@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550861"
 ---
 # <a name="how-to-share-sizing-properties-between-grids"></a>操作說明：在方格之間共用調整大小屬性
 此範例顯示如何共用的資料行的調整大小資料和資料列之間<xref:System.Windows.Controls.Grid>為了保留以一致的調整大小的項目。  

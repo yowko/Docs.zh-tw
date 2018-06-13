@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529655"
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的儲存格樣式
 每個資料格內<xref:System.Windows.Forms.DataGridView>控制項可以有它自己的樣式，例如，文字格式、 背景色彩、 前景色彩和字型。 通常，不過，多個資料格會共用特定的樣式特性。  

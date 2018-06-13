@@ -34,6 +34,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549473"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 語法詳細資料
 本主題中定義的詞彙用於描述 XAML 語法的項目。 這些條款常用的這份文件，WPF 文件的其餘具體而言，適用於其他使用 XAML 或啟用 System.Xaml 層級的 XAML 語言支援的基本 XAML 概念的架構。 本主題詳述主題所介紹的基本術語[XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)。  

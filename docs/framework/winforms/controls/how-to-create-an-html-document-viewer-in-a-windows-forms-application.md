@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530539"
 ---
 # <a name="how-to-create-an-html-document-viewer-in-a-windows-forms-application"></a>如何：在 Windows Forms 應用程式中建立 HTML 文件檢視器
 您可以使用<xref:System.Windows.Forms.WebBrowser>控制項以顯示和列印 HTML 文件，而不需提供網際網路網頁瀏覽器的完整功能。 當您想要利用的 HTML 格式的功能，但不是希望使用者載入任意網頁可能包含不受信任的 Web 控制項或潛在的惡意程式碼時，這非常有用。 您可能想要限制的能力<xref:System.Windows.Forms.WebBrowser>這種方式，例如，控制，當成 HTML 電子郵件檢視器使用，或提供您的應用程式中 HTML 格式的說明。  

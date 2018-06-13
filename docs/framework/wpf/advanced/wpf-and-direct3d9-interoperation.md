@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549431"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>WPF 和 Direct3D9 互通
 您可以在 Windows Presentation Foundation (WPF) 應用程式中包含 Direct3D9 內容。 本主題描述如何建立 Direct3D9 內容，以便有效地相互操作使用 WPF。  

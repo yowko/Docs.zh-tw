@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544849"
 ---
 # <a name="migration-and-interoperability"></a>移轉和互通性
 此頁面包含討論如何實作之間的互通性的文件的連結[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式和其他類型的[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]應用程式。  

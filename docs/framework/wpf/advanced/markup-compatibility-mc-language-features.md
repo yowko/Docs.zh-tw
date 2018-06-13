@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546565"
 ---
 # <a name="markup-compatibility-mc-language-features"></a>標記相容性 (mc:) 語言功能
 ## <a name="in-this-section"></a>本節內容  

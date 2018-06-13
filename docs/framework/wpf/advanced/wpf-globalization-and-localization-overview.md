@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549613"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 全球化和當地語系化概觀
 當您限制只有一種語言可以使用您的產品時，就是將潛在客戶群限制為全世界 65 億人口的一小部分。 如果您想要全球對象都可以使用應用程式，則具成本效益的產品當地語系化是更多客戶可以使用的一種最佳且最經濟的方法。  
@@ -130,7 +131,7 @@ ms.lasthandoff: 05/04/2018
   
  [!code-xaml[GlobalizationRunDialog#GridColumnDef](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GlobalizationRunDialog/CS/Window1.xaml#gridcolumndef)]  
   
- 前兩個資料行其中**開啟：**標籤和<xref:System.Windows.Controls.ComboBox>位於使用 10%的[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]總寬度。  
+ 前兩個資料行其中**開啟：** 標籤和<xref:System.Windows.Controls.ComboBox>位於使用 10%的[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]總寬度。  
   
  [!code-xaml[GlobalizationRunDialog#GridColumnDef2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GlobalizationRunDialog/CS/Window1.xaml#gridcolumndef2)]  
   

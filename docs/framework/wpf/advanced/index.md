@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544100"
 ---
 # <a name="advanced-windows-presentation-foundation"></a>進階 (Windows Presentation Foundation)
 本節說明 WPF 中的一些進階區域。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525086"
 ---
 # <a name="metafiles-in-gdi"></a>GDI+ 中的中繼檔
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供<xref:System.Drawing.Imaging.Metafile>類別，因此您可以記錄，並顯示中繼檔。 中繼檔，也稱為向量映像，是儲存為一連串的繪圖命令和設定映像。 命令和設定記錄在<xref:System.Drawing.Imaging.Metafile>可以儲存在記憶體中或儲存到檔案或資料流物件。  

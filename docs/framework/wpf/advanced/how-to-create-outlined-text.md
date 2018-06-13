@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544961"
 ---
 # <a name="how-to-create-outlined-text"></a>如何：建立外框文字
 在大部分情況下，當您加入裝飾中的文字字串時您[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式中，使用的文字方面的不連續字元或圖像 （glyph） 集合。 例如，您無法建立線形漸層筆刷並進行套用，以便<xref:System.Windows.Controls.Control.Foreground%2A>屬性<xref:System.Windows.Controls.TextBox>物件。 當您顯示或編輯文字方塊中時，線性漸層筆刷會自動套用至目前資料集的文字字串中的字元。  

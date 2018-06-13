@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750111"
 ---
 # <a name="lthttpstransportgt"></a>&lt;httpsTransport&gt;
 指定 HTTP 傳輸，以傳輸自訂繫結的 SOAP 訊息。  

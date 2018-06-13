@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544546"
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a>如何：透過 Blocks 屬性管理非固定格式內容項目
 這些範例會示範一些較常見可以透過動態內容的項目執行的運算**區塊**屬性。 這個屬性用來加入和移除項目從<xref:System.Windows.Documents.BlockCollection>。 非固定格式內容項目該功能**區塊**屬性包括：  

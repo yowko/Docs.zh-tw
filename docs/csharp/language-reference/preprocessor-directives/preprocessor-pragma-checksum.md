@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33285690"
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma 總和檢查碼 (C# 參考)
 產生來源檔案的總和檢查碼協助偵錯[!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]頁面。  

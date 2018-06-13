@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549327"
 ---
 # <a name="how-to-localize-an-application"></a>如何：將應用程式當地語系化
 本教學課程說明如何使用 LocBaml 工具來建立當地語系化的應用程式。  
@@ -102,9 +103,9 @@ ms.lasthandoff: 05/04/2018
   
     -   **asmpath**或 **-asmpath:** {*filedirectory*] **:** 如果您[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]程式碼包含自訂控制項，您必須提供**asmpath**自訂控制項組件。  
   
-    -   **nologo：**顯示無標誌或著作權資訊。  
+    -   **nologo：** 顯示無標誌或著作權資訊。  
   
-    -   **verbose：**顯示詳細模式資訊。  
+    -   **verbose：** 顯示詳細模式資訊。  
   
     > [!NOTE]
     >  如果您執行此工具時，您需要的選項清單，輸入**LocBaml.exe**按下 ENTER。  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547231"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>最佳化效能：其他建議
 <a name="introduction"></a> 本主題提供[最佳化 WPF 應用程式效能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)一節中主題所涵蓋內容以外的效能建議。  

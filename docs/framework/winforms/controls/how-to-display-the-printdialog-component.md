@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532183"
 ---
 # <a name="how-to-display-the-printdialog-component"></a>如何：顯示 PrintDialog 元件
 <xref:System.Windows.Forms.PrintDialog>元件是標準 Windows 列印對話方塊，您的使用者都很熟悉。 因為您的使用者會立即熟悉，很有幫助您使用<xref:System.Windows.Forms.PrintDialog>元件。  

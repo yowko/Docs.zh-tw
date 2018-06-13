@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529788"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>使用 ShouldSerialize 和 Reset 方法定義預設值
 `ShouldSerialize` 和`Reset`是選擇性屬性，您可以提供的方法，如果屬性未具有簡單的預設值。 如果此屬性有簡單的預設值，您應該套用<xref:System.ComponentModel.DefaultValueAttribute>和改為提供預設值給屬性的類別建構函式。 其中一種機制可讓設計工具中的下列功能：  

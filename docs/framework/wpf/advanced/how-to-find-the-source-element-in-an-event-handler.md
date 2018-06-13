@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543996"
 ---
 # <a name="how-to-find-the-source-element-in-an-event-handler"></a>如何：尋找事件處理常式中的來源項目
 這個範例示範如何尋找來源項目中的事件處理常式。  

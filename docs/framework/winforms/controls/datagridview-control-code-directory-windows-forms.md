@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529311"
 ---
 # <a name="datagridview-control-code-directory-windows-forms"></a>DataGridView 控制項程式碼目錄 (Windows Form)
 本主題提供的連結<xref:System.Windows.Forms.DataGridView>-相關文件中的程式碼範例。  

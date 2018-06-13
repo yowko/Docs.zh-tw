@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530799"
 ---
 # <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>如何：使用 Windows Form Label 控制項建立便捷鍵
 Windows Form<xref:System.Windows.Forms.Label>控制項可以用來定義其他控制項的便捷鍵。 當您定義便捷鍵的標籤控制項中時，使用者可以按 ALT 鍵加上您將焦點移至定位順序中在它後面的控制項，將指定的字元。 因為標籤不會收到焦點，焦點會自動移到定位順序中的下一個控制項。 使用這項技術，將文字方塊、 下拉式方塊、 清單方塊和資料格的存取金鑰。  

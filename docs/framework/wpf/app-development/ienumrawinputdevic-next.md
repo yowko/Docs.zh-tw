@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546402"
 ---
 # <a name="ienumrawinputdevicnext"></a>IEnumRAWINPUTDEVIC:Next
 列舉的下一步 `celt` [RAWINPUTDEVICE](http://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp)中列舉值的清單中，傳回其結構`rgelt`列舉中的項目實際數目以及`pceltFetched`。  

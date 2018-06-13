@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525898"
 ---
 # <a name="structure-of-the-graphics-interface"></a>圖形介面的結構
 Managed 的類別介面，以[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]包含約 60 類別、 50 的列舉型別，以及 8 結構。 <xref:System.Drawing.Graphics>類別的核心是[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]功能; 它是實際繪製線條、 曲線、 圖形、 影像和文字的類別。  

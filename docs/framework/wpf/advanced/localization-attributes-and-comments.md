@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547263"
 ---
 # <a name="localization-attributes-and-comments"></a>當地語系化屬性和註解
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 當地語系化註解是 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 原始程式碼內的屬性，並由開發人員提供以提供當地語系化的規則和提示。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 當地語系化註解包含兩組資訊︰可當地語系化屬性和自由格式當地語系化註解。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 當地語系化 API 使用可當地語系化屬性來指出要當地語系化的資源。 自由格式註解是應用程式作者想要包含的任何資訊。  

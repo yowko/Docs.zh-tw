@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551748"
 ---
 # <a name="popup"></a>快顯
 <xref:System.Windows.Controls.Primitives.Popup>控制會漂浮在目前的應用程式視窗的另一個視窗，顯示內容。  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524882"
 ---
 # <a name="using-managed-graphics-classes"></a>使用 Managed 圖形類別
 下列主題描述如何使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]managed 的類別 framework 中的應用程式開發介面。  

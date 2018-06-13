@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531204"
 ---
 # <a name="how-to-enable-the-tab-key-to-move-out-of-a-toolstrip-control"></a>如何：啟用 TAB 鍵來移至 ToolStrip 控制項之外
 使用下列程序可讓使用者按下 TAB 鍵以移出<xref:System.Windows.Forms.ToolStrip>定位順序中的下一個控制項。  

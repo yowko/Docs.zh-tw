@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551187"
 ---
 # <a name="combobox"></a>ComboBox
 <xref:System.Windows.Controls.ComboBox>控制向使用者呈現選項的清單。 清單會顯示和隱藏控制項展開和摺疊。 在其預設狀態下，清單會摺疊，顯示只有一個選擇。 使用者按一下按鈕以查看完整的選項清單。  

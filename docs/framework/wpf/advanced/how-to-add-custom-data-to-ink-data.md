@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544507"
 ---
 # <a name="how-to-add-custom-data-to-ink-data"></a>如何：將自訂資料加入至筆墨資料
 您可以將自訂資料加入筆墨會儲存為筆跡序列化格式 (ISF) 時將會儲存的筆墨。  您可以將自訂的資料，以儲存<xref:System.Windows.Ink.DrawingAttributes>、 <xref:System.Windows.Ink.StrokeCollection>，或<xref:System.Windows.Ink.Stroke>。  能夠將自訂資料儲存在三個物件上，讓您能夠決定最佳的位置來儲存資料。  所有三個類別使用類似的方法來儲存及存取自訂的資料。  

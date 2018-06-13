@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c4b28d60b3a1da32d2d9db84aa92ca4c9bf769aa
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423191"
 ---
 # <a name="icordebugregisterset-interface"></a>ICorDebugRegisterSet 介面
 代表目前正在執行的程式碼的電腦上的可用暫存器的集合。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/04/2018
 >  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   

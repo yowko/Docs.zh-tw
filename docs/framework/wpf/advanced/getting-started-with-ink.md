@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546233"
 ---
 # <a name="getting-started-with-ink"></a>筆墨入門
 數位筆跡併入您的應用程式是比以往更為容易。 從 COM 和 Windows Form 的方法達到完整地整合到程式設計必然發展筆墨[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 您不需要安裝個別的 Sdk 或執行階段程式庫。  

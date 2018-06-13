@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524448"
 ---
 # <a name="folderbrowserdialog-component-windows-forms"></a>FolderBrowserDialog 元件 (Windows Form)
 Windows Form`FolderBrowserDialog`元件會顯示與使用者可以瀏覽和選取資料夾或建立一個新的介面。 它是一個補充[OpenFileDialog 元件](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)元件，可用於瀏覽並選取檔案。  

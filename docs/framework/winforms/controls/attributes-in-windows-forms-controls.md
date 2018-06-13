@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525774"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Windows Form 控制項中的屬性
 .NET Framework 提供各種不同的屬性，供您套用至自訂控制項和元件的成員。 其中一些屬性會影響類別的執行階段行為，有些則會影響設計階段行為。  

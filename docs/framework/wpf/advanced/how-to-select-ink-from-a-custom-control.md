@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548362"
 ---
 # <a name="how-to-select-ink-from-a-custom-control"></a>如何：從自訂控制項選取筆墨
 藉由新增<xref:System.Windows.Ink.IncrementalLassoHitTester>若您的自訂控制項，您可以啟用您的控制項，讓使用者可以選取使用套索工具，其方式類似於筆墨<xref:System.Windows.Controls.InkCanvas>選取使用套索的筆墨。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551612"
 ---
 # <a name="how-to-remove-all-adorners-from-an-element"></a>如何：移除項目的所有裝飾項
 這個範例示範如何以程式設計方式移除所有裝飾指定<xref:System.Windows.UIElement>。  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548031"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>如何：得知列印工作是否可在此時列印
 列印佇列並非永遠可用的一天 24 小時。 它們有可以設定讓它們無法使用在每天特定時間的開始和結束時間屬性。 這項功能可用，例如，保留獨佔使用的特定部門下午 5 點後的印表機。 該部門會有不同的佇列服務的印表機，比其他部門使用。 其他部門的佇列會被設定為無法使用下午 5 點後，佇列的偏好部門可能被設定為時隨時可用。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550094"
 ---
 # <a name="how-to-persist-and-restore-application-scope-properties-across-application-sessions"></a>如何：跨應用程式工作階段保存和還原應用程式範圍的屬性
 這個範例示範如何保存應用程式關閉時，何時及如何還原應用程式領域屬性下, 一個應用程式時啟動的應用程式範圍的屬性。  

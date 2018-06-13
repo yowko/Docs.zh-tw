@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528853"
 ---
 # <a name="backgroundworker-component-overview"></a>BackgroundWorker 元件概觀
 有許多經常執行的作業都需要長時間執行。 例如：  

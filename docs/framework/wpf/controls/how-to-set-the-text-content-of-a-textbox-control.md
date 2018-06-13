@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551722"
 ---
 # <a name="how-to-set-the-text-content-of-a-textbox-control"></a>如何：設定 TextBox 控制項的文字內容
 這個範例示範如何使用<xref:System.Windows.Controls.TextBox.Text%2A>屬性來設定的初始文字內容<xref:System.Windows.Controls.TextBox>控制項。  

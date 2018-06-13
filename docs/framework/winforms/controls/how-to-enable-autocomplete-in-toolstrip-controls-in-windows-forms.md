@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532534"
 ---
 # <a name="how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms"></a>如何：啟用 Windows Form 中 ToolStrip 控制項的 AutoComplete
 下列程序結合<xref:System.Windows.Forms.ToolStripLabel>與<xref:System.Windows.Forms.ToolStripComboBox>，可以卸除向下顯示項目清單，例如最近瀏覽的網站。 如果使用者輸入的字元符合其中一個項目在清單中的第一個字元，也會立即顯示項目。  

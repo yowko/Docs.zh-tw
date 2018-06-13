@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551891"
 ---
 # <a name="how-to-rotate-an-image"></a>如何：旋轉影像
 這個範例示範如何使用旋轉 90 度影像<xref:System.Windows.Media.Imaging.BitmapImage.Rotation%2A>屬性<xref:System.Windows.Media.Imaging.BitmapImage>。  
