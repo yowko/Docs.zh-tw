@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803664"
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a>HOW TO：自訂系統提供的繫結
 Windows Communication Foundation (WCF) 包含數種系統提供繫結可讓您設定一些屬性的基礎繫結項目，但不是所有的屬性。 本主題示範如何設定繫結項目上的屬性來建立自訂繫結。  

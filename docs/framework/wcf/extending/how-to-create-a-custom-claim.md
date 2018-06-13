@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804855"
 ---
 # <a name="how-to-create-a-custom-claim"></a>HOW TO：建立自訂宣告
 識別模型基礎結構中 Windows Communication Foundation (WCF) 提供一組內建宣告類型和權限與協助程式函式建立<xref:System.IdentityModel.Claims.Claim>具有這些類型和權限的執行個體。 這些內建宣告專為 WCF 支援的用戶端認證類型中找到預設的模型資訊。 在許多情況下，內建宣告就已足夠；不過有些應用程式可能需要自訂宣告。 宣告中包含了宣告類型、宣告適用的資源，以及擁有該資源所需的權限。 這個主題會描述如何建立自訂宣告。  

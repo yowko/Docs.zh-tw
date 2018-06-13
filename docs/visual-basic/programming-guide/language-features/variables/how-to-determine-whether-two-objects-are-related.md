@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649821"
 ---
 # <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>如何：判斷兩個物件是否關聯 (Visual Basic)
 您可以比較來決定關聯性，如果建立的類別之間的任何兩個物件。 <xref:System.Type.IsInstanceOfType%2A>方法<xref:System.Type?displayProperty=nameWithType>類別會傳回`True`如果指定的類別繼承自目前的類別，或如果目前的類型是指定類別所支援的介面。  

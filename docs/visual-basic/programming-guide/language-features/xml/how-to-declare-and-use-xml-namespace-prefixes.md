@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648794"
 ---
 # <a name="how-to-declare-and-use-xml-namespace-prefixes-visual-basic"></a>如何：宣告和使用 XML 命名空間前置字元 (Visual Basic)
 這個範例示範如何匯入的 XML 命名空間前置詞`ns`並將它用於 XML 常值和 XML 軸屬性。  

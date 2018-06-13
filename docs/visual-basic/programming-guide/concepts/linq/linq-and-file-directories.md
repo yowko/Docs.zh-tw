@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646162"
 ---
 # <a name="linq-and-file-directories-visual-basic"></a>LINQ 和檔案目錄 (Visual Basic)
 許多檔案系統作業基本上就是查詢，因此很適合使用 LINQ 方法。  

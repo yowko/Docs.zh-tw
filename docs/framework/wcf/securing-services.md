@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808835"
 ---
 # <a name="securing-services"></a>保護服務的安全
 Windows Communication Foundation (WCF) 服務的安全性是由兩個主要需求所組成： 傳輸安全性和授權。 (第三個需求，安全性事件稽核的述[稽核](../../../docs/framework/wcf/feature-details/auditing-security-events.md)。)簡言之，傳輸安全性包含驗證 (驗證服務和用戶端兩者的身分識別)、機密性 (訊息加密) 和完整性 (用來偵測竄改的數位簽章)。 授權會控制存取資源，例如，只允許有權限的使用者讀取檔案。 使用 WCF 的功能，即可輕鬆實作兩個主要需求。  
@@ -69,7 +70,7 @@ Windows Communication Foundation (WCF) 服務的安全性是由兩個主要需�
  安全性模式決定如何保護訊息，每個選項互有利弊，說明如下。 如需有關如何設定安全性模式的詳細資訊，請參閱[How to： 設定安全性模式](../../../docs/framework/wcf/how-to-set-the-security-mode.md)。  
   
 #### <a name="transport-mode"></a>傳輸模式  
- 在網路和應用程式之間有多個層次。 下列其中一種是*傳輸*層*，*它負責管理端點間的訊息傳輸。 目的，則只需要瞭解 WCF 使用數個傳輸通訊協定，其中每一個都可以保護訊息傳輸。 (如需傳輸的詳細資訊，請參閱[傳輸](../../../docs/framework/wcf/feature-details/transports.md)。)  
+ 在網路和應用程式之間有多個層次。 下列其中一種是*傳輸*層 *，* 它負責管理端點間的訊息傳輸。 目的，則只需要瞭解 WCF 使用數個傳輸通訊協定，其中每一個都可以保護訊息傳輸。 (如需傳輸的詳細資訊，請參閱[傳輸](../../../docs/framework/wcf/feature-details/transports.md)。)  
   
  常用的通訊協定包含 HTTP 和 TCP。 每個這些通訊協定都會藉由通訊協定特定的 (一或多個) 機制來保護訊息傳輸。 例如，HTTP 通訊協定使用 SSL over HTTP (通常縮寫為 "HTTPS") 而受到保護。 因此，當您選取安全性的傳輸模式時，會依照通訊協定規定來選擇使用機制。 例如，如果您選取 <xref:System.ServiceModel.WSHttpBinding> 類別，並將其安全性模式設定為 Transport，同時會選取 SSL over HTTP (HTTPS) 做為安全性機制。 傳輸模式的優點是比訊息模式更有效率，因為安全性是整合在相當低的層級。 使用傳輸模式時，安全性機制必須依照傳輸規格來實作，因此只有在點對點傳輸時訊息才能安全流動。  
   

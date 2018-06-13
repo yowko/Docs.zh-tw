@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649590"
 ---
 # <a name="accessing-xml-in-visual-basic"></a>在 Visual Basic 中存取 XML
 Visual Basic 提供用於存取和巡覽 XML 軸屬性[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]結構。 這些屬性會使用特殊的語法，可讓您指定的 XML 名稱來存取項目和屬性。  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648664"
 ---
 # <a name="visual-basic-language-specification"></a>Visual Basic 語言規格
 Visual Basic 語言規格是 Visual Basic 文法和語法的相關的所有問題的答案的授權來源。 它包含的語言，包括 Visual Basic 參考文件中未涵蓋的許多相關的詳細的資訊。  

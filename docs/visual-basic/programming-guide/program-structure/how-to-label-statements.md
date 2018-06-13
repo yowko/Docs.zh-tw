@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650120"
 ---
 # <a name="how-to-label-statements-visual-basic"></a>如何：標記陳述式 (Visual Basic)
 陳述式區塊是由以冒號分隔的程式碼行所組成。 行程式碼前面有識別的字串或整數都稱為*標示為*。 陳述式標籤用來標記資料行的程式碼，以找出它使用陳述式例如`On Error Goto`。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806457"
 ---
 # <a name="wcf-service-publishing"></a>WCF 服務發行
 Windows Communication Foundation (WCF) 服務的發行可協助您從實際部署至生產環境進行測試應用程式的 WCF 服務主機和 WCF 測試用戶端提供的早期開發環境的進度。 在認可最後開發計畫之前，您可以使用 Windows Communication Foundation (WCF) 服務發行確認您的 WCF 服務正確執行，而且已準備好可以發佈。 您也可以選擇將您的 WCF 服務程式庫部署到不同的目標位置進行測試。  

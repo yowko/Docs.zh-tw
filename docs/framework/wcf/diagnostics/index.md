@@ -14,6 +14,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810001"
 ---
 # <a name="administration-and-diagnostics"></a>管理與診斷
 Windows Communication Foundation (WCF) 提供一組豐富的功能，可協助您監視應用程式的生命週期的不同階段。 例如，您可以使用組態在部署時設定服務與用戶端。 WCF 包含大量的效能計數器，可協助您測量應用程式的效能。 WCF 還公開服務，以透過 WCF Windows Management Instrumentation (WMI) 提供者在執行階段檢查的資料。 當應用程式遭遇失敗或開始發生異常行為時，您可以使用事件日誌檢查是否發生任何顯著的事件。 您也可以使用訊息記錄與追蹤檢查在應用程式中端對端之間發生的事件。 這些功能可以協助開發人員和 IT 專業人員疑難排解 WCF 應用程式，當它的行為不正確。  

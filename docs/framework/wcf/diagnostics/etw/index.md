@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809260"
 ---
 # <a name="analytic-tracing-with-etw"></a>具有 ETW 的分析追蹤
 Windows Communication Foundation (WCF) 的分析追蹤提供 WCF 服務的執行期間擷取診斷資訊的方式。 允許在生產環境中的 WCF 服務的疑難排解 WCF 堆疊中的關鍵點發出 WCF 分析追蹤事件。 WCF 服務的分析追蹤最少對效能造成影響的產品伺服器裝載[!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)]WCF 服務，因為這些事件會非常有效率的方式發出 Windows 事件追蹤 (ETW) 工作階段。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649392"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Generic Procedures in Visual Basic
 A*泛型程序*，也稱為*泛型方法*，是定義了至少一個型別參數的程序。 這可讓呼叫的程式碼來調整資料類型，使其符合需求每次呼叫程序。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644429"
 ---
 # <a name="functional-transformation-of-xml-visual-basic"></a>功能性轉換的 XML (Visual Basic)
 本主題討論修改 XML 文件的純功能性轉換方法，並與程序性方法對照。  

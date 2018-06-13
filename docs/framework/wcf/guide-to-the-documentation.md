@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805534"
 ---
 # <a name="guide-to-the-documentation"></a>文件指南
 此處提供的 Windows Communication Foundation (WCF) 文件的指引。 連結文件是建議的起點，並且根據特定興趣和專業等級分群組。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647384"
 ---
 # <a name="character-data-types-visual-basic"></a>字元資料類型 (Visual Basic)
 Visual Basic 提供*字元資料類型*處理可列印及可顯示的字元。 雖然它們都使用 Unicode 字元處理`Char`保存單一字元，而`String`包含了不定數量的字元。  

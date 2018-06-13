@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643564"
 ---
 # <a name="com-interop-visual-basic"></a>COM Interop (Visual Basic)
 元件物件模型 (COM) 可讓物件向其他元件公開其功能以及主控應用程式。 大部分的現今軟體都會包括 COM 物件。 雖然 .NET 組件是新應用程式的最佳選擇，但您有時可能需要採用 COM 物件。 本節涵蓋一些建立和使用 Visual Basic 中使用 COM 物件相關聯的問題。  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647107"
 ---
 # <a name="error-types-visual-basic"></a>錯誤類型 (Visual Basic)
 在 Visual Basic 中的錯誤 (也稱為*例外狀況*) 歸類到其中的三個類別： 語法錯誤、 執行階段錯誤，以及邏輯錯誤。  
