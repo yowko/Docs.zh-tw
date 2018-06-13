@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524579"
 ---
 # <a name="regions-in-gdi"></a>GDI+ 中的區域
 區域是輸出裝置的顯示區域的一部分。 區域可以是簡單 （單一矩形） 或複雜 （多邊形和封閉型曲線的組合）。 下圖顯示兩個區域： 其中一個矩形中，從建構和路徑中的其他建構。  

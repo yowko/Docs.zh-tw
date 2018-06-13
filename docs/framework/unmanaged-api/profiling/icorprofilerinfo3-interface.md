@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 21c2352a40d46c80e46c10a3874f911be433f37e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461805"
 ---
 # <a name="icorprofilerinfo3-interface"></a>ICorProfilerInfo3 介面
 提供程式碼分析工具用於和 Common Language Runtime (CLR) 通訊，以控制事件監視以及要求資訊的方法。 `ICorProfilerInfo3`介面是延伸[ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)介面。 它提供在 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] 和更新版本中支援的新方法。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 05/04/2018
  CLR 會傳遞`ICorProfilerInfo3`介面，以每個程式碼分析工具在初始化期間，使用程式碼剖析工具實作[icorprofilercallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)或[ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md)方法。 然後程式碼分析工具可以呼叫 `ICorProfilerInfo3` 方法，以取得在 CLR 控制下執行的 Managed 程式碼之資訊。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

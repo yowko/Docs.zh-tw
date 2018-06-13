@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d0ed1dc09e8dcee8a4c67e01279c6e13661e252d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459823"
 ---
 # <a name="icorprofilercallback2survivingreferences-method"></a>ICorProfilerCallback2::SurvivingReferences 方法
 報告堆積中物件的配置做為非壓縮記憶體回收的結果。  
@@ -71,7 +72,7 @@ HRESULT SurvivingReferences(
  因為有限的內部緩衝區、在伺服器記憶體回收期間以及其他原因的多重執行緒報告，在特定記憶體回收期間可能接收多重 `SurvivingReferences` 回呼。 在記憶體回收期間多個回呼的情況下，資訊是累計的；在任何 `SurvivingReferences` 回呼中被報告的所有參考不會被記憶體回收。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

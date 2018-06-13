@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587719"
 ---
 # <a name="managed-thread-states"></a>Managed 執行緒狀態
 屬性 <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> 提供位元遮罩，表示執行緒的目前狀態。 執行緒一律是在 <xref:System.Threading.ThreadState> 列舉至少一個可能的狀態中，而且可能同時在多個狀態中。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640263"
 ---
 # <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>範例輸出 Office Open XML 文件組件 (Visual Basic)
 本主題顯示如何開啟 Office Open XML 文件並存取其中的一部分。  

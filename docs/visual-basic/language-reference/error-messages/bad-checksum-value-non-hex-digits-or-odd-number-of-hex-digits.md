@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589247"
 ---
 # <a name="bad-checksum-value-non-hex-digits-or-odd-number-of-hex-digits"></a>錯誤的總和檢查碼值，非十六進位數字或奇數的十六進位數字
 總和檢查碼值包含無效的十六進位數字，或是有奇數個數字。  

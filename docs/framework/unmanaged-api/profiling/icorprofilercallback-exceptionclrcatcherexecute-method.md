@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6057593362e75044a9b2db32ad5dafe439a551d2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451138"
 ---
 # <a name="icorprofilercallbackexceptionclrcatcherexecute-method"></a>ICorProfilerCallback::ExceptionCLRCatcherExecute 方法
 時呼叫`catch`封鎖在 common language runtime (CLR) 本身內執行例外狀況。 這個方法是.NET Framework 2.0 版中已過時。  
@@ -33,7 +34,7 @@ HRESULT ExceptionCLRCatcherExecute();
 ```  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

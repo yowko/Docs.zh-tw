@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 04be252092732296354cfec102cf8fe648ed2dd6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33456634"
 ---
 # <a name="icorprofilerinfo2getclassfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetClassFromTokenAndTypeArgs 方法
 取得`ClassID`使用指定的中繼資料語彙基元的類型和`ClassID`值的任何型別引數。  
@@ -61,7 +62,7 @@ HRESULT GetClassFromTokenAndTypeArgs(
  一般情況下，使用`GetClassFromTokenAndTypeArgs`不建議使用。 如果分析工具想要特定類型的事件中，它們應該儲存`ModuleID`和`mdTypeDef`該型別，且使用[icorprofilerinfo2:: Getclassidinfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md)來檢查是否指定`ClassID`，就是所需的類型。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

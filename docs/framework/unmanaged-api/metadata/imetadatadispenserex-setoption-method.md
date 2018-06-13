@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cfe600b54eb03a07ea01375355c5ff94190e5d9d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449464"
 ---
 # <a name="imetadatadispenserexsetoption-method"></a>IMetaDataDispenserEx::SetOption 方法
 將指定的選項設定為目前中繼資料範圍的指定值。 此選項會控制如何處理目前的中繼資料範圍的呼叫。  
@@ -62,11 +63,11 @@ HRESULT SetOption (
 |MetaDataPreserveLocalRefs|停用最佳化本機定義的參考。|必須包含值的組合[CorLocalRefPreservation](../../../../docs/framework/unmanaged-api/metadata/corlocalrefpreservation-enumeration.md)列舉型別。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
- **程式庫：**做為 MsCorEE.dll 中的資源  
+ **程式庫：** 做為 MsCorEE.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

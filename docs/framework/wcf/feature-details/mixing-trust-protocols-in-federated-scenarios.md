@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494454"
 ---
 # <a name="mixing-trust-protocols-in-federated-scenarios"></a>在聯合案例中混合信任通信協定
 有些情況下，聯合用戶端會與信任版本不相同的服務和安全性權杖服務 (STS) 進行通訊。 WSDL 服務可包含 `RequestSecurityTokenTemplate` 判斷提示 (Assertion)，其中 WS-Trust 項目的版本與 STS 不同。 在這種情況下，Windows Communication Foundation (WCF) 用戶端會將從收到的 Ws-trust 元素轉換`RequestSecurityTokenTemplate`以符合 STS 信任版本。 WCF 會處理只能在標準繫結時不相符的信任版本。 WCF 所辨識的所有標準演算法參數是在標準繫結的一部分。 本主題描述與各種服務和 STS 之間的信任設定 WCF 行為。  

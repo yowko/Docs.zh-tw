@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cd4559663194cb845fb0cc040e1f6739e38caa0e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461139"
 ---
 # <a name="nextmethod-function"></a>NextMethod 函式
 擷取下一個方法呼叫開始列舉型別中的[BeginMethodEnumeration](beginmethodenumeration.md)。  
@@ -81,7 +82,7 @@ HRESULT NextMethod (
 如需 c + + 的範例，請參閱[IWbemClassObject::NextMethod](https://msdn.microsoft.com/library/aa391454(v=vs.85).aspx)方法。
 
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.idl  
   

@@ -17,9 +17,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 96a9672ee05cb1fe2573620bd1dea23e57339c93
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460837"
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib 方法
 藉由傳回其完整的路徑來解析類型程式庫的簡單名稱。  
@@ -65,7 +66,7 @@ HRESULT ResolveTypeLib(
  此介面的自訂實作必須傳回[BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) ，其中包含名為中的類型程式庫的完整路徑`bstrSimpleName`參數。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** TlbRef.idl、 TlbRef.h  
   

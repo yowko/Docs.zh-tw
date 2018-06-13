@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bebee019595143d25e950719ad62d9e10b76a3e9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418902"
 ---
 # <a name="icordebugmodulegetname-method"></a>ICorDebugModule::GetName 方法
 取得模組的檔案名稱。  
@@ -50,7 +51,7 @@ HRESULT GetName(
  `GetName`方法會傳回 S_OK HRESULT，如果模組的檔案名稱符合磁碟上的名稱。 `GetName` 如果名稱是優質，例如動態或記憶體中的模組會傳回 S_FALSE HRESULT。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   

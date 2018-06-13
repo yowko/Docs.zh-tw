@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596846"
 ---
 # <a name="a-delimiter-cannot-be-nothing-or-an-empty-string"></a>分隔符號不可以是 Nothing 或空字串
 `TextFieldParser` 無法讀取自檔案，因為 `Delimiters` 屬性設定為 `Nothing` 或為空白 `String` ("")。  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fe93b7ee28db8151345871b0dd716d41227ed565
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462295"
 ---
 # <a name="spawnderivedclass-function"></a>SpawnDerivedClass 函式
 從指定的物件建立新的衍生類別物件。    
@@ -73,7 +74,7 @@ HRESULT SpawnDerivedClass (
 新的物件中傳回`ppNewClass`會自動變成目前物件的子類別。 無法覆寫這個行為。 沒有任何子類別 （衍生的類別） 可以建立的方法。
 
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.idl  
   

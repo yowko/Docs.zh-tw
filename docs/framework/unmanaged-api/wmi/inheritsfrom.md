@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 87a1c1ee44d3b192747bd785f538c0332300ff50
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461411"
 ---
 # <a name="inheritsfrom-function"></a>[Inheritsfrom] 函式
 判斷目前的類別或執行個體是否衍生自指定的父類別。
@@ -63,7 +64,7 @@ HRESULT InheritsFrom (
 此函式會包裝呼叫[IWbemClassObject::InheritsFrom](https://msdn.microsoft.com/library/aa391452(v=vs.85).aspx)方法。
 
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.idl  
   

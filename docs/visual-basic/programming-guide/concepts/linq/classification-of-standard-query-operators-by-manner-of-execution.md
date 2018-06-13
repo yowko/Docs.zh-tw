@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644003"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>分類的標準查詢運算子的方式執行 (Visual Basic)
 會使用兩種主要方式之一執行標準查詢運算子方法的 LINQ to Objects 實作：立即或延後。 使用延後執行的查詢運算子可以另外細分成兩個分類︰資料流和非資料流。 如果您知道如何執行不同的查詢運算子，則可以協助您了解透過給定查詢所取得的結果。 如果資料來源變更，或您所建置的查詢是根據另一個查詢，則這特別有用。 本主題會根據執行方式來分類標準查詢運算子。  

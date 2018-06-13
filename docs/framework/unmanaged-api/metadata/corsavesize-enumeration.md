@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 66f9f95b0cf19acb677daf7f7401d21cc81864a0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447603"
 ---
 # <a name="corsavesize-enumeration"></a>CorSaveSize 列舉
 包含值，這些值表示在查詢儲存作業的大小時所需的精確度等級。  
@@ -44,11 +45,11 @@ typedef enum CorSaveSize {
 |`cssDiscardTransientCAs`|指定應移除捨棄的型別。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorHdr.h  
   
- **程式庫：**做為 MsCorEE.dll 中的資源  
+ **程式庫：** 做為 MsCorEE.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

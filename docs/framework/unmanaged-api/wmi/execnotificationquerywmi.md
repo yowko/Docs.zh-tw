@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4b5c26ab9c273b134915eea39078a83f569bcd32
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462412"
 ---
 # <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi 函式
 執行查詢，以接收事件。 呼叫會立即傳回，且呼叫端可以輪詢事件傳回的列舉值到達時。 釋出傳回的列舉值會取消查詢。  
@@ -116,7 +117,7 @@ HRESULT ExecNotificationQueryWmi (
 如果函式呼叫失敗，您可以藉由呼叫取得其他錯誤資訊[GetErrorInfo](geterrorinfo.md)函式。
 
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.idl  
   

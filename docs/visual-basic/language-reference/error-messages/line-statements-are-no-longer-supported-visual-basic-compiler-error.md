@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587875"
 ---
 # <a name="39line39-statements-are-no-longer-supported-visual-basic-compiler-error"></a>&#39;行&#39;陳述式已不再支援 （Visual Basic 編譯器錯誤）
 不再支援單行陳述式。 檔案 I/O 功能可做為`Microsoft.VisualBasic.FileSystem.LineInput`和圖形功能是做為`System.Drawing.Graphics.DrawLine`。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592089"
 ---
 # <a name="serialization-guidelines"></a>序列化方針
 本文件列出在設計要序列化的 API 時所要考量的指導方針。  

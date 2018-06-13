@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592219"
 ---
 # <a name="introducing-xml-serialization"></a>XML 序列化簡介
 序列化是將物件轉換成可輕易傳輸之形式的程序。 例如，您可序列化物件並透過網際網路以 HTTP 在用戶端與伺服器之間傳輸。 另一方面，還原序列化從資料流重建物件。  

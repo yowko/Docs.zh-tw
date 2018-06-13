@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591959"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>逐步解說：建立密碼編譯應用程式
 本逐步解說示範如何加密和解密內容。 程式碼範例是針對 Windows Form 應用程式所設計。 此應用程式不會示範真實世界案例，例如使用智慧卡。 相反地，它會示範加密和解密的基本概念。  

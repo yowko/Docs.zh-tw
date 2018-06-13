@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599232"
 ---
 # <a name="automation-object-does-not-have-a-default-value"></a>Automation 物件沒有預設值
 Visual Basic 無法判斷指定之物件的預設成員。  

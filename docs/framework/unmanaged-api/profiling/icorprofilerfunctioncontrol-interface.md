@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c0daf772702ada9d426b3da6913fff0186e33564
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455647"
 ---
 # <a name="icorprofilerfunctioncontrol-interface"></a>ICorProfilerFunctionControl 介面
 提供的方法可讓程式碼分析工具與通用語言執行平台 (CLR) 進行通訊，以控制在重新編譯特定方法時，JIT 編譯器應如何產生程式碼。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/04/2018
  `ICorProfilerFunctionControl` 介面可提供方法來控制單一重新編譯函式的程式碼產生方式。 分析工具取得透過此介面的執行個體[icorprofilercallback4:: Getrejitparameters](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-getrejitparameters-method.md)回呼。 `ICorProfilerFunctionControl` 的每個執行個體各控制一個函式的所有執行個體。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

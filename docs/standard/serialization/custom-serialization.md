@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592102"
 ---
 # <a name="custom-serialization"></a>自訂序列化
 自訂序列化是控制型別序列化與還原序列化的程序。 控制序列化就可確保序列化相容性，也就是在類型版本之間進行序列化與還原序列化的作業，而不違反類型的核心功能性。 例如，在第一版的型別中，可能只有兩個欄位。 在型別的下一版中，加入了更多的欄位。 然而第二版的應用程式必須對這兩種型別進行序列化及還原序列化。 下列章節會說明控制序列化的方法。

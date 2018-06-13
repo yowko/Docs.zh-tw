@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588333"
 ---
 # <a name="ltmessagegt-this-error-could-also-be-due-to-mixing-a-file-reference-with-a-project-reference-to-assembly-39ltassemblynamegt39"></a>&lt;訊息&gt;此錯誤也可能是因為混用了檔案參考和組件的專案參考&#39; &lt;assemblyname&gt;&#39;
 \<訊息 > 這個錯誤也可能是因為混用了檔案參考和組件的專案參考 '\<assemblyname >。 在此情況下，請嘗試更換的檔案參考 '\<assemblyfilename >' 在專案'\<projectname1 >' 的專案參考 '\<專案名稱 2> >'。  

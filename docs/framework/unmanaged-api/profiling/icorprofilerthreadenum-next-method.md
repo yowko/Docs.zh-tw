@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ed01b2f59c46d1dcedd62846ea663c9aa7213b37
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457722"
 ---
 # <a name="icorprofilerthreadenumnext-method"></a>ICorProfilerThreadEnum::Next 方法
 從循序執行緒集合中取得指定的連續執行緒數目，從序列中列舉值的目前位置開始。  
@@ -55,7 +56,7 @@ HRESULT Next (    [in]  ULONG      celt,
 |S_FALSE|傳回少於 `celt` 的項目數，表示列舉已完成。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

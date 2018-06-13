@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9a447dca98e5010163d5cc5f4f3da4333f4cdf7d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455266"
 ---
 # <a name="icorprofilercallback2garbagecollectionstarted-method"></a>ICorProfilerCallback2::GarbageCollectionStarted 方法
 通知記憶體回收已啟動程式碼分析工具。  
@@ -53,7 +54,7 @@ HRESULT GarbageCollectionStarted(
  它是安全的程式碼剖析工具來檢查期間其原始位置中的物件`GarbageCollectionStarted`回呼。 記憶體回收行程就會開始移動的物件之後從傳回`GarbageCollectionStarted`。 程式碼剖析工具分析工具從此回呼傳回之後，應該考慮所有可能無效，直到其接收到的物件識別碼`ICorProfilerCallback2::GarbageCollectionFinished`回呼。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

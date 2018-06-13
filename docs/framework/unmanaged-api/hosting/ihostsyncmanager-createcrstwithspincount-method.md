@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 50f292ab39bcf77d49d8a363b43b9233f350974c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446762"
 ---
 # <a name="ihostsyncmanagercreatecrstwithspincount-method"></a>IHostSyncManager::CreateCrstWithSpinCount 方法
 建立關鍵區段物件具有微調計數進行同步處理。  
@@ -58,11 +59,11 @@ HRESULT CreateCrstWithSpinCount (
  微調計數只適用於多處理器系統。 微調計數指定的執行與無法使用的重要區段相關聯的號誌上的等候作業之前，必須備呼叫執行緒的次數。 關鍵區段會變成可用微調作業期間，如果呼叫的執行緒可避免等候作業。 `CreateCrstWithSpinCount` 鏡像處理 Win32`InitializeCriticalSectionAndSpinCount`函式。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
- **程式庫：**包含做為 MSCorEE.dll 中的資源  
+ **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589863"
 ---
 # <a name="how-to-display-bound-data-in-a-datarepeater-control-visual-studio"></a>如何：在 DataRepeater 控制項中顯示繫結資料 (Visual Studio)
 最常見的用法<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項是以顯示從資料庫或其他資料來源繫結的資料。  

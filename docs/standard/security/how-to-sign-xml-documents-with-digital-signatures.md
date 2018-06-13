@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590295"
 ---
 # <a name="how-to-sign-xml-documents-with-digital-signatures"></a>如何：使用數位簽章簽署 XML 文件
 您可以使用 <xref:System.Security.Cryptography.Xml> 命名空間中的類別，以數位簽章簽署 XML 文件或 XML 文件的一部分。  XML 數位簽章 (XMLDSIG) 可讓您驗證在簽署資料後，資料未經過變更。  如需 XMLDSIG 標準的詳細資訊，請參閱全球資訊網協會 (W3C) 的建議[XML 簽章語法和處理](https://www.w3.org/TR/xmldsig-core/)。  

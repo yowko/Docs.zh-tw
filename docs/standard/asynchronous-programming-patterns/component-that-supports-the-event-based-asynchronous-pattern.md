@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579258"
 ---
 # <a name="walkthrough-implementing-a-component-that-supports-the-event-based-asynchronous-pattern"></a>逐步解說：實作支援事件架構非同步模式的元件
 如果您正在撰寫的類別含有一些可能造成明顯延遲的作業，請考慮實作[事件架構非同步模式概觀](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)，來為它提供非同步功能。  
