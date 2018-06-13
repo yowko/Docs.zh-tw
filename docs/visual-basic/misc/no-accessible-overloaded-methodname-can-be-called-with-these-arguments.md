@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636179"
 ---
 # <a name="no-accessible-overloaded-39ltmethodnamegt39-can-be-called-with-these-arguments-without-a-narrowing-conversion"></a>沒有可存取的多載&#39; &lt;methodname&gt; &#39;可以呼叫且不用縮小轉換這些引數
 已呼叫多載方法，但沒有方法可在未縮小轉換的情況下，符合所提供的引數清單。  

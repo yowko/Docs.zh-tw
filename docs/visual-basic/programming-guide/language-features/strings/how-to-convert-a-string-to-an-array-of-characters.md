@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648615"
 ---
 # <a name="how-to-convert-a-string-to-an-array-of-characters-in-visual-basic"></a>如何：在 Visual Basic 中將字串轉換為字元陣列
 有時候很有用的字元，在您的字串與您在字串內，例如當您在剖析字串的字元位置的資料。 此範例示範如何取得陣列的字元字串中藉由呼叫的字串<xref:System.String.ToCharArray%2A>方法。  
