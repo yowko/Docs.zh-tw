@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590022"
 ---
 # <a name="mutexes"></a>Mutex
 您可以使用 <xref:System.Threading.Mutex> 物件來提供獨佔的資源存取權。 <xref:System.Threading.Mutex> 類別所使用的系統資源比 <xref:System.Threading.Monitor> 類別還多，但前者可跨越應用程式定義域的界限進行封送處理、可搭配多個等候使用，並可用來同步處理不同處理序內的執行緒。 如需受管理之同步處理機制的比較，請參閱[同步處理原始物件概觀](../../../docs/standard/threading/overview-of-synchronization-primitives.md)。  

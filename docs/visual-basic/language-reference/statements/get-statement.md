@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605104"
 ---
 # <a name="get-statement"></a>Get 陳述式
 宣告`Get`屬性程序用來擷取屬性的值。  

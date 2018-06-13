@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594263"
 ---
 # <a name="subscript-out-of-range-visual-basic"></a>陣列索引超出範圍 (Visual Basic)
 陣列註標不正確，因為它超出允許的範圍。 維度的最低註標的值永遠為 0，而最高註標的值由`GetUpperBound`該維度的方法。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603466"
 ---
 # <a name="extension-indexer-property-visual-basic"></a>擴充索引子屬性 (Visual Basic)
 提供集合中個別項目的存取。  

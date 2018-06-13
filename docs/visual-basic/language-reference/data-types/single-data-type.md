@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590767"
 ---
 # <a name="single-data-type-visual-basic"></a>字串資料類型 (Visual Basic)
 保存帶正負號的 IEEE 32 位元 （4 個位元組） 單精確度浮點數值範圍從-3.4028235 e + 38 到-1.401298-45 負值，並從 1.401298-45 到 3.4028235 e + 38 的正數值。 單精確度數字會儲存實際數字的近似值。  

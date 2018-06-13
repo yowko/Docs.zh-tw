@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602771"
 ---
 # <a name="registry-summary-visual-basic"></a>登錄摘要 (Visual Basic)
 Visual Studio 語言關鍵字和執行階段程式庫成員會依用途組織和使用。  

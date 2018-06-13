@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592271"
 ---
 # <a name="how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls-visual-studio"></a>如何：使用 OvalShape 和 RectangleShape 控制項繪製圖案 (Visual Studio)
 您可以在設計階段和執行階段使用 <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> 控制項，在表單或容器上繪製圓形或橢圓形。 您可以使用 <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> 控制項在表單或容器上繪製正方形、矩形或是有圓角的矩形。 您也可以在設計階段和執行階段使用此控制項來繪製圖形。  

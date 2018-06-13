@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590903"
 ---
 # <a name="how-to-create-a-masterdetail-form-by-using-two-datarepeater-controls-visual-studio"></a>如何：使用兩個 DataRepeater 控制項建立主從式表單 (Visual Studio)
 您可以使用兩個或多個顯示相關的資料<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項建立主從式表單。 比方說，您可以在其中一個顯示客戶清單<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>，當使用者選取的客戶，顯示該客戶的訂單清單的第二個和<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>。  

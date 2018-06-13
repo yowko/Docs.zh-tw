@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590794"
 ---
 # <a name="how-to-disable-adding-and-deleting-datarepeater-items-visual-studio"></a>如何：停用加入和刪除 DataRepeater 項目 (Visual Studio)
 根據預設，使用者可以新增或刪除的項目<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項。 使用者可以按 CTRL + N 加入新項目時<xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItemEventArgs.DataRepeaterItem%2A>焦點或按一下**AddNewItem**按鈕<xref:System.Windows.Forms.BindingNavigator>控制項。 使用者可以藉由按下刪除的項目刪除時<xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItemEventArgs.DataRepeaterItem%2A>焦點或按一下**DeleteItem**按鈕<xref:System.Windows.Forms.BindingNavigator>控制項。  

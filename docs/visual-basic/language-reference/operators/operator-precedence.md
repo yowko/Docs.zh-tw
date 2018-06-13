@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605000"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Visual Basic 中的運算子優先順序
 每個組件時數個作業發生時在運算式中，評估，而且在呼叫預先定義的順序解決*運算子優先順序*。  

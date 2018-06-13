@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593889"
 ---
 # <a name="path-not-found"></a>找不到路徑
 檔案存取或磁碟存取作業時，作業系統已找不到指定的路徑。 檔案的路徑包括磁碟機規格加上目錄和子目錄的必須周遊以找出檔案。 路徑可為相對或絕對路徑。  

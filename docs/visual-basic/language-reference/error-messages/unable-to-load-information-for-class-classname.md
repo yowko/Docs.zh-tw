@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604168"
 ---
 # <a name="unable-to-load-information-for-class-39ltclassnamegt39"></a>無法載入類別的資訊&#39;&lt;類別名稱&gt;&#39;
 沒有可用的類別已建立的參考。  

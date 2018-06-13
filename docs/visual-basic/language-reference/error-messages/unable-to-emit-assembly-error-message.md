@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595169"
 ---
 # <a name="unable-to-emit-assembly-lterror-messagegt"></a>無法發出組件：&lt;錯誤訊息&gt;
 Visual Basic 編譯器呼叫組件連結器 (Al.exe，也稱為 Alink) 產生資訊清單，與組件，連結器在建立組件的發出階段回報錯誤。  

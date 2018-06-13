@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586382"
 ---
 # <a name="initializer-expected"></a>必須是初始設定式
 您嘗試使用物件初始設定式中的初始設定清單是空的如下列範例所示，宣告類別的執行個體。  

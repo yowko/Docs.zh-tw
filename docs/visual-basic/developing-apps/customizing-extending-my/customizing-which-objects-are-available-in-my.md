@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592148"
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>自訂 My 中可用的物件 (Visual Basic)
 本主題描述如何，您可以控制哪些`My`會藉由設定您的專案啟用物件`_MYTYPE`條件式編譯常數。 Visual Studio 整合式開發環境 (IDE) 會保留`_MYTYPE`專案與專案類型的同步處理的條件式編譯常數。  

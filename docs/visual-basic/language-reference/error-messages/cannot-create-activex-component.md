@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585953"
 ---
 # <a name="cannot-create-activex-component"></a>無法建立 ActiveX 元件
 您嘗試在設計階段時將 ActiveX 控制項放至於表單上，或將表單加入其上有 ActiveX 控制項的專案，但登錄中找不到相關資訊。  

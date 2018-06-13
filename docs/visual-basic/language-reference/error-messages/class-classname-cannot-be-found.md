@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586486"
 ---
 # <a name="class-39ltclassnamegt39-cannot-be-found"></a>類別&#39; &lt;classname&gt; &#39;找不到
 類別\<類別名稱 >' 找不到。 此狀況通常是因為 'Microsoft.VisualBasic.dll' 不符。  

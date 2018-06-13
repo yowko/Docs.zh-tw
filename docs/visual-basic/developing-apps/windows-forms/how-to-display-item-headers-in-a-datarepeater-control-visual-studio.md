@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592129"
 ---
 # <a name="how-to-display-item-headers-in-a-datarepeater-control-visual-studio"></a>如何：在 DataRepeater 控制項中顯示項目標題 (Visual Studio)
 中的項目標頭<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項提供視覺指標，當<xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>已選取。 當<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A>屬性設定為<xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Vertical>（預設值），顯示項目標題左邊的每個項目。 當<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A>屬性設定為<xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Horizontal>，項目標頭會顯示在每個項目的頂端。  

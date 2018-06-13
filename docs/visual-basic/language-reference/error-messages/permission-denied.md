@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595991"
 ---
 # <a name="permission-denied-visual-basic"></a>使用權限遭拒 (Visual Basic)
 嘗試寫入防寫保護的磁碟，或存取已鎖定的檔案。  

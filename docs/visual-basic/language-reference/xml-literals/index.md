@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600762"
 ---
 # <a name="xml-literals-visual-basic"></a>XML 常值 (Visual Basic)
 本節中的主題記錄 Visual Basic 中的 XML 常值的語法。 XML 常值語法可讓您直接在您的程式碼中加入 XML。  

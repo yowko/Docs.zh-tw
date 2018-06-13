@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594184"
 ---
 # <a name="xml-namespace-uri-39httpwwww3orgxml1998namespace39-can-be-bound-only-to-39xmlns39"></a>XML 命名空間 URI &#39; http://www.w3.org/XML/1998/namespace&#39; 可以只有繫結&#39;xmlns&#39;
 URI http://www.w3.org/XML/1998/namespace XML 命名空間宣告中使用。 這個 URI 是保留的命名空間，不能包含在 XML 命名空間宣告。  

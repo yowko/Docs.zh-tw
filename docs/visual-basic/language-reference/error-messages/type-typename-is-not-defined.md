@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595182"
 ---
 # <a name="type-39lttypenamegt39-is-not-defined"></a>型別&#39; &lt;typename&gt; &#39;未定義
 陳述式已參考未定義的類型。 您可以定義宣告陳述式中的類型例如`Enum`， `Structure`， `Class`，或`Interface`。  

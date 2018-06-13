@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33473224"
 ---
 # <a name="security-validation-and-authentication-failures-per-second"></a>每秒的安全性驗證和驗證失敗數
 計數器名稱：每秒的安全性驗證和驗證失敗。  

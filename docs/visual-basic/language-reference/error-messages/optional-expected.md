@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593950"
 ---
 # <a name="39optional39-expected"></a>&#39;選擇性&#39;預期
 在程序宣告中的選擇性引數的後面是必要的引數。 每個選擇性引數後面的引數也必須是選擇性的。  
