@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355213"
 ---
 # <a name="transaction-processing"></a>交易處理
 當您從線上書店購買一本書時，您以金錢來交易書籍 (以信用方式來支付)。 如果您的信用良好，接下來的一系列作業流程會確保您收到這本書，同時確保書店收到您支付的錢。 但是，如果在一系列交易過程中有任何一個環節出錯，整個交易就會失敗。 您將拿不到書，而書店也無法收到您支付的錢。  

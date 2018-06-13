@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365445"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>ADO.NET 中的並存執行
 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中，並存執行是指在安裝多個 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 版本的電腦上執行應用程式 (單獨使用針對編譯該應用程式所用的版本) 的能力。 如需設定來並行執行的詳細資訊，請參閱[-並存執行](../../../../docs/framework/deployment/side-by-side-execution.md)。  

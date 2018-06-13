@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358465"
 ---
 # <a name="object-identity"></a>物件識別
 執行階段中的物件具有唯一的識別 (Identity)。 兩個參考相同物件的變數實際上是參考相同的物件執行個體。 因此，透過經過其中一個變數的路徑進行的變更，可以透過另一個變數立即看到。  

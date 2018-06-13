@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313566"
 ---
 # <a name="passing-arrays-using-ref-and-out-c-programming-guide"></a>使用 ref 和 out 傳遞陣列 (C# 程式設計手冊)
 如同所有的 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 參數，陣列類型的 `out` 參數必須先指派才能使用，也就是說，被呼叫端必須先指派這個參數。 例如:   

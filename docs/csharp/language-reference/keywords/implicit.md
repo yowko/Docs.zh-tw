@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215013"
 ---
 # <a name="implicit-c-reference"></a>implicit (C# 參考)
 `implicit` 關鍵字是用來宣告隱含的使用者定義型別轉換運算子。 使用它可啟用使用者定義型別和其他型別之間的隱含轉換，但前提是要保證轉換作業不會導致資料的遺失。  

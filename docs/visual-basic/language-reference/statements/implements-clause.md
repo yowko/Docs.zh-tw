@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603401"
 ---
 # <a name="implements-clause-visual-basic"></a>Implements 子句 (Visual Basic)
 表示類別或結構的成員提供介面中定義之成員的實作。  

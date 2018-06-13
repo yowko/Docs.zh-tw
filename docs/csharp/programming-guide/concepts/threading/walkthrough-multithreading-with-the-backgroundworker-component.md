@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339364"
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-c"></a>逐步解說：使用 BackgroundWorker 元件進行多執行緒處理 (C#)
 本逐步解說示範如何建立多執行緒的 Windows Forms 應用程式，以搜尋文字檔案中某個文字的出現次數。 其會示範：  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362461"
 ---
 # <a name="sql-server-data-type-mappings"></a>SQL Server 資料類型對應
 SQL Server 和 .NET Framework 是以不同的型別系統為基礎。 例如，.NET Framework <xref:System.Decimal> 結構的最大小數點位數為 28，而 SQL Server decimal 和 numeric 資料型別的最大小數點位數為 38。 為了在讀取和寫入資料時維持資料完整性，<xref:System.Data.SqlClient.SqlDataReader> 會公開 (Expose) SQL Server 特有的具型別存取子方法 (可傳回 <xref:System.Data.SqlTypes> 的物件) 以及存取子方法 (可傳回 .NET Framework 型別)。 SQL Server 型別和 .NET Framework 型別也會由 <xref:System.Data.DbType> 和 <xref:System.Data.SqlDbType> 類別 (Class) 中的列舉型別 (Enumeration) 表示，而且您可以在指定 <xref:System.Data.SqlClient.SqlParameter> 資料型別時使用這些類別。  

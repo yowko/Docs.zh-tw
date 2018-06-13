@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362523"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>在 SQL Server 中建立應用程式角色
 應用程式角色可以用於將權限指派給應用程式，而不是資料庫角色或使用者。 使用者可以連接到資料庫、啟動應用程式角色，並採用授與應用程式的權限。 授與應用程式角色的權限在連接期間內都會維持有效。  

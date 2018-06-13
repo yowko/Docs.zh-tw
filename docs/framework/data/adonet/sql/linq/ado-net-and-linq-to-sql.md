@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363645"
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET 和 LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 屬於[!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]系列技術。 它是以 [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 提供者模型所提供的服務為基礎。 因此，您可以混合[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]與現有的程式碼[!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]應用程式和移轉目前[!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]解決方案[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]。 下圖提供關聯性 (Relationship) 的高層級檢視。  

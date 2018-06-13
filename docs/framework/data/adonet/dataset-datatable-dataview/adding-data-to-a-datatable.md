@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767124"
 ---
 # <a name="adding-data-to-a-datatable"></a>將資料加入至 DataTable
 建立 <xref:System.Data.DataTable> 並使用資料行和條件約束定義其結構之後，即可將新資料列加入資料表。 若要加入新資料列，請將新變數宣告為 <xref:System.Data.DataRow> 型別。 新**DataRow**呼叫時，會傳回物件<xref:System.Data.DataTable.NewRow%2A>方法。 **DataTable**接著會建立**DataRow**物件基礎的資料表，結構所定義的<xref:System.Data.DataColumnCollection>。  

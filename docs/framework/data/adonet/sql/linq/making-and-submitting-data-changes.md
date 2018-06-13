@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360789"
 ---
 # <a name="making-and-submitting-data-changes"></a>變更資料和提交
 本節中的主題描述如何變更資料庫以及將變更傳輸至資料庫，以及如何處理開放式並行存取 (Optimistic Concurrency) 衝突。  
