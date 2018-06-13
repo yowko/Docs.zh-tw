@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332304"
 ---
 # <a name="using-conversion-operators-c-programming-guide"></a>使用轉換運算子 (C# 程式設計手冊)
 您可以使用比較容易上手的 `implicit` 轉換運算子，或者使用可以向任何人清楚指出您要轉換程式碼的 `explicit` 轉換運算子。 本主題將示範這兩種類型的轉換運算子。  

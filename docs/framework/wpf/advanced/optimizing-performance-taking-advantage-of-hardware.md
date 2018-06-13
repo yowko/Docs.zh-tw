@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547250"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>最佳化效能：運用硬體
 內部架構[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]具有兩個呈現管線、 硬體和軟體。 本主題提供可協助您做出有關您的應用程式的效能最佳化這些轉譯管線的相關資訊。  

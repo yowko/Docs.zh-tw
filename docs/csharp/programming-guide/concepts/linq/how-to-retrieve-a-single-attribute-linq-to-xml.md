@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321284"
 ---
 # <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>如何：擷取單一屬性 (LINQ to XML) (C#)
 這個主題會說明如何擷取項目的單一屬性 (如果有屬性名稱)。 這在撰寫您要尋找具有特定屬性之項目的查詢運算式時，相當實用。  

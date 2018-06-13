@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332215"
 ---
 # <a name="wordprocessingml-document-with-styles"></a>WordprocessingML 文件以及樣式
 更複雜的 WordprocessingML 文件擁有使用樣式格式化的段落。  

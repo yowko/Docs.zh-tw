@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549366"
 ---
 # <a name="table-overview"></a>資料表概觀
 <xref:System.Windows.Documents.Table> 是支援的非固定格式文件內容的方格呈現的區塊層級項目。 此元素的彈性讓它更為實用，但也讓您更難了解並正確使用。  

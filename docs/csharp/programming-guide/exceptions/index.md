@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335260"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>例外狀況和例外處理 (C# 程式設計手冊)
 C# 語言的例外狀況處理功能可協助您處理在程式執行時發生的任何未預期或例外狀況。 例外狀況處理會使用 `try`、`catch` 和 `finally` 關鍵字來嘗試可能失敗的動作，以便在您決定這樣做很合理時處理失敗，之後再清除資源。 例外狀況可以由 Common Language Runtime (CLR)、.NET Framework 或任何協力廠商程式庫，或者應用程式程式碼來產生。 例外狀況是使用 `throw` 關鍵字所建立。  

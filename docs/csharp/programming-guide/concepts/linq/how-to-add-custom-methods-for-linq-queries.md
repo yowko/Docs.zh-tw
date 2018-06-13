@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326894"
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-c"></a>如何：新增 LINQ 查詢的自訂方法 (C#)
 您可以將擴充方法新增至 <xref:System.Collections.Generic.IEnumerable%601> 介面，來延伸您可以用於 LINQ 查詢的方法組。 例如，除了標準平均值或最多作業，您可以建立自訂的彙總方法，計算一系列值的單一值。 您也可以建立一個方法，用為自訂篩選器或一系列值的特定資料轉換，並傳回新的序列。 這類方法的範例包括 <xref:System.Linq.Enumerable.Distinct%2A>、<xref:System.Linq.Enumerable.Skip%2A> 和 <xref:System.Linq.Enumerable.Reverse%2A>。  

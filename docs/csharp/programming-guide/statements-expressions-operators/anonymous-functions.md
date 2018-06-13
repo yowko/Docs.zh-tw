@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321843"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>匿名函式 (C# 程式設計手冊)
 匿名函式是可用於任何需要委派類型之處的「內嵌」陳述式或運算式。 您可以使用它來初始化具名委派，或改將它傳遞給具名委派類型作為方法參數。  

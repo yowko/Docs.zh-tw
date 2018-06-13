@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334752"
 ---
 # <a name="boxing-nullable-types-c-programming-guide"></a>Box 處理可為 Null 的類型 (C# 程式設計手冊)
 如為非 Null 的物件，以可為 Null 的型別為基礎的物件僅能以 boxing 處理。 如果 <xref:System.Nullable%601.HasValue%2A> 是 `false`，則物件參考會指派給 `null` 而不是 boxing。 例如:   

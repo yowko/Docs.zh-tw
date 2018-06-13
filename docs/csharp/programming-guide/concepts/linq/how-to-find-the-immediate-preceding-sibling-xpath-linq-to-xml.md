@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318551"
 ---
 # <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-c"></a>如何：尋找正前面的同層級項目 (XPath-LINQ to XML) (C#)
 有時候您會想要尋找節點正前面的同層級。 由於前面同層級座標軸的位置性述詞語意 (Semantics) 在 XPath 中與 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 相反的這個差異，這是其中一個更有趣的比較。  

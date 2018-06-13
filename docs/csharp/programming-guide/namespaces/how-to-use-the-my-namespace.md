@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332006"
 ---
 # <a name="how-to-use-the-my-namespace-c-programming-guide"></a>如何：使用 My 命名空間 (C# 程式設計手冊)
 <xref:Microsoft.VisualBasic.MyServices> 命名空間 (Visual Basic 中的 `My`) 允許您以輕鬆且直覺式的方式存取許多 .NET Framework 類別，讓您能夠撰寫程式碼以與電腦、應用程式、設定、資源等等互動。 雖然原本設計為搭配使用 Visual Basic，但 `MyServices` 命名空間可以在 C# 應用程式中使用。  

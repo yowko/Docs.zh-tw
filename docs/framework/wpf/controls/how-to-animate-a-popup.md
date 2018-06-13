@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553750"
 ---
 # <a name="how-to-animate-a-popup"></a>如何：建立快顯功能表的動畫
 此範例示範兩種方式以動畫方式顯示<xref:System.Windows.Controls.Primitives.Popup>控制項。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334180"
 ---
 # <a name="async-return-types-c"></a>非同步方法的傳回型別 (C#)
 非同步方法可有下列傳回型別：

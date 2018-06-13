@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320660"
 ---
 # <a name="generics-and-arrays-c-programming-guide"></a>泛型和陣列 (C# 程式設計手冊)
 在 C# 2.0 及更新版本中，下限為零的一維陣列會自動實作 <xref:System.Collections.Generic.IList%601>。 這能讓您建立泛型方法，使用相同的程式碼逐一查看陣列和其他集合類型。 這項技術主要用於讀取集合的資料。 <xref:System.Collections.Generic.IList%601> 介面不能用來新增或移除陣列中的元素。 如果您嘗試呼叫 <xref:System.Collections.Generic.IList%601> 方法，例如此內容陣列上的 <xref:System.Collections.Generic.IList%601.RemoveAt%2A>，會擲回例外狀況。  

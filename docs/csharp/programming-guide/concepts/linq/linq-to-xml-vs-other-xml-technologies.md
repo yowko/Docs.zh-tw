@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333888"
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML 比較其他 XML 技術之比較
 這個主題會比較 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 與下列 XML 技術：<xref:System.Xml.XmlReader>、XSLT、MSXML 和 XmlLite。 這個資訊可以協助您決定要使用的技術。  

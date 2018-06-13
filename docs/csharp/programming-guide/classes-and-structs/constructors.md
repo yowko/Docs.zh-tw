@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33314030"
 ---
 # <a name="constructors-c-programming-guide"></a>建構函式 (C# 程式設計手冊)
 每當建立[類別](../../../csharp/language-reference/keywords/class.md)或[結構](../../../csharp/language-reference/keywords/struct.md)時，都會呼叫其建構函式。 類別或結構可有使用不同引數的多個建構函式。 建構函式能讓程式設計師可以設定預設值、限制具現化，以及撰寫彈性且容易閱讀的程式碼。 如需詳細資訊和範例，請參閱[使用建構函式](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)和[執行個體建構函式](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33314323"
 ---
 # <a name="fields-c-programming-guide"></a>欄位 (C# 程式設計手冊)
 「欄位」是任意類型的變數，可在[類別](../../../csharp/language-reference/keywords/class.md)或[結構](../../../csharp/language-reference/keywords/struct.md)中直接宣告。 欄位是其包含類型的「成員」。  

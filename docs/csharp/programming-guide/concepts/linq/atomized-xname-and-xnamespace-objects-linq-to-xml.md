@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323205"
 ---
 # <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-c"></a>不可部分完成的 XName 和 XNamespace 物件 (LINQ to XML) (C#)
 <xref:System.Xml.Linq.XName> 和 <xref:System.Xml.Linq.XNamespace> 物件是「不可部分完成」的物件。也就是說，如果它們包含相同的限定名稱，它們就會參考相同的物件。 這會針對查詢產生效能優勢：當您比較兩個不可部分完成的名稱是否相等時，基礎中繼語言 (Intermediate Language) 只需要判斷這兩個參考是否指向相同的物件即可。 基礎程式碼不需要進行耗時的字串比較。  

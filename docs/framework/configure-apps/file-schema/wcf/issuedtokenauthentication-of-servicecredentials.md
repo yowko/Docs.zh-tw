@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749965"
 ---
 # <a name="ltissuedtokenauthenticationgt-of-ltservicecredentialsgt"></a>&lt;serviceCredentials&gt; 的 &lt;issuedTokenAuthentication&gt;
 指定發行為服務認證的自訂權杖。  

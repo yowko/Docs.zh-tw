@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316318"
 ---
 # <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-c"></a>將項目、屬性和節點新增至 XML 樹狀結構 (C#)
 您可以將內容 (項目、屬性、註解、處理指示、文字和 CDATA) 加入到現有的 XML 樹狀結構中。  

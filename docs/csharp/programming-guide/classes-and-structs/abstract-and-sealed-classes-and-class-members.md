@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313910"
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>抽象和密封類別以及類別成員 (C# 程式設計手冊)
 [abstract](../../../csharp/language-reference/keywords/abstract.md) 關鍵字可讓您建立類別和[類別](../../../csharp/language-reference/keywords/class.md)成員，這些類別和成員並不完整，因此必須在衍生類別中實作。  

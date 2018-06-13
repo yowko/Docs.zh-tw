@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267905"
 ---
 # <a name="integral-types-table-c-reference"></a>整數類資料類型表 (C# 參考)
 下表顯示整數型別的大小和範圍，以構成簡單類型的子集。  

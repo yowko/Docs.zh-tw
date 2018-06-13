@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324414"
 ---
 # <a name="xattribute-class-overview-c"></a>XAttribute 類別概觀 (C#)
 屬性是與項目相關聯的成對名稱/值。 <xref:System.Xml.Linq.XAttribute> 類別表示 XML 屬性。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319321"
 ---
 # <a name="how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression-c-programming-guide"></a>如何：在查詢運算式中使用隱含類型區域變數和陣列 (C# 程式設計手冊)
 每次您希望編譯器判斷區域變數的類型時，可以使用隱含型別區域變數。 您必須使用隱含型別區域變數來儲存查詢運算式中常用的匿名型別。 下列範例說明在查詢中選擇性使用和必須使用隱含型別區域變數的情況。  

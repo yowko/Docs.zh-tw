@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323706"
 ---
 # <a name="tutorial-chaining-queries-together-c"></a>教學課程：將查詢鏈結在一起 (C#)
 此教學課程說明將查詢鏈結在一起時的處理模型。 將查詢鏈結在一起是撰寫功能性轉換的重要部分。 確實了解鏈結的查詢如何運作相當重要。  

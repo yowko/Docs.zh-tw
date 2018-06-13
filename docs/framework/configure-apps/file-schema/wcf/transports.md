@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755327"
 ---
 # <a name="transports"></a>傳輸
 傳輸層 (Transport Layer) 屬於通道堆疊中的最底層。 使用 Windows Communication Foundation (WCF) 的主要傳輸是 HTTP、 HTTPS、 TCP 及具名管道。 這個區段列出所有可讓您設定不同類型傳輸的組態項目。  

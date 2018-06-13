@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320862"
 ---
 # <a name="friend-assemblies-c"></a>Friend 組件 (C#)
 「friend 組件」是可以存取另一個組件的[內部](../../../../csharp/language-reference/keywords/internal.md)類型和成員的組件。 如果將組件指定為 friend 組件，就不再需要將類型和成員標記為 public，以供其他組件存取。 這在下列情況下特別方便：  

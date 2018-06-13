@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320088"
 ---
 # <a name="how-to-raise-base-class-events-in-derived-classes-c-programming-guide"></a>如何：在衍生類別中引發基底類別事件 (C# 程式設計手冊)
 下列簡單的範例示範在基底類別中宣告事件的標準方式，讓事件也可以從衍生類別引發。 這個模式會在 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 類別庫的 Windows Forms 類別中廣泛使用。  

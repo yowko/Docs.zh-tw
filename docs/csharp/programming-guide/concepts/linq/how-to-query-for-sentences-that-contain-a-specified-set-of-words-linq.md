@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319880"
 ---
 # <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>如何：查詢包含指定字組的句子 (LINQ) (C#)
 此範例示範如何在文字檔中尋找含有每個指定字組之相符項目的句子。 雖然此範例硬式編碼了搜尋字詞的陣列，但也可以在執行階段將它動態填入。 在此範例中，查詢會傳回包含 "Historically"、"data" 和 "integrated" 等字的句子。  

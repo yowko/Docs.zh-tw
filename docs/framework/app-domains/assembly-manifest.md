@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753647"
 ---
 # <a name="assembly-manifest"></a>組件資訊清單
 每個組件 (不論是靜態或是動態) 都含有描述組件中項目彼此如何關聯的資料集合。 組件資訊清單就包含這個組件的中繼資料。 組件資訊清單含有指定組件的版本需求和安全性識別所需的所有中繼資料，以及定義組件範圍和解析資源與類別參考所需的所有中繼資料。 組件資訊清單可以存放在具有 Microsoft Intermediate Language (MSIL) 程式碼的可移植執行檔 (PE) (.exe 或 .dll) 中，或者存放在只包含組件資訊清單的獨立 PE 檔中。  
