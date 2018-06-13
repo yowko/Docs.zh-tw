@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569079"
 ---
 # <a name="accessing-xml-data-using-xpathnavigator"></a><span data-ttu-id="70b30-102">使用 XPathNavigator 存取 XML 資料</span><span class="sxs-lookup"><span data-stu-id="70b30-102">Accessing XML Data using XPathNavigator</span></span>
 <span data-ttu-id="70b30-103"><xref:System.Xml.XPath.XPathNavigator> 類別提供了一組可以在 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 物件中巡覽節點、擷取 XML 資料及存取強型別 XML 資料的方法。</span><span class="sxs-lookup"><span data-stu-id="70b30-103">The <xref:System.Xml.XPath.XPathNavigator> class provides methods to navigate nodes, extract XML data and access strongly typed XML data in an <xref:System.Xml.XPath.XPathDocument> or <xref:System.Xml.XmlDocument> object.</span></span>  

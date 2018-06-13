@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650663"
 ---
 # <a name="-filealign"></a><span data-ttu-id="06b6a-102">-filealign</span><span class="sxs-lookup"><span data-stu-id="06b6a-102">-filealign</span></span>
 <span data-ttu-id="06b6a-103">指定要對齊輸出檔案區段的位置。</span><span class="sxs-lookup"><span data-stu-id="06b6a-103">Specifies where to align the sections of the output file.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569447"
 ---
 # <a name="namespace-support-in-the-dom"></a><span data-ttu-id="d8b0c-102">DOM 中支援的命名空間</span><span class="sxs-lookup"><span data-stu-id="d8b0c-102">Namespace Support in the DOM</span></span>
 <span data-ttu-id="d8b0c-103">XML 文件物件模型 (DOM) 具有完全的命名空間感知。</span><span class="sxs-lookup"><span data-stu-id="d8b0c-103">The XML Document Object Model (DOM) is completely namespace-aware.</span></span> <span data-ttu-id="d8b0c-104">只有命名空間感知 XML 文件受支援。</span><span class="sxs-lookup"><span data-stu-id="d8b0c-104">Only namespace-aware XML documents are supported.</span></span> <span data-ttu-id="d8b0c-105">全球資訊網協會 (W3C) 指定實作層級 1 的 DOM 應用程式可不具備命名空間感知，而 DOM 層級 2 功能則具有命名空間感知。</span><span class="sxs-lookup"><span data-stu-id="d8b0c-105">The World Wide Web Consortium (W3C) specifies that DOM applications that implement Level 1 can be non-namespace-aware, and DOM Level 2 features are namespace-aware.</span></span> <span data-ttu-id="d8b0c-106">然而，不論方法是來自層級 1 或層級 2 DOM 建議事項，XML DOM 中所有的功能都具有命名空間感知。</span><span class="sxs-lookup"><span data-stu-id="d8b0c-106">However, all features in the XML DOM are namespace-aware, regardless if the method is from the Level 1 or Level 2 DOM Recommendation.</span></span>  

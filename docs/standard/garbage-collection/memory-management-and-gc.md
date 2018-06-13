@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569904"
 ---
 # <a name="memory-management-and-garbage-collection-in-net"></a><span data-ttu-id="d5e6c-102">.NET 中的記憶體管理與記憶體回收</span><span class="sxs-lookup"><span data-stu-id="d5e6c-102">Memory Management and Garbage Collection in .NET</span></span>
 <span data-ttu-id="d5e6c-103">文件中的這一節將提供關於在 .NET 中管理記憶體的資訊。</span><span class="sxs-lookup"><span data-stu-id="d5e6c-103">This section of the documentation provides information about managing memory in .NET.</span></span>  
