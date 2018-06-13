@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575183"
 ---
 # <a name="how-to-create-files-and-directories-in-isolated-storage"></a><span data-ttu-id="9dd37-102">如何：在隔離儲存區中建立檔案和目錄</span><span class="sxs-lookup"><span data-stu-id="9dd37-102">How to: Create Files and Directories in Isolated Storage</span></span>
 <span data-ttu-id="9dd37-103">取得隔離存放區之後，您可以建立目錄和檔案來儲存資料。</span><span class="sxs-lookup"><span data-stu-id="9dd37-103">After you have obtained an isolated store, you can create directories and files for storing data.</span></span> <span data-ttu-id="9dd37-104">在存放區內，系統會以相對於虛擬檔案系統的根目錄指定檔案和目錄名稱。</span><span class="sxs-lookup"><span data-stu-id="9dd37-104">Within a store, file and directory names are specified with respect to the root of the virtual file system.</span></span>  

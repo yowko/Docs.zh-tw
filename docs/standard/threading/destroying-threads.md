@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582925"
 ---
 # <a name="destroying-threads"></a><span data-ttu-id="8a71f-102">終結執行緒</span><span class="sxs-lookup"><span data-stu-id="8a71f-102">Destroying Threads</span></span>
 <span data-ttu-id="8a71f-103"><xref:System.Threading.Thread.Abort%2A> 方法可用來永久停止受控執行緒。</span><span class="sxs-lookup"><span data-stu-id="8a71f-103">The <xref:System.Threading.Thread.Abort%2A> method is used to stop a managed thread permanently.</span></span> <span data-ttu-id="8a71f-104">當您呼叫 <xref:System.Threading.Thread.Abort%2A> 時，通用語言執行平台會在目標執行緒中擲回 <xref:System.Threading.ThreadAbortException>，而目標執行緒可加以攔截。</span><span class="sxs-lookup"><span data-stu-id="8a71f-104">When you call <xref:System.Threading.Thread.Abort%2A>, the common language runtime throws a <xref:System.Threading.ThreadAbortException> in the target thread, which the target thread can catch.</span></span> <span data-ttu-id="8a71f-105">如需詳細資訊，請參閱<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="8a71f-105">For more information, see <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.</span></span>  

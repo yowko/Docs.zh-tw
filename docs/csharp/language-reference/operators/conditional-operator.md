@@ -14,6 +14,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457212"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="71616-102">?: 運算子 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="71616-102">?: Operator (C# Reference)</span></span>
 <span data-ttu-id="71616-103">條件運算子 (`?:`) 通稱為三元條件運算式，是根據布林運算式的值傳回兩個值的其中一個。</span><span class="sxs-lookup"><span data-stu-id="71616-103">The conditional operator (`?:`), commonly known as the ternary conditional operator, returns one of two values depending on the value of a Boolean expression.</span></span> <span data-ttu-id="71616-104">以下是條件運算子的語法。</span><span class="sxs-lookup"><span data-stu-id="71616-104">Following is the syntax for the conditional operator.</span></span>  

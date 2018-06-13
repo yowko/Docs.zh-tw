@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172629"
 ---
 # <a name="readonly-c-reference"></a><span data-ttu-id="a11ec-102">readonly (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="a11ec-102">readonly (C# Reference)</span></span>
 <span data-ttu-id="a11ec-103">`readonly` 關鍵字是您可以在欄位上使用的修飾詞。</span><span class="sxs-lookup"><span data-stu-id="a11ec-103">The `readonly` keyword is a modifier that you can use on fields.</span></span> <span data-ttu-id="a11ec-104">欄位宣告包含 `readonly` 修飾詞時，宣告所引進欄位的指派只能出現為宣告的一部分或在相同類別的建構函式中。</span><span class="sxs-lookup"><span data-stu-id="a11ec-104">When a field declaration includes a `readonly` modifier, assignments to the fields introduced by the declaration can only occur as part of the declaration or in a constructor in the same class.</span></span>  

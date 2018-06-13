@@ -7,6 +7,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34233726"
 ---
 # <a name="lthostgt"></a><span data-ttu-id="f8736-102">&lt;主機&gt;</span><span class="sxs-lookup"><span data-stu-id="f8736-102">&lt;host&gt;</span></span>
 <span data-ttu-id="f8736-103">指定服務主機的設定。</span><span class="sxs-lookup"><span data-stu-id="f8736-103">Specifies settings for a service host.</span></span>  

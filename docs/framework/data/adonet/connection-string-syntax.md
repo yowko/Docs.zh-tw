@@ -7,6 +7,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472746"
 ---
 # <a name="connection-string-syntax"></a><span data-ttu-id="707d9-102">連接字串語法</span><span class="sxs-lookup"><span data-stu-id="707d9-102">Connection String Syntax</span></span>
 <span data-ttu-id="707d9-103">每個 .NET Framework 資料提供者都擁有一個 `Connection` 物件，繼承自 <xref:System.Data.Common.DbConnection> 以及提供者特定的 <xref:System.Data.Common.DbConnection.ConnectionString%2A> 屬性。</span><span class="sxs-lookup"><span data-stu-id="707d9-103">Each .NET Framework data provider has a `Connection` object that inherits from <xref:System.Data.Common.DbConnection> as well as a provider-specific <xref:System.Data.Common.DbConnection.ConnectionString%2A> property.</span></span> <span data-ttu-id="707d9-104">每個提供者的特定連接字串語法會記錄在其 `ConnectionString` 屬性中。</span><span class="sxs-lookup"><span data-stu-id="707d9-104">The specific connection string syntax for each provider is documented in its `ConnectionString` property.</span></span> <span data-ttu-id="707d9-105">下表列出 .NET Framework 中包含的四個資料提供者。</span><span class="sxs-lookup"><span data-stu-id="707d9-105">The following table lists the four data providers that are included in the .NET Framework.</span></span>  

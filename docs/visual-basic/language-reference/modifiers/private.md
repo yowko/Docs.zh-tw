@@ -12,6 +12,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234551"
 ---
 # <a name="private-visual-basic"></a><span data-ttu-id="47c92-102">Private (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="47c92-102">Private (Visual Basic)</span></span>
 <span data-ttu-id="47c92-103">指定一或多個宣告的程式設計項目只能從其宣告的內容，包括從任何所包含的型別中存取。</span><span class="sxs-lookup"><span data-stu-id="47c92-103">Specifies that one or more declared programming elements are accessible only from within their declaration context, including from within any contained types.</span></span>  

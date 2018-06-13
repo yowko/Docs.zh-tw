@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172044"
 ---
 # <a name="amp-operator-c-reference"></a><span data-ttu-id="ea4f4-102">&amp;= 運算子 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="ea4f4-102">&amp;= Operator (C# Reference)</span></span>
 <span data-ttu-id="ea4f4-103">AND 指派運算子。</span><span class="sxs-lookup"><span data-stu-id="ea4f4-103">The AND assignment operator.</span></span>  

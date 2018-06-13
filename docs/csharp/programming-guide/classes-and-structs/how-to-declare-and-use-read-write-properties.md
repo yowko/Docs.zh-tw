@@ -13,6 +13,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172314"
 ---
 # <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a><span data-ttu-id="9f045-102">如何：宣告及使用讀寫屬性 (C# 程式設計指南)</span><span class="sxs-lookup"><span data-stu-id="9f045-102">How to: Declare and Use Read Write Properties (C# Programming Guide)</span></span>
 <span data-ttu-id="9f045-103">屬性會提供公用資料成員的便利性，卻沒有不受保護、控制和驗證存取物件資料所附帶的風險。</span><span class="sxs-lookup"><span data-stu-id="9f045-103">Properties provide the convenience of public data members without the risks that come with unprotected, uncontrolled, and unverified access to an object's data.</span></span> <span data-ttu-id="9f045-104">這是透過「存取子」完成的：從基礎資料成員指派和擷取值的特殊方法。</span><span class="sxs-lookup"><span data-stu-id="9f045-104">This is accomplished through *accessors*: special methods that assign and retrieve values from the underlying data member.</span></span> <span data-ttu-id="9f045-105">[set](../../../csharp/language-reference/keywords/set.md) 存取子可讓資料成員被指派，而 [get](../../../csharp/language-reference/keywords/get.md) 存取子可擷取資料成員值。</span><span class="sxs-lookup"><span data-stu-id="9f045-105">The [set](../../../csharp/language-reference/keywords/set.md) accessor enables data members to be assigned, and the [get](../../../csharp/language-reference/keywords/get.md) accessor retrieves data member values.</span></span>  

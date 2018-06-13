@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575358"
 ---
 # <a name="traversing-xml-schemas"></a><span data-ttu-id="786a1-102">周遊 XML 結構描述</span><span class="sxs-lookup"><span data-stu-id="786a1-102">Traversing XML Schemas</span></span>
 <span data-ttu-id="786a1-103">使用結構描述物件模型 (SOM) API 周遊 XML 結構描述，可以提供對儲存於 SOM 之項目、屬性及型別的存取權。</span><span class="sxs-lookup"><span data-stu-id="786a1-103">Traversing an XML schema using the Schema Object Model (SOM) API provides access to the elements, attributes, and types stored in the SOM.</span></span> <span data-ttu-id="786a1-104">周遊載入到 SOM 的 XML 結構描述也是使用 SOM API 編輯 XML 結構描述的第一步。</span><span class="sxs-lookup"><span data-stu-id="786a1-104">Traversing an XML schema loaded into the SOM is also the first step in editing an XML schema using the SOM API.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33957998"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a><span data-ttu-id="54148-103">將現有的.NET 應用程式部署為 Windows 容器</span><span class="sxs-lookup"><span data-stu-id="54148-103">Deploy existing .NET apps as Windows containers</span></span>
 

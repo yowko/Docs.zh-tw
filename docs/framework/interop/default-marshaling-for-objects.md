@@ -15,6 +15,7 @@ ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34312179"
 ---
 # <a name="default-marshaling-for-objects"></a><span data-ttu-id="9f9be-102">物件的預設封送處理</span><span class="sxs-lookup"><span data-stu-id="9f9be-102">Default Marshaling for Objects</span></span>
 <span data-ttu-id="9f9be-103">類型為 <xref:System.Object?displayProperty=nameWithType> 的參數和欄位可以向 Unmanaged 程式碼公開為下列類型之一：</span><span class="sxs-lookup"><span data-stu-id="9f9be-103">Parameters and fields typed as <xref:System.Object?displayProperty=nameWithType> can be exposed to unmanaged code as one of the following types:</span></span>  

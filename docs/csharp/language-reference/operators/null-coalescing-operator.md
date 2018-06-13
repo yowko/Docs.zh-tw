@@ -13,6 +13,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458096"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="c152e-103">??</span><span class="sxs-lookup"><span data-stu-id="c152e-103">??</span></span> <span data-ttu-id="c152e-104">運算子 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="c152e-104">Operator (C# Reference)</span></span>
 <span data-ttu-id="c152e-105">`??` 運算子稱為 null 聯合運算子。</span><span class="sxs-lookup"><span data-stu-id="c152e-105">The `??` operator is called the null-coalescing operator.</span></span>  <span data-ttu-id="c152e-106">如果運算元不是 null，則會傳回左方運算元，否則傳回右方運算元。</span><span class="sxs-lookup"><span data-stu-id="c152e-106">It returns the left-hand operand if the operand is not null; otherwise it returns the right hand operand.</span></span>  

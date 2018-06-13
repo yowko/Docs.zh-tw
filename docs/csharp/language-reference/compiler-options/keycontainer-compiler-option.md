@@ -13,6 +13,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472564"
 ---
 # <a name="-keycontainer-c-compiler-options"></a><span data-ttu-id="be975-102">-keycontainer (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="be975-102">-keycontainer (C# Compiler Options)</span></span>
 <span data-ttu-id="be975-103">指定密碼編譯金鑰容器的名稱。</span><span class="sxs-lookup"><span data-stu-id="be975-103">Specifies the name of the cryptographic key container.</span></span>  
