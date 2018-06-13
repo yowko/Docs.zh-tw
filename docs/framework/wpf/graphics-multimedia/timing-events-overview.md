@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565483"
 ---
 # <a name="timing-events-overview"></a><span data-ttu-id="aa98e-102">計時事件概觀</span><span class="sxs-lookup"><span data-stu-id="aa98e-102">Timing Events Overview</span></span>
 <span data-ttu-id="aa98e-103">本主題描述如何使用五個可用的計時事件<xref:System.Windows.Media.Animation.Timeline>和<xref:System.Windows.Media.Animation.Clock>物件。</span><span class="sxs-lookup"><span data-stu-id="aa98e-103">This topic describes how to use the five timing events available on <xref:System.Windows.Media.Animation.Timeline> and <xref:System.Windows.Media.Animation.Clock> objects.</span></span>  

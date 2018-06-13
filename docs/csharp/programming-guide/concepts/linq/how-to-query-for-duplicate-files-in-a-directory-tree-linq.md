@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321297"
 ---
 # <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a><span data-ttu-id="d61b9-102">如何：查詢樹狀目錄中的重複檔案 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="d61b9-102">How to: Query for Duplicate Files in a Directory Tree (LINQ) (C#)</span></span>
 <span data-ttu-id="d61b9-103">同名的檔案有時可能位於多個資料夾中。</span><span class="sxs-lookup"><span data-stu-id="d61b9-103">Sometimes files that have the same name may be located in more than one folder.</span></span> <span data-ttu-id="d61b9-104">例如，在 Visual Studio 安裝資料夾下，有數個資料夾內含 readme.htm 檔案。</span><span class="sxs-lookup"><span data-stu-id="d61b9-104">For example, under the Visual Studio installation folder, several folders have a readme.htm file.</span></span> <span data-ttu-id="d61b9-105">這個範例示範如何查詢所指定根資料夾下的這類重複檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="d61b9-105">This example shows how to query for such duplicate file names under a specified root folder.</span></span> <span data-ttu-id="d61b9-106">第二個範例示範如何查詢大小和建立時間也相符的檔案。</span><span class="sxs-lookup"><span data-stu-id="d61b9-106">The second example shows how to query for files whose size and creation times also match.</span></span>  

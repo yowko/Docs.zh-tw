@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743468"
 ---
 # <a name="ltservicetimeoutsgt"></a><span data-ttu-id="2a6e2-102">&lt;serviceTimeouts&gt;</span><span class="sxs-lookup"><span data-stu-id="2a6e2-102">&lt;serviceTimeouts&gt;</span></span>
 <span data-ttu-id="2a6e2-103">指定服務的逾時。</span><span class="sxs-lookup"><span data-stu-id="2a6e2-103">Specifies the timeout for a service.</span></span>  

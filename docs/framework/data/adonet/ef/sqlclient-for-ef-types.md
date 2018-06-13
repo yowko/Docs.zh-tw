@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766539"
 ---
 # <a name="sqlclient-for-entity-frameworktypes"></a><span data-ttu-id="61c3d-102">適用於 Entity Framework 之 SqlClient 的類型</span><span class="sxs-lookup"><span data-stu-id="61c3d-102">SqlClient for Entity FrameworkTypes</span></span>
 <span data-ttu-id="61c3d-103">.NET Framework Data Provider for SQL Server (SqlClient) 提供者資訊清單檔案包含下列的清單：提供者基本型別 (Primitive Type)、每個型別的 Facet、概念和儲存體模型基本型別之間的對應，以及概念和儲存體模型基本型別之間的提升及轉換規則。</span><span class="sxs-lookup"><span data-stu-id="61c3d-103">The .NET Framework Data Provider for SQL Server (SqlClient) provider manifest file includes the list of the provider primitive types, facets for each type, the mappings between the conceptual and storage model primitive types, and the promotion and conversion rules between the conceptual and storage model primitive types.</span></span>  

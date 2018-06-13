@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754833"
 ---
 # <a name="ltwebsocketsettingsgt"></a><span data-ttu-id="f4dc3-102">&lt;webSocketSettings&gt;</span><span class="sxs-lookup"><span data-stu-id="f4dc3-102">&lt;webSocketSettings&gt;</span></span>
 <span data-ttu-id="f4dc3-103">用來指定 Web 通訊端設定的組態元素。</span><span class="sxs-lookup"><span data-stu-id="f4dc3-103">A configuration element used to specify Web Socket settings.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749110"
 ---
 # <a name="ltlocalissuergt"></a><span data-ttu-id="1175e-102">&lt;localIssuer&gt;</span><span class="sxs-lookup"><span data-stu-id="1175e-102">&lt;localIssuer&gt;</span></span>
 <span data-ttu-id="1175e-103">指定要用來取得安全性權杖的本機簽發者位址和繫結。</span><span class="sxs-lookup"><span data-stu-id="1175e-103">Specifies the address and binding of the local issuer to be used to obtain a security token.</span></span>  

@@ -33,6 +33,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397009"
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a><span data-ttu-id="9b86c-102">從 CodeDOM 圖表產生和編譯原始程式碼</span><span class="sxs-lookup"><span data-stu-id="9b86c-102">Generating and Compiling Source Code from a CodeDOM Graph</span></span>
 <span data-ttu-id="9b86c-103"><xref:System.CodeDom.Compiler> 命名空間提供的介面，可從 CodeDOM 物件圖形產生原始程式碼以及使用支援的編譯器管理編譯。</span><span class="sxs-lookup"><span data-stu-id="9b86c-103">The <xref:System.CodeDom.Compiler> namespace provides interfaces for generating source code from CodeDOM object graphs and for managing compilation with supported compilers.</span></span> <span data-ttu-id="9b86c-104">程式碼提供者可根據 CodeDOM 圖表以特定的程式設計語言產生原始程式碼。</span><span class="sxs-lookup"><span data-stu-id="9b86c-104">A code provider can produce source code in a particular programming language according to a CodeDOM graph.</span></span> <span data-ttu-id="9b86c-105">衍生自 <xref:System.CodeDom.Compiler.CodeDomProvider> 的類別一般會針對提供者支援的語言，提供產生及編譯程式碼的方法。</span><span class="sxs-lookup"><span data-stu-id="9b86c-105">A class that derives from <xref:System.CodeDom.Compiler.CodeDomProvider> can typically provide methods for generating and compiling code for the language the provider supports.</span></span>  

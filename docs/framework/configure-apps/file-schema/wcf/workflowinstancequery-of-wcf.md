@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767553"
 ---
 # <a name="ltworkflowinstancequerygt-of-wcf"></a><span data-ttu-id="6f90a-102">WCF 的 &lt;workflowInstanceQuery&gt;</span><span class="sxs-lookup"><span data-stu-id="6f90a-102">&lt;workflowInstanceQuery&gt; of WCF</span></span>
 <span data-ttu-id="6f90a-103">表示追蹤工作流程執行個體生命週期變更的查詢，例如已開始或已完成的事件。</span><span class="sxs-lookup"><span data-stu-id="6f90a-103">Represents a query that tracks workflow instance life cycle changes such as a started or completed event.</span></span>  

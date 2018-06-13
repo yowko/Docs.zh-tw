@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749539"
 ---
 # <a name="lttokenrequestparametersgt"></a><span data-ttu-id="fb98c-102">&lt;tokenRequestParameters&gt;</span><span class="sxs-lookup"><span data-stu-id="fb98c-102">&lt;tokenRequestParameters&gt;</span></span>
 <span data-ttu-id="fb98c-103">這個組態項目包含用於指定額外 XML 項目的子項目，在要求權杖時，這些 XML 項目會在訊息本文中傳送給安全性權杖服務。</span><span class="sxs-lookup"><span data-stu-id="fb98c-103">This configuration element contains child elements that can be used to specify additional XML elements to be sent in the message body to the Security Token Service when requesting a token.</span></span>  

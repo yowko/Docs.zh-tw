@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741941"
 ---
 # <a name="strong-named-assemblies"></a><span data-ttu-id="7667c-102">強式名稱的組件</span><span class="sxs-lookup"><span data-stu-id="7667c-102">Strong-Named Assemblies</span></span>
 <span data-ttu-id="7667c-103">強式命名組件會為組件建立唯一識別，並可防止發生組件衝突。</span><span class="sxs-lookup"><span data-stu-id="7667c-103">Strong-naming an assembly creates a unique identity for the assembly, and can prevent assembly conflicts.</span></span>  

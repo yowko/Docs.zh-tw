@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767163"
 ---
 # <a name="creating-a-datatable"></a><span data-ttu-id="36b71-102">建立 DataTable</span><span class="sxs-lookup"><span data-stu-id="36b71-102">Creating a DataTable</span></span>
 <span data-ttu-id="36b71-103"><xref:System.Data.DataTable> 表示記憶體中關聯式資料的某個資料表，它可以單獨建立及使用，也可以由其他 .NET Framework 物件所使用，而它最常見用法是做為 <xref:System.Data.DataSet> 的成員。</span><span class="sxs-lookup"><span data-stu-id="36b71-103">A <xref:System.Data.DataTable>, which represents one table of in-memory relational data, can be created and used independently, or can be used by other .NET Framework objects, most commonly as a member of a <xref:System.Data.DataSet>.</span></span>  

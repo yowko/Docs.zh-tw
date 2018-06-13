@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324157"
 ---
 # <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a><span data-ttu-id="344ca-102">如何：尋找同層級節點 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="344ca-102">How to: Find Sibling Nodes (XPath-LINQ to XML) (C#)</span></span>
 <span data-ttu-id="344ca-103">您可能想要尋找具有特定名稱之節點的所有同層級。</span><span class="sxs-lookup"><span data-stu-id="344ca-103">You might want to find all siblings of a node that have a specific name.</span></span> <span data-ttu-id="344ca-104">如果內容節點也有特定的名稱，所產生的集合可能包含內容節點。</span><span class="sxs-lookup"><span data-stu-id="344ca-104">The resulting collection might include the context node if the context node also has the specific name.</span></span>  
