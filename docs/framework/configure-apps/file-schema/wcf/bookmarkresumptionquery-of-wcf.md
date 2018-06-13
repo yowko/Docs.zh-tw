@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748252"
 ---
 # <a name="ltbookmarkresumptionquerygt-of-wcf"></a><span data-ttu-id="1ce8d-102">WCF 的 &lt;bookmarkResumptionQuery&gt;</span><span class="sxs-lookup"><span data-stu-id="1ce8d-102">&lt;bookmarkResumptionQuery&gt; of WCF</span></span>
 <span data-ttu-id="1ce8d-103">代表用來追蹤工作流程執行個體中之書籤繼續的查詢。</span><span class="sxs-lookup"><span data-stu-id="1ce8d-103">Represents a query that is used to track resumption of a bookmark within a workflow instance.</span></span> <span data-ttu-id="1ce8d-104">追蹤參與者必須要具備查詢，才能訂閱書籤繼續記錄。</span><span class="sxs-lookup"><span data-stu-id="1ce8d-104">The query is necessary for a tracking participant to subscribe to bookmark resumption records.</span></span>  

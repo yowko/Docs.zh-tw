@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391221"
 ---
 # <a name="how-to-create-com-wrappers"></a><span data-ttu-id="3dbb9-102">如何：建立 COM 包裝函式</span><span class="sxs-lookup"><span data-stu-id="3dbb9-102">How to: Create COM Wrappers</span></span>
 <span data-ttu-id="3dbb9-103">您可以使用 [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] 功能或 .NET Framework 工具 Tlbimp.exe 和 Regasm.exe 來建立元件物件模型 (COM) 包裝函式。</span><span class="sxs-lookup"><span data-stu-id="3dbb9-103">You can create Component Object Model (COM) wrappers by using [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] features or the .NET Framework tools Tlbimp.exe and Regasm.exe.</span></span> <span data-ttu-id="3dbb9-104">這兩種方法會產生兩種類型的 COM 包裝函式：</span><span class="sxs-lookup"><span data-stu-id="3dbb9-104">Both methods generate two types of COM wrappers:</span></span>  

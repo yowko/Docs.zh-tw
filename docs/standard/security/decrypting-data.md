@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589093"
 ---
 # <a name="decrypting-data"></a><span data-ttu-id="e0e3c-102">解密資料</span><span class="sxs-lookup"><span data-stu-id="e0e3c-102">Decrypting Data</span></span>
 <span data-ttu-id="e0e3c-103">解密是加密的反向作業。</span><span class="sxs-lookup"><span data-stu-id="e0e3c-103">Decryption is the reverse operation of encryption.</span></span> <span data-ttu-id="e0e3c-104">針對秘密金鑰加密，您必須同時知道金鑰和用來加密資料的 IV。</span><span class="sxs-lookup"><span data-stu-id="e0e3c-104">For secret-key encryption, you must know both the key and IV that were used to encrypt the data.</span></span> <span data-ttu-id="e0e3c-105">針對公開金鑰加密，您必須知道公開金鑰 (如果使用私密金鑰來加密資料) 或私密金鑰 (如果使用公開金鑰來加密資料)。</span><span class="sxs-lookup"><span data-stu-id="e0e3c-105">For public-key encryption, you must know either the public key (if the data was encrypted using the private key) or the private key (if the data was encrypted using the public key).</span></span>  

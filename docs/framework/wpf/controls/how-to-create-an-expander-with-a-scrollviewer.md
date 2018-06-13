@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553058"
 ---
 # <a name="how-to-create-an-expander-with-a-scrollviewer"></a><span data-ttu-id="19ce0-102">如何：使用 ScrollViewer 建立 Expander</span><span class="sxs-lookup"><span data-stu-id="19ce0-102">How to: Create an Expander with a ScrollViewer</span></span>
 <span data-ttu-id="19ce0-103">這個範例示範如何建立<xref:System.Windows.Controls.Expander>包含複雜的內容，例如影像和文字控制項。</span><span class="sxs-lookup"><span data-stu-id="19ce0-103">This example shows how to create an <xref:System.Windows.Controls.Expander> control that contains complex content, such as an image and text.</span></span> <span data-ttu-id="19ce0-104">此範例也內含的之內容<xref:System.Windows.Controls.Expander>中<xref:System.Windows.Controls.ScrollViewer>控制項。</span><span class="sxs-lookup"><span data-stu-id="19ce0-104">The example also encloses the content of the <xref:System.Windows.Controls.Expander> in a <xref:System.Windows.Controls.ScrollViewer> control.</span></span>  

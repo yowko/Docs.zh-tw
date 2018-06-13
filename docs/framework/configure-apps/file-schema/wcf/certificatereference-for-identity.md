@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747638"
 ---
 # <a name="ltcertificatereferencegt-for-ltidentitygt"></a><span data-ttu-id="91090-102">&lt;身分識別&gt;的 &lt;certificateReference&gt;</span><span class="sxs-lookup"><span data-stu-id="91090-102">&lt;certificateReference&gt; for &lt;identity&gt;</span></span>
 <span data-ttu-id="91090-103">指定 X.509 憑證驗證的設定。</span><span class="sxs-lookup"><span data-stu-id="91090-103">Specifies settings for X.509 certificate validation.</span></span> <span data-ttu-id="91090-104">連接至使用這個身分識別端點的安全 Windows Communication Foundation (WCF) 用戶端會確認伺服器所呈現的宣告包含用來建構這個身分識別的身分識別宣告。</span><span class="sxs-lookup"><span data-stu-id="91090-104">A secure Windows Communication Foundation (WCF) client that connects to an endpoint with this identity verifies that the claims presented by the server contain the identity claim used to construct this identity.</span></span>  

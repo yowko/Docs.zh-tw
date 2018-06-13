@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214035"
 ---
 # <a name="-unsafe-c-compiler-options"></a><span data-ttu-id="cfc4e-102">-unsafe (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="cfc4e-102">-unsafe (C# Compiler Options)</span></span>
 <span data-ttu-id="cfc4e-103">**-unsafe** 編譯器選項允許程式碼使用 [unsafe](../../../csharp/language-reference/keywords/unsafe.md) 關鍵字來進行編譯。</span><span class="sxs-lookup"><span data-stu-id="cfc4e-103">The **-unsafe** compiler option allows code that uses the [unsafe](../../../csharp/language-reference/keywords/unsafe.md) keyword to compile.</span></span>  

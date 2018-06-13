@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388413"
 ---
 # <a name="how-to-add-references-to-type-libraries"></a><span data-ttu-id="3c52a-102">如何：將參考加入至類型程式庫</span><span class="sxs-lookup"><span data-stu-id="3c52a-102">How to: Add References to Type Libraries</span></span>
 <span data-ttu-id="3c52a-103">Visual Studio 會產生內含新增類型程式庫參考時所產生之中繼資料的 interop 組件。</span><span class="sxs-lookup"><span data-stu-id="3c52a-103">Visual Studio generates an interop assembly containing metadata when you add a reference to a type library.</span></span> <span data-ttu-id="3c52a-104">如有提供主要的 Interop 組件，Visual Studio 便會先使用現有的組件，然後再產生新的 Interop 組件。</span><span class="sxs-lookup"><span data-stu-id="3c52a-104">If a primary interop assembly is available, Visual Studio uses the existing assembly before generating a new interop assembly.</span></span>  

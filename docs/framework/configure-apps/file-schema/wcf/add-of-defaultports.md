@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748746"
 ---
 # <a name="ltaddgt-of-ltdefaultportsgt"></a><span data-ttu-id="75b23-102">&lt;defaultPorts&gt; 的 &lt;add&gt;</span><span class="sxs-lookup"><span data-stu-id="75b23-102">&lt;add&gt; of &lt;defaultPorts&gt;</span></span>
 <span data-ttu-id="75b23-103">預設通訊端點，用戶端應用程式會接聽這個端點。</span><span class="sxs-lookup"><span data-stu-id="75b23-103">A default communications endpoint that the client application listens to.</span></span>  

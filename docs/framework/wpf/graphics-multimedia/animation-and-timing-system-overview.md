@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557962"
 ---
 # <a name="animation-and-timing-system-overview"></a><span data-ttu-id="1a1bf-102">動畫和計時系統概觀</span><span class="sxs-lookup"><span data-stu-id="1a1bf-102">Animation and Timing System Overview</span></span>
 <span data-ttu-id="1a1bf-103">本主題描述如何計時系統使用動畫， <xref:System.Windows.Media.Animation.Timeline>，和<xref:System.Windows.Media.Animation.Clock>以動畫方式顯示屬性的類別。</span><span class="sxs-lookup"><span data-stu-id="1a1bf-103">This topic describes how the timing system uses the animation, <xref:System.Windows.Media.Animation.Timeline>, and <xref:System.Windows.Media.Animation.Clock> classes to animate properties.</span></span>  

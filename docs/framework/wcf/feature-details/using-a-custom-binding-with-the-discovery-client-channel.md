@@ -1,32 +1,19 @@
 ---
 title: 使用具有探索用戶端通道的自訂繫結
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 36f95e75-04f7-44f3-a995-a0d623624d7f
-caps.latest.revision: 4
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a5c80a257efb5f6006a0cf6394a1079cf92d2471
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 4ef85b4c52c1f27b333413e2b6178452142d313f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498354"
 ---
-# <a name="using-a-custom-binding-with-the-discovery-client-channel"></a><span data-ttu-id="6e554-102">使用具有探索用戶端通道的自訂繫結</span><span class="sxs-lookup"><span data-stu-id="6e554-102">Using a Custom Binding with the Discovery Client Channel</span></span>
-<span data-ttu-id="6e554-103">使用自訂繫結配合 <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> 時，您必須定義建立 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> 執行個體的 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>。</span><span class="sxs-lookup"><span data-stu-id="6e554-103">When using a custom binding with the <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>, you must define a <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> that creates <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> instances.</span></span>  
+# <a name="using-a-custom-binding-with-the-discovery-client-channel"></a><span data-ttu-id="ccbf4-102">使用具有探索用戶端通道的自訂繫結</span><span class="sxs-lookup"><span data-stu-id="ccbf4-102">Using a Custom Binding with the Discovery Client Channel</span></span>
+<span data-ttu-id="ccbf4-103">使用自訂繫結配合 <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> 時，您必須定義建立 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> 執行個體的 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>。</span><span class="sxs-lookup"><span data-stu-id="ccbf4-103">When using a custom binding with the <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>, you must define a <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> that creates <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> instances.</span></span>  
   
-## <a name="creating-a-discoveryendpointprovider"></a><span data-ttu-id="6e554-104">建立 DiscoveryEndpointProvider</span><span class="sxs-lookup"><span data-stu-id="6e554-104">Creating a DiscoveryEndpointProvider</span></span>  
- <span data-ttu-id="6e554-105"><xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>會負責建立<xref:System.ServiceModel.Discovery.DiscoveryEndpoint>隨選執行個體。</span><span class="sxs-lookup"><span data-stu-id="6e554-105">The <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> is responsible for creating <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> instances on demand.</span></span> <span data-ttu-id="6e554-106">若要定義探索端點提供者，請從 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> 衍生一個類別，覆寫 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint%2A> 方法並傳回新的探索端點。</span><span class="sxs-lookup"><span data-stu-id="6e554-106">To define a discovery endpoint provider, derive a class from <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> and override the <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint%2A> method and return a new discovery endpoint.</span></span> <span data-ttu-id="6e554-107">下列範例示範如何建立探索端點提供者。</span><span class="sxs-lookup"><span data-stu-id="6e554-107">The following example shows how to create a discovery endpoint provider.</span></span>  
+## <a name="creating-a-discoveryendpointprovider"></a><span data-ttu-id="ccbf4-104">建立 DiscoveryEndpointProvider</span><span class="sxs-lookup"><span data-stu-id="ccbf4-104">Creating a DiscoveryEndpointProvider</span></span>  
+ <span data-ttu-id="ccbf4-105"><xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>會負責建立<xref:System.ServiceModel.Discovery.DiscoveryEndpoint>隨選執行個體。</span><span class="sxs-lookup"><span data-stu-id="ccbf4-105">The <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> is responsible for creating <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> instances on demand.</span></span> <span data-ttu-id="ccbf4-106">若要定義探索端點提供者，請從 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> 衍生一個類別，覆寫 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint%2A> 方法並傳回新的探索端點。</span><span class="sxs-lookup"><span data-stu-id="ccbf4-106">To define a discovery endpoint provider, derive a class from <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> and override the <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint%2A> method and return a new discovery endpoint.</span></span> <span data-ttu-id="ccbf4-107">下列範例示範如何建立探索端點提供者。</span><span class="sxs-lookup"><span data-stu-id="ccbf4-107">The following example shows how to create a discovery endpoint provider.</span></span>  
   
 ```  
 // Extend DiscoveryEndpointProvider class to change the default DiscoveryEndpoint  
@@ -41,7 +28,7 @@ public class UdpDiscoveryEndpointProvider : DiscoveryEndpointProvider
 }  
 ```  
   
- <span data-ttu-id="6e554-108">定義探索端點提供者之後，即可建立自訂繫結，並且加入 <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>，此項目會參考探索端點提供者，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="6e554-108">Once you have defined the discovery endpoint provider you can create a custom binding and add the <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>, which references the discovery endpoint provider as shown in the following example.</span></span>  
+ <span data-ttu-id="ccbf4-108">定義探索端點提供者之後，即可建立自訂繫結，並且加入 <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>，此項目會參考探索端點提供者，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="ccbf4-108">Once you have defined the discovery endpoint provider you can create a custom binding and add the <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>, which references the discovery endpoint provider as shown in the following example.</span></span>  
   
 ```  
 DiscoveryClientBindingElement discoveryBindingElement = new DiscoveryClientBindingElement();  
@@ -56,9 +43,9 @@ CustomBinding customBinding = new CustomBinding(new NetTcpBinding());
 customBinding.Elements.Insert(0, discoveryBindingElement);  
 ```  
   
- <span data-ttu-id="6e554-109">如需有關如何使用探索用戶端通道的詳細資訊，請參閱[使用探索用戶端通道](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)。</span><span class="sxs-lookup"><span data-stu-id="6e554-109">For more information about using the discovery client channel, see [Using the Discovery Client Channel](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md).</span></span> <span data-ttu-id="6e554-110">如需完整的程式碼範例，請參閱[探索繫結項目範例](../../../../docs/framework/wcf/samples/discovery-binding-element-sample.md)</span><span class="sxs-lookup"><span data-stu-id="6e554-110">For a complete code example, see [Discovery Binding Element Sample](../../../../docs/framework/wcf/samples/discovery-binding-element-sample.md)</span></span>  
+ <span data-ttu-id="ccbf4-109">如需有關如何使用探索用戶端通道的詳細資訊，請參閱[使用探索用戶端通道](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)。</span><span class="sxs-lookup"><span data-stu-id="ccbf4-109">For more information about using the discovery client channel, see [Using the Discovery Client Channel](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md).</span></span> <span data-ttu-id="ccbf4-110">如需完整的程式碼範例，請參閱[探索繫結項目範例](../../../../docs/framework/wcf/samples/discovery-binding-element-sample.md)</span><span class="sxs-lookup"><span data-stu-id="ccbf4-110">For a complete code example, see [Discovery Binding Element Sample](../../../../docs/framework/wcf/samples/discovery-binding-element-sample.md)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6e554-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6e554-111">See Also</span></span>  
- [<span data-ttu-id="6e554-112">WCF 探索概觀</span><span class="sxs-lookup"><span data-stu-id="6e554-112">WCF Discovery Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [<span data-ttu-id="6e554-113">使用探索用戶端通道</span><span class="sxs-lookup"><span data-stu-id="6e554-113">Using the Discovery Client Channel</span></span>](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
- [<span data-ttu-id="6e554-114">探索繫結項目範例</span><span class="sxs-lookup"><span data-stu-id="6e554-114">Discovery Binding Element Sample</span></span>](../../../../docs/framework/wcf/samples/discovery-binding-element-sample.md)
+## <a name="see-also"></a><span data-ttu-id="ccbf4-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ccbf4-111">See Also</span></span>  
+ [<span data-ttu-id="ccbf4-112">WCF 探索概觀</span><span class="sxs-lookup"><span data-stu-id="ccbf4-112">WCF Discovery Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [<span data-ttu-id="ccbf4-113">使用探索用戶端通道</span><span class="sxs-lookup"><span data-stu-id="ccbf4-113">Using the Discovery Client Channel</span></span>](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
+ [<span data-ttu-id="ccbf4-114">探索繫結項目範例</span><span class="sxs-lookup"><span data-stu-id="ccbf4-114">Discovery Binding Element Sample</span></span>](../../../../docs/framework/wcf/samples/discovery-binding-element-sample.md)

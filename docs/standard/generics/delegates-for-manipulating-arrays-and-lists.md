@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576291"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a><span data-ttu-id="2acdf-102">管理陣列和清單的泛型委派</span><span class="sxs-lookup"><span data-stu-id="2acdf-102">Generic Delegates for Manipulating Arrays and Lists</span></span>
 <span data-ttu-id="2acdf-103">本主題概略說明轉換、搜尋述詞以及要在陣列或集合的項目上採取之動作的泛型委派。</span><span class="sxs-lookup"><span data-stu-id="2acdf-103">This topic provides an overview of generic delegates for conversions, search predicates, and actions to be taken on elements of an array or collection.</span></span>  

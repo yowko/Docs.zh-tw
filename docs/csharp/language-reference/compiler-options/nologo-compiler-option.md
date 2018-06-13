@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213636"
 ---
 # <a name="-nologo-c-compiler-options"></a><span data-ttu-id="42de8-102">-nologo (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="42de8-102">-nologo (C# Compiler Options)</span></span>
 <span data-ttu-id="42de8-103">**-nologo** 選項會隱藏編譯器啟動時的登入橫幅，以及編譯期間的資訊訊息。</span><span class="sxs-lookup"><span data-stu-id="42de8-103">The **-nologo** option suppresses display of the sign-on banner when the compiler starts up and display of informational messages during compiling.</span></span>  

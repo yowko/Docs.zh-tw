@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755288"
 ---
 # <a name="ltusemanagedpresentationgt"></a><span data-ttu-id="01693-102">&lt;useManagedPresentation&gt;</span><span class="sxs-lookup"><span data-stu-id="01693-102">&lt;useManagedPresentation&gt;</span></span>
 <span data-ttu-id="01693-103">繫結項目，這個繫結項目可用來與 CardSpace 安全性權杖服務進行通訊，該服務支援 WS-Trust 的 CardSpace 設定檔。</span><span class="sxs-lookup"><span data-stu-id="01693-103">A binding element used to communicate with a CardSpace Security Token Service that supports the CardSpace profile of WS-Trust.</span></span> <span data-ttu-id="01693-104">這個項目沒有屬性，並呈現為空白 switch。</span><span class="sxs-lookup"><span data-stu-id="01693-104">This element has no attribute and is present as an empty switch.</span></span>  

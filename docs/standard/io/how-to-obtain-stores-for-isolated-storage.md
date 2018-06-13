@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576678"
 ---
 # <a name="how-to-obtain-stores-for-isolated-storage"></a><span data-ttu-id="0aadd-102">如何：取得離儲存區的存放區</span><span class="sxs-lookup"><span data-stu-id="0aadd-102">How to: Obtain Stores for Isolated Storage</span></span>
 <span data-ttu-id="0aadd-103">隔離存放區會公開資料區間內的虛擬檔案系統。</span><span class="sxs-lookup"><span data-stu-id="0aadd-103">An isolated store exposes a virtual file system within a data compartment.</span></span> <span data-ttu-id="0aadd-104"><xref:System.IO.IsolatedStorage.IsolatedStorageFile> 類別提供多種與隔離存放區互動的方法。</span><span class="sxs-lookup"><span data-stu-id="0aadd-104">The <xref:System.IO.IsolatedStorage.IsolatedStorageFile> class supplies a number of methods for interacting with an isolated store.</span></span> <span data-ttu-id="0aadd-105">若要建立和擷取存放區，<xref:System.IO.IsolatedStorage.IsolatedStorageFile> 提供三種靜態方法：</span><span class="sxs-lookup"><span data-stu-id="0aadd-105">To create and retrieve stores, <xref:System.IO.IsolatedStorage.IsolatedStorageFile> provides three static methods:</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388829"
 ---
 # <a name="specifying-an-entry-point"></a><span data-ttu-id="a28b0-102">指定進入點</span><span class="sxs-lookup"><span data-stu-id="a28b0-102">Specifying an Entry Point</span></span>
 <span data-ttu-id="a28b0-103">進入點可識別函式在 DLL 中的位置。</span><span class="sxs-lookup"><span data-stu-id="a28b0-103">An entry point identifies the location of a function in a DLL.</span></span> <span data-ttu-id="a28b0-104">在 Managed 專案中，目標函式的原始名稱或序數進入點可跨越交互操作界限識別該函式。</span><span class="sxs-lookup"><span data-stu-id="a28b0-104">Within a managed project, the original name or ordinal entry point of a target function identifies that function across the interoperation boundary.</span></span> <span data-ttu-id="a28b0-105">此外，您可以將進入點對應到不同的名稱，有效地重新命名函式。</span><span class="sxs-lookup"><span data-stu-id="a28b0-105">Further, you can map the entry point to a different name, effectively renaming the function.</span></span>  

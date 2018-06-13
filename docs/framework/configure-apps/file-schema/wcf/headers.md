@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747147"
 ---
 # <a name="ltheadersgt"></a><span data-ttu-id="0a8f9-102">&lt;標頭&gt;</span><span class="sxs-lookup"><span data-stu-id="0a8f9-102">&lt;headers&gt;</span></span>
 <span data-ttu-id="0a8f9-103">端點除了可以由其基本 URI 定址之外，還可由一個或多個 SOAP 標頭定址。</span><span class="sxs-lookup"><span data-stu-id="0a8f9-103">An endpoint can be addressed by one or more SOAP headers in addition to its basic URI.</span></span> <span data-ttu-id="0a8f9-104">有些情況適用這種方式，例如 SOAP 媒介，此時端點需要此端點的用戶端加入目標為媒介的 SOAP 標頭。</span><span class="sxs-lookup"><span data-stu-id="0a8f9-104">One set of scenarios where this is useful is a set of SOAP intermediary scenarios where an endpoint requires clients of that endpoint to include SOAP headers targeted at intermediaries.</span></span> <span data-ttu-id="0a8f9-105">這個組態項目可用於定義此類自訂位址標題。</span><span class="sxs-lookup"><span data-stu-id="0a8f9-105">This configuration element can be used to define such custom address headers.</span></span> <span data-ttu-id="0a8f9-106">端點標頭集合中的項目是使用者定義的 XML 項目。</span><span class="sxs-lookup"><span data-stu-id="0a8f9-106">Entries in the endpoint header collection are user-defined XML elements.</span></span> <span data-ttu-id="0a8f9-107">每個項目必須為格式正確的 XML。</span><span class="sxs-lookup"><span data-stu-id="0a8f9-107">Each element has to be well-formed XML.</span></span>  

@@ -1,35 +1,24 @@
 ---
-title: "自我裝載"
-ms.custom: 
+title: 自我裝載
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Self hosted service
 - Self Host Sample [Windows Communication Foundation]
 ms.assetid: 05e68661-1ddf-4abf-a899-9bb1b8272a5b
-caps.latest.revision: "38"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b662c034e4c3d7c21c9a48537cd7f80f4bb6b659
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d4fc6c55f0eb528e6ae8d19d733c67d7f7ce135f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502672"
 ---
-# <a name="self-host"></a><span data-ttu-id="52089-102">自我裝載</span><span class="sxs-lookup"><span data-stu-id="52089-102">Self-Host</span></span>
-<span data-ttu-id="52089-103">這個範例會示範如何在主控台應用程式中實作自我裝載的服務。</span><span class="sxs-lookup"><span data-stu-id="52089-103">This sample demonstrates how to implement a self-hosted service in a console application.</span></span> <span data-ttu-id="52089-104">這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)。</span><span class="sxs-lookup"><span data-stu-id="52089-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span> <span data-ttu-id="52089-105">服務的組態檔已經從 Web.config 重新命名為 App.config，並且修改為設定主機使用的基底位址。</span><span class="sxs-lookup"><span data-stu-id="52089-105">The service configuration file has been renamed from Web.config to App.config and modified to configure a base address, which the host uses.</span></span> <span data-ttu-id="52089-106">服務的原始程式碼已經修改為實作靜態 `Main` 函式，這個函式會建立和開啟提供已設定之基底位址的服務主機。</span><span class="sxs-lookup"><span data-stu-id="52089-106">The service source code has been modified to implement a static `Main` function that creates and opens a service host that provides the configured base address.</span></span> <span data-ttu-id="52089-107">服務實作已經修改為將每個作業的輸出寫入至主控台。</span><span class="sxs-lookup"><span data-stu-id="52089-107">The service implementation has been modified to write output to the console for each operation.</span></span> <span data-ttu-id="52089-108">除了設定服務的正確端點位址外，用戶端未經過修改。</span><span class="sxs-lookup"><span data-stu-id="52089-108">The client has been unmodified, except for configuring the correct endpoint address of the service.</span></span>  
+# <a name="self-host"></a><span data-ttu-id="6c28e-102">自我裝載</span><span class="sxs-lookup"><span data-stu-id="6c28e-102">Self-Host</span></span>
+<span data-ttu-id="6c28e-103">這個範例會示範如何在主控台應用程式中實作自我裝載的服務。</span><span class="sxs-lookup"><span data-stu-id="6c28e-103">This sample demonstrates how to implement a self-hosted service in a console application.</span></span> <span data-ttu-id="6c28e-104">這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)。</span><span class="sxs-lookup"><span data-stu-id="6c28e-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span> <span data-ttu-id="6c28e-105">服務的組態檔已經從 Web.config 重新命名為 App.config，並且修改為設定主機使用的基底位址。</span><span class="sxs-lookup"><span data-stu-id="6c28e-105">The service configuration file has been renamed from Web.config to App.config and modified to configure a base address, which the host uses.</span></span> <span data-ttu-id="6c28e-106">服務的原始程式碼已經修改為實作靜態 `Main` 函式，這個函式會建立和開啟提供已設定之基底位址的服務主機。</span><span class="sxs-lookup"><span data-stu-id="6c28e-106">The service source code has been modified to implement a static `Main` function that creates and opens a service host that provides the configured base address.</span></span> <span data-ttu-id="6c28e-107">服務實作已經修改為將每個作業的輸出寫入至主控台。</span><span class="sxs-lookup"><span data-stu-id="6c28e-107">The service implementation has been modified to write output to the console for each operation.</span></span> <span data-ttu-id="6c28e-108">除了設定服務的正確端點位址外，用戶端未經過修改。</span><span class="sxs-lookup"><span data-stu-id="6c28e-108">The client has been unmodified, except for configuring the correct endpoint address of the service.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="52089-109">此範例的安裝程序與建置指示位於本主題的結尾。</span><span class="sxs-lookup"><span data-stu-id="52089-109">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="6c28e-109">此範例的安裝程序與建置指示位於本主題的結尾。</span><span class="sxs-lookup"><span data-stu-id="6c28e-109">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="52089-110">此範例會實作靜態的 main 函式，以便為指定的 <xref:System.ServiceModel.ServiceHost> 型別建立 `CalculatorService`，如下列範例程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="52089-110">The sample implements a static main function to create a <xref:System.ServiceModel.ServiceHost> for the given `CalculatorService` type, as shown in the following sample code.</span></span>  
+ <span data-ttu-id="6c28e-110">此範例會實作靜態的 main 函式，以便為指定的 <xref:System.ServiceModel.ServiceHost> 型別建立 `CalculatorService`，如下列範例程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="6c28e-110">The sample implements a static main function to create a <xref:System.ServiceModel.ServiceHost> for the given `CalculatorService` type, as shown in the following sample code.</span></span>  
   
 ```  
 // Host the service within this EXE console application.  
@@ -52,7 +41,7 @@ public static void Main()
 }  
 ```  
   
- <span data-ttu-id="52089-111">當服務裝載於網際網路資訊服務 (IIS) 或 Windows Process Activation Service (WAS) 時，服務的基底位址是由裝載環境提供。</span><span class="sxs-lookup"><span data-stu-id="52089-111">When a service is hosted in Internet Information Services (IIS) or Windows Process Activation Service (WAS), the base address of the service is provided by the hosting environment.</span></span> <span data-ttu-id="52089-112">在自我裝載案例中，您必須自行指定基底位址。</span><span class="sxs-lookup"><span data-stu-id="52089-112">In the self-hosted case, you must specify the base address yourself.</span></span> <span data-ttu-id="52089-113">這是使用`add`元素中，子系[ \<baseAddresses >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)，子系[\<主機 >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md)，子系[\<服務 >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md)如下列範例組態所示。</span><span class="sxs-lookup"><span data-stu-id="52089-113">This is done using the `add` element, child of [\<baseAddresses>](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md), child of [\<host>](../../../../docs/framework/configure-apps/file-schema/wcf/host.md), child of [\<service>](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) as demonstrated in the following sample configuration.</span></span>  
+ <span data-ttu-id="6c28e-111">當服務裝載於網際網路資訊服務 (IIS) 或 Windows Process Activation Service (WAS) 時，服務的基底位址是由裝載環境提供。</span><span class="sxs-lookup"><span data-stu-id="6c28e-111">When a service is hosted in Internet Information Services (IIS) or Windows Process Activation Service (WAS), the base address of the service is provided by the hosting environment.</span></span> <span data-ttu-id="6c28e-112">在自我裝載案例中，您必須自行指定基底位址。</span><span class="sxs-lookup"><span data-stu-id="6c28e-112">In the self-hosted case, you must specify the base address yourself.</span></span> <span data-ttu-id="6c28e-113">這是使用`add`元素中，子系[ \<baseAddresses >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)，子系[\<主機 >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md)，子系[\<服務 >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md)如下列範例組態所示。</span><span class="sxs-lookup"><span data-stu-id="6c28e-113">This is done using the `add` element, child of [\<baseAddresses>](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md), child of [\<host>](../../../../docs/framework/configure-apps/file-schema/wcf/host.md), child of [\<service>](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) as demonstrated in the following sample configuration.</span></span>  
   
 ```xml  
 <service   
@@ -67,24 +56,24 @@ public static void Main()
 </service>  
 ```  
   
- <span data-ttu-id="52089-114">當您執行範例時，作業要求和回應會顯示在服務與用戶端主控台視窗中。</span><span class="sxs-lookup"><span data-stu-id="52089-114">When you run the sample, the operation requests and responses are displayed in both the service and client console windows.</span></span> <span data-ttu-id="52089-115">在每個主控台視窗中按下 ENTER 鍵，即可關閉服務與用戶端。</span><span class="sxs-lookup"><span data-stu-id="52089-115">Press ENTER in each console window to shut down the service and client.</span></span>  
+ <span data-ttu-id="6c28e-114">當您執行範例時，作業要求和回應會顯示在服務與用戶端主控台視窗中。</span><span class="sxs-lookup"><span data-stu-id="6c28e-114">When you run the sample, the operation requests and responses are displayed in both the service and client console windows.</span></span> <span data-ttu-id="6c28e-115">在每個主控台視窗中按下 ENTER 鍵，即可關閉服務與用戶端。</span><span class="sxs-lookup"><span data-stu-id="6c28e-115">Press ENTER in each console window to shut down the service and client.</span></span>  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="52089-116">若要安裝、建置及執行範例</span><span class="sxs-lookup"><span data-stu-id="52089-116">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="6c28e-116">若要安裝、建置及執行範例</span><span class="sxs-lookup"><span data-stu-id="6c28e-116">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="52089-117">請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="52089-117">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="6c28e-117">請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="6c28e-117">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="52089-118">若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。</span><span class="sxs-lookup"><span data-stu-id="52089-118">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2.  <span data-ttu-id="6c28e-118">若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。</span><span class="sxs-lookup"><span data-stu-id="6c28e-118">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  <span data-ttu-id="52089-119">若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="52089-119">To run the sample in a single- or cross-computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3.  <span data-ttu-id="6c28e-119">若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="6c28e-119">To run the sample in a single- or cross-computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="52089-120">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="52089-120">The samples may already be installed on your computer.</span></span> <span data-ttu-id="52089-121">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="52089-121">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="6c28e-120">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="6c28e-120">The samples may already be installed on your computer.</span></span> <span data-ttu-id="6c28e-121">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="6c28e-121">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="52089-122">如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。</span><span class="sxs-lookup"><span data-stu-id="52089-122">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="52089-123">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="52089-123">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="6c28e-122">如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。</span><span class="sxs-lookup"><span data-stu-id="6c28e-122">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="6c28e-123">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="6c28e-123">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\SelfHost`  
   
-## <a name="see-also"></a><span data-ttu-id="52089-124">請參閱</span><span class="sxs-lookup"><span data-stu-id="52089-124">See Also</span></span>  
- [<span data-ttu-id="52089-125">AppFabric 主控與持續性範例</span><span class="sxs-lookup"><span data-stu-id="52089-125">AppFabric Hosting and Persistence Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a><span data-ttu-id="6c28e-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6c28e-124">See Also</span></span>  
+ [<span data-ttu-id="6c28e-125">AppFabric 主控與持續性範例</span><span class="sxs-lookup"><span data-stu-id="6c28e-125">AppFabric Hosting and Persistence Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=193961)

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272678"
 ---
 # <a name="modifiers-c-reference"></a><span data-ttu-id="42776-102">修飾詞 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="42776-102">Modifiers (C# Reference)</span></span>
 <span data-ttu-id="42776-103">修飾詞用來修飾類型和類型成員的宣告。</span><span class="sxs-lookup"><span data-stu-id="42776-103">Modifiers are used to modify declarations of types and type members.</span></span> <span data-ttu-id="42776-104">本節將介紹 C# 修飾詞。</span><span class="sxs-lookup"><span data-stu-id="42776-104">This section introduces the C# modifiers.</span></span>  

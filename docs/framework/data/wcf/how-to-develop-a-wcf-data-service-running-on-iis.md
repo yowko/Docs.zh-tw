@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362510"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a><span data-ttu-id="6af72-102">HOW TO：開發在 IIS 上執行的 WCF Data Service</span><span class="sxs-lookup"><span data-stu-id="6af72-102">How to: Develop a WCF Data Service Running on IIS</span></span>
 <span data-ttu-id="6af72-103">本主題示範如何使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]來建立 ASP.NET Web 應用程式執行網際網路資訊服務 (IIS) 所裝載的 Northwind 範例資料庫為基礎的資料服務。</span><span class="sxs-lookup"><span data-stu-id="6af72-103">This topic shows how to use [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] to create a data service that is based on the Northwind sample database that is hosted by an ASP.NET Web application that is running on Internet Information Services (IIS).</span></span> <span data-ttu-id="6af72-104">如需如何建立相同的 Northwind 資料服務，以在 ASP.NET 程式開發伺服器執行的 ASP.NET Web 應用程式的範例，請參閱[WCF Data Services 快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="6af72-104">For an example of how to create the same Northwind data service as an ASP.NET Web application that runs on the ASP.NET Development Server, see the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span>  
