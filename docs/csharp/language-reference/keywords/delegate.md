@@ -14,6 +14,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172106"
 ---
 # <a name="delegate-c-reference"></a>delegate (C# 參考)
 委派類型的宣告類似方法簽章。 它具有傳回值以及任意類型之任何數目的參數：  

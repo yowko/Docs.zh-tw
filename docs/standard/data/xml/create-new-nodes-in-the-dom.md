@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569300"
 ---
 # <a name="create-new-nodes-in-the-dom"></a>在 DOM 中建立新節點
 <xref:System.Xml.XmlDocument> 有一個適用於所有節點型別的建立方法。 必要時請為該方法提供名稱，並針對具有內容的節點 (例如，文字節點) 提供內容或其他參數，即可建立節點。 下列方法需要填入名稱及一些其他參數來建立適當的節點。  

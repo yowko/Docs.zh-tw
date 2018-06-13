@@ -2,11 +2,12 @@
 title: protected internal (C# 參考)
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: a2a649f0fdb924c26380e7261bd935be736f0665
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ba2c811a1a4f095bcee65ed6678a7dc50fe94db
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172237"
 ---
 # <a name="protected-internal-c-reference"></a>protected internal (C# 參考)
 `protected internal` 關鍵字組合是成員存取修飾詞。 protected internal 成員可以從目前的組件或衍生自包含類別的類型存取。 如需 `protected internal` 和其他存取修飾詞的比較，請參閱[存取範圍層級](../../../csharp/language-reference/keywords/accessibility-levels.md)。 
@@ -14,7 +15,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="example"></a>範例  
  基底類別的 protected internal 成員可以從其包含組件內的任何類型存取。 它也可以在位於另一個組件的衍生類別內存取，但只能是在透過衍生類別類型的變數進行存取之時。 例如，請考慮下列程式碼區段：  
 
-```
+```csharp
 // Assembly1.cs  
 // Compile with: /target:library  
 public class BaseClass   
@@ -32,7 +33,7 @@ class TestAccess
 }  
 ```  
   
-```  
+```csharp  
 // Assembly2.cs  
 // Compile with: /reference:Assembly1.dll  
 class DerivedClass : BaseClass   

@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4c77edfff640f796dd3f345eaeb4728830c5f4c6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449140"
 ---
 # <a name="imetadataemit-interface"></a>IMetaDataEmit 介面
 提供方法來建立、 修改及儲存目前定義的範圍中的組件的相關中繼資料。 可以儲存在記憶體中的中繼資料，或儲存至磁碟。  
@@ -80,11 +81,11 @@ ms.lasthandoff: 05/04/2018
 |[TranslateSigWithScope 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-translatesigwithscope-method.md)|組件匯入目前的範圍，並取得新的中繼資料簽章為合併的範圍。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
- **程式庫：**做為 MsCorEE.dll 中的資源  
+ **程式庫：** 做為 MsCorEE.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

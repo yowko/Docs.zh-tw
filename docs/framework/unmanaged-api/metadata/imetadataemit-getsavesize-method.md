@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d9a65f76aed00e2b848f8603f1fee4d6acc91f99
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449153"
 ---
 # <a name="imetadataemitgetsavesize-method"></a>IMetaDataEmit::GetSaveSize 方法
 在目前範圍中取得的二進位的估計的大小，組件和它的中繼資料。  
@@ -56,11 +57,11 @@ HRESULT GetSaveSize (
  如果執行最佳化，則第一個階段只是排序要微調效能的匯入時搜尋的中繼資料結構。 這個步驟通常都會具有副作用，保留供日後參考工具的語彙基元都會失效記錄四處移動。 中繼資料並不會通知這些語彙基元的變更，直到呼叫之後的第二個階段，不過。 在第二個階段中，各種最佳化所執行的要減少整體的中繼資料，例如離開 （早期繫結） 的最佳化大小`mdTypeRef`和`mdMemberRef`權杖型別或成員宣告的參考時目前的中繼資料範圍。 在這個階段中，就會發生另一回合的語彙基元對應。 中繼資料引擎之後此階段，透過通知呼叫端，其`IMapToken`介面，任何變更的語彙基元值。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
- **程式庫：**做為 MSCorEE.dll 中的資源  
+ **程式庫：** 做為 MSCorEE.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   

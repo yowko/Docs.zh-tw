@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569970"
 ---
 # <a name="load-data-from-a-reader"></a>從讀取器載入資料
 使用 <xref:System.Xml.XmlDocument.Load%2A> 方法及 <xref:System.Xml.XmlReader> 的參數載入 XML 文件所發生的行為，與從其他格式載入資料的行為相比會有所不同。 如果讀取器處於其初始狀態，則 <xref:System.Xml.XmlDocument.Load%2A> 會使用讀取器的整個內容，並利用讀取器中的所有資料建置 XML 文件物件模型 (DOM)。  

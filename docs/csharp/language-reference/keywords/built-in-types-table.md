@@ -10,6 +10,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172262"
 ---
 # <a name="built-in-types-table-c-reference"></a>內建類型資料表 (C# 參考)
 下表顯示內建 C# 型別的關鍵字，這些是 <xref:System> 命名空間中預先定義型別的別名。  

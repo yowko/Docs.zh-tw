@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488799"
 ---
 # <a name="clients"></a>用戶端
 此章節的主題涵蓋用戶端架構，如何存取 Windows Communication Foundation (WCF) 服務、 如何設定 WCF 用戶端和 WCF 用戶端的一些安全性考量。  

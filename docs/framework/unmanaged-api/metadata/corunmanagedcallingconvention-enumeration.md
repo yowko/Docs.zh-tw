@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0b249d26335a66b55d0643f3e75bfd90554f731e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448865"
 ---
 # <a name="corunmanagedcallingconvention-enumeration"></a>CorUnmanagedCallingConvention 列舉
 指定 unmanaged 程式碼的呼叫慣例。  
@@ -60,7 +61,7 @@ typedef enum CorUnmanagedCallingConvention {
  CLR 不支援.NET Framework 1.0 版中的 「 快速 」 的呼叫慣例。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorHdr.h  
   

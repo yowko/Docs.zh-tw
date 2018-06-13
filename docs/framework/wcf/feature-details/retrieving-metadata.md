@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493597"
 ---
 # <a name="retrieving-metadata"></a>擷取中繼資料
 中繼資料擷取程序會要求和擷取中繼資料端點內的中繼資料，這些端點包括像是 WS-MetadataExchange (MEX) 中繼資料端點或 HTTP/GET 中繼資料端點。  

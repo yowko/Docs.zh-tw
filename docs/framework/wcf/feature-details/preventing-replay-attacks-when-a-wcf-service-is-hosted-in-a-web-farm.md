@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492267"
 ---
 # <a name="preventing-replay-attacks-when-a-wcf-service-is-hosted-in-a-web-farm"></a>防止 WCF 服務裝載於 Web 伺服陣列時的重新執行攻擊
 使用訊息安全性時，WCF 會從傳入訊息中建立 NONCE 並檢查內部 `InMemoryNonceCache` 確認產生的 NONCE 是否存在，以防止重新執行攻擊。 如果是，則將該訊息視為重新執行來捨棄。 在 Web 伺服陣列中裝載 WCF 服務時，由於不是跨 Web 伺服陣列中的節點來共用 `InMemoryNonceCache`，這個服務很容易遭受重新執行攻擊的威脅。  為減輕這種情況，WCF 4.5 提供了擴充點，可讓您從 <xref:System.ServiceModel.Security.NonceCache> 抽象類別衍生類別，以實作自己的共用 NONCE 快取。  

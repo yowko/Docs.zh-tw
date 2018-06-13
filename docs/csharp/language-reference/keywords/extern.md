@@ -13,6 +13,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172289"
 ---
 # <a name="extern-c-reference"></a>extern (C# 參考)
 `extern` 修飾詞是用來宣告於外部實作的方法。 `extern` 修飾詞的常見用法，是在使用 Interop 服務進行 Unmanaged 程式碼呼叫時，搭配 `DllImport` 屬性使用。 在此情況下，此方法也必須宣告為 `static`，如下列範例所示：  

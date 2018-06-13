@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33473441"
 ---
 # <a name="queued-rejected-messages-per-second"></a>每秒佇列拒絕的訊息數
 計數器名稱：每秒拒絕的佇列訊息。  

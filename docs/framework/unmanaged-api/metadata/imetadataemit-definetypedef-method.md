@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 54691785e3b2619b5f4a2eecc510800b4b5cee07
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446593"
 ---
 # <a name="imetadataemitdefinetypedef-method"></a>IMetaDataEmit::DefineTypeDef 方法
 建立型別定義為 common language runtime 類型，並取得該型別定義的中繼資料語彙基元。  
@@ -62,11 +63,11 @@ HRESULT DefineTypeDef (
  每個項目`rtkImplements`陣列保留`mdTypeDef`或`mdTypeRef`語彙基元。 陣列中的最後一個項目必須是`mdTokenNil`。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
- **程式庫：**做為 MSCorEE.dll 中的資源  
+ **程式庫：** 做為 MSCorEE.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

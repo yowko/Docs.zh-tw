@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488568"
 ---
 # <a name="authorization-in-wcf"></a>WCF 的授權
 授權是控制資源 (例如服務或檔案) 存取與權限的程序。 此章節的主題會示範如何在 Windows Communication Foundation (WCF) 的各種不同的方式執行此基本工作。  

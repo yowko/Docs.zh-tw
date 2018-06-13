@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 60c9266806ef6b5d7e2e1c3a219a4485bc22d7f3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445516"
 ---
 # <a name="imetadataemitsethandler-method"></a>IMetaDataEmit::SetHandler 方法
 設定所指定參考的方法`IUnknown`指標當做權杖的重新對應的通知回呼。  
@@ -44,11 +45,11 @@ HRESULT SetHandler (
  如果未透過來提供回呼方法，則`SetHandler`，將會執行任何最佳化上儲存除了其中數個匯入範圍已經合併使用`IMapToken`合併的每個範圍。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
- **程式庫：**做為 MSCorEE.dll 中的資源  
+ **程式庫：** 做為 MSCorEE.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
