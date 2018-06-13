@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568819"
 ---
 # <a name="extending-xslt-style-sheets"></a>延伸 XSLT 樣式表
 本節說明擴充 XSLT 功能的不同方法。 您可使用 <xref:System.Xml.Xsl.XsltArgumentList> 類別，加入擴充物件或參數。 然後可從樣式表呼叫該擴充物件或參數。 此外，您還可使用 `msxsl:script` 項目將指令碼區塊嵌入樣式表中。  
