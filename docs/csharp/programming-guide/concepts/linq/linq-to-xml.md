@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328551"
 ---
 # <a name="linq-to-xml-c"></a>LINQ to XML (C#)
 LINQ to XML 提供運用 .NET Language-Integrated Query (LINQ) Framework 的記憶體中 XML 程式開發介面。 LINQ to XML 使用最新的 .NET Framework 語言功能，其相當於重新設計的更新版文件物件模型 (DOM) XML 程式開發介面。  
