@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571965"
 ---
 # <a name="optimization-for-shared-web-hosting"></a><span data-ttu-id="87bb5-102">共用 Web 裝載的最佳化</span><span class="sxs-lookup"><span data-stu-id="87bb5-102">Optimization for Shared Web Hosting</span></span>
 <span data-ttu-id="87bb5-103">如果您是透過裝載數個小型 Web 站台所共用之伺服器的系統管理員，則可以將下列 `gcTrimCommitOnLowMemory` 設定加入 .NET 目錄中 Aspnet.config 檔案的 `runtime` 節點，以最佳化效能與增加站台的容量：</span><span class="sxs-lookup"><span data-stu-id="87bb5-103">If you are the administrator for a server that is shared by hosting several small Web sites, you can optimize performance and increase site capacity by adding the following `gcTrimCommitOnLowMemory` setting to the `runtime` node in the Aspnet.config file in the .NET directory:</span></span>  
