@@ -33,6 +33,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558118"
 ---
 # <a name="wpf-windows-overview"></a><span data-ttu-id="75357-102">WPF 視窗概觀</span><span class="sxs-lookup"><span data-stu-id="75357-102">WPF Windows Overview</span></span>
 <span data-ttu-id="75357-103">使用者透過 windows 的 Windows Presentation Foundation (WPF) 獨立應用程式與互動。</span><span class="sxs-lookup"><span data-stu-id="75357-103">Users interact with Windows Presentation Foundation (WPF) standalone applications through windows.</span></span> <span data-ttu-id="75357-104">視窗的主要用途是裝載內容，以視覺化方式檢視資料，並讓使用者可以與資料互動。</span><span class="sxs-lookup"><span data-stu-id="75357-104">The primary purpose of a window is to host content that visualizes data and enables users to interact with data.</span></span> <span data-ttu-id="75357-105">獨立[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]應用程式使用，提供它們自己的視窗<xref:System.Windows.Window>類別。</span><span class="sxs-lookup"><span data-stu-id="75357-105">Standalone [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applications provide their own windows by using the <xref:System.Windows.Window> class.</span></span> <span data-ttu-id="75357-106">本主題將介紹<xref:System.Windows.Window>之前涵蓋建立和管理 windows 獨立應用程式中的基本概念。</span><span class="sxs-lookup"><span data-stu-id="75357-106">This topic introduces <xref:System.Windows.Window> before covering the fundamentals of creating and managing windows in standalone applications.</span></span>  

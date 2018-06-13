@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557546"
 ---
 # <a name="navigation-topologies-overview"></a><span data-ttu-id="191c9-102">巡覽拓撲概觀</span><span class="sxs-lookup"><span data-stu-id="191c9-102">Navigation Topologies Overview</span></span>
 <a name="introduction"></a> <span data-ttu-id="191c9-103">本概觀介紹中瀏覽拓撲[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="191c9-103">This overview provides an introduction to navigation topologies in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].</span></span> <span data-ttu-id="191c9-104">並接著說明三種常見的巡覽拓撲及其範例。</span><span class="sxs-lookup"><span data-stu-id="191c9-104">Three common navigation topologies, with samples, are subsequently discussed.</span></span>  

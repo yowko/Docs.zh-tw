@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398283"
 ---
 # <a name="sockets"></a><span data-ttu-id="7254a-102">通訊端</span><span class="sxs-lookup"><span data-stu-id="7254a-102">Sockets</span></span>
 <span data-ttu-id="7254a-103"><xref:System.Net.Sockets> 命名空間包含 Windows Sockets 介面的 Managed 實作。</span><span class="sxs-lookup"><span data-stu-id="7254a-103">The <xref:System.Net.Sockets> namespace contains a managed implementation of the Windows Sockets interface.</span></span> <span data-ttu-id="7254a-104"><xref:System.Net> 命名空間中的所有其他網路存取類別都建立在此通訊端實作之上。</span><span class="sxs-lookup"><span data-stu-id="7254a-104">All other network-access classes in the <xref:System.Net> namespace are built on top of this implementation of sockets.</span></span>  

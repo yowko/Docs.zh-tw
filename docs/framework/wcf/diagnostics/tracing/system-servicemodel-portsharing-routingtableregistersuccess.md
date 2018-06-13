@@ -1,32 +1,21 @@
 ---
 title: System.ServiceModel.PortSharing.RoutingTableRegisterSuccess
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7f9441ce-5f4a-4080-9be5-c3c08a87bb21
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f55ec715dd69b76a710ede839c16589d103eb7a6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 868d136e05b7c0230409e117199fc2cb95b9c381
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33483402"
 ---
-# <a name="systemservicemodelportsharingroutingtableregistersuccess"></a><span data-ttu-id="5cfbf-102">System.ServiceModel.PortSharing.RoutingTableRegisterSuccess</span><span class="sxs-lookup"><span data-stu-id="5cfbf-102">System.ServiceModel.PortSharing.RoutingTableRegisterSuccess</span></span>
-<span data-ttu-id="5cfbf-103">System.ServiceModel.PortSharing.RoutingTableRegisterSuccess</span><span class="sxs-lookup"><span data-stu-id="5cfbf-103">System.ServiceModel.PortSharing.RoutingTableRegisterSuccess</span></span>  
+# <a name="systemservicemodelportsharingroutingtableregistersuccess"></a><span data-ttu-id="f2f04-102">System.ServiceModel.PortSharing.RoutingTableRegisterSuccess</span><span class="sxs-lookup"><span data-stu-id="f2f04-102">System.ServiceModel.PortSharing.RoutingTableRegisterSuccess</span></span>
+<span data-ttu-id="f2f04-103">System.ServiceModel.PortSharing.RoutingTableRegisterSuccess</span><span class="sxs-lookup"><span data-stu-id="f2f04-103">System.ServiceModel.PortSharing.RoutingTableRegisterSuccess</span></span>  
   
-## <a name="description"></a><span data-ttu-id="5cfbf-104">描述</span><span class="sxs-lookup"><span data-stu-id="5cfbf-104">Description</span></span>  
- <span data-ttu-id="5cfbf-105">已成功註冊命名空間。</span><span class="sxs-lookup"><span data-stu-id="5cfbf-105">The namespace was successfully registered.</span></span>  
+## <a name="description"></a><span data-ttu-id="f2f04-104">描述</span><span class="sxs-lookup"><span data-stu-id="f2f04-104">Description</span></span>  
+ <span data-ttu-id="f2f04-105">已成功註冊命名空間。</span><span class="sxs-lookup"><span data-stu-id="f2f04-105">The namespace was successfully registered.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5cfbf-106">請參閱</span><span class="sxs-lookup"><span data-stu-id="5cfbf-106">See Also</span></span>  
- [<span data-ttu-id="5cfbf-107">追蹤</span><span class="sxs-lookup"><span data-stu-id="5cfbf-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="5cfbf-108">使用追蹤為應用程式進行疑難排解</span><span class="sxs-lookup"><span data-stu-id="5cfbf-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="5cfbf-109">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="5cfbf-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="f2f04-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f2f04-106">See Also</span></span>  
+ [<span data-ttu-id="f2f04-107">追蹤</span><span class="sxs-lookup"><span data-stu-id="f2f04-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="f2f04-108">使用追蹤為應用程式進行疑難排解</span><span class="sxs-lookup"><span data-stu-id="f2f04-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="f2f04-109">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="f2f04-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

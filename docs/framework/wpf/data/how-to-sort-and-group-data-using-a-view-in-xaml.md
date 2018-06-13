@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555824"
 ---
 # <a name="how-to-sort-and-group-data-using-a-view-in-xaml"></a><span data-ttu-id="afc09-102">如何：使用 XAML 排序和分組資料</span><span class="sxs-lookup"><span data-stu-id="afc09-102">How to: Sort and Group Data Using a View in XAML</span></span>
 <span data-ttu-id="afc09-103">這個範例示範如何建立資料集合中的檢視[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="afc09-103">This example shows how to create a view of a data collection in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span> <span data-ttu-id="afc09-104">檢視可讓分組、 排序、 篩選的功能和目前項目的概念。</span><span class="sxs-lookup"><span data-stu-id="afc09-104">Views allow for the functionalities of grouping, sorting, filtering, and the notion of a current item.</span></span>  

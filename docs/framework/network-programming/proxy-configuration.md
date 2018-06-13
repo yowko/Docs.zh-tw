@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397529"
 ---
 # <a name="proxy-configuration"></a><span data-ttu-id="5087d-102">Proxy 組態</span><span class="sxs-lookup"><span data-stu-id="5087d-102">Proxy Configuration</span></span>
 <span data-ttu-id="5087d-103">Proxy 伺服器可處理資源的用戶端要求。</span><span class="sxs-lookup"><span data-stu-id="5087d-103">A proxy server handles client requests for resources.</span></span> <span data-ttu-id="5087d-104">Proxy 可從其快取傳回要求的資源，或將要求轉送至資源所在的伺服器。</span><span class="sxs-lookup"><span data-stu-id="5087d-104">A proxy can return a requested resource from its cache or forward the request to the server where the resource resides.</span></span> <span data-ttu-id="5087d-105">Proxy 可透過減少傳送至遠端伺服器的要求數目，來提升網路效能。</span><span class="sxs-lookup"><span data-stu-id="5087d-105">Proxies can improve network performance by reducing the number of requests sent to remote servers.</span></span> <span data-ttu-id="5087d-106">Proxy 也可用來限制對資源的存取。</span><span class="sxs-lookup"><span data-stu-id="5087d-106">Proxies can also be used to restrict access to resources.</span></span>  

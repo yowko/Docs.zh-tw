@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335386"
 ---
 # <a name="projection-operations-c"></a><span data-ttu-id="f8018-102">投影作業 (C#)</span><span class="sxs-lookup"><span data-stu-id="f8018-102">Projection Operations (C#)</span></span>
 <span data-ttu-id="f8018-103">投影是指將物件轉換成新形式的作業，而這個形式通常僅包含後續即將使用的屬性。</span><span class="sxs-lookup"><span data-stu-id="f8018-103">Projection refers to the operation of transforming an object into a new form that often consists only of those properties that will be subsequently used.</span></span> <span data-ttu-id="f8018-104">透過使用投影，您可以建構根據每個物件所建立的新型別。</span><span class="sxs-lookup"><span data-stu-id="f8018-104">By using projection, you can construct a new type that is built from each object.</span></span> <span data-ttu-id="f8018-105">您可以投影屬性並對其執行數學函式。</span><span class="sxs-lookup"><span data-stu-id="f8018-105">You can project a property and perform a mathematical function on it.</span></span> <span data-ttu-id="f8018-106">您也可以投影原始物件，而不進行任何變更。</span><span class="sxs-lookup"><span data-stu-id="f8018-106">You can also project the original object without changing it.</span></span>  

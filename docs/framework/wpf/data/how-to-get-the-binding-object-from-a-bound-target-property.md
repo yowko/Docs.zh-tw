@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556727"
 ---
 # <a name="how-to-get-the-binding-object-from-a-bound-target-property"></a><span data-ttu-id="c4aad-102">操作說明：從繫結的目標屬性取得繫結物件</span><span class="sxs-lookup"><span data-stu-id="c4aad-102">How to: Get the Binding Object from a Bound Target Property</span></span>
 <span data-ttu-id="c4aad-103">這個範例顯示如何從資料繫結目標屬性取得繫結物件。</span><span class="sxs-lookup"><span data-stu-id="c4aad-103">This example shows how to obtain the binding object from a data-bound target property.</span></span>  

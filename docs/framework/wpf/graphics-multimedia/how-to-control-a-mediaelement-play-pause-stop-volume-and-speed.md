@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561387"
 ---
 # <a name="how-to-control-a-mediaelement-play-pause-stop-volume-and-speed"></a><span data-ttu-id="d39e0-102">如何：控制 MediaElement (播放、暫停、停止、音量和速度)</span><span class="sxs-lookup"><span data-stu-id="d39e0-102">How to: Control a MediaElement (Play, Pause, Stop, Volume, and Speed)</span></span>
 <span data-ttu-id="d39e0-103">下列範例示範如何控制播放的媒體使用<xref:System.Windows.Controls.MediaElement>。</span><span class="sxs-lookup"><span data-stu-id="d39e0-103">The following example shows how to control playback of media using a <xref:System.Windows.Controls.MediaElement>.</span></span> <span data-ttu-id="d39e0-104">此範例會建立簡單的媒體播放程式，可讓您播放、 暫停、 停止，並略過來回媒體中，以及調整磁碟區和速度比。</span><span class="sxs-lookup"><span data-stu-id="d39e0-104">The example creates a simple media player that allows you to play, pause, stop, and skip back and forth in the media as well as adjust the volume and speed ratio.</span></span>  

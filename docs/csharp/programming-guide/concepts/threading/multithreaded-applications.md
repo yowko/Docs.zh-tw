@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336039"
 ---
 # <a name="multithreaded-applications-c"></a><span data-ttu-id="913c5-102">多執行緒應用程式 (C#)</span><span class="sxs-lookup"><span data-stu-id="913c5-102">Multithreaded Applications (C#)</span></span>
 <span data-ttu-id="913c5-103">使用 C#，您可以撰寫一次執行多項工作的應用程式。</span><span class="sxs-lookup"><span data-stu-id="913c5-103">With C#, you can write applications that perform multiple tasks at the same time.</span></span> <span data-ttu-id="913c5-104">可能妨礙其他工作的工作可以另外的執行緒執行，此等程序稱之為「多執行緒」或「無限制執行緒」。</span><span class="sxs-lookup"><span data-stu-id="913c5-104">Tasks with the potential of holding up other tasks can execute on separate threads, a process known as *multithreading* or *free threading*.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559278"
 ---
 # <a name="how-to-animate-a-rectangle-geometry-by-using-key-frames"></a><span data-ttu-id="d57c7-102">操作說明：使用主要畫面格建立矩形幾何的動畫</span><span class="sxs-lookup"><span data-stu-id="d57c7-102">How to: Animate a Rectangle Geometry by Using Key Frames</span></span>
 <span data-ttu-id="d57c7-103">此範例示範如何以動畫方式顯示<xref:System.Windows.Media.RectangleGeometry.Rect%2A>屬性<xref:System.Windows.Media.RectangleGeometry>所使用的主要畫面格。</span><span class="sxs-lookup"><span data-stu-id="d57c7-103">This example shows how to animate the <xref:System.Windows.Media.RectangleGeometry.Rect%2A> property of a <xref:System.Windows.Media.RectangleGeometry> by using key frames.</span></span>  

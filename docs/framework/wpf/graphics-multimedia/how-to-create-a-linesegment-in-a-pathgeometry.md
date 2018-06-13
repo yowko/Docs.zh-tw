@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559662"
 ---
 # <a name="how-to-create-a-linesegment-in-a-pathgeometry"></a><span data-ttu-id="82b54-102">操作說明：在 PathGeometry 中建立 LineSegment</span><span class="sxs-lookup"><span data-stu-id="82b54-102">How to: Create a LineSegment in a PathGeometry</span></span>
 <span data-ttu-id="82b54-103">這個範例會示範如何建立線段 。</span><span class="sxs-lookup"><span data-stu-id="82b54-103">This example shows how to create a line segment.</span></span> <span data-ttu-id="82b54-104">若要建立直線線段，使用<xref:System.Windows.Media.PathGeometry>， <xref:System.Windows.Media.PathFigure>，和<xref:System.Windows.Media.LineSegment>類別。</span><span class="sxs-lookup"><span data-stu-id="82b54-104">To create a line segment, use the <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, and <xref:System.Windows.Media.LineSegment> classes.</span></span>  

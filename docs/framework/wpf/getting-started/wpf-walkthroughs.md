@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557884"
 ---
 # <a name="wpf-walkthroughs"></a><span data-ttu-id="c54f5-102">WPF 逐步解說</span><span class="sxs-lookup"><span data-stu-id="c54f5-102">WPF Walkthroughs</span></span>
 <span data-ttu-id="c54f5-103">逐步解說提供常見情節的逐步指示。</span><span class="sxs-lookup"><span data-stu-id="c54f5-103">Walkthroughs give step-by-step instructions for common scenarios.</span></span> <span data-ttu-id="c54f5-104">因此是開始學習產品或特定功能領域的最佳入門。</span><span class="sxs-lookup"><span data-stu-id="c54f5-104">This makes them a good place to start learning about the product or a particular feature area.</span></span>  

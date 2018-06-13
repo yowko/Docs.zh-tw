@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397113"
 ---
 # <a name="internet-protocol-version-6"></a><span data-ttu-id="09f30-102">網際網路通訊協定第 6 版</span><span class="sxs-lookup"><span data-stu-id="09f30-102">Internet Protocol Version 6</span></span>
 <span data-ttu-id="09f30-103">網際網路通訊協定第 6 版 (IPv6) 是網際網路網路層級的新標準通訊協定套件。</span><span class="sxs-lookup"><span data-stu-id="09f30-103">The Internet Protocol version 6 (IPv6) is a new suite of standard protocols for the network layer of the Internet.</span></span> <span data-ttu-id="09f30-104">IPv6 旨在解決網際網路通訊協定當前版本 (稱為 IPv4) 有關位址耗竭、安全性、自動組態和擴充性等等的許多問題。</span><span class="sxs-lookup"><span data-stu-id="09f30-104">IPv6 is designed to solve many of the problems of the current version of the Internet Protocol suite (known as IPv4) with regard to address depletion, security, auto-configuration, extensibility, and so on.</span></span> <span data-ttu-id="09f30-105">IPv6 展開網際網路的功能，以啟用新種類的應用程式，包括點對點與行動應用程式。</span><span class="sxs-lookup"><span data-stu-id="09f30-105">IPv6 expands the capabilities of the Internet to enable new kinds of applications, including peer-to-peer and mobile applications.</span></span> <span data-ttu-id="09f30-106">以下是目前 IPv4 通訊協定的主要問題：</span><span class="sxs-lookup"><span data-stu-id="09f30-106">The following are the main issues of the current IPv4 protocol:</span></span>  

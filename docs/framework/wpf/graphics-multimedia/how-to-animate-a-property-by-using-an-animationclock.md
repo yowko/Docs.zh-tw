@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558728"
 ---
 # <a name="how-to-animate-a-property-by-using-an-animationclock"></a><span data-ttu-id="1a8f9-102">操作說明：使用 AnimationClock 建立屬性的動畫</span><span class="sxs-lookup"><span data-stu-id="1a8f9-102">How to: Animate a Property by Using an AnimationClock</span></span>
 <span data-ttu-id="1a8f9-103">這個範例示範如何使用<xref:System.Windows.Media.Animation.Clock>以動畫方式顯示屬性的物件。</span><span class="sxs-lookup"><span data-stu-id="1a8f9-103">This example shows how to use <xref:System.Windows.Media.Animation.Clock> objects to animate a property.</span></span>  
