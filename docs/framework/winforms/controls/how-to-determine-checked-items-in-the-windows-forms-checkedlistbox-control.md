@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531010"
 ---
 # <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>如何：判斷 Windows Form CheckedListBox 控制項中的已核取項目
 呈現 Windows Form 中的資料時<xref:System.Windows.Forms.CheckedListBox>控制項，您可以請逐一查看集合中儲存<xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A>屬性或清單使用逐步執行<xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>方法來判斷哪些項目會檢查。 <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>方法會採用做為其引數的項目索引編號，並傳回`true`或`false`。 Fci 不如預期，<xref:System.Windows.Forms.ListBox.SelectedItems%2A>和<xref:System.Windows.Forms.ListBox.SelectedIndices%2A>屬性不會決定會檢查哪些項目，它們會判斷哪些項目會反白顯示。  

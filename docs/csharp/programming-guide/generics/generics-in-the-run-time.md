@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334531"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>執行階段中的泛型 (C# 程式設計手冊)
 當泛型型別或方法編譯到 Microsoft intermediate language (MSIL) 時，會包含可將其識別為具有型別參數的中繼資料。 泛型型別 MSIL 的使用方法，因提供的型別參數為實值型別或參考型別而異。  

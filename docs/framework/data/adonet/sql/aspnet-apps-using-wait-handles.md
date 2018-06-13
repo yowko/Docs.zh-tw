@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356459"
 ---
 # <a name="aspnet-applications-using-wait-handles"></a>使用 Wait 控制代碼的 ASP.NET 應用程式
 當應用程式一次只處理一個非同步作業時，用於處理非同步作業的回呼及輪詢模式會很有用。 等候模式可提供更靈活的方式來處理多個非同步作業。 有兩種等候模式，這兩種模式都是針對用於實作它們的 <xref:System.Threading.WaitHandle> 方法而命名：等候 (任何) 模式及等候 (所有) 模式。  

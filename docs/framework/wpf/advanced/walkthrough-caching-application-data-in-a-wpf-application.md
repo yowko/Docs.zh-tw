@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548895"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>逐步解說：在 WPF 應用程式中快取應用程式資料
 快取可讓您將資料儲存在記憶體中，以進行快速存取。 一次存取資料時，應用程式可以從快取，而要擷取的原始來源取得資料。 這可以改善效能和延展性。 此外，暫時無法使用資料來源時，快取可讓資料可用。  
@@ -96,7 +97,7 @@ ms.lasthandoff: 05/04/2018
   
      **進階編譯器設定**對話方塊隨即出現。  
   
-4.  在**目標 framework （所有組態）**清單中，選取[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。 (請勿選取[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]。)  
+4.  在**目標 framework （所有組態）** 清單中，選取[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。 (請勿選取[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]。)  
   
 5.  按一下 [確定 **Deploying Office Solutions**]。  
   
@@ -295,7 +296,7 @@ ms.lasthandoff: 05/04/2018
   
      從文字檔案快取的內容會顯示在訊息方塊。 請注意，在檔案上的時間戳記。  
   
-3.  關閉訊息方塊，然後按一下 **取得快取**再次**。**  
+3.  關閉訊息方塊，然後按一下 **取得快取**再次 **。**  
   
      時間戳記不變。 這表示會顯示快取的內容。  
   
@@ -305,7 +306,7 @@ ms.lasthandoff: 05/04/2018
   
 5.  在文字編輯器中，開啟您所建立的文字檔案。 還不要進行任何變更。  
   
-6.  關閉訊息方塊，然後按一下 **取得快取**再次**。**  
+6.  關閉訊息方塊，然後按一下 **取得快取**再次 **。**  
   
      再次注意時間戳記。  
   

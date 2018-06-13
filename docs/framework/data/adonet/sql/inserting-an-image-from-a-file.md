@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359311"
 ---
 # <a name="inserting-an-image-from-a-file"></a>從檔案插入影像
 您可以將二進位大型物件 (BLOB) 做為二進位或字元資料寫入資料庫，端視資料來源的欄位類型而定。 BLOB 是參考 `text`、`ntext` 和 `image` 資料型別的一般詞彙，其中通常包含文件和圖片。  

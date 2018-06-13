@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526047"
 ---
 # <a name="custom-control-painting-and-rendering"></a>自訂控制項繪製和轉譯
 自訂繪製的控制項是容易由.NET Framework 的許多複雜工作。 撰寫的自訂控制項，當您有許多有關控制項的圖形的外觀。 如果您撰寫控制項是繼承自`Control`，您必須提供程式碼，讓您的控制項轉譯其圖形表示。 如果您要建立使用者控制項透過繼承自`UserControl`，繼承或從其中一個 Windows Form 控制項，您可能會覆寫標準的圖形表示，並提供您自己的圖形的程式碼。 如果您想要提供自訂的構成控制項轉譯`UserControl`撰寫時，您的選項變得更小，但仍然可讓各種不同的圖形化的控制項和應用程式的可能性。  

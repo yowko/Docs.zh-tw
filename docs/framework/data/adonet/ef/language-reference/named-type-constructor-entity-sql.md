@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763159"
 ---
 # <a name="named-type-constructor-entity-sql"></a>具名類型建構函式 (Entity SQL)
 用於建立概念模型名義型別 (例如實體類型或複雜類型) 的執行個體。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546984"
 ---
 # <a name="how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed"></a>如何：偵測有無安裝 Firefox 的 WPF 外掛程式
 可讓 Windows Presentation Foundation (WPF) 外掛程式，以用於 Firefox[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]而且釋放 Mozilla Firefox 瀏覽器中執行的 XAML 檔案。 本主題提供以 HTML 和系統管理員可用來判斷是否已安裝外掛程式，以用於 Firefox WPF 的 JavaScript 撰寫的指令碼。  

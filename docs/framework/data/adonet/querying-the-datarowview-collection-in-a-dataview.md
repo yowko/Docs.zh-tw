@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358888"
 ---
 # <a name="querying-the-datarowview-collection-in-a-dataview"></a>查詢 DataView 中的 DataRowView 集合
 <xref:System.Data.DataView> 公開可列舉之 <xref:System.Data.DataRowView> 物件的集合。 <xref:System.Data.DataRowView> 代表 <xref:System.Data.DataRow> 的自訂檢視並會在控制項中顯示該 <xref:System.Data.DataRow> 的特定版本。 只有一個 <xref:System.Data.DataRow> 的版本能透過控制項顯示，例如 <xref:System.Windows.Forms.DataGridView>。 您可以透過 <xref:System.Data.DataRow> 的 <xref:System.Data.DataRowView> 屬性，存取 <xref:System.Data.DataRowView.Row%2A> 公開的 <xref:System.Data.DataRowView>。 使用 <xref:System.Data.DataRowView> 檢視值時，<xref:System.Data.DataView.RowStateFilter%2A> 屬性會判斷要公開的是哪一個基礎 <xref:System.Data.DataRow> 的資料列版本。 如需有關存取使用不同的資料列版本資訊<xref:System.Data.DataRow>，請參閱[資料列狀態和資料列版本](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)。 因為集合<xref:System.Data.DataRowView>物件所公開<xref:System.Data.DataView>是您可以使用可列舉的[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]對它進行查詢。  

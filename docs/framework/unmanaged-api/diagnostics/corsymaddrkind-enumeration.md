@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 98cf49714829b4b2f80e0240c2ebde7fa6c280e1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425401"
 ---
 # <a name="corsymaddrkind-enumeration"></a>CorSymAddrKind 列舉
 指出記憶體位址的類型。  
@@ -59,7 +60,7 @@ typedef enum CorSymAddrKind
 |`ADDR_NATIVE_ISECTOFFSET`|表示第一個位址是區段，而且第二個位址是位移。|  
   
 ## <a name="requirements"></a>需求  
- **標頭：**於 CorSym.idl、 CorSym.h  
+ **標頭：** 於 CorSym.idl、 CorSym.h  
   
 ## <a name="see-also"></a>另請參閱  
  [診斷符號存放區列舉](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

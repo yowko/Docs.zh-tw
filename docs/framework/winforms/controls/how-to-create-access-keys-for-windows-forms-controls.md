@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530945"
 ---
 # <a name="how-to-create-access-keys-for-windows-forms-controls"></a>如何：建立 Windows Form 控制項的便捷鍵
 *便捷鍵*是功能表或功能表項目，例如按鈕控制項的標籤文字中加底線的字元。 便捷鍵，使用者可以 「 按一下 」 按鈕，然後按下 ALT 鍵組合中的預先定義的存取金鑰。 例如，按鈕會執行程序來列印表單時，如果，因此其`Text`屬性設定為"Print"，將新增連字號，再字母"P"讓字母"P"會在執行階段上底線的按鈕文字。 使用者可以執行命令與按鈕按下 ALT + P 關聯。 您不能有無法接收焦點的控制項的便捷鍵。  

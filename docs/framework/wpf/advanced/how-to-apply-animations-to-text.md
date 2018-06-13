@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545434"
 ---
 # <a name="how-to-apply-animations-to-text"></a>如何：對文字套用動畫
 動畫可以變更應用程式中文字的顯示和外觀。 下列範例會使用不同類型的動畫來影響的文字顯示<xref:System.Windows.Controls.TextBlock>控制項。  

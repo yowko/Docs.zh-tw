@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328860"
 ---
 # <a name="how-to-use-operator-overloading-to-create-a-complex-number-class-c-programming-guide"></a>如何：使用運算子多載建立複數類別 (C# 程式設計手冊)
 此範例示範如何使用運算子多載來建立定義複數加法的 `Complex` 複數類別。 此程式會顯示數值的虛數和實數部分，以及使用 `ToString` 方法覆寫的加法結果。  

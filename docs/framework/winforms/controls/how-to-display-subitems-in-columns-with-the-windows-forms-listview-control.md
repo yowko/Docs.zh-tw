@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532502"
 ---
 # <a name="how-to-display-subitems-in-columns-with-the-windows-forms-listview-control"></a>如何：使用 Windows Form ListView 控制項以資料行顯示子項目
 Windows Form<xref:System.Windows.Forms.ListView>控制項可以顯示其他的文字或詳細資料檢視中的每個項目的子項目。 第一個資料行顯示的項目文字，例如員工編號。 第二、 第三和後續的資料行中顯示第一、 第二，以及後續的相關聯的子項目。  

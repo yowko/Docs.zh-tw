@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337583"
 ---
 # <a name="interfaces-c-programming-guide"></a>介面 (C# 程式設計手冊)
 介面包含[類別](../../../csharp/language-reference/keywords/class.md)或 [struct](../../../csharp/language-reference/keywords/struct.md) 可實作的一組相關功能定義。  

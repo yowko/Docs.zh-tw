@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358537"
 ---
 # <a name="ltbaseaddressprefixfiltersgt"></a>&lt;baseAddressPrefixFilters&gt;
 表示的組態項目會指定通過篩選條件，提供一個機制，裝載在 IIS 中的 Windows Communication Foundation (WCF) 應用程式時挑選適當的網際網路資訊服務 (IIS) 繫結的集合。  

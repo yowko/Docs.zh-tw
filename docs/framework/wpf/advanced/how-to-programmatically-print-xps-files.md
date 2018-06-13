@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547580"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>如何：以程式設計方式列印 XPS 檔
 您可以使用一個多載<xref:System.Printing.PrintQueue.AddJob%2A>方法，以列印[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]未開啟的檔案<xref:System.Windows.Controls.PrintDialog>或原則上，任何[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]完全。  

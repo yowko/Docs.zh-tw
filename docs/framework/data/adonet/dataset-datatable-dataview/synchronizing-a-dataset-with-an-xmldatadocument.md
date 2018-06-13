@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763263"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>使用 XmlDataDocument 同步處理資料集
 本節將使用已與 <xref:System.Data.DataSet> 同步處理的強型別 <xref:System.Xml.XmlDataDocument>，來示範處理採購單的其中一個步驟。 請依照下列範例會建立**資料集**的最小化的結構描述，比對只包含來源 XML 文件的一部分。 這些範例使用**XmlDataDocument**來保留來源 XML 文件精確度啟用**資料集**用來公開 XML 文件的子集。  

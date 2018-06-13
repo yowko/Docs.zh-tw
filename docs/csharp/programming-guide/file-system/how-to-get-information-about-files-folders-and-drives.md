@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338535"
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>如何：取得有關檔案、資料夾和磁碟機的資訊 (C# 程式設計手冊)
 在 .NET Framework 中，您可以使用下列類別來存取檔案系統資訊：  
