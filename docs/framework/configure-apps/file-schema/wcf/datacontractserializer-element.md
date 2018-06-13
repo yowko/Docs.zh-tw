@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752763"
 ---
 # <a name="ltdatacontractserializergt"></a><span data-ttu-id="a0790-102">&lt;DataContractSerializer&gt;</span><span class="sxs-lookup"><span data-stu-id="a0790-102">&lt;dataContractSerializer&gt;</span></span>
 <span data-ttu-id="a0790-103">包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的組態資料。</span><span class="sxs-lookup"><span data-stu-id="a0790-103">Contains configuration data for the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span> <span data-ttu-id="a0790-104">這個項目會出現在兩個不同的階層架構中。</span><span class="sxs-lookup"><span data-stu-id="a0790-104">This element occurs in two different hierarchies.</span></span> <span data-ttu-id="a0790-105">其中一個列於接下來的＜結構描述階層架構＞一節，另一個則列於＜備註＞一節中。</span><span class="sxs-lookup"><span data-stu-id="a0790-105">One is listed the following Schema Hierarchy section and the other is listed in the Remarks section.</span></span>  

@@ -1,13 +1,6 @@
 ---
-title: "GDI+ 中的中繼檔"
-ms.custom: 
+title: GDI+ 中的中繼檔
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,37 +9,33 @@ helpviewer_keywords:
 - GDI+, metafiles
 - metafiles
 ms.assetid: 51da872c-c783-440f-8bf6-1e580a966c31
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2b9d378f82b2a7edca00fedaacdcc0fca179c5a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 73cacb7f701768b42121c31cfbc4f26905961231
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525086"
 ---
-# <a name="metafiles-in-gdi"></a><span data-ttu-id="b34ba-102">GDI+ 中的中繼檔</span><span class="sxs-lookup"><span data-stu-id="b34ba-102">Metafiles in GDI+</span></span>
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="b34ba-103">提供<xref:System.Drawing.Imaging.Metafile>類別，因此您可以記錄，並顯示中繼檔。</span><span class="sxs-lookup"><span data-stu-id="b34ba-103"> provides the <xref:System.Drawing.Imaging.Metafile> class so that you can record and display metafiles.</span></span> <span data-ttu-id="b34ba-104">中繼檔，也稱為向量映像，是儲存為一連串的繪圖命令和設定映像。</span><span class="sxs-lookup"><span data-stu-id="b34ba-104">A metafile, also called a vector image, is an image that is stored as a sequence of drawing commands and settings.</span></span> <span data-ttu-id="b34ba-105">命令和設定記錄在<xref:System.Drawing.Imaging.Metafile>可以儲存在記憶體中或儲存到檔案或資料流物件。</span><span class="sxs-lookup"><span data-stu-id="b34ba-105">The commands and settings recorded in a <xref:System.Drawing.Imaging.Metafile> object can be stored in memory or saved to a file or stream.</span></span>  
+# <a name="metafiles-in-gdi"></a><span data-ttu-id="5e4be-102">GDI+ 中的中繼檔</span><span class="sxs-lookup"><span data-stu-id="5e4be-102">Metafiles in GDI+</span></span>
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="5e4be-103"> 提供<xref:System.Drawing.Imaging.Metafile>類別，因此您可以記錄，並顯示中繼檔。</span><span class="sxs-lookup"><span data-stu-id="5e4be-103"> provides the <xref:System.Drawing.Imaging.Metafile> class so that you can record and display metafiles.</span></span> <span data-ttu-id="5e4be-104">中繼檔，也稱為向量映像，是儲存為一連串的繪圖命令和設定映像。</span><span class="sxs-lookup"><span data-stu-id="5e4be-104">A metafile, also called a vector image, is an image that is stored as a sequence of drawing commands and settings.</span></span> <span data-ttu-id="5e4be-105">命令和設定記錄在<xref:System.Drawing.Imaging.Metafile>可以儲存在記憶體中或儲存到檔案或資料流物件。</span><span class="sxs-lookup"><span data-stu-id="5e4be-105">The commands and settings recorded in a <xref:System.Drawing.Imaging.Metafile> object can be stored in memory or saved to a file or stream.</span></span>  
   
-## <a name="metafile-formats"></a><span data-ttu-id="b34ba-106">中繼檔格式</span><span class="sxs-lookup"><span data-stu-id="b34ba-106">Metafile Formats</span></span>  
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="b34ba-107">可以顯示已儲存在下列格式的中繼檔：</span><span class="sxs-lookup"><span data-stu-id="b34ba-107"> can display metafiles that have been stored in the following formats:</span></span>  
+## <a name="metafile-formats"></a><span data-ttu-id="5e4be-106">中繼檔格式</span><span class="sxs-lookup"><span data-stu-id="5e4be-106">Metafile Formats</span></span>  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="5e4be-107"> 可以顯示已儲存在下列格式的中繼檔：</span><span class="sxs-lookup"><span data-stu-id="5e4be-107"> can display metafiles that have been stored in the following formats:</span></span>  
   
--   <span data-ttu-id="b34ba-108">Windows 中繼檔 (WMF)</span><span class="sxs-lookup"><span data-stu-id="b34ba-108">Windows Metafile (WMF)</span></span>  
+-   <span data-ttu-id="5e4be-108">Windows 中繼檔 (WMF)</span><span class="sxs-lookup"><span data-stu-id="5e4be-108">Windows Metafile (WMF)</span></span>  
   
--   <span data-ttu-id="b34ba-109">加強型中繼檔 (EMF) </span><span class="sxs-lookup"><span data-stu-id="b34ba-109">Enhanced Metafile (EMF)</span></span>  
+-   <span data-ttu-id="5e4be-109">加強型中繼檔 (EMF) </span><span class="sxs-lookup"><span data-stu-id="5e4be-109">Enhanced Metafile (EMF)</span></span>  
   
--   <span data-ttu-id="b34ba-110">EMF +</span><span class="sxs-lookup"><span data-stu-id="b34ba-110">EMF+</span></span>  
+-   <span data-ttu-id="5e4be-110">EMF +</span><span class="sxs-lookup"><span data-stu-id="5e4be-110">EMF+</span></span>  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="b34ba-111">EMF 和 EMF + 格式，但不是在 WMF 格式，則可以錄製中繼檔。</span><span class="sxs-lookup"><span data-stu-id="b34ba-111"> can record metafiles in the EMF and EMF+ formats, but not in the WMF format.</span></span>  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="5e4be-111"> EMF 和 EMF + 格式，但不是在 WMF 格式，則可以錄製中繼檔。</span><span class="sxs-lookup"><span data-stu-id="5e4be-111"> can record metafiles in the EMF and EMF+ formats, but not in the WMF format.</span></span>  
   
- <span data-ttu-id="b34ba-112">EMF + 是擴充功能，可讓 EMF[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]来儲存的記錄。</span><span class="sxs-lookup"><span data-stu-id="b34ba-112">EMF+ is an extension to EMF that allows [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] records to be stored.</span></span> <span data-ttu-id="b34ba-113">有兩種變化 EMF + 格式： EMF + 只有和 EMF + 雙重。</span><span class="sxs-lookup"><span data-stu-id="b34ba-113">There are two variations on the EMF+ format: EMF+ Only and EMF+ Dual.</span></span> <span data-ttu-id="b34ba-114">EMF + 僅中繼檔只包含[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]記錄。</span><span class="sxs-lookup"><span data-stu-id="b34ba-114">EMF+ Only metafiles contain only [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] records.</span></span> <span data-ttu-id="b34ba-115">這類中繼檔可以顯示[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]不[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="b34ba-115">Such metafiles can be displayed by [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] but not by [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].</span></span> <span data-ttu-id="b34ba-116">EMF + 雙重中繼檔包含[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]和[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]記錄。</span><span class="sxs-lookup"><span data-stu-id="b34ba-116">EMF+ Dual metafiles contain [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] and [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] records.</span></span> <span data-ttu-id="b34ba-117">每個[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]記錄 EMF + 雙重中繼檔搭配替代[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]記錄。</span><span class="sxs-lookup"><span data-stu-id="b34ba-117">Each [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] record in an EMF+ Dual metafile is paired with an alternate [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] record.</span></span> <span data-ttu-id="b34ba-118">這類中繼檔可以顯示[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]或[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="b34ba-118">Such metafiles can be displayed by [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] or by [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].</span></span>  
+ <span data-ttu-id="5e4be-112">EMF + 是擴充功能，可讓 EMF[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]来儲存的記錄。</span><span class="sxs-lookup"><span data-stu-id="5e4be-112">EMF+ is an extension to EMF that allows [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] records to be stored.</span></span> <span data-ttu-id="5e4be-113">有兩種變化 EMF + 格式： EMF + 只有和 EMF + 雙重。</span><span class="sxs-lookup"><span data-stu-id="5e4be-113">There are two variations on the EMF+ format: EMF+ Only and EMF+ Dual.</span></span> <span data-ttu-id="5e4be-114">EMF + 僅中繼檔只包含[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]記錄。</span><span class="sxs-lookup"><span data-stu-id="5e4be-114">EMF+ Only metafiles contain only [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] records.</span></span> <span data-ttu-id="5e4be-115">這類中繼檔可以顯示[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]不[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="5e4be-115">Such metafiles can be displayed by [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] but not by [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].</span></span> <span data-ttu-id="5e4be-116">EMF + 雙重中繼檔包含[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]和[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]記錄。</span><span class="sxs-lookup"><span data-stu-id="5e4be-116">EMF+ Dual metafiles contain [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] and [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] records.</span></span> <span data-ttu-id="5e4be-117">每個[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]記錄 EMF + 雙重中繼檔搭配替代[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]記錄。</span><span class="sxs-lookup"><span data-stu-id="5e4be-117">Each [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] record in an EMF+ Dual metafile is paired with an alternate [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] record.</span></span> <span data-ttu-id="5e4be-118">這類中繼檔可以顯示[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]或[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="5e4be-118">Such metafiles can be displayed by [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] or by [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].</span></span>  
   
- <span data-ttu-id="b34ba-119">下列範例會顯示先前為檔案儲存在中繼檔。</span><span class="sxs-lookup"><span data-stu-id="b34ba-119">The following example displays a metafile that was previously saved as a file.</span></span> <span data-ttu-id="b34ba-120">中繼檔就會顯示在其左上角 （100，100）。</span><span class="sxs-lookup"><span data-stu-id="b34ba-120">The metafile is displayed with its upper-left corner at (100, 100).</span></span>  
+ <span data-ttu-id="5e4be-119">下列範例會顯示先前為檔案儲存在中繼檔。</span><span class="sxs-lookup"><span data-stu-id="5e4be-119">The following example displays a metafile that was previously saved as a file.</span></span> <span data-ttu-id="5e4be-120">中繼檔就會顯示在其左上角 （100，100）。</span><span class="sxs-lookup"><span data-stu-id="5e4be-120">The metafile is displayed with its upper-left corner at (100, 100).</span></span>  
   
  [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.ImagesBitmapsMetafiles#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#21)]  
   
-## <a name="see-also"></a><span data-ttu-id="b34ba-121">請參閱</span><span class="sxs-lookup"><span data-stu-id="b34ba-121">See Also</span></span>  
- [<span data-ttu-id="b34ba-122">影像、點陣圖和中繼檔</span><span class="sxs-lookup"><span data-stu-id="b34ba-122">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+## <a name="see-also"></a><span data-ttu-id="5e4be-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5e4be-121">See Also</span></span>  
+ [<span data-ttu-id="5e4be-122">影像、點陣圖和中繼檔</span><span class="sxs-lookup"><span data-stu-id="5e4be-122">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)

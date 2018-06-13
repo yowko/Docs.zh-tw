@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551787"
 ---
 # <a name="how-to-wrap-a-border-around-the-content-of-a-canvas"></a><span data-ttu-id="dee4a-102">如何：在畫布內容周圍加上框線</span><span class="sxs-lookup"><span data-stu-id="dee4a-102">How to: Wrap a Border Around the Content of a Canvas</span></span>
 <span data-ttu-id="dee4a-103">這個範例示範如何包裝<xref:System.Windows.Controls.Canvas>具有項目<xref:System.Windows.Controls.Border>。</span><span class="sxs-lookup"><span data-stu-id="dee4a-103">This example shows how to wrap a <xref:System.Windows.Controls.Canvas> element with a <xref:System.Windows.Controls.Border>.</span></span>  

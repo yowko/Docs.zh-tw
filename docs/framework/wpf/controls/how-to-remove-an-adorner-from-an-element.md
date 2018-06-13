@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551839"
 ---
 # <a name="how-to-remove-an-adorner-from-an-element"></a><span data-ttu-id="5c265-102">如何：從項目移除裝飾項</span><span class="sxs-lookup"><span data-stu-id="5c265-102">How to: Remove an Adorner from an Element</span></span>
 <span data-ttu-id="5c265-103">這個範例示範如何以程式設計方式移除特定的裝飾項指定<xref:System.Windows.UIElement>。</span><span class="sxs-lookup"><span data-stu-id="5c265-103">This example shows how to programmatically remove a specific adorner from a specified <xref:System.Windows.UIElement>.</span></span>  

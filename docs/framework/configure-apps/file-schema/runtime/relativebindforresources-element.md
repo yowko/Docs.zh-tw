@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752295"
 ---
 # <a name="ltrelativebindforresourcesgt-element"></a><span data-ttu-id="a6b93-102">&lt;relativeBindForResources&gt;項目</span><span class="sxs-lookup"><span data-stu-id="a6b93-102">&lt;relativeBindForResources&gt; Element</span></span>
 <span data-ttu-id="a6b93-103">最佳化附屬組件的探查。</span><span class="sxs-lookup"><span data-stu-id="a6b93-103">Optimizes the probe for satellite assemblies.</span></span>  

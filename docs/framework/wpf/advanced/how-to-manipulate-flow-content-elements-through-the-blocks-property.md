@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544546"
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a><span data-ttu-id="33b79-102">如何：透過 Blocks 屬性管理非固定格式內容項目</span><span class="sxs-lookup"><span data-stu-id="33b79-102">How to: Manipulate Flow Content Elements through the Blocks Property</span></span>
 <span data-ttu-id="33b79-103">這些範例會示範一些較常見可以透過動態內容的項目執行的運算**區塊**屬性。</span><span class="sxs-lookup"><span data-stu-id="33b79-103">These examples demonstrate some of the more common operations that can be performed on flow content elements through the **Blocks** property.</span></span> <span data-ttu-id="33b79-104">這個屬性用來加入和移除項目從<xref:System.Windows.Documents.BlockCollection>。</span><span class="sxs-lookup"><span data-stu-id="33b79-104">This property is used to add and remove items from <xref:System.Windows.Documents.BlockCollection>.</span></span> <span data-ttu-id="33b79-105">非固定格式內容項目該功能**區塊**屬性包括：</span><span class="sxs-lookup"><span data-stu-id="33b79-105">Flow content elements that feature a **Blocks** property include:</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549213"
 ---
 # <a name="optimizing-performance-object-behavior"></a><span data-ttu-id="52f3e-102">最佳化效能：物件行為</span><span class="sxs-lookup"><span data-stu-id="52f3e-102">Optimizing Performance: Object Behavior</span></span>
 <span data-ttu-id="52f3e-103">了解 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 物件的內建行為有助您做出功能和效能之間的正確取捨。</span><span class="sxs-lookup"><span data-stu-id="52f3e-103">Understanding the intrinsic behavior of [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] objects will help you make the right tradeoffs between functionality and performance.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751658"
 ---
 # <a name="ltmsmqintegrationbindinggt"></a><span data-ttu-id="caef7-102">&lt;msmqIntegrationBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="caef7-102">&lt;msmqIntegrationBinding&gt;</span></span>
 <span data-ttu-id="caef7-103">定義繫結，此繫結可透過 MSMQ 傳遞訊息來提供查詢支援。</span><span class="sxs-lookup"><span data-stu-id="caef7-103">Defines a binding that provides queuing support by routing messages through MSMQ.</span></span>  

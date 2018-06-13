@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544864"
 ---
 # <a name="how-to-automatically-size-a-window-to-fit-its-content"></a><span data-ttu-id="fb672-102">如何： 自動調整大小以符合其內容的視窗</span><span class="sxs-lookup"><span data-stu-id="fb672-102">How to: Automatically Size a Window to Fit Its Content</span></span>
 <span data-ttu-id="fb672-103">這個範例示範如何設定<xref:System.Windows.Window.SizeToContent%2A>屬性來指定視窗調整大小以符合其內容的方式。</span><span class="sxs-lookup"><span data-stu-id="fb672-103">This example shows how to set the <xref:System.Windows.Window.SizeToContent%2A> property to specify how a window resizes to fit its content.</span></span>  
