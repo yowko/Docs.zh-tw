@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496558"
 ---
 # <a name="large-data-and-streaming"></a>大型資料與資料流
 Windows Communication Foundation (WCF) 是一種以 XML 為基礎的通訊基礎結構。 因為 XML 資料通常編碼中所定義的標準文字格式[XML 1.0 規格](http://go.microsoft.com/fwlink/?LinkId=94838)、 已連線系統開發人員和設計師通常關心傳送訊息的網路使用量 （或大小） 之間網路和以文字為基礎的編碼 XML 會造成特殊的挑戰，對有效率的二進位資料傳輸。  

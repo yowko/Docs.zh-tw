@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537748"
 ---
 # <a name="toolstripprogressbar-control-overview"></a>ToolStripProgressBar 控制項概觀
 <xref:System.Windows.Forms.ToolStripProgressBar>結合浮動定位和所有的轉譯功能<xref:System.Windows.Forms.ToolStrip>其一般的程序追蹤功能使用的控制項。 A<xref:System.Windows.Forms.ToolStripProgressBar>最通常由<xref:System.Windows.Forms.StatusStrip>，且較不頻繁的<xref:System.Windows.Forms.ToolStrip>。  

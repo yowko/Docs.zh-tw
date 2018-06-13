@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502588"
 ---
 # <a name="workflow-control-endpoint"></a>工作流程控制端點
 工作流程控制端點可讓開發人員呼叫控制作業，以便從遠端控制使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 所裝載的工作流程執行個體。 這項功能可以使用程式設計的方式執行多種控制作業，像是暫停、繼續及終止。  

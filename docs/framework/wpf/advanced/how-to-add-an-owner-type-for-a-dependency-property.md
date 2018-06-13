@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542772"
 ---
 # <a name="how-to-add-an-owner-type-for-a-dependency-property"></a>如何：加入相依性屬性的擁有者類型
 這個範例示範如何將類別加入做為註冊不同類型的相依性屬性的擁有者。 這樣做， [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]讀取器和屬性系統都能夠辨識類別做為其他擁有者的屬性。 選擇性地加入做為擁有者可讓加入的類別，以提供特定類型的中繼資料。  

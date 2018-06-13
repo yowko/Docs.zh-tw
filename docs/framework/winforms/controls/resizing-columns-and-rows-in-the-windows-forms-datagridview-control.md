@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536951"
 ---
 # <a name="resizing-columns-and-rows-in-the-windows-forms-datagridview-control"></a>調整 Windows Form DataGridView 控制項中資料行和資料列的大小
 `DataGridView`控制項提供許多自訂其資料行和資料列的調整大小行為的選項。 一般而言，`DataGridView`不調整大小的資料格根據其內容。 相反地，它們會裁剪任何大於儲存格的顯示值。 如果內容可以顯示為字串，則資料格會顯示其工具提示中。  

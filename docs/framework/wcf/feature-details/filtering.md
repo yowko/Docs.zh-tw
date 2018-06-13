@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497239"
 ---
 # <a name="filtering"></a>篩選
 Windows Communication Foundation (WCF) 篩選系統可以使用宣告式篩選條件要比對訊息，並做出作業決策。 您可以使用篩選條件檢查訊息的部分，以判斷如何處理訊息。 例如，佇列處理序可以使用 XPath 1.0 查詢檢查已知標頭的優先順序項目，以便決定是否要將訊息移到佇列前頭。  

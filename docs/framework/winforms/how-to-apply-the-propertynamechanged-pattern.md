@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536741"
 ---
 # <a name="how-to-apply-the-propertynamechanged-pattern"></a>如何：套用 PropertyNameChanged 模式
 下列程式碼範例示範如何套用*PropertyName*模式設為自訂控制項。 當您實作自訂控制項搭配 Windows Form 資料繫結引擎所使用時，適用於此模式。  

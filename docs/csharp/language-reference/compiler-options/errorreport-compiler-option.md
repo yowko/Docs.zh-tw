@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218981"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport (C# 編譯器選項)
 此選項提供將 C# 編譯器內部錯誤回報給 Microsoft 的便利方式。  

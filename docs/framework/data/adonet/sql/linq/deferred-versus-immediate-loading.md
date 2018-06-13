@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360346"
 ---
 # <a name="deferred-versus-immediate-loading"></a>延後和立即載入的比較
 當您查詢物件時，實際上只擷取了所要求的物件。 *相關*物件無法自動擷取一次。 (如需詳細資訊，請參閱[跨關聯性查詢](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md)。)因為嘗試存取相關物件會產生對相關物件進行擷取的要求，所以您看不到相關物件尚未載入的事實。  

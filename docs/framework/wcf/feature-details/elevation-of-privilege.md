@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496190"
 ---
 # <a name="elevation-of-privilege"></a>權限提高
 *提高權限*得到的權限高於原先賦予攻擊者的授權。 例如，具有「唯讀」權限的攻擊者以不明方式將權限提高為「讀取和寫入」。  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496021"
 ---
 # <a name="auditing-security-events"></a>稽核安全性事件
 建立與 Windows Communication Foundation (WCF) 應用程式可以使用稽核功能記錄安全性事件 （成功、 失敗，或兩者）。 事件會寫入至 Windows 系統事件記錄檔，並且可以使用 [事件檢視器] 加以檢查。  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536009"
 ---
 # <a name="sorting-data-in-the-windows-forms-datagridview-control"></a>在 Windows Form DataGridView 控制項中排序資料
 

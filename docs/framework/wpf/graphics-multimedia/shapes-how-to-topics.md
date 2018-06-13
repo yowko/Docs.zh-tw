@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562866"
 ---
 # <a name="shapes-how-to-topics"></a>圖案 HOW TO 主題
 此章節的主題示範如何使用<xref:System.Windows.Shapes.Shape>繪製螢幕的基本圖案的物件。  

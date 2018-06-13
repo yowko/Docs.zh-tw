@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497009"
 ---
 # <a name="queues-overview"></a>佇列概觀
 本節將介紹已佇列通訊背後的一般和核心概念。 後續各節移到此處所述的佇列概念會列印文件的顯示，請在 Windows Communication Foundation (WCF) 的相關詳細資料。  

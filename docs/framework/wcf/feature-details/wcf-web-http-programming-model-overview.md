@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507109"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP 程式設計模型概觀
 Windows Communication Foundation (WCF) WEB HTTP 程式設計模型提供建置使用 WCF WEB HTTP 服務所需的基本項目。 WCF WEB HTTP 服務的設計可供最廣泛用戶端，包括 Web 瀏覽器存取，並具有下列獨特需求：  

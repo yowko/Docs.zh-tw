@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496745"
 ---
 # <a name="how-to-host-a-non-service-workflow-in-iis"></a>HOW TO：在 IIS 中裝載非服務工作流程
 您可以在 IIS/WAS 底下裝載非工作流程服務的工作流程。 當您需要裝載其他人所撰寫的工作流程時，這樣做就很有用。 例如，如果您重新裝載工作流程設計工具並允許使用者建立自己的工作流程。  在 IIS 中裝載非服務工作流程可支援許多功能，例如處理序回收、閒置關機、處理序健康狀態監控，以及訊息啟動。 在 IIS 中裝載的工作流程服務包含 <xref:System.ServiceModel.Activities.Receive> 活動，而且這些服務會在 IIS 收到訊息時啟動。 非服務工作流程不包含訊息活動，而且預設無法透過傳送訊息來啟動。  您必須從 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 衍生類別，並且定義包含作業的服務合約來建立工作流程執行個體。 本主題將逐步引導您逐步建立簡單的工作流程、 定義服務合約的用戶端可以使用啟動工作流程，以及衍生自<xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>這用來接聽之工作流程建立要求的服務合約。  

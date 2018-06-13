@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756900"
 ---
 # <a name="ltworkflowidlegt"></a>&lt;workflowIdle&gt;
 這個服務行為可控制卸載及保存閒置工作流程執行個體的時間。  

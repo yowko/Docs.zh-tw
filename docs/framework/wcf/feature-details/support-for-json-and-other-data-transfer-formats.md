@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497512"
 ---
 # <a name="support-for-json-and-other-data-transfer-formats"></a>JSON 和其他資料傳輸格式的支援
 JSON (JavaScript 物件標記法) 是一種有效率的資料編碼格式，可以在用戶端瀏覽器與啟用 AJAX (非同步 JavaScript 和 XML) 的 Web 服務之間啟用快速的小量資料交換作業。  

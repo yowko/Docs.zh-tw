@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507346"
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>解譯 wsatConfig.exe 傳回的錯誤碼
 本主題列出 WS-AtomicTransaction 組態公用程式 (wsatConfig.exe) 產生的錯誤碼，以及建議採取的動作。  

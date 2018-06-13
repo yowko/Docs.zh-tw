@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498058"
 ---
 # <a name="supported-deployment-scenarios"></a>支援的部署案例
 Windows Communication Foundation (WCF) 支援在部分信任應用程式中使用的功能子集主要被為了符合某些，但不是全部案例使用 WCF 的需求。 在伺服器上，WCF 符合網際網路範圍的要求會共用裝載提供者執行第三方應用程式中[!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]因為安全性緣故而度信任權限。 在用戶端，WCF 部分信任支援主要為了符合需求的部署技術例如[ClickOnce 部署](http://go.microsoft.com/fwlink/?LinkId=83712)或[!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]的 XAML 瀏覽器應用程式技術，允許順暢且安全部署桌面應用程式，從受信任的網站。  

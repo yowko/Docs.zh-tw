@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216604"
 ---
 # <a name="checked-c-reference"></a>checked (C# 參考)
 `checked` 關鍵字是用來明確啟用整數型別算術運算和轉換的溢位檢查。  

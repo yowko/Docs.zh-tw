@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536676"
 ---
 # <a name="tabcontrol-control-overview-windows-forms"></a>TabControl 控制項概觀 (Windows Form)
 Windows Form <xref:System.Windows.Forms.TabControl> 顯示多個索引標籤，像是在筆記本中的分隔線或在檔案櫃中一組資料夾的標籤。 索引標籤可以包含圖片和其他控制項。 您可以使用此索引標籤控制項以產生會顯示 Windows 作業系統，例如控制面板顯示內容中的許多地方的多頁對話方塊中的類型。 此外，<xref:System.Windows.Forms.TabControl>可以用來建立用來設定一組相關屬性的屬性頁。  

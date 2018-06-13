@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539448"
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>如何：回應 Windows Forms 應用程式中的字型配置變更
 在 Windows 作業系統中，使用者可以變更全系統字型設定，讓預設字型看起來更大或變小。 變更這些字型設定是重要的是視覺障礙者，並且需要讀取他們的螢幕上文字的較大類型的使用者。 您可以調整 Windows Form 應用程式由增加或減少大小的表單和內含之所有文字的字型配置變更時回應這些變更。 如果您想要以動態方式容納變更字型大小表單時，您可以將程式碼加入至表單。  

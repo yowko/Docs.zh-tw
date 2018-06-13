@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500060"
 ---
 # <a name="web-extensibility"></a>Web 擴充性
 本節包含示範自訂 Web 功能在 Windows Communication Foundation (WCF) 的範例。  

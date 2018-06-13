@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507356"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>WCF Web HTTP 程式設計物件模型
 WCF WEB HTTP 程式設計模型可讓開發人員公開，Windows Communication Foundation (WCF) Web 服務，透過基本 HTTP 要求，而不需要使用 SOAP。 WCF WEB HTTP 程式設計模型是建立在現有的 WCF 擴充性模型之上。 這個模型會定義下列類別：  

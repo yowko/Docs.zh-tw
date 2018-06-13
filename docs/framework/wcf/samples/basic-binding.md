@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498938"
 ---
 # <a name="basic-binding"></a>基本繫結
 本節包含示範使用端點項目之繫結屬性的基本範例。  

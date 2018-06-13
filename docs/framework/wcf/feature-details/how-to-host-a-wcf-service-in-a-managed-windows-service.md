@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497213"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>HOW TO：在 Managed Windows 服務中裝載 WCF 服務
 本主題概要說明建立 Windows 服務裝載 Windows Communication Foundation (WCF) 服務所需的基本步驟。 此案例會啟用受管理的 Windows 服務裝載是長時間執行的 WCF 服務裝載網際網路資訊服務 (IIS) 之外，不是啟動訊息的安全環境中的選項。 服務的存留期會改由作業系統來控制。 所有 Windows 版本都提供這個裝載選項。  

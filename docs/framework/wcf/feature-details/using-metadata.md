@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497941"
 ---
 # <a name="using-metadata"></a>使用中繼資料
 服務中繼資料中包含電腦可讀取的服務描述。 服務中繼資料包含服務端點、繫結、合約、作業和訊息的描述。 您可將服務中繼資料用於各種用途，包括自動產生用戶端來使用服務、實作服務描述，以及動態更新用戶端的繫結。  

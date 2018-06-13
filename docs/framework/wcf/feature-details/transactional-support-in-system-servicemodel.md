@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497915"
 ---
 # <a name="transactional-support-in-systemservicemodel"></a>System.ServiceModel 中的異動式支援
 本節中的主題說明 Windows Communication Foundation (WCF) 提供的交易功能。  

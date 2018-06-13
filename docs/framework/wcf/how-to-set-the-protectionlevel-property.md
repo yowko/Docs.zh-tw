@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501529"
 ---
 # <a name="how-to-set-the-protectionlevel-property"></a>HOW TO：設定 ProtectionLevel 屬性
 您可以套用適當的屬性 (Attribute) 並設定屬性 (Property)，藉此設定保護層級。 您可以設定服務層級的保護，以影響每一個訊息的所有部分，或是從方法到訊息部分，設定越發細微的保護層級。 如需有關`ProtectionLevel`屬性，請參閱[了解保護層級](../../../docs/framework/wcf/understanding-protection-level.md)。  

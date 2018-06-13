@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496834"
 ---
 # <a name="configuring-system-provided-bindings"></a>設定系統提供的繫結
 在與端點對話時，繫結會指定要使用的通訊機制，並指出如何連接至端點。 繫結包含的項目會定義如何 Windows Communication Foundation (WCF) 通道的分層處理以提供所需的通訊功能。 繫結包含三種項目型別：  

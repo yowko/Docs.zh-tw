@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496646"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>根據開發情況比較 ASP.NET Web 服務與 WCF
 Windows Communication Foundation (WCF) 都有 ASP.NET 相容性模式選項來啟用 WCF 應用程式來進行程式設計和設定與 ASP.NET Web 服務相同，並模擬其行為。 下列各節比較 ASP.NET Web 服務和 WCF 開發使用這兩種技術的應用程式的必要條件。  

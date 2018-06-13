@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499472"
 ---
 # <a name="how-to-examine-the-security-context"></a>HOW TO：檢查安全性內容
 程式設計 Windows Communication Foundation (WCF) 服務，服務安全性內容可讓您決定用戶端認證和宣告用來向服務驗證詳細資料。 這可藉由使用 <xref:System.ServiceModel.ServiceSecurityContext> 類別的屬性達成。  

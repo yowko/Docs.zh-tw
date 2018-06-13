@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550822"
 ---
 # <a name="flowdocumentscrollviewer"></a>FlowDocumentScrollViewer
 <xref:System.Windows.Controls.FlowDocumentScrollViewer>控制項用來檢視<xref:System.Windows.Documents.FlowDocument>內容捲動的容器中。 與<xref:System.Windows.Controls.FlowDocumentPageViewer>，其中每個頁面為基礎檢視的內容。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502542"
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Windows Presentation Foundation 用戶端中的資料繫結
 這個範例示範使用 Windows Presentation Foundation (WPF) 用戶端中的資料繫結。 此範例會使用隨機產生的傳回給用戶端的專輯陣列的 Windows Communication Foundation (WCF) 服務。 每張專輯各有名稱、價格和曲目表。 曲目有名稱和時間長度。 Windows Presentation Foundation (WPF) 用戶端所提供的使用者介面 (UI) 時，會自動繫結的服務所傳回的資訊。  

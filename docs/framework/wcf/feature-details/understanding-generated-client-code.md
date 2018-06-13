@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501352"
 ---
 # <a name="understanding-generated-client-code"></a>了解產生的用戶端程式碼
 [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 會產生用戶端程式碼和用戶端應用程式組態檔，用於建置用戶端應用程式。 本主題將提供產生之程式碼範例的導覽，用於標準服務合約情節。 如需有關如何建置使用產生的程式碼的用戶端應用程式的詳細資訊，請參閱[WCF 用戶端概觀](../../../../docs/framework/wcf/wcf-client-overview.md)。  

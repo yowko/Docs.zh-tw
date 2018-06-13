@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497967"
 ---
 # <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>HOW TO：使用 Windows Communication Foundation 服務 Moniker 且不註冊
 若要連接到並與 Windows Communication Foundation (WCF) 服務通訊，WCF 用戶端應用程式必須服務位址、 繫結組態，以及服務合約的詳細資料。  

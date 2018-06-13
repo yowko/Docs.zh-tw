@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504135"
 ---
 # <a name="custom-message-filter"></a>自訂訊息篩選條件
 這個範例示範如何取代 Windows Communication Foundation (WCF) 用來分派訊息至端點的訊息篩選。  

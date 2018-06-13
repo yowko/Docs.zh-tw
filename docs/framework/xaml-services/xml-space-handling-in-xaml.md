@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563463"
 ---
 # <a name="xmlspace-handling-in-xaml"></a>XAML 中的 xml:space 處理
 `xml:space`屬性是宣告的空白字元處理行為物件項目內的 XML 定義的屬性。 這個行為會與相關的項目內所包含的所有內容 （內部文字） 其中`xml:space`宣告，因此也會設定至子元素。  

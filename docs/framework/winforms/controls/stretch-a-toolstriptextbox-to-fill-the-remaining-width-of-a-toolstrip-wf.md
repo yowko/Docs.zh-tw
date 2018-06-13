@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537716"
 ---
 # <a name="how-to-stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-windows-forms"></a>如何：自動縮放 ToolStripTextBox 以填滿 ToolStrip 的剩餘寬度 (Windows Form)
 當您將<xref:System.Windows.Forms.ToolStrip.Stretch%2A>屬性<xref:System.Windows.Forms.ToolStrip>控制權傳輸至`true`，控制項從端對端，填滿其容器和其容器調整大小時，調整大小時。 在此組態中，您可能會發現這類延伸項目在控制項中， <xref:System.Windows.Forms.ToolStripTextBox>、 填滿可用空間和調整大小的控制項重新調整大小時。 延伸而非常有用，例如，如果您想要達到的外觀和行為類似於 Microsoft® Internet Explorer 中的網址列。  

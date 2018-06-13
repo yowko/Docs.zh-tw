@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538059"
 ---
 # <a name="how-to-implement-the-itypedlist-interface"></a>如何：實作 ITypedList 介面
 實作<xref:System.ComponentModel.ITypedList>介面以啟用探索可繫結清單的結構描述。  

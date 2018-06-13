@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499397"
 ---
 # <a name="using-a-data-contract-resolver"></a>使用資料合約解析程式
 資料合約解析程式可讓您動態設定已知型別。 在序列化或還原序列化資料合約未預期的型別時，就會需要已知型別。 如需已知型別的詳細資訊，請參閱[資料合約已知型別](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。 已知型別通常會以靜態方式指定。 這表示，實作作業時，您必須知道此作業可能會接收的所有可能型別。 不過，這項條件在某些情況中並不成立，此時，能夠以動態方式指定已知型別就很重要。  

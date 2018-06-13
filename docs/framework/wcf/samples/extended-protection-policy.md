@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504354"
 ---
 # <a name="extended-protection-policy"></a>延伸保護原則
 延伸保護是防止攔截式攻擊的一項安全性方案。 MITM 攻擊是一項安全性威脅，其方式為 MITM 取得用戶端的認證並將它轉送至伺服器。  

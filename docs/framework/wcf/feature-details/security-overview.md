@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505677"
 ---
 # <a name="security-overview"></a>安全性概觀
 Windows Communication Foundation (WCF) 是 SOAP 訊息架構分散式程式設計平台，並確保用戶端與服務之間的訊息是重要的保護資料。 WCF 提供交換現有安全性基礎結構和 SOAP 訊息的可辨識的安全性標準為基礎的安全訊息的多用途和互通平台。  
