@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395209"
 ---
 # <a name="how-to-request-a-web-page-and-retrieve-the-results-as-a-stream"></a><span data-ttu-id="71201-102">如何：要求網頁並擷取結果當做資料流</span><span class="sxs-lookup"><span data-stu-id="71201-102">How to: Request a Web Page and Retrieve the Results as a Stream</span></span>
 <span data-ttu-id="71201-103">這個範例示範如何要求網頁並擷取資料流中的結果。</span><span class="sxs-lookup"><span data-stu-id="71201-103">This example shows how to request a Web page and retrieve the results in a stream.</span></span>  

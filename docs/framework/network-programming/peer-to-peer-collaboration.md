@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397815"
 ---
 # <a name="peer-to-peer-collaboration"></a><span data-ttu-id="ef048-102">對等共同作業</span><span class="sxs-lookup"><span data-stu-id="ef048-102">Peer-to-Peer Collaboration</span></span>
 <span data-ttu-id="ef048-103">對等網路使用功能相當強大的電腦 (個人電腦)，而這些電腦存在於網際網路邊緣，並且不只是用於進行用戶端運算工作。</span><span class="sxs-lookup"><span data-stu-id="ef048-103">Peer-to-peer networking is the utilization of the relatively powerful computers (personal computers) that exist at the edge of the Internet for more than just client-based computing tasks.</span></span> <span data-ttu-id="ef048-104">現代個人電腦 (PC) 具有極快速的處理器、大量記憶體和大型硬碟，但在執行電子郵件和網頁瀏覽這類常見運算工作時並未完全利用到它們。</span><span class="sxs-lookup"><span data-stu-id="ef048-104">The modern personal computer (PC) has a very fast processor, vast memory, and a large hard disk, none of which are being fully utilized when performing common computing tasks such as email and Web browsing.</span></span> <span data-ttu-id="ef048-105">現代電腦可以輕鬆地作為許多類型之應用程式的用戶端和伺服器 (對等)。</span><span class="sxs-lookup"><span data-stu-id="ef048-105">The modern PC can easily act as both a client and server (a peer) for many types of applications.</span></span>  

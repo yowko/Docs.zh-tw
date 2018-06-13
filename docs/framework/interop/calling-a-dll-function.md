@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387129"
 ---
 # <a name="calling-a-dll-function"></a><span data-ttu-id="13076-102">呼叫 DLL 函式</span><span class="sxs-lookup"><span data-stu-id="13076-102">Calling a DLL Function</span></span>
 <span data-ttu-id="13076-103">雖然呼叫 Unmanaged DLL 函式與呼叫其他 Managed 程式碼幾乎完全相同，但具有一開始讓 DLL 函式混淆的差異。</span><span class="sxs-lookup"><span data-stu-id="13076-103">Although calling unmanaged DLL functions is nearly identical to calling other managed code, there are differences that can make DLL functions seem confusing at first.</span></span> <span data-ttu-id="13076-104">本節介紹描述一些異常呼叫相關問題的主題。</span><span class="sxs-lookup"><span data-stu-id="13076-104">This section introduces topics that describe some of the unusual calling-related issues.</span></span>  

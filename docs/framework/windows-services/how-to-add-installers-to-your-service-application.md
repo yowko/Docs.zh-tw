@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514356"
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a><span data-ttu-id="e17ea-102">如何：加入 Installer 至服務應用程式</span><span class="sxs-lookup"><span data-stu-id="e17ea-102">How to: Add Installers to Your Service Application</span></span>
 <span data-ttu-id="e17ea-103">Visual Studio 隨附安裝元件，可安裝與您服務應用程式相關聯的資源。</span><span class="sxs-lookup"><span data-stu-id="e17ea-103">Visual Studio ships installation components that can install resources associated with your service applications.</span></span> <span data-ttu-id="e17ea-104">安裝元件會在其安裝所在的系統上註冊個別服務，並讓服務控制管理員知道服務的存在。</span><span class="sxs-lookup"><span data-stu-id="e17ea-104">Installation components register an individual service on the system to which it is being installed and let the Services Control Manager know that the service exists.</span></span> <span data-ttu-id="e17ea-105">當您使用服務應用程式時，可以選取 [屬性] 視窗中的連結，以便自動將適當的安裝程式加入您的專案。</span><span class="sxs-lookup"><span data-stu-id="e17ea-105">When you work with a service application, you can select a link in the Properties window to automatically add the appropriate installers to your project.</span></span>  

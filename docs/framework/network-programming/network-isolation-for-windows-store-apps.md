@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398088"
 ---
 # <a name="network-isolation-for-windows-store-apps"></a><span data-ttu-id="05afc-102">Windows 市集應用程式的網路隔離</span><span class="sxs-lookup"><span data-stu-id="05afc-102">Network Isolation for Windows Store Apps</span></span>
 <span data-ttu-id="05afc-103"><xref:System.Net>、<xref:System.Net.Http> 和 <xref:System.Net.Http.Headers> 命名空間中的類別可以用來開發 Windows 市集應用程式或傳統型應用程式。</span><span class="sxs-lookup"><span data-stu-id="05afc-103">Classes in the <xref:System.Net>,  <xref:System.Net.Http>, and <xref:System.Net.Http.Headers> namespaces can be used to develop Windows Store  apps  or desktop apps.</span></span> <span data-ttu-id="05afc-104">在 Windows 市集應用程式中使用時，這些命名空間中的類別受到網路隔離的影響，而網路隔離是 [!INCLUDE[win8](../../../includes/win8-md.md)] 所使用應用程式安全性模型的一部分。</span><span class="sxs-lookup"><span data-stu-id="05afc-104">When used in a Windows Store app, classes in these namespaces are affected by network isolation, part of the application security model used by the [!INCLUDE[win8](../../../includes/win8-md.md)].</span></span> <span data-ttu-id="05afc-105">必須在 Windows 市集應用程式的應用程式資訊清單中啟用適當的網路功能，讓系統允許網路存取。</span><span class="sxs-lookup"><span data-stu-id="05afc-105">The appropriate network capabilities must be enabled in the app manifest for a Windows Store app for the system to allow network access.</span></span>  

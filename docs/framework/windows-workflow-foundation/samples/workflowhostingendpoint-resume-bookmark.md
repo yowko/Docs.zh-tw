@@ -1,50 +1,40 @@
 ---
-title: "WorkflowHostingEndpoint 繼續書籤"
-ms.custom: 
+title: WorkflowHostingEndpoint 繼續書籤
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a708064f-50b0-4751-b44e-d5410d08d451
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 140ff5282447c2a2307dee325645fc1f3f0497fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3af31af17e0c362beb8ba4b9b0479de59cab8ef3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515671"
 ---
-# <a name="workflowhostingendpoint-resume-bookmark"></a><span data-ttu-id="9aff4-102">WorkflowHostingEndpoint 繼續書籤</span><span class="sxs-lookup"><span data-stu-id="9aff4-102">WorkflowHostingEndpoint Resume Bookmark</span></span>
-<span data-ttu-id="9aff4-103">這個範例示範 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 如何與 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 搭配使用以建立工作流程執行個體。</span><span class="sxs-lookup"><span data-stu-id="9aff4-103">This sample demonstrates how the <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> can be used with <xref:System.ServiceModel.Activities.WorkflowServiceHost> to create workflow instances.</span></span>  
+# <a name="workflowhostingendpoint-resume-bookmark"></a><span data-ttu-id="965a1-102">WorkflowHostingEndpoint 繼續書籤</span><span class="sxs-lookup"><span data-stu-id="965a1-102">WorkflowHostingEndpoint Resume Bookmark</span></span>
+<span data-ttu-id="965a1-103">這個範例示範 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 如何與 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 搭配使用以建立工作流程執行個體。</span><span class="sxs-lookup"><span data-stu-id="965a1-103">This sample demonstrates how the <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> can be used with <xref:System.ServiceModel.Activities.WorkflowServiceHost> to create workflow instances.</span></span>  
   
-## <a name="demonstrates"></a><span data-ttu-id="9aff4-104">示範</span><span class="sxs-lookup"><span data-stu-id="9aff4-104">Demonstrates</span></span>  
- <span data-ttu-id="9aff4-105"><xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>, <xref:System.ServiceModel.Activities.WorkflowServiceHost></span><span class="sxs-lookup"><span data-stu-id="9aff4-105"><xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>, <xref:System.ServiceModel.Activities.WorkflowServiceHost></span></span>  
+## <a name="demonstrates"></a><span data-ttu-id="965a1-104">示範</span><span class="sxs-lookup"><span data-stu-id="965a1-104">Demonstrates</span></span>  
+ <span data-ttu-id="965a1-105"><xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>, <xref:System.ServiceModel.Activities.WorkflowServiceHost></span><span class="sxs-lookup"><span data-stu-id="965a1-105"><xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>, <xref:System.ServiceModel.Activities.WorkflowServiceHost></span></span>  
   
-## <a name="discussion"></a><span data-ttu-id="9aff4-106">討論</span><span class="sxs-lookup"><span data-stu-id="9aff4-106">Discussion</span></span>  
- <span data-ttu-id="9aff4-107">這個範例使用 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 來建立以 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 裝載的工作流程執行個體。</span><span class="sxs-lookup"><span data-stu-id="9aff4-107">This sample uses the <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> to create a workflow instance hosted using <xref:System.ServiceModel.Activities.WorkflowServiceHost>.</span></span> <span data-ttu-id="9aff4-108"><xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 是 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 的擴充點，可用於以下情形：</span><span class="sxs-lookup"><span data-stu-id="9aff4-108"><xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> is an extensibility point for <xref:System.ServiceModel.Activities.WorkflowServiceHost> that can be used in the following scenarios:</span></span>  
+## <a name="discussion"></a><span data-ttu-id="965a1-106">討論</span><span class="sxs-lookup"><span data-stu-id="965a1-106">Discussion</span></span>  
+ <span data-ttu-id="965a1-107">這個範例使用 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 來建立以 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 裝載的工作流程執行個體。</span><span class="sxs-lookup"><span data-stu-id="965a1-107">This sample uses the <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> to create a workflow instance hosted using <xref:System.ServiceModel.Activities.WorkflowServiceHost>.</span></span> <span data-ttu-id="965a1-108"><xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 是 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 的擴充點，可用於以下情形：</span><span class="sxs-lookup"><span data-stu-id="965a1-108"><xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> is an extensibility point for <xref:System.ServiceModel.Activities.WorkflowServiceHost> that can be used in the following scenarios:</span></span>  
   
--   <span data-ttu-id="9aff4-109">建立新的工作流程執行個體。</span><span class="sxs-lookup"><span data-stu-id="9aff4-109">Creating new workflow instances.</span></span>  
+-   <span data-ttu-id="965a1-109">建立新的工作流程執行個體。</span><span class="sxs-lookup"><span data-stu-id="965a1-109">Creating new workflow instances.</span></span>  
   
--   <span data-ttu-id="9aff4-110">在裝載於 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 的工作流程執行個體中繼續使用書籤。</span><span class="sxs-lookup"><span data-stu-id="9aff4-110">Resuming bookmarks on a workflow instance hosted in a <xref:System.ServiceModel.Activities.WorkflowServiceHost>.</span></span>  
+-   <span data-ttu-id="965a1-110">在裝載於 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 的工作流程執行個體中繼續使用書籤。</span><span class="sxs-lookup"><span data-stu-id="965a1-110">Resuming bookmarks on a workflow instance hosted in a <xref:System.ServiceModel.Activities.WorkflowServiceHost>.</span></span>  
   
- <span data-ttu-id="9aff4-111">包含的範例端點會公開合約，以提供作業來建立工作流程，以及傳回執行個體識別碼或建立具有特定識別碼的執行個體。</span><span class="sxs-lookup"><span data-stu-id="9aff4-111">The sample endpoint that is included exposes a contract that provides operations to create a workflow and return an instance ID, or to create an instance with a specific ID.</span></span> <span data-ttu-id="9aff4-112">範例主控台應用程式會建立具有基本工作流程定義的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 執行個體，並將 `CreationEndpoint` 加入至主機。</span><span class="sxs-lookup"><span data-stu-id="9aff4-112">The sample console application creates a <xref:System.ServiceModel.Activities.WorkflowServiceHost> instance with a basic workflow definition, and adds a `CreationEndpoint` to the host.</span></span> <span data-ttu-id="9aff4-113">接著會在端點上呼叫 `Create` 作業，以建立新的工作流程執行個體。</span><span class="sxs-lookup"><span data-stu-id="9aff4-113">It then calls the `Create` operation on the endpoint to create a new workflow instance.</span></span>  
+ <span data-ttu-id="965a1-111">包含的範例端點會公開合約，以提供作業來建立工作流程，以及傳回執行個體識別碼或建立具有特定識別碼的執行個體。</span><span class="sxs-lookup"><span data-stu-id="965a1-111">The sample endpoint that is included exposes a contract that provides operations to create a workflow and return an instance ID, or to create an instance with a specific ID.</span></span> <span data-ttu-id="965a1-112">範例主控台應用程式會建立具有基本工作流程定義的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 執行個體，並將 `CreationEndpoint` 加入至主機。</span><span class="sxs-lookup"><span data-stu-id="965a1-112">The sample console application creates a <xref:System.ServiceModel.Activities.WorkflowServiceHost> instance with a basic workflow definition, and adds a `CreationEndpoint` to the host.</span></span> <span data-ttu-id="965a1-113">接著會在端點上呼叫 `Create` 作業，以建立新的工作流程執行個體。</span><span class="sxs-lookup"><span data-stu-id="965a1-113">It then calls the `Create` operation on the endpoint to create a new workflow instance.</span></span>  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="9aff4-114">若要安裝、建置及執行範例</span><span class="sxs-lookup"><span data-stu-id="9aff4-114">To set up, build, and run the sample</span></span>  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="965a1-114">若要安裝、建置及執行範例</span><span class="sxs-lookup"><span data-stu-id="965a1-114">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="9aff4-115">建置方案。</span><span class="sxs-lookup"><span data-stu-id="9aff4-115">Build the solution.</span></span>  
+1.  <span data-ttu-id="965a1-115">建置方案。</span><span class="sxs-lookup"><span data-stu-id="965a1-115">Build the solution.</span></span>  
   
-2.  <span data-ttu-id="9aff4-116">執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="9aff4-116">Run the application.</span></span> <span data-ttu-id="9aff4-117">建立工作流程執行個體之後，`CreationEndpoint` 主控台會顯示包含執行個體識別碼的訊息。</span><span class="sxs-lookup"><span data-stu-id="9aff4-117">The `CreationEndpoint` console shows a message that includes the instance ID when the workflow instance is created.</span></span> <span data-ttu-id="9aff4-118">"Hello World ！"訊息</span><span class="sxs-lookup"><span data-stu-id="9aff4-118">The message "Hello World!"</span></span> <span data-ttu-id="9aff4-119">由工作流程上的書籤成功繼續列印。</span><span class="sxs-lookup"><span data-stu-id="9aff4-119">is printed by the workflow on successful resumption of the bookmark.</span></span>  
+2.  <span data-ttu-id="965a1-116">執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="965a1-116">Run the application.</span></span> <span data-ttu-id="965a1-117">建立工作流程執行個體之後，`CreationEndpoint` 主控台會顯示包含執行個體識別碼的訊息。</span><span class="sxs-lookup"><span data-stu-id="965a1-117">The `CreationEndpoint` console shows a message that includes the instance ID when the workflow instance is created.</span></span> <span data-ttu-id="965a1-118">"Hello World ！"訊息</span><span class="sxs-lookup"><span data-stu-id="965a1-118">The message "Hello World!"</span></span> <span data-ttu-id="965a1-119">由工作流程上的書籤成功繼續列印。</span><span class="sxs-lookup"><span data-stu-id="965a1-119">is printed by the workflow on successful resumption of the bookmark.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="9aff4-120">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="9aff4-120">The samples may already be installed on your machine.</span></span> <span data-ttu-id="9aff4-121">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="9aff4-121">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="965a1-120">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="965a1-120">The samples may already be installed on your machine.</span></span> <span data-ttu-id="965a1-121">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="965a1-121">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="9aff4-122">如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。</span><span class="sxs-lookup"><span data-stu-id="9aff4-122">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="9aff4-123">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="9aff4-123">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="965a1-122">如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。</span><span class="sxs-lookup"><span data-stu-id="965a1-122">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="965a1-123">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="965a1-123">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\ResumeBookmarkEndpoint`

@@ -1,69 +1,58 @@
 ---
 title: Basic1
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 84a315b6-3f96-4959-8306-49be37936a23
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4f10a7789c60f6e5e0734f4f0c93e7e088162e7f
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 4e6c4217eb50577a6649e09545db40492bac9a6f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515632"
 ---
-# <a name="basic"></a><span data-ttu-id="2ce1c-102">基本</span><span class="sxs-lookup"><span data-stu-id="2ce1c-102">Basic</span></span>
-<span data-ttu-id="2ce1c-103">本節提供示範基本 Windows Workflow Foundation (WF) 功能的範例。</span><span class="sxs-lookup"><span data-stu-id="2ce1c-103">This section provides samples that demonstrate basic Windows Workflow Foundation (WF) functionality.</span></span>  
+# <a name="basic"></a><span data-ttu-id="a7461-102">基本</span><span class="sxs-lookup"><span data-stu-id="a7461-102">Basic</span></span>
+<span data-ttu-id="a7461-103">本節提供示範基本 Windows Workflow Foundation (WF) 功能的範例。</span><span class="sxs-lookup"><span data-stu-id="a7461-103">This section provides samples that demonstrate basic Windows Workflow Foundation (WF) functionality.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2ce1c-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="2ce1c-104">In This Section</span></span>  
- [<span data-ttu-id="2ce1c-105">內建活動</span><span class="sxs-lookup"><span data-stu-id="2ce1c-105">Built-in Activities</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/built-in-activities.md)  
- <span data-ttu-id="2ce1c-106">包含使用內建活動程式庫的範例。</span><span class="sxs-lookup"><span data-stu-id="2ce1c-106">Contains samples that use the built-in activity library.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="a7461-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="a7461-104">In This Section</span></span>  
+ [<span data-ttu-id="a7461-105">內建活動</span><span class="sxs-lookup"><span data-stu-id="a7461-105">Built-in Activities</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/built-in-activities.md)  
+ <span data-ttu-id="a7461-106">包含使用內建活動程式庫的範例。</span><span class="sxs-lookup"><span data-stu-id="a7461-106">Contains samples that use the built-in activity library.</span></span>  
   
- [<span data-ttu-id="2ce1c-107">補償</span><span class="sxs-lookup"><span data-stu-id="2ce1c-107">Compensation</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/compensation-samples.md)  
- <span data-ttu-id="2ce1c-108">包含示範補償的範例。</span><span class="sxs-lookup"><span data-stu-id="2ce1c-108">Contains samples that demonstrate compensation.</span></span>  
+ [<span data-ttu-id="a7461-107">補償</span><span class="sxs-lookup"><span data-stu-id="a7461-107">Compensation</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/compensation-samples.md)  
+ <span data-ttu-id="a7461-108">包含示範補償的範例。</span><span class="sxs-lookup"><span data-stu-id="a7461-108">Contains samples that demonstrate compensation.</span></span>  
   
- [<span data-ttu-id="2ce1c-109">自訂活動</span><span class="sxs-lookup"><span data-stu-id="2ce1c-109">Custom Activities</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/custom-activities.md)  
- <span data-ttu-id="2ce1c-110">包含示範建立自訂活動的範例。</span><span class="sxs-lookup"><span data-stu-id="2ce1c-110">Contains samples that demonstrate creating custom activities.</span></span>  
+ [<span data-ttu-id="a7461-109">自訂活動</span><span class="sxs-lookup"><span data-stu-id="a7461-109">Custom Activities</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/custom-activities.md)  
+ <span data-ttu-id="a7461-110">包含示範建立自訂活動的範例。</span><span class="sxs-lookup"><span data-stu-id="a7461-110">Contains samples that demonstrate creating custom activities.</span></span>  
   
- [<span data-ttu-id="2ce1c-111">設計工具</span><span class="sxs-lookup"><span data-stu-id="2ce1c-111">Designer</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/designer.md)  
- <span data-ttu-id="2ce1c-112">包含示範如何使用 [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] 的範例。</span><span class="sxs-lookup"><span data-stu-id="2ce1c-112">Contains samples that demonstrate how to use [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)].</span></span>  
+ [<span data-ttu-id="a7461-111">設計工具</span><span class="sxs-lookup"><span data-stu-id="a7461-111">Designer</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/designer.md)  
+ <span data-ttu-id="a7461-112">包含示範如何使用 [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] 的範例。</span><span class="sxs-lookup"><span data-stu-id="a7461-112">Contains samples that demonstrate how to use [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)].</span></span>  
   
- [<span data-ttu-id="2ce1c-113">設計工具重新裝載</span><span class="sxs-lookup"><span data-stu-id="2ce1c-113">Designer ReHosting</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/designer-rehosting.md)  
- <span data-ttu-id="2ce1c-114">包含示範重新裝載活動設計工具的範例。</span><span class="sxs-lookup"><span data-stu-id="2ce1c-114">Contains samples that demonstrate re-hosting the activity designer.</span></span>  
+ [<span data-ttu-id="a7461-113">設計工具重新裝載</span><span class="sxs-lookup"><span data-stu-id="a7461-113">Designer ReHosting</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/designer-rehosting.md)  
+ <span data-ttu-id="a7461-114">包含示範重新裝載活動設計工具的範例。</span><span class="sxs-lookup"><span data-stu-id="a7461-114">Contains samples that demonstrate re-hosting the activity designer.</span></span>  
   
- [<span data-ttu-id="2ce1c-115">執行</span><span class="sxs-lookup"><span data-stu-id="2ce1c-115">Execution</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/execution.md)  
- <span data-ttu-id="2ce1c-116">包含示範執行工作流程的範例。</span><span class="sxs-lookup"><span data-stu-id="2ce1c-116">Contains samples that demonstrate executing workflows.</span></span>  
+ [<span data-ttu-id="a7461-115">執行</span><span class="sxs-lookup"><span data-stu-id="a7461-115">Execution</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/execution.md)  
+ <span data-ttu-id="a7461-116">包含示範執行工作流程的範例。</span><span class="sxs-lookup"><span data-stu-id="a7461-116">Contains samples that demonstrate executing workflows.</span></span>  
   
- [<span data-ttu-id="2ce1c-117">運算式</span><span class="sxs-lookup"><span data-stu-id="2ce1c-117">Expressions</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/expressions.md)  
- <span data-ttu-id="2ce1c-118">包含示範 Windows Workflow Foundation (WF) 運算式的範例。</span><span class="sxs-lookup"><span data-stu-id="2ce1c-118">Contains samples that demonstrate Windows Workflow Foundation (WF) expressions.</span></span>  
+ [<span data-ttu-id="a7461-117">運算式</span><span class="sxs-lookup"><span data-stu-id="a7461-117">Expressions</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/expressions.md)  
+ <span data-ttu-id="a7461-118">包含示範 Windows Workflow Foundation (WF) 運算式的範例。</span><span class="sxs-lookup"><span data-stu-id="a7461-118">Contains samples that demonstrate Windows Workflow Foundation (WF) expressions.</span></span>  
   
- [<span data-ttu-id="2ce1c-119">移轉</span><span class="sxs-lookup"><span data-stu-id="2ce1c-119">Migration</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/migration.md)  
- <span data-ttu-id="2ce1c-120">包含示範移轉以舊版的 Windows Workflow Foundation (WF) 中建立的工作流程的範例。</span><span class="sxs-lookup"><span data-stu-id="2ce1c-120">Contains samples that demonstrate migrating workflows created with previous versions of Windows Workflow Foundation (WF).</span></span>  
+ [<span data-ttu-id="a7461-119">移轉</span><span class="sxs-lookup"><span data-stu-id="a7461-119">Migration</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/migration.md)  
+ <span data-ttu-id="a7461-120">包含示範移轉以舊版的 Windows Workflow Foundation (WF) 中建立的工作流程的範例。</span><span class="sxs-lookup"><span data-stu-id="a7461-120">Contains samples that demonstrate migrating workflows created with previous versions of Windows Workflow Foundation (WF).</span></span>  
   
- [<span data-ttu-id="2ce1c-121">持續性</span><span class="sxs-lookup"><span data-stu-id="2ce1c-121">Persistence</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/persistence.md)  
- <span data-ttu-id="2ce1c-122">包含示範如何將工作流程保存到永久性媒體的範例。</span><span class="sxs-lookup"><span data-stu-id="2ce1c-122">Contains samples that demonstrate persisting workflows to a durable medium.</span></span>  
+ [<span data-ttu-id="a7461-121">持續性</span><span class="sxs-lookup"><span data-stu-id="a7461-121">Persistence</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/persistence.md)  
+ <span data-ttu-id="a7461-122">包含示範如何將工作流程保存到永久性媒體的範例。</span><span class="sxs-lookup"><span data-stu-id="a7461-122">Contains samples that demonstrate persisting workflows to a durable medium.</span></span>  
   
- [<span data-ttu-id="2ce1c-123">規則範例</span><span class="sxs-lookup"><span data-stu-id="2ce1c-123">Rules Samples</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/rules-samples.md)  
- <span data-ttu-id="2ce1c-124">包含示範如何使用 [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] 工作流程規則引擎的範例。</span><span class="sxs-lookup"><span data-stu-id="2ce1c-124">Contains samples that demonstrate using the workflow rules engine from [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)].</span></span>  
+ [<span data-ttu-id="a7461-123">規則範例</span><span class="sxs-lookup"><span data-stu-id="a7461-123">Rules Samples</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/rules-samples.md)  
+ <span data-ttu-id="a7461-124">包含示範如何使用 [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] 工作流程規則引擎的範例。</span><span class="sxs-lookup"><span data-stu-id="a7461-124">Contains samples that demonstrate using the workflow rules engine from [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)].</span></span>  
   
- [<span data-ttu-id="2ce1c-125">服務</span><span class="sxs-lookup"><span data-stu-id="2ce1c-125">Services</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/services.md)  
- <span data-ttu-id="2ce1c-126">包含示範工作流程服務的範例。</span><span class="sxs-lookup"><span data-stu-id="2ce1c-126">Contains samples that demonstrate workflow services.</span></span>  
+ [<span data-ttu-id="a7461-125">服務</span><span class="sxs-lookup"><span data-stu-id="a7461-125">Services</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/services.md)  
+ <span data-ttu-id="a7461-126">包含示範工作流程服務的範例。</span><span class="sxs-lookup"><span data-stu-id="a7461-126">Contains samples that demonstrate workflow services.</span></span>  
   
- [<span data-ttu-id="2ce1c-127">追蹤</span><span class="sxs-lookup"><span data-stu-id="2ce1c-127">Tracking</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md)  
- <span data-ttu-id="2ce1c-128">包含示範工作流程追蹤的範例。</span><span class="sxs-lookup"><span data-stu-id="2ce1c-128">Contains samples that demonstrate workflow tracking.</span></span>  
+ [<span data-ttu-id="a7461-127">追蹤</span><span class="sxs-lookup"><span data-stu-id="a7461-127">Tracking</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md)  
+ <span data-ttu-id="a7461-128">包含示範工作流程追蹤的範例。</span><span class="sxs-lookup"><span data-stu-id="a7461-128">Contains samples that demonstrate workflow tracking.</span></span>  
   
- [<span data-ttu-id="2ce1c-129">異動</span><span class="sxs-lookup"><span data-stu-id="2ce1c-129">Transactions</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/transactions.md)  
- <span data-ttu-id="2ce1c-130">包含示範工作流程異動的範例。</span><span class="sxs-lookup"><span data-stu-id="2ce1c-130">Contains samples that demonstrate workflow transactions.</span></span>  
+ [<span data-ttu-id="a7461-129">異動</span><span class="sxs-lookup"><span data-stu-id="a7461-129">Transactions</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/transactions.md)  
+ <span data-ttu-id="a7461-130">包含示範工作流程異動的範例。</span><span class="sxs-lookup"><span data-stu-id="a7461-130">Contains samples that demonstrate workflow transactions.</span></span>  
   
- [<span data-ttu-id="2ce1c-131">驗證</span><span class="sxs-lookup"><span data-stu-id="2ce1c-131">Validation</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/validation.md)  
- <span data-ttu-id="2ce1c-132">包含示範驗證 Windows Workflow Foundation 中的範例。</span><span class="sxs-lookup"><span data-stu-id="2ce1c-132">Contains samples that demonstrate validation in Windows Workflow Foundation.</span></span>  
+ [<span data-ttu-id="a7461-131">驗證</span><span class="sxs-lookup"><span data-stu-id="a7461-131">Validation</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/validation.md)  
+ <span data-ttu-id="a7461-132">包含示範驗證 Windows Workflow Foundation 中的範例。</span><span class="sxs-lookup"><span data-stu-id="a7461-132">Contains samples that demonstrate validation in Windows Workflow Foundation.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="2ce1c-133">參考資料</span><span class="sxs-lookup"><span data-stu-id="2ce1c-133">Reference</span></span>
+## <a name="reference"></a><span data-ttu-id="a7461-133">參考資料</span><span class="sxs-lookup"><span data-stu-id="a7461-133">Reference</span></span>
