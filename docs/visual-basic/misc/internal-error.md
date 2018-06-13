@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638389"
 ---
 # <a name="internal-error-visual-basic"></a><span data-ttu-id="30b3b-102">內部錯誤 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="30b3b-102">Internal error (Visual Basic)</span></span>
 <span data-ttu-id="30b3b-103">在 Visual Basic 中發生內部問題。</span><span class="sxs-lookup"><span data-stu-id="30b3b-103">An internal malfunction has occurred in Visual Basic.</span></span>  

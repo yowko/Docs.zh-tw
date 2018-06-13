@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637396"
 ---
 # <a name="no-mouse-wheel-is-present"></a><span data-ttu-id="3871f-102">滑鼠滾輪不存在</span><span class="sxs-lookup"><span data-stu-id="3871f-102">No mouse wheel is present</span></span>
 <span data-ttu-id="3871f-103">已呼叫 `My.Computer.Mouse.WheelScrollLines` 屬性，但是滑鼠有沒有滾輪。</span><span class="sxs-lookup"><span data-stu-id="3871f-103">The `My.Computer.Mouse.WheelScrollLines` property was called, but the mouse has no scroll wheel.</span></span>  

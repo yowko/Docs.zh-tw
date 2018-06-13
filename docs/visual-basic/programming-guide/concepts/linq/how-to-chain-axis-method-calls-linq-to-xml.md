@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643298"
 ---
 # <a name="how-to-chain-axis-method-calls-linq-to-xml-visual-basic"></a><span data-ttu-id="2c4a6-102">如何： 鏈結軸心方法呼叫 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2c4a6-102">How to: Chain Axis Method Calls (LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="2c4a6-103">您在程式碼中使用的常見模式為呼叫座標軸方法，然後呼叫其中一個擴充方法座標軸。</span><span class="sxs-lookup"><span data-stu-id="2c4a6-103">A common pattern that you will use in your code is to call an axis method, then call one of the extension method axes.</span></span>  

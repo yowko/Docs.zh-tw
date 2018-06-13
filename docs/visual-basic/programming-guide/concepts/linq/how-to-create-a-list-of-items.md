@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642804"
 ---
 # <a name="how-to-create-a-list-of-items"></a><span data-ttu-id="a26a6-102">如何：建立項目清單</span><span class="sxs-lookup"><span data-stu-id="a26a6-102">How to: Create a List of Items</span></span>
 <span data-ttu-id="a26a6-103">本主題中的程式碼定義 `Student` 類別並建立此類別的執行個體清單。</span><span class="sxs-lookup"><span data-stu-id="a26a6-103">The code in this topic defines a `Student` class and creates a list of instances of the class.</span></span> <span data-ttu-id="a26a6-104">清單設計來支援主題[逐步解說： 在 Visual Basic 中撰寫查詢](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)。</span><span class="sxs-lookup"><span data-stu-id="a26a6-104">The list is designed to support the topic [Walkthrough: Writing Queries in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).</span></span> <span data-ttu-id="a26a6-105">也可以用於任何需要物件清單的應用程式。</span><span class="sxs-lookup"><span data-stu-id="a26a6-105">It also can be used for any application that requires a list of objects.</span></span> <span data-ttu-id="a26a6-106">程式碼會使用物件初始設定式來定義學員清單中的項目。</span><span class="sxs-lookup"><span data-stu-id="a26a6-106">The code defines the items in the list of students by using object initializers.</span></span>  

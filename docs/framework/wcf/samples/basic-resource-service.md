@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803724"
 ---
 # <a name="basic-resource-service"></a><span data-ttu-id="25a0d-102">基本資源服務</span><span class="sxs-lookup"><span data-stu-id="25a0d-102">Basic Resource Service</span></span>
 <span data-ttu-id="25a0d-103">這個範例示範如何實作以 HTTP 為基礎的服務使用 Windows Communication Foundation (WCF) REST 程式設計模型會公開客戶的一組支援擷取、 加入、 刪除和取代作業。</span><span class="sxs-lookup"><span data-stu-id="25a0d-103">This sample demonstrates how to implement a HTTP-based service using the Windows Communication Foundation (WCF) REST Programming model that exposes a collection of customers that supports the retrieve, add, delete and replace operations.</span></span> <span data-ttu-id="25a0d-104">此範例包含 2-自我裝載的 WCF HTTP 服務 (Service.cs) 和元件的主控台應用程式 (program.cs) 建立服務並呼叫它。</span><span class="sxs-lookup"><span data-stu-id="25a0d-104">This sample consists of 2 components - a self-hosted WCF HTTP service (Service.cs) and a console application (program.cs) that creates the service and makes calls to it.</span></span>  

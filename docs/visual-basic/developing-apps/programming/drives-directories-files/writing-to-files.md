@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588115"
 ---
 # <a name="writing-to-files-in-visual-basic"></a><span data-ttu-id="9e0a0-102">在 Visual Basic 中寫入檔案</span><span class="sxs-lookup"><span data-stu-id="9e0a0-102">Writing to Files in Visual Basic</span></span>
 <span data-ttu-id="9e0a0-103">本節說明如何執行涉及寫入檔案的工作。</span><span class="sxs-lookup"><span data-stu-id="9e0a0-103">This section explains how to perform tasks that involve writing to files.</span></span>  

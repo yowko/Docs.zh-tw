@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643432"
 ---
 # <a name="element-operations-visual-basic"></a><span data-ttu-id="d781e-102">項目作業 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d781e-102">Element Operations (Visual Basic)</span></span>
 <span data-ttu-id="d781e-103">項目作業會從序列中傳回單一特定的項目。</span><span class="sxs-lookup"><span data-stu-id="d781e-103">Element operations return a single, specific element from a sequence.</span></span>  

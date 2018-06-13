@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643454"
 ---
 # <a name="variance-in-generic-interfaces-visual-basic"></a><span data-ttu-id="e68c6-102">泛型介面 (Visual Basic) 中的變異數</span><span class="sxs-lookup"><span data-stu-id="e68c6-102">Variance in Generic Interfaces (Visual Basic)</span></span>
 <span data-ttu-id="e68c6-103">.NET Framework 4 引入了對於數個現有泛型介面的變異數支援。</span><span class="sxs-lookup"><span data-stu-id="e68c6-103">.NET Framework 4 introduced variance support for several existing generic interfaces.</span></span> <span data-ttu-id="e68c6-104">差異支援可讓實作這些介面的類別以隱含方式轉換。</span><span class="sxs-lookup"><span data-stu-id="e68c6-104">Variance support enables implicit conversion of classes that implement these interfaces.</span></span> <span data-ttu-id="e68c6-105">下列介面現在都是 Variant︰</span><span class="sxs-lookup"><span data-stu-id="e68c6-105">The following interfaces are now variant:</span></span>  

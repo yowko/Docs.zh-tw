@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579349"
 ---
 # <a name="designing-a-ddd-oriented-microservice"></a><span data-ttu-id="c214f-103">設計 DDD 導向微服務</span><span class="sxs-lookup"><span data-stu-id="c214f-103">Designing a DDD-oriented microservice</span></span>
 

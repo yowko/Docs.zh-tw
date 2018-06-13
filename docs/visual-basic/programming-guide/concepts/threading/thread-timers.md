@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646888"
 ---
 # <a name="thread-timers-visual-basic"></a><span data-ttu-id="8ec02-102">執行緒計時器 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8ec02-102">Thread Timers (Visual Basic)</span></span>
 <span data-ttu-id="8ec02-103"><xref:System.Threading.Timer?displayProperty=nameWithType> 類別適用於定期對不同的執行緒執行工作。</span><span class="sxs-lookup"><span data-stu-id="8ec02-103">The <xref:System.Threading.Timer?displayProperty=nameWithType> class is useful for periodically running a task on a separate thread.</span></span> <span data-ttu-id="8ec02-104">例如，您可以使用執行緒計時器來檢查資料庫的狀態和完整性，或備份重要檔案。</span><span class="sxs-lookup"><span data-stu-id="8ec02-104">For example, you could use a thread timer to check the status and integrity of a database or to back up critical files.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598266"
 ---
 # <a name="argument-39ltargumentnamegt39-must-be-greater-than-or-equal-to-zero"></a><span data-ttu-id="f3dfc-102">引數&#39;&lt;引數名稱&gt;&#39;必須大於或等於零</span><span class="sxs-lookup"><span data-stu-id="f3dfc-102">Argument &#39;&lt;argumentname&gt;&#39; must be greater than or equal to zero</span></span>
 <span data-ttu-id="f3dfc-103">引數無效，因為它小於零。</span><span class="sxs-lookup"><span data-stu-id="f3dfc-103">An argument is not valid because it is less than zero.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638896"
 ---
 # <a name="key-cannot-be-deleted-because-it-has-subkeys"></a><span data-ttu-id="df0fb-102">機碼不能刪除，因為它有子機碼。</span><span class="sxs-lookup"><span data-stu-id="df0fb-102">Key cannot be deleted because it has subkeys</span></span>
 <span data-ttu-id="df0fb-103">機碼不能刪除，因為它有子機碼。</span><span class="sxs-lookup"><span data-stu-id="df0fb-103">The key cannot be deleted because it has subkeys.</span></span>  

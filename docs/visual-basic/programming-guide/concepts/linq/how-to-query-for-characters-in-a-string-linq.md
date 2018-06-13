@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642112"
 ---
 # <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a><span data-ttu-id="1a541-102">如何： 查詢字串 (LINQ) (Visual Basic) 中的字元</span><span class="sxs-lookup"><span data-stu-id="1a541-102">How to: Query for Characters in a String (LINQ) (Visual Basic)</span></span>
 <span data-ttu-id="1a541-103">因為 <xref:System.String> 類別會實作泛型 <xref:System.Collections.Generic.IEnumerable%601> 介面，所以可以用字元序列的形式查詢任何字串。</span><span class="sxs-lookup"><span data-stu-id="1a541-103">Because the <xref:System.String> class implements the generic <xref:System.Collections.Generic.IEnumerable%601> interface, any string can be queried as a sequence of characters.</span></span> <span data-ttu-id="1a541-104">不過，這不是常見的 LINQ 用法。</span><span class="sxs-lookup"><span data-stu-id="1a541-104">However, this is not a common use of LINQ.</span></span> <span data-ttu-id="1a541-105">對於複雜的模式比對作業，使用 <xref:System.Text.RegularExpressions.Regex> 類別。</span><span class="sxs-lookup"><span data-stu-id="1a541-105">For complex pattern matching operations, use the <xref:System.Text.RegularExpressions.Regex> class.</span></span>  

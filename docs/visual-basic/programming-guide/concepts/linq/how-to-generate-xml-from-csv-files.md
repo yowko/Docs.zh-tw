@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642700"
 ---
 # <a name="how-to-generate-xml-from-csv-files-visual-basic"></a><span data-ttu-id="c36b3-102">如何： 產生的 XML 從 CSV 檔案 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c36b3-102">How to: Generate XML from CSV Files (Visual Basic)</span></span>
 <span data-ttu-id="c36b3-103">此範例顯示如何使用 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]，從以逗號分隔的 (CSV) 檔案產生 XML 檔案。</span><span class="sxs-lookup"><span data-stu-id="c36b3-103">This example shows how to use [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  

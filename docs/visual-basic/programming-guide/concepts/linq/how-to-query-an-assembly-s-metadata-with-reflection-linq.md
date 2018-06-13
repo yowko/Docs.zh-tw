@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643226"
 ---
 # <a name="how-to-query-an-assembly39s-metadata-with-reflection-linq-visual-basic"></a><span data-ttu-id="4b3d3-102">如何： 查詢組件&#39;s 中繼資料，使用反映 (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4b3d3-102">How to: Query An Assembly&#39;s Metadata with Reflection (LINQ) (Visual Basic)</span></span>
 <span data-ttu-id="4b3d3-103">下列範例示範如何搭配使用 LINQ 與反射，來擷取符合所指定搜尋準則之方法的特定中繼資料。</span><span class="sxs-lookup"><span data-stu-id="4b3d3-103">The following example shows how LINQ can be used with reflection to retrieve specific metadata about methods that match a specified search criterion.</span></span> <span data-ttu-id="4b3d3-104">在此情況下，查詢會尋找組件中所有方法的名稱，而這些方法會傳回陣列這類可列舉類型。</span><span class="sxs-lookup"><span data-stu-id="4b3d3-104">In this case, the query will find the names of all the methods in the assembly that return enumerable types such as arrays.</span></span>  

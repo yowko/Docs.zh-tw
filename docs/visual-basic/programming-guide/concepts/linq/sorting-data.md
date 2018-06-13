@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646860"
 ---
 # <a name="sorting-data-visual-basic"></a><span data-ttu-id="11e35-102">排序資料 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="11e35-102">Sorting Data (Visual Basic)</span></span>
 <span data-ttu-id="11e35-103">排序作業會根據一個或多個屬性來排序序列的項目。</span><span class="sxs-lookup"><span data-stu-id="11e35-103">A sorting operation orders the elements of a sequence based on one or more attributes.</span></span> <span data-ttu-id="11e35-104">第一個排序準則會執行元素的主要排序；</span><span class="sxs-lookup"><span data-stu-id="11e35-104">The first sort criterion performs a primary sort on the elements.</span></span> <span data-ttu-id="11e35-105">您可以藉由指定第二個排序準則來排序每一個主要排序群組內的元素。</span><span class="sxs-lookup"><span data-stu-id="11e35-105">By specifying a second sort criterion, you can sort the elements within each primary sort group.</span></span>  

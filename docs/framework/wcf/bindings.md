@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803591"
 ---
 # <a name="windows-communication-foundation-bindings"></a><span data-ttu-id="e02fa-102">Windows Communication Foundation 繫結</span><span class="sxs-lookup"><span data-stu-id="e02fa-102">Windows Communication Foundation Bindings</span></span>
 <span data-ttu-id="e02fa-103">繫結會指定 Windows Communication Foundation (WCF) 服務端點如何與其他端點通訊。</span><span class="sxs-lookup"><span data-stu-id="e02fa-103">Bindings specify how a Windows Communication Foundation (WCF) service endpoint communicates with other endpoints.</span></span> <span data-ttu-id="e02fa-104">繫結的最基本功能，就是必須指定要使用的傳輸 (例如，HTTP 或 TCP)。</span><span class="sxs-lookup"><span data-stu-id="e02fa-104">At its most basic, a binding must specify the transport (for example, HTTP or TCP) to use.</span></span> <span data-ttu-id="e02fa-105">此外，您也可以透過繫結程序來設定其他特性，例如安全性與異動支援。</span><span class="sxs-lookup"><span data-stu-id="e02fa-105">You can also set other characteristics, such as security and transaction support, through bindings.</span></span>  

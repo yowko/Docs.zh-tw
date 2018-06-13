@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643120"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-visual-basic"></a><span data-ttu-id="2ded4-102">延後的執行與延遲評估 linq to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2ded4-102">Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)</span></span>
 <span data-ttu-id="2ded4-103">若要使用延後執行，通常會實作查詢和座標軸運算。</span><span class="sxs-lookup"><span data-stu-id="2ded4-103">Query and axis operations are often implemented to use deferred execution.</span></span> <span data-ttu-id="2ded4-104">本主題說明延後執行的條件與優點以及一些實作考量。</span><span class="sxs-lookup"><span data-stu-id="2ded4-104">This topic explains the requirements and advantages of deferred execution, and some implementation considerations.</span></span>  

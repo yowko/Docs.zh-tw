@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646922"
 ---
 # <a name="how-to-declare-custom-events-to-avoid-blocking-visual-basic"></a><span data-ttu-id="7cec0-102">如何：宣告自訂事件以避免封鎖 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7cec0-102">How to: Declare Custom Events To Avoid Blocking (Visual Basic)</span></span>
 <span data-ttu-id="7cec0-103">重要的一個事件處理常式不會封鎖後續的事件處理常式時，有幾種情況。</span><span class="sxs-lookup"><span data-stu-id="7cec0-103">There are several circumstances when it is important that one event handler not block subsequent event handlers.</span></span> <span data-ttu-id="7cec0-104">自訂事件可讓要以非同步方式呼叫其事件處理常式的事件。</span><span class="sxs-lookup"><span data-stu-id="7cec0-104">Custom events allow the event to call its event handlers asynchronously.</span></span>  

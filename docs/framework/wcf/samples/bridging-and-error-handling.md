@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804387"
 ---
 # <a name="bridging-and-error-handling"></a><span data-ttu-id="02c18-102">橋接及錯誤處理</span><span class="sxs-lookup"><span data-stu-id="02c18-102">Bridging and Error Handling</span></span>
 <span data-ttu-id="02c18-103">這個範例會示範 Windows Communication Foundation (WCF) 路由服務如何用於通訊的用戶端和服務使用不同繫結之間的橋接。</span><span class="sxs-lookup"><span data-stu-id="02c18-103">This sample demonstrates how the Windows Communication Foundation (WCF) routing service is used for bridging communication between a client and a service that use different bindings.</span></span> <span data-ttu-id="02c18-104">此範例也會示範如何針對容錯移轉情況使用備份服務。</span><span class="sxs-lookup"><span data-stu-id="02c18-104">This sample also shows how to use a back-up service for failover scenarios.</span></span> <span data-ttu-id="02c18-105">路由服務是 WCF 元件，以簡化應用程式中加入內容架構的路由器。</span><span class="sxs-lookup"><span data-stu-id="02c18-105">The routing service is a WCF component that makes it easy to include a content-based router in your application.</span></span> <span data-ttu-id="02c18-106">此範例會調整標準 WCF 計算機範例，以便使用路由服務進行通訊。</span><span class="sxs-lookup"><span data-stu-id="02c18-106">This sample adapts the standard WCF Calculator Sample to communicate using the routing service.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588076"
 ---
 # <a name="end-of-statement-expected"></a><span data-ttu-id="0988b-102">必須有陳述式結尾</span><span class="sxs-lookup"><span data-stu-id="0988b-102">End of statement expected</span></span>
 <span data-ttu-id="0988b-103">陳述式語法完成，但其他的程式設計項目項目完成陳述式後面。</span><span class="sxs-lookup"><span data-stu-id="0988b-103">The statement is syntactically complete, but an additional programming element follows the element that completes the statement.</span></span> <span data-ttu-id="0988b-104">需要在每個陳述式結尾行結束字元。</span><span class="sxs-lookup"><span data-stu-id="0988b-104">A line terminator is required at the end of every statement.</span></span>

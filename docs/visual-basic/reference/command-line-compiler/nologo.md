@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648537"
 ---
 # <a name="-nologo-visual-basic"></a><span data-ttu-id="4c1a0-102">-nologo (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4c1a0-102">-nologo (Visual Basic)</span></span>
 <span data-ttu-id="4c1a0-103">在編譯期間隱藏顯示著作權橫幅和參考用訊息。</span><span class="sxs-lookup"><span data-stu-id="4c1a0-103">Suppresses display of the copyright banner and informational messages during compilation.</span></span>  

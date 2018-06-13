@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586369"
 ---
 # <a name="reader-writer-locks"></a><span data-ttu-id="a1747-102">Reader-Writer 鎖定</span><span class="sxs-lookup"><span data-stu-id="a1747-102">Reader-Writer Locks</span></span>
 <span data-ttu-id="a1747-103"><xref:System.Threading.ReaderWriterLockSlim> 類別可讓多個執行緒同時讀取資源，但是會要求執行緒等候獨佔鎖定，才能寫入至資源。</span><span class="sxs-lookup"><span data-stu-id="a1747-103">The <xref:System.Threading.ReaderWriterLockSlim> class enables multiple threads to read a resource concurrently, but requires a thread to wait for an exclusive lock in order to write to the resource.</span></span>  

@@ -1,27 +1,18 @@
 ---
-title: "範例 XML 檔：典型採購訂單 (LINQ to XML)"
-ms.custom: 
+title: 範例 XML 檔：典型採購訂單 (LINQ to XML)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 65321b9c-1239-45e4-af40-eb86cedf7abd
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5bd22edc4513c2b4facec3d60ca397b12478a9c6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4a0d16013ba85eace6cca374f2f284c4a6e39f69
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644897"
 ---
-# <a name="sample-xml-file-typical-purchase-order-linq-to-xml"></a><span data-ttu-id="748d0-102">範例 XML 檔：典型採購訂單 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="748d0-102">Sample XML File: Typical Purchase Order (LINQ to XML)</span></span>
-<span data-ttu-id="748d0-103">下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。</span><span class="sxs-lookup"><span data-stu-id="748d0-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="748d0-104">這個檔案是典型的採購訂單。</span><span class="sxs-lookup"><span data-stu-id="748d0-104">This file is a typical purchase order.</span></span>  
+# <a name="sample-xml-file-typical-purchase-order-linq-to-xml"></a><span data-ttu-id="056d2-102">範例 XML 檔：典型採購訂單 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="056d2-102">Sample XML File: Typical Purchase Order (LINQ to XML)</span></span>
+<span data-ttu-id="056d2-103">下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。</span><span class="sxs-lookup"><span data-stu-id="056d2-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="056d2-104">這個檔案是典型的採購訂單。</span><span class="sxs-lookup"><span data-stu-id="056d2-104">This file is a typical purchase order.</span></span>  
   
-## <a name="purchaseorderxml"></a><span data-ttu-id="748d0-105">PurchaseOrder.xml</span><span class="sxs-lookup"><span data-stu-id="748d0-105">PurchaseOrder.xml</span></span>  
+## <a name="purchaseorderxml"></a><span data-ttu-id="056d2-105">PurchaseOrder.xml</span><span class="sxs-lookup"><span data-stu-id="056d2-105">PurchaseOrder.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -60,5 +51,5 @@ ms.lasthandoff: 10/18/2017
 </PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="748d0-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="748d0-106">See Also</span></span>  
- [<span data-ttu-id="748d0-107">範例 XML 文件 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="748d0-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="056d2-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="056d2-106">See Also</span></span>  
+ [<span data-ttu-id="056d2-107">範例 XML 文件 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="056d2-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

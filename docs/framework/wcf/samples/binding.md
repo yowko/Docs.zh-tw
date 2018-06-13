@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803562"
 ---
 # <a name="binding"></a><span data-ttu-id="4a9b0-102">繫結</span><span class="sxs-lookup"><span data-stu-id="4a9b0-102">Binding</span></span>
 <span data-ttu-id="4a9b0-103">本節包含示範使用端點項目之繫結屬性的範例。</span><span class="sxs-lookup"><span data-stu-id="4a9b0-103">This section contains samples that demonstrate using the binding attribute of an endpoint element.</span></span>  

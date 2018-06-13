@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647146"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-visual-basic"></a><span data-ttu-id="0df0e-102">擷取段落的文字與 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0df0e-102">Retrieving the Text of the Paragraphs (Visual Basic)</span></span>
 <span data-ttu-id="0df0e-103">本範例是上述範例中，基礎[擷取段落和其樣式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)。</span><span class="sxs-lookup"><span data-stu-id="0df0e-103">This example builds on the previous example, [Retrieving the Paragraphs and Their Styles (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md).</span></span> <span data-ttu-id="0df0e-104">這個新的範例會將每個段落的文字當做字串擷取。</span><span class="sxs-lookup"><span data-stu-id="0df0e-104">This new example retrieves the text of each paragraph as a string.</span></span>  

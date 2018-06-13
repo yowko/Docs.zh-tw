@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588693"
 ---
 # <a name="numerics-in-the-net-framework"></a><span data-ttu-id="53ed1-102">.NET Framework 中的數值</span><span class="sxs-lookup"><span data-stu-id="53ed1-102">Numerics in the .NET Framework</span></span>
 <span data-ttu-id="53ed1-103">.NET Framework 除了沒有理論上限或下限的整數型別 <xref:System.Numerics.BigInteger>、代表複數的型別 <xref:System.Numerics.Complex>，以及 <xref:System.Numerics> 命名空間中一組支援 SIMD 的向量型別之外，也支援標準數值整數和浮點數基本型別。</span><span class="sxs-lookup"><span data-stu-id="53ed1-103">The .NET Framework supports the standard numeric integral and floating-point primitives, as well as <xref:System.Numerics.BigInteger>, an integral type with no theoretical upper or lower bound, <xref:System.Numerics.Complex>, a type that represents complex numbers, and a set of SIMD-enabled vector types in the <xref:System.Numerics> namespace.</span></span>  
