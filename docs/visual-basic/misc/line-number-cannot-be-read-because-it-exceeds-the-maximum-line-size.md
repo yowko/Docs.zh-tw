@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635155"
 ---
 # <a name="line-ltnumbergt-cannot-be-read-because-it-exceeds-the-maximum-line-size"></a>行&lt;數目&gt;無法讀取，因為它已超過最大線條大小。
 無法讀取這行，因為超過行數上限。 這通常表示檔案中有左引號，但沒有右引號。  

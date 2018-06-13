@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595822"
 ---
 # <a name="xml-entity-references-are-not-supported"></a>不支援 XML 實體參考
 實體參考 (例如， `©`) 未定義在 XML 1.0 規格會包含做為 XML 常值的值。 只有`&`， `"`， `<`， `>`，和`'`支援 XML 實體參考 XML 常值中。  

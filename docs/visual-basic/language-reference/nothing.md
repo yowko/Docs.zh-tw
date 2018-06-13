@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603986"
 ---
 # <a name="nothing-visual-basic"></a>Nothing (Visual Basic)
 代表任何資料類型的預設值。 預設值是參考類型`null`參考。 對於實值類型的預設值取決於是否可為 null 的實值型別。  

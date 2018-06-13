@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594341"
 ---
 # <a name="variable-uses-an-automation-type-not-supported-in-visual-basic"></a>變數使用在 Visual Basic 中不支援的 Automation 類型
 您嘗試使用類型程式庫或 Visual Basic 不支援的資料類型的物件程式庫中定義的變數。  

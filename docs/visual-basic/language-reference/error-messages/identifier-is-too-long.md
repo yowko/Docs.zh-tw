@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586447"
 ---
 # <a name="identifier-is-too-long"></a>識別項太長
 名稱或識別碼，每個程式設計項目是限制為 1023年個字元。 此外，完整限定的名稱不能超過 1023年個字元。 這表示整個識別項字串 (`<namespace>.<...>.<namespace>.<class>.<element>`) 不能超過 1023 個字元，包括成員存取運算子 (`.`) 字元。  

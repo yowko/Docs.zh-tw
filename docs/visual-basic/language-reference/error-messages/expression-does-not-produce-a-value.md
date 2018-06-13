@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586653"
 ---
 # <a name="expression-does-not-produce-a-value"></a>運算式沒有產生值
 您嘗試使用不會產生值產生內容，例如呼叫中的值的運算式`Sub`在內容中其中`Function`預期。  

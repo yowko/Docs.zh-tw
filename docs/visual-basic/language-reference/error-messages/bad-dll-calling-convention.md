@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583834"
 ---
 # <a name="bad-dll-calling-convention"></a>不正確的 DLL 呼叫慣例
 引數傳遞至動態連結程式庫 (DLL) 必須完全符合所預期的常式。 呼叫慣例處理數目、 類型和引數的順序。 您的程式可能會呼叫常式傳入的引數數目的錯誤類型的 DLL 中。  

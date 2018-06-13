@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578985"
 ---
 # <a name="dispose-pattern"></a>Dispose 模式
 所有程式執行期間都取得一或多個系統資源，例如記憶體、 系統處理或資料庫連接。 開發人員需要時請小心使用這類的系統資源，因為它們已取得並使用之後必須釋放它們。  

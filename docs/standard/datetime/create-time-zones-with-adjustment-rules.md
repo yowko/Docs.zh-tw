@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576490"
 ---
 # <a name="how-to-create-time-zones-with-adjustment-rules"></a>如何： 建立有調整規則的時區
 

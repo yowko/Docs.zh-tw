@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584193"
 ---
 # <a name="developing-applications-with-visual-basic"></a>使用 Visual Basic 開發應用程式
 本章節內容涵蓋 Visual Basic 語言的概念文件。  

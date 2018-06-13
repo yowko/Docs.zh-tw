@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582804"
 ---
 # <a name="scheduling-threads"></a>排程執行緒
 每個執行緒都擁有一個指派的執行緒優先權。 Common Language Runtime 中建立的執行緒，一開始會被指派優先權 **ThreadPriority.Normal**。 建立在執行階段之外的執行緒，在它們進入受控環境之前，會保留它們所擁有的優先權。 您可以使用 **Thread.Priority** 屬性取得或設定任何執行緒的優先權。  

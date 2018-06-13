@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637855"
 ---
 # <a name="no-mouse-is-present"></a>滑鼠不存在
 已呼叫 `My.Computer.Mouse` 物件的其中一個屬性，但是電腦未安裝滑鼠或滑鼠連接埠。  

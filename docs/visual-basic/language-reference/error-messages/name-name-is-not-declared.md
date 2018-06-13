@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594815"
 ---
 # <a name="name-39ltnamegt39-is-not-declared"></a>名稱&#39;&lt;名稱&gt;&#39;未宣告
 陳述式參考了程式設計項目，但編譯器找不到具有相同名稱的項目。  

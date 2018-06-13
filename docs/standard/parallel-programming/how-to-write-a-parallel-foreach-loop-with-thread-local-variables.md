@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582733"
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-thread-local-variables"></a>如何：撰寫含有執行緒區域變數的 Parallel.ForEach 迴圈
 下列範例說明如何撰寫使用執行緒區域變數的 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 方法。 當 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 迴圈執行時，它會將其來源集合分成多個分割。 每個分割會有自己的「執行緒區域」變數複本 (這裡用「執行緒區域」一詞有點不正確，因為有時會有兩個分割在同一個執行緒上執行)。  

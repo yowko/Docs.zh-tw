@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582645"
 ---
 # <a name="accessing-the-keyboard-visual-basic"></a>存取鍵盤 (Visual Basic)
 `My.Computer.Keyboard` 物件提供的屬性可存取鍵盤目前的狀態，例如目前已按下哪些按鍵，並提供方法將按鍵輸入傳送至使用中的視窗。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581465"
 ---
 # <a name="serialization-samples-for-the-net-framework"></a>.NET Framework 的序列化範例
 這個章節示範如何在 .NET Framework 序列化物件。  

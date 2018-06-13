@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638678"
 ---
 # <a name="some-files-and-folders-caused-exceptions-during-the-operation"></a>某些檔案和資料夾在作業期間造成例外狀況
 嘗試執行作業，但使用者缺乏必要權限時，目錄和檔案可能會造成例外狀況。  

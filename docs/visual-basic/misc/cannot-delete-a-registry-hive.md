@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635181"
 ---
 # <a name="cannot-delete-a-registry-hive"></a>無法刪除登錄 Hive
 已嘗試刪除登錄 Hive。 Hive 是最上層的登錄機碼，例如 `HKEY_CURRENT_USER` 和 `HKEY_LOCAL_MACHINE`，且無法刪除。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586217"
 ---
 # <a name="clipboard-format-is-not-valid"></a>剪貼簿的格式無效
 指定的剪貼簿格式與不相容所執行的方法。 此錯誤的可能原因包括：  

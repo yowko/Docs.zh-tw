@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581364"
 ---
 # <a name="serialization-how-to-topics"></a>序列化 HOW TO 主題
 下列清單包含序列化概念文件的使用 HOW TO 主題的連結。  
