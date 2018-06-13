@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7ec66e0064a8d6e8d4664dd8c727aa87621cfd8e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427303"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriter-interface"></a>ISymUnmanagedAsyncMethodPropertiesWriter 介面
 可讓您定義選擇性的非同步方法的每個方法符號資訊。 一律使用具有開啟的方法。也就是說，呼叫之間[OpenMethod 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)和[CloseMethod 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)。  
@@ -29,7 +30,7 @@ ms.lasthandoff: 05/04/2018
 |[DefineKickoffMethod 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-definekickoffmethod-method.md)|設定啟始非同步作業的開始方法。|  
   
 ## <a name="requirements"></a>需求  
- **標頭：**於 CorSym.idl、 CorSym.h  
+ **標頭：** 於 CorSym.idl、 CorSym.h  
   
 ## <a name="see-also"></a>另請參閱  
  [診斷符號存放區介面](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

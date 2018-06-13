@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b6d0ba3f722f63650a3db6a8f633189993db0716
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431404"
 ---
 # <a name="ecustomdumpflavor-enumeration"></a>ECustomDumpFlavor 列舉
 包含值，表示哪些項目来納入的自訂子堆積的傾印時報告錯誤。  
@@ -45,7 +46,7 @@ typedef enum {
  類型的參數`ECustomDumpFlavor`傳遞至[iclrerrorreportingmanager:: Begincustomdump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md)方法。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   

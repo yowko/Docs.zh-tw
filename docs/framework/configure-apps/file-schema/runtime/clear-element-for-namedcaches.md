@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745509"
 ---
 # <a name="ltcleargt-element-for-ltnamedcachesgt"></a>&lt;清除&gt;元素&lt;namedCaches&gt;
 清除所有`namedCache`中的項目`namedCaches`記憶體快取的集合。  

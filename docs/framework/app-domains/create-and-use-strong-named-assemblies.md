@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744638"
 ---
 # <a name="creating-and-using-strong-named-assemblies"></a>建立和使用強式名稱的組件
 <a name="top"></a> 強式名稱是由組件的識別，也就是其簡單文字名稱、版本號碼及文化特性資訊 (如果有提供)，加上公開金鑰和數位簽章所組成的。 這是使用對應的私密金鑰，從組件檔案所產生  (組件檔案包含附屬組件資訊清單，而資訊清單則包含組件中所有檔案的名稱和雜湊)。  

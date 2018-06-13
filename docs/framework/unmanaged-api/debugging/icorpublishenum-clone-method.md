@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 12d9e468027e88cc74900364459f83d7e5125a9e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423802"
 ---
 # <a name="icorpublishenumclone-method"></a>ICorPublishEnum::Clone 方法
 建立一份這[ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)物件。  
@@ -39,7 +40,7 @@ HRESULT Clone (
  [out]位址指標`ICorPublishEnum`物件之這個複本`ICorPublishEnum`物件。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorPub.idl、 CorPub.h  
   

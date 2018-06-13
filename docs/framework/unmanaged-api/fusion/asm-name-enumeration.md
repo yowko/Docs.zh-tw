@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b9902b96a6f9ca56435430b6120a34dfb6cfadd7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431213"
 ---
 # <a name="asmname-enumeration"></a>ASM_NAME 列舉
 表示版本、 組建、 文化特性、 簽章，以及等等，將會擷取或設定其屬性的組件[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)方法。  
@@ -64,11 +65,11 @@ typedef enum {
 ```  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Fusion.h  
   
- **程式庫：**包含做為 MsCorEE.dll 中的資源  
+ **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

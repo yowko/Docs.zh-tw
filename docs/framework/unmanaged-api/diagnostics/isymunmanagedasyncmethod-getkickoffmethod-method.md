@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e2f055dc19bf7f40036283102d8cc4549555b992
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424764"
 ---
 # <a name="isymunmanagedasyncmethodgetkickoffmethod-method"></a>ISymUnmanagedAsyncMethod::GetKickoffMethod 方法
 請參閱[DefineKickoffMethod 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-definekickoffmethod-method.md)。  
@@ -29,7 +30,7 @@ HRESULT GetKickoffMethod(    [out, retval] mdToken* kickoffMethod);
  傳回 `HRESULT`。  
   
 ## <a name="requirements"></a>需求  
- **標頭：**於 CorSym.idl、 CorSym.h  
+ **標頭：** 於 CorSym.idl、 CorSym.h  
   
 ## <a name="see-also"></a>另請參閱  
  [ISymUnmanagedAsyncMethod 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethod-interface.md)

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742568"
 ---
 # <a name="ltidngt-element-uri-settings"></a>&lt;idn&gt;項目 （Uri 設定）
 指定是否國際化網域名稱 (IDN) 剖析會套用至網域名稱。  

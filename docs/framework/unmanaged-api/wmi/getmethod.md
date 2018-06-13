@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 65b8cb74a028892a3494e818f2b523f75e8766a1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460443"
 ---
 # <a name="getmethod-function"></a>GetMethod 函式
 擷取指定之方法的相關資訊。
@@ -79,7 +80,7 @@ HRESULT GetMethod (
 在`ppInSignature`和`ppOutSignature`分別中的屬性描述輸入和輸出參數，`IWbemClassObject`系統類別的執行個體[_Parameters](https://msdn.microsoft.com/library/aa394667(v=vs.85).aspx)。 中的屬性`ppInsignature`會命名為 **Param * * * n*，其中*n*是方法簽章中參數的位置 (例如`Param1`，`Param2`等。)。 中的屬性`ppOutSignature`也稱為 **Param * * * n*，傳回的值稱為**ReturnValue**。 如需詳細資訊和範例，請參閱[IWbemClassObject::GetMethod 方法](https://msdn.microsoft.com/library/aa391443(v=vs.85).aspx)。
 
 ## <a name="requirements"></a>需求  
-**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.idl  
   

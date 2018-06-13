@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 05cbe098b73dd817546dd72f0fc98ad548f75386
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425414"
 ---
 # <a name="isymunmanagedencupdate-interface"></a>ISymUnmanagedENCUpdate 介面
 [編輯後繼續] 功能提供函式。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/04/2018
 |[UpdateSymbolStore2 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-updatesymbolstore2-method.md)|讓編譯器將省略程式資料庫 (PDB) 資料流，從尚未經過修改的函式，前提是行資訊符合的需求。 使用舊的 PDB 行資訊和函式中的所有行的一個差異，您可以判斷正確的行資訊。|  
   
 ## <a name="requirements"></a>需求  
- **標頭：**於 CorSym.idl、 CorSym.h  
+ **標頭：** 於 CorSym.idl、 CorSym.h  
   
 ## <a name="see-also"></a>另請參閱  
  [診斷符號存放區介面](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

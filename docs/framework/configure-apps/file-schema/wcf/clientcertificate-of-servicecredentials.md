@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748915"
 ---
 # <a name="ltclientcertificategt-of-ltservicecredentialsgt"></a>&lt;serviceCredentials&gt; 的 &lt;clientCertificate&gt;
 定義雙工通訊模式中，用來簽署與加密服務至用戶端之訊息的 X.509 憑證。  

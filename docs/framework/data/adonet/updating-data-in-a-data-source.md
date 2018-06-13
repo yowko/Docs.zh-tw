@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357789"
 ---
 # <a name="updating-data-in-a-data-source"></a>更新資料來源中的資料
 會修改資料的 SQL 陳述式 (例如 INSERT、UPDATE 或 DELETE) 不會傳回資料列。 同樣地，許多預存程序會執行動作但不傳回資料列。 若要執行不傳回資料列的命令，建立**命令**物件使用適當的 SQL 命令和**連接**，包括任何必要**參數**。 執行命令並搭配**ExecuteNonQuery**方法**命令**物件。  

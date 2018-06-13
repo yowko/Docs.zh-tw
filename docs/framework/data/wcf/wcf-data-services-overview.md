@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365796"
 ---
 # <a name="wcf-data-services-overview"></a>WCF 資料服務概觀
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 建立及取用 Web 或內部的資料服務會使用啟用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 可讓您將資料公開為可由 Uri 定址的資源。 這可讓您使用具像狀態傳輸 (REST) 的語意存取及變更資料，尤其是標準 HTTP 動作，例如 GET、PUT、POST 和 DELETE。 本主題提供 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 所定義的模式和作法概觀以及 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 所提供的功能，以便在 .NET Framework 應用程式中充分利用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]。  

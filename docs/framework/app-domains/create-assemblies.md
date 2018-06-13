@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752061"
 ---
 # <a name="creating-assemblies"></a>建立組件
 您可以使用 IDE (例如 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]) 或 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 所提供的編譯器和工具來建立單一檔案或多檔案組件。 最簡單的組件是單一檔案，其具有簡單名稱並載入到單一應用程式定義域。 這個組件無法供應用程式目錄外部的其他組件參考，而且不會進行版本檢查。 若要解除安裝構成組件的應用程式，您只需要刪除其所在的目錄。 對許多開發人員而言，具有這些功能的組件就是部署應用程式所需的項目。  

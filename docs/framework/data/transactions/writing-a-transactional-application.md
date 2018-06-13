@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357192"
 ---
 # <a name="writing-a-transactional-application"></a>撰寫異動式應用程式
 身為交易式應用程式設計人員，您可以利用 <xref:System.Transactions> 命名空間所提供的兩個程式撰寫模型 (Programming Model) 來建立交易。 您可以利用明確的程式設計模型使用<xref:System.Transactions.Transaction>類別或隱含的程式設計模型，交易自動管理基礎結構，使用<xref:System.Transactions.TransactionScope>類別。 我們建議您開發使用隱含交易模式。 您可以找到有關如何使用交易範圍中的詳細資訊[實作隱含交易使用交易範圍](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)主題。  

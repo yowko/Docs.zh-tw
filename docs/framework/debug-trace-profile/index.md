@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386466"
 ---
 # <a name="debugging-tracing-and-profiling"></a>偵錯、追蹤和程式碼剖析
 若要偵錯 .NET Framework 應用程式，必須設定編譯器和執行階段環境，讓偵錯工具能夠附加至應用程式，並針對應用程式及其相對應的 Microsoft 中繼語言 (MSIL) 產生符號和字行對應 (可能的話)。 在偵錯 Managed 應用程式後，可將其剖析以提高效能。 程式碼剖析會評估和描述產生最常執行之程式碼的原始程式碼字行，以及花費多少時間執行。  

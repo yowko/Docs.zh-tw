@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2a84061cff7cc5dbdeba1e0e66396e04a8f345cb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423152"
 ---
 # <a name="icordebugprocess3setenablecustomnotification-method"></a>ICorDebugProcess3::SetEnableCustomNotification 方法
 啟用和停用指定之類型的自訂偵錯工具通知。  
@@ -46,7 +47,7 @@ HRESULT SetEnableCustomNotification(ICorDebugClass * pClass,
  從開始[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]，僅支援的通知是跨執行緒相依性通知。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   

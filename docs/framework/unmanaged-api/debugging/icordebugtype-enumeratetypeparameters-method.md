@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 12b002aaad65fd5f2a1207700c8de2ca8dd60eec
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421875"
 ---
 # <a name="icordebugtypeenumeratetypeparameters-method"></a>ICorDebugType::EnumerateTypeParameters 方法
 取得包含 ICorDebugTypeEnum 介面指標<xref:System.Type>此 ICorDebugType 所參考類別的參數。  
@@ -48,7 +49,7 @@ HRESULT EnumerateTypeParameters (
 -   ELEMENT_TYPE_ARRAY、 ELEMENT_TYPE_SZARRAY、 ELEMENT_TYPE_BYREF 或 ELEMENT_TYPE_PTR： 將會傳回一個型別參數。 例如，如果類型是陣列類型，例如`int32[]`，`EnumerateTypeParameters`會傳回`ICorDebugTypeEnum`，其中包含物件，代表`int32`。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
