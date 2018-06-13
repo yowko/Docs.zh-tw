@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7ed8c616fd71855f3c2313cee0b9fee3ba31babd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415171"
 ---
 # <a name="icordebugcontrollercommitchanges-method"></a>ICorDebugController::CommitChanges 方法
 `CommitChanges` 已經過時。 請勿呼叫這個方法。  
