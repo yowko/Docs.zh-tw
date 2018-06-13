@@ -11,9 +11,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d86f9b4903663604094895f6747b1407ff98c990
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435860"
 ---
 # <a name="deprecated-clr-hosting-functions"></a>已被取代的 CLR 裝載函式
 本章節描述的 unmanaged 全域靜態函式使用舊版的裝載 API。  

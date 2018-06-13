@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755210"
 ---
 # <a name="ltcachesgt"></a>&lt;快取&gt;
 註冊用於工作階段權杖，權杖重新執行偵測的快取。  
