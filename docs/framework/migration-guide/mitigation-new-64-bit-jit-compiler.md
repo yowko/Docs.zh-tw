@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391936"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a><span data-ttu-id="7a468-102">風險降低：新的 64 位元 JIT 編譯器</span><span class="sxs-lookup"><span data-stu-id="7a468-102">Mitigation: New 64-bit JIT Compiler</span></span>
 <span data-ttu-id="7a468-103">從 .NET Framework 4.6 開始，執行階段包含新的 64 位元 JIT 編譯器，用於 Just-In-Time 編譯。</span><span class="sxs-lookup"><span data-stu-id="7a468-103">Starting with the .NET Framework 4.6, the runtime includes a new 64-bit JIT compiler for just-in-time compilation.</span></span> <span data-ttu-id="7a468-104">這項變更不會影響使用 32 位元 JIT 編譯器的編譯。</span><span class="sxs-lookup"><span data-stu-id="7a468-104">This change does not affect compilation with the  32-bit JIT compiler.</span></span>  

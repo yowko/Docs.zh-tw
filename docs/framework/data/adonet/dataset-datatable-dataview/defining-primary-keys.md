@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757576"
 ---
 # <a name="defining-primary-keys"></a><span data-ttu-id="e74e6-102">定義主索引鍵</span><span class="sxs-lookup"><span data-stu-id="e74e6-102">Defining Primary Keys</span></span>
 <span data-ttu-id="e74e6-103">資料庫資料表通常會有資料行或資料行群組，可唯一識別資料表的每個資料列。</span><span class="sxs-lookup"><span data-stu-id="e74e6-103">A database table commonly has a column or group of columns that uniquely identifies each row in the table.</span></span> <span data-ttu-id="e74e6-104">這個識別欄位或資料行群組又稱為主索引鍵。</span><span class="sxs-lookup"><span data-stu-id="e74e6-104">This identifying column or group of columns is called the primary key.</span></span>  

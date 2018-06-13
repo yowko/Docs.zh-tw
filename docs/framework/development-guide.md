@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391094"
 ---
 # <a name="net-framework-development-guide"></a><span data-ttu-id="e3f0a-102">.NET Framework 開發指南</span><span class="sxs-lookup"><span data-stu-id="e3f0a-102">.NET Framework Development Guide</span></span>
 <span data-ttu-id="e3f0a-103">本節說明如何建立、設定、偵錯、保護和部署 .NET Framework 應用程式。</span><span class="sxs-lookup"><span data-stu-id="e3f0a-103">This section explains how to create, configure, debug, secure, and deploy your .NET Framework apps.</span></span> <span data-ttu-id="e3f0a-104">本節也提供有關技術領域的資訊，例如動態程式設計、互通性、擴充性、記憶體管理和執行緒。</span><span class="sxs-lookup"><span data-stu-id="e3f0a-104">The section also provides information about technology areas such as dynamic programming, interoperability, extensibility, memory management, and threading.</span></span>  

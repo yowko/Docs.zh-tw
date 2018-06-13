@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392444"
 ---
 # <a name="changes-to-the-systemuri-namespace-in-version-20"></a><span data-ttu-id="be391-102">2.0 版之 System.Uri 命名空間的變更</span><span class="sxs-lookup"><span data-stu-id="be391-102">Changes to the System.Uri namespace in Version 2.0</span></span>
 <span data-ttu-id="be391-103">已對 <xref:System.Uri?displayProperty=nameWithType> 類別進行數項變更。</span><span class="sxs-lookup"><span data-stu-id="be391-103">Several changes were made to the <xref:System.Uri?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="be391-104">這些變更已修正不正確的行為、增強可用性和增強式安全性。</span><span class="sxs-lookup"><span data-stu-id="be391-104">These changes fixed incorrect behavior, enhanced usability, and enhanced security.</span></span>  

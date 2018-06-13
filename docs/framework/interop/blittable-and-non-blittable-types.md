@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392287"
 ---
 # <a name="blittable-and-non-blittable-types"></a><span data-ttu-id="b665e-102">Blittable 和非 Blittable 類型</span><span class="sxs-lookup"><span data-stu-id="b665e-102">Blittable and Non-Blittable Types</span></span>
 <span data-ttu-id="b665e-103">大部分的資料類型是 Managed 和 Unmanaged 記憶體中的常見呈現，而且 Interop 封送處理器不需要特殊處理。</span><span class="sxs-lookup"><span data-stu-id="b665e-103">Most data types have a common representation in both managed and unmanaged memory and do not require special handling by the interop marshaler.</span></span> <span data-ttu-id="b665e-104">這些類型稱為「Blittable 類型」，因為它們在 Managed 與 Unmanaged 程式碼之間傳遞時不需要進行轉換。</span><span class="sxs-lookup"><span data-stu-id="b665e-104">These types are called *blittable types* because they do not require conversion when they are passed between managed and unmanaged code.</span></span>  

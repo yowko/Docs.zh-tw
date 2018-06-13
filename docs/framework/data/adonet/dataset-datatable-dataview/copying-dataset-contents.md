@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757290"
 ---
 # <a name="copying-dataset-contents"></a><span data-ttu-id="b5d84-102">複製資料集內容</span><span class="sxs-lookup"><span data-stu-id="b5d84-102">Copying DataSet Contents</span></span>
 <span data-ttu-id="b5d84-103">您可以建立一份<xref:System.Data.DataSet>，讓您可以使用資料，而不會影響原始資料，或處理的資料子集**資料集**。</span><span class="sxs-lookup"><span data-stu-id="b5d84-103">You can create a copy of a <xref:System.Data.DataSet> so that you can work with data without affecting the original data, or work with a subset of the data from a **DataSet**.</span></span> <span data-ttu-id="b5d84-104">當複製**資料集**，您可以：</span><span class="sxs-lookup"><span data-stu-id="b5d84-104">When copying a **DataSet**, you can:</span></span>  

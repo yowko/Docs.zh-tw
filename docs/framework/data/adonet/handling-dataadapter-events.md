@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759149"
 ---
 # <a name="handling-dataadapter-events"></a><span data-ttu-id="ef92e-102">處理 DataAdapter 的事件</span><span class="sxs-lookup"><span data-stu-id="ef92e-102">Handling DataAdapter Events</span></span>
 <span data-ttu-id="ef92e-103">ADO.NET <xref:System.Data.Common.DataAdapter> 公開 (Expose) 的三個事件可讓您用來回應資料來源中的資料變更。</span><span class="sxs-lookup"><span data-stu-id="ef92e-103">The ADO.NET <xref:System.Data.Common.DataAdapter> exposes three events that you can use to respond to changes made to data at the data source.</span></span> <span data-ttu-id="ef92e-104">下表說明 `DataAdapter` 事件。</span><span class="sxs-lookup"><span data-stu-id="ef92e-104">The following table shows the `DataAdapter` events.</span></span>  

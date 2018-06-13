@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391452"
 ---
 # <a name="marshaling-different-types-of-arrays"></a><span data-ttu-id="7a475-102">封送處理不同類型的陣列</span><span class="sxs-lookup"><span data-stu-id="7a475-102">Marshaling Different Types of Arrays</span></span>
 <span data-ttu-id="7a475-103">陣列是 Managed 程式碼中的參考類型，它包含一或多個相同類型的項目。</span><span class="sxs-lookup"><span data-stu-id="7a475-103">An array is a reference type in managed code that contains one or more elements of the same type.</span></span> <span data-ttu-id="7a475-104">雖然陣列是參考類型，它們會做為 In 參數傳遞至 Unmanaged 函式。</span><span class="sxs-lookup"><span data-stu-id="7a475-104">Although arrays are reference types, they are passed as In parameters to unmanaged functions.</span></span> <span data-ttu-id="7a475-105">此行為與 Managed 陣列傳遞至 Managed 物件的方式 (做為 In/Out 參數) 不一致。</span><span class="sxs-lookup"><span data-stu-id="7a475-105">This behavior is inconsistent with way managed arrays are passed to managed objects, which is as In/Out parameters.</span></span> <span data-ttu-id="7a475-106">如需詳細資訊，請參閱[複製和釘選](copying-and-pinning.md)。</span><span class="sxs-lookup"><span data-stu-id="7a475-106">For additional details, see [Copying and Pinning](copying-and-pinning.md).</span></span>  

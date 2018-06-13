@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391647"
 ---
 # <a name="deploying-net-framework-applications"></a><span data-ttu-id="548d5-102">部署 .NET Framework 應用程式</span><span class="sxs-lookup"><span data-stu-id="548d5-102">Deploying .NET Framework Applications</span></span>
 <span data-ttu-id="548d5-103">.NET Framework 文件的本章節提供部署 .NET Framework 應用程式的重要資訊，包括下列方針：載入組件、解析組件參考，以及透過產生原生映像 (NGen) 改善應用程式的效能。</span><span class="sxs-lookup"><span data-stu-id="548d5-103">This section of the .NET Framework documentation provides essential information for deploying .NET Framework applications, including guidelines for loading assemblies, resolving assembly references, and improving the performance of your application through native image generation.</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389502"
 ---
 # <a name="interoperating-with-unmanaged-code"></a><span data-ttu-id="857ea-102">與非受控程式碼交互操作</span><span class="sxs-lookup"><span data-stu-id="857ea-102">Interoperating with unmanaged code</span></span>
 

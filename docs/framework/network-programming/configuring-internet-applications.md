@@ -29,6 +29,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395056"
 ---
 # <a name="configuring-internet-applications"></a><span data-ttu-id="b5317-102">設定網際網路應用程式</span><span class="sxs-lookup"><span data-stu-id="b5317-102">Configuring Internet Applications</span></span>
 <span data-ttu-id="b5317-103">[\<system.Net> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) 組態項目包含應用程式的網路組態資訊。</span><span class="sxs-lookup"><span data-stu-id="b5317-103">The [\<system.Net> Element (Network Settings)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) configuration element contains network configuration information for applications.</span></span> <span data-ttu-id="b5317-104">使用 [\<system.Net> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) 項目，您可以設定 Proxy 伺服器、設定連線管理參數，以及在應用程式中包含自訂驗證和要求模組。</span><span class="sxs-lookup"><span data-stu-id="b5317-104">Using the [\<system.Net> Element (Network Settings)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) element, you can set proxy servers, set connection management parameters, and include custom authentication and request modules in your application.</span></span>  

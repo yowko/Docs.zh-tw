@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389040"
 ---
 # <a name="qualifying-net-types-for-interoperation"></a><span data-ttu-id="ceba8-102">限定互通的 .NET 類型</span><span class="sxs-lookup"><span data-stu-id="ceba8-102">Qualifying .NET Types for Interoperation</span></span>
 <span data-ttu-id="ceba8-103">如果您想要向 COM 應用程式公開組件中的類型，請考慮設計階段的 COM Interop 需求。</span><span class="sxs-lookup"><span data-stu-id="ceba8-103">If you intend to expose types in an assembly to COM applications, consider the requirements of COM interop at design time.</span></span> <span data-ttu-id="ceba8-104">當您遵守下列方針時，Managed 類型 (類別、介面、結構和列舉) 會與 COM 類型緊密整合：</span><span class="sxs-lookup"><span data-stu-id="ceba8-104">Managed types (class, interface, structure, and enumeration) seamlessly integrate with COM types when you adhere to the following guidelines:</span></span>  

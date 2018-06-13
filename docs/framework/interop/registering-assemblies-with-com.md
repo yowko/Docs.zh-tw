@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389157"
 ---
 # <a name="registering-assemblies-with-com"></a><span data-ttu-id="25dda-102">向 COM 註冊組件</span><span class="sxs-lookup"><span data-stu-id="25dda-102">Registering Assemblies with COM</span></span>
 <span data-ttu-id="25dda-103">您可以執行稱為[組件註冊工具 (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) 的命令列工具，註冊或取消登錄與 COM 搭配使用的組件。</span><span class="sxs-lookup"><span data-stu-id="25dda-103">You can run a command-line tool called the [Assembly Registration Tool (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) to register or unregister an assembly for use with COM.</span></span> <span data-ttu-id="25dda-104">Regasm.exe 會將此類別的相關資訊新增至容器登錄，讓 COM 用戶端可以明確地使用 .NET Framework 類別。</span><span class="sxs-lookup"><span data-stu-id="25dda-104">Regasm.exe adds information about the class to the system registry so COM clients can use the .NET Framework class transparently.</span></span> <span data-ttu-id="25dda-105"><xref:System.Runtime.InteropServices.RegistrationServices> 類別提供對等功能。</span><span class="sxs-lookup"><span data-stu-id="25dda-105">The <xref:System.Runtime.InteropServices.RegistrationServices> class provides the equivalent functionality.</span></span>  

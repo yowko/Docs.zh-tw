@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389551"
 ---
 # <a name="com-interop-sample-com-client-and-net-server"></a><span data-ttu-id="a32c5-102">COM Interop 範例：COM 用戶端與 .NET 伺服器</span><span class="sxs-lookup"><span data-stu-id="a32c5-102">COM Interop Sample: COM Client and .NET Server</span></span>
 <span data-ttu-id="a32c5-103">此範例示範執行貸款計算之 [COM 用戶端](#cpconcominteropsamplecomclientnetserveranchor1)與 [.NET 伺服器](#cpconcominteropsamplecomclientnetserveranchor2)的交互操作。</span><span class="sxs-lookup"><span data-stu-id="a32c5-103">This sample demonstrates the interoperation of a [COM Client](#cpconcominteropsamplecomclientnetserveranchor1) and a [.NET Server](#cpconcominteropsamplecomclientnetserveranchor2) that performs mortgage calculations.</span></span> <span data-ttu-id="a32c5-104">在此範例中，用戶端會建立和呼叫 Managed `Loan` 類別的執行個體，並將四個引數 (這四個的其中一個等於零) 傳遞給執行個體，然後顯示運算。</span><span class="sxs-lookup"><span data-stu-id="a32c5-104">In this example, the client creates and calls an instance of the managed `Loan` class, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="a32c5-105">這個範例的程式碼範例會出現在本節中。</span><span class="sxs-lookup"><span data-stu-id="a32c5-105">Code examples from this sample appear throughout this section.</span></span>  

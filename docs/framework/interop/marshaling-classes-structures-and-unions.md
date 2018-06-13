@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393389"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a><span data-ttu-id="d5ee1-102">封送處理類別、結構和等位</span><span class="sxs-lookup"><span data-stu-id="d5ee1-102">Marshaling Classes, Structures, and Unions</span></span>
 <span data-ttu-id="d5ee1-103">在 .NET Framework 中，類別和結構相類似。</span><span class="sxs-lookup"><span data-stu-id="d5ee1-103">Classes and structures are similar in the .NET Framework.</span></span> <span data-ttu-id="d5ee1-104">兩者都可以有欄位、屬性和事件。</span><span class="sxs-lookup"><span data-stu-id="d5ee1-104">Both can have fields, properties, and events.</span></span> <span data-ttu-id="d5ee1-105">也可以有靜態和非靜態方法。</span><span class="sxs-lookup"><span data-stu-id="d5ee1-105">They can also have static and nonstatic methods.</span></span> <span data-ttu-id="d5ee1-106">一個值得注意的差異在於結構是實值類型，而類別是參考類型。</span><span class="sxs-lookup"><span data-stu-id="d5ee1-106">One notable difference is that structures are value types and classes are reference types.</span></span>  

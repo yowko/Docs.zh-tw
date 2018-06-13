@@ -20,6 +20,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744313"
 ---
 # <a name="how-to-build-a-single-file-assembly"></a><span data-ttu-id="e8d18-102">如何：建置單一檔案組件</span><span class="sxs-lookup"><span data-stu-id="e8d18-102">How to: Build a Single-File Assembly</span></span>
 <span data-ttu-id="e8d18-103">單一檔案組件，是最簡單的組件類型，包含類型資訊和實作，以及[組件資訊清單](../../../docs/framework/app-domains/assembly-manifest.md)。</span><span class="sxs-lookup"><span data-stu-id="e8d18-103">A single-file assembly, which is the simplest type of assembly, contains type information and implementation, as well as the [assembly manifest](../../../docs/framework/app-domains/assembly-manifest.md).</span></span> <span data-ttu-id="e8d18-104">您可以使用命令列編譯器或 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 來建立單一檔案組件。</span><span class="sxs-lookup"><span data-stu-id="e8d18-104">You can use command-line compilers or [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] to create a single-file assembly.</span></span> <span data-ttu-id="e8d18-105">編譯器預設會建立副檔名為 .exe 的組件檔案。</span><span class="sxs-lookup"><span data-stu-id="e8d18-105">By default, the compiler creates an assembly file with an .exe extension.</span></span>  

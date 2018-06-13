@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393448"
 ---
 # <a name="httplistener"></a><span data-ttu-id="02110-102">HttpListener</span><span class="sxs-lookup"><span data-stu-id="02110-102">HttpListener</span></span>
 <span data-ttu-id="02110-103"><xref:System.Net.HttpListener> 類別提供以程式設計方式控制的 HTTP 通訊協定接聽程式。</span><span class="sxs-lookup"><span data-stu-id="02110-103">The <xref:System.Net.HttpListener> class provides a programmatically controlled HTTP protocol listener.</span></span> <span data-ttu-id="02110-104">此接聽程式可在 <xref:System.Net.HttpListener> 物件的存留期內作用，並且在您的應用程式中執行。</span><span class="sxs-lookup"><span data-stu-id="02110-104">The listener is active for the lifetime of the <xref:System.Net.HttpListener> object and runs within your application.</span></span>  

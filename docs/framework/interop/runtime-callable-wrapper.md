@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393506"
 ---
 # <a name="runtime-callable-wrapper"></a><span data-ttu-id="e8a0b-102">執行階段可呼叫包裝函式</span><span class="sxs-lookup"><span data-stu-id="e8a0b-102">Runtime Callable Wrapper</span></span>
 <span data-ttu-id="e8a0b-103">Common Language Runtime 會透過名為執行階段可呼叫包裝函式 (RCW) 的 Proxy 來公開 COM 物件。</span><span class="sxs-lookup"><span data-stu-id="e8a0b-103">The common language runtime exposes COM objects through a proxy called the runtime callable wrapper (RCW).</span></span> <span data-ttu-id="e8a0b-104">雖然 RCW 對 .NET 用戶端似乎是個普通物件，但其主要功能是在 .NET 用戶端與 COM 物件之間封送處理呼叫。</span><span class="sxs-lookup"><span data-stu-id="e8a0b-104">Although the RCW appears to be an ordinary object to .NET clients, its primary function is to marshal calls between a .NET client and a COM object.</span></span>  

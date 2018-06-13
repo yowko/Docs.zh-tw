@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393838"
 ---
 # <a name="pnrp-clouds"></a><span data-ttu-id="c452e-102">PNRP 雲端</span><span class="sxs-lookup"><span data-stu-id="c452e-102">PNRP Clouds</span></span>
 <span data-ttu-id="c452e-103">PNRP「雲端」代表一組節點，可以透過網路彼此進行通訊。</span><span class="sxs-lookup"><span data-stu-id="c452e-103">A PNRP "cloud" represents a set of nodes that can communicate with each other through the network.</span></span> <span data-ttu-id="c452e-104">「雲端」這個詞相當於「對等網格」和「點對點圖形」。</span><span class="sxs-lookup"><span data-stu-id="c452e-104">The term "cloud" is synonymous with "peer mesh" and "peer-to-peer graph".</span></span>  

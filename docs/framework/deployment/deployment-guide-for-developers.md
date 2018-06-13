@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392186"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a><span data-ttu-id="17873-102">.NET Framework 開發人員部署手冊</span><span class="sxs-lookup"><span data-stu-id="17873-102">.NET Framework deployment guide for developers</span></span>
 <span data-ttu-id="17873-103">開發人員若要讓自己的應用程式一起安裝從 .NET Framework 4.5 至 [!INCLUDE[net_current](../../../includes/net-current-version.md)] 的任何 .NET Framework 版本，可參考本主題提供的資訊。</span><span class="sxs-lookup"><span data-stu-id="17873-103">This topic provides information for developers who want to install any version of the .NET Framework from the .NET Framework 4.5 to the [!INCLUDE[net_current](../../../includes/net-current-version.md)] with their apps.</span></span>

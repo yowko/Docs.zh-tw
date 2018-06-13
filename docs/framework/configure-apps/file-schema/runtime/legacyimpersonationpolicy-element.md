@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745184"
 ---
 # <a name="ltlegacyimpersonationpolicygt-element"></a><span data-ttu-id="0aa73-102">&lt;legacyImpersonationPolicy&gt;項目</span><span class="sxs-lookup"><span data-stu-id="0aa73-102">&lt;legacyImpersonationPolicy&gt; Element</span></span>
 <span data-ttu-id="0aa73-103">指定 Windows 識別不會流經非同步點，而不論目前執行緒上執行內容的流程設定為何。</span><span class="sxs-lookup"><span data-stu-id="0aa73-103">Specifies that the Windows identity does not flow across asynchronous points, regardless of the flow settings for the execution context on the current thread.</span></span>  

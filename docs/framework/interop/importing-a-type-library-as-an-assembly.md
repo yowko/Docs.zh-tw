@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393412"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a><span data-ttu-id="6a221-102">匯入類型程式庫做為組件</span><span class="sxs-lookup"><span data-stu-id="6a221-102">Importing a Type Library as an Assembly</span></span>
 <span data-ttu-id="6a221-103">COM 類型定義通常位於型別程式庫中。</span><span class="sxs-lookup"><span data-stu-id="6a221-103">COM type definitions usually reside in a type library.</span></span> <span data-ttu-id="6a221-104">反之，符合 CLS 的編譯器則是在組件中產生型別中繼資料。</span><span class="sxs-lookup"><span data-stu-id="6a221-104">In contrast, CLS-compliant compilers produce type metadata in an assembly.</span></span> <span data-ttu-id="6a221-105">這兩種類型資訊的來源有相當大的差異。</span><span class="sxs-lookup"><span data-stu-id="6a221-105">The two sources of type information are quite different.</span></span> <span data-ttu-id="6a221-106">本主題描述從型別程式庫產生中繼資料的技術。</span><span class="sxs-lookup"><span data-stu-id="6a221-106">This topic describes techniques for generating metadata from a type library.</span></span> <span data-ttu-id="6a221-107">產生的組件稱為 Interop 組件，其包含的類型資訊可讓 .NET Framework 應用程式使用 COM 類型。</span><span class="sxs-lookup"><span data-stu-id="6a221-107">The resulting assembly is called an interop assembly, and the type information it contains enables .NET Framework applications to use COM types.</span></span>  

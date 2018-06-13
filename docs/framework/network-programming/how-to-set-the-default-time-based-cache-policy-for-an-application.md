@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396668"
 ---
 # <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a><span data-ttu-id="534ff-102">如何：為應用程式設定以時間為基礎的預設快取原則</span><span class="sxs-lookup"><span data-stu-id="534ff-102">How to: Set the Default Time-Based Cache Policy for an Application</span></span>
 <span data-ttu-id="534ff-103">以時間為基礎的預設快取原則，可讓應用程式擁有與快取資源一起傳送之標頭所定義的快取行為，以及 RFC 2616 的第 13 節與第 14 節中定義的快取行為 (可從 [http://www.ietf.org](http://www.ietf.org/) 取得)。這是適用於大部分應用程式的快取行為。</span><span class="sxs-lookup"><span data-stu-id="534ff-103">The default time-based cache policy allows an application to have its cache behavior defined by the headers sent with the cached resource and the cache behavior defined in sections 13 and 14 of RFC 2616, available at [http://www.ietf.org](http://www.ietf.org/). This is the appropriate cache behavior for most applications.</span></span>  

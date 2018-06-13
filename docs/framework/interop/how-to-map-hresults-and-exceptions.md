@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393545"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a><span data-ttu-id="20477-102">如何：對應 HRESULT 和例外狀況</span><span class="sxs-lookup"><span data-stu-id="20477-102">How to: Map HRESULTs and Exceptions</span></span>
 <span data-ttu-id="20477-103">COM 方法是藉由傳回 HRESULT 來報告錯誤；.NET 方法則是藉由擲回例外狀況來報告錯誤。</span><span class="sxs-lookup"><span data-stu-id="20477-103">COM methods report errors by returning HRESULTs; .NET methods report them by throwing exceptions.</span></span> <span data-ttu-id="20477-104">執行階段則負責處理兩者之間的轉換。</span><span class="sxs-lookup"><span data-stu-id="20477-104">The runtime handles the transition between the two.</span></span> <span data-ttu-id="20477-105">.NET Framework 的每一個例外狀況類別都會對應到一個 HRESULT。</span><span class="sxs-lookup"><span data-stu-id="20477-105">Each exception class in the .NET Framework maps to an HRESULT.</span></span>  

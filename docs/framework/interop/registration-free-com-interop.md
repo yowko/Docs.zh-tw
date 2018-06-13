@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390246"
 ---
 # <a name="registration-free-com-interop"></a><span data-ttu-id="bf1f9-102">免註冊的 COM Interop</span><span class="sxs-lookup"><span data-stu-id="bf1f9-102">Registration-Free COM Interop</span></span>
 <span data-ttu-id="bf1f9-103">免註冊的 COM Interop 不需要使用 Windows 登錄來儲存組件資訊，即可啟動元件。</span><span class="sxs-lookup"><span data-stu-id="bf1f9-103">Registration-free COM interop activates a component without using the Windows registry to store assembly information.</span></span> <span data-ttu-id="bf1f9-104">您不是在部署期間在電腦上登錄元件，而是在設計階段建立 Win32 樣式資訊清單檔案，其中包含繫結和啟動的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="bf1f9-104">Instead of registering a component on a computer during deployment, you create Win32-style manifest files at design time that contain information about binding and activation.</span></span> <span data-ttu-id="bf1f9-105">這些資訊清單檔案 (而不是登錄機碼) 會引導物件的啟動。</span><span class="sxs-lookup"><span data-stu-id="bf1f9-105">These manifest files, rather than registry keys, direct the activation of an object.</span></span>  

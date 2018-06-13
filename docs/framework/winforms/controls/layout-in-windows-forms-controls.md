@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535837"
 ---
 # <a name="layout-in-windows-forms-controls"></a><span data-ttu-id="9abb1-102">Windows Form 控制項中的配置</span><span class="sxs-lookup"><span data-stu-id="9abb1-102">Layout in Windows Forms Controls</span></span>
 <span data-ttu-id="9abb1-103">對許多應用程式而言，控制項在表單上的精確位置是高優先順序。</span><span class="sxs-lookup"><span data-stu-id="9abb1-103">Precise placement of controls on your form is a high priority for many applications.</span></span> <span data-ttu-id="9abb1-104"><xref:System.Windows.Forms?displayProperty=nameWithType>命名空間提供您許多版面配置工具，可完成這項作業。</span><span class="sxs-lookup"><span data-stu-id="9abb1-104">The <xref:System.Windows.Forms?displayProperty=nameWithType> namespace gives you many layout tools to accomplish this.</span></span>  

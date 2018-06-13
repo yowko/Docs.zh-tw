@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392797"
 ---
 # <a name="copying-and-pinning"></a><span data-ttu-id="707e8-102">複製和 Pin</span><span class="sxs-lookup"><span data-stu-id="707e8-102">Copying and Pinning</span></span>
 <span data-ttu-id="707e8-103">封送處理資料時，Interop 封送處理器可以複製或釘選所封送處理的資料。</span><span class="sxs-lookup"><span data-stu-id="707e8-103">When marshaling data, the interop marshaler can copy or pin the data being marshaled.</span></span> <span data-ttu-id="707e8-104">複製資料時會將某個記憶體位置中的一份資料放入另一個記憶體位置。</span><span class="sxs-lookup"><span data-stu-id="707e8-104">Copying the data places a copy of data from one memory location in another memory location.</span></span> <span data-ttu-id="707e8-105">下圖顯示複製實值型別與以傳址方式將類型從 Managed 複製至 Unmanaged 記憶體之間的差異。</span><span class="sxs-lookup"><span data-stu-id="707e8-105">The following illustration shows the differences between copying a value type and copying a type passed by reference from managed to unmanaged memory.</span></span>  

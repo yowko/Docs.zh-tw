@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742428"
 ---
 # <a name="programming-with-application-domains-and-assemblies"></a><span data-ttu-id="f576c-102">使用應用程式定義域和組件設計程式</span><span class="sxs-lookup"><span data-stu-id="f576c-102">Programming with Application Domains and Assemblies</span></span>
 <span data-ttu-id="f576c-103">Microsoft Internet Explorer、ASP.NET 和 Windows 殼層這類主機會在執行 .NET Framework 應用程式時將通用語言執行平台載入至處理序、在該處理序中建立[應用程式定義域](../../../docs/framework/app-domains/application-domains.md)，然後在該應用程式定義域中載入並執行使用者程式碼。</span><span class="sxs-lookup"><span data-stu-id="f576c-103">Hosts such as Microsoft Internet Explorer, ASP.NET, and the Windows shell load the common language runtime into a process, create an [application domain](../../../docs/framework/app-domains/application-domains.md) in that process, and then load and execute user code in that application domain when running a .NET Framework application.</span></span> <span data-ttu-id="f576c-104">在大部分情況下，您不必操心如何建立應用程式定義域並載入組件，因為執行階段主機會執行這些工作。</span><span class="sxs-lookup"><span data-stu-id="f576c-104">In most cases, you do not have to worry about creating application domains and loading assemblies into them because the runtime host performs those tasks.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218380"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a><span data-ttu-id="c5914-102">明確數值轉換表 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="c5914-102">Explicit Numeric Conversions Table (C# Reference)</span></span>
 <span data-ttu-id="c5914-103">明確數值轉換是使用 cast 運算式，用來將任何數值類型轉換成任何其他數值類型，沒有任何隱含的轉換。</span><span class="sxs-lookup"><span data-stu-id="c5914-103">Explicit numeric conversion is used to convert any numeric type to any other numeric type, for which there is no implicit conversion, by using a cast expression.</span></span> <span data-ttu-id="c5914-104">下表顯示這些轉換。</span><span class="sxs-lookup"><span data-stu-id="c5914-104">The following table shows these conversions.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542583"
 ---
 # <a name="events-wpf"></a><span data-ttu-id="1f012-102">事件 (WPF)</span><span class="sxs-lookup"><span data-stu-id="1f012-102">Events (WPF)</span></span>
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="1f012-103"> 介紹可以叫用處理常式的路由事件，此處理常式存在於應用程式項目樹狀結構的不同接聽程式上。</span><span class="sxs-lookup"><span data-stu-id="1f012-103"> introduces routed events that can invoke handlers that exist on various listeners in the element tree of an application.</span></span>  

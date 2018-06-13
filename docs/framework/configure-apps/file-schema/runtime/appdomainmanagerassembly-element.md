@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744846"
 ---
 # <a name="ltappdomainmanagerassemblygt-element"></a><span data-ttu-id="b4747-102">&lt;appDomainManagerAssembly&gt;項目</span><span class="sxs-lookup"><span data-stu-id="b4747-102">&lt;appDomainManagerAssembly&gt; Element</span></span>
 <span data-ttu-id="b4747-103">針對處理序中的預設應用程式網域，指定提供應用程式網域管理員的組件。</span><span class="sxs-lookup"><span data-stu-id="b4747-103">Specifies the assembly that provides the application domain manager for the default application domain in the process.</span></span>  

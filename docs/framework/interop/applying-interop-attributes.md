@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392560"
 ---
 # <a name="applying-interop-attributes"></a><span data-ttu-id="6aadc-102">套用 Interop 屬性</span><span class="sxs-lookup"><span data-stu-id="6aadc-102">Applying Interop Attributes</span></span>
 <span data-ttu-id="6aadc-103"><xref:System.Runtime.InteropServices> 命名空間提供了三種類別的 Interop 專屬屬性：一種是您在設計階段套用的屬性、一種是 COM Interop 工具和 API 在轉換過程中套用的屬性，還有一種是您或 COM Interop 套用的屬性。</span><span class="sxs-lookup"><span data-stu-id="6aadc-103">The <xref:System.Runtime.InteropServices> namespace provides three categories of interop-specific attributes: those applied by you at design time, those applied by COM interop tools and APIs during the conversion process, and those applied either by you or COM interop.</span></span>  

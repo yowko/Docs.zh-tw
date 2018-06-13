@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389378"
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a><span data-ttu-id="0ae99-102">做為回呼方法，委派封送處理</span><span class="sxs-lookup"><span data-stu-id="0ae99-102">Marshaling a Delegate as a Callback Method</span></span>
 <span data-ttu-id="0ae99-103">此範例示範如何將委派傳遞至需要函式指標的 Unmanaged 函式。</span><span class="sxs-lookup"><span data-stu-id="0ae99-103">This sample demonstrates how to pass delegates to an unmanaged function expecting function pointers.</span></span> <span data-ttu-id="0ae99-104">委派是可保留方法參考的類別，並且相當於型別安全函式指標或回呼函式。</span><span class="sxs-lookup"><span data-stu-id="0ae99-104">A delegate is a class that can hold a reference to a method and is equivalent to a type-safe function pointer or a callback function.</span></span>  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744820"
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a><span data-ttu-id="448f4-102">逐步解說：建立可延伸應用程式</span><span class="sxs-lookup"><span data-stu-id="448f4-102">Walkthrough: Creating an Extensible Application</span></span>
 <span data-ttu-id="448f4-103">本逐步解說描述如何建立會執行簡單的計算機功能的增益集的管線。</span><span class="sxs-lookup"><span data-stu-id="448f4-103">This walkthrough describes how to create a pipeline for an add-in that performs simple calculator functions.</span></span> <span data-ttu-id="448f4-104">不會示範真實世界的實例。相反地，它會示範在管線，以及如何增益集可以提供主機服務的基本功能。</span><span class="sxs-lookup"><span data-stu-id="448f4-104">It does not demonstrate a real-world scenario; rather, it demonstrates the basic functionality of a pipeline and how an add-in can provide services for a host.</span></span>  

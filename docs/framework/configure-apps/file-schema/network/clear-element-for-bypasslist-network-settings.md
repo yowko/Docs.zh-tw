@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742188"
 ---
 # <a name="ltcleargt-element-for-bypasslist-network-settings"></a><span data-ttu-id="3ed62-102">&lt;清除&gt;bypasslist （網路設定） 的項目</span><span class="sxs-lookup"><span data-stu-id="3ed62-102">&lt;clear&gt; Element for bypasslist (Network Settings)</span></span>
 <span data-ttu-id="3ed62-103">清除 proxy 略過清單。</span><span class="sxs-lookup"><span data-stu-id="3ed62-103">Clears the proxy bypass list.</span></span>  

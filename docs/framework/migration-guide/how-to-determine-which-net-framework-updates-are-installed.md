@@ -1,11 +1,7 @@
 ---
-title: "如何：判斷安裝的 .NET Framework 安全性更新與 Hotfix"
-description: "了解如何判斷電腦上所安裝的 .NET Framework 安全性更新與 Hotfix。"
+title: 如何：判斷安裝的 .NET Framework 安全性更新與 Hotfix
+description: 了解如何判斷電腦上所安裝的 .NET Framework 安全性更新與 Hotfix。
 ms.date: 11/27/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,44 +11,42 @@ helpviewer_keywords:
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1ad61ce44c24f48b51c32eb554e8d37932d119af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6373def6859023377bf899f02d710c2ac6d83c44
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389596"
 ---
-# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a><span data-ttu-id="5eebe-103">如何：判斷安裝的 .NET Framework 安全性更新與 Hotfix</span><span class="sxs-lookup"><span data-stu-id="5eebe-103">How to: Determine which .NET Framework security updates and hotfixes are installed</span></span>
+# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a><span data-ttu-id="ed257-103">如何：判斷安裝的 .NET Framework 安全性更新與 Hotfix</span><span class="sxs-lookup"><span data-stu-id="ed257-103">How to: Determine which .NET Framework security updates and hotfixes are installed</span></span>
 
-<span data-ttu-id="5eebe-104">本文說明如何找出安裝在電腦上的 .NET Framework 安全性更新與 Hotfix。</span><span class="sxs-lookup"><span data-stu-id="5eebe-104">This article shows you how to find out which .NET Framework security updates and hotfixes are installed on a computer.</span></span>
+<span data-ttu-id="ed257-104">本文說明如何找出安裝在電腦上的 .NET Framework 安全性更新與 Hotfix。</span><span class="sxs-lookup"><span data-stu-id="ed257-104">This article shows you how to find out which .NET Framework security updates and hotfixes are installed on a computer.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="5eebe-105">本文中展示的所有技術，皆需要使用具備系統管理權限的帳戶。</span><span class="sxs-lookup"><span data-stu-id="5eebe-105">All the techniques shown in this article require an account with administrative privileges.</span></span>
+> <span data-ttu-id="ed257-105">本文中展示的所有技術，皆需要使用具備系統管理權限的帳戶。</span><span class="sxs-lookup"><span data-stu-id="ed257-105">All the techniques shown in this article require an account with administrative privileges.</span></span>
 
-## <a name="to-find-installed-updates-using-the-registry"></a><span data-ttu-id="5eebe-106">使用登錄尋找已安裝的更新</span><span class="sxs-lookup"><span data-stu-id="5eebe-106">To find installed updates using the registry</span></span>
+## <a name="to-find-installed-updates-using-the-registry"></a><span data-ttu-id="ed257-106">使用登錄尋找已安裝的更新</span><span class="sxs-lookup"><span data-stu-id="ed257-106">To find installed updates using the registry</span></span>
 
-<span data-ttu-id="5eebe-107">已為電腦上安裝之各版 .NET Framework 所安裝之安全性更新與 Hotfix，都列於 Windows 登錄中。</span><span class="sxs-lookup"><span data-stu-id="5eebe-107">The installed security updates and hotfixes for each version of the .NET Framework installed on a computer are listed in the Windows registry.</span></span> <span data-ttu-id="5eebe-108">您可使用登錄編輯程式 (*regedit.exe*) 程式，檢視此資訊。</span><span class="sxs-lookup"><span data-stu-id="5eebe-108">You can use the Registry Editor (*regedit.exe*) program to view this information.</span></span>
+<span data-ttu-id="ed257-107">已為電腦上安裝之各版 .NET Framework 所安裝之安全性更新與 Hotfix，都列於 Windows 登錄中。</span><span class="sxs-lookup"><span data-stu-id="ed257-107">The installed security updates and hotfixes for each version of the .NET Framework installed on a computer are listed in the Windows registry.</span></span> <span data-ttu-id="ed257-108">您可使用登錄編輯程式 (*regedit.exe*) 程式，檢視此資訊。</span><span class="sxs-lookup"><span data-stu-id="ed257-108">You can use the Registry Editor (*regedit.exe*) program to view this information.</span></span>
 
-1. <span data-ttu-id="5eebe-109">開啟 **regedit.exe** 程式。</span><span class="sxs-lookup"><span data-stu-id="5eebe-109">Open the program **regedit.exe**.</span></span> <span data-ttu-id="5eebe-110">在 Windows 8 和更新版本中，在 [開始] ![Windows 標誌](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") 上按一下滑鼠右鍵，按一下，然後選取 [執行]。</span><span class="sxs-lookup"><span data-stu-id="5eebe-110">In Windows 8 and later versions, right-click **Start** ![Windows logo](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo"), then select **Run**.</span></span> <span data-ttu-id="5eebe-111">在 [開啟]方塊中，輸入 **regedit**，然後選取 [確定]。</span><span class="sxs-lookup"><span data-stu-id="5eebe-111">In the **Open** box, enter **regedit** and select **OK**.</span></span>
+1. <span data-ttu-id="ed257-109">開啟 **regedit.exe** 程式。</span><span class="sxs-lookup"><span data-stu-id="ed257-109">Open the program **regedit.exe**.</span></span> <span data-ttu-id="ed257-110">在 Windows 8 和更新版本中，在 [開始] ![Windows 標誌](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") 上按一下滑鼠右鍵，按一下，然後選取 [執行]。</span><span class="sxs-lookup"><span data-stu-id="ed257-110">In Windows 8 and later versions, right-click **Start** ![Windows logo](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo"), then select **Run**.</span></span> <span data-ttu-id="ed257-111">在 [開啟]方塊中，輸入 **regedit**，然後選取 [確定]。</span><span class="sxs-lookup"><span data-stu-id="ed257-111">In the **Open** box, enter **regedit** and select **OK**.</span></span>
 
-2. <span data-ttu-id="5eebe-112">在 [登錄編輯程式] 中，開啟下列子機碼：</span><span class="sxs-lookup"><span data-stu-id="5eebe-112">In the Registry Editor, open the following subkey:</span></span>
+2. <span data-ttu-id="ed257-112">在 [登錄編輯程式] 中，開啟下列子機碼：</span><span class="sxs-lookup"><span data-stu-id="ed257-112">In the Registry Editor, open the following subkey:</span></span>
 
      `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates`
 
-     <span data-ttu-id="5eebe-113">已安裝的更新會列於子機碼下，這些子機碼可識別套用更新的 .NET Framework 版本。</span><span class="sxs-lookup"><span data-stu-id="5eebe-113">The installed updates are listed under subkeys that identify the .NET Framework version they apply to.</span></span> <span data-ttu-id="5eebe-114">每個更新都是透過知識庫 (KB) 號碼加以識別。</span><span class="sxs-lookup"><span data-stu-id="5eebe-114">Each update is identified by a Knowledge Base (KB) number.</span></span>
+     <span data-ttu-id="ed257-113">已安裝的更新會列於子機碼下，這些子機碼可識別套用更新的 .NET Framework 版本。</span><span class="sxs-lookup"><span data-stu-id="ed257-113">The installed updates are listed under subkeys that identify the .NET Framework version they apply to.</span></span> <span data-ttu-id="ed257-114">每個更新都是透過知識庫 (KB) 號碼加以識別。</span><span class="sxs-lookup"><span data-stu-id="ed257-114">Each update is identified by a Knowledge Base (KB) number.</span></span>
 
-<span data-ttu-id="5eebe-115">在登錄編輯程式中，.NET Framework 版本和每一版已安裝的更新會儲存在不同的子機碼中。</span><span class="sxs-lookup"><span data-stu-id="5eebe-115">In the Registry Editor, the .NET Framework versions and installed updates for each version are stored in different subkeys.</span></span> <span data-ttu-id="5eebe-116">如需偵測已安裝之版本號碼的相關資訊，請參閱[如何：判斷安裝的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)。</span><span class="sxs-lookup"><span data-stu-id="5eebe-116">For information about detecting the installed version numbers, see [How to: Determine which .NET Framework versions are installed](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).</span></span>
+<span data-ttu-id="ed257-115">在登錄編輯程式中，.NET Framework 版本和每一版已安裝的更新會儲存在不同的子機碼中。</span><span class="sxs-lookup"><span data-stu-id="ed257-115">In the Registry Editor, the .NET Framework versions and installed updates for each version are stored in different subkeys.</span></span> <span data-ttu-id="ed257-116">如需偵測已安裝之版本號碼的相關資訊，請參閱[如何：判斷安裝的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)。</span><span class="sxs-lookup"><span data-stu-id="ed257-116">For information about detecting the installed version numbers, see [How to: Determine which .NET Framework versions are installed](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).</span></span>
 
-## <a name="to-find-installed-updates-by-querying-the-registry-in-code"></a><span data-ttu-id="5eebe-117">在程式碼中查詢登錄來尋找已安裝的更新</span><span class="sxs-lookup"><span data-stu-id="5eebe-117">To find installed updates by querying the registry in code</span></span>
+## <a name="to-find-installed-updates-by-querying-the-registry-in-code"></a><span data-ttu-id="ed257-117">在程式碼中查詢登錄來尋找已安裝的更新</span><span class="sxs-lookup"><span data-stu-id="ed257-117">To find installed updates by querying the registry in code</span></span>
 
-<span data-ttu-id="5eebe-118">下列範例以程式設計方式判斷電腦上安裝的 .NET Framework 安全性更新與 Hotfix：</span><span class="sxs-lookup"><span data-stu-id="5eebe-118">The following example programmatically determines the .NET Framework security updates and hotfixes that are installed on a computer:</span></span>
+<span data-ttu-id="ed257-118">下列範例以程式設計方式判斷電腦上安裝的 .NET Framework 安全性更新與 Hotfix：</span><span class="sxs-lookup"><span data-stu-id="ed257-118">The following example programmatically determines the .NET Framework security updates and hotfixes that are installed on a computer:</span></span>
 
 [!code-csharp[ListUpdates](../../../samples/snippets/csharp/VS_Snippets_CLR/listupdates/cs/program.cs)]
 [!code-vb[ListUpdates](../../../samples/snippets/visualbasic/VS_Snippets_CLR/listupdates/vb/program.vb)]
 
-<span data-ttu-id="5eebe-119">該範例會產生類似如下的輸出：</span><span class="sxs-lookup"><span data-stu-id="5eebe-119">The example produces an output that's similar to the following one:</span></span>
+<span data-ttu-id="ed257-119">該範例會產生類似如下的輸出：</span><span class="sxs-lookup"><span data-stu-id="ed257-119">The example produces an output that's similar to the following one:</span></span>
 
 ```console
 Microsoft .NET Framework 4 Client Profile
@@ -73,9 +67,9 @@ Microsoft .NET Framework 4 Extended
   KB2600217
 ```
 
-## <a name="to-find-installed-updates-by-querying-the-registry-in-powershell"></a><span data-ttu-id="5eebe-120">在 PowerShell 中查詢登錄來尋找已安裝的更新</span><span class="sxs-lookup"><span data-stu-id="5eebe-120">To find installed updates by querying the registry in PowerShell</span></span>
+## <a name="to-find-installed-updates-by-querying-the-registry-in-powershell"></a><span data-ttu-id="ed257-120">在 PowerShell 中查詢登錄來尋找已安裝的更新</span><span class="sxs-lookup"><span data-stu-id="ed257-120">To find installed updates by querying the registry in PowerShell</span></span>
 
-<span data-ttu-id="5eebe-121">下列範例示範如何使用 PowerShell 判斷電腦上安裝的 .NET Framework 安全性更新與 Hotfix：</span><span class="sxs-lookup"><span data-stu-id="5eebe-121">The following example shows how to determine the .NET Framework security updates and hotfixes that are installed on a computer using PowerShell:</span></span>
+<span data-ttu-id="ed257-121">下列範例示範如何使用 PowerShell 判斷電腦上安裝的 .NET Framework 安全性更新與 Hotfix：</span><span class="sxs-lookup"><span data-stu-id="ed257-121">The following example shows how to determine the .NET Framework security updates and hotfixes that are installed on a computer using PowerShell:</span></span>
 
 ```powershell
 $DotNetVersions = Get-ChildItem HKLM:\SOFTWARE\WOW6432Node\Microsoft\Updates | Where-Object {$_.name -like
@@ -91,7 +85,7 @@ ForEach($Version in $DotNetVersions){
 }
 ```
 
-<span data-ttu-id="5eebe-122">該範例會產生類似如下的輸出：</span><span class="sxs-lookup"><span data-stu-id="5eebe-122">The example produces an output that's similar to the following one:</span></span>
+<span data-ttu-id="ed257-122">該範例會產生類似如下的輸出：</span><span class="sxs-lookup"><span data-stu-id="ed257-122">The example produces an output that's similar to the following one:</span></span>
 
 ```console
 Microsoft .NET Framework 4 Client Profile
@@ -112,8 +106,8 @@ KB2600211
 KB2600217
 ```
 
-## <a name="see-also"></a><span data-ttu-id="5eebe-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5eebe-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ed257-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ed257-123">See also</span></span>
 
-[<span data-ttu-id="5eebe-124">如何：判斷安裝的 .NET Framework 版本</span><span class="sxs-lookup"><span data-stu-id="5eebe-124">How to: Determine which .NET Framework versions are installed</span></span>](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)  
-[<span data-ttu-id="5eebe-125">安裝適用於開發人員的 .NET Framework</span><span class="sxs-lookup"><span data-stu-id="5eebe-125">Install the .NET Framework for developers</span></span>](../../../docs/framework/install/guide-for-developers.md)  
-[<span data-ttu-id="5eebe-126">版本和相依性</span><span class="sxs-lookup"><span data-stu-id="5eebe-126">Versions and dependencies</span></span>](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+[<span data-ttu-id="ed257-124">如何：判斷安裝的 .NET Framework 版本</span><span class="sxs-lookup"><span data-stu-id="ed257-124">How to: Determine which .NET Framework versions are installed</span></span>](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)  
+[<span data-ttu-id="ed257-125">安裝適用於開發人員的 .NET Framework</span><span class="sxs-lookup"><span data-stu-id="ed257-125">Install the .NET Framework for developers</span></span>](../../../docs/framework/install/guide-for-developers.md)  
+[<span data-ttu-id="ed257-126">版本和相依性</span><span class="sxs-lookup"><span data-stu-id="ed257-126">Versions and dependencies</span></span>](../../../docs/framework/migration-guide/versions-and-dependencies.md)

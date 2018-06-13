@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394903"
 ---
 # <a name="default-marshaling-for-strings"></a><span data-ttu-id="493ed-102">字串的預設封送處理</span><span class="sxs-lookup"><span data-stu-id="493ed-102">Default Marshaling for Strings</span></span>
 <span data-ttu-id="493ed-103"><xref:System.String?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 類別同時都有類似的封送處理行為。</span><span class="sxs-lookup"><span data-stu-id="493ed-103">Both the <xref:System.String?displayProperty=nameWithType> and <xref:System.Text.StringBuilder?displayProperty=nameWithType> classes have similar marshaling behavior.</span></span>  

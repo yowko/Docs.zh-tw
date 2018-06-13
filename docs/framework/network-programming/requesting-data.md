@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396294"
 ---
 # <a name="requesting-data"></a><span data-ttu-id="46ffd-102">要求資料</span><span class="sxs-lookup"><span data-stu-id="46ffd-102">Requesting Data</span></span>
 <span data-ttu-id="46ffd-103">開發在現今網際網路分散式作業環境中執行的應用程式，需要從所有類型的資源中擷取資料的有效且易用的方法。</span><span class="sxs-lookup"><span data-stu-id="46ffd-103">Developing applications that run in the distributed operating environment of today's Internet requires an efficient, easy-to-use method for retrieving data from resources of all types.</span></span> <span data-ttu-id="46ffd-104">可插式通訊協定可讓您開發應用程式，而應用程式使用單一介面來擷取多個網際網路通訊協定中的資料。</span><span class="sxs-lookup"><span data-stu-id="46ffd-104">Pluggable protocols let you develop applications that use a single interface to retrieve data from multiple Internet protocols.</span></span>  

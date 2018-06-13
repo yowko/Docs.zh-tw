@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215955"
 ---
 # <a name="bool-c-reference"></a><span data-ttu-id="0c020-102">bool (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="0c020-102">bool (C# Reference)</span></span>
 <span data-ttu-id="0c020-103">`bool` 關鍵字是 <xref:System.Boolean?displayProperty=nameWithType> 的別名。</span><span class="sxs-lookup"><span data-stu-id="0c020-103">The `bool` keyword is an alias of <xref:System.Boolean?displayProperty=nameWithType>.</span></span> <span data-ttu-id="0c020-104">它是用來宣告可儲存布林值 [true](../../../csharp/language-reference/keywords/true.md) 和 [false](../../../csharp/language-reference/keywords/false.md) 的變數。</span><span class="sxs-lookup"><span data-stu-id="0c020-104">It is used to declare variables to store the Boolean values, [true](../../../csharp/language-reference/keywords/true.md) and [false](../../../csharp/language-reference/keywords/false.md).</span></span>  

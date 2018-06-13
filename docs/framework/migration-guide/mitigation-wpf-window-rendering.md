@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389564"
 ---
 # <a name="mitigation-wpf-window-rendering"></a><span data-ttu-id="37297-102">風險降低：WPF 視窗呈現</span><span class="sxs-lookup"><span data-stu-id="37297-102">Mitigation: WPF Window Rendering</span></span>
 <span data-ttu-id="37297-103">在 Windows 8 與更新版本中執行的 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 多重監視器案例中，如果視窗擴充到單一顯示畫面以外，可呈現完整視窗而不會將其裁剪。</span><span class="sxs-lookup"><span data-stu-id="37297-103">In the [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] running on Windows 8 and above, the entire window is rendered without clipping when it extends outside of single display in a multi-monitor scenario.</span></span>  
