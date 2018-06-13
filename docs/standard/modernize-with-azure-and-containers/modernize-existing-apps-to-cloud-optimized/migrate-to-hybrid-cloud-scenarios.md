@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33957888"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a><span data-ttu-id="13676-103">移轉至混合式雲端案例</span><span class="sxs-lookup"><span data-stu-id="13676-103">Migrate to hybrid cloud scenarios</span></span>
 

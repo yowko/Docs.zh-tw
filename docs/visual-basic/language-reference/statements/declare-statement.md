@@ -32,6 +32,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34233973"
 ---
 # <a name="declare-statement"></a><span data-ttu-id="c57c7-102">Declare Statement</span><span class="sxs-lookup"><span data-stu-id="c57c7-102">Declare Statement</span></span>
 <span data-ttu-id="c57c7-103">宣告實作的外部檔案中的程序的參考。</span><span class="sxs-lookup"><span data-stu-id="c57c7-103">Declares a reference to a procedure implemented in an external file.</span></span>  

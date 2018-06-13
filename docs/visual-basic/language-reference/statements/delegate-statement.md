@@ -12,6 +12,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234674"
 ---
 # <a name="delegate-statement"></a><span data-ttu-id="f19f2-102">Delegate 陳述式</span><span class="sxs-lookup"><span data-stu-id="f19f2-102">Delegate Statement</span></span>
 <span data-ttu-id="f19f2-103">用來宣告委派。</span><span class="sxs-lookup"><span data-stu-id="f19f2-103">Used to declare a delegate.</span></span> <span data-ttu-id="f19f2-104">委派是參考類型，這是指`Shared`方法的型別或物件的執行個體方法。</span><span class="sxs-lookup"><span data-stu-id="f19f2-104">A delegate is a reference type that refers to a `Shared` method of a type or to an instance method of an object.</span></span> <span data-ttu-id="f19f2-105">任何具有相符的參數和傳回型別程序可以用來建立這個委派類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="f19f2-105">Any procedure with matching parameter and return types can be used to create an instance of this delegate class.</span></span> <span data-ttu-id="f19f2-106">此程序可然後稍後會透過叫用委派執行個體。</span><span class="sxs-lookup"><span data-stu-id="f19f2-106">The procedure can then later be invoked by means of the delegate instance.</span></span>  

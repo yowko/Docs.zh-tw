@@ -10,6 +10,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172057"
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a><span data-ttu-id="7a031-102">如何：定義抽象屬性 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="7a031-102">How to: Define Abstract Properties (C# Programming Guide)</span></span>
 <span data-ttu-id="7a031-103">下例示範如何定義[抽象](../../../csharp/language-reference/keywords/abstract.md)屬性。</span><span class="sxs-lookup"><span data-stu-id="7a031-103">The following example shows how to define [abstract](../../../csharp/language-reference/keywords/abstract.md) properties.</span></span> <span data-ttu-id="7a031-104">抽象屬性宣告不提供屬性存取子實作 -- 它會宣告類別支援屬性，但保留衍生類別的存取子實作。</span><span class="sxs-lookup"><span data-stu-id="7a031-104">An abstract property declaration does not provide an implementation of the property accessors -- it declares that the class supports properties, but leaves the accessor implementation to derived classes.</span></span> <span data-ttu-id="7a031-105">下例示範如何實作繼承自基底類別的抽象屬性。</span><span class="sxs-lookup"><span data-stu-id="7a031-105">The following example demonstrates how to implement the abstract properties inherited from a base class.</span></span>  

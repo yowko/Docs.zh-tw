@@ -13,6 +13,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172289"
 ---
 # <a name="extern-c-reference"></a><span data-ttu-id="b62f9-102">extern (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="b62f9-102">extern (C# Reference)</span></span>
 <span data-ttu-id="b62f9-103">`extern` 修飾詞是用來宣告於外部實作的方法。</span><span class="sxs-lookup"><span data-stu-id="b62f9-103">The `extern` modifier is used to declare a method that is implemented externally.</span></span> <span data-ttu-id="b62f9-104">`extern` 修飾詞的常見用法，是在使用 Interop 服務進行 Unmanaged 程式碼呼叫時，搭配 `DllImport` 屬性使用。</span><span class="sxs-lookup"><span data-stu-id="b62f9-104">A common use of the `extern` modifier is with the `DllImport` attribute when you are using Interop services to call into unmanaged code.</span></span> <span data-ttu-id="b62f9-105">在此情況下，此方法也必須宣告為 `static`，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="b62f9-105">In this case, the method must also be declared as `static`, as shown in the following example:</span></span>  

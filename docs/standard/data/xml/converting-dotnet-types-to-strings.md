@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568767"
 ---
 # <a name="converting-net-framework-types-to-strings"></a><span data-ttu-id="d3b7f-102">將 .NET Framework 型別轉換成字串</span><span class="sxs-lookup"><span data-stu-id="d3b7f-102">Converting .NET Framework Types to Strings</span></span>
 <span data-ttu-id="d3b7f-103">若要將 .NET Framework 型別轉換成字串，請使用 **ToString** 方法。</span><span class="sxs-lookup"><span data-stu-id="d3b7f-103">If you want to convert a .NET Framework type to a string, use the **ToString** method.</span></span> <span data-ttu-id="d3b7f-104">**ToString** 方法會傳回所傳入之型別的字串表示。</span><span class="sxs-lookup"><span data-stu-id="d3b7f-104">The **ToString** method returns a string representation of the type passed in.</span></span> <span data-ttu-id="d3b7f-105">下表將列出 .NET Framework 型別，其所傳回的字串格式會對應至 XML 結構描述 (XSD) 規格。</span><span class="sxs-lookup"><span data-stu-id="d3b7f-105">The following table lists the .NET Framework types that return a string in a format that maps to the XML Schema (XSD) specifications.</span></span>  

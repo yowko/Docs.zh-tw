@@ -17,6 +17,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234461"
 ---
 # <a name="structure-statement"></a><span data-ttu-id="f23f1-102">Structure 陳述式</span><span class="sxs-lookup"><span data-stu-id="f23f1-102">Structure Statement</span></span>
 <span data-ttu-id="f23f1-103">宣告結構的名稱，並導入的變數、 屬性、 事件和結構包含的程序定義。</span><span class="sxs-lookup"><span data-stu-id="f23f1-103">Declares the name of a structure and introduces the definition of the variables, properties, events, and procedures that the structure comprises.</span></span>  

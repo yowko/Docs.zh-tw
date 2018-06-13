@@ -10,6 +10,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34037359"
 ---
 # <a name="duplex-services"></a><span data-ttu-id="2abda-102">雙工服務</span><span class="sxs-lookup"><span data-stu-id="2abda-102">Duplex Services</span></span>
 <span data-ttu-id="2abda-103">雙工服務合約為訊息交換模式，其中的兩個端點可以彼此獨立地傳送訊息。</span><span class="sxs-lookup"><span data-stu-id="2abda-103">A duplex service contract is a message exchange pattern in which both endpoints can send messages to the other independently.</span></span> <span data-ttu-id="2abda-104">因此，雙工服務可以將訊息傳送回用戶端端點，以提供類似事件的行為。</span><span class="sxs-lookup"><span data-stu-id="2abda-104">A duplex service, therefore, can send messages back to the client endpoint, providing event-like behavior.</span></span> <span data-ttu-id="2abda-105">用戶端建立與服務的連線，並提供服務所需的通道以供服務將訊息傳回用戶端，這個程序即是所謂的雙工通訊。</span><span class="sxs-lookup"><span data-stu-id="2abda-105">Duplex communication occurs when a client connects to a service and provides the service with a channel on which the service can send messages back to the client.</span></span> <span data-ttu-id="2abda-106">請注意，雙工服務的類似事件行為只會在工作階段內運作。</span><span class="sxs-lookup"><span data-stu-id="2abda-106">Note that the event-like behavior of duplex services only works within a session.</span></span>  

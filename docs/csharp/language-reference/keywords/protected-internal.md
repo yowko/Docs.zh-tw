@@ -7,6 +7,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172237"
 ---
 # <a name="protected-internal-c-reference"></a><span data-ttu-id="4c1f8-102">protected internal (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="4c1f8-102">protected internal (C# Reference)</span></span>
 <span data-ttu-id="4c1f8-103">`protected internal` 關鍵字組合是成員存取修飾詞。</span><span class="sxs-lookup"><span data-stu-id="4c1f8-103">The `protected internal` keyword combination is a member access modifier.</span></span> <span data-ttu-id="4c1f8-104">protected internal 成員可以從目前的組件或衍生自包含類別的類型存取。</span><span class="sxs-lookup"><span data-stu-id="4c1f8-104">A protected internal member is accessible from the current assembly or from types that are derived from the containing class.</span></span> <span data-ttu-id="4c1f8-105">如需 `protected internal` 和其他存取修飾詞的比較，請參閱[存取範圍層級](../../../csharp/language-reference/keywords/accessibility-levels.md)。</span><span class="sxs-lookup"><span data-stu-id="4c1f8-105">For a comparison of `protected internal` with the other access modifiers, see [Accessibility Levels](../../../csharp/language-reference/keywords/accessibility-levels.md).</span></span> 

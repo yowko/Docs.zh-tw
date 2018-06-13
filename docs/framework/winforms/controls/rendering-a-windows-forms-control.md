@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541384"
 ---
 # <a name="rendering-a-windows-forms-control"></a><span data-ttu-id="2182c-102">呈現 Windows Form 控制項</span><span class="sxs-lookup"><span data-stu-id="2182c-102">Rendering a Windows Forms Control</span></span>
 <span data-ttu-id="2182c-103">轉譯是指使用者的螢幕上建立的視覺表示法的程序。</span><span class="sxs-lookup"><span data-stu-id="2182c-103">Rendering refers to the process of creating a visual representation on a user's screen.</span></span> <span data-ttu-id="2182c-104">Windows Form 使用[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]（新 Windows 圖形的程式庫） 來進行轉譯。</span><span class="sxs-lookup"><span data-stu-id="2182c-104">Windows Forms uses [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (the new Windows graphics library) for rendering.</span></span> <span data-ttu-id="2182c-105">Managed 的類別，可提供存取權[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]中<xref:System.Drawing?displayProperty=nameWithType>命名空間和及其子命名空間。</span><span class="sxs-lookup"><span data-stu-id="2182c-105">The managed classes that provide access to [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] are in the <xref:System.Drawing?displayProperty=nameWithType> namespace and its subnamespaces.</span></span>  
