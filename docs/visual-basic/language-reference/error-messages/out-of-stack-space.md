@@ -1,40 +1,32 @@
 ---
 title: 堆疊空間不足 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrID28
 ms.assetid: bfcd792b-ac29-4158-81fc-ea0c13f4ffa2
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ec839d1f0ad1931ed4229e898a900c3210d813ed
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e39be5913fe877cf7b3396e4f13f4440288cb8f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593281"
 ---
-# <a name="out-of-stack-space-visual-basic"></a><span data-ttu-id="69d50-102">堆疊空間不足 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="69d50-102">Out of stack space (Visual Basic)</span></span>
-<span data-ttu-id="69d50-103">堆疊是記憶體的工作區域的成長和壓縮，以動態方式與執行程式的需求。</span><span class="sxs-lookup"><span data-stu-id="69d50-103">The stack is a working area of memory that grows and shrinks dynamically with the demands of your executing program.</span></span> <span data-ttu-id="69d50-104">已超過其限制。</span><span class="sxs-lookup"><span data-stu-id="69d50-104">Its limits have been exceeded.</span></span>  
+# <a name="out-of-stack-space-visual-basic"></a><span data-ttu-id="0abed-102">堆疊空間不足 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0abed-102">Out of stack space (Visual Basic)</span></span>
+<span data-ttu-id="0abed-103">堆疊是記憶體的工作區域的成長和壓縮，以動態方式與執行程式的需求。</span><span class="sxs-lookup"><span data-stu-id="0abed-103">The stack is a working area of memory that grows and shrinks dynamically with the demands of your executing program.</span></span> <span data-ttu-id="0abed-104">已超過其限制。</span><span class="sxs-lookup"><span data-stu-id="0abed-104">Its limits have been exceeded.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="69d50-105">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="69d50-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="0abed-105">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="0abed-105">To correct this error</span></span>  
   
-1.  <span data-ttu-id="69d50-106">請檢查該程序無巢狀太深。</span><span class="sxs-lookup"><span data-stu-id="69d50-106">Check that procedures are not nested too deeply.</span></span>  
+1.  <span data-ttu-id="0abed-106">請檢查該程序無巢狀太深。</span><span class="sxs-lookup"><span data-stu-id="0abed-106">Check that procedures are not nested too deeply.</span></span>  
   
-2.  <span data-ttu-id="69d50-107">請確定遞迴程序會正確地終止。</span><span class="sxs-lookup"><span data-stu-id="69d50-107">Make sure recursive procedures terminate properly.</span></span>  
+2.  <span data-ttu-id="0abed-107">請確定遞迴程序會正確地終止。</span><span class="sxs-lookup"><span data-stu-id="0abed-107">Make sure recursive procedures terminate properly.</span></span>  
   
-3.  <span data-ttu-id="69d50-108">如果本機變數需要多個本機變數空間大於可用空間，請嘗試宣告部分模組層級的變數。</span><span class="sxs-lookup"><span data-stu-id="69d50-108">If local variables require more local variable space than is available, try declaring some variables at the module level.</span></span> <span data-ttu-id="69d50-109">您也可以宣告程序中的所有變數靜態前`Property`， `Sub`，或`Function`關鍵字搭配`Static`。</span><span class="sxs-lookup"><span data-stu-id="69d50-109">You can also declare all variables in the procedure static by preceding the `Property`, `Sub`, or `Function` keyword with `Static`.</span></span> <span data-ttu-id="69d50-110">您可以使用或`Static`宣告程序內的個別靜態變數的陳述式。</span><span class="sxs-lookup"><span data-stu-id="69d50-110">Or you can use the `Static` statement to declare individual static variables within procedures.</span></span>  
+3.  <span data-ttu-id="0abed-108">如果本機變數需要多個本機變數空間大於可用空間，請嘗試宣告部分模組層級的變數。</span><span class="sxs-lookup"><span data-stu-id="0abed-108">If local variables require more local variable space than is available, try declaring some variables at the module level.</span></span> <span data-ttu-id="0abed-109">您也可以宣告程序中的所有變數靜態前`Property`， `Sub`，或`Function`關鍵字搭配`Static`。</span><span class="sxs-lookup"><span data-stu-id="0abed-109">You can also declare all variables in the procedure static by preceding the `Property`, `Sub`, or `Function` keyword with `Static`.</span></span> <span data-ttu-id="0abed-110">您可以使用或`Static`宣告程序內的個別靜態變數的陳述式。</span><span class="sxs-lookup"><span data-stu-id="0abed-110">Or you can use the `Static` statement to declare individual static variables within procedures.</span></span>  
   
-4.  <span data-ttu-id="69d50-111">重新定義為可變長度字串，固定長度字串的部分為固定長度字串使用堆疊空間較可變長度的字串。</span><span class="sxs-lookup"><span data-stu-id="69d50-111">Redefine some of your fixed-length strings as variable-length strings, as fixed-length strings use more stack space than variable-length strings.</span></span> <span data-ttu-id="69d50-112">您也可以定義在模組層級，不需要堆疊空間的字串。</span><span class="sxs-lookup"><span data-stu-id="69d50-112">You can also define the string at module level where it requires no stack space.</span></span>  
+4.  <span data-ttu-id="0abed-111">重新定義為可變長度字串，固定長度字串的部分為固定長度字串使用堆疊空間較可變長度的字串。</span><span class="sxs-lookup"><span data-stu-id="0abed-111">Redefine some of your fixed-length strings as variable-length strings, as fixed-length strings use more stack space than variable-length strings.</span></span> <span data-ttu-id="0abed-112">您也可以定義在模組層級，不需要堆疊空間的字串。</span><span class="sxs-lookup"><span data-stu-id="0abed-112">You can also define the string at module level where it requires no stack space.</span></span>  
   
-5.  <span data-ttu-id="69d50-113">檢查數目巢狀`DoEvents`函式呼叫，使用`Calls`對話方塊來檢視哪些程序會在堆疊作用中。</span><span class="sxs-lookup"><span data-stu-id="69d50-113">Check the number of nested `DoEvents` function calls, by using the `Calls` dialog box to view which procedures are active on the stack.</span></span>  
+5.  <span data-ttu-id="0abed-113">檢查數目巢狀`DoEvents`函式呼叫，使用`Calls`對話方塊來檢視哪些程序會在堆疊作用中。</span><span class="sxs-lookup"><span data-stu-id="0abed-113">Check the number of nested `DoEvents` function calls, by using the `Calls` dialog box to view which procedures are active on the stack.</span></span>  
   
-6.  <span data-ttu-id="69d50-114">請確定您未透過觸發已將事件程序呼叫堆疊的事件不會造成 」 事件串聯 」。</span><span class="sxs-lookup"><span data-stu-id="69d50-114">Make sure you did not cause an "event cascade" by triggering an event that calls an event procedure already on the stack.</span></span> <span data-ttu-id="69d50-115">事件串聯類似結束的遞迴程序呼叫，但它是較不明顯，因為 Visual Basic，而不是在程式碼中明確呼叫進行呼叫。</span><span class="sxs-lookup"><span data-stu-id="69d50-115">An event cascade is similar to an unterminated recursive procedure call, but it is less obvious, since the call is made by Visual Basic rather than an explicit call in the code.</span></span> <span data-ttu-id="69d50-116">使用`Calls`對話方塊來檢視哪些程序會在堆疊作用中。</span><span class="sxs-lookup"><span data-stu-id="69d50-116">Use the `Calls` dialog box to view which procedures are active on the stack.</span></span>  
+6.  <span data-ttu-id="0abed-114">請確定您未透過觸發已將事件程序呼叫堆疊的事件不會造成 」 事件串聯 」。</span><span class="sxs-lookup"><span data-stu-id="0abed-114">Make sure you did not cause an "event cascade" by triggering an event that calls an event procedure already on the stack.</span></span> <span data-ttu-id="0abed-115">事件串聯類似結束的遞迴程序呼叫，但它是較不明顯，因為 Visual Basic，而不是在程式碼中明確呼叫進行呼叫。</span><span class="sxs-lookup"><span data-stu-id="0abed-115">An event cascade is similar to an unterminated recursive procedure call, but it is less obvious, since the call is made by Visual Basic rather than an explicit call in the code.</span></span> <span data-ttu-id="0abed-116">使用`Calls`對話方塊來檢視哪些程序會在堆疊作用中。</span><span class="sxs-lookup"><span data-stu-id="0abed-116">Use the `Calls` dialog box to view which procedures are active on the stack.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="69d50-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="69d50-117">See Also</span></span>  
- [<span data-ttu-id="69d50-118">記憶體視窗</span><span class="sxs-lookup"><span data-stu-id="69d50-118">Memory Windows</span></span>](/visualstudio/debugger/memory-windows)
+## <a name="see-also"></a><span data-ttu-id="0abed-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0abed-117">See Also</span></span>  
+ [<span data-ttu-id="0abed-118">記憶體視窗</span><span class="sxs-lookup"><span data-stu-id="0abed-118">Memory Windows</span></span>](/visualstudio/debugger/memory-windows)

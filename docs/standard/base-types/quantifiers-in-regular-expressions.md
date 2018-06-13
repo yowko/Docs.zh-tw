@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579089"
 ---
 # <a name="quantifiers-in-regular-expressions"></a><span data-ttu-id="adffd-102">規則運算式中的數量詞</span><span class="sxs-lookup"><span data-stu-id="adffd-102">Quantifiers in Regular Expressions</span></span>
 <span data-ttu-id="adffd-103">數量詞指定輸入中要有多少字元、群組或字元類別的執行個體，才能找到相符項目。</span><span class="sxs-lookup"><span data-stu-id="adffd-103">Quantifiers specify how many instances of a character, group, or character class must be present in the input for a match to be found.</span></span>  <span data-ttu-id="adffd-104">下表列出 .NET 支援的數量詞。</span><span class="sxs-lookup"><span data-stu-id="adffd-104">The following table lists the quantifiers supported by .NET.</span></span>  

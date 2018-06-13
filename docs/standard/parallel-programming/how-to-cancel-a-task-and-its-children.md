@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580220"
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a><span data-ttu-id="162dc-102">如何：取消工作及其子系</span><span class="sxs-lookup"><span data-stu-id="162dc-102">How to: Cancel a Task and Its Children</span></span>
 <span data-ttu-id="162dc-103">這些範例示範如何執行下列工作：</span><span class="sxs-lookup"><span data-stu-id="162dc-103">These examples show how to perform the following tasks:</span></span>  
