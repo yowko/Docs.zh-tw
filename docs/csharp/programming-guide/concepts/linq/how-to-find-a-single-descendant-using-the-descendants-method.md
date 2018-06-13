@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316955"
 ---
 # <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a><span data-ttu-id="6d3dd-102">如何：使用 Descendants 方法尋找單一子系 (C#)</span><span class="sxs-lookup"><span data-stu-id="6d3dd-102">How to: Find a Single Descendant Using the Descendants Method (C#)</span></span>
 <span data-ttu-id="6d3dd-103">您可以使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸方法快速撰寫程式碼以尋找唯一具名的單一項目。</span><span class="sxs-lookup"><span data-stu-id="6d3dd-103">You can use the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis method to quickly write code to find a single uniquely named element.</span></span> <span data-ttu-id="6d3dd-104">當您想要利用特定名稱尋找特定子代時，這個技術特別實用。</span><span class="sxs-lookup"><span data-stu-id="6d3dd-104">This technique is especially useful when you want to find a particular descendant with a specific name.</span></span> <span data-ttu-id="6d3dd-105">您可以撰寫程式碼來導覽所需的項目，但使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸撰寫程式碼通常比較快也比較容易。</span><span class="sxs-lookup"><span data-stu-id="6d3dd-105">You could write the code to navigate to the desired element, but it is often faster and easier to write the code using the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.</span></span>  

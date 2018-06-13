@@ -1,68 +1,55 @@
 ---
 title: 如何：對應繼承階層架構
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: b27c779b-9355-4dc7-b95f-7dfd504b6e48
 dev_langs:
 - csharp
 - vb
-caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4ffc3e9e7b9c5cc52f5f6fb5cbefd279ca1c0505
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 627baf61902877390b0b2c88bf25438cb26c6491
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355349"
 ---
-# <a name="how-to-map-inheritance-hierarchies"></a><span data-ttu-id="a2ef3-102">如何：對應繼承階層架構</span><span class="sxs-lookup"><span data-stu-id="a2ef3-102">How to: Map Inheritance Hierarchies</span></span>
-<span data-ttu-id="a2ef3-103">若要在 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 中實作繼承對應，您必須如下列步驟所述，在繼承階層架構 (Inheritance Hierarchy) 的根類別上指定屬性 (Attribute) 與其屬性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="a2ef3-103">To implement inheritance mapping in [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)], you must specify the attributes and attribute properties on the root class of the inheritance hierarchy as described in the following steps.</span></span> <span data-ttu-id="a2ef3-104">使用 Visual Studio 的開發人員可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]來對應繼承階層架構。</span><span class="sxs-lookup"><span data-stu-id="a2ef3-104">Developers using Visual Studio can use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to map inheritance hierarchies.</span></span> <span data-ttu-id="a2ef3-105">請參閱[How to： 使用 O/R 設計工具設定繼承](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer)。</span><span class="sxs-lookup"><span data-stu-id="a2ef3-105">See [How to: Configure inheritance by using the O/R Designer](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer).</span></span>  
+# <a name="how-to-map-inheritance-hierarchies"></a><span data-ttu-id="77de1-102">如何：對應繼承階層架構</span><span class="sxs-lookup"><span data-stu-id="77de1-102">How to: Map Inheritance Hierarchies</span></span>
+<span data-ttu-id="77de1-103">若要在 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 中實作繼承對應，您必須如下列步驟所述，在繼承階層架構 (Inheritance Hierarchy) 的根類別上指定屬性 (Attribute) 與其屬性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="77de1-103">To implement inheritance mapping in [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)], you must specify the attributes and attribute properties on the root class of the inheritance hierarchy as described in the following steps.</span></span> <span data-ttu-id="77de1-104">使用 Visual Studio 的開發人員可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]來對應繼承階層架構。</span><span class="sxs-lookup"><span data-stu-id="77de1-104">Developers using Visual Studio can use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to map inheritance hierarchies.</span></span> <span data-ttu-id="77de1-105">請參閱[How to： 使用 O/R 設計工具設定繼承](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer)。</span><span class="sxs-lookup"><span data-stu-id="77de1-105">See [How to: Configure inheritance by using the O/R Designer](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="a2ef3-106">子類別上不需要任何特別的屬性 (Attribute) 或屬性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="a2ef3-106">No special attributes or properties are required on the subclasses.</span></span> <span data-ttu-id="a2ef3-107">請特別注意，子類別沒有 <xref:System.Data.Linq.Mapping.TableAttribute> 屬性 (Attribute)。</span><span class="sxs-lookup"><span data-stu-id="a2ef3-107">Note especially that subclasses do not have the <xref:System.Data.Linq.Mapping.TableAttribute> attribute.</span></span>  
+>  <span data-ttu-id="77de1-106">子類別上不需要任何特別的屬性 (Attribute) 或屬性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="77de1-106">No special attributes or properties are required on the subclasses.</span></span> <span data-ttu-id="77de1-107">請特別注意，子類別沒有 <xref:System.Data.Linq.Mapping.TableAttribute> 屬性 (Attribute)。</span><span class="sxs-lookup"><span data-stu-id="77de1-107">Note especially that subclasses do not have the <xref:System.Data.Linq.Mapping.TableAttribute> attribute.</span></span>  
   
-### <a name="to-map-an-inheritance-hierarchy"></a><span data-ttu-id="a2ef3-108">若要對應繼承階層架構</span><span class="sxs-lookup"><span data-stu-id="a2ef3-108">To map an inheritance hierarchy</span></span>  
+### <a name="to-map-an-inheritance-hierarchy"></a><span data-ttu-id="77de1-108">若要對應繼承階層架構</span><span class="sxs-lookup"><span data-stu-id="77de1-108">To map an inheritance hierarchy</span></span>  
   
-1.  <span data-ttu-id="a2ef3-109">將 <xref:System.Data.Linq.Mapping.TableAttribute> 屬性 (Attribute) 加入至根類別。</span><span class="sxs-lookup"><span data-stu-id="a2ef3-109">Add the <xref:System.Data.Linq.Mapping.TableAttribute> attribute to the root class.</span></span>  
+1.  <span data-ttu-id="77de1-109">將 <xref:System.Data.Linq.Mapping.TableAttribute> 屬性 (Attribute) 加入至根類別。</span><span class="sxs-lookup"><span data-stu-id="77de1-109">Add the <xref:System.Data.Linq.Mapping.TableAttribute> attribute to the root class.</span></span>  
   
-2.  <span data-ttu-id="a2ef3-110">同樣在根類別中，加入階層結構中每個類別的 <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> 屬性 (Attribute)。</span><span class="sxs-lookup"><span data-stu-id="a2ef3-110">Also to the root class, add an <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> attribute for each class in the hierarchy structure.</span></span>  
+2.  <span data-ttu-id="77de1-110">同樣在根類別中，加入階層結構中每個類別的 <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> 屬性 (Attribute)。</span><span class="sxs-lookup"><span data-stu-id="77de1-110">Also to the root class, add an <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> attribute for each class in the hierarchy structure.</span></span>  
   
-3.  <span data-ttu-id="a2ef3-111">針對每個 <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> 屬性 (Attribute)，定義 <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A> 屬性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="a2ef3-111">For each <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> attribute, define a <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A> property.</span></span>  
+3.  <span data-ttu-id="77de1-111">針對每個 <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> 屬性 (Attribute)，定義 <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A> 屬性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="77de1-111">For each <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> attribute, define a <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A> property.</span></span>  
   
-     <span data-ttu-id="a2ef3-112">這個屬性 (Property) 保留的值會顯示在資料庫資料表的 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A> 資料行中，以表示此資料列屬於哪個類別或子類別。</span><span class="sxs-lookup"><span data-stu-id="a2ef3-112">This property holds a value that appears in the database table in the <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A> column to indicate which class or subclass this row of data belongs to.</span></span>  
+     <span data-ttu-id="77de1-112">這個屬性 (Property) 保留的值會顯示在資料庫資料表的 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A> 資料行中，以表示此資料列屬於哪個類別或子類別。</span><span class="sxs-lookup"><span data-stu-id="77de1-112">This property holds a value that appears in the database table in the <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A> column to indicate which class or subclass this row of data belongs to.</span></span>  
   
-4.  <span data-ttu-id="a2ef3-113">針對每個 <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> 屬性 (Attribute)，同時加入 <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Type%2A> 屬性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="a2ef3-113">For each <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> attribute, also add a <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Type%2A> property.</span></span>  
+4.  <span data-ttu-id="77de1-113">針對每個 <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> 屬性 (Attribute)，同時加入 <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Type%2A> 屬性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="77de1-113">For each <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> attribute, also add a <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Type%2A> property.</span></span>  
   
-     <span data-ttu-id="a2ef3-114">這個屬性 (Property) 保留的值會指定索引鍵值所表示的類別或子類別。</span><span class="sxs-lookup"><span data-stu-id="a2ef3-114">This property holds a value that specifies which class or subclass the key value signifies.</span></span>  
+     <span data-ttu-id="77de1-114">這個屬性 (Property) 保留的值會指定索引鍵值所表示的類別或子類別。</span><span class="sxs-lookup"><span data-stu-id="77de1-114">This property holds a value that specifies which class or subclass the key value signifies.</span></span>  
   
-5.  <span data-ttu-id="a2ef3-115">僅在其中一個 <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> 屬性 (Attribute) 中，加入 <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A> 屬性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="a2ef3-115">On only one of the <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> attributes, add an <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A> property.</span></span>  
+5.  <span data-ttu-id="77de1-115">僅在其中一個 <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> 屬性 (Attribute) 中，加入 <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A> 屬性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="77de1-115">On only one of the <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> attributes, add an <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A> property.</span></span>  
   
-     <span data-ttu-id="a2ef3-116">這個屬性是用來指定*後援*對應時資料庫資料表中的鑑別子值不符合任何<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A>繼承對應中的值。</span><span class="sxs-lookup"><span data-stu-id="a2ef3-116">This property serves to designate a *fallback* mapping when the discriminator value from the database table does not match any <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A> value in the inheritance mappings.</span></span>  
+     <span data-ttu-id="77de1-116">這個屬性是用來指定*後援*對應時資料庫資料表中的鑑別子值不符合任何<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A>繼承對應中的值。</span><span class="sxs-lookup"><span data-stu-id="77de1-116">This property serves to designate a *fallback* mapping when the discriminator value from the database table does not match any <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A> value in the inheritance mappings.</span></span>  
   
-6.  <span data-ttu-id="a2ef3-117">加入 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A> 屬性 (Attribute) 的 <xref:System.Data.Linq.Mapping.ColumnAttribute> 屬性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="a2ef3-117">Add an <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A> property for a <xref:System.Data.Linq.Mapping.ColumnAttribute> attribute.</span></span>  
+6.  <span data-ttu-id="77de1-117">加入 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A> 屬性 (Attribute) 的 <xref:System.Data.Linq.Mapping.ColumnAttribute> 屬性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="77de1-117">Add an <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A> property for a <xref:System.Data.Linq.Mapping.ColumnAttribute> attribute.</span></span>  
   
-     <span data-ttu-id="a2ef3-118">這個屬性 (Property) 表示此為保留 <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A> 值的資料行。</span><span class="sxs-lookup"><span data-stu-id="a2ef3-118">This property signifies that this is the column that holds the <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A> value.</span></span>  
+     <span data-ttu-id="77de1-118">這個屬性 (Property) 表示此為保留 <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A> 值的資料行。</span><span class="sxs-lookup"><span data-stu-id="77de1-118">This property signifies that this is the column that holds the <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A> value.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a2ef3-119">範例</span><span class="sxs-lookup"><span data-stu-id="a2ef3-119">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="77de1-119">範例</span><span class="sxs-lookup"><span data-stu-id="77de1-119">Example</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="a2ef3-120">如果您使用 Visual Studio，您可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]設定繼承。</span><span class="sxs-lookup"><span data-stu-id="a2ef3-120">If you are using Visual Studio, you can use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to configure inheritance.</span></span> <span data-ttu-id="a2ef3-121">請參閱[How to： 使用 O/R 設計工具設定繼承](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer)</span><span class="sxs-lookup"><span data-stu-id="a2ef3-121">See [How to: Configure inheritance by using the O/R Designer](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer)</span></span>  
+>  <span data-ttu-id="77de1-120">如果您使用 Visual Studio，您可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]設定繼承。</span><span class="sxs-lookup"><span data-stu-id="77de1-120">If you are using Visual Studio, you can use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to configure inheritance.</span></span> <span data-ttu-id="77de1-121">請參閱[How to： 使用 O/R 設計工具設定繼承](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer)</span><span class="sxs-lookup"><span data-stu-id="77de1-121">See [How to: Configure inheritance by using the O/R Designer](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer)</span></span>  
   
- <span data-ttu-id="a2ef3-122">在下列程式碼範例中，`Vehicle` 會定義為根類別，而且會實作先前的步驟以描述 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 的階層架構。</span><span class="sxs-lookup"><span data-stu-id="a2ef3-122">In the following code example, `Vehicle` is defined as the root class, and the previous steps have been implemented to describe the hierarchy for [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].</span></span>  
+ <span data-ttu-id="77de1-122">在下列程式碼範例中，`Vehicle` 會定義為根類別，而且會實作先前的步驟以描述 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 的階層架構。</span><span class="sxs-lookup"><span data-stu-id="77de1-122">In the following code example, `Vehicle` is defined as the root class, and the previous steps have been implemented to describe the hierarchy for [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].</span></span>  
   
  [!code-csharp[DLinqCustomize#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCustomize/cs/Program.cs#4)]
  [!code-vb[DLinqCustomize#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#4)]  
   
-## <a name="see-also"></a><span data-ttu-id="a2ef3-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a2ef3-123">See Also</span></span>  
- [<span data-ttu-id="a2ef3-124">繼承支援</span><span class="sxs-lookup"><span data-stu-id="a2ef3-124">Inheritance Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md)  
- [<span data-ttu-id="a2ef3-125">如何：使用程式碼編輯器自訂實體類別</span><span class="sxs-lookup"><span data-stu-id="a2ef3-125">How to: Customize Entity Classes by Using the Code Editor</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+## <a name="see-also"></a><span data-ttu-id="77de1-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="77de1-123">See Also</span></span>  
+ [<span data-ttu-id="77de1-124">繼承支援</span><span class="sxs-lookup"><span data-stu-id="77de1-124">Inheritance Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md)  
+ [<span data-ttu-id="77de1-125">如何：使用程式碼編輯器自訂實體類別</span><span class="sxs-lookup"><span data-stu-id="77de1-125">How to: Customize Entity Classes by Using the Code Editor</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

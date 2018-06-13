@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33211747"
 ---
 # <a name="-preferreduilang-c-compiler-options"></a><span data-ttu-id="6ee7c-102">-preferreduilang (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="6ee7c-102">-preferreduilang (C# Compiler Options)</span></span>
 <span data-ttu-id="6ee7c-103">使用 `-preferreduilang` 編譯器選項，您就可以指定 C# 編譯器顯示輸出的語言，例如錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="6ee7c-103">By using the `-preferreduilang` compiler option, you can specify the language in which the C# compiler displays output, such as error messages.</span></span>  

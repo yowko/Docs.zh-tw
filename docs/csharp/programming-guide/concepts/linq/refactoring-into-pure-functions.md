@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339549"
 ---
 # <a name="refactoring-into-pure-functions-c"></a><span data-ttu-id="25913-102">重構為純虛擬函式 (C#)</span><span class="sxs-lookup"><span data-stu-id="25913-102">Refactoring Into Pure Functions (C#)</span></span>
 

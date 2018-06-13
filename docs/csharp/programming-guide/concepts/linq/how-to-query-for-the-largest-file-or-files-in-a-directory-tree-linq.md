@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325353"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a><span data-ttu-id="33286-102">如何：查詢目錄樹狀中的最大檔案 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="33286-102">How to: Query for the Largest File or Files in a Directory Tree (LINQ) (C#)</span></span>
 <span data-ttu-id="33286-103">此範例顯示五個與檔案位元組大小相關的查詢：</span><span class="sxs-lookup"><span data-stu-id="33286-103">This example shows five queries related to file size in bytes:</span></span>  

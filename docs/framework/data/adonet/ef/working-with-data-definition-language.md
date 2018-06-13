@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764394"
 ---
 # <a name="working-with-data-definition-language"></a><span data-ttu-id="d1834-102">使用資料定義語言</span><span class="sxs-lookup"><span data-stu-id="d1834-102">Working with Data Definition Language</span></span>
 <span data-ttu-id="d1834-103">從開始[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]第 4 版[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]支援資料定義語言 (DDL)。</span><span class="sxs-lookup"><span data-stu-id="d1834-103">Starting with the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] version 4, the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] supports data definition language (DDL).</span></span> <span data-ttu-id="d1834-104">這可讓您根據連接字串和儲存體 (SSDL) 模型的中繼資料，建立或刪除資料庫執行個體。</span><span class="sxs-lookup"><span data-stu-id="d1834-104">This allows you to create or delete a database instance based on the connection string and the metadata of the storage (SSDL) model.</span></span>  

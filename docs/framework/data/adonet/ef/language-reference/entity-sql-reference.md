@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766731"
 ---
 # <a name="entity-sql-reference"></a><span data-ttu-id="55a7d-102">Entity SQL 參考</span><span class="sxs-lookup"><span data-stu-id="55a7d-102">Entity SQL Reference</span></span>
 <span data-ttu-id="55a7d-103">本節內容包括 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 參考主題。</span><span class="sxs-lookup"><span data-stu-id="55a7d-103">This section contains [!INCLUDE[esql](../../../../../../includes/esql-md.md)] reference topics.</span></span> <span data-ttu-id="55a7d-104">本主題將摘要說明 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 運算子並將它們依分類群組。</span><span class="sxs-lookup"><span data-stu-id="55a7d-104">This topic summarizes and groups the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operators by category.</span></span>  

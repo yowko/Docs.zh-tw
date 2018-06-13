@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327688"
 ---
 # <a name="chaining-queries-example-c"></a><span data-ttu-id="861b1-102">鏈結查詢範例 (C#)</span><span class="sxs-lookup"><span data-stu-id="861b1-102">Chaining Queries Example (C#)</span></span>
 <span data-ttu-id="861b1-103">這個範例會在先前的範例上建置，然後在將同時使用延後執行與延遲評估的兩個查詢鏈結在一起時，顯示發生什麼狀況。</span><span class="sxs-lookup"><span data-stu-id="861b1-103">This example builds on the previous example and shows what happens when you chain together two queries that both use deferred execution and lazy evaluation.</span></span>  

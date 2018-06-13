@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325938"
 ---
 # <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a><span data-ttu-id="ea1f1-102">如何：擷取項目的表層值 (C#)</span><span class="sxs-lookup"><span data-stu-id="ea1f1-102">How to: Retrieve the Shallow Value of an Element (C#)</span></span>
 <span data-ttu-id="ea1f1-103">本主題說明如何取得項目的表層值。</span><span class="sxs-lookup"><span data-stu-id="ea1f1-103">This topic shows how to get the shallow value of an element.</span></span> <span data-ttu-id="ea1f1-104">表層值僅是特定項目的值。與深層值不同的是，深層值包含了由所有子代項目連結成單一字串的值。</span><span class="sxs-lookup"><span data-stu-id="ea1f1-104">The shallow value is the value of the specific element only, as opposed to the deep value, which includes the values of all descendent elements concatenated into a single string.</span></span>  

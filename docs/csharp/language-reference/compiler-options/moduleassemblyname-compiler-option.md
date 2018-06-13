@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217226"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a><span data-ttu-id="bb924-102">-moduleassemblyname (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="bb924-102">-moduleassemblyname (C# Compiler Option)</span></span>
 <span data-ttu-id="bb924-103">指定 .netmodule 可以存取其非公用類型的組件。</span><span class="sxs-lookup"><span data-stu-id="bb924-103">Specifies an assembly whose non-public types a .netmodule can access.</span></span>  

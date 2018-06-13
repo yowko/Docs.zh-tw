@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340680"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a><span data-ttu-id="4f0f3-102">使用純虛擬函式進行重構 (C#)</span><span class="sxs-lookup"><span data-stu-id="4f0f3-102">Refactoring Using a Pure Function (C#)</span></span>
 <span data-ttu-id="4f0f3-103">下列範例會重構上述範例 ([使用擴充方法進行重構 (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)) 來使用此範例中的純虛擬函式，而且尋找段落文字的程式碼會被移到純靜態方法 `ParagraphText`。</span><span class="sxs-lookup"><span data-stu-id="4f0f3-103">The following example refactors the previous example, [Refactoring Using an Extension Method (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), to use a pure function In this example, the code to find the text of a paragraph is moved to the pure static method `ParagraphText`.</span></span>  

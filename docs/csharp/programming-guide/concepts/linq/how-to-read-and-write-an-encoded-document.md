@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317154"
 ---
 # <a name="how-to-read-and-write-an-encoded-document-c"></a><span data-ttu-id="b5cd8-102">如何：讀取和寫入編碼的文件 (C#)</span><span class="sxs-lookup"><span data-stu-id="b5cd8-102">How to: Read and Write an Encoded Document (C#)</span></span>
 <span data-ttu-id="b5cd8-103">若要建立編碼的 XML 文件，您可以將編碼設定為所需的字碼頁名稱，以便將 <xref:System.Xml.Linq.XDeclaration> 加入到 XML 樹狀結構中。</span><span class="sxs-lookup"><span data-stu-id="b5cd8-103">To create an encoded XML document, you add an <xref:System.Xml.Linq.XDeclaration> to the XML tree, setting the encoding to the desired code page name.</span></span>  

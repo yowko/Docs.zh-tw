@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767451"
 ---
 # <a name="lttransportgt-of-ltwebhttpbindinggt"></a><span data-ttu-id="cbe2b-102">&lt;webHttpBinding&gt; 的 &lt;transport&gt;</span><span class="sxs-lookup"><span data-stu-id="cbe2b-102">&lt;transport&gt; of &lt;webHttpBinding&gt;</span></span>
 <span data-ttu-id="cbe2b-103">定義服務端點 (此服務端點是設定來接收 HTTP 要求的) 之傳輸層級安全性設定。</span><span class="sxs-lookup"><span data-stu-id="cbe2b-103">Defines the transport-level security settings for a service endpoint configured to receive HTTP requests.</span></span>  

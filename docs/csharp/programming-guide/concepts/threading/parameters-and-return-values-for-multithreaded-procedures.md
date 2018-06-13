@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340212"
 ---
 # <a name="parameters-and-return-values-for-multithreaded-procedures-c"></a><span data-ttu-id="9e202-102">多執行緒程序的參數和傳回值 (C#)</span><span class="sxs-lookup"><span data-stu-id="9e202-102">Parameters and Return Values for Multithreaded Procedures (C#)</span></span>
 <span data-ttu-id="9e202-103">在多執行緒應用程式中提供和傳回值很複雜，因為執行緒類別的建構函式必須傳遞到不採用任何引數且不傳回任何值的程序參考。</span><span class="sxs-lookup"><span data-stu-id="9e202-103">Supplying and returning values in a multithreaded application is complicated because the constructor for the thread class must be passed a reference to a procedure that takes no arguments and returns no value.</span></span> <span data-ttu-id="9e202-104">下節會說明一些簡單的方法來提供參數，以及從不同執行緒的程序傳回值。</span><span class="sxs-lookup"><span data-stu-id="9e202-104">The following sections show some simple ways to supply parameters and return values from procedures on separate threads.</span></span>  

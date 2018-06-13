@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319929"
 ---
 # <a name="nested-types-c-programming-guide"></a><span data-ttu-id="b135e-102">巢狀類型 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="b135e-102">Nested Types (C# Programming Guide)</span></span>
 <span data-ttu-id="b135e-103">在 [class](../../../csharp/language-reference/keywords/class.md) 或 [struct](../../../csharp/language-reference/keywords/struct.md) 內定義的類型稱為巢狀型別。</span><span class="sxs-lookup"><span data-stu-id="b135e-103">A type defined within a [class](../../../csharp/language-reference/keywords/class.md) or [struct](../../../csharp/language-reference/keywords/struct.md) is called a nested type.</span></span> <span data-ttu-id="b135e-104">例如: </span><span class="sxs-lookup"><span data-stu-id="b135e-104">For example:</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322688"
 ---
 # <a name="pointer-conversions-c-programming-guide"></a><span data-ttu-id="46ee7-102">指標轉換 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="46ee7-102">Pointer Conversions (C# Programming Guide)</span></span>
 <span data-ttu-id="46ee7-103">下表顯示預先定義的隱含指標轉換。</span><span class="sxs-lookup"><span data-stu-id="46ee7-103">The following table shows the predefined implicit pointer conversions.</span></span> <span data-ttu-id="46ee7-104">在許多情況下可能會發生隱含轉換，包括方法叫用和指派陳述式。</span><span class="sxs-lookup"><span data-stu-id="46ee7-104">Implicit conversions might occur in many situations, including method invoking and assignment statements.</span></span>  

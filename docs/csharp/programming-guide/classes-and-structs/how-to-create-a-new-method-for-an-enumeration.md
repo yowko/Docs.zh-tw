@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313029"
 ---
 # <a name="how-to-create-a-new-method-for-an-enumeration-c-programming-guide"></a><span data-ttu-id="5ec56-102">如何：建立列舉類型的新方法 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="5ec56-102">How to: Create a New Method for an Enumeration (C# Programming Guide)</span></span>
 <span data-ttu-id="5ec56-103">您可以使用擴充方法來新增專屬於特定列舉類型的功能。</span><span class="sxs-lookup"><span data-stu-id="5ec56-103">You can use extension methods to add functionality specific to a particular enum type.</span></span>  

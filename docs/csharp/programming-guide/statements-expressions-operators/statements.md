@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339523"
 ---
 # <a name="statements-c-programming-guide"></a><span data-ttu-id="4a8df-102">陳述式 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="4a8df-102">Statements (C# Programming Guide)</span></span>
 <span data-ttu-id="4a8df-103">程式所採取的動作是在陳述式中表示。</span><span class="sxs-lookup"><span data-stu-id="4a8df-103">The actions that a program takes are expressed in statements.</span></span> <span data-ttu-id="4a8df-104">根據指定的條件，常見動作包括宣告變數、指派值、呼叫方法、循環執行集合，以及分支到一個或另一個程式碼區塊。</span><span class="sxs-lookup"><span data-stu-id="4a8df-104">Common actions include declaring variables, assigning values, calling methods, looping through collections, and branching to one or another block of code, depending on a given condition.</span></span> <span data-ttu-id="4a8df-105">陳述式在程式中的執行順序稱為「控制流程」或「執行流程」。</span><span class="sxs-lookup"><span data-stu-id="4a8df-105">The order in which statements are executed in a program is called the flow of control or flow of execution.</span></span> <span data-ttu-id="4a8df-106">根據程式如何反應它在執行階段收到的輸入，每次執行程式時，控制流程可能都會不同。</span><span class="sxs-lookup"><span data-stu-id="4a8df-106">The flow of control may vary every time that a program is run, depending on how the program reacts to input that it receives at run time.</span></span>  

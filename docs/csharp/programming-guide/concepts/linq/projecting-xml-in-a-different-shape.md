@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340420"
 ---
 # <a name="projecting-xml-in-a-different-shape-c"></a><span data-ttu-id="ad2f1-102">以不同的組織結構投影 XML (C#)</span><span class="sxs-lookup"><span data-stu-id="ad2f1-102">Projecting XML in a Different Shape (C#)</span></span>
 <span data-ttu-id="ad2f1-103">本主題顯示以不同於來源 XML 的組織結構規劃 XML 的範例。</span><span class="sxs-lookup"><span data-stu-id="ad2f1-103">This topic shows an example of projecting XML that is in a different shape than the source XML.</span></span>  

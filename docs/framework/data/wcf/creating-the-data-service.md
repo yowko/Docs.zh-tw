@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362832"
 ---
 # <a name="creating-the-data-service"></a><span data-ttu-id="659a6-102">建立資料服務</span><span class="sxs-lookup"><span data-stu-id="659a6-102">Creating the Data Service</span></span>
 <span data-ttu-id="659a6-103">在這個工作中，您將建立使用的範例資料服務[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]公開 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Northwind 範例資料庫為基礎的摘要。</span><span class="sxs-lookup"><span data-stu-id="659a6-103">In this task, you will create a sample data service that uses [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] to expose an [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed that is based on the Northwind sample database.</span></span> <span data-ttu-id="659a6-104">這個工作包含下列基本步驟：</span><span class="sxs-lookup"><span data-stu-id="659a6-104">The task involves the following basic steps:</span></span>  
