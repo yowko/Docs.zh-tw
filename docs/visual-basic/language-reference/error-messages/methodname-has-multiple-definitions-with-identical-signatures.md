@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593726"
 ---
 # <a name="39ltmethodnamegt39-has-multiple-definitions-with-identical-signatures"></a>&#39;&lt;methodname&gt; &#39;有多個具有相同特徵標記定義
 A`Function`或`Sub`程序宣告使用相同的程序名稱和引數清單與上一個宣告。 可能的原因是嘗試多載原始程序。 多載程序必須具有不同的引數清單。  

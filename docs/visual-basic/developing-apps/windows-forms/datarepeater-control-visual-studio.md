@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591029"
 ---
 # <a name="datarepeater-control-visual-studio"></a>DataRepeater 控制項 (Visual Studio)
 Visual Basic Power Pack <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控制項是可捲動的容器，用於存放顯示重複資料的控制項，例如資料庫資料表中的資料列。 當您需要對資料的版面配置擁有更多控制權時，可以此取代 <xref:System.Windows.Forms.DataGridView> 控制項。  

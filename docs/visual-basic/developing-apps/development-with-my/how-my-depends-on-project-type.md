@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592076"
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>My 如何相依於專案類型 (Visual Basic)
 `My` 會公開特定專案類型所需的物件。 例如，`My.Forms`物件是在 Windows Form 應用程式中可用的但無法使用主控台應用程式中。 本主題描述這`My`物件都在不同專案類型。  

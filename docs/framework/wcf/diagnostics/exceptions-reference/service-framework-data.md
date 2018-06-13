@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474012"
 ---
 # <a name="service-framework-data"></a>服務架構資料
 此主題會列出服務架構資料產生的所有例外狀況。  

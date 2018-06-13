@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593684"
 ---
 # <a name="property-or-method-not-found"></a>找不到屬性或方法
 未定義的參考的物件的方法或物件屬性。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326946"
 ---
 # <a name="equality-operations-c"></a>相等比較作業 (C#)
 對應項目相等且具有相同數目項目的兩個序列，會視為相等。  

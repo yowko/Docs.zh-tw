@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576428"
 ---
 # <a name="names-of-namespaces"></a>命名空間的名稱
 做為與其他命名指導方針，命名的命名空間時的目標建立足夠的清楚起見使用 framework 立即知道命名空間的內容可能是程式設計人員。 下列範本會指定為命名空間進行的一般規則：  

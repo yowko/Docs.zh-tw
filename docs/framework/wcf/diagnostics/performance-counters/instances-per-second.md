@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33471864"
 ---
 # <a name="instances-per-second"></a>每秒的執行個體數
 計數器名稱：每秒建立的執行個體。  

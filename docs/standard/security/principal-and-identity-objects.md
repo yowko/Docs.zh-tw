@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590956"
 ---
 # <a name="principal-and-identity-objects"></a>Principal 和 Identity 物件
 Managed 程式碼可以找出身分識別或透過主體的角色<xref:System.Security.Principal.IPrincipal>物件，其中包含的參考<xref:System.Security.Principal.IIdentity>物件。 它可能有助於您比較 Identity 和 Principal 物件，以熟悉例如使用者和群組帳戶的概念。 在大部分網路環境中，使用者帳戶代表人員或程式，而群組帳戶代表特定類別的使用者和他們擁有的權限。 同樣地，.NET Framework Identity 物件代表使用者，而角色代表成員資格和安全性內容。 在 .NET Framework 中，Principal 物件會封裝身分識別物件和角色。 .NET framework 應用程式會根據主體的身分識別或更常見的是其角色成員資格，授與主體權限。  

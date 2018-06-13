@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765629"
 ---
 # <a name="entity-data-model-key-concepts"></a>實體資料模型索引鍵概念
 實體資料模型 (EDM) 會使用三個索引鍵概念描述資料結構：*實體類型*，*關聯型別*，和*屬性*。 描述任何 EDM 實作中的資料結構時，這些是最重要的概念。  

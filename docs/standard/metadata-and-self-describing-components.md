@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579323"
 ---
 # <a name="metadata-and-self-describing-components"></a>中繼資料和自我描述元件
 在過去，以一種語言撰寫的軟體元件 (.exe 或 .dll) 不容易使用以另一種語言所撰寫的軟體元件。 COM 對這個問題提供了進一步的解決方式。 .NET Framework 允許編譯器 (Compiler) 發出額外的宣告資訊至所有模組和組件中，使元件的互通性更為容易。 這個資訊，稱為中繼資料 (Metadata)，能幫助元件順暢地互動。  

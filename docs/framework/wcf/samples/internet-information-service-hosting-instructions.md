@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507570"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Internet Information Service 裝載指示
 若要執行由網際網路資訊服務 (IIS) 裝載的範例，您必須確定 IIS 已正確安裝並正在執行中。  
@@ -131,7 +132,7 @@ ms.lasthandoff: 05/04/2018
   
 1.  從**管理您的伺服器**，按一下 **新增或移除角色**，然後按一下 **下一步**。  
   
-2.  選取**應用程式伺服器 （IIS，ASP.NET）**從**伺服器角色**清單，然後再按**下一步**。  
+2.  選取**應用程式伺服器 （IIS，ASP.NET）** 從**伺服器角色**清單，然後再按**下一步**。  
   
 3.  選取**啟用 ASP.NET**核取方塊，然後**下一步**。  
   

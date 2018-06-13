@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474028"
 ---
 # <a name="message-logging"></a>訊息記錄
 Windows Communication Foundation (WCF) 提供讓您記錄傳入和傳出訊息的離線耗用量。 訊息記錄功能可讓您看到訊息與訊息本文的樣貌。 這種記錄類型特別適合用來讓您了解傳入了哪些引數，以及接收端點以何種方式來理解以 XML 表示的引數。 此外，記錄收到的訊息可讓您診斷格式不正確的訊息並查看訊息的抵達方式。 您也可以檢查所使用的安全性權杖、加密與簽署的部分，以及保留不變的部分。  
