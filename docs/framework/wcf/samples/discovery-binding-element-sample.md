@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805664"
 ---
 # <a name="discovery-binding-element-sample"></a><span data-ttu-id="ab3b8-102">探索繫結項目範例</span><span class="sxs-lookup"><span data-stu-id="ab3b8-102">Discovery Binding Element Sample</span></span>
 <span data-ttu-id="ab3b8-103">此範例示範如何使用探索用戶端繫結項目探索服務。</span><span class="sxs-lookup"><span data-stu-id="ab3b8-103">This sample demonstrates how to use the discovery client binding element to discover a service.</span></span> <span data-ttu-id="ab3b8-104">此功能可讓開發人員將探索用戶端通道加入至其現有的用戶端通道堆疊中，讓程式設計模型變得非常直覺。</span><span class="sxs-lookup"><span data-stu-id="ab3b8-104">This feature enables developers to add a discovery client channel to their existing client channel stack, making the programming model very intuitive.</span></span> <span data-ttu-id="ab3b8-105">開啟相關聯的通道時，就會使用探索解析服務的位址。</span><span class="sxs-lookup"><span data-stu-id="ab3b8-105">When the associated channel is opened, the address of the service is resolved using discovery.</span></span> <span data-ttu-id="ab3b8-106">這個範例包含下列專案：</span><span class="sxs-lookup"><span data-stu-id="ab3b8-106">This sample consists of the following projects:</span></span>  

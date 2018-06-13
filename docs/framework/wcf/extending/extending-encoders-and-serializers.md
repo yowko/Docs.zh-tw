@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803536"
 ---
 # <a name="extending-encoders-and-serializers"></a><span data-ttu-id="bffa1-102">擴充編碼器與序列化程式</span><span class="sxs-lookup"><span data-stu-id="bffa1-102">Extending Encoders and Serializers</span></span>
 <span data-ttu-id="bffa1-103">本節中的主題描述如何擴充 Windows Communication Foundation (WCF) 序列化系統。</span><span class="sxs-lookup"><span data-stu-id="bffa1-103">The topics in this section describe how to extend the Windows Communication Foundation (WCF) serialization system.</span></span>  

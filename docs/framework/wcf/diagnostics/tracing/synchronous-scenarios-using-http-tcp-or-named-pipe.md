@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810170"
 ---
 # <a name="synchronous-scenarios-using-http-tcp-or-named-pipe"></a><span data-ttu-id="03ddf-102">使用 HTTP、TCP 或具名管道的同步案例</span><span class="sxs-lookup"><span data-stu-id="03ddf-102">Synchronous Scenarios using HTTP, TCP or Named-Pipe</span></span>
 <span data-ttu-id="03ddf-103">本主題將說明不同的同步要求/回覆案例中的各種活動與傳輸，以及使用 HTTP、TCP 或具名管道的單一執行緒用戶端。</span><span class="sxs-lookup"><span data-stu-id="03ddf-103">This topic describes the activities and transfers for different synchronous request/reply scenarios, with a single-threaded client, using HTTP, TCP or named pipe.</span></span> <span data-ttu-id="03ddf-104">請參閱[使用 HTTP、 TCP 或具名管道的非同步案例](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md)如需詳細資訊，在多執行緒的要求。</span><span class="sxs-lookup"><span data-stu-id="03ddf-104">See [Asynchronous Scenarios using HTTP, TCP, or Named-Pipe](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md) for more information on multi-threaded requests.</span></span>  

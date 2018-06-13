@@ -10,6 +10,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472759"
 ---
 # <a name="string-interpolation"></a><span data-ttu-id="1b882-103">字串插補</span><span class="sxs-lookup"><span data-stu-id="1b882-103">String interpolation</span></span>
 

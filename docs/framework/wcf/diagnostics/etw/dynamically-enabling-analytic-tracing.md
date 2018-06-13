@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803485"
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a><span data-ttu-id="965e6-102">動態地啟用分析的追蹤</span><span class="sxs-lookup"><span data-stu-id="965e6-102">Dynamically Enabling Analytic Tracing</span></span>
 <span data-ttu-id="965e6-103">使用隨附於 Windows 作業系統的工具，您可以使用 Windows 事件追蹤 (ETW) 來動態啟用或停用追蹤。</span><span class="sxs-lookup"><span data-stu-id="965e6-103">Using tools that ship with the Windows operating system, you can enable or disable tracing dynamically using Event Tracing for Windows (ETW).</span></span> <span data-ttu-id="965e6-104">所有[!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)]Windows Communication Foundation (WCF) 服務的分析追蹤可以啟用和停用，而不需要修改應用程式的 Web.config 檔案，或重新啟動服務。</span><span class="sxs-lookup"><span data-stu-id="965e6-104">For all [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] Windows Communication Foundation (WCF) services, analytic tracing can be enabled and disabled dynamically without modifying the application’s Web.config file or restarting the service.</span></span> <span data-ttu-id="965e6-105">這樣可讓發出追蹤事件的應用程式維持不變。</span><span class="sxs-lookup"><span data-stu-id="965e6-105">This allows the application that emits the trace events to remain undisturbed.</span></span>  

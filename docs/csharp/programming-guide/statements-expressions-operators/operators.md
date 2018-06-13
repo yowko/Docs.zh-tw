@@ -11,6 +11,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457926"
 ---
 # <a name="operators-c-programming-guide"></a><span data-ttu-id="39b1a-102">運算子 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="39b1a-102">Operators (C# Programming Guide)</span></span>
 <span data-ttu-id="39b1a-103">在 C# 中，「 *運算子* 」(Operator) 是程式的元素，這類元素會套用至運算式或陳述式中的一個或多個「 *運算元* 」(Operand)。</span><span class="sxs-lookup"><span data-stu-id="39b1a-103">In C#, an *operator* is a program element that is applied to one or more *operands* in an expression or statement.</span></span> <span data-ttu-id="39b1a-104">只使用一個運算元的運算子稱為`++`「一元」 `new`(Unary) 運算子，例如遞增運算子 ( *) 或* 。</span><span class="sxs-lookup"><span data-stu-id="39b1a-104">Operators that take one operand, such as the increment operator (`++`) or `new`, are referred to as *unary* operators.</span></span> <span data-ttu-id="39b1a-105">使用兩個運算元的運算子稱為`+`「二元」`-`(Binary) 運算子，例如算術運算子 (`*`、`/`、 *及* )。</span><span class="sxs-lookup"><span data-stu-id="39b1a-105">Operators that take two operands, such as arithmetic operators (`+`,`-`,`*`,`/`), are referred to as *binary* operators.</span></span> <span data-ttu-id="39b1a-106">還有一種運算子稱為條件運算子 (`?:`)，它會使用三個運算元而且是 C# 中唯一的三元運算子。</span><span class="sxs-lookup"><span data-stu-id="39b1a-106">One operator, the conditional operator (`?:`), takes three operands and is the sole ternary operator in C#.</span></span>  

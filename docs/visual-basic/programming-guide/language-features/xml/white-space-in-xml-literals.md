@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649746"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a><span data-ttu-id="0b486-102">XML 常值中的空白字元 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0b486-102">White Space in XML Literals (Visual Basic)</span></span>
 <span data-ttu-id="0b486-103">Visual Basic 編譯器會在建立時，結合只有顯著泛空白字元字元從 XML 常值[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]物件。</span><span class="sxs-lookup"><span data-stu-id="0b486-103">The Visual Basic compiler incorporates only the significant white space characters from an XML literal when it creates a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object.</span></span> <span data-ttu-id="0b486-104">不會納入無意義的空格字元。</span><span class="sxs-lookup"><span data-stu-id="0b486-104">The insignificant white space characters are not incorporated.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808323"
 ---
 # <a name="token-authenticator"></a><span data-ttu-id="56cc7-102">權杖驗證器</span><span class="sxs-lookup"><span data-stu-id="56cc7-102">Token Authenticator</span></span>
 <span data-ttu-id="56cc7-103">這個範例示範如何實作自訂權杖驗證器。</span><span class="sxs-lookup"><span data-stu-id="56cc7-103">This sample demonstrates how to implement a custom token authenticator.</span></span> <span data-ttu-id="56cc7-104">Windows Communication Foundation (WCF) 的權杖驗證器用來驗證郵件時，所使用的權杖驗證前後一致，以及驗證身分識別相關聯的語彙基元。</span><span class="sxs-lookup"><span data-stu-id="56cc7-104">A token authenticator in Windows Communication Foundation (WCF) is used for validating the token used with the message, verifying that it is self-consistent, and authenticating the identity associated with the token.</span></span>  

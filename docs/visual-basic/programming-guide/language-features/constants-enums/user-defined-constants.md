@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648771"
 ---
 # <a name="user-defined-constants-visual-basic"></a><span data-ttu-id="26a43-102">使用者定義常數 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="26a43-102">User-Defined Constants (Visual Basic)</span></span>
 <span data-ttu-id="26a43-103">常數是有意義的名稱來取代數字或字串，不會變更。</span><span class="sxs-lookup"><span data-stu-id="26a43-103">A constant is a meaningful name that takes the place of a number or string that does not change.</span></span> <span data-ttu-id="26a43-104">如同它的名稱所示，常數用來儲存應用程式執行過程中維持不變的值。</span><span class="sxs-lookup"><span data-stu-id="26a43-104">Constants store values that, as the name implies, remain constant throughout the execution of an application.</span></span> <span data-ttu-id="26a43-105">您可以使用常數所定義的控制項或元件，或建立您自己。</span><span class="sxs-lookup"><span data-stu-id="26a43-105">You can use constants that are defined by the controls or components you work with, or you can create your own.</span></span> <span data-ttu-id="26a43-106">常數您自行建立會描述成*使用者定義*。</span><span class="sxs-lookup"><span data-stu-id="26a43-106">Constants you create yourself are described as *user-defined*.</span></span>  

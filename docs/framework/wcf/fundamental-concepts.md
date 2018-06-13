@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808048"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a><span data-ttu-id="4e749-102">Windows Communication Foundation 的主要概念</span><span class="sxs-lookup"><span data-stu-id="4e749-102">Fundamental Windows Communication Foundation Concepts</span></span>
 <span data-ttu-id="4e749-103">本文件提供 Windows Communication Foundation (WCF) 架構的高階檢視。</span><span class="sxs-lookup"><span data-stu-id="4e749-103">This document provides a high-level view of the Windows Communication Foundation (WCF) architecture.</span></span> <span data-ttu-id="4e749-104">以說明重要概念，以及如何搭配運用這些概念。</span><span class="sxs-lookup"><span data-stu-id="4e749-104">It is intended to explain key concepts and how they fit together.</span></span> <span data-ttu-id="4e749-105">如需建立簡單的 WCF 服務和用戶端版本的教學課程，請參閱[入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)。</span><span class="sxs-lookup"><span data-stu-id="4e749-105">For a tutorial on creating the simplest version of a WCF service and client, see [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md).</span></span> <span data-ttu-id="4e749-106">若要深入了解 WCF 程式設計，請參閱[基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)。</span><span class="sxs-lookup"><span data-stu-id="4e749-106">To learn WCF programming, see [Basic WCF Programming](../../../docs/framework/wcf/basic-wcf-programming.md).</span></span>  

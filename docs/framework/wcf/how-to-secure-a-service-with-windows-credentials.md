@@ -14,6 +14,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806392"
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a><span data-ttu-id="3ff16-102">HOW TO：使用 Windows 認證來確保服務安全</span><span class="sxs-lookup"><span data-stu-id="3ff16-102">How to: Secure a Service with Windows Credentials</span></span>
 <span data-ttu-id="3ff16-103">本主題示範如何啟用 Windows Communication Foundation (WCF) 服務位於 Windows 網域，且呼叫相同的網域中的用戶端上的傳輸安全性。</span><span class="sxs-lookup"><span data-stu-id="3ff16-103">This topic shows how to enable transport security on a Windows Communication Foundation (WCF) service that resides in a Windows domain and is called by clients in the same domain.</span></span> <span data-ttu-id="3ff16-104">如需有關此案例的詳細資訊，請參閱[Windows 驗證的傳輸安全性](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)。</span><span class="sxs-lookup"><span data-stu-id="3ff16-104">For more information about this scenario, see [Transport Security with Windows Authentication](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md).</span></span> <span data-ttu-id="3ff16-105">範例應用程式，請參閱[WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md)範例。</span><span class="sxs-lookup"><span data-stu-id="3ff16-105">For a sample application, see the [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) sample.</span></span>  

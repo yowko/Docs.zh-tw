@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649379"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a><span data-ttu-id="3b75b-102">XElement 和 XDocument 物件的有效內容</span><span class="sxs-lookup"><span data-stu-id="3b75b-102">Valid Content of XElement and XDocument Objects</span></span>
 <span data-ttu-id="3b75b-103">本主題說明可以傳遞給用於將內容加入至項目和文件之建構函式 (Constructor) 和方法的有效引數。</span><span class="sxs-lookup"><span data-stu-id="3b75b-103">This topic describes the valid arguments that can be passed to constructors and methods that you use to add content to elements and documents.</span></span>  

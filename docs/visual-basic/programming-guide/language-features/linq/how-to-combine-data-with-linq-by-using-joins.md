@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653451"
 ---
 # <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a><span data-ttu-id="b00b9-102">如何：使用 Joins 以 LINQ 合併資料 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b00b9-102">How to: Combine Data with LINQ by Using Joins (Visual Basic)</span></span>
 <span data-ttu-id="b00b9-103">Visual Basic 提供`Join`和`Group Join`查詢子句可讓您結合多個集合之間的一般值為基礎的集合的內容。</span><span class="sxs-lookup"><span data-stu-id="b00b9-103">Visual Basic provides the `Join` and `Group Join` query clauses to enable you to combine the contents of multiple collections based on common values between the collections.</span></span> <span data-ttu-id="b00b9-104">這些值稱為*金鑰*值。</span><span class="sxs-lookup"><span data-stu-id="b00b9-104">These values are known as *key* values.</span></span> <span data-ttu-id="b00b9-105">開發人員熟悉關聯式資料庫概念會辨識`Join`INNER JOIN 子句和`Group Join`做為有效，LEFT OUTER JOIN 子句。</span><span class="sxs-lookup"><span data-stu-id="b00b9-105">Developers familiar with relational database concepts will recognize the `Join` clause as an INNER JOIN and the `Group Join` clause as, effectively, a LEFT OUTER JOIN.</span></span>  

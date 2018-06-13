@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806054"
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a><span data-ttu-id="4b53f-102">設定 Windows Communication Foundation 服務的繫結</span><span class="sxs-lookup"><span data-stu-id="4b53f-102">Configuring Bindings for Windows Communication Foundation Services</span></span>
 <span data-ttu-id="4b53f-103">建立應用程式時，您經常會需要在應用程式部署後，延後系統管理員的決定。</span><span class="sxs-lookup"><span data-stu-id="4b53f-103">When creating an application, you often want to defer decisions to the administrator after the deployment of the application.</span></span> <span data-ttu-id="4b53f-104">例如，我們很多時都無法預知服務位址，或統一資源識別元 (URI)。</span><span class="sxs-lookup"><span data-stu-id="4b53f-104">For example, there is often no way of knowing in advance what a service address, or Uniform Resource Identifier (URI), will be.</span></span> <span data-ttu-id="4b53f-105">這時候，為位址進行硬式編碼並不是理想的作法，較好的作法是讓系統管理員在建立服務後再處理。</span><span class="sxs-lookup"><span data-stu-id="4b53f-105">Instead of hard-coding an address, it is preferable to allow an administrator to do so after creating a service.</span></span> <span data-ttu-id="4b53f-106">這樣的靈活性是透過組態達成。</span><span class="sxs-lookup"><span data-stu-id="4b53f-106">This flexibility is accomplished through configuration.</span></span>  

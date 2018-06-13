@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810105"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a><span data-ttu-id="4d7c8-102">使用 WCF 用戶端存取服務</span><span class="sxs-lookup"><span data-stu-id="4d7c8-102">Accessing Services Using a WCF Client</span></span>
 <span data-ttu-id="4d7c8-103">建立服務之後下, 一個步驟是建立 WCF 用戶端 proxy。</span><span class="sxs-lookup"><span data-stu-id="4d7c8-103">After you create a service, the next step is to create a WCF client proxy.</span></span> <span data-ttu-id="4d7c8-104">用戶端應用程式使用 WCF 用戶端 proxy 來與服務通訊。</span><span class="sxs-lookup"><span data-stu-id="4d7c8-104">A client application uses the WCF client proxy to communicate with the service.</span></span> <span data-ttu-id="4d7c8-105">用戶端應用程式通常會匯入服務的中繼資料來產生可用來叫用此服務的 WCF 用戶端程式碼。</span><span class="sxs-lookup"><span data-stu-id="4d7c8-105">Client applications usually import a service's metadata to generate WCF client code that can be used to invoke the service.</span></span>  

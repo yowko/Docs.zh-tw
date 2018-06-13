@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655872"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a><span data-ttu-id="773aa-102">逐步解說：在 Visual Basic 中撰寫查詢</span><span class="sxs-lookup"><span data-stu-id="773aa-102">Walkthrough: Writing Queries in Visual Basic</span></span>
 <span data-ttu-id="773aa-103">本逐步解說示範如何使用 Visual Basic 語言功能，以及在寫入[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]查詢運算式。</span><span class="sxs-lookup"><span data-stu-id="773aa-103">This walkthrough demonstrates how you can use Visual Basic language features to write [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] query expressions.</span></span> <span data-ttu-id="773aa-104">逐步解說示範如何建立一份學生物件上的查詢、 如何執行查詢，以及如何修改它們。</span><span class="sxs-lookup"><span data-stu-id="773aa-104">The walkthrough demonstrates how to create queries on a list of Student objects, how to run the queries, and how to modify them.</span></span> <span data-ttu-id="773aa-105">查詢會將數個功能，包括物件初始設定式、 區域類型推斷和匿名型別。</span><span class="sxs-lookup"><span data-stu-id="773aa-105">The queries incorporate several features including object initializers, local type inference, and anonymous types.</span></span>  

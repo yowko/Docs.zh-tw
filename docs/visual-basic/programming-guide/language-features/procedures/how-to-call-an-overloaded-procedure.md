@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649122"
 ---
 # <a name="how-to-call-an-overloaded-procedure-visual-basic"></a><span data-ttu-id="eb209-102">如何：呼叫多載程序 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="eb209-102">How to: Call an Overloaded Procedure (Visual Basic)</span></span>
 <span data-ttu-id="eb209-103">多載化程序的優點是在呼叫的彈性。</span><span class="sxs-lookup"><span data-stu-id="eb209-103">The advantage of overloading a procedure is in the flexibility of the call.</span></span> <span data-ttu-id="eb209-104">呼叫程式碼可以取得傳遞至程序，然後再呼叫單一程序名稱，不論所傳遞的引數需要的資訊。</span><span class="sxs-lookup"><span data-stu-id="eb209-104">The calling code can obtain the information it needs to pass to the procedure and then call a single procedure name, no matter what arguments it is passing.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803341"
 ---
 # <a name="analytic-tracing-overview"></a><span data-ttu-id="ba0f7-102">分析追蹤的概觀</span><span class="sxs-lookup"><span data-stu-id="ba0f7-102">Analytic Tracing Overview</span></span>
 <span data-ttu-id="ba0f7-103">[!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] 中的分析追蹤是一項高效能、低詳細等級的追蹤功能，設定於 Windows 事件追蹤 (ETW) 之上。</span><span class="sxs-lookup"><span data-stu-id="ba0f7-103">Analytic tracing in [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] is a high performance and low verbosity tracing feature set on top of Event Tracing for Windows (ETW).</span></span> <span data-ttu-id="ba0f7-104">ETW 是在核心層級執行，可大幅降低追蹤作業的負荷。</span><span class="sxs-lookup"><span data-stu-id="ba0f7-104">ETW runs at the kernel-level to greatly reduce the overhead of tracing operations.</span></span> <span data-ttu-id="ba0f7-105">它能有效率地緩衝使用者和核心模式的事件，並且允許動態啟用記錄，而不需重新啟動服務。</span><span class="sxs-lookup"><span data-stu-id="ba0f7-105">It efficiently buffers user- and kernel-mode events, and allows dynamic enabling of logging without requiring service restarts.</span></span> <span data-ttu-id="ba0f7-106">事件發出和接收之後，即可在事件記錄檔中使用追蹤資料。</span><span class="sxs-lookup"><span data-stu-id="ba0f7-106">The tracing data is available in the event logs after it has been emitted and received.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803436"
 ---
 # <a name="client-interoperability"></a><span data-ttu-id="39249-102">用戶端互通性</span><span class="sxs-lookup"><span data-stu-id="39249-102">Client Interoperability</span></span>
 <span data-ttu-id="39249-103">本節包含示範 Windows Communication Foundation (WCF) 和其他技術之間的互通性範例。</span><span class="sxs-lookup"><span data-stu-id="39249-103">This section contains samples that demonstrate interoperability between Windows Communication Foundation (WCF) and other technologies.</span></span>  

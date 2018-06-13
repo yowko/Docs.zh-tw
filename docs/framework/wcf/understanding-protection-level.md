@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809777"
 ---
 # <a name="understanding-protection-level"></a><span data-ttu-id="05119-102">了解保護層級</span><span class="sxs-lookup"><span data-stu-id="05119-102">Understanding Protection Level</span></span>
 <span data-ttu-id="05119-103">在許多不同的類別上都可找到 `ProtectionLevel` 屬性，例如 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 類別。</span><span class="sxs-lookup"><span data-stu-id="05119-103">The `ProtectionLevel` property is found on many different classes, such as the <xref:System.ServiceModel.ServiceContractAttribute> and the <xref:System.ServiceModel.OperationContractAttribute> classes.</span></span> <span data-ttu-id="05119-104">此屬性會控制如何保護訊息的部分 (或全部) 內容。</span><span class="sxs-lookup"><span data-stu-id="05119-104">The property controls how a part (or whole) of a message is protected.</span></span> <span data-ttu-id="05119-105">本主題說明 Windows Communication Foundation (WCF) 功能及其運作方式。</span><span class="sxs-lookup"><span data-stu-id="05119-105">This topic explains the Windows Communication Foundation (WCF) feature and how it works.</span></span>  

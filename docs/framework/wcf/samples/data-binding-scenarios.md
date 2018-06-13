@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803831"
 ---
 # <a name="data-binding-scenarios"></a><span data-ttu-id="f7874-102">資料繫結案例</span><span class="sxs-lookup"><span data-stu-id="f7874-102">Data Binding Scenarios</span></span>
 <span data-ttu-id="f7874-103">本節包含示範 Windows Communication Foundation (WCF) 的資料繫結案例的範例。</span><span class="sxs-lookup"><span data-stu-id="f7874-103">This section contains samples that demonstrate Windows Communication Foundation (WCF) data binding scenarios.</span></span>  

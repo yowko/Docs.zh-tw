@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33802973"
 ---
 # <a name="viewing-message-logs"></a><span data-ttu-id="153f7-102">檢視訊息記錄</span><span class="sxs-lookup"><span data-stu-id="153f7-102">Viewing Message Logs</span></span>
 <span data-ttu-id="153f7-103">此主題描述如何檢視訊息記錄。</span><span class="sxs-lookup"><span data-stu-id="153f7-103">This topic describes how you can view message logs.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807849"
 ---
 # <a name="hosting-services"></a><span data-ttu-id="04414-102">裝載服務</span><span class="sxs-lookup"><span data-stu-id="04414-102">Hosting Services</span></span>
 <span data-ttu-id="04414-103">如果要成為作用中的服務，必須將服務裝載在建立及控制其內容和存留時間的執行階段環境中。</span><span class="sxs-lookup"><span data-stu-id="04414-103">To become active, a service must be hosted within a run-time environment that creates it and controls its context and lifetime.</span></span> <span data-ttu-id="04414-104">Windows Communication Foundation (WCF) 服務被設計為在支援 managed 程式碼的任何 Windows 處理序中執行。</span><span class="sxs-lookup"><span data-stu-id="04414-104">Windows Communication Foundation (WCF) services are designed to run in any Windows process that supports managed code.</span></span>  

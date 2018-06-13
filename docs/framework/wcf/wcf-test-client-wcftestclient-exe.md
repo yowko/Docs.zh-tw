@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809741"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a><span data-ttu-id="4c075-102">WCF 測試用戶端 (WcfTestClient.exe)</span><span class="sxs-lookup"><span data-stu-id="4c075-102">WCF Test Client (WcfTestClient.exe)</span></span>
 <span data-ttu-id="4c075-103">Windows Communication Foundation (WCF) 測試用戶端 (WcfTestClient.exe) 是一種 GUI 工具，可讓使用者輸入測試參數，請送出該輸入至服務，並檢視服務傳回的回應。</span><span class="sxs-lookup"><span data-stu-id="4c075-103">Windows Communication Foundation (WCF) Test Client (WcfTestClient.exe) is a GUI tool that enables users to input test parameters, submit that input to the service, and view the response that the service sends back.</span></span> <span data-ttu-id="4c075-104">它提供了完善的服務測試經驗結合 WCF 服務主機時。</span><span class="sxs-lookup"><span data-stu-id="4c075-104">It provides a seamless service testing experience when combined with WCF Service Host.</span></span>  
