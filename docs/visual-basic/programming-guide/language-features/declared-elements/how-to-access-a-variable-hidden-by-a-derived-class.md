@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648043"
 ---
 # <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>如何：存取衍生類別所隱藏的變數 (Visual Basic)
 當在衍生類別中的程式碼存取的變數時，編譯器通常會將參考解析最接近的可存取版本，也就是可存取的版本之後的最少衍生步驟回溯存取的類別。 如果變數在衍生類別中定義，程式碼通常會存取該定義。  

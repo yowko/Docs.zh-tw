@@ -15,11 +15,12 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: 85911647c089d51bafe2d65d1c5db907599b06d4
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
-ms.translationtype: HT
+ms.openlocfilehash: 9c2c38020bb57a008d0948a360a5b2cbe401089d
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457754"
 ---
 # <a name="styling-and-templating"></a>樣式設定和範本化
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 樣式設定和範本化係指一套功能 (樣式、範本、觸發程序及分鏡腳本)，可讓開發人員和設計人員創造引人注目的效果，並為其產品建立一致的外觀。 雖然開發人員和 (或) 設計人員可以依個別應用程式廣泛地自訂外觀，但強大的樣式設定和範本化模型仍有其必要性，這可允許在應用程式內或應用程式之間維護及共用外觀。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 便有提供該模型。  
@@ -28,10 +29,8 @@ ms.lasthandoff: 05/15/2018
   
  本概觀將焦點放在應用程式的樣式設定和範本化方面，而不討論任何資料繫結概念。 如需有關資料繫結的資訊，請參閱[資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)。  
   
- 此外，了解資源相當重要，資源可讓您重複使用樣式和範本。 如需有關資源的詳細資訊，請參閱 [XAML 資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)。  
-  
- 
-  
+ 此外，了解資源相當重要，資源可讓您重複使用樣式和範本。 如需有關資源的詳細資訊，請參閱 [XAML 資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)。
+
 <a name="styling_and_templating_sample"></a>   
 ## <a name="styling-and-templating-sample"></a>樣式設定和範本化範例  
  本概觀中使用的程式碼範例是根據下圖中所示的簡單相片範例：  
@@ -183,9 +182,9 @@ ms.lasthandoff: 05/15/2018
   
  您可以將資源字典定義成個別的檔案，這可讓您跨多個應用程式重複使用佈景主題。 您也可以透過定義多個資源字典來提供類型相同但值不同的資源，以建立可切換的佈景主題。 重新定義這些樣式或其他應用程式層級的資源，是簡化應用程式的建議做法。  
   
- 若要共用一組資源，包括樣式和範本，跨應用程式，您可以建立[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]檔案，並定義<xref:System.Windows.ResourceDictionary>。 例如，請看看下圖，當中顯示部分的[使用 ControlTemplates 設定樣式範例](http://go.microsoft.com/fwlink/?LinkID=160041)：  
-  
- ![控制項範本範例](../../../../docs/framework/wpf/controls/media/stylingintro-controltemplateexamples.png "StylingIntro_ControlTemplateExamples")  
+ 若要共用一組資源，包括樣式和範本，跨應用程式，您可以建立[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]檔案，並定義<xref:System.Windows.ResourceDictionary>。 例如，請看看下圖，當中顯示部分的[使用 ControlTemplates 設定樣式範例](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)：
+
+![控制項範本範例](../../../../docs/framework/wpf/controls/media/stylingintro-controltemplateexamples.png "StylingIntro_ControlTemplateExamples")  
   
  如果您查看範例中的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案，您將會發現這些檔案都具有下列內容：  
   

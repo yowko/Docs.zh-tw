@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636483"
 ---
 # <a name="file-io-with-type-39lttypenamegt39-is-not-valid"></a>類型具有檔案 I/O &#39; &lt;typename&gt; &#39;無效
 您正在嘗試將不支援的類型寫入檔案。  

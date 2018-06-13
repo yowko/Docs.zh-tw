@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644871"
 ---
 # <a name="linq-and-reflection-visual-basic"></a>LINQ 和反映 (Visual Basic)
 .NET Framework 類別庫的反映 API 可以用來檢查 .NET 組件中的中繼資料，以及建立該組件中之類型、類型成員、參數等項目的集合。 因為這些集合支援泛型 `IEnumerable` 介面，所以可以使用 LINQ 進行查詢。  

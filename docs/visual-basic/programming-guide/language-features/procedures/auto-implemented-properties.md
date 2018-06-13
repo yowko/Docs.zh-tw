@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656309"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>自動實作的屬性 (Visual Basic)
 *自動實作屬性*可讓您快速指定類別的屬性，而不需要撰寫程式碼以`Get`和`Set`屬性。 當您撰寫自動實作屬性之程式碼時，Visual Basic 編譯器會自動建立私用欄位，來存放建立關聯的 `Get` 和 `Set` 程序外，另外存放屬性變數。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636613"
 ---
 # <a name="named-arguments-cannot-match-paramarray-parameters"></a>具名引數與 ParamArray 參數不相符
 參數陣列必須以傳值方式傳遞。  

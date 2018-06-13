@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803578"
 ---
 # <a name="deploying-services"></a>部署服務
 本主題描述如何部署到執行階段環境的 Windows Communication Foundation (WCF) 應用程式。  

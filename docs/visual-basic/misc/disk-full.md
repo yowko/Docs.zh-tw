@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635573"
 ---
 # <a name="disk-full-visual-basic"></a>磁碟已滿 (Visual Basic)
 磁碟上的空間不足，無法完成 `Print`、 `Write`或 `FileClose` 作業，或建立必要的檔案。  

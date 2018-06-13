@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635544"
 ---
 # <a name="code-resource-not-found"></a>找不到程式碼資源
 已呼叫程式碼資源中的程序，但找不到該程式碼資源。  

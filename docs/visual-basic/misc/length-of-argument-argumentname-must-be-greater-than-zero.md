@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635615"
 ---
 # <a name="length-of-argument-39ltargumentnamegt39-must-be-greater-than-zero"></a>引數的長度&#39;&lt;引數名稱&gt;&#39;必須是大於零
 引數的值等於或小於零。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457471"
 ---
 # <a name="combobox-styles-and-templates"></a>ComboBox 樣式和範本
 本主題描述樣式和範本<xref:System.Windows.Controls.ComboBox>控制項。 您可以修改預設<xref:System.Windows.Controls.ControlTemplate>來提供獨特的外觀的控制項。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643153"
 ---
 # <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>如何： 尋找子系的特定項目名稱 (Visual Basic)
 有時候您會想要尋找具有特定名稱的所有子代。 您可以撰寫程式碼來逐一查看所有子代，但是使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸比較容易。  
