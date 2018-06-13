@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644299"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>逐步解說：實作 COM 物件的繼承 (Visual Basic)
 您可以取得 Visual Basic 類別從`Public`中 COM 物件，即使這些舊版本的 Visual Basic 中建立的類別。 屬性和類別繼承自 COM 物件的方法可以覆寫或多載一樣屬性和任何其他基底類別的方法可以覆寫或多載。 從 COM 物件的繼承時，您有現有的類別程式庫，您不希望重新編譯。  
