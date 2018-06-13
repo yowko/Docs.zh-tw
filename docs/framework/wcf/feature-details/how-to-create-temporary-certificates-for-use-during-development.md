@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495362"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>HOW TO：建立開發時要使用的暫時憑證
 在開發安全的服務或用戶端會使用 Windows Communication Foundation (WCF) 時，則通常需要提供來做為認證的 X.509 憑證。 憑證通常是憑證鏈結的一部分，在電腦的 [受信任的根憑證授權單位] 存放區中有根授權。 具有憑證鏈結可讓您設定一組憑證的範圍，其中根授權通常來自您的組織或企業單位。 如果要在開發期間進行模擬，您可以建立兩種憑證以滿足安全性需求。 第一種是放在 [受信任的根憑證授權單位] 存放區中的自我簽署憑證，而第二種憑證是從第一種建立的，並放在個人存放區或本機位置，或目前使用者位置的個人存放區。 本主題將逐步帶領您使用由 [SDK 所提供的](http://go.microsoft.com/fwlink/?LinkId=248185)憑證建立工具 (MakeCert.exe) [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 來建立這兩種憑證。  
@@ -17,7 +18,7 @@ ms.lasthandoff: 05/04/2018
 > [!IMPORTANT]
 >  憑證建立工具所產生的憑證僅針對測試用途提供。 當部署服務或用戶端時，請確定使用由憑證授權單位所提供的適當憑證。 這可能是來自您組織中的 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 憑證伺服器或協力廠商。  
 >   
->  根據預設， [Makecert.exe （憑證建立工具）](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)建立的憑證的根授權稱為 「 根代理者**。 」** 由於「根代理者」不是在 [受信任的根憑證授權單位] 存放區中，因此會讓這些憑證變得不安全。 建立位於 [受信任的根憑證授權單位] 存放區中的自我簽署憑證，可讓您建立一個更能夠模擬您開發環境的開發環境。  
+>  根據預設， [Makecert.exe （憑證建立工具）](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)建立的憑證的根授權稱為 「 根代理者 **。 」** 由於「根代理者」不是在 [受信任的根憑證授權單位] 存放區中，因此會讓這些憑證變得不安全。 建立位於 [受信任的根憑證授權單位] 存放區中的自我簽署憑證，可讓您建立一個更能夠模擬您開發環境的開發環境。  
   
  如需有關建立及使用憑證的詳細資訊，請參閱[使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。 如需使用憑證做為認證的詳細資訊，請參閱[保護服務和用戶端](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)。 如需有關使用 Microsoft Authenticode 技術的教學課程，請參閱 [Authenticode 概觀與教學課程 (英文)](http://go.microsoft.com/fwlink/?LinkId=88919)。  
   

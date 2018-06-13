@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523451"
 ---
 # <a name="how-to-rotate-reflect-and-skew-images"></a>如何：旋轉、反射和傾斜影像
 您可以旋轉、 反射和傾斜影像藉由指定目的端座標點的原始影像的左上角、 右上角和左下角。 這三個目的點決定仿射轉換平行四邊形對應原始矩形的映像。  

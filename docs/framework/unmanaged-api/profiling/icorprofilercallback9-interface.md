@@ -12,9 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 488af069e7798fde650abb1473df256eed2d692f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452373"
 ---
 # <a name="icorprofilercallback9-interface"></a>ICorProfilerCallback9 介面
 [在.NET Framework 4.7.2 和更新版本中支援]  
@@ -28,7 +29,7 @@ ms.lasthandoff: 05/04/2018
 |[DynamicMethodUnloaded 方法](ICorProfilerCallback9-dynamicmethodunloaded-method.md)|通知的動態方法已被記憶體回收，並接著卸載分析工具。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

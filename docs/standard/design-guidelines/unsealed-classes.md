@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571657"
 ---
 # <a name="unsealed-classes"></a>非密封類別
 密封的類別無法被繼承，以及它們會防止擴充性。 相反地，可以繼承自的類別稱為未密封的類別。  

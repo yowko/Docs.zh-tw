@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517569"
 ---
 # <a name="b233zier-splines-in-gdi"></a>B&#233;zier GDI + 中的曲線
 貝茲曲線是四個點所指定的曲線： 兩個結束點 （p1 和 p2） 和兩個控制點 （c1 和 c2）。 曲線開始 p1 和 p2 當做結尾。 曲線不會通過的控點，但控點做為磁鐵曲線納入特定指示和影響曲線彎曲的方式。 下圖顯示其端點和控制點貝茲曲線。  

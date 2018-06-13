@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567815"
 ---
 # <a name="creating-new-strings-in-net"></a>在 .NET 中建立新字串
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 允許使用簡單指派來建立字串，並且還可以多載類別建構函式，以支援使用多個不同參數來建立字串。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 也會在 <xref:System.String?displayProperty=nameWithType> 類別中提供數個方法，藉由組合多個字串、字串陣列或物件來建立新的字串物件。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521611"
 ---
 # <a name="how-to-draw-a-custom-dashed-line"></a>如何：繪製自訂短折線
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供數種中所列的虛線樣式<xref:System.Drawing.Drawing2D.DashStyle>列舉型別。 如果這些標準虛線樣式不符合您的需求，您可以建立自訂虛線圖樣。  

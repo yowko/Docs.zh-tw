@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8215ddfd0f59f835d0b0dcd278b8cae9c12027d2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422106"
 ---
 # <a name="icordebugthread4hadunhandledexception-method"></a>ICorDebugThread4::HadUnhandledException 方法
 指出執行緒是否有曾經處理的例外狀況。  
@@ -50,7 +51,7 @@ HRESULT GetBlockingObjects (
  這個方法會指出執行緒是否有曾經處理的例外狀況。 根據時間就會觸發未處理例外狀況回呼或起始原生 JIT 附加時，這個方法保證會傳回 S_OK。 不保證， [ICorDebugThread.GetCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md)方法會傳回未處理的例外狀況; 不過，它將如果處理程序已不尚未繼續取得未處理例外狀況回呼之後，或在原生 JIT 附加。 此外，它有可能 （雖然可能性不大） 有多個執行緒的未處理例外狀況在原生 JIT 附加，就會觸發的階段。 在此情況下沒有任何方式可判斷哪些例外狀況觸發 JIT 附加。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   

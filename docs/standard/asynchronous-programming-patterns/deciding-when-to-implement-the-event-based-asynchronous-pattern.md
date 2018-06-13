@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570974"
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>決定何時實作事件架構非同步模式
 事件架構非同步模式提供的模式可公開類別的非同步行為。 引進此模式之後，[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 定義兩種模式來公開非同步行為：以 <xref:System.IAsyncResult?displayProperty=nameWithType> 介面為基礎的非同步模式與事件架構模式。 本主題說明適合實作這兩種模式的時機。  

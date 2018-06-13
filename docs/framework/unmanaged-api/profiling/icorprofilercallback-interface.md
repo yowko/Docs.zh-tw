@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 96c8c9de7a6b26c9a00a0ffaf4fb50c08a80d5a1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461613"
 ---
 # <a name="icorprofilercallback-interface"></a>ICorProfilerCallback 介面
 提供用來在分析工具已訂閱的事件發生時，通知程式碼分析工具 common language runtime (CLR) 的方法。  
@@ -110,7 +111,7 @@ ms.lasthandoff: 05/04/2018
 >  分析工具註冊單一的 COM 物件。 如果程式碼剖析工具的目標.NET Framework 版本為 1.0 或 1.1，COM 物件必須實作的方法`ICorProfilerCallback`。 如果它以.NET Framework 2.0 版或更新版本為目標，COM 物件也必須實作的方法`ICorProfilerCallback2`。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

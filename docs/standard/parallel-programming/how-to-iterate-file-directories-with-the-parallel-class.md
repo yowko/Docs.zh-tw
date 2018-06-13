@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580714"
 ---
 # <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>如何：使用平行類別逐一查看檔案目錄
 在許多情況下，檔案反覆運算是一項可以輕鬆平行處理的作業。 [如何：使用 PLINQ 逐一查看檔案目錄](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md)這個主題示範針對許多案例執行此工作的最簡單方式。 不過，當您的程式碼需要處理在存取檔案系統時可能會出現的許多類型例外狀況時，便會提升此工作的複雜性。 下列範例會示範處理該問題的其中一種方式。 它會使用以堆疊為基礎的反覆運算來周遊位於特定目錄底下的所有檔案和資料夾，並能使程式碼能夠攔截並處理各種不同的例外狀況。 當然，要如何處理例外狀況仍然取決於您。  

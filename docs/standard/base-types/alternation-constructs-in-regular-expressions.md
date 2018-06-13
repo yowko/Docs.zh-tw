@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574731"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>規則運算式中的替代建構
 <a name="top"></a> 交替建構會修改規則運算式來啟用二選一或條件式比對。 .NET 支援下列三種替代建構：  

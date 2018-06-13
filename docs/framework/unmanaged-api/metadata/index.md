@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 194184f6ddafa1341fbb731ba51e9635ea66ffa3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450498"
 ---
 # <a name="metadata-unmanaged-api-reference"></a>中繼資料 (Unmanaged API 參考)
 中繼資料應用程式開發介面可讓編譯器之類的用戶端無需由 Common Language Runtime (CLR) 載入類型，即可產生或存取元件的中繼資料。  

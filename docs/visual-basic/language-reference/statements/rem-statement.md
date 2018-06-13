@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604272"
 ---
 # <a name="rem-statement-visual-basic"></a>REM 陳述式 (Visual Basic)
 用來在程式碼的原始程式碼中包含說明備註。  

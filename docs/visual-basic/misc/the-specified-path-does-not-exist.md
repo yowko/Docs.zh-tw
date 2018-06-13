@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637891"
 ---
 # <a name="the-specified-path-does-not-exist"></a>指定路徑不存在
 指定的路徑不存在，可能是因為結合字串時發生錯誤。  

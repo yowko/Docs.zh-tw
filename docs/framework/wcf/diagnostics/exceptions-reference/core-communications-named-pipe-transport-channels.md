@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33468328"
 ---
 # <a name="core-communications-named-pipe-transport-channels"></a>核心通訊：具名管道傳輸通道
 本主題會列出由具名管道傳輸通道產生的所有例外狀況 (Exception)。  

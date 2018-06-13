@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522391"
 ---
 # <a name="how-to-rotate-colors"></a>如何：旋轉色彩
 中度空間旋轉很難視覺化。 我們可以讓您更輕鬆地視覺化起來保留固定的色彩元件之一。 假設同意將固定為 1 的 alpha 元件 （完全不透明）。 然後我們可以將三維色彩空間視覺化具有紅色、 綠色和藍色軸下, 圖所示。  
