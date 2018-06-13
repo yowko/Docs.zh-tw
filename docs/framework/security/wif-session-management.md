@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399106"
 ---
 # <a name="wif-session-management"></a>WIF 工作階段管理
 當用戶端第一次嘗試存取由信賴憑證者裝載的受保護資源時，用戶端必須先向信賴憑證者所信任的安全性權杖服務 (STS) 驗證其本身。 接著，STS 會發出安全性權杖給用戶端。 用戶端將這個權杖出示給信賴憑證者後，信賴憑證者便可授與用戶端存取受保護資源的權限。 不過，您不希望用戶端針對每個要求向 STS 重新進行驗證，特別是因為它還可能與信賴憑證者不在同一部電腦或同一個網域中。 相反地，Windows Identity Foundation (WIF) 會讓用戶端和信賴憑證者建立一個工作階段，用戶端可在其中針對第一個要求之後的所有要求，使用工作階段安全性權杖向信賴憑證者驗證其本身。 信賴憑證者可以使用儲存在 Cookie 內的這個工作階段安全性權杖，用來重新建構用戶端的 <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType>。  

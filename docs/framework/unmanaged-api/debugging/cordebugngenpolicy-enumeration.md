@@ -20,9 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cc5a06e6b3cc1e9338d860cdb110bf7d516080be
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404020"
 ---
 # <a name="cordebugngenpolicy-enumeration"></a>CorDebugNGenPolicy 列舉
 提供用來判定偵錯工具是否從原生影像快取載入原生 (NGen) 影像的值。  
@@ -45,7 +46,7 @@ enum CorDebugNGENPolicy {
  `CorDebugNGENPolicy`項列舉供[icordebugprocess5:: Enablengenpolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md)方法。 停用映像從本機原生映像快取的使用方法是確保偵錯工具載入偵錯 JIT 編譯的影像，而不是最佳化的原生映像提供一致的偵錯經驗。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   

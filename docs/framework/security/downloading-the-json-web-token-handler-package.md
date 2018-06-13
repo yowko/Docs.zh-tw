@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404673"
 ---
 # <a name="downloading-the-json-web-token-handler-package"></a>下載 JSON Web 語彙基元處理常式套件
 本主題討論如何在您的專案中下載並使用 JSON Web 權杖處理常式。  

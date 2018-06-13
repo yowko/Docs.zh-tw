@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4be232ab557d582f3521b8775108c004b5a3dd78
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403301"
 ---
 # <a name="clrdebuggingversion-structure"></a>CLR_DEBUGGING_VERSION 結構
 定義用來偵錯之工具通用語言執行平台 (CLR) 的產品版本。  
@@ -52,7 +53,7 @@ WORD wRevision;
  `CLR_DEBUGGING_VERSION`結構等同於 COR_VERSION 結構中，不過，`CLR_DEBUGGING_VERSION`結構提供額外的結構版本 欄位 (`wStructVersion`)。 目前，此欄位必須設定為零。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl  
   

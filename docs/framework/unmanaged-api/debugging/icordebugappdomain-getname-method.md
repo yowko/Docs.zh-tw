@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 84f895e749fc8f2520dbce3caf9e6c11fda78a7a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405765"
 ---
 # <a name="icordebugappdomaingetname-method"></a>ICorDebugAppDomain::GetName 方法
 取得應用程式定義域的名稱。  
@@ -51,7 +52,7 @@ HRESULT GetName (
  偵錯工具呼叫`GetName`方法一次，若要取得之名稱所需的緩衝區大小。 偵錯工具會配置緩衝區，然後再呼叫第二次方法來填滿緩衝區。 第一次呼叫，以取得名稱的大小指*查詢模式*。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   

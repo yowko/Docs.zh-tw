@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356855"
 ---
 # <a name="transaction-management-escalation"></a>交易管理擴大規模
 Windows 會裝載一組服務與模組，用以構成交易管理員。 交易管理員擴大規模說明了將交易從某個交易管理員的元件移轉到另一個元件上的處理序。  

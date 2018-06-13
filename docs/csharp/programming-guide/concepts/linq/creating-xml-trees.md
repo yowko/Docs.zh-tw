@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318584"
 ---
 # <a name="creating-xml-trees-c"></a>建立 XML 樹狀結構 (C#)
 其中一個最常見的 XML 工做為建構 XML 樹狀結構。 本節描述數種建立這些樹狀結構的方式。  

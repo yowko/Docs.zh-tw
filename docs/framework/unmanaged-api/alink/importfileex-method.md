@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2fe73bef50a32c3ff03f2a2754f665cc95018a4d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402990"
 ---
 # <a name="importfileex-method"></a>ImportFileEx 方法
 匯入指定組件或未繫結的模組。  

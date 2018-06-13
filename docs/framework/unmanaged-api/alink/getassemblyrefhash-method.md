@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ccf60d067af356dda1870a2fb1dcca21966f16a6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401482"
 ---
 # <a name="getassemblyrefhash-method"></a>GetAssemblyRefHash 方法
 擷取指定的組件的雜湊 blob。  

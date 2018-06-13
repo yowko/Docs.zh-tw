@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356414"
 ---
 # <a name="what-you-can-do-with-linq-to-sql"></a>LINQ to SQL 的功能
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援 SQL 開發人員需要的所有重要功能。 您可以查詢資訊，以及在資料表中插入、更新和刪除資訊。  

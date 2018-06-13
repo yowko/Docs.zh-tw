@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e8f9eecd6d6d74717eb7c1e389bfa24e40afc950
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402570"
 ---
 # <a name="endmerge-method"></a>EndMerge 方法
 表示所有自訂屬性，已合併到發出範圍。  

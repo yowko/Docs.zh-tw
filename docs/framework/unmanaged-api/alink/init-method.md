@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b512389078ab022208c4b163edc8501a900669ac
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400360"
 ---
 # <a name="init-method"></a>Init 方法
 準備實作物件[IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)供使用。  

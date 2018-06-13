@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356780"
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>在完全信任環境下執行內部網路應用程式
 從 .NET Framework 3.5 版 Service Pack 1 (SP1) 開始，應用程式及其程式庫組件可以當成來自網路共用的完全信任組件執行。 <xref:System.Security.SecurityZone.MyComputer> 區域辨識項會自動新增至從內部網路共用載入的組件。 這個辨識項會提供這些組件與電腦上組件相同的授權集 (通常為完全信任)。 此功能不適用於 ClickOnce 應用程式或專為主機設計執行的應用程式。  

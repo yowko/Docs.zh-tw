@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361539"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>在 ADO.NET 中傳送和修改資料
 任何資料庫應用程式都有一個主要功能，那就是連接到資料來源並擷取其內含的資料。 ADO.NET 的.NET Framework 資料提供者做為應用程式和資料來源之間的橋樑可讓您執行命令以及有關使用擷取資料**DataReader**或**DataAdapter**. 任何資料庫應用程式都有一個主要功能，那就是更新資料庫中儲存的資料。 在 ADO.NET 中，更新資料牽涉到使用**DataAdapter**和<xref:System.Data.DataSet>，和**命令**物件; 並且也可能需要使用交易。  

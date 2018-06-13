@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399240"
 ---
 # <a name="wif-configuration-reference"></a>WIF 組態參考
 您可以在應用程式中將項目新增至組態檔，藉以設定 Windows Identity Foundation (WIF)。 本主題包含 WIF 組態元素之參考主題的連結。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400415"
 ---
 # <a name="what39s-new-in-windows-identity-foundation-45"></a>Windows Identity Foundation 4.5 的新功能
 第一版的 Windows Identity Foundation (WIF) 是發行為獨立下載的版本，稱為 WIF 3.5，因為它是在 .NET 3.5 SP1 的期間內所引入的。 從 .NET 4.5 開始，WIF 就成為 .NET Framework 的一部分。 在架構中直接提供 WIF 類別可讓 .NET 中的宣告式身分識別的整合更加深入，讓您更容易使用宣告。 您需要修改為 WIF 3.5 所撰寫的應用程式，才能利用新的模型；如需詳細資訊，請參閱[將使用 WIF 3.5 建置的應用程式移轉至 WIF 4.5 的方針](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)。  

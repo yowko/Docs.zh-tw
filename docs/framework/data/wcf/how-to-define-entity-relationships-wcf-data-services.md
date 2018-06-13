@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363988"
 ---
 # <a name="how-to-define-entity-relationships-wcf-data-services"></a>如何：定義實體關聯性 (WCF 資料服務)
 當您在 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 中加入新的實體時，並不會自動定義新實體與相關實體之間的任何關聯性。 您可以建立和變更實體執行個體之間的關聯性，而且可以讓用戶端程式庫在資料服務中反映這些變更。 如需詳細資訊，請參閱[更新資料服務](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)。  

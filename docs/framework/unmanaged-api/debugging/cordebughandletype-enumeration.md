@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2898f530fe3f9368778d0f854e8254f7b32d5293
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404933"
 ---
 # <a name="cordebughandletype-enumeration"></a>CorDebugHandleType 列舉
 指出控制代碼類型。  
@@ -42,7 +43,7 @@ typedef enum CorDebugHandleType {
 |`HANDLE_WEAK_TRACK_RESURRECTION`|控制代碼很弱，這不會防止物件被記憶體回收所回收。<br /><br /> 收集物件時，控制代碼會變成無效。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
