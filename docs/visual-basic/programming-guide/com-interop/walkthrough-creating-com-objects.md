@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643857"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>逐步解說：使用 Visual Basic 建立 COM 物件
 建立新的應用程式或元件時，最好建立.NET Framework 組件。 不過，Visual Basic 也可輕鬆公開.NET Framework 元件至 com。 這可讓您針對需要 COM 元件的舊版應用程式套件提供新的元件。 本逐步解說示範如何使用 Visual Basic 公開[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]物件當做 COM 物件，及未在 COM 類別樣板。  

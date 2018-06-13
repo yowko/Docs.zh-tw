@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810027"
 ---
 # <a name="udp-activation"></a>UDP 啟用
 這個範例根據[傳輸： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例。 它會擴充[傳輸： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例以支援使用 Windows Process Activation Service (WAS) 的處理序啟用。  

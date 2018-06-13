@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809299"
 ---
 # <a name="custom-lifetime"></a>自訂存留期
 這個範例示範如何撰寫 Windows Communication Foundation (WCF) 擴充程式以提供自訂存留時間服務共用的 WCF 服務執行個體。  

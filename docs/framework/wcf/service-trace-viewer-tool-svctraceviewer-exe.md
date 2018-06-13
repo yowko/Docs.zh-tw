@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809013"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>服務追蹤檢視器工具 (SvcTraceViewer.exe)
 Windows Communication Foundation (WCF) 服務追蹤檢視器工具可協助您分析由 WCF 所產生的診斷追蹤。 服務追蹤檢視器能夠輕鬆合併、 檢視和篩選記錄內追蹤訊息，以便您可以診斷、 修復和驗證 WCF 服務的問題。  

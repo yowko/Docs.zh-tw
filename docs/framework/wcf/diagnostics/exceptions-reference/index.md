@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474463"
 ---
 # <a name="exceptions-reference"></a>例外狀況參考
 此區段會列出產生 Windows Communication Foundation (WCF) 的下列區域中的所有例外狀況：  
