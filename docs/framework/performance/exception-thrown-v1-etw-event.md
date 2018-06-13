@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393851"
 ---
 # <a name="exception-thrownv1-etw-event"></a>Exception Thrown_V1 ETW 事件
 此事件會擷取被擲回的例外狀況相關資訊。  

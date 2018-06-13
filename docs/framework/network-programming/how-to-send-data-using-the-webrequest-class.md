@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394653"
 ---
 # <a name="how-to-send-data-using-the-webrequest-class"></a>如何：使用 WebRequest 類別傳送資料
 下列程序描述用來將資料傳送到伺服器的步驟。 本程序通常用於在網頁上張貼資料。  

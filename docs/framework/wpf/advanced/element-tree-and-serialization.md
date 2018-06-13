@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542857"
 ---
 # <a name="element-tree-and-serialization"></a>項目樹狀結構和序列化
 WPF 的程式設計項目通常存在於彼此間某種形式的樹狀結構關聯性。 例如，以 XAML 建立的應用程式 UI 可以概念化為物件樹狀結構。 項目樹狀結構可以進一步細分為兩個不連續但有時平行的樹狀結構︰邏輯樹狀結構和視覺化樹狀結構。 WPF 中的序列化牽涉到儲存這兩種樹狀結構的狀態和應用程式狀態，並可能以 XAML 寫入至檔案。  

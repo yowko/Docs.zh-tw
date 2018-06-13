@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541137"
 ---
 # <a name="windows-forms-control-development-basics"></a>Windows Form 控制項開發的基本概念
 Windows Form 控制項是一個類別，是直接或間接衍生自<xref:System.Windows.Forms.Control?displayProperty=nameWithType>。 下列清單描述開發 Windows Form 控制項的常見案例：  

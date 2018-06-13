@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640553"
 ---
 # <a name="specified-registry-path-does-not-start-with-a-valid-hive-name"></a>指定的登錄路徑開頭不是有效的登錄區名稱
 指定的登錄路徑開頭不是有效的登錄區名稱。 有效的登錄區名稱如下：  

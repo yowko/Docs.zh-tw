@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 821f524cc8ff7f9983f811f539e2badb2306be26
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437699"
 ---
 # <a name="iclrtaskyieldtask-method"></a>ICLRTask::YieldTask 方法
 要求 common language runtime (CLR) 擱工作的目前[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)執行個體所表示，並使用其他工作的處理器時間。  
@@ -47,11 +48,11 @@ HRESULT YieldTask ();
  主機會呼叫`YieldTask`來要求其他工作或處理序的處理器資源。 這個方法主要是讓長時間執行的程式碼放棄 CPU 時間。 執行階段會嘗試將工作的目前`ICLRTask`的執行個體表示它可以產生處理時間，但不保證一定成功的狀態。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
- **程式庫：**包含做為 MSCorEE.dll 中的資源  
+ **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

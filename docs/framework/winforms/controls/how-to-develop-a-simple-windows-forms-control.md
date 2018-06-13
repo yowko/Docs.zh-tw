@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539662"
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>如何：開發簡單的 Windows Forms 控制項
 本節將逐步引導您完成撰寫自訂 Windows Forms 控制項的重要步驟。 在本逐步解說中開發的簡單控制項允許的對齊方式與其<xref:System.Windows.Forms.Control.Text%2A>来變更屬性。 它不會引發或處理事件。  

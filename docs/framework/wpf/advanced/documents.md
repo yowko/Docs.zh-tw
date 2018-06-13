@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542960"
 ---
 # <a name="documents"></a>文件
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供一組多功能的元件，可讓開發人員透過進階的文件功能和改良的閱讀經驗來建置應用程式。 除了增強功能和品質，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 也針對文件封裝、安全性和儲存提供簡化的管理服務。  

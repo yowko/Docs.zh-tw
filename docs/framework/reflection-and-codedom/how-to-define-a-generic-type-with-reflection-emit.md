@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396915"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>如何：使用反映發出定義泛型類型
 本主題示範如何建立具有兩個型別參數的簡單泛型類型、如何將類別條件約束、介面條件約束及特殊條件約束套用至型別參數，以及如何建立成員，以使用類別的型別參數作為參數類型及傳回類型。  

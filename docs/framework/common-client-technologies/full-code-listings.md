@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742019"
 ---
 # <a name="full-code-listings"></a>完整程式碼清單
 本主題包含使用[操作和慣性](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)處理器的應用程式完整程式碼清單。  

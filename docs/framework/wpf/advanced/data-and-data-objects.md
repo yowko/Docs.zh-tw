@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540315"
 ---
 # <a name="data-and-data-objects"></a>資料與資料物件
 拖放作業期間傳輸的資料會儲存在資料物件。  就概念而言，資料物件包含一或多個下列配對：  

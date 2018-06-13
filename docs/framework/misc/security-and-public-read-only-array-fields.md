@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392625"
 ---
 # <a name="security-and-public-read-only-array-fields"></a>安全及公開唯讀陣列欄位
 永遠不會使用來自 managed 程式庫公用唯讀陣列欄位來定義的邊界行為或應用程式的安全性，因為可以修改公用唯讀陣列欄位。  

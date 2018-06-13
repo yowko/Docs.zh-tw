@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364771"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>LINQ to SQL 的典型使用步驟
 若要實作 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 應用程式，請遵循本主題稍後所說明的步驟。 請注意，許多步驟都是選擇性的步驟。 您可以放心使用預設狀態下的物件模型。  

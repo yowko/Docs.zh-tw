@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389414"
 ---
 # <a name="deploying-an-interop-application"></a>部署 Interop 應用程式
 Interop 應用程式通常包含 .NET 用戶端組件、代表各種不同 COM 型別程式庫的一或多個 Interop 組件，以及一或多個已登錄的 COM 元件。 Visual Studio 和 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 提供工具以匯入型別程式庫，並將它轉換成 Interop 組件，如[匯入型別程式庫作為組件](importing-a-type-library-as-an-assembly.md)中所述。 有兩種方式可以部署 Interop 應用程式：  

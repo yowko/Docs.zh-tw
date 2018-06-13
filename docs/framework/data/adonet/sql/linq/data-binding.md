@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365166"
 ---
 # <a name="data-binding"></a>資料繫結
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援與通用控制項，如方格控制項繫結。 具體來說，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]定義繫結至資料方格以及處理主從式繫結，都可以進行顯示和更新的基本模式。  

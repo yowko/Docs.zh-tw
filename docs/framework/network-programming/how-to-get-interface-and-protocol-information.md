@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395082"
 ---
 # <a name="how-to-get-interface-and-protocol-information"></a>如何：取得介面和通訊協定資訊
 這個範例示範如何讀取網路介面的 TCP 統計資料。  

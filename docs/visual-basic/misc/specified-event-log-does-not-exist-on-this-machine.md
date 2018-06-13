@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638697"
 ---
 # <a name="specified-event-log-does-not-exist-on-this-machine"></a>指定的事件記錄檔不存在於這部電腦上
 嘗試存取不存在於這部電腦上的事件記錄檔。  

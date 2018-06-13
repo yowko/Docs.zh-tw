@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395423"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>如何：設定要求的快取原則
 下列範例示範如何設定要求的快取原則。 範例的輸入是如 http://www.contoso.com/ 之類的 URI。  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f7ed7787f0302826cab67664780177f05e551199
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421102"
 ---
 # <a name="icordebugthread2getactivefunctions-method"></a>ICorDebugThread2::GetActiveFunctions 方法
 在每個執行緒框架中取得作用中的函式的相關資訊。  
@@ -55,7 +56,7 @@ HRESULT GetActiveFunctions (
  `GetActiveFunctions`方法主要為了最佳化透過由框架的堆疊追蹤取得相同的資訊並包含原本 ICorDebugILFrame 物件為其完整的堆疊追蹤中的框架。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568780"
 ---
 # <a name="inferring-an-xml-schema"></a>推斷 XML 結構描述
 說明如何使用結構描述物件模型 (SOM) <xref:System.Xml.Schema.XmlSchemaInference> 類別從 XML 文件結構來推斷 XML 結構描述定義語言 (XSD) 結構描述。  

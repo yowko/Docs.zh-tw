@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638865"
 ---
 # <a name="named-argument-not-found-visual-basic"></a>找不到具名引數 (Visual Basic)
 除非具名引數出現在程序定義中，否則不能用於程序引動過程。 您已指定具名引數，但程序並未定義為接受該名稱的引數。  
