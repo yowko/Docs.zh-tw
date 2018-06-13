@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590727"
 ---
 # <a name="introduction-to-the-line-and-shape-controls-visual-studio"></a>Line 和 Shape 控制項簡介 (Visual Studio)
 Visual Basic Power Pack 線條和圖案控制項是一組可讓您在表單和容器上繪製線條和形狀的三個圖形化控制項。 <xref:Microsoft.VisualBasic.PowerPacks.LineShape>控制項用來繪製水平、 垂直和對角線線條。 <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>控制項用來繪製圓形和橢圓形，而<xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>控制項用來繪製的矩形和正方形。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597405"
 ---
 # <a name="39lttypenamegt39-is-a-type-and-cannot-be-used-as-an-expression"></a>&#39;&lt;typename&gt; &#39;是類型，無法當成運算式使用
 需要運算式的地方就會出現類型名稱。 運算式必須包含變數、常數、常值、屬性和 `Function` 程序呼叫的一些組合。  

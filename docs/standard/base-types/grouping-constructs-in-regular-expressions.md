@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579817"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>規則運算式中的群組建構
 群組建構會描寫規則運算式的子運算式，以及擷取輸入字串的子字串。 您可以使用群組建構來執行下列作業：  

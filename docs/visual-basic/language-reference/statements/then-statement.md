@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598394"
 ---
 # <a name="then-statement"></a>Then 陳述式
 引進要編譯或測試的條件，則為 true 時執行的陳述式區塊。  

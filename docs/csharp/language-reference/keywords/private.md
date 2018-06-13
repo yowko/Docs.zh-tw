@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171859"
 ---
 # <a name="private-c-reference"></a>private (C# 參考)
 `private` 關鍵字是成員存取修飾詞。 

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472746"
 ---
 # <a name="connection-string-syntax"></a>連接字串語法
 每個 .NET Framework 資料提供者都擁有一個 `Connection` 物件，繼承自 <xref:System.Data.Common.DbConnection> 以及提供者特定的 <xref:System.Data.Common.DbConnection.ConnectionString%2A> 屬性。 每個提供者的特定連接字串語法會記錄在其 `ConnectionString` 屬性中。 下表列出 .NET Framework 中包含的四個資料提供者。  

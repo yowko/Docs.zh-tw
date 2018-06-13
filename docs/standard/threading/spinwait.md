@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585407"
 ---
 # <a name="spinwait"></a>SpinWait
 <xref:System.Threading.SpinWait?displayProperty=nameWithType> 是一個輕量型同步處理類型，您可以在低階案例中使用此類型，來避免核心事件所需且成本昂貴的環境切換和核心轉換。 在多核心電腦上，預期資源不會長時間保留時，若等待中的執行緒要在使用者模式中進行數十個或數百個週期的微調，然後進行重試以取得資源，此類型可能會更有效率。 如果資源在微調之後可供使用，則您節省了數千個週期。 如果資源仍然無法使用，則您只花費了數個週期，仍可進入以核心為基礎的等候。 這個微調然後等候的組合有時稱為「兩階段等候作業」。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598991"
 ---
 # <a name="argument-cannot-be-an-empty-string"></a>引數不可為空字串
 已定義引數為空字串 ("")。  

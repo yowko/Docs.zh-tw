@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577557"
 ---
 # <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>如何：在 .NET Framework 資料流與 Windows 執行階段資料流之間轉換
 適用 Windows 市集應用程式的 .NET Framework 是完整 .NET Framework 的子集。 基於 Windows 市集應用程式的安全性和其他要求，您無法使用整套 .NET Framework API 開啟和讀取檔案。 如需詳細資訊，請參閱[適用於 Windows 市集應用程式的 .NET 概觀](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)。 不過，您可能會想要使用 .NET Framework API 進行其他資料流管理作業。 若要管理這些資料流，您可能會發現需要在 .NET Framework 資料流類型 (例如 <xref:System.IO.MemoryStream> 或 <xref:System.IO.FileStream>) 和 Windows 執行階段資料流 (例如 [IInputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.iinputstream.aspx)、 [IOutputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ioutputstream.aspx)或 [IRandomAccessStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.irandomaccessstream.aspx)) 之間轉換。  
