@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580373"
 ---
 # <a name="how-to-create-and-execute-a-simple-plinq-query"></a><span data-ttu-id="efea5-102">如何：建立並執行簡單的 PLINQ 查詢</span><span class="sxs-lookup"><span data-stu-id="efea5-102">How to: Create and Execute a Simple PLINQ Query</span></span>
 <span data-ttu-id="efea5-103">下列範例說明如何在來源序列上使用 <xref:System.Linq.ParallelEnumerable.AsParallel%2A> 擴充方法建立簡易平行 LINQ 查詢，以及如何使用 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 方法執行查詢。</span><span class="sxs-lookup"><span data-stu-id="efea5-103">The following example shows how to create a simple Parallel LINQ query by using the <xref:System.Linq.ParallelEnumerable.AsParallel%2A> extension method on the source sequence, and executing the query by using the <xref:System.Linq.ParallelEnumerable.ForAll%2A> method.</span></span>  

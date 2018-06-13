@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574731"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a><span data-ttu-id="5f7bb-102">規則運算式中的替代建構</span><span class="sxs-lookup"><span data-stu-id="5f7bb-102">Alternation Constructs in Regular Expressions</span></span>
 <a name="top"></a> <span data-ttu-id="5f7bb-103">交替建構會修改規則運算式來啟用二選一或條件式比對。</span><span class="sxs-lookup"><span data-stu-id="5f7bb-103">Alternation constructs modify a regular expression to enable either/or or conditional matching.</span></span> <span data-ttu-id="5f7bb-104">.NET 支援下列三種替代建構：</span><span class="sxs-lookup"><span data-stu-id="5f7bb-104">.NET supports three alternation constructs:</span></span>  

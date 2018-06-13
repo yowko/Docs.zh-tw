@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572118"
 ---
 # <a name="select-xml-data-using-xpathnavigator"></a><span data-ttu-id="e3b80-102">使用 XPathNavigator 選取 XML 資料</span><span class="sxs-lookup"><span data-stu-id="e3b80-102">Select XML Data Using XPathNavigator</span></span>
 <span data-ttu-id="e3b80-103"><xref:System.Xml.XPath.XPathNavigator> 類別提供一組方法，可以使用 XPath 運算式選取 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 物件中的一組節點。</span><span class="sxs-lookup"><span data-stu-id="e3b80-103">The <xref:System.Xml.XPath.XPathNavigator> class provides a set of methods used to select a set of nodes in an <xref:System.Xml.XPath.XPathDocument> or <xref:System.Xml.XmlDocument> object using an XPath expression.</span></span> <span data-ttu-id="e3b80-104">一旦選取，即可重複處理已選取的節點集。</span><span class="sxs-lookup"><span data-stu-id="e3b80-104">Once selected, you can iterate over the selected set of nodes.</span></span>  

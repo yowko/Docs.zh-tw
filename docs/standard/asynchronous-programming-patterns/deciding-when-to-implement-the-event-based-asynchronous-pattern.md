@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570974"
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a><span data-ttu-id="0eb29-102">決定何時實作事件架構非同步模式</span><span class="sxs-lookup"><span data-stu-id="0eb29-102">Deciding When to Implement the Event-based Asynchronous Pattern</span></span>
 <span data-ttu-id="0eb29-103">事件架構非同步模式提供的模式可公開類別的非同步行為。</span><span class="sxs-lookup"><span data-stu-id="0eb29-103">The Event-based Asynchronous Pattern provides a pattern for exposing the asynchronous behavior of a class.</span></span> <span data-ttu-id="0eb29-104">引進此模式之後，[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 定義兩種模式來公開非同步行為：以 <xref:System.IAsyncResult?displayProperty=nameWithType> 介面為基礎的非同步模式與事件架構模式。</span><span class="sxs-lookup"><span data-stu-id="0eb29-104">With the introduction of this pattern, the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] defines two patterns for exposing asynchronous behavior: the Asynchronous Pattern based on the <xref:System.IAsyncResult?displayProperty=nameWithType> interface, and the event-based pattern.</span></span> <span data-ttu-id="0eb29-105">本主題說明適合實作這兩種模式的時機。</span><span class="sxs-lookup"><span data-stu-id="0eb29-105">This topic describes when it is appropriate for you to implement both patterns.</span></span>  

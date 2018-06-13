@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547195"
 ---
 # <a name="staticresource-markup-extension"></a><span data-ttu-id="3b1a7-102">StaticResource 標記延伸</span><span class="sxs-lookup"><span data-stu-id="3b1a7-102">StaticResource Markup Extension</span></span>
 <span data-ttu-id="3b1a7-103">提供的任何值[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]property 屬性，查看已定義之資源的參考。</span><span class="sxs-lookup"><span data-stu-id="3b1a7-103">Provides a value for any [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] property attribute by looking up a reference to an already defined resource.</span></span> <span data-ttu-id="3b1a7-104">該資源的查閱行為相當於載入時查閱，從目前標記先前已載入的資源將會尋找[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]頁面以及其他應用程式的來源，而且將會產生做為該資源值在執行階段物件的屬性值。</span><span class="sxs-lookup"><span data-stu-id="3b1a7-104">Lookup behavior for that resource is analogous to load-time lookup, which will look for resources that were previously loaded from the markup of the current [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] page as well as other application sources, and will generate that resource value as the property value in the run-time objects.</span></span>  

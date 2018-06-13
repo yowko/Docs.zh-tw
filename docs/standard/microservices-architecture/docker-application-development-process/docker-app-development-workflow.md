@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579674"
 ---
 # <a name="development-workflow-for-docker-apps"></a><span data-ttu-id="ff2b8-103">Docker 應用程式的開發工作流程</span><span class="sxs-lookup"><span data-stu-id="ff2b8-103">Development workflow for Docker apps</span></span>
 

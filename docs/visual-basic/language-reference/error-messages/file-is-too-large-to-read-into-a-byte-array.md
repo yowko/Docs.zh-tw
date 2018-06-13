@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585921"
 ---
 # <a name="file-is-too-large-to-read-into-a-byte-array"></a><span data-ttu-id="51bf5-102">檔案太大，無法讀入位元組陣列中</span><span class="sxs-lookup"><span data-stu-id="51bf5-102">File is too large to read into a byte array</span></span>
 <span data-ttu-id="51bf5-103">您嘗試讀取的位元組陣列的檔案大小超過 4 GB。</span><span class="sxs-lookup"><span data-stu-id="51bf5-103">The size of the file you are attempting to read into a byte array exceeds 4 GB.</span></span> <span data-ttu-id="51bf5-104">`My.Computer.FileSystem.ReadAllBytes`方法無法讀取超過此大小的檔案。</span><span class="sxs-lookup"><span data-stu-id="51bf5-104">The `My.Computer.FileSystem.ReadAllBytes` method cannot read a file that exceeds this size.</span></span>  

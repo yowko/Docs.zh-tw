@@ -1,43 +1,33 @@
 ---
-title: "自訂複合設計工具 - 工作流程項目展示器"
-ms.custom: 
+title: 自訂複合設計工具 - 工作流程項目展示器
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b529d1c150f686fb4a39f968001c9ac03c7c1dc0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5bdc952bb4b920f0b5a7d272423ec2d922a94798
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517114"
 ---
-# <a name="custom-composite-designers---workflow-item-presenter"></a><span data-ttu-id="9d9b4-102">自訂複合設計工具 - 工作流程項目展示器</span><span class="sxs-lookup"><span data-stu-id="9d9b4-102">Custom Composite Designers - Workflow Item Presenter</span></span>
-<span data-ttu-id="9d9b4-103"><xref:System.Activities.Presentation.WorkflowItemPresenter>可允許的 「 卸除區 」 可以放置任意活動建立 WF 設計工具程式設計模型中的關鍵類型。</span><span class="sxs-lookup"><span data-stu-id="9d9b4-103">The <xref:System.Activities.Presentation.WorkflowItemPresenter> is a key type in the WF designer programming model that allows for the creation of a "drop zone" where an arbitrary activity can be placed.</span></span> <span data-ttu-id="9d9b4-104">這個範例示範如何建置會呈現這類 「 卸除區。 」 的活動設計工具</span><span class="sxs-lookup"><span data-stu-id="9d9b4-104">This sample shows how to build an activity designer that surfaces such a "drop zone."</span></span>  
+# <a name="custom-composite-designers---workflow-item-presenter"></a><span data-ttu-id="8eb43-102">自訂複合設計工具 - 工作流程項目展示器</span><span class="sxs-lookup"><span data-stu-id="8eb43-102">Custom Composite Designers - Workflow Item Presenter</span></span>
+<span data-ttu-id="8eb43-103"><xref:System.Activities.Presentation.WorkflowItemPresenter>可允許的 「 卸除區 」 可以放置任意活動建立 WF 設計工具程式設計模型中的關鍵類型。</span><span class="sxs-lookup"><span data-stu-id="8eb43-103">The <xref:System.Activities.Presentation.WorkflowItemPresenter> is a key type in the WF designer programming model that allows for the creation of a "drop zone" where an arbitrary activity can be placed.</span></span> <span data-ttu-id="8eb43-104">這個範例示範如何建置會呈現這類 「 卸除區。 」 的活動設計工具</span><span class="sxs-lookup"><span data-stu-id="8eb43-104">This sample shows how to build an activity designer that surfaces such a "drop zone."</span></span>  
   
- <span data-ttu-id="9d9b4-105">這個範例會示範下列情況：</span><span class="sxs-lookup"><span data-stu-id="9d9b4-105">This sample demonstrates:</span></span>  
+ <span data-ttu-id="8eb43-105">這個範例會示範下列情況：</span><span class="sxs-lookup"><span data-stu-id="8eb43-105">This sample demonstrates:</span></span>  
   
-## <a name="demonstrates"></a><span data-ttu-id="9d9b4-106">示範</span><span class="sxs-lookup"><span data-stu-id="9d9b4-106">Demonstrates</span></span>  
+## <a name="demonstrates"></a><span data-ttu-id="8eb43-106">示範</span><span class="sxs-lookup"><span data-stu-id="8eb43-106">Demonstrates</span></span>  
   
--   <span data-ttu-id="9d9b4-107">建立具有 <xref:System.Activities.Presentation.WorkflowItemPresenter> 的自訂活動設計工具。</span><span class="sxs-lookup"><span data-stu-id="9d9b4-107">Creating a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span></span>  
+-   <span data-ttu-id="8eb43-107">建立具有 <xref:System.Activities.Presentation.WorkflowItemPresenter> 的自訂活動設計工具。</span><span class="sxs-lookup"><span data-stu-id="8eb43-107">Creating a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span></span>  
   
--   <span data-ttu-id="9d9b4-108">使用中繼資料存放區登錄自訂設計工具。</span><span class="sxs-lookup"><span data-stu-id="9d9b4-108">Registering the custom designer using the metadata store.</span></span>  
+-   <span data-ttu-id="8eb43-108">使用中繼資料存放區登錄自訂設計工具。</span><span class="sxs-lookup"><span data-stu-id="8eb43-108">Registering the custom designer using the metadata store.</span></span>  
   
--   <span data-ttu-id="9d9b4-109">以宣告和強制方式設計重新裝載之工具箱的程式。</span><span class="sxs-lookup"><span data-stu-id="9d9b4-109">Programming the rehosted toolbox declaratively and imperatively.</span></span>  
+-   <span data-ttu-id="8eb43-109">以宣告和強制方式設計重新裝載之工具箱的程式。</span><span class="sxs-lookup"><span data-stu-id="8eb43-109">Programming the rehosted toolbox declaratively and imperatively.</span></span>  
   
-## <a name="sample-details"></a><span data-ttu-id="9d9b4-110">範例詳細資料</span><span class="sxs-lookup"><span data-stu-id="9d9b4-110">Sample Details</span></span>  
- <span data-ttu-id="9d9b4-111">這個範例的程式碼會示範：</span><span class="sxs-lookup"><span data-stu-id="9d9b4-111">The code for this sample shows:</span></span>  
+## <a name="sample-details"></a><span data-ttu-id="8eb43-110">範例詳細資料</span><span class="sxs-lookup"><span data-stu-id="8eb43-110">Sample Details</span></span>  
+ <span data-ttu-id="8eb43-111">這個範例的程式碼會示範：</span><span class="sxs-lookup"><span data-stu-id="8eb43-111">The code for this sample shows:</span></span>  
   
--   <span data-ttu-id="9d9b4-112">針對 `SimpleNativeActivity` 類別建置自訂活動設計工具。</span><span class="sxs-lookup"><span data-stu-id="9d9b4-112">The custom activity designer is built for the `SimpleNativeActivity` class.</span></span>  
+-   <span data-ttu-id="8eb43-112">針對 `SimpleNativeActivity` 類別建置自訂活動設計工具。</span><span class="sxs-lookup"><span data-stu-id="8eb43-112">The custom activity designer is built for the `SimpleNativeActivity` class.</span></span>  
   
--   <span data-ttu-id="9d9b4-113">建立具有 <xref:System.Activities.Presentation.WorkflowItemPresenter> 的自訂活動設計工具</span><span class="sxs-lookup"><span data-stu-id="9d9b4-113">The creation of a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span></span>  
+-   <span data-ttu-id="8eb43-113">建立具有 <xref:System.Activities.Presentation.WorkflowItemPresenter> 的自訂活動設計工具</span><span class="sxs-lookup"><span data-stu-id="8eb43-113">The creation of a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span></span>  
   
 ```xaml  
 <sap:ActivityDesigner x:Class="Microsoft.Samples.UsingWorkflowItemPresenter.SimpleNativeDesigner"  
@@ -73,23 +63,23 @@ ms.lasthandoff: 12/22/2017
 </sap:ActivityDesigner>  
 ```  
   
- <span data-ttu-id="9d9b4-114">請注意繫結至 `ModelItem.Body` 的 WPF 資料繫結用法。</span><span class="sxs-lookup"><span data-stu-id="9d9b4-114">Note the use of WPF data binding to bind to `ModelItem.Body`.</span></span> <span data-ttu-id="9d9b4-115">`ModelItem`位於屬性<xref:System.Activities.Presentation.ActivityDesigner>基礎物件在設計工具使用，在此情況下，它會參考**SimpleNativeActivity**。</span><span class="sxs-lookup"><span data-stu-id="9d9b4-115">`ModelItem` is the property on <xref:System.Activities.Presentation.ActivityDesigner> that refers to the underlying object the designer is being used for, in this case, **SimpleNativeActivity**.</span></span>  
+ <span data-ttu-id="8eb43-114">請注意繫結至 `ModelItem.Body` 的 WPF 資料繫結用法。</span><span class="sxs-lookup"><span data-stu-id="8eb43-114">Note the use of WPF data binding to bind to `ModelItem.Body`.</span></span> <span data-ttu-id="8eb43-115">`ModelItem` 位於屬性<xref:System.Activities.Presentation.ActivityDesigner>基礎物件在設計工具使用，在此情況下，它會參考**SimpleNativeActivity**。</span><span class="sxs-lookup"><span data-stu-id="8eb43-115">`ModelItem` is the property on <xref:System.Activities.Presentation.ActivityDesigner> that refers to the underlying object the designer is being used for, in this case, **SimpleNativeActivity**.</span></span>  
   
-#### <a name="to-setup-build-and-run-the-sample"></a><span data-ttu-id="9d9b4-116">若要設定、建置及執行範例</span><span class="sxs-lookup"><span data-stu-id="9d9b4-116">To setup, build, and run the sample</span></span>  
+#### <a name="to-setup-build-and-run-the-sample"></a><span data-ttu-id="8eb43-116">若要設定、建置及執行範例</span><span class="sxs-lookup"><span data-stu-id="8eb43-116">To setup, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="9d9b4-117">在 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 中開啟方案。</span><span class="sxs-lookup"><span data-stu-id="9d9b4-117">Open the solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
+1.  <span data-ttu-id="8eb43-117">在 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 中開啟方案。</span><span class="sxs-lookup"><span data-stu-id="8eb43-117">Open the solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-2.  <span data-ttu-id="9d9b4-118">按 F5 編譯和執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="9d9b4-118">Press F5 to compile and run the application.</span></span>  
+2.  <span data-ttu-id="8eb43-118">按 F5 編譯和執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="8eb43-118">Press F5 to compile and run the application.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="9d9b4-119">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="9d9b4-119">The samples may already be installed on your machine.</span></span> <span data-ttu-id="9d9b4-120">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="9d9b4-120">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="8eb43-119">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="8eb43-119">The samples may already be installed on your machine.</span></span> <span data-ttu-id="8eb43-120">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="8eb43-120">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="9d9b4-121">如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。</span><span class="sxs-lookup"><span data-stu-id="9d9b4-121">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="9d9b4-122">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="9d9b4-122">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="8eb43-121">如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。</span><span class="sxs-lookup"><span data-stu-id="8eb43-121">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="8eb43-122">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="8eb43-122">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`  
   
-## <a name="see-also"></a><span data-ttu-id="9d9b4-123">請參閱</span><span class="sxs-lookup"><span data-stu-id="9d9b4-123">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="8eb43-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8eb43-123">See Also</span></span>  
  <xref:System.Activities.Presentation.WorkflowItemPresenter>  
- [<span data-ttu-id="9d9b4-124">使用工作流程設計工具開發應用程式</span><span class="sxs-lookup"><span data-stu-id="9d9b4-124">Developing Applications with the Workflow Designer</span></span>](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)
+ [<span data-ttu-id="8eb43-124">使用工作流程設計工具開發應用程式</span><span class="sxs-lookup"><span data-stu-id="8eb43-124">Developing Applications with the Workflow Designer</span></span>](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

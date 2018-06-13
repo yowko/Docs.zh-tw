@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637891"
 ---
 # <a name="the-specified-path-does-not-exist"></a><span data-ttu-id="bb1d2-102">指定路徑不存在</span><span class="sxs-lookup"><span data-stu-id="bb1d2-102">The specified path does not exist</span></span>
 <span data-ttu-id="bb1d2-103">指定的路徑不存在，可能是因為結合字串時發生錯誤。</span><span class="sxs-lookup"><span data-stu-id="bb1d2-103">A specified path does not exist, perhaps due to an error combining strings.</span></span>  

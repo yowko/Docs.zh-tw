@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569885"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a><span data-ttu-id="986d5-102">在 .NET 中修剪和移除字串中的字元</span><span class="sxs-lookup"><span data-stu-id="986d5-102">Trimming and Removing Characters from Strings in .NET</span></span>
 <span data-ttu-id="986d5-103">如果您將句子剖析成個別文字，最後可能會得到許多文字，但文字任一端有空格 (也稱為空白字元)。</span><span class="sxs-lookup"><span data-stu-id="986d5-103">If you are parsing a sentence into individual words, you might end up with words that have blank spaces (also called white spaces) on either end of the word.</span></span> <span data-ttu-id="986d5-104">在這種情況下，您可以使用 **System.String** 類別中的其中一個 Trim 方法，從字串中的指定位置移除任意數目的空格或其他字元。</span><span class="sxs-lookup"><span data-stu-id="986d5-104">In this situation, you can use one of the trim methods in the **System.String** class to remove any number of spaces or other characters from a specified position in the string.</span></span> <span data-ttu-id="986d5-105">下表描述可用的 Trim 方法。</span><span class="sxs-lookup"><span data-stu-id="986d5-105">The following table describes the available trim methods.</span></span>  

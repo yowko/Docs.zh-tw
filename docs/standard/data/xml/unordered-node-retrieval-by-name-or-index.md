@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572937"
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a><span data-ttu-id="f3a70-102">根據名稱或索引擷取的未排序節點</span><span class="sxs-lookup"><span data-stu-id="f3a70-102">Unordered Node Retrieval by Name or Index</span></span>
 <span data-ttu-id="f3a70-103">根據全球資訊網協會 (W3C) 規格中的說明，**XmlNamedNodeMap** 是一種 NamedNodeMap，若要處理的是未排序節點集，則必須使用它，因為它可以根據名稱或索引而參考節點。</span><span class="sxs-lookup"><span data-stu-id="f3a70-103">The **XmlNamedNodeMap** is described in the World Wide Web Consortium (W3C) specification as the NamedNodeMap and is required to handle an unordered set of nodes with the ability to reference nodes by their name or index.</span></span> <span data-ttu-id="f3a70-104">存取 **XmlNamedNodeMap** 的唯一方法，是當 **XmlNamedNodeMap** 經由方法或屬性傳回時。</span><span class="sxs-lookup"><span data-stu-id="f3a70-104">The only way you have access to an **XmlNamedNodeMap** is when an **XmlNamedNodeMap** is returned through a method or property.</span></span> <span data-ttu-id="f3a70-105">有三種方法或屬性會傳回 **XmlNamedNodeMap**：</span><span class="sxs-lookup"><span data-stu-id="f3a70-105">There are three methods or properties that return an **XmlNamedNodeMap**:</span></span>  

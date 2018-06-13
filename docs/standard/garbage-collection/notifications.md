@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579154"
 ---
 # <a name="garbage-collection-notifications"></a><span data-ttu-id="e175c-102">記憶體回收告知</span><span class="sxs-lookup"><span data-stu-id="e175c-102">Garbage Collection Notifications</span></span>
 <span data-ttu-id="e175c-103">在某些情況下，通用語言執行平台 (CLR) 所執行的完整記憶體回收 (也就是層代 2 回收) 可能會降低效能。</span><span class="sxs-lookup"><span data-stu-id="e175c-103">There are situations in which a full garbage collection (that is, a generation 2 collection) by the common language runtime may adversely affect performance.</span></span> <span data-ttu-id="e175c-104">這是一個問題，特別會發生在處理大量要求的伺服器上；在此情況下，完整記憶體回收可能會導致要求逾時。若要避免在關鍵期間發生完整回收，您可以在接近完整記憶體回收時收到通知，然後採取行動將工作負載重新導向至另一個伺服器執行個體。</span><span class="sxs-lookup"><span data-stu-id="e175c-104">This can be an issue particularly with servers that process large volumes of requests; in this case, a long garbage collection can cause a request time-out. To prevent a full collection from occurring during a critical period, you can be notified that a full garbage collection is approaching and then take action to redirect the workload to another server instance.</span></span> <span data-ttu-id="e175c-105">您也可以自行引發回收，前提是目前的伺服器執行個體不需要處理要求。</span><span class="sxs-lookup"><span data-stu-id="e175c-105">You can also induce a collection yourself, provided that the current server instance does not need to process requests.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549123"
 ---
 # <a name="typography-in-wpf"></a><span data-ttu-id="4478f-102">WPF 中的印刷樣式</span><span class="sxs-lookup"><span data-stu-id="4478f-102">Typography in WPF</span></span>
 <span data-ttu-id="4478f-103">本主題將介紹 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的主要印刷樣式功能。</span><span class="sxs-lookup"><span data-stu-id="4478f-103">This topic introduces the major typographic features of [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="4478f-104">這些功能包括提升文字轉譯的品質與效能、[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 印刷樣式支援、已增強的國際文字、已增強的字型支援，以及新的文字應用程式開發介面 (API)。</span><span class="sxs-lookup"><span data-stu-id="4478f-104">These features include improved quality and performance of text rendering, [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] typography support, enhanced international text, enhanced font support, and new text application programming interfaces (APIs).</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578231"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a><span data-ttu-id="0bff5-102">推斷結構描述節點型別與結構的規則</span><span class="sxs-lookup"><span data-stu-id="0bff5-102">Rules for Inferring Schema Node Types and Structure</span></span>
 <span data-ttu-id="0bff5-103">本主題說明結構描述推斷程序如何將 XML 文件中所發現的節點型別轉譯為 XML 結構描述定義語言 (XSD) 結構。</span><span class="sxs-lookup"><span data-stu-id="0bff5-103">This topic describes how the schema inference process translates the node types in an XML document to an XML Schema definition language (XSD) structure.</span></span>  

@@ -42,6 +42,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579856"
 ---
 # <a name="the-regular-expression-object-model"></a><span data-ttu-id="4b189-102">規則運算式物件模型</span><span class="sxs-lookup"><span data-stu-id="4b189-102">The Regular Expression Object Model</span></span>
 <a name="introduction"></a> <span data-ttu-id="4b189-103">本主題說明用來處理 .NET 規則運算式的物件模型。</span><span class="sxs-lookup"><span data-stu-id="4b189-103">This topic describes the object model used in working with .NET regular expressions.</span></span> <span data-ttu-id="4b189-104">它包含以下各節：</span><span class="sxs-lookup"><span data-stu-id="4b189-104">It contains the following sections:</span></span>  

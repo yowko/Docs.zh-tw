@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerCallback::AssemblyUnloadStarted 方法"
-ms.custom: 
+title: ICorProfilerCallback::AssemblyUnloadStarted 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerCallback.AssemblyUnloadStarted
 api_location:
@@ -23,44 +15,41 @@ helpviewer_keywords:
 ms.assetid: 6e47b7e5-0335-4dd3-8c42-d3c07d62b102
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9984cff1d3c4013d66bc9eb7dbe5dbe7b61d2ba3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 10475831be02bd4a958da84b7b75409cf3ad4097
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450521"
 ---
-# <a name="icorprofilercallbackassemblyunloadstarted-method"></a><span data-ttu-id="21e61-102">ICorProfilerCallback::AssemblyUnloadStarted 方法</span><span class="sxs-lookup"><span data-stu-id="21e61-102">ICorProfilerCallback::AssemblyUnloadStarted Method</span></span>
-<span data-ttu-id="21e61-103">通知分析工具正在卸載組件。</span><span class="sxs-lookup"><span data-stu-id="21e61-103">Notifies the profiler that an assembly is being unloaded.</span></span>  
+# <a name="icorprofilercallbackassemblyunloadstarted-method"></a><span data-ttu-id="cc3dc-102">ICorProfilerCallback::AssemblyUnloadStarted 方法</span><span class="sxs-lookup"><span data-stu-id="cc3dc-102">ICorProfilerCallback::AssemblyUnloadStarted Method</span></span>
+<span data-ttu-id="cc3dc-103">通知分析工具正在卸載組件。</span><span class="sxs-lookup"><span data-stu-id="cc3dc-103">Notifies the profiler that an assembly is being unloaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="21e61-104">語法</span><span class="sxs-lookup"><span data-stu-id="21e61-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cc3dc-104">語法</span><span class="sxs-lookup"><span data-stu-id="cc3dc-104">Syntax</span></span>  
   
 ```  
 HRESULT AssemblyUnloadStarted(  
     [in] AssemblyID assemblyId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="21e61-105">參數</span><span class="sxs-lookup"><span data-stu-id="21e61-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="cc3dc-105">參數</span><span class="sxs-lookup"><span data-stu-id="cc3dc-105">Parameters</span></span>  
  `assemblyId`  
- <span data-ttu-id="21e61-106">[in]識別正在卸載組件。</span><span class="sxs-lookup"><span data-stu-id="21e61-106">[in] Identifies the assembly that is being unloaded.</span></span>  
+ <span data-ttu-id="cc3dc-106">[in]識別正在卸載組件。</span><span class="sxs-lookup"><span data-stu-id="cc3dc-106">[in] Identifies the assembly that is being unloaded.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="21e61-107">備註</span><span class="sxs-lookup"><span data-stu-id="21e61-107">Remarks</span></span>  
- <span data-ttu-id="21e61-108">值`assemblyId`不正確資訊要求之後`AssemblyUnloadStarted`方法會傳回-這是程式碼剖析工具來取得這個組件的相關資訊的最後機會。</span><span class="sxs-lookup"><span data-stu-id="21e61-108">The value of `assemblyId` is not valid for an information request after the `AssemblyUnloadStarted` method returns — this is the profiler's last chance to get information about this assembly.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cc3dc-107">備註</span><span class="sxs-lookup"><span data-stu-id="cc3dc-107">Remarks</span></span>  
+ <span data-ttu-id="cc3dc-108">值`assemblyId`不正確資訊要求之後`AssemblyUnloadStarted`方法會傳回-這是程式碼剖析工具來取得這個組件的相關資訊的最後機會。</span><span class="sxs-lookup"><span data-stu-id="cc3dc-108">The value of `assemblyId` is not valid for an information request after the `AssemblyUnloadStarted` method returns — this is the profiler's last chance to get information about this assembly.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="21e61-109">需求</span><span class="sxs-lookup"><span data-stu-id="21e61-109">Requirements</span></span>  
- <span data-ttu-id="21e61-110">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="21e61-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cc3dc-109">需求</span><span class="sxs-lookup"><span data-stu-id="cc3dc-109">Requirements</span></span>  
+ <span data-ttu-id="cc3dc-110">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="cc3dc-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="21e61-111">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="21e61-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="cc3dc-111">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="cc3dc-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="21e61-112">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="21e61-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="cc3dc-112">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cc3dc-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="21e61-113">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="21e61-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="cc3dc-113">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cc3dc-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="21e61-114">請參閱</span><span class="sxs-lookup"><span data-stu-id="21e61-114">See Also</span></span>  
- [<span data-ttu-id="21e61-115">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="21e61-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [<span data-ttu-id="21e61-116">AssemblyUnloadFinished 方法</span><span class="sxs-lookup"><span data-stu-id="21e61-116">AssemblyUnloadFinished Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadfinished-method.md)
+## <a name="see-also"></a><span data-ttu-id="cc3dc-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cc3dc-114">See Also</span></span>  
+ [<span data-ttu-id="cc3dc-115">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="cc3dc-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
+ [<span data-ttu-id="cc3dc-116">AssemblyUnloadFinished 方法</span><span class="sxs-lookup"><span data-stu-id="cc3dc-116">AssemblyUnloadFinished Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadfinished-method.md)
