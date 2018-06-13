@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1fa1081afc77c8116d8858c187401555409b4dcd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453977"
 ---
 # <a name="icorprofilercallbackjitcompilationstarted-method"></a>ICorProfilerCallback::JITCompilationStarted 方法
 通知分析工具在 just-in-time (JIT) 編譯器已開始編譯函式。  
@@ -49,7 +50,7 @@ HRESULT JITCompilationStarted(
  程式碼剖析工具必須在其中兩個執行緒同時進行回呼的情況下支援 JIT 回呼的序列。 例如，執行緒的呼叫`JITCompilationStarted`。 不過，執行緒的呼叫之前`JITCompilationFinished`，執行緒 B 呼叫[icorprofilercallback:: Exceptionsearchfunctionenter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md)函式識別碼從執行緒 A 的`JITCompilationStarted`回呼。 它可能會顯示該函式 ID 尚未有效期不應因為呼叫`JITCompilationFinished`有尚未收到分析工具。 不過，在這類情況下，函式識別碼無效。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

@@ -22,9 +22,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: db818f638898da6379ce4dadfada8eccc3adeb12
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455415"
 ---
 # <a name="strongnameerrorinfo-function"></a>StrongNameErrorInfo 函式
 取得其中一個強式名稱的函式所引發的最後一個錯誤碼。  
@@ -44,11 +45,11 @@ HRESULT StrongNameErrorInfo ();
  大部分的強式名稱的方法會傳回簡單`true`或`false`成功完成的指示。 使用`StrongNameErrorInfo`函式來擷取指定強式名稱的函式所產生的最後一個錯誤的 HRESULT。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** StrongName.h  
   
- **程式庫：**包含做為 MsCorEE.dll 中的資源  
+ **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 581f42dc83622712dbb30ef556a481388bafe259
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455568"
 ---
 # <a name="profiling-unmanaged-api-reference"></a>分析 (Unmanaged API 參考)
 分析 API 可讓監視程式執行的 common language runtime (CLR) 分析工具。  

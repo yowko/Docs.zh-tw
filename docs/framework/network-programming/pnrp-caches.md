@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397477"
 ---
 # <a name="pnrp-caches"></a>PNRP 快取
 對等名稱解析通訊協定 (PNRP) 快取是以演算法方式選取對等上所維護之對等端點的本機集合。  

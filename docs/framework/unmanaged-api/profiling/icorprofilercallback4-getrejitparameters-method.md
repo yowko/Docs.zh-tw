@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f628bd1270b529264c14236ca7cdc03bf7afd9d8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454201"
 ---
 # <a name="icorprofilercallback4getrejitparameters-method"></a>ICorProfilerCallback4::GetReJITParameters 方法
 可讓程式碼分析工具來設定替代程式碼產生旗標，為新的重新編譯的方法主體。  
@@ -46,7 +47,7 @@ HRESULT GetReJITParameters(     [in] ModuleID moduleId,     [in] mdMethodDef met
  CLR 問題`GetReJITParameters`回呼，讓分析工具可以指定重新編譯特定的方法的參數。 `GetReJITParameters`回呼發出一次，每個函式，分析工具所提供的參數會套用至該函式的所有執行個體。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572966"
 ---
 # <a name="naming-guidelines"></a>命名方針
 下一組一致的命名慣例架構的開發工作可以是主要帳目加入架構的可用性。 它可讓廣泛的分開專案的開發人員所使用的架構。 表單的一致性，超出架構項目的名稱必須容易了解，並必須傳遞每個項目的函式。  

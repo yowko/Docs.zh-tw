@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578303"
 ---
 # <a name="standard-timespan-format-strings"></a>標準 TimeSpan 格式字串
 <a name="Top"></a> 標準 <xref:System.TimeSpan> 格式字串會使用單一格式規範，來定義從格式化作業所產生之 <xref:System.TimeSpan> 值的文字表示。 任何包含一個以上字元 (包含空格) 的格式字串，都會解譯為自訂 <xref:System.TimeSpan> 格式字串。 如需詳細資訊，請參閱[自訂 TimeSpan 格式字串](../../../docs/standard/base-types/custom-timespan-format-strings.md)。  
