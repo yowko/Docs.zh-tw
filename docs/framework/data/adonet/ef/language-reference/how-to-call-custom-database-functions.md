@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762841"
 ---
 # <a name="how-to-call-custom-database-functions"></a><span data-ttu-id="620b7-102">如何：呼叫自訂資料庫函式</span><span class="sxs-lookup"><span data-stu-id="620b7-102">How to: Call Custom Database Functions</span></span>
 <span data-ttu-id="620b7-103">本主題描述如何呼叫資料庫中定義的自訂資料庫函式，而資料庫是來自 LINQ to Entities 查詢。</span><span class="sxs-lookup"><span data-stu-id="620b7-103">This topic describes how to call custom functions that are defined in the database from within LINQ to Entities queries.</span></span>  

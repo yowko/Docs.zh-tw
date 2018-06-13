@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359166"
 ---
 # <a name="xml-documentation-comments-c-programming-guide"></a><span data-ttu-id="6b46a-102">XML 文件註解 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="6b46a-102">XML Documentation Comments (C# Programming Guide)</span></span>
 <span data-ttu-id="6b46a-103">在 Visual C# 中，您可以加入程式碼的文件，加入的方法是在原始程式碼中，於註解所參考程式碼區塊之前的特殊註解欄位 (以三個斜線表示) 中加入 XML 項目，例如：</span><span class="sxs-lookup"><span data-stu-id="6b46a-103">In Visual C# you can create documentation for your code by including XML elements in special comment fields (indicated by triple slashes) in the source code directly before the code block to which the comments refer, for example:</span></span>  

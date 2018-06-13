@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359445"
 ---
 # <a name="c-walkthroughs"></a><span data-ttu-id="8471e-102">C# 逐步解說</span><span class="sxs-lookup"><span data-stu-id="8471e-102">C# Walkthroughs</span></span>
 <span data-ttu-id="8471e-103">逐步解說提供常見情節的逐步指示，使其成為開始學習產品或特定功能區域的最佳去處。</span><span class="sxs-lookup"><span data-stu-id="8471e-103">Walkthroughs give step-by-step instructions for common scenarios, which makes them a good place to start learning about the product or a particular feature area.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334710"
 ---
 # <a name="conversion-operators-c-programming-guide"></a><span data-ttu-id="cae93-102">轉換運算子 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="cae93-102">Conversion Operators (C# Programming Guide)</span></span>
 <span data-ttu-id="cae93-103">C# 可讓程式設計人員宣告類別或結構轉換，使類別或結構能夠與其他類別、結構或基本類型相互轉換。</span><span class="sxs-lookup"><span data-stu-id="cae93-103">C# enables programmers to declare conversions on classes or structs so that classes or structs can be converted to and/or from other classes or structs, or basic types.</span></span> <span data-ttu-id="cae93-104">轉換的定義方式類似運算子，並會以轉換的目標類型命名。</span><span class="sxs-lookup"><span data-stu-id="cae93-104">Conversions are defined like operators and are named for the type to which they convert.</span></span> <span data-ttu-id="cae93-105">在引數所要轉換的目標類型或轉換的結果類型中，必須有一個是包含類型，但不能兩者都是。</span><span class="sxs-lookup"><span data-stu-id="cae93-105">Either the type of the argument to be converted, or the type of the result of the conversion, but not both, must be the containing type.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761983"
 ---
 # <a name="gt-greater-than-or-equal-to-entity-sql"></a><span data-ttu-id="83b0c-102">&gt;= (大於或等於) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="83b0c-102">&gt;= (Greater Than or Equal To) (Entity SQL)</span></span>
 <span data-ttu-id="83b0c-103">比較兩個運算式來判斷左運算式的值是否大於或等於右運算式。</span><span class="sxs-lookup"><span data-stu-id="83b0c-103">Compares two expressions to determine whether the left expression has a value greater than or equal to the right expression.</span></span>  

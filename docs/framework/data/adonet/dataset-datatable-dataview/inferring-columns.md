@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761073"
 ---
 # <a name="inferring-columns"></a><span data-ttu-id="4b36d-102">推斷資料行</span><span class="sxs-lookup"><span data-stu-id="4b36d-102">Inferring Columns</span></span>
 <span data-ttu-id="4b36d-103">ADO.NET 從 XML 文件中判斷要將哪些項目推斷成 <xref:System.Data.DataSet> 的資料表後，接著就會推斷這些資料表的資料行。</span><span class="sxs-lookup"><span data-stu-id="4b36d-103">After ADO.NET has determined from an XML document which elements to infer as tables for a <xref:System.Data.DataSet>, it then infers the columns for those tables.</span></span> <span data-ttu-id="4b36d-104">ADO.NET 2.0 導入了新的結構描述推斷引擎，為每個推斷強型別的資料型別**simpleType**項目。</span><span class="sxs-lookup"><span data-stu-id="4b36d-104">ADO.NET 2.0 introduced a new schema inference engine that infers a strongly typed data type for each **simpleType** element.</span></span> <span data-ttu-id="4b36d-105">在較舊的版本中的資料型別推斷**simpleType**項目一律為**xsd: string**。</span><span class="sxs-lookup"><span data-stu-id="4b36d-105">In previous versions, the data type of an inferred **simpleType** element was always **xsd:string**.</span></span>  

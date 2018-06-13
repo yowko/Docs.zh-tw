@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334531"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a><span data-ttu-id="277b4-102">執行階段中的泛型 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="277b4-102">Generics in the Run Time (C# Programming Guide)</span></span>
 <span data-ttu-id="277b4-103">當泛型型別或方法編譯到 Microsoft intermediate language (MSIL) 時，會包含可將其識別為具有型別參數的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="277b4-103">When a generic type or method is compiled into Microsoft intermediate language (MSIL), it contains metadata that identifies it as having type parameters.</span></span> <span data-ttu-id="277b4-104">泛型型別 MSIL 的使用方法，因提供的型別參數為實值型別或參考型別而異。</span><span class="sxs-lookup"><span data-stu-id="277b4-104">How the MSIL for a generic type is used differs based on whether the supplied type parameter is a value type or reference type.</span></span>  

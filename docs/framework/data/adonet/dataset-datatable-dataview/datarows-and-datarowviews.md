@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762867"
 ---
 # <a name="datarows-and-datarowviews"></a><span data-ttu-id="c5eaa-102">DataRow 和 DataRowView</span><span class="sxs-lookup"><span data-stu-id="c5eaa-102">DataRows and DataRowViews</span></span>
 <span data-ttu-id="c5eaa-103"><xref:System.Data.DataView> 公開可列舉之 <xref:System.Data.DataRowView> 物件的集合。</span><span class="sxs-lookup"><span data-stu-id="c5eaa-103">A <xref:System.Data.DataView> exposes an enumerable collection of <xref:System.Data.DataRowView> objects.</span></span> <span data-ttu-id="c5eaa-104">**DataRowView**物件將值公開為物件陣列，會依名稱或序數參考的基礎資料表中的資料行編製索引。</span><span class="sxs-lookup"><span data-stu-id="c5eaa-104">The **DataRowView** objects expose values as object arrays that are indexed by either the name or the ordinal reference of the column in the underlying table.</span></span> <span data-ttu-id="c5eaa-105">您可以存取<xref:System.Data.DataRow>公開**DataRowView**使用<xref:System.Data.DataRowView.Row%2A>屬性**DataRowView**。</span><span class="sxs-lookup"><span data-stu-id="c5eaa-105">You can access the <xref:System.Data.DataRow> that is exposed by the **DataRowView** by using the <xref:System.Data.DataRowView.Row%2A> property of the **DataRowView**.</span></span>  
