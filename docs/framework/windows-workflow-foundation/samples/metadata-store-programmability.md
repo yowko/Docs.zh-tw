@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517433"
 ---
 # <a name="metadata-store-programmability"></a>中繼資料存放區可程式性
 中繼資料存放區是讓任意中繼資料 (CLR 屬性形式) 與執行階段類型產生關聯的 [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] 功能。 這啟用執行階段元件與其設計階段對應項目之間的鬆散結合，也提供變更設計階段元件但不影響執行階段的能力。 此範例示範如何透過將屬性套用至我們沒有控制權的執行階段類型，對中繼資料存放區撰寫程式。 一般用語是主控應用程式註冊一組類型的中繼資料。  

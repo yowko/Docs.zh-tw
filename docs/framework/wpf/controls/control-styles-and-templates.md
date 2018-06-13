@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556909"
 ---
 # <a name="control-styles-and-templates"></a>控制項的樣式和範本
 在 Windows Presentation Foundation (WPF) 控制項有<xref:System.Windows.Controls.ControlTemplate>，其中包含該控制項的視覺化樹狀結構。 您可以藉由修改變更控制項的外觀和結構<xref:System.Windows.Controls.ControlTemplate>該控制項。 沒有任何方法來取代一部分的視覺化樹狀結構的控制項。若要變更的視覺化樹狀結構的控制項，您必須設定<xref:System.Windows.Controls.Control.Template%2A>至其新且完整的控制項屬性<xref:System.Windows.Controls.ControlTemplate>。  

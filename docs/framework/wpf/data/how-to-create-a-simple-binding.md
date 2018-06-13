@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555013"
 ---
 # <a name="how-to-create-a-simple-binding"></a>如何：建立簡單繫結
 此範例將示範如何建立簡單<xref:System.Windows.Data.Binding>。  

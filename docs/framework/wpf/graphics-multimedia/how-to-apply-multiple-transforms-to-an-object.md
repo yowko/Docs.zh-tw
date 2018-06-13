@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560528"
 ---
 # <a name="how-to-apply-multiple-transforms-to-an-object"></a>操作說明：套用多重轉換至物件
 這個範例示範如何使用<xref:System.Windows.Media.TransformGroup>至兩個或多個群組<xref:System.Windows.Media.Transform>併入單一複合物件<xref:System.Windows.Media.Transform>。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572784"
 ---
 # <a name="xml-document-creation"></a>建立 XML 文件
 有兩種方式可用來建立 XML 文件。 一種方法是不用參數建立 **XmlDocument**。 另一種方法是建立 **XmlDocument**，並且將 XmlNameTable 當作參數傳給它。 下列範例顯示如何在不使用參數的情況下，建立新的空白 **XmlDocument**。  

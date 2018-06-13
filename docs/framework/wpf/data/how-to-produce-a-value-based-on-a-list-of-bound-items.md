@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556831"
 ---
 # <a name="how-to-produce-a-value-based-on-a-list-of-bound-items"></a>操作說明：根據繫結項目的清單產生值
 <xref:System.Windows.Data.MultiBinding> 可讓您將繫結目標屬性繫結至來源屬性的清單，然後再套用邏輯，以產生使用給定的輸入值。 這個範例示範如何使用<xref:System.Windows.Data.MultiBinding>。  

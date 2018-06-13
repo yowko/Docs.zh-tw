@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365952"
 ---
 # <a name="wcf-data-services-45"></a>WCF Data Services 4.5
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] (之前稱為 "ADO.NET Data Services") 是 .NET Framework 的一個元件，可讓您建立使用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]的服務來透過 Web 或內部網路公開及取用資料，其方式是使用[具像狀態傳輸 (REST)](http://go.microsoft.com/fwlink/?LinkId=113919) 的語意。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 會將資料公開為可由 URI 定址的資源。 資料是使用 GET、PUT、POST 和 DELETE 的標準 HTTP 動作來存取及變更。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 會運用[實體資料模型](../../../../docs/framework/data/adonet/entity-data-model.md)的實體關聯慣例，將資源公開為依關聯性相關的實體集。  

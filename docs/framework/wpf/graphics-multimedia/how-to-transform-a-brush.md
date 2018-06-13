@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561586"
 ---
 # <a name="how-to-transform-a-brush"></a>操作說明：轉換筆刷
 此範例顯示如何將轉換<xref:System.Windows.Media.Brush>藉由使用其兩個轉換屬性的物件：<xref:System.Windows.Media.Brush.RelativeTransform%2A>和<xref:System.Windows.Media.Brush.Transform%2A>。  

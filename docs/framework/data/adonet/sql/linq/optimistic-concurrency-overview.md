@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362924"
 ---
 # <a name="optimistic-concurrency-overview"></a>開放式並行存取：概觀
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援開放式並行存取 (Optimistic Concurrency) 控制。 下表描述在開放式並行存取的條款[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文件：  

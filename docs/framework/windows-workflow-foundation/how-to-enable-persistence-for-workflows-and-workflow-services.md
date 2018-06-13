@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514414"
 ---
 # <a name="how-to-enable-persistence-for-workflows-and-workflow-services"></a>HOW TO：啟用工作流程與工作流程服務的持續性
 本主題描述如何啟用工作流程與工作流程服務的持續性。  

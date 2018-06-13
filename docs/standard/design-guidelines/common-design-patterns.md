@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570332"
 ---
 # <a name="common-design-patterns"></a>通用設計模式
 有許多書籍，軟體模式、 模式語言和解決非常廣泛的模式主旨的 antipatterns 上。 因此，本章節提供指導方針和一組非常有限的模式，常用於在.NET Framework 應用程式開發介面的設計相關討論。  

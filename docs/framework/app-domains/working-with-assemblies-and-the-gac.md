@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744300"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>使用組件和全域組件快取
 如果您想要在數個應用程式之間共用組件，可以將它安裝到全域組件快取。 每部安裝 Common Language Runtime 的電腦都有這個全機器程式碼快取。 全域組件快取會儲存特別指定為由電腦上數個應用程式共用的組件。 組件必須有強式名稱，才能安裝在全域組件快取中。  

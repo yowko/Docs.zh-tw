@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557780"
 ---
 # <a name="treeview-overview"></a>TreeView 概觀
 <xref:System.Windows.Controls.TreeView>控制項可用來顯示階層式結構的資訊，使用可摺疊的節點。 本主題將介紹<xref:System.Windows.Controls.TreeView>和<xref:System.Windows.Controls.TreeViewItem>控制項，並提供其用法的簡單範例。  

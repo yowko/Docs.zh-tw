@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559413"
 ---
 # <a name="how-to-write-metadata-to-a-bitmap"></a>如何：將中繼資料寫入點陣圖
 這個範例示範如何將中繼資料寫入點陣圖使用中繼資料的查詢語言。  

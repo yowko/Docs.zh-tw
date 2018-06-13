@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572193"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>使用 XmlSchemaCollection 進行 XML 結構描述 (XSD) 驗證
 您可以使用 <xref:System.Xml.Schema.XmlSchemaCollection>，依據 XML 結構描述定義語言 (XSD) 結構描述來驗證 XML 文件。 <xref:System.Xml.Schema.XmlSchemaCollection> 可以提升效能，其方法是將結構描述儲存於集合中，而不用在每次執行驗證時，都要將其載入記憶體。 如果結構描述存在於結構描述集合中，則 `schemaLocation` 屬性可用於查詢集合中的結構描述。  

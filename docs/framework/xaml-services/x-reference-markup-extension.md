@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562241"
 ---
 # <a name="xreference-markup-extension"></a>x:Reference 標記延伸
 會參考其他地方在 XAML 標記中宣告執行個體。 參考所參考的項目`x:Name`。  

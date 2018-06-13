@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523870"
 ---
 # <a name="how-to-display-pop-up-help"></a>如何：顯示快顯說明
 Windows Form 上顯示說明的其中一種方式是透過**協助**位於標題列，可透過存取右側的按鈕<xref:System.Windows.Forms.Form.HelpButton%2A>屬性。 這種顯示 [說明] 的方式非常適合與對話方塊一起使用。 以強制回應方式 (使用 <xref:System.Windows.Forms.Form.ShowDialog%2A> 方法) 顯示的對話方塊無法啟動外部 [說明] 系統，因為將焦點轉換至另一個視窗之前，必須先關閉強制回應對話方塊。 此外，使用**協助**按鈕需要有沒有**最小化**按鈕或**最大化**標題列中顯示的按鈕。 這是標準的對話方塊慣例，而表單則通常具有**最小化**和**最大化**按鈕。  

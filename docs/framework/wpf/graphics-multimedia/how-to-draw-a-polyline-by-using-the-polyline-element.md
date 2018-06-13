@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561757"
 ---
 # <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>如何：使用 Polyline 項目繪製聚合線
 此範例顯示如何畫聚合線條，這是使用一系列連接的直線<xref:System.Windows.Shapes.Polyline>項目。  

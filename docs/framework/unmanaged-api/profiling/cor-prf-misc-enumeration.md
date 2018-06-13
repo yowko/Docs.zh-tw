@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c8f4cffd718fffa9145e1082092ecec45b80a2ec
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451054"
 ---
 # <a name="corprfmisc-enumeration"></a>COR_PRF_MISC 列舉
 包含指定特定識別項的常數值。  
@@ -44,7 +45,7 @@ typedef enum {
 |`PROFILER_GLOBAL_MODULE`|不屬於模組的全域物件預設模組識別項。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

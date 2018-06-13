@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365692"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>如何：使用 ADO.NET Entity Framework 資料來源建立資料服務 (WCF 資料服務)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 會將實體資料公開為資料服務。 此實體的資料由[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)][!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]當資料來源為關聯式資料庫。 本主題會示範如何建立[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-架構根據現有的資料庫，並使用此資料模型來建立新的資料服務的 Visual Studio Web 應用程式中的資料模型。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/04/2018
   
      **選擇資料連接**的對話方塊會更新與您的資料庫連接設定。  
   
-7.  請確認**將實體連接設定儲存為 App.Config 中：**核取方塊。 然後按 [下一步] 。  
+7.  請確認**將實體連接設定儲存為 App.Config 中：** 核取方塊。 然後按 [下一步] 。  
   
 8.  在**選擇您的資料庫物件**對話方塊中，選取的所有資料庫物件想要在資料服務中公開。  
   

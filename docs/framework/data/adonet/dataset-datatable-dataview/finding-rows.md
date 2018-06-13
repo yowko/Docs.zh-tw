@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760878"
 ---
 # <a name="finding-rows"></a>尋找資料列
 您可以使用 <xref:System.Data.DataView.Find%2A> 的 <xref:System.Data.DataView.FindRows%2A> 和 <xref:System.Data.DataView> 方法，依照資料列的排序索引鍵值來搜尋資料列。 區分大小寫的搜尋中的值**尋找**和**FindRows**方法由**CaseSensitive**基礎屬性<xref:System.Data.DataTable>。 搜尋值必須完全符合現有的排序索引鍵值，才能傳回結果。  

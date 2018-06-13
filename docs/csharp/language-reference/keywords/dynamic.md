@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217135"
 ---
 # <a name="dynamic-c-reference"></a>dynamic (C# 參考)
 `dynamic` 類型可讓發生它的作業略過編譯時期類型檢查。 相反地，這些作業會在執行階段解決。 `dynamic` 類型會簡化 Office Automation API 這類 COM API 的存取、IronPython 程式庫這類動態 API 的存取，以及 HTML 文件物件模型 (DOM) 的存取。  

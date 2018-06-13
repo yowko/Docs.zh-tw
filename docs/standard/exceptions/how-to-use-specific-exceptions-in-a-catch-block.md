@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571794"
 ---
 # <a name="how-to-use-specific-exceptions-in-a-catch-block"></a>如何使用 Catch 區塊中的特定例外狀況
 

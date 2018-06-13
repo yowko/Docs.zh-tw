@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563580"
 ---
 # <a name="generics-in-xaml"></a>XAML 中的泛型
 .NET Framework XAML 服務實作於 System.Xaml 中提供支援使用泛型的 CLR 型別。 這項支援包括指定的條件約束的泛型型別引數，並強制執行條件約束，藉由呼叫適當`Add`泛型集合的情況下的方法。 本主題描述使用，並參考 XAML 中的泛型類型的層面。  

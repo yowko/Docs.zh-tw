@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557286"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>如何：繫結至 Web 服務
 這個範例示範如何繫結至 Web 服務方法呼叫所傳回的物件。  

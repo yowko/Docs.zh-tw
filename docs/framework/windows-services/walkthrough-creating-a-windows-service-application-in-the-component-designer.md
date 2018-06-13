@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520509"
 ---
 # <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a>逐步解說：在元件設計工具中建立 Windows 服務應用程式
 本文示範如何在 Visual Studio 中建立簡單的 Windows 服務應用程式，以將訊息寫入至事件記錄檔。 以下是建立及使用服務的基本執行步驟：  

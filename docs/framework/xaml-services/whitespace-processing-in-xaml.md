@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565541"
 ---
 # <a name="whitespace-processing-in-xaml"></a>XAML 中的泛空白字元處理
 XAML 的語言規則表示 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 處理器實作必須處理必要的空白字元。 本主題說明這些 XAML 語言規則， 並同時說明 XAML 處理器和 XAML 寫入器的 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 實作針對序列化所定義的額外空白字元處理方式。  

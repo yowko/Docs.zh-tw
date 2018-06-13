@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570588"
 ---
 # <a name="design-guidelines-for-exceptions"></a>例外狀況的設計方針
 例外狀況處理有許多優於傳回值為基礎的錯誤報告。 良好的架構設計，可協助應用程式開發人員了解例外狀況的優點。 本節討論例外狀況的優點，並提供有效地使用這些指導方針。  

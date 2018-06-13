@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560915"
 ---
 # <a name="how-to-hit-test-geometry-in-a-visual"></a>操作說明：對 Visual 中的幾何進行點擊測試
 這個範例示範如何在所組成的一或多個視覺物件上執行點擊的測試<xref:System.Windows.Media.Geometry>物件。  

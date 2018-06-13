@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557572"
 ---
 # <a name="popup-overview"></a>快顯功能表概觀
 <xref:System.Windows.Controls.Primitives.Popup>控制項可用來在漂浮在目前應用程式視窗相對於指定的項目或螢幕座標的另一個視窗中顯示內容。 本主題將介紹<xref:System.Windows.Controls.Primitives.Popup>控制項，並提供其用途的相關資訊。  

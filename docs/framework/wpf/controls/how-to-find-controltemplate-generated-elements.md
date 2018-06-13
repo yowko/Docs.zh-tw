@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553906"
 ---
 # <a name="how-to-find-controltemplate-generated-elements"></a>如何：尋找 ControlTemplate 產生的項目
 這個範例示範如何尋找所產生的項目<xref:System.Windows.Controls.ControlTemplate>。  

@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2614ad988496a22f0e6234c2f3300e22ef548308
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452438"
 ---
 # <a name="functionleave-function"></a>FunctionLeave 函式
 通知分析工具函式是要傳回給呼叫者。  
@@ -54,7 +55,7 @@ void __stdcall FunctionLeave (
  此外，`FunctionLeave`函式不可以呼叫至 managed 程式碼或任何方式發生原因的 managed 的記憶體配置。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl  
   

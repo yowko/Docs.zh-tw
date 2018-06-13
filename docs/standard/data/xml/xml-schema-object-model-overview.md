@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572105"
 ---
 # <a name="xml-schema-object-model-overview"></a>XML 結構描述物件模型概觀
 Microsoft .NET Framework 中的結構描述物件模型 (SOM) 是一個豐富的 API，可讓您以程式設計的方式建立、編輯及驗證結構描述。 SOM 在 XML 結構描述文件上的運作方式，與文件物件模型 (DOM) 在 XML 文件上的運作方式相似。 XML 結構描述文件是有效的 XML 檔案，當它載入 SOM 後，便可傳達符合該結構描述之其他 XML 文件結構及有效性的意義。  

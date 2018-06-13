@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397945"
 ---
 # <a name="securing-wrapper-code"></a>設定包裝函式程式碼的安全性
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  

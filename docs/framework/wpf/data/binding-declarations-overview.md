@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557208"
 ---
 # <a name="binding-declarations-overview"></a>繫結宣告概觀
 本主題討論可以用來宣告繫結的不同方法。  

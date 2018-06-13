@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562001"
 ---
 # <a name="path-animation-how-to-topics"></a>路徑動畫 HOW TO 主題
 本節中的主題將示範如何建立動畫物件沿著路徑。  

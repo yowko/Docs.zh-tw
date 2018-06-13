@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554989"
 ---
 # <a name="how-to-bind-to-the-results-of-a-linq-query"></a>如何：繫結至 LINQ 查詢結果
 此範例示範如何執行 LINQ 查詢，然後再繫結結果。  

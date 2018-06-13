@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568520"
 ---
 # <a name="node-collections-in-namednodemaps-and-nodelists"></a>NamedNodeMap 和 NodeList 中的節點集合
 您可以擷取一組節點，並且將它放入已排序或未排序的集合。 全球資訊網協會 (W3C) 將一組置於未排序之集合的節點稱為 NamedNodeMap；您可以根據這種集合型別的名稱或索引來擷取資料。 而 W3C 將一組置於已排序之集合的節點稱為 NodeList，可以使用從零開始的索引擷取資料。 NamedNodeMaps 和 NodeLists 是由 W3C 說明。 在 Microsoft .NET Framework 中，NamedNodeMap 的實作是 **XmlNamedNodeMap**，而 NodeList 則由 **XmlNodeList** 實作。  
