@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530142"
 ---
 # <a name="how-to-create-a-read-only-text-box-windows-forms"></a>如何：建立唯讀文字方塊 (Windows Form)
 您可以將可編輯的 Windows Form 文字方塊中轉換成唯讀的控制項。 例如，文字方塊可能會顯示值通常編輯，但可能不是目前，因為應用程式的狀態。  

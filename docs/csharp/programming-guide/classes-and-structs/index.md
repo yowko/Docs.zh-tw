@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327355"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>類別和結構 (C# 程式設計手冊)
 類別和結構是 .NET Framework 中一般型別系統的兩個基本建構。 每一個基本上都是封裝一組屬於相同邏輯單元之資料和行為的資料結構。 資料和行為是類別或結構的「成員」，它們包含類別或結構的方法、屬性和事件等，如本主題稍後所列。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529424"
 ---
 # <a name="displaying-data-in-the-windows-forms-datagridview-control"></a>在 Windows Form DataGridView 控制項中顯示資料
 `DataGridView`控制項用來顯示來自各種外部資料來源的資料。 或者，您可以將資料列和資料行加入至控制項，並手動填入資料。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545879"
 ---
 # <a name="inline-styles-and-templates"></a>內嵌樣式和範本
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供<xref:System.Windows.Style>物件和範本物件 (<xref:System.Windows.FrameworkTemplate>子類別) 做為在資源定義元素的視覺外觀的方式，以便它們可以用於多次。 基於這個理由中的屬性[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]可接受型別<xref:System.Windows.Style>和<xref:System.Windows.FrameworkTemplate>幾乎資源參考現有的樣式和範本，而非定義新的內嵌。  

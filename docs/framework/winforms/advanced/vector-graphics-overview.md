@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528335"
 ---
 # <a name="vector-graphics-overview"></a>向量圖形概觀
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 座標系統上繪製線條、 矩形和其他形狀。 您可以選擇各式各樣的座標系統，但預設座標系統具有原點左上角的 x 軸指向右側和 y 軸指向下方。 預設座標系統中的量值單位為像素。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528279"
 ---
 # <a name="developing-a-composite-windows-forms-control"></a>開發複合 Windows Form 控制項
 您可以結合其他的 Windows Form 控制項來開發複合 Windows Form 控制項。 複合控制項衍生自<xref:System.Web.UI.UserControl>稱為使用者控制項。 基底類別 <xref:System.Windows.Forms.UserControl> 提供鍵盤路徑給子控制項，以確保子控制項可以接收焦點。 如需使用者控制項的範例，請參閱<xref:System.Windows.Forms.UserControl>範例[How to： 適用於 Windows Form 控制項中的屬性](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)。  

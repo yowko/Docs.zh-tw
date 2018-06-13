@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547946"
 ---
 # <a name="globalization-for-wpf"></a>WPF 的全球化
 本主題將介紹問題，您應該瞭解的撰寫時[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的全球市場的應用程式。 全球化的程式設計項目中所定義[!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]中`System.Globalization`。  

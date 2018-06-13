@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546673"
 ---
 # <a name="document-serialization-and-storage"></a>文件序列化與儲存
 Microsoft.NET Framework 提供一種強大的環境建立及顯示高品質的文件。  增強的功能支援固定文件和非固定格式文件，進階檢視控制項，結合功能強大的 2D 和 3D 圖形的功能，可將新的層級的品質和使用者經驗的.NET Framework 應用程式。  能夠彈性地管理文件的記憶體中表示法是.NET Framework 的主要功能，能夠有效率地儲存和載入資料存放區都需要的幾乎所有應用程式。  將文件從記憶體內部表示轉換成外部資料存放區的程序，稱為序列化。  讀取資料存放區並重新建立原始記憶體內部執行個體的反向程序，則稱為還原序列化。  

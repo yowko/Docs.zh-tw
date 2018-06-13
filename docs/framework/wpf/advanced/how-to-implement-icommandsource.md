@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547023"
 ---
 # <a name="how-to-implement-icommandsource"></a>如何：實作 ICommandSource
 這個範例示範如何建立命令來源藉由實作<xref:System.Windows.Input.ICommandSource>。  命令來源是知道如何叫用命令的物件。  <xref:System.Windows.Input.ICommandSource>介面會公開三個成員： <xref:System.Windows.Input.ICommandSource.Command%2A>， <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>，和<xref:System.Windows.Input.ICommandSource.CommandTarget%2A>。  <xref:System.Windows.Input.ICommandSource.Command%2A> 是將會叫用的命令。 <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>是從命令來源傳遞至方法，這個方法會處理命令的使用者定義資料類型。 <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>是正在其執行命令的物件。  

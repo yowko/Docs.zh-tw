@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546916"
 ---
 # <a name="templatebinding-markup-extension"></a>TemplateBinding 標記延伸
 將控制項樣板中的屬性值連結成為樣板化控制項上另一個屬性的值。  

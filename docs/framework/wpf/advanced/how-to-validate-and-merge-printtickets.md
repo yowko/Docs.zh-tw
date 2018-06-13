@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548489"
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a>如何：驗證和合併 PrintTickets
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [列印結構描述](http://go.microsoft.com/fwlink/?LinkId=186397)包含彈性和可延伸<xref:System.Printing.PrintCapabilities>和<xref:System.Printing.PrintTicket>項目。 前者逐項列出的列印裝置的功能，後者會指定如何裝置應該使用那些功能相對於特定的一連串的文件、 個別的文件或個別頁面。  

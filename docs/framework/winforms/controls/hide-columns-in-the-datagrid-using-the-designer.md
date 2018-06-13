@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527052"
 ---
 # <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用設計工具隱藏 Windows Form DataGridView 控制項中的資料行
 有時候您會想要只顯示 Windows Form <xref:System.Windows.Forms.DataGridView> 控制項中某些可用的資料行。 例如，您可能想要顯示員工薪資資料行具有管理認證，而對其他使用者隱藏該使用者。 或者，您可以將控制項繫結至資料來源包含只有其中一些您想要顯示的許多資料行。 在此情況下，您通常會移除您不想要顯示，而非加以隱藏的資料行。 如需詳細資訊，請參閱[如何： 加入和移除資料行中使用 Windows Form DataGridView 控制項設計工具](../../../../docs/framework/winforms/controls/add-and-remove-columns-in-the-datagrid-using-the-designer.md)。  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531210"
 ---
 # <a name="how-to-play-a-beep-from-a-windows-form"></a>如何：播放 Windows Form 中的嗶聲
 這個範例會在執行階段播放嗶聲。  
