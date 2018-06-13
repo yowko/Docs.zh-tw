@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643430"
 ---
 # <a name="advanced-linq-to-xml-programming-visual-basic"></a>進階的 LINQ to XML 程式設計 (Visual Basic)
 本節提供的資訊將僅適用於某些 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 案例中的進階開發人員。  

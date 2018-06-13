@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643805"
 ---
 # <a name="variance-in-delegates-visual-basic"></a>委派 (Visual Basic) 中的變異數
 .NET framework 3.5 引入了使用所有的委派，在 C# 和 Visual Basic 中的委派型別比對方法簽章的支援變異數。 這表示您可以指派給委派的不只是具有相符簽章的方法，也可以是會傳回更多衍生型別 (共變數) 的方法，或接受衍生型別 (反變數) 比委派型別指定少的參數的方法。 這包括泛型和非泛型委派。  

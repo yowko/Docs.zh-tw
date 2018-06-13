@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215494"
 ---
 # <a name="-target-c-compiler-options"></a>-target (C# 編譯器選項)
 您可以使用四種形式之一來指定 **-target** 編譯器選項︰  

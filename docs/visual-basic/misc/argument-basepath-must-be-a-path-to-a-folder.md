@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602063"
 ---
 # <a name="argument-basepath-must-be-a-path-to-a-folder"></a>引數 BasePath 必須是資料夾路徑
 引數 `BasePath` 必須是由資料夾路徑所組成。 您可能不正確地剖析字串，並提供無法辨識為有效路徑的值。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647256"
 ---
 # <a name="structures-visual-basic"></a>結構 (Visual Basic)
 A*結構*為一般化的使用者定義型別 (UDT) 由舊版 Visual Basic 的支援。 欄位中，除了結構可以公開屬性、 方法和事件。 結構可以實作一個或多個介面，您可以宣告為每個欄位個別的存取層級。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562371"
 ---
 # <a name="transformations-how-to-topics"></a>轉換 HOW TO 主題
 本節中的主題描述如何將不同的轉換套用至物件。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643148"
 ---
 # <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a>如何： 尋找相關項目 (XPATH-LINQ to XML) (Visual Basic)
 本主題顯示如何取得在其他項目值所參考的屬性上選取的項目。  

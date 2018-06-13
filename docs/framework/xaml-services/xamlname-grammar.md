@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561887"
 ---
 # <a name="xamlname-grammar"></a>XamlName 文法
 XamlName 文法是特定的文法定義在 XAML 語言規格 [MS-XAML]，這為了方便起見在此處重現。  

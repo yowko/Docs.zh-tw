@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648495"
 ---
 # <a name="structure-variables-visual-basic"></a>結構變數 (Visual Basic)
 當您建立結構之後時，您可以為該型別宣告程序層級和模組層級變數。 例如，您可以建立結構有關電腦系統記錄資訊。 下列範例為其示範。  

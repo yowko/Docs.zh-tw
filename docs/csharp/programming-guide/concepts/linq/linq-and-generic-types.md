@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327733"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ 和泛型類型 (C#)
 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢是以 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 2.0 版中引進的泛型型別為基礎。 您不需要深入了解泛型，就可以開始撰寫查詢。 不過，您可能需要了解兩個基本概念：  

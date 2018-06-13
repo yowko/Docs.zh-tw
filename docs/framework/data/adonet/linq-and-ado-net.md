@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766123"
 ---
 # <a name="linq-and-adonet"></a>LINQ 和 ADO.NET
 現在，許多企業開發人員必須使用兩個 （或以上） 的程式語言： 高階語言的商務邏輯層與展示層 （例如 Visual C# 或 Visual Basic），以及與資料庫互動的查詢語言 (例如[!INCLUDE[tsql](../../../../includes/tsql-md.md)])。 因此，開發人員必須精通許多語言才能具有效率，而且也會在開發環境中產生語言不符的情況。 例如，使用資料存取 API 針對資料庫執行查詢的應用程式會使用引號，將查詢指定成字串常值 (String Literal)。 編譯器 (Compiler) 無法讀取這個查詢字串而且不會檢查是否有錯誤，例如語法無效或它所參考的資料行或資料列是否實際存在。 此外，系統無法提供查詢參數的型別檢查和 `IntelliSense` 支援。  

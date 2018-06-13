@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646548"
 ---
 # <a name="control-flow-in-visual-basic"></a>Visual Basic 中的控制流程
 如果處於不受控制的狀態，則程式會從頭到尾執行其陳述式。 只要使用這種單向流程，就可以撰寫一些極簡單的程式。 不過，任何程式設計語言的大部分功能和效用都是來自於它們能夠使用控制陳述式和迴圈來變更執行順序。  

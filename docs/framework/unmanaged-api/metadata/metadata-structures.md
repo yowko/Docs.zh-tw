@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2095b6e490612cff5af193b1c1dfcbb6757fc23e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449955"
 ---
 # <a name="metadata-structures"></a>中繼資料結構
 本節說明中繼資料 API 所使用的 Unmanaged 結構。  

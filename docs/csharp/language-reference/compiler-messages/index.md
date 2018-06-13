@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213199"
 ---
 # <a name="c-compiler-errors"></a>C# 編譯器錯誤
 部分 C# 編譯器錯誤會有對應的主題來說明產生錯誤的原因，以及在某些情況下，如何修正錯誤。 使用下列其中一個步驟，來查看說明是否適用於特定的錯誤訊息。  

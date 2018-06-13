@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329556"
 ---
 # <a name="how-to-build-linq-to-xml-examples-c"></a>如何：建置 LINQ to XML 範例 (C#)
 此文件中的各種片段與範例使用各種命名空間中的類別和型別。 編譯 C# 程式碼時，您必須提供適當的 `using` 指示詞。  

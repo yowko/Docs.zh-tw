@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337700"
 ---
 # <a name="pointer-comparison-c-programming-guide"></a>指標比較 (C# 程式設計手冊)
 您可以套用下列運算子來比較任何類型的指標：  

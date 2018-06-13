@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338347"
 ---
 # <a name="serializing-xml-trees-c"></a>序列化 XML 樹狀結構 (C#)
 序列化 XML 樹狀結構表示從 XML 樹狀結構產生 XML。 您可以序列化到檔案、<xref:System.IO.TextWriter> 類別的具體實作，或 <xref:System.Xml.XmlWriter> 的具體實作。  

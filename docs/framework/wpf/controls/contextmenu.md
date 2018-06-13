@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550120"
 ---
 # <a name="contextmenu"></a>ContextMenu
 <xref:System.Windows.Controls.ContextMenu>可讓控制項以顯示<xref:System.Windows.Controls.Menu>專屬於控制項的內容。 一般而言，<xref:System.Windows.Controls.ContextMenu>中公開[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]透過滑鼠按鈕或鍵盤的功能表按鈕。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642060"
 ---
 # <a name="the-folder-cannot-be-created-since-a-file-already-exists-with-the-same-path"></a>無法建立資料夾，因為已經存在具有相同路徑的檔案。
 嘗試建立目錄，但已經存在具有該路徑的檔案。 這可能是不正確剖析路徑的結果，特別是使用相對路徑時。  
