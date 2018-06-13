@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754859"
 ---
 # <a name="ltusernameauthenticationgt"></a><span data-ttu-id="ef180-102">&lt;userNameAuthentication&gt;</span><span class="sxs-lookup"><span data-stu-id="ef180-102">&lt;userNameAuthentication&gt;</span></span>
 <span data-ttu-id="ef180-103">根據使用者名稱和密碼來指定服務的認證。</span><span class="sxs-lookup"><span data-stu-id="ef180-103">Specifies a service's credentials based on user name and password.</span></span>  

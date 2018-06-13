@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318220"
 ---
 # <a name="members-c-programming-guide"></a><span data-ttu-id="bc275-102">成員 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="bc275-102">Members (C# Programming Guide)</span></span>
 <span data-ttu-id="bc275-103">類別和結構的成員可表示其資料與行為。</span><span class="sxs-lookup"><span data-stu-id="bc275-103">Classes and structs have members that represent their data and behavior.</span></span> <span data-ttu-id="bc275-104">類別的成員包含在所有類別中宣告的成員，以及在其繼承階層架構之所有類別中宣告的所有成員 (建構函式和完成項除外)。</span><span class="sxs-lookup"><span data-stu-id="bc275-104">A class's members include all the members declared in the class, along with all members (except constructors and finalizers) declared in all classes in its inheritance hierarchy.</span></span> <span data-ttu-id="bc275-105">基底類別中的私用成員可繼承衍生類別，但卻無法從衍生類別進行存取。</span><span class="sxs-lookup"><span data-stu-id="bc275-105">Private members in base classes are inherited but are not accessible from derived classes.</span></span>  

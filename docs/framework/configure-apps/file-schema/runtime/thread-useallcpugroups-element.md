@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745587"
 ---
 # <a name="ltthreaduseallcpugroupsgt-element"></a><span data-ttu-id="6c051-102">&lt;Thread_UseAllCpuGroups&gt;項目</span><span class="sxs-lookup"><span data-stu-id="6c051-102">&lt;Thread_UseAllCpuGroups&gt; Element</span></span>
 <span data-ttu-id="6c051-103">指定執行階段是否會將 Managed 執行緒分散到所有 CPU 群組。</span><span class="sxs-lookup"><span data-stu-id="6c051-103">Specifies whether the runtime distributes managed threads across all CPU groups.</span></span>  

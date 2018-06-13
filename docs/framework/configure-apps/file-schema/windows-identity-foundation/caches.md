@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755210"
 ---
 # <a name="ltcachesgt"></a><span data-ttu-id="0328d-102">&lt;快取&gt;</span><span class="sxs-lookup"><span data-stu-id="0328d-102">&lt;caches&gt;</span></span>
 <span data-ttu-id="0328d-103">註冊用於工作階段權杖，權杖重新執行偵測的快取。</span><span class="sxs-lookup"><span data-stu-id="0328d-103">Registers the caches used for session tokens and token replay detection.</span></span>  

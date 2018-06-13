@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742909"
 ---
 # <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a><span data-ttu-id="73a4e-102">\<移除 > NameValueSectionHandler DictionarySectionHandler 的項目</span><span class="sxs-lookup"><span data-stu-id="73a4e-102">\<remove> element for NameValueSectionHandler and DictionarySectionHandler</span></span>
 

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265683"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="23088-102">| 運算子 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="23088-102">| Operator (C# Reference)</span></span>
 <span data-ttu-id="23088-103">整數型別和 `bool` 會預先定義二元 `|` 運算子。</span><span class="sxs-lookup"><span data-stu-id="23088-103">Binary `|` operators are predefined for the integral types and `bool`.</span></span> <span data-ttu-id="23088-104">對於整數型別，`|` 會計算其運算元的位元 OR。</span><span class="sxs-lookup"><span data-stu-id="23088-104">For integral types, `|` computes the bitwise OR of its operands.</span></span> <span data-ttu-id="23088-105">對於 `bool` 運算元，`|` 會計算其運算元的邏輯 OR；亦即，如果且唯有當其兩個運算元都是 `false` 時，結果會是 `false`。</span><span class="sxs-lookup"><span data-stu-id="23088-105">For `bool` operands, `|` computes the logical OR of its operands; that is, the result is `false` if and only if both its operands are `false`.</span></span>  

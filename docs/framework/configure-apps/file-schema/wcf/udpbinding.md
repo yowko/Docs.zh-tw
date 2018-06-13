@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756211"
 ---
 # <a name="ltudpbindinggt"></a><span data-ttu-id="88ced-102">&lt;udpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="88ced-102">&lt;udpBinding&gt;</span></span>
 <span data-ttu-id="88ced-103">用來設定 <xref:System.ServiceModel.UdpBinding> 繫結的組態元素。</span><span class="sxs-lookup"><span data-stu-id="88ced-103">A configuration element used to configure the <xref:System.ServiceModel.UdpBinding> binding.</span></span>  
