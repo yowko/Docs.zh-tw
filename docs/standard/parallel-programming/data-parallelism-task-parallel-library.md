@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584653"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>資料平行處理原則 (工作平行程式庫)
 「資料平行處理原則」是指在來源集合或陣列中的元素上，同時 (也就是平行) 執行相同作業的情節。 在資料平行作業中，會將來源集合分割，讓多個執行緒可以同時在不同區段上操作。  

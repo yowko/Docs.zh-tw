@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590762"
 ---
 # <a name="attached-and-detached-child-tasks"></a>附加與中斷連結的子工作
 「子工作」(或「巢狀工作」) 是 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 執行個體，它是在另一項工作 (稱為「父工作」) 的使用者委派中建立。 子工作可以中斷連結或附加。 「中斷連結的子工作」(detached child task) 是獨立於其父代而執行的工作。 「附加的子工作」(attached child task) 是巢狀工作，而且是使用 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 選項所建立，其父代並不明確或預設禁止它附加。 工作可能會建立任意數目的附加和中斷連結的子工作，只受限於系統資源。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591868"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>擴充 Visual Basic 應用程式模型
 您可以將功能加入應用程式模型藉由覆寫`Overridable`成員<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>類別。 這項技術可讓您自訂應用程式模型的行為，並加入您自己的方法呼叫，在應用程式啟動和關機。  

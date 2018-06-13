@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585083"
 ---
 # <a name="data-structures-for-parallel-programming"></a>適用於平行程式設計的資料結構
 .NET Framework 4 版導入了數個適用於平行程式設計的新類型，包括一系列並行集合類別、輕量型同步處理原始物件，以及適用於延遲初始設定的類型。 您可以搭配任何多執行緒應用程式程式碼使用這些類型，其中包括工作平行程式庫和 PLINQ。  

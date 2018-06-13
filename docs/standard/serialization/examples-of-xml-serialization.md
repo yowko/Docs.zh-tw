@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592024"
 ---
 # <a name="examples-of-xml-serialization"></a>XML 序列化的範例
 XML 序列化的形式不只一種，從簡單到複雜都有。 例如，您可序列化僅包含公用欄位及屬性的類別，如 [XML 序列化簡介](../../../docs/standard/serialization/introducing-xml-serialization.md)中所示。 下列程式碼範例說明各種不同的進階案例，包括如何使用 XML 序列化以產生符合特定 XML 結構描述 (XSD) 文件的 XML 資料流。  

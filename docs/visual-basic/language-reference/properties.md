@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599973"
 ---
 # <a name="properties-visual-basic"></a>屬性 (Visual Basic)
 此頁面會列出的 Visual Basic 模組成員的屬性。 其他成員的特定 Visual Basic 物件的屬性會列在[物件](../../visual-basic/language-reference/objects/index.md)。  

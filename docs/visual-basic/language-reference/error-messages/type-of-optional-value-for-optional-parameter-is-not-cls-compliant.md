@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594339"
 ---
 # <a name="type-of-optional-value-for-optional-parameter-ltparameternamegt-is-not-cls-compliant"></a>選擇性的值的選擇性參數的型別&lt;parametername&gt;不符合 CLS 標準
 程序已標記為 `<CLSCompliant(True)>`，但所宣告的 [Optional](../../../visual-basic/language-reference/modifiers/optional.md) 參數卻具有不符合標準之型別的預設值。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/04/2018
   
  根據預設，這個訊息是一個警告。 如需隱藏警告或將警告視為錯誤的相關資訊，請參閱 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。  
   
- **錯誤識別碼：**BC40042  
+ **錯誤識別碼：** BC40042  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   

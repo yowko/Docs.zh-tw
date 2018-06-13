@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597783"
 ---
 # <a name="addressof-operator-visual-basic"></a>AddressOf 運算子 (Visual Basic)
 建立參考特定程序的程序委派執行個體。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582418"
 ---
 # <a name="attributes-that-control-encoded-soap-serialization"></a>控制編碼 SOAP 序列化的屬性 
 全球資訊網協會 (www.w3.org) 的文件《Simple Object Access Protocol (SOAP) 1.1》，其中包含描述 SOAP 參數如何編碼的選擇性章節 (第 5 節)。 若要遵循第 5 節的規格，您必須使用在 <xref:System.Xml.Serialization> 命名空間中的特殊屬性集。 套用適合類別與類別成員的那些屬性，然後使用 <xref:System.Xml.Serialization.XmlSerializer> 序列化類別的執行個體。  

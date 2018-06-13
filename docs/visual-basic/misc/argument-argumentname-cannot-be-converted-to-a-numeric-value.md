@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598952"
 ---
 # <a name="argument-39ltargumentnamegt39-cannot-be-converted-to-a-numeric-value"></a>引數&#39;&lt;引數名稱&gt;&#39;無法轉換成數值
 已嘗試將變數，例如字串，轉換為數值。  

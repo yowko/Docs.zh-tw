@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580922"
 ---
 # <a name="using-tpl-with-other-asynchronous-patterns"></a>使用具有其他非同步模式的 TPL
 工作平行程式庫可透過多種方式與傳統 .NET Framework 非同步程式設計模式一起使用。  

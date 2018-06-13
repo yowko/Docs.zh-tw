@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590117"
 ---
 # <a name="how-to-change-the-appearance-of-a-datarepeater-control-visual-studio"></a>如何：變更 DataRepeater 控制項的外觀 (Visual Studio)
 您可以變更的外觀<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項在設計階段藉由設定屬性，或在執行階段處理<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem>事件。  
