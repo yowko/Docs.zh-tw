@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396931"
 ---
 # <a name="garbage-collection-etw-events"></a>記憶體回收 ETW 事件
 <a name="top"></a> 這些事件收集到記憶體回收的相關資訊。 它們協助診斷和偵錯，包括判斷執行多少次記憶體回收、在記憶體回收期間釋放了多少記憶體，以及其他事項。  

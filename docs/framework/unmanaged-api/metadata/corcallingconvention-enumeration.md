@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 468ad1acf55c4d1b4fc2b53730f16ee8630cf19b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444011"
 ---
 # <a name="corcallingconvention-enumeration"></a>CorCallingConvention 列舉
 包含值，這些值描述在 Managed 程式碼中進行的呼叫慣例類型。  
@@ -68,7 +69,7 @@ typedef enum CorCallingConvention
 |`IMAGE_CEE_CS_CALLCONV_GENERIC`|表示泛型方法簽章，以明確的型別引數數目。 這位於一般參數計數。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorHdr.h  
   

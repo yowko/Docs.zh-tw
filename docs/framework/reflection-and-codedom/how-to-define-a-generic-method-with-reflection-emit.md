@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396801"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>如何：使用反映發出定義泛型方法
 第一個程序示範如何建立有兩個類型參數的簡單泛型方法，以及如何將類別條件約束、介面條件約束和特殊條件約束套用至類型參數。  

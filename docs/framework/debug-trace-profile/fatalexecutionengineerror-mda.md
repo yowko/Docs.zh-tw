@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392534"
 ---
 # <a name="fatalexecutionengineerror-mda"></a>fatalExecutionEngineError MDA
 在 Common Language Runtime (CLR) 中偵測到嚴重錯誤時，就會啟動 `fatalExecutionEngine``Error` Managed 偵錯助理 (MDA)。 處理程序會終止。  

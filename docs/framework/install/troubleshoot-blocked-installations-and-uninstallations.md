@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394499"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>針對 .NET Framework 安裝和解除安裝遭封鎖的問題進行疑難排解
 

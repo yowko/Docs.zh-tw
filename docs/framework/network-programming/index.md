@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397893"
 ---
 # <a name="network-programming-in-the-net-framework"></a>以 .NET Framework 進行網路程式設計
 Microsoft .NET Framework 提供有層次、可擴充和網際網路服務的 Managed 實作，可以迅速而簡易地整合到您的應用程式。 您的網路應用程式可以建置在可外掛式通訊協定上，以便自動利用新的網際網路通訊協定，或者也可以使用 Windows Socket 介面的 Managed 實作，以便搭配使用通訊端層級上的網路。  

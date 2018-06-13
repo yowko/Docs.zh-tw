@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396242"
 ---
 # <a name="using-secure-sockets-layer"></a>使用安全通訊端層
 <xref:System.Net> 類別會使用安全通訊端層 (SSL) 來加密數個網路通訊協定的連線。  

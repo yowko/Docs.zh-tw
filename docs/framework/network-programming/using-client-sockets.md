@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395943"
 ---
 # <a name="using-client-sockets"></a>使用用戶端通訊端
 在透過 <xref:System.Net.Sockets.Socket> 起始交談之前，您必須先建立應用程式和遠端裝置之間的資料管道。 雖然有其他的網路位址系列和通訊協定存在，但此範例會示範如何建立遠端服務的 TCP/IP 連線。  

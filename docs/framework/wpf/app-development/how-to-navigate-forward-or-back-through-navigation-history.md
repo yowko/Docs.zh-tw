@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546262"
 ---
 # <a name="how-to-navigate-forward-or-back-through-navigation-history"></a>如何：在巡覽記錄中前移或後移
 此範例說明如何巡覽向前或向後巡覽記錄中的項目。  

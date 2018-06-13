@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397711"
 ---
 # <a name="how-to-request-data-using-the-webrequest-class"></a>如何：使用 WebRequest 類別要求資料
 下列程序描述用來向伺服器要求資源的步驟 ，例如網頁或檔案。 資源必須是以 URI 識別。  

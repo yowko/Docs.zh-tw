@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398621"
 ---
 # <a name="claims-based-authorization-using-wif"></a>使用 WIF 進行宣告式授權
 在信賴憑證者應用程式中，授權會判斷哪些是已驗證的識別可以存取的資源，以及可以針對這些資源執行哪些作業。 不適當或弱式授權會導致資訊洩露以及資料遭竄改。 本主題概述可使用 Windows Identity Foundation (WIF) 和 Security Token Service (STS) (例如 Microsoft Azure Access Control Service (ACS)) 為宣告感知 ASP.NET Web 應用程式和服務實作授權的方式。  

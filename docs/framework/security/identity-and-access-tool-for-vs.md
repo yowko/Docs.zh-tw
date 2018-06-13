@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398605"
 ---
 # <a name="identity-and-access-tool-for-visual-studio-2012"></a>Visual Studio 2012 的識別和存取工具
 本主題說明適用於 Visual Studio 11 的新識別和存取工具。 您可以從下列 URL 下載此工具： [ http://go.microsoft.com/fwlink/?LinkID=245849 ](http://go.microsoft.com/fwlink/?LinkID=245849)或直接從透過搜尋 「 識別 」 擴充功能管理員直接在 Visual Studio 11 內。  

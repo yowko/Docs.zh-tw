@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488214"
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>HOW TO：匯出自訂原則判斷提示
 原則判斷提示描述服務端點的功能與需求。 服務應用程式可使用服務中繼資料中的自訂原則判斷提示，與用戶端應用程式進行端點、繫結或合約自訂資訊的通訊。 您可以使用 Windows Communication Foundation (WCF) 的附加於端點、 作業或訊息的主旨，根據功能或您通訊的需求的 WSDL 繫結的原則運算式匯出判斷提示。  

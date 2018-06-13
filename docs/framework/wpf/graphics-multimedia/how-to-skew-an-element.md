@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561559"
 ---
 # <a name="how-to-skew-an-element"></a>操作說明：扭曲元素
 這個範例示範如何使用<xref:System.Windows.Media.SkewTransform>扭曲項目。 扭曲也稱為傾斜，這種轉換會以非一致的方式延伸座標空間。 一般用途之一<xref:System.Windows.Media.SkewTransform>是模擬[!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]深度[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]物件。  

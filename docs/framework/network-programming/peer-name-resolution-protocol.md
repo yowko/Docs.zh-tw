@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396996"
 ---
 # <a name="peer-name-resolution-protocol"></a>對等名稱解析通訊協定
 在對等環境中，對等使用特定名稱解析系統，才能從名稱或其他類型的識別碼解析彼此的網路位置 (位址、通訊協定和連接埠)。 過去，網域名稱系統 (DNS) 內本來就是暫時性連線以及其他缺點，而讓對等名稱解析變得複雜。  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547338"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>DependencyObject 的安全建構函式模式
 一般而言，類別建構函式不應該呼叫回呼 (例如，虛擬方法或委派)，因為建構函式可以當成衍生類別之建構函式的基底初始化來呼叫。 進入虛擬項目，可能是在任何指定物件的未完成初始化狀態中完成的。 不過，屬性系統本身會在內部呼叫並公開回呼，以做為相依性屬性系統的一部分。 簡單作業與相依性屬性值設定為<xref:System.Windows.DependencyObject.SetValue%2A>呼叫可能會包含回呼某處判斷。 基於這個理由，在建構函式的主體內設定相依性屬性值時應特別小心，如果您的類型是用來做為基底類別，這可能就會發生問題。 沒有實作的特定模式<xref:System.Windows.DependencyObject>可避免特定問題與相依性屬性的狀態和固有的回呼，其中記載於此處的建構函式。  

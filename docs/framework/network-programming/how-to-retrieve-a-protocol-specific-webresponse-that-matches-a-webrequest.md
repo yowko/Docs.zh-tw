@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394208"
 ---
 # <a name="how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest"></a>如何：擷取符合 WebRequest 的通訊協定特定 WebResponse
 這個範例示範如何擷取符合 WebRequest 的通訊協定特定 WebResponse。  
