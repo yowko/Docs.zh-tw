@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753322"
 ---
 # <a name="ltknowntypegt"></a><span data-ttu-id="13ad5-102">&lt;knownType&gt;</span><span class="sxs-lookup"><span data-stu-id="13ad5-102">&lt;knownType&gt;</span></span>
 <span data-ttu-id="13ad5-103">指定還原序列化期間要由 <xref:System.Runtime.Serialization.DataContractSerializer> 使用的型別。</span><span class="sxs-lookup"><span data-stu-id="13ad5-103">Specifies a type to be used by <xref:System.Runtime.Serialization.DataContractSerializer> during deserialization.</span></span> <span data-ttu-id="13ad5-104">項目會指定由「宣告型別」的欄位或屬性所傳回的「已知型別」。</span><span class="sxs-lookup"><span data-stu-id="13ad5-104">The element specifies a "known type" that is returned by a field or property of a "declared type."</span></span> <span data-ttu-id="13ad5-105">如需詳細資訊，請參閱[資料合約已知型別](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。</span><span class="sxs-lookup"><span data-stu-id="13ad5-105">For more information, see [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).</span></span>  

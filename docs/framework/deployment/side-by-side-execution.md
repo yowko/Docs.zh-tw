@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395157"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a><span data-ttu-id="91d53-102">.NET Framework 並存執行</span><span class="sxs-lookup"><span data-stu-id="91d53-102">Side-by-Side Execution in the .NET Framework</span></span>
 <span data-ttu-id="91d53-103">並存執行是在同一台電腦上執行多個版本之應用程式或元件的能力。</span><span class="sxs-lookup"><span data-stu-id="91d53-103">Side-by-side execution is the ability to run multiple versions of an application or component on the same computer.</span></span> <span data-ttu-id="91d53-104">在同一台電腦上，您可以同時擁有通用語言執行平台的多個版本，以及使用某一版執行階段的應用程式和元件的多個版本。</span><span class="sxs-lookup"><span data-stu-id="91d53-104">You can have multiple versions of the common language runtime, and multiple versions of applications and components that use a version of the runtime, on the same computer at the same time.</span></span>  

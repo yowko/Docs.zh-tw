@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33288615"
 ---
 # <a name="out-parameter-modifier-c-reference"></a><span data-ttu-id="aec4d-102">out 參數修飾詞 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="aec4d-102">out parameter modifier (C# Reference)</span></span>
 <span data-ttu-id="aec4d-103">`out` 關鍵字會導致引數由參考傳遞。</span><span class="sxs-lookup"><span data-stu-id="aec4d-103">The `out` keyword causes arguments to be passed by reference.</span></span> <span data-ttu-id="aec4d-104">它類似於 [ref](ref.md) 關鍵字，只是 `ref` 需要在傳遞之前，先初始化變數。</span><span class="sxs-lookup"><span data-stu-id="aec4d-104">It is like the [ref](ref.md) keyword, except that `ref` requires that the variable be initialized before it is passed.</span></span> <span data-ttu-id="aec4d-105">其類似於 [in](in-parameter-modifier.md) 關鍵字，但不同處在於 `in` 不允許呼叫的方法來修改引數的值。</span><span class="sxs-lookup"><span data-stu-id="aec4d-105">It is also like the [in](in-parameter-modifier.md) keyword, except that `in` does not allow the called method to modify the argument value.</span></span> <span data-ttu-id="aec4d-106">若要使用 `out` 參數，方法定義和呼叫方法都必須明確地使用 `out` 關鍵字。</span><span class="sxs-lookup"><span data-stu-id="aec4d-106">To use an `out` parameter, both the method definition and the calling method must explicitly use the `out` keyword.</span></span> <span data-ttu-id="aec4d-107">例如: </span><span class="sxs-lookup"><span data-stu-id="aec4d-107">For example:</span></span>  

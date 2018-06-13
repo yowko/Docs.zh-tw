@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269636"
 ---
 # <a name="let-clause-c-reference"></a><span data-ttu-id="c38c9-102">let 子句 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="c38c9-102">let clause (C# Reference)</span></span>
 <span data-ttu-id="c38c9-103">在查詢運算式中，有時它十分適合儲存子運算式的結果，以將它用於後續子句。</span><span class="sxs-lookup"><span data-stu-id="c38c9-103">In a query expression, it is sometimes useful to store the result of a sub-expression in order to use it in subsequent clauses.</span></span> <span data-ttu-id="c38c9-104">您可以使用 `let` 關鍵字執行這項作業，而此關鍵字會建立新的範圍變數，並使用您提供的運算式結果將它初始化。</span><span class="sxs-lookup"><span data-stu-id="c38c9-104">You can do this with the `let` keyword, which creates a new range variable and initializes it with the result of the expression you supply.</span></span> <span data-ttu-id="c38c9-105">使用值初始化之後，就不能使用範圍變數來儲存另一個值。</span><span class="sxs-lookup"><span data-stu-id="c38c9-105">Once initialized with a value, the range variable cannot be used to store another value.</span></span> <span data-ttu-id="c38c9-106">不過，如果範圍變數保留可查詢類型，則可以進行查詢。</span><span class="sxs-lookup"><span data-stu-id="c38c9-106">However, if the range variable holds a queryable type, it can be queried.</span></span>  

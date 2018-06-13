@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393980"
 ---
 # <a name="cache-policy"></a><span data-ttu-id="f494a-102">快取原則</span><span class="sxs-lookup"><span data-stu-id="f494a-102">Cache Policy</span></span>
 <span data-ttu-id="f494a-103">快取原則所定義的規則用來判斷是否可以使用所要求資源的快取複本來滿足要求。</span><span class="sxs-lookup"><span data-stu-id="f494a-103">A cache policy defines rules that are used to determine whether a request can be satisfied using a cached copy of the requested resource.</span></span> <span data-ttu-id="f494a-104">應用程式指定有效期限的用戶端快取需求，但有效的快取原則是由用戶端快取需求、伺服器內容到期需求和伺服器重新驗證需求所決定。</span><span class="sxs-lookup"><span data-stu-id="f494a-104">Applications specify client cache requirements for freshness, but the effective cache policy is determined by the client cache requirements, the server's content expiration requirements, and the server's revalidation requirements.</span></span> <span data-ttu-id="f494a-105">用戶端快取原則與伺服器需求的互動一律會導致最保守的快取原則，協助確保將最新內容傳回給用戶端應用程式。</span><span class="sxs-lookup"><span data-stu-id="f494a-105">The interaction of client cache policy and server requirements always results in the most conservative cache policy, to help ensure that the freshest content is returned to the client application.</span></span>  

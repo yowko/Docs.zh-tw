@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273383"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="67063-102">== 運算子 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="67063-102">== Operator (C# Reference)</span></span>
 <span data-ttu-id="67063-103">對於預先定義的實值型別，等號比較運算子 (`==`) 在運算元相等時傳回 true；否則傳回 `false`。</span><span class="sxs-lookup"><span data-stu-id="67063-103">For predefined value types, the equality operator (`==`) returns true if the values of its operands are equal, `false` otherwise.</span></span> <span data-ttu-id="67063-104">對於 [string](../../../csharp/language-reference/keywords/string.md) 以外的參考型別，若兩個運算元參考到同一物件，`==` 會傳回 `true`。</span><span class="sxs-lookup"><span data-stu-id="67063-104">For reference types other than [string](../../../csharp/language-reference/keywords/string.md), `==` returns `true` if its two operands refer to the same object.</span></span> <span data-ttu-id="67063-105">對於 `string` 類型，`==` 會比較字串的值。</span><span class="sxs-lookup"><span data-stu-id="67063-105">For the `string` type, `==` compares the values of the strings.</span></span>  

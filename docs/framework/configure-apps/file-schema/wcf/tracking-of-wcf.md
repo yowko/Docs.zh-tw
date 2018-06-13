@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749315"
 ---
 # <a name="lttrackinggt-of-wcf"></a><span data-ttu-id="4ca96-102">WCF 的 &lt;tracking&gt;</span><span class="sxs-lookup"><span data-stu-id="4ca96-102">&lt;tracking&gt; of WCF</span></span>
 <span data-ttu-id="4ca96-103">代表定義工作流程服務之追蹤設定的組態區段。</span><span class="sxs-lookup"><span data-stu-id="4ca96-103">Represents a configuration section for defining tracking settings for a workflow service.</span></span>  

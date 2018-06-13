@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33289265"
 ---
 # <a name="line-c-reference"></a><span data-ttu-id="2b371-102">#line (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="2b371-102">#line (C# Reference)</span></span>
 <span data-ttu-id="2b371-103">`#line` 可讓您修改編譯器的行號以及 (選擇性) 錯誤和警告的檔案名稱輸出。</span><span class="sxs-lookup"><span data-stu-id="2b371-103">`#line` lets you modify the compiler's line number and (optionally) the file name output for errors and warnings.</span></span> <span data-ttu-id="2b371-104">此範例示範如何報告兩個與行號建立關聯的警告。</span><span class="sxs-lookup"><span data-stu-id="2b371-104">This example shows how to report two warnings associated with line numbers.</span></span> <span data-ttu-id="2b371-105">`#line 200` 指示詞會將行號強制為 200 (但預設值為 #7)，而且在下一個 #line 指示詞之前，檔案名稱將會回報為 "Special"。</span><span class="sxs-lookup"><span data-stu-id="2b371-105">The `#line 200` directive forces the line number to be 200 (although the default is #7) and until the next #line directive, the filename will be reported as "Special".</span></span> <span data-ttu-id="2b371-106">#line 預設指示詞會將行編號還原為其預設編號，這會計算已由先前的指示詞重新編號的行。</span><span class="sxs-lookup"><span data-stu-id="2b371-106">The #line default directive returns the line numbering to its default numbering, which counts the lines that were renumbered by the previous directive.</span></span>  

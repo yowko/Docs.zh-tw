@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270574"
 ---
 # <a name="sizeof-c-reference"></a><span data-ttu-id="0c283-102">sizeof (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="0c283-102">sizeof (C# Reference)</span></span>
 <span data-ttu-id="0c283-103">用來取得 Unmanaged 類型的大小 (以位元組為單位)。</span><span class="sxs-lookup"><span data-stu-id="0c283-103">Used to obtain the size in bytes for an unmanaged type.</span></span> <span data-ttu-id="0c283-104">Unmanaged 類型包含下表所列的內建類型，也包含下列項目：</span><span class="sxs-lookup"><span data-stu-id="0c283-104">Unmanaged types include the built-in types that are listed in the table that follows, and also the following:</span></span>  

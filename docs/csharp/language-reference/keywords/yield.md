@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33289421"
 ---
 # <a name="yield-c-reference"></a><span data-ttu-id="09026-102">yield (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="09026-102">yield (C# Reference)</span></span>
 <span data-ttu-id="09026-103">在陳述式中使用 `yield` 關鍵字時，您會表示關鍵字所在的方法、運算子或 `get` 存取子是迭代器。</span><span class="sxs-lookup"><span data-stu-id="09026-103">When you use the `yield` keyword in a statement, you indicate that the method, operator, or `get` accessor in which it appears is an iterator.</span></span> <span data-ttu-id="09026-104">如果使用 `yield` 定義迭代器，當您為自訂集合類型實作 <xref:System.Collections.Generic.IEnumerator%601> 和 <xref:System.Collections.IEnumerable> 模式時，就不需要明確的額外類別 (保存列舉之狀態的類別，請參閱 <xref:System.Collections.IEnumerator> 中的範例)。</span><span class="sxs-lookup"><span data-stu-id="09026-104">Using `yield` to define an iterator removes the need for an explicit extra class (the class that holds the state for an enumeration, see <xref:System.Collections.Generic.IEnumerator%601> for an example) when you implement the <xref:System.Collections.IEnumerable> and <xref:System.Collections.IEnumerator> pattern for a custom collection type.</span></span>  

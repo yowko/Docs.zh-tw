@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265268"
 ---
 # <a name="value-c-reference"></a><span data-ttu-id="a2b73-102">value (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="a2b73-102">value (C# Reference)</span></span>
 <span data-ttu-id="a2b73-103">內容關鍵字 `value` 用於一般屬性宣告中的 set 存取子。</span><span class="sxs-lookup"><span data-stu-id="a2b73-103">The contextual keyword `value` is used in the set accessor in ordinary property declarations.</span></span> <span data-ttu-id="a2b73-104">類似於方法的輸入參數。</span><span class="sxs-lookup"><span data-stu-id="a2b73-104">It is similar to an input parameter on a method.</span></span> <span data-ttu-id="a2b73-105">`value` 一字參考用戶端程式碼嘗試指派給屬性的值。</span><span class="sxs-lookup"><span data-stu-id="a2b73-105">The word `value` references the value that client code is attempting to assign to the property.</span></span> <span data-ttu-id="a2b73-106">在下例中，`MyDerivedClass` 具有稱為 `Name` 的屬性，它使用 `value` 參數將新的字串指派給支援欄位 `name`。</span><span class="sxs-lookup"><span data-stu-id="a2b73-106">In the following example, `MyDerivedClass` has a property called `Name` that uses the `value` parameter to assign a new string to the backing field `name`.</span></span> <span data-ttu-id="a2b73-107">就用戶端程式碼的觀點而言，是以簡單指派寫入作業。</span><span class="sxs-lookup"><span data-stu-id="a2b73-107">From the point of view of client code, the operation is written as a simple assignment.</span></span>  

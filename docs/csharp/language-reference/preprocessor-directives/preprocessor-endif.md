@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269973"
 ---
 # <a name="endif-c-reference"></a><span data-ttu-id="8be31-102">#endif (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="8be31-102">#endif (C# Reference)</span></span>
 <span data-ttu-id="8be31-103">`#endif` 指定條件指示詞的結尾，而其開始於 [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) 指示詞。</span><span class="sxs-lookup"><span data-stu-id="8be31-103">`#endif` specifies the end of a conditional directive, which began with the [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) directive.</span></span> <span data-ttu-id="8be31-104">例如，套用至物件的</span><span class="sxs-lookup"><span data-stu-id="8be31-104">For example,</span></span>  

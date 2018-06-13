@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270227"
 ---
 # <a name="lt-operator-c-reference"></a><span data-ttu-id="933f0-102">&lt; 運算子 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="933f0-102">&lt; Operator (C# Reference)</span></span>
 <span data-ttu-id="933f0-103">如果第一個運算元小於第二個運算元，則所有數值和列舉類型都會定義「小於」關係運算子 (`<`) 以傳回 `true`否則為 `false`。</span><span class="sxs-lookup"><span data-stu-id="933f0-103">All numeric and enumeration types define a "less than" relational operator (`<`) that returns `true` if the first operand is less than the second, `false` otherwise.</span></span>  

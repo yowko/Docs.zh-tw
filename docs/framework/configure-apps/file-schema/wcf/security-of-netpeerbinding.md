@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749136"
 ---
 # <a name="ltsecuritygt-of-ltnetpeerbindinggt"></a><span data-ttu-id="2428a-102">&lt;netPeerBinding&gt; 的 &lt;security&gt;</span><span class="sxs-lookup"><span data-stu-id="2428a-102">&lt;security&gt; of &lt;netPeerBinding&gt;</span></span>
 <span data-ttu-id="2428a-103">定義的安全性設定[ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)，包括使用的驗證類型使用，並使用訊息傳輸的安全性。</span><span class="sxs-lookup"><span data-stu-id="2428a-103">Defines the security settings of the [\<netPeerTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md), including the type of authentication used and the security used for the message transport.</span></span>  

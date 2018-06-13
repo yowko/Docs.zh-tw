@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752193"
 ---
 # <a name="setting-assembly-attributes"></a><span data-ttu-id="befb0-102">設定組件屬性</span><span class="sxs-lookup"><span data-stu-id="befb0-102">Setting Assembly Attributes</span></span>
 <span data-ttu-id="befb0-103">組件屬性是提供組件相關資訊的值。</span><span class="sxs-lookup"><span data-stu-id="befb0-103">Assembly attributes are values that provide information about an assembly.</span></span> <span data-ttu-id="befb0-104">屬性可分成下列幾組資訊：</span><span class="sxs-lookup"><span data-stu-id="befb0-104">The attributes are divided into the following sets of information:</span></span>  

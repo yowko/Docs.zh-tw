@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217203"
 ---
 # <a name="-link-c-compiler-options"></a><span data-ttu-id="541f3-102">-link (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="541f3-102">-link (C# Compiler Options)</span></span>
 <span data-ttu-id="541f3-103">讓編譯器將所指定組件的 COM 類型資訊全部提供給您目前編譯的專案。</span><span class="sxs-lookup"><span data-stu-id="541f3-103">Causes the compiler to make COM type information in the specified assemblies available to the project that you are currently compiling.</span></span>  

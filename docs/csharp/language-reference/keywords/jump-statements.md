@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265216"
 ---
 # <a name="jump-statements-c-reference"></a><span data-ttu-id="63f3c-102">跳躍陳述式 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="63f3c-102">Jump Statements (C# Reference)</span></span>
 <span data-ttu-id="63f3c-103">分支是使用跳躍陳述式來執行，這會導致立即傳輸程式控制項。</span><span class="sxs-lookup"><span data-stu-id="63f3c-103">Branching is performed using jump statements, which cause an immediate transfer of the program control.</span></span> <span data-ttu-id="63f3c-104">跳躍陳述式中會使用下列關鍵字：</span><span class="sxs-lookup"><span data-stu-id="63f3c-104">The following keywords are used in jump statements:</span></span>  
