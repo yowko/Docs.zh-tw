@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507093"
 ---
 # <a name="transport-security-overview"></a>傳輸安全性概觀
 傳輸安全性機制中 Windows Communication Foundation (WCF) 取決於繫結和傳輸所使用。 例如，使用 <xref:System.ServiceModel.WSHttpBinding> 類別時，傳輸為 HTTP，而保護此傳輸的主要機制則為 Secure Sockets Layer (SSL) over HTTP，通常稱為 HTTPS。 本主題討論 WCF 系統提供繫結中使用的主要傳輸安全性機制。  

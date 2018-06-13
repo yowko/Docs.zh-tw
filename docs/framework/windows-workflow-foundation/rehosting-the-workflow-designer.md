@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513302"
 ---
 # <a name="rehosting-the-workflow-designer"></a>重新裝載工作流程設計工具
 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 可因建立、修改與監控工作流程等目的，在 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 之外的環境重新裝載。  

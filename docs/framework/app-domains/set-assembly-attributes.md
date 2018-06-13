@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752193"
 ---
 # <a name="setting-assembly-attributes"></a>設定組件屬性
 組件屬性是提供組件相關資訊的值。 屬性可分成下列幾組資訊：  

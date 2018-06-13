@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513340"
 ---
 # <a name="compensation-samples"></a>補償 (範例)
 本節包含相關的補償中 Windows Workflow Foundation (WF) 範例。  

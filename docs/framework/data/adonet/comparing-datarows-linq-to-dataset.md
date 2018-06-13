@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756276"
 ---
 # <a name="comparing-datarows-linq-to-dataset"></a>比較 DataRow (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 定義了許多設定運算子，可比較來源項目以便查看它們是否相等。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 會提供下列設定運算子：  

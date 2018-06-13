@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513307"
 ---
 # <a name="getting-started-writing-a-custom-activity"></a>撰寫自訂活動的使用者入門
 這個範例示範如何以 XAML 定義簡單的自訂活動。 此活動名稱為 `Rhyme`，其邏輯為三個 <xref:System.Activities.Statements.WriteLine> 活動的序列。  

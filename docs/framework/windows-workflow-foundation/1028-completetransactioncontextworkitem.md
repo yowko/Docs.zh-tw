@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511383"
 ---
 # <a name="1028---completetransactioncontextworkitem"></a>1028 - CompleteTransactionContextWorkItem
 ## <a name="properties"></a>屬性  

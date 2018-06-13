@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513122"
 ---
 # <a name="guide-to-the-windows-workflow-documentation"></a>Windows Workflow 文件指南
 本主題包含如何使用 Windows Workflow Foundation 文件的資訊。 連結文件是建議的起點，並且根據特定興趣和專業等級分群組。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513660"
 ---
 # <a name="waiting-for-input-in-a-workflow"></a>在工作流程中等待輸入
 本節中的主題討論如何使用書籤和傳訊活動。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514152"
 ---
 # <a name="bookmarks"></a>書籤
 這個範例示範如何撰寫自訂活動，建立可接收外部輸入的書籤。 範例中還包括在工作流程中使用自訂活動的基本主控台應用程式，並且示範如何探索和繼續與執行中工作流程執行個體相關聯的書籤。 如需書籤的詳細資訊，請參閱[書籤](../../../../docs/framework/windows-workflow-foundation/bookmarks.md)。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513682"
 ---
 # <a name="creating-and-running-a-workflow-instance"></a>建立與執行工作流程執行個體
 這個範例示範如何執行工作流程執行個體。 範例中會示範如何以同步和非同步方式執行。  

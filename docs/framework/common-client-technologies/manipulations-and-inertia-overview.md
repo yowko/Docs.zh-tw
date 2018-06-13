@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744391"
 ---
 # <a name="manipulations-and-inertia-overview"></a>操作和慣性概觀
 「操作」可讓使用者使用「操作工具」來移動、旋轉和調整使用者介面 (UI) 項目大小。 操作工具代表滑鼠或 (在觸控式的情況下) 手寫筆或手指。  

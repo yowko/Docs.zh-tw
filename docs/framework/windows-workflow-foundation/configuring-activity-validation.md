@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512596"
 ---
 # <a name="configuring-activity-validation"></a>設定活動驗證
 活動驗證可讓活動作者和使用者在執行前，先在活動的組態中識別及報告錯誤。 Windows Workflow Foundation (WF) 提供下列三種活動驗證：  

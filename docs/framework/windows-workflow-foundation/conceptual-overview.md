@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511845"
 ---
 # <a name="windows-workflow-conceptual-overview"></a>Windows Workflow Conceptual 概觀
 本節包含一系列討論更大的 Windows Workflow Foundation (WF) 背後概念的主題。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359422"
 ---
 # <a name="privacy-and-data-security"></a>隱私權和資料安全性
 如何保護及管理 ADO.NET 應用程式中的機密資訊，是依據建立資訊時所使用的基礎產品及技術而定。 ADO.NET 並未直接針對資料的保護或加密提供服務。  

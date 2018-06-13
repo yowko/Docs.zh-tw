@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327433"
 ---
 # <a name="grouping-data-c"></a>分組資料 (C#)
 分組指的是將資料放在群組中，好讓每一個群組中的項目共用共同的屬性。  

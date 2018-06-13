@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514048"
 ---
 # <a name="how-to-deserialize-instance-data-properties"></a>HOW TO：還原序列化執行個體資料屬性
 有時候，使用者或工作流程管理員可能會想要手動檢查持續工作流程執行個體的狀態。 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 提供公開下列四個資料行的執行個體資料表檢視：  

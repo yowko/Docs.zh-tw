@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408056"
 ---
 # <a name="how-to-enable-token-replay-detection"></a>操作說明︰啟用權杖重新執行偵測
 ## <a name="applies-to"></a>適用於  

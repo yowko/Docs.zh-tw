@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512264"
 ---
 # <a name="developing-windows-service-applications"></a>開發 Windows 服務應用程式
 您可以使用 Microsoft Visual Studio 或 Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK，藉由建立要安裝為服務的應用程式，以輕鬆地建立服務。 這種類型的應用程式稱為 Windows 服務。 您可以使用架構功能，以建立服務、安裝服務，以及啟動、停止及控制服務的行為。  

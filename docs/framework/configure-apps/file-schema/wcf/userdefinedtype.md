@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755275"
 ---
 # <a name="ltuserdefinedtypegt"></a>&lt;userDefinedType&gt;
 表示要包含在服務合約中的使用者定義型別 (User Defined Type，UDT)。  

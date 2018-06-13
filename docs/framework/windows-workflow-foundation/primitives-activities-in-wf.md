@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513367"
 ---
 # <a name="primitives-activities-in-wf"></a>WF 中的基本活動
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 提供數個系統供應式活動，這些活動會提供一個方便的機制來執行一般工作。  
