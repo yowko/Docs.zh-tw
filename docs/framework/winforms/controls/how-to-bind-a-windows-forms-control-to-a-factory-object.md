@@ -1,14 +1,6 @@
 ---
 title: 如何：將 Windows Forms 控制項繫結至 Factory 物件
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,40 +11,35 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding to a factory object
 - BindingSource component [Windows Forms], examples
 ms.assetid: 7d59af89-ff82-41d8-a48a-f1fbae788b0d
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0c489227d12afd5e6d63a43c752ea97f06aa974e
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: c796071f42f58d12c60031777afa9260142424d4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530116"
 ---
-# <a name="how-to-bind-a-windows-forms-control-to-a-factory-object"></a><span data-ttu-id="8f6d3-102">如何：將 Windows Forms 控制項繫結至 Factory 物件</span><span class="sxs-lookup"><span data-stu-id="8f6d3-102">How to: Bind a Windows Forms Control to a Factory Object</span></span>
-<span data-ttu-id="8f6d3-103">當您在建立與資料互動的控制項時，有時會發現需要將控制項繫結程序至會產生其他物件的物件或方法。</span><span class="sxs-lookup"><span data-stu-id="8f6d3-103">When you are building controls that interact with data, you will sometimes find it necessary to bind a control to an object or method that generates other objects.</span></span> <span data-ttu-id="8f6d3-104">這類物件或方法就叫做 Factory。</span><span class="sxs-lookup"><span data-stu-id="8f6d3-104">Such an object or method is called a factory.</span></span> <span data-ttu-id="8f6d3-105">比方說，您的資料來源可能是從方法呼叫傳回的值，而不是記憶體或類型中的物件。</span><span class="sxs-lookup"><span data-stu-id="8f6d3-105">Your data source might be, for example, the return value from a method call, instead of an object in memory or a type.</span></span> <span data-ttu-id="8f6d3-106">只要來源傳回集合，您就可以將控制項繫結至這種資料來源。</span><span class="sxs-lookup"><span data-stu-id="8f6d3-106">You can bind a control to this kind of data source as long as the source returns a collection.</span></span>  
+# <a name="how-to-bind-a-windows-forms-control-to-a-factory-object"></a><span data-ttu-id="e000d-102">如何：將 Windows Forms 控制項繫結至 Factory 物件</span><span class="sxs-lookup"><span data-stu-id="e000d-102">How to: Bind a Windows Forms Control to a Factory Object</span></span>
+<span data-ttu-id="e000d-103">當您在建立與資料互動的控制項時，有時會發現需要將控制項繫結程序至會產生其他物件的物件或方法。</span><span class="sxs-lookup"><span data-stu-id="e000d-103">When you are building controls that interact with data, you will sometimes find it necessary to bind a control to an object or method that generates other objects.</span></span> <span data-ttu-id="e000d-104">這類物件或方法就叫做 Factory。</span><span class="sxs-lookup"><span data-stu-id="e000d-104">Such an object or method is called a factory.</span></span> <span data-ttu-id="e000d-105">比方說，您的資料來源可能是從方法呼叫傳回的值，而不是記憶體或類型中的物件。</span><span class="sxs-lookup"><span data-stu-id="e000d-105">Your data source might be, for example, the return value from a method call, instead of an object in memory or a type.</span></span> <span data-ttu-id="e000d-106">只要來源傳回集合，您就可以將控制項繫結至這種資料來源。</span><span class="sxs-lookup"><span data-stu-id="e000d-106">You can bind a control to this kind of data source as long as the source returns a collection.</span></span>  
   
- <span data-ttu-id="8f6d3-107">使用 <xref:System.Windows.Forms.BindingSource> 控制項可讓您輕鬆將控制項繫結至 Factory 物件。</span><span class="sxs-lookup"><span data-stu-id="8f6d3-107">You can easily bind a control to a factory object by using the <xref:System.Windows.Forms.BindingSource> control.</span></span>  
+ <span data-ttu-id="e000d-107">使用 <xref:System.Windows.Forms.BindingSource> 控制項可讓您輕鬆將控制項繫結至 Factory 物件。</span><span class="sxs-lookup"><span data-stu-id="e000d-107">You can easily bind a control to a factory object by using the <xref:System.Windows.Forms.BindingSource> control.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8f6d3-108">範例</span><span class="sxs-lookup"><span data-stu-id="8f6d3-108">Example</span></span>  
- <span data-ttu-id="8f6d3-109">下列範例示範如何使用 <xref:System.Windows.Forms.BindingSource> 控制項，將 <xref:System.Windows.Forms.DataGridView> 控制項繫結至 Factory 方法。</span><span class="sxs-lookup"><span data-stu-id="8f6d3-109">The following example demonstrates how to bind a <xref:System.Windows.Forms.DataGridView> control to a factory method by using a <xref:System.Windows.Forms.BindingSource> control.</span></span> <span data-ttu-id="8f6d3-110">Factory 方法名為 `GetOrdersByCustomerId`，它會傳回 Northwind 資料庫中指定客戶的所有訂單。</span><span class="sxs-lookup"><span data-stu-id="8f6d3-110">The factory method is named `GetOrdersByCustomerId`, and it returns all the orders for a given customer in the Northwind database.</span></span>  
+## <a name="example"></a><span data-ttu-id="e000d-108">範例</span><span class="sxs-lookup"><span data-stu-id="e000d-108">Example</span></span>  
+ <span data-ttu-id="e000d-109">下列範例示範如何使用 <xref:System.Windows.Forms.BindingSource> 控制項，將 <xref:System.Windows.Forms.DataGridView> 控制項繫結至 Factory 方法。</span><span class="sxs-lookup"><span data-stu-id="e000d-109">The following example demonstrates how to bind a <xref:System.Windows.Forms.DataGridView> control to a factory method by using a <xref:System.Windows.Forms.BindingSource> control.</span></span> <span data-ttu-id="e000d-110">Factory 方法名為 `GetOrdersByCustomerId`，它會傳回 Northwind 資料庫中指定客戶的所有訂單。</span><span class="sxs-lookup"><span data-stu-id="e000d-110">The factory method is named `GetOrdersByCustomerId`, and it returns all the orders for a given customer in the Northwind database.</span></span>  
   
  [!code-cpp[System.Windows.Forms.DataConnector.BindToFactory#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.BindToFactory/CPP/form1.cpp#1)]
  [!code-csharp[System.Windows.Forms.DataConnector.BindToFactory#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.BindToFactory/CS/form1.cs#1)]
  [!code-vb[System.Windows.Forms.DataConnector.BindToFactory#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.BindToFactory/VB/form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="8f6d3-111">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="8f6d3-111">Compiling the Code</span></span>  
- <span data-ttu-id="8f6d3-112">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="8f6d3-112">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="e000d-111">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="e000d-111">Compiling the Code</span></span>  
+ <span data-ttu-id="e000d-112">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="e000d-112">This example requires:</span></span>  
   
--   <span data-ttu-id="8f6d3-113">System、System.Data、System.Drawing 和 System.Windows.Forms 組件的參考。</span><span class="sxs-lookup"><span data-stu-id="8f6d3-113">References to the System, System.Data, System.Drawing and System.Windows.Forms assemblies.</span></span>  
+-   <span data-ttu-id="e000d-113">System、System.Data、System.Drawing 和 System.Windows.Forms 組件的參考。</span><span class="sxs-lookup"><span data-stu-id="e000d-113">References to the System, System.Data, System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="8f6d3-114">Visual Basic 或 Visual C# 中建置這個範例，從命令列的相關資訊，請參閱[從命令列建置](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[使用 csc.exe 建置](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="8f6d3-114">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="8f6d3-115">您也可以將程式碼貼入新的專案，以建置 Visual Studio 中的這個範例。</span><span class="sxs-lookup"><span data-stu-id="8f6d3-115">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  <span data-ttu-id="8f6d3-116">另請參閱 [如何：使用 Visual Studio 編譯及執行完整的 Windows Form 程式碼範例](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="8f6d3-116">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
+ <span data-ttu-id="e000d-114">Visual Basic 或 Visual C# 中建置這個範例，從命令列的相關資訊，請參閱[從命令列建置](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[使用 csc.exe 建置](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="e000d-114">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="e000d-115">您也可以將程式碼貼入新的專案，以建置 Visual Studio 中的這個範例。</span><span class="sxs-lookup"><span data-stu-id="e000d-115">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  <span data-ttu-id="e000d-116">另請參閱 [如何：使用 Visual Studio 編譯及執行完整的 Windows Form 程式碼範例](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="e000d-116">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8f6d3-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8f6d3-117">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="e000d-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e000d-117">See Also</span></span>  
  <xref:System.Windows.Forms.BindingNavigator>  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.BindingSource>  
- [<span data-ttu-id="8f6d3-118">BindingSource 元件</span><span class="sxs-lookup"><span data-stu-id="8f6d3-118">BindingSource Component</span></span>](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [<span data-ttu-id="8f6d3-119">操作說明：將 Windows Forms 控制項繫結至型別</span><span class="sxs-lookup"><span data-stu-id="8f6d3-119">How to: Bind a Windows Forms Control to a Type</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)
+ [<span data-ttu-id="e000d-118">BindingSource 元件</span><span class="sxs-lookup"><span data-stu-id="e000d-118">BindingSource Component</span></span>](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
+ [<span data-ttu-id="e000d-119">操作說明：將 Windows Forms 控制項繫結至型別</span><span class="sxs-lookup"><span data-stu-id="e000d-119">How to: Bind a Windows Forms Control to a Type</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)

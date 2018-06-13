@@ -1,14 +1,6 @@
 ---
-title: "ISymUnmanagedWriter::DefineGlobalVariable 方法"
-ms.custom: 
+title: ISymUnmanagedWriter::DefineGlobalVariable 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedWriter.DefineGlobalVariable
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 843c904a-8176-4d8f-bd47-b4d4c29f4c5c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 11d991d9861fa3dc77b6a95a4c8f7665547672eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: f1dd657c004c58480ea2f603ad4494753463c79b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428441"
 ---
-# <a name="isymunmanagedwriterdefineglobalvariable-method"></a><span data-ttu-id="81372-102">ISymUnmanagedWriter::DefineGlobalVariable 方法</span><span class="sxs-lookup"><span data-stu-id="81372-102">ISymUnmanagedWriter::DefineGlobalVariable Method</span></span>
-<span data-ttu-id="81372-103">定義單一的全域變數。</span><span class="sxs-lookup"><span data-stu-id="81372-103">Defines a single global variable.</span></span>  
+# <a name="isymunmanagedwriterdefineglobalvariable-method"></a><span data-ttu-id="55624-102">ISymUnmanagedWriter::DefineGlobalVariable 方法</span><span class="sxs-lookup"><span data-stu-id="55624-102">ISymUnmanagedWriter::DefineGlobalVariable Method</span></span>
+<span data-ttu-id="55624-103">定義單一的全域變數。</span><span class="sxs-lookup"><span data-stu-id="55624-103">Defines a single global variable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="81372-104">語法</span><span class="sxs-lookup"><span data-stu-id="81372-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="55624-104">語法</span><span class="sxs-lookup"><span data-stu-id="55624-104">Syntax</span></span>  
   
 ```  
 HRESULT DefineGlobalVariable(  
@@ -52,38 +41,38 @@ HRESULT DefineGlobalVariable(
     [in] ULONG32      addr3);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="81372-105">參數</span><span class="sxs-lookup"><span data-stu-id="81372-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="55624-105">參數</span><span class="sxs-lookup"><span data-stu-id="55624-105">Parameters</span></span>  
  `name`  
- <span data-ttu-id="81372-106">[in]指標`WCHAR`，定義全域變數的名稱。</span><span class="sxs-lookup"><span data-stu-id="81372-106">[in] A pointer to a `WCHAR` that defines the global variable name.</span></span>  
+ <span data-ttu-id="55624-106">[in]指標`WCHAR`，定義全域變數的名稱。</span><span class="sxs-lookup"><span data-stu-id="55624-106">[in] A pointer to a `WCHAR` that defines the global variable name.</span></span>  
   
  `attributes`  
- <span data-ttu-id="81372-107">[in]全域變數的屬性。</span><span class="sxs-lookup"><span data-stu-id="81372-107">[in] The global variable attributes.</span></span>  
+ <span data-ttu-id="55624-107">[in]全域變數的屬性。</span><span class="sxs-lookup"><span data-stu-id="55624-107">[in] The global variable attributes.</span></span>  
   
  `cSig`  
- <span data-ttu-id="81372-108">[in]A`ULONG32`指出的大小，以字元為單位的`signature`緩衝區。</span><span class="sxs-lookup"><span data-stu-id="81372-108">[in] A `ULONG32` that indicates the size, in characters, of the `signature` buffer.</span></span>  
+ <span data-ttu-id="55624-108">[in]A`ULONG32`指出的大小，以字元為單位的`signature`緩衝區。</span><span class="sxs-lookup"><span data-stu-id="55624-108">[in] A `ULONG32` that indicates the size, in characters, of the `signature` buffer.</span></span>  
   
  `signature`  
- <span data-ttu-id="81372-109">[in]全域變數簽章。</span><span class="sxs-lookup"><span data-stu-id="81372-109">[in] The global variable signature.</span></span>  
+ <span data-ttu-id="55624-109">[in]全域變數簽章。</span><span class="sxs-lookup"><span data-stu-id="55624-109">[in] The global variable signature.</span></span>  
   
  `addrKind`  
- <span data-ttu-id="81372-110">[in]地址類型。</span><span class="sxs-lookup"><span data-stu-id="81372-110">[in] The address type.</span></span>  
+ <span data-ttu-id="55624-110">[in]地址類型。</span><span class="sxs-lookup"><span data-stu-id="55624-110">[in] The address type.</span></span>  
   
  `addr1`  
- <span data-ttu-id="81372-111">[in]參數規格的第一個位址。</span><span class="sxs-lookup"><span data-stu-id="81372-111">[in] The first address for the parameter specification.</span></span>  
+ <span data-ttu-id="55624-111">[in]參數規格的第一個位址。</span><span class="sxs-lookup"><span data-stu-id="55624-111">[in] The first address for the parameter specification.</span></span>  
   
  `addr2`  
- <span data-ttu-id="81372-112">[in]參數規格的第二個位址。</span><span class="sxs-lookup"><span data-stu-id="81372-112">[in] The second address for the parameter specification.</span></span>  
+ <span data-ttu-id="55624-112">[in]參數規格的第二個位址。</span><span class="sxs-lookup"><span data-stu-id="55624-112">[in] The second address for the parameter specification.</span></span>  
   
  `addr3`  
- <span data-ttu-id="81372-113">[in]參數規格的第三個位址。</span><span class="sxs-lookup"><span data-stu-id="81372-113">[in] The third address for the parameter specification.</span></span>  
+ <span data-ttu-id="55624-113">[in]參數規格的第三個位址。</span><span class="sxs-lookup"><span data-stu-id="55624-113">[in] The third address for the parameter specification.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="81372-114">傳回值</span><span class="sxs-lookup"><span data-stu-id="81372-114">Return Value</span></span>  
- <span data-ttu-id="81372-115">如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="81372-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="55624-114">傳回值</span><span class="sxs-lookup"><span data-stu-id="55624-114">Return Value</span></span>  
+ <span data-ttu-id="55624-115">如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="55624-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="81372-116">需求</span><span class="sxs-lookup"><span data-stu-id="81372-116">Requirements</span></span>  
- <span data-ttu-id="81372-117">**標頭：**於 CorSym.idl、 CorSym.h</span><span class="sxs-lookup"><span data-stu-id="81372-117">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="55624-116">需求</span><span class="sxs-lookup"><span data-stu-id="55624-116">Requirements</span></span>  
+ <span data-ttu-id="55624-117">**標頭：** 於 CorSym.idl、 CorSym.h</span><span class="sxs-lookup"><span data-stu-id="55624-117">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="81372-118">請參閱</span><span class="sxs-lookup"><span data-stu-id="81372-118">See Also</span></span>  
- [<span data-ttu-id="81372-119">ISymUnmanagedWriter 介面</span><span class="sxs-lookup"><span data-stu-id="81372-119">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)  
- [<span data-ttu-id="81372-120">DefineLocalVariable 方法</span><span class="sxs-lookup"><span data-stu-id="81372-120">DefineLocalVariable Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)  
- [<span data-ttu-id="81372-121">DefineGlobalVariable2 方法</span><span class="sxs-lookup"><span data-stu-id="81372-121">DefineGlobalVariable2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineglobalvariable2-method.md)
+## <a name="see-also"></a><span data-ttu-id="55624-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="55624-118">See Also</span></span>  
+ [<span data-ttu-id="55624-119">ISymUnmanagedWriter 介面</span><span class="sxs-lookup"><span data-stu-id="55624-119">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)  
+ [<span data-ttu-id="55624-120">DefineLocalVariable 方法</span><span class="sxs-lookup"><span data-stu-id="55624-120">DefineLocalVariable Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)  
+ [<span data-ttu-id="55624-121">DefineGlobalVariable2 方法</span><span class="sxs-lookup"><span data-stu-id="55624-121">DefineGlobalVariable2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineglobalvariable2-method.md)

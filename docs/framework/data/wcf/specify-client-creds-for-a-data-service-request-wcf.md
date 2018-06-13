@@ -1,70 +1,57 @@
 ---
-title: "HOW TO：指定資料服務要求的用戶端認證 (WCF Data Services)"
-ms.custom: 
+title: HOW TO：指定資料服務要求的用戶端認證 (WCF Data Services)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 09575a5f4790bc481b817412df2017e53ee18268
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cf3ba2a13d56aae56ed7a1444169056b9905a145
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363962"
 ---
-# <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a><span data-ttu-id="ab145-102">HOW TO：指定資料服務要求的用戶端認證 (WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="ab145-102">How to: Specify Client Credentials for a Data Service Request (WCF Data Services)</span></span>
-<span data-ttu-id="ab145-103">預設情況下，將要求傳送至 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 服務時，用戶端程式庫不提供認證。</span><span class="sxs-lookup"><span data-stu-id="ab145-103">By default, the client library does not supply credentials when sending a request to an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] service.</span></span> <span data-ttu-id="ab145-104">不過，您可以透過為 <xref:System.Net.NetworkCredential> 的 <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> 屬性提供 <xref:System.Data.Services.Client.DataServiceContext>，藉以指定要傳送的認證來驗證要求。</span><span class="sxs-lookup"><span data-stu-id="ab145-104">However, you can specify that credentials be sent to authenticate requests to the data service by supplying a <xref:System.Net.NetworkCredential> for the <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> property of the <xref:System.Data.Services.Client.DataServiceContext>.</span></span> <span data-ttu-id="ab145-105">如需詳細資訊，請參閱 [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="ab145-105">For more information, see [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md).</span></span> <span data-ttu-id="ab145-106">本主題中的範例會示範如何在從資料服務要求資料時，明確地提供 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端所使用的認證。</span><span class="sxs-lookup"><span data-stu-id="ab145-106">The example in this topic shows how to explicitly provide credentials that are used by the [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] client when requesting data from the data service.</span></span>  
+# <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a><span data-ttu-id="d6ae9-102">HOW TO：指定資料服務要求的用戶端認證 (WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="d6ae9-102">How to: Specify Client Credentials for a Data Service Request (WCF Data Services)</span></span>
+<span data-ttu-id="d6ae9-103">預設情況下，將要求傳送至 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 服務時，用戶端程式庫不提供認證。</span><span class="sxs-lookup"><span data-stu-id="d6ae9-103">By default, the client library does not supply credentials when sending a request to an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] service.</span></span> <span data-ttu-id="d6ae9-104">不過，您可以透過為 <xref:System.Net.NetworkCredential> 的 <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> 屬性提供 <xref:System.Data.Services.Client.DataServiceContext>，藉以指定要傳送的認證來驗證要求。</span><span class="sxs-lookup"><span data-stu-id="d6ae9-104">However, you can specify that credentials be sent to authenticate requests to the data service by supplying a <xref:System.Net.NetworkCredential> for the <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> property of the <xref:System.Data.Services.Client.DataServiceContext>.</span></span> <span data-ttu-id="d6ae9-105">如需詳細資訊，請參閱 [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="d6ae9-105">For more information, see [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md).</span></span> <span data-ttu-id="d6ae9-106">本主題中的範例會示範如何在從資料服務要求資料時，明確地提供 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端所使用的認證。</span><span class="sxs-lookup"><span data-stu-id="d6ae9-106">The example in this topic shows how to explicitly provide credentials that are used by the [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] client when requesting data from the data service.</span></span>  
   
- <span data-ttu-id="ab145-107">本主題中的範例使用 Northwind 範例資料服務和自動產生的用戶端資料服務類別。</span><span class="sxs-lookup"><span data-stu-id="ab145-107">The example in this topic uses the Northwind sample data service and autogenerated client data service classes.</span></span> <span data-ttu-id="ab145-108">當您完成建立此服務和用戶端資料類別[WCF Data Services 快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="ab145-108">This service and the client data classes are created when you complete the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span> <span data-ttu-id="ab145-109">您也可以使用[Northwind 範例資料服務](http://go.microsoft.com/fwlink/?LinkId=187426)上發行[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]網站; 這個範例資料服務是唯讀的並嘗試將變更儲存傳回錯誤。</span><span class="sxs-lookup"><span data-stu-id="ab145-109">You can also use the [Northwind sample data service](http://go.microsoft.com/fwlink/?LinkId=187426) that is published on the [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Web site; this sample data service is read-only and attempting to save changes returns an error.</span></span> <span data-ttu-id="ab145-110">上的範例資料服務[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]網站允許匿名驗證。</span><span class="sxs-lookup"><span data-stu-id="ab145-110">The sample data services on the [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Web site allow anonymous authentication.</span></span>  
+ <span data-ttu-id="d6ae9-107">本主題中的範例使用 Northwind 範例資料服務和自動產生的用戶端資料服務類別。</span><span class="sxs-lookup"><span data-stu-id="d6ae9-107">The example in this topic uses the Northwind sample data service and autogenerated client data service classes.</span></span> <span data-ttu-id="d6ae9-108">當您完成建立此服務和用戶端資料類別[WCF Data Services 快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="d6ae9-108">This service and the client data classes are created when you complete the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span> <span data-ttu-id="d6ae9-109">您也可以使用[Northwind 範例資料服務](http://go.microsoft.com/fwlink/?LinkId=187426)上發行[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]網站; 這個範例資料服務是唯讀的並嘗試將變更儲存傳回錯誤。</span><span class="sxs-lookup"><span data-stu-id="d6ae9-109">You can also use the [Northwind sample data service](http://go.microsoft.com/fwlink/?LinkId=187426) that is published on the [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Web site; this sample data service is read-only and attempting to save changes returns an error.</span></span> <span data-ttu-id="d6ae9-110">上的範例資料服務[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]網站允許匿名驗證。</span><span class="sxs-lookup"><span data-stu-id="d6ae9-110">The sample data services on the [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Web site allow anonymous authentication.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ab145-111">範例</span><span class="sxs-lookup"><span data-stu-id="ab145-111">Example</span></span>  
- <span data-ttu-id="ab145-112">下列範例是 Windows Presentation Framework 應用程式的主頁面的 Extensible Application Markup Language (XAML) 檔案的程式碼後置頁面。</span><span class="sxs-lookup"><span data-stu-id="ab145-112">The following example is from the code-behind page for an Extensible Application Markup Language (XAML) file that is the main page of the Windows Presentation Framework application.</span></span> <span data-ttu-id="ab145-113">此範例會顯示 `LoginWindow` 執行個體，以便向使用者收集驗證認證，然後在要求資料服務時使用這些認證。</span><span class="sxs-lookup"><span data-stu-id="ab145-113">This example displays a `LoginWindow` instance to collect authentication credentials from the user, and then uses these credentials when making a request to the data service.</span></span>  
+## <a name="example"></a><span data-ttu-id="d6ae9-111">範例</span><span class="sxs-lookup"><span data-stu-id="d6ae9-111">Example</span></span>  
+ <span data-ttu-id="d6ae9-112">下列範例是 Windows Presentation Framework 應用程式的主頁面的 Extensible Application Markup Language (XAML) 檔案的程式碼後置頁面。</span><span class="sxs-lookup"><span data-stu-id="d6ae9-112">The following example is from the code-behind page for an Extensible Application Markup Language (XAML) file that is the main page of the Windows Presentation Framework application.</span></span> <span data-ttu-id="d6ae9-113">此範例會顯示 `LoginWindow` 執行個體，以便向使用者收集驗證認證，然後在要求資料服務時使用這些認證。</span><span class="sxs-lookup"><span data-stu-id="d6ae9-113">This example displays a `LoginWindow` instance to collect authentication credentials from the user, and then uses these credentials when making a request to the data service.</span></span>  
   
  [!code-csharp[Astoria Northwind Client#ClientCredentials](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/clientcredentials.xaml.cs#clientcredentials)]  
  [!code-vb[Astoria Northwind Client#ClientCredentials](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/clientcredentials.xaml.vb#clientcredentials)]
   
-## <a name="example"></a><span data-ttu-id="ab145-114">範例</span><span class="sxs-lookup"><span data-stu-id="ab145-114">Example</span></span>  
- <span data-ttu-id="ab145-115">下列 XAML 定義 WPF 應用程式的主頁面。</span><span class="sxs-lookup"><span data-stu-id="ab145-115">The following XAML defines the main page of the WPF application.</span></span>  
+## <a name="example"></a><span data-ttu-id="d6ae9-114">範例</span><span class="sxs-lookup"><span data-stu-id="d6ae9-114">Example</span></span>  
+ <span data-ttu-id="d6ae9-115">下列 XAML 定義 WPF 應用程式的主頁面。</span><span class="sxs-lookup"><span data-stu-id="d6ae9-115">The following XAML defines the main page of the WPF application.</span></span>  
   
  [!code-xaml[Astoria Northwind Client#ClientCredentialsXaml](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/clientcredentials.xaml#clientcredentialsxaml)]  
   
-## <a name="example"></a><span data-ttu-id="ab145-116">範例</span><span class="sxs-lookup"><span data-stu-id="ab145-116">Example</span></span>  
- <span data-ttu-id="ab145-117">下列範例取自視窗的程式碼後置頁面，在要求資料服務前，此視窗用來收集使用者的驗證認證。</span><span class="sxs-lookup"><span data-stu-id="ab145-117">The following example is from the code-behind page for the window that is used to collect the authentication credentials from the user before making a request to the data service.</span></span>  
+## <a name="example"></a><span data-ttu-id="d6ae9-116">範例</span><span class="sxs-lookup"><span data-stu-id="d6ae9-116">Example</span></span>  
+ <span data-ttu-id="d6ae9-117">下列範例取自視窗的程式碼後置頁面，在要求資料服務前，此視窗用來收集使用者的驗證認證。</span><span class="sxs-lookup"><span data-stu-id="d6ae9-117">The following example is from the code-behind page for the window that is used to collect the authentication credentials from the user before making a request to the data service.</span></span>  
   
  [!code-csharp[Astoria Northwind Client#ClientCredentialsLogin](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/clientcredentialslogin.xaml.cs#clientcredentialslogin)]  
  [!code-vb[Astoria Northwind Client#ClientCredentialsLogin](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/clientcredentialslogin.xaml.vb#clientcredentialslogin)]
   
-## <a name="example"></a><span data-ttu-id="ab145-118">範例</span><span class="sxs-lookup"><span data-stu-id="ab145-118">Example</span></span>  
- <span data-ttu-id="ab145-119">下列 XAML 定義 WPF 應用程式的登入。</span><span class="sxs-lookup"><span data-stu-id="ab145-119">The following XAML defines the login of the WPF application.</span></span>  
+## <a name="example"></a><span data-ttu-id="d6ae9-118">範例</span><span class="sxs-lookup"><span data-stu-id="d6ae9-118">Example</span></span>  
+ <span data-ttu-id="d6ae9-119">下列 XAML 定義 WPF 應用程式的登入。</span><span class="sxs-lookup"><span data-stu-id="d6ae9-119">The following XAML defines the login of the WPF application.</span></span>  
   
  [!code-xaml[Astoria Northwind Client#ClientCredentialsLoginXaml](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/clientcredentialslogin.xaml#clientcredentialsloginxaml)]  
   
-## <a name="net-framework-security"></a><span data-ttu-id="ab145-120">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="ab145-120">.NET Framework Security</span></span>  
- <span data-ttu-id="ab145-121">下列安全性考量適用於本主題中的範例：</span><span class="sxs-lookup"><span data-stu-id="ab145-121">The following security considerations apply to the example in this topic:</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="d6ae9-120">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="d6ae9-120">.NET Framework Security</span></span>  
+ <span data-ttu-id="d6ae9-121">下列安全性考量適用於本主題中的範例：</span><span class="sxs-lookup"><span data-stu-id="d6ae9-121">The following security considerations apply to the example in this topic:</span></span>  
   
--   <span data-ttu-id="ab145-122">若要驗證此範例中提供的認證有效，Northwind 資料服務必須使用匿名存取以外的驗證配置。</span><span class="sxs-lookup"><span data-stu-id="ab145-122">To verify that the credentials supplied in this sample work, the Northwind data service must use an authentication scheme other than anonymous access.</span></span> <span data-ttu-id="ab145-123">否則，主控資料服務的網站將不會要求認證。</span><span class="sxs-lookup"><span data-stu-id="ab145-123">Otherwise, the Web site hosting the data service will not request credentials.</span></span>  
+-   <span data-ttu-id="d6ae9-122">若要驗證此範例中提供的認證有效，Northwind 資料服務必須使用匿名存取以外的驗證配置。</span><span class="sxs-lookup"><span data-stu-id="d6ae9-122">To verify that the credentials supplied in this sample work, the Northwind data service must use an authentication scheme other than anonymous access.</span></span> <span data-ttu-id="d6ae9-123">否則，主控資料服務的網站將不會要求認證。</span><span class="sxs-lookup"><span data-stu-id="d6ae9-123">Otherwise, the Web site hosting the data service will not request credentials.</span></span>  
   
--   <span data-ttu-id="ab145-124">使用者認證只有在執行期間才會要求，而且不得快取。</span><span class="sxs-lookup"><span data-stu-id="ab145-124">User credentials should only be requested during execution and should not be cached.</span></span> <span data-ttu-id="ab145-125">認證永遠必須以安全的方式儲存。</span><span class="sxs-lookup"><span data-stu-id="ab145-125">Credentials must always be stored securely.</span></span>  
+-   <span data-ttu-id="d6ae9-124">使用者認證只有在執行期間才會要求，而且不得快取。</span><span class="sxs-lookup"><span data-stu-id="d6ae9-124">User credentials should only be requested during execution and should not be cached.</span></span> <span data-ttu-id="d6ae9-125">認證永遠必須以安全的方式儲存。</span><span class="sxs-lookup"><span data-stu-id="d6ae9-125">Credentials must always be stored securely.</span></span>  
   
--   <span data-ttu-id="ab145-126">使用基本與摘要式驗證傳送的資料不會經過加密，因此敵人可以看到資料。</span><span class="sxs-lookup"><span data-stu-id="ab145-126">Data sent with Basic and Digest Authentication is not encrypted, so the data can be seen by an adversary.</span></span> <span data-ttu-id="ab145-127">此外，基本驗證認證 (使用者名稱和密碼) 會以純文字傳送，而且可以被攔截。</span><span class="sxs-lookup"><span data-stu-id="ab145-127">Additionally, basic authentication credentials (user name and password) are sent in cleartext and can be intercepted.</span></span>  
+-   <span data-ttu-id="d6ae9-126">使用基本與摘要式驗證傳送的資料不會經過加密，因此敵人可以看到資料。</span><span class="sxs-lookup"><span data-stu-id="d6ae9-126">Data sent with Basic and Digest Authentication is not encrypted, so the data can be seen by an adversary.</span></span> <span data-ttu-id="d6ae9-127">此外，基本驗證認證 (使用者名稱和密碼) 會以純文字傳送，而且可以被攔截。</span><span class="sxs-lookup"><span data-stu-id="d6ae9-127">Additionally, basic authentication credentials (user name and password) are sent in cleartext and can be intercepted.</span></span>  
   
- <span data-ttu-id="ab145-128">如需詳細資訊，請參閱 [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="ab145-128">For more information, see [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md).</span></span>  
+ <span data-ttu-id="d6ae9-128">如需詳細資訊，請參閱 [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="d6ae9-128">For more information, see [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ab145-129">請參閱</span><span class="sxs-lookup"><span data-stu-id="ab145-129">See Also</span></span>  
- [<span data-ttu-id="ab145-130">保護 WCF 資料服務的安全</span><span class="sxs-lookup"><span data-stu-id="ab145-130">Securing WCF Data Services</span></span>](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)  
- [<span data-ttu-id="ab145-131">WCF Data Services 用戶端程式庫</span><span class="sxs-lookup"><span data-stu-id="ab145-131">WCF Data Services Client Library</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+## <a name="see-also"></a><span data-ttu-id="d6ae9-129">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d6ae9-129">See Also</span></span>  
+ [<span data-ttu-id="d6ae9-130">保護 WCF 資料服務的安全</span><span class="sxs-lookup"><span data-stu-id="d6ae9-130">Securing WCF Data Services</span></span>](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)  
+ [<span data-ttu-id="d6ae9-131">WCF Data Services 用戶端程式庫</span><span class="sxs-lookup"><span data-stu-id="d6ae9-131">WCF Data Services Client Library</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

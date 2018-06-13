@@ -1,14 +1,6 @@
 ---
-title: "如何：編輯 TableLayoutPanel 控制項中的資料行和資料列"
-ms.custom: 
+title: 如何：編輯 TableLayoutPanel 控制項中的資料行和資料列
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - net.ComponentModel.StyleCollectionEditor
 helpviewer_keywords:
@@ -16,46 +8,41 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], editing
 - rows [Windows Forms], editing
 ms.assetid: c367ed43-40dc-49eb-9e0f-ba70e83dfec0
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bf54a02a409bead598a4e98315d5709e55677f3b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 763d5df6c49d45f7ee305f4a3be0a1f0a2539872
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533503"
 ---
-# <a name="how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control"></a><span data-ttu-id="01f03-102">如何：編輯 TableLayoutPanel 控制項中的資料行和資料列</span><span class="sxs-lookup"><span data-stu-id="01f03-102">How to: Edit Columns and Rows in a TableLayoutPanel Control</span></span>
-<span data-ttu-id="01f03-103">您可以使用集合編輯器 的<xref:System.Windows.Forms.TableLayoutPanel>控制項稱為**資料行和資料列樣式**對話方塊中，若要編輯的資料列和資料行的控制項。</span><span class="sxs-lookup"><span data-stu-id="01f03-103">You can use the collection editor of the <xref:System.Windows.Forms.TableLayoutPanel> control, called the **Column and Row Styles** dialog box, to edit the rows and columns of your controls.</span></span>  
+# <a name="how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control"></a><span data-ttu-id="24ea4-102">如何：編輯 TableLayoutPanel 控制項中的資料行和資料列</span><span class="sxs-lookup"><span data-stu-id="24ea4-102">How to: Edit Columns and Rows in a TableLayoutPanel Control</span></span>
+<span data-ttu-id="24ea4-103">您可以使用集合編輯器 的<xref:System.Windows.Forms.TableLayoutPanel>控制項稱為**資料行和資料列樣式**對話方塊中，若要編輯的資料列和資料行的控制項。</span><span class="sxs-lookup"><span data-stu-id="24ea4-103">You can use the collection editor of the <xref:System.Windows.Forms.TableLayoutPanel> control, called the **Column and Row Styles** dialog box, to edit the rows and columns of your controls.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="01f03-104">如果您想要跨多個資料列或資料行的控制項時，設定`RowSpan`和`ColumnSpan`控制項的屬性。</span><span class="sxs-lookup"><span data-stu-id="01f03-104">If you want a control to span multiple rows or columns, set the `RowSpan` and `ColumnSpan` properties on the control.</span></span> <span data-ttu-id="01f03-105">如需詳細資訊，請參閱 [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)。</span><span class="sxs-lookup"><span data-stu-id="01f03-105">For more information, see [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).</span></span>  
+>  <span data-ttu-id="24ea4-104">如果您想要跨多個資料列或資料行的控制項時，設定`RowSpan`和`ColumnSpan`控制項的屬性。</span><span class="sxs-lookup"><span data-stu-id="24ea4-104">If you want a control to span multiple rows or columns, set the `RowSpan` and `ColumnSpan` properties on the control.</span></span> <span data-ttu-id="24ea4-105">如需詳細資訊，請參閱 [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)。</span><span class="sxs-lookup"><span data-stu-id="24ea4-105">For more information, see [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).</span></span>  
 >   
->  <span data-ttu-id="01f03-106">如果您想要在儲存格時，將控制項對齊，或者您想要自動縮放儲存格內的控制項，請使用控制項的<xref:System.Windows.Forms.Control.Anchor%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="01f03-106">If you want to align a control within a cell, or if you want a control to stretch within a cell, use the control's <xref:System.Windows.Forms.Control.Anchor%2A> property.</span></span> <span data-ttu-id="01f03-107">如需詳細資訊，請參閱 [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)。</span><span class="sxs-lookup"><span data-stu-id="01f03-107">For more information, see [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).</span></span>  
+>  <span data-ttu-id="24ea4-106">如果您想要在儲存格時，將控制項對齊，或者您想要自動縮放儲存格內的控制項，請使用控制項的<xref:System.Windows.Forms.Control.Anchor%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="24ea4-106">If you want to align a control within a cell, or if you want a control to stretch within a cell, use the control's <xref:System.Windows.Forms.Control.Anchor%2A> property.</span></span> <span data-ttu-id="24ea4-107">如需詳細資訊，請參閱 [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)。</span><span class="sxs-lookup"><span data-stu-id="24ea4-107">For more information, see [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).</span></span>  
 >   
->  <span data-ttu-id="01f03-108">根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。</span><span class="sxs-lookup"><span data-stu-id="01f03-108">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="01f03-109">若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。</span><span class="sxs-lookup"><span data-stu-id="01f03-109">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="01f03-110">如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)</span><span class="sxs-lookup"><span data-stu-id="01f03-110">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
+>  <span data-ttu-id="24ea4-108">根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。</span><span class="sxs-lookup"><span data-stu-id="24ea4-108">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="24ea4-109">若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。</span><span class="sxs-lookup"><span data-stu-id="24ea4-109">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="24ea4-110">如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)</span><span class="sxs-lookup"><span data-stu-id="24ea4-110">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### <a name="to-edit-rows-and-columns"></a><span data-ttu-id="01f03-111">若要編輯的資料列和資料行</span><span class="sxs-lookup"><span data-stu-id="01f03-111">To edit rows and columns</span></span>  
+### <a name="to-edit-rows-and-columns"></a><span data-ttu-id="24ea4-111">若要編輯的資料列和資料行</span><span class="sxs-lookup"><span data-stu-id="24ea4-111">To edit rows and columns</span></span>  
   
-1.  <span data-ttu-id="01f03-112">拖曳<xref:System.Windows.Forms.TableLayoutPanel>控制項從**工具箱**拖曳至表單。</span><span class="sxs-lookup"><span data-stu-id="01f03-112">Drag a <xref:System.Windows.Forms.TableLayoutPanel> control from the **Toolbox** onto your form.</span></span>  
+1.  <span data-ttu-id="24ea4-112">拖曳<xref:System.Windows.Forms.TableLayoutPanel>控制項從**工具箱**拖曳至表單。</span><span class="sxs-lookup"><span data-stu-id="24ea4-112">Drag a <xref:System.Windows.Forms.TableLayoutPanel> control from the **Toolbox** onto your form.</span></span>  
   
-2.  <span data-ttu-id="01f03-113">按一下<xref:System.Windows.Forms.TableLayoutPanel>控制項的智慧標籤圖像 (![智慧標籤圖像](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 並選取**編輯資料列和資料行**開啟**資料行和資料列樣式** 對話方塊。</span><span class="sxs-lookup"><span data-stu-id="01f03-113">Click the <xref:System.Windows.Forms.TableLayoutPanel> control's smart tag glyph (![Smart Tag Glyph](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) and select **Edit Rows and Columns** to open the **Column and Row Styles** dialog box.</span></span> <span data-ttu-id="01f03-114">您也可以以滑鼠右鍵按一下<xref:System.Windows.Forms.TableLayoutPanel>控制，然後選取**編輯資料列和資料行**從捷徑功能表。</span><span class="sxs-lookup"><span data-stu-id="01f03-114">You can also right click on the <xref:System.Windows.Forms.TableLayoutPanel> control and select **Edit Rows and Columns** from the shortcut menu.</span></span>  
+2.  <span data-ttu-id="24ea4-113">按一下<xref:System.Windows.Forms.TableLayoutPanel>控制項的智慧標籤圖像 (![智慧標籤圖像](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 並選取**編輯資料列和資料行**開啟**資料行和資料列樣式** 對話方塊。</span><span class="sxs-lookup"><span data-stu-id="24ea4-113">Click the <xref:System.Windows.Forms.TableLayoutPanel> control's smart tag glyph (![Smart Tag Glyph](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) and select **Edit Rows and Columns** to open the **Column and Row Styles** dialog box.</span></span> <span data-ttu-id="24ea4-114">您也可以以滑鼠右鍵按一下<xref:System.Windows.Forms.TableLayoutPanel>控制，然後選取**編輯資料列和資料行**從捷徑功能表。</span><span class="sxs-lookup"><span data-stu-id="24ea4-114">You can also right click on the <xref:System.Windows.Forms.TableLayoutPanel> control and select **Edit Rows and Columns** from the shortcut menu.</span></span>  
   
-3.  <span data-ttu-id="01f03-115">若要新增或移除資料行，選取**資料行**從**成員型別**下拉式清單方塊。</span><span class="sxs-lookup"><span data-stu-id="01f03-115">To add or remove columns, select **Columns** from the **Member type** drop-down list box.</span></span>  
+3.  <span data-ttu-id="24ea4-115">若要新增或移除資料行，選取**資料行**從**成員型別**下拉式清單方塊。</span><span class="sxs-lookup"><span data-stu-id="24ea4-115">To add or remove columns, select **Columns** from the **Member type** drop-down list box.</span></span>  
   
-4.  <span data-ttu-id="01f03-116">若要新增或移除資料列，選取**列**從**成員型別**下拉式清單方塊。</span><span class="sxs-lookup"><span data-stu-id="01f03-116">To add or remove rows, select **Rows** from the **Member type** drop-down list box.</span></span>  
+4.  <span data-ttu-id="24ea4-116">若要新增或移除資料列，選取**列**從**成員型別**下拉式清單方塊。</span><span class="sxs-lookup"><span data-stu-id="24ea4-116">To add or remove rows, select **Rows** from the **Member type** drop-down list box.</span></span>  
   
-5.  <span data-ttu-id="01f03-117">按一下**新增**按鈕，將資料列或資料行加入至結尾**成員**清單。</span><span class="sxs-lookup"><span data-stu-id="01f03-117">Click the **Add** button to add a row or column to the end of the **Member** list.</span></span>  
+5.  <span data-ttu-id="24ea4-117">按一下**新增**按鈕，將資料列或資料行加入至結尾**成員**清單。</span><span class="sxs-lookup"><span data-stu-id="24ea4-117">Click the **Add** button to add a row or column to the end of the **Member** list.</span></span>  
   
-6.  <span data-ttu-id="01f03-118">按一下**插入**按鈕在清單中加入資料列或資料行的目前選取的項目之前。</span><span class="sxs-lookup"><span data-stu-id="01f03-118">Click the **Insert** button to add a row or column before the currently selected item in the list.</span></span>  
+6.  <span data-ttu-id="24ea4-118">按一下**插入**按鈕在清單中加入資料列或資料行的目前選取的項目之前。</span><span class="sxs-lookup"><span data-stu-id="24ea4-118">Click the **Insert** button to add a row or column before the currently selected item in the list.</span></span>  
   
-7.  <span data-ttu-id="01f03-119">如果您要新增的資料列或資料行，選取**大小類型**新的資料列或資料行。</span><span class="sxs-lookup"><span data-stu-id="01f03-119">If you are adding a row or column, select the **Size Type** for the new row or column.</span></span> <span data-ttu-id="01f03-120">如需詳細資訊，請參閱<xref:System.Windows.Forms.SizeType>。</span><span class="sxs-lookup"><span data-stu-id="01f03-120">For more information, see <xref:System.Windows.Forms.SizeType>.</span></span>  
+7.  <span data-ttu-id="24ea4-119">如果您要新增的資料列或資料行，選取**大小類型**新的資料列或資料行。</span><span class="sxs-lookup"><span data-stu-id="24ea4-119">If you are adding a row or column, select the **Size Type** for the new row or column.</span></span> <span data-ttu-id="24ea4-120">如需詳細資訊，請參閱<xref:System.Windows.Forms.SizeType>。</span><span class="sxs-lookup"><span data-stu-id="24ea4-120">For more information, see <xref:System.Windows.Forms.SizeType>.</span></span>  
   
-8.  <span data-ttu-id="01f03-121">若要移除的資料列或資料行，請按一下**移除**按鈕來刪除目前選取的項目中**成員**清單。</span><span class="sxs-lookup"><span data-stu-id="01f03-121">To remove a row or column, click the **Remove** button to delete the currently selected item in the **Member** list.</span></span>  
+8.  <span data-ttu-id="24ea4-121">若要移除的資料列或資料行，請按一下**移除**按鈕來刪除目前選取的項目中**成員**清單。</span><span class="sxs-lookup"><span data-stu-id="24ea4-121">To remove a row or column, click the **Remove** button to delete the currently selected item in the **Member** list.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="01f03-122">請參閱</span><span class="sxs-lookup"><span data-stu-id="01f03-122">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="24ea4-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="24ea4-122">See Also</span></span>  
  <xref:System.Windows.Forms.SizeType>  
- [<span data-ttu-id="01f03-123">TableLayoutPanel 控制項</span><span class="sxs-lookup"><span data-stu-id="01f03-123">TableLayoutPanel Control</span></span>](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)
+ [<span data-ttu-id="24ea4-123">TableLayoutPanel 控制項</span><span class="sxs-lookup"><span data-stu-id="24ea4-123">TableLayoutPanel Control</span></span>](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317979"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-c"></a><span data-ttu-id="e5018-102">如何：判斷檔案是否為組件 (C#)</span><span class="sxs-lookup"><span data-stu-id="e5018-102">How to: Determine If a File Is an Assembly (C#)</span></span>
 <span data-ttu-id="e5018-103">檔案只有受管理時才是組件，而且其中繼資料會包含組件項目。</span><span class="sxs-lookup"><span data-stu-id="e5018-103">A file is an assembly if and only if it is managed, and contains an assembly entry in its metadata.</span></span> <span data-ttu-id="e5018-104">如需組件和中繼資料的詳細資訊，請參閱[組件資訊清單](../../../../../docs/framework/app-domains/assembly-manifest.md)主題。</span><span class="sxs-lookup"><span data-stu-id="e5018-104">For more information on assemblies and metadata, see the topic [Assembly Manifest](../../../../../docs/framework/app-domains/assembly-manifest.md).</span></span>  

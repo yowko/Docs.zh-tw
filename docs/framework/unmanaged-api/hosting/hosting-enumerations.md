@@ -1,128 +1,119 @@
 ---
-title: "裝載列舉"
-ms.custom: 
+title: 裝載列舉
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 helpviewer_keywords:
 - unmanaged enumerations [.NET Framework], hosting
 - enumerations [.NET Framework hosting]
 - hosting enumerations [.NET Framework]
 ms.assetid: e09131eb-1f7d-4f52-ae42-7393e9b62ef6
-caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cc6b5df39c9fad6182f0ee6e4ff95638e9aaf448
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 05fc295d394dca7a4f0edead64d326032958b070
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435760"
 ---
-# <a name="hosting-enumerations"></a><span data-ttu-id="47751-102">裝載列舉</span><span class="sxs-lookup"><span data-stu-id="47751-102">Hosting Enumerations</span></span>
-<span data-ttu-id="47751-103">本章節描述裝載 API 所使用的 unmanaged 的列舉。</span><span class="sxs-lookup"><span data-stu-id="47751-103">This section describes the unmanaged enumerations that the hosting API uses.</span></span>  
+# <a name="hosting-enumerations"></a><span data-ttu-id="63236-102">裝載列舉</span><span class="sxs-lookup"><span data-stu-id="63236-102">Hosting Enumerations</span></span>
+<span data-ttu-id="63236-103">本章節描述裝載 API 所使用的 unmanaged 的列舉。</span><span class="sxs-lookup"><span data-stu-id="63236-103">This section describes the unmanaged enumerations that the hosting API uses.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="47751-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="47751-104">In This Section</span></span>  
- [<span data-ttu-id="47751-105">CLSID_RESOLUTION_FLAGS 列舉</span><span class="sxs-lookup"><span data-stu-id="47751-105">CLSID_RESOLUTION_FLAGS Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/clsid-resolution-flags-enumeration.md)  
- <span data-ttu-id="47751-106">包含值，表示 common language runtime (CLR) 應該要如何解決`CLSID`。</span><span class="sxs-lookup"><span data-stu-id="47751-106">Contains values that indicate how the common language runtime (CLR) should resolve a `CLSID`.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="63236-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="63236-104">In This Section</span></span>  
+ [<span data-ttu-id="63236-105">CLSID_RESOLUTION_FLAGS 列舉</span><span class="sxs-lookup"><span data-stu-id="63236-105">CLSID_RESOLUTION_FLAGS Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/clsid-resolution-flags-enumeration.md)  
+ <span data-ttu-id="63236-106">包含值，表示 common language runtime (CLR) 應該要如何解決`CLSID`。</span><span class="sxs-lookup"><span data-stu-id="63236-106">Contains values that indicate how the common language runtime (CLR) should resolve a `CLSID`.</span></span>  
   
- [<span data-ttu-id="47751-107">COR_GC_STAT_TYPES 列舉</span><span class="sxs-lookup"><span data-stu-id="47751-107">COR_GC_STAT_TYPES Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)  
- <span data-ttu-id="47751-108">指定要記錄的回收統計資料。</span><span class="sxs-lookup"><span data-stu-id="47751-108">Specifies the statistics to be recorded for a garbage collection.</span></span>  
+ [<span data-ttu-id="63236-107">COR_GC_STAT_TYPES 列舉</span><span class="sxs-lookup"><span data-stu-id="63236-107">COR_GC_STAT_TYPES Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)  
+ <span data-ttu-id="63236-108">指定要記錄的回收統計資料。</span><span class="sxs-lookup"><span data-stu-id="63236-108">Specifies the statistics to be recorded for a garbage collection.</span></span>  
   
- [<span data-ttu-id="47751-109">COR_GC_THREAD_STATS_TYPES 列舉</span><span class="sxs-lookup"><span data-stu-id="47751-109">COR_GC_THREAD_STATS_TYPES Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-types-enumeration.md)  
- <span data-ttu-id="47751-110">指出執行緒的記憶體回收集合統計資料。</span><span class="sxs-lookup"><span data-stu-id="47751-110">Indicates the garbage collection statistics for a thread.</span></span>  
+ [<span data-ttu-id="63236-109">COR_GC_THREAD_STATS_TYPES 列舉</span><span class="sxs-lookup"><span data-stu-id="63236-109">COR_GC_THREAD_STATS_TYPES Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-types-enumeration.md)  
+ <span data-ttu-id="63236-110">指出執行緒的記憶體回收集合統計資料。</span><span class="sxs-lookup"><span data-stu-id="63236-110">Indicates the garbage collection statistics for a thread.</span></span>  
   
- [<span data-ttu-id="47751-111">EApiCategories 列舉</span><span class="sxs-lookup"><span data-stu-id="47751-111">EApiCategories Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eapicategories-enumeration.md)  
- <span data-ttu-id="47751-112">描述分類的主機可以封鎖無法在部分信任程式碼中執行的功能。</span><span class="sxs-lookup"><span data-stu-id="47751-112">Describes the categories of capabilities that the host can block from running in partially trusted code.</span></span>  
+ [<span data-ttu-id="63236-111">EApiCategories 列舉</span><span class="sxs-lookup"><span data-stu-id="63236-111">EApiCategories Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eapicategories-enumeration.md)  
+ <span data-ttu-id="63236-112">描述分類的主機可以封鎖無法在部分信任程式碼中執行的功能。</span><span class="sxs-lookup"><span data-stu-id="63236-112">Describes the categories of capabilities that the host can block from running in partially trusted code.</span></span>  
   
- [<span data-ttu-id="47751-113">EBindPolicyLevels 列舉</span><span class="sxs-lookup"><span data-stu-id="47751-113">EBindPolicyLevels Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/ebindpolicylevels-enumeration.md)  
- <span data-ttu-id="47751-114">提供指定的層級套用或修改組件原則的旗標。</span><span class="sxs-lookup"><span data-stu-id="47751-114">Provides flags that specify the level at which to apply or modify assembly policy.</span></span>  
+ [<span data-ttu-id="63236-113">EBindPolicyLevels 列舉</span><span class="sxs-lookup"><span data-stu-id="63236-113">EBindPolicyLevels Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/ebindpolicylevels-enumeration.md)  
+ <span data-ttu-id="63236-114">提供指定的層級套用或修改組件原則的旗標。</span><span class="sxs-lookup"><span data-stu-id="63236-114">Provides flags that specify the level at which to apply or modify assembly policy.</span></span>  
   
- [<span data-ttu-id="47751-115">ECLRAssemblyIdentityFlags 列舉</span><span class="sxs-lookup"><span data-stu-id="47751-115">ECLRAssemblyIdentityFlags Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclrassemblyidentityflags-enumeration.md)  
- <span data-ttu-id="47751-116">表示組件的識別類型。</span><span class="sxs-lookup"><span data-stu-id="47751-116">Indicates the type of an assembly's identity.</span></span>  
+ [<span data-ttu-id="63236-115">ECLRAssemblyIdentityFlags 列舉</span><span class="sxs-lookup"><span data-stu-id="63236-115">ECLRAssemblyIdentityFlags Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclrassemblyidentityflags-enumeration.md)  
+ <span data-ttu-id="63236-116">表示組件的識別類型。</span><span class="sxs-lookup"><span data-stu-id="63236-116">Indicates the type of an assembly's identity.</span></span>  
   
- [<span data-ttu-id="47751-117">EClrEvent 列舉</span><span class="sxs-lookup"><span data-stu-id="47751-117">EClrEvent Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md)  
- <span data-ttu-id="47751-118">描述主機可以註冊回呼的 CLR 事件。</span><span class="sxs-lookup"><span data-stu-id="47751-118">Describes the CLR events for which the host can register callbacks.</span></span>  
+ [<span data-ttu-id="63236-117">EClrEvent 列舉</span><span class="sxs-lookup"><span data-stu-id="63236-117">EClrEvent Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md)  
+ <span data-ttu-id="63236-118">描述主機可以註冊回呼的 CLR 事件。</span><span class="sxs-lookup"><span data-stu-id="63236-118">Describes the CLR events for which the host can register callbacks.</span></span>  
   
- [<span data-ttu-id="47751-119">EClrFailure 列舉</span><span class="sxs-lookup"><span data-stu-id="47751-119">EClrFailure Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)  
- <span data-ttu-id="47751-120">描述的主機可以設定原則動作失敗。</span><span class="sxs-lookup"><span data-stu-id="47751-120">Describes the set of failures for which a host can set policy actions.</span></span>  
+ [<span data-ttu-id="63236-119">EClrFailure 列舉</span><span class="sxs-lookup"><span data-stu-id="63236-119">EClrFailure Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)  
+ <span data-ttu-id="63236-120">描述的主機可以設定原則動作失敗。</span><span class="sxs-lookup"><span data-stu-id="63236-120">Describes the set of failures for which a host can set policy actions.</span></span>  
   
- [<span data-ttu-id="47751-121">EClrOperation 列舉</span><span class="sxs-lookup"><span data-stu-id="47751-121">EClrOperation Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)  
- <span data-ttu-id="47751-122">描述一組作業，主機可以套用原則的動作。</span><span class="sxs-lookup"><span data-stu-id="47751-122">Describes the set of operations for which a host can apply policy actions.</span></span>  
+ [<span data-ttu-id="63236-121">EClrOperation 列舉</span><span class="sxs-lookup"><span data-stu-id="63236-121">EClrOperation Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)  
+ <span data-ttu-id="63236-122">描述一組作業，主機可以套用原則的動作。</span><span class="sxs-lookup"><span data-stu-id="63236-122">Describes the set of operations for which a host can apply policy actions.</span></span>  
   
- [<span data-ttu-id="47751-123">EClrUnhandledException 列舉</span><span class="sxs-lookup"><span data-stu-id="47751-123">EClrUnhandledException Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclrunhandledexception-enumeration.md)  
- <span data-ttu-id="47751-124">描述可用於管理使用者程式碼中未處理的例外狀況的選項。</span><span class="sxs-lookup"><span data-stu-id="47751-124">Describes the available options for managing exceptions that are unhandled in user code.</span></span>  
+ [<span data-ttu-id="63236-123">EClrUnhandledException 列舉</span><span class="sxs-lookup"><span data-stu-id="63236-123">EClrUnhandledException Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclrunhandledexception-enumeration.md)  
+ <span data-ttu-id="63236-124">描述可用於管理使用者程式碼中未處理的例外狀況的選項。</span><span class="sxs-lookup"><span data-stu-id="63236-124">Describes the available options for managing exceptions that are unhandled in user code.</span></span>  
   
- [<span data-ttu-id="47751-125">EContextType 列舉</span><span class="sxs-lookup"><span data-stu-id="47751-125">EContextType Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/econtexttype-enumeration.md)  
- <span data-ttu-id="47751-126">描述目前執行中執行緒的安全性內容。</span><span class="sxs-lookup"><span data-stu-id="47751-126">Describes the security context of the currently executing thread.</span></span>  
+ [<span data-ttu-id="63236-125">EContextType 列舉</span><span class="sxs-lookup"><span data-stu-id="63236-125">EContextType Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/econtexttype-enumeration.md)  
+ <span data-ttu-id="63236-126">描述目前執行中執行緒的安全性內容。</span><span class="sxs-lookup"><span data-stu-id="63236-126">Describes the security context of the currently executing thread.</span></span>  
   
- [<span data-ttu-id="47751-127">ECustomDumpFlavor 列舉</span><span class="sxs-lookup"><span data-stu-id="47751-127">ECustomDumpFlavor Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpflavor-enumeration.md)  
- <span data-ttu-id="47751-128">包含值，表示哪些項目来納入的自訂子堆積的傾印時報告錯誤。</span><span class="sxs-lookup"><span data-stu-id="47751-128">Contains values that indicate which items to include in a custom subset of a heap dump when reporting errors.</span></span>  
+ [<span data-ttu-id="63236-127">ECustomDumpFlavor 列舉</span><span class="sxs-lookup"><span data-stu-id="63236-127">ECustomDumpFlavor Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpflavor-enumeration.md)  
+ <span data-ttu-id="63236-128">包含值，表示哪些項目来納入的自訂子堆積的傾印時報告錯誤。</span><span class="sxs-lookup"><span data-stu-id="63236-128">Contains values that indicate which items to include in a custom subset of a heap dump when reporting errors.</span></span>  
   
- [<span data-ttu-id="47751-129">ECustomDumpItemKind 列舉</span><span class="sxs-lookup"><span data-stu-id="47751-129">ECustomDumpItemKind Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md)  
- <span data-ttu-id="47751-130">保留供未來擴充功能的[CustomDumpItem 結構](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md)結構。</span><span class="sxs-lookup"><span data-stu-id="47751-130">Reserved for future extension of the [CustomDumpItem Structure](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) structure.</span></span>  
+ [<span data-ttu-id="63236-129">ECustomDumpItemKind 列舉</span><span class="sxs-lookup"><span data-stu-id="63236-129">ECustomDumpItemKind Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md)  
+ <span data-ttu-id="63236-130">保留供未來擴充功能的[CustomDumpItem 結構](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md)結構。</span><span class="sxs-lookup"><span data-stu-id="63236-130">Reserved for future extension of the [CustomDumpItem Structure](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) structure.</span></span>  
   
- [<span data-ttu-id="47751-131">EHostApplicationPolicy 列舉</span><span class="sxs-lookup"><span data-stu-id="47751-131">EHostApplicationPolicy Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/ehostapplicationpolicy-enumeration.md)  
- <span data-ttu-id="47751-132">指出如何修改[IHostAssemblyManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)介面物件。</span><span class="sxs-lookup"><span data-stu-id="47751-132">Indicates how to modify an [IHostAssemblyManager Interface](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md) interface object.</span></span> <span data-ttu-id="47751-133">這個列舉型別已被取代。</span><span class="sxs-lookup"><span data-stu-id="47751-133">This enumeration has been deprecated.</span></span>  
+ [<span data-ttu-id="63236-131">EHostApplicationPolicy 列舉</span><span class="sxs-lookup"><span data-stu-id="63236-131">EHostApplicationPolicy Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/ehostapplicationpolicy-enumeration.md)  
+ <span data-ttu-id="63236-132">指出如何修改[IHostAssemblyManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)介面物件。</span><span class="sxs-lookup"><span data-stu-id="63236-132">Indicates how to modify an [IHostAssemblyManager Interface](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md) interface object.</span></span> <span data-ttu-id="63236-133">這個列舉型別已被取代。</span><span class="sxs-lookup"><span data-stu-id="63236-133">This enumeration has been deprecated.</span></span>  
   
- [<span data-ttu-id="47751-134">EHostBindingPolicyModifyFlags 列舉</span><span class="sxs-lookup"><span data-stu-id="47751-134">EHostBindingPolicyModifyFlags Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/ehostbindingpolicymodifyflags-enumeration.md)  
- <span data-ttu-id="47751-135">可讓主機指定的重新導向時套用至目標組件的原則修改從來源組件，應執行 CLR 類型。</span><span class="sxs-lookup"><span data-stu-id="47751-135">Allows the host to specify the type of redirection the CLR should perform when applying policy modifications from a source assembly to a target assembly.</span></span>  
+ [<span data-ttu-id="63236-134">EHostBindingPolicyModifyFlags 列舉</span><span class="sxs-lookup"><span data-stu-id="63236-134">EHostBindingPolicyModifyFlags Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/ehostbindingpolicymodifyflags-enumeration.md)  
+ <span data-ttu-id="63236-135">可讓主機指定的重新導向時套用至目標組件的原則修改從來源組件，應執行 CLR 類型。</span><span class="sxs-lookup"><span data-stu-id="63236-135">Allows the host to specify the type of redirection the CLR should perform when applying policy modifications from a source assembly to a target assembly.</span></span>  
   
- [<span data-ttu-id="47751-136">EInitializeNewDomainFlags 列舉</span><span class="sxs-lookup"><span data-stu-id="47751-136">EInitializeNewDomainFlags Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/einitializenewdomainflags-enumeration.md)  
- <span data-ttu-id="47751-137">可讓主機提供的執行階段相關的應用程式定義域初始化資訊。</span><span class="sxs-lookup"><span data-stu-id="47751-137">Enables the host to provide the runtime with information about the initialization of an application domain.</span></span>  
+ [<span data-ttu-id="63236-136">EInitializeNewDomainFlags 列舉</span><span class="sxs-lookup"><span data-stu-id="63236-136">EInitializeNewDomainFlags Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/einitializenewdomainflags-enumeration.md)  
+ <span data-ttu-id="63236-137">可讓主機提供的執行階段相關的應用程式定義域初始化資訊。</span><span class="sxs-lookup"><span data-stu-id="63236-137">Enables the host to provide the runtime with information about the initialization of an application domain.</span></span>  
   
- [<span data-ttu-id="47751-138">EMemoryAvailable 列舉</span><span class="sxs-lookup"><span data-stu-id="47751-138">EMemoryAvailable Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/ememoryavailable-enumeration.md)  
- <span data-ttu-id="47751-139">包含值，表示電腦上的可用實體記憶體數量。</span><span class="sxs-lookup"><span data-stu-id="47751-139">Contains values that indicate the amount of free physical memory on the computer.</span></span>  
+ [<span data-ttu-id="63236-138">EMemoryAvailable 列舉</span><span class="sxs-lookup"><span data-stu-id="63236-138">EMemoryAvailable Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/ememoryavailable-enumeration.md)  
+ <span data-ttu-id="63236-139">包含值，表示電腦上的可用實體記憶體數量。</span><span class="sxs-lookup"><span data-stu-id="63236-139">Contains values that indicate the amount of free physical memory on the computer.</span></span>  
   
- [<span data-ttu-id="47751-140">EMemoryCriticalLevel 列舉</span><span class="sxs-lookup"><span data-stu-id="47751-140">EMemoryCriticalLevel Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md)  
- <span data-ttu-id="47751-141">包含值，表示故障的影響，當有特定記憶體配置要求卻無法滿足。</span><span class="sxs-lookup"><span data-stu-id="47751-141">Contains values that indicate the impact of a failure when a specific memory allocation has been requested but cannot be satisfied.</span></span>  
+ [<span data-ttu-id="63236-140">EMemoryCriticalLevel 列舉</span><span class="sxs-lookup"><span data-stu-id="63236-140">EMemoryCriticalLevel Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md)  
+ <span data-ttu-id="63236-141">包含值，表示故障的影響，當有特定記憶體配置要求卻無法滿足。</span><span class="sxs-lookup"><span data-stu-id="63236-141">Contains values that indicate the impact of a failure when a specific memory allocation has been requested but cannot be satisfied.</span></span>  
   
- [<span data-ttu-id="47751-142">EPolicyAction 列舉</span><span class="sxs-lookup"><span data-stu-id="47751-142">EPolicyAction Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)  
- <span data-ttu-id="47751-143">描述所描述的作業可以設定主機的原則動作[EClrOperation 列舉](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)和所描述的失敗[EClrFailure 列舉](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)。</span><span class="sxs-lookup"><span data-stu-id="47751-143">Describes the policy actions the host can set for operations described by [EClrOperation Enumeration](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) and failures described by [EClrFailure Enumeration](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md).</span></span>  
+ [<span data-ttu-id="63236-142">EPolicyAction 列舉</span><span class="sxs-lookup"><span data-stu-id="63236-142">EPolicyAction Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)  
+ <span data-ttu-id="63236-143">描述所描述的作業可以設定主機的原則動作[EClrOperation 列舉](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)和所描述的失敗[EClrFailure 列舉](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)。</span><span class="sxs-lookup"><span data-stu-id="63236-143">Describes the policy actions the host can set for operations described by [EClrOperation Enumeration](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) and failures described by [EClrFailure Enumeration](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md).</span></span>  
   
- [<span data-ttu-id="47751-144">ESymbolReadingPolicy 列舉</span><span class="sxs-lookup"><span data-stu-id="47751-144">ESymbolReadingPolicy Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/esymbolreadingpolicy-enumeration.md)  
- <span data-ttu-id="47751-145">包含值，設定原則的讀取程式資料庫 (PDB) 檔案。</span><span class="sxs-lookup"><span data-stu-id="47751-145">Contains values that set the policy for reading program database (PDB) files.</span></span>  
+ [<span data-ttu-id="63236-144">ESymbolReadingPolicy 列舉</span><span class="sxs-lookup"><span data-stu-id="63236-144">ESymbolReadingPolicy Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/esymbolreadingpolicy-enumeration.md)  
+ <span data-ttu-id="63236-145">包含值，設定原則的讀取程式資料庫 (PDB) 檔案。</span><span class="sxs-lookup"><span data-stu-id="63236-145">Contains values that set the policy for reading program database (PDB) files.</span></span>  
   
- [<span data-ttu-id="47751-146">ETaskType 列舉</span><span class="sxs-lookup"><span data-stu-id="47751-146">ETaskType Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/etasktype-enumeration.md)  
- <span data-ttu-id="47751-147">包含值，表示工作所代表類型[ICLRTask 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)或[IHostTask 介面](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)介面。</span><span class="sxs-lookup"><span data-stu-id="47751-147">Contains values that indicate the kind of task represented by an [ICLRTask Interface](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) or an [IHostTask Interface](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) interface.</span></span>  
+ [<span data-ttu-id="63236-146">ETaskType 列舉</span><span class="sxs-lookup"><span data-stu-id="63236-146">ETaskType Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/etasktype-enumeration.md)  
+ <span data-ttu-id="63236-147">包含值，表示工作所代表類型[ICLRTask 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)或[IHostTask 介面](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)介面。</span><span class="sxs-lookup"><span data-stu-id="63236-147">Contains values that indicate the kind of task represented by an [ICLRTask Interface](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) or an [IHostTask Interface](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) interface.</span></span>  
   
- [<span data-ttu-id="47751-148">HOST_TYPE 列舉</span><span class="sxs-lookup"><span data-stu-id="47751-148">HOST_TYPE Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md)  
- <span data-ttu-id="47751-149">包含指定的啟動應用程式的主機類型的值。</span><span class="sxs-lookup"><span data-stu-id="47751-149">Contains values that specify the type of host that is launching an application.</span></span>  
+ [<span data-ttu-id="63236-148">HOST_TYPE 列舉</span><span class="sxs-lookup"><span data-stu-id="63236-148">HOST_TYPE Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md)  
+ <span data-ttu-id="63236-149">包含指定的啟動應用程式的主機類型的值。</span><span class="sxs-lookup"><span data-stu-id="63236-149">Contains values that specify the type of host that is launching an application.</span></span>  
   
- [<span data-ttu-id="47751-150">MALLOC_TYPE 列舉</span><span class="sxs-lookup"><span data-stu-id="47751-150">MALLOC_TYPE Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/malloc-type-enumeration.md)  
- <span data-ttu-id="47751-151">包含值，指定所配置的記憶體的特性。</span><span class="sxs-lookup"><span data-stu-id="47751-151">Contains values that specify the characteristics of the memory that is being allocated.</span></span>  
+ [<span data-ttu-id="63236-150">MALLOC_TYPE 列舉</span><span class="sxs-lookup"><span data-stu-id="63236-150">MALLOC_TYPE Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/malloc-type-enumeration.md)  
+ <span data-ttu-id="63236-151">包含值，指定所配置的記憶體的特性。</span><span class="sxs-lookup"><span data-stu-id="63236-151">Contains values that specify the characteristics of the memory that is being allocated.</span></span>  
   
- [<span data-ttu-id="47751-152">METAHOST_CONFIG_FLAGS 列舉</span><span class="sxs-lookup"><span data-stu-id="47751-152">METAHOST_CONFIG_FLAGS Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/metahost-config-flags-enumeration.md)  
- <span data-ttu-id="47751-153">描述可能的旗標中傳回`pdwConfigFlags`參數[iclrmetahostpolicy:: Getrequestedruntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="47751-153">Describes the possible flags returned in the `pdwConfigFlags` parameter of the [ICLRMetaHostPolicy::GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) method.</span></span>  
+ [<span data-ttu-id="63236-152">METAHOST_CONFIG_FLAGS 列舉</span><span class="sxs-lookup"><span data-stu-id="63236-152">METAHOST_CONFIG_FLAGS Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/metahost-config-flags-enumeration.md)  
+ <span data-ttu-id="63236-153">描述可能的旗標中傳回`pdwConfigFlags`參數[iclrmetahostpolicy:: Getrequestedruntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="63236-153">Describes the possible flags returned in the `pdwConfigFlags` parameter of the [ICLRMetaHostPolicy::GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) method.</span></span>  
   
- [<span data-ttu-id="47751-154">METAHOST_POLICY_FLAGS 列舉</span><span class="sxs-lookup"><span data-stu-id="47751-154">METAHOST_POLICY_FLAGS Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)  
- <span data-ttu-id="47751-155">提供通用於大多數的執行階段主機的繫結原則。</span><span class="sxs-lookup"><span data-stu-id="47751-155">Provides binding policies that are common to most runtime hosts.</span></span>  
+ [<span data-ttu-id="63236-154">METAHOST_POLICY_FLAGS 列舉</span><span class="sxs-lookup"><span data-stu-id="63236-154">METAHOST_POLICY_FLAGS Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)  
+ <span data-ttu-id="63236-155">提供通用於大多數的執行階段主機的繫結原則。</span><span class="sxs-lookup"><span data-stu-id="63236-155">Provides binding policies that are common to most runtime hosts.</span></span>  
   
- [<span data-ttu-id="47751-156">RUNTIME_INFO_FLAGS 列舉</span><span class="sxs-lookup"><span data-stu-id="47751-156">RUNTIME_INFO_FLAGS Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md)  
- <span data-ttu-id="47751-157">包含值，表示應傳回在 CLR 的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="47751-157">Contains values that indicate what information about the CLR should be returned.</span></span>  
+ [<span data-ttu-id="63236-156">RUNTIME_INFO_FLAGS 列舉</span><span class="sxs-lookup"><span data-stu-id="63236-156">RUNTIME_INFO_FLAGS Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md)  
+ <span data-ttu-id="63236-157">包含值，表示應傳回在 CLR 的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="63236-157">Contains values that indicate what information about the CLR should be returned.</span></span>  
   
- [<span data-ttu-id="47751-158">StackOverflowType 列舉</span><span class="sxs-lookup"><span data-stu-id="47751-158">StackOverflowType Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/stackoverflowtype-enumeration.md)  
- <span data-ttu-id="47751-159">包含值，表示造成堆疊溢位事件的根本原因。</span><span class="sxs-lookup"><span data-stu-id="47751-159">Contains values that indicate the underlying cause of a stack overflow event.</span></span>  
+ [<span data-ttu-id="63236-158">StackOverflowType 列舉</span><span class="sxs-lookup"><span data-stu-id="63236-158">StackOverflowType Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/stackoverflowtype-enumeration.md)  
+ <span data-ttu-id="63236-159">包含值，表示造成堆疊溢位事件的根本原因。</span><span class="sxs-lookup"><span data-stu-id="63236-159">Contains values that indicate the underlying cause of a stack overflow event.</span></span>  
   
- [<span data-ttu-id="47751-160">STARTUP_FLAGS 列舉</span><span class="sxs-lookup"><span data-stu-id="47751-160">STARTUP_FLAGS Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)  
- <span data-ttu-id="47751-161">包含值，表示 CLR 的啟動行為。</span><span class="sxs-lookup"><span data-stu-id="47751-161">Contains values that indicate the startup behavior of the CLR.</span></span>  
+ [<span data-ttu-id="63236-160">STARTUP_FLAGS 列舉</span><span class="sxs-lookup"><span data-stu-id="63236-160">STARTUP_FLAGS Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)  
+ <span data-ttu-id="63236-161">包含值，表示 CLR 的啟動行為。</span><span class="sxs-lookup"><span data-stu-id="63236-161">Contains values that indicate the startup behavior of the CLR.</span></span>  
   
- [<span data-ttu-id="47751-162">ValidatorFlags 列舉</span><span class="sxs-lookup"><span data-stu-id="47751-162">ValidatorFlags Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md)  
- <span data-ttu-id="47751-163">包含值，表示應該執行的呼叫中的驗證類型[驗證方法](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)。</span><span class="sxs-lookup"><span data-stu-id="47751-163">Contains values that indicate the type of validation that should be performed in a call to [Validate Method](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md).</span></span>  
+ [<span data-ttu-id="63236-162">ValidatorFlags 列舉</span><span class="sxs-lookup"><span data-stu-id="63236-162">ValidatorFlags Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md)  
+ <span data-ttu-id="63236-163">包含值，表示應該執行的呼叫中的驗證類型[驗證方法](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)。</span><span class="sxs-lookup"><span data-stu-id="63236-163">Contains values that indicate the type of validation that should be performed in a call to [Validate Method](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md).</span></span>  
   
- [<span data-ttu-id="47751-164">WAIT_OPTION 列舉</span><span class="sxs-lookup"><span data-stu-id="47751-164">WAIT_OPTION Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md)  
- <span data-ttu-id="47751-165">指出如果 CLR 區塊所要求的作業，主機應該採取的動作。</span><span class="sxs-lookup"><span data-stu-id="47751-165">Indicates the action a host should take if an operation requested by the CLR blocks.</span></span>  
+ [<span data-ttu-id="63236-164">WAIT_OPTION 列舉</span><span class="sxs-lookup"><span data-stu-id="63236-164">WAIT_OPTION Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md)  
+ <span data-ttu-id="63236-165">指出如果 CLR 區塊所要求的作業，主機應該採取的動作。</span><span class="sxs-lookup"><span data-stu-id="63236-165">Indicates the action a host should take if an operation requested by the CLR blocks.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="47751-166">相關章節</span><span class="sxs-lookup"><span data-stu-id="47751-166">Related Sections</span></span>  
- [<span data-ttu-id="47751-167">裝載 Coclass</span><span class="sxs-lookup"><span data-stu-id="47751-167">Hosting Coclasses</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  
+## <a name="related-sections"></a><span data-ttu-id="63236-166">相關章節</span><span class="sxs-lookup"><span data-stu-id="63236-166">Related Sections</span></span>  
+ [<span data-ttu-id="63236-167">裝載 Coclass</span><span class="sxs-lookup"><span data-stu-id="63236-167">Hosting Coclasses</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  
   
- [<span data-ttu-id="47751-168">裝載介面</span><span class="sxs-lookup"><span data-stu-id="47751-168">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
+ [<span data-ttu-id="63236-168">裝載介面</span><span class="sxs-lookup"><span data-stu-id="63236-168">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
   
- [<span data-ttu-id="47751-169">已被取代的 CLR 裝載函式</span><span class="sxs-lookup"><span data-stu-id="47751-169">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)  
+ [<span data-ttu-id="63236-169">已被取代的 CLR 裝載函式</span><span class="sxs-lookup"><span data-stu-id="63236-169">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)  
   
- [<span data-ttu-id="47751-170">裝載結構</span><span class="sxs-lookup"><span data-stu-id="47751-170">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+ [<span data-ttu-id="63236-170">裝載結構</span><span class="sxs-lookup"><span data-stu-id="63236-170">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317443"
 ---
 # <a name="element-operations-c"></a><span data-ttu-id="0e254-102">項目作業 (C#)</span><span class="sxs-lookup"><span data-stu-id="0e254-102">Element Operations (C#)</span></span>
 <span data-ttu-id="0e254-103">項目作業會從序列中傳回單一特定的項目。</span><span class="sxs-lookup"><span data-stu-id="0e254-103">Element operations return a single, specific element from a sequence.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653620"
 ---
 # <a name="-specify-response-file-visual-basic"></a><span data-ttu-id="e209d-102">@ (指定回應檔) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e209d-102">@ (Specify Response File) (Visual Basic)</span></span>
 <span data-ttu-id="e209d-103">指定包含編譯器選項的檔案和要編譯的原始程式碼檔案。</span><span class="sxs-lookup"><span data-stu-id="e209d-103">Specifies a file that contains compiler options and source-code files to compile.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33315512"
 ---
 # <a name="passing-arrays-as-arguments-c-programming-guide"></a><span data-ttu-id="02c07-102">傳遞陣列當做引數 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="02c07-102">Passing Arrays as Arguments (C# Programming Guide)</span></span>
 <span data-ttu-id="02c07-103">陣列可以作為引數傳遞至方法參數。</span><span class="sxs-lookup"><span data-stu-id="02c07-103">Arrays can be passed as arguments to method parameters.</span></span> <span data-ttu-id="02c07-104">因為陣列是參考型別，所以方法可以變更項目的值。</span><span class="sxs-lookup"><span data-stu-id="02c07-104">Because arrays are reference types, the method can change the value of the elements.</span></span>  

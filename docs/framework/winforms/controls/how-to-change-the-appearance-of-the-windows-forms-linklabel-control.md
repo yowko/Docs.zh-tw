@@ -1,13 +1,6 @@
 ---
-title: "如何：變更 Windows Form LinkLabel 控制項的外觀"
-ms.custom: 
+title: 如何：變更 Windows Form LinkLabel 控制項的外觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,25 +12,21 @@ helpviewer_keywords:
 - examples [Windows Forms], LinkLabel control
 - LinkLabel control [Windows Forms], examples
 ms.assetid: fdc5854f-5162-4457-8cbe-1042feb2d132
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7dc3963ab1b242ce8dce53d9bba996f52347679b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e1bb0ecba6fd8ddf66c6debb90ef4dd94641a97e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531482"
 ---
-# <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a><span data-ttu-id="c3b6b-102">如何：變更 Windows Form LinkLabel 控制項的外觀</span><span class="sxs-lookup"><span data-stu-id="c3b6b-102">How to: Change the Appearance of the Windows Forms LinkLabel Control</span></span>
-<span data-ttu-id="c3b6b-103">您可以變更所顯示的文字<xref:System.Windows.Forms.LinkLabel>控制項，以符合各種用途。</span><span class="sxs-lookup"><span data-stu-id="c3b6b-103">You can change the text displayed by the <xref:System.Windows.Forms.LinkLabel> control to suit a variety of purposes.</span></span> <span data-ttu-id="c3b6b-104">比方說，是常見的作法是藉由設定才會出現在特定的色彩與底線的文字，可以按一下文字向使用者指示。</span><span class="sxs-lookup"><span data-stu-id="c3b6b-104">For example, it is common practice to indicate to the user that text can be clicked by setting the text to appear in a specific color with an underline.</span></span> <span data-ttu-id="c3b6b-105">在使用者按一下文字之後，色彩變更為不同的色彩。</span><span class="sxs-lookup"><span data-stu-id="c3b6b-105">After the user clicks the text, the color changes to a different color.</span></span> <span data-ttu-id="c3b6b-106">若要控制此行為，您可以設定五個不同的屬性： <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>， <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>， <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>， <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>，和<xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="c3b6b-106">To control this behavior, you can set five different properties: the <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>, and <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> properties.</span></span>  
+# <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a><span data-ttu-id="3c086-102">如何：變更 Windows Form LinkLabel 控制項的外觀</span><span class="sxs-lookup"><span data-stu-id="3c086-102">How to: Change the Appearance of the Windows Forms LinkLabel Control</span></span>
+<span data-ttu-id="3c086-103">您可以變更所顯示的文字<xref:System.Windows.Forms.LinkLabel>控制項，以符合各種用途。</span><span class="sxs-lookup"><span data-stu-id="3c086-103">You can change the text displayed by the <xref:System.Windows.Forms.LinkLabel> control to suit a variety of purposes.</span></span> <span data-ttu-id="3c086-104">比方說，是常見的作法是藉由設定才會出現在特定的色彩與底線的文字，可以按一下文字向使用者指示。</span><span class="sxs-lookup"><span data-stu-id="3c086-104">For example, it is common practice to indicate to the user that text can be clicked by setting the text to appear in a specific color with an underline.</span></span> <span data-ttu-id="3c086-105">在使用者按一下文字之後，色彩變更為不同的色彩。</span><span class="sxs-lookup"><span data-stu-id="3c086-105">After the user clicks the text, the color changes to a different color.</span></span> <span data-ttu-id="3c086-106">若要控制此行為，您可以設定五個不同的屬性： <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>， <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>， <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>， <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>，和<xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="3c086-106">To control this behavior, you can set five different properties: the <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>, and <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> properties.</span></span>  
   
-### <a name="to-change-the-appearance-of-a-linklabel-control"></a><span data-ttu-id="c3b6b-107">若要變更 LinkLabel 控制項的外觀</span><span class="sxs-lookup"><span data-stu-id="c3b6b-107">To change the appearance of a LinkLabel control</span></span>  
+### <a name="to-change-the-appearance-of-a-linklabel-control"></a><span data-ttu-id="3c086-107">若要變更 LinkLabel 控制項的外觀</span><span class="sxs-lookup"><span data-stu-id="3c086-107">To change the appearance of a LinkLabel control</span></span>  
   
-1.  <span data-ttu-id="c3b6b-108">設定<xref:System.Windows.Forms.LinkLabel.LinkColor%2A>和<xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>屬性，以您想要的色彩。</span><span class="sxs-lookup"><span data-stu-id="c3b6b-108">Set the <xref:System.Windows.Forms.LinkLabel.LinkColor%2A> and <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> properties to the colors you want.</span></span>  
+1.  <span data-ttu-id="3c086-108">設定<xref:System.Windows.Forms.LinkLabel.LinkColor%2A>和<xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>屬性，以您想要的色彩。</span><span class="sxs-lookup"><span data-stu-id="3c086-108">Set the <xref:System.Windows.Forms.LinkLabel.LinkColor%2A> and <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> properties to the colors you want.</span></span>  
   
-     <span data-ttu-id="c3b6b-109">完成這項可以是以程式設計方式或在設計階段在**屬性**視窗。</span><span class="sxs-lookup"><span data-stu-id="c3b6b-109">This can be done either programmatically or at design time in the **Properties** window.</span></span>  
+     <span data-ttu-id="3c086-109">完成這項可以是以程式設計方式或在設計階段在**屬性**視窗。</span><span class="sxs-lookup"><span data-stu-id="3c086-109">This can be done either programmatically or at design time in the **Properties** window.</span></span>  
   
     ```vb  
     ' You can set the color using decimal values for red, green, and blue  
@@ -60,9 +49,9 @@ ms.lasthandoff: 12/22/2017
     linkLabel1->VisitedLinkColor = Color::Purple;  
     ```  
   
-2.  <span data-ttu-id="c3b6b-110">設定<xref:System.Windows.Forms.LinkLabel.Text%2A>屬性設為適當的標題。</span><span class="sxs-lookup"><span data-stu-id="c3b6b-110">Set the <xref:System.Windows.Forms.LinkLabel.Text%2A> property to an appropriate caption.</span></span>  
+2.  <span data-ttu-id="3c086-110">設定<xref:System.Windows.Forms.LinkLabel.Text%2A>屬性設為適當的標題。</span><span class="sxs-lookup"><span data-stu-id="3c086-110">Set the <xref:System.Windows.Forms.LinkLabel.Text%2A> property to an appropriate caption.</span></span>  
   
-     <span data-ttu-id="c3b6b-111">完成這項可以是以程式設計方式或在設計階段在**屬性**視窗。</span><span class="sxs-lookup"><span data-stu-id="c3b6b-111">This can be done either programmatically or at design time in the **Properties** window.</span></span>  
+     <span data-ttu-id="3c086-111">完成這項可以是以程式設計方式或在設計階段在**屬性**視窗。</span><span class="sxs-lookup"><span data-stu-id="3c086-111">This can be done either programmatically or at design time in the **Properties** window.</span></span>  
   
     ```vb  
     LinkLabel1.Text = "Click here to see more."  
@@ -76,9 +65,9 @@ ms.lasthandoff: 12/22/2017
     linkLabel1->Text = "Click here to see more.";  
     ```  
   
-3.  <span data-ttu-id="c3b6b-112">設定<xref:System.Windows.Forms.LinkLabel.LinkArea%2A>屬性來判斷哪一個部分的標題會指出以連結形式。</span><span class="sxs-lookup"><span data-stu-id="c3b6b-112">Set the <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> property to determine which part of the caption will be indicated as a link.</span></span>  
+3.  <span data-ttu-id="3c086-112">設定<xref:System.Windows.Forms.LinkLabel.LinkArea%2A>屬性來判斷哪一個部分的標題會指出以連結形式。</span><span class="sxs-lookup"><span data-stu-id="3c086-112">Set the <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> property to determine which part of the caption will be indicated as a link.</span></span>  
   
-     <span data-ttu-id="c3b6b-113"><xref:System.Windows.Forms.LinkLabel.LinkArea%2A>值會表示具有<xref:System.Windows.Forms.LinkArea>包含兩個數字，起始字元位置的字元數。</span><span class="sxs-lookup"><span data-stu-id="c3b6b-113">The <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> value is represented with a <xref:System.Windows.Forms.LinkArea> containing two numbers, the starting character position and the number of characters.</span></span> <span data-ttu-id="c3b6b-114">完成這項可以是以程式設計方式或在設計階段在**屬性**視窗。</span><span class="sxs-lookup"><span data-stu-id="c3b6b-114">This can be done either programmatically or at design time in the **Properties** window.</span></span>  
+     <span data-ttu-id="3c086-113"><xref:System.Windows.Forms.LinkLabel.LinkArea%2A>值會表示具有<xref:System.Windows.Forms.LinkArea>包含兩個數字，起始字元位置的字元數。</span><span class="sxs-lookup"><span data-stu-id="3c086-113">The <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> value is represented with a <xref:System.Windows.Forms.LinkArea> containing two numbers, the starting character position and the number of characters.</span></span> <span data-ttu-id="3c086-114">完成這項可以是以程式設計方式或在設計階段在**屬性**視窗。</span><span class="sxs-lookup"><span data-stu-id="3c086-114">This can be done either programmatically or at design time in the **Properties** window.</span></span>  
   
     ```vb  
     LinkLabel1.LinkArea = new LinkArea(6,4)  
@@ -92,13 +81,13 @@ ms.lasthandoff: 12/22/2017
     linkLabel1->LinkArea = LinkArea(6,4);  
     ```  
   
-4.  <span data-ttu-id="c3b6b-115">設定<xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>屬性<xref:System.Windows.Forms.LinkBehavior.AlwaysUnderline>， <xref:System.Windows.Forms.LinkBehavior.HoverUnderline>，或<xref:System.Windows.Forms.LinkBehavior.NeverUnderline>。</span><span class="sxs-lookup"><span data-stu-id="c3b6b-115">Set the <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A> property to <xref:System.Windows.Forms.LinkBehavior.AlwaysUnderline>, <xref:System.Windows.Forms.LinkBehavior.HoverUnderline>, or <xref:System.Windows.Forms.LinkBehavior.NeverUnderline>.</span></span>  
+4.  <span data-ttu-id="3c086-115">設定<xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>屬性<xref:System.Windows.Forms.LinkBehavior.AlwaysUnderline>， <xref:System.Windows.Forms.LinkBehavior.HoverUnderline>，或<xref:System.Windows.Forms.LinkBehavior.NeverUnderline>。</span><span class="sxs-lookup"><span data-stu-id="3c086-115">Set the <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A> property to <xref:System.Windows.Forms.LinkBehavior.AlwaysUnderline>, <xref:System.Windows.Forms.LinkBehavior.HoverUnderline>, or <xref:System.Windows.Forms.LinkBehavior.NeverUnderline>.</span></span>  
   
-     <span data-ttu-id="c3b6b-116">如果設定為<xref:System.Windows.Forms.LinkBehavior.HoverUnderline>，取決於標題的一部分<xref:System.Windows.Forms.LinkLabel.LinkArea%2A>會只加上底線指標停留在其上時。</span><span class="sxs-lookup"><span data-stu-id="c3b6b-116">If it is set to <xref:System.Windows.Forms.LinkBehavior.HoverUnderline>, the part of the caption determined by <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> will only be underlined when the pointer rests on it.</span></span>  
+     <span data-ttu-id="3c086-116">如果設定為<xref:System.Windows.Forms.LinkBehavior.HoverUnderline>，取決於標題的一部分<xref:System.Windows.Forms.LinkLabel.LinkArea%2A>會只加上底線指標停留在其上時。</span><span class="sxs-lookup"><span data-stu-id="3c086-116">If it is set to <xref:System.Windows.Forms.LinkBehavior.HoverUnderline>, the part of the caption determined by <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> will only be underlined when the pointer rests on it.</span></span>  
   
-5.  <span data-ttu-id="c3b6b-117">在<xref:System.Windows.Forms.LinkLabel.LinkClicked>事件處理常式中，設定<xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>屬性`true`。</span><span class="sxs-lookup"><span data-stu-id="c3b6b-117">In the <xref:System.Windows.Forms.LinkLabel.LinkClicked> event handler, set the <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> property to `true`.</span></span>  
+5.  <span data-ttu-id="3c086-117">在<xref:System.Windows.Forms.LinkLabel.LinkClicked>事件處理常式中，設定<xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>屬性`true`。</span><span class="sxs-lookup"><span data-stu-id="3c086-117">In the <xref:System.Windows.Forms.LinkLabel.LinkClicked> event handler, set the <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> property to `true`.</span></span>  
   
-     <span data-ttu-id="c3b6b-118">瀏覽過的連結，它是常見的作法是變更其外觀以某種方式，通常依色彩。</span><span class="sxs-lookup"><span data-stu-id="c3b6b-118">When a link has been visited, it is common practice to change its appearance in some way, usually by color.</span></span> <span data-ttu-id="c3b6b-119">文字會變更為所指定的色彩<xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="c3b6b-119">The text will change to the color specified by the <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> property.</span></span>  
+     <span data-ttu-id="3c086-118">瀏覽過的連結，它是常見的作法是變更其外觀以某種方式，通常依色彩。</span><span class="sxs-lookup"><span data-stu-id="3c086-118">When a link has been visited, it is common practice to change its appearance in some way, usually by color.</span></span> <span data-ttu-id="3c086-119">文字會變更為所指定的色彩<xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="3c086-119">The text will change to the color specified by the <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> property.</span></span>  
   
     ```vb  
     Protected Sub LinkLabel1_LinkClicked (ByVal sender As Object, _  
@@ -132,11 +121,11 @@ ms.lasthandoff: 12/22/2017
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="c3b6b-120">請參閱</span><span class="sxs-lookup"><span data-stu-id="c3b6b-120">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="3c086-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3c086-120">See Also</span></span>  
  <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>  
  <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>  
  <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>  
  <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>  
- [<span data-ttu-id="c3b6b-121">LinkLabel 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="c3b6b-121">LinkLabel Control Overview</span></span>](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)  
- [<span data-ttu-id="c3b6b-122">操作說明：使用 Windows Forms LinkLabel 控制項連結至物件或網頁</span><span class="sxs-lookup"><span data-stu-id="c3b6b-122">How to: Link to an Object or Web Page with the Windows Forms LinkLabel Control</span></span>](../../../../docs/framework/winforms/controls/link-to-an-object-or-web-page-with-wf-linklabel-control.md)  
- [<span data-ttu-id="c3b6b-123">LinkLabel 控制項</span><span class="sxs-lookup"><span data-stu-id="c3b6b-123">LinkLabel Control</span></span>](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)
+ [<span data-ttu-id="3c086-121">LinkLabel 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="3c086-121">LinkLabel Control Overview</span></span>](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)  
+ [<span data-ttu-id="3c086-122">操作說明：使用 Windows Forms LinkLabel 控制項連結至物件或網頁</span><span class="sxs-lookup"><span data-stu-id="3c086-122">How to: Link to an Object or Web Page with the Windows Forms LinkLabel Control</span></span>](../../../../docs/framework/winforms/controls/link-to-an-object-or-web-page-with-wf-linklabel-control.md)  
+ [<span data-ttu-id="3c086-123">LinkLabel 控制項</span><span class="sxs-lookup"><span data-stu-id="3c086-123">LinkLabel Control</span></span>](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)

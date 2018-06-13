@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753598"
 ---
 # <a name="ltcertificategt-of-ltpeergt"></a><span data-ttu-id="d7d6e-102">&lt;peer&gt; 的 &lt;certificate&gt;</span><span class="sxs-lookup"><span data-stu-id="d7d6e-102">&lt;certificate&gt; of &lt;peer&gt;</span></span>
 <span data-ttu-id="d7d6e-103">指定對等所使用的憑證。</span><span class="sxs-lookup"><span data-stu-id="d7d6e-103">Specifies a certificate used by a peer.</span></span>  
