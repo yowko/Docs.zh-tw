@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643430"
 ---
 # <a name="advanced-linq-to-xml-programming-visual-basic"></a><span data-ttu-id="2a9d4-102">進階的 LINQ to XML 程式設計 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2a9d4-102">Advanced LINQ to XML Programming (Visual Basic)</span></span>
 <span data-ttu-id="2a9d4-103">本節提供的資訊將僅適用於某些 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 案例中的進階開發人員。</span><span class="sxs-lookup"><span data-stu-id="2a9d4-103">This section provides information that will only be applicable to advanced developers in certain [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] scenarios.</span></span>  

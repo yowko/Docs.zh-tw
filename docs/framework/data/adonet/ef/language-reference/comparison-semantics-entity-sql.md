@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765551"
 ---
 # <a name="comparison-semantics-entity-sql"></a><span data-ttu-id="5adde-102">比較語意 (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="5adde-102">Comparison Semantics (Entity SQL)</span></span>
 <span data-ttu-id="5adde-103">執行以下任何 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 運算子都會牽涉到型別執行個體的比較：</span><span class="sxs-lookup"><span data-stu-id="5adde-103">Performing any of the following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operators involves comparison of type instances:</span></span>  

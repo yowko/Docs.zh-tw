@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648495"
 ---
 # <a name="structure-variables-visual-basic"></a><span data-ttu-id="db833-102">結構變數 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="db833-102">Structure Variables (Visual Basic)</span></span>
 <span data-ttu-id="db833-103">當您建立結構之後時，您可以為該型別宣告程序層級和模組層級變數。</span><span class="sxs-lookup"><span data-stu-id="db833-103">Once you have created a structure, you can declare procedure-level and module-level variables as that type.</span></span> <span data-ttu-id="db833-104">例如，您可以建立結構有關電腦系統記錄資訊。</span><span class="sxs-lookup"><span data-stu-id="db833-104">For example, you can create a structure that records information about a computer system.</span></span> <span data-ttu-id="db833-105">下列範例為其示範。</span><span class="sxs-lookup"><span data-stu-id="db833-105">The following example demonstrates this.</span></span>  

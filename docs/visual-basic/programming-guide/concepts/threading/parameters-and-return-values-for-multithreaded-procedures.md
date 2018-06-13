@@ -1,28 +1,19 @@
 ---
-title: "參數和傳回值的多執行緒程序 (Visual Basic)"
-ms.custom: 
+title: 參數和傳回值的多執行緒程序 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cbdce172-7ff6-41a9-bb21-53a7c6f538a5
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 071e0aa916e4b3464c7c0cbff6596cabc6b67906
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 039e9be6f174148995a83c842a442806b9409a3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648095"
 ---
-# <a name="parameters-and-return-values-for-multithreaded-procedures-visual-basic"></a><span data-ttu-id="9d5e9-102">參數和傳回值的多執行緒程序 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9d5e9-102">Parameters and Return Values for Multithreaded Procedures (Visual Basic)</span></span>
-<span data-ttu-id="9d5e9-103">在多執行緒應用程式中提供和傳回值很複雜，因為執行緒類別的建構函式必須傳遞到不採用任何引數且不傳回任何值的程序參考。</span><span class="sxs-lookup"><span data-stu-id="9d5e9-103">Supplying and returning values in a multithreaded application is complicated because the constructor for the thread class must be passed a reference to a procedure that takes no arguments and returns no value.</span></span> <span data-ttu-id="9d5e9-104">下節會說明一些簡單的方法來提供參數，以及從不同執行緒的程序傳回值。</span><span class="sxs-lookup"><span data-stu-id="9d5e9-104">The following sections show some simple ways to supply parameters and return values from procedures on separate threads.</span></span>  
+# <a name="parameters-and-return-values-for-multithreaded-procedures-visual-basic"></a><span data-ttu-id="0fb2e-102">參數和傳回值的多執行緒程序 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0fb2e-102">Parameters and Return Values for Multithreaded Procedures (Visual Basic)</span></span>
+<span data-ttu-id="0fb2e-103">在多執行緒應用程式中提供和傳回值很複雜，因為執行緒類別的建構函式必須傳遞到不採用任何引數且不傳回任何值的程序參考。</span><span class="sxs-lookup"><span data-stu-id="0fb2e-103">Supplying and returning values in a multithreaded application is complicated because the constructor for the thread class must be passed a reference to a procedure that takes no arguments and returns no value.</span></span> <span data-ttu-id="0fb2e-104">下節會說明一些簡單的方法來提供參數，以及從不同執行緒的程序傳回值。</span><span class="sxs-lookup"><span data-stu-id="0fb2e-104">The following sections show some simple ways to supply parameters and return values from procedures on separate threads.</span></span>  
   
-## <a name="supplying-parameters-for-multithreaded-procedures"></a><span data-ttu-id="9d5e9-105">為多執行緒程序提供參數</span><span class="sxs-lookup"><span data-stu-id="9d5e9-105">Supplying Parameters for Multithreaded Procedures</span></span>  
- <span data-ttu-id="9d5e9-106">為多執行緒方法呼叫提供參數的最佳方式，是將目標方法包裝在類別中，並為要用為新執行緒參數的類別定義欄位。</span><span class="sxs-lookup"><span data-stu-id="9d5e9-106">The best way to supply parameters for a multithreaded method call is to wrap the target method in a class and define fields for that class that will serve as parameters for the new thread.</span></span> <span data-ttu-id="9d5e9-107">這種方法的優點是您可以建立類別的新執行個體，每次想要開始新執行緒都可以使用它自己的參數。</span><span class="sxs-lookup"><span data-stu-id="9d5e9-107">The advantage of this approach is that you can create a new instance of the class, with its own parameters, every time you want to start a new thread.</span></span> <span data-ttu-id="9d5e9-108">例如，假設您有計算三角形面積的函式，如下列程式碼所示︰</span><span class="sxs-lookup"><span data-stu-id="9d5e9-108">For example, suppose you have a function that calculates the area of a triangle, as in the following code:</span></span>  
+## <a name="supplying-parameters-for-multithreaded-procedures"></a><span data-ttu-id="0fb2e-105">為多執行緒程序提供參數</span><span class="sxs-lookup"><span data-stu-id="0fb2e-105">Supplying Parameters for Multithreaded Procedures</span></span>  
+ <span data-ttu-id="0fb2e-106">為多執行緒方法呼叫提供參數的最佳方式，是將目標方法包裝在類別中，並為要用為新執行緒參數的類別定義欄位。</span><span class="sxs-lookup"><span data-stu-id="0fb2e-106">The best way to supply parameters for a multithreaded method call is to wrap the target method in a class and define fields for that class that will serve as parameters for the new thread.</span></span> <span data-ttu-id="0fb2e-107">這種方法的優點是您可以建立類別的新執行個體，每次想要開始新執行緒都可以使用它自己的參數。</span><span class="sxs-lookup"><span data-stu-id="0fb2e-107">The advantage of this approach is that you can create a new instance of the class, with its own parameters, every time you want to start a new thread.</span></span> <span data-ttu-id="0fb2e-108">例如，假設您有計算三角形面積的函式，如下列程式碼所示︰</span><span class="sxs-lookup"><span data-stu-id="0fb2e-108">For example, suppose you have a function that calculates the area of a triangle, as in the following code:</span></span>  
   
 ```vb  
 Function CalcArea(ByVal Base As Double, ByVal Height As Double) As Double  
@@ -30,7 +21,7 @@ Function CalcArea(ByVal Base As Double, ByVal Height As Double) As Double
 End Function  
 ```  
   
- <span data-ttu-id="9d5e9-109">您可以撰寫類別，包裝 `CalcArea` 函式並建立儲存輸入參數的欄位，如下所示︰</span><span class="sxs-lookup"><span data-stu-id="9d5e9-109">You can write a class that wraps the `CalcArea` function and creates fields to store input parameters, as follows:</span></span>  
+ <span data-ttu-id="0fb2e-109">您可以撰寫類別，包裝 `CalcArea` 函式並建立儲存輸入參數的欄位，如下所示︰</span><span class="sxs-lookup"><span data-stu-id="0fb2e-109">You can write a class that wraps the `CalcArea` function and creates fields to store input parameters, as follows:</span></span>  
   
 ```vb  
 Class AreaClass  
@@ -44,7 +35,7 @@ Class AreaClass
 End Class  
 ```  
   
- <span data-ttu-id="9d5e9-110">若要使用 `AreaClass`，您可以建立 `AreaClass` 物件，然後設定 `Base` 和 `Height` 屬性，如下列程式碼所示︰</span><span class="sxs-lookup"><span data-stu-id="9d5e9-110">To use the `AreaClass`, you can create an `AreaClass` object, and set the `Base` and `Height` properties as shown in the following code:</span></span>  
+ <span data-ttu-id="0fb2e-110">若要使用 `AreaClass`，您可以建立 `AreaClass` 物件，然後設定 `Base` 和 `Height` 屬性，如下列程式碼所示︰</span><span class="sxs-lookup"><span data-stu-id="0fb2e-110">To use the `AreaClass`, you can create an `AreaClass` object, and set the `Base` and `Height` properties as shown in the following code:</span></span>  
   
 ```vb  
 Protected Sub TestArea()  
@@ -57,12 +48,12 @@ Protected Sub TestArea()
 End Sub  
 ```  
   
- <span data-ttu-id="9d5e9-111">請注意，呼叫 `CalcArea` 方法之後，`TestArea` 程序不會檢查 `Area` 欄位的值。</span><span class="sxs-lookup"><span data-stu-id="9d5e9-111">Notice that the `TestArea` procedure does not check the value of the `Area` field after calling the `CalcArea` method.</span></span> <span data-ttu-id="9d5e9-112">如果您在呼叫 `Thread.Start` 之後立即檢查，因為 `CalcArea` 在另外的執行緒上執行，所以不保證會設定 `Area` 欄位。</span><span class="sxs-lookup"><span data-stu-id="9d5e9-112">Because `CalcArea` runs on a separate thread, the `Area` field is not guaranteed to be set if you check it immediately after calling `Thread.Start`.</span></span> <span data-ttu-id="9d5e9-113">下節會討論從多執行緒程序傳回值的更好方法。</span><span class="sxs-lookup"><span data-stu-id="9d5e9-113">The next section discusses a better way to return values from multithreaded procedures.</span></span>  
+ <span data-ttu-id="0fb2e-111">請注意，呼叫 `CalcArea` 方法之後，`TestArea` 程序不會檢查 `Area` 欄位的值。</span><span class="sxs-lookup"><span data-stu-id="0fb2e-111">Notice that the `TestArea` procedure does not check the value of the `Area` field after calling the `CalcArea` method.</span></span> <span data-ttu-id="0fb2e-112">如果您在呼叫 `Thread.Start` 之後立即檢查，因為 `CalcArea` 在另外的執行緒上執行，所以不保證會設定 `Area` 欄位。</span><span class="sxs-lookup"><span data-stu-id="0fb2e-112">Because `CalcArea` runs on a separate thread, the `Area` field is not guaranteed to be set if you check it immediately after calling `Thread.Start`.</span></span> <span data-ttu-id="0fb2e-113">下節會討論從多執行緒程序傳回值的更好方法。</span><span class="sxs-lookup"><span data-stu-id="0fb2e-113">The next section discusses a better way to return values from multithreaded procedures.</span></span>  
   
-## <a name="returning-values-from-multithreaded-procedures"></a><span data-ttu-id="9d5e9-114">從多執行緒程序傳回值</span><span class="sxs-lookup"><span data-stu-id="9d5e9-114">Returning Values from Multithreaded Procedures</span></span>  
- <span data-ttu-id="9d5e9-115">從在其他執行緒上執行的程序傳回值很複雜，因為這些程序不能是函式，也無法使用 `ByRef` 引數。</span><span class="sxs-lookup"><span data-stu-id="9d5e9-115">Returning values from procedures that run on separate threads is complicated by the fact that the procedures cannot be functions and cannot use `ByRef` arguments.</span></span> <span data-ttu-id="9d5e9-116">傳回值最簡單的方式是使用 <xref:System.ComponentModel.BackgroundWorker> 元件來管理您的執行緒，並在工作完成時引發事件，然後以事件處理常式來處理結果。</span><span class="sxs-lookup"><span data-stu-id="9d5e9-116">The easiest way to return values is to use the <xref:System.ComponentModel.BackgroundWorker> component to manage your threads and raise an event when the task is done, and process the results with an event handler.</span></span>  
+## <a name="returning-values-from-multithreaded-procedures"></a><span data-ttu-id="0fb2e-114">從多執行緒程序傳回值</span><span class="sxs-lookup"><span data-stu-id="0fb2e-114">Returning Values from Multithreaded Procedures</span></span>  
+ <span data-ttu-id="0fb2e-115">從在其他執行緒上執行的程序傳回值很複雜，因為這些程序不能是函式，也無法使用 `ByRef` 引數。</span><span class="sxs-lookup"><span data-stu-id="0fb2e-115">Returning values from procedures that run on separate threads is complicated by the fact that the procedures cannot be functions and cannot use `ByRef` arguments.</span></span> <span data-ttu-id="0fb2e-116">傳回值最簡單的方式是使用 <xref:System.ComponentModel.BackgroundWorker> 元件來管理您的執行緒，並在工作完成時引發事件，然後以事件處理常式來處理結果。</span><span class="sxs-lookup"><span data-stu-id="0fb2e-116">The easiest way to return values is to use the <xref:System.ComponentModel.BackgroundWorker> component to manage your threads and raise an event when the task is done, and process the results with an event handler.</span></span>  
   
- <span data-ttu-id="9d5e9-117">下例會透過從在另一個執行緒上執行的程序引發事件傳回值：</span><span class="sxs-lookup"><span data-stu-id="9d5e9-117">The following example returns a value by raising an event from a procedure running on a separate thread:</span></span>  
+ <span data-ttu-id="0fb2e-117">下例會透過從在另一個執行緒上執行的程序引發事件傳回值：</span><span class="sxs-lookup"><span data-stu-id="0fb2e-117">The following example returns a value by raising an event from a procedure running on a separate thread:</span></span>  
   
 ```vb  
 Private Class AreaClass2  
@@ -108,13 +99,13 @@ Private Sub BackgroundWorker1_RunWorkerCompleted(
 End Sub  
 ```  
   
- <span data-ttu-id="9d5e9-118">您可以使用 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> 方法的選擇性 `ByVal` 狀態物件變數，提供參數並將值傳回給執行緒集區執行緒。</span><span class="sxs-lookup"><span data-stu-id="9d5e9-118">You can provide parameters and return values to thread-pool threads by using the optional `ByVal` state-object variable of the <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> method.</span></span> <span data-ttu-id="9d5e9-119">執行緒計時器執行緒也支援針對此目的狀態物件。</span><span class="sxs-lookup"><span data-stu-id="9d5e9-119">Thread-timer threads also support a state object for this purpose.</span></span> <span data-ttu-id="9d5e9-120">在執行緒集區和執行緒計時器上的資訊，請參閱[執行緒集區 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)[執行緒集區](http://msdn.microsoft.com/library/4b8bb2c8-8ca4-457c-9afd-d11bc9a05701)和[執行緒計時器 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-timers.md)。</span><span class="sxs-lookup"><span data-stu-id="9d5e9-120">For information on thread pooling and thread timers, see [Thread Pooling (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)[Thread Pooling](http://msdn.microsoft.com/library/4b8bb2c8-8ca4-457c-9afd-d11bc9a05701) and [Thread Timers (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-timers.md).</span></span>  
+ <span data-ttu-id="0fb2e-118">您可以使用 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> 方法的選擇性 `ByVal` 狀態物件變數，提供參數並將值傳回給執行緒集區執行緒。</span><span class="sxs-lookup"><span data-stu-id="0fb2e-118">You can provide parameters and return values to thread-pool threads by using the optional `ByVal` state-object variable of the <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> method.</span></span> <span data-ttu-id="0fb2e-119">執行緒計時器執行緒也支援針對此目的狀態物件。</span><span class="sxs-lookup"><span data-stu-id="0fb2e-119">Thread-timer threads also support a state object for this purpose.</span></span> <span data-ttu-id="0fb2e-120">在執行緒集區和執行緒計時器上的資訊，請參閱[執行緒集區 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)[執行緒集區](http://msdn.microsoft.com/library/4b8bb2c8-8ca4-457c-9afd-d11bc9a05701)和[執行緒計時器 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-timers.md)。</span><span class="sxs-lookup"><span data-stu-id="0fb2e-120">For information on thread pooling and thread timers, see [Thread Pooling (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)[Thread Pooling](http://msdn.microsoft.com/library/4b8bb2c8-8ca4-457c-9afd-d11bc9a05701) and [Thread Timers (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-timers.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9d5e9-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9d5e9-121">See Also</span></span>  
- [<span data-ttu-id="9d5e9-122">逐步解說：使用 BackgroundWorker 元件進行多執行緒處理 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9d5e9-122">Walkthrough: Multithreading with the BackgroundWorker Component (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/walkthrough-multithreading-with-the-backgroundworker-component.md)  
- [<span data-ttu-id="9d5e9-123">執行緒集區 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9d5e9-123">Thread Pooling (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)  
- [<span data-ttu-id="9d5e9-124">執行緒同步處理 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9d5e9-124">Thread Synchronization (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/thread-synchronization.md)  
- [<span data-ttu-id="9d5e9-125">事件</span><span class="sxs-lookup"><span data-stu-id="9d5e9-125">Events</span></span>](../../../../visual-basic/programming-guide/language-features/events/index.md)  
- [<span data-ttu-id="9d5e9-126">多執行緒應用程式 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9d5e9-126">Multithreaded Applications (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)  
- [<span data-ttu-id="9d5e9-127">委派</span><span class="sxs-lookup"><span data-stu-id="9d5e9-127">Delegates</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
- [<span data-ttu-id="9d5e9-128">元件中的多執行緒</span><span class="sxs-lookup"><span data-stu-id="9d5e9-128">Multithreading in Components</span></span>](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)
+## <a name="see-also"></a><span data-ttu-id="0fb2e-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0fb2e-121">See Also</span></span>  
+ [<span data-ttu-id="0fb2e-122">逐步解說：使用 BackgroundWorker 元件進行多執行緒處理 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0fb2e-122">Walkthrough: Multithreading with the BackgroundWorker Component (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/walkthrough-multithreading-with-the-backgroundworker-component.md)  
+ [<span data-ttu-id="0fb2e-123">執行緒集區 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0fb2e-123">Thread Pooling (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)  
+ [<span data-ttu-id="0fb2e-124">執行緒同步處理 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0fb2e-124">Thread Synchronization (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/thread-synchronization.md)  
+ [<span data-ttu-id="0fb2e-125">事件</span><span class="sxs-lookup"><span data-stu-id="0fb2e-125">Events</span></span>](../../../../visual-basic/programming-guide/language-features/events/index.md)  
+ [<span data-ttu-id="0fb2e-126">多執行緒應用程式 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0fb2e-126">Multithreaded Applications (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)  
+ [<span data-ttu-id="0fb2e-127">委派</span><span class="sxs-lookup"><span data-stu-id="0fb2e-127">Delegates</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
+ [<span data-ttu-id="0fb2e-128">元件中的多執行緒</span><span class="sxs-lookup"><span data-stu-id="0fb2e-128">Multithreading in Components</span></span>](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)

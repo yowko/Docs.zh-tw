@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332877"
 ---
 # <a name="interoperability-c-programming-guide"></a><span data-ttu-id="0ce2f-102">互通性 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="0ce2f-102">Interoperability (C# Programming Guide)</span></span>
 <span data-ttu-id="0ce2f-103">互通性可讓您保留並充分利用目前在 Unmanaged 程式碼上的投資。</span><span class="sxs-lookup"><span data-stu-id="0ce2f-103">Interoperability enables you to preserve and take advantage of existing investments in unmanaged code.</span></span> <span data-ttu-id="0ce2f-104">在 Common Language Runtime (CLR) 控制下執行的程式碼稱為「Managed 程式碼」，而在 CLR 外部執行的程式碼稱為「Unmanaged 程式碼」。</span><span class="sxs-lookup"><span data-stu-id="0ce2f-104">Code that runs under the control of the common language runtime (CLR) is called *managed code*, and code that runs outside the CLR is called *unmanaged code*.</span></span> <span data-ttu-id="0ce2f-105">COM、COM+、C++ 元件、ActiveX 元件及 Microsoft Win32 API 都是 Unmanaged 程式碼的範例。</span><span class="sxs-lookup"><span data-stu-id="0ce2f-105">COM, COM+, C++ components, ActiveX components, and Microsoft Win32 API are examples of unmanaged code.</span></span>  

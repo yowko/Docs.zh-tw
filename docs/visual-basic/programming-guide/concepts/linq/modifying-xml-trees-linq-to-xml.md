@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645612"
 ---
 # <a name="modifying-xml-trees-linq-to-xml-visual-basic"></a><span data-ttu-id="eaf91-102">修改 XML 樹狀 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="eaf91-102">Modifying XML Trees (LINQ to XML) (Visual Basic)</span></span>
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="eaf91-103"> 是 XML 樹狀結構的記憶體中存放區。</span><span class="sxs-lookup"><span data-stu-id="eaf91-103"> is an in-memory store for an XML tree.</span></span> <span data-ttu-id="eaf91-104">在您從來源載入或剖析 XML 樹狀結構後，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 會讓您就地修改該樹狀結構，然後序列化樹狀結構，以便將其儲存到檔案或傳送到遠端伺服器。</span><span class="sxs-lookup"><span data-stu-id="eaf91-104">After you load or parse an XML tree from a source, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] lets you modify that tree in place, and then serialize the tree, perhaps saving it to a file or sending it to a remote server.</span></span>  

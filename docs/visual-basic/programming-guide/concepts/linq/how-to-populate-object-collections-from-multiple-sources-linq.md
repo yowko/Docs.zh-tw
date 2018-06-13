@@ -1,35 +1,26 @@
 ---
-title: "如何： 從 (LINQ) (Visual Basic) 的多個來源填入物件集合"
-ms.custom: 
+title: 如何： 從 (LINQ) (Visual Basic) 的多個來源填入物件集合
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3b52042078667ccfbefadcdf1cef5ab0873cc97b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e890900cd2f53e62a55adef56bfdb27b9787d598
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643311"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a><span data-ttu-id="82936-102">如何： 從 (LINQ) (Visual Basic) 的多個來源填入物件集合</span><span class="sxs-lookup"><span data-stu-id="82936-102">How to: Populate Object Collections from Multiple Sources (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="82936-103">此範例示範如何將不同來源的資料合併成新的類型。</span><span class="sxs-lookup"><span data-stu-id="82936-103">This example shows how to merge data from different sources into a sequence of new types.</span></span>  
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a><span data-ttu-id="19b99-102">如何： 從 (LINQ) (Visual Basic) 的多個來源填入物件集合</span><span class="sxs-lookup"><span data-stu-id="19b99-102">How to: Populate Object Collections from Multiple Sources (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="19b99-103">此範例示範如何將不同來源的資料合併成新的類型。</span><span class="sxs-lookup"><span data-stu-id="19b99-103">This example shows how to merge data from different sources into a sequence of new types.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="82936-104">請勿嘗試將記憶體內部資料或檔案系統中的資料，與仍在資料庫中的資料聯結。</span><span class="sxs-lookup"><span data-stu-id="82936-104">Do not try to join in-memory data or data in the file system with data that is still in a database.</span></span> <span data-ttu-id="82936-105">這類跨定義域的聯結會產生未定義的結果，因為針對資料庫查詢和其他類型的來源定義聯結作業的方式可能不同。</span><span class="sxs-lookup"><span data-stu-id="82936-105">Such cross-domain joins can yield undefined results because of different ways in which join operations might be defined for database queries and other types of sources.</span></span> <span data-ttu-id="82936-106">此外，如果資料庫中的資料量太大，這類作業也可能會導致記憶體不足的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="82936-106">Additionally, there is a risk that such an operation could cause an out-of-memory exception if the amount of data in the database is large enough.</span></span> <span data-ttu-id="82936-107">若要將資料庫中的資料聯結至記憶體內部資料，請先在資料庫查詢中呼叫 `ToList` 或 `ToArray`，然後對傳回的集合執行聯結。</span><span class="sxs-lookup"><span data-stu-id="82936-107">To join data from a database to in-memory data, first call `ToList` or `ToArray` on the database query, and then perform the join on the returned collection.</span></span>  
+>  <span data-ttu-id="19b99-104">請勿嘗試將記憶體內部資料或檔案系統中的資料，與仍在資料庫中的資料聯結。</span><span class="sxs-lookup"><span data-stu-id="19b99-104">Do not try to join in-memory data or data in the file system with data that is still in a database.</span></span> <span data-ttu-id="19b99-105">這類跨定義域的聯結會產生未定義的結果，因為針對資料庫查詢和其他類型的來源定義聯結作業的方式可能不同。</span><span class="sxs-lookup"><span data-stu-id="19b99-105">Such cross-domain joins can yield undefined results because of different ways in which join operations might be defined for database queries and other types of sources.</span></span> <span data-ttu-id="19b99-106">此外，如果資料庫中的資料量太大，這類作業也可能會導致記憶體不足的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="19b99-106">Additionally, there is a risk that such an operation could cause an out-of-memory exception if the amount of data in the database is large enough.</span></span> <span data-ttu-id="19b99-107">若要將資料庫中的資料聯結至記憶體內部資料，請先在資料庫查詢中呼叫 `ToList` 或 `ToArray`，然後對傳回的集合執行聯結。</span><span class="sxs-lookup"><span data-stu-id="19b99-107">To join data from a database to in-memory data, first call `ToList` or `ToArray` on the database query, and then perform the join on the returned collection.</span></span>  
   
-### <a name="to-create-the-data-file"></a><span data-ttu-id="82936-108">建立資料檔</span><span class="sxs-lookup"><span data-stu-id="82936-108">To create the data file</span></span>  
+### <a name="to-create-the-data-file"></a><span data-ttu-id="19b99-108">建立資料檔</span><span class="sxs-lookup"><span data-stu-id="19b99-108">To create the data file</span></span>  
   
--   <span data-ttu-id="82936-109">Names.csv 和 scores.csv 將檔案複製到您的專案資料夾中所述[How to： 將內容從不同的檔案 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)。</span><span class="sxs-lookup"><span data-stu-id="82936-109">Copy the names.csv and scores.csv files into your project folder, as described in [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).</span></span>  
+-   <span data-ttu-id="19b99-109">Names.csv 和 scores.csv 將檔案複製到您的專案資料夾中所述[How to： 將內容從不同的檔案 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)。</span><span class="sxs-lookup"><span data-stu-id="19b99-109">Copy the names.csv and scores.csv files into your project folder, as described in [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="82936-110">範例</span><span class="sxs-lookup"><span data-stu-id="82936-110">Example</span></span>  
- <span data-ttu-id="82936-111">下列範例示範如何使用具名類型 `Student`，來儲存將兩個記憶體內部字串集合合併得來的資料，這些字串模擬 .csv 格式的試算表資料。</span><span class="sxs-lookup"><span data-stu-id="82936-111">The following example shows how to use a named type `Student` to store merged data from two in-memory collections of strings that simulate spreadsheet data in .csv format.</span></span> <span data-ttu-id="82936-112">第一個字串集合代表學生姓名和學號，第二個集合代表學生學號 (第一欄) 和四個測驗分數。</span><span class="sxs-lookup"><span data-stu-id="82936-112">The first collection of strings represents the student names and IDs, and the second collection represents the student ID (in the first column) and four exam scores.</span></span> <span data-ttu-id="82936-113">學號會作為外部索引鍵使用。</span><span class="sxs-lookup"><span data-stu-id="82936-113">The ID is used as the foreign key.</span></span>  
+## <a name="example"></a><span data-ttu-id="19b99-110">範例</span><span class="sxs-lookup"><span data-stu-id="19b99-110">Example</span></span>  
+ <span data-ttu-id="19b99-111">下列範例示範如何使用具名類型 `Student`，來儲存將兩個記憶體內部字串集合合併得來的資料，這些字串模擬 .csv 格式的試算表資料。</span><span class="sxs-lookup"><span data-stu-id="19b99-111">The following example shows how to use a named type `Student` to store merged data from two in-memory collections of strings that simulate spreadsheet data in .csv format.</span></span> <span data-ttu-id="19b99-112">第一個字串集合代表學生姓名和學號，第二個集合代表學生學號 (第一欄) 和四個測驗分數。</span><span class="sxs-lookup"><span data-stu-id="19b99-112">The first collection of strings represents the student names and IDs, and the second collection represents the student ID (in the first column) and four exam scores.</span></span> <span data-ttu-id="19b99-113">學號會作為外部索引鍵使用。</span><span class="sxs-lookup"><span data-stu-id="19b99-113">The ID is used as the foreign key.</span></span>  
   
 ```vb  
 Class Student  
@@ -104,9 +95,9 @@ End Class
 ' The average score of Tucker Michael is 92  
 ```  
   
- <span data-ttu-id="82936-114">在[Select 子句](../../../../visual-basic/language-reference/queries/select-clause.md)子句，物件初始設定式來具現化每個新`Student`使用兩個來源的資料物件。</span><span class="sxs-lookup"><span data-stu-id="82936-114">In the [Select Clause](../../../../visual-basic/language-reference/queries/select-clause.md) clause, an object initializer is used to instantiate each new `Student` object by using the data from the two sources.</span></span>  
+ <span data-ttu-id="19b99-114">在[Select 子句](../../../../visual-basic/language-reference/queries/select-clause.md)子句，物件初始設定式來具現化每個新`Student`使用兩個來源的資料物件。</span><span class="sxs-lookup"><span data-stu-id="19b99-114">In the [Select Clause](../../../../visual-basic/language-reference/queries/select-clause.md) clause, an object initializer is used to instantiate each new `Student` object by using the data from the two sources.</span></span>  
   
- <span data-ttu-id="82936-115">如果您不需要儲存查詢的結果，則匿名型別會比具名類型更方便使用。</span><span class="sxs-lookup"><span data-stu-id="82936-115">If you do not have to store the results of a query, anonymous types can be more convenient than named types.</span></span> <span data-ttu-id="82936-116">如果要在執行查詢的方法外傳遞查詢結果，則必須使用具名類型。</span><span class="sxs-lookup"><span data-stu-id="82936-116">Named types are required if you pass the query results outside the method in which the query is executed.</span></span> <span data-ttu-id="82936-117">下列範例會執行與上述範例相同的工作，但使用匿名型別而不是具名類型：</span><span class="sxs-lookup"><span data-stu-id="82936-117">The following example performs the same task as the previous example, but uses anonymous types instead of named types:</span></span>  
+ <span data-ttu-id="19b99-115">如果您不需要儲存查詢的結果，則匿名型別會比具名類型更方便使用。</span><span class="sxs-lookup"><span data-stu-id="19b99-115">If you do not have to store the results of a query, anonymous types can be more convenient than named types.</span></span> <span data-ttu-id="19b99-116">如果要在執行查詢的方法外傳遞查詢結果，則必須使用具名類型。</span><span class="sxs-lookup"><span data-stu-id="19b99-116">Named types are required if you pass the query results outside the method in which the query is executed.</span></span> <span data-ttu-id="19b99-117">下列範例會執行與上述範例相同的工作，但使用匿名型別而不是具名類型：</span><span class="sxs-lookup"><span data-stu-id="19b99-117">The following example performs the same task as the previous example, but uses anonymous types instead of named types:</span></span>  
   
 ```vb  
 ' Merge the data by using an anonymous type.   
@@ -132,8 +123,8 @@ For Each s In queryNamesScores2
 Next  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="82936-118">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="82936-118">Compiling the Code</span></span>  
- <span data-ttu-id="82936-119">建立以 .NET Framework 3.5 版或更新版本為目標的專案，其中包含對 System.Core.dll 的參考，以及 System.Linq 命名空間的 `Imports` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="82936-119">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="19b99-118">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="19b99-118">Compiling the Code</span></span>  
+ <span data-ttu-id="19b99-119">建立以 .NET Framework 3.5 版或更新版本為目標的專案，其中包含對 System.Core.dll 的參考，以及 System.Linq 命名空間的 `Imports` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="19b99-119">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="82936-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="82936-120">See Also</span></span>  
- [<span data-ttu-id="82936-121">LINQ 和字串 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="82936-121">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a><span data-ttu-id="19b99-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="19b99-120">See Also</span></span>  
+ [<span data-ttu-id="19b99-121">LINQ 和字串 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="19b99-121">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

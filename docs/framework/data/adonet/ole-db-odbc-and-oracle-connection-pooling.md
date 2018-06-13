@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803120"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a><span data-ttu-id="7df5d-102">OLE DB、ODBC 和 Oracle 連接共用</span><span class="sxs-lookup"><span data-stu-id="7df5d-102">OLE DB, ODBC, and Oracle Connection Pooling</span></span>
 <span data-ttu-id="7df5d-103">共用連接可顯著提高應用程式的效能及延展性。</span><span class="sxs-lookup"><span data-stu-id="7df5d-103">Pooling connections can significantly enhance the performance and scalability of your application.</span></span> <span data-ttu-id="7df5d-104">本節說明 OLE DB、ODBC 和 Oracle 的 .NET Framework 資料提供者的連接共用 (Connection Pooling)。</span><span class="sxs-lookup"><span data-stu-id="7df5d-104">This section discusses connection pooling for the .NET Framework data providers for OLE DB, ODBC and Oracle.</span></span>  

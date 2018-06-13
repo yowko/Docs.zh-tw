@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765876"
 ---
 # <a name="identifiers-entity-sql"></a><span data-ttu-id="4fc73-102">識別項 (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="4fc73-102">Identifiers (Entity SQL)</span></span>
 <span data-ttu-id="4fc73-103">[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中使用識別項表示查詢運算式別名、變數參考、物件的屬性、函式等。</span><span class="sxs-lookup"><span data-stu-id="4fc73-103">Identifiers are used in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] to represent query expression aliases, variable references, properties of objects, functions, and so on.</span></span> [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="4fc73-104"> 提供兩種類型的識別項： 簡單識別項和引號識別項。</span><span class="sxs-lookup"><span data-stu-id="4fc73-104"> provides two kinds of identifiers: simple identifiers and quoted identifiers.</span></span>  

@@ -1,40 +1,32 @@
 ---
-title: "如何：使用字元值陣列建立字串 (Visual Basic)"
-ms.custom: 
+title: 如何：使用字元值陣列建立字串 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - examples [Visual Basic], arrays
 - examples [Visual Basic], Char data type
 ms.assetid: 69f94e85-d57c-4ccc-a62a-426e829f5c5e
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 06e5c6923c26f3cb84b38475d6680523853d727d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 104b329011d69e10a2926f31ce5d296759a3cce8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647163"
 ---
-# <a name="how-to-create-a-string-from-an-array-of-char-values-visual-basic"></a><span data-ttu-id="24cc7-102">如何：使用字元值陣列建立字串 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="24cc7-102">How to: Create a String from An Array of Char Values (Visual Basic)</span></span>
-<span data-ttu-id="24cc7-103">此範例會建立個別字元的字串"abcd"。</span><span class="sxs-lookup"><span data-stu-id="24cc7-103">This example creates the string "abcd" from individual characters.</span></span>  
+# <a name="how-to-create-a-string-from-an-array-of-char-values-visual-basic"></a><span data-ttu-id="6a17e-102">如何：使用字元值陣列建立字串 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6a17e-102">How to: Create a String from An Array of Char Values (Visual Basic)</span></span>
+<span data-ttu-id="6a17e-103">此範例會建立個別字元的字串"abcd"。</span><span class="sxs-lookup"><span data-stu-id="6a17e-103">This example creates the string "abcd" from individual characters.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="24cc7-104">範例</span><span class="sxs-lookup"><span data-stu-id="24cc7-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="6a17e-104">範例</span><span class="sxs-lookup"><span data-stu-id="6a17e-104">Example</span></span>  
  [!code-vb[VbVbalrStrings#61](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-create-a-string-from-an-array-of-char-values_1.vb)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="24cc7-105">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="24cc7-105">Compiling the Code</span></span>  
- <span data-ttu-id="24cc7-106">這個方法沒有任何特殊的需求。</span><span class="sxs-lookup"><span data-stu-id="24cc7-106">This method has no special requirements.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="6a17e-105">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="6a17e-105">Compiling the Code</span></span>  
+ <span data-ttu-id="6a17e-106">這個方法沒有任何特殊的需求。</span><span class="sxs-lookup"><span data-stu-id="6a17e-106">This method has no special requirements.</span></span>  
   
- <span data-ttu-id="24cc7-107">語法`"a"c`，其中單一`c`在引號內的單一字元後面接著，用來建立字元常值。</span><span class="sxs-lookup"><span data-stu-id="24cc7-107">The syntax `"a"c`, where a single `c` follows a single character in quotation marks, is used to create a character literal.</span></span>  
+ <span data-ttu-id="6a17e-107">語法`"a"c`，其中單一`c`在引號內的單一字元後面接著，用來建立字元常值。</span><span class="sxs-lookup"><span data-stu-id="6a17e-107">The syntax `"a"c`, where a single `c` follows a single character in quotation marks, is used to create a character literal.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="24cc7-108">穩固程式設計</span><span class="sxs-lookup"><span data-stu-id="24cc7-108">Robust Programming</span></span>  
- <span data-ttu-id="24cc7-109">Null 字元 (等於`Chr(0)`) 字串中會導致非預期的結果時使用的字串。</span><span class="sxs-lookup"><span data-stu-id="24cc7-109">Null characters (equivalent to `Chr(0)`) in the string lead to unexpected results when using the string.</span></span> <span data-ttu-id="24cc7-110">Null 字元將會包含在字串中，但在某些情況下不會顯示 null 字元之後。</span><span class="sxs-lookup"><span data-stu-id="24cc7-110">The null character will be included with the string, but characters following the null character will not be displayed in some situations.</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="6a17e-108">穩固程式設計</span><span class="sxs-lookup"><span data-stu-id="6a17e-108">Robust Programming</span></span>  
+ <span data-ttu-id="6a17e-109">Null 字元 (等於`Chr(0)`) 字串中會導致非預期的結果時使用的字串。</span><span class="sxs-lookup"><span data-stu-id="6a17e-109">Null characters (equivalent to `Chr(0)`) in the string lead to unexpected results when using the string.</span></span> <span data-ttu-id="6a17e-110">Null 字元將會包含在字串中，但在某些情況下不會顯示 null 字元之後。</span><span class="sxs-lookup"><span data-stu-id="6a17e-110">The null character will be included with the string, but characters following the null character will not be displayed in some situations.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="24cc7-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="24cc7-111">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="6a17e-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6a17e-111">See Also</span></span>  
  <xref:System.String>  
- [<span data-ttu-id="24cc7-112">Char 資料類型</span><span class="sxs-lookup"><span data-stu-id="24cc7-112">Char Data Type</span></span>](../../../../visual-basic/language-reference/data-types/char-data-type.md)  
- [<span data-ttu-id="24cc7-113">資料類型</span><span class="sxs-lookup"><span data-stu-id="24cc7-113">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+ [<span data-ttu-id="6a17e-112">Char 資料類型</span><span class="sxs-lookup"><span data-stu-id="6a17e-112">Char Data Type</span></span>](../../../../visual-basic/language-reference/data-types/char-data-type.md)  
+ [<span data-ttu-id="6a17e-113">資料類型</span><span class="sxs-lookup"><span data-stu-id="6a17e-113">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)

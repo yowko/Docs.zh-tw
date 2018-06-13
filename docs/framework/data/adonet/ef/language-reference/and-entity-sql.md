@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763783"
 ---
 # <a name="ampamp-and-entity-sql"></a><span data-ttu-id="b0da3-102">&amp;&amp; （和）(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="b0da3-102">&amp;&amp; (AND) (Entity SQL)</span></span>
 <span data-ttu-id="b0da3-103">如果兩個運算式都是 `true` 則傳回 `true`，否則為 `false` 或 `NULL`。</span><span class="sxs-lookup"><span data-stu-id="b0da3-103">Returns `true` if both expressions are `true`; otherwise, `false` or `NULL`.</span></span>  

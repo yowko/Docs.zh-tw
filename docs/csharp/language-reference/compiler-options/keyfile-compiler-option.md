@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214009"
 ---
 # <a name="-keyfile-c-compiler-options"></a><span data-ttu-id="93d77-102">-keyfile (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="93d77-102">-keyfile (C# Compiler Options)</span></span>
 <span data-ttu-id="93d77-103">指定包含密碼編譯金鑰的檔名。</span><span class="sxs-lookup"><span data-stu-id="93d77-103">Specifies the filename containing the cryptographic key.</span></span>  

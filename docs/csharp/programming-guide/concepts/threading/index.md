@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335831"
 ---
 # <a name="threading-c"></a><span data-ttu-id="3c73d-102">執行緒 (C#)</span><span class="sxs-lookup"><span data-stu-id="3c73d-102">Threading (C#)</span></span>
 <span data-ttu-id="3c73d-103">C# 程式可以透過執行緒執行並行處理，讓您可以一次執行多項作業。</span><span class="sxs-lookup"><span data-stu-id="3c73d-103">Threading enables your C# program to perform concurrent processing so that you can do more than one operation at a time.</span></span> <span data-ttu-id="3c73d-104">例如，您可以使用執行緒監視使用者的輸入、執行背景工作，以及處理同時的輸入資料流。</span><span class="sxs-lookup"><span data-stu-id="3c73d-104">For example, you can use threading to monitor input from the user, perform background tasks, and handle simultaneous streams of input.</span></span>  

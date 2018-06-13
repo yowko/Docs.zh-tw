@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644416"
 ---
 # <a name="concepts-and-terminology-functional-transformation-visual-basic"></a><span data-ttu-id="35304-102">概念和術語 （功能轉換） (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="35304-102">Concepts and Terminology (Functional Transformation) (Visual Basic)</span></span>
 <span data-ttu-id="35304-103">本主題說明純功能性轉換的概念與術語。</span><span class="sxs-lookup"><span data-stu-id="35304-103">This topic introduces the concepts and terminology of pure functional transformations.</span></span> <span data-ttu-id="35304-104">轉換資料的功能性轉換方法所產生的程式碼通常比更傳統的命令性程式設計可以更快速地進行程式設計、更明確，而且更容易進行偵錯與維護。</span><span class="sxs-lookup"><span data-stu-id="35304-104">The functional transformation approach to transforming data yields code that is often quicker to program, more expressive, and easier to debug and maintain than more traditional, imperative programming.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763692"
 ---
 # <a name="-not-equal-to-entity-sql"></a><span data-ttu-id="c4aac-102">!= (不等於) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="c4aac-102">!= (Not Equal To) (Entity SQL)</span></span>
 <span data-ttu-id="c4aac-103">比較兩個運算式來判斷左運算式是否不等於右運算式。</span><span class="sxs-lookup"><span data-stu-id="c4aac-103">Compares two expressions to determine whether the left expression is not equal to the right expression.</span></span> <span data-ttu-id="c4aac-104">!= (不等於) 運算子的功能相當於 <> 運算子。</span><span class="sxs-lookup"><span data-stu-id="c4aac-104">The != (Not Equal To) operator is functionally equivalent to the <> operator.</span></span>  

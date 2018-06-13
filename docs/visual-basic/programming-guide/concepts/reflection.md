@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646672"
 ---
 # <a name="reflection-visual-basic"></a><span data-ttu-id="ab0a3-102">反映 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ab0a3-102">Reflection (Visual Basic)</span></span>
 <span data-ttu-id="ab0a3-103">反映提供的物件 (類型為 <xref:System.Type>) 可描述組件、模組和類型。</span><span class="sxs-lookup"><span data-stu-id="ab0a3-103">Reflection provides objects (of type <xref:System.Type>) that describe assemblies, modules and types.</span></span> <span data-ttu-id="ab0a3-104">您可以使用反映來動態建立類型的執行個體、將類型繫結至現有的物件，或從現有的物件取得類型，並叫用其方法或存取其欄位及屬性。</span><span class="sxs-lookup"><span data-stu-id="ab0a3-104">You can use reflection to dynamically create an instance of a type, bind the type to an existing object, or get the type from an existing object and invoke its methods or access its fields and properties.</span></span> <span data-ttu-id="ab0a3-105">如果您在程式碼中使用屬性，則反映可讓您存取它們。</span><span class="sxs-lookup"><span data-stu-id="ab0a3-105">If you are using attributes in your code, reflection enables you to access them.</span></span> <span data-ttu-id="ab0a3-106">如需詳細資訊，請參閱[屬性](../../../standard/attributes/index.md)。</span><span class="sxs-lookup"><span data-stu-id="ab0a3-106">For more information, see [Attributes](../../../standard/attributes/index.md).</span></span>  

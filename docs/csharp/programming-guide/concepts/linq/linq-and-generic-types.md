@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327733"
 ---
 # <a name="linq-and-generic-types-c"></a><span data-ttu-id="f1eb1-102">LINQ 和泛型類型 (C#)</span><span class="sxs-lookup"><span data-stu-id="f1eb1-102">LINQ and Generic Types (C#)</span></span>
 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]<span data-ttu-id="f1eb1-103"> 查詢是以 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 2.0 版中引進的泛型型別為基礎。</span><span class="sxs-lookup"><span data-stu-id="f1eb1-103"> queries are based on generic types, which were introduced in version 2.0 of the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="f1eb1-104">您不需要深入了解泛型，就可以開始撰寫查詢。</span><span class="sxs-lookup"><span data-stu-id="f1eb1-104">You do not need an in-depth knowledge of generics before you can start writing queries.</span></span> <span data-ttu-id="f1eb1-105">不過，您可能需要了解兩個基本概念：</span><span class="sxs-lookup"><span data-stu-id="f1eb1-105">However, you may want to understand two basic concepts:</span></span>  

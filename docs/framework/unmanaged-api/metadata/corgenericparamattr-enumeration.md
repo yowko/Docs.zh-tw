@@ -1,14 +1,6 @@
 ---
-title: "CorGenericParamAttr 列舉"
-ms.custom: 
+title: CorGenericParamAttr 列舉
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorGenericParamAttr
 api_location:
@@ -22,22 +14,19 @@ helpviewer_keywords:
 ms.assetid: 36c76266-71d8-48dc-bd89-54943fa659c1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e40613d790baed5bd89bee1e1f5ca57043bfe76a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 9d56be8c6f224010da22803894524299c0d376ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443530"
 ---
-# <a name="corgenericparamattr-enumeration"></a><span data-ttu-id="10202-102">CorGenericParamAttr 列舉</span><span class="sxs-lookup"><span data-stu-id="10202-102">CorGenericParamAttr Enumeration</span></span>
-<span data-ttu-id="10202-103">包含描述值<xref:System.Type>參數的泛型型別，用於呼叫[imetadataemit2:: Definegenericparam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md)。</span><span class="sxs-lookup"><span data-stu-id="10202-103">Contains values that describe the <xref:System.Type> parameters for generic types, as used in calls to [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).</span></span>  
+# <a name="corgenericparamattr-enumeration"></a><span data-ttu-id="0cb4d-102">CorGenericParamAttr 列舉</span><span class="sxs-lookup"><span data-stu-id="0cb4d-102">CorGenericParamAttr Enumeration</span></span>
+<span data-ttu-id="0cb4d-103">包含描述值<xref:System.Type>參數的泛型型別，用於呼叫[imetadataemit2:: Definegenericparam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md)。</span><span class="sxs-lookup"><span data-stu-id="0cb4d-103">Contains values that describe the <xref:System.Type> parameters for generic types, as used in calls to [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="10202-104">語法</span><span class="sxs-lookup"><span data-stu-id="10202-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0cb4d-104">語法</span><span class="sxs-lookup"><span data-stu-id="0cb4d-104">Syntax</span></span>  
   
 ```  
 typedef enum CorGenericParamAttr {  
@@ -56,26 +45,26 @@ typedef enum CorGenericParamAttr {
 } CorGenericParamAttr;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="10202-105">成員</span><span class="sxs-lookup"><span data-stu-id="10202-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="0cb4d-105">成員</span><span class="sxs-lookup"><span data-stu-id="0cb4d-105">Members</span></span>  
   
-|<span data-ttu-id="10202-106">成員</span><span class="sxs-lookup"><span data-stu-id="10202-106">Member</span></span>|<span data-ttu-id="10202-107">描述</span><span class="sxs-lookup"><span data-stu-id="10202-107">Description</span></span>|  
+|<span data-ttu-id="0cb4d-106">成員</span><span class="sxs-lookup"><span data-stu-id="0cb4d-106">Member</span></span>|<span data-ttu-id="0cb4d-107">描述</span><span class="sxs-lookup"><span data-stu-id="0cb4d-107">Description</span></span>|  
 |------------|-----------------|  
-|`gpVarianceMask`|<span data-ttu-id="10202-108">參數的變異數只適用於介面及委派的泛型參數。</span><span class="sxs-lookup"><span data-stu-id="10202-108">Parameter variance applies only to generic parameters for interfaces and delegates.</span></span>|  
-|`gpNonVariant`|<span data-ttu-id="10202-109">表示變異數不存在。</span><span class="sxs-lookup"><span data-stu-id="10202-109">Indicates the absence of variance.</span></span>|  
-|`gpCovariant`|<span data-ttu-id="10202-110">指出共變數。</span><span class="sxs-lookup"><span data-stu-id="10202-110">Indicates covariance.</span></span>|  
-|`gpContravariant`|<span data-ttu-id="10202-111">表示反變數。</span><span class="sxs-lookup"><span data-stu-id="10202-111">Indicates contravariance.</span></span>|  
-|`gpSpecialConstraintMask`|<span data-ttu-id="10202-112">特殊條件約束可以套用至任何<xref:System.Type>參數。</span><span class="sxs-lookup"><span data-stu-id="10202-112">Special constraints can apply to any <xref:System.Type> parameter.</span></span>|  
-|`gpNoSpecialConstraint`|<span data-ttu-id="10202-113">表示沒有條件約束套用到<xref:System.Type>參數。</span><span class="sxs-lookup"><span data-stu-id="10202-113">Indicates that no constraint applies to the <xref:System.Type> parameter.</span></span>|  
-|`gpReferenceTypeConstraint`|<span data-ttu-id="10202-114">表示<xref:System.Type>參數必須是參考型別。</span><span class="sxs-lookup"><span data-stu-id="10202-114">Indicates that the <xref:System.Type> parameter must be a reference type.</span></span>|  
-|`gpNotNullableValueTypeConstraint`|<span data-ttu-id="10202-115">表示<xref:System.Type>參數必須是實值類型不得為 null 的值。</span><span class="sxs-lookup"><span data-stu-id="10202-115">Indicates that the <xref:System.Type> parameter must be a value type that cannot be a null value.</span></span>|  
-|`gpDefaultConstructorConstraint`|<span data-ttu-id="10202-116">表示<xref:System.Type>參數必須要有的預設公用建構函式不接受任何參數。</span><span class="sxs-lookup"><span data-stu-id="10202-116">Indicates that the <xref:System.Type> parameter must have a default public constructor that takes no parameters.</span></span>|  
+|`gpVarianceMask`|<span data-ttu-id="0cb4d-108">參數的變異數只適用於介面及委派的泛型參數。</span><span class="sxs-lookup"><span data-stu-id="0cb4d-108">Parameter variance applies only to generic parameters for interfaces and delegates.</span></span>|  
+|`gpNonVariant`|<span data-ttu-id="0cb4d-109">表示變異數不存在。</span><span class="sxs-lookup"><span data-stu-id="0cb4d-109">Indicates the absence of variance.</span></span>|  
+|`gpCovariant`|<span data-ttu-id="0cb4d-110">指出共變數。</span><span class="sxs-lookup"><span data-stu-id="0cb4d-110">Indicates covariance.</span></span>|  
+|`gpContravariant`|<span data-ttu-id="0cb4d-111">表示反變數。</span><span class="sxs-lookup"><span data-stu-id="0cb4d-111">Indicates contravariance.</span></span>|  
+|`gpSpecialConstraintMask`|<span data-ttu-id="0cb4d-112">特殊條件約束可以套用至任何<xref:System.Type>參數。</span><span class="sxs-lookup"><span data-stu-id="0cb4d-112">Special constraints can apply to any <xref:System.Type> parameter.</span></span>|  
+|`gpNoSpecialConstraint`|<span data-ttu-id="0cb4d-113">表示沒有條件約束套用到<xref:System.Type>參數。</span><span class="sxs-lookup"><span data-stu-id="0cb4d-113">Indicates that no constraint applies to the <xref:System.Type> parameter.</span></span>|  
+|`gpReferenceTypeConstraint`|<span data-ttu-id="0cb4d-114">表示<xref:System.Type>參數必須是參考型別。</span><span class="sxs-lookup"><span data-stu-id="0cb4d-114">Indicates that the <xref:System.Type> parameter must be a reference type.</span></span>|  
+|`gpNotNullableValueTypeConstraint`|<span data-ttu-id="0cb4d-115">表示<xref:System.Type>參數必須是實值類型不得為 null 的值。</span><span class="sxs-lookup"><span data-stu-id="0cb4d-115">Indicates that the <xref:System.Type> parameter must be a value type that cannot be a null value.</span></span>|  
+|`gpDefaultConstructorConstraint`|<span data-ttu-id="0cb4d-116">表示<xref:System.Type>參數必須要有的預設公用建構函式不接受任何參數。</span><span class="sxs-lookup"><span data-stu-id="0cb4d-116">Indicates that the <xref:System.Type> parameter must have a default public constructor that takes no parameters.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="10202-117">需求</span><span class="sxs-lookup"><span data-stu-id="10202-117">Requirements</span></span>  
- <span data-ttu-id="10202-118">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="10202-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0cb4d-117">需求</span><span class="sxs-lookup"><span data-stu-id="0cb4d-117">Requirements</span></span>  
+ <span data-ttu-id="0cb4d-118">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0cb4d-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="10202-119">**標頭：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="10202-119">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="0cb4d-119">**標頭：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="0cb4d-119">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="10202-120">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="10202-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="0cb4d-120">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0cb4d-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="10202-121">請參閱</span><span class="sxs-lookup"><span data-stu-id="10202-121">See Also</span></span>  
- [<span data-ttu-id="10202-122">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="10202-122">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="0cb4d-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0cb4d-121">See Also</span></span>  
+ [<span data-ttu-id="0cb4d-122">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="0cb4d-122">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

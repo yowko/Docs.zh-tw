@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213723"
 ---
 # <a name="false-literal-c-reference"></a><span data-ttu-id="c7af8-102">false 常值 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="c7af8-102">false Literal (C# Reference)</span></span>
 <span data-ttu-id="c7af8-103">代表布林值 false。</span><span class="sxs-lookup"><span data-stu-id="c7af8-103">Represents the boolean value false.</span></span>  
