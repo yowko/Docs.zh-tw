@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331983"
 ---
 # <a name="shape-of-wordprocessingml-documents-c"></a><span data-ttu-id="c2f48-102">WordprocessingML 文件的組織結構 (C#)</span><span class="sxs-lookup"><span data-stu-id="c2f48-102">Shape of WordprocessingML Documents (C#)</span></span>
 <span data-ttu-id="c2f48-103">這個主題說明 WordprocessingML 文件的 XML 組織結構。</span><span class="sxs-lookup"><span data-stu-id="c2f48-103">This topic introduces the XML shape of a WordprocessingML document.</span></span>  

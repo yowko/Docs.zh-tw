@@ -7,6 +7,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172460"
 ---
 # <a name="structures"></a><span data-ttu-id="ba90a-103">結構</span><span class="sxs-lookup"><span data-stu-id="ba90a-103">Structures</span></span>
 

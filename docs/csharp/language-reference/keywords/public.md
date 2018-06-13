@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171989"
 ---
 # <a name="public-c-reference"></a><span data-ttu-id="80550-102">public (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="80550-102">public (C# Reference)</span></span>
 <span data-ttu-id="80550-103">`public` 關鍵字是類型和類型成員的存取修飾詞。</span><span class="sxs-lookup"><span data-stu-id="80550-103">The `public` keyword is an access modifier for types and type members.</span></span> <span data-ttu-id="80550-104">公用存取是最寬鬆的存取層級。</span><span class="sxs-lookup"><span data-stu-id="80550-104">Public access is the most permissive access level.</span></span> <span data-ttu-id="80550-105">不會限制存取公用成員，如此範例所示︰</span><span class="sxs-lookup"><span data-stu-id="80550-105">There are no restrictions on accessing public members, as in this example:</span></span>  

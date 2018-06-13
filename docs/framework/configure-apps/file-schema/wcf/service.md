@@ -7,6 +7,7 @@ ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/11/2018
+ms.locfileid: "34059026"
 ---
 # <a name="ltservicegt"></a><span data-ttu-id="452b6-102">&lt;服務&gt;</span><span class="sxs-lookup"><span data-stu-id="452b6-102">&lt;service&gt;</span></span>
 <span data-ttu-id="452b6-103">`service` 項目包含 Windows Communication Foundation (WCF) 服務的設定。</span><span class="sxs-lookup"><span data-stu-id="452b6-103">The `service` element contains the settings for a Windows Communication Foundation (WCF) service.</span></span> <span data-ttu-id="452b6-104">它也包含公開服務的端點。</span><span class="sxs-lookup"><span data-stu-id="452b6-104">It also contains endpoints that expose the service.</span></span>  
