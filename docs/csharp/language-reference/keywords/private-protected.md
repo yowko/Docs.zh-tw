@@ -7,6 +7,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457247"
 ---
 # <a name="private-protected-c-reference"></a><span data-ttu-id="2ecb0-102">private protected (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="2ecb0-102">private protected (C# Reference)</span></span>
 <span data-ttu-id="2ecb0-103">`private protected` 關鍵字組合是成員存取修飾詞。</span><span class="sxs-lookup"><span data-stu-id="2ecb0-103">The `private protected` keyword combination is a member access modifier.</span></span> <span data-ttu-id="2ecb0-104">從包含類別衍生的類型可以存取 private protected 成員，但只能在其包含的組件內存取。</span><span class="sxs-lookup"><span data-stu-id="2ecb0-104">A private protected member is accessible by types derived from the containing class, but only within its containing assembly.</span></span> <span data-ttu-id="2ecb0-105">如需 `private protected` 和其他存取修飾詞的比較，請參閱[存取範圍層級](../../../csharp/language-reference/keywords/accessibility-levels.md)。</span><span class="sxs-lookup"><span data-stu-id="2ecb0-105">For a comparison of `private protected` with the other access modifiers, see [Accessibility Levels](../../../csharp/language-reference/keywords/accessibility-levels.md).</span></span> 

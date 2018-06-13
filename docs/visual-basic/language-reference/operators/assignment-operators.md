@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600710"
 ---
 # <a name="assignment-operators-visual-basic"></a><span data-ttu-id="67cc8-102">指派運算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="67cc8-102">Assignment Operators (Visual Basic)</span></span>
 <span data-ttu-id="67cc8-103">以下是在 Visual Basic 中定義的指派運算子。</span><span class="sxs-lookup"><span data-stu-id="67cc8-103">The following are the assignment operators defined in Visual Basic.</span></span>  

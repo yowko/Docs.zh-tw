@@ -14,6 +14,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457719"
 ---
 # <a name="datepicker-styles-and-templates"></a><span data-ttu-id="f4fcd-102">日期選擇器樣式和範本</span><span class="sxs-lookup"><span data-stu-id="f4fcd-102">DatePicker Styles and Templates</span></span>
 <span data-ttu-id="f4fcd-103">本主題描述樣式和範本<xref:System.Windows.Controls.DatePicker>控制項。</span><span class="sxs-lookup"><span data-stu-id="f4fcd-103">This topic describes the styles and templates for the <xref:System.Windows.Controls.DatePicker> control.</span></span> <span data-ttu-id="f4fcd-104">您可以修改預設<xref:System.Windows.Controls.ControlTemplate>來提供獨特的外觀的控制項。</span><span class="sxs-lookup"><span data-stu-id="f4fcd-104">You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance.</span></span> <span data-ttu-id="f4fcd-105">如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。</span><span class="sxs-lookup"><span data-stu-id="f4fcd-105">For more information, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span></span>  

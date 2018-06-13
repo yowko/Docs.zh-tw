@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569946"
 ---
 # <a name="xdr-validation-with-xmlschemacollection"></a><span data-ttu-id="16034-102">使用 XmlSchemaCollection 的 XDR 驗證</span><span class="sxs-lookup"><span data-stu-id="16034-102">XDR Validation with XmlSchemaCollection</span></span>
 <span data-ttu-id="16034-103">如果您驗證的 XML 資料精簡 (XDR) 結構描述儲存在 **XmlSchemaCollection** 中，它會與結構描述加入集合時指定的命名空間 URI 建立關聯。</span><span class="sxs-lookup"><span data-stu-id="16034-103">If the XML-Data Reduced (XDR) schema you are validating against is stored in the **XmlSchemaCollection**, it is associated with the namespace URI specified when the schema was added to the collection.</span></span> <span data-ttu-id="16034-104">**XmlValidatingReader** 會將 XML 文件中的命名空間 URI 對應至集合中與這個 URI 對應的結構描述。</span><span class="sxs-lookup"><span data-stu-id="16034-104">**XmlValidatingReader** maps the namespace URI in the XML document to the schema that corresponds to that URI in the collection.</span></span>  

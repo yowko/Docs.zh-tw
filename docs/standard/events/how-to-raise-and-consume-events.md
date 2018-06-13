@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572719"
 ---
 # <a name="how-to-raise-and-consume-events"></a><span data-ttu-id="4ce16-102">如何：引發和使用事件</span><span class="sxs-lookup"><span data-stu-id="4ce16-102">How to: Raise and Consume Events</span></span>
 <span data-ttu-id="4ce16-103">本主題中的範例將示範如何使用事件。</span><span class="sxs-lookup"><span data-stu-id="4ce16-103">The examples in this topic show how to work with events.</span></span> <span data-ttu-id="4ce16-104">包括 <xref:System.EventHandler> 委派、<xref:System.EventHandler%601> 委派和自訂委派的範例，用以說明包含和不包含資料的事件。</span><span class="sxs-lookup"><span data-stu-id="4ce16-104">They include examples of the <xref:System.EventHandler> delegate, the <xref:System.EventHandler%601> delegate, and a custom delegate, to illustrate events with and without data.</span></span>  

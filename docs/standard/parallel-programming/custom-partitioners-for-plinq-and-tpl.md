@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592362"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a><span data-ttu-id="27ece-102">PLINQ 和 TPL 的自訂 Partitioner</span><span class="sxs-lookup"><span data-stu-id="27ece-102">Custom Partitioners for PLINQ and TPL</span></span>
 <span data-ttu-id="27ece-103">若要將資料來源上的作業平行化，其中一個必要步驟就是將來源「分割」成多個可供多個執行緒同時存取的區段。</span><span class="sxs-lookup"><span data-stu-id="27ece-103">To parallelize an operation on a data source, one of the essential steps is to *partition* the source into multiple sections that can be accessed concurrently by multiple threads.</span></span> <span data-ttu-id="27ece-104">PLINQ 和「工作平行程式庫」(TPL) 提供預設的 Partitioner，可在您撰寫平行查詢或 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 迴圈時在背景中運作。</span><span class="sxs-lookup"><span data-stu-id="27ece-104">PLINQ and the Task Parallel Library (TPL) provide default partitioners that work transparently when you write a parallel query or <xref:System.Threading.Tasks.Parallel.ForEach%2A> loop.</span></span> <span data-ttu-id="27ece-105">針對較進階的案例，您可以插入自己的 Partitioner。</span><span class="sxs-lookup"><span data-stu-id="27ece-105">For more advanced scenarios, you can plug in your own partitioner.</span></span>  

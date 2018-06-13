@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574526"
 ---
 # <a name="how-to-read-text-from-a-file"></a><span data-ttu-id="ff9d8-102">如何：從檔案讀取文字</span><span class="sxs-lookup"><span data-stu-id="ff9d8-102">How to: Read Text from a File</span></span>
 <span data-ttu-id="ff9d8-103">下列範例將示範如何以同步和非同步方式，從使用適用於桌面應用程式的 .NET 之文字檔讀取文字。</span><span class="sxs-lookup"><span data-stu-id="ff9d8-103">The following examples show how to read text synchronously and asynchronously from a text file using .NET for desktop apps.</span></span> <span data-ttu-id="ff9d8-104">在這兩個範例中，當您建立 <xref:System.IO.StreamReader> 類別的執行個體時，會提供檔案的相對路徑或絕對路徑。</span><span class="sxs-lookup"><span data-stu-id="ff9d8-104">In both examples, when you create the instance of the <xref:System.IO.StreamReader> class, you provide the relative or absolute path to the file.</span></span> <span data-ttu-id="ff9d8-105">下列範例會假設名為 TestFile.txt 的檔案與應用程式位於相同資料夾中。</span><span class="sxs-lookup"><span data-stu-id="ff9d8-105">The following examples assume that the file named TestFile.txt is in the same folder as the application.</span></span>  

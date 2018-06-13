@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572092"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a><span data-ttu-id="52c06-102">XslCompiledTransform 類別的輸出選項</span><span class="sxs-lookup"><span data-stu-id="52c06-102">Output Options on the XslCompiledTransform Class</span></span>
 <span data-ttu-id="52c06-103">本主題討論可用的 XSLT 輸出選項。</span><span class="sxs-lookup"><span data-stu-id="52c06-103">This topic discusses the available XSLT output options.</span></span> <span data-ttu-id="52c06-104">您可以指定樣式表中或 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法上的輸出選項。</span><span class="sxs-lookup"><span data-stu-id="52c06-104">You can specify output options in the style sheet, or on the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method.</span></span>  

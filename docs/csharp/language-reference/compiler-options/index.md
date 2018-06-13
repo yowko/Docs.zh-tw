@@ -15,6 +15,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472512"
 ---
 # <a name="c-compiler-options"></a><span data-ttu-id="9c07a-102">C# 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="9c07a-102">C# Compiler Options</span></span>
 <span data-ttu-id="9c07a-103">編譯器會產生可執行檔 (.exe)、動態連結程式庫 (.dll) 或程式碼模組 (.netmodule)。</span><span class="sxs-lookup"><span data-stu-id="9c07a-103">The compiler produces executable (.exe) files, dynamic-link libraries (.dll), or code modules (.netmodule).</span></span>  

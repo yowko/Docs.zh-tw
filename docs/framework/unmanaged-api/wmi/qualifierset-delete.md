@@ -1,11 +1,7 @@
 ---
-title: "QualifierSet_Delete 函式 （Unmanaged API 參考）"
-description: "QualifierSet_Delete 函式會依名稱刪除限定詞。"
+title: QualifierSet_Delete 函式 （Unmanaged API 參考）
+description: QualifierSet_Delete 函式會依名稱刪除限定詞。
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - QualifierSet_Delete
 api_location:
@@ -20,21 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4e7b5650a0b47fd8d9b64bb9d0fff3511afe2d43
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: e0e96ba458edfe7261fd5857b7bcb8486f4a6636
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460041"
 ---
-# <a name="qualifiersetdelete-function"></a><span data-ttu-id="dce32-103">QualifierSet_Delete 函式</span><span class="sxs-lookup"><span data-stu-id="dce32-103">QualifierSet_Delete function</span></span>
-<span data-ttu-id="dce32-104">依名稱刪除指定的限定詞。</span><span class="sxs-lookup"><span data-stu-id="dce32-104">Deletes a specified qualifier by name.</span></span>  
+# <a name="qualifiersetdelete-function"></a><span data-ttu-id="489c3-103">QualifierSet_Delete 函式</span><span class="sxs-lookup"><span data-stu-id="489c3-103">QualifierSet_Delete function</span></span>
+<span data-ttu-id="489c3-104">依名稱刪除指定的限定詞。</span><span class="sxs-lookup"><span data-stu-id="489c3-104">Deletes a specified qualifier by name.</span></span>  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="dce32-105">語法</span><span class="sxs-lookup"><span data-stu-id="dce32-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="489c3-105">語法</span><span class="sxs-lookup"><span data-stu-id="489c3-105">Syntax</span></span>  
   
 ```  
 HRESULT QualifierSet_Delete (
@@ -44,41 +38,41 @@ HRESULT QualifierSet_Delete (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="dce32-106">參數</span><span class="sxs-lookup"><span data-stu-id="dce32-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="489c3-106">參數</span><span class="sxs-lookup"><span data-stu-id="489c3-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="dce32-107">[in]未使用這個參數。</span><span class="sxs-lookup"><span data-stu-id="dce32-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="489c3-107">[in]未使用這個參數。</span><span class="sxs-lookup"><span data-stu-id="489c3-107">[in] This parameter is unused.</span></span>
 
 `ptr`   
-<span data-ttu-id="dce32-108">[in]指標[IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx)執行個體。</span><span class="sxs-lookup"><span data-stu-id="dce32-108">[in] A pointer to an [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) instance.</span></span>
+<span data-ttu-id="489c3-108">[in]指標[IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx)執行個體。</span><span class="sxs-lookup"><span data-stu-id="489c3-108">[in] A pointer to an [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) instance.</span></span>
 
 `wszName`   
-<span data-ttu-id="dce32-109">[in]若要刪除限定詞的名稱。</span><span class="sxs-lookup"><span data-stu-id="dce32-109">[in] The name of the qualifier to delete.</span></span>
+<span data-ttu-id="489c3-109">[in]若要刪除限定詞的名稱。</span><span class="sxs-lookup"><span data-stu-id="489c3-109">[in] The name of the qualifier to delete.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="dce32-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="dce32-110">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="489c3-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="489c3-110">Return value</span></span>
 
-<span data-ttu-id="dce32-111">這個函式傳回下列值會定義在*WbemCli.h*標頭檔，或者您可以定義它們以常數的形式在程式碼中：</span><span class="sxs-lookup"><span data-stu-id="dce32-111">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="489c3-111">這個函式傳回下列值會定義在*WbemCli.h*標頭檔，或者您可以定義它們以常數的形式在程式碼中：</span><span class="sxs-lookup"><span data-stu-id="489c3-111">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="dce32-112">常數</span><span class="sxs-lookup"><span data-stu-id="dce32-112">Constant</span></span>  |<span data-ttu-id="dce32-113">值</span><span class="sxs-lookup"><span data-stu-id="dce32-113">Value</span></span>  |<span data-ttu-id="dce32-114">描述</span><span class="sxs-lookup"><span data-stu-id="dce32-114">Description</span></span>  |
+|<span data-ttu-id="489c3-112">常數</span><span class="sxs-lookup"><span data-stu-id="489c3-112">Constant</span></span>  |<span data-ttu-id="489c3-113">值</span><span class="sxs-lookup"><span data-stu-id="489c3-113">Value</span></span>  |<span data-ttu-id="489c3-114">描述</span><span class="sxs-lookup"><span data-stu-id="489c3-114">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="dce32-115">0x80041008</span><span class="sxs-lookup"><span data-stu-id="dce32-115">0x80041008</span></span> | <span data-ttu-id="dce32-116">`wszName`參數無效。</span><span class="sxs-lookup"><span data-stu-id="dce32-116">The `wszName` parameter is not valid.</span></span> |
-|`WBEM_E_INVALID_OPERATION` | <span data-ttu-id="dce32-117">0x80041016</span><span class="sxs-lookup"><span data-stu-id="dce32-117">0x80041016</span></span> | <span data-ttu-id="dce32-118">刪除這個限定詞是不合法的。</span><span class="sxs-lookup"><span data-stu-id="dce32-118">Deleting this qualifier is illegal.</span></span> |
-|`WBEM_E_NOT_FOUND` | <span data-ttu-id="dce32-119">而會收到 0x80041002</span><span class="sxs-lookup"><span data-stu-id="dce32-119">0x80041002</span></span> | <span data-ttu-id="dce32-120">找不到指定的限定詞。</span><span class="sxs-lookup"><span data-stu-id="dce32-120">The specified qualifier was not found.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="dce32-121">0</span><span class="sxs-lookup"><span data-stu-id="dce32-121">0</span></span> | <span data-ttu-id="dce32-122">函式呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="dce32-122">The function call was successful.</span></span>  |
-| `WBEM_S_RESET_TO_DEFAULT` | <span data-ttu-id="dce32-123">0x40002</span><span class="sxs-lookup"><span data-stu-id="dce32-123">0x40002</span></span> | <span data-ttu-id="dce32-124">本機覆寫已刪除，並從父物件的原始限定詞已恢復範圍。</span><span class="sxs-lookup"><span data-stu-id="dce32-124">The local override was deleted and the original qualifier from the parent object has resumed scope.</span></span> |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="489c3-115">0x80041008</span><span class="sxs-lookup"><span data-stu-id="489c3-115">0x80041008</span></span> | <span data-ttu-id="489c3-116">`wszName`參數無效。</span><span class="sxs-lookup"><span data-stu-id="489c3-116">The `wszName` parameter is not valid.</span></span> |
+|`WBEM_E_INVALID_OPERATION` | <span data-ttu-id="489c3-117">0x80041016</span><span class="sxs-lookup"><span data-stu-id="489c3-117">0x80041016</span></span> | <span data-ttu-id="489c3-118">刪除這個限定詞是不合法的。</span><span class="sxs-lookup"><span data-stu-id="489c3-118">Deleting this qualifier is illegal.</span></span> |
+|`WBEM_E_NOT_FOUND` | <span data-ttu-id="489c3-119">而會收到 0x80041002</span><span class="sxs-lookup"><span data-stu-id="489c3-119">0x80041002</span></span> | <span data-ttu-id="489c3-120">找不到指定的限定詞。</span><span class="sxs-lookup"><span data-stu-id="489c3-120">The specified qualifier was not found.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="489c3-121">0</span><span class="sxs-lookup"><span data-stu-id="489c3-121">0</span></span> | <span data-ttu-id="489c3-122">函式呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="489c3-122">The function call was successful.</span></span>  |
+| `WBEM_S_RESET_TO_DEFAULT` | <span data-ttu-id="489c3-123">0x40002</span><span class="sxs-lookup"><span data-stu-id="489c3-123">0x40002</span></span> | <span data-ttu-id="489c3-124">本機覆寫已刪除，並從父物件的原始限定詞已恢復範圍。</span><span class="sxs-lookup"><span data-stu-id="489c3-124">The local override was deleted and the original qualifier from the parent object has resumed scope.</span></span> |
 
-## <a name="remarks"></a><span data-ttu-id="dce32-125">備註</span><span class="sxs-lookup"><span data-stu-id="dce32-125">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="489c3-125">備註</span><span class="sxs-lookup"><span data-stu-id="489c3-125">Remarks</span></span>
 
-<span data-ttu-id="dce32-126">此函式會包裝呼叫[IWbemQualifierSet::Delete](https://msdn.microsoft.com/library/aa391864(v=vs.85).aspx)方法。</span><span class="sxs-lookup"><span data-stu-id="dce32-126">This function wraps a call to the [IWbemQualifierSet::Delete](https://msdn.microsoft.com/library/aa391864(v=vs.85).aspx) method.</span></span>
+<span data-ttu-id="489c3-126">此函式會包裝呼叫[IWbemQualifierSet::Delete](https://msdn.microsoft.com/library/aa391864(v=vs.85).aspx)方法。</span><span class="sxs-lookup"><span data-stu-id="489c3-126">This function wraps a call to the [IWbemQualifierSet::Delete](https://msdn.microsoft.com/library/aa391864(v=vs.85).aspx) method.</span></span>
 
-<span data-ttu-id="dce32-127">限定詞傳播規則，因為特定的辨識符號可能已從另一個物件繼承和只是覆寫目前的類別或執行個體中。</span><span class="sxs-lookup"><span data-stu-id="dce32-127">Due to qualifier propagation rules, a particular qualifier may have been inherited from another object and merely overridden in the current class or instance.</span></span> <span data-ttu-id="dce32-128">在此情況下，`QualifierSet_Delete`方法重設這個限定詞繼承其原始值。</span><span class="sxs-lookup"><span data-stu-id="dce32-128">In this case, the `QualifierSet_Delete` method resets the qualifier to its original inherited value.</span></span> <span data-ttu-id="dce32-129">函式在此情況下會傳回狀態碼`WBEM_S_RESET_TO_DEFAULT`。</span><span class="sxs-lookup"><span data-stu-id="dce32-129">The function in this case returns the status code `WBEM_S_RESET_TO_DEFAULT`.</span></span>
+<span data-ttu-id="489c3-127">限定詞傳播規則，因為特定的辨識符號可能已從另一個物件繼承和只是覆寫目前的類別或執行個體中。</span><span class="sxs-lookup"><span data-stu-id="489c3-127">Due to qualifier propagation rules, a particular qualifier may have been inherited from another object and merely overridden in the current class or instance.</span></span> <span data-ttu-id="489c3-128">在此情況下，`QualifierSet_Delete`方法重設這個限定詞繼承其原始值。</span><span class="sxs-lookup"><span data-stu-id="489c3-128">In this case, the `QualifierSet_Delete` method resets the qualifier to its original inherited value.</span></span> <span data-ttu-id="489c3-129">函式在此情況下會傳回狀態碼`WBEM_S_RESET_TO_DEFAULT`。</span><span class="sxs-lookup"><span data-stu-id="489c3-129">The function in this case returns the status code `WBEM_S_RESET_TO_DEFAULT`.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="dce32-130">需求</span><span class="sxs-lookup"><span data-stu-id="dce32-130">Requirements</span></span>  
- <span data-ttu-id="dce32-131">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="dce32-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="489c3-130">需求</span><span class="sxs-lookup"><span data-stu-id="489c3-130">Requirements</span></span>  
+ <span data-ttu-id="489c3-131">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="489c3-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dce32-132">**標頭：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="dce32-132">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="489c3-132">**標頭：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="489c3-132">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="dce32-133">**.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="dce32-133">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="489c3-133">**.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="489c3-133">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dce32-134">另請參閱</span><span class="sxs-lookup"><span data-stu-id="dce32-134">See also</span></span>  
-[<span data-ttu-id="dce32-135">WMI 和效能計數器 （Unmanaged API 參考）</span><span class="sxs-lookup"><span data-stu-id="dce32-135">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="489c3-134">另請參閱</span><span class="sxs-lookup"><span data-stu-id="489c3-134">See also</span></span>  
+[<span data-ttu-id="489c3-135">WMI 和效能計數器 （Unmanaged API 參考）</span><span class="sxs-lookup"><span data-stu-id="489c3-135">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

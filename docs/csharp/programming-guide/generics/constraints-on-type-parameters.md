@@ -11,6 +11,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457354"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a><span data-ttu-id="e45d8-102">型別參數的條件約束 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="e45d8-102">Constraints on type parameters (C# Programming Guide)</span></span>
 

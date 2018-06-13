@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806269"
 ---
 # <a name="how-to-create-a-windows-communication-foundation-client"></a><span data-ttu-id="55cb5-102">HOW TO：建立 Windows Communication Foundation 用戶端</span><span class="sxs-lookup"><span data-stu-id="55cb5-102">How to: Create a Windows Communication Foundation Client</span></span>
 <span data-ttu-id="55cb5-103">這是建立 Windows Communication Foundation (WCF) 應用程式所需的六個工作的第四個。</span><span class="sxs-lookup"><span data-stu-id="55cb5-103">This is the fourth of six tasks required to create a Windows Communication Foundation (WCF) application.</span></span> <span data-ttu-id="55cb5-104">六個工作的概觀，請參閱[入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)主題。</span><span class="sxs-lookup"><span data-stu-id="55cb5-104">For an overview of all six of the tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>  

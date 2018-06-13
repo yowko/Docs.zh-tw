@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172668"
 ---
 # <a name="internal-c-reference"></a><span data-ttu-id="585c0-102">internal (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="585c0-102">internal (C# Reference)</span></span>
 <span data-ttu-id="585c0-103">`internal` 關鍵字是類型和類型成員的[存取修飾詞](../../../csharp/language-reference/keywords/access-modifiers.md)。</span><span class="sxs-lookup"><span data-stu-id="585c0-103">The `internal` keyword is an [access modifier](../../../csharp/language-reference/keywords/access-modifiers.md) for types and type members.</span></span> 

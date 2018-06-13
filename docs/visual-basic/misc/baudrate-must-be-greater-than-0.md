@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599144"
 ---
 # <a name="baudrate-must-be-greater-than-0"></a><span data-ttu-id="09caf-102">BaudRate 必須大於 0</span><span class="sxs-lookup"><span data-stu-id="09caf-102">BaudRate must be greater than 0</span></span>
 <span data-ttu-id="09caf-103">為 `BaudRate` 方法指定的 `My.Computer.Ports.OpenSerialPort` 引數必須大於零。</span><span class="sxs-lookup"><span data-stu-id="09caf-103">The `BaudRate` argument specified for the `My.Computer.Ports.OpenSerialPort` method must be greater than zero.</span></span>  

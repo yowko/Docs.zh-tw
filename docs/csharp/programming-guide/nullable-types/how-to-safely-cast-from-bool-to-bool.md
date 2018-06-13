@@ -10,6 +10,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457473"
 ---
 # <a name="how-to-safely-cast-from-bool-to-bool-c-programming-guide"></a><span data-ttu-id="39c69-102">如何：從 bool? 安全轉型到 bool (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="39c69-102">How to: Safely Cast from bool? to bool (C# Programming Guide)</span></span>
 <span data-ttu-id="39c69-103">`bool?` 可為 Null 的型別可以包含三個不同的值︰`true`、`false` 和 `null`。</span><span class="sxs-lookup"><span data-stu-id="39c69-103">The `bool?` nullable type can contain three different values: `true`, `false`, and `null`.</span></span> <span data-ttu-id="39c69-104">因此，`bool?` 類型不能用在有 `if`、`for` 或 `while` 的條件中。</span><span class="sxs-lookup"><span data-stu-id="39c69-104">Therefore, the `bool?` type cannot be used in conditionals such as with `if`, `for`, or `while`.</span></span> <span data-ttu-id="39c69-105">例如，下列程式碼會導致編譯器錯誤。</span><span class="sxs-lookup"><span data-stu-id="39c69-105">For example, the following code causes a compiler error.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172031"
 ---
 # <a name="this-c-reference"></a><span data-ttu-id="e2356-103">this (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="e2356-103">this (C# Reference)</span></span>
 <span data-ttu-id="e2356-104">`this` 關鍵字指的是類別的目前執行個體，也用作擴充方法第一個參數的修飾詞。</span><span class="sxs-lookup"><span data-stu-id="e2356-104">The `this` keyword refers to the current instance of the class and is also used as a modifier of the first parameter of an extension method.</span></span>  

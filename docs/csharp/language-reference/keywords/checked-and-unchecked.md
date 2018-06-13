@@ -14,6 +14,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/18/2018
+ms.locfileid: "34234369"
 ---
 # <a name="checked-and-unchecked-c-reference"></a><span data-ttu-id="1a2c6-102">Checked 與 Unchecked (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="1a2c6-102">Checked and Unchecked (C# Reference)</span></span>
 <span data-ttu-id="1a2c6-103">C# 陳述式可在 checked 或 unchecked 內容中執行。</span><span class="sxs-lookup"><span data-stu-id="1a2c6-103">C# statements can execute in either checked or unchecked context.</span></span> <span data-ttu-id="1a2c6-104">在 checked 內容中，算術溢位會引發例外狀況。</span><span class="sxs-lookup"><span data-stu-id="1a2c6-104">In a checked context, arithmetic overflow raises an exception.</span></span> <span data-ttu-id="1a2c6-105">在未經檢查的內容中，會忽略算術溢位，並捨棄目的型別不適用的高序位位元，以便將結果截斷。</span><span class="sxs-lookup"><span data-stu-id="1a2c6-105">In an unchecked context, arithmetic overflow is ignored and the result is truncated by discarding any high-order bits that don't fit in the destination type.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574362"
 ---
 # <a name="pipe-operations-in-the-net-framework"></a><span data-ttu-id="1ca32-102">.NET Framework 中的管道作業</span><span class="sxs-lookup"><span data-stu-id="1ca32-102">Pipe Operations in the .NET Framework</span></span>
 <span data-ttu-id="1ca32-103">管道會提供一種處理序間通訊的方法。</span><span class="sxs-lookup"><span data-stu-id="1ca32-103">Pipes provide a means for interprocess communication.</span></span> <span data-ttu-id="1ca32-104">管道有兩種類型：</span><span class="sxs-lookup"><span data-stu-id="1ca32-104">There are two types of pipes:</span></span>  

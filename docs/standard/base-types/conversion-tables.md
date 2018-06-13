@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571113"
 ---
 # <a name="type-conversion-tables-in-net"></a><span data-ttu-id="035e5-102">.NET 中的類型轉換表</span><span class="sxs-lookup"><span data-stu-id="035e5-102">Type Conversion Tables in .NET</span></span>
 <span data-ttu-id="035e5-103">將一種類型的值轉換成另一種大小相等或較大類型的值時，就會發生擴展轉換。</span><span class="sxs-lookup"><span data-stu-id="035e5-103">Widening conversion occurs when a value of one type is converted to another type that is of equal or greater size.</span></span> <span data-ttu-id="035e5-104">將一種類型的值轉換成另一種大小較小類型的值時，就會發生縮小轉換。</span><span class="sxs-lookup"><span data-stu-id="035e5-104">A narrowing conversion occurs when a value of one type is converted to a value of another type that is of a smaller size.</span></span> <span data-ttu-id="035e5-105">本主題中的表格將說明這兩種轉換類型的行為。</span><span class="sxs-lookup"><span data-stu-id="035e5-105">The tables in this topic illustrate the behaviors exhibited by both types of conversions.</span></span>  

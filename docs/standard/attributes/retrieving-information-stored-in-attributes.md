@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570393"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a><span data-ttu-id="ebd7b-102">擷取儲存於屬性中的資訊</span><span class="sxs-lookup"><span data-stu-id="ebd7b-102">Retrieving Information Stored in Attributes</span></span>
 <span data-ttu-id="ebd7b-103">擷取自訂屬性是一個簡單的程序。</span><span class="sxs-lookup"><span data-stu-id="ebd7b-103">Retrieving a custom attribute is a simple process.</span></span> <span data-ttu-id="ebd7b-104">首先，對想要擷取的屬性宣告執行個體。</span><span class="sxs-lookup"><span data-stu-id="ebd7b-104">First, declare an instance of the attribute you want to retrieve.</span></span> <span data-ttu-id="ebd7b-105">然後，使用 <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> 方法將新屬性初始化為所要擷取之屬性的值。</span><span class="sxs-lookup"><span data-stu-id="ebd7b-105">Then, use the <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> method to initialize the new attribute to the value of the attribute you want to retrieve.</span></span> <span data-ttu-id="ebd7b-106">在將新屬性 (Attribute) 初始化之後，只要使用其屬性 (Poperty) 即可取得值。</span><span class="sxs-lookup"><span data-stu-id="ebd7b-106">Once the new attribute is initialized, you simply use its properties to get the values.</span></span>  

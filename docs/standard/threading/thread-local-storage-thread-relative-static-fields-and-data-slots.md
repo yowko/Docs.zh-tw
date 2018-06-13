@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589850"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a><span data-ttu-id="4db0a-102">執行緒區域儲存區：執行緒相關的靜態欄位和資料位置</span><span class="sxs-lookup"><span data-stu-id="4db0a-102">Thread Local Storage: Thread-Relative Static Fields and Data Slots</span></span>
 <span data-ttu-id="4db0a-103">您可以使用受控執行緒區域儲存區 (TLS) 來儲存對執行緒和應用程式定義域而言是唯一的資料。</span><span class="sxs-lookup"><span data-stu-id="4db0a-103">You can use managed thread local storage (TLS) to store data that is unique to a thread and application domain.</span></span> <span data-ttu-id="4db0a-104">.NET Framework 提供兩種方式來使用受控 TLS：執行緒相關的靜態欄位和資料插槽。</span><span class="sxs-lookup"><span data-stu-id="4db0a-104">The .NET Framework provides two ways to use managed TLS: thread-relative static fields and data slots.</span></span>  

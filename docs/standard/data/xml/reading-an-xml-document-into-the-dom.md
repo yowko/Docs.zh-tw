@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569716"
 ---
 # <a name="reading-an-xml-document-into-the-dom"></a><span data-ttu-id="7fcba-102">將 XML 文件讀取到 DOM</span><span class="sxs-lookup"><span data-stu-id="7fcba-102">Reading an XML Document into the DOM</span></span>
 <span data-ttu-id="7fcba-103">從不同的格式將 XML 資訊讀取到記憶體。</span><span class="sxs-lookup"><span data-stu-id="7fcba-103">XML information is read into memory from different formats.</span></span> <span data-ttu-id="7fcba-104">可從字串、資料流、URL、文字讀取器或衍生自 <xref:System.Xml.XmlReader> 的類別讀取它。</span><span class="sxs-lookup"><span data-stu-id="7fcba-104">It can be read from a string, stream, URL, text reader, or a class derived from the <xref:System.Xml.XmlReader>.</span></span>  

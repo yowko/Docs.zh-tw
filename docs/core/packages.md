@@ -9,6 +9,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472798"
 ---
 # <a name="packages-metapackages-and-frameworks"></a><span data-ttu-id="f0afa-103">套件、中繼套件和架構</span><span class="sxs-lookup"><span data-stu-id="f0afa-103">Packages, metapackages and frameworks</span></span>
 

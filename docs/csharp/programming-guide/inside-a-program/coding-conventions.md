@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336933"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a><span data-ttu-id="170ae-102">C# 編碼慣例 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="170ae-102">C# Coding Conventions (C# Programming Guide)</span></span>
  <span data-ttu-id="170ae-103">編碼慣例有下列用途：</span><span class="sxs-lookup"><span data-stu-id="170ae-103">Coding conventions serve the following purposes:</span></span>  
