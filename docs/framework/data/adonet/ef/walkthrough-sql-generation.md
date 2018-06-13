@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766318"
 ---
 # <a name="walkthrough-sql-generation"></a><span data-ttu-id="fc7e2-102">逐步解說：SQL 產生</span><span class="sxs-lookup"><span data-stu-id="fc7e2-102">Walkthrough: SQL Generation</span></span>
 <span data-ttu-id="fc7e2-103">本主題將說明 SQL 產生就會發生在[範例提供者](http://go.microsoft.com/fwlink/?LinkId=180616)。</span><span class="sxs-lookup"><span data-stu-id="fc7e2-103">This topic illustrates how SQL generation occurs in the [Sample Provider](http://go.microsoft.com/fwlink/?LinkId=180616).</span></span> <span data-ttu-id="fc7e2-104">下列 Entity SQL 查詢會使用範例提供者所隨附的模型：</span><span class="sxs-lookup"><span data-stu-id="fc7e2-104">The following Entity SQL query uses the model that is included with the sample provider:</span></span>  
