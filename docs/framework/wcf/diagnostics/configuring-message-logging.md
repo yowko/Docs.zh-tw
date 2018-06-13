@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807836"
 ---
 # <a name="configuring-message-logging"></a><span data-ttu-id="01ff6-102">設定訊息記錄</span><span class="sxs-lookup"><span data-stu-id="01ff6-102">Configuring Message Logging</span></span>
 <span data-ttu-id="01ff6-103">本主題描述如何針對不同的案例設定訊息記錄。</span><span class="sxs-lookup"><span data-stu-id="01ff6-103">This topic describes how you can configure message logging for different scenarios.</span></span>  

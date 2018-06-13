@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807030"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a><span data-ttu-id="0cb24-102">WCF 服務主機 (WcfSvcHost.exe)</span><span class="sxs-lookup"><span data-stu-id="0cb24-102">WCF Service Host (WcfSvcHost.exe)</span></span>
 <span data-ttu-id="0cb24-103">Windows Communication Foundation (WCF) 服務主機 (WcfSvcHost.exe) 可讓您啟動 Visual Studio 偵錯工具 (F5) 來自動裝載並測試您已實作的服務。</span><span class="sxs-lookup"><span data-stu-id="0cb24-103">Windows Communication Foundation (WCF) Service Host (WcfSvcHost.exe) allows you to launch the Visual Studio debugger (F5) to automatically host and test a service you have implemented.</span></span> <span data-ttu-id="0cb24-104">然後，您可以測試服務使用 WCF 測試用戶端 (WcfTestClient.exe) 或您自己的用戶端中，尋找並修正任何可能的錯誤。</span><span class="sxs-lookup"><span data-stu-id="0cb24-104">You can then test the service using WCF Test Client (WcfTestClient.exe), or your own client, to find and fix any potential errors.</span></span>  

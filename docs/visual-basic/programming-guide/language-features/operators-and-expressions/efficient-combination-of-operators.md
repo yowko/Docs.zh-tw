@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648914"
 ---
 # <a name="efficient-combination-of-operators-visual-basic"></a><span data-ttu-id="fd940-102">有效的運算子組合 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fd940-102">Efficient Combination of Operators (Visual Basic)</span></span>
 <span data-ttu-id="fd940-103">複雜運算式可包含許多不同的運算子。</span><span class="sxs-lookup"><span data-stu-id="fd940-103">Complex expressions can contain many different operators.</span></span> <span data-ttu-id="fd940-104">下列範例將說明這點。</span><span class="sxs-lookup"><span data-stu-id="fd940-104">The following example illustrates this.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805612"
 ---
 # <a name="advanced-filters"></a><span data-ttu-id="61170-102">進階篩選</span><span class="sxs-lookup"><span data-stu-id="61170-102">Advanced Filters</span></span>
 <span data-ttu-id="61170-103">這個範例會示範 Windows Communication Foundation (WCF) 的路由服務。</span><span class="sxs-lookup"><span data-stu-id="61170-103">This sample demonstrates a Windows Communication Foundation (WCF) routing service.</span></span> <span data-ttu-id="61170-104">路由服務是 WCF 元件，以簡化應用程式中加入內容架構的路由器。</span><span class="sxs-lookup"><span data-stu-id="61170-104">The routing service is a WCF component that makes it easy to include a content-based router in your application.</span></span> <span data-ttu-id="61170-105">此範例會調整標準的 WCF 計算機範例，以便使用路由服務進行通訊。</span><span class="sxs-lookup"><span data-stu-id="61170-105">This sample adapts the standard WCF Calculator sample to communicate using the routing service.</span></span> <span data-ttu-id="61170-106">此範例示範如何透過訊息篩選與訊息篩選資料表的使用，定義以內容為基礎的路由邏輯。</span><span class="sxs-lookup"><span data-stu-id="61170-106">This sample shows how to define content-based routing logic through the use of message filters and message filter tables.</span></span>  

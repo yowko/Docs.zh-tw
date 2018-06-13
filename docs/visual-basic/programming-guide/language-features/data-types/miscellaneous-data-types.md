@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647332"
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a><span data-ttu-id="6fe44-102">其他資料類型 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6fe44-102">Miscellaneous Data Types (Visual Basic)</span></span>
 <span data-ttu-id="6fe44-103">Visual Basic 提供數個不導向數字或字元的資料類型。</span><span class="sxs-lookup"><span data-stu-id="6fe44-103">Visual Basic supplies several data types that are not oriented toward numbers or characters.</span></span> <span data-ttu-id="6fe44-104">相反地，它們可以處理特定資料這類是/否值、 日期/時間值和物件位址。</span><span class="sxs-lookup"><span data-stu-id="6fe44-104">Instead, they deal with specialized data such as yes/no values, date/time values, and object addresses.</span></span>  

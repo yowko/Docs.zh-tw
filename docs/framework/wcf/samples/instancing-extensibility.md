@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804586"
 ---
 # <a name="instancing-extensibility"></a><span data-ttu-id="13eed-102">執行個體擴充性</span><span class="sxs-lookup"><span data-stu-id="13eed-102">Instancing Extensibility</span></span>
 <span data-ttu-id="13eed-103">本節包含示範自訂執行個體的範例。</span><span class="sxs-lookup"><span data-stu-id="13eed-103">This section contains samples that demonstrate custom instancing.</span></span>  

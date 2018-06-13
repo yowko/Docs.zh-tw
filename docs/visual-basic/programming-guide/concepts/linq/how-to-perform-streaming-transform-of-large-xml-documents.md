@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643727"
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a><span data-ttu-id="6c592-102">如何： 執行大型 XML 文件 (Visual Basic) 的資料流轉換</span><span class="sxs-lookup"><span data-stu-id="6c592-102">How to: Perform Streaming Transform of Large XML Documents (Visual Basic)</span></span>
 <span data-ttu-id="6c592-103">有時候您必須轉換大型 XML 檔案並撰寫您的應用程式，讓應用程式的記憶體使用量可以預測。</span><span class="sxs-lookup"><span data-stu-id="6c592-103">Sometimes you have to transform large XML files, and write your application so that the memory footprint of the application is predictable.</span></span> <span data-ttu-id="6c592-104">如果您嘗試使用非常大的 XML 檔案填入 XML 樹狀結構，您的記憶體使用量將與檔案大小成正比 (也就是，變成過度)。</span><span class="sxs-lookup"><span data-stu-id="6c592-104">If you try to populate an XML tree with a very large XML file, your memory usage will be proportional to the size of the file (that is, excessive).</span></span> <span data-ttu-id="6c592-105">因此，您應該改用資料流技術。</span><span class="sxs-lookup"><span data-stu-id="6c592-105">Therefore, you should use a streaming technique instead.</span></span>  

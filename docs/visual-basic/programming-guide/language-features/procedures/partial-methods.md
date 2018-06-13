@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651592"
 ---
 # <a name="partial-methods-visual-basic"></a><span data-ttu-id="8e028-102">部分方法 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8e028-102">Partial Methods (Visual Basic)</span></span>
 <span data-ttu-id="8e028-103">部分方法可讓開發人員程式碼中插入自訂邏輯。</span><span class="sxs-lookup"><span data-stu-id="8e028-103">Partial methods enable developers to insert custom logic into code.</span></span> <span data-ttu-id="8e028-104">通常，程式碼是類別的設計工具產生的一部分。</span><span class="sxs-lookup"><span data-stu-id="8e028-104">Typically, the code is part of a designer-generated class.</span></span> <span data-ttu-id="8e028-105">部分方法中所建立的程式碼產生器中，部分類別定義，它們通常用來提供到的項目已變更的通知。</span><span class="sxs-lookup"><span data-stu-id="8e028-105">Partial methods are defined in a partial class that is created by a code generator, and they are commonly used to provide notification that something has been changed.</span></span> <span data-ttu-id="8e028-106">它們可讓開發人員指定自訂的行為變更的回應。</span><span class="sxs-lookup"><span data-stu-id="8e028-106">They enable the developer to specify custom behavior in response to the change.</span></span>  

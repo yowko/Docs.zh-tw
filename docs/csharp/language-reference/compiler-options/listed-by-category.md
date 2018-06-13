@@ -11,6 +11,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472408"
 ---
 # <a name="c-compiler-options-listed-by-category"></a><span data-ttu-id="81d83-102">依分類列出的 C# 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="81d83-102">C# Compiler Options Listed by Category</span></span>
 

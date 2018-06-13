@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806828"
 ---
 # <a name="activity"></a><span data-ttu-id="9fef4-102">活動</span><span class="sxs-lookup"><span data-stu-id="9fef4-102">Activity</span></span>
 <span data-ttu-id="9fef4-103">本主題說明 Windows Communication Foundation (WCF) 追蹤模型中的活動追蹤。</span><span class="sxs-lookup"><span data-stu-id="9fef4-103">This topic describes activity traces in the Windows Communication Foundation (WCF) tracing model.</span></span> <span data-ttu-id="9fef4-104">活動指的是協助使用者縮小失敗範圍的處理單位。</span><span class="sxs-lookup"><span data-stu-id="9fef4-104">Activities are processing units that help the user narrow down the scope of a failure.</span></span> <span data-ttu-id="9fef4-105">發生在同一個活動中的錯誤都是直接相關的。</span><span class="sxs-lookup"><span data-stu-id="9fef4-105">Errors that occur in the same activity are directly related.</span></span> <span data-ttu-id="9fef4-106">例如，因為訊息解密失敗而導致作業失敗。</span><span class="sxs-lookup"><span data-stu-id="9fef4-106">For example, an operation fails because message decryption has failed.</span></span> <span data-ttu-id="9fef4-107">作業與訊息解密失敗的追蹤會同時出現在同一個活動中，顯示解密錯誤與要求錯誤之間直接的相互關聯性。</span><span class="sxs-lookup"><span data-stu-id="9fef4-107">The traces for both the operation and message decryption failure appear in the same activity, showing direct correlation between the decryption error and the request error.</span></span>  

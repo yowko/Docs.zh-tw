@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805937"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a><span data-ttu-id="2313b-102">使用 Windows Management Instrumentation 進行診斷</span><span class="sxs-lookup"><span data-stu-id="2313b-102">Using Windows Management Instrumentation for Diagnostics</span></span>
 <span data-ttu-id="2313b-103">Windows Communication Foundation (WCF) 公開服務，以透過 WCF Windows Management Instrumentation (WMI) 提供者在執行階段檢查的資料。</span><span class="sxs-lookup"><span data-stu-id="2313b-103">Windows Communication Foundation (WCF) exposes inspection data of a service at runtime through a WCF Windows Management Instrumentation (WMI) provider.</span></span>  

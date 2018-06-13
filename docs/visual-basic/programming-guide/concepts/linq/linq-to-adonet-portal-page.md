@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646561"
 ---
 # <a name="linq-to-adonet-portal-page"></a><span data-ttu-id="08c57-102">LINQ to ADO.NET (入口網站頁面)</span><span class="sxs-lookup"><span data-stu-id="08c57-102">LINQ to ADO.NET (Portal Page)</span></span>
 [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)]<span data-ttu-id="08c57-103"> 可讓您使用 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 程式設計模型，針對 [!INCLUDE[vstecado](~/includes/vstecado-md.md)] 中的任何可列舉物件進行查詢。</span><span class="sxs-lookup"><span data-stu-id="08c57-103"> enables you to query over any enumerable object in [!INCLUDE[vstecado](~/includes/vstecado-md.md)] by using the [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] programming model.</span></span>  

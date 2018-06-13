@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640166"
 ---
 # <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-visual-basic"></a><span data-ttu-id="93051-102">如何： 擷取項目 (LINQ to XML) 的集合 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="93051-102">How to: Retrieve a Collection of Elements (LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="93051-103">這個主題會示範 <xref:System.Xml.Linq.XContainer.Elements%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="93051-103">This topic demonstrates the <xref:System.Xml.Linq.XContainer.Elements%2A> method.</span></span> <span data-ttu-id="93051-104">此方法會擷取項目之子項目的集合。</span><span class="sxs-lookup"><span data-stu-id="93051-104">This method retrieves a collection of the child elements of an element.</span></span>  

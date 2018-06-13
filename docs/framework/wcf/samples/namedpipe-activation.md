@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806379"
 ---
 # <a name="namedpipe-activation"></a><span data-ttu-id="38902-102">NamedPipe 啟用</span><span class="sxs-lookup"><span data-stu-id="38902-102">NamedPipe Activation</span></span>
 <span data-ttu-id="38902-103">此範例示範裝載服務，該服務使用 Windows Process Activation Service (WAS) 啟用透過名稱管道通訊的服務。</span><span class="sxs-lookup"><span data-stu-id="38902-103">This sample demonstrates hosting a service that uses Windows Process Activation Service (WAS) to activate a service that communicates over names pipes.</span></span> <span data-ttu-id="38902-104">這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)且需要[!INCLUDE[wv](../../../../includes/wv-md.md)]執行。</span><span class="sxs-lookup"><span data-stu-id="38902-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) and requires [!INCLUDE[wv](../../../../includes/wv-md.md)] to run.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803133"
 ---
 # <a name="endpoint-performance-counters"></a><span data-ttu-id="43917-102">端點效能計數器</span><span class="sxs-lookup"><span data-stu-id="43917-102">Endpoint Performance Counters</span></span>
 <span data-ttu-id="43917-103">端點效能計數器會擷取顯示端點如何接受訊息的資料。</span><span class="sxs-lookup"><span data-stu-id="43917-103">Endpoint performance counters capture data that reveals how an endpoint is accepting messages.</span></span> <span data-ttu-id="43917-104">使用效能監視器檢視時，可以在 `ServiceModelEndpoint 4.0.0.0` 效能物件下找到它們。</span><span class="sxs-lookup"><span data-stu-id="43917-104">They can be found under the `ServiceModelEndpoint 4.0.0.0` performance object when viewing with the Performance Monitor.</span></span> <span data-ttu-id="43917-105">執行個體是使用下列模式來命名：</span><span class="sxs-lookup"><span data-stu-id="43917-105">The instances are named using this pattern:</span></span>  

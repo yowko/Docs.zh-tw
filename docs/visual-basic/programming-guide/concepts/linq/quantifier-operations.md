@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645830"
 ---
 # <a name="quantifier-operations-visual-basic"></a><span data-ttu-id="6ec5e-102">數量詞作業 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6ec5e-102">Quantifier Operations (Visual Basic)</span></span>
 <span data-ttu-id="6ec5e-103">數量詞作業會傳回 <xref:System.Boolean> 值，指出序列中的部分或所有項目是否符合條件。</span><span class="sxs-lookup"><span data-stu-id="6ec5e-103">Quantifier operations return a <xref:System.Boolean> value that indicates whether some or all of the elements in a sequence satisfy a condition.</span></span>  

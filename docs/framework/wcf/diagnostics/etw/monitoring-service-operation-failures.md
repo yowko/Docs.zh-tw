@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803763"
 ---
 # <a name="monitoring-service-operation-failures"></a><span data-ttu-id="09b7f-102">監控服務作業失敗</span><span class="sxs-lookup"><span data-stu-id="09b7f-102">Monitoring Service Operation Failures</span></span>
 <span data-ttu-id="09b7f-103">如果您為應用程式啟用分析追蹤，可以在事件檢視器中輕鬆監視服務失敗。</span><span class="sxs-lookup"><span data-stu-id="09b7f-103">If analytic tracing is enabled for an application, service failures can easily be monitored in the event viewer.</span></span>  <span data-ttu-id="09b7f-104">本主題示範如何判斷服務作業失敗的時間，以及如何判斷造成失敗的原因。</span><span class="sxs-lookup"><span data-stu-id="09b7f-104">This topic demonstrates how to determine when a service operation fails, and how to determine what caused the failure.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804621"
 ---
 # <a name="bindings-and-binding-elements"></a><span data-ttu-id="7be83-102">繫結和繫結項目</span><span class="sxs-lookup"><span data-stu-id="7be83-102">Bindings and Binding Elements</span></span>
 <span data-ttu-id="7be83-103">繫結是一種特殊的組態項目，稱為集合*繫結項目*、 其所評估的服務執行階段時用戶端或服務端點會在建構。</span><span class="sxs-lookup"><span data-stu-id="7be83-103">Bindings are collections of special configuration elements, called *binding elements*, which are evaluated by the service runtime whenever a client or service endpoint is being constructed.</span></span> <span data-ttu-id="7be83-104">繫結項目在繫結內的型別與順序會決定端點通道堆疊中通訊協定與傳輸通道的選擇與堆疊順序。</span><span class="sxs-lookup"><span data-stu-id="7be83-104">The type and order of the binding elements within a binding determines the selection and stacking order of the protocol and transport channels in an endpoint's channel stack.</span></span>  

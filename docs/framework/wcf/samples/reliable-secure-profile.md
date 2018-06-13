@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805742"
 ---
 # <a name="reliable-secure-profile"></a><span data-ttu-id="b944b-102">可靠的安全設定檔</span><span class="sxs-lookup"><span data-stu-id="b944b-102">Reliable Secure Profile</span></span>
 <span data-ttu-id="b944b-103">這個範例會示範如何撰寫 WCF 和[可靠的安全設定檔](http://go.microsoft.com/fwlink/?LinkId=178140)(RSP)。</span><span class="sxs-lookup"><span data-stu-id="b944b-103">This sample demonstrates how to compose WCF and [Reliable Secure Profile](http://go.microsoft.com/fwlink/?LinkId=178140) (RSP).</span></span> <span data-ttu-id="b944b-104">這個範例會示範實作[建立連線](http://go.microsoft.com/fwlink/?LinkId=178141)通道可以在與可信賴傳訊，並選擇性地撰寫安全的通道，以建立可靠的安全繫結根據 RSP 規格。</span><span class="sxs-lookup"><span data-stu-id="b944b-104">This sample demonstrates the implementation of a [Make Connection](http://go.microsoft.com/fwlink/?LinkId=178141) channel which can be composed together with Reliable Messaging and optionally a secure channel to create a Reliable Secure Binding based on the RSP specification.</span></span>  

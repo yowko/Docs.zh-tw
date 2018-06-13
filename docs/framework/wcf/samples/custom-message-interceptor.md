@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806314"
 ---
 # <a name="custom-message-interceptor"></a><span data-ttu-id="cc7e5-102">自訂訊息攔截器</span><span class="sxs-lookup"><span data-stu-id="cc7e5-102">Custom Message Interceptor</span></span>
 <span data-ttu-id="cc7e5-103">這個範例示範通道擴充性模型的使用方式。</span><span class="sxs-lookup"><span data-stu-id="cc7e5-103">This sample demonstrates the use of the channel extensibility model.</span></span> <span data-ttu-id="cc7e5-104">尤其，這個範例會示範如何實作建立通道處理站和通道接聽程式的自訂繫結項目，以攔截執行階段堆疊中特定點的所有傳入與傳出訊息。</span><span class="sxs-lookup"><span data-stu-id="cc7e5-104">In particular, it shows how to implement a custom binding element that creates channel factories and channel listeners to intercept all incoming and outgoing messages at a particular point in the run-time stack.</span></span> <span data-ttu-id="cc7e5-105">範例也包含用戶端和伺服器，以示範這些自訂處理站的使用方式。</span><span class="sxs-lookup"><span data-stu-id="cc7e5-105">The sample also includes a client and server that demonstrate the use of these custom factories.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804182"
 ---
 # <a name="wcf-system-requirements"></a><span data-ttu-id="2d469-102">WCF 系統需求</span><span class="sxs-lookup"><span data-stu-id="2d469-102">WCF System Requirements</span></span>
 <span data-ttu-id="2d469-103">Windows Communication Foundation (WCF) 是用來建立分散式應用程式的通訊基礎結構。</span><span class="sxs-lookup"><span data-stu-id="2d469-103">Windows Communication Foundation (WCF) is a communication infrastructure that is used to create distributed applications.</span></span> <span data-ttu-id="2d469-104">下面列出可讓 WCF 執行的需求。</span><span class="sxs-lookup"><span data-stu-id="2d469-104">The following lists the requirements that enable WCF to run.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651696"
 ---
 # <a name="how-to-determine-the-string-associated-with-an-enumeration-value-visual-basic"></a><span data-ttu-id="75485-102">如何：決定與列舉值關聯的字串 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="75485-102">How to: Determine the String Associated with an Enumeration Value (Visual Basic)</span></span>
 <span data-ttu-id="75485-103"><xref:System.Enum.GetValues%2A>和<xref:System.Enum.GetNames%2A>方法可讓您判斷字串和列舉成員相關聯的值。</span><span class="sxs-lookup"><span data-stu-id="75485-103">The <xref:System.Enum.GetValues%2A> and <xref:System.Enum.GetNames%2A> methods allow you to determine the strings and values associated with enumeration members.</span></span>  

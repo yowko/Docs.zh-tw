@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804816"
 ---
 # <a name="query-execution"></a><span data-ttu-id="0c616-102">查詢執行</span><span class="sxs-lookup"><span data-stu-id="0c616-102">Query Execution</span></span>
 <span data-ttu-id="0c616-103">使用者建立 LINQ 查詢之後，查詢就會轉換成命令樹。</span><span class="sxs-lookup"><span data-stu-id="0c616-103">After a LINQ query is created by a user, it is converted to a command tree.</span></span> <span data-ttu-id="0c616-104">命令樹一種可與 Entity Framework 比較的查詢表示方式。</span><span class="sxs-lookup"><span data-stu-id="0c616-104">A command tree is a representation of a query that is compatible with the Entity Framework.</span></span> <span data-ttu-id="0c616-105">接下來命令樹會針對資料來源執行。</span><span class="sxs-lookup"><span data-stu-id="0c616-105">The command tree is then executed against the data source.</span></span> <span data-ttu-id="0c616-106">查詢執行期間會評估所有查詢運算式 (也就是查詢的所有元件)，包括結果具體化中使用的運算式。</span><span class="sxs-lookup"><span data-stu-id="0c616-106">At query execution time, all query expressions (that is, all components of the query) are evaluated, including those expressions that are used in result materialization.</span></span>  

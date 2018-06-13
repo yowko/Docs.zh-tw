@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644624"
 ---
 # <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="7b7bb-102">範例 XML 檔：命名空間中的測試組態</span><span class="sxs-lookup"><span data-stu-id="7b7bb-102">Sample XML File: Test Configuration in a Namespace</span></span>
 <span data-ttu-id="7b7bb-103">下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。</span><span class="sxs-lookup"><span data-stu-id="7b7bb-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="7b7bb-104">這是測試組態檔案。</span><span class="sxs-lookup"><span data-stu-id="7b7bb-104">This is a test configuration file.</span></span> <span data-ttu-id="7b7bb-105">XML 位於命名空間中。</span><span class="sxs-lookup"><span data-stu-id="7b7bb-105">The XML is in a namespace.</span></span>  

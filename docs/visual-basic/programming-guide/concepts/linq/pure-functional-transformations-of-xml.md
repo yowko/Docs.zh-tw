@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645167"
 ---
 # <a name="pure-functional-transformations-of-xml-visual-basic"></a><span data-ttu-id="cbe44-102">純功能性轉換 XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cbe44-102">Pure Functional Transformations of XML (Visual Basic)</span></span>
 <span data-ttu-id="cbe44-103">本節提供 XML 的功能性轉換教學課程。</span><span class="sxs-lookup"><span data-stu-id="cbe44-103">This section provides a functional transformation tutorial for XML.</span></span> <span data-ttu-id="cbe44-104">這包含您必須了解之主要概念和語言建構以使用功能性轉換的說明，以及使用功能性轉換以管理 XML 文件的範例。</span><span class="sxs-lookup"><span data-stu-id="cbe44-104">This includes explanations of the main concepts and language constructs that you must understand to use functional transformations, and examples of using functional transformations to manipulate an XML document.</span></span> <span data-ttu-id="cbe44-105">雖然這個教學課程提供 LINQ to XML 程式碼範例，但是所有基礎概念也適用於其他 LINQ 技術。</span><span class="sxs-lookup"><span data-stu-id="cbe44-105">Although this tutorial provides LINQ to XML code examples, all of the underlying concepts also apply to other LINQ technologies.</span></span>  

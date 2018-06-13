@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650497"
 ---
 # <a name="documenting-your-code-with-xml-visual-basic"></a><span data-ttu-id="da638-102">使用 XML 在程式碼中加入文件 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="da638-102">Documenting Your Code with XML (Visual Basic)</span></span>
 <span data-ttu-id="da638-103">您可以在 Visual Basic 中，文件使用 XML 的程式碼</span><span class="sxs-lookup"><span data-stu-id="da638-103">In Visual Basic, you can document your code using XML</span></span>  

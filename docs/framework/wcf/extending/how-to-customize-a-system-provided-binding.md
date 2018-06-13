@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803664"
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a><span data-ttu-id="6bf74-102">HOW TO：自訂系統提供的繫結</span><span class="sxs-lookup"><span data-stu-id="6bf74-102">How to: Customize a System-Provided Binding</span></span>
 <span data-ttu-id="6bf74-103">Windows Communication Foundation (WCF) 包含數種系統提供繫結可讓您設定一些屬性的基礎繫結項目，但不是所有的屬性。</span><span class="sxs-lookup"><span data-stu-id="6bf74-103">Windows Communication Foundation (WCF) includes several system-provided bindings that allow you to configure some of the properties of the underlying binding elements, but not all of the properties.</span></span> <span data-ttu-id="6bf74-104">本主題示範如何設定繫結項目上的屬性來建立自訂繫結。</span><span class="sxs-lookup"><span data-stu-id="6bf74-104">This topic demonstrates how to set properties on the binding elements to create a custom binding.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649096"
 ---
 # <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a><span data-ttu-id="5b7f4-102">以零為起始的 vs。在 Visual Basic 中的其中一個基礎字串存取</span><span class="sxs-lookup"><span data-stu-id="5b7f4-102">Zero-based vs. One-based String Access in Visual Basic</span></span>
 <span data-ttu-id="5b7f4-103">本主題會比較方式 Visual Basic 和[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]提供字串中字元的權限。</span><span class="sxs-lookup"><span data-stu-id="5b7f4-103">This topic compares how Visual Basic and the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] provide access to the characters in a string.</span></span> <span data-ttu-id="5b7f4-104">[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]一律存取以零為起始的字元在字串中，而 Visual Basic 提供的以零為起始和一個型的存取，根據函式。</span><span class="sxs-lookup"><span data-stu-id="5b7f4-104">The [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] always provides zero-based access to the characters in a string, whereas Visual Basic provides zero-based and one-based access, depending on the function.</span></span>  

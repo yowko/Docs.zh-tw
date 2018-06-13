@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654056"
 ---
 # <a name="string-basics-in-visual-basic"></a><span data-ttu-id="1141a-102">Visual Basic 中的字串基礎</span><span class="sxs-lookup"><span data-stu-id="1141a-102">String Basics in Visual Basic</span></span>
 <span data-ttu-id="1141a-103">`String` 資料類型代表一系列字元 (每個依序代表 `Char` 資料類型的一個執行個體)。</span><span class="sxs-lookup"><span data-stu-id="1141a-103">The `String` data type represents a series of characters (each representing in turn an instance of the `Char` data type).</span></span> <span data-ttu-id="1141a-104">本主題說明在 Visual Basic 中字串的基本概念。</span><span class="sxs-lookup"><span data-stu-id="1141a-104">This topic introduces the basic concepts of strings in Visual Basic.</span></span>  

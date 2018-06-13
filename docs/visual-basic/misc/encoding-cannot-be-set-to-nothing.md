@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638115"
 ---
 # <a name="encoding-cannot-be-set-to-nothing"></a><span data-ttu-id="6c49a-102">編碼不能設定為 Nothing。</span><span class="sxs-lookup"><span data-stu-id="6c49a-102">Encoding cannot be set to Nothing</span></span>
 <span data-ttu-id="6c49a-103">讀取或寫入檔案的嘗試失敗，因為參數 `encoding` 已設定為 `Nothing` ，但需要有效的值。</span><span class="sxs-lookup"><span data-stu-id="6c49a-103">An attempt to read from or write to a file has failed because the parameter `encoding` has been set to `Nothing` but requires a valid value.</span></span>  

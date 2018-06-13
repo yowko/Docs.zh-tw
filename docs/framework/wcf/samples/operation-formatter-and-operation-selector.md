@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808656"
 ---
 # <a name="operation-formatter-and-operation-selector"></a><span data-ttu-id="39a54-102">作業格式器和作業選取器</span><span class="sxs-lookup"><span data-stu-id="39a54-102">Operation Formatter and Operation Selector</span></span>
 <span data-ttu-id="39a54-103">這個範例會示範如何使用 Windows Communication Foundation (WCF) 擴充性點，以讓 WCF 所預期的內容不同的格式中的訊息資料。</span><span class="sxs-lookup"><span data-stu-id="39a54-103">This sample demonstrates how Windows Communication Foundation (WCF) extensibility points can be used to allow message data in a different format from what WCF expects.</span></span> <span data-ttu-id="39a54-104">根據預設，WCF 格式器會預期要包含在方法參數`soap:body`項目。</span><span class="sxs-lookup"><span data-stu-id="39a54-104">By default, WCF formatters expect method parameters to be included under the `soap:body` element.</span></span> <span data-ttu-id="39a54-105">此範例會示範如何實作自訂作業格式器，而這個作業格式器會剖析 HTTP GET 查詢字串中的參數資料，然後使用該資料叫用方法。</span><span class="sxs-lookup"><span data-stu-id="39a54-105">The sample shows how to implement a custom operation formatter that parses parameter data from an HTTP GET query string instead and invokes methods using that data.</span></span>  

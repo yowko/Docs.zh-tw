@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804299"
 ---
 # <a name="scenario"></a><span data-ttu-id="620d8-102">情節</span><span class="sxs-lookup"><span data-stu-id="620d8-102">Scenario</span></span>
 <span data-ttu-id="620d8-103">本節包含示範 Windows Communication Foundation (WCF) 案例的範例。</span><span class="sxs-lookup"><span data-stu-id="620d8-103">This section contains samples that demonstrate Windows Communication Foundation (WCF) scenarios.</span></span>  

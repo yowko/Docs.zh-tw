@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652561"
 ---
 # <a name="sub-procedures-visual-basic"></a><span data-ttu-id="fbedb-102">Sub 程序 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fbedb-102">Sub Procedures (Visual Basic)</span></span>
 <span data-ttu-id="fbedb-103">A`Sub`程序是一系列的 Visual Basic 陳述式加上`Sub`和`End Sub`陳述式。</span><span class="sxs-lookup"><span data-stu-id="fbedb-103">A `Sub` procedure is a series of Visual Basic statements enclosed by the `Sub` and `End Sub` statements.</span></span> <span data-ttu-id="fbedb-104">`Sub`程序執行的工作，並再將控制權傳回給呼叫的程式碼，但不會傳回值，呼叫程式碼。</span><span class="sxs-lookup"><span data-stu-id="fbedb-104">The `Sub` procedure performs a task and then returns control to the calling code, but it does not return a value to the calling code.</span></span>  

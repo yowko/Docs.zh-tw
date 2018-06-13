@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655267"
 ---
 # <a name="events-visual-basic"></a><span data-ttu-id="d2c72-102">事件 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d2c72-102">Events (Visual Basic)</span></span>
 <span data-ttu-id="d2c72-103">雖然您可能會將 Visual Studio 專案中視覺化為一系列程序執行的序列，但實際上，大部分程式都是事件驅動，這表示執行流程取決於呼叫的外部項目*事件*。</span><span class="sxs-lookup"><span data-stu-id="d2c72-103">While you might visualize a Visual Studio project as a series of procedures that execute in a sequence, in reality, most programs are event driven—meaning the flow of execution is determined by external occurrences called *events*.</span></span>  

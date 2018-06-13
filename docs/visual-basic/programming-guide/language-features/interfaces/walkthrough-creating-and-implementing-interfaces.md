@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653607"
 ---
 # <a name="walkthrough-creating-and-implementing-interfaces-visual-basic"></a><span data-ttu-id="f4421-102">逐步解說：建立和實作介面 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f4421-102">Walkthrough: Creating and Implementing Interfaces (Visual Basic)</span></span>
 
