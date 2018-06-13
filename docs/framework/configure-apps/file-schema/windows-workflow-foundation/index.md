@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352485"
 ---
 # <a name="windows-workflow-foundation-configuration-schema"></a>Windows Workflow Foundation 組態結構描述
 Windows Workflow Foundation (WF) 組態項目可讓您設定工作流程應用程式。 針對工作流程應用程式，您可以設定追蹤 (Tracking) 與追蹤 (Tracing) 之外的其他功能。 如需追蹤 (tracking) 與追蹤 (tracing) 的詳細資訊，請參閱[工作流程追蹤及追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)。 工作流程服務，您也可以使用 Windows Communication Foundation (WCF) 組態項目。 如需 WCF 的詳細資訊，請參閱[WCF 組態結構描述](../../../../../docs/framework/configure-apps/file-schema/wcf/index.md)。  

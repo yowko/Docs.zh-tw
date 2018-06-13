@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265229"
 ---
 # <a name="on-c-reference"></a>on (C# 參考)
 查詢運算式的 [join 子句](../../../csharp/language-reference/keywords/join-clause.md) 使用 `on` 內容關鍵字來指定聯結條件。  

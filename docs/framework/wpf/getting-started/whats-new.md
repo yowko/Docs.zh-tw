@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558092"
 ---
 # <a name="what39s-new-in-wpf-version-45"></a>WPF 4.5 版的新功能
 <a name="introduction"></a> 本主題包含新功能和增強功能的相關資訊[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]4.5 版。  

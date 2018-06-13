@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566307"
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>WPF 中圖案和基本繪圖概觀
 本主題概要說明如何繪製具有<xref:System.Windows.Shapes.Shape>物件。 A<xref:System.Windows.Shapes.Shape>是一種<xref:System.Windows.UIElement>，可讓您繪製圖形至螢幕。 UI 項目，因為<xref:System.Windows.Shapes.Shape>物件可以用內<xref:System.Windows.Controls.Panel>項目和大部分的控制項。  

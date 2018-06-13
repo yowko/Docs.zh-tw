@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266685"
 ---
 # <a name="partial-type-c-reference"></a>partial (類型) (C# 參考)
 部分型別定義允許將類別、結構或介面定義分割成多個檔案。  

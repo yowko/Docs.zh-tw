@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358852"
 ---
 # <a name="return-the-average-value-from-a-numeric-sequence"></a>傳回數值序列的平均值
 <xref:System.Linq.Enumerable.Average%2A> 運算子會計算數值序列的平均值。  

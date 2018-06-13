@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557390"
 ---
 # <a name="toolbar-overview"></a>ToolBar 概觀
 <xref:System.Windows.Controls.ToolBar> 控制項是一組命令或其函式中，通常與控制項的容器。 A<xref:System.Windows.Controls.ToolBar>通常包含按鈕就會叫用命令。  
