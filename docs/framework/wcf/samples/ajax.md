@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803423"
 ---
 # <a name="ajax"></a><span data-ttu-id="cc8f8-102">AJAX</span><span class="sxs-lookup"><span data-stu-id="cc8f8-102">AJAX</span></span>
 <span data-ttu-id="cc8f8-103">本節包含示範非同步 JavaScript 與 XML 功能的範例。</span><span class="sxs-lookup"><span data-stu-id="cc8f8-103">This section includes samples that demonstrate Asynchronous JavaScript and XML functionality.</span></span>  

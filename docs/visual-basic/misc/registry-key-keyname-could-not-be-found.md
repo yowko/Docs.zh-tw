@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640618"
 ---
 # <a name="registry-key-39ltkeynamegt39-could-not-be-found"></a><span data-ttu-id="40cd9-102">登錄機碼&#39; &lt;keyname&gt; &#39;找不到</span><span class="sxs-lookup"><span data-stu-id="40cd9-102">Registry key &#39;&lt;keyname&gt;&#39; could not be found</span></span>
 <span data-ttu-id="40cd9-103">找不到登錄機碼。</span><span class="sxs-lookup"><span data-stu-id="40cd9-103">A registry key cannot be found.</span></span>  

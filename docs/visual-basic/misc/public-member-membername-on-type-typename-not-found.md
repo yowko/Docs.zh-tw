@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637526"
 ---
 # <a name="public-member-39ltmembernamegt39-on-type-39lttypenamegt39-not-found"></a><span data-ttu-id="0cd89-102">Public 成員&#39; &lt;membername&gt; &#39;類型上&#39; &lt;typename&gt; &#39;找不到</span><span class="sxs-lookup"><span data-stu-id="0cd89-102">Public member &#39;&lt;membername&gt;&#39; on type &#39;&lt;typename&gt;&#39; not found</span></span>
 <span data-ttu-id="0cd89-103">找不到您嘗試存取的成員。</span><span class="sxs-lookup"><span data-stu-id="0cd89-103">The member you are trying to access cannot be found.</span></span> <span data-ttu-id="0cd89-104">存取晚期繫結物件的非公用成員時，就會發生這個錯誤。</span><span class="sxs-lookup"><span data-stu-id="0cd89-104">This error can occur when accessing non-public members of late-bound objects.</span></span>  

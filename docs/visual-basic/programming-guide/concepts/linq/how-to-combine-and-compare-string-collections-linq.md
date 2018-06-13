@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644442"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a><span data-ttu-id="7747a-102">如何： 合併和比較字串集合 (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7747a-102">How to: Combine and Compare String Collections (LINQ) (Visual Basic)</span></span>
 <span data-ttu-id="7747a-103">本例示範如何合併包含文字行的檔案，然後排序結果。</span><span class="sxs-lookup"><span data-stu-id="7747a-103">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="7747a-104">具體來說，它會示範如何在兩組文字行上執行簡單的串連、等位和交集。</span><span class="sxs-lookup"><span data-stu-id="7747a-104">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640276"
 ---
 # <a name="this-operation-can-only-be-done-when-the-file-is-closed"></a><span data-ttu-id="3977f-102">只有在 File 關閉時，才能執行這項作業</span><span class="sxs-lookup"><span data-stu-id="3977f-102">This operation can only be done when the File is closed</span></span>
 <span data-ttu-id="3977f-103">開啟檔案時，嘗試執行的作業只能在關閉檔案時執行。</span><span class="sxs-lookup"><span data-stu-id="3977f-103">When a file is open, an attempt has been made to perform an operation that can only be performed when the file is closed.</span></span>  

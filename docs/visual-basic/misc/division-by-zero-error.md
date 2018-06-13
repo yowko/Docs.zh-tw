@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636752"
 ---
 # <a name="division-by-zero-visual-basic-error"></a><span data-ttu-id="174b7-102">除數為零 (Visual Basic 錯誤)</span><span class="sxs-lookup"><span data-stu-id="174b7-102">Division by zero (Visual Basic Error)</span></span>
 <span data-ttu-id="174b7-103">作為除數的運算式值為零。</span><span class="sxs-lookup"><span data-stu-id="174b7-103">The value of an expression used as a divisor is zero.</span></span>  
