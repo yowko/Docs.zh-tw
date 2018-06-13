@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362746"
 ---
 # <a name="interoperability-with-enterprise-services-and-com-transactions"></a>與 Enterprise Services 和 COM+ 交易的互通性
 <xref:System.Transactions> 命名空間支援以此命名空間建立的交易物件，以及透過 COM+ 建立的交易兩者之間的互通性。  

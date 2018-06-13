@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1be18d374bad07b590096acac985812c2e2ed9b2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407578"
 ---
 # <a name="icordebugsetunmanagedhandler-method"></a>ICorDebug::SetUnmanagedHandler 方法
 指定 unmanaged 事件的事件處理常式的物件。  
@@ -42,7 +43,7 @@ HRESULT SetUnmanagedHandler (
  此事件處理常式物件的 unmanaged 呼叫之後，必須設定事件[icordebug:: Initialize](../../../../docs/framework/unmanaged-api/debugging/icordebug-initialize-method.md)和任何呼叫之前[icordebug:: Createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)或[icordebug:: Debugactiveprocess](../../../../docs/framework/unmanaged-api/debugging/icordebug-debugactiveprocess-method.md). 不過，舊版的用途，您不必設定未受管理的事件，直到第一個原生偵錯事件就會引發的事件處理常式物件。 具體來說，如果`ICorDebug::CreateProcess`已設定 CREATE_SUSPENDED 旗標，不可分派的事件，主執行緒繼續執行之前的原生偵錯。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   

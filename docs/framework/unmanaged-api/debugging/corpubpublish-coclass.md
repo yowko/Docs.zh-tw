@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9941a9be7d9f68255636b405db29a623be8d37e8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406434"
 ---
 # <a name="corpubpublish-coclass"></a>CorpubPublish Coclass
 提供介面來發行應用程式定義域和處理序的相關資訊。  
@@ -51,7 +52,7 @@ coclass CorpubPublish {
  典型的發佈案例牽涉到的開發人員想要偵錯應用程式定義域中的電腦執行的 managed 程式碼。 裝載環境可能執行之處理序中的多個應用程式定義域。 開發人員想要使用圖形化使用者介面或其他方式來列出所有電腦執行的處理程序，並選取特定的處理程序。 清單中應該包含的所有應用程式網域內執行 managed 程式碼的處理序。 開發人員可以識別該特定應用程式定義域，並將偵錯工具附加至該定義域。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorPub.idl  
   

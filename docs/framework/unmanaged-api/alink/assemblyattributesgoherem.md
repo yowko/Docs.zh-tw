@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 075f0ce7001573bb4e61a3e059e699d15275ea0b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403184"
 ---
 # <a name="assemblyattributesgoherem"></a>AssemblyAttributesGoHereM
 供 ALink 用來做為儲存自訂屬性相關資訊的預留位置。  

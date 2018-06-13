@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8fb1ae367c30bb038bfe25961e91f02f172f486c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405752"
 ---
 # <a name="corheapinfo-structure"></a>COR_HEAPINFO 結構
 提供記憶體回收堆積的一般相關資訊，包括其是否可以列舉。  
@@ -53,7 +54,7 @@ typedef struct _COR_HEAPINFO {
  之前列舉的物件在記憶體回收堆積上的，您必須一律檢查`areGCStructuresValid`欄位，以確保在堆積中的可列舉的狀態。 如需詳細資訊，請參閱[icordebugprocess5:: Getgcheapinformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md)方法。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   

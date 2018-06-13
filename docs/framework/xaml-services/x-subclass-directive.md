@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566414"
 ---
 # <a name="xsubclass-directive"></a>x:Subclass 指示詞
 修改 XAML 標記編譯行為時`x:Class`也會提供。 而不是建立部分類別，根據`x:Class`，提供`x:Class`建立為中繼類別，而且應該然後根據您提供的衍生的類別`x:Class`。  

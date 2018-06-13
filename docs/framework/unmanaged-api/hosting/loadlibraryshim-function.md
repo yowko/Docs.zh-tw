@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c8936fa3d22cfde4c2536fccf9d46c1990133db1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445308"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim 函式
 載入 DLL 隨附於.NET Framework 可轉散發套件中的指定的版本。  
@@ -67,7 +68,7 @@ HRESULT LoadLibraryShim (
 >  從.NET Framework 2.0 版開始，載入 Fusion.dll 會造成載入 CLR。 這是因為 Fusion.dll 中的函式現在是包裝函式的實作所提供的執行階段。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
