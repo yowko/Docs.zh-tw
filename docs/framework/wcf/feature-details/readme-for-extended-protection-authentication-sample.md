@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495076"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>延伸保護驗證之範例的讀我檔案
 延伸的保護是一項安全性方案來抵禦攔截 (MITM) 攻擊，攻擊者 （"--攔截 」） 攔截用戶端認證並使用它們來存取用戶端想要的伺服器上的安全資源保護。  

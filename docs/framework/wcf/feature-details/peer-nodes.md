@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491526"
 ---
 # <a name="peer-nodes"></a>對等節點
 PeerNode 是指在對等通道網狀結構中的單一端點。 應用程式可以擁有多個參與不同網狀結構的對等節點。 例如，對等交談應用程式可以屬於兩個不同的網狀結構：一個網狀結構是與高中好友的交談，而另一個網狀結構則是與工作同事的交談。  

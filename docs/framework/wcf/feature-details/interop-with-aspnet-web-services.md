@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494292"
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>與 ASP.NET Web 服務的互通性
 之間的互通性[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]可藉由確保服務使用這兩種技術實作符合 WS-I Web 服務和 Windows Communication Foundation (WCF) Web 服務-Basic Profile 1.1 規格。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服務符合 WS-Basic Profile 1.1 會使用 WCF 系統提供繫結，與 WCF 用戶端互通之<xref:System.ServiceModel.BasicHttpBinding>。  

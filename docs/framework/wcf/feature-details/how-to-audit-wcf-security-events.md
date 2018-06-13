@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493255"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>HOW TO：稽核 Windows Communication Foundation 安全性事件
 Windows Communication Foundation (WCF) 可讓您將安全性事件記錄到 Windows 事件記錄檔，您可以使用 Windows 事件檢視器檢視。 這個主題會說明如何將應用程式設定為會記錄安全性事件。 如需 WCF 稽核的詳細資訊，請參閱[稽核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)。  

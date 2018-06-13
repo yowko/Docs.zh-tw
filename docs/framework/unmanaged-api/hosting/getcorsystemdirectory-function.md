@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 008514e3637a980f3722d0c9896a17be33d54c31
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431684"
 ---
 # <a name="getcorsystemdirectory-function"></a>GetCORSystemDirectory 函式
 傳回 common language runtime (CLR) 載入到處理程序的安裝的目錄。 安裝目錄是完整名稱，例如，"c:\windows\microsoft.net\framework\v1.0.3705"。  
@@ -54,7 +55,7 @@ HRESULT GetCORSystemDirectory (
 >  請勿使用此函式中執行的 CLR 版本 4 的處理序。 如果在電腦上已安裝舊版的 clr，此函數會傳回該版本的安裝目錄。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   

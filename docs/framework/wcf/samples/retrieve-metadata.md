@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501581"
 ---
 # <a name="retrieve-metadata"></a>擷取中繼資料
 這個範例會示範如何實作會動態擷取服務的中繼資料，以選擇要進行通訊之端點的用戶端。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 服務已修改成公開兩個端點，在基底位址使用端點`basicHttpBinding`繫結和安全的端點，在 {*baseaddress*} /secure 使用`wsHttpBinding`繫結。 此時用戶端並不是以端點位址與繫結設定，而是使用 <xref:System.ServiceModel.Description.MetadataExchangeClient> 類別動態擷取服務的中繼資料，然後使用 <xref:System.ServiceModel.Description.ServiceEndpointCollection> 類別將中繼資料當做 <xref:System.ServiceModel.Description.WsdlImporter> 匯入。  

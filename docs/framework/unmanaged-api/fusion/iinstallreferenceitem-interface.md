@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fd3c19bbbcb5b1a5f0e89b9df86f87beca32cd00
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431347"
 ---
 # <a name="iinstallreferenceitem-interface"></a>IInstallReferenceItem 介面
 代表安裝在全域組件快取的項目。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/04/2018
 |[GetReference 方法](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-getreference-method.md)|取得指標`FUSION_INSTALL_REFERENCE`結構所表示`IInstallReferenceItem`。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Fusion.h  
   

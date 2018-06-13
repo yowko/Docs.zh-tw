@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489592"
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>預計採用 Windows Communication Foundation：簡化未來整合
 如果您正使用 ASP.NET，並且預期在未來使用 WCF，本主題提供指引以確定新的 ASP.NET Web 服務，將也與 WCF 應用程式正常運作。  

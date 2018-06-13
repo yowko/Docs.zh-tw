@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494172"
 ---
 # <a name="message-security-with-mutual-certificates"></a>相互憑證的訊息安全性
 下列案例會顯示 Windows Communication Foundation (WCF) 服務和用戶端使用訊息安全性模式保護。 用戶端與服務以憑證加以驗證。  

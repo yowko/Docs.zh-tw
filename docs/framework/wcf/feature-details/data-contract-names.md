@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494266"
 ---
 # <a name="data-contract-names"></a>資料合約名稱
 有時候用戶端和服務不會共用相同的類型。 只要兩邊的資料合約都相同，仍然可以相互傳遞資料。 [資料合約等價](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)根據資料合約與資料成員名稱，並因此提供的機制是將對應的類型和成員到這些名稱。 本主題說明的規則時建立名稱命名的資料合約，以及 Windows Communication Foundation (WCF) 基礎結構的預設行為。  

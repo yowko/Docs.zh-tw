@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494666"
 ---
 # <a name="queues-and-reliable-sessions"></a>佇列和可靠的工作階段
 佇列和可靠工作階段是實作可信賴傳訊的 Windows Communication Foundation (WCF) 功能。 本節包含的主題將討論 WCF 可信賴傳訊功能。  

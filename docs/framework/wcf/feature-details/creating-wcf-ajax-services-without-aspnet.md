@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490353"
 ---
 # <a name="creating-wcf-ajax-services-without-aspnet"></a>建立不含 ASP.NET 的 WCF AJAX 服務
 Windows Communication Foundation (WCF) AJAX 服務可以存取從任何已啟用 JavaScript 的網頁，而不需要 ASP.NET AJAX。 本主題描述如何建立 WCF 服務。  

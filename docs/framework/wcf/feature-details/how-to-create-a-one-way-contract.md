@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490769"
 ---
 # <a name="how-to-create-a-one-way-contract"></a>HOW TO：建立單向合約
 本主題說明的基本步驟可用來建立使用單向合約的方法。 這類方法會叫用 Windows Communication Foundation (WCF) 服務，從用戶端上的作業，但不是期待回覆。 例如，您可以使用此合約類型，將通知發行給許多訂閱者。 您也可以在建立雙工 (雙向) 合約時使用單向合約，以供用戶端與伺服器彼此各自進行通訊，並方便任何一方初始化對另一方的呼叫。 這麼做可以特別允許伺服器對用戶端進行單向呼叫，而用戶端會將此呼叫視為事件。 如需指定單向方法的詳細資訊，請參閱 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 屬性與 <xref:System.ServiceModel.OperationContractAttribute> 類別。  

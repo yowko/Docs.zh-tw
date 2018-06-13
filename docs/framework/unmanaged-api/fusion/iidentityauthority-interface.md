@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 692ac4ef4fe8ea64c6a63dc2f02cc04244a842c3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432519"
 ---
 # <a name="iidentityauthority-interface"></a>IIdentityAuthority 介面
 管理程式碼物件的識別索引鍵。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/04/2018
 |`IIdentityAuthority::TextToReference`|取得的介面指標`IReferenceIdentity`產生從指定的執行個體的格式字串。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Isolation.h  
   

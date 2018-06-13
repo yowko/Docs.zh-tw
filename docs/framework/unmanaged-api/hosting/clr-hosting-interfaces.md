@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 03839a2c6e52f9d2dcdd2e0941ff4fdbeb8a3a17
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435637"
 ---
 # <a name="clr-hosting-interfaces"></a>CLR 裝載介面
 本節描述 unmanaged 介面主機可用於將 common language runtime (CLR) 整合到他們的應用程式。 資訊適用於.NET Framework 2.0 版和更新版本。 這些介面來控制許多層面的執行階段，比起 1.0 和 1.1 版，請將主機啟用，並提供更緊密的整合，則 CLR 與主機的執行模式之間。  

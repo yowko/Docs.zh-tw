@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492540"
 ---
 # <a name="how-to-import-metadata-into-service-endpoints"></a>HOW TO：將中繼資料匯入服務端點
 本主題說明如何匯入服務端點的集合中的中繼資料以及如何使用服務中定義[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 本主題將示範如何建立用戶端應用程式，從服務匯入中繼資料，然後在服務上呼叫 `Add` 方法。  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d447bd9712fc925cd738bd0c530d8329f510a5f3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437374"
 ---
 # <a name="iclrtaskmanagergetcurrenttask-method"></a>ICLRTaskManager::GetCurrentTask 方法
 取得[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)方法呼叫所起始的作業系統執行緒目前正在執行的執行個體。  
@@ -53,11 +54,11 @@ HRESULT GetCurrentTask (
  `ICLRTask`執行個體`ppTask`參數指向代表目前執行之工作的 CLR。 `ICLRTask`執行個體都與對應[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)主機中代表工作的執行個體。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
- **程式庫：**包含做為 MSCorEE.dll 中的資源  
+ **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

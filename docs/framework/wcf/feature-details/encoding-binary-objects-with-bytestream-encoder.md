@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489478"
 ---
 # <a name="encoding-binary-objects-with-bytestream-encoder"></a>以位元組資料流編碼器將二進位物件編碼
 傳送和接收原始二進位資料與 Windows Communication Foundation (WCF) 已設定使用<xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>。  

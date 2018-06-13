@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495420"
 ---
 # <a name="exporting-and-importing-metadata"></a>匯出和匯入中繼資料
 在 Windows Communication Foundation (WCF) 中，匯出中繼資料是描述服務端點，並將其投射至並行標準化表示法，用戶端可用來了解如何使用服務的程序。 匯入服務中繼資料是從服務中繼資料產生 <xref:System.ServiceModel.Description.ServiceEndpoint> 執行個體或組件的程序。  

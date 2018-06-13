@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495758"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>網際網路資訊服務裝載最佳做法
 本主題概述裝載 Windows Communication Foundation (WCF) 服務的一些最佳作法。  

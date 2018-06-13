@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494110"
 ---
 # <a name="hosting-in-internet-information-services"></a>在網際網路資訊服務中裝載
 為主控 Windows Communication Foundation (WCF) 服務的其中一個選項是網際網路資訊服務 (IIS) 應用程式裡面。 這個裝載模型與 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 和 ASP.NET (ASMX) Web 服務所使用的模型很類似。  

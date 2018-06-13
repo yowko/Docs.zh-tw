@@ -20,9 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f0436991512713c05e60a3c10d6fbdaa17bb378c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429823"
 ---
 # <a name="nukedownloadedcache-function"></a>NukeDownloadedCache 函式
 刪除 common language runtime (CLR) 下載快取。  
@@ -40,7 +41,7 @@ HRESULT NukeDownloadedCache();
  CLR 下載快取是從 URL 下載的強式名稱組件可能重複使用的儲存位置的區域。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Fusion.h  
   

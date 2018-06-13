@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496708"
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>HOW TO：實作探索 Proxy
 本主題說明如何實作探索 Proxy。 如需探索功能在 Windows Communication Foundation (WCF) 的詳細資訊，請參閱[WCF 探索概觀](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)。 探索 Proxy 可透過建立延伸類別的方式來實作，該類別可擴充<xref:System.ServiceModel.Discovery.DiscoveryProxy> 抽象類別。 許多其他支援類別都已在此範例中定義和使用。 `OnResolveAsyncResult`、`OnFindAsyncResult` 和 `AsyncResult`。 這些類別會實作 <xref:System.IAsyncResult> 介面。 如需有關<xref:System.IAsyncResult>看到[System.IAsyncResult 介面](xref:System.IAsyncResult)。

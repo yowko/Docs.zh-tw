@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495579"
 ---
 # <a name="best-practices-for-queued-communication"></a>佇列通訊的最佳做法
 本主題的佇列通訊中 Windows Communication Foundation (WCF) 提供建議的做法。 下列各節由案例的觀點來討論建議的做法。  

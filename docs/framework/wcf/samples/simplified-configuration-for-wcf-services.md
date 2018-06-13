@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502260"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>WCF 服務的簡化組態
 這個範例示範如何實作與設定一般服務和用戶端會使用 Windows Communication Foundation (WCF)。 這個範例是所有其他基本技術範例的基礎。  

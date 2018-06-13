@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494777"
 ---
 # <a name="message-security-with-a-windows-client"></a>Windows 用戶端的訊息安全性
 這個案例示範 Windows Communication Foundation (WCF) 用戶端和伺服器保護的訊息安全性模式。 此用戶端和伺服器會以 Windows 認證進行驗證。  

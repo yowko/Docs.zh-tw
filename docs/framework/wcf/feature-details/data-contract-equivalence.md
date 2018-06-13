@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492791"
 ---
 # <a name="data-contract-equivalence"></a>資料合約等價
 若要讓用戶端成功地將特定型別的資料傳送至服務，或讓服務成功地將資料傳送至用戶端，傳送的型別不一定要存在於接收端。 唯一的需求是這兩個型別的資料合約必須相等  (某些情況下，嚴格對等不是必要項目，如所述[資料合約版本控制](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)。)  

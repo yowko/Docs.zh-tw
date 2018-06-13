@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490493"
 ---
 # <a name="integrating-with-com-applications"></a>整合 COM+ 應用程式
 Windows Communication Foundation (WCF) 提供非常豐富的環境建立分散式應用程式。 如果您在裝載於 COM + 元件架構應用程式邏輯中有了大筆投資，您可以使用 WCF 來擴充現有邏輯，而不是不必重新撰寫程式碼。 本節中的主題描述如何搭配 WCF 使用 COM +。  

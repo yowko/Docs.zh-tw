@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491864"
 ---
 # <a name="peer-to-peer-networking"></a>對等網路
 對等通道是多方對等 (P2P) 通訊技術在 Windows Communication Foundation (WCF)。 它為應用程式開發人員提供了安全、可擴充的訊息 P2P 通訊通道。 像「交談」這樣的共同作業應用程式，即是受惠於對等通道多方應用程式的其中一個例子；一群人可以在這裡透過對等方式彼此交談，而不需要伺服器。 對等通道能夠進行 P2P 共同作業、內容散發、負載平衡，以及消費者和企業案例的分散式處理。  
