@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583288"
 ---
 # <a name="how-to-register-callbacks-for-cancellation-requests"></a><span data-ttu-id="5cbce-102">如何：註冊取消要求的回呼</span><span class="sxs-lookup"><span data-stu-id="5cbce-102">How to: Register Callbacks for Cancellation Requests</span></span>
 <span data-ttu-id="5cbce-103">下列範例示範如何註冊委派，當因為在建立權杖的物件上呼叫 <xref:System.Threading.CancellationTokenSource.Cancel%2A>，而使 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 屬性變成 true 時，將會叫用此委派。</span><span class="sxs-lookup"><span data-stu-id="5cbce-103">The following example shows how to register a delegate that will be invoked when a <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> property becomes true due to a call to <xref:System.Threading.CancellationTokenSource.Cancel%2A> on the object that created the token.</span></span> <span data-ttu-id="5cbce-104">您可以使用這個技巧來取消原本不支援整合取消架構的非同步作業，以及解除封鎖可能會等候非同步作業完成的方法。</span><span class="sxs-lookup"><span data-stu-id="5cbce-104">Use this technique for cancelling asynchronous operations that do not natively support the unified cancellation framework, and for unblocking methods that might be waiting for an asynchronous operation to finish.</span></span>  

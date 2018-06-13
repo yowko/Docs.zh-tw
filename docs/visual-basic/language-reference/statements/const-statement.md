@@ -11,6 +11,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34233843"
 ---
 # <a name="const-statement-visual-basic"></a><span data-ttu-id="60806-102">Const 陳述式 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="60806-102">Const Statement (Visual Basic)</span></span>
 <span data-ttu-id="60806-103">宣告並定義一或多個常數。</span><span class="sxs-lookup"><span data-stu-id="60806-103">Declares and defines one or more constants.</span></span>  

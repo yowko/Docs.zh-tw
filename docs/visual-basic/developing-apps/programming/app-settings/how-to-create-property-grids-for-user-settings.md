@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590981"
 ---
 # <a name="how-to-create-property-grids-for-user-settings-in-visual-basic"></a><span data-ttu-id="8aa2b-102">如何：在 Visual Basic 中建立使用者設定的屬性方格</span><span class="sxs-lookup"><span data-stu-id="8aa2b-102">How to: Create Property Grids for User Settings in Visual Basic</span></span>
 <span data-ttu-id="8aa2b-103">您可以使用 `My.Settings` 物件的使用者設定屬性填入 <xref:System.Windows.Forms.PropertyGrid> 控制項，以建立使用者設定的屬性方格。</span><span class="sxs-lookup"><span data-stu-id="8aa2b-103">You can create a property grid for user settings by populating a <xref:System.Windows.Forms.PropertyGrid> control with the user setting properties of the `My.Settings` object.</span></span>  

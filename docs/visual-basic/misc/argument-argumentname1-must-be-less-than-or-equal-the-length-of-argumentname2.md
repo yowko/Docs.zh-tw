@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599085"
 ---
 # <a name="argument-39ltargumentname1gt39-must-be-less-than-or-equal-the-length-of-argument-39ltargumentname2gt39"></a><span data-ttu-id="ef6c5-102">引數&#39; &lt;argumentname1&gt; &#39;必須小於或等於引數的長度&#39;&lt;引數名稱 2&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="ef6c5-102">Argument &#39;&lt;argumentname1&gt;&#39; must be less than or equal the length of argument &#39;&lt;argumentname2&gt;&#39;</span></span>
 <span data-ttu-id="ef6c5-103">提供的引數長度超過它正在取代的引數長度。</span><span class="sxs-lookup"><span data-stu-id="ef6c5-103">The length of a supplied argument exceeds the length of the argument it is replacing.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585940"
 ---
 # <a name="how-to-parse-file-paths-in-visual-basic"></a><span data-ttu-id="0bed8-102">如何：在 Visual Basic 中剖析檔案路徑</span><span class="sxs-lookup"><span data-stu-id="0bed8-102">How to: Parse File Paths in Visual Basic</span></span>
 <span data-ttu-id="0bed8-103"><xref:Microsoft.VisualBasic.FileIO.FileSystem> 物件提供剖析檔案路徑時的數種有用方法。</span><span class="sxs-lookup"><span data-stu-id="0bed8-103">The <xref:Microsoft.VisualBasic.FileIO.FileSystem> object offers a number of useful methods when parsing file paths.</span></span>  

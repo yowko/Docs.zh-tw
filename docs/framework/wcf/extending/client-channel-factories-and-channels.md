@@ -7,6 +7,7 @@ ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34483550"
 ---
 # <a name="client-channel-factories-and-channels"></a><span data-ttu-id="312b8-102">用戶端：通道處理站與通道</span><span class="sxs-lookup"><span data-stu-id="312b8-102">Client: Channel Factories and Channels</span></span>
 <span data-ttu-id="312b8-103">這個主題會討論通道處理站和通道的建立方面。</span><span class="sxs-lookup"><span data-stu-id="312b8-103">This topic discusses the creation of channel factories and channels.</span></span>  

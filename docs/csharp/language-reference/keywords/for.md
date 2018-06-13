@@ -12,6 +12,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/18/2018
+ms.locfileid: "34306523"
 ---
 # <a name="for-c-reference"></a><span data-ttu-id="fdffa-102">for (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="fdffa-102">for (C# reference)</span></span>
 

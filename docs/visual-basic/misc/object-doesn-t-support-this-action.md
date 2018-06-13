@@ -9,6 +9,7 @@ ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34312205"
 ---
 # <a name="object-doesnt-support-this-action-visual-basic"></a><span data-ttu-id="2afbb-102">物件不支援此動作 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2afbb-102">Object doesn't support this action (Visual Basic)</span></span>
 <span data-ttu-id="2afbb-103">您已參考這個物件不支援的方法或屬性。</span><span class="sxs-lookup"><span data-stu-id="2afbb-103">You referenced a method or property that is not supported by this object.</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592135"
 ---
 # <a name="walkthrough-creating-a-custom-dataflow-block-type"></a><span data-ttu-id="61964-102">逐步解說：建立自訂資料流程區塊類型</span><span class="sxs-lookup"><span data-stu-id="61964-102">Walkthrough: Creating a Custom Dataflow Block Type</span></span>
 <span data-ttu-id="61964-103">雖然 TPL 資料流程式庫提供數個啟用各種不同功能的資料流程區塊類型，但您也可以建立自訂的區塊類型。</span><span class="sxs-lookup"><span data-stu-id="61964-103">Although the TPL Dataflow Library provides several dataflow block types that enable a variety of functionality, you can also create custom block types.</span></span> <span data-ttu-id="61964-104">本文件說明如何建立會實作自訂行為的資料流程區塊類型之兩種方式。</span><span class="sxs-lookup"><span data-stu-id="61964-104">This document describes how to create a dataflow block type that implements custom behavior.</span></span>  

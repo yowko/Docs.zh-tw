@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34027385"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a><span data-ttu-id="9be69-103">逐步解說和技術取得已啟動的概觀</span><span class="sxs-lookup"><span data-stu-id="9be69-103">Walkthroughs and technical get started overview</span></span>
 

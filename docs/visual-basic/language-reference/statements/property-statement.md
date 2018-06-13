@@ -16,6 +16,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235986"
 ---
 # <a name="property-statement"></a><span data-ttu-id="3005b-102">Property Statement</span><span class="sxs-lookup"><span data-stu-id="3005b-102">Property Statement</span></span>
 <span data-ttu-id="3005b-103">宣告屬性，以及用來儲存及擷取屬性值的屬性程序的名稱。</span><span class="sxs-lookup"><span data-stu-id="3005b-103">Declares the name of a property, and the property procedures used to store and retrieve the value of the property.</span></span>  
