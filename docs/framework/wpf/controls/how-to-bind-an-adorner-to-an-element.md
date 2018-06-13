@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552548"
 ---
 # <a name="how-to-bind-an-adorner-to-an-element"></a><span data-ttu-id="0bddd-102">如何：將裝飾項繫結至項目</span><span class="sxs-lookup"><span data-stu-id="0bddd-102">How to: Bind an Adorner to an Element</span></span>
 <span data-ttu-id="0bddd-103">這個範例示範如何以程式設計方式將裝飾項繫結至指定<xref:System.Windows.UIElement>。</span><span class="sxs-lookup"><span data-stu-id="0bddd-103">This example shows how to programmatically bind an adorner to a specified <xref:System.Windows.UIElement>.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392742"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a><span data-ttu-id="47602-102">如何：將 Managed 程式碼 DCOM 移轉至 WCF</span><span class="sxs-lookup"><span data-stu-id="47602-102">How to: Migrate Managed-Code DCOM to WCF</span></span>
 <span data-ttu-id="47602-103">對於分散式環境中伺服器與用戶端之間的 Managed 程式碼呼叫，Windows Communication Foundation (WCF) 是比分散式元件物件模型 (DCOM) 更建議使用的安全選擇。</span><span class="sxs-lookup"><span data-stu-id="47602-103">Windows Communication Foundation (WCF) is the recommended and secure choice over Distributed Component Object Model (DCOM) for managed code calls between servers and clients in a distributed environment.</span></span> <span data-ttu-id="47602-104">本文將說明如何在下列情節中將程式碼從 DCOM 移轉至 WCF。</span><span class="sxs-lookup"><span data-stu-id="47602-104">This article shows how you to migrate code from DCOM to WCF for the following scenarios.</span></span>  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398218"
 ---
 # <a name="basic-and-digest-authentication"></a><span data-ttu-id="482c8-102">基本和摘要式驗證</span><span class="sxs-lookup"><span data-stu-id="482c8-102">Basic and Digest Authentication</span></span>
 <span data-ttu-id="482c8-103">基本和摘要式驗證的 <xref:System.Net> 實作符合 RFC2617 - HTTP 驗證：基本和摘要式驗證 (可在全球資訊網協會的網站 www.w3.org 上取得)。</span><span class="sxs-lookup"><span data-stu-id="482c8-103">The <xref:System.Net> implementation of basic and digest authentication complies with RFC2617 – HTTP Authentication: Basic and Digest Authentication (available on the World Wide Web Consortium's Web site at www.w3.org).</span></span>  

@@ -1,56 +1,43 @@
 ---
-title: "如何：使用範本為使用 GridView 的 ListView 設定樣式"
-ms.custom: 
+title: 如何：使用範本為使用 GridView 的 ListView 設定樣式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ListView controls [WPF], styling
 ms.assetid: 94bf964b-96c8-4bdf-a0c3-f5271b7cb565
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9abc19ca14cf512deff898f5f20d23870b8b7847
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 481d92d4301401f8ba87c4912cd44b17c5104b1b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553828"
 ---
-# <a name="how-to-use-templates-to-style-a-listview-that-uses-gridview"></a><span data-ttu-id="f96f1-102">如何：使用範本為使用 GridView 的 ListView 設定樣式</span><span class="sxs-lookup"><span data-stu-id="f96f1-102">How to: Use Templates to Style a ListView That Uses GridView</span></span>
-<span data-ttu-id="f96f1-103">這個範例示範如何使用<xref:System.Windows.DataTemplate>和<xref:System.Windows.Style>物件，指定的外觀<xref:System.Windows.Controls.ListView>使用控制項<xref:System.Windows.Controls.GridView>檢視模式。</span><span class="sxs-lookup"><span data-stu-id="f96f1-103">This example shows how to use the <xref:System.Windows.DataTemplate> and <xref:System.Windows.Style> objects to specify the appearance of a <xref:System.Windows.Controls.ListView> control that uses a <xref:System.Windows.Controls.GridView> view mode.</span></span>  
+# <a name="how-to-use-templates-to-style-a-listview-that-uses-gridview"></a><span data-ttu-id="49b5c-102">如何：使用範本為使用 GridView 的 ListView 設定樣式</span><span class="sxs-lookup"><span data-stu-id="49b5c-102">How to: Use Templates to Style a ListView That Uses GridView</span></span>
+<span data-ttu-id="49b5c-103">這個範例示範如何使用<xref:System.Windows.DataTemplate>和<xref:System.Windows.Style>物件，指定的外觀<xref:System.Windows.Controls.ListView>使用控制項<xref:System.Windows.Controls.GridView>檢視模式。</span><span class="sxs-lookup"><span data-stu-id="49b5c-103">This example shows how to use the <xref:System.Windows.DataTemplate> and <xref:System.Windows.Style> objects to specify the appearance of a <xref:System.Windows.Controls.ListView> control that uses a <xref:System.Windows.Controls.GridView> view mode.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f96f1-104">範例</span><span class="sxs-lookup"><span data-stu-id="f96f1-104">Example</span></span>  
- <span data-ttu-id="f96f1-105">下列範例會顯示<xref:System.Windows.Style>和<xref:System.Windows.DataTemplate>物件可自訂的資料行標頭的外觀<xref:System.Windows.Controls.GridViewColumn>。</span><span class="sxs-lookup"><span data-stu-id="f96f1-105">The following examples show <xref:System.Windows.Style> and <xref:System.Windows.DataTemplate> objects that customize the appearance of a column header for a <xref:System.Windows.Controls.GridViewColumn>.</span></span>  
+## <a name="example"></a><span data-ttu-id="49b5c-104">範例</span><span class="sxs-lookup"><span data-stu-id="49b5c-104">Example</span></span>  
+ <span data-ttu-id="49b5c-105">下列範例會顯示<xref:System.Windows.Style>和<xref:System.Windows.DataTemplate>物件可自訂的資料行標頭的外觀<xref:System.Windows.Controls.GridViewColumn>。</span><span class="sxs-lookup"><span data-stu-id="49b5c-105">The following examples show <xref:System.Windows.Style> and <xref:System.Windows.DataTemplate> objects that customize the appearance of a column header for a <xref:System.Windows.Controls.GridViewColumn>.</span></span>  
   
  [!code-xaml[ListViewTemplate#GridViewHeaderStyle](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#gridviewheaderstyle)]  
   
  [!code-xaml[ListViewTemplate#GridViewHeaderTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#gridviewheadertemplate)]  
   
- <span data-ttu-id="f96f1-106">下列範例示範如何使用這些<xref:System.Windows.Style>和<xref:System.Windows.DataTemplate>物件來設定<xref:System.Windows.Controls.GridViewColumn.HeaderContainerStyle%2A>和<xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A>屬性<xref:System.Windows.Controls.GridViewColumn>。</span><span class="sxs-lookup"><span data-stu-id="f96f1-106">The following example shows how to use these <xref:System.Windows.Style> and <xref:System.Windows.DataTemplate> objects to set the <xref:System.Windows.Controls.GridViewColumn.HeaderContainerStyle%2A> and <xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A> properties of a <xref:System.Windows.Controls.GridViewColumn>.</span></span> <span data-ttu-id="f96f1-107"><xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A>屬性定義的資料行儲存格的內容。</span><span class="sxs-lookup"><span data-stu-id="f96f1-107">The <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> property defines the content of the column cells.</span></span>  
+ <span data-ttu-id="49b5c-106">下列範例示範如何使用這些<xref:System.Windows.Style>和<xref:System.Windows.DataTemplate>物件來設定<xref:System.Windows.Controls.GridViewColumn.HeaderContainerStyle%2A>和<xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A>屬性<xref:System.Windows.Controls.GridViewColumn>。</span><span class="sxs-lookup"><span data-stu-id="49b5c-106">The following example shows how to use these <xref:System.Windows.Style> and <xref:System.Windows.DataTemplate> objects to set the <xref:System.Windows.Controls.GridViewColumn.HeaderContainerStyle%2A> and <xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A> properties of a <xref:System.Windows.Controls.GridViewColumn>.</span></span> <span data-ttu-id="49b5c-107"><xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A>屬性定義的資料行儲存格的內容。</span><span class="sxs-lookup"><span data-stu-id="49b5c-107">The <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> property defines the content of the column cells.</span></span>  
   
  [!code-xaml[ListViewTemplate#GridViewColumnTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#gridviewcolumntemplate)]  
   
- <span data-ttu-id="f96f1-108"><xref:System.Windows.Controls.GridViewColumn.HeaderContainerStyle%2A>和<xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A>只有兩種數個屬性，您可以用來自訂資料行的標頭外觀<xref:System.Windows.Controls.GridView>控制項。</span><span class="sxs-lookup"><span data-stu-id="f96f1-108">The <xref:System.Windows.Controls.GridViewColumn.HeaderContainerStyle%2A> and <xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A> are only two of several properties that you can use to customize column header appearance for a <xref:System.Windows.Controls.GridView> control.</span></span> <span data-ttu-id="f96f1-109">如需詳細資訊，請參閱 [GridView 資料行標頭樣式和範本概觀](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="f96f1-109">For more information, see [GridView Column Header Styles and Templates Overview](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md).</span></span>  
+ <span data-ttu-id="49b5c-108"><xref:System.Windows.Controls.GridViewColumn.HeaderContainerStyle%2A>和<xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A>只有兩種數個屬性，您可以用來自訂資料行的標頭外觀<xref:System.Windows.Controls.GridView>控制項。</span><span class="sxs-lookup"><span data-stu-id="49b5c-108">The <xref:System.Windows.Controls.GridViewColumn.HeaderContainerStyle%2A> and <xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A> are only two of several properties that you can use to customize column header appearance for a <xref:System.Windows.Controls.GridView> control.</span></span> <span data-ttu-id="49b5c-109">如需詳細資訊，請參閱 [GridView 資料行標頭樣式和範本概觀](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="49b5c-109">For more information, see [GridView Column Header Styles and Templates Overview](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md).</span></span>  
   
- <span data-ttu-id="f96f1-110">下列範例示範如何定義<xref:System.Windows.DataTemplate>之自訂中的資料格的外觀<xref:System.Windows.Controls.GridViewColumn>。</span><span class="sxs-lookup"><span data-stu-id="f96f1-110">The following example shows how to define a <xref:System.Windows.DataTemplate> that customizes the appearance of the cells in a <xref:System.Windows.Controls.GridViewColumn>.</span></span>  
+ <span data-ttu-id="49b5c-110">下列範例示範如何定義<xref:System.Windows.DataTemplate>之自訂中的資料格的外觀<xref:System.Windows.Controls.GridViewColumn>。</span><span class="sxs-lookup"><span data-stu-id="49b5c-110">The following example shows how to define a <xref:System.Windows.DataTemplate> that customizes the appearance of the cells in a <xref:System.Windows.Controls.GridViewColumn>.</span></span>  
   
  [!code-xaml[ListViewTemplate#GridViewCellTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#gridviewcelltemplate)]  
   
- <span data-ttu-id="f96f1-111">下列範例會示範如何使用這個<xref:System.Windows.DataTemplate>來定義的內容<xref:System.Windows.Controls.GridViewColumn>儲存格。</span><span class="sxs-lookup"><span data-stu-id="f96f1-111">The following example shows how to use this <xref:System.Windows.DataTemplate> to define the content of a <xref:System.Windows.Controls.GridViewColumn> cell.</span></span> <span data-ttu-id="f96f1-112">而不是使用此範本<xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A>屬性顯示在舊版<xref:System.Windows.Controls.GridViewColumn>範例。</span><span class="sxs-lookup"><span data-stu-id="f96f1-112">This template is used instead of the <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> property that is shown in the previous <xref:System.Windows.Controls.GridViewColumn> example.</span></span>  
+ <span data-ttu-id="49b5c-111">下列範例會示範如何使用這個<xref:System.Windows.DataTemplate>來定義的內容<xref:System.Windows.Controls.GridViewColumn>儲存格。</span><span class="sxs-lookup"><span data-stu-id="49b5c-111">The following example shows how to use this <xref:System.Windows.DataTemplate> to define the content of a <xref:System.Windows.Controls.GridViewColumn> cell.</span></span> <span data-ttu-id="49b5c-112">而不是使用此範本<xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A>屬性顯示在舊版<xref:System.Windows.Controls.GridViewColumn>範例。</span><span class="sxs-lookup"><span data-stu-id="49b5c-112">This template is used instead of the <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> property that is shown in the previous <xref:System.Windows.Controls.GridViewColumn> example.</span></span>  
   
  [!code-xaml[ListViewTemplate#CellTemplateProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#celltemplateproperty)]  
   
-## <a name="see-also"></a><span data-ttu-id="f96f1-113">請參閱</span><span class="sxs-lookup"><span data-stu-id="f96f1-113">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="49b5c-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="49b5c-113">See Also</span></span>  
  <xref:System.Windows.Controls.ListView>  
  <xref:System.Windows.Controls.GridView>  
- [<span data-ttu-id="f96f1-114">GridView 概觀</span><span class="sxs-lookup"><span data-stu-id="f96f1-114">GridView Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [<span data-ttu-id="f96f1-115">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="f96f1-115">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
- [<span data-ttu-id="f96f1-116">ListView 概觀</span><span class="sxs-lookup"><span data-stu-id="f96f1-116">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)
+ [<span data-ttu-id="49b5c-114">GridView 概觀</span><span class="sxs-lookup"><span data-stu-id="49b5c-114">GridView Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-overview.md)  
+ [<span data-ttu-id="49b5c-115">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="49b5c-115">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [<span data-ttu-id="49b5c-116">ListView 概觀</span><span class="sxs-lookup"><span data-stu-id="49b5c-116">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)

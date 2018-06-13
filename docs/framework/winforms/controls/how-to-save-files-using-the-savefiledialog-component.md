@@ -1,14 +1,6 @@
 ---
 title: 如何：使用 SaveFileDialog 元件儲存檔案
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,38 +11,33 @@ helpviewer_keywords:
 - files [Windows Forms], saving
 - OpenFile method [Windows Forms], saving files with SaveFileDialog component
 ms.assetid: 02e8f409-b83f-4707-babb-e71f6b223d90
-caps.latest.revision: 20
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cace4dcd9aa5eb5d46579044905bbf2e5d755b66
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ca6ca5adbbe20a438ba936778ba71f1a163b40e5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540526"
 ---
-# <a name="how-to-save-files-using-the-savefiledialog-component"></a><span data-ttu-id="fea6b-102">如何：使用 SaveFileDialog 元件儲存檔案</span><span class="sxs-lookup"><span data-stu-id="fea6b-102">How to: Save Files Using the SaveFileDialog Component</span></span>
-<span data-ttu-id="fea6b-103"><xref:System.Windows.Forms.SaveFileDialog>元件可讓使用者瀏覽檔案系統，並選取要儲存檔案。</span><span class="sxs-lookup"><span data-stu-id="fea6b-103">The <xref:System.Windows.Forms.SaveFileDialog> component allows users to browse the file system and select files to be saved.</span></span> <span data-ttu-id="fea6b-104">對話方塊會傳回使用者在對話方塊中所選取之檔案的路徑和名稱。</span><span class="sxs-lookup"><span data-stu-id="fea6b-104">The dialog box returns the path and name of the file the user has selected in the dialog box.</span></span> <span data-ttu-id="fea6b-105">不過，您必須撰寫程式碼，以實際將檔案寫入至磁碟。</span><span class="sxs-lookup"><span data-stu-id="fea6b-105">However, you must write the code to actually write the files to disk.</span></span>  
+# <a name="how-to-save-files-using-the-savefiledialog-component"></a><span data-ttu-id="6f786-102">如何：使用 SaveFileDialog 元件儲存檔案</span><span class="sxs-lookup"><span data-stu-id="6f786-102">How to: Save Files Using the SaveFileDialog Component</span></span>
+<span data-ttu-id="6f786-103"><xref:System.Windows.Forms.SaveFileDialog>元件可讓使用者瀏覽檔案系統，並選取要儲存檔案。</span><span class="sxs-lookup"><span data-stu-id="6f786-103">The <xref:System.Windows.Forms.SaveFileDialog> component allows users to browse the file system and select files to be saved.</span></span> <span data-ttu-id="6f786-104">對話方塊會傳回使用者在對話方塊中所選取之檔案的路徑和名稱。</span><span class="sxs-lookup"><span data-stu-id="6f786-104">The dialog box returns the path and name of the file the user has selected in the dialog box.</span></span> <span data-ttu-id="6f786-105">不過，您必須撰寫程式碼，以實際將檔案寫入至磁碟。</span><span class="sxs-lookup"><span data-stu-id="6f786-105">However, you must write the code to actually write the files to disk.</span></span>  
   
-### <a name="to-save-a-file-using-the-savefiledialog-component"></a><span data-ttu-id="fea6b-106">使用 SaveFileDialog 元件儲存檔案</span><span class="sxs-lookup"><span data-stu-id="fea6b-106">To save a file using the SaveFileDialog component</span></span>  
+### <a name="to-save-a-file-using-the-savefiledialog-component"></a><span data-ttu-id="6f786-106">使用 SaveFileDialog 元件儲存檔案</span><span class="sxs-lookup"><span data-stu-id="6f786-106">To save a file using the SaveFileDialog component</span></span>  
   
--   <span data-ttu-id="fea6b-107">顯示 [儲存檔案] 對話方塊，並呼叫方法來儲存使用者所選取的檔案。</span><span class="sxs-lookup"><span data-stu-id="fea6b-107">Display the **Save File** dialog box and call a method to save the file selected by the user.</span></span>  
+-   <span data-ttu-id="6f786-107">顯示 [儲存檔案] 對話方塊，並呼叫方法來儲存使用者所選取的檔案。</span><span class="sxs-lookup"><span data-stu-id="6f786-107">Display the **Save File** dialog box and call a method to save the file selected by the user.</span></span>  
   
-     <span data-ttu-id="fea6b-108">使用<xref:System.Windows.Forms.SaveFileDialog>元件的<xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A>方法來儲存檔案。</span><span class="sxs-lookup"><span data-stu-id="fea6b-108">Use the <xref:System.Windows.Forms.SaveFileDialog> component's <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> method to save the file.</span></span> <span data-ttu-id="fea6b-109">這個方法可讓您<xref:System.IO.Stream>可以寫入的物件。</span><span class="sxs-lookup"><span data-stu-id="fea6b-109">This method gives you a <xref:System.IO.Stream> object you can write to.</span></span>  
+     <span data-ttu-id="6f786-108">使用<xref:System.Windows.Forms.SaveFileDialog>元件的<xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A>方法來儲存檔案。</span><span class="sxs-lookup"><span data-stu-id="6f786-108">Use the <xref:System.Windows.Forms.SaveFileDialog> component's <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> method to save the file.</span></span> <span data-ttu-id="6f786-109">這個方法可讓您<xref:System.IO.Stream>可以寫入的物件。</span><span class="sxs-lookup"><span data-stu-id="6f786-109">This method gives you a <xref:System.IO.Stream> object you can write to.</span></span>  
   
-     <span data-ttu-id="fea6b-110">使用下列範例<xref:System.Windows.Forms.DialogResult>屬性來取得檔案的名稱和<xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A>方法來儲存檔案。</span><span class="sxs-lookup"><span data-stu-id="fea6b-110">The example below uses the <xref:System.Windows.Forms.DialogResult> property to get the name of the file, and the <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> method to save the file.</span></span> <span data-ttu-id="fea6b-111"><xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A>方法會提供要寫入至檔案資料流。</span><span class="sxs-lookup"><span data-stu-id="fea6b-111">The <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> method gives you a stream to write the file to.</span></span>  
+     <span data-ttu-id="6f786-110">使用下列範例<xref:System.Windows.Forms.DialogResult>屬性來取得檔案的名稱和<xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A>方法來儲存檔案。</span><span class="sxs-lookup"><span data-stu-id="6f786-110">The example below uses the <xref:System.Windows.Forms.DialogResult> property to get the name of the file, and the <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> method to save the file.</span></span> <span data-ttu-id="6f786-111"><xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A>方法會提供要寫入至檔案資料流。</span><span class="sxs-lookup"><span data-stu-id="6f786-111">The <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> method gives you a stream to write the file to.</span></span>  
   
-     <span data-ttu-id="fea6b-112">在下列範例中，沒有<xref:System.Windows.Forms.Button>控制指派給它的映像。</span><span class="sxs-lookup"><span data-stu-id="fea6b-112">In the example below, there is a <xref:System.Windows.Forms.Button> control with an image assigned to it.</span></span> <span data-ttu-id="fea6b-113">當您按一下按鈕，<xref:System.Windows.Forms.SaveFileDialog>元件具現化且允許型別.gif、.jpeg、.bmp 檔案的篩選條件。</span><span class="sxs-lookup"><span data-stu-id="fea6b-113">When you click the button, a <xref:System.Windows.Forms.SaveFileDialog> component is instantiated with a filter that allows files of type .gif, .jpeg, and .bmp.</span></span> <span data-ttu-id="fea6b-114">如果在 [儲存檔案] 對話方塊中選取這類型的檔案，則會儲存按鈕的影像。</span><span class="sxs-lookup"><span data-stu-id="fea6b-114">If a file of this type is selected in the Save File dialog box, the button's image is saved.</span></span>  
+     <span data-ttu-id="6f786-112">在下列範例中，沒有<xref:System.Windows.Forms.Button>控制指派給它的映像。</span><span class="sxs-lookup"><span data-stu-id="6f786-112">In the example below, there is a <xref:System.Windows.Forms.Button> control with an image assigned to it.</span></span> <span data-ttu-id="6f786-113">當您按一下按鈕，<xref:System.Windows.Forms.SaveFileDialog>元件具現化且允許型別.gif、.jpeg、.bmp 檔案的篩選條件。</span><span class="sxs-lookup"><span data-stu-id="6f786-113">When you click the button, a <xref:System.Windows.Forms.SaveFileDialog> component is instantiated with a filter that allows files of type .gif, .jpeg, and .bmp.</span></span> <span data-ttu-id="6f786-114">如果在 [儲存檔案] 對話方塊中選取這類型的檔案，則會儲存按鈕的影像。</span><span class="sxs-lookup"><span data-stu-id="6f786-114">If a file of this type is selected in the Save File dialog box, the button's image is saved.</span></span>  
   
     > [!IMPORTANT]
-    >  <span data-ttu-id="fea6b-115">取得或設定<xref:System.Windows.Forms.FileDialog.FileName%2A>屬性，您的組件需要權限層級授與由<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>類別。</span><span class="sxs-lookup"><span data-stu-id="fea6b-115">To get or set the <xref:System.Windows.Forms.FileDialog.FileName%2A> property, your assembly requires a privilege level granted by the <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="fea6b-116">若在部分信任內容中執行，程序可能會因為權限不足而擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="fea6b-116">If you are running in a partial-trust context, the process might throw an exception due to insufficient privileges.</span></span> <span data-ttu-id="fea6b-117">如需詳細資訊，請參閱[程式碼存取安全性基本概念](../../../../docs/framework/misc/code-access-security-basics.md)。</span><span class="sxs-lookup"><span data-stu-id="fea6b-117">For more information, see [Code Access Security Basics](../../../../docs/framework/misc/code-access-security-basics.md).</span></span>  
+    >  <span data-ttu-id="6f786-115">取得或設定<xref:System.Windows.Forms.FileDialog.FileName%2A>屬性，您的組件需要權限層級授與由<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>類別。</span><span class="sxs-lookup"><span data-stu-id="6f786-115">To get or set the <xref:System.Windows.Forms.FileDialog.FileName%2A> property, your assembly requires a privilege level granted by the <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="6f786-116">若在部分信任內容中執行，程序可能會因為權限不足而擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="6f786-116">If you are running in a partial-trust context, the process might throw an exception due to insufficient privileges.</span></span> <span data-ttu-id="6f786-117">如需詳細資訊，請參閱[程式碼存取安全性基本概念](../../../../docs/framework/misc/code-access-security-basics.md)。</span><span class="sxs-lookup"><span data-stu-id="6f786-117">For more information, see [Code Access Security Basics](../../../../docs/framework/misc/code-access-security-basics.md).</span></span>  
   
-     <span data-ttu-id="fea6b-118">這個範例假設您的表單具有<xref:System.Windows.Forms.Button>用來控制其<xref:System.Windows.Forms.ButtonBase.Image%2A>屬性設定為型別.gif、.jpeg 或.bmp 檔案。</span><span class="sxs-lookup"><span data-stu-id="fea6b-118">The example assumes your form has a <xref:System.Windows.Forms.Button> control with its <xref:System.Windows.Forms.ButtonBase.Image%2A> property set to a file of type .gif, .jpeg, or .bmp.</span></span>  
+     <span data-ttu-id="6f786-118">這個範例假設您的表單具有<xref:System.Windows.Forms.Button>用來控制其<xref:System.Windows.Forms.ButtonBase.Image%2A>屬性設定為型別.gif、.jpeg 或.bmp 檔案。</span><span class="sxs-lookup"><span data-stu-id="6f786-118">The example assumes your form has a <xref:System.Windows.Forms.Button> control with its <xref:System.Windows.Forms.ButtonBase.Image%2A> property set to a file of type .gif, .jpeg, or .bmp.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="fea6b-119"><xref:System.Windows.Forms.FileDialog>類別的<xref:System.Windows.Forms.FileDialog.FilterIndex%2A>屬性 (即繼承，因為屬於<xref:System.Windows.Forms.SaveFileDialog>類別) 會使用 1 為基底的索引。</span><span class="sxs-lookup"><span data-stu-id="fea6b-119">The <xref:System.Windows.Forms.FileDialog> class's <xref:System.Windows.Forms.FileDialog.FilterIndex%2A> property (which, due to inheritance, is part of the <xref:System.Windows.Forms.SaveFileDialog> class) uses a one-based index.</span></span> <span data-ttu-id="fea6b-120">如果您要撰寫程式碼，以特定格式來儲存資料 (例如，以純文字與二進位格式儲存檔案)，則這十分重要。</span><span class="sxs-lookup"><span data-stu-id="fea6b-120">This is important if you are writing code to save data in a specific format (for example, saving a file in plain text versus binary format).</span></span> <span data-ttu-id="fea6b-121">下列範例具有這個屬性。</span><span class="sxs-lookup"><span data-stu-id="fea6b-121">This property is featured in the example below.</span></span>  
+    >  <span data-ttu-id="6f786-119"><xref:System.Windows.Forms.FileDialog>類別的<xref:System.Windows.Forms.FileDialog.FilterIndex%2A>屬性 (即繼承，因為屬於<xref:System.Windows.Forms.SaveFileDialog>類別) 會使用 1 為基底的索引。</span><span class="sxs-lookup"><span data-stu-id="6f786-119">The <xref:System.Windows.Forms.FileDialog> class's <xref:System.Windows.Forms.FileDialog.FilterIndex%2A> property (which, due to inheritance, is part of the <xref:System.Windows.Forms.SaveFileDialog> class) uses a one-based index.</span></span> <span data-ttu-id="6f786-120">如果您要撰寫程式碼，以特定格式來儲存資料 (例如，以純文字與二進位格式儲存檔案)，則這十分重要。</span><span class="sxs-lookup"><span data-stu-id="6f786-120">This is important if you are writing code to save data in a specific format (for example, saving a file in plain text versus binary format).</span></span> <span data-ttu-id="6f786-121">下列範例具有這個屬性。</span><span class="sxs-lookup"><span data-stu-id="6f786-121">This property is featured in the example below.</span></span>  
   
     ```vb  
     Private Sub Button2_Click(ByVal sender As System.Object, _  
@@ -174,7 +161,7 @@ ms.lasthandoff: 04/26/2018
        }  
     ```  
   
-     <span data-ttu-id="fea6b-122">(Visual C# 和[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 下列程式碼置於表單的建構函式，以註冊事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="fea6b-122">(Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="6f786-122">(Visual C# 和[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 下列程式碼置於表單的建構函式，以註冊事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="6f786-122">(Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.button2.Click += new System.EventHandler(this.button2_Click);  
@@ -185,11 +172,11 @@ ms.lasthandoff: 04/26/2018
        System::EventHandler(this, &Form1::button2_Click);  
     ```  
   
-     <span data-ttu-id="fea6b-123">如需寫入檔案資料流的詳細資訊，請參閱<xref:System.IO.FileStream.BeginWrite%2A>和<xref:System.IO.FileStream.Write%2A>。</span><span class="sxs-lookup"><span data-stu-id="fea6b-123">For more information about writing file streams, see <xref:System.IO.FileStream.BeginWrite%2A> and <xref:System.IO.FileStream.Write%2A>.</span></span>  
+     <span data-ttu-id="6f786-123">如需寫入檔案資料流的詳細資訊，請參閱<xref:System.IO.FileStream.BeginWrite%2A>和<xref:System.IO.FileStream.Write%2A>。</span><span class="sxs-lookup"><span data-stu-id="6f786-123">For more information about writing file streams, see <xref:System.IO.FileStream.BeginWrite%2A> and <xref:System.IO.FileStream.Write%2A>.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="fea6b-124">特定控制項，例如<xref:System.Windows.Forms.RichTextBox>控制，能夠儲存檔案。</span><span class="sxs-lookup"><span data-stu-id="fea6b-124">Certain controls, such as the <xref:System.Windows.Forms.RichTextBox> control, have the ability to save files.</span></span> <span data-ttu-id="fea6b-125">如需詳細資訊，請參閱 MSDN Online Library 技術文件 [Essential Code for Windows Forms Dialog Boxes](http://go.microsoft.com/fwlink/?LinkID=102575) (Windows Forms 對話方塊的基本程式碼) 的＜SaveFileDialog 元件＞一節。</span><span class="sxs-lookup"><span data-stu-id="fea6b-125">For more information, see the "SaveFileDialog Component" section of the MSDN Online Library technical article, [Essential Code for Windows Forms Dialog Boxes](http://go.microsoft.com/fwlink/?LinkID=102575).</span></span>  
+    >  <span data-ttu-id="6f786-124">特定控制項，例如<xref:System.Windows.Forms.RichTextBox>控制，能夠儲存檔案。</span><span class="sxs-lookup"><span data-stu-id="6f786-124">Certain controls, such as the <xref:System.Windows.Forms.RichTextBox> control, have the ability to save files.</span></span> <span data-ttu-id="6f786-125">如需詳細資訊，請參閱 MSDN Online Library 技術文件 [Essential Code for Windows Forms Dialog Boxes](http://go.microsoft.com/fwlink/?LinkID=102575) (Windows Forms 對話方塊的基本程式碼) 的＜SaveFileDialog 元件＞一節。</span><span class="sxs-lookup"><span data-stu-id="6f786-125">For more information, see the "SaveFileDialog Component" section of the MSDN Online Library technical article, [Essential Code for Windows Forms Dialog Boxes](http://go.microsoft.com/fwlink/?LinkID=102575).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fea6b-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fea6b-126">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="6f786-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6f786-126">See Also</span></span>  
  <xref:System.Windows.Forms.SaveFileDialog>  
- [<span data-ttu-id="fea6b-127">SaveFileDialog 元件</span><span class="sxs-lookup"><span data-stu-id="fea6b-127">SaveFileDialog Component</span></span>](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)
+ [<span data-ttu-id="6f786-127">SaveFileDialog 元件</span><span class="sxs-lookup"><span data-stu-id="6f786-127">SaveFileDialog Component</span></span>](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)

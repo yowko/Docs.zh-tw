@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389503"
 ---
 # <a name="mitigation-path-normalization"></a><span data-ttu-id="c4e3d-102">風險降低︰路徑正規化</span><span class="sxs-lookup"><span data-stu-id="c4e3d-102">Mitigation: Path Normalization</span></span>
 <span data-ttu-id="c4e3d-103">從以 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 為目標的應用程式開始，.NET Framework 中的路徑正規化已有所變更。</span><span class="sxs-lookup"><span data-stu-id="c4e3d-103">Starting with apps the target  the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], path normalization in the .NET Framework has changed.</span></span>  

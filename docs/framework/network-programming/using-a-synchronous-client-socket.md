@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397698"
 ---
 # <a name="using-a-synchronous-client-socket"></a><span data-ttu-id="4fc84-102">使用同步用戶端通訊端</span><span class="sxs-lookup"><span data-stu-id="4fc84-102">Using a Synchronous Client Socket</span></span>
 <span data-ttu-id="4fc84-103">在網路作業完成時，同步用戶端通訊端會暫止應用程式。</span><span class="sxs-lookup"><span data-stu-id="4fc84-103">A synchronous client socket suspends the application program while the network operation completes.</span></span> <span data-ttu-id="4fc84-104">同步通訊端不適用於大量使用網路以進行作業的應用程式，但它們可以啟用其他應用程式的網路服務簡單存取。</span><span class="sxs-lookup"><span data-stu-id="4fc84-104">Synchronous sockets are not suitable for applications that make heavy use of the network for their operation, but they can enable simple access to network services for other applications.</span></span>  

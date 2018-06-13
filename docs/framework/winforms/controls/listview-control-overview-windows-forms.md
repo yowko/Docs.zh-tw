@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540669"
 ---
 # <a name="listview-control-overview-windows-forms"></a><span data-ttu-id="092f0-102">ListView 控制項概觀 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="092f0-102">ListView Control Overview (Windows Forms)</span></span>
 <span data-ttu-id="092f0-103">Windows Form <xref:System.Windows.Forms.ListView> 控制項顯示具有圖示的項目清單。</span><span class="sxs-lookup"><span data-stu-id="092f0-103">The Windows Forms <xref:System.Windows.Forms.ListView> control displays a list of items with icons.</span></span> <span data-ttu-id="092f0-104">若要建立像 Windows 檔案總管右窗格的使用者介面，您可以使用清單檢視。</span><span class="sxs-lookup"><span data-stu-id="092f0-104">You can use a list view to create a user interface like the right pane of Windows Explorer.</span></span> <span data-ttu-id="092f0-105">控制項有四個檢視模式： 使用 LargeIcon、 SmallIcon、 清單和詳細資料。</span><span class="sxs-lookup"><span data-stu-id="092f0-105">The control has four view modes: LargeIcon, SmallIcon, List, and Details.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408742"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a><span data-ttu-id="cd198-102">Regasm.exe (組件登錄工具)</span><span class="sxs-lookup"><span data-stu-id="cd198-102">Regasm.exe (Assembly Registration Tool)</span></span>
 <span data-ttu-id="cd198-103">組件註冊工具會讀取組件內的中繼資料，並將必要的項目加入至登錄，這樣可讓 COM 用戶端順利地建立 .NET Framework 類別。</span><span class="sxs-lookup"><span data-stu-id="cd198-103">The Assembly Registration tool reads the metadata within an assembly and adds the necessary entries to the registry, which allows COM clients to create .NET Framework classes transparently.</span></span> <span data-ttu-id="cd198-104">註冊類別之後，任何 COM 用戶端都可以將它當做 COM 類別使用。</span><span class="sxs-lookup"><span data-stu-id="cd198-104">Once a class is registered, any COM client can use it as though the class were a COM class.</span></span> <span data-ttu-id="cd198-105">類別只會在安裝組件時註冊一次。</span><span class="sxs-lookup"><span data-stu-id="cd198-105">The class is registered only once, when the assembly is installed.</span></span> <span data-ttu-id="cd198-106">在實際註冊類別之後，才能從 COM 建立組件內類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="cd198-106">Instances of classes within the assembly cannot be created from COM until they are actually registered.</span></span>  
