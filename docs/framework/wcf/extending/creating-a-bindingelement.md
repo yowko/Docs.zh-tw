@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807185"
 ---
 # <a name="creating-a-bindingelement"></a>建立 BindingElement
 繫結和繫結項目 (延伸的物件<xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType>和<xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>分別) 是 Windows Communication Foundation (WCF) 應用程式模型所在的通道處理站和通道接聽程式相關聯的位置。 不繫結，使用自訂通道，需要在通道層級的程式設計中所述[服務通道層級程式設計](../../../../docs/framework/wcf/extending/service-channel-level-programming.md)和[用戶端通道層級程式設計](../../../../docs/framework/wcf/extending/client-channel-level-programming.md)。 本主題討論的最低需求，以便使用您的通道在 WCF 中，開發<xref:System.ServiceModel.Channels.BindingElement>為您的通道，並從應用程式的步驟 4 中所述的啟用使用[開發通道](../../../../docs/framework/wcf/extending/developing-channels.md)。  

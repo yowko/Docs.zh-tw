@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807315"
 ---
 # <a name="using-performance-counters"></a>使用效能計數器
 這個範例會示範如何存取 Windows Communication Foundation (WCF) 的效能計數器，以及如何建立使用者定義的效能計數器。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/07/2018
   
 ### <a name="to-view-performance-data"></a>若要檢視效能資料  
   
-1.  按一下啟動效能監視器] 工具**啟動**，**執行...**，輸入`perfmon`按一下 **[確定]，**或從 [控制台]，選取 [**系統管理工具**按兩下**效能**。  
+1.  按一下啟動效能監視器] 工具**啟動**，**執行...**，輸入`perfmon`按一下 **[確定]，** 或從 [控制台]，選取 [**系統管理工具**按兩下**效能**。  
   
     > [!NOTE]
     >  在範例程式碼執行後才能新增計數器。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805586"
 ---
 # <a name="advanced-format-selection"></a>進階格式選取
 這個範例示範如何擴充以支援新的傳出回應格式的 Windows Communication Foundation (WCF) REST 程式設計模型。 此外，這個範例使用 T4 範本將回應當做 XHTML 頁面傳回，示範如何實作檢視樣式程式設計模型。  

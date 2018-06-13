@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803665"
 ---
 # <a name="guidelines-and-best-practices"></a>方針及最佳作法
 本節將提供指導方針建立 Windows Communication Foundation (WCF) 應用程式的主題。  

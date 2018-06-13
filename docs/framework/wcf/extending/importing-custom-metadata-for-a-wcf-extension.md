@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806857"
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>匯入 WCF 擴充的自訂中繼資料
 在 Windows Communication Foundation (WCF) 中，中繼資料匯入是從它的中繼資料產生服務或其元件部分的抽象表示法的程序。 例如，可以匯入 WCF<xref:System.ServiceModel.Description.ServiceEndpoint>執行個體，<xref:System.ServiceModel.Channels.Binding>執行個體或<xref:System.ServiceModel.Description.ContractDescription>服務的執行個體從 WSDL 文件。 若要匯入 WCF 服務中繼資料，請使用 實作<xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType>抽象類別。 型別衍生自<xref:System.ServiceModel.Description.MetadataImporter>類別會實作支援匯入中繼資料格式以利用 WS 原則匯入 WCF 中的邏輯。  

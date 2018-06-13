@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809514"
 ---
 # <a name="soap-and-http-endpoints"></a>SOAP 及 HTTP 端點
 這個範例示範如何實作以 RPC 為基礎的服務，並將它公開在 SOAP 格式和"Plain Old XML"(POX) 格式使用 WCF Web 程式設計模型。 請參閱[基本 HTTP 服務](../../../../docs/framework/wcf/samples/basic-http-service.md)服務的 HTTP 繫結的更多詳細的範例。 這個範例的重點在於，使用不同繫結透過 SOAP 和 HTTP 公開相同服務的相關詳細資料。  

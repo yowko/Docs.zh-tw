@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807657"
 ---
 # <a name="trusted-facade-service"></a>信任的外觀服務
 這個案例範例示範如何呼叫者的身分識別資訊從一項服務之間使用 Windows Communication Foundation (WCF) 安全性基礎結構。  

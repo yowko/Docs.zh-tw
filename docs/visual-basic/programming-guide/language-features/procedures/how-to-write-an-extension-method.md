@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648729"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>如何：撰寫擴充方法 (Visual Basic)
 擴充方法可讓您將方法加入至現有的類別。 可以呼叫擴充方法，就好像該類別的執行個體。  

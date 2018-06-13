@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652373"
 ---
 # <a name="parameter-arrays-visual-basic"></a>參數陣列 (Visual Basic)
 通常，您無法呼叫具有多個引數數目比程序宣告指定的程序。 當您需要了不定數量的引數時，您可以宣告*參數陣列*，可讓程序以接受的參數值陣列。 您不必知道參數陣列中的項目數，當您定義的程序。 陣列大小取決於個別的程序的每個呼叫。  

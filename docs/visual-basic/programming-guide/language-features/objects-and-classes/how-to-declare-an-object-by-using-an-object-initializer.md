@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649161"
 ---
 # <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>如何：使用物件初始設定式宣告物件 (Visual Basic)
 物件初始設定式可讓您宣告並具現化類別，以在單一陳述式的執行個體。 此外，您可以在相同的時間初始化執行個體的一或多個的成員，而不叫用的參數化建構函式。  

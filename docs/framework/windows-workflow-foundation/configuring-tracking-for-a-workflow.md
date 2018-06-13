@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809699"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>設定工作流程的追蹤
 工作流程可透過三種方法執行：  

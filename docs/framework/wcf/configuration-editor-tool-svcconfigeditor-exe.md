@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809871"
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>組態編輯器工具 (SvcConfigEditor.exe)
 Windows Communication Foundation (WCF) 服務組態編輯器 (SvcConfigEditor.exe) 可讓系統管理員和開發人員使用圖形化使用者介面建立並修改 WCF 服務的組態設定。 有了這項工具，您可以管理 WCF 繫結、行為、服務及診斷的設定，而不用直接編輯 XML 組態檔。  

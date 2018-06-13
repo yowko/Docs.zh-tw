@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809754"
 ---
 # <a name="activity-list"></a>活動清單
 本主題列出 Windows Communication Foundation (WCF) 所定義的所有活動。  

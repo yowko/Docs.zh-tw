@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649148"
 ---
 # <a name="how-to-access-characters-in-strings-in-visual-basic"></a>如何：在 Visual Basic 中存取字串中的字元
 這個範例示範如何使用<xref:System.String.Chars%2A>屬性來存取字串中指定位置處的字元。  

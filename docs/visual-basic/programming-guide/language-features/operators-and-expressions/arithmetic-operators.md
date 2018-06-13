@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655580"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Visual Basic 的算術運算子
 算術運算子可用來執行許多熟悉的算術運算涉及數值常值、 變數、 其他運算式、 函式和屬性呼叫和常數所代表的計算。 搭配算術運算子也分類為位元移位運算子會在一個運算元的個別位元層級執行動作，並向左或向右移位的位元模式。  

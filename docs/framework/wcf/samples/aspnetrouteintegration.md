@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804400"
 ---
 # <a name="aspnetrouteintegration"></a>AspNetRouteIntegration
 這個範例示範如何將服務裝載於 Windows Communication Foundation (WCF) 的其餘部分使用 ASP.NET 路由。 [基本資源服務](../../../../docs/framework/wcf/samples/basic-resource-service.md)範例示範此案例中的自我裝載的版本，並討論深度的服務實作。 本主題著重在 ASP.NET 整合功能。 如需 ASP.NET 路由的詳細資訊，請參閱<xref:System.Web.Routing>。  

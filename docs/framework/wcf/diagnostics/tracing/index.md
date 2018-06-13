@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809312"
 ---
 # <a name="tracing"></a>追蹤
 Windows Communication Foundation (WCF) 提供應用程式檢測與診斷資料錯誤監視與分析。 您可以不使用偵錯工具而改用追蹤，以了解應用程式行為以及發生錯誤的原因。 您也可以將各元件的錯誤與處理相互關聯，以提供端對端的經驗。  

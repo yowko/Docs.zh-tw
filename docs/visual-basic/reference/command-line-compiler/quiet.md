@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652392"
 ---
 # <a name="-quiet"></a>-quiet
 防止編譯器顯示語法相關錯誤和警告的程式碼。  

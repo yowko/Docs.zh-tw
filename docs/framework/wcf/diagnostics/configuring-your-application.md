@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803646"
 ---
 # <a name="configuring-your-application"></a>設定您的應用程式
 Windows Communication Foundation (WCF) 會使用.NET 組態系統，並可讓您設定服務在電腦和應用程式的範圍。  

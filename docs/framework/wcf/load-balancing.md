@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807521"
 ---
 # <a name="load-balancing"></a>負載平衡
 以增加容量的 Windows Communication Foundation (WCF) 應用程式的方法之一是調整排除這些程式部署到負載平衡的伺服器陣列。 WCF 應用程式可以進行負載平衡使用標準負載平衡技術，包括 Windows 網路負載平衡等軟體負載平衡器，以及硬體架構的負載平衡裝置。  
