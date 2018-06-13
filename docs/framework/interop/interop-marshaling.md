@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395365"
 ---
 # <a name="interop-marshaling"></a><span data-ttu-id="2d096-102">Interop 封送處理</span><span class="sxs-lookup"><span data-stu-id="2d096-102">Interop Marshaling</span></span>
 <a name="top"></a> <span data-ttu-id="2d096-103">Interop 封送處理會控制如何以方法引數傳遞資料，以及控制呼叫期間於 Managed 和 Unmanaged 記憶體之間的傳回值。</span><span class="sxs-lookup"><span data-stu-id="2d096-103">Interop marshaling governs how data is passed in method arguments and return values between managed and unmanaged memory during calls.</span></span> <span data-ttu-id="2d096-104">Interop 封送處理是由 Common Language Runtime 的封送處理服務所執行的執行階段活動。</span><span class="sxs-lookup"><span data-stu-id="2d096-104">Interop marshaling is a run-time activity performed by the common language runtime's marshaling service.</span></span>  

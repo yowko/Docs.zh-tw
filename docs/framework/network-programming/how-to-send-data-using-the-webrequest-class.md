@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394653"
 ---
 # <a name="how-to-send-data-using-the-webrequest-class"></a><span data-ttu-id="f5cb8-102">如何：使用 WebRequest 類別傳送資料</span><span class="sxs-lookup"><span data-stu-id="f5cb8-102">How to: Send Data Using the WebRequest Class</span></span>
 <span data-ttu-id="f5cb8-103">下列程序描述用來將資料傳送到伺服器的步驟。</span><span class="sxs-lookup"><span data-stu-id="f5cb8-103">The following procedure describes the steps used to send data to a server.</span></span> <span data-ttu-id="f5cb8-104">本程序通常用於在網頁上張貼資料。</span><span class="sxs-lookup"><span data-stu-id="f5cb8-104">This procedure is commonly used to post data to a Web page.</span></span>  

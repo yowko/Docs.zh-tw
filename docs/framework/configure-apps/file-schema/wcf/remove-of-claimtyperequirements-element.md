@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753237"
 ---
 # <a name="ltremovegt-of-ltclaimtyperequirementsgt-element"></a><span data-ttu-id="d3089-102">&lt;claimTypeRequirements&gt; 項目的 &lt;remove&gt;</span><span class="sxs-lookup"><span data-stu-id="d3089-102">&lt;remove&gt; of &lt;claimTypeRequirements&gt; element</span></span>
 <span data-ttu-id="d3089-103">指定聯合認證中要移除的宣告型別。</span><span class="sxs-lookup"><span data-stu-id="d3089-103">Specifies the types of claims to be removed in the federated credential.</span></span>  

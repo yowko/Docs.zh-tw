@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugThread::EnumerateChains 方法"
-ms.custom: 
+title: ICorDebugThread::EnumerateChains 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugThread.EnumerateChains
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: ec00bc21-117e-4acd-9301-2cfafd5be8d3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8e6a9637edb4a846b4d10dd6565533a9219ad558
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: caeb60c33580f7171a6959c3046cf7312868851b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420550"
 ---
-# <a name="icordebugthreadenumeratechains-method"></a><span data-ttu-id="f807d-102">ICorDebugThread::EnumerateChains 方法</span><span class="sxs-lookup"><span data-stu-id="f807d-102">ICorDebugThread::EnumerateChains Method</span></span>
-<span data-ttu-id="f807d-103">ICorDebugChainEnum 列舉值，其中包含這個 ICorDebugThread 物件中的所有堆疊鏈結中取得的介面指標。</span><span class="sxs-lookup"><span data-stu-id="f807d-103">Gets an interface pointer to an ICorDebugChainEnum enumerator that contains all the stack chains in this ICorDebugThread object.</span></span>  
+# <a name="icordebugthreadenumeratechains-method"></a><span data-ttu-id="b5ba4-102">ICorDebugThread::EnumerateChains 方法</span><span class="sxs-lookup"><span data-stu-id="b5ba4-102">ICorDebugThread::EnumerateChains Method</span></span>
+<span data-ttu-id="b5ba4-103">ICorDebugChainEnum 列舉值，其中包含這個 ICorDebugThread 物件中的所有堆疊鏈結中取得的介面指標。</span><span class="sxs-lookup"><span data-stu-id="b5ba4-103">Gets an interface pointer to an ICorDebugChainEnum enumerator that contains all the stack chains in this ICorDebugThread object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f807d-104">語法</span><span class="sxs-lookup"><span data-stu-id="f807d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b5ba4-104">語法</span><span class="sxs-lookup"><span data-stu-id="b5ba4-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumerateChains (  
@@ -46,28 +35,28 @@ HRESULT EnumerateChains (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f807d-105">參數</span><span class="sxs-lookup"><span data-stu-id="f807d-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="b5ba4-105">參數</span><span class="sxs-lookup"><span data-stu-id="b5ba4-105">Parameters</span></span>  
  `ppChains`  
- <span data-ttu-id="f807d-106">[out]位址指標`ICorDebugChainEnum`鏈結這個執行緒開始作用中 （也就是最新的） 鏈結中的物件，可讓所有堆疊的列舉。</span><span class="sxs-lookup"><span data-stu-id="f807d-106">[out] A pointer to the address of an `ICorDebugChainEnum` object that allows enumeration of all the stack chains in this thread, starting at the active (that is, the most recent) chain.</span></span>  
+ <span data-ttu-id="b5ba4-106">[out]位址指標`ICorDebugChainEnum`鏈結這個執行緒開始作用中 （也就是最新的） 鏈結中的物件，可讓所有堆疊的列舉。</span><span class="sxs-lookup"><span data-stu-id="b5ba4-106">[out] A pointer to the address of an `ICorDebugChainEnum` object that allows enumeration of all the stack chains in this thread, starting at the active (that is, the most recent) chain.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f807d-107">備註</span><span class="sxs-lookup"><span data-stu-id="f807d-107">Remarks</span></span>  
- <span data-ttu-id="f807d-108">堆疊鏈結代表執行緒的實際呼叫堆疊。</span><span class="sxs-lookup"><span data-stu-id="f807d-108">The stack chain represents the physical call stack for the thread.</span></span> <span data-ttu-id="f807d-109">在下列情況下建立堆疊鏈結界限：</span><span class="sxs-lookup"><span data-stu-id="f807d-109">The following circumstances create a stack chain boundary:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b5ba4-107">備註</span><span class="sxs-lookup"><span data-stu-id="b5ba4-107">Remarks</span></span>  
+ <span data-ttu-id="b5ba4-108">堆疊鏈結代表執行緒的實際呼叫堆疊。</span><span class="sxs-lookup"><span data-stu-id="b5ba4-108">The stack chain represents the physical call stack for the thread.</span></span> <span data-ttu-id="b5ba4-109">在下列情況下建立堆疊鏈結界限：</span><span class="sxs-lookup"><span data-stu-id="b5ba4-109">The following circumstances create a stack chain boundary:</span></span>  
   
--   <span data-ttu-id="f807d-110">管理至 unmanaged 或 unmanaged--受管理的轉換。</span><span class="sxs-lookup"><span data-stu-id="f807d-110">A managed-to-unmanaged or unmanaged-to-managed transition.</span></span>  
+-   <span data-ttu-id="b5ba4-110">管理至 unmanaged 或 unmanaged--受管理的轉換。</span><span class="sxs-lookup"><span data-stu-id="b5ba4-110">A managed-to-unmanaged or unmanaged-to-managed transition.</span></span>  
   
--   <span data-ttu-id="f807d-111">內容切換。</span><span class="sxs-lookup"><span data-stu-id="f807d-111">A context switch.</span></span>  
+-   <span data-ttu-id="b5ba4-111">內容切換。</span><span class="sxs-lookup"><span data-stu-id="b5ba4-111">A context switch.</span></span>  
   
--   <span data-ttu-id="f807d-112">A 劫持使用者執行緒偵錯工具。</span><span class="sxs-lookup"><span data-stu-id="f807d-112">A debugger hijacking of a user thread.</span></span>  
+-   <span data-ttu-id="b5ba4-112">A 劫持使用者執行緒偵錯工具。</span><span class="sxs-lookup"><span data-stu-id="b5ba4-112">A debugger hijacking of a user thread.</span></span>  
   
- <span data-ttu-id="f807d-113">簡單案例中的單一內容中執行純粹是 managed 程式碼的執行緒，執行緒與堆疊鏈結之間會有一對一的對應。</span><span class="sxs-lookup"><span data-stu-id="f807d-113">In the simple case for a thread that is running purely managed code in a single context, a one-to-one correspondence will exist between threads and stack chains.</span></span>  
+ <span data-ttu-id="b5ba4-113">簡單案例中的單一內容中執行純粹是 managed 程式碼的執行緒，執行緒與堆疊鏈結之間會有一對一的對應。</span><span class="sxs-lookup"><span data-stu-id="b5ba4-113">In the simple case for a thread that is running purely managed code in a single context, a one-to-one correspondence will exist between threads and stack chains.</span></span>  
   
- <span data-ttu-id="f807d-114">偵錯工具可能想要重新排列成邏輯呼叫堆疊的所有執行緒的實際呼叫堆疊。</span><span class="sxs-lookup"><span data-stu-id="f807d-114">A debugger may want to rearrange the physical call stacks of all threads into logical call stacks.</span></span> <span data-ttu-id="f807d-115">這會牽涉到排序依據其呼叫端/被呼叫端的關聯性的所有執行緒的鏈結，並且重新分組。</span><span class="sxs-lookup"><span data-stu-id="f807d-115">This would involve sorting all the threads' chains by their caller/callee relationships and regrouping them.</span></span>  
+ <span data-ttu-id="b5ba4-114">偵錯工具可能想要重新排列成邏輯呼叫堆疊的所有執行緒的實際呼叫堆疊。</span><span class="sxs-lookup"><span data-stu-id="b5ba4-114">A debugger may want to rearrange the physical call stacks of all threads into logical call stacks.</span></span> <span data-ttu-id="b5ba4-115">這會牽涉到排序依據其呼叫端/被呼叫端的關聯性的所有執行緒的鏈結，並且重新分組。</span><span class="sxs-lookup"><span data-stu-id="b5ba4-115">This would involve sorting all the threads' chains by their caller/callee relationships and regrouping them.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f807d-116">需求</span><span class="sxs-lookup"><span data-stu-id="f807d-116">Requirements</span></span>  
- <span data-ttu-id="f807d-117">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f807d-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b5ba4-116">需求</span><span class="sxs-lookup"><span data-stu-id="b5ba4-116">Requirements</span></span>  
+ <span data-ttu-id="b5ba4-117">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b5ba4-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f807d-118">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f807d-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b5ba4-118">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b5ba4-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f807d-119">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f807d-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b5ba4-119">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b5ba4-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f807d-120">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f807d-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="b5ba4-120">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b5ba4-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

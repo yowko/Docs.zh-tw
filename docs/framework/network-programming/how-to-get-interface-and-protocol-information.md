@@ -1,31 +1,23 @@
 ---
-title: "如何：取得介面和通訊協定資訊"
-ms.custom: 
+title: 如何：取得介面和通訊協定資訊
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Network
 ms.assetid: fd88d26c-4063-495e-a253-736ac3e6b23f
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 20bee2f0d6821c8abec08231e9ab0b8fdb211854
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 6c793f98e25c22ecb34b8aa8deb185048a08a1f9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395082"
 ---
-# <a name="how-to-get-interface-and-protocol-information"></a><span data-ttu-id="9918d-102">如何：取得介面和通訊協定資訊</span><span class="sxs-lookup"><span data-stu-id="9918d-102">How to: Get Interface and Protocol Information</span></span>
-<span data-ttu-id="9918d-103">這個範例示範如何讀取網路介面的 TCP 統計資料。</span><span class="sxs-lookup"><span data-stu-id="9918d-103">This sample shows how to read the TCP statistics of a network interface.</span></span>  
+# <a name="how-to-get-interface-and-protocol-information"></a><span data-ttu-id="536f8-102">如何：取得介面和通訊協定資訊</span><span class="sxs-lookup"><span data-stu-id="536f8-102">How to: Get Interface and Protocol Information</span></span>
+<span data-ttu-id="536f8-103">這個範例示範如何讀取網路介面的 TCP 統計資料。</span><span class="sxs-lookup"><span data-stu-id="536f8-103">This sample shows how to read the TCP statistics of a network interface.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9918d-104">範例</span><span class="sxs-lookup"><span data-stu-id="9918d-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="536f8-104">範例</span><span class="sxs-lookup"><span data-stu-id="536f8-104">Example</span></span>  
   
 ```  
 public static void ShowTcpStatistics(NetworkInterfaceComponent version)  
@@ -80,7 +72,7 @@ public static void ShowTcpStatistics(NetworkInterfaceComponent version)
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="9918d-105">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="9918d-105">Compiling the Code</span></span>  
- <span data-ttu-id="9918d-106">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="9918d-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="536f8-105">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="536f8-105">Compiling the Code</span></span>  
+ <span data-ttu-id="536f8-106">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="536f8-106">This example requires:</span></span>  
   
--   <span data-ttu-id="9918d-107">對 **System.Net** 命名空間的參考。</span><span class="sxs-lookup"><span data-stu-id="9918d-107">References to the **System.Net** namespace.</span></span>
+-   <span data-ttu-id="536f8-107">對 **System.Net** 命名空間的參考。</span><span class="sxs-lookup"><span data-stu-id="536f8-107">References to the **System.Net** namespace.</span></span>

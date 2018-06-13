@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395254"
 ---
 # <a name="configuring-caching-in-network-applications"></a><span data-ttu-id="263da-102">設定網路應用程式的快取功能</span><span class="sxs-lookup"><span data-stu-id="263da-102">Configuring Caching in Network Applications</span></span>
 <span data-ttu-id="263da-103">若要設定快取，您必須指定應用程式或 <xref:System.Net.WebRequest> 層級的快取原則。</span><span class="sxs-lookup"><span data-stu-id="263da-103">To configure caching, you must specify a cache policy at the application or <xref:System.Net.WebRequest> level.</span></span> <span data-ttu-id="263da-104">下列主題所提供的程式碼範例示範如何設定應用程式和要求來使用快取。</span><span class="sxs-lookup"><span data-stu-id="263da-104">The following topics provide code examples that demonstrate configuring applications and requests to use caching.</span></span>  

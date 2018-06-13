@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753023"
 ---
 # <a name="ltpolicyimportergt"></a><span data-ttu-id="cbad6-102">&lt;policyImporter&gt;</span><span class="sxs-lookup"><span data-stu-id="cbad6-102">&lt;policyImporter&gt;</span></span>
 <span data-ttu-id="cbad6-103">指定原則匯入工具，此工具會控制匯入有關繫結的自訂原則判斷提示 (Assertion)。</span><span class="sxs-lookup"><span data-stu-id="cbad6-103">Specifies a policy importer that controls the import of custom policy assertions about bindings.</span></span>  

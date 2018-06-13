@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395849"
 ---
 # <a name="socket-code-examples"></a><span data-ttu-id="7a61d-102">通訊端程式碼範例</span><span class="sxs-lookup"><span data-stu-id="7a61d-102">Socket Code Examples</span></span>
 <span data-ttu-id="7a61d-103">下列程式碼範例示範如何使用 <xref:System.Net.Sockets.Socket> 類別作為用戶端連接到遠端網路服務，以及作為伺服器接聽來自遠端用戶端的連線。</span><span class="sxs-lookup"><span data-stu-id="7a61d-103">The following code examples demonstrate how to use the <xref:System.Net.Sockets.Socket> class as a client to connect to remote network services and as a server to listen for connections from remote clients.</span></span>  

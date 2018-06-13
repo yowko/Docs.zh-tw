@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392504"
 ---
 # <a name="attributed-programming-model-overview-mef"></a><span data-ttu-id="12bbb-102">屬性化程式設計模型概觀 (MEF)</span><span class="sxs-lookup"><span data-stu-id="12bbb-102">Attributed Programming Model Overview (MEF)</span></span>
 <span data-ttu-id="12bbb-103">在 Managed Extensibility Framework (MEF) 中， *「程式設計模型」* (Programming Model) 是定義 MEF 藉以運作之一組概念性物件的特定方法。</span><span class="sxs-lookup"><span data-stu-id="12bbb-103">In the Managed Extensibility Framework (MEF), a *programming model* is a particular method of defining the set of conceptual objects on which MEF operates.</span></span> <span data-ttu-id="12bbb-104">這些概念性物件包含組件、匯入和匯出。</span><span class="sxs-lookup"><span data-stu-id="12bbb-104">These conceptual objects include parts, imports, and exports.</span></span> <span data-ttu-id="12bbb-105">MEF 使用這些物件，但不會指定這些物件的表示方式。</span><span class="sxs-lookup"><span data-stu-id="12bbb-105">MEF uses these objects, but does not specify how they should be represented.</span></span> <span data-ttu-id="12bbb-106">因此，各種程式設計模型都有可能，包括自訂的程式設計模型在內。</span><span class="sxs-lookup"><span data-stu-id="12bbb-106">Therefore, a wide variety of programming models are possible, including customized programming models.</span></span>  

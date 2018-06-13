@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568000"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a><span data-ttu-id="3fe61-102">如何：在日期與時間值中顯示毫秒</span><span class="sxs-lookup"><span data-stu-id="3fe61-102">How to: Display Milliseconds in Date and Time Values</span></span>
 <span data-ttu-id="3fe61-103">預設的日期和時間格式化方法 (例如 <xref:System.DateTime.ToString?displayProperty=nameWithType>) 包括時間值的小時、分鐘和秒，但不包括它的毫秒元件。</span><span class="sxs-lookup"><span data-stu-id="3fe61-103">The default date and time formatting methods, such as <xref:System.DateTime.ToString?displayProperty=nameWithType>, include the hours, minutes, and seconds of a time value but exclude its milliseconds component.</span></span> <span data-ttu-id="3fe61-104">本主題說明如何將日期和時間的毫秒部分加入格式化的日期和時間字串。</span><span class="sxs-lookup"><span data-stu-id="3fe61-104">This topic shows how to include a date and time's millisecond component in formatted date and time strings.</span></span>  

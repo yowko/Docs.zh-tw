@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541816"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a><span data-ttu-id="a8f99-102">逐步解說：使用 TableLayoutPanel 排列 Windows Form 上的控制項</span><span class="sxs-lookup"><span data-stu-id="a8f99-102">Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel</span></span>
 <span data-ttu-id="a8f99-103">有些應用程式需要表單能在調整表單大小或變更內容大小時，自行適當排列配置。</span><span class="sxs-lookup"><span data-stu-id="a8f99-103">Some applications require a form with a layout that arranges itself appropriately as the form is resized or as the contents change in size.</span></span> <span data-ttu-id="a8f99-104">當需要動態配置但不想用程式碼明確處理 <xref:System.Windows.Forms.Control.Layout> 事件時，請考慮使用配置面板。</span><span class="sxs-lookup"><span data-stu-id="a8f99-104">When you need a dynamic layout and you do not want to handle <xref:System.Windows.Forms.Control.Layout> events explicitly in your code, consider using a layout panel.</span></span>  

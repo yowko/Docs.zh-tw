@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639524"
 ---
 # <a name="the-file-is-currently-closed"></a><span data-ttu-id="52f19-102">目前已關閉檔案</span><span class="sxs-lookup"><span data-stu-id="52f19-102">The file is currently closed</span></span>
 <span data-ttu-id="52f19-103">嘗試執行的作業只能對開啟的檔案執行，但目前已關閉檔案。</span><span class="sxs-lookup"><span data-stu-id="52f19-103">An attempt has been made to perform an operation that can only be performed on an open file, but the file is currently closed.</span></span>  

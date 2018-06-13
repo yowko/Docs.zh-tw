@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389414"
 ---
 # <a name="deploying-an-interop-application"></a><span data-ttu-id="db15a-102">部署 Interop 應用程式</span><span class="sxs-lookup"><span data-stu-id="db15a-102">Deploying an Interop Application</span></span>
 <span data-ttu-id="db15a-103">Interop 應用程式通常包含 .NET 用戶端組件、代表各種不同 COM 型別程式庫的一或多個 Interop 組件，以及一或多個已登錄的 COM 元件。</span><span class="sxs-lookup"><span data-stu-id="db15a-103">An interop application typically includes a .NET client assembly, one or more interop assemblies representing distinct COM type libraries, and one or more registered COM components.</span></span> <span data-ttu-id="db15a-104">Visual Studio 和 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 提供工具以匯入型別程式庫，並將它轉換成 Interop 組件，如[匯入型別程式庫作為組件](importing-a-type-library-as-an-assembly.md)中所述。</span><span class="sxs-lookup"><span data-stu-id="db15a-104">Visual Studio and the [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] provide tools to import and convert a type library to an interop assembly, as discussed in [Importing a Type Library as an Assembly](importing-a-type-library-as-an-assembly.md).</span></span> <span data-ttu-id="db15a-105">有兩種方式可以部署 Interop 應用程式：</span><span class="sxs-lookup"><span data-stu-id="db15a-105">There are two ways to deploy an interop application:</span></span>  

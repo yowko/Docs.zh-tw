@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389271"
 ---
 # <a name="how-to-implement-callback-functions"></a><span data-ttu-id="b51bf-102">如何：實作回呼函式</span><span class="sxs-lookup"><span data-stu-id="b51bf-102">How to: Implement Callback Functions</span></span>
 <span data-ttu-id="b51bf-103">下列程序及範例示範 Managed 應用程式 (使用平台叫用) 如何將每個視窗的控制碼值列印到本機電腦上。</span><span class="sxs-lookup"><span data-stu-id="b51bf-103">The following procedure and example demonstrate how a managed application, using platform invoke, can print the handle value for each window on the local computer.</span></span> <span data-ttu-id="b51bf-104">具體而言，程序和範例會使用 **EnumWindows** 函式以逐步執行視窗的清單，並使用 Managed 回呼函式 (具名回呼) 以列印視窗控制代碼的值。</span><span class="sxs-lookup"><span data-stu-id="b51bf-104">Specifically, the procedure and example use the **EnumWindows** function to step through the list of windows and a managed callback function (named CallBack) to print the value of the window handle.</span></span>  
