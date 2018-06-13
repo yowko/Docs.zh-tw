@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594142"
 ---
 # <a name="non-cls-compliant-ltmembernamegt-is-not-allowed-in-a-cls-compliant-interface"></a>非 CLS 相容&lt;membername&gt;符合 CLS 標準的介面中不允許
 屬性、 程序或在介面中的事件標記為`<CLSCompliant(True)>`當介面本身標示為`<CLSCompliant(False)>`或未標記。  

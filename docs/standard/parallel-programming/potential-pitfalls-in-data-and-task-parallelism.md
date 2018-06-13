@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592388"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>資料和工作平行處理原則中可能出現的錯誤
 在許多情況下，相較於一般循序迴圈，<xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 更能提供顯著的效能改良。 不過，平行處理迴圈的工作所帶來的複雜性可能會造成問題，而在循序程式碼中，這些問題不是不常見，就是完全不會發生。 本主題列出一些您在撰寫平行迴圈時應該避免的作法。  
