@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b7c96439cf50c18e336baa70cf463b9463203290
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461174"
 ---
 # <a name="qualifiersetgetnames-function"></a>QualifierSet_GetNames 函式
 擷取所有的限定詞或都是從目前的物件或屬性的某些限定詞的名稱。 
@@ -76,7 +77,7 @@ HRESULT QualifierSet_GetNames (
 不是給定的物件，因此有零個限定詞，針對錯誤中的字串數目`pstrNames`傳回可以是 0，即使此函數會傳回`WBEM_S_NO_ERROR`。
 
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.idl  
   

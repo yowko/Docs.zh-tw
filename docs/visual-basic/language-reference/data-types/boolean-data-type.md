@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590273"
 ---
 # <a name="boolean-data-type-visual-basic"></a>Boolean 資料類型 (Visual Basic)
 保留值只能是`True`或`False`。 關鍵字`True`和`False`對應到兩個狀態的`Boolean`變數。  

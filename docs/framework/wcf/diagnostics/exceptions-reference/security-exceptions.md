@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474879"
 ---
 # <a name="security-exceptions"></a>安全性例外狀況
 本主題會列出所有安全性例外狀況。  

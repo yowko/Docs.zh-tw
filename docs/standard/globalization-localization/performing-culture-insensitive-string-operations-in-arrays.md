@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572056"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-arrays"></a>在陣列中執行不區分文化特性的字串作業
 <xref:System.Array.Sort%2A?displayProperty=nameWithType> 和 <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> 方法的多載預設會使用 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 屬性執行區分文化特性的排序。 這些方法所傳回的區分文化特性的結果可能會因為文化特性排序順序上的差異而有所不同。 若要消除區分文化特性的行為，請使用此方法中可接受 `comparer` 參數的其中一個多載。 `comparer` 參數會指定要在比較陣列中元素時使用的 <xref:System.Collections.IComparer> 實作。 為參數指定一個使用 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 的自訂非變異值比較子類別。 如需自訂非變異值比較子類別的範例，請參閱[在集合中執行不區分文化特性的字串作業](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md)主題中的「使用 SortedList 類別」子主題。  

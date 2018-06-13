@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573655"
 ---
 # <a name="nested-types"></a>巢狀類型
 巢狀型別是另一個類型，稱為封入類型的範圍內定義的類型。 巢狀型別可以存取其封入類型的所有成員。 例如，具有存取權給定義在封入類型，以及受保護的定義中封入類型的所有上階欄位的私用欄位。  

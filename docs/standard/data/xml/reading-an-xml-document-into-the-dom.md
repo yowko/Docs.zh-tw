@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569716"
 ---
 # <a name="reading-an-xml-document-into-the-dom"></a>將 XML 文件讀取到 DOM
 從不同的格式將 XML 資訊讀取到記憶體。 可從字串、資料流、URL、文字讀取器或衍生自 <xref:System.Xml.XmlReader> 的類別讀取它。  

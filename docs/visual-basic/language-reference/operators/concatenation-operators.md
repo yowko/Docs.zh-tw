@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597049"
 ---
 # <a name="concatenation-operators-visual-basic"></a>串連運算子 (Visual Basic)
 以下是定義在 Visual Basic 中的串連運算子。  

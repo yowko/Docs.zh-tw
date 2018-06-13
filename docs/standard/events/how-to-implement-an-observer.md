@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574851"
 ---
 # <a name="how-to-implement-an-observer"></a>如何：實作觀察器
 觀察者設計模式需要觀察者和提供者之間的分區，其中觀察者會註冊通知，而提供者會監視資料並將通知傳送到一個或多個觀察者。 本主題討論如何建立觀察者。 相關主題為[操作說明：實作提供者](../../../docs/standard/events/how-to-implement-a-provider.md)，討論如何建立提供者。  

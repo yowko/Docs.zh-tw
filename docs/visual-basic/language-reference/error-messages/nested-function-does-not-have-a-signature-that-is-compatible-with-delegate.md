@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594467"
 ---
 # <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-39ltdelegatenamegt39"></a>巢狀函式沒有與委派相容的簽章&#39;&lt;委派名稱&gt;&#39;
 Lambda 運算式已被指派至具有相容簽章的委派。 例如，下列程式碼中，委派`Del`有兩個整數參數。  

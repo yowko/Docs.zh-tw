@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e0e96ba458edfe7261fd5857b7bcb8486f4a6636
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460041"
 ---
 # <a name="qualifiersetdelete-function"></a>QualifierSet_Delete 函式
 依名稱刪除指定的限定詞。  
@@ -67,7 +68,7 @@ HRESULT QualifierSet_Delete (
 限定詞傳播規則，因為特定的辨識符號可能已從另一個物件繼承和只是覆寫目前的類別或執行個體中。 在此情況下，`QualifierSet_Delete`方法重設這個限定詞繼承其原始值。 函式在此情況下會傳回狀態碼`WBEM_S_RESET_TO_DEFAULT`。
 
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.idl  
   

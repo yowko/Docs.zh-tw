@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593200"
 ---
 # <a name="object-or-class-does-not-support-the-set-of-events"></a>物件或類別不支援事件的設定
 您嘗試使用`WithEvents`變數無法為指定的事件集的事件來源的元件。 例如，您要接收到事件的物件，然後再建立另一個物件`Implements`的第一個物件。 您可能會認為您可以從實作的物件接收到事件，但這不一定大小寫。 `Implements` 只會實作介面方法和屬性。 `WithEvents` 不支援私用`UserControls`，因為型別資訊所需引發`ObjectEvent`不在執行階段。  

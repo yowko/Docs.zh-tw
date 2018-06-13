@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594103"
 ---
 # <a name="mycomputerkeyboard-object"></a>My.Computer.Keyboard 物件
 提供屬性以存取鍵盤目前的狀態，例如目前已按下哪些按鍵，並提供方法將按鍵輸入傳送至使用中視窗。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571029"
 ---
 # <a name="usage-guidelines"></a>用法方針
 本章節包含使用一般類型，可公開存取的 Api 中的指導方針。 它說明如何直接使用內建架構類型 （例如序列化屬性） 和一般運算子多載。  

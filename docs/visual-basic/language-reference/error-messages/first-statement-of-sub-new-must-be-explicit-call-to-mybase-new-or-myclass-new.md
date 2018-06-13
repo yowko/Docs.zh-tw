@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589889"
 ---
 # <a name="first-statement-of-this-39sub-new39-must-be-an-explicit-call-to-39mybasenew39-or-39myclassnew39-because-the-39ltconstructornamegt39-in-the-base-class-39ltbaseclassnamegt39-of-39ltderivedclassnamegt39-is-marked-obsolete-39lterrormessagegt39"></a>這個第一個陳述式&#39;Sub New&#39;必須明確呼叫&#39;MyBase.New&#39;或&#39;MyClass.New&#39;因為&#39; &lt;constructorname&gt; &#39;基底類別中&#39;&lt;基&gt;&#39;的&#39;&lt;衍生類別名稱&gt;&#39;標記為過時： &#39; &lt;errormessage&gt;&#39;
 類別建構函式未明確地呼叫基底類別建構函式，而且隱含的基底類別建構函式已使用 <xref:System.ObsoleteAttribute> 屬性和指示詞標記，以將其視為錯誤。  

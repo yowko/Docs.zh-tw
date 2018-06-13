@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574591"
 ---
 # <a name="using-standard-exception-types"></a>使用標準例外狀況類型
 本章節描述架構和其使用方式的詳細資料所提供的標準例外狀況。 清單是不是完整詳盡。 請參閱.NET Framework 參考文件的使用方式的其他架構例外狀況類型。  

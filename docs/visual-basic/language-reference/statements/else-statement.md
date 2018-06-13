@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597682"
 ---
 # <a name="else-statement-visual-basic"></a>Else 陳述式 (Visual Basic)
 導入了一組陳述式來執行或編譯是否已經執行或編譯的陳述式的任何其他條件群組。  
