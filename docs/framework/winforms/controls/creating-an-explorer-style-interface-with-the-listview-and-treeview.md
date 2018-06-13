@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529194"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>逐步解說：使用設計工具以 ListView 和 TreeView 控制項建立檔案總管風格的介面
 其中一個 Visual Studio 的優點是時間的能夠建立專業的 Windows Form 應用程式在短量。 透過常見的案例所建立的使用者介面 (UI)<xref:System.Windows.Forms.ListView>和<xref:System.Windows.Forms.TreeView>類似於 Windows 作業系統的 Windows 檔案總管 功能的控制項。 Windows 檔案總管 會顯示使用者的電腦上的檔案和資料夾的階層式結構。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/04/2018
   
     2.  將 <xref:System.Windows.Forms.ListView.View%2A> 屬性設定為 <xref:System.Windows.Forms.View.Details>。  
   
-    3.  開啟屬於 ColumnHeader 集合編輯器，依序按一下省略符號 (![VisualStudioEllipsesButton 螢幕擷取畫面](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 中<xref:System.Windows.Forms.ListView.Columns%2A>屬性**。** 新增三個資料行並設定其<xref:System.Windows.Forms.ColumnHeader.Text%2A>屬性`Name`， `Type`，和`Last Modified`分別。 按一下 [確定]  關閉對話方塊。  
+    3.  開啟屬於 ColumnHeader 集合編輯器，依序按一下省略符號 (![VisualStudioEllipsesButton 螢幕擷取畫面](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 中<xref:System.Windows.Forms.ListView.Columns%2A>屬性 **。** 新增三個資料行並設定其<xref:System.Windows.Forms.ColumnHeader.Text%2A>屬性`Name`， `Type`，和`Last Modified`分別。 按一下 [確定]  關閉對話方塊。  
   
     4.  將 <xref:System.Windows.Forms.ListView.SmallImageList%2A> 屬性設定為 `imageList1.`  
   
@@ -72,7 +73,7 @@ ms.lasthandoff: 05/04/2018
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#2)]  
   
-11. 處理<xref:System.Windows.Forms.TreeView.NodeMouseClick>事件`treeview1` **，**和實作程式碼以填入`listview1`與節點的內容時按一下節點。 將此程式碼加入`Form1`類別。  
+11. 處理<xref:System.Windows.Forms.TreeView.NodeMouseClick>事件`treeview1` **，** 和實作程式碼以填入`listview1`與節點的內容時按一下節點。 將此程式碼加入`Form1`類別。  
   
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#3)]  

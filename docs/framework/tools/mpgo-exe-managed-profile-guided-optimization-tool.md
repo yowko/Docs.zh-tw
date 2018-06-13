@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410016"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (Managed 特性指引最佳化工具)
 Managed 特性指引最佳化工具 (Mpgo.exe) 是一項命令列工具，它會使用常見的使用者情節最佳化[原生映像產生器 (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 所建立的原生映像組件。 此工具可讓您執行產生分析資料的訓練情節。 [原生映像產生器 (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 會使用這項資料最佳化其產生的原生映像應用程式組件。 訓練情節是指嘗試執行應用程式的預期使用方式。 Mpgo.exe 會隨 Visual Studio Ultimate 2012 (含) 以後版本提供。 從 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] 開始，您也可以使用 Mpgo.exe 最佳化 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式。  

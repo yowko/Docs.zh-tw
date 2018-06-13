@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552548"
 ---
 # <a name="how-to-bind-an-adorner-to-an-element"></a>如何：將裝飾項繫結至項目
 這個範例示範如何以程式設計方式將裝飾項繫結至指定<xref:System.Windows.UIElement>。  

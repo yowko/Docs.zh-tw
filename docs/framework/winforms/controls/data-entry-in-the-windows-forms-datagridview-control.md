@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526816"
 ---
 # <a name="data-entry-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的資料輸入
 `DataGridView`控制項提供數種功能，可讓您變更使用者加入或修改控制項中的資料的方式。 比方說，您可以讓資料輸入更有效率的新資料列中提供預設值和錯誤發生時警示使用者。  

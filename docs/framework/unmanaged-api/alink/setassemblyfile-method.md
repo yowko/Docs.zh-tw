@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1e557cc0da7bc684843ae3969242ffb84d811c44
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405342"
 ---
 # <a name="setassemblyfile-method"></a>SetAssemblyFile 方法
 指定要建置的組件名稱。 不適用於產生繫結的模組時使用。  

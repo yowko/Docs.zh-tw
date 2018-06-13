@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542944"
 ---
 # <a name="how-to-adjust-spacing-between-paragraphs"></a>如何：調整段落之間的間距
 此範例顯示如何調整或排除段落中非固定格式內容之間的間距。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541881"
 ---
 # <a name="binding-markup-extension"></a>繫結標記延伸
 延後建立中繼運算式物件及解譯資料內容套用至項目，且在執行階段與其繫結的繫結的資料值的屬性值。  

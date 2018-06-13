@@ -20,9 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0988b2c4471cb5449f7c7fac82c6e94bcd537b7e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409275"
 ---
 # <a name="createversionstringfrommodule-function"></a>CreateVersionStringFromModule 函式
 從目標處理序中的 Common Language Runtime (CLR) 路徑來建立版本字串。  
@@ -78,7 +79,7 @@ HRESULT CreateVersionStringFromModule (
  應該要呼叫此函式兩次。 當您第一次呼叫此函式時，針對 `pBuffer` 和 `cchBuffer` 都傳遞 null。 當您這麼做時，`pBuffer` 所需的緩衝區大小將會傳回 `pdwLength` 中。 然後您可以呼叫此函式第二次，並且在 `pBuffer` 中傳遞緩衝區，在 `cchBuffer` 中傳遞其大小。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** dbgshim.h  
   
