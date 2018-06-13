@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592388"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a><span data-ttu-id="2b91c-102">資料和工作平行處理原則中可能出現的錯誤</span><span class="sxs-lookup"><span data-stu-id="2b91c-102">Potential Pitfalls in Data and Task Parallelism</span></span>
 <span data-ttu-id="2b91c-103">在許多情況下，相較於一般循序迴圈，<xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 更能提供顯著的效能改良。</span><span class="sxs-lookup"><span data-stu-id="2b91c-103">In many cases, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> and <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> can provide significant performance improvements over ordinary sequential loops.</span></span> <span data-ttu-id="2b91c-104">不過，平行處理迴圈的工作所帶來的複雜性可能會造成問題，而在循序程式碼中，這些問題不是不常見，就是完全不會發生。</span><span class="sxs-lookup"><span data-stu-id="2b91c-104">However, the work of parallelizing the loop introduces complexity that can lead to problems that, in sequential code, are not as common or are not encountered at all.</span></span> <span data-ttu-id="2b91c-105">本主題列出一些您在撰寫平行迴圈時應該避免的作法。</span><span class="sxs-lookup"><span data-stu-id="2b91c-105">This topic lists some practices to avoid when you write parallel loops.</span></span>  

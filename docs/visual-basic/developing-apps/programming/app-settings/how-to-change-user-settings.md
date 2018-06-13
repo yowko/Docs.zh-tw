@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591985"
 ---
 # <a name="how-to-change-user-settings-in-visual-basic"></a><span data-ttu-id="327ad-102">如何：在 Visual Basic 中變更使用者設定</span><span class="sxs-lookup"><span data-stu-id="327ad-102">How to: Change User Settings in Visual Basic</span></span>
 <span data-ttu-id="327ad-103">您可以將新值指派給 `My.Settings` 物件的設定屬性，來變更使用者設定。</span><span class="sxs-lookup"><span data-stu-id="327ad-103">You can change a user setting by assigning a new value to the setting's property on the `My.Settings` object.</span></span>  
