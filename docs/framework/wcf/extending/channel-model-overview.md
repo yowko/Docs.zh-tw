@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804634"
 ---
 # <a name="channel-model-overview"></a>通道模型概觀
 Windows Communication Foundation (WCF) 通道堆疊是處理訊息的一或多個通道的分層的通訊堆疊。 堆疊底部為傳輸通道，其負責針對基礎傳輸進行調整 (例如，TCP、HTTP、SMTP 和其他的傳輸類型)。 通道會提供低階的程式設計模型來傳送及接收訊息。 這個程式設計模型依賴多個介面和其他類型，統稱為 WCF 通道模型。 本主題將討論通道形狀、建構基本通道接聽程式 (在服務上) 以及通道處理站 (在用戶端上)。  

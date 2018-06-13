@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805125"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>含 WCF 服務的 ASMX 用戶端
 這個範例示範如何使用 Windows Communication Foundation (WCF) 建立服務，然後從非 WCF 用戶端，例如 ASMX 用戶端存取服務。  

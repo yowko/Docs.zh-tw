@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809465"
 ---
 # <a name="data-contract-surrogates"></a>資料合約代理
 資料合約*surrogate*是資料合約模型上建置的進階的功能。 這項功能是專為在使用者想要變更型別序列化、還原序列化或投射至中繼資料的方式時，用來自訂和替換型別所設計。 某些可能使用代理的情況包括：尚未指定型別的資料合約、欄位和屬性 (Property) 尚未以 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性 (Attribute) 標記，或是使用者希望動態建立結構描述變形時。  

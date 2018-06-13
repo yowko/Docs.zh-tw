@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652892"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>如何：多載使用選擇性參數的程序 (Visual Basic)
 如果程序有一或多個[選擇性](../../../../visual-basic/language-reference/modifiers/optional.md)參數，您不能定義比對任何隱含的多載的多載的版本。 如需詳細資訊，請參閱 < 隱含多載的選擇性參數 」[中多載化程序的考量](./considerations-in-overloading-procedures.md)。  

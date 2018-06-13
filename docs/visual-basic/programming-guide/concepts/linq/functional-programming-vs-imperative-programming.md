@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644273"
 ---
 # <a name="functional-programming-vs-imperative-programming-visual-basic"></a>功能性程式設計與命令式程式設計 (Visual Basic)
 本主題比較與對照功能性程式設計與更傳統的命令性 (程序性) 程式設計。  

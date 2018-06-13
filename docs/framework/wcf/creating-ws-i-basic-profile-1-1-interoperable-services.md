@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804939"
 ---
 # <a name="creating-ws-i-basic-profile-11-interoperable-services"></a>建立 WS-I Basic Profile 1.1 互通服務
 若要設定 WCF 服務端點來與互通[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]Web 服務用戶端：  

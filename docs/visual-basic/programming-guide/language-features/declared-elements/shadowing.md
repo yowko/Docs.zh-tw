@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656067"
 ---
 # <a name="shadowing-in-visual-basic"></a>Visual Basic 中的遮蔽功能
 當兩個的程式設計項目共用相同的名稱時，可以隱藏其中一個，或*陰影*，另一個。 在這種情況下，加上陰影的項目不是可參考。相反地，當您的程式碼使用的項目名稱時，Visual Basic 編譯器解析遮蔽的項目。  

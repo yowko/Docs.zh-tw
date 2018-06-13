@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810105"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>使用 WCF 用戶端存取服務
 建立服務之後下, 一個步驟是建立 WCF 用戶端 proxy。 用戶端應用程式使用 WCF 用戶端 proxy 來與服務通訊。 用戶端應用程式通常會匯入服務的中繼資料來產生可用來叫用此服務的 WCF 用戶端程式碼。  
