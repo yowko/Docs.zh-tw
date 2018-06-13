@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327154"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a>擷取段落的文字 (C#)
 這個範例是根據上述範例 ([擷取段落及其樣式 (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)) 所建置。 這個新的範例會將每個段落的文字當做字串擷取。  

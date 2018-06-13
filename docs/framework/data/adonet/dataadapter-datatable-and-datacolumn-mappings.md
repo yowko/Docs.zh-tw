@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759019"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>DataAdapter DataTable 和 DataColumn 對應
 A **DataAdapter**包含零或多個集合<xref:System.Data.Common.DataTableMapping>物件在其**TableMappings**屬性。 A **DataTableMapping**提供對資料來源，查詢傳回的資料之間的主要對應和<xref:System.Data.DataTable>。 **DataTableMapping**名稱可以傳遞取代**DataTable**名稱**填滿**方法**DataAdapter**。 下列範例會建立**DataTableMapping**名為**AuthorsMapping**如**作者**資料表。  

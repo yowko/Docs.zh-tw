@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604675"
 ---
 # <a name="ltseealsogt-visual-basic"></a>&lt;另請參閱&gt;(Visual Basic)
 指定出現在 「 請參閱 」 一節中的連結。  

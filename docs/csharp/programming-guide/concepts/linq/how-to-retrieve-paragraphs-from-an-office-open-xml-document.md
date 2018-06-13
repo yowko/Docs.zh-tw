@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322178"
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>如何：從 Office Open XML 文件擷取段落 (C#)
 本主題顯示的範例可開啟 Office Open XML 文件，並在文件中擷取所有段落的集合。  

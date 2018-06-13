@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750189"
 ---
 # <a name="ltaddgt-of-ltcontracttypenamesgt"></a>&lt;contractTypeNames&gt; 的 &lt;add&gt;
 組態項目，這個項目會指定要搜尋之服務的合約名稱，以及通常用於搜尋服務的準則。 如果指定多個合約名稱，則只會回覆符合「所有」合約的服務端點。 請注意，在 Windows Communication Foundation (WCF) 中，端點只能支援一個合約。  

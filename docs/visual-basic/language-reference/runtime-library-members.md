@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604584"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Visual Basic 執行階段程式庫成員
 `Microsoft.VisualBasic`命名空間包含類別、 模組、 常數和列舉型別構成 Visual Basic 執行階段程式庫。 這些程式庫成員可讓程序、 屬性和常數值，您可以使用您的程式碼中。 每個模組和類別代表與特定類別的功能。  

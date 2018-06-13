@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746094"
 ---
 # <a name="ltpublisherpolicygt-element"></a>&lt;p&gt;項目
 指定執行階段是否套用發行者原則。  

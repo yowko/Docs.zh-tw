@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329218"
 ---
 # <a name="performance-linq-to-xml-c"></a>效能 (LINQ to XML) (C#)
 本節提供 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中效能的相關資訊，尤其是功能性建構與查詢的效能。  

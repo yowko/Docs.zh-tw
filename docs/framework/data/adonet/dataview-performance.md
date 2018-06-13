@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762776"
 ---
 # <a name="dataview-performance"></a>DataView 效能
 本主題將討論使用 <xref:System.Data.DataView.Find%2A> 類別 (Class) 之 <xref:System.Data.DataView.FindRows%2A> 和 <xref:System.Data.DataView> 方法以及在 Web 應用程式中快取 <xref:System.Data.DataView> 的效能提升。  

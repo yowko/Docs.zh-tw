@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763835"
 ---
 # <a name="set-entity-sql"></a>SET (Entity SQL)
 SET 運算式會產生移除所有重複項目的新集合，利用這種方式將物件的集合轉換成集合。  

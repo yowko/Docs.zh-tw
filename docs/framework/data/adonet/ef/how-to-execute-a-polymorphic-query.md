@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760823"
 ---
 # <a name="how-to-execute-a-polymorphic-query"></a>如何：執行多型查詢
 本主題示範如何執行多型[!INCLUDE[esql](../../../../../includes/esql-md.md)]查詢使用[OFTYPE](../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md)運算子。  

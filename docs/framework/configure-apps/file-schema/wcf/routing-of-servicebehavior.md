@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750748"
 ---
 # <a name="ltroutinggt-of-ltservicebehaviorgt"></a>&lt;serviceBehavior&gt; 的 &lt;routing&gt;
 提供於執行階段存取路由服務的功能，可用來動態修改路由組態。  

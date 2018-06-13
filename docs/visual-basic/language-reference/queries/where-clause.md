@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604038"
 ---
 # <a name="where-clause-visual-basic"></a>Where 子句 (Visual Basic)
 指定查詢的篩選條件。  

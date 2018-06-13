@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758150"
 ---
 # <a name="connection-events"></a>Connection 的事件
 所有.NET Framework 資料提供者都有**連接**物件具有兩個事件可讓您擷取從資料來源的參考用訊息，或決定是否狀態**連接**具有變更。 下表描述的事件**連接**物件。  

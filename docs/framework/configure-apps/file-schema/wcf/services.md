@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749227"
 ---
 # <a name="ltservicesgt"></a>&lt;服務&gt;
 服務定義於組態檔的 `services` 區段中。 各服務都有自己的 `service` 組態區段。  

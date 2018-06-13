@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751073"
 ---
 # <a name="lttcptransportgt"></a>&lt;tcpTransport&gt;
 定義 TCP 傳輸，通道可使用此傳輸來傳輸自訂繫結的訊息。  

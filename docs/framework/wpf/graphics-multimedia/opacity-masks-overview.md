@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566229"
 ---
 # <a name="opacity-masks-overview"></a>不透明度遮罩概觀
 不透明度遮罩可讓您將元素或視覺物件的一部分設定成透明或半透明。 若要建立不透明度遮罩，您套用<xref:System.Windows.Media.Brush>至<xref:System.Windows.UIElement.OpacityMask%2A>項目屬性或<xref:System.Windows.Media.Visual>。  筆刷會對應到元素或視覺物件，且每個筆刷像素的不透明度值會用來決定元素或視覺物件每個對應像素最終的不透明度。  

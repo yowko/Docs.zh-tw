@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755633"
 ---
 # <a name="ltsystemservicemodelgt-of-workflow"></a>工作流程的 &lt;system.serviceModel&gt;
 這個組態區段包含所有工作流程組態項目。  

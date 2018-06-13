@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758353"
 ---
 # <a name="adding-existing-constraints-to-a-dataset"></a>將現有條件約束加入至資料集
 **填滿**方法**DataAdapter**填滿<xref:System.Data.DataSet>只能搭配資料表資料行和資料列從資料來源; 雖然條件約束通常由設定資料來源，**填滿**方法不會加入此結構描述資訊**資料集**預設。 填入**資料集**與資料來源的現有主索引鍵條件約束資訊，您可以呼叫**FillSchema**方法**DataAdapter**，或設定**MissingSchemaAction**屬性**DataAdapter**至**Missingschemaaction**之前先呼叫**填滿**。 這可確保該主索引鍵中的條件約束**資料集**反映出在資料來源。 外部索引鍵條件約束資訊就不會包含與必須明確地如下所示建立[DataTable 條件約束](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590825"
 ---
 # <a name="first-operand-in-a-binary-39if39-expression-must-be-nullable-or-a-reference-type"></a>二進位檔案中的第一個運算元&#39;如果&#39;運算式必須是可為 null 或參考型別
 `If`運算式可接受兩個或三個引數。 當您傳送只有兩個引數時，第一個引數必須是參考類型或 null 的型別。 如果第一個引數評估為任何項目以外`Nothing`，其值會傳回。 如果第一個引數評估為`Nothing`，評估並傳回第二個引數。  

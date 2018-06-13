@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761255"
 ---
 # <a name="deployment-considerations-entity-framework"></a>部署考量 (Entity Framework)
 本主題提供的資訊是有關部署使用 ADO.NET Entity Framework 進行資料存取的應用程式。 如需有關 Entity Framework 的詳細資訊，請參閱[入門](../../../../../docs/framework/data/adonet/ef/getting-started.md)。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764037"
 ---
 # <a name="entity-container"></a>Entity Container - 實體容器
 *實體容器*是邏輯群組[實體集](../../../../docs/framework/data/adonet/entity-set.md)，[關聯集](../../../../docs/framework/data/adonet/association-set.md)，和[函式匯入](../../../../docs/framework/data/adonet/model-declared-function.md)。  

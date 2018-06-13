@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760030"
 ---
 # <a name="diffgrams"></a>DiffGram
 DiffGram 是 XML 格式，可用來識別資料項目的目前和原始版本。 <xref:System.Data.DataSet> 使用 DiffGram 格式以載入保存內容，並將內容序列化以透過網路連接傳輸。 當<xref:System.Data.DataSet>寫入為 DiffGram，它所擴展的所有必要資訊 DiffGram，以正確重新建立內容，但不是架構的<xref:System.Data.DataSet>，包括資料行值，同時從**原始**和**目前**資料列版本中，資料列錯誤資訊和資料列順序。  

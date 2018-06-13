@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569899"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>在規則運算式中執行字元逸出
 規則運算式中的反斜線 (\\) 表示下列其中之一：  

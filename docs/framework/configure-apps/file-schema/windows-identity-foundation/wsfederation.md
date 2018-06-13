@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758980"
 ---
 # <a name="ltwsfederationgt"></a>&lt;wsFederation&gt;
 提供組態<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(WSFAM)。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 05/03/2018
 |屬性|描述|  
 |---------------|-----------------|  
 |authenticationType|URI，指定驗證類型。 WS-同盟登入要求 wauth 參數設定。 選擇性。 預設為空字串，指定 wauth 參數不包含在要求中。|  
-|有效期限|所需最長使用期限的驗證要求，以分鐘為單位。 WS-同盟登入要求 wfresh 參數設定。 選擇性。 預設值是零。 選擇性。 **警告：**下一版的.NET Framework 4.5、`freshness`屬性都屬於類型`xs:string`和其預設值為`null`。|  
+|有效期限|所需最長使用期限的驗證要求，以分鐘為單位。 WS-同盟登入要求 wfresh 參數設定。 選擇性。 預設值是零。 選擇性。 **警告：** 下一版的.NET Framework 4.5、`freshness`屬性都屬於類型`xs:string`和其預設值為`null`。|  
 |homeRealm|要用於驗證的身分識別提供者 (IP) 主領域。 WS-同盟登入要求 whr 參數設定。 選擇性。 預設為空字串，指定 whr 參數不包含在要求中。|  
 |issuer|預期的權杖簽發者的 URI。 設定基底 URL 的 WS-同盟登入要求和所需的登出要求。|  
 |persistentCookiesOnPassiveRedirects|指定是否要針對驗證，來發出永續性 cookie。 選擇性。 預設值為"false"，不會發行 cookie。|  
@@ -63,8 +64,8 @@ ms.lasthandoff: 05/03/2018
 |requestPtr|指定權杖發佈要求的位置的 URL。 設定要求的 wreqptr 參數。 選擇性。 預設為空字串，指定 wreqptr 參數不包含在要求中。 不包括在要求中的 wreq 或 wreqptr 參數表示 STS 知道要發出的權杖類型。|  
 |requireHttps|指定與安全性權杖服務 (STS) 的通訊是否必須使用 HTTPS 通訊協定。 選擇性。 預設值為"true"，則必須使用 HTTPS。|  
 |資源|URI 為識別所存取之資源的信賴憑證者的合作對象 (RP)，以安全性權杖服務 (STS)。 選擇性。 WS-同盟登入要求 wres 參數設定。 選擇性。 預設為空字串，指定 wres 參數不包含在要求中。 **注意：** wres 是傳統的參數。 指定`realm`改為使用 wtrealm 參數的屬性。|  
-|signInQueryString|提供擴充點，以便在 WS-同盟登入要求 URL 中指定應用程式定義查詢參數。 選擇性。 預設為空字串，指定應該在要求中包含其他任何參數。 參數會指定為使用下列形式的查詢字串片段： `"param1=value1&param2=value2&param3=value3"` ，依此類推。 **注意：**組態檔中 ' （& s) 」 必須使用其實體參考，來指定查詢字串中的字元`&`。|  
-|signOutQueryString|提供擴充點，以便在 WS-同盟登入要求 URL 中指定應用程式定義查詢參數。 選擇性。 預設為空字串，指定應該在要求中包含其他任何參數。 參數會指定為使用下列形式的查詢字串片段： `"param1=value1&param2=value2&param3=value3"` ，依此類推。 **注意：**組態檔中 ' （& s) 」 必須使用其實體參考，來指定查詢字串中的字元`&`。|  
+|signInQueryString|提供擴充點，以便在 WS-同盟登入要求 URL 中指定應用程式定義查詢參數。 選擇性。 預設為空字串，指定應該在要求中包含其他任何參數。 參數會指定為使用下列形式的查詢字串片段： `"param1=value1&param2=value2&param3=value3"` ，依此類推。 **注意：** 組態檔中 ' （& s) 」 必須使用其實體參考，來指定查詢字串中的字元`&`。|  
+|signOutQueryString|提供擴充點，以便在 WS-同盟登入要求 URL 中指定應用程式定義查詢參數。 選擇性。 預設為空字串，指定應該在要求中包含其他任何參數。 參數會指定為使用下列形式的查詢字串片段： `"param1=value1&param2=value2&param3=value3"` ，依此類推。 **注意：** 組態檔中 ' （& s) 」 必須使用其實體參考，來指定查詢字串中的字元`&`。|  
 |signOutReply|在被動登出透過 WS-同盟通訊協定中指定的用戶端應該重新導向安全性權杖服務 (STS) 的 URL。 在 WS-同盟登出要求上設定 wreply 的參數。 選擇性。 預設為空字串，指定應該在要求中包含其他任何參數。|  
   
 ### <a name="child-elements"></a>子項目  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746718"
 ---
 # <a name="ltonewaygt"></a>&lt;oneWay&gt;
 針對自訂繫結啟用封包路由和使用單向方法。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762419"
 ---
 # <a name="facet"></a>facet
 A *facet*用於基本型別屬性定義中加入詳細資料。 A[屬性](../../../../docs/framework/data/adonet/property.md)定義包含有關屬性型別資訊，但是通常需要更多詳細資料時。 例如，概念模型中的實體類型可能會有 `String` 型別的屬性，其值不可設為 null。 Facet 可讓您指定此詳細層級。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747849"
 ---
 # <a name="ltmetadatagt"></a>&lt;中繼資料&gt;
 指定如何處理服務中繼資料。  

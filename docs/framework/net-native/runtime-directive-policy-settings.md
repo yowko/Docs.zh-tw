@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396756"
 ---
 # <a name="runtime-directive-policy-settings"></a>執行階段指示詞原則設定
 > [!NOTE]
