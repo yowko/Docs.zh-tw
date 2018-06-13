@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754833"
 ---
 # <a name="ltwebsocketsettingsgt"></a>&lt;webSocketSettings&gt;
 用來指定 Web 通訊端設定的組態元素。  

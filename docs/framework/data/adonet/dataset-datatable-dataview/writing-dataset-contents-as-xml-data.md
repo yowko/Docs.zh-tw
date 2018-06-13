@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761905"
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>將資料集內容當做 XML 資料寫入
 在 ADO.NET 中，您可以寫入使用 XML 形式的 <xref:System.Data.DataSet>，具有或不具有其結構描述皆可。 如果結構描述資訊是以 XML 內嵌的，它就會以 XML 結構描述定義語言 (XSD) 寫入。 結構描述包含 <xref:System.Data.DataSet> 的資料表定義，以及關聯性和條件約束定義。  

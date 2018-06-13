@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604860"
 ---
 # <a name="yield-statement-visual-basic"></a>Yield 陳述式 (Visual Basic)
 傳送至集合的下一個項目`For Each...Next`陳述式。  

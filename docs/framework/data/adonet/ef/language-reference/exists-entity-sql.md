@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762087"
 ---
 # <a name="exists-entity-sql"></a>EXISTS (Entity SQL)
 判斷集合是否為空。  

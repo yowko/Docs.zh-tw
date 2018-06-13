@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321609"
 ---
 # <a name="how-to-project-an-object-graph-c"></a>如何：投影物件圖形 (C#)
 本主題說明如何從 XML 規劃或填入物件圖形。  

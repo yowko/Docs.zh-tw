@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604155"
 ---
 # <a name="-operator-visual-basic"></a>*= 運算子 (Visual Basic)
 將變數或屬性的值，乘以運算式的值，並將結果指派給變數或屬性。  

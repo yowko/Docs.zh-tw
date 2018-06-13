@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750215"
 ---
 # <a name="lttransportgt-of-ltnethttpbindinggt"></a>&lt;netHttpBinding&gt; 的 &lt;transport&gt;
 定義可控制 HTTP 傳輸之驗證參數的屬性。  

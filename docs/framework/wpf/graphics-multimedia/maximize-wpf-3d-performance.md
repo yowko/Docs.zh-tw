@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565434"
 ---
 # <a name="maximize-wpf-3d-performance"></a>最大化 WPF 3D 效能
 當您使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]建置 3D 控制項，並包含在應用程式中的 3D 場景，它是很重要考量效能最佳化。 本主題提供 3D 類別和應用程式，以及當您使用這些最佳化效能的建議事項會影響效能的屬性的清單。  

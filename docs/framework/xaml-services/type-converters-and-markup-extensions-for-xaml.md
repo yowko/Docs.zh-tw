@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565859"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>XAML 的類型轉換子和標記延伸
 類型轉換器和標記延伸是 XAML 類型系統和 XAML 寫入器用以產生物件圖形元件的兩項技術。 雖然兩者共用某些特性，但類型轉換器和標記延伸在 XAML 節點資料流中會以不同的方式表示。 在本文件集中，有時會將類型轉換器、標記延伸和類似的建構統稱為值轉換器。  

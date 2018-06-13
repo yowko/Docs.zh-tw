@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604051"
 ---
 # <a name="typeof-operator-visual-basic"></a>TypeOf 運算子 (Visual Basic)
 比較物件參考變數與資料類型。  
