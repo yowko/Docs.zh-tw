@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517039"
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>使用追蹤來疑難排解應用程式
 Windows Workflow Foundation (WF) 可讓您追蹤工作流程相關資訊，Windows Workflow Foundation 應用程式或服務的執行會提供詳細資料。 Windows Workflow Foundation 主機就能夠在工作流程執行個體執行期間擷取工作流程事件。 如果您的工作流程會產生錯誤或例外狀況，您可以使用 Windows Workflow Foundation 追蹤來疑難排解其處理的詳細資料。  

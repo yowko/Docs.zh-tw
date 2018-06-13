@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337401"
 ---
 # <a name="using-delegates-c-programming-guide"></a>使用委派 (C# 程式設計手冊)
 [委派](../../../csharp/language-reference/keywords/delegate.md)是可以安全封裝方法的類型，類似於 C 和 C++ 中的函式指標。 與 C 函式指標不同之處在於，委派為物件導向且類型安全，同時安全性較佳。 委派的類型由委派的名稱所定義。 下列範例宣告名為 `Del` 的委派，其可封裝採用[字串](../../../csharp/language-reference/keywords/string.md)作為引數並傳回 [void](../../../csharp/language-reference/keywords/void.md) 的方法：  

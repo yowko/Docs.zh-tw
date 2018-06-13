@@ -14,6 +14,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33955962"
 ---
 # <a name="event-c-reference"></a>event (C# 參考)
 `event` 關鍵字用來在發行者類別中宣告事件。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525004"
 ---
 # <a name="folderbrowserdialog-component-overview-windows-forms"></a>FolderBrowserDialog 元件概觀 (Windows Form)
 Windows Form<xref:System.Windows.Forms.FolderBrowserDialog>元件是用來瀏覽和選取資料夾的強制回應對話方塊。 也可以從建立新的資料夾<xref:System.Windows.Forms.FolderBrowserDialog>元件。  

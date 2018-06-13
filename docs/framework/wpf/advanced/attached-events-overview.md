@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541735"
 ---
 # <a name="attached-events-overview"></a>附加事件概觀
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 定義語言元件和稱為「附加事件」的事件類型。 附加事件的概念，讓您能新增特定事件的處理常式到任意項目，而不是實際定義或繼承事件的項目。 在此情況下，可能引發事件的物件和目的地處理執行個體都不會定義或以其他方式「擁有」事件。  

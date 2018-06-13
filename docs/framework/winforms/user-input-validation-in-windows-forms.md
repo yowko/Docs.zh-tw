@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541803"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Windows Form 中的使用者輸入驗證
 當使用者將資料輸入您的應用程式時，您可以確認資料有效，您的應用程式使用它之前。 您可能需要某些文字欄位不是零長度、 欄位會格式化為電話號碼或其他類型的格式正確的資料，或字串不包含任何不安全的字元可用來對資料庫的安全性造成損害。 Windows Form 提供幾種方式可以驗證您的應用程式中的輸入。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/04/2018
  當您使用資料繫結時，在控制項中的資料會同步處理與資料來源執行期間<xref:System.Windows.Forms.Control.Validating>事件。 如果您取消<xref:System.Windows.Forms.Control.Validating>事件，資料將不會與資料來源同步。  
   
 > [!IMPORTANT]
->  如果您有自訂的驗證發生之後<xref:System.Windows.Forms.Control.Validating>事件，它將不會影響的資料繫結。 例如，如果您在程式碼<xref:System.Windows.Forms.Control.Validated>嘗試取消資料繫結的事件，資料繫結仍會發生。 在此情況下，執行中的驗證<xref:System.Windows.Forms.Control.Validated>事件，變更控制項的**資料來源更新模式**屬性 (**(Databindings) 下**\\**（進階）**) 從**OnValidation**至**永不**，並加入*控制項*`.DataBindings["`*\<YOURFIELD >* `"].WriteValue()`來驗證程式碼。  
+>  如果您有自訂的驗證發生之後<xref:System.Windows.Forms.Control.Validating>事件，它將不會影響的資料繫結。 例如，如果您在程式碼<xref:System.Windows.Forms.Control.Validated>嘗試取消資料繫結的事件，資料繫結仍會發生。 在此情況下，執行中的驗證<xref:System.Windows.Forms.Control.Validated>事件，變更控制項的**資料來源更新模式**屬性 (**(Databindings) 下**\\ **（進階）**) 從**OnValidation**至**永不**，並加入*控制項*`.DataBindings["`*\<YOURFIELD >* `"].WriteValue()`來驗證程式碼。  
   
 ### <a name="implicit-and-explicit-validation"></a>隱含和明確的驗證  
  因此當沒有控制項的資料取得驗證？ 這是您開發人員可自行決定。 您可以使用隱含或明確的驗證，根據您的應用程式的需求。  

@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b8c972bcace3ba3d855a3b5eebc16e6b76994eb7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450700"
 ---
 # <a name="corprfjitcache-enumeration"></a>COR_PRF_JIT_CACHE 列舉
 指出快取的函式搜尋結果。  
@@ -45,7 +46,7 @@ typedef enum {
 |`COR_PRF_FUNCTION_NOT_FOUND`|搜尋找不到函式。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

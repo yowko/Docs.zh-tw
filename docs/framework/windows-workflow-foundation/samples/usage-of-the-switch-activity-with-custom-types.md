@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517877"
 ---
 # <a name="usage-of-the-switch-activity-with-custom-types"></a>使用自訂類型之切換活動的使用
 這個範例描述如何啟用 <xref:System.Activities.Statements.Switch%601> 活動，在執行階段評估使用者定義的複雜類型。 在大部分傳統的程序性程式語言，[切換](http://go.microsoft.com/fwlink/?LinkId=180521)陳述式選取根據變數的條件評估的執行邏輯。 傳統上，`switch` 陳述式適用於可靜態評估的運算式。 例如，在 C# 中，這表示僅支援基本型別 (例如 <xref:System.Boolean>、<xref:System.Int32> 和 <xref:System.String>)，以及列舉型別。  

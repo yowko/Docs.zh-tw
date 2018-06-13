@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524699"
 ---
 # <a name="lines-curves-and-shapes"></a>線條、曲線和形狀
 向量圖形部分[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]用來繪製線條、 繪製曲線，以及繪製，並填滿圖案。  

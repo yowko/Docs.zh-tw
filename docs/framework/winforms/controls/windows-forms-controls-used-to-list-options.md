@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539746"
 ---
 # <a name="windows-forms-controls-used-to-list-options"></a>用來列出選項的 Windows Form 控制項
 如果您想要為使用者提供一份可從中選擇的選項，您可以加入 Windows Form 加入各種不同的控制項。 多少根據您想要限制使用者的輸入，您可以加入<xref:System.Windows.Forms.ListBox>控制項，<xref:System.Windows.Forms.ComboBox>控制項，或<xref:System.Windows.Forms.CheckedListBox>控制項。 使用下列連結來判斷最佳的控制項符合您的需求。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523919"
 ---
 # <a name="restricting-the-drawing-surface-in-gdi"></a>限制 GDI+ 中的繪圖介面
 裁剪包括限制到特定矩形或區域的繪圖。 下圖顯示字串"Hello"裁剪為心形的區域。  
