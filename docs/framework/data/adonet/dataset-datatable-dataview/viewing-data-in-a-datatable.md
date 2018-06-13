@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761242"
 ---
 # <a name="viewing-data-in-a-datatable"></a><span data-ttu-id="a81ca-102">在 DataTable 中檢視資料</span><span class="sxs-lookup"><span data-stu-id="a81ca-102">Viewing Data in a DataTable</span></span>
 <span data-ttu-id="a81ca-103">您可以存取的內容<xref:System.Data.DataTable>使用**列**和**資料行**集合**DataTable**。</span><span class="sxs-lookup"><span data-stu-id="a81ca-103">You can access the contents of a <xref:System.Data.DataTable> by using the **Rows** and **Columns** collections of the **DataTable**.</span></span> <span data-ttu-id="a81ca-104">您也可以使用<xref:System.Data.DataTable.Select%2A>方法來傳回中的資料子集**DataTable**根據包括搜尋條件的準則，排序順序，與資料列狀態。</span><span class="sxs-lookup"><span data-stu-id="a81ca-104">You can also use the <xref:System.Data.DataTable.Select%2A> method to return subsets of the data in a **DataTable** according to criteria including search criteria, sort order, and row state.</span></span> <span data-ttu-id="a81ca-105">此外，您可以使用<xref:System.Data.DataRowCollection.Find%2A>方法**DataRowCollection**搜尋特定的資料列，使用主索引鍵值時。</span><span class="sxs-lookup"><span data-stu-id="a81ca-105">Additionally, you can use the <xref:System.Data.DataRowCollection.Find%2A> method of the **DataRowCollection** when searching for a particular row using a primary key value.</span></span>  

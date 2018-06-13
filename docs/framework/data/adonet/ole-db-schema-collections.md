@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766929"
 ---
 # <a name="ole-db-schema-collections"></a><span data-ttu-id="e3303-102">OLE DB 結構描述集合</span><span class="sxs-lookup"><span data-stu-id="e3303-102">OLE DB Schema Collections</span></span>
 <span data-ttu-id="e3303-103">本節將討論 Microsoft SQL Server、Oracle 和 Microsoft Jet 之 OLE DB 提供者的結構描述集合支援。</span><span class="sxs-lookup"><span data-stu-id="e3303-103">This section discusses schema collection support for the OLE DB providers for Microsoft SQL Server, Oracle, and Microsoft Jet.</span></span>  

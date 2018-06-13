@@ -1,13 +1,6 @@
 ---
-title: "如何：將控制項和表單邊緣對齊"
-ms.custom: 
+title: 如何：將控制項和表單邊緣對齊
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,34 +10,30 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning on forms
 - custom controls [Windows Forms], docking using code
 ms.assetid: 5994cb59-242b-4e75-bd0e-62879c34d702
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7979b58d52c6df7341259af50a39e104781dd148
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a8571f668de2714511a8732772443a8897043cf2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526510"
 ---
-# <a name="how-to-align-a-control-to-the-edges-of-forms"></a><span data-ttu-id="45324-102">如何：將控制項和表單邊緣對齊</span><span class="sxs-lookup"><span data-stu-id="45324-102">How to: Align a Control to the Edges of Forms</span></span>
-<span data-ttu-id="45324-103">您可設定 <xref:System.Windows.Forms.Control.Dock%2A> 屬性讓控制項對齊表單邊緣。</span><span class="sxs-lookup"><span data-stu-id="45324-103">You can make your control align to the edge of your forms by setting the <xref:System.Windows.Forms.Control.Dock%2A> property.</span></span> <span data-ttu-id="45324-104">這個屬性會指定您的控制項在表單中的位置。</span><span class="sxs-lookup"><span data-stu-id="45324-104">This property designates where your control resides in the form.</span></span> <span data-ttu-id="45324-105">可將 <xref:System.Windows.Forms.Control.Dock%2A> 屬性設為下列值：</span><span class="sxs-lookup"><span data-stu-id="45324-105">The <xref:System.Windows.Forms.Control.Dock%2A> property can be set to the following values:</span></span>  
+# <a name="how-to-align-a-control-to-the-edges-of-forms"></a><span data-ttu-id="559c8-102">如何：將控制項和表單邊緣對齊</span><span class="sxs-lookup"><span data-stu-id="559c8-102">How to: Align a Control to the Edges of Forms</span></span>
+<span data-ttu-id="559c8-103">您可設定 <xref:System.Windows.Forms.Control.Dock%2A> 屬性讓控制項對齊表單邊緣。</span><span class="sxs-lookup"><span data-stu-id="559c8-103">You can make your control align to the edge of your forms by setting the <xref:System.Windows.Forms.Control.Dock%2A> property.</span></span> <span data-ttu-id="559c8-104">這個屬性會指定您的控制項在表單中的位置。</span><span class="sxs-lookup"><span data-stu-id="559c8-104">This property designates where your control resides in the form.</span></span> <span data-ttu-id="559c8-105">可將 <xref:System.Windows.Forms.Control.Dock%2A> 屬性設為下列值：</span><span class="sxs-lookup"><span data-stu-id="559c8-105">The <xref:System.Windows.Forms.Control.Dock%2A> property can be set to the following values:</span></span>  
   
-|<span data-ttu-id="45324-106">設定</span><span class="sxs-lookup"><span data-stu-id="45324-106">Setting</span></span>|<span data-ttu-id="45324-107">對控制項的影響</span><span class="sxs-lookup"><span data-stu-id="45324-107">Effect on your control</span></span>|  
+|<span data-ttu-id="559c8-106">設定</span><span class="sxs-lookup"><span data-stu-id="559c8-106">Setting</span></span>|<span data-ttu-id="559c8-107">對控制項的影響</span><span class="sxs-lookup"><span data-stu-id="559c8-107">Effect on your control</span></span>|  
 |-------------|----------------------------|  
-|<xref:System.Windows.Forms.DockStyle.Bottom>|<span data-ttu-id="45324-108">停駐在表單下方。</span><span class="sxs-lookup"><span data-stu-id="45324-108">Docks to the bottom of the form.</span></span>|  
-|<xref:System.Windows.Forms.DockStyle.Fill>|<span data-ttu-id="45324-109">填滿表單中剩下的空間。</span><span class="sxs-lookup"><span data-stu-id="45324-109">Fills all remaining space in the form.</span></span>|  
-|<xref:System.Windows.Forms.DockStyle.Left>|<span data-ttu-id="45324-110">停駐在表單左方。</span><span class="sxs-lookup"><span data-stu-id="45324-110">Docks to the left side of the form.</span></span>|  
-|<xref:System.Windows.Forms.DockStyle.None>|<span data-ttu-id="45324-111">不會停駐在任何地方，且會出現在 <xref:System.Windows.Forms.Control.Location%2A> 屬性所指定的位置。</span><span class="sxs-lookup"><span data-stu-id="45324-111">Does not dock anywhere, and it appears at the location specified by its <xref:System.Windows.Forms.Control.Location%2A> property.</span></span>|  
-|<xref:System.Windows.Forms.DockStyle.Right>|<span data-ttu-id="45324-112">停駐在表單右方。</span><span class="sxs-lookup"><span data-stu-id="45324-112">Docks to the right side of the form.</span></span>|  
-|<xref:System.Windows.Forms.DockStyle.Top>|<span data-ttu-id="45324-113">停駐在表單上方。</span><span class="sxs-lookup"><span data-stu-id="45324-113">Docks to the top of the form.</span></span>|  
+|<xref:System.Windows.Forms.DockStyle.Bottom>|<span data-ttu-id="559c8-108">停駐在表單下方。</span><span class="sxs-lookup"><span data-stu-id="559c8-108">Docks to the bottom of the form.</span></span>|  
+|<xref:System.Windows.Forms.DockStyle.Fill>|<span data-ttu-id="559c8-109">填滿表單中剩下的空間。</span><span class="sxs-lookup"><span data-stu-id="559c8-109">Fills all remaining space in the form.</span></span>|  
+|<xref:System.Windows.Forms.DockStyle.Left>|<span data-ttu-id="559c8-110">停駐在表單左方。</span><span class="sxs-lookup"><span data-stu-id="559c8-110">Docks to the left side of the form.</span></span>|  
+|<xref:System.Windows.Forms.DockStyle.None>|<span data-ttu-id="559c8-111">不會停駐在任何地方，且會出現在 <xref:System.Windows.Forms.Control.Location%2A> 屬性所指定的位置。</span><span class="sxs-lookup"><span data-stu-id="559c8-111">Does not dock anywhere, and it appears at the location specified by its <xref:System.Windows.Forms.Control.Location%2A> property.</span></span>|  
+|<xref:System.Windows.Forms.DockStyle.Right>|<span data-ttu-id="559c8-112">停駐在表單右方。</span><span class="sxs-lookup"><span data-stu-id="559c8-112">Docks to the right side of the form.</span></span>|  
+|<xref:System.Windows.Forms.DockStyle.Top>|<span data-ttu-id="559c8-113">停駐在表單上方。</span><span class="sxs-lookup"><span data-stu-id="559c8-113">Docks to the top of the form.</span></span>|  
   
- <span data-ttu-id="45324-114">Visual Studio 中有針對此功能提供的設計階段支援。</span><span class="sxs-lookup"><span data-stu-id="45324-114">There is design-time support for this feature in Visual Studio.</span></span>  
+ <span data-ttu-id="559c8-114">Visual Studio 中有針對此功能提供的設計階段支援。</span><span class="sxs-lookup"><span data-stu-id="559c8-114">There is design-time support for this feature in Visual Studio.</span></span>  
   
-### <a name="to-set-the-dock-property-for-your-control-at-run-time"></a><span data-ttu-id="45324-115">在執行階段設定控制項的 Dock 屬性</span><span class="sxs-lookup"><span data-stu-id="45324-115">To set the Dock property for your control at run time</span></span>  
+### <a name="to-set-the-dock-property-for-your-control-at-run-time"></a><span data-ttu-id="559c8-115">在執行階段設定控制項的 Dock 屬性</span><span class="sxs-lookup"><span data-stu-id="559c8-115">To set the Dock property for your control at run time</span></span>  
   
-1.  <span data-ttu-id="45324-116">在程式碼中，將 <xref:System.Windows.Forms.Control.Dock%2A> 屬性設定為適當值。</span><span class="sxs-lookup"><span data-stu-id="45324-116">Set the <xref:System.Windows.Forms.Control.Dock%2A> property to the appropriate value in code.</span></span>  
+1.  <span data-ttu-id="559c8-116">在程式碼中，將 <xref:System.Windows.Forms.Control.Dock%2A> 屬性設定為適當值。</span><span class="sxs-lookup"><span data-stu-id="559c8-116">Set the <xref:System.Windows.Forms.Control.Dock%2A> property to the appropriate value in code.</span></span>  
   
     ```vb  
     ' To set the Dock property internally.  
@@ -60,10 +49,10 @@ ms.lasthandoff: 12/22/2017
     UserControl1.Dock = DockStyle.Top;  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="45324-117">請參閱</span><span class="sxs-lookup"><span data-stu-id="45324-117">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="559c8-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="559c8-117">See Also</span></span>  
  <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType>  
- [<span data-ttu-id="45324-118">使用 .NET Framework 開發自訂的 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="45324-118">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- [<span data-ttu-id="45324-119">操作說明：錨定和停駐 FlowLayoutPanel 控制項中的子控制項</span><span class="sxs-lookup"><span data-stu-id="45324-119">How to: Anchor and Dock Child Controls in a FlowLayoutPanel Control</span></span>](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)  
- [<span data-ttu-id="45324-120">操作說明：錨定和停駐 TableLayoutPanel 控制項中的子控制項</span><span class="sxs-lookup"><span data-stu-id="45324-120">How to: Anchor and Dock Child Controls in a TableLayoutPanel Control</span></span>](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
- [<span data-ttu-id="45324-121">AutoSize 屬性概觀</span><span class="sxs-lookup"><span data-stu-id="45324-121">AutoSize Property Overview</span></span>](../../../../docs/framework/winforms/controls/autosize-property-overview.md)
+ [<span data-ttu-id="559c8-118">使用 .NET Framework 開發自訂的 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="559c8-118">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
+ [<span data-ttu-id="559c8-119">操作說明：錨定和停駐 FlowLayoutPanel 控制項中的子控制項</span><span class="sxs-lookup"><span data-stu-id="559c8-119">How to: Anchor and Dock Child Controls in a FlowLayoutPanel Control</span></span>](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)  
+ [<span data-ttu-id="559c8-120">操作說明：錨定和停駐 TableLayoutPanel 控制項中的子控制項</span><span class="sxs-lookup"><span data-stu-id="559c8-120">How to: Anchor and Dock Child Controls in a TableLayoutPanel Control</span></span>](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
+ [<span data-ttu-id="559c8-121">AutoSize 屬性概觀</span><span class="sxs-lookup"><span data-stu-id="559c8-121">AutoSize Property Overview</span></span>](../../../../docs/framework/winforms/controls/autosize-property-overview.md)

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524780"
 ---
 # <a name="how-to-draw-text-on-a-windows-form"></a><span data-ttu-id="72106-102">如何：在 Windows Form 上繪製文字</span><span class="sxs-lookup"><span data-stu-id="72106-102">How to: Draw Text on a Windows Form</span></span>
 <span data-ttu-id="72106-103">下列程式碼範例示範如何使用<xref:System.Drawing.Graphics.DrawString%2A>方法<xref:System.Drawing.Graphics>表單上繪製文字。</span><span class="sxs-lookup"><span data-stu-id="72106-103">The following code example shows how to use the <xref:System.Drawing.Graphics.DrawString%2A> method of the <xref:System.Drawing.Graphics> to draw text on a form.</span></span> <span data-ttu-id="72106-104">或者，您可以使用<xref:System.Windows.Forms.TextRenderer>的表單上繪製文字。</span><span class="sxs-lookup"><span data-stu-id="72106-104">Alternatively, you can use <xref:System.Windows.Forms.TextRenderer> for drawing text on a form.</span></span> <span data-ttu-id="72106-105">如需詳細資訊，請參閱[How to： 使用 GDI 繪製的文字](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)。</span><span class="sxs-lookup"><span data-stu-id="72106-105">For more information, see [How to: Draw Text with GDI](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md).</span></span>  

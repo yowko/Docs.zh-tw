@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762932"
 ---
 # <a name="modeling-and-mapping"></a><span data-ttu-id="aed10-102">建立模型和對應</span><span class="sxs-lookup"><span data-stu-id="aed10-102">Modeling and Mapping</span></span>
 <span data-ttu-id="aed10-103">在 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 中，您可以使用應用程式最適合的方式來定義概念模型、儲存體模型，以及兩者間的對應。</span><span class="sxs-lookup"><span data-stu-id="aed10-103">In the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], you can define the conceptual model, storage model, and the mapping between the two in the way that best suits your application.</span></span> <span data-ttu-id="aed10-104">在 Visual Studio 中的實體資料模型工具可讓您建立。[edmx 檔案](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)從資料庫或圖形化模型，然後更新該檔案在資料庫或模型變更時。</span><span class="sxs-lookup"><span data-stu-id="aed10-104">The Entity Data Model Tools in Visual Studio allow you to create an .[edmx file](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4) from a database or a graphical model and then update that file when either the database or model changes.</span></span>  
