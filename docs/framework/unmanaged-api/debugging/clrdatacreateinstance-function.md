@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d9d4965751db1a70871270317a644b0acb1302f7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405976"
 ---
 # <a name="clrdatacreateinstance-function"></a>CLRDataCreateInstance 函式
 建立指定的目標項目介面物件。  
@@ -50,7 +51,7 @@ HRESULT CLRDataCreateInstance (
  `ICLRDataTarget`物件由偵錯應用程式的作者來實作。 實作取決於目標項目所表示的類型。 目標項目可能是處理程序，記憶體傾印、 遠端電腦，以及等等。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** ClrData.idl  
   

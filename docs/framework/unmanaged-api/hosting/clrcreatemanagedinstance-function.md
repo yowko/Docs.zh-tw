@@ -21,9 +21,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a375ea586bacc2d3dafe53d493a7467730fae889
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432317"
 ---
 # <a name="clrcreatemanagedinstance-function"></a>ClrCreateManagedInstance 函式
 建立指定的 managed 型別的執行個體。  
@@ -54,7 +55,7 @@ STDAPI ClrCreateManagedInstance (
  Common language runtime 已應載入處理序。 例如，藉由呼叫載入[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)函式之前`ClrCreateManagedInstance`呼叫函式。 如果未載入執行階段，`ClrCreateManagedInstance`第一次嘗試載入的執行階段 v1.0.3705。 如果失敗，它會嘗試載入執行階段的最新版本。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
