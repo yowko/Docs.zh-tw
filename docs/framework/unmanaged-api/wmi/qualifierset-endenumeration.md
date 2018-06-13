@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0e24acdde486f377cc9187aac088ce7a611cd4eb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460737"
 ---
 # <a name="qualifiersetendenumeration-function"></a>QualifierSet_EndEnumeration 函式
 結束呼叫開始列舉[QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)函式。  
@@ -60,7 +61,7 @@ HRESULT QualifierSet_EndEnumeration (
 
 ## <a name="requirements"></a>需求  
 
-**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
 **標頭：** WMINet_Utils.idl  
   

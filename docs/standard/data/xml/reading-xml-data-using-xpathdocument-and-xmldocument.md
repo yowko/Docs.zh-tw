@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575462"
 ---
 # <a name="reading-xml-data-using-xpathdocument-and-xmldocument"></a>使用 XPathDocument 及 XmlDocument 讀取 XML 資料
 讀取 <xref:System.Xml.XPath?displayProperty=nameWithType> 命名空間中的 XML 文件有兩種方式。 一種是使用唯讀的 <xref:System.Xml.XPath.XPathDocument> 類別讀取 XML 文件，另一種是使用 <xref:System.Xml.XmlDocument> 命名空間中可編輯的 <xref:System.Xml?displayProperty=nameWithType> 類別讀取 XML 文件。  

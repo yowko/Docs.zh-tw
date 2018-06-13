@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578326"
 ---
 # <a name="application-domain-resource-monitoring"></a>應用程式定義域資源監視
 應用程式定義域資源監視 (ARM) 可讓主機依應用程式定義域來監視 CPU 和記憶體的使用情況。 對於在長時間執行的處理序中使用許多應用程式定義域的主機 (例如 ASP.NET) 來說，這相當有用。 主機可以將對整個處理序的效能造成負面影響之應用程式的應用程式定義域卸載，但前提是它必須能夠識別有問題的應用程式。 ARM 提供可用來協助做出此判斷的資訊。  

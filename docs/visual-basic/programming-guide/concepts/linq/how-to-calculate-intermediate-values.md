@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642476"
 ---
 # <a name="how-to-calculate-intermediate-values-visual-basic"></a>如何： 計算中繼值 (Visual Basic)
 這個範例顯示如何計算可用於排序、篩選與選取的中繼值。  

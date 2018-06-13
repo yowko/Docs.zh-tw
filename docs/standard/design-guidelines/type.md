@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572885"
 ---
 # <a name="type-design-guidelines"></a>類型設計方針
 CLR 觀點中，有類型只有兩個類別，參考類型和實值類型 — 但架構設計的相關討論，為了分割類型分成多個邏輯群組，每個都有它自己的特定設計規則。  

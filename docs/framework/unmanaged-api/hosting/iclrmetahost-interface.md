@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9e4db5f3c7deb300a9666182cb6b712eacf42cfa
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436224"
 ---
 # <a name="iclrmetahost-interface"></a>ICLRMetaHost 介面
 提供方法，傳回其版本號碼為基礎的特定版本的 common language runtime (CLR)、 列出所有已安裝的 Clr，清單中指定的處理序載入所有執行階段中，探索用來編譯組件、 結束處理程序的 CLR 版本使用全新的執行階段關機和查詢舊版 API 繫結。  
@@ -47,11 +48,11 @@ HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHost,
 ```  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MetaHost.h  
   
- **程式庫：**包含做為 MSCorEE.dll 中的資源  
+ **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

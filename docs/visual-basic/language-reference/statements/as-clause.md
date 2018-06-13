@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604259"
 ---
 # <a name="as-clause-visual-basic"></a>As 子句 (Visual Basic)
 導入了`As`子句，用來識別宣告陳述式或泛型型別參數的條件約束清單中的資料類型。  

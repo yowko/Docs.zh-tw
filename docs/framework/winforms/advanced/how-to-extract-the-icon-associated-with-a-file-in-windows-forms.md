@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522662"
 ---
 # <a name="how-to-extract-the-icon-associated-with-a-file-in-windows-forms"></a>如何：擷取與 Windows Form 中檔案相關的圖示
 許多檔案都已內嵌提供相關聯的檔案類型的視覺表示法的圖示。 例如，Microsoft Word 文件包含它們識別為 Word 文件的圖示。 當清單控制項或資料表控制項中顯示檔案，您可能要顯示的檔案類型，每個檔案名稱旁邊的圖示。 您可以輕鬆地使用<xref:System.Drawing.Icon.ExtractAssociatedIcon%2A>方法。  

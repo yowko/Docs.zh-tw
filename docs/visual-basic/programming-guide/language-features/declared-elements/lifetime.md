@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654225"
 ---
 # <a name="lifetime-in-visual-basic"></a>Visual Basic 中的存留期
 *存留期*的宣告的項目是一段時間期間它是可供使用。 變數是唯一的項目存留期的。 基於此目的，編譯器會將程序參數和函式會傳回做為變數的特殊案例。 變數的存留期代表一段時間期間中，它能容納的值。 其值可以變更其存留期，但它永遠會保留一些值。  

@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ec2fd3b309820f2bfb7f6091cc3db720db497408
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434889"
 ---
 # <a name="fusion-interfaces"></a>融合介面
 本章節描述融合 API 會使用來存取應用程式的資源的內容，並找出正確的版本的應用程式資源的 unmanaged 的介面。  

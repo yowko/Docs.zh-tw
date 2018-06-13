@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605351"
 ---
 # <a name="option-strict-statement"></a>Long
 不允許晚期繫結，且允許隱含型別，結果中，會限制為只有擴展轉換的隱含資料類型轉換`Object`型別。  

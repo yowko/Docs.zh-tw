@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574656"
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>執行不區分文化特性的大小寫變更
 <xref:System.String.ToUpper%2A?displayProperty=nameWithType>、<xref:System.String.ToLower%2A?displayProperty=nameWithType>、<xref:System.Char.ToUpper%2A?displayProperty=nameWithType> 和 <xref:System.Char.ToLower%2A?displayProperty=nameWithType> 方法提供不接受任何參數的多載。 根據預設，不含參數的這些多載會根據 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 的值，執行大小寫變更。 這會產生可能會因為文化特性而有所不同的區分大小寫結果。 若要釐清您希望大小寫變更是區分文化特性還是不區分文化特性，就應該使用要求您明確地指定 `culture` 參數的這些方法的多載。 針對區分文化特性的大小寫變更，請為 `culture` 參數指定 `CultureInfo.CurrentCulture`。 至於不區分文化特性的大小寫變更，則為 `culture` 參數指定 `CultureInfo.InvariantCulture`。  

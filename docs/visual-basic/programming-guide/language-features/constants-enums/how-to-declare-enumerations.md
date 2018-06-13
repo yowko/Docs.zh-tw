@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650799"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>如何：宣告列舉 (Visual Basic)
 建立列舉，含`Enum`陳述式的宣告區段中的類別或模組。 您無法宣告列舉型別方法內。 若要指定適當的存取層級，請使用`Private`， `Protected`， `Friend`，或`Public`。  

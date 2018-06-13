@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522532"
 ---
 # <a name="how-to-translate-image-colors"></a>如何：轉譯影像色彩
 翻譯將值加入至一個以上的四個色彩元件。 下表中，可以代表轉譯的色彩矩陣項目。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575697"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>XML 與關聯式資料和 ADO.NET 互相整合
 **XmlDataDocument** 類別是 **XmlDocument** 的衍生類別，而且含有 XML 資料。 **XmlDataDocument** 的好處是提供關聯式與階層式資料之間的橋樑。 可被結合到 **DataSet**，而且兩種類別都可以隨內含資料而同步變更的即是 **XmlDocument**。 結合 **DataSet** 的 **XmlDocument** 允許 XML 和關聯式資料互相整合，因而您的資料並不一定要成為 XML 或以關聯式格式表示。 兩種您都可以選擇，而不必受限於單一資料表示法。  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d3edae4cb112f46643734c5f1612d9df36ad47e9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441320"
 ---
 # <a name="ihostmemorymanager-interface"></a>IHostMemoryManager 介面
 提供方法讓 common language runtime (CLR) 進行透過主機的虛擬記憶體要求，而不是使用標準 Win32 虛擬記憶體函式。  
@@ -44,11 +45,11 @@ ms.lasthandoff: 05/04/2018
  `IHostMemoryManager` 也提供 CLR，以取得的指標，請在堆積上之記憶體要求，並取得處理序中的記憶體不足壓力層級透過主應用程式所報告的方法。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
- **程式庫：**包含做為 MSCorEE.dll 中的資源  
+ **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

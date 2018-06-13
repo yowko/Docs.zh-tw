@@ -44,6 +44,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577302"
 ---
 # <a name="net-class-library-overview"></a>.NET 類別庫概觀
 .NET 實作包括類別、介面、委派和實值型別，以加速和最佳化開發過程並提供對系統功能的存取。 為了促進語言之間的互通性，大部分 .NET 類型符合 CLS 標準，因而可以透過其編譯器符合 Common Language Specification (CLS) 的任何程式設計語言來使用。  

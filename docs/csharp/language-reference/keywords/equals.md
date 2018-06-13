@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216161"
 ---
 # <a name="equals-c-reference"></a>equals (C# 參考)
 `equals` 內容關鍵字可用於查詢運算式的 `join` 子句，以比較兩個序列的元素。 如需詳細資訊，請參閱 [join 子句](../../../csharp/language-reference/keywords/join-clause.md)。  

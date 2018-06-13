@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521738"
 ---
 # <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a>如何：以規劃圖樣填滿形狀
 從兩個色彩來進行規劃圖樣： 一個用於背景，一個背景上形成圖樣的程式碼行。 若要規劃圖樣填滿封閉的圖形，請使用<xref:System.Drawing.Drawing2D.HatchBrush>物件。 下列範例會示範如何以規劃圖樣填滿橢圓形：  
