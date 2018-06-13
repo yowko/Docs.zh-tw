@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325129"
 ---
 # <a name="ltparamrefgt-c-programming-guide"></a><span data-ttu-id="a2941-102">&lt;paramref&gt; (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="a2941-102">&lt;paramref&gt; (C# Programming Guide)</span></span>
 ## <a name="syntax"></a><span data-ttu-id="a2941-103">語法</span><span class="sxs-lookup"><span data-stu-id="a2941-103">Syntax</span></span>  

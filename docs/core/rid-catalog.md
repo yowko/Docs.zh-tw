@@ -4,52 +4,49 @@ description: 了解執行階段識別碼 (RID) 以及 RID 在 .NET Core 中的�
 author: mairaw
 ms.author: mairaw
 ms.date: 09/07/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 42707d96744ff765c2ea6ae2298da3e8b27f912f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 81f9e5f65385bbd81c7fdae7f75c62d11b6f6319
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215903"
 ---
-# <a name="net-core-rid-catalog"></a><span data-ttu-id="b138b-103">.NET Core RID 類別目錄</span><span class="sxs-lookup"><span data-stu-id="b138b-103">.NET Core RID Catalog</span></span>
+# <a name="net-core-rid-catalog"></a><span data-ttu-id="a8daa-103">.NET Core RID 類別目錄</span><span class="sxs-lookup"><span data-stu-id="a8daa-103">.NET Core RID Catalog</span></span>
 
-<span data-ttu-id="b138b-104">RID 是*執行階段識別項*的縮寫。</span><span class="sxs-lookup"><span data-stu-id="b138b-104">RID is short for *Runtime IDentifier*.</span></span> <span data-ttu-id="b138b-105">RID 值是用來識別應用程式執行所在的目標平台。</span><span class="sxs-lookup"><span data-stu-id="b138b-105">RID values are used to identify target platforms where the application runs.</span></span>
-<span data-ttu-id="b138b-106">.NET 套件會使用它們來代表 NuGet 套件中的平台特定資產。</span><span class="sxs-lookup"><span data-stu-id="b138b-106">They're used by .NET packages to represent platform-specific assets in NuGet packages.</span></span> <span data-ttu-id="b138b-107">下列值是 RID 的範例：`linux-x64`、`ubuntu.14.04-x64`、`win7-x64` 或 `osx.10.12-x64`。</span><span class="sxs-lookup"><span data-stu-id="b138b-107">The following values are examples of RIDs: `linux-x64`, `ubuntu.14.04-x64`, `win7-x64`, or `osx.10.12-x64`.</span></span>
-<span data-ttu-id="b138b-108">針對具有原生相依性的套件，RID 也可指定能在哪些平台上還原套件。</span><span class="sxs-lookup"><span data-stu-id="b138b-108">For the packages with native dependencies, the RID designates on which platforms the package can be restored.</span></span>
+<span data-ttu-id="a8daa-104">RID 是*執行階段識別項*的縮寫。</span><span class="sxs-lookup"><span data-stu-id="a8daa-104">RID is short for *Runtime IDentifier*.</span></span> <span data-ttu-id="a8daa-105">RID 值是用來識別應用程式執行所在的目標平台。</span><span class="sxs-lookup"><span data-stu-id="a8daa-105">RID values are used to identify target platforms where the application runs.</span></span>
+<span data-ttu-id="a8daa-106">.NET 套件會使用它們來代表 NuGet 套件中的平台特定資產。</span><span class="sxs-lookup"><span data-stu-id="a8daa-106">They're used by .NET packages to represent platform-specific assets in NuGet packages.</span></span> <span data-ttu-id="a8daa-107">下列值是 RID 的範例：`linux-x64`、`ubuntu.14.04-x64`、`win7-x64` 或 `osx.10.12-x64`。</span><span class="sxs-lookup"><span data-stu-id="a8daa-107">The following values are examples of RIDs: `linux-x64`, `ubuntu.14.04-x64`, `win7-x64`, or `osx.10.12-x64`.</span></span>
+<span data-ttu-id="a8daa-108">針對具有原生相依性的套件，RID 也可指定能在哪些平台上還原套件。</span><span class="sxs-lookup"><span data-stu-id="a8daa-108">For the packages with native dependencies, the RID designates on which platforms the package can be restored.</span></span>
 
-<span data-ttu-id="b138b-109">單一 RID 可在您專案檔的 `<RuntimeIdentifier>` 元素中設定。</span><span class="sxs-lookup"><span data-stu-id="b138b-109">A single RID can be set in the `<RuntimeIdentifier>` element of your project file.</span></span> <span data-ttu-id="b138b-110">可以在專案檔的 `<RuntimeIdentifiers>` 元素中，將多個 RID 定義為以分號分隔的清單。</span><span class="sxs-lookup"><span data-stu-id="b138b-110">Multiple RIDs can be defined as a semicolon-delimited list in the project file's `<RuntimeIdentifiers>` element.</span></span> <span data-ttu-id="b138b-111">它們也可以透過以`--runtime`選項搭配下列 [.NET Core CLI 命令](./tools/index.md)來使用：</span><span class="sxs-lookup"><span data-stu-id="b138b-111">They're also used via the `--runtime` option with the following [.NET Core CLI commands](./tools/index.md):</span></span>
+<span data-ttu-id="a8daa-109">單一 RID 可在您專案檔的 `<RuntimeIdentifier>` 元素中設定。</span><span class="sxs-lookup"><span data-stu-id="a8daa-109">A single RID can be set in the `<RuntimeIdentifier>` element of your project file.</span></span> <span data-ttu-id="a8daa-110">可以在專案檔的 `<RuntimeIdentifiers>` 元素中，將多個 RID 定義為以分號分隔的清單。</span><span class="sxs-lookup"><span data-stu-id="a8daa-110">Multiple RIDs can be defined as a semicolon-delimited list in the project file's `<RuntimeIdentifiers>` element.</span></span> <span data-ttu-id="a8daa-111">它們也可以透過以`--runtime`選項搭配下列 [.NET Core CLI 命令](./tools/index.md)來使用：</span><span class="sxs-lookup"><span data-stu-id="a8daa-111">They're also used via the `--runtime` option with the following [.NET Core CLI commands](./tools/index.md):</span></span>
 
-- [<span data-ttu-id="b138b-112">dotnet build</span><span class="sxs-lookup"><span data-stu-id="b138b-112">dotnet build</span></span>](./tools/dotnet-build.md)
-- [<span data-ttu-id="b138b-113">dotnet clean</span><span class="sxs-lookup"><span data-stu-id="b138b-113">dotnet clean</span></span>](./tools/dotnet-clean.md)
-- [<span data-ttu-id="b138b-114">dotnet pack</span><span class="sxs-lookup"><span data-stu-id="b138b-114">dotnet pack</span></span>](./tools/dotnet-pack.md)
-- [<span data-ttu-id="b138b-115">dotnet publish</span><span class="sxs-lookup"><span data-stu-id="b138b-115">dotnet publish</span></span>](./tools/dotnet-publish.md)
-- [<span data-ttu-id="b138b-116">dotnet restore</span><span class="sxs-lookup"><span data-stu-id="b138b-116">dotnet restore</span></span>](./tools/dotnet-restore.md)
-- [<span data-ttu-id="b138b-117">dotnet run</span><span class="sxs-lookup"><span data-stu-id="b138b-117">dotnet run</span></span>](./tools/dotnet-run.md)
-- [<span data-ttu-id="b138b-118">dotnet store</span><span class="sxs-lookup"><span data-stu-id="b138b-118">dotnet store</span></span>](./tools/dotnet-store.md)
+- [<span data-ttu-id="a8daa-112">dotnet build</span><span class="sxs-lookup"><span data-stu-id="a8daa-112">dotnet build</span></span>](./tools/dotnet-build.md)
+- [<span data-ttu-id="a8daa-113">dotnet clean</span><span class="sxs-lookup"><span data-stu-id="a8daa-113">dotnet clean</span></span>](./tools/dotnet-clean.md)
+- [<span data-ttu-id="a8daa-114">dotnet pack</span><span class="sxs-lookup"><span data-stu-id="a8daa-114">dotnet pack</span></span>](./tools/dotnet-pack.md)
+- [<span data-ttu-id="a8daa-115">dotnet publish</span><span class="sxs-lookup"><span data-stu-id="a8daa-115">dotnet publish</span></span>](./tools/dotnet-publish.md)
+- [<span data-ttu-id="a8daa-116">dotnet restore</span><span class="sxs-lookup"><span data-stu-id="a8daa-116">dotnet restore</span></span>](./tools/dotnet-restore.md)
+- [<span data-ttu-id="a8daa-117">dotnet run</span><span class="sxs-lookup"><span data-stu-id="a8daa-117">dotnet run</span></span>](./tools/dotnet-run.md)
+- [<span data-ttu-id="a8daa-118">dotnet store</span><span class="sxs-lookup"><span data-stu-id="a8daa-118">dotnet store</span></span>](./tools/dotnet-store.md)
 
-<span data-ttu-id="b138b-119">代表具體作業系統的 RID 通常遵循 `[os].[version]-[architecture]-[additional qualifiers]` 這個模式，其中：</span><span class="sxs-lookup"><span data-stu-id="b138b-119">RIDs that represent concrete operating systems usually follow this pattern: `[os].[version]-[architecture]-[additional qualifiers]` where:</span></span>
+<span data-ttu-id="a8daa-119">代表具體作業系統的 RID 通常遵循 `[os].[version]-[architecture]-[additional qualifiers]` 這個模式，其中：</span><span class="sxs-lookup"><span data-stu-id="a8daa-119">RIDs that represent concrete operating systems usually follow this pattern: `[os].[version]-[architecture]-[additional qualifiers]` where:</span></span>
 
-- <span data-ttu-id="b138b-120">`[os]` 是作業/平台系統 Moniker。</span><span class="sxs-lookup"><span data-stu-id="b138b-120">`[os]` is the operating/platform system moniker.</span></span> <span data-ttu-id="b138b-121">例如，`ubuntu`。</span><span class="sxs-lookup"><span data-stu-id="b138b-121">For example, `ubuntu`.</span></span>
+- <span data-ttu-id="a8daa-120">`[os]` 是作業/平台系統 Moniker。</span><span class="sxs-lookup"><span data-stu-id="a8daa-120">`[os]` is the operating/platform system moniker.</span></span> <span data-ttu-id="a8daa-121">例如，`ubuntu`。</span><span class="sxs-lookup"><span data-stu-id="a8daa-121">For example, `ubuntu`.</span></span>
 
-- <span data-ttu-id="b138b-122">`[version]` 是作業系統版本，使用以點分隔 (`.`) 的版本號碼表示。</span><span class="sxs-lookup"><span data-stu-id="b138b-122">`[version]` is the operating system version in the form of a dot-separated (`.`) version number.</span></span> <span data-ttu-id="b138b-123">例如，`15.10`。</span><span class="sxs-lookup"><span data-stu-id="b138b-123">For example, `15.10`.</span></span>
+- <span data-ttu-id="a8daa-122">`[version]` 是作業系統版本，使用以點分隔 (`.`) 的版本號碼表示。</span><span class="sxs-lookup"><span data-stu-id="a8daa-122">`[version]` is the operating system version in the form of a dot-separated (`.`) version number.</span></span> <span data-ttu-id="a8daa-123">例如，`15.10`。</span><span class="sxs-lookup"><span data-stu-id="a8daa-123">For example, `15.10`.</span></span>
 
-  - <span data-ttu-id="b138b-124">版本**不應為**行銷版本，因為行銷版本通常代表作業系統的多個個別版本，且具有不同平台 API 介面區。</span><span class="sxs-lookup"><span data-stu-id="b138b-124">The version **shouldn't** be marketing versions, as they often represent multiple discrete versions of the operating system with varying platform API surface area.</span></span>
+  - <span data-ttu-id="a8daa-124">版本**不應為**行銷版本，因為行銷版本通常代表作業系統的多個個別版本，且具有不同平台 API 介面區。</span><span class="sxs-lookup"><span data-stu-id="a8daa-124">The version **shouldn't** be marketing versions, as they often represent multiple discrete versions of the operating system with varying platform API surface area.</span></span>
 
-- <span data-ttu-id="b138b-125">`[architecture]` 處理器架構。</span><span class="sxs-lookup"><span data-stu-id="b138b-125">`[architecture]` is the processor architecture.</span></span> <span data-ttu-id="b138b-126">例如：`x86`、`x64`、`arm` 或 `arm64`。</span><span class="sxs-lookup"><span data-stu-id="b138b-126">For example: `x86`, `x64`, `arm`, or `arm64`.</span></span>
+- <span data-ttu-id="a8daa-125">`[architecture]` 處理器架構。</span><span class="sxs-lookup"><span data-stu-id="a8daa-125">`[architecture]` is the processor architecture.</span></span> <span data-ttu-id="a8daa-126">例如：`x86`、`x64`、`arm` 或 `arm64`。</span><span class="sxs-lookup"><span data-stu-id="a8daa-126">For example: `x86`, `x64`, `arm`, or `arm64`.</span></span>
 
-- <span data-ttu-id="b138b-127">`[additional qualifiers]` 進一步區分不同平台。</span><span class="sxs-lookup"><span data-stu-id="b138b-127">`[additional qualifiers]` further differentiate different platforms.</span></span> <span data-ttu-id="b138b-128">例如：`aot` 或 `corert`。</span><span class="sxs-lookup"><span data-stu-id="b138b-128">For example: `aot` or `corert`.</span></span>
+- <span data-ttu-id="a8daa-127">`[additional qualifiers]` 進一步區分不同平台。</span><span class="sxs-lookup"><span data-stu-id="a8daa-127">`[additional qualifiers]` further differentiate different platforms.</span></span> <span data-ttu-id="a8daa-128">例如：`aot` 或 `corert`。</span><span class="sxs-lookup"><span data-stu-id="a8daa-128">For example: `aot` or `corert`.</span></span>
 
-## <a name="rid-graph"></a><span data-ttu-id="b138b-129">RID 圖表</span><span class="sxs-lookup"><span data-stu-id="b138b-129">RID graph</span></span>
+## <a name="rid-graph"></a><span data-ttu-id="a8daa-129">RID 圖表</span><span class="sxs-lookup"><span data-stu-id="a8daa-129">RID graph</span></span>
 
-<span data-ttu-id="b138b-130">RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。</span><span class="sxs-lookup"><span data-stu-id="b138b-130">The RID graph or runtime fallback graph is a list of RIDs that are compatible with each other.</span></span> <span data-ttu-id="b138b-131">RID 是在 [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) 套件中定義。</span><span class="sxs-lookup"><span data-stu-id="b138b-131">The RIDs are defined in the [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) package.</span></span> <span data-ttu-id="b138b-132">您可以在 [*runtime.json*](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) 檔案 (位於 CoreFX 存放庫) 中看到支援的 RID 清單與 RID 圖形。</span><span class="sxs-lookup"><span data-stu-id="b138b-132">You can see the list of supported RIDs and the RID graph in the [*runtime.json*](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) file, which is located at the CoreFX repo.</span></span> <span data-ttu-id="b138b-133">在此檔案中，您可以看到所有 RID (基底項目除外) 都包含 `"#import"` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="b138b-133">In this file, you can see that all RIDs, except for the base one, contain an `"#import"` statement.</span></span> <span data-ttu-id="b138b-134">這些陳述式指出相容的 RID。</span><span class="sxs-lookup"><span data-stu-id="b138b-134">These statements indicate compatible RIDs.</span></span>
+<span data-ttu-id="a8daa-130">RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。</span><span class="sxs-lookup"><span data-stu-id="a8daa-130">The RID graph or runtime fallback graph is a list of RIDs that are compatible with each other.</span></span> <span data-ttu-id="a8daa-131">RID 是在 [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) 套件中定義。</span><span class="sxs-lookup"><span data-stu-id="a8daa-131">The RIDs are defined in the [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) package.</span></span> <span data-ttu-id="a8daa-132">您可以在 [*runtime.json*](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) 檔案 (位於 CoreFX 存放庫) 中看到支援的 RID 清單與 RID 圖形。</span><span class="sxs-lookup"><span data-stu-id="a8daa-132">You can see the list of supported RIDs and the RID graph in the [*runtime.json*](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) file, which is located at the CoreFX repo.</span></span> <span data-ttu-id="a8daa-133">在此檔案中，您可以看到所有 RID (基底項目除外) 都包含 `"#import"` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="a8daa-133">In this file, you can see that all RIDs, except for the base one, contain an `"#import"` statement.</span></span> <span data-ttu-id="a8daa-134">這些陳述式指出相容的 RID。</span><span class="sxs-lookup"><span data-stu-id="a8daa-134">These statements indicate compatible RIDs.</span></span>
 
-<span data-ttu-id="b138b-135">當 NuGet 還原套件時，它會嘗試尋找與所指定執行階段完全相符的項目。</span><span class="sxs-lookup"><span data-stu-id="b138b-135">When NuGet restores packages, it tries to find an exact match for the specified runtime.</span></span>
-<span data-ttu-id="b138b-136">若找不到完全相符的項目，NuGet 會返回到圖形，直到它根據 RID 圖形找到最接近的相容系統。</span><span class="sxs-lookup"><span data-stu-id="b138b-136">If an exact match is not found, NuGet walks back the graph until it finds the closest compatible system according to the RID graph.</span></span>
+<span data-ttu-id="a8daa-135">當 NuGet 還原套件時，它會嘗試尋找與所指定執行階段完全相符的項目。</span><span class="sxs-lookup"><span data-stu-id="a8daa-135">When NuGet restores packages, it tries to find an exact match for the specified runtime.</span></span>
+<span data-ttu-id="a8daa-136">若找不到完全相符的項目，NuGet 會返回到圖形，直到它根據 RID 圖形找到最接近的相容系統。</span><span class="sxs-lookup"><span data-stu-id="a8daa-136">If an exact match is not found, NuGet walks back the graph until it finds the closest compatible system according to the RID graph.</span></span>
 
-<span data-ttu-id="b138b-137">下列範例是 `osx.10.12-x64` RID 的實際項目：</span><span class="sxs-lookup"><span data-stu-id="b138b-137">The following example is the actual entry for the `osx.10.12-x64` RID:</span></span>
+<span data-ttu-id="a8daa-137">下列範例是 `osx.10.12-x64` RID 的實際項目：</span><span class="sxs-lookup"><span data-stu-id="a8daa-137">The following example is the actual entry for the `osx.10.12-x64` RID:</span></span>
 
 ```json
 "osx.10.12-x64": {
@@ -57,9 +54,9 @@ ms.lasthandoff: 04/28/2018
 }
 ```
 
-<span data-ttu-id="b138b-138">上述 RID 指定 `osx.10.12-x64` 匯入 `osx.10.11-x64`。</span><span class="sxs-lookup"><span data-stu-id="b138b-138">The above RID specifies that `osx.10.12-x64` imports `osx.10.11-x64`.</span></span> <span data-ttu-id="b138b-139">因此，當 NuGet 還原套件時，它會嘗試在套件中尋找與 `osx.10.12-x64` 完全相符的項目。</span><span class="sxs-lookup"><span data-stu-id="b138b-139">So, when NuGet restores packages, it tries to find an exact match for  `osx.10.12-x64` in the package.</span></span> <span data-ttu-id="b138b-140">例如，若 NuGet 找不到特定執行階段，它可以還原指定 `osx.10.11-x64` 執行階段的套件。</span><span class="sxs-lookup"><span data-stu-id="b138b-140">If NuGet cannot find the specific runtime, it can restore packages that specify `osx.10.11-x64` runtimes, for example.</span></span>
+<span data-ttu-id="a8daa-138">上述 RID 指定 `osx.10.12-x64` 匯入 `osx.10.11-x64`。</span><span class="sxs-lookup"><span data-stu-id="a8daa-138">The above RID specifies that `osx.10.12-x64` imports `osx.10.11-x64`.</span></span> <span data-ttu-id="a8daa-139">因此，當 NuGet 還原套件時，它會嘗試在套件中尋找與 `osx.10.12-x64` 完全相符的項目。</span><span class="sxs-lookup"><span data-stu-id="a8daa-139">So, when NuGet restores packages, it tries to find an exact match for  `osx.10.12-x64` in the package.</span></span> <span data-ttu-id="a8daa-140">例如，若 NuGet 找不到特定執行階段，它可以還原指定 `osx.10.11-x64` 執行階段的套件。</span><span class="sxs-lookup"><span data-stu-id="a8daa-140">If NuGet cannot find the specific runtime, it can restore packages that specify `osx.10.11-x64` runtimes, for example.</span></span>
 
-<span data-ttu-id="b138b-141">下列範例顯示也在 *runtime.json* 檔案中定義的稍大 RID 圖形：</span><span class="sxs-lookup"><span data-stu-id="b138b-141">The following example shows a slightly bigger RID graph also defined in the *runtime.json*  file:</span></span>
+<span data-ttu-id="a8daa-141">下列範例顯示也在 *runtime.json* 檔案中定義的稍大 RID 圖形：</span><span class="sxs-lookup"><span data-stu-id="a8daa-141">The following example shows a slightly bigger RID graph also defined in the *runtime.json*  file:</span></span>
 
 ```
     win7-x64    win7-x86
@@ -73,85 +70,85 @@ ms.lasthandoff: 04/28/2018
             any
 ```
 
-<span data-ttu-id="b138b-142">所有的 RID 最終將對應至根 `any` RID。</span><span class="sxs-lookup"><span data-stu-id="b138b-142">All RIDs eventually map back to the root `any` RID.</span></span>
+<span data-ttu-id="a8daa-142">所有的 RID 最終將對應至根 `any` RID。</span><span class="sxs-lookup"><span data-stu-id="a8daa-142">All RIDs eventually map back to the root `any` RID.</span></span>
 
-<span data-ttu-id="b138b-143">處理 RID 時，您必須謹記一些考量：</span><span class="sxs-lookup"><span data-stu-id="b138b-143">There are some considerations about RIDs that you have to keep in mind when working with them:</span></span>
+<span data-ttu-id="a8daa-143">處理 RID 時，您必須謹記一些考量：</span><span class="sxs-lookup"><span data-stu-id="a8daa-143">There are some considerations about RIDs that you have to keep in mind when working with them:</span></span>
 
-- <span data-ttu-id="b138b-144">RID 是**隱晦字串**，因此必須以黑箱視之。</span><span class="sxs-lookup"><span data-stu-id="b138b-144">RIDs are **opaque strings** and should be treated as black boxes.</span></span>
-- <span data-ttu-id="b138b-145">不要以程式設計方式建置 RID。</span><span class="sxs-lookup"><span data-stu-id="b138b-145">Don't build RIDs programmatically.</span></span>
-- <span data-ttu-id="b138b-146">使用已針對平台定義的 RID。</span><span class="sxs-lookup"><span data-stu-id="b138b-146">Use RIDs that are already defined for the platform.</span></span>
-- <span data-ttu-id="b138b-147">RID 必須是特定的，因此不要假設實際 RID 值會怎樣。</span><span class="sxs-lookup"><span data-stu-id="b138b-147">The RIDs need to be specific, so don't assume anything from the actual RID value.</span></span>
+- <span data-ttu-id="a8daa-144">RID 是**隱晦字串**，因此必須以黑箱視之。</span><span class="sxs-lookup"><span data-stu-id="a8daa-144">RIDs are **opaque strings** and should be treated as black boxes.</span></span>
+- <span data-ttu-id="a8daa-145">不要以程式設計方式建置 RID。</span><span class="sxs-lookup"><span data-stu-id="a8daa-145">Don't build RIDs programmatically.</span></span>
+- <span data-ttu-id="a8daa-146">使用已針對平台定義的 RID。</span><span class="sxs-lookup"><span data-stu-id="a8daa-146">Use RIDs that are already defined for the platform.</span></span>
+- <span data-ttu-id="a8daa-147">RID 必須是特定的，因此不要假設實際 RID 值會怎樣。</span><span class="sxs-lookup"><span data-stu-id="a8daa-147">The RIDs need to be specific, so don't assume anything from the actual RID value.</span></span>
 
-## <a name="using-rids"></a><span data-ttu-id="b138b-148">使用 RID</span><span class="sxs-lookup"><span data-stu-id="b138b-148">Using RIDs</span></span>
+## <a name="using-rids"></a><span data-ttu-id="a8daa-148">使用 RID</span><span class="sxs-lookup"><span data-stu-id="a8daa-148">Using RIDs</span></span>
 
-<span data-ttu-id="b138b-149">若要使用 RID，必須先了解有哪些 RID 存在。</span><span class="sxs-lookup"><span data-stu-id="b138b-149">To be able to use RIDs, you have to know which RIDs exist.</span></span> <span data-ttu-id="b138b-150">新的值會定期新增至平台。</span><span class="sxs-lookup"><span data-stu-id="b138b-150">New values are added regularly to the platform.</span></span>
-<span data-ttu-id="b138b-151">如需最新的完整版本，請查看 CoreFX 存放庫上的 [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) 檔案。</span><span class="sxs-lookup"><span data-stu-id="b138b-151">For the latest and complete version, see the [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) file on CoreFX repo.</span></span>
+<span data-ttu-id="a8daa-149">若要使用 RID，必須先了解有哪些 RID 存在。</span><span class="sxs-lookup"><span data-stu-id="a8daa-149">To be able to use RIDs, you have to know which RIDs exist.</span></span> <span data-ttu-id="a8daa-150">新的值會定期新增至平台。</span><span class="sxs-lookup"><span data-stu-id="a8daa-150">New values are added regularly to the platform.</span></span>
+<span data-ttu-id="a8daa-151">如需最新的完整版本，請查看 CoreFX 存放庫上的 [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) 檔案。</span><span class="sxs-lookup"><span data-stu-id="a8daa-151">For the latest and complete version, see the [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) file on CoreFX repo.</span></span>
 
-<span data-ttu-id="b138b-152">.NET Core 2.0 SDK 引進可攜式 RID 的概念。</span><span class="sxs-lookup"><span data-stu-id="b138b-152">.NET Core 2.0 SDK introduces the concept of portable RIDs.</span></span> <span data-ttu-id="b138b-153">它們是新增到 RID 圖形且未繫結到特定版本或 OS 發行版本的新值。</span><span class="sxs-lookup"><span data-stu-id="b138b-153">They are new values added to the RID graph that aren't tied to a specific version or OS distribution.</span></span> <span data-ttu-id="b138b-154">處理多個 Linux 散發時，它們特別實用。</span><span class="sxs-lookup"><span data-stu-id="b138b-154">They're particularly useful when dealing with multiple Linux distros.</span></span>
+<span data-ttu-id="a8daa-152">.NET Core 2.0 SDK 引進可攜式 RID 的概念。</span><span class="sxs-lookup"><span data-stu-id="a8daa-152">.NET Core 2.0 SDK introduces the concept of portable RIDs.</span></span> <span data-ttu-id="a8daa-153">它們是新增到 RID 圖形且未繫結到特定版本或 OS 發行版本的新值。</span><span class="sxs-lookup"><span data-stu-id="a8daa-153">They are new values added to the RID graph that aren't tied to a specific version or OS distribution.</span></span> <span data-ttu-id="a8daa-154">處理多個 Linux 散發時，它們特別實用。</span><span class="sxs-lookup"><span data-stu-id="a8daa-154">They're particularly useful when dealing with multiple Linux distros.</span></span>
 
-<span data-ttu-id="b138b-155">下列清單顯示用於每個 OS 的最常見 RID。</span><span class="sxs-lookup"><span data-stu-id="b138b-155">The following list shows the most common RIDs used for each OS.</span></span> <span data-ttu-id="b138b-156">它不涵蓋 `arm` 或 `corert` 值。</span><span class="sxs-lookup"><span data-stu-id="b138b-156">It doesn't cover `arm` or `corert` values.</span></span>
+<span data-ttu-id="a8daa-155">下列清單顯示用於每個 OS 的最常見 RID。</span><span class="sxs-lookup"><span data-stu-id="a8daa-155">The following list shows the most common RIDs used for each OS.</span></span> <span data-ttu-id="a8daa-156">它不涵蓋 `arm` 或 `corert` 值。</span><span class="sxs-lookup"><span data-stu-id="a8daa-156">It doesn't cover `arm` or `corert` values.</span></span>
 
-## <a name="windows-rids"></a><span data-ttu-id="b138b-157">Windows RID</span><span class="sxs-lookup"><span data-stu-id="b138b-157">Windows RIDs</span></span>
+## <a name="windows-rids"></a><span data-ttu-id="a8daa-157">Windows RID</span><span class="sxs-lookup"><span data-stu-id="a8daa-157">Windows RIDs</span></span>
 
-- <span data-ttu-id="b138b-158">可攜式</span><span class="sxs-lookup"><span data-stu-id="b138b-158">Portable</span></span>
+- <span data-ttu-id="a8daa-158">可攜式</span><span class="sxs-lookup"><span data-stu-id="a8daa-158">Portable</span></span>
   - `win-x86`
   - `win-x64`
-- <span data-ttu-id="b138b-159">Windows 7/Windows Server 2008 R2</span><span class="sxs-lookup"><span data-stu-id="b138b-159">Windows 7 / Windows Server 2008 R2</span></span>
+- <span data-ttu-id="a8daa-159">Windows 7/Windows Server 2008 R2</span><span class="sxs-lookup"><span data-stu-id="a8daa-159">Windows 7 / Windows Server 2008 R2</span></span>
   - `win7-x64`
   - `win7-x86`
-- <span data-ttu-id="b138b-160">Windows 8/Windows Server 2012</span><span class="sxs-lookup"><span data-stu-id="b138b-160">Windows 8 / Windows Server 2012</span></span>
+- <span data-ttu-id="a8daa-160">Windows 8/Windows Server 2012</span><span class="sxs-lookup"><span data-stu-id="a8daa-160">Windows 8 / Windows Server 2012</span></span>
   - `win8-x64`
   - `win8-x86`
   - `win8-arm`
-- <span data-ttu-id="b138b-161">Windows 8.1/Windows Server 2012 R2</span><span class="sxs-lookup"><span data-stu-id="b138b-161">Windows 8.1 / Windows Server 2012 R2</span></span>
+- <span data-ttu-id="a8daa-161">Windows 8.1/Windows Server 2012 R2</span><span class="sxs-lookup"><span data-stu-id="a8daa-161">Windows 8.1 / Windows Server 2012 R2</span></span>
   - `win81-x64`
   - `win81-x86`
   - `win81-arm`
-- <span data-ttu-id="b138b-162">Windows 10/Windows Server 2016</span><span class="sxs-lookup"><span data-stu-id="b138b-162">Windows 10 / Windows Server 2016</span></span>
+- <span data-ttu-id="a8daa-162">Windows 10/Windows Server 2016</span><span class="sxs-lookup"><span data-stu-id="a8daa-162">Windows 10 / Windows Server 2016</span></span>
   - `win10-x64`
   - `win10-x86`
   - `win10-arm`
   - `win10-arm64`
 
-<span data-ttu-id="b138b-163">如需詳細資訊，請參閱 [Windows 上 .NET Core 的必要條件](windows-prerequisites.md)。</span><span class="sxs-lookup"><span data-stu-id="b138b-163">See [Prerequisites for .NET Core on Windows](windows-prerequisites.md) for more information.</span></span>
+<span data-ttu-id="a8daa-163">如需詳細資訊，請參閱 [Windows 上 .NET Core 的必要條件](windows-prerequisites.md)。</span><span class="sxs-lookup"><span data-stu-id="a8daa-163">See [Prerequisites for .NET Core on Windows](windows-prerequisites.md) for more information.</span></span>
 
-## <a name="linux-rids"></a><span data-ttu-id="b138b-164">Linux RID</span><span class="sxs-lookup"><span data-stu-id="b138b-164">Linux RIDs</span></span>
+## <a name="linux-rids"></a><span data-ttu-id="a8daa-164">Linux RID</span><span class="sxs-lookup"><span data-stu-id="a8daa-164">Linux RIDs</span></span>
 
-- <span data-ttu-id="b138b-165">可攜式</span><span class="sxs-lookup"><span data-stu-id="b138b-165">Portable</span></span>
+- <span data-ttu-id="a8daa-165">可攜式</span><span class="sxs-lookup"><span data-stu-id="a8daa-165">Portable</span></span>
   - `linux-x64`
-- <span data-ttu-id="b138b-166">CentOS</span><span class="sxs-lookup"><span data-stu-id="b138b-166">CentOS</span></span>
+- <span data-ttu-id="a8daa-166">CentOS</span><span class="sxs-lookup"><span data-stu-id="a8daa-166">CentOS</span></span>
   - `centos-x64`
   - `centos.7-x64`
-- <span data-ttu-id="b138b-167">Debian</span><span class="sxs-lookup"><span data-stu-id="b138b-167">Debian</span></span>
+- <span data-ttu-id="a8daa-167">Debian</span><span class="sxs-lookup"><span data-stu-id="a8daa-167">Debian</span></span>
   - `debian-x64`
   - `debian.8-x64`
-- <span data-ttu-id="b138b-168">Fedora</span><span class="sxs-lookup"><span data-stu-id="b138b-168">Fedora</span></span>
+- <span data-ttu-id="a8daa-168">Fedora</span><span class="sxs-lookup"><span data-stu-id="a8daa-168">Fedora</span></span>
   - `fedora-x64`
   - `fedora.24-x64`
-  - <span data-ttu-id="b138b-169">`fedora.25-x64` (.NET Core 2.0 或更新版本)</span><span class="sxs-lookup"><span data-stu-id="b138b-169">`fedora.25-x64` (.NET Core 2.0 or later versions)</span></span>
-  - <span data-ttu-id="b138b-170">`fedora.26-x64` (.NET Core 2.0 或更新版本)</span><span class="sxs-lookup"><span data-stu-id="b138b-170">`fedora.26-x64` (.NET Core 2.0 or later versions)</span></span>
-- <span data-ttu-id="b138b-171">Gentoo (.NET Core 2.0 或更新版本)</span><span class="sxs-lookup"><span data-stu-id="b138b-171">Gentoo (.NET Core 2.0 or later versions)</span></span>
+  - <span data-ttu-id="a8daa-169">`fedora.25-x64` (.NET Core 2.0 或更新版本)</span><span class="sxs-lookup"><span data-stu-id="a8daa-169">`fedora.25-x64` (.NET Core 2.0 or later versions)</span></span>
+  - <span data-ttu-id="a8daa-170">`fedora.26-x64` (.NET Core 2.0 或更新版本)</span><span class="sxs-lookup"><span data-stu-id="a8daa-170">`fedora.26-x64` (.NET Core 2.0 or later versions)</span></span>
+- <span data-ttu-id="a8daa-171">Gentoo (.NET Core 2.0 或更新版本)</span><span class="sxs-lookup"><span data-stu-id="a8daa-171">Gentoo (.NET Core 2.0 or later versions)</span></span>
   - `gentoo-x64`
-- <span data-ttu-id="b138b-172">openSUSE</span><span class="sxs-lookup"><span data-stu-id="b138b-172">openSUSE</span></span>
+- <span data-ttu-id="a8daa-172">openSUSE</span><span class="sxs-lookup"><span data-stu-id="a8daa-172">openSUSE</span></span>
   - `opensuse-x64`
   - `opensuse.42.1-x64`
-- <span data-ttu-id="b138b-173">Oracle Linux</span><span class="sxs-lookup"><span data-stu-id="b138b-173">Oracle Linux</span></span>
+- <span data-ttu-id="a8daa-173">Oracle Linux</span><span class="sxs-lookup"><span data-stu-id="a8daa-173">Oracle Linux</span></span>
   - `ol-x64`
   - `ol.7-x64`
   - `ol.7.0-x64`
   - `ol.7.1-x64`
   - `ol.7.2-x64`
-- <span data-ttu-id="b138b-174">Red Hat Enterprise Linux</span><span class="sxs-lookup"><span data-stu-id="b138b-174">Red Hat Enterprise Linux</span></span>
+- <span data-ttu-id="a8daa-174">Red Hat Enterprise Linux</span><span class="sxs-lookup"><span data-stu-id="a8daa-174">Red Hat Enterprise Linux</span></span>
   - `rhel-x64`
-  - <span data-ttu-id="b138b-175">`rhel.6-x64` (.NET Core 2.0 或更新版本)</span><span class="sxs-lookup"><span data-stu-id="b138b-175">`rhel.6-x64` (.NET Core 2.0 or later versions)</span></span>
+  - <span data-ttu-id="a8daa-175">`rhel.6-x64` (.NET Core 2.0 或更新版本)</span><span class="sxs-lookup"><span data-stu-id="a8daa-175">`rhel.6-x64` (.NET Core 2.0 or later versions)</span></span>
   - `rhel.7-x64`
   - `rhel.7.1-x64`
   - `rhel.7.2-x64`
-  - <span data-ttu-id="b138b-176">`rhel.7.3-x64` (.NET Core 2.0 或更新版本)</span><span class="sxs-lookup"><span data-stu-id="b138b-176">`rhel.7.3-x64` (.NET Core 2.0 or later versions)</span></span>
-  - <span data-ttu-id="b138b-177">`rhel.7.4-x64` (.NET Core 2.0 或更新版本)</span><span class="sxs-lookup"><span data-stu-id="b138b-177">`rhel.7.4-x64` (.NET Core 2.0 or later versions)</span></span>
-- <span data-ttu-id="b138b-178">Tizen (.NET Core 2.0 或更新版本)</span><span class="sxs-lookup"><span data-stu-id="b138b-178">Tizen (.NET Core 2.0 or later versions)</span></span>
+  - <span data-ttu-id="a8daa-176">`rhel.7.3-x64` (.NET Core 2.0 或更新版本)</span><span class="sxs-lookup"><span data-stu-id="a8daa-176">`rhel.7.3-x64` (.NET Core 2.0 or later versions)</span></span>
+  - <span data-ttu-id="a8daa-177">`rhel.7.4-x64` (.NET Core 2.0 或更新版本)</span><span class="sxs-lookup"><span data-stu-id="a8daa-177">`rhel.7.4-x64` (.NET Core 2.0 or later versions)</span></span>
+- <span data-ttu-id="a8daa-178">Tizen (.NET Core 2.0 或更新版本)</span><span class="sxs-lookup"><span data-stu-id="a8daa-178">Tizen (.NET Core 2.0 or later versions)</span></span>
   - `tizen`
-- <span data-ttu-id="b138b-179">Ubuntu</span><span class="sxs-lookup"><span data-stu-id="b138b-179">Ubuntu</span></span>
+- <span data-ttu-id="a8daa-179">Ubuntu</span><span class="sxs-lookup"><span data-stu-id="a8daa-179">Ubuntu</span></span>
   - `ubuntu-x64`
   - `ubuntu.14.04-x64`
   - `ubuntu.14.10-x64`
@@ -159,33 +156,33 @@ ms.lasthandoff: 04/28/2018
   - `ubuntu.15.10-x64`
   - `ubuntu.16.04-x64`
   - `ubuntu.16.10-x64`
-- <span data-ttu-id="b138b-180">Ubuntu 衍生版</span><span class="sxs-lookup"><span data-stu-id="b138b-180">Ubuntu derivatives</span></span>
+- <span data-ttu-id="a8daa-180">Ubuntu 衍生版</span><span class="sxs-lookup"><span data-stu-id="a8daa-180">Ubuntu derivatives</span></span>
   - `linuxmint.17-x64`
   - `linuxmint.17.1-x64`
   - `linuxmint.17.2-x64`
   - `linuxmint.17.3-x64`
   - `linuxmint.18-x64`
-  - <span data-ttu-id="b138b-181">`linuxmint.18.1-x64` (.NET Core 2.0 或更新版本)</span><span class="sxs-lookup"><span data-stu-id="b138b-181">`linuxmint.18.1-x64` (.NET Core 2.0 or later versions)</span></span>
+  - <span data-ttu-id="a8daa-181">`linuxmint.18.1-x64` (.NET Core 2.0 或更新版本)</span><span class="sxs-lookup"><span data-stu-id="a8daa-181">`linuxmint.18.1-x64` (.NET Core 2.0 or later versions)</span></span>
 
-<span data-ttu-id="b138b-182">如需詳細資訊，請參閱 [Linux 上 .NET Core 的必要條件](linux-prerequisites.md)。</span><span class="sxs-lookup"><span data-stu-id="b138b-182">See [Prerequisites for .NET Core on Linux](linux-prerequisites.md) for more information.</span></span>
+<span data-ttu-id="a8daa-182">如需詳細資訊，請參閱 [Linux 上 .NET Core 的必要條件](linux-prerequisites.md)。</span><span class="sxs-lookup"><span data-stu-id="a8daa-182">See [Prerequisites for .NET Core on Linux](linux-prerequisites.md) for more information.</span></span>
 
-## <a name="macos-rids"></a><span data-ttu-id="b138b-183">macOS RID</span><span class="sxs-lookup"><span data-stu-id="b138b-183">macOS RIDs</span></span>
+## <a name="macos-rids"></a><span data-ttu-id="a8daa-183">macOS RID</span><span class="sxs-lookup"><span data-stu-id="a8daa-183">macOS RIDs</span></span>
 
-<span data-ttu-id="b138b-184">macOS RID 使用較舊的 "OSX" 商標。</span><span class="sxs-lookup"><span data-stu-id="b138b-184">macOS RIDs use the older "OSX" branding.</span></span>
+<span data-ttu-id="a8daa-184">macOS RID 使用較舊的 "OSX" 商標。</span><span class="sxs-lookup"><span data-stu-id="a8daa-184">macOS RIDs use the older "OSX" branding.</span></span>
 
-- <span data-ttu-id="b138b-185">`osx-x64` (.NET Core 2.0 或更新版本，最小版本為 `osx.10.12-x64`)</span><span class="sxs-lookup"><span data-stu-id="b138b-185">`osx-x64` (.NET Core 2.0 or later versions, minimum version is `osx.10.12-x64`)</span></span>
+- <span data-ttu-id="a8daa-185">`osx-x64` (.NET Core 2.0 或更新版本，最小版本為 `osx.10.12-x64`)</span><span class="sxs-lookup"><span data-stu-id="a8daa-185">`osx-x64` (.NET Core 2.0 or later versions, minimum version is `osx.10.12-x64`)</span></span>
 - `osx.10.10-x64`
 - `osx.10.11-x64`
-- <span data-ttu-id="b138b-186">`osx.10.12-x64` (.NET Core 1.1 或更新版本)</span><span class="sxs-lookup"><span data-stu-id="b138b-186">`osx.10.12-x64` (.NET Core 1.1 or later versions)</span></span>
+- <span data-ttu-id="a8daa-186">`osx.10.12-x64` (.NET Core 1.1 或更新版本)</span><span class="sxs-lookup"><span data-stu-id="a8daa-186">`osx.10.12-x64` (.NET Core 1.1 or later versions)</span></span>
 - `osx.10.13-x64`
 
-<span data-ttu-id="b138b-187">如需詳細資訊，請參閱 [macOS 上 .NET Core 的必要條件](macos-prerequisites.md)。</span><span class="sxs-lookup"><span data-stu-id="b138b-187">See [Prerequisites for .NET Core on macOS](macos-prerequisites.md) for more information.</span></span>
+<span data-ttu-id="a8daa-187">如需詳細資訊，請參閱 [macOS 上 .NET Core 的必要條件](macos-prerequisites.md)。</span><span class="sxs-lookup"><span data-stu-id="a8daa-187">See [Prerequisites for .NET Core on macOS](macos-prerequisites.md) for more information.</span></span>
 
-## <a name="android-rids-net-core-20-or-later-versions"></a><span data-ttu-id="b138b-188">Android RID (.NET Core 2.0 或更新版本)</span><span class="sxs-lookup"><span data-stu-id="b138b-188">Android RIDs (.NET Core 2.0 or later versions)</span></span>
+## <a name="android-rids-net-core-20-or-later-versions"></a><span data-ttu-id="a8daa-188">Android RID (.NET Core 2.0 或更新版本)</span><span class="sxs-lookup"><span data-stu-id="a8daa-188">Android RIDs (.NET Core 2.0 or later versions)</span></span>
 
 - `android`
 - `android.21`
 
-## <a name="see-also"></a><span data-ttu-id="b138b-189">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b138b-189">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a8daa-189">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a8daa-189">See also</span></span>
 
-[<span data-ttu-id="b138b-190">執行階段識別碼</span><span class="sxs-lookup"><span data-stu-id="b138b-190">Runtime IDs</span></span>](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/readme.md)
+[<span data-ttu-id="a8daa-190">執行階段識別碼</span><span class="sxs-lookup"><span data-stu-id="a8daa-190">Runtime IDs</span></span>](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/readme.md)

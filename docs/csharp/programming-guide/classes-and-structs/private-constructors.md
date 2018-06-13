@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33315785"
 ---
 # <a name="private-constructors-c-programming-guide"></a><span data-ttu-id="16ad9-102">私用建構函式 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="16ad9-102">Private Constructors (C# Programming Guide)</span></span>
 <span data-ttu-id="16ad9-103">私用建構函式是一種特殊的執行個體建構函式。</span><span class="sxs-lookup"><span data-stu-id="16ad9-103">A private constructor is a special instance constructor.</span></span> <span data-ttu-id="16ad9-104">它通常會用於只包含靜態成員的類別。</span><span class="sxs-lookup"><span data-stu-id="16ad9-104">It is generally used in classes that contain static members only.</span></span> <span data-ttu-id="16ad9-105">如果類別具有一或多個私用建構函式，而且沒有任何公用建構函式，則其他類別 (巢狀類別除外) 無法建立此類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="16ad9-105">If a class has one or more private constructors and no public constructors, other classes (except nested classes) cannot create instances of this class.</span></span> <span data-ttu-id="16ad9-106">例如: </span><span class="sxs-lookup"><span data-stu-id="16ad9-106">For example:</span></span>  

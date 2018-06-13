@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766981"
 ---
 # <a name="connection-strings"></a><span data-ttu-id="9826a-102">連接字串</span><span class="sxs-lookup"><span data-stu-id="9826a-102">Connection Strings</span></span>
 <span data-ttu-id="9826a-103">連接字串 (Connection String) 包含可當做參數從資料提供者 (Data Provider) 傳遞至資料來源的初始化資訊。</span><span class="sxs-lookup"><span data-stu-id="9826a-103">A connection string contains initialization information that is passed as a parameter from a data provider to a data source.</span></span> <span data-ttu-id="9826a-104">此語法會因資料提供者而不同，而且連接字串會在嘗試開啟連接期間進行剖析。</span><span class="sxs-lookup"><span data-stu-id="9826a-104">The syntax depends on the data provider, and the connection string is parsed during the attempt to open a connection.</span></span> <span data-ttu-id="9826a-105">Entity Framework 所使用的連接字串包含用來連接至支援 Entity Framework 之基礎 ADO.NET 資料提供者的資訊。</span><span class="sxs-lookup"><span data-stu-id="9826a-105">Connection strings used by the Entity Framework contain information used to connect to the underlying ADO.NET data provider that supports the Entity Framework.</span></span> <span data-ttu-id="9826a-106">它們也包含必要之模型和對應檔的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="9826a-106">They also contain information about the required model and mapping files.</span></span>  

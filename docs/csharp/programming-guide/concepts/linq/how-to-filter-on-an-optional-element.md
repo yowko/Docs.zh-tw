@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320166"
 ---
 # <a name="how-to-filter-on-an-optional-element-c"></a><span data-ttu-id="401f3-102">如何：篩選選擇性項目 (C#)</span><span class="sxs-lookup"><span data-stu-id="401f3-102">How to: Filter on an Optional Element (C#)</span></span>
 <span data-ttu-id="401f3-103">有時候即使您不確定項目是否存在於 XML 文件中，您都會想要針對該項目進行篩選。</span><span class="sxs-lookup"><span data-stu-id="401f3-103">Sometimes you want to filter for an element even though you are not sure it exists in your XML document.</span></span> <span data-ttu-id="401f3-104">搜尋應該會執行，因此，如果特定的項目沒有子項目，您就不會篩選該項目來觸發 Null 參考例外狀況。</span><span class="sxs-lookup"><span data-stu-id="401f3-104">The search should be executed so that if the particular element does not have the child element, you do not trigger a null reference exception by filtering for it.</span></span> <span data-ttu-id="401f3-105">在下列範例中，`Child5` 項目沒有 `Type` 子項目，但查詢仍會正確執行。</span><span class="sxs-lookup"><span data-stu-id="401f3-105">In the following example, the `Child5` element does not have a `Type` child element, but the query still executes correctly.</span></span>  

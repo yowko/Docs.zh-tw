@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765434"
 ---
 # <a name="adonet"></a><span data-ttu-id="e2274-102">ADO.NET</span><span class="sxs-lookup"><span data-stu-id="e2274-102">ADO.NET</span></span>
 <span data-ttu-id="e2274-103">ADO.NET 是針對 .NET Framework 程式設計人員公開 (Expose) 資料存取服務一組類別 (Class)。</span><span class="sxs-lookup"><span data-stu-id="e2274-103">ADO.NET is a set of classes that expose data access services for .NET Framework programmers.</span></span> <span data-ttu-id="e2274-104">ADO.NET 提供一組豐富的元件，用於建立分散式資料共用應用程式。</span><span class="sxs-lookup"><span data-stu-id="e2274-104">ADO.NET provides a rich set of components for creating distributed, data-sharing applications.</span></span> <span data-ttu-id="e2274-105">其為 .NET Framework 的一個完整的部分，提供關聯式、XML 及應用程式資料的存取。</span><span class="sxs-lookup"><span data-stu-id="e2274-105">It is an integral part of the .NET Framework, providing access to relational, XML, and application data.</span></span> <span data-ttu-id="e2274-106">ADO.NET 支援各種開發需要，包括建立應用程式、工具、語言或網際網路瀏覽器使用的前端資料庫用戶端及中介層商務物件。</span><span class="sxs-lookup"><span data-stu-id="e2274-106">ADO.NET supports a variety of development needs, including the creation of front-end database clients and middle-tier business objects used by applications, tools, languages, or Internet browsers.</span></span>  

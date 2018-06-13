@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329864"
 ---
 # <a name="generic-methods-c-programming-guide"></a><span data-ttu-id="16736-102">泛型方法 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="16736-102">Generic Methods (C# Programming Guide)</span></span>
 <span data-ttu-id="16736-103">泛型方法是使用型別參數宣告的方法，如下所示：</span><span class="sxs-lookup"><span data-stu-id="16736-103">A generic method is a method that is declared with type parameters, as follows:</span></span>  

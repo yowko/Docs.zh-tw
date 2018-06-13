@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331210"
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a><span data-ttu-id="a8a89-102">C# 程式的一般結構 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="a8a89-102">General Structure of a C# Program (C# Programming Guide)</span></span>
 <span data-ttu-id="a8a89-103">C# 程式可以包含一或多個檔案。</span><span class="sxs-lookup"><span data-stu-id="a8a89-103">C# programs can consist of one or more files.</span></span> <span data-ttu-id="a8a89-104">每個檔案可以包含零個或多個命名空間。</span><span class="sxs-lookup"><span data-stu-id="a8a89-104">Each file can contain zero or more namespaces.</span></span> <span data-ttu-id="a8a89-105">命名空間可以包含類別、結構、介面、列舉和委派等類型，以及他命名空間。</span><span class="sxs-lookup"><span data-stu-id="a8a89-105">A namespace can contain types such as classes, structs, interfaces, enumerations, and delegates, in addition to other namespaces.</span></span> <span data-ttu-id="a8a89-106">以下是 C# 程式的基本架構，其中包含上述所有項目。</span><span class="sxs-lookup"><span data-stu-id="a8a89-106">The following is the skeleton of a C# program that contains all of these elements.</span></span>  

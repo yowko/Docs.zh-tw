@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321700"
 ---
 # <a name="parsing-xml-c"></a><span data-ttu-id="4d80f-102">剖析 XML (C#)</span><span class="sxs-lookup"><span data-stu-id="4d80f-102">Parsing XML (C#)</span></span>
 <span data-ttu-id="4d80f-103">本節中的主題描述如何剖析 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="4d80f-103">The topics in this section describe how to parse XML documents.</span></span>  
