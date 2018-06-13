@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571231"
 ---
 # <a name="how-to-copy-directories"></a><span data-ttu-id="1b024-102">如何：複製目錄</span><span class="sxs-lookup"><span data-stu-id="1b024-102">How to: Copy Directories</span></span>
 <span data-ttu-id="1b024-103">本範例將示範如何使用 I/O 類別將某一個目錄的內容同步複製到另一個位置。</span><span class="sxs-lookup"><span data-stu-id="1b024-103">This example demonstrates how to use I/O classes to synchronously copy the contents of a directory to another location.</span></span> <span data-ttu-id="1b024-104">在此範例中，使用者可以指定是否要同時複製子目錄。</span><span class="sxs-lookup"><span data-stu-id="1b024-104">In this example, the user can specify whether to also copy the subdirectories.</span></span> <span data-ttu-id="1b024-105">如果子目錄已複製，這個範例中的方法就會以遞迴方式複製子目錄，方法是在每個後續的子目錄上呼叫其本身，直到沒有其他要複製的子目錄為止。</span><span class="sxs-lookup"><span data-stu-id="1b024-105">If the subdirectories are copied, the method in this example recursively copies them by calling itself on each subsequent subdirectory until there are no more to copy.</span></span>  

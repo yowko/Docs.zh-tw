@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571456"
 ---
 # <a name="xpath-queries-and-namespaces"></a><span data-ttu-id="7520a-102">XPath 查詢及命名空間</span><span class="sxs-lookup"><span data-stu-id="7520a-102">XPath Queries and Namespaces</span></span>
 <span data-ttu-id="7520a-103">XPath 查詢可辨識 XML文件中的命名空間，並可使用命名空間前置詞來限定項目及屬性名稱。</span><span class="sxs-lookup"><span data-stu-id="7520a-103">XPath queries are aware of namespaces in an XML document and can use namespace prefixes to qualify element and attribute names.</span></span> <span data-ttu-id="7520a-104">使用命名空間前置詞限定項目及屬性名稱，會將 XPath 查詢傳回的節點限制為那些只屬於特定命名空間的節點。</span><span class="sxs-lookup"><span data-stu-id="7520a-104">Qualifying element and attribute names with a namespace prefix limits the nodes returned by an XPath query to only those nodes that belong to a specific namespace.</span></span>  

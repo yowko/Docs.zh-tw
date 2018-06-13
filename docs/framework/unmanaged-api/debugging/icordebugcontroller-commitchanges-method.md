@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugController::CommitChanges 方法"
-ms.custom: 
+title: ICorDebugController::CommitChanges 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugController.CommitChanges
 api_location:
@@ -23,20 +15,17 @@ helpviewer_keywords:
 ms.assetid: f8e38bf6-0312-4517-bed5-42031ed86331
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bf397f36d29b1d8bc7be16beeb4e4d3e49f1fb69
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7ed8c616fd71855f3c2313cee0b9fee3ba31babd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415171"
 ---
-# <a name="icordebugcontrollercommitchanges-method"></a><span data-ttu-id="9cce2-102">ICorDebugController::CommitChanges 方法</span><span class="sxs-lookup"><span data-stu-id="9cce2-102">ICorDebugController::CommitChanges Method</span></span>
-<span data-ttu-id="9cce2-103">`CommitChanges` 已經過時。</span><span class="sxs-lookup"><span data-stu-id="9cce2-103">`CommitChanges` is obsolete.</span></span> <span data-ttu-id="9cce2-104">請勿呼叫這個方法。</span><span class="sxs-lookup"><span data-stu-id="9cce2-104">Do not call this method.</span></span>  
+# <a name="icordebugcontrollercommitchanges-method"></a><span data-ttu-id="3da58-102">ICorDebugController::CommitChanges 方法</span><span class="sxs-lookup"><span data-stu-id="3da58-102">ICorDebugController::CommitChanges Method</span></span>
+<span data-ttu-id="3da58-103">`CommitChanges` 已經過時。</span><span class="sxs-lookup"><span data-stu-id="3da58-103">`CommitChanges` is obsolete.</span></span> <span data-ttu-id="3da58-104">請勿呼叫這個方法。</span><span class="sxs-lookup"><span data-stu-id="3da58-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9cce2-105">請參閱</span><span class="sxs-lookup"><span data-stu-id="9cce2-105">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="3da58-105">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3da58-105">See Also</span></span>  
  
