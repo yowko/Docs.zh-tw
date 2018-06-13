@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597984"
 ---
 # <a name="removehandler-statement"></a><span data-ttu-id="d6714-102">RemoveHandler 陳述式</span><span class="sxs-lookup"><span data-stu-id="d6714-102">RemoveHandler Statement</span></span>
 <span data-ttu-id="d6714-103">移除事件和事件處理常式之間的關聯。</span><span class="sxs-lookup"><span data-stu-id="d6714-103">Removes the association between an event and an event handler.</span></span>  

@@ -1,40 +1,29 @@
 ---
-title: "服務：每秒失敗的呼叫數"
-ms.custom: 
+title: 服務：每秒失敗的呼叫數
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5a2c7939-107d-4f0c-b43c-e02e079e8a9d
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 632c81b6ffd84202b7609dccb89887af01ae706e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6af8f79d1fe163967a5c6e8220697aa11bee66c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33473823"
 ---
-# <a name="service-calls-failed-per-second"></a><span data-ttu-id="bcc0c-102">服務：每秒失敗的呼叫數</span><span class="sxs-lookup"><span data-stu-id="bcc0c-102">Service: Calls Failed Per Second</span></span>
-<span data-ttu-id="bcc0c-103">計數器名稱：每秒失敗的呼叫數。</span><span class="sxs-lookup"><span data-stu-id="bcc0c-103">Counter Name: Calls Failed Per Second.</span></span>  
+# <a name="service-calls-failed-per-second"></a><span data-ttu-id="2a07f-102">服務：每秒失敗的呼叫數</span><span class="sxs-lookup"><span data-stu-id="2a07f-102">Service: Calls Failed Per Second</span></span>
+<span data-ttu-id="2a07f-103">計數器名稱：每秒失敗的呼叫數。</span><span class="sxs-lookup"><span data-stu-id="2a07f-103">Counter Name: Calls Failed Per Second.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="bcc0c-104">描述</span><span class="sxs-lookup"><span data-stu-id="bcc0c-104">Description</span></span>  
- <span data-ttu-id="bcc0c-105">未處理之例外狀況的呼叫數，以及此服務在一秒之內所收到的呼叫數。</span><span class="sxs-lookup"><span data-stu-id="bcc0c-105">Number of calls that have unhandled exceptions, and are received by this service in a second.</span></span>  
+## <a name="description"></a><span data-ttu-id="2a07f-104">描述</span><span class="sxs-lookup"><span data-stu-id="2a07f-104">Description</span></span>  
+ <span data-ttu-id="2a07f-105">未處理之例外狀況的呼叫數，以及此服務在一秒之內所收到的呼叫數。</span><span class="sxs-lookup"><span data-stu-id="2a07f-105">Number of calls that have unhandled exceptions, and are received by this service in a second.</span></span>  
   
- <span data-ttu-id="bcc0c-106">這個計數器的效能計數器型別是[PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649)，其值使用以下公式計算。</span><span class="sxs-lookup"><span data-stu-id="bcc0c-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
+ <span data-ttu-id="2a07f-106">這個計數器的效能計數器型別是[PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649)，其值使用以下公式計算。</span><span class="sxs-lookup"><span data-stu-id="2a07f-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
   
- <span data-ttu-id="bcc0c-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="bcc0c-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>  
+ <span data-ttu-id="2a07f-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="2a07f-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>  
   
- <span data-ttu-id="bcc0c-108">在 Managed 程式碼中，發生錯誤狀況時會擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="bcc0c-108">In managed code, exceptions are thrown when error conditions occur.</span></span>  
+ <span data-ttu-id="2a07f-108">在 Managed 程式碼中，發生錯誤狀況時會擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="2a07f-108">In managed code, exceptions are thrown when error conditions occur.</span></span>  
   
- <span data-ttu-id="bcc0c-109">在 Managed 程式碼中，發生錯誤狀況時會擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="bcc0c-109">In managed code, exceptions are thrown when error conditions occur.</span></span>  
+ <span data-ttu-id="2a07f-109">在 Managed 程式碼中，發生錯誤狀況時會擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="2a07f-109">In managed code, exceptions are thrown when error conditions occur.</span></span>  
   
- <span data-ttu-id="bcc0c-110">每當此服務有未處理的例外狀況時，此計數器就會遞增。</span><span class="sxs-lookup"><span data-stu-id="bcc0c-110">This counter is incremented every time there is an unhandled exception in this service.</span></span>  
+ <span data-ttu-id="2a07f-110">每當此服務有未處理的例外狀況時，此計數器就會遞增。</span><span class="sxs-lookup"><span data-stu-id="2a07f-110">This counter is incremented every time there is an unhandled exception in this service.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bcc0c-111">請參閱</span><span class="sxs-lookup"><span data-stu-id="bcc0c-111">See Also</span></span>  
- [<span data-ttu-id="bcc0c-112">指定及處理合約與服務中的錯誤</span><span class="sxs-lookup"><span data-stu-id="bcc0c-112">Specifying and Handling Faults in Contracts and Services</span></span>](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+## <a name="see-also"></a><span data-ttu-id="2a07f-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2a07f-111">See Also</span></span>  
+ [<span data-ttu-id="2a07f-112">指定及處理合約與服務中的錯誤</span><span class="sxs-lookup"><span data-stu-id="2a07f-112">Specifying and Handling Faults in Contracts and Services</span></span>](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

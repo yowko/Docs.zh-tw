@@ -1,36 +1,23 @@
 ---
-title: "多個端點"
-ms.custom: 
+title: 多個端點
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Multiple EndPoints
 ms.assetid: 8f0c2e1f-9aee-41c2-8301-c72b7f664412
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 87846ca624b557f39bcb61d467a270779f399f6d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1658db83c809f875914036e9e10ac86cc6a821c5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501966"
 ---
-# <a name="multiple-endpoints"></a><span data-ttu-id="9b83d-102">多個端點</span><span class="sxs-lookup"><span data-stu-id="9b83d-102">Multiple Endpoints</span></span>
-<span data-ttu-id="9b83d-103">多個端點範例會示範如何在服務上設定多個端點，以及如何從用戶端與每個端點進行通訊。</span><span class="sxs-lookup"><span data-stu-id="9b83d-103">The Multiple Endpoints sample demonstrates how to configure multiple endpoints on a service and how to communicate with each endpoint from a client.</span></span> <span data-ttu-id="9b83d-104">這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)。</span><span class="sxs-lookup"><span data-stu-id="9b83d-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span> <span data-ttu-id="9b83d-105">服務組態已修改成定義支援 `ICalculator` 合約的兩個端點，但是每個端點會位在不同的位址，同時使用不同的繫結。</span><span class="sxs-lookup"><span data-stu-id="9b83d-105">The service configuration has been modified to define two endpoints that support the `ICalculator` contract, but each at a different address using a different binding.</span></span> <span data-ttu-id="9b83d-106">用戶端組態與程式碼已修改成可與這兩個服務端點進行通訊。</span><span class="sxs-lookup"><span data-stu-id="9b83d-106">The client configuration and code have been modified to communicate with both of the service endpoints.</span></span>  
+# <a name="multiple-endpoints"></a><span data-ttu-id="cf61f-102">多個端點</span><span class="sxs-lookup"><span data-stu-id="cf61f-102">Multiple Endpoints</span></span>
+<span data-ttu-id="cf61f-103">多個端點範例會示範如何在服務上設定多個端點，以及如何從用戶端與每個端點進行通訊。</span><span class="sxs-lookup"><span data-stu-id="cf61f-103">The Multiple Endpoints sample demonstrates how to configure multiple endpoints on a service and how to communicate with each endpoint from a client.</span></span> <span data-ttu-id="cf61f-104">這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)。</span><span class="sxs-lookup"><span data-stu-id="cf61f-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span> <span data-ttu-id="cf61f-105">服務組態已修改成定義支援 `ICalculator` 合約的兩個端點，但是每個端點會位在不同的位址，同時使用不同的繫結。</span><span class="sxs-lookup"><span data-stu-id="cf61f-105">The service configuration has been modified to define two endpoints that support the `ICalculator` contract, but each at a different address using a different binding.</span></span> <span data-ttu-id="cf61f-106">用戶端組態與程式碼已修改成可與這兩個服務端點進行通訊。</span><span class="sxs-lookup"><span data-stu-id="cf61f-106">The client configuration and code have been modified to communicate with both of the service endpoints.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="9b83d-107">此範例的安裝程序與建置指示位於本主題的結尾。</span><span class="sxs-lookup"><span data-stu-id="9b83d-107">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="cf61f-107">此範例的安裝程序與建置指示位於本主題的結尾。</span><span class="sxs-lookup"><span data-stu-id="cf61f-107">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="9b83d-108">服務 Web.config 檔已修改成定義兩個端點，每個端點都支援相同的 `ICalculator` 合約，但是分別位在不同的位址及使用不同繫結。</span><span class="sxs-lookup"><span data-stu-id="9b83d-108">The service Web.config file has been modified to define two endpoints, each supporting the same `ICalculator` contract, but at different addresses using different bindings.</span></span> <span data-ttu-id="9b83d-109">第一個端點是定義位在基底位址且 `basicHttpBinding` 使用繫結，其並未啟用安全性。</span><span class="sxs-lookup"><span data-stu-id="9b83d-109">The first endpoint is defined at the base address using a `basicHttpBinding` binding, which does not have security enabled.</span></span> <span data-ttu-id="9b83d-110">第二個端點是定義位在 {baseaddress}/secure 且使用 `wsHttpBinding` 繫結，其已透過搭配 Windows 驗證使用 WS-Security，因此預設為安全端點。</span><span class="sxs-lookup"><span data-stu-id="9b83d-110">The second endpoint is defined at {baseaddress}/secure using a `wsHttpBinding` binding, which is secure by default, using WS-Security with Windows authentication.</span></span>  
+ <span data-ttu-id="cf61f-108">服務 Web.config 檔已修改成定義兩個端點，每個端點都支援相同的 `ICalculator` 合約，但是分別位在不同的位址及使用不同繫結。</span><span class="sxs-lookup"><span data-stu-id="cf61f-108">The service Web.config file has been modified to define two endpoints, each supporting the same `ICalculator` contract, but at different addresses using different bindings.</span></span> <span data-ttu-id="cf61f-109">第一個端點是定義位在基底位址且 `basicHttpBinding` 使用繫結，其並未啟用安全性。</span><span class="sxs-lookup"><span data-stu-id="cf61f-109">The first endpoint is defined at the base address using a `basicHttpBinding` binding, which does not have security enabled.</span></span> <span data-ttu-id="cf61f-110">第二個端點是定義位在 {baseaddress}/secure 且使用 `wsHttpBinding` 繫結，其已透過搭配 Windows 驗證使用 WS-Security，因此預設為安全端點。</span><span class="sxs-lookup"><span data-stu-id="cf61f-110">The second endpoint is defined at {baseaddress}/secure using a `wsHttpBinding` binding, which is secure by default, using WS-Security with Windows authentication.</span></span>  
   
 ```xml  
 <service   
@@ -50,7 +37,7 @@ ms.lasthandoff: 12/22/2017
 </service>  
 ```  
   
- <span data-ttu-id="9b83d-111">這兩個端點也都會設定在用戶端。</span><span class="sxs-lookup"><span data-stu-id="9b83d-111">Both endpoints are also configured on the client.</span></span> <span data-ttu-id="9b83d-112">這些端點有指定名稱，因此呼叫者可以將需要的端點名稱傳遞至用戶端的建構函式中。</span><span class="sxs-lookup"><span data-stu-id="9b83d-112">These endpoints are given names so that the caller can pass the desired endpoint name into the constructor of the client.</span></span>  
+ <span data-ttu-id="cf61f-111">這兩個端點也都會設定在用戶端。</span><span class="sxs-lookup"><span data-stu-id="cf61f-111">Both endpoints are also configured on the client.</span></span> <span data-ttu-id="cf61f-112">這些端點有指定名稱，因此呼叫者可以將需要的端點名稱傳遞至用戶端的建構函式中。</span><span class="sxs-lookup"><span data-stu-id="cf61f-112">These endpoints are given names so that the caller can pass the desired endpoint name into the constructor of the client.</span></span>  
   
 ```xml  
 <client>  
@@ -69,7 +56,7 @@ address="http://localhost/servicemodelsamples/service.svc/secure"
 </client>  
 ```  
   
- <span data-ttu-id="9b83d-113">用戶端會同時使用這些端點，如下列程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="9b83d-113">The client uses both endpoints as shown in the following code.</span></span>  
+ <span data-ttu-id="cf61f-113">用戶端會同時使用這些端點，如下列程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="cf61f-113">The client uses both endpoints as shown in the following code.</span></span>  
   
 ```  
 static void Main()  
@@ -98,7 +85,7 @@ static void Main()
 }  
 ```  
   
- <span data-ttu-id="9b83d-114">當您執行用戶端時，與這兩個端點的互動都會顯示。</span><span class="sxs-lookup"><span data-stu-id="9b83d-114">When you run the client, interactions with both endpoints are displayed.</span></span>  
+ <span data-ttu-id="cf61f-114">當您執行用戶端時，與這兩個端點的互動都會顯示。</span><span class="sxs-lookup"><span data-stu-id="cf61f-114">When you run the client, interactions with both endpoints are displayed.</span></span>  
   
 ```  
 Communicate with basic endpoint.  
@@ -115,21 +102,21 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="9b83d-115">若要安裝、建置及執行範例</span><span class="sxs-lookup"><span data-stu-id="9b83d-115">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="cf61f-115">若要安裝、建置及執行範例</span><span class="sxs-lookup"><span data-stu-id="cf61f-115">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="9b83d-116">請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="9b83d-116">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="cf61f-116">請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="cf61f-116">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="9b83d-117">若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。</span><span class="sxs-lookup"><span data-stu-id="9b83d-117">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2.  <span data-ttu-id="cf61f-117">若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。</span><span class="sxs-lookup"><span data-stu-id="cf61f-117">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  <span data-ttu-id="9b83d-118">若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="9b83d-118">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3.  <span data-ttu-id="cf61f-118">若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="cf61f-118">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="9b83d-119">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="9b83d-119">The samples may already be installed on your machine.</span></span> <span data-ttu-id="9b83d-120">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="9b83d-120">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="cf61f-119">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="cf61f-119">The samples may already be installed on your machine.</span></span> <span data-ttu-id="cf61f-120">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="cf61f-120">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="9b83d-121">如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。</span><span class="sxs-lookup"><span data-stu-id="9b83d-121">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="9b83d-122">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="9b83d-122">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="cf61f-121">如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。</span><span class="sxs-lookup"><span data-stu-id="cf61f-121">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="cf61f-122">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="cf61f-122">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleEndpoints`  
   
-## <a name="see-also"></a><span data-ttu-id="9b83d-123">請參閱</span><span class="sxs-lookup"><span data-stu-id="9b83d-123">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cf61f-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cf61f-123">See Also</span></span>

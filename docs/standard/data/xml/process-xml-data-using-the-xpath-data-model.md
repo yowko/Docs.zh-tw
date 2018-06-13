@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569947"
 ---
 # <a name="process-xml-data-using-the-xpath-data-model"></a><span data-ttu-id="ce8de-102">使用 XPath 資料模型處理 XML 資料</span><span class="sxs-lookup"><span data-stu-id="ce8de-102">Process XML Data Using the XPath Data Model</span></span>
 <span data-ttu-id="ce8de-103"><xref:System.Xml?displayProperty=nameWithType> 命名空間會使用 <xref:System.Xml.XmlDocument> 或 <xref:System.Xml.XPath.XPathDocument> 類別，以程式設計方式來表示 XML 文件、片段、節點或記憶體中的節點集。</span><span class="sxs-lookup"><span data-stu-id="ce8de-103">The <xref:System.Xml?displayProperty=nameWithType> namespace provides a programmatic representation of XML documents, fragments, nodes, or node-sets in-memory, using the <xref:System.Xml.XmlDocument> or <xref:System.Xml.XPath.XPathDocument> classes.</span></span>  

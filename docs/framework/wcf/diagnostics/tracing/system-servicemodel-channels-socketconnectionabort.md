@@ -1,32 +1,21 @@
 ---
 title: System.ServiceModel.Channels.SocketConnectionAbort
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5e1a7716-b23a-46c5-952a-19c53b447a71
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 94c90e0dd4982de2afc733fd4f94baa7aeda3e51
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8093bf3a11c416693612340fad142ffda8dca234
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33478455"
 ---
-# <a name="systemservicemodelchannelssocketconnectionabort"></a><span data-ttu-id="4e9d6-102">System.ServiceModel.Channels.SocketConnectionAbort</span><span class="sxs-lookup"><span data-stu-id="4e9d6-102">System.ServiceModel.Channels.SocketConnectionAbort</span></span>
-<span data-ttu-id="4e9d6-103">System.ServiceModel.Channels.SocketConnectionAbort</span><span class="sxs-lookup"><span data-stu-id="4e9d6-103">System.ServiceModel.Channels.SocketConnectionAbort</span></span>  
+# <a name="systemservicemodelchannelssocketconnectionabort"></a><span data-ttu-id="834ad-102">System.ServiceModel.Channels.SocketConnectionAbort</span><span class="sxs-lookup"><span data-stu-id="834ad-102">System.ServiceModel.Channels.SocketConnectionAbort</span></span>
+<span data-ttu-id="834ad-103">System.ServiceModel.Channels.SocketConnectionAbort</span><span class="sxs-lookup"><span data-stu-id="834ad-103">System.ServiceModel.Channels.SocketConnectionAbort</span></span>  
   
-## <a name="description"></a><span data-ttu-id="4e9d6-104">描述</span><span class="sxs-lookup"><span data-stu-id="4e9d6-104">Description</span></span>  
- <span data-ttu-id="4e9d6-105">SocketConnection 已中止。</span><span class="sxs-lookup"><span data-stu-id="4e9d6-105">SocketConnection aborted.</span></span>  
+## <a name="description"></a><span data-ttu-id="834ad-104">描述</span><span class="sxs-lookup"><span data-stu-id="834ad-104">Description</span></span>  
+ <span data-ttu-id="834ad-105">SocketConnection 已中止。</span><span class="sxs-lookup"><span data-stu-id="834ad-105">SocketConnection aborted.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4e9d6-106">請參閱</span><span class="sxs-lookup"><span data-stu-id="4e9d6-106">See Also</span></span>  
- [<span data-ttu-id="4e9d6-107">追蹤</span><span class="sxs-lookup"><span data-stu-id="4e9d6-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="4e9d6-108">使用追蹤為應用程式進行疑難排解</span><span class="sxs-lookup"><span data-stu-id="4e9d6-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="4e9d6-109">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="4e9d6-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="834ad-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="834ad-106">See Also</span></span>  
+ [<span data-ttu-id="834ad-107">追蹤</span><span class="sxs-lookup"><span data-stu-id="834ad-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="834ad-108">使用追蹤為應用程式進行疑難排解</span><span class="sxs-lookup"><span data-stu-id="834ad-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="834ad-109">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="834ad-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

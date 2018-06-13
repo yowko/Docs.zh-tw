@@ -1,13 +1,6 @@
 ---
-title: "圖形概觀 (Windows Form)"
-ms.custom: 
+title: 圖形概觀 (Windows Form)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, graphics
 - Windows Forms, GDI+
@@ -15,45 +8,41 @@ helpviewer_keywords:
 - GDI+, Windows Forms
 - graphics
 ms.assetid: 94084509-2c6f-477d-923b-d25d37a36b1c
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c066b3c6c84d89a74b18e90ac3a6aa80c63a9b0e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 197f9dfcc14260017911b37dd6e6b7ce49e44ed4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521752"
 ---
-# <a name="graphics-overview-windows-forms"></a><span data-ttu-id="3c70e-102">圖形概觀 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="3c70e-102">Graphics Overview (Windows Forms)</span></span>
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="3c70e-103">是可讓程式設計人員撰寫的應用程式與裝置無關的圖形裝置介面。</span><span class="sxs-lookup"><span data-stu-id="3c70e-103"> is a Graphics Device Interface that enables programmers to write device-independent applications.</span></span> <span data-ttu-id="3c70e-104">服務的[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]公開會透過一組 managed 類別。</span><span class="sxs-lookup"><span data-stu-id="3c70e-104">The services of [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] are exposed through a set of managed classes.</span></span>  
+# <a name="graphics-overview-windows-forms"></a><span data-ttu-id="66ba4-102">圖形概觀 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="66ba4-102">Graphics Overview (Windows Forms)</span></span>
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="66ba4-103"> 是可讓程式設計人員撰寫的應用程式與裝置無關的圖形裝置介面。</span><span class="sxs-lookup"><span data-stu-id="66ba4-103"> is a Graphics Device Interface that enables programmers to write device-independent applications.</span></span> <span data-ttu-id="66ba4-104">服務的[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]公開會透過一組 managed 類別。</span><span class="sxs-lookup"><span data-stu-id="66ba4-104">The services of [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] are exposed through a set of managed classes.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3c70e-105">本節內容</span><span class="sxs-lookup"><span data-stu-id="3c70e-105">In This Section</span></span>  
- [<span data-ttu-id="3c70e-106">圖形概觀</span><span class="sxs-lookup"><span data-stu-id="3c70e-106">Overview of Graphics</span></span>](../../../../docs/framework/winforms/advanced/overview-of-graphics.md)  
- <span data-ttu-id="3c70e-107">提供一般簡介[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="3c70e-107">Provides a general introduction to [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="66ba4-105">本節內容</span><span class="sxs-lookup"><span data-stu-id="66ba4-105">In This Section</span></span>  
+ [<span data-ttu-id="66ba4-106">圖形概觀</span><span class="sxs-lookup"><span data-stu-id="66ba4-106">Overview of Graphics</span></span>](../../../../docs/framework/winforms/advanced/overview-of-graphics.md)  
+ <span data-ttu-id="66ba4-107">提供一般簡介[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="66ba4-107">Provides a general introduction to [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].</span></span>  
   
- [<span data-ttu-id="3c70e-108">圖形服務的三個分類</span><span class="sxs-lookup"><span data-stu-id="3c70e-108">Three Categories of Graphics Services</span></span>](../../../../docs/framework/winforms/advanced/three-categories-of-graphics-services.md)  
- <span data-ttu-id="3c70e-109">描述三個類別構成的程式設計[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="3c70e-109">Describes the three categories that make up programming with [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].</span></span>  
+ [<span data-ttu-id="66ba4-108">圖形服務的三個分類</span><span class="sxs-lookup"><span data-stu-id="66ba4-108">Three Categories of Graphics Services</span></span>](../../../../docs/framework/winforms/advanced/three-categories-of-graphics-services.md)  
+ <span data-ttu-id="66ba4-109">描述三個類別構成的程式設計[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="66ba4-109">Describes the three categories that make up programming with [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].</span></span>  
   
- [<span data-ttu-id="3c70e-110">圖形介面的結構</span><span class="sxs-lookup"><span data-stu-id="3c70e-110">Structure of the Graphics Interface</span></span>](../../../../docs/framework/winforms/advanced/structure-of-the-graphics-interface.md)  
- <span data-ttu-id="3c70e-111">描述 managed 的類別介面[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="3c70e-111">Describes the managed class interface of [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].</span></span>  
+ [<span data-ttu-id="66ba4-110">圖形介面的結構</span><span class="sxs-lookup"><span data-stu-id="66ba4-110">Structure of the Graphics Interface</span></span>](../../../../docs/framework/winforms/advanced/structure-of-the-graphics-interface.md)  
+ <span data-ttu-id="66ba4-111">描述 managed 的類別介面[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="66ba4-111">Describes the managed class interface of [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="3c70e-112">參考資料</span><span class="sxs-lookup"><span data-stu-id="3c70e-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="66ba4-112">參考資料</span><span class="sxs-lookup"><span data-stu-id="66ba4-112">Reference</span></span>  
  <xref:System.Drawing>  
- <span data-ttu-id="3c70e-113">提供對 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 基本圖形功能的存取。</span><span class="sxs-lookup"><span data-stu-id="3c70e-113">Provides access to [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] basic graphics functionality.</span></span>  
+ <span data-ttu-id="66ba4-113">提供對 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 基本圖形功能的存取。</span><span class="sxs-lookup"><span data-stu-id="66ba4-113">Provides access to [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] basic graphics functionality.</span></span>  
   
  <xref:System.Drawing.Drawing2D>  
- <span data-ttu-id="3c70e-114">提供進階二維和向量圖形功能。</span><span class="sxs-lookup"><span data-stu-id="3c70e-114">Provides advanced two-dimensional and vector graphics functionality.</span></span>  
+ <span data-ttu-id="66ba4-114">提供進階二維和向量圖形功能。</span><span class="sxs-lookup"><span data-stu-id="66ba4-114">Provides advanced two-dimensional and vector graphics functionality.</span></span>  
   
  <xref:System.Drawing.Imaging>  
- <span data-ttu-id="3c70e-115">提供進階 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 影像處理功能。</span><span class="sxs-lookup"><span data-stu-id="3c70e-115">Provides advanced [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] imaging functionality.</span></span>  
+ <span data-ttu-id="66ba4-115">提供進階 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 影像處理功能。</span><span class="sxs-lookup"><span data-stu-id="66ba4-115">Provides advanced [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] imaging functionality.</span></span>  
   
  <xref:System.Drawing.Text>  
- <span data-ttu-id="3c70e-116">提供進階 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 印刷樣式功能。</span><span class="sxs-lookup"><span data-stu-id="3c70e-116">Provides advanced [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] typography functionality.</span></span>  
+ <span data-ttu-id="66ba4-116">提供進階 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 印刷樣式功能。</span><span class="sxs-lookup"><span data-stu-id="66ba4-116">Provides advanced [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] typography functionality.</span></span>  
   
  <xref:System.Drawing.Printing>  
- <span data-ttu-id="3c70e-117">提供與列印相關服務。</span><span class="sxs-lookup"><span data-stu-id="3c70e-117">Provides print-related services.</span></span>  
+ <span data-ttu-id="66ba4-117">提供與列印相關服務。</span><span class="sxs-lookup"><span data-stu-id="66ba4-117">Provides print-related services.</span></span>  
   
  <xref:System.Windows.Forms.TextRenderer>  
- <span data-ttu-id="3c70e-118">提供[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]繪製及測量功能的文字。</span><span class="sxs-lookup"><span data-stu-id="3c70e-118">Provides [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] text drawing and measuring functionality.</span></span>
+ <span data-ttu-id="66ba4-118">提供[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]繪製及測量功能的文字。</span><span class="sxs-lookup"><span data-stu-id="66ba4-118">Provides [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] text drawing and measuring functionality.</span></span>

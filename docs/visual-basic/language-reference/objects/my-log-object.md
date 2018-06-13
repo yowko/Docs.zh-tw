@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596017"
 ---
 # <a name="mylog-object"></a><span data-ttu-id="67c49-102">My.Log 物件</span><span class="sxs-lookup"><span data-stu-id="67c49-102">My.Log Object</span></span>
 <span data-ttu-id="67c49-103">提供屬性和事件和例外狀況資訊寫入應用程式的記錄檔接聽程式的方法。</span><span class="sxs-lookup"><span data-stu-id="67c49-103">Provides a property and methods for writing event and exception information to the application's log listeners.</span></span>  
