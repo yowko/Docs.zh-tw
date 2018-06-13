@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803364"
 ---
 # <a name="channels-extensibility"></a>通道擴充性
 本節包含示範自訂通道的範例。  

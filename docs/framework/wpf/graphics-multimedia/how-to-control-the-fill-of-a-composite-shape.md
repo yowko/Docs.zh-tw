@@ -12,11 +12,12 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563039"
 ---
 # <a name="how-to-control-the-fill-of-a-composite-shape"></a>操作說明：控制複合圖案的填色
 <xref:System.Windows.Media.GeometryGroup.FillRule%2A>屬性<xref:System.Windows.Media.GeometryGroup>或<xref:System.Windows.Media.PathGeometry>，指定 「 規則 」 複合圖形會用來判斷指定的點是否幾何的一部分。 有兩個可能的值為<xref:System.Windows.Media.FillRule>:<xref:System.Windows.Media.FillRule.EvenOdd>和<xref:System.Windows.Media.FillRule.Nonzero>。 以下各節將說明如何使用這兩個規則。  
   
- **EvenOdd：**這個規則會從某個點朝任意方向繪製無限遠的光線，並且計算給定圖案中與光線相交的路徑線段數目，以判斷該點是否在填滿區域中。 如果這個數字是奇數，該點即是在區域內；如為偶數，該點即在區域外。  
+ **EvenOdd：** 這個規則會從某個點朝任意方向繪製無限遠的光線，並且計算給定圖案中與光線相交的路徑線段數目，以判斷該點是否在填滿區域中。 如果這個數字是奇數，該點即是在區域內；如為偶數，該點即在區域外。  
   
  例如，以下的 XAML 會建立一系列的同心圓環形 （目標） 所組成的複合圖形<xref:System.Windows.Media.GeometryGroup.FillRule%2A>設<xref:System.Windows.Media.FillRule.EvenOdd>。  
   
@@ -30,7 +31,7 @@ ms.lasthandoff: 05/04/2018
   
  ![圖表：FillRule 屬性值為 EvenOdd](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleevenodd2.png "FillRuleEvenOdd2")  
   
- **NonZero：**這個規則會從某個點朝任意方向繪製無限遠的光線，然後檢查圖案線段與光線相交的位置，以判斷該點是否在路徑填滿區域內。 從零開始計算，路徑線段每次從左到右與光線交會就加一，每次從右到左與光線交會就減一。 計算交會後，如果結果為零，則點即在路徑外。 否則就在路徑內。  
+ **NonZero：** 這個規則會從某個點朝任意方向繪製無限遠的光線，然後檢查圖案線段與光線相交的位置，以判斷該點是否在路徑填滿區域內。 從零開始計算，路徑線段每次從左到右與光線交會就加一，每次從右到左與光線交會就減一。 計算交會後，如果結果為零，則點即在路徑外。 否則就在路徑內。  
   
  [!code-xaml[GeometriesMiscSnippets_snip#FillRuleNonZeroValueEllipseGeometry](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillrulenonzerovalueellipsegeometry)]  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 05/04/2018
   
  ![圖表：FillRule 屬性值為 NonZero](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero4.png "FillRuleNonZero4")  
   
- **注意：**目的<xref:System.Windows.Media.FillRule>，所有圖形都視為封閉式。 如果線段中有間隙，請繪製虛構線段將它封閉。 在上面的範例中，環形中有小型的間隙。 有鑑於此，我們可能會預期通過間隙射出的光線，會提供與另一個方向的光線不同的結果。 以下是放大的圖中的其中一個這些間距和 「 虛數區段 」 (繪製基於套用的區段<xref:System.Windows.Media.FillRule>)，就會關閉它。  
+ **注意：** 目的<xref:System.Windows.Media.FillRule>，所有圖形都視為封閉式。 如果線段中有間隙，請繪製虛構線段將它封閉。 在上面的範例中，環形中有小型的間隙。 有鑑於此，我們可能會預期通過間隙射出的光線，會提供與另一個方向的光線不同的結果。 以下是放大的圖中的其中一個這些間距和 「 虛數區段 」 (繪製基於套用的區段<xref:System.Windows.Media.FillRule>)，就會關閉它。  
   
  ![]圖表：對於 FillRule，線段一定都會封閉(../../../../docs/framework/wpf/graphics-multimedia/media/fillruleclosedshapes.png "FillRuleClosedShapes")  
   
