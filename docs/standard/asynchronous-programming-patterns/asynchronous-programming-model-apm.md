@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573785"
 ---
 # <a name="asynchronous-programming-model-apm"></a><span data-ttu-id="842d5-102">非同步程式設計模型 (APM)</span><span class="sxs-lookup"><span data-stu-id="842d5-102">Asynchronous Programming Model (APM)</span></span>
 <span data-ttu-id="842d5-103">使用 <xref:System.IAsyncResult> 設計模式的非同步作業會實作為兩種方法，名為 **Begin***OperationName* 和 **End***OperationName*，分別開始和結束非同步作業 *OperationName*。</span><span class="sxs-lookup"><span data-stu-id="842d5-103">An asynchronous operation that uses the <xref:System.IAsyncResult> design pattern is implemented as two methods named **Begin***OperationName* and **End***OperationName* that begin and end the asynchronous operation *OperationName* respectively.</span></span> <span data-ttu-id="842d5-104">例如， <xref:System.IO.FileStream> 類別提供 <xref:System.IO.FileStream.BeginRead%2A> 和 <xref:System.IO.FileStream.EndRead%2A> 方法，以非同步方式讀取檔案的位元組。</span><span class="sxs-lookup"><span data-stu-id="842d5-104">For example, the <xref:System.IO.FileStream> class provides the <xref:System.IO.FileStream.BeginRead%2A> and <xref:System.IO.FileStream.EndRead%2A> methods to asynchronously read bytes from a file.</span></span> <span data-ttu-id="842d5-105">這些方法實作 <xref:System.IO.FileStream.Read%2A> 方法的非同步版本。</span><span class="sxs-lookup"><span data-stu-id="842d5-105">These methods implement the asynchronous version of the <xref:System.IO.FileStream.Read%2A> method.</span></span>  
