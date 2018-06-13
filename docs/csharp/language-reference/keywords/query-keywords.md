@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275697"
 ---
 # <a name="query-keywords-c-reference"></a><span data-ttu-id="c67dd-102">查詢關鍵字 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="c67dd-102">Query Keywords (C# Reference)</span></span>
 <span data-ttu-id="c67dd-103">本節包含查詢運算式中所使用的內容關鍵字。</span><span class="sxs-lookup"><span data-stu-id="c67dd-103">This section contains the contextual keywords used in query expressions.</span></span>  

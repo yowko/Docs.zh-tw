@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565685"
 ---
 # <a name="path-animations-overview"></a><span data-ttu-id="03052-102">路徑動畫概觀</span><span class="sxs-lookup"><span data-stu-id="03052-102">Path Animations Overview</span></span>
 <a name="introduction"></a> <span data-ttu-id="03052-103">本主題將介紹路徑動畫，它可讓您使用幾何路徑來產生輸出值。</span><span class="sxs-lookup"><span data-stu-id="03052-103">This topic introduces path animations, which enable you to use a geometric path to generate output values.</span></span> <span data-ttu-id="03052-104">路徑動畫很適合用來沿著複雜路徑移動和旋轉物件。</span><span class="sxs-lookup"><span data-stu-id="03052-104">Path animations are useful for moving and rotating objects along complex paths.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339377"
 ---
 # <a name="linq-to-xml-overview-c"></a><span data-ttu-id="98a64-102">LINQ to XML 概觀 (C#)</span><span class="sxs-lookup"><span data-stu-id="98a64-102">LINQ to XML Overview (C#)</span></span>
 <span data-ttu-id="98a64-103">XML 已被廣泛採用為格式化許多內容之資料的方式。</span><span class="sxs-lookup"><span data-stu-id="98a64-103">XML has been widely adopted as a way to format data in many contexts.</span></span> <span data-ttu-id="98a64-104">例如，您可以在 Web、組態檔、Microsoft Office Word 檔案與資料庫中發現 XML。</span><span class="sxs-lookup"><span data-stu-id="98a64-104">For example, you can find XML on the Web, in configuration files, in Microsoft Office Word files, and in databases.</span></span>  

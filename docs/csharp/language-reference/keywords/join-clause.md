@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33289395"
 ---
 # <a name="join-clause-c-reference"></a><span data-ttu-id="89052-102">join 子句 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="89052-102">join clause (C# Reference)</span></span>
 <span data-ttu-id="89052-103">`join` 子句可用於將不同來源序列中的項目產生關聯，這些項目在物件模型中沒有直接關聯性。</span><span class="sxs-lookup"><span data-stu-id="89052-103">The `join` clause is useful for associating elements from different source sequences that have no direct relationship in the object model.</span></span> <span data-ttu-id="89052-104">唯一的需求是每個來源中的項目必須共用可比較是否相等的特定值。</span><span class="sxs-lookup"><span data-stu-id="89052-104">The only requirement is that the elements in each source share some value that can be compared for equality.</span></span> <span data-ttu-id="89052-105">例如，食品經銷商可能有一份特定產品的供應商清單，以及一份買家清單。</span><span class="sxs-lookup"><span data-stu-id="89052-105">For example, a food distributor might have a list of suppliers of a certain product, and a list of buyers.</span></span> <span data-ttu-id="89052-106">針對位於相同指定地區的所有供應商和買家，可使用 `join` 子句來建立該產品的供應商和買家清單。</span><span class="sxs-lookup"><span data-stu-id="89052-106">A `join` clause can be used, for example, to create a list of the suppliers and buyers of that product who are all in the same specified region.</span></span>  

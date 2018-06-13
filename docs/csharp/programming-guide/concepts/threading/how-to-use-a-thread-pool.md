@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340472"
 ---
 # <a name="how-to-use-a-thread-pool-c"></a><span data-ttu-id="6144f-102">如何：使用執行緒集區 (C#)</span><span class="sxs-lookup"><span data-stu-id="6144f-102">How to: Use a Thread Pool (C#)</span></span>
 <span data-ttu-id="6144f-103">「執行緒共用」是一種多執行緒處理，其中的工作會加入佇列，並在建立執行緒時自動啟動。</span><span class="sxs-lookup"><span data-stu-id="6144f-103">*Thread pooling* is a form of multithreading in which tasks are added to a queue and automatically started when threads are created.</span></span> <span data-ttu-id="6144f-104">如需詳細資訊，請參閱[執行緒共用 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)。</span><span class="sxs-lookup"><span data-stu-id="6144f-104">For more information, see [Thread Pooling (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md).</span></span>  

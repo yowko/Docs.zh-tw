@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532768"
 ---
 # <a name="how-to-work-with-image-columns-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="19fcc-102">如何：使用 Windows Form DataGridView 控制項中的影像資料行</span><span class="sxs-lookup"><span data-stu-id="19fcc-102">How to: Work with Image Columns in the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="19fcc-103">下列程式碼範例示範如何在互動式使用者介面 (UI) 中使用 <xref:System.Windows.Forms.DataGridView> 影像資料行。</span><span class="sxs-lookup"><span data-stu-id="19fcc-103">The following code example shows how to use the <xref:System.Windows.Forms.DataGridView> image columns in an interactive user interface (UI).</span></span> <span data-ttu-id="19fcc-104">此範例也會示範使用 <xref:System.Windows.Forms.DataGridViewImageColumn> 時的影像大小調整和配置的可能性。</span><span class="sxs-lookup"><span data-stu-id="19fcc-104">The example also demonstrates image sizing and layout possibilities with the <xref:System.Windows.Forms.DataGridViewImageColumn>.</span></span>  

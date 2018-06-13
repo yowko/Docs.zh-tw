@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557975"
 ---
 # <a name="3-d-transformations-overview"></a><span data-ttu-id="dff8d-102">立體轉換概觀</span><span class="sxs-lookup"><span data-stu-id="dff8d-102">3-D Transformations Overview</span></span>
 <span data-ttu-id="dff8d-103">本主題說明如何對 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 圖形系統中的 3D 模型套用轉換。</span><span class="sxs-lookup"><span data-stu-id="dff8d-103">This topic describes how to apply transformations to 3-D models in the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] graphics system.</span></span> <span data-ttu-id="dff8d-104">轉換可讓開發人員重新置放模型、調整模型大小，以及調整模型方向，而不需要變更定義模型的基底值。</span><span class="sxs-lookup"><span data-stu-id="dff8d-104">Transformations allow the developer to reposition, resize, and reorient models without changing the base values that define them.</span></span>  

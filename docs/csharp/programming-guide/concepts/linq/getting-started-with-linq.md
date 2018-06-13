@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339315"
 ---
 # <a name="getting-started-with-linq-in-c"></a><span data-ttu-id="d7f7b-102">開始使用 C# 中的 LINQ</span><span class="sxs-lookup"><span data-stu-id="d7f7b-102">Getting Started with LINQ in C#</span></span>
 <span data-ttu-id="d7f7b-103">本節包含基本的背景資訊可協助您了解其餘 LINQ 文件和範例。</span><span class="sxs-lookup"><span data-stu-id="d7f7b-103">This section contains basic background information that will help you understand the rest of the LINQ documentation and samples.</span></span>  

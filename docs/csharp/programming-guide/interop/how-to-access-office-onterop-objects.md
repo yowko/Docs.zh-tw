@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338740"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a><span data-ttu-id="ec2d8-102">如何：使用 Visual C# 功能存取 Office Interop 物件 (C# 程式設計指南)</span><span class="sxs-lookup"><span data-stu-id="ec2d8-102">How to: Access Office Interop Objects by Using Visual C# Features (C# Programming Guide)</span></span>
 <span data-ttu-id="ec2d8-103">Visual C# 的功能可以簡化 Office API 物件存取。</span><span class="sxs-lookup"><span data-stu-id="ec2d8-103">Visual C# has features that simplify access to Office API objects.</span></span> <span data-ttu-id="ec2d8-104">新功能包括具名引數和選擇性引數、稱為 `dynamic` 的新類型，以及傳遞引數以像是實值參數的形式，參考 COM 方法中參數的能力。</span><span class="sxs-lookup"><span data-stu-id="ec2d8-104">The new features include named and optional arguments, a new type called `dynamic`, and the ability to pass arguments to reference parameters in COM methods as if they were value parameters.</span></span>  

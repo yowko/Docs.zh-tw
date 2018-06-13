@@ -1,13 +1,6 @@
 ---
-title: "HOW TO：使用專案資料來源繫結資料 (WCF Data Services)"
-ms.custom: 
+title: HOW TO：使用專案資料來源繫結資料 (WCF Data Services)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,118 +8,114 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 94ca7614e6df2d82216fa869309dff2da8eee634
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0807b8de6bad5e70fbf522cb1cc20872c59fe1b4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362024"
 ---
-# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a><span data-ttu-id="1496b-102">HOW TO：使用專案資料來源繫結資料 (WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="1496b-102">How to: Bind Data Using a Project Data Source (WCF Data Services)</span></span>
-<span data-ttu-id="1496b-103">您可以在 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端應用程式中，建立以產生之資料物件為基礎的資料來源。</span><span class="sxs-lookup"><span data-stu-id="1496b-103">You can create data sources that are based on the generated data objects in an [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] client application.</span></span> <span data-ttu-id="1496b-104">當您加入的參考資料服務使用**加入服務參考** 對話方塊中，以及產生的用戶端資料類別建立的專案資料來源。</span><span class="sxs-lookup"><span data-stu-id="1496b-104">When you add a reference to a data service by using the **Add Service Reference** dialog, a project data source is created along with the generated client data classes.</span></span> <span data-ttu-id="1496b-105">每一個實體集都會建立一個資料來源，並由資料服務公開。</span><span class="sxs-lookup"><span data-stu-id="1496b-105">One data source is created for each entity set that the data service exposes.</span></span> <span data-ttu-id="1496b-106">您可以建立表單，以顯示服務的資料，這些資料來源項目從**資料來源**視窗拖曳至設計工具。</span><span class="sxs-lookup"><span data-stu-id="1496b-106">You can create forms that display data from the service by dragging these data source items from the **Data Sources** window onto the designer.</span></span> <span data-ttu-id="1496b-107">這些項目會成為繫結至資料來源的控制項。</span><span class="sxs-lookup"><span data-stu-id="1496b-107">These items become controls that are bound to the data source.</span></span> <span data-ttu-id="1496b-108">在執行期間，此資料來源繫結至執行個體<xref:System.Data.Services.Client.DataServiceCollection%601>類別，其中會填入到資料服務查詢所傳回的物件。</span><span class="sxs-lookup"><span data-stu-id="1496b-108">During execution, this data source is bound to an instance of the <xref:System.Data.Services.Client.DataServiceCollection%601> class, which is filled with objects that are returned by a query to the data service.</span></span> <span data-ttu-id="1496b-109">如需詳細資訊，請參閱[資料繫結至控制項](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="1496b-109">For more information, see [Binding Data to Controls](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).</span></span>  
+# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a><span data-ttu-id="33e20-102">HOW TO：使用專案資料來源繫結資料 (WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="33e20-102">How to: Bind Data Using a Project Data Source (WCF Data Services)</span></span>
+<span data-ttu-id="33e20-103">您可以在 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端應用程式中，建立以產生之資料物件為基礎的資料來源。</span><span class="sxs-lookup"><span data-stu-id="33e20-103">You can create data sources that are based on the generated data objects in an [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] client application.</span></span> <span data-ttu-id="33e20-104">當您加入的參考資料服務使用**加入服務參考** 對話方塊中，以及產生的用戶端資料類別建立的專案資料來源。</span><span class="sxs-lookup"><span data-stu-id="33e20-104">When you add a reference to a data service by using the **Add Service Reference** dialog, a project data source is created along with the generated client data classes.</span></span> <span data-ttu-id="33e20-105">每一個實體集都會建立一個資料來源，並由資料服務公開。</span><span class="sxs-lookup"><span data-stu-id="33e20-105">One data source is created for each entity set that the data service exposes.</span></span> <span data-ttu-id="33e20-106">您可以建立表單，以顯示服務的資料，這些資料來源項目從**資料來源**視窗拖曳至設計工具。</span><span class="sxs-lookup"><span data-stu-id="33e20-106">You can create forms that display data from the service by dragging these data source items from the **Data Sources** window onto the designer.</span></span> <span data-ttu-id="33e20-107">這些項目會成為繫結至資料來源的控制項。</span><span class="sxs-lookup"><span data-stu-id="33e20-107">These items become controls that are bound to the data source.</span></span> <span data-ttu-id="33e20-108">在執行期間，此資料來源繫結至執行個體<xref:System.Data.Services.Client.DataServiceCollection%601>類別，其中會填入到資料服務查詢所傳回的物件。</span><span class="sxs-lookup"><span data-stu-id="33e20-108">During execution, this data source is bound to an instance of the <xref:System.Data.Services.Client.DataServiceCollection%601> class, which is filled with objects that are returned by a query to the data service.</span></span> <span data-ttu-id="33e20-109">如需詳細資訊，請參閱[資料繫結至控制項](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="33e20-109">For more information, see [Binding Data to Controls](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).</span></span>  
   
- <span data-ttu-id="1496b-110">本主題的範例使用 Northwind 範例資料服務和自動產生的用戶端資料服務類別。</span><span class="sxs-lookup"><span data-stu-id="1496b-110">The examples in this topic use the Northwind sample data service and autogenerated client data service classes.</span></span> <span data-ttu-id="1496b-111">當您完成建立此服務和用戶端資料類別[WCF Data Services 快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="1496b-111">This service and the client data classes are created when you complete the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span>  
+ <span data-ttu-id="33e20-110">本主題的範例使用 Northwind 範例資料服務和自動產生的用戶端資料服務類別。</span><span class="sxs-lookup"><span data-stu-id="33e20-110">The examples in this topic use the Northwind sample data service and autogenerated client data service classes.</span></span> <span data-ttu-id="33e20-111">當您完成建立此服務和用戶端資料類別[WCF Data Services 快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="33e20-111">This service and the client data classes are created when you complete the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span>  
   
-### <a name="to-use-a-project-data-source-in-a-wpf-window"></a><span data-ttu-id="1496b-112">使用 WPF 視窗中的專案資料來源</span><span class="sxs-lookup"><span data-stu-id="1496b-112">To use a project data source in a WPF window</span></span>  
+### <a name="to-use-a-project-data-source-in-a-wpf-window"></a><span data-ttu-id="33e20-112">使用 WPF 視窗中的專案資料來源</span><span class="sxs-lookup"><span data-stu-id="33e20-112">To use a project data source in a WPF window</span></span>  
   
-1.  <span data-ttu-id="1496b-113">在 WPF 專案中，將參考加入至 Northwind 資料服務。</span><span class="sxs-lookup"><span data-stu-id="1496b-113">In a WPF project, add a reference to the Northwind data service.</span></span> <span data-ttu-id="1496b-114">如需詳細資訊，請參閱[如何： 加入資料服務參考](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="1496b-114">For more information, see [How to: Add a Data Service Reference](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).</span></span>  
+1.  <span data-ttu-id="33e20-113">在 WPF 專案中，將參考加入至 Northwind 資料服務。</span><span class="sxs-lookup"><span data-stu-id="33e20-113">In a WPF project, add a reference to the Northwind data service.</span></span> <span data-ttu-id="33e20-114">如需詳細資訊，請參閱[如何： 加入資料服務參考](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="33e20-114">For more information, see [How to: Add a Data Service Reference](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).</span></span>  
   
-2.  <span data-ttu-id="1496b-115">在**資料來源**視窗中，展開 `Customers`節點**NorthwindEntities**專案資料來源。</span><span class="sxs-lookup"><span data-stu-id="1496b-115">In the **Data Sources** window, expand the `Customers` node in the **NorthwindEntities** project data source.</span></span>  
+2.  <span data-ttu-id="33e20-115">在**資料來源**視窗中，展開 `Customers`節點**NorthwindEntities**專案資料來源。</span><span class="sxs-lookup"><span data-stu-id="33e20-115">In the **Data Sources** window, expand the `Customers` node in the **NorthwindEntities** project data source.</span></span>  
   
-3.  <span data-ttu-id="1496b-116">按一下**CustomerID**項目，選取**ComboBox**從清單中，然後拖曳**CustomerID**項目從**客戶**節點設計工具。</span><span class="sxs-lookup"><span data-stu-id="1496b-116">Click the **CustomerID** item, select **ComboBox** from the list, and drag the **CustomerID** item from the **Customers** node to the designer.</span></span>  
+3.  <span data-ttu-id="33e20-116">按一下**CustomerID**項目，選取**ComboBox**從清單中，然後拖曳**CustomerID**項目從**客戶**節點設計工具。</span><span class="sxs-lookup"><span data-stu-id="33e20-116">Click the **CustomerID** item, select **ComboBox** from the list, and drag the **CustomerID** item from the **Customers** node to the designer.</span></span>  
   
-     <span data-ttu-id="1496b-117">這會在視窗的 XAML 檔案中，建立下列物件項目：</span><span class="sxs-lookup"><span data-stu-id="1496b-117">This creates the following object elements in the XAML file for the window:</span></span>  
+     <span data-ttu-id="33e20-117">這會在視窗的 XAML 檔案中，建立下列物件項目：</span><span class="sxs-lookup"><span data-stu-id="33e20-117">This creates the following object elements in the XAML file for the window:</span></span>  
   
-    -   <span data-ttu-id="1496b-118"><xref:System.Windows.Data.CollectionViewSource> 物件，名為 `customersViewSource`。</span><span class="sxs-lookup"><span data-stu-id="1496b-118">A <xref:System.Windows.Data.CollectionViewSource> element named `customersViewSource`.</span></span> <span data-ttu-id="1496b-119">最上層 <xref:System.Windows.FrameworkElement.DataContext%2A> 物件項目的 <xref:System.Windows.Controls.Grid> 屬性會設成這個新的 <xref:System.Windows.Data.CollectionViewSource>。</span><span class="sxs-lookup"><span data-stu-id="1496b-119">The <xref:System.Windows.FrameworkElement.DataContext%2A> property of the top-level <xref:System.Windows.Controls.Grid> object element is set to this new <xref:System.Windows.Data.CollectionViewSource>.</span></span>  
+    -   <span data-ttu-id="33e20-118"><xref:System.Windows.Data.CollectionViewSource> 物件，名為 `customersViewSource`。</span><span class="sxs-lookup"><span data-stu-id="33e20-118">A <xref:System.Windows.Data.CollectionViewSource> element named `customersViewSource`.</span></span> <span data-ttu-id="33e20-119">最上層 <xref:System.Windows.FrameworkElement.DataContext%2A> 物件項目的 <xref:System.Windows.Controls.Grid> 屬性會設成這個新的 <xref:System.Windows.Data.CollectionViewSource>。</span><span class="sxs-lookup"><span data-stu-id="33e20-119">The <xref:System.Windows.FrameworkElement.DataContext%2A> property of the top-level <xref:System.Windows.Controls.Grid> object element is set to this new <xref:System.Windows.Data.CollectionViewSource>.</span></span>  
   
-    -   <span data-ttu-id="1496b-120">資料繫結 <xref:System.Windows.Controls.ComboBox>，名為 `CustomerID`。</span><span class="sxs-lookup"><span data-stu-id="1496b-120">A data-bound <xref:System.Windows.Controls.ComboBox> named `CustomerID`.</span></span>  
+    -   <span data-ttu-id="33e20-120">資料繫結 <xref:System.Windows.Controls.ComboBox>，名為 `CustomerID`。</span><span class="sxs-lookup"><span data-stu-id="33e20-120">A data-bound <xref:System.Windows.Controls.ComboBox> named `CustomerID`.</span></span>  
   
-    -   <span data-ttu-id="1496b-121"><xref:System.Windows.Controls.Label>。</span><span class="sxs-lookup"><span data-stu-id="1496b-121">A <xref:System.Windows.Controls.Label>.</span></span>  
+    -   <span data-ttu-id="33e20-121"><xref:System.Windows.Controls.Label>。</span><span class="sxs-lookup"><span data-stu-id="33e20-121">A <xref:System.Windows.Controls.Label>.</span></span>  
   
-4.  <span data-ttu-id="1496b-122">拖曳**訂單**至設計工具的導覽屬性。</span><span class="sxs-lookup"><span data-stu-id="1496b-122">Drag the **Orders** navigation property to the designer.</span></span>  
+4.  <span data-ttu-id="33e20-122">拖曳**訂單**至設計工具的導覽屬性。</span><span class="sxs-lookup"><span data-stu-id="33e20-122">Drag the **Orders** navigation property to the designer.</span></span>  
   
-     <span data-ttu-id="1496b-123">這會在視窗的 XAML 檔案中，建立下列其他物件項目：</span><span class="sxs-lookup"><span data-stu-id="1496b-123">This creates the following additional object elements in the XAML file for the window:</span></span>  
+     <span data-ttu-id="33e20-123">這會在視窗的 XAML 檔案中，建立下列其他物件項目：</span><span class="sxs-lookup"><span data-stu-id="33e20-123">This creates the following additional object elements in the XAML file for the window:</span></span>  
   
-    -   <span data-ttu-id="1496b-124">第二個 <xref:System.Windows.Data.CollectionViewSource> 物件，名為 `customersOrdersViewSource`，其資料來源是 `customerViewSource`。</span><span class="sxs-lookup"><span data-stu-id="1496b-124">A second <xref:System.Windows.Data.CollectionViewSource> element named `customersOrdersViewSource`, the source of which is the `customerViewSource`.</span></span>  
+    -   <span data-ttu-id="33e20-124">第二個 <xref:System.Windows.Data.CollectionViewSource> 物件，名為 `customersOrdersViewSource`，其資料來源是 `customerViewSource`。</span><span class="sxs-lookup"><span data-stu-id="33e20-124">A second <xref:System.Windows.Data.CollectionViewSource> element named `customersOrdersViewSource`, the source of which is the `customerViewSource`.</span></span>  
   
-    -   <span data-ttu-id="1496b-125">資料繫結 <xref:System.Windows.Controls.DataGrid> 控制項，名為 `ordersDataGrid`。</span><span class="sxs-lookup"><span data-stu-id="1496b-125">A data-bound <xref:System.Windows.Controls.DataGrid> control named `ordersDataGrid`.</span></span>  
+    -   <span data-ttu-id="33e20-125">資料繫結 <xref:System.Windows.Controls.DataGrid> 控制項，名為 `ordersDataGrid`。</span><span class="sxs-lookup"><span data-stu-id="33e20-125">A data-bound <xref:System.Windows.Controls.DataGrid> control named `ordersDataGrid`.</span></span>  
   
-5.  <span data-ttu-id="1496b-126">（選擇性）拖曳其他項目從**客戶**加入設計工具中的節點。</span><span class="sxs-lookup"><span data-stu-id="1496b-126">(Optional) Drag additional items from the **Customers** node to the designer.</span></span>  
+5.  <span data-ttu-id="33e20-126">（選擇性）拖曳其他項目從**客戶**加入設計工具中的節點。</span><span class="sxs-lookup"><span data-stu-id="33e20-126">(Optional) Drag additional items from the **Customers** node to the designer.</span></span>  
   
-6.  <span data-ttu-id="1496b-127">開啟表單的字碼頁並加入下列 `using` 陳述式 (在 Visual Basic 中為 `Imports`)：</span><span class="sxs-lookup"><span data-stu-id="1496b-127">Open the code page for the form and add the following `using` statements (`Imports` in Visual Basic):</span></span>  
+6.  <span data-ttu-id="33e20-127">開啟表單的字碼頁並加入下列 `using` 陳述式 (在 Visual Basic 中為 `Imports`)：</span><span class="sxs-lookup"><span data-stu-id="33e20-127">Open the code page for the form and add the following `using` statements (`Imports` in Visual Basic):</span></span>  
   
      [!code-csharp[Astoria Northwind Client#CustomersOrdersUsingWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf2.xaml.cs#customersordersusingwpf)]  
   
-7.  <span data-ttu-id="1496b-128">在定義表單的部分類別中，加入下列可建立 <xref:System.Data.Objects.ObjectContext> 執行個體並定義 `customerID` 常數的程式碼。</span><span class="sxs-lookup"><span data-stu-id="1496b-128">In the partial class that defines the form, add the following code that creates an <xref:System.Data.Objects.ObjectContext> instance and defines the `customerID` constant.</span></span>  
+7.  <span data-ttu-id="33e20-128">在定義表單的部分類別中，加入下列可建立 <xref:System.Data.Objects.ObjectContext> 執行個體並定義 `customerID` 常數的程式碼。</span><span class="sxs-lookup"><span data-stu-id="33e20-128">In the partial class that defines the form, add the following code that creates an <xref:System.Data.Objects.ObjectContext> instance and defines the `customerID` constant.</span></span>  
   
      [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf2.xaml.cs#customersordersdefinitionwpf)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf2.xaml.vb#customersordersdefinitionwpf)]  
   
-8.  <span data-ttu-id="1496b-129">在設計工具中選取視窗。</span><span class="sxs-lookup"><span data-stu-id="1496b-129">In the designer, select the window.</span></span>  
+8.  <span data-ttu-id="33e20-129">在設計工具中選取視窗。</span><span class="sxs-lookup"><span data-stu-id="33e20-129">In the designer, select the window.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="1496b-130">請確定您選取的是視窗本身，而不是選擇視窗的內容。</span><span class="sxs-lookup"><span data-stu-id="1496b-130">Make sure that you select the window itself, rather than selecting content that is within the window.</span></span> <span data-ttu-id="1496b-131">如果已選取視窗，**名稱**頂端附近的文字方塊**屬性**視窗應該包含視窗的名稱。</span><span class="sxs-lookup"><span data-stu-id="1496b-131">If the window is selected, the **Name** text box near the top of the **Properties** window should contain the name of the window.</span></span>  
+    >  <span data-ttu-id="33e20-130">請確定您選取的是視窗本身，而不是選擇視窗的內容。</span><span class="sxs-lookup"><span data-stu-id="33e20-130">Make sure that you select the window itself, rather than selecting content that is within the window.</span></span> <span data-ttu-id="33e20-131">如果已選取視窗，**名稱**頂端附近的文字方塊**屬性**視窗應該包含視窗的名稱。</span><span class="sxs-lookup"><span data-stu-id="33e20-131">If the window is selected, the **Name** text box near the top of the **Properties** window should contain the name of the window.</span></span>  
   
-9. <span data-ttu-id="1496b-132">在**屬性**視窗中，選取**事件** 按鈕。</span><span class="sxs-lookup"><span data-stu-id="1496b-132">In the **Properties** window, select the **Events** button.</span></span>  
+9. <span data-ttu-id="33e20-132">在**屬性**視窗中，選取**事件** 按鈕。</span><span class="sxs-lookup"><span data-stu-id="33e20-132">In the **Properties** window, select the **Events** button.</span></span>  
   
-10. <span data-ttu-id="1496b-133">尋找**Loaded**事件，然後按兩下這個事件旁的下拉式清單。</span><span class="sxs-lookup"><span data-stu-id="1496b-133">Find the **Loaded** event, and then double-click the drop-down list next to this event.</span></span>  
+10. <span data-ttu-id="33e20-133">尋找**Loaded**事件，然後按兩下這個事件旁的下拉式清單。</span><span class="sxs-lookup"><span data-stu-id="33e20-133">Find the **Loaded** event, and then double-click the drop-down list next to this event.</span></span>  
   
-     <span data-ttu-id="1496b-134">Visual Studio 會開啟視窗的程式碼後置檔案，然後產生 <xref:System.Windows.FrameworkElement.Loaded> 事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="1496b-134">Visual Studio opens the code-behind file for the window and generates a <xref:System.Windows.FrameworkElement.Loaded> event handler.</span></span>  
+     <span data-ttu-id="33e20-134">Visual Studio 會開啟視窗的程式碼後置檔案，然後產生 <xref:System.Windows.FrameworkElement.Loaded> 事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="33e20-134">Visual Studio opens the code-behind file for the window and generates a <xref:System.Windows.FrameworkElement.Loaded> event handler.</span></span>  
   
-11. <span data-ttu-id="1496b-135">在新建立的 <xref:System.Windows.FrameworkElement.Loaded> 事件處理常式中，複製並貼上下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="1496b-135">In the newly created <xref:System.Windows.FrameworkElement.Loaded> event handler, copy and paste the following code.</span></span>  
+11. <span data-ttu-id="33e20-135">在新建立的 <xref:System.Windows.FrameworkElement.Loaded> 事件處理常式中，複製並貼上下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="33e20-135">In the newly created <xref:System.Windows.FrameworkElement.Loaded> event handler, copy and paste the following code.</span></span>  
   
      [!code-csharp[Astoria Northwind Client#CustomersOrdersDataBindingWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf2.xaml.cs#customersordersdatabindingwpf)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersDataBindingWpf](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf2.xaml.vb#customersordersdatabindingwpf)]  
   
-12. <span data-ttu-id="1496b-136">這個程式碼會根據 LINQ 查詢執行傳回 <xref:System.Data.Services.Client.DataServiceCollection%601> 物件的 `Customers`，以及 Northwind 資料服務的相關 <xref:System.Collections.Generic.IEnumerable%601> 物件，建立 `Customers` 型別的 `Orders`，然後繫結至 `customersViewSource`。</span><span class="sxs-lookup"><span data-stu-id="1496b-136">This code creates an instance of <xref:System.Data.Services.Client.DataServiceCollection%601> for the `Customers` type based on the execution of a LINQ query that returns an <xref:System.Collections.Generic.IEnumerable%601> of `Customers` along with related `Orders` objects from the Northwind data service and binds it to the `customersViewSource`.</span></span>  
+12. <span data-ttu-id="33e20-136">這個程式碼會根據 LINQ 查詢執行傳回 <xref:System.Data.Services.Client.DataServiceCollection%601> 物件的 `Customers`，以及 Northwind 資料服務的相關 <xref:System.Collections.Generic.IEnumerable%601> 物件，建立 `Customers` 型別的 `Orders`，然後繫結至 `customersViewSource`。</span><span class="sxs-lookup"><span data-stu-id="33e20-136">This code creates an instance of <xref:System.Data.Services.Client.DataServiceCollection%601> for the `Customers` type based on the execution of a LINQ query that returns an <xref:System.Collections.Generic.IEnumerable%601> of `Customers` along with related `Orders` objects from the Northwind data service and binds it to the `customersViewSource`.</span></span>  
   
-### <a name="to-use-a-project-data-source-in-a-windows-form"></a><span data-ttu-id="1496b-137">使用 Windows Form 中的專案資料來源</span><span class="sxs-lookup"><span data-stu-id="1496b-137">To use a project data source in a Windows form</span></span>  
+### <a name="to-use-a-project-data-source-in-a-windows-form"></a><span data-ttu-id="33e20-137">使用 Windows Form 中的專案資料來源</span><span class="sxs-lookup"><span data-stu-id="33e20-137">To use a project data source in a Windows form</span></span>  
   
-1.  <span data-ttu-id="1496b-138">在**資料來源**視窗中，展開 **客戶**節點**NorthwindEntities**專案資料來源。</span><span class="sxs-lookup"><span data-stu-id="1496b-138">In the **Data Sources** window, expand the **Customers** node in the **NorthwindEntities** project data source.</span></span>  
+1.  <span data-ttu-id="33e20-138">在**資料來源**視窗中，展開 **客戶**節點**NorthwindEntities**專案資料來源。</span><span class="sxs-lookup"><span data-stu-id="33e20-138">In the **Data Sources** window, expand the **Customers** node in the **NorthwindEntities** project data source.</span></span>  
   
-2.  <span data-ttu-id="1496b-139">按一下**CustomerID**項目，選取**ComboBox**從清單中，然後拖曳**CustomerID**項目從**客戶**節點設計工具。</span><span class="sxs-lookup"><span data-stu-id="1496b-139">Click the **CustomerID** item, select **ComboBox** from the list, and drag the **CustomerID** item from the **Customers** node to the designer.</span></span>  
+2.  <span data-ttu-id="33e20-139">按一下**CustomerID**項目，選取**ComboBox**從清單中，然後拖曳**CustomerID**項目從**客戶**節點設計工具。</span><span class="sxs-lookup"><span data-stu-id="33e20-139">Click the **CustomerID** item, select **ComboBox** from the list, and drag the **CustomerID** item from the **Customers** node to the designer.</span></span>  
   
-     <span data-ttu-id="1496b-140">這會在表單上建立下列控制項：</span><span class="sxs-lookup"><span data-stu-id="1496b-140">This creates the following controls on the form:</span></span>  
+     <span data-ttu-id="33e20-140">這會在表單上建立下列控制項：</span><span class="sxs-lookup"><span data-stu-id="33e20-140">This creates the following controls on the form:</span></span>  
   
-    -   <span data-ttu-id="1496b-141"><xref:System.Windows.Forms.BindingSource> 執行個體，名為 `customersBindingSource`。</span><span class="sxs-lookup"><span data-stu-id="1496b-141">An instance of <xref:System.Windows.Forms.BindingSource> named `customersBindingSource`.</span></span>  
+    -   <span data-ttu-id="33e20-141"><xref:System.Windows.Forms.BindingSource> 執行個體，名為 `customersBindingSource`。</span><span class="sxs-lookup"><span data-stu-id="33e20-141">An instance of <xref:System.Windows.Forms.BindingSource> named `customersBindingSource`.</span></span>  
   
-    -   <span data-ttu-id="1496b-142"><xref:System.Windows.Forms.BindingNavigator> 執行個體，名為 `customersBindingNavigator`。</span><span class="sxs-lookup"><span data-stu-id="1496b-142">An instance of <xref:System.Windows.Forms.BindingNavigator> named `customersBindingNavigator`.</span></span> <span data-ttu-id="1496b-143">您可以刪除這個不再需要的控制項。</span><span class="sxs-lookup"><span data-stu-id="1496b-143">You can delete this control as it will not be needed.</span></span>  
+    -   <span data-ttu-id="33e20-142"><xref:System.Windows.Forms.BindingNavigator> 執行個體，名為 `customersBindingNavigator`。</span><span class="sxs-lookup"><span data-stu-id="33e20-142">An instance of <xref:System.Windows.Forms.BindingNavigator> named `customersBindingNavigator`.</span></span> <span data-ttu-id="33e20-143">您可以刪除這個不再需要的控制項。</span><span class="sxs-lookup"><span data-stu-id="33e20-143">You can delete this control as it will not be needed.</span></span>  
   
-    -   <span data-ttu-id="1496b-144">資料繫結 <xref:System.Windows.Forms.ComboBox>，名為 `CustomerID`。</span><span class="sxs-lookup"><span data-stu-id="1496b-144">A data-bound <xref:System.Windows.Forms.ComboBox> named `CustomerID`.</span></span>  
+    -   <span data-ttu-id="33e20-144">資料繫結 <xref:System.Windows.Forms.ComboBox>，名為 `CustomerID`。</span><span class="sxs-lookup"><span data-stu-id="33e20-144">A data-bound <xref:System.Windows.Forms.ComboBox> named `CustomerID`.</span></span>  
   
-    -   <span data-ttu-id="1496b-145"><xref:System.Windows.Forms.Label>。</span><span class="sxs-lookup"><span data-stu-id="1496b-145">A <xref:System.Windows.Forms.Label>.</span></span>  
+    -   <span data-ttu-id="33e20-145"><xref:System.Windows.Forms.Label>。</span><span class="sxs-lookup"><span data-stu-id="33e20-145">A <xref:System.Windows.Forms.Label>.</span></span>  
   
-3.  <span data-ttu-id="1496b-146">拖曳**訂單**至表單的導覽屬性。</span><span class="sxs-lookup"><span data-stu-id="1496b-146">Drag the **Orders** navigation property to the form.</span></span>  
+3.  <span data-ttu-id="33e20-146">拖曳**訂單**至表單的導覽屬性。</span><span class="sxs-lookup"><span data-stu-id="33e20-146">Drag the **Orders** navigation property to the form.</span></span>  
   
-4.  <span data-ttu-id="1496b-147">這會建立 `ordersBindingSource` 控制項，且控制項的 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 屬性設為 `customersBindingSource` 和 <xref:System.Windows.Forms.BindingSource.DataMember%2A> 屬性設為 `Customers`。</span><span class="sxs-lookup"><span data-stu-id="1496b-147">This creates the `ordersBindingSource` control with the <xref:System.Windows.Forms.BindingSource.DataSource%2A> property of the control set to the `customersBindingSource` and the <xref:System.Windows.Forms.BindingSource.DataMember%2A> property set to `Customers`.</span></span> <span data-ttu-id="1496b-148">表單上也會建立 `ordersDataGridView` 資料繫結控制項，並伴隨著標示適當的標籤控制項。</span><span class="sxs-lookup"><span data-stu-id="1496b-148">It also creates the `ordersDataGridView` data-bound control on the form, accompanied by an appropriately titled label control.</span></span>  
+4.  <span data-ttu-id="33e20-147">這會建立 `ordersBindingSource` 控制項，且控制項的 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 屬性設為 `customersBindingSource` 和 <xref:System.Windows.Forms.BindingSource.DataMember%2A> 屬性設為 `Customers`。</span><span class="sxs-lookup"><span data-stu-id="33e20-147">This creates the `ordersBindingSource` control with the <xref:System.Windows.Forms.BindingSource.DataSource%2A> property of the control set to the `customersBindingSource` and the <xref:System.Windows.Forms.BindingSource.DataMember%2A> property set to `Customers`.</span></span> <span data-ttu-id="33e20-148">表單上也會建立 `ordersDataGridView` 資料繫結控制項，並伴隨著標示適當的標籤控制項。</span><span class="sxs-lookup"><span data-stu-id="33e20-148">It also creates the `ordersDataGridView` data-bound control on the form, accompanied by an appropriately titled label control.</span></span>  
   
-5.  <span data-ttu-id="1496b-149">（選擇性）拖曳其他項目從**客戶**加入設計工具中的節點。</span><span class="sxs-lookup"><span data-stu-id="1496b-149">(Optional) Drag additional items from the **Customers** node to the designer.</span></span>  
+5.  <span data-ttu-id="33e20-149">（選擇性）拖曳其他項目從**客戶**加入設計工具中的節點。</span><span class="sxs-lookup"><span data-stu-id="33e20-149">(Optional) Drag additional items from the **Customers** node to the designer.</span></span>  
   
-6.  <span data-ttu-id="1496b-150">開啟表單的字碼頁並加入下列 `using` 陳述式 (在 Visual Basic 中為 `Imports`)：</span><span class="sxs-lookup"><span data-stu-id="1496b-150">Open the code page for the form and add the following `using` statements (`Imports` in Visual Basic):</span></span>  
+6.  <span data-ttu-id="33e20-150">開啟表單的字碼頁並加入下列 `using` 陳述式 (在 Visual Basic 中為 `Imports`)：</span><span class="sxs-lookup"><span data-stu-id="33e20-150">Open the code page for the form and add the following `using` statements (`Imports` in Visual Basic):</span></span>  
   
      [!code-csharp[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersusing)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersusing)]  
   
-7.  <span data-ttu-id="1496b-151">在定義表單的部分類別中，加入下列可建立 <xref:System.Data.Objects.ObjectContext> 執行個體並定義 `customerID` 常數的程式碼。</span><span class="sxs-lookup"><span data-stu-id="1496b-151">In the partial class that defines the form, add the following code that creates an <xref:System.Data.Objects.ObjectContext> instance and defines the `customerID` constant.</span></span>  
+7.  <span data-ttu-id="33e20-151">在定義表單的部分類別中，加入下列可建立 <xref:System.Data.Objects.ObjectContext> 執行個體並定義 `customerID` 常數的程式碼。</span><span class="sxs-lookup"><span data-stu-id="33e20-151">In the partial class that defines the form, add the following code that creates an <xref:System.Data.Objects.ObjectContext> instance and defines the `customerID` constant.</span></span>  
   
      [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersdefinition)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersdefinition)]  
   
-8.  <span data-ttu-id="1496b-152">在表單設計工具中，按兩下表單。</span><span class="sxs-lookup"><span data-stu-id="1496b-152">In the form designer, double-click the form.</span></span>  
+8.  <span data-ttu-id="33e20-152">在表單設計工具中，按兩下表單。</span><span class="sxs-lookup"><span data-stu-id="33e20-152">In the form designer, double-click the form.</span></span>  
   
-     <span data-ttu-id="1496b-153">這樣會開啟表單的字碼頁，並且建立用於處理表單之 `Load` 事件的方法。</span><span class="sxs-lookup"><span data-stu-id="1496b-153">This opens the code page for the form and creates the method that handles the `Load` event for the form.</span></span>  
+     <span data-ttu-id="33e20-153">這樣會開啟表單的字碼頁，並且建立用於處理表單之 `Load` 事件的方法。</span><span class="sxs-lookup"><span data-stu-id="33e20-153">This opens the code page for the form and creates the method that handles the `Load` event for the form.</span></span>  
   
-9. <span data-ttu-id="1496b-154">在 `Load` 事件處理常式中，複製並貼入下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="1496b-154">In the `Load` event handler, copy and paste the following code.</span></span>  
+9. <span data-ttu-id="33e20-154">在 `Load` 事件處理常式中，複製並貼入下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="33e20-154">In the `Load` event handler, copy and paste the following code.</span></span>  
   
      [!code-csharp[Astoria Northwind Client#CustomersOrdersDataBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersdatabinding)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersDataBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersdatabinding)]  
   
-10. <span data-ttu-id="1496b-155">這個程式碼會根據 <xref:System.Data.Services.Client.DataServiceCollection%601> 執行傳回 Northwind 資料服務之 `Customers`的 <xref:System.Data.Services.Client.DataServiceQuery%601>，建立 <xref:System.Collections.Generic.IEnumerable%601> 型別的 `Customers`，然後繫結至 `customersBindingSource`。</span><span class="sxs-lookup"><span data-stu-id="1496b-155">This code creates an instance of <xref:System.Data.Services.Client.DataServiceCollection%601> for the `Customers` type based on the execution of a <xref:System.Data.Services.Client.DataServiceQuery%601> that returns an <xref:System.Collections.Generic.IEnumerable%601> of `Customers` from the Northwind data service and binds it to the `customersBindingSource`.</span></span>  
+10. <span data-ttu-id="33e20-155">這個程式碼會根據 <xref:System.Data.Services.Client.DataServiceCollection%601> 執行傳回 Northwind 資料服務之 `Customers`的 <xref:System.Data.Services.Client.DataServiceQuery%601>，建立 <xref:System.Collections.Generic.IEnumerable%601> 型別的 `Customers`，然後繫結至 `customersBindingSource`。</span><span class="sxs-lookup"><span data-stu-id="33e20-155">This code creates an instance of <xref:System.Data.Services.Client.DataServiceCollection%601> for the `Customers` type based on the execution of a <xref:System.Data.Services.Client.DataServiceQuery%601> that returns an <xref:System.Collections.Generic.IEnumerable%601> of `Customers` from the Northwind data service and binds it to the `customersBindingSource`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1496b-156">請參閱</span><span class="sxs-lookup"><span data-stu-id="1496b-156">See Also</span></span>  
- [<span data-ttu-id="1496b-157">WCF Data Services 用戶端程式庫</span><span class="sxs-lookup"><span data-stu-id="1496b-157">WCF Data Services Client Library</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
- [<span data-ttu-id="1496b-158">如何：將資料繫結至 Windows Presentation Foundation 項目</span><span class="sxs-lookup"><span data-stu-id="1496b-158">How to: Bind Data to Windows Presentation Foundation Elements</span></span>](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)
+## <a name="see-also"></a><span data-ttu-id="33e20-156">另請參閱</span><span class="sxs-lookup"><span data-stu-id="33e20-156">See Also</span></span>  
+ [<span data-ttu-id="33e20-157">WCF Data Services 用戶端程式庫</span><span class="sxs-lookup"><span data-stu-id="33e20-157">WCF Data Services Client Library</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
+ [<span data-ttu-id="33e20-158">如何：將資料繫結至 Windows Presentation Foundation 項目</span><span class="sxs-lookup"><span data-stu-id="33e20-158">How to: Bind Data to Windows Presentation Foundation Elements</span></span>](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)

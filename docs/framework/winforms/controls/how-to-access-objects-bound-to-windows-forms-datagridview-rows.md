@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529671"
 ---
 # <a name="how-to-access-objects-bound-to-windows-forms-datagridview-rows"></a><span data-ttu-id="4f224-102">如何：存取物件繫結至 Windows Form DataGridView 資料列</span><span class="sxs-lookup"><span data-stu-id="4f224-102">How to: Access Objects Bound to Windows Forms DataGridView Rows</span></span>
 <span data-ttu-id="4f224-103">有時候顯示儲存在商務物件集合中之資料表的資訊會很有用。</span><span class="sxs-lookup"><span data-stu-id="4f224-103">Sometimes it is useful to display a table of information stored in a collection of business objects.</span></span> <span data-ttu-id="4f224-104">當您繫結 <xref:System.Windows.Forms.DataGridView> 控制項至這類集合，則每個公用屬性會顯示在自己的資料行中​​，除非屬性已標示為不可由 <xref:System.ComponentModel.BrowsableAttribute> 瀏覽。</span><span class="sxs-lookup"><span data-stu-id="4f224-104">When you bind a <xref:System.Windows.Forms.DataGridView> control to such a collection, each public property is displayed in its own column unless the property has been marked non-browsable with a <xref:System.ComponentModel.BrowsableAttribute>.</span></span> <span data-ttu-id="4f224-105">例如，`Customer` 物件的集合可能有 [名稱] 和 [位址] 等資料行。</span><span class="sxs-lookup"><span data-stu-id="4f224-105">For example, a collection of `Customer` objects would have columns such as **Name** and **Address**.</span></span>  

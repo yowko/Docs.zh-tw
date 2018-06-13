@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569527"
 ---
 # <a name="entity-references-are-expanded-and-not-preserved"></a><span data-ttu-id="9d604-102">實體參考是可擴充且沒有保留</span><span class="sxs-lookup"><span data-stu-id="9d604-102">Entity References are Expanded and Not Preserved</span></span>
 <span data-ttu-id="9d604-103">當實體參考擴充並且由它所表示的文字所取代時，就不會建立 **XmlEntityReference** 節點。</span><span class="sxs-lookup"><span data-stu-id="9d604-103">When the entity reference is expanded and replaced by the text it represents, the **XmlEntityReference** node is not created.</span></span> <span data-ttu-id="9d604-104">相反的，實體宣告會剖析，而從宣告中之內容建立的節點會複製到 **XmlEntityReference** 的位置。</span><span class="sxs-lookup"><span data-stu-id="9d604-104">Instead, the entity declaration is parsed, and nodes created from the content in the declaration are copied in the place of the **XmlEntityReference**.</span></span> <span data-ttu-id="9d604-105">因此，在 `&publisher;` 範例中，不會儲存 `&publisher;`，但會建立 **XmlText** 節點。</span><span class="sxs-lookup"><span data-stu-id="9d604-105">Therefore, in the `&publisher;` example, the `&publisher;` is not saved, but instead, an **XmlText** node is created.</span></span>  

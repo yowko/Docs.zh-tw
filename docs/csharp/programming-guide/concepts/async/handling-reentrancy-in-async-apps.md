@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339757"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a><span data-ttu-id="01457-102">處理非同步應用程式中的重新進入 (C#)</span><span class="sxs-lookup"><span data-stu-id="01457-102">Handling Reentrancy in Async Apps (C#)</span></span>
 <span data-ttu-id="01457-103">當您將非同步程式碼納入您的應用程式時，應該考慮並防止可能發生的重新進入，也就是在完成前重新進入的非同步作業。</span><span class="sxs-lookup"><span data-stu-id="01457-103">When you include asynchronous code in your app, you should consider and possibly prevent reentrancy, which refers to reentering an asynchronous operation before it has completed.</span></span> <span data-ttu-id="01457-104">如果您不找出並處理重新進入的可能性，它可能會導致非預期的結果。</span><span class="sxs-lookup"><span data-stu-id="01457-104">If you don't identify and handle possibilities for reentrancy, it can cause unexpected results.</span></span>  

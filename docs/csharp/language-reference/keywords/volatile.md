@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272580"
 ---
 # <a name="volatile-c-reference"></a><span data-ttu-id="0d67f-102">volatile (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="0d67f-102">volatile (C# Reference)</span></span>
 <span data-ttu-id="0d67f-103">`volatile` 關鍵字指出某個欄位可能是由同時執行的多個執行緒所修改。</span><span class="sxs-lookup"><span data-stu-id="0d67f-103">The `volatile` keyword indicates that a field might be modified by multiple threads that are executing at the same time.</span></span> <span data-ttu-id="0d67f-104">宣告 `volatile` 的欄位並不適用編譯器最佳化，因為編譯器最佳化是假設由單一執行緒進行存取。</span><span class="sxs-lookup"><span data-stu-id="0d67f-104">Fields that are declared `volatile` are not subject to compiler optimizations that assume access by a single thread.</span></span> <span data-ttu-id="0d67f-105">這樣可確保欄位中永遠出現最新的值。</span><span class="sxs-lookup"><span data-stu-id="0d67f-105">This ensures that the most up-to-date value is present in the field at all times.</span></span>  

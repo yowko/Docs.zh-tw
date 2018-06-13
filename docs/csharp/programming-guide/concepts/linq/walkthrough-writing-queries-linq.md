@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340407"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a><span data-ttu-id="0148d-102">逐步解說：在 C# 中撰寫查詢 (LINQ)</span><span class="sxs-lookup"><span data-stu-id="0148d-102">Walkthrough: Writing Queries in C# (LINQ)</span></span>
 <span data-ttu-id="0148d-103">本逐步解說示範用以撰寫 LINQ 查詢運算式的 C# 語言功能。</span><span class="sxs-lookup"><span data-stu-id="0148d-103">This walkthrough demonstrates the C# language features that are used to write LINQ query expressions.</span></span>  

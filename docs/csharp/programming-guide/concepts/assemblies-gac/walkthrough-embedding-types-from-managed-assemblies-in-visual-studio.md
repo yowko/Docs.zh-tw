@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339238"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a><span data-ttu-id="46c57-102">逐步解說：在 Visual Studio 中內嵌來自 Managed 組件的型別 (C#)</span><span class="sxs-lookup"><span data-stu-id="46c57-102">Walkthrough: Embedding Types from Managed Assemblies in Visual Studio (C#)</span></span>
 <span data-ttu-id="46c57-103">若要內嵌來自強式名稱 Managed 組件的類型資訊，您可以鬆散地結合應用程式中的類型以確保版本獨立。</span><span class="sxs-lookup"><span data-stu-id="46c57-103">If you embed type information from a strong-named managed assembly, you can loosely couple types in an application to achieve version independence.</span></span> <span data-ttu-id="46c57-104">也就是說，您可以撰寫程式來使用 Managed 程式庫多個版本的類型，而不需重新編譯每個版本。</span><span class="sxs-lookup"><span data-stu-id="46c57-104">That is, your program can be written to use types from multiple versions of a managed library without having to be recompiled for each version.</span></span>  

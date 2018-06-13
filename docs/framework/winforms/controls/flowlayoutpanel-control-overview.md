@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526721"
 ---
 # <a name="flowlayoutpanel-control-overview"></a><span data-ttu-id="4d95e-102">FlowLayoutPanel 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="4d95e-102">FlowLayoutPanel Control Overview</span></span>
 <span data-ttu-id="4d95e-103"><xref:System.Windows.Forms.FlowLayoutPanel> 控制項會以水平或垂直的流動方向來排列其內容。</span><span class="sxs-lookup"><span data-stu-id="4d95e-103">The <xref:System.Windows.Forms.FlowLayoutPanel> control arranges its contents in a horizontal or vertical flow direction.</span></span> <span data-ttu-id="4d95e-104">您可以將控制項的內容從一個資料列包裝至下一個資料列，或從一個資料行包裝至下一個資料行。</span><span class="sxs-lookup"><span data-stu-id="4d95e-104">You can wrap the control's contents from one row to the next, or from one column to the next.</span></span> <span data-ttu-id="4d95e-105">或者，您可以用裁剪的方式，而不是包裝其內容。</span><span class="sxs-lookup"><span data-stu-id="4d95e-105">Alternately, you can clip instead of wrap its contents.</span></span>  
