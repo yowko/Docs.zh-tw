@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599232"
 ---
 # <a name="automation-object-does-not-have-a-default-value"></a><span data-ttu-id="a69c9-102">Automation 物件沒有預設值</span><span class="sxs-lookup"><span data-stu-id="a69c9-102">Automation object does not have a default value</span></span>
 <span data-ttu-id="a69c9-103">Visual Basic 無法判斷指定之物件的預設成員。</span><span class="sxs-lookup"><span data-stu-id="a69c9-103">Visual Basic cannot determine the default member for the specified object.</span></span>  

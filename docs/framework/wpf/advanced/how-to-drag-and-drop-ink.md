@@ -1,13 +1,6 @@
 ---
-title: "如何：拖放筆墨"
-ms.custom: 
+title: 如何：拖放筆墨
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,20 +12,16 @@ helpviewer_keywords:
 - drag-and-drop ink
 - dropping ink [WPF]
 ms.assetid: 932dc410-2bf3-4486-ab31-13487ba59f60
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2151d7bf2ea7ccfc034d89cc637331256251618d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 48f0a501b9a04869443be2b50288946779a315f1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543198"
 ---
-# <a name="how-to-drag-and-drop-ink"></a><span data-ttu-id="2c666-102">如何：拖放筆墨</span><span class="sxs-lookup"><span data-stu-id="2c666-102">How to: Drag and Drop Ink</span></span>
-## <a name="example"></a><span data-ttu-id="2c666-103">範例</span><span class="sxs-lookup"><span data-stu-id="2c666-103">Example</span></span>  
- <span data-ttu-id="2c666-104">下列範例會建立應用程式可讓使用者從其中一個拖曳選取的筆劃<xref:System.Windows.Controls.InkCanvas>之間。</span><span class="sxs-lookup"><span data-stu-id="2c666-104">The following example creates an application that enables the user to drag selected strokes from one <xref:System.Windows.Controls.InkCanvas> to the other.</span></span>  
+# <a name="how-to-drag-and-drop-ink"></a><span data-ttu-id="30fc8-102">如何：拖放筆墨</span><span class="sxs-lookup"><span data-stu-id="30fc8-102">How to: Drag and Drop Ink</span></span>
+## <a name="example"></a><span data-ttu-id="30fc8-103">範例</span><span class="sxs-lookup"><span data-stu-id="30fc8-103">Example</span></span>  
+ <span data-ttu-id="30fc8-104">下列範例會建立應用程式可讓使用者從其中一個拖曳選取的筆劃<xref:System.Windows.Controls.InkCanvas>之間。</span><span class="sxs-lookup"><span data-stu-id="30fc8-104">The following example creates an application that enables the user to drag selected strokes from one <xref:System.Windows.Controls.InkCanvas> to the other.</span></span>  
   
  [!code-xaml[InkDragDrop#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkDragDrop/CSharp/Window1.xaml#1)]  
   

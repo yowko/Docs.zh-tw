@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589837"
 ---
 # <a name="get-started-with-visual-basic"></a><span data-ttu-id="2bb38-102">開始使用 Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2bb38-102">Get started with Visual Basic</span></span>
 <span data-ttu-id="2bb38-103">本文的這一節可協助您開始進行 Visual Basic 應用程式開發。</span><span class="sxs-lookup"><span data-stu-id="2bb38-103">This section of the documentation helps you get started with Visual Basic application development.</span></span>  

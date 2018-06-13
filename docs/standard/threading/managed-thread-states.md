@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587719"
 ---
 # <a name="managed-thread-states"></a><span data-ttu-id="e10a6-102">Managed 執行緒狀態</span><span class="sxs-lookup"><span data-stu-id="e10a6-102">Managed Thread States</span></span>
 <span data-ttu-id="e10a6-103">屬性 <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> 提供位元遮罩，表示執行緒的目前狀態。</span><span class="sxs-lookup"><span data-stu-id="e10a6-103">The property <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> provides a bit mask that indicates the thread's current state.</span></span> <span data-ttu-id="e10a6-104">執行緒一律是在 <xref:System.Threading.ThreadState> 列舉至少一個可能的狀態中，而且可能同時在多個狀態中。</span><span class="sxs-lookup"><span data-stu-id="e10a6-104">A thread is always in at least one of the possible states in the <xref:System.Threading.ThreadState> enumeration, and can be in multiple states at the same time.</span></span>  

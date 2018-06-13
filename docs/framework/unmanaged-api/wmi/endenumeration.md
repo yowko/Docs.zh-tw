@@ -1,11 +1,7 @@
 ---
-title: "EndEnumeration 函式 （Unmanaged API 參考）"
-description: "EndEnumeration 函式會終止列舉型別。"
+title: EndEnumeration 函式 （Unmanaged API 參考）
+description: EndEnumeration 函式會終止列舉型別。
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - EndEnumeration
 api_location:
@@ -20,21 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fee3137dad3f89fa8849b28e9ca38b40040f916e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: d77497beb122bef580d6eb142fede33b8cf220e3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459514"
 ---
-# <a name="endenumeration-function"></a><span data-ttu-id="1f4bc-103">EndEnumeration 函式</span><span class="sxs-lookup"><span data-stu-id="1f4bc-103">EndEnumeration function</span></span>
-<span data-ttu-id="1f4bc-104">結束呼叫啟動列舉順序[BeginEnumeration 函式](beginenumeration.md)。</span><span class="sxs-lookup"><span data-stu-id="1f4bc-104">Terminates an enumeration sequence started with a call to the [BeginEnumeration function](beginenumeration.md).</span></span>  
+# <a name="endenumeration-function"></a><span data-ttu-id="3a180-103">EndEnumeration 函式</span><span class="sxs-lookup"><span data-stu-id="3a180-103">EndEnumeration function</span></span>
+<span data-ttu-id="3a180-104">結束呼叫啟動列舉順序[BeginEnumeration 函式](beginenumeration.md)。</span><span class="sxs-lookup"><span data-stu-id="3a180-104">Terminates an enumeration sequence started with a call to the [BeginEnumeration function](beginenumeration.md).</span></span>  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
-## <a name="syntax"></a><span data-ttu-id="1f4bc-105">語法</span><span class="sxs-lookup"><span data-stu-id="1f4bc-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3a180-105">語法</span><span class="sxs-lookup"><span data-stu-id="3a180-105">Syntax</span></span>  
   
 ```  
 HRESULT EndEnumeration (
@@ -43,36 +37,36 @@ HRESULT EndEnumeration (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="1f4bc-106">參數</span><span class="sxs-lookup"><span data-stu-id="1f4bc-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="3a180-106">參數</span><span class="sxs-lookup"><span data-stu-id="3a180-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="1f4bc-107">[in]未使用這個參數。</span><span class="sxs-lookup"><span data-stu-id="1f4bc-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="3a180-107">[in]未使用這個參數。</span><span class="sxs-lookup"><span data-stu-id="3a180-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="1f4bc-108">[in]指標[IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)執行個體。</span><span class="sxs-lookup"><span data-stu-id="1f4bc-108">[in] A pointer to an [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instance.</span></span>
+<span data-ttu-id="3a180-108">[in]指標[IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)執行個體。</span><span class="sxs-lookup"><span data-stu-id="3a180-108">[in] A pointer to an [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instance.</span></span>
 
 
-## <a name="return-value"></a><span data-ttu-id="1f4bc-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="1f4bc-109">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="3a180-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="3a180-109">Return value</span></span>
 
-<span data-ttu-id="1f4bc-110">這個函式傳回下列值會定義在*WbemCli.h*標頭檔，或者您可以定義它們以常數的形式在程式碼中：</span><span class="sxs-lookup"><span data-stu-id="1f4bc-110">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="3a180-110">這個函式傳回下列值會定義在*WbemCli.h*標頭檔，或者您可以定義它們以常數的形式在程式碼中：</span><span class="sxs-lookup"><span data-stu-id="3a180-110">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="1f4bc-111">常數</span><span class="sxs-lookup"><span data-stu-id="1f4bc-111">Constant</span></span>  |<span data-ttu-id="1f4bc-112">值</span><span class="sxs-lookup"><span data-stu-id="1f4bc-112">Value</span></span>  |<span data-ttu-id="1f4bc-113">描述</span><span class="sxs-lookup"><span data-stu-id="1f4bc-113">Description</span></span>  |
+|<span data-ttu-id="3a180-111">常數</span><span class="sxs-lookup"><span data-stu-id="3a180-111">Constant</span></span>  |<span data-ttu-id="3a180-112">值</span><span class="sxs-lookup"><span data-stu-id="3a180-112">Value</span></span>  |<span data-ttu-id="3a180-113">描述</span><span class="sxs-lookup"><span data-stu-id="3a180-113">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | <span data-ttu-id="1f4bc-114">0x80041001</span><span class="sxs-lookup"><span data-stu-id="1f4bc-114">0x80041001</span></span> | <span data-ttu-id="1f4bc-115">發生一般失敗。</span><span class="sxs-lookup"><span data-stu-id="1f4bc-115">There has been a general failure.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="1f4bc-116">0</span><span class="sxs-lookup"><span data-stu-id="1f4bc-116">0</span></span> | <span data-ttu-id="1f4bc-117">函式呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="1f4bc-117">The function call was successful.</span></span>  |
+|`WBEM_E_FAILED` | <span data-ttu-id="3a180-114">0x80041001</span><span class="sxs-lookup"><span data-stu-id="3a180-114">0x80041001</span></span> | <span data-ttu-id="3a180-115">發生一般失敗。</span><span class="sxs-lookup"><span data-stu-id="3a180-115">There has been a general failure.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="3a180-116">0</span><span class="sxs-lookup"><span data-stu-id="3a180-116">0</span></span> | <span data-ttu-id="3a180-117">函式呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="3a180-117">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="1f4bc-118">備註</span><span class="sxs-lookup"><span data-stu-id="1f4bc-118">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="3a180-118">備註</span><span class="sxs-lookup"><span data-stu-id="3a180-118">Remarks</span></span>
 
-<span data-ttu-id="1f4bc-119">此函式會包裝呼叫[IWbemClassObject::EndEnumeration](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)方法。</span><span class="sxs-lookup"><span data-stu-id="1f4bc-119">This function wraps a call to the [IWbemClassObject::EndEnumeration](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) method.</span></span>
+<span data-ttu-id="3a180-119">此函式會包裝呼叫[IWbemClassObject::EndEnumeration](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)方法。</span><span class="sxs-lookup"><span data-stu-id="3a180-119">This function wraps a call to the [IWbemClassObject::EndEnumeration](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) method.</span></span>
 
-<span data-ttu-id="1f4bc-120">呼叫`EndEnumeration`函式不是必要項目，但建議因為列舉型別相關聯的資源釋出。</span><span class="sxs-lookup"><span data-stu-id="1f4bc-120">A call to the `EndEnumeration` function is not required, but it is recommended because it releases resources associated with the enumeration.</span></span> <span data-ttu-id="1f4bc-121">不過，resoruces 會自動解除配置時啟動下一次列舉或釋放物件。</span><span class="sxs-lookup"><span data-stu-id="1f4bc-121">However, the resoruces are deallocated automatically when the next enumeration is started or the object is released.</span></span>
+<span data-ttu-id="3a180-120">呼叫`EndEnumeration`函式不是必要項目，但建議因為列舉型別相關聯的資源釋出。</span><span class="sxs-lookup"><span data-stu-id="3a180-120">A call to the `EndEnumeration` function is not required, but it is recommended because it releases resources associated with the enumeration.</span></span> <span data-ttu-id="3a180-121">不過，resoruces 會自動解除配置時啟動下一次列舉或釋放物件。</span><span class="sxs-lookup"><span data-stu-id="3a180-121">However, the resoruces are deallocated automatically when the next enumeration is started or the object is released.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="1f4bc-122">需求</span><span class="sxs-lookup"><span data-stu-id="1f4bc-122">Requirements</span></span>  
- <span data-ttu-id="1f4bc-123">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1f4bc-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3a180-122">需求</span><span class="sxs-lookup"><span data-stu-id="3a180-122">Requirements</span></span>  
+ <span data-ttu-id="3a180-123">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3a180-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1f4bc-124">**標頭：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="1f4bc-124">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="3a180-124">**標頭：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="3a180-124">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="1f4bc-125">**.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="1f4bc-125">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="3a180-125">**.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="3a180-125">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1f4bc-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1f4bc-126">See also</span></span>  
-[<span data-ttu-id="1f4bc-127">WMI 和效能計數器 （Unmanaged API 參考）</span><span class="sxs-lookup"><span data-stu-id="1f4bc-127">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="3a180-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3a180-126">See also</span></span>  
+[<span data-ttu-id="3a180-127">WMI 和效能計數器 （Unmanaged API 參考）</span><span class="sxs-lookup"><span data-stu-id="3a180-127">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

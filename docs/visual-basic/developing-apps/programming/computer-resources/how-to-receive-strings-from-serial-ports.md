@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588943"
 ---
 # <a name="how-to-receive-strings-from-serial-ports-in-visual-basic"></a><span data-ttu-id="f85b4-102">如何：在 Visual Basic 中接收來自序列埠的字串</span><span class="sxs-lookup"><span data-stu-id="f85b4-102">How to: Receive Strings From Serial Ports in Visual Basic</span></span>
 <span data-ttu-id="f85b4-103">本主題描述如何在 Visual Basic 中使用 `My.Computer.Ports` 來接收來自電腦序列埠的字串。</span><span class="sxs-lookup"><span data-stu-id="f85b4-103">This topic describes how to use `My.Computer.Ports` to receive strings from the computer's serial ports in Visual Basic.</span></span>  

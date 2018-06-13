@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390360"
 ---
 # <a name="how-to-debug-clr-activation-issues"></a><span data-ttu-id="d5ece-102">如何：偵錯 CLR 啟用問題</span><span class="sxs-lookup"><span data-stu-id="d5ece-102">How to: Debug CLR Activation Issues</span></span>
 <span data-ttu-id="d5ece-103">如果以正確的通用語言執行平台 (CLR) 版本執行應用程式時發生問題，您可以檢視並偵錯 CLR 啟用記錄。</span><span class="sxs-lookup"><span data-stu-id="d5ece-103">If you encounter problems in getting your application to run with the correct version of the common language runtime (CLR), you can view and debug CLR activation logs.</span></span> <span data-ttu-id="d5ece-104">當您的應用程式載入不符預期的 CLR 版本，或完全不載入 CLR 時，這些記錄檔對判斷啟動問題的根本原因非常有幫助。</span><span class="sxs-lookup"><span data-stu-id="d5ece-104">These logs can be very useful in determining the root cause of an activation issue, when your application either loads a different CLR version than expected or doesn't load the CLR at all.</span></span> <span data-ttu-id="d5ece-105">[NET Framework 初始化錯誤：管理使用者經驗](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) 會討論應用程式找不到任何 CLR 時的經驗。</span><span class="sxs-lookup"><span data-stu-id="d5ece-105">The [.NET Framework Initialization Errors: Managing the User Experience](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) discusses the experience when no CLR is found for an application.</span></span>  

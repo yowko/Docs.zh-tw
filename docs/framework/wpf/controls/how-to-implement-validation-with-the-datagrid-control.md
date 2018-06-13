@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557871"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a><span data-ttu-id="bb7bf-102">如何：使用 DataGrid 控制項實作驗證</span><span class="sxs-lookup"><span data-stu-id="bb7bf-102">How to: Implement Validation with the DataGrid Control</span></span>
 <span data-ttu-id="bb7bf-103"><xref:System.Windows.Controls.DataGrid>控制項可讓您執行資料格和資料列層級的驗證。</span><span class="sxs-lookup"><span data-stu-id="bb7bf-103">The <xref:System.Windows.Controls.DataGrid> control enables you to perform validation at both the cell and row level.</span></span> <span data-ttu-id="bb7bf-104">資料格層級驗證時，您會驗證個別屬性繫結的資料物件的使用者更新值時。</span><span class="sxs-lookup"><span data-stu-id="bb7bf-104">With cell-level validation, you validate individual properties of a bound data object when a user updates a value.</span></span> <span data-ttu-id="bb7bf-105">資料列層級驗證時，您會驗證整個資料的物件，當使用者將變更認可至資料列。</span><span class="sxs-lookup"><span data-stu-id="bb7bf-105">With row-level validation, you validate entire data objects when a user commits changes to a row.</span></span> <span data-ttu-id="bb7bf-106">您也可以提供自訂的視覺化回饋，對於驗證錯誤，或使用預設的視覺化回饋，<xref:System.Windows.Controls.DataGrid>控制項提供。</span><span class="sxs-lookup"><span data-stu-id="bb7bf-106">You can also provide customized visual feedback for validation errors, or use the default visual feedback that the <xref:System.Windows.Controls.DataGrid> control provides.</span></span>  

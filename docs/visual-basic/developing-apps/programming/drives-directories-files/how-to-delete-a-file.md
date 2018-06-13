@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588619"
 ---
 # <a name="how-to-delete-a-file-in-visual-basic"></a><span data-ttu-id="3c300-102">如何：在 Visual Basic 中刪除檔案</span><span class="sxs-lookup"><span data-stu-id="3c300-102">How to: Delete a File in Visual Basic</span></span>
 <span data-ttu-id="3c300-103">`My.Computer.FileSystem` 物件的 `DeleteFile` 方法可讓您刪除檔案。</span><span class="sxs-lookup"><span data-stu-id="3c300-103">The `DeleteFile` method of the `My.Computer.FileSystem` object allows you to delete a file.</span></span> <span data-ttu-id="3c300-104">提供的選項包括︰是否要將已刪除的檔案傳送至 [資源回收筒]、是否要求使用者確認應該刪除檔案，以及使用者取消該作業時該怎麼辦。</span><span class="sxs-lookup"><span data-stu-id="3c300-104">Among the options it offers are: whether to send the deleted file to the **Recycle Bin**, whether to ask the user to confirm that the file should be deleted, and what to do when the user cancels the operation.</span></span>  

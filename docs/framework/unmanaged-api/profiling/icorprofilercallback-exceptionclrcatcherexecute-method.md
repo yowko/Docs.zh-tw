@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerCallback::ExceptionCLRCatcherExecute 方法"
-ms.custom: 
+title: ICorProfilerCallback::ExceptionCLRCatcherExecute 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerCallback.ExceptionCLRCatcherExecute
 api_location:
@@ -23,36 +15,33 @@ helpviewer_keywords:
 ms.assetid: aaac8f98-5cf4-42c7-b04b-556cce367e36
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c5d278fa196836d18b8515bee5af1946b2ca4d74
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 6057593362e75044a9b2db32ad5dafe439a551d2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451138"
 ---
-# <a name="icorprofilercallbackexceptionclrcatcherexecute-method"></a><span data-ttu-id="abde6-102">ICorProfilerCallback::ExceptionCLRCatcherExecute 方法</span><span class="sxs-lookup"><span data-stu-id="abde6-102">ICorProfilerCallback::ExceptionCLRCatcherExecute Method</span></span>
-<span data-ttu-id="abde6-103">時呼叫`catch`封鎖在 common language runtime (CLR) 本身內執行例外狀況。</span><span class="sxs-lookup"><span data-stu-id="abde6-103">Called when a `catch` block for an exception is executed inside the common language runtime (CLR) itself.</span></span> <span data-ttu-id="abde6-104">這個方法是.NET Framework 2.0 版中已過時。</span><span class="sxs-lookup"><span data-stu-id="abde6-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  
+# <a name="icorprofilercallbackexceptionclrcatcherexecute-method"></a><span data-ttu-id="1c7e6-102">ICorProfilerCallback::ExceptionCLRCatcherExecute 方法</span><span class="sxs-lookup"><span data-stu-id="1c7e6-102">ICorProfilerCallback::ExceptionCLRCatcherExecute Method</span></span>
+<span data-ttu-id="1c7e6-103">時呼叫`catch`封鎖在 common language runtime (CLR) 本身內執行例外狀況。</span><span class="sxs-lookup"><span data-stu-id="1c7e6-103">Called when a `catch` block for an exception is executed inside the common language runtime (CLR) itself.</span></span> <span data-ttu-id="1c7e6-104">這個方法是.NET Framework 2.0 版中已過時。</span><span class="sxs-lookup"><span data-stu-id="1c7e6-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="abde6-105">語法</span><span class="sxs-lookup"><span data-stu-id="abde6-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1c7e6-105">語法</span><span class="sxs-lookup"><span data-stu-id="1c7e6-105">Syntax</span></span>  
   
 ```  
 HRESULT ExceptionCLRCatcherExecute();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="abde6-106">需求</span><span class="sxs-lookup"><span data-stu-id="abde6-106">Requirements</span></span>  
- <span data-ttu-id="abde6-107">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="abde6-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1c7e6-106">需求</span><span class="sxs-lookup"><span data-stu-id="1c7e6-106">Requirements</span></span>  
+ <span data-ttu-id="1c7e6-107">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1c7e6-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="abde6-108">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="abde6-108">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="1c7e6-108">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="1c7e6-108">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="abde6-109">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="abde6-109">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1c7e6-109">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1c7e6-109">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="abde6-110">**.NET framework 版本：** 1.1、 1.0</span><span class="sxs-lookup"><span data-stu-id="abde6-110">**.NET Framework Versions:** 1.1, 1.0</span></span>  
+ <span data-ttu-id="1c7e6-110">**.NET framework 版本：** 1.1、 1.0</span><span class="sxs-lookup"><span data-stu-id="1c7e6-110">**.NET Framework Versions:** 1.1, 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="abde6-111">請參閱</span><span class="sxs-lookup"><span data-stu-id="abde6-111">See Also</span></span>  
- [<span data-ttu-id="abde6-112">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="abde6-112">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [<span data-ttu-id="abde6-113">ExceptionCLRCatcherFound 方法</span><span class="sxs-lookup"><span data-stu-id="abde6-113">ExceptionCLRCatcherFound Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionclrcatcherfound-method.md)
+## <a name="see-also"></a><span data-ttu-id="1c7e6-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1c7e6-111">See Also</span></span>  
+ [<span data-ttu-id="1c7e6-112">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="1c7e6-112">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
+ [<span data-ttu-id="1c7e6-113">ExceptionCLRCatcherFound 方法</span><span class="sxs-lookup"><span data-stu-id="1c7e6-113">ExceptionCLRCatcherFound Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionclrcatcherfound-method.md)

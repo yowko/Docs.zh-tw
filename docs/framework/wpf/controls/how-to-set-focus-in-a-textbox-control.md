@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552535"
 ---
 # <a name="how-to-set-focus-in-a-textbox-control"></a><span data-ttu-id="9c704-102">如何：在 TextBox 控制項中設定焦點</span><span class="sxs-lookup"><span data-stu-id="9c704-102">How to: Set Focus in a TextBox Control</span></span>
 <span data-ttu-id="9c704-103">這個範例示範如何使用<xref:System.Windows.UIElement.Focus%2A>方法，以將焦點設在<xref:System.Windows.Controls.TextBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="9c704-103">This example shows how to use the <xref:System.Windows.UIElement.Focus%2A> method to set focus on a <xref:System.Windows.Controls.TextBox> control.</span></span>  

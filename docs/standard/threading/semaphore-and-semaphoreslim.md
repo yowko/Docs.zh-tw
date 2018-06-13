@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591308"
 ---
 # <a name="semaphore-and-semaphoreslim"></a><span data-ttu-id="8cd47-102">Semaphore 和 SemaphoreSlim</span><span class="sxs-lookup"><span data-stu-id="8cd47-102">Semaphore and SemaphoreSlim</span></span>
 <span data-ttu-id="8cd47-103"><xref:System.Threading.Semaphore?displayProperty=nameWithType> 類別代表具名 (系統) 或區域號誌。</span><span class="sxs-lookup"><span data-stu-id="8cd47-103">The <xref:System.Threading.Semaphore?displayProperty=nameWithType> class represents a named (systemwide) or local semaphore.</span></span> <span data-ttu-id="8cd47-104">它是 Win32 號誌物件周圍的精簡型包裝函式。</span><span class="sxs-lookup"><span data-stu-id="8cd47-104">It is a thin wrapper around the Win32 semaphore object.</span></span> <span data-ttu-id="8cd47-105">Win32 號誌是計算的號誌，可以用來控制資源集區的存取。</span><span class="sxs-lookup"><span data-stu-id="8cd47-105">Win32 semaphores are counting semaphores, which can be used to control access to a pool of resources.</span></span>  

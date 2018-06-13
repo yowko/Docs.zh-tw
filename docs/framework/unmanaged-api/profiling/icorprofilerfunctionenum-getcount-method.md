@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerFunctionEnum::GetCount 方法"
-ms.custom: 
+title: ICorProfilerFunctionEnum::GetCount 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerFunctionEnum.GetCount Method
 api_location:
@@ -23,40 +15,37 @@ helpviewer_keywords:
 ms.assetid: 62ec65e3-3e9d-400b-ae61-d24b8963995b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3ac7e1e4c13578859c02f531dbc3b5e6f01e55cb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 413b860353d3a9e75771f9349ebf151d8f2e3579
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453290"
 ---
-# <a name="icorprofilerfunctionenumgetcount-method"></a><span data-ttu-id="41965-102">ICorProfilerFunctionEnum::GetCount 方法</span><span class="sxs-lookup"><span data-stu-id="41965-102">ICorProfilerFunctionEnum::GetCount Method</span></span>
-<span data-ttu-id="41965-103">取得應用程式已載入的或分析工具強制載入的函式數目。</span><span class="sxs-lookup"><span data-stu-id="41965-103">Gets the number of functions that were loaded by the application or forcibly loaded by the profiler.</span></span>  
+# <a name="icorprofilerfunctionenumgetcount-method"></a><span data-ttu-id="2e47e-102">ICorProfilerFunctionEnum::GetCount 方法</span><span class="sxs-lookup"><span data-stu-id="2e47e-102">ICorProfilerFunctionEnum::GetCount Method</span></span>
+<span data-ttu-id="2e47e-103">取得應用程式已載入的或分析工具強制載入的函式數目。</span><span class="sxs-lookup"><span data-stu-id="2e47e-103">Gets the number of functions that were loaded by the application or forcibly loaded by the profiler.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="41965-104">語法</span><span class="sxs-lookup"><span data-stu-id="41965-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2e47e-104">語法</span><span class="sxs-lookup"><span data-stu-id="2e47e-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCount([out] ULONG * pcelt);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="41965-105">參數</span><span class="sxs-lookup"><span data-stu-id="41965-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="2e47e-105">參數</span><span class="sxs-lookup"><span data-stu-id="2e47e-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="41965-106">[out]已載入的函式數目。</span><span class="sxs-lookup"><span data-stu-id="41965-106">[out] The number of functions that were loaded.</span></span>  
+ <span data-ttu-id="2e47e-106">[out]已載入的函式數目。</span><span class="sxs-lookup"><span data-stu-id="2e47e-106">[out] The number of functions that were loaded.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="41965-107">需求</span><span class="sxs-lookup"><span data-stu-id="41965-107">Requirements</span></span>  
- <span data-ttu-id="41965-108">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="41965-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2e47e-107">需求</span><span class="sxs-lookup"><span data-stu-id="2e47e-107">Requirements</span></span>  
+ <span data-ttu-id="2e47e-108">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2e47e-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="41965-109">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="41965-109">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="2e47e-109">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="2e47e-109">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="41965-110">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="41965-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2e47e-110">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2e47e-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="41965-111">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="41965-111">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="2e47e-111">**.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2e47e-111">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="41965-112">請參閱</span><span class="sxs-lookup"><span data-stu-id="41965-112">See Also</span></span>  
- [<span data-ttu-id="41965-113">ICorProfilerFunctionEnum 介面</span><span class="sxs-lookup"><span data-stu-id="41965-113">ICorProfilerFunctionEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)  
- [<span data-ttu-id="41965-114">分析介面</span><span class="sxs-lookup"><span data-stu-id="41965-114">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="2e47e-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2e47e-112">See Also</span></span>  
+ [<span data-ttu-id="2e47e-113">ICorProfilerFunctionEnum 介面</span><span class="sxs-lookup"><span data-stu-id="2e47e-113">ICorProfilerFunctionEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)  
+ [<span data-ttu-id="2e47e-114">分析介面</span><span class="sxs-lookup"><span data-stu-id="2e47e-114">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588878"
 ---
 # <a name="how-to-read-from-comma-delimited-text-files-in-visual-basic"></a><span data-ttu-id="a8771-102">如何：在 Visual Basic 中從逗號分隔文字檔讀取</span><span class="sxs-lookup"><span data-stu-id="a8771-102">How to: read from comma-delimited text files in Visual Basic</span></span>
 <span data-ttu-id="a8771-103">`TextFieldParser` 物件可讓您輕鬆有效率地剖析結構化文字檔，例如記錄檔。</span><span class="sxs-lookup"><span data-stu-id="a8771-103">The `TextFieldParser` object provides a way to easily and efficiently parse structured text files, such as logs.</span></span> <span data-ttu-id="a8771-104">`TextFieldType` 屬性會定義檔案是有分隔符號的檔案，還是具有固定寬度文字欄位的檔案。</span><span class="sxs-lookup"><span data-stu-id="a8771-104">The `TextFieldType` property defines whether it is a delimited file or one with fixed-width fields of text.</span></span>  

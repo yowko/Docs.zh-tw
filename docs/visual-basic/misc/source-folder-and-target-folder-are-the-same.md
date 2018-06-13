@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640481"
 ---
 # <a name="source-folder-and-target-folder-are-the-same"></a><span data-ttu-id="70548-102">來源資料夾和目標資料夾相同</span><span class="sxs-lookup"><span data-stu-id="70548-102">Source folder and target folder are the same</span></span>
 <span data-ttu-id="70548-103">嘗試複製或移動檔案，但指定的來源目錄和目標目錄相同。</span><span class="sxs-lookup"><span data-stu-id="70548-103">An attempt has been made to copy or move a file, but the specified source directory and target directory are the same.</span></span> <span data-ttu-id="70548-104">這可能是檔案路徑剖析不正確的結果。</span><span class="sxs-lookup"><span data-stu-id="70548-104">This may be a result of incorrectly parsing a file path.</span></span>  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591417"
 ---
 # <a name="sbyte-data-type-visual-basic"></a><span data-ttu-id="a09d0-102">SByte 資料類型 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a09d0-102">SByte data type (Visual Basic)</span></span>
 

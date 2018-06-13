@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587354"
 ---
 # <a name="labels-that-are-numbers-must-be-followed-by-colons"></a><span data-ttu-id="c4aa1-102">內容為數字的標籤之後必須跟隨冒號</span><span class="sxs-lookup"><span data-stu-id="c4aa1-102">Labels that are numbers must be followed by colons</span></span>
 <span data-ttu-id="c4aa1-103">行號會遵循相同的規則和其他種類的標籤，也必須包含冒號。</span><span class="sxs-lookup"><span data-stu-id="c4aa1-103">Line numbers follow the same rules as other kinds of labels, and must contain a colon.</span></span>  

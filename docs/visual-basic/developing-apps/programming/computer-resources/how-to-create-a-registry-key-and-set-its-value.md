@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590747"
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a><span data-ttu-id="7c278-102">如何：在 Visual Basic 中建立登錄機碼並設定其值</span><span class="sxs-lookup"><span data-stu-id="7c278-102">How to: Create a Registry Key and Set Its Value in Visual Basic</span></span>
 <span data-ttu-id="7c278-103">`My.Computer.Registry` 物件的 `CreateSubKey` 方法可以用來建立登錄機碼。</span><span class="sxs-lookup"><span data-stu-id="7c278-103">The `CreateSubKey` method of the `My.Computer.Registry` object can be used to create a registry key.</span></span>  

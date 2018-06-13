@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591375"
 ---
 # <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a><span data-ttu-id="2bbac-102">在剪貼簿儲存和讀取資料 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2bbac-102">Storing data to and reading from the Clipboard (Visual Basic)</span></span>
 <span data-ttu-id="2bbac-103">剪貼簿可以用來儲存資料，例如文字和影像。</span><span class="sxs-lookup"><span data-stu-id="2bbac-103">The Clipboard can be used to store data, such as text and images.</span></span> <span data-ttu-id="2bbac-104">因為所有使用中處理序都共用剪貼簿，所以可以使用它在這兩者之間傳輸資料。</span><span class="sxs-lookup"><span data-stu-id="2bbac-104">Because the Clipboard is shared by all active processes, it can be used to transfer data between them.</span></span> <span data-ttu-id="2bbac-105">`My.Computer.Clipboard` 物件可讓您輕鬆地存取剪貼簿，以及讀取和寫入它。</span><span class="sxs-lookup"><span data-stu-id="2bbac-105">The `My.Computer.Clipboard` object allows you to easily access the Clipboard and to read from and write to it.</span></span>  

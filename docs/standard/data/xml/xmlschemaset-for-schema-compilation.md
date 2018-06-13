@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579076"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a><span data-ttu-id="daf6b-102">用於結構描述編譯的 XmlSchemaSet</span><span class="sxs-lookup"><span data-stu-id="daf6b-102">XmlSchemaSet for Schema Compilation</span></span>
 <span data-ttu-id="daf6b-103">說明 <xref:System.Xml.Schema.XmlSchemaSet>，它是一種可儲存及驗證 XML 結構描述定義語言 (XSD) 結構描述的快取。</span><span class="sxs-lookup"><span data-stu-id="daf6b-103">Describes the <xref:System.Xml.Schema.XmlSchemaSet>, a cache where XML Schema definition language (XSD) schemas can be stored and validated.</span></span>  

@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataDispenserEx::FindAssembly 方法"
-ms.custom: 
+title: IMetaDataDispenserEx::FindAssembly 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataDispenserEx.FindAssembly
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 3afe7252-5f28-48d9-a74d-1927566c404c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8f125008e4ae5b7f2abbe6d467b486b962700d42
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 0b4caf27fe45ce0a85b7e1800827a1e5cd0893ca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445234"
 ---
-# <a name="imetadatadispenserexfindassembly-method"></a><span data-ttu-id="e00ef-102">IMetaDataDispenserEx::FindAssembly 方法</span><span class="sxs-lookup"><span data-stu-id="e00ef-102">IMetaDataDispenserEx::FindAssembly Method</span></span>
-<span data-ttu-id="e00ef-103">這個方法尚未實作。</span><span class="sxs-lookup"><span data-stu-id="e00ef-103">This method is not implemented.</span></span> <span data-ttu-id="e00ef-104">如果呼叫，它會傳回 E_NOTIMPL。</span><span class="sxs-lookup"><span data-stu-id="e00ef-104">If called, it returns E_NOTIMPL.</span></span>  
+# <a name="imetadatadispenserexfindassembly-method"></a><span data-ttu-id="a68a5-102">IMetaDataDispenserEx::FindAssembly 方法</span><span class="sxs-lookup"><span data-stu-id="a68a5-102">IMetaDataDispenserEx::FindAssembly Method</span></span>
+<span data-ttu-id="a68a5-103">這個方法尚未實作。</span><span class="sxs-lookup"><span data-stu-id="a68a5-103">This method is not implemented.</span></span> <span data-ttu-id="a68a5-104">如果呼叫，它會傳回 E_NOTIMPL。</span><span class="sxs-lookup"><span data-stu-id="a68a5-104">If called, it returns E_NOTIMPL.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e00ef-105">語法</span><span class="sxs-lookup"><span data-stu-id="e00ef-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a68a5-105">語法</span><span class="sxs-lookup"><span data-stu-id="a68a5-105">Syntax</span></span>  
   
 ```  
 HRESULT FindAssembly(  
@@ -52,37 +41,37 @@ HRESULT FindAssembly(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e00ef-106">參數</span><span class="sxs-lookup"><span data-stu-id="e00ef-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="a68a5-106">參數</span><span class="sxs-lookup"><span data-stu-id="a68a5-106">Parameters</span></span>  
  `szAppBase`  
- <span data-ttu-id="e00ef-107">[in]未使用。</span><span class="sxs-lookup"><span data-stu-id="e00ef-107">[in] Not used.</span></span>  
+ <span data-ttu-id="a68a5-107">[in]未使用。</span><span class="sxs-lookup"><span data-stu-id="a68a5-107">[in] Not used.</span></span>  
   
  `szPrivateBin`  
- <span data-ttu-id="e00ef-108">[in]未使用。</span><span class="sxs-lookup"><span data-stu-id="e00ef-108">[in] Not used.</span></span>  
+ <span data-ttu-id="a68a5-108">[in]未使用。</span><span class="sxs-lookup"><span data-stu-id="a68a5-108">[in] Not used.</span></span>  
   
  `szGlobalBin`  
- <span data-ttu-id="e00ef-109">[in]未使用。</span><span class="sxs-lookup"><span data-stu-id="e00ef-109">[in] Not used.</span></span>  
+ <span data-ttu-id="a68a5-109">[in]未使用。</span><span class="sxs-lookup"><span data-stu-id="a68a5-109">[in] Not used.</span></span>  
   
  `szAssemblyName`  
- <span data-ttu-id="e00ef-110">[in]找不到組件。</span><span class="sxs-lookup"><span data-stu-id="e00ef-110">[in] The assembly to be found.</span></span>  
+ <span data-ttu-id="a68a5-110">[in]找不到組件。</span><span class="sxs-lookup"><span data-stu-id="a68a5-110">[in] The assembly to be found.</span></span>  
   
  `szName`  
- <span data-ttu-id="e00ef-111">[out]組件的簡單名稱。</span><span class="sxs-lookup"><span data-stu-id="e00ef-111">[out] The simple name of the assembly.</span></span>  
+ <span data-ttu-id="a68a5-111">[out]組件的簡單名稱。</span><span class="sxs-lookup"><span data-stu-id="a68a5-111">[out] The simple name of the assembly.</span></span>  
   
  `cchName`  
- <span data-ttu-id="e00ef-112">[in]大小，以位元組為單位的`szName`。</span><span class="sxs-lookup"><span data-stu-id="e00ef-112">[in] The size, in bytes, of `szName`.</span></span>  
+ <span data-ttu-id="a68a5-112">[in]大小，以位元組為單位的`szName`。</span><span class="sxs-lookup"><span data-stu-id="a68a5-112">[in] The size, in bytes, of `szName`.</span></span>  
   
  `pcName`  
- <span data-ttu-id="e00ef-113">[out]中實際傳回的字元數`szName`。</span><span class="sxs-lookup"><span data-stu-id="e00ef-113">[out] The number of characters actually returned in `szName`.</span></span>  
+ <span data-ttu-id="a68a5-113">[out]中實際傳回的字元數`szName`。</span><span class="sxs-lookup"><span data-stu-id="a68a5-113">[out] The number of characters actually returned in `szName`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e00ef-114">需求</span><span class="sxs-lookup"><span data-stu-id="e00ef-114">Requirements</span></span>  
- <span data-ttu-id="e00ef-115">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e00ef-115">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a68a5-114">需求</span><span class="sxs-lookup"><span data-stu-id="a68a5-114">Requirements</span></span>  
+ <span data-ttu-id="a68a5-115">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a68a5-115">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e00ef-116">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e00ef-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="a68a5-116">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="a68a5-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="e00ef-117">**程式庫：**做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="e00ef-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="a68a5-117">**程式庫：** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="a68a5-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="e00ef-118">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e00ef-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a68a5-118">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a68a5-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e00ef-119">請參閱</span><span class="sxs-lookup"><span data-stu-id="e00ef-119">See Also</span></span>  
- [<span data-ttu-id="e00ef-120">IMetaDataDispenserEx 介面</span><span class="sxs-lookup"><span data-stu-id="e00ef-120">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
- [<span data-ttu-id="e00ef-121">IMetaDataDispenser 介面</span><span class="sxs-lookup"><span data-stu-id="e00ef-121">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+## <a name="see-also"></a><span data-ttu-id="a68a5-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a68a5-119">See Also</span></span>  
+ [<span data-ttu-id="a68a5-120">IMetaDataDispenserEx 介面</span><span class="sxs-lookup"><span data-stu-id="a68a5-120">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
+ [<span data-ttu-id="a68a5-121">IMetaDataDispenser 介面</span><span class="sxs-lookup"><span data-stu-id="a68a5-121">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
