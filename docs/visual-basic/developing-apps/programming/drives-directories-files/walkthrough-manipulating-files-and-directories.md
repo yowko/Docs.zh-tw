@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592505"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a><span data-ttu-id="73d06-102">逐步解說：在 Visual Basic 中管理檔案和目錄</span><span class="sxs-lookup"><span data-stu-id="73d06-102">Walkthrough: Manipulating Files and Directories in Visual Basic</span></span>
 <span data-ttu-id="73d06-103">本逐步解說提供 Visual Basic 中檔案 I/O 的基本概念簡介。</span><span class="sxs-lookup"><span data-stu-id="73d06-103">This walkthrough provides an introduction to the fundamentals of file I/O in Visual Basic.</span></span> <span data-ttu-id="73d06-104">其中說明如何建立一個小型應用程式，以提列並檢查目錄中的文字檔案。</span><span class="sxs-lookup"><span data-stu-id="73d06-104">It describes how to create a small application that lists and examines text files in a directory.</span></span> <span data-ttu-id="73d06-105">針對每個選取的文字檔案，應用程式會提供檔案屬性和第一行內容。</span><span class="sxs-lookup"><span data-stu-id="73d06-105">For each selected text file, the application provides file attributes and the first line of content.</span></span> <span data-ttu-id="73d06-106">您也可以選擇將資訊寫入記錄檔。</span><span class="sxs-lookup"><span data-stu-id="73d06-106">There is an option to write information to a log file.</span></span>  

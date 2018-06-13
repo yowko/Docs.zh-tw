@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588839"
 ---
 # <a name="expression-recursively-calls-the-containing-property-39ltpropertynamegt39"></a><span data-ttu-id="57015-102">運算式遞迴呼叫包含屬性&#39; &lt;propertyname&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="57015-102">Expression recursively calls the containing property &#39;&lt;propertyname&gt;&#39;</span></span>
 <span data-ttu-id="57015-103">中的陳述式`Set`屬性定義的程序會將值儲存至屬性的名稱。</span><span class="sxs-lookup"><span data-stu-id="57015-103">A statement in the `Set` procedure of a property definition stores a value into the name of the property.</span></span>  

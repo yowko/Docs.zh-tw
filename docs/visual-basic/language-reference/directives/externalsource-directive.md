@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586587"
 ---
 # <a name="externalsource-directive"></a><span data-ttu-id="337a3-102">#ExternalSource 指示詞</span><span class="sxs-lookup"><span data-stu-id="337a3-102">#ExternalSource Directive</span></span>
 <span data-ttu-id="337a3-103">表示特定的原始程式碼行和來源外部文字之間的對應。</span><span class="sxs-lookup"><span data-stu-id="337a3-103">Indicates a mapping between specific lines of source code and text external to the source.</span></span>  

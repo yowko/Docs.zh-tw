@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578651"
 ---
 # <a name="state-and-data-in-docker-applications"></a><span data-ttu-id="5500b-103">Docker 應用程式中的狀態和資料</span><span class="sxs-lookup"><span data-stu-id="5500b-103">State and data in Docker applications</span></span>
 

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592037"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a><span data-ttu-id="02471-102">在 Visual Basic 中使用應用程式記錄檔</span><span class="sxs-lookup"><span data-stu-id="02471-102">Working with Application Logs in Visual Basic</span></span>
 <span data-ttu-id="02471-103">`My.Applicaton.Log` 和 `My.Log` 物件讓您輕鬆地將記錄和追蹤資訊寫入記錄檔。</span><span class="sxs-lookup"><span data-stu-id="02471-103">The `My.Applicaton.Log` and `My.Log` objects make it easy to write logging and tracing information to logs.</span></span>  

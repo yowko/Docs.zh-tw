@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582157"
 ---
 # <a name="threadsuspend-garbage-collection-and-safe-points"></a><span data-ttu-id="e9c09-102">Thread.Suspend、記憶體回收和安全點</span><span class="sxs-lookup"><span data-stu-id="e9c09-102">Thread.Suspend, Garbage Collection, and Safe Points</span></span>
 <span data-ttu-id="e9c09-103">當您在執行緒上呼叫 <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> 時，系統會注意到已要求執行緒暫止，並允許執行緒在實際暫止執行緒之前執行，直到它到達安全點為止。</span><span class="sxs-lookup"><span data-stu-id="e9c09-103">When you call <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> on a thread, the system notes that a thread suspension has been requested and allows the thread to execute until it has reached a safe point before actually suspending the thread.</span></span> <span data-ttu-id="e9c09-104">執行緒的安全點是在其執行中可執行記憶體回收的點。</span><span class="sxs-lookup"><span data-stu-id="e9c09-104">A safe point for a thread is a point in its execution at which garbage collection can be performed.</span></span>  

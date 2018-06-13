@@ -1,27 +1,16 @@
 ---
-title: "發生錯誤的可信賴傳訊工作階段數"
-ms.custom: 
+title: 發生錯誤的可信賴傳訊工作階段數
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0b8a694a-92fa-498b-b5d6-fcf75e4d329d
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 489b2526ab91f03f420b7db6237d3e9cce62241f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cbff40a0338d36f3da96e4d1e19be033af2a61cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33472029"
 ---
-# <a name="reliable-messaging-sessions-faulted"></a><span data-ttu-id="5d0cd-102">發生錯誤的可信賴傳訊工作階段數</span><span class="sxs-lookup"><span data-stu-id="5d0cd-102">Reliable Messaging Sessions Faulted</span></span>
-<span data-ttu-id="5d0cd-103">計數器名稱：發生錯誤的可信賴傳訊工作階段數。</span><span class="sxs-lookup"><span data-stu-id="5d0cd-103">Counter Name: Reliable Messaging Sessions Faulted.</span></span>  
+# <a name="reliable-messaging-sessions-faulted"></a><span data-ttu-id="95aea-102">發生錯誤的可信賴傳訊工作階段數</span><span class="sxs-lookup"><span data-stu-id="95aea-102">Reliable Messaging Sessions Faulted</span></span>
+<span data-ttu-id="95aea-103">計數器名稱：發生錯誤的可信賴傳訊工作階段數。</span><span class="sxs-lookup"><span data-stu-id="95aea-103">Counter Name: Reliable Messaging Sessions Faulted.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="5d0cd-104">描述</span><span class="sxs-lookup"><span data-stu-id="5d0cd-104">Description</span></span>  
- <span data-ttu-id="5d0cd-105">在此服務發生錯誤的可信賴傳訊工作階段數。</span><span class="sxs-lookup"><span data-stu-id="5d0cd-105">Number of reliable messaging sessions that are faulted in this service.</span></span>
+## <a name="description"></a><span data-ttu-id="95aea-104">描述</span><span class="sxs-lookup"><span data-stu-id="95aea-104">Description</span></span>  
+ <span data-ttu-id="95aea-105">在此服務發生錯誤的可信賴傳訊工作階段數。</span><span class="sxs-lookup"><span data-stu-id="95aea-105">Number of reliable messaging sessions that are faulted in this service.</span></span>

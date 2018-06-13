@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587198"
 ---
 # <a name="how-to-write-to-binary-files-in-visual-basic"></a><span data-ttu-id="d4e1d-102">如何：在 Visual Basic 中寫入二進位檔案</span><span class="sxs-lookup"><span data-stu-id="d4e1d-102">How to: Write to Binary Files in Visual Basic</span></span>
 <span data-ttu-id="d4e1d-103"><xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A> 方法會將資料寫入二進位檔案。</span><span class="sxs-lookup"><span data-stu-id="d4e1d-103">The <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A> method writes data to a binary file.</span></span> <span data-ttu-id="d4e1d-104">如果 `append` 參數為 `True`，它會將資料附加至檔案；若否，則會覆寫檔案中的資料。</span><span class="sxs-lookup"><span data-stu-id="d4e1d-104">If the `append` parameter is `True`, it will append the data to the file; otherwise data in the file is overwritten.</span></span>  

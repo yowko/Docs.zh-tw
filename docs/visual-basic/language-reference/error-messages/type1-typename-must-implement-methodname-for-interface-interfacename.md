@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594379"
 ---
 # <a name="lttype1gt39lttypenamegt39-must-implement-39ltmethodnamegt39-for-interface-39ltinterfacenamegt39"></a><span data-ttu-id="a208a-102">&lt;type1&gt;&#39;&lt;typename&gt; &#39;必須實作&#39; &lt;methodname&gt; &#39;介面&#39;&lt;介面名稱&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="a208a-102">&lt;type1&gt;&#39;&lt;typename&gt;&#39; must implement &#39;&lt;methodname&gt;&#39; for interface &#39;&lt;interfacename&gt;&#39;</span></span>
 <span data-ttu-id="a208a-103">類別或結構實作介面宣告，但未實作介面所定義的程序。</span><span class="sxs-lookup"><span data-stu-id="a208a-103">A class or structure claims to implement an interface but does not implement a procedure defined by the interface.</span></span> <span data-ttu-id="a208a-104">必須實作介面的每個成員。</span><span class="sxs-lookup"><span data-stu-id="a208a-104">Every member of the interface must be implemented.</span></span>  

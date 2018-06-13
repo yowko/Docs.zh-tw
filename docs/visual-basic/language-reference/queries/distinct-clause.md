@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603973"
 ---
 # <a name="distinct-clause-visual-basic"></a><span data-ttu-id="1be2b-102">Distinct 子句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1be2b-102">Distinct Clause (Visual Basic)</span></span>
 <span data-ttu-id="1be2b-103">限制目前的範圍變數，以消除重複的值，在後續的查詢子句中的值。</span><span class="sxs-lookup"><span data-stu-id="1be2b-103">Restricts the values of the current range variable to eliminate duplicate values in subsequent query clauses.</span></span>  

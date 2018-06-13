@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586473"
 ---
 # <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a><span data-ttu-id="4c421-102">如何：在 Visual Basic 中讀取登錄機碼的值</span><span class="sxs-lookup"><span data-stu-id="4c421-102">How to: Read a Value from a Registry Key in Visual Basic</span></span>
 <span data-ttu-id="4c421-103">您可以使用 `My.Computer.Registry` 物件的 `GetValue` 方法來讀取 Windows 登錄中的值。</span><span class="sxs-lookup"><span data-stu-id="4c421-103">The `GetValue` method of the `My.Computer.Registry` object can be used to read values in the Windows registry.</span></span>  

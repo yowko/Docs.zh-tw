@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585732"
 ---
 # <a name="how-to-append-to-text-files-in-visual-basic"></a><span data-ttu-id="2d93d-102">如何：在 Visual Basic 中附加至文字檔</span><span class="sxs-lookup"><span data-stu-id="2d93d-102">How to: Append to Text Files in Visual Basic</span></span>
 <span data-ttu-id="2d93d-103">您可以使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 方法來附加至文字檔，方法是指定將 `append` 參數設定為 `True`。</span><span class="sxs-lookup"><span data-stu-id="2d93d-103">The <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> method can be used to append to a text file by specifying that the `append` parameter is set to `True`.</span></span>  

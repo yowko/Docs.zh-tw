@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600762"
 ---
 # <a name="xml-literals-visual-basic"></a><span data-ttu-id="af6d1-102">XML 常值 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="af6d1-102">XML Literals (Visual Basic)</span></span>
 <span data-ttu-id="af6d1-103">本節中的主題記錄 Visual Basic 中的 XML 常值的語法。</span><span class="sxs-lookup"><span data-stu-id="af6d1-103">The topics in this section document the syntax of XML literals in Visual Basic.</span></span> <span data-ttu-id="af6d1-104">XML 常值語法可讓您直接在您的程式碼中加入 XML。</span><span class="sxs-lookup"><span data-stu-id="af6d1-104">The XML literal syntax enables you to incorporate XML directly in your code.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590722"
 ---
 # <a name="how-to-download-a-file-in-visual-basic"></a><span data-ttu-id="4fef5-102">如何：在 Visual Basic 中下載檔案</span><span class="sxs-lookup"><span data-stu-id="4fef5-102">How to: Download a File in Visual Basic</span></span>
 <span data-ttu-id="4fef5-103"><xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> 方法可以用來下載遠端檔案，並將它儲存到特定位置。</span><span class="sxs-lookup"><span data-stu-id="4fef5-103">The <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> method can be used to download a remote file and store it to a specific location.</span></span> <span data-ttu-id="4fef5-104">如果 `ShowUI` 參數設定為 `True`，則會顯示對話方塊以顯示下載進度，並允許使用者取消作業。</span><span class="sxs-lookup"><span data-stu-id="4fef5-104">If the `ShowUI` parameter is set to `True`, a dialog box is displayed showing the progress of the download and allowing users to cancel the operation.</span></span> <span data-ttu-id="4fef5-105">根據預設，不會覆寫具有相同名稱的現有檔案；如果您想要覆寫現有檔案，請將 `overwrite` 參數設定為 `True`。</span><span class="sxs-lookup"><span data-stu-id="4fef5-105">By default, existing files having the same name are not overwritten; if you want to overwrite existing files, set the `overwrite` parameter to `True`.</span></span>  
