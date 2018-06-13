@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546653"
 ---
 # <a name="wpf-unmanaged-api-reference"></a>WPF Unmanaged API 參考
 Windows Presentation Foundation (WPF) 程式庫公開 unmanaged 函式僅供內部使用的數的字。 它們不應該從使用者程式碼呼叫。  

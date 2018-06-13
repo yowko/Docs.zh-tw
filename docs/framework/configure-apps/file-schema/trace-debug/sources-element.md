@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752698"
 ---
 # <a name="ltsourcesgt-element"></a>&lt;來源&gt;項目
 指定初始化追蹤訊息的追蹤來源。  

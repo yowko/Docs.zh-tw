@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539847"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>如何：在 Windows Form 上設定定位順序
 定位順序是以使用者焦點從某個控制項移動到另一個按下 TAB 鍵的順序。 每個表單都有它自己的定位順序。 根據預設，定位順序是用來建立控制項的順序相同。 定位順序編號從 0 開始。  

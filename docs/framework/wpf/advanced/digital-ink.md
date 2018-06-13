@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537469"
 ---
 # <a name="digital-ink"></a>數位筆跡
 本章節將討論使用中的數位筆跡[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 傳統上只有在 Tablet PC SDK 中找到，數位筆跡現已推出的核心 Windows Presentation Foundation。 這表示您現在可以使用 Windows Presentation Foundation 的開發單純的 Tablet PC 應用程式。  

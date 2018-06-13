@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752197"
 ---
 # <a name="sisdebuggercheckdisabledfortestpurposes-field"></a>s_isDebuggerCheckDisabledForTestPurposes 欄位
 
@@ -38,4 +39,4 @@ private static bool s_isDebuggerCheckDisabledForTestPurposes
 
 **組件：** PresentationCore （在 PresentationCore.dll)
 
-**.NET framework 版本：**自 4.6 起可用。
+**.NET framework 版本：** 自 4.6 起可用。

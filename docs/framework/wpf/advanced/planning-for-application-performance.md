@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546948"
 ---
 # <a name="planning-for-application-performance"></a>應用程式效能規劃
 達成您的效能目標的成功取決於您開發效能策略的程度。 規劃是在開發任何產品的第一個階段。 本主題說明一些非常簡單的規則開發良好效能策略。  

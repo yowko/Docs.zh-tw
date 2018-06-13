@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538404"
 ---
 # <a name="mouse-capture-in-windows-forms"></a>Windows Form 中的滑鼠捕捉
 *將滑鼠擷取*指的是當控制項接受所有的滑鼠輸入的命令。 當控制項捕捉住滑鼠時，不論是否在指標位於其框線內接收滑鼠輸入。  

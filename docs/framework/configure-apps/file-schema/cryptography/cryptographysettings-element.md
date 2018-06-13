@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751931"
 ---
 # <a name="ltcryptographysettingsgt-element"></a>&lt;cryptographySettings&gt;項目
 包含密碼編譯設定。  

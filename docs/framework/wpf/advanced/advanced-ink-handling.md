@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539024"
 ---
 # <a name="advanced-ink-handling"></a>筆墨進階處理
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]隨附<xref:System.Windows.Controls.InkCanvas>，而且您可以將它放在您的應用程式立即開始收集和顯示筆墨的項目。 不過，如果<xref:System.Windows.Controls.InkCanvas>控制項不提供細微的層級的控制，您可以藉由自訂您自己的筆墨收集和使用筆墨呈現類別維護較高的層級的控制<xref:System.Windows.Input.StylusPlugIns>。  

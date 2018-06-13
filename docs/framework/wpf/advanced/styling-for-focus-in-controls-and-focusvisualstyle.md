@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549512"
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>設定控制項中焦點的樣式和 FocusVisualStyle
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供兩種平行機制，在控制項接收到鍵盤焦點時，用來變更它的視覺外觀。 第一種機制是使用屬性 setter 的屬性，例如<xref:System.Windows.UIElement.IsKeyboardFocused%2A>樣式或範本套用至控制項內。 第二種機制是要提供不同的樣式的值為<xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>屬性;"專注視覺化樣式 」 建立個別的視覺化樹狀結構控制項，而不是變更或其他 UI 控制項的視覺化樹狀結構上方繪製到裝飾項藉由取代它的項目。 本主題將討論每一種機制的適用案例。  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2e4a727dcfbc80b131f526a08b00bd0ec91ca209
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415018"
 ---
 # <a name="icordebugilframeenumeratearguments-method"></a>ICorDebugILFrame::EnumerateArguments 方法
 在這個框架中取得的引數的列舉值。  
@@ -42,7 +43,7 @@ HRESULT EnumerateArguments (
  `EnumerateArguments` 取得可以列出此 ICorDebugILFrame 物件所代表的呼叫框架中提供的引數的列舉值。 清單中會包含引數，會[vararg](/cpp/windows/vararg) （也就是引數數目可變） 的引數以及`vararg`。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   

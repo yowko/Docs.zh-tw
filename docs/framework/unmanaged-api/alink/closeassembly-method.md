@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 68698aab0fd0872c6e6f67e4ec531ab0226e784f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401949"
 ---
 # <a name="closeassembly-method"></a>CloseAssembly 方法
 完成組件作業。 開始新的組件或未繫結的模組之前呼叫這個方法。  
