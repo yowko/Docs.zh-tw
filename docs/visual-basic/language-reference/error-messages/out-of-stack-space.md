@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593281"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>堆疊空間不足 (Visual Basic)
 堆疊是記憶體的工作區域的成長和壓縮，以動態方式與執行程式的需求。 已超過其限制。  

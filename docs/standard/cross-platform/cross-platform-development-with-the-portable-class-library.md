@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579661"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>可攜式類別庫的跨平台開發
 Visual Studio 中的 .NET Framework 可攜式類別庫專案類型可幫助您快速、輕鬆地建立適用於 Microsoft 平台的跨平台應用程式和程式庫。  
@@ -57,7 +58,7 @@ Visual Studio 中的 .NET Framework 可攜式類別庫專案類型可幫助您�
 ## <a name="creating-a-portable-class-library-project"></a>建立可攜式類別庫專案  
  若要建立可攜式類別庫，您應使用 Visual Studio 提供的其中一個範本。 建立新的專案，然後在**新專案**對話方塊的 **範本**，選取您的目標語言 （C# 或 Visual Basic 中），然後選取其中一個您要當做目標的平台。 您可以在下一個步驟選取其他平台。  
   
- 在 Visual Studio 2013 Update 2 中，您可以選擇**類別庫 （可攜式）**您選擇的語言與平台，以建立可攜式類別庫範本。 您會看到適用於下列平台的這個範本：  
+ 在 Visual Studio 2013 Update 2 中，您可以選擇**類別庫 （可攜式）** 您選擇的語言與平台，以建立可攜式類別庫範本。 您會看到適用於下列平台的這個範本：  
   
 -   市集應用程式  
   
@@ -84,7 +85,7 @@ Visual Studio 2013 Update 2 的加入可攜式類別庫對話方塊
   
 <a name="platforms"></a>   
 ## <a name="target-options"></a>目標選項  
- 當您建立可攜式類別庫專案時，可以選擇您要設為目標的作業系統和 .NET Framework 版本。 如果您使用 Visual Studio 2013，您已安裝 Update 2 或更新版本中，您可以選擇**類別庫 （通用應用程式的可攜式）**範本來建立以 Windows 8.1 和 Windows Phone 8.1 為目標的可攜式類別庫。 下表顯示依據您使用之 Visual Studio 版本而定的可用目標。  
+ 當您建立可攜式類別庫專案時，可以選擇您要設為目標的作業系統和 .NET Framework 版本。 如果您使用 Visual Studio 2013，您已安裝 Update 2 或更新版本中，您可以選擇**類別庫 （通用應用程式的可攜式）** 範本來建立以 Windows 8.1 和 Windows Phone 8.1 為目標的可攜式類別庫。 下表顯示依據您使用之 Visual Studio 版本而定的可用目標。  
   
 |目標選項|Visual Studio 2012|Visual Studio 2013|Visual Studio 2013 Update 2 或更新版|  
 |-|-|-|-|  

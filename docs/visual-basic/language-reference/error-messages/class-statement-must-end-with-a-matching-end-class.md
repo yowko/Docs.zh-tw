@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585511"
 ---
 # <a name="39class39-statement-must-end-with-a-matching-39end-class39"></a>&#39;類別&#39;陳述式必須搭配相對應的結束&#39;結束類別&#39;
 `Class` 用來起始`Class`區塊，因此它只能出現在區塊中，搭配相對應的開頭`End Class`陳述式結束區塊。 您有多餘`Class`陳述式，或您有未結束您`Class`區塊`End Class`。  

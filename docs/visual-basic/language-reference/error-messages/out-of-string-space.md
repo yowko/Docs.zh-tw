@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594442"
 ---
 # <a name="out-of-string-space-visual-basic"></a>超出字串空間 (Visual Basic)
 Visual Basic 中，您可以使用非常大的字串。 不過，需求的其他程式，您可以使用字串的方式，仍有可能導致這個錯誤。  
