@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cc63a0a42c1da11daa5d38ecce505296a893616b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453931"
 ---
 # <a name="icorprofilercallback3-interface"></a>ICorProfilerCallback3 介面
 提供 common language runtime (CLR) 用來通訊的回呼方法附加和卸離狀態資訊給分析工具。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="remarks"></a>備註  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

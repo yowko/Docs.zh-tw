@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575969"
 ---
 # <a name="generic-interfaces"></a>泛型介面
 本主題概述提供泛型類型系列中常見功能的泛型介面。  

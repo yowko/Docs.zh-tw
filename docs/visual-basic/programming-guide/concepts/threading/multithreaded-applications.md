@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650474"
 ---
 # <a name="multithreaded-applications-visual-basic"></a>多執行緒應用程式 (Visual Basic)
 使用 Visual Basic 中，您可以撰寫在同時執行多項工作的應用程式。 可能妨礙其他工作的工作可以另外的執行緒執行，此等程序稱之為「多執行緒」或「無限制執行緒」。  

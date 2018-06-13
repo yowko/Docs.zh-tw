@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645703"
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-visual-basic"></a>鏈結的查詢 (LINQ to XML) 的效能 (Visual Basic)
 LINQ (和 LINQ to XML) 其中一個最重要的優點在於，鏈結查詢的執行效能就如同單一較大且更複雜的查詢。  

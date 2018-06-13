@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649135"
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a>如何：隱藏繼承的變數 (Visual Basic)
 在衍生的類別會繼承其基底類別的所有定義。 如果您想要定義變數使用相同的名稱做為基底類別項目，您可以將它隱藏，或*陰影*，當在衍生類別中定義變數時，該基底類別項目。 如果這樣做，請在衍生類別中的程式碼會存取您的變數，除非明確略過遮蔽的機制。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34311971"
 ---
 # <a name="ltlibrarygt-element-net-native"></a>&lt;Library&gt; 項目 (.NET Native)
 定義包含類型和類型成員的組件，該類型和類型成員的中繼資料會在執行階段用於反映。  

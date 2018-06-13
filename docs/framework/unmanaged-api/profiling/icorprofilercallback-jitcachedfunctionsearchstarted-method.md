@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6d97b40412b6999000a601b72904a03edf2acd08
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454028"
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchstarted-method"></a>ICorProfilerCallback::JITCachedFunctionSearchStarted 方法
 通知分析工具已用於先前使用原生映像產生器 (NGen.exe) 所編譯的函式中開始搜尋。  
@@ -51,7 +52,7 @@ HRESULT JITCachedFunctionSearchStarted(
  當分析工具收到重複的回撥時，它必須設定所參考的值`pbUseCachedFunction`為相同的值為所有重複的回呼。 也就是說，當`JITCachedFunctionSearchStarted`多次呼叫具有相同`functionId`值，分析工具必須回應相同的每一次。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   
