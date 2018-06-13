@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742506"
 ---
 # <a name="multifile-assemblies"></a>多檔案組件
 您可以搭配使用命令列編譯器或 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 與 Visual C++，來建立多個組件。 組件中的一個檔案必須包含組件資訊清單。 啟動應用程式的組件也必須包含進入點，例如 Main 或 WinMain 方法。  

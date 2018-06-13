@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398166"
 ---
 # <a name="security-and-remoting-considerations"></a>安全性和遠端處理考量
 遠端處理可讓您設定應用程式定義域、處理序或電腦之間的透明呼叫。 不過，程式碼存取安全性堆疊查核行程無法跨處理序或電腦界限 (只會在同一個處理序的不同應用程式定義域之間套用)。  

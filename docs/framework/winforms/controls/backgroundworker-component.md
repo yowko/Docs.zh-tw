@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525748"
 ---
 # <a name="backgroundworker-component"></a>BackgroundWorker 元件
 `BackgroundWorker`元件可讓您的表單或控制項加入執行非同步作業。  

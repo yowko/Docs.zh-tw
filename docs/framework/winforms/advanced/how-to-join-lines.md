@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522011"
 ---
 # <a name="how-to-join-lines"></a>如何：聯結線條
 線聯結是由其結束符合或重疊的兩個線條的一般區域。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供三個線條聯結樣式： 儀表、 斜面，和捨入。 線條聯結樣式是屬性的<xref:System.Drawing.Pen>類別。 當您指定的線條聯結樣式<xref:System.Drawing.Pen>物件聯結樣式將會套用到所有連接的直線任何<xref:System.Drawing.Drawing2D.GraphicsPath>使用該畫筆繪製的物件。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517065"
 ---
 # <a name="custom-activity-to-switch-on-a-range-of-values"></a>自訂活動以切換到值的範圍
 這個範例示範如何建立可擴充 <xref:System.Activities.Statements.Switch%601> 用法的自訂活動。 傳統 <xref:System.Activities.Statements.Switch%601> 陳述式允許根據單一值的切換。 但有些商務狀況中活動必須根據值範圍來切換。 例如，當切換依據的值介於 1 和 5 之間時，活動可能會執行某個動作，當值介於 6 和 10 之間時執行另一個動作，並針對所有其他值執行預設動作。 這個自訂活動正是實現該狀況。  

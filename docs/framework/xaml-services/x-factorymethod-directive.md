@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563411"
 ---
 # <a name="xfactorymethod-directive"></a>x:FactoryMethod 指示詞
 指定 XAML 處理器必須用來解決它支援的型別之後初始化物件的建構函式以外的方法。  

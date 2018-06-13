@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519830"
 ---
 # <a name="regular-expression-activities"></a>規則運算式活動
 這個範例示範如何建立可公開 <xref:System.Text.RegularExpressions> 命名空間規則運算式功能的一組活動。 這些自訂活動可用在工作流程應用程式中。 如需有關規則運算式的詳細資訊，請參閱[N:System.Text.RegularExpressions](http://go.microsoft.com/fwlink/?LinkId=150434)命名空間。  

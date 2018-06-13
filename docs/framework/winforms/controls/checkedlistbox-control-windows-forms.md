@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525584"
 ---
 # <a name="checkedlistbox-control-windows-forms"></a>CheckedListBox 控制項 (Windows Form)
 Windows Form`CheckedListBox`控制項會顯示清單的項目，例如<xref:System.Windows.Forms.ListBox>控制項，然後還可以顯示在清單中項目旁的核取記號。  

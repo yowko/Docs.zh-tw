@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519041"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5 中的外顯化原則活動
 這個範例會示範 ExternalizedPolicy4 活動如何讓執行現有[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]Windows Workflow Foundation (WF 3.5)<xref:System.Workflow.Activities.Rules.RuleSet>中的物件[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]直接透過使用 「 規則引擎的 Windows Workflow Foundation (WF 4.5)WF 3.5 隨附的。 您可以使用這個活動來開啟及執行任何現有的 WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>。 如需 Windows Workflow Foundation 的一部分的 WF 3.5 規則引擎的詳細資訊，請閱讀[Windows Workflow Foundation 規則引擎簡介](http://go.microsoft.com/fwlink/?LinkId=166079)。 如需有關移轉規則至[!INCLUDE[wf1](../../../../includes/wf1-md.md)]中[!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]，請閱讀上的移轉指引[移轉指引](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。  

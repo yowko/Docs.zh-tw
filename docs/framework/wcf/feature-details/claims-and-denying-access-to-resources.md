@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488607"
 ---
 # <a name="claims-and-denying-access-to-resources"></a>宣告與拒絕資源的存取
 Windows Communication Foundation (WCF) 支援宣告型授權機制。 就像根據宣告的存在而允許存取資源，系統也經常會根據宣告的存在而拒絕存取資源。 這類系統應該在尋找會導致允許存取的宣告之前，先檢查 <xref:System.IdentityModel.Policy.AuthorizationContext> 是否有會導致拒絕存取的宣告。  

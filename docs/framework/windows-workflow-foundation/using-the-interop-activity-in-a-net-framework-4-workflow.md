@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520223"
 ---
 # <a name="using-the-interop-activity-in-a-net-framework-4-workflow"></a>在 .NET Framework 4 工作流程中使用 Interop 活動
 使用 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 或 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 建立的活動，可以經由使用 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 活動，在 <xref:System.Activities.Statements.Interop> 工作流程中使用。 本主題提供使用 <xref:System.Activities.Statements.Interop> 活動的概觀。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/04/2018
   
 1.  以滑鼠右鍵按一下**PolicyActivityLibrary**中**方案總管 中**選取**新增**然後**活動...**.  
   
-2.  選取**活動 （程式碼分開置放）**從**Visual C# 項目**清單。 型別`DiscountCalculator`中**名稱**方塊，然後按一下**確定**。  
+2.  選取**活動 （程式碼分開置放）** 從**Visual C# 項目**清單。 型別`DiscountCalculator`中**名稱**方塊，然後按一下**確定**。  
   
 3.  以滑鼠右鍵按一下**DiscountCalculator.xoml**中**方案總管 中**選取**檢視程式碼**。  
   

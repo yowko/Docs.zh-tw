@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520886"
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a>如何：建構字型系列和字型
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 字型的字體相同但不同的樣式分組字型家族。 例如，新細明體字型系列包含下列字型：  

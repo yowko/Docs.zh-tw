@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552840"
 ---
 # <a name="how-to-create-and-use-a-canvas"></a>如何：建立和使用 Canvas
 這個範例示範如何建立和使用的執行個體<xref:System.Windows.Controls.Canvas>。  

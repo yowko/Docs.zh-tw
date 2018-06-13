@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8b604e1d7fc3d3c8adf7d95bd95843bc0110dbc9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440014"
 ---
 # <a name="ihostassemblystoreprovidemodule-method"></a>IHostAssemblyStore::ProvideModule 方法
 解析組件或連結 （但非內嵌） 內模組資源檔案。  
@@ -67,11 +68,11 @@ HRESULT ProvideModule (
  傳回識別值`pdwModuleId`由主應用程式所指定。 處理序的存留期內，識別項必須是唯一的。 CLR 會使用此值的唯一識別碼做為相關聯的資料流。 它會檢查每個值的值對`pAssemblyId`呼叫所傳回[ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)針對值和`pdwModuleId`其他呼叫所傳回`ProvideModule`。 如果主應用程式會傳回相同的識別碼值的另一個`IStream`，CLR 會檢查是否已經對應資料流的內容。 如果是這樣，CLR 載入而不是一個新的映像的現有複本。 因此，識別項也不能重疊從傳回的組件識別項`ProvideAssembly`。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
- **程式庫：**包含做為 MSCorEE.dll 中的資源  
+ **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

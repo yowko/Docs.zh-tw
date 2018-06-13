@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490457"
 ---
 # <a name="how-to-use-svcutilexe-to-validate-compiled-service-code"></a>HOW TO：使用 Svcutil.exe 來驗證已編譯服務程式碼
 您可以使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)來偵測服務實作和組態中的錯誤，而不需要裝載服務。  

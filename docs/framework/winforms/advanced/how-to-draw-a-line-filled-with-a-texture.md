@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522184"
 ---
 # <a name="how-to-draw-a-line-filled-with-a-texture"></a>如何：繪製填滿材質的線條
 而不是繪製線條，以利用純色，您可以繪製材質的線條。 若要繪製的直線和曲線的紋理，建立<xref:System.Drawing.TextureBrush>物件，並將其傳遞<xref:System.Drawing.TextureBrush>物件<xref:System.Drawing.Pen.%23ctor%2A>建構函式。 紋理筆刷與關聯的點陣圖用於磚平面 （不可見），並畫筆筆觸時畫筆繪製線條或曲線時，發現並排紋理的特定像素為單位。  

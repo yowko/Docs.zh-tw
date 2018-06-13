@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515081"
 ---
 # <a name="determining-workflow-execution-duration-using-tracing"></a>使用流程追蹤判斷工作流程的執行
 本主題示範如何判斷成功完成的自行裝載工作流程使用工作流程追蹤來執行所需的時間。  

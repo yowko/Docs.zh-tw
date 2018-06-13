@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523546"
 ---
 # <a name="changing-the-appearance-of-windows-forms"></a>變更 Windows Form 的外觀
 您可以使用許多不同的方式，來自訂 Windows Forms 應用程式的外觀，例如變更框線、不透明度、形狀、樣式，或設定 Windows Forms 應用程式的背景影像。  

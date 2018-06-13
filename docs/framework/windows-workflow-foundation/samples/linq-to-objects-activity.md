@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516665"
 ---
 # <a name="linq-to-objects-activity"></a>LINQ to Objects 活動
 這個範例示範如何建立活動，以使用 LINQ to Objects 查詢集合項目。  

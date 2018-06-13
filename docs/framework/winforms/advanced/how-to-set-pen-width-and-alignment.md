@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522278"
 ---
 # <a name="how-to-set-pen-width-and-alignment"></a>如何：設定畫筆寬度和對齊
 當您建立<xref:System.Drawing.Pen>，您可以做為其中一個建構函式的引數提供的畫筆寬度。 您也可以變更畫筆寬度<xref:System.Drawing.Pen.Width%2A>屬性<xref:System.Drawing.Pen>類別。  

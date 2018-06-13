@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525490"
 ---
 # <a name="basic-column-row-and-cell-features-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的基本資料行、資料列和儲存格功能
 許多的基本行為的`DataGridView`藉由設定單一屬性，則可以修改資料格、 列和資料行。 本節中的主題會說明有幾個最常使用這些功能。  

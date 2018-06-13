@@ -45,6 +45,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397763"
 ---
 # <a name="reliability-best-practices"></a>可靠性最佳作法
 下列可靠性規則會導向至 SQL Server；不過，它們也會套用至任何主機型伺服器應用程式。 SQL Server 這類伺服器絕對不能流失資源，也不能關閉。  不過，撰寫每個改變物件狀態之方法的退出程式碼，無法完成該作業。  目標不是撰寫 100% 可靠的 Managed 程式碼，來復原每個具有退出程式碼的位置中的任何錯誤。  這會是成功機率很低的煩人工作。  Common Language Runtime (CLR) 無法輕易地強烈保證 Managed 程式碼可撰寫可行的完美程式碼。  請注意，與 ASP.NET 不同，SQL Server 只會使用一個無法回收的處理序，而不需要關閉資料庫一段無法接受的時間。  

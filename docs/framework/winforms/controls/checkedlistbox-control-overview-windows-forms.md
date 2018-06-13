@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524303"
 ---
 # <a name="checkedlistbox-control-overview-windows-forms"></a>CheckedListBox 控制項概觀 (Windows Form)
 Windows Form<xref:System.Windows.Forms.CheckedListBox>控制項延伸<xref:System.Windows.Forms.ListBox>控制項。 它會執行幾乎所有項目清單方塊沒有和也可以顯示在清單中項目旁的核取記號。 其他兩個控制項之間的差異是，檢查清單方塊只支援<xref:System.Windows.Forms.DrawMode.Normal?displayProperty=nameWithType>; 的檢查清單方塊只能有一個項目，或不選取。 請注意會反白顯示在表單上選取的項目，而且不是已檢查的項目一樣。  
