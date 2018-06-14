@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507654"
 ---
 # <a name="windows-communication-foundation-glossary-for-net-framework-45"></a>.NET Framework 4.5 的 Windows Communication Foundation 字彙
 以下是專為 Windows Communication Foundation 文件所定義的詞彙。  

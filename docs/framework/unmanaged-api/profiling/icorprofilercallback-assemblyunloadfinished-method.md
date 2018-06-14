@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0d757a0455992bc82ead922a5fbf4c71f11a9085
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450865"
 ---
 # <a name="icorprofilercallbackassemblyunloadfinished-method"></a>ICorProfilerCallback::AssemblyUnloadFinished 方法
 通知分析工具組件已卸載。  
@@ -47,7 +48,7 @@ HRESULT AssemblyUnloadFinished(
  卸載組件的某些部分可能會繼續之後`AssemblyUnloadFinished`回呼。 失敗的 HRESULT 中`hrStatus`表示失敗。 不過，成功 HRESULT 中`hrStatus`只會指出已成功卸載組件的第一個部分。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

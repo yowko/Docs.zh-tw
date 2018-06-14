@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557676"
 ---
 # <a name="gridview-overview"></a>GridView 概觀
 <xref:System.Windows.Controls.GridView> 檢視模式是一種檢視模式的<xref:System.Windows.Controls.ListView>控制項。 <xref:System.Windows.Controls.GridView>類別和其支援的類別可讓您和您的使用者通常使用按鈕為互動式的資料行標頭的資料表中檢視項目集合。 本主題將介紹<xref:System.Windows.Controls.GridView>類別，並且摘要說明其用途。  

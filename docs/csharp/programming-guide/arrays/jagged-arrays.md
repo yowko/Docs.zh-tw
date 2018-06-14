@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33297364"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>不規則陣列 (C# 程式設計手冊)
 不規則陣列是一種陣列，其元素也是陣列。 不規則陣列的項目可以有不同的維度和大小。 不規則陣列有時稱為「陣列的陣列」。 下列範例示範如何宣告、初始化和存取不規則陣列。  

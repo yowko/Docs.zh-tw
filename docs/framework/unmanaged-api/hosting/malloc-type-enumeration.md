@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2c5e970a1677b1e43821cce9985e32ebd0726686
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442536"
 ---
 # <a name="malloctype-enumeration"></a>MALLOC_TYPE 列舉
 包含值，指定所配置的記憶體的特性。  
@@ -42,7 +43,7 @@ typedef enum {
 |`MALLOC_THREADSAFE`|配置的記憶體是安全執行緒。 也就是說，不進行任何同步處理多個執行緒可以存取的記憶體。<br /><br /> 如果未設定此旗標，則必須序列化物件上的呼叫。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   

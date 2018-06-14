@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520717"
 ---
 # <a name="help-systems-in-windows-forms-applications"></a>Windows Forms 應用程式中的說明系統
 其中一個最重要的優待的就如的應用程式，開發人員可以提供您的使用者，是一流的說明系統。 這是他們將會開啟時產生混淆或求助對象。 提供說明系統的 Windows 型應用程式中輕鬆方式是使用[HelpProvider 元件](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)。  

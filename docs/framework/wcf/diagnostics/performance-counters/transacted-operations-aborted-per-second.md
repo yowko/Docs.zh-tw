@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474528"
 ---
 # <a name="transacted-operations-aborted-per-second"></a>每秒中止的交易作業數
 計數器名稱：每秒中止的交易作業數。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273919"
 ---
 # <a name="-operator-c-reference"></a>! 運算子 (C# 參考)
 邏輯負運算子 (`!`) 是將運算元變成負值的一元運算子。 它是針對 `bool` 所定義，並且只有在其運算元為 `false` 時，才會傳回 `true`。  

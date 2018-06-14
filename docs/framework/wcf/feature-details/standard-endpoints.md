@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500593"
 ---
 # <a name="standard-endpoints"></a>標準端點
 端點會由位址、繫結和合約指定。 其他可能會在端點上設定的參數包括行為組態、標頭和接聽 URI。  某些端點類型的這些值不會改變。 例如，中繼資料交換端點一律會使用 <xref:System.ServiceModel.Description.IMetadataExchange> 合約。 其他端點，例如 <xref:System.ServiceModel.Description.WebHttpEndpoint>，則一律會要求指定的端點行為。 您可以讓端點針對常用的端點屬性使用預設值，以藉此提升端點的可用性。 標準端點可讓開發人員定義具有預設值的端點，或定義一個或多個端點屬性未改變的位置。  這些端點可讓您不需指定靜態性質的資訊即可使用端點。 標準端點可用於基礎結構和應用程式端點。  

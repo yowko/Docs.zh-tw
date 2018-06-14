@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594909"
 ---
 # <a name="overflow-visual-basic-error"></a>溢位 (Visual Basic 錯誤)
 常值表示它已被指派的資料類型的限制以外的值。  

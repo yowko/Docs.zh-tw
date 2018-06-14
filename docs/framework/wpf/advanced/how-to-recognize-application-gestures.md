@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543689"
 ---
 # <a name="how-to-recognize-application-gestures"></a>如何：辨認應用程式筆勢
 下列範例示範如何清除筆墨，當使用者<xref:System.Windows.Ink.ApplicationGesture.ScratchOut>軌跡上<xref:System.Windows.Controls.InkCanvas>。 這個範例假設<xref:System.Windows.Controls.InkCanvas>，稱為`inkCanvas1`，XAML 檔中宣告。  

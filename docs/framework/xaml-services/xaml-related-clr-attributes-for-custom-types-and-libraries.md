@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566479"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>自訂類型和程式庫的 XAML 相關 CLR 屬性
 本主題會描述通用語言執行階段 (CLR) 屬性所定義的.NET Framework XAML 服務。 它也會說明其他 CLR 具有的屬性定義在.NET Framework 組件或類型的應用程式的 XAML 相關案例。 屬性的組件、 類型或成員設定這些 CLR 屬性提供 XAML 類型系統資訊與您的型別。 任何直接處理 XAML 節點資料流，或透過專用的 XAML 讀取器和 XAML 寫入器會使用.NET Framework XAML 服務的 XAML 取用者會提供資訊。  
@@ -21,9 +22,9 @@ ms.lasthandoff: 05/04/2018
 ### <a name="ambientattribute"></a>AmbientAttribute  
  **參考文件：**  <xref:System.Windows.Markup.AmbientAttribute>  
   
- **適用於：**類別屬性，或`get`支援可附加屬性的存取子成員。  
+ **適用於：** 類別屬性，或`get`支援可附加屬性的存取子成員。  
   
- **引數：**無  
+ **引數：** 無  
   
  <xref:System.Windows.Markup.AmbientAttribute> 表示屬性或使用屬性化型別的所有屬性，應在 XAML 中的環境屬性概念解譯。 環境概念與 XAML 處理器如何判斷成員類別擁有者有關。 環境的屬性是屬性預期的可供使用的剖析器的內容中建立物件圖形，但在暫止立即的 XAML 節點集所建立的一般型別成員查閱值。  
   
@@ -32,18 +33,18 @@ ms.lasthandoff: 05/04/2018
 ### <a name="constructorargumentattribute"></a>ConstructorArgumentAttribute  
  **參考文件：**  <xref:System.Windows.Markup.ConstructorArgumentAttribute>  
   
- **適用於：**類別  
+ **適用於：** 類別  
   
- **引數：**指定比對單一建構函式引數的屬性名稱的字串。  
+ **引數：** 指定比對單一建構函式引數的屬性名稱的字串。  
   
  <xref:System.Windows.Markup.ConstructorArgumentAttribute> 指定可以使用非預設建構函式語法中初始化物件，並指定名稱的屬性提供建構資訊。 這項資訊主要供 XAML 序列化之用。 如需詳細資訊，請參閱<xref:System.Windows.Markup.ConstructorArgumentAttribute>。  
   
 ### <a name="contentpropertyattribute"></a>ContentPropertyAttribute  
  **參考文件：**  <xref:System.Windows.Markup.ContentPropertyAttribute>  
   
- **適用於：**類別  
+ **適用於：** 類別  
   
- **引數：**指定成員的屬性化型別名稱的字串。  
+ **引數：** 指定成員的屬性化型別名稱的字串。  
   
  <xref:System.Windows.Markup.ContentPropertyAttribute> 表示引數所命名的屬性應該做為該類型的 XAML 內容屬性。 XAML 內容屬性定義會繼承所有可指派給定義類型的衍生型別。 您可以藉由套用覆寫特定衍生類型上的定義<xref:System.Windows.Markup.ContentPropertyAttribute>特定衍生型別。  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 05/04/2018
 ### <a name="contentwrapperattribute"></a>ContentWrapperAttribute  
  **參考文件：**  <xref:System.Windows.Markup.ContentWrapperAttribute>  
   
- **適用於：**類別，尤其是集合型別。  
+ **適用於：** 類別，尤其是集合型別。  
   
  **引數：** A <xref:System.Type> ，指定要使用的內容包裝函式類型做為外部內容類型。  
   
@@ -65,9 +66,9 @@ ms.lasthandoff: 05/04/2018
 ### <a name="dependsonattribute"></a>DependsOnAttribute  
  **參考文件：**  <xref:System.Windows.Markup.DependsOnAttribute>  
   
- **適用於：**屬性  
+ **適用於：** 屬性  
   
- **引數：**字串，指定的屬性化類型的另一個成員的名稱。  
+ **引數：** 字串，指定的屬性化類型的另一個成員的名稱。  
   
  <xref:System.Windows.Markup.DependsOnAttribute> 表示屬性化的屬性，取決於另一個屬性的值。 將此屬性套用至屬性定義，可確保相依的屬性，會先處理 XAML 物件寫入。 使用方式的<xref:System.Windows.Markup.DependsOnAttribute>建立有效的物件必須遵循剖析特定順序的型別上指定例外的情況下的屬性。  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 05/04/2018
 ### <a name="markupextensionreturntypeattribute"></a>MarkupExtensionReturnTypeAttribute  
  **參考文件：**  <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute>  
   
- **適用於：**類別，應該是<xref:System.Windows.Markup.MarkupExtension>衍生型別。  
+ **適用於：** 類別，應該是<xref:System.Windows.Markup.MarkupExtension>衍生型別。  
   
  **引數：** A <xref:System.Type> ，指定最精確的類型，預期為`ProvideValue`結果的屬性化<xref:System.Windows.Markup.MarkupExtension>。  
   
@@ -85,9 +86,9 @@ ms.lasthandoff: 05/04/2018
 ### <a name="namescopepropertyattribute"></a>NameScopePropertyAttribute  
  **參考文件：**  <xref:System.Windows.Markup.NameScopePropertyAttribute>  
   
- **適用於：**類別  
+ **適用於：** 類別  
   
- **引數：**支援兩種屬性：  
+ **引數：** 支援兩種屬性：  
   
 -   屬性化型別指定的屬性名稱的字串。  
   
@@ -98,9 +99,9 @@ ms.lasthandoff: 05/04/2018
 ### <a name="runtimenamepropertyattribute"></a>RuntimeNamePropertyAttribute  
  **參考文件：**  <xref:System.Windows.Markup.RuntimeNamePropertyAttribute>  
   
- **適用於：**類別  
+ **適用於：** 類別  
   
- **引數：**屬性化型別指定執行階段名稱屬性名稱的字串。  
+ **引數：** 屬性化型別指定執行階段名稱屬性名稱的字串。  
   
  <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> 報告的屬性化類型對應至 XAML 屬性[X:name 指示詞](../../../docs/framework/xaml-services/x-name-directive.md)。 屬性必須是型別<xref:System.String>，而且必須是讀取/寫入。  
   
@@ -109,7 +110,7 @@ ms.lasthandoff: 05/04/2018
 ### <a name="trimsurroundingwhitespaceattribute"></a>TrimSurroundingWhitespaceAttribute  
  **參考文件：**  <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>  
   
- **適用於：**類型  
+ **適用於：** 類型  
   
  **引數：** None。  
   
@@ -118,7 +119,7 @@ ms.lasthandoff: 05/04/2018
 ### <a name="typeconverterattribute"></a>TypeConverterAttribute  
  **參考文件：**  <xref:System.ComponentModel.TypeConverterAttribute>  
   
- **適用於：**類別、 屬性、 方法 (唯一 XAML 有效的方法則是`get`存取子，支援可附加的成員)。  
+ **適用於：** 類別、 屬性、 方法 (唯一 XAML 有效的方法則是`get`存取子，支援可附加的成員)。  
   
  **引數：** <xref:System.Type>的<xref:System.ComponentModel.TypeConverter>。  
   
@@ -137,25 +138,25 @@ ms.lasthandoff: 05/04/2018
 ### <a name="uidpropertyattribute"></a>UidPropertyAttribute  
  **參考文件：**  <xref:System.Windows.Markup.UidPropertyAttribute>  
   
- **適用於：**類別  
+ **適用於：** 類別  
   
- **引數：**參考相關的屬性名稱的字串。  
+ **引數：** 參考相關的屬性名稱的字串。  
   
  表示的 CLR 屬性的類別別名[X:uid 指示詞](../../../docs/framework/xaml-services/x-uid-directive.md)。  
   
 ### <a name="usableduringinitializationattribute"></a>UsableDuringInitializationAttribute  
  **參考文件：**  <xref:System.Windows.Markup.UsableDuringInitializationAttribute>  
   
- **適用於：**類別  
+ **適用於：** 類別  
   
- **引數：**布林值。 如果用於屬性的使用目的，這應該一律指定為`true`。  
+ **引數：** 布林值。 如果用於屬性的使用目的，這應該一律指定為`true`。  
   
  表示這個類型是否在 XAML 物件圖形建立期間由上而下建置。 這是進階的概念，與您的程式設計模型的定義可能密切相關。 如需詳細資訊，請參閱<xref:System.Windows.Markup.UsableDuringInitializationAttribute>。  
   
 ### <a name="valueserializerattribute"></a>ValueSerializerAttribute  
  **參考文件：**  <xref:System.Windows.Markup.ValueSerializerAttribute>  
   
- **適用於：**類別、 屬性、 方法 (唯一 XAML 有效的方法則是`get`存取子，支援可附加的成員)。  
+ **適用於：** 類別、 屬性、 方法 (唯一 XAML 有效的方法則是`get`存取子，支援可附加的成員)。  
   
  **引數：** A<xref:System.Type>指定值序列化程式支援類別，用於在序列化的屬性化類型中，所有屬性，或是特定屬性的屬性。  
   
@@ -164,7 +165,7 @@ ms.lasthandoff: 05/04/2018
 ### <a name="whitespacesignificantcollectionattribute"></a>WhitespaceSignificantCollectionAttribute  
  **參考文件：**  <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>  
   
- **適用於：**類別，特別是預期的混合的內容，裝載在物件項目周圍的空白字元可能會顯著 UI 表示法的集合型別。  
+ **適用於：** 類別，特別是預期的混合的內容，裝載在物件項目周圍的空白字元可能會顯著 UI 表示法的集合型別。  
   
  **引數：** None。  
   
@@ -173,36 +174,36 @@ ms.lasthandoff: 05/04/2018
 ### <a name="xamldeferloadattribute"></a>XamlDeferLoadAttribute  
  **參考文件：**  <xref:System.Windows.Markup.XamlDeferLoadAttribute>  
   
- **適用於：**類別屬性。  
+ **適用於：** 類別屬性。  
   
- **引數：**支援兩個屬性會形成類型為字串，或類型為<xref:System.Type>。 請參閱 <xref:System.Windows.Markup.XamlDeferLoadAttribute>。  
+ **引數：** 支援兩個屬性會形成類型為字串，或類型為<xref:System.Type>。 請參閱 <xref:System.Windows.Markup.XamlDeferLoadAttribute>。  
   
  表示類別或屬性具有 XAML 延後的載入使用量 （例如範本行為），並報告類別，可讓延後的行為和目的地/內容型別。  
   
 ### <a name="xamlsetmarkupextensionattribute"></a>XamlSetMarkupExtensionAttribute  
  **參考文件：**  <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute>  
   
- **適用於：**類別  
+ **適用於：** 類別  
   
- **引數：**命名回呼。  
+ **引數：** 命名回呼。  
   
  表示類別可以使用標記延伸的一個或多個屬性，提供的值，而且參考的 XAML 寫入器應該在之前執行任何屬性的類別上的標記延伸模組組作業呼叫的處理常式。  
   
 ### <a name="xamlsettypeconverterattribute"></a>XamlSetTypeConverterAttribute  
  **參考文件：**  <xref:System.Windows.Markup.XamlSetTypeConverterAttribute>  
   
- **適用於：**類別  
+ **適用於：** 類別  
   
- **引數：**命名回呼。  
+ **引數：** 命名回呼。  
   
  表示類別可以使用類型轉換器，來提供值的一個或多個屬性，而且參考的 XAML 寫入器應該在之前執行上類別的任何屬性的型別轉換子組作業呼叫的處理常式。  
   
 ### <a name="xmllangpropertyattribute"></a>XmlLangPropertyAttribute  
  **參考文件：**  <xref:System.Windows.Markup.XmlLangPropertyAttribute>  
   
- **適用於：**類別  
+ **適用於：** 類別  
   
- **引數：**指定別名的屬性名稱的字串`xml:lang`屬性化型別上。  
+ **引數：** 指定別名的屬性名稱的字串`xml:lang`屬性化型別上。  
   
  <xref:System.Windows.Markup.XmlLangPropertyAttribute> 報告的屬性化類型對應至 XML 屬性`lang`指示詞。 屬性不是一定的型別<xref:System.String>，但必須是可從 （做到這一點無法關聯型別轉換子，屬性的型別，或特定的屬性） 的字串。 屬性必須是讀取/寫入。  
   

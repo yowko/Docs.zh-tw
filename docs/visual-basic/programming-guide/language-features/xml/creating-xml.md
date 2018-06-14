@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651096"
 ---
 # <a name="creating-xml-in-visual-basic"></a>在 Visual Basic 中建立 XML
 Visual Basic 可讓您使用*XML 常值*直接在程式碼。 XML 常值語法表示[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]物件，而且這是 XML 1.0 語法類似。 這可讓您更輕鬆地以程式設計方式建立 XML 項目、 文件和片段，因為您程式碼具有相同的最後一個 XML 結構。  

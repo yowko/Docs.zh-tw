@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589996"
 ---
 # <a name="implicit-conversion-from-39lttypename1gt39-to-39lttypename2gt39-in-copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument"></a>從隱含轉換&#39; &lt;typename1&gt; &#39;至&#39; &lt;2>&gt; &#39;中的值複製&#39;ByRef&#39;參數&#39; &lt;參數名稱&gt;&#39;回對應的引數。
 與呼叫的程序[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)類型不同於其對應參數的引數。  

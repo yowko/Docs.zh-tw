@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766500"
 ---
 # <a name="string-canonical-functions"></a>字串標準函式
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 包含字串標準函式。  
@@ -18,7 +19,7 @@ ms.lasthandoff: 05/03/2018
 |--------------|-----------------|  
 |`Concat (` `string1`, `string2``)`|傳回包含附加至 `string2` 之 `string1` 的字串。<br /><br /> **引數**<br /><br /> `string1`：`string2` 附加至的字串。<br /><br /> `string2`：附加至 `string1` 的字串。<br /><br /> **傳回值**<br /><br /> `String`。 如果傳回值字串的長度超過允許的最大長度，就會發生錯誤。<br /><br /> **範例**<br /><br /> `-- The following example returns abcxyz.`<br /><br /> `Concat('abc', 'xyz')`|  
 |`Contains (` `string`, `target``)`|如果 `true` 包含在 `target` 之中，傳回`string`。<br /><br /> **引數**<br /><br /> `string`：用來搜尋的字串。<br /><br /> `target`：搜尋的目標字串。<br /><br /> **傳回值**<br /><br /> 如果 `true` 包含在 `target` 中，則為 `string`，否則為 `false`。<br /><br /> **範例**<br /><br /> `-- The following example returns true.`<br /><br /> `Contains('abc', 'bc')`|  
-|`EndsWith (` `string`, `target``)`|如果 `true` 是以 `target` 為結尾，傳回 `string`。<br /><br /> **引數**<br /><br /> `string`：用來搜尋的字串。<br /><br /> `target`：搜尋位於 `string` 結尾處的目標字串。<br /><br /> **傳回值**<br /><br /> 如果 `True` 是以 `string` 為結尾，則為 `target`，否則為 `false`。<br /><br /> **範例**<br /><br /> `-- The following example returns true.`<br /><br /> `EndsWith('abc', 'bc')` **注意：**如果您使用 SQL Server 資料提供者，此函數會傳回`false`字串如果固定的長度字串資料行中儲存和`target`是常數。 在這個情況下，會搜尋到整個字串，包括任何填補的後端空格。 可能的解決方法是修剪固定長度字串中的資料，如以下範例所示：`EndsWith(TRIM(string), target)`|  
+|`EndsWith (` `string`, `target``)`|如果 `true` 是以 `target` 為結尾，傳回 `string`。<br /><br /> **引數**<br /><br /> `string`：用來搜尋的字串。<br /><br /> `target`：搜尋位於 `string` 結尾處的目標字串。<br /><br /> **傳回值**<br /><br /> 如果 `True` 是以 `string` 為結尾，則為 `target`，否則為 `false`。<br /><br /> **範例**<br /><br /> `-- The following example returns true.`<br /><br /> `EndsWith('abc', 'bc')` **注意：** 如果您使用 SQL Server 資料提供者，此函數會傳回`false`字串如果固定的長度字串資料行中儲存和`target`是常數。 在這個情況下，會搜尋到整個字串，包括任何填補的後端空格。 可能的解決方法是修剪固定長度字串中的資料，如以下範例所示：`EndsWith(TRIM(string), target)`|  
 |`IndexOf(` `target`, `string``)`|傳回 `target` 在 `string` 內部的位置，或 0 (如果找不到的話)。 傳回 1 表示 `string` 的開頭。 索引編號會從 1 開始。<br /><br /> **引數**<br /><br /> `target`：搜尋的目標字串。<br /><br /> `string`：用來搜尋的字串。<br /><br /> **傳回值**<br /><br /> `Int32`。<br /><br /> **範例**<br /><br /> `-- The following example returns 4.`<br /><br /> `IndexOf('xyz', 'abcxyz')`|  
 |`Left (` `string`, `length``)`|從 `length` 的左側傳回前 `string` 個字元。 如果 `string` 的長度小於 `length`，就會傳回整個字串。<br /><br /> **引數**<br /><br /> `string`：`String`。<br /><br /> `length`：`Int16`、`Int32`、`Int64` 或 `Byte`。 `length` 不得小於零。<br /><br /> **傳回值**<br /><br /> `String`。<br /><br /> **範例**<br /><br /> `-- The following example returns abc.`<br /><br /> `Left('abcxyz', 3)`|  
 |`Length (` `string` `)`|傳回字串的 (`Int32`) 長度 (以字元為單位)。<br /><br /> **引數**<br /><br /> `string`：`String`。<br /><br /> **傳回值**<br /><br /> `Int32`。<br /><br /> **範例**<br /><br /> `-- The following example returns 6.`<br /><br /> `Legth('abcxyz')`|  

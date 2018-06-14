@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386944"
 ---
 # <a name="developing-web-applications-with-aspnet"></a>使用 ASP.NET 開發 Web 應用程式
 ASP.NET 是用來建立 Web 應用程式的 .NET Framework 技術。 為了方便起見，在此提供下列連結：  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591308"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore 和 SemaphoreSlim
 <xref:System.Threading.Semaphore?displayProperty=nameWithType> 類別代表具名 (系統) 或區域號誌。 它是 Win32 號誌物件周圍的精簡型包裝函式。 Win32 號誌是計算的號誌，可以用來控制資源集區的存取。  

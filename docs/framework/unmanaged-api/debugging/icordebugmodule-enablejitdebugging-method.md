@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 71722293bfb80a7e57393916560f922d970ea2ab
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415638"
 ---
 # <a name="icordebugmoduleenablejitdebugging-method"></a>ICorDebugModule::EnableJITDebugging 方法
 控制是否在 just-in-time (JIT) 編譯器會保留在這個模組中方法的偵錯資訊。  
@@ -46,7 +47,7 @@ HRESULT EnableJITDebugging(
  偵錯工具為作用中時，會載入的所有模組的預設會啟用 JIT 偵錯。 以程式設計方式啟用或停用這些設定會覆寫全域設定。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   

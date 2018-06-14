@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398179"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>應用程式定義域資源監視 (ARM) ETW 事件
 <a name="top"></a> 這些事件可提供有關應用程式網域狀態的詳細診斷資訊。 您可以使用這些事件或使用應用程式網域資源監視 (ARM) 功能，取得相同的資訊。  

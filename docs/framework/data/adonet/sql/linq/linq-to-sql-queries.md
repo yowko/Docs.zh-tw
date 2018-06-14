@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355096"
 ---
 # <a name="linq-to-sql-queries"></a>LINQ to SQL 查詢
 使用與 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 相同的語法，就可以定義 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 查詢。 唯一的差別在於查詢中參考的物件會對應至資料庫中的項目。 如需詳細資訊，請參閱 [LINQ 查詢簡介 (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)。  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654722"
 ---
 # <a name="common-tasks-performed-with-visual-basic-operators"></a>與 Visual Basic 運算子一起執行的一般工作
 運算子會執行許多常見的工作包含一個或多個運算式呼叫*運算元*。  

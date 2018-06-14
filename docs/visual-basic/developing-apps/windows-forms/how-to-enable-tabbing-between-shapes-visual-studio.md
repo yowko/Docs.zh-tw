@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589543"
 ---
 # <a name="how-to-enable-tabbing-between-shapes-visual-studio"></a>如何：在圖案間啟用定位處理 (Visual Studio)
 Line 和 shape 控制項沒有`TabStop`或`TabIndex`屬性，但您仍然可以啟用它們之間按下 tab 鍵。 在下列範例中，按下 ctrl 鍵和 TAB 鍵將索引標籤之間圖形;按 TAB 鍵將索引標籤按鈕之間。  

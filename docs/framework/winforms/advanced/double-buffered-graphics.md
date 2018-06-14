@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524062"
 ---
 # <a name="double-buffered-graphics"></a>雙重緩衝的圖形
 閃爍是編寫圖形程式碼時常見的問題。 需要多個複雜繪製作業的圖形作業可能會導致轉譯的影像出現閃爍，或具有無法接受的外觀。 為了解決這些問題，.NET Framework 提供雙重緩衝的存取。  

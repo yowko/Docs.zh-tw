@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267403"
 ---
 # <a name="-operator-c-reference"></a>+ 運算子 (C# 參考)
 `+` 運算子可以作為一元或二元運算子。  

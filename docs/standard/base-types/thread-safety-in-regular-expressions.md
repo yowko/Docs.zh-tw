@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567714"
 ---
 # <a name="thread-safety-in-regular-expressions"></a>規則運算式中的執行緒安全
 <xref:System.Text.RegularExpressions.Regex> 類別本身為不變 (唯讀) 的安全執行緒。 也就是說，您可以在任何執行緒上建立 **Regex** 物件，並在執行緒之間共用；您也可以從任何執行緒呼叫比對方法，而不會變更任何全域狀態。  

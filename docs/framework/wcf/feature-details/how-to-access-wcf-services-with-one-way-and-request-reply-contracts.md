@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494318"
 ---
 # <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>HOW TO：使用單向和要求-回覆合約來存取 WCF 服務
 下列程序說明如何存取 Windows Communication Foundation (WCF) 服務來定義單向合約與要求-回覆合約，並不使用雙工通訊模式。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806714"
 ---
 # <a name="linq-to-sql-sample"></a>LINQ to SQL 範例
 這個範例示範如何建立活動，以使用 SQL Server 資料庫資料表中的 LINQ to SQL 查詢實體。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527322"
 ---
 # <a name="domainupdown-control-windows-forms"></a>DomainUpDown 控制項 (Windows Form)
 Windows Form<xref:System.Windows.Forms.DomainUpDown>控制項看起來對按鈕及文字方塊中的組合的清單中向上或向下移動。 控制項顯示，並設定選項的清單中的文字字串。 按一下向上和向下按鈕移動清單、 按向上鍵和向下鍵，或輸入清單中的項目相符的字串，使用者可以選取的字串。 這個控制項的其中一個可能的使用是從依字母順序排序的名稱清單中選取項目。 (若要排序清單，請設定<xref:System.Windows.Forms.DomainUpDown.Sorted%2A>屬性`true`。)這個控制項的功能清單方塊或下拉式方塊中，非常類似，但是它會佔用很少的空間。  

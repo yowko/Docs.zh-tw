@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512995"
 ---
 # <a name="control-flow-activities-in-wf"></a>WF 中的控制流程活動
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 提供數種活動，可用於控制工作流程內的執行流程。 這些活動 (例如`Switch`和`If`) 實作類似於程式設計環境例如 Visual C# 中，有些的流程控制架構 (例如`Pick`) 建立新的程式設計架構模型。  

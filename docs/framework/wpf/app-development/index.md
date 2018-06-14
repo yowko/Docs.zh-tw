@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548882"
 ---
 # <a name="application-development"></a>應用程式開發
 <a name="introduction"></a> Windows Presentation Foundation (WPF) 是可用來開發下列類型的應用程式的呈現架構：  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804988"
 ---
 # <a name="data-binding-in-an-aspnet-client"></a>ASP.NET 用戶端中的資料繫結
 這個範例示範如何將 Web Form 應用程式中一般的 Windows Communication Foundation (WCF) 服務所傳回的資料繫結。  

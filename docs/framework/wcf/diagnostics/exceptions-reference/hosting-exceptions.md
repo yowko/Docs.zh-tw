@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33469433"
 ---
 # <a name="hosting-exceptions"></a>裝載例外狀況
 這個主題會列出由裝載所產生的所有例外狀況。  

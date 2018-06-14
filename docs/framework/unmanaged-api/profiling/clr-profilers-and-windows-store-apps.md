@@ -16,9 +16,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 20a1ed9b6b613b1e4d3e5363ab9995cc81295091
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462282"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR 分析工具和 Windows 市集應用程式
 本主題討論您需要考慮當寫入診斷工具分析的受管理的 Windows 市集應用程式內部執行程式碼。  它也提供指導方針來修改現有的開發工具，讓它們繼續運作，當您執行 Windows 市集應用程式。  若要了解這項資訊，最好是如果您已熟悉通用語言執行階段程式碼剖析 API，您已經使用此應用程式開發介面中執行正確地針對 Windows 桌面應用程式，而且您正在現在想要修改工具的診斷工具若要正確地執行針對 Windows 市集應用程式。  

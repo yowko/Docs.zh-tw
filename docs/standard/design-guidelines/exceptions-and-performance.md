@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575332"
 ---
 # <a name="exceptions-and-performance"></a>例外狀況和效能
 一個常見的問題相關的例外狀況是針對經常失敗的程式碼使用例外狀況，如果實作的效能將會無法接受。 這是有效的問題。 當成員擲回例外狀況時，其效能可能會大幅度速度較慢。 不過，它是達成目標時不允許使用錯誤碼的例外狀況指導方針嚴格遵守良好的效能。 本節中所述的兩種模式提供的建議執行這項操作。  

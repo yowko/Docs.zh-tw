@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33957948"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-instances-aci"></a>當 Azure 容器執行個體 (ACI) 部署 Windows 容器
 

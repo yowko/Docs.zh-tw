@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655833"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>如何：變更程序引數的值 (Visual Basic)
 當您呼叫程序時，您提供每個引數會對應至其中一個程序中定義的參數。 在某些情況下，程序程式碼可以變更對應的引數呼叫的程式碼中的值。 在其他情況下，此程序可以變更引數的本機複本。  

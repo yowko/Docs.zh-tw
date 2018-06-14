@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547137"
 ---
 # <a name="building-and-deploying-wpf-applications"></a>建置和部署 WPF 應用程式
 建置和部署模型可讓您建置和部署應用程式，在本機和遠端電腦上，包括下列：  

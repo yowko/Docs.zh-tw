@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498663"
 ---
 # <a name="generating-data-type-classes-from-xml"></a>從 XML 產生資料型別類型
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 包含可以從 XML 產生資料類型類別的新功能。 本主題描述如何自動產生資料型別之.NET 部落格 rss 摘要。  

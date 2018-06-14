@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517987"
 ---
 # <a name="support-for-queries"></a>支援查詢
 SQL 工作流程執行個體存放區會記錄存放區中一組已知的屬性。 使用者可以根據這些屬性查詢執行個體。 下列清單包含其中一些已知的屬性：  

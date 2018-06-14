@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531036"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>如何：變更 Windows Form TabControl 的外觀
 您可以使用的屬性，以變更 Windows Form 中的索引標籤的外觀<xref:System.Windows.Forms.TabControl>和<xref:System.Windows.Forms.TabPage>組成個別的索引標籤控制項上的物件。 藉由設定這些屬性，您可以顯示索引標籤上的映像、 顯示垂直而非水平索引標籤、 顯示多個資料列的索引標籤，和啟用或以程式設計的方式停用索引標籤。  

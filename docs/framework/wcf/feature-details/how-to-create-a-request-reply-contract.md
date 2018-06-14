@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489569"
 ---
 # <a name="how-to-create-a-request-reply-contract"></a>HOW TO：建立要求-回覆合約
 要求-回覆合約會指定一個方法以傳回回覆。 回覆必須在此合約條件下進行傳送並與要求相互關聯。 即便該方法未傳回任何回覆 (在 C# 為 `void`，在 Visual Basic 為 `Sub`)，基礎結構還是會建立空訊息並傳送給呼叫者。 若要避免傳送空的回覆訊息，請使用單向作業合約。  

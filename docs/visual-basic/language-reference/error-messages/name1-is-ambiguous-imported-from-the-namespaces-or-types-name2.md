@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593635"
 ---
 # <a name="39ltname1gt39-is-ambiguous-imported-from-the-namespaces-or-types-39ltname2gt39"></a>&#39;&lt;name1&gt; &#39;模稜兩可，從命名空間或類型匯入&#39; &lt;name2&gt;&#39;
 您提供的名稱模稜兩可，因此與另一個名稱發生衝突。 Visual Basic 編譯器並沒有任何衝突解決規則中。您必須自行區分名稱。  

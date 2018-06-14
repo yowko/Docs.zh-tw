@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655717"
 ---
 # <a name="statements-in-visual-basic"></a>Visual Basic 中的陳述式
 在 Visual Basic 中的陳述式是完整的指示。 它可以包含關鍵字、 運算子、 變數、 常數和運算式。 每個陳述式屬於下列類別之一：  

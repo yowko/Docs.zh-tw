@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810079"
 ---
 # <a name="advanced-error-handling"></a>進階的錯誤處理
 這個範例會示範 Windows Communication Foundation (WCF) 路由服務。 路由服務是 WCF 元件，以簡化應用程式中加入內容架構的路由器。 此範例示範路由服務如何使用異動和其他更複雜的訊息處理概念，例如多點傳送，以聰明的方式從錯誤中復原。  

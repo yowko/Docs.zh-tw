@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549168"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>逐步解說：當地語系化混合應用程式
 本逐步解說會示範如何當地語系化[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中的項目[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-混合式應用程式。  
@@ -90,7 +91,7 @@ ms.lasthandoff: 05/04/2018
   
 8.  在 [方案總管] 中，以滑鼠右鍵按一下**LocalizingWpfInWf**按一下**卸載專案**。  
   
-     專案名稱會標記為**（無法使用）**。  
+     專案名稱會標記為 **（無法使用）**。  
   
 9. 以滑鼠右鍵按一下**LocalizingWpfInWf**，然後按一下**編輯 LocalizingWpfInWf.csproj**。  
   

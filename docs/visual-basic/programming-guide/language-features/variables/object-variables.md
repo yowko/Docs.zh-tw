@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649109"
 ---
 # <a name="object-variables-in-visual-basic"></a>Visual Basic 中的物件變數
 除了直接儲存的值，變數可以參考的物件。 您指派給變數的物件相同的原因，您將任何值指派給變數：  

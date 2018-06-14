@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2779138a0999e34ad6424d76ddfebbcfdf611d58
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422893"
 ---
 # <a name="icorpublishenumprocesses-method"></a>ICorPublish::EnumProcesses 方法
 取得此電腦上執行的受管理處理程序中的列舉值。  
@@ -48,7 +49,7 @@ HRESULT EnumProcesses (
  `EnumProcesses`方法可能會多次呼叫這個[ICorPublish](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)建立新的最新集合的處理序的執行個體。 現有的集合不會影響的後續呼叫`EnumProcesses`方法。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorPub.idl、 CorPub.h  
   

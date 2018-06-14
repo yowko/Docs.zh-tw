@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216473"
 ---
 # <a name="explicit-c-reference"></a>explicit (C# 參考)
 `explicit` 關鍵字會宣告必須使用轉換叫用的使用者定義型別轉換運算子。 例如，此運算子會將稱為華氏的類別轉換成稱為攝氏的類別︰  

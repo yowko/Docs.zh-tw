@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653659"
 ---
 # <a name="sample-compilation-command-lines-visual-basic"></a>編譯命令列範例 (Visual Basic)
 Visual Basic 中編譯程式從 Visual Studio 或者，您可以編譯從命令列，以產生可執行檔 (.exe) 或動態連結程式庫 (.dll) 檔案。  

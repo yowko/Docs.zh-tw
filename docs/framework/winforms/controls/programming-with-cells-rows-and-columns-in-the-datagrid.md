@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538537"
 ---
 # <a name="programming-with-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>在 Windows Form DataGridView 控制項中利用儲存格、資料列和資料行進行程式設計
 本節提供示範各種牽涉到儲存格、 列和資料行物件的程式設計工作的主題。  

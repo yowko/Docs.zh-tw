@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585710"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>HOW TO：限定 XML 元素和 XML 屬性名稱
 [程式碼範例](#cpconworkingwithxmlnamespacesanchor1)  

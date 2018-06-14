@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528550"
 ---
 # <a name="windows-forms-print-support"></a>Windows Form 列印支援
 在 Windows Form 中的列印工作主要是使用[PrintDocument 元件](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)元件，讓使用者列印，而[PrintPreviewDialog 控制項](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)控制項， [PrintDialog元件](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md)和[PageSetupDialog 元件](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)習慣使用 Windows 作業系統的使用者提供熟悉的圖形化介面的元件。  

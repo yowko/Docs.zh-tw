@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521332"
 ---
 # <a name="how-to-draw-a-single-b233zier-spline"></a>如何： 繪製單一 B&#233;zier 曲線
 貝茲曲線由四個點所定義： 一個起始點，兩個控制點和端點。  

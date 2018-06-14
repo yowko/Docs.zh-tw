@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515989"
 ---
 # <a name="auto-confirm-pattern"></a>自動確認模式
 這個範例包含三個狀況，其執行示範自訂 `AutoConfirmScope` 活動。 第一個範例顯示四個可補償活動的序列成功執行，其中第二個和第三個可補償活動以巢狀方式置於 `AutoConfirmScope` 中。 第二個範例顯示相同序列，但在第四個 <xref:System.Activities.Statements.CompensableActivity> 執行後發生例外狀況。 第三個狀況顯示相同序列，但在第二個  `AutoConfirmScope` 完成後於 <xref:System.Activities.Statements.CompensableActivity> 中發生例外狀況。  

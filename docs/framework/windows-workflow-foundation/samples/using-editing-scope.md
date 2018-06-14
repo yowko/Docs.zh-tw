@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517387"
 ---
 # <a name="using-editing-scope"></a>使用編輯範圍
 這個範例示範如何批次處理一組變更，以便在單一不可部分完成的單位中復原這些變更。 根據預設，活動設計工具作者所執行的動作會自動整合至復原/取消復原系統。  

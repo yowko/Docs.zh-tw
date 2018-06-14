@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806951"
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>建置 Windows Communication Foundation 範例
 您可以建置 Windows Communication Foundation (WCF) 範例，使用 Visual Studio 2010 或**msbuild**從命令列命令。 本主題將同時說明這兩個程序。  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516409"
 ---
 # <a name="adjusting-the-size-and-scale-of-windows-forms"></a>調整大小和小數位數為 Windows Form
 本主題提供有關調整 Windows Form 大小的資訊連結。  

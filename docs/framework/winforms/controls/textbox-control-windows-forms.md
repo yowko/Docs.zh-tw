@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536250"
 ---
 # <a name="textbox-control-windows-forms"></a>TextBox 控制項 (Windows Form)
 Windows Form 的文字方塊會用來從使用者取得輸入或顯示的文字。 `TextBox`控制項通常用於編輯的文字，不過它也可以設定為唯讀。 文字方塊可以顯示多行、 文字換行到控制項的大小和加入基本的格式。 `TextBox`控制項可讓單一文字在控制項中輸入或顯示格式。  

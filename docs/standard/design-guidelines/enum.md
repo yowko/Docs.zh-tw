@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579245"
 ---
 # <a name="enum-design"></a>列舉設計
 列舉是特殊類型的實值型別。 有兩種類型的列舉： 簡單列舉和旗標的列舉。  

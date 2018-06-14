@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2f4382c7fa85008de9e67ad21c467402bae4ac90
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451278"
 ---
 # <a name="corprfsuspendreason-enumeration"></a>COR_PRF_SUSPEND_REASON 列舉
 指出執行階段已暫止的原因。  
@@ -56,7 +57,7 @@ typedef enum {
  允許在 unmanaged 程式碼中的所有執行階段執行緒繼續執行，直到嘗試重新進入執行階段，此時它們也會暫止之前執行階段會繼續執行。 這也適用於新的執行緒進入執行階段。 在執行階段內的所有執行緒會立即暫停，如果它們是在可中斷的程式碼，或是要求暫止時執行到可中斷的程式碼。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

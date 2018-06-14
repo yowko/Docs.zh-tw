@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504155"
 ---
 # <a name="fault-contract"></a>錯誤合約
 錯誤合約範例會示範如何在服務與用戶端之間傳達錯誤資訊。 範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，與其他程式碼加入至服務，以將內部例外狀況轉換為錯誤。 用戶端會嘗試執行除數為零，以便強制在服務上造成錯誤狀況。  

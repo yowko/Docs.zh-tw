@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542206"
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>如何：建立繫結控制項並格式化顯示的資料
 Windows Form 資料繫結，您可以將資料格式化顯示的資料繫結控制項中使用**格式化和進階繫結** 對話方塊。  
@@ -26,7 +27,7 @@ Windows Form 資料繫結，您可以將資料格式化顯示的資料繫結控�
   
 2.  在表單中選取控制項，然後開啟屬性視窗。  
   
-3.  展開 **(DataBindings)** 屬性，然後在**（進階）**方塊中，按一下省略符號按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 以顯示**格式化與進階繫結**對話方塊中，具有該控制項屬性的完整清單。  
+3.  展開 **(DataBindings)** 屬性，然後在 **（進階）** 方塊中，按一下省略符號按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 以顯示**格式化與進階繫結**對話方塊中，具有該控制項屬性的完整清單。  
   
 4.  選取您想要繫結，然後按一下的屬性**繫結**箭號。  
   
@@ -49,7 +50,7 @@ Windows Form 資料繫結，您可以將資料格式化顯示的資料繫結控�
     |貨幣|使用指定的小數位數**小數位數**上下按鈕控制項。|  
     |日期時間|選取如何藉由選取其中一個項目中顯示的日期和時間**類型**選取方塊。|  
     |科學記號|使用指定的小數位數**小數位數**上下按鈕控制項。|  
-    |自訂|指定使用自訂格式字串。<br /><br /> 如需詳細資訊，請參閱[格式類型](../../../docs/standard/base-types/formatting-types.md)。 **注意：**自訂格式字串來成功反覆存取資料來源和繫結的控制項之間不保證。 改為處理 <xref:System.Windows.Forms.Binding.Parse> 或 <xref:System.Windows.Forms.Binding.Format> 繫結的事件，以及在事件處理程式碼中套用自訂格式。|  
+    |自訂|指定使用自訂格式字串。<br /><br /> 如需詳細資訊，請參閱[格式類型](../../../docs/standard/base-types/formatting-types.md)。 **注意：** 自訂格式字串來成功反覆存取資料來源和繫結的控制項之間不保證。 改為處理 <xref:System.Windows.Forms.Binding.Parse> 或 <xref:System.Windows.Forms.Binding.Format> 繫結的事件，以及在事件處理程式碼中套用自訂格式。|  
   
 8.  按一下**確定**關閉**格式化與進階繫結**對話方塊並返回 [屬性] 視窗。  
   

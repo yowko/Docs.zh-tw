@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322545"
 ---
 # <a name="functional-transformation-of-xml-c"></a>XML 功能性轉換 (C#)
 本主題討論修改 XML 文件的純功能性轉換方法，並與程序性方法對照。  

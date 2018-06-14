@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603635"
 ---
 # <a name="new-operator-visual-basic"></a>New 運算子 (Visual Basic)
 導入了`New`子句來建立新的物件執行個體，指定型別參數的建構函式條件約束，或識別`Sub`與類別建構函式的程序。  

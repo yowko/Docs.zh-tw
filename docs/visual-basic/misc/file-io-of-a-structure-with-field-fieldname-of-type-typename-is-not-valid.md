@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33634923"
 ---
 # <a name="file-io-of-a-structure-with-field-39ltfieldnamegt39-of-type-39lttypenamegt39-is-not-valid"></a>檔案 I/O 的結構與欄位&#39; &lt;fieldname&gt; &#39;型別的&#39; &lt;typename&gt; &#39;無效
 您嘗試寫入檔案的結構包含不支援的類型。  

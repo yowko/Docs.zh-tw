@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803763"
 ---
 # <a name="monitoring-service-operation-failures"></a>監控服務作業失敗
 如果您為應用程式啟用分析追蹤，可以在事件檢視器中輕鬆監視服務失敗。  本主題示範如何判斷服務作業失敗的時間，以及如何判斷造成失敗的原因。  

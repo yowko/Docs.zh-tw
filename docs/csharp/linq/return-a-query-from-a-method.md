@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33274946"
 ---
 # <a name="how-to-return-a-query-from-a-method-c-programming-guide"></a>如何：從方法傳回查詢 (C# 程式設計手冊)
 這個範例示範如何以傳回值和 `out` 參數形式從方法中傳回查詢。  

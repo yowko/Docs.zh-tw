@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336634"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>使用動態類型 (C# 程式設計手冊)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 引進一種新類型 `dynamic`。 此類型是靜態類型，但 `dynamic` 類型的物件會略過靜態類型檢查。 在大多數情況下，其運作會像是具有 `object` 類型。 在編譯時期，會假設類型為 `dynamic` 的項目能夠支援所有作業。 因此，您無須考慮物件是從 COM API、動態語言 (例如 IronPython)、HTML 文件物件模型 (DOM)、反映或是程式其他地方取得其值。 不過，如果程式碼無效，則會在執行階段攔截到錯誤。  

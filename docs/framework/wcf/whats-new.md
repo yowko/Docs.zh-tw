@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809897"
 ---
 # <a name="what39s-new-in-windows-communication-foundation-45"></a>什麼&#39;s Windows Communication Foundation 4.5 的新功能
 本主題討論 Windows Communication Foundation (WCF) 的新功能。  

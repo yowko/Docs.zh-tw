@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538622"
 ---
 # <a name="treeview-control-overview-windows-forms"></a>TreeView 控制項概觀 (Windows Form)
 使用 Windows Form <xref:System.Windows.Forms.TreeView> 控制項，您可以向使用者顯示節點階層，就像 Windows 作業系統中 Windows 檔案總管功能左窗格顯示檔案和資料夾的方式。 樹狀檢視中的每個節點都可能包含其他節點，稱為*子節點*。 您可以顯示父節點或包含子節點的節點為展開或摺疊。 您也可以藉由設定樹狀檢視的 <xref:System.Windows.Forms.TreeView.CheckBoxes%2A> 屬性為 `true`來顯示節點旁邊核取方塊的樹狀檢視。 藉由設定節點的 <xref:System.Windows.Forms.TreeNode.Checked%2A> 屬性為 `true` 或 `false`，您可以程式設計的方式選取或清除節點。  

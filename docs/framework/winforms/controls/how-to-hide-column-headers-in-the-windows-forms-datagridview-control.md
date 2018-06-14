@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532271"
 ---
 # <a name="how-to-hide-column-headers-in-the-windows-forms-datagridview-control"></a>如何：隱藏 Windows Form DataGridView 控制項中的資料行行首
 有時候您會想要顯示<xref:System.Windows.Forms.DataGridView>沒有資料行標頭。 在<xref:System.Windows.Forms.DataGridView>控制項，<xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A>屬性值會決定是否顯示資料行標頭。  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392504"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>屬性化程式設計模型概觀 (MEF)
 在 Managed Extensibility Framework (MEF) 中， *「程式設計模型」* (Programming Model) 是定義 MEF 藉以運作之一組概念性物件的特定方法。 這些概念性物件包含組件、匯入和匯出。 MEF 使用這些物件，但不會指定這些物件的表示方式。 因此，各種程式設計模型都有可能，包括自訂的程式設計模型在內。  

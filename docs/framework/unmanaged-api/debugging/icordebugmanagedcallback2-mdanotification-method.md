@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 64b09c173e2f66d4c650083cc12f8a0ac2c92007
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417224"
 ---
 # <a name="icordebugmanagedcallback2mdanotification-method"></a>ICorDebugManagedCallback2::MDANotification 方法
 提供執行程式碼發現正在偵錯的應用程式中 managed 偵錯助理 (MDA) 的通知。  
@@ -62,7 +63,7 @@ HRESULT MDANotification(
  偵錯工具就會釋放參考`ICorDebugMDA`之後立即從傳回的執行個體`MDANotification`回呼，讓 CLR 回收 MDA 所耗用的記憶體。 釋放此執行個體可改善效能，當引發許多 Mda。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   

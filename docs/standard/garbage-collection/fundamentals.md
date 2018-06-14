@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579531"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>記憶體回收的基本概念
 <a name="top"></a> 在 Common Language Runtime (CLR) 中，記憶體回收行程會當做自動記憶體管理員。 它提供了下列優點：  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dc79277c75118b11766e66137284bd5655eed091
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405368"
 ---
 # <a name="iclrdatatargetrequest-method"></a>ICLRDataTarget::Request 方法
 由通用語言執行平台 (CLR) 資料存取服務要求的操作，實作所定義。  
@@ -62,7 +63,7 @@ HRESULT Request (
  此方法是由偵錯應用程式的作者來實作。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** ClrData.idl、 ClrData.h  
   

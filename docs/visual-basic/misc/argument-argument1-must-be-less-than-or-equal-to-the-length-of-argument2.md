@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600684"
 ---
 # <a name="argument-39ltargument1gt39-must-be-less-than-or-equal-to-the-length-of-argument-39ltargument2gt39"></a>引數&#39;&lt;引數 1&gt; &#39;必須小於或等於引數的長度&#39;&lt;引數 2&gt;&#39;
 引數的長度超過允許的限制 (透過第二個引數的長度所決定)。  

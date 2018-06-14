@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7a53b0a9cdcec33846f9d491e7d6567bcf9235b5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428758"
 ---
 # <a name="corlaunchapplication-function"></a>CorLaunchApplication 函式
 啟動指定的網路路徑，使用指定的資訊清單和其他應用程式資料在應用程式。  
@@ -65,7 +66,7 @@ HRESULT CorLaunchApplication (
  [out]程序中載入應用程式的相關資訊的指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   

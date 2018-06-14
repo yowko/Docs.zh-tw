@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559457"
 ---
 # <a name="how-to-draw-a-closed-shape-by-using-the-polygon-element"></a>如何：使用 Polygon 項目繪製封閉的形狀
 這個範例示範如何使用來繪製封閉的圖形<xref:System.Windows.Shapes.Polygon>項目。 若要繪製封閉的圖形，請建立<xref:System.Windows.Shapes.Polygon>項目，並使用其<xref:System.Windows.Shapes.Polygon.Points%2A>屬性可指定圖形的頂點。 繪製線條，會自動連接的第一個和最後一個點。 最後，指定<xref:System.Windows.Shapes.Shape.Fill%2A>、 <xref:System.Windows.Shapes.Shape.Stroke%2A>，或兩者。  

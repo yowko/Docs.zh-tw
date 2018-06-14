@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f5fd7c2bd4fae94d1ef5021b558a04b734803b68
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430553"
 ---
 # <a name="isymunmanagedwriter5-interface"></a>ISymUnmanagedWriter5 介面
 ISymUnmanagedWriter5 介面。  
@@ -29,7 +30,7 @@ ISymUnmanagedWriter5 介面。
 |[OpenMapTokensToSourceSpans 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-openmaptokenstosourcespans-method.md)|開啟發出到語彙基元至來源範圍的對應資訊的特殊的自訂資料區段。 方法已經開啟，或反之亦然，會發生錯誤時，請開啟此區段。|  
   
 ## <a name="requirements"></a>需求  
- **標頭：**於 CorSym.idl、 CorSym.h  
+ **標頭：** 於 CorSym.idl、 CorSym.h  
   
 ## <a name="see-also"></a>另請參閱  
  [診斷符號存放區介面](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  

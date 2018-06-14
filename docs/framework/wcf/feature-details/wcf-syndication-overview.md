@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498240"
 ---
 # <a name="wcf-syndication-overview"></a>WCF 新聞訂閱概觀
 Windows Communication Foundation (WCF) 提供支援公開從 WCF 服務的新聞訂閱摘要。 新聞訂閱是一種應用程式整合機制，可讓伺服器透過稱為摘要的互通格式來公開一些應用程式資料。 摘要是一種應用程式資料的集合，內含一些摘要層級的中繼資料 (標題、作者、URL 與其他中繼資料) 以及一系列的摘要項目。 摘要中的項目通常會依照時間順序，從距今最近的時間往回排列。 摘要項目包含一組標準的項目層級中繼資料 (標題、URL、建立日期、分類，與其他項目層級的中繼資料) 以及任意數量的特定應用程式資料。 兩個最常見的新聞訂閱摘要類型為 Really Simple Syndication (RSS) 2.0 和 Atom 1.0 時，這兩種都受到 WCF。  

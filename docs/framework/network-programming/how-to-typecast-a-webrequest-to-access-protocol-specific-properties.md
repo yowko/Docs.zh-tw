@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394068"
 ---
 # <a name="how-to-typecast-a-webrequest-to-access-protocol-specific-properties"></a>如何：轉換 WebRequest 類型以存取通訊協定特定屬性
 這個範例示範如何轉換 WebRequest 類型以存取通訊協定特定屬性。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585576"
 ---
 # <a name="39is39-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-39lttypenamegt39"></a>&#39;是&#39;需要運算元有參考類型，但此運算元擁有實值型別&#39;&lt;類型名稱&gt;&#39;
 `Is`比較運算子會判斷兩個物件變數是否參考相同的執行個體。 這項比較是未定義實值類型。  

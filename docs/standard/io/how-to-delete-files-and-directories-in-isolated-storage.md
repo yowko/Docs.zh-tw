@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573483"
 ---
 # <a name="how-to-delete-files-and-directories-in-isolated-storage"></a>如何：刪除隔離儲存區中的檔案和目錄
 您可以刪除隔離儲存區檔案中的目錄和檔案。 在存放區內，檔案和目錄名稱都與作業系統相依，且會指定為相對於虛擬檔案系統的根目錄。 它們在 Windows 作業系統上不區分大小寫。  

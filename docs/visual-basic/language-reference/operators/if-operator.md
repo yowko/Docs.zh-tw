@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603960"
 ---
 # <a name="if-operator-visual-basic"></a>If 運算子 (Visual Basic)
 使用最少運算評估，有條件地傳回兩個值之一。 `If`可以呼叫具有三個引數或兩個引數的運算子。  

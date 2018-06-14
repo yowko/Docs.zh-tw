@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522316"
 ---
 # <a name="how-to-draw-an-existing-bitmap-to-the-screen"></a>如何：將現有點陣圖描繪至螢幕
 您可以輕鬆地繪製現有映像，螢幕上。 您必須先建立<xref:System.Drawing.Bitmap>使用點陣圖建構函式之檔案名稱，物件<xref:System.Drawing.Bitmap.%23ctor%28System.String%29>。 這個建構函式接受數個不同的檔案格式，包括 BMP、 GIF、 JPEG、 PNG 和 TIFF 影像。 建立之後<xref:System.Drawing.Bitmap>物件，傳遞<xref:System.Drawing.Bitmap>物件<xref:System.Drawing.Graphics.DrawImage%2A>方法<xref:System.Drawing.Graphics>物件。  

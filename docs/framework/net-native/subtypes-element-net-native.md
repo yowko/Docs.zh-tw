@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397984"
 ---
 # <a name="ltsubtypesgt-element-net-native"></a>&lt;Subtypes&gt; 項目 (.NET Native)
 將執行階段原則套用至從包含類型繼承的所有類別。  

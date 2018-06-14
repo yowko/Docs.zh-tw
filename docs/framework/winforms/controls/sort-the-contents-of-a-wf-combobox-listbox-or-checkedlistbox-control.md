@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535642"
 ---
 # <a name="how-to-sort-the-contents-of-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>如何：排序 Windows Form 中 ComboBox、ListBox 或 CheckedListBox 控制項的內容
 當資料繫結 Windows Form 控制項將不會排序。 若要顯示已排序的資料，請使用支援排序的資料來源，然後排序的資料來源。 支援排序的資料來源是資料的檢視、 資料檢視管理員和排序陣列。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599059"
 ---
 # <a name="operators-listed-by-functionality-visual-basic"></a>運算子 (依功能排列) (Visual Basic)
 請參閱下列其中一個下面所列的類別，或開啟說明資料表的內容，請參閱 < Visual Basic 運算子的字母順序排列的這個部分。  

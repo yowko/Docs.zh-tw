@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ab8ed5c4fa3dc0ed77c1948aa6c1b940ecc25c14
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421447"
 ---
 # <a name="icordebugremote-interface"></a>ICorDebugRemote 介面
 提供啟動或附加 Managed 偵錯工具至遠端目標處理序的功能。  
@@ -68,7 +69,7 @@ interface ICorDebugRemote : IUnknown
  目前，這項功能僅適用於偵錯遠端 Macintosh 電腦執行的 Silverlight 架構應用程式目標支援。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587429"
 ---
 # <a name="handles-clause-requires-a-withevents-variable-defined-in-the-containing-type-or-one-of-its-base-types"></a>Handles 子句需要 WithEvents 變數，該變數定義於包含類型或它的一種基底類型中
 您並未提供`WithEvents`變數中您`Handles`子句。 `Handles`程序宣告結尾處的關鍵字會導致它處理由使用所宣告物件變數引發的事件`WithEvents`關鍵字。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394975"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>透過 Proxy 存取網際網路
 如果您的網站使用 Proxy 來提供網際網路存取，則您必須設定 Proxy 執行個體，使您的應用程式能夠與 Web Proxy 進行通訊。  

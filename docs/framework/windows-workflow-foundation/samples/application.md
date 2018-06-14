@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513847"
 ---
 # <a name="application"></a>應用程式
 本節包含相關的工作流程應用程式中 Windows Workflow Foundation (WF) 範例。  

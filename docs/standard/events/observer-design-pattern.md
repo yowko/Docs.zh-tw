@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578109"
 ---
 # <a name="observer-design-pattern"></a>觀察器設計模式
 觀察者設計模式可讓訂閱者向提供者註冊，並且接收通知。 它適合任何需要推入型通知的情節。 這個模式會定義「提供者」(也稱為「主題」或「可預見值」)，以及零個、一個或多個「觀察者」。 觀察者會向提供者註冊，而且只要預先定義的條件、事件或狀態有所變更，提供者就會自動呼叫觀察者的其中一種方法，來通知所有觀察者。 在這個方法呼叫中，提供者也可以提供目前的狀態資訊給觀察者。 在 .NET Framework 中，觀察者設計模式是透過實作泛型 <xref:System.IObservable%601?displayProperty=nameWithType> 和 <xref:System.IObserver%601?displayProperty=nameWithType> 介面來套用。 泛型類型參數代表提供通知資訊的類型。  

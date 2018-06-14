@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526998"
 ---
 # <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>如何：使用複合模式控制 Alpha 混色
 有時可能會當您想要建立螢幕的點陣圖，具有下列特性：  

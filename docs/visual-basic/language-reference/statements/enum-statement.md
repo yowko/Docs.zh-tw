@@ -16,6 +16,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234012"
 ---
 # <a name="enum-statement-visual-basic"></a>Enum 陳述式 (Visual Basic)
 宣告列舉，並定義其成員的值。  

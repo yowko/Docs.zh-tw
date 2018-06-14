@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364944"
 ---
 # <a name="formulate-projections"></a>制定投影
 下列範例會顯示如何`select`C# 中的陳述式和`Select`在 Visual Basic 中的陳述式可以結合其他功能，以構成查詢投影。  

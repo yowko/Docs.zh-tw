@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586834"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>使用 Visual Basic 自訂專案和擴充 My 物件
 您可以自訂專案範本，提供額外`My`物件。 這可簡化其他開發人員尋找並使用您的物件。  

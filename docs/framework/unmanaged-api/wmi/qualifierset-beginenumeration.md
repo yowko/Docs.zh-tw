@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1fac897f743ca452c38282143cdf822b682df1df
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460111"
 ---
 # <a name="qualifiersetbeginenumeration-function"></a>QualifierSet_BeginEnumeration 函式
 將物件的辨識符號的列舉值重設列舉的開頭。  
@@ -74,7 +75,7 @@ HRESULT QualifierSet_BeginEnumeration (
 |`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | 傳回的傳播限定詞的名稱，從另一個物件。 <br/> 屬性： 傳回僅限定詞傳播給這個屬性從類別定義中，而不從本身的屬性。 <br/> 執行個體： 傳回傳播這些辨識符號，從類別定義。 <br/> 類別： 傳回繼承自父類別的只有這些限定詞的名稱。 |
 
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.idl  
   

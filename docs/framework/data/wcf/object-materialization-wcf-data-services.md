@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365458"
 ---
 # <a name="object-materialization-wcf-data-services"></a>物件具體化 (WCF 資料服務)
 當您使用**加入服務參考**對話方塊，即可取用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要中的.NET Framework 為基礎的用戶端應用程式時，對等的資料類別都會產生摘要所公開的資料模型中每個實體類型。 如需詳細資訊，請參閱[產生資料服務用戶端程式庫](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)。 查詢所傳回之實體資料會具體化為其中一個產生之用戶端資料服務類別的執行個體。 合併選項和識別解析為追蹤之物件的相關資訊，請參閱[管理資料服務內容](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)。  

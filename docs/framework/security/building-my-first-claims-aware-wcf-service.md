@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399609"
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>建置第一個宣告感知 WCF 服務
 ## <a name="applies-to"></a>適用於  

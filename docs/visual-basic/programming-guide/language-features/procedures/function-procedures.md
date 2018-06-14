@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655531"
 ---
 # <a name="function-procedures-visual-basic"></a>函式程序 (Visual Basic)
 A`Function`程序是一系列的 Visual Basic 陳述式加上`Function`和`End Function`陳述式。 `Function`程序執行的工作，並再將控制權傳回給呼叫程式碼。 當它傳回控制項時，它也會傳回值，呼叫程式碼。  

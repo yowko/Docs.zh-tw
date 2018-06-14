@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527011"
 ---
 # <a name="how-to-change-the-type-of-a-windows-forms-datagridview-column-using-the-designer"></a>如何：使用設計工具變更 Windows Form DataGridView 資料行的類型
 有時您會想要變更的資料行，已新增至 Windows Form 的型別<xref:System.Windows.Forms.DataGridView>控制項。 例如，您可能要修改的某些資料行時將控制項繫結至資料來源自動產生的型別。 當您顯示的資料表有包含相關資料表中的資料列的外部索引鍵資料行時，這非常有用。 在此情況下，您可能想要取代顯示這些外部索引鍵，以顯示更有意義的值，從相關資料表中的下拉式方塊資料行的文字 方塊中資料行。  

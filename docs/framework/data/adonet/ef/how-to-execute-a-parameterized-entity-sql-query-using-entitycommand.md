@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767176"
 ---
 # <a name="how-to-execute-a-parameterized-entity-sql-query-using-entitycommand"></a>如何：使用 EntityCommand 執行 Entity SQL 查詢
 本主題示範如何執行[!INCLUDE[esql](../../../../../includes/esql-md.md)]使用具有參數的查詢<xref:System.Data.EntityClient.EntityCommand>物件。  

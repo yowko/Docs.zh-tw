@@ -6,6 +6,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33956178"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>逐步解說：使用 C# 保存物件 #
 

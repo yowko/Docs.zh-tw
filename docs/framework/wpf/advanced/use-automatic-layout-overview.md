@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548311"
 ---
 # <a name="use-automatic-layout-overview"></a>使用自動配置概觀
 本主題將介紹如何撰寫的開發人員的指導方針[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]可當地語系化的應用程式[!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]。 在過去，當地語系化的[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]耗時的程序。 每一種語言，[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]是改為所需的像素的像素調整。 使用正確的設計和編碼標準，右邊今日[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]可用於建構，所以當地語系化人員需要小於調整大小和執行重新調整位置。 撰寫應用程式都可以更輕鬆地調整大小和重新定位的方法在呼叫自動配置，而且可藉由使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式的設計。  

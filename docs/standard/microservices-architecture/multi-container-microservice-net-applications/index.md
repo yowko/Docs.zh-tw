@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571952"
 ---
 # <a name="designing-and-developing-multi-container-and-microservice-based-net-applications"></a>設計和開發多容器和微服務 .NET 應用程式
 

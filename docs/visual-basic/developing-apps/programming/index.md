@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587406"
 ---
 # <a name="programming-in-visual-basic"></a>Visual Basic 中的程式設計
 本節將討論您可能想要在建立 Visual Basic 應用程式時深入了解的程式設計工作。  

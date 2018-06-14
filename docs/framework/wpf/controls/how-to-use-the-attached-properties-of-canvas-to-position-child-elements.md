@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552370"
 ---
 # <a name="how-to-use-the-attached-properties-of-canvas-to-position-child-elements"></a>操作說明：使用 Canvas 的附加屬性置放子元素
 這個範例示範如何使用附加的屬性<xref:System.Windows.Controls.Canvas>来放置子項目。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595956"
 ---
 # <a name="mycomputerclock-object"></a>My.Computer.Clock 物件
 提供屬性，以從系統時鐘存取目前當地時間與國際標準時間 (相當於格林威治標準時間)。  

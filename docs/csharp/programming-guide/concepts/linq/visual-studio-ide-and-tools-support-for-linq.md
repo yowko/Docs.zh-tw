@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330716"
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-c"></a>LINQ 的 Visual Studio IDE 和工具支援 (C#)
 Visual Studio 整合式開發環境 (IDE) 提供支援 LINQ 應用程式開發的下列功能：  

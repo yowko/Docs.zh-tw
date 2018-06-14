@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572732"
 ---
 # <a name="struct-design"></a>結構設計
 一般用途的實值類型通常稱為結構，其 C# 關鍵字。 本節提供一般結構設計指導方針。  

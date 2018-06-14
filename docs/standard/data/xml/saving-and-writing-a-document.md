@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573590"
 ---
 # <a name="saving-and-writing-a-document"></a>儲存與寫入文件
 載入及儲存 <xref:System.Xml.XmlDocument> 時，儲存的文件與原始文件在下列方面可能不同：  

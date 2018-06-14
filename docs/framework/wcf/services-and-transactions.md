@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504315"
 ---
 # <a name="services-and-transactions"></a>服務與異動
 Windows Communication Foundation (WCF) 應用程式能夠起始用戶端內的異動，並協調服務作業中的異動。 用戶端可以初始化異動並叫用數個服務作業，同時確保服務作業已認可，或是復原為單一單位。  

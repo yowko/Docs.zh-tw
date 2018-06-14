@@ -6,9 +6,10 @@ ms.author: wiwagn
 ms.date: 09/22/2017
 ms.openlocfilehash: 0093c19830d752d8b425c0a447693316eb6da9b8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567779"
 ---
 # <a name="introduction-to-the-docker-application-life-cycle"></a>Docker 應用程式生命週期簡介
  

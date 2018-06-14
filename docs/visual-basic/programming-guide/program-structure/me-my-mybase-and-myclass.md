@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650523"
 ---
 # <a name="me-my-mybase-and-myclass-in-visual-basic"></a>Visual Basic 中的 Me、My、MyBase 和 MyClass
 `Me``My`， `MyBase`，和`MyClass`在 Visual Basic 中有類似的名稱，但不同的用途。 本主題會描述每個實體以加以區別。  

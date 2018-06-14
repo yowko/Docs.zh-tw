@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648067"
 ---
 # <a name="nested-control-structures-visual-basic"></a>巢狀控制結構 (Visual Basic)
 您可以將放控制陳述式內部的其他控制陳述式，例如`If...Then...Else`區塊內`For...Next`迴圈。 放在另一個控制陳述式內的控制陳述式即為*巢狀*。  

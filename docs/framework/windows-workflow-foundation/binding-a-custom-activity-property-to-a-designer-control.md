@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513545"
 ---
 # <a name="binding-a-custom-activity-property-to-a-designer-control"></a>將自訂活動屬性繫結至設計工具控制項
 將文字方塊設計工具控制項繫結至活動引數相當簡單。不過，將複雜的設計工具控制項 (例如下拉式方塊) 繫結至活動引數可能會呈現挑戰。 本主題討論如何將活動引數繫結至自訂活動設計工具上的下拉式方塊控制項。  

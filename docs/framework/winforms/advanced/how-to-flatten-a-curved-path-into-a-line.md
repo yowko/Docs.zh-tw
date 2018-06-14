@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521199"
 ---
 # <a name="how-to-flatten-a-curved-path-into-a-line"></a>如何：將曲線路徑簡維為線條
 A<xref:System.Drawing.Drawing2D.GraphicsPath>物件會儲存一連串的線路與貝茲曲線。 您可以加入幾種類型的曲線 （省略符號、 弧線、 曲線） 的路徑，但之前儲存的路徑中，將會轉換成貝茲曲線的每個曲線。 簡維路徑包含將在路徑中的每個貝茲曲線轉換成一系列直線。 下圖顯示路徑之前和之後扁平化。  

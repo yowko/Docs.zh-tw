@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505045"
 ---
 # <a name="web-hosting-a-queued-application"></a>以 Web 裝載佇列應用程式
 Windows Process Activation Service (WAS) 管理啟用和包含該主機的 Windows Communication Foundation (WCF) 服務的應用程式的工作者處理序的存留期。 WAS 處理序模型會藉由移除 HTTP 上的相依性，將 HTTP 伺服器的 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 處理序模型一般化。 這可讓 WCF 服務使用 HTTP 和非 HTTP 通訊協定，例如 net.msmq 和 msmq.formatname，可支援訊息型啟用，並提供裝載大量應用程式在給定電腦上之能力的裝載環境中。  

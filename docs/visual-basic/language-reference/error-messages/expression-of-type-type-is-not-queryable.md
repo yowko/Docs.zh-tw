@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589005"
 ---
 # <a name="expression-of-type-lttypegt-is-not-queryable"></a>型別的運算式&lt;類型&gt;不是可查詢
 型別的運算式\<類型 > 不是可供查詢。 請確定您沒有遺漏組件參考和/或命名空間匯入的 LINQ 提供者。  

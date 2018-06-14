@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523338"
 ---
 # <a name="how-to-draw-a-line-on-a-windows-form"></a>如何：在 Windows Form 上繪製線條
 這個範例會在表單上繪製一條線。 通常，當您在表單上繪製時，您會處理表單的<xref:System.Windows.Forms.Control.Paint>事件，並執行繪圖使用<xref:System.Windows.Forms.PaintEventArgs.Graphics%2A>屬性<xref:System.Windows.Forms.PaintEventArgs>，在此範例所示  

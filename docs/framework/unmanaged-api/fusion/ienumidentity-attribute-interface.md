@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: da6462a320b1f090940473f566ade91d36e74780
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431697"
 ---
 # <a name="ienumidentityattribute-interface"></a>IEnumIDENTITY_ATTRIBUTE 介面
 可做為目前範圍中的程式碼物件的屬性的列舉值。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/04/2018
 |`IEnumIDENTITY_ATTRIBUTE::Skip`|將指令指標向前移以指定的項目，從目前位置開始。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Isolation.h  
   

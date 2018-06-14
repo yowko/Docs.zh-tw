@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522821"
 ---
 # <a name="getting-started-with-graphics-programming"></a>圖形程式設計入門
 本節說明如何開始使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]Windows Forms 應用程式。 下列主題示範如何完成數個[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]工作，例如繪製和填滿圖形和文字。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552684"
 ---
 # <a name="wpf-host-presentationhostexe"></a>WPF 主應用程式 (PresentationHost.exe)
 Windows Presentation Foundation (WPF) 主機 (PresentationHost.exe) 是應用程式可讓[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]相容的瀏覽器裝載應用程式 (包括[!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)]和更新版本)。 根據預設，Windows Presentation Foundation (WPF) 主機是否註冊為殼層和[!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)]處理常式瀏覽器裝載[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]內容，其中包括：  

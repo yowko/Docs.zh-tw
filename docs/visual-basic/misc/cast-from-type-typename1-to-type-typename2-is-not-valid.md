@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636089"
 ---
 # <a name="cast-from-type-39lttypename1gt39-to-type-39lttypename2gt39-is-not-valid"></a>從型別轉型&#39; &lt;typename1&gt; &#39;輸入&#39; &lt;2>&gt; &#39;無效
 嘗試將變數從一種類型轉換成另一種類型不正確。  

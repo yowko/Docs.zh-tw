@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592414"
 ---
 # <a name="the-managed-thread-pool"></a>Managed 執行緒集區
 <xref:System.Threading.ThreadPool> 類別為您的應用程式提供了受到系統管理的背景工作執行緒集區，讓您專注於應用程式工作上，而不是執行緒的管理。 如果您有需要在背景處理的簡短工作，Managed 執行緒集區是利用多重執行緒的一個簡單方式。 例如，從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，您可以建立 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 物件，這兩個物件會在執行緒集區執行緒上執行非同步工作。  

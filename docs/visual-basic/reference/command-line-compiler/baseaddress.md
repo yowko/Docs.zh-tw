@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650146"
 ---
 # <a name="-baseaddress"></a>-baseaddress
 建立 DLL 時，請指定預設基底地址。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/04/2018
   
 |在 Visual Studio IDE 中設定-baseaddress|  
 |---|  
-|1.在 **方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。 <br />2.按一下 [編譯] 索引標籤。<br />3.按一下 [ **進階**]。<br />4.修改中的值**DLL 基底位址：**方塊。 **注意：** **DLL 基底位址：**方塊是唯讀的除非目標是 DLL。|  
+|1.在 **方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。 <br />2.按一下 [編譯] 索引標籤。<br />3.按一下 [ **進階**]。<br />4.修改中的值**DLL 基底位址：** 方塊。 **注意：** **DLL 基底位址：** 方塊是唯讀的除非目標是 DLL。|  
   
 ## <a name="see-also"></a>另請參閱  
  [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)  

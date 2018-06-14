@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579232"
 ---
 # <a name="custom-numeric-format-strings"></a>自訂數值格式字串
 您可以建立由一個或多個自訂數值規範所組成的自訂數值格式字串，以定義如何格式化數值資料。 自訂數值格式字串為任何非 [標準數值格式字串](../../../docs/standard/base-types/standard-numeric-format-strings.md)的格式字串。  

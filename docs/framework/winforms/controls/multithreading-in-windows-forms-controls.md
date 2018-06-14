@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536353"
 ---
 # <a name="multithreading-in-windows-forms-controls"></a>在 Windows Form 控制項中的多執行緒
 在許多應用程式，您可以讓您的使用者介面 (UI) 更能有效回應執行耗時的作業，另一個執行緒上。 數個工具可供多執行緒 Windows Form 控制項，包括<xref:System.Threading>命名空間，<xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType>方法，而`BackgroundWorker`元件。  

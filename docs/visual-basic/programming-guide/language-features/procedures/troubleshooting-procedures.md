@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655515"
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>疑難排解程序 (Visual Basic)
 此頁面會列出處理程序時，可能會發生的一些常見問題。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/04/2018
   
  陳述式`allOnes(i) = 1`會產生編譯器錯誤，因為它似乎呼叫`allOnes`與錯誤的資料類型的引數 (單一`Integer`而不是`Integer`陣列)。 陳述式`Return allOnes()`會產生編譯器錯誤，因為它似乎呼叫`allOnes`但沒有引數。  
   
- **正確的方法：**能夠修改要傳回之陣列的項目，定義內部陣列做為本機變數。 下列範例會編譯無誤。  
+ **正確的方法：** 能夠修改要傳回之陣列的項目，定義內部陣列做為本機變數。 下列範例會編譯無誤。  
   
  [!code-vb[VbVbcnProcedures#66](./codesnippet/VisualBasic/troubleshooting-procedures_1.vb)]  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 05/04/2018
   
  第二個`MsgBox`呼叫顯示"之後 replace(n): 11、 21、 31、 41"。 因為`n`傳遞`ByVal`，`replace`無法修改變數`n`指派給它的新陣列。 當`replace`建立新的陣列執行個體`k`並將它指派給本機變數`a`，就會失去參考`n`傳入呼叫程式碼。 它會遞增的成員`a`，只有本機陣列`k`會受到影響。  
   
- **正確的方法：**能夠修改對應的變數項目本身，其傳址方式傳遞。 下列範例顯示的宣告中的變更`replace`，可讓它來取代另一個呼叫的程式碼中的一個陣列。  
+ **正確的方法：** 能夠修改對應的變數項目本身，其傳址方式傳遞。 下列範例顯示的宣告中的變更`replace`，可讓它來取代另一個呼叫的程式碼中的一個陣列。  
   
  [!code-vb[VbVbcnProcedures#64](./codesnippet/VisualBasic/troubleshooting-procedures_5.vb)]  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 05/04/2018
   
  若要多載程序，不能只改變一個或多個先前的項目。  
   
- **正確的方法：**能夠定義程序多載，您必須在不同的簽章。 因為您必須使用相同的名稱，您必須更改數目、 順序或資料類型的參數。 在泛型程序中，您可以不同型別參數數目。 在轉換運算子 ([CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md))，您可以不同的傳回型別。  
+ **正確的方法：** 能夠定義程序多載，您必須在不同的簽章。 因為您必須使用相同的名稱，您必須更改數目、 順序或資料類型的參數。 在泛型程序中，您可以不同型別參數數目。 在轉換運算子 ([CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md))，您可以不同的傳回型別。  
   
 ### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>多載解析的選擇性和 ParamArray 引數  
  如果您多載的程序有一或多個[選擇性](../../../../visual-basic/language-reference/modifiers/optional.md)參數或[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)參數，您必須避免重複的任一*隱含多載*。 如需資訊，請參閱[中多載化程序的考量](./considerations-in-overloading-procedures.md)。  
@@ -115,7 +116,7 @@ ms.lasthandoff: 05/04/2018
   
  在第二個呼叫中，編譯器無法排除任何多載根據縮小。 它也消除了第三個多載基於相同理由，如同第一個呼叫，因為它可以呼叫具有較少的擴展引數類型的第二個多載。 不過，編譯器無法解析的第一個和第二個多載之間。 各有一個定義的參數類型可擴展成中的其他對應的類型 (`Byte`至`Short`，但`Single`至`Double`)。 因此，編譯器會產生多載解析錯誤。  
   
- **正確的方法：**能夠呼叫多載程序不模稜兩可，請使用[CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)以符合參數型別引數資料類型。 下列範例會示範呼叫`z`，強制第二個多載解析。  
+ **正確的方法：** 能夠呼叫多載程序不模稜兩可，請使用[CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)以符合參數型別引數資料類型。 下列範例會示範呼叫`z`，強制第二個多載解析。  
   
  [!code-vb[VbVbcnProcedures#65](./codesnippet/VisualBasic/troubleshooting-procedures_8.vb)]  
   

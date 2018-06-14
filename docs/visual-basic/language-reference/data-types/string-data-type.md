@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592115"
 ---
 # <a name="string-data-type-visual-basic"></a>String 資料類型 (Visual Basic)
 保存該範圍的不帶正負號的 16 位元 （2 個位元組） 字碼指標的序列，從 0 到 65535 的值。 每個*程式碼點*，或字元碼，表示單一 Unicode 字元。 字串可包含 0 到大約二十億 (2 ^31) 的 Unicode 字元。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34233908"
 ---
 # <a name="interface-statement-visual-basic"></a>Interface 陳述式 (Visual Basic)
 宣告介面的名稱，並引進組成介面成員的定義。  

@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 728acc09f739fe567fca4a2571cbabf1ba8838a2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427427"
 ---
 # <a name="isymunmanagedmethod-interface"></a>ISymUnmanagedMethod 介面
 代表符號存放區內的方法。 這個介面提供存取只與符號相關屬性的方法，而非類型相關的屬性。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/04/2018
 |[GetToken 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-gettoken-method.md)|傳回這個方法的中繼資料語彙基元。|  
   
 ## <a name="requirements"></a>需求  
- **標頭：**於 CorSym.idl、 CorSym.h  
+ **標頭：** 於 CorSym.idl、 CorSym.h  
   
 ## <a name="see-also"></a>另請參閱  
  [診斷符號存放區介面](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

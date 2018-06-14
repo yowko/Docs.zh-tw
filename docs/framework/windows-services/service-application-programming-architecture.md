@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516103"
 ---
 # <a name="service-application-programming-architecture"></a>服務應用程式的程式設計架構
 Windows 服務應用程式會以繼承自 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 類別的類別為基礎。 您會覆寫來自這個類別的方法，並定義適用於它們的功能以決定服務的行為方式。  

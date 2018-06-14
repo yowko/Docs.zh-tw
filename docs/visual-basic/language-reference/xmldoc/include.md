@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602732"
 ---
 # <a name="ltincludegt-visual-basic"></a>&lt;包含&gt;(Visual Basic)
 參考的類型和成員在原始程式碼中的所描述的另一個檔案。  

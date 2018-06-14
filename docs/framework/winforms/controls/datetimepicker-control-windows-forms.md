@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526539"
 ---
 # <a name="datetimepicker-control-windows-forms"></a>DateTimePicker 控制項 (Windows Form)
 Windows Form`DateTimePicker`控制項可讓使用者選取單一項目從清單中的日期或時間。 用來代表日期時，它會出現在兩個部分： 以文字和一個方格，其中會顯示當您按一下清單旁邊的向下箭號表示日期的下拉式清單。  

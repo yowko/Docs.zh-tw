@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604298"
 ---
 # <a name="amp-operator-visual-basic"></a>&amp; 運算子 (Visual Basic)
 產生的字串串連兩個運算式。  

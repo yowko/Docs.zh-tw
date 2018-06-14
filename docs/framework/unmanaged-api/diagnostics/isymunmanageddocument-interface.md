@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f75e517890275b90523dc42cdac3a83d871beac7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427198"
 ---
 # <a name="isymunmanageddocument-interface"></a>ISymUnmanagedDocument 介面
 代表符號存放區所參考的文件。 文件是由統一資源定位器 (URL) 和 GUID 文件類型定義。 您可以找出不論如何使用 URL 儲存文件及文件類型的 GUID。 您可以在符號存放區中儲存的文件來源，並透過此介面擷取它。  

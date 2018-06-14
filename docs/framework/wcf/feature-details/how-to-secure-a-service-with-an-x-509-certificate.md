@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493038"
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>HOW TO：使用 X.509 憑證來確保服務安全
 保護使用 X.509 憑證的服務是 Windows Communication Foundation (WCF) 中的大多數繫結使用的基本技術。 此主題會介紹使用 X.509 憑證設定自我主控服務的步驟。  

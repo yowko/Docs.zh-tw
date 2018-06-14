@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 86d48461c601b53d4461331a11a0e0ac7ddc6e7c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412541"
 ---
 # <a name="icordebugevalcallfunction-method"></a>ICorDebugEval::CallFunction 方法
 設定指定函式的呼叫。  

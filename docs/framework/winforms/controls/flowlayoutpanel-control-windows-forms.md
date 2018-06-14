@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524396"
 ---
 # <a name="flowlayoutpanel-control-windows-forms"></a>FlowLayoutPanel 控制項 (Windows Form)
 `FlowLayoutPanel` 控制項會以水平或垂直的流動方向來排列其內容。 其內容可以從某一資料列換行至下一個資料列，或從某一資料行換行至下一個資料行。 此外，也可裁剪其內容而不換行。  

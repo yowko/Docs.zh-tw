@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644104"
 ---
 # <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a>如何： 排序多個索引鍵 (Visual Basic) 的項目
 這個主題顯示如何在多個索引鍵上排序。  

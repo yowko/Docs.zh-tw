@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595286"
 ---
 # <a name="assembly-visual-basic"></a>Assembly (Visual Basic)
 指定的原始程式檔開頭的屬性會套用到整個組件。  

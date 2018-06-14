@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641124"
 ---
 # <a name="use-39fileputobject39-instead-of-39fileput39-when-using-argument-of-type-39object39"></a>使用&#39;FilePutObject&#39;而不是&#39;FilePut&#39;的型別引數時&#39;物件&#39;
 `FilePut`方法包含類型的引數`Object`。 `FilePutObject` 應該用於取代 `FilePut` ，以避免模稜兩可。  

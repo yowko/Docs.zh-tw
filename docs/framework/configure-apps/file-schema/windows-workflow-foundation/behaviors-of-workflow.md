@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767306"
 ---
 # <a name="ltbehaviorsgt-of-workflow"></a>工作流程的 &lt;behaviors&gt;
 這個項目包含**serviceBehaviors**集合。  集合中的每個項目都會定義工作流程服務使用的行為項目。 每個行為項目由其唯一**名稱**屬性。  

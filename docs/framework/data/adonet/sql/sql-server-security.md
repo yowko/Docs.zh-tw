@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364203"
 ---
 # <a name="sql-server-security"></a>SQL Server 安全性
 SQL Server 具有許多功能，可支援安全資料庫應用程式的建立。  

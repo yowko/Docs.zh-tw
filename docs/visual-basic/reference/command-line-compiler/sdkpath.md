@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654761"
 ---
 # <a name="-sdkpath"></a>-sdkpath
 指定 mscorlib.dll 和 Microsoft.VisualBasic.dll 的位置。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525043"
 ---
 # <a name="three-categories-of-graphics-services"></a>圖形服務的三個分類
 在 Windows Form 中的圖形供應項目可分為下列三個主要類別：  

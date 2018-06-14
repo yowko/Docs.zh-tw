@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546132"
 ---
 # <a name="preview-events"></a>預覽事件
 預覽事件，也就是通道事件，是路由的事件，其中的路由方向是從應用程式根目錄，向引發事件，且會回報為事件資料來源的項目。 並非所有事件案例支援或需要預覽事件。本主題描述的情況下，其中預覽事件存在，應用程式或元件應如何處理它們和情況下，建立自訂元件或類別中預覽事件可能會適當。  

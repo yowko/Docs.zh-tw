@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358608"
 ---
 # <a name="oracle-sequences"></a>Oracle 序列
 .NET Framework Data Provider for Oracle 藉由使用 <xref:System.Data.OracleClient.OracleDataAdapter>，支援在執行插入後擷取伺服器所產生的「Oracle 序列」索引鍵值。  

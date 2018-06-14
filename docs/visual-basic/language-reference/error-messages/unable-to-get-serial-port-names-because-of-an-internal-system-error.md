@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596651"
 ---
 # <a name="unable-to-get-serial-port-names-because-of-an-internal-system-error"></a>無法取得序列埠名稱，因為有內部系統錯誤
 呼叫 `My.Computer.Ports.SerialPortNames` 屬性時發生內部錯誤。  

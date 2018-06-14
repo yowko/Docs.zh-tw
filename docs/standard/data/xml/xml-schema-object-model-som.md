@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570121"
 ---
 # <a name="xml-schema-object-model-som"></a>XML 結構描述物件模型 (SOM)
 XML 結構描述是一種功能強大且複雜的工具，其用於在相容 XML 文件中建立及驗證結構。 與關聯式資料庫中的資料模型化相似，結構描述提供一種定義 XML 文件結構的方法，即指定可在文件中使用的項目，以及為了對該指定結構描述有效，這些項目必須遵循的結構及型別。  

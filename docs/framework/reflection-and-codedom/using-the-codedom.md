@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399015"
 ---
 # <a name="using-the-codedom"></a>使用 CodeDOM
 CodeDOM 提供的類型代表許多常見的原始程式碼項目類型。 您可以設計程式，建置使用 CodeDOM 項目的原始程式碼模型，組合物件圖形。 此物件圖形可以轉譯成使用 CodeDOM 程式碼產生器的原始程式碼，處理受支援的程式設計語言。 您也可以使用 CodeDOM 將原始程式碼編譯成二進位組件。  

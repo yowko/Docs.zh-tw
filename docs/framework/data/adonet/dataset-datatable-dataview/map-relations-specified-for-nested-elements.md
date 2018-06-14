@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756692"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>針對巢狀項目指定的關聯進行對應
 結構描述可以包含**msdata: relationship**註解明確指定結構描述中任何兩個項目之間的對應。 在指定的兩個項目**msdata: relationship**可以巢狀結構描述，但沒有為。 對應處理會使用**msdata: relationship**結構描述產生的主索引鍵/外部索引鍵關聯性之間的兩個資料行中。  

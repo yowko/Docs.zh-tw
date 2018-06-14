@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599840"
 ---
 # <a name="key-visual-basic"></a>Key (Visual Basic)
 `Key`關鍵字可讓您指定之屬性的匿名型別行為。 只有屬性指定為索引鍵屬性中的匿名型別執行個體或計算的雜湊程式碼的值之間的等號比較測試。 無法變更索引鍵屬性的值。  

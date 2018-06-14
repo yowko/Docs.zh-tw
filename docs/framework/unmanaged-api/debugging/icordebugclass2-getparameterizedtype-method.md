@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6a5b3a28c7250a16e78e199bceff7c9e64517319
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408209"
 ---
 # <a name="icordebugclass2getparameterizedtype-method"></a>ICorDebugClass2::GetParameterizedType 方法
 取得這個類別的型別宣告。  
@@ -63,7 +64,7 @@ HRESULT GetParameterizedType (
  導入`ICorDebugType`物件以代表執行階段概念類型的已產生漣漪效果在整個應用程式開發介面。 先前所花費的函式`ICorDebugClass`或`ICorDebugClass2`物件，或甚至`CorElementType`值已經被一般化採取`ICorDebugType`物件。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   

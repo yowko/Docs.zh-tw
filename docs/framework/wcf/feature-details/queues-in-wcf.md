@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496584"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Windows Communication Foundation 中的佇列
 本節中的主題會討論 Windows Communication Foundation (WCF) 支援的佇列。 WCF 支援利用 Microsoft Message Queuing （舊稱 MSMQ） 做為傳輸方式的佇列，並可讓下列案例：  

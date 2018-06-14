@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538024"
 ---
 # <a name="how-to-display-option-buttons-in-a-menustrip-windows-forms"></a>如何：在 MenuStrip 中顯示選項按鈕 (Windows Form)
 選項按鈕，也稱為 「 選項按鈕的類似於核取方塊，不同之處在於使用者只能選取一個一次。 雖然預設<xref:System.Windows.Forms.ToolStripMenuItem>類別並未提供選項按鈕的行為，但是類別提供您可以自訂實作中功能表項目的選項按鈕行為的核取方塊行為<xref:System.Windows.Forms.MenuStrip>控制項。  

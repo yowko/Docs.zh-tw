@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585167"
 ---
 # <a name="events-of-shared-withevents-variables-cannot-be-handled-by-non-shared-methods"></a>共用 WithEvents 變數的事件不能由非共用的方法處理
 宣告變數`Shared`修飾詞是共用的變數。 共用的變數會識別一個儲存位置。 宣告變數`WithEvents`變數所屬的類型，處理變數引發的事件集的判斷提示的修飾詞。 屬性值指派給變數時，建立由`WithEvents`宣告取消攔截任何現有的事件處理常式，並透過新的事件處理常式連結`Add`方法。  

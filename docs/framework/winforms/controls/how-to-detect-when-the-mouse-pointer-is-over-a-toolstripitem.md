@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530493"
 ---
 # <a name="how-to-detect-when-the-mouse-pointer-is-over-a-toolstripitem"></a>如何：當滑鼠指標移至 ToolStripItem 上時偵測
 使用下列程序來偵測當滑鼠指標位於<xref:System.Windows.Forms.ToolStripItem>。  

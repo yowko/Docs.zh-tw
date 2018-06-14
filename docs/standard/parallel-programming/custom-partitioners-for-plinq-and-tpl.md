@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592362"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>PLINQ 和 TPL 的自訂 Partitioner
 若要將資料來源上的作業平行化，其中一個必要步驟就是將來源「分割」成多個可供多個執行緒同時存取的區段。 PLINQ 和「工作平行程式庫」(TPL) 提供預設的 Partitioner，可在您撰寫平行查詢或 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 迴圈時在背景中運作。 針對較進階的案例，您可以插入自己的 Partitioner。  

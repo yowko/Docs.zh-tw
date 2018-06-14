@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598579"
 ---
 # <a name="pathfile-access-error"></a>路徑/檔案存取錯誤
 檔案存取或磁碟存取作業時，作業系統無法建立路徑和檔案名稱之間的連接。  

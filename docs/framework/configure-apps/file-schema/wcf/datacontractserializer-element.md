@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752763"
 ---
 # <a name="ltdatacontractserializergt"></a>&lt;DataContractSerializer&gt;
 包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的組態資料。 這個項目會出現在兩個不同的階層架構中。 其中一個列於接下來的＜結構描述階層架構＞一節，另一個則列於＜備註＞一節中。  

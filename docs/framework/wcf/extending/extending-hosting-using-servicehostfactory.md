@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806204"
 ---
 # <a name="extending-hosting-using-servicehostfactory"></a>使用 ServiceHostFactory 擴充裝載
 標準<xref:System.ServiceModel.ServiceHost>應用程式開發介面，用於裝載服務中 Windows Communication Foundation (WCF) 為 WCF 架構中的擴充點。 使用者可以從 <xref:System.ServiceModel.ServiceHost> 衍生自己的主機類別，通常要覆寫 <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening> 以使用 <xref:System.ServiceModel.Description.ServiceDescription> 以便在開啟服務之前以命令方式新增預設端點或修改行為。  

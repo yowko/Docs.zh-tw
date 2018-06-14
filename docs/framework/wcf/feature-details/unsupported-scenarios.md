@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507709"
 ---
 # <a name="unsupported-scenarios"></a>不支援的案例
 基於各種原因，Windows Communication Foundation (WCF) 不支援某些特定的安全性案例。 例如， [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition 不會實作 SSPI 或 Kerberos 驗證通訊協定，而且因此 WCF 不支援該平台上使用 Windows 驗證來執行服務。 執行 Windows XP Home Edition 下的 WCF 時，會支援如使用者名稱/密碼與 HTTP/HTTPS 整合式的驗證之類的其他驗證機制。  

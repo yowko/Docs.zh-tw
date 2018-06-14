@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655128"
 ---
 # <a name="procedures-in-visual-basic"></a>Visual Basic 中的程序
 A*程序*是 Visual Basic 陳述式的宣告陳述式括住的區塊 (`Function`， `Sub`， `Operator`， `Get`， `Set`) 和符合`End`宣告。 在 Visual Basic 中的所有可執行陳述式必須是某些程序內。  

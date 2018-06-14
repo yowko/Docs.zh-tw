@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603557"
 ---
 # <a name="-operator"></a>\\= 運算子
 將運算式的值的變數或屬性的值除以並指派給變數或屬性的整數結果。  

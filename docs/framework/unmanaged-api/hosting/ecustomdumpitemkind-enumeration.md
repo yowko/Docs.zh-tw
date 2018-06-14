@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 777fa850fcab1d1a6191c605ecb2f2a181fddcc0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429915"
 ---
 # <a name="ecustomdumpitemkind-enumeration"></a>ECustomDumpItemKind 列舉
 保留供未來擴充功能的[CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md)結構。  
@@ -40,7 +41,7 @@ typedef enum {
 |`DUMP_ITEM_None`|保留供未來使用。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   

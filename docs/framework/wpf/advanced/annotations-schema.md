@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542011"
 ---
 # <a name="annotations-schema"></a>附註結構描述
 本主題說明 Microsoft Annotations Framework 用來儲存和擷取使用者註釋資料的 XML 結構描述定義 (XSD)。  

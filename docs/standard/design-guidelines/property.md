@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577089"
 ---
 # <a name="property-design"></a>屬性設計
 雖然技術上非常類似於方法內容，但它們是根據它們的使用案例相當不同。 這些應該視為智慧型欄位。 有的欄位，呼叫的語法和方法的彈性。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496967"
 ---
 # <a name="how-to-create-a-federated-client"></a>HOW TO：建立聯合用戶端
 在 Windows Communication Foundation (WCF)，建立的用戶端*同盟服務*包含三個主要步驟：  

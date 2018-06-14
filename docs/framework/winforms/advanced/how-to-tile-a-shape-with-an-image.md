@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523119"
 ---
 # <a name="how-to-tile-a-shape-with-an-image"></a>如何：使用影像並排顯示圖案
 磚可以放在相鄰涵蓋樓層，如同可以相鄰放置矩形的映像，填滿 （磚） 圖形。 若要並排顯示圖案的內部，使用紋理筆刷。 當您建構<xref:System.Drawing.TextureBrush>物件，其中您傳遞給建構函式的引數為<xref:System.Drawing.Image>物件。 當您使用的材質筆刷繪製圖形內部時，此映像的重複複本填滿的圖案。  

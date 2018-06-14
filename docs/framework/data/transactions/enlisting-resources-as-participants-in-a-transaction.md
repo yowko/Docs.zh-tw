@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365601"
 ---
 # <a name="enlisting-resources-as-participants-in-a-transaction"></a>將資源登記成為交易中的參與者
 參與交易的每項資源都會受到資源管理員的管理，而這些資源管理員在採取行動時必須經過交易管理員的協調。 訂閱者透過交易管理員登記到交易中，並收到告知來完成整個協調程序。  

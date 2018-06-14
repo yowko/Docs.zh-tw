@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218942"
 ---
 # <a name="-warnaserror-c-compiler-options"></a>-warnaserror (C# 編譯器選項)
 **-warnaserror+** 選項會將所有警告都視為錯誤  

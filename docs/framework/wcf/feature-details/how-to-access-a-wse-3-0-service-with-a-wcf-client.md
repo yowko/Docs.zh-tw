@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492521"
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>HOW TO：使用 WCF 用戶端來存取 WSE 3.0 服務
 WCF 用戶端設定為使用 August 2004 Ws-addressing 規格版本時，Windows Communication Foundation (WCF) 用戶端會將 Microsoft.NET 服務的連線層級相容 Web Services Enhancements (WSE) 3.0 與。 不過，WSE 3.0 服務不支援中繼資料交換 (MEX) 通訊協定，因此當您使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)若要建立 WCF 用戶端類別，安全性設定不會套用至所產生WCF 用戶端。 因此，您必須指定安全性設定，將 WSE 3.0 服務需要產生 WCF 用戶端之後。  

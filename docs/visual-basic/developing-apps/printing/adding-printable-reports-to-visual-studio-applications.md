@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592050"
 ---
 # <a name="adding-printable-reports-to-visual-studio-applications"></a>將可列印報表加入至 Visual Studio 應用程式
 Visual Studio 支援各種不同的報表方案，可將報告給 Visual Basic 應用程式的豐富資料。 您可以建立並加入使用 ReportViewer 控制項、 採用的 Crystal Reports 或 SQL Server Reporting Services 報表。  

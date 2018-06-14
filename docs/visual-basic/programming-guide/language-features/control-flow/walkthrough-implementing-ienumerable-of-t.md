@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656323"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>逐步解說：在 Visual Basic 中實作 IEnumerable(Of T)
 <xref:System.Collections.Generic.IEnumerable%601>可以一次傳回一個項目值序列的類別會實作介面。 傳回的資料一次的一個項目是您沒有將一組完整的資料載入記憶體，才能使用它的優點。 您只需要使用足夠的記憶體載入資料的單一項目。 類別可實作`IEnumerable(T)`介面可以搭配`For Each`迴圈或 LINQ 查詢。  

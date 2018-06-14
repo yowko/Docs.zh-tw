@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754911"
 ---
 # <a name="ltcleargt"></a>&lt;clear&gt;
 清除所有的安全性權杖處理常式，從目前的語彙基元處理常式集合。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589469"
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-a-different-directory-in-visual-basic"></a>如何：在 Visual Basic 中於不同資料夾內建立檔案複本
 `My.Computer.FileSystem.CopyFile` 方法可讓您複製檔案。 它的參數可以覆寫現有檔案、重新命名檔案、顯示作業進度，並讓使用者取消作業。  

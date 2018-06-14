@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566778"
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>使用純色和漸層繪製的概觀
 本主題描述如何使用<xref:System.Windows.Media.SolidColorBrush>， <xref:System.Windows.Media.LinearGradientBrush>，和<xref:System.Windows.Media.RadialGradientBrush>來使用純色，線性漸層和放射狀漸層繪製的物件。  
@@ -78,7 +79,7 @@ ms.lasthandoff: 05/04/2018
   
  ![對角線性漸層](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-diaglgradient-nolabel.jpg "wcpsdk_graphicsmm_diaglgradient_nolabel")  
   
- **注意：**本主題中的漸層範例會使用預設座標系統來設定起始點和結束點。 預設座標系統是相對於週框方塊：0 表示週框方塊的 0%，而 1 表示週框方塊的 100%。 您可以設定來變更座標系統<xref:System.Windows.Media.GradientBrush.MappingMode%2A>屬性設為值<xref:System.Windows.Media.BrushMappingMode.Absolute>。 絕對座標系統不會相對於週框方塊。 值會直接在本機空間中解譯。  
+ **注意：** 本主題中的漸層範例會使用預設座標系統來設定起始點和結束點。 預設座標系統是相對於週框方塊：0 表示週框方塊的 0%，而 1 表示週框方塊的 100%。 您可以設定來變更座標系統<xref:System.Windows.Media.GradientBrush.MappingMode%2A>屬性設為值<xref:System.Windows.Media.BrushMappingMode.Absolute>。 絕對座標系統不會相對於週框方塊。 值會直接在本機空間中解譯。  
   
  <xref:System.Windows.Media.GradientStop>是漸層筆刷的基本建置組塊。  指定漸層停駐<xref:System.Windows.Media.GradientStop.Color%2A>在<xref:System.Windows.Media.GradientStop.Offset%2A>漸層軸上。  
   

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337892"
 ---
 # <a name="linq-to-xml-for-xpath-users-c"></a>XPath 使用者適用的 LINQ to XML (C#)
 這組主題顯示多個 XPath 運算式及其 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 對等用法。  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172486"
 ---
 # <a name="data-templating-overview"></a>資料範本化概觀
 WPF 資料範本化模型對於資料呈現方式的定義，具有相當大的彈性。 WPF 控制項的內建功能支援自訂資料呈現方式。 本主題首先會示範如何定義<xref:System.Windows.DataTemplate>和再導入了其他的資料範本化功能，例如根據自訂邏輯以及支援的階層式資料的顯示範本選擇。  

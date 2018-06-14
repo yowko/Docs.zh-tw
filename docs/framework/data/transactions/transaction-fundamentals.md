@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361501"
 ---
 # <a name="transaction-fundamentals"></a>交易基礎觀念
 交易作業會將多項工作繫結在一起。 例如，想像應用程式正在執行兩項工作。 首先，它會在資料庫中建立新的表格。 接著，它會呼叫特定物件來收集與格式化資料，然後將資料插入新的表格中。 這兩項工作都是相關的，甚至是互相依存的，除非您可以在表格中填入資料，否則您會想要避免建立新的表格。 在單一交易範圍內執行這兩項工作，會將這兩項工作強制聯結在一起。 如果第二項工作失敗，第一項工作就會復原至建立新表格之前的時間點。  

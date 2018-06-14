@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595848"
 ---
 # <a name="39set39-accessor-of-property-39ltpropertynamegt39-is-not-accessible"></a>&#39;設定&#39;屬性的存取子&#39; &lt;propertyname&gt; &#39;不能存取
 陳述式嘗試儲存屬性的值，它並沒有存取權的屬性時`Set`程序。  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 71e881eca541d6a987fa7d27e1d73903f843e26a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460602"
 ---
 # <a name="cloneenumwbemclassobject-function"></a>CloneEnumWbemClassObject 函式
 讓列舉值，並保留其目前位置列舉中的邏輯副本。  
@@ -88,7 +89,7 @@ HRESULT CloneEnumWbemClassObject (
 如需範例，請參閱[IEnumWbemClassObject::Clone](https://msdn.microsoft.com/library/aa390859(v=vs.85).aspx)方法。
 
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.idl  
   

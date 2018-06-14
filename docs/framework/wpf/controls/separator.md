@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551039"
 ---
 # <a name="separator"></a>Separator
 A<xref:System.Windows.Controls.Separator>控制項可繪製線條、 水平或垂直、 在控制項中，項目之間例如<xref:System.Windows.Controls.ListBox>， <xref:System.Windows.Controls.Menu>，和<xref:System.Windows.Controls.ToolBar>。  

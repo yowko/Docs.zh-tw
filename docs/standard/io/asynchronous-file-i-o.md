@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575514"
 ---
 # <a name="asynchronous-file-io"></a>非同步檔案 I/O
 非同步作業可讓您執行耗用大量資源的 I/O 作業，而不需要封鎖主執行緒。 這項效能考量對於 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式或 [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)] 應用程式而言特別重要，尤其是針對耗時的資料流作業可能會阻礙 UI 執行緒，使應用程式看起來像是停止運作的情況。  

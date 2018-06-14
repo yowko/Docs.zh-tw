@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391598"
 ---
 # <a name="runtime-information-etw-events"></a>執行階段資訊 ETW 事件
 執行階段的這些 ETW 事件記錄資訊，包含 SKU、版本號碼、執行階段啟用方式、用來啟動它的命令列參數、GUID (適用時)，以及其他相關資訊。 如果多個執行階段是在某個處理序內執行，則這些事件所提供的資訊 (ClrInstanceID) 有助於釐清執行階段。  

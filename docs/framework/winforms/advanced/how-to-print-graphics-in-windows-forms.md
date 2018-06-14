@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521494"
 ---
 # <a name="how-to-print-graphics-in-windows-forms"></a>如何：列印 Windows Form 中的圖形
 通常您會想要列印在 Windows 架構應用程式中的圖形。 <xref:System.Drawing.Graphics>類別提供方法來繪製至裝置，例如螢幕或印表機的物件。  

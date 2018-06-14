@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c515a8184e8c01b0e292057f3f66ffef28f2c5fb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402877"
 ---
 # <a name="iclrdatatargetgetmachinetype-method"></a>ICLRDataTarget::GetMachineType 方法
 取得目標處理序正在使用的指令集類型的識別項。  
@@ -39,7 +40,7 @@ HRESULT GetMachineType (
  [out]指標值，指出的指令集的目標處理序正在使用。 傳回`machineType`是 IMAGE_FILE_MACHINE 常數、 WinNT.h 標頭檔中定義的其中一個。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** ClrData.idl、 ClrData.h  
   

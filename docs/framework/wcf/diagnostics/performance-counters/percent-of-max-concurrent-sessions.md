@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33470409"
 ---
 # <a name="percent-of-max-concurrent-sessions"></a>最大並行工作階段的百分比
 計數器名稱：最大並行工作階段的百分比  

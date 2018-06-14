@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585112"
 ---
 # <a name="argument-not-optional-visual-basic"></a>引數不是選擇性的 (Visual Basic)
 引數的類型與數量必須符合所預期。 沒有引數數目不正確或不是選擇性的省略引數。 引數可以只從使用者定義的程序呼叫省略，如果它宣告`Optional`程序定義中。  

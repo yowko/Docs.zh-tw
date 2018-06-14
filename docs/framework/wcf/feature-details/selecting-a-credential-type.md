@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508471"
 ---
 # <a name="selecting-a-credential-type"></a>選取認證類型
 *認證*Windows Communication Foundation (WCF) 會使用來建立宣告的身分識別或功能的資料。 例如，護照是政府發給的認證，以證明一個國家或地區的公民身分。 在 WCF 中，認證可以有許多形式，例如使用者名稱權杖和 X.509 憑證。 本主題討論認證，在 WCF 中的使用方式以及如何選擇正確的認證，您的應用程式。  

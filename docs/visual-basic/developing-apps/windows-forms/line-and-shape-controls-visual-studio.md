@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585550"
 ---
 # <a name="line-and-shape-controls-visual-studio"></a>Line 和 Shape 控制項 (Visual Studio)
 Visual Basic Power Pack 線條和圖案控制項是圖形控制項，可讓您在表單或容器上繪製水平線、垂直線、對角線、矩形、正方形、橢圓形、圓形，以及圓角矩形和正方形。  

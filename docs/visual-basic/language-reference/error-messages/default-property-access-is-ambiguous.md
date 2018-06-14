@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590851"
 ---
 # <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>預設屬性存取是模稜兩可繼承的介面成員之間&#39; &lt;defaultpropertyname&gt; &#39;介面的&#39;&lt;介面名稱 1>.<&gt; &#39;和&#39; &lt;defaultpropertyname&gt; &#39;介面的&#39;&lt;介面名稱 2>&gt;&#39;
 介面繼承自兩個介面，其中每個宣告預設屬性具有相同名稱。 編譯器無法解析存取無限制的這個預設屬性。 下列範例將說明這點。  

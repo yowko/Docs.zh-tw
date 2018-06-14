@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8f144426996583d5058f70daed99d8a37cfb6bfb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444662"
 ---
 # <a name="cormethodattr-enumeration"></a>CorMethodAttr 列舉
 包含值描述方法的功能。  
@@ -93,7 +94,7 @@ typedef enum CorMethodAttr {
 |`mdRequireSecObject`|指定此方法會呼叫包含安全性驗證碼的另一個方法。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorHdr.h  
   

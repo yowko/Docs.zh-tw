@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360257"
 ---
 # <a name="formulate-joins-and-cross-product-queries"></a>制定聯結和交叉乘積查詢
 下列範例顯示如何合併多張資料表中的結果。  

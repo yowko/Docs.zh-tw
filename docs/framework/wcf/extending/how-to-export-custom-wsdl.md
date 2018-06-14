@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489044"
 ---
 # <a name="how-to-export-custom-wsdl"></a>HOW TO：匯出自訂的 WSDL
 本主題將說明如何匯出自訂的 WSDL 資訊。 為了要這麼做，我們定義了一個名為 `WsdlDocumentationAttribute` 的新程式碼屬性，會將自訂的資訊加入至服務所產生的 WSDL。  

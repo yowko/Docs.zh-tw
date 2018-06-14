@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546487"
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>如何：偵測有無安裝 .NET Framework 3.0
 系統管理員可以部署的系統上的 Microsoft.NET Framework 應用程式之前，他們必須先確認.NET Framework 執行階段已存在。 本主題提供以 HTML/JavaScript 撰寫的指令碼的系統管理員可用來判斷.NET Framework 是否存在於系統上。  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536214"
 ---
 # <a name="putting-controls-on-windows-forms"></a>將控制項加入 Windows Form
 有各種不同的控制項，您可以放在 Windows Form 上，根據您的應用程式的需求。  

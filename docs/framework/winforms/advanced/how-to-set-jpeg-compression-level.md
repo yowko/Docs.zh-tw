@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525239"
 ---
 # <a name="how-to-set-jpeg-compression-level"></a>如何：設定 JPEG 壓縮層級
 當您將影像儲存至磁碟以減少檔案大小或改善其品質時，可能會想要修改影像的參數。 您可以修改其壓縮層級來調整 JPEG 影像的品質。 若要儲存為 JPEG 影像時，請指定壓縮層級，您必須建立<xref:System.Drawing.Imaging.EncoderParameters>物件，並將它傳遞給<xref:System.Drawing.Image.Save%2A>方法<xref:System.Drawing.Image>類別。 初始化<xref:System.Drawing.Imaging.EncoderParameters>物件，所以它沒有陣列，其中包含一<xref:System.Drawing.Imaging.EncoderParameter>。 當您建立<xref:System.Drawing.Imaging.EncoderParameter>，指定<xref:System.Drawing.Imaging.Encoder.Quality>編碼器，以及所要的壓縮層級。  

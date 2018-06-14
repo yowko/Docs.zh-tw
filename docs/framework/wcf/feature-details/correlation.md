@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491279"
 ---
 # <a name="correlation"></a>相互關聯
 當工作流程服務應用程式與其他服務通訊時，將其中的訊息分派至正確的工作流程執行個體是相當重要的。 相互關聯可提供此操作的機制。 本節中的主題提供相互關聯的概要以及說明如何在不同的工作流程服務案例中加以使用。  

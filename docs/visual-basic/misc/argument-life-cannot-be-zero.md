@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597695"
 ---
 # <a name="argument-39life39-cannot-be-zero"></a>引數&#39;生命&#39;不能為零
 `Life`的引數無效，該引數必須是指定資產使用年限長度的 `Double` 。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505726"
 ---
 # <a name="conditional-get-and-put"></a>條件式 Get 和 Put
 此範例示範如何針對 WCF REST 程式設計模型使用新的條件式擷取和更新 API。 因為最適合的條件式擷取和更新資源導向和 REST 服務，這個範例會延續[基本資源服務](../../../../docs/framework/wcf/samples/basic-resource-service.md)範例。 此範例著重於新增的條件式擷取和更新支援[基本資源服務](../../../../docs/framework/wcf/samples/basic-resource-service.md)範例使用新的 Api 中導入[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]。  

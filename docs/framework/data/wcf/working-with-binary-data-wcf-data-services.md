@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365367"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>使用二進位資料 (WCF 資料服務)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]用戶端程式庫可讓您擷取和更新從二進位資料[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要在下列方面：  

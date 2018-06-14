@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498341"
 ---
 # <a name="servicemodel-transaction-configuration"></a>ServiceModel 異動組態
 Windows Communication Foundation (WCF) 提供三個屬性來設定服務的交易： `transactionFlow`， `transactionProtocol`，和`transactionTimeout`。  

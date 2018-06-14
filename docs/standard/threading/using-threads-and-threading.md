@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584176"
 ---
 # <a name="using-threads-and-threading"></a>使用執行緒和執行緒處理
 本節中的主題將討論受控執行緒的建立和管理、如何將資料傳遞至受控執行緒並取得結果，以及如何終結執行緒和處理 <xref:System.Threading.ThreadAbortException>。  

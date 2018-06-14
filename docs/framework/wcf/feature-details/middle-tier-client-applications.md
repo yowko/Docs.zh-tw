@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493486"
 ---
 # <a name="middle-tier-client-applications"></a>中介層用戶端應用程式
 本主題討論各種使用 Windows Communication Foundation (WCF) 的中介層用戶端應用程式的特定問題。  

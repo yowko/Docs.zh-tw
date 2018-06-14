@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 94ba53e4af114773a347d15b7308dc4c3567154e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435702"
 ---
 # <a name="iclrtask-interface"></a>ICLRTask 介面
 提供方法，讓主應用程式提出要求的 common language runtime (CLR)，或提供相關聯的工作有關 clr 的通知。  
@@ -47,11 +48,11 @@ ms.lasthandoff: 05/04/2018
  工作通常會終止執行程式碼的結尾。 此時，主機會呼叫`ICLRTask::ExitTask`終結相關聯`ICLRTask`。 不過，工作可以也被回收，做法是透過呼叫`ICLRTask::Reset`，可讓`ICLRTask`重複使用的執行個體。 這種方法可避免重複建立和終結執行個體的額外負荷。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
- **程式庫：**包含做為 MSCorEE.dll 中的資源  
+ **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

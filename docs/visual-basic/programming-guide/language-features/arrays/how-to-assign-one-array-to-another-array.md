@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647926"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>如何：指派一個陣列至另一個陣列 (Visual Basic)
 因為陣列是物件，您可以使用類似其他物件類型的指派陳述式中。 陣列變數會保留從屬陣列元素和的順位和長度的資訊，將資料指標，並指派複製只有這個指標。  

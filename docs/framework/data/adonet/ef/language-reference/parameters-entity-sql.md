@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765070"
 ---
 # <a name="parameters-entity-sql"></a>參數 (Entity SQL)
 參數是定義在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 外部的變數，通常是透過主應用程式語言使用的繫結 API 來定義。 每一個參數都有一個名稱和型別， 使用查詢運算式中所定義的參數名稱在 (@) 符號做為前置詞。 這樣可讓它們避免與屬性名稱或查詢內定義的其他名稱混淆。  

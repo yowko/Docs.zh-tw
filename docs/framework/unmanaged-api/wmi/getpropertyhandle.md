@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 103e81dfa0e455157cfce5914b711347b15b578d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460579"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle 函式
 傳回唯一的控制代碼識別屬性。
@@ -76,7 +77,7 @@ HRESULT GetPropertyHandle (
 控制代碼可以擷取屬性的所有資料類型以外`CIM_OBJECT`和`CIM_ARRAY`。 傳回類別的所有執行個體的控制代碼的工作。
 
 ## <a name="requirements"></a>需求  
-**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.idl  
   

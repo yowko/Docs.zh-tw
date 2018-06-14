@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593122"
 ---
 # <a name="range-variable-ltvariablegt-hides-a-variable-in-an-enclosing-block-a-previously-defined-range-variable-or-an-implicitly-declared-variable-in-a-query-expression"></a>範圍變數&lt;變數&gt;隱藏了封閉區塊、 預先定義的範圍變數或查詢運算式中隱含宣告的變數中的變數
 中指定的範圍變數名稱`Select`， `From`， `Aggregate`，或`Let`子句會重複已經在查詢或查詢所隱含宣告的變數名稱中先前指定的範圍變數的名稱例如，欄位名稱或彙總函式的名稱。  

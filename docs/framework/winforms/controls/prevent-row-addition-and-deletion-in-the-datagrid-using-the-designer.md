@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536660"
 ---
 # <a name="how-to-prevent-row-addition-and-deletion-in-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用設計工具防止在 Windows Form DataGridView 控制項中新增和刪除資料列
 有時候您會想要防止使用者在您的 <xref:System.Windows.Forms.DataGridView> 控制項中輸入新的資料列或刪除現有的資料列。 在控制項底部的新記錄是特殊的資料列中輸入新資料列。 當您停用資料列新增時，不會顯示為新的記錄資料列。 接著您可以控制完全唯讀停用資料列的刪除和編輯儲存格。  

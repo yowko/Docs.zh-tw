@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332750"
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>運算式主體成員 (C# 程式設計手冊)
 運算式主體定義可讓您以極為簡潔且可讀的形式提供成員的實作。 只要任何所支援成員 (例如方法或屬性) 的邏輯包含單一運算式，就可以使用運算式主體定義。 運算式主體定義的一般語法如下︰

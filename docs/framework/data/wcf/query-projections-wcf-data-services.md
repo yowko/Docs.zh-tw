@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365718"
 ---
 # <a name="query-projections-wcf-data-services"></a>查詢投影 (WCF 資料服務)
 投影提供一項機制[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]若要減少實體的某些屬性會在回應中傳回藉由指定查詢所傳回之摘要中的資料。 如需詳細資訊，請參閱[OData: Select 系統查詢選項 ($select)](http://go.microsoft.com/fwlink/?LinkId=186076)。  

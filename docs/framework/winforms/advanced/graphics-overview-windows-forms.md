@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521752"
 ---
 # <a name="graphics-overview-windows-forms"></a>圖形概觀 (Windows Form)
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 是可讓程式設計人員撰寫的應用程式與裝置無關的圖形裝置介面。 服務的[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]公開會透過一組 managed 類別。  

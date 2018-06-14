@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494146"
 ---
 # <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>HOW TO：將合約公開給 SOAP 和 Web 用戶端
 根據預設，Windows Communication Foundation (WCF) 提供端點只對 SOAP 用戶端。 在[How to： 建立基本的 WCF Web HTTP 服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)，端點都可以提供給非 SOAP 用戶端。 有時候您可能會想要讓兩者都有機會使用相同合約，也就是同時當做 Web 端點和 SOAP 端點。 本主題說明如何執行此操作的範例。  

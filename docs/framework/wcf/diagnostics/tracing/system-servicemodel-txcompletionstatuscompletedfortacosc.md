@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33485091"
 ---
 # <a name="systemservicemodeltxcompletionstatuscompletedfortacosc"></a>System.ServiceModel.TxCompletionStatusCompletedForTACOSC
 此特定異動已經在工作階段關閉時完成。  

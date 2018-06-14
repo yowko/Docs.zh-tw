@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2735355097a1f3f581b3a4bc74f08d8f2ebf3bd8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430376"
 ---
 # <a name="idefinitionappid-interface"></a>IDefinitionAppId 介面
 代表目前範圍中定義的應用程式的程式碼的唯一識別碼。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/04/2018
 |`IDefinitionAppId::put_SubscriptionId`|設定此訂用帳戶的語彙基元識別碼`IDefinitionAppId`指定的字串值的物件。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Isolation.h  
   

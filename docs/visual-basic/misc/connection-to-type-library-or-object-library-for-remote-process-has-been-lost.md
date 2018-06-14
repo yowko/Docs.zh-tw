@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635680"
 ---
 # <a name="connection-to-type-library-or-object-library-for-remote-process-has-been-lost"></a>對類型程式庫或物件程式庫的遠端處理連線已經中斷
 您已中斷與遠端處理之物件程式庫或類型程式庫的連線。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216144"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc (C# 編譯器選項)
 **-doc** 選項可讓您在 XML 檔案中放入文件註解。  

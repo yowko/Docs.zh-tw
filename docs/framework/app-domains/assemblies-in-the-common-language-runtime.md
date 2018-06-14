@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744326"
 ---
 # <a name="assemblies-in-the-common-language-runtime"></a>Common Language Runtime 中的組件
 組件是 .NET Framework 應用程式的建置組塊；它們構成部署、版本控制、重複使用、啟用範圍和安全性權限的基礎單位。 組件是建置來共同運作及構成一個功能邏輯單位的型別與資源集合。 組件為通用語言執行平台提供了感知型別實作所需的資訊。 對於執行階段而言，型別不會存在於組件的內容以外。  

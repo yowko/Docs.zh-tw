@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571079"
 ---
 # <a name="protected-members"></a>Protected 成員
 受保護的成員，本身不提供任何擴充性，但會讓透過子類別化的擴充性功能更強大。 它們可以用於不含不必要地複雜的主要公用介面公開進階的自訂選項。  

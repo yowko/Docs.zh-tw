@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518433"
 ---
 # <a name="what39s-new-in-windows-workflow-foundation"></a>什麼&#39;s Windows Workflow Foundation 的新功能
 Windows Workflow Foundation (WF) 中[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]從舊版變更數種開發架構。 現在，建立、執行與維護工作流程以及實作新功能的主機都變得更簡單了。 如需.NET 3.0 和.NET 3.5 工作流程應用程式移轉至使用最新版本的詳細資訊，請參閱[移轉指引](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。  

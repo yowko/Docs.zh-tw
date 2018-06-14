@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745093"
 ---
 # <a name="startup-settings-schema"></a>啟動設定結構描述
 啟動設定會指定應執行應用程式之 Common Language Runtime 的版本。  

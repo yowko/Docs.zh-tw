@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656265"
 ---
 # <a name="-link-visual-basic"></a>-連結 (Visual Basic)
 讓編譯器將所指定組件的 COM 類型資訊全部提供給您目前編譯的專案。  

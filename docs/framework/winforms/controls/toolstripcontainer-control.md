@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538844"
 ---
 # <a name="toolstripcontainer-control"></a>ToolStripContainer 控制項
 <xref:System.Windows.Forms.ToolStrip> 控制項使用 <xref:System.Windows.Forms.ToolStripContainer> 來進行內建浮動定位 (共用停駐時工具區域內的水平或垂直空間)。  

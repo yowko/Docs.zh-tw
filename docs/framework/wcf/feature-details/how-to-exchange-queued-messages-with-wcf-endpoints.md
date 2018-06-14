@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494653"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>HOW TO：與 WCF 端點交換佇列訊息
 佇列確保即使服務目前無法在通訊時，可信賴傳訊不會發生在用戶端和 Windows Communication Foundation (WCF) 服務，之間。 下列程序示範如何實作 WCF 服務時，持久的用戶端與服務之間通訊使用標準佇列繫結確保。  

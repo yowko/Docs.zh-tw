@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6e3d138700ef06da7b40a88a768a41f3ffcb38eb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403236"
 ---
 # <a name="codechunkinfo-structure1"></a>CodeChunkInfo 結構 1
 代表記憶體中的單一程式碼區塊。  
@@ -45,7 +46,7 @@ typedef struct _CodeChunkInfo {
  單一的程式碼區塊是物件的屬於程式碼，例如函式的原生程式碼的區域。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl  
   

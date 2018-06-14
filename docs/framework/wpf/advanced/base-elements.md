@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539461"
 ---
 # <a name="base-elements"></a>基底項目
 四個重要類別-<xref:System.Windows.UIElement>， <xref:System.Windows.ContentElement>， <xref:System.Windows.FrameworkElement>，和<xref:System.Windows.FrameworkContentElement>-實作大量百分比的 WPF 程式設計中可用的常見項目功能。 這四個類別被指在此 SDK 中的基底項目類別。  

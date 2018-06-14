@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590669"
 ---
 # <a name="user-defined-data-type"></a>使用者定義資料類型
 資料保留在您定義的格式。 `Structure`陳述式定義的格式。  

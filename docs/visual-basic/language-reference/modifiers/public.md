@@ -13,6 +13,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235914"
 ---
 # <a name="public-visual-basic"></a>Public (Visual Basic)
 指定一或多個宣告的程式設計項目有沒有存取限制。  

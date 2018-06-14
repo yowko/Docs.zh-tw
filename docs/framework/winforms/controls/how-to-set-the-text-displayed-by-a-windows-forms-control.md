@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535609"
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>如何：設定由 Windows Form 控制項所顯示的文字
 Windows Form 控制項通常會顯示與控制項主要功能相關的一些文字。 例如，<xref:System.Windows.Forms.Button> 控制項通常會顯示一個標題，指出當按下按鈕時，就會執行什麼動作。 針對所有控制項，您都可以使用 <xref:System.Windows.Forms.Control.Text%2A> 屬性來設定或傳回該文字。 您可以使用 <xref:System.Windows.Forms.Control.Font%2A> 屬性來變更字型。 您也可以使用設計工具來設定文字。  另請參閱[How to： 建立存取金鑰的 Windows Form 控制項使用設計工具](http://msdn.microsoft.com/library/ms233673\(v=vs.110\))， [How to： 設定 Windows Form 控制項使用的文字顯示在設計工具](http://msdn.microsoft.com/library/ms233665\(v=vs.110\))， [How to： 設定影像顯示 Windows Form 控制項使用設計工具](http://msdn.microsoft.com/library/ms233656\(v=vs.110\))。  

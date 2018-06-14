@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766084"
 ---
 # <a name="distributed-transactions"></a>分散式異動
 異動是一組相關工作，尤其是它會做為一個單位的成功 (認可) 或失敗 (中止)。 A*分散式交易*是影響幾個資源的交易。 對於要認可的分散式異動，所有參與者都必須保證資料的任何變更都是永久的。 不管系統是否當機，還是發生其他不可預見的事件，變更必須持續。 如果單一參與者無法做出此保證，則整個交易會失敗，交易範圍內的任何資料變更都將復原。  

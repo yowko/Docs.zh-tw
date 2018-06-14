@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529804"
 ---
 # <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a>縮放 Windows Form DataGridView 控制項的最佳作法
 <xref:System.Windows.Forms.DataGridView>控制項用來提供最大的延展性。 如果您需要顯示大量的資料，您應該遵循本主題，以避免消耗大量的記憶體，或降低使用者介面 (UI) 的回應中所述的指導方針。 本主題將討論下列問題：  

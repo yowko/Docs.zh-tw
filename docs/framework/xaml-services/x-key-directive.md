@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565895"
 ---
 # <a name="xkey-directive"></a>x:Key 指示詞
 可唯一識別所建立和定義 XAML 的字典中所參考的項目。 加入`x:Key`XAML 物件項目值是最常見的方式來識別資源字典，例如在 WPF 中的資源<xref:System.Windows.ResourceDictionary>。  

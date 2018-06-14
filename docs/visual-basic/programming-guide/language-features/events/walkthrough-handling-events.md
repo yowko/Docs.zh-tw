@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655110"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>逐步解說：處理事件 (Visual Basic)
 這是兩個主題會示範如何使用事件的第二個。 第一個主題，[逐步解說： 宣告和引發事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)，示範如何宣告和引發事件。 本節會使用表單和類別，從該逐步解說顯示如何處理時就會發生的事件。  
@@ -63,7 +64,7 @@ ms.lasthandoff: 05/04/2018
   
 #### <a name="to-create-an-object-and-assign-a-reference-to-it"></a>若要建立的物件，並指派給它的參考  
   
-1.  選取**（Form1 事件）**左邊的下拉式清單中從**程式碼編輯器**。  
+1.  選取 **（Form1 事件）** 左邊的下拉式清單中從**程式碼編輯器**。  
   
 2.  選取`Load`右邊下拉式清單中的事件。 **程式碼編輯器**開啟`Form1_Load`事件程序。  
   

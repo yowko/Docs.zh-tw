@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 91e64bb2e1c8a7b11fe70024eb4a4fa1717c06e5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407345"
 ---
 # <a name="corheapobject-structure"></a>COR_HEAPOBJECT 結構
 提供 Managed 堆積上的物件相關資訊。  
@@ -55,7 +56,7 @@ typedef struct _COR_HEAPOBJECT {
  `COR_HEAPOBJECT`結構包含參考計數的 COM 介面。 如果您擷取`COR_HEAPOBJECT`來自列舉值，藉由呼叫的執行個體[icordebugheapenum:: Next](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-next-method.md)方法，您後續必須釋放參考。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   

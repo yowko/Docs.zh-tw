@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760735"
 ---
 # <a name="entity-sql-overview"></a>Entity SQL 概觀
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 是類似 SQL 的語言，可讓您在 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 中查詢概念模型。 概念模型將資料表示成實體和關聯性，以及[!INCLUDE[esql](../../../../../../includes/esql-md.md)]可讓您查詢這些實體和關聯性類似使用 SQL 的格式。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760202"
 ---
 # <a name="except-entity-sql"></a>EXCEPT (Entity SQL)
 從 EXCEPT 運算元左側的查詢運算式傳回任何相異值集合，這些相異值是 EXCEPT 運算元右側的查詢運算式沒有傳回的。 所有運算式都必須具有與 `expression`相同的型別或是共同基底型別或衍生型別。  

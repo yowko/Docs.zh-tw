@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408140"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Unmanaged 程式碼的安全編碼指南
 某些程式庫程式碼需要呼叫 Unmanaged 程式碼 (例如原生程式碼 API，像是 Win32)。 由於這表示要越過 Managed 程式碼的安全性範疇，所以充分的警告是必要的。 若您的程式碼是安全性中性的，則您的程式碼以及它所呼叫的任何程式碼，都必須具備 Unmanaged 程式碼權限 (指定了具有<xref:System.Security.Permissions.SecurityPermission> 旗標的 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> )。  

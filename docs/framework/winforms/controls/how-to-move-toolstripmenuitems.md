@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534904"
 ---
 # <a name="how-to-move-toolstripmenuitems"></a>如何：移動 ToolStripMenuItems
 在設計階段，您可以移動整個最上層功能表和其功能表項目不同的位置<xref:System.Windows.Forms.MenuStrip>。 您也可以移動個別的功能表項目之間的最上層功能表，或變更功能表中功能表項目的位置。  

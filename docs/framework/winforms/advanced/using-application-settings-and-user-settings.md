@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523838"
 ---
 # <a name="using-application-settings-and-user-settings"></a>使用應用程式設定和使用者設定
 從.NET Framework 2.0 開始，您可以建立並存取應用程式執行的工作階段之間保存的值。 這些值稱為*設定*。 設定可以代表使用者喜好設定，或需要使用應用程式的重要資訊。 例如，您可能會建立一系列的應用程式的色彩配置的使用者喜好設定儲存的設定。 或者，您可能會儲存連接字串，指定您的應用程式使用的資料庫。 設定可讓您保留很重要的應用程式外部程式碼，以及建立儲存個別使用者的喜好設定的設定檔的資訊。  

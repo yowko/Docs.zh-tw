@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764667"
 ---
 # <a name="sqlclient-for-entity-framework-functions"></a>適用於 Entity Framework 的 SqlClient 函式
 適用於 Entity Framework 的 .NET Framework Data Provider for SQL Server (SqlClient) 提供了一組可執行數學和彙總 (Aggregation) 計算的函式，以及可執行 `System.DateTime` 和 `string` 作業的函式。 這些函式位於 `SQLServer` 命名空間 (Namespace) 中。  

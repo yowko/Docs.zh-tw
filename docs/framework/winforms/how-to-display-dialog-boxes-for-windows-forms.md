@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537420"
 ---
 # <a name="how-to-display-dialog-boxes-for-windows-forms"></a>如何：顯示 Windows Form 的對話方塊
 您在您的應用程式中顯示任何其他形式的相同方式顯示的對話方塊。 執行應用程式時，會自動載入啟動表單。 若要讓第二個表單或對話方塊會出現在應用程式中，撰寫程式碼載入和顯示它。 同樣地，若要讓表單或對話方塊消失，請撰寫程式碼來卸載或隱藏它。  

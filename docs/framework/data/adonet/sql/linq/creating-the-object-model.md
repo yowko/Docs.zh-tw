@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359929"
 ---
 # <a name="creating-the-object-model"></a>建立物件模型
 您可以從現有的資料庫建立物件模型 (Object Model)，並且使用預設狀態下的模型。 您也可以自訂模型的各個層面及其行為。  

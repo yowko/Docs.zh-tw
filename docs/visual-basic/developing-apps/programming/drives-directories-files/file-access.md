@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583301"
 ---
 # <a name="file-access-with-visual-basic"></a>使用 Visual Basic 存取檔案
 `My.Computer.FileSystem` 物件提供用於處理檔案和資料夾的工具。 其屬性、方法和事件可讓您建立、複製、移動、調查及刪除檔案和資料夾。 `My.Computer.FileSystem` 比 Visual Basic 所提供的舊版函式 (`FileOpen`、`FileClose`、`Input`、`InputString`、`LineInput` 等) 提供更佳效能，以利回溯相容性。  

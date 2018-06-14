@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530285"
 ---
 # <a name="how-to-create-a-border-around-a-windows-forms-control-using-padding"></a>如何：使用邊框距離在 Windows Form 控制項周圍建立框線
 下列程式碼範例示範如何建立框線或外框<xref:System.Windows.Forms.RichTextBox>控制項。 此範例設定的值<xref:System.Windows.Forms.Panel>控制項的<xref:System.Windows.Forms.Padding>5 和集合的屬性<xref:System.Windows.Forms.Control.Dock%2A>屬性的子系<xref:System.Windows.Forms.RichTextBox>控制權傳輸至<xref:System.Windows.Forms.DockStyle.Fill>。 <xref:System.Windows.Forms.Control.BackColor%2A>的<xref:System.Windows.Forms.Panel>控制設為  <xref:System.Drawing.Color.Blue%2A>，它會建立周圍的藍色框線<xref:System.Windows.Forms.RichTextBox>控制項。  

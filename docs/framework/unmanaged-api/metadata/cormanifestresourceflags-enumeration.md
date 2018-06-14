@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 21cce26c94d26f6c079fca644a31bf83cd1a6432
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440706"
 ---
 # <a name="cormanifestresourceflags-enumeration"></a>CorManifestResourceFlags 列舉
 表示資源的組件資訊清單中編碼的可見性。  
@@ -46,7 +47,7 @@ typedef enum CorManifestResourceFlags {
 |`mrPrivate`|資源是私用。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorHdr.h  
   

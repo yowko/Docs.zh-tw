@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601877"
 ---
 # <a name="amp-operator-visual-basic"></a>&amp;= 運算子 (Visual Basic)
 串連`String`運算式`String`變數或屬性，並將結果指派給變數或屬性。  

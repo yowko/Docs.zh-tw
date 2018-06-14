@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555986"
 ---
 # <a name="how-to-implement-property-change-notification"></a>操作說明：實作屬性變更通知
 若要支援<xref:System.Windows.Data.BindingMode.OneWay>或<xref:System.Windows.Data.BindingMode.TwoWay>繫結至啟用您的繫結目標屬性，以自動反映繫結來源 （例如，讓使用者編輯表單時，自動更新 [預覽] 窗格），動態變更您的類別必須提供適當的屬性已變更通知。 這個範例示範如何建立類別，實作<xref:System.ComponentModel.INotifyPropertyChanged>。  

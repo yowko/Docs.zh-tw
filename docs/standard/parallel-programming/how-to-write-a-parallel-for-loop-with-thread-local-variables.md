@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584666"
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>如何：撰寫含有執行緒區域變數的 Parallel.For 迴圈
 此範例說明如何使用執行緒區域變數，儲存及擷取 <xref:System.Threading.Tasks.Parallel.For%2A> 迴圈所建立之每項工作的狀態。 使用執行緒區域資料，可讓您避免因同步處理大量的共用狀態存取而產生額外負荷。 您可以計算並儲存值，直到工作的所有反覆運算完成為止，而無須在每次反覆運算時寫入至共用資源。 接著，您可以將最終結果寫入至共用資源，或將其傳遞至其他方法。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363110"
 ---
 # <a name="manipulating-data"></a>操作資料
 引進 Multiple Active Result Set (MARS) 之前，開發人員必須使用多重連接或伺服器端游標來解析某些案例。 此外，當在交易中使用多個連接時，繫結連接 (使用**sp_getbindtoken**和**sp_bindsession**) 所需。 下列案例顯示如何以啟用 MARS 的連接取代多重連接。  

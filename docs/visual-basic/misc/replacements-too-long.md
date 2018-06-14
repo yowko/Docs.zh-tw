@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33634829"
 ---
 # <a name="replacements-too-long"></a>取代文字太長
 您指定的取代文字超過允許的長度。  

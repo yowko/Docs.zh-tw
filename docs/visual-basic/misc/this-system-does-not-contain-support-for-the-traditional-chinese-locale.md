@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641736"
 ---
 # <a name="this-system-does-not-contain-support-for-the-traditional-chinese-locale"></a>此系統沒有包含繁體中文地區設定的支援
 您曾嘗試使用 `VbStrConv.TraditionalChinese` 列舉成員，但您的系統不支援繁體中文地區設定。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543389"
 ---
 # <a name="how-to-change-the-cursor-type"></a>如何：變更游標類型
 這個範例示範如何變更<xref:System.Windows.Input.Cursor>滑鼠指標特定的項目和應用程式。  

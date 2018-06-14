@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743897"
 ---
 # <a name="ltbypasslistgt-element-network-settings"></a>&lt;bypasslist&gt;項目 （網路設定）
 提供一組規則運算式，其中說明不使用 proxy 的位址。  

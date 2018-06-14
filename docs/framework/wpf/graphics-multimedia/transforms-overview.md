@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566752"
 ---
 # <a name="transforms-overview"></a>轉換概觀
 本主題描述如何使用[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]<xref:System.Windows.Media.Transform>旋轉、 縮放、 移動類別 （轉換） 和傾斜<xref:System.Windows.FrameworkElement>物件。  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549152"
 ---
 # <a name="dialog-boxes-overview"></a>對話方塊概觀
 獨立應用程式通常具有主視窗，同時會顯示主要資料的應用程式運作，並公開的功能來處理該資料透過[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]機制類似功能表列、 工具列和狀態列。 重要的應用程式還可能顯示其他視窗來執行下列動作：  

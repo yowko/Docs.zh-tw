@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804975"
 ---
 # <a name="conceptual-overview"></a>概觀說明
 本主題摘要說明資訊的相關 Windows Communication Foundation (WCF) 訊息系統及支援其使用的類別。  

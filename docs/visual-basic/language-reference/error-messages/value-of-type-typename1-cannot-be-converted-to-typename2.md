@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595234"
 ---
 # <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39"></a>型別的值&#39; &lt;typename1&gt; &#39;無法轉換成&#39; &lt;2>&gt;&#39;
 類型的值 '\<typename1 >' 無法轉換成'\<2> >'。 類型不符的情況可能是因為混用了檔案參考和組件的專案參考 '\<assemblyname >'。 請嘗試更換的檔案參考 '\<檔案路徑 >' 在專案中'\<projectname1 >' 的專案參考 '\<專案名稱 2> >'。  

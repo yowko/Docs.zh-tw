@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641956"
 ---
 # <a name="vbstrconvwide-and-vbstrconvnarrow-are-not-applicable-to-the-locale-specified"></a>VbStrConv.Wide 和 VbStrConv.Narrow 不適用於指定的地區設定
 應用程式嘗試使用 `VbStrConv` 列舉成員 `Wide` 或 `Narrow`，這並不適用於指定的地區設定。  

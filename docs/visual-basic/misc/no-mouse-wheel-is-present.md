@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637396"
 ---
 # <a name="no-mouse-wheel-is-present"></a>滑鼠滾輪不存在
 已呼叫 `My.Computer.Mouse.WheelScrollLines` 屬性，但是滑鼠有沒有滾輪。  

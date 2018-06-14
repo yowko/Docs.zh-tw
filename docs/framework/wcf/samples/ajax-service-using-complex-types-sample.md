@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804075"
 ---
 # <a name="ajax-service-using-complex-types-sample"></a>使用複雜型別的 AJAX 服務範例
 這個範例示範如何使用 Windows Communication Foundation (WCF) 來建立 ASP.NET Asynchronous JavaScript and XML (AJAX) 服務會建立複雜類型的執行個體，並將它們傳送服務和用戶端為 JavaScript 物件標記法 (JSON) 之間。 您可以從 Web 瀏覽器用戶端使用 JavaScript 程式碼存取 AJAX 服務。 這個範例是根據[基本 AJAX 服務](../../../../docs/framework/wcf/samples/basic-ajax-service.md)範例。  

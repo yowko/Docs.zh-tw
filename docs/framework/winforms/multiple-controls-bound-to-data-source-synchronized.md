@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539536"
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>如何：確保繫結至相同資料來源的多個控制項都能保持同步
 有時候當使用 Windows Form 中的資料繫結時，多個控制項所繫結至相同的資料來源。 在某些情況下，可能必須採取額外步驟以確保控制項的繫結的內容中與其他每個及資料來源同步處理。 這些步驟是兩個情況中，必須：  

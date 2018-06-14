@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0fb805e3292d90fd5f9562d9b0b8fcc31f84ec7f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449360"
 ---
 # <a name="imetadatadispenseropenscope-method"></a>IMetaDataDispenser::OpenScope 方法
 開啟現有磁碟上的檔案，並將它的中繼資料對應到記憶體中。  
@@ -62,11 +63,11 @@ HRESULT OpenScope (
  在.NET Framework 2.0 版中，範圍則是以開啟`dwOpenFlags`ofRead 設不會再共用。 共用範圍，以便使用 ofReadOnly 值。 共用範圍時，使用 「 讀取/寫入 」 中繼資料介面的查詢將會失敗。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
- **程式庫：**做為 MsCorEE.dll 中的資源  
+ **程式庫：** 做為 MsCorEE.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

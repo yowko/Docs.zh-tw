@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334193"
 ---
 # <a name="thread-pooling-c"></a>執行緒共用 (C#)
 「執行緒集區」是可用來在背景執行數項工作的執行緒集合。 (如需背景資訊，請參閱[執行緒處理 (C#)](../../../../csharp/programming-guide/concepts/threading/index.md))。這可讓主要執行緒非同步地執行其他工作。  

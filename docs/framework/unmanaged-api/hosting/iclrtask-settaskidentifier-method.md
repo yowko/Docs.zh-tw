@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 05a561c54f2d004d073fdfffffdb59cb2b5189e5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435676"
 ---
 # <a name="iclrtasksettaskidentifier-method"></a>ICLRTask::SetTaskIdentifier 方法
 指示 common language runtime (CLR) 所指定的識別碼的值與表示由目前的工作[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)執行個體。  
@@ -53,11 +54,11 @@ HRESULT SetTaskIdentifier (
  主機可以識別項關聯的工作，可協助整合 CLR 和偵錯環境中的主機。 識別項具有 CLR 無意義。 CLR 會將它沿著傳遞至偵錯工具應用程式。 偵錯工具可以利用這個識別碼與主機呼叫堆疊中的 CLR 呼叫堆疊，並啟用在偵錯工具的使用者介面中檢視時統一其各自的追蹤資訊。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
- **程式庫：**包含做為 MSCorEE.dll 中的資源  
+ **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

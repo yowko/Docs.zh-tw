@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8f8398c16b27836b772e8ac56ee1f7e8494f4be0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403565"
 ---
 # <a name="setmanifestfile-method"></a>SetManifestFile 方法
 可讓您指定或重設連結器會使用時，它會建立組件資訊清單檔案。  

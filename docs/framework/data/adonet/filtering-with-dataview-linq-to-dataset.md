@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766097"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>使用 DataView 進行篩選 (LINQ to DataSet)
 使用特定準則來篩選資料，然後透過 UI 控制項呈現資料給用戶端的功能是資料繫結的重要層面。 <xref:System.Data.DataView> 提供了許多方式來篩選資料並傳回符合特定篩選準則的資料列子集。 除了以字串為基礎的篩選功能<xref:System.Data.DataView>也會提供能夠使用[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]篩選條件的運算式。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 允許更複雜且功能強大的篩選作業比字串為基礎的篩選運算式。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561832"
 ---
 # <a name="xuid-directive"></a>x:Uid 指示詞
 提供唯一的識別項的標記項目。 在許多案例中，這個唯一識別碼使用 XAML 當地語系化程序和工具。  

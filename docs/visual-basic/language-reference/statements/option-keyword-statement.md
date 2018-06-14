@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598219"
 ---
 # <a name="option-ltkeywordgt-statement"></a>選項&lt;關鍵字&gt;陳述式
 引進指定套用至整個原始程式檔的編譯器選項的陳述式。  

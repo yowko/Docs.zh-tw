@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333020"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>執行個體建構函式 (C# 程式設計手冊)
 當您使用 [new](../../../csharp/language-reference/keywords/new.md) 運算式來建立 [class](../../../csharp/language-reference/keywords/class.md) 物件時，可使用執行個體建構函式來建立和初始化任何執行個體成員變數。 若要初始化 [static](../../../csharp/language-reference/keywords/static.md) 類別或非靜態類別中的靜態變數，您必須定義靜態建構函式。 如需詳細資訊，請參閱[靜態建構函式](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)。  

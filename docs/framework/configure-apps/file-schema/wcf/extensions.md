@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746874"
 ---
 # <a name="ltextensionsgt"></a>&lt;擴充功能&gt;
 這個組態項目包含 XML 項目的集合，這些項目包含要與標準可探索中繼資料 (EPR、ContractTypeName、BindingName、Scope 與 ListenURI) 一併發行的 XML 項目集合。 以下是使用這個組態項目的範例。  

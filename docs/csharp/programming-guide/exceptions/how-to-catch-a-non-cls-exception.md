@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340017"
 ---
 # <a name="how-to-catch-a-non-cls-exception"></a>如何：攔截非 CLS 例外狀況
 包括 C++/CLI 在內的某些 .NET 語言，允許物件擲回非衍生自 <xref:System.Exception> 的例外狀況。 這類例外狀況稱之為「非 CLS 例外狀況」或「非例外狀況」。 在 Visual C# 中無法擲回非 CLS 例外狀況，但有兩種方式可以攔截它們：  

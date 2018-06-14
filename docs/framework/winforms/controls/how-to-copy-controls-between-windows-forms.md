@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530269"
 ---
 # <a name="how-to-copy-controls-between-windows-forms"></a>如何：在 Windows Form 之間複製控制項
 相同表單上、 拖曳另一個表單，在專案中，或到剪貼簿，以便用於其他方案，可能會複製控制項。  

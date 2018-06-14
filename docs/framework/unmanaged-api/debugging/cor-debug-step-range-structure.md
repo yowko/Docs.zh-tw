@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d5809221f2f31bc725c6a62fa5f8f91822f1c157
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407222"
 ---
 # <a name="cordebugsteprange-structure"></a>COR_DEBUG_STEP_RANGE 結構
 包含程式碼範圍的位移資訊。  
@@ -44,7 +45,7 @@ typedef struct {
 |`endOffset`|範圍結尾的位移。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl  
   

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218282"
 ---
 # <a name="getting-started-with-net-core-on-macos"></a>在 macOS 上開始使用 .NET Core
 

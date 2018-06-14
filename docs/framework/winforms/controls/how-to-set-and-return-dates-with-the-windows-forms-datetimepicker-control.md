@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535665"
 ---
 # <a name="how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control"></a>如何：使用 Windows Form DateTimePicker 控制項設定和傳回日期
 在 Windows Form <xref:System.Windows.Forms.DateTimePicker> 控制項中目前選取的日期或時間取決於 <xref:System.Windows.Forms.DateTimePicker.Value%2A> 屬性。 您可以在顯示控制項之前 (例如，在設計階段或在表單的 <xref:System.Windows.Forms.Form.Load> 事件) 設定 <xref:System.Windows.Forms.DateTimePicker.Value%2A> 屬性來判斷在控制項中一開始所選取的日期。 根據預設，此控制項的 <xref:System.Windows.Forms.DateTimePicker.Value%2A> 設為目前的日期。 如果您在程式碼中變更控制項的 <xref:System.Windows.Forms.DateTimePicker.Value%2A>，控制項會在表單上自動更新以反映新的設定。  

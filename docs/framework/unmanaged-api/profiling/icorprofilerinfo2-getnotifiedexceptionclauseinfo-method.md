@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 07606bf58709f088db486e0263e5cb519ab5b4cf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33456663"
 ---
 # <a name="icorprofilerinfo2getnotifiedexceptionclauseinfo-method"></a>ICorProfilerInfo2::GetNotifiedExceptionClauseInfo 方法
 取得例外狀況子句的原生位址和框架資訊 (`catch`/`finally`/`filter`) 是即將執行或剛執行。  
@@ -43,7 +44,7 @@ HRESULT GetNotifiedExceptionClauseInfo(
  這個呼叫可在任何時間之後的 Enter 回呼上述其中一個直到收到對應的 Leave 回呼或巢狀例外狀況擲回目前子句，則有這個是沒有保留的通知該子句中。 請注意，不可能擲回的例外狀況來逸出`filter`例外狀況子句，所以一律保持通知在此情況下。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591613"
 ---
 # <a name="object-data-type"></a>Object Data Type
 參考物件的保留位址。 您可以將任何參考類型 （字串、 陣列、 類別或介面） 指派給`Object`變數。 `Object`變數也可以指任何實值類型的資料 (數值， `Boolean`， `Char`， `Date`、 結構或列舉型別)。  

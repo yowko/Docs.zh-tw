@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565571"
 ---
 # <a name="xstatic-markup-extension"></a>x:Static 標記延伸
 參考任何靜態值的程式碼實體中定義[!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– 相容的方式。 參考的靜態屬性可以用來提供屬性，以在 XAML 中的值。  

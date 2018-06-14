@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599287"
 ---
 # <a name="array-dimensions-do-not-match-those-specified-in-the-39vbfixedarray39-attribute"></a>陣列維度不相符中所指定&#39;與 VBFixedArray&#39;屬性
 您的陣列維度不符合 `VBFixedArray` 屬性所指定的維度。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550998"
 ---
 # <a name="change-selection-in-a-richtextbox-programmatically"></a>以程式設計方式變更 RichTextBox 中的選項
 此範例示範如何以程式設計方式變更目前的選取範圍中<xref:System.Windows.Controls.RichTextBox>。 此選項會與相同使用者已選取使用使用者介面的內容。  

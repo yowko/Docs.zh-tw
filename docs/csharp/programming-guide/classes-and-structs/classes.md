@@ -11,6 +11,7 @@ ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34312088"
 ---
 # <a name="classes-c-programming-guide"></a>類別 (C# 程式設計手冊)
 「類別」是一種建構，可讓您將其他類型、方法和事件的變數群組在一起，以建立您自己的自訂類型。 類別就像藍圖。 它會定義類型的資料和行為。 如果類別未宣告為靜態，則用戶端程式碼可以建立它的「執行個體」。 這些執行個體是指派給變數的「物件」。 除非類別的執行個體的所有參考都超出範圍，否則變數會保留在記憶體中。 此時，CLR 會將它標記為適合進行記憶體回收。 如果類別宣告為 [static](../../../csharp/language-reference/keywords/static.md)，則您無法建立執行個體，而且用戶端程式碼只能透過類別本身存取它。 如需詳細資訊，請參閱[靜態類別和靜態類別成員](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。  

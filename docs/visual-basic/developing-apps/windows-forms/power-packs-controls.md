@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584198"
 ---
 # <a name="visual-basic-power-packs-controls"></a>Visual Basic Power Packs 控制項
 Visual Basic Power Packs 控制項是附加的 Windows Form 控制項。 Visual Studio 中並沒有包含它們。  您可以[下載這些](http://go.microsoft.com/fwlink/?LinkId=321343)，但是它們會當做提供-不支援。  

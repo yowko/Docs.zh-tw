@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507859"
 ---
 # <a name="datacontract-surrogate"></a>DataContract Surrogate
 這個範例示範如何使用資料合約 Surrogate 類別來自訂像是序列化 (Serialization)、還原序列化 (Deserialization)、結構描述匯出以及結構描述匯入等程序。 這個範例示範如何序列化和 Windows Communication Foundation (WCF) 用戶端與服務之間傳輸資料的位置的用戶端和伺服器案例中，使用 surrogate。  

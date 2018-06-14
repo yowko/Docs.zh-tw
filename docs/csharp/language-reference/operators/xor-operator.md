@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271246"
 ---
 # <a name="-operator-c-reference"></a>^ 運算子 (C# 參考)
 整數型別和 `bool` 會預先定義二元 `^` 運算子。 對於整數型別，`^` 會計算其運算元的位元互斥 OR。 對於 `bool` 運算元，`^` 會計算其運算元的邏輯位元互斥 OR；亦即，如果且唯有在正好其中一個運算元是 `true` 時，結果會是 `true`。  

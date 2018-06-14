@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 83e32b2b69d53772f8a4ebaabe1c025b95d1da47
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453723"
 ---
 # <a name="icorprofilercallbackshutdown-method"></a>ICorProfilerCallback::Shutdown 方法
 通知分析工具的應用程式即將關閉。  
@@ -40,7 +41,7 @@ HRESULT Shutdown();
  一般情況下，分析工具必須處理未預期的關機。 處理程序，例如可能因 Win32 的`TerminateProcess`（宣告於 Winbase.h） 的方法。 在其他情況下，CLR 會暫止特定受管理的執行緒 （背景執行緒），而不以正確順序解構訊息傳遞它們。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

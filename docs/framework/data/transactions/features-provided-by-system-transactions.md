@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365926"
 ---
 # <a name="features-provided-by-systemtransactions"></a>System.Transactions 所提供的功能
 本節說明如何使用 <xref:System.Transactions> 命名空間所提供的各項功能，來撰寫自己的交易式應用程式與資源管理員。 具體來說，本節涵蓋了如何與一或多位參與者一同建立並參與交易 (本機或分散式)。  

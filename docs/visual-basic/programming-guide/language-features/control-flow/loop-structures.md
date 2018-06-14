@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647887"
 ---
 # <a name="loop-structures-visual-basic"></a>迴圈結構 (Visual Basic)
 Visual Basic 迴圈結構可讓您重複執行一或多行程式碼。 您可以重複迴圈結構中的陳述式，直到條件為`True`，直到條件為`False`、 在集合中指定的次數，或一次針對每個項目數目。  

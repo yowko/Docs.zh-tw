@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804231"
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>HOW TO：建立自訂授權原則
 識別模型基礎結構中 Windows Communication Foundation (WCF) 支援宣告型授權模型。 宣告會從權杖擷取出來 (可以選擇性地由自訂授權原則進行處理)，接著會放置到可隨後進行檢查以做出授權決策的 <xref:System.IdentityModel.Policy.AuthorizationContext>。 自訂原則可用於將來自傳入權杖的宣告轉換為應用程式所需要的宣告。 如此一來，應用程式層都可以 WCF 支援的不同權杖類型所服務之不同宣告的詳細資料達成隔離。 本主題會說明如何實作自訂授權原則，以及如何將該原則新增至服務所使用的原則集合。  

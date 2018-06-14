@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651310"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>如何：決定物件變數參考的類型 (Visual Basic)
 物件變數包含儲存在其他位置的資料指標。 在執行階段可以變更該資料的類型。 在任何時刻，您可以使用<xref:System.Type.GetTypeCode%2A>方法，以判斷目前的執行階段類型，或[TypeOf 運算子](../../../../visual-basic/language-reference/operators/typeof-operator.md)來找出是否有目前執行階段型別是使用指定的型別相容。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491246"
 ---
 # <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>HOW TO：使用服務 Moniker 搭配中繼資料交換合約
 之後開發一些新的 WCF 服務，您可能會決定您想要能夠從指令碼或 Visual Basic 6.0 應用程式呼叫這些服務。 一種方法是將產生 WCF 用戶端組件、 向 COM 註冊組件、 組件安裝在 GAC 中，然後再從 Visual Basic 程式碼參照 COM 型別。 當您發佈應用程式時，您必須將發佈的 WCF 用戶端組件。 然後使用者必須向 COM 註冊 WCF 用戶端組件，並將它放在 GAC 中。 WCF COM Interop 也可讓您不需依賴 WCF 用戶端組件中進行相同的服務呼叫。 WCF moniker 可讓您從任何 COM 相容語言 （Visual Basic、 VBScript、 Visual Basic for Applications (VBA) 等等) 呼叫任何 WCF 服務，藉由指定的中繼資料交換 (Mex) 端點 URI 用來擷取類型的服務 moniker服務的相關資訊。 本主題描述如何呼叫使用者入門 WCF 範例使用指定 Mex 端點的 WCF moniker。  

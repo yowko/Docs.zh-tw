@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745210"
 ---
 # <a name="ltremovegt-element-for-ltnamedcachesgt"></a>&lt;移除&gt;元素&lt;namedCaches&gt;
 從記憶體快取的 `namedCaches` 集合移除具名快取項目。  

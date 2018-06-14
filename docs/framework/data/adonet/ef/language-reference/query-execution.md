@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804816"
 ---
 # <a name="query-execution"></a>查詢執行
 使用者建立 LINQ 查詢之後，查詢就會轉換成命令樹。 命令樹一種可與 Entity Framework 比較的查詢表示方式。 接下來命令樹會針對資料來源執行。 查詢執行期間會評估所有查詢運算式 (也就是查詢的所有元件)，包括結果具體化中使用的運算式。  

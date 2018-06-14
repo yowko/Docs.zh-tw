@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360696"
 ---
 # <a name="how-to-retrieve-information-as-read-only"></a>如何：以唯讀形式擷取資訊
 不想要變更資料時，可以搜尋唯讀結果以增加查詢效能。  

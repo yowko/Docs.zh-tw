@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577813"
 ---
 # <a name="comparing-strings-in-net"></a>在 .NET 中比較字串
 .NET 會提供數種方法來比較字串值。 下表列出並描述數值比較的方法。  

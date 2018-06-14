@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550747"
 ---
 # <a name="checkbox"></a>核取方塊
 您可以使用<xref:System.Windows.Controls.CheckBox>中[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]應用程式代表使用者可以選取或清除的選項。 您可以使用單一的核取方塊，或您可以將群組兩個或多個核取方塊。  

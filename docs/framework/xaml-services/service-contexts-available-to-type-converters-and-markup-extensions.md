@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566159"
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>適用於類型轉換子和標記延伸的服務內容
 在撰寫類型來支援使用類型轉換子和標記延伸時，通常必須先知道會在標記或周圍物件圖形結構中的何處使用類型轉換子和標記延伸。 要有這些資訊，才能正確地具現化所提供的物件，或是在物件圖形中建立對現有物件的物件參考。 使用 .NET Framework XAML 服務時，可能需要的內容會以一系列服務介面的形式公開。 類型轉換子或標記延伸支援程式碼可以使用從 <xref:System.Xaml.XamlObjectWriter> 或相關類型傳來的可用服務提供者內容，來查詢服務。 XAML 結構描述內容可透過這類服務直接提供。 本主題說明如何透過值轉換器實作存取服務內容，並列出通常可用的服務及其角色。  
@@ -74,7 +75,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="iserviceprovider"></a>IServiceProvider  
  **T:System.Xaml.IDestinationTypeProvider**中查詢服務： <xref:System.IServiceProvider>  
   
- **適用於：**服務基礎結構在.NET Framework 中的基本作業，以便讓您可以呼叫<xref:System.IServiceProvider.GetService%2A?displayProperty=nameWithType>。  
+ **適用於：** 服務基礎結構在.NET Framework 中的基本作業，以便讓您可以呼叫<xref:System.IServiceProvider.GetService%2A?displayProperty=nameWithType>。  
   
 ### <a name="itypedescriptorcontext"></a>ITypeDescriptorContext  
  **T:System.Xaml.IDestinationTypeProvider**中查詢服務： <xref:System.ComponentModel.ITypeDescriptorContext>  

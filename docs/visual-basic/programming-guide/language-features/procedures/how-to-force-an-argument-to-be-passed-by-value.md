@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651073"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>如何：強制以傳值方式傳遞引數 (Visual Basic)
 程序宣告判斷傳遞機制。 如果參數宣告[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)，Visual Basic 預期依參考傳遞相對應的引數。 這可讓程序來變更呼叫的程式碼中引數的基礎的程式設計項目值。 如果您想要保護對應的項目，針對這類變更，您可以覆寫`ByRef`括弧括住的引數名稱呼叫程序中的傳遞機制。 這些括號是封閉的呼叫中引數清單的括號。  

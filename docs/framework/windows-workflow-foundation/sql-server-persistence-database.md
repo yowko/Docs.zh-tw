@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514660"
 ---
 # <a name="sql-server-persistence-database"></a>SQL Server 持續性資料庫
 本節提供有關 SQL 工作流程執行個體存放區所支援之公用資料庫檢視表的詳細資料，並示範如何還原序列化基本執行個體資料屬性以及如何查詢非保存的執行個體。  

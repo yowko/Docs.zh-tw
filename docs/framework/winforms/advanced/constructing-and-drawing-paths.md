@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520652"
 ---
 # <a name="constructing-and-drawing-paths"></a>建構和繪製路徑
 路徑是一系列基本圖形 （線條、 矩形、 曲線、 文字和 like），可操作並繪製為單一單位。 路徑可以分割成*圖表*為開啟或關閉。 圖形可以包含數個基本項目。  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 395dc85ad638e8a790962a4aa38019612c360ce1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402213"
 ---
 # <a name="getalinkmessagedll-function"></a>GetALinkMessageDll 函式
 尋找並載入 DLL 的訊息。 如果訊息 DLL 無法找到或載入，則傳回 0。 訊息 DLL 應該的子目錄，其名稱是語言識別碼、 中或在目前的目錄。  

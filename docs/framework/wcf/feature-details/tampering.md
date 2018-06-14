@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498627"
 ---
 # <a name="tampering"></a>竄改
 *竄改*會改變一則訊息或傳遞的訊息，並使用修改的訊息用於不它適用於的行為。  

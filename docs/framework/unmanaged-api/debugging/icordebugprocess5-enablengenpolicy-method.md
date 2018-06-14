@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c598491acd27223a8a41234ddf2c6b8e6f005d52
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423139"
 ---
 # <a name="icordebugprocess5enablengenpolicy-method"></a>ICorDebugProcess5::EnableNGENPolicy 方法
 設定值，這個值會決定應用程式載入 managed 偵錯工具下執行時的原生映像的方式。  
@@ -44,7 +45,7 @@ HRESULT EnableNGENPolicy(
  `ICorDebugProcess5::EnableNGenPolicy`程序的存留期間，隨時可以呼叫方法。 原則是作用中的任何原則設定之後載入的模組。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   

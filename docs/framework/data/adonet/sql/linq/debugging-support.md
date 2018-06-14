@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361769"
 ---
 # <a name="debugging-support"></a>偵錯支援
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供一般偵錯支援[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]專案。  另請參閱[偵錯 LINQ](http://msdn.microsoft.com/library/Bb385795\(v=vs.110\))或[偵錯 LINQ](http://msdn.microsoft.com/library/Bb385795\(v=vs.120\))。  

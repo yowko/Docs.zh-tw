@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588222"
 ---
 # <a name="39as-any39-is-not-supported-in-39declare39-statements"></a>&#39;做為任何&#39;中不支援&#39;Declare&#39;陳述式
 `Any`資料類型用於`Declare`允許無法包含任何資料類型的引數使用的 Visual Basic 6.0 及舊版中的陳述式。 多載，不過，Visual Basic 支援，因此讓`Any`資料型別已經過時。  

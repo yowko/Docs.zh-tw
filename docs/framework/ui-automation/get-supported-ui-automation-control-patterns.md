@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410188"
 ---
 # <a name="get-supported-ui-automation-control-patterns"></a>取得支援的 UI 自動化控制項模式
 > [!NOTE]

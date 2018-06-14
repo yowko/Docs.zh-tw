@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360663"
 ---
 # <a name="how-to-specify-database-data-types"></a>如何：指定資料庫的資料類型
 使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A>屬性<xref:System.Data.Linq.Mapping.ColumnAttribute>屬性來指定 T-SQL 資料表宣告中定義的資料行的確切文字。  

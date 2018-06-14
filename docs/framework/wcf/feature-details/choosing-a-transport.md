@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495531"
 ---
 # <a name="choosing-a-transport"></a>選擇傳輸
 本主題討論選擇包含 Windows Communication Foundation (WCF) 中的三種主要傳輸的準則： HTTP、 TCP 及具名的管道。 WCF 也包含訊息佇列 (也稱為 MSMQ) 傳輸，但是這份文件不討論訊息佇列。  

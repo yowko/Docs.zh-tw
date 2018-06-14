@@ -14,6 +14,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172499"
 ---
 # <a name="regular-expression-examples"></a>規則運算式範例
 本節包含程式碼範例，說明規則運算式在常見應用程式中的使用方式。  

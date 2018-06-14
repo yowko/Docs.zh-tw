@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498211"
 ---
 # <a name="transport-security"></a>傳輸安全性
 傳輸安全性的 Windows Communication Foundation (WCF) 取決於選取的繫結。 繫結所實作的傳輸將決定實際的安全性機制。 本章節中的主題說明所實作的機制及其選項。  

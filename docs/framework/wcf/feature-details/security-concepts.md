@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497395"
 ---
 # <a name="security-concepts"></a>安全性概念
 本章節將簡要說明與 Windows Communication Foundation (WCF) 安全性相關的概念。  

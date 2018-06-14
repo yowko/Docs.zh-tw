@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577107"
 ---
 # <a name="how-to-write-text-to-a-file"></a>如何：將文字寫入檔案
 本主題示範可針對 .NET Framework 應用程式或 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式，將文字寫入至檔案的幾種不同方式。 通常會使用下列類別和方法，將文字寫入至檔案：  

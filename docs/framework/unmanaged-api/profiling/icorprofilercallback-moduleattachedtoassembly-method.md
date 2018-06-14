@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e6b5281e30c48471131fa12e5106f7d0a6826e1b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452555"
 ---
 # <a name="icorprofilercallbackmoduleattachedtoassembly-method"></a>ICorProfilerCallback::ModuleAttachedToAssembly 方法
 通知分析工具模組要附加到其父組件。  
@@ -45,7 +46,7 @@ HRESULT ModuleAttachedToAssembly(
  可以透過匯入位址表 (IAT)，載入模組，透過呼叫`LoadLibrary`，或透過中繼資料參考。 如此一來，common language runtime (CLR) 載入器有多個程式碼路徑，以判斷模組存在所在的組件。 因此，可能會之後[icorprofilercallback:: Moduleloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)呼叫時，此模組並不知道哪一個組件處於和取得父組件識別碼不可行。 `ModuleAttachedToAssembly`模組附加至其父組件和識別碼可透過其父組件時，呼叫方法。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

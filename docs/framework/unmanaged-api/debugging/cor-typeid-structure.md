@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3d4e07fb3d0988838fde662f4bb7d4719cc2d50f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408336"
 ---
 # <a name="cortypeid-structure"></a>COR_TYPEID 結構
 包含類型識別項。  
@@ -47,7 +48,7 @@ typedef struct COR_TYPEID{
  A`COR_TYPEID`物件要當做不透明。 其個別的欄位不應該存取或操作。 其唯一用途是做為識別項提供做為`out`中參數的方法呼叫，且可，接著傳遞給其他方法，以提供其他資訊。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   

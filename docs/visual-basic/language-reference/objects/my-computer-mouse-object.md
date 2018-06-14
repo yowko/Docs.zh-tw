@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593612"
 ---
 # <a name="mycomputermouse-object"></a>My.Computer.Mouse 物件
 提供用於取得屬性的格式和本機電腦上安裝的滑鼠的組態資訊。  

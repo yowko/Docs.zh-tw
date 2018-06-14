@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491984"
 ---
 # <a name="how-to-set-up-a-signature-confirmation"></a>HOW TO：設定簽章確認
 *簽章確認*是確保收到的回覆已產生寄件者的原始訊息的回應是訊息啟動器的機制。 簽章確認是定義在 WS-Security 1.1 規格中。 如果端點支援 WS-Security 1.0，您就無法使用簽章確認。  

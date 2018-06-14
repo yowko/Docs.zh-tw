@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639607"
 ---
 # <a name="type-of-argument-39ltargumentnamegt39-is-39lttypenamegt39-which-is-not-numeric"></a>引數型別&#39;&lt;引數名稱&gt;&#39;是&#39; &lt;typename&gt;&#39;，不是數值
 在必須要有數值引數的情況下，會發生非數值引數。  

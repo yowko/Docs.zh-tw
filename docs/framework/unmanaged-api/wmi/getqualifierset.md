@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0b50befa4346e17048598afd3d018dbde2fe8572
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458558"
 ---
 # <a name="getqualifierset-function"></a>GetQualifierSet 函式
 擷取設定的類別執行個體或類別定義的限定詞。
@@ -67,7 +68,7 @@ HRESULT GetQualifierSet (
 [IWbemQualifierSet 指標](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx)可讓呼叫者新增、 編輯或刪除這些限定詞。 這類新增、 編輯或刪除限定詞會套用至整個執行個體或類別定義。
 
 ## <a name="requirements"></a>需求  
-**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.idl  
   

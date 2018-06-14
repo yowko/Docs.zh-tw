@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543282"
 ---
 # <a name="how-to-insert-an-element-into-text-programmatically"></a>如何：以程式設計的方式將項目插入文字
 下列範例示範如何使用兩個<xref:System.Windows.Documents.TextPointer>物件，指定要套用的文字內的範圍<xref:System.Windows.Documents.Span>項目。  

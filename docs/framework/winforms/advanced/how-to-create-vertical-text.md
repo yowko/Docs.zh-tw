@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521468"
 ---
 # <a name="how-to-create-vertical-text"></a>如何：建立垂直文字
 您可以使用<xref:System.Drawing.StringFormat>物件，以指定垂直而非水平繪製文字。  

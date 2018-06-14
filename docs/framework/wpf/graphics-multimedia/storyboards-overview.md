@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566895"
 ---
 # <a name="storyboards-overview"></a>分鏡腳本概觀
 本主題示範如何使用<xref:System.Windows.Media.Animation.Storyboard>來組織及套用動畫物件。 說明如何以互動方式操作<xref:System.Windows.Media.Animation.Storyboard>物件，並描述間接屬性目標語法。  
@@ -260,7 +261,7 @@ ms.lasthandoff: 05/04/2018
   
  使用這些方法的優點是，您不需要建立<xref:System.Windows.Trigger>或<xref:System.Windows.TriggerAction>物件; 您只需要參考可控制<xref:System.Windows.Media.Animation.Storyboard>您只要操作。  
   
- **附註：**所執行的所有互動動作<xref:System.Windows.Media.Animation.Clock>，因此同時在<xref:System.Windows.Media.Animation.Storyboard>將發生在下一個刻度計時引擎就會發生不久前下一個呈現。 例如，如果您使用<xref:System.Windows.Media.Animation.Storyboard.Seek%2A>以跳至另一個點的動畫，屬性值的方法不會立即變更的值而變更的下一個刻度計時引擎。  
+ **附註：** 所執行的所有互動動作<xref:System.Windows.Media.Animation.Clock>，因此同時在<xref:System.Windows.Media.Animation.Storyboard>將發生在下一個刻度計時引擎就會發生不久前下一個呈現。 例如，如果您使用<xref:System.Windows.Media.Animation.Storyboard.Seek%2A>以跳至另一個點的動畫，屬性值的方法不會立即變更的值而變更的下一個刻度計時引擎。  
   
  下列範例示範如何套用和控制動畫的互動式方法<xref:System.Windows.Media.Animation.Storyboard>類別。  
   

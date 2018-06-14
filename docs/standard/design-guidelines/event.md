@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575385"
 ---
 # <a name="event-design"></a>事件設計
 事件是最常使用的回呼 （允許呼叫使用者程式碼架構的建構） 形式。 其他的回撥機制包括委派、 虛擬成員和介面為基礎的外掛程式取得的成員。資料可用性研究表示大部分的開發人員可以更輕鬆地使用事件，比使用其他的回撥機制。 事件會正確地切割整合與 Visual Studio 和許多語言。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549678"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverter 和 XAML
 本主題介紹將字串的類型轉換當成一般 XAML 語言功能的目的。 在.NET Framework 中，<xref:System.ComponentModel.TypeConverter>類別將某特定用途做可用來當作 XAML 屬性使用方式中的屬性值的受管理的自訂類別實作的一部分。 如果您撰寫自訂的類別，而且您想要您的類別可做為 XAML 可設定屬性值的執行個體，您可能需要套用<xref:System.ComponentModel.TypeConverterAttribute>至類別，撰寫自訂<xref:System.ComponentModel.TypeConverter>類別，或兩者。  

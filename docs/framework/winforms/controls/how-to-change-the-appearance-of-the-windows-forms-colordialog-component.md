@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530243"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>如何：變更 Windows Form ColorDialog 元件的外觀
 您可以設定 Windows Form 的外觀<xref:System.Windows.Forms.ColorDialog>元件使用其屬性的數目。 此對話方塊包含兩個區段，其中顯示基本色彩，可讓使用者定義自訂色彩的其中一個。  

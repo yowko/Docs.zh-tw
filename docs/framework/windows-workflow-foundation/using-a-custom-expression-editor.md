@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518573"
 ---
 # <a name="using-a-custom-expression-editor"></a>使用自訂運算式編輯器
 可以實作自訂運算式編輯器，以提供更豐富、更簡單的運算式編輯體驗。 在一些案例中，您可能會想要使用自訂運算式編輯器：  

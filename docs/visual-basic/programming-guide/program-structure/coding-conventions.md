@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655357"
 ---
 # <a name="visual-basic-coding-conventions"></a>Visual Basic 編碼慣例
 Microsoft 開發範例和文件，請遵循本主題中的指導方針。 如果您遵循相同的程式碼撰寫慣例，您可能會有下列好處：  

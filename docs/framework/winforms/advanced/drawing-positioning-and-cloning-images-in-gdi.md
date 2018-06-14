@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521647"
 ---
 # <a name="drawing-positioning-and-cloning-images-in-gdi"></a>在 GDI+ 中繪製、定位和複製影像
 您可以使用<xref:System.Drawing.Bitmap>類別來載入及顯示點陣影像，而且您可以使用<xref:System.Drawing.Imaging.Metafile>類別來載入及顯示向量影像。 <xref:System.Drawing.Bitmap>和<xref:System.Drawing.Imaging.Metafile>類別繼承自<xref:System.Drawing.Image>類別。 若要顯示的向量映像，您需要的執行個體<xref:System.Drawing.Graphics>類別和<xref:System.Drawing.Imaging.Metafile>。 若要顯示點陣影像，您需要的執行個體<xref:System.Drawing.Graphics>類別和<xref:System.Drawing.Bitmap>。 執行個體<xref:System.Drawing.Graphics>類別提供<xref:System.Drawing.Graphics.DrawImage%2A>方法，這個方法會接收<xref:System.Drawing.Imaging.Metafile>或<xref:System.Drawing.Bitmap>做為引數。  

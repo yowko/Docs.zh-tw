@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641049"
 ---
 # <a name="unable-to-read-fixed-width-fields-because-fieldwidths-is-nothing-or-empty"></a>無法讀取固定寬度的欄位，因為 FieldWidths 為 Nothing 或空白
 `TextFieldParser` 無法讀取固定寬度的欄位，因為 `FieldWidths` 屬性設定為 `Nothing` 或空白。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523078"
 ---
 # <a name="how-to-use-hit-testing-with-a-region"></a>如何：使用區域的使用點擊測試
 點擊測試的目的是要判斷游標是否在指定的物件，例如圖示或按鈕。  

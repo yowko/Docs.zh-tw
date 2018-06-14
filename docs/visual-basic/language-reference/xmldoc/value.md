@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602454"
 ---
 # <a name="ltvaluegt-visual-basic"></a>&lt;值&gt;(Visual Basic)
 指定屬性的描述。  

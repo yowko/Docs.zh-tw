@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523763"
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>如何：在設計階段建立新設定
 您可以使用 設定設計工具，在設計階段建立新的設定。 設定設計工具是格線樣式介面，可讓您建立新的設定，並指定這些設定的屬性。 您必須指定名稱、 值、 類型和您的新設定的範圍。 一旦建立的設定時，就是在程式碼中存取。  

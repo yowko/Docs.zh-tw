@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33477928"
 ---
 # <a name="systemservicemodelchannelspnrpunregisteredaddresses"></a>System.ServiceModel.Channels.PnrpUnregisteredAddresses
 Pnrp Resolver 已移除註冊本機節點的位址。  

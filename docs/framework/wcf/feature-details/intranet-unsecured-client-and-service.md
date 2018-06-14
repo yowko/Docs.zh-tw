@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492244"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>沒有安全保障的內部網路用戶端與服務
 下圖說明簡單的 Windows Communication Foundation (WCF) 服務，開發 WCF 應用程式的安全私人網路上提供的資訊。 因為資料重要性低、 預期網路本質上是安全的，或由 WCF 基礎結構下一層提供安全性，則不需要安全性。  

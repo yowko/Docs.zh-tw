@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564132"
 ---
 # <a name="xmembers-directive"></a>x:Members 指示詞
 保存成員定義在標記中，套用至父項目 x： 類別的集合。  

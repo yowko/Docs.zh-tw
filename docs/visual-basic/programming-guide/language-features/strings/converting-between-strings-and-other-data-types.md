@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648277"
 ---
 # <a name="converting-between-strings-and-other-data-types-in-visual-basic"></a>在 Visual Basic 中的字串和其他資料類型之間進行轉換
 本章節描述如何將字串轉換成其他資料型別。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515368"
 ---
 # <a name="using-interop-with-external-data-exchange"></a>與外部資料交換服務互通使用
 <xref:System.Activities.Statements.Interop>活動可以用來從 Windows Workflow Foundation (WF) 中執行活動[!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]和[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)](WF3)，和 Windows Workflow Foundation 內的工作流程[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)](WF4)。 此範例示範如何使用 WF4 工作流程服務中的 <xref:System.Workflow.Activities.ExternalDataExchangeService> 活動，以設定及執行 WF3 工作流程來使用 <xref:System.Activities.Statements.Interop> (以及用來呼叫方法和處理事件的對應自訂活動)。  

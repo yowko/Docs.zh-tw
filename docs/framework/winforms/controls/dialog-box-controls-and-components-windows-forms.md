@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527206"
 ---
 # <a name="dialog-box-controls-and-components-windows-forms"></a>對話方塊控制項和元件 (Windows Form)
 下列 Windows Form 控制項和元件提供標準的對話方塊。 如需每個對話方塊所提供之功能的詳細資訊，請參閱下列連結。  

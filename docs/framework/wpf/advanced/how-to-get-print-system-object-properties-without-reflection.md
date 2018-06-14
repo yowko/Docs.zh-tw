@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544726"
 ---
 # <a name="how-to-get-print-system-object-properties-without-reflection"></a>如何：取得列印系統物件屬性但不使用反映
 使用反映詳細列出的物件上的屬性 （和這些屬性的類型） 不會降低應用程式的效能。 <xref:System.Printing.IndexedProperties>命名空間提供方法來取得這項資訊與使用反映。  

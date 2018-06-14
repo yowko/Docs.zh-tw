@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333924"
 ---
 # <a name="finding-text-in-word-documents-c"></a>尋找 Word 文件中的文字 (C#)
 本主題會延伸先前的查詢以進行實用的操作：在文件中尋找出現的所有字串。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362060"
 ---
 # <a name="performing-catalog-operations"></a>執行資料庫目錄作業
 若要執行的命令來修改資料庫或目錄，例如 CREATE TABLE 或 CREATE PROCEDURE 陳述式，建立**命令**物件使用適當的 SQL 陳述式和**連接**物件。 執行命令並搭配**ExecuteNonQuery**方法**命令**物件。  

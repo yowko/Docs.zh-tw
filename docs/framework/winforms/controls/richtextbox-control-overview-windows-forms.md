@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542115"
 ---
 # <a name="richtextbox-control-overview-windows-forms"></a>RichTextBox 控制項概觀 (Windows Form)
 Windows Form<xref:System.Windows.Forms.RichTextBox>控制項用來顯示、 輸入及管理具有格式的文字。 <xref:System.Windows.Forms.RichTextBox>控制項執行的所有項目<xref:System.Windows.Forms.TextBox>控制項，但它可以也顯示字型、 色彩和連結; 文字和內嵌的影像從載入檔案，並尋找指定的字元。 <xref:System.Windows.Forms.RichTextBox>控制項通常用來提供操作文字，並顯示類似於文書處理應用程式，例如 Microsoft Word 的功能。 像<xref:System.Windows.Forms.TextBox>控制項，<xref:System.Windows.Forms.RichTextBox>控制項可以顯示捲軸，但不同的是<xref:System.Windows.Forms.TextBox>控制它的預設值是要顯示水平與垂直捲軸，如有需要以及它還有其他捲軸設定。  

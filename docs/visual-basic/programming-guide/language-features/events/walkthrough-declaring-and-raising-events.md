@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652805"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>逐步解說：宣告和引發事件 (Visual Basic)
 本逐步解說示範如何宣告和引發事件的類別，名為`Widget`。 完成步驟之後，您可能想要閱讀附屬主題: <<c0> [ 逐步解說： 處理事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)，其示範如何使用事件`Widget`來提供應用程式中的狀態資訊的物件。  

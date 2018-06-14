@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493025"
 ---
 # <a name="how-to-create-a-basic-atom-feed"></a>HOW TO：建立基本 Atom 摘要
 Windows Communication Foundation (WCF) 可讓您建立公開新聞訂閱摘要的服務。 本主題討論如何建立可公開 Atom 新聞訂閱摘要的新聞訂閱服務。  

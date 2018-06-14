@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458103"
 ---
 # <a name="configuring-client-behaviors"></a>設定用戶端行為
 Windows Communication Foundation (WCF) 設定有兩種行為： 藉由參考行為組態-中定義的`<behavior>`用戶端應用程式組態檔-，或以程式設計方式呼叫中的區段應用程式。 這個主題將描述這兩種方法。  

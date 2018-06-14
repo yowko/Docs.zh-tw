@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536408"
 ---
 # <a name="how-to-implement-the-inotifypropertychanged-interface"></a>如何：實作 INotifyPropertyChanged 介面
 下列程式碼範例示範如何實作<xref:System.ComponentModel.INotifyPropertyChanged>介面。 在 Windows Form 資料繫結中使用的商務物件上實作這個介面。 實作之後，介面溝通商務物件上的屬性變更繫結的控制項。  

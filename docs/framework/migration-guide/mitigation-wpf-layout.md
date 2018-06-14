@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387334"
 ---
 # <a name="mitigation-wpf-layout"></a>風險降低：WPF 版面配置
 WPF 控制項的版面配置可能略有不同。  

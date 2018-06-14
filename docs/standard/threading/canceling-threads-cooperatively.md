@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581338"
 ---
 # <a name="canceling-threads-cooperatively"></a>以合作方式取消執行緒
 在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]之前，.NET Framework 不會提供內建，以便在執行緒啟動後以合作方式加以取消。 不過，在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中，您可以使用取消語彙基元來取消執行緒，就如同您可以使用它們來取消 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 物件或 PLINQ 查詢。 雖然 <xref:System.Threading.Thread?displayProperty=nameWithType> 類別不提供取消語彙基元的內建支援，您仍可透過使用採取 <xref:System.Threading.ParameterizedThreadStart> 委派的 <xref:System.Threading.Thread> 建構函式，將語彙基元傳遞至執行緒程序。 下列範例示範如何進行這項操作。  

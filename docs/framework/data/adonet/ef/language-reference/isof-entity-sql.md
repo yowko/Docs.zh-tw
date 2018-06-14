@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762136"
 ---
 # <a name="isof-entity-sql"></a>ISOF (Entity SQL)
 判斷運算式的型別是否不屬於所指定的型別或它的其中一個子型別。  

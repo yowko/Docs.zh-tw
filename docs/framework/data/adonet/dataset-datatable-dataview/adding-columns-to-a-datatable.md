@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760462"
 ---
 # <a name="adding-columns-to-a-datatable"></a>將資料行加入至 DataTable
 A<xref:System.Data.DataTable>包含的集合<xref:System.Data.DataColumn>所參考的物件**資料行**資料表屬性。 這個資料行集合 (可搭配任何條件約束) 可定義資料表的結構描述 (或結構)。  

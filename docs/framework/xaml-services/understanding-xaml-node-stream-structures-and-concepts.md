@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566648"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>認識 XAML 節點資料流結構和概念
 XAML 讀取器和 XAML 寫入器在 .NET Framework XAML 服務中實作，根據 XAML 節點資料流的設計概念。 XAML 節點資料流是一組 XAML 節點的概念化。 在此概念化中，XAML 處理器會逐步查核 XAML 中的節點關聯性結構，一次一個 XAML。 在任何時候，只能有一個目前的記錄或目前的位置存在於開啟的 XAML 節點資料流中，而應用程式開發介面的許多層面只會報告從該位置取得的資訊。 XAML 節點資料流中的目前節點可以描述成物件、成員或值。 若將 XAML 視為 XAML 節點資料流，XAML 讀取器可以與 XAML 寫入器進行通訊，並可讓程式在有關 XAML 的載入路徑或儲存路徑作業期間，檢視、變更 XAML 節點資料流的內容，或與其互動。 XAML 讀取器和寫入器應用程式開發介面的設計和 XAML 節點資料流概念，類似先前相關讀取器和寫入器的設計和概念，例如 [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] ，以及 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 類別。 本主題討論 XAML 節點資料流概念，並說明如何撰寫在 XAML 節點層級與 XAML 表示法互動的常式。  
@@ -199,7 +200,7 @@ public class GameBoard {
   
 -   **未知的內容：** 此成員節點的名稱是 `_UnknownContent`。 嚴格來說，它是 <xref:System.Xaml.XamlDirective>，且其定義在 XAML 語言 XAML 命名空間中。 如果 XAML 物件項目包含來源 XAML 中的內容，但是在目前可用的 XAML 結構描述內容之下，無法判斷任何內容屬性，則會將這個指示詞當作 Sentinel 使用。 若要在 XAML 節點資料流中偵測此情況，您可以檢查是否有名為 `_UnknownContent` 的成員。 如果在載入路徑 XAML 節點資料流中，沒有採取任何其他動作，當它遇到任何物件上的 <xref:System.Xaml.XamlObjectWriter> 成員，預設 `WriteEndObject` 就會在所嘗試的 `_UnknownContent` 上擲回。 預設 <xref:System.Xaml.XamlXmlWriter> 不會擲回，並且會將成員視為隱含。 您可以從 `_UnknownContent` 取得 <xref:System.Xaml.XamlLanguage.UnknownContent%2A>的靜態實體。  
   
--   **集合的集合屬性：**雖然用於 XAML 之集合類別的支援 CLR 類型，通常會有專用具名屬性可保存集合項目，但是在支援類型解析之前，XAML 類型系統並不知道該屬性。 相反地，XAML 節點資料流會導入 `Items` 預留位置，做為集合 XAML 類型的成員。 在 .NET Framework XAML 服務實作中，這個指示詞/成員在節點資料流中的名稱為 `_Items`。 這個指示詞的常數可以從 <xref:System.Xaml.XamlLanguage.Items%2A>取得。  
+-   **集合的集合屬性：** 雖然用於 XAML 之集合類別的支援 CLR 類型，通常會有專用具名屬性可保存集合項目，但是在支援類型解析之前，XAML 類型系統並不知道該屬性。 相反地，XAML 節點資料流會導入 `Items` 預留位置，做為集合 XAML 類型的成員。 在 .NET Framework XAML 服務實作中，這個指示詞/成員在節點資料流中的名稱為 `_Items`。 這個指示詞的常數可以從 <xref:System.Xaml.XamlLanguage.Items%2A>取得。  
   
      注意：XAML 節點資料流可能包含 Items 屬性，而依據支援類型解析和 XAML 結構描述內容，其中的項目是無法剖析的。 例如，套用至物件的  
   

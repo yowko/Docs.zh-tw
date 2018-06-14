@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561972"
 ---
 # <a name="visual-layer-programming-how-to-topics"></a>視覺分層程式設計 HOW TO 主題
 本節中的主題示範如何使用點擊測試和低階組合的視覺化的圖層。  

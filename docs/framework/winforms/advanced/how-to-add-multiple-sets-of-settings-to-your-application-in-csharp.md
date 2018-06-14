@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520805"
 ---
 # <a name="how-to-add-multiple-sets-of-settings-to-your-application-in-c"></a>如何：在 C# 中將多組設定加入至應用程式 #
 在某些情況下，您可以在應用程式中有多組設定。 比方說，如果您開發的應用程式特定的設定群組打算經常變更，它可能是個明智的選擇，讓檔案可以批發，取代成單一檔案的所有分隔它們句子不受影響的其他設定。 Visual Studio 可讓您將多組設定加入至專案。 可透過 Properties.Settings 物件存取設定的其他設定。  

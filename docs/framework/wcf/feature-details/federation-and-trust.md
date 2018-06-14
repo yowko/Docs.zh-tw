@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492901"
 ---
 # <a name="federation-and-trust"></a>聯合與信任
 本主題涵蓋同盟應用程式、 信任界限和組態，以及使用發行之權杖中 Windows Communication Foundation (WCF) 與相關的各種層面。  

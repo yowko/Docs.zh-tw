@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640526"
 ---
 # <a name="how-to-work-with-activex-controls-visual-basic"></a>如何：使用 ActiveX 控制項 (Visual Basic)
 ActiveX 控制項是 COM 元件或您可以將其插入 Web 網頁或其他應用程式來重複使用已封裝的功能有其他人已撰寫的物件。 您可以使用 Visual Basic 6.0 和更早版本所開發的 ActiveX 控制項加入功能**工具箱**的 Visual Studio。  

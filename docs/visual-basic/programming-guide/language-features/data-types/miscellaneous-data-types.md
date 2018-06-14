@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647332"
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a>其他資料類型 (Visual Basic)
 Visual Basic 提供數個不導向數字或字元的資料類型。 相反地，它們可以處理特定資料這類是/否值、 日期/時間值和物件位址。  

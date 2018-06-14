@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9d56be8c6f224010da22803894524299c0d376ba
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443530"
 ---
 # <a name="corgenericparamattr-enumeration"></a>CorGenericParamAttr 列舉
 包含描述值<xref:System.Type>參數的泛型型別，用於呼叫[imetadataemit2:: Definegenericparam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md)。  
@@ -59,7 +60,7 @@ typedef enum CorGenericParamAttr {
 |`gpDefaultConstructorConstraint`|表示<xref:System.Type>參數必須要有的預設公用建構函式不接受任何參數。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorHdr.h  
   

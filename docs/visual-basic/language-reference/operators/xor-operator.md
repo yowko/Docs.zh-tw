@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604792"
 ---
 # <a name="xor-operator-visual-basic"></a>Xor 運算子 (Visual Basic)
 執行邏輯排除在兩個`Boolean`運算式或兩個數值運算式的位元互斥。  

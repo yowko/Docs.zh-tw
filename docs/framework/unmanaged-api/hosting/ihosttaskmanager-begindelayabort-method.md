@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 65bb59efa9d38fa32baa38eb239103f5cfa8be86
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441912"
 ---
 # <a name="ihosttaskmanagerbegindelayabort-method"></a>IHostTaskManager::BeginDelayAbort 方法
 通知主機 managed 程式碼正在進入的期間，不會中止目前的工作。  
@@ -48,11 +49,11 @@ HRESULT BeginDelayAbort ();
  主機必須不會中止目前的工作，直到`EndDelayAbort`呼叫。 如果另一個呼叫`BeginDelayAbort`在未經的中間呼叫`EndDelayAbort`，主應用程式應該會傳回 E_UNEXPECTED 從`BeginDelayAbort`，並應該採取任何動作。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
- **程式庫：**包含做為 MSCorEE.dll 中的資源  
+ **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 463bcf451574700d02f933d024ea5c24cedd259d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441811"
 ---
 # <a name="loadstringrc-function"></a>LoadStringRC 函式
 使用目前執行緒的預設文化特性，將 HRESULT 值轉譯成錯誤訊息。  
@@ -63,7 +64,7 @@ HRESULT LoadStringRC (
  如果方法沒有成功完成`szBuffer`包含空字串。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   

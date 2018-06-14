@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766981"
 ---
 # <a name="connection-strings"></a>連接字串
 連接字串 (Connection String) 包含可當做參數從資料提供者 (Data Provider) 傳遞至資料來源的初始化資訊。 此語法會因資料提供者而不同，而且連接字串會在嘗試開啟連接期間進行剖析。 Entity Framework 所使用的連接字串包含用來連接至支援 Entity Framework 之基礎 ADO.NET 資料提供者的資訊。 它們也包含必要之模型和對應檔的相關資訊。  
@@ -46,7 +47,7 @@ Metadata=res://<assemblyFullName>/<resourceName>.
   
 |選項|描述|  
 |-|-|  
-|`assemblyFullName`|含有內嵌資源之組件 (Assembly) 的完整名稱。 此名稱包括簡單名稱、版本名稱、支援的文化特性 (Culture) 和公開金鑰 (Public Key)，如下所示：<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> 資源可以內嵌在應用程式可存取的任何組件中。<br /><br /> 如果您指定以萬用字元 (\*) 的`assemblyFullName`，Entity Framework 執行階段將會搜尋下列位置中，依此順序中的資源：<br /><br /> 1.呼叫組件。<br />2.參考的組件。<br />3.位於應用程式 bin 目錄中的組件。<br /><br /> 如果這些檔案不在其中一個位置內，就會擲回例外狀況 (Exception)。 **注意：**當您使用萬用字元 （*） 時，Entity Framework 必須逐一查看以便含有正確名稱的資源的所有組件。 若要改善效能，請指定組件名稱而非萬用字元。|  
+|`assemblyFullName`|含有內嵌資源之組件 (Assembly) 的完整名稱。 此名稱包括簡單名稱、版本名稱、支援的文化特性 (Culture) 和公開金鑰 (Public Key)，如下所示：<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> 資源可以內嵌在應用程式可存取的任何組件中。<br /><br /> 如果您指定以萬用字元 (\*) 的`assemblyFullName`，Entity Framework 執行階段將會搜尋下列位置中，依此順序中的資源：<br /><br /> 1.呼叫組件。<br />2.參考的組件。<br />3.位於應用程式 bin 目錄中的組件。<br /><br /> 如果這些檔案不在其中一個位置內，就會擲回例外狀況 (Exception)。 **注意：** 當您使用萬用字元 （*） 時，Entity Framework 必須逐一查看以便含有正確名稱的資源的所有組件。 若要改善效能，請指定組件名稱而非萬用字元。|  
 |`resourceName`|內含資源的名稱，例如 AdvendtureWorksModel.csdl。 中繼資料服務只會尋找具有下列其中一個副檔名的檔案或資源：.csdl、.ssdl 或 .msl。 如果沒有指定 `resourceName`，就會載入所有中繼資料資源。 這些資源應該在組件中具有唯一的名稱。 如果您在組件的不同目錄中定義了具有相同名稱的多個檔案，`resourceName` 就必須在資源名稱前面包含資料夾結構，例如 FolderName.FileName.csdl。<br /><br /> 當您針對 `resourceName` 指定萬用字元 (*) 時，不需要使用 `assemblyFullName`。|  
   
 > [!NOTE]

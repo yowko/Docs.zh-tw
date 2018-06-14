@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582131"
 ---
 # <a name="security-and-race-conditions"></a>安全性和競爭情形
 值得注意的另一個部分是利用競爭情形的安全性漏洞的可能性。 有幾種的方式可能造成此。 請依照下列子主題簡述一些主要開發人員必須避免的陷阱。  

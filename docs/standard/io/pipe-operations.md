@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574362"
 ---
 # <a name="pipe-operations-in-the-net-framework"></a>.NET Framework 中的管道作業
 管道會提供一種處理序間通訊的方法。 管道有兩種類型：  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364001"
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>從 Web 瀏覽器存取服務 (WCF 資料服務快速入門)
 在此工作中，您將從 Visual Studio 啟動 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，並且選擇性停用 Web 瀏覽器中的摘要讀取功能。 然後會擷取服務定義文件，以及提交至公開的資源的網頁瀏覽器透過 HTTP GET 要求來存取資料服務資源。  

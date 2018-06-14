@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33286171"
 ---
 # <a name="ltlt-operator-c-reference"></a>&lt;&lt; 運算子 (C# 參考)
 左移運算子 (`<<`) 會向其第一個運算元左移第二個運算元所指定的位元數。 第二個運算元的類型必須是 [int](../../../csharp/language-reference/keywords/int.md) 或對 `int` 進行預先定義隱含數值轉換的類型。  

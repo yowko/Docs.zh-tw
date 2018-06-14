@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271064"
 ---
 # <a name="-operator-c-reference"></a>% 運算子 (C# 參考)
 remainder 運算子 (`%`) 會計算其第一個運算元除以第二個運算元之後的餘數。 所有數值類型都有預先定義的餘數運算子。 

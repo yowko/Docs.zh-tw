@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638527"
 ---
 # <a name="operator-is-not-valid-for-type-39lttypenamegt39"></a>運算子不是有效的型別&#39;&lt;類型名稱&gt;&#39;
 運算子不適用於這些類型。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33487853"
 ---
 # <a name="custom-authorization"></a>自訂授權
 授權是控制資源和工作之存取權的處理序。 本章節各個主題可讓您建立實作不同的宣告類型或原則。  

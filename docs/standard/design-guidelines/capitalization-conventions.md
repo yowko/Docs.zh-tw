@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575280"
 ---
 # <a name="capitalization-conventions"></a>大小寫慣例
 簡單的方法，使用這個章節配置中的指導方針情況下，當套用一致的方式，請識別項的類型、 成員和參數容易閱讀。  

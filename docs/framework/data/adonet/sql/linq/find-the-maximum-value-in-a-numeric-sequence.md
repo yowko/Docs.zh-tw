@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353813"
 ---
 # <a name="find-the-maximum-value-in-a-numeric-sequence"></a>尋找數值序列中的最大值
 使用 <xref:System.Linq.Enumerable.Max%2A> 運算子可尋找數值序列中的最高值。  

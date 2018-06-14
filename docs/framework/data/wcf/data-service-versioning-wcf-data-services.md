@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365614"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>資料服務版本控制 (WCF Data Services)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]可讓您建立資料服務，讓用戶端可以存取資料，做為使用 Uri 中的資料模型為基礎的資源。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 也支援服務作業的定義。 初始部署並在其存留期期間潛在進行數次之後，可能會因為各種原因而需要變更這些資料服務 (例如變更商務需要、資訊技術需求) 或處理其他問題。 當您針對現有的資料服務進行變更時，必須考慮是否要定義新的資料服務版本，以及如何妥善地將對於現有用戶端應用程式的影響降至最低。 本主題提供建立新資料服務版本時機和方式的指引。 本主題也會描述 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 如何處理支援不同版本 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 通訊協定之用戶端與資料服務之間的交換。  

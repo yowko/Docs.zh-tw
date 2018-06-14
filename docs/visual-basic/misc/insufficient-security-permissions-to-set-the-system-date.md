@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33633695"
 ---
 # <a name="insufficient-security-permissions-to-set-the-system-date"></a>設定系統日期的安全性權限不足
 安全性權限不足，無法設定系統日期。  

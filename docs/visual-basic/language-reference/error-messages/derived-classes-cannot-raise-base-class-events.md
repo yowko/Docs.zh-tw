@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586395"
 ---
 # <a name="derived-classes-cannot-raise-base-class-events"></a>衍生的類別無法引發基底類別事件
 只能從宣告它的宣告空間，可以引發事件。 因此，類別無法引發任何其他類別，即使其中從中衍生的事件。  

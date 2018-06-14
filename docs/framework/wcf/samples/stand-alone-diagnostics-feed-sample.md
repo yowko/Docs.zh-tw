@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807755"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>獨立診斷摘要範例
 這個範例示範如何建立的 RSS/Atom 摘要的新聞訂閱與 Windows Communication Foundation (WCF)。 它是基本的"Hello World"程式，其中顯示物件模型的基本概念和如何設定 Windows Communication Foundation (WCF) 服務。  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545567"
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-inlines-property"></a>如何：透過 Inlines 屬性管理非固定格式內容項目
 這些範例會示範一些較常見可以內嵌動態內容項目執行的作業 (和容器的這類項目，例如<xref:System.Windows.Controls.TextBlock>) 透過**內嵌**屬性。 這個屬性用來加入和移除項目從<xref:System.Windows.Documents.InlineCollection>。 非固定格式內容項目該功能**內嵌**屬性包括：  

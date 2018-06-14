@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586126"
 ---
 # <a name="identifier-expected"></a>必須是識別項
 不是可辨識的宣告項目名稱的程式設計項目就會發生在內容需要項目名稱。 可能的原因是確認屬性已指定某個位置以外的陳述式開頭。  

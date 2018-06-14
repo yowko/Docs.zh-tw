@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520236"
 ---
 # <a name="using-the-invokepowershell-activity"></a>使用 InvokePowerShell 活動
 InvokePowerShell 範例示範如何使用 `InvokePowerShell` 活動叫用 Windows PowerShell 命令。  

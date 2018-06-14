@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804567"
 ---
 # <a name="jsonp"></a>JSONP
 此範例示範如何在 WCF REST 服務中支援 JSON with Padding (JSONP)。 JSONP 是一項慣例，透過在目前文件中產生指令碼標記，用來叫用 (Invoke) 跨網域指令碼。 結果會傳回到指定的回呼函式 (Callback Function)。 JSONP 的基礎概念是，之類的標記`<script src="http://..." >`可以評估指令碼，來自任何網域，而這些標記擷取的指令碼中的其他函式可能已定義範圍內進行評估。  

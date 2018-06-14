@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357147"
 ---
 # <a name="retrieving-identity-or-autonumber-values"></a>擷取識別或自動編號值
 關聯式資料庫中的主索引鍵是永遠包含唯一值的資料行或資料行組合。 瞭解主索引鍵值可讓您找出包含此值的資料列。 關聯式 Database Engine (例如 SQL Server、Oracle 和 Microsoft Access/Jet) 支援建立可指定為主索引鍵的自動遞增資料行。 上述的值會在資料列加入至資料表時由伺服器產生。 在 SQL Server 中，您可以設定資料行的識別屬性。在 Oracle 中，您可以建立序列 (Sequence)。在 Microsoft Access 中，您可以建立 AutoNumber 資料行。  

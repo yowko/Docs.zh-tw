@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519934"
 ---
 # <a name="compensation"></a>補償
 補償中 Windows Workflow Foundation (WF) 是一種機制讓先前由已完成的工作可以復原或得到補償 （應用程式定義的邏輯） 發生後續失敗時。 本節描述如何在工作流程中使用補償。  

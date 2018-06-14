@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bc1d3ffc34cd74d68bf10cb677b68f0a75bb7c67
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444226"
 ---
 # <a name="startupflags-enumeration"></a>STARTUP_FLAGS 列舉
 包含值，表示啟動行為的 common language runtime (CLR)。 根據預設，記憶體回收是非並行，而且只基底類別程式庫載入定義域中性區域。  
@@ -74,7 +75,7 @@ typedef enum {
 |`STARTUP_ARM`|指定啟用應用程式定義域資源監視。 請參閱<xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>屬性和[ \<appDomainResourceMonitoring > 項目](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   

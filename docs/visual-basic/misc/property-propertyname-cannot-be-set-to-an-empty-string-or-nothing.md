@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639268"
 ---
 # <a name="property-ltpropertynamegt-cannot-be-set-to-an-empty-string-or-nothing"></a>屬性&lt;propertyname&gt;不能設定為空字串或 Nothing
 此屬性需要空字串 ("") 或 `Nothing`以外的值。 這可能是不正確計算值的結果。  

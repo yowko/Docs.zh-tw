@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638092"
 ---
 # <a name="picture-is-not-valid"></a>圖片無效
 您已嘗試將點陣圖、圖示或 Windows 中繼檔以外的圖形格式指派給表單或控制項的 `Picture` 屬性。  

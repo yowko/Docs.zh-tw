@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748668"
 ---
 # <a name="ltruntimegt-element"></a>&lt;執行階段&gt;項目
 提供 common language runtime 用來設定應用程式的資訊。  

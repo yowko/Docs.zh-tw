@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c92ba2b5eac5eb1368a7d7ccf3b666886f4ca92a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454710"
 ---
 # <a name="corprfhighmonitor-enumeration"></a>COR_PRF_HIGH_MONITOR 列舉
 [在 .NET Framework 4.5.2 及更新版本中支援]  
@@ -50,7 +51,7 @@ typedef enum {
 `COR_PRF_HIGH_MONITOR_IMMUTABLE` 就是要代表只在初始化期間設定的所有旗標的位元遮罩。 嘗試變更任何其他地方會導致失敗的這些旗標`HRESULT`。
 
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

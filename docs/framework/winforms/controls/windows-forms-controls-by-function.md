@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541573"
 ---
 # <a name="windows-forms-controls-by-function"></a>依功能區分 Windows Form 控制項
 Windows Form 提供控制項和元件執行的函式數目。 下表列出 Windows Form 控制項和元件，依據一般函式。 此外，其中有多個控制項提供相同的功能，建議使用的控制項都會列出其所取代的控制項的相關附註。 在後續另一個表格中，已被取代的控制項會列出與其建議的取代項目。  

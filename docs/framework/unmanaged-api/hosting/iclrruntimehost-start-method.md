@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: df2747b7cce112e61c6fb99cdb91dc0d56047b9e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432556"
 ---
 # <a name="iclrruntimehoststart-method"></a>ICLRRuntimeHost::Start 方法
 初始化 common language runtime (CLR) 程序。  
@@ -47,11 +48,11 @@ HRESULT Start();
  在許多情況下則不需要呼叫`Start`，因為執行階段會初始化其本身會自動在執行 managed 程式碼的第一個要求時。 不過，您可以使用`Start`指定完全執行階段初始化的時間。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
- **程式庫：**包含做為 MSCorEE.dll 中的資源  
+ **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

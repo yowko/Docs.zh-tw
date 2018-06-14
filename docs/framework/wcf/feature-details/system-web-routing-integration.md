@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498019"
 ---
 # <a name="systemwebrouting-integration"></a>System.Web.Routing 整合
 裝載 Windows Communication Foundation (WCF) 服務中網際網路資訊服務 (IIS) 時您放置.svc 檔案中的虛擬目錄。 此 .svc 檔案會指定要使用的服務主機處理站，以及實作服務的類別。 時，對服務提出要求的.svc 檔案中指定 URI，例如： http://contoso.com/EmployeeServce.svc。 對於撰寫 REST 服務的程式設計人員而言，此類型的 URI 不是最佳的方法。 REST 服務的 URI 會指定特定資源，且一般來說沒有任何擴充。 <xref:System.Web.Routing>整合功能可讓您裝載即可回應 Uri 不含副檔名的 WCF REST 服務。 如需有關路由，請參閱[ASP.NET 路由](http://go.microsoft.com/fwlink/?LinkId=184660)和[AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md)範例。  

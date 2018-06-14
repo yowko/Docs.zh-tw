@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 60624a5f6323399d06bda4e0280de8fbe861bd9b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419581"
 ---
 # <a name="icordebugprocess2getreferencevaluefromgchandle-method"></a>ICorDebugProcess2::GetReferenceValueFromGCHandle 方法
 取得已回收控制代碼指定的受管理物件的參考指標。  
@@ -51,7 +52,7 @@ HRESULT GetReferenceValueFromGCHandle (
 >  `GetReferenceValueFromGCHandle`方法不會驗證此控制代碼。 因此，`GetReferenceValueFromGCHandle`方法可能會毀損偵錯工具和程式碼進行偵錯，如果傳遞無效的控制代碼。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   

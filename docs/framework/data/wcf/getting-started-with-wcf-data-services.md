@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359487"
 ---
 # <a name="getting-started-with-wcf-data-services"></a>WCF 資料服務使用者入門
 本節中的主題可協助您快速了解[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]以及如何使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]公開及取用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要說明基礎技術。 本節包括概念性內容和[快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)教學課程。  

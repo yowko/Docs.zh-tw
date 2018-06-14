@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494052"
 ---
 # <a name="inside-the-custompeerresolverservice-client-registrations"></a>CustomPeerResolverService 內部：用戶端登錄
 網狀結構中的每一個節點都會將自己的端點資訊透過 `Register` 函式發佈給解析程式服務。 解析程式服務會儲存這項資訊做為註冊記錄。 這份記錄會包含該節點的唯一識別碼 (RegistrationID) 以及端點資訊 (PeerNodeAddress)。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513480"
 ---
 # <a name="pausing-and-resuming-a-workflow"></a>暫止和繼續流程
 工作流程將會暫停並繼續來回應書籤和封鎖的活動 (例如 <xref:System.Activities.Statements.Delay>)，但是也可以使用持續性來明確暫停、卸載及繼續執行工作流程。  

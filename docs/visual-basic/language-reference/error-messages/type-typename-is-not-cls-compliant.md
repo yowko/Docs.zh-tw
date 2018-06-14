@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594604"
 ---
 # <a name="type-lttypenamegt-is-not-cls-compliant"></a>型別&lt;typename&gt;不符合 CLS 標準
 具有不符合 CLS 標準的資料類型來宣告變數、 屬性或函式傳回。  

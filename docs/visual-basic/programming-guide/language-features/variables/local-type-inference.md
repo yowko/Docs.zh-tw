@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655319"
 ---
 # <a name="local-type-inference-visual-basic"></a>區域類型推斷 (Visual Basic)
 Visual Basic 編譯器使用*型別推斷*來判斷資料類型的本機變數宣告為不具有`As`子句。 編譯器會推斷變數的初始化運算式的型別類型。 這可讓您宣告變數而不用明確陳述的型別，如下列範例所示。 宣告，因為兩者`num1`和`num2`強型別為整數。  

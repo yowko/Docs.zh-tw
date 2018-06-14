@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651372"
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>如何：建立不變更值的變數 (Visual Basic)
 可能會互相矛盾的概念，不會變更其值的變數。 但常數不可行時，有很多情況下，而且會很有用的變數，以固定值。 在這種情況下，您可以定義的成員變數[ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)關鍵字。  

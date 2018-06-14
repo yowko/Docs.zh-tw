@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592011"
 ---
 # <a name="overview-of-synchronization-primitives"></a>同步處理原始物件概觀
 <a name="top"></a>.NET Framework 提供同步處理原始物件的範圍，以便控制執行緒的互動，及避免競爭情形。 這些可以大致分為三個類別：鎖定、信號及連鎖作業。  

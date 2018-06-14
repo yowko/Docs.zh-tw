@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356097"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>LINQ to SQL 多層式架構與 Web 服務
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 是專門用來在鬆散結合的資料存取層 (DAL) 例如 Web 服務中介層上使用。 如果展示層是 ASP.NET 網頁，那麼您可以使用 <xref:System.Web.UI.WebControls.LinqDataSource> Web 伺服器控制項，管理使用者介面與中介層上的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 之間的資料傳輸。 如果展示層不是 ASP.NET 網頁，則中介層和展示層都必須額外執行一些工作，以管理資料的序列化 (Serialization) 和還原序列化 (Deserialization)。  

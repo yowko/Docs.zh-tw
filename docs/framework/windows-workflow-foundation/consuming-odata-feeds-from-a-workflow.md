@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520496"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>從流程中使用 OData 摘要
 WCF 資料服務是 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的一個元件，可讓您建立使用 Open Data Protocol (OData) 的服務，利用具像狀態傳輸 (REST) 的語意透過 Web 或內部網路公開及取用資料。 OData 會將資料公開為可由 URI 定址的資源。 任何可以傳送 HTTP 要求並處理資料服務傳回之 OData 摘要的應用程式，都可以與 OData 型資料服務互動。 此外，WCF 資料服務也包含用戶端程式庫，在您從 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 應用程式取用 OData 摘要時，可為您提供更豐富的程式設計體驗。 本主題提供在工作流程中取用 OData 摘要的概觀 (不論有沒有使用用戶端程式庫)。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644390"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>COM Interop 簡介 (Visual Basic)
 元件物件模型 (COM) 可讓您公開其功能給其他元件和主控件應用程式的物件。 COM 物件已被 Windows 程式設計多年的基礎，而針對 common language runtime (CLR) 所設計的應用程式會提供許多優點。  

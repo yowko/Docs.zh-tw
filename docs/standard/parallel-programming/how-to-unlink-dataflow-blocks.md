@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581546"
 ---
 # <a name="how-to-unlink-dataflow-blocks"></a>如何：取消連結資料流程區塊
 本文件將說明如何解除目標資料流程區塊與其來源之間的連結。

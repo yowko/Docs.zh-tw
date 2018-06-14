@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537599"
 ---
 # <a name="windows-forms-controls"></a>Windows Form 控制項
 當您設計及修改 Windows Forms 應用程式的使用者介面時，您必須新增、對齊和調整控制項的位置。 控制項是表單物件內所包含的物件。 每一種控制項都有自己適合特定用途的一組屬性、方法和事件。 您可以在設計工具中操作控制項和撰寫程式碼以在執行階段以動態方式加入控制項。  

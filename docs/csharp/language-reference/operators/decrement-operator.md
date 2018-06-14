@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33288797"
 ---
 # <a name="---operator-c-reference"></a>-- 運算子 (C# 參考)
 遞減運算子 (`--`) 的運算元遞減量為 1。 遞減運算子可以出現在其運算元的前後：`--variable` 和 `variable--`。 第一種形式是前置遞減運算。 運算的結果是運算元遞減「之後」的值。 第二種形式是後置遞減運算。 運算的結果是運算元遞減「之前」的值。  

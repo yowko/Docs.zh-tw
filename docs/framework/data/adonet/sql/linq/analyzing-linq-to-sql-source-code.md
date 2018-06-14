@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353750"
 ---
 # <a name="analyzing-linq-to-sql-source-code"></a>分析 LINQ to SQL 原始程式碼
 使用下列步驟，您就可以從 Northwind 範例資料庫產生 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 原始程式碼。 您可以比較物件模型的項目與資料庫的項目，進一步了解不同項目的對應方式。  

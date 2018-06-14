@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365835"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>多層式架構應用程式中的資料擷取和 CUD 作業 (LINQ to SQL)
 當您將像是 Customers 或 Orders 等實體物件透過網路序列化到用戶端時，這些實體會與其資料內容中斷連結。 資料內容不會再追蹤它們的變更或它們與其他物件的關聯。 如果用戶端只讀取資料，這就不成問題。 此外，要讓用戶端加入資料列到資料庫，也相對來說簡單。 不過，如果您的應用程式要讓用戶端能夠更新或刪除資料，就必須將實體附加到新的資料內容，才能呼叫 <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>。 此外，如果您使用開放式並行存取 (Optimistic Concurrency) 來檢查原始值，那麼也需要想辦法將原始實體和修改過的實體提供給資料庫。 `Attach` 方法即是提供來讓您將中斷連結的實體放入新的資料內容。  

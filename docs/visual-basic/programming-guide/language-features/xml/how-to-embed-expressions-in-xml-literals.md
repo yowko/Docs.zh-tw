@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652265"
 ---
 # <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>如何：將運算式內嵌在 XML 常值中 (Visual Basic)
 您可以使用內嵌的運算式，來建立 XML 文件、 片段或包含在執行階段建立的內容項目結合 XML 常值。 下列範例會示範如何使用內嵌的運算式來填入項目內容、 屬性和項目名稱，在執行階段。  

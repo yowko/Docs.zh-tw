@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352242"
 ---
 # <a name="ltservicedebuggt"></a>&lt;serviceDebug&gt;
 指定 Windows Communication Foundation (WCF) 服務的偵錯和說明資訊的功能。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/04/2018
 |httpsHelpPageBindingConfiguration|字串，這個字串會指定在 `httpsHelpPageBinding` 屬性中指定之繫結的名稱，該屬性會參考這個繫結中的其他組態資訊。 必須在 `<bindings>` 區段中定義相同的名稱。|  
 |httpsHelpPageEnabled|布林值，控制 WCF 發行 HTML 說明頁所指定的位址是否`httpsHelpPageUrl`屬性。 預設值為 `true`。<br /><br /> 您可以將這個屬性設定為 `false`，以停用 HTML 瀏覽器可見的 HTML 說明頁的發行。<br /><br /> 若要確保 HTML 說明網頁是在由 `httpsHelpPageUrl` 屬性控制的位置發行，必須將這個屬性設定為 `true`。 此外，還必須符合下列其中一項條件：<br /><br /> -`httpsHelpPageUrl`屬性是支援 HTTPS 通訊協定配置的絕對位址。<br />-沒有支援 HTTPS 通訊協定配置的服務的基底位址。<br /><br /> 如果將不支援 HTTPS 通訊協定配置的絕對位址指派至 `httpsHelpPageUrl` 屬性，將會擲回例外狀況，但是其他任何不符合前述條件的情況都會造成沒有例外狀況和沒有 HTML 說明網頁。|  
 |httpsHelpPageUrl|URI，指定當使用 HTML 瀏覽器檢視端點時，使用者所看到的自訂 HTML 說明檔的相對或絕對 HTTPS URL。<br /><br /> 您可以使用這個屬性來啟用從 HTTPS/Get 要求 (例如，從 HTML 瀏覽器) 傳回的自訂 HTML 說明檔。 HTML 說明檔的位置解析如下：<br /><br /> -如果此屬性的值是相對位址，HTML 說明檔的位置就是支援 HTTPS 要求的服務基底位址的值加上這個屬性值。<br />-如果此屬性的值是絕對位址，且支援 HTTPS 要求，HTML 說明檔的位置就是這個屬性的值。<br />-如果此屬性的值是絕對位址，但不支援 HTTPS 要求，會擲回例外狀況。<br /><br /> 這個屬性是唯一時才有效`httpHelpPageEnabled`屬性是`true`。|  
-|includeExceptionDetailInFaults|值，指定是否要針對偵錯用途，在傳回給用戶端的 SOAP 錯誤詳細資料中包含 Managed 例外狀況資訊。 預設為 `false`。<br /><br /> 如果您將這個屬性設定為 `true`，就可以讓 Managed 例外狀況資訊的進入用戶端以便偵錯，以及發行可讓使用者在 Web 瀏覽器中瀏覽服務的 HTML 資訊檔案。 **注意：**傳回 managed 例外狀況資訊傳回用戶端可能會有的安全性風險。 這是因為例外狀況細節會公開內部服務實作 (Implementation) 的相關資訊，可能會被未經授權的用戶端加以利用。|  
+|includeExceptionDetailInFaults|值，指定是否要針對偵錯用途，在傳回給用戶端的 SOAP 錯誤詳細資料中包含 Managed 例外狀況資訊。 預設為 `false`。<br /><br /> 如果您將這個屬性設定為 `true`，就可以讓 Managed 例外狀況資訊的進入用戶端以便偵錯，以及發行可讓使用者在 Web 瀏覽器中瀏覽服務的 HTML 資訊檔案。 **注意：** 傳回 managed 例外狀況資訊傳回用戶端可能會有的安全性風險。 這是因為例外狀況細節會公開內部服務實作 (Implementation) 的相關資訊，可能會被未經授權的用戶端加以利用。|  
   
 ### <a name="child-elements"></a>子項目  
  無。  

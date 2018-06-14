@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551813"
 ---
 # <a name="how-to-style-controls-on-a-toolbar"></a>如何：工具列上的樣式控制項
 <xref:System.Windows.Controls.ToolBar>定義<xref:System.Windows.ResourceKey>物件，指定控制項內的樣式<xref:System.Windows.Controls.ToolBar>。  若要設定在控制項的樣式<xref:System.Windows.Controls.ToolBar>，將`x:key`要的樣式屬性<xref:System.Windows.ResourceKey>中定義<xref:System.Windows.Controls.ToolBar>。  

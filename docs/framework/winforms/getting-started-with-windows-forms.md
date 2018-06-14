@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538961"
 ---
 # <a name="getting-started-with-windows-forms"></a>Windows Form 使用者入門
 您可以使用 Windows Form 建立功能強大的 Windows 應用程式。 下列主題說明如何利用 Windows Form 顯示資料、 處理使用者輸入和部署您的應用程式，以增強安全性輕鬆能力深入了解。  

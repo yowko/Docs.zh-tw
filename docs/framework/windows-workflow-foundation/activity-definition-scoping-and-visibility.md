@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518498"
 ---
 # <a name="activity-definition-scoping-and-visibility"></a>活動定義範圍和可視性
 就像物件的範圍和可視性一樣，活動定義範圍和可視性是其他物件或活動存取活動成員的能力。 活動定義是由下列實作所執行：  

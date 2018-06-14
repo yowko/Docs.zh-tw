@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572810"
 ---
 # <a name="systemxml-usage"></a>System.Xml 使用方式
 本節討論中的幾種類型的使用方式的相關<xref:System.Xml?displayProperty=nameWithType>無法用來代表 XML 資料的命名空間。  

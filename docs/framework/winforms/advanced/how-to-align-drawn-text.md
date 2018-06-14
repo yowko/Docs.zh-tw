@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522753"
 ---
 # <a name="how-to-align-drawn-text"></a>如何：對齊繪製的文字
 當您執行自訂繪圖時，您通常可以置表單或控制項上描繪的文字。 您可以輕鬆地對齊，以繪製<xref:System.Drawing.Graphics.DrawString%2A>或<xref:System.Windows.Forms.TextRenderer.DrawText%2A>方法藉由建立正確格式化的物件，並設定適當的格式旗標。  

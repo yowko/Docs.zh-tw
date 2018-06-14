@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556662"
 ---
 # <a name="drawings-how-to-topics"></a>繪圖 HOW TO 主題
 本節中的主題描述如何使用<xref:System.Windows.Media.Drawing>繪製圖形、 影像或文字的物件。  

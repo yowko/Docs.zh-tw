@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766851"
 ---
 # <a name="oracle-schema-collections"></a>Oracle 結構描述集合
 除通用結構描述集合之外，Microsoft .NET Framework Data Provider for Oracle 還支援下列特定的結構描述集合：  

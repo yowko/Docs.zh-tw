@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535534"
 ---
 # <a name="tooltip-component-overview-windows-forms"></a>ToolTip 元件概觀 (Windows Form)
 當使用者指向控制項時，Windows Form <xref:System.Windows.Forms.ToolTip> 元件會顯示文字。 工具提示可以與任何控制項產生關聯。 使用此元件的範例： 為了節省空間，在表單上，您可以在按鈕上顯示小圖示，並使用工具提示說明按鈕的功能。  

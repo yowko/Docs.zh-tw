@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596203"
 ---
 # <a name="argument-ltargumentnamegt-must-be-greater-than-or-equal-to-zero"></a>引數&lt;引數名稱&gt;必須大於或等於零
 引數值小於零。 引數值必須大於或等於零。  

@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 78149d1f8fdad3c11fe693221888f115af84ada2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406418"
 ---
 # <a name="authenticode-unmanaged-api-reference"></a>Authenticode (Unmanaged API 參考)
 支援 Authenticode XrML 授權的建立及驗證模組。  

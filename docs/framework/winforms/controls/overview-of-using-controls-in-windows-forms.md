@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537358"
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>在 Windows Form 中使用控制項的概觀
 本主題描述 Windows Form 應用程式的基本項目，並提供簡單的範例，使用的控制項及處理 Windows Form 應用程式中的事件。  

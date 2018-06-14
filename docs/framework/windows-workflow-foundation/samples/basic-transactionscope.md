@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516798"
 ---
 # <a name="basic-transactionscope"></a>基本 TransactionScope
 這個範例包含四個案例，會示範如何巢狀處理 <xref:System.Activities.Statements.TransactionScope> 執行個體。 第一個案例會示範巢狀處理協力廠商活動，作者對於這個活動的結構並不清楚。 第二和第三個案例示範如何採用逾時，最後一個案例則示範 <xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure%2A> 設定。  

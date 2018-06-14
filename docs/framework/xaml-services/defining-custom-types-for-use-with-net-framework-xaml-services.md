@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566492"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>定義可搭配 .NET Framework XAML 服務使用的自訂類型
 當您定義了商務物件的自訂型別，或在特定架構上沒有相依性的類型時，但有特定的 XAML，您可以遵循的最佳作法。 如果您依照這些作法，可以發現 XAML 特性，您的型別.NET Framework XAML 服務和 XAML 讀取器和 XAML 寫入器，並提供適當的表示，使用 XAML 類型系統的 XAML 節點資料流。 本主題說明類型定義、 成員定義和 CLR 設定其屬性的型別或成員的最佳作法。  

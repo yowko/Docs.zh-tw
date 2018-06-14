@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532710"
 ---
 # <a name="how-to-split-a-window-horizontally-using-the-designer"></a>如何：使用設計工具水平分隔視窗
 這個範例會將用來分隔<xref:System.Windows.Forms.SplitContainer>控制水平。  

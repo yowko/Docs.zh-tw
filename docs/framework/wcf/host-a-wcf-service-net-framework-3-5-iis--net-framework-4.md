@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499124"
 ---
 # <a name="how-to-host-a-wcf-service-written-with-net-framework-35-in-iis-running-under-net-framework-4"></a>HOW TO：在 .NET Framework 4 下執行的 IIS 中，裝載以 .NET Framework 3.5 寫入的 WCF 服務
 裝載 Windows Communication Foundation (WCF) 服務，以撰寫時[!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)]上執行的機器[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]，您可能會收到<xref:System.ServiceModel.ProtocolException>包含下列文字。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527280"
 ---
 # <a name="matrix-representation-of-transformations"></a>以矩陣來表示轉換
 M × n 矩陣是一組數字中的資料列 m 和 n 個資料行排列。 下圖將顯示數個矩陣。  

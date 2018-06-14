@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489202"
 ---
 # <a name="data-transfer-and-serialization"></a>資料傳輸與序列化
 在連線系統中，服務與用戶端會仰賴資料交換來完成任何工作。 身為開發人員的服務或用戶端，您也必須了解 Windows Communication Foundation (WCF) 如何處理資料與資料序列化才能建立有效率且容易維護的應用程式。  

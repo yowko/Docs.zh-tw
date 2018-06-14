@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528319"
 ---
 # <a name="defining-a-property-in-windows-forms-controls"></a>定義 Windows Form 控制項中的屬性
 如需屬性的概觀，請參閱[屬性概觀](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52)。 定義屬性時，有一些重要的考量︰  

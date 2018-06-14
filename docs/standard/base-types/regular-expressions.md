@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577136"
 ---
 # <a name="net-regular-expressions"></a>.NET 規則運算式
 規則運算式提供功能強大、彈性且有效率的方法來處理文字。 規則運算式的廣泛模式比對標記法可讓您快速剖析大量文字，以尋找特定的字元模式；驗證文字，以確保其符合預先定義的模式 (例如電子郵件地址)；擷取、編輯、取代或刪除文字子字串；以及將擷取的字串加入至集合，以產生報告。 對許多處理字串或剖析大型文字區塊的應用程式而言，規則運算式是不可或缺的工具。  

@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 54d239c3091b29424b26fbab4cb4eb9152ff9ad9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442162"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets 列舉
 指定有效套用屬性的應用程式項目。  
@@ -86,7 +87,7 @@ typedef enum CorAttributeTargets
  `CorAttributeTargets`與 managed<xref:System.AttributeTargets?displayProperty=nameWithType>列舉型別。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorHdr.h  
   

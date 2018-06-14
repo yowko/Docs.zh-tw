@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588839"
 ---
 # <a name="expression-recursively-calls-the-containing-property-39ltpropertynamegt39"></a>運算式遞迴呼叫包含屬性&#39; &lt;propertyname&gt;&#39;
 中的陳述式`Set`屬性定義的程序會將值儲存至屬性的名稱。  

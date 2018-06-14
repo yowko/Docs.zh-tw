@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550057"
 ---
 # <a name="how-to-add-a-watermark-to-a-textbox"></a>如何：將浮水印加入至 TextBox
 下列範例示範如何協助您的可用性<xref:System.Windows.Controls.TextBox>所顯示說明背景影像的內部<xref:System.Windows.Controls.TextBox>直到使用者輸入文字，此時映像會移除。 此外，背景影像會還原一次當使用者移除其輸入。 請參閱下圖。  

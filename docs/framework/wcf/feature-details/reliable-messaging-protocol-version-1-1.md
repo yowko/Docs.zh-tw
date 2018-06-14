@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496954"
 ---
 # <a name="reliable-messaging-protocol-version-11"></a>Reliable Messaging Protocol 1.1 版
 本主題涵蓋 Windows Communication Foundation (WCF) 實作詳細資料的 WS-SECURITY 與 Ws-reliablemessaging February 2007 （1.1 版） 通訊協定所需使用 HTTP 傳輸的互通性。 WCF 會遵循的條件約束及說明本主題所述 Ws-reliablemessaging 規格。 請注意開始實作 Ws-reliablemessaging 1.1 版通訊協定[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]。  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557195"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-rotation3danimation"></a>如何：使用 Rotation3DAnimation 建立立體旋轉的動畫
 下列範例示範如何讓旋轉時它"wobbles 」 使用 3D 物件<xref:System.Windows.Media.Animation.Rotation3DAnimation>以動畫方式顯示<xref:System.Windows.Media.Media3D.RotateTransform3D.Rotation%2A>屬性<xref:System.Windows.Media.Media3D.RotateTransform3D>套用至 3D 物件的物件。  

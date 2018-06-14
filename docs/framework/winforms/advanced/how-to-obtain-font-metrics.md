@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524205"
 ---
 # <a name="how-to-obtain-font-metrics"></a>如何：取得字型度量資訊
 <xref:System.Drawing.FontFamily>類別提供下列方法，擷取特定的系列樣式組合的各種度量：  

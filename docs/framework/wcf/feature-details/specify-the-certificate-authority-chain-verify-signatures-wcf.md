@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498071"
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>HOW TO：指定用來驗證簽章的憑證授權單位憑證鏈結 (WCF)
 當 Windows Communication Foundation (WCF) 接收 SOAP 訊息使用 X.509 憑證來簽署時，依預設它會確認 X.509 憑證由受信任的憑證授權單位發出。 它會搜尋憑證存放區並判斷該憑證授權單位的憑證是否已指定為受信任來完成所有程序。 為了讓 WCF 這項判斷，憑證授權單位憑證鏈結必須安裝在正確的憑證存放區。  

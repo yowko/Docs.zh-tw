@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748213"
 ---
 # <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt;項目
 
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/03/2018
   
 |屬性|描述|  
 |---------------|-----------------|  
-|**version**|選擇性屬性。<br /><br /> 字串值，用於指定這個應用程式支援的通用語言執行平台 (CLR) 版本。 如需有效值的`version`屬性，請參閱[「 執行階段版本 」 值](#version)> 一節。 **注意：**透過.NET Framework 3.5，「*執行階段版本*"值的形式*主要*。*次要*。*建置*。 從 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 開始，只需要主要和次要版本號碼 (也就是 "v4.0"，不需要 "v4.0.30319")。 建議使用較短的字串。|  
+|**version**|選擇性屬性。<br /><br /> 字串值，用於指定這個應用程式支援的通用語言執行平台 (CLR) 版本。 如需有效值的`version`屬性，請參閱[「 執行階段版本 」 值](#version)> 一節。 **注意：** 透過.NET Framework 3.5，「*執行階段版本*"值的形式*主要*。*次要*。*建置*。 從 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 開始，只需要主要和次要版本號碼 (也就是 "v4.0"，不需要 "v4.0.30319")。 建議使用較短的字串。|  
 |**sku**|選擇性屬性。<br /><br /> 字串值，指定庫存單位 (SKU)，進而指定哪些應用程式支援的.NET Framework 版本。<br /><br /> 從.NET Framework 4.0 使用`sku`屬性建議。  該屬性存在時，會指出應用程式作為目標的 .NET Framework 版本。<br /><br /> 如需 sku 屬性的有效值，請參閱[「 sku 識別碼 」 值](#sku)> 一節。|  
   
 ## <a name="remarks"></a>備註

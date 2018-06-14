@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542557"
 ---
 # <a name="forwardtranslateaccelerator-function-wpf-unmanaged-api-reference"></a>ForwardTranslateAccelerator 函式 (WPF Unmanaged API 參考)
 這個 API 支援的 Windows Presentation Foundation (WPF) 基礎結構，並不是直接從您的程式碼使用。  
@@ -36,7 +37,7 @@ HRESULT ForwardTranslateAccelerator(
  `true` 當此應用程式已經指定有機會處理輸入的訊息，但未處理。否則， `false`。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[.NET Framework 系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[.NET Framework 系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **DLL:**  
   

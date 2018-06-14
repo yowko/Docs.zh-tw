@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502724"
 ---
 # <a name="workflow-services-overview"></a>工作流程服務概觀
 工作流程服務是使用工作流程實作的 wcf 服務。 工作流程服務是使用訊息活動來傳送和接收 Windows Communication Foundation (WCF) 訊息的工作流程。 .NET Framework 4.5 引入了許多傳訊活動，可讓您從工作流程內傳送及接收訊息。 如需傳訊活動，以及如何使用它們來實作不同訊息交換模式的詳細資訊，請參閱[傳訊活動](../../../../docs/framework/wcf/feature-details/messaging-activities.md)。  

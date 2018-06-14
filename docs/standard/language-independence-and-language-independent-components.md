@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579622"
 ---
 # <a name="language-independence-and-language-independent-components"></a>語言獨立性以及與語言無關的元件
 .NET Framework 是與語言無關的。 這表示，身為開發人員，您可以用目標為 .NET Framework 的許多語言之一進行開發，例如 C#、C++/CLI、Eiffel、F#、IronPython、IronRuby、PowerBuilder、Visual Basic、Visual COBOL 和 Windows PowerShell。 您可以存取為 .NET Framework 開發的類別庫的類型和成員，而不需要知道最初的寫入語言，也不需遵循任何原始語言的語言慣例。 如果您是元件開發人員，則不論其語言為何，元件都可以由任何 .NET Framework 應用程式存取。  

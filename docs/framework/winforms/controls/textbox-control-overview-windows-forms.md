@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539863"
 ---
 # <a name="textbox-control-overview-windows-forms"></a>TextBox 控制項概觀 (Windows Form)
 Windows Form 的文字方塊會用來從使用者取得輸入或顯示的文字。 <xref:System.Windows.Forms.TextBox>控制項通常用於編輯的文字，不過它也可以設定為唯讀。 文字方塊可以顯示多行、 文字換行到控制項的大小和加入基本的格式。 <xref:System.Windows.Forms.TextBox>控制項提供單一的格式樣式的文字顯示，或輸入控制項。 若要顯示多種類型的格式化的文字，請使用<xref:System.Windows.Forms.RichTextBox>控制項。 如需詳細資訊，請參閱[RichTextBox 控制項概觀](../../../../docs/framework/winforms/controls/richtextbox-control-overview-windows-forms.md)。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579388"
 ---
 # <a name="observer-design-pattern-best-practices"></a>觀察器設計模式最佳作法
 在 .NET Framework 中，觀察者設計模式會實作為一組介面。 <xref:System.IObservable%601?displayProperty=nameWithType> 介面代表資料提供者，它也負責提供 <xref:System.IDisposable> 實作，讓觀察者可以取消訂閱通知。 <xref:System.IObserver%601?displayProperty=nameWithType> 介面代表觀察者。 本主題說明使用這些介面實作觀察者設計模式時，開發人員應該遵循的最佳作法。  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d09a2ee278dba7e711891bc6d72043bb3a499dd8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458486"
 ---
 # <a name="endmethodenumeration-function"></a>EndMethodEnumeration 函式
 結束呼叫啟動列舉順序[BeginMethodEnumeration 函式](beginmethodenumeration.md)。  
@@ -60,7 +61,7 @@ HRESULT EndMethodEnumeration (
 呼叫者開始列舉順序使用[BeginMethodEnumeration 函式](beginmethodenumeration.md)，然後再呼叫[NextMethod 函式](nextmethod.md )直到該方法傳回`WBEM_S_NO_MORE_DATA`。 呼叫端 （選擇性） 藉由呼叫完成順序`EndMethodEnumeration`。 呼叫端可能會提早終止列舉型別，藉由呼叫`EndMethodEnumeration`在任何時間。
 
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.idl  
   

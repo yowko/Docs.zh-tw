@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546324"
 ---
 # <a name="optimizing-wpf-application-performance"></a>最佳化 WPF 應用程式效能
 本節的目的在於為參考[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式開發人員所需的方式來改善其應用程式的效能。 如果您是新的 Microsoft.NET framework 開發人員和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，您應該先熟悉這兩個平台。 本節假設兩者的實用知識，並寫入的程式設計人員已經知道要取得其應用程式啟動且正在執行。  

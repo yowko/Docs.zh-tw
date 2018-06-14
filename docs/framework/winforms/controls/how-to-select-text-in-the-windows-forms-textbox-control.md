@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536689"
 ---
 # <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a>如何：在 Windows Form TextBox 控制項中選取文字
 您可以在 Windows Form 中，以程式設計方式選取文字<xref:System.Windows.Forms.TextBox>控制項。 比方說，如果您建立的搜尋文字的特定字串的函式，您可以選取要以視覺化方式警示找到的字串位置的讀取器的文字。  

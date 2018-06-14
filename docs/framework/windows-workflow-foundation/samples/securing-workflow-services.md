@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806665"
 ---
 # <a name="securing-workflow-services"></a>保護工作流程服務
 安全工作流程服務範例示範下列程序：  

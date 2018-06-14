@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521156"
 ---
 # <a name="how-to-fill-open-figures"></a>如何：填滿開放圖形
 您可以藉由傳遞填滿路徑<xref:System.Drawing.Drawing2D.GraphicsPath>物件<xref:System.Drawing.Graphics.FillPath%2A>方法。 <xref:System.Drawing.Graphics.FillPath%2A>方法填入填滿模式 （替代或捲繞） 根據目前設定路徑的路徑。 如果路徑有任何開啟的數字，如同這些數字已關閉，已填入的路徑。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 關閉圖繪製直線其結束點從它的起點。  

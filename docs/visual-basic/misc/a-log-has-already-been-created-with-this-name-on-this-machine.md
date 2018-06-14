@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603426"
 ---
 # <a name="a-log-has-already-been-created-with-this-name-on-this-machine"></a>已在這部電腦上建立具有這個名稱的記錄檔。
 嘗試使用已在使用的名稱來建立記錄檔。  

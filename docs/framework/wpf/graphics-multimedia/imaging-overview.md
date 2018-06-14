@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566388"
 ---
 # <a name="imaging-overview"></a>影像處理概觀
 本主題提供 [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)] 的簡介。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 可讓開發人員顯示、轉換及格式化影像。  
@@ -167,13 +168,13 @@ ms.lasthandoff: 05/04/2018
   
  中繼資料的存取透過提供<xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>屬性<xref:System.Windows.Media.Imaging.BitmapSource>物件。 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> 傳回<xref:System.Windows.Media.Imaging.BitmapMetadata>物件，其中包含映像所包含的所有中繼資料。 此資料可能位於單一的中繼資料結構描述，或不同結構描述的組合中。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 支援下列影像中繼資料結構描述：[!INCLUDE[TLA#tla_exif](../../../../includes/tlasharptla-exif-md.md)]、tEXt (PNG 文字型資料)、[!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)]、[!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)] 和 [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]。  
   
- 若要簡化讀取中繼資料的程序<xref:System.Windows.Media.Imaging.BitmapMetadata>提供幾個具名的屬性可輕鬆地存取這類<xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>， <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>，和<xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>。 許多具名屬性也可以用於寫入中繼資料。 讀取中繼資料的其他支援是由中繼資料查詢讀取器提供。 <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A>方法用來擷取中繼資料查詢讀取器所提供字串查詢，例如 *"/ app1/exif /"*。 在下列範例中，<xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A>用來取得文字儲存於 *"/ 文字/說明 「*位置。  
+ 若要簡化讀取中繼資料的程序<xref:System.Windows.Media.Imaging.BitmapMetadata>提供幾個具名的屬性可輕鬆地存取這類<xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>， <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>，和<xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>。 許多具名屬性也可以用於寫入中繼資料。 讀取中繼資料的其他支援是由中繼資料查詢讀取器提供。 <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A>方法用來擷取中繼資料查詢讀取器所提供字串查詢，例如 *"/ app1/exif /"*。 在下列範例中，<xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A>用來取得文字儲存於 *"/ 文字/說明 「* 位置。  
   
  [!code-cpp[BitmapMetadata#GetQuery](../../../../samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#getquery)]
  [!code-csharp[BitmapMetadata#GetQuery](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#getquery)]
  [!code-vb[BitmapMetadata#GetQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BitMapMetadata/VB/BitmapMetadata.vb#getquery)]  
   
- 若要寫入中繼資料，必須使用中繼資料查詢寫入器。 <xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A> 取得查詢寫入者，並設定所需的值。 在下列範例中，<xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A>用來寫入文字儲存於 *"/ 文字/說明 「*位置。  
+ 若要寫入中繼資料，必須使用中繼資料查詢寫入器。 <xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A> 取得查詢寫入者，並設定所需的值。 在下列範例中，<xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A>用來寫入文字儲存於 *"/ 文字/說明 「* 位置。  
   
  [!code-cpp[BitmapMetadata#SetQuery](../../../../samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#setquery)]
  [!code-csharp[BitmapMetadata#SetQuery](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#setquery)]

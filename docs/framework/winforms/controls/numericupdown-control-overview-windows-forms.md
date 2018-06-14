@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537157"
 ---
 # <a name="numericupdown-control-overview-windows-forms"></a>NumericUpDown 控制項概觀 (Windows Form)
 <xref:System.Windows.Forms.NumericUpDown>控制項看起來像文字方塊中的組合和一對箭號，讓使用者可以按一下以調整值。 控制項顯示，並設定單一數值的數字值的固定選擇清單中。 使用者可以增加和減少數目，依序按一下向上和向下箭號，按向上鍵和向下鍵，或在控制項中輸入數字。 按一下向上鍵移動朝最大值。按一下向下鍵移動朝最小值。  

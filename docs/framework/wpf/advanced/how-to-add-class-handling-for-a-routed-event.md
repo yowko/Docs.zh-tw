@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545359"
 ---
 # <a name="how-to-add-class-handling-for-a-routed-event"></a>如何：加入路由事件的類別處理
 依類別處理常式或路由中任何指定節點上的執行個體處理常式可以處理路由的事件。 首先，叫用與可用由類別實作來隱藏執行個體處理的事件，或引進其他事件的特定行為的基底類別所擁有的事件類別處理常式。 此範例說明兩種密切相關的技術，實作類別處理常式。  

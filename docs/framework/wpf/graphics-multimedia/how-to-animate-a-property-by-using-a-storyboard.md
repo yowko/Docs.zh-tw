@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561068"
 ---
 # <a name="how-to-animate-a-property-by-using-a-storyboard"></a>操作說明：使用分鏡腳本建立屬性的動畫
 這個範例示範如何使用<xref:System.Windows.Media.Animation.Storyboard>以動畫方式顯示屬性。 若要建立屬性的動畫使用<xref:System.Windows.Media.Animation.Storyboard>，建立您想要建立動畫，並建立每一個屬性的動畫<xref:System.Windows.Media.Animation.Storyboard>包含動畫。  

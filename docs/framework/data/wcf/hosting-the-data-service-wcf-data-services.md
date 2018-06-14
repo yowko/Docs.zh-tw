@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362846"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>裝載資料服務 (WCF 資料服務)
 使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，您可以建立將資料公開為服務[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要。 這個資料服務會定義為繼承自 <xref:System.Data.Services.DataService%601> 的類別。 這個類別會提供處理要求訊息、 執行更新對資料來源，以及產生所需的回應訊息所需的功能[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]。 不過，無法繫結至資料服務，而且網路通訊端上接聽內送 HTTP 要求。 對於這個必要的功能而言，資料服務會依賴裝載的元件。  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393038"
 ---
 # <a name="securing-exception-handling"></a>設定例外狀況處理的安全性
 在 Visual c + + 和 Visual Basic 中，執行才能進行任何進一步篩選條件運算式堆疊**最後**陳述式。 **攔截**與相關聯的區塊之後，該篩選條件執行**最後**陳述式。 如需詳細資訊，請參閱[使用使用者篩選例外狀況](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md)。 本節會檢查此順序的安全性含意。 請考慮下列虛擬程式碼範例所說明的篩選陳述式中的順序和**最後**執行的陳述式。  

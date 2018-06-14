@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534537"
 ---
 # <a name="toolstripstatuslabel-control-overview"></a>ToolStripStatusLabel 控制項概觀
 <xref:System.Windows.Forms.ToolStripStatusLabel>當做標籤<xref:System.Windows.Forms.StatusStrip>。 像<xref:System.Windows.Forms.Label>或<xref:System.Windows.Forms.ToolStripLabel>、<xref:System.Windows.Forms.ToolStripStatusLabel>提供文字、 影像或兩者的不可點選的顯示區域。 <xref:System.Windows.Forms.ToolStripStatusLabel>由<xref:System.Windows.Forms.StatusStrip>。  

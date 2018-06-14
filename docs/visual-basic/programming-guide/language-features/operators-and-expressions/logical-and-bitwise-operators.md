@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656148"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Visual Basic 中的邏輯運算子和位元運算子
 邏輯運算子會比較`Boolean`運算式並傳回`Boolean`結果。 `And`， `Or`， `AndAlso`， `OrElse`，和`Xor`運算子是*二進位*由於它們會採用兩個運算元，而`Not`運算子是*一元*因為它會採用單一運算元。 其中某些運算子也可以執行位元整數值上的邏輯作業。  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e2668e36debebb5ba71277912f37833eba584fde
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403275"
 ---
 # <a name="corversion-structure"></a>COR_VERSION 結構
 儲存通用語言執行平台的標準四部分版本號碼。  
@@ -49,7 +50,7 @@ typedef struct _COR_VERSION {
  如果版本號碼是 1.0.3705.288，1 是主要版本號碼，0 是次要版本號碼、 3705 是組建編號，而 288 是次組建編號。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl  
   

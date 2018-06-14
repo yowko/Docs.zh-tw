@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516301"
 ---
 # <a name="durable-delay-in-xamlx"></a>XAMLX 中的永久性延遲
 這個範例示範如何使用永久性延遲，此延遲會在延遲期間將工作流程保存至永久性裝置。  

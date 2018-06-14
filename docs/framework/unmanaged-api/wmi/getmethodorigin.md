@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 35e56494d0082db970afce21da8e63a597f0a535
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458145"
 ---
 # <a name="getmethodorigin-function"></a>GetMethodOrigin 函式
 判斷在其中宣告方法的類別。
@@ -71,7 +72,7 @@ HRESULT GetMethodOrigin (
 `pstrClassName`參數必須是指向有效`BSTR`因為這是在呼叫函式前`out`參數; 此指標會取消配置函式傳回後。
 
 ## <a name="requirements"></a>需求  
-**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.idl  
   

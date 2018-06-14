@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760995"
 ---
 # <a name="writing-dataset-schema-information-as-xsd"></a>將資料集結構描述資訊當做 XSD 寫入
 您可以將 <xref:System.Data.DataSet> 的結構描述寫為 XML 結構描述定義語言 (XSD) 結構描述，即可以在 XML 文件中進行傳輸，而不論是否有任何相關資料。 XML 結構描述可以寫入檔案時，資料流， <xref:System.Xml.XmlWriter>，或字串，它可用於產生強型別**資料集**。 如需有關強型別**資料集**物件，請參閱[型別資料集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)。  

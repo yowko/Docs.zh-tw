@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577394"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>從 XslTransform 類別移轉
 XSLT 架構已在 [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] 版本中重新設計。 <xref:System.Xml.Xsl.XslTransform> 類別取代了 <xref:System.Xml.Xsl.XslCompiledTransform> 類別。  

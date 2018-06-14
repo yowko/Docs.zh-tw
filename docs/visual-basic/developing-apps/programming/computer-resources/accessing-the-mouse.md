@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582586"
 ---
 # <a name="accessing-the-mouse-visual-basic"></a>存取滑鼠 (Visual Basic)
 `My.Computer.Mouse` 物件提供尋找電腦滑鼠相關資訊的方法；例如，如有滑鼠，即為滑鼠按鈕數目及滑鼠滾輪詳細資料等資訊。  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528270"
 ---
 # <a name="how-to-add-search-capabilities-to-a-listview-control"></a>如何：將搜尋能力加入至 ListView 控制項
 有時候當使用大型清單中的項目時，才<xref:System.Windows.Forms.ListView>控制項，您想要提供給使用者的搜尋能力。 <xref:System.Windows.Forms.ListView>控制兩個不同的方式提供這項功能： 文字比對和搜尋的位置。  

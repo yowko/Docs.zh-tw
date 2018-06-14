@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386167"
 ---
 # <a name="wcf-directive-syntax"></a>WCF 指示詞語法
 指定.svc 檔案中的 Windows Communication Foundation (WCF) 指示詞用來指示編譯器設定。 每個指示詞可以含有一個或多個該指示詞特有的屬性 (搭配值)。 WCF 只剩[ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)指示詞。  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538152"
 ---
 # <a name="event-handlers-overview-windows-forms"></a>事件處理常式概觀 (Windows Form)
 事件處理常式會是繫結至事件的方法。 當事件引發時，事件處理常式中的程式碼會執行。 每個事件處理常式提供可讓您正確處理事件的兩個參數。 下列範例顯示的事件處理常式<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Click>事件。  

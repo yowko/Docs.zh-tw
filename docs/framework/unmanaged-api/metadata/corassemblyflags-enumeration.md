@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9d6ec37bbd8750c27a41b5f18180c7726cdcd483
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442825"
 ---
 # <a name="corassemblyflags-enumeration"></a>CorAssemblyFlags 列舉
 包含值，這些值描述套用至組件編譯的中繼資料。  
@@ -78,7 +79,7 @@ typedef enum CorAssemblyFlags {
 |`afContentType_WindowsRuntime`|指出[!INCLUDE[wrt](../../../../includes/wrt-md.md)]內容類型。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorHdr.h  
   

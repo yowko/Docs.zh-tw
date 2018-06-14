@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751983"
 ---
 # <a name="ltcleargt-element-for-authenticationmodules-network-settings"></a>&lt;清除&gt;authenticationModules （網路設定） 的項目
 清除所有的驗證模組，從應用程式。  

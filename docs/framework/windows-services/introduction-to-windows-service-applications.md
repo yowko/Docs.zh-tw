@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520418"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Windows 服務應用程式簡介
 Microsoft Windows 服務 (以前稱為 NT 服務) 讓您能夠建立長時間執行的應用程式，並使其在自己的 Windows 工作階段中執行。 這些服務可以在電腦開機時自動啟動、可以暫停和重新啟動，而且不會顯示任何使用者介面。 這些功能讓服務非常適合在伺服器上使用，或者，當您需要不會干擾其他在同一部電腦上工作的使用者且又長時間執行的功能時使用。 您也可以在特定使用者帳戶的安全性內容中執行服務，此使用者帳戶不同於登入的使用者帳戶或預設電腦帳戶。 如需服務和 Windows 工作階段的詳細資訊，請參閱 Windows SDK 文件。  

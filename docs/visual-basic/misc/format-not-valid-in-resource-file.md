@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636128"
 ---
 # <a name="format-not-valid-in-resource-file"></a>資源檔中的格式無效
 您的專案中的資源檔不符合 Windows 資源檔的標準格式，或是有不相符的資源檔和 Visual Basic 專案。  

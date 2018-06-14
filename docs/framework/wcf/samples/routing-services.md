@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809988"
 ---
 # <a name="routing-services"></a>路由服務
 本節包含示範如何使用 Windows Communication Foundation (WCF) 路由器的範例。  

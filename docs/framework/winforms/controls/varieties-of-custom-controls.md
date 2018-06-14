@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541225"
 ---
 # <a name="varieties-of-custom-controls"></a>各種自訂控制項
 使用 .NET Framework，您可以開發及實作新的控制項。 您可以擴充熟悉的使用者控制項的功能，以及透過繼承擴充現有的控制項。 您也可以撰寫自訂控制項來執行它們自己的繪製。  

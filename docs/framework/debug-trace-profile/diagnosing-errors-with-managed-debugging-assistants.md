@@ -36,6 +36,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392316"
 ---
 # <a name="diagnosing-errors-with-managed-debugging-assistants"></a>診斷 Managed 偵錯助理的錯誤
 Managed 偵錯助理 (MDA) 是偵錯輔助程式，可與通用語言執行平台 (CLR) 合作提供執行階段狀態的相關資訊。 這些助理會產生有關您無法設陷之執行階段事件的告知性訊息。 您可以使用 MDA 來隔離在 Managed 與 Unmanaged 程式碼之間轉換時，所發生之不易發現的應用程式 Bug。 若要啟用或停用所有 MDA，您可以加入機碼至 Windows 登錄，或是設定環境變數。 若要啟用特定 MDA，您可以使用應用程式組態設定。 您可以針對應用程式組態檔中某些個別的 MDA，設定額外的組態設定。 因為在載入執行階段時，會剖析這些組態檔，所以您必須在 Managed 應用程式啟動之前，先啟用 MDA。 您不能為已啟動的應用程式啟用 MDA。  

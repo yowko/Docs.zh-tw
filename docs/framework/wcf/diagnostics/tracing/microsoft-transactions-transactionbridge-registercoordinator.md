@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33475549"
 ---
 # <a name="microsofttransactionstransactionbridgeregistercoordinator"></a>Microsoft.Transactions.TransactionBridge.RegisterCoordinator
 WS-Atomic 異動通訊協定服務已順利對控制通訊協定註冊其協調器。  

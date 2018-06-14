@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651109"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>如何：定義程序的參數 (Visual Basic)
 A*參數*允許將值傳遞至程序呼叫它時，如果呼叫的程式碼。 您宣告一個變數，指定其名稱和資料類型的相同方式宣告的程序的每個參數。 您也可以指定傳遞機制，以及參數是否為選擇性。  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4708fa173725e4c91a13f5b92cdbb1fdf8a8a4d1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432099"
 ---
 # <a name="ireferenceidentity-interface"></a>IReferenceIdentity 介面
 表示唯一的簽章的程式碼物件的參考。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/04/2018
 |`IReferenceIdentity::SetAttribute`|設定具有指定的命名空間與指定的名稱，以指定的值的屬性。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Isolation.h  
   

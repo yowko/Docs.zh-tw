@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596804"
 ---
 # <a name="derived-math-functions-visual-basic"></a>衍生的數學函式 (Visual Basic)
 下表顯示這些可以衍生自內建數學函式的非內建的數學函式<xref:System.Math?displayProperty=nameWithType>物件。 您可以存取內建數學函式加入`Imports System.Math`至您的檔案或專案。  

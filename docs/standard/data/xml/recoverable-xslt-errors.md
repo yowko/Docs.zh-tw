@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579271"
 ---
 # <a name="recoverable-xslt-errors"></a>可復原的 XSLT 錯誤
 ＜W3C XSL 轉換 (XSLT) 1.0 版建議事項＞中所包含的領域，可告訴實作提供者該採取哪些決策來處理哪種狀況。 這些領域視為 Discretionary 行為。 例如，在 7.3 節＜建立處理指示＞中，XSLT 1.0 版建議事項指出如果具現化 `xsl:processing-instruction` 的內容會建立非文字節點的節點，就會產生錯誤。 針對某些問題，XSLT 1.0 版建議事項中會指出在處理器決定從錯誤復原時要採取的決策。 針對 7.3 節中的問題，W3C 指出只要忽略節點及其內容，實作即可從這項錯誤中復原。  

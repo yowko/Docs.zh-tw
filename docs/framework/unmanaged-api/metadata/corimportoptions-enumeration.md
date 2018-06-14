@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7078b2eb98c15b7229132076da8af4691032bb08
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441788"
 ---
 # <a name="corimportoptions-enumeration"></a>CorImportOptions 列舉
 包含旗標值，這些值可控制在匯入目前範圍之外的組件期間所發生的行為。  
@@ -58,7 +59,7 @@ typedef enum CorImportOptions {
 |`MDImportOptionAllExportedTypes`|表示應該列舉所有的匯出的類型，包括已刪除的。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorHdr.h  
   

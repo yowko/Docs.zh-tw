@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538723"
 ---
 # <a name="how-to-access-keyed-collections-in-windows-forms"></a>如何：在 Windows Form 中存取索引集合
 -   您可以依索引鍵來存取個別的收集項目。 這項功能已加入 Windows Form 應用程式通常會使用的許多集合類別。 下列清單顯示一些具有可存取的索引的集合的集合類別：  

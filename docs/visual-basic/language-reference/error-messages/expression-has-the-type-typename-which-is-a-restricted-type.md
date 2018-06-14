@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587569"
 ---
 # <a name="expression-has-the-type-39lttypenamegt39-which-is-a-restricted-type-and-cannot-be-used-to-access-members-inherited-from-39object39-or-39valuetype39"></a>運算式具有類型&#39; &lt;typename&gt; &#39;是受限制的類型，無法用來存取成員繼承自&#39;物件&#39;或&#39;ValueType&#39;
 運算式評估為 common language runtime (CLR) 無法 box 處理的類型，但是會存取需要進行 boxing 的成員。  

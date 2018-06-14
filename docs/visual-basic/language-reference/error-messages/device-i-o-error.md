@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585524"
 ---
 # <a name="device-io-error"></a>裝置 I/O 錯誤
 您的程式已使用磁碟機或印表機等裝置時，就會發生輸入或輸出錯誤。  

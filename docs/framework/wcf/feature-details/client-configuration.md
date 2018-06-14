@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493126"
 ---
 # <a name="client-configuration"></a>用戶端組態
 您可以使用 Windows Communication Foundation (WCF) 用戶端設定來指定位址、 繫結、 行為以及合約，用戶端端點，用戶端用以連接至服務端點的"ABC"屬性。 [\<用戶端 >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md)項目具有[\<端點 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)其屬性用來設定端點 Abc 的項目。 本主題的「設定端點」一節將討論這些屬性。  

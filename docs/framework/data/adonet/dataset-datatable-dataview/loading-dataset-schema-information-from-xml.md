@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760241"
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>從 XML 載入資料集結構描述資訊
 結構描述的<xref:System.Data.DataSet>（其資料表、 資料行、 關聯和條件約束） 可以定義以程式設計的方式，建立由**填滿**或**FillSchema**方法<xref:System.Data.Common.DataAdapter>，或從載入XML 文件。 若要載入**資料集**結構描述資訊從 XML 文件，您可以使用**ReadXmlSchema**或**InferXmlSchema**方法**資料集**. **ReadXmlSchema**可讓您載入或推斷**資料集**從包含 XML 結構描述定義語言 (XSD) 結構描述或內嵌 XML 結構描述的 XML 文件的文件結構描述資訊。 **InferXmlSchema**可讓您從 XML 文件結構描述推斷同時忽略您指定特定 XML 命名空間。  

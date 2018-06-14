@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361636"
 ---
 # <a name="customizing-insert-update-and-delete-operations"></a>自訂插入、更新和刪除作業
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 預設會產生動態 SQL 來實作插入、讀取、更新和刪除作業。 不過在實務上，您通常會自訂應用程式以符合您的業務需求。  

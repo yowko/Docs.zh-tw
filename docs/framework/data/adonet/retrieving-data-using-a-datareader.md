@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353256"
 ---
 # <a name="retrieving-data-using-a-datareader"></a>使用 DataReader 擷取資料
 擷取使用資料**DataReader**牽涉到建立的執行個體**命令**物件，然後再建立**DataReader**藉由呼叫**Command.ExecuteReader**從資料來源擷取資料列。 下列範例說明如何使用**DataReader**其中`reader`代表有效的 DataReader 和`command`代表有效的命令物件。  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eeff8aa0336c0c497e306825c6c77f4f8745ca7c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431801"
 ---
 # <a name="eclrunhandledexception-enumeration"></a>EClrUnhandledException 列舉
 描述可用於管理使用者程式碼中未處理的例外狀況的選項。  
@@ -45,7 +46,7 @@ typedef enum {
  若要指定 CLR 行為類似較早版本，請使用`eHostDeterminedPolicy`成員。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   

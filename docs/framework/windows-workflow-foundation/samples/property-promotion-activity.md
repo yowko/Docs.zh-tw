@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519921"
 ---
 # <a name="property-promotion-activity"></a>屬性促銷活動
 此範例提供了端對端方案，此方案會將 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 提升功能直接整合到工作流程撰寫經驗。 將會提供組態元素、工作流程活動、可簡化使用提升功能之工作流程延伸模組的集合。 此外，此範例也包含一個簡單的工作流程，可示範如何使用這個集合。  

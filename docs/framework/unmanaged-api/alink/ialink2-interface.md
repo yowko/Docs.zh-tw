@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0ddc2f50b42ba8adf7aa5f4d7fa0dc68469e7344
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408457"
 ---
 # <a name="ialink2-interface"></a>IALink2 介面
 補充[IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)藉由宣告方法，例如在較新的中繼資料介面上操作[IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)。 此外，IALink2 宣告的原始 IALink 介面提供額外的使用量大的彈性的方法。  

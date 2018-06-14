@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389248"
 ---
 # <a name="net-core-and-open-source"></a>.NET 的核心和開放原始碼
 本主題概要說明什麼是 .NET Core，並說明如何尋找更多資訊。 若要尋找 .NET Core 主題的完整清單，請瀏覽 [.NET Core 指南](../../core/index.md)。

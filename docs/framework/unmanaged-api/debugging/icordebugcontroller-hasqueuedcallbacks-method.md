@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eba265b727d00690ab77c6ae831e954d59df7c50
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411606"
 ---
 # <a name="icordebugcontrollerhasqueuedcallbacks-method"></a>ICorDebugController::HasQueuedCallbacks 方法
 取得值，指出是否針對指定的執行緒目前佇列任何受管理的回呼。  
@@ -50,7 +51,7 @@ HRESULT HasQueuedCallbacks (
  當偵錯事件會排入佇列時，它們已經發生，因此偵錯工具必須清空整個佇列，以確定偵錯項目狀態。 (呼叫`ICorDebugController::Continue`清空佇列。)例如，如果佇列包含兩個執行緒上的偵錯事件*X*，和偵錯工具暫止的執行緒*X*之後第一個偵錯事件，然後呼叫`ICorDebugController::Continue`，第二個偵錯事件執行緒*X*會分派，雖然執行緒已經暫止。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   

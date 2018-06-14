@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580399"
 ---
 # <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a>使用 Azure Key Vault 以在生產階段保護密碼
 

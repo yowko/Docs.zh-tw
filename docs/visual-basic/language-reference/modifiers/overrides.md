@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602515"
 ---
 # <a name="overrides-visual-basic"></a>Overrides (Visual Basic)
 指定屬性或程序會覆寫繼承自基底類別的同名屬性或程序。  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6df28cd3eaadfe62cd34e20e6e03d5a89e6bb425
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401205"
 ---
 # <a name="emitmanifest-method"></a>EmitManifest 方法
 發出的最後一個資訊清單。 匯入所有其他檔案，並設定所有選項之後呼叫這個方法。 請勿呼叫這個方法未繫結的模組。  

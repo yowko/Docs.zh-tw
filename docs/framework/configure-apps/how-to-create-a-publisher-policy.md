@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758122"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>如何：建立發行者原則
 組件的廠商可以狀態的應用程式應該使用較新版的組件，包含與升級後的組件的發行者原則檔。 發行者原則檔會指定組件重新導向和程式碼基底的設定，並使用相同的格式為應用程式組態檔。 發行者原則檔會編譯的組件，並放置於全域組件快取。  

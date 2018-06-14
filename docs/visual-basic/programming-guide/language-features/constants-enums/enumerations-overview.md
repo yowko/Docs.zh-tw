@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647575"
 ---
 # <a name="enumerations-overview-visual-basic"></a>列舉類型的概觀 (Visual Basic)
 列舉型別提供便利的方式來處理組相關的常數和常數值與名稱。 例如，您可以宣告列舉來當作一組與當週的日次建立關聯的整數常數，接著在程式碼中使用日次的名稱而不是它們的整數值。  

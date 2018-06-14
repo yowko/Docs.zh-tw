@@ -14,9 +14,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bac5578caaf5682c12509b41da77b3d7cca76312
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415229"
 ---
 # <a name="icordebugilcode-interface"></a>ICorDebugILCode 介面
 [在 .NET Framework 4.5.2 及更新版本中支援]  
@@ -30,7 +31,7 @@ ms.lasthandoff: 05/04/2018
 |[GetEHClauses 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)|傳回針對此 IL 定義之例外狀況處理 (EH) 子句清單的指標。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   

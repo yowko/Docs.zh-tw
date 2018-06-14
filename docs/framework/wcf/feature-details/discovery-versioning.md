@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489176"
 ---
 # <a name="discovery-versioning"></a>探索版本控制
 本主題簡要概述部分新探索功能的實作， 同時也概要說明如何選取要使用的探索版本。  

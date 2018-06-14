@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573083"
 ---
 # <a name="virtual-members"></a>虛擬成員
 虛擬成員會覆寫，因此變更子類別的行為。 它們是回呼提供，擴充性方面相當類似，但是可以執行效能和記憶體耗用量方面更好。 此外，虛擬成員感覺更自然的案例中，需要建立一個特殊種類的現有類型 （特製化）。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571109"
 ---
 # <a name="field-design"></a>欄位設計
 封裝 （encapsulation） 的原則就是其中一個最重要的概念在物件導向設計。 此原則就是儲存在物件內的資料必須能夠存取只適用於該物件。  

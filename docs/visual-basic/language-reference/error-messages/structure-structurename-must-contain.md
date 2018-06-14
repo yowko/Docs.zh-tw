@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594494"
 ---
 # <a name="structure-39ltstructurenamegt39-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-39custom39"></a>結構&#39; &lt;structurename&gt; &#39;必須包含至少一個執行個體成員變數或至少一個執行個體事件宣告未標記為&#39;自訂&#39;
 結構定義不包含任何非共用的變數或非共用的非自訂事件。  

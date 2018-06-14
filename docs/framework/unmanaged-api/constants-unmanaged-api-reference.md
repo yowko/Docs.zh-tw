@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 65925b7dafb9e89433253d68327c488365674963
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406265"
 ---
 # <a name="constants-unmanaged-api-reference"></a>常數 (Unmanaged API 參考)
 本主題描述的語言類型、 語言廠商和定義於 CorSym.idl 中的文件類型常數。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541053"
 ---
 # <a name="creating-an-ink-input-control"></a>建立筆墨輸入控制項
 您可以建立的自訂控制項，動態及靜態呈現筆墨。 這就是，轉譯為使用者繪製筆觸，導致出現 「 資料流程 」 從 tablet 畫筆，並後顯示筆墨會加入至控制項，透過 tablet 畫筆，從剪貼簿 貼上或從檔案載入的筆墨的筆墨。 若要以動態方式呈現筆墨，必須使用您的控制項<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>。 若要以靜態方式轉譯筆墨，您必須覆寫手寫筆事件方法 (<xref:System.Windows.UIElement.OnStylusDown%2A>， <xref:System.Windows.UIElement.OnStylusMove%2A>，和<xref:System.Windows.UIElement.OnStylusUp%2A>) 來收集<xref:System.Windows.Input.StylusPoint>資料，建立筆觸，並將其新增<xref:System.Windows.Controls.InkPresenter>（呈現在控制項上的筆墨）。  

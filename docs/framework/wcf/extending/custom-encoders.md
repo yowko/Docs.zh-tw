@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809273"
 ---
 # <a name="custom-encoders"></a>自訂編碼器
 本主題討論如何建立自訂編碼器。  

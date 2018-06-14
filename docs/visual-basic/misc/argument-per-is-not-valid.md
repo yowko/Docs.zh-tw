@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603921"
 ---
 # <a name="argument-39per39-is-not-valid"></a>引數&#39;每&#39;無效
 為 `Per`提供的引數無效，該引數必須是指定範圍 1 到 `Double` 中付款期的 `NPer`。  

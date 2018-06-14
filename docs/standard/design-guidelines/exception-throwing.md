@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573717"
 ---
 # <a name="exception-throwing"></a>擲回例外狀況
 擲回例外狀況這一節所述的指導方針需要良好定義的執行失敗的意義。 每當成員無法執行的動作前，就會發生執行失敗執行 （其成員名稱一樣）。 例如，如果`OpenFile`方法不能將開啟的檔案控制代碼傳回給呼叫者，它會被視為新的執行失敗。  

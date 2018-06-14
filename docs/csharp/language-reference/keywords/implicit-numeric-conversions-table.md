@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217190"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>隱含數值轉換表 (C# 參考)
 下表顯示預先定義的隱含數值轉換。 在許多情況下可能會發生隱含轉換，包括方法叫用和指派陳述式。  

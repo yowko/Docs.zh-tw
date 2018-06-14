@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4b985aeb97621e552e9e97581e67cae029d019ef
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405889"
 ---
 # <a name="setpekind-method"></a>SetPEKind 方法
 決定可攜式執行檔的類型，特定電腦或電腦無關。  

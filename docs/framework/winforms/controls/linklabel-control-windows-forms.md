@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535447"
 ---
 # <a name="linklabel-control-windows-forms"></a>LinkLabel 控制項 (Windows Form)
 Windows Form`LinkLabel`控制項可讓您將 Web 樣式連結新增至 Windows Form 應用程式。 您可以使用`LinkLabel`控制項，您可以使用的所有項目<xref:System.Windows.Forms.Label>控制; 您也可以設定部分文字的物件或網頁的連結。  

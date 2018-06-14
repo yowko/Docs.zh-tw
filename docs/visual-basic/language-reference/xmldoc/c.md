@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599602"
 ---
 # <a name="ltcgt-visual-basic"></a>&lt;c&gt; (Visual Basic)
 描述內的文字表示的程式碼。  

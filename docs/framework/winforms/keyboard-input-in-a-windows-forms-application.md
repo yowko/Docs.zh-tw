@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537069"
 ---
 # <a name="keyboard-input-in-a-windows-forms-application"></a>Windows Forms 應用程式中的鍵盤輸入
 Windows Form 包含可讓您回應特定按鍵，並提供方法讓您攔截、 修改和使用在應用程式中，表單中，按下按鍵及控制層級的標準鍵盤事件。  

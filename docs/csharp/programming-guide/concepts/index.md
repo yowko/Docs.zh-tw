@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335632"
 ---
 # <a name="programming-concepts-c"></a>程式設計概念 (C#)
 本節說明 C# 語言的程式設計概念。  

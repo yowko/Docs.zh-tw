@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490831"
 ---
 # <a name="performance-considerations"></a>效能考量
 建置應用程式時，效能是很重要的考量。 本章節包含與效能和安全性相關的項目。  

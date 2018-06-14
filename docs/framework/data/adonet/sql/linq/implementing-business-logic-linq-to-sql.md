@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362047"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>實作商務邏輯 (LINQ to SQL)
 本主題中的「商務邏輯」一詞，指的是您套用到資料的任何自訂規則或驗證測試，待套用之後，資料才會在資料庫中插入、更新或刪除。 商務邏輯有時也稱為「商務規則」或「定義域邏輯」。 在 N-Tier 應用程式中，這通常會設計為邏輯層，以便與展示層或資料存取層分開修改。 資料存取層可在資料庫中的資料更新、插入或刪除之前或之後叫用 (Invoke) 商務邏輯。  

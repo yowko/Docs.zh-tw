@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535206"
 ---
 # <a name="picturebox-control-windows-forms"></a>PictureBox 控制項 (Windows Form)
 Windows Form`PictureBox`控制項用來顯示點陣圖、 GIF、 JPEG、 中繼檔或圖示格式的圖形。  

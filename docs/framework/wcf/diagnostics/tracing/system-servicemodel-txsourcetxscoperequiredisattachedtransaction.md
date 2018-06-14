@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33482934"
 ---
 # <a name="systemservicemodeltxsourcetxscoperequiredisattachedtransaction"></a>System.ServiceModel.TxSourceTxScopeRequiredIsAttachedTransaction
 從 InstanceContext 異動接收到指定之作業的指定異動。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749786"
 ---
 # <a name="ltcertificategt-element"></a>&lt;certificate&gt; 項目
 指定要用來簽署與加密對等用戶端之訊息的 X.509 憑證。  

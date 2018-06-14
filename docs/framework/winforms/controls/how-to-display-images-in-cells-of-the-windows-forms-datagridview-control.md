@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531189"
 ---
 # <a name="how-to-display-images-in-cells-of-the-windows-forms-datagridview-control"></a>如何：顯示 Windows Form DataGridView 控制項的儲存格影像
 圖片或圖形是您可以在資料列中顯示的值。 通常，這些圖形會採用員工的相片或公司標誌的形式。  

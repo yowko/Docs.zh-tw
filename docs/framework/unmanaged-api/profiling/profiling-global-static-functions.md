@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8bb5d93c91de857ebbee63009cad73fba7e1d284
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461831"
 ---
 # <a name="profiling-global-static-functions"></a>分析全域靜態函式
 本節說明分析 API 所使用的 unmanaged 應用程式開發介面函式。  

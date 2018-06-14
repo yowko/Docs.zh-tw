@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571380"
 ---
 # <a name="designing-for-extensibility"></a>擴充性設計
 設計一個架構的一個重要層面確保已仔細考慮架構的擴充性。 這需要您已了解的成本與利益各種擴充性機制相關聯。 本章節可協助您決定哪一個擴充性機制 — 子類別化、 事件、 虛擬成員、 回呼 (callback) 等等，可以最符合您的架構的需求。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600337"
 ---
 # <a name="argument-39ltargumentnamegt39-is-not-a-valid-value"></a>引數&#39;&lt;引數名稱&gt;&#39;不是有效的值
 引數的值無效。  

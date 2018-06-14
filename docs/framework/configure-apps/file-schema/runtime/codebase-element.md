@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745990"
 ---
 # <a name="ltcodebasegt-element"></a>&lt;程式碼基底&gt;項目
 指定 common language runtime 可以找到組件的位置。  

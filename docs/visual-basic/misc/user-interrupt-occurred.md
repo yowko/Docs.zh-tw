@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640342"
 ---
 # <a name="user-interrupt-occurred"></a>發生使用者中斷
 使用者已按 CTRL+BREAK 或另一個插斷鍵。  

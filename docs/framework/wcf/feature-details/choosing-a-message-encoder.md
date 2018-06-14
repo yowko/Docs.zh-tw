@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494858"
 ---
 # <a name="choosing-a-message-encoder"></a>選擇訊息編碼器
 本主題討論準則進行選擇包含 Windows Communication Foundation (WCF) 訊息編碼器： 二進位、 文字和訊息傳輸最佳化機制 (MTOM)。  

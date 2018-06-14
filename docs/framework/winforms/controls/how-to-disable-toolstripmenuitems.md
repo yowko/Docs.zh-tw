@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532024"
 ---
 # <a name="how-to-disable-toolstripmenuitems"></a>如何：停用 ToolStripMenuItems
 您可以限制或擴大使用者可能會進行啟用及停用功能表項目，以回應使用者活動的命令。 依預設會啟用功能表項目，建立，但這可以透過調整<xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>屬性。 您可以操作此屬性在設計階段於**屬性**視窗或以程式設計方式在程式碼中設定。  

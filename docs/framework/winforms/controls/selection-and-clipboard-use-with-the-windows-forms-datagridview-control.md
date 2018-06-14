@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537638"
 ---
 # <a name="selection-and-clipboard-use-with-the-windows-forms-datagridview-control"></a>選取範圍和剪貼簿與 Windows Form DataGridView 控制項搭配使用
 `DataGridView`控制讓您為不同的選項，以設定使用者可以如何選取儲存格、 列和資料行。 例如，您可以啟用單一或多個選取項目、 選取整個資料列或資料行，當使用者按一下資料格或選取整個資料列或資料行只有當使用者按一下其標頭，可讓儲存格選取範圍。 如果您想要提供讓您選取的使用者介面，您可以停用一般的選取項目，並以程式設計方式處理所有選取項目。 此外，您可以讓使用者選取的值複製到剪貼簿。  

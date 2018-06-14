@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646535"
 ---
 # <a name="visual-basic-programming-guide"></a>Visual Basic 程式設計手冊
 如同任何現代程式設計語言，Visual Basic 支援許多通用程式設計建構和語言項目。 本指南說明使用 Visual Basic 進行程式設計的所有主要的項目。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561744"
 ---
 # <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>操作說明：設定 TileBrush 的並排顯示大小
 這個範例示範如何設定的磚大小<xref:System.Windows.Media.TileBrush>。 根據預設，<xref:System.Windows.Media.TileBrush>會產生單一的磚，完全填滿您所繪製的區域。 您可以藉由設定覆寫這個行為<xref:System.Windows.Media.TileBrush.Viewport%2A>和<xref:System.Windows.Media.TileBrush.ViewportUnits%2A>屬性。  

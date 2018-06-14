@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388052"
 ---
 # <a name="pinvokestackimbalance-mda"></a>pInvokeStackImbalance MDA
 假設 <xref:System.Runtime.InteropServices.DllImportAttribute> 屬性中已指定呼叫慣例並已宣告Managed 簽章中的參數，當 CLR 在平台叫用呼叫之後偵測到有堆疊深度不符合預期的堆疊深度時，便會啟動 `pInvokeStackImbalance` Managed 偵錯助理 (MDA)。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544673"
 ---
 # <a name="how-to-use-systemfonts"></a>如何：使用 SystemFonts
 這個範例示範如何使用的靜態資源<xref:System.Windows.SystemFonts>類別才能設定或自訂按鈕的樣式。  

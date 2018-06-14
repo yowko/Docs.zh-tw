@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508978"
 ---
 # <a name="using-the-message-class"></a>使用 Message 類別
 <xref:System.ServiceModel.Channels.Message>類別是 Windows Communication Foundation (WCF) 的基礎。 用戶端和服務之間的通訊，最終結果都是要傳送和接收 <xref:System.ServiceModel.Channels.Message> 執行個體。  

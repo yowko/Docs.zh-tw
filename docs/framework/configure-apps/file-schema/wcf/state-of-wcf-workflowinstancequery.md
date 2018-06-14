@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754567"
 ---
 # <a name="ltstategt-of-wcf-ltworkflowinstancequerygt"></a>WCF 的 &lt;state&gt;、&lt;workflowInstanceQuery&gt;
 表示建立追蹤記錄時，追蹤的工作流程執行個體中的訂閱狀態集合。  

@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9a88f8b2ad1ac59cf7044ca5d7ace5a468510b6f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424751"
 ---
 # <a name="idebugautoattach-interface"></a>IDebugAutoAttach 介面
 定義介面，伺服器叫用偵錯工具自動附加。  

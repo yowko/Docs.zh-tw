@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397776"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>將您的 Windows 市集應用程式移轉至 .NET Native
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 在 Windows 市集或開發人員的電腦上提供應用程式的靜態編譯。 這不同於 just-in-time (JIT) 編譯器或裝置上的 [原生映像產生器 (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 為 Windows 市集應用程式執行的動態編譯。 儘管有所差異， [!INCLUDE[net_native](../../../includes/net-native-md.md)] 還是會嘗試維持與 [適用於 Windows 市集應用程式的 .NET](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)的相容性。 大多數的情況下，在適用於 Windows 市集應用程式的 .NET 上運作的項目也會使用 [!INCLUDE[net_native](../../../includes/net-native-md.md)]。  不過，在某些情況下，您可能會遇到行為上的變更。 本文件將在下列區域討論適用於 Windows 市集應用程式的標準 .NET 與 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 之間的這些差異：  

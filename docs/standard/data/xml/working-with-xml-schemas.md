@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570649"
 ---
 # <a name="working-with-xml-schemas"></a>使用 XML 結構描述
 若要定義 XML 文件的結構及其項目關聯性、資料類型及內容條件約束，可以使用文件類型定義 (DTD) 或 XML 結構描述定義語言 (XSD) 結構描述。 儘管當 XML 文件滿足全球資訊網協會 (W3C) 可延伸標記語言 (XML) 1.0 版建議事項定義的所有語法要求時，會將其視為格式正確，但是它必須格式正確且符合由其 DTD 或結構描述所定義的條件約束才會被視為有效。 因此，儘管所有有效 XML 文件的格式都正確，但是並非所有格式正確的 XML 文件都有效。  

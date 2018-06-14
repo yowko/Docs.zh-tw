@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544228"
 ---
 # <a name="input-wpf"></a>輸入 (WPF)
 Windows Presentation Foundation (WPF) 包含支援數種類型的輸入。 此輸入包含文字、 觸控、 滑鼠、 命令、 焦點、 觸控、 拖放及數位筆跡。 本章節描述在 WPF 中輸入的相關主題。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595718"
 ---
 # <a name="unicode-visual-basic"></a>Unicode (Visual Basic)
 指定 Visual Basic 應封送處理為 Unicode 值，不論所宣告外部程序名稱的所有字串。  

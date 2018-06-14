@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805521"
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>控制資源使用並改善效能
 本主題說明中的 Windows Communication Foundation (WCF) 架構的不同區域，用於控制資源消耗並影響效能度量資訊的各種屬性。  

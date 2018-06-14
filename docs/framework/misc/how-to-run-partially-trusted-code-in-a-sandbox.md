@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393269"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>如何：在沙箱中執行部分信任的程式碼
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  

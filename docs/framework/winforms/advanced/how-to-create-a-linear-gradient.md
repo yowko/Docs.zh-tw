@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522456"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>如何：建立線形漸層
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供水平、 垂直和對角線線形漸層。 根據預設，線性漸層色彩一致變更。 不過，您可以自訂線性漸層，以便以非統一的方式變更色彩。  

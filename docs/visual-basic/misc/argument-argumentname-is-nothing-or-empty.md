@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599615"
 ---
 # <a name="argument-39ltargumentnamegt39-is-nothing-or-empty"></a>引數&#39;&lt;引數名稱&gt;&#39;為 Nothing 或空白
 引數名稱無效，因為它已初始化為 `Nothing` 或為空白。 引數必須具有特定資料類型和有效的名稱。  

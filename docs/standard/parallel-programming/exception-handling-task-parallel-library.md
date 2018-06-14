@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591292"
 ---
 # <a name="exception-handling-task-parallel-library"></a>例外狀況處理 (工作平行程式庫)
 由在工作中執行的使用者程式碼所擲回的未處理例外狀況，會傳播回到呼叫執行緒，本主題稍後所述的特定情況除外。 當您使用其中一個靜態或執行個體 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 或 <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` 方法時會傳播例外狀況，您可以用 `try`/`catch` 陳述式包住呼叫來處理它們。 如果工作是已連結子工作的父代，或如果您在等候多個工作，就可能會擲回多個例外狀況。  

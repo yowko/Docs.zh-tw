@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591686"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Windows 中的 Managed 和 Unmanaged 執行緒處理
 所有執行緒的管理都會透過 <xref:System.Threading.Thread> 類別進行，包括 Common Language Runtime 建立的執行緒，以及在執行階段外部建立但進入 Managed 環境執行程式碼的執行緒。 執行階段會監視在其處理序中所有曾在 Managed 執行環境中執行程式碼的執行緒， 但不會追蹤其他任何執行緒。 執行緒可透過 COM Interop (因為執行階段會將 Managed 物件當做 COM 物件公開給 Unmanaged 世界)、COM [DllGetClassObject](https://msdn.microsoft.com/library/ms680760.aspx) 函式和平台叫用來進入 Managed 執行環境。  

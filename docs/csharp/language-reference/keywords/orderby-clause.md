@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268047"
 ---
 # <a name="orderby-clause-c-reference"></a>orderby 子句 (C# 參考)
 在查詢運算式中，`orderby` 子句可讓傳回的序列或子序列 (群組) 以遞增或遞減順序排序。 您可以指定多個索引鍵，以便執行一或多個次要排序作業。 排序是由項目類型的預設比較子執行。 預設的排序次序為遞增。 您也可以指定自訂比較子。 不過，它只有在使用以方法為基礎的語法時才可用。 如需詳細資訊，請參閱[排序資料](../../programming-guide/concepts/linq/sorting-data.md)。  

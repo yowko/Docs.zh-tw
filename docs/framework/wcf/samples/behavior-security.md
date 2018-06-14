@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499515"
 ---
 # <a name="behavior-security"></a>行為安全性
 本節包含示範設定服務行為之安全性的範例。  

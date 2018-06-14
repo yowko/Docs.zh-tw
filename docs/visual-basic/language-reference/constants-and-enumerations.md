@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591738"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>常數和列舉類型 (Visual Basic)
 Visual Basic 提供了一些預先定義的常數和列舉型別供開發人員。 常數用來儲存應用程式的執行過程中維持的值。 列舉提供使用相關常數組和建立常數值與名稱之關聯的便利方法。  

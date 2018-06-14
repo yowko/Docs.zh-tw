@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746835"
 ---
 # <a name="ltlistenersgt-element-for-ltsourcegt"></a>&lt;接聽程式&gt;元素&lt;來源&gt;
 加入或移除接聽程式在<xref:System.Diagnostics.TraceSource.Listeners%2A>集合<xref:System.Diagnostics.TraceSource>。 接聽程式追蹤將輸出導向至適當的目標，例如記錄檔、 視窗或文字檔。  

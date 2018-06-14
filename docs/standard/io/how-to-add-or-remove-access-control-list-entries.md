@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573419"
 ---
 # <a name="how-to-add-or-remove-access-control-list-entries"></a>如何：新增或移除存取控制清單項目
 若要在檔案加入或移除存取控制清單 (ACL) 項目，必須從檔案或目錄取得 <xref:System.Security.AccessControl.FileSecurity> 或 <xref:System.Security.AccessControl.DirectorySecurity> 物件、修改，然後套用回到檔案或目錄。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561520"
 ---
 # <a name="how-to-use-a-cached-element-as-a-brush"></a>如何：將快取的項目當做筆刷使用
 使用<xref:System.Windows.Media.BitmapCacheBrush>有效率地重複使用快取之元素的類別。 若要快取項目，建立的新執行個體<xref:System.Windows.Media.BitmapCache>類別，並將它指派給項目的<xref:System.Windows.UIElement.CacheMode%2A>屬性。  

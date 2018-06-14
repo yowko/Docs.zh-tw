@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651605"
 ---
 # <a name="optional-parameters-visual-basic"></a>選擇性參數 (Visual Basic)
 您可以將程序參數指定為選擇項，當該程序被呼叫時就不必提供引數。 *選擇性參數*以`Optional`程序定義中的關鍵字。 可套用下列規則：  

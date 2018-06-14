@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492941"
 ---
 # <a name="out-of-order-message-processing"></a>不按照順序的訊息處理
 工作流程服務可能取決於訊息以特定順序傳送。 工作流程服務包含一個或多個 <xref:System.ServiceModel.Activities.Receive> 活動，各個 <xref:System.ServiceModel.Activities.Receive> 活動會預期某個特定的訊息。 要是沒有特定的傳輸傳遞保證，用戶端傳送的訊息可能會延遲，因而傳遞的順序可能不符合工作流程服務的預期。 實作不要求訊息以特定順序傳送的工作流程服務，通常會使用平行活動來完成。 若為更複雜的應用程式通訊協定，工作流程很快就會變得非常複雜。  次序不對的訊息處理功能在 Windows Communication Foundation (WCF) 可讓您建立這類工作流程不含所有的巢狀平行活動的複雜度。 支援的通道上才支援不按照順序的訊息處理<xref:System.ServiceModel.Channels.ReceiveContext>例如 WCF MSMQ 繫結。  

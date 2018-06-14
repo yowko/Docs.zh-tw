@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550835"
 ---
 # <a name="groupbox"></a>GroupBox
 <xref:System.Windows.Controls.GroupBox>控制項是<xref:System.Windows.Controls.HeaderedContentControl>提供的標題為的容器[!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)]內容。  

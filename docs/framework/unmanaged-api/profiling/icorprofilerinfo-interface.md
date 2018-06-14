@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: da5a041e8a18420b4cf9962e4315683be8857711
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462266"
 ---
 # <a name="icorprofilerinfo-interface"></a>ICorProfilerInfo 介面
 提供程式碼分析工具用來通訊與 common language runtime (CLR)，以控制事件監視及要求資訊的方法。  
@@ -74,7 +75,7 @@ ms.lasthandoff: 05/04/2018
  CLR 通過，透過程式碼剖析工具實作[icorprofilercallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)、`ICorProfilerInfo`初始化期間的每個程式碼分析工具的介面。 接著程式碼分析工具可以呼叫的方法`ICorProfilerInfo`介面，以取得在 CLR 的控制項下執行的 managed 程式碼的相關資訊。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

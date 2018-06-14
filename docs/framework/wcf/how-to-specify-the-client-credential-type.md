@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499333"
 ---
 # <a name="how-to-specify-the-client-credential-type"></a>HOW TO：指定用戶端認證類型
 在設定過安全性模式 (傳輸或訊息) 後，您就會擁有設定用戶端認證類型的選項。 這個屬性會指定用戶端必須提供給服務以進行驗證的認證類型。 如需有關如何設定安全性模式 （之前設定用戶端認證類型的必要步驟） 的詳細資訊，請參閱[How to： 設定安全性模式](../../../docs/framework/wcf/how-to-set-the-security-mode.md)。  

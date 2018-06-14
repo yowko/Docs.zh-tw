@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516396"
 ---
 # <a name="activity-authoring-options-in-wf"></a>WF 中的活動撰寫選項
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 提供了幾個建立自訂活動的選項。 用於撰寫指定活動的正確方法，要視所需的執行階段功能而定。  

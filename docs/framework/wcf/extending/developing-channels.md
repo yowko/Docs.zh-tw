@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33487421"
 ---
 # <a name="developing-channels"></a>開發通道
 若要開發通訊協定和傳輸通道，可與 Windows Communication Foundation (WCF) 應用程式層會需要幾個步驟。 本主題將說明這些步驟，並指引您前往特定主題以取得詳細資訊。 若要了解通道模型和本主題所述的各種類型，請參閱[通道模型概觀](../../../../docs/framework/wcf/extending/channel-model-overview.md)。 如需完成的傳輸通道範例中，請參閱[傳輸： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)。  

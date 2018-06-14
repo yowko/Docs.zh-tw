@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474853"
 ---
 # <a name="activity-tracing-in-message-security"></a>訊息安全性中的活動追蹤
 此主題將說明安全性處理中的活動追蹤 (將於下列三個階段中發生)。  

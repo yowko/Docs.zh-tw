@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ade568889d1c0203115f160d855de8c598798196
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403353"
 ---
 # <a name="setassemblyfile2-method"></a>SetAssemblyFile2 方法
 設定的名稱和新的組件的選項。 當您產生未繫結的模組時，請勿呼叫這個方法。  

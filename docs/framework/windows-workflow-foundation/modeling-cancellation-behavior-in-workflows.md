@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519895"
 ---
 # <a name="modeling-cancellation-behavior-in-workflows"></a>工作流程中的模型化取消行為
 活動可以在工作流程內部取消，例如，由 <xref:System.Activities.Statements.Parallel> 活動在它的 <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> 評估為 `true` 時來取消不完整的分支，或是從工作流程外部取消 (如果主機呼叫 <xref:System.Activities.WorkflowApplication.Cancel%2A>)。 若要提供取消處理，工作流程作者可以使用 <xref:System.Activities.Statements.CancellationScope> 活動、<xref:System.Activities.Statements.CompensableActivity> 活動或是建立可提供取消邏輯的自訂活動。 本主題提供工作流程取消的概觀。  

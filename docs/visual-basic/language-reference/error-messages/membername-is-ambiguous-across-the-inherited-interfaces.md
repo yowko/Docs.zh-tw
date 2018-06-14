@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585297"
 ---
 # <a name="39ltmembernamegt39-is-ambiguous-across-the-inherited-interfaces-39ltinterfacename1gt39-and-39ltinterfacename2gt39"></a>&#39;&lt;membername&gt; &#39;模稜兩可，跨繼承介面&#39;&lt;介面名稱 1>.<&gt; &#39;和&#39;&lt;介面名稱 2>&gt;&#39;
 繼承自多個介面具有相同名稱的兩個或多個成員的介面。  

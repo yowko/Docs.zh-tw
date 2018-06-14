@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570420"
 ---
 # <a name="names-of-assemblies-and-dlls"></a>組件和 DLL 的名稱
 組件是部署和 managed 程式碼程式的身分識別的單位。 雖然組件可以跨一個或多個檔案，通常是組件以一對一對應的 DLL。 因此，本節會說明只 DLL 命名慣例，然後可以對應至組件命名慣例。  

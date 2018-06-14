@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765691"
 ---
 # <a name="working-with-data-providers"></a>處理資料提供者
 本章節中的主題所描述的一些服務和提供者，可將針對概念模型的查詢轉換成針對 Entity Framework 所支援之資料來源的原生查詢。  

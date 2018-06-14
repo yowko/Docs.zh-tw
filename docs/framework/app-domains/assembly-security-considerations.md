@@ -22,6 +22,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743416"
 ---
 # <a name="assembly-security-considerations"></a>組件安全性考量
 <a name="top"></a> 當您建置組件時，您可以指定一組該組件需要用來執行的使用權限。 是否將某些使用權限授予組件則以辨識項 (Evidence) 為基礎。  

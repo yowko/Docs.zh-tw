@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807302"
 ---
 # <a name="wmi-provider"></a>WMI 提供者
 這個範例示範如何在執行階段的 Windows Communication Foundation (WCF) 服務收集資料，請使用 WCF 內建的 Windows Management Instrumentation (WMI) 提供者。 此外，這個範例還會示範如何將使用者定義的 WMI 物件新增至服務。 此範例會啟動的 WMI 提供者[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)並示範如何收集資料，從`ICalculator`服務在執行階段。  

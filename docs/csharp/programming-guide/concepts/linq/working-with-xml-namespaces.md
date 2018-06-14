@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330469"
 ---
 # <a name="working-with-xml-namespaces-c"></a>處理 XML 命名空間 (C#)
 本節中的主題描述 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 如何支援命名空間。  

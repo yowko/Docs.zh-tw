@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557613"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-key-frames"></a>如何：使用主要畫面格建立立體旋轉的動畫
 在下列範例中，<xref:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames>用來進行時其軸的旋轉動畫導致"微微"旋轉的 3D 物件。 這個動畫會使用下列的主要畫面格：  

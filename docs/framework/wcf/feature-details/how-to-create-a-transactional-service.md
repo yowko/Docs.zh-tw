@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494975"
 ---
 # <a name="how-to-create-a-transactional-service"></a>HOW TO：建立異動式服務
 這個範例示範建立異動式服務的各層面，以及使用用戶端初始化的異動以協調服務作業。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764992"
 ---
 # <a name="entity-key"></a>實體索引鍵
 *實體索引鍵*是[屬性](../../../../docs/framework/data/adonet/property.md)或一組屬性的[實體類型](../../../../docs/framework/data/adonet/entity-type.md)，用於判斷識別。 構成實體索引鍵的屬性是在設計階段選取的。 實體索引鍵屬性的值必須唯一識別實體類型執行個體中的[實體集](../../../../docs/framework/data/adonet/entity-set.md)在執行階段。 您應選取構成實體索引鍵的屬性，以保證執行個體在實體集中的唯一性。  

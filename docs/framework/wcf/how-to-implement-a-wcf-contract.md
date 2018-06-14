@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499307"
 ---
 # <a name="how-to-implement-a-windows-communication-foundation-service-contract"></a>HOW TO：實作 Windows Communication Foundation 服務合約
 這是建立基本 Windows Communication Foundation (WCF) 服務和可呼叫服務的用戶端所需的六個工作的第二個。 如需所有六個工作的概觀，請參閱[入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)主題。  

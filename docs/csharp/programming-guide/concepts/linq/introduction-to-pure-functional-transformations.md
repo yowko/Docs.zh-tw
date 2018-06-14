@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329097"
 ---
 # <a name="introduction-to-pure-functional-transformations-c"></a>純函數式轉換簡介 (C#)
 本節說明功能性轉換，包括基礎的概念與支援的語言建構。 其中包含程式設計的物件導向與功能性轉換方法，包括如何轉換到後者的建議。 雖然在許多程式設計案例中都可以使用功能性轉換，但是此處使用 XML 轉換做為具體範例。  

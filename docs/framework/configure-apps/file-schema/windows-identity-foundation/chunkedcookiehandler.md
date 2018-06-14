@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758369"
 ---
 # <a name="ltchunkedcookiehandlergt"></a>&lt;chunkedCookieHandler&gt;
 設定<xref:System.IdentityModel.Services.ChunkedCookieHandler>。 這個項目可能只會存在於如果`mode`屬性`<cookieHandler>`元素是 「 預設 」 或 「 區塊 」。  

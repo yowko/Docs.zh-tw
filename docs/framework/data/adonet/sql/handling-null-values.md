@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364267"
 ---
 # <a name="handling-null-values"></a>處理 Null 值
 當資料行中的值未知或遺失時，便會使用關聯式資料庫中的 Null 值。 Null 既不是空字串 (針對字元或 datetime 資料型別)，也不是零值 (針對數值資料型別)。 根據 ANSI SQL-92 規格的內容，對所有的資料型別而言，Null 必須都是相同的，以便可一致處理所有的 Null。 藉由實作 <xref:System.Data.SqlTypes> 介面，<xref:System.Data.SqlTypes.INullable> 命名空間可以提供 Null 語意。 <xref:System.Data.SqlTypes> 中的每個資料型別都具有自己的 `IsNull` 屬性及 `Null` 值，而該值可以指派給該資料型別的執行個體 (Instance)。  

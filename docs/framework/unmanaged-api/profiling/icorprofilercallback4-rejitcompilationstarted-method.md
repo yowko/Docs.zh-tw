@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d3e21d42340378c576bfc65750fba26a257b82cb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457742"
 ---
 # <a name="icorprofilercallback4rejitcompilationstarted-method"></a>ICorProfilerCallback4::ReJITCompilationStarted 方法
 通知分析工具在 just-in-time (JIT) 編譯器已啟動重新編譯函式。  
@@ -51,7 +52,7 @@ HRESULT ReJITCompilationStarted(
  程式碼剖析工具必須在其中兩個執行緒同時進行回呼的情況下支援 JIT 重新編譯回呼的序列。 例如，執行緒的呼叫`ReJITCompilationStarted`; 不過，執行緒的呼叫[ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md)，執行緒 B 呼叫[icorprofilercallback:: Exceptionsearchfunctionenter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md)函式識別碼從`ReJITCompilationStarted`回呼執行緒 a。它可能會顯示該函式 ID 尚未有效期不應因為呼叫[ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md)有尚未收到分析工具。 不過，在此情況下，函式識別碼無效。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

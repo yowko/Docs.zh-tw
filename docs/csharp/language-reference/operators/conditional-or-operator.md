@@ -13,6 +13,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171802"
 ---
 # <a name="-operator-c-reference"></a>|| 運算子 (C# 參考)
 條件式 OR 運算子 (`||`) 會執行其 `bool` 運算元的邏輯 OR。 如果第一個運算元評估值為 `true`，就不會評估第二個運算元。 如果第一個運算元評估值為 `false`，第二個運算子會判斷整個 OR 運算式是評估為`true` 或 `false`。  

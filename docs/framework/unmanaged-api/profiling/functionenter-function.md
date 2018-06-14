@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 77de59de8fcf3797237245ce42c7f0eaa96d3d24
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451778"
 ---
 # <a name="functionenter-function"></a>FunctionEnter 函式
 通知分析工具控制會傳遞至函數。  
@@ -54,7 +55,7 @@ void __stdcall FunctionEnter (
  此外，`FunctionEnter`函式不可以呼叫至 managed 程式碼或任何方式發生原因的 managed 的記憶體配置。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl  
   

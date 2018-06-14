@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 78fdcb69e73bc7238972d1a6ffb37b5ba91c7953
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459081"
 ---
 # <a name="stacksnapshotcallback-function"></a>StackSnapshotCallback 函式
 提供程式碼剖析工具相關資訊每個 managed 的框架和每次執行未受管理的框架的堆疊上堆疊查核行程，由起始期間[icorprofilerinfo2:: Dostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)方法。  
@@ -65,7 +66,7 @@ HRESULT __stdcall StackSnapshotCallback (
  `ICorProfilerInfo2::DoStackSnapshot`方法呼叫`StackSnapshotCallback`managed 框架每一次或一次每一回合的 unmanaged 框架的函式。 如果`StackSnapshotCallback`稱為 「 執行中的未受管理的框架，分析工具可能會使用暫存器內容 (所參考`context`參數) 來執行它自己的未受管理的堆疊查核行程。 在此情況下，Win32`CONTEXT`結構代表最近推送的框架內的未受管理的框架執行的 CPU 狀態。 雖然 Win32`CONTEXT`結構包含之所有暫存器值，則您應該只依賴的堆疊指標暫存器、 框架指標暫存器、 指令指標暫存器和靜態 （即保留） 值整數暫存器。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl  
   

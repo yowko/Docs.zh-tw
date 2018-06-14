@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b28fe8e8fd8b602a01b6358f46f60cdf792ced0d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448621"
 ---
 # <a name="cornativetype-enumeration"></a>CorNativeType 列舉
 包含值，這些值描述原生 Unmanaged 類型。  
@@ -139,7 +140,7 @@ typedef enum CorNativeType {
 |`NATIVE_TYPE_MAX`|無效的值。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorHdr.h  
   

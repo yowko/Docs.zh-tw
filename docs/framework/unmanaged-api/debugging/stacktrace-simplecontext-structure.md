@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: acf2ba752ace49ae288857dc22819a8e7e429a34
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424049"
 ---
 # <a name="stacktracesimplecontext-structure"></a>StackTrace_SimpleContext 結構
 提供可用來代替完整 `CONTEXT` 結構的簡單內容。  
@@ -49,7 +50,7 @@ struct StackTrace_SimpleContext
  因為堆疊追蹤函式通常需要只傳回位址、 框架位移，並堆疊位址，您可以選擇性地使用`SimpleContext`結構，而不是大型`CONTEXT`結構。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** SOS_Stacktrace.h  
   

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563793"
 ---
 # <a name="xshared-attribute"></a>x:Shared 屬性
 當設定為`false`，修改 WPF 擷取資源的行為，讓屬性化的資源的要求建立每個要求而不是共用相同的執行個體的所有要求的新執行個體。  

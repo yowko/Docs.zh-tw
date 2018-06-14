@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528440"
 ---
 # <a name="how-to-anchor-controls-on-windows-forms"></a>如何：錨定 Windows Form 上的控制項
 如果您要設計的表單，使用者可以在執行階段調整大小，將表單上的控制項應調整大小，並適當地重新調整位置。 若要調整大小以動態方式使用表單的控制項，您可以使用<xref:System.Windows.Forms.Control.Anchor%2A>Windows Form 控制項的屬性。 <xref:System.Windows.Forms.Control.Anchor%2A>屬性會定義控制項的錨點位置。 當控制項錨定至表單，並調整表單大小時，控制項就會維護控制項的錨點位置之間的距離。 例如，如果您有<xref:System.Windows.Forms.TextBox>錨定的左方、 右方和下邊緣的表單，表單調整大小時，控制項<xref:System.Windows.Forms.TextBox>水平控制項會調整大小，以便保持相同的距離，從表單的左邊和右邊側邊。 此外，控制項本身也會做垂直定位，因此其位置一律會從表單的邊緣相同的距離。 如果控制項不錨定和調整表單大小時，會變更控制項相對於表單的邊緣的位置。  

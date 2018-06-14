@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638473"
 ---
 # <a name="file-information-cannot-be-queried-if-the-file-does-not-exist"></a>如果檔案不存在，就無法查詢檔案資訊
 已嘗試查詢 <xref:System.IO.FileInfo> 物件，以取得不存在檔案的相關資訊。 這通常是因為提供檔案名稱時發生錯誤。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585048"
 ---
 # <a name="can39t-create-necessary-temporary-file"></a>可以&#39;t 建立必要的暫存檔
 磁碟機已滿，其中包含 TEMP 環境變數所指定的目錄或 TEMP 環境變數指定無效或唯讀磁碟機或目錄。  

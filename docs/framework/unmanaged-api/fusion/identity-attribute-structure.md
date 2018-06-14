@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f716ff35ae0cd3d2a53c55756b8957e54fa355c6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431531"
 ---
 # <a name="identityattribute-structure"></a>IDENTITY_ATTRIBUTE 結構
 包含有關屬性的中繼資料資訊[IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)執行個體。  
@@ -49,7 +50,7 @@ typedef struct _IDENTITY_ATTRIBUTE {
  執行個體`IDENTITY_ATTRIBUTE`結構是相關聯的執行個體[IDENTITY_ATTRIBUTE_BLOB](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)結構。 `IDENTITY_ATTRIBUTE`結構包含實際的字串，而且對應`IDENTITY_ATTRIBUTE_BLOB`結構清單中所列之三個字串的位移`IDENTITY_ATTRIBUTE`結構。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Isolation.h  
   

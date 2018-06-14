@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399817"
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a>建立桌面應用程式的資源檔
 您可以在資源檔中包括資源 (例如字串、影像或物件資料)，以讓應用程式輕鬆地使用它們。 .NET Framework 提供五種方式來建立資源檔：  

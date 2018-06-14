@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364219"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>SQL Server 中的授權和權限
 當您建立資料庫物件時，必須明確地授與權限，讓使用者能夠存取這些物件。 每個安全性實體物件都具有可利用權限陳述式來授與主體的權限。  

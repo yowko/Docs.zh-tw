@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759890"
 ---
 # <a name="entity-framework-overview"></a>Entity Framework 概觀
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 是 ADO.NET 中的一組技術，可支援資料導向軟體應用程式的開發。 資料導向應用程式的架構設計人員和開發人員經常致力於滿足達成兩個迥異目標的需求。 他們必須針對所解決之商務問題的實體、關聯性和邏輯建立模型，而且也必須使用用來儲存和擷取資料的資料引擎。 這項資料可能會跨越多個儲存系統，而且每個系統都有自己的通訊協定 (Protocol)。即使是使用單一儲存系統的應用程式都必須在儲存系統的需求與撰寫有效率和可維護應用程式程式碼的需求之間取得平衡。  

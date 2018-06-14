@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395407"
 ---
 # <a name="reliability"></a>可靠性
 重要的是，在 SQL Server 這類伺服器環境中執行的程式碼可防止發生非同步例外狀況。 如這裡所討論，可靠性不是 SQL Server 特有的，而是針對任何在 .NET Framework 2.0 版環境中執行的主機撰寫可靠程式碼。 不過，SQL Server 是大規模使用 2.0 版新可靠性功能的第一個服務，因此當成範例使用。  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527374"
 ---
 # <a name="how-to-add-activex-controls-to-windows-forms"></a>如何：將 ActiveX 控制項加入至 Windows Form
 Windows Form 設計工具最適合主機的 Windows Form 控制項，而您也可以使 Windows Form 上的 ActiveX 控制項。  

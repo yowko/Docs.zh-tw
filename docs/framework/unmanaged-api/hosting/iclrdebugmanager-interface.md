@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d123177bf9f1b5eee1a2ba4d9b7f2042ddc07aa2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434935"
 ---
 # <a name="iclrdebugmanager-interface"></a>ICLRDebugManager 介面
 提供方法，讓主應用程式能夠與識別項和好記的名稱產生關聯的一組工作。  
@@ -46,11 +47,11 @@ ms.lasthandoff: 05/04/2018
  群組的識別碼和易記名稱，主機會指派給群組，沒有任何意義的 common language runtime (CLR)。 CLR 只會將資訊傳遞至偵錯工具。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
- **程式庫：**包含做為 MSCorEE.dll 中的資源  
+ **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505140"
 ---
 # <a name="operationcontextscope"></a>OperationContextScope
 OperationContextScope 範例會示範如何傳送上使用的標頭的 Windows Communication Foundation (WCF) 呼叫的額外資訊。 在此範例中，伺服器與用戶端都是主控台應用程式。  

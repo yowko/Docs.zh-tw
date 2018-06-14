@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586421"
 ---
 # <a name="evaluation-of-expression-or-statement-timed-out"></a>運算式或陳述式評估已經逾時
 運算式的評估未及時完成。  

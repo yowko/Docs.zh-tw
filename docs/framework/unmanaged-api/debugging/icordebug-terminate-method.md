@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2c2b590e7402bf29ffeb5bd14fc383edae41a04e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403989"
 ---
 # <a name="icordebugterminate-method"></a>ICorDebug::Terminate 方法
 終止`ICorDebug`物件。  
@@ -39,7 +40,7 @@ HRESULT Terminate ();
  `Terminate` 時，必須呼叫`ICorDebug`不再需要物件。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   

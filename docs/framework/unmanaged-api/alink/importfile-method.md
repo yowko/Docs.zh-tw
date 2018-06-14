@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 54b0a02af7f22e775e3f9567de79664c9805b4e2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400646"
 ---
 # <a name="importfile-method"></a>ImportFile 方法
 匯入組件和未繫結的模組。  

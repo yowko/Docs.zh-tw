@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744271"
 ---
 # <a name="64-bit-applications"></a>64 位元應用程式
 您在編譯應用程式時，可以指定其應以原生應用程式在 Windows 64 位元作業系統上或在 WOW64 下 (Windows 64 位元上的 Windows 32 位元) 執行。 WOW64 是讓 32 位元應用程式可在 64 位元系統上執行的相容性環境。 所有 64 位元版本的 Windows 作業系統中都包含 WOW64。  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 338120932b0bcbe390332515856aaeaa3bc34a56
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461694"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot 方法
 引導 managed 的框架，在指定之執行緒的堆疊上，並將資訊傳送給分析工具透過回呼。  
@@ -99,7 +100,7 @@ HRESULT DoStackSnapshot(
  另外還有死結的風險是如果您呼叫`DoStackSnapshot`從您的分析工具已建立，以便您可以將不同的目標執行緒的堆疊查核行程的執行緒。 第一次您建立的執行緒進入特定`ICorProfilerInfo*`方法 (包括`DoStackSnapshot`)，CLR 會執行每個執行緒，在該執行緒上的 CLR 特定初始化。 如果您的分析工具已暫停目標執行緒嘗試查核行程，其堆疊，而且擁有鎖定的必要執行這個每個執行緒的初始化發生該目標執行緒，則會發生死結。 若要避免這個死結，請至初始呼叫`DoStackSnapshot`從您程式碼剖析工具建立的執行緒，瀏覽個別目標執行緒，但並不會擱置目標執行緒第一次。 此第一次呼叫可確保每個執行緒初始化可以完成不包含死結。 如果`DoStackSnapshot`成功，而且至少一個框架時，會報告該點之後，將會暫停任何目標執行緒和呼叫該程式碼剖析工具建立的執行緒安全`DoStackSnapshot`到該目標執行緒的堆疊查核行程。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

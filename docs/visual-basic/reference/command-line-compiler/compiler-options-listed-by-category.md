@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655820"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>依分類列出的 Visual Basic 編譯器選項
 Visual Basic 命令列編譯器可作為從 Visual Studio 整合式的開發環境 (IDE) 內編譯程式的替代方案。 以下是 Visual Basic 命令列編譯器選項，依功能分類排序的清單。  

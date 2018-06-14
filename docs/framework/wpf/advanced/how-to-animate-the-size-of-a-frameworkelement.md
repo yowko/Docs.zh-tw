@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543981"
 ---
 # <a name="how-to-animate-the-size-of-a-frameworkelement"></a>如何：建立 FrameworkElement 大小的動畫
 若要建立動畫的大小<xref:System.Windows.FrameworkElement>，您可能可以動畫顯示其<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>屬性或使用動畫的<xref:System.Windows.Media.ScaleTransform>。  

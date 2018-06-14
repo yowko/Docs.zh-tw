@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595923"
 ---
 # <a name="functions-visual-basic"></a>函式 (Visual Basic)
 本節中的主題包含 Visual Basic 執行階段成員函式的表格。  

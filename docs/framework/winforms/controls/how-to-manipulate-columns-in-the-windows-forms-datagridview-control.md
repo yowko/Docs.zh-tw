@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532879"
 ---
 # <a name="how-to-manipulate-columns-in-the-windows-forms-datagridview-control"></a>如何：管理 Windows Forms DataGridView 控制項中的資料行
 下列程式碼範例顯示使用 <xref:System.Windows.Forms.DataGridViewColumn> 類別屬性操作 <xref:System.Windows.Forms.DataGridView> 資料行的各種方式。  

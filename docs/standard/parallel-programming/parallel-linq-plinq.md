@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581377"
 ---
 # <a name="parallel-linq-plinq"></a>平行 LINQ (PLINQ)
 Parallel LINQ (PLINQ) 是平行實作的 LINQ to Objects。 PLINQ 實作了一組完整的 LINQ 標準查詢運算子來作為 <xref:System.Linq> 命名空間的擴充方法，並具有其他運算子可供平行作業使用。 PLINQ 結合了 LINQ 語法簡單易懂的特性以及平行程式設計的威力。 和以工作平行程式庫為目標的程式碼一樣，PLINQ 查詢會根據主機電腦的能力來以並行程度縮放。  

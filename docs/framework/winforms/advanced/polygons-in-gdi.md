@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525843"
 ---
 # <a name="polygons-in-gdi"></a>GDI+ 中的多邊形
 多邊形是具有三個或多個直線邊封閉的圖形。 例如，三角形是具有三個邊的多邊形、 矩形是具有四個邊的多邊形和五邊形是具有五個邊的多邊形。 下圖顯示幾個多邊形。  

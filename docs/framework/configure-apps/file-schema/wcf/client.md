@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752633"
 ---
 # <a name="ltclientgt"></a>&lt;用戶端&gt;
 `client` 項目會定義用戶端可連線的端點清單。  

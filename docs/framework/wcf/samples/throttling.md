@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503478"
 ---
 # <a name="throttling"></a>節流
 節流範例會示範節流控制項的用法。 節流控制會限制同時呼叫、並行執行個體或工作階段的數目，以防止過度消耗資源。 節流行為會指定於服務組態檔設定中。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，用來實作計算機服務。  

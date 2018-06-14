@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604644"
 ---
 # <a name="shadows-visual-basic"></a>Shadows (Visual Basic)
 指定宣告的程式設計項目會重新宣告並隱藏相同具名的項目或基底類別中的多載項目集。  

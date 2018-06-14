@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645252"
 ---
 # <a name="language-integrated-axes-in-visual-basic-linq-to-xml"></a>Visual Basic 中已整合語言的軸心方法 (LINQ to XML)
 本節描述直接內建讓您輕鬆存取 XML Visual Basic 語言的功能。 許多 LINQ to XML 文件的範例都使用這些整合式的 Visual Basic 軸。  

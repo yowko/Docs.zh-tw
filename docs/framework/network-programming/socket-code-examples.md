@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395849"
 ---
 # <a name="socket-code-examples"></a>通訊端程式碼範例
 下列程式碼範例示範如何使用 <xref:System.Net.Sockets.Socket> 類別作為用戶端連接到遠端網路服務，以及作為伺服器接聽來自遠端用戶端的連線。  

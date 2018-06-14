@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520298"
 ---
 # <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>HOW TO：更新執行中工作流程執行個體的定義
 動態更新提供的機制可讓工作流程應用程式開發人員更新持續性工作流程執行個體的工作流程定義。 必要的變更可以是實作錯誤修復、新要求，或是適應突如其來的變化。 此教學課程中的步驟示範如何使用動態更新來修改保存的執行個體`v1`數字猜測工作流程來比對中引進的新功能[How to： 主機的工作流程-並存的多個版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  

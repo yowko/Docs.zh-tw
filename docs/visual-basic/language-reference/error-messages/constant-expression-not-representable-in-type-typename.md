@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585765"
 ---
 # <a name="constant-expression-not-representable-in-type-39lttypenamegt39"></a>無法顯示在型別常數運算式&#39;&lt;類型名稱&gt;&#39;
 您嘗試評估常數，不符合目標類型，通常是因為它超出範圍。  

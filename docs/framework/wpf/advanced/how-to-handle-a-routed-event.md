@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544313"
 ---
 # <a name="how-to-handle-a-routed-event"></a>如何：處理路由事件
 此範例示範事件反昇事件運作方式，以及如何撰寫可處理路由事件資料的處理常式。  

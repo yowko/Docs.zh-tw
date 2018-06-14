@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654105"
 ---
 # <a name="other-control-structures-visual-basic"></a>其他控制結構 (Visual Basic)
 Visual Basic 提供可協助您控制結構的資源處置或減少您必須重複的物件參考的次數。  

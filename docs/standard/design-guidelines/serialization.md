@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578062"
 ---
 # <a name="serialization"></a>序列化
 序列化是將物件轉換成可以輕易地保存或傳輸之格式的程序。 例如，您可以將物件序列化、 傳輸透過網際網路使用 HTTP，並還原序列化該目的地電腦上。  

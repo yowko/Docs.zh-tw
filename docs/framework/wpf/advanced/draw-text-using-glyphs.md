@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542522"
 ---
 # <a name="draw-text-using-glyphs"></a>使用圖像繪製文字
 本主題說明如何使用低階<xref:System.Windows.Documents.Glyphs>物件中的文字顯示[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395241"
 ---
 # <a name="ltparametergt-element-net-native"></a>&lt;Parameter&gt; 項目 (.NET Native)
 將反映原則套用至傳遞給方法的引數類型。  

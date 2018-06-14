@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528615"
 ---
 # <a name="helpprovider-component-overview-windows-forms"></a>HelpProvider 元件概觀 (Windows Form)
 Windows Form [HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)元件可用來將 HTML 說明 1.x 說明檔 （以 HTML Help Workshop 產生的.chm 檔案或.htm 檔） 與 Windows 應用程式產生關聯。 您可以提供各種不同的方式說明：  

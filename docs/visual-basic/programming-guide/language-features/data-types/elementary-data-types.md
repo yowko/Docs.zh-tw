@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646374"
 ---
 # <a name="elementary-data-types-visual-basic"></a>基礎資料類型 (Visual Basic)
 Visual Basic 提供一組預先定義的資料類型，您可以使用許多程式設計項目。 本章節描述這些類型和使用方式。  

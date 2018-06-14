@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363282"
 ---
 # <a name="optimization-using-single-phase-commit-and-promotable-single-phase-notification"></a>使用單一階段交易認可和可提升單一階段告知進行最佳化
 本主題將說明 <xref:System.Transactions> 基礎結構所提供，用以最佳化效能的各項機制。  

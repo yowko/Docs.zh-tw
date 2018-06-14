@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542245"
 ---
 # <a name="windows-forms"></a>Windows Forms
 由於表單是應用程式的基礎單位，因此在表單的功能和設計方面需要多加考量。 表單基本上就像是一個空白面板，身為開發人員的您可使用控制項建立使用者介面，並使用程式碼管理資料，來增強表單。 為此，Visual Studio 為您提供的整合式的開發環境 (IDE) 以協助您撰寫程式碼，以及設定與撰寫的豐富控制項[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]。 您可以利用程式碼來補充這些控制項的功能，進而輕鬆快速地開發所需的方案。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33486720"
 ---
 # <a name="configuration-and-metadata-support"></a>組態與中繼資料支援
 這個主題描述如何啟用繫結和繫結項目的組態與中繼資料支援。  

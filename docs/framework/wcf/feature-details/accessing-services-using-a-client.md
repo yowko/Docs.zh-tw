@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495992"
 ---
 # <a name="accessing-services-using-a-client"></a>使用用戶端存取服務
 用戶端應用程式必須建立、 設定及使用 WCF 用戶端或通道物件來與服務通訊。 [WCF 用戶端概觀](../../../../docs/framework/wcf/wcf-client-overview.md)主題提供的物件和建立基本用戶端和通道物件，以及使用它們的相關步驟的概觀。  

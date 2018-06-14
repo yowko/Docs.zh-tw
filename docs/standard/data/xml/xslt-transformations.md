@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570990"
 ---
 # <a name="xslt-transformations"></a>XSLT 轉換
 可延伸樣式表語言轉換 (XSLT) 可讓您將來源 XML 文件的內容轉換成另一種不同格式或結構的文件。 例如，您可以使用 XSLT 將 XML 轉換成網站上使用的 HTML，或將它轉換成只包含應用程式所需欄位的文件。 這項轉換程序是由 [W3C XSL 轉換 (XSLT) 1.0 版建議事項](https://www.w3.org/TR/xslt-10/) (英文) 所指定。  

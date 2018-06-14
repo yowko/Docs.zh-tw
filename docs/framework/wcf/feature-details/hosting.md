@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489394"
 ---
 # <a name="hosting"></a>裝載
 本節中各主題描述服務裝載。 服務可以裝載網際網路資訊服務 (IIS)、 Windows Process Activation Service (WAS)、 Windows Server AppFabric、 Windows 服務，或由受管理的應用程式，這個選項通常稱為*自我裝載*。  

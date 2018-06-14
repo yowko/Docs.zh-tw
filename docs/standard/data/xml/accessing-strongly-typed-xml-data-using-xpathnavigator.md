@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578112"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 存取強型別 XML 資料
 做為 XPath 2.0 資料模型的執行個體，<xref:System.Xml.XPath.XPathNavigator> 類別可以包含對應至 Common Language Runtime (CLR) 型別的強型別資料。 根據 XPath 2.0 資料模型，只有項目及屬性才可以包含強型別資料。 <xref:System.Xml.XPath.XPathNavigator> 類別提供可將 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 物件內的資料做為強型別資料進行存取的機制，以及將一種資料型別轉換為另一種型別的機制。  

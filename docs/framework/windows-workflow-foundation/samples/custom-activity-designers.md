@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514284"
 ---
 # <a name="custom-activity-designers"></a>自訂活動設計工具
 本章節包含了活動範例，這些範例會使用自訂設計工具以顯示在工作流程設計工具中。  

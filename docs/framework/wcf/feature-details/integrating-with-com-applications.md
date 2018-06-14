@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491838"
 ---
 # <a name="integrating-with-com-applications"></a>整合 COM 應用程式
 Windows Communication Foundation (WCF) 服務使用 WCF 服務 moniker 可以直接整合至現有的程式碼中。 服務 Moniker 可以從多種 COM 架構開發環境中使用，例如 Office VBA、Visual Basic 6.0 或 Visual C++ 6.0。  

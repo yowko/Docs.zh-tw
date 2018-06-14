@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803942"
 ---
 # <a name="automatic-format-selection"></a>自動格式選取
 這個範例會示範如何啟用自動格式選取 （XML 或 JSON），使用 Windows Communication Foundation (WCF) REST 程式設計模型，以及如何明確設定作業碼中的格式。  

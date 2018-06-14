@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564870"
 ---
 # <a name="xarguments-directive"></a>x:Arguments 指示詞
 在 XAML 中、 非預設建構函式物件項目宣告或 factory 方法物件宣告，封裝建構引數。  

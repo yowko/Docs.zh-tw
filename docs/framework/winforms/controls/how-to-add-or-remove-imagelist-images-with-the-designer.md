@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527670"
 ---
 # <a name="how-to-add-or-remove-imagelist-images-with-the-designer"></a>如何：使用設計工具加入或移除 ImageList 影像
 您可以將映像以<xref:System.Windows.Forms.ImageList>元件數個不同的方式。 您可以將影像加入使用智慧標籤相關聯的非常快速地<xref:System.Windows.Forms.ImageList>，或如果您要設定其他幾個屬性上<xref:System.Windows.Forms.ImageList>，可能會發現更方便地加入 [屬性] 視窗的影像。 您也可以使用程式碼，以新增映像。 如需如何新增程式碼的映像的詳細資訊，請參閱[如何： 加入或移除映像使用 Windows Form ImageList 元件](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)。 通常您填入<xref:System.Windows.Forms.ImageList>映像之前相關聯的控制項，但這不是必要元件。  

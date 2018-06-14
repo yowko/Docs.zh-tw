@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648576"
 ---
 # <a name="enumerations-and-name-qualification-visual-basic"></a>列舉和名稱限定 (Visual Basic)
 一般來說，當參考的列舉成員，您必須限定成員名稱與列舉型別名稱。 例如，若要參考`Sunday`隸屬您`Days`列舉型別，您可以使用下列語法：  

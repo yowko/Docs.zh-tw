@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596915"
 ---
 # <a name="variable-39ltvariablenamegt39-is-used-before-it-has-been-assigned-a-value"></a>變數&#39; &lt;variablename&gt; &#39;已在指派值之前使用
 變數 '\<變數名稱 >' 已在指派值之前使用。 可能會在執行階段產生 null 參考例外狀況。  

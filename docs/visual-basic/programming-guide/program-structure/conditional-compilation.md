@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653013"
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Visual Basic 中的條件式編譯
 在*條件式編譯*，而忽略其他的特定程式中的程式碼區塊會選擇性地編譯。  

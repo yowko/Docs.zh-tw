@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551774"
 ---
 # <a name="listbox-how-to-topics"></a>ListBox HOW TO 主題
 本節中的主題描述如何使用<xref:System.Windows.Controls.ListBox>控制項來顯示可選取項目清單。  

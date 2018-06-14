@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588089"
 ---
 # <a name="39ltmembernamegt39-cannot-expose-type-39lttypenamegt39-outside-the-project-through-ltcontainertypegt-39ltcontainertypenamegt39"></a>&#39;&lt;membername&gt; &#39;無法公開型別&#39; &lt;typename&gt; &#39;透過在專案外&lt;containertype&gt; &#39; &lt;containertypename&gt;&#39;
 變數、 程序參數或函式傳回其容器，外部公開，但它卻宣告為不會公開容器外的型別。  

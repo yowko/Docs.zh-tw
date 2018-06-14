@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505966"
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>ServiceModel 屬性與 ServiceDescription 參考
 *描述樹狀目錄*是類型的階層 (從<xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType>類別)，描述服務的每個層面。 Windows Communication Foundation (WCF) 會使用描述樹狀目錄來建置有效的服務執行階段，以發行 Web 服務描述語言 (WSDL)、 XML 結構描述定義語言 (XSD)，以及用戶端可用來服務相關的原則判斷提示 （中繼資料）連接到並使用服務，並產生各種程式碼和組態檔表示法的描述樹狀目錄值。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766731"
 ---
 # <a name="entity-sql-reference"></a>Entity SQL 參考
 本節內容包括 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 參考主題。 本主題將摘要說明 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 運算子並將它們依分類群組。  

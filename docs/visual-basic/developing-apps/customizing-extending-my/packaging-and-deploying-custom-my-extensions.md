@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591855"
 ---
 # <a name="packaging-and-deploying-custom-my-extensions-visual-basic"></a>封裝和部署自訂的 My 擴充 (Visual Basic)
 Visual Basic 提供簡單的方法，以部署您的自訂`My`使用 Visual Studio 範本命名空間擴充功能。 如果您要建立專案範本，您`My`延伸模組是新的專案類型中不可或缺的一部分，您可以包含自訂`My`與專案中，當您將範本匯出時的延伸模組程式碼。 如需匯出專案範本的詳細資訊，請參閱[How to： 建立專案範本](/visualstudio/ide/how-to-create-project-templates)。  

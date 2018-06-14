@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340420"
 ---
 # <a name="projecting-xml-in-a-different-shape-c"></a>以不同的組織結構投影 XML (C#)
 本主題顯示以不同於來源 XML 的組織結構規劃 XML 的範例。  

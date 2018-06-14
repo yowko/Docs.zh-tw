@@ -2,11 +2,12 @@
 title: 'F # 元件的設計指導方針'
 description: '了解撰寫 F # 預定由其他呼叫端元件的指導方針。'
 ms.date: 05/14/2018
-ms.openlocfilehash: 7859baac76be01b2cfbdc8602b6cc417cfe5106f
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
-ms.translationtype: HT
+ms.openlocfilehash: 7e71710b1bc2fe3e8d7a5a091513a1432650dc04
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458082"
 ---
 # <a name="f-component-design-guidelines"></a>F # 元件的設計指導方針
 
@@ -483,7 +484,7 @@ type MultiMap<'Key,'Value> = Map<'Key,'Value list>
 
 在設計為從其他.NET 語言使用的程式庫時，務必遵守[.NET 程式庫設計方針](../../standard/design-guidelines/index.md)。 在本文件中，這些程式庫會標示為香草.NET 程式庫，而不是 F #-面對使用 F # 的程式庫建構不受限制。 設計香草.NET 程式庫表示藉由減少使用 F # 提供熟悉且慣用語 Api 與.NET Framework 的其餘部分一致-公用 API 中的特定建構。 下列各節中說明的規則。
 
-### <a name="namespace-and-type-sesign-for-libraries-for-use-from-other-net-languages"></a>命名空間和類型 sesign （適用於從其他.NET 語言使用的程式庫）
+### <a name="namespace-and-type-design-for-libraries-for-use-from-other-net-languages"></a>命名空間和類型的設計 （適用於從其他.NET 語言使用的程式庫）
 
 #### <a name="apply-the-net-naming-conventions-to-the-public-api-of-your-components"></a>套用至元件的公用 API 的.NET 命名慣例
 

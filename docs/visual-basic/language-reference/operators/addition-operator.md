@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605221"
 ---
 # <a name="-operator-visual-basic"></a>+ 運算子 (Visual Basic)
 兩個數字相加或傳回數值運算式的正值。 也可以用來串連兩個字串運算式。  

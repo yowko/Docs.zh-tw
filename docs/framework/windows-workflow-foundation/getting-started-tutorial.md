@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512436"
 ---
 # <a name="getting-started-tutorial"></a>快速入門教學課程
 本節包含一系列逐步解說主題，向您介紹程式設計 Windows Workflow Foundation (WF) 應用程式。 您可以遵循這些主題的程序進行，建置一個數字猜測遊戲應用程式。 教學課程中的第一個主題會引導您透過步驟來建立工作流程所需的自訂活動。 在第二個主題中，這些活動會隨著內建工作流程活動組裝至流程圖工作流程。 在第三個主題中，會設定主應用程式執行工作流程，並在最後一個主題中介紹持續性。 這個程序中的每一個步驟都與之前的步驟息息相關，因此建議您最好依照順序完成。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639411"
 ---
 # <a name="set-not-supported-read-only-property"></a>不支援 Set (唯讀屬性)
 您嘗試設定或變更唯讀屬性。  

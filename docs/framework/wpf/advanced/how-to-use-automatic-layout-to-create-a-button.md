@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545210"
 ---
 # <a name="how-to-use-automatic-layout-to-create-a-button"></a>如何：使用自動配置建立按鈕
 此範例說明如何使用自動版面配置方法，以建立可當地語系化之應用程式中的按鈕。  

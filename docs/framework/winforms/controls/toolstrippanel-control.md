@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535424"
 ---
 # <a name="toolstrippanel-control"></a>ToolStripPanel 控制項
 `ToolStripPanel` 控制項可以在停駐時共用工具區域中的水平空間或垂直空間，也可以在您不需要 <xref:System.Windows.Forms.ToolStripContainer> 的四個面板和中間面板時排列 <xref:System.Windows.Forms.ToolStrip> 控制項。  

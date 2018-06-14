@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654418"
 ---
 # <a name="interfaces-visual-basic"></a>介面 (Visual Basic)
 「介面」可定義類別可實作的屬性、方法和事件。 介面可讓您將功能定義為一小組緊密相關的屬性、方法和事件；這會降低相容性問題，因為您可以為您的介面開發增強的實作，而不會危及現有程式碼。 只要開發額外的介面和實作，您就可以隨時加入新功能。  

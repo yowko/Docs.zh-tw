@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499567"
 ---
 # <a name="discovery-extensibility"></a>探索擴充性
 本節中的範例示範如何擴充 Windows Communication Foundation (WCF) 探索功能。  

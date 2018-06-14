@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646379"
 ---
 # <a name="constants-and-enumerations-in-visual-basic"></a>Visual Basic 的常數和列舉類型
 常數是指使用有意義的名稱來取代維持不變的值。 如同它的名稱所示，常數用來儲存應用程式執行過程中維持不變的值。 您可以使用常數來提供有意義的名稱，而不是數字，讓程式碼更容易讀取。  

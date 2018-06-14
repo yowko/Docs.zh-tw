@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7bc6c9079b6f233946fa38979800e28097e849f8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428585"
 ---
 # <a name="fusion-unmanaged-api-reference"></a>融合 (Unmanaged API 參考)
 融合 API 可讓執行階段主應用程式會存取應用程式的資源的內容，以便找出這些資源的應用程式的正確版本。  

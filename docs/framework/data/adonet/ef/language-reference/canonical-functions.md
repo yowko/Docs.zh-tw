@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760930"
 ---
 # <a name="canonical-functions"></a>標準函式
 本節討論所有資料提供者都支援，而且可由所有查詢技術使用的標準函式。 標準函式無法由提供者擴允。  

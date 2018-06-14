@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651592"
 ---
 # <a name="partial-methods-visual-basic"></a>部分方法 (Visual Basic)
 部分方法可讓開發人員程式碼中插入自訂邏輯。 通常，程式碼是類別的設計工具產生的一部分。 部分方法中所建立的程式碼產生器中，部分類別定義，它們通常用來提供到的項目已變更的通知。 它們可讓開發人員指定自訂的行為變更的回應。  

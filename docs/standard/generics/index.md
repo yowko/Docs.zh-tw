@@ -33,6 +33,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579063"
 ---
 # <a name="generics-in-net"></a>.NET 的泛型
 
@@ -80,7 +81,7 @@ ms.lasthandoff: 05/04/2018
   
 -   一般詞彙 *「泛型類型」* (generic type) 包括建構的類型和泛型類型定義。  
   
--   泛型類型參數的*「共變數」* (covariance) 和 *「反變數」* of generic type parameters enable you to use constructed generic types whose type arguments are more derived (covariance) or less derived (「反變數」) than a target constructed type. 共變數和反變數合稱為「變異數」。 如需詳細資訊，請參閱 [Covariance and Contravariance](../../../docs/standard/generics/covariance-and-contravariance.md) (共變數和反變數)。  
+-   泛型類型參數的 *「共變數」* (covariance) 和 *「反變數」* of generic type parameters enable you to use constructed generic types whose type arguments are more derived (covariance) or less derived (「反變數」) than a target constructed type. 共變數和反變數合稱為「變異數」。 如需詳細資訊，請參閱 [Covariance and Contravariance](../../../docs/standard/generics/covariance-and-contravariance.md) (共變數和反變數)。  
   
 -   「條件約束」是對泛型型別參數的限制。 例如，您可以限制類型參數為實作 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 泛型介面的類型，以確保能夠排序類型的執行個體。 您也可以將類型參數限制為具有特定基底類別的類型，或是具有預設建構函式的類型，或為參考類型或實值類型。 的泛型類型的使用者無法替換沒有滿足這些條件約束的類型引數。  
   

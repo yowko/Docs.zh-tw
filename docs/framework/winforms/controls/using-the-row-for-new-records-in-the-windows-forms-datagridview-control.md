@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540655"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>使用 Windows Form DataGridView 控制項中用於新增資料錄的資料列
 當您使用<xref:System.Windows.Forms.DataGridView>進行編輯您的應用程式中的資料，您通常想要讓使用者能夠將新的資料列加入至資料存放區。 <xref:System.Windows.Forms.DataGridView>控制項支援藉由提供一個資料列給新的記錄，這一律會顯示為最後一個資料列的這項功能。 它會標示有星號 （*） 符號，其資料列行首。 下列各節會討論一些程式與資料列的新記錄啟用時，您應該考慮的事項。  

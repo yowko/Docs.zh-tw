@@ -6,9 +6,10 @@ ms.author: wiwagn
 ms.date: 09/22/2017
 ms.openlocfilehash: 1bd1abccb55fe9f837b024cc0f61eea71d3b64c5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567922"
 ---
 # <a name="run-manage-and-monitor-docker-production-environments"></a>執行、管理和監視 Docker 生產環境
 

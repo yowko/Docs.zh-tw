@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593599"
 ---
 # <a name="ordinal-is-not-valid"></a>無效的序數
 使用數字，而不是程序名稱，指示您動態連結程式庫 (DLL) 的呼叫使用`#num`語法。 此錯誤有下列可能原因：  

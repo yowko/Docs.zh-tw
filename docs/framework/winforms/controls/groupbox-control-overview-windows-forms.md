@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525161"
 ---
 # <a name="groupbox-control-overview-windows-forms"></a>GroupBox 控制項概觀 (Windows Form)
 Windows Form<xref:System.Windows.Forms.GroupBox>控制項可用來提供其他控制項可識別的群組。 一般而言，您可以使用群組方塊細分函式表單。 比方說，您可能會指定郵寄選項，例如要使用哪個夜間貨運訂購表單。 群組在群組中的所有選項可讓使用者邏輯的視覺提示，並在設計階段的所有控制項可以輕易地都移動 — 當您將單一<xref:System.Windows.Forms.GroupBox>控制所有其包含的控制項，跟著移動。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804959"
 ---
 # <a name="determining-service-operation-duration"></a>判斷服務作業持續時間
 如果分析追蹤已啟用 Windows Communication Foundation (WCF) 應用程式中，服務作業執行期間可以輕鬆地檢查事件記錄檔來判斷。  本主題示範如何判斷服務作業完成所需的時間。  

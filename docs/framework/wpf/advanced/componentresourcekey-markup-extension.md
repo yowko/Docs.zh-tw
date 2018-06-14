@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540406"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey 標記延伸
 定義和參考會從外部組件載入的資源索引鍵。 這可讓組件，而不是類別或組件中的明確資源字典中指定的目標類型的資源查閱。  

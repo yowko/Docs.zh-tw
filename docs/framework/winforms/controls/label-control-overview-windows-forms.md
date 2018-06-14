@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536298"
 ---
 # <a name="label-control-overview-windows-forms"></a>Label 控制項概觀 (Windows Form)
 Windows Form<xref:System.Windows.Forms.Label>控制項用來顯示文字或影像，使用者無法編輯。 它們可用來識別表單的物件，提供特定控制項的描述按一下將執行動作，例如，或在執行階段事件或應用程式中的處理序的回應中顯示資訊。 例如，您可以使用標籤，加入文字方塊、 清單方塊、 下拉式方塊和等等的描述性標題。 您也可以撰寫程式碼以變更在執行階段顯示的標籤，以回應事件的文字。 例如，如果您的應用程式在幾分鐘的時間來處理變更，您可以在標籤中顯示處理狀態訊息。  

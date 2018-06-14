@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588157"
 ---
 # <a name="secure-coding-guidelines"></a>安全程式碼撰寫方針
 辨識項架構的安全性和程式碼存取安全性提供十分強大的明確機制以實作安全性。 大部分的應用程式程式碼都只需要使用 .NET Framework 所實作的基礎結構即可。 某些情況還需要其他的應用程式特定安全性 (藉由擴充安全性系統或是使用新的臨機操作方法來建置)。  

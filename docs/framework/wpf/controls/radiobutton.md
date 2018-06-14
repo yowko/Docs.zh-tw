@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553919"
 ---
 # <a name="radiobutton"></a>RadioButton
 <xref:System.Windows.Controls.RadioButton> 控制項通常分組為使用者提供單一選擇多個選項。選取一次只能有一個按鈕。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650461"
 ---
 # <a name="-win32icon"></a>-win32icon
 將.ico 檔插入輸出檔中。 這個.ico 檔表示中的輸出檔**檔案總管**。  

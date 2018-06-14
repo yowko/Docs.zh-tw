@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584953"
 ---
 # <a name="timers"></a>計時器
 計時器是輕量型物件，可讓您指定要在指定時間呼叫的委派。 執行緒集區中的執行緒會執行等候作業。  

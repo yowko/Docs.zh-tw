@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410386"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (資訊清單產生和編輯工具)
 「資訊清單產生和編輯工具」(Mage.exe) 是命令列工具，可支援建立和編輯應用程式與部署資訊清單。 由於 Mage.exe 是命令列工具，因此可以從批次指令碼及其他 Windows 架構應用程式 (包括 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 應用程式) 中執行。  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654212"
 ---
 # <a name="collection-initializers-visual-basic"></a>集合初始設定式 (Visual Basic)
 「集合初始設定式」提供簡短的語法，以讓您建立集合，並填入一組初始值。 當您透過一組已知值來建立集合時，集合初始設定式十分有用，例如，一份功能表選項或類別清單、一組初始數值、一份日期或月份名稱這類靜態字串清單，或用於驗證的這類省市清單的地理位置。  

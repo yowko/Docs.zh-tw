@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365237"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>使用動作實作伺服器端行為
 OData 動作可實作一種行為，以依據從 OData 服務擷取的資源而動作。  例如，將數位影片視為資源時，您可以對數位影片進行許多動作：簽出、評比/加註或簽入。 這些是管理數位影片之 WCF 資料服務可實作的所有動作範例。 動作描述於 OData 回應中，而這個回應包含可叫用動作的資源。 當使用者要求代表數位影片的資源時，從 WCF 資料服務傳回的回應就會包含可用於該項資源之動作的相關資訊。 動作的可用性可能會取決於資料服務或資源的狀態。 例如，一旦數位影片已簽出之後，就無法由其他使用者簽出。 用戶端只要指定 URL，就可以叫用動作。 例如http://MyServer/MovieService.svc/Movies(6)會識別特定的數位影片和http://MyServer/MovieService.svc/Movies(6)/Checkout會叫用特定的影片中的動作。 動作可讓您公開服務模型，而不公開資料模型。 繼續處理影片服務範例時，您可能會想要讓使用者評比影片，但不直接以資源的形式公開評比資料。 此時，您可以實作評比動作，讓使用者評比影片，但不直接以資源的形式存取評比資料。  

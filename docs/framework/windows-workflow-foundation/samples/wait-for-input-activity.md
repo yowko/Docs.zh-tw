@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518988"
 ---
 # <a name="wait-for-input-activity"></a>等候輸入活動
 此範例示範如何在工作流程中建立具名書籤。 Windows Workflow Foundation (WF) 並不會提供用來建立宣告式的書籤的活動。 因此，當您想要在工作流程中建立書籤時，您必須撰寫可建立書籤的自訂活動。 此範例中定義的 `WaitForInput` 活動會提供這個功能，所以使用者可在工作流程中以宣告方式建立書籤。  

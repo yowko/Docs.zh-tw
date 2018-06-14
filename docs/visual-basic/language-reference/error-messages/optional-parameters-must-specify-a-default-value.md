@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593912"
 ---
 # <a name="optional-parameters-must-specify-a-default-value"></a>選擇性參數必須指定預設值
 選擇性參數必須提供如果未提供參數呼叫程序可以使用的預設值。  

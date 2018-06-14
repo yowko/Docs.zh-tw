@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541560"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>檔案對話方塊自訂位置的已知資料夾 GUID
 您使用<xref:System.Guid>指定[!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)]已知資料夾，當您加入資料夾來<xref:System.Windows.Forms.FileDialog.CustomPlaces%2A>集合。 已知資料夾 Guid 不區分大小寫，且 KnownFolders.h 檔中定義[!INCLUDE[winSDK](../../../../includes/winsdk-md.md)]。  

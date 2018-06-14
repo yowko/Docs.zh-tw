@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0735e4c59ba609ed87d61aca737c4f8a4dab757a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453482"
 ---
 # <a name="icorprofilercallbackmanagedtounmanagedtransition-method"></a>ICorProfilerCallback::ManagedToUnmanagedTransition 方法
 通知分析工具，從 managed 程式碼轉換為 unmanaged 程式碼已發生。  
@@ -45,7 +46,7 @@ HRESULT ManagedToUnmanagedTransition(
  如果值`reason`是 COR_PRF_TRANSITION_CALL，識別碼是，unmanaged 的函式，這將會永遠不會有已編譯使用在 just-in-time 編譯器函式。 Unmanaged 函式具有與其相關聯，例如名稱及一些中繼資料的基本資訊。 如果 unmanaged 函式呼叫使用隱含的平台叫用 (PInvoke)，執行階段無法判斷呼叫的目的地，而`functionId`將會是 null。 如需有關隱含 PInvoke 的詳細資訊，請參閱[使用 c + + Interop (隱含 PInvoke)](/cpp/dotnet/using-cpp-interop-implicit-pinvoke)。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

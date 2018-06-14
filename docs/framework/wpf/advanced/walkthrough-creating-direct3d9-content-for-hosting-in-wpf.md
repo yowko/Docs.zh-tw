@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547364"
 ---
 # <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>逐步解說：建立裝載於 WPF 中的 Direct3D9 內容
 本逐步解說示範如何建立適用於 Windows Presentation Foundation (WPF) 應用程式中裝載的 Direct3D9 內容。 如需有關裝載 WPF 應用程式中的 Direct3D9 內容的詳細資訊，請參閱[WPF 和 Direct3D9 互通](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/04/2018
   
      [應用程式設定] 畫面隨即出現。  
   
-3.  在**應用程式類型：**區段中，選取**DLL**選項。  
+3.  在**應用程式類型：** 區段中，選取**DLL**選項。  
   
 4.  按一下 [ **完成**]。  
   

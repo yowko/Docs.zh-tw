@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593245"
 ---
 # <a name="method-does-not-have-a-signature-compatible-with-the-delegate"></a>方法沒有與委派相容的簽章
 方法的簽章和您嘗試使用的委派不相容。 `Delegate` 陳述式定義委派類別的參數類型和傳回類型。 任何有符合的相容的型別參數和傳回型別可以用來建立這個委派類型的執行個體的程序。  

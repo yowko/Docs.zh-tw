@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521975"
 ---
 # <a name="how-to-determine-the-parameters-supported-by-an-encoder"></a>如何：判斷編碼器所支援的參數
 您可以調整影像的參數，例如品質和壓縮層級，但您必須知道所指定之影像編碼器支援的參數。 <xref:System.Drawing.Image>類別提供<xref:System.Drawing.Image.GetEncoderParameterList%2A>方法，以便決定映像所支援的參數為特定的編碼器。 您可以指定編碼器使用的 GUID。 <xref:System.Drawing.Image.GetEncoderParameterList%2A>方法傳回的陣列<xref:System.Drawing.Imaging.EncoderParameter>物件。  

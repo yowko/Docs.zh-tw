@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538857"
 ---
 # <a name="how-to-format-data-in-the-windows-forms-datagridview-control"></a>如何：格式化 Windows Form DataGridView 控制項中的資料
 下列程序示範基本的資料格的值使用的格式<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>屬性<xref:System.Windows.Forms.DataGridView>控制項和控制項中的特定資料行。 如需進階的資料格式資訊，請參閱[How to： 在 Windows Form DataGridView 控制項中自訂格式化資料](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)。  

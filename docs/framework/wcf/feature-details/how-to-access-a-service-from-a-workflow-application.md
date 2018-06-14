@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494933"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>HOW TO：存取來自工作流程應用程式的服務
 本主題描述如何從工作流程主控台應用程式呼叫工作流程服務。 它相依於是否完成[How to： 使用訊息活動建立工作流程服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)主題。 雖然本主題描述如何從工作流程應用程式呼叫工作流程服務，但是相同的方法可用來從工作流程應用程式呼叫的任何 Windows Communication Foundation (WCF) 服務。  

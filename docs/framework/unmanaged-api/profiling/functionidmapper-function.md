@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 151b790afaf6a251ba5d8d8932f44a503cde853a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458594"
 ---
 # <a name="functionidmapper-function"></a>FunctionIDMapper 函式
 通知分析工具函式的指定的識別碼可能會重新對應至替代識別碼，以用於[FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)， [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)，和[FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)該函式的回呼。 `FunctionIDMapper` 也可讓分析工具指出它是否要接收該函式的回呼。  
@@ -54,7 +55,7 @@ UINT_PTR __stdcall FunctionIDMapper (
  程式碼剖析工具應該分析應用程式的多個執行緒所呼叫同時相同的方法/函式的情況下容錯。 在這種情況下，分析工具可能會收到多個`FunctionIDMapper`相同的回呼`FunctionID`。 程式碼剖析工具應該先確定要從此回呼傳回相同的值，多次呼叫具有相同時`FunctionID`。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl  
   

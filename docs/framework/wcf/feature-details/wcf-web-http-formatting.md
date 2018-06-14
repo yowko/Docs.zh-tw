@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505163"
 ---
 # <a name="wcf-web-http-formatting"></a>WCF Web HTTP 格式化
 WCF Web HTTP 程式設計模型可讓您動態決定服務作業傳回回應所使用的最佳格式。 兩種可用來判斷最適合格式的方法分別為：自動和明確。  

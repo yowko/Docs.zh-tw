@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6956d73be0380baef96d94584f007e0683331784
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446080"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion 函式
 可讓主機判斷處理序中先明確初始化 CLR 使用的 common language runtime (CLR) 版本。  
@@ -84,7 +85,7 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
  從所有的呼叫`pBeginHostSetup`至`pEndHostSetup`必須發生在單一執行緒或 fiber，具有相同的邏輯堆疊。 這個執行緒可以不同的執行緒`hostCallback`呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   

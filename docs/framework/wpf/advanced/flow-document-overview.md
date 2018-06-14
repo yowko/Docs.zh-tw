@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549733"
 ---
 # <a name="flow-document-overview"></a>非固定格式文件概觀
 非固定格式文件的設計是為最佳化檢視和可讀性。 非固定格式文件並不會設為某種預先定義的配置，而是會根據執行階段變數 (例如視窗大小、裝置解析度和選擇性的使用者喜好設定)，動態調整及自動重排其內容。 此外，非固定格式文件提供進階文件功能，例如編頁和資料行。 本主題提供非固定格式文件和建立方式的概觀。  
@@ -70,7 +71,7 @@ ms.lasthandoff: 05/04/2018
 ### <a name="richtextbox"></a>RichTextBox  
  您使用<xref:System.Windows.Controls.RichTextBox>當您想要允許使用者編輯非固定格式內容。 例如，如果您想要建立編輯器允許使用者操作的事情就像資料表、 斜體一樣，粗體格式等，可以使用<xref:System.Windows.Controls.RichTextBox>。 請參閱[RichTextBox 概觀](../../../../docs/framework/wpf/controls/richtextbox-overview.md)如需詳細資訊。  
   
- **注意：**非固定格式內容內<xref:System.Windows.Controls.RichTextBox>行為與其他控制項中所包含的非固定格式內容的完全相同。 例如，沒有資料行中的<xref:System.Windows.Controls.RichTextBox>，因此沒有自動調整大小行為。 此外，不可以在中使用一般內建的功能，例如搜尋、 模式、 頁面導覽、 和縮放檢視的非固定格式內容的<xref:System.Windows.Controls.RichTextBox>。  
+ **注意：** 非固定格式內容內<xref:System.Windows.Controls.RichTextBox>行為與其他控制項中所包含的非固定格式內容的完全相同。 例如，沒有資料行中的<xref:System.Windows.Controls.RichTextBox>，因此沒有自動調整大小行為。 此外，不可以在中使用一般內建的功能，例如搜尋、 模式、 頁面導覽、 和縮放檢視的非固定格式內容的<xref:System.Windows.Controls.RichTextBox>。  
   
 <a name="creating_flow_content"></a>   
 ## <a name="creating-flow-content"></a>建立非固定格式內容  
@@ -153,7 +154,7 @@ ms.lasthandoff: 05/04/2018
   
  [!code-xaml[FlowOvwSnippets_snip#RunExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/RunSnippetsExample.xaml#runexample1)]  
   
- **注意：**從[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]、<xref:System.Windows.Documents.Run.Text%2A>屬性<xref:System.Windows.Documents.Run>物件是相依性屬性。 您可以繫結<xref:System.Windows.Documents.Run.Text%2A>屬性，以資料來源，例如<xref:System.Windows.Controls.TextBlock>。 <xref:System.Windows.Documents.Run.Text%2A>屬性完全支援單向繫結。 <xref:System.Windows.Documents.Run.Text%2A>屬性也支援雙向繫結，除了<xref:System.Windows.Controls.RichTextBox>。 如需範例，請參閱 <xref:System.Windows.Documents.Run.Text%2A?displayProperty=nameWithType>。  
+ **注意：** 從[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]、<xref:System.Windows.Documents.Run.Text%2A>屬性<xref:System.Windows.Documents.Run>物件是相依性屬性。 您可以繫結<xref:System.Windows.Documents.Run.Text%2A>屬性，以資料來源，例如<xref:System.Windows.Controls.TextBlock>。 <xref:System.Windows.Documents.Run.Text%2A>屬性完全支援單向繫結。 <xref:System.Windows.Documents.Run.Text%2A>屬性也支援雙向繫結，除了<xref:System.Windows.Controls.RichTextBox>。 如需範例，請參閱 <xref:System.Windows.Documents.Run.Text%2A?displayProperty=nameWithType>。  
   
  **Span**  
   
@@ -263,7 +264,7 @@ ms.lasthandoff: 05/04/2018
   
  資料流程項目是否使用<xref:System.Windows.Documents.InlineCollection>（內嵌） 或<xref:System.Windows.Documents.BlockCollection>（區塊），包含其子項目取決於子元素的類型 (<xref:System.Windows.Documents.Block>或<xref:System.Windows.Documents.Inline>) 可包含父代。 下一節的＜內容結構描述＞會摘要說明非固定格式內容項目的內含項目規則。  
   
- **注意：**沒有搭配非固定格式內容的集合的第三個型別<xref:System.Windows.Documents.ListItemCollection>，但是此集合只適用於<xref:System.Windows.Documents.List>。 此外，還有數個集合搭配使用<xref:System.Windows.Documents.Table>。 請參閱[資料表概觀](../../../../docs/framework/wpf/advanced/table-overview.md)如需詳細資訊。  
+ **注意：** 沒有搭配非固定格式內容的集合的第三個型別<xref:System.Windows.Documents.ListItemCollection>，但是此集合只適用於<xref:System.Windows.Documents.List>。 此外，還有數個集合搭配使用<xref:System.Windows.Documents.Table>。 請參閱[資料表概觀](../../../../docs/framework/wpf/advanced/table-overview.md)如需詳細資訊。  
   
 <a name="content_schema"></a>   
 ## <a name="content-schema"></a>內容結構描述  

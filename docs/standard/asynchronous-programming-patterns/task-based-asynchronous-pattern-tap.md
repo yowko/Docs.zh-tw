@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579011"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>以工作為基礎的非同步模式 (TAP)
 工作式非同步模式 (TAP) 是以 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 命名空間中的 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks?displayProperty=nameWithType> 類型為基礎，這兩種類別用於表示任意非同步作業。 TAP 是進行新的開發工作時，建議使用的非同步設計模式。  

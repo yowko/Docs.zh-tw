@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501045"
 ---
 # <a name="customdiscoverymetadata"></a>CustomDiscoveryMetadata
 這個範例示範如何將自訂 XML 中繼資料插入服務公開之可探索端點的探索中繼資料。 接著在範例中會示範用戶端如何搜尋服務及擷取這項自訂資料。 這個範例包含二個專案，也就是服務和用戶端。  

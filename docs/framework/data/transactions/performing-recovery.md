@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363926"
 ---
 # <a name="performing-recovery"></a>執行復原
 資源管理員會在資源失敗後重新登記異動參與者，以協助解析異動中的永久性登記。  

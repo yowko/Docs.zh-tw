@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497954"
 ---
 # <a name="wcf-discovery"></a>WCF 探索
 Windows Communication Foundation (WCF) 提供支援，可讓服務以使用 Ws-discovery 通訊協定的互通方式可在執行階段。 WCF 服務可以公告其可用性，使用多點傳送的訊息的網路或探索 proxy 伺服器。 用戶端應用程式可搜尋網路或探索 Proxy 伺服器，來尋找符合整組準則的服務。 本節中的主題提供概要並詳細說明此功能的程式設計模型。  

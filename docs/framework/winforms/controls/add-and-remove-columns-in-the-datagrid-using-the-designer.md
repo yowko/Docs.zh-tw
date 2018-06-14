@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528141"
 ---
 # <a name="how-to-add-and-remove-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用設計工具在 Windows Form DataGridView 控制項中加入和移除資料行
 Windows Form<xref:System.Windows.Forms.DataGridView>控制項必須包含資料行，才能顯示資料。 如果您計劃手動填入控制項，您必須自己加入資料行。 或者，您可以將控制項繫結至資料來源，這會產生並自動填入資料行。 如果資料來源包含多個資料行，比您想要顯示，您可以移除不必要的資料行。  

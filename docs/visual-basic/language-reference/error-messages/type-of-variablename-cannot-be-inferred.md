@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597144"
 ---
 # <a name="type-of-39ltvariablenamegt39-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>輸入的&#39; &lt;variablename&gt; &#39;無法推斷，因為迴圈繫結和 step 變數不會擴展為相同的型別
 您已經撰寫`For...Next`迴圈下列條件成立，因為編譯器無法推斷迴圈控制變數的資料類型：  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498166"
 ---
 # <a name="transactions-in-wcf"></a>WCF 的異動
 Windows Communication Foundation (WCF) 的交易功能可讓數個元件同時參與資料作業。 本章節中的主題會詳細檢查這項功能。  

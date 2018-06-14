@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33472095"
 ---
 # <a name="transaction-formatter"></a>異動格式器
 此主題會列出異動格式器產生的所有例外狀況。  

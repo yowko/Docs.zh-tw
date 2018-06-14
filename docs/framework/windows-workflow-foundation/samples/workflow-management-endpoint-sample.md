@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517090"
 ---
 # <a name="workflow-management-endpoint-sample"></a>工作流程管理端點範例
 這個範例示範如何使用工作流程控制端點，在本機和遠端建立及執行工作流程。 此範例也示範如何裝載控制端點，以及撰寫用戶端來呼叫該控制端點以建立及執行工作流程執行個體。 此工作流程不是服務。  

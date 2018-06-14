@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494500"
 ---
 # <a name="peer-channel-security"></a>對等通道安全性
 「對等通道」能夠啟用各種相依於多方通訊的分散式應用程式類型。 有些範例會包含網際網路範圍的內容散發，其中受信任的來源會散發內容 (例如媒體或軟體更新)、朋友們會互相交換音樂或相片，或是同事們一起編輯文件。 每個案例都需要唯一的安全性模型。 「對等通道」安全性模型的設計目的，是處理這些案例並提供聲音安全性模型，以滿足不同識別、驗證和授權模型的個別需求。  

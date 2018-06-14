@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559711"
 ---
 # <a name="how-to-define-a-name-scope"></a>如何：定義名稱範圍
 若要動畫方式顯示與<xref:System.Windows.Media.Animation.Storyboard>在程式碼中，您必須建立<xref:System.Windows.NameScope>並向擁有該名稱範圍的項目中的目標物件的名稱。 在下列範例中，<xref:System.Windows.NameScope>建立`myMainPanel`。 兩個按鈕，`button1`和`button2`，會加入至面板，並註冊其名稱。 數個動畫和<xref:System.Windows.Media.Animation.Storyboard>所建立。 分鏡腳本<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>方法用來啟動動畫。  

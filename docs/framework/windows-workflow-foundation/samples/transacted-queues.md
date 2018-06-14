@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519677"
 ---
 # <a name="transacted-queues"></a>交易的佇列
 這個範例示範如何整合佇列和交易中 Windows Workflow Foundation (WF) 來建立可靠和可擴充的服務。 A <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope`在用戶端工作流程中用於傳送訊息至佇列，以在交易使用<xref:System.ServiceModel.NetMsmqBinding>。 在伺服器上使用 <xref:System.ServiceModel.Activities.TransactedReceiveScope>，在相同交易下從佇列接收訊息並更新工作流程狀態。  

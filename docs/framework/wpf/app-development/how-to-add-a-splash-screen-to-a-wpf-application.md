@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546997"
 ---
 # <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a>如何：在 WPF 應用程式中加入啟動顯示畫面
 本主題說明如何新增到 [啟動] 視窗或*啟動顯示畫面*，Windows Presentation Foundation (WPF) 應用程式。  

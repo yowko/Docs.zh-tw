@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c7d62b1b6031f6ebdd5327626f42de38b18b3fa7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452045"
 ---
 # <a name="icorprofilercallbackobjectallocated-method"></a>ICorProfilerCallback::ObjectAllocated 方法
 通知分析工具，為物件配置在堆積中的記憶體。  
@@ -45,7 +46,7 @@ HRESULT ObjectAllocated(
  `ObjectedAllocated`不會從堆疊或 unmanaged 的記憶體配置呼叫方法。 `classId`參數可以參考尚未載入的 managed 程式碼中的類別。 分析工具將會收到該類別的類別載入回呼之後立即`ObjectAllocated`回呼。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

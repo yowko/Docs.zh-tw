@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652496"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>程序參數和引數 (Visual Basic)
 在大部分情況下，需要一些資訊在其中呼叫的情況的相關程序。 執行重複或共用的工作的程序會針對每個呼叫使用不同的資訊。 這項資訊包含變數、 常數和呼叫它時傳遞至程序的運算式。  

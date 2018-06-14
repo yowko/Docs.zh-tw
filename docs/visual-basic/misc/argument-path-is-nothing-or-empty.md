@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599476"
 ---
 # <a name="argument-39path39-is-nothing-or-empty"></a>引數&#39;路徑&#39;為 Nothing 或空白
 路徑名稱無效，因為它已初始化為 `Nothing` 或為空白。 路徑必須具有特定資料類型和有效的名稱。  

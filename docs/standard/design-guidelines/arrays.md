@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570391"
 ---
 # <a name="arrays"></a>陣列
 **✓ 不要**偏好使用透過公用應用程式開發介面中的陣列的集合。 [集合](../../../docs/standard/design-guidelines/guidelines-for-collections.md)> 一節提供有關如何選擇集合和陣列的詳細資料。  

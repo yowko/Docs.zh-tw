@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550247"
 ---
 # <a name="how-to-enable-spell-checking-in-a-text-editing-control"></a>如何：在文字編輯控制項中啟用拼字檢查
 下列範例示範如何啟用簽入的即時拼字<xref:System.Windows.Controls.TextBox>使用<xref:System.Windows.Controls.SpellCheck.IsEnabled%2A>屬性<xref:System.Windows.Controls.SpellCheck>類別。  

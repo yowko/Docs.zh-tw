@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535727"
 ---
 # <a name="how-to-set-the-sort-modes-for-columns-in-the-windows-forms-datagridview-control"></a>如何：設定 Windows Form DataGridView 控制項中的資料行排序模式
 在<xref:System.Windows.Forms.DataGridView>控制項中，文字方塊資料行使用自動排序依預設，而其他資料行類型不會自動排序。 有時候您會想要覆寫這些預設值。 例如，您可以顯示影像取代文字、 數字或列舉型別資料格的值。 雖然無法排序映像，可以進行排序它們代表的基礎值。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599771"
 ---
 # <a name="add-failed-duplicate-key-value-supplied"></a>加入失敗。 提供了重複的機碼值
 `Add` 作業失敗，因為索引鍵的值與另一個索引鍵的值相同。 索引鍵的值必須是唯一的。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635014"
 ---
 # <a name="databits-must-be-greater-than-0"></a>DataBits 必須大於 0
 為 `DataBits` 方法指定的 `My.Computer.Ports.OpenSerialPort` 引數必須大於零。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340641"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda 運算式 (C# 程式設計手冊)
 Lambda 運算式是 [匿名函式](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) ，可用來建立 [委派](../../../csharp/programming-guide/delegates/using-delegates.md) 或 [運算式樹狀架構](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) 類型。 使用 Lambda 運算式可以撰寫區域函式，這些函式可以當做引數傳遞，或是當做函式呼叫的值傳回。 Lambda 運算式對於撰寫 LINQ 查詢運算式而言特別有用。  

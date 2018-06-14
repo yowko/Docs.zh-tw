@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495128"
 ---
 # <a name="message-security-with-a-user-name-client"></a>使用者名稱用戶端的訊息安全性
 下圖顯示 Windows Communication Foundation (WCF) 服務和用戶端使用訊息層級安全性保護。 服務會使用 X.509 憑證來進行驗證。 用戶端會使用使用者名稱與密碼來進行驗證。  

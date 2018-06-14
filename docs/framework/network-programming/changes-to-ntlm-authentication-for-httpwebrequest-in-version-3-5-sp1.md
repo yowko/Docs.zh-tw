@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397906"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>3.5 SP1 版中 HttpWebRequest 之 NTLM 驗證的變更
 已在 .NET Framework 版本 3.5 SP1 和更新版本中進行安全性變更，這些變更會影響 <xref:System.Net.HttpWebRequest>、<xref:System.Net.HttpListener>、<xref:System.Net.Security.NegotiateStream> 以及 System.Net 命名空間中的相關類別處理整合式 Windows 驗證的方式。 這些變更可能會影響使用這些類別提出 Web 要求並接收回應的應用程式，而且其中使用根據 NTLM 的整合式 Windows 驗證。 這項變更可能會影響設定成使用整合式 Windows 驗證的網頁伺服器和用戶端應用程式。  

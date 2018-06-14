@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805950"
 ---
 # <a name="net-binding"></a>Net 繫結
 本節包含示範使用端點項目之網路繫結屬性的範例。  

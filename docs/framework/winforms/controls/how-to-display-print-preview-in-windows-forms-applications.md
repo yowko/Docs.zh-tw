@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532804"
 ---
 # <a name="how-to-display-print-preview-in-windows-forms-applications"></a>如何：在 Windows Forms 應用程式中顯示預覽列印
 您可以使用<xref:System.Windows.Forms.PrintPreviewDialog>控制項，讓使用者顯示文件，通常在列印之前。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492007"
 ---
 # <a name="partial-trust"></a>部分信任
 從 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]開始，部分信任的呼叫端可以存取在 <xref:System.ServiceModel>、<xref:System.Runtime.Serialization> 和 <xref:System.ServiceModel.Web> 中實作的公用型別與方法。 本章節描述使用 Windows Communication Foundation (WCF) 內的部分信任的應用程式，以及可減少程式碼存取安全性 (CAS) 執行的應用程式的 WCF 功能的有限的子集的支援的案例權限。  

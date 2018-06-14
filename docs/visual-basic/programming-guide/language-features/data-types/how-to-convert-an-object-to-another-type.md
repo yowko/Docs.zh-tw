@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647614"
 ---
 # <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>如何：在 Visual Basic 中將物件轉換成其他類型
 您將轉換`Object`變數設為另一種資料類型，使用轉換關鍵字，例如[CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)。  

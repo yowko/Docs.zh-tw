@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590260"
 ---
 # <a name="double-data-type-visual-basic"></a>Double 資料類型 (Visual Basic)
 保存帶正負號的 IEEE 64 位元 （8 個位元組） 雙精確度浮點數，範圍從-1.79769313486231570 e + 308 到-4.94065645841246544-324 負數值，從 4.94065645841246544 e-324 1.79769313486231570 e + 308 至正值。 雙精度數字會儲存實際數字的近似值。  

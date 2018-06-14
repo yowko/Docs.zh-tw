@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588992"
 ---
 # <a name="constructor-39ltnamegt39-cannot-call-itself"></a>建構函式&#39;&lt;名稱&gt;&#39;不能呼叫自己本身
 A`Sub New`類別或結構中的程序呼叫本身。  

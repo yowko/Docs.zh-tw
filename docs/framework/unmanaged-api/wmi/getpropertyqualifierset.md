@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d2951733211737f06cd737b20bd1537277be1be1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461473"
 ---
 # <a name="getpropertyqualifierset-function"></a>GetPropertyQualifierSet 函式
 擷取特定的屬性設定的限定詞。
@@ -76,7 +77,7 @@ HRESULT GetPropertyQualifierSet (
 由於系統屬性沒有限定詞，則函數會傳回`WBEM_E_SYSTEM_PROPERTY`如果您嘗試取得[IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx)指標是否為系統屬性。
 
 ## <a name="requirements"></a>需求  
-**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.idl  
   

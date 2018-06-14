@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637062"
 ---
 # <a name="cannot-convert-start-value-of-type-39lttype1gt39-and-step-value-of-type-39lttype2gt39-to-a-common-type"></a>無法轉換類型的起始值&#39; &lt;type1&gt; &#39;和間距值型別的&#39; &lt;type2&gt; &#39;成一般類型
 指定的 `For...Next` 控制項值具有不同的類型，因此無效，因為它們無法轉換成一般類型。  

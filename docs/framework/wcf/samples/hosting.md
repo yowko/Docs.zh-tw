@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809803"
 ---
 # <a name="hosting"></a>裝載
 本節包含示範裝載 Windows Communication Foundation (WCF) 服務的範例。  

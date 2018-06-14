@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755990"
 ---
 # <a name="ltaudienceurisgt"></a>&lt;audienceUris&gt;
 指定是可接受的識別項的信賴憑證者的合作對象 (RP) 的 Uri 的集合。 除非它們適用其中一個允許的 audience Uri，將不會接受權杖。  

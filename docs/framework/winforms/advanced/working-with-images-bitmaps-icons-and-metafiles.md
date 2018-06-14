@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526830"
 ---
 # <a name="working-with-images-bitmaps-icons-and-metafiles"></a>使用影像、點陣圖、圖示和中繼檔
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供 `Bitmap` 類別來使用點陣影像，且提供 `Metafile` 類別來使用向量影像。 `Bitmap` 類別和 `Metafile` 類別都是繼承自 `Image` 類別。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765876"
 ---
 # <a name="identifiers-entity-sql"></a>識別項 (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中使用識別項表示查詢運算式別名、變數參考、物件的屬性、函式等。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供兩種類型的識別項： 簡單識別項和引號識別項。  

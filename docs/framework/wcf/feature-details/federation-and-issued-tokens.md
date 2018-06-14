@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491571"
 ---
 # <a name="federation-and-issued-tokens"></a>聯合與發行的權杖
 使用 Windows Communication Foundation (WCF)，您可以建立與實作 WS-同盟和 Ws-trust 規格的服務進行安全通訊的用戶端。 這些規格使用 XML、SOAP 和 Web 服務描述語言 (WSDL)，提供跨不同信任領域的驗證和授權。  

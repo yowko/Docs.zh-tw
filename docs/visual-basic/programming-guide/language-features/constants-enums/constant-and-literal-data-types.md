@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649844"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>常數和常值資料類型 (Visual Basic)
 常值是值，表示為本身，而不是做為變數的值或運算式，例如數字 3 或字串"Hello"的結果。 常數是有意義的名稱，會取代常值，並維持相同的值在整個程式，而不是變數，其值可能會變更。  

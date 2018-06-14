@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537586"
 ---
 # <a name="mouse-input-in-a-windows-forms-application"></a>Windows Forms 應用程式中的滑鼠輸入
 Windows Forms 包含各種滑鼠事件，並另外支援自訂的滑鼠游標、滑鼠捕捉和拖放行為。  

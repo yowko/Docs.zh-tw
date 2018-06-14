@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745142"
 ---
 # <a name="ltswitchesgt-element"></a>&lt;交換器&gt;項目
 包含追蹤參數及設定追蹤參數的層級。  

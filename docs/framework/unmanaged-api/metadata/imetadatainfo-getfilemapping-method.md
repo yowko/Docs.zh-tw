@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 562b6fcd015441ce5eb6b5f0ab7a4f361bb229c3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449425"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a>IMetaDataInfo::GetFileMapping 方法
 取得記憶體區域的對應的檔，以及對應的類型。  
@@ -52,7 +53,7 @@ HRESULT GetFileMapping (
 |-------------|-----------------|  
 |`S_OK`|所有輸出會填都滿。|  
 |`E_INVALIDARG`|傳遞 NULL 做為引數的值。|  
-|`COR_E_NOTSUPPORTED`|CLR 實作無法提供記憶體區域的相關資訊。 這種情形，原因如下：<br /><br /> -在中繼資料範圍以開啟`ofWrite`或`ofCopyMemory`旗標。<br />-在中繼資料範圍已開啟但`ofReadOnly`旗標。<br />- [Imetadatadispenser:: Openscopeonmemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md)方法用來開啟僅中繼資料檔案的一部分。<br />-檔案不是可移植執行檔 (PE) 檔案。 **注意：**這些條件取決於 CLR 實作，並可可能會影響在未來的 CLR 版本。|  
+|`COR_E_NOTSUPPORTED`|CLR 實作無法提供記憶體區域的相關資訊。 這種情形，原因如下：<br /><br /> -在中繼資料範圍以開啟`ofWrite`或`ofCopyMemory`旗標。<br />-在中繼資料範圍已開啟但`ofReadOnly`旗標。<br />- [Imetadatadispenser:: Openscopeonmemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md)方法用來開啟僅中繼資料檔案的一部分。<br />-檔案不是可移植執行檔 (PE) 檔案。 **注意：** 這些條件取決於 CLR 實作，並可可能會影響在未來的 CLR 版本。|  
   
 ## <a name="remarks"></a>備註  
  記憶體的`ppvData`指向無效，只要基礎中繼資料範圍已開啟。  
@@ -64,11 +65,11 @@ HRESULT GetFileMapping (
  不支援傳遞任何三個參數為 NULL。 方法會傳回`E_INVALIDARG`，和輸出會填滿。 忽略對應型別或區域的大小，可能會導致程式異常終止。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
- **程式庫：**做為 MsCorEE.dll 中的資源  
+ **程式庫：** 做為 MsCorEE.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

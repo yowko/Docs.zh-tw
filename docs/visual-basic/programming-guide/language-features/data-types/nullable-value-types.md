@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656015"
 ---
 # <a name="nullable-value-types-visual-basic"></a>可為 Null 的實值類型 (Visual Basic)
 有時候您使用實值型別，在某些情況下沒有已定義的值。 例如，資料庫中的欄位可能區分有意義的值，而不需指派的值。 實值型別可以擴充為一般值或 null 值。 呼叫這類延伸模組*null 的型別*。  

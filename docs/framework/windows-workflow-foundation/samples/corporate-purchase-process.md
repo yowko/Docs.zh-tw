@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520038"
 ---
 # <a name="corporate-purchase-process"></a>公司購買程序
 這個範例示範如何建立一個具有自動最佳提案選取、非常基本的提案徵求書 (RFP) 架構採購程序。 它結合 <xref:System.Activities.Statements.Parallel>、<xref:System.Activities.Statements.ParallelForEach%601> 和 <xref:System.Activities.Statements.ForEach%601>，以及自訂活動，建立代表此程序的工作流程。  
@@ -126,7 +127,7 @@ ms.lasthandoff: 05/04/2018
 |表單|描述|  
 |-|-|  
 |NewRfp|建立及提交新的提案徵求書。|  
-|ShowProposals|顯示所有作用中和已完成的提案徵求書。 **注意：**可能需要按一下**重新整理**UI，以查看在該螢幕上的變更之後您建立或修改提案徵求書, 中的按鈕。|  
+|ShowProposals|顯示所有作用中和已完成的提案徵求書。 **注意：** 可能需要按一下**重新整理**UI，以查看在該螢幕上的變更之後您建立或修改提案徵求書, 中的按鈕。|  
 |SubmitProposal|在具象提案徵求書中取得供應商的提案。 此視窗僅由供應商使用。|  
 |ViewRfp|顯示提案徵求書的所有相關資訊 (收到的提案、日期、值和其他資訊)。 此視窗僅由提案徵求書建立者使用。|  
   

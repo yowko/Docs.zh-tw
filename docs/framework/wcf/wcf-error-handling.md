@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504912"
 ---
 # <a name="wcf-error-handling"></a>WCF 錯誤處理
 WCF 應用程式遇到的錯誤屬於下列其中一個群組：  

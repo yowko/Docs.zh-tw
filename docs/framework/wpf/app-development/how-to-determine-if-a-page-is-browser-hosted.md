@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545885"
 ---
 # <a name="how-to-determine-if-a-page-is-browser-hosted"></a>如何： 判斷頁面是否為瀏覽器裝載
 這個範例示範如何判斷如果<xref:System.Windows.Controls.Page>裝載在瀏覽器中。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330436"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>如何：比較兩個資料夾的內容 (LINQ) (C#)
 本例示範三種比較兩個檔案清單的方式︰  

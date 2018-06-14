@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537872"
 ---
 # <a name="windows-forms-coordinates"></a>Windows Form 座標
 Windows form 座標系統為基礎裝置座標和量值時，在 Windows Form 中描繪的基本單位是裝置單位 （一般而言，像素）。 在螢幕上的點以 x 和 y 座標組說明增加到右、 增加從上到下 y 座標的 x 座標。 相對於螢幕的原點的位置會因您指定螢幕或用戶端座標。  

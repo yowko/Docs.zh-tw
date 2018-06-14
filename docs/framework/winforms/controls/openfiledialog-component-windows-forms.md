@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539948"
 ---
 # <a name="openfiledialog-component-windows-forms"></a>OpenFileDialog 元件 (Windows Form)
 Windows Form <xref:System.Windows.Forms.OpenFileDialog> 元件是預先設定的對話方塊， 它會是相同**開啟檔案**Windows 作業系統所公開的對話方塊。 它繼承自 <xref:System.Windows.Forms.CommonDialog> 類別。  

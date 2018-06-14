@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2f837a526879f80177bc9979e1d7671edfcd8d4f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460144"
 ---
 # <a name="get-function"></a>Get 函式
 如果存在的話，擷取指定的屬性值。
@@ -87,7 +88,7 @@ HRESULT Get (
 `pVal`引數指派正確的型別和值限定詞和 COM [VariantInit](https://msdn.microsoft.com/library/ms221402(v=vs.85).aspx)函式
 
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.idl  
   

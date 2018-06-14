@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506489"
 ---
 # <a name="usage-of-standard-endpoints"></a>使用標準端點
 這個範例示範如何在服務組態檔中使用標準端點。 標準端點可讓使用者透過使用單一屬性描述位址、繫結和合約組合，並且將其他屬性與該屬性產生關聯的方式簡化端點定義。 這個範例示範如何定義及實作自訂標準端點，以及如何定義端點中的特定屬性。  

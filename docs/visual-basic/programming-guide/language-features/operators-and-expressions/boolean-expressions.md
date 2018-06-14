@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655794"
 ---
 # <a name="boolean-expressions-visual-basic"></a>布林運算式 (Visual Basic)
 A*布林運算式*是評估為值的運算式[布林資料型別](../../../../visual-basic/language-reference/data-types/boolean-data-type.md):`True`或`False`。 `Boolean` 運算式可以採用數種格式。 最簡單的是直接比較值的`Boolean`變數設為`Boolean`常值，如下列範例所示。  

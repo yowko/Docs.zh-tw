@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580519"
 ---
 # <a name="parallel-diagnostic-tools"></a>平行診斷工具
 Visual Studio 可廣泛支援多執行緒應用程式的偵錯與分析。  

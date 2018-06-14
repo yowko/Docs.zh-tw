@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571910"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>如何：將使用者輸入 Web 控制項的數值轉換成數字
 由於網頁可在世界上的任何角落顯示，所以，使用者可以幾乎不限數量的格式來將數值資料輸入至 <xref:System.Web.UI.WebControls.TextBox> 控制項。 因此，判斷網頁使用者的地區設定和文化特性就變得非常重要。 當您剖析使用者輸入時，可以接著套用使用者地區設定和文化特性所定義的格式設定慣例。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518560"
 ---
 # <a name="application-settings-for-custom-controls"></a>自訂控制項的應用程式設定
 您必須完成特定工作，讓您的自訂控制項能夠保存應用程式設定，在第三方應用程式中裝載控制項時。  

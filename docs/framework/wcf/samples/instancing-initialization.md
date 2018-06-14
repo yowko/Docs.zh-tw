@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807918"
 ---
 # <a name="instancing-initialization"></a>執行個體初始化
 這個範例會延續[共用](../../../../docs/framework/wcf/samples/pooling.md)範例藉由定義介面， `IObjectControl`，其啟用及停用它的自訂初始化物件。 用戶端會叫用將物件傳回集區的方法，以及不將物件傳回集區的方法。  

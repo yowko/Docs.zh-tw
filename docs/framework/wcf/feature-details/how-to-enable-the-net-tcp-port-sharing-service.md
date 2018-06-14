@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490756"
 ---
 # <a name="how-to-enable-the-nettcp-port-sharing-service"></a>HOW TO：啟用 Net.TCP 連接埠共用服務
 Windows Communication Foundation (WCF) 會使用稱為 Net.TCP Port Sharing Service 的 Windows 服務來促進 TCP 連接埠共用多個處理序。 此服務已安裝一部分 WCF，但為了安全起見預設不會啟用服務，並因此必須手動啟用第一次使用之前。 本主題說明如何使用 Microsoft Management Console (MMC) 嵌入式管理單元，來設定 Net TCP Port Sharing Service。  

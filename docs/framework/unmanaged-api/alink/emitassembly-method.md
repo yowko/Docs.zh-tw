@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1cd1c077a8f2a5fe3b2b46c2e1da2e92b5a797a6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402053"
 ---
 # <a name="emitassembly-method"></a>EmitAssembly 方法
 建立組件。 其他所有檔案都已都關閉的組件檔案除外之後呼叫這個方法。 產生未繫結的模組時，請勿呼叫這個方法。  

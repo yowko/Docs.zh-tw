@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566962"
 ---
 # <a name="targeting-older-versions-of-net"></a>以舊版 .NET 為目標
 
@@ -47,7 +48,7 @@ This project requires the 2.0 F# runtime, but that runtime is not installed.
 2. 選擇**控制台**圖示，選擇**程式**圖示，然後選擇 **開啟或關閉 Windows 功能**連結。
 <br />
 
-3. 請確定 **.NET Framework 3.5 （包括.NET 2.0 和 3.0）**核取方塊已選取，然後選擇**確定** 按鈕。
+3. 請確定 **.NET Framework 3.5 （包括.NET 2.0 和 3.0）** 核取方塊已選取，然後選擇**確定** 按鈕。
 <br />  您不需要選取核取方塊，任何的子節點的.NET framework 的選擇性元件。
 <br />  如果尚未，啟用.NET Framework 3.5。
 <br />

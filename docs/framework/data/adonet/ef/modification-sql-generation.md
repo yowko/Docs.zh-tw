@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766656"
 ---
 # <a name="modification-sql-generation"></a>修改 SQL 產生
 本節將討論如何為您的 (SQL:1999 相容資料庫) 提供者開發修改 SQL 產生模組。 這個模組負責將修改命令樹轉譯為適當的 SQL INSERT、UPDATE 或 DELETE 陳述式。  

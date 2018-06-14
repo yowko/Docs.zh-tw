@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758025"
 ---
 # <a name="generating-strongly-typed-datasets"></a>產生強類型資料集
 如果 XML 結構描述是採用 XML 結構描述定義語言 (XSD) 標準進行編譯，則可以使用 <xref:System.Data.DataSet> 所提供的 XSD.exe 工具產生強型別 [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)]。  

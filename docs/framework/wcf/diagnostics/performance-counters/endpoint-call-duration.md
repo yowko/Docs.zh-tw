@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33467789"
 ---
 # <a name="endpoint-call-duration"></a>端點：呼叫持續時間
 對此端點呼叫的平均持續時間。  平均持續時間是根據此方程式計算而來：(N1-N0)/(D1-D0)。  

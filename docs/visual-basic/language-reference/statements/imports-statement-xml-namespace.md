@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604558"
 ---
 # <a name="imports-statement-xml-namespace"></a>Imports 陳述式 (XML 命名空間)
 匯入 XML 命名空間前置詞，以用於 XML 常值和 XML 軸屬性。  

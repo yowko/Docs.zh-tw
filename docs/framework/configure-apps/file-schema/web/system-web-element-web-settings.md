@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755158"
 ---
 # <a name="ltsystemwebgt-element-web-settings"></a>&lt;system.web&gt;項目 （Web 設定）
 包含 ASP.NET 裝載層如何管理整個處理序行為的詳細資訊。  

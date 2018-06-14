@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762932"
 ---
 # <a name="modeling-and-mapping"></a>建立模型和對應
 在 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 中，您可以使用應用程式最適合的方式來定義概念模型、儲存體模型，以及兩者間的對應。 在 Visual Studio 中的實體資料模型工具可讓您建立。[edmx 檔案](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)從資料庫或圖形化模型，然後更新該檔案在資料庫或模型變更時。  

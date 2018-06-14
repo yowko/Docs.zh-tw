@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639320"
 ---
 # <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a>如何： 使用群組 (Visual Basic) 建立階層
 此範例顯示如何群組資料，然後根據該群組產生 XML。  

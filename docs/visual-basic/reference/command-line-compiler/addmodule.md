@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656002"
 ---
 # <a name="-addmodule"></a>-addmodule
 讓編譯器將所指定檔案的類型資訊全部提供給您目前編譯的專案。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602751"
 ---
 # <a name="value-of-type-39type139-cannot-be-converted-to-39type239"></a>型別的值&#39;type1&#39;無法轉換成&#39;type2&#39;
 類型 'type1' 值無法轉換成 'type2'。 您可以使用 'Value' 屬性取得的第一個元素的字串值 '\<parentElement >'。  

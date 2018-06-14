@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525963"
 ---
 # <a name="using-transformations-to-scale-colors"></a>使用轉換調整色彩
 一或多個四個色彩元件的數字會乘以縮放轉換。 下表提供代表調整色彩矩陣項目。  

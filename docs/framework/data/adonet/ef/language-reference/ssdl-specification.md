@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762763"
 ---
 # <a name="ssdl-specification"></a>SSDL 規格
 [Msdn.microsoft.com/data/ef](http://msdn.microsoft.com/data/ef)網站現在是 Entity Framework 內容的主要位置。  

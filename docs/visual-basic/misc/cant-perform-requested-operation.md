@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636844"
 ---
 # <a name="can39t-perform-requested-operation-visual-basic"></a>可以&#39;t 執行要求的作業 (Visual Basic)
 作業無法執行，因為它會使專案的目前狀態無效。 例如，您可能嘗試以程式設計方式修改正在執行的程式碼。  

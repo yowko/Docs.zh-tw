@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573577"
 ---
 # <a name="choosing-between-class-and-struct"></a>在類別和結構之間選擇
 其中每個架構設計師所面臨的基本設計決策在於要設計的類型 （參考型別） 的類別或結構 （實值類型）。 充分了解的參考類型和實值類型的行為差異是在選擇非常重要的。  

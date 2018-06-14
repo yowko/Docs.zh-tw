@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545103"
 ---
 # <a name="how-to-retrieve-data-in-a-particular-data-format"></a>如何：擷取特定資料格式的資料
 下列範例會示範如何從指定的格式中的資料物件擷取資料。  

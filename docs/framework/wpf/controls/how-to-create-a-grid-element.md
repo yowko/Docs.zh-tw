@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551162"
 ---
 # <a name="how-to-create-a-grid-element"></a>如何：建立 Grid 項目
 ## <a name="example"></a>範例  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604831"
 ---
 # <a name="set-statement-visual-basic"></a>Set 陳述式 (Visual Basic)
 宣告`Set`用來將值指派給屬性的屬性程序。  

@@ -10,12 +10,13 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550182"
 ---
 # <a name="how-to-enable-tab-characters-in-a-textbox-control"></a>如何：在 TextBox 控制項中啟用定位字元
 這個範例示範如何啟用做為標準輸入中的定位字元接受<xref:System.Windows.Controls.TextBox>控制項。  
   
 ## <a name="example"></a>範例  
- 若要啟用的定位字元接受做為輸入中<xref:System.Windows.Controls.TextBox>控制，請設定<xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsTab%2A>屬性**，則為 true**。  
+ 若要啟用的定位字元接受做為輸入中<xref:System.Windows.Controls.TextBox>控制，請設定<xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsTab%2A>屬性 **，則為 true**。  
   
  [!code-xaml[TextBox_EnablingTab#_AcceptsTab](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_EnablingTab/CS/Window1.xaml#_acceptstab)]  
   

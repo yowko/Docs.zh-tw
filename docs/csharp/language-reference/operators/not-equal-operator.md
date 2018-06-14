@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272435"
 ---
 # <a name="-operator-c-reference"></a>!= 運算子 (C# 參考)
 不等比較運算子 (`!=`) 會在其運算元相等時傳回 false，否則傳回 true。 所有類型 (包括字串和物件) 已預先定義不等比較運算子。 使用者定義型別可以多載 `!=` 運算子。  

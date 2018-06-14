@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495238"
 ---
 # <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>HOW TO：將 Windows Communication Foundation 服務設為使用連接埠共用
 若要使用 net.tcp:// 的連接埠共用您的 Windows Communication Foundation (WCF) 應用程式最簡單的方式是公開 （expose） 服務使用<xref:System.ServiceModel.NetTcpBinding>。  

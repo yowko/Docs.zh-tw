@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488939"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>在 IIS 與 WAS 中以組態為基礎的啟動
 通常當裝載 Windows Communication Foundation (WCF) 服務在 Internet Information Services (IIS) 或 Windows Process Activation Service (WAS) 下的，您必須提供.svc 檔案。 .svc 檔案包含服務名稱和選擇性自訂服務主機處理站。 此額外的檔案會增加管理能力的負荷。 以組態為基礎的啟動功能可免除 .svc 檔案的需求以及關聯的負荷。  

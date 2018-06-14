@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527309"
 ---
 # <a name="arranging-controls-on-windows-forms"></a>排列 Windows Form 上的控制項
 使用不同方式在表單上放置和操作控制項，即可建立對使用者而言為直覺式且作用的使用者介面。  

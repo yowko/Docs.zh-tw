@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 46ee8c62861a62ac044f295f7da082756d87347b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447629"
 ---
 # <a name="imetadataimportenummembers-method"></a>IMetaDataImport::EnumMembers 方法
 列舉代表指定類型成員的 MemberDef 語彙基元。  
@@ -65,11 +66,11 @@ HRESULT EnumMembers (
  列舉集合成員的類別，當`EnumMembers`傳回直接在類別上定義的成員。 即使類別會實作提供這些繼承的成員，它不會傳回此類別會繼承，任何成員。 若要列舉繼承的成員，呼叫端必須明確地逐步繼承鏈結。 請注意，規則的繼承鏈結會視語言或編譯器發出的原始中繼資料。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
- **程式庫：**包含做為 MsCorEE.dll 中的資源  
+ **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

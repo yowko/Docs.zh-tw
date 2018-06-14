@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551145"
 ---
 # <a name="bulletdecorator"></a>BulletDecorator
 <xref:System.Windows.Controls.Primitives.BulletDecorator> 有兩個內容屬性：<xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A>和<xref:System.Windows.Controls.Decorator.Child%2A>。 <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A>屬性會定義<xref:System.Windows.UIElement>来做為項目符號。 <xref:System.Windows.Controls.Decorator.Child%2A>屬性會定義<xref:System.Windows.UIElement>，以視覺化方式對齊項目符號。  

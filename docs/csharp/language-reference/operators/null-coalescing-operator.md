@@ -13,6 +13,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458096"
 ---
 # <a name="-operator-c-reference"></a>?? 運算子 (C# 參考)
 `??` 運算子稱為 null 聯合運算子。  如果運算元不是 null，則會傳回左方運算元，否則傳回右方運算元。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363259"
 ---
 # <a name="implementing-a-resource-manager"></a>實作資源管理員
 交易所使用的每項資源都會受到資源管理員的管理，而這些資源管理員在採取行動時必須經過交易管理員的協調。 資源管理員會和交易管理員一起合作以提供應用程式單元性 (Atomicity) 和隔離性 (Isolation) 的保證。 Microsoft SQL Server、永久性訊息佇列、記憶體中的雜湊資料表，通通都是資源管理員的範例。  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 13498c58c7625edfa4954b8da8837f1bd60c976d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423412"
 ---
 # <a name="icordebugprocess5gettypefortypeid-method"></a>ICorDebugProcess5::GetTypeForTypeID 方法
 將類型識別項轉換成 ICorDebugType 值。  
@@ -46,7 +47,7 @@ HRESULT GetTypeForTypeID(
  在某些情況下，傳回型別識別項的方法會傳回 null`COR_TYPEID`值。 如果這個值會傳遞做為`id`引數，`GetTypeForTypeID`方法將會失敗，並傳回`E_FAIL`。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   

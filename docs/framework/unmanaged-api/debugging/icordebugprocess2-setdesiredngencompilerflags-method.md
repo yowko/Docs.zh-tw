@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 94ba2b0cf7d88104eaadd434732edf3c1d4060e2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422697"
 ---
 # <a name="icordebugprocess2setdesiredngencompilerflags-method"></a>ICorDebugProcess2::SetDesiredNGENCompilerFlags 方法
 設定必須先行編譯的映像，為了讓執行階段將該映像載入目前的處理序中內嵌的旗標。  
@@ -46,7 +47,7 @@ HRESULT SetDesiredNGENCompilerFlags (
  `SetDesiredNGENCompilerFlags`方法必須在期間呼叫[icordebugmanagedcallback:: Createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md)回呼。 嘗試呼叫`SetDesiredNGENCompilerFlags`方法之後將會失敗。 此外，嘗試設定旗標，無法定義`CorDebugJITCompilerFlags`列舉型別或不合法的特定處理序將會失敗。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   

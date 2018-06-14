@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604324"
 ---
 # <a name="unable-to-link-to-resource-file-39ltfilenamegt39-lterror-messagegt"></a>無法連結至資源檔&#39; &lt;filename&gt;&#39;:&lt;錯誤訊息&gt;
 Visual Basic 編譯器呼叫組件連結器 (Al.exe，也稱為 Alink)，以產生資訊清單的組件。 連結器在從組件連結到原生 COM+ 資源檔案時回報了錯誤。  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6aafb918616d27cf6289a8747f3336b2e813beb6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461080"
 ---
 # <a name="writepropertyvalue-function"></a>WritePropertyValue 函式
 寫入屬性控制代碼所識別的屬性中指定的位元組數目。
@@ -75,7 +76,7 @@ HRESULT WritePropertyValue (
 如需非字串屬性值，`lNumBytes`必須是正確的資料大小，指定型別的屬性。 字串屬性值，`lNumBytes`必須是長度以位元組為單位，指定的字串和字串本身，以位元組為單位的平均長度必須是和遵循以 null 結束的字元。
 
 ## <a name="requirements"></a>需求  
-**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.idl  
   

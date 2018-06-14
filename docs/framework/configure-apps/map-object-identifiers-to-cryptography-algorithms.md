@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756614"
 ---
 # <a name="mapping-object-identifiers-to-cryptography-algorithms"></a>對應物件識別項至密碼編譯演算法
 數位簽章確認，資料未遭竄改時每個程式傳送到另一個。 通常就是透過將數學函式套用至要簽署資料的雜湊計算數位簽章。 格式化時要簽署的雜湊值，有些數位簽章演算法就會附加在格式化作業的一部分 ASN.1 物件識別碼 (OID)。 OID 識別用來計算雜湊演算法。 您可以將演算法對應至物件識別碼，來擴充要使用的自訂演算法的新一代密碼編譯機制。 下列範例會示範如何將物件識別碼對應至新的雜湊演算法。  

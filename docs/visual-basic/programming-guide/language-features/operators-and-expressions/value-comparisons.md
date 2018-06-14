@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649603"
 ---
 # <a name="value-comparisons-visual-basic"></a>數值比較 (Visual Basic)
 比較運算子可用來建構比較數值變數的值的運算式。 這些運算式會傳回`Boolean`值根據是否比較為 true 或 false。 這類運算式的範例如下所示。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332526"
 ---
 # <a name="common-attributes-c"></a>常見屬性 (C#)
 本主題描述最常在 C# 程式中使用的屬性。  

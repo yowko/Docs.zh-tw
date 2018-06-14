@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fac90699cf217aff926003aa545b9cceb11bf58d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410003"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>CorDebugInterfaceVersion 列舉
 指定介面、.NET Framework 版本，或是已引進介面的 .NET Framework 版本。  
@@ -237,7 +238,7 @@ typedef enum CorDebugInterfaceVersion {
 -   [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]導入混合的介面版本。 例如，`ICorDebugThread3` 和 `ICorDebugThread4` 會以 `ICorDebugThread` 介面的第三和第四版出現。 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]也引進了第一版`ICorDebugStackWalk`介面和第二個版本`ICorDebugNativeFrame`介面 (`ICorDebugNativeFrame2`)。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   

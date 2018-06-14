@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557689"
 ---
 # <a name="data-binding-how-to-topics"></a>資料繫結 HOW TO 主題
 本節中的主題描述如何使用資料繫結至資料繫結元素，從各種資料來源的 common language runtime (CLR) 物件和 XML 格式。  

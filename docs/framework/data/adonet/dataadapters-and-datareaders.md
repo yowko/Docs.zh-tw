@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758096"
 ---
 # <a name="dataadapters-and-datareaders"></a>DataAdapter 和 DataReader
 您可以使用 ADO.NET **DataReader**從資料庫擷取資料的唯讀、 順向資料流。 時會傳回結果的查詢會執行，而且會儲存在用戶端上的網路緩衝區中，直到您提出要求時使用**讀取**方法**DataReader**。 使用**DataReader**可以提高應用程式效能，並使用，以擷取資料及 （依預設） 只有一個資料列一次將儲存在記憶體中，可降低系統額外負荷。  

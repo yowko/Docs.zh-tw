@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511887"
 ---
 # <a name="extending-windows-workflow-foundation"></a>擴充 Windows Workflow Foundation
 下列章節描述如何使用自訂活動和設計工具外部重新裝載環境中的擴充 Windows Workflow Foundation (WF) [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567584"
 ---
 # <a name="manipulating-strings-in-net"></a>在 .NET 中操作字串
 .NET 提供大量的常式集合，讓您能夠有效率建立、比較和修改字串，並迅速剖析大量文字和資料以搜尋、移除和取代文字模式。  

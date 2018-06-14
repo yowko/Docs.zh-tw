@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604974"
 ---
 # <a name="synclock-statement"></a>SyncLock 陳述式
 取得陳述式區塊的獨佔鎖定之前執行的區塊。  

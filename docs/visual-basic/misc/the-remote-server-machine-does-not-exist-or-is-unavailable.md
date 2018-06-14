@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639248"
 ---
 # <a name="the-remote-server-machine-does-not-exist-or-is-unavailable-visual-basic"></a>遠端伺服器電腦不存在或無法使用 (Visual Basic)
 您嘗試連線到無法使用或不存在的遠端伺服器。 這個錯誤可能是由於您的網路連線中斷所造成。  

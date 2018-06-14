@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527400"
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>如何：使用色彩矩陣轉換單一色彩
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供<xref:System.Drawing.Image>和<xref:System.Drawing.Bitmap>類別來儲存和管理影像。 <xref:System.Drawing.Image> 和<xref:System.Drawing.Bitmap>物件會儲存每個像素色彩的 32 位元數字： 8 位元每個紅色、 綠色、 藍色及 alpha。 四個元件的每一個都是從 0 到 255，0 代表不含濃度，代表完整的濃度 255 的數字。 Alpha 元件指定色彩的透明度： 0 是完全透明，而 255 是完全不透明。  

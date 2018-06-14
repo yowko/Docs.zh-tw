@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494513"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>資料合約中的列舉型別
 列舉可以在資料合約模型中表示。 本主題將逐步介紹幾個範例，說明程式設計模型。  

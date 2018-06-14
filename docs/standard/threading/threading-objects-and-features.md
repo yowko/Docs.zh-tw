@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591321"
 ---
 # <a name="threading-objects-and-features"></a>執行緒物件和功能
 .NET Framework 提供一些物件，可協助您建立及管理多執行緒應用程式。 Managed 執行緒是以 <xref:System.Threading.Thread> 類別來表示。 <xref:System.Threading.ThreadPool> 類別可讓您輕鬆建立及管理多執行緒的背景工作。 <xref:System.ComponentModel.BackgroundWorker> 類別會針對與使用者介面互動的工作執行相同的作業。 <xref:System.Threading.Timer> 類別會定期執行背景工作。  

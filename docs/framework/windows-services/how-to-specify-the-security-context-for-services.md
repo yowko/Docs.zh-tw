@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512472"
 ---
 # <a name="how-to-specify-the-security-context-for-services"></a>如何：指定服務的安全性內容
 根據預設，服務會在與登入使用者不同的安全性內容中執行。 服務會在稱為 `LocalSystem` 的預設系統帳戶內容中執行，授與他們與使用者不同的系統資源存取權限。 您可以變更此行為，以指定服務應在其中執行的不同使用者帳戶。  

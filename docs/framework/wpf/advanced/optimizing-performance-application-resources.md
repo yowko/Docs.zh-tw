@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546591"
 ---
 # <a name="optimizing-performance-application-resources"></a>最佳化效能：應用程式資源
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可讓您共用應用程式資源，以便您可以透過類似具類型的項目支援一致的外觀或行為。 本主題提供的一些建議這個區域，可協助您改善應用程式的效能。  

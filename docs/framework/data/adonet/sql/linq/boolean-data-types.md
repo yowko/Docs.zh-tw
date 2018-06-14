@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361568"
 ---
 # <a name="boolean-data-types"></a>Boolean 資料類型
 除了不會轉譯最少運算行為以外，在 Common Language Runtime (CLR) 中布林運算子會如預期運作。 例如，Visual Basic `AndAlso` 運算子的行為方式如同 `And` 運算子。 而 C# `&&` 運算子的行為方式則如同 `&` 運算子。  

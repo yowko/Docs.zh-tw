@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540186"
 ---
 # <a name="menustrip-control-windows-forms"></a>MenuStrip 控制項 (Windows Form)
 此控制項會將應用程式的命令分組，並使其容易存取。  

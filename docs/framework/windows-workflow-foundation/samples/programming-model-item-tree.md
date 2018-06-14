@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516470"
 ---
 # <a name="programming-model-item-tree"></a>程式設計模型項目樹狀
 這個範例會示範如何在瀏覽<xref:System.Activities.Presentation.Model.ModelItem>樹狀使用宣告式資料繫結，從 Windows Presentation Foundation (WPF) 樹狀結構檢視。  

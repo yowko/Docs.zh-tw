@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766032"
 ---
 # <a name="the-shape-of-the-command-trees"></a>命令樹的形狀
 SQL 產生模組負責根據給定輸入查詢命令樹運算式，產生後端特定的 SQL 查詢。 本章節將討論查詢命令樹的特性、屬性和結構。  

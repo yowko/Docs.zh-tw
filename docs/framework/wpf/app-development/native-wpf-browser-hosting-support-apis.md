@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550016"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>裝載支援 API 的原生 WPF 瀏覽器
 裝載的[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]網頁瀏覽器中的應用程式透過使用中文件 (也稱為 DocObject) 已註冊的伺服器超出 WPF 主機的協助。 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] 可以直接啟動，並與主動式文件整合。 Xbap 和鬆散的 XAML 文件中 Mozilla 瀏覽器中，裝載[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]提供 NPAPI 外掛程式，可提供相似的主控環境來[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]主動式文件與伺服器[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]沒有。 不過，其他瀏覽器中的最簡單的實用方式裝載 Xbap 和 XAML 文件，而且獨立應用程式是透過 Internet Explorer Web 瀏覽器控制項。 網頁瀏覽器控制項提供複雜使用中文件伺服器主控環境中，但它可讓它自己的主應用程式來自訂和擴充該環境及直接與目前現用的文件物件通訊。  

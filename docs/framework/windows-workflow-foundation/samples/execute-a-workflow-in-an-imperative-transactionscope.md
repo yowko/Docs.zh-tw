@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516954"
 ---
 # <a name="execute-a-workflow-in-an-imperative-transactionscope"></a>在命令性 TransactionScope 中執行工作流程
 這個範例示範如何從命令式 C# 程式碼，在 <xref:System.Activities.WorkflowInvoker> 底下使用 <xref:System.Transactions.Transaction> 來執行工作流程。  

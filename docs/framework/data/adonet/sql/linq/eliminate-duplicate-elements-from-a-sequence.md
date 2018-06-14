@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357296"
 ---
 # <a name="eliminate-duplicate-elements-from-a-sequence"></a>從序列排除重複項目
 使用 <xref:System.Linq.Queryable.Distinct%2A> 運算子去除序列中重複的項目。  

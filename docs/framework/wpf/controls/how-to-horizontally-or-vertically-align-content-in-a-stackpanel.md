@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550746"
 ---
 # <a name="how-to-horizontally-or-vertically-align-content-in-a-stackpanel"></a>如何：水平或垂直對齊 StackPanel 中的內容
 此範例顯示如何調整<xref:System.Windows.Controls.StackPanel.Orientation%2A>的內容內<xref:System.Windows.Controls.StackPanel>項目，以及如何調整<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>和<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>子內容。  

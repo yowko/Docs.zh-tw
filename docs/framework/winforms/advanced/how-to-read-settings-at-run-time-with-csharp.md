@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521010"
 ---
 # <a name="how-to-read-settings-at-run-time-with-c"></a>如何：在執行階段使用 C# 讀取設定 #
 您可以在執行階段透過屬性物件來讀取應用程式範圍和使用者範圍的設定。 屬性物件會透過 Properties.Settings.Default 成員公開所有專案的預設值。  

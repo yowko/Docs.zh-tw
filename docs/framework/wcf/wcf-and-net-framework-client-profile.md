@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500974"
 ---
 # <a name="wcf-and-net-framework-client-profile"></a>WCF 和 .NET Framework Client Profile
 [!INCLUDE[arrowhead](../../../includes/arrowhead-md.md)] 是 .Net Framework 完整版的輕量型版本，針對不需要整個架構的用戶端所設計。 此用戶端架構並未完整支援 Windows Communication Foundation。  

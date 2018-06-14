@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396131"
 ---
 # <a name="peer-name-publication-and-resolution"></a>對等名稱發佈和解析
 ## <a name="publishing-a-peer-name"></a>發行對等名稱  

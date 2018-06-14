@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656252"
 ---
 # <a name="anonymous-types-visual-basic"></a>匿名類型 (Visual Basic)
 Visual Basic 支援可讓您建立的物件，而不需要撰寫的資料類型的類別定義的匿名型別。 編譯器 (Compiler) 會自動幫您建立類別 (Class)。 類別沒有可用的名稱，直接繼承自<xref:System.Object>，且包含您指定在宣告物件的屬性。 未指定資料類型的名稱，因為它指*匿名型別*。  

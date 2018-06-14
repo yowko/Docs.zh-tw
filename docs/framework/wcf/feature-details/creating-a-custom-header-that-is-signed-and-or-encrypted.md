@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490691"
 ---
 # <a name="creating-a-custom-header-that-is-signed-and-or-encrypted"></a>建立自訂的標頭已簽署和-或已加密
 使用 WCF 用戶端來呼叫非 WCF 服務時，有時候必須使用自訂 SOAP 標頭。 WCF 具有一個規範化 Bug，這個 Bug 會讓已簽署和加密的自訂標頭無法使用非 WCF 服務。 這個問題是預設 XML 命名空間的規範化錯誤所造成。 只有當您使用已簽署和 (或) 加密的自訂標頭來呼叫非 WCF 服務時，才會發生這個問題。  當此服務收到包含已簽署和 (或) 加密之自訂標頭的訊息時，它無法驗證簽章。 這種解決方法會避免規範化 Bug、允許與非 WCF 服務互通，但是無法防止與 WCF 服務互通。  

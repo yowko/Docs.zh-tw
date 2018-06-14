@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495605"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>HOW TO：設定聯合服務的認證
 在 Windows Communication Foundation (WCF)，建立聯合的服務包含下列主要程序：  

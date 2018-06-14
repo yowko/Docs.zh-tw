@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650435"
 ---
 # <a name="composite-data-types-visual-basic"></a>複合資料類型 (Visual Basic)
 除了提供的基本資料型別 Visual Basic，您也可以組合建立不同類型的項目*複合資料類型*例如結構、 陣列和類別。 基本型別和其他複合類型，您可以建置複合資料類型。 例如，您可以定義結構元素的陣列或結構的陣列成員。  

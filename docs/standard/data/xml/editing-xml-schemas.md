@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577211"
 ---
 # <a name="editing-xml-schemas"></a>編輯 XML 結構描述
 編輯 XML 結構描述是結構描述物件模型 (SOM) 的其中一項最重要功能。 SOM 的所有前結構描述編譯屬性都可用於變更 XML 結構描述中的現有值。 然後可重新編譯該 XML 結構描述以反映這些變更。  

@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fdea4c456f04911c37acd69ced65ba841f7959ff
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449347"
 ---
 # <a name="imetadataimport-interface"></a>IMetaDataImport 介面
 提供從可攜式執行檔 (PE) 或其他來源匯入及管理現有中繼資料的方法，例如類型程式庫或獨立的執行階段中繼資料二進位檔。  
@@ -104,11 +105,11 @@ ms.lasthandoff: 05/04/2018
 -   Get 方法是專門用來傳回中繼資料項目的單一值屬性。 當屬性為另一個項目的參考時，則會傳回該項目的語彙基元。 任何指標輸入類型都可以是 NULL，表示未要求特定的值。 若要取得基本上是集合物件的屬性 (例如類別實作的介面集合)，請使用列舉方法。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
- **程式庫：**做為 MsCorEE.dll 中的資源  
+ **程式庫：** 做為 MsCorEE.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

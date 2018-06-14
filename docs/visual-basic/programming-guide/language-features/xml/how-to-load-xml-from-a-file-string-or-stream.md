@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647627"
 ---
 # <a name="how-to-load-xml-from-a-file-string-or-stream-visual-basic"></a>如何：從檔案、字串或資料流載入 XML (Visual Basic)
 您可以建立[XML 常值](../../../../visual-basic/language-reference/xml-literals/index.md)，並將它們從外部來源，例如檔案、 字串或資料流的內容填入使用數種方法。 在下列範例會顯示這些方法。  

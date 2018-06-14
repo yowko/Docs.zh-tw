@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559319"
 ---
 # <a name="how-to-create-multiple-subpaths-within-a-pathgeometry"></a>如何：在 PathGeometry 內建立多個子路徑
 這個範例示範如何建立多個子路徑中的<xref:System.Windows.Media.PathGeometry>。 若要建立多個路徑，您建立<xref:System.Windows.Media.PathFigure>的每一個子路徑。  

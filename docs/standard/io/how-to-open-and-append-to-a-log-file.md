@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571939"
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>如何：開啟並附加至記錄檔
 <xref:System.IO.StreamWriter> 和 <xref:System.IO.StreamReader> 會在資料流中寫入字元和讀取字元。 下列程式碼範例會開啟用於輸入的 `log.txt` 檔案，如果該檔案還未存在，則會建立該檔案，並將資訊附加至檔案的結尾。 接著，檔案的內容會寫入標準輸出以供顯示。 此範例的替代方法是，將資訊儲存成單一字串或字串陣列，而且 <xref:System.IO.File.WriteAllText%2A> 或 <xref:System.IO.File.WriteAllLines%2A> 方法可以用來達成相同的功能。  

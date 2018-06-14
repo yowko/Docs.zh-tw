@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561471"
 ---
 # <a name="how-to-trigger-media-playback-with-a-user-event"></a>操作說明：以使用者事件觸發媒體播放
 這個範例示範如何將媒體播放與某個事件同步。  

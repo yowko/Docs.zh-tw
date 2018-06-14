@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583886"
 ---
 # <a name="declaration-expected"></a>必須是宣告
 非宣告陳述式，例如指派或迴圈陳述式，就會發生任何程序之外。 允許只宣告外部程序。  

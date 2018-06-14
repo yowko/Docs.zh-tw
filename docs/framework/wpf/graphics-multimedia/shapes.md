@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562189"
 ---
 # <a name="shapes"></a>圖形
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供支援繪製基本圖形使用<xref:System.Windows.Shapes.Shape>類別。 圖形物件衍生自<xref:System.Windows.FrameworkElement>因此，參與版面配置系統，而可以直接使用繪製[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642148"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>如何： 將檔案分割成許多檔案中，使用群組 (LINQ) (Visual Basic)
 此範例示範如何合併兩個檔案的內容，然後建立一組以新方法組織資料的新檔案。  

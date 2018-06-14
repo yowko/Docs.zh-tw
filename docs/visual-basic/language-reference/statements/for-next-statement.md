@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605325"
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next 陳述式 (Visual Basic)
 重複指定的次數的陳述式群組。  

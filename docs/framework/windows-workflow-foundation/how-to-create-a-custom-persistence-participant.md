@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517237"
 ---
 # <a name="how-to-create-a-custom-persistence-participant"></a>HOW TO：建立自訂非持續性參與者
 下列程序包含建立持續性參與者的步驟。 請參閱[參與持續性](http://go.microsoft.com/fwlink/?LinkID=177735)範例和[存放區擴充性](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)的持續性參與者的範例實作的主題。  

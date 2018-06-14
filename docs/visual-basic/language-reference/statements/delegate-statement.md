@@ -12,6 +12,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234674"
 ---
 # <a name="delegate-statement"></a>Delegate 陳述式
 用來宣告委派。 委派是參考類型，這是指`Shared`方法的型別或物件的執行個體方法。 任何具有相符的參數和傳回型別程序可以用來建立這個委派類別的執行個體。 此程序可然後稍後會透過叫用委派執行個體。  

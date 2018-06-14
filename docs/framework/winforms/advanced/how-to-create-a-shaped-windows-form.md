@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522213"
 ---
 # <a name="how-to-create-a-shaped-windows-form"></a>如何：建立具圖案的 Windows Form
 此範例提供表單的表單會調整大小的橢圓形。  

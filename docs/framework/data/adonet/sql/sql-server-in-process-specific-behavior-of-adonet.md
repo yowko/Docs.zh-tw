@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356599"
 ---
 # <a name="sql-server-in-process-specific-behavior-of-adonet"></a>ADO.NET 的 SQL Server 同處理序特定行為
 ADO.NET 有四個主要功能擴充，位於 <xref:Microsoft.SqlServer.Server> 命名空間 (Namespace) 中，它們專門用於同處理序：<xref:Microsoft.SqlServer.Server.SqlContext>、<xref:Microsoft.SqlServer.Server.SqlPipe>、<xref:Microsoft.SqlServer.Server.SqlTriggerContext> 和 <xref:Microsoft.SqlServer.Server.SqlDataRecord>。  

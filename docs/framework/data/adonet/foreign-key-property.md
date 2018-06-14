@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762646"
 ---
 # <a name="foreign-key-property"></a>外部索引鍵屬性
 A*外部索引鍵屬性*實體資料模型 (EDM) 中是基本型別[屬性](../../../../docs/framework/data/adonet/property.md)（或基本型別屬性的一組） 上[實體類型](../../../../docs/framework/data/adonet/entity-type.md)包含[實體索引鍵](../../../../docs/framework/data/adonet/entity-key.md)另一個實體類型。  

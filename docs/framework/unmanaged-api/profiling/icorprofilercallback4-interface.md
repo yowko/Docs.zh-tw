@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8bcddc143cacc3df016e6b8dd7907a67354c4311
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455731"
 ---
 # <a name="icorprofilercallback4-interface"></a>ICorProfilerCallback4 介面
 提供 common language runtime (CLR) 會將資訊傳達給分析工具使用的回呼方法。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="remarks"></a>備註  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

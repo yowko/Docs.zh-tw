@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582925"
 ---
 # <a name="destroying-threads"></a>終結執行緒
 <xref:System.Threading.Thread.Abort%2A> 方法可用來永久停止受控執行緒。 當您呼叫 <xref:System.Threading.Thread.Abort%2A> 時，通用語言執行平台會在目標執行緒中擲回 <xref:System.Threading.ThreadAbortException>，而目標執行緒可加以攔截。 如需詳細資訊，請參閱<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>。  

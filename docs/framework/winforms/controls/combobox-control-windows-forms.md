@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524530"
 ---
 # <a name="combobox-control-windows-forms"></a>ComboBox 控制項 (Windows Form)
 Windows Form`ComboBox`控制項用來在下拉式清單方塊中顯示資料。 根據預設，`ComboBox`控制項出現在兩個部分： 上半部是文字方塊，可讓使用者輸入的清單項目。 第二個部分是清單方塊會顯示，使用者可以從中選取一個項目清單。  

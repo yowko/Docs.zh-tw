@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515248"
 ---
 # <a name="exposing-data-with-cachemetadata"></a>使用 CacheMetadata 公開資料
 執行活動之前，工作流程執行階段會取得維持其執行作業所需的所有活動相關資訊。 工作流程執行階段會在 <xref:System.Activities.Activity.CacheMetadata%2A> 方法執行期間取得這項資訊。 此方法的預設實作會為執行階段提供活動執行時所公開的所有公用引數、變數和子活動。如果活動需要提供更多資訊給執行階段 (例如私用成員或要由活動排程的其他活動)，您就可以覆寫此方法以提供這些資訊。  

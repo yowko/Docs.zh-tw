@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218393"
 ---
 # <a name="from-clause-c-reference"></a>from 子句 (C# 參考)
 查詢運算式的開頭必須是 `from` 子句。 此外，查詢運算式可以包含子查詢，也是以 `from` 子句開頭。 `from` 子句指定下列內容：  

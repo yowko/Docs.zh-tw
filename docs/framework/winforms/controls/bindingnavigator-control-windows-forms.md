@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526060"
 ---
 # <a name="bindingnavigator-control-windows-forms"></a>BindingNavigator 控制項 (Windows Form)
 `BindingNavigator`控制項是繫結至資料之控制項的瀏覽和操作使用者介面 (UI)。 `BindingNavigator` 控制項可讓使用者巡覽和操作 Windows Form 上的資料。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649223"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>使用字串名稱呼叫屬性或方法 (Visual Basic)
 在大部分情況下，您可以在設計階段探索的屬性和方法的物件，並撰寫程式碼來處理它們。 不過，在某些情況下您可能不知道物件的屬性和方法的相關事先，或者您可能只想讓使用者指定的屬性，或在執行階段執行方法的彈性。  

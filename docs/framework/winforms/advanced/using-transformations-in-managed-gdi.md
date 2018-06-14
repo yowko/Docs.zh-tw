@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523792"
 ---
 # <a name="using-transformations-in-managed-gdi"></a>使用 Managed GDI+ 中的轉換
 仿射轉換包含旋轉、 縮放、 反射、 切變和轉譯。 在[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]、<xref:System.Drawing.Drawing2D.Matrix>類別提供的基礎執行仿射轉換向量圖形、 影像和文字。  

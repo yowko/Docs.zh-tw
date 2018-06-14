@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742201"
 ---
 # <a name="coreresponsedata-class"></a>CoreResponseData 類別
 
@@ -35,6 +36,6 @@ internal class CoreResponseData
 
 **命名空間：** <xref:System.Net>
 
-**組件：**系統 （在 System.dll)
+**組件：** 系統 （在 System.dll)
 
-**.NET framework 版本：**自 2.0 起可用。
+**.NET framework 版本：** 自 2.0 起可用。

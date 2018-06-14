@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572706"
 ---
 # <a name="select-nodes-using-xpath-navigation"></a>使用 XPath 巡覽選取節點
 XML 文件物件模型 (DOM) 包含可讓您在 DOM 中使用 XML 路徑語言 (XPath) 巡覽查詢資訊的方法。 您可以使用 XPath 尋找單一特定節點，或是尋找符合某些準則的所有節點。  

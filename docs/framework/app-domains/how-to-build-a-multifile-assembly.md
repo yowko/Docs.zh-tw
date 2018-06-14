@@ -24,6 +24,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744079"
 ---
 # <a name="how-to-build-a-multifile-assembly"></a>如何：建置多檔案組件
 本文說明如何建立多檔案組件，並提供說明程序中每個步驟的程式碼。  

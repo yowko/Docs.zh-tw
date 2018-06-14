@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525409"
 ---
 # <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>如何：使用 Windows Form NotifyIcon 元件將應用程式圖示加入至 TaskBar
 Windows Form<xref:System.Windows.Forms.NotifyIcon>元件會在工作列的狀態通知區域中顯示一個圖示。 若要在 [狀態] 區域中顯示多個圖示，您必須有多個<xref:System.Windows.Forms.NotifyIcon>表單上的元件。 若要設定顯示控制項的圖示，請使用<xref:System.Windows.Forms.NotifyIcon.Icon%2A>屬性。 您也可以撰寫程式碼<xref:System.Windows.Forms.NotifyIcon.DoubleClick>事件處理常式，因此當使用者按兩下圖示時，會發生的事情的情況。 例如，您可以進行設定圖示所代表的背景處理序的使用者出現的對話方塊。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395508"
 ---
 # <a name="security-etw-events"></a>安全性 ETW 事件
 <a name="top"></a> 強式名稱驗證和 Authenticode 驗證期間，會引發安全性事件。  

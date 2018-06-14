@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542570"
 ---
 # <a name="drag-and-drop"></a>拖放
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供靈活自如拖曳和卸除基礎結構可支援拖曳和卸除的資料中[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式，以及其他[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]應用程式。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491851"
 ---
 # <a name="claims-and-tokens"></a>宣告與權杖
 本主題說明 Windows Communication Foundation (WCF) 從它所支援的預設權杖所建立的各種宣告類型。  

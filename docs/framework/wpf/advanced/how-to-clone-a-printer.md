@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544192"
 ---
 # <a name="how-to-clone-a-printer"></a>如何：複製印表機
 大部分的企業，在某個時間點，購買多台印表機的相同模型。 一般而言，這些所有在安裝有幾乎相同的組態設定。 安裝每一部印表機可能會很費時而且容易產生錯誤。 <xref:System.Printing.IndexedProperties?displayProperty=nameWithType>命名空間和<xref:System.Printing.PrintServer.InstallPrintQueue%2A>都會以 Microsoft.NET Framework 公開的類別會讓您能夠立即安裝任何數目的其他列印佇列，就會遭到複製，從現有的列印佇列。  

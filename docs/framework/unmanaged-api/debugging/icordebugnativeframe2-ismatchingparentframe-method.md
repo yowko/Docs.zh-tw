@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 39c0ea69a0922f5e0d25c98c21ec17a872b2f421
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418866"
 ---
 # <a name="icordebugnativeframe2ismatchingparentframe-method"></a>ICorDebugNativeFrame2::IsMatchingParentFrame 方法
 判斷指定的範圍是否為目前的畫面格的父代。  
@@ -56,7 +57,7 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
  `IsMatchingParentFrame` 傳回`true`框架物件傳遞至該方法是否呼叫此方法的框架物件的父系。 如果您不是子系為指定框架的框架上呼叫方法，它會傳回錯誤。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   

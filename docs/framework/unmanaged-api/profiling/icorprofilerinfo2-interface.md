@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8cec2a622a1a30881949ad5a9f2050077e195015
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461395"
 ---
 # <a name="icorprofilerinfo2-interface"></a>ICorProfilerInfo2 介面
 提供程式碼分析工具用於和 common language runtime (CLR)，以控制事件監視以及要求資訊通訊的方法。 `ICorProfilerInfo2`介面是延伸[ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)介面。 也就是說，它會提供.NET Framework 2.0 版及更新版本中支援的新方法。  
@@ -59,7 +60,7 @@ ms.lasthandoff: 05/04/2018
  CLR 會傳遞`ICorProfilerInfo2`介面，以每個程式碼分析工具在初始化期間，使用程式碼剖析工具實作[icorprofilercallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)。 接著程式碼分析工具可以呼叫的方法`ICorProfilerInfo2`介面，以取得在 CLR 的控制項下執行的 managed 程式碼的相關資訊。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

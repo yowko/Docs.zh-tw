@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392927"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>如何：建立，初始化和設定追蹤參數
 追蹤參數可讓您啟用、停用和篩選追蹤輸出。  
@@ -74,11 +75,11 @@ ms.lasthandoff: 05/04/2018
   
 2.  如果您的專案未包含組態檔 (app.config 或 Web.config)，請從 [專案] 功能表中選取 [新增項目]。  
   
-    -   **Visual Basic：**在 [新增項目] 對話方塊中，選擇 [應用程式組態檔]。  
+    -   **Visual Basic：** 在 [新增項目] 對話方塊中，選擇 [應用程式組態檔]。  
   
          隨即會建立並開啟應用程式組態檔。 這是根項目為 `<configuration>.` 的 XML 文件。  
   
-    -   **Visual C#：**在 [新增項目] 對話方塊中，選擇 [XML 檔]。 將這個檔案命名為 **app.config**。在 XML 編輯器中，於 XML 宣告後加入下列 XML：  
+    -   **Visual C#：** 在 [新增項目] 對話方塊中，選擇 [XML 檔]。 將這個檔案命名為 **app.config**。在 XML 編輯器中，於 XML 宣告後加入下列 XML：  
   
         ```xml  
         <configuration>  

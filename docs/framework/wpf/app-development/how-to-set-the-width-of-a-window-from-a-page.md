@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545986"
 ---
 # <a name="how-to-set-the-width-of-a-window-from-a-page"></a>如何： 設定頁面的視窗的寬度
 此範例說明如何設定從視窗的寬度<xref:System.Windows.Controls.Page>。  

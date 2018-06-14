@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518896"
 ---
 # <a name="policy-activity-in-net-framework-45"></a>.NET Framework 4.5 中的原則活動
 Policy4 活動可讓 Windows Workflow Foundation [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5)<xref:System.Workflow.Activities.Rules.RuleSet>物件使用中 Windows Workflow Foundation [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) 是直接使用 WF 3.5 隨附的規則引擎。 您可以使用這個活動來建立及執行 WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>。 如需 Windows Workflow Foundation 的一部分的 WF 3.5 規則引擎的詳細資訊，請閱讀 Windows Workflow Foundation 規則引擎簡介。 如需有關移轉到 WF 中的規則[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]，請閱讀[移轉指引](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。  

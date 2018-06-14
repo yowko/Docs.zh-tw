@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516561"
 ---
 # <a name="transaction-convoy-scope"></a>異動防護範圍
 這個範例示範如何建立 Parallel Convoy 訊息活動模式搭配 <xref:System.ServiceModel.Activities.TransactedReceiveScope>，以建立多個作業可依任何順序同時在相同交易中發生的通訊協定模型。 這個範例也示範 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 如何在沒有交易流向伺服器時自動建立新交易，因此用戶端不會利用任何交易。  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533470"
 ---
 # <a name="how-to-set-pictures-at-run-time-windows-forms"></a>如何：在執行階段設定圖片 (Windows Form)
 您可以透過程式設計方式設定 Windows Form 所顯示的影像<xref:System.Windows.Forms.PictureBox>控制項。  

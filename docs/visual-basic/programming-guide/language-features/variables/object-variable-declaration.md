@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656278"
 ---
 # <a name="object-variable-declaration-visual-basic"></a>物件變數宣告 (Visual Basic)
 您可以使用一般宣告陳述式來宣告物件變數。 資料類型，您指定`Object`(也就是[物件資料類型](../../../../visual-basic/language-reference/data-types/object-data-type.md)) 或更特定類別的物件是要建立的。  

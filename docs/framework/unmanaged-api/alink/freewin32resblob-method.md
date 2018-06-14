@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d124ce5dd38bed7eb439a055ff9e30a75efe5891
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400740"
 ---
 # <a name="freewin32resblob-method"></a>FreeWin32ResBlob 方法
 釋放的 Win32 資源 blob 和相關聯的資源。  

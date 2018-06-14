@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393838"
 ---
 # <a name="pnrp-clouds"></a>PNRP 雲端
 PNRP「雲端」代表一組節點，可以透過網路彼此進行通訊。 「雲端」這個詞相當於「對等網格」和「點對點圖形」。  

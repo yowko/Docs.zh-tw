@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 82421fa83a6f0d24492d70f961e731b679c25728
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400714"
 ---
 # <a name="precloseassembly-method"></a>PreCloseAssembly 方法
 關閉組件檔案。 之後關閉所有其他檔案，但在關閉的組件檔案之前，請呼叫這個方法。 請勿呼叫這個方法未繫結的模組。  

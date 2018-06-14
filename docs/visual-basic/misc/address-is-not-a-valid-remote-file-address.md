@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599895"
 ---
 # <a name="ltaddressgt-is-not-a-valid-remote-file-address"></a>&lt;位址&gt;不是有效的遠端檔案位址
 \<位址 > 不是有效的遠端檔案位址。 有效位址應該包含通訊協定、路徑和檔案名稱。  

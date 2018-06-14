@@ -13,9 +13,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6fca7359888b8b73b2e1cf709ab708d71abf0db6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435808"
 ---
 # <a name="diagnostics-symbol-store-interfaces"></a>診斷符號存放區介面
 本主題描述 unmanaged 的介面，可讓編譯器產生供偵錯工具符號資訊。  

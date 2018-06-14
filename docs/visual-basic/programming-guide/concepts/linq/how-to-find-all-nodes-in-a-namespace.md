@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641608"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>如何： 尋找命名空間 (Visual Basic) 中的所有節點
 您可以在每個項目或屬性的命名空間上篩選，尋找該特定命名空間中的所有節點。  

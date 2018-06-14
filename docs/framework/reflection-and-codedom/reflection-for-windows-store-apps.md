@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398787"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>適用於 Windows 市集應用程式之 .NET Framework 中的反映
 從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 開始，.NET Framework 包含一組反映類型和成員，以便用於 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式。 這些類型和成員提供於完整 .NET Framework，以及[適用於 Windows 市集應用程式的 .NET](http://go.microsoft.com/fwlink/?LinkID=225700)。 本文件說明這些與其對應項目在 .NET Framework 4 和舊版之間的主要差異。  

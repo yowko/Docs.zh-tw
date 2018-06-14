@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591673"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>逐步解說：在 Windows Forms 應用程式中使用資料流程
 本文鍵示範如何建立資料流程區塊網路，其可以在 Windows Forms 應用程式中執行映像處理。  

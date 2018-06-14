@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587380"
 ---
 # <a name="bad-file-mode"></a>不正確的檔案模式
 管理檔案內容中使用的陳述式必須是適當的模式開啟檔案。 可能的原因包括：  

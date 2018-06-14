@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494932"
 ---
 # <a name="routing"></a>路由
 本節中的主題涵蓋路由服務。 路由服務是可設定的泛型 SOAP 媒介，可讓您設定以內容為基礎的路由、設定通訊協定橋接、處理通訊錯誤，以及在執行階段動態更新路由邏輯。  

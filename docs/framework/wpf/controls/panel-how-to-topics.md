@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553779"
 ---
 # <a name="panel-how-to-topics"></a>Panel HOW TO 主題
 本節中的主題描述如何使用<xref:System.Windows.Controls.Panel>項目與相關[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575183"
 ---
 # <a name="how-to-create-files-and-directories-in-isolated-storage"></a>如何：在隔離儲存區中建立檔案和目錄
 取得隔離存放區之後，您可以建立目錄和檔案來儲存資料。 在存放區內，系統會以相對於虛擬檔案系統的根目錄指定檔案和目錄名稱。  

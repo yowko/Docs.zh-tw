@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520155"
 ---
 # <a name="exceptions"></a>例外狀況
 工作流程可以利用 <xref:System.Activities.Statements.TryCatch> 活動處理在工作流程執行期間引發的例外狀況。 工作流程可以處理這些例外狀況，也可以利用 <xref:System.Activities.Statements.Rethrow> 活動重新擲回。 <xref:System.Activities.Statements.TryCatch.Finally%2A> 區段中的活動是在 <xref:System.Activities.Statements.TryCatch.Try%2A> 區段或 <xref:System.Activities.Statements.TryCatch.Catches%2A> 區段完成時執行的。 由工作流程裝載<xref:System.Activities.WorkflowApplication>也可以使用執行個體<xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>處理不會處理的例外狀況的事件處理常式<xref:System.Activities.Statements.TryCatch>活動。  

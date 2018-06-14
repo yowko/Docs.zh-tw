@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758928"
 ---
 # <a name="ole-db-data-type-mappings"></a>OLE DB 資料類型對應
 下表顯示來自 .NET Framework Data Provider for ADO 和 OLE DB ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]) 之資料型別的推斷 <xref:System.Data.OleDb> 型別。 同時也一併列出 <xref:System.Data.OleDb.OleDbDataReader> 具型別的存取子方法。  

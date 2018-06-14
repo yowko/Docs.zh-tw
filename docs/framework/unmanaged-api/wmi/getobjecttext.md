@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d2f0e766a3a310bdb58f7cbffd8d49404eb5e0b0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459635"
 ---
 # <a name="getobjecttext-function"></a>GetObjectText 函式
 傳回物件的文字呈現在受管理物件格式 (MOF) 語法。
@@ -77,7 +78,7 @@ HRESULT GetObjectText (
 `pstrObjectText` 必須是指向`null`時呼叫的函式; 它必須指向在方法呼叫之前，因為無效的指標將不會重新配置的字串。
 
 ## <a name="requirements"></a>需求  
-**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.idl  
   

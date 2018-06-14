@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 844ac2a8aad4ce2cc6f70de2d5a53c7c0b6f4f6c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453140"
 ---
 # <a name="icorprofilercallbackjitinlining-method"></a>ICorProfilerCallback::JITInlining 方法
 通知分析工具在 just-in-time (JIT) 編譯器即將插入與另一個函式的函式。  
@@ -51,7 +52,7 @@ HRESULT JITInlining(
  內嵌函式插入不會引發事件進入或離開。 因此，必須設定程式碼剖析工具`pfShouldInline`至`false`才能產生精確範圍的 callgraph。 設定`pfShouldInline`至`false`會影響效能，因為內嵌插入通常會提升速度和減少插入的方法不同的 JIT 編譯事件。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

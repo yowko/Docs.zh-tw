@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744664"
 ---
 # <a name="ltnetworkgt-element-network-settings"></a>&lt;網路&gt;項目 （網路設定）
 設定外部簡易郵件傳輸通訊協定 (SMTP) 伺服器的網路選項。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523155"
 ---
 # <a name="global-and-local-transformations"></a>全域和區域轉換
 全域轉換為轉換套用至所繪製的每個項目的指定<xref:System.Drawing.Graphics>物件。 相反地，區域轉換為套用至要繪製的特定項目的轉換。  

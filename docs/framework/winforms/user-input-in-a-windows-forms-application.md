@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538359"
 ---
 # <a name="user-input-in-a-windows-forms-application"></a>Windows Forms 應用程式中的使用者輸入
 在 Windows Form 使用者輸入會傳送至應用程式的 Windows 訊息的形式。 一系列的可覆寫方法處理這些訊息的應用程式表單，並控制層級。 當這些方法會接收滑鼠和鍵盤訊息時，它們就會引發事件，可取得資訊滑鼠或鍵盤輸入來處理。 在許多情況下，Windows Forms 應用程式將能夠處理所有的使用者輸入，只要處理這些事件。 在其他情況下，應用程式可能需要覆寫其中一個處理訊息才能攔截特定的訊息之前收到由應用程式、 表單或控制項的方法。  

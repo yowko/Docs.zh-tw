@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534490"
 ---
 # <a name="how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set"></a>如何：將 Windows Form RadioButton 控制項群組成集合使用
 Windows Form<xref:System.Windows.Forms.RadioButton>控制項的設計，讓使用者在兩個或多個設定，其中只有一個可以指派給程序或物件之間的選擇。 例如，一群<xref:System.Windows.Forms.RadioButton>控制項可能會顯示各種封裝承運業者寄送的訂單，但是會使用承運業者寄送的其中之一。 因此只有一個<xref:System.Windows.Forms.RadioButton>一次可以選取，即使它是功能群組的一部分。  

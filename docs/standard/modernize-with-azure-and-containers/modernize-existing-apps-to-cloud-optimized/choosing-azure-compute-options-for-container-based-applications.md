@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33958008"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>選擇容器應用程式的 Azure 運算平台
 
@@ -16,12 +17,12 @@ ms.lasthandoff: 05/10/2018
 
 做為*依預設*建議中，以下是建議您在本指南中的主要標準：
 
-  - **單一龐大的應用程式：**選擇 Azure App Service
-  - **多層式架構應用程式：**選擇 orchestrators，例如 Azure Kubernetes 服務 (AKS)、 服務網狀架構 (SF) 或應用程式服務，如果您有一部或幾個後端服務
+  - **單一龐大的應用程式：** 選擇 Azure App Service
+  - **多層式架構應用程式：** 選擇 orchestrators，例如 Azure Kubernetes 服務 (AKS)、 服務網狀架構 (SF) 或應用程式服務，如果您有一部或幾個後端服務
   - **Linux microservices:** 選擇 AKS/Kubernetes
   - **Windows microservices:** 選擇 Service Fabric
-  - **無伺服器函式 （& s) 事件處理常式：**選擇 Azure 函式
-  - **大型批次：**選擇 Azure 批次
+  - **無伺服器函式 （& s) 事件處理常式：** 選擇 Azure 函式
+  - **大型批次：** 選擇 Azure 批次
 
 不過，這項建議應採取的 salt 捏合與產品的選取項目會取決於特定應用程式的需求和特性。 一開始它們看起來類似的類型時，即使並非所有應用程式都是相同的。
 

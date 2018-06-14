@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0d154985e9c1614e6b8f13a55410ead0cb5e861b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441051"
 ---
 # <a name="corlinkeroptions-enumeration"></a>CorLinkerOptions 列舉
 指定旗標，以選取中繼資料連結器的選項。  
@@ -42,7 +43,7 @@ typedef enum CorLinkerOptions {
 |`MDNetModule`|會保留私用類型和全域函式。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorHdr.h  
   

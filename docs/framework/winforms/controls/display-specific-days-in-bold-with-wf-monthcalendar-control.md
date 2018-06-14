@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528527"
 ---
 # <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>如何：使用 Windows Form MonthCalendar 控制項以粗體顯示特定日期
 Windows Form<xref:System.Windows.Forms.MonthCalendar>控制項可以顯示天以粗體為單數日期或重複的基礎。 您可能會執行這特別的日期，例如假日和週末的強調。  

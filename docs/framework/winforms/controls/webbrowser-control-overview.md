@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540988"
 ---
 # <a name="webbrowser-control-overview"></a>WebBrowser 控制項概觀
 <xref:System.Windows.Forms.WebBrowser>控制項提供 WebBrowser ActiveX 控制項 managed 包裝函式。 Managed 包裝函式可讓您在 Windows Form 用戶端應用程式中顯示網頁。 您可以使用<xref:System.Windows.Forms.WebBrowser>控制項複製 Internet Explorer Web 瀏覽功能，您的應用程式，或者您可以停用預設的 Internet Explorer 功能和控制項做為簡單的 HTML 文件檢視器。 您也可以使用此控制項將 DHTML 為基礎的使用者介面項目加入至表單，隱藏的事實，它們會裝載在<xref:System.Windows.Forms.WebBrowser>控制項。 這種方法可讓您順暢地結合到單一應用程式的 Windows Form 控制項使用的 Web 控制項。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541907"
 ---
 # <a name="toolstrip-technology-summary"></a>ToolStrip 技術摘要
 本主題提供有關 `ToolStrip` 控制項及支援這些控制項之類別的摘要資訊。  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575488"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>以非同步的方式呼叫同步方法
 .NET Framework 可讓您以非同步方式呼叫任何方法。 若要這樣做，您使用相同簽章定義委派，做為您要呼叫的方法；Common Language Runtime 則會自動以適當簽章定義此委派的 `BeginInvoke` 和 `EndInvoke` 方法。  

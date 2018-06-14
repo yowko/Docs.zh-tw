@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395774"
 ---
 # <a name="listening-with-sockets"></a>透過通訊端接聽
 接聽程式或伺服器通訊端會開啟網路的連接埠，等候用戶端連接到該連接埠。 雖然有其他的網路位址系列和通訊協定存在，但此範例會示範如何建立遠端服務的 TCP/IP 網路連線。  

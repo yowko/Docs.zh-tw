@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766744"
 ---
 # <a name="date-and-time-canonical-functions"></a>日期及時間標準函式
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 包括日期和時間的標準函式。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/03/2018
 |`DiffDays(` `startExpression`, `endExpression``)`|傳回 `startExpression` 與 `endExpression` 之間的天數差。<br /><br /> **引數**<br /><br /> `startExpression`、`endExpression`：`DateTime` 或 `DateTimeOffset`。 **注意：** `startExpression`和`endExpression`必須屬於相同的型別。   <br /><br /> **傳回值**<br /><br /> `Int32`。|  
 |`DiffMonths(` `startExpression`, `endExpression``)`|傳回 `startExpression` 與 `endExpression` 之間的月數差。<br /><br /> **引數**<br /><br /> `startExpression`、`endExpression`：`DateTime` 或 `DateTimeOffset`。 **注意：** `startExpression`和`endExpression`必須屬於相同的型別。   <br /><br /> **傳回值**<br /><br /> `Int32`。|  
 |`DiffYears(` `startExpression`, `endExpression``)`|傳回 `startExpression` 與 `endExpression` 之間的年數差。<br /><br /> **引數**<br /><br /> `startExpression`、`endExpression`：`DateTime` 或 `DateTimeOffset`。 **注意：** `startExpression`和`endExpression`必須屬於相同的型別。   <br /><br /> **傳回值**<br /><br /> `Int32`。|  
-|`GetTotalOffsetMinutes(` `datetimeoffset` `)`|傳回 `datetimeoffset` 與格林威治標準時間 (GMT) 間的時差分鐘數。 這項值通常介於 +780 到 -780 之間 (+ 或 - 13 小時)。 **注意：**僅支援 SQL Server 2008 中這個函式。 <br /><br /> **引數**<br /><br /> `DateTimeOffset`。<br /><br /> **傳回值**<br /><br /> `Int32`。|  
+|`GetTotalOffsetMinutes(` `datetimeoffset` `)`|傳回 `datetimeoffset` 與格林威治標準時間 (GMT) 間的時差分鐘數。 這項值通常介於 +780 到 -780 之間 (+ 或 - 13 小時)。 **注意：** 僅支援 SQL Server 2008 中這個函式。 <br /><br /> **引數**<br /><br /> `DateTimeOffset`。<br /><br /> **傳回值**<br /><br /> `Int32`。|  
 |`Hour (` `expression` `)`|以介於 0 到 23 之間的 `expression` 格式傳回 `Int32` 的小時部分。<br /><br /> **引數**<br /><br /> `DateTime, Time` 和 `DateTimeOffset`。<br /><br /> **範例**<br /><br /> `-- The following example returns 22.`<br /><br /> `Hour(cast('22:35:5' as DateTime))`|  
 |`Millisecond(` `expression` `)`|以介於 0 到 999 之間的 `expression` 格式傳回 `Int32` 的毫秒部分。<br /><br /> **引數**<br /><br /> `DateTime, Time` 和 `DateTimeOffset`。<br /><br /> **傳回值**<br /><br /> `Int32`。|  
 |`Minute(` `expression` `)`|以介於 0 到 59 之間的 `expression` 格式傳回 `Int32` 的分鐘部分。<br /><br /> **引數**<br /><br /> `DateTime, Time` 或 `DateTimeOffset`。<br /><br /> **傳回值**<br /><br /> `Int32`。<br /><br /> **範例**<br /><br /> `-- The following example returns 35`<br /><br /> `Minute(cast('22:35:5' as DateTime))`|  

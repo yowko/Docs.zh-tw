@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550650"
 ---
 # <a name="dockpanel-how-to-topics"></a>DockPanel HOW TO 主題
 本節中的主題描述如何使用<xref:System.Windows.Controls.DockPanel>放置子項目在版面配置容器的邊緣處的項目。  

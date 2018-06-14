@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33487616"
 ---
 # <a name="wmi-class-reference"></a>WMI 類別參考
 此區段會列出所有的 Windows Communication Foundation (WCF) WMI 提供者所公開的 WMI 類別。  

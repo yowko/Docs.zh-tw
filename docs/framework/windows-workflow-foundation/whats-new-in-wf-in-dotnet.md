@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520444"
 ---
 # <a name="what39s-new-in-windows-workflow-foundation-in-net-45"></a>什麼&#39;s.NET 4.5 中 Windows Workflow Foundation 的新功能
 Windows Workflow Foundation (WF) 中[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]引進許多新功能的詳細資訊，如新增活動、 設計工具功能和工作流程開發模型。 然而，重新裝載之工作流程設計工具並不支援所有在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引進的新工作流程功能。 如需支援的新功能的詳細資訊，請參閱[新 Workflow Foundation 4.5 功能，在重新裝載工作流程設計工具中支援](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md)。 如需.NET 3.0 和.NET 3.5 工作流程應用程式移轉至使用最新版本的詳細資訊，請參閱[移轉指引](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。 本主題提供 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引進之新工作流程功能的概觀。  

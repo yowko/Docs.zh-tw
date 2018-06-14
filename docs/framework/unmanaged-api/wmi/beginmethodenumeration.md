@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d87627b8bb3414860d994273396dbb4e64acdea7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459872"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration 函式
 開始列舉物件的可用方法的型別。  
@@ -69,7 +70,7 @@ HRESULT BeginMethodEnumeration (
 如果目前的物件類別定義，才支援這個方法呼叫。 方法操作中未提供[IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)指向執行個體的指標。 方法會列舉中的順序保證能夠針對指定的執行個體而異[IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)。
 
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.idl  
   

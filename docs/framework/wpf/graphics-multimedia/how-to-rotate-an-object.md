@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561939"
 ---
 # <a name="how-to-rotate-an-object"></a>操作說明：旋轉物件
 此範例會顯示如何旋轉物件。 此範例會先建立<xref:System.Windows.Media.RotateTransform>，然後指定其<xref:System.Windows.Media.RotateTransform.Angle%2A>以度為單位。  

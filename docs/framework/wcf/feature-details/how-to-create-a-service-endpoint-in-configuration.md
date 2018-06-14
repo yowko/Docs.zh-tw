@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490223"
 ---
 # <a name="how-to-create-a-service-endpoint-in-configuration"></a>HOW TO：在組態中建立服務端點
 端點可讓用戶端存取的 Windows Communication Foundation (WCF) 服務提供的功能。 您可以使用相對與絕對端點位址的組合，定義一個或多個端點，如果您沒有定義任何服務端點，執行階段預設會提供一些服務端點。 本主題說明如何使用包含相對與絕對位址的組態檔來加入端點。  

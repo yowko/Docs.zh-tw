@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804829"
 ---
 # <a name="message-queueing-integration"></a>訊息佇列整合
 本節包含示範訊息佇列與 Windows Communication Foundation (WCF) 之間的整合的範例。  

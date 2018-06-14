@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270574"
 ---
 # <a name="sizeof-c-reference"></a>sizeof (C# 參考)
 用來取得 Unmanaged 類型的大小 (以位元組為單位)。 Unmanaged 類型包含下表所列的內建類型，也包含下列項目：  

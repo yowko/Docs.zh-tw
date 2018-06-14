@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536269"
 ---
 # <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>如何：指定 Windows Form DataGridView 控制項的編輯模式
 根據預設，使用者可以編輯的目前內容<xref:System.Windows.Forms.DataGridView>文字方塊儲存格，請輸入或按 f2 鍵。 這將儲存格置於編輯模式如果符合所有下列條件：  

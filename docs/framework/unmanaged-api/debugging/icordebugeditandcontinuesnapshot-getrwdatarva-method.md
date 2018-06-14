@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c2bc4dc831e87d72c6147e0f42ae3c4d1c79e113
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414160"
 ---
 # <a name="icordebugeditandcontinuesnapshotgetrwdatarva-method"></a>ICorDebugEditAndContinueSnapshot::GetRwDataRVA 方法
 `GetRwDataRVA` 已經過時。 請勿呼叫這個方法。  

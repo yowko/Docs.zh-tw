@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508099"
 ---
 # <a name="working-with-nats-and-firewalls"></a>使用 NAT 與防火牆
 網路連線的用戶端與伺服器經常無法擁有直接且開放的通訊路徑。 網路上的端點電腦與中繼電腦都會針對封包進行篩選、路由、分析與轉換。 網路位址轉譯 (NAT) 與防火牆都是能夠參與網路通訊的常見中繼應用程式範例。  

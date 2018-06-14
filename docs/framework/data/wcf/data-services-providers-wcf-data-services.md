@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358875"
 ---
 # <a name="data-services-providers-wcf-data-services"></a>資料服務提供者 (WCF 資料服務)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 將資料公開為支援多個提供者模型[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要。 本主題所提供的資訊能讓您針對您的資料來源，選擇最適合的 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 提供者。  

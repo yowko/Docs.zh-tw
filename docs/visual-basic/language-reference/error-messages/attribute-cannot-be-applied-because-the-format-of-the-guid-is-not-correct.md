@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587556"
 ---
 # <a name="39ltattributegt39-cannot-be-applied-because-the-format-of-the-guid-39ltnumbergt39-is-not-correct"></a>&#39;&lt;屬性&gt;&#39;無法套用，因為 GUID 的格式&#39;&lt;數目&gt;&#39;不正確
 A`COMClassAttribute`屬性區塊指定全域唯一識別碼 (GUID) 的 guid 不符合為適當格式。 `COMClassAttribute` 使用 Guid 來唯一識別類別、 介面和建立事件。  

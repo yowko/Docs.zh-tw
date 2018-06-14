@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352635"
 ---
 # <a name="referential-integrity-constraint"></a>參考完整性條件約束
 A*參考完整性條件約束*實體資料模型 (EDM) 中是類似於關聯式資料庫中的參考完整性條件約束。 從資料庫資料表資料行 （或資料行） 都可以參考另一個資料表的主索引鍵的方式相同[屬性](../../../../docs/framework/data/adonet/property.md)（或屬性） 的[實體類型](../../../../docs/framework/data/adonet/entity-type.md)可以參考[實體索引鍵](../../../../docs/framework/data/adonet/entity-key.md)另一個實體類型。 參考的實體類型稱為*主要端點*條件約束。 參考主要端點的實體類型稱為*相依端點*條件約束。  

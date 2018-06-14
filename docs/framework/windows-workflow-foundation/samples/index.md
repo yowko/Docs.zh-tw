@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517354"
 ---
 # <a name="windows-workflow-wf-samples"></a>Windows Workflow (WF) 範例
 這些範例的 Windows Workflow Foundation (WF) 的各種層面提供指示。  

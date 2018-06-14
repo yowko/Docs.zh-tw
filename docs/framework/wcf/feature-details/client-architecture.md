@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494087"
 ---
 # <a name="client-architecture"></a>用戶端架構
 應用程式會使用 Windows Communication Foundation (WCF) 用戶端物件來叫用服務作業。 本主題討論 WCF 用戶端物件、 WCF 用戶端通道，以及其基礎通道架構的關聯性。 WCF 用戶端物件的基本概觀，請參閱[WCF 用戶端概觀](../../../../docs/framework/wcf/wcf-client-overview.md)。 如需通道層的詳細資訊，請參閱[擴充通道層](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md)。  

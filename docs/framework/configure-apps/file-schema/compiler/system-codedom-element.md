@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744222"
 ---
 # <a name="ltsystemcodedomgt-element"></a>&lt;system.codedom&gt;項目
 指定可用語言提供者的編譯器組態設定。  

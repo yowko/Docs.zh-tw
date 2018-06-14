@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2491b700e8fac512f0d782a42e30ae3114e93c3f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455542"
 ---
 # <a name="icorprofilerinfogetmodulemetadata-method"></a>ICorProfilerInfo::GetModuleMetaData 方法
 取得對應至指定的模組的中繼資料介面執行個體。  
@@ -55,7 +56,7 @@ HRESULT GetModuleMetaData(
  某些模組 （例如資源模組） 會有任何中繼資料。 在這些情況下，`GetModuleMetaData`會傳回 S_FALSE 和中的 null 的 HRESULT 值 *`ppOut`。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

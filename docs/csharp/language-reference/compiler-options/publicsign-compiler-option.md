@@ -12,6 +12,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472821"
 ---
 # <a name="-publicsign-c-compiler-options"></a>-publicsign (C# 編譯器選項)
 

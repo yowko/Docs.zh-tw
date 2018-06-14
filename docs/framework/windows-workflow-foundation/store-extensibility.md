@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517916"
 ---
 # <a name="store-extensibility"></a>存放區擴充性
 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 可讓使用者提升應用程式專屬的自訂屬性，用來查詢持續性資料庫中的執行個體。 提升屬性的動作會讓值用於資料庫中的特殊檢視表。 這些提升屬性 (可用於使用者查詢中的屬性) 可以屬於簡單型別 (例如 Int64、GUID、String 及 DateTime)，也可以屬於序列化的二進位型別 (byte[])。  

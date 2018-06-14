@@ -29,6 +29,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605286"
 ---
 # <a name="type-list-visual-basic"></a>類型清單 (Visual Basic)
 指定*型別參數*如*泛型*程式設計項目。 以逗號分隔多個參數。 以下是一個型別參數的語法。  

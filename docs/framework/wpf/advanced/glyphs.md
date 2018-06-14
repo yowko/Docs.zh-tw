@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543062"
 ---
 # <a name="glyphs"></a>字符
 圖像 （glyph） 是字元的要在螢幕上繪製的低階描述。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 可直接存取圖像 （glyph） 的客戶想要攔截，並將保存完成格式化後的文字。  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571393"
 ---
 # <a name="member-design-guidelines"></a>成員設計方針
 方法、 屬性、 事件、 建構函式，以及欄位統稱為成員。 成員是最終 framework 功能向架構的使用者。  

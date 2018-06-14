@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589175"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>XML 序列化程式產生器工具 (Sgen.exe)
 XML 序列化程式產生器會為指定組件中的型別建立 XML 序列化 (Serialization) 組件，以改善 <xref:System.Xml.Serialization.XmlSerializer> 在序列化或還原序列化指定型別物件時的啟動效能。  
@@ -28,7 +29,7 @@ sgen [options]
 |**/help 或 /?**|顯示工具的命令語法和選項。|  
 |**/k**[**eep**]|將產生的原始程式檔 (Source File) 和其他暫存檔案編譯成序列化組件之後，隱藏刪除這些檔案的動作。 這個選項可以用來判斷工具是否正在為特定的型別產生序列化程式碼。|  
 |**/n**[**ologo**]|隱藏顯示 Microsoft 程式啟始資訊。|  
-|**/o**[**ut**] **: * * * 路徑*|指定要在其中儲存所產生之組件的目錄。 **注意：**產生的組件名稱是由輸入組件的名稱加上 "xmlSerializers.dll" 所組成。|  
+|**/o**[**ut**] **: * * * 路徑*|指定要在其中儲存所產生之組件的目錄。 **注意：** 產生的組件名稱是由輸入組件的名稱加上 "xmlSerializers.dll" 所組成。|  
 |**/p**[**roxytypes**]|只為 XML Web 服務 Proxy 型別產生序列化程式碼。|  
 |**/r**[**eference**]**:***assemblyfiles*|指定要求 XML 序列化的型別所參考的組件。 這個選項接受以逗號分隔多個組件檔案。|  
 |**/s**[**ilent**]|隱藏顯示成功訊息。|  

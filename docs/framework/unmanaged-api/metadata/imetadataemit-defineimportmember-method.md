@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f9995fda70d1d5a3c19c30496de6c32f20015d47
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449386"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>IMetaDataEmit::DefineImportMember 方法
 會建立所指定成員的類型或模組，定義在目前的範圍之外，以及定義該參考的語彙基元的參考。  
@@ -78,11 +79,11 @@ HRESULT DefineImportMember (
 -   如果將會由編譯器或連結器稍後解決目標成員的父系，則傳遞`mdTokenNil`中`tkParent`。 僅限適用的案例是在全域函式或全域變數從最後會連結到目前模組的.obj 檔案匯入和中繼資料合併。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
- **程式庫：**做為 MSCorEE.dll 中的資源  
+ **程式庫：** 做為 MSCorEE.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

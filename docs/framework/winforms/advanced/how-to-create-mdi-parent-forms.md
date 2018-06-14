@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525187"
 ---
 # <a name="how-to-create-mdi-parent-forms"></a>如何：建立 MDI 父表單
 > [!IMPORTANT]

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520561"
 ---
 # <a name="control-help-using-tooltips"></a>使用工具提示來顯示控制項說明
 您可以使用<xref:System.Windows.Forms.ToolTip>元件，以顯示簡短、 特製化 Windows Form 上的個別控制項的說明訊息。 <xref:System.Windows.Forms.ToolTip>元件提供屬性來指定每個控制項在表單上顯示的文字。 如需有關使用<xref:System.Windows.Forms.ToolTip>元件，如此一來，請參閱[How to： 在設計階段的 Windows Form 上控制項的 設定工具提示](../../../../docs/framework/winforms/controls/how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)。 此外，您可以設定<xref:System.Windows.Forms.ToolTip>元件，使其沒有延遲顯示之前。 如需詳細資訊，請參閱[如何： 變更 Windows Form ToolTip 元件的延遲](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)。  

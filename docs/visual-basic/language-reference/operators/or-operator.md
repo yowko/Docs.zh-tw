@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604766"
 ---
 # <a name="or-operator-visual-basic"></a>Or 運算子 (Visual Basic)
 在兩個執行邏輯分離`Boolean`運算式或兩個數值運算式的位元分離。  

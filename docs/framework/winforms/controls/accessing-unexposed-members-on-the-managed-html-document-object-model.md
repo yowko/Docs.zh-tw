@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526429"
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>存取 Managed HTML 文件物件模型上未公開的成員
 Managed HTML 文件物件模型 (DOM) 包含一種類別稱為<xref:System.Windows.Forms.HtmlElement>會公開屬性、 方法和所有 HTML 項目都有通用的事件。 有時候，不過，您將需要存取的受管理的介面不會直接公開的成員。 本主題討論兩種方式來存取未公開的成員，包括[!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)]和網頁內所定義的 VBScript 函式。  

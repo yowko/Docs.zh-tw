@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562319"
 ---
 # <a name="how-to-load-an-image-as-a-thumbnail"></a>如何：將影像當做縮圖載入
 下列範例顯示如何載入<xref:System.Windows.Controls.Image>縮圖，以節省記憶體的應用程式。  

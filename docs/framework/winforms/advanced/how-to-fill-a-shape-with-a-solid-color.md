@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521319"
 ---
 # <a name="how-to-fill-a-shape-with-a-solid-color"></a>如何：使用純色填滿形狀
 若要利用純色填滿圖形時，建立<xref:System.Drawing.SolidBrush>物件，並再將其傳遞<xref:System.Drawing.SolidBrush>物件做為其中一個填滿方法的引數為<xref:System.Drawing.Graphics>類別。 下列範例會示範如何使用紅色的色彩填滿橢圓形。  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548216"
 ---
 # <a name="packaging-fonts-with-applications"></a>將字型與應用程式一起封裝
 本主題提供的概觀與封裝字型與您[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式。  
@@ -165,7 +166,7 @@ ms.lasthandoff: 05/04/2018
   
 -   **使用組件的絕對 URI： 標記法：** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式不允許您建立<xref:System.Windows.Media.FontFamily>物件以程式設計方式使用 「 組件:"一部分絕對[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]字型的參考。 例如，`"pack://application:,,,/resources/#Pericles Light"`是無效的字型參考。  
   
--   **自動字型內嵌︰**在設計階段期間，不支援搜尋應用程式所使用的字型，也不支援自動將字型內嵌於應用程式的資源中。  
+-   **自動字型內嵌︰** 在設計階段期間，不支援搜尋應用程式所使用的字型，也不支援自動將字型內嵌於應用程式的資源中。  
   
 -   **字型子集︰**[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式不支援為非固定文件建立字型子集。  
   

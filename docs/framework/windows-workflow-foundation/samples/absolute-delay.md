@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518381"
 ---
 # <a name="absolute-delay"></a>絕對延遲
 這個範例的主要案例是在工作流程應用程式中使用永久性計時器，以便延遲到指定的 <xref:System.DateTime> 為止。 這項作業與使用內建的 <xref:System.Activities.Statements.Delay> 活動不同，因為這樣做只會允許您延遲給定的 <xref:System.TimeSpan> (或分鐘/秒數)。  

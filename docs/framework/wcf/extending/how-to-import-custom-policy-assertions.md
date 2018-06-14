@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491149"
 ---
 # <a name="how-to-import-custom-policy-assertions"></a>HOW TO：匯入自訂原則判斷提示
 原則判斷提示描述服務端點的功能與需求。  用戶端應用程式可使用服務中繼資料中的原則判斷提示，來設定用戶端繫結或自訂服務端點的服務合約。  

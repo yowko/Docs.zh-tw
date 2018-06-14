@@ -6,9 +6,10 @@ ms.author: wiwagn
 ms.date: 09/21/2017
 ms.openlocfilehash: 4a9452f660cf80505848b2ec3491274cdc7c3f6c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568039"
 ---
 # <a name="designing-and-developing-containerized-apps-using-docker-and-microsoft-azure"></a>使用 Docker 和 Microsoft Azure 設計和開發容器化應用程式
 

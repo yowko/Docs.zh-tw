@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33473392"
 ---
 # <a name="servicemodel-registration-tool"></a>ServiceModel 註冊工具
 ServiceModel 註冊工具是一種命令列工具，可讓您在單一電腦上管理 ServiceModel 的註冊。 如需有關這項工具的詳細資訊，請參閱[ServiceModel 註冊工具 (ServiceModelReg.exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md)。

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512953"
 ---
 # <a name="customizing-the-workflow-design-experience"></a>自訂工作流程設計經驗
 在 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 中，設計自訂活動及重新裝載 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 的案例已大幅簡化。 無論開發或部署都變得更加容易、更有彈性。 索引鍵的基礎結構變更是，新的活動設計工具程式設計模型建置 Windows Presentation Foundation (WPF) 時。 因此，您可以非常輕易地透過宣告的方式定義活動設計工具，以及將 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] 重新裝載於其他應用程式中。 重新裝載時，可開發自訂運算式編輯器以支援 IntelliSense 或簡化的運算式網域。 使用 Windows Communication Foundation (WCF) 的整合變得更緊密使用工作流程服務。 自訂活動設計工具和模型項目樹狀可用來加強重新裝載工作流程設計工具中的設計階段經驗。  

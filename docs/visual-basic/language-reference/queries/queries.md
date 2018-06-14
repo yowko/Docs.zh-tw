@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604779"
 ---
 # <a name="queries-visual-basic"></a>查詢 (Visual Basic)
 Visual Basic 可讓您建立[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]您的程式碼中的運算式。  

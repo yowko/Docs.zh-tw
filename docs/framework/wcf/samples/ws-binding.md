@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804910"
 ---
 # <a name="ws-binding"></a>WS 繫結
 本節包含示範 Windows 服務繫結中 Windows Communication Foundation (WCF) 的範例。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322467"
 ---
 # <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-c"></a>如何：查詢一組資料夾中的位元組總數 (LINQ) (C#)
 此範例示範如何擷取所指定資料夾及其所有子資料夾中之所有檔案使用的位元組總數。  

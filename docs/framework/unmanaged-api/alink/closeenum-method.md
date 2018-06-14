@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e5c3185dc6d488223d5882f543f0c690d82261b5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402440"
 ---
 # <a name="closeenum-method"></a>CloseEnum 方法
 關閉指定的列舉型別，並釋放相關聯的資源。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648482"
 ---
 # <a name="how-to-access-xml-descendant-elements-visual-basic"></a>如何：存取 XML 子代項目 (Visual Basic)
 這個範例示範如何使用子代 axis 屬性來存取所有的 XML 項目具有指定的名稱的資料，而且包含在 XML 項目。 特別是，它會使用`Value`屬性集合中取得的第一個項目值`name`子代軸屬性傳回。 `name`子代 axis 屬性會取得名為的所有項目`name`包含在`contacts`物件。 此範例也會使用`phone`子代 axis 屬性來存取具名的所有下階`phone`包含在`contacts`物件。  

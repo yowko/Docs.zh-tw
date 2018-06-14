@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601910"
 ---
 # <a name="overloads-visual-basic"></a>Overloads (Visual Basic)
 指定屬性或程序會重新宣告一或多個同名的現有屬性或程序。  

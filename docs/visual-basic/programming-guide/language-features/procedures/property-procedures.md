@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656082"
 ---
 # <a name="property-procedures-visual-basic"></a>屬性程序 (Visual Basic)
 屬性程序是一系列的 Visual Basic 陳述式，以操作上模組、 類別或結構的自訂屬性。 屬性程序也稱為是*屬性存取子*。  

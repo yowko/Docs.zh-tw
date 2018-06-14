@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597482"
 ---
 # <a name="application-defined-or-object-defined-error"></a>應用程式定義或物件定義的錯誤
 發生應用程式定義或使用者定義的錯誤。 請檢查錯誤。  

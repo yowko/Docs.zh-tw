@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497538"
 ---
 # <a name="secure-sessions"></a>安全工作階段
 保證傳送的順序來接收訊息的可靠工作階段是一項功能的 Windows Communication Foundation (WCF)。 本節中的主題將就建立可靠工作階段時要考量的安全性影響提供說明。 如需可靠工作階段的詳細資訊，請參閱[Sessions<](../../../../docs/framework/wcf/using-sessions.md)。  

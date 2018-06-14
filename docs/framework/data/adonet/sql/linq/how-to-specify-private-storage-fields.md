@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361594"
 ---
 # <a name="how-to-specify-private-storage-fields"></a>如何：指定私用儲存欄位
 使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>屬性<xref:System.Data.Linq.Mapping.DataAttribute>屬性來指定基礎儲存欄位的名稱。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578855"
 ---
 # <a name="guidelines-for-collections"></a>集合方針
 可以被視為特別設計用來管理群組物件都有某些共同特性的任何類型的集合。 這幾乎都適合實作這類類型<xref:System.Collections.IEnumerable>或<xref:System.Collections.Generic.IEnumerable%601>，因此本節中，我們只考慮實作一或兩個介面的型別是集合。  

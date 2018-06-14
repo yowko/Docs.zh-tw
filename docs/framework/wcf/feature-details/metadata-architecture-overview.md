@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496889"
 ---
 # <a name="metadata-architecture-overview"></a>中繼資料架構概觀
 Windows Communication Foundation (WCF) 提供豐富的基礎結構的匯出、 發行、 擷取和匯入服務中繼資料。 WCF 服務使用中繼資料描述如何與服務端點互動的讓 Svcutil.exe 之類的工具，可以自動產生用戶端程式碼來存取服務。  

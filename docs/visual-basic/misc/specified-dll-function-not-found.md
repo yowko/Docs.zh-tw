@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639751"
 ---
 # <a name="specified-dll-function-not-found"></a>找不到所指定的 DLL 函式
 在使用者程式庫參考中找到動態連結程式庫 (DLL)，但在 DLL 內找不到指定的 DLL 函式。  

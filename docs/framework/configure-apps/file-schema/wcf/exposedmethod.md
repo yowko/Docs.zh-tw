@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747378"
 ---
 # <a name="ltexposedmethodgt"></a>&lt;exposedMethod&gt;
 表示 COM+ 方法，這個方法會在 COM+ 元件上的介面公開為 Web 服務時公開。  

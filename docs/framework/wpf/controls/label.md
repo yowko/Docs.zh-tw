@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553724"
 ---
 # <a name="label"></a>ThisAddIn
 <xref:System.Windows.Controls.Label> 控制項通常會提供資訊清單中的[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。  在過去，<xref:System.Windows.Controls.Label>已包含僅限文字，但因為<xref:System.Windows.Controls.Label>隨附[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]是<xref:System.Windows.Controls.ContentControl>，它可以包含任一個文字或<xref:System.Windows.UIElement>。  

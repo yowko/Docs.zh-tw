@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501212"
 ---
 # <a name="basic-data-contract"></a>基本資料合約
 這個範例會示範如何實作資料合約。 資料合約可以讓您在服務間來回傳遞結構化資料。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)但會使用複數，而不是基本數值類型。  

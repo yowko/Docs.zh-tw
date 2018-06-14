@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489979"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>驗證的延伸保護概觀
 驗證的延伸保護有助於防範中間人 (MITM) 攻擊，以免用戶端的認證遭攻擊者攔截後再轉送至伺服器。  

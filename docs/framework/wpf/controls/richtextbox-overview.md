@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557520"
 ---
 # <a name="richtextbox-overview"></a>RichTextBox 概觀
 <xref:System.Windows.Controls.RichTextBox>控制項可讓您顯示或編輯包括段落、 影像、 資料表及多個非固定格式內容。 本主題將介紹<xref:System.Windows.Controls.TextBox>類別，並提供有關如何使用中的範例[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和 C#。  
@@ -27,7 +28,7 @@ ms.lasthandoff: 05/04/2018
 |<xref:System.Windows.Controls.TextBox>|[是]|是|否|否。|  
 |<xref:System.Windows.Controls.RichTextBox>|[是]|是|是|[是]|  
   
- **注意：**雖然<xref:System.Windows.Controls.TextBox>不支援格式化相關的命令，例如<xref:System.Windows.Documents.EditingCommands.ToggleBold%2A>(Ctr + B)，例如許多基本命令支援這兩個控制項<xref:System.Windows.Documents.EditingCommands.MoveToLineEnd%2A>。  
+ **注意：** 雖然<xref:System.Windows.Controls.TextBox>不支援格式化相關的命令，例如<xref:System.Windows.Documents.EditingCommands.ToggleBold%2A>(Ctr + B)，例如許多基本命令支援這兩個控制項<xref:System.Windows.Documents.EditingCommands.MoveToLineEnd%2A>。  
   
  稍後會更詳細說明上表中的功能。  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 05/04/2018
   
  項目要<xref:System.Windows.Documents.Paragraph>和<xref:System.Windows.Documents.Bold>判斷如何內容內<xref:System.Windows.Controls.RichTextBox>隨即出現。 當使用者編輯<xref:System.Windows.Controls.RichTextBox>內容，他們會變更此非固定格式內容。 若要深入了解非固定格式內容的功能及如何與其搭配運作，請參閱[非固定格式文件概觀](../../../../docs/framework/wpf/advanced/flow-document-overview.md)。  
   
- **注意：**非固定格式內容內<xref:System.Windows.Controls.RichTextBox>行為與其他控制項中所包含的非固定格式內容的完全相同。 例如，沒有資料行中的<xref:System.Windows.Controls.RichTextBox>，因此沒有自動調整大小行為。 此外，內建的功能，例如搜尋、 檢視模式、 頁面導覽、 和縮放內沒有<xref:System.Windows.Controls.RichTextBox>。  
+ **注意：** 非固定格式內容內<xref:System.Windows.Controls.RichTextBox>行為與其他控制項中所包含的非固定格式內容的完全相同。 例如，沒有資料行中的<xref:System.Windows.Controls.RichTextBox>，因此沒有自動調整大小行為。 此外，內建的功能，例如搜尋、 檢視模式、 頁面導覽、 和縮放內沒有<xref:System.Windows.Controls.RichTextBox>。  
   
 <a name="realtime_spellechecking"></a>   
 ## <a name="real-time-spell-checking"></a>即時拼字檢查  

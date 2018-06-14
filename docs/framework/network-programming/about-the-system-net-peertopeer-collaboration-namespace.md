@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394039"
 ---
 # <a name="about-the-systemnetpeertopeercollaboration-namespace"></a>關於 System.Net.PeerToPeer.Collaboration 命名空間
 <xref:System.Net.PeerToPeer.Collaboration> 命名空間提供使用對等共同作業基礎結構，可用來實作對等共同作業活動的類別和 API。  

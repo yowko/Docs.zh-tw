@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582196"
 ---
 # <a name="getting-information-about-the-computer-visual-basic"></a>取得電腦的相關資訊 (Visual Basic)
 `My.Computer.Info` 物件所提供的屬性可用來取得電腦的記憶體、已載入組件、名稱和作業系統的相關資訊。  

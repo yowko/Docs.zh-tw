@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506753"
 ---
 # <a name="firewall-instructions"></a>防火牆指示
 您必須啟用數個連接埠或在防火牆中的程式，讓 Windows Communication Foundation (WCF) 範例才能運作。 許多範例都使用範圍 8000-8003 中的連接埠以及連接埠 9000 進行通訊。 防火牆預設為開啟狀態，可防止對這些連接埠的存取。 若要為範例啟用防火牆，請視您的需求和安全性環境，完成下列其中一個程序：  

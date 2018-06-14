@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654118"
 ---
 # <a name="structures-and-classes-visual-basic"></a>結構和類別 (Visual Basic)
 Visual Basic 統一的語法結構和類別，因為這兩個實體支援的大部分相同的功能。 不過，另外還有結構和類別之間的重要差異。  

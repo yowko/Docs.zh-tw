@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500073"
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>HOW TO：實作非同步服務作業
 Windows Communication Foundation (WCF) 應用程式中，服務作業可以實作非同步或同步不需規定用戶端如何呼叫它。 例如，非同步服務作業可以利用同步方式呼叫，而同步服務作業可以透過非同步方式呼叫。 如需示範如何在用戶端應用程式中以非同步方式呼叫作業的範例，請參閱[如何： 非同步呼叫服務作業](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。 如需有關同步和非同步作業的詳細資訊，請參閱[設計服務合約](../../../docs/framework/wcf/designing-service-contracts.md)和[同步和非同步作業](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)。 本主題描述非同步服務作業的基本結構，程式碼尚未完成。 如需服務及用戶端的完整範例請參閱[非同步](http://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7)。  

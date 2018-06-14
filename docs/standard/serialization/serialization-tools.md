@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581403"
 ---
 # <a name="serialization-tools"></a>序列化工具
 本章節內容包含序列化工具的詳細資訊。 您可以從命令列執行所有工具。  

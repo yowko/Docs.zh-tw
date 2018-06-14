@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761502"
 ---
 # <a name="comparison-expressions"></a>比較運算式
 比較運算式會檢查常數值、屬性值或方法結果是否等於、不等於、大於或小於另一個值。 如果特定比較對於 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 無效，將會擲回例外狀況。 所有的比較 (隱含和明確) 都會要求所有元件在資料來源內都是可以比較的。 `Where` 子句中經常會使用比較運算式來限制查詢結果。  

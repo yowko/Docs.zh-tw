@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643935"
 ---
 # <a name="how-to-transform-the-shape-of-an-xml-tree-visual-basic"></a>如何： 轉換 XML 樹狀結構 (Visual Basic) 的圖形
 XML 文件的「組織結構」會參考其項目名稱、屬性名稱，及其階層的特性。  

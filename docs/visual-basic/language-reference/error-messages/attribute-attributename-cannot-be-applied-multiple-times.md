@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584855"
 ---
 # <a name="attribute-39ltattributenamegt39-cannot-be-applied-multiple-times"></a>屬性&#39; &lt;attributename&gt; &#39;不可套用多次
 屬性只能套用一次。 `AttributeUsage`屬性會決定是否可以多次套用屬性。  

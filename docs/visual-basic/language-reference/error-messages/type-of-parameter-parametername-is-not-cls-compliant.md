@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596053"
 ---
 # <a name="type-of-parameter-39ltparameternamegt39-is-not-cls-compliant"></a>參數的型別&#39; &lt;parametername&gt; &#39;不符合 CLS 標準
 程序標示為`<CLSCompliant(True)>`但會宣告參數的型別標示為`<CLSCompliant(False)>`、 未標示，或因為它是不相容的類型而不符資格。  

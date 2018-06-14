@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743091"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>應用程式定義域和組件 HOW TO 主題
 下列各節包含使用應用程式定義域和組件設計程式之概念文件中所有「如何」主題的連結。  

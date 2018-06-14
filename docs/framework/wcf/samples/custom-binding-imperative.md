@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500665"
 ---
 # <a name="custom-binding-imperative"></a>命令式自訂繫結
 此範例示範如何撰寫命令式程式碼來定義和使用自訂繫結，而不使用組態檔或 Windows Communication Foundation (WCF) 產生用戶端。 這個範例會結合 HTTP 傳輸和可靠工作階段通道所提供的功能來建立可靠的 HTTP 架構繫結。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，用來實作計算機服務。  

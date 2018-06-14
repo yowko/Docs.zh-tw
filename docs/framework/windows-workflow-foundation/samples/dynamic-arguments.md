@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517974"
 ---
 # <a name="dynamic-arguments"></a>動態引數
 這個範例示範如何實作活動，由活動消費者 (而不是活動作者) 定義其引數。 其執行方式為覆寫執行階段建構活動中繼資料的方式。  

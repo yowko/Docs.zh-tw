@@ -42,6 +42,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579856"
 ---
 # <a name="the-regular-expression-object-model"></a>規則運算式物件模型
 <a name="introduction"></a> 本主題說明用來處理 .NET 規則運算式的物件模型。 它包含以下各節：  

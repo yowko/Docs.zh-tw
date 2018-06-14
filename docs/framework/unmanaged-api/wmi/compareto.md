@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: db4431da90842f4f96a0f09a2f28dc473d956ee3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460404"
 ---
 # <a name="compareto-function"></a>CompareTo 函式
 比較物件與另一個 Windows 管理物件。  
@@ -88,7 +89,7 @@ HRESULT CompareTo (
 |`WBEM_COMPARISON_INCLUDE_ALL` | 0 | 請考慮在比較中的所有功能。 |
 
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.idl  
   

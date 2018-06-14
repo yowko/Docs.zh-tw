@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525571"
 ---
 # <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用設計工具在 Windows Form DataGridView 控制項中啟用資料行重新調整順序
 檢視顯示 Windows Form 中的資料時<xref:System.Windows.Forms.DataGridView>控制項，使用者有時候想要比較的特定資料行中的值。 特別是如果使用者必須來回水平捲動以查看感興趣的資料行，這可以是資料行放在相隔在控制項中，如果很不方便。 您可以進行比較讓使用者重新排列資料行的資料行值更容易的工作。 當您啟用重新排列資料行時，使用者可以拖曳資料行標頭，使用滑鼠到新的位置移動資料行。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636509"
 ---
 # <a name="division-by-zero-visual-basic-run-time-error"></a>除數為零 (Visual Basic 執行階段錯誤)
 當做除數的運算式其值為零。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33471803"
 ---
 # <a name="endpoint-security-validation-and-authentication-failures"></a>端點：安全性驗證和驗證失敗數
 計數器名稱：安全性驗證和驗證失敗數  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572979"
 ---
 # <a name="framework-design-guidelines"></a>Framework 設計方針
 本節提供指導方針來設計文件庫，可擴充及.NET Framework 進行互動。 目標是要協助確保應用程式開發介面一致性和易用性藉由提供統一的程式設計模型，用於開發的程式語言無關的程式庫設計工具。 我們建議您開發的類別和擴充.NET Framework 的元件時，請遵循這些設計指導方針。 不一致的程式庫設計造成不良影響開發人員生產力，並讓採用受阻。  

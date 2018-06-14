@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326312"
 ---
 # <a name="advanced-query-techniques-linq-to-xml-c"></a>進階查詢技術 (LINQ to XML) (C#)
 本節提供更進階的 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢技術範例。  

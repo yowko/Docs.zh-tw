@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216007"
 ---
 # <a name="add-c-reference"></a>add (C# 參考)
 使用 `add` 內容關鍵字定義自訂事件存取子，以在用戶端程式碼訂閱[事件](../../../csharp/language-reference/keywords/event.md)時叫用。 如果提供自訂的 `add` 存取子，您也必須提供 [remove](../../../csharp/language-reference/keywords/remove.md) 存取子。  

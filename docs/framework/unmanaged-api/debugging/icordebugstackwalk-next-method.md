@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 367c43dc08722288dc3b32b5133f7770ffc3a27c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423100"
 ---
 # <a name="icordebugstackwalknext-method"></a>ICorDebugStackWalk::Next 方法
 移動[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)下一個畫面格的物件。  
@@ -48,7 +49,7 @@ HRESULT Next();
  `Next`方法往前移`ICorDebugStackWalk`物件呼叫框架，只有當執行階段可以回溯目前的框架。 否則，物件前進至下一步，執行階段可以回溯框架。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   

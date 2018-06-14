@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502930"
 ---
 # <a name="receivecontext-enabled-wcf-channels"></a>已啟用 ReceiveContext 的 WCF 通道
 這個範例示範具備 <xref:System.ServiceModel.Channels.ReceiveContext> 能力之 WCF 通道的用處。 這個範例會實作服務，以使用 NetMSMQ 通道尋找兩個數字的乘積。  

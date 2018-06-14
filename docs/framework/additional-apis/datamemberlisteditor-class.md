@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742045"
 ---
 # <a name="datamemberlisteditor-class"></a>DataMemberListEditor 類別
 
@@ -41,7 +42,7 @@ internal class DataMemberListEditor : UITypeEditor
   
 **組件：** System.Design （在 System.Design.dll)  
   
-**.NET framework 版本：**自 2.0 起可用。  
+**.NET framework 版本：** 自 2.0 起可用。  
   
 ## <a name="see-also"></a>另請參閱
 

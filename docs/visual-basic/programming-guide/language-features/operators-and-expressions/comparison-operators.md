@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655132"
 ---
 # <a name="comparison-operators-in-visual-basic"></a>Comparison Operators in Visual Basic
 比較運算子比較兩個運算式，並傳回`Boolean`值，表示其值的關聯性。 比較數值、 運算子、 用於比較字串和運算子比較物件有運算子。 本文件討論所有的三種類型的運算子。  

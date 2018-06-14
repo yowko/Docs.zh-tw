@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400207"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (組件繫結記錄檔檢視器)
 組件繫結記錄檔檢視器會顯示組件繫結的詳細資料。 這項資訊有助於診斷 .NET Framework 為何無法在執行階段找到組件。 這類失敗通常是因為組件部署至不正確的位置、原生映像已失效，或版本號碼或文化特定不符所致。 通用語言執行平台找不到組件，通常在應用程式中會顯示為 <xref:System.TypeLoadException>。  

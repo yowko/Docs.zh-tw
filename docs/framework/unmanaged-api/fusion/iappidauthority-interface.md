@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 819afec2c448e5f396ab54e2dde00c01da310b12
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33433746"
 ---
 # <a name="iappidauthority-interface"></a>IAppIdAuthority 介面
 提供方法，產生並比較應用程式的身分識別與參考的索引鍵。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/04/2018
 |`IAppIdAuthority::TextToReference`|取得的介面指標`IReferenceAppId`表示的指定的字串索引鍵參考的組件執行個體。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Isolation.h  
   

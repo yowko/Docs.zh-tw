@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493346"
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>HOW TO：使用 MMC 嵌入式管理單元來檢視憑證
 常見的認證類型是 X.509 憑證。 當建立安全服務或用戶端時，您可以藉由使用像是 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> 方法，指定用來當做用戶端或服務認證的憑證。 方法需要各種參數，例如儲存憑證的存放區，以及當搜尋憑證時要使用的值。 下列程序示範如何檢視電腦上的存放區，以尋找適當的憑證。 尋找憑證指紋的範例，請參閱[How to： 擷取憑證的指紋](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/04/2018
   
 10. 在**新增/移除嵌入式管理單元**對話方塊中，按一下 **確定**。  
   
-11. 在**主控台根目錄**視窗中，按一下 **憑證 （本機電腦）**以檢視憑證存放區的電腦。  
+11. 在**主控台根目錄**視窗中，按一下 **憑證 （本機電腦）** 以檢視憑證存放區的電腦。  
   
 12. 選擇性。 若要檢視您帳戶的憑證，請重複步驟 3 到 6。 在步驟 7，而不是選取**電腦帳戶**，按一下 **我的使用者帳戶**並重複步驟 8 到 10。  
   

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541342"
 ---
 # <a name="how-keyboard-input-works"></a>鍵盤輸入的運作方式
 Windows Forms 會引發鍵盤事件以回應 Windows 訊息，進而處理鍵盤輸入。 大部分的 Windows Forms 應用程式會藉由處理鍵盤事件來處理鍵盤輸入。 不過，您需要了解鍵盤訊息的運作方式，以便實作更進階的鍵盤輸入案例，例如在按鍵觸達控制項之前先行攔截。 本主題說明 Windows Forms 可辨識的按鍵資料類型，並提供鍵盤訊息的路由方式概觀。 如需鍵盤事件的相關資訊，請參閱[使用鍵盤事件](../../../docs/framework/winforms/using-keyboard-events.md)。  
@@ -37,7 +38,7 @@ Windows Forms 會引發鍵盤事件以回應 Windows 訊息，進而處理鍵盤
 |動作|相關方法|注意|  
 |------------|--------------------|-----------|  
 |檢查命令按鍵，例如快速鍵或功能表捷徑。|<xref:System.Windows.Forms.Control.ProcessCmdKey%2A>|這個方法會處理命令按鍵，其優先於一般按鍵。 如果此方法傳回 `true`，就不會發送按鍵訊息，也不會發生按鍵事件。 如果它傳回`false`，<xref:System.Windows.Forms.Control.IsInputKey%2A>稱為`.`|  
-|檢查是否有需要前置處理的特殊按鍵或一般字元鍵應該引發<xref:System.Windows.Forms.Control.KeyDown>事件並分派至控制項。|<xref:System.Windows.Forms.Control.IsInputKey%2A>|如果此方法會傳回`true`，表示控制項是正規字元和<xref:System.Windows.Forms.Control.KeyDown>就會引發事件。 如果`false`，<xref:System.Windows.Forms.Control.ProcessDialogKey%2A>呼叫。 **注意：**為了確保取得控制項的索引鍵或索引鍵的組合，您可以處理<xref:System.Windows.Forms.Control.PreviewKeyDown>事件以及組<xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A>的<xref:System.Windows.Forms.PreviewKeyDownEventArgs>至`true`針對您想要的索引鍵。|  
+|檢查是否有需要前置處理的特殊按鍵或一般字元鍵應該引發<xref:System.Windows.Forms.Control.KeyDown>事件並分派至控制項。|<xref:System.Windows.Forms.Control.IsInputKey%2A>|如果此方法會傳回`true`，表示控制項是正規字元和<xref:System.Windows.Forms.Control.KeyDown>就會引發事件。 如果`false`，<xref:System.Windows.Forms.Control.ProcessDialogKey%2A>呼叫。 **注意：** 為了確保取得控制項的索引鍵或索引鍵的組合，您可以處理<xref:System.Windows.Forms.Control.PreviewKeyDown>事件以及組<xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A>的<xref:System.Windows.Forms.PreviewKeyDownEventArgs>至`true`針對您想要的索引鍵。|  
 |檢查導覽鍵 (ESC、TAB、Return 或方向鍵)。|<xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|這個方法會處理運用控制項內特殊功能的實體按鍵，例如在控制項與其父代之間切換焦點。 直接控制權不會處理索引鍵，如果<xref:System.Windows.Forms.Control.ProcessDialogKey%2A>，依此類推到階層中的最上層控制項的父控制項上呼叫。 如果此方法傳回 `true`，則已完成前置處理，而不會產生按鍵事件。 如果它傳回`false`、<xref:System.Windows.Forms.Control.KeyDown>就會發生事件。|  
   
 ### <a name="preprocessing-for-a-keypress-event"></a>KeyPress 事件前置處理  
@@ -61,7 +62,7 @@ Windows Forms 會引發鍵盤事件以回應 Windows 訊息，進而處理鍵盤
   
 |工作|方法|  
 |----------|------------|  
-|攔截導覽鍵，並引發<xref:System.Windows.Forms.Control.KeyDown>事件。 例如，您希望在文字方塊中處理 TAB 和 Return 鍵。|覆寫 <xref:System.Windows.Forms.Control.IsInputKey%2A>。 **注意：**或者，您可以處理<xref:System.Windows.Forms.Control.PreviewKeyDown>事件以及組<xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A>的<xref:System.Windows.Forms.PreviewKeyDownEventArgs>至`true`針對您想要的索引鍵。|  
+|攔截導覽鍵，並引發<xref:System.Windows.Forms.Control.KeyDown>事件。 例如，您希望在文字方塊中處理 TAB 和 Return 鍵。|覆寫 <xref:System.Windows.Forms.Control.IsInputKey%2A>。 **注意：** 或者，您可以處理<xref:System.Windows.Forms.Control.PreviewKeyDown>事件以及組<xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A>的<xref:System.Windows.Forms.PreviewKeyDownEventArgs>至`true`針對您想要的索引鍵。|  
 |在控制項上執行特殊輸入或導覽處理。 例如，您想使用清單控制項中的方向鍵來變更所選的項目。|覆寫 <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|  
 |攔截導覽鍵，並引發<xref:System.Windows.Forms.Control.KeyPress>事件。 例如，在微調方塊控制項中，您想要多次按方向鍵以加快項目的進度。|覆寫 <xref:System.Windows.Forms.Control.IsInputChar%2A>。|  
 |執行特殊處理的輸入或瀏覽期間<xref:System.Windows.Forms.Control.KeyPress>事件。 例如，在清單控制項中按住 "r" 按鍵，可略過以字母 r 開頭的項目。|覆寫 <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  

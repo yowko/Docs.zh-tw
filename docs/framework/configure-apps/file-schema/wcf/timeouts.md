@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752997"
 ---
 # <a name="lttimeoutsgt"></a>&lt;逾時&gt;
 表示組態項目，指定允許服務主機開啟或關閉的時間間隔。  

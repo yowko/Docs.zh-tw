@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318220"
 ---
 # <a name="members-c-programming-guide"></a>成員 (C# 程式設計手冊)
 類別和結構的成員可表示其資料與行為。 類別的成員包含在所有類別中宣告的成員，以及在其繼承階層架構之所有類別中宣告的所有成員 (建構函式和完成項除外)。 基底類別中的私用成員可繼承衍生類別，但卻無法從衍生類別進行存取。  

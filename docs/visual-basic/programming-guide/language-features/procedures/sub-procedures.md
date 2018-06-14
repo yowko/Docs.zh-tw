@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652561"
 ---
 # <a name="sub-procedures-visual-basic"></a>Sub 程序 (Visual Basic)
 A`Sub`程序是一系列的 Visual Basic 陳述式加上`Sub`和`End Sub`陳述式。 `Sub`程序執行的工作，並再將控制權傳回給呼叫的程式碼，但不會傳回值，呼叫程式碼。  

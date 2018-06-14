@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598149"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out (泛型修飾詞) (Visual Basic)
 泛型型別參數`Out`關鍵字可讓您指定的型別是 covariant。  

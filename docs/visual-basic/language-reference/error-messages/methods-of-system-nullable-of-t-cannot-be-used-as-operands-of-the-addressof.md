@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594116"
 ---
 # <a name="methods-of-39systemnullableof-t39-cannot-be-used-as-operands-of-the-39addressof39-operator"></a>方法的&#39;System.Nullable (Of T)&#39;不能做為運算元的&#39;AddressOf&#39;運算子
 陳述式使用`AddressOf`運算子和運算元的程序表示<xref:System.Nullable%601>結構。  

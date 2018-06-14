@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586737"
 ---
 # <a name="input-past-end-of-file"></a>輸入超過檔案結尾
 任一`Input`讀取陳述式是空的檔案，或其中一個會使用所有的資料，或您使用`EOF`針對二進位存取所開啟的檔案具有函式。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508813"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate 與 UriTemplateTable
 Web 開發人員需要能夠描述其服務所回應的 URI 形式與配置。 Windows Communication Foundation (WCF) 會加入兩個新的類別，讓開發人員掌控其 Uri。 <xref:System.UriTemplate> 和<xref:System.UriTemplateTable>WCF 中會形成 URI 為基礎的分派引擎的基礎。 這些類別也能在他們自己，可讓開發人員充分運用範本與 URI 對應機制而不需要實作 WCF 服務。  

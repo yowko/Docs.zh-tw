@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647757"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>有效率地使用資料類型 (Visual Basic)
 指派給未宣告的變數和變數宣告為不具有資料類型的`Object`資料型別。 這樣可以輕鬆撰寫程式快速，但是它可能會使程式執行速度變慢。  

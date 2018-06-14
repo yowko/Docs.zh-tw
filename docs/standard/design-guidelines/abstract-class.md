@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570535"
 ---
 # <a name="abstract-class-design"></a>抽象類別設計
 **X 不**抽象型別中定義公用或受保護的內部建構函式。  

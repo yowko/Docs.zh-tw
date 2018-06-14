@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804472"
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>HOW TO：建立自訂用戶端身分識別驗證器
 *識別*功能的 Windows Communication Foundation (WCF) 可讓用戶端預先指定預期的服務身分識別。 每當伺服器向用戶端驗證自身時，就會比對預期身分識別來檢查身分識別  (如身分識別，以及它的運作方式的說明，請參閱[服務識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。)  

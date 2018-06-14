@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760098"
 ---
 # <a name="modifying-dataviews"></a>修改 DataView
 您可以使用 <xref:System.Data.DataView> 加入、刪除或修改基底資料表中的資料列。 能夠使用**DataView**來修改基礎資料表中的資料由設定其中的三個布林值屬性**DataView**。 這些屬性是 <xref:System.Data.DataView.AllowNew%2A>、<xref:System.Data.DataView.AllowEdit%2A> 和 <xref:System.Data.DataView.AllowDelete%2A>。 它們會設定為**true**預設。  

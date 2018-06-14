@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585563"
 ---
 # <a name="bad-file-name-or-number"></a>不正確的檔名或數目
 嘗試存取指定的檔案時發生錯誤。 此錯誤的可能原因包括：  

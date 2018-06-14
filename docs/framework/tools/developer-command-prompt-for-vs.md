@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402024"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Visual Studio 的開發人員命令提示字元
 「Visual Studio 開發人員命令提示字元」會自動設定環境變數，讓您能夠輕鬆使用 .NET Framework 工具。 開發人員命令提示字元會隨 Visual Studio 的完整版本或 Community Edition 一起安裝， 但無法隨 Visual Studio 的 Express 版本一起安裝。  

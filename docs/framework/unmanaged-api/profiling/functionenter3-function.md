@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 466b90f814d267fb289b2804beccd58fc442e341
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451876"
 ---
 # <a name="functionenter3-function"></a>FunctionEnter3 函式
 通知分析工具控制會傳遞至函數。  
@@ -47,7 +48,7 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
 -   結束時，您必須還原堆疊取出關閉推入其呼叫端的所有參數。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl  
   
