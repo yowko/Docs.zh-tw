@@ -12,13 +12,13 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33390730"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>.NET 原生 App 中的執行階段例外狀況
-因為偵錯和發行組態完全不同，所以請務必在目標平台上測試通用 Windows 平台 App 的發行組建。 根據預設，偵錯組態會使用 .NET 核心執行階段來編譯 App，但此發行組態會使用 .NET 原生將 App 編譯為原生程式碼。  
+因為偵錯和發行組態完全不同，所以請務必在目標平台上測試通用 Windows 平台 App 的發行組建。 根據預設，偵錯組態會使用 .NET Core 執行階段來編譯 App，但此發行組態會使用 .NET 原生將 App 編譯為原生程式碼。  
   
 > [!IMPORTANT]
 >  如需處理 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)、[MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) 和 [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 這三項您在測試應用程式發行版本時可能遇到之例外狀況的資訊，請參閱[使用者入門](../../../docs/framework/net-native/getting-started-with-net-native.md)主題中的「步驟 4：手動解決遺失的中繼資料」，以及 [反映和 .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md) 和[執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。  
   
 ## <a name="debug-and-release-builds"></a>偵錯與發行組建  
- 當偵錯組建針對 .NET 核心執行階段執行時，它尚未被編譯為原生程式碼。 這使得此執行階段平常提供的所有服務可用於您的 App。  
+ 當偵錯組建針對 .NET Core 執行階段執行時，它尚未被編譯為原生程式碼。 這使得此執行階段平常提供的所有服務可用於您的 App。  
   
  相反地，發行組建會編譯為其目標平台的原生程式碼、移除大部分外部執行階段和程式庫的相依性，以及徹底最佳化程式碼，以追求最大效能。  
   

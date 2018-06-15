@@ -57,7 +57,7 @@ Microservices 架構是進階的方法，您可以使用全新或改良朝雲端
 
 Microservices 架構成為分散式和大型或複雜關鍵任務應用程式為基礎的自發的服務形式的多個獨立子系統的慣用的方法。 在 microservices 基礎架構中，應用程式會建立可以是獨立開發、 測試、 版本設定，部署，以及調整的服務集合。 這可包括任何相關的自發每個資料庫微服務。
 
-您可以使用.NET 核心實作 microservices 架構的詳細檢視，請參閱可下載 PDF 電子書[.NET microservices： 容器化的.NET 應用程式的架構](https://aka.ms/microservicesebook)。 本指南也可以使用[線上](../../microservices-architecture/index.md)。
+您可以使用.NET Core 實作 microservices 架構的詳細檢視，請參閱可下載 PDF 電子書[.NET microservices： 容器化的.NET 應用程式的架構](https://aka.ms/microservicesebook)。 本指南也可以使用[線上](../../microservices-architecture/index.md)。
 
 但即使是個 microservices 提供功能強大的功能與獨立部署、 強式子系統界限和技術多樣化的案例-它們也會引發許多新的挑戰。 分散式應用程式開發，例如分散且獨立的資料模型中; 與挑戰相關達到復原 microservices; 之間的通訊最終一致性; 需要和操作的複雜性。 Microservices 導入相較於傳統的整合應用程式的複雜性較高的層的級。
 

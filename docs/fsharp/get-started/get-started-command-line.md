@@ -1,6 +1,6 @@
 ---
 title: '開始使用 F # 的命令列工具'
-description: '了解如何在 F # 在任何作業系統 （Windows、 macOs 或 Linux） 上使用.NET 核心 CLI 建置簡單的多專案方案。'
+description: '了解如何在 F # 在任何作業系統 （Windows、 macOs 或 Linux） 上使用.NET Core CLI 建置簡單的多專案方案。'
 ms.date: 03/26/2018
 ms.openlocfilehash: 35ec2313742a0b14c92f3de2662a16aff389b214
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
@@ -9,7 +9,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ms.locfileid: "33562033"
 ---
-# <a name="get-started-with-f-with-the-net-core-cli"></a>開始使用 F # 和.NET 核心 CLI
+# <a name="get-started-with-f-with-the-net-core-cli"></a>開始使用 F # 和.NET Core CLI
 
 本文件涵蓋如何您可以在任何作業系統上 （Windows、 macOS 或 Linux） 與.NET Core CLI 開始使用 F #。 它將經歷建置在多專案方案中的使用主控台應用程式會呼叫類別庫。
 
