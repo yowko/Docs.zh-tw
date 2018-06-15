@@ -1,1 +1,1 @@
-<span data-ttu-id="cf2ca-101">Visual Basic Runtime Library (位於 Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="cf2ca-101">Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>
+<span data-ttu-id="f8377-101">Visual Basic Runtime Library (位於 Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="f8377-101">Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>
