@@ -8,11 +8,12 @@ helpviewer_keywords:
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acf47b24446656a539400c825f3332a70d211dad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4097d82772c24bb0416bcb3f6d48bd1c7f101b95
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231433"
 ---
 # <a name="-target-visual-basic"></a>-目標 (Visual Basic)
 指定編譯器輸出的格式。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/04/2018
 |`-target:library`|會導致編譯器建立的動態連結程式庫 (DLL)。<br /><br /> 動態連結程式庫檔案被建立.dll 副檔名。<br /><br /> 除非另有指定`-out`選項，輸出檔名稱會採用第一個輸入檔的名稱。<br /><br /> 當建置 DLL，`Sub Main`程序就不需要。|  
 |`-target:module`|會導致編譯器產生的模組，可以加入組件。<br /><br /> .Netmodule 副檔名來建立輸出檔案。<br /><br /> .NET common language runtime 無法載入沒有組件的檔案。 不過，您可以將這類檔案合併的組件的組件資訊清單使用`-reference`。<br /><br /> 當其中一個模組中的程式碼參考另一個模組中的內部型別時，這兩個模組都必須加入至組件資訊清單使用`-reference`。<br /><br /> [-Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)選項從模組匯入中繼資料。|  
 |`-target:winexe`|可讓編譯器建立的可執行檔的 Windows 架構應用程式。<br /><br /> 可執行檔會建立副檔名為.exe。 Windows 應用程式是提供使用者介面，從[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]類別庫或搭配 Win32 Api。<br /><br /> 除非另有指定`-out`選項，輸出檔名稱會採用所包含的輸入檔的名稱`Sub Main`程序。<br /><br /> 只有一個`Sub Main`會編譯成.exe 檔的原始程式檔中所需的程序。 在您的程式碼已有多個類別`Sub Main`程序，使用`-main`編譯器選項以指定哪一個類別包含`Sub Main`程序|  
-|`-target:appcontainerexe`|可讓編譯器建立的可執行 windows 應用程式必須在應用程式容器中執行。 這個設定設計用於[!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]應用程式。<br /><br /> **Appcontainerexe**設定中的 [特性] 欄位設定一個位元[可攜式執行檔](http://go.microsoft.com/fwlink/p/?LinkId=236960)檔案。 此位元表示必須在應用程式容器中執行應用程式。 如果設定此位元時，發生錯誤`CreateProcess`方法嘗試啟動應用程式容器之外的應用程式。 此位元設定，除了 **-/target: appcontainerexe**相當於 **-/target: winexe**。<br /><br /> 可執行檔會建立副檔名為.exe。<br /><br /> 除非您另外指定使用`-out`選項，輸出檔名稱會採用所包含的輸入檔的名稱`Sub Main`程序。<br /><br /> 只有一個`Sub Main`會編譯成.exe 檔的原始程式檔中所需的程序。 如果您的程式碼會包含一個以上的類別具有`Sub Main`程序，使用`-main`編譯器選項以指定哪一個類別包含`Sub Main`程序|  
+|`-target:appcontainerexe`|可讓編譯器建立的可執行 windows 應用程式必須在應用程式容器中執行。 這個設定設計用於[!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]應用程式。<br /><br /> **Appcontainerexe**設定中的 [特性] 欄位設定一個位元[可攜式執行檔](https://msdn.microsoft.com/library/windows/desktop/ms680547(v=vs.85).aspx?id=19509)檔案。 此位元表示必須在應用程式容器中執行應用程式。 如果設定此位元時，發生錯誤`CreateProcess`方法嘗試啟動應用程式容器之外的應用程式。 此位元設定，除了 **-/target: appcontainerexe**相當於 **-/target: winexe**。<br /><br /> 可執行檔會建立副檔名為.exe。<br /><br /> 除非您另外指定使用`-out`選項，輸出檔名稱會採用所包含的輸入檔的名稱`Sub Main`程序。<br /><br /> 只有一個`Sub Main`會編譯成.exe 檔的原始程式檔中所需的程序。 如果您的程式碼會包含一個以上的類別具有`Sub Main`程序，使用`-main`編譯器選項以指定哪一個類別包含`Sub Main`程序|  
 |`-target:winmdobj`|會導致編譯器建立中繼檔案，您可以將它轉換成 Windows 執行階段二進位檔 (.winmd) 檔案。 .Winmd 檔案可供 JavaScript 和 c + + 程式，除了 managed 的語言程式。<br /><br /> 副檔名為.winmdobj 建立中繼檔案。<br /><br /> 除非您另外指定使用`-out`選項，輸出檔名稱會採用第一個輸入檔的名稱。 A`Sub Main`程序不是必要的。<br /><br /> .Winmdobj 檔案設計來做為輸入<xref:Microsoft.Build.Tasks.WinMDExp>匯出工具來產生 Windows 中繼資料 (WinMD) 檔案。 WinMD 檔案副檔名.winmd，且包含的程式碼，原始的程式庫和 WinMD 定義該 JavaScript、 c + + 和 Windows 執行階段使用。|  
   
  除非您指定`-target:module`，`-target`導致[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]来加入至輸出檔的組件資訊清單。  

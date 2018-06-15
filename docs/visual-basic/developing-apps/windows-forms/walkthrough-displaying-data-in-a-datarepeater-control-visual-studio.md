@@ -7,11 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - DataRepeater, walkthrough
 ms.assetid: 65dcdb95-6c3e-47cc-987d-190000f71653
-ms.openlocfilehash: d02668303f61f6a22f99bd7c86c41c9c139a716f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e64a819e9670a29e97140a32c81f5ff9006f83e
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231501"
 ---
 # <a name="walkthrough-displaying-data-in-a-datarepeater-control-visual-studio"></a>逐步解說：在 DataRepeater 控制項中顯示資料 (Visual Studio)
 本逐步解說提供在 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控制項中顯示繫結資料的基本完整情節。  
@@ -19,7 +20,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="prerequisite"></a>必要條件  
  這個逐步解說需要使用 Northwind 範例資料庫。  
   
- 如果您的開發電腦上沒有這個資料庫，則可以從 [Microsoft 下載中心](http://go.microsoft.com/fwlink/?LinkID=98088)下載。 如需指示，請參閱[下載範例資料庫](../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
+ 如果您在開發電腦上沒有這個資料庫，您可以從 Microsoft 下載中心下載它。 如需指示，請參閱[下載範例資料庫](../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
   
 ## <a name="overview"></a>總覽  
  本逐步解說的第一個部分包含四項主要工作：  

@@ -3044,25 +3044,26 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: 44bc5647fe740a4900b99794fe7af907e6328665
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 413765a6feebab3be8196552d11ade30bce28496
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231459"
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>很抱歉，我們不&#39;t 這個 Visual Basic 錯誤的詳細資訊
 很抱歉，我們沒有任何有關此錯誤的特定資訊。 您可以搜尋錯誤號碼與訊息文字，以在網路上尋找資訊。 或者，您可以要求其他開發人員使用這些論壇的其中一個：  
   
- [Visual Basic 語言](http://go.microsoft.com/fwlink/?LinkId=145963)  
+ [Visual Basic 語言](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vblanguage)  
  提供問題的 Visual Basic 語言語法和編譯器關於和一般討論區論壇。  
   
- [Visual Basic Interop and Upgrade](http://go.microsoft.com/fwlink/?LinkId=145966) (Visual Basic Interop 與升級)  
+ [Visual Basic Interop and Upgrade](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbinterop) (Visual Basic Interop 與升級)  
  提供有關問題的論壇，並升級為 Visual Basic 及使用互通性功能的問題。  
   
- [Visual Basic IDE](http://go.microsoft.com/fwlink/?LinkId=145971)  
+ [Visual Basic IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbide)  
  提供有關如何在 Visual Studio 環境中運作的問題的論壇。  
   
- [Visual Basic General](http://go.microsoft.com/fwlink/?LinkId=145973) (Visual Basic 一般)  
+ [Visual Basic General](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral) (Visual Basic 一般)  
  提供有關問題的論壇和 Visual Basic 不討論其他論壇中的問題。  
   
  [StackOverflow](http://stackoverflow.com/questions/tagged/vb.net)  
