@@ -5,5 +5,5 @@
 ### [使用 Visual Studio 2017 發行您的 Hello World 應用程式](../../core/tutorials/publishing-with-visual-studio.md)
 ## [在 Visual Studio 2017 中使用 C# 和 .NET Core 建置類別庫](../../core/tutorials/library-with-visual-studio.md)
 ### [在 Visual Studio 2017 中使用 .NET Core 測試類別庫](../../core/tutorials/testing-library-with-visual-studio.md)
-### [在 Visual Studio 2017 中透過 .NET Core 使用類別庫](../../core/tutorials/consuming-library-with-visual-studio.md)
+### [使用 Visual Studio 2017 中的 .NET Standard 程式庫](../../core/tutorials/consuming-library-with-visual-studio.md)
 ## [C# 與 Visual Studio Code 使用者入門](../../core/tutorials/with-visual-studio-code.md)

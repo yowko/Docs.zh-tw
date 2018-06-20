@@ -72,6 +72,8 @@
 ## [macOS 先決條件](core/macos-prerequisites.md)
 ## [Linux 必要條件](core/linux-prerequisites.md)
 ## [.NET Core 的新功能](core/whats-new/index.md)
+### [.NET Core 2.1 的新功能](core/whats-new/dotnet-core-2-1.md)
+### [.NET Core 2.0 的新功能](core/whats-new/dotnet-core-2-0.md)
 ## [教學課程](core/tutorials/index.md)
 ### [使用 Visual Studio 2017 在 Windows 上建置完整的 .NET Core 解決方案](core/tutorials/using-on-windows-full-solution.md)
 ### [在 macOS 上開始使用 .NET Core](core/tutorials/using-on-macos.md)
@@ -96,6 +98,7 @@
 ### [使用 CLI 工具部署應用程式](core/deploying/deploy-with-cli.md)
 ### [使用 Visual Studio 部署應用程式](core/deploying/deploy-with-vs.md)
 ### [使用跨平台工具建立 NuGet 套件](core/deploying/creating-nuget-packages.md)
+### [獨立部署執行階段向前復原](core/deploying/runtime-patch-selection.md)
 ### [執行階段套件存放區](core/deploying/runtime-store.md)
 ## [Docker](core/docker/index.md)
 ### [.NET 和 Docker 簡介](core/docker/intro-net-docker.md)
@@ -122,20 +125,23 @@
 ## [.NET Core SDK 概觀](core/sdk.md)
 ## [.NET Core CLI 工具](core/tools/index.md)
 ### [遙測](core/tools/telemetry.md)
+### [通用工具](core/tools/global-tools.md)
 ### [擴充性模型](core/tools/extensibility.md)
 ### [持續整合](core/tools/using-ci-with-cli.md)
 ### [自訂範本](core/tools/custom-templates.md)
 ### [dotnet](core/tools/dotnet.md)
 ### [dotnet build](core/tools/dotnet-build.md)
+### [dotnet build-server](core/tools/dotnet-build-server.md)
 ### [dotnet clean](core/tools/dotnet-clean.md)
 ### [dotnet help](core/tools/dotnet-help.md)
 ### [dotnet install-script](core/tools/dotnet-install-script.md)
 ### [dotnet migrate](core/tools/dotnet-migrate.md)
 ### [dotnet msbuild](core/tools/dotnet-msbuild.md)
 ### [dotnet new](core/tools/dotnet-new.md)
-### [dotnet nuget delete](core/tools/dotnet-nuget-delete.md)
-### [dotnet nuget locals](core/tools/dotnet-nuget-locals.md)
-### [dotnet nuget push](core/tools/dotnet-nuget-push.md)
+### dotnet nuget
+#### [dotnet nuget delete](core/tools/dotnet-nuget-delete.md)
+#### [dotnet nuget locals](core/tools/dotnet-nuget-locals.md)
+#### [dotnet nuget push](core/tools/dotnet-nuget-push.md)
 ### [dotnet pack](core/tools/dotnet-pack.md)
 ### [dotnet publish](core/tools/dotnet-publish.md)
 ### [dotnet restore](core/tools/dotnet-restore.md)
@@ -143,6 +149,11 @@
 ### [dotnet sln](core/tools/dotnet-sln.md)
 ### [dotnet store](core/tools/dotnet-store.md)
 ### [dotnet test](core/tools/dotnet-test.md)
+### dotnet tool
+#### [dotnet tool install](core/tools/dotnet-tool-install.md)
+#### [dotnet tool list](core/tools/dotnet-tool-list.md)
+#### [dotnet tool uninstall](core/tools/dotnet-tool-uninstall.md)
+#### [dotnet tool update](core/tools/dotnet-tool-update.md)
 ### [dotnet vstest](core/tools/dotnet-vstest.md)
 ### 專案修改命令
 #### 參考
@@ -155,6 +166,7 @@
 ### [global.json](core/tools/global-json.md)
 ## [.NET Core 其他工具](core/additional-tools/index.md)
 ### [WCF Web Service Reference Provider](core/additional-tools/wcf-web-service-reference-guide.md)
+### [dotnet-svcutil](core/additional-tools/dotnet-svcutil-guide.md)
 ### [XML 序列化程式產生器](core/additional-tools/xml-serializer-generator.md)
 ## [從 .NET Framework 移植](core/porting/index.md)
 ### [針對 .NET Core 組織專案](core/porting/project-structure.md)
@@ -215,10 +227,11 @@
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
 ## [C# 的新功能](csharp/whats-new/index.md)
-### [C# 7.2 的新功能](csharp/whats-new/csharp-7-2.md)
-### [C# 7.1 的新功能](csharp/whats-new/csharp-7-1.md)
-### [C# 7.0 的新功能](csharp/whats-new/csharp-7.md)
-### [C# 6 的新功能](csharp/whats-new/csharp-6.md)
+### [C# 7.3](csharp/whats-new/csharp-7-3.md)
+### [C# 7.2](csharp/whats-new/csharp-7-2.md)
+### [C# 7.1](csharp/whats-new/csharp-7-1.md)
+### [C# 7.0](csharp/whats-new/csharp-7.md)
+### [C# 6](csharp/whats-new/csharp-6.md)
 ### [C# 版本歷程記錄](csharp/whats-new/csharp-version-history.md)
 ### [語言和架構之間的關係](csharp/whats-new/relationships-between-language-and-library.md)
 <!-- End What's New -->
@@ -549,6 +562,7 @@
 ### [逐步解說：實作 COM 物件的繼承](visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
 
 ## [語言參考](visual-basic/language-reference/index.md)
+### [設定語言版本](visual-basic/language-reference/configure-language-version.md)
 ### [印刷樣式與程式碼慣例](visual-basic/language-reference/typographic-and-code-conventions.md)
 ### [Visual Basic 執行階段程式庫成員](visual-basic/language-reference/runtime-library-members.md)
 ### [關鍵字](visual-basic/language-reference/keywords/index.md)
@@ -1117,11 +1131,12 @@
 <!-- ML.NET Content -->
 # [ML.NET 指南](machine-learning/index.md)
 ## [教學課程](machine-learning/tutorials/index.md)
-### [情感分析 (分類)](machine-learning/tutorials/sentiment-analysis.md)
-### [計程車車費預測工具 (迴歸)](machine-learning/tutorials/taxi-fare.md)
+### [情感分析 (二元分類)](machine-learning/tutorials/sentiment-analysis.md)
+### [計程車車資預測工具 (迴歸)](machine-learning/tutorials/taxi-fare.md)
 ## [資源](machine-learning/resources/index.md)
 ### [機器學習服務字彙](machine-learning/resources/glossary.md)
-### [機器學習基本概念](machine-learning/resources/basics.md)
+### [機器學習服務基本概念](machine-learning/resources/basics.md)
+### [機器學習服務工作](machine-learning/resources/tasks.md)
 
 <!-- End ML.NET Content -->
 
