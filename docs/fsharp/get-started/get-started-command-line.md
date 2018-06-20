@@ -1,6 +1,6 @@
 ---
 title: '開始使用 F # 的命令列工具'
-description: '了解如何在 F # 在任何作業系統 （Windows、 macOs 或 Linux） 上使用.NET Core CLI 建置簡單的多專案方案。'
+description: '了解如何在 F # 在任何作業系統 （Windows、 macOs 或 Linux） 上使用.NET Core CLI 建置簡單的多專案方案'
 ms.date: 03/26/2018
 ms.openlocfilehash: 35ec2313742a0b14c92f3de2662a16aff389b214
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d

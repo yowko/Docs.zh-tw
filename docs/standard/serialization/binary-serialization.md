@@ -110,7 +110,7 @@ ms.locfileid: "33592611"
 - <xref:System.Data.DBConcurrencyException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
 - <xref:System.Data.DataException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
 - <xref:System.Data.DataSet?displayProperty=nameWithType>
-- <xref:System.Data.DataTable?displayProperty=nameWithType> （除非 RemotingFormat 設 SerializationFormat.Binary 在此情況下它可以只交換與.NET Core 2.1 和更新版本。）   
+- <xref:System.Data.DataTable?displayProperty=nameWithType>（除非 RemotingFormat 設 SerializationFormat.Binary 在此情況下它可以只交換與.NET Core 2.1 和更新版本。）    
 - <xref:System.Data.DeletedRowInaccessibleException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
 - <xref:System.Data.DuplicateNameException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
 - <xref:System.Data.EvaluateException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
