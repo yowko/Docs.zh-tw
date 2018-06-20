@@ -2,12 +2,12 @@
 title: 字串 (F#)
 description: "了解 F # 'string' 類型為 Unicode 字元序列所代表的不可變的文字。"
 ms.date: 05/16/2016
-ms.openlocfilehash: bdd1d1a542e70bcd95fce51e75d0c1ddffceb008
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 80c08f5b768dd826745e07b8c5726093050ab730
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564855"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207101"
 ---
 # <a name="strings"></a>字串
 
@@ -17,7 +17,7 @@ ms.locfileid: "33564855"
 `string`類型不可變的文字表示為 Unicode 字元序列。 `string` 是 `System.String` 在 .NET Framework 中的別名。
 
 ## <a name="remarks"></a>備註
-字串常值是以引號 （"） 字元分隔。 反斜線字元 (\)用來編碼某些特殊字元。 反斜線和在一起的下一個字元稱為*逸出序列*。 逸出序列支援 F # 字串常值會顯示下表中。
+字串常值是以引號 （"） 字元分隔。 反斜線字元 ( \\ ) 來編碼某些特殊字元。 反斜線和在一起的下一個字元稱為*逸出序列*。 逸出序列支援 F # 字串常值會顯示下表中。
 
 |字元|逸出序列|
 |---------|---------------|

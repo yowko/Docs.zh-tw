@@ -2,12 +2,12 @@
 title: 計算運算式 (F#)
 description: '了解如何建立方便的語法撰寫 F # 可以排序，合併使用控制流程建構和繫結中的計算。'
 ms.date: 05/16/2016
-ms.openlocfilehash: a4ddb3fde284452bc901c5270551611e43742c1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4995efc757d99a575ee9fad3abf0465a32398c44
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566609"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207429"
 ---
 # <a name="computation-expressions"></a>計算運算式
 
@@ -15,6 +15,7 @@ F # 中的計算運算式提供方便的語法撰寫，可以排序，並使用�
 
 
 ## <a name="built-in-workflows"></a>內建工作流程
+
 循序項運算式是計算運算式的範例是非同步工作流程和查詢運算式。 如需詳細資訊，請參閱[序列](sequences.md)，[非同步工作流程](asynchronous-workflows.md)，和[查詢運算式](query-expressions.md)。
 
 某些功能通用於循序項運算式與非同步工作流程，並說明計算運算式的基本語法：

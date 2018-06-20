@@ -4,16 +4,16 @@ description: 了解如何偵測和解決時間的弱點可能會使用加密區�
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: a07acbb943c430f6e26bec44f55a5c84306da513
-ms.sourcegitcommit: 73a662360bbe2f43c19aca1fbcc2565025c60cd8
-ms.translationtype: HT
+ms.openlocfilehash: 26f4d19f591ac02d792bebbd648e90b07d84de56
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35327449"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208682"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>CBC 模式的對稱式解密使用邊框距離與計時弱點
 
-根據目前已知的密碼編譯研究的 Microsoft 認為，除了非常特定的情況下，就無法再解密資料時已驗證的填補加密使用對稱式加密的加密區塊鏈結 (CBC) 模式的安全套用此選項，而第一個確保完整性的加密文字。
+Microsoft 認為有，就無法再解密資料時不含第一個確保完整性的加密文字，除了已套用可驗證的填補加密使用對稱式加密的加密區塊鏈結 (CBC) 模式的安全非常特定情況。 此 judgement 根據目前已知的密碼編譯研究。 
 
 ## <a name="introduction"></a>簡介
 

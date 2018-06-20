@@ -5,11 +5,12 @@ helpviewer_keywords:
 - Windows Forms, enhancing
 - Windows Forms, adding features
 ms.assetid: 733d1219-d6ad-4256-a55b-9eccf47f5a06
-ms.openlocfilehash: 750d94caf08776ae457dbff153afbc8ec9368f07
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ab1a79bc3a799edc8b0472bb31983a7215f6f9e
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208586"
 ---
 # <a name="enhancing-windows-forms-applications"></a>增強 Windows Forms 應用程式
 Windows Form 包含許多功能，可用來增強您的 Windows 應用程式，以符合您的使用者的特定需求。 下列主題將描述這些功能及其用法。  
@@ -30,7 +31,7 @@ Windows Form 包含許多功能，可用來增強您的 Windows 應用程式，�
  [Windows Forms 應用程式中的網路](../../../../docs/framework/winforms/advanced/networking-in-windows-forms-applications.md)  
  其中包含主題的連結，說明並示範如何使用 Windows Form 中的網路。  
   
- [全球化 Windows Forms](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)  
+ [全球化 Windows Form 應用程式](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)  
  其中包含主題的連結，示範如何全球化 Windows Forms 應用程式。  
   
  [Windows Forms 和 Unmanaged 應用程式](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  

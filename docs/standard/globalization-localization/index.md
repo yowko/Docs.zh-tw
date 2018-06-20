@@ -1,25 +1,26 @@
 ---
-title: 全球化和當地語系化 .NET Framework 應用程式
-ms.date: 03/30/2017
+title: 全球化與當地語系化 .NET 應用程式
+ms.date: 06/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- international applications [.NET Framework]
-- globalization [.NET Framework], encoding
+- international applications [.NET]
+- globalization [.NET], encoding
 - global applications
 - internationalization
 - world-ready applications
-- application development [.NET Framework], globalization
+- application development [.NET], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26c237d082a56d17b2d8493bff52dbac6faca8b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f03935c1ee38cec4ee20c4306213be484933f0bb
+ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35250995"
 ---
-# <a name="globalizing-and-localizing-net-framework-applications"></a>全球化和當地語系化 .NET Framework 應用程式
+# <a name="globalizing-and-localizing-net-applications"></a>全球化與當地語系化 .NET 應用程式
 開發[世界通用的應用程式](http://msdn.microsoft.com/goglobal/bb978433.aspx)，包括可以當地語系化為一種或多種語言的應用程式，這項開發工作包含三個步驟：全球化、可當地語系化檢閱，以及當地語系化。  
   
  [全球化](../../../docs/standard/globalization-localization/globalization.md)  
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/04/2018
   
 -   可產生更穩定且較少 Bug 的當地語系化應用程式。  
   
- .NET Framework 提供各種開發世界通用及當地語系化應用程式的支援。 特別是，.NET Framework 類別庫中的許多類型成員會傳回反映目前使用者文化特性或特定文化特性慣例的值，藉以協助全球化。 此外，.NET Framework 還支援附屬組件，可簡化當地語系化應用程式的程序。  
+ .NET 提供各種開發全球通用及當地語系化應用程式的支援。 特別是，.NET 類別庫中的許多類型成員，會傳回反映目前使用者文化特性或特定文化特性慣例的值，藉以協助全球化。 此外，.NET 還支援附屬組件，可簡化當地語系化應用程式的程序。  
   
  如需其他資訊，請參閱[全球化文件](/globalization/)。  
   
@@ -51,8 +52,8 @@ ms.lasthandoff: 05/04/2018
  [當地語系化](../../../docs/standard/globalization-localization/localization.md)  
  討論建立當地語系化應用程式的最後一個階段，包括自訂特定區域或文化特性的應用程式使用者介面。  
   
- [不區分文化特性的字串之作業](../../../docs/standard/globalization-localization/culture-insensitive-string-operations.md)  
- 說明如何使用預設為區分文化特性的 .NET Framework 方法和類別來取得不區分文化特性的結果。  
+ [不區分文化特性的字串作業](../../../docs/standard/globalization-localization/culture-insensitive-string-operations.md)  
+ 說明如何使用預設為區分文化特性的 .NET 方法與類別，來取得不區分文化特性的結果。  
   
  [開發世界性的應用程式的最佳做法](../../../docs/standard/globalization-localization/best-practices-for-developing-world-ready-apps.md)  
  說明進行全球化、當地語系化和開發世界性的 ASP.NET 的最佳實施方針。  

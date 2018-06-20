@@ -7,11 +7,11 @@
 ## 快速入門
 ### [語法分析](get-started/syntax-analysis.md)
 ### [語意分析](get-started/semantic-analysis.md)
+### [語法轉換](get-started/syntax-transformation.md)
+
 
 <!-- Taken from https://github.com/dotnet/roslyn/wiki/Samples-and-Walkthroughs -->
 <!--
-### Get started with semantic analysis
-### Get started with Syntax transformation
 ### Get started writing custom analyzers and code fixes
 
 <!--
