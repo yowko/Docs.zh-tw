@@ -4,12 +4,12 @@ description: 了解 .NET Core 的版本控制運作方式。
 author: bleroy
 ms.author: mairaw
 ms.date: 02/13/2018
-ms.openlocfilehash: 0cfd620d2b6e6e60531b0e2aa938c1ed64b6af23
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 33c545fdea254133fe6e65f4d6dd725f5184faec
+ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219010"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36298236"
 ---
 # <a name="net-core-versioning"></a>.NET Core 版本控制
 
@@ -45,14 +45,14 @@ ms.locfileid: "33219010"
 以下是此格式的一些範例：
 
 ```
-dotnet-runtime-2.0.4-macos.10.12-x64.pkg            # Mac runtime installer
-dotnet-sdk-2.0.4-win10-x64.exe                      # Windows SDK installer
-dotnet-sdk-2.0.4-fedora.24-x64.tar.gz               # Fedora 24 binary archive
+dotnet-runtime-2.0.4-osx.10.12-x64.pkg            # Mac runtime installer
+dotnet-sdk-2.0.4-win-x64.exe                      # Windows SDK installer
+dotnet-sdk-2.0.4-linux-x64.tar.gz                 # Linux binary archive
 
 #Ubuntu file set needed for the SDK
-dotnet-host-2.0.4-ubuntu.16.04-x64.deb              # Host / muxer and host policy
-dotnet-runtime-2.0.4-ubuntu.16.04-x64.deb           # runtime
-dotnet-sdk-2.0.4-ubuntu.16.04-x64.deb               # SDK tools
+dotnet-host-2.0.4-ubuntu.16.04-x64.deb            # Host / muxer and host policy
+dotnet-runtime-2.0.4-ubuntu.16.04-x64.deb         # runtime
+dotnet-sdk-2.0.4-ubuntu.16.04-x64.deb             # SDK tools
 ```
 
 此格式易讀，並會清楚顯示您要下載的項目、版本和可以使用的位置。 執行階段套件名稱包含 `runtime`，SDK 則包含 `SDK`。
