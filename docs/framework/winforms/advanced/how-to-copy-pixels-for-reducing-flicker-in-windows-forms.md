@@ -13,12 +13,12 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: 65428132c885191b62c3b4a76c8937bf8f3f6732
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dc5f05ff4ea9f3c2b828cbe37860e1bd241fc604
+ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522040"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36270431"
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>如何：複製像素以降低 Windows Form 的閃動
 當您以動畫顯示簡單的圖形時，使用者可以有時會遇到，閃爍或其他不想要的視覺效果。 限制這個問題的一種方式是在圖形上使用 「 bitblt 」 程序。 Bitblt 即是 」 位元區塊傳送 」 的色彩資料從起點的像素矩形到目的地矩形的像素為單位。  
@@ -28,7 +28,7 @@ ms.locfileid: "33522040"
  在下列範例在表單上繪製的形狀其<xref:System.Windows.Forms.Control.Paint>事件處理常式。 然後，<xref:System.Drawing.Graphics.CopyFromScreen%2A>方法用來複製圖形。  
   
 > [!NOTE]
->  設定表單的<xref:System.Windows.Forms.Control.DoubleBuffered%2A>屬性`true`將圖形化中的程式碼<xref:System.Windows.Forms.Control.Paint>事件是雙重緩衝。 雖然這不會有任何明顯效能提升使用下列程式碼時，卻是某個動作，請記住，使用更複雜的圖形操作類型程式碼時。  
+>  設定表單的<xref:System.Windows.Forms.Control.DoubleBuffered%2A>屬性`true`將圖形化中的程式碼<xref:System.Windows.Forms.Control.Paint>事件是雙重緩衝。 這不會有任何差別的效能提升使用下列程式碼時，它是某個動作，請記住，使用更複雜的圖形操作類型程式碼時。  
   
 ## <a name="example"></a>範例  
   
