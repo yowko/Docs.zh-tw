@@ -5,12 +5,12 @@ hide_bc: true
 title: .NET 文件
 description: 了解如何使用 C#、Visual Basic 及 F#，在任何平台上使用 .NET 建立各種應用程式。 瀏覽 API 參考、範例程式碼、教學課程及更多資源。
 ms.custom: updateeachrelease
-ms.openlocfilehash: 0914320c18818fb9d69fb1e0dbd89c0ec78acd61
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.openlocfilehash: a62586689d1fe1c3352171fe71d92620269d9a72
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35231537"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314902"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -584,7 +584,7 @@ ms.locfileid: "35231537"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://www.visualstudio.com/vs/game-development">
+                                                <a href="https://visualstudio.microsoft.com/vs/game-development">
                                                     <h3>使用 Visual Studio 開發遊戲</h3>
                                                     <p>透過 Visual Studio 使用您選擇的遊戲引擎撰寫遊戲並對其偵錯。
                                                     </p>
