@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc54b8bdc96a5038dc75111d9833e70e7ffd2e9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 207227b3e5c52b7c6e0f704543379874f3708c03
+ms.sourcegitcommit: ceca5a1c027627abcca2767567703c3879f33325
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578036"
+ms.lasthandoff: 06/23/2018
+ms.locfileid: "36338100"
 ---
 # <a name="general-naming-conventions"></a>一般命名慣例
 本章節描述一般命名慣例與相關單字的選擇，如何避免使用特定語言的名稱中使用縮寫和首字母縮略字和建議的指導方針。  
@@ -85,7 +85,7 @@ ms.locfileid: "33578036"
   
  **✓ 不要**偏好加入後置詞，而不是前置詞，指示現有的應用程式開發介面的新版本。  
   
- 瀏覽文件時，這將可協助探索或使用 Intellisense。 將新的 Api，接近組織 API 的舊版本，因為大部分的瀏覽器和 Intellisense 會依字母順序顯示識別項。  
+ 瀏覽文件時，這將可協助探索或使用 IntelliSense。 將新的 Api，接近組織 API 的舊版本，因為大部分的瀏覽器和 IntelliSense 會依字母順序顯示識別項。  
   
  **✓ 考慮**使用全新，但有意義的識別項，而非新增後置字元或前置詞。  
   
