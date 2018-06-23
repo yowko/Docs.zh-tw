@@ -4,12 +4,12 @@ description: Microsoft 平台和工具的容器化 Docker 應用程式生命週�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 05db5cf8e8dc073dd341fbffab619c326b48f136
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 62da6a3ff595422e42450cb1341976424acc5a52
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569287"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314707"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>使用 Visual Studio Tools for Docker (在 Windows 上的 Visual Studio)
 
@@ -23,7 +23,7 @@ Docker for Windows 的最新版本，它就能夠更輕鬆比曾經來開發 Doc
 
 如果您使用 Visual Studio 2015，您必須更新 3 或更新版本以及 Visual Studio Tools for Docker。
 
-**更多資訊：** 如需安裝 Visual Studio 的指示，請移至[ https://www.visualstudio.com/\ 產品/vs-2015年-產品-版本](https://www.visualstudio.com/products/vs-2015-product-editions)。
+**更多資訊：** 如需安裝 Visual Studio 的指示，請移至[https://visualstudio.microsoft.com/\產品/vs-2015年-產品-版本](https://visualstudio.microsoft.com/products/vs-2015-product-editions)。
 
 若要查看安裝 Visual Studio Tools for Docker 的詳細資訊，請移至<http://aka.ms/vstoolsfordocker>和<https://docs.microsoft.com/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker>。
 

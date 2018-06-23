@@ -4,12 +4,12 @@ description: 了解如何提起和 shift 加現代化現有的應用程式的 Az
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 4/28/2018
-ms.openlocfilehash: 3fcfdca68e05494785148cbbe149cdc2f812c577
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 10af3a8ce1b9f501d7b646c8d49fcecab29af821
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956379"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314795"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>現代化現有的.NET 應用程式與 Azure 雲端與 Windows 容器 （第 2 版）
 
@@ -21,7 +21,7 @@ Microsoft Press 及 Microsoft DevDiv 部門
 One Microsoft Way  
 Redmond, Washington 98052-6399  
 
-Copyright （c) Microsoft corporation 2018  
+Copyright © 2018 by Microsoft Corporation  
 
 著作權所有，並保留一切權利。 本書內容的任何部分在未經過發行者書面許可下，不得以任何形式或透過任何方式進行重製。
 
@@ -121,7 +121,7 @@ Microsoft 與列於商標http://www.microsoft.com"商標 」 網頁上是 Micros
 
 - **雲端基礎結構已備妥**（重新裝載或 basic 提起 & 移位）： 第一個步驟中，許多組織只想要快速地執行雲端移轉策略。 在此情況下，重新裝載的應用程式。 大多數重新裝載作業都能透過使用 [Azure Migrate](https://aka.ms/azuremigrate) 自動執行，此服務會提供必要的指導、深入解析及機制，協助您透過 [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/) 及 [Azure 資料庫移轉服務](https://azure.microsoft.com/campaigns/database-migration/)等雲端工具移轉到雲端。 您也可以手動設定重新裝載，使您能在將舊版應用程式移至雲端時，了解有關您資產的基礎結構詳細資料。 例如，您可以在 Azure 中移動您 Vm 的應用程式幾乎修改可能與只有次要組態變更。 在此情況中的網路功能與內部部署環境相似，特別是當您在 Azure 中建立虛擬網路的時候。
 
-- **雲端最佳化**（受管理服務和 Windows 容器）： 此模型是關於使取得一些重要的優點，從雲端，而不需要變更應用程式的核心架構的幾個重要的部署最佳化。 基本步驟是將 [Windows 容器](https://docs.microsoft.com/virtualization/windowscontainers/about/)支援新增至您現有的 .NET Framework 應用程式。 此重要步驟 （得以） 並不需要影響程式碼，因此整體的增益和 shift 投入時間是淺色。 您可以使用 [Image2Docker](https://github.com/docker/communitytools-image2docker-win)、Visual Studio 以及 Visual Studio Tools for [Docker](https://www.docker.com/)。 Visual Studio 會自動選擇 ASP.NET 應用程式及 Windows 容器映像的智慧型預設。 這些工具提供了迅速的內部迴圈，以及容器到 Azure 的快速路徑， 並改善您部署到多個環境時的靈活度。 然後，移至生產環境，您可以部署 Windows 容器，以便[Azure Web 應用程式的容器](https://azure.microsoft.com/en-us/services/app-service/containers/)，[Azure 容器執行個體 (ACI) 和 Windows Server 2016 和容器，如果您偏好的 IaaS 方法的 Azure Vm。 稍微更為複雜的多容器應用程式，到像 orchestrators [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)或[Azure Kubernetes 服務 (AKS/ACS)](https://azure.microsoft.com/en-us/services/container-service/)。 在初步現代化期間，您也可以從雲端新增資產，例如 [Azure Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview) 等工具進行監視；使用 [Visual Studio Team Services](https://www.visualstudio.com/team-services/) 建立的應用程式生命週期 CI/CD 管線；以及更多可在 Azure 中取得的資料資源服務。 比方說，您可以修改原先使用傳統 [ASP.NET Web Forms](https://www.asp.net/web-forms) 或 [ASP.NET MVC](https://www.asp.net/mvc) 開發的整合型 Web 應用程式，而您現在可以使用 Windows 容器進行部署。 當您使用 Windows 容器時，也應該將資料移轉到 [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/)中的資料庫，這完全不需要變更您應用程式的核心架構。
+- **雲端最佳化**（受管理服務和 Windows 容器）： 此模型是關於使取得一些重要的優點，從雲端，而不需要變更應用程式的核心架構的幾個重要的部署最佳化。 基本步驟是將 [Windows 容器](https://docs.microsoft.com/virtualization/windowscontainers/about/)支援新增至您現有的 .NET Framework 應用程式。 此重要步驟 （得以） 並不需要影響程式碼，因此整體的增益和 shift 投入時間是淺色。 您可以使用 [Image2Docker](https://github.com/docker/communitytools-image2docker-win)、Visual Studio 以及 Visual Studio Tools for [Docker](https://www.docker.com/)。 Visual Studio 會自動選擇 ASP.NET 應用程式及 Windows 容器映像的智慧型預設。 這些工具提供了迅速的內部迴圈，以及容器到 Azure 的快速路徑， 並改善您部署到多個環境時的靈活度。 然後，移至生產環境，您可以部署 Windows 容器，以便[Azure Web 應用程式的容器](https://azure.microsoft.com/en-us/services/app-service/containers/)，[Azure 容器執行個體 (ACI) 和 Windows Server 2016 和容器，如果您偏好的 IaaS 方法的 Azure Vm。 稍微更為複雜的多容器應用程式，到像 orchestrators [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)或[Azure Kubernetes 服務 (AKS/ACS)](https://azure.microsoft.com/en-us/services/container-service/)。 在初步現代化期間，您也可以從雲端新增資產，例如 [Azure Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview) 等工具進行監視；使用 [Visual Studio Team Services](https://visualstudio.microsoft.com/team-services/) 建立的應用程式生命週期 CI/CD 管線；以及更多可在 Azure 中取得的資料資源服務。 比方說，您可以修改原先使用傳統 [ASP.NET Web Forms](https://www.asp.net/web-forms) 或 [ASP.NET MVC](https://www.asp.net/mvc) 開發的整合型 Web 應用程式，而您現在可以使用 Windows 容器進行部署。 當您使用 Windows 容器時，也應該將資料移轉到 [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/)中的資料庫，這完全不需要變更您應用程式的核心架構。
 
 - **雲端原生**： 推出時，您應該考慮架構[雲端原生](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)應用程式時您的目標與工作的多個獨立的開發小組的大型且複雜的應用程式開發和部署獨立的不同 microservices。 此外，由於 granularized 且獨立的擴充性每微服務。 這些架構的方法面臨非常重要的挑戰和複雜度，但是可以透過使用雲端 PaaS 大幅簡化而且 orchestrators 喜歡[Azure Kubernetes 服務 (AKS/ACS)](https://azure.microsoft.com/en-us/services/container-service/) (managed Kubernetes)，[Azure 服務網狀架構，以及[Azure 函式](https://azure.microsoft.com/services/functions/)無伺服器的方法。 所有這些方法 （例如 microservices 和非伺服器） 通常需要您的雲端架構設計人員和撰寫新程式碼，適用於特定的 PaaS 平台的程式碼或與特定架構，例如 microservices 對齊的程式碼。
 

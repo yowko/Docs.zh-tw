@@ -5,12 +5,12 @@ helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: e27c56d9a6d745c7d1ff83986e7996aa1bebc879
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0018b9f8644ec7d222a416bb5f71a7c61671009e
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529879"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314759"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>自動縮放 Windows Form
 自動縮放功能允許某部電腦上以特定顯示解析度或系統字型所設計的表單和其控制項，可以在另一部電腦上以不同的顯示解析度或系統字型正確地顯示。 如此可確保表單和其控制項利用智慧方式調整大小，以便與使用者和其他開發人員電腦上的原生視窗和其他應用程式保持一致。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 對自動縮放和視覺化樣式的支援，可以讓 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 應用程式在與每個使用者電腦上的原生 Windows 應用程式相較下，都能保有一致的外觀和風格。
@@ -42,14 +42,6 @@ ms.locfileid: "33529879"
 - 自動縮放只會在 <xref:System.Windows.Forms.Form> 類別中實作，並不會在 <xref:System.Windows.Forms.ContainerControl> 類別中實作。 因此，只有在使用者控制項是以與表單相同的解析度所設計，並且在設計階段置於表單中時，使用者控制項才能正確縮放。
 
 - 多位開發人員只能在其電腦解析度都相同時，才能同時設計表單和其子控制項。 同樣地，它也會根據與父表單關聯的解析度來繼承表單。
-
-> [!NOTE]
-> 顯示 Dpi，尤其是在新式 2-1 的裝置，在極大的差異可能仍然是.NET Framework 和 Visual Studio 的最新版本。 若要解決這個問題使用不同的 DPI 顯示小組中，一律請確定 Visual Studio 會開始在 DPI 感知的模式中，因此 Windows Form 設計工具一律基底 96 DPI 的版面配置計算。 為此，只要設定下列登錄機碼，若要停用 Visual Studio HighDPI 感知功能：
->
-> ```
-> [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\devenv.exe]
-> "dpiAwareness"=dword:00000000
-> ```
 
 - 它與 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 2.0 版所採用的新版配置管理員不相容，例如 <xref:System.Windows.Forms.FlowLayoutPanel> 和 <xref:System.Windows.Forms.TableLayoutPanel>。
 

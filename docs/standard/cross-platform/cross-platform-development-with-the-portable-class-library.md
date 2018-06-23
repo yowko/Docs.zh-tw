@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c9a679a69b5a4cc7076fd2f31a0870d48ef47dd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6625103da5b9e235b214a41d990d7accb2646e57
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579661"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314935"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>可攜式類別庫的跨平台開發
 Visual Studio 中的 .NET Framework 可攜式類別庫專案類型可幫助您快速、輕鬆地建立適用於 Microsoft 平台的跨平台應用程式和程式庫。  
@@ -51,8 +51,8 @@ Visual Studio 中的 .NET Framework 可攜式類別庫專案類型可幫助您�
 |Visual Studio Express 2010 版本|否。|  
 |Visual Studio 2012、Professional、Premium 或 Ultimate|可以。 如需 Windows Phone 8.0 支援安裝[Windows Phone SDK 8.0](https://www.microsoft.com/download/details.aspx?id=35471)。|  
 |Visual Studio Express 2012 版本|否。|  
-|Visual Studio 2013、Professional、Premium 或 Ultimate|可以。 如需 Windows Phone 8.1 支援安裝[最新版本的 Visual Studio 2013](https://www.visualstudio.com/vs/older-downloads/)。|  
-|Visual Studio Community 2013 for Windows|是的當您安裝[最新版本的 Visual Studio Community 2013](https://www.visualstudio.com/vs/older-downloads/)，其中包括 Update 2。|  
+|Visual Studio 2013、Professional、Premium 或 Ultimate|可以。 如需 Windows Phone 8.1 支援安裝[最新版本的 Visual Studio 2013](https://visualstudio.microsoft.com/vs/older-downloads/)。|  
+|Visual Studio Community 2013 for Windows|是的當您安裝[最新版本的 Visual Studio Community 2013](https://visualstudio.microsoft.com/vs/older-downloads/)，其中包括 Update 2。|  
   
 <a name="create_pcl"></a>   
 ## <a name="creating-a-portable-class-library-project"></a>建立可攜式類別庫專案  
