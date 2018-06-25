@@ -8,12 +8,12 @@ helpviewer_keywords:
 - cast operator [C#]
 - () operator [C#]
 ms.assetid: 846e1f94-8a8c-42fc-a42c-fbd38e70d8cc
-ms.openlocfilehash: 2ded01ef3192e0f34d586cd63d93b894b5347e7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 82dfc2e11d6a8a025aa9b7557255a13b69ffa508
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275021"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207950"
 ---
 # <a name="-operator-c-reference"></a>() 運算子 (C# 參考)
 除了用來指定運算式中運算的順序，括號也可用來執行下列工作：  
@@ -31,9 +31,7 @@ ms.locfileid: "33275021"
   
  無法多載 `()` 運算子。  
   
- 如需詳細資訊，請參閱[轉換和型別轉換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)。  
-  
- cast 運算式可能會導致語法模稜兩可。 例如，運算式 `(x)–y` 可以解譯成 cast 運算式 (由 –y 至 x 類型的轉換)，或是結合括號運算式的加法運算式 (該括號運算式會計算 x – y 的值)。  
+ 如需詳細資訊，請參閱[轉型和型別轉換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)。  
   
  如需方法引動過程的詳細資訊，請參閱[方法](../../../csharp/programming-guide/classes-and-structs/methods.md)。  
   

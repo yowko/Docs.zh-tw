@@ -3,11 +3,12 @@ title: Tuple 型別 - C# 手冊
 description: 了解 C# 中的未具名和具名 Tuple 類型
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 5ef8d89f62a30d3d64f7377972e31d9c4d93d41e
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 6c3b6edb0481b8c2e4d92989b605f657aac607fa
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/18/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208294"
 ---
 # <a name="c-tuple-types"></a>C# Tuple 型別 #
 
@@ -91,7 +92,8 @@ Tuple 是比 `class` 和 `struct` 類型更為簡單且更具彈性的資料容�
 
 [!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 
-有數個規則讓 tuple 相等測試更加方便。 如果其中一個 Tuple 是可為 null 的 Tuple，則 Tuple 相等會執行[提升轉換](/dotnet/csharp/language-reference/language-specification/conversions.md#lifted-conversion-operators)，如下列程式碼所示：
+有數個規則讓 tuple 相等測試更加方便。 如果其中一個 Tuple 是可為 null 的 Tuple，則 Tuple 相等會執行[提升轉換](/dotnet/csharp/language-reference/language-specification/conversions#lifted-conversion-operators)，如下列程式碼所示：
+
 
 [!code-csharp[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]
 

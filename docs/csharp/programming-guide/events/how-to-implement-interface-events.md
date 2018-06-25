@@ -5,11 +5,12 @@ helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: 5f6dc5d9c0b901db485028159a2872f7db2f363f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9bd030efb2e3e7bdbf3bb727948a2aae04a2fe50
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207947"
 ---
 # <a name="how-to-implement-interface-events-c-programming-guide"></a>如何：實作介面事件 (C# 程式設計手冊)
 [介面](../../../csharp/language-reference/keywords/interface.md)可以宣告[事件](../../../csharp/language-reference/keywords/event.md)。 下列範例示範如何在類別中實作介面事件。 基本上，規則與您在實作任何介面方法或屬性時相同。  
@@ -42,10 +43,7 @@ ms.lasthandoff: 05/04/2018
             }  
             protected virtual void OnShapeChanged(MyEventArgs e)  
             {  
-                if(ShapeChanged != null)  
-                {  
-                   ShapeChanged(this, e);  
-                }  
+                ShapeChanged?.Invoke(this, e);  
             }  
         }  
   
@@ -53,9 +51,9 @@ ms.lasthandoff: 05/04/2018
     ```  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何處理以下較不常見的狀況：您的類別繼承自兩個或多個介面，且每個介面具有相同名稱的事件。 在此情況下，您必須針對其中至少一個事件提供明確介面實作。 當您針對事件撰寫明確介面實作時，也必須撰寫 `add` 和 `remove` 事件存取子。 這些通常是由編譯器所提供的，但在此案例中，編譯器無法提供它們。  
+下列範例示範如何處理以下較不常見的狀況：您的類別繼承自兩個或多個介面，且每個介面具有相同名稱的事件。 在此情況下，您必須針對其中至少一個事件提供明確介面實作。 當您針對事件撰寫明確介面實作時，也必須撰寫 `add` 和 `remove` 事件存取子。 這些通常是由編譯器所提供的，但在此案例中，編譯器無法提供它們。  
   
- 您可以提供自己的存取子，來指定是否要透過類別中的相同事件或透過不同的事件來表示這兩個事件。 例如，如果根據介面規格應該在不同時間引發事件，則可以將每個事件與類別中的個別實作產生關聯。 在下列範例中，訂閱者會藉由將圖形參考轉換為 `IShape` 或 `IDrawingObject`，來判斷他們將接收哪些 `OnDraw` 事件。  
+您可以提供自己的存取子，來指定是否要透過類別中的相同事件或透過不同的事件來表示這兩個事件。 例如，如果根據介面規格應該在不同時間引發事件，則可以將每個事件與類別中的個別實作產生關聯。 在下列範例中，訂閱者會藉由將圖形參考轉換為 `IShape` 或 `IDrawingObject`，來判斷他們將接收哪些 `OnDraw` 事件。  
   
  [!code-csharp[csProgGuideEvents#10](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-implement-interface-events_1.cs)]  
   

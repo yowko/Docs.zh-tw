@@ -3,14 +3,15 @@ title: .NET Standard
 description: 了解 .NET Standard、其版本及支援的 .NET 實作。
 author: mairaw
 ms.author: mairaw
-ms.date: 08/13/2017
+ms.date: 05/18/2018
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 832efe566aaab1e0add687cdb474bacdf5b5d829
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f4490edfc06fcc3ec06daffdb0966ac9ee72e23
+ms.sourcegitcommit: ceca5a1c027627abcca2767567703c3879f33325
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36298171"
 ---
 # <a name="net-standard"></a>.NET Standard
 

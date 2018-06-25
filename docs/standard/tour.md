@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: b1925397fb7cad5e55f992feaa5be2e2d837aac8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: de5ff06e660d3c4e976c10043a7ebc72d102cff5
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592258"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314639"
 ---
 # <a name="tour-of-net"></a>.NET 教學課程
 
@@ -25,7 +25,7 @@ ms.locfileid: "33592258"
 
 ## <a name="programming-languages"></a>程式語言
 
-.NET 支援多種程式設計語言。 .NET 實作會實作[通用語言基礎結構 (CLI)](https://www.visualstudio.com/license-terms/ecma-c-common-language-infrastructure-standards/)，它的其中一個功能是指定與語言無關的執行階段和語言互通性。 這表示您可以選擇任何 .NET 語言，在 .NET 上建置應用程式與服務。
+.NET 支援多種程式設計語言。 .NET 實作會實作[通用語言基礎結構 (CLI)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/)，它的其中一個功能是指定與語言無關的執行階段和語言互通性。 這表示您可以選擇任何 .NET 語言，在 .NET 上建置應用程式與服務。
 
 Microsoft 積極地開發並支援三種 .NET 語言：C#、F# 與 Visual Basic (VB)。 
 

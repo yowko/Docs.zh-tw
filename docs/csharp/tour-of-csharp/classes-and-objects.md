@@ -3,12 +3,12 @@ title: C# 中的類別和物件 - C# 語言教學課程
 description: 第一次接觸 C#？ 請閱讀此類別、物件及繼承概觀
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 1a8c34588cce21f4f4164df57aa8044074c23783
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e89d8b89e5f4f74d637a1e3674fb3959a231a49
+ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357338"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36298288"
 ---
 # <a name="classes-and-objects"></a>類別與物件
 
@@ -207,7 +207,7 @@ C# 要求必須「明確指派」區域變數，才能取得其值。 例如，�
 
 ### <a name="method-overloading"></a>方法多載
 
-方法「多載」可允許相同類別中的多個方法擁有相同的名稱，只要它們的簽章是唯一的即可。 編譯多載方法的叫用時，編譯器會使用「多載解析」來判斷要叫用的特定方法。 多載解析會尋找一個與引數最相符的方法，或者，如果找不到任何一個最相符的方法，則會回報錯誤。 下列範例示範多載解析的實際運作情況。 `Main` 方法中每項叫用的註解會顯示實際叫用的方法是哪一個。
+方法「多載」可允許相同類別中的多個方法擁有相同的名稱，只要它們的簽章是唯一的即可。 編譯多載方法的叫用時，編譯器會使用「多載解析」來判斷要叫用的特定方法。 多載解析會尋找一個與引數最相符的方法，或者，如果找不到任何一個最相符的方法，則會回報錯誤。 下列範例示範多載解析的實際運作情況。 `UsageExample` 方法中每項叫用的註解會顯示實際叫用的方法是哪一個。
 
 [!code-csharp[OverloadUsage](../../../samples/snippets/csharp/tour/classes-and-objects/Overloading.cs#L3-L41)]
 

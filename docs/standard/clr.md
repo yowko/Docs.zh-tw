@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7887c1142b721249526a318257149e419affd967
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 89989b4b7730f4e252dc846377b385cb359dbee1
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572287"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36315117"
 ---
 # <a name="common-language-runtime-clr-overview"></a>Common Language Runtime (CLR) 概觀
 
@@ -32,7 +32,7 @@ ms.locfileid: "33572287"
 編譯器和工具會公開 Common Language Runtime 的功能，並且可以讓您撰寫從這個 Managed 執行環境獲益的程式碼。 以 Runtime 為目標的語言編譯器所開發的程式碼稱為 Managed 程式碼；它可因某些功能而得到改進，例如跨程式語言整合、跨程式語言例外狀況處理 (Exception Handling)、增強的安全性、版本控制和部署支援、元件互動的簡化模型，以及偵錯和設定檔服務。
 
 > [!NOTE]
-> 編譯器和工具能夠產生 Common Language Runtime 可以使用的輸出，因為類型系統、中繼資料格式和執行階段環境 (虛擬執行系統) 都是以公用標準 ECMA 通用語言基礎結構規格來定義。 如需詳細資訊，請參閱 [ECMA C# 和通用語言基礎結構規格](https://www.visualstudio.com/license-terms/ecma-c-common-language-infrastructure-standards/)。
+> 編譯器和工具能夠產生 Common Language Runtime 可以使用的輸出，因為類型系統、中繼資料格式和執行階段環境 (虛擬執行系統) 都是以公用標準 ECMA 通用語言基礎結構規格來定義。 如需詳細資訊，請參閱 [ECMA C# 和通用語言基礎結構規格](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/)。
 
 若要讓 Runtime 能夠提供服務給 Managed 程式碼，語言編譯器必須發出描述程式碼中型別、成員和參考的中繼資料。 中繼資料是與程式碼一起儲存；每一個可載入的 Common Language Runtime 可移植執行檔 (PE) 都包含中繼資料。 Runtime 使用中繼資料來找出並載入類別、配置記憶體中的執行個體 (Instance)、解析方法引動過程 (Method Invocation)、產生機器碼、強制使用安全性，和設定 Run-Time 內容界限 (Context Boundary)。
 

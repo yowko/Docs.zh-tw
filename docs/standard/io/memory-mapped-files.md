@@ -7,15 +7,16 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - memory-mapped files
-- inter-process communiation
+- inter-process communication
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec4f3f8df0478c1fc881358ae8e220220fbedf17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1cf2d7f36dbfffe1c86e32eec5137840837612f4
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208146"
 ---
 # <a name="memory-mapped-files"></a>記憶體對應檔案
 記憶體對應檔案包含檔案在虛擬記憶體中的內容。 檔案和記憶體空間之間的這個對應可讓應用程式 (包括多個處理序) 透過直接讀取和寫入記憶體來修改檔案。 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，您可以利用與原生 Windows 功能存取記憶體對應檔案相同的方法，使用 受控碼來存取記憶體對應檔案，如[管理記憶體對應檔案](https://msdn.microsoft.com/library/ms810613.aspx) \(英文\) 所述。  
