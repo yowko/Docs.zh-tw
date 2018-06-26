@@ -3,12 +3,13 @@ title: 針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行�
 description: 本指南說明您在 .NET 中建置伺服器應用程式時應考量要使用哪種 .NET 實作。
 author: cartermp
 ms.author: mairaw
-ms.date: 03/15/2018
-ms.openlocfilehash: 5626c6c1687fe0b8d558df8772fc69c32981787c
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.date: 06/19/2018
+ms.openlocfilehash: a9eaeae515041ee1d99ede5b004ecc85e453de2d
+ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36298184"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇
 
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/17/2018
 
 ## <a name="when-to-choose-net-framework"></a>選擇 .NET Framework 的時機
 
-.NET Core 可為新的應用程式和應用程式模式提供顯著的優點。 不過，.NET Framework 會持續為許多現有案例的自然選擇。 因此，.NET Core 不會取代 .NET Framework 用於所有伺服器應用程式。
+.NET Core 可為新的應用程式和應用程式模式提供顯著的優點。 不過，.NET Framework 仍然是許多現有案例的理想選擇；因此 .NET Framework 並不會在所有伺服器應用程式中被 .NET Core 所取代。
 
 ### <a name="current-net-framework-applications"></a>目前的 .NET Framework 應用程式
 
@@ -87,8 +88,6 @@ ms.lasthandoff: 05/17/2018
 * ASP.NET Web Forms 應用程式：ASP.NET Web Forms 只能在 .NET Framework 中使用。 ASP.NET Core 無法用於 ASP.NET Web Forms。 目前並未規劃將 ASP.NET Web Forms 帶入 .NET Core。
 
 * ASP.NET Web Pages 應用程式：ASP.NET Web Pages 未隨附於 ASP.NET Core 中。 ASP.NET Core [Razor 頁面](/aspnet/core/mvc/razor-pages/)與 Web Pages 有許多相似處。
-
-* ASP.NET SignalR 伺服器/用戶端實作。 目前，[ASP.NET SignalR](https://github.com/aspnet/SignalR) 以預覽模式提供於 ASP.NET Core 2.1。
 
 * WCF 服務實作。 即使已有 [WCF 用戶端程式庫](https://github.com/dotnet/wcf) 可從 .NET Core 取用 WCF 服務，但 WCF 伺服器實作目前只能在 .NET Framework 中使用。 此案例不是 .NET Core 目前計劃的一部分，但未來會納入考慮。
 

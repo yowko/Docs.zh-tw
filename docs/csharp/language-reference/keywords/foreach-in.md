@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: b6b7dc0a4d3970ddfbbb6635ccebbbd5b75671e4
-ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
+ms.openlocfilehash: 7613590686f7f7ec6439da4a2bb672e524ab01e8
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34549372"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34565702"
 ---
 # <a name="foreach-in-c-reference"></a>foreach、in (C# 參考)
 
@@ -23,7 +23,7 @@ ms.locfileid: "34549372"
 - 具有公用無參數的 `GetEnumerator` 方法，其傳回型別為類別、結構或介面型別。
 - `GetEnumerator` 方法的傳回型別具有公用的 `Current` 屬性，且公用無參數的 `MoveNext` 方法的傳回型別為 <xref:System.Boolean>。
 
-您可以在 `foreach` 陳述式區塊內的任何位置，使用 [break](break.md) 關鍵字跳出迴圈，或使用 [continue](continue.md) 關鍵字逐步執行到迴圈中的下一個反覆運算。 您也可以使用 [goto](goto.md)、[return](return.md) 或 [throw](throw.md) 陳述式結束 `foreach` 迴圈。
+您可以在 `foreach` 陳述式區塊內的任何位置，使用 [break](break.md) 陳述式跳出迴圈，或使用 [continue](continue.md) 陳述式逐步執行到迴圈中的下一個反覆運算。 您也可以使用 [goto](goto.md)、[return](return.md) 或 [throw](throw.md) 陳述式結束 `foreach` 迴圈。
 
 ## <a name="examples"></a>範例
 

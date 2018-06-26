@@ -3,12 +3,13 @@ title: dotnet list reference 命令 - .NET Core CLI
 description: dotnet list reference 命令提供方便的選項，以列出專案對專案參考。
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: 24cb1124fc3f8707afe727e6a73d35d5dde39937
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/25/2018
+ms.openlocfilehash: 821e6d276af44bf984c8ac1b42b4e954dbe69556
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34697179"
 ---
 # <a name="dotnet-list-reference"></a>dotnet list reference
 

@@ -3,12 +3,13 @@ title: dotnet restore 命令 - .NET Core CLI
 description: 了解如何使用 dotnet restore 命令來還原相依性和專案特有工具。
 author: mairaw
 ms.author: mairaw
-ms.date: 11/30/2017
-ms.openlocfilehash: 6f8aaa2060ab7e6b2e9b99ce4d35588c2bf54d36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: fcfa3f2f7133c3add2b02823937dd26fce690453
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696581"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -21,19 +22,17 @@ ms.lasthandoff: 05/04/2018
 ## <a name="synopsis"></a>概要
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```
-dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--force] [--ignore-failed-sources] [--no-cache] [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity]
+dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--force] [--ignore-failed-sources] [--no-cache]
+    [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity]
 dotnet restore [-h|--help]
 ```
-
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
 ```
-dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--ignore-failed-sources] [--no-cache] [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity]
+dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--ignore-failed-sources] [--no-cache]
+    [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity]
 dotnet restore [-h|--help]
 ```
-
 ---
 
 ## <a name="description"></a>描述
@@ -44,7 +43,7 @@ dotnet restore [-h|--help]
 
 若要還原相依性，NuGet 需要套件所在的摘要。 摘要通常透過 *NuGet.config* 組態檔提供。 安裝 CLI 工具時，會提供預設組態檔。 您可以在專案目錄中建立自己的 *NuGet.config* 檔案，以指定其他摘要。 您也可以在命令提示字元中針對每個引動過程指定其他摘要。
 
-針對相依性，您可以使用 `--packages` 引數指定已還原套件在還原作業期間的放置位置。 如果未指定，則會使用預設的 NuGet 套件快取，它位於所有作業系統上使用者主目錄的 `.nuget/packages` 目錄中 (例如，Linux 上的 */home/user1* 或 Windows 上的 *C:\Users\user1*)。
+針對相依性，您可以使用 `--packages` 引數指定已還原套件在還原作業期間的放置位置。 如果未指定，則會使用預設的 NuGet 套件快取，它位於所有作業系統上使用者主目錄的 `.nuget/packages` 目錄中。 例如，Linux 上的 */home/user1* 或 Windows 上的 *C:\Users\user1*。
 
 針對專案特定工具，`dotnet restore` 會先還原在其中封裝工具的套件，然後繼續還原其專案檔中所指定的工具相依性。
 
@@ -56,14 +55,15 @@ dotnet restore [-h|--help]
 
 - [`dotnet new`](dotnet-new.md)
 - [`dotnet build`](dotnet-build.md)
+- [`dotnet build server`](dotnet-build-server.md)
 - [`dotnet run`](dotnet-run.md)
 - [`dotnet test`](dotnet-test.md)
 - [`dotnet publish`](dotnet-publish.md)
 - [`dotnet pack`](dotnet-pack.md)
 
-多數情況下，您不再需要明確地使用 `dotnet restore` 命令。 
+多數情況下，您不再需要明確地使用 `dotnet restore` 命令。
 
-但某些情況下，`dotnet restore` 並不適合隱含執行。 例如，某些自動化系統，像是建置系統，必須明確呼叫 `dotnet restore` 以控制還原發生的時間，進而控制網路使用量。 為避免隱含執行 `dotnet restore`，在使用任一這些命令時可使用 `--no-restore` 參數，來停用隱含還原。
+有時候，可能不適合隱含執行 `dotnet restore`。 例如，某些自動化系統，像是建置系統，必須明確呼叫 `dotnet restore` 以控制還原發生的時間，進而控制網路使用量。 為避免隱含執行 `dotnet restore`，在使用任一這些命令時，可使用 `--no-restore` 旗標來停用隱含還原。
 
 ## <a name="arguments"></a>引數
 
@@ -85,7 +85,7 @@ dotnet restore [-h|--help]
 
 `--force`
 
-即使最後的還原成功，仍強制解析所有相依性。 這相當於刪除 *project.assets.json* 檔案。
+即使最後的還原成功，仍強制解析所有相依性。 指定這個旗標等同於刪除 *project.assets.json* 檔案。
 
 `-h|--help`
 
@@ -113,7 +113,7 @@ dotnet restore [-h|--help]
 
 `-s|--source <SOURCE>`
 
-指定要在還原作業期間使用的 NuGet 套件來源。 如此會覆寫 *NuGet.config* 檔案中所指定的所有來源。 多次指定這個選項，即可提供多個來源。
+指定要在還原作業期間使用的 NuGet 套件來源。 此設定會覆寫 *NuGet.config* 檔案中所指定的所有來源。 多次指定這個選項，即可提供多個來源。
 
 `--verbosity <LEVEL>`
 

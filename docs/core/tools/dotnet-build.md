@@ -3,12 +3,13 @@ title: dotnet build 命令 - .NET Core CLI
 description: dotnet build 命令會建置專案和其所有相依性。
 author: mairaw
 ms.author: mairaw
-ms.date: 03/10/2018
-ms.openlocfilehash: 4fc93e013c271fdf856f5c73affffd3880d0dbea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/25/2018
+ms.openlocfilehash: 6b0b7bc11b560d8632b38f1dfa4e7eb3ce6c54d2
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34697127"
 ---
 # <a name="dotnet-build"></a>dotnet-build
 
@@ -40,15 +41,15 @@ dotnet build [-h|--help]
 
 如果專案對於第三方有相依性 (例如來自 NuGet 的程式庫)，這些相依性將會從 NuGet 快取解析，而不會透過專案的建置輸出提供。 因此，`dotnet build` 產生的結果尚未準備好轉移到另一部電腦來執行。 這與 .NET Framework 的行為相反。在 .NET Framework 中，建置可執行檔專案 (應用程式) 所產生的輸出，可在任何已安裝 .NET Framework 的電腦上執行。 若要在 .NET Core 中擁有類似體驗，您需要使用 [dotnet publish](dotnet-publish.md) 命令。 如需詳細資訊，請參閱 [.NET Core 應用程式部署](../deploying/index.md)。
 
-建置會需要 *project.assets.json* 檔案，其中列出您應用程式的相依性。 檔案會在 [`dotnet restore`](dotnet-restore.md) 執行時建立。 如果沒有資產檔案，工具就會因為無法解析參考組件而發生錯誤。 以前使用 .NET Core 1.x SDK，您需要先明確執行 `dotnet restore` 再執行 `dotnet build`。 自 .NET Core 2.0 SDK 開始，`dotnet restore` 會在您執行 `dotnet build` 時以隱含方式執行。 如果您想要在執行 build 命令時停用隱含還原，您可以跳過 `--no-restore` 選項。
+建置會需要 *project.assets.json* 檔案，其中列出您應用程式的相依性。 檔案會在 [`dotnet restore`](dotnet-restore.md) 執行時建立。 如果沒有資產檔案，工具就會因為無法解析參考組件而發生錯誤。 以前使用 .NET Core 1.x SDK 時，您需要先明確執行 `dotnet restore` 再執行 `dotnet build`。 自 .NET Core 2.0 SDK 開始，`dotnet restore` 會在您執行 `dotnet build` 時以隱含方式執行。 如果您想要在執行 build 命令時停用隱含還原，您可以跳過 `--no-restore` 選項。
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
 `dotnet build` 使用 MSBuild 來建置專案，因此同時支援平行和累加建置。 如需詳細資訊，請參閱[累加建置](/visualstudio/msbuild/incremental-builds)。
 
-除了其選項，`dotnet build` 命令也接受 MSBuild 選項，例如用於設定屬性的 `/p`，以及用於定義記錄器的 `/l`。 請參閱 [MSBuild 命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)，以深入了解這些選項。 
+除了其選項，`dotnet build` 命令也接受 MSBuild 選項，例如用於設定屬性的 `/p`，以及用於定義記錄器的 `/l`。 如需這些選項的詳細資訊，請參閱 [MSBuild 命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)。
 
-專案是否為可執行檔可透過專案檔中的 `<OutputType>` 屬性來判斷。 下列範例顯示將產生可執行程式碼的專案：
+專案是否為可執行檔可透過專案檔中的 `<OutputType>` 屬性來判斷。 下列範例顯示會產生可執行程式碼的專案：
 
 ```xml
 <PropertyGroup>
@@ -56,7 +57,7 @@ dotnet build [-h|--help]
 </PropertyGroup>
 ```
 
-若要產生程式庫，只要省略 `<OutputType>` 屬性即可。 建置輸出的主要差別在於，程式庫的 IL DLL 不包含進入點，而且無法執行。 
+若要產生程式庫，只要省略 `<OutputType>` 屬性即可。 建置輸出的主要差別在於，程式庫的 IL DLL 不包含進入點，而且無法執行。
 
 ## <a name="arguments"></a>引數
 
@@ -78,7 +79,7 @@ dotnet build [-h|--help]
 
 `--force`
 
- 即使最後的還原成功，仍強制解析所有相依性。 這相當於刪除 *project.assets.json* 檔案。
+即使最後的還原成功，仍強制解析所有相依性。 指定這個旗標等同於刪除 *project.assets.json* 檔案。
 
 `-h|--help`
 
@@ -86,15 +87,15 @@ dotnet build [-h|--help]
 
 `--no-dependencies`
 
-忽略專案對專案 (P2P) 參考，並且只建置指定要建置的根專案。
+忽略專案對專案 (P2P) 參考，並且只建置指定的根專案。
 
 `--no-incremental`
 
-針對累加建置，將建置標示為不安全。 這會關閉累加編譯，並強制全新重建專案的相依性關係圖。
+針對累加建置，將建置標示為不安全。 此旗標會關閉累加編譯，並強制全新重建專案的相依性關係圖。
 
 `--no-restore`
 
-建置期間不執行隱含還原。
+建置期間不會執行隱含還原。
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
@@ -128,11 +129,11 @@ dotnet build [-h|--help]
 
 `--no-dependencies`
 
-忽略專案對專案 (P2P) 參考，並且只建置指定要建置的根專案。
+忽略專案對專案 (P2P) 參考，並且只建置指定的根專案。
 
 `--no-incremental`
 
-針對累加建置，將建置標示為不安全。 這會關閉累加編譯，並強制全新重建專案的相依性關係圖。
+針對累加建置，將建置標示為不安全。 此旗標會關閉累加編譯，並強制全新重建專案的相依性關係圖。
 
 `-o|--output <OUTPUT_DIRECTORY>`
 

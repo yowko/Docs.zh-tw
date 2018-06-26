@@ -3,12 +3,12 @@ title: C# 6 的新功能 - C# 指南
 description: 了解 C# 第 6 版的新功能
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: c23d4f45441451fbf8a2ad2f939bdb1ed6144154
-ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
+ms.openlocfilehash: 5ba5d8f4cc5c7cecdda030594273324d14d1582a
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34483485"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34565874"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 的新功能
 
@@ -38,6 +38,8 @@ C# 6.0 版包含許多功能，能提升開發人員的產能。 本版的功能
     - 集合初始設定式可以依賴可存取的擴充方法，以及成員方法。
 * [改進的多載解析](#improved-overload-resolution)：
     - 有些建構先前會產生模稜兩可的方法呼叫，現在已可以正確解析。
+* [`deterministic` 編譯器選項](#deterministic-compiler-output)：
+    - deterministic 編譯器選項可確保相同來源的後續編譯會產生相同的二進位輸出。
 
 這些功能的整體影響是您可撰寫更簡潔且更具可讀性的程式碼，。 語法包含許多常見做法的較少繁瑣細節。 繁瑣細節較少時比較容易看出設計目的。 充分了解這些功能，您將更具生產力、撰寫更具可讀性的程式碼，並且更專注於您的核心功能，而不是語言的建構。
 
@@ -388,3 +390,12 @@ C# 5 對於您可以放置 `await` 運算式的位置有數個限制。
 [!code-csharp[Lambda](../../../samples/snippets/csharp/new-in-6/overloads.cs#Lambda)]
 
 C# 6 編譯器可正確判斷 `Task.Run(Func<Task>())` 是較好的選擇。
+
+### <a name="deterministic-compiler-output"></a>deterministic 編譯器選項
+
+`-deterministic` 選項會指示編譯器針對相同原始程式檔 的後續編譯產生位元組對位元組的相同輸出組件。
+
+根據預設，每次編譯會針對每次編譯產生唯一的輸出。 編譯器會新增時間戳記，以及從亂數產生的 GUID。 如果您想要比較位元組對位元組的輸出，以確保組建的一致性，您可以使用此選項。
+
+如需詳細資訊，請參閱 [-deterministic 編譯器選項](../language-reference/compiler-options/deterministic-compiler-option.md)文章。
+

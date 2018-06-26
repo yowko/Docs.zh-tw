@@ -3,12 +3,13 @@ title: dotnet store 命令
 description: "'dotnet store' 命令會在執行階段套件存放區中儲存指定的組件。"
 author: bleroy
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: f819444c92afde0e1a5349a58918f993868a0143
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: 54654522207157f7d49bb86223b7986acccf51ee
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696321"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/04/2018
 
 `-m|--manifest <PATH_TO_MANIFEST_FILE>`
 
-「套件存放區資訊清單檔」是 XML 檔，包含要儲存的套件清單。 資訊清單檔的格式相容於 *csproj* 格式。 因此，參考所需套件的 *csproj* 專案檔可以搭配 `-m|--manifest` 選項，將組件儲存在執行階段套件存放區中。 若要指定多個資訊清單檔，請為每個檔案重複選項和路徑：`--manifest packages1.csproj --manifest packages2.csproj`。
+「套件存放區資訊清單檔」是 XML 檔，包含要儲存的套件清單。 資訊清單檔的格式相容於 SDK 樣式專案格式。 因此，參考所需套件的專案檔可以搭配 `-m|--manifest` 選項，將組件儲存在執行階段套件存放區中。 若要指定多個資訊清單檔，請為每個檔案重複選項和路徑。 例如：`--manifest packages1.csproj --manifest packages2.csproj`。
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
@@ -82,4 +83,4 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="see-also"></a>另請參閱
 
-[執行階段套件存放區](../deploying/runtime-store.md)   
+[執行階段套件存放區](../deploying/runtime-store.md)

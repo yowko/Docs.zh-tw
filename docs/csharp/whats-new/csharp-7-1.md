@@ -2,11 +2,12 @@
 title: C# 7.1 中的新增功能
 description: C# 7.1 新功能的概觀。
 ms.date: 08/16/2017
-ms.openlocfilehash: 00baec45d7582d3ac12c7b0865241f5cd8159246
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 565db102284424f9d8f6fa04ec9c74b52c9da0e6
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728650"
 ---
 # <a name="whats-new-in-c-71"></a>C# 7.1 中的新增功能
 
@@ -15,7 +16,7 @@ C# 7.1 是 C# 語言的第一個發行的小數點版本。 這表示這個語�
  這使得工具的升級與語言版本的升級能夠分開來決定。
 
 
-C# 7.1 也新增了[語言版本選擇](#language-version-selection)組態項目、三種新的語言功能和新的編譯器行為。
+C# 7.1 也新增了[語言版本選擇](../language-reference/configure-language-version.md)組態項目、三種新的語言功能和新的編譯器行為。
 
 此版本的新款語言功能包括：
 
@@ -29,51 +30,7 @@ C# 7.1 也新增了[語言版本選擇](#language-version-selection)組態項目
 
 最後，編譯器有兩個選項 `/refout` 和 `/refonly`，它們控制了[參考組件產生](#reference-assembly-generation)。
 
-## <a name="language-version-selection"></a>版本選取項目
-
-C# 編譯器自 Visual Studio 2017 15.3 與 .NET Core SDK 2.0 起開始支援 C# 7.1。 不過，7.1 的功能預設為關閉。 若要啟用 7.1 功能，您需要變更專案的語言版本設定。
-
-在 [方案總管]的專案節點上按一下滑鼠右鍵，並選取 [屬性]。 選取 [建置] 索引標籤並選取 [進階] 按鈕。 在下拉式清單中選取 [C# 最新的次要版本 (最新版)]，或特定版本 [C# 7.1]，如下圖所示。 `latest` 值表示您想要使用目前電腦上的最新次要版本。 `C# 7.1` 表示您想要使用 C# 7.1，即使是已有較新的次要版本發行。
-
-![設定語言版本](./media/csharp-7-1/advanced-build-settings.png)
-
-或者，您可以編輯 "csproj" 檔案，並新增或修改下列行：
-
-```xml
-<PropertyGroup>
-  <LangVersion>latest</LangVersion>
-</PropertyGroup>
-```
-
-> [!NOTE]
-> 如果您使用 Visual Studio IDE 來更新 csproj 檔，IDE 會為每個組建組態建立個別的節點。 您一般會在所有組建組態中設定相同的值，但您需要針對每個組建組態明確設定，或在修改此設定時選取 [所有組態]。 您會在 csproj 檔案中看到下列內容：
-
-```xml
-<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-  <LangVersion>latest</LangVersion>
-</PropertyGroup>
-
-<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-  <LangVersion>latest</LangVersion>
-</PropertyGroup>
-```
-
-`LangVersion` 項目的有效設定為：
-
-* `ISO-1`
-* `ISO-2`
-* `3`
-* `4`
-* `5`
-* `6`
-* `7`
-* `7.1`
-* `default`
-* `latest`
-
-特殊字串 `default` 和 `latest` 會分別解析成安裝在組建電腦上的最新主要和次要語言版本。
-
-此設定能讓在您開發環境中安裝新版本的 SDK 和工具與在專案中選擇納入新語言功能這兩件事分開。 您可以在組建電腦上安裝最新的 SDK 和工具。 每個專案可以設定為針對其組建使用特定版本的語言。
+若要使用小數點版本中的最新功能，您需要[設定編譯器語言版本](../language-reference/configure-language-version.md)並選取該版本。
 
 ## <a name="async-main"></a>非同步主要
 

@@ -4,11 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 領域事件�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 424408ca095eadeda33690277dcf38bac923e29f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6af18b1154759677c7749632eace30bad752591
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34697192"
 ---
 # <a name="domain-events-design-and-implementation"></a>領域事件：設計和實作
 
@@ -151,7 +152,7 @@ public abstract class Entity
 
 當您想要引發事件時，您只要從彙總根實體之任何方法的程式碼將它新增至事件集合。
 
-下列程式碼 (屬於 [eShopOnContainers 的 OrderAggrergateRoot](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs)) 顯示一個範例：
+下列程式碼 (屬於 [eShopOnContainers 的 Order aggregate-root](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs)) 顯示一個範例：
 
 ```csharp
 var orderStartedDomainEvent = new OrderStartedDomainEvent(this, //Order object
@@ -339,7 +340,7 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 -   **Jimmy Bogard：更佳的領域事件模式**
     [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
 
--   **Vaughn Vernon：有效的彙總設計第 2 部分：使彙總共同作業**
+-   **Vaughn Vernon：Effective Aggregate Design Part II: Making Aggregates Work Together (有效彙總設計第二部分：使彙總共同作業)**
     [*http://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
 -   **Jimmy Bogard：加強您的領域：領域事件**

@@ -10,11 +10,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: f917d662366dc8ff540cdee6222199fe8f5606c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6dfdf14b518582388e655ec5616904928dfd8b5
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696435"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (C# 參考)
 try-catch 陳述式包含 `try` 區塊後面接著一個或多個 `catch` 子句，指定不同例外狀況的處理常式。  
@@ -42,7 +43,7 @@ catch (InvalidCastException e)
   
  您可以在相同 try catch 陳述式中的子句中使用多個特定的 `catch`。 在此情況下，`catch` 子句的順序很重要，因為會依順序檢查 `catch` 子句。 在較不特定的例外狀況之前攔截較特定的例外狀況。 如果您排序 catch 區塊，使得永遠不會達到較新的區塊，編譯器會產生錯誤。  
   
- 使用 `catch` 引數是篩選您想要處理的例外狀況的一種方式。  您也可以使用述詞運算式，進一步檢查例外狀況來決定是否要處理。  如果述詞運算式會傳回 false，則搜尋處理常式會繼續。  
+ 使用 `catch` 引數是篩選您想要處理的例外狀況的一種方式。  您也可以使用例外狀況篩選，進一步檢查例外狀況來決定是否要處理。  如果例外狀況篩選會傳回 false，則搜尋處理常式會繼續。  
   
 ```csharp  
 catch (ArgumentException e) when (e.ParamName == "…")  
@@ -50,7 +51,7 @@ catch (ArgumentException e) when (e.ParamName == "…")
 }  
 ```  
   
- 例外狀況篩選條件優於攔截和重新擲回 (說明如下所示)，因為篩選條件不會損壞堆疊。  如果之後的處理常式傾印堆疊，您可以看到例外狀況原本來自何處，而不是只重新擲回的最後一個位置。  例外狀況篩選條件運算式的常見用法是記錄。  您可以建立一律會傳回 false 同時會輸出到記錄檔的述詞函式，您可以持續記錄例外狀況，而不必處理它們並重新擲回。  
+ 例外狀況篩選條件優於攔截和重新擲回 (說明如下所示)，因為篩選條件不會損壞堆疊。  如果之後的處理常式傾印堆疊，您可以看到例外狀況原本來自何處，而不是只重新擲回的最後一個位置。  例外狀況篩選條件運算式的常見用法是記錄。  您可以建立一律會傳回 false 同時會輸出到記錄檔的篩選，您可以持續記錄例外狀況，而不必處理它們並重新擲回。  
   
  [throw](../../../csharp/language-reference/keywords/throw.md) 陳述式可以在 `catch` 區塊中用來重新擲回 `catch` 陳述式攔截到的例外狀況。 下列範例會從 <xref:System.IO.IOException> 例外狀況擷取來源資訊，然後將例外狀況擲回父方法。  
   
@@ -92,9 +93,19 @@ catch (InvalidCastException e)
     {  
         // Take some action.  
     }  
- }  
+}  
 ```  
-  
+
+> [!NOTE]
+> 也可以使用例外狀況篩選，以通常更為簡潔的方式取得類似的結果 (以及未修改堆疊，如本文件稍早所述)。 下列範例的呼叫端行為類似於上一個範例。 此函式會在 `e.Data` 為 `null` 時，將 `InvalidCastException` 擲回呼叫端。
+> 
+> ```csharp
+> catch (InvalidCastException e) when (e.Data != null)   
+> {  
+>     // Take some action.  
+> }
+> ```   
+
  從 `try` 區塊內，僅初始化其中宣告的變數。 否則，在區塊的執行完成之前，可能會發生例外狀況。 例如，在下列程式碼範例中，變數 `n` 是在 `try` 區塊內初始化。 在 `Write(n)` 陳述式中的 `try` 區塊外嘗試使用此變數，將產生編譯器錯誤。  
   
 ```csharp  

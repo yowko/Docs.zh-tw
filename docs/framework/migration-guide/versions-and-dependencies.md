@@ -1,17 +1,18 @@
 ---
 title: .NET Framework 版本和相依性
 ms.custom: updateeachrelease
-ms.date: 04/10/2018
+ms.date: 05/31/2018
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b3a32e21573ae7f2e59655b191278e4aec7c4ab
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 7c2c3ca038508b63533a7e17f6ceb6ebf1ad6842
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728611"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 版本和相依性
 每一版 .NET Framework 都包含通用語言執行平台 (CLR)、基底類別庫及其他 Managed 程式庫。 本主題將說明各版 .NET Framework 的主要功能、提供有關基礎 CLR 版本和相關聯開發環境的資訊，以及識別 Windows 作業系統所安裝的版本。  
@@ -44,9 +45,13 @@ ms.lasthandoff: 05/23/2018
 |2.0|2.0|-   泛型<br />-   ASP.NET 新增功能<br />-   [其他...](http://msdn.microsoft.com/library/t357fb32\(v=vs.80\).aspx)|2005|-|✓ 2008 R2 SP1<br />✓ 2008 SP2<br />✓ 2003|請參閱[相關指示](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
 |1.1|1.1|-   ASP.NET 和 ADO.NET 更新<br />-   並存執行<br />-   [其他...](http://msdn.microsoft.com/library/9wtde3k4\(v=vs.80\).aspx)|2003|-|✓ 2003|請參閱[相關指示](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
 |1.0|1.0|.NET Framework 的第一個版本。|Visual Studio .NET|-|-|請參閱[相關指示](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
-  
- 一般而言，您不應該解除安裝電腦上已安裝的任何 .NET Framework 版本，因為您使用的應用程式可能倚賴特定版本，如果移除該版本，可能使應用程式中斷。 您可以同時在單一電腦上載入多個 .NET Framework 版本。 這表示，您不需要解除安裝舊版，可以直接安裝新版 .NET Framework。 如需詳細資訊，請參閱[使用者入門](../../../docs/framework/get-started/index.md)。  
-  
+
+**備註**
+
+<sup>\*</sup>&nbsp;&nbsp;必須在此作業系統上透過[控制台 (適用於 Windows) 或伺服器管理員 (適用於 Windows Server)](../install/dotnet-35-windows-10.md#enable-the-net-framework-35-in-control-panel) 來啟用 .NET Framework。
+
+ 一般而言，您不應該解除安裝電腦上已安裝的任何 .NET Framework 版本，因為您使用的應用程式可能倚賴特定版本，如果移除該版本，可能使應用程式中斷。 您可以同時在單一電腦上載入多個 .NET Framework 版本。 這表示，您不需要解除安裝舊版，可以直接安裝新版 .NET Framework。 如需詳細資訊，請參閱[使用者入門](../../../docs/framework/get-started/index.md)。
+
 ## <a name="targeting-and-running-net-framework-apps-for-version-45-and-later"></a>鎖定執行 .NET Framework 4.5 及更新版本的應用程式  
  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 為就地更新，會取代您電腦上的 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]；同樣地，[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 4.5.2、4.6、4.6.1、4.6.2、4.7 和 4.7.1 也是 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的就地更新，亦即其全都使用相同的執行階段版本，但組件版本會更新，並包含新的類型及成員。 安裝這些更新的其中一項之後，您的 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] .NET Framework 4.6 或 .NET Framework 4.7 應用程式應無須重新編譯即可繼續執行。 不過，反向操作則不可行。 不建議您在舊版 .NET Framework 上執行目標為新版 .NET Framework 的應用程式。 比方說，我們不建議您在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 上執行以 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 為目標的應用程式。 以下是適用的方針：  
   

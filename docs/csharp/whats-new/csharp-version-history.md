@@ -3,11 +3,12 @@ title: C# 的歷史 - C# 指南
 description: 最早的語言版本有哪些內容，而在之後有什麼演變？
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 1c7b91a3a5c77059ca8d7acef95252b4a3557b28
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e659f2438e9785a02f7016e49b78015ad46b9133
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696971"
 ---
 # <a name="the-history-of-c"></a>C# 的歷史 #
 
@@ -98,7 +99,7 @@ C# 5.0 版是該語言非常聚焦的一個版本。 幾乎該版本的所有心
 - [Null 傳播程式](https://davefancher.com/2014/08/14/c-6-0-null-propagation-operator/)
 - [字串內插補點](../language-reference/tokens/interpolated.md)
 - [nameof 運算子](https://stackoverflow.com/questions/31695900/what-is-the-purpose-of-nameof)
-- [字典初始設定式](../programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md)
+- [索引初始設定式](csharp-6.md#index-initializers)
 
 這些功能每個本身都很有趣。 但是，如果您一起看它們，您會發現有趣的模式。 在此版本中，C# 排除語言樣本，以使程式碼更簡易、可讀性更高。 因此，對於喜好乾淨、簡單程式碼的人而言，這個語言版本大幅勝出。
 

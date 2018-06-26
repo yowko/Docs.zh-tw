@@ -3,12 +3,13 @@ title: dotnet nuget locals 命令 - .NET Core CLI
 description: dotnet nuget locals 命令會清除或列出本機 NuGet 資源，例如 http-request 快取、暫時快取，或整部電腦的全域套件資料夾。
 author: karann-msft
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: d0c900a06b00fd5e6b7ad66527c6582483222c45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: 799acb92d6ab7439e15c23c9f0b7b572c966adda
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696867"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
@@ -20,7 +21,10 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>概要
 
-`dotnet nuget locals <CACHE_LOCATION> [(-c|--clear)|(-l|--list)] [--force-english-output] [-h|--help]`
+```
+dotnet nuget locals <CACHE_LOCATION> [(-c|--clear)|(-l|--list)] [--force-english-output]
+dotnet nuget locals [-h|--help]
+```
 
 ## <a name="description"></a>描述
 
@@ -30,7 +34,7 @@ ms.lasthandoff: 05/04/2018
 
 `CACHE_LOCATION`
 
-下列其中一個值：
+要列出或清除的快取位置。 它接受下列其中一個值：
 
 * `all` - 指出指定的作業會套用至所有快取類型：http-request 快取、全域套件快取和暫時快取。
 * `http-cache` - 指出指定的作業只套用至 http-request 快取。 其他快取位置不受影響。
@@ -38,6 +42,10 @@ ms.lasthandoff: 05/04/2018
 * `temp` - 指出指定的作業只套用至暫時快取。 其他快取位置不受影響。
 
 ## <a name="options"></a>選項
+
+`--force-english-output`
+
+強制使用非變異英文文化特性來執行應用程式。
 
 `-h|--help`
 
@@ -49,11 +57,7 @@ ms.lasthandoff: 05/04/2018
 
 `-l|--list`
 
-list 選項是用來顯示指定之快取類型的位置。 
-
-`--force-english-output`
-
-強制命令列輸出採用英文。
+list 選項是用來顯示指定之快取類型的位置。
 
 ## <a name="examples"></a>範例
 

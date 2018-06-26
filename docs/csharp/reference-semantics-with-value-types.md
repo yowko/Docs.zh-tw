@@ -3,26 +3,19 @@ title: 具備實值型別的參考語意
 description: 了解最小化安全地複製結構的語言功能
 ms.date: 11/10/2017
 ms.custom: mvc
-ms.openlocfilehash: 3c53a426a6adb37f5091e4ad61835fef6c9f7729
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0646a7fbc01ed76883fb6b16ce04006049ef054a
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34566276"
 ---
 # <a name="reference-semantics-with-value-types"></a>具備實值型別的參考語意
 
 使用實值型別的優點是他們通常可避免堆積配置。
 相對地，缺點則是他們根據實值複製。 這種兩難的情況使得最佳化針對大量資料進行運作的演算法，變得更加困難。 C# 7.2 中新的語言功能提供一項新的機制，可對實值型別使用利用參考傳遞的語意。 若能善用這些功能，即可同時最小化配置及複製作業。 本文會探討這些新功能。
 
-文中有許多程式碼範例示範有 C# 7.2 的新增功能。 若要使用這些功能，必須在您的專專案設為使用 C# 7.2 或更新版本。 您可使用 Visual Studio 進行選取。 請為每個專案，從功能表選取 [專案]，然後選取 [屬性]。 選取 [建置] 索引標籤，然後按一下 [進階]。 您可於該位置設定語言版本。 請選擇 [7.2] 或 [最新版]。  或者，您也可以編輯 *csproj* 檔案，並新增下列節點：
-
-```XML
-  <PropertyGroup>
-    <LangVersion>7.2</LangVersion>
-  </PropertyGroup>
-```
-
-您可以為值使用 [7.2] 或 [最新版]。
+文中有許多程式碼範例示範有 C# 7.2 的新增功能。 若要使用這些功能，必須在您的專專案設為使用 C# 7.2 或更新版本。 如需設定語言版本的詳細資訊，請參閱[設定語言版本](language-reference/configure-language-version.md)。
 
 ## <a name="passing-arguments-by-readonly-reference"></a>以唯讀參考傳遞引數
 

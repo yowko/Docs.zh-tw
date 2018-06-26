@@ -3,12 +3,13 @@ title: dotnet run 命令 - .NET Core CLI
 description: dotnet run 命令提供方便的選項，以透過原始程式碼來執行應用程式。
 author: mairaw
 ms.author: mairaw
-ms.date: 03/10/2018
-ms.openlocfilehash: b45d6772cabd6be90ea8e8b5da57c16692b20322
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: 82c6e44e52aa6af7044edf72fd6e57b7614a70f3
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696308"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -20,20 +21,23 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>概要
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 ```
-dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies] [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [[--] [application arguments]]
+dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies]
+    [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [-v|--verbosity] [[--] [application arguments]]
 dotnet run [-h|--help]
 ```
-
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+```
+dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies]
+    [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [[--] [application arguments]]
+dotnet run [-h|--help]
+```
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
 ```
 dotnet run [-c|--configuration] [-f|--framework] [-p|--project] [[--] [application arguments]]
 dotnet run [-h|--help]
 ```
-
 ---
 
 ## <a name="description"></a>描述
@@ -46,7 +50,7 @@ dotnet run [-h|--help]
 
 `dotnet run` 命令用於專案內容中，而非已建置的組件。 如果您改為嘗試執行與 Framework 相依的應用程式 DLL，您必須不透過命令使用 [dotnet](dotnet.md)。 例如，若要執行 `myapp.dll`，使用︰
 
-```
+```console
 dotnet myapp.dll
 ```
 
@@ -58,11 +62,11 @@ dotnet myapp.dll
 
 ## <a name="options"></a>選項
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `--`
 
-分隔 `dotnet run` 的引數與執行中應用程式的引數。 此項目之後的所有引數會傳遞至執行的應用程式。
+分隔 `dotnet run` 的引數與執行中應用程式的引數。 此分隔符號之後的所有引數會傳遞至執行的應用程式。
 
 `-c|--configuration {Debug|Release}`
 
@@ -74,7 +78,7 @@ dotnet myapp.dll
 
 `--force`
 
-即使最後的還原成功，仍強制解析所有相依性。 這相當於刪除 *project.assets.json*。
+即使最後的還原成功，仍強制解析所有相依性。 指定這個旗標等同於刪除 *project.assets.json* 檔案。
 
 `-h|--help`
 
@@ -86,7 +90,7 @@ dotnet myapp.dll
 
 `--no-build`
 
-不會在執行前建置專案。
+不會在執行前建置專案。 它也會隱含設定 `--no-restore` 旗標。
 
 `--no-dependencies`
 
@@ -94,11 +98,65 @@ dotnet myapp.dll
 
 `--no-launch-profile`
 
-不會嘗試使用 *launchSettings.json* 設定應用程式。
+不會嘗試使用 *launchSettings.json* 來設定應用程式。
 
 `--no-restore`
 
-執行命令時，不執行隱含的還原。
+執行命令時，不會執行隱含的還原。
+
+`-p|--project <PATH>`
+
+指定要執行的專案檔路徑 (資料夾名稱或完整路徑)。 如果未指定，則會預設為目前目錄。
+
+`--runtime <RUNTIME_IDENTIFIER>`
+
+指定要還原套件的目標執行階段。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。
+
+`-v|--verbosity <LEVEL>`
+
+設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
+
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+
+`--`
+
+分隔 `dotnet run` 的引數與執行中應用程式的引數。 此分隔符號之後的所有引數會傳遞至執行的應用程式。
+
+`-c|--configuration {Debug|Release}`
+
+定義組建組態。 預設值是 `Debug`。
+
+`-f|--framework <FRAMEWORK>`
+
+使用指定的[架構](../../standard/frameworks.md)建置並執行應用程式。 架構必須在專案檔中指定。
+
+`--force`
+
+即使最後的還原成功，仍強制解析所有相依性。 指定這個旗標等同於刪除 *project.assets.json* 檔案。
+
+`-h|--help`
+
+印出命令的簡短說明。
+
+`--launch-profile <NAME>`
+
+啟動應用程式時使用的啟動設定檔名稱 (如果有的話)。 啟動設定檔是在 *launchSettings.json* 檔案中定義，通常稱為 `Development`、`Staging` 和 `Production`。 如需詳細資訊，請參閱[使用多個環境](/aspnet/core/fundamentals/environments)。
+
+`--no-build`
+
+不會在執行前建置專案。 它也會隱含設定 `--no-restore` 旗標。
+
+`--no-dependencies`
+
+在還原包含專案對專案 (P2P) 參考的專案時，會還原根專案，而非參考。
+
+`--no-launch-profile`
+
+不會嘗試使用 *launchSettings.json* 來設定應用程式。
+
+`--no-restore`
+
+執行命令時，不會執行隱含的還原。
 
 `-p|--project <PATH>`
 
@@ -112,7 +170,7 @@ dotnet myapp.dll
 
 `--`
 
-分隔 `dotnet run` 的引數與執行中應用程式的引數。 此項目之後的所有引數會傳遞至執行的應用程式。
+分隔 `dotnet run` 的引數與執行中應用程式的引數。 此分隔符號之後的所有引數會傳遞至執行的應用程式。
 
 `-c|--configuration {Debug|Release}`
 

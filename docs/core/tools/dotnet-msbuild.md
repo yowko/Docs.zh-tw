@@ -3,12 +3,13 @@ title: dotnet msbuild 命令 - .NET Core CLI
 description: dotnet msbuild 命令提供對 MSBuild 命令列的存取。
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: c51c058391de4925afd4339fe84e28500d692e1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/25/2018
+ms.openlocfilehash: 58aac2a5314758b8711c0b014154022168fb671c
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696841"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
@@ -26,7 +27,7 @@ ms.lasthandoff: 05/04/2018
 
 `dotnet msbuild` 命令可存取完整功能的 MSBuild。
 
-命令與現有的 MSBuild 命令列用戶端具有完全相同的功能。 選項完全一樣。 使用 [MSBuild 命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)來取得可用選項的資訊。 
+命令與現有的 MSBuild 命令列用戶端具有完全相同的功能。 選項完全一樣。 如需可用選項的詳細資訊，請參閱 [MSBuild 命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)。
 
 ## <a name="examples"></a>範例
 

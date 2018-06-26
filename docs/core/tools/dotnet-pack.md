@@ -3,12 +3,13 @@ title: dotnet pack 命令 - .NET Core CLI
 description: dotnet pack 命令會建立 .NET Core 專案的 NuGet 套件。
 author: mairaw
 ms.author: mairaw
-ms.date: 03/10/2018
-ms.openlocfilehash: 6e6136e22c4bac201cfa0e4af321329432c04936
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: 8c2569ec7598b21fe9b673176143d0e54b9eb065
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696815"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -21,16 +22,15 @@ ms.lasthandoff: 05/04/2018
 ## <a name="synopsis"></a>概要
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```
 dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies]
     [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
-
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 ```
-dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
+dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output]
+    [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
 ---
@@ -41,7 +41,7 @@ dotnet pack [-h|--help]
 
 封裝專案的 NuGet 相依性會新增至 *.nuspec* 檔案，因此在安裝套件時可以正確地解析它們。 專案對專案參考不會封裝到專案內。 目前，如果您有專案對專案相依性，則必須一個專案各一個套件。
 
-`dotnet pack` 預設會先建置專案。 如果您想要避免這種行為，請傳遞 `--no-build` 選項。 這通常適用於您知道先前剛建立程式碼的持續整合 (CI) 組建案例。
+`dotnet pack` 預設會先建置專案。 如果您想要避免這種行為，請傳遞 `--no-build` 選項。 這個選項通常適用於您知道先前剛建立程式碼的持續整合 (CI) 組建案例。
 
 您可以提供 MSBuild 屬性給 `dotnet pack` 命令來壓縮程序。 如需詳細資訊，請參閱 [NuGet 中繼資料屬性](csproj.md#nuget-metadata-properties)和 [MSBuild 命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)。 [範例](#examples)一節示範針對數個不同案例使用 MSBuild /p 參數的方法。
 
@@ -51,7 +51,7 @@ dotnet pack [-h|--help]
 
 `PROJECT`
 
-要封裝的專案。 它可以是 [csproj 檔案](csproj.md)或目錄的路徑。 如果省略，則會預設為目前目錄。
+要封裝的專案。 它可以是 [csproj 檔案](csproj.md)或目錄的路徑。 如果未指定，則會預設為目前目錄。
 
 ## <a name="options"></a>選項
 
@@ -61,7 +61,9 @@ dotnet pack [-h|--help]
 
 定義組建組態。 預設值是 `Debug`。
 
-`--force`：即使最後的還原成功，仍強制解析所有相依性。 這相當於刪除 *project.assets.json* 檔案。
+`--force`
+
+即使最後的還原成功，仍強制解析所有相依性。 指定這個旗標等同於刪除 *project.assets.json* 檔案。
 
 `-h|--help`
 
@@ -77,7 +79,7 @@ dotnet pack [-h|--help]
 
 `--no-build`
 
-不會在封裝前建置專案。
+不會在封裝前建置專案。 它也會隱含設定 `--no-restore` 旗標。
 
 `--no-dependencies`
 
@@ -85,13 +87,13 @@ dotnet pack [-h|--help]
 
 `--no-restore`
 
-執行命令時，不執行隱含的還原。
+執行命令時，不會執行隱含還原。
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
 將已建置的套件放置在指定的目錄中。
 
-`-r|--runtime <RUNTIME_IDENTIFIER>`
+`--runtime <RUNTIME_IDENTIFIER>`
 
 指定要還原套件的目標執行階段。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。
 
