@@ -37,7 +37,7 @@ ms.locfileid: "33602732"
 ## <a name="remarks"></a>備註  
  使用`<include>`標記來參考另一個檔案中描述的類型的註解和您的原始程式碼中的成員。 這是將文件註解直接放在原始程式碼檔中的替代方案。  
   
- `<include>`標記使用 W3C XML 路徑語言 (XPath) 1.0 版建議事項。 自訂方法的詳細資訊您`<include>`使用位於http://www.w3.org/TR/xpath。  
+ `<include>`標記使用 W3C XML 路徑語言 (XPath) 1.0 版建議事項。 自訂方法的詳細資訊您`<include>`使用位於 http://www.w3.org/TR/xpath 。  
   
 ## <a name="example"></a>範例  
  這個範例會使用`<include>`從名為的檔案匯入成員文件註解標記`commentFile.xml`。  

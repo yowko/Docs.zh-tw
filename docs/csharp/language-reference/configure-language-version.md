@@ -2,12 +2,12 @@
 title: 選取 C# 語言版本 - C# 指南
 description: 設定編譯器以特定的編譯器版本執行語法驗證
 ms.date: 05/24/2018
-ms.openlocfilehash: 2056a99544d0cac94bc7cc79e8cd8793b1bcff78
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 9b91e62168ced0f373e1a55def8b279dc64833d8
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34566319"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207910"
 ---
 # <a name="select-the-c-language-version"></a>選取 C# 語言版本
 
@@ -88,7 +88,7 @@ Visual Studio 可協助您判斷您需要的語言版本。 如果您使用不�
 </Project>
 ```
 
-現在，包含該檔案之目錄的每個子目錄中的組建將會使用 C# 版本 7.3 語法。 如需詳細資訊，請參閱[自訂組建](/visualstudio/msbuild/customize-your-build.md)。
+現在，包含該檔案之目錄的每個子目錄中的組建將會使用 C# 版本 7.3 語法。 如需詳細資訊，請參閱[自訂組建](/visualstudio/msbuild/customize-your-build)。
 
 ## <a name="set-the-langversion-compiler-option"></a>設定 langversion 編譯器選項
 
