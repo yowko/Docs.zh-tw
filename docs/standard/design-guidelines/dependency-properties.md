@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 212cfb1e-cec4-4047-94a6-47209b387f6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 039015f895a491d8709815d6aff52eb6139d779f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7398202cc265fbd55b9bf0b5a53367dedcab57b0
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576112"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948481"
 ---
 # <a name="dependency-properties"></a>相依性屬性
 相依性屬性 (DP) 是將其值儲存在屬性存放區，而不是儲存在類型變數 （欄位），例如的一般屬性。  
@@ -43,7 +43,7 @@ ms.locfileid: "33576112"
   
  附加屬性的典型的範例是<xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType>屬性。 此屬性代表按鈕的 （不方格的） 資料行位置，但是只有相關如果按鈕包含在方格中，因此它 「 附加 」 到按鈕的方格。  
   
-```  
+```xaml
 <Grid>  
     <Grid.ColumnDefinitions>  
         <ColumnDefinition />  
@@ -57,7 +57,7 @@ ms.locfileid: "33576112"
   
  附加屬性的定義看起來大部分的一般相依性屬性的不同之處在於存取子都由靜態的 Get 和 Set 方法：  
   
-```  
+```csharp
 public class Grid {  
   
     public static int GetColumn(DependencyObject obj) {  

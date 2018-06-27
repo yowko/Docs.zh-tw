@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 31a6c13b-d6a2-492b-9a9f-e5238c983bcb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdcb746ae2d8c2262b0cd0c6c9dcaababb12bd63
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f7bb9420d6439cff36c5cfa997152773503fbd9a
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578985"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948546"
 ---
 # <a name="dispose-pattern"></a>Dispose 模式
 所有程式執行期間都取得一或多個系統資源，例如記憶體、 系統處理或資料庫連接。 開發人員需要時請小心使用這類的系統資源，因為它們已取得並使用之後必須釋放它們。  
@@ -59,22 +59,22 @@ ms.locfileid: "33578985"
   
  下列範例示範基本模式的簡單實作：  
   
-```  
+```csharp
 public class DisposableResourceHolder : IDisposable {  
   
     private SafeHandle resource; // handle to a resource  
   
-    public DisposableResourceHolder(){  
+    public DisposableResourceHolder() {  
         this.resource = ... // allocates the resource  
     }  
   
-    public void Dispose(){  
+    public void Dispose() {  
         Dispose(true);  
         GC.SuppressFinalize(this);  
     }  
   
-    protected virtual void Dispose(bool disposing){  
-        if (disposing){  
+    protected virtual void Dispose(bool disposing) {  
+        if (disposing) {  
             if (resource!= null) resource.Dispose();  
         }  
     }  
@@ -89,9 +89,9 @@ public class DisposableResourceHolder : IDisposable {
   
  所有資源清除應都發生在這個方法。 方法呼叫來自完成項和`IDisposable.Dispose`方法。 參數會是如果正在從叫用完成項內則為 false。 它應該用於確保在最終處理期間執行的任何程式碼不會存取其他最終處理物件。 下一節會說明實作完成項的詳細資料。  
   
-```  
-protected virtual void Dispose(bool disposing){  
-    if (disposing){  
+```csharp
+protected virtual void Dispose(bool disposing) {  
+    if (disposing) {  
         if (resource!= null) resource.Dispose();  
     }  
 }  
@@ -101,7 +101,7 @@ protected virtual void Dispose(bool disposing){
   
  若要呼叫`SuppressFinalize`才應該發生`Dispose(true)`順利執行。  
   
-```  
+```csharp
 public void Dispose(){  
     Dispose(true);  
     GC.SuppressFinalize(this);  
@@ -112,17 +112,17 @@ public void Dispose(){
   
  `Dispose(bool)`方法是由子類別應該覆寫。  
   
-```  
+```csharp
 // bad design  
 public class DisposableResourceHolder : IDisposable {  
-    public virtual void Dispose(){ ... }  
-    protected virtual void Dispose(bool disposing){ ... }  
+    public virtual void Dispose() { ... }  
+    protected virtual void Dispose(bool disposing) { ... }  
 }  
   
 // good design  
 public class DisposableResourceHolder : IDisposable {  
-    public void Dispose(){ ... }  
-    protected virtual void Dispose(bool disposing){ ... }  
+    public void Dispose() { ... }  
+    protected virtual void Dispose(bool disposing) { ... }  
 }  
 ```  
   
@@ -132,13 +132,13 @@ public class DisposableResourceHolder : IDisposable {
   
  **✓ 不要**允許`Dispose(bool)`方法來呼叫一次以上。 此方法可能會選擇不執行任何動作後第一次呼叫。  
   
-```  
+```csharp
 public class DisposableResourceHolder : IDisposable {  
   
     bool disposed = false;  
   
-    protected virtual void Dispose(bool disposing){  
-        if(disposed) return;  
+    protected virtual void Dispose(bool disposing) {  
+        if (disposed) return;  
         // cleanup  
         ...  
         disposed = true;  
@@ -154,18 +154,18 @@ public class DisposableResourceHolder : IDisposable {
   
  **✓ 不要**擲回<xref:System.ObjectDisposedException>從已經過處置物件後，無法使用的任何成員。  
   
-```  
+```csharp
 public class DisposableResourceHolder : IDisposable {  
     bool disposed = false;  
     SafeHandle resource; // handle to a resource  
   
-    public void DoSomething(){  
-           if(disposed) throw new ObjectDisposedException(...);  
+    public void DoSomething() {  
+        if (disposed) throw new ObjectDisposedException(...);  
         // now call some native methods using the resource   
-            ...  
+        ...  
     }  
-    protected virtual void Dispose(bool disposing){  
-        if(disposed) return;  
+    protected virtual void Dispose(bool disposing) {  
+        if (disposed) return;  
         // cleanup  
         ...  
         disposed = true;  
@@ -177,12 +177,12 @@ public class DisposableResourceHolder : IDisposable {
   
  這樣做，它時，請務必`Close`實作相同`Dispose`並考慮實作`IDisposable.Dispose`方法明確。  
   
-```  
+```csharp
 public class Stream : IDisposable {  
-    IDisposable.Dispose(){  
+    IDisposable.Dispose() {  
         Close();  
     }  
-    public void Close(){  
+    public void Close() {  
         Dispose(true);  
         GC.SuppressFinalize(this);  
     }  
@@ -201,29 +201,29 @@ public class Stream : IDisposable {
   
  下列程式碼會顯示可完成類型的範例：  
   
-```  
+```csharp
 public class ComplexResourceHolder : IDisposable {  
   
     private IntPtr buffer; // unmanaged memory buffer  
     private SafeHandle resource; // disposable handle to a resource  
   
-    public ComplexResourceHolder(){  
+    public ComplexResourceHolder() {  
         this.buffer = ... // allocates memory  
         this.resource = ... // allocates the resource  
     }  
   
-    protected virtual void Dispose(bool disposing){  
+    protected virtual void Dispose(bool disposing) {  
             ReleaseBuffer(buffer); // release unmanaged memory  
-        if (disposing){ // release other disposable objects  
+        if (disposing) { // release other disposable objects  
             if (resource!= null) resource.Dispose();  
         }  
     }  
   
-    ~ ComplexResourceHolder(){  
+    ~ComplexResourceHolder() {
         Dispose(false);  
     }  
   
-    public void Dispose(){  
+    public void Dispose() {
         Dispose(true);  
         GC.SuppressFinalize(this);  
     }  
@@ -242,14 +242,14 @@ public class ComplexResourceHolder : IDisposable {
   
  當實作完成項時，只需呼叫`Dispose(false)`，並將內的所有資源清除邏輯`Dispose(bool disposing)`方法。  
   
-```  
+```csharp
 public class ComplexResourceHolder : IDisposable {  
   
-    ~ ComplexResourceHolder(){  
+    ~ComplexResourceHolder() {
         Dispose(false);  
     }  
   
-    protected virtual void Dispose(bool disposing){  
+    protected virtual void Dispose(bool disposing) {
         ...  
     }  
 }  
