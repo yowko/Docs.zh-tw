@@ -119,7 +119,7 @@ WCF 資料服務是 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]
  **xmlns:m ="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"**  
  **xmlns ="http://www.w3.org/2005/Atom">**  
  **\<標題 類型 ="text"> 訂單 \< /標題 >**  
- **\<識別碼 >http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI') / 排序\</id >**  
+ **\<識別碼>http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/排序\</id>**  
  **\<更新 > 2010年-05-19T19:37:07Z\</ 更新 >**  
  **\<連結 rel ="本身"title ="Orders"href ="Orders"/ >**  
  **\<項目 >**  
