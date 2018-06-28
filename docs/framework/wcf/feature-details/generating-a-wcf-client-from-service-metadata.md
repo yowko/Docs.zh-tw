@@ -2,12 +2,12 @@
 title: 從服務中繼資料產生 WCF 用戶端
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: bd349099213a7818555a910aac1949999a57a58f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55034868b465b63dca3ca28238d81b348d9d6893
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494012"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37027924"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>從服務中繼資料產生 WCF 用戶端
 本主題說明如何使用 Svcutil.exe 中不同的參數，從中繼資料文件中產生用戶端。  
@@ -20,7 +20,7 @@ ms.locfileid: "33494012"
   
 -   DISCO 要求 (使用[DiscoveryClientProtocol](http://go.microsoft.com/fwlink/?LinkId=94777)從 ASP.NET Web 服務) 提供的位址。  
   
- Svcutil.exe 會根據 Web 服務描述語言 (WSDL) 或從服務收到的原則檔產生用戶端。 使用者主要名稱 (UPN) 是串連包含 "\@" 的使用者名稱，並新增完整網域名稱 (FQDN) 所產生的。 不過，如果在 Active Directory 註冊的使用者，此格式不正確，而且工具所產生的 UPN 會造成 Kerberos 驗證，並出現下列錯誤訊息中的失敗：**登入嘗試失敗。** 若要解決這個問題，請手動修復由此工具產生的用戶端檔案。  
+ Svcutil.exe 會根據 Web 服務描述語言 (WSDL) 或從服務收到的原則檔產生用戶端。 使用者主要名稱 (UPN) 藉由串連使用者名稱與產生"\@」，然後再新增完整網域名稱 (FQDN)。 不過，如果在 Active Directory 註冊的使用者，此格式不正確，而且工具所產生的 UPN 會造成 Kerberos 驗證，並出現下列錯誤訊息中的失敗：**登入嘗試失敗。** 若要解決這個問題，請手動修復由此工具產生的用戶端檔案。  
   
 ```  
 svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>  
