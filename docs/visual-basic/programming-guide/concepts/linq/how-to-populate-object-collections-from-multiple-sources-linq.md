@@ -2,12 +2,12 @@
 title: 如何： 從 (LINQ) (Visual Basic) 的多個來源填入物件集合
 ms.date: 06/22/2018
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-ms.openlocfilehash: 097a41614b4e7fb48c3ef3903faec8ed9ee3d5b6
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 6560f853874f9b9a9aeb53bd0678540004fdfcc1
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948445"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37070859"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>如何： 從 (LINQ) (Visual Basic) 的多個來源填入物件集合
 
@@ -25,7 +25,6 @@ ms.locfileid: "36948445"
 下列範例示範如何使用具名類型 `Student`，來儲存將兩個記憶體內部字串集合合併得來的資料，這些字串模擬 .csv 格式的試算表資料。 第一個字串集合代表學生姓名和學號，第二個集合代表學生學號 (第一欄) 和四個測驗分數。 學號會作為外部索引鍵使用。
 
 ```vb
-Imports System
 Imports System.Collections.Generic
 Imports System.Linq
 
@@ -133,7 +132,8 @@ Next
 
 建立並編譯專案為目標的下列選項的其中一個：
 
-- .NET framework 3.5 或更新版本與對 system.core.dll 的參考的版本。
+- .NET framework 3.5 版 System.Core.dll 的參考。
+- .NET framework 4.0 或更新版本的版本。
 - .NET core 版本 1.0 或更高版本。
 
 ## <a name="see-also"></a>另請參閱

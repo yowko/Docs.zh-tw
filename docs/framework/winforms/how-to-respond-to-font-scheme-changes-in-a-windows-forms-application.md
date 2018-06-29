@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-ms.openlocfilehash: 455609ea602f450803718f5be34618b087560d21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2451885c673515eb6690b0784fd5bd22de629209
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539448"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071142"
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>如何：回應 Windows Forms 應用程式中的字型配置變更
 在 Windows 作業系統中，使用者可以變更全系統字型設定，讓預設字型看起來更大或變小。 變更這些字型設定是重要的是視覺障礙者，並且需要讀取他們的螢幕上文字的較大類型的使用者。 您可以調整 Windows Form 應用程式由增加或減少大小的表單和內含之所有文字的字型配置變更時回應這些變更。 如果您想要以動態方式容納變更字型大小表單時，您可以將程式碼加入至表單。  
@@ -40,13 +40,13 @@ ms.locfileid: "33539448"
   
 5.  最後，實作的處理常式<xref:System.Windows.Forms.Form.FormClosing>中斷連結的事件<xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>事件處理常式。  
   
-> [!IMPORTANT]
->  包括此程式碼的失敗會導致您的應用程式會造成記憶體流失。  
+     > [!IMPORTANT]
+     > 包括此程式碼的失敗會導致您的應用程式會造成記憶體流失。  
   
- [!code-csharp[WinFormsAutoScaling#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#5)]
- [!code-vb[WinFormsAutoScaling#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#5)]  
+     [!code-csharp[WinFormsAutoScaling#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#5)]
+     [!code-vb[WinFormsAutoScaling#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#5)]  
   
-1.  編譯並執行程式碼。  
+6.  編譯並執行程式碼。  
   
 ### <a name="to-manually-change-the-font-scheme-in-windows-xp"></a>若要手動變更在 Windows XP 中的字型配置  
   
@@ -56,7 +56,7 @@ ms.locfileid: "33539448"
   
 3.  從**字型大小**下拉式清單方塊中，選取新字型的大小。  
   
-     您會發現表單回應執行階段變更桌面的字型配置中。 當使用者變更之間**一般**，**大字型**，和**超大型字**，變更字型的表單，並正確地進行縮放。  
+     您會發現表單現在會反應在桌面的字型配置中的執行階段變更。 當使用者變更之間**一般**，**大字型**，和**超大型字**，變更字型的表單，並正確地進行縮放。  
   
 ## <a name="example"></a>範例  
  [!code-csharp[WinFormsAutoScaling#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#1)]

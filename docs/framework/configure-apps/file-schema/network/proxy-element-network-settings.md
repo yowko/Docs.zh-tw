@@ -11,12 +11,12 @@ ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: b5ae716994f9b8222a633699367c94480179c97b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8d2e224f710a1f344623440f29c2c6e0e9bd661e
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744443"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37072510"
 ---
 # <a name="ltproxygt-element-network-settings"></a>&lt;proxy&gt;項目 （網路設定）
 定義 Proxy 伺服器。  
@@ -46,12 +46,12 @@ ms.locfileid: "32744443"
 |**屬性**|**描述**|  
 |-------------------|---------------------|  
 |`autoDetect`|指定是否自動偵測 proxy。 預設值是 `unspecified`。|  
-|`bypassonlocal`|指定是否略過本機資源的 proxy。 本機資源包括本機伺服器 (http://localhost， http://loopback，或http://127.0.0.1)以及沒有句號的 URI (http://webserver)。 預設值是 `unspecified`。|  
+|`bypassonlocal`|指定是否略過本機資源的 proxy。 本機資源包括本機伺服器 (`http://localhost`， `http://loopback`，或`http://127.0.0.1`) 以及沒有句號的 URI (`http://webserver`)。 預設值是 `unspecified`。|  
 |`proxyaddress`|指定 proxy 使用的 URI。|  
 |`scriptLocation`|指定組態指令碼的位置。|  
 |`usesystemdefault`|指定是否要使用 Internet Explorer proxy 設定。 如果設定為`true`，後續的屬性會覆寫 Internet Explorer proxy 設定。 預設值是 `unspecified`。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  

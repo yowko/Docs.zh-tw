@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], Value
 - XML Value property [Visual Basic]
 ms.assetid: 7ddd057a-a195-4e9b-ad8b-2ee0e615a20f
-ms.openlocfilehash: 31c9ce2774d6c6182403885a4438c4aa6bf143ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 927158f940d9b96cd06873c7d3e710be91b887e9
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604181"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071614"
 ---
 # <a name="xml-value-property-visual-basic"></a>XML Value 屬性 (Visual Basic)
 提供存取集合的第一個元素的值<xref:System.Xml.Linq.XElement>物件。  
@@ -38,7 +38,7 @@ object.Value
  <xref:System.Xml.Linq.XElement.Value%2A>屬性可讓您輕鬆地存取集合中的第一個元素的值<xref:System.Xml.Linq.XElement>物件。 這個屬性會先檢查集合是否包含至少一個物件。 如果集合是空的則這個屬性會傳回`Nothing`。 否則，這個屬性會傳回的值<xref:System.Xml.Linq.XElement.Value%2A>集合中的第一個元素的屬性。  
   
 > [!NOTE]
->  當您存取 XML 屬性使用的值 ' @' 屬性值會傳回做為識別項， `String` ，您不需要明確指定<xref:System.Xml.Linq.XAttribute.Value%2A>屬性。  
+>  當您存取 XML 屬性使用的值 '\@' 屬性值會傳回做為識別項， `String` ，您不需要明確指定<xref:System.Xml.Linq.XAttribute.Value%2A>屬性。  
   
  若要存取集合中的其他項目，您可以使用 XML 擴充索引子屬性。 如需詳細資訊，請參閱[擴充索引子屬性](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)。  
   

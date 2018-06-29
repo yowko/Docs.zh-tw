@@ -2,11 +2,12 @@
 title: 一般結構描述集合
 ms.date: 03/30/2017
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
-ms.openlocfilehash: fc8b581a127fbef0f32cdee53eaa62d241e4ae31
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 29ccd2af4268a86ae4c2047ad2523f68b0f6489e
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37072120"
 ---
 # <a name="common-schema-collections"></a>一般結構描述集合
 通用結構描述集合是由每個 .NET Framework Managed 提供者所實作的結構描述集合。 您可以查詢.NET Framework managed 提供者以決定支援的結構描述集合的清單，藉由呼叫**GetSchema**方法沒有引數，或使用結構描述集合名稱"MetaDataCollections"。 這會傳回 <xref:System.Data.DataTable>，包括支援的結構描述集合清單、每個集合所支援的限制數目，以及集合所使用之識別項部分的數目。 這些集合會描述所有必要資料行。 如果願意，提供者可以隨意加入其他資料行。 例如，`SqlClient` 及 `OracleClient` 會將 ParameterName 加入限制集合。  
@@ -29,7 +30,7 @@ ms.lasthandoff: 05/03/2018
   
 |ColumnName|DataType|描述|  
 |----------------|--------------|-----------------|  
-|CompositeIdentifierSeparatorPattern|string|符合複合識別項中複合分隔符號的規則運算式。 例如，"\\。 」 （適用於 SQL Server) 或"@&#124;\\。 」 (適用於 Oracle)。<br /><br /> 複合識別項通常是會用於資料庫物件名稱，例如： pubs.dbo.authors 或pubs@dbo.authors。<br /><br /> SQL 伺服器，請使用規則運算式 「\\。 」。 為 OracleClient，請使用"@&#124;\\。 」。<br /><br /> 若為 ODBC，請使用 Catalog_name_seperator。<br /><br /> 若為 OLE DB，請使用 DBLITERAL_CATALOG_SEPARATOR 或 DBLITERAL_SCHEMA_SEPARATOR。|  
+|CompositeIdentifierSeparatorPattern|string|符合複合識別項中複合分隔符號的規則運算式。 例如，"\\。 」 （適用於 SQL Server) 或 「\@&#124;\\。 」 (適用於 Oracle)。<br /><br /> 複合識別項通常是會用於資料庫物件名稱，例如： pubs.dbo.authors 或pubs@dbo.authors。<br /><br /> SQL 伺服器，請使用規則運算式 「\\。 」。 為 OracleClient，請使用"\@&#124;\\。 」。<br /><br /> 若為 ODBC，請使用 Catalog_name_seperator。<br /><br /> 若為 OLE DB，請使用 DBLITERAL_CATALOG_SEPARATOR 或 DBLITERAL_SCHEMA_SEPARATOR。|  
 |DataSourceProductName|string|提供者存取的產品名稱，如 "Oracle" 或 "SQLServer"。|  
 |DataSourceProductVersion|string|表示提供者存取的產品版本，使用資料來源原生格式，而非 Microsoft 格式。<br /><br /> 在某些情況下，DataSourceProductVersion 及 DataSourceProductVersionNormalized 將為同一值。 若為 OLE DB 及 ODBC，這些值將永遠相同，因為它們對應於基礎原生 API 中的同一函式呼叫。|  
 |DataSourceProductVersionNormalized|string|資料來源的正規化版本，可使用 `String.Compare()` 進行比較。 它的格式對提供者的所有版本來說都一致，這可以防止版本 10 在版本 1 與版本 2 之間排序。<br /><br /> 例如，Oracle 提供者使用的格式為"nn.nn.nn.nn.nn"其正規化版本，會使 Oracle 8i 資料來源傳回"08.01.07.04.01"。 SQL Server 會使用一般的 Microsoft 「 nn.nn.nnnn 」 格式。<br /><br /> 在某些情況下，DataSourceProductVersion 及 DataSourceProductVersionNormalized 將為同一值。 若為 OLE DB 及 ODBC，這些值將永遠相同，因為它們對應於基礎原生 API 中的同一函式呼叫。|  
@@ -37,8 +38,8 @@ ms.lasthandoff: 05/03/2018
 |IdentifierPattern|string|符合識別項並具有識別項相符值的規則運算式。 例如 "[A-Za-z0-9_#$]"。|  
 |IdentifierCase|<xref:System.Data.Common.IdentifierCase>|表示是否將非引號識別項視為區分大小寫。|  
 |OrderByColumnsInSelect|bool|指定 ORDER BY 子句中的資料行是否必須包含於選取清單中。 True 值表示其必須包含於選取清單中，False 值表示其不必包含於選取清單中。|  
-|ParameterMarkerFormat|string|表示如何格式化參數的格式字串。<br /><br /> 如果資料來源支援具名參數，則此字串中的第一個替代符號位置應為要格式化參數名稱的位置。<br /><br /> 例如，如果資料來源要求對參數進行命名，並加上 ':' 這會是 「:{0}"。 使用參數名稱 "p1" 對進行格式化時，產生的字串為 ":p1"。<br /><br /> 如果資料來源必須要有加上參數 '@'，但名稱中已包含它們，這會是'{0}'，並格式化一個名為參數的結果"@p1」 將只是 「@p1"。<br /><br /> 資料來源不要求具名的參數而要求使用 '？ ' 字元，為指定的格式字串 '？ '，這會忽略參數名稱。 針對 OLE DB 將傳回 '?'。|  
-|ParameterMarkerPattern|string|符合參數標記的規則運算式。 它會具有參數名稱的相符值 (如果有的話)。<br /><br /> 例如，如果支援具名參數將 '\@' 導引字元包括在參數名稱中，則此項將為："(\@[A-Za-z0-9_$#]*)"。<br /><br /> 不過，如果支援具名的參數 ':' 做為導引字元，且不屬於參數名稱，這會是:": ([A Za a-za-z0-9_$ #]\*) 」。<br /><br /> 當然，如果資料來源不支援具名參數，則此項僅為 "?"。|  
+|ParameterMarkerFormat|string|表示如何格式化參數的格式字串。<br /><br /> 如果資料來源支援具名參數，則此字串中的第一個替代符號位置應為要格式化參數名稱的位置。<br /><br /> 例如，如果資料來源要求對參數進行命名，並加上 ':' 這會是 「:{0}"。 使用參數名稱 "p1" 對進行格式化時，產生的字串為 ":p1"。<br /><br /> 如果資料來源必須要有加上參數 '@'，但名稱中已包含它們，這會是'{0}'，並格式化一個名為參數的結果"\@p1"就"\@p1"。<br /><br /> 資料來源不要求具名的參數而要求使用 '？ ' 字元，為指定的格式字串 '？ '，這會忽略參數名稱。 針對 OLE DB 將傳回 '?'。|  
+|ParameterMarkerPattern|string|符合參數標記的規則運算式。 它會具有參數名稱的相符值 (如果有的話)。<br /><br /> 例如，如果支援具名參數將 '@' 導引字元包括在參數名稱中，則此項將為："(@[A-Za-z0-9_$#]*)"。<br /><br /> 不過，如果支援具名的參數 ':' 做為導引字元，且不屬於參數名稱，這會是:": ([A Za a-za-z0-9_$ #]\*) 」。<br /><br /> 當然，如果資料來源不支援具名參數，則此項僅為 "?"。|  
 |ParameterNameMaxLength|int|參數名稱的最大長度 (以字元為單位)。 Visual Studio 要求如果支援參數名稱，則最大長度的最小值為 30 個字元。<br /><br /> 如果資料來源不支援具名參數，此屬性將傳回零。|  
 |ParameterNamePattern|string|符合有效參數名稱的規則運算式。 不同資料來源對可用於參數名稱的字元具有不同規則。<br /><br /> Visual Studio 要求如果支援參數名稱，則字元 "\p{Lu}\p{Ll}\p{Lt}\p{Lm}\p{Lo}\p{Nl}\p{Nd}" 為針對參數名稱有效的支援字元集最小值。|  
 |QuotedIdentifierPattern|string|符合引號識別項並具有識別項本身 (不帶有引號) 之相符值的規則運算式。 例如，如果資料來源使用雙引號識別引號識別項，這會是: 「 (([^\\"]&#124;\\"\\") *)"。|  

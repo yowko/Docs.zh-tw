@@ -13,11 +13,12 @@ ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: e20d414b3be41fc175037c6691518adf6a424b69
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 40eda14d4d578f10a77aa06843abd48f58c55f6a
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37073017"
 ---
 # <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;移除&gt;webRequestModules （網路設定） 的項目
 移除應用程式中自訂的 Web 要求模組。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/03/2018
 |-------------------|---------------------|  
 |`prefix`|此 Web 要求模組所處理的要求 URI 前置詞。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -56,7 +57,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="remarks"></a>備註  
  `remove`項目會移除已註冊的 Web 要求模組指定的 URI 前置詞。  
   
- 值`prefix`屬性應該是有效的 URI-例如，「 http 」 的前置字元或 "http://www.contoso.com" 。  
+ 值`prefix`屬性應該是有效的 URI-例如，「 http 」 的前置字元或"`http://www.contoso.com` "。  
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  

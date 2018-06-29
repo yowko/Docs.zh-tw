@@ -2,12 +2,12 @@
 title: 訊息通訊協定
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-ms.openlocfilehash: c900c8fde8b13b4766fb245de2bab46b5601f135
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d188c79d3879ef383d24f56c81d66973266636bc
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496633"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37072718"
 ---
 # <a name="messaging-protocols"></a>訊息通訊協定
 Windows Communication Foundation (WCF) 通道堆疊利用編碼和傳輸通道內部訊息表示法轉換為其 wire 格式，並將其傳送使用特定的傳輸。 最常用於 Web 服務互通性的傳輸為 HTTP，而 Web 服務最常用的編碼為 XML 架構的 SOAP 1.1、SOAP 1.2 和訊息傳輸最佳化機制 (MTOM)。  
@@ -130,7 +130,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
  B3121: WCF 採用 Ws-metadataexchange (MEX) 規格第 6 節以傳值方式或傳址包含端點參考中繼資料中所述的機制。  
   
- 假設 WCF 服務需要使用在權杖簽發者所發出的安全性判斷提示標記語言 (SAML) 權杖進行驗證的http://sts.fabrikam123.com。WCF 端點描述這項驗證需求使用`sp:IssuedToken`含有巢狀判斷提示`sp:Issuer`指向權杖簽發者的判斷提示。 存取 `sp:Issuer` 判斷提示的用戶端應用程式必須知道如何與權杖簽發者端點進行通訊。 用戶端需要知道與權杖簽發者有關的中繼資料。 使用 MEX 中定義的端點參考中繼資料延伸，WCF 會提供權杖簽發者中繼資料的參考。  
+ 假設 WCF 服務需要使用在權杖簽發者所發出的安全性判斷提示標記語言 (SAML) 權杖進行驗證的http://sts.fabrikam123.com。 WCF 端點描述這項驗證需求使用`sp:IssuedToken`含有巢狀判斷提示`sp:Issuer`指向權杖簽發者的判斷提示。 存取 `sp:Issuer` 判斷提示的用戶端應用程式必須知道如何與權杖簽發者端點進行通訊。 用戶端需要知道與權杖簽發者有關的中繼資料。 使用 MEX 中定義的端點參考中繼資料延伸，WCF 會提供權杖簽發者中繼資料的參考。  
   
 ```xml  
 <sp:IssuedToken>  
@@ -452,7 +452,7 @@ Content-Length: 0
   
 -   R4132：HTTP Content-Type 標頭必須具有含 `application/xop+xml` 值的型別參數，以雙引號括住。  
   
- 雖然使用雙引號不是在 RFC 2387 中明確陳述，文字會遵守多重/相關媒體型別參數的最可能包含的所有保留的字元，例如"@" or "/"，因此需要使用雙引號。  
+ 雖然使用雙引號不是在 RFC 2387 中明確陳述，文字會遵守多重/相關媒體型別參數的最可能會包含保留的字元，例如"\@"或"/"，因此需要使用雙引號標記。  
   
 -   R4133：HTTP Content-Type 標頭應該具有起始參數，其中具有包含 SOAP 1.x 封套之 MIME 部分的 Content-ID 標頭值，以雙引號括住。 如果省略了起始參數，則第一個 MIME 部分必須包含 SOAP 1.x 封套。  
   
