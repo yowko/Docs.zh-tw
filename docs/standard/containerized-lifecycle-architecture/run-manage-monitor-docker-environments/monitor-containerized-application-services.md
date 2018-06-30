@@ -4,12 +4,12 @@ description: Microsoft 平台和工具的容器化 Docker 應用程式生命週�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 3877767117d8292644782fc07df6667931688be2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 368d99e92f80cf37965139cb67fc5f22b44f40cd
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575540"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106122"
 ---
 # <a name="monitor-containerized-application-services"></a>監視進行容器化應用程式服務
 
@@ -97,4 +97,5 @@ Operations Management Suite 會實作為雲端式服務，因為您可以將它�
 **進一歩** 找到有關安裝和設定 Docker 容器中的方案[Operations Management Suite](http://microsoft.com/oms)，請移至<https://docs.microsoft.com/azure/log-analytics/log-analytics-containers>。
 
 >[!div class="step-by-step"]
-[上一個] (管理-生產-docker-environments.md) [下一步] (.../key-takeaways/index.md)
+[上一頁](manage-production-docker-environments.md)
+[下一頁](../key-takeaways/index.md)

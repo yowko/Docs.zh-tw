@@ -4,12 +4,12 @@ description: Microsoft 平台和工具的容器化 Docker 應用程式生命週�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: 4a9452f660cf80505848b2ec3491274cdc7c3f6c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b8f2924b658b7e2eeb295adc3c89a1ed576bba60
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568039"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104686"
 ---
 # <a name="designing-and-developing-containerized-apps-using-docker-and-microsoft-azure"></a>使用 Docker 和 Microsoft Azure 設計和開發容器化應用程式
 
@@ -19,4 +19,5 @@ ms.locfileid: "33568039"
 
 
 >[!div class="step-by-step"]
-[上一個] (../Microsoft-platform-tools-containerized-apps/index.md) [下一個] (design-docker-applications.md)
+[Prev](../Microsoft-platform-tools-containerized-apps/index.md)
+[下一步](design-docker-applications.md)

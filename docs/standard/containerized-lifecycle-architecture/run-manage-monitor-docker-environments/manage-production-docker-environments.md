@@ -4,12 +4,12 @@ description: Microsoft 平台和工具的容器化 Docker 應用程式生命週�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 5ecf1fbc164ff4170951894abc071908f45178d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 169ffa7ba61fa5dff09229410adb534f8e34a35c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573877"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104581"
 ---
 # <a name="manage-production-docker-environments"></a>管理 Docker 的生產環境
 
@@ -46,4 +46,5 @@ ms.locfileid: "33573877"
 
 
 >[!div class="step-by-step"]
-[上一個] (run-microservices-based-applications-in-production.md) [下一步] (監視-容器化的應用程式-services.md)
+[上一頁](run-microservices-based-applications-in-production.md)
+[下一頁](monitor-containerized-application-services.md)

@@ -4,12 +4,12 @@ description: Microsoft 平台和工具的容器化 Docker 應用程式生命週�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: cda9aa77ca033dced8b6b30538f19f28a5fa63a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e578599c61053704202946772c43bdb5ef895c2
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579206"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105585"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 應用程式的內部迴圈的開發工作流程
 
@@ -122,7 +122,7 @@ ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 
 **進一歩** 建置.NET Core 應用程式的 Docker 映像的相關資訊，請移至<https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>。
 
-若要了解如何建置自己的映像，請前往[ https://docs.docker.com/engine/\ 教學課程/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/)。
+若要了解如何建置自己的映像，請前往[https://docs.docker.com/engine/\教學課程/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/)。
 
 **多平台映像儲存機制**
 
@@ -255,8 +255,9 @@ Docker 主機上，開啟瀏覽器並瀏覽至該網站。您應該會看到您�
 
 您也可以偵錯.NET Core 容器在 Docker 中的使用 Visual Studio 中下, 一節中所述。
 
-**更多資訊：** 若要了解有關偵錯 Node.js Docker 容器的詳細資訊，請移至<https://blog.docker.com/2016/07/live-debugging-docker/>和[ https://blogs.msdn.microsoft.com/\ 使用者\_ed/2016年/02/27 /visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/)。
+**更多資訊：** 若要了解有關偵錯 Node.js Docker 容器的詳細資訊，請移至<https://blog.docker.com/2016/07/live-debugging-docker/>和[https://blogs.msdn.microsoft.com/\使用者\_ed/2016年/02/27 /visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/)。
 
 
 >[!div class="step-by-step"]
-[上一個] (docker-應用程式層開發-environment.md) [下一步] (visual-studio-工具-如-docker.md)
+[上一頁](docker-apps-development-environment.md)
+[下一頁](visual-studio-tools-for-docker.md)

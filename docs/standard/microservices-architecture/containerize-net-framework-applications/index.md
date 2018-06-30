@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 將舊版整�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: a12012f115629a79734c18c3bc75733ae2fc8195
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 01b84d29a559bde02ebd30535488c272d5208167
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578829"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106511"
 ---
 # <a name="migrating-legacy-monolithic-net-framework-applications-to-windows-containers"></a>將舊版整合型 .NET Framework 應用程式移轉至 Windows 容器
 
@@ -186,4 +186,5 @@ COPY ${source:-obj/Docker/publish} .
 在開發環境中，您必須在相同的 OS 中執行所有容器。 Docker CE for Windows 不支援同時執行 Windows 和 Linux 容器。 在生產環境中，您可以決定要在單一 Docker 主機 (或叢集) 的 Windows 容器中執行目錄微服務，還是要讓 Web Form 應用程式與不同 Docker 主機之 Linux 容器中執行的目錄微服務執行個體通訊。 這會視您要如何最佳化網路延遲而定。 在大多數情況下，您會想要讓應用程式相依的微服務在相同的 Docker 主機 (或群集) 中執行，以方便部署並降低通訊延遲。 在這些設定中，只有在微服務執行個體與高可用性伺服器之間為了永續性資料儲存的通訊才會有很高的成本。
 
 >[!div class="step-by-step"]
-[上一個] (../net-core-single-containers-linux-windows-server-hosts/index.md) [下一個] (../multi-container-microservice-net-applications/index.md)
+[上一頁](../net-core-single-containers-linux-windows-server-hosts/index.md)
+[下一頁](../multi-container-microservice-net-applications/index.md)

@@ -4,16 +4,17 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 架構容器�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 91f63343ba2d7458d0d3b03978ac79a3a7e8427a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 185279cb4df70d9896d7e11c995170e7cd214f73
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573642"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106810"
 ---
 # <a name="architecting-container--and-microservice-based-applications"></a>架構容器和微服務應用程式
 
-*Microservices 提供極大的好處，但也會引發龐大的新挑戰。當建立微服務應用程式時，會以微服務架構模式為基礎。*
+
+  *Microservices 提供極大的好處，但也會引發龐大的新挑戰。當建立微服務應用程式時，會以微服務架構模式為基礎。*
 
 稍早在本指南中，您了解有關容器和 Docker 的基本概念。 這是您開始使用容器所需的基本資訊。 雖然容器是啟用程式且非常適合微服務，但對微服務架構而言絕非必要，而且本架構章節中的許多架構概念在沒有容器的情況下也適用。 不過，由於已介紹過容器的重要性，因此本指南會將重點放在這兩者的交集。
 
@@ -31,4 +32,5 @@ ms.locfileid: "33573642"
 
 
 >[!div class="step-by-step"]
-[上一個] (../net-core-net-framework-containers/official-net-docker-images.md) [下一個] (containerize-monolithic-applications.md)
+[上一頁](../net-core-net-framework-containers/official-net-docker-images.md)
+[下一頁](containerize-monolithic-applications.md)

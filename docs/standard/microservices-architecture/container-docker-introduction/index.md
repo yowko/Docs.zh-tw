@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 容器和 Doc
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: c1f78a8904270123188367a01bddbcac3f7f1b7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8d9334785b2f3ee770c5f0e6bd2e13faa995b6f2
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572271"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106823"
 ---
 # <a name="introduction-to-containers-and-docker"></a>容器和 Docker 簡介
 
@@ -31,4 +31,5 @@ ms.locfileid: "33572271"
 
 
 >[!div class="step-by-step"]
-[上一個] (../index.md) [下一個] (docker-defined.md)
+[上一頁](../index.md)
+[下一頁](docker-defined.md)

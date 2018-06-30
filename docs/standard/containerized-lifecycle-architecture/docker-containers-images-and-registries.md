@@ -4,12 +4,12 @@ description: Microsoft 平台和工具的容器化 Docker 應用程式生命週�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 43b76f738fa4b7c89423a5b9fac7ef91f40880c5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff5a1f3e4b09ac9f7ea600d3f127523b96fcce55
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568728"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106359"
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker 容器、映像和登錄
 
@@ -34,4 +34,5 @@ ms.locfileid: "33568728"
 -   您想要在映像與所選擇的部署環境之間有最低的網路延遲。 比方說，如果 Azure 為您的生產環境，您可能想要儲存您的映像在 Azure 容器登錄中，因此網路延遲會最小。 同樣地，如果您的生產環境是內部部署，您可能想要在相同的區域網路內提供內部部署 Docker Trusted Registry。
 
 >[!div class="step-by-step"]
-[上一個] (docker-terminology.md) [下一步] (Docker-應用程式的生命週期/index.md)
+[上一頁](docker-terminology.md)
+[下一頁](Docker-application-lifecycle/index.md)

@@ -4,12 +4,12 @@ description: Microsoft 平台和工具的容器化 Docker 應用程式生命週�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 4adbdd7099dfc1c5ef13d5bbb4370ae2f14aba1e
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 3da7816127982c3657129561975eed6d1f5aad5a
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696776"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104503"
 ---
 # <a name="development-environment-for-docker-apps"></a>Docker 應用程式的開發環境
 
@@ -48,4 +48,5 @@ ms.locfileid: "34696776"
 
 
 >[!div class="step-by-step"]
-[上一個] (協調-高的延展性-availability.md) [下一步] (docker-應用程式-內部-迴圈-workflow.md)
+[上一頁](orchestrate-high-scalability-availability.md)
+[下一頁](docker-apps-inner-loop-workflow.md)

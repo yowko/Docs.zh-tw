@@ -4,12 +4,12 @@ description: Microsoft 平台和工具的容器化 Docker 應用程式生命週�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: 02bd144f5bfd64ab3a0b0d30aad642c5c3099c7b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b14d361fb93b98de68b828514c7ea72811075fb8
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576239"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106187"
 ---
 # <a name="introduction-to-the-microsoft-platform-and-tools-for-containerized-apps"></a>容器化應用程式的 Microsoft 平台和工具簡介
 
@@ -59,4 +59,5 @@ ms.locfileid: "33576239"
 因此，Microsoft 會提供端對端容器化 Docker 應用程式生命週期的完整基礎。 不過，它是「產品和技術集合，可讓您選擇性地進行選取，以及與現有工具和處理序整合」。 廣泛方式的彈性以及功能深度的強度讓 Microsoft 十分適合進行容器化 Docker 應用程式開發。
 
 >[!div class="step-by-step"]
-[上一個] (../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md) [下一個] (../design-develop-containerized-apps/index.md)
+[上一頁](../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md)
+[下一頁](../design-develop-containerized-apps/index.md)

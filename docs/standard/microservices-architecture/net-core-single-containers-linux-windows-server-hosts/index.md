@@ -4,11 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 在 Linux 或
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: f429bc0c6e76c2be2e4f491768a15ab36ecb0d34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 662e1af8595c074ee1aeba5ad4d83660b667c1cd
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105523"
 ---
 # <a name="deploying-single-container-based-net-core-web-applications-on-linux-or-windows-nano-server-hosts"></a>在 Linux 或 Windows Nano Server 主機上部署單一容器 .NET Core Web 應用程式
 
@@ -141,4 +142,5 @@ services:
 新增 Docker 支援的精靈會與執行中的 Docker 處理序通訊。 如果當您啟動精靈時，Docker 不在執行中，精靈將無法正確執行。 此外，精靈會檢查您目前的容器選擇，以新增正確的 Docker 支援。 如果您想要新增 Windows 容器的支援，您需要在有執行中 Docker 並已設定 Windows 容器的同時執行精靈。 如果您想要新增 Linux 容器的支援，請在有執行中 Docker 並已設定 Linux 容器的同時執行精靈。
 
 >[!div class="step-by-step"]
-[上一個] (../docker-application-development-process/docker-app-development-workflow.md) [下一個] (../containerize-net-framework-applications/index.md)
+[上一頁](../docker-application-development-process/docker-app-development-workflow.md)
+[下一頁](../containerize-net-framework-applications/index.md)

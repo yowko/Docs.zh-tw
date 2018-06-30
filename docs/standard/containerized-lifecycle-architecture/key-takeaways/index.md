@@ -4,12 +4,12 @@ description: Microsoft 平台和工具的容器化 Docker 應用程式生命週�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 84ba63c1685fcc3a49c6333a5e88c363bdad8ed4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf5648b1aa21ffd783c76aaa11c8e81371f45d18
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568975"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104634"
 ---
 # <a name="key-takeaways"></a>金鑰附帶
 
@@ -26,4 +26,4 @@ ms.locfileid: "33568975"
 Visual Studio Team Services 可透過持續部署管線大幅簡化指定給 Docker 環境的 DevOps 環境 (包含簡單 Docker 環境，或根據 Azure 的更進階微服務和容器協調器)。
 
 >[!div class="step-by-step"]
-[上一個] (../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)
+[上一步](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)

@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 針對 Docker
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: b483214e7bd039a71ae642aa26e69d63222af8ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f6689468eda1dd1b12c24927e650b2b01381274
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580123"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104438"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-docker-containers"></a>針對 Docker 容器在 .NET Core 和 .NET Framework 之間進行選擇
 
@@ -17,4 +17,5 @@ ms.locfileid: "33580123"
 
 
 >[!div class="step-by-step"]
-[上一個] (../container-docker-introduction/docker-containers-images-registries.md) [下一個] (general-guidance.md)
+[上一頁](../container-docker-introduction/docker-containers-images-registries.md)
+[下一頁](general-guidance.md)

@@ -4,12 +4,12 @@ description: Microsoft 平台和工具的容器化 Docker 應用程式生命週�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 198313c260b36d3f3025606e73e220c361a7ebb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b88eb5637bf266ab2e0a6d255f2e83f6aadc8af2
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578998"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106158"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker 應用程式的外部迴圈 DevOps 工作流程中的步驟
 
@@ -234,4 +234,5 @@ Mesosphere DC/OS: <https://mesosphere.com/product/>
 監視和診斷是 DevOps 領域內的 100%時，只會監視的處理程序和開發小組對測試或測試環境中執行的分析。 這是藉由執行負載測試，或只是藉由監視 beta 或 QA 環境中，嘗試測試版測試人員的新版本。
 
 >[!div class="step-by-step"]
-[上一個] (index.md) [下一步] (.../run-manage-monitor-docker-environments/index.md)
+[上一頁](index.md)
+[下一頁](../run-manage-monitor-docker-environments/index.md)

@@ -4,12 +4,12 @@ description: Microsoft 平台和工具的容器化 Docker 應用程式生命週�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: 6525e5f80ebb0551e4f85904a467d862aa4133ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f4a3b7675365aa4d1e33328f756439398f3a4de
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567727"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105233"
 ---
 # <a name="design-docker-applications"></a>設計 Docker 應用程式
 
@@ -19,4 +19,5 @@ ms.locfileid: "33567727"
 
 
 >[!div class="step-by-step"]
-[上一個] (index.md) [下一步] (常見的容器-設計-principles.md)
+[上一頁](index.md)
+[下一頁](common-container-design-principles.md)
