@@ -2,12 +2,12 @@
 title: 組態與中繼資料支援
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
-ms.openlocfilehash: 4dfeeba6db220e03ad981b13e2bb093bedcd43c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d316e373177d86b7ba2b715f29fe3dace9082e8b
+ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486720"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37140147"
 ---
 # <a name="configuration-and-metadata-support"></a>組態與中繼資料支援
 這個主題描述如何啟用繫結和繫結項目的組態與中繼資料支援。  
@@ -182,7 +182,7 @@ if (transportBindingElement is UdpTransportBindingElement)
  自訂繫結項目可以匯出服務端點之 WSDL 繫結的原則判斷提示，以表示該繫結項目的功能。 下列程式碼範例取自[傳輸： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例。  
   
 #### <a name="policy-export"></a>原則匯出  
- `UdpTransportBindingElement`型別會實作 '<xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType>加入支援匯出原則。 因此，<xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> 會針對包含它的任何繫結，在產生原則時包含 `UdpTransportBindingElement`。  
+ `UdpTransportBindingElement`型別會實作<xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType>加入支援匯出原則。 因此，<xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> 會針對包含它的任何繫結，在產生原則時包含 `UdpTransportBindingElement`。  
   
  在 <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A?displayProperty=nameWithType> 中，新增 UDP 的判斷提示和其他判斷提示 (如果通道使用多點傳送模式)。 這是因為多點傳送模式會影響通訊堆疊的建構方式，所以必須同時對兩端進行協調。  
   
