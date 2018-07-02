@@ -4,12 +4,12 @@ description: 探索 ML.NET 中支援的各種不同機器學習工作。
 ms.date: 06/04/2018
 author: aditidugar
 ms.author: johalex
-ms.openlocfilehash: 22249ac2d275a4168dbd8b03b90d9698fe90f2d1
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: 875006a9cddb87b5f9436b78773420858fd842dd
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34860639"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207717"
 ---
 # <a name="machine-learning-tasks"></a>機器學習工作
 
@@ -29,13 +29,17 @@ ms.locfileid: "34860639"
 * 診斷病患是否有某種疾病。
 * 決定是否要將電子郵件標示為「垃圾郵件」。
 
-## <a name="multi-class-classification"></a>多元分類
+如需詳細資訊，請參閱維基百科上的[二元分類](https://en.wikipedia.org/wiki/Binary_classification) \(英文\) 一文。
+
+## <a name="multiclass-classification"></a>多元分類
 
 這是一個[監督式機器學習](glossary.md#supervised-machine-learning)工作，可用來預測資料執行個體的類別 (分類)。 分類演算法的輸入是一組已加上標籤的範例。 每個標籤都是介於 0 到 k-1 的整數，其中 k 是類別數。 分類演算法的輸出是一個分類器，可供您用來預測未加標籤之新執行個體的類別。 多元分類案例的範例包括：
 
 * 判斷狗的品種，例如「西伯利亞哈士奇」、「黃金獵犬」、「貴賓狗」等。
 * 理解影片評論是「正面」、「中立」還是「負面」。
 * 將飯店評論分類成「地點」、「價格」、「整潔度」等。
+
+如需詳細資訊，請參閱維基百科上的[多元分類](https://en.wikipedia.org/wiki/Multiclass_classification) \(英文\) 一文。
 
 ## <a name="regression"></a>迴歸
 
