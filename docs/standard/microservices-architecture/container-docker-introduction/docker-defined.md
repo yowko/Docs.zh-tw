@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 什麼是 Doc
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: fadd2611283f0a7dadbf1734fe48f7d1a13096ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06dd5199b8dbc42ce3e9ae35bc5c3673d01cb4de
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576188"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106797"
 ---
 # <a name="what-is-docker"></a>什麼是 Docker？
 
@@ -58,4 +58,5 @@ Docker 映像容器以原生方式在 Linux 及 Windows 上執行。 Windows 映
 Docker 開發人員不會說：「電腦上行得通，為什麼生產環境行不通？」 他們會說：「Docker 上可以執行。」 Docker 封裝的應用程式可以在任何受支援的 Docker 環境中執行。 Docker 封裝的應用程式在所有部署目標 (開發、品管、暫存、生產環境) 中都能以一致的方式執行。
 
 >[!div class="step-by-step"]
-[上一頁] (index.md) [上一頁] (docker-terminology.md)
+[上一頁](index.md)
+[下一頁](docker-terminology.md)

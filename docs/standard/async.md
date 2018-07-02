@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
-ms.openlocfilehash: b9d612186e1051644e8d4ae9476b8fafd811deb0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b9084da80ff400bf99fc8641c69bc38c805d039a
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567337"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071421"
 ---
 # <a name="async-overview"></a>非同步總覽
 
@@ -37,7 +37,7 @@ ms.locfileid: "33567337"
 
 如需詳細資訊，請參閱[深入了解非同步](async-in-depth.md)主題。
 
-[非同步程式設計模式](/asynchronous-programming-patterns/index.md)主題概述 .NET 中所支援的三個非同步程式設計模式：  
+[非同步程式設計模式](asynchronous-programming-patterns/index.md)主題概述 .NET 中所支援的三個非同步程式設計模式：  
   
 -   [非同步程式設計模型 (APM)](asynchronous-programming-patterns/asynchronous-programming-model-apm.md) (舊版)  
   

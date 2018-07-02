@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - byte keyword [C#]
 ms.assetid: 111f1db9-ca32-4f0e-b497-4783517eda47
-ms.openlocfilehash: 4ac913bd0d1bd178211ad26a720a80e22877c961
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 28acbe67b85637550fdb1f5e290a9abb60bf5c65
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172172"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37027885"
 ---
 # <a name="byte-c-reference"></a>byte (C# 參考)
 
 `byte` 表示用來儲存下表所指出值的整數型別。  
   
-|類型|範圍|大小|.NET Framework 類型|  
+|類型|範圍|大小|.NET 型別|  
 |----------|-----------|----------|-------------------------|  
 |`byte`|0 到 255|不帶正負號的 8 位元整數|<xref:System.Byte?displayProperty=nameWithType>|  
   

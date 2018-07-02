@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 實作微服�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 5d7037f91cb338721f91d35567246ebbca018a3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5d8ba76caab39db222c2ceba36a4d67cab3e8a3f
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579168"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105790"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>實作微服務之間的事件通訊 (整合事件)
 
@@ -129,4 +129,5 @@ public interface IEventBus
 
 
 >[!div class="step-by-step"]
-[上一頁] (database-server-container.md) [下一頁] (rabbitmq-event-bus-development-test-environment.md)
+[上一頁](database-server-container.md)
+[下一頁](rabbitmq-event-bus-development-test-environment.md)

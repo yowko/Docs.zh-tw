@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce2c47b172afee8745cdf5f68323d64dd550ea59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6db9d2e1e075b9908e4c6db3d327f446980e98a5
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579141"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37072952"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>在 .NET 中使用 StringBuilder 類別
 <xref:System.String> 物件不可變。 每次您使用 <xref:System.String?displayProperty=nameWithType> 類別的其中一個方法時，就會在記憶體中建立新的字串物件，這需要為該新物件配置新的空間。 在您需要重複修改字串的情況下，與建立新 <xref:System.String> 物件相關聯的額外負荷可能成本高昂。 當您想要修改字串，而不建立新物件時，可以使用 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 類別。 例如，在迴圈中將許多字串串連在一起時，可以使用 <xref:System.Text.StringBuilder> 類別來提升效能。  
@@ -43,7 +43,7 @@ ms.locfileid: "33579141"
  [!code-vb[Conceptual.StringBuilder#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#1)]  
   
 ## <a name="setting-the-capacity-and-length"></a>設定容量和長度  
- 雖然 <xref:System.Text.StringBuilder> 是一個動態物件，可讓您擴充其封裝之字串中的字元數，但您可以指定它能容納的字元數上限值。 這個值稱為物件的容量，不應該與目前 <xref:System.Text.StringBuilder> 保存的字串長度混淆。 例如，您可以用字串 "Hello" 建立 <xref:System.Text.StringBuilder> 類別的新執行個體，其長度為 5，而您可能會將物件的最大容量指定為 25。 當您修改 <xref:System.Text.StringBuilder> 時，在到達容量上限之前，它不會重新配置自己的大小。 發生這種情況時，會自動配置新的空間，而且容量加倍。 您可以使用其中一個多載建構函式來指定 <xref:System.Text.StringBuilder> 類別的容量。 下列範例會指定 `MyStringBuilder` 物件可以擴展到最多 25 個空格。  
+ 雖然 <xref:System.Text.StringBuilder> 是一個動態物件，可讓您擴充其封裝之字串中的字元數，但您可以指定它能容納的字元數上限值。 這個值稱為物件的容量，不應該與目前 <xref:System.Text.StringBuilder> 保存的字串長度混淆。 例如，您可以用字串 "Hello" 建立 <xref:System.Text.StringBuilder> 類別的新執行個體，其長度為 5，而您可能會將物件的最大容量指定為 25。 當您修改 <xref:System.Text.StringBuilder> 時，在到達容量上限之前，它不會重新配置自己的大小。 發生這種情況時，會自動配置新的空間，而且容量加倍。 您可以使用其中一個多載建構函式來指定 <xref:System.Text.StringBuilder> 類別的容量。 下列範例會指定 `myStringBuilder` 物件可以擴展到最多 25 個空格。  
   
  [!code-cpp[Conceptual.StringBuilder#2](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#2)]
  [!code-csharp[Conceptual.StringBuilder#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#2)]

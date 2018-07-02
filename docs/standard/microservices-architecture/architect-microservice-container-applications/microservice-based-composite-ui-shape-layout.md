@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 根據微服�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: cbadb13109c51ba53530011a17006b585573f40a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4e1e1671238d3cc5944bfe53b49f7d0ddd969aff
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576789"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105365"
 ---
 # <a name="creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices"></a>根據微服務建立複合 UI，包括多個微服務所產生的視覺 UI 形狀和配置
 
@@ -58,4 +58,5 @@ ms.locfileid: "33576789"
 
 
 >[!div class="step-by-step"]
-[上一個] (microservices-addressability-service-registry.md) [下一個] (resilient-high-availability-microservices.md)
+[上一頁](microservices-addressability-service-registry.md)
+[下一頁](resilient-high-availability-microservices.md)

@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/08/2017
-ms.openlocfilehash: e27cdb4b785253edd27e9854d6f977e3ede02266
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: b22e0e109144b4abd04cd4199cfdec244d8fa7af
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208147"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106498"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>測試 ASP.NET Core MVC 應用程式
 
@@ -273,4 +273,5 @@ public class CatalogControllerGetImage : BaseWebTest
 此功能測試將執行完整的 ASP.NET Core MVC 應用程式堆疊，包括可能存在的所有中介軟體、篩選器、繫結器等等。 會驗證指定路由 ("/catalog/pic/1") 傳回已知位置檔案預期的位元組陣列。 因並未設定真實的網頁伺服器，所以避免了使用真實的網頁伺服器進行測試之脆弱度 (例如防火牆設定的問題)。 針對 TestServer 執行的功能測試通常比整合與單元測試要慢，但比在網路上執行測試之網頁伺服器的測試要快得多。
 
 >[!div class="step-by-step"]
-[上一頁] (work-with-data-in-asp-net-core-apps.md) [下一頁] (development-process-for-azure.md)
+[上一頁](work-with-data-in-asp-net-core-apps.md)
+[下一頁](development-process-for-azure.md)

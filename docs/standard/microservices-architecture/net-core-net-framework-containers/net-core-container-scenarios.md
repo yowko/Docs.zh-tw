@@ -4,12 +4,12 @@ description: 適用於容器化 .NET 應用程式的.NET 微服務架構 | 選�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: 45917a9dbfbd6610c3cca9ab7dcf9f924c329c10
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 761a9579cc301b7ca4b949a2a83af20ab8bb0f20
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314922"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104648"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>選擇在 Docker 容器使用 .NET Core 的時機
 
@@ -53,4 +53,5 @@ ms.locfileid: "36314922"
 
 
 >[!div class="step-by-step"]
-[上一頁] (general-guidance.md) [下一頁] (net-framework-container-scenarios.md)
+[上一頁](general-guidance.md)
+[下一頁](net-framework-container-scenarios.md)

@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 設計 DDD �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/06/2017
-ms.openlocfilehash: 520f2928eb0d300ab0dc2d328d974455e102e4d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7793a3ffded788698fcbc4ba28edefde44268989
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579349"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105767"
 ---
 # <a name="designing-a-ddd-oriented-microservice"></a>設計 DDD 導向微服務
 
@@ -106,4 +106,5 @@ Eric Evans 的優良書籍 [Domain Driven Design (領域驅動設計)](https://d
 
 
 >[!div class="step-by-step"]
-[上一頁] (cqrs-microservice-reads.md) [下一頁] (microservice-domain-model.md)
+[上一頁](cqrs-microservice-reads.md)
+[下一頁](microservice-domain-model.md)

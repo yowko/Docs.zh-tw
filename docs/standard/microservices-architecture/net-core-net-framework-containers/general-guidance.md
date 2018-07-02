@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 一般指引
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: ccaae99f4c46fe739041f9b9e907a702303e62f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd654c23cf8a8d0986575642ef25d6864251a4e4
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592570"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104075"
 ---
 # <a name="general-guidance"></a>一般指引
 
@@ -47,4 +47,5 @@ ms.locfileid: "33592570"
 
 
 >[!div class="step-by-step"]
-[上一頁] (index.md) [下一頁] (net-core-container-scenarios.md)
+[上一頁](index.md)
+[下一頁](net-core-container-scenarios.md)

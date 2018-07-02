@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 邏輯架構�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: f77123977a50c30150f5a64cc08c3c217b429ac4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d675ba753903e181c67712e34eea82fed72df0d7
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574682"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105431"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>邏輯架構與實體架構
 
@@ -37,4 +37,5 @@ ms.locfileid: "33574682"
 
 
 >[!div class="step-by-step"]
-[上一個] (data-sovereignty-per-microservice.md) [下一個] (distributed-data-management.md)
+[上一頁](data-sovereignty-per-microservice.md)
+[下一頁](distributed-data-management.md)

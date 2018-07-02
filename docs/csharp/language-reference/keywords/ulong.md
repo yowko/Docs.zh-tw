@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - ulong keyword [C#]
 ms.assetid: f2ece624-837a-40cf-92c5-343e7f33397c
-ms.openlocfilehash: 1f291d2dd2706231f018a04f0af86051cef6c28a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 96975bcfc270694a59a19e7c40183083dbc5bd98
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33288303"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37027989"
 ---
 # <a name="ulong-c-reference"></a>ulong (C# 參考)
 
 `ulong` 關鍵字表示根據下表所示的大小和範圍來儲存值的整數類型。  
   
-|類型|範圍|大小|.NET Framework 類型|  
+|類型|範圍|大小|.NET 型別|  
 |----------|-----------|----------|-------------------------|  
 |`ulong`|0 到 18,446,744,073,709,551,615|不帶正負號的 64 位元整數|<xref:System.UInt64?displayProperty=nameWithType>|  
   

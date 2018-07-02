@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 設計基礎�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/08/2017
-ms.openlocfilehash: 2b15fcaeaa8934caceaeab963123650354abf291
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9da1020ac5b43971a8f976c518f4537bec866c26
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578909"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105842"
 ---
 # <a name="designing-the-infrastructure-persistence-layer"></a>設計基礎結構持續性層
 
@@ -164,4 +164,5 @@ public interface ISpecification<T>
     [*https://www.martinfowler.com/apsupp/spec.pdf/*](https://www.martinfowler.com/apsupp/spec.pdf)
 
 >[!div class="step-by-step"]
-[上一個] (domain-events-design-implementation.md) [下一個] (infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+[上一頁](domain-events-design-implementation.md)
+[下一頁](infrastructure-persistence-layer-implemenation-entity-framework-core.md)

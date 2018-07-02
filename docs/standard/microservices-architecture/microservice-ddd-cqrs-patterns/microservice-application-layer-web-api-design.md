@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 設計微服�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: 77e0556e4b6d9a22cf76a79ec86d744d9009a39f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e5c7e0acb0496aebce4d9cbe8cb51ced0c7166a2
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577423"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106602"
 ---
 # <a name="designing-the-microservice-application-layer-and-web-api"></a>設計微服務應用程式層及 Web API
 
@@ -48,4 +48,5 @@ DI 是一種實作相依性反轉準則的方式。 它是一種為了達到物�
 
 
 >[!div class="step-by-step"]
-[上一頁] (nosql-database-persistence-infrastructure.md) [下一頁] (microservice-application-layer-implementation-web-api.md)
+[上一頁](nosql-database-persistence-infrastructure.md)
+[下一頁](microservice-application-layer-implementation-web-api.md)

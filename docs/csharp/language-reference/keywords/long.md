@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - long keyword [C#]
 ms.assetid: f9b24319-1f39-48be-a42b-d528ee28a7fd
-ms.openlocfilehash: f2bdc34400215ad24d5dcec2e1e9f314a01430d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 106b832801a373ca387be455ef1c0df4233621d0
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33288450"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37027820"
 ---
 # <a name="long-c-reference"></a>long (C# 參考)
 
 `long` 表示儲存值的整數型別 (以下表所示的大小和範圍為依據)。  
   
-|類型|範圍|大小|.NET Framework 類型|  
+|類型|範圍|大小|.NET 型別|  
 |----------|-----------|----------|-------------------------|  
 |`long`|-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807|帶正負號的 64 位元整數|<xref:System.Int64?displayProperty=nameWithType>|  
   

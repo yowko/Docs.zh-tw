@@ -7,17 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - sbyte keyword [C#]
 ms.assetid: 1a9c7b48-73d1-4d33-b485-c4faf0a816bc
-ms.openlocfilehash: 4a2d13463348c2f0c32aec076623f59040d1d81f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 94968ed61fced9716112740613a4e3a86622e2e3
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37028054"
 ---
 # <a name="sbyte-c-reference"></a>sbyte (C# 參考)
 
 `sbyte` 表示儲存值的整數型別 (以下表所示的大小和範圍為依據)。  
   
-|類型|範圍|大小|.NET Framework 類型|  
+|類型|範圍|大小|.NET 型別|  
 |----------|-----------|----------|-------------------------|  
 |`sbyte`|-128 到 127|帶正負號的 8 位元整數|<xref:System.SByte?displayProperty=nameWithType>|  
   

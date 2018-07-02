@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | Seedwork (網
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: 7098bc1d37ecdf4826c0db6e754ca8df2ed72fe4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 21f502d74aab10b306e350ee831583f06b394dc7
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578049"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105099"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (網域模型的可重複使用基底類別和介面)
 
@@ -144,4 +144,5 @@ public interface IRepository<T> where T : IAggregateRoot
 
 
 >[!div class="step-by-step"]
-[上一頁] (net-core-microservice-domain-model.md) [下一頁] (implement-value-objects.md)
+[上一頁](net-core-microservice-domain-model.md)
+[下一頁](implement-value-objects.md)

@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 微服務可�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: cce0b11ca8cb4fe4d97e2f575888254f92543fc3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec3ccdd823e00d148bb8a97e906132f44e7fa727
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573668"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106667"
 ---
 # <a name="microservices-addressability-and-the-service-registry"></a>微服務可定址性和服務登錄
 
@@ -34,4 +34,5 @@ ms.locfileid: "33573668"
 
 
 >[!div class="step-by-step"]
-[上一個] (maintain-microservice-apis.md) [下一個] (microservice-based-composite-ui-shape-layout.md)
+[上一頁](maintain-microservice-apis.md)
+[下一頁](microservice-based-composite-ui-shape-layout.md)

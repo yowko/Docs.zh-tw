@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | API 閘道模
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/07/2018
-ms.openlocfilehash: 75a7c0557319ca948d2112ba0a58f1761368e6f3
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.openlocfilehash: 83ec054239814ba20ebeec1f3d50b9f7e6dcdd87
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35231547"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106274"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API 閘道模式與直接用戶端對微服務通訊
 
@@ -65,7 +65,7 @@ ms.locfileid: "35231547"
 
 ## <a name="what-is-the-api-gateway-pattern"></a>什麼是 API 閘道模式？
 
-當您使用多個用戶端應用程式來設計和建置大型或複雜微服務應用程式時，可以考慮使用的不錯方法是 [API 閘道](https://microservices.io/patterns/apigateway.html)。 這個服務提供一組特定微服務的單一進入點。 它類似物件導向設計的[外觀模式](https://en.wikipedia.org/wiki/Facade_pattern)，不過在此案例中，它是分散式系統的一部分。
+當您使用多個用戶端應用程式來設計和建置大型或複雜微服務應用程式時，可以考慮使用的不錯方法是 [API 閘道](https://microservices.io/patterns/apigateway.html)。 這個服務提供特定一組微服務的單一進入點。 它類似物件導向設計的[外觀模式](https://en.wikipedia.org/wiki/Facade_pattern)，不過在此案例中，它是分散式系統的一部分。
 API 閘道模式有時也稱為「前端的後端 [(BFF)](https://samnewman.io/patterns/architectural/bff/)」，因為您是在考量用戶端應用程式需求時建置它。
 
 因此，API 閘道位在用戶端應用程式和微服務之間， 它會做為反向 Proxy 使用，將用戶端的要求路由至服務。 它也可以提供額外的跨領域功能，例如驗證、SSL 終止和快取。
@@ -178,4 +178,5 @@ API 閘道產品的作用通常像是連入通訊的反向 Proxy，您也可以�
 - **Clemens Vasters：GOTO 2016 的傳訊和微服務** (影片) [*https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
 
 >[!div class="step-by-step"]
-[上一頁] (identify-microservice-domain-model-boundaries.md) [下一頁] (communication-in-microservice-architecture.md)
+[上一頁](identify-microservice-domain-model-boundaries.md)
+[下一頁](communication-in-microservice-architecture.md)

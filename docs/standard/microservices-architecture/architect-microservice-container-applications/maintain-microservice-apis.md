@@ -4,12 +4,12 @@ description: 適用於容器化 .NET 應用程式的.NET 微服務架構 | 建�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 4b57a0ed8c4e8a4cd36ef5cef4b40de0595f1284
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a2ec577a12cf677c2ec5e20a6f3e862911c82fbb
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575872"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105689"
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>建立、發展以及版本控制微服務 API 與協定
 
@@ -38,4 +38,5 @@ API 定義的性質取決於您所用的通訊協定。 比方說，如果您使
 
 
 >[!div class="step-by-step"]
-[上一頁] (asynchronous-message-based-communication.md) [下一頁] (microservices-addressability-service-registry.md)
+[上一頁](asynchronous-message-based-communication.md)
+[下一頁](microservices-addressability-service-registry.md)

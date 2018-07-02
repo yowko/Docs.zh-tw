@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | AS
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/07/2017
-ms.openlocfilehash: aea8a54bdee7eebd977f8b67d9888c2288dcd26d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 756f74cacec0a9f5be502ee02659510869d79746
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590329"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105705"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>ASP.NET Web Core 應用程式的 Azure 裝載建議
 
@@ -36,7 +36,7 @@ ms.locfileid: "33590329"
 
 ### <a name="app-service-web-apps"></a>App Service Web Apps
 
-App Service Web Apps 提供全受管的平台，針對裝載 Web 應用程式最佳化。 其為一種平台即服務 (PaaS) 產品，可讓您專注於商務邏輯；Azure 則負責執行和調整應用程式所需的基礎結構。 App Service Web Apps 的一些主要功能：
+App Service Web Apps 提供全受管的平台，針對裝載 Web 應用程式最佳化。 其為一種平台即服務 (PaaS) 供應項目，可讓您專注於商務邏輯；Azure 則負責執行和調整應用程式所需的基礎結構。 App Service Web Apps 的一些主要功能：
 
 -   DevOps 最佳化 (持續整合與傳遞、多種環境、A/B測試、指令碼支援)
 
@@ -126,4 +126,4 @@ Azure 提供各種資料儲存選項，以便您的應用程式可以針對有�
     <https://docs.microsoft.com/azure/app-service-web/choose-web-site-cloud-service-vm>
 
 >[!div class="step-by-step"]
-[上一頁] (development-process-for-azure.md)
+[上一步](development-process-for-azure.md)

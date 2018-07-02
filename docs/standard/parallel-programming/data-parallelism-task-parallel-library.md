@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65084296cd4fb462670d0c4927b741a698a59da9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5bf162a3ef9f66e7c7d74c96f13c055857818a2b
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584653"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37070950"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>資料平行處理原則 (工作平行程式庫)
 「資料平行處理原則」是指在來源集合或陣列中的元素上，同時 (也就是平行) 執行相同作業的情節。 在資料平行作業中，會將來源集合分割，讓多個執行緒可以同時在不同區段上操作。  
@@ -47,7 +47,7 @@ ms.locfileid: "33584653"
 |[操作說明：撰寫簡單的 Parallel.ForEach 迴圈](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md)|說明如何透過任何 <xref:System.Collections.Generic.IEnumerable%601> 來源集合，撰寫 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 迴圈。|  
 |[如何：停止或中斷 Parallel.For 迴圈](https://msdn.microsoft.com/library/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e)|描述如何停止或中斷平行迴圈，讓所有執行緒都能收到動作的通知。|  
 |[操作說明：撰寫含有執行緒區域變數的 Parallel.For 迴圈](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)|說明如何撰寫 <xref:System.Threading.Tasks.Parallel.For%2A> 迴圈 (其中每個執行緒各維護一個任何其他執行緒都看不到的私用變數)，以及當迴圈完成時，如何同步處理所有執行緒的結果。|  
-|[操作說明：撰寫含有執行緒區域變數的 Parallel.ForEach 迴圈](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md)|說明如何撰寫 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 迴圈 (其中每個執行緒各維護一個任何其他執行緒都看不到的私用變數)，以及當迴圈完成時，如何同步處理所有執行緒的結果。|  
+|[如何：撰寫含有 Partition-Local 變數的 Parallel.ForEach 迴圈](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)|說明如何撰寫 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 迴圈 (其中每個執行緒各維護一個任何其他執行緒都看不到的私用變數)，以及當迴圈完成時，如何同步處理所有執行緒的結果。|  
 |[操作說明：取消 Parallel.For 或 ForEach 迴圈](../../../docs/standard/parallel-programming/how-to-cancel-a-parallel-for-or-foreach-loop.md)|說明如何使用 <xref:System.Threading.CancellationToken?displayProperty=nameWithType> 來取消平行迴圈|  
 |[操作說明：加速小型迴圈主體](../../../docs/standard/parallel-programming/how-to-speed-up-small-loop-bodies.md)|說明當迴圈主體非常小時，用來加速執行的一種方法。|  
 |[工作平行程式庫 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|提供工作平行程式庫的概觀。|  

@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 針對開發�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: e2b0f1a6152df5d323164fb2eca102fcb973667e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb9bf51d947774cddd7b42ade0f05abc8fb3d7e9
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580233"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104749"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>針對開發或測試環境使用 RabbitMQ 實作事件匯流排
 
@@ -111,4 +111,5 @@ Subscribe 方法接受 IIntegrationEventHandler 物件，就像是目前微服�
 
 
 >[!div class="step-by-step"]
-[上一個] (integration-event-based-microservice-communications.md) [下一個] (subscribe-events.md)
+[上一頁](integration-event-based-microservice-communications.md)
+[下一頁](subscribe-events.md)

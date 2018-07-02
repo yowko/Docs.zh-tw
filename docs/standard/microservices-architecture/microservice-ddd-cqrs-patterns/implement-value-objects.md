@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 實作值物�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: 04a0def5fbadcc39220d9dc8daa9c9341fe66b26
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ba2e48e742e580a1c96743fa89e413c488b8dc7
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579298"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106719"
 ---
 # <a name="implementing-value-objects"></a>實作值物件
 
@@ -326,4 +326,5 @@ public class Address
 
 
 >[!div class="step-by-step"]
-[上一頁] (seedwork-domain-model-base-classes-interfaces.md) [下一頁] (enumeration-classes-over-enum-types.md)
+[上一頁](seedwork-domain-model-base-classes-interfaces.md)
+[下一頁](enumeration-classes-over-enum-types.md)

@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 建立簡單�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 85694cbfe8c30b8430200f0ffbd01379f11b3f9d
-ms.sourcegitcommit: c03eef711abe961a85db2b4d0715257d1524aef6
+ms.openlocfilehash: d99480c1b703bc46228e25f6acd7e7fbbcae6228
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33848498"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106443"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>建立簡單資料驅動 CRUD 微服務
 
@@ -414,4 +414,5 @@ public class Startup
 
 
 >[!div class="step-by-step"]
-[上一頁] (microservice-application-design.md) [下一頁] (multi-container-applications-docker-compose.md)
+[上一頁](microservice-application-design.md)
+[下一頁](multi-container-applications-docker-compose.md)

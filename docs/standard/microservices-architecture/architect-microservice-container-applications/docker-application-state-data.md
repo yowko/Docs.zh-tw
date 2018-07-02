@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | Docker 應用
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: c5cfe617335d8150d069149ac87f79206b1b5eca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1469038af29167f7dbb1a161b951eee742cf4bec
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578651"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105614"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker 應用程式中的狀態和資料
 
@@ -59,4 +59,5 @@ Docker 提供一項功能，稱為「重疊檔案系統」。 這會實作寫入
 
 
 >[!div class="step-by-step"]
-[上一個] (containerize-monolithic-applications.md) [下一個] (service-oriented-architecture.md)
+[上一頁](containerize-monolithic-applications.md)
+[下一頁](service-oriented-architecture.md)

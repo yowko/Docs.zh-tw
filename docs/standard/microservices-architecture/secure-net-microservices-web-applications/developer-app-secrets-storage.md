@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 在開發期�
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: d8dd2da07104d6461d4eec0cb3fccd61c4db71c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 560120db35ae190bdef1f95d72ac1e5de697124e
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580110"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105942"
 ---
 # <a name="storing-application-secrets-safely-during-development"></a>在開發期間安全地儲存應用程式祕密
 
@@ -53,4 +53,5 @@ Secret Manager 工具所設定的秘密會依使用秘密之專案的 UserSecret
 
 
 >[!div class="step-by-step"]
-[上一個] (authorization-net-microservices-web-applications.md) [下一個] (azure-key-vault-protects-secrets.md)
+[上一頁](authorization-net-microservices-web-applications.md)
+[下一頁](azure-key-vault-protects-secrets.md)

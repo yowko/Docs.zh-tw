@@ -4,12 +4,12 @@ description: 了解如何將程式庫專案從 .NET Framework 移植到 .NET Cor
 author: cartermp
 ms.author: mairaw
 ms.date: 07/14/2017
-ms.openlocfilehash: 88513eaee35a82d6424fc2218f8cbbe635a8e02c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f1d79623b4ece836732010e76a3c93fbbf8099f
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218354"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37028041"
 ---
 # <a name="porting-to-net-core---libraries"></a>移轉到 .NET Core - 程式庫
 
@@ -72,18 +72,6 @@ AppDomain 可將應用程式互相隔離。 AppDomain 需要執行階段支援�
 安全性透明度與 CAS 類似，允許以宣告方式區隔沙箱化程式碼和安全性關鍵程式碼，但它已[不再支援作為安全性界線](~/docs/framework/misc/security-transparent-code.md)。 Silverlight 會大量使用這項功能。 
 
 使用由作業系統提供的安全性界線 (例如虛擬化、容器或使用者帳戶) 來以最少的權限集合執行處理序。
-
-### <a name="globaljson"></a>global.json
-
-*global.json* 檔案是可讓您設定專案 .NET Core 工具版本的選擇性檔案。 如果您是使用 .NET Core 的每晚建置版本，且想要指定特定版本的 SDK，請使用 *global.json* 檔案來指定版本。 它通常位於目前的工作目錄，或是它的其中一個父目錄中。 
-
-```json
-{
-  "sdk": {
-    "version": "2.1.0-preview1-006491"
-  }
-}
-```
 
 ## <a name="converting-a-pcl-project"></a>轉換 PCL 專案
 

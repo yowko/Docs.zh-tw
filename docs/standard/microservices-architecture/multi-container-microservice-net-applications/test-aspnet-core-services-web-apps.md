@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 測試 ASP.NE
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: b3aa0d50ba3ab64440ef51201d611177fea78ce4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e06f582677e61209d0b226fc68bca81dfe593e5
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582671"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104396"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>測試 ASP.NET Core 服務和 Web 應用程式
 
@@ -124,4 +124,5 @@ public class PrimeWebDefaultRequestShould
 compose 應用程式啟動且執行之後，如果您正在執行 Visual Studio，則可以利用中斷點和例外狀況。 或者，您可以在 Visual Studio Team Services 中的 CI 管線，或其他支援 Docker 容器的任何 CI/CD 系統中，自動執行整合測試。
 
 >[!div class="step-by-step"]
-[上一頁] (subscribe-events.md) [下一頁] (../microservice-ddd-cqrs-patterns/index.md)
+[上一頁](subscribe-events.md)
+[下一頁](../microservice-ddd-cqrs-patterns/index.md)

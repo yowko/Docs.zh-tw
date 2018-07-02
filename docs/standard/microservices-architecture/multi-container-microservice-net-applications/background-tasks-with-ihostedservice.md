@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 在微服務�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: eb6d412ee91ab8d2c97a4917f23ee914e3fb9068
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: 79ad437ef809486b3315de223697ac78109556ba
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805564"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105897"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>在微服務中使用 IHostedService 和 BackgroundService 類別實作背景工作
 
@@ -260,4 +260,5 @@ WebHost.CreateDefaultBuilder(args)
 
 
 >[!div class="step-by-step"]
-[上一頁] (test-aspnet-core-services-web-apps.md) [下一頁] (../microservice-ddd-cqrs-patterns/index.md)
+[上一頁](test-aspnet-core-services-web-apps.md)
+[下一頁](../microservice-ddd-cqrs-patterns/index.md)

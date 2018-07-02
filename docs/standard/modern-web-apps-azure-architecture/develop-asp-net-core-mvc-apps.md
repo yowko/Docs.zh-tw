@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/07/2017
-ms.openlocfilehash: 59f0d46dadb736ad55e53f6715b7ca1b62e9cec4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a90f88e117965aec1550a45f114cabfda5204468
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592401"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106589"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>開發 ASP.NET Core MVC 應用程式
 
@@ -552,4 +552,5 @@ ASP.NET Core 應用程式是主控台應用程式，必須在伺服器開機時�
 > <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]
-[上一頁] (common-client-side-web-technologies.md) [下一頁] (work-with-data-in-asp-net-core-apps.md)
+[上一頁](common-client-side-web-technologies.md)
+[下一頁](work-with-data-in-asp-net-core-apps.md)
