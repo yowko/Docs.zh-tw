@@ -3,12 +3,12 @@ title: 索引子
 description: 了解 C# 索引子，以及其如何實作索引的屬性，而索引的屬性就是使用一或多個引數所參考的屬性。
 ms.date: 06/20/2016
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 73f79f58cd20187a6fd0de29f53f1a31a269e0e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 012213a4cdf8b70ec919639a082d5700228dde6b
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218295"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207491"
 ---
 # <a name="indexers"></a>索引子
 
@@ -176,7 +176,7 @@ public class DataSamples
 
 ### <a name="dictionaries"></a>字典
 
-另一個常見案例是當您需要建立字典或對應的模型時。 當您的類型根據索引鍵 (通常是文字索引鍵) 儲存值時，就會發生此情況。 此範例會建立將命令列引數對應至管理這些選項之 [Lamdba 運算式](delegates-overview.md)的字典。 下列範例顯示兩個類別︰將命令列選項對應至 `Action` 委派的 `ArgsActions` 類別，以及遇到該選項時會使用 `ArgsActions` 執行每個 `Action` 的 `ArgsProcessor`。
+另一個常見案例是當您需要建立字典或對應的模型時。 當您的類型根據索引鍵 (通常是文字索引鍵) 儲存值時，就會發生此情況。 此範例會建立將命令列引數對應至管理這些選項之 [Lambda 運算式](delegates-overview.md)的字典。 下列範例顯示兩個類別︰將命令列選項對應至 `Action` 委派的 `ArgsActions` 類別，以及遇到該選項時會使用 `ArgsActions` 執行每個 `Action` 的 `ArgsProcessor`。
 
 ```csharp
 public class ArgsProcessor

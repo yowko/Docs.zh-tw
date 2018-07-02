@@ -4,17 +4,17 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/08/2017
-ms.openlocfilehash: 7b4bcb1c39ddbbc104820558532b03bc9341804e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e27cdb4b785253edd27e9854d6f977e3ede02266
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592557"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208147"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>測試 ASP.NET Core MVC 應用程式
 
 > _「如果您不喜歡為您的產品進行單元測試，您的客戶多半也不會喜歡測試它。」_
-> _- 匿名-
+>  _- 匿名 -_
 
 ## <a name="summary"></a>總結
 
@@ -38,7 +38,7 @@ ms.locfileid: "33592557"
 
 LocalFileImageService 實作類別，會實作從指定識別碼之特定文件夾中擷取和傳回影像檔位元數的邏輯：
 
-```cs
+```csharp
 public class LocalFileImageService : IImageService
 {
     private readonly IHostingEnvironment _env;
@@ -53,6 +53,13 @@ public class LocalFileImageService : IImageService
             var contentRoot = _env.ContentRootPath + "//Pics";
             var path = Path.Combine(contentRoot, id + ".png");
             return File.ReadAllBytes(path);
+        }
+        catch (FileNotFoundException ex)
+        {
+            throw new CatalogImageMissingException(ex);
+        }
+    }
+}
 ```
 
 ### <a name="functional-tests"></a>功能測試
@@ -101,19 +108,19 @@ Martin Fowler 撰寫了測試金字塔相關事項，其中的一個範例如圖
 
 您應該以統一的方式來為測試命名，並以名稱來指出每項測試的用途。 取得巨大成功的一種方法，是根據其正在測試的類別和方法來命名測試類別。 這會導致許多小測試類別，但可以非常清楚劃分每項測試的職責。 藉由設定測試類別名稱來識別要測試的類別和方法，測試方法名稱可用於指定要測試的行為。 這應該包含預期的行為，以及任何應該產生這種行為的輸入或假設。 測試名稱的一些範例：
 
--   CatalogControllerGetImage.CallsImageServiceWithId
+- CatalogControllerGetImage.CallsImageServiceWithId
 
--   CatalogControllerGetImage.LogsWarningGivenImageMissingException
+- CatalogControllerGetImage.LogsWarningGivenImageMissingException
 
--   CatalogControllerGetImage.ReturnsFileResultWithBytesGivenSuccess
+- CatalogControllerGetImage.ReturnsFileResultWithBytesGivenSuccess
 
--   CatalogControllerGetImage.ReturnsNotFoundResultGivenImageMissingException
+- CatalogControllerGetImage.ReturnsNotFoundResultGivenImageMissingException
 
 此方法的變體，會結束每個含有 "Should" 的測試類別名稱，並稍微修改時態：
 
--   CatalogControllerGetImage**Should**.**Call**ImageServiceWithId
+- CatalogControllerGetImage**Should**.**Call**ImageServiceWithId
 
--   CatalogControllerGetImage**Should**.**Log**WarningGivenImageMissingException
+- CatalogControllerGetImage**Should**.**Log**WarningGivenImageMissingException
 
 有些小組會認為第二種命名方法更清楚，只是略為冗長。 無論如何，請嘗試使用能深入了解測試行為的命名慣例；如此，當一或多項測試失敗時，從其名稱即可明顯看出是哪些案例失敗。 請避免含糊不清地命名您的測試，例如 ControllerTests.Test1，因為在測試結果中看到時並不會提供任何價值。
 
@@ -131,7 +138,7 @@ Martin Fowler 撰寫了測試金字塔相關事項，其中的一個範例如圖
 
 有時您需要重構程式碼才能進行單元測試。 通常這包括識別抽象概念與使用相依性插入來存取您想要測試的程式碼中之抽象概念，而不是直接針對基礎結構進行編碼。 例如，請考慮這個簡單的動作方法，來顯示影像：
 
-```cs
+```csharp
 [HttpGet("[controller]/pic/{id}")]
 public IActionResult GetImage(int id)
 {
@@ -146,7 +153,7 @@ public IActionResult GetImage(int id)
 
 如果您不能直接對檔案系統行為進行單元測試，且無法測試路由，那麼需要測試哪些內容？ 在重構使單元測試成為可能之後，您可能會發現一些測試案例和遺失的行為，例如錯誤處理。 找不到檔案時，該方法會執行什麼操作？ 它應該做什麼？ 在此範例中，重構的方法如下所示：
 
-```cs
+```csharp
 [HttpGet("[controller]/pic/{id}")\]
 public IActionResult GetImage(int id)
 {
@@ -168,21 +175,11 @@ public IActionResult GetImage(int id)
 
 ## <a name="integration-testing-aspnet-core-apps"></a>對 ASP.NET Core 應用程式進行單元測試
 
-```cs
-    }
-        catch (FileNotFoundException ex)
-        {
-            throw new CatalogImageMissingException(ex);
-        }
-    }
-}
-```
-
 此服務使用 IHostingEnvironment，就像 CatalogController 程式碼在重構為個別的服務之前一樣。 由於這是使用 IHostingEnvironment 之控制器中唯一的程式碼，因此已從 CatalogController 的建構函式中移除該相依性。
 
 若要測試此服務是否正常運作，您需要建立一個已知的測試影像檔，並驗證該服務會在指定特定輸入的情況下將其傳回。 請注意不要在您實際想要測試的行為上使用模擬物件 (在此情況下，從檔案系統讀取)。 但是，模擬物件可能仍然有助於設定整合測試。 在此情況下，您可以模擬 IHostingEnvironment，使其 ContentRootPath 指向您要用於測試影像的資料夾。 完整運作的整合測試類別如下所示：
 
-```cs
+```csharp
 public class LocalFileImageServiceGetImageBytesById
 {
     private byte[] _testBytes = new byte[] { 0x01, 0x02, 0x03 };
@@ -224,7 +221,7 @@ public class LocalFileImageServiceGetImageBytesById
 
 對於 ASP.NET Core 應用程式，TestServer 類別可使功能測試很容易撰寫。 就像您通常為應用程式所做的一樣，可使用 WebHostBuilder 來設定 TestServer。 這個 WebHostBuilder 應該像應用程式的真實主機一樣設定，但是您可以修改其任何層面以使測試更為容易。 大多數情況下，您會在很多測試案例中重複使用相同的 TestServer，因此您可以將其封裝在可重複使用的方法中 (也許在基底類別)：
 
-```cs
+```csharp
 public abstract class BaseWebTest
 {
     protected readonly HttpClient _client;
@@ -234,14 +231,14 @@ public abstract class BaseWebTest
     {
         _client = GetClient();
     }
-    
+
     protected HttpClient GetClient()
     {
         var startupAssembly = typeof(Startup).GetTypeInfo().Assembly;
         _contentRoot = GetProjectPath("src", startupAssembly);
         var builder = new WebHostBuilder()
         .UseContentRoot(_contentRoot)
-        .UseStartup&lt;Startup&gt;();
+        .UseStartup<Startup>();
         var server = new TestServer(builder);
         var client = server.CreateClient();
         return client;
@@ -251,7 +248,7 @@ public abstract class BaseWebTest
 
 GetProjectPath 方法只會將實體路徑傳回至 Web 專案 (下載解決方案範例)。 在此情況下，WebHostBuilder 僅會指定 Web 應用程式的內容根目錄，並參考真實 Web 應用程式使用的相同啟動類別。 若要使用 TestServer，請使用標準的 System.Net.HttpClient 類型對其發出要求。 TestServer 會公開一個有用的 CreateClient 方法，該方法提供了一個預先設定的用戶端，而該用戶端已準備好向在 TestServer 上執行的應用程式發出要求。 在為您的 ASP.NET Core 應用程式撰寫功能測試時，您可以使用此用戶端 (在上述的基本測試中設定為受保護的\_用戶端成員）：
 
-```cs
+```csharp
 public class CatalogControllerGetImage : BaseWebTest
 {
     [Fact]

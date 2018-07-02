@@ -1,6 +1,6 @@
 ---
 title: 如何：從檔案讀取文字
-ms.date: 03/30/2017
+ms.date: 06/19/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -14,26 +14,26 @@ helpviewer_keywords:
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0bb37c5beaaa529ea09fa23f31b55a0d6bc6d510
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7c54e5e55770f3df44819cdf6d2d2c866f7e0fc
+ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574526"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36298158"
 ---
 # <a name="how-to-read-text-from-a-file"></a>如何：從檔案讀取文字
 下列範例將示範如何以同步和非同步方式，從使用適用於桌面應用程式的 .NET 之文字檔讀取文字。 在這兩個範例中，當您建立 <xref:System.IO.StreamReader> 類別的執行個體時，會提供檔案的相對路徑或絕對路徑。 下列範例會假設名為 TestFile.txt 的檔案與應用程式位於相同資料夾中。  
   
- 由於 Windows 執行階段提供不同的資料流類型來讀取和寫入檔案，因此這些程式碼不適用於 Windows 市集應用程式的開發工作。 如需示範如何在 Windows 市集應用程式的內容中從檔案讀取文字的範例，請參閱[快速入門：讀取和寫入檔案](http://msdn.microsoft.com/library/windows/apps/hh758325.aspx)。 如需如何在 .NET Framework 資料流和 Windows 執行階段資料流之間轉換的範例，請參閱[操作說明：在 .NET Framework 資料流與 Windows 執行階段資料流之間轉換](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)。  
+ 由於 Windows 執行階段提供不同的資料流類型來讀取和寫入檔案，因此這些程式碼不適用於 Windows 市集應用程式的開發工作。 如需示範如何在 Windows 市集應用程式中從檔案讀取文字的範例，請參閱[快速入門：讀取和寫入檔案](https://docs.microsoft.com/en-us/previous-versions/windows/apps/hh758325(v=win.10))。 如需如何在 .NET Framework 資料流和 Windows 執行階段資料流之間轉換的範例，請參閱[如何：在 .NET Framework 資料流與 Windows 執行階段資料流之間轉換](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)。  
   
 ## <a name="example"></a>範例  
- 第一個範例將示範在主控台應用程式內的同步讀取作業。 在這個範例中，會使用資料流讀取器開啟文字檔案，內容會複製到字串，而字串會輸出到主控台。  
+ 下列範例將示範在主控台應用程式內的同步讀取作業。 在這個範例中，會使用資料流讀取器開啟文字檔案，內容會複製到字串，而字串會輸出到主控台。  
   
  [!code-csharp[Conceptual.BasicIO.TextFiles#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source3.cs#3)]
  [!code-vb[Conceptual.BasicIO.TextFiles#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source3.vb#3)]  
   
 ## <a name="example"></a>範例  
- 第二個範例將示範 Windows Presentation Foundation (WPF) 應用程式內的非同步讀取作業。  
+ 下列範例將示範 Windows Presentation Foundation (WPF) 應用程式內的非同步讀取作業。  
   
  [!code-csharp[Conceptual.BasicIO.TextFiles#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source6.cs#6)]
  [!code-vb[Conceptual.BasicIO.TextFiles#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source6.vb#6)]  

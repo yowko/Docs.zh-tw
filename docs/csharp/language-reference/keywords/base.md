@@ -1,5 +1,5 @@
 ---
-title: base (C# 參考)
+title: base 關鍵字 (C# 參考)
 description: 了解 base 關鍵字，該關鍵字可用來存取 C# 衍生類別中基底類別的成員。
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - base keyword [C#]
 ms.assetid: 8b645dbe-1a33-49b8-8716-1c401f9a5ea5
-ms.openlocfilehash: 69885ba0b2d05c79f2b7ba9458e7ba8c8b7aa0c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 94bfcbacd8c222004c1a013cc855ac8d46aab05f
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214477"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314655"
 ---
 # <a name="base-c-reference"></a>base (C# 參考)
 
@@ -31,22 +31,26 @@ ms.locfileid: "33214477"
 所存取的基底類別是類別宣告中所指定的基底類別。 例如，如果您指定 `class ClassB : ClassA`，則不論 ClassA 的基底類別為何，都會從 ClassB 存取 ClassA 成員。
 
 ## <a name="example"></a>範例
+
 在此範例中，基底類別 `Person` 和衍生類別 `Employee` 都會有名為 `Getinfo` 的方法。 使用 `base` 關鍵字，即可從衍生類別對基底類別呼叫 `Getinfo` 方法。
 
-[!code-csharp[csrefKeywordsAccess#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/base_1.cs)]
+[!code-csharp[csrefKeywordsAccess#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#1)]
 
 如需其他範例，請參閱 [new](../../../csharp/language-reference/keywords/new.md)、[virtual](../../../csharp/language-reference/keywords/virtual.md) 和 [override](../../../csharp/language-reference/keywords/override.md)。
 
 ## <a name="example"></a>範例
+
 這個範例示範如何指定在建立衍生類別的執行個體時呼叫的基底類別建構函式。
 
-[!code-csharp[csrefKeywordsAccess#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/base_2.cs)]
+[!code-csharp[csrefKeywordsAccess#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#2)]
 
 ## <a name="c-language-specification"></a>C# 語言規格
+
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>另請參閱
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
- [this](../../../csharp/language-reference/keywords/this.md)
+
+[C# 參考](../../../csharp/language-reference/index.md)  
+[C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+[C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+[this](../../../csharp/language-reference/keywords/this.md)

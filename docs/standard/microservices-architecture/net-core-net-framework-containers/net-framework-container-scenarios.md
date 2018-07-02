@@ -3,12 +3,13 @@ title: 針對 Docker 容器選擇 .NET Framework 的時機
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 針對 Docker 容器選擇 .NET Framework 的時機
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/18/2017
-ms.openlocfilehash: e707c8f0e721915e829e41628891928594010b92
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 06/07/2018
+ms.openlocfilehash: 06b67f702b38202f598745826fa48f1ca97b7282
+ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35251031"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>針對 Docker 容器選擇 .NET Framework 的時機
 
@@ -22,15 +23,15 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="using-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>使用不適用於 .NET Core 的協力廠商 .NET 程式庫或 NuGet 套件
 
-協力廠商程式庫會快速採行 [.NET Standard](../../net-standard.md)，以跨所有 .NET 類別 (包含 .NET Core) 共用程式碼。 使用 .NET Standard 程式庫 2.0 和以上版本，跨不同架構的 API 介面功能已明顯變大，而且，在 .NET Core 2.0 中，應用程式也可以直接參考現有 .NET Framework 程式庫 (請參閱[相容性修正](https://github.com/dotnet/standard/blob/master/docs/faq.md#how-does-net-standard-versioning-work))。
+協力廠商程式庫會快速採行 [.NET Standard](../../net-standard.md)，以跨所有 .NET 類別 (包含 .NET Core) 共用程式碼。 使用 .NET Standard 程式庫 2.0 和以上版本，跨不同架構的 API 介面相容性已明顯變好，而且在 .NET Core 2.x 中，應用程式也可以直接參考現有 .NET Framework 程式庫 (請參閱[相容性修正](https://github.com/dotnet/standard/blob/master/docs/faq.md#how-does-net-standard-versioning-work) \(英文\))。
 
 不過，即使自 .NET Standard 2.0 和 .NET Core 2.0 開始有該例外進展，仍然可能有特定 NuGet 套件需要執行 Windows 而且可能不支援 .NET Core 的情況。 如果這些套件對您的應用程式十分重要，則需要在 Windows 容器上使用 .NET Framework。
 
 ## <a name="using-net-technologies-not-available-for-net-core"></a>使用不適用於 .NET Core 的 .NET 技術 
 
-部分 .NET Framework 技術不適用於目前版本的 .NET Core (撰寫本文時的 2.0 版)。 這其中有一些可在更新的 .NET Core 版本 (.NET Core 2.x) 中使用，但其他則不適用於 .NET Core 設為目標的新應用程式模式，而且可能永遠無法使用。
+部分 .NET Framework 技術在最新版本的 .NET Core (撰寫本文時為 2.1 版) 中未提供。 這其中有一些可在更新的 .NET Core 版本 (.NET Core 2.x) 中使用，但其他則不適用於 .NET Core 設為目標的新應用程式模式，而且可能永遠無法使用。
 
-下列清單顯示 .NET Core 2.0 中未提供的大部分技術：
+下列清單顯示 .NET Core 2.1 中未提供的大部分技術：
 
 -   ASP.NET Web Form。 只有在 .NET Framework 上才能使用這項技術。 目前並未規劃將 ASP.NET Web Form 帶入 .NET Core。
 
@@ -64,4 +65,4 @@ ms.lasthandoff: 05/04/2018
 
 
 >[!div class="step-by-step"]
-[上一個] (net-core-container-scenarios.md) [下一個] (container-framework-choice-factors.md)
+[上一頁] (net-core-container-scenarios.md) [下一頁] (container-framework-choice-factors.md)

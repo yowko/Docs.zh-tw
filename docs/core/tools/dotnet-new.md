@@ -3,13 +3,13 @@ title: dotnet new 命令 - .NET Core CLI
 description: dotnet new 命令會根據指定的範本建立新的 .NET Core 專案。
 author: mairaw
 ms.author: mairaw
-ms.date: 05/29/2018
-ms.openlocfilehash: ae24c4145cc67ca863c07e4d22af8a1c2c2dd732
-ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
+ms.date: 06/12/2018
+ms.openlocfilehash: f0ef91361dfbc2c2ba5532fbd607786289e98c69
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34570459"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207765"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -151,8 +151,8 @@ dotnet new [-h|--help]
 
 要建立的範本語言。 接受的語言會因範本而有所不同 (請參閱[引數](#arguments)一節中的預設值)。 並非所有範本都適用。
 
-    > [!NOTE]
-    > Some shells interpret `#` as a special character. In those cases, you need to enclose the language parameter value, such as `dotnet new console -lang "F#"`.
+> [!NOTE]
+> 某些 Shell 會將 `#` 解譯為特殊字元。 在這些情況下，您需要括住語言參數值，例如 `dotnet new console -lang "F#"`。
 
 `-n|--name <OUTPUT_NAME>`
 
@@ -202,8 +202,8 @@ dotnet new [-h|--help]
 
 要建立的範本語言。 接受的語言會因範本而有所不同 (請參閱[引數](#arguments)一節中的預設值)。 並非所有範本都適用。
 
-    > [!NOTE]
-    > Some shells interpret `#` as a special character. In those cases, you need to enclose the language parameter value, such as `dotnet new console -lang "F#"`.
+> [!NOTE]
+> 某些 Shell 會將 `#` 解譯為特殊字元。 在這些情況下，您需要括住語言參數值，例如 `dotnet new console -lang "F#"`。
 
 `-n|--name <OUTPUT_NAME>`
 
@@ -243,8 +243,8 @@ dotnet new [-h|--help]
 
 要建立的範本語言。 接受的語言會因範本而有所不同 (請參閱[引數](#arguments)一節中的預設值)。 並非所有範本都適用。
 
-    > [!NOTE]
-    > Some shells interpret `#` as a special character. In those cases, you need to enclose the language parameter value, such as `dotnet new console -lang "F#"`.
+> [!NOTE]
+> 某些 Shell 會將 `#` 解譯為特殊字元。 在這些情況下，您需要括住語言參數值，例如 `dotnet new console -lang "F#"`。
 
 `-n|--name <OUTPUT_NAME>`
 
@@ -502,13 +502,13 @@ dotnet new [-h|--help]
 
 `dotnet new classlib -lang VB -o MyLibrary`
 
-未經驗證即在目前的目錄中，建立以 .NET Core 2.0 為目標的新 ASP.NET Core C# MVC 應用程式專案：
+未經驗證即在目前的目錄中建立新 ASP.NET Core C# MVC 應用程式專案：
 
-`dotnet new mvc -au None -f netcoreapp2.0`
+`dotnet new mvc -au None`
 
-建立以 .NET Core 2.0 為目標的新 xUnit 應用程式：
+建立新的 xUnit 應用程式：
 
-`dotnet new xunit --framework netcoreapp2.0`
+`dotnet new xunit`
 
 列出 MVC 可用的所有範本：
 

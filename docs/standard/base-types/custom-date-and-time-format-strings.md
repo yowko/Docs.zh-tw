@@ -16,11 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 665c90ca9950424be21539a83992e1c36dc51ba7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5dbdb4aa70fcd14a914e1cb1b608260f1e51c1d0
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208154"
 ---
 # <a name="custom-date-and-time-format-strings"></a>自訂日期和時間格式字串
 日期和時間格式字串會定義對 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值執行格式化作業後所產生的文字表示。 另外還會定義剖析作業所需日期和時間值的表示，以便成功地將字串轉換成日期和時間。 自訂格式字串是由一個或多個自訂日期和時間格式規範所組成。 任何不是[標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)的字串都會被解譯為自訂日期和時間格式字串。  
@@ -90,7 +91,7 @@ ms.lasthandoff: 05/04/2018
 |"/"|日期分隔符號。<br /><br /> 詳細資訊：["/" 自訂格式規範](#dateSeparator)。|2009-06-15T13:45:30 -> / (en-US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -> . (tr-TR)|  
 |"*string*"<br /><br /> '*string*'|常值字串分隔符號。<br /><br /> 詳細資訊︰[字元常值](#Literals)。|2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P|  
 |%|將下列字元定義為自訂格式規範。<br /><br /> 詳細資訊：[使用單一自訂格式規範](#UsingSingleSpecifiers)。|2009-06-15T13:45:30 (%h) -> 1|  
-|\|逸出字元。<br /><br /> 詳細資訊︰[字元常值](#Literals)和[使用逸出字元](#escape)。|2009-06-15T13:45:30 (h \h) -> 1 h|  
+|\\|逸出字元。<br /><br /> 詳細資訊︰[字元常值](#Literals)和[使用逸出字元](#escape)。|2009-06-15T13:45:30 (h \h) -> 1 h|  
 |任意字元|字元會原封不動地複製到結果字串。<br /><br /> 詳細資訊︰[字元常值](#Literals)。|2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A|  
   
  下列各節提供每個自訂日期和時間格式規範的其他資訊。 除非特別註明，否則每個規範都會產生相同的字串表示，無論是與 <xref:System.DateTime> 值或 <xref:System.DateTimeOffset> 值搭配使用。  

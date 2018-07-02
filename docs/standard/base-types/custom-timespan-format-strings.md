@@ -15,11 +15,12 @@ helpviewer_keywords:
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 354b9fe1171e8e41702db001ab3c0e5daa65431e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f65e8bb1a61bad458cb33a3bf9d2553479c750e
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208151"
 ---
 # <a name="custom-timespan-format-strings"></a>自訂 TimeSpan 格式字串
 <xref:System.TimeSpan> 格式字串會定義從格式化作業產生之 <xref:System.TimeSpan> 值的字串表示。 自訂格式字串會由一或多個自訂的 <xref:System.TimeSpan> 格式規範搭配任意數目的常值字元所組成。 任何字串只要不是[標準 TimeSpan 格式字串](../../../docs/standard/base-types/standard-timespan-format-strings.md)，就會被解譯為自訂的 <xref:System.TimeSpan> 格式字串。  
@@ -66,7 +67,7 @@ ms.lasthandoff: 05/04/2018
 |"FFFFFF"|時間間隔中的百萬分之一秒。 不顯示小數點後的零。<br /><br /> 詳細資訊：["FFFFFF" 自訂格式規範](#F6_Specifier)。|`TimeSpan.Parse("00:00:06.3291791")`：<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`：<br /><br /> `ss\.FFFFFF`: 03.1|  
 |"FFFFFFF"|時間間隔中的千萬分之一秒。 不顯示小數點後的零或七位數都是零。<br /><br /> 詳細資訊：["FFFFFFF" 自訂格式規範](#F7_Specifier)。|`TimeSpan.Parse("00:00:06.3291791")`：<br /><br /> `FFFFFF`: 3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`：<br /><br /> `ss\.FFFFFF`: 03.19|  
 |*'string*'|常值字串分隔符號。<br /><br /> 詳細資訊：[其他字元](#Other)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|  
-|\|逸出字元。<br /><br /> 詳細資訊：[其他字元](#Other)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|  
+|\\|逸出字元。<br /><br /> 詳細資訊：[其他字元](#Other)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|  
 |任意字元|其他任何未逸出字元都會解譯為自訂格式規範。<br /><br /> 詳細資訊：[其他字元](#Other)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|  
   
 <a name="dSpecifier"></a>   

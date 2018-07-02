@@ -3,11 +3,12 @@ title: 更新的 .NET Core 事件模式
 description: 了解 .NET Core 事件模式如何啟用回溯相容性的彈性，以及如何使用非同步訂閱者來實作安全事件處理。
 ms.date: 06/20/2016
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: d0ad85479265041d895039d6c72f1f9909ea5fa8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f28c3ea9d8cf3e8fc68953c79def5744eb5abe4
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827176"
 ---
 # <a name="the-updated-net-core-event-pattern"></a>更新的 .NET Core 事件模式
 
@@ -20,24 +21,9 @@ ms.lasthandoff: 05/04/2018
 事實上，您可以變更 `FileFoundArgs` 和 `SearchDirectoryArgs` 的定義，讓它們不衍生自 `EventArgs`。
 程式運作完全相同。
 
-您也可以將 `SearchDirectoryArgs` 變更 struct，如果還想再進行一項變更︰
+如果您再進行一項變更，還可以將 `SearchDirectoryArgs` 變更為結構：
 
-```csharp  
-internal struct SearchDirectoryArgs  
-{  
-    internal string CurrentSearchDirectory { get; }  
-    internal int TotalDirs { get; }  
-    internal int CompletedDirs { get; }  
-    
-    internal SearchDirectoryArgs(string dir, int totalDirs, 
-        int completedDirs) : this()  
-    {  
-        CurrentSearchDirectory = dir;  
-        TotalDirs = totalDirs;  
-        CompletedDirs = completedDirs;  
-    }  
-}  
-```   
+[!code-csharp[SearchDir](../../samples/csharp/events/Program.cs#DeclareSearchEvent "Define search directory event")]
 
 其他的變更是先呼叫預設的建構函式，再輸入初始化所有欄位的建構函式。 若不新增，C# 的規則就會先報告正在存取屬性，再報告它們已被指派。
 

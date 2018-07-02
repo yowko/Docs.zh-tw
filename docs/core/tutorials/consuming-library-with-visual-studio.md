@@ -1,21 +1,22 @@
 ---
-title: 在 Visual Studio 2017 中透過 .NET Core 使用類別庫
+title: 在 Visual Studio 2017 中使用 .NET Standard 類別庫
 description: 了解如何使用 Visual Studio 2017 來呼叫類別庫中的成員。
 author: BillWagner
 ms.author: wiwagn
-ms.date: 08/07/2017
+ms.date: 06/05/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 0a7002f2a5dba5a5aad32a83a43a933cd2cc5722
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e71001ee8595741119293304190fd9ef4251148
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827309"
 ---
-# <a name="consuming-a-class-library-with-net-core-in-visual-studio-2017"></a>在 Visual Studio 2017 中透過 .NET Core 使用類別庫
+# <a name="consuming-a-net-standard-library-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Standard 類別庫
 
-一旦遵循[在 Visual Studio 2017 中使用 .NET Core 建置 C# 類別庫](./library-with-visual-studio.md)或[在 Visual Studio 2017 中使用 .NET Core 建置 Visual Basic 類別庫](vb-library-with-visual-studio.md)中的步驟建立了類別庫，也[在 Visual Studio 2017 中使用 .NET Core 測試類別庫](testing-library-with-visual-studio.md)中測試了類別庫，並建置了類別庫的發行版本，下一個步驟就是把它提供給呼叫端使用。 執行這項作業的方法有兩種：
+在您遵循[在 Visual Studio 2017 中使用 .NET Core 建置 C# 類別庫](./library-with-visual-studio.md)或[在 Visual Studio 2017 中使用 .NET Core 建置 Visual Basic 類別庫](vb-library-with-visual-studio.md)中的步驟建立 .NET Standard 類別庫，並根據[在 Visual Studio 2017 中使用 .NET Core 測試類別庫](testing-library-with-visual-studio.md)中的指示測試該類別庫，然後建置該類別庫的發行版本之後，下一個步驟就是把它提供給呼叫端使用。 執行這項作業的方法有兩種：
 
 * 如果該類別庫將供單一方案使用 (例如，如果它是單一大型應用程式中的元件)，您可以直接將它以專案的形式包含在您的方案中。
 
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/04/2018
 
    [!CODE-csharp[UsingClassLib#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/showcase.cs)]
 
-   此程式碼會使用 [Console.WindowHeight](xref:System.Console.WindowHeight) 屬性來判斷主控台視窗有多少資料列。 每當 [Console.CursorTop](xref:System.Console.CursorTop) 屬性大於或等於主控台視窗中的資料列數目時，程式碼都會清除主控台視窗並向使用者顯示訊息。
+   該程式碼會使用 `row` 變數來維護寫入至主控台視窗的資料列數目計數。 當它大於或等於 25 時，程式碼就會清除主控台視窗，並向使用者顯示訊息。
 
    此程式會提示使用者輸入字串。 它會指出該字串開頭是否為大寫字元。 如果使用者沒有輸入字串就按 Enter 鍵，應用程式就會終止且主控台視窗會關閉。
 
@@ -78,7 +79,7 @@ ms.lasthandoff: 05/04/2018
 
     [!CODE-vb[UsingClassLib#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/showcase.vb)]
 
-   此程式碼會使用 [Console.WindowHeight](xref:System.Console.WindowHeight) 屬性來判斷主控台視窗有多少資料列。 每當 [Console.CursorTop](xref:System.Console.CursorTop) 屬性大於或等於主控台視窗中的資料列數目時，程式碼都會清除主控台視窗並向使用者顯示訊息。
+   該程式碼會使用 `row` 變數來維護寫入至主控台視窗的資料列數目計數。 當它大於或等於 25 時，程式碼就會清除主控台視窗，並向使用者顯示訊息。
 
    此程式會提示使用者輸入字串。 它會指出該字串開頭是否為大寫字元。 如果使用者沒有輸入字串就按 Enter 鍵，應用程式就會終止且主控台視窗會關閉。
 

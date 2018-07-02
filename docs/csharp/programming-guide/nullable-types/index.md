@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, nullable types
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-ms.openlocfilehash: fcff492f420a60a41b373bf9042ed0c2d66d0446
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 64b326b82cd022ed6590a232546690e2ec2a5c78
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34456584"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105484"
 ---
 # <a name="nullable-types-c-programming-guide"></a>可為 Null 的類型 (C# 程式設計手冊)
 可為 Null 的型別是 <xref:System.Nullable%601?displayProperty=nameWithType> 結構的執行個體。 可為 Null 的型別可以代表其基礎值型別的正確值範圍，再加上額外的 `null` 值。 例如，您可以將範圍從 -2147483648 到 2147483647 的任何值指派給 `Nullable<Int32>` (發音為「Nullable of Int32」)，或為它指派 `null` 值。 您可以為 `Nullable<bool>` 指派下列值：[true](../../../csharp/language-reference/keywords/true.md)、[false](../../../csharp/language-reference/keywords/false.md) 或 [null](../../../csharp/language-reference/keywords/null.md)。 當您正在處理包含可能不會指派值之元素的資料庫和其他資料型別時，將 `null` 指派為數字或布林值型別的功能特別有用。 例如，資料庫中的布林值欄位可以儲存 `true` 或 `false` 的值，而它也可能是未定義的。 
@@ -27,7 +27,7 @@ ms.locfileid: "34456584"
   
 -   語法 `T?` 是 <xref:System.Nullable%601> 的縮寫，其中 `T` 是實值型別。 這兩種格式是可互換的。  
   
--   將值指派給可為 Null 的型別，就像您針對一般實值型別所做的一樣，例如 `int? x = 10;` 或 `double? d = 4.108`。 您也可以為可為 Null 的型別指派值 `null`: `int? x = null.`  
+-   將值指派給可為 Null 的型別，就像您針對一般實值型別所做的一樣，例如 `int? x = 10;` 或 `double? d = 4.108;`。 您也可以為可為 Null 的型別指派值 `null`：`int? x = null;`。  
   
 -   使用 <xref:System.Nullable%601.GetValueOrDefault%2A?displayProperty=nameWithType> 方法來傳回指派的值，或者，如果值為 `null`，則傳回基礎類型的預設值，例如 `int j = x.GetValueOrDefault();`  
   

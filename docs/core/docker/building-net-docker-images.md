@@ -6,11 +6,12 @@ ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: f539efe15ce68a77890538430a170da64ff325e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e48a263334ebb93a5d281032336aeb4073d8467c
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827335"
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>建置 .NET Core 應用程式的 Docker 映像
 
@@ -18,7 +19,7 @@ ms.lasthandoff: 05/04/2018
 
 您會在本教學課程中了解︰
 > [!div class="checklist"]
-> * 了解 Microsoft .NET Core Docker 映像 
+> * 了解 Microsoft.NET Core Docker 映像 
 > * 取得要 Docker 化的 ASP.NET Core 範例應用程式
 > * 在本機執行 ASP.NET 範例應用程式
 > * 使用 Docker for Linux 容器來建置並執行範例
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/04/2018
 
 為達成上述目標，我們在 [`microsoft/dotnet`](https://hub.docker.com/r/microsoft/dotnet/) 下提供映像變化。
 
-* `microsoft/dotnet:<version>-sdk`(`microsoft/dotnet:2.0.0-sdk`) 此映像包含具有 .NET Core 和命令列工具 (CLI) 的 .NET Core SDK。 此映像會對應至**開發案例**。 您可以使用此映像進行本機開發、偵錯和單元測試。 此映像也可用於**建置**案例。 使用 `microsoft/dotnet:sdk` 一律可以提供最新版本。
+* `microsoft/dotnet:<version>-sdk`(`microsoft/dotnet:2.1-sdk`) 此映像包含具有 .NET Core 和命令列工具 (CLI) 的 .NET Core SDK。 此映像會對應至**開發案例**。 您可以使用此映像進行本機開發、偵錯和單元測試。 此映像也可用於**建置**案例。 使用 `microsoft/dotnet:sdk` 一律可以提供最新版本。
 
 > [!TIP]
 > 如果您不確定需求，則需要使用 `microsoft/dotnet:<version>-sdk` 映像。 作為「既定」映像，其設計是要用作擲離容器 (裝載原始程式碼，並啟動容器來啟動應用程式)，以及用作從中建置其他映像的基底映像。
@@ -79,9 +80,9 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="samples-to-explore"></a>要探索的範例
 
-* [此 ASP.NET Core Docker 範例](https://github.com/dotnet/dotnet-docker-samples/tree/master/aspnetapp) \(英文\) 示範建置適用於生產之 ASP.NET Core 應用程式的 Docker 映像的最佳做法模式。 該範例可與 Linux 或 Windows 容器搭配使用。
+* [此 ASP.NET Core Docker 範例](https://github.com/dotnet/dotnet-docker/tree/master/samples/aspnetapp) \(英文\) 示範建置適用於生產之 ASP.NET Core 應用程式的 Docker 映像的最佳做法模式。 該範例可與 Linux 或 Windows 容器搭配使用。
 
-* 此 .NET Core Docker 範例示範[建置適用於生產之 .NET Core 應用程式的 Docker 映像](https://github.com/dotnet/dotnet-docker-samples/tree/master/dotnetapp-prod) \(英文\) 的最佳做法模式。
+* 此 .NET Core Docker 範例示範[建置適用於生產之 .NET Core 應用程式的 Docker 映像](https://github.com/dotnet/dotnet-docker/tree/master/samples/dotnetapp) \(英文\) 的最佳做法模式。
 
 ## <a name="your-first-aspnet-core-docker-app"></a>第一個 ASP.NET Core Docker 應用程式
 
@@ -101,9 +102,9 @@ ms.lasthandoff: 05/04/2018
 
 若要建置並執行，請安裝下列項目：
 
-#### <a name="net-core-20-sdk"></a>.NET Core 2.0 SDK
+#### <a name="net-core-21-sdk"></a>.NET Core 2.1 SDK
 
-* 安裝 [.NET Core SDK 2.0](https://www.microsoft.com/net/core)。
+* 安裝 [.NET Core SDK 2.1](https://www.microsoft.com/net/core) \(英文\)。
 
 * 如果您還沒有這麼做，請安裝您慣用的程式碼編輯器。
 
@@ -112,7 +113,7 @@ ms.lasthandoff: 05/04/2018
 
 #### <a name="installing-docker-client"></a>安裝 Docker 用戶端
 
-安裝 [Docker 17.06](https://docs.docker.com/release-notes/docker-ce/) 或更新版本的 Docker 用戶端。
+安裝 [Docker 18.03](https://docs.docker.com/release-notes/docker-ce/) \(英文\) 或更新版本的 Docker 用戶端。
 
 Docker 用戶端可以安裝於：
 
@@ -136,22 +137,26 @@ Docker 用戶端可以安裝於：
 
 ### <a name="getting-the-sample-application"></a>取得範例應用程式
 
-取得範例的最簡單方式是使用 git 並使用下列指示，以複製[範例存放庫](https://github.com/dotnet/dotnet-docker-samples)： 
+取得範例的最簡單方式是使用下列指示透過 Git 複製 [.NET Core Docker 存放庫](https://github.com/dotnet/dotnet-docker) \(英文\)： 
 
 ```console
-git clone https://github.com/dotnet/dotnet-docker-samples/
+git clone https://github.com/dotnet/dotnet-docker
 ```
 
-您也可以從 .NET Core Docker 範例存放庫中，將存放庫下載為 zip (較小)。
+您也可以從 .NET Core Docker 存放庫中將存放庫下載為 zip (它很小)。
 
 ### <a name="run-the-aspnet-app-locally"></a>在本機執行 ASP.NET 應用程式
 
 針對參考點，在將應用程式放入容器前，要先在本機執行應用程式。
 
-您可以使用 .NET Core 2.0 SDK 並使用下列命令，以在本機建置和執行應用程式 (這些指示假設存放庫的根目錄)：
+您可以搭配 .NET Core 2.1 SDK 使用下列命令，以在本機建置並執行應用程式 (這些指示會假設存放庫的根目錄)：
 
 ```console
-cd aspnetapp
+cd dotnet-docker
+cd samples
+cd aspnetapp // solution scope where the dockerfile is located
+cd aspnetapp // project scope
+
 dotnet run
 ```
 
@@ -162,7 +167,10 @@ dotnet run
 您可以使用 Linux 容器並使用下列命令，以在 Docker 中建置和執行範例 (這些指示假設存放庫的根目錄)：
 
 ```console
-cd aspnetapp
+cd dotnet-docker
+cd samples
+cd aspnetapp // solution scope where the dockerfile is located
+
 docker build -t aspnetapp .
 docker run -it --rm -p 5000:80 --name aspnetcore_sample aspnetapp
 ```
@@ -177,7 +185,10 @@ docker run -it --rm -p 5000:80 --name aspnetcore_sample aspnetapp
 您可以使用 Windows 容器並使用下列命令，以在 Docker 中建置和執行範例 (這些示假設存放庫的根目錄)：
 
 ```console
-cd aspnetapp
+cd dotnet-docker
+cd samples
+cd aspnetapp // solution scope where the dockerfile is located
+
 docker build -t aspnetapp .
 docker run -it --rm --name aspnetcore_sample aspnetapp
 ```
@@ -215,11 +226,11 @@ Ethernet adapter Ethernet:
 您可以使用 [dotnet publish](../tools/dotnet-publish.md) 命令，以在本機產生準備好部署至生產環境的應用程式。
 
 ```console
-dotnet publish -c release -o published
+dotnet publish -c Release -o published
 ```
 
 > [!NOTE]
-> -c release 引數會以發行模式建置應用程式 (預設值是偵錯模式)。 如需詳細資訊，請參閱命令列參數的 [dotnet run reference](../tools/dotnet-run.md)。
+> -c Release 引數會以發行模式建置應用程式 (預設值是偵錯模式)。 如需詳細資訊，請參閱命令列參數的 [dotnet run reference](../tools/dotnet-run.md)。
 
 您可以使用下列命令，在 **Windows** 上執行應用程式。
 
@@ -235,10 +246,10 @@ dotnet published/aspnetapp.dll
 
 ### <a name="docker-images-used-in-this-sample"></a>此範例中所使用的 Docker 映像
 
-在此範例中，使用下列 Docker 映像
+此範例的 dockerfile 使用的是下列 Docker 映像。
 
-* `microsoft/aspnetcore-build:2.0`
-* `microsoft/aspnetcore:2.0`
+* `microsoft/dotnet:2.1-sdk`
+* `microsoft/dotnet:2.1-aspnetcore-runtime`
 
 恭喜您！ 您已：
 > [!div class="checklist"]

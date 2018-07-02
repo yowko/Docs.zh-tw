@@ -1,24 +1,24 @@
 ---
-title: 處理和擲回例外狀況
-ms.date: 03/30/2017
+title: 在 .NET 中處理和擲回例外狀況
+ms.date: 06/19/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- exceptions [.NET Framework], handling
+- exceptions [.NET], handling
 - runtime, exceptions
 - filtering exceptions
-- errors [.NET Framework], exceptions
-- exceptions [.NET Framework], throwing
-- exceptions [.NET Framework]
+- errors [.NET], exceptions
+- exceptions [.NET], throwing
+- exceptions [.NET]
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b71ffd9bfcfcb048f148ac1a3a418c03b9834ea2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a278940528966e32646a3551b4c133223de9746e
+ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575449"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36298340"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>在 .NET 中處理和擲回例外狀況
 
@@ -26,7 +26,7 @@ ms.locfileid: "33575449"
 
 ## <a name="exceptions"></a>例外狀況
 
-例外狀況是執行程式所遇到的錯誤狀況或未預期的行為。 若是程式碼或您呼叫的程式碼 (例如共用程式庫) 中有錯誤、無法使用作業系統資源、執行階段遇到非預期的狀況 (例如無法驗證的程式碼) 等等，就可能擲回例外狀況。 您的應用程式可從一些狀況中復原，但有些狀況就無法復原。 雖然您可以從應用程式的大部分例外狀況中復原，但卻無法從執行階段的大部分例外狀況中復原。
+例外狀況是執行程式所遇到的錯誤狀況或未預期的行為。 在發生程式碼或您呼叫的程式碼 (例如共用程式庫) 中有錯誤、無法使用作業系統資源、執行階段遇到非預期的狀況 (例如無法驗證的程式碼) 等情況時，就可能會擲回例外狀況。 您的應用程式可從一些狀況中復原，但有些狀況就無法復原。 雖然您可以從大部分的應用程式例外狀況中復原，但是無法從大部分的執行階段例外狀況中復原。
 
 在 .NET 中，例外狀況是繼承自 <xref:System.Exception?displayProperty=nameWithType> 類別的物件。 從發生問題的程式碼區域擲回例外狀況。 例外狀況會向上傳遞堆疊，直到應用程式處理或程式終止它。
 
@@ -36,38 +36,37 @@ ms.locfileid: "33575449"
 
 - .NET 程式語言擲回和處理例外狀況的方式都相同。
 
-- 要處理例外狀況不需要任何特定語言的語法，但可讓每一種語言定義自己的語法。
+- 不需要任何特定語言語法以處理例外狀況，但可讓每一種語言定義屬於自己的語法。
 
 - 例外狀況可跨處理序，甚至是跨電腦界限擲回。
 
 - 可將例外狀況處理程式碼加入應用程式，以增加程式可靠性。
 
-例外狀況優於其他錯誤通知方法，例如傳回碼。 不會發生未通知失敗的情況，因為如果擲回例外狀況而您未加以處理，執行階段就會終止您的應用程式。 也不會因為程式碼無法檢查失敗傳回碼，就繼續在整個系統散佈無效的值。 
+例外狀況優於其他錯誤通知方法，例如傳回碼。 不會發生未注意到失敗的情況，因為如果系統擲出例外狀況且您未加以處理，執行階段就會終止您的應用程式。 無效值不會因為程式碼無法檢查失敗傳回碼，而持續在系統中散佈。
 
 ## <a name="common-exceptions"></a>常見的例外狀況
 
 下表列出一些常見的例外狀況，並提供可能造成這些例外狀況的原因範例。
 
-| 例外狀況類型 | 基底類型 | 描述 | 範例 |
-| -------------- | --------- | ----------- | ------- |
-| <xref:System.Exception> | <xref:System.Object> | 適用於所有例外狀況的基底類別。 | 無 (使用這個例外狀況的衍生類別)。 |
-| <xref:System.IndexOutOfRangeException> | <xref:System.Exception> | 只有當陣列索引不正確時，才由執行階段擲回。 | 在有效的陣列範圍之外編製陣列索引：`arr[arr.Length+1]` |
-| <xref:System.NullReferenceException> | <xref:System.Exception> | 只有當參考 Null 物件時，才由執行階段擲回。 | `object o = null; o.ToString();` |
-| <xref:System.InvalidOperationException> | <xref:System.Exception> | 當處於無效狀態時，由方法擲回。 | 在從基礎集合將 Item 移除之後，呼叫 `Enumerator.GetNext()`。 |
-| <xref:System.ArgumentException> | <xref:System.Exception> | 適用於所有引數例外狀況的基底類別。 | 無 (使用這個例外狀況的衍生類別)。 |
-| <xref:System.ArgumentNullException> | <xref:System.Exception> | 由不允許引數為 Null 的方法擲回。 | `String s = null; "Calculate".IndexOf (s);` |
-| <xref:System.ArgumentOutOfRangeException> | <xref:System.Exception> | 由驗證引數是在指定範圍內的方法擲回。 | `String s = "string"; s.Substring(s.Length+1);` |
+| 例外狀況類型 | 描述 | 範例 |
+| -------------- | ----------- | ------- |
+| <xref:System.Exception> | 適用於所有例外狀況的基底類別。 | 無 (使用這個例外狀況的衍生類別)。 |
+| <xref:System.IndexOutOfRangeException> | 只有當陣列索引不正確時，才由執行階段擲回。 | 在陣列有效範圍之外對它進行索引： <br /> `arr[arr.Length+1]` |
+| <xref:System.NullReferenceException> | 只有當參考 Null 物件時，才由執行階段擲回。 | `object o = null;` <br /> `o.ToString();` |
+| <xref:System.InvalidOperationException> | 當處於無效狀態時，由方法擲回。 | 在從基礎集合將項目移除之後，呼叫 `Enumerator.MoveNext()`。 |
+| <xref:System.ArgumentException> | 適用於所有引數例外狀況的基底類別。 | 無 (使用這個例外狀況的衍生類別)。 |
+| <xref:System.ArgumentNullException> | 由不允許引數為 Null 的方法擲回。 | `String s = null;` <br /> `"Calculate".IndexOf(s);`|
+| <xref:System.ArgumentOutOfRangeException> | 由驗證引數是在指定範圍內的方法擲回。 | `String s = "string";` <br /> `s.Substring(s.Length+1);` |
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-* [例外狀況類別和屬性](exception-class-and-properties.md)
-* [操作說明：使用 Try/Catch 區塊攔截例外狀況](how-to-use-the-try-catch-block-to-catch-exceptions.md)
-* [操作說明：使用 Catch 區塊中的特定例外狀況](how-to-use-specific-exceptions-in-a-catch-block.md)
-* [操作說明：明確擲回例外狀況](how-to-explicitly-throw-exceptions.md)
-* [操作說明：建立使用者定義的例外狀況](how-to-create-user-defined-exceptions.md)
-* [使用使用者篩選的例外狀況處理常式](using-user-filtered-exception-handlers.md)
-* [操作說明：使用 Finally 區塊](how-to-use-finally-blocks.md)
-* [處理 COM Interop 例外狀況](handling-com-interop-exceptions.md)
-* [例外狀況的最佳做法](best-practices-for-exceptions.md)
-
-若要深入了解 .NET 中例外狀況的運作方式，請參閱 [What Every Dev needs to Know About Exceptions in the Runtime](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md)。
+[例外狀況類別和屬性](exception-class-and-properties.md)  
+[操作說明：使用 Try/Catch 區塊攔截例外狀況](how-to-use-the-try-catch-block-to-catch-exceptions.md)  
+[操作說明：使用 Catch 區塊中的特定例外狀況](how-to-use-specific-exceptions-in-a-catch-block.md)  
+[操作說明：明確擲回例外狀況](how-to-explicitly-throw-exceptions.md)  
+[操作說明：建立使用者定義的例外狀況](how-to-create-user-defined-exceptions.md)  
+[使用使用者篩選的例外狀況處理常式](using-user-filtered-exception-handlers.md)  
+[操作說明：使用 Finally 區塊](how-to-use-finally-blocks.md)  
+[處理 COM Interop 例外狀況](handling-com-interop-exceptions.md)  
+[例外狀況的最佳做法](best-practices-for-exceptions.md)  
+[每個開發人員針對執行階段中例外狀況所需知道的概念](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md) \(英文\)。

@@ -3,26 +3,28 @@ title: 執行運算式樹狀架構
 description: 將運算式樹狀架構轉換成可執行檔的中繼語言 (IL) 指令，以了解執行運算式樹狀架構。
 ms.date: 06/20/2016
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: 54706cd5d8ebe60bb893bc82f05aecddae370602
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb9ec5f023587b4e5c74ab71acbd6a886e085e4a
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218159"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207387"
 ---
 # <a name="executing-expression-trees"></a>執行運算式樹狀架構
 
 [上一個課程 -- 支援運算式樹狀架構的架構類型](expression-classes.md)
 
 「運算式樹狀架構」是一種表示特定程式碼的資料結構。
-它不是已編譯且可執行的程式碼。 如果您想要執行由運算式樹狀架構表示的 .NET 程式碼，您必須將它轉換成可執行 IL 指令。 
+它不是已編譯且可執行的程式碼。 如果您想要執行由運算式樹狀架構表示的 .NET 程式碼，您必須將它轉換成可執行 IL 指令。
+
 ## <a name="lambda-expressions-to-functions"></a>將 Lambda 運算式轉換成函式
-您可以將任何 LambdaExpression 或衍生自 LambdaExpression 的任何類型，轉換成可執行 IL。 其他運算式類型則無法直接轉換成程式碼。 這項限制實際上不會造成太大影響。 Lambda 運算式是您想要轉換成可執行中繼語言 (IL) 以便執行的唯一運算式類型。 (想想直接執行 `ConstantExpression` 的用意。 是否有任何用處？)任何 `LamdbaExpression` 的運算式樹狀架構或衍生自 `LambdaExpression` 的類型，都可以轉換成 IL。
+
+您可以將任何 LambdaExpression 或衍生自 LambdaExpression 的任何類型，轉換成可執行 IL。 其他運算式類型則無法直接轉換成程式碼。 這項限制實際上不會造成太大影響。 Lambda 運算式是您想要轉換成可執行中繼語言 (IL) 以便執行的唯一運算式類型。 (想想直接執行 `ConstantExpression` 的用意。 是否有任何用處？)任何 `LambdaExpression` 的運算式樹狀架構或衍生自 `LambdaExpression` 的類型，都可以轉換成 IL。
 運算式類型 `Expression<TDelegate>` 是 .NET Core 程式庫中唯一的具體範例。 它可用來表示對應至任何委派類型的運算式。 因為此類型對應至委派類型，所以 .NET 可以查看運算式，並為符合 Lambda 運算式簽章的適當委派產生 IL。 
 
-在大多數情況下，這會在運算式和其對應委派之間建立一個簡單的對應。 例如，由 `Expression<Func<int>>` 表示的運算式樹狀架構會轉換成 `Func<int>` 類型的委派。 對於具有任何傳回型別和引數清單的 Lambda 運算式，會有一個委派類型，它是由該 Lambda 運算式表示之可執行程式碼的目標類型。
+在大多數情況下，這會在運算式和其對應委派之間建立一個簡單的對應。 例如，由 `Expression<Func<int>>` 表示的運算式樹狀架構會轉換成 `Func<int>` 類型的委派。 針對具有任何傳回型別和引數清單的 Lambda 運算式，會有一個委派類型，它是由該 Lambda 運算式表示之可執行程式碼的目標類型。
 
-`LamdbaExpression` 類型包含將運算式樹狀架構轉換成可執行程式碼時所使用的 `Compile` 和 `CompileToMethod` 成員。 `Compile` 方法會建立委派。 `CompileToMethod` 方法會以表示運算式樹狀架構之編譯輸出的 IL 來更新 `MethodBuilder` 物件。 請注意，`CompileToMethod` 僅適用於完整桌面架構，而不適用於 .NET Core 架構。
+`LambdaExpression` 類型包含將運算式樹狀架構轉換成可執行程式碼時所使用的 `Compile` 和 `CompileToMethod` 成員。 `Compile` 方法會建立委派。 `CompileToMethod` 方法會以表示運算式樹狀架構之編譯輸出的 IL 來更新 `MethodBuilder` 物件。 請注意，`CompileToMethod` 僅適用於完整桌面架構，而不適用於 .NET Core。
 
 或者，您也可以提供 `DebugInfoGenerator`，以接收所產生之委派物件的符號偵錯資訊。 這可讓您將運算式樹狀架構轉換成委派物件，並具有所產生之委派的完整偵錯資訊。
 
@@ -35,11 +37,11 @@ var answer = func(); // Invoke Delegate
 Console.WriteLine(answer);
 ```
 
-請注意，委派類型是以運算式類型為基礎。 如果您想要以強型別方式來使用委派物件，您必須了解傳回型別和引數清單。 `LambdaExpression.Compile()` 方法會傳回 `Delegate` 類型。 您必須將它轉換成正確的委派類型，才能讓任何編譯時期工具檢查傳回型別的引數清單。
+請注意，委派類型是以運算式類型為基礎。 如果您想要以強型別方式來使用委派物件，您必須了解傳回型別和引數清單。 `LambdaExpression.Compile()` 方法會傳回 `Delegate` 類型。 您必須將它轉換成正確的委派類型，才能讓任何編譯時期工具檢查引數清單或傳回型別。
 
 ## <a name="execution-and-lifetimes"></a>執行和存留期
 
-您可以藉由叫用在呼叫 `LamdbaExpression.Compile()` 時所建立的委派，來執行程式碼。 如上所示，`add.Compile()` 會傳回委派。 叫用該委派 (藉由呼叫 `func()`) 即可執行程式碼。
+您可以藉由叫用在呼叫 `LambdaExpression.Compile()` 時所建立的委派，來執行程式碼。 如上所示，`add.Compile()` 會傳回委派。 叫用該委派 (藉由呼叫 `func()`) 即可執行程式碼。
 
 該委派代表運算式樹狀架構中的程式碼。 您可以保留該委派的控制代碼，稍後再叫用它。 您不需要在每次想要執行運算式樹狀架構所表示的程式碼時編譯運算式樹狀架構 (請記住，運算式樹狀架構為不可變，稍後編譯相同的運算式樹狀架構將會建立執行相同程式碼的委派)。
 

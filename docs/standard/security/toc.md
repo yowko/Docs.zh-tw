@@ -31,3 +31,4 @@
 ### [安全性和使用者輸入](security-and-user-input.md)
 ### [安全性和競爭情形](security-and-race-conditions.md)
 ### [安全性和產生作業中的程式碼](security-and-on-the-fly-code-generation.md)
+### [使用填補進行 CBC 模式對稱解密的計時漏洞](vulnerabilities-cbc-mode.md)

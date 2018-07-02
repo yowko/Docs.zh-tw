@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4f791ea339c9188ac8fada525611fc68821351d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f78df1a85bacae3019fe27857731174796d8a311
+ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743416"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36270418"
 ---
 # <a name="assembly-security-considerations"></a>組件安全性考量
 <a name="top"></a> 當您建置組件時，您可以指定一組該組件需要用來執行的使用權限。 是否將某些使用權限授予組件則以辨識項 (Evidence) 為基礎。  
@@ -45,9 +45,13 @@ ms.locfileid: "32743416"
  在載入期間，組件的辨識項 (Evidence) 是用來做為安全性原則的輸入。 安全性原則是由企業和電腦的系統管理員以及使用者原則設定所建立的，它決定在執行時授予所有 Managed 程式碼的使用權限集。 安全性原則可以針對組件 (如果具有簽署工具產生的簽章) 的發行者、針對要從其中下載組件的 Web 網站和區域 (Internet Explorer 的用詞)，或針對組件的強式名稱 (Strong Name) 建立。 例如，電腦的系統管理員可以建立安全性原則，允許從某一 Web 網站下載並且由特定軟體公司簽名的所有程式碼存取電腦上的某個資料庫，但是不授予寫入該電腦磁碟的存取權。  
   
 ## <a name="strong-named-assemblies-and-signing-tools"></a>強式名稱組件和簽署工具  
+
+ > [!WARNING]
+ > 請勿依賴強式名稱提供安全性。 強式名稱僅提供唯一識別。
+
  您可以用兩種不同但互補的方式來簽署組件：運用強式名稱，或是使用 [SignTool.exe (簽署工具)](../../../docs/framework/tools/signtool-exe.md)。 使用強式名稱簽署組件，就會將公開金鑰加密新增至含有組件資訊清單的檔案。 強式名稱簽署可協助驗證唯一名稱，防止冒用名稱，並且在解析參考時為呼叫端提供某種識別 (Identity)。  
   
- 但是，並沒有任何信任層級與強式名稱關聯，這也使得 [SignTool.exe (簽署工具)](../../../docs/framework/tools/signtool-exe.md) 更為重要。 這兩種簽署工具需要發行者向協力廠商授權單位證明其識別並取得憑證。 然後將這項憑證嵌入您的檔案，就可以讓系統管理員用來決定是否要信任程式碼的真實性。  
+ 並沒有任何信任層級與強式名稱建立關聯，這也使得 [SignTool.exe (簽署工具)](../../../docs/framework/tools/signtool-exe.md) 更為重要。 這兩種簽署工具需要發行者向協力廠商授權單位證明其識別並取得憑證。 然後將這項憑證嵌入您的檔案，就可以讓系統管理員用來決定是否要信任程式碼的真實性。  
   
  您可以同時對組件賦予強式名稱和使用 [SignTool.exe (簽署工具)](../../../docs/framework/tools/signtool-exe.md) 建立的數位簽章，或是只使用其中一種。 這兩種簽署工具只能同時簽署一個檔案。對於多檔案組件，您必須簽署含有組件資訊清單的檔案。 強式名稱儲存在包含組件資訊清單的檔案中，但是使用 [SignTool.exe (簽署工具)](../../../docs/framework/tools/signtool-exe.md) 建立的簽章，則是儲存在包含組件資訊清單的可攜式執行檔 (PE) 中的保留位置。 當您已經擁有依靠 [SignTool.exe (簽署工具)](../../../docs/framework/tools/signtool-exe.md) 所產生簽章的信任階層，或者您的原則只使用金鑰部分而不檢查信任鏈結，您就能使用 [SignTool.exe (簽署工具)](../../../docs/framework/tools/signtool-exe.md) 來簽署組件 (不論是否使用強式名稱)。  
   

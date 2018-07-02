@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: c01152d016a852c15ffa1d1c82c16d6795965f31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16d318c1c1a5d8e560b97d9e996f1165a4566c6a
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289213"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207915"
 ---
 # <a name="is-c-reference"></a>is (C# 參考) #
 
@@ -75,7 +75,7 @@ ms.locfileid: "33289213"
 
 其中 *expr* 是評估為特定類型執行個體的運算式，*type* 是 *expr* 的結果要轉換的目標類型名稱，而 *varname* 是 *expr* 的結果所轉換的目標物件 (如果 `is` 測試為 `true`)。 
 
-如果下列任一項為真，`is` 運算式為`true`：
+如果 *expr* 不是 `null`，且符合下列任一項，則 `is` 運算式為 `true`：
 
 - *expr* 是其類型與 *type* 相同的執行個體。
 
@@ -85,7 +85,7 @@ ms.locfileid: "33289213"
 
 - *expr* 是實作 *type* 介面的類型執行個體。
 
-如果 *exp* 為 `true`，而且 `is` 搭配 `if` 陳述式使用，則 *varname* 會被指派，而且只在 `if` 陳述式內具有區域範圍。
+如果 *exp* 為 `true`，且 `is` 與 `if` 陳述式搭配使用，則會指派 *varname* ；而且只在 `if` 陳述式內具有區域範圍。
 
 下列範例使用 `is` 類型模式來提供類型之 <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> 方法的實作。
 

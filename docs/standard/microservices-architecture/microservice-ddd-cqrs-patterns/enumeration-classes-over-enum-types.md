@@ -4,15 +4,16 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 使用列舉�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 1cb8c6115602d80b61f1116cbb1a8df4fbcee028
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1b2569caa7e7a6a899a6765d2e39d0fff8e37e2f
+ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35251190"
 ---
 # <a name="using-enumeration-classes-instead-of-enum-types"></a>使用列舉類別，而非列舉類型
 
-[列舉](../../../../docs/csharp/language-reference/keywords/enum.md) (簡稱「列舉類型」) 是整數型別的精簡語言包裝函式。 您可能會想要將其用途限制在儲存一組封閉值中的一個值時。 根據性別 (例如男性、女性、不明) 或大小 (小、中、大) 的分類就是很好的例子。 使用列舉來控制流程或更強固的抽象概念可能會導致[程式碼異味](http://deviq.com/code-smells/) (Code Smell)。 這種使用方式會導致程式碼因為有許多查看列舉值的控制流程陳述式而變得很脆弱。
+[列舉](../../../../docs/csharp/language-reference/keywords/enum.md) (簡稱「列舉類型」) 是整數型別的精簡語言包裝函式。 您可能會想要將其用途限制在儲存一組封閉值中的一個值時。 依大小 (小、中、大) 分類是不錯的範例。 使用列舉來控制流程或更強固的抽象概念可能會導致[程式碼異味](http://deviq.com/code-smells/) (Code Smell)。 這種使用方式會導致程式碼因為有許多查看列舉值的控制流程陳述式而變得很脆弱。
 
 相反地，您可以建立列舉類別，以便利用物件導向語言的所有豐富功能。
 
@@ -126,4 +127,4 @@ public class CardType : Enumeration
 
 
 >[!div class="step-by-step"]
-[上一個] (implement-value-objects.md) [下一個] (domain-model-layer-validations.md)
+[上一頁] (implement-value-objects.md) [下一頁] (domain-model-layer-validations.md)

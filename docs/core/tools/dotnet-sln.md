@@ -3,13 +3,13 @@ title: dotnet sln 命令 - .NET Core CLI
 description: dotnet-sln 命令提供方便在方案檔中新增、移除及列出專案的選項。
 author: mairaw
 ms.author: mairaw
-ms.date: 05/29/2018
-ms.openlocfilehash: dd77281b55b3e7fc7c293e402d11de016ef73cf8
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 06/13/2018
+ms.openlocfilehash: 65ae402ef5519863886c8cf833598f5314b4bdad
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696708"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207772"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -33,6 +33,12 @@ dotnet sln [-h|--help]
 ## <a name="description"></a>描述
 
 `dotnet sln` 命令提供方便在方案檔中新增、移除及列出專案的方式。
+
+若要使用 `dotnet sln` 命令，方案檔必須已經存在。 如果您需要建立一個，請使用 [dotnet new](dotnet-new.md) 命令，如下列範例：
+
+```
+dotnet new sln
+```
 
 ## <a name="commands"></a>命令
 

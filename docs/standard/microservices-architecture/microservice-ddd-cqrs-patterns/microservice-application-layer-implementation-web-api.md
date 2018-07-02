@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 使用 Web AP
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: 7c785814c4726dd805ad7b0dccb6a3584118cc65
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9572540f17e5628d7f71c94ee68f7cba17d64d07
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579752"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207634"
 ---
 # <a name="implementing-the-microservice-application-layer-using-the-web-api"></a>使用 Web API 實作微服務應用程式層
 
@@ -667,7 +667,7 @@ public class CreateOrderCommandHandler
 
 這是建立命令與命令處理常式之關聯的程式碼。 處理常式只是簡單類別，但它繼承自 RequestHandler&lt;T&gt;，而且 MediatR 確定它是使用正確承載所叫用。
 
-## <a name="applying-cross-cutting-concerns-when-processing-commands-with-the-behaviors-in-meadiatr"></a>在 MeadiatR 中使用行為處理命令時套用跨領域關注
+## <a name="applying-cross-cutting-concerns-when-processing-commands-with-the-behaviors-in-mediatr"></a>在 MediatR 中使用行為處理命令時套用跨領域關注
 
 還有一件事：可以將跨領域關注套用至中繼程序管道。 您也可以查看 Autofac 註冊模組程式碼結尾，了解如何註冊行為類型，特別是自訂 LoggingBehavior 類別和 ValidatorBehavior 類別。 但是，您也可以新增其他自訂行為。
 
@@ -827,13 +827,13 @@ public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
 
 ##### <a name="the-mediator-pattern"></a>中繼程序模式
 
--   **中繼程序模式**
-    [*https://en.wikipedia.org/wiki/Mediator\_模式*](https://en.wikipedia.org/wiki/Mediator_pattern)
+-   **Mediator pattern**
+    [*https://en.wikipedia.org/wiki/Mediator\_pattern*](https://en.wikipedia.org/wiki/Mediator_pattern) (中繼程序模式)
 
 ##### <a name="the-decorator-pattern"></a>裝飾項目模式
 
--   **裝飾項目模式**
-    [*https://en.wikipedia.org/wiki/Decorator\_模式*](https://en.wikipedia.org/wiki/Decorator_pattern)
+-   **Decorator pattern**
+    [*https://en.wikipedia.org/wiki/Decorator\_pattern*](https://en.wikipedia.org/wiki/Decorator_pattern) (裝飾項目模式)
 
 ##### <a name="mediatr-jimmy-bogard"></a>MediatR (Jimmy Bogard)
 

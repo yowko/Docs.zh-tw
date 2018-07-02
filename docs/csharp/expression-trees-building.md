@@ -3,12 +3,12 @@ title: 組建運算式樹狀架構
 description: 了解建置運算式樹狀架構的技術。
 ms.date: 06/20/2016
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.openlocfilehash: 52e03bd1ea2635d75da6d70af6918b33b64622b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7751af17aafa8e2d1a14125da43352108b1c1f95
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216310"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207185"
 ---
 # <a name="building-expression-trees"></a>組建運算式樹狀架構
 
@@ -43,10 +43,10 @@ var addition = Expression.Add(one, two);
 建立加法運算式之後，您可以建立 Lambda 運算式︰
 
 ```csharp
-var lamdba = Expression.Lambda(addition);
+var lambda = Expression.Lambda(addition);
 ```
 
-這是非常簡單的 LambdaExpression，因為它不包含任何引數。
+這是非常簡單的 Lambda 運算式，因為它不包含任何引數。
 稍後在本節中，您會看到引數如何對應至參數，並組建更複雜的運算式。
 
 針對和這個同樣簡單的運算式，您可以將所有呼叫結合成單一陳述式︰

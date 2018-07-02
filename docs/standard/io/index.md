@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 63767a3ba2831ca9cadd9b99998eb871780143e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40eeeab159bdef9fc286374fde8c1c1d3a9f5c2b
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579037"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105650"
 ---
 # <a name="file-and-stream-io"></a>檔案和資料流 I/O
 檔案和資料流 I/O (輸入/輸出) 是指對儲存媒體來回傳輸資料。 在 .NET Framework 中，`System.IO` 命名空間包含能夠以同步和非同步方式在資料流和檔案上進行讀取和寫入的類型。 這些命名空間還包含對檔案進行壓縮和解壓縮的類型，以及透過管道和序列埠進行通訊的類型。  
@@ -26,6 +26,8 @@ ms.locfileid: "33579037"
   
 ## <a name="files-and-directories"></a>檔案和目錄  
  您可以使用 <xref:System.IO?displayProperty=nameWithType> 命名空間中的類型與檔案和目錄互動。 例如，您可以取得及設定檔案和目錄的屬性，並且根據搜尋條件擷取檔案和目錄集合。  
+
+如需 Windows 系統的路徑命名慣例及檔案路徑表達方式，包括 .NET Core 1.1 及更新版本和 .NET Framework 4.6.2 及更新版本中支援的 DOS 裝置語法，請參閱 [Windows 系統上的檔案路徑格式](file-path-formats.md)。 
   
  以下是常用的檔案和目錄類別：  
   

@@ -3,11 +3,12 @@ title: 模式比對 - C# 手冊
 description: 了解 C# 中的模式比對運算式
 ms.date: 01/24/2017
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 0f95ac8b16939173e6cfd7304b9cbe52526b5169
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 635ab45c89a38f3dedac2d60ea1e31ebf394c9b2
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231472"
 ---
 # <a name="pattern-matching"></a>模式比對 #
 
@@ -72,7 +73,7 @@ ms.lasthandoff: 05/07/2018
 模式比對 `switch` 陳述式使用開發人員熟悉的語法，而開發人員之前使用傳統的 C 樣式 `switch` 陳述式。 已評估每個 `case`，且執行符合輸入變數的條件下程式碼。 程式碼無法從一個 case 運算式「繼續」執行到下一個，`case` 陳述式的語法需要每個 `case` 以 `break`、`return` 或 `goto` 結束。
 
 > [!NOTE]
-> `goto` 陳述式跳至另一個標籤只有針對常數模式才有效，即傳統的 switch 陳述式。
+> 用來跳至另一個標籤的 `goto` 陳述式僅針對常數模式 (即傳統的 switch 陳述式) 有效。
 
 具有控管 `switch` 陳述式的新重要規則。 `switch` 運算式已移除變數型別限制。
 可使用任何型別，例如本例的 `object`。 Case 運算式不再限於常數值。 移除該限制表示重新排列 `switch` 區段可能會變更程式的行為。

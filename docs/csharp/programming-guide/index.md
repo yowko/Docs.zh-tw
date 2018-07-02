@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 62aacdafb5c257a8824bc8c8241ead7a274c2e2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f6500fa5f8f5022c4e910da894f182dcc5525be5
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333267"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207374"
 ---
 # <a name="c-programming-guide"></a>C# 程式設計手冊
 本節提供可透過 .NET Framework 存取 C# 的重要 C# 語言特性與功能的詳細資訊。  
   
- 本節內容中大部分會假設您已經了解一些 C# 和一般程式設計概念。 如果您是 C# 程式設計或 C# 的新手，您可能想要瀏覽 [C# 使用者入門](https://www.microsoft.com/net/tutorials/csharp/getting-started)互動式教學課程，而不需要事先具備程式設計知識。  
+ 本節內容中大部分會假設您已經了解一些 C# 和一般程式設計概念。 如果您是程式設計或 C# 的新手，建議先瀏覽 [C# 快速入門](../quick-starts/index.md) 或 [C# 使用者入門](https://www.microsoft.com/net/tutorials/csharp/getting-started) \(英文\) 互動式教學課程，這些內容不需要事先具備程式設計知識。  
   
  如需特定關鍵字、運算子和前置處理器指示詞的相關資訊，請參閱 [C# 參考](../../csharp/language-reference/index.md)。 如需 C# 語言規格的相關資訊，請參閱 [C# 語言規格](../../csharp/language-reference/language-specification/index.md)。  
   

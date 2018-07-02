@@ -39,14 +39,15 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6c61e4721e6daa548db2fffccc75606e98f71cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b6730e621a85dc8e656723647f949449241c407
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577302"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207452"
 ---
 # <a name="net-class-library-overview"></a>.NET 類別庫概觀
+
 .NET 實作包括類別、介面、委派和實值型別，以加速和最佳化開發過程並提供對系統功能的存取。 為了促進語言之間的互通性，大部分 .NET 類型符合 CLS 標準，因而可以透過其編譯器符合 Common Language Specification (CLS) 的任何程式設計語言來使用。  
   
  .NET 類型是建置 .NET 應用程式、元件和控制項的基礎。 .NET 實作包含執行下列函式的類型：  
@@ -63,22 +64,24 @@ ms.locfileid: "33577302"
   
 -   提供資料存取、豐富型用戶端 (Rich Client) GUI 和伺服器控制的用戶端 GUI  
   
- .NET 提供相當豐富的介面，以及抽象和具體 (非抽象) 類別。 您可以使用原來的具體類別，或在許多狀況中從它們衍生您自己的類別。 若要使用介面的功能，您可以建立實作介面的類別，或者從實作介面的 .NET Framework 類別之一來衍生類別。  
+ .NET 提供相當豐富的介面，以及抽象和具體 (非抽象) 類別。 您可以使用原來的具體類別，或在許多狀況中從它們衍生您自己的類別。 若要使用介面的功能，您可以建立實作介面的類別，或者從實作介面的 .NET 類別之一來衍生類別。  
   
-## <a name="naming-conventions"></a>命名規範  
- .NET 類型使用意味著階層架構的點語法命名配置。 這個技術將相關的型別群組至命名空間 (Namespace)，所以可以更容易地搜尋和參考它們。 完整名稱的第一部分 - 直到最右邊的點 - 是命名空間名稱。 最後部分是型別名稱。 例如，**System.Collections.ArrayList** 代表 **ArrayList** 類型，其屬於 **System.Collections** 命名空間。 **System.Collections** 中的類型可以用來操作物件的集合。  
+## <a name="naming-conventions"></a>命名規範
+
+ .NET 類型使用意味著階層架構的點語法命名配置。 這個技術將相關的型別群組至命名空間 (Namespace)，所以可以更容易地搜尋和參考它們。 完整名稱的第一部分 - 直到最右邊的點 - 是命名空間名稱。 最後部分是型別名稱。 例如，`System.Collections.Generic.List<T>` 代表 `List<T>` 型別，其屬於 `System.Collections.Generic` 命名空間。 <xref:System.Collections.Generic> 中的型別可以用來處理泛型集合。  
   
  這個命名配置使得程式庫開發人員更容易擴充 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 以建立階層式型別群組，並以一致且有意義的方式來命名它們。 此外還允許以完整名稱明確識別型別 (也就是藉由命名空間和型別名稱)，其可避免型別名稱衝突。 程式庫開發人員為其命名空間建立名稱時，應使用以下命名慣例：  
   
  *CompanyName*.*TechnologyName*  
   
- 例如，Microsoft.Word 命名空間符合這個方針。  
+ 例如，`Microsoft.Word`　命名空間符合這個方針。  
   
  使用命名模式將相關的型別群組至命名空間，是建置和記錄類別庫非常有用的方式。 然而，這個命名配置在可視性、成員存取、繼承 (Inheritance)、安全性或繫結上沒有作用。 命名空間可以在多重組件 (Assembly) 之間分割，而單一組件可以包含來自多重命名空間的型別。 組件在 Common Language Runtime 中提供版本、部署、安全性、載入和可視性的正式結構。  
   
  如需命名空間和類型名稱的詳細資訊，請參閱[一般型別系統](../../docs/standard/base-types/common-type-system.md)。  
   
-## <a name="system-namespace"></a>System 命名空間  
+## <a name="system-namespace"></a>System 命名空間
+
  <xref:System> 命名空間是 .NET 中基本類型的根命名空間。 這個命名空間包含的類別，代表所有應用程式使用的基底資料型別：<xref:System.Object> (繼承階層架構的根)、<xref:System.Byte>、<xref:System.Char>、<xref:System.Array>、<xref:System.Int32>、<xref:System.String> 等等。 許多這些型別對應到您的程式語言所使用的原始資料型別。 當您使用 .NET Framework 型別撰寫程式碼時，您可以在需要 .NET Framework 基底資料型別時使用您語言的對應關鍵字。  
   
  下表列出 .NET 所提供基底類型的清單、簡要描述各類型，並且指示 Visual Basic、C#、C++ 和 F# 中的對應類型。  

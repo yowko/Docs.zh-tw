@@ -91,6 +91,7 @@
 ### [相依性管理](core/tools/dependencies.md)
 ### [csproj 格式的新增項目](core/tools/csproj.md)
 ## 移轉
+### [.NET Core 2.0 至 2.1](core/migration/20-21.md)
 ### [移轉至 csproj 格式](core/migration/index.md)
 ### [project.json 與 csproj 的對應](core/tools/project-json-to-csproj.md)
 ### [從 DNX 移轉](core/migration/from-dnx.md)
@@ -119,7 +120,6 @@
 ### [單元測試已發行輸出](core/testing/unit-testing-published-output.md)
 ### [搭配 Visual Studio 的 .NET Core 專案即時單元測試](/visualstudio/test/live-unit-testing-start)
 ## [版本控制](core/versions/index.md)
-### [.NET Core 支援](core/versions/lts-current.md)
 <!--### [🔧 Servicing](core/versions/servicing.md)-->
 ## [執行階段識別項目錄](core/rid-catalog.md)
 ## [.NET Core SDK 概觀](core/sdk.md)
@@ -414,7 +414,7 @@
 ### [命名空間](fsharp/language-reference/namespaces.md)
 ### [模組](fsharp/language-reference/modules.md)
 ### [匯入宣告：open 關鍵字](fsharp/language-reference/import-declarations-the-open-keyword.md)
-### [簽章](fsharp/language-reference/signatures.md)
+### [簽章檔案](fsharp/language-reference/signature-files.md)
 ### [測量單位](fsharp/language-reference/units-of-measure.md)
 ### [XML 文件](fsharp/language-reference/xml-documentation.md)
 ### [延遲運算](fsharp/language-reference/lazy-computations.md)

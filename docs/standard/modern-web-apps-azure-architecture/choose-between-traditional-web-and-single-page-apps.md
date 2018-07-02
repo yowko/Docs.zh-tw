@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Microsoft Azure 來架構現代化 Web 應�
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017
-ms.openlocfilehash: 834c71b92cb1bfd19bdc7fec8a19d3b2a87b74bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8c6a3b6c9c934cd44eb4fa402c8d792006ac560
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582895"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208145"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>在傳統 Web 應用程式和單頁應用程式 (SPA) 之間作選擇
 
@@ -71,10 +71,10 @@ SPAs 可以支援豐富的用戶端功能，且當使用者採取動作或在應
 撰寫 SPA 需要熟悉 JavaScript 及/或 TypeScript，以及用戶端程式設計技術與程式庫。 您的小組應能夠使用 Angular 等 SPA 架構來撰寫現代化 JavaScript。
 
 > ### <a name="references--spa-frameworks"></a>參考資料 – SPA 架構
-> - **AngularJS**  
-> <https://angularjs.org/>
-> - **4 種受歡迎的 JavaScript 架構之比較**  
-> <https://www.developereconomics.com/feature-comparison-of-4-popular-js-mv-frameworks>
+> - **Angular**  
+> <https://angular.io>
+> - **JavaScript 架構的比較**  
+> <https://javascriptreport.com/the-ultimate-guide-to-javascript-frameworks/>
 
 **您的應用程式必須已針對其他 (內部或公開) 用戶端公開 API**
 

@@ -4,7 +4,7 @@
 #### [操作說明：撰寫簡單的 Parallel.For 迴圈](how-to-write-a-simple-parallel-for-loop.md)
 #### [操作說明：撰寫簡單的 Parallel.ForEach 迴圈](how-to-write-a-simple-parallel-foreach-loop.md)
 #### [操作說明：撰寫含有執行緒區域變數的 Parallel.For 迴圈](how-to-write-a-parallel-for-loop-with-thread-local-variables.md)
-#### [操作說明：撰寫含有執行緒區域變數的 Parallel.ForEach 迴圈](how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md)
+#### [如何：撰寫含有 Partition-Local 變數的 Parallel.ForEach 迴圈](how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)
 #### [操作說明：取消 Parallel.For 或 ForEach 迴圈](how-to-cancel-a-parallel-for-or-foreach-loop.md)
 #### [操作說明：處理平行迴圈中的例外狀況](how-to-handle-exceptions-in-parallel-loops.md)
 #### [操作說明：加速小型迴圈主體](how-to-speed-up-small-loop-bodies.md)

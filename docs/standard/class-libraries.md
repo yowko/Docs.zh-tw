@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: 7d2f81ef08892c994163d609a56008c1accadaa8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8026ac821dfeed03127c894a5768a4c91b13beb3
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570594"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207169"
 ---
 # <a name="net-class-libraries"></a>.NET 類別庫
 
@@ -39,7 +39,7 @@ ms.locfileid: "33570594"
 
 許多程式庫開發人員已從透過一個來源產生多個平台特定程式庫 (使用條件式編譯指示詞) 切換到可攜式程式庫。 有[數種方式](https://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html)，可以使用目前最廣泛接受的 [bait-and-switch](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/) 技術來存取可攜式程式庫內的平台特定功能。
 
-### <a name="net-standard-class-libraries"></a>.NET Standard 類別庫
+## <a name="net-standard-class-libraries"></a>.NET Standard 類別庫
 
 .NET Standard 程式庫可以取代平台特定和可攜式程式庫概念。 就它們可以公開基礎平台 (沒有綜合平台或平台交集) 的所有功能這點而言，它們是平台特定的。 就它們可以在所有支援的平台上運作這點而言，它們是可攜式。
 
@@ -60,6 +60,6 @@ ms.locfileid: "33570594"
 
 如需詳細資訊，請參閱 [.NET Standard](net-standard.md) 主題。
 
-### <a name="mono-class-libraries"></a>Mono 類別庫
+## <a name="mono-class-libraries"></a>Mono 類別庫
 
 Mono 上支援類別庫 (包含上述三種類型的程式庫)。 Mono 經常被 (正確) 視為 Microsoft .NET Framework 的跨平台實作。 在某種程度上，原因是平台特定 .NET Framework 程式庫可以在 Mono 執行階段上執行，而不需要進行修改或重新編譯。 在建立可攜式類別庫之前就具有這項特性，因此是啟用 .NET Framework 與 Mono 之間的二進位可攜性的明確選擇 (雖然只作用於一個方向)。

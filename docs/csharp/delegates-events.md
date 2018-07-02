@@ -3,11 +3,12 @@ title: 委派和事件
 description: 了解可在 .NET Core 文件中的何處找到委派和事件的資訊。
 ms.date: 06/20/2016
 ms.assetid: 4e80e053-8022-4987-a8a0-209caec0315d
-ms.openlocfilehash: 939bb0f441e5a18b1ae8d48fe9a8021bd2dad3f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b802a7aa8ef3e9ab0c05af23186d124dcc07bdb5
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34826824"
 ---
 # <a name="delegates--events"></a>委派和事件
 
@@ -45,3 +46,4 @@ ms.lasthandoff: 05/04/2018
 
     本文討論您應該如何區別在設計中使用事件與委派。
  
+您可以從 GitHub 範例存放庫下載[委派範例](https://github.com/dotnet/samples/tree/master/csharp/delegates-and-events) \(英文\) 和[事件範例](https://github.com/dotnet/samples/tree/master/csharp/events) \(英文\)。

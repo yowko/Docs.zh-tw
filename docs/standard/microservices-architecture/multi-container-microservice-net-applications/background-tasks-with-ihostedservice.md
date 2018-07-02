@@ -4,11 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 在微服務�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 083d2a8c6a0d1649f8bfb2c21a92fb43381fe9ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb6d412ee91ab8d2c97a4917f23ee914e3fb9068
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805564"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>在微服務中使用 IHostedService 和 BackgroundService 類別實作背景工作
 
@@ -193,7 +194,7 @@ public class GracePeriodManagerService : BackgroundService
             {
                 _logger.LogDebug($"GracePeriod task doing background work.");
 
-                // This eShopOnContainers method is quering a database table 
+                // This eShopOnContainers method is querying a database table 
                 // and publishing events into the Event Bus (RabbitMS / ServiceBus)
                 CheckConfirmedGracePeriodOrders();
 
@@ -211,7 +212,7 @@ public class GracePeriodManagerService : BackgroundService
 }
 ```
 
-在 eShopOnContainers 這個特定狀況下，它會執行應用程式方法來查詢可尋找具有特定狀態之訂單的資料庫表格，以及在套用變更時，透過事件匯流排發行整合事件 (在其下，它可以使用 RabbitMQ 或 Azure 服務匯流排)。 
+在 eShopOnContainers 這個特定案例中，它會執行應用程式方法來查詢資料庫資料表，以尋找具有特定狀態的訂單，以及在套用變更時，透過事件匯流排 (可以使用 RabbitMQ 或 Azure 服務匯流排) 發行整合事件。 
 
 當然，您可以改為執行任何其他商務背景工作。
 
@@ -259,4 +260,4 @@ WebHost.CreateDefaultBuilder(args)
 
 
 >[!div class="step-by-step"]
-[上一個] (test-aspnet-core-services-web-apps.md) [下一個] (../microservice-ddd-cqrs-patterns/index.md)
+[上一頁] (test-aspnet-core-services-web-apps.md) [下一頁] (../microservice-ddd-cqrs-patterns/index.md)
