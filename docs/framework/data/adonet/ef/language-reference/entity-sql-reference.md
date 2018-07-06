@@ -4,7 +4,7 @@ ms.date: 03/30/2017
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
 ms.openlocfilehash: 79cdf35128ac35920797060b09ff2fc5999708a7
 ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 06/27/2018
 ms.locfileid: "37028015"
@@ -50,12 +50,12 @@ ms.locfileid: "37028015"
 |[= (等於)](equals-entity-sql.md)|比較兩個運算式是否相等。|
 |[> (大於)](greater-than-entity-sql.md)|比較兩個運算式來判斷左運算式的值是否大於右運算式。|
 |[>= (大於或等於)](greater-than-or-equal-to-entity-sql.md)|比較兩個運算式來判斷左運算式的值是否大於或等於右運算式。|
-|[是&AMP;#91;不&AMP;#93;NULL](isnull-entity-sql.md)|判斷查詢運算式是否為 null。|
+|[是&#91;不&#93;NULL](isnull-entity-sql.md)|判斷查詢運算式是否為 null。|
 |[< (小於)](less-than-entity-sql.md)|比較兩個運算式來判斷左運算式的值是否小於右運算式。|
 |[<= (小於或等於)](less-than-or-equal-to-entity-sql.md)|比較兩個運算式來判斷左運算式的值是否小於或等於右運算式。|
-|[&AMP;#91;不&AMP;#93;BETWEEN](between-entity-sql.md)|判斷運算式是否會產生所指定範圍內的值。|
-|[!= (不等於)](not-equal-to-entity-sql.md)|比較兩個運算式來判斷左的運算式是否不等於右運算式。|
-|[&AMP;#91;不&AMP;#93;像](like-entity-sql.md)|判斷特定字元字串是否符合指定的模式。|
+|[&#91;不&#93;BETWEEN](between-entity-sql.md)|判斷運算式是否會產生所指定範圍內的值。|
+|[\!= (不等於)](not-equal-to-entity-sql.md)|比較兩個運算式來判斷左的運算式是否不等於右運算式。|
+|[&#91;不&#93;像](like-entity-sql.md)|判斷特定字元字串是否符合指定的模式。|
 
 ## <a name="logical-and-case-expression-operators"></a>邏輯和 case 運算式運算子
 
@@ -63,7 +63,7 @@ ms.locfileid: "37028015"
 
 |運算子|描述|
 |--------------|-----------------|
-|[& & (邏輯 AND)](and-entity-sql.md)|邏輯 AND。|
+|[&& (邏輯 AND)](and-entity-sql.md)|邏輯 AND。|
 |[!(邏輯 NOT)](not-entity-sql.md)|邏輯 NOT。|
 |[&#124;&#124;(邏輯 OR)](or-entity-sql.md)|邏輯 OR。|
 |[CASE](case-entity-sql.md)|評估一組布林運算式來得出結果。|
@@ -106,9 +106,9 @@ Entity SQL 提供各種功能強大的設定作業。 這包括設定運算子�
 |--------------|---------|
 |[ANYELEMENT](anyelement-entity-sql.md)|從多重值集合中擷取元素。|
 |[EXCEPT](except-entity-sql.md)|傳回不傳回的查詢運算式 EXCEPT 運算元右側的 EXCEPT 運算元左側查詢運算式的任何相異值集合。|
-|[&AMP;#91;不&AMP;#93;EXISTS](exists-entity-sql.md)|判斷集合是否為空。|
+|[&#91;不&#93;EXISTS](exists-entity-sql.md)|判斷集合是否為空。|
 |[FLATTEN](flatten-entity-sql.md)|將集合轉換成扁平化集合。|
-|[&AMP;#91;不&AMP;#93;IN](in-entity-sql.md)|判斷某個值是否與集合中的任何值相符。|
+|[&#91;不&#93;IN](in-entity-sql.md)|判斷某個值是否與集合中的任何值相符。|
 |[INTERSECT](intersect-entity-sql.md)|傳回 INTERSECT 運算元左右兩側之查詢運算式都會傳回的任何相異值集合。|
 |[OVERLAPS](overlaps-entity-sql.md)|判斷兩個集合是否有共同項目。|
 |[SET](set-entity-sql.md)|用來產生移除所有重複項目的新集合，利用這種方式將物件的集合 (collection) 轉換成集 (set)。|
@@ -122,7 +122,7 @@ Entity SQL 提供的型別建構、 查詢和操作運算式 （值） 的作業
 |--------------|---------|
 |[CAST](cast-entity-sql.md)|將一種資料類型的運算式轉換成另一種。|
 |[COLLECTION](collection-entity-sql.md)|用於[函式](function-entity-sql.md)作業可宣告實體類型或複雜型別的集合。|
-|[是&AMP;#91;不&AMP;#93;OF](isof-entity-sql.md)|判斷運算式的型別是否不屬於所指定的型別或它的其中一個子型別。|
+|[是&#91;不&#93;OF](isof-entity-sql.md)|判斷運算式的型別是否不屬於所指定的型別或它的其中一個子型別。|
 |[OFTYPE](oftype-entity-sql.md)|從屬於特定型別的查詢運算式中傳回物件的集合。|
 |[具名類型建構函式](named-type-constructor-entity-sql.md)|用來建立實體類型或複雜型別的執行個體。|
 |[MULTISET](multiset-entity-sql.md)|從值清單建立多重集的執行個體。|
