@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b41161d1511f7dce975ac5ad916750734972fa3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc0c1ebdc4f774858916dcc8ec8db2ba386b7a88
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579869"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948601"
 ---
 # <a name="regular-expression-language---quick-reference"></a>規則運算式語言 - 快速參考
 <a name="top"></a>規則運算式是規則運算式引擎嘗試在輸入文字中比對的模式。 模式是由一個或多個字元常值、運算子或建構所組成。  如需簡介，請參閱 [.NET 規則運算式](../../../docs/standard/base-types/regular-expressions.md)。  
@@ -93,8 +93,8 @@ ms.locfileid: "33579869"
   
 |判斷提示|描述|模式|符合|  
 |---------------|-----------------|-------------|-------------|  
-|`^`|必須從字串開頭或行首來開始比對。|`^\d{3}`|"901-333-" 中的<br /><br /> "901-333-"|  
-|`$`|比對必須發生在字串結尾，或發生在字行或字串結尾的 `\n` 之前。|`-\d{3}$`|"-333-333-" 中的<br /><br /> "-333"|  
+|`^`|根據預設，比對必須在字串的開頭開始；在多行模式中，它必須在一行的開頭開始。|`^\d{3}`|"901-333-" 中的<br /><br /> "901-333-"|  
+|`$`|根據預設，比對必須發生在字串的結尾或字串結尾的 `\n` 之前；在多行模式中，它必須發生在一行的結尾之前，或一行結尾的 `\n` 之前。|`-\d{3}$`|"-333-333-" 中的<br /><br /> "-333"|  
 |`\A`|比對必須發生在字串開頭。|`\A\d{3}`|"901-333-" 中的<br /><br /> "901-333-"|  
 |`\Z`|比對必須發生在字串結尾，或發生在字串結尾的 `\n` 之前。|`-\d{3}\Z`|"-333-333-" 中的<br /><br /> "-333"|  
 |`\z`|比對必須發生在字串結尾。|`-\d{3}\z`|"-333-333-" 中的<br /><br /> "-333"|  

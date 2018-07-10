@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 非同步訊�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: bee9a6215d2952f6c7f71607b1c4b1f44d1c0faf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5fb5d2f9f4f63ee885752a5dcc45cc45f71dc32f
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579128"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106404"
 ---
 # <a name="asynchronous-message-based-communication"></a>非同步訊息通訊
 
@@ -85,7 +85,7 @@ ms.locfileid: "33579128"
 
 ## <a name="additional-resources"></a>其他資源
 
--   **事件驅動訊息**
+-   **事件驅動傳訊**
     [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
 -   **發佈/訂閱頻道**
@@ -108,4 +108,5 @@ ms.locfileid: "33579128"
 
 
 >[!div class="step-by-step"]
-[上一頁] (communication-in-microservice-architecture.md) [下一頁] (maintain-microservice-apis.md)
+[上一頁](communication-in-microservice-architecture.md)
+[下一頁](maintain-microservice-apis.md)

@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2cbf0ceb7d5f8e56955f8989e5eb4efba99540bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 24a579acacf41df24779252e1064e1c271310edc
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578023"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948585"
 ---
 # <a name="anchors-in-regular-expressions"></a>規則運算式中的錨點
 <a name="top"></a> 錨點或不可部分完成的無寬度判斷提示會指定字串中必須比對的位置。 當您在搜尋運算式中使用錨點時，規則運算式引擎不會在字串中前進或使用字元；它只會尋找指定位置中的相符項目。 例如， `^` 指定必須從行首或字串的開頭開始比對。 因此，僅當行首出現 "http:" 時，規則運算式 `^http:` 才會與其相符。 下表列出 .NET 中此規則運算式所支援的錨點。  
   
 |錨點|描述|  
 |------------|-----------------|  
-|`^`|比對必須發生在字串的開頭或行首。 如需詳細資訊，請參閱 [字串開頭或行首](#Start)。|  
-|`$`|比對必須發生在字串結尾或行尾，或是發生在字串結尾或行尾的 `\n` 之前。 如需詳細資訊，請參閱 [字串結尾或行尾](#End)。|  
+|`^`|根據預設，比對必須發生在字串的開頭；在多行模式中，它必須發生在一行的開頭。 如需詳細資訊，請參閱 [字串開頭或行首](#Start)。|  
+|`$`|根據預設，比對必須發生在字串的結尾或字串結尾的 `\n` 之前；在多行模式中，它必須發生在一行的結尾，或一行結尾的 `\n` 之前。 如需詳細資訊，請參閱 [字串結尾或行尾](#End)。|  
 |`\A`|比對只能發生在字串的開頭 (不支援多行)。 如需詳細資訊，請參閱 [僅字串開頭](#StartOnly)。|  
 |`\Z`|比對必須發生在字串結尾，或發生在字串結尾的 `\n` 之前。 如需詳細資訊，請參閱 [字串結尾或結束新行之前](#EndOrNOnly)。|  
 |`\z`|比對只能發生在字串結尾。 如需詳細資訊，請參閱 [僅字串結尾](#EndOnly)。|  
@@ -40,7 +40,7 @@ ms.locfileid: "33578023"
   
 <a name="Start"></a>   
 ## <a name="start-of-string-or-line-"></a>字串開頭或行首：^  
- `^` 錨點可讓您指定下列模式必須從字串的第一個字元位置開始。 如果您將 `^` 與 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 選項搭配使用 (請參閱[規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md))，則比對必須發生在每一行的行首。  
+ 根據預設，`^` 錨點可讓您指定下列模式必須從字串的第一個字元位置開始。 如果您將 `^` 與 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 選項搭配使用 (請參閱[規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md))，則比對必須發生在每一行的行首。  
   
  下列範例會在規則運算式中使用 `^` 錨點，該規則運算式會擷取與某些職業棒球隊存在期間年份相關的資訊。 此範例會呼叫 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 方法的兩個多載：  
   

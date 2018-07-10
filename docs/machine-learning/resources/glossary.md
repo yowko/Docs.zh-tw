@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: dotnet-ml
 ms.devlang: dotnet
 manager: wpickett
-ms.openlocfilehash: 332d9e14bea165992f9f00b048286e185269ea79
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: b7690eb6931f4a491b1a03812fe3f2d8a64cfcd4
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34860637"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207720"
 ---
 # <a name="machine-learning-glossary"></a>機器學習字彙
 
@@ -33,7 +33,7 @@ ms.locfileid: "34860637"
 
 ## <a name="binary-classification"></a>二元分類
 
-[標籤](#label)僅來自兩個類別其中之一的[分類](#classification)案例。 如需詳細資訊，請參閱維基百科上的[二元分類](https://en.wikipedia.org/wiki/Binary_classification) \(英文\) 一文。
+[標籤](#label)僅來自兩個類別其中之一的[分類](#classification)案例。 如需詳細資訊，請參閱[機器學習工作](tasks.md)主題的[二元分類](tasks.md#binary-classification)一節。
 
 ## <a name="classification"></a>分類
 
@@ -63,7 +63,7 @@ ms.locfileid: "34860637"
 
 機器學習演算法的參數。 範例包括決策樹系中要學習的樹數目，或梯度下降演算法中的步階大小。 「超參數」的值是在將模型定型之前設定的，並且會控管尋找預測函式之參數 (例如決策樹中的比較點或線性迴歸模型中的加權) 的程序。 如需詳細資訊，請參閱維基百科上的[超參數](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning)) \(英文\) 一文。
 
-## <a name="label"></a>標籤
+## <a name="label"></a>ThisAddIn
 
 要使用機器學習模型來預測的元素。 例如，狗的品種或未來的股價。
 
@@ -79,13 +79,13 @@ ms.locfileid: "34860637"
 
 相關的 ML.NET API：<xref:Microsoft.ML.Models.RegressionMetrics.L1?displayProperty=nameWithType>。
 
-## <a name="model"></a>模型
+## <a name="model"></a>型號
 
 傳統上，預測函式的參數。 例如，線性迴歸模型中的加權，或決策樹中的分割點。 在 ML.NET 中，模型包含預測領域物件 (例如影像或文字) [標籤](#label)所需的一切資訊。 這意謂著 ML.NET 模型除了包含預測函式的參數之外，也包含必要的特徵化步驟。
 
 ## <a name="multiclass-classification"></a>多元分類
 
-[標籤](#label)來自三個或更多個類別其中之一的[分類](#classification)案例。 如需詳細資訊，請參閱維基百科上的[多元分類](https://en.wikipedia.org/wiki/Multiclass_classification) \(英文\) 一文。
+[標籤](#label)來自三個或更多個類別其中之一的[分類](#classification)案例。 如需詳細資訊，請參閱[機器學習工作](tasks.md)主題的[多元分類](tasks.md#multiclass-classification)一節。
 
 ## <a name="n-gram"></a>N 連語法 (N-gram)
 
@@ -99,7 +99,7 @@ ms.locfileid: "34860637"
 
 讓模型與資料集相符所需的所有作業。 管線會由資料輸入、轉換、特徵化及學習步驟所組成。 在管線定型之後，就會轉換成模型。
 
-## <a name="precision"></a>精確率
+## <a name="precision"></a>精確度
 
 在[分類](#classification)中，類別的精確率係指正確預測為屬於該類別的項目數，除以預測為屬於該類別的項目總數後，所得出的值。
 
@@ -113,7 +113,7 @@ ms.locfileid: "34860637"
 
 ## <a name="regression"></a>迴歸
 
-輸出為實際值 (例如雙精度浮點數) 的[機器學習](#supervised-machine-learning)工作。 範例包括預測股價。
+輸出為實際值 (例如雙精度浮點數) 的[機器學習](#supervised-machine-learning)工作。 範例包括預測股價。 如需詳細資訊，請參閱[機器學習工作](tasks.md)主題的[迴歸](tasks.md#regression)一節。
 
 ## <a name="relative-absolute-error"></a>相對絕對誤差
 
@@ -137,7 +137,7 @@ ms.locfileid: "34860637"
 
 針對所指定定型資料集，識別[模型](#model)的程序。 就線性模型而言，這意謂著要尋找加權。 就決策樹而言，則涉及識別分割點。
 
-## <a name="transform"></a>轉換
+## <a name="transform"></a>Transform
 
 一個會轉換資料的[管線](#pipeline)元件。 例如，從文字轉換成數字向量。
 

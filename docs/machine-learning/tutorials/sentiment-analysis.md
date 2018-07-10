@@ -4,12 +4,12 @@ description: 探索如何在二元分類案例中使用 ML.NET，以了解如何
 ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 898b4664120b6eeb0ef18aac3acdc94b0ca0bacd
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 727718c00b9270e2bbbe0840879b3a7e164a02d8
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314834"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948614"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>教學課程：在情感分析二元分類案例中使用 ML.NET
 
@@ -113,13 +113,13 @@ ms.locfileid: "36314834"
 
 [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#1 "Add necessary usings")]
 
-您必須建立三個全域變數，以保存最近所下載檔案的路徑：
+您必須建立三個全域欄位，以保存最近所下載檔案的路徑：
 
 * `_dataPath` 包含用來將模型定型的資料集路徑。
 * `_testDataPath` 包含用來評估模型的資料集路徑。
 * `_modelPath` 包含用來儲存定型模型的路徑。
 
-將下列程式碼新增至緊接在 `Main` 方法上方的一行，以指定最近下載的檔案：
+將下列程式碼新增至緊接在 `Main` 方法上方的一行，以指定這些路徑：
 
 [!code-csharp[Declare file variables](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#2 "Declare variables to store data files")]
 
