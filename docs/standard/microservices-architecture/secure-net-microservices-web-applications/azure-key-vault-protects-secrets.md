@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 使用 Azure 
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 5ad5686909c29eba5916cbcc4b7115a16108a004
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 171d9120e4817065ddafc9dfa9caa362694ddeb3
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580399"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105280"
 ---
 # <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a>使用 Azure Key Vault 以在生產階段保護密碼
 
@@ -75,4 +75,5 @@ var kvClient = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(asyn
     [*https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets*](https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets)
 
 >[!div class="step-by-step"]
-[上一個] (developer-app-secrets-storage.md) [下一個] (../key-takeaways.md)
+[上一頁](developer-app-secrets-storage.md)
+[下一頁](../key-takeaways.md)

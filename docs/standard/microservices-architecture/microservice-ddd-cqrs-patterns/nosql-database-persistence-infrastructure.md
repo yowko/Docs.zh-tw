@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 使用 NoSQL 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: 2618e8c068ec538f5bfed2f8243d1c594478fcb0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf43f9914a05c2745f914a6e36fcab13fb7feffa
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578959"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106641"
 ---
 # <a name="using-nosql-databases-as-a-persistence-infrastructure"></a>使用 NoSQL 資料庫作為持續性基礎結構
 
@@ -330,4 +330,5 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=<YourDockerHostIP>
 
 
 >[!div class="step-by-step"]
-[上一個] (infrastructure-persistence-layer-implemenation-entity-framework-core.md) [下一個] (microservice-application-layer-web-api-design.md)
+[上一頁](infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+[下一頁](microservice-application-layer-web-api-design.md)

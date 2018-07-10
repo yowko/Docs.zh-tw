@@ -4,12 +4,12 @@ description: 透過逐步使用 dotnet test 和 MSTest 建置範例方案的互�
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.openlocfilehash: b76e577d3950dd13b038f47c1b133e3529867c38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6cfc389a1ee526d8dc4383c5efd6fb3299eb08d8
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216092"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105598"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>使用 MSTest 與 .NET Core 為 C# 進行單元測試
 
@@ -17,7 +17,7 @@ ms.locfileid: "33216092"
 
 ### <a name="creating-the-source-project"></a>建立來源專案
 
-開啟 Shell 視窗。 建立名稱為 *unit-testing-using-dotnet-test* 的目錄來放置方案。 在此新目錄中，執行 [`dotnet new sln`](../tools/dotnet-new.md) 以針對類別庫與測試專案建立新方案檔。 接著，建立 *PrimeService* 目錄。 下列大綱顯示到目前為止的目錄與檔案結構：
+開啟 Shell 視窗。 建立名稱為 *unit-testing-using-mstest* 的目錄來放置解決方案。 在此新目錄中，執行 [`dotnet new sln`](../tools/dotnet-new.md) 以針對類別庫與測試專案建立新方案檔。 接著，建立 *PrimeService* 目錄。 下列大綱顯示到目前為止的目錄與檔案結構：
 
 ```
 /unit-testing-using-mstest

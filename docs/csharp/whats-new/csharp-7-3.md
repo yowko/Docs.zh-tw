@@ -2,12 +2,12 @@
 title: C# 7.3 的新功能
 description: C# 7.3 新功能的概觀
 ms.date: 05/16/2018
-ms.openlocfilehash: 1d1aca2564c26315cf8b3af60a863ea3c70fd385
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 135351fa06a498e4aa90cb4d9372880b8119de0f
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827094"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106771"
 ---
 # <a name="whats-new-in-c-73"></a>C# 7.3 的新功能
 
@@ -72,7 +72,7 @@ class C
 {
     static S s = new S();
 
-    public void M()
+    unsafe public void M()
     {
         fixed (int* ptr = s.myFixedField)
         {
@@ -93,7 +93,7 @@ ref VeryLargeStruct refLocal = ref veryLargeStruct; // initialization
 refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to different storage.
 ```
 
-如需詳細資訊，請參閱有關 [`ref` 傳回和 `ref` 區域變數](../programming-guide/classes-and-structs/ref-returns.md)的文章。
+如需詳細資訊，請參閱有關 [`ref` 傳回和 `ref` 區域變數](../programming-guide/classes-and-structs/ref-returns.md)的文章，以及有關 [`foreach`](../language-reference/keywords/foreach-in.md) 的文章。
 
 ### <a name="stackalloc-arrays-support-initializers"></a>`stackalloc` 陣列支援初始設定式
 

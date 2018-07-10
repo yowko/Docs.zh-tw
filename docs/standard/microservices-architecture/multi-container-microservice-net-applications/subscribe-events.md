@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 訂閱事件
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 8ef9f39b0d99db32438e7dcf83318a1aa9054967
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6cc5563f93915d1516e5a5f22a104012c1bb85d6
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592440"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106573"
 ---
 # <a name="subscribing-to-events"></a>訂閱事件
 
@@ -319,7 +319,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 -   **使用 NServiceBus 的分支 eShopOnContainers (特定軟體)**
     [*http://go.particular.net/eShopOnContainers*](http://go.particular.net/eShopOnContainers)
 
--   **事件驅動訊息**
+-   **事件驅動傳訊**
     [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
 -   **Jimmy Bogard：重構朝向彈性：評估結合程度**
@@ -372,10 +372,11 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 -   **Azure 服務匯流排：代理傳訊：重複偵測**
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **可靠性指南** (RabbitMQ 文件)[*https://www.rabbitmq.com/reliability.html\#取用者*](https://www.rabbitmq.com/reliability.html%23consumer)
+-   **可靠性指南** (RabbitMQ 文件) [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
 
 
 
 
 >[!div class="step-by-step"]
-[上一個] (rabbitmq-event-bus-development-test-environment.md) [下一個] (test-aspnet-core-services-web-apps.md)
+[上一頁](rabbitmq-event-bus-development-test-environment.md)
+[下一頁](test-aspnet-core-services-web-apps.md)

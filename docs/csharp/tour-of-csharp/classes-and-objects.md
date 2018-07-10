@@ -3,12 +3,12 @@ title: C# 中的類別和物件 - C# 語言教學課程
 description: 第一次接觸 C#？ 請閱讀此類別、物件及繼承概觀
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 1e89d8b89e5f4f74d637a1e3674fb3959a231a49
-ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
+ms.openlocfilehash: 8e6b327c8391c3a3c97f7806f87dbb9656f0d00d
+ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298288"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37140277"
 ---
 # <a name="classes-and-objects"></a>類別與物件
 
@@ -55,7 +55,7 @@ ms.locfileid: "36298288"
 
 ## <a name="accessibility"></a>協助工具選項
 
-類別的每個成員都有關聯的存取能力，用來控制能夠存取成員的程式文字區域。 存取能力有五種可能的形式。 以下為摘要說明。
+類別的每個成員都有關聯的存取能力，用來控制能夠存取成員的程式文字區域。 存取能力有六種可能的形式。 以下為摘要說明。
 
 * `public`
     - 存取不受限制
@@ -64,7 +64,7 @@ ms.locfileid: "36298288"
 * `internal`
     - 存取限於目前組件 (.exe、.dll 等)
 * `protected internal`
-    - 存取限於包含類別或衍生自包含類別的類別
+    - 存取限於包含類別、衍生自包含類別的類別，或同組件中的類別
 * `private`
     - 存取僅限於此類別
 * `private protected`

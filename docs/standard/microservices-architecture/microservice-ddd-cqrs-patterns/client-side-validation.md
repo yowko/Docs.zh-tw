@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 用戶端驗�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 2adce39561dd2b97910155ebed595a2df7785c11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c61a08566492a59090b19f99aaf97b5f6082c1fb
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574669"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104565"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>用戶端驗證 (展示層中的驗證)
 
@@ -29,7 +29,7 @@ ms.locfileid: "33574669"
 
 ### <a name="validation-in-xamarin-mobile-apps"></a>Xamarin 行動應用程式中的驗證
 
--   **驗證文字輸入和顯示錯誤**
+-   **驗證文字輸入，並顯示錯誤**
     [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
 -   **驗證回呼**
@@ -65,4 +65,5 @@ ms.locfileid: "33574669"
 
 
 >[!div class="step-by-step"]
-[上一個] (domain-model-layer-validations.md) [下一個] (domain-events-design-implementation.md)
+[上一頁](domain-model-layer-validations.md)
+[下一頁](domain-events-design-implementation.md)

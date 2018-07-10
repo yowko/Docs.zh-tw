@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 33ced8ee-1745-4e71-8dee-ebe70ec067c7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1b1295185bf0fa06884b1332762d01f86f138a0b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 902c82f77240c957cc6070c9437b95d0c89fca53
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572219"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105345"
 ---
 # <a name="xml-processing-options"></a>XML 處理選項
 請參閱下表，以取得您可以用來處理 XML 資料的 Microsoft 技術清單。  

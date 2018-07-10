@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7caf42ee45f31e374bd2cbf7c700992130281ff0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e05da1c2ed68f482cbb1280c5c40583ab54d71bb
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579765"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071860"
 ---
 # <a name="backtracking-in-regular-expressions"></a>規則運算式中的回溯
 <a name="top"></a> 回溯 (Backtracking) 會在規則運算式模式包含選擇性的 [數量詞](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) 或 [交替建構](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)，且規則運算式引擎返回之前儲存的狀態繼續搜尋相符項目時發生。 回溯是規則運算式的核心能力，可讓運算式功能強大且靈活，並且比對非常複雜的模式。 但同時，這項強大功能需付出相當的代價。 回溯經常是影響規則運算式引擎之效能最重要的一項因素。 幸好開發人員能夠掌控規則運算式引擎的行為，以及其使用回溯的方式。 本主題將說明回溯運作的方式，以及如何進行控制。  
@@ -169,7 +169,7 @@ ms.locfileid: "33579765"
 |`[-.\w]*`|比對出現零次、一次或多次的連字號、句號或文字字元。|  
 |`[0-9A-Z]`|比對英數字元。|  
 |`([-.\w]*[0-9A-Z])*`|比對出現零次或多次的零個或多個連字號、句號或文字字元組合，後面接著英數字元。 這是第一個擷取群組。|  
-|`@`|比對 "@" 記號。|  
+|`@`|比對 "\@" 記號。|  
   
  第二個規則運算式模式 `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@`使用左合樣判斷提示。 其定義方式如下表所示。  
   
@@ -179,7 +179,7 @@ ms.locfileid: "33579765"
 |`[0-9A-Z]`|比對英數字元。 這項比較不區分大小寫，因為 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法是使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 選項呼叫。|  
 |`[-.\w]*`|比對出現零次或多次的連字號、句號或文字字元。|  
 |`(?<=[0-9A-Z])`|如果是英數字，則向左合樣最後一個符合的字元並繼續比對。 請注意，英數字元是由句號、連字號和所有文字字元組成之集合的子集。|  
-|`@`|比對 "@" 記號。|  
+|`@`|比對 "\@" 記號。|  
   
 <a name="Lookahead"></a>   
 ### <a name="lookahead-assertions"></a>右合樣判斷提示  

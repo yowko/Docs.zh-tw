@@ -3,12 +3,12 @@ title: 在 Docker 中裝載的微服務 - C#
 description: 了解如何建立在 Docker 容器中執行的 ASP.NET Core 服務
 ms.date: 06/08/2017
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: b043b0109bcf8a67867d2c73a5ab22e43a4963cf
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 1f4b38243beb1210b1374bd701fac66b2fa72cc5
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207918"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106346"
 ---
 # <a name="microservices-hosted-in-docker"></a>在 Docker 中裝載的微服務
 
@@ -46,15 +46,17 @@ Docker 可以安裝在許多 Linux 發行版本、macOS 或 Windows。 上述的
 
 ## <a name="create-the-application"></a>建立應用程式
 
-現在您已安裝完所有工具，請建立新的 ASP.NET Core 應用程式。 若要這樣做，請建立稱為 "WeatherMicroservice" 的新目錄，並以您最愛的 Shell 在該目錄中執行下列命令：
+既然您已安裝完所有工具，請在稱為 "WeatherMicroservice" 的目錄中建立新的 ASP.NET Core 應用程式，方法是在您慣用的殼層執行下列命令：
 
 ```console
-dotnet new web
+dotnet new web -o WeatherMicroservice
 ```
 
 `dotnet` 命令會執行 .NET 開發所需的工具。 每個動詞都會執行不同的命令。
 
 `dotnet new` 命令用來建立 .Net Core 專案。
+
+`dotnet new` 命令之後的 `-o WeatherMicroservice` 選項，用來提供要建立 ASP.NET Core 應用程式的位置。
 
 針對此微服務，我們想要最簡單且最輕量的 Web 應用程式，因此使用了「空的 ASP.NET Core」範本，方法是指定其簡短名稱：`web`。
 

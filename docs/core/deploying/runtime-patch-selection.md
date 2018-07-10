@@ -4,16 +4,16 @@ description: 了解獨立式部署的 dotnet publish 變更。
 author: jralexander
 ms.author: kdollard
 ms.date: 05/31/2018
-ms.openlocfilehash: 40d28e81e2ac1b27e7fd89e16d2d906a080fd18b
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 39a23917dec1aba5142839265c555da5c1e6f09c
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697206"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071028"
 ---
 # <a name="self-contained-deployment-runtime-roll-forward"></a>獨立式部署執行階段向前復原
 
-.NET Core [獨立式應用程式部署](index.md)包含 .NET Core l 程式庫和 .NET Core 執行階段。 從 .NET Core SDK 2.1.300 (.NET Core 2.1) 開始，獨立式應用程式部署[現在會發佈電腦上的最高修補程式執行階段](https://github.com/dotnet/designs/pull/36)。 根據預設，用於獨立式部署的 [`dotnet publish`](../tools/dotnet-publish.md) 會選取發佈電腦上已安裝為 SDK 一部分的最新版本。 這可讓您部署的應用程式使用 `publish` 期間所提供的安全性修正 (和其他修正) 來執行。 應用程式必須重新發佈，才能取得新的修補程式。 藉由在 `dotnet publish` 命令上指定 `-r <RID>`，或者在專案檔 (csproj / vbproj) 中或命令列上指定[執行階段識別碼 (RID)](../rid-catalog.md)，即可建立獨立式應用程式。
+.NET Core [獨立式應用程式部署](index.md)包含 .NET Core l 程式庫和 .NET Core 執行階段。 從 .NET Core SDK 2.1.300 (.NET Core 2.1) 開始，獨立式應用程式部署[會發佈電腦上的最高修補程式執行階段](https://github.com/dotnet/designs/pull/36)。 根據預設，用於獨立式部署的 [`dotnet publish`](../tools/dotnet-publish.md) 會選取發佈電腦上已安裝為 SDK 一部分的最新版本。 這可讓您部署的應用程式使用 `publish` 期間所提供的安全性修正 (和其他修正) 來執行。 應用程式必須重新發佈，才能取得新的修補程式。 藉由在 `dotnet publish` 命令上指定 `-r <RID>`，或者在專案檔 (csproj / vbproj) 中或命令列上指定[執行階段識別碼 (RID)](../rid-catalog.md)，即可建立獨立式應用程式。
 
 ## <a name="patch-version-roll-forward-overview"></a>修補程式版本向前復原概觀
 
@@ -28,15 +28,15 @@ ms.locfileid: "34697206"
 
 執行 `restore` 作為 `publish` 作業的一部分有時候可能不適用於您的情況。 若要在建立獨立式應用程式時避免在 `publish` 期間進行 `restore`，請執行下列動作：
 
-* 將 `RuntimeIdentifiers` 屬性設定為要發佈之所有 [RID](../rid-catalog.md) 的分號分隔清單
-* 將 `TargetLatestRuntimePatch` 屬性設定為 `true`
+* 將 `RuntimeIdentifiers` 屬性設定為要發佈之所有 [RID](../rid-catalog.md) 的分號分隔清單。
+* 將 `TargetLatestRuntimePatch` 屬性設定為 `true`。
 
 ## <a name="no-restore-argument-with-dotnet-publish-options"></a>No-restore 引數搭配 dotnet publish 選項
 
 如果您想要使用相同的專案檔同時建立獨立式應用程式和[與架構相依的應用程式](index.md)，而且想要使用 `--no-restore` 引數搭配 `dotnet publish`，則選擇下列其中一項：
 
-1. 偏好與架構相依的行為。 如果應用程式是與架構相依的應用程式，這是預設行為。 如果應用程式是獨立式應用程式，且可以使用未修補的 2.1.0 本機執行階段，請在專案檔 (csproj / vbproj) 中將 `TargetLatestRuntimePatch` 設定為 `false`。
+1. 偏好與架構相依的行為。 如果應用程式是與架構相依的應用程式，這是預設行為。 如果應用程式是獨立式應用程式，且可以使用未修補的 2.1.0 本機執行階段，請在專案檔中將 `TargetLatestRuntimePatch` 設定為 `false`。
 
-2. 偏好獨立式行為。 如果應用程式是獨立式應用程式，這是預設行為。 如果應用程式是與架構相依的應用程式，且需要安裝最新的修補程式，請在專案檔 (csproj / vbproj) 中將 `TargetLatestRuntimePatch` 設定為 `true`。
+2. 偏好獨立式行為。 如果應用程式是獨立式應用程式，這是預設行為。 如果應用程式是與架構相依的應用程式，且需要安裝最新的修補程式，請在專案檔中將 `TargetLatestRuntimePatch` 設定為 `true`。
 
-3. 在專案檔 (csproj / vbproj) 中將 `RuntimeFrameworkVersion` 設定為特定的修補程式版本，藉以取得執行階段架構版本的明確控制權。
+3. 在專案檔中將 `RuntimeFrameworkVersion` 設定為特定的修補程式版本，藉以取得執行階段架構版本的明確控制權。

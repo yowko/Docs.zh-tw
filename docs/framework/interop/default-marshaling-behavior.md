@@ -1,6 +1,6 @@
 ---
 title: 預設的封送處理行為
-ms.date: 03/30/2017
+ms.date: 06/26/2018
 dev_langs:
 - csharp
 - vb
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f5fef84250f9dbc10a921a6844f7020c72835cea
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 83bb8b0305e47ca7b354db03c7a9a3dd02f62d41
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457384"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37028067"
 ---
 # <a name="default-marshaling-behavior"></a>預設的封送處理行為
 Interop 封送處理會依據規則作業，這些規則指定與方法參數關聯的資料在 Managed 和 Unmanaged 記憶體之間傳遞時的運作方式。 這些內建規則會將這類封送處理活動當做資料類型轉換來控制；控制被呼叫端是否可以變更收到的資料，並將這些變更傳回給呼叫端；以及控制在哪些情況下，封送處理器會提供效能最佳化。  
@@ -113,7 +113,9 @@ interface DelegateTest : IDispatch {
 ```  
   
  函式指標和其他任何 Unmanaged 函式指標一樣，都可以解除參考。  
-  
+
+在此範例中，當兩個委派封送處理成 <xref:System.Runtime.InteropServices.UnmanagedType.FunctionPtr?displayProperty=nameWithType> 時，結果就是 `int` 和 `int` 的指標。 因為正在封送處理委派型別，所以這裡的 `int` 代表 void (`void*`) 的指標，這是記憶體中的委派位址。 換句話說，此結果是 32 位元 Windows 系統所特有，因為這裡的 `int` 代表函式指標的大小。
+
 > [!NOTE]
 >  Unmanaged 程式碼所持有之 Managed 委派的函式指標參考，無法防止 Common Language Runtime 在 Managed 物件上執行記憶體回收。  
   

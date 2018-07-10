@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da87531ff7f20181e1e5499acb8152d0fbadc8af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6d4fd91eccd5e8f3fd6be7c8a63ab1c097002382
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592388"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37073225"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>資料和工作平行處理原則中可能出現的錯誤
 在許多情況下，相較於一般循序迴圈，<xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 更能提供顯著的效能改良。 不過，平行處理迴圈的工作所帶來的複雜性可能會造成問題，而在循序程式碼中，這些問題不是不常見，就是完全不會發生。 本主題列出一些您在撰寫平行迴圈時應該避免的作法。  
@@ -24,7 +24,7 @@ ms.locfileid: "33592388"
  在某些情況下，平行迴圈的執行速度可能比循序迴圈更慢。 基本的經驗法則是，反覆項目不多且使用者委派速度很快的平行迴圈不太可能加快多少速度。 不過，因為效能牽涉到許多因素，我們建議您一律要測量實際的結果。  
   
 ## <a name="avoid-writing-to-shared-memory-locations"></a>避免寫入共用的記憶體位置  
- 循序程式碼經常會讀取或寫入靜態變數或類別欄位。 不過，每當有多個執行緒同時存取這類變數時，就很可能產生競爭情形。 即便您可以使用鎖定來同步處理變數的存取，同步處理的成本也會減損效能。 因此，我們建議您盡可能避免在平行迴圈中存取共用狀態，或至少做出限制。 執行這項操作的最佳方式是使用 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 的多載，其在迴圈執行時會使用 <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> 變數來儲存執行緒區域狀態。 如需詳細資訊，請參閱[如何：撰寫含有執行緒區域變數的 Parallel.For 迴圈](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)和[如何：撰寫含有執行緒區域變數的 Parallel.ForEach 迴圈](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md)。  
+ 循序程式碼經常會讀取或寫入靜態變數或類別欄位。 不過，每當有多個執行緒同時存取這類變數時，就很可能產生競爭情形。 即便您可以使用鎖定來同步處理變數的存取，同步處理的成本也會減損效能。 因此，我們建議您盡可能避免在平行迴圈中存取共用狀態，或至少做出限制。 執行這項操作的最佳方式是使用 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 的多載，其在迴圈執行時會使用 <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> 變數來儲存執行緒區域狀態。 如需詳細資訊，請參閱[如何：撰寫含有執行緒區域變數的 Parallel.For 迴圈](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)和[如何：撰寫含有分割區域變數的 Parallel.ForEach 迴圈](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)。  
   
 ## <a name="avoid-over-parallelization"></a>避免過度平行處理  
  在使用平行迴圈時，您會因為分割來源集合和同步處理背景工作執行緒而產生額外成本。 電腦上的處理器數目則會進一步限制平行處理的好處。 多個計算繫結執行緒若只在一個處理器上執行，系統並不會獲得任何加速效果。 因此，您必須注意不要過度平行處理迴圈。  

@@ -4,12 +4,12 @@ description: dotnet run 命令提供方便的選項，以透過原始程式碼�
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 82c6e44e52aa6af7044edf72fd6e57b7614a70f3
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 609ac27f21e6801992b9e10c7d465a805492859e
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696308"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071756"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -102,7 +102,7 @@ dotnet myapp.dll
 
 `--no-restore`
 
-執行命令時，不會執行隱含的還原。
+執行命令時，不會執行隱含還原。
 
 `-p|--project <PATH>`
 
@@ -156,7 +156,7 @@ dotnet myapp.dll
 
 `--no-restore`
 
-執行命令時，不會執行隱含的還原。
+執行命令時，不會執行隱含還原。
 
 `-p|--project <PATH>`
 
@@ -201,9 +201,9 @@ dotnet myapp.dll
 
 執行指定的專案：
 
-`dotnet run --project /projects/proj1/proj1.csproj`
+`dotnet run --project ./projects/proj1/proj1.csproj`
 
-執行目前目錄中的專案 (因為已使用 `--` 引數，所以這個範例中的 `--help` 引數會傳遞給應用程式)：
+執行目前目錄中的專案 (因為已使用空白的 `--` 選項，所以這個範例中的 `--help` 引數會傳遞給應用程式)：
 
 `dotnet run --configuration Release -- --help`
 

@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 使用 docker
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
-ms.openlocfilehash: ded2e5399938be25005776963b0310b6a49d0353
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 430fbe3fc6d63fd3b90b578f32b42831c368ba10
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592349"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106300"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>使用 docker-compose.yml 定義多容器應用程式 
 
@@ -548,4 +548,5 @@ docker-compose build 與 docker-compose up 命令之間的差異在於 docker-co
 
 
 >[!div class="step-by-step"]
-[上一個] (data-driven-crud-microservice.md) [下一個] (database-server-container.md)
+[上一頁](data-driven-crud-microservice.md)
+[下一頁](database-server-container.md)
