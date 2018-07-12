@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 06/18/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 690e39dcbd02d81b8d4afe918a74795aa02f7fc6
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 9706dad0a8e32651496e0404be4501c2c70e9d75
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314961"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948627"
 ---
 # <a name="tutorial-use-mlnet-to-predict-new-york-taxi-fares-regression"></a>教學課程：使用 ML.NET 來預測紐約計程車車資 (迴歸)
 
@@ -82,7 +82,7 @@ ms.locfileid: "36314961"
 
 1. 在 [方案總管] 中，於專案上按一下滑鼠右鍵，然後選取 [新增] > [新增項目]。
 1. 在 [新增項目] 對話方塊中，選取 [類別]，然後將 [名稱] 欄位變更為 *TaxiTrip.cs*。 接著，選取 [新增] 按鈕。
-1. 將下列 `using` 陳述式新增至新的檔案：
+1. 將下列的 `using` 指示詞加入新檔案：
 
    [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/TaxiTrip.cs#1 "Add necessary usings")]
 
@@ -96,19 +96,23 @@ ms.locfileid: "36314961"
 
 ## <a name="define-data-and-model-paths"></a>定義資料和模型路徑
 
-請返回 *Program.cs* 檔案，並建立三個全域常數來保存包含資料集之檔案的路徑以及用來儲存模型的路徑：
+請返回 *Program.cs* 檔案，並新增三個欄位，針對包含資料集的檔案與用來儲存模型的檔案，以保存這些檔案的路徑：
 
-* `_datapath` 包含用來將模型定型的資料集路徑。
-* `_testdatapath` 包含用來評估模型的資料集路徑。
-* `_modelpath` 包含用來儲存定型模型的路徑。
+* `_datapath` 會針對具有用來定型模型之資料集的檔案，包含檔案的路徑。
+* `_testdatapath` 會針對具有用來評估模型之資料集的檔案，包含檔案的路徑。
+* `_modelpath` 會針對儲存定型模型的檔案，包含檔案的路徑。
 
-將下列程式碼新增至緊接在 `Main` 方法上方的一行，以指定這些路徑：
+將下列程式碼加入 `Main` 方法的緊鄰上方，以指定這些路徑：
 
 [!code-csharp[InitializePaths](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#2 "Define variables to store the data file paths")]
 
+若要將上述的程式碼進行編譯，請在 *Program.cs* 檔案頂端加入下列 `using` 指示詞：
+
+[!code-csharp[AddUsingsForPaths](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#17 "Using statements for path definitions")]
+
 ## <a name="create-a-learning-pipeline"></a>建立學習管線
 
-在 *Program.cs* 檔案頂端新增下列額外的 `using` 陳述式：
+在 *Program.cs* 檔案頂端加入下列額外的 `using` 指示詞：
 
 [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
 
@@ -135,7 +139,7 @@ var pipeline = new LearningPipeline();
 
 ## <a name="load-and-transform-data"></a>載入並轉換資料
 
-學習管線執行的第一個步驟是從定型資料集載入資料。 在我們的案例中，定型資料集儲存在具有 `_datapath` 常數所定義路徑的文字檔中。 這個檔案包含具有資料行名稱的標頭，因此載入資料時應該忽略第一個資料列。 檔案中的資料行是以逗號 (",") 分隔。 將下列程式碼新增至 `Train` 方法：
+學習管線執行的第一個步驟是從定型資料集載入資料。 在我們的案例中，定型資料集儲存在具有 `_datapath` 欄位所定義路徑的文字檔中。 這個檔案包含具有資料行名稱的標頭，因此載入資料時應該忽略第一個資料列。 檔案中的資料行是以逗號 (",") 分隔。 將下列程式碼新增至 `Train` 方法：
 
 ```csharp
 pipeline.Add(new TextLoader(_datapath).CreateFrom<TaxiTrip>(useHeader: true, separator: ','));
@@ -215,7 +219,7 @@ pipeline.Add(new FastTreeRegressor());
 
 [!code-csharp[AsyncMain](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#8 "Make the Main method async and return a task.")]
 
-您還必須在檔案頂端新增下列 `using` 陳述式：
+您還必須在檔案頂端新增下列 `using` 指示詞：
 
 [!code-csharp[UsingTasks](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#9 "Add System.Threading.Tasks. to your usings.")]
 
