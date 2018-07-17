@@ -3,10 +3,10 @@ title: '&lt;basicHttpBinding&gt; 的 &lt;message&gt;'
 ms.date: 03/30/2017
 ms.assetid: 51cdd329-6461-471a-8747-56c2299b61e5
 ms.openlocfilehash: 7f543a91f1d11575df239267a6a8a0b244d99cb3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 378f0e075030239d8259a92a6a0193dd6faf54b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/16/2018
 ms.locfileid: "33366043"
 ---
 # <a name="ltmessagegt-of-ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt; 的 &lt;message&gt;
@@ -41,17 +41,17 @@ ms.locfileid: "33366043"
   
 |值|描述|  
 |-----------|-----------------|  
-|使用者名稱|-需要使用 UserName 認證伺服器驗證用戶端。 這個認證必須使用來指定[ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)。<br />WCF 不支援傳送密碼摘要或衍生金鑰，使用密碼，甚至對訊息安全性使用該金鑰。 因此，WCF 會強制使用 UserName 認證時保護傳輸。 對於 `basicHttpBinding`，這需要設定 SSL 通道。|  
-|憑證|需要使用憑證對伺服器驗證用戶端。 在此情況下需要使用指定的用戶端認證[ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)和[ \<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)。 此外，當使用訊息安全性模式時，必須提供服務憑證給用戶端。 在此情況下必須指定使用服務認證<xref:System.ServiceModel.Description.ClientCredentials>類別或`ClientCredentials`行為項目，並指定服務憑證使用[ \<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)。|  
+|使用者名稱|-需要使用 UserName 認證的伺服器驗證用戶端。 這個認證必須使用來指定[ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)。<br />WCF 不支援傳送密碼摘要或衍生金鑰使用密碼，並使用訊息安全性這類金鑰。 因此，傳輸保護使用 UserName 認證時，會強制執行 WCF。 對於 `basicHttpBinding`，這需要設定 SSL 通道。|  
+|憑證|需要使用憑證對伺服器驗證用戶端。 在此情況下必須使用指定的用戶端認證[ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)並[ \<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)。 此外，當使用訊息安全性模式時，必須提供服務憑證給用戶端。 在此情況下必須使用指定的服務認證<xref:System.ServiceModel.Description.ClientCredentials>類別或`ClientCredentials`行為項目，並指定服務憑證使用[ \<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|定義之安全性功能[ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)。|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|定義的安全性功能[ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)。|  
   
 ## <a name="example"></a>範例  
  這個範例會示範如何實作一個使用 basicHttpBinding 和訊息安全性的應用程式。 在下列服務組態範例中，端點定義會指定 basicHttpBinding，並參考名為 `Binding1` 的繫結組態。 服務對用戶端驗證它自己時所使用的憑證是在組態檔案 `behaviors` 區段中的 `serviceCredentials` 項目下設定。 用戶端用來對服務驗證本身之憑證所套用的驗證模式，也是在 `behaviors` 項目下的 `clientCertificate` 區段中設定。  
