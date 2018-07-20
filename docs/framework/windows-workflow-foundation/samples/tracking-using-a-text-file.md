@@ -55,7 +55,7 @@ ms.locfileid: "33805794"
   
 5.  瀏覽器顯示**StockPriceService**頁面，其中包含本機服務 wsdl 位址。 複製此位址。  
   
-     本機服務 wsdl 位址的範例是http://localhost:53797/StockPriceService.xamlx?wsdl。  
+     本機服務 wsdl 位址的範例是 http://localhost:53797/StockPriceService.xamlx?wsdl 。  
   
 6.  使用 [[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]] 移至 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 資料夾 (預設安裝資料夾為 %SystemDrive%\Program Files\Microsoft Visual Studio 10.0)。 然後尋找 Common7\IDE\ 子資料夾。  
   

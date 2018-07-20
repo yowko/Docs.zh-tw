@@ -26,7 +26,7 @@ Windows Form<xref:System.Windows.Forms.Timer>元件有<xref:System.Windows.Forms
   
 -   間隔不保證在時間上完全停用。 若要確保精確度，計時器應該檢查系統時鐘，如有需要而嘗試追蹤的累積的時間在內部。  
   
--   有效位數<xref:System.Windows.Forms.Timer.Interval%2A>屬性是以毫秒為單位。 某些電腦提供高解析度的計數器高於毫秒的解析度。 這類計數器的可用性取決於您的電腦的處理器硬體。 如需詳細資訊，請參閱文件 172338，」 方式來使用 QueryPerformanceCounter 到時間程式碼，"Microsoft 知識庫中在http://support.microsoft.com。  
+-   有效位數<xref:System.Windows.Forms.Timer.Interval%2A>屬性是以毫秒為單位。 某些電腦提供高解析度的計數器高於毫秒的解析度。 這類計數器的可用性取決於您的電腦的處理器硬體。 如需詳細資訊，請參閱文件 172338，」 方式來使用 QueryPerformanceCounter 到時間程式碼，"Microsoft 知識庫中在 http://support.microsoft.com 。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.Timer>  

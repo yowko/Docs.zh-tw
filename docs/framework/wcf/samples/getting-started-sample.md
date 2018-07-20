@@ -141,9 +141,9 @@ public class CalculatorService : ICalculator
   
  服務會公開位在 IIS 或 WAS 主機提供之基底位址上的端點。 繫結會設定為標準 <xref:System.ServiceModel.WSHttpBinding>，此繫結會提供用於定址和安全性的 HTTP 通訊與標準 Web 服務通訊協定。 此合約是服務實作的 `ICalculator`。  
   
- 在設定，可以存取的服務在http://localhost/servicemodelsamples/service.svc在同一部電腦上的用戶端。 為了讓遠端電腦上的用戶端存取服務，這時必須指定完整網域名稱，而不要指定 localhost。  
+ 在設定，可以存取的服務在 http://localhost/servicemodelsamples/service.svc 在同一部電腦上的用戶端。 為了讓遠端電腦上的用戶端存取服務，這時必須指定完整網域名稱，而不要指定 localhost。  
   
- 根據預設，此架構不會公開任何中繼資料。 因此，服務會開啟<xref:System.ServiceModel.Description.ServiceMetadataBehavior>並公開在中繼資料交換 (MEX) 端點http://localhost/servicemodelsamples/service.svc/mex。 下列組態會示範這個作業。  
+ 根據預設，此架構不會公開任何中繼資料。 因此，服務會開啟<xref:System.ServiceModel.Description.ServiceMetadataBehavior>並公開在中繼資料交換 (MEX) 端點 http://localhost/servicemodelsamples/service.svc/mex 。 下列組態會示範這個作業。  
   
 ```xaml  
 <system.serviceModel>  

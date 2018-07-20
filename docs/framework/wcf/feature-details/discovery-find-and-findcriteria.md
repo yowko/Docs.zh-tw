@@ -28,7 +28,7 @@ ms.locfileid: "33495316"
   
     -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> 會執行基本的區分大小寫字串比較。  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> 相符項目以區段分隔"/"。 搜尋http://contoso/building1符合與範圍的服務http://contoso/building/floor1。 請注意，它不符合http://contoso/building100因為最後兩個區段不相符。  
+    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> 相符項目以區段分隔"/"。 搜尋 http://contoso/building1 符合與範圍的服務 http://contoso/building/floor1  。 請注意，它不符合 http://contoso/building100 因為最後兩個區段不相符。  
   
     -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> 會使用 LDAP URL 依照區段比對範圍。  
   

@@ -20,10 +20,10 @@ ms.locfileid: "33495089"
   
  通常，當用戶端與聯合服務進行通訊時，服務都會指定特定安全性權杖服務的位址，該服務預期會發出用戶端要用來向聯合服務驗證自己的權杖。 在某些情況下，用戶端可能會設定為使用*本機簽發者*。  
   
- Windows Communication Foundation (WCF) 的聯合繫結的簽發者位址的情況下使用本機簽發者http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous或`null`。 在這種情況下，您必須設定包含本機簽發者位址的 <xref:System.ServiceModel.Description.ClientCredentials>，以及用來與該簽發者進行通訊的繫結。  
+ Windows Communication Foundation (WCF) 的聯合繫結的簽發者位址的情況下使用本機簽發者 http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous 或`null`。 在這種情況下，您必須設定包含本機簽發者位址的 <xref:System.ServiceModel.Description.ClientCredentials>，以及用來與該簽發者進行通訊的繫結。  
   
 > [!NOTE]
->  如果<xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A>屬性`ClientCredentials`類別設定為`true`、 未指定本機簽發者位址，及所指定的簽發者位址[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)或其他聯合繫結是http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self， http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous，或者是`null`，然後 Windows[!INCLUDE[infocard](../../../../includes/infocard-md.md)]就使用簽發者。  
+>  如果<xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A>屬性`ClientCredentials`類別設定為`true`、 未指定本機簽發者位址，及所指定的簽發者位址[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)或其他聯合繫結是 http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self ， http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous ，或者是`null`，然後 Windows[!INCLUDE[infocard](../../../../includes/infocard-md.md)]就使用簽發者。  
   
 ### <a name="to-configure-the-local-issuer-in-code"></a>透過程式碼來設定本機簽發者  
   

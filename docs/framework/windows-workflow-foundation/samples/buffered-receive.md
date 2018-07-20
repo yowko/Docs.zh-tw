@@ -85,7 +85,7 @@ ms.locfileid: "33518707"
   
 #### <a name="to-run-the-sample"></a>若要執行範例  
   
-1.  瀏覽至http://localhost/private/loanservice/service1.xamlx以確保服務正在執行。  
+1.  瀏覽至 http://localhost/private/loanservice/service1.xamlx 以確保服務正在執行。  
   
 2.  按 F5 執行 LoanClient 應用程式。 一旦工作流程完成時，out.txt 檔案應該會儲存至 C:\Inbox，這個檔案包含訊息交換結果。  
   
