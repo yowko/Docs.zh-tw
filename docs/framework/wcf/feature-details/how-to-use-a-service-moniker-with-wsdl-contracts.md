@@ -16,7 +16,7 @@ ms.locfileid: "33491039"
   
 1.  開啟和建置 GettingStarted 範例方案。  
   
-2.  開啟 Internet Explorer 並瀏覽至http://localhost/ServiceModelSamples/Service.svc以確定服務正在運作。  
+2.  開啟 Internet Explorer 並瀏覽至 http://localhost/ServiceModelSamples/Service.svc 以確定服務正在運作。  
   
 3.  在 Service.cs 檔案中新增 CalculatorService 類別的下列屬性：  
   
@@ -26,7 +26,7 @@ ms.locfileid: "33491039"
   
   
   
-5.  建立讓應用程式讀取的 WSDL 檔案。 步驟 3 和 4 中已新增的命名空間，因為您可以使用 IE 來查詢服務的整個 WSDL 描述瀏覽至http://localhost/ServiceModelSamples/Service.svc?wsdl。 然後，您可以從 Internet Explorer 將檔案另存為 serviceWSDL.xml。 如果您在步驟 3 和 4 中沒有指定命名空間，藉由查詢上述 URL 而傳回的 WSDL 文件將不會是完整的 WSDL。 傳回的 WSDL 文件將包含數個匯入其他 WSDL 文件的匯入陳述式。 您必須瀏覽每個匯入陳述式並建置完整的 WSDL 文件，結合從服務傳回的 WSDL 和匯入 WSDL。  
+5.  建立讓應用程式讀取的 WSDL 檔案。 步驟 3 和 4 中已新增的命名空間，因為您可以使用 IE 來查詢服務的整個 WSDL 描述瀏覽至 http://localhost/ServiceModelSamples/Service.svc?wsdl 。 然後，您可以從 Internet Explorer 將檔案另存為 serviceWSDL.xml。 如果您在步驟 3 和 4 中沒有指定命名空間，藉由查詢上述 URL 而傳回的 WSDL 文件將不會是完整的 WSDL。 傳回的 WSDL 文件將包含數個匯入其他 WSDL 文件的匯入陳述式。 您必須瀏覽每個匯入陳述式並建置完整的 WSDL 文件，結合從服務傳回的 WSDL 和匯入 WSDL。  
   
 6.  開啟 Visual Basic 6.0，並建立新的標準 .exe 檔案。 將按鈕加入至表單中，然後按兩下這個按鈕，將下列程式碼加入至 Click 處理常式：  
   
