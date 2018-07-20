@@ -43,11 +43,11 @@ ms.locfileid: "32751770"
 |externalMetadataLocation|包含 WSDL 檔案位置的 URI，此位置會傳回給使用者，以回應 WSDL 和 MEX 要求，而非自動產生的 WSDL。 如果未設定這個屬性，則會傳回預設 WSDL。 預設為空字串。|  
 |httpGetBinding|字串，這個字串會指定透過 HTTP GET 擷取中繼資料所要使用之繫結的型別。 這是選擇性的設定。 如果未指定這個設定，則會使用預設的繫結。<br /><br /> 只有當繫結的內部繫結項目支援 <xref:System.ServiceModel.Channels.IReplyChannel> 時，這些繫結才會受到支援。 此外，該繫結的 <xref:System.ServiceModel.Channels.MessageVersion> 屬性 (Property) 必須是 <xref:System.ServiceModel.Channels.MessageVersion.None%2A>。|  
 |httpGetBindingConfiguration|字串，這個字串會設定在 `httpGetBinding` 屬性中指定之繫結的名稱，該屬性會參考這個繫結中的其他組態資訊。 必須在 `<bindings>` 區段中定義相同的名稱。|  
-|httpGetEnabled|布林值，指定是否發行服務中繼資料以使用 HTTP/Get 要求進行擷取。 預設為 `false`。<br /><br /> 如果未指定 httpGetUrl 屬性，則中繼資料的發行位址會是服務位址加上 "?wsdl"。 例如，如果服務位址是"http://localhost:8080/CalculatorService"，HTTP/Get 中繼資料位址為"http://localhost:8080/CalculatorService?wsdl"。<br /><br /> 如果這個屬性是`false`，或服務的位址並非根據 HTTP 或 HTTPS，"？ wsdl"會被忽略。|  
+|httpGetEnabled|布林值，指定是否發行服務中繼資料以使用 HTTP/Get 要求進行擷取。 預設為 `false`。<br /><br /> 如果未指定 httpGetUrl 屬性，則中繼資料的發行位址會是服務位址加上 "?wsdl"。 例如，如果服務位址是" http://localhost:8080/CalculatorService"，HTTP/Get 中繼資料位址為" http://localhost:8080/CalculatorService?wsdl"。<br /><br /> 如果這個屬性是`false`，或服務的位址並非根據 HTTP 或 HTTPS，"？ wsdl"會被忽略。|  
 |httpGetUrl|布林值，指定中繼資料的發行位址以使用 HTTP/Get 要求進行擷取。 如果已指定相對 URI，則視為相對於服務的基底位址。|  
 |httpsGetBinding|字串，這個字串會指定透過 HTTPS GET 擷取中繼資料所要使用之繫結的型別。 這是選擇性的設定。 如果未指定這個設定，則會使用預設的繫結。<br /><br /> 只有當繫結的內部繫結項目支援 <xref:System.ServiceModel.Channels.IReplyChannel> 時，這些繫結才會受到支援。 此外，該繫結的 <xref:System.ServiceModel.Channels.MessageVersion> 屬性 (Property) 必須是 <xref:System.ServiceModel.Channels.MessageVersion.None%2A>。|  
 |httpsGetBindingConfiguration|字串，這個字串會設定在 `httpsGetBinding` 屬性中指定之繫結的名稱，該屬性會參考這個繫結中的其他組態資訊。 必須在 `<bindings>` 區段中定義相同的名稱。|  
-|httpsGetEnabled|布林值，指定是否發行服務中繼資料以使用 HTTPS/Get 要求進行擷取。 預設為 `false`。<br /><br /> 如果未指定 httpsGetUrl 屬性，則中繼資料的發行位址會是服務位址加上 "?wsdl"。 例如，如果服務位址是"https://localhost:8080/CalculatorService"，HTTP/Get 中繼資料位址為"https://localhost:8080/CalculatorService?wsdl"。<br /><br /> 如果這個屬性是`false`，或服務的位址並非根據 HTTP 或 HTTPS，"？ wsdl"會被忽略。|  
+|httpsGetEnabled|布林值，指定是否發行服務中繼資料以使用 HTTPS/Get 要求進行擷取。 預設為 `false`。<br /><br /> 如果未指定 httpsGetUrl 屬性，則中繼資料的發行位址會是服務位址加上 "?wsdl"。 例如，如果服務位址是" https://localhost:8080/CalculatorService"，HTTP/Get 中繼資料位址為" https://localhost:8080/CalculatorService?wsdl"。<br /><br /> 如果這個屬性是`false`，或服務的位址並非根據 HTTP 或 HTTPS，"？ wsdl"會被忽略。|  
 |httpsGetUrl|URI，指定中繼資料的發行位址以使用 HTTPS/Get 要求進行擷取。|  
 |policyVersion|字串，指定所要使用的 WS-Policy 規格版本。 此屬性的型別為 <xref:System.ServiceModel.Description.PolicyVersion>。|  
   
@@ -81,7 +81,7 @@ ms.locfileid: "32751770"
 ```  
   
 ## <a name="example"></a>範例  
- 下列範例設定服務以公開中繼資料使用\<serviceMetadata > 項目。 它也設定了一個端點，將 `IMetadataExchange` 合約公開做為 WS-MetadataExchange (MEX) 通訊協定的實作。 此範例使用 `mexHttpBinding`，這個方便的標準繫結，相當於將安全性模式設定為 `wsHttpBinding` 的 `None`。 "Mex"的相對位址用於端點中，當解析服務基底位址的端點位址http://localhost/servicemodelsamples/service.svc/mex。  
+ 下列範例設定服務以公開中繼資料使用\<serviceMetadata > 項目。 它也設定了一個端點，將 `IMetadataExchange` 合約公開做為 WS-MetadataExchange (MEX) 通訊協定的實作。 此範例使用 `mexHttpBinding`，這個方便的標準繫結，相當於將安全性模式設定為 `wsHttpBinding` 的 `None`。 "Mex"的相對位址用於端點中，當解析服務基底位址的端點位址 http://localhost/servicemodelsamples/service.svc/mex 。  
   
 ```xml
 <configuration>  
