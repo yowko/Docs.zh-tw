@@ -60,7 +60,7 @@ ms.locfileid: "37140238"
 |---------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IInvokeProvider>|[是]|所有超連結控制項必須支援叫用模式。|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|視情況而定|當連結包含對使用者來說可以使用、且有意義的資訊時，超連結控制項應支援值控制項模式。|  
-|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|例如：`"http://www...."`|例如，網際網路或內部網路位址的 URL 就是包含對使用者來說有意義之資訊的超連結。 不過，程式設計連結只對應用程式有意義，不建議用於 Value 屬性。|  
+|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|例如： `"http://www...."` |例如，網際網路或內部網路位址的 URL 就是包含對使用者來說有意義之資訊的超連結。 不過，程式設計連結只對應用程式有意義，不建議用於 Value 屬性。|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>必要的使用者介面自動化事件  
