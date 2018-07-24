@@ -64,7 +64,7 @@ ms.locfileid: "37028015"
 |運算子|描述|
 |--------------|-----------------|
 |[&& (邏輯 AND)](and-entity-sql.md)|邏輯 AND。|
-|[!(邏輯 NOT)](not-entity-sql.md)|邏輯 NOT。|
+|[\!(邏輯 NOT)](not-entity-sql.md)|邏輯 NOT。|
 |[&#124;&#124;(邏輯 OR)](or-entity-sql.md)|邏輯 OR。|
 |[CASE](case-entity-sql.md)|評估一組布林運算式來得出結果。|
 |[THEN](then-entity-sql.md)|結果[時](http://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998)子句時評估為 true。|
