@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 78e852e2f1894f92e5b43228faedfad0d78981fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 79749f5e593fbf4ea282cc5c8000be88098b702f
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364473"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874591"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server 連接共用 (ADO.NET)
 連接到資料庫伺服器通常需要執行幾個很費時的步驟。 必須要建立實體頻道 (如通訊端或具名管道)，必須建立與伺服器的初始信號交換、必須剖析連接字串資訊、伺服器必須要驗證連接，以及必須檢查是否已在現行交易中登記等。  
   
- 實際上，大部分應用程式僅使用一個或幾個不同的連接組態。 這表示應用程式執行期間，將會重複開啟及關閉許多相同的連接。 若要開啟連接的成本降至最低[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]使用呼叫的最佳化技術*連接共用*。  
+ 實際上，大部分應用程式僅使用一個或幾個不同的連接組態。 這表示應用程式執行期間，將會重複開啟及關閉許多相同的連接。 若要開啟連接的成本降至最低[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]會使用名為的最佳化技術*連接共用*。  
   
  連接共用可減少開啟新連接的必要次數。 *共用器*維護實體連接的擁有權。 它藉由讓每個指定連接組態的作用中連接集保持運行狀態，來管理連接。 只要使用者針對連接呼叫 `Open`，共用器便會查看集區中是否有可用的連接。 如果共用的連接可用，則共用器會將其傳回至呼叫端，而不會開啟新的連接。 應用程式針對連接呼叫 `Close` 時，共用器會將其傳回至共用的作用中連接集，而不會真正關閉它。 連接一旦傳回至集區，便已備妥在下一次 `Open` 呼叫中重複使用。  
   
@@ -67,13 +67,12 @@ using (SqlConnection connection = new SqlConnection(
  連接共用器會藉由重新配置釋放回集區的連接，來滿足連接的請求。 如果已達到最大集區大小，但仍沒有可用的連接，則會將要求排入佇列。 共用器接下來會嘗試回收所有連接，直到達到逾時 (預設值是 15 秒)。 如果連接逾時之前共用器無法滿足要求，則會擲回例外狀況。  
   
 > [!CAUTION]
->  強烈建議您在使用完連接後一律關閉該連接，以便將連接傳回集區。 您可以使用`Close`或`Dispose`方法`Connection`物件，或藉由開啟內的所有連線`using`C# 中的陳述式或`Using`在 Visual Basic 中的陳述式。 可能不會將未明確關閉的連接加入或傳回集區。 如需詳細資訊，請參閱[使用陳述式](~/docs/csharp/language-reference/keywords/using-statement.md)或[如何： 處置系統資源](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)適用於 Visual Basic。  
+>  強烈建議您在使用完連接後一律關閉該連接，以便將連接傳回集區。 您可以使用`Close`或`Dispose`方法`Connection`物件，或藉由開啟內的所有連線`using`在 C# 中，陳述式或`Using`Visual Basic 中的陳述式。 可能不會將未明確關閉的連接加入或傳回集區。 如需詳細資訊，請參閱 < [using 陳述式](~/docs/csharp/language-reference/keywords/using-statement.md)或是[如何： 處置系統資源](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)Visual basic。  
   
 > [!NOTE]
->  請不要在您類別之 `Close` 方法中的 `Dispose`、`Connection` 或任何其他 Managed 物件上呼叫 `DataReader` 或 `Finalize`。 在完成項中，只需釋放類別直接擁有的 Unmanaged 資源。 如果類別未擁有任何 Unmanaged 資源，請不要在類別定義中包含 `Finalize` 方法。 如需詳細資訊，請參閱[回收](../../../../docs/standard/garbage-collection/index.md)。  
+>  請不要在您類別之 `Close` 方法中的 `Dispose`、`Connection` 或任何其他 Managed 物件上呼叫 `DataReader` 或 `Finalize`。 在完成項中，只需釋放類別直接擁有的 Unmanaged 資源。 如果類別未擁有任何 Unmanaged 資源，請不要在類別定義中包含 `Finalize` 方法。 如需詳細資訊，請參閱 <<c0> [ 回收](../../../../docs/standard/garbage-collection/index.md)。  
   
-> [!NOTE]
->  從連接集區中擷取連接或將連接傳回連接集區時，系統不會在伺服器上引發登入和登出事件。 這是因為當連接傳回連接集區時，連接實際上並未關閉。 如需詳細資訊，請參閱[Audit Login Event Class](http://msdn2.microsoft.com/library/ms190260.aspx)和[Logout Event Class<](http://msdn2.microsoft.com/library/ms175827.aspx) SQL Server 線上叢書 》 中。  
+如需開啟和關閉連接相關聯的事件的詳細資訊，請參閱[Audit Login Event Class](/sql/relational-databases/event-classes/audit-login-event-class)並[Audit Logout 事件類別](/sql/relational-databases/event-classes/audit-logout-event-class)SQL Server 文件。  
   
 ## <a name="removing-connections"></a>移除連接  
  如果集區中的連接已閒置大約 4 到 8 分鐘，或如果共用器偵測到與伺服器的連接已嚴重損毀，則連接共用器會從集區中移除該連接。 請注意，只有嘗試與伺服器進行通訊後，才能偵測到嚴重損毀的連接。 如果發現連接已不再連接到伺服器，則會將其標記為無效。 只當關閉或回收無效的連接時，才會將它們從連接集區中移除。  
@@ -125,10 +124,10 @@ using (SqlConnection connection = new SqlConnection(
 ```  
   
 ## <a name="application-roles-and-connection-pooling"></a>應用程式角色和連接共用  
- 呼叫 `sp_setapprole` 系統預存程序來啟動 SQL Server 應用程式角色後，便無法重設該連接的安全性內容。 不過，啟用共用後，連接會傳回到集區，並且在重複使用共用連接時發生錯誤。 如需詳細資訊，請參閱知識庫文件中，「[SQL 應用程式角色錯誤 OLE DB 資源共用](http://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)。 」  
+ 呼叫 `sp_setapprole` 系統預存程序來啟動 SQL Server 應用程式角色後，便無法重設該連接的安全性內容。 不過，啟用共用後，連接會傳回到集區，並且在重複使用共用連接時發生錯誤。 如需詳細資訊，請參閱知識庫文件中，「[OLE DB 資源共用的 SQL 應用程式角色錯誤](http://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)。 」  
   
 ### <a name="application-role-alternatives"></a>應用程式角色替代方案  
- 建議您善加利用安全機制，以取代應用程式角色。 如需詳細資訊，請參閱[SQL Server 中建立應用程式角色](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)。  
+ 建議您善加利用安全機制，以取代應用程式角色。 如需詳細資訊，請參閱 < [SQL Server 中建立應用程式角色](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [連接共用](../../../../docs/framework/data/adonet/connection-pooling.md)  

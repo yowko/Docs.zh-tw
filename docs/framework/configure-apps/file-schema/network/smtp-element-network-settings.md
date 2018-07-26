@@ -11,15 +11,15 @@ ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 56912e09d24fc83e93a91cc42b1d96dcc68210f2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9b6e01906c31316cfa8f148ed96944f309517f95
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741889"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874919"
 ---
 # <a name="ltsmtpgt-element-network-settings"></a>&lt;smtp&gt;項目 （網路設定）
-設定傳遞格式、 傳遞方法和來源地址傳送電子郵件。  
+設定的傳遞格式、 傳遞方法，以及從來傳送電子郵件地址。  
   
  \<configuration>  
 \<system.net>  
@@ -46,15 +46,15 @@ ms.locfileid: "32741889"
 |屬性|描述|  
 |---------------|-----------------|  
 |`deliveryFormat`|指定外寄電子郵件的傳遞格式。 可接受的值為 SevenBit 和 International。|  
-|`deliveryMethod`|指定電子郵件的傳遞方法。 可接受的值為網路、 pickupDirectoryFromIis 和 specifiedPickupDirectory。|  
+|`deliveryMethod`|指定電子郵件的傳遞方法。 可接受的值為網路、 PickupDirectoryFromIis 和 SpecifiedPickupDirectory。|  
 |`from`|指定從外寄電子郵件地址。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`specifiedPickupDirectory`|設定簡易郵件傳輸通訊協定 (SMTP) 伺服器的本機目錄。|  
-|`network`|設定外部的 SMTP 伺服器的網路選項。|  
+|`specifiedPickupDirectory`|設定 Simple Mail Transport Protocol (SMTP) 伺服器的本機目錄。|  
+|`network`|設定外部 SMTP 伺服器的網路選項。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -63,13 +63,13 @@ ms.locfileid: "32741889"
 |[\<mailSettings> 項目 (網路設定)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|設定郵件傳送選項。|  
   
 ## <a name="example"></a>範例  
- 下列範例會指定適當 SMTP 參數來傳送電子郵件使用預設網路認證。  
+ 下列範例會指定適當的 SMTP 參數，使用預設網路認證傳送電子郵件。  
   
 ```xml  
 <configuration>  
   <system.net>  
     <mailSettings>  
-      <smtp deliveryMethod="network" deliveryFormat="SevenBit"  from="ben@contoso.com">  
+      <smtp deliveryMethod="Network" deliveryFormat="SevenBit"  from="ben@contoso.com">  
         <network  
           host="localhost"  
           port="25"  

@@ -2,12 +2,12 @@
 title: LINQ to XML 概觀 (C#)
 ms.date: 07/20/2015
 ms.assetid: 716b94d3-0091-4de1-8e05-41bc069fa9dd
-ms.openlocfilehash: 318c5494134fd1dd3ac2adbf538d693ad4a5dbf8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1cb4a0cd50abe579bdbf78d388b73af30cbdd6f0
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339377"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874685"
 ---
 # <a name="linq-to-xml-overview-c"></a>LINQ to XML 概觀 (C#)
 XML 已被廣泛採用為格式化許多內容之資料的方式。 例如，您可以在 Web、組態檔、Microsoft Office Word 檔案與資料庫中發現 XML。  
@@ -28,7 +28,7 @@ XML 已被廣泛採用為格式化許多內容之資料的方式。 例如，您
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的另一項優點是將查詢結果當做 <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XAttribute> 物件建構函式參數的功能，可提供建立 XML 樹狀結構的強大方法。 此方法稱為「功能建構」，可讓開發人員輕鬆將 XML 樹狀結構從某種圖形轉換為另一種圖形。  
   
- 例如，您可能具有[ XML 檔範例：典型訂購單 (LINQ to XML)](http://msdn.microsoft.com/library/0606c09f-6e43-4f8d-95c8-e8e2e08d2348) 中所述的典型 XML 訂購單。 您可以使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 執行下列查詢，以便在採購訂單中取得每個項目的零件編號屬行值：  
+ 例如，您可能具有[ XML 檔範例：典型訂購單 (LINQ to XML)](sample-xml-file-typical-purchase-order-linq-to-xml-1.md) 中所述的典型 XML 訂購單。 您可以使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 執行下列查詢，以便在採購訂單中取得每個項目的零件編號屬行值：  
   
 ```csharp  
 IEnumerable<string> partNos =  

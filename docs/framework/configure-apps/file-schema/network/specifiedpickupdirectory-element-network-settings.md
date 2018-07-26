@@ -11,14 +11,15 @@ ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 3a982bdbe4953691d4e8e7663f14059ff4771934
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 50ab7387fc5e2cac65cac1a6dba0e563225beec9
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874698"
 ---
 # <a name="ltspecifiedpickupdirectorygt-element-network-settings"></a>&lt;specifiedPickupDirectory&gt;項目 （網路設定）
-設定簡易郵件傳輸通訊協定 (SMTP) 伺服器的本機目錄。  
+設定 Simple Mail Transport Protocol (SMTP) 伺服器的本機目錄。  
   
  \<configuration>  
 \<system.net>  
@@ -41,16 +42,16 @@ ms.lasthandoff: 05/03/2018
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`pickupDirectoryLocation`|目錄，讓應用程式儲存供稍後處理 SMTP 伺服器的電子郵件。|  
+|`pickupDirectoryLocation`|目錄，讓應用程式會儲存供稍後處理 SMTP 伺服器的電子郵件。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<smtp > 項目 （網路設定）](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|設定簡易郵件傳輸通訊協定 (SMTP) 郵件傳送選項。|  
+|[\<smtp > 項目 （網路設定）](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|設定 Simple Mail Transport Protocol (SMTP) 郵件傳送選項。|  
   
 ## <a name="remarks"></a>備註  
  `specifiedPickupDirectory` 屬性會設定目錄，讓應用程式儲存郵件以供 SMTP 伺服器處理。  
@@ -62,7 +63,7 @@ ms.lasthandoff: 05/03/2018
 <configuration>  
   <system.net>  
     <mailSettings>  
-      <smtp deliveryMethod="specifiedPickupDirectory">  
+      <smtp deliveryMethod="SpecifiedPickupDirectory">  
         <specifiedPickupDirectory  
           pickupDirectoryLocation="c:\maildrop"  
         />  

@@ -5,11 +5,11 @@ author: blackdwarf
 ms.author: mairaw
 ms.date: 04/12/2017
 ms.openlocfilehash: 6cabd3959a29878788916ae26589be408c12e0ca
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956191"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244786"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>.NET Core CLI 工具擴充性模型
 

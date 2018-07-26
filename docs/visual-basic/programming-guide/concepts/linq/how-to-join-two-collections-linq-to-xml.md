@@ -3,11 +3,11 @@ title: 如何： 聯結兩個集合 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5a5758d4-906b-4285-908d-5b930db192e6
 ms.openlocfilehash: 3ceb9cf7dfdd1d18a07e93d15624fd8fac045d07
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643688"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245696"
 ---
 # <a name="how-to-join-two-collections-linq-to-xml-visual-basic"></a>如何： 聯結兩個集合 (LINQ to XML) (Visual Basic)
 XML 文件中的項目或屬性有時候會參考其他項目或屬性。 例如，[範例 XML 檔：客戶和訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) XML 文件包含客戶清單與訂單清單。 每個 `Customer` 項目都包含一個 `CustomerID` 屬性。 每個 `Order` 項目都包含一個 `CustomerID` 項目。 每個訂單中的 `CustomerID` 項目都會參考客戶中的 `CustomerID` 屬性。  
@@ -18,7 +18,7 @@ XML 文件中的項目或屬性有時候會參考其他項目或屬性。 例如
   
  請注意，因為沒有可用的索引，所以這種聯結的執行階段效能會比較差。  
   
- 如需詳細資訊，關於`Join`，請參閱[聯結作業 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)。  
+ 如需詳細資訊的相關`Join`，請參閱 <<c2> [ 聯結作業 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)。  
   
 ## <a name="example"></a>範例  
  下列範例會將 `Customer` 項目聯結到 `Order` 項目，並在訂單中產生包含 `CompanyName` 項目的新 XML 文件。  

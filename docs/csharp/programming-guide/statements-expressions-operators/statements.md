@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
 ms.openlocfilehash: 68f7f799ebbfe52c99820083eb22761c79f66483
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339523"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39220746"
 ---
 # <a name="statements-c-programming-guide"></a>陳述式 (C# 程式設計手冊)
 程式所採取的動作是在陳述式中表示。 根據指定的條件，常見動作包括宣告變數、指派值、呼叫方法、循環執行集合，以及分支到一個或另一個程式碼區塊。 陳述式在程式中的執行順序稱為「控制流程」或「執行流程」。 根據程式如何反應它在執行階段收到的輸入，每次執行程式時，控制流程可能都會不同。  

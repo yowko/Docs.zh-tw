@@ -6,11 +6,11 @@ helpviewer_keywords:
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
 ms.openlocfilehash: 3cd49a17991f3d7606b0364a83be2b2e30ba0cce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218055"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961374"
 ---
 # <a name="command-line-build-with-cscexe"></a>使用 csc.exe 建置命令列
 您可以在命令提示字元中輸入 C# 編譯器的可執行檔名稱 (*csc.exe*)，藉此叫用該編譯器。

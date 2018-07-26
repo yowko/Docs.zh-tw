@@ -8,11 +8,11 @@ helpviewer_keywords:
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
 ms.openlocfilehash: d4e57347a11b804f3ea7f4bb9736c134c4b71929
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213242"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961302"
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>如何：串連多個字串 (C# 指南)
 

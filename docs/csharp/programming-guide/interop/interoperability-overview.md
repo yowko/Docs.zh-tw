@@ -9,11 +9,11 @@ helpviewer_keywords:
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
 ms.openlocfilehash: 747b2d420beeb63b89b21dd16d2977d12bc5d580
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337499"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244185"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>互通性概觀 (C# 程式設計手冊)
 本主題說明可在 C# Managed 程式碼和 Unmanaged 程式碼之間啟用互通性的方法。  

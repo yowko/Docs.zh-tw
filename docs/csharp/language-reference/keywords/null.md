@@ -8,11 +8,11 @@ helpviewer_keywords:
 - null keyword [C#]
 ms.assetid: fecb1c60-6232-4efe-87f7-9a86ba2e9119
 ms.openlocfilehash: cd99ce43ad359c58c855748dff9a01abb6dbd453
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268116"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961166"
 ---
 # <a name="null-c-reference"></a>null (C# 參考)
 `null` 關鍵字是表示 Null 參考的常值，不參考任何物件的值。 `null` 是參考型別變數的預設值。 一般的實值型別不可為 Null。 不過，C# 2.0 引入了可為 Null 的實值型別。 請參閱[可為 Null 的型別](../../../csharp/programming-guide/nullable-types/index.md)。  

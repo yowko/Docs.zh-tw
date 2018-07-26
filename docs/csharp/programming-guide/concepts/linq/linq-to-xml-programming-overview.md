@@ -3,11 +3,11 @@ title: LINQ to XML 程式設計概觀 (C#)
 ms.date: 07/20/2015
 ms.assetid: 2dfa9b6f-5890-461d-b81c-316853c7f320
 ms.openlocfilehash: c461d4b4082293d91d18538596cfa03d9445c224
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339796"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198877"
 ---
 # <a name="linq-to-xml-programming-overview-c"></a>LINQ to XML 程式設計概觀 (C#)
 這些主題提供有關 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 類別的高階概觀資訊，以及關於其中三個最重要類別的詳細資訊。  

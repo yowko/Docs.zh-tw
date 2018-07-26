@@ -5,11 +5,11 @@ helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
 ms.openlocfilehash: 3b43e7e3aafda5ee5b6a49f271f725fb8eeeca59
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172655"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198165"
 ---
 # <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>如何：在查詢中傳回項目屬性的子集 (C# 程式設計手冊)
 如果下列兩個條件都成立，請在查詢運算式中使用匿名型別：  

@@ -2,12 +2,12 @@
 title: 迭代器 (C#)
 ms.date: 07/20/2015
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: 08fe529f46ccaae7b2e17367a47346265aa0e8b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 52450c4e80f5d9a149fd95c31f9c1189066659c5
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338867"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245266"
 ---
 # <a name="iterators-c"></a>迭代器 (C#)
 「迭代器」可用來逐步執行集合，例如清單和陣列。  
@@ -218,7 +218,7 @@ public class Zoo : IEnumerable
 ```  
   
 ##  <a name="BKMK_GenericList"></a> 搭配泛型清單使用迭代器  
- 在以下範例中，`Stack(Of T)` 泛型類別會實作 <xref:System.Collections.Generic.IEnumerable%601> 泛型介面。 `Push` 方法會將值指派給 `T` 類型的陣列。 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 方法會使用 `yield return` 陳述式以傳回陣列值。  
+ 在以下範例中，<xref:System.Collections.Generic.Stack%601> 泛型類別會實作 <xref:System.Collections.Generic.IEnumerable%601> 泛型介面。 <xref:System.Collections.Generic.Stack%601.Push%2A> 方法會將值指派給 `T` 類型的陣列。 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 方法會使用 `yield return` 陳述式以傳回陣列值。  
   
  除了泛型 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 方法，您也必須實作非泛型 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 方法。 這是因為 <xref:System.Collections.Generic.IEnumerable%601> 繼承自 <xref:System.Collections.IEnumerable>。 非泛型實作會延後到泛型實作。  
   

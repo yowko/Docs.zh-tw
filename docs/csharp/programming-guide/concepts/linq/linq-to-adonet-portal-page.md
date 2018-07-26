@@ -3,11 +3,11 @@ title: LINQ to ADO.NET (入口網站頁面)
 ms.date: 07/20/2015
 ms.assetid: 6bd269b4-3509-4688-b672-836008704182
 ms.openlocfilehash: 56fcd2a411b5eda4c0aff8754ecbc2f769ac99a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325756"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37959643"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET (入口網站頁面)
 [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] 可讓您使用 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 程式設計模型，針對 [!INCLUDE[vstecado](~/includes/vstecado-md.md)] 中的任何可列舉物件進行查詢。  

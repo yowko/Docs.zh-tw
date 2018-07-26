@@ -1,15 +1,15 @@
 ---
-title: 修改 XML 樹狀 (LINQ to XML) (Visual Basic)
+title: 修改 XML 樹狀結構 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 4ae511a5-4fc9-4178-9c8e-761357deae3f
 ms.openlocfilehash: e524088ac6ccde3a46de7547379eb82f9760fd57
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645612"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37959519"
 ---
-# <a name="modifying-xml-trees-linq-to-xml-visual-basic"></a>修改 XML 樹狀 (LINQ to XML) (Visual Basic)
+# <a name="modifying-xml-trees-linq-to-xml-visual-basic"></a>修改 XML 樹狀結構 (LINQ to XML) (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 是 XML 樹狀結構的記憶體中存放區。 在您從來源載入或剖析 XML 樹狀結構後，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 會讓您就地修改該樹狀結構，然後序列化樹狀結構，以便將其儲存到檔案或傳送到遠端伺服器。  
   
  當您就地修改樹狀結構時，您可以使用特定方法，例如，<xref:System.Xml.Linq.XContainer.Add%2A>。  
@@ -20,7 +20,7 @@ ms.locfileid: "33645612"
   
 |主題|描述|  
 |-----------|-----------------|  
-|[記憶體中 XML 樹狀結構修改與功能建構 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction.md)|比較在記憶體中修改 XML 樹狀與功能結構。|  
+|[記憶體中 XML 樹狀結構修改與函數式建構 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction.md)|比較在記憶體中修改 XML 樹狀與功能結構。|  
 |[將項目、 屬性和節點加入至 XML 樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/adding-elements-attributes-and-nodes-to-an-xml-tree.md)|提供將項目、屬性或節點加入到 XML 樹狀的相關資訊。|  
 |[修改 XML 樹狀結構中的項目、屬性和節點](../../../../visual-basic/programming-guide/concepts/linq/modifying-elements-attributes-and-nodes-in-an-xml-tree.md)|提供修改現有項目、屬性或節點的相關資訊。|  
 |[移除項目、 屬性和節點從 XML 樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/removing-elements-attributes-and-nodes-from-an-xml-tree.md)|提供將項目、屬性或節點從 XML 樹狀移除的相關資訊。|  

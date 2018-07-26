@@ -1,17 +1,17 @@
 ---
 title: F# 語言參考
-description: '找到 F # 語言功能的資訊從這個語言的語彙基元、 概念、 類型、 運算式和編譯器支援建構主題參考。'
+description: '尋找 F # 語言的功能資訊此參考以語言的語彙基元、 概念、 類型、 運算式和編譯器支援建構的主題。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 1c25ab4a4936b532a21aed8b2b0202fec1dd7133
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0f0b54ab95e634538fc8511a18aac9d8ee00f26
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566687"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37937081"
 ---
 # <a name="f-language-reference"></a>F# 語言參考
 
-此區段是 F # 語言，以.NET 為目標的多典範程式語言的參考。 F# 語言支援函式、物件導向和命令式程式設計語言。
+本節是 F # 語言，以.NET 為目標的多範型程式設計語言的參考。 F# 語言支援函式、物件導向和命令式程式設計語言。
 
 
 ## <a name="f-tokens"></a>F# 語彙基元
@@ -63,7 +63,7 @@ ms.locfileid: "33566687"
 |標題|描述|
 |-----|-----------|
 |[值](values/index.md)|描述值，這是具有特定類型且不可變的數量；值可以是整數或浮點數、字元或文字、清單、序列、陣列、元組、差別聯集、記錄、類別類型或函式值。|
-|[基本類型](primitive-types.md)|描述 F# 語言中使用的基本類型。 它也會提供對應的 .NET 類型以及每個類型的最小值和最大值。|
+|[基本類型](basic-types.md)|描述 F # 語言中使用的基礎基本類型。 它也會提供對應的 .NET 類型以及每個類型的最小值和最大值。|
 |[單位類型](unit-type.md)|描述 `unit` 類型，這個類型表示缺少特定值；`unit` 類型只有單一值，作為沒有或不需要其他值時的預留位置。|
 |[字串](strings.md)|描述 F# 中的字串。 `string` 類型以一連串的 Unicode 字元表示不可變文字。 `string` 是 `System.String` 在 .NET Framework 中的別名。|
 |[元組](tuples.md)|描述元組，這是不具名但有序之值 (可能是不同的類型) 的群組。|

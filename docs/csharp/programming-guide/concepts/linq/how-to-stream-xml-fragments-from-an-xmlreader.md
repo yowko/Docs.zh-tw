@@ -3,11 +3,11 @@ title: 如何：從 XmlReader 串流 XML 片段 (C#)
 ms.date: 07/20/2015
 ms.assetid: 4a8f0e45-768a-42e2-bc5f-68bdf0e0a726
 ms.openlocfilehash: 8e2baed3ca32ea4273993fe5bed43fef768204ce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321060"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39221006"
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a>如何：從 XmlReader 串流 XML 片段 (C#)
 當您必須處理大型 XML 檔案時，可能無法將整個 XML 樹狀載入記憶體中。 這個主題顯示如何使用 <xref:System.Xml.XmlReader> 串流片段。  

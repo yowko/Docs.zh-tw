@@ -3,10 +3,11 @@ title: 範例 XML 文件 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: a734cc4e-d95d-4631-91a2-81618c8ad894
 ms.openlocfilehash: 1110a4b89158e0230401c449aa95d74be72eccc7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244529"
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a>範例 XML 文件 (LINQ to XML)
 下列範例檔案用於整個 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的程式碼範例和程式碼片段。  

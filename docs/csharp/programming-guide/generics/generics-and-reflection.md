@@ -6,11 +6,11 @@ helpviewer_keywords:
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
 ms.openlocfilehash: 7e35c7d6712323bd7088ad68160da05cdf3a5115
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335182"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245774"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>泛型和反映 (C# 程式設計手冊)
 由於 Common Language Runtime (CLR) 可在執行階段存取泛型型別資訊，因此您可以使用反映取得泛型型別的相關資訊，方法和取得非泛型型別的資訊相同。 如需詳細資訊，請參閱[執行階段中的泛型](../../../csharp/programming-guide/generics/generics-in-the-run-time.md)。  

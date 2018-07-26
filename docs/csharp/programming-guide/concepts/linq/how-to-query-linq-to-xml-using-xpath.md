@@ -3,11 +3,11 @@ title: 如何：使用 XPath 查詢 LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: ee5af263-4ab1-45e5-b792-33a3221b426d
 ms.openlocfilehash: a02149719afa19350a9baf15c41bd3548daa1344
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317082"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37959851"
 ---
 # <a name="how-to-query-linq-to-xml-using-xpath-c"></a>如何：使用 XPath 查詢 LINQ to XML (C#)
 本主題說明可讓您使用 XPath 查詢 XML 樹狀結構的擴充方法。 如需有關使用這些擴充方法的詳細資訊，請參閱 <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>。  

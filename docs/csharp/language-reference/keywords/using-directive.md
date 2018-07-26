@@ -5,11 +5,11 @@ helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
 ms.openlocfilehash: 180c038987e7de6b39a8eae0e86871eea41a40bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33280087"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960036"
 ---
 # <a name="using-directive-c-reference"></a>using 指示詞 (C# 參考)
 `using` 指示詞有三個用途：  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
 ms.openlocfilehash: aca1a9fa0b57e9b3b0a515a805039ade2fe0c2f1
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027911"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199413"
 ---
 # <a name="extern-c-reference"></a>extern (C# 參考)
 

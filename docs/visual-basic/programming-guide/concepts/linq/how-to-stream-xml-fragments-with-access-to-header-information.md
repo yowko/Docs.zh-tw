@@ -1,18 +1,18 @@
 ---
-title: 如何： 串流 XML 片段，以存取標頭資訊 (Visual Basic)
+title: 如何： Stream XML 片段並存取標頭資訊 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: effd10df-87c4-4d7a-8a9a-1434d829dca5
 ms.openlocfilehash: 60ec63c33d20fa38bed32d9c46c4acfe649ecd15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644468"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245181"
 ---
-# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>如何： 串流 XML 片段，以存取標頭資訊 (Visual Basic)
+# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>如何： Stream XML 片段並存取標頭資訊 (Visual Basic)
 有時候您必須讀取任意大的 XML 檔案並撰寫您的應用程式，讓應用程式的記憶體使用量可以預測。 如果您嘗試使用大型 XML 檔案填入 XML 樹狀結構，您的記憶體使用量將與檔案大小成正比，也就是，變成過度。 因此，您應該改用資料流技術。  
   
- 其中一個選項是使用 <xref:System.Xml.XmlReader> 撰寫您的應用程式。 但是，您可能想要使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢 XML 樹狀結構。 若發生這種情況，您可以撰寫自己的自訂座標軸方法。 如需詳細資訊，請參閱[How to： 撰寫 LINQ to XML 軸心方法 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md)。  
+ 其中一個選項是使用 <xref:System.Xml.XmlReader> 撰寫您的應用程式。 但是，您可能想要使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢 XML 樹狀結構。 若發生這種情況，您可以撰寫自己的自訂座標軸方法。 如需詳細資訊，請參閱 <<c0> [ 如何： 撰寫 LINQ to XML 座標軸方法 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md)。  
   
  若要撰寫您自己的座標軸方法，您可以撰寫使用 <xref:System.Xml.XmlReader> 讀取節點的小方法，直到該方法到達您感興趣的其中一個節點。 然後，該方法會呼叫從 <xref:System.Xml.Linq.XNode.ReadFrom%2A> 讀取的 <xref:System.Xml.XmlReader>，並具現化 XML 片段。 此時，您就可以在自訂座標軸方法上撰寫 LINQ 查詢。  
   

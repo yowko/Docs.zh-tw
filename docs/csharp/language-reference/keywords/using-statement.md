@@ -5,11 +5,11 @@ helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
 ms.openlocfilehash: 7bf9138721ecee63c65c2e39922aee96b1dfaa41
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207863"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960944"
 ---
 # <a name="using-statement-c-reference"></a>using 陳述式 (C# 參考)
 提供方便的語法，以確保正確使用 <xref:System.IDisposable> 物件。  

@@ -9,11 +9,11 @@ ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 22eb8aa1cd86dba4a1a65edf31a3b18df7085a33
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654446"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245469"
 ---
 # <a name="-subsystemversion-visual-basic"></a>-subsystemversion (Visual Basic)
 指定產生的可執行檔可在其上執行的最小子系統版本，進而決定可執行檔可在其上執行的 Windows 版本。 大多數情況下，此選項可確保可執行檔可以利用舊版 Windows 未提供的特定安全性功能。  
@@ -62,7 +62,7 @@ ms.locfileid: "33654446"
 -   如果先前的條件均非為 true，則預設值是 4.00。  
   
 ## <a name="setting-this-option"></a>設定這個選項  
- 若要設定 **-subsystemversion**編譯器選項在 Visual Studio 中，您就必須開啟.vbproj 檔案並將指定的值`SubsystemVersion`MSBuild XML 中的屬性。 您不能在 Visual Studio IDE 中設定此選項。 如需詳細資訊，請參閱本主題稍早的＜預設值＞或[通用的 MSBuild 專案屬性](/visualstudio/msbuild/common-msbuild-project-properties)。  
+ 若要設定 **-subsystemversion**編譯器選項在 Visual Studio 中，您必須開啟.vbproj 檔案，並指定的值`SubsystemVersion`在 MSBuild XML 中的屬性。 您不能在 Visual Studio IDE 中設定此選項。 如需詳細資訊，請參閱本主題稍早的＜預設值＞或[通用的 MSBuild 專案屬性](/visualstudio/msbuild/common-msbuild-project-properties)。  
   
 
   

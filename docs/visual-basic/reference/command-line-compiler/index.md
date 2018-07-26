@@ -11,22 +11,22 @@ ms.assetid: 6b57c444-50c7-4b88-8f59-ed65cff5e05c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1dd00fca2f2b24386773ac4868763cfb868e6b37
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650903"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244760"
 ---
 # <a name="visual-basic-command-line-compiler"></a>Visual Basic 命令列編譯器
 
-Visual Basic 命令列編譯器提供從 Visual Studio 整合式的開發環境 (IDE) 內編譯程式的替代方法。 本章節包含 Visual Basic 編譯器選項的描述。
+Visual Basic 命令列編譯器提供從 Visual Studio 整合式的開發環境 (IDE) 內編譯程式的替代方案。 本節包含 Visual Basic 編譯器選項的描述。
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
 ## <a name="in-this-section"></a>本節內容
 
 [從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)  
-描述 Visual Basic 命令列編譯器，提供除了從 Visual Studio IDE 內編譯程式。
+描述 Visual Basic 命令列編譯器，可作為從 Visual Studio IDE 內編譯程式的替代方案。
 
 [依字母順序列出 Visual Basic 編譯器選項](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
 依字母順序排列的資料表中列出編譯器選項

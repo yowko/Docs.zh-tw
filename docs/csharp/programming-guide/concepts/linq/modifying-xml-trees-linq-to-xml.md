@@ -3,11 +3,11 @@ title: 修改 XML 樹狀結構 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8ec47e6d-2363-4694-be46-8d5ca4d15fc9
 ms.openlocfilehash: 4afb071b5229b3a585ea032effc2985c9a9f7c3a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324206"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198532"
 ---
 # <a name="modifying-xml-trees-linq-to-xml-c"></a>修改 XML 樹狀結構 (LINQ to XML) (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 是 XML 樹狀結構的記憶體中存放區。 在您從來源載入或剖析 XML 樹狀結構後，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 會讓您就地修改該樹狀結構，然後序列化樹狀結構，以便將其儲存到檔案或傳送到遠端伺服器。  

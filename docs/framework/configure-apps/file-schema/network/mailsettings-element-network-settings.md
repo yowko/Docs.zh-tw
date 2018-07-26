@@ -11,12 +11,12 @@ ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 5bc7cc649b18a5330d056bbddfe96db4ecca2ec8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a9afd992a12392ae0ad1c27eea305cb7e367686d
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746419"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874412"
 ---
 # <a name="ltmailsettingsgt-element-network-settings"></a>&lt;mailSettings&gt;項目 （網路設定）
 設定郵件傳送選項。  
@@ -39,7 +39,7 @@ ms.locfileid: "32746419"
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |屬性|描述|  
 |---------------|-----------------|  
@@ -52,13 +52,13 @@ ms.locfileid: "32746419"
 |[\<system.Net> 項目 (網路設定)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|包含會指定 .NET Framework 如何連接至網路的設定。|  
   
 ## <a name="example"></a>範例  
- 下列範例會指定適當 SMTP 參數來傳送電子郵件使用預設網路認證。  
+ 下列範例會指定適當的 SMTP 參數，使用預設網路認證傳送電子郵件。  
   
 ```xml  
 <configuration>  
   <system.net>  
     <mailSettings>  
-      <smtp deliveryMethod="network">  
+      <smtp deliveryMethod="Network">  
         <network  
           host="localhost"  
           port="25"  

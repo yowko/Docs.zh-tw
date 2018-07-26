@@ -7,11 +7,11 @@ helpviewer_keywords:
 - errors [C#]
 ms.assetid: 57262ab1-6c50-4f9c-81ad-9fba48477416
 ms.openlocfilehash: e67e568b67400807ba7a1668acb6b3a36b4c7f22
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213199"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39220785"
 ---
 # <a name="c-compiler-errors"></a>C# 編譯器錯誤
 部分 C# 編譯器錯誤會有對應的主題來說明產生錯誤的原因，以及在某些情況下，如何修正錯誤。 使用下列其中一個步驟，來查看說明是否適用於特定的錯誤訊息。  

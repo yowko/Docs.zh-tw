@@ -3,11 +3,11 @@ title: 如何：根據位置尋找子項目 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: e35bb269-ec86-4c96-8321-12491a0eb2c3
 ms.openlocfilehash: ffe10bd5b263e56b6f2ee1708688523a2b0dd018
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317498"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245050"
 ---
 # <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a>如何：根據位置尋找子項目 (XPath-LINQ to XML) (C#)
 有時候您會想要根據項目的位置尋找這些項目。 您可能想要尋找第二個項目，或者想要尋找第三到第五個項目。  

@@ -3,10 +3,11 @@ title: 維護名稱 / 值組 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 57ac2072-d9f5-432b-84f0-a889c62fd813
 ms.openlocfilehash: 6d842adb1e21a7744f03f4a7e7fb0785ffb6a119
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39243793"
 ---
 # <a name="maintaining-namevalue-pairs-visual-basic"></a>維護名稱/值組 (Visual Basic)
 許多應用程式都必須維護妥善保存為成對名稱/值的資訊。 這類資訊可能是組態或全域設定的相關資訊。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 包含一些有助您輕鬆保存成對名稱/值組的方法。 您可以將該資訊保存為屬性或一組子項目。  
@@ -120,4 +121,4 @@ Console.WriteLine(root)
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>  
  <xref:System.Xml.Linq.XElement.SetElementValue%2A>  
- [修改 XML 樹狀 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+ [修改 XML 樹狀結構 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

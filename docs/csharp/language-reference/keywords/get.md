@@ -8,11 +8,11 @@ helpviewer_keywords:
 - get keyword [C#]
 ms.assetid: a52de048-fbe0-41b0-82ec-8e4ac04d3a71
 ms.openlocfilehash: 671cadce0bd120ec0728562ec448b2ce6edf2dd7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216105"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961348"
 ---
 # <a name="get-c-reference"></a>get (C# 參考)
 

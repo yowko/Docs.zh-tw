@@ -6,11 +6,11 @@ helpviewer_keywords:
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
 ms.openlocfilehash: 90423c868ca303f8e94c16f44bc5e0b23615fc17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33314053"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199374"
 ---
 # <a name="constants-c-programming-guide"></a>常數 (C# 程式設計手冊)
 常數是在編譯時期已知且不會在程式存留期變更的不可變值。 常數是使用 [const](../../../csharp/language-reference/keywords/const.md) 修飾詞所宣告。 有 C# 內建型別 (不含 <xref:System.Object?displayProperty=nameWithType>) 才能宣告為 `const`。 如需內建類型的清單，請參閱[內建類型資料表](../../../csharp/language-reference/keywords/built-in-types-table.md)。 使用者定義型別 (包括類別、結構和陣列) 不能是 `const`。 使用 [readonly](../../../csharp/language-reference/keywords/readonly.md) 修飾詞來建立在執行階段一次初始化的類別、結構或陣列 (例如在建構函式中)，因而無法進行變更。  

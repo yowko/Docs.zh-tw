@@ -9,11 +9,11 @@ helpviewer_keywords:
 - reading files [Visual Basic]
 ms.assetid: ad831a1b-7d01-4f07-a47b-799f3037df19
 ms.openlocfilehash: cfb22fea6d2be4c1cf78efbc63b2e2342bcac49c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590779"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37959491"
 ---
 # <a name="reading-from-files-in-visual-basic"></a>在 Visual Basic 中讀取檔案
 本節說明如何執行與讀取檔案建立關聯的工作。  

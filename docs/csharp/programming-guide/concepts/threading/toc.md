@@ -3,6 +3,5 @@
 ## [多執行緒程序的參數和傳回值](parameters-and-return-values-for-multithreaded-procedures.md)
 ## [逐步解說：使用 BackgroundWorker 元件進行多執行緒處理](walkthrough-multithreading-with-the-backgroundworker-component.md)
 ## [執行緒同步處理](thread-synchronization.md)
-## [執行緒計時器](thread-timers.md)
 ## [執行緒共用](thread-pooling.md)
 ### [如何：使用執行緒集區](how-to-use-a-thread-pool.md)

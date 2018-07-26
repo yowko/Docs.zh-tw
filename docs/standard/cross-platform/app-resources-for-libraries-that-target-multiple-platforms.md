@@ -1,6 +1,6 @@
 ---
 title: 以多平台為目標之函式庫的應用程式資源
-ms.date: 03/30/2017
+ms.date: 07/18/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -14,19 +14,21 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f4682b9ffcb0edb4e54c427968c3d40c0de134d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 11b9bde41e2209a88a042eb6c61de37def9da787
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578213"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245489"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>以多平台為目標之函式庫的應用程式資源
-您可以使用.NET Framework[可攜式類別庫](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)專案類型確保您的類別庫中的資源，可從多個平台。 這個專案類型會在 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] 中提供，並且以 .NET Framework 類別庫的可攜式子集為目標。 使用[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]可確保能夠從桌面應用程式、Silverlight 應用程式、Windows Phone 應用程式和 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式存取您的程式庫。  
+您可以使用.NET Framework[可攜式類別庫](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)專案類型，以確保您類別庫中的資源，可從多個平台。 這個專案類型會在 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] 中提供，並且以 .NET Framework 類別庫的可攜式子集為目標。 使用[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]可確保能夠從桌面應用程式、Silverlight 應用程式、Windows Phone 應用程式和 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式存取您的程式庫。  
+
+[!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
   
  [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]專案只會將 <xref:System.Resources> 命名空間中非常有限的類型子集提供給您的應用程式，但確實可讓您使用 <xref:System.Resources.ResourceManager> 類別擷取資源。 不過，如果您要使用 Visual Studio 建立應用程式，則應該使用 Visual Studio 所建立的強類型包裝函式，而不要直接使用 <xref:System.Resources.ResourceManager> 類別。  
   
- 若要在 Visual Studio 中建立的強類型包裝函式，設定主要資源檔的**存取修飾詞**Visual Studio 資源設計工具中**公用**。 這樣會建立包含強類型 ResourceManager 包裝函式的 [resourceFileName].designer.cs 或 [resourceFileName].designer.vb 檔。 如需使用強類型的資源包裝函式的詳細資訊，請參閱中的 < 產生強類型資源類別 > 一節[Resgen.exe （資源檔產生器）](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)主題。  
+ 若要在 Visual Studio 中建立的強型別包裝函式，設定主要資源檔的**存取修飾詞**Visual Studio 資源設計工具中**公用**。 這樣會建立包含強類型 ResourceManager 包裝函式的 [resourceFileName].designer.cs 或 [resourceFileName].designer.vb 檔。 如需使用的強類型的資源包裝函式的詳細資訊，請參閱 「 產生強類型資源類別 > 一節[Resgen.exe （資源檔產生器）](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)主題。  
   
 ## <a name="resource-manager-in-the-includenetportableincludesnet-portable-mdmd"></a>[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]的資源管理員  
  在[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]專案中，所有對資源的存取都是透過 <xref:System.Resources.ResourceManager> 類別處理。 由於無法從<xref:System.Resources>專案存取像是 <xref:System.Resources.ResourceReader> 和 <xref:System.Resources.ResourceSet> 這類 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 命名空間中的類型，因此這些類型無法用來存取資源。  
@@ -65,7 +67,7 @@ ms.locfileid: "33578213"
 |NameLength|25|  
 |標題|員工資料庫|  
   
- 下列程式碼定義`UILibrary`使用名為資源管理員包裝函式類別`resources`由 Visual Studio 產生時**存取修飾詞**檔案變更為**公用**. UILibrary 類別會在必要時剖析字串資料。 . 請注意，該類別位於 `MyCompany.Employees` 命名空間中。  
+ 下列程式碼定義`UILibrary`類別，會使用名為資源管理員包裝函式`resources`Visual Studio 所產生時**存取修飾詞**檔案變更為**公用**. UILibrary 類別會在必要時剖析字串資料。 . 請注意，該類別位於 `MyCompany.Employees` 命名空間中。  
   
  [!code-csharp[Conceptual.Resources.Portable#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/uilibrary.cs#1)]
  [!code-vb[Conceptual.Resources.Portable#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/uilibrary.vb#1)]  
@@ -80,7 +82,7 @@ ms.locfileid: "33578213"
  [!code-csharp[Conceptual.Resources.PortableMetro#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetro/cs/blankpage.xaml.cs#1)]  
   
 ## <a name="example-localized-includenetportableincludesnet-portable-mdmd"></a>範例：當地語系化的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]  
- 下列當地語系化的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]範例包含法文 (法國) 和英文 (美國) 文化特性的資源。 英文 （美國） 文化特性是應用程式的預設文化特性。它的資源會顯示在資料表中[上一節](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc)。 法文 (法國) 文化特性的資源檔命名為 LibResources.fr-FR.resx，並且包含下表所列的字串資源。 `UILibrary` 類別的原始程式碼與前一節中所顯示的內容相同。  
+ 下列當地語系化的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]範例包含法文 (法國) 和英文 (美國) 文化特性的資源。 英文 （美國） 文化特性是應用程式的預設文化特性;它的資源會顯示在資料表中[上一節](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc)。 法文 (法國) 文化特性的資源檔命名為 LibResources.fr-FR.resx，並且包含下表所列的字串資源。 `UILibrary` 類別的原始程式碼與前一節中所顯示的內容相同。  
   
 |資源名稱|資源值|  
 |-------------------|--------------------|  

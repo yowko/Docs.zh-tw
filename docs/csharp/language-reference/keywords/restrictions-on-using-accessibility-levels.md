@@ -5,11 +5,11 @@ helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
 ms.openlocfilehash: fd2f9b11523aac1cb720559db44aa36029d52ddb
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172405"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960901"
 ---
 # <a name="restrictions-on-using-accessibility-levels-c-reference"></a>使用存取範圍層級的限制 (C# 參考)
 當您在宣告中指定類型時，請檢查類型的存取範圍層級是否相依於成員或另一個類型的存取範圍層級。 例如，直接基底類別至少必須可以像衍生類別一樣地存取。 下列宣告會導致編譯器錯誤，因為基底類別 `BaseClass` 比 `MyClass` 更少存取：  

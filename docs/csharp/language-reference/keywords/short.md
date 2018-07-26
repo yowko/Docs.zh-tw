@@ -8,11 +8,11 @@ helpviewer_keywords:
 - short keyword [C#]
 ms.assetid: 04c10688-e51a-4a87-bfec-83f7fb42ff11
 ms.openlocfilehash: 7991259aadd391288caa37b35addd6e16e234878
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027859"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960406"
 ---
 # <a name="short-c-reference"></a>short (C# 參考)
 

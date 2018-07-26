@@ -9,11 +9,11 @@ helpviewer_keywords:
 - addition operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
 ms.openlocfilehash: d4a269c07e0d6dc2ac6a6a101f200653c6ea7a29
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267403"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244867"
 ---
 # <a name="-operator-c-reference"></a>+ 運算子 (C# 參考)
 `+` 運算子可以作為一元或二元運算子。  

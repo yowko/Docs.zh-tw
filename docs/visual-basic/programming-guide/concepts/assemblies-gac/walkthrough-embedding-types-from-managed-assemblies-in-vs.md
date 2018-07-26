@@ -1,15 +1,15 @@
 ---
-title: 逐步解說： 在 Visual Studio (Visual Basic) 中內嵌 Managed 組件的類型
+title: 逐步解說： 在 Visual Studio (Visual Basic) 中內嵌來自 Managed 組件的型別
 ms.date: 07/20/2015
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
 ms.openlocfilehash: 1f6176746b783d020c809fb0b5d55d741ce0148b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644182"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245464"
 ---
-# <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>逐步解說： 在 Visual Studio (Visual Basic) 中內嵌 Managed 組件的類型
+# <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>逐步解說： 在 Visual Studio (Visual Basic) 中內嵌來自 Managed 組件的型別
 若要內嵌來自強式名稱 Managed 組件的類型資訊，您可以鬆散地結合應用程式中的類型以確保版本獨立。 也就是說，您可以撰寫程式來使用 Managed 程式庫多個版本的類型，而不需重新編譯每個版本。  
   
  內嵌型別時，通常會搭配使用 COM Interop (例如從 Microsoft Office 使用 Automation 物件的應用程式)。 當您內嵌類型資訊時，可讓相同組建的程式使用不同電腦上版本各異的 Microsoft Office。 不過，您也可以搭配使用類型內嵌功能與完全受管理的解決方案。  
@@ -56,7 +56,7 @@ ms.locfileid: "33644182"
   
 2.  在 [新增專案] 對話方塊的 [專案類型] 窗格中，確認已選取 [Windows]。 在 [範本] 窗格中，選取 [類別庫]。 在 [名稱] 方塊中，輸入 `TypeEquivalenceInterface` 並按一下 [確定]。 隨即會建立新專案。  
   
-3.  在**方案總管 中**，Class1.vb 檔案上按一下滑鼠右鍵，然後按一下**重新命名**。 將檔案重新命名為 `ISampleInterface.vb`，然後按 ENTER。 重新命名檔案時，也會將類別重新命名為 `ISampleInterface`。 這個類別將代表類別的公用介面。  
+3.  在 **方案總管**，以滑鼠右鍵按一下 Class1.vb 檔案，然後按一下**重新命名**。 將檔案重新命名為 `ISampleInterface.vb`，然後按 ENTER。 重新命名檔案時，也會將類別重新命名為 `ISampleInterface`。 這個類別將代表類別的公用介面。  
   
 4.  以滑鼠右鍵按一下 TypeEquivalenceInterface 專案，然後按一下 [屬性]。 按一下 [編譯] 索引標籤。將輸出路徑設為開發電腦上的有效位置，例如 `C:\TypeEquivalenceSample`。 這個位置也會用於本逐步解說稍後的步驟。  
   
@@ -77,11 +77,11 @@ ms.locfileid: "33644182"
   
 7.  在 [工具] 功能表上，按一下 [建立 GUID]。 在 [建立 GUID] 對話方塊中，依序按一下 [登錄格式] 和 [複製]。 按一下 [結束] 。  
   
-8.  刪除 `Guid` 屬性中的範例 GUID，然後貼上您從 [建立 GUID] 對話方塊所複製的 GUID。 移除大括號 ({}) 從複製的 GUID。  
+8.  刪除 `Guid` 屬性中的範例 GUID，然後貼上您從 [建立 GUID] 對話方塊所複製的 GUID。 移除已複製 GUID 的大括弧 ({})。  
   
 9. 在 [專案] 功能表上，按一下 [顯示所有檔案]。  
   
-10. 在**方案總管 中**，依序展開**我的專案**資料夾。 按兩下 AssemblyInfo.vb。 將下列屬性加入檔案中。  
+10. 在 **方案總管**，展開**我的專案**資料夾。 按兩下 AssemblyInfo.vb。 將下列屬性加入檔案中。  
   
     ```vb  
     <Assembly: ImportedFromTypeLib("")>  
@@ -101,7 +101,7 @@ ms.locfileid: "33644182"
   
 2.  在 [新增專案] 對話方塊的 [專案類型] 窗格中，確認已選取 [Windows]。 在 [範本] 窗格中，選取 [類別庫]。 在 [名稱] 方塊中，輸入 `TypeEquivalenceRuntime` 並按一下 [確定]。 隨即會建立新專案。  
   
-3.  在**方案總管 中**，Class1.vb 檔案上按一下滑鼠右鍵，然後按一下**重新命名**。 將檔案重新命名為 `SampleClass.vb`，然後按 ENTER。 重新命名檔案時，也會將類別重新命名為 `SampleClass`。 此類別會實作 `ISampleInterface` 介面。  
+3.  在 **方案總管**，以滑鼠右鍵按一下 Class1.vb 檔案，然後按一下**重新命名**。 將檔案重新命名為 `SampleClass.vb`，然後按 ENTER。 重新命名檔案時，也會將類別重新命名為 `SampleClass`。 此類別會實作 `ISampleInterface` 介面。  
   
 4.  以滑鼠右鍵按一下 TypeEquivalenceRuntime 專案，然後按一下 [屬性]。 按一下 [編譯] 索引標籤。將輸出路徑設為您在 TypeEquivalenceInterface 專案中使用的相同位置，例如 `C:\TypeEquivalenceSample`。  
   
@@ -155,7 +155,7 @@ ms.locfileid: "33644182"
   
 6.  展開方案總管中的 [參考] 資料夾。 選取 TypeEquivalenceInterface 參考。 在 TypeEquivalenceInterface 參考的 [屬性] 視窗中，將 [內嵌 Interop 類型] 屬性設為 [True]。  
   
-7.  將下列程式碼加入至要建立用戶端程式的 Module1.vb 檔案。  
+7.  若要建立用戶端程式 Module1.vb 檔案中加入下列程式碼。  
   
     ```vb  
     Imports TypeEquivalenceInterface  

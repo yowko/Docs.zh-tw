@@ -8,11 +8,11 @@ helpviewer_keywords:
 - private keyword [C#]
 ms.assetid: 654c0bb8-e6ac-4086-bf96-7474fa6aa1c8
 ms.openlocfilehash: 89bc23e91bf693f0a95b75dffe2399cb7e865b50
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34171859"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960803"
 ---
 # <a name="private-c-reference"></a>private (C# 參考)
 `private` 關鍵字是成員存取修飾詞。 

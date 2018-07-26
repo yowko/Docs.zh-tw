@@ -1,15 +1,15 @@
 ---
-title: 使用節點 (Visual Basic) 進行程式設計
+title: 搭配節點 (Visual Basic) 進行程式設計
 ms.date: 07/20/2015
 ms.assetid: d8422a9b-dd37-44a3-8aac-2237ed9561e0
 ms.openlocfilehash: 871755ef0293513f07c60b1d5735c47692163b78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648342"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244006"
 ---
-# <a name="programming-with-nodes-visual-basic"></a>使用節點 (Visual Basic) 進行程式設計
+# <a name="programming-with-nodes-visual-basic"></a>搭配節點 (Visual Basic) 進行程式設計
 必須撰寫程式 (例如，XML 編輯器、轉換系統或報表寫入器) 的 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 開發人員通常需要撰寫的程式可在比項目和屬性更細微的層級上作業。 他們通常需要在節點層級、管理的文字節點、處理指示與註解上作業。 這個主題提供一些關於在節點層級進行程式設計的詳細資料。  
   
 ## <a name="node-details"></a>節點詳細資料  

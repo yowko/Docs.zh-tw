@@ -6,11 +6,11 @@ f1_keywords:
 - nameof
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
 ms.openlocfilehash: 2695095aa4bf2035d8766f3cbcb82f4fbb290e22
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207862"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245631"
 ---
 # <a name="nameof-c-reference"></a>nameof (C# 參考)
 

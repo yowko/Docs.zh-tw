@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual Basic, data access
 ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
 ms.openlocfilehash: 2e6cfc3d6d8752b12fa20a357dedfeb1b3346dce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585823"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198834"
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>在 Visual Basic 應用程式中存取資料
 Visual Basic 包括數個新功能，以協助開發可存取資料的應用程式。 將項目從[資料來源視窗](/visualstudio/data-tools/add-new-data-sources)拖曳至表單，以建立 Windows 應用程式的資料繫結表單。 將項目從 [資料來源] 視窗拖曳至現有控制項，以將控制項繫結至資料。  

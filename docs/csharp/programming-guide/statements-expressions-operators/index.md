@@ -10,11 +10,11 @@ helpviewer_keywords:
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
 ms.openlocfilehash: 3759b6e09b1df53eb95cfce2a93f5197fb913adf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338792"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198191"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>陳述式、運算式和運算子 (C# 程式設計手冊)
 組成應用程式的 C# 程式碼是由包含關鍵字、運算式和運算子的陳述式所構成。 本節包含有關 C# 程式中這些基本項目的資訊。  

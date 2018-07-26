@@ -3,11 +3,11 @@ title: 範例 XML 檔：多份採購訂單 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 2d29fcaa-60df-43d4-8ccc-6cdba7c013e9
 ms.openlocfilehash: 02e414ef0fbe5787a98a0783ba9ed5583886d2ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320966"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245518"
 ---
 # <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a>範例 XML 檔：多份採購訂單 (LINQ to XML)
 下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。 這個檔案包含數個採購訂單。  

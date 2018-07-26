@@ -9,14 +9,14 @@ ms.assetid: aecaab01-9353-46c5-941c-6edabd4eff92
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 045e621f0104c4c958d77d2443c1524b33410b7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650461"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39221019"
 ---
 # <a name="-win32icon"></a>-win32icon
-將.ico 檔插入輸出檔中。 這個.ico 檔表示中的輸出檔**檔案總管**。  
+將.ico 檔插入輸出檔。 這個.ico 檔表示中的輸出檔**檔案總管**。  
   
 ## <a name="syntax"></a>語法  
   
@@ -28,19 +28,19 @@ ms.locfileid: "33650461"
   
 |詞彙|定義|  
 |---|---|  
-|`filename`|要加入至輸出檔的.ico 檔案。 將檔案名稱括在引號 ("") 如果包含空格。|  
+|`filename`|要加入至輸出檔的.ico 檔案。 將檔案名稱括在引號 ("") 如果它包含空格。|  
   
 ## <a name="remarks"></a>備註  
- 您可以建立與 Microsoft Windows 資源編譯器 (RC) 的.ico 檔案。 資源編譯器在編譯 Visual c + + 程式; 當叫用.ico 檔案是從.rc 檔案建立。 `-win32icon`和`-win32resource`選項互斥。  
+ 您可以建立與 Microsoft Windows 資源編譯器 (RC) 的.ico 檔案。 資源編譯器會叫用，當您編譯 Visual c + + 程式;.ico 檔是從.rc 檔案建立。 `-win32icon`和`-win32resource`選項互斥。  
   
- 請參閱[-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md)參考[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]資源檔或[-資源 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)附加[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]資源檔。 請參閱[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) .res 檔案匯入。  
+ 請參閱[-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md)參考[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]資源檔，或[-資源 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)附加[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]資源檔。 請參閱[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)匯入.res 檔案。  
   
 |若要設定-win32icon Visual Studio IDE 中|  
 |---|  
-|1.在 **方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。 <br />2.按一下 [應用程式]  索引標籤。<br />3.修改中的值**圖示**方塊。|  
+|1.在 **方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。 <br />2.按一下 [應用程式]  索引標籤。<br />3.修改中的值**圖示** 方塊中。|  
   
 ## <a name="example"></a>範例  
- 下列程式碼編譯`In.vb`，並將.ico 檔，附加`Rf.ico`。  
+ 下列程式碼會編譯`In.vb`並附加.ico 檔， `Rf.ico`。  
   
 ```console
 vbc -win32icon:rf.ico in.vb  

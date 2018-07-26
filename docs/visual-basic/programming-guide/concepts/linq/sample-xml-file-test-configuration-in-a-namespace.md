@@ -1,13 +1,13 @@
 ---
-title: 範例 XML 檔： Namespace3 中的測試組態
+title: 3 中的範例 XML 檔： 測試組態
 ms.date: 07/20/2015
 ms.assetid: aff02614-30ee-45e1-bc0f-d64b193d20b8
 ms.openlocfilehash: 2a572bb4d2618bdd6ef002389703ea63ee2ed21b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644624"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39243838"
 ---
 # <a name="sample-xml-file-test-configuration-in-a-namespace"></a>範例 XML 檔：命名空間中的測試組態
 下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。 這是測試組態檔案。 XML 位於命名空間中。  

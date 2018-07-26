@@ -7,11 +7,11 @@ helpviewer_keywords:
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
 ms.openlocfilehash: d1e132093cc59c7b41a3f7d5b522fca2e224f779
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219036"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961215"
 ---
 # <a name="how-to-search-strings"></a>如何：搜尋字串
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - int keyword [C#]
 ms.assetid: 212447b4-5d2a-41aa-88ab-84fe710bdb52
 ms.openlocfilehash: 41ee5ecdae815eaddf8652a4873c060fb8f92bc3
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028262"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199426"
 ---
 # <a name="int-c-reference"></a>int (C# 參考)
 

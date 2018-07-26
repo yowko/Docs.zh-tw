@@ -10,11 +10,11 @@ helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
 ms.openlocfilehash: b58e06c87ebf601daf231c83993ebe512f51ecd9
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33955962"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961491"
 ---
 # <a name="event-c-reference"></a>event (C# 參考)
 `event` 關鍵字用來在發行者類別中宣告事件。  

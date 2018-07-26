@@ -5,11 +5,11 @@ helpviewer_keywords:
 - true operator [C#]
 ms.assetid: acaba817-5da5-4364-b3b2-2e5c75ec1839
 ms.openlocfilehash: 71f522b3860f7461f5c52dd77bb424f7ba0f9bf5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275076"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960102"
 ---
 # <a name="true-operator-c-reference"></a>true 運算子 (C# 參考)
 若運算元為 true 即傳回 [bool](../../../csharp/language-reference/keywords/bool.md) 值 `true`；否則傳回 `false`。  

@@ -2,12 +2,12 @@
 title: 執行緒 (C#)
 ms.date: 07/20/2015
 ms.assetid: 236d157d-37c0-4ee8-89fc-721e6c596325
-ms.openlocfilehash: 9f1c7071972d8e449bc06054fbe6d70e447b694f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8325132a359c8b65572943bb79c9f02a485eb290
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335831"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874662"
 ---
 # <a name="threading-c"></a>執行緒 (C#)
 C# 程式可以透過執行緒執行並行處理，讓您可以一次執行多項作業。 例如，您可以使用執行緒監視使用者的輸入、執行背景工作，以及處理同時的輸入資料流。  
@@ -41,7 +41,6 @@ C# 程式可以透過執行緒執行並行處理，讓您可以一次執行多�
 |[多執行緒程序的參數和傳回值 (C#)](../../../../csharp/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md)|說明多執行緒應用程式如何傳遞及傳回參數。|  
 |[逐步解說：BackgroundWorker 元件的多執行緒 (C#)](../../../../csharp/programming-guide/concepts/threading/walkthrough-multithreading-with-the-backgroundworker-component.md)|示範如何建立簡單的多執行緒應用程式。|  
 |[執行緒同步處理 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)|說明如何控制執行緒的互動。|  
-|[執行緒計時器 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-timers.md)|說明如何定期對個別的執行緒執行程序。|  
 |[執行緒集區 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)|說明如何使用系統管理的背景工作執行緒集區。|  
 |[如何：使用執行緒集區 (C#)](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|示範如何同步執行緒集區中多執行緒的使用。|  
 |[執行緒處理](../../../../../docs/standard/threading/index.md)|說明如何在.NET Framework 中實作執行緒。|

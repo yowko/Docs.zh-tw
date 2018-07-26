@@ -3,11 +3,11 @@ title: LINQ to XML 座標軸概觀 (C#)
 ms.date: 07/20/2015
 ms.assetid: 516792fb-461d-40a8-8a50-9993a51258fc
 ms.openlocfilehash: 0fe8766e3bcde17b59d78f0659043b8d4f017066
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340277"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961283"
 ---
 # <a name="linq-to-xml-axes-overview-c"></a>LINQ to XML 座標軸概觀 (C#)
 建立 XML 樹狀結構，或將 XML 文件載入到 XML 樹狀結構後，您可以進行查詢以尋找項目和屬性並擷取其值。 您可以透過「座標軸方法」擷取集合，也稱為「座標軸」。 有些座標軸是 <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XDocument> 類別中，傳回 <xref:System.Collections.Generic.IEnumerable%601> 集合的方法。 有些座標軸是 <xref:System.Xml.Linq.Extensions> 類別中的擴充方法。 當做擴充方法實作的座標軸會在集合上運算，然後傳回集合。  

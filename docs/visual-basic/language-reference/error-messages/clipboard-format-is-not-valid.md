@@ -4,25 +4,25 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID460
 ms.assetid: 71a4a045-65bb-417d-b3bd-99a9fa3c53f6
-ms.openlocfilehash: eef16096b269902dbaca6a344abf4c5f6a504fb7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f2a0ab33c1749117d5de4987e85c44602ccd29ce
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586217"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245553"
 ---
 # <a name="clipboard-format-is-not-valid"></a>剪貼簿的格式無效
 指定的剪貼簿格式與不相容所執行的方法。 此錯誤的可能原因包括：  
   
--   使用剪貼簿`GetText`或`SetText`方法以外的剪貼簿格式`vbCFText`或`vbCFLink`。  
+-   使用剪貼簿`GetText`或是`SetText`方法以外的剪貼簿格式`vbCFText`或`vbCFLink`。  
   
--   使用剪貼簿`GetData`或`SetData`方法以外的剪貼簿格式`vbCFBitmap`， `vbCFDIB`，或`vbCFMetafile`。  
+-   使用剪貼簿`GetData`或是`SetData`方法以外的剪貼簿格式`vbCFBitmap`， `vbCFDIB`，或`vbCFMetafile`。  
   
--   使用`DataObject``GetData`方法或`SetData`與 Microsoft Windows 登錄格式 (HC000-& HFFFF)，保留範圍中的剪貼簿格式的方法時該剪貼簿格式尚未註冊使用 Microsoft Windows。  
+-   使用`GetData`或是`SetData`方法`DataObject`與 Microsoft Windows 登錄格式 （HC000-& HFFFF），保留範圍的剪貼簿格式時該剪貼簿格式尚未註冊使用 Microsoft Windows.  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   移除無效的格式，並指定為有效。  
+-   移除無效的格式，並指定一個有效的帳戶。  
   
 ## <a name="see-also"></a>另請參閱  
  [剪貼簿：新增其他格式](/cpp/mfc/clipboard-adding-other-formats)

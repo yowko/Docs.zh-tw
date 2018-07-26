@@ -4,14 +4,14 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_WhitespaceInToken
 ms.assetid: 55107656-270e-4bbb-841a-478904df8e07
-ms.openlocfilehash: ed22ac435a5cd46288f9854ae711b7fad354f624
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 92aa3539a09a2479e75d1127b63db0e57297ba26
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641217"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245494"
 ---
-# <a name="textfieldparser-does-not-support-comment-tokens-that-contain-whitespace"></a>TextFieldParser 不支援包含空白字元的註解語彙基元
+# <a name="textfieldparser-does-not-support-comment-tokens-that-contain-white-space"></a>TextFieldParser 不支援包含空白字元的註解語彙基元
 已提供包含空白字元的註解語彙基元。 `TextFieldParser` 不支援包含空白字元的註解語彙基元，除非空白字元發生在語彙基元的開頭。 發生在語彙基元開頭的空白字元會被忽略。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  

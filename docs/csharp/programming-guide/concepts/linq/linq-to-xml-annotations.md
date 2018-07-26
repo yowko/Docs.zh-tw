@@ -3,11 +3,11 @@ title: LINQ to XML 註釋
 ms.date: 07/20/2015
 ms.assetid: 54e7b9d0-07f5-488f-9065-b6e6b870f810
 ms.openlocfilehash: 8b8e03b0174ad2bf044c21eb9a9d3391da37fb7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320114"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960695"
 ---
 # <a name="linq-to-xml-annotations"></a>LINQ to XML 註釋
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中的註釋可讓您將任意型別的任意物件與 XML 樹狀結構中的任何 XML 元件產生關聯。  

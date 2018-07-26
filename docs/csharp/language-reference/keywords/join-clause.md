@@ -9,11 +9,11 @@ helpviewer_keywords:
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
 ms.openlocfilehash: a868c52cf753b1e4285586ec41c1993f519299d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289395"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39243718"
 ---
 # <a name="join-clause-c-reference"></a>join 子句 (C# 參考)
 `join` 子句可用於將不同來源序列中的項目產生關聯，這些項目在物件模型中沒有直接關聯性。 唯一的需求是每個來源中的項目必須共用可比較是否相等的特定值。 例如，食品經銷商可能有一份特定產品的供應商清單，以及一份買家清單。 針對位於相同指定地區的所有供應商和買家，可使用 `join` 子句來建立該產品的供應商和買家清單。  

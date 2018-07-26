@@ -7,11 +7,11 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 03c9c118104f6fe3196d0a4bb13d28a6a122d859
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805538"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245715"
 ---
 # <a name="visual-basic-guide"></a>Visual Basic 指南
 

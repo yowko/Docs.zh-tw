@@ -8,17 +8,18 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: f20ba6845a6a84a57fa7636355d08b2f4e5cea2a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e043903647075587d1e7eec21c9a7b04f596dbf6
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340641"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37937045"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda 運算式 (C# 程式設計手冊)
-Lambda 運算式是 [匿名函式](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) ，可用來建立 [委派](../../../csharp/programming-guide/delegates/using-delegates.md) 或 [運算式樹狀架構](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) 類型。 使用 Lambda 運算式可以撰寫區域函式，這些函式可以當做引數傳遞，或是當做函式呼叫的值傳回。 Lambda 運算式對於撰寫 LINQ 查詢運算式而言特別有用。  
+
+Lambda 運算式是 [匿名函式](anonymous-methods.md) ，可用來建立 [委派](../delegates/using-delegates.md) 或 [運算式樹狀架構](../concepts/expression-trees/index.md) 類型。 使用 Lambda 運算式可以撰寫區域函式，這些函式可以當做引數傳遞，或是當做函式呼叫的值傳回。 Lambda 運算式對於撰寫 LINQ 查詢運算式而言特別有用。
   
- 若要建立 Lambda 運算式，請在 Lambda 運算子 [=>](../../../csharp/language-reference/operators/lambda-operator.md)的左邊指定輸入參數 (如果有的話)，並將運算式或陳述式區塊放在另一邊。 例如，Lambda 運算式 `x => x * x` 會指定名為 `x` 的參數，並傳回 `x` 的平方值。 您可以將這個運算式指派給委派類型，如下列範例所示：  
+若要建立 Lambda 運算式，請在 Lambda 運算子 [=>](../../../csharp/language-reference/operators/lambda-operator.md)的左邊指定輸入參數 (如果有的話)，並將運算式或陳述式區塊放在另一邊。 例如，Lambda 運算式 `x => x * x` 會指定名為 `x` 的參數，並傳回 `x` 的平方值。 您可以將這個運算式指派給委派類型，如下列範例所示：  
   
 ```csharp  
 delegate int del(int i);  
@@ -58,8 +59,9 @@ namespace ConsoleApplication1
   
  所有適用於匿名方法的限制，也都適用於 Lambda 運算式。 如需詳細資訊，請參閱[匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)。  
   
-## <a name="expression-lambdas"></a>運算式 Lambda  
- 在 => 運算子右邊有運算式的 Lambda 運算式稱為「運算式 Lambda」。 運算式 Lambda 會在[運算式樹狀架構](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)的建構過程中大量使用。 運算式 Lambda 會傳回運算式的結果，並採用下列基本形式：  
+## <a name="expression-lambdas"></a>運算式 Lambda
+
+ 在 => 運算子右邊有運算式的 Lambda 運算式稱為「運算式 Lambda」。 運算式 Lambda 會在[運算式樹狀架構](../concepts/expression-trees/index.md)的建構過程中大量使用。 運算式 Lambda 會傳回運算式的結果，並採用下列基本形式：
   
 ```csharp
 (input-parameters) => expression

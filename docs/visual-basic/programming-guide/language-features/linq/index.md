@@ -5,10 +5,11 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
 ms.openlocfilehash: 58eeffc2445b71adee4fce2f8cff0c69a597f140
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199130"
 ---
 # <a name="linq-in-visual-basic"></a>Visual Basic 中的 LINQ
 本節包含概觀、範例與背景資訊，可協助您了解與使用 Visual Basic 和 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]。  

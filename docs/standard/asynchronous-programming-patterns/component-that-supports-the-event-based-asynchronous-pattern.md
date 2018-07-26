@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：實作支援事件架構非同步模式的元件
+title: 如何：實作支援事件架構非同步模式的元件
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 9156a538e306fb8657855a840dd8185cef8794b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c5282befe15dc65db5ba320f558c7f22949ae7c2
+ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579258"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39220759"
 ---
-# <a name="walkthrough-implementing-a-component-that-supports-the-event-based-asynchronous-pattern"></a>逐步解說：實作支援事件架構非同步模式的元件
+# <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>如何：實作支援事件架構非同步模式的元件
 如果您正在撰寫的類別含有一些可能造成明顯延遲的作業，請考慮實作[事件架構非同步模式概觀](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)，來為它提供非同步功能。  
   
  本逐步解說說明如何建立實作「事件架構非同步模式」的元件。 其實作方式是使用 <xref:System.ComponentModel?displayProperty=nameWithType> 命名空間中的協助程式類別，以確保此元件在任何應用程式模型下都能正常運作，包括 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]、主控台應用程式及 Windows Forms 應用程式。 您也可以使用 <xref:System.Windows.Forms.PropertyGrid> 控制項和您自己的自訂設計工具來設計此元件。  
@@ -254,6 +254,4 @@ ms.locfileid: "33579258"
 ## <a name="see-also"></a>請參閱  
  [操作說明：在背景執行作業](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
  [事件架構非同步模式概觀](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
- [不在組建中：Visual Basic 中的多執行緒處理](https://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
- [操作說明：實作支援事件架構非同步模式的元件](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)  
- [使用事件架構非同步模式設計多執行緒程式](../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)
+ [事件架構非同步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  

@@ -2,12 +2,12 @@
 title: 排序資料 (C#)
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
-ms.openlocfilehash: 6e223ecbfc68e904762bff998b3bd37f88607f7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 90ff7d52e6832935fe16e081e904acae3a24669a
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332555"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245425"
 ---
 # <a name="sorting-data-c"></a>排序資料 (C#)
 排序作業會根據一個或多個屬性來排序序列的項目。 第一個排序準則會執行元素的主要排序； 您可以藉由指定第二個排序準則來排序每一個主要排序群組內的元素。  
@@ -56,7 +56,7 @@ foreach (string str in query)
 ```  
   
 #### <a name="primary-descending-sort"></a>主要遞減排序  
- 下一個範例示範如何在 LINQ 查詢中使用 `orderby``descending` 子句，依其第一個字母以遞減順序來排序字串。  
+ 下一個範例示範如何在 LINQ 查詢中使用 `orderby descending` 子句，依其第一個字母以遞減順序來排序字串。  
   
 ```csharp  
 string[] words = { "the", "quick", "brown", "fox", "jumps" };  
@@ -104,7 +104,7 @@ foreach (string str in query)
 ```  
   
 #### <a name="secondary-descending-sort"></a>次要遞減排序  
- 下一個範例示範如何在 LINQ 查詢中使用 `orderby``descending` 子句，執行依遞增順序的主要排序以及依遞減順序的次要排序。 字串主要是依長度進行排序，其次依字串的第一個字母進行排序。  
+ 下一個範例示範如何在 LINQ 查詢中使用 `orderby descending` 子句，執行依遞增順序的主要排序以及依遞減順序的次要排序。 字串主要是依長度進行排序，其次依字串的第一個字母進行排序。  
   
 ```csharp  
 string[] words = { "the", "quick", "brown", "fox", "jumps" };  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - checked keyword [C#]
 ms.assetid: 718a1194-988d-48a3-b089-d6ee8bd1608d
 ms.openlocfilehash: e6c28ee0c575bd6010a8aad76fc978062c5fc6a4
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948406"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960751"
 ---
 # <a name="checked-c-reference"></a>checked (C# 參考)
 

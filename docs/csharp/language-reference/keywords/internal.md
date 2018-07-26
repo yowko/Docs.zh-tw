@@ -8,11 +8,11 @@ helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
 ms.openlocfilehash: d2fcc19bb7bc6de373412e7728f3025647c0435d
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172668"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961478"
 ---
 # <a name="internal-c-reference"></a>internal (C# 參考)
 `internal` 關鍵字是類型和類型成員的[存取修飾詞](../../../csharp/language-reference/keywords/access-modifiers.md)。 

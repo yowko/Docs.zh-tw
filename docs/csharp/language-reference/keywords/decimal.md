@@ -8,11 +8,11 @@ helpviewer_keywords:
 - decimal keyword [C#]
 ms.assetid: b6522132-b5ee-4be3-ad13-3adfdb7de7a1
 ms.openlocfilehash: 18924abefb85012fc6c61073603c594de906b58d
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027950"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961192"
 ---
 # <a name="decimal-c-reference"></a>decimal (C# 參考)
 

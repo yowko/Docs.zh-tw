@@ -6,11 +6,11 @@ helpviewer_keywords:
 - out keyword [C#]
 ms.assetid: f8c20dec-a8bc-426a-9882-4076b1db1e00
 ms.openlocfilehash: 95ccbe3ab5bf2d326e1154af0b169972a24f7e38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269609"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245082"
 ---
 # <a name="out-generic-modifier-c-reference"></a>out (泛型修飾詞) (C# 參考)
 若為泛型型別參數，`out` 關鍵字會指定型別參數是 Covariant。 您可以在泛型介面及委派中使用 `out` 關鍵字。  

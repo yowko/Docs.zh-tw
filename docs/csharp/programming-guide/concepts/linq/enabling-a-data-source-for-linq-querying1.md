@@ -3,11 +3,11 @@ title: 啟用資料來源以進行 LINQ 查詢1
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
 ms.openlocfilehash: 5b67995f40bc0cb703003aa80b511268f21da8b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339692"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39220993"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>啟用資料來源以進行 LINQ 查詢
 您可以使用各種方式來擴充 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，以啟用要在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 模式下進行查詢的任何資料來源。 資料來源可能是資料結構、Web 服務、檔案系統或資料庫等等。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 模式可以讓用戶端輕鬆查詢已啟用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢的資料來源，因為查詢的語法和模式並未改變。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 可以擴充至這些資料來源的方式包括：  

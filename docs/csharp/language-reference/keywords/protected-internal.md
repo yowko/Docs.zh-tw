@@ -3,11 +3,11 @@ title: protected internal (C# 參考)
 ms.date: 11/15/2017
 author: sputier
 ms.openlocfilehash: 5ba2c811a1a4f095bcee65ed6678a7dc50fe94db
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172237"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244854"
 ---
 # <a name="protected-internal-c-reference"></a>protected internal (C# 參考)
 `protected internal` 關鍵字組合是成員存取修飾詞。 protected internal 成員可以從目前的組件或衍生自包含類別的類型存取。 如需 `protected internal` 和其他存取修飾詞的比較，請參閱[存取範圍層級](../../../csharp/language-reference/keywords/accessibility-levels.md)。 

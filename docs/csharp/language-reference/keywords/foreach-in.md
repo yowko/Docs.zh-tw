@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: d3ce1122c54c14b1baf35641f28d062a2855d335
-ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
+ms.openlocfilehash: a6397cdc9d1e36423a14158a57ca2c1b3fe9df17
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37140264"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874958"
 ---
 # <a name="foreach-in-c-reference"></a>foreach、in (C# 參考)
 
@@ -35,11 +35,11 @@ ms.locfileid: "37140264"
 
 下一個範例使用 `foreach` 陳述式搭配不實作任何介面的 <xref:System.Span%601?displayProperty=nameWithType> 型別執行個體：
 
-[!code-csharp[span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#2)]
+[!code-csharp-interactive[span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#2)]
 
 從 C# 7.3 開始，如果列舉值的 `Current` 屬性會傳回[參考傳回值](../../programming-guide/classes-and-structs/ref-returns.md) (`T` 是集合元素類型的 `ref T`)，您可以使用 `ref` 或 `ref readonly` 修飾詞宣告反覆運算變數。 下列範例會使用 `ref` 反覆運算變數來設定 stackalloc 陣列中每個項目的值。 `ref readonly` 版本會逐一查看集合以列印所有值。 `readonly` 宣告會使用隱含的本機變數宣告。 您可以搭配使用隱含的變數宣告與 `ref` 或 `ref readonly` 宣告，也可以明確地鍵入變數宣告。
 
-[!code-csharp[ref span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#RefSpan)]
+[!code-csharp-interactive[ref span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#RefSpan)]
 
 ## <a name="c-language-specification"></a>C# 語言規格
 

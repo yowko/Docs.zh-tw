@@ -3,11 +3,11 @@ title: 範例 XML 檔： 客戶和訂單中 Namespace1
 ms.date: 07/20/2015
 ms.assetid: 9fe81dbb-e51f-4e80-a49b-e34ac0b1f980
 ms.openlocfilehash: 363da08b7185d42c464dd927bcbbf5d0af4c1899
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646347"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244123"
 ---
 # <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a>範例 XML 檔：位於相同命名空間中的客戶和訂單
 下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。 這個檔案包含客戶和訂單。 XML 位於命名空間中。  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
 ms.openlocfilehash: 47f8e978d81b4aec94482f0a295691b830c3698c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325158"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199156"
 ---
 # <a name="properties-c-programming-guide"></a>屬性 (C# 程式設計手冊)
 

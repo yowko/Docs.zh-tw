@@ -3,11 +3,11 @@ title: 混合的宣告式程式碼-命令式程式碼 Bug (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: fada62d0-0680-4e73-945a-2b00d7a507af
 ms.openlocfilehash: efc58aac69c53cda724e5fe348560a99311e8d4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337687"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244068"
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-c"></a>混合的宣告式程式碼/命令式程式碼 Bug (LINQ to XML) (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 包含各種方法，可讓您直接修改 XML 樹狀結構。 您可以加入項目、刪除項目、變更項目的內容、加入屬性等等。 [修改 XML 樹狀結構 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md) 會說明這個程式發展介面。 如果您要逐一查看其中一個座標軸 (例如，<xref:System.Xml.Linq.XContainer.Elements%2A>)，而且您要在逐一查看座標軸時修改 XML 樹狀結構，您可以解決一些奇怪的 Bug。  

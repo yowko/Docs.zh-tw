@@ -9,11 +9,11 @@ helpviewer_keywords:
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
 ms.openlocfilehash: 343cce85dd235532fbe3fc90af0a785f48518db7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276015"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245607"
 ---
 # <a name="namespace-c-reference"></a>namespace (C# 參考)
 `namespace` 關鍵字用來宣告包含一組相關物件的範圍。 您可以使用命名空間來組織程式碼項目，並建立全域唯一的型別。  

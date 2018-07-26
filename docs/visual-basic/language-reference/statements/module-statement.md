@@ -1,5 +1,5 @@
 ---
-title: Module 陳述式
+title: Module 陳述式 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - Module
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - classes [Visual Basic], vs. modules
 - declarations [Visual Basic], modules
 ms.assetid: a1243afc-14a5-45df-95d5-51118aeac362
-ms.openlocfilehash: f4a0c7b772417085718b63569e8368178e348567
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5628224a08fe5f12cf2a81b179c4998001174354
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605013"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244097"
 ---
 # <a name="module-statement"></a>Module 陳述式
 宣告模組的名稱，並引進變數、 屬性、 事件和組成模組的程序的定義。  
@@ -48,50 +48,50 @@ End Module
  必要。 此模組的名稱。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
   
  `statements`  
- 選擇性。 定義的變數、 屬性、 事件、 程序和此模組的巢狀的類型的陳述式。  
+ 選擇性。 定義的變數、 屬性、 事件、 程序和巢狀型別，此模組的陳述式。  
   
  `End Module`  
  終止`Module`定義。  
   
 ## <a name="remarks"></a>備註  
- A`Module`陳述式會定義可在整個其命名空間的參考類型。 A*模組*(有時稱為*標準模組*) 是類似類別，但有一些重要的區別。 每個模組都有一個執行個體，並不需要建立或指派給變數。 模組不支援繼承或實作介面。 請注意，模組是不*類型*類別或結構會在概念上，您無法宣告為具有模組的資料類型的程式設計項目。  
+ A`Module`陳述式會定義可在其命名空間的參考型別。 A*模組*(有時也稱為*標準模組*) 類似的類別，但有一些重要的差別。 每個模組都有一個執行個體，並不需要建立或指派給變數。 模組不支援繼承或實作介面。 請注意，模組不是*型別*意思是類別或結構，您不能宣告為具有模組的資料類型的程式設計項目。  
   
- 您可以使用`Module`只能在命名空間層級。 這表示*宣告內容*模組必須是原始程式檔或命名空間，且不可為類別、 結構、 模組、 介面、 程序或區塊。 您無法巢狀模組內任何類型或另一個模組，內。 如需詳細資訊，請參閱[宣告內容和預設存取層級](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
+ 您可以使用`Module`只能在命名空間層級。 這表示*宣告內容*的模組必須是原始程式檔或命名空間，而且不得類別、 結構、 模組、 介面、 程序或區塊。 您無法巢狀在另一個模組，或任何類型內的模組。 如需詳細資訊，請參閱[宣告內容和預設存取層級](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
   
- 模組都有相同的存留期為您的程式。 因為所有其成員，所以`Shared`，他們也擁有相同的程式的存留期。  
+ 模組具有相同的存留期，為您的程式。 因為它的成員全部都`Shared`，它們也有相同的程式的存留期。  
   
- 模組預設為[Friend](../../../visual-basic/language-reference/modifiers/friend.md)存取。 您可以調整其存取層級，使用存取修飾詞。 如需詳細資訊，請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+ 模組預設為[Friend](../../../visual-basic/language-reference/modifiers/friend.md)存取。 您可以調整它們的存取層級，使用存取修飾詞。 如需詳細資訊，請參閱 <<c0> [ 存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
- 模組的所有成員都會隱含地`Shared`。  
+ 模組的所有成員都是隱含`Shared`。  
   
 ## <a name="classes-and-modules"></a>類別和模組  
- 這些項目有許多相似處，但有一些重要的差異。  
+ 這些項目有許多相似之處，但有一些重要的差異。  
   
--   **術語。** 舊版的 Visual Basic 辨識兩種類型的模組：*類別模組*（.cls 檔案） 和*標準模組*（.bas 檔案）。 目前的版本會呼叫這些*類別*和*模組*分別。  
+-   **術語。** 舊版的 Visual Basic 會辨識兩種模組類型：*類別的模組*（.cls 檔案） 和*標準模組*（.bas 檔案）。 目前的版本會呼叫這些*類別*並*模組*分別。  
   
--   **共用的成員。** 您可以控制類別的成員是共用或執行個體成員。  
+-   **共用的成員。** 您可以控制類別的成員是否共用，或執行個體成員。  
   
--   **物件的方向。** 類別是物件導向，但模組不是。 為物件，因此唯一類別可以具現化。 如需詳細資訊，請參閱[物件和類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)。  
+-   **物件導向。** 類別是物件導向，但模組不是。 因此唯一的類別可以具現化為物件。 如需詳細資訊，請參閱 <<c0> [ 物件和類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)。  
   
 ## <a name="rules"></a>規則  
   
--   **修飾詞。** 所有的模組成員會隱含地[共用](../../../visual-basic/language-reference/modifiers/shared.md)。 您無法使用`Shared`關鍵字宣告成員，而且您無法改變任何成員的共用的狀態時。  
+-   **修飾詞。** 模組的所有成員都是隱含[共用](../../../visual-basic/language-reference/modifiers/shared.md)。 您無法使用`Shared`關鍵字宣告成員，而且您無法改變任何成員的共用的狀態。  
   
--   **繼承**： 模組無法從任何型別繼承以外<xref:System.Object>，繼承的所有模組。 特別是，一個模組，無法繼承自另一個。  
+-   **繼承**： 模組無法而非繼承自任何型別<xref:System.Object>，繼承的所有模組。 特別是，一個模組無法繼承自另一個。  
   
-     您無法使用[Inherits 陳述式](../../../visual-basic/language-reference/statements/inherits-statement.md)在模組定義中，即使指定<xref:System.Object>。  
+     您無法使用[Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md)在模組定義中，甚至指定<xref:System.Object>。  
   
--   **預設屬性。** 您無法在模組中定義的任何預設屬性。 如需詳細資訊，請參閱[預設](../../../visual-basic/language-reference/modifiers/default.md)。  
+-   **預設屬性。** 您無法在模組中定義任何預設屬性。 如需詳細資訊，請參閱 <<c0> [ 預設](../../../visual-basic/language-reference/modifiers/default.md)。  
   
 ## <a name="behavior"></a>行為  
   
--   **存取層級。** 在模組內，您可以宣告具有自己的存取層級的每個成員。 模組成員預設為[公用](../../../visual-basic/language-reference/modifiers/public.md)變數和常數，除了存取的預設值為[私人](../../../visual-basic/language-reference/modifiers/private.md)存取。 模組具有限制存取比多其中一個成員，指定的模組的存取層級會優先使用。  
+-   **存取層級。** 在模組內，您可以宣告具有它自己的存取層級的每個成員。 模組成員預設為[公開金鑰](../../../visual-basic/language-reference/modifiers/public.md)變數和常數，除了存取哪些預設[私人](../../../visual-basic/language-reference/modifiers/private.md)存取。 當模組有限制存取比多個成員時，指定的模組的存取層級的優先順序較高。  
   
--   **範圍。** 模組是在範圍中的命名空間。  
+-   **範圍。** 模組是在其命名空間的範圍中。  
   
-     每個模組成員的範圍是整個模組。 請注意，所有成員都接受*輸入促銷*，因而導致其升級為包含模組的命名空間範圍。 如需詳細資訊，請參閱[型別提升](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)。  
+     每個模組成員的範圍是整個模組。 請注意，所有成員都進行*類型提升*，因而導致其升級為包含模組的命名空間的範圍。 如需詳細資訊，請參閱 <<c0> [ 型別提升](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)。  
   
--   **限定性條件。** 您可以在專案中，有多個模組，您可以宣告具有相同名稱在兩個或多個模組中的成員。 不過，您必須限定這類成員具有適當的模組名稱的任何參考，如果參考是從該模組的外部。 如需詳細資訊，請參閱[宣告之項目的參考](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
+-   **限定性條件。** 您可以在專案中，有多個模組，您可以宣告具有相同名稱在兩個或多個模組中的成員。 不過，您必須限定這類成員的適當的模組名稱的任何參考，如果參考是從該模組外。 如需詳細資訊，請參閱 < [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
   
 ## <a name="example"></a>範例  
  [!code-vb[VbVbalrStatements#69](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/module-statement_1.vb)]  

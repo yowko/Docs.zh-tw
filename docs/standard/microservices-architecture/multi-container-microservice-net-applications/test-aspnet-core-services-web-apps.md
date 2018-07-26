@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 測試 ASP.NE
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 5e06f582677e61209d0b226fc68bca81dfe593e5
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: f7bd75ecdd85e49524ccdf67f3e59aa4be46bdce
+ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104396"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792409"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>測試 ASP.NET Core 服務和 Web 應用程式
 
@@ -98,7 +98,7 @@ public class PrimeWebDefaultRequestShould
 
 -   **Steve Smith.Testing controllers (測試控制器)** (ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](/aspnet/core/mvc/controllers/testing)
 
--   **Steve Smith.Integration testing (整合測試)** (ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/testing/integration-testing*](/aspnet/core/testing/integration-testing)
+-   **Steve Smith.Integration testing (整合測試)** (ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/test/integration-tests*](/aspnet/core/test/integration-tests)
 
 -   **Unit testing in .NET Core using dotnet test (使用 dotnet test 的 .NET Core 單元測試)**
     [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](../../../core/testing/unit-testing-with-dotnet-test.md)
