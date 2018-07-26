@@ -6,37 +6,37 @@ helpviewer_keywords:
 - XML literals [Visual Basic], white space
 ms.assetid: dfe3a9ff-d69a-418e-a6b5-476f4ed84219
 ms.openlocfilehash: 60ee90c69aeda38f95107a6043801a4994972079
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649746"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245155"
 ---
-# <a name="white-space-in-xml-literals-visual-basic"></a><span data-ttu-id="0b486-102">XML 常值中的空白字元 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0b486-102">White Space in XML Literals (Visual Basic)</span></span>
-<span data-ttu-id="0b486-103">Visual Basic 編譯器會在建立時，結合只有顯著泛空白字元字元從 XML 常值[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]物件。</span><span class="sxs-lookup"><span data-stu-id="0b486-103">The Visual Basic compiler incorporates only the significant white space characters from an XML literal when it creates a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object.</span></span> <span data-ttu-id="0b486-104">不會納入無意義的空格字元。</span><span class="sxs-lookup"><span data-stu-id="0b486-104">The insignificant white space characters are not incorporated.</span></span>  
+# <a name="white-space-in-xml-literals-visual-basic"></a><span data-ttu-id="c3b15-102">XML 常值中的空白字元 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c3b15-102">White Space in XML Literals (Visual Basic)</span></span>
+<span data-ttu-id="c3b15-103">Visual Basic 編譯器會在建立時，包含只有顯著泛空白字元字元從 XML 常值[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]物件。</span><span class="sxs-lookup"><span data-stu-id="c3b15-103">The Visual Basic compiler incorporates only the significant white space characters from an XML literal when it creates a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object.</span></span> <span data-ttu-id="c3b15-104">不會納入不顯著泛空白字元。</span><span class="sxs-lookup"><span data-stu-id="c3b15-104">The insignificant white space characters are not incorporated.</span></span>  
   
-## <a name="significant-and-insignificant-white-space"></a><span data-ttu-id="0b486-105">顯著和不顯著泛空白字元</span><span class="sxs-lookup"><span data-stu-id="0b486-105">Significant and Insignificant White Space</span></span>  
- <span data-ttu-id="0b486-106">XML 常值中的空白字元就很重要的只有三個方面：</span><span class="sxs-lookup"><span data-stu-id="0b486-106">White space characters in XML literals are significant in only three areas:</span></span>  
+## <a name="significant-and-insignificant-white-space"></a><span data-ttu-id="c3b15-105">顯著與不顯著泛空白字元</span><span class="sxs-lookup"><span data-stu-id="c3b15-105">Significant and Insignificant White Space</span></span>  
+ <span data-ttu-id="c3b15-106">XML 常值中的空白字元很重要的只有三個方面：</span><span class="sxs-lookup"><span data-stu-id="c3b15-106">White space characters in XML literals are significant in only three areas:</span></span>  
   
--   <span data-ttu-id="0b486-107">當它們位於屬性值。</span><span class="sxs-lookup"><span data-stu-id="0b486-107">When they are in an attribute value.</span></span>  
+-   <span data-ttu-id="c3b15-107">當它們位於屬性值。</span><span class="sxs-lookup"><span data-stu-id="c3b15-107">When they are in an attribute value.</span></span>  
   
--   <span data-ttu-id="0b486-108">當它們是項目的文字內容的一部分，而且文字也包含其他字元。</span><span class="sxs-lookup"><span data-stu-id="0b486-108">When they are part of an element's text content and the text also contains other characters.</span></span>  
+-   <span data-ttu-id="c3b15-108">當它們是項目的文字內容的一部分，文字也包含其他字元。</span><span class="sxs-lookup"><span data-stu-id="c3b15-108">When they are part of an element's text content and the text also contains other characters.</span></span>  
   
--   <span data-ttu-id="0b486-109">當仍在內嵌運算式的項目文字內容。</span><span class="sxs-lookup"><span data-stu-id="0b486-109">When they are in an embedded expression for an element's text content.</span></span>  
+-   <span data-ttu-id="c3b15-109">當它們位於項目的文字內容的內嵌運算式。</span><span class="sxs-lookup"><span data-stu-id="c3b15-109">When they are in an embedded expression for an element's text content.</span></span>  
   
- <span data-ttu-id="0b486-110">否則，編譯器會將空格字元視為無意義，而且不包含然後中[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]常值的物件。</span><span class="sxs-lookup"><span data-stu-id="0b486-110">Otherwise, the compiler treats white space characters as insignificant and does not include then in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object for the literal.</span></span>  
+ <span data-ttu-id="c3b15-110">否則，編譯器泛空白字元視為無意義，而且不包含然後中[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]的常值的物件。</span><span class="sxs-lookup"><span data-stu-id="c3b15-110">Otherwise, the compiler treats white space characters as insignificant and does not include then in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object for the literal.</span></span>  
   
- <span data-ttu-id="0b486-111">若要在 XML 常值包含有效的空白字元，使用內嵌的運算式，其中包含字串常值空白字元。</span><span class="sxs-lookup"><span data-stu-id="0b486-111">To include insignificant white space in an XML literal, use an embedded expression that contains a string literal with the white space.</span></span>  
+ <span data-ttu-id="c3b15-111">若要在 XML 常值包含不顯著泛空白字元，使用內嵌的運算式，其中包含泛空白字元常值的字串。</span><span class="sxs-lookup"><span data-stu-id="c3b15-111">To include insignificant white space in an XML literal, use an embedded expression that contains a string literal with the white space.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="0b486-112">如果`xml:space`屬性會出現在 XML 元素常值、 Visual Basic 編譯器包含中的屬性<xref:System.Xml.Linq.XElement>物件，但加入此屬性不會變更編譯器如何處理空白字元。</span><span class="sxs-lookup"><span data-stu-id="0b486-112">If the `xml:space` attribute appears in an XML element literal, the Visual Basic compiler includes the attribute in the <xref:System.Xml.Linq.XElement> object, but adding this attribute does not change how the compiler treats white space.</span></span>  
+>  <span data-ttu-id="c3b15-112">如果`xml:space`屬性會出現在 XML 元素常值、 Visual Basic 編譯器包含中的屬性<xref:System.Xml.Linq.XElement>物件，但新增這個屬性不會變更編譯器如何處理泛空白字元。</span><span class="sxs-lookup"><span data-stu-id="c3b15-112">If the `xml:space` attribute appears in an XML element literal, the Visual Basic compiler includes the attribute in the <xref:System.Xml.Linq.XElement> object, but adding this attribute does not change how the compiler treats white space.</span></span>  
   
-## <a name="examples"></a><span data-ttu-id="0b486-113">範例</span><span class="sxs-lookup"><span data-stu-id="0b486-113">Examples</span></span>  
- <span data-ttu-id="0b486-114">下列範例包含兩個外部和內部的 XML 項目。</span><span class="sxs-lookup"><span data-stu-id="0b486-114">The following example contains two XML elements, outer and inner.</span></span> <span data-ttu-id="0b486-115">這兩個元素包含文字內容中的空白字元。</span><span class="sxs-lookup"><span data-stu-id="0b486-115">Both elements contain white space in their text content.</span></span> <span data-ttu-id="0b486-116">外部的項目中的泛空白字元是無意義的因為它只包含空白字元和 XML 項目。</span><span class="sxs-lookup"><span data-stu-id="0b486-116">The white space in the outer element is insignificant because it contains only white space and an XML element.</span></span> <span data-ttu-id="0b486-117">內部項目中的空白字元很重要的因為它包含泛空白字元和文字。</span><span class="sxs-lookup"><span data-stu-id="0b486-117">The white space in the inner element is significant because it contains white space and text.</span></span>  
+## <a name="examples"></a><span data-ttu-id="c3b15-113">範例</span><span class="sxs-lookup"><span data-stu-id="c3b15-113">Examples</span></span>  
+ <span data-ttu-id="c3b15-114">下列範例包含兩個外部和內部的 XML 項目。</span><span class="sxs-lookup"><span data-stu-id="c3b15-114">The following example contains two XML elements, outer and inner.</span></span> <span data-ttu-id="c3b15-115">這兩個項目會包含其文字內容中的泛空白字元。</span><span class="sxs-lookup"><span data-stu-id="c3b15-115">Both elements contain white space in their text content.</span></span> <span data-ttu-id="c3b15-116">外部的項目中的泛空白字元不重要，因為它只包含泛空白字元和 XML 項目。</span><span class="sxs-lookup"><span data-stu-id="c3b15-116">The white space in the outer element is insignificant because it contains only white space and an XML element.</span></span> <span data-ttu-id="c3b15-117">內部項目中的泛空白字元是顯著，因為它包含泛空白字元和文字。</span><span class="sxs-lookup"><span data-stu-id="c3b15-117">The white space in the inner element is significant because it contains white space and text.</span></span>  
   
  [!code-vb[VbXMLSamples#29](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/white-space-in-xml-literals_1.vb)]  
   
- <span data-ttu-id="0b486-118">當執行時，此程式碼會顯示下列文字。</span><span class="sxs-lookup"><span data-stu-id="0b486-118">When run, this code displays the following text.</span></span>  
+ <span data-ttu-id="c3b15-118">當執行時，此程式碼就會顯示下列文字。</span><span class="sxs-lookup"><span data-stu-id="c3b15-118">When run, this code displays the following text.</span></span>  
   
 ```xml  
 <outer>  
@@ -46,5 +46,5 @@ ms.locfileid: "33649746"
 </outer>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0b486-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0b486-119">See Also</span></span>  
- [<span data-ttu-id="0b486-120">在 Visual Basic 中建立 XML</span><span class="sxs-lookup"><span data-stu-id="0b486-120">Creating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+## <a name="see-also"></a><span data-ttu-id="c3b15-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c3b15-119">See Also</span></span>  
+ [<span data-ttu-id="c3b15-120">在 Visual Basic 中建立 XML</span><span class="sxs-lookup"><span data-stu-id="c3b15-120">Creating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)

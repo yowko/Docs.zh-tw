@@ -3,25 +3,25 @@ title: 如何：列出樹狀中的所有節點 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3e934371-f4c6-458b-9f6b-f9061b596f5b
 ms.openlocfilehash: 0ee4c51946ff6116fa37f4ca61bc42deed562532
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322126"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37959477"
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-c"></a><span data-ttu-id="148be-102">如何：列出樹狀中的所有節點 (C#)</span><span class="sxs-lookup"><span data-stu-id="148be-102">How to: List All Nodes in a Tree (C#)</span></span>
-<span data-ttu-id="148be-103">列出樹狀中的所有節點有時候很有幫助。</span><span class="sxs-lookup"><span data-stu-id="148be-103">Sometimes it is helpful to list all nodes in a tree.</span></span> <span data-ttu-id="148be-104">這在精確了解方法或屬性如何影響樹狀結構時相當實用。</span><span class="sxs-lookup"><span data-stu-id="148be-104">This can be useful when learning exactly how a method or property affects the tree.</span></span> <span data-ttu-id="148be-105">以文字格式列出所有節點的其中一個方法為產生正確而且明確識別樹狀結構中任何節點的 XPath 運算式。</span><span class="sxs-lookup"><span data-stu-id="148be-105">One approach to listing all nodes in a textual form is to generate an XPath expression that exactly and specifically identifies any node in the tree.</span></span>  
+# <a name="how-to-list-all-nodes-in-a-tree-c"></a><span data-ttu-id="16d50-102">如何：列出樹狀中的所有節點 (C#)</span><span class="sxs-lookup"><span data-stu-id="16d50-102">How to: List All Nodes in a Tree (C#)</span></span>
+<span data-ttu-id="16d50-103">列出樹狀中的所有節點有時候很有幫助。</span><span class="sxs-lookup"><span data-stu-id="16d50-103">Sometimes it is helpful to list all nodes in a tree.</span></span> <span data-ttu-id="16d50-104">這在精確了解方法或屬性如何影響樹狀結構時相當實用。</span><span class="sxs-lookup"><span data-stu-id="16d50-104">This can be useful when learning exactly how a method or property affects the tree.</span></span> <span data-ttu-id="16d50-105">以文字格式列出所有節點的其中一個方法為產生正確而且明確識別樹狀結構中任何節點的 XPath 運算式。</span><span class="sxs-lookup"><span data-stu-id="16d50-105">One approach to listing all nodes in a textual form is to generate an XPath expression that exactly and specifically identifies any node in the tree.</span></span>  
   
- <span data-ttu-id="148be-106">若是使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 執行 XPath 運算式，則不會特別有幫助。</span><span class="sxs-lookup"><span data-stu-id="148be-106">It is not particularly helpful to execute XPath expressions using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span> <span data-ttu-id="148be-107">XPath 運算式的效能比 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢的效能差，而且 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢的功能更為強大。</span><span class="sxs-lookup"><span data-stu-id="148be-107">XPath expressions have poorer performance than [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries, and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries are much more powerful.</span></span> <span data-ttu-id="148be-108">不過，若是要識別 XML 樹狀中的節點，XPath 就非常適合。</span><span class="sxs-lookup"><span data-stu-id="148be-108">However, as a way to identify nodes in the XML tree, XPath works well.</span></span>  
+ <span data-ttu-id="16d50-106">若是使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 執行 XPath 運算式，則不會特別有幫助。</span><span class="sxs-lookup"><span data-stu-id="16d50-106">It is not particularly helpful to execute XPath expressions using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span> <span data-ttu-id="16d50-107">XPath 運算式的效能比 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢的效能差，而且 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢的功能更為強大。</span><span class="sxs-lookup"><span data-stu-id="16d50-107">XPath expressions have poorer performance than [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries, and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries are much more powerful.</span></span> <span data-ttu-id="16d50-108">不過，若是要識別 XML 樹狀中的節點，XPath 就非常適合。</span><span class="sxs-lookup"><span data-stu-id="16d50-108">However, as a way to identify nodes in the XML tree, XPath works well.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="148be-109">範例</span><span class="sxs-lookup"><span data-stu-id="148be-109">Example</span></span>  
- <span data-ttu-id="148be-110">這個範例顯示名稱為 `GetXPath` 的函式，可針對 XML 樹狀結構中的任何節點，產生特定的 XPath 運算式。</span><span class="sxs-lookup"><span data-stu-id="148be-110">This example shows an function named `GetXPath` that generates a specific XPath expression for any node in the XML tree.</span></span> <span data-ttu-id="148be-111">即使節點位於命名空間中，它也可以產生適當的 XPath 運算式。</span><span class="sxs-lookup"><span data-stu-id="148be-111">It generates appropriate XPath expressions even when nodes are in a namespace.</span></span> <span data-ttu-id="148be-112">XPath 運算式是利用命名空間前置詞產生。</span><span class="sxs-lookup"><span data-stu-id="148be-112">The XPath expressions are generated by using namespace prefixes.</span></span>  
+## <a name="example"></a><span data-ttu-id="16d50-109">範例</span><span class="sxs-lookup"><span data-stu-id="16d50-109">Example</span></span>  
+ <span data-ttu-id="16d50-110">這個範例顯示名稱為 `GetXPath` 的函式，可針對 XML 樹狀結構中的任何節點，產生特定的 XPath 運算式。</span><span class="sxs-lookup"><span data-stu-id="16d50-110">This example shows an function named `GetXPath` that generates a specific XPath expression for any node in the XML tree.</span></span> <span data-ttu-id="16d50-111">即使節點位於命名空間中，它也可以產生適當的 XPath 運算式。</span><span class="sxs-lookup"><span data-stu-id="16d50-111">It generates appropriate XPath expressions even when nodes are in a namespace.</span></span> <span data-ttu-id="16d50-112">XPath 運算式是利用命名空間前置詞產生。</span><span class="sxs-lookup"><span data-stu-id="16d50-112">The XPath expressions are generated by using namespace prefixes.</span></span>  
   
- <span data-ttu-id="148be-113">接著，此範例會建立包含數種節點類型之範例的小型 XML 樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="148be-113">The example then creates a small XML tree that contains an example of several types of nodes.</span></span> <span data-ttu-id="148be-114">它會逐一查看下階節點，並列印每個節點的 XPath 運算式。</span><span class="sxs-lookup"><span data-stu-id="148be-114">It then iterates through the descendant nodes and prints the XPath expression for each node.</span></span>  
+ <span data-ttu-id="16d50-113">接著，此範例會建立包含數種節點類型之範例的小型 XML 樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="16d50-113">The example then creates a small XML tree that contains an example of several types of nodes.</span></span> <span data-ttu-id="16d50-114">它會逐一查看下階節點，並列印每個節點的 XPath 運算式。</span><span class="sxs-lookup"><span data-stu-id="16d50-114">It then iterates through the descendant nodes and prints the XPath expression for each node.</span></span>  
   
- <span data-ttu-id="148be-115">您會注意到，XML 宣告不是樹狀結構中的節點。</span><span class="sxs-lookup"><span data-stu-id="148be-115">You will notice that the XML declaration is not a node in the tree.</span></span>  
+ <span data-ttu-id="16d50-115">您會注意到，XML 宣告不是樹狀結構中的節點。</span><span class="sxs-lookup"><span data-stu-id="16d50-115">You will notice that the XML declaration is not a node in the tree.</span></span>  
   
- <span data-ttu-id="148be-116">下列為包含數種節點類型的 XML 檔案：</span><span class="sxs-lookup"><span data-stu-id="148be-116">The following is an XML file that contains several types of nodes:</span></span>  
+ <span data-ttu-id="16d50-116">下列為包含數種節點類型的 XML 檔案：</span><span class="sxs-lookup"><span data-stu-id="16d50-116">The following is an XML file that contains several types of nodes:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -37,7 +37,7 @@ ms.locfileid: "33322126"
 </Root>  
 ```  
   
- <span data-ttu-id="148be-117">下列為上述 XML 樹狀結構中的節點清單，以 XPath 運算式表示：</span><span class="sxs-lookup"><span data-stu-id="148be-117">The following is the list of nodes in the above XML tree, expressed as XPath expressions:</span></span>  
+ <span data-ttu-id="16d50-117">下列為上述 XML 樹狀結構中的節點清單，以 XPath 運算式表示：</span><span class="sxs-lookup"><span data-stu-id="16d50-117">The following is the list of nodes in the above XML tree, expressed as XPath expressions:</span></span>  
   
 ```  
 /processing-instruction()  
@@ -315,7 +315,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="148be-118">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="148be-118">This example produces the following output:</span></span>  
+ <span data-ttu-id="16d50-118">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="16d50-118">This example produces the following output:</span></span>  
   
 ```  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -348,5 +348,5 @@ class Program
 /Root/aw:ElementInNamespace/aw:ChildInNamespace  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="148be-119">請參閱</span><span class="sxs-lookup"><span data-stu-id="148be-119">See Also</span></span>  
- [<span data-ttu-id="148be-120">進階查詢技術 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="148be-120">Advanced Query Techniques (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="16d50-119">請參閱</span><span class="sxs-lookup"><span data-stu-id="16d50-119">See Also</span></span>  
+ [<span data-ttu-id="16d50-120">進階查詢技術 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="16d50-120">Advanced Query Techniques (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

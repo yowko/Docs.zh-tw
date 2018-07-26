@@ -3,25 +3,25 @@ title: 如何：根據位置尋找子項目 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: e35bb269-ec86-4c96-8321-12491a0eb2c3
 ms.openlocfilehash: ffe10bd5b263e56b6f2ee1708688523a2b0dd018
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317498"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245050"
 ---
-# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a><span data-ttu-id="eee62-102">如何：根據位置尋找子項目 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="eee62-102">How to: Find Child Elements Based on Position (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="eee62-103">有時候您會想要根據項目的位置尋找這些項目。</span><span class="sxs-lookup"><span data-stu-id="eee62-103">Sometimes you want to find elements based on their position.</span></span> <span data-ttu-id="eee62-104">您可能想要尋找第二個項目，或者想要尋找第三到第五個項目。</span><span class="sxs-lookup"><span data-stu-id="eee62-104">You might want to find the second element, or you might want to find the third through the fifth element.</span></span>  
+# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a><span data-ttu-id="01223-102">如何：根據位置尋找子項目 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="01223-102">How to: Find Child Elements Based on Position (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="01223-103">有時候您會想要根據項目的位置尋找這些項目。</span><span class="sxs-lookup"><span data-stu-id="01223-103">Sometimes you want to find elements based on their position.</span></span> <span data-ttu-id="01223-104">您可能想要尋找第二個項目，或者想要尋找第三到第五個項目。</span><span class="sxs-lookup"><span data-stu-id="01223-104">You might want to find the second element, or you might want to find the third through the fifth element.</span></span>  
   
- <span data-ttu-id="eee62-105">XPath 運算式為：</span><span class="sxs-lookup"><span data-stu-id="eee62-105">The XPath expression is:</span></span>  
+ <span data-ttu-id="01223-105">XPath 運算式為：</span><span class="sxs-lookup"><span data-stu-id="01223-105">The XPath expression is:</span></span>  
   
  `Test[position() >= 2 and position() <= 4]`  
   
- <span data-ttu-id="eee62-106">以延遲的方式撰寫這個 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢的方法有兩種。</span><span class="sxs-lookup"><span data-stu-id="eee62-106">There are two approaches to writing this [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] query in a lazy way.</span></span> <span data-ttu-id="eee62-107">您可以使用 <xref:System.Linq.Enumerable.Skip%2A> 和 <xref:System.Linq.Enumerable.Take%2A> 運算子，或者，您可以使用採用索引的 <xref:System.Linq.Enumerable.Where%2A> 多載。</span><span class="sxs-lookup"><span data-stu-id="eee62-107">You can use the <xref:System.Linq.Enumerable.Skip%2A> and <xref:System.Linq.Enumerable.Take%2A> operators, or you can use the <xref:System.Linq.Enumerable.Where%2A> overload that takes an index.</span></span> <span data-ttu-id="eee62-108">當您使用 <xref:System.Linq.Enumerable.Where%2A> 多載時，您可以使用採用兩個引數的 Lambda 運算式。</span><span class="sxs-lookup"><span data-stu-id="eee62-108">When you use the <xref:System.Linq.Enumerable.Where%2A> overload, you use a lambda expression that takes two arguments.</span></span> <span data-ttu-id="eee62-109">下列範例顯示根據位置進行選擇的兩種方法。</span><span class="sxs-lookup"><span data-stu-id="eee62-109">The following example shows both methods of selecting based on position.</span></span>  
+ <span data-ttu-id="01223-106">以延遲的方式撰寫這個 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢的方法有兩種。</span><span class="sxs-lookup"><span data-stu-id="01223-106">There are two approaches to writing this [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] query in a lazy way.</span></span> <span data-ttu-id="01223-107">您可以使用 <xref:System.Linq.Enumerable.Skip%2A> 和 <xref:System.Linq.Enumerable.Take%2A> 運算子，或者，您可以使用採用索引的 <xref:System.Linq.Enumerable.Where%2A> 多載。</span><span class="sxs-lookup"><span data-stu-id="01223-107">You can use the <xref:System.Linq.Enumerable.Skip%2A> and <xref:System.Linq.Enumerable.Take%2A> operators, or you can use the <xref:System.Linq.Enumerable.Where%2A> overload that takes an index.</span></span> <span data-ttu-id="01223-108">當您使用 <xref:System.Linq.Enumerable.Where%2A> 多載時，您可以使用採用兩個引數的 Lambda 運算式。</span><span class="sxs-lookup"><span data-stu-id="01223-108">When you use the <xref:System.Linq.Enumerable.Where%2A> overload, you use a lambda expression that takes two arguments.</span></span> <span data-ttu-id="01223-109">下列範例顯示根據位置進行選擇的兩種方法。</span><span class="sxs-lookup"><span data-stu-id="01223-109">The following example shows both methods of selecting based on position.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="eee62-110">範例</span><span class="sxs-lookup"><span data-stu-id="eee62-110">Example</span></span>  
- <span data-ttu-id="eee62-111">這個範例會尋找第二到第四個 `Test` 項目。</span><span class="sxs-lookup"><span data-stu-id="eee62-111">This example finds the second through the fourth `Test` element.</span></span> <span data-ttu-id="eee62-112">結果為項目的集合。</span><span class="sxs-lookup"><span data-stu-id="eee62-112">The result is a collection of elements.</span></span>  
+## <a name="example"></a><span data-ttu-id="01223-110">範例</span><span class="sxs-lookup"><span data-stu-id="01223-110">Example</span></span>  
+ <span data-ttu-id="01223-111">這個範例會尋找第二到第四個 `Test` 項目。</span><span class="sxs-lookup"><span data-stu-id="01223-111">This example finds the second through the fourth `Test` element.</span></span> <span data-ttu-id="01223-112">結果為項目的集合。</span><span class="sxs-lookup"><span data-stu-id="01223-112">The result is a collection of elements.</span></span>  
   
- <span data-ttu-id="eee62-113">此範例使用下列 XML 文件︰[範例 XML 檔：測試組態 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="eee62-113">This example uses the following XML document: [Sample XML File: Test Configuration (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="01223-113">此範例使用下列 XML 文件︰[範例 XML 檔：測試組態 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="01223-113">This example uses the following XML document: [Sample XML File: Test Configuration (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XElement testCfg = XElement.Load("TestConfig.xml");  
@@ -54,7 +54,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="eee62-114">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="eee62-114">This example produces the following output:</span></span>  
+ <span data-ttu-id="01223-114">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="01223-114">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -78,5 +78,5 @@ Results are identical
 </Test>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="eee62-115">請參閱</span><span class="sxs-lookup"><span data-stu-id="eee62-115">See Also</span></span>  
- [<span data-ttu-id="eee62-116">XPath 使用者適用的 LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="eee62-116">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="01223-115">請參閱</span><span class="sxs-lookup"><span data-stu-id="01223-115">See Also</span></span>  
+ [<span data-ttu-id="01223-116">XPath 使用者適用的 LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="01223-116">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

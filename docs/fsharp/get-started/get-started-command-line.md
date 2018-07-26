@@ -1,52 +1,52 @@
 ---
-title: '開始使用 F # 的命令列工具'
+title: '使用命令列工具開始使用 F #'
 description: '了解如何在 F # 在任何作業系統 （Windows、 macOs 或 Linux） 上使用.NET Core CLI 建置簡單的多專案方案'
 ms.date: 03/26/2018
-ms.openlocfilehash: 35ec2313742a0b14c92f3de2662a16aff389b214
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6cdb2b42781dba6ba00c03b20e6a76d033e03063
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562033"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37875010"
 ---
-# <a name="get-started-with-f-with-the-net-core-cli"></a><span data-ttu-id="11d84-103">開始使用 F # 和.NET Core CLI</span><span class="sxs-lookup"><span data-stu-id="11d84-103">Get started with F# with the .NET Core CLI</span></span>
+# <a name="get-started-with-f-with-the-net-core-cli"></a><span data-ttu-id="b2d9c-103">開始使用 F # 和.NET Core CLI</span><span class="sxs-lookup"><span data-stu-id="b2d9c-103">Get started with F# with the .NET Core CLI</span></span>
 
-<span data-ttu-id="11d84-104">本文件涵蓋如何您可以在任何作業系統上 （Windows、 macOS 或 Linux） 與.NET Core CLI 開始使用 F #。</span><span class="sxs-lookup"><span data-stu-id="11d84-104">This article covers how you can get started with F# on any operating system (Windows, macOS, or Linux) with the .NET Core CLI.</span></span> <span data-ttu-id="11d84-105">它將經歷建置在多專案方案中的使用主控台應用程式會呼叫類別庫。</span><span class="sxs-lookup"><span data-stu-id="11d84-105">It goes through building a multi-project solution with a class library that is called by a console application.</span></span>
+<span data-ttu-id="b2d9c-104">本文涵蓋如何您可以開始使用 F # 在任何作業系統上 （Windows、 macOS 或 Linux） 使用.NET Core CLI。</span><span class="sxs-lookup"><span data-stu-id="b2d9c-104">This article covers how you can get started with F# on any operating system (Windows, macOS, or Linux) with the .NET Core CLI.</span></span> <span data-ttu-id="b2d9c-105">它會經歷建置主控台應用程式會呼叫類別庫的多專案方案。</span><span class="sxs-lookup"><span data-stu-id="b2d9c-105">It goes through building a multi-project solution with a class library that is called by a console application.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="11d84-106">必要條件</span><span class="sxs-lookup"><span data-stu-id="11d84-106">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="b2d9c-106">必要條件</span><span class="sxs-lookup"><span data-stu-id="b2d9c-106">Prerequisites</span></span>
 
-<span data-ttu-id="11d84-107">若要開始，您必須安裝[.NET Core 1.0 或更新版本的 SDK](https://www.microsoft.com/net/download/)。</span><span class="sxs-lookup"><span data-stu-id="11d84-107">To begin, you must install the [.NET Core SDK 1.0 or later](https://www.microsoft.com/net/download/).</span></span> <span data-ttu-id="11d84-108">沒有需要解除安裝舊版的.NET Core SDK，因為它支援由並存安裝。</span><span class="sxs-lookup"><span data-stu-id="11d84-108">There is no need to uninstall a previous version of the .NET Core SDK, as it supports side-by-side installations.</span></span>
+<span data-ttu-id="b2d9c-107">若要開始，您必須安裝最新[.NET Core SDK](https://www.microsoft.com/net/download/)。</span><span class="sxs-lookup"><span data-stu-id="b2d9c-107">To begin, you must install the latest [.NET Core SDK](https://www.microsoft.com/net/download/).</span></span>
 
-<span data-ttu-id="11d84-109">本文假設您知道如何使用命令列，並以慣用的文字編輯器。</span><span class="sxs-lookup"><span data-stu-id="11d84-109">This article assumes that you know how to use a command line and have a preferred text editor.</span></span> <span data-ttu-id="11d84-110">如果您已不使用它， [Visual Studio Code](https://code.visualstudio.com)是絕佳的選項為 F # 的文字編輯器。</span><span class="sxs-lookup"><span data-stu-id="11d84-110">If you don't already use it, [Visual Studio Code](https://code.visualstudio.com) is a great option as a text editor for F#.</span></span> <span data-ttu-id="11d84-111">若要取得實用的功能，如 IntelliSense、 更佳語法反白顯示，以及更多，您可以下載[Ionide 延伸](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)。</span><span class="sxs-lookup"><span data-stu-id="11d84-111">To get awesome features like IntelliSense, better syntax highlighting, and more, you can download the [Ionide Extension](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp).</span></span>
+<span data-ttu-id="b2d9c-108">本文假設您知道如何使用命令列，並以慣用的文字編輯器。</span><span class="sxs-lookup"><span data-stu-id="b2d9c-108">This article assumes that you know how to use a command line and have a preferred text editor.</span></span> <span data-ttu-id="b2d9c-109">如果您尚未使用的話[Visual Studio Code](get-started-vscode.md)是以 F # 的文字編輯器的絕佳選項。</span><span class="sxs-lookup"><span data-stu-id="b2d9c-109">If you don't already use it, [Visual Studio Code](get-started-vscode.md) is a great option as a text editor for F#.</span></span>
 
-## <a name="build-a-simple-multi-project-solution"></a><span data-ttu-id="11d84-112">建置簡單的多專案方案</span><span class="sxs-lookup"><span data-stu-id="11d84-112">Build a simple multi-project solution</span></span>
+## <a name="build-a-simple-multi-project-solution"></a><span data-ttu-id="b2d9c-110">建置簡單的多專案解決方案</span><span class="sxs-lookup"><span data-stu-id="b2d9c-110">Build a simple multi-project solution</span></span>
 
-<span data-ttu-id="11d84-113">開啟命令提示字元/終端機，並使用[dotnet 新](../../core/tools/dotnet-new.md)命令以建立新的方案檔稱為`FSNetCore`:</span><span class="sxs-lookup"><span data-stu-id="11d84-113">Open a command prompt/terminal and use the [dotnet new](../../core/tools/dotnet-new.md) command to create new solution file called `FSNetCore`:</span></span>
+<span data-ttu-id="b2d9c-111">開啟命令提示字元/終端機，並使用[dotnet 新](../../core/tools/dotnet-new.md)命令來建立新的方案檔案，稱為`FSNetCore`:</span><span class="sxs-lookup"><span data-stu-id="b2d9c-111">Open a command prompt/terminal and use the [dotnet new](../../core/tools/dotnet-new.md) command to create new solution file called `FSNetCore`:</span></span>
 
-```
+```console
 dotnet new sln -o FSNetCore
 ```
 
-<span data-ttu-id="11d84-114">執行前一個命令之後，會產生下列目錄結構：</span><span class="sxs-lookup"><span data-stu-id="11d84-114">The following directory structure is produced after running the previous command:</span></span>
+<span data-ttu-id="b2d9c-112">執行上述命令之後，會產生下列目錄結構：</span><span class="sxs-lookup"><span data-stu-id="b2d9c-112">The following directory structure is produced after running the previous command:</span></span>
 
-```
+```console
 FSNetCore
     ├── FSNetCore.sln
 ```
 
-### <a name="write-a-class-library"></a><span data-ttu-id="11d84-115">撰寫類別庫</span><span class="sxs-lookup"><span data-stu-id="11d84-115">Write a class library</span></span>
+### <a name="write-a-class-library"></a><span data-ttu-id="b2d9c-113">撰寫的類別程式庫</span><span class="sxs-lookup"><span data-stu-id="b2d9c-113">Write a class library</span></span>
 
-<span data-ttu-id="11d84-116">將目錄變更為*FSNetCore*。</span><span class="sxs-lookup"><span data-stu-id="11d84-116">Change directories to *FSNetCore*.</span></span>
+<span data-ttu-id="b2d9c-114">將目錄變更為*FSNetCore*。</span><span class="sxs-lookup"><span data-stu-id="b2d9c-114">Change directories to *FSNetCore*.</span></span>
 
-<span data-ttu-id="11d84-117">使用`dotnet new`命令，建立類別庫專案中的**src**名為程式庫的資料夾。</span><span class="sxs-lookup"><span data-stu-id="11d84-117">Use the `dotnet new` command, create a class library project in the **src** folder named Library.</span></span>
+<span data-ttu-id="b2d9c-115">使用`dotnet new`命令，建立類別庫專案中的**src**名為程式庫的資料夾。</span><span class="sxs-lookup"><span data-stu-id="b2d9c-115">Use the `dotnet new` command, create a class library project in the **src** folder named Library.</span></span>
 
-```
+```console
 dotnet new lib -lang F# -o src/Library
 ```
 
-<span data-ttu-id="11d84-118">執行前一個命令之後，會產生下列目錄結構：</span><span class="sxs-lookup"><span data-stu-id="11d84-118">The following directory structure is produced after running the previous command:</span></span>
+<span data-ttu-id="b2d9c-116">執行上述命令之後，會產生下列目錄結構：</span><span class="sxs-lookup"><span data-stu-id="b2d9c-116">The following directory structure is produced after running the previous command:</span></span>
 
-```
+```console
 └── FSNetCore
     ├── FSNetCore.sln
     └── src
@@ -55,7 +55,7 @@ dotnet new lib -lang F# -o src/Library
             └── Library.fsproj
 ```
 
-<span data-ttu-id="11d84-119">取代內容`Library.fs`為下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="11d84-119">Replace the contents of `Library.fs` with the following code:</span></span>
+<span data-ttu-id="b2d9c-117">內容取代`Library.fs`為下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="b2d9c-117">Replace the contents of `Library.fs` with the following code:</span></span>
 
 ```fsharp
 module Library
@@ -66,31 +66,31 @@ let getJsonNetJson value =
     sprintf "I used to be %s but now I'm %s thanks to JSON.NET!" value (JsonConvert.SerializeObject(value))
 ```
 
-<span data-ttu-id="11d84-120">將 Newtonsoft.Json NuGet 套件加入至程式庫專案。</span><span class="sxs-lookup"><span data-stu-id="11d84-120">Add the Newtonsoft.Json NuGet package to the Library project.</span></span>
+<span data-ttu-id="b2d9c-118">將 Newtonsoft.Json NuGet 套件新增至程式庫專案。</span><span class="sxs-lookup"><span data-stu-id="b2d9c-118">Add the Newtonsoft.Json NuGet package to the Library project.</span></span>
 
-```
+```console
 dotnet add src/Library/Library.fsproj package Newtonsoft.Json
 ```
 
-<span data-ttu-id="11d84-121">新增`Library`專案加入`FSNetCore`方案中使用[dotnet sln 新增](../../core/tools/dotnet-sln.md)命令：</span><span class="sxs-lookup"><span data-stu-id="11d84-121">Add the `Library` project to the `FSNetCore` solution using the [dotnet sln add](../../core/tools/dotnet-sln.md) command:</span></span>
+<span data-ttu-id="b2d9c-119">新增`Library`專案加入`FSNetCore`解決方案使用[dotnet sln 新增](../../core/tools/dotnet-sln.md)命令：</span><span class="sxs-lookup"><span data-stu-id="b2d9c-119">Add the `Library` project to the `FSNetCore` solution using the [dotnet sln add](../../core/tools/dotnet-sln.md) command:</span></span>
 
-```
+```console
 dotnet sln add src/Library/Library.fsproj
 ```
 
-<span data-ttu-id="11d84-122">還原 NuGet 相依性，使用`dotnet restore`命令 ([請參閱附註](#dotnet-restore-note)) 並執行`dotnet build`建置專案。</span><span class="sxs-lookup"><span data-stu-id="11d84-122">Restore the NuGet dependencies using the `dotnet restore` command ([see note](#dotnet-restore-note)) and run `dotnet build` to build the project.</span></span>
+<span data-ttu-id="b2d9c-120">執行`dotnet build`來建置專案。</span><span class="sxs-lookup"><span data-stu-id="b2d9c-120">Run `dotnet build` to build the project.</span></span> <span data-ttu-id="b2d9c-121">建置時，將會還原無法解析的相依性。</span><span class="sxs-lookup"><span data-stu-id="b2d9c-121">Unresolved dependencies will be restored when building.</span></span>
 
-### <a name="write-a-console-application-that-consumes-the-class-library"></a><span data-ttu-id="11d84-123">撰寫使用類別庫的主控台應用程式</span><span class="sxs-lookup"><span data-stu-id="11d84-123">Write a console application that consumes the class library</span></span>
+### <a name="write-a-console-application-that-consumes-the-class-library"></a><span data-ttu-id="b2d9c-122">撰寫主控台應用程式使用的類別庫</span><span class="sxs-lookup"><span data-stu-id="b2d9c-122">Write a console application that consumes the class library</span></span>
 
-<span data-ttu-id="11d84-124">使用`dotnet new`命令，請建立主控台應用程式中的**src**名為應用程式的資料夾。</span><span class="sxs-lookup"><span data-stu-id="11d84-124">Use the `dotnet new` command, create a console application in the **src** folder named App.</span></span>
+<span data-ttu-id="b2d9c-123">使用`dotnet new`命令，建立主控台應用程式**src**名為應用程式的資料夾。</span><span class="sxs-lookup"><span data-stu-id="b2d9c-123">Use the `dotnet new` command, create a console application in the **src** folder named App.</span></span>
 
-```
+```console
 dotnet new console -lang F# -o src/App
 ```
 
-<span data-ttu-id="11d84-125">執行前一個命令之後，會產生下列目錄結構：</span><span class="sxs-lookup"><span data-stu-id="11d84-125">The following directory structure is produced after running the previous command:</span></span>
+<span data-ttu-id="b2d9c-124">執行上述命令之後，會產生下列目錄結構：</span><span class="sxs-lookup"><span data-stu-id="b2d9c-124">The following directory structure is produced after running the previous command:</span></span>
 
-```
+```console
 └── FSNetCore
     ├── FSNetCore.sln
     └── src
@@ -102,7 +102,7 @@ dotnet new console -lang F# -o src/App
             └── Library.fsproj
 ```
 
-<span data-ttu-id="11d84-126">使用以下列程式碼取代`Program.fs`的內容：</span><span class="sxs-lookup"><span data-stu-id="11d84-126">Replace the contents of the `Program.fs` file with the following code:</span></span>
+<span data-ttu-id="b2d9c-125">使用以下列程式碼取代`Program.fs`的內容：</span><span class="sxs-lookup"><span data-stu-id="b2d9c-125">Replace the contents of the `Program.fs` file with the following code:</span></span>
 
 ```fsharp
 open System
@@ -119,35 +119,36 @@ let main argv =
     0 // return an integer exit code
 ```
 
-<span data-ttu-id="11d84-127">將參考加入`Library`專案使用[dotnet 將參考加入](../../core/tools/dotnet-add-reference.md)。</span><span class="sxs-lookup"><span data-stu-id="11d84-127">Add a reference to the `Library` project using [dotnet add reference](../../core/tools/dotnet-add-reference.md).</span></span>
+<span data-ttu-id="b2d9c-126">將參考加入`Library`使用的專案[dotnet 新增參考](../../core/tools/dotnet-add-reference.md)。</span><span class="sxs-lookup"><span data-stu-id="b2d9c-126">Add a reference to the `Library` project using [dotnet add reference](../../core/tools/dotnet-add-reference.md).</span></span>
 
-```
+```console
 dotnet add src/App/App.fsproj reference src/Library/Library.fsproj
 ```
 
-<span data-ttu-id="11d84-128">新增`App`專案加入`FSNetCore`方案中使用`dotnet sln add`命令：</span><span class="sxs-lookup"><span data-stu-id="11d84-128">Add the `App` project to the `FSNetCore` solution using the `dotnet sln add` command:</span></span>
+<span data-ttu-id="b2d9c-127">新增`App`專案加入`FSNetCore`解決方案使用`dotnet sln add`命令：</span><span class="sxs-lookup"><span data-stu-id="b2d9c-127">Add the `App` project to the `FSNetCore` solution using the `dotnet sln add` command:</span></span>
 
-```
+```console
 dotnet sln add src/App/App.fsproj
 ```
 
-<span data-ttu-id="11d84-129">還原 NuGet 相依性， `dotnet restore` ([請參閱附註](#dotnet-restore-note)) 並執行`dotnet build`建置專案。</span><span class="sxs-lookup"><span data-stu-id="11d84-129">Restore the NuGet dependencies, `dotnet restore` ([see note](#dotnet-restore-note)) and run `dotnet build` to build the project.</span></span>
+<span data-ttu-id="b2d9c-128">還原 NuGet 相依性`dotnet restore`([請參閱附註](#dotnet-restore-note)) 並執行`dotnet build`來建置專案。</span><span class="sxs-lookup"><span data-stu-id="b2d9c-128">Restore the NuGet dependencies, `dotnet restore` ([see note](#dotnet-restore-note)) and run `dotnet build` to build the project.</span></span>
 
-<span data-ttu-id="11d84-130">將目錄切換到`src/App`主控台專案並執行專案傳遞`Hello World`做為引數：</span><span class="sxs-lookup"><span data-stu-id="11d84-130">Change directory to the `src/App` console project and run the project passing `Hello World` as arguments:</span></span>
+<span data-ttu-id="b2d9c-129">將目錄變更為`src/App`主控台專案，然後執行專案傳遞`Hello World`做為引數：</span><span class="sxs-lookup"><span data-stu-id="b2d9c-129">Change directory to the `src/App` console project and run the project passing `Hello World` as arguments:</span></span>
 
-```
+```console
 cd src/App
 dotnet run Hello World
 ```
 
-<span data-ttu-id="11d84-131">您應該會看到下列結果：</span><span class="sxs-lookup"><span data-stu-id="11d84-131">You should see the following results:</span></span>
+<span data-ttu-id="b2d9c-130">您應該會看到下列結果：</span><span class="sxs-lookup"><span data-stu-id="b2d9c-130">You should see the following results:</span></span>
 
-```
+```console
 Nice command-line arguments! Here's what JSON.NET has to say about them:
 
 I used to be Hello but now I'm ""Hello"" thanks to JSON.NET!
 I used to be World but now I'm ""World"" thanks to JSON.NET!
 ```
 
-<a name="dotnet-restore-note"></a>
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+## <a name="next-steps"></a><span data-ttu-id="b2d9c-131">後續步驟</span><span class="sxs-lookup"><span data-stu-id="b2d9c-131">Next steps</span></span>
+
+<span data-ttu-id="b2d9c-132">接下來，請參閱[的 F # 教學課程](../tour.md)若要深入了解不同的 F # 功能。</span><span class="sxs-lookup"><span data-stu-id="b2d9c-132">Next, check out the [Tour of F#](../tour.md) to learn more about different F# features.</span></span>
