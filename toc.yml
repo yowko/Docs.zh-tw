@@ -25,6 +25,9 @@
             - name: .NET 微服務 - DevOps 電子書
               tocHref: /dotnet/standard/containerized-lifecycle-architecture/
               topicHref: /dotnet/standard/containerized-lifecycle-architecture/index
+            - name: 無伺服器應用程式電子書
+              tocHref: /dotnet/standard/serverless-architecture/
+              topicHref: /dotnet/standard/serverless-architecture/index
             - name: 非同步程式設計模式
               tocHref: /dotnet/standard/asynchronous-programming-patterns/
               topicHref: /dotnet/standard/asynchronous-programming-patterns/index
