@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 保護 .NET �
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: ccdf6ecc30979e953d42a403c2c988780394df96
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 0e55a68432dfd44c7a73ae51512f50d481ae100c
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106693"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37937029"
 ---
 # <a name="securing-net-microservices-and-web-applications"></a>保護 .NET 微服務和 Web 應用程式
 

@@ -4,12 +4,12 @@ description: 部署 .NET Core 應用程式。
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.openlocfilehash: 27f9260166f7e7899501e1798333b982fb728152
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a39efdd92cf9c3bb6aadf83949e02ce20960481
+ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33212671"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792422"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core 應用程式部署
 
@@ -41,7 +41,7 @@ ms.locfileid: "33212671"
 
 ## <a name="self-contained-deployments-scd"></a>自封式部署 (SCD)
 
-針對自封式部署，您不僅要部署自己的應用程式和所有協力廠商相依性，還要部署建置應用程式所用的 .NET Core 版本。 不過，建立 SCD 不包含各種平台的 [.NET Core 原生相依性](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)本身 (例如，macOS 上的 OpenSSL)，所以在執行應用程式前要先行安裝。
+針對自封式部署，您不僅要部署自己的應用程式和所有協力廠商相依性，還要部署建置應用程式所用的 .NET Core 版本。 不過，建立 SCD 不包含各種平台的 [.NET Core 原生相依性](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)本身 (例如，macOS 上的 OpenSSL)，所以在執行應用程式前要先行安裝。 如需執行階段之版本繫結的詳細資訊，請參閱 [.NET Core 中的版本繫結](../versions/selection.md)上的文章
 
 FDD 和 SCD 使用不同的主機可執行檔，因此您可以使用自己的發行者簽章，為 SCD 簽署主機可執行檔。
 

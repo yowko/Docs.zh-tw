@@ -1,76 +1,113 @@
 ---
 title: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式
-description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | 簡介
+description: 本指南會提供使用 ASP.NET Core 和 Azure 建置整合型 Web 應用程式的端對端指引。
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/06/2017
-ms.openlocfilehash: 085ec85002fc1661d6e20b3c3f11cf4b6ea2161b
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/28/2018
+ms.openlocfilehash: e2d2545108b55043c322baffbd609b2422d2743b
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37103915"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936980"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式
 
-![封面影像](./media/cover.jpg)
+![封面影像](./media/cover.png)
 
+發行者
+
+Microsoft 開發人員部門 .NET 和 Visual Studio 產品小組
+
+Microsoft Corporation 部門
+
+One Microsoft Way
+
+Redmond, Washington 98052-6399
+
+Copyright © 2018 by Microsoft Corporation
+
+著作權所有，並保留一切權利。 本書內容的任何部分在未經過發行者書面許可下，不得以任何形式或透過任何方式進行重製或傳送。
+
+本書是以「現況」提供，代表作者的觀點和意見。 本書中所述之觀點、意見與資訊 (包括 URL 及其他網際網路網站參考) 可能會隨時變更，恕不另行通知。
+
+此處所描述的一些範例僅供說明，純屬虛構。 任何實際關聯或連結純屬巧合。
+
+Microsoft 與列於 https://www.microsoft.com「商標」網頁的商標是 Microsoft 集團的商標。
+
+Mac 與 macOS 是 Apple Inc. 的商標。
+
+Docker 鯨魚標誌是 Docker, Inc. 的註冊商標。使用需要許可。
+
+所有其他商標和標誌屬於其各自擁有者的財產。
+
+作者: 
+
+> 軟體架構 Advisor **Steve Smith (@ardalis)**，[Ardalis.com](https://ardalis.com)
+
+編輯者：
+
+> **Maira Wenzel**
+
+## <a name="introduction"></a>簡介
 
 .NET Core 和 ASP.NET Core 提供許多優於傳統.NET 開發的優點。 如果下列部分或所有項目對應用程式成功而言十分重要，則您應該將 .NET Core 用於伺服器應用程式：
 
--   跨平台支援
+- 跨平台支援。
 
--   使用微服務
+- 使用微服務。
 
--   使用 Docker 容器
+- 使用 Docker 容器。
 
--   高效能和延展性需求
+- 高效能和延展性需求。
 
--   相同伺服器上應用程式之 .NET 版本的並存版本控制
+- 相同伺服器上應用程式之 .NET 版本的並存版本控制。
 
 傳統 .NET 應用程式可以並確實支援這些需求，但 ASP.NET Core 和 .NET Core 已最佳化可提供針對上述案例的改善支援。
 
 越來越多的組織會選擇使用 Microsoft Azure 這類服務，以在雲端中裝載其 Web 應用程式。 如果下列對您的應用程式或組織十分重要，則您應該考慮將應用程式裝載在雲端中：
 
--   降低對資料中心成本的投資 (硬體、軟體、空間、公用程式等等)
+- 降低對資料中心成本的投資 (硬體、軟體、空間、公用程式等等)
 
--   彈性價格 (根據使用付費，而閒置容量不需付費)
+- 彈性定價 (根據使用量付費，而閒置容量不需付費)。
 
--   極高可靠性
+- 可靠性極高。
 
--   改善的應用程式行動性；輕鬆地變更您應用程式的部署位置和方式
+- 改善的應用程式行動性；輕鬆地變更您應用程式的部署位置和方式。
 
--   彈性容量；根據實際需求相應增加或減少
+- 彈性容量；根據實際需求相應增加或減少。
 
-使用 ASP.NET Core 建置 Web 應用程式 (且其裝載於 Microsoft Azure) 提供許多優於傳統替代項目的具競爭性優點。 ASP.NET Core 已針對現代化 Web 應用程式開發做法和雲端裝載案例最佳化。 在本指南中，您將學習如何架構 ASP.NET Core 應用程式以善加利用這些功能。
+使用 ASP.NET Core 建置 Web 應用程式 (且其裝載於 Azure) 提供許多比傳統替代項目更具競爭性的優點。 ASP.NET Core 已針對現代化 Web 應用程式開發做法和雲端裝載案例最佳化。 在本指南中，您將學習如何架構 ASP.NET Core 應用程式，以善加利用這些功能。
 
 ## <a name="purpose"></a>用途
 
 本指南會提供使用 ASP.NET Core 和 Azure 建置整合型 Web 應用程式的端對端指引。
 
-本指南可補充「使用 .NET 架構和開發容器化和以微服務為基礎的應用程式」，其較著重 Docker、微服務以及裝載企業應用程式的容器的部署。
+本指南是 ["_.NET Microservices.Architecture for Containerized .NET Applications_"](../microservices-architecture/index.md) 的補充說明，該書籍著重在 Docker、微服務及部署容器以裝載企業應用程式的部分。
 
-> ### <a name="architecting-and-developing-containerized-microservice-based-apps-in-net"></a>在 .NET 中架構和開發以容器化微服務為基礎的應用程式
-> - **電子書**  
-> <http://aka.ms/MicroservicesEbook>
-> - **範例應用程式**  
-> <http://aka.ms/microservicesarchitecture>
+### <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET 微服務。 容器化 .NET 應用程式的架構
+
+- **電子書**  
+  <https://aka.ms/MicroservicesEbook>
+- **範例應用程式**  
+  <https://aka.ms/microservicesarchitecture>
 
 ## <a name="who-should-use-this-guide"></a>誰應該使用本指南
 
 本指南的對象主要是開發人員、開發負責人和架構設計人員，而他們對使用 Microsoft 技術和服務在雲端中建置現代化 Web 應用程式感興趣。
 
-次要對象是技術決策者，其已熟悉 ASP.NET 和 (或) Azure，並尋找是否可以升級為新或現有專案之 ASP.NET Core 的相關資訊。
+次要對象是技術決策者，其已熟悉 ASP.NET 或 Azure，並尋找是否可以升級為新專案或現有專案之 ASP.NET Core 的相關資訊。
 
 ## <a name="how-you-can-use-this-guide"></a>此指南的使用方式
 
-本指南已壓縮成相當小的文件，著重於使用現代化 .NET 技術和 Windows Azure 來建置 Web 應用程式。 因此，可以完整讀取它，以提供對這類應用程式和其技術考量的基礎了解。 本指南與其範例應用程式也可以作為起點或參考。 使用相關聯的範例應用程式作為您專屬應用程式的範本，或查看如何組織應用程式的元件組件。 請回頭參考指南的原則、架構和技術選項的涵蓋範圍，以及權衡這些針對您專屬應用程式之選擇的決策考量。
+本指南已壓縮成相當小的文件，著重於使用現代化 .NET 技術和 Windows Azure 來建置 Web 應用程式。 因此，可以完整讀取它，以提供對這類應用程式和其技術考量的基礎了解。 本指南與其範例應用程式也可以作為起點或參考。 使用相關聯的範例應用程式作為您專屬應用程式的範本，或查看如何組織應用程式的元件組件。 當您要為專屬應用程式權衡這些選擇時，請回頭參考指南內架構和技術選項的原則與說明還有決策考量。
 
-請隨意將本指南轉寄給您的小組，協助確保對這些考量和機會有共同的了解。 讓所有人都使用一組共用術語和基礎原則，將有助於確保套用一致的架構模式和做法。
+請隨意將本指南轉寄給您的小組，協助確保對這些考量和機會有共同的了解。 讓所有人都使用一組共用術語和基礎原則，有助確保套用一致的架構模式和做法。
 
 ## <a name="references"></a>參考
+
 - **針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇**  
-<https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server>
+  <https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server>
 
 >[!div class="step-by-step"]
 [下一步](modern-web-applications-characteristics.md)

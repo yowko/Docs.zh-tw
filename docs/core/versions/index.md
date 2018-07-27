@@ -4,12 +4,12 @@ description: 了解 .NET Core 的版本控制運作方式。
 author: bleroy
 ms.author: mairaw
 ms.date: 02/13/2018
-ms.openlocfilehash: 33c545fdea254133fe6e65f4d6dd725f5184faec
-ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
+ms.openlocfilehash: aa4f05a1a95c1bfbd16f41ca695ea23d48606772
+ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298236"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792318"
 ---
 # <a name="net-core-versioning"></a>.NET Core 版本控制
 
@@ -32,6 +32,15 @@ ms.locfileid: "36298236"
 * `Microsoft.NETCore.App` 中繼套件。
 
 使用單一版本號碼可讓使用者更容易了解在開發電腦上要安裝的 SDK 版本，以及佈建到生產環境時，應該使用的共用架構對應版本。 下載 SDK 或執行階段時，您看到的版本號碼就會是相同的。
+
+### <a name="version-selection"></a>版本選取項目
+
+.NET core 會套用一組原則，以決定在各種案例中使用何種 .NET Core 執行階段和 SDK 的版本。 您可在[版本選取項目](selection.md)上的文章中完整探索這些案例及原則。
+
+您可以將這些原則視為執行下列角色：
+
+* 可簡單且有效率地部署 .NET Core，包括安全性和可靠性更新。
+* 可讓開發人員使用最新的工具和命令，且不受目標執行階段影響。
 
 ### <a name="installers"></a>安裝程式
 
