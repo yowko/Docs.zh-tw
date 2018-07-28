@@ -7,14 +7,14 @@ helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
 ms.openlocfilehash: 7d2477070dce558aa932c822852ac8ac9c6721e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654056"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332657"
 ---
 # <a name="string-basics-in-visual-basic"></a>Visual Basic 中的字串基礎
-`String` 資料類型代表一系列字元 (每個依序代表 `Char` 資料類型的一個執行個體)。 本主題說明在 Visual Basic 中字串的基本概念。  
+`String` 資料類型代表一系列字元 (每個依序代表 `Char` 資料類型的一個執行個體)。 本主題介紹 Visual Basic 中的字串的基本概念。  
   
 ## <a name="string-variables"></a>字串變數  
  可將代表字元數列的常值指派給字串的執行個體。 例如:   
@@ -29,7 +29,7 @@ ms.locfileid: "33654056"
   
  [!code-vb[VbVbalrStrings#65](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_3.vb)]  
   
- 此程式碼會造成錯誤，因為編譯器會終止第二個引號後的字串，並將字串的其餘部分解譯為程式碼。 若要解決這個問題，Visual Basic 會將字串常值視為一個引號字串中的兩個引號解譯。 下列範例示範在字串中包含引號的正確方式：  
+ 此程式碼會造成錯誤，因為編譯器會終止第二個引號後的字串，並將字串的其餘部分解譯為程式碼。 若要解決此問題，Visual Basic 會解譯為字串中的一個引號常值字串中的兩個引號。 下列範例示範在字串中包含引號的正確方式：  
   
  [!code-vb[VbVbalrStrings#66](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_4.vb)]  
   
@@ -61,7 +61,7 @@ World]]></xml>.Value
  變數 `myArray` 現在包含 `Char` 值的陣列，每個都代表 `myString` 的一個字元。  
   
 ## <a name="the-immutability-of-strings"></a>字串的不變性  
- 字串是*不可變*，其值無法變更一次，也就是說它已建立。 不過，這不會讓您將多個值指派給一個字串變數。 參考下列範例：  
+ 字串是*不可變*，其值無法變更一次這表示它已建立。 不過，這不會讓您將多個值指派給一個字串變數。 參考下列範例：  
   
  [!code-vb[VbVbalrStrings#69](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_7.vb)]  
   

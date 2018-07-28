@@ -1,5 +1,5 @@
 ---
-title: GoTo 陳述式
+title: GoTo 陳述式 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.GoTo
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-ms.openlocfilehash: 27ebc677bab8b7f61a02408fddb30a6ec21c43cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adb7668b6a818b2042a38f9458685a6f93085dc8
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604740"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332983"
 ---
 # <a name="goto-statement"></a>GoTo 陳述式
-無條件分支的程序中指定的行。  
+無條件分支到程序中指定的行。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,27 +34,27 @@ GoTo line
  必要。 任何行標籤。  
   
 ## <a name="remarks"></a>備註  
- `GoTo`陳述式只能將程式分支中的程序中的行。 行必須擁有行加上標籤的`GoTo`可以參考。 如需詳細資訊，請參閱[How to： 標籤陳述式](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)。  
+ `GoTo`陳述式只可以分支在程序中出現的行。 列必須有標籤的列`GoTo`可以參考。 如需詳細資訊，請參閱 <<c0> [ 如何： 標籤陳述式](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)。  
   
 > [!NOTE]
->  `GoTo` 陳述式會讓程式碼難以讀取和維護。 您應該盡可能改用控制結構。 如需詳細資訊，請參閱[控制流程](../../../visual-basic/programming-guide/language-features/control-flow/index.md)。  
+>  `GoTo` 陳述式可以讓程式碼難以閱讀和維護。 可能的話，請改為使用控制結構。 如需詳細資訊，請參閱 <<c0> [ 控制流程](../../../visual-basic/programming-guide/language-features/control-flow/index.md)。  
   
- 您無法使用`GoTo`陳述式來從外部的分支`For`...`Next`, `For Each`...`Next`, `SyncLock`...`End SyncLock`, `Try`...`Catch`...`Finally`, `With`...`End With`，或`Using`...`End Using`建構內的標籤。  
+ 您無法使用`GoTo`陳述式，以從外部的分支`For`...`Next`, `For Each`...`Next`, `SyncLock`...`End SyncLock`, `Try`...`Catch`...`Finally`, `With`...`End With`，或`Using`...`End Using`建構內的標籤。  
   
-## <a name="branching-and-try-constructions"></a>分支，然後再次嘗試語法結構  
- 內`Try`...`Catch`...`Finally`建構，下列規則適用於與分支`GoTo`陳述式。  
+## <a name="branching-and-try-constructions"></a>分支，然後再試語法結構  
+ 內`Try`...`Catch`...`Finally`建構，下列規則適用於使用分支`GoTo`陳述式。  
   
-|區塊或地區|分支中從外部|從內部往外分支|  
+|區塊或地區|分支中從外部|從內往外分支|  
 |---------------------|-------------------------------|-------------------------------|  
-|`Try` 區塊|只能從`Catch`相同建構區塊<sup>1</sup>|只在整個建構之外|  
-|`Catch` 區塊|不允許|僅外部整個建構，或為`Try`相同建構區塊<sup>1</sup>|  
-|`Finally` 區塊|不允許|不允許|  
+|`Try` 區塊|只能從`Catch`相同的建構區塊<sup>1</sup>|只為整個建構之外|  
+|`Catch` 區塊|永遠不允許|只之外的整個建構，或是`Try`相同的建構區塊<sup>1</sup>|  
+|`Finally` 區塊|永遠不允許|永遠不允許|  
   
- <sup>1</sup>如果一個`Try`...`Catch`...`Finally`建構，巢狀`Catch`區塊可以分支到`Try`區塊在它自己的巢狀層級，而不用到任何其他`Try`區塊。 巢狀`Try`...`Catch`...`Finally`建構必須完全在包含`Try`或`Catch`建構巢狀所在的區塊。  
+ <sup>1</sup>如果`Try`...`Catch`...`Finally`建構巢狀在另一個`Catch`區塊可以分支到`Try`區塊，在它自己的巢狀層級，但不是到任何其他`Try`區塊。 巢狀`Try`...`Catch`...`Finally`建構必須完全在包含`Try`或`Catch`建構巢狀所在的區塊。  
   
- 下圖顯示一個`Try`建構巢狀方式置於另一個。 兩個建構區塊之間的不同分支就會表示成有效或無效。  
+ 下圖顯示一個`Try`建構巢狀在另一個。 在兩個建構的區塊之間的各種分支會表示成有效或無效。  
   
- ![Try 語法結構的分支示意圖](../../../visual-basic/language-reference/statements/media/trybranching.gif "TryBranching")  
+ ![Try 語法結構中的分支示意圖](../../../visual-basic/language-reference/statements/media/trybranching.gif "TryBranching")  
 Try 語法結構的有效和無效的分支  
   
 ## <a name="example"></a>範例  

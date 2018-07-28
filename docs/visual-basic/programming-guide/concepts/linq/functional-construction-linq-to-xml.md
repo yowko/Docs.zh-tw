@@ -1,15 +1,15 @@
 ---
-title: 功能建構 (LINQ to XML) (Visual Basic)
+title: 函數式建構 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: feac4273-39ab-43ae-bab7-4059c807a785
 ms.openlocfilehash: 360c321f993c8adb17767987060a0edcccad082a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644286"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39333009"
 ---
-# <a name="functional-construction-linq-to-xml-visual-basic"></a>功能建構 (LINQ to XML) (Visual Basic)
+# <a name="functional-construction-linq-to-xml-visual-basic"></a>函數式建構 (LINQ to XML) (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 提供一種強大的方式來建立 XML 元素，稱為「函數式建構」。 功能結構是在單一陳述式中建立 XML 樹狀結構的能力。  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 程式介面有數種主要功能可以使用功能結構：  
@@ -22,7 +22,7 @@ ms.locfileid: "33644286"
   
  以下是一個範例：  
   
- 這些功能可讓您撰寫程式碼使用 XML 常值，建立 XML 樹狀結構，也可以撰寫程式碼會使用結果[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查詢當您建立 XML 樹狀結構：  
+ 這些功能可讓您撰寫程式碼使用 XML 常值，來建立 XML 樹狀結構，以及撰寫程式碼，會使用結果[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查詢當您建立 XML 樹狀結構：  
   
 ```vb  
 Dim srcTree As XElement = _  

@@ -6,14 +6,14 @@ helpviewer_keywords:
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 ms.openlocfilehash: b69615a5cf05427a2bfde82af976cfafb41171b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655267"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332869"
 ---
 # <a name="events-visual-basic"></a>事件 (Visual Basic)
-雖然您可能會將 Visual Studio 專案中視覺化為一系列程序執行的序列，但實際上，大部分程式都是事件驅動，這表示執行流程取決於呼叫的外部項目*事件*。  
+雖然您可能會以視覺化方式檢視 Visual Studio 專案以一系列的程序，依序執行，事實上，大部分程式都是事件驅動，這表示執行流程取決於呼叫的外部發生項目*事件*。  
   
  事件是通知應用程式發生重要事件的信號。 例如，當使用者按一下表單上的控制項時，表單可以引發 `Click` 事件，並呼叫處理事件的程序。 事件也允許個別工作進行通訊。 例如，假設您的應用程式與主應用程式個別執行排序工作。 如果使用者取消排序，則您的應用程式可以傳送取消事件，以指示排序處理序停止。  
   
@@ -26,7 +26,7 @@ ms.locfileid: "33655267"
  [!code-vb[VbVbalrEvents#24](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_1.vb)]  
   
 ### <a name="raising-events"></a>引發事件  
- 事件就像是訊息，會告知發生了重要事件。 廣播訊息的動作稱為「引發」事件。 您可以在 Visual Basic 中引發事件的`RaiseEvent`陳述式，如下列範例所示：  
+ 事件就像是訊息，會告知發生了重要事件。 廣播訊息的動作稱為「引發」事件。 您可以在 Visual Basic 中引發事件`RaiseEvent`陳述式，如下列範例所示：  
   
  [!code-vb[VbVbalrEvents#25](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_2.vb)]  
   
@@ -38,7 +38,7 @@ ms.locfileid: "33655267"
 ### <a name="event-handlers"></a>事件處理常式  
  「事件處理常式」是在發生相對應事件時所呼叫的程序。 您可以使用具有相符簽章的任何有效副程式，做為事件處理常式。 不過，您無法使用函式做為事件處理常式，因為它無法將值傳回事件來源。  
   
- Visual Basic 使用標準命名慣例，事件處理常式，它結合了事件發送者、 底線和事件的名稱的名稱。 例如，將名為 `button1` 的按鈕 `Click` 事件命名為 `Sub button1_Click`。  
+ Visual Basic 會使用標準命名慣例，事件處理常式，結合了事件傳送者、 底線和事件名稱的名稱。 例如，將名為 `button1` 的按鈕 `Click` 事件命名為 `Sub button1_Click`。  
   
 > [!NOTE]
 >  我們建議您在為自己的事件定義事件處理常式時，使用此命名慣例，但這並非必要；您可以使用任何有效的副程式名稱。  
@@ -55,7 +55,7 @@ ms.locfileid: "33655267"
   
 -   您不能使用 `WithEvents` 變數做為物件變數。 也就是說，您無法將它宣告為 `Object` - 當您宣告變數時，必須指定類別名稱。  
   
--   由於共用的事件不會繫結到類別執行個體，您無法使用`WithEvents`來以宣告方式處理共用的事件。 同樣地，您不能使用 `WithEvents` 或 `Handles`，處理來自 `Structure` 的事件。 在這兩種情況下，您可以使用 `AddHandler` 陳述式來處理這些事件。  
+-   由於共用的事件不會繫結到類別執行個體，您無法使用`WithEvents`以宣告方式處理共用的事件。 同樣地，您不能使用 `WithEvents` 或 `Handles`，處理來自 `Structure` 的事件。 在這兩種情況下，您可以使用 `AddHandler` 陳述式來處理這些事件。  
   
 -   您無法建立 `WithEvents` 變數的陣列。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "33655267"
   
  雖然 `Handles` 子句是建立事件與事件處理常式之關聯的標準方式，但它只能在編譯時期建立事件與事件處理常式的關聯。  
   
- 在某些情況下，例如，事件相關聯的表單或控制項，Visual Basic 自動虛設空白的事件處理常式，並將它與事件產生關聯。 例如，當您按兩下設計模式中的表單上的命令按鈕時，Visual Basic 建立空白的事件處理常式和`WithEvents`變數適用於命令按鈕，如下列程式碼所示：  
+ 在某些情況下，例如，表單或控制項，與相關聯的事件 Visual Basic 自動 stub 出空的事件處理常式，並將它與事件相關聯。 例如，當您按兩下設計模式中的表單上的命令按鈕時，Visual Basic 建立空白的事件處理常式和`WithEvents`變數的命令按鈕，如下列程式碼所示：  
   
  [!code-vb[VbVbalrEvents#26](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_4.vb)]  
   

@@ -5,11 +5,11 @@ f1_keywords:
 - vbrAmbiguousCall2
 ms.assetid: 13b20ffa-9f02-4971-a3cb-e08b402fd971
 ms.openlocfilehash: c298f996322f5ad80b4e76ecf2dd33b4205e3f42
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244360"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332632"
 ---
 # <a name="no-accessible-overloaded-39ltmethodnamegt39-can-be-called-with-these-arguments-without-a-narrowing-conversion-ltlistgt"></a>沒有可存取的多載&#39; &lt;methodname&gt; &#39;可以呼叫且不用縮小轉換這些引數：&lt;清單&gt;
 已呼叫多載方法，但沒有方法可在未縮小轉換的情況下，符合所提供的引數清單。  
