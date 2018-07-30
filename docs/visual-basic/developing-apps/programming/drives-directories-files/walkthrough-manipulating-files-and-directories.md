@@ -16,11 +16,11 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
 ms.openlocfilehash: ab1c119d2c5cd9bfa0ff725774144bc65817cad4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592505"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332905"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>逐步解說：在 Visual Basic 中管理檔案和目錄
 本逐步解說提供 Visual Basic 中檔案 I/O 的基本概念簡介。 其中說明如何建立一個小型應用程式，以提列並檢查目錄中的文字檔案。 針對每個選取的文字檔案，應用程式會提供檔案屬性和第一行內容。 您也可以選擇將資訊寫入記錄檔。  

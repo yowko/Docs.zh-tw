@@ -7,11 +7,11 @@ helpviewer_keywords:
 - registry [Visual Basic], reading
 ms.assetid: a13da106-185b-41d7-b23c-416da65e21e4
 ms.openlocfilehash: 6ce05b956ebf9a544eb8c95165b0f709c694f334
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584614"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332931"
 ---
 # <a name="reading-from-and-writing-to-the-registry-visual-basic"></a>讀取和寫入登錄 (Visual Basic)
 本主題描述與登錄建立關聯的工作和概念主題。  

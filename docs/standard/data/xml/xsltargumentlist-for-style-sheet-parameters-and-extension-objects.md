@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 808d21ae0eabdc7502ef97facc3d45f2220883af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c1a17e32b98405d1b35b5b19e3e9144cffef5bfe
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576805"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332996"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>樣式表參數和擴充物件的 XsltArgumentList
 <xref:System.Xml.Xsl.XsltArgumentList> 類別包含可擴充樣式表語言轉換 (XSLT) 參數和 XSLT 擴充物件。 傳入 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法後，就可從樣式表叫用這些參數和擴充物件。  
@@ -295,7 +295,7 @@ public class Sample
   }  
   
   //Calculates the circumference of a circle given the radius.  
-  public class Calculate{  
+  public class Calculate {  
   
     private double circ = 0;  
   
