@@ -5,12 +5,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 830c68e6857e72fe19099753ba57a7e22491af2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb70a7e3dfd8b274987bf68568004d785afd0ee1
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339653"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936943"
 ---
 # <a name="expressions-c-programming-guide"></a>運算式 (C# 程式設計手冊)
 「運算式」是一連串的一或多個運算元以及兩或多個運算子，可以評估為單一值、物件、方法或命名空間。 運算式可以包含常值、方法呼叫、運算子和其運算元，或「簡單名稱」。 簡單名稱可以是變數、型別成員、方法參數、命名空間或型別的名稱。  
@@ -61,8 +61,9 @@ DoWork();
 ## <a name="lambda-expressions"></a>Lambda 運算式  
  Lambda 運算式代表「內嵌方法」，而這種方法沒有名稱，但可以有輸入參數和多個陳述式。 它們廣泛用於 LINQ，以將引數傳遞給方法。 根據所使用的內容，會將 Lambda 運算式編譯為委派或運算式樹狀架構。 如需詳細資訊，請參閱 [Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)。  
   
-## <a name="expression-trees"></a>運算式樹狀架構  
- 運算式樹狀架構會將運算式代表為資料結構。 LINQ 提供者廣泛使用它們，以將查詢運算式轉譯為某個其他內容中有意義的程式碼，例如 SQL 資料庫。 如需詳細資訊，請參閱[運算式樹狀架構](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)。  
+## <a name="expression-trees"></a>運算式樹狀架構
+
+運算式樹狀架構會將運算式代表為資料結構。 LINQ 提供者廣泛使用它們，以將查詢運算式轉譯為某個其他內容中有意義的程式碼，例如 SQL 資料庫。 如需詳細資訊，請參閱[運算式樹狀架構 (C#)](../concepts/expression-trees/index.md)。
   
 ## <a name="expression-body-definitions"></a>運算式主體定義
 

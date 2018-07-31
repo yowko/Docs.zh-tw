@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: eaf410fa198fdb38a39a0474e9e147542919df8e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 519c22e3c2647e2ae3423688b468e133a3e5eb84
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578417"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37937110"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>實作事件架構非同步模式的最佳作法
 事件架構非同步模式提供有效率的方式，讓您運用熟悉的事件和委派語意，公開類別中的非同步行為。 若要實作事件架構非同步模式，您需要遵循一些特定的行為需求。 下列各節說明在實作遵循事件架構非同步模式的類別時，所應考量的需求和方針。  
@@ -28,14 +28,14 @@ ms.locfileid: "33578417"
  如果您實作事件架構非同步模式，則必須提供一些保證，以確保類別的行為正確，並且類別的用戶端可依賴此行為。  
   
 ### <a name="completion"></a>完成  
- 在成功完成、發生錯誤或取消時，一律會叫用 MethodName***Completed* 事件處理常式。 應用程式絕對不應該發生保持閒置狀態和永遠無法完成的情況。 這項規則的唯一例外，是在非同步作業本身設計為永遠無法完成的時候。  
+ 在成功完成、發生錯誤或取消時，一律會叫用 <em>MethodName</em>**Completed** 事件處理常式。 應用程式絕對不應該發生保持閒置狀態和永遠無法完成的情況。 這項規則的唯一例外，是在非同步作業本身設計為永遠無法完成的時候。  
   
 ### <a name="completed-event-and-eventargs"></a>Completed 事件和 EventArgs  
- 對每個 MethodName***Async* 方法，會套用下列設計需求：  
+ 對每個 <em>MethodName</em>**Async** 方法，會套用下列設計需求：  
   
--   在與此方法相同的類別上定義 MethodName***Completed* 事件。  
+-   在與此方法相同的類別上定義 <em>MethodName</em>**Completed** 事件。  
   
--   對衍生自 <xref:System.ComponentModel.AsyncCompletedEventArgs> 類別的 MethodName***Completed* 事件，定義 <xref:System.EventArgs> 類別和伴隨的委派。 預設類別名稱的格式應該為 *MethodName*CompletedEventArgs。  
+-   對衍生自 <xref:System.ComponentModel.AsyncCompletedEventArgs> 類別的 <em>MethodName</em>**Completed** 事件，定義 <xref:System.EventArgs> 類別和伴隨的委派。 預設類別名稱的格式應該為 *MethodName*CompletedEventArgs。  
   
 -   確定 <xref:System.EventArgs> 類別是 *MethodName* 方法的傳回值所特有。 當您使用 <xref:System.EventArgs> 類別時，應該不需要開發人員轉換結果。  
   
