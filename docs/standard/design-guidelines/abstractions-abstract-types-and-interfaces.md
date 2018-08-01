@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573022"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>抽象 (抽象類型和介面)
 抽象概念是描述合約，但不提供完整的實作的合約的型別。 抽象概念通常會實作為抽象類別或介面，和它們隨附一組妥善定義的參考文件描述的實作合約的型別所需的語意。 某些.NET Framework 中最重要的抽象概念包括<xref:System.IO.Stream>， <xref:System.Collections.Generic.IEnumerable%601>，和<xref:System.Object>。  
@@ -27,11 +28,11 @@ ms.lasthandoff: 05/04/2018
   
  不過，抽象層提供極為強大的其他擴充性機制無法通常會比對的擴充性。 它們是許多架構模式的詳細資訊，例如外掛程式，核心逆轉控制 (IoC)、 管線等等。 它們也是極為重要的測試能力的架構。 良好的抽象概念實現出大量的相依性，以便進行單元測試虛設常式。 總而言之，抽象化是負責 sought-after 現代化的物件導向架構的豐富。  
   
- **X 不**提供抽象，除非它們經過開發數種具象實作和應用程式開發介面使用的抽象概念。  
+ **X DO NOT**提供抽象，除非它們經過開發數種具象實作和應用程式開發介面使用的抽象概念。  
   
- **✓ 不要**設計抽象時請小心選擇之間的抽象類別和介面。  
+ **✓ DO**設計抽象時請小心選擇之間的抽象類別和介面。  
   
- **✓ 考慮**提供參考測試的具象實作的抽象概念。 這類測試應該允許使用者以測試是否有其正確實作的合約。  
+ **✓ CONSIDER**提供參考測試的具象實作的抽象概念。 這類測試應該允許使用者以測試是否有其正確實作的合約。  
   
  *部分 © 2005年，2009 Microsoft Corporation。All rights reserved.*  
   

@@ -27,24 +27,24 @@ ms.locfileid: "33576428"
  `Fabrikam.Math`  
  `Litware.Security`  
   
- **✓ 不要**命名空間名稱前面加上的公司名稱，以避免不同公司的具有相同名稱的命名空間。  
+ **✓ DO**命名空間名稱前面加上的公司名稱，以避免不同公司的具有相同名稱的命名空間。  
   
- **✓ 不要**第二個層級的命名空間名稱使用的穩定、 版本無關的產品名稱。  
+ **✓ DO**第二個層級的命名空間名稱使用的穩定、 版本無關的產品名稱。  
   
- **X 不**使用組織階層做為基礎，名稱在命名空間階層中，因為公司內的群組名稱大多數為暫時性。 組織相關技術的群組周圍的命名空間階層的架構。  
+ **X DO NOT**使用組織階層做為基礎，名稱在命名空間階層中，因為公司內的群組名稱大多數為暫時性。 組織相關技術的群組周圍的命名空間階層的架構。  
   
- **✓ 不要**期間，使用 PascalCasing，與不同的命名空間的元件 (例如`Microsoft.Office.PowerPoint`)。 如果您的品牌使用社會大小寫，您應該遵循您的品牌所定義的大小寫，即使偏離標準的命名空間的大小寫。  
+ **✓ DO**期間，使用 PascalCasing，與不同的命名空間的元件 (例如`Microsoft.Office.PowerPoint`)。 如果您的品牌使用社會大小寫，您應該遵循您的品牌所定義的大小寫，即使偏離標準的命名空間的大小寫。  
   
- **✓ 考慮**適時使用複數命名空間名稱。  
+ **✓ CONSIDER**適時使用複數命名空間名稱。  
   
  例如，使用`System.Collections`而不是`System.Collection`。 品牌名稱與縮寫，不過是這項規則的例外狀況。 例如，使用`System.IO`而不是`System.IOs`。  
   
- **X 不**該命名空間中使用相同名稱的命名空間和類型。  
+ **X DO NOT**該命名空間中使用相同名稱的命名空間和類型。  
   
  例如，請勿使用`Debug`為命名空間名稱，然後也提供類別，名為`Debug`相同的命名空間中。 有好幾種編譯器需要這類必須是完整的類型。  
   
 ### <a name="namespaces-and-type-name-conflicts"></a>命名空間和類型名稱衝突  
- **X 不**引入泛型型別名稱，例如`Element`， `Node`， `Log`，和`Message`。  
+ **X DO NOT**引入泛型型別名稱，例如`Element`， `Node`， `Log`，和`Message`。  
   
  沒有這樣做會導致輸入名稱衝突在一般案例的機率相當高。 您應該限定的泛型型別名稱 (`FormElement`， `XmlNode`， `EventLog`， `SoapMessage`)。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "33576428"
      `System.Windows*`   
      `System.Web.UI*`  
   
-     **X 不**讓具有相同名稱的單一應用程式模型中的命名空間中的型別。  
+     **X DO NOT**讓具有相同名稱的單一應用程式模型中的命名空間中的型別。  
   
      例如，不會加入名為型別`Page`至<xref:System.Web.UI.Adapters?displayProperty=nameWithType>命名空間，因為<xref:System.Web.UI?displayProperty=nameWithType>命名空間已經包含名為型別`Page`。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "33576428"
   
      核心命名空間包含所有`System`命名空間，但排除的應用程式模型的命名空間和基礎結構命名空間。 和其他項目，核心命名空間包含`System`， `System.IO`， `System.Xml`，和`System.Net`。  
   
-     **X 不**授與類型的核心命名空間中的任何類型，會發生衝突的名稱。  
+     **X DO NOT**授與類型的核心命名空間中的任何類型，會發生衝突的名稱。  
   
      例如，絕對不要使用`Stream`做為型別名稱。 它會和衝突<xref:System.IO.Stream?displayProperty=nameWithType>的非常常用的型別。  
   
@@ -77,9 +77,9 @@ ms.locfileid: "33576428"
   
      此類別包含所有具有相同的前兩個命名空間節點的命名空間`(<Company>.<Technology>*`)，例如`Microsoft.Build.Utilities`和`Microsoft.Build.Tasks`。 請務必確認屬於單一技術類型未與彼此衝突。  
   
-     **X 不**指派內單一技術的其他類型的型別名稱，以免造成衝突。  
+     **X DO NOT**指派內單一技術的其他類型的型別名稱，以免造成衝突。  
   
-     **X 不**（除非該技術不是用於與應用程式模型） 導入技術的命名空間中的型別和應用程式模型命名空間之間的類型名稱衝突。  
+     **X DO NOT**（除非該技術不是用於與應用程式模型） 導入技術的命名空間中的型別和應用程式模型命名空間之間的類型名稱衝突。  
   
  *部分 © 2005年，2009 Microsoft Corporation。All rights reserved.*  
   

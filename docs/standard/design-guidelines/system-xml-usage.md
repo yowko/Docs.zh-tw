@@ -15,13 +15,13 @@ ms.locfileid: "33572810"
 # <a name="systemxml-usage"></a>System.Xml 使用方式
 本節討論中的幾種類型的使用方式的相關<xref:System.Xml?displayProperty=nameWithType>無法用來代表 XML 資料的命名空間。  
   
- **X 不**使用<xref:System.Xml.XmlNode>或<xref:System.Xml.XmlDocument>來表示 XML 資料。 使用的執行個體非<xref:System.Xml.XPath.IXPathNavigable>， <xref:System.Xml.XmlReader>， <xref:System.Xml.XmlWriter>，或是子類型的<xref:System.Xml.Linq.XNode>改為。 `XmlNode` 和`XmlDocument`不專為公開在公用 Api。  
+ **X DO NOT**使用<xref:System.Xml.XmlNode>或<xref:System.Xml.XmlDocument>來表示 XML 資料。 使用的執行個體非<xref:System.Xml.XPath.IXPathNavigable>， <xref:System.Xml.XmlReader>， <xref:System.Xml.XmlWriter>，或是子類型的<xref:System.Xml.Linq.XNode>改為。 `XmlNode` 和`XmlDocument`不專為公開在公用 Api。  
   
- **✓ 不要**使用`XmlReader`， `IXPathNavigable`，或是子類型的`XNode`做為輸入或輸出的接受或傳回 XML 的成員。  
+ **✓ DO**使用`XmlReader`， `IXPathNavigable`，或是子類型的`XNode`做為輸入或輸出的接受或傳回 XML 的成員。  
   
  使用這些抽象概念，而不是`XmlDocument`， `XmlNode`，或<xref:System.Xml.XPath.XPathDocument>，因為這可分隔從記憶體中 XML 文件的特定實作的方法，並讓他們使用的虛擬公開 （expose） 的 XML 資料來源`XNode``XmlReader`，或<xref:System.Xml.XPath.XPathNavigator>。  
   
- **X 不**子類別`XmlDocument`如果您想要建立代表基礎物件模型或資料來源的 XML 檢視表的型別。  
+ **X DO NOT**子類別`XmlDocument`如果您想要建立代表基礎物件模型或資料來源的 XML 檢視表的型別。  
   
  *部分 © 2005年，2009 Microsoft Corporation。All rights reserved.*  
   

@@ -2,12 +2,12 @@
 title: 非同步方法的傳回型別 (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 07aefcf3149b2210e3dc97713647fa3a0133a535
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02e3cdd433d5d6d4d58667d56592b9fc2bf374c4
+ms.sourcegitcommit: dc02d7d95f1e3efcc7166eaf431b0ec0dc9d8dca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334180"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37143553"
 ---
 # <a name="async-return-types-c"></a>非同步方法的傳回型別 (C#)
 非同步方法可有下列傳回型別：
@@ -24,7 +24,7 @@ ms.locfileid: "33334180"
   
 每個傳回型別在下列其中一節探討，您可以在主題結尾處找到使用全部三種類型的完整範例。  
   
-##  <a name="BKMK_TaskTReturnType"></a> Task(T) 傳回型別  
+##  <a name="BKMK_TaskTReturnType"></a> Task\<TResult\> 傳回型別  
 <xref:System.Threading.Tasks.Task%601> 傳回型別用於非同步方法，此方法包含 [return](../../../../csharp/language-reference/keywords/return.md) (C#) 陳述式，其運算元的類型為 `TResult`。  
   
 在下列範例中，`GetLeisureHours` 非同步方法包含一個傳回整數的 `return` 陳述式。 因此，方法宣告必須指定 `Task<int>` 傳回型別。  <xref:System.Threading.Tasks.Task.FromResult%2A> 非同步方法是傳回字串作業的預留位置。
@@ -60,13 +60,13 @@ ms.locfileid: "33334180"
   
 傳回 void 的非同步方法的呼叫端無法攔截方法擲回的例外狀況，這類未處理的例外狀況有可能造成應用程式失敗。 如果例外狀況發生在會傳回 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 的非同步方法，則例外狀況會儲存在傳回的工作中，並在等候工作時再次擲回。 因此，請確定任何可能會產生例外狀況的非同步方法具有傳回型別 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>，且會等候對方法的呼叫。  
   
-如需如何在非同步方法中攔截例外狀況的詳細資訊，請參閱 [try-catch](../../../../csharp/language-reference/keywords/try-catch.md)。  
+如需如何在非同步方法中攔截例外狀況的詳細資訊，請參閱 [try-catch](../../../language-reference/keywords/try-catch.md) 主題的[非同步方法中的例外狀況](../../../language-reference/keywords/try-catch.md#exceptions-in-async-methods)一節。  
   
 下例會定義非同步事件處理常式。  
  
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns3.cs)]  
  
-## <a name="generalized-async-return-types-and-valuetaskt"></a>通用的非同步傳回型別和 ValueTask<T>
+## <a name="generalized-async-return-types-and-valuetasktresult"></a>通用的非同步傳回型別和 ValueTask\<TResult\>
 
 自 C# 7.0 開始，非同步方法可以傳回具有可存取 `GetAwaiter` 方法的任何型別。
  
