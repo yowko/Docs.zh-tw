@@ -3,20 +3,18 @@ title: 架構原則
 description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | 架構原則
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/06/2017
-ms.openlocfilehash: 4ee14b128d3b83fd446352bb6f78afc08fb38c52
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 6/28/2018
+ms.openlocfilehash: 2e0938fc67e02a52b99158b2ff07b9f32464e674
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105855"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404434"
 ---
 # <a name="architectural-principles"></a>架構原則
 
 > 「如果營造商要像程式設計人員撰寫程式那樣地蓋房子，那麼第一隻經過的啄木鳥將會摧毀文明。」  
 > _\- Gerald Weinberg_
-
-## <a name="summary"></a>總結
 
 您在架構與設計軟體解決方案時，應該惦記著可維護性。 本節中所述的準則可協助引導您做出將產生可維護之全新應用程式的架構決策。 一般而言，這些原則會引導您利用與應用程式其他部分未緊密結合，而是透過明確介面或傳訊系統進行通訊的不同元件來建置應用程式。
 
@@ -34,7 +32,7 @@ ms.locfileid: "37105855"
 
 在類別中，封裝是藉由限制對類別內部狀態的外部存取而達成。 如果外部執行者想要操作物件的狀態，則應透過妥善定義的函式 (或屬性 setter) 來達成，而不是直接存取物件的私用狀態。 同樣地，應用程式元件和應用程式本身應該公開妥善定義的介面，供它們的共同作業者來使用，而不是允許直接修改它們的狀態。 如此應用程式的內部設計便可以隨著時間而持續改進，且不必擔心這麼做會中斷共同作業者，只要維護公用合約即可。
 
-### <a name="dependency-inversion"></a>相依性反轉 (Dependency Inversion)
+### <a name="dependency-inversion"></a>相依性反轉
 
 應用程式內的相依性方向應該是抽象的方向，而不是實作詳細資料。 大部分的應用程式撰寫時，編譯時間相依性會以執行階段執行的方向流動。 這會產生直接相依性圖形。 也就是說，如果模組 A 呼叫模組 B 中的函式，而它呼叫模組 C 中的函式，則在編譯階段 A 會相依於 B，B 會相依於 C，如圖 4-1 所示。
 
@@ -64,7 +62,7 @@ ms.locfileid: "37105855"
 
 當此原則套用至應用程式架構，並帶到其邏輯端點時，便會得到微服務。 指定的微服務應該具有單一責任。 如果您需要擴充系統的行為，通常新增其他微服務會比較好，而不要新增責任至現有的微服務。
 
-[深入了解微服務架構](http://aka.ms/MicroservicesEbook)
+[深入了解微服務架構](https://aka.ms/MicroservicesEbook)
 
 ### <a name="dont-repeat-yourself-dry"></a>不重複原則 (DRY)
 
@@ -81,17 +79,17 @@ ms.locfileid: "37105855"
 
 違反這個原則的一些範例包括：
 
--   必要的基底類別
+- 必要的基底類別。
 
--   必要的介面實作
+- 必要的介面實作。
 
--   負責自行儲存的類別 (例如使用中的記錄模式)
+- 負責自行儲存的類別 (例如使用中的記錄模式)。
 
--   必要的預設建構函式
+- 必要的預設建構函式。
 
--   需要虛擬關鍵字的屬性
+- 需要虛擬關鍵字的屬性。
 
--   持續性特定的必要屬性
+- 持續性特定的必要屬性。
 
 類別有任何上述功能或行為的要求，會為要持續保存的類型與持續性技術選擇之間新增結合，使得更難以在未來採用新的資料存取策略。
 
@@ -103,19 +101,20 @@ ms.locfileid: "37105855"
 
 > ### <a name="references--modern-web-applications"></a>參考 – 現代化 Web 應用程式
 > - **關注點分離**  
-> <http://deviq.com/separation-of-concerns/>
-> - **封裝**<http://deviq.com/encapsulation/>
+> <https://deviq.com/separation-of-concerns/>
+> - **封裝**  
+> <https://deviq.com/encapsulation/>
 > - **相依性反轉準則**  
-> <http://deviq.com/dependency-inversion-principle/>
+> <https://deviq.com/dependency-inversion-principle/>
 > - **明確相依性準則**  
-> <http://deviq.com/explicit-dependencies-principle/>
+> <https://deviq.com/explicit-dependencies-principle/>
 > - **不重複原則**  
-> <http://deviq.com/don-t-repeat-yourself/>
+> <https://deviq.com/don-t-repeat-yourself/>
 > - **持續性無知**  
-> <http://deviq.com/persistence-ignorance/>
+> <https://deviq.com/persistence-ignorance/>
 > - **繫結內容**  
 > <https://martinfowler.com/bliki/BoundedContext.html>
 
-> [!div class="step-by-step"]
+>[!div class="step-by-step"]
 [上一頁](choose-between-traditional-web-and-single-page-apps.md)
 [下一頁](common-web-application-architectures.md)

@@ -3,13 +3,13 @@ title: 處理部分失敗的策略
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 處理部分失敗的策略
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: c36ea31ad19b02fb02bc8e7185bfe8687b87764f
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/08/2018
+ms.openlocfilehash: ac82f6d506213614c7a4079e0f55f798f26a6550
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104205"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874399"
 ---
 # <a name="strategies-for-handling-partial-failure"></a>處理部分失敗的策略
 

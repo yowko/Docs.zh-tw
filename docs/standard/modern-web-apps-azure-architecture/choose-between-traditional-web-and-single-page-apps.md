@@ -1,40 +1,38 @@
 ---
 title: 在傳統 Web 應用程式和單頁應用程式之間作選擇
-description: 使用 ASP.NET Core 和 Microsoft Azure 來架構現代化 Web 應用程式
+description: 了解建置 Web 應用程式時，如何在傳統 Web 應用程式和單頁應用程式 (SPA) 之間作選擇。
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/06/2017
-ms.openlocfilehash: bbb217b2f11901658fa70a5e5cff6521d157952c
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 6/28/2018
+ms.openlocfilehash: 40b17d07b008c2a3a9457bffc26b612e6b5c9fe5
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104762"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404141"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>在傳統 Web 應用程式和單頁應用程式 (SPA) 之間作選擇
 
 > 「Atwood 定律：任何可以用 JavaScript 撰寫的應用程式，最後都將以 JavaScript 撰寫。」  
 > _\- Jeff Atwood_
 
-## <a name="summary"></a>總結
-
 現在有兩種建置 Web 應用程式的通用方法：在伺服器上執行大多數應用程式邏輯的傳統 Web 應用程式，以及執行大多數使用者介面邏輯的單頁應用程式 (SPA)，主要使用 Web API 與 Web 伺服器通訊。 混合式方法也是可能的，最簡單方法為在較大的傳統 Web 應用程式中，裝載一或多個豐富、類似 SPA 的子應用程式。
 
 您應該使用傳統 Web 應用程式的時機：
 
--   應用程式用戶端的需求簡單或甚至是唯讀。
+- 應用程式用戶端的需求簡單或甚至是唯讀。
 
--   應用程式需要在不支援 JavaScript 的瀏覽器中運作。
+- 應用程式需要在不支援 JavaScript 的瀏覽器中運作。
 
--   您的小組不熟悉 JavaScript 或 TypeScript 開發技術。
+- 您的小組不熟悉 JavaScript 或 TypeScript 開發技術。
 
 您應該使用 SPA 的時機：
 
--   應用程式必須公開具有許多功能的豐富使用者介面。
+- 應用程式必須公開具有許多功能的豐富使用者介面。
 
--   您的小組熟悉 JavaScript 及/或 TypeScript 開發。
+- 您的小組熟悉 JavaScript 及/或 TypeScript 開發。
 
--   您的應用程式必須已針對其他 (內部或公開) 用戶端公開 API。
+- 您的應用程式必須已針對其他 (內部或公開) 用戶端公開 API。
 
 此外，SPA 架構需要更多的架構和安全性專業知識。 由於頻繁的更新及新的架構，SPA 架構會經歷比傳統 Web 應用程式更大的變換。 設定自動化的建置和部署程序、使用容器等部署選項，比傳統 Web 應用程式更難用於 SPA 應用程式。
 
@@ -71,10 +69,11 @@ SPAs 可以支援豐富的用戶端功能，且當使用者採取動作或在應
 撰寫 SPA 需要熟悉 JavaScript 及/或 TypeScript，以及用戶端程式設計技術與程式庫。 您的小組應能夠使用 Angular 等 SPA 架構來撰寫現代化 JavaScript。
 
 > ### <a name="references--spa-frameworks"></a>參考資料 – SPA 架構
+>
 > - **Angular**  
-> <https://angular.io>
+>   <https://angular.io>
 > - **JavaScript 架構的比較**  
-> <https://javascriptreport.com/the-ultimate-guide-to-javascript-frameworks/>
+>   <https://javascriptreport.com/the-ultimate-guide-to-javascript-frameworks/>
 
 **您的應用程式必須已針對其他 (內部或公開) 用戶端公開 API**
 
@@ -84,12 +83,12 @@ SPAs 可以支援豐富的用戶端功能，且當使用者採取動作或在應
 
 下列決策表摘要列出在傳統 Web 應用程式和 SPA 之間作選擇時需要考慮的一些基本因素。
 
-  | **因素** | **傳統 Web 應用程式** | **單一頁面應用程式** |
-  |---|---|---|
-  | 小組必須熟悉 JavaScript/TypeScript | **最少** | **必要** |
-  | 支援無指令碼的瀏覽器 | **支援** | **不支援** |
-  | 最少的用戶端應用程式行為 | **適用** | **大材小用** |
-  | 內容豐富且複雜的使用者介面需求 | **有限** | **適用** |
+| **因素**                                           | **傳統 Web 應用程式** | **單一頁面應用程式** |
+| ---------------------------------------------------- | ----------------------- | --------------------------- |
+| 小組必須熟悉 JavaScript/TypeScript | **最少**             | **必要**                |
+| 支援無指令碼的瀏覽器                   | **支援**           | **不支援**           |
+| 最少的用戶端應用程式行為             | **適用**         | **大材小用**                |
+| 內容豐富且複雜的使用者介面需求            | **有限**             | **適用**             |
 
 >[!div class="step-by-step"]
 [上一頁](modern-web-applications-characteristics.md)

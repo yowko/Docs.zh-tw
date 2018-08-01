@@ -3,14 +3,14 @@ title: C# 中的繼承
 description: 了解如何使用 C# 程式庫和應用程式中的繼承。
 author: rpetrusha
 ms.author: ronpet
-ms.date: 08/16/2017
+ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 1476425594e55531fdb56de531ee61808dccd7db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 646602c4bab311e6d6078378fe423741a1dd38e1
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365757"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37875220"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 和 .NET 中的繼承
 
@@ -32,7 +32,6 @@ ms.locfileid: "33365757"
   [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 1. 輸入 [dotnet run](../../core/tools/dotnet-run.md) 命令來編譯和執行範例。
-
 
 ## <a name="background-what-is-inheritance"></a>背景︰什麼是繼承？
 
@@ -99,7 +98,7 @@ public class B : A // Generates CS0534.
 }
 ```
 
-繼承只適用於類別和介面。 其他型別分類 (結構、委派及列舉) 均不支援繼承。 因此如下所示，嘗試編譯程式碼會產生編譯器錯誤 CS0527：「介面清單中的型別 'ValueType' 不是介面」。 錯誤訊息指出，雖然您可以定義結構實作的介面，但不支援繼承。
+繼承只適用於類別和介面。 其他型別分類 (結構、委派及列舉) 均不支援繼承。 由於這些規則，嘗試編譯如下列範例所示的程式碼會產生編譯器錯誤 CS0527：「介面清單中的類型 'ValueType' 不是介面」。 錯誤訊息指出，雖然您可以定義結構實作的介面，但不支援繼承。
 
 ```csharp
 using System;
@@ -111,13 +110,13 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 ## <a name="implicit-inheritance"></a>隱含繼承
 
-除了透過單一繼承而繼承自的任何型別以外，<xref:System.Object> 或從中衍生的型別都會是 .NET 型別系統中所有型別的隱含繼承來源。 這樣可確保任何型別都可以使用一般功能。
+除了透過單一繼承而繼承自的任何型別以外，<xref:System.Object> 或從中衍生的型別都會是 .NET 型別系統中所有型別的隱含繼承來源。 任何類型都可以使用 <xref:System.Object> 的一般功能。
 
 為了說明隱含繼承表示的意思，讓我們定義只有空的類別定義的新類別 `SimpleClass`︰
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#1)]
 
-我們接下來可以使用反映 (可讓我們檢查型別的中繼資料以取得該型別的相關資訊) 來取得一份屬於 `SimpleClass` 型別的成員清單。 雖然我們尚未在 `SimpleClass` 類別中定義任何成員，但此範例的輸出指出它實際上有九個成員。 其中之一是 C# 編譯器為 `SimpleClass` 型別自動提供的無參數 (或預設) 建構函式。 其餘八個成員都屬於 <xref:System.Object>，該型別是 .NET 型別系統中所有類別與介面最終的隱含繼承來源。
+您接下來可以使用反映 (可讓您檢查類型的中繼資料以取得該類型的相關資訊) 來取得一份屬於 `SimpleClass` 類型的成員清單。 雖然您尚未在 `SimpleClass` 類別中定義任何成員，但此範例的輸出指出它實際上有九個成員。 其中一個成員是 C# 編譯器為 `SimpleClass` 類型自動提供的無參數 (或預設) 建構函式。 其餘八個成員都屬於 <xref:System.Object>，該型別是 .NET 型別系統中所有類別與介面最終的隱含繼承來源。
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#2)]
 
@@ -135,7 +134,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 受保護的 <xref:System.Object.MemberwiseClone%2A> 方法會建立目前物件的淺層複製 (Shallow Clone)。
 
-因為隱含繼承，所以我們能呼叫從 `SimpleClass`物件繼承的任何成員，如同 `SimpleClass` 類別中定義的實際成員一般。 例如，下列範例呼叫 `SimpleClass.ToString` 方法，其 `SimpleClass` 繼承自<xref:System.Object>。
+因為隱含繼承，所以您能呼叫從 `SimpleClass` 物件繼承的任何成員，如同 `SimpleClass` 類別中定義的實際成員一般。 例如，下列範例呼叫 `SimpleClass.ToString` 方法，其 `SimpleClass` 繼承自<xref:System.Object>。
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass2.cs#1)]
 
@@ -155,11 +154,11 @@ public struct ValueStructure : ValueType // Generates CS0527.
 > [!NOTE]
 > 類別或結構可以再實作另一個介面。 介面實作通常以單一繼承的因應措施或搭配結構使用繼承的方式呈現，但其目的在表達介面與其實作型別之間和繼承不同的關聯性 (「可以執行」關聯性)。 介面會定義一組其實作型別可以使用的功能子集 (例如測試相等、比較或排序物件，或支援區分文化特性剖析和格式化的能力)。
 
-請注意，「是」也在表達型別與其特定具現化型別之間的關聯性。 在下列範例中，`Automobile` 類別有三個唯一的唯讀屬性︰ `Make`為汽車製造商、`Model`為汽車種類以及 `Year`為其製造年份。 此 `Automobile` 類別還有一個建構函式，會將其引數指派給屬性值，並會覆寫 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 方法以產生可唯一識別 `Automobile` 執行個體的字串，而不是 `Automobile` 類別。
+請注意，「是」也在表達型別與其特定具現化型別之間的關聯性。 在下列範例中，`Automobile` 類別有三個唯一的唯讀屬性︰ `Make`為汽車製造商、`Model`為汽車種類以及 `Year`為其製造年份。 您的 `Automobile` 類別還有一個建構函式，會將其引數指派給屬性值，並會覆寫 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 方法以產生可唯一識別 `Automobile` 執行個體的字串，而不是 `Automobile` 類別。
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#1)]
 
-在此情況下，我們不應該仰賴繼承來表示特定的車輛廠牌和款式。 例如，我們不需要定義 `Packard` 型別來表示 Packard Motor 汽車公司製造的汽車。 相反地，我們可以建立 `Automobile` 物件，將適當的值傳遞至它的類別建構函式，如下列範例所示。
+在此情況下，您不應該仰賴繼承來表示特定的車輛廠牌和款式。 例如，您不需要定義 `Packard` 類型來表示 Packard Motor 汽車公司製造的汽車。 相反地，您可以建立 `Automobile` 物件，將適當的值傳遞至它的類別建構函式，如下列範例所示。
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#2)]
 
@@ -167,35 +166,37 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 ## <a name="designing-the-base-class-and-derived-classes"></a>設計基底類別和衍生類別
 
-讓我們來看設計基底類別和其衍生類別的流程。 在本節中，我們會定義基底類別 `Publication`，其代表任何類型的發行物，例如書籍、雜誌、報紙、期刊、文章等等。我們也會定義衍生自 `Book` 類別的類別 `Publication`。 我們可以輕鬆地擴充該範例來定義其他衍生類別，例如 `Magazine`、`Journal`、`Newspaper` 及 `Article`。
+讓我們來看設計基底類別和其衍生類別的流程。 在本節中，您會定義基底類別 `Publication`，其代表任何類型的發行物，例如書籍、雜誌、報紙、期刊、文章等等。您也會定義衍生自 `Publication` 的 `Book` 類別。 您可以輕鬆地擴充該範例來定義其他衍生類別，例如 `Magazine`、`Journal`、`Newspaper` 及 `Article`。
 
 ### <a name="the-base-publication-class"></a>基底 Publication 類別
 
-在設計 `Publication` 類別時，我們需要做出幾個設計決策︰
+在設計 `Publication` 類別時，您需要做出幾個設計決策：
 
-- 基底 `Publication` 類別中包含哪些成員，以及 `Publication` 成員是否提供方法實作，或 `Publication` 是否為抽象基底類別，可做為其衍生類別的範本。
+- 您的基底 `Publication` 類別中包含哪些成員，以及 `Publication` 成員是否提供方法實作，或 `Publication` 是否為抽象基底類別，可作為其衍生類別的範本。
 
   在此情況下，`Publication` 類別會提供方法實作。 [設計抽象基底類別和其衍生類別](#abstract)一節中所包含的範例，會使用抽象基底類別來定義衍生類別必須覆寫的方法。 衍生類別可隨意提供適用於衍生型別的任何實作。
 
-  能夠重複使用程式碼 (也就是，多個衍生類別共用基底類別方法的宣告和實作，而不需要加以覆寫) 是非抽象基底類別的一項優點。 因此，如果 `Publication` 的程式碼可能會和一些或大部分特殊 `Publication` 型別共用，我們就應該將成員加入其中。 如果無法有效地完成，我們就不得不在衍生類別中大量提供相同的成員實作，而不是在基底類別中提供單一實作。 在多個位置中有重複的程式碼需要維護，是造成錯誤的潛在來源。
+  能夠重複使用程式碼 (也就是，多個衍生類別共用基底類別方法的宣告和實作，而不需要加以覆寫) 是非抽象基底類別的一項優點。 因此，如果 `Publication` 的程式碼可能會和一些或大部分特殊 `Publication` 類型共用，您就應該將成員加入其中。 如果您無法有效率地提供基底類別實作，您就不得不在衍生類別中大量提供相同的成員實作，而不是在基底類別中提供單一實作。 在多個位置中有重複的程式碼需要維護，是造成錯誤的潛在來源。
 
-  為了能盡可能重複使用程式碼和建立邏輯與直覺式繼承階層，我們希望只將所有獲大部分發行物通用的資料與功能納入 `Publication` 類別中。 衍生類別接著實作其所代表特定發行物類型的唯一成員。
+  為了能盡可能重複使用程式碼和建立邏輯與直覺式繼承階層，您希望只將所有或大部分發行物通用的資料與功能納入 `Publication` 類別中。 衍生類別接著實作其所代表特定發行物類型的唯一成員。
 
-- 擴充類別階層的程度。 我們想要開發有三種類別以上的階層，還是只想要一個基底類別和一或多個衍生類別？ 例如，`Publication` 可以是 `Periodical` 的基底類別，而後者又是 `Magazine`、`Journal` 及 `Newspaper` 的基底類別。
+- 擴充類別階層的程度。 您想要開發有三種類別以上的階層，還是只想要一個基底類別和一或多個衍生類別？ 例如，`Publication` 可以是 `Periodical` 的基底類別，而後者又是 `Magazine`、`Journal` 及 `Newspaper` 的基底類別。
 
-  針對本範例，我們將使用有 `Publication` 類別和單一衍生類別 `Book` 的簡單階層。 我們可以輕鬆地擴充範例，以建立一些衍生自 `Publication` (例如 `Magazine` 和 `Article`) 的其他類別。
+  針對您的範例，您將使用有 `Publication` 類別和單一衍生類別 `Book` 的小型階層。 您可以輕鬆地擴充範例，以建立一些衍生自 `Publication` (例如 `Magazine` 和 `Article`) 的其他類別。
 
-- 將基底類別具現化是否適當。 如果不適當，我們應該對該類別套用 [abstract](../language-reference/keywords/abstract.md) 關鍵字。 如果直接呼叫其類別建構函式，嘗試具現化標示有 `abstract` 關鍵字的類別，C# 編譯器會產生錯誤 CS0144：「無法建立抽象類別或介面的執行個體」。 如果使用反映嘗試具現化該類別，反映方法會擲回 <xref:System.MemberAccessException>。 否則，可以呼叫其類別建構函式具現化 `Publication` 類別。
+- 將基底類別具現化是否適當。 如果不適當，您應該對該類別套用 [abstract](../language-reference/keywords/abstract.md) 關鍵字。 否則，可以呼叫其類別建構函式具現化您的 `Publication` 類別。 如果直接呼叫其類別建構函式，嘗試具現化標示有 `abstract` 關鍵字的類別，C# 編譯器會產生錯誤 CS0144：「無法建立抽象類別或介面的執行個體」。 如果使用反映嘗試具現化該類別，反映方法會擲回 <xref:System.MemberAccessException>。
 
-  根據預設，可以呼叫其類別建構函式具現化基底類別。 請注意，我們不必明確地定義類別建構函式。 如果基底類別的原始程式碼中尚未存在建構函式，C# 編譯器會自動提供預設 (無參數) 建構函式。
+  根據預設，可以呼叫其類別建構函式具現化基底類別。 您不必明確地定義類別建構函式。 如果基底類別的原始程式碼中尚未存在建構函式，C# 編譯器會自動提供預設 (無參數) 建構函式。
 
-  針對本範例，我們將 `Publication` 類別標記為 [abstract](../language-reference/keywords/abstract.md)，使它無法具現化。
+  針對您的範例，您將 `Publication` 類別標示為 [abstract](../language-reference/keywords/abstract.md)，使它無法具現化。  不含任何 `abstract` 方法的 `abstract` 類別指出此類別代表數個實體類別 共用的抽象概念 (例如 `Book`、`Journal`)。
 
-- 衍生類別是否必須繼承特定成員的基底類別實作，或是有覆寫基底類別實作的選項。 我們都必須使用 [virtual](../language-reference/keywords/virtual.md) 關鍵字，以允許衍生類別覆寫基底類別方法。 根據預設，「不」可覆寫基底類別中定義的方法。
+- 不論衍生類別是否必須繼承特定成員的基底類別實作、是否有覆寫基底類別實作的選項，或是否必須提供實作。 您都可以使用 [abstract](../language-reference/keywords/abstract.md) 關鍵字，強制衍生類別提供實作。 您可以使用 [virtual](../language-reference/keywords/virtual.md) 關鍵字，允許衍生類別覆寫基底類別方法。 根據預設，「不」可覆寫基底類別中定義的方法。
 
-- 衍生類別是否代表繼承階層中的最後一個類別，且本身無法用來做為額外衍生類別的基底類別。 根據預設，任何類別可以做為基底類別。 我們可以套用 [sealed](../language-reference/keywords/sealed.md) 關鍵字 ，指出類別不可以做為任何其他類別的基底類別。 嘗試衍生自密封類別會產生編譯器錯誤 CS0509：「無法衍生自密封型別 <typeName>」。
+ `Publication` 類別沒有任何 `abstract` 方法，但類別本身為 `abstract`。
 
-  針對本範例，我們會將衍生類別標記為 `sealed`。
+- 衍生類別是否代表繼承階層中的最後一個類別，且本身無法用來做為額外衍生類別的基底類別。 根據預設，任何類別可以做為基底類別。 您可以套用 [sealed](../language-reference/keywords/sealed.md) 關鍵字，指出類別不可以作為任何其他類別的基底類別。 嘗試衍生自密封類別會產生編譯器錯誤 CS0509：「無法衍生自密封型別 <typeName>」。
+
+  針對您的範例，您會將衍生類別標示為 `sealed`。
 
 下列範例示範 `Publication` 類別的原始程式碼，以及由 `Publication.PublicationType` 屬性所傳回的 `PublicationType` 列舉。 除了其繼承自 <xref:System.Object> 的成員以外，`Publication` 類別還會定義下列的唯一成員，以及定義成員覆寫︰
 
@@ -203,7 +204,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 建構函式
 
-  因為 `Publication` 類別是 `abstract`，所以它無法從程式碼直接具現化，如下所示︰
+  因為 `Publication` 類別是 `abstract`，所以它無法從程式碼直接具現化，如下列範例所示︰
 
   ```csharp
   var publication = new Publication("Tiddlywinks for Experts", "Fun and Games",
@@ -234,7 +235,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
   如果某型別不會覆寫 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 方法，它會傳回該型別的完整名稱，該名稱很少用來區分不同的執行個體。 `Publication` 類別會覆寫 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 以傳回 `Title` 屬性的值。
 
-下圖說明基底 `Publication` 類別和其隱含繼承的 <xref:System.Object> 類別之間的關聯性。
+下圖說明您的基底 `Publication` 類別和其隱含繼承的 <xref:System.Object> 類別之間的關聯性。
 
 ![物件和發行物類別](media/publication-class.jpg)
 
@@ -250,7 +251,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
   這兩個 `Book` 建構函式共用三個常見參數。 *title* 和 *publisher* 這兩個會對應至 `Publication` 建構函式的參數。 第三個為 *author*，其會儲存至私用 `authorName` 欄位。 一個建構函式包含 *isbn* 參數，其會儲存在 `ISBN` Auto 屬性中。
 
-  第一個建構函式會使用 [this](../language-reference/keywords/this.md) 關鍵字來呼叫另一個建構函式。 這是定義建構函式的常見模式。 呼叫參數個數最多的建構函式時，參數個數較少的建構函式會提供預設值。
+  第一個建構函式會使用 [this](../language-reference/keywords/this.md) 關鍵字來呼叫另一個建構函式。 建構函式鏈結是定義建構函式的常見模式。 呼叫參數個數最多的建構函式時，參數個數較少的建構函式會提供預設值。
 
   第二個建構函式使用 [base](../language-reference/keywords/base.md) 關鍵字，來將標題和發行者名稱傳遞給基底類別建構函式。 如果您在原始程式碼中沒有明確呼叫基底類別建構函式，C# 編譯器會自動呼叫基底類別的預設或無參數建構函式。
 
@@ -260,38 +261,38 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 兩個價格相關的唯讀屬性，`Price` 和 `Currency`。 其值將在 `SetPrice` 方法呼叫中做為引數提供。 該價格會儲存在私用欄位 `bookPrice` 中。 `Currency` 屬性是三位數的 ISO 貨幣符號 (例如 USD 代表美元)，而且會儲存在私用 `ISOCurrencySymbol` 欄位。 ISO 貨幣符號可從 <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A> 屬性擷取。
 
-- `SetPrice` 方法會設定 `bookPrice` 和 `ISOCurrencySymbol` 欄位的值。 這些都是 `Price` 和 `Currency` 屬性所傳回的值。
+- `SetPrice` 方法會設定 `bookPrice` 和 `ISOCurrencySymbol` 欄位的值。 這些值是由 `Price` 和 `Currency` 屬性所傳回。
 
 - 覆寫 `ToString` 方法 (繼承自`Publication`)，以及 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 與 <xref:System.Object.GetHashCode%2A> 方法 (繼承自<xref:System.Object>)。
 
-  除非遭到覆寫，否則 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 方法會測試參考是否相等。 也就是說，如果兩個物件變數都參考相同的物件，才會將兩者視為相等。 換句話說，在 `Book` 類別的情況下，如果兩個 `Book` 物件都有相同的 ISBN，兩者應該相等。
+  除非遭到覆寫，否則 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 方法會測試參考是否相等。 也就是說，如果兩個物件變數都參考相同的物件，才會將兩者視為相等。 在 `Book` 類別中，如果兩個 `Book` 物件都有相同的 ISBN，兩者應該相等。
 
-  當您覆寫 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 方法時，也必須覆寫 <xref:System.Object.GetHashCode%2A> 方法，以傳回值供執行階段用來在雜湊集合中儲存項目，藉以提高擷取效率。 雜湊碼應會傳回和相等測試一致的值。 因為我們已經覆寫 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 以傳回 `true`，所以如果兩個 `Book` 物件的 ISBN 屬性相等，我們會呼叫 `ISBN` 屬性所傳回字串的 <xref:System.String.GetHashCode%2A> 方法，以傳回計算出的雜湊碼。
+  當您覆寫 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 方法時，也必須覆寫 <xref:System.Object.GetHashCode%2A> 方法，以傳回值供執行階段用來在雜湊集合中儲存項目，藉以提高擷取效率。 雜湊碼應會傳回和相等測試一致的值。 由於您已覆寫 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>，在兩個 `Book` 物件的 ISBN 屬性相等時傳回 `true`，因此您可以呼叫 `ISBN` 屬性所傳回字串的 <xref:System.String.GetHashCode%2A> 方法，來傳回計算出的雜湊碼。
 
 下圖說明 `Book` 類別和其 `Publication` 基底類別之間的關聯性。
 
 ![發行物和書籍類別](media/book-class.jpg)
 
-我們現在可以具現化 `Book` 物件，叫用其唯一與繼承成員，然後將它做為引數傳遞給預期參數為型別 `Publication` 或型別 `Book` 的方法，如下列範例所示。
+您現在可以具現化 `Book` 物件，叫用其唯一與繼承成員，然後將它作為引數傳遞給預期參數為類型 `Publication` 或類型 `Book` 的方法，如下列範例所示。
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/use-publication.cs#1)]
 
 ## <a name="designing-abstract-base-classes-and-their-derived-classes"></a>設計抽象基底類別及其衍生類別
 <a name="abstract"></a>
 
-在上述範例中，我們定義的基底類別會為一些方法提供實作，以允許衍生類別共用程式碼。 不過，在許多情況下，基底類別不需要提供實作。 相反地，基底類別是抽象類別「」。它會做為範本，定義每個衍生類別都必須實作的成員。 通常在抽象基底類別中，每個衍生型別都會有該型別的唯一實作。
+在上述範例中，您定義的基底類別會為一些方法提供實作，以允許衍生類別共用程式碼。 不過，在許多情況下，基底類別不需要提供實作。 相反地，基底類別是宣告「抽象方法」的「抽象類別」；它會作為範本，定義每個衍生類別都必須實作的成員。 通常在抽象基底類別中，每個衍生類型都會有該類型的唯一實作。 您已使用 abstract 關鍵字來標示類別，因為具現化 `Publication` 物件沒有任何意義，但該類別確實會提供發行物通用功能的實作。
 
-例如，每個封閉的二維幾何圖形都包括兩個屬性：面積 (其為圖形內部範圍) 以及周長或圖形邊緣的距離。 不過，計算這些屬性的方式，完全取決於特定圖形。 例如，計算圓形的周長 (圓周) 的公式，就和計算三角形周長的公式相當不同。
+例如，每個封閉的二維幾何圖形都包括兩個屬性：面積 (其為圖形內部範圍) 以及周長或圖形邊緣的距離。 不過，計算這些屬性的方式，完全取決於特定圖形。 例如，計算圓形的周長 (圓周) 的公式，就和計算三角形周長的公式不同。 `Shape` 類別是具有 `abstract` 方法的 `abstract` 類別。 這表示衍生類別共用相同的功能，但這些衍生類別會以不同的方式來實作該功能。
 
-下列範例定義一個名為 `Shape` 的基底類別，其中定義兩個屬性︰`Area` 和 `Perimeter`。 請注意，除了標示有 [abstract](../language-reference/keywords/abstract.md) 關鍵字的類別，每個執行個體成員也都標示 [abstract](../language-reference/keywords/abstract.md) 關鍵字。 在此情況下，`Shape` 也會覆寫 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 方法以傳回型別的名稱，而不是其完整名稱。 此外，它會定義兩個靜態成員 `GetArea` 和 `GetPerimeter`，讓呼叫端能夠輕鬆地擷取任何衍生類別執行個體的面積和周長。 當我們將衍生類別的執行個體傳遞給上述任一種方法時，執行階段都會呼叫衍生類別的方法覆寫。
+下列範例定義一個名為 `Shape` 的基底類別，其中定義兩個屬性︰`Area` 和 `Perimeter`。 除了標示有 [abstract](../language-reference/keywords/abstract.md) 關鍵字的類別，每個執行個體成員也都標示 [abstract](../language-reference/keywords/abstract.md) 關鍵字。 在此情況下，`Shape` 也會覆寫 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 方法以傳回型別的名稱，而不是其完整名稱。 此外，它會定義兩個靜態成員 `GetArea` 和 `GetPerimeter`，讓呼叫端能夠輕鬆地擷取任何衍生類別執行個體的面積和周長。 當您將衍生類別的執行個體傳遞給上述任一種方法時，執行階段都會呼叫衍生類別的方法覆寫。
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#1)]
 
-我們接著可以從代表特定圖形的 `Shape` 衍生一些類別。 下列範例定義三個類別：`Triangle`、`Rectangle` 和 `Circle`。 每個都使用該特定圖形的唯一公式來計算的面積和周長。 某些衍生類別也定義其所代表圖形特有的屬性，例如 `Rectangle.Diagonal` 和 `Circle.Diameter`。
+您接著可以從代表特定圖形的 `Shape` 衍生一些類別。 下列範例定義三個類別：`Triangle`、`Rectangle` 和 `Circle`。 每個都使用該特定圖形的唯一公式來計算的面積和周長。 某些衍生類別也定義其所代表圖形特有的屬性，例如 `Rectangle.Diagonal` 和 `Circle.Diameter`。
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
 
-下列範例使用衍生自 `Shape` 的物件。 具現化衍生自 `Shape` 的物件陣列，並呼叫會包裝所傳回 `Shape` 屬性值的 `Shape` 類別靜態方法。 請注意，執行階段會從衍生型別的覆寫屬性擷取值。 範例也會將陣列中的每個 `Shape` 物件轉換為其衍生型別，而且如果轉換成功，就會擷取 `Shape` 的那個特定子類別的屬性。 
+下列範例使用衍生自 `Shape` 的物件。 具現化衍生自 `Shape` 的物件陣列，並呼叫會包裝所傳回 `Shape` 屬性值的 `Shape` 類別靜態方法。 執行階段會從衍生類型的覆寫屬性擷取值。 範例也會將陣列中的每個 `Shape` 物件轉換為其衍生型別，而且如果轉換成功，就會擷取 `Shape` 的那個特定子類別的屬性。 
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 

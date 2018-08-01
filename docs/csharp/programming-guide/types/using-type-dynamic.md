@@ -5,12 +5,12 @@ helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-ms.openlocfilehash: 67eb39fd6f2077d2adf1d38d001e801b815d687d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 296b9c80b4ea8b09e8efce71e3b388f7e453850b
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336634"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404372"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>使用動態類型 (C# 程式設計手冊)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 引進一種新類型 `dynamic`。 此類型是靜態類型，但 `dynamic` 類型的物件會略過靜態類型檢查。 在大多數情況下，其運作會像是具有 `object` 類型。 在編譯時期，會假設類型為 `dynamic` 的項目能夠支援所有作業。 因此，您無須考慮物件是從 COM API、動態語言 (例如 IronPython)、HTML 文件物件模型 (DOM)、反映或是程式其他地方取得其值。 不過，如果程式碼無效，則會在執行階段攔截到錯誤。  
@@ -27,7 +27,12 @@ ms.locfileid: "33336634"
   
  [!code-csharp[CsProgGuideTypes#51](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_3.cs)]  
   
- 結果不是 `dynamic` 的作業包括從 `dynamic` 轉換成另一種類型，以及包含 `dynamic` 類型引數的建構函式呼叫。 例如，下列宣告中 `testInstance` 的類型是 `ExampleClass`，而不是 `dynamic`。  
+ 結果不是 `dynamic` 的作業包括：
+ 
+* 從 `dynamic` 轉換成另一種類型。 
+* 包含 `dynamic` 類型引數的建構函式呼叫。 
+
+例如，下列宣告中 `testInstance` 的類型是 `ExampleClass`，而不是 `dynamic`：
   
  [!code-csharp[CsProgGuideTypes#52](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_4.cs)]  
   

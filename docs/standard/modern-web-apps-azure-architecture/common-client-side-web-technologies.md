@@ -3,20 +3,18 @@ title: 一般用戶端 Web 技術
 description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | 一般用戶端 Web 技術
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/07/2017
-ms.openlocfilehash: 79dac220e40274889783d29c0e04679dd878fda5
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 6/28/2018
+ms.openlocfilehash: 692c1bf243c26ef6dcf441be9324e43d6a93fe50
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106758"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404602"
 ---
 # <a name="common-client-side-web-technologies"></a>一般用戶端 Web 技術
 
 > 「網站應由內而外呈現最佳效果。」  
 > _- Paul Cookson_
-
-## <a name="summary"></a>總結
 
 ASP.NET Core 應用程式是 Web 應用程式，通常依賴於如 HTML、CSS 和 JavaScript 等用戶端 Web 技術。 藉由將頁面 (HTML) 的內容與其版面配置和樣式 (CSS) 分離開來，以及其行為 (透過 JavaScript)，複雜的 Web 應用程式可以利用關注點分離原則。 當這些問題並非密不可分時，未來對應用程式結構、設計或行為的變更，可以更容易進行。
 
@@ -38,7 +36,7 @@ CSS (階層式樣式表) 用來控制 HTML 項目的外觀和版面配置。 CSS
 
 ### <a name="css-preprocessors"></a>CSS 前置處理器
 
-CSS 樣式表缺少對條件邏輯、變數和其他程式設計語言功能的支援。 因此，大型樣式表通常包含大量的重複，因為相同的顏色、字型或其他設定會套用至 HTML 項目和 CSS 類別的許多不同變化。 透過新增對變數和邏輯的支援，CSS 前置處理器可以幫助您的樣式表遵循 [DRY Principle](http://deviq.com/don-t-repeat-yourself/) (DRY 準則)。
+CSS 樣式表缺少對條件邏輯、變數和其他程式設計語言功能的支援。 因此，大型樣式表通常包含大量的重複，因為相同的顏色、字型或其他設定會套用至 HTML 項目和 CSS 類別的許多不同變化。 透過新增對變數和邏輯的支援，CSS 前置處理器可以幫助您的樣式表遵循 [DRY Principle](https://deviq.com/don-t-repeat-yourself/) (DRY 準則)。
 
 最熱門的 CSS 前置處理器是 Sass 和 LESS。 兩者都擴充 CSS 並回溯相容，這表示一般的 CSS 檔案即為有效的 Sass 或 LESS 檔案。 Sass 基於 Ruby，LESS 基於 JavaScript，而兩者通常都是作為本機開發程序的一部分執行。 兩者都提供命令列工具以及 Visual Studio 中的內建支援，以使用 Gulp 或 Grunt 工作來執行。
 
@@ -48,13 +46,13 @@ JavaScript 是一種動態、解譯的程式設計語言，已在 ECMAScript 語
 
 在 Web 應用程式中使用 JavaScript 時，您通常需要執行幾項工作：
 
--   選取 HTML 項目並擷取及/或 更新其值
+- 選取 HTML 項目並擷取及/或更新其值。
 
--   查詢 Web API 以取得資料
+- 查詢 Web API 以取得資料。
 
--   將命令傳送至 Web API (並回應回呼及其結果)
+- 將命令傳送至 Web API (並回應回呼及其結果)。
 
--   執行驗證
+- 執行驗證。
 
 您可以使用 JavaScript 來單獨執行所有這些工作，但有許多程式庫能使這些工作更容易。 這些程式庫中第一個也最成功的一個是 jQuery，持續成為在網頁上簡化這些工作的熱門選擇。 對於單頁應用程式 (SPA)，jQuery 並不提供許多 Angular 和 React 能提供的所需功能。
 
@@ -100,9 +98,9 @@ export class AppComponent { name = 'Angular'; }
 
 透過使用元件和範本，而不是 DOM 項目，Angular 應用程式可以在較高的抽象層次上運作，並且與僅使用 JavaScript (也稱為 "vanilla JS") 或使用 jQuery 撰寫的應用程式相比，整體程式碼更少。 Angular 也會對您如何組織用戶端指令檔施加一些順序。 按照慣例，Angular 應用程式使用通用資料夾結構，而模組和元件指令檔則位於應用程式資料夾中。 有關建置、部署和測試應用程式的 Angular 指令碼通常位於較高層級的資料夾中。
 
-Angular 也能妥善使用命令列介面 (CLI) 工具。 在本機開始 Angular 開發 (假設您已經安裝了 git 和 npm)，只需從 GitHub 複製一個儲存機制並執行 \`npm 安裝\` 和 \`npm 啟動\`即可。 除此之外，Angular 也隨附自己的 CLI 工具可以建立專案、新增檔案，以及協助測試、統合及部署工作。 此 CLI 工具的易用性可讓 Angular與 ASP.NET Core 特別相容，也提懂性供了絕佳的 CLI 支援。
+Angular 也能妥善使用命令列介面 (CLI) 工具。 在本機開始 Angular 開發 (假設您已經安裝了 git 和 npm)，只需從 GitHub 複製一個存放庫並執行 `npm install` 和 `npm start` 即可。 除此之外，Angular 也隨附自己的 CLI 工具可以建立專案、新增檔案，以及協助測試、統合及部署工作。 此 CLI 工具的易用性可讓 Angular與 ASP.NET Core 特別相容，也提懂性供了絕佳的 CLI 支援。
 
-Microsoft 開發了一個參考應用程式 [eShopOnContainers](http://aka.ms/MicroservicesArchitecture)，其中包含一個 Angular SPA 實作。 這個應用程式包含 Angular 模組來管理線上商店的購物籃、從其目錄中載入和顯示項目，以及處理訂單建立。 您可以從 [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA) 檢視和下載範例應用程式。
+Microsoft 開發了一個參考應用程式 [eShopOnContainers](https://aka.ms/MicroservicesArchitecture)，其中包含一個 Angular SPA 實作。 這個應用程式包含 Angular 模組來管理線上商店的購物籃、從其目錄中載入和顯示項目，以及處理訂單建立。 您可以從 [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA) 檢視和下載範例應用程式。
 
 ### <a name="react"></a>React
 
@@ -128,17 +126,17 @@ React 在 HTML 的工作方式上也很獨特。 在程式碼和標記之間沒�
 
 在考量哪種 JavaScript 架構最適合支援您的 SPA 時，請記住下列考量：
 
--   您的小組是否熟悉該架構和其相依性 (在某些情況下包括 TypeScript)？
+- 您的小組是否熟悉該架構和其相依性 (在某些情況下包括 TypeScript)？
 
--   該架構是否專斷，以及您是否同意其預設的運作方式？
+- 該架構是否專斷，以及您是否同意其預設的運作方式？
 
--   該架構 (或附屬程式庫) 是否包含您應用程式所需的全部功能？
+- 該架構 (或附屬程式庫) 是否包含您應用程式所需的全部功能？
 
--   該架構是否有充分的文件記載？
+- 該架構是否有充分的文件記載？
 
--   在社群中有多活躍？ 新專案是否使用該架構來建置？
+- 在社群中有多活躍？ 新專案是否使用該架構來建置？
 
--   其核心小組有多活躍？ 問題是否得到解決、新版本是否定期發出？
+- 其核心小組有多活躍？ 問題是否得到解決、新版本是否定期發出？
 
 JavaScript 架構持續以驚人的速度改良。 使用上面列出的考量，來協助減輕選擇架構時，可能造成日後後悔對其依賴的風險。 如果您特別注重風險，請考慮提供商業支援及/或 由大型企業開發的架構。
 

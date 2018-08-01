@@ -1,17 +1,17 @@
 ---
 title: '#define (C# 參考)'
-ms.date: 07/20/2015
+ms.date: 06/30/2018
 f1_keywords:
 - '#define'
 helpviewer_keywords:
 - '#define directive [C#]'
 ms.assetid: 23638b8f-779c-450e-b600-d55682de7d01
-ms.openlocfilehash: 1903b96de5f9dfa4efc252897a4a4bd18ed64924
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f40c32a89641256e4f8fe30cd24f523b898139d5
+ms.sourcegitcommit: dc02d7d95f1e3efcc7166eaf431b0ec0dc9d8dca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33286730"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37143475"
 ---
 # <a name="define-c-reference"></a>#define (C# 參考)
 您可以使用 `#define` 來定義符號。 當您將符號作為運算式傳遞給 [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) 指示詞時，運算式會判斷值為 `true`，如下列範例所示：  
@@ -29,9 +29,9 @@ ms.locfileid: "33286730"
   
  您可以定義符號，但不能將值指派給符號。 如果您要使用的任何指示並不是前置處理器指示詞，則檔案中必須先出現 `#define` 指示詞才行。  
   
- 您也可以使用 [/define](../../../csharp/language-reference/compiler-options/define-compiler-option.md) 編譯器選項來定義符號。 您可以使用 [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md) 來取消定義符號。  
+ 您也可以使用 [-define](../../../csharp/language-reference/compiler-options/define-compiler-option.md) 編譯器選項來定義符號。 您可以使用 [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md) 來取消定義符號。  
   
- 透過 `/define` 或 `#define` 所定義的符號不會與相同名稱的變數發生衝突。 也就是說，您不應將變數名稱傳遞給前置處理器指示詞，而且符號僅能由前置處理器指示詞來評估。  
+ 透過 `-define` 或 `#define` 所定義的符號不會與相同名稱的變數發生衝突。 也就是說，您不應將變數名稱傳遞給前置處理器指示詞，而且符號僅能由前置處理器指示詞來評估。  
   
  使用 `#define` 所建立的符號範圍即為定義符號的檔案。  
   

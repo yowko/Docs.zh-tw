@@ -3,20 +3,18 @@ title: 開發 ASP.NET Core MVC 應用程式
 description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | 開發 ASP.NET Core MVC 應用程式
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/07/2017
-ms.openlocfilehash: a90f88e117965aec1550a45f114cabfda5204468
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/28/2018
+ms.openlocfilehash: 2fd3eb1e123959130884b96ee9d2e59b83c41b0a
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106589"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404641"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>開發 ASP.NET Core MVC 應用程式
 
 > 「沒必要第一次就做對。 最後做對才重要。」  
 > _- Andrew Hunt 和 David Thomas_
-
-## <a name="summary"></a>總結
 
 ASP.NET Core 是跨平台的開放原始碼架構，適用於建置現代化的雲端最佳化 Web 應用程式。 ASP.NET Core 應用程式是輕量型且模組化的，並內建相依性插入支援，以提高可測試性和可維護性。 ASP.NET Core 是建置企業級 Web 應用程式的強大架構，其結合 MVC，除了檢視型應用程式，還支援建置現代化 Web API。
 
@@ -33,7 +31,7 @@ app.UseMvc(routes =>;
 });
 ```
 
-在此範例中，已將名為 "default" 的路由新增至路由表。 它定義一個路由範本，其中包含 *controller*、*action* 和 *id* 的預留位置。controller 和 action 預留位置已指定預設值 (分別是 "Home" 和 "Index")，而 id 預留位置則是選擇性的 (由於已套用 "?")。 此處定義的慣例指出要求的第一個部分應該對應至控制器的名稱，第二個部分對應至動作，而第三個部分 (如果需要) 則會代表 id 參數。 慣例路由通常是在應用程式的一個位置定義，例如在啟動類別的 Configure 方法中。
+在此範例中，已將名為 "default" 的路由新增至路由表。 它定義一個路由範本，其中包含 _controller_、_action_ 和 _id_ 的預留位置。controller 和 action 預留位置已指定預設值 (分別是 "Home" 和 "Index")，而 id 預留位置則是選擇性的 (由於已套用 "?")。 此處定義的慣例指出要求的第一個部分應該對應至控制器的名稱，第二個部分對應至動作，而第三個部分 (如果需要) 則會代表 id 參數。 慣例路由通常是在應用程式的一個位置定義，例如在啟動類別的 Configure 方法中。
 
 屬性路由會直接套用至控制器和動作，而不是全域指定。 其優點在於當您想要查看特定方法時，會更容易搜尋到這些路由，但也表示路由資訊不會保留在應用程式的一個位置。 透過屬性路由，您可以輕鬆地為一個動作指定多個路由，並合併控制器與動作之間的路由。 例如: 
 
@@ -45,9 +43,10 @@ public class HomeController : Controller
     [Route("Index")] // Combines to define route template "Home/Index"
     [Route("/")] // Does not combine, defines the route template ""
     public IActionResult Index() {}
+}
 ```
 
-您可以在 [HttpGet] 和類似屬性上指定路由，避免需要新增個別 [Route\] 屬性。 屬性路由也可以使用權杖，來減少重複控制器或動作名稱的需求，如下所示：
+您可以在 [HttpGet] 和類似屬性上指定路由，避免需要新增個別 [Route] 屬性。 屬性路由也可以使用權杖，來減少重複控制器或動作名稱的需求，如下所示：
 
 ```csharp
 [Route("[controller\]")]
@@ -55,29 +54,32 @@ public class ProductsController : Controller
 {
     [Route("")] // Matches 'Products'
     [Route("Index")] // Matches 'Products/Index'
-    public IActionResult Index()
+    public IActionResult Index() {}
 }
 ```
 
-在指定的要求與路由經過比對之後，但呼叫動作方法之前，ASP.NET Core MVC 會在要求上執行[模型繫結](https://docs.microsoft.com/aspnet/core/mvc/models/model-binding)和[模型驗證](https://docs.microsoft.com/aspnet/core/mvc/models/validation)。 模型繫結會負責將傳入 HTTP 資料轉換成 .NET 類型，以指定為要呼叫之動作方法的參數。 例如，如果動作方法必須有 int id 參數，模型繫結會嘗試從要求隨附的值提供此參數。 若要這樣做，模型繫結會尋找以 POST 形式送出的值、路由本身中的值，以及查詢字串值。 假設找到 id 值，則會將它轉換成整數，再傳入動作方法。
+在指定的要求與路由經過比對之後，但呼叫動作方法之前，ASP.NET Core MVC 會在要求上執行[模型繫結](/aspnet/core/mvc/models/model-binding)和[模型驗證](/aspnet/core/mvc/models/validation)。 模型繫結會負責將傳入 HTTP 資料轉換成 .NET 類型，以指定為要呼叫之動作方法的參數。 例如，如果動作方法必須有 int id 參數，模型繫結會嘗試從要求隨附的值提供此參數。 若要這樣做，模型繫結會尋找以 POST 形式送出的值、路由本身中的值，以及查詢字串值。 假設找到 id 值，則會將它轉換成整數，再傳入動作方法。
 
 在繫結模型之後，但呼叫動作方法之前，會進行模型驗證。 模型驗證會根據模型類型使用選用屬性，並可協助確保提供的模型物件符合特定資料需求。 某些值可能指定為必要，或限制為特定長度或數字範圍等等。如果指定了驗證屬性，但模型不符合其需求，則屬性 ModelState.IsValid 會是 false，而且會將失敗的驗證規則集傳送給提出要求的用戶端。
 
-如果您使用模型驗證，請務必檢查模型是否有效，再執行任何狀態改變命令，以確保您的應用程式不會遭到無效資料損毀。 您可以使用[篩選條件](https://docs.microsoft.com/aspnet/core/mvc/controllers/filters)，避免需要在每個動作中新增程式碼來執行此作業。 ASP.NET Core MVC 篩選條件可讓您攔截要求群組，以便可根據目標套用一般原則和跨領域關注。 您可以將篩選條件套用至個別動作、整個控制器，或針對應用程式全域套用。
+如果您使用模型驗證，請務必檢查模型是否有效，再執行任何狀態改變命令，以確保您的應用程式不會遭到無效資料損毀。 您可以使用[篩選條件](/aspnet/core/mvc/controllers/filters)，避免需要在每個動作中新增程式碼來執行此作業。 ASP.NET Core MVC 篩選條件可讓您攔截要求群組，以便可根據目標套用一般原則和跨領域關注。 您可以將篩選條件套用至個別動作、整個控制器，或針對應用程式全域套用。
 
-對於 Web API，ASP.NET Core MVC 支援[「內容交涉」](https://docs.microsoft.com/aspnet/core/mvc/models/formatting)，可讓要求指定回應的格式化方式。 根據要求中提供的標頭，傳回資料的動作會將回應格式化為 XML、JSON 或其他支援的格式。 這項功能可讓具有不同資料格式需求的多個用戶端使用相同的 API。
+對於 Web API，ASP.NET Core MVC 支援[「內容交涉」](/aspnet/core/mvc/models/formatting)，可讓要求指定回應的格式化方式。 根據要求中提供的標頭，傳回資料的動作會將回應格式化為 XML、JSON 或其他支援的格式。 這項功能可讓具有不同資料格式需求的多個用戶端使用相同的 API。
 
 > ### <a name="references--mapping-requests-to-responses"></a>參考資料 - 將要求對應至回應
+>
 > - **路由至控制器動作**
 > <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
-> - **模型繫結**https://docs.microsoft.com/aspnet/core/mvc/models/model-binding
+> - **模型繫結**
+> <https://docs.microsoft.com/aspnet/core/mvc/models/model-binding>
 > - **模型驗證**
 > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
-> - **篩選條件**https://docs.microsoft.com/aspnet/core/mvc/controllers/filters
+> - **篩選條件**
+> <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 
 ## <a name="working-with-dependencies"></a>使用相依性
 
-ASP.NET Core 已內建支援，並在內部使用稱為[相依性插入](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)的技術。 相依性插入是在應用程式的不同組件之間啟用鬆散結合的一項技術。 建議您啟用鬆散結合，因為它可讓您更輕鬆地隔離應用程式組件，以便進行測試或取代。 此外，變更應用程式的某個組件，也較不可能會對應用程式的其他地方造成非預期的影響。 相依性插入是以相依性反轉準則為基礎，而且通常是實現開啟/關閉準則的關鍵。 當您評估應用程式搭配其相依性的運作情況時，請注意[靜態黏貼](http://deviq.com/static-cling/)程式碼異味，並記住「[New 就是黏附](https://ardalis.com/new-is-glue)」此一箴言。
+ASP.NET Core 已內建支援，並在內部使用稱為[相依性插入](/aspnet/core/fundamentals/dependency-injection)的技術。 相依性插入是在應用程式的不同組件之間啟用鬆散結合的一項技術。 建議您啟用鬆散結合，因為它可讓您更輕鬆地隔離應用程式組件，以便進行測試或取代。 此外，變更應用程式的某個組件，也較不可能會對應用程式的其他地方造成非預期的影響。 相依性插入是以相依性反轉準則為基礎，而且通常是實現開啟/關閉準則的關鍵。 當您評估應用程式搭配其相依性的運作情況時，請注意[靜態黏貼](https://deviq.com/static-cling/)程式碼異味，並記住「[New 就是黏附](https://ardalis.com/new-is-glue)」此一箴言。
 
 靜態黏貼發生於您的類別呼叫靜態方法或存取靜態屬性時，並對基礎結構具有副作用或相依性。 例如，如果您有一個方法呼叫靜態方法，而該方法接著寫入資料庫，則您的方法會與資料庫緊密結合。 任何中斷資料庫呼叫的項目都會中斷您的方法。 測試這類方法眾所周知很困難，因為這類測試需要商用模擬程式庫來模擬靜態呼叫，或只能透過適當的測試資料庫進行測試。 未相依於基礎結構的靜態呼叫 (特別是完全無狀態的呼叫) 可安心呼叫，不會影響結合或可測試性 (將程式碼結合到靜態呼叫本身除外)。
 
@@ -118,7 +120,7 @@ public void Configure(IApplicationBuilder app,
 > [!NOTE]
 > 如果您需要確保特定服務可供啟動類別使用，您可以使用 WebHostBuilder 及其 ConfigureServices 方法進行設定。
 
-啟動類別是您應該如何建構 ASP.NET Core 應用程式之其他組件的模型，這些組件包括控制器、中介軟體、篩選條件到您自己的服務。 在每個案例中，您應該遵循[明確相依性準則](http://deviq.com/explicit-dependencies-principle/)，要求而不是直接建立相依性，並在您的應用程式中利用相依性插入。 對於您直接具現化實作的位置和方式請小心，特別是搭配基礎結構使用或具有副作用的服務和物件。 最好是使用您的應用程式核心中定義的抽象概念，並作為引數傳遞到特定實作類型的硬式編碼參考。
+啟動類別是您應該如何建構 ASP.NET Core 應用程式之其他組件的模型，這些組件包括控制器、中介軟體、篩選條件到您自己的服務。 在每個案例中，您應該遵循[明確相依性準則](https://deviq.com/explicit-dependencies-principle/)，要求而不是直接建立相依性，並在您的應用程式中利用相依性插入。 對於您直接具現化實作的位置和方式請小心，特別是搭配基礎結構使用或具有副作用的服務和物件。 最好是使用您的應用程式核心中定義的抽象概念，並作為引數傳遞到特定實作類型的硬式編碼參考。
 
 ## <a name="structuring-the-application"></a>建構應用程式
 
@@ -136,7 +138,7 @@ ASP.NET Core UI 專案會負責任何 UI 層級考量，但不應該包含商務
 
 ### <a name="feature-organization"></a>功能組織
 
-根據預設，ASP.NET Core 應用程式組織其資料夾結構時會包含 Controllers 和 Views，通常也會包含 ViewModels。 支援這些伺服器端結構的用戶端程式碼通常會與 wwwroot 資料夾分開儲存。 不過，大型應用程式在使用此組織方式時可能會遇到問題，因為處理任何指定的功能通常需要在這些資料夾之間跳來跳去。 隨著每個資料夾中的檔案和子資料夾數目增加，這會變得越來越困難，而導致需要大幅捲動方案總管。 解決此問題的方法之一，是依「功能」而不是檔案類型來組織應用程式程式碼。 此組織樣式通常稱為功能資料夾或功能分割 (請參閱：[Vertical Slices](http://deviq.com/vertical-slices/) (垂直分割))。
+根據預設，ASP.NET Core 應用程式組織其資料夾結構時會包含 Controllers 和 Views，通常也會包含 ViewModels。 支援這些伺服器端結構的用戶端程式碼通常會與 wwwroot 資料夾分開儲存。 不過，大型應用程式在使用此組織方式時可能會遇到問題，因為處理任何指定的功能通常需要在這些資料夾之間跳來跳去。 隨著每個資料夾中的檔案和子資料夾數目增加，這會變得越來越困難，而導致需要大幅捲動方案總管。 解決此問題的方法之一，是依「功能」而不是檔案類型來組織應用程式程式碼。 此組織樣式通常稱為功能資料夾或功能分割 (請參閱：[Vertical Slices](https://deviq.com/vertical-slices/) (垂直分割))。
 
 基於此目的，ASP.NET Core MVC 會支援 Areas。 使用 Areas，您可以在每個 Areas 資料夾中建立不同的 Controllers 和 Views 資料夾集 (以及任何相關聯的模型)。 圖 7-1 顯示使用 Areas 的範例資料夾結構。
 
@@ -205,7 +207,7 @@ ASP.NET Core MVC 也會使用慣例來尋找檢視。 您可以使用自訂慣�
 
 ### <a name="cross-cutting-concerns"></a>跨領域關注
 
-隨著應用程式成長，排除跨領域關注因素對於去除重複和維持一致性會變得越來越重要。 ASP.NET Core 應用程式中的一些跨領域關注範例包括驗證 (authentication)、模型驗證 (validation) 規則、輸出快取和錯誤處理，還有許多其他範例。 ASP.NET Core MVC [篩選條件](https://docs.microsoft.com/aspnet/core/mvc/controllers/filters)可讓您在要求處理管線的特定步驟之前或之後執行程式碼。 例如，您可以在模型繫結前後、動作前後或動作結果前後執行篩選條件。 您也可以使用授權篩選條件來控制管線其餘部分的存取。 圖 7-2 顯示如何透過篩選條件 (如已設定) 要求執行流程。
+隨著應用程式成長，排除跨領域關注因素對於去除重複和維持一致性會變得越來越重要。 ASP.NET Core 應用程式中的一些跨領域關注範例包括驗證 (authentication)、模型驗證 (validation) 規則、輸出快取和錯誤處理，還有許多其他範例。 ASP.NET Core MVC [篩選條件](/aspnet/core/mvc/controllers/filters)可讓您在要求處理管線的特定步驟之前或之後執行程式碼。 例如，您可以在模型繫結前後、動作前後或動作結果前後執行篩選條件。 您也可以使用授權篩選條件來控制管線其餘部分的存取。 圖 7-2 顯示如何透過篩選條件 (如已設定) 要求執行流程。
 
 ![要求處理會歷經授權篩選條件、資源篩選條件、模型繫結、動作篩選條件、動作執行和動作結果轉換、例外狀況篩選條件、結果篩選條件，以及結果執行。 在送出的過程，要求只會經過結果篩選條件和資源篩選條件的處理，然後便成為傳送至用戶端的回應。](./media/image7-2.png)
 
@@ -264,7 +266,6 @@ public class ValidateModelAttribute : ActionFilterAttribute
 同樣地，篩選條件可用來檢查記錄是否存在，並先傳回 404 再執行動作，因此不需要在動作中執行這些檢查。 一旦您取出一般慣例並組織方案，將基礎結構程式碼和商務邏輯與 UI 分隔開來之後，您的 MVC 動作方法應該會非常精簡：
 
 ```csharp
-// PUT api/authors/2/5
 [HttpPut("{id}")]
 [ValidateAuthorExists]
 public async Task<IActionResult> Put(int id, [FromBody]Author author)
@@ -277,18 +278,19 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 您可以從 MSDN 文章 [Real World ASP.NET Core MVC Filters](https://msdn.microsoft.com/magazine/mt767699.aspx) (真實世界的 ASP.NET Core MVC 篩選條件)，深入了解如何實作篩選條件及下載工作範例。
 
 > ### <a name="references--structuring-applications"></a>參考資料 - 建構應用程式
+>
 > - **區域**  
-> <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
-> - **MSDN – Feature Slices for ASP.NET Core MVC**
->  <https://msdn.microsoft.com/magazine/mt763233.aspx> (MSDN – ASP.NET Core MVC 的功能分區)
+>   <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
+> - **MSDN Magazine - Feature Slices for ASP.NET Core MVC (MSDN Magazine - ASP.NET Core MVC 的功能分區)**  
+ > <https://msdn.microsoft.com/magazine/mt763233.aspx>
 > - **篩選**  
-> <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
+>   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **MSDN - Real World ASP.NET Core MVC Filters (真實世界的 ASP.NET Core MVC 篩選條件)**  
-> <https://msdn.microsoft.com/magazine/mt767699.aspx>
+>   <https://msdn.microsoft.com/magazine/mt767699.aspx>
 
 ## <a name="security"></a>安全性
 
-保護 Web 應用程式是很龐大的主題，其中包含許多考量。 最基本的安全性層級牽涉到確保您知道指定要求的來源，以及確保該要求只具有其應有的資源存取權。 驗證是比較要求隨附的認證與受信任資料存放區中的認證，來查看是否應該將要求視為來自已知實體的程序。 授權是根據使用者身分識別限制特定資源存取權的程序。 第三個安全性考量是防止第三方竊聽要求，您應該至少[確保應用程式使用 SSL](https://docs.microsoft.com/aspnet/core/security/enforcing-ssl)。
+保護 Web 應用程式是很龐大的主題，其中包含許多考量。 最基本的安全性層級牽涉到確保您知道指定要求的來源，以及確保該要求只具有其應有的資源存取權。 驗證是比較要求隨附的認證與受信任資料存放區中的認證，來查看是否應該將要求視為來自已知實體的程序。 授權是根據使用者身分識別限制特定資源存取權的程序。 第三個安全性考量是防止第三方竊聽要求，您應該至少[確保應用程式使用 SSL](/aspnet/core/security/enforcing-ssl)。
 
 ### <a name="authentication"></a>驗證
 
@@ -329,7 +331,7 @@ public void Configure(IApplicationBuilder app)
 
 在 Configure 方法中，UseIdentity 必須在 UseMvc 之前出現。 在 ConfigureServices 中設定身分識別時，您會注意到對 AddDefaultTokenProviders 的呼叫。 這與可用來保護 Web 通訊的權杖無關，而是指建立提示的提供者，這些提示可透過簡訊或電子郵件傳送給使用者，以確認其身分識別。
 
-您可以從官方 ASP.NET Core 文件，深入了解如何[設定雙因素驗證](https://docs.microsoft.com/aspnet/core/security/authentication/2fa)和[啟用外部登入提供者](https://docs.microsoft.com/aspnet/core/security/authentication/social/)。
+您可以從官方 ASP.NET Core 文件，深入了解如何[設定雙因素驗證](/aspnet/core/security/authentication/2fa)和[啟用外部登入提供者](/aspnet/core/security/authentication/social/)。
 
 ### <a name="authorization"></a>授權
 
@@ -383,40 +385,41 @@ public void ConfigureServices(IServiceCollection services)
 **圖 7-4**： Web API 的權杖型驗證
 
 > ### <a name="references--security"></a>參考資料 - 安全性
+>
 > - **安全性文件概觀**  
-> https://docs.microsoft.com/aspnet/core/security/
+>   https://docs.microsoft.com/aspnet/core/security/
 > - **Enforcing SSL in an ASP.NET Core App** (在 ASP.NET Core 應用程式中強制執行 SSL)  
-> <https://docs.microsoft.com/aspnet/core/security/enforcing-ssl>
+>   <https://docs.microsoft.com/aspnet/core/security/enforcing-ssl>
 > - **身分識別簡介**  
-> <https://docs.microsoft.com/aspnet/core/security/authentication/identity>
+>   <https://docs.microsoft.com/aspnet/core/security/authentication/identity>
 > - **授權簡介**  
-> <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
+>   <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
 > - **Azure App Service 之 API Apps 的驗證和授權**  
-> <https://docs.microsoft.com/azure/app-service-api/app-service-api-authentication>
+>   <https://docs.microsoft.com/azure/app-service-api/app-service-api-authentication>
 
 ## <a name="client-communication"></a>用戶端通訊
 
 除了透過 Web API 提供頁面及回應資料要求，ASP.NET Core 應用程式還可以直接與連線的用戶端通訊。 此輸出通訊可以使用各種傳輸技術，最常見的是 WebSockets。 ASP.NET Core SignalR 是一種程式庫，可讓您簡單地將即時伺服器對用戶端通訊功能新增至應用程式。 SignalR 支援各種傳輸技術 (包括 WebSockets)，並從開發人員擷取許多實作詳細資料。
 
-ASP.NET Core SignalR 目前正在開發中，下一版 ASP.NET Core 將會提供使用。 不過，目前有其他[開放原始碼 WebSockets 程式庫](https://github.com/radu-matei/websocket-manager)可用。
+ASP.NET Core 2.1 提供 ASP.NET Core SignalR。
 
 即時用戶端通訊 (不論是直接使用 WebSockets 或其他技術) 在許多不同的應用程式案例中都很有用。 其中某些範例包括：
 
--   即時聊天室應用程式
+- 即時聊天室應用程式
 
--   監控應用程式
+- 監控應用程式
 
--   工作進度更新
+- 工作進度更新
 
--   通知
+- 通知
 
--   互動式論壇應用程式
+- 互動式論壇應用程式
 
 在應用程式中內建用戶端通訊時，通常有兩個元件：
 
--   伺服器端連線管理員 (SignalR 中樞、WebSocketManager、WebSocketHandler)
+- 伺服器端連線管理員 (SignalR 中樞、WebSocketManager、WebSocketHandler)
 
--   用戶端程式庫
+- 用戶端程式庫
 
 用戶端不僅限於瀏覽器，行動裝置應用程式、主控台應用程式和其他原生應用程式也可以使用 SignalR/WebSockets 來通訊。 下列簡單程式會將所有傳送至交談應用程式的內容回應到主控台，以作為 WebSocketManager 範例應用程式的一部分：
 
@@ -434,26 +437,28 @@ public class Program
         Console.ReadLine();
         StopConnectionAsync();
     }
-    
+
     public static async Task StartConnectionAsync()
     {
         _connection = new Connection();
         await _connection.StartConnectionAsync("ws://localhost:65110/chat");
     }
-    
+
     public static async Task StopConnectionAsync()
     {
         await _connection.StopConnectionAsync();
     }
+}
 ```
 
 請考慮您的應用程式直接與用戶端應用程式通訊的方式，並考慮即時通訊是否會改善應用程式的使用者體驗。
 
 > ### <a name="references--client-communication"></a>參考資料 - 用戶端通訊
+>
 > - **ASP.NET Core SignalR**  
-> <https://github.com/aspnet/SignalR>
+>   <https://github.com/aspnet/SignalR>
 > - **WebSocket Manager**  
-> https://github.com/radu-matei/websocket-manager
+>   https://github.com/radu-matei/websocket-manager
 
 ## <a name="domain-driven-design--should-you-apply-it"></a>領域驅動設計 - 是否應該套用？
 
@@ -463,29 +468,29 @@ public class Program
 
 您的領域模型會包含彼此互動以代表系統行為的物件。 這些物件的分類如下：
 
--   [實體](http://deviq.com/entity/)，代表具有身分識別執行緒的物件。 實體通常會儲存在使用金鑰的持續性儲存區中，稍後可予以擷取。
+- [實體](https://deviq.com/entity/)，代表具有身分識別執行緒的物件。 實體通常會儲存在使用金鑰的持續性儲存區中，稍後可予以擷取。
 
--   [彙總](http://deviq.com/aggregate-pattern/)，代表應該當作一個單位保存的物件群組。
+- [彙總](https://deviq.com/aggregate-pattern/)，代表應該當作一個單位保存的物件群組。
 
--   [值物件](http://deviq.com/value-object/)，代表可根據其屬性值的總和比較的概念。 例如，由開始和結束日期組成的 DateRange。
+- [值物件](https://deviq.com/value-object/)，代表可根據其屬性值的總和比較的概念。 例如，由開始和結束日期組成的 DateRange。
 
--   [領域事件](https://martinfowler.com/eaaDev/DomainEvent.html)，代表系統內發生的事件，系統的其他組件對這些事件會有興趣。
+- [領域事件](https://martinfowler.com/eaaDev/DomainEvent.html)，代表系統內發生的事件，系統的其他組件對這些事件會有興趣。
 
-請注意，DDD 領域模型應該將複雜行為封裝在模型內。 特別是實體，不應該只是屬性集合。 當領域模型缺少行為且只代表系統的狀態時，即為 [Anemic 模型](http://deviq.com/anemic-model/)，DDD 中並不需要此模型。
+請注意，DDD 領域模型應該將複雜行為封裝在模型內。 特別是實體，不應該只是屬性集合。 當領域模型缺少行為且只代表系統的狀態時，即為 [Anemic 模型](https://deviq.com/anemic-model/)，DDD 中並不需要此模型。
 
 除了這些模型類型，DDD 通常還會採用多種模式：
 
--   [儲存機制](http://deviq.com/repository-pattern/)，用於抽象化持續性詳細資料。
+- [儲存機制](https://deviq.com/repository-pattern/)，用於抽象化持續性詳細資料。
 
--   [Factory](https://en.wikipedia.org/wiki/Factory_method_pattern)，用於封裝複雜的物件建立。
+- [Factory](https://en.wikipedia.org/wiki/Factory_method_pattern)，用於封裝複雜的物件建立。
 
--   領域事件，用於分離相依行為與觸發行為。
+- 領域事件，用於分離相依行為與觸發行為。
 
--   [服務](http://gorodinski.com/blog/2012/04/14/services-in-domain-driven-design-ddd/)，用於封裝複雜行為及/或基礎結構實作詳細資料。
+- [服務](http://gorodinski.com/blog/2012/04/14/services-in-domain-driven-design-ddd/)，用於封裝複雜行為及/或基礎結構實作詳細資料。
 
--   [命令](https://en.wikipedia.org/wiki/Command_pattern)，用於分離發出命令與執行命令本身。
+- [命令](https://en.wikipedia.org/wiki/Command_pattern)，用於分離發出命令與執行命令本身。
 
--   [規格](http://deviq.com/specification-pattern/)，用於封裝查詢詳細資料。
+- [規格](https://deviq.com/specification-pattern/)，用於封裝查詢詳細資料。
 
 DDD 也建議使用上述的全新架構，允許鬆散結合、封裝，以及可使用單元測試輕鬆驗證的程式碼。
 
@@ -500,8 +505,9 @@ DDD 牽涉到投資模型、架構和通訊，這對較小型的應用程式，�
 混合式方法只會將 DDD 用於應用程式的異動或較複雜區域，而不會用於較簡單的 CRUD 或應用程式的唯讀部分。 例如，如果您想要查詢資料來顯示報表或視覺化儀表板的資料，則不需要有彙總的條件約束。 針對這類需求，最好是使用個別且較簡單的讀取模型。
 
 > ### <a name="references--domain-driven-design"></a>參考資料 - 領域驅動設計
+>
 > - **DDD 簡單說明 (StackOverflow 解答)**  
-> <https://stackoverflow.com/questions/1222392/can-someone-explain-domain-driven-design-ddd-in-plain-english-please/1222488#1222488>
+>   <https://stackoverflow.com/questions/1222392/can-someone-explain-domain-driven-design-ddd-in-plain-english-please/1222488#1222488>
 
 ## <a name="deployment"></a>部署
 
@@ -525,31 +531,32 @@ ASP.NET Core 應用程式是主控台應用程式，必須在伺服器開機時�
 
 如果您在 Azure 上裝載應用程式，您可以使用 Microsoft Azure 應用程式閘道作為專用虛擬設備來提供數項服務。 除了作為個別應用程式的反向 Proxy，應用程式閘道也可能提供下列功能：
 
--   HTTP 負載平衡
+- HTTP 負載平衡
 
--   SSL 卸載 (SSL 僅限網際網路)
+- SSL 卸載 (SSL 僅限網際網路)
 
--   端對端 SSL
+- 端對端 SSL
 
--   多網站路由 (單一應用程式閘道上最多可合併 20 個網站)
+- 多網站路由 (單一應用程式閘道上最多可合併 20 個網站)
 
--   Web 應用程式防火牆
+- Web 應用程式防火牆
 
--   WebSocket 支援
+- WebSocket 支援
 
--   進階診斷
+- 進階診斷
 
-*如需 Azure 部署選項的詳細資訊，請參閱第 10 章。*
+_如需 Azure 部署選項的詳細資訊，請參閱[第 10 章](development-process-for-azure.md)。_
 
 > ### <a name="references--deployment"></a>參考資料 - 部署
+>
 > - **裝載和部署概觀**  
-> <https://docs.microsoft.com/aspnet/core/publishing/>
+>   <https://docs.microsoft.com/aspnet/core/publishing/>
 > - **何時搭配使用 Kestrel 與反向 Proxy**  
-> <https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel#when-to-use-kestrel-with-a-reverse-proxy>
+>   <https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel#when-to-use-kestrel-with-a-reverse-proxy>
 > - **在 Docker 中裝載 ASP.NET Core 應用程式**  
-> <https://docs.microsoft.com/aspnet/core/publishing/docker>
+>   <https://docs.microsoft.com/aspnet/core/publishing/docker>
 > - **Azure 應用程式閘道簡介**  
-> <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
+>   <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]
 [上一頁](common-client-side-web-technologies.md)

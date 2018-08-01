@@ -1,23 +1,21 @@
 ---
 title: 使用 ASP.NET Core 應用程式中的資料
-description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | 使用 ASP 中的資料
+description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | 使用 ASP.NET Core 應用程式中的資料
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/07/2017
-ms.openlocfilehash: c9f1350f57ed649b9bf53968c19ab652b3c74384
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/28/2018
+ms.openlocfilehash: 7209789eb36dc717823625c0ae67357ee332086b
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106171"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404654"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>使用 ASP.NET Core 應用程式中的資料
 
 > 「資料是非常寶貴的資產，而且比系統本身擁有更長久的價值。」
-
-Tim Berners-Lee
-
-## <a name="summary"></a>總結
+>
+> Tim Berners-Lee
 
 對所有軟體應用程式來說，資料存取都是非常重要的一部分。 ASP.NET Core 支援各種不同的資料存取選項，包括 Entity Framework Core (和 Entity Framework 6)，並可使用任何 .NET 資料存取架構。 至於要選擇使用哪種資料存取架構，則取決於應用程式的需求。 您可以將這些選項從 ApplicationCore 和 UI 專案中抽離出來，並將實作詳細資料封裝到基礎結構中，以協助產生相依性低的可測試軟體。
 
@@ -35,7 +33,7 @@ dotnet add package Microsoft.EntityFrameworkCore.InMemory
 
 ### <a name="the-dbcontext"></a>DbContext
 
-若要使用 EF Core，您需要 DbContext 的子類別。 這個類別包含的屬性代表應用程式會用到的實體集合。 eShopOnWeb 範例包括 CatalogContext 以及項目、品牌和類型的集合：
+若要使用 EF Core，您需要 <xref:Microsoft.EntityFrameworkCore.DbContext> 的子類別。 這個類別包含的屬性代表應用程式會用到的實體集合。 eShopOnWeb 範例包括 CatalogContext 以及項目、品牌和類型的集合：
 
 ```csharp
 public class CatalogContext : DbContext
@@ -129,9 +127,11 @@ var brandsWithItems = await _context.CatalogBrands
 
 另一個用來載入相關資料的選項是使用「明確式載入」。 明確式載入可讓您將其他資料載入已擷取的實體中。 由於這牽涉到資料庫的個別要求，因此不建議用於 Web 應用程式，而應該將每項要求的資料庫往返次數降至最低。
 
-「消極式載入」功能會自動載入應用程式參考的相關資料。 EF Core 目前不支援這項功能，但和明確式載入相同，通常建議您為 Web 應用程式停用此功能。
+「消極式載入」功能會自動載入應用程式參考的相關資料。 EF Core 已在 2.1 版中新增對消極式載入的支援。 消極式載入預設不會啟用，而且需要安裝 `Microsoft.EntityFrameworkCore.Proxies`。 如同明確式載入，通常應該為 Web 應用程式停用消極式載入，因為其使用會導致在每個 Web 要求中發出額外的資料庫查詢。 不幸的是，當延遲很小且用於測試的資料集通常很小時，消極式載入所產生的額外負荷往往在開發期間不易察覺。 不過，在生產環境中，由於使用者、資料和延遲更多，額外的資料庫要求通常會導致 Web 應用程式大量使用消極式載入而效能不佳。
 
-### <a name="resilient-connections"></a>具復原功能的連線
+[避免在 Web 應用程式中消極載入實體](https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications)
+
+### <a name="resilient-connections"></a>具復原功能的連接
 
 有時您可能會無法使用 SQL 資料庫等外部資源。 在暫時無法使用的情況下，應用程式可以使用重試邏輯，以避免引發例外狀況。 這項技術通常稱為「連線復原能力」。 您可以重試某項作業，並以指數方式增加等候時間，直到已達重試計數上限為止，藉此實作[使用指數輪詢重試](https://docs.microsoft.com/azure/architecture/patterns/retry)技術。 這項技術是為了因應雲端資源可能會在短時間內斷斷續續無法使用，而導致某些要求失敗的問題。
 
@@ -153,19 +153,19 @@ public class Startup
         {
             sqlOptions.EnableRetryOnFailure(
             maxRetryCount: 5,
-            maxRetryDelay: TimeSpan.FromSeconds(30), 
-            errorNumbersToAdd: null); 
+            maxRetryDelay: TimeSpan.FromSeconds(30),
+            errorNumbersToAdd: null);
         });
     });
 }
 //...
 ```
 
-  #### <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a>使用 BeginTransaction 和多個 DbContext 的執行策略和明確異動 
-  
-  在 EF Core 連接中啟用重試時，您使用 EF Core 執行的每項作業都會變成其本身可重試的作業。 如果發生暫時性失敗，SaveChanges 的每個查詢和每個呼叫會當做一個單位來重試。
-  
-  不過，如果您的程式碼使用 BeginTransaction 起始異動，您將定義需視為一個單位的專屬作業群組，如果發生失敗，必須復原異動內的所有項目。 如果您在使用 EF 執行策略 (重試原則) 時嘗試執行該交易，並在交易中包含來自多個 DbContext 的數個 SaveChanges，則會看到類似如下的例外狀況。
+#### <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a>使用 BeginTransaction 和多個 DbContext 的執行策略和明確異動
+
+在 EF Core 連接中啟用重試時，您使用 EF Core 執行的每項作業都會變成其本身可重試的作業。 如果發生暫時性失敗，SaveChanges 的每個查詢和每個呼叫會當做一個單位來重試。
+
+不過，如果您的程式碼使用 BeginTransaction 起始異動，您將定義需視為一個單位的專屬作業群組，如果發生失敗，必須復原異動內的所有項目。 如果您在使用 EF 執行策略 (重試原則) 時嘗試執行該交易，並在交易中包含來自多個 DbContext 的數個 SaveChanges，則會看到類似如下的例外狀況。
 
 System.InvalidOperationException：已設定的執行策略 'SqlServerRetryingExecutionStrategy' 不支援使用者起始的異動。 使用 'DbContext.Database.CreateExecutionStrategy()' 所傳回的執行策略，將異動中的所有作業當做一個可重試的單位來執行。
 
@@ -176,7 +176,7 @@ System.InvalidOperationException：已設定的執行策略 'SqlServerRetryingEx
 // within an explicit transaction
 // See:
 // https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency
-var strategy = _catalogContext.Database.CreateExecutionStrategy(); 
+var strategy = _catalogContext.Database.CreateExecutionStrategy();
 await strategy.ExecuteAsync(async () =>
 {
     // Achieving atomicity between original Catalog database operation and the
@@ -185,7 +185,7 @@ await strategy.ExecuteAsync(async () =>
     {
         _catalogContext.CatalogItems.Update(catalogItem);
         await _catalogContext.SaveChangesAsync();
-        
+
         // Save to EventLog only if product price changed
         if (raiseProductPriceChangedEvent)
         await _integrationEventLogService.SaveEventAsync(priceChangedEvent);
@@ -197,12 +197,13 @@ await strategy.ExecuteAsync(async () =>
 第一個 DbContext 是 \_catalogContext，第二個 DbContext 則位於 \_integrationEventLogService 物件內。 最後，系統會使用 EF 執行策略執行多個 DbContext 的認可動作。
 
 > ### <a name="references--entity-framework-core"></a>參考資料 – Entity Framework Core
+>
 > - **EF Core 文件**  
-> <https://docs.microsoft.com/ef/>
+>   <https://docs.microsoft.com/ef/>
 > - **EF Core：相關資料**  
-> <https://docs.microsoft.com/ef/core/querying/related-data>
+>   <https://docs.microsoft.com/ef/core/querying/related-data>
 > - **避免在 ASPNET 應用程式中消極載入實體**  
-> <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
+>   <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
 
 ## <a name="ef-core-or-micro-orm"></a>該使用 EF Core 或微型 ORM？
 
@@ -273,7 +274,6 @@ NoSQL 資料庫通常不會強制執行 [ACID](https://en.wikipedia.org/wiki/ACI
 
 Azure DocumentDB 是全受控的 NoSQL 資料庫服務，可提供以雲端為基礎的無結構描述資料儲存區。 DocumentDB 是專為滿足快速及可預測的效能、高可用性、彈性調整和全域發佈需求所建置。 即使在 NoSQL 資料庫中，開發人員仍可以對 JSON 資料使用豐富且熟悉的 SQL 查詢功能。 DocumentDB 中的所有資源都會儲存為 JSON 文件。 系統會以「項目」形式來管理資源；也就是說，資源是包含中繼資料和「摘要」的文件，也是項目的集合。 圖 8-2 顯示不同 DocumentDB 資源之間的關聯性。
 
-
 ![DocumentDB (其為 NoSQL JSON 資料庫) 資源之間的階層式關聯性](./media/image8-2.png)
 
 **圖 8-2**： DocumentDB 資源的組織。
@@ -282,25 +282,25 @@ DocumentDB 查詢語言是一種簡單但功能強大的介面，適用於查詢
 
 **參考資料 – DocumentDB**
 
--   DocumentDB 簡介
-    <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
+- DocumentDB 簡介
+  <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
 
-## <a name="other-persistence-options"></a>其他持續性儲存區選項
+## <a name="other-persistence-options"></a>其他持續性選項
 
 除了關聯式和 NoSQL 儲存區選項，ASP.NET Core 應用程式也可以使用 Azure 儲存體，透過以雲端為基礎且可擴充的方式，來儲存各種不同的資料格式和檔案。 Azure 儲存體可大幅進行調整，因此您可以一開始先儲存少量資料，之後再視應用程式的需要，擴充儲存至數百 GB 或 TB。 Azure 儲存體支援下列四種資料類型：
 
--   Blob 儲存體，也稱為物件儲存體，適用於非結構化的文字或二進位儲存。
+- Blob 儲存體，也稱為物件儲存體，適用於非結構化的文字或二進位儲存。
 
--   資料表儲存體，可透過資料列索引鍵存取，適用於結構化資料集。
+- 資料表儲存體，可透過資料列索引鍵存取，適用於結構化資料集。
 
--   佇列儲存體，適合用來進行以佇列為主的通訊。
+- 佇列儲存體，適合用來進行以佇列為主的通訊。
 
--   檔案儲存體，適合用來存取 Azure 虛擬機器和內部部署應用程式之間的共用檔案。
+- 檔案儲存體，適合用來存取 Azure 虛擬機器和內部部署應用程式之間的共用檔案。
 
 **參考資料 – Azure 儲存體**
 
--   Azure 儲存體簡介
-    <https://docs.microsoft.com/azure/storage/storage-introduction>
+- Azure 儲存體簡介
+  <https://docs.microsoft.com/azure/storage/storage-introduction>
 
 ## <a name="caching"></a>快取
 
@@ -316,16 +316,17 @@ ASP.NET Core 支援兩個層級的快取回應。 第一個層級不會快取伺
     [ResponseCache(Duration = 60)]
     public IActionResult Contact()
     { }
-    
+
     ViewData["Message"] = "Your contact page.";
     return View();
 }
+```
 
-The above example will result in the following header being added to the response, instructing clients to cache the result for up to 60 seconds.
+上述範例會導致將下列標頭新增至回應，並指示用戶端快取結果高達 60 秒。
 
 Cache-Control: public,max-age=60
 
-In order to add server-side in-memory caching to the application, you must reference the Microsoft.AspNetCore.ResponseCaching NuGet package, and then add the Response Caching middleware. This middleware is configured in both ConfigureServices and Configure in Startup:
+若要將伺服器端記憶體內部快取新增至應用程式，您必須參考 Microsoft.AspNetCore.ResponseCaching NuGet 套件，然後新增回應快取中介軟體。 此中介軟體是在啟動的 ConfigureServices 和 Configure 中設定：
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -339,11 +340,11 @@ public void Configure(IApplicationBuilder app)
 }
 ```
 
-回應快取中介軟體會根據一組可自訂的條件來自動快取回應。 根據預設，只會快取透過 GET 或 HEAD 方法要求的 200 (沒問題) 回應。 此外，要求的回應必須具備 Cache-Control: public 標頭，而且不能包含 Authorization 或 Set-Cookie 的標頭。 請參閱[回應快取中介軟體所使用的快取條件完整清單](https://docs.microsoft.com/aspnet/core/performance/caching/middleware#conditions-for-caching)。
+回應快取中介軟體會根據一組可自訂的條件來自動快取回應。 根據預設，只會快取透過 GET 或 HEAD 方法要求的 200 (沒問題) 回應。 此外，要求的回應必須具備 Cache-Control: public 標頭，而且不能包含 Authorization 或 Set-Cookie 的標頭。 請參閱[回應快取中介軟體所使用的快取條件完整清單](/aspnet/core/performance/caching/middleware#conditions-for-caching)。
 
 ### <a name="data-caching"></a>資料快取
 
-您可以只快取個別的資料查詢結果，或同時快取完整的 Web 回應。 若要這麼做，您可以在 Web 伺服器上使用記憶體內部快取，或使用[分散式快取](https://docs.microsoft.com/aspnet/core/performance/caching/distributed)。 本節將示範如何實作記憶體內部快取。
+您可以只快取個別的資料查詢結果，或同時快取完整的 Web 回應。 若要這麼做，您可以在 Web 伺服器上使用記憶體內部快取，或使用[分散式快取](/aspnet/core/performance/caching/distributed)。 本節將示範如何實作記憶體內部快取。
 
 在 ConfigureServices 中，新增對記憶體 (或分散式) 快取的支援：
 
@@ -374,7 +375,7 @@ public class CachedCatalogService : ICatalogService
         _cache = cache;
         _catalogService = catalogService;
     }
-    
+
     public async Task<IEnumerable<SelectListItem>> GetBrands()
     {
         return await _cache.GetOrCreateAsync(_brandsKey, async entry =>
@@ -383,7 +384,7 @@ public class CachedCatalogService : ICatalogService
             return await _catalogService.GetBrands();
         });
     }
-    
+
     public async Task<Catalog> GetCatalogItems(int pageIndex, int itemsPage, int? brandID, int? typeId)
     {
         string cacheKey = String.Format(_itemsKeyTemplate, pageIndex, itemsPage, brandID, typeId);
@@ -393,7 +394,7 @@ public class CachedCatalogService : ICatalogService
             return await _catalogService.GetCatalogItems(pageIndex, itemsPage, brandID, typeId);
         });
     }
-    
+
     public async Task<IEnumerable<SelectListItem>> GetTypes()
     {
         return await _cache.GetOrCreateAsync(_typesKey, async entry =>
@@ -436,6 +437,8 @@ new CancellationChangeToken(cts.Token));
 // elsewhere, expire the cache by cancelling the token\
 _cache.Get<CancellationTokenSource>("cts").Cancel();
 ```
+
+快取可大幅提升從資料庫反覆要求相同值的網頁效能。 請務必測量資料存取和頁面效能，再套用快取，並僅在看到有改進的需求時才套用快取。 快取會耗用網頁伺服器記憶體資源，並增加應用程式的複雜度，因此請務必不要太早使用此技術進行最佳化。
 
 >[!div class="step-by-step"]
 [上一頁](develop-asp-net-core-mvc-apps.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - local functions [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 208ac3d4a7b803dd081edfd9f5227a779f7cf211
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: 2f21dd80de8f9df612ab460b9375bf5c1dfae1ce
+ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805616"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792305"
 ---
 # <a name="local-functions-c-programming-guide"></a>區域函式 (C# 程式設計手冊)
 

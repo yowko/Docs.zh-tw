@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02f88faab6ddbaa026e73ad61bc63fbe8e5e00ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d689aeb91ad79b776c3b93c1809ec46947ea60b
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591321"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874783"
 ---
 # <a name="threading-objects-and-features"></a>執行緒物件和功能
 .NET Framework 提供一些物件，可協助您建立及管理多執行緒應用程式。 Managed 執行緒是以 <xref:System.Threading.Thread> 類別來表示。 <xref:System.Threading.ThreadPool> 類別可讓您輕鬆建立及管理多執行緒的背景工作。 <xref:System.ComponentModel.BackgroundWorker> 類別會針對與使用者介面互動的工作執行相同的作業。 <xref:System.Threading.Timer> 類別會定期執行背景工作。  
@@ -25,7 +25,7 @@ ms.locfileid: "33591321"
  說明 **ThreadPool** 類別，這個類別可讓您要求執行緒執行工作，而不需要自行進行任何執行緒管理。  
   
  [計時器](../../../docs/standard/threading/timers.md)  
- 說明如何使用 **Timer** 來指定要在指定時間呼叫的委派。  
+ 說明可用於多執行緒環境的計時器。  
   
  [監視](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
  說明如何使用 **Monitor** 類別來同步存取成員，或建置自己的執行緒管理型別。  

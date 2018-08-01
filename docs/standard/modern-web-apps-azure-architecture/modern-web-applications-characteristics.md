@@ -3,20 +3,18 @@ title: 現代化 Web 應用程式的特性
 description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | 現代化 Web 應用程式的特性
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/06/2017
-ms.openlocfilehash: cc4493bf8e45c41a94e8e6f719318b14ad5b05f1
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/28/2018
+ms.openlocfilehash: 4c73ab59148325f66d3ee17db3fb78d397b73f15
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105803"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404482"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>現代化 Web 應用程式的特性
 
 > "… 有了適當的設計，功能即容易取得。 這種方法艱鉅，但會持續成功。」  
 > _\- Dennis Ritchie_
-
-## <a name="summary"></a>總結
 
 現代化 Web 應用程式具有比以往更高的使用者期望和更高的需求。 現今的 Web 應用程式應該要在世界上的任何地方全天候可用，並可讓幾乎所有裝置或所有尺寸的螢幕使用。 Web 應用程式必須安全、靈活、可調整，以符合尖峰需求。 越來越複雜的案例應透過使用 JavaScript 建置在用戶端上豐富的使用者體驗來處理，並有效率地透過 Web API 進行通訊。
 
@@ -24,15 +22,16 @@ ASP.NET Core 已針對現代化 Web 應用程式和雲端式裝載案例最佳�
 
 ## <a name="reference-application-eshoponweb"></a>參考應用程式：eShopOnWeb
 
-本指南包含參考應用程式 *eShopOnWeb* 來示範一些原則與建議。 該應用程式是一個簡單的線上商店，支援瀏覽上衣、咖啡馬克杯以及其他行銷商品目錄。 參考應用程式刻意簡單化，以便於理解。
+本指南包含參考應用程式 _eShopOnWeb_ 來示範一些原則與建議。 該應用程式是一個簡單的線上商店，支援瀏覽上衣、咖啡馬克杯以及其他行銷商品目錄。 參考應用程式刻意簡單化，以便於理解。
 
 **圖 2-1。** eShopOnWeb
 
 ![](./media/image2-1.png)
 
 > ### <a name="reference-application"></a>參考應用程式
+>
 > - **eShopOnWeb**  
-> <https://github.com/dotnet/eShopOnWeb>
+>   <https://github.com/dotnet/eShopOnWeb>
 
 ## <a name="cloud-hosted-and-scalable"></a>雲端裝載且可調整
 
@@ -42,7 +41,7 @@ ASP.NET Core 十分適合雲端 (公用、私人、任何雲端)，因為記憶�
 
 ASP.NET Core 為跨平台，可以在 Linux、MacOS 以及 Windows 上執行。 這為使用 ASP.NET Core 建置之應用程式的開發和部署開啟了許多新選項。 現今通常執行於 Linux 的 Docker 容器，可以裝載 ASP.NET Core 應用程式，使其能夠利用[容器和微服務](../microservices-architecture/index.md)的優勢。
 
-## <a name="modular-and-loosely-coupled"></a>模組化及鬆散偶合
+## <a name="modular-and-loosely-coupled"></a>模組化且鬆散結合
 
 NuGet 套件是 .NET Core 中的頭等公民，而 ASP.NET Core 應用程式是透過 NuGet 的許多程式庫所組成。 此功能的細微性有助於確保應用程式僅依賴和部署實際所需的功能，從而減少其使用量和安全性弱點介面區。
 
@@ -58,7 +57,7 @@ ASP.NET Core 應用程式支援單元測試；其鬆散結合和相依性插入�
 
 相較之下，單頁應用程式 (SPA) 只涉及極少數動態產生的伺服器端頁面載入 (如有)。 許多 SPA 都是在靜態的 HTML 檔案中初始化，該檔案會載入必要的 JavaScript 程式庫以啟動並執行應用程式。 這些應用程式大量使用 Web API 來滿足其資料要求，並且可以提供更豐富的使用者體驗。
 
-許多 Web 應用程式牽涉到傳統 Web 應用程式行為 (通常用於內容) 和 SPA (適用於互動功能) 的組合。 ASP.NET Core 在同一個應用程式中支援 MVC 和 Web API，使用相同的工具和基礎架構程式庫。
+許多 Web 應用程式牽涉到傳統 Web 應用程式行為 (通常用於內容) 和 SPA (適用於互動功能) 的組合。 ASP.NET Core 在同一個應用程式中支援 MVC (檢視及/或 Razor Pages) 和 Web API，使用相同的工具組和基礎架構程式庫。
 
 ## <a name="simple-development-and-deployment"></a>簡單開發與部署
 
@@ -69,12 +68,13 @@ ASP.NET Core 應用程式支援單元測試；其鬆散結合和相依性插入�
 除了 ASP.NET Core 之外，傳統 ASP.NET 4.x 仍然是建置 Web 應用程式穩定且可靠的平台。 ASP.NET 支援 MVC 和 Web API 開發模型以及 Web Form，非常適合豐富的頁面型應用程式開發，且具有豐富的協力廠商元件生態系統。 Windows Azure 對 ASP.NET 4.x 應用程式有長期的支援，許多開發人員都熟悉此平台。
 
 > ### <a name="references--modern-web-applications"></a>參考資料 – 現代化 Web 應用程式
+>
 > - **ASP.NET Core 簡介**  
-> <https://docs.microsoft.com/aspnet/core/>
+>   <https://docs.microsoft.com/aspnet/core/>
 > - **ASP.NET Core 的六個主要優點使其與眾不同且更好**  
-> <https://blog.trigent.com/six-key-benefits-of-asp-net-core-1-0-which-make-it-different-better/>
+>   <https://blog.trigent.com/six-key-benefits-of-asp-net-core-1-0-which-make-it-different-better/>
 > - **ASP.NET Core 中的測試**  
-> <https://docs.microsoft.com/aspnet/core/testing/>
+>   <https://docs.microsoft.com/aspnet/core/testing/>
 
 >[!div class="step-by-step"]
 [上一頁](index.md)

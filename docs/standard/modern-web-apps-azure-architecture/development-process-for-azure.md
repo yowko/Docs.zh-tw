@@ -3,13 +3,13 @@ title: Azure 開發程序
 description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | Azure 開發程序
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/08/2017
-ms.openlocfilehash: ea7b173369cea3b785297a136546d65965c3d789
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/28/2018
+ms.openlocfilehash: bde771051af034e7da72e9648fb3b0f37a95fa01
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106849"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404385"
 ---
 # <a name="development-process-for-azure"></a>Azure 開發程序
 
@@ -40,8 +40,6 @@ ms.locfileid: "37106849"
 
 [下載 Visual Studio Code](https://code.visualstudio.com/download)
 
-
-
 ## <a name="development-workflow-for-azure-hosted-aspnet-core-apps"></a>Azure 裝載之 ASP.NET Core 應用程式的開發工作流程
 
 應用程式開發生命週期從每位開發人員的電腦開始，開發人員使用其偏好的語言撰寫應用程式的程式碼，並在本機進行測試。 開發人員可以選擇偏好的原始檔控制系統，並且可使用組建伺服器或根據內建的 Azure 功能，設定持續整合 (CI) 及/或持續傳遞/部署 (CD)。
@@ -52,9 +50,9 @@ ms.locfileid: "37106849"
 
 若要建立應用程式的發行管線，您需要讓應用程式程式碼進入原始檔控制。 設定本機存放庫並在 Team 專案中將它連接至遠端存放庫。 請遵循下列指示：
 
--   [使用 Git 和 Visual Studio 共用程式碼](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs)或
+- [使用 Git 和 Visual Studio 共用程式碼](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs)或
 
--   [使用 TFVC 和 Visual Studio 共用程式碼](https://docs.microsoft.com/vsts/tfvc/share-your-code-in-tfvc-vs)
+- [使用 TFVC 和 Visual Studio 共用程式碼](https://docs.microsoft.com/vsts/tfvc/share-your-code-in-tfvc-vs)
 
 建立 Azure App Service，您將在其中部署應用程式。 前往 Azure 入口網站上的 [應用程式服務] 刀鋒視窗，建立 Web 應用程式。 按一下 [+新增]、選取 Web 應用程式範本、按一下 [建立]，然後提供名稱和其他詳細資料。 Web 應用程式將可從 {name}.azurewebsites.net 存取。
 
@@ -98,7 +96,7 @@ CI/CD 管線設定之後，您就可以直接更新 Web 應用程式，並認可
 
 建置成功之後，CD 程序會取得所產生的組建成品。 這會包括 Web 部署套件。 組建伺服器會將此套件部署至 Azure App Service，以新建的服務來取代任何現有的服務。 此步驟通常以預備環境為目標，但某些應用程式會透過 CD 程序直接部署至生產環境。
 
-#### <a name="step-5-azure-app-service-web-app"></a>步驟 5： Azure App Service。 Web 應用程式。
+#### <a name="step-5-azure-app-service-web-app"></a>步驟 5： Azure App Service Web 應用程式
 
 部署之後，ASP.NET Core 應用程式會在 Azure App Service Web 應用程式的內容裡執行。 可以使用 Azure 入口網站來監視及進一步設定此 Web 應用程式。
 
@@ -110,7 +108,6 @@ Web 應用程式在執行時，您可以監視應用程式的健康狀態，並�
 
 **建置並部署 ASP.NET Core 應用程式至 Azure**  
 <https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core>
-
 
 >[!div class="step-by-step"]
 [上一頁](test-asp-net-core-mvc-apps.md)
