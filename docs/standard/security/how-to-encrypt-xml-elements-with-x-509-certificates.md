@@ -24,7 +24,7 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33591469"
 ---
 # <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>如何：使用 X.509 憑證加密 XML 元素
-您可以使用 <xref:System.Security.Cryptography.Xml> 命名空間中的類別來加密 XML 文件內的項目。  XML 加密是交換或儲存加密 XML 資料的標準方法，不必擔心資料被輕易讀取。  如需 XML 加密標準的詳細資訊，請參閱全球資訊網協會 (W3C) 規格 XML 加密位於http://www.w3.org/TR/xmldsig-core/。  
+您可以使用 <xref:System.Security.Cryptography.Xml> 命名空間中的類別來加密 XML 文件內的項目。  XML 加密是交換或儲存加密 XML 資料的標準方法，不必擔心資料被輕易讀取。  如需 XML 加密標準的詳細資訊，請參閱全球資訊網協會 (W3C) 規格 XML 加密位於 http://www.w3.org/TR/xmldsig-core/。  
   
  您可以使用 XML 加密將任何 XML 元素或文件取代為包含加密 XML 資料的 <`EncryptedData`> 元素。 <`EncryptedData`> 元素可以包含子元素，而子元素會包含有關加密時所使用之金鑰和程序的資訊。  XML 加密可讓文件中包含多個加密的元素，並允許元素加密多次。  這個程序中的程式碼範例將顯示如何建立 <`EncryptedData`> 元素和數個其他子元素，以便稍後在解密時使用。  
   
