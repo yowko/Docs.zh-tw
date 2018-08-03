@@ -6,10 +6,10 @@ ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2c64baef3037cdb7b45ede3febacdbc1e76304c0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33574695"
 ---
 # <a name="result-tree-fragment-in-transformations"></a>轉換中的結果樹狀片段

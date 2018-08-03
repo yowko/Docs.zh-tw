@@ -15,10 +15,10 @@ ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f3c229b0fc463863b7113c7ba73890b84e86553b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33579648"
 ---
 # <a name="regular-expression-options"></a>規則運算式選項
@@ -275,7 +275,7 @@ ms.locfileid: "33579648"
   
 -   字元類別中的空白字元一律解譯為常值。 例如，規則運算式模式 `[ .,;:]` 會比對任何單一空白字元、句點、逗號、分號或冒號。  
   
--   方括號數量詞中不允許空白字元，例如 `{`n`}`、`{`n`,}` 和 `{`n`,`m`}`。 例如，規則運算式模式 `\d{1. 3}` 無法比對從一到三位數的任何數字序列，因為其中包含空白字元。  
+-   方括號數量詞中不允許空白字元，例如 `{`n`}`、`{`n`,}` 和 `{`n`,`m`}`。 例如，規則運算式模式 `\d{1, 3}` 無法比對從一到三位數的任何數字序列，因為其中包含空白字元。  
   
 -   引進語言項目的字元序列中，不允許空白字元。 例如:   
   

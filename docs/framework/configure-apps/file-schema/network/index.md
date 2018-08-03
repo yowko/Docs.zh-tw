@@ -16,28 +16,27 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: c080ff7ebef680712581d1f77fd4eb1ec99c6a86
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "32742610"
 ---
 # <a name="network-settings-schema"></a>網路設定結構描述
 網路設定會指定 .NET Framework 如何連接至網際網路。 下表描述 [\<system.Net> 項目 (網路設定)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) 下每個子組態項目的功能。  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<authenticationModules> 項目 (網路設定)](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|指定用來驗證網際網路要求的模組。|  
 |[\<connectionManagement> 項目 (網路設定)](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|指定連線到網際網路主機的最大連線數目。|  
 |[\<defaultProxy> 項目 (網路設定)](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|指定用於網際網路之 HTTP 要求的 Proxy 伺服器。|  
 |[\<mailSettings> 項目 (網路設定)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|包含郵件傳送選項的設定。|  
-|[\<requestCaching> 項目 (網路設定)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|指定用來向網際網路主機要求資訊的模組。|  
-|[\<requestCaching> 項目 (網路設定)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|為 <xref:System.Net?displayProperty=nameWithType> 命名空間設定基本的網路選項。|  
+|[\<requestCaching> 項目 (網路設定)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|控制網路要求的快取機制。|  
 |[\<webRequestModules> 項目 (網路設定)](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|指定用來向網際網路主機要求資訊的模組。|  
   
  URI 設定會指定 .NET Framework 如何處理使用統一資源識別元 (URI) 表示的網站位址。 下表描述 [\<URI> 項目 (URI 設定)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md) 下每個子組態項目的功能。  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<idn> 項目 (URI設定)](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)|指定是否要對網域名稱套用國際化網域名稱 (IDN) 剖析。|  
 |[\<iriParsing> 項目 (URI 設定)](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)|指定是否要將國際資源識別項 (IRI) 剖析套用至 <xref:System.Uri>，以及是否應該套用 IRI 剖析規則。|  

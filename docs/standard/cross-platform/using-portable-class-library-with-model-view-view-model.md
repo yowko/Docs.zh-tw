@@ -1,6 +1,6 @@
 ---
 title: 搭配 Model-View-View 模型使用可攜式類別庫
-ms.date: 03/30/2017
+ms.date: 07/18/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -12,22 +12,24 @@ ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: aa8423c5c9453a9edb1058f0d5bdf4c494ece088
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33574104"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>搭配 Model-View-View 模型使用可攜式類別庫
-您可以使用.NET Framework[可攜式類別庫](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)實作模型檢視 View Model (MVVM) 模式，並且跨多平台共用組件。  
-  
+您可以使用.NET Framework[可攜式類別庫](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)實作模型檢視 View Model (MVVM) 模式，並跨多個平台共用的組件。  
+
+[!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
+
  MVVM 是將使用者介面與基礎商務邏輯隔離的應用程式模式。 您可以在 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 的[!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)]專案中實作模型和檢視模型類別，然後建立針對不同平台自訂的檢視。 這個方法讓您只需撰寫資料模型和商務邏輯一次，就可以從 .NET Framework、Silverlight、Windows Phone 和 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式使用該程式碼，如下圖所示。  
   
  ![搭配 MVVM 圖表可攜式](../../../docs/standard/cross-platform/media/portablemvvmdiagram.png "PortableMVVMdiagram")  
   
  本主題不提供 MVVM 模式的一般資訊。 它只會提供有關如何使用資訊[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]實作 MVVM。 如需 MVVM 的詳細資訊，請參閱[MVVM 快速入門](https://msdn.microsoft.com/library/gg430869(v=PandP.40).aspx)。  
   
-## <a name="classes-that-support-mvvm"></a>類別，可支援 MVVM  
+## <a name="classes-that-support-mvvm"></a>支援 MVVM 類別  
  如果您的[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]專案是以 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]、[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]、Silverlight 或 Windows Phone 7.5 為目標，就可以使用下列類別實作 MVVM 模式：  
   
 -   <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType> 類別  
@@ -53,17 +55,17 @@ ms.locfileid: "33574104"
 -   中的所有類別<xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType>命名空間  
   
 ## <a name="implementing-mvvm"></a>實作 MVVM  
- 若要實作 MVVM，您通常會建立模型和檢視模型中的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]專案，因為[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]專案無法參考非可攜式專案。 模型和檢視模型可以是相同專案中，或在不同的專案中。 如果您使用不同的專案，請從檢視模型專案新增參考模型專案。  
+ 若要實作 MVVM，您通常會建立模型和檢視模型中的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]專案，因為[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]專案無法參考非可攜式專案。 模型和檢視模型可以是相同專案中，或在不同的專案中。 如果您使用不同的專案，請從檢視模型專案中將參考新增到模型專案。  
   
- 編譯模型後，當您檢視模型專案時，會參考包含此檢視的應用程式中的這些組件。 檢視只會與檢視模型互動時，如果您只需要參考組件包含檢視模型。  
+ 編譯模型後，當您檢視模型專案時，您會參考包含此檢視的應用程式中的這些組件。 如果檢視互動只具有檢視模型，您只需要參考該組件包含檢視模型。  
   
 ### <a name="model"></a>型號  
- 下列範例示範的簡化的模型類別，可能位於[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]專案。  
+ 下列範例示範簡化的模型類別，可能位於[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]專案。  
   
  [!code-csharp[PortableClassLibraryMVVM#1](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customer.cs#1)]
  [!code-vb[PortableClassLibraryMVVM#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customer.vb#1)]  
   
- 下列範例顯示簡單的方式填入、 擷取及更新中的資料[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]專案。 在實際的應用程式，將會從來源，例如 Windows Communication Foundation (WCF) 服務擷取資料。  
+ 下列範例顯示簡單的方式來填入、 擷取和更新中的資料[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]專案。 在實際的應用程式中，您會從來源，例如 Windows Communication Foundation (WCF) 服務擷取資料。  
   
  [!code-csharp[PortableClassLibraryMVVM#2](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customerrepository.cs#2)]
  [!code-vb[PortableClassLibraryMVVM#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerrepository.vb#2)]  
@@ -85,7 +87,7 @@ ms.locfileid: "33574104"
  [!code-vb[PortableClassLibraryMVVM#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerviewmodel.vb#5)]  
   
 ### <a name="view"></a>檢視  
- 從[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]應用程式，[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式、 Silverlight 架構應用程式或 Windows Phone 7.5 的應用程式，您可以參考包含模型和檢視的模型專案的組件。  然後，您會建立互動的檢視以檢視模型。 下列範例示範簡化的 Windows Presentation Foundation (WPF) 應用程式，以擷取並更新檢視模型中的資料。 您可以在 Windows Phone Silverlight 建立類似的檢視或[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式。  
+ 從[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]應用程式，[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式、 Silverlight 架構應用程式或 Windows Phone 7.5 應用程式，您可以參考包含模型和檢視的模型專案的組件。  然後，您會建立互動的檢視以檢視模型。 下列範例示範簡化的 Windows Presentation Foundation (WPF) 應用程式，以擷取並更新檢視模型中的資料。 您可以建立類似的檢視，silverlight 中的 Windows Phone 或[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式。  
   
  [!code-xaml[PortableClassLibraryMVVM#6](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainwindow.xaml#6)]  
   

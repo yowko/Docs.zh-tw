@@ -7,26 +7,26 @@ helpviewer_keywords:
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
 ms.openlocfilehash: e278b28e5c0015eeab549b04d3870dfa247a57ed
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33808867"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 隱私權資訊
-Microsoft 一向致力於保護終端使用者的隱私權。 當您建置應用程式使用 Windows Communication Foundation (WCF)，版本 3.0 中，您的應用程式可能會影響到使用者的隱私權。 例如，應用程式可能會明確收集使用者的連絡資訊，或者透過網際網路向您的網站要求資訊或傳送資訊至網站。 如果您在應用程式中內嵌 Microsoft 技術，則該技術可能帶有會影響隱私權的行為。 WCF 不會傳送任何資訊給 Microsoft 從您的應用程式，除非使用者選擇將它傳送給我們。  
+Microsoft 一向致力於保護終端使用者的隱私權。 當您建置的應用程式使用 Windows Communication Foundation (WCF) 3.0 版，您的應用程式可能會影響到使用者的隱私權。 例如，應用程式可能會明確收集使用者的連絡資訊，或者透過網際網路向您的網站要求資訊或傳送資訊至網站。 如果您在應用程式中內嵌 Microsoft 技術，則該技術可能帶有會影響隱私權的行為。 WCF 不會傳送任何資訊給 Microsoft 從您的應用程式除非您本人或使用者選擇要傳送給我們。  
   
 ## <a name="wcf-in-brief"></a>WCF 簡介  
- WCF 是使用 Microsoft.NET Framework，可讓開發人員建置分散式應用程式的分散式訊息架構。 而在兩個應用程式之間通訊的訊息則包含標頭和本文資訊。  
+ WCF 是使用 Microsoft.NET Framework 可讓開發人員建置分散式應用程式的分散式訊息架構。 而在兩個應用程式之間通訊的訊息則包含標頭和本文資訊。  
   
- 根據應用程式使用的服務而定，標頭可能包含訊息路由、安全性資訊、交易及其他項目。 根據預設，訊息通常會經過加密。 唯一的例外為使用 `BasicHttpBinding` 時，此項原本就設計用於不受安全保護的舊式 Web 服務。 身為應用程式設計師，您要負責做好最後的設計。 SOAP 本文中的訊息包含應用程式特定資料。不過，這類應用程式定義的個人資訊的資料可以受到使用 WCF 加密或機密性功能。 下列章節將描述可能影響隱私權的功能。  
+ 根據應用程式使用的服務而定，標頭可能包含訊息路由、安全性資訊、交易及其他項目。 根據預設，訊息通常會經過加密。 唯一的例外為使用 `BasicHttpBinding` 時，此項原本就設計用於不受安全保護的舊式 Web 服務。 身為應用程式設計師，您要負責做好最後的設計。 在 SOAP 主體中的訊息包含應用程式專屬資料;不過，這項資料，例如應用程式定義的個人資訊，您可以保護使用 WCF 加密或機密性功能。 下列章節將描述可能影響隱私權的功能。  
   
 ## <a name="messaging"></a>訊息  
- 每個 WCF 訊息具有指定訊息目的端位址標頭且應回覆。  
+ 每個 WCF 訊息具有指定的訊息目的地的位址標頭和回覆去處。  
   
  端點位址的位址元件則是可識別端點的統一資源識別元 (URI)。 此位址可以是網路位址或邏輯位址。 位址也可能包含電腦名稱 (主機名稱，完整網域名稱) 和 IP 位址。 端點位址也可能包含全域唯一識別元 (GUID)，或者包含可用於分辨每個位址之暫存定址的 GUID 集合。 每則訊息中都包含屬於 GUID 的訊息識別碼。 另外，此功能會遵循 WS-Addressing 參照標準。  
   
- WCF 訊息層不會寫入本機電腦的任何個人資訊。 不過，如果服務開發人員建立了會公開這類資訊的服務 (例如，在端點名稱中使用某個人的名稱，或者在端點的 Web 服務描述語言中加入個人資訊，可是沒有要求用戶端使用 https 來存取 WSDL)，則該訊息層可能在網路層級中傳播個人資訊。 此外，如果開發人員執行[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具針對端點公開的個人資訊，此工具的輸出可能包含該資訊之後，並寫入輸出檔本機硬碟。  
+ WCF 傳訊層不會寫入到本機電腦的任何個人資訊。 不過，如果服務開發人員建立了會公開這類資訊的服務 (例如，在端點名稱中使用某個人的名稱，或者在端點的 Web 服務描述語言中加入個人資訊，可是沒有要求用戶端使用 https 來存取 WSDL)，則該訊息層可能在網路層級中傳播個人資訊。 此外，如果開發人員執行[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具針對端點公開個人資訊，此工具的輸出可能包含該資訊，並寫入輸出檔案本機硬碟。  
   
 ## <a name="hosting"></a>裝載  
  WCF 中的裝載功能可讓應用程式可視需要啟動或啟用多個應用程式之間的連接埠共用。 WCF 應用程式可以裝載在網際網路資訊服務 (IIS)，類似於[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]。  
@@ -34,7 +34,7 @@ Microsoft 一向致力於保護終端使用者的隱私權。 當您建置應用
  裝載時並不會在網路上公開任何特定資訊，而且也不會保存電腦上的資料。  
   
 ## <a name="message-security"></a>訊息安全性  
- WCF 安全性提供的訊息應用程式的安全性功能。 所提供的安全性功能包含驗證和授權。  
+ WCF 安全性會提供訊息應用程式的安全性功能。 所提供的安全性功能包含驗證和授權。  
   
  驗證的作法是在用戶端和服務之間傳遞認證。 您可以透過傳輸層級安全性或 SOAP 訊息層級安全性來進行驗證，如下所示：  
   
@@ -66,34 +66,34 @@ Microsoft 一向致力於保護終端使用者的隱私權。 當您建置應用
  交易功能會實作 WS-Coordination 和 WS-Atomic 交易標準。  
   
 ## <a name="reliable-sessions"></a>可靠工作階段  
- 在 WCF 中的可靠工作階段會提供訊息的傳輸，傳輸或中繼失敗發生時。 即使中斷基礎傳輸 (例如，無線網路上的 TCP 連線) 或遺失訊息 (HTTP Proxy 捨棄了傳出或傳入的訊息)，這些可靠的工作階段仍可確實傳送一次訊息。 可靠的工作階段也會復原重新排列順序後的訊息 (在多路徑路由時可能會發生)，保留訊息傳送的順序。  
+ 在 WCF 中的可靠工作階段提供訊息的傳輸，傳輸或中繼失敗發生時。 即使中斷基礎傳輸 (例如，無線網路上的 TCP 連線) 或遺失訊息 (HTTP Proxy 捨棄了傳出或傳入的訊息)，這些可靠的工作階段仍可確實傳送一次訊息。 可靠的工作階段也會復原重新排列順序後的訊息 (在多路徑路由時可能會發生)，保留訊息傳送的順序。  
   
  您可以使用 WS-ReliableMessaging (WS-RM) 通訊協定來實作可靠的工作階段。 這些工作階段會新增其中包含工作階段資訊的 WS-RM 標頭，而您可以使用此資訊來識別與特定可靠的工作階段相關聯的所有訊息。 每個 WS-RM 工作階段都有識別碼，也就是 GUID。  
   
  使用者電腦上不會保留任何個人資訊。  
   
 ## <a name="queued-channels"></a>佇列通道  
- 佇列可代表接收應用程式，存放來自傳送應用程式的訊息，並在稍後將這些訊息轉寄至接收應用程式。 例如，接收應用程式為暫時性時，使用佇列將協助確保訊息的傳輸，從傳送應用程式至接收應用程式。 WCF 提供使用 Microsoft Message Queuing (MSMQ) 做為傳輸佇列的支援。  
+ 佇列可代表接收應用程式，存放來自傳送應用程式的訊息，並在稍後將這些訊息轉寄至接收應用程式。 例如，接收應用程式為暫時性時，使用佇列將協助確保訊息的傳輸，從傳送應用程式至接收應用程式。 WCF 會提供使用 Microsoft Message Queuing (MSMQ) 做為傳輸佇列的支援。  
   
  佇列通道功能不會將標頭新增至訊息。 該功能會以適當的 [訊息佇列] 訊息屬性設定，來建立 [訊息佇列] 的訊息，並叫用 [訊息佇列] 方法以將訊息放置在 [訊息佇列] 的佇列中。 [訊息佇列] 是隨附於 Windows 的選用元件。  
   
  佇列通道功能並不會在使用者電腦上保留任何資訊，而這都歸功於使用 [訊息佇列] 做為佇列基礎結構。  
   
 ## <a name="com-integration"></a>COM+ 整合  
- 這項功能會包裝現有的 COM 和 COM + 功能來建立與 WCF 服務相容的服務。 這項功能不會使用特定標頭，也不會在終端使用者的電腦上保留任何資料。  
+ 這項功能會包裝現有的 COM 和 COM + 功能以建立與 WCF 服務相容的服務。 這項功能不會使用特定標頭，也不會在終端使用者的電腦上保留任何資料。  
   
 ## <a name="com-service-moniker"></a>COM 服務 Moniker  
  這是標準的 WCF 用戶端提供 unmanaged 包裝函式。 這項功能在網路上沒有特定的標頭，也不會在電腦上保留任何資料。  
   
 ## <a name="peer-channel"></a>對等通道  
- 對等通道可讓開發多方應用程式使用 WCF。 多方通訊會以網狀結構的脈絡發生。 [網狀結構] 是依照各節點可加入的名稱所識別。 對等通道中的每個節點都會在使用者指定的連接埠上建立 TCP 接聽項，並與網狀結構中的其他節點建立連線以確保擁有回復性。 若要連線至網狀結構中的其他節點，節點也必須與網狀結構中的其他節點交換資料，包括接聽項位址和電腦的 IP 位址。 在網狀結構中來回傳送的訊息會包含專屬於傳送者的安全性資訊，因此可防止發生訊息詐騙和竄改。  
+ 對等通道可讓使用 WCF 的多方應用程式的開發。 多方通訊會以網狀結構的脈絡發生。 [網狀結構] 是依照各節點可加入的名稱所識別。 對等通道中的每個節點都會在使用者指定的連接埠上建立 TCP 接聽項，並與網狀結構中的其他節點建立連線以確保擁有回復性。 若要連線至網狀結構中的其他節點，節點也必須與網狀結構中的其他節點交換資料，包括接聽項位址和電腦的 IP 位址。 在網狀結構中來回傳送的訊息會包含專屬於傳送者的安全性資訊，因此可防止發生訊息詐騙和竄改。  
   
  使用者電腦上不會存放任何個人資訊。  
   
 ## <a name="it-professional-experience"></a>IT 專業人員的體驗  
   
 ### <a name="tracing"></a>追蹤  
- WCF 基礎結構的診斷功能會記錄透過傳輸和服務模型層級，和活動以及這些訊息相關聯的事件所傳遞的訊息。 根據預設，這個功能是關閉的。 啟用使用應用程式的組態檔，且在執行階段使用 WCF WMI 提供者可能會修改追蹤行為。 啟用此功能時，追蹤基礎結構會將包含訊息、活動和處理事件的診斷追蹤，發送至已設定的接聽項。 輸出的格式和位置是由系統管理員的接聽程式組態選項來決定，不過通常會是 XML 格式的檔案。 系統管理員要負責設定追蹤檔上的存取控制清單 (ACL)。 由 Windows Activation System (WAS) 裝載時，系統管理員更應該確定在非必須的情況下，不是從公開的虛擬根目錄使用檔案。  
+ WCF 基礎結構的診斷功能會記錄透過傳輸和服務模型層，和活動以及這些訊息相關聯的事件傳遞的訊息。 根據預設，這個功能是關閉的。 啟用使用應用程式的組態檔，且可能在執行階段使用的 WCF WMI 提供者修改追蹤行為。 啟用此功能時，追蹤基礎結構會將包含訊息、活動和處理事件的診斷追蹤，發送至已設定的接聽項。 輸出的格式和位置是由系統管理員的接聽程式組態選項來決定，不過通常會是 XML 格式的檔案。 系統管理員要負責設定追蹤檔上的存取控制清單 (ACL)。 由 Windows Activation System (WAS) 裝載時，系統管理員更應該確定在非必須的情況下，不是從公開的虛擬根目錄使用檔案。  
   
  追蹤的類型有兩種：訊息記錄和服務模型診斷追蹤，分別會在下節中描述。 這兩個類型的追蹤也可透過本身的追蹤來源進行設定：<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> 和 <xref:System.ServiceModel>。 這些記錄追蹤來源都會擷取對應用程式而言為本機的資料。  
   
@@ -116,24 +116,24 @@ Microsoft 一向致力於保護終端使用者的隱私權。 當您建置應用
  在此層級記錄的訊息即使已安全保護並且在網路上加密，仍會進行解密。  
   
  格式不正確的訊息記錄  
- 記錄的訊息，WCF 基礎結構無法理解或處理。  
+ WCF 基礎結構無法理解或處理的記錄檔訊息。  
   
  會以現狀記錄訊息，也就是加密或未加密的狀態。  
   
- 當訊息記錄在解密或未加密形式，預設 WCF 移除安全性金鑰和可能的個人資訊的訊息之前記錄。 下面章節會描述要移除的資訊以及移除的時機。 電腦的系統管理員和應用程式開發人員都必須採取特定的組態動作，才能變更行為以記錄金鑰和可能的個人資訊。  
+ 當訊息記錄在解密或未加密的形式，根據預設 WCF 移除安全性金鑰和可能的個人資訊訊息之前記錄。 下面章節會描述要移除的資訊以及移除的時機。 電腦的系統管理員和應用程式開發人員都必須採取特定的組態動作，才能變更行為以記錄金鑰和可能的個人資訊。  
   
 #### <a name="information-removed-from-message-headers-when-logging-decryptedunencrypted-messages"></a>記錄解密/未加密訊息時，從訊息標頭中移除的資訊  
  以解密/未加密形式記錄訊息時，在記錄訊息之前，預設會從訊息標頭和訊息本文中移除安全性金鑰和可能會有的個人資訊。 下列清單顯示什麼 WCF 視為金鑰和可能的個人資訊。  
   
  移除的金鑰：  
   
- \- 為 xmlns: wst ="http://schemas.xmlsoap.org/ws/2004/04/trust"和 xmlns: wst ="http://schemas.xmlsoap.org/ws/2005/02/trust"  
+ \- Xmlns:wst ="http://schemas.xmlsoap.org/ws/2004/04/trust"和 xmlns:wst ="http://schemas.xmlsoap.org/ws/2005/02/trust」  
   
  wst:BinarySecret  
   
  wst:Entropy  
   
- \- Xmlns:wsse ="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd"和 xmlns:wsse ="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- Xmlns:wsse ="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd"和 xmlns:wsse ="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd」  
   
  wsse:Password  
   
@@ -141,13 +141,13 @@ Microsoft 一向致力於保護終端使用者的隱私權。 當您建置應用
   
  移除的可能個人資訊：  
   
- \- Xmlns:wsse ="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd"和 xmlns:wsse ="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- Xmlns:wsse ="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd"和 xmlns:wsse ="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd」  
   
  wsse:Username  
   
  wsse:BinarySecurityToken  
   
- \- 為 xmlns: saml ="urn: oasis： 名稱： tc: SAML:1.0:assertion 」 移除的項目以粗體顯示 （下方）：  
+ \- 為 xmlns: saml ="urn: oasis： 名稱： tc: SAML:1.0:assertion 「 移除的項目以粗體顯示 （如下所示）：  
   
  \<判斷提示  
   
@@ -173,7 +173,7 @@ Microsoft 一向致力於保護終端使用者的隱私權。 當您建置應用
   
  \<DoNotCacheCondition / > *  
   
- <\!-抽象基底類型  
+ <\!-抽象基底型別  
   
  \<條件 / > *  
   
@@ -191,13 +191,13 @@ Microsoft 一向致力於保護終端使用者的隱私權。 當您建置應用
   
  \</ 建議 > 嗎？  
   
- <\!-抽象基底型別  
+ <\!-抽象基底類型  
   
  \<陳述式 / > *  
   
  \<SubjectStatement >  
   
- \<主題 >  
+ \<主旨 >  
   
  `<NameIdentifier`  
   
@@ -217,7 +217,7 @@ Microsoft 一向致力於保護終端使用者的隱私權。 當您建置應用
   
  \<SubjectConfirmationData>[any]\</SubjectConfirmationData>?  
   
- \<ds:KeyInfo >...\</ds:KeyInfo > 嗎？  
+ \<ds: keyinfo >...\</ds:KeyInfo > 嗎？  
   
  \</ SubjectConfirmation > 嗎？  
   
@@ -285,7 +285,7 @@ Microsoft 一向致力於保護終端使用者的隱私權。 當您建置應用
   
  [主旨]  
   
- \<動作命名空間 ="[uri]"> [字串]\</Action > +  
+ \<動作命名空間 ="[uri]"> [string]\</Action > +  
   
  \<辨識項 >  
   
@@ -293,18 +293,18 @@ Microsoft 一向致力於保護終端使用者的隱私權。 當您建置應用
   
  \<判斷提示 > [判斷提示]\</Assertion > +  
   
- \</ 證據 > 嗎？  
+ \</ 辨識項 > 嗎？  
   
  \</AuthorizationDecisionStatement>*  
   
  \</Assertion>  
   
 #### <a name="information-removed-from-message-bodies-when-logging-decryptedunencrypted-messages"></a>記錄解密/未加密訊息時，從訊息本文中移除的資訊  
- 如先前所述，WCF 移除金鑰和已知的可能個人資訊，從訊息標頭記錄解密/未加密的訊息。 此外，WCF 會移除金鑰和已知的可能個人資訊從訊息本文的本文項目與下面描述參與金鑰交換的安全性訊息的動作。  
+ 如先前所述，WCF 移除金鑰和已知的可能個人資訊，從訊息標頭的記錄解密/未加密的訊息。 此外，WCF 會移除金鑰和已知的可能個人資訊的內文項目與下列清單中，會描述參與金鑰交換的安全性訊息的動作的訊息內文。  
   
  若為下列命名空間：  
   
- xmlns: wst ="http://schemas.xmlsoap.org/ws/2004/04/trust"和 xmlns: wst ="http://schemas.xmlsoap.org/ws/2005/02/trust"（例如，如果沒有可用的動作）  
+ xmlns:wst ="http://schemas.xmlsoap.org/ws/2004/04/trust"和 xmlns:wst ="http://schemas.xmlsoap.org/ws/2005/02/trust」 （例如，如果沒有可用的動作）  
   
  將移除這些本文項目的資訊，而這些本文項目牽涉到金鑰交換：  
   
@@ -374,24 +374,24 @@ Microsoft 一向致力於保護終端使用者的隱私權。 當您建置應用
 ### <a name="other-features-for-it-professionals"></a>IT 專業人員可用的其他功能  
  WCF 有 WMI 提供者會公開透過 WMI （隨附於 Windows） 的 WCF 基礎結構組態資訊。 根據預設，系統管理員將可使用 WMI 介面。  
   
- WCF 組態是使用.NET Framework 組態的機制。 而這些組態檔會存放在電腦上。 應用程式開發人員和系統管理員會針對每項應用程式需求而建立組態檔和 ACL。 組態檔中包含了一些端點位址和連結，可連接到憑證存放區的憑證。 您可以使用憑證來提供應用程式資料，進而可設定應用程式所使用的各種功能屬性。  
+ WCF 組態會使用.NET Framework 的組態機制。 而這些組態檔會存放在電腦上。 應用程式開發人員和系統管理員會針對每項應用程式需求而建立組態檔和 ACL。 組態檔中包含了一些端點位址和連結，可連接到憑證存放區的憑證。 您可以使用憑證來提供應用程式資料，進而可設定應用程式所使用的各種功能屬性。  
   
  WCF 也會使用.NET Framework 處理序傾印功能藉由呼叫<xref:System.Environment.FailFast%2A>方法。  
   
 ### <a name="it-pro-tools"></a>IT 專業人員工具  
- WCF 還提供的下列 IT 專業人員工具隨附於 Windows SDK。  
+ WCF 也提供下列 IT 專業人員工具所附 Windows SDK 中。  
   
 #### <a name="svctraceviewerexe"></a>SvcTraceViewer.exe  
- 檢視器會顯示 WCF 追蹤檔。 也會顯示追蹤內所含的任何資訊。  
+ 檢視器會顯示 WCF 追蹤檔案。 也會顯示追蹤內所含的任何資訊。  
   
 #### <a name="svcconfigeditorexe"></a>SvcConfigEditor.exe  
  編輯器可讓使用者建立和編輯 WCF 組態檔。 這個編輯器還會顯示組態檔中所含的任何資訊。 使用文字編輯器也可完成同樣的工作。  
   
 #### <a name="servicemodelreg"></a>ServiceModel_Reg  
- 這個工具可讓使用者管理電腦上的 ServiceModel 安裝。 此工具的主控台視窗中顯示狀態訊息，當它執行，並在過程中，可能會顯示 WCF 安裝組態的相關資訊。  
+ 這個工具可讓使用者管理電腦上的 ServiceModel 安裝。 此工具主控台視窗中顯示狀態訊息，當它執行，並在過程中，可能會顯示的 WCF 安裝組態的相關資訊。  
   
 #### <a name="wsatconfigexe-and-wsatuidll"></a>WSATConfig.exe 和 WSATUI.dll  
- 這些工具可讓 IT 專業人員設定 WCF 中的可互通的 Ws-atomictransaction 網路支援。 這些工具會顯示存放在登錄的最常用 WS-AtomicTransaction 設定值，也可讓使用者變更這些值。  
+ 這些工具可讓 IT 專業人員在 WCF 中設定可互通的 WS-AtomicTransaction 網路支援。 這些工具會顯示存放在登錄的最常用 WS-AtomicTransaction 設定值，也可讓使用者變更這些值。  
   
 ## <a name="cross-cutting-features"></a>跨領域功能  
  下列功能為跨領域功能。 也就是說，可以使用前面提及的任何功能來組成不同的功能。  
