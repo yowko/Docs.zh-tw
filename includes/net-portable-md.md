@@ -1,1 +1,1 @@
-<span data-ttu-id="22e88-101">可攜式類別庫</span><span class="sxs-lookup"><span data-stu-id="22e88-101">Portable Class Library</span></span>
+<span data-ttu-id="46e94-101">可攜式類別庫</span><span class="sxs-lookup"><span data-stu-id="46e94-101">Portable Class Library</span></span>
