@@ -57,7 +57,7 @@ ms.locfileid: "33563039"
   
  **注意︰** 目的<xref:System.Windows.Media.FillRule>，所有圖案都視為封閉式。 如果線段中有間隙，請繪製虛構線段將它封閉。 在上面的範例中，環形中有小型的間隙。 有鑑於此，我們可能會預期通過間隙射出的光線，會提供與另一個方向的光線不同的結果。 以下是其中一個間隙以及 「 虛構線段 」 的放大的圖 (基於套用繪製的線段<xref:System.Windows.Media.FillRule>)，將它關閉。  
   
- ![]圖表：對於 FillRule，線段一定都會封閉(../../../../docs/framework/wpf/graphics-multimedia/media/fillruleclosedshapes.png "FillRuleClosedShapes")  
+ ![圖表：對於 FillRule，線段一定都會封閉](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleclosedshapes.png "FillRuleClosedShapes")  
   
 ## <a name="example"></a>範例  
   
