@@ -12,10 +12,10 @@ ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: dd38b59e39f938d6347457100243f09935444d88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33578076"
 ---
 # <a name="best-practices-for-exceptions"></a>例外狀況的最佳做法
@@ -104,17 +104,19 @@ ms.locfileid: "33578076"
 
 - 如果定義域不共用通用應用程式基底，則以強式名稱簽署含有例外狀況資訊的組件，並將組件部署到全域組件快取中。
 
-## <a name="include-a-localized-description-string-in-every-exception"></a>在每一個例外狀況中包含當地語系化的描述字串
-
-使用者看到的錯誤訊息是衍生自擲回的例外狀況描述字串，而不是衍生自例外狀況類別名稱。
-
 ## <a name="use-grammatically-correct-error-messages"></a>使用文法正確的錯誤訊息
 
-撰寫清楚的句子並包含結尾標點符號。 例外狀況說明字串中的每一句應該以句號結束。 例如，「記錄資料表已溢位」。 就是適當的描述字串。
+撰寫清楚的句子並包含結尾標點符號。 在每個指派給 <xref:System.Exception.Message?displayProperty=nameWithType> 屬性的字串中之句子，都應以句點結束。 例如，「記錄資料表已溢位。」 就是正確的訊息字串。
+
+## <a name="include-a-localized-string-message-in-every-exception"></a>在每個例外狀況中，納入當地語系化的字串訊息
+
+使用者所看到的錯誤訊息，衍生自擲回的例外狀況之 <xref:System.Exception.Message?displayProperty=nameWithType> 屬性，而並非來自例外狀況類別的名稱。 一般來說，您要將值指派到 <xref:System.Exception.Message?displayProperty=nameWithType> 屬性，方法是將訊息字串傳遞到[例外狀況建構函式](xref:System.Exception.%23ctor%2A)的 `message` 引數。 
+
+若是當地語系化的應用程式，則應對每個應用程式可能會擲回的例外狀況，該提供當地語系化的訊息字串。 您可使用資源檔，提供當地語系化的錯誤訊息。 如需當地語系化應用程式與擷取當地語系化字串的詳細資訊，請參閱[傳統型應用程式中的資源](../../framework/resources/index.md)與 <xref:System.Resources.ResourceManager?displayProperty=nameWithType>。
 
 ## <a name="in-custom-exceptions-provide-additional-properties-as-needed"></a>在自訂例外狀況中，視需要提供額外的屬性
 
-只有在額外資訊對某個程式設計案例有用時，才提供例外狀況的額外屬性 (以及描述字串)。 例如，<xref:System.IO.FileNotFoundException> 提供 <xref:System.IO.FileNotFoundException.FileName> 屬性。
+只有在其他資訊對某個程式設計案例實用時，才為例外狀況提供其他屬性 (以及自訂訊息字串)。 例如，<xref:System.IO.FileNotFoundException> 提供 <xref:System.IO.FileNotFoundException.FileName> 屬性。
 
 ## <a name="place-throw-statements-so-that-the-stack-trace-will-be-helpful"></a>放置 throw 陳述式讓堆疊追蹤更有用
 

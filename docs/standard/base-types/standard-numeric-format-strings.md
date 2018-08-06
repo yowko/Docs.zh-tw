@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f471d62ca31096b955dd6f703c70faabe91cb55b
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "36208150"
 ---
 # <a name="standard-numeric-format-strings"></a>標準數值格式字串
@@ -67,7 +67,7 @@ ms.locfileid: "36208150"
 <a name="Using"></a>   
 ## <a name="using-standard-numeric-format-strings"></a>使用標準數值格式字串  
 
-[!INCLUDE[interactive-note](~/includes/csharp-interactive-with-culture-note.md)]
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
 使用標準數值格式字串來定義數值的格式有兩種方式：  
   
@@ -166,7 +166,7 @@ ms.locfileid: "36208150"
   
 <a name="FFormatString"></a>   
 ## <a name="the-fixed-point-f-format-specifier"></a>固定點 ("F") 格式規範  
- 固定點 ("F") 格式規範會將數字轉換為 "-ddd.ddd…" 形式的字串， 其中 "d" 表示數字 (0-9)。 字串以負號開始，如果數值為負數的話。  
+ 固定點 ("F") 格式規範，會將數字轉換為 "-ddd.ddd…" 形式的字串，其中的每個 "d" 代表一個數字 (0-9)。 字串以負號開始，如果數值為負數的話。  
   
  精確度規範指示所需要的小數位數。 如果省略精確度規範，則會由目前 <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> 屬性提供數值有效位數。  
   
@@ -350,7 +350,7 @@ ms.locfileid: "36208150"
   
 ## <a name="example"></a>範例  
  
-[!INCLUDE[interactive-note](~/includes/csharp-interactive-with-culture-note.md)]
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
  
  下列範例會使用 en-US 文化特性和所有標準數值格式規範來格式化整數和浮點數值。 這個範例使用兩個特定的數字類型 (<xref:System.Double> 和 <xref:System.Int32>)，但用於其他任何數字基底類型 (<xref:System.Byte>、<xref:System.SByte>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.UInt16>、<xref:System.UInt32>、<xref:System.UInt64>、<xref:System.Numerics.BigInteger>、<xref:System.Decimal> 和 <xref:System.Single>) 也會產生類似的結果。  
   

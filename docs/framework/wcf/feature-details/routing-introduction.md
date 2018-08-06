@@ -3,10 +3,10 @@ title: 路由簡介
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
 ms.openlocfilehash: 3ee7ea8271df47354a0897434bf8f203eaf09a51
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33496860"
 ---
 # <a name="routing-introduction"></a>路由簡介
@@ -15,13 +15,13 @@ ms.locfileid: "33496860"
  這個主題的主要對象為路由服務的新手，內容涵蓋路由服務的基本組態和裝載。  
   
 ## <a name="configuration"></a>組態  
- 路由服務會實作為 WCF 服務，公開一個或多個從用戶端接收訊息的服務端點，並且將訊息路由傳送至一個或多個目的端點。 服務提供了 <xref:System.ServiceModel.Routing.RoutingBehavior>，它會套用至服務所公開的服務端點。 這個行為可用來設定服務運作方式的各種不同方面。 為了方便使用組態檔時，在指定的參數**RoutingBehavior**。 在程式碼為基礎的情況下，這些參數會指定為一部分<xref:System.ServiceModel.Routing.RoutingConfiguration>物件，然後傳遞至**RoutingBehavior**。  
+ 路由服務會實作為 WCF 服務，公開一個或多個從用戶端接收訊息的服務端點，並且將訊息路由傳送至一個或多個目的端點。 服務提供了 <xref:System.ServiceModel.Routing.RoutingBehavior>，它會套用至服務所公開的服務端點。 這個行為可用來設定服務運作方式的各種不同方面。 為了方便使用組態檔進行設定，在指定的參數**RoutingBehavior**。 在程式碼為基礎的情況下，這些參數會指定為一部分<xref:System.ServiceModel.Routing.RoutingConfiguration>物件，然後傳遞至**RoutingBehavior**。  
   
- 啟動時，這個行為會將 <xref:System.ServiceModel.Routing.SoapProcessingBehavior> (用來執行訊息的 SOAP 處理) 加入至用戶端端點。 這可讓路由服務將訊息傳送至端點所需不同**MessageVersion**比接收訊息所在的端點。 **RoutingBehavior**也會註冊一個服務延伸， <xref:System.ServiceModel.Routing.RoutingExtension>，修改路由服務組態在執行階段提供了協助工具點。  
+ 啟動時，這個行為會將 <xref:System.ServiceModel.Routing.SoapProcessingBehavior> (用來執行訊息的 SOAP 處理) 加入至用戶端端點。 這可讓路由服務將訊息傳送至需要不同的端點**MessageVersion**比接收訊息所在的端點。 **RoutingBehavior**也會註冊一個服務延伸， <xref:System.ServiceModel.Routing.RoutingExtension>，以修改路由服務組態，在執行階段提供了協助工具點。  
   
- **RoutingConfiguration**類別提供了一致的方式設定和更新路由服務的組態。  它包含參數，做為路由服務的設定，並可用來設定**RoutingBehavior**服務啟動時，或傳遞至**RoutingExtension**修改路由在執行階段組態。  
+ **RoutingConfiguration**類別提供一致的方式設定和更新路由服務的組態。  它包含做為路由服務的設定，而用來設定參數**RoutingBehavior**當服務啟動時，或傳遞給**RoutingExtension**修改路由在執行階段組態。  
   
- 路由邏輯可用來執行訊息的內容架構路由，它是透過將多個 <xref:System.ServiceModel.Dispatcher.MessageFilter> 物件群組為篩選資料表 (<xref:System.ServiceModel.Dispatcher.MessageFilterTable%601> 物件) 的方式定義。 內送訊息會針對包含在篩選資料表，以及對於每個訊息篩選條件評估**MessageFilter**符合訊息，並轉送至目的地端點。 使用指定的篩選資料表，應該用來將訊息路由**RoutingBehavior**組態中或透過程式碼使用**RoutingConfiguration**物件。  
+ 路由邏輯可用來執行訊息的內容架構路由，它是透過將多個 <xref:System.ServiceModel.Dispatcher.MessageFilter> 物件群組為篩選資料表 (<xref:System.ServiceModel.Dispatcher.MessageFilterTable%601> 物件) 的方式定義。 內送訊息會根據包含在篩選資料表，並針對每個訊息篩選條件來評估**MessageFilter**符合訊息，並轉送至目的地端點。 使用指定的篩選資料表，應該用來將訊息路由傳送**RoutingBehavior**組態中，或透過使用程式碼**RoutingConfiguration**物件。  
   
 ### <a name="defining-endpoints"></a>定義端點  
  雖然您似乎應該藉由定義將要使用的路由邏輯開始進行設定，但實際上，您進行的第一個步驟應該是判斷要將訊息路由傳送至其中之端點的組織架構。 路由服務會使用合約定義用來接收和傳送訊息的通道組織結構，因此輸入通道的組織結構必須符合輸出通道的組織結構。  例如，如果您要路由傳送至使用要求-回覆通道組織結構的端點，則必須在傳入端點上使用相容的合約，例如 <xref:System.ServiceModel.Routing.IRequestReplyRouter>。  
@@ -31,9 +31,9 @@ ms.locfileid: "33496860"
 > [!NOTE]
 >  使用指定多種通訊模式 (例如混合單向和雙向作業) 的合約時，其中一種解決方法，就是在路由服務中使用雙工合約，例如 <xref:System.ServiceModel.Routing.IDuplexSessionRouter>。 不過，這表示繫結必須具備雙工通訊的能力，但這並不適用於所有情況。 在不具備雙工能力的情況下，可能需要將通訊重構為多個端點或修改應用程式。  
   
- 如需路由合約的詳細資訊，請參閱[路由合約](../../../../docs/framework/wcf/feature-details/routing-contracts.md)。  
+ 如需有關路由合約的詳細資訊，請參閱[路由合約](../../../../docs/framework/wcf/feature-details/routing-contracts.md)。  
   
- 定義服務端點之後，您可以使用**RoutingBehavior**使特定**RoutingConfiguration**與端點。 使用組態檔設定路由服務時**RoutingBehavior**用來指定篩選資料表，其中包含用來處理此端點上接收之訊息的路由邏輯。 如果您要以程式設計方式設定路由服務可以使用指定的篩選資料表**RoutingConfiguration**。  
+ 定義服務端點之後，您可以使用**RoutingBehavior**關聯特定**RoutingConfiguration**與端點。 使用組態檔設定路由服務時**RoutingBehavior**用來指定篩選資料表，其中包含用來處理此端點上收到的訊息的路由邏輯。 如果您要以程式設計方式設定路由服務可以使用指定的篩選資料表**RoutingConfiguration**。  
   
  下列範例會同時以程式設計方式和使用組態檔的方式，定義路由服務使用的服務和用戶端端點。  
   
@@ -98,18 +98,18 @@ serviceHost.Description.Behaviors.Add(
      new RoutingBehavior(rc));  
 ```  
   
- 這個範例會設定讓路由服務公開 （expose） 單一的端點位址為"http://localhost:8000/routingservice/router」，用來接收要路由傳送訊息。 由於訊息會路由傳送至要求-回覆端點，因此服務端點會使用 <xref:System.ServiceModel.Routing.IRequestReplyRouter> 合約。 這項設定也會定義單一用戶端端點的 「http://localhost:8000/servicemodelsample/service」 訊息會路由傳送至。 名為"routingTable1"篩選資料表 （未顯示） 包含用來路由傳送訊息的路由邏輯且與相關聯的服務端點使用**RoutingBehavior** （適用於組態檔） 或**RoutingConfiguration** （適用於以程式設計方式設定）。  
+ 這個範例會設定讓路由服務公開 （expose） 單一的端點位址為"http://localhost:8000/routingservice/router」，用來接收要路由傳送的訊息。 由於訊息會路由傳送至要求-回覆端點，因此服務端點會使用 <xref:System.ServiceModel.Routing.IRequestReplyRouter> 合約。 此設定也會定義單一用戶端端點"http://localhost:8000/servicemodelsample/service」 訊息會路由傳送至。 名為"routingTable1"篩選資料表 （未顯示） 包含用來路由訊息的路由邏輯，並使用是與服務端點相關聯**RoutingBehavior** （適用於組態檔） 或**RoutingConfiguration** （適用於以程式設計方式設定）。  
   
 ### <a name="routing-logic"></a>路由邏輯  
  若要定義用來路由傳送訊息的路由邏輯，您必須判斷傳入訊息內包含的哪些資訊可以單獨處理。 例如，如果要路由傳送的所有目的端點共用相同的 SOAP 動作，則訊息內所包含動作的值就不適合做為指標，且訊息不應該路由傳送至該值所指的特定端點。 如果您必須以唯一的方式將訊息路由傳送至某一個特定端點，則應該對唯一識別路由傳送訊息至其中之目的端點的資料進行篩選。  
   
- 路由服務提供數個**MessageFilter**檢查訊息，例如位址、 動作、 端點名稱或甚至 XPath 查詢中的特定值的實作。 如果這些實作都不符合您的需求，您就可以建立自訂**MessageFilter**實作。 如需訊息篩選和實作 (implementation) 路由服務所使用的比較的詳細資訊，請參閱[訊息篩選條件](../../../../docs/framework/wcf/feature-details/message-filters.md)和[選擇篩選](../../../../docs/framework/wcf/feature-details/choosing-a-filter.md)。  
+ 路由服務提供多種**MessageFilter**檢查訊息，例如位址、 動作、 端點名稱或甚至 XPath 查詢中的特定值的實作。 如果這些實作都不符合您的需求，您就可以建立自訂**MessageFilter**實作。 如需訊息篩選條件，並比較使用路由服務所實作的詳細資訊，請參閱[訊息篩選條件](../../../../docs/framework/wcf/feature-details/message-filters.md)並[選擇篩選](../../../../docs/framework/wcf/feature-details/choosing-a-filter.md)。  
   
- 多個訊息篩選條件會組織成篩選資料表，每個關聯**MessageFilter**與目的端點。 此外，篩選資料表還可以選擇性地用來指定備份端點清單，路由服務會在發生傳輸錯誤時，嘗試將訊息路由傳送至這些備份端點。  
+ 多個訊息篩選會組織成篩選資料表，將每個產生關聯**MessageFilter**與目的端點。 此外，篩選資料表還可以選擇性地用來指定備份端點清單，路由服務會在發生傳輸錯誤時，嘗試將訊息路由傳送至這些備份端點。  
   
- 根據預設，篩選資料表內的所有訊息篩選都會同步評估，不過，您可以指定 <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.Priority%2A>，讓訊息篩選依照特定順序進行評估。 具有最高優先權的所有項目會先進行評估，而如果在較高優先權層級中找到相符項目，就不會對較低優先權的訊息篩選進行評估。 如需篩選資料表的詳細資訊，請參閱[訊息篩選條件](../../../../docs/framework/wcf/feature-details/message-filters.md)。  
+ 根據預設，篩選資料表內的所有訊息篩選都會同步評估，不過，您可以指定 <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.Priority%2A>，讓訊息篩選依照特定順序進行評估。 具有最高優先權的所有項目會先進行評估，而如果在較高優先權層級中找到相符項目，就不會對較低優先權的訊息篩選進行評估。 如需有關篩選資料表的詳細資訊，請參閱[訊息篩選條件](../../../../docs/framework/wcf/feature-details/message-filters.md)。  
   
- 下列範例使用 <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>，它會針對所有訊息評估為 `true`。 這**MessageFilter**新增至"routingTable1"篩選資料表，其關聯**MessageFilter**與名為"CalculatorService"的用戶端端點。 **RoutingBehavior**然後指定應該將此資料表用來路由傳送訊息處理服務端點。  
+ 下列範例使用 <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>，它會針對所有訊息評估為 `true`。 這**MessageFilter**新增至"routingTable1"篩選資料表，其會將**MessageFilter**與名為"CalculatorService"的用戶端端點。 **RoutingBehavior**然後指定 這個資料表應該用於處理服務端點的路由訊息。  
   
 ```xml  
 <behaviors>  
@@ -160,7 +160,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
   
 -   評估訊息時，必須有多個篩選傳回 `true`。  
   
- 如果這些條件都符合，則訊息會路由傳送至所有評估為 `true` 之篩選的所有端點。 下列範例會定義路由組態，如果訊息中的端點位址是路由傳送至這兩個端點會導致http://localhost:8000/routingservice/router/rounding。  
+ 如果這些條件都符合，則訊息會路由傳送至所有評估為 `true` 之篩選的所有端點。 下列範例會定義路由組態，如果訊息中的端點位址路由傳送至這兩個端點會導致http://localhost:8000/routingservice/router/rounding。  
   
 ```xml  
 <!--ROUTING SECTION -->  
@@ -189,19 +189,19 @@ rc.FilterTable.Add(new EndpointAddressMessageFilter(new EndpointAddress(
 ```  
   
 ### <a name="soap-processing"></a>SOAP 處理  
- 若要支援不同的通訊協定之間的訊息路由**RoutingBehavior**根據預設會加入<xref:System.ServiceModel.Routing.SoapProcessingBehavior>來將訊息傳送至的所有用戶端端點。 這個行為自動建立新**MessageVersion**之前將訊息路由至端點，以及建立相容的**MessageVersion**後再傳回至任何回應文件要求的用戶端應用程式。  
+ 若要支援不同的通訊協定之間的訊息路由**RoutingBehavior**根據預設會加入<xref:System.ServiceModel.Routing.SoapProcessingBehavior>訊息會路由傳送至的所有用戶端端點。 此行為會自動建立新**MessageVersion**之前的訊息路由傳送至端點，以及建立相容**MessageVersion**之前將它以傳回任何回應文件提出要求的用戶端應用程式。  
   
- 若要建立新所採取的步驟**MessageVersion**針對外寄訊息如下：  
+ 若要建立新的所採取的步驟**MessageVersion**輸出訊息如下所示：  
   
  **要求處理**  
   
--   取得**MessageVersion**輸出繫結/通道。  
+-   取得**MessageVersion**的輸出繫結/通道。  
   
 -   取得原始訊息的本文讀取裝置。  
   
 -   建立新的訊息使用相同的動作、 本文讀取裝置和新**MessageVersion**。  
   
--   如果<xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A>！ = **Addressing.None**，複製 To、 From、 FaultTo 和 RelatesTo 標頭到新訊息。  
+-   如果<xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A>！ = **Addressing.None**，複製 To、 From、 FaultTo 和 RelatesTo 標頭，以新的訊息。  
   
 -   將所有訊息屬性複製到新訊息。  
   
@@ -215,20 +215,20 @@ rc.FilterTable.Add(new EndpointAddressMessageFilter(new EndpointAddress(
   
 -   取得已接收回應訊息的本文讀取裝置。  
   
--   使用相同的動作、 本文讀取裝置，建立新的回應訊息和**MessageVersion**的原始要求訊息。  
+-   建立新的回應訊息與相同的動作、 本文讀取裝置，而**MessageVersion**的原始要求訊息。  
   
--   如果<xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A>！ = **Addressing.None**，複製 To、 From、 FaultTo 和 RelatesTo 標頭到新訊息。  
+-   如果<xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A>！ = **Addressing.None**，複製 To、 From、 FaultTo 和 RelatesTo 標頭，以新的訊息。  
   
 -   將訊息屬性複製到新訊息。  
   
 -   傳回新的回應訊息。  
   
- 根據預設， **SoapProcessingBehavior**會自動加入至由用戶端端點<xref:System.ServiceModel.Routing.RoutingBehavior>在服務啟動時; 不過，您可以控制是否 SOAP 處理使用新增至所有用戶端端點<xref:System.ServiceModel.Routing.RoutingConfiguration.SoapProcessingEnabled%2A>屬性。 如果需要對 SOAP 處理進行更細微的控制，您也可以將此行為直接加入至特定端點，並且在端點層級啟用或停用此行為。  
+ 根據預設， **SoapProcessingBehavior**會自動新增至用戶端端點<xref:System.ServiceModel.Routing.RoutingBehavior>在服務啟動時; 不過，您可以控制是否 SOAP 處理加入至所有用戶端端點所使用<xref:System.ServiceModel.Routing.RoutingConfiguration.SoapProcessingEnabled%2A>屬性。 如果需要對 SOAP 處理進行更細微的控制，您也可以將此行為直接加入至特定端點，並且在端點層級啟用或停用此行為。  
   
 > [!NOTE]
 >  如果端點需要與原始要求訊息不同的 MessageVersion，且該端點的 SOAP 處理已停用，則您必須提供自訂機制來處理任何必要的 SOAP 修改，才能將訊息傳送至目的端點。  
   
- 在下列範例中， **soapProcessingEnabled**屬性用來防止**SoapProcessingBehavior**自動加到所有用戶端端點。  
+ 在下列範例中， **soapProcessingEnabled**屬性用來防止**SoapProcessingBehavior**自動新增至所有用戶端端點。  
   
 ```xml  
 <behaviors>  
@@ -250,7 +250,7 @@ rc.SoapProcessingEnabled = false;
 ### <a name="dynamic-configuration"></a>動態組態  
  當您加入其他用戶端端點，或是需要修改用來路由傳送訊息的篩選時，必須能夠在執行階段動態更新組態，以避免中斷目前正透過路由服務接收訊息的端點服務。 修改組態檔或主應用程式的程式碼不一定足夠，因為這兩種方法都需要回收應用程式，而這樣可能會導致目前正在傳輸的任何訊息遺失，且在等待服務重新啟動時可能發生停機。  
   
- 您只能修改**RoutingConfiguration**以程式設計的方式。 雖然您一開始可以使用組態檔設定服務，您只能修改組態在執行階段透過建構新**RoutingConfigution**並將它傳遞為參數，以<xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A>方法由<xref:System.ServiceModel.Routing.RoutingExtension>服務延伸。 目前正在傳輸的任何訊息會繼續使用先前的設定，在呼叫之後收到的訊息時，路由傳送**ApplyConfiguration**使用新的組態。 下列範例示範建立路由服務的執行個體，然後修改組態。  
+ 您只能修改**RoutingConfiguration**以程式設計的方式。 雖然您一開始可以使用組態檔設定服務，您只能修改組態，在執行階段透過建構新**RoutingConfigution**並將它傳遞做為參數<xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A>方法由<xref:System.ServiceModel.Routing.RoutingExtension>服務延伸模組。 目前正在傳輸的任何訊息會繼續使用先前的設定，在呼叫之後收到的訊息時，路由傳送**ApplyConfiguration**使用新的組態。 下列範例示範建立路由服務的執行個體，然後修改組態。  
   
 ```csharp  
 RoutingConfiguration routingConfig = new RoutingConfiguration();  
@@ -280,17 +280,17 @@ routerHost.routerHost.Extensions.Find<RoutingExtension>().ApplyConfiguration(rc2
 >  使用舊組態開啟的任何工作階段都會繼續使用舊組態。 只有新的工作階段才會使用新組態。  
   
 ## <a name="error-handling"></a>錯誤處理  
- 如果嘗試傳送訊息時發生任何 <xref:System.ServiceModel.CommunicationException>，則會進行錯誤處理。 這些例外狀況通常表示，嘗試與定義的用戶端端點 (如 <xref:System.ServiceModel.EndpointNotFoundException>、<xref:System.ServiceModel.ServerTooBusyException> 或 <xref:System.ServiceModel.CommunicationObjectFaultedException>) 進行通訊時發生問題。 錯誤處理程式碼也會攔截並嘗試重新傳送時<xref:System.TimeoutException>發生時，這是另一個常見的例外狀況不衍生自**CommunicationException**。  
+ 如果嘗試傳送訊息時發生任何 <xref:System.ServiceModel.CommunicationException>，則會進行錯誤處理。 這些例外狀況通常表示，嘗試與定義的用戶端端點 (如 <xref:System.ServiceModel.EndpointNotFoundException>、<xref:System.ServiceModel.ServerTooBusyException> 或 <xref:System.ServiceModel.CommunicationObjectFaultedException>) 進行通訊時發生問題。 錯誤處理程式碼也會攔截並嘗試重新傳送的時機<xref:System.TimeoutException>發生時，這是另一個常見的例外狀況不衍生自**CommunicationException**。  
   
  發生上述其中一個例外狀況時，路由服務會容錯移轉至備份端點清單。 如果所有備份端點都發生通訊錯誤而失敗，或是某個端點傳回例外狀況，表示目的端服務內發生錯誤，則路由服務會將錯誤傳回至用戶端應用程式。  
   
 > [!NOTE]
->  錯誤處理功能會擷取並處理嘗試傳送訊息和嘗試關閉通道時發生的例外狀況。 錯誤處理程式碼不是偵測或處理與其進行通訊的應用程式端點所建立的例外狀況<xref:System.ServiceModel.FaultException> ，所擲回服務會出現在路由服務做**FaultMessage**並且送回用戶端。  
+>  錯誤處理功能會擷取並處理嘗試傳送訊息和嘗試關閉通道時發生的例外狀況。 錯誤處理程式碼不是偵測或處理它與其進行通訊的應用程式端點所建立的例外狀況<xref:System.ServiceModel.FaultException>所擲回一項服務會出現在路由服務的身分**FaultMessage**並且送回用戶端。  
 >   
 >  如果路由服務嘗試回覆訊息時發生錯誤，您可能會在用戶端收到 <xref:System.ServiceModel.FaultException>，而非路由服務不存在時通常會收到的 <xref:System.ServiceModel.EndpointNotFoundException>。 路由服務可能會因而遮蓋例外狀況，而且除非您檢查巢狀例外狀況，否則無法提供完整透明度。  
   
 ### <a name="tracing-exceptions"></a>追蹤例外狀況  
- 當傳送訊息至清單中的端點失敗，路由服務會追蹤產生的例外狀況資料，並將例外狀況詳細資料附加為一個名為的訊息屬性**例外狀況**。 如此可保留例外狀況資料，並且讓使用者透過訊息偵測器，以程式設計方式進行存取。  例外狀況資料是以一個訊息為單位儲存在字典中，該字典會將端點名稱對應至嘗試傳送訊息時發生的例外狀況詳細資料。  
+ 當傳送訊息至清單中的端點失敗，路由服務會追蹤產生的例外狀況資料，並附加為一個名為的訊息屬性的例外狀況詳細資料**例外狀況**。 如此可保留例外狀況資料，並且讓使用者透過訊息偵測器，以程式設計方式進行存取。  例外狀況資料是以一個訊息為單位儲存在字典中，該字典會將端點名稱對應至嘗試傳送訊息時發生的例外狀況詳細資料。  
   
 ### <a name="backup-endpoints"></a>備份端點  
  篩選資料表中的每一個篩選項目都可以選擇性地指定備份端點清單，這些端點會在傳送至主要端點發生傳輸錯誤時使用。 如果發生這類錯誤，路由服務會嘗試將訊息傳送至備份端點清單中的第一個項目。 如果此傳送嘗試同樣發生傳輸錯誤，則會嘗試備份清單中的下一個端點。 路由服務會繼續將訊息傳送至清單中的每一個端點，直到訊息接收成功、所有端點都傳回傳輸錯誤，或是端點傳回非傳輸錯誤為止。  
@@ -390,9 +390,9 @@ using (ServiceHost serviceHost =
 ```  
   
 ## <a name="routing-service-and-impersonation"></a>路由服務與模擬  
- WCF 路由服務可以搭配模擬使用以傳送和接收訊息。 平常對模擬的所有 Windows 條件約束在這裡都適用。 當您撰寫您自己的服務時，如果需要設定服務或帳戶使用權限以使用模擬，就必須執行那些同樣的步驟來搭配路由服務使用模擬。 如需詳細資訊，請參閱[委派和模擬](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
+ WCF 路由服務可以搭配模擬使用以傳送和接收訊息。 平常對模擬的所有 Windows 條件約束在這裡都適用。 當您撰寫您自己的服務時，如果需要設定服務或帳戶使用權限以使用模擬，就必須執行那些同樣的步驟來搭配路由服務使用模擬。 如需詳細資訊，請參閱 <<c0> [ 委派和模擬](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
   
- 搭配路由服務的模擬需要使用 ASP.NET 模擬 (採用 ASP.NET 相容模式時) 或 Windows 認證 (這已設定為允許模擬)。 如需 ASP.NET 相容性模式的詳細資訊，請參閱[WCF 服務與 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。  
+ 搭配路由服務的模擬需要使用 ASP.NET 模擬 (採用 ASP.NET 相容模式時) 或 Windows 認證 (這已設定為允許模擬)。 如需有關 ASP.NET 相容性模式的詳細資訊，請參閱[WCF 服務與 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。  
   
 > [!WARNING]
 >  WCF 路由服務不支援基本驗證的模擬。  

@@ -7,10 +7,10 @@ ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc
 ms.openlocfilehash: e48a263334ebb93a5d281032336aeb4073d8467c
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "34827335"
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>建置 .NET Core 應用程式的 Docker 映像
@@ -83,6 +83,17 @@ ms.locfileid: "34827335"
 * [此 ASP.NET Core Docker 範例](https://github.com/dotnet/dotnet-docker/tree/master/samples/aspnetapp) \(英文\) 示範建置適用於生產之 ASP.NET Core 應用程式的 Docker 映像的最佳做法模式。 該範例可與 Linux 或 Windows 容器搭配使用。
 
 * 此 .NET Core Docker 範例示範[建置適用於生產之 .NET Core 應用程式的 Docker 映像](https://github.com/dotnet/dotnet-docker/tree/master/samples/dotnetapp) \(英文\) 的最佳做法模式。
+
+## <a name="forward-the-request-scheme-and-original-ip-address"></a>轉寄要求配置與原始 IP 位址
+
+Proxy 伺服器、負載平衡器及其他網路設備，通常會在要求觸達容器化應用程式之前，遮蔽要求的相關資訊：
+
+* 透過 HTTP 作為 Proxy 來處理 HTTPS 要求時，原始配置 (HTTPS) 會遺失而必須在標頭中轉送。
+* 由於應用程式會從 Proxy 而非從網際網路或公司網路上的真實來源，收到要求，因此必須也在標頭中轉寄原始用戶端 IP 位址。
+
+此資訊在要求處理方面可能相當重要，例如在重新導向、驗證、連結產生、原則評估及用戶端地理位置方面。
+
+若要將配置與原始 IP 位址轉寄到容器化的 ASP.NET Core 應用程式，請使用轉寄標頭中介軟體。 如需詳細資訊，請參閱[設定 ASP.NET Core 以處理 Proxy 伺服器和負載平衡器](/aspnet/core/host-and-deploy/proxy-load-balancer)。
 
 ## <a name="your-first-aspnet-core-docker-app"></a>第一個 ASP.NET Core Docker 應用程式
 
@@ -258,7 +269,6 @@ dotnet published/aspnetapp.dll
 > * 在本機執行 ASP.NET 範例應用程式
 > * 使用 Docker for Linux 容器來建置並執行範例
 > * 使用 Docker for Windows 容器來建置並執行範例
-
 
 **後續步驟**
 

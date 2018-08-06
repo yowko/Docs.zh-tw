@@ -5,17 +5,17 @@ author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
 ms.openlocfilehash: f8dfbb712957d22e5b4aa16920e7b003a79c4444
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/22/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "36314694"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>使用 Visual Studio for Mac 在 macOS 上建置完整的 .NET Core 解決方案
 
 Visual Studio for Mac 針對開發 .NET Core 應用程式，提供功能完整的整合式開發環境 (IDE)。 本主題會逐步引導您建置一個包含可重複使用之程式庫和單元測試的 .NET Core 解決方案。
 
-本教學課程會示範如何建立能接受來自使用者的搜尋文字和文字字串、使用類別庫中的方法計算搜尋文字出現在字串中的次數，並將結果傳回給使用者的應用程式。 解決方案也會包含針對類別庫的單元測試，做為測試驅動開發 (TDD) 概念的簡介。 如果您偏好使用完整範例來進行教學課程，請下載[範例解決方案 (英文)](https://github.com/dotnet/samples/blob/master/core/tutorials/using-on-mac-vs-full-solution/WordCounter)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+本教學課程會示範如何建立能接受來自使用者的搜尋文字和文字字串、使用類別庫中的方法計算搜尋文字出現在字串中的次數，並將結果傳回給使用者的應用程式。 解決方案也包含類別庫的單元測試，作為單元測試概念的簡介。 如果您偏好使用完整範例來進行教學課程，請下載[範例解決方案 (英文)](https://github.com/dotnet/samples/blob/master/core/tutorials/using-on-mac-vs-full-solution/WordCounter)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 > [!NOTE]
 > 我們非常重視您的意見反應。 您有兩種方式可以提供意見反應給 Visual Studio for Mac 開發小組：
@@ -106,15 +106,15 @@ Visual Studio for Mac 針對開發 .NET Core 應用程式，提供功能完整�
 
    ![IDE 主視窗中用來檢查 GetWordCount 的初始單元測試](./media/using-on-mac-vs-full-solution/vsmacfull08.png)
 
-   使用 TDD 時，請務必使新的測試失敗一次，以確認其測試邏輯是正確的。 該方法會傳入 "Jack" (大寫) 這個名字，以及具有 "Jack" 和 "jack" (大寫與小寫) 的字串。 如果 `GetWordCount` 方法能正常運作，它會針對搜尋文字傳回兩個實例計數。 為了刻意讓此測試失敗，您會先實作測試，以判斷提示 `GetWordCount` 方法沒有傳回搜尋文字 "Jack" 的兩個實例。 繼續進行下一個步驟以刻意讓測試失敗。
+   請務必讓新的測試失敗一次，以確認其測試邏輯正確。 該方法會傳入 "Jack" (大寫) 這個名字，以及具有 "Jack" 和 "jack" (大寫與小寫) 的字串。 如果 `GetWordCount` 方法能正常運作，它會針對搜尋文字傳回兩個實例計數。 為了刻意讓此測試失敗，您會先實作測試，以判斷提示 `GetWordCount` 方法沒有傳回搜尋文字 "Jack" 的兩個實例。 繼續進行下一個步驟以刻意讓測試失敗。
 
 1. 開啟螢幕右側的 [單元測試] 面板。
 
-![單元測試面板](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanel.png)
+   ![單元測試面板](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanel.png)
 
 1. 按一下**固定**圖示維持面板開啟。
 
-![單元測試面板固定圖示](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanelDockIcon.png)
+   ![單元測試面板固定圖示](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanelDockIcon.png)
 
 1. 按一下 [全部執行] 按鈕。
    
