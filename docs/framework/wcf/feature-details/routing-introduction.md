@@ -15,9 +15,9 @@ ms.locfileid: "33496860"
  這個主題的主要對象為路由服務的新手，內容涵蓋路由服務的基本組態和裝載。  
   
 ## <a name="configuration"></a>組態  
- 路由服務會實作為 WCF 服務，公開一個或多個從用戶端接收訊息的服務端點，並且將訊息路由傳送至一個或多個目的端點。 服務提供了 <xref:System.ServiceModel.Routing.RoutingBehavior>，它會套用至服務所公開的服務端點。 這個行為可用來設定服務運作方式的各種不同方面。 為了方便使用組態檔進行設定，在指定的參數**RoutingBehavior**。 在程式碼為基礎的情況下，這些參數會指定為一部分<xref:System.ServiceModel.Routing.RoutingConfiguration>物件，然後傳遞至**RoutingBehavior**。  
+ 路由服務會實作為 WCF 服務，公開一個或多個從用戶端接收訊息的服務端點，並且將訊息路由傳送至一個或多個目的端點。 服務提供了 <xref:System.ServiceModel.Routing.RoutingBehavior>，它會套用至服務所公開的服務端點。 這個行為可用來設定服務運作方式的各種不同方面。 為了方便使用組態檔進行設定，在指定的參數 **RoutingBehavior**。 在程式碼為基礎的情況下，這些參數會指定為一部分 <xref:System.ServiceModel.Routing.RoutingConfiguration> 物件，然後傳遞至 **RoutingBehavior**。  
   
- 啟動時，這個行為會將 <xref:System.ServiceModel.Routing.SoapProcessingBehavior> (用來執行訊息的 SOAP 處理) 加入至用戶端端點。 這可讓路由服務將訊息傳送至需要不同的端點**MessageVersion**比接收訊息所在的端點。 **RoutingBehavior**也會註冊一個服務延伸， <xref:System.ServiceModel.Routing.RoutingExtension>，以修改路由服務組態，在執行階段提供了協助工具點。  
+ 啟動時，這個行為會將 <xref:System.ServiceModel.Routing.SoapProcessingBehavior> (用來執行訊息的 SOAP 處理) 加入至用戶端端點。 這可讓路由服務將訊息傳送至需要不同的端點**MessageVersion**比接收訊息所在的端點。 **RoutingBehavior**也會註冊一個服務延伸， <xref:System.ServiceModel.Routing.RoutingExtension> ，以修改路由服務組態，在執行階段提供了協助工具點。  
   
  **RoutingConfiguration**類別提供一致的方式設定和更新路由服務的組態。  它包含做為路由服務的設定，而用來設定參數**RoutingBehavior**當服務啟動時，或傳遞給**RoutingExtension**修改路由在執行階段組態。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "33496860"
 > [!NOTE]
 >  使用指定多種通訊模式 (例如混合單向和雙向作業) 的合約時，其中一種解決方法，就是在路由服務中使用雙工合約，例如 <xref:System.ServiceModel.Routing.IDuplexSessionRouter>。 不過，這表示繫結必須具備雙工通訊的能力，但這並不適用於所有情況。 在不具備雙工能力的情況下，可能需要將通訊重構為多個端點或修改應用程式。  
   
- 如需有關路由合約的詳細資訊，請參閱[路由合約](../../../../docs/framework/wcf/feature-details/routing-contracts.md)。  
+ 如需有關路由合約的詳細資訊，請參閱 [路由合約](../../../../docs/framework/wcf/feature-details/routing-contracts.md)。  
   
  定義服務端點之後，您可以使用**RoutingBehavior**關聯特定**RoutingConfiguration**與端點。 使用組態檔設定路由服務時**RoutingBehavior**用來指定篩選資料表，其中包含用來處理此端點上收到的訊息的路由邏輯。 如果您要以程式設計方式設定路由服務可以使用指定的篩選資料表**RoutingConfiguration**。  
   
@@ -98,7 +98,7 @@ serviceHost.Description.Behaviors.Add(
      new RoutingBehavior(rc));  
 ```  
   
- 這個範例會設定讓路由服務公開 （expose） 單一的端點位址為"http://localhost:8000/routingservice/router」，用來接收要路由傳送的訊息。 由於訊息會路由傳送至要求-回覆端點，因此服務端點會使用 <xref:System.ServiceModel.Routing.IRequestReplyRouter> 合約。 此設定也會定義單一用戶端端點"http://localhost:8000/servicemodelsample/service」 訊息會路由傳送至。 名為"routingTable1"篩選資料表 （未顯示） 包含用來路由訊息的路由邏輯，並使用是與服務端點相關聯**RoutingBehavior** （適用於組態檔） 或**RoutingConfiguration** （適用於以程式設計方式設定）。  
+ 這個範例會設定讓路由服務公開 （expose） 單一的端點位址為" http://localhost:8000/routingservice/router 」，用來接收要路由傳送的訊息。 由於訊息會路由傳送至要求-回覆端點，因此服務端點會使用 <xref:System.ServiceModel.Routing.IRequestReplyRouter> 合約。 此設定也會定義單一用戶端端點"http://localhost:8000/servicemodelsample/service 」訊息會路由傳送至。 名為"routingTable1"篩選資料表 （未顯示） 包含用來路由訊息的路由邏輯，並使用是與服務端點相關聯**RoutingBehavior** （適用於組態檔） 或**RoutingConfiguration** （適用於以程式設計方式設定）。  
   
 ### <a name="routing-logic"></a>路由邏輯  
  若要定義用來路由傳送訊息的路由邏輯，您必須判斷傳入訊息內包含的哪些資訊可以單獨處理。 例如，如果要路由傳送的所有目的端點共用相同的 SOAP 動作，則訊息內所包含動作的值就不適合做為指標，且訊息不應該路由傳送至該值所指的特定端點。 如果您必須以唯一的方式將訊息路由傳送至某一個特定端點，則應該對唯一識別路由傳送訊息至其中之目的端點的資料進行篩選。  

@@ -33,7 +33,7 @@ ms.locfileid: "33495758"
  中介層案例同時會因為使用 `svcutil /a` 選項所產生的非同步 API 而產生一些效能。 `/a`選項會使[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)產生`BeginXXX/EndXXX`每個服務作業中，會允許遠端服務上的長期執行呼叫的方法背景執行緒。  
   
 ## <a name="wcf-in-multi-homed-or-multi-named-scenarios"></a>多重主目錄系統或多重具名案例中的 WCF  
- 您可以部署 WCF 服務內的 IIS Web 伺服陣列，其中的一組電腦共用通用外部名稱 (例如http://www.contoso.com)但會個別定址依不同的主機名稱 (比方說，http://www.contoso.com可能會將流量導向至兩個不同的電腦名為http://machine1.internal.contoso.com和http://machine2.internal.contoso.com)。 此部署案例中透過 WCF，完全支援，但需要特殊組態的裝載服務的中繼資料 （Web 服務描述語言） 中顯示正確的 （外部） 主機名稱的 WCF 服務的 IIS 網站。  
+ 您可以部署 WCF 服務內的 IIS Web 伺服陣列，其中的一組電腦共用通用外部名稱 (例如 http://www.contoso.com) 但會個別定址依不同的主機名稱 (比方說， http://www.contoso.com 可能會將流量導向至兩個不同的電腦名為 http://machine1.internal.contoso.com 和 http://machine2.internal.contoso.com)。 此部署案例中透過 WCF，完全支援，但需要特殊組態的裝載服務的中繼資料 （Web 服務描述語言） 中顯示正確的 （外部） 主機名稱的 WCF 服務的 IIS 網站。  
   
  若要確保正確的主機名稱會出現在產生 WCF 服務中繼資料，請設定裝載 WCF 服務來使用明確的主機名稱的 IIS 網站的預設身分識別。 例如，駐留在 www.contoso.com 伺服器陣列的電腦應該使用的 IIS 網站繫結 *:80:www.contoso.com 適用於 HTTP 和\*: 443:www.contoso.com https。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "33495758"
 ## <a name="application-pools-running-in-different-user-contexts-overwrite-assemblies-from-other-accounts-in-the-temporary-folder"></a>在不同使用者內容中執行的應用程式集區會覆寫來自暫存資料夾裡其他帳戶的組件  
  為了確保在不同使用者內容中執行的應用程式集區無法覆寫來自 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 暫存檔案資料夾中其他帳戶的組件，請針對不同的應用程式使用不同的身分識別與暫存資料夾。 例如，如果您有兩個虛擬應用程式 (/Application1 和 / Application2)，則可以使用兩個不同的身分識別來建立兩個應用程式集區 (A 和 B)。 應用程式集區 A 可以使用某個使用者身分識別 (user1) 來執行，而應用程式集區 B 則可透過另一個使用者身分識別 (user2) 來執行，同時設定 /Application1 來使用 A 並設定 /Application2 來使用 B。  
   
- 在 Web.config 中，您可以設定暫存資料夾，請使用\< system.web/compilation/@tempFolder>。 為 application1，它可以是"c:\tempForUser1 」，並對於應用程式 2 中，這可能是 「 c:\tempForUser2"。 針對這些資料夾賦予兩個身分識別對應的寫入權限。  
+ 在 Web.config 中，您可以設定暫存資料夾，請使用 \< system.web/compilation/@tempFolder>。 為 application1，它可以是"c:\tempForUser1 ，並對於應用程式 2 中，這可能是 c:\tempForUser2"。 針對這些資料夾賦予兩個身分識別對應的寫入權限。  
   
  這樣一來，user2 將無法變更 /application2 (位於 c:\tempForUser1 底下) 的程式碼產生資料夾。  
   
