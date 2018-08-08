@@ -31,14 +31,15 @@ ms.locfileid: "33218799"
 
 ## <a name="common-top-level-properties"></a>常見的最上層屬性
 
-### <a name="name"></a>name
+### <a name="name"></a>專案名稱
+
 ```json
 {
   "name": "MyProjectName"
 }
 ```
 
-不再受支援。 在 csproj 中，這是由目錄名稱所定義的專案檔名所決定。 例如，`MyProjectName.csproj`。
+不再支援此屬性。 在 csproj 中，這是由目錄名稱所定義的專案檔名所決定。 例如，`MyProjectName.csproj`。
 
 根據預設，專案檔名也會指定 `<AssemblyName>` 和 `<PackageId>` 屬性的值。 
 
@@ -105,6 +106,7 @@ And it's really great!</Description>
 ## <a name="frameworks"></a>frameworks
 
 ### <a name="one-target-framework"></a>一個目標架構
+
 ```json
 {
   "frameworks": {
@@ -130,7 +132,7 @@ And it's really great!</Description>
 }
 ```
 
-使用 `TargetFrameworks` 屬性，定義您的目標架構清單。 使用分號來分隔多個架構值。 
+使用 `TargetFrameworks` 屬性，定義您的目標架構清單。 使用分號來分隔多個目標架構值。 
 
 ```xml
 <PropertyGroup>
@@ -175,9 +177,10 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-請注意，移轉專案中的 `<RuntimeFrameworkVersion>` 值取決於您已安裝的 SDK 版本。
+請注意，移轉專案中的 `<RuntimeFrameworkVersion>` 設定值，取決於您已安裝的 SDK 版本。
 
 ### <a name="top-level-dependencies"></a>最上層相依性
+
 ```json
 {
   "dependencies": {
@@ -193,6 +196,7 @@ And it's really great!</Description>
 ```
 
 ### <a name="per-framework-dependencies"></a>每個架構相依性
+
 ```json
 {
   "framework": {
@@ -250,6 +254,7 @@ And it's really great!</Description>
 ### <a name="dependency-type"></a>相依性類型
 
 #### <a name="type-project"></a>類型︰專案
+
 ```json
 {
   "dependencies": {
@@ -273,6 +278,7 @@ And it's really great!</Description>
 
 
 #### <a name="type-build"></a>類型︰組建
+
 ```json
 {
   "dependencies": {
@@ -291,6 +297,7 @@ And it's really great!</Description>
 ```
 
 #### <a name="type-platform"></a>類型：平台
+
 ```json
 {
   "dependencies": {
@@ -302,9 +309,10 @@ And it's really great!</Description>
 }
 ```
 
-csproj 中沒有對應項。 
+此設定在 csproj 中沒有對應項。 
 
 ## <a name="runtimes"></a>runtimes
+
 ```json
 {
   "runtimes": {
@@ -322,6 +330,7 @@ csproj 中沒有對應項。
 ```
 
 ### <a name="standalone-apps-self-contained-deployment"></a>獨立應用程式 (獨立性部署)
+
 在 project.json 中，定義 `runtimes` 區段表示應用程式在建置和發行期間是獨立的。
 在 MSBuild 中，所有專案在建置期間都是「可攜式」，但可發行為獨立專案。
 
@@ -330,6 +339,7 @@ csproj 中沒有對應項。
 如需詳細資訊，請參閱[獨立性部署 (SCD)](../deploying/index.md#self-contained-deployments-scd)。
 
 ## <a name="tools"></a>tools
+
 ```json
 {
   "tools": {
@@ -500,7 +510,6 @@ MSBuild 中的 `owners` 項目沒有對應項。 對於 `summary`，您可以使
 </Target>
 ```
 
-
 ## <a name="runtimeoptions"></a>runtimeOptions
 
 ```json
@@ -549,6 +558,7 @@ MSBuild 中的 `owners` 項目沒有對應項。 對於 `summary`，您可以使
 ```
 
 ## <a name="shared"></a>共用
+
 ```json
 {
   "shared": "shared/**/*.cs"
