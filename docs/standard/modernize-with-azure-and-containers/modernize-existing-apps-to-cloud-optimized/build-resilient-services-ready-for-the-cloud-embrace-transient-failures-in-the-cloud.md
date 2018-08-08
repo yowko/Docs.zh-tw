@@ -37,7 +37,7 @@ ms.locfileid: "33957928"
 
 實作存取資料庫時，根據您使用的.NET 版本的彈性通訊時可能很簡單 (例如， [Entity Framework 6 或更新版本](https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx)，它是只需設定資料庫連接）。 或者，您可能需要使用額外的程式庫，例如[暫時性錯誤處理應用程式區塊](https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx)（適用於舊版的.NET），或甚至會實作您自己的程式庫。
 
-實作 HTTP 重試與斷路器時，適用於.NET 的建議是使用[Polly](https://github.com/App-vNext/Polly)目標.NET Framework 4.0，.NET Framework 4.5 和.NET 標準 1.1 中，其中包含.NET Core 支援程式庫。
+實作 HTTP 重試與斷路器時，適用於.NET 的建議是使用[Polly](https://github.com/App-vNext/Polly)目標.NET Framework 4.0，.NET Framework 4.5 和.NET Standard 1.1 中，其中包含.NET Core 支援程式庫。
 
 若要深入了解如何實作的策略來處理在雲端中的部分失敗，請參閱下列參考。
 

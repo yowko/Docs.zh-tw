@@ -32,7 +32,7 @@ Visual Studio for Mac 針對開發 .NET Core 應用程式，提供功能完整�
 
 ## <a name="building-a-library"></a>建置程式庫
 
-1. 選取歡迎畫面上的 [新增專案]。 在 [多平台] 節點下的 [新增專案] 對話方塊中，選取 [.NET 標準程式庫] 範本。 選取 [下一步]。
+1. 選取歡迎畫面上的 [新增專案]。 在 [多平台] 節點下的 [新增專案] 對話方塊中，選取 [.NET Standard 程式庫] 範本。 選取 [下一步]。
 
    ![[新增專案] 對話方塊](./media/using-on-mac-vs-full-solution/vsmacfull01.png)
 

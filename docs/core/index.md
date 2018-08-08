@@ -137,7 +137,7 @@ Windows 與 Unix 實作大小相近。 Windows 實作較大，因為 CoreFX 會�
 
 ### <a name="comparison-with-mono"></a>與 Mono 的比較
 
-[Mono](http://www.mono-project.com/) 是原始的跨平台和[開放原始碼](https://github.com/mono/mono) .NET 實作，首次發送為 2004 年。 它可以視為 .NET Framework 的社群複製體。 Mono 專案小組依賴 Microsoft 為提供相容實作而發行的開放 [.NET 標準](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (特別是 ECMA 335)。
+[Mono](http://www.mono-project.com/) 是原始的跨平台和[開放原始碼](https://github.com/mono/mono) .NET 實作，首次發送為 2004 年。 它可以視為 .NET Framework 的社群複製體。 Mono 專案小組依賴 Microsoft 為提供相容實作而發行的開放 [.NET Standard](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (特別是 ECMA 335)。
 
 .NET Core 和 Mono 的主要差異︰
 
