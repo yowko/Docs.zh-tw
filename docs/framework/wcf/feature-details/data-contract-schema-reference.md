@@ -47,7 +47,7 @@ ms.locfileid: "33496795"
 |`elementFormDefault`|必須限定。 所有項目必須限定，以便由 `DataContractSerializer`支援結構描述。 這可以透過設定xs:schema/@elementFormDefault為"qualified"或藉由設定xs:element/@form為"qualified"在每個個別項目宣告。|  
 |`finalDefault`|忽略。|  
 |`Id`|忽略。|  
-|`targetNamespace`|支援且對應至資料合約命名空間。 如果沒有指定此屬性，便會使用空白的命名空間。 不能保留的命名空間http://schemas.microsoft.com/2003/10/Serialization/。|  
+|`targetNamespace`|支援且對應至資料合約命名空間。 如果沒有指定此屬性，便會使用空白的命名空間。 不能保留的命名空間 http://schemas.microsoft.com/2003/10/Serialization/ 。|  
 |`version`|忽略。|  
   
 ### <a name="xsschema-contents"></a>\<schema> >： 內容  
@@ -524,7 +524,7 @@ public class Employee : Person
 |`positiveInteger`|<xref:System.Int64>.|  
   
 ## <a name="iserializable-types-mapping"></a>ISerializable 型別對應  
- 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 1.0 版中，已將 `ISerializable` 引入為用來序列化物件以便保存或做為資料傳輸用途的一般機制。 有許多 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別都會實作 `ISerializable` ，而且可以在應用程式之間傳遞。 `DataContractSerializer` 自然會為 `ISerializable` 類別提供支援。 `DataContractSerializer` 會對應至 `ISerializable` 實作結構描述型別 (其中只有型別的 QName 限定名稱不同)，而且是有效的屬性集合。 例如，`DataContractSerializer`對應<xref:System.Exception>至下列 XSD 型別中http://schemas.datacontract.org/2004/07/System命名空間。  
+ 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 1.0 版中，已將 `ISerializable` 引入為用來序列化物件以便保存或做為資料傳輸用途的一般機制。 有許多 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別都會實作 `ISerializable` ，而且可以在應用程式之間傳遞。 `DataContractSerializer` 自然會為 `ISerializable` 類別提供支援。 `DataContractSerializer` 會對應至 `ISerializable` 實作結構描述型別 (其中只有型別的 QName 限定名稱不同)，而且是有效的屬性集合。 例如， `DataContractSerializer` 對應 <xref:System.Exception> 至下列 XSD 型別中 http://schemas.datacontract.org/2004/07/System 命名空間。  
   
 ```xml  
 <xs:complexType name="Exception">  

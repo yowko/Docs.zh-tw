@@ -35,7 +35,7 @@ ms.locfileid: "33806269"
   
 3.  將 System.ServiceModel 的參考加入至 gettingstartedclient 專案，以滑鼠右鍵按一下**參考**在方案總管，然後選取 gettingstartedclient 專案下的資料夾**新增**參考。 在**加入參考**對話方塊中，選取**Framework**對話方塊的左側。 在 [搜尋組件] 文字方塊中輸入 `System.ServiceModel`。 在對話方塊中間區段選取**System.ServiceModel**，按一下 [**新增**按鈕，然後按一下**關閉**] 按鈕。 按一下以儲存方案**全部儲存**主功能表下的按鈕。  
   
-4.  接著您要將服務參考加入至計算機服務。 您必須先啟動 GettingStartedHost 主控台應用程式，才能執行此作業。 一旦主機在執行您可以以滑鼠右鍵按一下方案總管 中 gettingstartedclient 專案底下的 參考 資料夾，並選取加入服務參考，然後輸入下列 URL 中的 加入服務參考 對話方塊的 位址 方塊中： 超連結"http://localhost:8000/ServiceModelSamples/Service"http://localhost:8000/ServiceModelSamples/Service按一下**移** 按鈕。 CalculatorService 接著應該會顯示在 [服務] 清單方塊中，請按兩下 [CalculatorService]，其將展開並顯示服務所實作的服務合約。 保留預設命名空間，並按一下**確定** 按鈕。  
+4.  接著您要將服務參考加入至計算機服務。 您必須先啟動 GettingStartedHost 主控台應用程式，才能執行此作業。 一旦主機在執行您可以以滑鼠右鍵按一下方案總管 中 gettingstartedclient 專案底下的 參考 資料夾，並選取加入服務參考，然後輸入下列 URL 中的 加入服務參考 對話方塊的 位址 方塊中： 超連結 "http://localhost:8000/ServiceModelSamples/Service" http://localhost:8000/ServiceModelSamples/Service 按一下**移** 按鈕。 CalculatorService 接著應該會顯示在 [服務] 清單方塊中，請按兩下 [CalculatorService]，其將展開並顯示服務所實作的服務合約。 保留預設命名空間，並按一下**確定** 按鈕。  
   
      當您使用 Visual Studio 加入服務的參考時，新項目將會在 [方案總管] 中 [GettingStartedClient] 專案底下的 [服務參考] 資料夾下方出現。  如果您使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)將產生的原始程式碼檔和 app.config 檔案的工具。  
   

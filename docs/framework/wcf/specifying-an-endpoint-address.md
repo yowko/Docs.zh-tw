@@ -45,7 +45,7 @@ ms.locfileid: "33809114"
   
  當<xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>呼叫方法時 （也就是當裝載應用程式會嘗試啟動服務），系統會尋找[\<服務 >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)具有 name 屬性，指定 「 UE 項目。Samples.HelloService"。 如果[\<服務 >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)找到項目，系統就會載入指定的類別並建立使用組態檔中提供的端點定義的端點。 這項機制可讓您透過兩行程式碼輕鬆地載入並啟動服務，同時不用在程式碼中留下繫結與位址資訊。 使用這種方法的好處是，您不用重新編譯或重新部署應用程式，便可進行這些變更。  
   
- 選擇性標頭中宣告[\<標頭 >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)。 下列是用來區分兩個標頭的組態檔中指定服務端點項目的範例： 從"Gold"用戶端http://tempuri1.org/和 「 標準 」 的用戶端從http://tempuri2.org/。 呼叫此服務的用戶端必須擁有適當[\<標頭 >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)其組態檔中。  
+ 選擇性標頭中宣告[\<標頭 >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)。 下列是用來區分兩個標頭的組態檔中指定服務端點項目的範例： 從"Gold"用戶端 http://tempuri1.org/ 和 「 標準 」 的用戶端從 http://tempuri2.org/ 。 呼叫此服務的用戶端必須擁有適當[\<標頭 >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)其組態檔中。  
   
  [!code-xml[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]  
   
