@@ -1,105 +1,174 @@
 ---
 title: 類型擴充 (F#)
-description: '了解如何 F # 型別延伸模組可讓您將新成員加入先前定義的物件類型。'
-ms.date: 05/16/2016
+description: '了解 F # 類型擴充功能如何讓您將新成員加入先前定義的物件類型。'
+ms.date: 07/20/2018
 ms.openlocfilehash: 2181745ea75894fbfe35d5522c130baaf1876455
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "33566882"
 ---
-# <a name="type-extensions"></a>類型擴充
+# <a name="type-extensions"></a>類型擴充功能
 
-類型擴充功能可讓您將新成員加入至先前定義的物件類型。
+輸入擴充功能 (也稱為_增強指定_) 是一系列的功能，可讓您將新成員新增至先前定義的物件類型。 三個功能如下：
+
+* 內建類型擴充功能
+* 選擇性類型擴充功能
+* 擴充方法
+
+每個可用於不同的案例，並有不同的優缺點。
 
 ## <a name="syntax"></a>語法
 
 ```fsharp
-// Intrinsic extension.
+// Intrinsic and optional extensions
 type typename with
     member self-identifier.member-name =
         body
     ...
-[ end ]
 
-// Optional extension.
-type typename with
-    member self-identifier.member-name =
+// Extension methods
+open System.Runtime.CompilerServices
+
+[<Extension>]
+type Extensions() =
+    [static] member self-identifier.extension-name (ty: typename, [args]) =
         body
     ...
-[ end ]
 ```
 
-## <a name="remarks"></a>備註
-有兩種形式的類型擴充功能具有稍有不同的語法和行為。 *內建擴充*擴充功能會出現相同的命名空間或模組中，在相同原始程式檔，和相同的組件 （DLL 或可執行檔），為要擴充的類型。 *選擇性擴充功能*是出現原始的模組、 命名空間或要擴充之類型的組件外部的擴充功能。 類型會檢查透過反映，但選擇性擴充功能不這麼做時，內建的擴充功能會出現在型別。 選擇性擴充功能必須在模組中，而且它們才會進入範圍時，其中包含延伸模組已開啟。
+## <a name="intrinsic-type-extensions"></a>內建類型擴充功能
 
-在先前的語法， *typename*表示要擴充的型別。 可以存取任何型別可以擴充，但型別名稱必須是實際的型別名稱，而不是類型縮寫。 一種類型的擴充功能中，您可以定義多個成員。 *自我識別項*代表叫用的如同一般成員物件的執行個體。
+內建類型擴充功能是擴充的使用者定義型別類型擴充功能。
 
-`end`關鍵字是選擇性的輕量型語法。
+內建類型擴充功能必須定義在相同的檔案**和**在相同的命名空間或模組做為其延伸的類型。 任何其他定義將會導致它們正在[選擇性類型擴充](type-extensions.md#optional-type-extensions)。
 
-就像其他類別類型上的成員可以使用類型擴充功能中定義的成員。 類似其他成員，它們可以是靜態或執行個體成員。 這些方法也稱為的*擴充方法*; 屬性稱為*擴充功能屬性*，依此類推。 選擇性擴充成員會編譯成靜態成員的物件執行個體被當做隱含的第一個參數。 不過，它們會如同執行個體成員或靜態成員，根據宣告的方式。 隱含擴充成員隨附做為型別的成員，而且可以無限制使用。
-
-擴充方法不能為虛擬或抽象方法。 它們可以多載其他方法的名稱相同，但該編譯器會產生模稜兩可的呼叫在非擴充方法的喜好設定。
-
-如果一種類型的多個內建型別延伸存在，所有成員必須都是唯一的。 針對選擇性型別擴充功能，為相同類型的不同類型擴充功能中的成員可以有相同的名稱。 只有當用戶端程式碼會開啟兩個不同的領域，定義了相同的成員名稱，則會發生模稜兩可的錯誤。
-
-在下列範例中，模組中的類型具有內建型別延伸。 外部模組的用戶端程式碼，類型擴充功能會顯示為一般成員中所有各方面的類型。
-
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet3701.fs)]
-
-您可以使用內建類型擴充功能來分隔成區段類型的定義。 這可以是用於管理大型的類型定義，例如，將編譯器產生的程式碼和撰寫程式碼分開，或將群組在一起由不同的人所建立，或不同功能相關聯的程式碼。
-
-在下列範例中，選擇性型別延伸能擴充`System.Int32`擴充方法的型別`FromString`呼叫靜態成員`Parse`。 `testFromString`方法將示範就像任何執行個體成員一樣，會呼叫新的成員。
-
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet3702.fs)]
-
-新的執行個體成員會出現的任何其他方法一樣`Int32`IntelliSense，但只包含延伸模組的模組開啟或其他在範圍中時的型別。
-
-## <a name="generic-extension-methods"></a>泛型擴充方法
-F # 3.1 之前, 的 F # 編譯器並不支援使用 C#-樣式的泛型型別變數、 陣列類型、 元組型別或 F # 函式類型做為 「 這個 」 參數的擴充方法。 F # 3.1 支援使用這些延伸模組成員。
-
-比方說，F # 3.1 程式碼中，您可以使用擴充方法具有簽章，類似於 C# 中的下列語法：
-
-```csharp
-static member Method<T>(this T input, T other)
-```
-
-泛型型別參數受到限制時，這種方式就特別有用。 此外，您現在可以宣告如下 F # 程式碼中的擴充成員，並定義其他且語意豐富的擴充方法的集合。 在 F # 中，您通常定義擴充成員如下列範例所示：
+內建類型擴充有時候是簡潔的方式，將功能分開的型別宣告。 下列範例示範如何定義內建類型擴充功能：
 
 ```fsharp
+namespace Example
+
+type Variant =
+    | Num of int
+    | Str of string
+  
+module Variant =
+    let print v =
+        match v with
+        | Num n -> printf "Num %d" n
+        | Str s -> printf "Str %s" s
+
+// Add a member to Variant as an extension
+type Variant with
+    member x.Print() = Variant.print x
+```
+
+使用類型擴充功能，可讓您將下列各項：
+
+* Deklarace`Variant`類型
+* 若要列印的功能`Variant`根據其 「 圖形 」 類別
+* 若要存取物件樣式的列印功能的方式`.`-標記法
+
+這是定義為成員的所有項目上的替代`Variant`。 雖然不是原本就更好的方法，它可能會更簡潔的功能，在某些情況下表示。
+
+內建類型擴充會編譯為型別的擴充，而反映檢查類型時，會出現在類型上的成員。
+
+## <a name="optional-type-extensions"></a>選擇性類型擴充功能
+
+選擇性類型擴充會出現原始模組、 命名空間或要擴充型別的組件外部的延伸模組。
+
+選擇性類型擴充可用於擴充您還沒有定義您自己的類型。 例如: 
+
+```fsharp
+module Extensions
+
 open System.Collections.Generic
 
 type IEnumerable<'T> with
     /// Repeat each element of the sequence n times
     member xs.RepeatElements(n: int) =
-        seq { for x in xs do for i in 1 .. n do yield x }
+        seq {
+            for x in xs do
+                for i in 1 .. n do
+                    yield x
+        }
 ```
 
-不過，若是泛型類型，型別變數可能不限制。 您現在可以宣告 C#-F # 若要解決這項限制中的樣式擴充成員。 當您合併這類宣告與 F # 的內嵌功能時，您可以擴充成員呈現泛型演算法。
+您現在可以存取`RepeatElements`好像是隸屬<xref:System.Collections.Generic.IEnumerable%601>只要`Extensions`模組會開啟您在範圍中。
 
-請考慮下列宣告：
+擴充的型別，當反映檢查上沒有出現選擇性擴充功能。 選擇性擴充功能必須在模組中，而且時，它們只能在範圍中包含的延伸模組的模組已開啟，或不在範圍內。
+
+選擇性擴充成員會編譯成靜態成員的物件執行個體隱含傳遞做為第一個參數。 不過，它們就像它們是執行個體成員或靜態成員，根據這些宣告的方式。
+
+## <a name="generic-limitation-of-intrinsic-and-optional-type-extensions"></a>內建函式和選擇性類型擴充功能的一般限制
+
+很可能限於型別變數是泛型型別上宣告的型別延伸模組。 這個需求是延伸模組宣告的條件約束符合宣告的型別條件約束。
+
+不過，即使宣告的型別和型別延伸模組之間比對條件約束，就可以加諸的宣告型別與型別參數上的不同需求擴充成員的主體所推斷的條件約束。 例如: 
 
 ```fsharp
+open System.Collections.Generic
+
+// NOT POSSIBLE AND FAILS TO COMPILE!
+//
+// The member 'Sum' has a different requirement on 'T than the type IEnumerable<'T>
+type IEnumerable<'T> with
+    member this.Sum() = Seq.sum this
+```
+
+沒有任何方法可以取得此程式碼以使用選擇性類型擴充功能：
+
+* 現況`Sum`成員有不同的條件約束`'T`(`static member get_Zero`和`static member (+)`) 比類型擴充功能的定義。
+* 修改類型擴充功能，能夠以相同的條件約束`Sum`就不再符合定義的條件約束上`IEnumerable<'T>`。
+* 進行變更的成員，才能`member inline Sum`將會不相符類型條件約束發生錯誤
+
+預期是 「 浮動在空間 」，可以呈現，彷彿它們所擴充類型的靜態方法。 這是其中的擴充方法會變得必要。
+
+## <a name="extension-methods"></a>擴充方法
+
+最後，（有時稱為 「 C# 樣式擴充成員 」） 的擴充方法可以宣告在 F # 中為靜態成員方法的類別上。
+
+擴充方法可用於當您想要將會限制型別變數的泛型型別上定義擴充功能。 例如: 
+
+```fsharp
+namespace Extensions
+
+open System.Runtime.CompilerServices
+
 [<Extension>]
-type ExtraCSharpStyleExtensionMethodsInFSharp () =
+type IEnumerableExtensions() =
     [<Extension>]
     static member inline Sum(xs: IEnumerable<'T>) = Seq.sum xs
 ```
 
-藉由使用此宣告，您可以撰寫類似下面的範例的程式碼。
+使用時，此程式碼會讓它看起來好像`Sum`上定義<xref:System.Collections.Generic.IEnumerable%601>，只要`Extensions`已開啟，或在範圍內。
 
-```fsharp
-let listOfIntegers = [ 1 .. 100 ]
-let listOfBigIntegers = [ 1I to 100I ]
-let sum1 = listOfIntegers.Sum()
-let sum2 = listOfBigIntegers.Sum()
-```
+## <a name="other-remarks"></a>其他備註
 
-這個程式碼，在相同的泛型算術程式碼會套用到兩種類型的清單沒有多載中，定義單一擴充功能的成員。
+類型延伸模組也會有下列屬性：
 
+* 任何可以存取的型別可加以擴充。
+* 內建函式和選擇性類型擴充功能可以定義_任何_成員型別，不只是方法。 讓擴充功能屬性也是可行的例如。
+* `self-identifier`權杖[語法](type-extensions.md#syntax)表示叫用，就像一般成員類型的執行個體。
+* 擴充的成員可以是靜態或執行個體成員。
+* 類型擴充功能上的型別變數必須符合宣告的型別條件的約束。
+
+型別擴充功能也有下列限制：
+
+* 類型擴充功能不支援虛擬或抽象方法。
+* 類型擴充功能的增強指定為不支援覆寫方法。
+* 不支援類型擴充功能[以靜態方式解析的類型參數](generics/statically-resolved-type-parameters.md)。
+* 選擇性類型擴充功能的增強指定為不支援的建構函式。
+* 類型擴充功能不能定義於[類型縮寫](type-abbreviations.md)。
+* 類型擴充功能不一定適用於`byref<'T>`（不過它們可以宣告）。
+* 類型擴充功能不適用於屬性 （不過它們可以宣告）。
+* 您可以定義多載相同名稱的其他方法的擴充功能，但 F # 編譯器可讓非擴充方法的喜好設定時，不會模稜兩可的呼叫。
+
+最後，如果多個內建類型擴充功能有一種類型，所有成員必須都是唯一的。 對於選擇性類型擴充成相同類型的不同類型擴充中的成員可以有相同的名稱。 只有當用戶端程式碼會開啟兩個不同的領域，定義了相同成員名稱，則會發生模稜兩可錯誤。
 
 ## <a name="see-also"></a>另請參閱
+
 [F# 語言參考](index.md)
 
 [成員](members/index.md)

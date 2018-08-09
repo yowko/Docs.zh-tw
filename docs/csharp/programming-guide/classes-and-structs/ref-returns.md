@@ -5,10 +5,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
 ms.openlocfilehash: e749b9c9309a4b1a737a0c1d0b5e1cfe5748114a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "33339614"
 ---
 # <a name="ref-returns-and-ref-locals"></a>ref 傳回值和 ref 區域變數
@@ -35,16 +35,19 @@ ms.locfileid: "33339614"
  
 ## <a name="defining-a-ref-return-value"></a>定義 ref 傳回值
 
-將 [ref](../../language-reference/keywords/ref.md) 關鍵字新增至方法簽章的傳回型別，即可定義 ref 傳回值。 例如，下列簽章指出 `GetContactInformation` 屬性會將 `Person` 物件的參考傳回給呼叫者：
+傳回*參考傳回值*的方法必須滿足下列兩個條件：
+
+- 方法簽章在傳回型別前包含 [ref](../../language-reference/keywords/ref.md) 關鍵字。
+- 方法主體中的每個 [return](../../language-reference/keywords/return.md) 陳述式在所傳回執行個體前包含 [ref](../../language-reference/keywords/ref.md) 關鍵字。
+
+下列範例顯示滿足那些條件並傳回參考給名為 `p` 之 `Person` 物件的方法：
 
 ```csharp
-public ref Person GetContactInformation(string fname, string lname);
-```
-
-此外，方法主體中每個 [return](../../language-reference/keywords/return.md) 陳述式所傳回的物件名稱前面必須加上 [ref](../../language-reference/keywords/ref.md) 關鍵字。 例如，下列 `return` 陳述式會傳回對名為 `p` 之 `Person` 物件的參考：
-
-```csharp
-return ref p;
+public ref Person GetContactInformation(string fname, string lname)
+{
+    // ...method implementation...
+    return ref p;
+}
 ```
 
 ## <a name="consuming-a-ref-return-value"></a>使用 ref 傳回值
