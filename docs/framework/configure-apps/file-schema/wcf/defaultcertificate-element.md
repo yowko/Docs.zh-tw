@@ -78,7 +78,7 @@ x509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
  對於使用以憑證為基礎之訊息安全性的繫結，這個組態項目指定的憑證會用來加密傳送給服務的訊息，而且預期會由服務用來簽署對用戶端的回覆。 它會儲存當服務未指定憑證時所要使用的單一憑證。  
   
 ## <a name="example"></a>範例  
- 下列範例會指定要用於的端點 URI 開頭憑證http://www.contoso.com和要針對所有其他不執行憑證交涉的端點使用的憑證。  
+ 下列範例會指定要用於的端點 URI 開頭憑證 http://www.contoso.com 和要針對所有其他不執行憑證交涉的端點使用的憑證。  
   
 ```xml  
 <serviceCertificate>  

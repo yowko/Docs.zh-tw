@@ -207,7 +207,7 @@ Press <ENTER> to terminate client.
     > [!NOTE]
     >  設定批次檔是設計用來從 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示字元執行。 它要求 path 環境變數指向安裝 SDK 的目錄。 這個環境變數是在[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示字元中自動設定。  
   
-3.  驗證的存取權的服務使用瀏覽器輸入位址http://localhost/servicemodelsamples/service.svc。  
+3.  驗證的存取權的服務使用瀏覽器輸入位址 http://localhost/servicemodelsamples/service.svc 。  
   
 4.  從 \client\bin 啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
   

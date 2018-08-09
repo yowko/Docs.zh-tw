@@ -59,7 +59,7 @@ endpointBehaviors 區段
  如需詳細資訊，請參閱 「 範圍的憑證 」 一節[How to： 建立聯合用戶端](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例會指定網域名稱與端點通訊時要使用用戶端的服務憑證http://www.contoso.com透過 HTTP 通訊協定。  
+ 下列範例會指定網域名稱與端點通訊時要使用用戶端的服務憑證 http://www.contoso.com 透過 HTTP 通訊協定。  
   
 ```xml  
 <serviceCertificate>  
