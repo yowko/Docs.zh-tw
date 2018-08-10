@@ -1,65 +1,65 @@
 ---
-title: 可為 Null 的類型 (C# 程式設計手冊)
-ms.date: 05/15/2017
+title: 可為 Null 的型別 (C# 程式設計指南)
+description: 深入了解 C# 可為 Null 的型別和其使用方式
+ms.date: 07/30/2018
 helpviewer_keywords:
 - nullable types [C#]
 - C# language, nullable types
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
 ms.openlocfilehash: 64b326b82cd022ed6590a232546690e2ec2a5c78
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "39245582"
 ---
-# <a name="nullable-types-c-programming-guide"></a>可為 Null 的類型 (C# 程式設計手冊)
-可為 Null 的型別是 <xref:System.Nullable%601?displayProperty=nameWithType> 結構的執行個體。 可為 Null 的型別可以代表其基礎值型別的正確值範圍，再加上額外的 `null` 值。 例如，您可以將範圍從 -2147483648 到 2147483647 的任何值指派給 `Nullable<Int32>` (發音為「Nullable of Int32」)，或為它指派 `null` 值。 您可以為 `Nullable<bool>` 指派下列值：[true](../../../csharp/language-reference/keywords/true.md)、[false](../../../csharp/language-reference/keywords/false.md) 或 [null](../../../csharp/language-reference/keywords/null.md)。 當您正在處理包含可能不會指派值之元素的資料庫和其他資料型別時，將 `null` 指派為數字或布林值型別的功能特別有用。 例如，資料庫中的布林值欄位可以儲存 `true` 或 `false` 的值，而它也可能是未定義的。 
+# <a name="nullable-types-c-programming-guide"></a>可為 Null 的型別 (C# 程式設計指南)
+
+可為 Null 的型別是 <xref:System.Nullable%601?displayProperty=nameWithType> 結構的執行個體。 可為 Null 的型別能代表基礎類型 `T` 的所有值，以及額外的 [null](../../language-reference/keywords/null.md) 值。 基礎類型 `T` 可以是任何不可為 Null 的[實值型別](../../language-reference/keywords/value-types.md)。 `T` 不可為參考型別。
+
+例如，您可以指派 `null` 或介於 <xref:System.Int32.MinValue?displayProperty=nameWithType> 到 <xref:System.Int32.MaxValue?displayProperty=nameWithType> 的任何整數值給 `Nullable<int>`，以及指派 [true](../../language-reference/keywords/true-literal.md)、[false](../../language-reference/keywords/false-literal.md) 或 `null` 給 `Nullable<bool>`。
+
+當您需要表示基礎類型的未定義值時，可使用可為 Null 的型別。 布林值變數只可有兩個值：true 和 false。 但不會有任何「未定義」的值。 在許多程式設計應用程式最值得注意的資料庫互動中，可能未定義或缺少變數值。 例如，資料庫中的欄位可能包含 true 或 false 兩種值，但也可能完全不包含任何值。 在此情況下，可使用 `Nullable<bool>` 類型。
+
+可為 Null 的型別特色如下：
   
-[!code-csharp[nullable-types](../../../../samples/snippets/csharp/programming-guide/nullable-types/nullable-ex1.cs)]  
+- 可為 Null 的型別代表可指派 `null` 值的實值型別變數。 您無法根據參考型別建立可為 Null 的型別。 (參考型別已經支援 `null` 值)。  
   
-如需詳細資訊，請參閱[使用可為 Null 的型別](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)  
+- 語法 `T?`是 `Nullable<T>` 的略寫。 這兩種格式是可互換的。  
   
-## <a name="nullable-types-overview"></a>可為 Null 的型別概觀  
- 可為 Null 的型別特色如下：  
+- 將值指派給可為 Null 的型別，就像您指派值給基礎實值型別一樣：`int? x = 10;` 或 `double? d = 4.108;`。 您也可以指派 `null` 值：`int? x = null;`。  
   
--   可為 Null 的型別代表可指派 `null` 值的實值型別變數。 您無法根據參考型別建立可為 Null 的型別。 (參考型別已經支援 `null` 值)。  
+- 使用 <xref:System.Nullable%601.HasValue%2A?displayProperty=nameWithType> 和 <xref:System.Nullable%601.Value%2A?displayProperty=nameWithType> 唯讀屬性可測試是否有 Null，並擷取該值，如下列範例所示：`if (x.HasValue) y = x.Value;`  
   
--   語法 `T?` 是 <xref:System.Nullable%601> 的縮寫，其中 `T` 是實值型別。 這兩種格式是可互換的。  
+  - 如果變數包含值，<xref:System.Nullable%601.HasValue%2A> 屬性會傳回 `true`，若為 `null`，則傳回 `false`。
   
--   將值指派給可為 Null 的型別，就像您針對一般實值型別所做的一樣，例如 `int? x = 10;` 或 `double? d = 4.108;`。 您也可以為可為 Null 的型別指派值 `null`：`int? x = null;`。  
+  - 若 <xref:System.Nullable%601.HasValue%2A> 傳回 `true`，<xref:System.Nullable%601.Value%2A> 屬性會傳回值。 否則會擲回 <xref:System.InvalidOperationException>。  
   
--   使用 <xref:System.Nullable%601.GetValueOrDefault%2A?displayProperty=nameWithType> 方法來傳回指派的值，或者，如果值為 `null`，則傳回基礎類型的預設值，例如 `int j = x.GetValueOrDefault();`  
+- 您也可以使用 `==` 和 `!=` 運算子搭配可為 Null 的型別，如下列範例所示︰`if (x != null) y = x.Value;`。 如果 `a` 和 `b` 都是 Null，`a == b` 會評估為 `true`。  
+
+- 從 C# 7.0 開始，您可以為兩項檢查使用模式比對，並取得可為 Null 的型別值：`if (x is int xValue) y = xValue;`。
   
--   使用 <xref:System.Nullable%601.HasValue%2A> 和 <xref:System.Nullable%601.Value%2A> 唯讀屬性，以測試是否有 Null 並擷取值，如下列範例所示：`if(x.HasValue) j = x.Value;`  
+- `T?` 的預設值為 <xref:System.Nullable%601.HasValue%2A> 屬性傳回 `false` 的執行個體。  
+
+- 使用 <xref:System.Nullable%601.GetValueOrDefault> 方法可傳回指派的值，如果可為 Null 的型別值為 `null`，則傳回基礎實值型別的[預設](../../language-reference/keywords/default-values-table.md)值。  
+
+- 使用 <xref:System.Nullable%601.GetValueOrDefault(%600)> 方法可傳回指派的值，如果可為 Null 的型別值為 `null`，則傳回提供的預設值。
   
-    -   如果變數包含值，`HasValue` 屬性就會傳回 `true`，或者，如果它是 `null`，則會傳回 `false`。  
+- 使用[聯合 Null 的運算子](../../language-reference/operators/null-coalescing-operator.md) `??`可將值指派給以可為 Null 之型別值為基礎的基礎類型：`int? x = null; int y = x ?? -1;`。 在範例中，因為 `x` 是 Null，所以結果值 `y` 是 `-1`。
+
+- 如果在兩種資料類別之間定義使用者定義轉換，則這些資料類型的可為 Null 版本也可使用相同的轉換。
   
-    -   如果指派了其中一個，則 `Value` 屬性會傳回值。 否則會擲回 <xref:System.InvalidOperationException?displayProperty=nameWithType>。  
+- 不允許巢狀可為 Null 的型別。 系統不會編譯下列這一行：`Nullable<Nullable<int>> n;`  
+
+如需詳細資訊，請參閱[使用可為 Null 的型別](using-nullable-types.md)和[如何：識別可為 Null 的型別](how-to-identify-a-nullable-type.md)主題。
   
-    -   `HasValue` 的預設值為 `false`。 `Value` 屬性沒有預設值。  
-  
-    -   您也可以使用 `==` 和 `!=` 運算子搭配可為 Null 的型別，如下列範例所示︰`if (x != null) y = x;`  
-  
--   使用 `??` 運算子來指派預設值，在將目前值為 `null` 之可為 Null 的型別指派給非可為 Null 的型別時，將會套用此預設值，例如 `int? x = null; int y = x ?? -1;`  
-  
--   不允許巢狀可為 Null 的型別。 系統將不會編譯下列這一行：`Nullable<Nullable<int>> n;`  
-  
-## <a name="related-sections"></a>相關章節  
- 如需詳細資訊：  
-  
--   [使用可為 Null 的型別](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)  
-  
--   [對可為 Null 的型別進行 boxing](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)  
-  
--   [??運算子](../../../csharp/language-reference/operators/null-coalescing-operator.md)  
-  
-## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>請參閱  
- <xref:System.Nullable>  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [C#](../../../csharp/index.md)  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [「增益」(Lift) 的真正意義是什麼？(英文)](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)
+## <a name="see-also"></a>另請參閱
+
+ <xref:System.Nullable%601?displayProperty=nameWithType>  
+ <xref:System.Nullable?displayProperty=nameWithType>  
+ [??運算子](../../language-reference/operators/null-coalescing-operator.md)  
+ [C# 程式設計指南](../index.md)  
+ [C# 指南](../../index.md)  
+ [C# 參考](../../language-reference/index.md)  
+ [可為 Null 的實值型別 (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
