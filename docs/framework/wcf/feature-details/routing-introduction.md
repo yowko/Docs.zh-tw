@@ -160,7 +160,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
   
 -   評估訊息時，必須有多個篩選傳回 `true`。  
   
- 如果這些條件都符合，則訊息會路由傳送至所有評估為 `true` 之篩選的所有端點。 下列範例會定義路由組態，如果訊息中的端點位址路由傳送至這兩個端點會導致http://localhost:8000/routingservice/router/rounding。  
+ 如果這些條件都符合，則訊息會路由傳送至所有評估為 `true` 之篩選的所有端點。 下列範例會定義路由組態，如果訊息中的端點位址路由傳送至這兩個端點會導致 http://localhost:8000/routingservice/router/rounding 。  
   
 ```xml  
 <!--ROUTING SECTION -->  

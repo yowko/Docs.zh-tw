@@ -46,7 +46,7 @@ IntegratedWindowsAuthentication: Specifies Windows authentication"
 |---------------|-----------------|  
 |allowCookies|布林值，指定用戶端是否接受 Cookie 並在未來要求時傳播 Cookie。 預設為 `false`。<br /><br /> 當您與使用 Cookie 的 ASMX Web 服務互動時，可以使用這個屬性。 如此一來，從伺服器傳回的 Cookie 就一定會自動複製到該服務未來所有的用戶端要求。|  
 |authenticationScheme|指定通訊協定，用於驗證由 HTTP 接聽程式處理的用戶端要求。 有效值包括以下的值：<br /><br /> -Digest： 指定摘要式驗證。<br />-Negotiate： 與用戶端決定驗證配置進行交涉。 如果用戶端和伺服器都支援 Kerberos，就使用它，否則使用 NTLM。<br />-Ntlm： 指定 NTLM 驗證。<br />-基本： 指定基本驗證。<br />匿名： 指定匿名驗證。<br /><br /> 預設值為 Anonymous。 此屬性的型別為 <xref:System.Net.AuthenticationSchemes>。 這個屬性只可以設定一次。|  
-|bypassProxyOnLocal|布林值，指出本機位址是否略過 Proxy 伺服器。 預設為 `false`。<br /><br /> 本機位址是位於本機 LAN 或內部網路上的位址。<br /><br /> Windows Communication Foundation (WCF) 一律忽略 proxy，如果服務位址開頭http://localhost。<br /><br /> 如果您希望用戶端在與相同電腦上的服務進行交談時通過 Proxy，應使用主機名稱而非 localhost。|  
+|bypassProxyOnLocal|布林值，指出本機位址是否略過 Proxy 伺服器。 預設為 `false`。<br /><br /> 本機位址是位於本機 LAN 或內部網路上的位址。<br /><br /> Windows Communication Foundation (WCF) 一律忽略 proxy，如果服務位址開頭 http://localhost 。<br /><br /> 如果您希望用戶端在與相同電腦上的服務進行交談時通過 Proxy，應使用主機名稱而非 localhost。|  
 |hostnameComparisonMode|指定用於剖析 URI 的 HTTP 主機名稱比較模式。 有效值為：<br /><br /> -StrongWildcard: （"+"） 比對指定的配置、 連接埠和相對 URI 的內容中所有可能的主機名稱。<br />-完全： 無萬用字元。<br />-WeakWildcard: ("*") 必須符合指定的配置、 連接埠和相對 UIR 有不尚未明確比對或透過強式萬用字元機制的內容中的所有可能主機名稱。<br /><br /> 預設為 StrongWildcard。 此屬性的型別為 `System.ServiceModel.HostnameComparisonMode`。|  
 |keepAliveEnabled|布林值，指定是否要與網際網路資源建立持續連線。|  
 |maxBufferSize|正整數，指定緩衝區的大小上限。 預設為 524288。|  

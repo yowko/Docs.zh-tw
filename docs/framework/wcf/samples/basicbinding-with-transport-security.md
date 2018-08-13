@@ -56,7 +56,7 @@ ms.locfileid: "33502685"
 </system.serviceModel>  
 ```  
   
- 當您嘗試存取 HTTPS 時，因為此範例中使用的憑證是使用 Makecert.exe 所建立的測試憑證，會顯示安全性警示： 解決您的瀏覽器https://localhost/servicemodelsamples/service.svc。 若要讓 Windows Communication Foundation (WCF) 用戶端使用測試憑證，某些其他程式碼加入至用戶端，以便隱藏安全性警示。 使用實際憑證時，不需要這個程式碼及伴隨的類別。  
+ 當您嘗試存取 HTTPS 時，因為此範例中使用的憑證是使用 Makecert.exe 所建立的測試憑證，會顯示安全性警示： 解決您的瀏覽器 https://localhost/servicemodelsamples/service.svc 。 若要讓 Windows Communication Foundation (WCF) 用戶端使用測試憑證，某些其他程式碼加入至用戶端，以便隱藏安全性警示。 使用實際憑證時，不需要這個程式碼及伴隨的類別。  
 
 ```csharp
 // This code is required only for test certificates such as those   

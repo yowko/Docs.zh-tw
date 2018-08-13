@@ -83,7 +83,7 @@ ms.locfileid: "36298171"
 
 NuGet 套件是以一個或多個[架構](frameworks.md)為目標。 .NET Standard 套件是以 ".NET Standard" 架構為目標。 您可使用 `netstandard` [壓縮 TFM](frameworks.md) (例如，`netstandard1.4`)，以 .NET Standard 架構為目標。 要在多個執行階段上執行的程式庫應以此架構為目標。 對大多數的 API 來說，會以 `netstandard2.0` 為目標，因為提供的 API 數目，超過 .NET Standard 1.6 與 2.0 之間的一倍。
 
-[`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/) 中繼套件會參考定 .NET Standard 的完整一組 NuGet 套件。 若要將 `netstandard` 設為目標，最常見方式是參考這個中繼套件。 它描述大約 40 種定義 .NET Standard 的 .NET 程式庫和相關 API，並提供其存取權。 您可以參考目標為 `netstandard` 的其他套件，以存取其他 API。
+[`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/) 中繼套件會參考定 .NET Standard 的完整一組 NuGet 套件。  若要將 `netstandard` 設為目標，最常見方式是參考這個中繼套件。 它描述大約 40 種定義 .NET Standard 的 .NET 程式庫和相關 API，並提供其存取權。 您可以參考目標為 `netstandard` 的其他套件，以存取其他 API。
 
 ### <a name="versioning"></a>版本控制
 

@@ -130,7 +130,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
  B3121: WCF 採用 Ws-metadataexchange (MEX) 規格第 6 節以傳值方式或傳址包含端點參考中繼資料中所述的機制。  
   
- 假設 WCF 服務需要使用在權杖簽發者所發出的安全性判斷提示標記語言 (SAML) 權杖進行驗證的http://sts.fabrikam123.com。 WCF 端點描述這項驗證需求使用`sp:IssuedToken`含有巢狀判斷提示`sp:Issuer`指向權杖簽發者的判斷提示。 存取 `sp:Issuer` 判斷提示的用戶端應用程式必須知道如何與權杖簽發者端點進行通訊。 用戶端需要知道與權杖簽發者有關的中繼資料。 使用 MEX 中定義的端點參考中繼資料延伸，WCF 會提供權杖簽發者中繼資料的參考。  
+ 假設 WCF 服務需要使用在權杖簽發者所發出的安全性判斷提示標記語言 (SAML) 權杖進行驗證的 http://sts.fabrikam123.com 。 WCF 端點描述這項驗證需求使用`sp:IssuedToken`含有巢狀判斷提示`sp:Issuer`指向權杖簽發者的判斷提示。 存取 `sp:Issuer` 判斷提示的用戶端應用程式必須知道如何與權杖簽發者端點進行通訊。 用戶端需要知道與權杖簽發者有關的中繼資料。 使用 MEX 中定義的端點參考中繼資料延伸，WCF 會提供權杖簽發者中繼資料的參考。  
   
 ```xml  
 <sp:IssuedToken>  

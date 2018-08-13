@@ -102,7 +102,7 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  當您執行範例時，作業要求和回應會顯示在服務與用戶端主控台視窗中。 在每個主控台視窗中按下 ENTER 鍵，即可關閉服務與用戶端。  
   
 > [!NOTE]
->  服務必須使用系統管理帳戶執行，或是它執行的帳戶必須被授與註冊權限http://localhost:8000/ServiceModelSamples向 HTTP 層的 URI。 這類權限可以授與設定[命名空間保留](http://go.microsoft.com/fwlink/?LinkId=95012)使用[Httpcfg.exe 工具](http://go.microsoft.com/fwlink/?LinkId=95010)。  
+>  服務必須使用系統管理帳戶執行，或是它執行的帳戶必須被授與註冊權限 http://localhost:8000/ServiceModelSamples 向 HTTP 層的 URI。 這類權限可以授與設定[命名空間保留](http://go.microsoft.com/fwlink/?LinkId=95012)使用[Httpcfg.exe 工具](http://go.microsoft.com/fwlink/?LinkId=95010)。  
   
 > [!NOTE]
 >  在執行 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 的電腦上，只有在 Host.exe 應用程式擁有「模擬」權限的情況下才支援模擬  (根據預設，只有系統管理員具有此權限)。若要將此權限加入至服務執行帳戶，請前往**系統管理工具**，開啟**本機安全性原則**，開啟**本機原則**，按一下**使用者權限指派**，然後選取**驗證後模擬用戶端**按兩下**屬性**新增使用者或群組。  

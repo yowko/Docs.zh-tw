@@ -321,7 +321,7 @@ ms.locfileid: "33496745"
   
 8.  將 web.config 複製到您的 IIS 應用程式目錄。  
   
-9. 測試以查看建立端點，是否要處理的啟動 Internet Explorer 並瀏覽至http://localhost/MyCreationEndpoint/Workflow1.xamlx。 Internet Explorer 應該會顯示下列畫面：  
+9. 測試以查看建立端點，是否要處理的啟動 Internet Explorer 並瀏覽至 http://localhost/MyCreationEndpoint/Workflow1.xamlx 。 Internet Explorer 應該會顯示下列畫面：  
   
      ![測試服務](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")  
   

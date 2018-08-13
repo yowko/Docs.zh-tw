@@ -126,7 +126,7 @@ ms.locfileid: "33508640"
  [ \<IssuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)包含用來設定本機簽發者的權杖或使用與安全性權杖服務的行為項目。 如需設定用戶端使用本機簽發者的指示，請參閱[How to： 設定本機簽發者](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)。  
   
 #### <a name="localissueraddress"></a>\<localIssuerAddress >  
- 指定預設的安全性權杖服務位址。 這用時<xref:System.ServiceModel.WSFederationHttpBinding>並不提供的 URL 安全性權杖服務，或是聯合繫結的簽發者位址是http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous或`null`。 在這種情形下，<xref:System.ServiceModel.Description.ClientCredentials> 必須設定本機簽發者的位址，以及用於與該簽發者進行通訊的繫結。  
+ 指定預設的安全性權杖服務位址。 這用時<xref:System.ServiceModel.WSFederationHttpBinding>並不提供的 URL 安全性權杖服務，或是聯合繫結的簽發者位址是 http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous 或 `null` 。 在這種情形下，<xref:System.ServiceModel.Description.ClientCredentials> 必須設定本機簽發者的位址，以及用於與該簽發者進行通訊的繫結。  
   
 #### <a name="issuerchannelbehaviors"></a>\<h >  
  使用[ \<h >](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)新增與安全性權杖服務通訊時使用的 WCF 用戶端行為。 定義中的用戶端行為[ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) > 一節。 若要使用定義的行為，加入 <`add`> 項目`<issuerChannelBehaviors>`具有兩個屬性的項目。 將 `issuerAddress` 設定為安全性權杖服務的 URL，並將 `behaviorConfiguration` 屬性設定為已定義之端點行為的名稱，如下列範例所示。  

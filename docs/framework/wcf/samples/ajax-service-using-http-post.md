@@ -33,7 +33,7 @@ public interface ICalculator
 
  您可以在服務上使用 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> 來建立 AJAX 端點，如基本 AJAX 服務範例所示。  
   
- 不同於 GET 要求，您無法從瀏覽器叫用 POST 服務。 比方說，瀏覽至http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200產生錯誤，因為 POST 服務預期`n1`和`n2`參數來傳送訊息主體中 — 以 JSON 格式 — 而不是 URL。  
+ 不同於 GET 要求，您無法從瀏覽器叫用 POST 服務。 比方說，瀏覽至 http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200 產生錯誤，因為 POST 服務預期`n1`和`n2`參數來傳送訊息主體中 — 以 JSON 格式 — 而不是 URL。  
   
  用戶端網頁 PostAjaxClientPage.aspx 包含 ASP.NET 程式碼，此程式碼會在使用者每次按下網頁上其中一個作業按鈕時叫用此服務。 服務會在相同的方式回應[基本 AJAX 服務](../../../../docs/framework/wcf/samples/basic-ajax-service.md)範例與 GET 要求。  
   
