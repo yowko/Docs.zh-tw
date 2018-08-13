@@ -31,7 +31,7 @@ ms.locfileid: "33218799"
 
 ## <a name="common-top-level-properties"></a>常見的最上層屬性
 
-### <a name="name"></a>專案名稱
+### <a name="name"></a>名稱
 
 ```json
 {
