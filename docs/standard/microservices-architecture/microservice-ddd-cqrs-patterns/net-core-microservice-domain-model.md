@@ -15,7 +15,7 @@ ms.locfileid: "37106261"
 
 上一節解釋了設計領域模型的基本設計準則及模式。 現在是探索使用 .NET Core (純 C\# 程式碼) 及 EF Core 實作領域模型之可能方式的時候了。 請注意，您的領域模型會僅由您的程式碼組成。 它只會有 EF Core 模型需求，而非真正對 EF 的相依性。 您不應該在您的領域模型中對 EF Core 或任何其他的 ORM 具有硬式相依性或參考。
 
-## <a name="domain-model-structure-in-a-custom-net-standard-library"></a>自訂 .NET 標準程式庫中的領域模型結構
+## <a name="domain-model-structure-in-a-custom-net-standard-library"></a>自訂 .NET Standard 程式庫中的領域模型結構
 
 用於 eShopOnContainers 參考應用程式的資料夾組織展示了應用程式的 DDD 模型。 您可能會發現不同的資料夾組織可以更清楚的與您為應用程式選擇的設計進行通訊。 如同您在圖 9-10 中所看到的，在訂購領域模型中有兩個彙總，即訂單 (order) 彙總和購買者 (buyer) 彙總。 每一個彙總都是一組領域實體和值物件，雖然您也可以使用單一領域實體 (彙總根或根實體) 來組成彙總。
 
@@ -27,7 +27,7 @@ ms.locfileid: "37106261"
 
 您也可以查看包含了可讓您用來作為領域實體及值物件基底之自訂基底類別的 [SeedWork](https://martinfowler.com/bliki/Seedwork.html) 資料夾，以便您在每一個領域物件類別中不會有冗餘的程式碼。
 
-## <a name="structuring-aggregates-in-a-custom-net-standard-library"></a>在自訂 .NET 標準程式庫中建立彙總結構
+## <a name="structuring-aggregates-in-a-custom-net-standard-library"></a>在自訂 .NET Standard 程式庫中建立彙總結構
 
 「彙總」指的是為了符合交易一致性而群組在一起的領域物件所構成的叢集。 這些物件可以是實體的執行個體 (其中一個為彙總根或根實體) 加上任何額外的值物件。
 

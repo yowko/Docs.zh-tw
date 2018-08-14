@@ -17,7 +17,7 @@ ms.locfileid: "36207773"
 > [!NOTE]
 > 下圖顯示使用 Unix 的命令列範例。  此處顯示的 `dotnet pack` 命令，運作運作方式與在 Windows 上如出一轍。
 
-在 .NET Core 1.0，程式庫預期以 NuGet 封裝方式散發。  實際上，所有的 .NET 標準程式庫都是以這種方式散發及取用。  `dotnet pack` 命令最容易完成此作業。
+在 .NET Core 1.0，程式庫預期以 NuGet 封裝方式散發。  實際上，所有的 .NET Standard 程式庫都是以這種方式散發及取用。  `dotnet pack` 命令最容易完成此作業。
 
 假設您剛寫完酷炫的新程式庫，希望透過 NuGet 散發。  您可以使用跨平台工具建立 NuGet 封裝，絲毫不差地完成此作業！  下例假設 **SuperAwesomeLibrary** 程式庫以 `netstandard1.0` 為目標。
 

@@ -55,7 +55,7 @@ ms.locfileid: "33520509"
   
 2.  在 Visual Basic 或 Visual C# 專案範本清單中，選擇 [Windows 服務] ，並將專案命名為 **MyNewService**。 選擇 [確定] 。  
   
-     專案範本會自動加入繼承自 `Service1` 且名稱為 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 的元件類別。  
+     專案範本會自動加入繼承自 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 且名稱為 `Service1` 的元件類別。  
   
 3.  在 [編輯]  功能表上，依序選擇 [尋找和取代] 、[檔案中尋找]  (鍵盤：CTRL+SHIFT+F)。 將所有 `Service1` 的出現變更為 `MyNewService`。 Service1.cs、Program.cs 和 Service1.Designer.cs (或它們的 .vb 對應項) 中可找到這些情況。  
   

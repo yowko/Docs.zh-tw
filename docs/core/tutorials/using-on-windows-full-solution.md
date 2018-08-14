@@ -23,7 +23,7 @@ Visual Studio 2017 提供功能完整的開發環境來開發 .NET Core 應用�
 
 ### <a name="writing-the-library"></a>撰寫程式庫
 
-1. 在 Visual Studio 中，依序選擇 [檔案]、[新增]、[專案]。 在 [新增專案] 對話方塊中，展開 [Visual C#] 節點，然後依序選擇 [.NET Standard] 節點和 [類別庫 (.NET 標準)]。 
+1. 在 Visual Studio 中，依序選擇 [檔案]、[新增]、[專案]。 在 [新增專案] 對話方塊中，展開 [Visual C#] 節點，然後依序選擇 [.NET Standard] 節點和 [類別庫 (.NET Standard)]。 
 
 2. 將專案命名為 "Library"、方案命名為 "Golden"。 維持核取 [為方案建立目錄]。 按一下 [確定 **Deploying Office Solutions**]。
 
