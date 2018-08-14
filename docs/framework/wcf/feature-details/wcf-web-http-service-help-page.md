@@ -10,7 +10,7 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33500948"
 ---
 # <a name="wcf-web-http-service-help-page"></a>WCF Web HTTP 服務說明網頁
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 會為 WCF WEB HTTP 服務提供自動說明頁面。 此說明頁面會列出每項作業、要求與回應格式和結構描述的說明。 此功能預設為關閉。 當使用者瀏覽至 WCF WEB HTTP 服務並附加在 「 / 說明 」 的 URL，例如後面 http://localhost:8000/Customers/Help，一樣會顯示下列說明頁面。  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 會為 WCF WEB HTTP 服務提供自動說明頁面。 此說明頁面會列出每項作業、要求與回應格式和結構描述的說明。 此功能預設為關閉。 當使用者瀏覽至 WCF WEB HTTP 服務並附加在 「 / 說明 」 的 URL，例如後面 http://localhost:8000/Customers/Help ，一樣會顯示下列說明頁面。  
   
  ![WCF REST 說明頁面](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")  
   

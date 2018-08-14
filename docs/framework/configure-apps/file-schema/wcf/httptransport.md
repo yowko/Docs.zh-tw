@@ -52,7 +52,7 @@ IntegratedWindowsAuthentication: Specifies Windows authentication"
 |maxBufferSize|正整數，指定緩衝區的大小上限。 預設為 524288。|  
 |proxyAddress|指定 HTTP Proxy 位址的 URI。 如果 `useSystemWebProxy` 為 `true`，則這項設定必須為 `null`。 預設為 `null`。|  
 |proxyAuthenticationScheme|指定通訊協定，用於驗證由 HTTP Proxy 處理的用戶端要求。 有效值包括以下的值：<br /><br /> -無： 未執行驗證。<br />-Digest： 指定摘要式驗證。<br />-Negotiate： 與用戶端決定驗證配置進行交涉。 如果用戶端和伺服器都支援 Kerberos，就使用它，否則使用 NTLM。<br />-Ntlm： 指定 NTLM 驗證。<br />-基本： 指定基本驗證。<br />匿名： 指定匿名驗證。<br />-IntegratedWindowsAuthentication： 指定 Windows 驗證。<br /><br /> 預設值為 Anonymous。 此屬性的型別為 <xref:System.Net.AuthenticationSchemes>。|  
-|realm|字串，指定在 Proxy/伺服器上使用的領域。 預設為空字串。<br /><br /> 伺服器使用領域來分割受保護的資源。 每個分割都可以有自己的驗證配置和 (或) 授權資料庫。 領域只限於基本和摘要式驗證使用。 當用戶端成功驗證之後，驗證對指定領域中的所有資源都有效。 領域的詳細說明，請參閱 RFC 2617 在http://www.ietf.org。|  
+|realm|字串，指定在 Proxy/伺服器上使用的領域。 預設為空字串。<br /><br /> 伺服器使用領域來分割受保護的資源。 每個分割都可以有自己的驗證配置和 (或) 授權資料庫。 領域只限於基本和摘要式驗證使用。 當用戶端成功驗證之後，驗證對指定領域中的所有資源都有效。 領域的詳細說明，請參閱 RFC 2617 在 http://www.ietf.org 。|  
 |transferMode|指定訊息是否要經過緩衝處理或資料流處理，或為要求或回應。 有效值包括以下的值：<br /><br /> 緩衝： 緩衝要求和回應訊息。<br />資料流： 進行串流的要求和回應訊息。<br />-StreamedRequest： 要求訊息資料流處理，並緩衝處理回應訊息。<br />-StreamedResponse： 緩衝處理要求訊息和回應訊息資料流處理。<br /><br /> 預設為 Buffered。 此屬性的型別為 <xref:System.ServiceModel.TransferMode>。|  
 |unsafeConnectionNtlmAuthentication|布林值，指定是否已在伺服器啟用「不安全的連線共用」。 預設為 `false`。 如果已啟用，NTLM 驗證會在各 TCP 連線上執行一次。|  
 |useDefaultWebProxy|布林值，指定是否使用整部機器 Proxy 設定而非使用者特定設定。 預設值為 `true`。|  
