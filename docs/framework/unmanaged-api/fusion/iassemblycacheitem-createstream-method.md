@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8057406552525be19f8e6457de9faf841edc6e68
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3a0b3242e8ae29b9d21dc50d3ea0476967e9746f
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429497"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754491"
 ---
-# <a name="iassemblycacheitemcreatestream-method"></a><span data-ttu-id="86667-102">IAssemblyCacheItem::CreateStream 方法</span><span class="sxs-lookup"><span data-stu-id="86667-102">IAssemblyCacheItem::CreateStream Method</span></span>
-<span data-ttu-id="86667-103">建立具有指定的名稱和格式的資料流。</span><span class="sxs-lookup"><span data-stu-id="86667-103">Creates a stream with the specified name and format.</span></span>  
+# <a name="iassemblycacheitemcreatestream-method"></a><span data-ttu-id="e5f0c-102">IAssemblyCacheItem::CreateStream 方法</span><span class="sxs-lookup"><span data-stu-id="e5f0c-102">IAssemblyCacheItem::CreateStream Method</span></span>
+<span data-ttu-id="e5f0c-103">建立具有指定的名稱和格式的資料流。</span><span class="sxs-lookup"><span data-stu-id="e5f0c-103">Creates a stream with the specified name and format.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="86667-104">語法</span><span class="sxs-lookup"><span data-stu-id="86667-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e5f0c-104">語法</span><span class="sxs-lookup"><span data-stu-id="e5f0c-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateStream (  
@@ -40,31 +40,31 @@ HRESULT CreateStream (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="86667-105">參數</span><span class="sxs-lookup"><span data-stu-id="86667-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="e5f0c-105">參數</span><span class="sxs-lookup"><span data-stu-id="e5f0c-105">Parameters</span></span>  
  `dwFlags`  
- <span data-ttu-id="86667-106">[in]支援下列值： 旗標。</span><span class="sxs-lookup"><span data-stu-id="86667-106">[in] Flags defined in Fusion.idl.</span></span>  
+ <span data-ttu-id="e5f0c-106">[in]支援下列值： 旗標。</span><span class="sxs-lookup"><span data-stu-id="e5f0c-106">[in] Flags defined in Fusion.idl.</span></span>  
   
  `pszStreamName`  
- <span data-ttu-id="86667-107">[in]要建立之資料流名稱。</span><span class="sxs-lookup"><span data-stu-id="86667-107">[in] The name of the stream to be created.</span></span>  
+ <span data-ttu-id="e5f0c-107">[in]若要建立資料流的名稱。</span><span class="sxs-lookup"><span data-stu-id="e5f0c-107">[in] The name of the stream to be created.</span></span>  
   
  `dwFormat`  
- <span data-ttu-id="86667-108">[in]要進行資料流處理的檔案格式。</span><span class="sxs-lookup"><span data-stu-id="86667-108">[in] The format of the file to be streamed.</span></span>  
+ <span data-ttu-id="e5f0c-108">[in]若要串流處理檔案的格式。</span><span class="sxs-lookup"><span data-stu-id="e5f0c-108">[in] The format of the file to be streamed.</span></span>  
   
  `dwFormatFlags`  
- <span data-ttu-id="86667-109">[in]支援下列值： 格式特有的旗標。</span><span class="sxs-lookup"><span data-stu-id="86667-109">[in] Format-specific flags defined in Fusion.idl.</span></span>  
+ <span data-ttu-id="e5f0c-109">[in]支援下列值： 格式特有的旗標。</span><span class="sxs-lookup"><span data-stu-id="e5f0c-109">[in] Format-specific flags defined in Fusion.idl.</span></span>  
   
  `ppIStream`  
- <span data-ttu-id="86667-110">[out]傳回的位址指標[IStream](https://msdn.microsoft.com/library/aa380034.aspx)執行個體。</span><span class="sxs-lookup"><span data-stu-id="86667-110">[out] A pointer to the address of the returned [IStream](https://msdn.microsoft.com/library/aa380034.aspx) instance.</span></span>  
+ <span data-ttu-id="e5f0c-110">[out]傳回的位址指標[IStream](/windows/desktop/api/objidl/nn-objidl-istream)執行個體。</span><span class="sxs-lookup"><span data-stu-id="e5f0c-110">[out] A pointer to the address of the returned [IStream](/windows/desktop/api/objidl/nn-objidl-istream) instance.</span></span>  
   
  `puliMaxSize`  
- <span data-ttu-id="86667-111">[in，選用]所參考的資料流的大小上限`ppIStream`。</span><span class="sxs-lookup"><span data-stu-id="86667-111">[in, optional] The maximum size of the stream referenced by `ppIStream`.</span></span>  
+ <span data-ttu-id="e5f0c-111">[in，選用]所參考的資料流的大小上限`ppIStream`。</span><span class="sxs-lookup"><span data-stu-id="e5f0c-111">[in, optional] The maximum size of the stream referenced by `ppIStream`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="86667-112">需求</span><span class="sxs-lookup"><span data-stu-id="86667-112">Requirements</span></span>  
- <span data-ttu-id="86667-113">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="86667-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e5f0c-112">需求</span><span class="sxs-lookup"><span data-stu-id="e5f0c-112">Requirements</span></span>  
+ <span data-ttu-id="e5f0c-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e5f0c-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="86667-114">**標頭：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="86667-114">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="e5f0c-114">**標頭：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="e5f0c-114">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="86667-115">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="86667-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e5f0c-115">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e5f0c-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="86667-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="86667-116">See Also</span></span>  
- [<span data-ttu-id="86667-117">IAssemblyCacheItem 介面</span><span class="sxs-lookup"><span data-stu-id="86667-117">IAssemblyCacheItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
+## <a name="see-also"></a><span data-ttu-id="e5f0c-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e5f0c-116">See Also</span></span>  
+ [<span data-ttu-id="e5f0c-117">IAssemblyCacheItem 介面</span><span class="sxs-lookup"><span data-stu-id="e5f0c-117">IAssemblyCacheItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
