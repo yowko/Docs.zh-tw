@@ -11,12 +11,12 @@ ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 8d2e224f710a1f344623440f29c2c6e0e9bd661e
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 5fba4bfa14642092dbb7c0153bcd92160a62b12b
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37072510"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754507"
 ---
 # <a name="ltproxygt-element-network-settings"></a>&lt;proxy&gt;項目 （網路設定）
 定義 Proxy 伺服器。  
@@ -46,9 +46,9 @@ ms.locfileid: "37072510"
 |**屬性**|**描述**|  
 |-------------------|---------------------|  
 |`autoDetect`|指定是否自動偵測 proxy。 預設值是 `unspecified`。|  
-|`bypassonlocal`|指定是否略過本機資源的 proxy。 本機資源包括本機伺服器 (`http://localhost`， `http://loopback`，或`http://127.0.0.1`) 以及沒有句號的 URI (`http://webserver`)。 預設值是 `unspecified`。|  
+|`bypassonlocal`|指定是否略過本機資源的 proxy。 本機資源包含在本機伺服器 (`http://localhost`， `http://loopback`，或`http://127.0.0.1`) 和不含點的 URI (`http://webserver`)。 預設值是 `unspecified`。|  
 |`proxyaddress`|指定 proxy 使用的 URI。|  
-|`scriptLocation`|指定組態指令碼的位置。|  
+|`scriptLocation`|指定的組態指令碼的位置。 請勿使用`bypassonlocal`具有此屬性的屬性。 |  
 |`usesystemdefault`|指定是否要使用 Internet Explorer proxy 設定。 如果設定為`true`，後續的屬性會覆寫 Internet Explorer proxy 設定。 預設值是 `unspecified`。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -67,17 +67,17 @@ ms.locfileid: "37072510"
   
  值`proxyaddress`屬性應該是語式正確的 Uniform Resource Indicator (URI)。  
   
- `scriptLocation`屬性會自動偵測 proxy 設定指令碼的參考。 <xref:System.Net.WebProxy>類別會嘗試找出在設定指令碼 (通常是具名 Wpad.dat) 時，當**使用自動設定指令碼**Internet Explorer 中選取選項。  
+ `scriptLocation`屬性會自動偵測 proxy 設定指令碼的參考。 <xref:System.Net.WebProxy>類別會嘗試找出組態指令碼 (通常是具名 Wpad.dat) 時，當**使用自動設定指令碼**Internet Explorer 中選取選項。 如果`bypassonlocal`設定為任何值，`scriptLocation`會被忽略。
   
  使用`usesystemdefault`要移轉至 2.0 版的.NET Framework 1.1 版應用程式的屬性。  
   
- 如果擲回例外狀況`proxyaddress`屬性會指定無效的預設 proxy。 例外狀況的 <xref:System.Exception.InnerException%2A> 屬性應該會有此錯誤的根本原因之詳細資訊。  
+ 如果將會擲回例外狀況`proxyaddress`屬性會指定無效的預設 proxy。 例外狀況的 <xref:System.Exception.InnerException%2A> 屬性應該會有此錯誤的根本原因之詳細資訊。  
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用來自 Internet Explorer proxy 的預設值，指定 proxy 位址，並略過本機存取的 proxy。  
+ 下列範例會使用來自 Internet Explorer proxy 的預設值，指定 proxy 位址，並會略過本機存取的 proxy。  
   
 ```xml  
 <configuration>  

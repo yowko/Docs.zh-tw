@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 103e81dfa0e455157cfce5914b711347b15b578d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 94171b0708c97eb7510e916e451ed03645d706f3
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460579"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754614"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle 函式
 傳回唯一的控制代碼識別屬性。
@@ -43,23 +43,23 @@ HRESULT GetPropertyHandle (
 ## <a name="parameters"></a>參數
 
 `vFunc`  
-[in]未使用這個參數。
+[in]未使用此參數。
 
 `ptr`  
-[in]指標[IWbemObjectAccess](https://msdn.microsoft.com/library/aa391770(v=vs.85).aspx)執行個體。
+[in]指標[IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess)執行個體。
 
 `wszPropertyName`  
 [in]包含屬性名稱的 UTF16 編碼 characaters null 結尾字串。   
 
 `pType`  
-[out]指標[ `CIMTYPE` ](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx)列舉的成員，表示屬性的 CIM 類型。
+[out]指標[ `CIMTYPE` ](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx)列舉的成員，表示屬性的 CIM 型別。
 
 `pHandle`   
 [out]包含屬性控制代碼的整數指標。
 
 ## <a name="return-value"></a>傳回值
 
-這個函式傳回下列值會定義在*WbemCli.h*標頭檔，或者您可以定義它們以常數的形式在程式碼中：
+此函式所傳回的下列值中定義*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼：
 
 |常數  |值  |描述  |
 |---------|---------|---------|
@@ -70,18 +70,18 @@ HRESULT GetPropertyHandle (
   
 ## <a name="remarks"></a>備註
 
-此函式會包裝呼叫[IWbemClassObject::GetPropertyHandle](https://msdn.microsoft.com/library/aa391771(v=vs.85).aspx)方法。
+此函式會包裝在呼叫[IWbemClassObject::GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle)方法。
 
-您可以使用此控制代碼來使用時，識別屬性[IWbemObjectAccess](https://msdn.microsoft.com/library/aa391770(v=vs.85).aspx)方法來讀取或寫入屬性值。
+您可以使用此控制代碼識別屬性使用時[IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess)方法來讀取或寫入屬性值。
 
-控制代碼可以擷取屬性的所有資料類型以外`CIM_OBJECT`和`CIM_ARRAY`。 傳回類別的所有執行個體的控制代碼的工作。
+控制代碼可以擷取所有資料類型的屬性以外`CIM_OBJECT`和`CIM_ARRAY`。 傳回類別所有執行個體之間的控制代碼的工作。
 
 ## <a name="requirements"></a>需求  
-**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.idl  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

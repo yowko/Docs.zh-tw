@@ -3,11 +3,11 @@ title: 如何：建立包含命名空間的文件 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cc5b0d4d-360c-4ada-94fa-2d2916e989be
 ms.openlocfilehash: 204d8a9cbb6ce47c6334c7309d27910c75b90ae0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643074"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754169"
 ---
 # <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>如何：建立包含命名空間的文件 (LINQ to XML) (Visual Basic)
 本主題顯示如何在 Visual Basic 中建立具有命名空間 (Namespace) 的文件。  
@@ -18,7 +18,7 @@ ms.locfileid: "33643074"
   
  您可以使用 `Imports` 關鍵字，同時定義預設命名空間與具有前置詞的命名空間。  
   
- 如需詳細資訊，請參閱[在 Visual Basic 中的 XML 常值簡介](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 在 Visual Basic 中的 XML 常值簡介](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md)。  
   
  請注意，XML 預設命名空間僅適用於項目，而不適用於屬性。 根據預設，屬性一定會在沒有命名空間中。 不過，您可以使用命名空間前置詞，將屬性放到命名空間中。  
   

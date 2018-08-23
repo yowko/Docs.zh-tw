@@ -3,10 +3,11 @@ title: LINQ to XML 程式設計概觀 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a7c07d0a-1fae-4610-ae51-56dd7075cc14
 ms.openlocfilehash: 18e32a855ebaebf8c5adf852be7f746894018132
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: a474397fd4de822f0d878d86d907e49763872b0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "42754186"
 ---
 # <a name="linq-to-xml-programming-overview-visual-basic"></a>LINQ to XML 程式設計概觀 (Visual Basic)
 這些主題提供有關 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 類別的高階概觀資訊，以及關於其中三個最重要類別的詳細資訊。  
@@ -15,7 +16,7 @@ ms.lasthandoff: 05/04/2018
   
 |主題|描述|  
 |-----------|-----------------|  
-|[函數式與程序性程式設計 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-vs-procedural-programming-linq-to-xml.md)|提供兩個撰寫 LINQ to XML 應用程式之準則方法的高階檢視。|  
+|[函數式與程序性程式設計的比較 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-vs-procedural-programming-linq-to-xml.md)|提供兩個撰寫 LINQ to XML 應用程式之準則方法的高階檢視。|  
 |[LINQ to XML 類別概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-classes-overview.md)|提供 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 類別的概觀。|  
 |[XElement 類別概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xelement-class-overview.md)|說明代表 XML 項目的 <xref:System.Xml.Linq.XElement> 類別。 <xref:System.Xml.Linq.XElement> 是 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 類別階層中的其中一個基礎類別。|  
 |[XAttribute 類別概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xattribute-class-overview.md)|說明代表 XML 屬性的 <xref:System.Xml.Linq.XAttribute> 類別。|  

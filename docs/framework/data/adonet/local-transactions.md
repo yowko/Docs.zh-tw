@@ -5,31 +5,31 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: 394059481b5081586904d2d5ea5d4a3d3e0df42b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 40ba9085905869ca5d3d8f39a3d7ce11639b1504
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758889"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754544"
 ---
 # <a name="local-transactions"></a>本機異動
-當您要將多個工作繫結在一起，以讓它們當做單一的工作單位來執行時，便會使用 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中的交易。 例如，想像應用程式正在執行兩項工作。 首先，它會更新包含訂單資訊的資料表。 然後會更新包含存貨資訊的資料表，將訂購項目記入借方。 如果其中任何一項失敗，然後這兩個更新會回復。  
+當您要將多個工作繫結在一起，以讓它們當做單一的工作單位來執行時，便會使用 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中的交易。 例如，想像應用程式正在執行兩項工作。 首先，它會更新包含訂單資訊的資料表。 然後會更新包含存貨資訊的資料表，將訂購項目記入借方。 如果任一個工作失敗，則這兩個更新會回復。  
   
 ## <a name="determining-the-transaction-type"></a>決定異動類型  
- 交易是被視為本機交易時它是單一階段交易並直接處理資料庫。 交易是被視為分散式的交易時，它由交易監視器進行協調，並使用保全機制 （如兩階段認可） 進行異動解析。  
+ 交易是被視為本機交易時它是單一階段交易，並直接處理資料庫。 交易是被視為是分散式的交易，它由交易監視器協調，並使用保全機制 （如兩階段交易認可），進行交易解析時。  
   
  每個 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者都有它自己的 `Transaction` 物件，以執行本機交易。 如果您需要在 SQL Server 資料庫中執行交易，請選擇 <xref:System.Data.SqlClient> 交易。 若為 Oracle 交易，請使用 <xref:System.Data.OracleClient> 提供者。 此外，還有<xref:System.Data.Common.DbTransaction>適用於撰寫需要交易的提供者獨立程式碼的類別。  
   
 > [!NOTE]
->  在伺服器上執行異動是最有效率的。 如果您使用的 SQL Server 資料庫大量使用明確的交易，請考慮使用 Transact-SQL BEGIN TRANSACTION 陳述式，將它們寫入為預存程序。 如需執行伺服器端交易的詳細資訊，請參閱《SQL Server 線上叢書》。  
+> 在伺服器上執行異動是最有效率的。 如果您使用的 SQL Server 資料庫大量使用明確的異動，請考慮使用 Transact-SQL BEGIN TRANSACTION 陳述式，將它們寫入為預存程序。
   
-## <a name="performing-a-transaction-using-a-single-connection"></a>使用單一連接執行交易  
+## <a name="performing-a-transaction-using-a-single-connection"></a>使用單一連接執行異動  
  在 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中，您會使用 `Connection` 物件控制交易。 您可使用 `BeginTransaction` 方法來起始本機交易。 開始交易之後，您可使用 `Transaction` 物件的 `Command` 屬性，在該交易中登記命令。 然後，您可根據交易元件的成敗，來認可或復原對資料來源所做的修改。  
   
 > [!NOTE]
 >  `EnlistDistributedTransaction` 方法不可用於本機交易。  
   
- 交易的範圍僅限於連接。 下列範例執行由 `try` 區塊中的兩個單獨命令所組成的明確交易。 命令執行時針對 Production.ScrapReason 資料表的 INSERT 陳述式在 AdventureWorks SQL Server 範例資料庫中，也就是已認可，會擲回任何例外狀況。 如果擲回例外狀況，則 `catch` 區塊中的程式碼便會復原交易。 如果交易在完成之前遭到中止或連接關閉，則會自動復原該交易。  
+ 交易的範圍僅限於連接。 下列範例執行由 `try` 區塊中的兩個單獨命令所組成的明確交易。 命令執行針對的 Production.ScrapReason 資料表的 INSERT 陳述式在 AdventureWorks SQL Server 範例資料庫中，也就是已認可，如果擲不回任何例外狀況。 如果擲回例外狀況，則 `catch` 區塊中的程式碼便會復原交易。 如果交易在完成之前遭到中止或連接關閉，則會自動復原該交易。  
   
 ## <a name="example"></a>範例  
  請遵循下列步驟來執行交易。  

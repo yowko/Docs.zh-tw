@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ea151417a1cb53104ec29fff1e76e21f82ec9bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6dfb0b404413351761d269c800be19e75acfb41f
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431639"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754569"
 ---
 # <a name="getassemblyidentityfromfile-function"></a>GetAssemblyIdentityFromFile 函式
-取得指標`IUnknown`物件具有指定`IID`中位於指定的檔案路徑的組件。  
+取得指標`IUnknown`使用指定的物件`IID`中指定的檔案路徑中的組件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,12 +49,12 @@ HRESULT GetAssemblyIdentityFromFile (
  [out]傳回的介面指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Fusion.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- <<!--zzxref:IUnknown --> `IUnknown`>  
+ [IUnknown](/cpp/atl/iunknown)  
  [融合全域靜態函式](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

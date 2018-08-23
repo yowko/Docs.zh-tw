@@ -1,15 +1,15 @@
 ---
-title: 如何： 尋找子項目 (XPATH-LINQ to XML) 的位置為基礎 (Visual Basic)
+title: 如何： 尋找子項目根據位置 (XPATH-LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6831e1db-5e97-444f-a7a1-d0a87104b005
 ms.openlocfilehash: 9f18da12786b4c44dc21e54c8d5020f49ef9ecb6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641036"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754120"
 ---
-# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-visual-basic"></a>如何： 尋找子項目 (XPATH-LINQ to XML) 的位置為基礎 (Visual Basic)
+# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-visual-basic"></a>如何： 尋找子項目根據位置 (XPATH-LINQ to XML) (Visual Basic)
 有時候您會想要根據項目的位置尋找這些項目。 您可能想要尋找第二個項目，或者想要尋找第三到第五個項目。  
   
  XPath 運算式為：  

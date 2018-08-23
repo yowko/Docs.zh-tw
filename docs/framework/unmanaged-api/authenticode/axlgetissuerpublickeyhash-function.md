@@ -10,12 +10,12 @@ api_type:
 ms.assetid: fb626b41-b888-4625-84c3-2c02b5e3866f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b197aa539e60a9dbcee55cf190c44b45da3a5fb4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 408b71bf38427d12418e05f8b509fe841bc95ef1
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402011"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754528"
 ---
 # <a name="axlgetissuerpublickeyhash-function"></a>_AxlGetIssuerPublicKeyHash 函式
 擷取公開金鑰的 SHA-1 雜湊，此公開金鑰與用於簽署特定憑證的私密金鑰相關。  
@@ -31,7 +31,7 @@ HRESULT _AxlGetIssuerPublicKeyHash (
   
 #### <a name="parameters"></a>參數  
  `pChainContext`  
- [in] CSP 公開金鑰 Blob。 請參閱[CRYPTOAPI_BLOB](http://msdn.microsoft.com/library/windows/desktop/aa380238.aspx)結構。  
+ [in] CSP 公開金鑰 Blob。 請參閱[CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob)結構。  
   
  `ppwszPublicKeyHash`  
  [out] WCHAR * (要接收十六進位編碼的公開金鑰語彙基元) 的指標。  

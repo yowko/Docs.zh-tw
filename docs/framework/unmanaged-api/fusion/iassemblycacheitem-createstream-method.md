@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8057406552525be19f8e6457de9faf841edc6e68
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3a0b3242e8ae29b9d21dc50d3ea0476967e9746f
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429497"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754491"
 ---
 # <a name="iassemblycacheitemcreatestream-method"></a>IAssemblyCacheItem::CreateStream 方法
 建立具有指定的名稱和格式的資料流。  
@@ -45,26 +45,26 @@ HRESULT CreateStream (
  [in]支援下列值： 旗標。  
   
  `pszStreamName`  
- [in]要建立之資料流名稱。  
+ [in]若要建立資料流的名稱。  
   
  `dwFormat`  
- [in]要進行資料流處理的檔案格式。  
+ [in]若要串流處理檔案的格式。  
   
  `dwFormatFlags`  
  [in]支援下列值： 格式特有的旗標。  
   
  `ppIStream`  
- [out]傳回的位址指標[IStream](https://msdn.microsoft.com/library/aa380034.aspx)執行個體。  
+ [out]傳回的位址指標[IStream](/windows/desktop/api/objidl/nn-objidl-istream)執行個體。  
   
  `puliMaxSize`  
  [in，選用]所參考的資料流的大小上限`ppIStream`。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Fusion.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [IAssemblyCacheItem 介面](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
