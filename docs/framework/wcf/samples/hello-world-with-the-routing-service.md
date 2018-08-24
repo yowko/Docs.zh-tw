@@ -2,15 +2,15 @@
 title: 路由服務的 Hello World
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: 881636097cf342de09164804c6df6acfbcd97c45
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: d875ab5471a7c1ff50aa0501991a7af0eaf0bb5f
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33810248"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42792392"
 ---
 # <a name="hello-world-with-the-routing-service"></a>路由服務的 Hello World
-這個範例會示範 Windows Communication Foundation (WCF) 路由服務。 路由服務是 WCF 元件，以簡化應用程式中加入內容架構的路由器。 此範例會調整標準 WCF 計算機範例，以便使用路由服務進行通訊。 在此範例中，計算機用戶端設定為傳送訊息到路由器所公開的端點。 路由服務會設定為接受傳送給它的所有訊息，並將其轉送到對應於計算機服務的端點。 因此，傳送自用戶端的訊息會由路由器接收，然後再重新路由至實際的計算機服務。 來自計算機服務的訊息會傳送回路由器，接著再將其傳遞回計算機用戶端。  
+這個範例會示範 Windows Communication Foundation (WCF) 路由服務。 路由服務是一種 WCF 元件，可讓您更輕鬆地在您的應用程式中加入內容為基礎的路由器。 此範例會調整標準 WCF 計算機範例，以便使用路由服務進行通訊。 在此範例中，計算機用戶端設定為傳送訊息到路由器所公開的端點。 路由服務會設定為接受傳送給它的所有訊息，並將其轉送到對應於計算機服務的端點。 因此，傳送自用戶端的訊息會由路由器接收，然後再重新路由至實際的計算機服務。 來自計算機服務的訊息會傳送回路由器，接著再將其傳遞回計算機用戶端。  
   
 ### <a name="to-use-this-sample"></a>若要使用這個範例  
   
@@ -20,8 +20,8 @@ ms.locfileid: "33810248"
   
     > [!NOTE]
     >  如果按下 F5，計算機用戶端會自動啟動。 如果您按下 CTRL+SHIFT+B (建置)，則必須自行啟動下列應用程式。  
-    >   
-    >  1.  計算機用戶端 (./CalculatorClient/bin/client.exe)  
+    >  
+    > 1.  計算機用戶端 (./CalculatorClient/bin/client.exe)  
     > 2.  計算機服務 (./CalculatorService/bin/service.exe)  
     > 3.  路由服務 (./RoutingService/bin/RoutingService.exe)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "33810248"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\HelloRoutingService`  
   
