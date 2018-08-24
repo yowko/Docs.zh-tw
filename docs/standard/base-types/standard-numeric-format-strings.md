@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f471d62ca31096b955dd6f703c70faabe91cb55b
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: f20db5cfb13f788ae0f8670f0d1c3b221db3e43b
+ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "36208150"
+ms.lasthandoff: 08/15/2018
+ms.locfileid: "42753618"
 ---
 # <a name="standard-numeric-format-strings"></a>標準數值格式字串
 
@@ -55,7 +55,7 @@ ms.locfileid: "36208150"
 |----------------------|----------|-----------------|--------------|  
 |"C" 或 "c"|貨幣|結果：貨幣值。<br /><br /> 支援的類型：所有數字類型。<br /><br /> 有效位數規範：小數位數的數目。<br /><br /> 預設有效位數規範：由 <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType> 定義。<br /><br /> 詳細資訊：[貨幣 ("C") 格式規範](#CFormatString)。|123.456 ("C", en-US) -> $123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 ("C3", en-US) -> ($123.456)<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|  
 |"D" 或 "d"|Decimal|結果：帶選擇性負號的整數位數。<br /><br /> 支援的類型：只有整數類型。<br /><br /> 精確度規範：最少位數。<br /><br /> 預設精確度規範：必要的最少位數。<br /><br /> 詳細資訊：[十進位 ("D") 格式規範](#DFormatString)。|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|  
-|"E" 或 "e"|指數 (科學記號)|結果：指數標記法。<br /><br /> 支援的類型：所有數字類型。<br /><br /> 有效位數規範：小數位數的數目。<br /><br /> 預設精確度規範：6。<br /><br /> 詳細資訊：[指數 ("E") 格式規範](#EFormatString)。|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1,052033e+003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr_FR) -> -1,05E+003|  
+|"E" 或 "e"|指數 (科學記號)|結果：指數標記法。<br /><br /> 支援的類型：所有數字類型。<br /><br /> 有效位數規範：小數位數的數目。<br /><br /> 預設精確度規範：6。<br /><br /> 詳細資訊：[指數 ("E") 格式規範](#EFormatString)。|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1,052033e+003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr-FR) -> -1,05E+003|  
 |"F" 或 "f"|固定點|結果：帶選擇性負號的整數和小數位數。<br /><br /> 支援的類型：所有數字類型。<br /><br /> 有效位數規範：小數位數的數目。<br /><br /> 預設有效位數規範：由 <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> 定義。<br /><br /> 詳細資訊：[固定點 ("F") 格式規範](#FFormatString)。|1234.567 ("F", en-US) -> 1234.57<br /><br /> 1234.567 ("F", de-DE) -> 1234,57<br /><br /> 1234 ("F1", en-US) -> 1234.0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234.56 ("F4", en-US) -> -1234.5600<br /><br /> -1234.56 ("F4", de-DE) -> -1234,5600|  
 |"G" 或 "g"|一般|結果：固定點和科學標記法兩者中更精簡的一個。<br /><br /> 支援的類型：所有數字類型。<br /><br /> 精確度規範：有效位數。<br /><br /> 預設精確度規範：因數字類型而異。<br /><br /> 詳細資訊：[一般 ("G") 格式規範](#GFormatString)。|-123.456 ("G", en-US) -> -123.456<br /><br /> -123.456 ("G", sv-SE) -> -123,456<br /><br /> 123.4546 ("G4", en-US) -> 123.5<br /><br /> 123.4546 ("G4", sv-SE) -> 123,5<br /><br /> -1.234567890e-25 ("G", en-US) -> -1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25|  
 |"N" 或 "n"|number|結果：帶選擇性負號的整數和小數位數、群組分隔符號，以及小數分隔符號。<br /><br /> 支援的類型：所有數字類型。<br /><br /> 精確度規範：想要的小數位數。<br /><br /> 預設有效位數規範：由 <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> 定義。<br /><br /> 詳細資訊：[數值 ("N") 格式規範](#NFormatString)。|1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|  
