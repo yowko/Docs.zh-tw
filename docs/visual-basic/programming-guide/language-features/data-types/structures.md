@@ -9,19 +9,19 @@ helpviewer_keywords:
 - user-defined data types [Visual Basic], about user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: 55e86462-5e99-4d33-8018-6d097ca491b2
-ms.openlocfilehash: 1e245cb562a3112107ee805cf05c10b0374d8831
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ebfc82665bb18d96c83db8f29a6c206a9a71fd7f
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647256"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925782"
 ---
 # <a name="structures-visual-basic"></a>結構 (Visual Basic)
-A*結構*為一般化的使用者定義型別 (UDT) 由舊版 Visual Basic 的支援。 欄位中，除了結構可以公開屬性、 方法和事件。 結構可以實作一個或多個介面，您可以宣告為每個欄位個別的存取層級。  
+A*結構*為一般化的使用者定義型別 (UDT) 支援舊版的 Visual Basic。 除了欄位之外，結構可以公開屬性、 方法和事件。 結構可以實作一或多個介面，以及您可以宣告個別的存取層級，每個欄位。  
   
- 您可以結合以建立結構的不同類型的資料項目。 結構會將一或多個*元素*與彼此、 與結構本身。 當您宣告結構時，它會變成*複合資料類型*，而且您可以宣告該類型的變數。  
+ 您可以結合以建立結構的不同類型的資料項目。 結構會將一或多個*項目*彼此及與結構本身。 當您宣告結構時，它會變成*複合資料型別*，而您可以宣告該類型的變數。  
   
- 當您想相關的資訊片段的單一變數時，結構會很有用。 比方說，您可以將員工的名稱、 電話分機號碼和薪資放在一起。 您可以使用數個變數，這項資訊，或您無法定義的結構，並將它用於單一員工變數。 當您有許多員工，因此變數的許多執行個體時，此結構的優點就顯而易見。  
+ 當您想要的數個相關的資訊片段的單一變數時，結構會很有用。 例如，您可能要保持員工的名稱、 電話分機號碼和薪資。 您可以使用數個變數，這項資訊，或者您可以定義結構，並使用它之單一員工變數。 當您有許多員工，且因此變數的許多執行個體時，結構的優點變得顯而易見。  
   
 ## <a name="in-this-section"></a>本節內容  
  [如何：宣告結構](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
@@ -40,5 +40,5 @@ A*結構*為一般化的使用者定義型別 (UDT) 由舊版 Visual Basic 的�
  [資料類型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
  介紹 Visual Basic 資料類型，並說明如何使用它們。  
   
- [資料類型](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [資料類型](../../../../visual-basic/language-reference/data-types/index.md)  
  列出 Visual Basic 所提供的基本資料類型。

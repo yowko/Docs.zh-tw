@@ -38,18 +38,18 @@ helpviewer_keywords:
 ms.assetid: 6353cb9b-6ee4-4af6-a5a8-88ce39f90cc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9262c57c5773b947f18fd9e8cf9087bb8e02de7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31dc703598fa6d92b3f312b2b5f0bf5fadab9c04
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653503"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42911818"
 ---
-# <a name="type-characters-visual-basic"></a>輸入的字元 (Visual Basic)
+# <a name="type-characters-visual-basic"></a>輸入字元 (Visual Basic)
 
-除了宣告陳述式中指定的資料類型，您可以強制使用一些程式設計項目的資料型別*類型字元*。 型別字元必須緊接的項目，其中沒有任何種類的中介字元。
+除了宣告陳述式中指定的資料類型，您可以強制使用一些程式設計項目的資料型別*型別字元*。 類型字元必須緊接的項目，不可有任何類型的任何中介字元。
 
-類型字元不是項目的名稱的一部分。 型別字元定義的項目可以參考不含類型字元。
+類型字元不是項目的名稱的一部分。 定義使用類型字元的項目可以參考不含類型字元。
 
 ## <a name="identifier-type-characters"></a>識別項類型字元
 
@@ -64,9 +64,9 @@ Visual Basic 提供的一組*識別項類型字元*您可以使用在宣告中�
 |`#`|`Double`|`Dim X#`|  
 |`$`|`String`|`Dim V$ = "Secret"`|  
   
- 存在任何識別項類型字元`Boolean`， `Byte`， `Char`， `Date`， `Object`， `SByte`， `Short`， `UInteger`， `ULong`，或`UShort`資料型別，或任何複合資料類型，例如陣列或結構。
+ 沒有識別項類型字元存在`Boolean`， `Byte`， `Char`， `Date`， `Object`， `SByte`， `Short`， `UInteger`， `ULong`，或`UShort`資料類型，或任何複合資料類型，例如陣列或結構。
 
-在某些情況下，您可以將附加`$`字元為 Visual Basic 函式，例如`Left$`而不是`Left`，以取得傳回的值類型為`String`。
+在某些情況下，您可以將附加`$`字元，是 Visual Basic 函式，例如`Left$`而不是`Left`，以取得傳回的值類型為`String`。
 
 在所有情況下，識別項類型字元必須緊接的識別項名稱。
 
@@ -76,19 +76,19 @@ A*常值*是特定值的資料類型的文字表示法。
 
 ### <a name="default-literal-types"></a>預設常值類型
 
-常值的形式通常出現在您的程式碼會判斷其資料類型。 下表顯示這些預設型別。  
+常值的形式通常出現在您的程式碼會判斷其資料型別。 下表顯示這些預設型別。  
   
 |文字格式的常值|預設資料類型|範例|  
 |-----------------------------|-----------------------|-------------|  
 |數字，沒有小數部分|`Integer`|`2147483647`|  
 |數字，沒有小數部分，針對太大 `Integer`|`Long`|`2147483648`|  
-|數字，小數部分|`Double`|`1.2`|  
+|數字的小數點後的組件|`Double`|`1.2`|  
 |以雙引號括住|`String`|`"A"`|  
 |數字符號括住|`Date`|`#5/17/1993 9:32 AM#`|  
 
 ### <a name="forced-literal-types"></a>強制的常值類型
 
-Visual Basic 提供的一組*常值類型字元*，您可以使用強制常之外的資料類型的形式表示。 您可以將字元附加到常值的結尾。 下表顯示可用的常值類型字元，與使用方式的範例。
+Visual Basic 提供的一組*常值類型字元*，可用來強制常之外的資料類型的形式表示。 您可以將字元附加到常值的結尾。 下表顯示可用的常值類型字元，與使用方式的範例。
   
 |常值類型字元|資料類型|範例|  
 |----------------------------|---------------|-------------|  
@@ -103,38 +103,38 @@ Visual Basic 提供的一組*常值類型字元*，您可以使用強制常之�
 |`UL`|`ULong`|`N = 347UL`|
 |`C`|`Char`|`Q = "."C`|
 
-沒有常值類型字元存在`Boolean`， `Byte`， `Date`， `Object`， `SByte`，或`String`資料型別，或任何複合資料類型，例如陣列或結構。
+任何常值類型字元存在`Boolean`， `Byte`， `Date`， `Object`， `SByte`，或`String`資料類型，或任何的複合資料類型，例如陣列或結構。
 
-常值也可以使用識別項類型字元 (`%`， `&`， `@`， `!`， `#`， `$`)，可能是變數、 常數和運算式。 不過，常值類型字元 (`S`， `I`， `L`， `D`， `F`， `R`， `C`) 可以僅能搭配常值。
+常值也可以使用識別項類型字元 (`%`， `&`， `@`， `!`， `#`， `$`)，如可以變數、 常數和運算式。 不過，常值類型字元 (`S`， `I`， `L`， `D`， `F`， `R`， `C`) 可以僅能搭配常值。
 
 在所有情況下，常值類型字元必須緊接的常值。
 
-## <a name="hexadecimal-binary-and-octal-literals"></a>十六進位、 二進位以及八進位常值
+## <a name="hexadecimal-binary-and-octal-literals"></a>十六進位、 二進位以及八進位的常值
 
-編譯器通常會解譯為十進位 (基底 10) 數字系統中的常值的整數。 您也可以定義一個整數常值的十六進位 (基底 16) 數字`&H`前置詞的二進位 (基底 2) 數字`&B`前置詞，以及八進位 (基底 8) 編號，以`&O`前置詞。 請依照下列前置詞的數字必須適用於數字系統。 下表將說明這點。  
+通常，編譯器會解譯為十進位 (基底 10) 數字系統中的常值的整數。 您也可以定義的常值整數的十六進位 (基底 16) 數字`&H`前置詞的二進位 (基底 2) 數字`&B`前置詞，以及八進位 (基底 8) 編號，以`&O`前置詞。 請依照下列前置詞的數字必須適用於數字系統。 下表說明這點。  
   
 |數字基底|前置詞|有效的數字值|範例|
 |-----------------|------------|------------------------|-------------|
 |十六進位 (基底 16)|`&H`|0-9 和 A-F|`&HFFFF`|
-|二進位 (基底 2)|`&B`|0-1|`&B01111100`|
+|二進位檔 (基底 2)|`&B`|0-1|`&B01111100`|
 |八進位 (基底 8)|`&O`|0-7|`&O77`|
 
-從 Visual Basic 2017 開始，您可以使用底線字元 (`_`) 做為群組分隔符號，來增強整數常值的可讀性。 下列範例會使用`_`成 8 位元群組分組的二進位常值的字元：
+從 Visual Basic 2017 開始，您可以使用底線字元 (`_`) 做為群組分隔符號，以提升的整數常值的可讀性。 下列範例會使用`_`群 8 位元群組中的二進位常值的字元：
 
 ```vb
 Dim number As Integer = &B00100010_11000101_11001111_11001101
 ```
 
-您可以遵循前置的常值與常值類型字元。 下列範例顯示這點。
+您可以依照前置的常值與常值類型字元。 下列範例會示範這。
 
 ```vb
 Dim counter As Short = &H8000S
 Dim flags As UShort = &H8000US
 ```
 
-在上述範例中，`counter`的十進位值為-32768，和`flags`具有 32768 的十進位值。
+在上述範例中，`counter`具有十進位值，介於-32768 和`flags`32768 的十進位值。
 
-從 Visual Basic 15.5 開始，您也可以使用底線字元 (`_`) 做為前置詞和十六進位、 二進位或八進位的數字之間的前置分隔符號。 例如: 
+從 Visual Basic 15.5 開始，您也可以使用底線字元 (`_`) 作為前置分隔符號之間的前置詞和十六進位、 二進位或八進位數字。 例如: 
 
 ```vb
 Dim number As Integer = &H_C305_F860
@@ -147,7 +147,7 @@ Dim number As Integer = &H_C305_F860
  [資料類型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
  [基礎資料類型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
  [值類型和參考類型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [在 Visual Basic 中的型別轉換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+ [在 Visual Basic 中的類型轉換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
  [資料類型的疑難排解](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
  [變數宣告](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [資料類型](../../../../visual-basic/language-reference/data-types/data-type-summary.md)
+ [資料類型](../../../../visual-basic/language-reference/data-types/index.md)

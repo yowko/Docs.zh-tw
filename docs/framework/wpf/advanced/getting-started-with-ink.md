@@ -1,84 +1,116 @@
 ---
-title: 筆墨入門
-ms.date: 03/30/2017
+title: 在 Visual Studio 中的 WPF 應用程式中建立 InkCanvas
+ms.date: 08/15/2018
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - procedural code in lieu of XAML [WPF]
-- gradient brush [WPF], animating colors of
 - XAML [WPF], procedural code in lieu of
-- animation [WPF], gradient brush colors
-- brushes [WPF], animating colors of
+- InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: 9a1b53d0513eeef377fe8e012a8d5d7ea3f8a984
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 600d8528125606c6e1af5b031e2fc31aabb79206
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546233"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925040"
 ---
-# <a name="getting-started-with-ink"></a>筆墨入門
-數位筆跡併入您的應用程式是比以往更為容易。 從 COM 和 Windows Form 的方法達到完整地整合到程式設計必然發展筆墨[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 您不需要安裝個別的 Sdk 或執行階段程式庫。  
-  
-## <a name="prerequisites"></a>必要條件  
- 若要使用下列的範例，您必須先安裝 Microsoft Visual Studio 2005 和[!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]。 您也應該了解如何撰寫適用於 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的應用程式。 如需開始使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，請參閱[逐步解說： 第一個 WPF 桌面應用程式](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
-  
-## <a name="quick-start"></a>快速入門  
- 本節可協助您撰寫簡單[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]收集筆墨的應用程式。  
-  
- 如果您尚未這樣做，請安裝 Microsoft Visual Studio 2005 和[!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)]。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式通常必須經過編譯，您可以檢視它們，即使它們是完全組成[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 不過，[!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)]包含應用程式，XamlPad，設計來加速實作的處理序[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-基礎 UI。 若要檢視和修補這份文件中的前幾個範例，您可以使用該應用程式。 建立的程序編譯的應用程式從[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]涵蓋在本文件稍後。  
-  
- 若要啟動 XAMLPad，按一下 **啟動**功能表上，指向**所有程式**，指向**Microsoft Windows SDK**，指向**工具**，然後按一下**XAMLPad**。 在 [轉譯] 窗格中，XAMLPad 會呈現撰寫程式碼窗格中的 XAML 程式碼。 您可以編輯 XAML 程式碼，所做的變更會立即顯示在 [轉譯] 窗格中。  
-  
-#### <a name="got-ink"></a>有筆墨嗎？  
- 若要啟動您的第一個[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]支援筆墨的應用程式：  
-  
-1.  開啟 Microsoft Visual Studio 2005  
-  
-2.  建立新**Windows 應用程式 (WPF)**  
-  
-3.  型別`<InkCanvas/>`之間`<Grid>`標記  
-  
-4.  按**F5**來偵錯工具中啟動應用程式  
-  
-5.  使用手寫筆或滑鼠，撰寫**hello world**視窗中  
-  
- 您已撰寫筆墨相當於使用只有 12 按鍵的"hello world"應用程式 ！  
-  
-#### <a name="spice-up-your-application"></a>您的應用程式讓動  
- 讓我們來看的某些功能的優點[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。  取代開頭之間的所有內容\<視窗 > 並關閉\</Window > 以取得筆墨表面背景漸層筆刷下列標記的標記。  
-  
- [!code-xaml[DigitalInkTopics#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#1)]  
-[!code-xaml[DigitalInkTopics#1a](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#1a)]  
-  
-#### <a name="using-animation"></a>使用動畫  
- 玩看，我們製作動畫漸層筆刷的色彩。 加入下列[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]關閉後`</InkCanvas>`標記結束之前`</Page>`標記。  
-  
- [!code-xaml[DigitalInkTopics#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#2)]  
-  
-#### <a name="adding-some-code-behind-the-xaml"></a>加入一些程式碼背後的 XAML  
- 雖然 XAML 會很容易就能設計使用者介面，任何真實世界應用程式必須加入程式碼來處理事件。 以下是以滑鼠右鍵按一下回應來自滑鼠的筆墨會放大的簡單範例：  
-  
- 設定`MouseRightButtonUp`處理常式中的您[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]:  
-  
- [!code-xaml[DigitalInkTopics#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]  
-  
- 在 Visual Studio 方案總管 中，展開 Windows1.xaml 並開啟 Window1.xaml.cs 或 Window1.xaml.vb，如果您使用 Visual Basic 的程式碼後置檔案。 加入下列事件處理常式程式碼：  
-  
- [!code-csharp[DigitalInkTopics#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
- [!code-vb[DigitalInkTopics#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]  
-  
- 現在，執行您的應用程式。 加入某些筆墨然後以滑鼠右鍵按一下使用滑鼠，或執行按保留對等項目具有手寫筆。  
-  
-#### <a name="using-procedural-code-instead-of-xaml"></a>使用程序程式碼，而不 XAML  
- 您可以存取所有[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]程序程式碼中的功能。 以下是"Hello 筆墨 World"應用程式[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，不使用任何[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]完全。 將下列程式碼貼到空白 Visual Studio 中的主控台應用程式。 新增 PresentationCore、 PresentationFramework 和 WindowsBase 組件的參考，並按下建置應用程式**F5**:  
-  
- [!code-csharp[InkCanvasConsoleApp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
- [!code-vb[InkCanvasConsoleApp#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]  
-  
-## <a name="see-also"></a>另請參閱  
- [數位筆跡](../../../../docs/framework/wpf/advanced/digital-ink.md)  
- [收集筆墨](../../../../docs/framework/wpf/advanced/collecting-ink.md)  
- [手寫辨識](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)  
- [儲存筆墨](../../../../docs/framework/wpf/advanced/storing-ink.md)
+# <a name="get-started-with-ink-in-wpf"></a>開始使用 WPF 中的筆墨
+
+Windows Presentation Foundation (WPF) 具有筆跡功能，可讓您輕鬆地將您的應用程式的數位筆跡。
+
+## <a name="prerequisites"></a>必要條件
+
+若要使用下列範例中，第一次[安裝 Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)。 它也有助於了解如何撰寫基本的 WPF 應用程式。 開始使用 WPF 的協助，請參閱[逐步解說： 我第一個 WPF 桌面應用程式](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。
+
+## <a name="quick-start"></a>快速入門
+
+本節可協助您撰寫簡單的 WPF 應用程式會收集筆跡。
+
+### <a name="got-ink"></a>有筆墨嗎？
+
+若要建立支援筆墨的 WPF 應用程式：
+
+1. 開啟 Visual Studio。
+
+2. 建立新**WPF 應用程式**。
+
+   在 [**新的專案**] 對話方塊中，展開**已安裝** > **Visual C#** 或**Visual Basic**  >  **Windows 桌面**類別目錄。 然後，選取**WPF 應用程式 (.NET Framework)** 應用程式範本。 輸入名稱，然後按**確定**。
+
+   Visual Studio 建立專案，並*MainWindow.xaml*會在設計工具中開啟。
+
+3. 型別`<InkCanvas/>`之間`<Grid>`標記。
+
+   ![InkCanvas 標記的 XAML 設計工具](media/getting-started-with-ink/inkcanvas-xaml.png)
+
+4. 按下**F5**來啟動您的應用程式偵錯工具。
+
+5. 使用手寫筆或滑鼠，撰寫**hello world**  視窗中。
+
+您已撰寫筆墨相當於只有 12 的按鍵輸入的"hello world"應用程式 ！
+
+### <a name="spice-up-your-app"></a>為您的應用程式增添
+
+讓我們好好利用 WPF 的某些功能。 取代所有項目之間的開頭和結尾\<視窗 > 標記，以下列標記：
+
+```xaml
+<Page>
+  <InkCanvas Name="myInkCanvas" MouseRightButtonUp="RightMouseUpHandler">
+    <InkCanvas.Background>
+      <LinearGradientBrush>
+        <GradientStop Color="Yellow" Offset="0.0" />
+          <GradientStop Color="Blue" Offset="0.5" />
+            <GradientStop Color="HotPink" Offset="1.0" />
+              </LinearGradientBrush>
+    </InkCanvas.Background>
+  </InkCanvas>
+</Page>
+```
+
+此 XAML 會建立漸層筆刷背景筆跡的介面上。
+
+![在筆跡介面在 WPF 應用程式中的漸層色彩](media/getting-started-with-ink/gradient-colors.png)
+
+### <a name="add-some-code-behind-the-xaml"></a>加入一些程式碼背後的 XAML
+
+XAML 可以很容易就能設計使用者介面，而任何實際的應用程式必須加入程式碼來處理事件。 以下是簡單的範例，以滑鼠右鍵按一下的滑鼠回應中的筆墨會放大。
+
+1. 設定`MouseRightButtonUp`在您的 XAML 中的處理常式：
+
+   [!code-xaml[DigitalInkTopics#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]
+
+1. 在 [**方案總管] 中**、 展開 MainWindow.xaml 並開啟程式碼後置檔案 （MainWindow.xaml.cs 或 MainWindow.xaml.vb）。 新增下列事件處理常式程式碼：
+
+   [!code-csharp[DigitalInkTopics#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
+   [!code-vb[DigitalInkTopics#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]
+
+1. 執行應用程式。 新增一些墨水，然後以滑鼠右鍵按一下滑鼠或手寫筆使用中執行按保留對等項目。
+
+   顯示您以滑鼠右鍵按一下 每次會放大。
+
+### <a name="use-procedural-code-instead-of-xaml"></a>使用程序程式碼，而不是 XAML
+
+您可以存取所有的 WPF 功能從程序性程式碼。 請遵循下列步驟來建立不使用任何 XAML 的 WPF 的"Hello 筆墨 World"應用程式。
+
+1. Visual Studio 中建立新的主控台應用程式專案。
+
+   在 [**新的專案**] 對話方塊中，展開**已安裝** > **Visual C#** 或**Visual Basic**  >  **Windows 桌面**類別目錄。 然後，選取**主控台應用程式 (.NET Framework)** 應用程式範本。 輸入名稱，然後按**確定**。
+
+1. 將下列程式碼貼到 Program.cs 或 Program.vb 檔案中：
+
+   [!code-csharp[InkCanvasConsoleApp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
+   [!code-vb[InkCanvasConsoleApp#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]
+
+1. 新增 PresentationCore、 PresentationFramework、 與 WindowsBase 組件的參考，以滑鼠右鍵按一下**參考**中**方案總管**，然後選擇**加入參考**.
+
+   ![顯示 PresentationCore 與 PresentationFramework 參考管理員](media/getting-started-with-ink/references.png)
+
+1. 建置應用程式藉由按下**F5**。
+
+## <a name="see-also"></a>另請參閱
+
+- [數位筆跡](../../../../docs/framework/wpf/advanced/digital-ink.md)
+- [收集筆墨](../../../../docs/framework/wpf/advanced/collecting-ink.md)
+- [手寫辨識](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)
+- [儲存筆墨](../../../../docs/framework/wpf/advanced/storing-ink.md)

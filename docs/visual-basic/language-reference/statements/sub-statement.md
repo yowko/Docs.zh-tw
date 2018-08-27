@@ -29,15 +29,15 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-ms.openlocfilehash: 08be38cdbec82914b567ab5b86eed71181efcf57
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 7baa4e25bc876ebfbe03c316b2020e01aedbc88d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34234172"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924491"
 ---
 # <a name="sub-statement-visual-basic"></a>Sub 陳述式 (Visual Basic)
-名稱、 參數和定義的程式碼會宣告`Sub`程序。  
+宣告名稱、 參數和定義的程式碼`Sub`程序。  
   
 ## <a name="syntax"></a>語法  
   
@@ -72,7 +72,7 @@ End Sub
   
     -   [Private](../modifiers/private.md)  
   
-    - [Protected 的 Friend](../../language-reference/modifiers/protected-friend.md)
+    - [為 protected 的 Friend](../../language-reference/modifiers/protected-friend.md)
 
     - [受保護的私用](../../language-reference/modifiers/private-protected.md)
   
@@ -102,7 +102,7 @@ End Sub
   
 -   `Shadows`  
   
-     選擇性。 請參閱[陰影](../modifiers/shadows.md)。  
+     選擇性。 請參閱[Shadows](../modifiers/shadows.md)。  
   
 -   `Async`  
   
@@ -110,7 +110,7 @@ End Sub
   
 -   `name`  
   
-     必要。 程序的名稱。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。 若要建立之類別的建構函式程序，將名稱設定`Sub`程序`New`關鍵字。 如需詳細資訊，請參閱[物件存留期： 物件的建立和終結](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)。  
+     必要。 程序的名稱。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。 若要建立類別的建構函式程序，將名稱設定`Sub`程序`New`關鍵字。 如需詳細資訊，請參閱 <<c0> [ 物件存留期： 物件的建立和終結的方式](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)。  
   
 -   `typeparamlist`  
   
@@ -122,7 +122,7 @@ End Sub
   
 -   `Implements`  
   
-     選擇性。 表示此程序會實作一或多個`Sub`程序，每一個定義中包含這個程序的類別或結構所實作的介面。 請參閱[實作陳述式](implements-statement.md)。  
+     選擇性。 表示此程序會實作一或多個`Sub`程序，每一個都在此程序包含類別或結構所實作的介面中定義。 請參閱[實作陳述式](implements-statement.md)。  
   
 -   `implementslist`  
   
@@ -136,12 +136,12 @@ End Sub
   
     |組件|描述|  
     |---|---|  
-    |`interface`|必要。 這個程序所實作的介面名稱所含的類別或結構。|  
+    |`interface`|必要。 這個程序所實作的介面名稱的包含類別或結構。|  
     |`definedname`|必要。 名稱，據以在 `interface` 中定義程序。|  
   
 -   `Handles`  
   
-     選擇性。 指出此程序可以處理一或多個特定事件。 請參閱[處理](handles-clause.md)。  
+     選擇性。 表示此程序可以處理一或多個特定的事件。 請參閱[處理](handles-clause.md)。  
   
 -   `eventlist`  
   
@@ -164,22 +164,22 @@ End Sub
   
 -   `End Sub`  
   
-     結束此程序的定義。  
+     結束這個程序的定義。  
   
 ## <a name="remarks"></a>備註  
- 所有可執行程式碼必須是程序內。 使用`Sub`程序時您不想要將值傳回給呼叫程式碼。 使用`Function`程序，當您想要傳回的值。  
+ 所有的可執行程式碼必須在程序。 使用`Sub`程序，當您不想要將值傳回給呼叫程式碼。 使用`Function`程序，當您想要傳回的值。  
   
 ## <a name="defining-a-sub-procedure"></a>定義 Sub 程序  
- 您可以定義`Sub`程序只能在模組層級。 Sub 程序的宣告內容，因此，必須在類別、 結構、 模組或介面，且不能在原始程式檔、 命名空間、 程序或區塊。 如需詳細資訊，請參閱[宣告內容和預設存取層級](declaration-contexts-and-default-access-levels.md)。  
+ 您可以定義`Sub`只能在模組層級的程序。 Sub 程序的宣告內容，因此，必須類別、 結構、 模組或介面，且不能是原始程式檔、 命名空間、 程序或區塊。 如需詳細資訊，請參閱[宣告內容和預設存取層級](declaration-contexts-and-default-access-levels.md)。  
   
- `Sub` 程序預設為公用存取。 您可以使用存取修飾詞來調整其存取層級。  
+ `Sub` 程序預設為公用存取。 您可以使用存取修飾詞，以調整其存取層級。  
   
- 如果程序使用`Implements`關鍵字、 包含的類別或結構必須`Implements`緊接在後面的陳述式其`Class`或`Structure`陳述式。 `Implements`陳述式必須包含每個介面中指定`implementslist`。 不過，用介面會定義的名稱`Sub`(在`definedname`) 沒有符合此程序的名稱 (在`name`)。  
+ 如果程序會使用`Implements`關鍵字、 包含類別或結構必須`Implements`緊接在後面的陳述式及其`Class`或`Structure`陳述式。 `Implements`陳述式必須包含在指定的每個介面`implementslist`。 不過，由此介面定義的名稱`Sub`(在`definedname`) 不需符合此程序名稱 (在`name`)。  
   
-## <a name="returning-from-a-sub-procedure"></a>從 Sub 程序傳回  
- 當`Sub`程序傳回呼叫程式碼，呼叫它的陳述式之後的陳述式繼續執行。  
+## <a name="returning-from-a-sub-procedure"></a>傳回從 Sub 程序  
+ 當`Sub`程序傳回給呼叫程式碼，執行會繼續進行呼叫它的陳述式之後的陳述式。  
   
- 下列範例示範從傳回`Sub`程序。  
+ 下列範例顯示傳回`Sub`程序。  
   
 ```vb  
 Sub mySub(ByVal q As String)  
@@ -187,42 +187,42 @@ Sub mySub(ByVal q As String)
 End Sub   
 ```  
   
- `Exit Sub`和`Return`陳述式會導致立即結束`Sub`程序。 任何數目的`Exit Sub`和`Return`陳述式可以出現在任何地方程序，且您可以混合`Exit Sub`和`Return`陳述式。  
+ `Exit Sub`並`Return`陳述式會導致立即結束`Sub`程序。 任意數目的`Exit Sub`並`Return`陳述式可以出現在任何位置的程序中，您可以混合`Exit Sub`和`Return`陳述式。  
   
-## <a name="calling-a-sub-procedure"></a>呼叫 Sub 程序  
- 您呼叫`Sub`陳述式中使用的程序名稱，然後遵循與它的引數清單括號括住該名稱的程序。 只有當您並未提供任何引數，您可以省略括號。 不過，您的程式碼的可讀性您加上括號。  
+## <a name="calling-a-sub-procedure"></a>呼叫子函數程序  
+ 您呼叫`Sub`陳述式中使用的程序名稱，並接著遵循和它的引數清單括號括住該名稱的程序。 只有當您未提供任何引數，您可以省略括號。 不過，您的程式碼是如果您加上括號的更容易閱讀。  
   
  A`Sub`程序和`Function`程序可以有參數，並且執行一系列的陳述式。 不過，`Function`程序傳回的值，以及`Sub`程序不會。 因此，您無法使用`Sub`在運算式中的程序。  
   
- 您可以使用`Call`關鍵字，當您呼叫`Sub`程序，但該關鍵字時，不建議用於大部分用途。 如需詳細資訊，請參閱[Call 陳述式](call-statement.md)。  
+ 您可以使用`Call`關鍵字，當您呼叫`Sub`程序，但該關鍵字，不建議用於大部分用途。 如需詳細資訊，請參閱 < [Call 陳述式](call-statement.md)。  
   
- Visual Basic 有時會重新排列算術運算式，以提高內部的效率。 基於這個原因，如果引數清單包含運算式呼叫其他程序，您不應該假設這些運算式，會以特定順序呼叫。  
+ Visual Basic 中有時重新排列算術運算式，以提高內部的效率。 基於這個理由，如果您的引數清單包含運算式呼叫其他程序，您不應假設特定的順序，將會呼叫這些運算式。  
   
 ## <a name="async-sub-procedures"></a>Async Sub 程序  
- 使用 Async 功能，您可以不使用明確回呼或手動將您的程式碼分散到多個函式或 lambda 運算式呼叫的非同步函式。  
+ 使用非同步功能，可以叫用非同步的函數，而不使用明確回呼或手動將您的程式碼分散到多個函式或 lambda 運算式。  
   
- 如果您將標記的程序有[非同步](../modifiers/async.md)修飾詞，您可以使用[Await](../../../visual-basic/language-reference/operators/await-operator.md)程序中的運算子。 當控制項到達`Await`中的運算式`Async`程序中，控制項會傳回給呼叫者，並在程序的進度會暫停，直到等候的工作完成。 工作完成時，可以在程序繼續執行。  
+ 如果您將標記的程序[非同步](../modifiers/async.md)修飾詞，您可以使用[Await](../../../visual-basic/language-reference/operators/await-operator.md)程序中的運算子。 當控制項到達`Await`中的運算式`Async`程序中，控制項會傳回給呼叫者，並在程序的進度會暫停，直到等候的工作完成。 工作完成時，可以在程序繼續執行。  
   
 > [!NOTE]
->  `Async`程序傳回給呼叫端時遇到的其中一個第一次的等候的物件尚未完成或結束`Async`達到程序時，何者先發生。  
+>  `Async`程序傳回給呼叫端在遇到可能是第一次的等候的物件尚未完成時或結尾`Async`達到程序時，何者先發生。  
   
- 您也可以將標記[Function 陳述式](function-statement.md)與`Async`修飾詞。 `Async`函式可以有傳回類型為<xref:System.Threading.Tasks.Task%601>或<xref:System.Threading.Tasks.Task>。 範例稍後在本主題說明`Async`函式的傳回型別<xref:System.Threading.Tasks.Task%601>。  
+ 您也可以將標記[Function 陳述式](function-statement.md)使用`Async`修飾詞。 `Async`函式可以有傳回型別<xref:System.Threading.Tasks.Task%601>或<xref:System.Threading.Tasks.Task>。 範例稍後在本主題說明`Async`函式具有傳回型別<xref:System.Threading.Tasks.Task%601>。  
   
- `Async` `Sub` 程序主要用於事件處理常式，不會傳回的值。 `Async``Sub`無法等候程序，和呼叫端的`Async``Sub`程序無法攔截例外狀況，`Sub`程序會擲回。  
+ `Async` `Sub` 程序主要用於事件處理常式，不會傳回的值。 `Async` `Sub`無法等候程序，和呼叫端`Async``Sub`程序無法攔截例外狀況，`Sub`程序會擲回。  
   
  `Async`程序不可以宣告任何[ByRef](../modifiers/byref.md)參數。  
   
- 如需有關`Async`程序，請參閱[使用 Async 和 Await 進行非同步程式設計](../../../visual-basic/programming-guide/concepts/async/index.md)，[非同步程式中的控制流程](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)，和[非同步傳回型別](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
+ 如需詳細資訊`Async`程序，請參閱[使用 Async 和 Await 進行非同步程式設計](../../../visual-basic/programming-guide/concepts/async/index.md)，[非同步程式中的控制流程](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)，和[非同步傳回型別](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
   
 ## <a name="example"></a>範例  
- 下列範例會使用`Sub`陳述式來定義名稱、 參數和形成主體的程式碼`Sub`程序。  
+ 下列範例會使用`Sub`陳述式來定義名稱、 參數和構成的主體的程式碼`Sub`程序。  
   
  [!code-vb[VbVbalrStatements#58](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/sub-statement_1.vb)]  
   
 ## <a name="example"></a>範例  
- 在下列範例中，`DelayAsync`是`Async``Function`具有傳回類型為<xref:System.Threading.Tasks.Task%601>。 `DelayAsync` 具有傳回整數的 `Return` 陳述式。 因此，函式宣告的`DelayAsync`必須具有傳回類型為`Task(Of Integer)`。 因為傳回類型為`Task(Of Integer)`，評估`Await`中的運算式`DoSomethingAsync`產生整數，如下列陳述式所示： `Dim result As Integer = Await delayTask`。  
+ 在下列範例中，`DelayAsync`已`Async``Function`具有傳回型別<xref:System.Threading.Tasks.Task%601>。 `DelayAsync` 具有傳回整數的 `Return` 陳述式。 因此，函式的宣告`DelayAsync`必須具有傳回型別`Task(Of Integer)`。 因為傳回類型是`Task(Of Integer)`，評估`Await`中的運算式`DoSomethingAsync`會產生整數，下列陳述式所示： `Dim result As Integer = Await delayTask`。  
   
- `startButton_Click`程序是範例`Async Sub`程序。 因為`DoSomethingAsync`是`Async`函式，呼叫工作`DoSomethingAsync`必須等候，如下列陳述式所示： `Await DoSomethingAsync()`。 `startButton_Click``Sub`程序都必須定義`Async`修飾詞因為它有`Await`運算式。  
+ `startButton_Click`程序是範例`Async Sub`程序。 因為`DoSomethingAsync`已`Async`函式，呼叫工作`DoSomethingAsync`必須等候，下列陳述式所示： `Await DoSomethingAsync()`。 `startButton_Click` `Sub`程序都必須定義`Async`修飾詞因為它有`Await`運算式。  
   
  [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/sub-statement_2.vb)]  
   

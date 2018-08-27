@@ -1,5 +1,5 @@
 ---
-title: 建立執行緒並在啟動時間傳遞資料
+title: 建立執行緒，並在啟動期間傳遞資料
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 52b32222-e185-4f42-91a7-eaca65c0ab6d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 96c0c898f103c058c370a0d108568056b1ff8196
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: cb5d8456885b4fe805ca1bb80f0065b88a09dbb4
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33586574"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42912022"
 ---
 # <a name="creating-threads-and-passing-data-at-start-time"></a>建立執行緒，並在啟動期間傳遞資料
 

@@ -2,12 +2,12 @@
 title: 使用預存程序管理 SQL Server 中的權限
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-ms.openlocfilehash: 2472481156f44b55726243e9d939522e46796070
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d16a6609603cfb83fc6523606cc7ec9e7bfd8dba
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361280"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42912061"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>使用預存程序管理 SQL Server 中的權限
 為資料庫建立多重防線的方法之一，就是使用預存程序 (Stored Procedure) 或使用者定義的函式來實作所有資料存取。 您可以撤銷或拒絕基礎物件 (例如資料表) 的所有權限，然後在預存程序上授與 EXECUTE 權限。 如此即可有效地在資料和資料庫物件周圍建立安全性防線。  
@@ -54,7 +54,7 @@ ms.locfileid: "33361280"
   
 |資源|描述|  
 |--------------|-----------------|  
-|[預存程序](http://msdn.microsoft.com/library/ms190782.aspx)和[SQL 資料隱碼](http://go.microsoft.com/fwlink/?LinkId=98234)SQL Server 線上叢書中|說明如何建立預存程序以及「SQL 插入」運作方式的主題。|  
+|《SQL Server 線上叢書》中的[預存程序](/sql/relational-databases/stored-procedures/stored-procedures-database-engine)和 [SQL 插入](http://go.microsoft.com/fwlink/?LinkId=98234)|說明如何建立預存程序以及「SQL 插入」運作方式的主題。|  
   
 ## <a name="see-also"></a>另請參閱  
  [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

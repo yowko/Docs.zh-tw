@@ -16,24 +16,24 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d9eda0d90e4db7638e3733d0b7a7cc265f4deba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: baff7dac7f1ddc8546bcb52627eeee992921a395
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454843"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925879"
 ---
 # <a name="itypelibresolver-interface"></a>ITypeLibResolver 介面
-提供[ResolveTypeLib 方法](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md)，這會解析類型程式庫的檔案路徑。  
+提供[ResolveTypeLib 方法](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md)，其解析後的類型程式庫的檔案路徑。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[ResolveTypeLib 方法](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md)|藉由傳回其完整的路徑來解析類型程式庫的簡單名稱。|  
+|[ResolveTypeLib 方法](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md)|藉由傳回它的完整的路徑來解析型別程式庫的簡單名稱。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** TlbRef.idl、 TlbRef.h  
   
@@ -43,4 +43,4 @@ ms.locfileid: "33454843"
   
 ## <a name="see-also"></a>另請參閱  
  [Tlbexp Helper 函式](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- [LoadTypeLibEx 函式](https://msdn.microsoft.com/library/windows/desktop/ms221249\(v=vs.85\).aspx)
+ [LoadTypeLibEx 函式](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

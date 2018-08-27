@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: b1395c3bd81f7f9d2f12d5b1ea2ec4b784f7aab9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0b4cdfa7bab1f41f80926b20da3e63a72a2d165d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766224"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42911996"
 ---
 # <a name="optimistic-concurrency"></a>開放式並行存取
 在多使用者環境中，更新資料庫中的資料時，有兩種模型可供使用：開放式並行存取和封閉式並行存取。 <xref:System.Data.DataSet> 物件的設計是要鼓勵使用者在進行長時間的活動 (如遠端處理資料以及與資料進行互動) 時，採用開放式同步存取。  
@@ -42,7 +42,7 @@ ms.locfileid: "32766224"
   
  在下午 1:01 時，User2 讀取同一資料列。  
   
- 在下午 1:03，User2 變更**FirstName**從"Bob"為"Robert"，並更新資料庫。  
+ 在下午 1:03 時，變更 User2 **FirstName**從"Bob"為"Robert"，並更新資料庫。  
   
 |資料行名稱|原始值|目前值|資料庫中的值|  
 |-----------------|--------------------|-------------------|-----------------------|  
@@ -71,7 +71,7 @@ ms.locfileid: "32766224"
 SELECT Col1, Col2, Col3 FROM Table1  
 ```  
   
- 若要更新中的資料列時，是否有開放式並行存取違規測試**Table1**，您可以發出下列 UPDATE 陳述式：  
+ 若要更新中的資料列時，測試開放式同步存取違規**Table1**，您可以發出下列 UPDATE 陳述式：  
   
 ```  
 UPDATE Table1 Set Col1 = @NewCol1Value,  
@@ -96,14 +96,14 @@ UPDATE Table1 Set Col1 = @NewVal1
  使用開放式同步存取模型時，您也可以選擇套用較寬鬆的準則。 例如，在 WHERE 子句中僅使用主索引鍵資料行時，不論另一個資料行在上次查詢後是否曾更新，都會覆寫資料。 您也可以只在特定資料行套用 WHERE 子句，以覆寫資料 (除非特定欄位在上次查詢後已經更新)。  
   
 ### <a name="the-dataadapterrowupdated-event"></a>DataAdapter.RowUpdated 事件  
- **RowUpdated**事件<xref:System.Data.Common.DataAdapter>物件可以搭配上述技術，以提供您的應用程式的開放式並行存取違規的通知。 **RowUpdated**每次嘗試更新之後，就會發生**Modified**中的資料列**資料集**。 如此可讓您加入特殊處理程式碼，包括發生例外狀況時的處理、加入自訂錯誤資訊、加入重試邏輯等等。 <xref:System.Data.Common.RowUpdatedEventArgs>物件會傳回**RecordsAffected**屬性包含資料表中修改之資料列的特定更新命令影響的資料列數目。 藉由設定更新命令以測試開放式同步存取， **RecordsAffected**屬性會如此一來，傳回值為 0 時已經發生開放式並行存取違規，因為已不更新任何記錄。 若發生這種情況，就會發生例外狀況。 **RowUpdated**事件可讓您處理出現在這裡，並避免例外狀況的適當設定**RowUpdatedEventArgs.Status**值，例如**UpdateStatus.SkipCurrentRow**。 如需有關**RowUpdated**事件，請參閱[處理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)。  
+ **RowUpdated**事件的<xref:System.Data.Common.DataAdapter>物件可以搭配使用，技巧如先前所述，以提供您的應用程式的開放式並行存取違規的通知。 **RowUpdated**每次嘗試更新之後，就會發生**Modified**中的資料列**DataSet**。 如此可讓您加入特殊處理程式碼，包括發生例外狀況時的處理、加入自訂錯誤資訊、加入重試邏輯等等。 <xref:System.Data.Common.RowUpdatedEventArgs>物件會傳回**RecordsAffected**屬性包含所修改的資料列，資料表中的特定更新命令影響的資料列數目。 藉由設定更新命令以測試開放式同步存取**RecordsAffected**屬性會如此一來，傳回值為 0 時已經發生開放式同步存取違規，因為已不更新的任何記錄。 若發生這種情況，就會發生例外狀況。 **RowUpdated**事件可讓您處理這項問題，並避免例外狀況的設定適當**RowUpdatedEventArgs.Status**值，例如**UpdateStatus.SkipCurrentRow**。 如需詳細資訊**RowUpdated**事件，請參閱[處理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)。  
   
- （選擇性） 您可以設定**DataAdapter.ContinueUpdateOnError**至**true**，然後再呼叫**更新**，並回應錯誤資訊儲存在**RowError**屬性的特定資料列時**更新**完成。 如需詳細資訊，請參閱[資料列錯誤資訊](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)。  
+ （選擇性） 您可以設定**DataAdapter.ContinueUpdateOnError**要 **，則為 true**，然後再呼叫**Update**，並回應錯誤資訊儲存在**RowError**屬性的特定資料列時**更新**完成。 如需詳細資訊，請參閱 <<c0> [ 資料列錯誤資訊](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)。  
   
 ## <a name="optimistic-concurrency-example"></a>開放式同步存取範例  
- 以下是簡單的範例，以設定**UpdateCommand**的**DataAdapter**以測試開放式同步存取，然後使用**RowUpdated**來測試事件開放式並行存取違規。 發生開放式並行存取違規時，應用程式會設定**RowError**針對發出更新以反映開放式並行存取違規的資料列。  
+ 以下是簡單的範例，以設定**UpdateCommand**的**DataAdapter**以測試開放式同步存取，然後使用**RowUpdated**事件以測試開放式同步存取違規。 發生開放式同步存取違規時，應用程式設定**RowError**更新以反映開放式同步存取違規，所發出的資料列。  
   
- 請注意，WHERE 子句的 UPDATE 命令傳遞的參數值會對應至**原始**其各自的資料行的值。  
+ 請注意，傳遞至更新命令的 WHERE 子句的參數值會對應至**原始**其各自的資料行的值。  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -166,7 +166,7 @@ SqlDataAdapter adapter = new SqlDataAdapter(
 // The Update command checks for optimistic concurrency violations  
 // in the WHERE clause.  
 adapter.UpdateCommand = new SqlCommand("UPDATE Customers Set CustomerID = @CustomerID, CompanyName = @CompanyName " +  
-   "WHERE CustomerID = @oldCustomerID AND CompanyName = @oldCompanyName, connection);  
+   "WHERE CustomerID = @oldCustomerID AND CompanyName = @oldCompanyName", connection);  
 adapter.UpdateCommand.Parameters.Add(  
   "@CustomerID", SqlDbType.NChar, 5, "CustomerID");  
 adapter.UpdateCommand.Parameters.Add(  

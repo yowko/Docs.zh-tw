@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic], converting
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
-ms.openlocfilehash: 367991e4bbca710df54edf73179f855ff79bb56e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f168b3021ee1dbe3c82edc22fc779767c30446b8
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647614"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42912009"
 ---
 # <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>如何：在 Visual Basic 中將物件轉換成其他類型
-您將轉換`Object`變數設為另一種資料類型，使用轉換關鍵字，例如[CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)。  
+您將轉換`Object`變數設為另一個資料類型，例如使用轉換關鍵字[CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)。  
   
 ## <a name="example"></a>範例  
  下列範例會將轉換`Object`變數設為`Integer`和`String`。  
@@ -26,7 +26,7 @@ Public Sub objectConversion(ByVal anObject As Object)
 End Sub  
 ```  
   
- 如果您已了解的內容`Object`變數都是特定資料類型，最好是將變數轉換成該資料類型。 如果您繼續使用`Object`變數時，您會產生  *boxing*和*unboxing* （適用於實值類型） 或*晚期繫結*（適用於參考型別）。 這些作業採用額外的執行時間，並提升效能。  
+ 如果您知道的內容`Object`變數是特定的資料類型，最好是將變數轉換成該資料型別。 如果您繼續使用`Object`變數，您會產生其中一個*boxing*並*unboxing* （適用於實值型別） 或*晚期繫結*（適用於參考型別）。 這些作業全部需要額外的執行時間，並讓您的效能降低。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
@@ -35,11 +35,11 @@ End Sub
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Object>  
- [在 Visual Basic 中的型別轉換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+ [在 Visual Basic 中的類型轉換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
  [擴展和縮小轉換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
  [隱含和明確轉換](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
  [字串與其他類型之間的轉換](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
  [陣列轉換](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
  [結構](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [資料類型](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [資料類型](../../../../visual-basic/language-reference/data-types/index.md)  
  [類型轉換函式](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
