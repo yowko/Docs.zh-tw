@@ -5,60 +5,60 @@ helpviewer_keywords:
 - arrays [C#], passing as arguments
 ms.assetid: f3a0971e-c87c-4a1f-8262-bc0a3b712772
 ms.openlocfilehash: 0289297be9d7b4989cc95d2b50b92dae9ee831f7
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199219"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42911795"
 ---
-# <a name="passing-arrays-as-arguments-c-programming-guide"></a><span data-ttu-id="76cac-102">傳遞陣列當做引數 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="76cac-102">Passing arrays as arguments (C# Programming Guide)</span></span>
+# <a name="passing-arrays-as-arguments-c-programming-guide"></a><span data-ttu-id="abd64-102">傳遞陣列當做引數 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="abd64-102">Passing arrays as arguments (C# Programming Guide)</span></span>
 
-<span data-ttu-id="76cac-103">陣列可以作為引數傳遞至方法參數。</span><span class="sxs-lookup"><span data-stu-id="76cac-103">Arrays can be passed as arguments to method parameters.</span></span> <span data-ttu-id="76cac-104">因為陣列是參考型別，所以方法可以變更項目的值。</span><span class="sxs-lookup"><span data-stu-id="76cac-104">Because arrays are reference types, the method can change the value of the elements.</span></span>
+<span data-ttu-id="abd64-103">陣列可以作為引數傳遞至方法參數。</span><span class="sxs-lookup"><span data-stu-id="abd64-103">Arrays can be passed as arguments to method parameters.</span></span> <span data-ttu-id="abd64-104">因為陣列是參考型別，所以方法可以變更項目的值。</span><span class="sxs-lookup"><span data-stu-id="abd64-104">Because arrays are reference types, the method can change the value of the elements.</span></span>
 
-## <a name="passing-single-dimensional-arrays-as-arguments"></a><span data-ttu-id="76cac-105">傳遞一維陣列作為引數</span><span class="sxs-lookup"><span data-stu-id="76cac-105">Passing single-dimensional arrays as arguments</span></span>
+## <a name="passing-single-dimensional-arrays-as-arguments"></a><span data-ttu-id="abd64-105">傳遞一維陣列作為引數</span><span class="sxs-lookup"><span data-stu-id="abd64-105">Passing single-dimensional arrays as arguments</span></span>
 
-<span data-ttu-id="76cac-106">您可以將初始化的一維陣列傳遞至方法。</span><span class="sxs-lookup"><span data-stu-id="76cac-106">You can pass an initialized single-dimensional array to a method.</span></span> <span data-ttu-id="76cac-107">例如，下列陳述式會將陣列傳送至列印方法。</span><span class="sxs-lookup"><span data-stu-id="76cac-107">For example, the following statement sends an array to a print method.</span></span>
+<span data-ttu-id="abd64-106">您可以將初始化的一維陣列傳遞至方法。</span><span class="sxs-lookup"><span data-stu-id="abd64-106">You can pass an initialized single-dimensional array to a method.</span></span> <span data-ttu-id="abd64-107">例如，下列陳述式會將陣列傳送至列印方法。</span><span class="sxs-lookup"><span data-stu-id="abd64-107">For example, the following statement sends an array to a print method.</span></span>
 
 [!code-csharp[csProgGuideArrays#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#34)]
 
-<span data-ttu-id="76cac-108">下列程式碼顯示列印方法的部分實作。</span><span class="sxs-lookup"><span data-stu-id="76cac-108">The following code shows a partial implementation of the print method.</span></span>
+<span data-ttu-id="abd64-108">下列程式碼顯示列印方法的部分實作。</span><span class="sxs-lookup"><span data-stu-id="abd64-108">The following code shows a partial implementation of the print method.</span></span>
 
 [!code-csharp[csProgGuideArrays#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#33)]
 
-<span data-ttu-id="76cac-109">您可以在一個步驟中初始化並傳遞新的陣列，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="76cac-109">You can initialize and pass a new array in one step, as is shown in the following example.</span></span>
+<span data-ttu-id="abd64-109">您可以在一個步驟中初始化並傳遞新的陣列，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="abd64-109">You can initialize and pass a new array in one step, as is shown in the following example.</span></span>
 
 [!code-csharp[CsProgGuideArrays#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#35)]
 
-### <a name="example"></a><span data-ttu-id="76cac-110">範例</span><span class="sxs-lookup"><span data-stu-id="76cac-110">Example</span></span>
+### <a name="example"></a><span data-ttu-id="abd64-110">範例</span><span class="sxs-lookup"><span data-stu-id="abd64-110">Example</span></span>
 
-<span data-ttu-id="76cac-111">在下列範例中，字串的陣列會初始化，並作為引數傳遞至字串的 `DisplayArray` 方法。</span><span class="sxs-lookup"><span data-stu-id="76cac-111">In the following example, an array of strings is initialized and passed as an argument to a `DisplayArray` method for strings.</span></span> <span data-ttu-id="76cac-112">此方法會顯示陣列的元素。</span><span class="sxs-lookup"><span data-stu-id="76cac-112">The method displays the elements of the array.</span></span> <span data-ttu-id="76cac-113">接下來，`ChangeArray` 方法會反轉陣列項目，然後 `ChangeArrayElements` 方法會修改陣列的前三個項目。</span><span class="sxs-lookup"><span data-stu-id="76cac-113">Next, the `ChangeArray` method reverses the array elements, and then the `ChangeArrayElements` method modifies the first three elements of the array.</span></span> <span data-ttu-id="76cac-114">每個方法傳回之後，`DisplayArray` 方法會顯示以傳值方式傳遞陣列不會防止變更陣列元素。</span><span class="sxs-lookup"><span data-stu-id="76cac-114">After each method returns, the `DisplayArray` method shows that passing an array by value doesn't prevent changes to the array elements.</span></span>
+<span data-ttu-id="abd64-111">在下列範例中，字串的陣列會初始化，並作為引數傳遞至字串的 `DisplayArray` 方法。</span><span class="sxs-lookup"><span data-stu-id="abd64-111">In the following example, an array of strings is initialized and passed as an argument to a `DisplayArray` method for strings.</span></span> <span data-ttu-id="abd64-112">此方法會顯示陣列的元素。</span><span class="sxs-lookup"><span data-stu-id="abd64-112">The method displays the elements of the array.</span></span> <span data-ttu-id="abd64-113">接下來，`ChangeArray` 方法會反轉陣列項目，然後 `ChangeArrayElements` 方法會修改陣列的前三個項目。</span><span class="sxs-lookup"><span data-stu-id="abd64-113">Next, the `ChangeArray` method reverses the array elements, and then the `ChangeArrayElements` method modifies the first three elements of the array.</span></span> <span data-ttu-id="abd64-114">每個方法傳回之後，`DisplayArray` 方法會顯示以傳值方式傳遞陣列不會防止變更陣列元素。</span><span class="sxs-lookup"><span data-stu-id="abd64-114">After each method returns, the `DisplayArray` method shows that passing an array by value doesn't prevent changes to the array elements.</span></span>
 
 [!code-csharp[csProgGuideArrays#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/ArrayExample.cs)]
 
-## <a name="passing-multidimensional-arrays-as-arguments"></a><span data-ttu-id="76cac-115">傳遞多維陣列作為引數</span><span class="sxs-lookup"><span data-stu-id="76cac-115">Passing multidimensional arrays as arguments</span></span>
+## <a name="passing-multidimensional-arrays-as-arguments"></a><span data-ttu-id="abd64-115">傳遞多維陣列作為引數</span><span class="sxs-lookup"><span data-stu-id="abd64-115">Passing multidimensional arrays as arguments</span></span>
 
-<span data-ttu-id="76cac-116">將初始化的多維陣列傳遞至方法所使用的方式，與傳遞一維陣列的方式相同。</span><span class="sxs-lookup"><span data-stu-id="76cac-116">You pass an initialized multidimensional array to a method in the same way that you pass a one-dimensional array.</span></span>
+<span data-ttu-id="abd64-116">將初始化的多維陣列傳遞至方法所使用的方式，與傳遞一維陣列的方式相同。</span><span class="sxs-lookup"><span data-stu-id="abd64-116">You pass an initialized multidimensional array to a method in the same way that you pass a one-dimensional array.</span></span>
 
 [!code-csharp[csProgGuideArrays#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#41)]
 
-<span data-ttu-id="76cac-117">下列程式碼顯示可接受二維陣列作為其引數之列印方法的部分宣告。</span><span class="sxs-lookup"><span data-stu-id="76cac-117">The following code shows a partial declaration of a print method that accepts a two-dimensional array as its argument.</span></span>
+<span data-ttu-id="abd64-117">下列程式碼顯示可接受二維陣列作為其引數之列印方法的部分宣告。</span><span class="sxs-lookup"><span data-stu-id="abd64-117">The following code shows a partial declaration of a print method that accepts a two-dimensional array as its argument.</span></span>
 
 [!code-csharp[csProgGuideArrays#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#36)]
 
-<span data-ttu-id="76cac-118">您可以在一個步驟中初始化並傳遞新的陣列，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="76cac-118">You can initialize and pass a new array in one step, as is shown in the following example:</span></span>
+<span data-ttu-id="abd64-118">您可以在一個步驟中初始化並傳遞新的陣列，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="abd64-118">You can initialize and pass a new array in one step, as is shown in the following example:</span></span>
 
 [!code-csharp[csProgGuideArrays#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#32)]
 
-### <a name="example"></a><span data-ttu-id="76cac-119">範例</span><span class="sxs-lookup"><span data-stu-id="76cac-119">Example</span></span>
+### <a name="example"></a><span data-ttu-id="abd64-119">範例</span><span class="sxs-lookup"><span data-stu-id="abd64-119">Example</span></span>
 
-<span data-ttu-id="76cac-120">在下列範例中，整數的二維陣列會初始化並傳遞至 `Print2DArray` 方法。</span><span class="sxs-lookup"><span data-stu-id="76cac-120">In the following example, a two-dimensional array of integers is initialized and passed to the `Print2DArray` method.</span></span> <span data-ttu-id="76cac-121">此方法會顯示陣列的元素。</span><span class="sxs-lookup"><span data-stu-id="76cac-121">The method displays the elements of the array.</span></span>
+<span data-ttu-id="abd64-120">在下列範例中，整數的二維陣列會初始化並傳遞至 `Print2DArray` 方法。</span><span class="sxs-lookup"><span data-stu-id="abd64-120">In the following example, a two-dimensional array of integers is initialized and passed to the `Print2DArray` method.</span></span> <span data-ttu-id="abd64-121">此方法會顯示陣列的元素。</span><span class="sxs-lookup"><span data-stu-id="abd64-121">The method displays the elements of the array.</span></span>
 
 [!code-csharp[csProgGuideArrays#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#31)]
 
-## <a name="see-also"></a><span data-ttu-id="76cac-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="76cac-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="abd64-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="abd64-122">See also</span></span>
 
-[<span data-ttu-id="76cac-123">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="76cac-123">C# Programming Guide</span></span>](../index.md)  
-[<span data-ttu-id="76cac-124">陣列</span><span class="sxs-lookup"><span data-stu-id="76cac-124">Arrays</span></span>](index.md)  
-[<span data-ttu-id="76cac-125">一維陣列</span><span class="sxs-lookup"><span data-stu-id="76cac-125">Single-Dimensional Arrays</span></span>](single-dimensional-arrays.md)  
-[<span data-ttu-id="76cac-126">多維陣列</span><span class="sxs-lookup"><span data-stu-id="76cac-126">Multidimensional Arrays</span></span>](multidimensional-arrays.md)  
-[<span data-ttu-id="76cac-127">不規則陣列</span><span class="sxs-lookup"><span data-stu-id="76cac-127">Jagged Arrays</span></span>](jagged-arrays.md)  
+[<span data-ttu-id="abd64-123">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="abd64-123">C# Programming Guide</span></span>](../index.md)  
+[<span data-ttu-id="abd64-124">陣列</span><span class="sxs-lookup"><span data-stu-id="abd64-124">Arrays</span></span>](index.md)  
+[<span data-ttu-id="abd64-125">一維陣列</span><span class="sxs-lookup"><span data-stu-id="abd64-125">Single-Dimensional Arrays</span></span>](single-dimensional-arrays.md)  
+[<span data-ttu-id="abd64-126">多維陣列</span><span class="sxs-lookup"><span data-stu-id="abd64-126">Multidimensional Arrays</span></span>](multidimensional-arrays.md)  
+[<span data-ttu-id="abd64-127">不規則陣列</span><span class="sxs-lookup"><span data-stu-id="abd64-127">Jagged Arrays</span></span>](jagged-arrays.md)  
