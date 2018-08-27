@@ -3,12 +3,12 @@ title: 執行群組聯結 (C# 中的 LINQ)
 description: 了解如何使用 C# 中的 LINQ 執行群組聯結。
 ms.date: 12/1/2016
 ms.assetid: 9667daf9-a5fd-4b43-a5c4-a9c2b744000e
-ms.openlocfilehash: d52aa8f75a1868c26f6a965553bf8047518bb447
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: f65faabcb039e186a2e0d18dda4373263ffd0b8b
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37403998"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42911921"
 ---
 # <a name="perform-grouped-joins"></a>執行群組聯結
 
@@ -35,8 +35,8 @@ ms.locfileid: "37403998"
 
 ## <a name="see-also"></a>另請參閱
 
-<xref:System.Linq.Enumerable.Join%2A>  
-<xref:System.Linq.Enumerable.GroupJoin%2A>  
-[執行內部聯結](perform-inner-joins.md)  
-[執行左方外部聯結](perform-left-outer-joins.md)  
-[匿名型別](../programming-guide/classes-and-structs/anonymous-types.md)  
+- <xref:System.Linq.Enumerable.Join%2A>  
+- <xref:System.Linq.Enumerable.GroupJoin%2A>  
+- [執行內部聯結](perform-inner-joins.md)  
+- [執行左方外部聯結](perform-left-outer-joins.md)  
+- [匿名型別](../programming-guide/classes-and-structs/anonymous-types.md)  

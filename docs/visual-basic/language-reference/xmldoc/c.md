@@ -5,15 +5,15 @@ helpviewer_keywords:
 - c XML tag
 - <c> XML tag
 ms.assetid: 36ad5d1b-11f7-4012-8932-41962ac327d1
-ms.openlocfilehash: 556c00fa761a1bce5e922a304706c78893550901
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06c6899895f278fdf652725a05ecc7229805f4d4
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33599602"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935354"
 ---
 # <a name="ltcgt-visual-basic"></a>&lt;c&gt; (Visual Basic)
-描述內的文字表示的程式碼。  
+表示描述內的文字是程式碼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -28,14 +28,14 @@ ms.locfileid: "33599602"
 |`text`|您要指定為程式碼的文字。|  
   
 ## <a name="remarks"></a>備註  
- `<c>`標籤會提供一個方法來指示描述內的文字應該標記為程式碼。 請使用 [\<code>](../../../visual-basic/language-reference/xmldoc/code.md) 將多行指定為程式碼。  
+ `<c>`標記可讓您一個方法來指示應該標記為程式碼，在一段描述的文字。 請使用 [\<code>](../../../visual-basic/language-reference/xmldoc/code.md) 將多行指定為程式碼。  
   
  編譯搭配 [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) 可處理檔案的文件註解。  
   
 ## <a name="example"></a>範例  
- 這個範例會使用`<c>`表示摘要區段中的標記`Counter`是程式碼。  
+ 這個範例會使用`<c>`表示的摘要區段中的標記`Counter`是程式碼。  
   
  [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/c_1.vb)]  
   
 ## <a name="see-also"></a>另請參閱  
- [XML 註解標記](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [XML 註解標記](../../../visual-basic/language-reference/xmldoc/index.md)

@@ -2,12 +2,12 @@
 title: DEREF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4c78e833-b260-453d-9bf4-eb39857dd0fa
-ms.openlocfilehash: ee3877ca256eb3847b0284ac2a7362a4a60aad48
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: abe47f8c72abe13bd5c27fe10a412ff94ab861cf
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761476"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930008"
 ---
 # <a name="deref-entity-sql"></a>DEREF (Entity SQL)
 對參考值取值並且產生該取值的結果。  
@@ -26,7 +26,7 @@ SELECT DEREF ( o.expression ) from Table as o;
  所參考之實體的值。  
   
 ## <a name="remarks"></a>備註  
- DEREF 運算子會對參考值取值並且產生該取值的結果。 例如，如果`r`是參考型別參考的\<T >，`Deref``(r)`之類型的運算式`T`產生參考之實體`r`。 如果此參數值為 null，或為懸空 (也就是參考的目標不存在)，DEREF 運算子的結果就會是 null。  
+ DEREF 運算子會對參考值取值並且產生該取值的結果。 例如，如果`r`是型別參考的參考\<T >，`Deref(r)`是類型的運算式`T`產生參考之實體`r`。 如果此參數值為 null，或為懸空 (也就是參考的目標不存在)，DEREF 運算子的結果就會是 null。  
   
 ## <a name="example"></a>範例  
  以下 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查詢使用 DEREF 運算子對參考值取值並且產生該取值的結果。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  

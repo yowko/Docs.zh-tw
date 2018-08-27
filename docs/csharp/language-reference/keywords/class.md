@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 04e64e825e4297ceb432393c7bd145a6cf4fcb2c
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: ea1e2e049a692fb9d86731c8a450b568f275f9a9
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948507"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924794"
 ---
 # <a name="class-c-reference"></a>類別 (C# 參考)
 
@@ -72,6 +72,8 @@ class TestClass
 - [介面](../../../csharp/programming-guide/interfaces/index.md)
 
 - [結構](../../../csharp/programming-guide/classes-and-structs/structs.md)
+
+- [列舉](../../../csharp/programming-guide/enumeration-types.md)
 
 ## <a name="example"></a>範例
 

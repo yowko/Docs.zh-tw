@@ -7,12 +7,12 @@ helpviewer_keywords:
 - dynamic [C#]
 - dynamic keyword [C#]
 ms.assetid: 9e797102-cc83-4964-bf58-afe4f54d16bc
-ms.openlocfilehash: de54b3ea663738f5b7af9e6100e0b69571d4caf9
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: bddcb8890ef7312047d05794ccef0b638de4ed78
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948393"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930247"
 ---
 # <a name="dynamic-c-reference"></a>dynamic (C# 參考)
 
@@ -65,12 +65,12 @@ obj = obj + 3;
 
 ## <a name="see-also"></a>另請參閱
 
-<xref:System.Dynamic.ExpandoObject?displayProperty=nameWithType>  
-<xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>  
-[使用動態型別](../../../csharp/programming-guide/types/using-type-dynamic.md)  
-[object](../../../csharp/language-reference/keywords/object.md)  
-[is](../../../csharp/language-reference/keywords/is.md)  
-[as](../../../csharp/language-reference/keywords/as.md)  
-[typeof](../../../csharp/language-reference/keywords/typeof.md)  
-[如何：使用 as 和 is 運算子進行安全轉換](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)  
-[逐步解說：建立和使用動態物件](../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+- <xref:System.Dynamic.ExpandoObject?displayProperty=nameWithType>  
+- <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>  
+- [使用動態型別](../../../csharp/programming-guide/types/using-type-dynamic.md)  
+- [object](../../../csharp/language-reference/keywords/object.md)  
+- [is](../../../csharp/language-reference/keywords/is.md)  
+- [as](../../../csharp/language-reference/keywords/as.md)  
+- [typeof](../../../csharp/language-reference/keywords/typeof.md)  
+- [如何：使用 as 和 is 運算子進行安全轉換](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)  
+- [逐步解說：建立和使用動態物件](../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

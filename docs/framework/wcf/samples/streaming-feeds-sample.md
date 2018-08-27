@@ -2,12 +2,12 @@
 title: 資料流摘要範例
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-ms.openlocfilehash: 2c420bad9ad96107f56b5435efa6fffd6941cdaa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50fa7ccfde544ac9e0ab762434ccc5c3b94958ea
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33505533"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929243"
 ---
 # <a name="streaming-feeds-sample"></a>資料流摘要範例
 這個範例會示範如何管理含有大量項目的新聞訂閱摘要。 在伺服器上，此範例會示範如何在項目即將寫入網路資料流的之前立即延遲建立摘要中個別的 <xref:System.ServiceModel.Syndication.SyndicationItem> 物件。  
@@ -16,7 +16,7 @@ ms.locfileid: "33505533"
   
  為了充分示範新聞訂閱 API 的資料流處理能力，在這個範例中，伺服器會公開包含無限數目項目的摘要 (這種情況不太可能發生)。 在這個情況中，伺服器會持續在摘要中產生新的項目，直到摘要判斷用戶端已經從摘要讀取了指定數目的項目 (預設為 10)。 為了簡要說明，我們在同一個處理序中同時實作用戶端和伺服器，並使用共用的 `ItemCounter` 物件來追蹤用戶端已經產生了多少數目的項目。 `ItemCounter` 型別存在的唯一理由，就是讓範例案例正常地終止，但此型別不是我們要示範的核心模式項目。  
   
- 示範會使用 Visual C# 的迭代器 (使用`yield``return`關鍵字建構)。 如需迭代器的詳細資訊，請參閱 MSDN 上的 < 使用 Iterator > 主題。  
+ 示範會使用 Visual C# 的迭代器 (使用`yield return`關鍵字建構)。 如需迭代器的詳細資訊，請參閱 MSDN 上的 < 使用 Iterator > 主題。  
   
 ## <a name="service"></a>服務  
  此服務會實作由一個作業組成的基本 <xref:System.ServiceModel.Web.WebGetAttribute> 合約，如下列程式碼所示。  
@@ -65,7 +65,7 @@ public Atom10FeedFormatter StreamedFeed()
 }  
 ```  
   
- 這樣一來，項目資料流就永遠不會經過記憶體緩衝處理了。 您可以觀察此行為上設定中斷點`yield``return`陳述式內的`ItemGenerator.GenerateItems()`方法，您會看到，服務傳回的結果之後，首次遇到此中斷點`StreamedFeed()`方法。  
+ 這樣一來，項目資料流就永遠不會經過記憶體緩衝處理了。 您可以觀察此行為上設定中斷點`yield return`內的陳述式`ItemGenerator.GenerateItems()`方法，並注意的是，服務傳回的結果後第一次遇到此中斷點`StreamedFeed()`方法。  
   
 ## <a name="client"></a>用戶端  
  這個範例中的用戶端會使用自訂 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 實作，這個實作會延遲具體化摘要中的個別項目，而不是經過記憶體來緩衝處理它們。 下列為自訂 `StreamedAtom10FeedFormatter` 執行個體的使用方式。  
@@ -97,24 +97,24 @@ private IEnumerable<SyndicationItem> DelayReadItems(XmlReader reader, Syndicatio
 }  
 ```  
   
- 這樣一來，除非周遊 `ReadItems()` 結果的用戶端應用程式準備好要使用每個項目，否則無法從網路讀取每個項目。 您可以觀察此行為上設定中斷點`yield``return`陳述式內的`StreamedAtom10FeedFormatter.DelayReadItems()`並注意，在呼叫之後第一次遇到此中斷點`ReadFrom()`完成。  
+ 這樣一來，除非周遊 `ReadItems()` 結果的用戶端應用程式準備好要使用每個項目，否則無法從網路讀取每個項目。 您可以觀察此行為上設定中斷點`yield return`內的陳述式`StreamedAtom10FeedFormatter.DelayReadItems()`並注意到，在呼叫之後第一次遇到此中斷點`ReadFrom()`完成。  
   
  下列指示說明如何建置並執行範例。 請注意，雖然伺服器會在用戶端讀取 10 次之後已經停止產生項目，但輸出仍會顯示用戶端明顯讀取了 10 次以上。 這是因為範例所使用的網路繫結會以 4 KB 的區段為一個單位來傳送資料。 因此，用戶端根本沒機會讀取項目，就會立即收到 4 KB 大小的項目資料。 這是正常行為 (透過合理大小的區段來傳送資料流處理的 HTTP 資料能夠提升效能)。  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-3.  若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StreamingFeeds`  
   

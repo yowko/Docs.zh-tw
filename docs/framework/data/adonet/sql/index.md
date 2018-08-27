@@ -2,12 +2,12 @@
 title: SQL Server 和 ADO.NET
 ms.date: 03/30/2017
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
-ms.openlocfilehash: 87e46ad9e83929e40daecc3e3af2eb1281c5ced9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cfb24be22ebec9a49c489ddcbff4824c4cd3cf34
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360709"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935080"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server 和 ADO.NET
 本節說明 .NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) 特有的功能與行為。  
@@ -38,7 +38,7 @@ ms.locfileid: "33360709"
   
  如需 SQL Server Database Engine 的完整文件，請參閱您所使用之 SQL Server 版本的《SQL Server 線上叢書》。  
   
- [SQL Server 線上叢書](http://msdn.microsoft.com/library/ms130214.aspx)  
+ [SQL Server 線上叢書](/sql/sql-server/sql-server-technical-documentation)  
   
 ## <a name="see-also"></a>另請參閱  
  [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

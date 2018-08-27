@@ -3,12 +3,12 @@ title: 查詢物件集合 (C# 中的 LINQ)
 description: 了解如何使用 C# 中的 LINQ 查詢集合。
 ms.date: 11/30/2016
 ms.assetid: 87a76f8a-0b58-4791-90ea-2fe0a30416c9
-ms.openlocfilehash: 87c7bbe789c165a6e189231df1979fc264a34dce
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 7bc59e7009f9ae8d8f66c24e9519d9100404c9c4
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37403917"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935537"
 ---
 # <a name="query-a-collection-of-objects"></a>查詢物件的集合
 
@@ -26,5 +26,5 @@ ms.locfileid: "37403917"
   
 ## <a name="see-also"></a>另請參閱
 
-[Language-Integrated Query (LINQ)](index.md)  
-[字串內插補點](../language-reference/tokens/interpolated.md)
+- [Language-Integrated Query (LINQ)](index.md)  
+- [字串內插補點](../language-reference/tokens/interpolated.md)

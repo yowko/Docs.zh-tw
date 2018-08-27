@@ -2,11 +2,12 @@
 title: 在 SQL Server 中加密資料
 ms.date: 03/30/2017
 ms.assetid: 83b992f7-b351-4678-b4b9-f4ffd58134cc
-ms.openlocfilehash: 9e2924dc9f2f2954f6690ad5009c4143d1b9a44f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d662f04cb54e12abfc481487cb5172f63edf0316
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932740"
 ---
 # <a name="data-encryption-in-sql-server"></a>在 SQL Server 中加密資料
 SQL Server 提供使用憑證、非對稱金鑰或對稱金鑰來加密及解密資料的功能， 而且可在內部的憑證存放區內管理上述所有項目。 此存放區會使用加密階層，藉由階層中的上層層級來確保下層層級的憑證及金鑰。 SQL Server 的此功能區也稱為「秘密儲存區」(Secret Storage)。  
@@ -18,15 +19,15 @@ SQL Server 提供使用憑證、非對稱金鑰或對稱金鑰來加密及解密
   
  SQL Server 可在資料庫連接的範圍內維護多個開放式的對稱金鑰。 您可從存放區擷取開放式金鑰，並將其用於解密資料。 在資料解密後，就不需指定要使用的對稱金鑰。 每個加密的值都包含加密時所使用金鑰的識別碼 (金鑰 GUID)。 如果已解密並開啟了正確的金鑰，則引擎會比對加密的位元組資料流與開放式對稱金鑰， 然後再使用此金鑰來執行解密作業並傳回資料。 如果沒有開啟正確的金鑰，則會傳回 NULL。  
   
- 如需示範如何使用資料庫中的加密資料的範例，請參閱[如何： 加密資料行的資料](http://go.microsoft.com/fwlink/?LinkID=128559)SQL Server 線上叢書 》 中。  
+ 如需示範如何使用資料庫中的加密資料的範例，請參閱[加密資料行的](/sql/relational-databases/security/encryption/encrypt-a-column-of-data)。
   
 ## <a name="external-resources"></a>外部資源  
  如需有關資料加密的詳細資訊，請參閱下列資源。  
   
-|||  
+|資源|描述|  
 |-|-|  
-|[SQL Server 加密](http://msdn.microsoft.com/library/bb510663.aspx)SQL Server 線上叢書中|提供 SQL Server 中的加密概觀。 此主題包含其他主題和「如何」文件的連結。|  
-|[加密階層](http://msdn.microsoft.com/library/ms189586.aspx)和[加密的如何主題](http://msdn.microsoft.com/library/aa337557.aspx)SQL Server 線上叢書中|提供 SQL Server 中的加密概觀。 此主題包含其他主題和「如何」文件的連結。|  
+|[SQL Server 加密](/sql/relational-databases/security/encryption/sql-server-encryption)|提供 SQL Server 中的加密概觀。 本主題包含其他文章連結。|  
+|[加密階層](/sql/relational-databases/security/encryption/encryption-hierarchy)|提供 SQL Server 中的加密概觀。 本主題提供的其他文章連結。|  
   
 ## <a name="see-also"></a>另請參閱  
  [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

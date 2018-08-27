@@ -1,17 +1,17 @@
 ---
 title: '#if 前置處理器指示詞 (C# 參考)'
-ms.date: 02/13/2017
+ms.date: 06/30/2018
 f1_keywords:
 - '#if'
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: 2ae0af6971dbf549b52e8168e035d8582bdab61d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c54a1fe0dba5f6d57b03b2ffeb4f1737fadfe039
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33287679"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000933"
 ---
 # <a name="if-c-reference"></a>#if (C# 參考)
 
@@ -33,9 +33,9 @@ ms.locfileid: "33287679"
 
 `#define` 可讓您定義符號。 屆時，使用該符號作為傳遞到 `#if` 指示詞的運算式，運算式就會評估為 `true`。
 
-您也可以使用 [/define](../compiler-options/define-compiler-option.md) 編譯器選項來定義符號。 您可以使用 [#undef](preprocessor-undef.md) 來取消定義符號。
+您也可以使用 [-define](../compiler-options/define-compiler-option.md) 編譯器選項來定義符號。 您可以使用 [#undef](preprocessor-undef.md) 來取消定義符號。
 
-透過 `/define` 或 `#define` 定義的符號不會與相同名稱的變數發生衝突。 也就是說，您不應將變數名稱傳遞給前置處理器指示詞，而且符號僅能由前置處理器指示詞來評估。
+透過 `-define` 或 `#define` 定義的符號不會與相同名稱的變數發生衝突。 也就是說，您不應將變數名稱傳遞給前置處理器指示詞，而且符號僅能由前置處理器指示詞來評估。
 
 使用 `#define` 建立的符號範圍是定義它的檔案。
 
@@ -88,7 +88,7 @@ public class MyClass
 
 ## <a name="see-also"></a>另請參閱
 
-[C# 參考](../../../csharp/language-reference/index.md)  
-[C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-[C# 前置處理器指示詞](index.md)  
-[如何：使用追蹤和偵錯進行條件式編譯](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)。
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 前置處理器指示詞](index.md)  
+- [如何：使用追蹤和偵錯進行條件式編譯](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)。

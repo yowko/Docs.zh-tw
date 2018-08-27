@@ -7,12 +7,12 @@ helpviewer_keywords:
 - '&& operator [C#]'
 - logical AND operator [C#]
 ms.assetid: 2e4f0a1c-92a3-40f8-8e3b-17b607f20c31
-ms.openlocfilehash: 15bb3e9702f04cc805af63767c7ecbfc68160368
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 459b791fde3e4d3940dbd3d916f940e81f365da6
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34171911"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999726"
 ---
 # <a name="ampamp-operator-c-reference"></a>&amp;&amp; 運算子 (C# 參考)
 條件式 AND 運算子 (`&&`) 會執行其 `bool` 運算元的邏輯 AND，但只有在必要時才會評估其第二個運算元。  
@@ -42,7 +42,8 @@ x & y
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [C# 運算子](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 運算子](../../../csharp/language-reference/operators/index.md)

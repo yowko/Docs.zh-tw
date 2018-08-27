@@ -5,11 +5,12 @@ helpviewer_keywords:
 - keywords [C#], modifiers
 - modifiers [C#]
 ms.assetid: c96691dd-b357-49ec-b5ae-03ca214fadfb
-ms.openlocfilehash: 241cbc767a3d094d664cf77f488e4154812d7516
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5000f94a954994769eda2ac09404ba6a71c4639b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930360"
 ---
 # <a name="modifiers-c-reference"></a>修飾詞 (C# 參考)
 修飾詞用來修飾類型和類型成員的宣告。 本節將介紹 C# 修飾詞。  
@@ -32,7 +33,8 @@ ms.lasthandoff: 05/04/2018
 |[virtual](../../../csharp/language-reference/keywords/virtual.md)|宣告方法或存取子的實作可藉由覆寫衍生類別中的成員變更。|  
 |[volatile](../../../csharp/language-reference/keywords/volatile.md)|表示欄位可以在程式中藉由像是作業系統、硬體或是同時執行的執行緒進行修改。|  
   
-## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)

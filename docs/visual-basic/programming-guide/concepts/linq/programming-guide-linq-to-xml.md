@@ -3,11 +3,11 @@ title: 程式設計手冊 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1f942bf-3404-4354-b4c5-4fe35e37a02b
 ms.openlocfilehash: 70c169cecc8ca4ede30216bc832a8518766cd1a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647413"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929811"
 ---
 # <a name="programming-guide-linq-to-xml-visual-basic"></a>程式設計手冊 (LINQ to XML) (Visual Basic)
 本節提供使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 進行程式設計的概念性和使用說明資訊。  
@@ -17,7 +17,7 @@ ms.locfileid: "33647413"
   
  本文件的目標在於讓各種開發人員容易使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 可讓 XML 程式設計更為容易。 您不需要是專業開發人員就可以使用本文件。  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 大量依賴泛型類別。 因此，是非常重要的是了解使用泛型型別和類別。 如需詳細資訊，請參閱[Visual Basic 中的泛型類型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 大量依賴泛型類別。 因此，是非常重要的是您已了解使用泛型型別和類別。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Basic 中的泛型型別](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -29,7 +29,7 @@ ms.locfileid: "33647413"
 |[序列化 XML 樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)|描述多個序列化 XML 樹狀的方法，並提供要使用哪個方法的指引。|  
 |[LINQ to XML 軸 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)|列舉並描述 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 座標軸方法，您必須在撰寫 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢之前了解這些方法。|  
 |[查詢 XML 樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)|提供查詢 XML 樹狀的常見範例。|  
-|[修改 XML 樹狀 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)|如同文件物件模型 (DOM)，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 可讓您就地修改 XML 樹狀結構。|  
+|[修改 XML 樹狀結構 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)|如同文件物件模型 (DOM)，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 可讓您就地修改 XML 樹狀結構。|  
 |[進階的 LINQ to XML 程式設計 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)|提供附註、事件、串流以及其他進階案例的相關資訊。|  
 |[LINQ to XML 安全性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-security.md)|描述與 LINQ to XML 相關聯的安全性問題，並提供一些減少暴露其安全性的指引。|  
 |[範例 XML 文件 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)|包含本文件中的許多範例所使用的 XML 範例文件。|  

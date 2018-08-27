@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 94171b0708c97eb7510e916e451ed03645d706f3
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42754614"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933342"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle 函式
 傳回唯一的控制代碼識別屬性。

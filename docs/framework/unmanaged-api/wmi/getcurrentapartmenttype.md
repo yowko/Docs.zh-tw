@@ -1,6 +1,6 @@
 ---
 title: GetCurrentApartmentType 函式 （Unmanaged API 參考）
-description: GetCurrentApartmentType 函式會擷取呼叫端執行的所在的 apartment 的型別。
+description: GetCurrentApartmentType 函式會擷取呼叫端執行所在的 apartment 的型別。
 ms.date: 11/06/2017
 api_name:
 - GetCurrentApartmentType
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca7b5fa5bf6d845d542d3e80c0571e59f3d4c1e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4de85eb310de70dc8fd61f7c06abca95ec267f87
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461720"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931411"
 ---
 # <a name="getcurrentapartmenttype-function"></a>GetCurrentApartmentType 函式
-擷取的 apartment 呼叫者正在執行的所在的型別。   
+擷取呼叫端執行所在的 apartment 的型別。   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -41,32 +41,32 @@ HRESULT GetCurrentApartmentType (
 ## <a name="parameters"></a>參數
 
 `vFunc`  
-[in]未使用這個參數。
+[in]未使用此參數。
 
 `ptr`  
-[in]指標[IComThreadingInfo](https://msdn.microsoft.com/library/windows/desktop/ms694502(v=vs.85).aspx)執行個體。
+[in]指標[IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo)執行個體。
 
 `aptType`  
-[out]指標[APTTYPE](https://msdn.microsoft.com/library/windows/desktop/ms693793(v=vs.85).aspx)列舉值，指出呼叫端的 apartment。
+[out]指標[APTTYPE](/windows/desktop/api/objidlbase/ne-objidlbase-_apttype)列舉值，指出呼叫端的 apartment。
 
 ## <a name="return-value"></a>傳回值
 
 
 |常數  |值  |描述  |
 |---------|---------|---------|
-| `S_OK` | 0 | 已順利完成函式。 |
+| `S_OK` | 0 | 已成功完成函式。 |
 | `E_FAIL` | 0x80000008 | 呼叫端不在 apartment 中執行。 |
   
 ## <a name="remarks"></a>備註
 
-此函式會包裝呼叫[IComThreadingInfo::GetCurrentApartmentType](https://msdn.microsoft.com/library/windows/desktop/ms683752(v=vs.85).aspx)方法。
+此函式會包裝在呼叫[IComThreadingInfo::GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype)方法。
 
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.idl  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

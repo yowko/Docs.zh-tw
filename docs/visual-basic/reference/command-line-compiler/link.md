@@ -1,5 +1,5 @@
 ---
-title: -連結 (Visual Basic)
+title: -link (Visual Basic)
 ms.date: 03/10/2018
 helpviewer_keywords:
 - l compiler option [Visual Basic]
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
 ms.openlocfilehash: 95c528c4d686c44d0d77d1f55833be75ab14f8bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656265"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931886"
 ---
-# <a name="-link-visual-basic"></a>-連結 (Visual Basic)
+# <a name="-link-visual-basic"></a>-link (Visual Basic)
 讓編譯器將所指定組件的 COM 類型資訊全部提供給您目前編譯的專案。  
   
 ## <a name="syntax"></a>語法  
@@ -55,7 +55,7 @@ ms.locfileid: "33656265"
   
  使用[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)指定一或多個組件參考所在的目錄。  
   
- 像[/參考](../../../visual-basic/reference/command-line-compiler/reference.md)編譯器選項`-link`編譯器選項會使用 Vbc.rsp 回應檔，參照經常用於[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]組件。 使用[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)若不想讓編譯器使用 Vbc.rsp 檔案進行的編譯器選項。  
+ 像是[/reference](../../../visual-basic/reference/command-line-compiler/reference.md)編譯器選項`-link`編譯器選項會使用參考常用的 Vbc.rsp 回應檔[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]組件。 使用  [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)編譯器選項，如果不想讓編譯器使用 Vbc.rsp 檔案。  
   
  `-link` 的簡短形式為 `-l`。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "33656265"
  [!code-vb[VbLinkCompiler#5](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_5.vb)]  
   
 ## <a name="example"></a>範例  
- 下列命令列編譯原始程式檔`OfficeApp.vb`和參考組件從`COMData1.dll`和`COMData2.dll`產生`OfficeApp.exe`。  
+ 下列命令列編譯原始程式檔`OfficeApp.vb`，而且參考的組件`COMData1.dll`並`COMData2.dll`產生`OfficeApp.exe`。  
   
 ```console  
 vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  

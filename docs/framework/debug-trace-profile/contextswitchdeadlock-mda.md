@@ -14,58 +14,66 @@ helpviewer_keywords:
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2231758130630988e20fd9094c7a0bcfc67499d0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fdbad4a5eb9a9d0c81ae8d29394652e9f6df136e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935854"
 ---
 # <a name="contextswitchdeadlock-mda"></a>contextSwitchDeadlock MDA
-試圖進行 COM 內容轉換期間，偵測到死結時，會啟用 `contextSwitchDeadlock` Managed 偵錯助理 (MDA)。  
-  
-## <a name="symptoms"></a>徵兆  
- 最常見的徵兆是，在 Unmanaged COM 元件上從 Managed 程式碼進行的呼叫未傳回。  另一個徵兆是記憶體使用量隨著時間增加。  
-  
-## <a name="cause"></a>原因  
- 最有可能的原因是，單一執行緒 Apartment (STA) 執行緒沒有提取訊息。 STA 執行緒可能正在等待而沒有提取訊息，或是正在執行長時間作業，不允許訊息佇列提取。  
-  
- 記憶體使用量隨著時間增加的原因，是因為完成項執行緒試圖在 Unmanaged COM 元件上呼叫 `Release`，而該元件未傳回。  這會導致完成項無法回收其他物件。  
-  
- 根據預設，Visual Basic 主控台應用程式主要執行緒的執行緒模型為 STA。 如果 STA 執行緒直接或間接透過通用語言執行平台或協力廠商控制項來使用 COM 互通性，就會啟用此 MDA。  若要避免在 Visual Basic 主控台應用程式中啟用此 MDA，請將 <xref:System.MTAThreadAttribute> 屬性套用至 Main 方法，或修改應用程式來提取訊問。  
-  
- 在符合下列所有條件的情況下，有可能會錯誤地啟用此 MDA：  
-  
--   應用程式直接或間接透過程式庫，從 STA 執行緒建立 COM 元件。  
-  
--   已在偵錯工具中停止應用程式，而使用者繼續應用程式，或執行步驟作業。  
-  
--   未啟用 Unmanaged 偵錯。  
-  
- 若要判斷是否錯誤地啟用 MDA，請停用所有中斷點、重新啟動應用程式，並且讓它不間斷地執行。 如果未啟用 MDA，則可能初始啟用時發生錯誤。 若是如此，請停用 MDA，以避免阻礙偵錯工作階段。  
-  
+
+試圖進行 COM 內容轉換期間，偵測到死結時，會啟用 `contextSwitchDeadlock` Managed 偵錯助理 (MDA)。
+
+## <a name="symptoms"></a>徵兆
+
+最常見的徵兆是，在 Unmanaged COM 元件上從 Managed 程式碼進行的呼叫未傳回。  另一個徵兆是記憶體使用量隨著時間增加。
+
+## <a name="cause"></a>原因
+
+最有可能的原因是，單一執行緒 Apartment (STA) 執行緒沒有提取訊息。 STA 執行緒可能正在等待而沒有提取訊息，或是正在執行長時間作業，不允許訊息佇列提取。
+
+記憶體使用量隨著時間增加的原因，是因為完成項執行緒試圖在 Unmanaged COM 元件上呼叫 `Release`，而該元件未傳回。  這會導致完成項無法回收其他物件。
+
+根據預設，Visual Basic 主控台應用程式主要執行緒的執行緒模型為 STA。 如果 STA 執行緒直接或間接透過通用語言執行平台或協力廠商控制項來使用 COM 互通性，就會啟用此 MDA。  若要避免在 Visual Basic 主控台應用程式中啟用此 MDA，請將 <xref:System.MTAThreadAttribute> 屬性套用至 Main 方法，或修改應用程式來提取訊問。
+
+在符合下列所有條件的情況下，有可能會錯誤地啟用此 MDA：
+
+-   應用程式直接或間接透過程式庫，從 STA 執行緒建立 COM 元件。
+
+-   已在偵錯工具中停止應用程式，而使用者繼續應用程式，或執行步驟作業。
+
+-   未啟用 Unmanaged 偵錯。
+
+若要判斷是否錯誤地啟用 MDA，請停用所有中斷點、重新啟動應用程式，並且讓它不間斷地執行。 如果未啟用 MDA，則可能初始啟用時發生錯誤。 若是如此，請停用 MDA，以避免阻礙偵錯工作階段。
+
 > [!NOTE]
->  此 MDA 在 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 及較新版本的預設集中。 在 Visual Studio 中啟用裝載處理序時，您無法停用預設集中的 Mda。 預設會啟用裝載處理序，所以必須明確將其停用。 如需如何停用 MDA 的資訊，請參閱[診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)中的＜啟用和停用 MDA＞。  
-  
-## <a name="resolution"></a>解決方式  
- 遵循有關 STA 訊息幫浦的 COM 規則。  
-  
-## <a name="effect-on-the-runtime"></a>對執行階段的影響  
- 此 MDA 對 CLR 沒有影響。 它只會提報 COM 內容的相關資料。  
-  
-## <a name="output"></a>輸出  
- 描述目前內容和目標內容的訊息。  
-  
-## <a name="configuration"></a>組態  
-  
-```xml  
-<mdaConfig>  
-  <assistants>  
-    <contextSwitchDeadlock />  
-  </assistants>  
-</mdaConfig>  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Interop 封送處理](../../../docs/framework/interop/interop-marshaling.md)
+> 此 MDA 會在預設設定適用於 Visual Studio。 如需有關如何停用 Mda 的資訊，請參閱 < [Managed 偵錯助理診斷錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md#enable-and-disable-mdas)。
+
+## <a name="resolution"></a>解決方式
+
+遵循有關 STA 訊息幫浦的 COM 規則。
+
+## <a name="effect-on-the-runtime"></a>對執行階段的影響
+
+此 MDA 對 CLR 沒有影響。 它只會提報 COM 內容的相關資料。
+
+## <a name="output"></a>輸出
+
+描述目前內容和目標內容的訊息。
+
+## <a name="configuration"></a>組態
+
+```xml
+<mdaConfig>
+  <assistants>
+    <contextSwitchDeadlock />
+  </assistants>
+</mdaConfig>
+```
+
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Interop 封送處理](../../../docs/framework/interop/interop-marshaling.md)

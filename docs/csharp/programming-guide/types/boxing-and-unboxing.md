@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: eff5f05aa8b5081069b9e0f2f5f152669afaea18
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: b4bf63af1955582083e7ff54a5717f1ce56dfbb1
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207914"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929282"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Boxing 和 Unboxing (C# 程式設計手冊)
 Boxing 是將[實值型別](../../../csharp/language-reference/keywords/value-types.md)轉換為 `object` 類型或是由這個實值型別實作之任何介面類型的程序。 當 CLR Box 處理實值類型時，它會將值包裝在 System.Object 內，並儲存到 Managed 堆積上。 Unbox 處理則會從物件中擷取實值類型。 Boxing 是隱含處理，unboxing 則是明確處理。 Boxing 和 unboxing 的概念是 C# 類型系統統一檢視的基礎，其中任何類型的值都可視為物件。  
@@ -32,7 +32,7 @@ Boxing 是將[實值型別](../../../csharp/language-reference/keywords/value-ty
  [!code-csharp[csProgGuideTypes#47](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_3.cs)]  
   
 ## <a name="performance"></a>效能  
- 相對於單純的指派，boxing 和 unboxing 是會耗費大量運算資源的處理序。 當實值類型經過 Box 處理時，必須配置及建構新的物件。 Unboxing 所需的轉換雖然較為簡單，但也同樣需要大量運算資源。 如需詳細資訊，請參閱[效能](https://msdn.microsoft.com/library/ms173196(VS.110).aspx)。  
+ 相對於單純的指派，boxing 和 unboxing 是會耗費大量運算資源的處理序。 當實值類型經過 Box 處理時，必須配置及建構新的物件。 Unboxing 所需的轉換雖然較為簡單，但也同樣需要大量運算資源。 如需詳細資訊，請參閱[效能](../../../../docs/framework/performance/performance-tips.md)。  
   
 ## <a name="boxing"></a>Boxing  
  Boxing 可用來儲存記憶體回收堆積中的實值類型。 Boxing 是一種隱含轉換，可將[實值型別](../../../csharp/language-reference/keywords/value-types.md)轉換為 `object` 類型，或是由這個實值型別實作的任何介面類型。 對實值類型進行 Boxing 處理時，會在堆積上配置物件執行個體，並將值複製到新物件中。  
@@ -89,13 +89,13 @@ Unboxing 轉換
   
  如果您將陳述式：  
   
-```  
+```csharp
 int j = (short) o;  
 ```  
   
  變更為：  
   
-```  
+```csharp
 int j = (int) o;  
 ```  
   

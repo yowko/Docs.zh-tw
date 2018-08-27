@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise exclusive OR operator [C#]
 ms.assetid: b09bc815-570f-4db6-a637-5b4ed99d014a
-ms.openlocfilehash: 5cc3cd2cfc932646e5b2dd6ec034555b07582379
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1333f9d06e2804029550e6364a225558e096431
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271246"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925294"
 ---
 # <a name="-operator-c-reference"></a>^ 運算子 (C# 參考)
 整數型別和 `bool` 會預先定義二元 `^` 運算子。 對於整數型別，`^` 會計算其運算元的位元互斥 OR。 對於 `bool` 運算元，`^` 會計算其運算元的邏輯位元互斥 OR；亦即，如果且唯有在正好其中一個運算元是 `true` 時，結果會是 `true`。  
@@ -31,7 +31,8 @@ ms.locfileid: "33271246"
   
  互斥 OR 的結果是 `1100 0111`，這是十六進位的 C7。  
   
-## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [C# 運算子](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 運算子](../../../csharp/language-reference/operators/index.md)

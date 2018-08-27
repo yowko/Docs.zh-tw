@@ -12,12 +12,12 @@ ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a5fccf5ea86469f14963fad8e7d2af0f7c68d2df
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 8342f1389718eb41d1138e0bdd166530c1f2a10e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37107028"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933601"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 系統上的檔案路徑格式
 
@@ -181,7 +181,7 @@ DOS 裝置路徑由以下元件組成：
 
 ## <a name="skipping-normalization"></a>略過正規化
 
-一般而言，任何傳遞給 Windows API 的路徑 (實際上) 會傳遞給 [GetFullPathName 函式](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx)並正規化。 有一個重要的例外狀況：開頭為問號而非句號的裝置路徑。 除非路徑開頭完全為 `\\?\`(請注意我們使用了標準的反斜線)，否則它會正規化。
+一般而言，任何傳遞給 Windows API 的路徑 (實際上) 會傳遞給 [GetFullPathName 函式](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)並正規化。 有一個重要的例外狀況：開頭為問號而非句號的裝置路徑。 除非路徑開頭完全為 `\\?\`(請注意我們使用了標準的反斜線)，否則它會正規化。
 
 為何會想要略過正規化？ 有三個主要的原因：
 
@@ -196,9 +196,9 @@ DOS 裝置路徑由以下元件組成：
 
 略過正規化和最大路徑檢查是兩個裝置路徑語法之間唯一的差異，它們在其他方面都一樣。 略過正規化時請小心，因為您可能會很容易就建立令「正常」應用程式難以處理的路徑。
 
-開頭為 `\\?\` 的路徑，在您明確地將其傳遞給 [GetFullPathName 函式](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx)時，仍會正規化。
+開頭為 `\\?\` 的路徑，在您明確地將其傳遞給 [GetFullPathName 函式](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)時，仍會正規化。
 
-請注意，您可以將多於 `MAX_PATH` 個字元的路徑傳遞給 [GetFullPathName](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx) 而不需要 `\\?\`。 它支援最長可達 Windows 可處理字串大小上限的任意長度路徑。
+請注意，您可以將多於 `MAX_PATH` 個字元的路徑傳遞給 [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) 而不需要 `\\?\`。 它支援最長可達 Windows 可處理字串大小上限的任意長度路徑。
 
 ## <a name="case-and-the-windows-file-system"></a>大小寫與 Windows 檔案系統
 

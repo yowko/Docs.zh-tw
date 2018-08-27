@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aa8cbe0cc87e656eeb8cd0234875a87ade9c05f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eeb050e7741422b286c553182cea891278ac9ee7
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393597"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998743"
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 移轉問題
 
@@ -122,7 +122,7 @@ ms.locfileid: "33393597"
 | **組件載入** | 為了避免重複載入組件，以及儲存虛擬位址空間，CLR 現在只會使用 Win32 `MapViewOfFile` 函式載入組件。 它也不再呼叫 `LoadLibrary` 函式。<br><br>這項變更會以下列方式影響診斷應用程式：<br><br>* <xref:System.Diagnostics.ProcessModuleCollection> 將不再包含從 `Process.GetCurrentProcess().Modules` 呼叫取得之類別庫 (.dll 檔案) 中的任何模組。<br>* 使用 `EnumProcessModules` 函式的 Win32 應用程式看不到所有列出的受管理模組。 | 無。 |
 | **宣告類型** | 類型沒有宣告類型時，<xref:System.Type.DeclaringType> 屬性現在會正確地傳回 Null。 | 無。 |
 | **委派** | 將 Null 值傳遞給委派的建構函式時，委派現在會擲回 <xref:System.ArgumentNullException>，而不是 <xref:System.NullReferenceException>。 | 請確定任何例外狀況處理攔截到 <xref:System.ArgumentNullException>。 |
-| **全域組件快取位置變更** | 針對 .NET Framework 4 組件，已將全域組件快取從 Windows 目錄 (%WINDIR%) 移至 Microsoft.Net 子目錄 (*%WINDIR%\\Microsoft.Net*)。 舊版本中的組件會保留在較舊的目錄中。<br><br>未受管理的 [ASM_CACHE_FLAGS](https://msdn.microsoft.com/library/ms231621(v=vs.100).aspx) 列舉包含新的 `ASM_CACHE_ROOT_EX` 旗標。 此旗標會取得 .NET Framework 4 組件的快取位置，而快取位置可以透過 [GetCachePath](/dotnet/framework/unmanaged-api/fusion/getcachepath-function) 函式取得。 | 無，假設應用程式未使用組件的明確路徑，這不是建議的作法。 |
+| **全域組件快取位置變更** | 針對 .NET Framework 4 組件，已將全域組件快取從 Windows 目錄 (%WINDIR%) 移至 Microsoft.Net 子目錄 (*%WINDIR%\\Microsoft.Net*)。 舊版本中的組件會保留在較舊的目錄中。<br><br>未受管理的 [ASM_CACHE_FLAGS](../unmanaged-api/fusion/asm-cache-flags-enumeration.md) 列舉包含新的 `ASM_CACHE_ROOT_EX` 旗標。 此旗標會取得 .NET Framework 4 組件的快取位置，而快取位置可以透過 [GetCachePath](../unmanaged-api/fusion/getcachepath-function.md) 函式取得。 | 無，假設應用程式未使用組件的明確路徑，這不是建議的作法。 |
 | **全域組件快取工具** | [Gacutil.exe (全域組件快取工具)](https://msdn.microsoft.com/library/ex0ss12c(v=vs.100).aspx) 不再支援殼層外掛程式檢視器。 | 無。 |
 
 ### <a name="interoperability"></a>互通性
@@ -131,9 +131,9 @@ ms.locfileid: "33393597"
 
 | 功能 | 3.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
-| **緩衝區長度** (Unmanaged API) | 為了節省記憶體，[ICorProfilerInfo2::GetStringLayout](/dotnet/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method) 方法之 `pBufferLengthOffset` 參數的功能已變更成符合 `pStringLengthOffset` 參數。 這兩個參數現在會指向字串長度的位移位置。 已從字串類別呈現移除緩衝區長度。 | 移除緩衝區長度的任何相依性。 |
+| **緩衝區長度** (Unmanaged API) | 為了節省記憶體，[ICorProfilerInfo2::GetStringLayout](../unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) 方法之 `pBufferLengthOffset` 參數的功能已變更成符合 `pStringLengthOffset` 參數。 這兩個參數現在會指向字串長度的位移位置。 已從字串類別呈現移除緩衝區長度。 | 移除緩衝區長度的任何相依性。 |
 | **JIT 偵錯** | 若要簡化 Just-In-Time (JIT) 偵錯的註冊，.NET Framework 偵錯工具現在只會使用 AeDebug 登錄機碼，以控制機器碼的 JIT 偵錯行為。 這項變更會導致下列各項：<br><br>* 您無法再針對 Managed 和機器碼註冊兩個不同的偵錯工具。<br>* 您可以不再針對非互動式處理序自動啟動偵錯工具，但可以提示使用者進行互動式處理序。<br>* 在無法啟動偵錯工具時，或沒有應該啟動的註冊偵錯工具時，不再通知您。<br>* 不再支援取決於應用程式互動性的自動啟動原則。 | 依需要調整偵錯作業。 |
-| **平台叫用** | 為了改善與 Unmanaged 程式碼之互通性的效能，平台叫用中的不正確呼叫慣例現在會讓應用程式失敗。 在舊版本中，封送處理層會解析堆疊中的這些錯誤。 | 對 Microsoft Visual Studio 2010 中的應用程式進行偵錯將會警告您發生這些錯誤，因此您可以更正它們。<br><br>如果您有無法更新的二進位檔，則可以將 [\<NetFx40_PInvokeStackResilience>](/dotnet/framework/configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element) 項目包含在您應用程式的組態檔中，以解決舊版堆疊中的呼叫錯誤。 不過，這可能會影響應用程式的效能。 |
+| **平台叫用** | 為了改善與 Unmanaged 程式碼之互通性的效能，平台叫用中的不正確呼叫慣例現在會讓應用程式失敗。 在舊版本中，封送處理層會解析堆疊中的這些錯誤。 | 對 Microsoft Visual Studio 2010 中的應用程式進行偵錯將會警告您發生這些錯誤，因此您可以更正它們。<br><br>如果您有無法更新的二進位檔，則可以將 [\<NetFx40_PInvokeStackResilience>](../configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element.md) 項目包含在您應用程式的組態檔中，以解決舊版堆疊中的呼叫錯誤。 不過，這可能會影響應用程式的效能。 |
 | **已移除介面** (Unmanaged API) | 為了避免開發人員混淆，已移除下列介面，因為它們未提供任何有用的執行階段案例，而且 CLR 未提供或接受任何實作：<br><br>* **INativeImageINativeImageDependency**<br>* **INativeImageInstallInfo**<br>* **INativeImageEvaluate**<br>* **INativeImageConverter**<br>* **ICorModule**<br>* **IMetaDataConverter** | 無。 |
 
 ## <a name="data"></a>資料

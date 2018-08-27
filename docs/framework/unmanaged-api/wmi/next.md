@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e945930a9a668d0a1c1e4c26bf3add9cc574c261
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 15d470ccf9384695aa38a50c2c062c1b660fea96
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461424"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934969"
 ---
 # <a name="next-function"></a>下一個函式
-擷取列舉開頭的呼叫中的下一個屬性[BeginEnumeration](beginenumeration.md)。  
+擷取開頭呼叫列舉中的下一個屬性[BeginEnumeration](beginenumeration.md)。  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -45,62 +45,62 @@ HRESULT Next (
 ## <a name="parameters"></a>參數
 
 `vFunc`  
-[in]未使用這個參數。
+[in]未使用此參數。
 
 `ptr`  
-[in]指標[IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)執行個體。
+[in]指標[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)執行個體。
 
 `lFlags`  
 [in]保留。 這個參數必須是 0。
 
 `pstrName`  
-[out]新`BSTR`，其中包含屬性名稱。 您可以將此參數設定為`null`如果不需要名稱。
+[out]新`BSTR`含有屬性名稱。 您可以將此參數設定為`null`如果名稱不需要。
 
 `pVal`  
-[out]A`VARIANT`填入屬性的值。 您可以將此參數設定為`null`如果不需要值。 如果函數傳回的錯誤碼，`VARIANT`傳遞至`pVal`左未經修改。 
+[out]A`VARIANT`填滿屬性的值。 您可以將此參數設定為`null`如果不需要值。 如果函數傳回的錯誤碼`VARIANT`傳遞至`pVal`左未經修改。 
 
 `pvtType`  
-[out]指標`CIMTYPE`變數 (`LONG`屬性的型別會放入)。 這個屬性的值可以是`VT_NULL_VARIANT`，在此情況下則需要判斷實際屬性型別。 這個參數也可以是`null`。 
+[out]指標`CIMTYPE`變數 (`LONG`到置於屬性的型別)。 這個屬性的值可以是`VT_NULL_VARIANT`，在此情況下就必須判斷屬性的實際型別。 這個參數也可以是`null`。 
 
 `plFlavor`  
-[out]`null`，或接收資訊來源之屬性的值。 請參閱 [備註] 提供可能的值。 
+[out]`null`，或接收的原始伺服器上的資訊屬性的值。 請參閱 [備註] 區段，如需可能值。 
 
 ## <a name="return-value"></a>傳回值
 
-這個函式傳回下列值會定義在*WbemCli.h*標頭檔，或者您可以定義它們以常數的形式在程式碼中：
+此函式所傳回的下列值中定義*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼：
 
 |常數  |值  |描述  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | 0x80041001 | 發生一般失敗。 |
+| `WBEM_E_FAILED` | 0x80041001 | 已有一般失敗。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 參數無效。 |
 | `WBEM_E_UNEXPECTED` | 0x8004101d | 沒有不需要呼叫[ `BeginEnumeration` ](beginenumeration.md)函式。 |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 使用開始新的列舉型別沒有足夠的記憶體。 |
-| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | 遠端程序呼叫之目前處理序和失敗的 Windows 管理。 |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體可供開始新的列舉型別。 |
+| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | 遠端程序會呼叫之失敗的 Windows 管理與目前的處理序。 |
 | `WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
-| `WBEM_S_NO_MORE_DATA` | 0x40005 | 列舉中沒有其他內容。 |
+| `WBEM_S_NO_MORE_DATA` | 0x40005 | 列舉中沒有更多的屬性。 |
   
 ## <a name="remarks"></a>備註
 
-此函式會包裝呼叫[IWbemClassObject::Next](https://msdn.microsoft.com/library/aa391453(v=vs.85).aspx)方法。
+此函式會包裝在呼叫[IWbemClassObject::Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-next)方法。
 
 這個方法也會傳回系統屬性。
 
-如果屬性的基礎類型的物件路徑、 日期或時間或另一種特殊類型，則傳回的類型不包含足夠的資訊。 呼叫端必須檢查`CIMTYPE`指定判斷屬性是否為物件參考、 日期或時間或另一種特殊類型的屬性。
+如果屬性的基礎類型的物件路徑、 日期或時間或另一種特殊類型，傳回的型別並不會包含足夠的資訊。 呼叫端必須檢查`CIMTYPE`来判斷屬性是否有物件參考、 日期或時間或另一種特殊類型的指定屬性。
 
-如果`plFlavor`不`null`、`LONG`值接收資訊屬性的原點，如下所示：
+如果`plFlavor`不是`null`，則`LONG`值接收屬性的原始伺服器的相關資訊，如下所示：
 
 |常數  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | 屬性是標準的系統屬性。 |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | 類別： 屬性繼承自父類別。 </br> 執行個體： 屬性繼承自父類別，而尚未修改的執行個體。  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | 類別： 屬性屬於衍生的類別。 </br> 執行個體： 執行個體; 所修改的屬性也就是所提供的值，或辨識符號的加入或修改。 |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | 類別： 屬性繼承自父類別。 </br> 執行個體： 屬性，而繼承自父類別中，尚未修改的執行個體。  |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | 類別： 屬性屬於衍生的類別。 </br> 執行個體： 執行個體; 所修改的屬性也就是所提供的值，或加入或修改限定詞。 |
 
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.idl  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

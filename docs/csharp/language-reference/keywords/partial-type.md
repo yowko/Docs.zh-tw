@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - partial types [C#]
 ms.assetid: 27320743-a22e-4c7b-b0b3-53afe3607334
-ms.openlocfilehash: 4f57149dd18deb08aa11b72d0a6d5f71b3838bd1
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 362a02815cb249d57c0bd19706714df1d71644f4
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960293"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929659"
 ---
 # <a name="partial-type-c-reference"></a>partial (類型) (C# 參考)
 部分型別定義允許將類別、結構或介面定義分割成多個檔案。  
@@ -31,8 +31,9 @@ ms.locfileid: "37960293"
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)  
- [泛型簡介](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)  
+- [泛型簡介](../../../csharp/programming-guide/generics/introduction-to-generics.md)

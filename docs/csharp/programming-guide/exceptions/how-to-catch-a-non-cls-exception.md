@@ -5,11 +5,11 @@ helpviewer_keywords:
 - exceptions [C#], non-CLS
 ms.assetid: db4630b3-5240-471a-b3a7-c7ff6ab31e8d
 ms.openlocfilehash: c3153da78e0c25d59da7b5d83bd33f8080c7fae8
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198766"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42754939"
 ---
 # <a name="how-to-catch-a-non-cls-exception"></a>如何：攔截非 CLS 例外狀況
 包括 C++/CLI 在內的某些 .NET 語言，允許物件擲回非衍生自 <xref:System.Exception> 的例外狀況。 這類例外狀況稱之為「非 CLS 例外狀況」或「非例外狀況」。 在 C# 中無法擲回非 CLS 例外狀況，但有兩種方式可以攔截它們︰  

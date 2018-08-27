@@ -4,11 +4,11 @@ description: 周遊、查詢和查核語法樹狀結構的簡介。
 ms.date: 02/05/2018
 ms.custom: mvc
 ms.openlocfilehash: e377fe10e094e958627c3503fc39b7e2d02b3d7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356240"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931755"
 ---
 # <a name="get-started-with-syntax-analysis"></a>開始使用語法分析
 

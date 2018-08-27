@@ -3,11 +3,11 @@ title: 剖析 XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 7ea83f83-a779-423a-9875-4ea4e51f97fc
 ms.openlocfilehash: 876cfdf7bd5a82aba75d456d6d5cda57e080fdf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321700"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933978"
 ---
 # <a name="parsing-xml-c"></a>剖析 XML (C#)
 本節中的主題描述如何剖析 XML 文件。  

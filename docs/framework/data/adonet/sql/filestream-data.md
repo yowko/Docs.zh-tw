@@ -2,12 +2,12 @@
 title: FILESTREAM 資料
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: 782674cb38669c400bd5d730c2fd0c144778a985
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb7291fad15917614f5eebd31ad0e239c987a81d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357766"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931396"
 ---
 # <a name="filestream-data"></a>FILESTREAM 資料
 FILESTREAM 儲存體屬性適用於儲存在 varbinary(max) 資料行中的二進位 (BLOB) 資料。 在引進 FILESTREAM 之前，儲存二進位資料需要特殊處理。 文字文件、影像和視訊等非結構化資料通常會儲存在資料庫外部，因而難以管理。  
@@ -18,7 +18,7 @@ FILESTREAM 儲存體屬性適用於儲存在 varbinary(max) 資料行中的二�
  針對 varbinary(max) 資料行指定 FILESTREAM 屬性會導致 SQL Server 將資料儲存在本機 NTFS 檔案系統上，而非資料庫檔案中。 雖然系統會以不同的方式儲存資料，但是您仍可使用支援搭配儲存在資料庫中之 varbinary(max) 資料的相同 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 陳述式 (Statement)。  
   
 ## <a name="sqlclient-support-for-filestream"></a>FILESTREAM 的 SqlClient 支援  
- [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server <xref:System.Data.SqlClient>、 支援讀取和寫入 FILESTREAM 資料使用<xref:System.Data.SqlTypes.SqlFileStream>類別中定義<xref:System.Data.SqlTypes>命名空間。 `SqlFileStream` 繼承自 <xref:System.IO.Stream> 類別，可提供讀取和寫入資料流的方法。 讀取資料流會將資料從資料流傳送至資料結構中，例如位元組的陣列。 寫入則會將資料從資料結構傳送至資料流中。  
+ [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server <xref:System.Data.SqlClient>、 讀取和寫入 FILESTREAM 資料使用的支援<xref:System.Data.SqlTypes.SqlFileStream>類別中定義<xref:System.Data.SqlTypes>命名空間。 `SqlFileStream` 繼承自 <xref:System.IO.Stream> 類別，可提供讀取和寫入資料流的方法。 讀取資料流會將資料從資料流傳送至資料結構中，例如位元組的陣列。 寫入則會將資料從資料結構傳送至資料流中。  
   
 ### <a name="creating-the-sql-server-table"></a>建立 SQL Server 資料表  
  下列 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 陳述式會建立名為 employees 的資料表並插入一個資料列。 一旦您啟用了 FILESTREAM 儲存體之後，就可以使用這份資料表搭配後面的程式碼範例。 SQL Server 線上叢書 》 中的資源連結位於本主題的結尾。  
@@ -167,18 +167,18 @@ namespace FileStreamTest
 }
 ```  
   
- 如需其他範例，請參閱[如何儲存和擷取二進位資料至檔案資料流資料行](http://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str)。  
+ 如需其他範例，請參閱[如何儲存和擷取至檔案資料流資料行的二進位資料](http://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str)。  
   
 ## <a name="resources-in-sql-server-books-online"></a>SQL Server 線上叢書中的資源  
- FILESTREAM 的完整文件位於 SQL Server 線上叢書 》 中的下列章節。  
+ FILESTREAM 的完整文件位於 SQL Server 線上叢書 》 中的下列各節。  
   
 |主題|描述|  
 |-----------|-----------------|  
 |[設計和實作 FILESTREAM 儲存體](http://msdn2.microsoft.com/library/bb895234\(SQL.105\).aspx)|提供 FILESTREAM 文件和相關主題的連結。|  
 |[FILESTREAM 概觀](http://msdn2.microsoft.com/library/bb933993\(SQL.105\).aspx)|描述使用 FILESTREAM 儲存體的時機，以及它如何整合 SQL Server Database Engine 與 NTFS 檔案系統。|  
 |[開始使用 FILESTREAM 儲存體](http://msdn.microsoft.com/library/bb933995\(SQL.105\).aspx)|描述如何在 SQL Server 執行個體 (Instance) 上啟用 FILESTREAM、如何建立資料庫和資料表來儲存 FILESTREAM 資料，以及如何管理包含 FILESTREAM 資料的資料列。|  
-|[在用戶端應用程式中使用 FILESTREAM 儲存體](http://msdn.microsoft.com/library/bb933877\(SQL.105\).aspx)|描述可用於處理 FILESTREAM 資料的 Win32 API 函式。|  
-|[FILESTREAM 與其他 SQL Server 功能](http://msdn.microsoft.com/library/bb895334\(SQL.105\).aspx)|針對使用 FILESTREAM 資料搭配其他 SQL Server 功能提供相關的考量、指導方針和限制。|  
+|[在 用戶端應用程式中使用 FILESTREAM 儲存體](http://msdn.microsoft.com/library/bb933877\(SQL.105\).aspx)|描述可用於處理 FILESTREAM 資料的 Win32 API 函式。|  
+|[FILESTREAM 和其他 SQL Server 功能](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|針對使用 FILESTREAM 資料搭配其他 SQL Server 功能提供相關的考量、指導方針和限制。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 資料類型和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  

@@ -12,14 +12,14 @@ ms.assetid: e226946d-19ce-4cc9-91f5-aed24f77aa2b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ac495e10be2ec1534dc9d9081aef369773d93e17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649870"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933047"
 ---
 # <a name="-win32resource"></a>-win32resource
-將 Win32 資源檔插入輸出檔中。  
+將 Win32 資源檔插入輸出檔。  
   
 ## <a name="syntax"></a>語法  
   
@@ -29,20 +29,20 @@ ms.locfileid: "33649870"
   
 ## <a name="arguments"></a>引數  
  `filename`  
- 要加入至輸出檔的資源檔名稱。 將檔案名稱括在引號 ("") 如果包含空格。  
+ 要加入至輸出檔的資源檔名稱。 將檔案名稱括在引號 ("") 如果它包含空格。  
   
 ## <a name="remarks"></a>備註  
  您可以建立 Win32 資源檔與 Microsoft Windows 資源編譯器 (RC)。  
   
- Win32 資源可以包含版本或點陣圖 （圖示） 資訊可協助您識別應用程式中的**檔案總管**。 如果您未指定`-win32resource`，編譯器會產生組件版本為基礎的版本資訊。 `-win32resource`和`-win32icon`選項互斥。  
+ Win32 資源可以包含版本或點陣圖 （圖示） 資訊，以協助識別您的應用程式**檔案總管**。 如果您未指定`-win32resource`，編譯器會產生的組件版本為基礎的版本資訊。 `-win32resource`和`-win32icon`選項互斥。  
   
- 請參閱[-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md)參考[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]資源檔或[-資源 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)附加[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]資源檔。  
+ 請參閱[-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md)參考[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]資源檔，或[-資源 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)附加[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]資源檔。  
   
 > [!NOTE]
->  `-win32resource`選項不是從 Visual Studio 開發環境中使用; 其只有在從命令列編譯時。  
+>  `-win32resource`選項不是從 Visual Studio 開發環境中使用; 只有在從命令列編譯時均可使用。  
   
 ## <a name="example"></a>範例  
- 下列程式碼編譯`In.vb`，並將 Win32 資源檔，附加`Rf.res`:  
+ 下列程式碼會編譯`In.vb`並附加 Win32 資源檔， `Rf.res`:  
   
 ```console  
 vbc -win32resource:rf.res in.vb  

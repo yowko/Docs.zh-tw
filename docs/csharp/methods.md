@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: a9d78ecfc3911cf959333c098a66614239609c4e
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: f5fd156ba25352fb1f816349c5e130267f7da8c2
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457952"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925840"
 ---
 # <a name="methods"></a>方法 #
 
@@ -296,12 +296,12 @@ public Customer this[long id] => store.LookupCustomer(id);
 
 ## <a name="see-also"></a>另請參閱 ##
 
-[存取修飾詞](language-reference/keywords/access-modifiers.md)   
-[靜態類別和靜態類別成員](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)   
-[繼承](programming-guide/classes-and-structs/inheritance.md)   
-[抽象和密封類別以及類別成員](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
-[params](language-reference/keywords/params.md)   
-[out](language-reference/keywords/out-parameter-modifier.md)   
-[ref](language-reference/keywords/ref.md)   
-[in](language-reference/keywords/in-parameter-modifier.md)   
-[傳遞參數](programming-guide/classes-and-structs/passing-parameters.md)
+- [存取修飾詞](language-reference/keywords/access-modifiers.md)   
+- [靜態類別和靜態類別成員](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)   
+- [繼承](programming-guide/classes-and-structs/inheritance.md)   
+- [抽象和密封類別以及類別成員](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
+- [params](language-reference/keywords/params.md)   
+- [out](language-reference/keywords/out-parameter-modifier.md)   
+- [ref](language-reference/keywords/ref.md)   
+- [in](language-reference/keywords/in-parameter-modifier.md)   
+- [傳遞參數](programming-guide/classes-and-structs/passing-parameters.md)

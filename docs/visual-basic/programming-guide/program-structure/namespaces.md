@@ -17,11 +17,11 @@ helpviewer_keywords:
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
 ms.openlocfilehash: c1302bf4b424c7c03fb6c2d8132b086c4d30fd87
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655554"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934449"
 ---
 # <a name="namespaces-in-visual-basic"></a>Visual Basic 中的命名空間
 命名空間可組織組件中定義的物件。 組件可包含多個命名空間，而命名空間也可包含其他命名空間。 在使用類別庫等大型物件群組時，命名空間可避免語意模糊並簡化參考。  
@@ -33,7 +33,7 @@ ms.locfileid: "33655554"
 ## <a name="avoiding-name-collisions"></a>避免名稱衝突  
  [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 命名空間會解決有時稱為 *「命名空間干擾」*(namespace pollution) 的問題，也就是類別庫的開發人員因為使用與另一個程式庫類似的名稱而受到阻礙的情況。 這些與現有元件的衝突有時稱為 *「名稱衝突」*(name collision)。  
   
- 例如，如果您建立了一個名為 `ListBox`的新類別，您不需提供完整名稱就可以在專案內使用它。 不過，如果您想在同一個專案中使用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox> 類別，則必須使用完整參考使其成為唯一的參考。 如果參考不是唯一的 Visual Basic 會產生錯誤，指出名稱模稜兩可。 下列程式碼範例示範如何宣告這些物件：  
+ 例如，如果您建立了一個名為 `ListBox`的新類別，您不需提供完整名稱就可以在專案內使用它。 不過，如果您想在同一個專案中使用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox> 類別，則必須使用完整參考使其成為唯一的參考。 如果參考不是唯一的 Visual Basic 會產生錯誤訊息指出名稱模稜兩可。 下列程式碼範例示範如何宣告這些物件：  
   
  [!code-vb[VbVbalrApplication#7](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_2.vb)]  
   
@@ -41,9 +41,9 @@ ms.locfileid: "33655554"
   
  ![命名空間階層](../../../visual-basic/programming-guide/program-structure/media/vanamespacehierarchy.gif "vaNamespaceHierarchy")  
   
- 根據預設，您使用 Visual Basic 中建立每個可執行檔會包含與您的專案名稱相同的命名空間。 例如，如果您在名為 `ListBoxProject`的專案中定義物件，則可執行檔 ListBoxProject.exe 會包含一個稱為 `ListBoxProject`的命名空間。  
+ 根據預設，您使用 Visual Basic 中建立每個可執行檔會包含與專案同名的命名空間。 例如，如果您在名為 `ListBoxProject`的專案中定義物件，則可執行檔 ListBoxProject.exe 會包含一個稱為 `ListBoxProject`的命名空間。  
   
- 多個組件可以使用相同的命名空間。 Visual Basic 會將它們視為一組的名稱。 例如，您可以在名為 `SomeNameSpace` 的組件中為稱為 `Assemb1`的命名空間定義類別，並自一個名為 `Assemb2`的組件中為相同的命名空間定義其他類別。  
+ 多個組件可以使用相同的命名空間。 Visual Basic 會將它們視為一組名稱。 例如，您可以在名為 `SomeNameSpace` 的組件中為稱為 `Assemb1`的命名空間定義類別，並自一個名為 `Assemb2`的組件中為相同的命名空間定義其他類別。  
   
 ## <a name="fully-qualified-names"></a>完整名稱  
  完整名稱是物件參考，前面會加上定義物件之命名空間的名稱。 如果您建立類別的參考 (在 [專案]  功能表中選擇 [加入參考]  )，就可以使用其他專案中所定義的物件，並且在程式碼中使用該物件的完整名稱。 下列程式碼片段示範如何使用另一個專案命名空間之物件的完整名稱：  
@@ -60,7 +60,7 @@ ms.locfileid: "33655554"
   
  [!code-vb[VbVbalrApplication#11](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_6.vb)]  
   
- 如果您嘗試使用`Class1`未完整限定它，Visual Basic 會產生的錯誤訊息名稱`Class1`模稜兩可。  
+ 如果您嘗試使用`Class1`而不必完整限定它，Visual Basic 會產生錯誤訊息，指出名稱`Class1`模稜兩可。  
   
 ## <a name="namespace-level-statements"></a>命名空間層級陳述式  
  在命名空間中，您可以定義模組、介面、類別、委派、列舉、結構和其他命名空間等項目。 您無法在命名空間層級定義屬性、程序、變數和事件等項目。 這些項目必須在模組、結構或類別等容器內宣告。  
@@ -109,7 +109,7 @@ End Namespace
   
  在命名空間宣告中， `Global` 不能以巢狀方式放在另一個命名空間中。  
   
- 您可以使用[應用程式] 頁面上，[專案設計工具 (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)來檢視和修改**根命名空間**的專案。  若是新專案，[根命名空間]  預設為專案名稱。 若要使 `Global` 成為最上層命名空間，您可以清除 [根命名空間]  項目讓方塊空白。 清除 [根命名空間]  就不再需要命名空間宣告中的 `Global` 關鍵字。  
+ 您可以使用[Application Page，Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)來檢視和修改**根命名空間**的專案。  若是新專案，[根命名空間]  預設為專案名稱。 若要使 `Global` 成為最上層命名空間，您可以清除 [根命名空間]  項目讓方塊空白。 清除 [根命名空間]  就不再需要命名空間宣告中的 `Global` 關鍵字。  
   
  如果 `Namespace` 陳述式所宣告的名稱也是 .NET Framework 中的命名空間，當完整名稱中未使用 `Global` 關鍵字時，.NET Framework 命名空間會變成無法使用。 若要允許在不使用 `Global` 關鍵字的情況下存取該 .NET Framework 命名空間，您可以在 `Global` 陳述式中包含 `Namespace` 關鍵字。  
   

@@ -1,46 +1,46 @@
 ---
-title: 'F # 程式碼格式化方針'
-description: '了解 F # 程式碼格式化方針。'
+title: 'F # 程式碼格式設定指導方針'
+description: '了解 F # 程式碼格式化的指導方針。'
 ms.date: 05/14/2018
-ms.openlocfilehash: 6c8e4059fd4bf1e7450118a6df02609217c4f4db
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.openlocfilehash: 9c6e80509e9a5654e6514674d38c02e2a6b44e37
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35231500"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935933"
 ---
-# <a name="f-code-formatting-guidelines"></a>F # 程式碼格式化方針
+# <a name="f-code-formatting-guidelines"></a>F # 程式碼格式設定指導方針
 
-這篇文章提供如何格式化您的程式碼，讓 F # 程式碼的指導方針：
+這篇文章提供如何格式化您的程式碼，使 F # 程式碼的指導方針：
 
-* 通常以更易於閱讀檢視
-* 會根據套用的 Visual Studio 中的工具和其他編輯器格式設定慣例
+* 通常視為更易於閱讀
+* 會根據套用在 Visual Studio 中的工具和其他的編輯器格式設定慣例
 * 類似於線上的其他程式碼
 
-這些方針根據[F # 格式設定慣例的完整指南](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md)由[Anh 盜賊藩](https://github.com/dungpa)。
+這些指導方針根據[F # 格式設定慣例的完整指南](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md)依[Anh phan （英文)](https://github.com/dungpa)。
 
 ## <a name="general-rules-for-indentation"></a>縮排的一般規則
 
-F # 預設會使用空白字元。 下列指導方針均提供指導方針來選擇龐大這也可能造成的一些挑戰。
+F # 會使用預設的顯著泛空白字元。 下列指導方針的用意在於提供指引來選擇要掌握這造成一些挑戰。
 
 ### <a name="using-spaces"></a>使用空間
 
-需要縮排時，您必須使用空間，而不是索引標籤。 需要至少一個空白字元。 您的組織可以建立以指定要用來縮排; 的空格數目編碼標準通常會發生縮排每個層級的縮排的兩個、 三或四個空格。
+需要縮排時，您必須使用空格，而不是索引標籤。 需要至少一個空白字元。 您的組織可以建立以指定要用來縮排; 的空格數目的程式碼撰寫標準通常會發生縮排每個層級的縮排的兩個、 三個或四個空格。
 
-**我們建議您縮排每 4 個空格。**
+**我們建議每個縮排的 4 個空格。**
 
-話雖如此，縮排程式是主觀。 變化 [確定]，但是您應該遵循的第一個規則*縮排的一致性*。 選擇公認的縮排樣式，並在整個程式碼基底有系統地使用它。
+話雖如此，程式的縮排是主觀的問題而已。 變化都沒問題，但您應該遵循的第一個規則*縮排的一致性*。 選擇通常可接受的縮排樣式，並在整個程式碼基底有系統地使用它。
 
-## <a name="formatting-blank-lines"></a>格式化空白行
+## <a name="formatting-blank-lines"></a>格式化的空白行
 
-* 個別最上層函式和類別定義具有兩個空白的行。
-* 在類別內的方法定義會以單一的空白列分隔。
-* 額外的空白的線條可能謹慎 （） 來分隔的相關函式群組。 一堆相關 one-liners （例如，一組虛擬實作） 之間，可能會省略空白的行。
-* 用於空白的行在函數中，謹慎使用，表示邏輯區段。
+* 另一個最上層函式和類別定義兩個空白的行。
+* 在類別內的方法定義是以單一的空白行分隔。
+* 額外的空白的行可能會用來分隔組相關的函式的 （謹慎使用）。 一大堆相關單行 （比方說，一組虛擬實作） 之間，可能會省略空白的行。
+* 使用空白列在函式，盡量節制，來指出邏輯區段。
 
-## <a name="formatting-comments"></a>格式化的註解
+## <a name="formatting-comments"></a>格式化註解
 
-通常，而不用多個雙斜線註解 ML 樣式區塊註解。
+通常不用 ML 樣式區塊註解的多個雙斜線註解。
 
 ```fsharp
 // Prefer this style of comments when you want
@@ -52,7 +52,7 @@ F # 預設會使用空白字元。 下列指導方針均提供指導方針來選
 *)
 ```
 
-內嵌註解應該將第一個字母變成大寫。
+第一個字母時，應大寫內嵌註解。
 
 ```fsharp
 let f x = x + 1 // Increment by one.
@@ -60,9 +60,9 @@ let f x = x + 1 // Increment by one.
 
 ## <a name="naming-conventions"></a>命名規範
 
-### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>使用 camelCase 類別繫結、 運算式繫結和繫結模式值和函式
+### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>使用 camelCase 類別繫結、 繫結運算式和模式繫結的值和函式
 
-它通常會和接受的 F # 樣式 camelCase 用於所有名稱繫結，做為本機變數，或在模式比對和函式定義中。
+是很常見，並接受的 F # 使用樣式 camelCase 的所有名稱繫結做為本機變數，或在模式比對和函式定義中。
 
 ```fsharp
 // OK
@@ -89,7 +89,7 @@ type MyClass() =
     member x.Result = doSomething()
 ```
 
-### <a name="use-camelcase-for-module-bound-public-functions"></a>CamelCase 用於繫結模組的公用函式
+### <a name="use-camelcase-for-module-bound-public-functions"></a>針對模組繫結的公用函式使用 camelCase
 
 當模組繫結函式是公用 API 的一部分時，它應該使用 camelCase:
 
@@ -100,20 +100,20 @@ module MyAPI =
     let publicFunctionTwo param1 param2 param3 = ...
 ```
 
-### <a name="use-camelcase-for-internal-and-private-module-bound-values-and-functions"></a>CamelCase 用於內部及私人模組繫結值和函式
+### <a name="use-camelcase-for-internal-and-private-module-bound-values-and-functions"></a>使用 camelCase 的內部與私用模組繫結值和函式
 
-CamelCase 用於私用模組繫結值，如下所示：
+使用 camelCase 的私用模組繫結值，包括下列：
 
-* 臨機操作指令碼中的函式
+* 在指令碼中的特定函式
 
-* 構成模組或類型的內部實作的值
+* 組成模組或類型的內部實作的值
 
 ```fsharp
 let emailMyBossTheLatestResults =
     ...
 ```
 
-### <a name="use-camelcase-for-parameters"></a>使用 camelCase 參數
+### <a name="use-camelcase-for-parameters"></a>針對參數使用 camelCase
 
 所有參數都應該都使用 camelCase 根據.NET 命名慣例。
 
@@ -125,7 +125,7 @@ type MyClass() =
     member this.MyMethod(paramOne, paramTwo) = ...
 ```
 
-### <a name="use-pascalcase-for-modules"></a>使用 PascalCase 模組
+### <a name="use-pascalcase-for-modules"></a>使用 PascalCase 的模組
 
 （最上層、 內部、 私用、 巢狀） 的所有模組都應該都使用 PascalCase。
 
@@ -139,9 +139,9 @@ module Helpers =
     ...
 ```
 
-### <a name="use-pascalcase-for-type-declarations-members-and-labels"></a>PascalCase 用於宣告類型、 成員和標籤
+### <a name="use-pascalcase-for-type-declarations-members-and-labels"></a>使用 PascalCase 的型別宣告、 成員和標籤
 
-類別、 介面、 結構、 列舉型別、 委派、 記錄和差別聯的集應該全部是名為 PascalCase。 型別和記錄和差別聯的集的標籤內的成員也應該使用 PascalCase。
+類別、 介面、 結構、 列舉、 委派、 記錄和差別聯的集全部命名為使用 PascalCase。 型別和用於記錄和差別聯的集的標籤內的成員也應該使用 PascalCase。
 
 ```fsharp
 type IMyInterface =
@@ -159,19 +159,19 @@ type SchoolPerson =
     | Administrator
 ```
 
-### <a name="use-pascalcase-for-constructs-intrinsic-to-net"></a>PascalCase 用於建構內建的.NET
+### <a name="use-pascalcase-for-constructs-intrinsic-to-net"></a>適用於.NET 內建函式建構的使用 PascalCase
 
-命名空間、 例外狀況、 事件和專案 /`.dll`名稱也應該使用 PascalCase。 不僅這樣做耗用量其他.NET 語言的感覺更自然的取用者，也是.NET 命名慣例，系統可能會遇到與一致。
+命名空間、 例外狀況、 事件和專案 /`.dll`名稱也應該使用 PascalCase。 不只這樣清楚感受更自然的取用者從其他.NET 語言使用，也是配合您可能會遇到的.NET 命名慣例。
 
 ### <a name="avoid-underscores-in-names"></a>避免在名稱中的底線
 
-在過去，有些 F # 程式庫名稱中使用底線。 不過，這是不再被廣泛接受，這是因為它與.NET 的命名慣例發生衝突。 話雖如此，某些 F # 程式設計人員使用底線有很大，部分由於歷史原因，並容忍度及方面很重要。 不過，請注意樣式通常 disliked 其他人可以選擇要使用它。
+在過去，某些 F # 程式庫名稱中使用底線。 不過，這是不會再被廣泛接受，這是因為它與.NET 命名慣例衝突。 話雖如此，某些 F # 程式設計人員使用底線大量、 部分基於歷史原因，並容錯] 和 [方面很重要。 不過，請注意樣式通常會不喜歡的人可以選擇要使用它。
 
-有些例外狀況包含間的互通性與原生元件，其中底線很常見。
+某些例外狀況包含間的互通性與原生元件，其中底線很常見。
 
 ### <a name="use-standard-f-operators"></a>使用標準的 F # 運算子
 
-下列運算子定義在 F # 標準程式庫，而且應該用於而不是定義對等項目。 因為它會使程式碼更容易讀取與慣用語，被建議使用這些運算子。 具有背景 OCaml 或其他功能的程式設計語言的開發人員可能會不同語言的習慣。 下列清單摘要說明建議的 F # 運算子。
+下列運算子 F # 標準程式庫中已定義，而且應該使用而不是定義對等項目。 因為它會使程式碼，更容易理解且慣用語，建議使用這些運算子。 具有背景的 OCaml 或其他功能的程式設計語言的開發人員可能習慣將不同的習慣用語。 下列清單摘要說明建議的 F # 運算子。
 
 ```fsharp
 x |> f // Forward pipeline
@@ -193,18 +193,35 @@ x ^^^ y // Bitwise xor, also for working with “flags” enumeration
 
 ### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>使用泛型的前置詞的語法 (`Foo<T>`) 而非後置語法 (`T Foo`)
 
-F # 繼承這兩個的後置 ML 樣式命名泛型型別 (比方說， `int list`) 以及.NET 樣式的前置詞 (例如， `list<int>`)。 偏好的.NET 樣式，除了特定的四種類型：
+F # 會繼承這兩個後置 ML 的樣式命名泛型型別 (例如`int list`) 以及.NET 樣式的前置詞 (例如`list<int>`)。 偏好的.NET 樣式，除了特定的四種類型：
 
-1. F # 列出，請使用後置格式：`int list`而不是`list<int>`。
-2. 使用 F # 選項，請使用 後置格式：`int option`而不是`option<int>`。
-3. F # 陣列，使用的語法名稱`int[]`而`int array`或`array<int>`。
-4. 參考儲存格，使用`int ref`而`ref<int>`或`Ref<int>`。
+1. F # 清單中，使用後置格式：`int list`而非`list<int>`。
+2. 使用 F # 選項，請使用後置格式：`int option`而非`option<int>`。
+3. F # 陣列，使用的語法名稱`int[]`而非`int array`或`array<int>`。
+4. 參考儲存格，使用`int ref`而非`ref<int>`或`Ref<int>`。
 
-對於所有其他類型，使用的前置格式。
+對於所有其他類型，使用前置詞的表單。
 
-## <a name="formatting-discriminated-union-declarations"></a>格式化差別等位宣告
+## <a name="formatting-tuples"></a>格式化的 tuple
 
-縮排`|`由 4 個空格的類型定義中：
+Tuple 的具現化應該是括號括住，而且中分隔的逗號後面必須接著一個空格，例如： `(1, 2)`， `(x, y, z)`。
+
+通常可接受省略括號中的 tuple 模式比對：
+
+```fsharp
+let (x, y) = z // Destructuring
+let x, y = z // OK
+
+// OK
+match x, y with
+| 1, _ -> 0
+| x, 1 -> 0
+| x, y -> 1
+```
+
+## <a name="formatting-discriminated-union-declarations"></a>設定格式化的差別等位宣告
+
+縮排`|`由 4 個空格的型別定義中：
 
 ```fsharp
 // OK
@@ -220,7 +237,9 @@ type Volume =
 | ImperialPint of float
 ```
 
-具現化差別等位分成多行，應該提供包含的資料包含縮排新的範圍：
+## <a name="formatting-discriminated-unions"></a>格式化差別聯集
+
+具現化差別聯集分割成多行，應該會產生包含的資料附縮排新的範圍：
 
 ```fsharp
 let tree1 =
@@ -229,7 +248,7 @@ let tree1 =
          BinaryNode(BinaryValue 3, BinaryValue 4))
 ```
 
-右括號也可以是新的一行：
+右括號也可以在新的一行：
 
 ```fsharp
 let tree1 =
@@ -239,30 +258,55 @@ let tree1 =
     )
 ```
 
-## <a name="formatting-tuples"></a>Tuple 的格式化
+## <a name="formatting-record-declarations"></a>格式設定記錄的宣告
 
-Tuple 的具現化應該是括號括住，而且內分隔逗號後面必須接著一個空格，例如： `(1, 2)`， `(x, y, z)`。
-
-普遍接受的例外狀況是 tuple 的省略括號中的模式比對：
+縮排`{`在類型定義由 4 空間，開始在同一行上的 [欄位] 清單：
 
 ```fsharp
-let (x, y) = z // Destructuring
+// OK
+type PostalAddress =
+    { Address : string
+      City : string
+      Zip : string }
+    member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
 
-match x, y with
-| 1, _ -> 0
-| x, 1 -> 0
-| x, y -> 1
+// Not OK
+type PostalAddress =
+  { Address : string
+    City : string
+    Zip : string }
+    member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
+    
+// Unusual in F#
+type PostalAddress =
+    { 
+        Address : string
+        City : string
+        Zip : string
+    }
 ```
 
-## <a name="formatting-records"></a>格式化的資料錄
+將左語彙基元放在同一行和結尾語彙基元，在新的一行上也是沒問題，但請注意，您必須使用[詳細語法](../language-reference/verbose-syntax.md)來定義成員 (`with`關鍵字):
 
-簡短的記錄可以撰寫在一行中：
+```fsharp
+//  OK, but verbose syntax required
+type PostalAddress = { 
+    Address : string
+    City : string
+    Zip : string
+} with
+    member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
+```
+
+## <a name="formatting-records"></a>格式化的記錄
+
+可以在同一行撰寫簡短的記錄：
 
 ```fsharp
 let point = { X = 1.0; Y = 0.0 }
 ```
 
-記錄的長度應該使用新行的標籤：
+較長的記錄應該使用新行標籤：
 
 ```fsharp
 let rainbow =
@@ -270,7 +314,7 @@ let rainbow =
       Lackeys = ["Zippy"; "George"; "Bungle"] }
 ```
 
-將左語彙基元放在同一行和新的一行的結尾語彙基元是也可以：
+將左語彙基元放在同一行和結尾語彙基元，在新的一行上，也沒問題：
 
 ```fsharp
 let rainbow = {
@@ -286,13 +330,13 @@ let rainbow = {
 }
 ```
 
-清單和陣列項目套用相同的規則。
+相同的規則適用於清單和陣列的項目。
 
-## <a name="formatting-lists-and-arrays"></a>格式設定清單和陣列
+## <a name="formatting-lists-and-arrays"></a>格式化的清單和陣列
 
-寫入`x :: l`前後的空格與`::`運算子 (`::`是中置運算子，因此，以空格) 和`[1; 2; 3]`(`;`是分隔符號，因此後接空格)。
+撰寫`x :: l`與前後的空格`::`運算子 (`::`是中置運算子，因此括住空格) 和`[1; 2; 3]`(`;`是分隔符號，因此後面接著空格)。
 
-一律使用至少一個兩個不同的大括號類似運算子之間的空間。 例如，將保留之間的空格`[`和`{`。
+一律使用兩個不同的大括號類似運算子之間的至少一個空白字元。 例如，將保留之間保留一個空格`[`和`{`。
 
 ```fsharp
 // OK
@@ -310,7 +354,7 @@ let rainbow = {
  { IngredientName = "Lemon"; Quantity = 1 }]
 ```
 
-清單和陣列分成多行，請依照下列類似的規則一樣記錄：
+清單和陣列分成多行，請遵循類似的規則記錄也一樣：
 
 ```fsharp
 let pascalsTriangle = [|
@@ -328,29 +372,21 @@ let pascalsTriangle = [|
 
 ## <a name="formatting-if-expressions"></a>如果格式運算式
 
-縮排的條件取決於它們構成的運算式的大小。 如果`cond`，`e1`和`e2`很小，只要將它們寫入在一行上：
+縮排的條件取決於它們構成的運算式的大小。 如果`cond`，`e1`和`e2`簡短，只要將它們寫入在同一行：
 
 ```fsharp
 if cond then e1 else e2
 ```
 
-如果`e1`和`cond`很小，但`e2`大：
+如果有任一`cond`，`e1`或`e2`更久，但不多行：
 
 ```fsharp
-if cond then e1
-else
-    e2
-```
-
-如果`e1`和`cond`大和`e2`小：
-
-```fsharp
-if cond then
-    e1
+if cond
+then e1
 else e2
 ```
 
-如果所有運算式都是大型的：
+如果任何運算式是多行：
 
 ```fsharp
 if cond then
@@ -359,7 +395,7 @@ else
     e2
 ```
 
-使用多個條件`elif`和`else`縮排在相同範圍`if`:
+使用多個條件`elif`並`else`縮排在相同範圍`if`:
 
 ```fsharp
 if cond1 then e1
@@ -368,9 +404,9 @@ elif cond3 then e3
 else e4
 ```
 
-### <a name="pattern-matching-constructs"></a>模式比對的建構
+### <a name="pattern-matching-constructs"></a>模式比對建構
 
-使用`|`相符項目的每個子句不縮排。 如果運算式是短，您可以考慮使用單一行，如果每一個子運算式也很簡單。
+使用`|`不縮排每個子句的相符項目。 如果運算式很短，您可以考慮使用單一行，如果每一個子運算式也很簡單。
 
 ```fsharp
 // OK
@@ -386,7 +422,7 @@ match l with
     | [] -> failwith "Couldn't find David"
 ```
 
-如果在模式比對箭號右邊的運算式太大，將它移至下列的行縮排一個步驟，從`match` / `|`。
+如果在模式比對的箭號右側的運算式太大，將它移至下列這一行，縮排的一個步驟，從`match` / `|`。
 
 ```fsharp
 match lam with
@@ -398,7 +434,7 @@ match lam with
 
 ```
 
-模式比對的匿名函式，來啟動`function`，應該通常不縮排太遠。 例如，縮排一個範圍，如下所示是可以：
+模式比對的匿名函式，來啟動`function`，應該通常不縮排牽扯太廣。 例如，縮排一個範圍，如下所示沒關係：
 
 ```fsharp
 lambdaList
@@ -408,7 +444,7 @@ lambdaList
     | Var v -> 1)
 ```
 
-模式比對所定義的函式中`let`或`let rec`之後開始進行縮排 4 個空格`let`，即使`function`關鍵字使用：
+模式比對中所定義的函式`let`或是`let rec`之後開始進行縮排的 4 個空格`let`，即使`function`關鍵字可用於：
 
 ```fsharp
 let rec sizeLambda acc = function
@@ -421,7 +457,7 @@ let rec sizeLambda acc = function
 
 ## <a name="formatting-trywith-expressions"></a>格式化的 try / with 運算式
 
-模式比對的例外狀況類型，應該在相同的層級縮排`with`。
+模式比對的例外狀況類型應位於相同層級會縮排`with`。
 
 ```fsharp
 try
@@ -440,7 +476,7 @@ with
 
 一般而言，大部分函式參數的應用程式是在同一行。
 
-如果您想要套用至新的一行函式的參數，則縮排一個領域。
+如果您想要套用至新的一行中的函式的參數，則由一個範圍縮排。
 
 ```fsharp
 // OK
@@ -460,7 +496,7 @@ let printVolumes x =
         (convertVolumeImperialPint x)
 ```
 
-函式引數的 lambda 運算式套用相同的指導方針。 如果 lambda 運算式主體的主體可以有另一條，縮排一個領域
+函式引數的 lambda 運算式套用相同的指導方針。 如果 lambda 運算式主體的主體可以有另一條，縮排一個範圍
 
 ```fsharp
 let printListWithOffset a list1 =
@@ -476,13 +512,13 @@ let printListWithOffset a list1 =
         list1
 ```
 
-不過，如果是多行 lambda 運算式的主體，請考慮將它分解成個別的函式而非保有套用為單一引數的函式的多行建構。
+不過，如果多行 lambda 運算式的主體，請考慮一下重構到個別函式而非已做為單一引數套用至函式的多行建構。
 
-### <a name="formatting-infix-operators"></a>格式化的中置運算子
+### <a name="formatting-infix-operators"></a>格式化 中置運算子
 
-以空格分開的運算子。 此規則的明顯例外狀況是`!`和`.`運算子。
+以空格分開的運算子。 明顯的例外狀況，此規則會`!`和`.`運算子。
 
-中置運算式是在相同的資料行上的內容 [確定]:
+中置運算式會為同一個資料行的組合中的 [確定]:
 
 ```fsharp
 acc +
@@ -496,7 +532,7 @@ let function1 arg1 arg2 arg3 arg4 =
 
 ### <a name="formatting-pipeline-operators"></a>格式設定管線運算子
 
-管線`|>`運算子都應之下操作的運算式。
+管線`|>`運算子都應下它們對的運算式。
 
 ```fsharp
 // Preferred approach
@@ -521,7 +557,7 @@ let methods2 = System.AppDomain.CurrentDomain.GetAssemblies()
 
 ### <a name="formatting-modules"></a>格式化的模組
 
-在本機的模組中的程式碼必須縮排相對於模組，但應該不會縮排在最上層的模組中的程式碼。 命名空間元素不具有縮排。
+在本機的模組中的程式碼必須相對於模組，縮排，但應該不會縮排在最上層模組中的程式碼。 縮排沒有命名空間項目。
 
 ```fsharp
 // A is a top-level module.
@@ -541,7 +577,7 @@ module A2 =
 
 ### <a name="formatting-object-expressions-and-interfaces"></a>格式化的物件運算式和介面
 
-物件運算式和介面應該有相同的方式對齊`member`要縮排後 4 個空格。
+物件運算式和介面應該使用相同的方式對齊`member`正在後 4 個空格縮排。
 
 ```fsharp
 let comparer =
@@ -553,9 +589,9 @@ let comparer =
               reversed.CompareTo (rev s2) }
 ```
 
-### <a name="formatting-whitespace-in-expressions"></a>格式運算式中的空白字元
+### <a name="formatting-white-space-in-expressions"></a>設定格式化的運算式中的泛空白字元
 
-請避免多餘的空白字元，F # 運算式中。
+避免多餘的空白字元在 F # 運算式。
 
 ```fsharp
 // OK
@@ -565,7 +601,7 @@ spam (ham.[1])
 spam ( ham.[ 1 ] )
 ```
 
-具名引數也不應該有周圍的空間`=`:
+具名引數也不應該周圍的空間`=`:
 
 ```fsharp
 // OK

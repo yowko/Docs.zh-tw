@@ -4,12 +4,12 @@ ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: 8b15b0df5e3f65494a037eed7992c9a16d9b8578
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b5f79f41306d6e4a8d2f1aa432ba6c2e0879f74
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216165"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930038"
 ---
 # <a name="contextual-keywords-c-reference"></a>內容關鍵字 (C# 參考)
 內容關鍵字可用來在程式碼中提供特定的意義，但它不是 C# 中的保留字。 本節介紹下列內容關鍵字︰  
@@ -33,7 +33,8 @@ ms.locfileid: "33216165"
   
  C# 3.0 中引進的所有查詢關鍵字也都是內容。 如需詳細資訊，請參閱[查詢關鍵字 (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)。  
   
-## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)

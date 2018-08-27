@@ -5,11 +5,11 @@ helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
 ms.openlocfilehash: 553a6d1d2e922d1683cb5dbe2fa0b525c9b1e37a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326416"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925326"
 ---
 # <a name="using-structs-c-programming-guide"></a>使用結構 (C# 程式設計手冊)
 `struct` 類型很適合用於代表輕量型物件，例如 `Point`、 `Rectangle`和 `Color`。 雖然使用 [自動實作的屬性](../../../csharp/language-reference/keywords/class.md) 可以輕鬆地將一個點表示為一個 [類別](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)，但是在某些情節中 [結構](../../../csharp/language-reference/keywords/struct.md) 可能會更有效率。 例如，如果您宣告含有 1000 個 `Point` 物件的陣列，您會配置額外的記憶體來參考每個物件；在此案例下，結構所耗用的記憶體會較少。 因為 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 含有名為 <xref:System.Drawing.Point>的物件，所以本範例中的結構會改稱為 "CoOrds"。  

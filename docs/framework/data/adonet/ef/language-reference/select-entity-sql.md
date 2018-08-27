@@ -2,11 +2,12 @@
 title: SELECT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
-ms.openlocfilehash: f815c08b9be11efc71b04678d9780cabcdd69ab5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 93eea5d539e943c57ed7c6236caa854486ac238e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933849"
 ---
 # <a name="select-entity-sql"></a>SELECT (Entity SQL)
 指定查詢要傳回的項目。  
@@ -31,20 +32,20 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
  只允許指定一個項目，而且不加入資料列包裝函式。  
   
  `topSubclause`  
- 表示查詢所傳回第一組結果的數目，格式為 `top (``expr``)`。  
+ 任何有效的運算式，指出從這個形式的查詢傳回的第一個結果數目`top(expr)`。  
   
- LIMIT 參數[ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)運算子也可讓您選取結果集中的第 n 個項目。  
+ LIMIT 參數[ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)運算子也可讓您在結果集中選取前 n 個項目。  
   
  `aliasedExpr`  
  以下格式的運算式：  
   
- `expr` 做為`identifier`&#124; `expr`  
+ `expr` 為`identifier`&#124; `expr`  
   
  `expr`  
  常值或運算式。  
   
 ## <a name="remarks"></a>備註  
- SELECT 子句之後，會評估[FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md)， [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md)，和[HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md)已評估子句。 SELECT 子句只可參考目前範圍內 (來自 FROM 子句，或來自外部範圍) 的項目。 如果指定了 GROUP BY 子句，SELECT 子句只可參考 GROUP BY 索引鍵的別名。 只允許在彙總函式中參考 FROM 子句項目。  
+ SELECT 子句之後，會評估[FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md)， [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md)，並[HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md)已評估子句。 SELECT 子句只可參考目前範圍內 (來自 FROM 子句，或來自外部範圍) 的項目。 如果指定了 GROUP BY 子句，SELECT 子句只可參考 GROUP BY 索引鍵的別名。 只允許在彙總函式中參考 FROM 子句項目。  
   
  位於 SELECT 關鍵字之後的一或多個查詢運算式就是所謂的選取清單，較正式的名稱則是投影。 投影最常見的形式是單一查詢運算式。 如果從集合 `member1` 選取成員 `collection1`，將會針對 `member1` 中的每一個物件產生所有 `collection1`值的新集合，如以下範例所示。  
   
@@ -93,7 +94,7 @@ SELECT a1, a2 FROM T1 AS a1, T2 AS a2
 ## <a name="example"></a>範例  
  以下 Entity SQL 查詢使用 SELECT 運算子指定查詢要傳回的項目。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
   
-1.  遵循 [如何：執行可傳回 StructuralType 結果的查詢](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)中的程序進行。  
+1.  遵循 [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)中的程序進行。  
   
 2.  將下列查詢當成引數，傳遞至 `ExecuteStructuralTypeQuery` 方法：  
   

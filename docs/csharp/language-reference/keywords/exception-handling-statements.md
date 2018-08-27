@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - keywords [C#], exception handling
 ms.assetid: 6d0323a3-3164-411c-9b84-a3606bd0e13c
-ms.openlocfilehash: 1b429ce3c5838a824f9b6799332bc810bd3a5a82
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d48981e0d36053fce1249b27cd15551ed59dc91
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213219"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931081"
 ---
 # <a name="exception-handling-statements-c-reference"></a>例外狀況處理陳述式 (C# 參考)
 C# 提供內建支援以處理稱為例外狀況的異常情況，它們可能發生在程式執行期間。 超出一般控制流程的程式碼會處理這些例外狀況。  
@@ -25,8 +25,9 @@ C# 提供內建支援以處理稱為例外狀況的異常情況，它們可能�
 -   [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)  
   
 ## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
- [陳述式關鍵字](../../../csharp/language-reference/keywords/statement-keywords.md)  
- [例外狀況和例外狀況處理](../../../csharp/programming-guide/exceptions/index.md)
+
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+- [陳述式關鍵字](../../../csharp/language-reference/keywords/statement-keywords.md)  
+- [例外狀況和例外狀況處理](../../../csharp/programming-guide/exceptions/index.md)

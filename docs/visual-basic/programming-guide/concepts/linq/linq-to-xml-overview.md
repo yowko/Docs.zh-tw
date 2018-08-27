@@ -3,11 +3,11 @@ title: LINQ to XML 概觀 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 502661e0-bc5d-438d-94c2-7efb63bb6fbd
 ms.openlocfilehash: 3818177c2ed14b1159b8e63e324894d7e89b72b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649083"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932399"
 ---
 # <a name="linq-to-xml-overview-visual-basic"></a>LINQ to XML 概觀 (Visual Basic)
 XML 已被廣泛採用為格式化許多內容之資料的方式。 例如，您可以在 Web、組態檔、Microsoft Office Word 檔案與資料庫中發現 XML。  
@@ -22,9 +22,9 @@ XML 已被廣泛採用為格式化許多內容之資料的方式。 例如，您
 ## <a name="what-is-linq-to-xml"></a>何謂 LINQ to XML？  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 是一個以 LINQ 為基礎、記憶體中的 XML 程式發展介面，可讓您從 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 程式設計語言內使用 XML。  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 如同文件物件模型 (DOM)，它會將 XML 文件帶到記憶體中。 您可以查詢與修改文件，並在修改後儲存到檔案，或將其序列化並透過網際網路傳送。 不過，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]與 DOM 不同： 它會提供新的物件模型較為輕量且更容易使用，而且會在 Visual Basic 中使用的語言功能。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 如同文件物件模型 (DOM)，它會將 XML 文件帶到記憶體中。 您可以查詢與修改文件，並在修改後儲存到檔案，或將其序列化並透過網際網路傳送。 不過，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]與 DOM 不同： 它提供新的物件模型較為輕量且更容易使用，而且會在 Visual Basic 中的語言功能的利用。  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 最重要的優點為其與 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 的整合能力。 這種整合可讓您在記憶體中 XML 文件上撰寫查詢以擷取項目和屬性的集合。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的查詢功能相當於 (雖然語法上不同) XPath 和 Xquery 的功能。 整合[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]在 Visual Basic 中提供更強、 編譯時期檢查功能，以及改善偵錯工具支援。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 最重要的優點為其與 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 的整合能力。 這種整合可讓您在記憶體中 XML 文件上撰寫查詢以擷取項目和屬性的集合。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的查詢功能相當於 (雖然語法上不同) XPath 和 Xquery 的功能。 整合[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]Visual Basic 中提供更強類型，編譯時間檢查，以及改善的偵錯工具支援。  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的另一項優點是將查詢結果當做 <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XAttribute> 物件建構函式參數的功能，可提供建立 XML 樹狀結構的強大方法。 此方法稱為「功能建構」，可讓開發人員輕鬆將 XML 樹狀結構從某種圖形轉換為另一種圖形。  
   
@@ -64,7 +64,7 @@ Select item
 -   使用這些功能的組合，將 XML 樹狀結構從一個組織結構轉換為另一個組織結構。  
   
 ## <a name="creating-xml-trees"></a>建立 XML 樹狀結構  
- 使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 進行程式設計其中一項最重要的優點是，建立 XML 樹狀結構很容易。 例如，若要建立小型 XML 樹狀結構，您可以如下所示撰寫程式碼：  
+ 使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 進行程式設計其中一項最重要的優點是，建立 XML 樹狀結構很容易。 比方說，若要建立小型 XML 樹狀結構，您可以如下撰寫程式碼：  
   
 ```vb  
 Dim contacts = _  
@@ -85,7 +85,7 @@ Dim contacts = _
   
  Visual Basic 編譯器將轉譯成 XML 常值[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]方法呼叫。  
   
- 如需詳細資訊，請參閱[建立 XML 樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 建立 XML 樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Xml.Linq>  

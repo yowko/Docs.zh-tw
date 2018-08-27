@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual C#, C# language specification
 - language specification [C#]
 ms.assetid: e5d5a5cc-636b-4bff-b9c8-a8edc6207c22
-ms.openlocfilehash: 5ed035d5e1e524de9f86254d03e3276966293bf6
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: 976282ab51ec3e9990161abf2dd089798bd949dd
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472785"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931272"
 ---
 # <a name="c-60-draft-language-specification"></a>C# 6.0 草稿語言規格
 
@@ -26,8 +26,9 @@ C# 語言規格是 C# 語法和用法的最終來源。 此規格包含語言各
 草稿規格的相關問題應該在 [dotnet/csharplang](https://github.com/dotnet/csharplang/issues) 存放庫中建立。 或者，如果您有興趣修正所發現的任何錯誤，您可以提交[提取要求](https://github.com/dotnet/csharplang/pulls)至相同的存放庫。
 
 ## <a name="see-also"></a>另請參閱
- [C# 參考](../index.md)  
- [C# 程式設計指南](../../programming-guide/index.md)
+
+- [C# 參考](../index.md)  
+- [C# 程式設計指南](../../programming-guide/index.md)
 
 >[!div class="step-by-step"]
 [下一步](../../../../_csharplang/spec/introduction.md)

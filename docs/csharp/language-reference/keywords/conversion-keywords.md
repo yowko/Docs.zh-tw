@@ -6,12 +6,12 @@ helpviewer_keywords:
 - type conversion [C#], keywords
 - types [C#], conversion keywords
 ms.assetid: 8683ff14-5289-4efe-b4f5-1e6a075918ab
-ms.openlocfilehash: ffa6d7cb4b6606a5742077b823c1a3f710d2e624
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34175f1bda169a9def9e3146214a6d5cd4d258e7
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213944"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930407"
 ---
 # <a name="conversion-keywords-c-reference"></a>轉換關鍵字 (C# 參考)
 本節描述用於類型轉換的關鍵字：  
@@ -23,6 +23,7 @@ ms.locfileid: "33213944"
 -   [operator](../../../csharp/language-reference/keywords/operator.md)  
   
 ## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)
+
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)

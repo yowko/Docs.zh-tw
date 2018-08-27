@@ -3,16 +3,16 @@ title: 字串插值 (Visual Basic)
 ms.date: 10/31/2017
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95f79c5cdff1a48da2bb0eaf92229570ced631b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 313e74d5ce252884f1df2479ef1db8b4b24b5cce
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653555"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930546"
 ---
 # <a name="interpolated-strings-visual-basic-reference"></a>字串插值 （Visual Basic 參考）
 
-可用來建構字串。  字串插值類似包含「插入運算式」的範本字串。  字串插值會傳回一個字串，以將內含的插入運算式取代為運算式的字串表示。 Visual Basic 14 和更新版本中使用這項功能。
+可用來建構字串。  字串插值類似包含「插入運算式」的範本字串。  字串插值會傳回一個字串，以將內含的插入運算式取代為運算式的字串表示。 這項功能可在 Visual Basic 14 和更新版本。
 
 字串插值的引數比[複合格式字串](../../../../standard/base-types/composite-formatting.md#composite-format-string)更容易了解。  例如，字串插值  
   
@@ -35,10 +35,10 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
 - *field-width* 是帶正負號的整數，表示欄位中的字元數。 如果是正數，則欄位會靠右對齊；如果是負數，則會靠左對齊。 
 
-- *format-string* 是一個格式字串，適用於將格式化的物件類型。 例如，對於<xref:System.DateTime>值，它可能是[標準日期和時間格式字串](~/docs/standard/base-types/standard-date-and-time-format-strings.md)例如"D"或"d"。
+- *format-string* 是一個格式字串，適用於將格式化的物件類型。 例如，對於<xref:System.DateTime>值，它可以是[標準日期和時間格式字串](~/docs/standard/base-types/standard-date-and-time-format-strings.md)例如"D"或"d"。
 
 > [!IMPORTANT]
-> 字串開頭的 `$` 與 `"` 之間不能有空白字元。 這樣做會讓編譯器錯誤。
+> 字串開頭的 `$` 與 `"` 之間不能有空白字元。 這樣做會導致編譯器錯誤。
 
  您可以在使用字串常值的任何位置使用字串插值。  每次執行含有字串插值的程式碼時，都會評估字串插值。 這可讓您分開定義和評估字串插值。  
   
@@ -66,11 +66,11 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
    請注意，只能使用反映來檢查字串插值。 如果將它傳遞至字串格式化方法 (例如 <xref:System.Console.WriteLine(System.String)>)，則會解析其格式項目並傳回結果字串。 
 
-3. 轉換至字串插值的<xref:System.FormattableString>代表複合格式字串的變數。 檢查複合格式字串及其如何轉譯為結果字串有助於在建立查詢時，防止插入式攻擊。 A<xref:System.FormattableString>還包括：
+3. 若要將字串插值轉換<xref:System.FormattableString>變數，以代表複合格式字串。 檢查複合格式字串及其如何轉譯為結果字串有助於在建立查詢時，防止插入式攻擊。 A<xref:System.FormattableString>還包括：
 
       - 產生 <xref:System.Globalization.CultureInfo.CurrentCulture> 的結果字串的 <xref:System.FormattableString.ToString> 多載。
       
-      - A<xref:System.FormattableString.Invariant%2A>方法所產生的字串<xref:System.Globalization.CultureInfo.InvariantCulture>。
+      - A<xref:System.FormattableString.Invariant%2A>方法，產生的字串<xref:System.Globalization.CultureInfo.InvariantCulture>。
       
       - 產生指定文化特性的結果字串的 <xref:System.FormattableString.ToString(System.IFormatProvider)> 方法。 
   

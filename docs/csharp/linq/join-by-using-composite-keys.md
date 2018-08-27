@@ -3,12 +3,12 @@ title: 使用複合索引鍵執行聯結 (C# 中的 LINQ)
 description: 了解如何使用 LINQ 中的複合索引鍵執行聯結。
 ms.date: 12/1/2016
 ms.assetid: da70b54d-3213-45eb-8437-fbe75cbcf935
-ms.openlocfilehash: dd3f5e949b5c1bc6abc592dc135e73a91be801e9
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: ae37d03f996f0b0cc184a86663f16d62e6c29c69
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404024"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932330"
 ---
 # <a name="join-by-using-composite-keys"></a>使用複合索引鍵執行聯結
 
@@ -38,6 +38,6 @@ join...on new {Name = o.CustomerName, ID = o.CustID} equals
 
 ## <a name="see-also"></a>另請參閱
 
-[Language-Integrated Query (LINQ)](index.md)  
-[join 子句](../language-reference/keywords/join-clause.md)  
-[group 子句](../language-reference/keywords/group-clause.md)  
+- [Language-Integrated Query (LINQ)](index.md)  
+- [join 子句](../language-reference/keywords/join-clause.md)  
+- [group 子句](../language-reference/keywords/group-clause.md)  

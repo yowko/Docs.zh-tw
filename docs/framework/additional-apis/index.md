@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bdba02feb8cacc6ab1886c12f88716184aa2a81a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 049268c29946e95ca7bb194f6cae38baf8f060f6
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752425"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933526"
 ---
 # <a name="additional-class-libraries-and-apis"></a>其他類別庫和 API
 
-由於 .NET Framework 會持續演變，因此為了改善跨平台開發工作或讓客戶早點採用新功能，我們會不定期 (Out of Band，OOB) 發行新功能。 本主題列出有提供文件的 OOB 專案。  
+.NET Framework 一直不斷進化。 若要改善跨平台開發，並及早引入新功能，會發行 out-of-band (OOB) 的新功能。 本主題列出有提供文件的 OOB 專案。  
   
-除此之外，某些程式庫會以 .NET Framework 的特定平台或實作為目標。 例如，<xref:System.Text.CodePagesEncodingProvider>類別使字碼頁編碼方式可使用.NET Framework 開發 UWP 應用程式。 本主題也會列出這些程式庫。  
+除此之外，某些程式庫會以 .NET Framework 的特定平台或實作為目標。 比方說，<xref:System.Text.CodePagesEncodingProvider>類別會使用.NET Framework 開發的 UWP 應用程式提供字碼頁編碼方式。 本主題也會列出這些程式庫。  
   
 ## <a name="oob-projects"></a>OOB 專案
   
@@ -35,7 +35,7 @@ ms.locfileid: "32752425"
   
 | 專案 | 描述 |  
 | ------- | ----------- |  
-| <xref:System.Text.CodePagesEncodingProvider> | 擴充<xref:System.Text.EncodingProvider>供通用 Windows 平台為目標的應用程式程式碼頁編碼方式的類別。 |  
+| <xref:System.Text.CodePagesEncodingProvider> | 擴充<xref:System.Text.EncodingProvider>類別，以使用於通用 Windows 平台為目標的應用程式的字碼頁編碼方式。 |  
   
 ## <a name="private-apis"></a>私人 API  
 

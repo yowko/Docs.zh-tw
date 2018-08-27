@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: 31073772fd42244167b5e68959ebb373ec759025
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 65e815411cc9f4af063cb955ae63d18e87f43f38
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33314323"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998693"
 ---
 # <a name="fields-c-programming-guide"></a>欄位 (C# 程式設計手冊)
 「欄位」是任意類型的變數，可在[類別](../../../csharp/language-reference/keywords/class.md)或[結構](../../../csharp/language-reference/keywords/struct.md)中直接宣告。 欄位是其包含類型的「成員」。  
@@ -41,7 +41,7 @@ ms.locfileid: "33314323"
   
  欄位可以選擇性地宣告為 [static](../../../csharp/language-reference/keywords/static.md)。 這可隨時向呼叫者提供欄位，即使沒有任何類別執行個體存在。 如需詳細資訊，請參閱[靜態類別和靜態類別成員](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。  
   
- 欄位可以宣告為 [readonly](../../../csharp/language-reference/keywords/readonly.md)。 您只能在初始化期間或在建構函式中指派值給唯讀欄位。 `static``readonly` 欄位非常類似於常數，不同之處在於 C# 編譯器無法在編譯時期存取靜態唯讀欄位的值，只有在執行階段才能這麼做。 如需詳細資訊，請參閱[常數](../../../csharp/programming-guide/classes-and-structs/constants.md)。  
+ 欄位可以宣告為 [readonly](../../../csharp/language-reference/keywords/readonly.md)。 您只能在初始化期間或在建構函式中指派值給唯讀欄位。 `static readonly` 欄位非常類似於常數，不同之處在於 C# 編譯器無法在編譯時期存取靜態唯讀欄位的值，只有在執行階段才能這麼做。 如需詳細資訊，請參閱[常數](../../../csharp/programming-guide/classes-and-structs/constants.md)。  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

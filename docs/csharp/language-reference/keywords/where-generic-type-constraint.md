@@ -6,12 +6,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 94db10c81af55030dfcf6e210a86658c84868e42
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 34246824fb8ff28e47ea424c78eca38e999a30b6
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961077"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931872"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (泛型類型條件約束) (C# 參考)
 
@@ -64,8 +64,8 @@ ms.locfileid: "37961077"
 
 ## <a name="see-also"></a>另請參閱
 
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [泛型簡介](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
- [new 條件約束](../../../csharp/language-reference/keywords/new-constraint.md)  
- [型別參數的條件約束](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)  
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [泛型簡介](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- [new 條件約束](../../../csharp/language-reference/keywords/new-constraint.md)  
+- [型別參數的條件約束](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)  

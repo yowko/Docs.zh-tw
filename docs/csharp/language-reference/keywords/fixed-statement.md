@@ -6,12 +6,12 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: 28c8e9bd078e07a185f541214aa5b5ff79018ff5
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 021fc3bd63922394bd70495bd4335b068fc51cdd
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34826990"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929295"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed 陳述式 (C# 參考)
 
@@ -73,8 +73,8 @@ fixed (byte* ps = srcarray, pd = dstarray)
 
 ## <a name="see-also"></a>請參閱
 
- [C# 參考](../index.md)  
- [C# 程式設計指南](../../programming-guide/index.md)  
- [C# 關鍵字](index.md)  
- [Unsafe.DangerousAPI](unsafe.md)  
- [固定大小的緩衝區](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)
+- [C# 參考](../index.md)  
+- [C# 程式設計指南](../../programming-guide/index.md)  
+- [C# 關鍵字](index.md)  
+- [Unsafe.DangerousAPI](unsafe.md)  
+- [固定大小的緩衝區](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)

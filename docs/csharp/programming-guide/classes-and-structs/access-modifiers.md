@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: ec275d4782fee047b16fd114c4d22ceb03eecb11
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 4be248b1d86692bd35491e55b1c649cd8428a33b
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199216"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42751958"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>存取修飾詞 (C# 程式設計手冊)
 所有類型和類型成員都具有存取範圍層級，以控制是否可以從組件中的其他程式碼或其他組件中使用它們。 您可以使用下列存取修飾詞，以在宣告類型或成員時指定其存取範圍：  
@@ -43,7 +43,7 @@ ms.locfileid: "39199216"
   
  衍生類別的存取範圍不能大於其基底類型。 換句話說，您不能有衍生自內部類別 `A` 的公用類別 `B`。 因為 `A` 的所有 protected 或 internal 成員都可以從衍生類別進行存取，所以如果允許這樣做，則會有將 `A` 設為 public 的效果。  
   
- 您可以使用 InternalsVisibleToAttribute 來啟用特定其他組件存取您的內部類型。 如需詳細資訊，請參閱 [Friend Assemblies](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055) (Friend 組件)。  
+ 您可以使用 InternalsVisibleToAttribute 來啟用特定其他組件存取您的內部類型。 如需詳細資訊，請參閱 [Friend Assemblies](../concepts/assemblies-gac/friend-assemblies.md) (Friend 組件)。  
   
 ## <a name="class-and-struct-member-accessibility"></a>類別和結構成員存取範圍  
  您可使用六種存取類型的任一種，宣告類別成員 (包括巢狀類別和結構)。 因為結構不支援繼承，所以無法將結構成員宣告為 protected。  

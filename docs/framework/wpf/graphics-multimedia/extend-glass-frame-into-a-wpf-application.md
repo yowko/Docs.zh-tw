@@ -10,14 +10,15 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: 1e1efd6db6efa3a0b85d7d7794be7d3728da8c85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93eda6d6a13d6a510f2aeb06ab1c66d0cd40927f
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931536"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>將玻璃框架擴充至 WPF 應用程式中
-本主題示範如何擴充[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]玻璃框架工作區的 Windows Presentation Foundation (WPF) 應用程式。  
+本主題示範如何擴充[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]至 Windows Presentation Foundation (WPF) 應用程式的工作區的玻璃框架。  
   
 > [!NOTE]
 >  此範例只能在執行桌面視窗管理員 (DWM) 且已啟用玻璃效果的 [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] 機器上使用。 [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] 家用入門版不支援透明的玻璃效果。 在 [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] 其他版本上通常以透明玻璃效果呈現的區域會呈現不透明。  
@@ -61,10 +62,10 @@ public static extern int DwmExtendFrameIntoClientArea(
         End Function  
 ```  
   
- [DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx) 是會將框架擴充至工作區的 DWM 函式。 它接受兩個參數：視窗控制代碼和 [MARGINS](https://msdn.microsoft.com/library/bb773244.aspx) 結構。 [MARGINS](https://msdn.microsoft.com/library/bb773244.aspx) 是用來告知 DWM 應該額外將多少框架擴充至工作區。  
+ [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) 是會將框架擴充至工作區的 DWM 函式。 它接受兩個參數：視窗控制代碼和 [MARGINS](/windows/desktop/api/uxtheme/ns-uxtheme-_margins) 結構。 [MARGINS](/windows/desktop/api/uxtheme/ns-uxtheme-_margins) 是用來告知 DWM 應該額外將多少框架擴充至工作區。  
   
 ## <a name="example"></a>範例  
- 若要使用 [DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx) 函式，必須取得視窗控制代碼。 在[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，可從取得的視窗控制代碼<xref:System.Windows.Interop.HwndSource.Handle%2A>屬性<xref:System.Windows.Interop.HwndSource>。 在下列範例中，框架會擴充至用戶端區域上<xref:System.Windows.FrameworkElement.Loaded>視窗的事件。  
+ 若要使用 [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) 函式，必須取得視窗控制代碼。 在  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，可從取得視窗控制代碼<xref:System.Windows.Interop.HwndSource.Handle%2A>屬性<xref:System.Windows.Interop.HwndSource>。 在下列範例中，將框架擴充到工作區上<xref:System.Windows.FrameworkElement.Loaded>視窗的事件。  
   
 ```csharp  
 void OnLoaded(object sender, RoutedEventArgs e)  
@@ -108,7 +109,7 @@ void OnLoaded(object sender, RoutedEventArgs e)
 ```  
   
 ## <a name="example"></a>範例  
- 下列範例示範將框架擴充至工作區的簡單視窗。 框架會包含下列兩個的上框線後方已擴充<xref:System.Windows.Controls.TextBox>物件。  
+ 下列範例示範將框架擴充至工作區的簡單視窗。 包含兩個的上框線後面擴充框架<xref:System.Windows.Controls.TextBox>物件。  
   
 ```xaml  
 <Window x:Class="SDKSample.Window1"  
@@ -149,6 +150,6 @@ void OnLoaded(object sender, RoutedEventArgs e)
  ![擴充至 WPF 應用程式中的玻璃框架。](../../../../docs/framework/wpf/graphics-multimedia/media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")  
   
 ## <a name="see-also"></a>另請參閱  
- [桌面視窗管理員概觀](https://msdn.microsoft.com/library/aa969540.aspx)  
- [桌面視窗管理員模糊概觀](https://msdn.microsoft.com/library/aa969537.aspx)  
- [DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx)
+ [桌面視窗管理員概觀](/windows/desktop/dwm/dwm-overview)  
+ [桌面視窗管理員模糊概觀](/windows/desktop/dwm/blur-ovw)  
+ [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea)

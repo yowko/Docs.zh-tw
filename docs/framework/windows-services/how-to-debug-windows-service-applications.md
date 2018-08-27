@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
 manager: douge
-ms.openlocfilehash: 2c73ccd75bdbd1298371921bababa87ba4520495
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5de4c90361033df603bb63fbb365514d6bb5ea0c
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518046"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935683"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>如何：偵錯 Windows 服務應用程式
 服務必須從服務控制管理員內容之中執行，而不是從 Visual Studio 之中執行。 因此，對服務進行偵錯不像是對其他 Visual Studio 應用程式類型進行偵錯那樣簡單直接。 若要對服務進行偵錯，您必須啟動服務，然後將偵錯工具附加至執行中的處理序。 之後就可以使用 Visual Studio 所有的標準偵錯功能，對應用程式進行偵錯。  
@@ -33,7 +33,7 @@ ms.locfileid: "33518046"
 >  對 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法進行偵錯可能是項困難的工作，因為服務控制管理員對於啟動服務的所有嘗試都強加上 30 秒的限制。 如需詳細資訊，請參閱[疑難排解：對 Windows 服務進行偵錯](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md)。  
   
 > [!WARNING]
->  若要取得有關偵錯的有意義資訊，Visual Studio 偵錯工具必須在符號檔中找到正在進行偵錯的二進位檔案。 如果您想要對建置於 Visual Studio 中的服務進行偵錯，符號檔 (.pdb 檔) 會與可執行檔或程式庫位於同一個資料夾中，並且偵錯工具會自動載入檔案。 如果您想要對非您所建置的服務進行偵錯，則應該先找到服務的符號，並確定偵錯工具可以找到這些符號。 請參閱[指定符號 (.pdb) 和原始程式檔](http://msdn.microsoft.com/library/1105e169-5272-4e7c-b3e7-cda1b7798a6b)。 如果您想要對系統處理序進行偵錯，或想要在您的服務中有系統呼叫的符號，則應該加入 Microsoft 符號伺服器。 請參閱[偵錯符號](http://msdn.microsoft.com/windows/desktop/ee416588.aspx) \(英文\)。  
+>  若要取得有關偵錯的有意義資訊，Visual Studio 偵錯工具必須在符號檔中找到正在進行偵錯的二進位檔案。 如果您想要對建置於 Visual Studio 中的服務進行偵錯，符號檔 (.pdb 檔) 會與可執行檔或程式庫位於同一個資料夾中，並且偵錯工具會自動載入檔案。 如果您想要對非您所建置的服務進行偵錯，則應該先找到服務的符號，並確定偵錯工具可以找到這些符號。 請參閱[指定符號 (.pdb) 和原始程式檔](http://msdn.microsoft.com/library/1105e169-5272-4e7c-b3e7-cda1b7798a6b)。 如果您想要對系統處理序進行偵錯，或想要在您的服務中有系統呼叫的符號，則應該加入 Microsoft 符號伺服器。 請參閱[偵錯符號](/windows/desktop/DxTechArts/debugging-with-symbols) \(英文\)。  
   
 ### <a name="to-debug-a-service"></a>偵錯服務  
   
@@ -80,7 +80,7 @@ ms.locfileid: "33518046"
   
 1.  將方法加入執行 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 方法的服務：  
   
-    ```  
+    ```csharp  
     internal void TestStartupAndStop(string[] args)  
     {  
         this.OnStart(args);  
@@ -91,18 +91,19 @@ ms.locfileid: "33518046"
   
 2.  依照下列方式重寫 `Main` 方法：  
   
-    ```  
+    ```csharp  
     static void Main(string[] args)  
-            {  
-                if (Environment.UserInteractive)  
-                {  
-                    MyNewService service1 = new MyNewService(args);  
-                    service1.TestStartupAndStop(args);  
-                }  
-                else  
-                {  
-                    // Put the body of your old Main method here.  
-                }  
+    {  
+        if (Environment.UserInteractive)  
+        {  
+            MyNewService service1 = new MyNewService(args);  
+            service1.TestStartupAndStop(args);  
+        }  
+        else  
+        {  
+            // Put the body of your old Main method here.  
+        }  
+    }
     ```  
   
 3.  在專案屬性的 [應用程式] 索引標籤中，將 [輸出類型] 設定為 [主控台應用程式]。  
@@ -117,4 +118,4 @@ ms.locfileid: "33518046"
  [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
  [如何：安裝和解除安裝服務](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
  [如何：啟動服務](../../../docs/framework/windows-services/how-to-start-services.md)  
- [對服務進行偵錯](http://msdn.microsoft.com/library/windows/desktop/ms682546.aspx) \(英文\)
+ [對服務進行偵錯](/windows/desktop/Services/debugging-a-service) \(英文\)

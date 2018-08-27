@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6625103da5b9e235b214a41d990d7accb2646e57
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: a6c86870bf0089c25d402cf8f28a513e953ef28f
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "36314935"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933699"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>可攜式類別庫的跨平台開發
 Visual Studio 中的 .NET Framework 可攜式類別庫專案類型可幫助您快速、輕鬆地建立適用於 Microsoft 平台的跨平台應用程式和程式庫。  
@@ -147,7 +147,7 @@ Visual Studio 2012 中的變更目標對話方塊
  ➌ 需要[Microsoft HTTP Client Libraries](https://www.nuget.org/packages/Microsoft.Net.Http)封裝  
   
 > [!WARNING]
->  當您參考時，您可能會發生錯誤[Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression)並[Microsoft HTTP Client Libraries](https://www.nuget.org/packages/Microsoft.Net.Http) Windows Phone Silverlight 8.1 應用程式所使用的可攜式程式庫中的套件。 如需詳細資訊，請參閱 <<c0> [ 平台相容性和重大變更 Windows Phone Silverlight 8.1 應用程式](/previous-versions/windows/apps/dn642084(v=vs.105))。  
+>  當您參考時，您可能會發生錯誤[Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression)並[Microsoft HTTP Client Libraries](https://www.nuget.org/packages/Microsoft.Net.Http) Windows Phone Silverlight 8.1 應用程式所使用的可攜式程式庫中的套件。 如需詳細資訊，請參閱 <<c0> [ 平台相容性和重大變更 Windows Phone Silverlight 8.1 應用程式](https://docs.microsoft.com/previous-versions/windows/apps/dn642084(v=vs.105))。  
   
 <a name="members"></a>   
 ## <a name="supported-types-and-members"></a>支援的類型和成員  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 407ca9e4744ea9be45867a08e87c502821226472
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.openlocfilehash: 2009b3620bc4874520221a4ea847222feafca01b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34058827"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000972"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - 字串內插補點 (C# 參考)
 
@@ -88,12 +88,13 @@ ms.locfileid: "34058827"
 
 如果您是字串插補的新手，請參閱 [C# 中的字串插值](../../quick-starts/interpolated-strings.yml)快速入門。 如需其他範例，請參閱 [C# 中的字串插值](../../tutorials/string-interpolation.md)教學課程。
 
-## <a name="see-also"></a>另請參閱  
- <xref:System.String.Format%2A?displayProperty=nameWithType>  
- <xref:System.FormattableString?displayProperty=nameWithType>  
- <xref:System.IFormattable?displayProperty=nameWithType>  
- [複合格式](../../../standard/base-types/composite-formatting.md)  
- [字串](../../programming-guide/strings/index.md)  
- [C# 程式設計指南](../../programming-guide/index.md)  
- [C# 特殊字元](index.md)  
- [C# 參考](../index.md)  
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.String.Format%2A?displayProperty=nameWithType>
+- <xref:System.FormattableString?displayProperty=nameWithType>
+- <xref:System.IFormattable?displayProperty=nameWithType>
+- [複合格式](../../../standard/base-types/composite-formatting.md)
+- [字串](../../programming-guide/strings/index.md)
+- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 特殊字元](index.md)
+- [C# 參考](../index.md)

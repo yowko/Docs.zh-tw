@@ -6,21 +6,21 @@ helpviewer_keywords:
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
 ms.openlocfilehash: 2917a698f9aa7828c201a048f443f5941797c704
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655859"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934286"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Visual Basic 中的物件和類別
 「物件」是可視為一個單位的程式碼和資料組合。 物件可以是應用程式的一部分，例如控制項或表單。 整個應用程式也可以是一個物件。
 
-當您在 Visual Basic 中建立應用程式時，您經常使用的物件。 您可以使用由 Visual Basic 中，例如控制項、 表單和資料存取物件的物件。 您也可以在 Visual Basic 應用程式中使用從其他應用程式的物件。 您甚至可以建立自己的物件，並為其定義其他屬性和方法。 物件的作用類似針對程式預製的建置組塊 - 它們可讓您撰寫一段程式碼一次，然後不斷地重複使用。  
+當您在 Visual Basic 中建立應用程式時，您經常會使用物件。 您可以使用 Visual Basic 中，所提供，例如控制項、 表單和資料存取物件的物件。 您也可以在 Visual Basic 應用程式內使用從其他應用程式的物件。 您甚至可以建立自己的物件，並為其定義其他屬性和方法。 物件的作用類似針對程式預製的建置組塊 - 它們可讓您撰寫一段程式碼一次，然後不斷地重複使用。  
   
 本主題會詳細討論物件。  
 
 ## <a name="objects-and-classes"></a>物件和類別
-在 Visual Basic 中的每個物件由定義*類別*。 類別會描述物件的變數、屬性、程序及事件。 物件是類別的執行個體；當您定義類別之後，就能視需要建立最多的物件。
+在 Visual Basic 中的每個物件所定義*類別*。 類別會描述物件的變數、屬性、程序及事件。 物件是類別的執行個體；當您定義類別之後，就能視需要建立最多的物件。
 
 若要了解物件和其類別之間的關聯性，請想像餅乾壓模與餅乾。 餅乾壓模是類別。 它會定義每塊餅乾的特性，例如大小和形狀。 類別可用來建立物件。 物件則是餅乾。
 

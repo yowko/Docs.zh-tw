@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - base keyword [C#]
 ms.assetid: 8b645dbe-1a33-49b8-8716-1c401f9a5ea5
-ms.openlocfilehash: 94bfcbacd8c222004c1a013cc855ac8d46aab05f
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 8719ab79273701173530760ad1bec837c4f4302d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314655"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934349"
 ---
 # <a name="base-c-reference"></a>base (C# 參考)
 
@@ -50,7 +50,7 @@ ms.locfileid: "36314655"
 
 ## <a name="see-also"></a>另請參閱
 
-[C# 參考](../../../csharp/language-reference/index.md)  
-[C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-[C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
-[this](../../../csharp/language-reference/keywords/this.md)
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+- [this](../../../csharp/language-reference/keywords/this.md)

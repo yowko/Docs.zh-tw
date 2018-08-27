@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c50d79f402d55a2fb5e859da4d61b04eeeb6931
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 80c3a772ae4dfba53982ed28c0bd54f500c50b08
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579739"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932944"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>泛型中的共變數和反變數
 <a name="top"></a> 共變數和反變數這兩個詞，是指使用比原本所指定更多 (較明確) 或更少 (較不明確) 衍生類型的能力。 泛型類型參數支援共變數和反變數，可在指派和使用泛型類型時提供更大的彈性。 當您參考類型系統時，共變數、反變數和不可變數的定義如下。 範例中會假設名為 `Base` 的基底類別，以及名為 `Derived`的衍生類別。  
@@ -33,13 +33,13 @@ ms.locfileid: "33579739"
   
      可讓您使用比原本所指定更泛型 (較少衍生) 的類型。  
   
-     您可以將 `IEnumerable<Base>` (在 Visual Basic 中為`IEnumerable(Of Base)` ) 的執行個體指派給 `IEnumerable<Derived>`類型的變數。  
+     您可以將 `Action<Base>` (在 Visual Basic 中為`Action(Of Base)` ) 的執行個體指派給 `Action<Derived>`類型的變數。  
   
 -   `Invariance`  
   
      表示您只能使用原本指定的類型，因此不可變泛型類型參數既不是共變數，也不是反變數。  
   
-     您無法將 `IEnumerable<Base>` (在 Visual Basic 中為 `IEnumerable(Of Base)`) 的執行個體指派給 `IEnumerable<Derived>` 類型的變數，反之亦然。  
+     您無法將 `List<Base>` (在 Visual Basic 中為 `List(Of Base)`) 的執行個體指派給 `List<Derived>` 類型的變數，反之亦然。  
   
  Covariant 型別參數可讓您進行看起來很像一般[多型](~/docs/csharp/programming-guide/classes-and-structs/polymorphism.md)的指派，如下列程式碼所示。  
   
