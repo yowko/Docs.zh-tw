@@ -2,12 +2,12 @@
 title: 操作說明文章 (C# 指南)
 description: 集結了快速提示與簡要的程式碼範例
 ms.date: 12/20/2017
-ms.openlocfilehash: 209af8858de1a791997d254f5a2ddd5dd1803bff
-ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
+ms.openlocfilehash: db3ba1982a26097c3d69ba91493164c8f2371be9
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34549377"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999559"
 ---
 # <a name="how-to-c"></a>操作說明 (C#)
 
@@ -68,7 +68,7 @@ ms.locfileid: "34549377"
 - [使用 `as` 與 `is` 安全地轉換為其他類型](../programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)。
 - [定義 `struct` 類型的轉換運算子](../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)。
 - [決定類型是不是可為 Null 的實值型別](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md)。
-- [在可為 Null 與不可為 Null 的實值型別間轉換](../programming-guide/nullable-types/how-to-safely-cast-from-bool-to-bool.md)。
+- [在可為 Null 與不可為 Null 的實值型別間轉換](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-type-to-an-underlying-type)。
 
 ## <a name="equality-and-ordering-comparisons"></a>相等和排序比較
 
@@ -126,7 +126,7 @@ LINQ 可讓您撰寫程式碼，來查詢支援 LINQ 查詢運算式模式的任
 
 - [使用 `System.Threading.Tasks.Task.WhenAll` 改善非同步效能](../programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)。
 - [使用 `async` 與 `await` 平行提出多個 Web 要求](../programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)。
-- [使用執行緒集區](../programming-guide/concepts/threading/how-to-use-a-thread-pool.md)。
+- [使用執行緒集區](../../standard/threading/the-managed-thread-pool.md#using-the-thread-pool)。
 
 ## <a name="command-line-args-to-your-program"></a>程式的命令列引數
 
