@@ -16,19 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d87627b8bb3414860d994273396dbb4e64acdea7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e69625184aca7d1ebd4bb0b7dc7c4958596b906a
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459872"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000339"
 ---
-# <a name="beginenumeration-function"></a><span data-ttu-id="89093-103">BeginEnumeration 函式</span><span class="sxs-lookup"><span data-stu-id="89093-103">BeginEnumeration function</span></span>
-<span data-ttu-id="89093-104">開始列舉物件的可用方法的型別。</span><span class="sxs-lookup"><span data-stu-id="89093-104">Begins an enumeration of the methods available for the object.</span></span>  
+# <a name="beginenumeration-function"></a><span data-ttu-id="aa3eb-103">BeginEnumeration 函式</span><span class="sxs-lookup"><span data-stu-id="aa3eb-103">BeginEnumeration function</span></span>
+<span data-ttu-id="aa3eb-104">開始列舉型別物件的可用方法。</span><span class="sxs-lookup"><span data-stu-id="aa3eb-104">Begins an enumeration of the methods available for the object.</span></span>  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
-## <a name="syntax"></a><span data-ttu-id="89093-105">語法</span><span class="sxs-lookup"><span data-stu-id="89093-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="aa3eb-105">語法</span><span class="sxs-lookup"><span data-stu-id="aa3eb-105">Syntax</span></span>  
   
 ``` 
 HRESULT BeginMethodEnumeration (
@@ -38,43 +38,43 @@ HRESULT BeginMethodEnumeration (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="89093-106">參數</span><span class="sxs-lookup"><span data-stu-id="89093-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="aa3eb-106">參數</span><span class="sxs-lookup"><span data-stu-id="aa3eb-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="89093-107">[in]未使用這個參數。</span><span class="sxs-lookup"><span data-stu-id="89093-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="aa3eb-107">[in]未使用此參數。</span><span class="sxs-lookup"><span data-stu-id="aa3eb-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="89093-108">[in]指標[IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)執行個體。</span><span class="sxs-lookup"><span data-stu-id="89093-108">[in] A pointer to an [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instance.</span></span>
+<span data-ttu-id="aa3eb-108">[in]指標[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)執行個體。</span><span class="sxs-lookup"><span data-stu-id="aa3eb-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
 `lEnumFlags`  
-<span data-ttu-id="89093-109">[in]零 (0) 的所有方法中或指定之列舉型別範圍的旗標。</span><span class="sxs-lookup"><span data-stu-id="89093-109">[in] Zero (0) for all methods, or a flag that specifies the scope of the enumeration.</span></span> <span data-ttu-id="89093-110">中所定義的下列旗標*WbemCli.h*標頭檔，或者您可以定義它們以常數的形式在程式碼中：</span><span class="sxs-lookup"><span data-stu-id="89093-110">The following flags are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="aa3eb-109">[in]所有的方法，或指定的列舉型別範圍的旗標，為零 (0)。</span><span class="sxs-lookup"><span data-stu-id="aa3eb-109">[in] Zero (0) for all methods, or a flag that specifies the scope of the enumeration.</span></span> <span data-ttu-id="aa3eb-110">中所定義的下列旗標*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼：</span><span class="sxs-lookup"><span data-stu-id="aa3eb-110">The following flags are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-<span data-ttu-id="89093-111">常數</span><span class="sxs-lookup"><span data-stu-id="89093-111">Constant</span></span>  |<span data-ttu-id="89093-112">值</span><span class="sxs-lookup"><span data-stu-id="89093-112">Value</span></span>  |<span data-ttu-id="89093-113">描述</span><span class="sxs-lookup"><span data-stu-id="89093-113">Description</span></span>  |
+<span data-ttu-id="aa3eb-111">常數</span><span class="sxs-lookup"><span data-stu-id="aa3eb-111">Constant</span></span>  |<span data-ttu-id="aa3eb-112">值</span><span class="sxs-lookup"><span data-stu-id="aa3eb-112">Value</span></span>  |<span data-ttu-id="aa3eb-113">描述</span><span class="sxs-lookup"><span data-stu-id="aa3eb-113">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_FLAG_LOCAL_ONLY` | <span data-ttu-id="89093-114">0x10</span><span class="sxs-lookup"><span data-stu-id="89093-114">0x10</span></span> | <span data-ttu-id="89093-115">限制此類別本身中定義之方法的列舉。</span><span class="sxs-lookup"><span data-stu-id="89093-115">Limit the enumeration to methods that are defined in the class itself.</span></span> |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  <span data-ttu-id="89093-116">0x20</span><span class="sxs-lookup"><span data-stu-id="89093-116">0x20</span></span> | <span data-ttu-id="89093-117">限制的列舉型別都繼承自基底類別的屬性。</span><span class="sxs-lookup"><span data-stu-id="89093-117">Limit the enumeration to properties that are inherited from base classes.</span></span> |
+| `WBEM_FLAG_LOCAL_ONLY` | <span data-ttu-id="aa3eb-114">0x10</span><span class="sxs-lookup"><span data-stu-id="aa3eb-114">0x10</span></span> | <span data-ttu-id="aa3eb-115">限制類別本身中定義的方法來列舉型別。</span><span class="sxs-lookup"><span data-stu-id="aa3eb-115">Limit the enumeration to methods that are defined in the class itself.</span></span> |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  <span data-ttu-id="aa3eb-116">0x20</span><span class="sxs-lookup"><span data-stu-id="aa3eb-116">0x20</span></span> | <span data-ttu-id="aa3eb-117">限制列舉型別繼承自基底類別的屬性。</span><span class="sxs-lookup"><span data-stu-id="aa3eb-117">Limit the enumeration to properties that are inherited from base classes.</span></span> |
 
-## <a name="return-value"></a><span data-ttu-id="89093-118">傳回值</span><span class="sxs-lookup"><span data-stu-id="89093-118">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="aa3eb-118">傳回值</span><span class="sxs-lookup"><span data-stu-id="aa3eb-118">Return value</span></span>
 
-<span data-ttu-id="89093-119">這個函式傳回下列值會定義在*WbemCli.h*標頭檔，或者您可以定義它們以常數的形式在程式碼中：</span><span class="sxs-lookup"><span data-stu-id="89093-119">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="aa3eb-119">此函式所傳回的下列值中定義*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼：</span><span class="sxs-lookup"><span data-stu-id="aa3eb-119">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="89093-120">常數</span><span class="sxs-lookup"><span data-stu-id="89093-120">Constant</span></span>  |<span data-ttu-id="89093-121">值</span><span class="sxs-lookup"><span data-stu-id="89093-121">Value</span></span>  |<span data-ttu-id="89093-122">描述</span><span class="sxs-lookup"><span data-stu-id="89093-122">Description</span></span>  |
+|<span data-ttu-id="aa3eb-120">常數</span><span class="sxs-lookup"><span data-stu-id="aa3eb-120">Constant</span></span>  |<span data-ttu-id="aa3eb-121">值</span><span class="sxs-lookup"><span data-stu-id="aa3eb-121">Value</span></span>  |<span data-ttu-id="aa3eb-122">描述</span><span class="sxs-lookup"><span data-stu-id="aa3eb-122">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="89093-123">0x80041008</span><span class="sxs-lookup"><span data-stu-id="89093-123">0x80041008</span></span> | <span data-ttu-id="89093-124">`lEnnumFlags` 為非零，並不是其中一個指定的旗標。</span><span class="sxs-lookup"><span data-stu-id="89093-124">`lEnnumFlags` is non-zero and is not one of the specified flags.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="89093-125">0</span><span class="sxs-lookup"><span data-stu-id="89093-125">0</span></span> | <span data-ttu-id="89093-126">函式呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="89093-126">The function call was successful.</span></span>  |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="aa3eb-123">0x80041008</span><span class="sxs-lookup"><span data-stu-id="aa3eb-123">0x80041008</span></span> | <span data-ttu-id="aa3eb-124">`lEnnumFlags` 為非零，並不是其中一個指定的旗標。</span><span class="sxs-lookup"><span data-stu-id="aa3eb-124">`lEnnumFlags` is non-zero and is not one of the specified flags.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="aa3eb-125">0</span><span class="sxs-lookup"><span data-stu-id="aa3eb-125">0</span></span> | <span data-ttu-id="aa3eb-126">函式呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="aa3eb-126">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="89093-127">備註</span><span class="sxs-lookup"><span data-stu-id="89093-127">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="aa3eb-127">備註</span><span class="sxs-lookup"><span data-stu-id="aa3eb-127">Remarks</span></span>
 
-<span data-ttu-id="89093-128">此函式會包裝呼叫[IWbemClassObject::BeginMethodEnumeration](https://msdn.microsoft.com/library/aa391435(v=vs.85).aspx)方法。</span><span class="sxs-lookup"><span data-stu-id="89093-128">This function wraps a call to the [IWbemClassObject::BeginMethodEnumeration](https://msdn.microsoft.com/library/aa391435(v=vs.85).aspx) method.</span></span>
+<span data-ttu-id="aa3eb-128">此函式會包裝在呼叫[IWbemClassObject::BeginMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-beginmethodenumeration)方法。</span><span class="sxs-lookup"><span data-stu-id="aa3eb-128">This function wraps a call to the [IWbemClassObject::BeginMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-beginmethodenumeration) method.</span></span>
 
-<span data-ttu-id="89093-129">如果目前的物件類別定義，才支援這個方法呼叫。</span><span class="sxs-lookup"><span data-stu-id="89093-129">This method call is only supported if the current object is a class definition.</span></span> <span data-ttu-id="89093-130">方法操作中未提供[IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)指向執行個體的指標。</span><span class="sxs-lookup"><span data-stu-id="89093-130">Method manipulation is not available from [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) pointers that point to instances.</span></span> <span data-ttu-id="89093-131">方法會列舉中的順序保證能夠針對指定的執行個體而異[IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)。</span><span class="sxs-lookup"><span data-stu-id="89093-131">The order in which methods are enumerated is guaranteed to be invariant for a given instance of [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx).</span></span>
+<span data-ttu-id="aa3eb-129">如果目前的物件類別定義才支援這個方法呼叫。</span><span class="sxs-lookup"><span data-stu-id="aa3eb-129">This method call is only supported if the current object is a class definition.</span></span> <span data-ttu-id="aa3eb-130">方法操作不是可從[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)指標，指向 執行個體。</span><span class="sxs-lookup"><span data-stu-id="aa3eb-130">Method manipulation is not available from [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) pointers that point to instances.</span></span> <span data-ttu-id="aa3eb-131">方法會列舉在其中的順序保證為指定的執行個體而異[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)。</span><span class="sxs-lookup"><span data-stu-id="aa3eb-131">The order in which methods are enumerated is guaranteed to be invariant for a given instance of [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject).</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="89093-132">需求</span><span class="sxs-lookup"><span data-stu-id="89093-132">Requirements</span></span>  
- <span data-ttu-id="89093-133">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="89093-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="aa3eb-132">需求</span><span class="sxs-lookup"><span data-stu-id="aa3eb-132">Requirements</span></span>  
+ <span data-ttu-id="aa3eb-133">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="aa3eb-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="89093-134">**標頭：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="89093-134">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="aa3eb-134">**標頭：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="aa3eb-134">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="89093-135">**.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="89093-135">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="aa3eb-135">**.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="aa3eb-135">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="89093-136">另請參閱</span><span class="sxs-lookup"><span data-stu-id="89093-136">See also</span></span>  
-[<span data-ttu-id="89093-137">WMI 和效能計數器 （Unmanaged API 參考）</span><span class="sxs-lookup"><span data-stu-id="89093-137">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="aa3eb-136">另請參閱</span><span class="sxs-lookup"><span data-stu-id="aa3eb-136">See also</span></span>  
+[<span data-ttu-id="aa3eb-137">WMI 和效能計數器 （Unmanaged API 參考）</span><span class="sxs-lookup"><span data-stu-id="aa3eb-137">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

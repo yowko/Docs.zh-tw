@@ -8,44 +8,44 @@ helpviewer_keywords:
 - type conversion [C#], as keyword
 - as keyword [C#]
 ms.assetid: a9be126b-cbf4-4990-a70d-d0e1983cad0e
-ms.openlocfilehash: cc5bb62d94e6999bf9174bd2221fb68e7c711588
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: aee80b3262ccd9432d7c311dddec47185b66d05f
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207901"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003069"
 ---
-# <a name="as-c-reference"></a><span data-ttu-id="18c5f-102">as (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="18c5f-102">as (C# Reference)</span></span>
-<span data-ttu-id="18c5f-103">您可以使用 `as` 運算子，以在相容的參考型別或[可為 Null 的型別](../../../csharp/programming-guide/nullable-types/index.md)之間執行特定轉換類型。</span><span class="sxs-lookup"><span data-stu-id="18c5f-103">You can use the `as` operator to perform certain types of conversions between compatible reference types or [nullable types](../../../csharp/programming-guide/nullable-types/index.md).</span></span> <span data-ttu-id="18c5f-104">下列程式碼示範範例。</span><span class="sxs-lookup"><span data-stu-id="18c5f-104">The following code shows an example.</span></span>  
+# <a name="as-c-reference"></a><span data-ttu-id="ced24-102">as (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="ced24-102">as (C# Reference)</span></span>
+<span data-ttu-id="ced24-103">您可以使用 `as` 運算子，以在相容的參考型別或[可為 Null 的型別](../../../csharp/programming-guide/nullable-types/index.md)之間執行特定轉換類型。</span><span class="sxs-lookup"><span data-stu-id="ced24-103">You can use the `as` operator to perform certain types of conversions between compatible reference types or [nullable types](../../../csharp/programming-guide/nullable-types/index.md).</span></span> <span data-ttu-id="ced24-104">下列程式碼示範範例。</span><span class="sxs-lookup"><span data-stu-id="ced24-104">The following code shows an example.</span></span>  
   
 [!code-csharp[csrefKeywordsOperator#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#1)]
   
-## <a name="remarks"></a><span data-ttu-id="18c5f-105">備註</span><span class="sxs-lookup"><span data-stu-id="18c5f-105">Remarks</span></span>  
- <span data-ttu-id="18c5f-106">`as` 運算子就像轉型運算。</span><span class="sxs-lookup"><span data-stu-id="18c5f-106">The `as` operator is like a cast operation.</span></span> <span data-ttu-id="18c5f-107">不過，如果無法進行轉換，則 `as` 會傳回 `null`，而不是引發例外狀況。</span><span class="sxs-lookup"><span data-stu-id="18c5f-107">However, if the conversion isn't possible, `as` returns `null` instead of raising an exception.</span></span> <span data-ttu-id="18c5f-108">參考下列範例：</span><span class="sxs-lookup"><span data-stu-id="18c5f-108">Consider the following example:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ced24-105">備註</span><span class="sxs-lookup"><span data-stu-id="ced24-105">Remarks</span></span>  
+ <span data-ttu-id="ced24-106">`as` 運算子就像轉型運算。</span><span class="sxs-lookup"><span data-stu-id="ced24-106">The `as` operator is like a cast operation.</span></span> <span data-ttu-id="ced24-107">不過，如果無法進行轉換，則 `as` 會傳回 `null`，而不是引發例外狀況。</span><span class="sxs-lookup"><span data-stu-id="ced24-107">However, if the conversion isn't possible, `as` returns `null` instead of raising an exception.</span></span> <span data-ttu-id="ced24-108">參考下列範例：</span><span class="sxs-lookup"><span data-stu-id="ced24-108">Consider the following example:</span></span>  
   
 ```csharp  
 expression as type  
 ```  
   
- <span data-ttu-id="18c5f-109">這個程式碼相當於下列運算式，差異在於只會評估 `expression` 變數一次。</span><span class="sxs-lookup"><span data-stu-id="18c5f-109">The code is equivalent to the following expression except that the `expression` variable is evaluated only one time.</span></span>  
+ <span data-ttu-id="ced24-109">這個程式碼相當於下列運算式，差異在於只會評估 `expression` 變數一次。</span><span class="sxs-lookup"><span data-stu-id="ced24-109">The code is equivalent to the following expression except that the `expression` variable is evaluated only one time.</span></span>  
   
 ```csharp  
 expression is type ? (type)expression : (type)null  
 ```  
   
- <span data-ttu-id="18c5f-110">請注意，`as` 運算子只會執行參考轉換、可為 Null 的轉換以及 Boxing 轉換。</span><span class="sxs-lookup"><span data-stu-id="18c5f-110">Note that the `as` operator performs only reference conversions, nullable conversions, and boxing conversions.</span></span> <span data-ttu-id="18c5f-111">`as` 運算子無法執行其他轉換，例如使用者定義的轉換，就應該改為使用轉換運算式來執行。</span><span class="sxs-lookup"><span data-stu-id="18c5f-111">The `as` operator can't perform other conversions, such as user-defined conversions, which should instead be performed by using cast expressions.</span></span>  
+ <span data-ttu-id="ced24-110">請注意，`as` 運算子只會執行參考轉換、可為 Null 的轉換以及 Boxing 轉換。</span><span class="sxs-lookup"><span data-stu-id="ced24-110">Note that the `as` operator performs only reference conversions, nullable conversions, and boxing conversions.</span></span> <span data-ttu-id="ced24-111">`as` 運算子無法執行其他轉換，例如使用者定義的轉換，就應該改為使用轉換運算式來執行。</span><span class="sxs-lookup"><span data-stu-id="ced24-111">The `as` operator can't perform other conversions, such as user-defined conversions, which should instead be performed by using cast expressions.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="18c5f-112">範例</span><span class="sxs-lookup"><span data-stu-id="18c5f-112">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="ced24-112">範例</span><span class="sxs-lookup"><span data-stu-id="ced24-112">Example</span></span>  
 
 [!code-csharp[csrefKeywordsOperator#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#2)]
   
-## <a name="c-language-specification"></a><span data-ttu-id="18c5f-113">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="18c5f-113">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="ced24-113">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="ced24-113">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="18c5f-114">請參閱</span><span class="sxs-lookup"><span data-stu-id="18c5f-114">See Also</span></span>  
- [<span data-ttu-id="18c5f-115">C# 參考</span><span class="sxs-lookup"><span data-stu-id="18c5f-115">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="18c5f-116">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="18c5f-116">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="18c5f-117">C# 關鍵字</span><span class="sxs-lookup"><span data-stu-id="18c5f-117">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
- [<span data-ttu-id="18c5f-118">is</span><span class="sxs-lookup"><span data-stu-id="18c5f-118">is</span></span>](../../../csharp/language-reference/keywords/is.md)  
- [<span data-ttu-id="18c5f-119">?: 運算子</span><span class="sxs-lookup"><span data-stu-id="18c5f-119">?: Operator</span></span>](../../../csharp/language-reference/operators/conditional-operator.md)  
- [<span data-ttu-id="18c5f-120">運算子關鍵字</span><span class="sxs-lookup"><span data-stu-id="18c5f-120">Operator Keywords</span></span>](../../../csharp/language-reference/keywords/operator-keywords.md)
+## <a name="see-also"></a><span data-ttu-id="ced24-114">請參閱</span><span class="sxs-lookup"><span data-stu-id="ced24-114">See Also</span></span>  
+- [<span data-ttu-id="ced24-115">C# 參考</span><span class="sxs-lookup"><span data-stu-id="ced24-115">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="ced24-116">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="ced24-116">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="ced24-117">C# 關鍵字</span><span class="sxs-lookup"><span data-stu-id="ced24-117">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+- [<span data-ttu-id="ced24-118">is</span><span class="sxs-lookup"><span data-stu-id="ced24-118">is</span></span>](../../../csharp/language-reference/keywords/is.md)  
+- [<span data-ttu-id="ced24-119">?: 運算子</span><span class="sxs-lookup"><span data-stu-id="ced24-119">?: Operator</span></span>](../../../csharp/language-reference/operators/conditional-operator.md)  
+- [<span data-ttu-id="ced24-120">運算子關鍵字</span><span class="sxs-lookup"><span data-stu-id="ced24-120">Operator Keywords</span></span>](../../../csharp/language-reference/keywords/operator-keywords.md)
