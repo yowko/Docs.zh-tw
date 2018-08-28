@@ -1,6 +1,6 @@
 ---
 title: 如何：確認字串是否為有效的電子郵件格式
-ms.date: 03/30/2017
+ms.date: 08/10/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -20,19 +20,16 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02c942dea3314581ce8f758bb9ed3ce88c2fe150
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 18426e655f6702844daa822921888194ed7ecb64
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172323"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42753832"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>如何：確認字串是否為有效的電子郵件格式
 下列範例會使用規則運算式來確認字串是否為有效的電子郵件格式。  
 
-> [!NOTE]
->  建議您使用 <xref:System.Net.Mail.MailAddress?displayProperty=nameWithType> 類別來檢查字串是否使用有效的電子郵件地址格式。 若要這樣做，請將電子郵件地址字串傳遞給 <xref:System.Net.Mail.MailAddress.%23ctor%28System.String%29?displayProperty=nameWithType> 類別建構函式，這會在無法辨識字串的格式時，擲回 <xref:System.FormatException>。  
-  
 ## <a name="example"></a>範例  
  此範例會定義 `IsValidEmail` 方法，如果字串包含有效的電子郵件地址，則這個方法會傳回 `true` ，否則會傳回 `false` ，但不會採取其他任何動作。  
   

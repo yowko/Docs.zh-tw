@@ -7,14 +7,14 @@ ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dc25ff282772cc82b8ebe5d59e729a6a48afa8f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656028"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999583"
 ---
-# <a name="visual-basic-compiler-options-listed-alphabetically"></a>依字母順序列出的 Visual Basic 編譯器選項
-Visual Basic 命令列編譯器可作為從 Visual Studio 整合式的開發環境 (IDE) 編譯程式的替代方法。 以下是 Visual Basic 命令列編譯器選項，依字母順序排序的清單。  
+# <a name="visual-basic-compiler-options-listed-alphabetically"></a>依字母順序排列的 Visual Basic 編譯器選項
+Visual Basic 命令列編譯器提供從 Visual Studio 整合式的開發環境 (IDE) 編譯程式的替代方法。 以下是 Visual Basic 命令列編譯器選項，依字母順序排序的清單。  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
@@ -42,7 +42,7 @@ Visual Basic 命令列編譯器可作為從 Visual Studio 整合式的開發環�
 |[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|指定金鑰組的金鑰容器名稱，為組件提供強式名稱。|  
 |[-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)|指定一個檔案，其中包含可為組件提供強式名稱的金鑰或金鑰組。|  
 |[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|指定語言版本： 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0。|  
-|[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|指定所參考的組件位置[-參考](../../../visual-basic/reference/command-line-compiler/reference.md)選項。|  
+|[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|指定所參考的組件的位置[-參考](../../../visual-basic/reference/command-line-compiler/reference.md)選項。|  
 |[-linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md)|建立與 Managed 資源的連結。|  
 |[-main](../../../visual-basic/reference/command-line-compiler/main.md)|指定類別，其中包含`Sub Main`在啟動時使用的程序。|  
 |[-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|指定將包含模組的組件名稱。|  
@@ -65,8 +65,8 @@ Visual Basic 命令列編譯器可作為從 Visual Studio 整合式的開發環�
 |[-quiet](../../../visual-basic/reference/command-line-compiler/quiet.md)|防止編譯器顯示語法相關錯誤和警告的程式碼。|  
 |[-recurse](../../../visual-basic/reference/command-line-compiler/recurse.md)|搜尋要編譯之原始程式檔的子目錄。|  
 |[-reference](../../../visual-basic/reference/command-line-compiler/reference.md)|從組匯入中繼資料。|  
-|[-refonly](refonly-compiler-option.md)|輸出只參考的組件。|
-|[-refout](refout-compiler-option.md)|指定的參考組件的輸出路徑。|
+|[-refonly](refonly-compiler-option.md)|輸出僅參考組件。|
+|[-refout](refout-compiler-option.md)|指定參考組件的輸出路徑。|
 |[-removeintchecks](../../../visual-basic/reference/command-line-compiler/removeintchecks.md)|停用整數的溢位檢查。|  
 |[-resource](../../../visual-basic/reference/command-line-compiler/resource.md)|將 Managed 資源內嵌至組件中。|  
 |[-rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)|指定所有類型宣告的命名空間。|  

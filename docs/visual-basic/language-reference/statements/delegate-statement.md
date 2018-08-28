@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
 ms.openlocfilehash: 4718c0a6e332d644a7f54c79246df95f841058d0
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244237"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999817"
 ---
 # <a name="delegate-statement"></a>Delegate 陳述式
 用來宣告委派。 委派是參考型別參考`Shared`方法的型別或物件的執行個體方法。 任何具有相符的參數和傳回型別程序可用來建立這個委派類別的執行個體。 此程序可以接著會叫用透過委派執行個體。  

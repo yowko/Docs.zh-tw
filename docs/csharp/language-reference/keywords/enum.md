@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 634fbd846993d32ae529f87e96fd91857e5c1883
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: a64559ac1127f5ec296cf3892dd521c3ad8ac2be
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028275"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003238"
 ---
 # <a name="enum-c-reference"></a>enum (C# 參考)
 
@@ -97,11 +97,11 @@ int x = (int)Day.Sun;
 
 ## <a name="see-also"></a>另請參閱
 
-[C# 參考](../index.md)  
-[列舉型別](../../programming-guide/enumeration-types.md)  
-[C# 關鍵字](index.md)  
-[整數型別表](integral-types-table.md)  
-[內建型別表](built-in-types-table.md)  
-[隱含數值轉換表](implicit-numeric-conversions-table.md)  
-[明確數值轉換表](explicit-numeric-conversions-table.md)  
-[列舉命名慣例](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)
+- [C# 參考](../index.md)  
+- [列舉型別](../../programming-guide/enumeration-types.md)  
+- [C# 關鍵字](index.md)  
+- [整數型別表](integral-types-table.md)  
+- [內建型別表](built-in-types-table.md)  
+- [隱含數值轉換表](implicit-numeric-conversions-table.md)  
+- [明確數值轉換表](explicit-numeric-conversions-table.md)  
+- [列舉命名慣例](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)

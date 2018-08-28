@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bb1d9bdbd0874875939010ea5503fe791a2cd1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 271042fc167331def9e427cd4fc8b510e5f2f32e
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579830"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925720"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET 中規則運算式的最佳做法
 <a name="top"></a> .NET 中的規則運算式引擎是一項強大且功能完整的工具，會依據模式比對而非比較與比對常值文字的方式處理文字。 在大部分情況下，它會快速且有效率地執行模式比對。 不過，在某些情況下，規則運算式引擎速度可能變得相當慢。 而只有鮮少情況下，它甚至可能在處理相對小的輸入卻耗費數小時甚至數天時停止回應。  
@@ -190,7 +190,7 @@ ms.locfileid: "33579830"
   
  由於字緣與文字字元不同，也不是文字字元的子集，因此規則運算式引擎不可能在比對文字字元時跨越字緣。 這表示對於這個規則運算式來說，回溯不會使任何比對完全成功，只會造成效能降低，因為規則運算式引擎會被迫儲存每一個成功的初始文字字元比對的狀態。  
   
- 如果您判定不需回溯，則可使用 `(?>``subexpression``)` 語言元素來停用它。 下列範例會使用兩個規則運算式剖析輸入字串。 首先，`\b\p{Lu}\w*\b` 會仰賴回溯。 第二，`\b\p{Lu}(?>\w*)\b` 會停用回溯。 如範例的輸出所示，兩者會產生相同的結果。  
+ 如果您判定不需回溯，則可使用 `(?>subexpression)` 語言元素來停用它。 下列範例會使用兩個規則運算式剖析輸入字串。 首先，`\b\p{Lu}\w*\b` 會仰賴回溯。 第二，`\b\p{Lu}(?>\w*)\b` 會停用回溯。 如範例的輸出所示，兩者會產生相同的結果。  
   
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack2.cs#10)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack2.vb#10)]  
@@ -272,20 +272,20 @@ ms.locfileid: "33579830"
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/group1.cs#8)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/group1.vb#8)]  
   
- 如果您使用子運算式的目的只是要在其中套用數量詞，對於擷取的文字並不感興趣，則應該停用群組擷取。 例如，`(?:``subexpression``)` 語言元素會阻止套用該語言元素的群組擷取相符的子字串。 在下列範例中，前一個範例的規則運算式模式會變成 `\b(?:\w+[;,]?\s?)+[.?!]`。 如輸出所示，它會阻止規則運算式引擎填入 <xref:System.Text.RegularExpressions.GroupCollection> 和 <xref:System.Text.RegularExpressions.CaptureCollection> 集合。  
+ 如果您使用子運算式的目的只是要在其中套用數量詞，對於擷取的文字並不感興趣，則應該停用群組擷取。 例如，`(?:subexpression)` 語言元素會阻止套用該語言元素的群組擷取相符的子字串。 在下列範例中，前一個範例的規則運算式模式會變成 `\b(?:\w+[;,]?\s?)+[.?!]`。 如輸出所示，它會阻止規則運算式引擎填入 <xref:System.Text.RegularExpressions.GroupCollection> 和 <xref:System.Text.RegularExpressions.CaptureCollection> 集合。  
   
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/group2.cs#9)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/group2.vb#9)]  
   
  您可以透過下列其中一種方式停用擷取：  
   
--   使用 `(?:``subexpression``)` 語言元素。 這個項目會阻止在套用該項目的群組中擷取相符的子字串。 不過，它不會停用任何巢狀群組中的子字串擷取。  
+-   使用 `(?:subexpression)` 語言元素。 這個項目會阻止在套用該項目的群組中擷取相符的子字串。 不過，它不會停用任何巢狀群組中的子字串擷取。  
   
--   使用 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> 選項。 這個選項會停用規則運算式模式中的所有未命名或隱含擷取。 當您使用這個選項時，只會擷取符合 `(?<``name``>``subexpression``)` 語言元素所定義之具名群組的子字串。 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> 旗標可以傳遞至 `options` 類別建構函式的 <xref:System.Text.RegularExpressions.Regex> 參數，或是 `options` 靜態比對方法的 <xref:System.Text.RegularExpressions.Regex> 參數。  
+-   使用 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> 選項。 這個選項會停用規則運算式模式中的所有未命名或隱含擷取。 當您使用這個選項時，只會擷取符合 `(?<name>subexpression)` 語言元素所定義之具名群組的子字串。 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> 旗標可以傳遞至 `options` 類別建構函式的 <xref:System.Text.RegularExpressions.Regex> 參數，或是 `options` 靜態比對方法的 <xref:System.Text.RegularExpressions.Regex> 參數。  
   
 -   在 `n` 語言項目中使用 `(?imnsx)` 選項。 這個選項會從規則運算式模式中出現該項目的位置開始，停用所有未命名或隱含擷取。 在到達模式結尾或 `(-n)` 選項啟用未命名或隱含擷取之前，擷取都會是停用狀態。 如需詳細資訊，請參閱[其他建構](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md)。  
   
--   在 `n` 語言項目中使用 `(?imnsx:``subexpression``)` 選項。 這個選項會停用 `subexpression` 中的所有未命名或隱含擷取。 任何未命名或隱含巢狀擷取群組所進行的擷取也都會停用。  
+-   在 `n` 語言項目中使用 `(?imnsx:subexpression)` 選項。 這個選項會停用 `subexpression` 中的所有未命名或隱含擷取。 任何未命名或隱含巢狀擷取群組所進行的擷取也都會停用。  
   
  [回到頁首](#top)  
   

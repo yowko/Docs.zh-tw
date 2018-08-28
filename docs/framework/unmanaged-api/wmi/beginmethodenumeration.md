@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d87627b8bb3414860d994273396dbb4e64acdea7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e69625184aca7d1ebd4bb0b7dc7c4958596b906a
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459872"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000339"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration 函式
-開始列舉物件的可用方法的型別。  
+開始列舉型別物件的可用方法。  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -41,22 +41,22 @@ HRESULT BeginMethodEnumeration (
 ## <a name="parameters"></a>參數
 
 `vFunc`  
-[in]未使用這個參數。
+[in]未使用此參數。
 
 `ptr`  
-[in]指標[IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)執行個體。
+[in]指標[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)執行個體。
 
 `lEnumFlags`  
-[in]零 (0) 的所有方法中或指定之列舉型別範圍的旗標。 中所定義的下列旗標*WbemCli.h*標頭檔，或者您可以定義它們以常數的形式在程式碼中：
+[in]所有的方法，或指定的列舉型別範圍的旗標，為零 (0)。 中所定義的下列旗標*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼：
 
 常數  |值  |描述  |
 |---------|---------|---------|
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 限制此類別本身中定義之方法的列舉。 |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | 限制的列舉型別都繼承自基底類別的屬性。 |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 限制類別本身中定義的方法來列舉型別。 |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | 限制列舉型別繼承自基底類別的屬性。 |
 
 ## <a name="return-value"></a>傳回值
 
-這個函式傳回下列值會定義在*WbemCli.h*標頭檔，或者您可以定義它們以常數的形式在程式碼中：
+此函式所傳回的下列值中定義*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼：
 
 |常數  |值  |描述  |
 |---------|---------|---------|
@@ -65,16 +65,16 @@ HRESULT BeginMethodEnumeration (
   
 ## <a name="remarks"></a>備註
 
-此函式會包裝呼叫[IWbemClassObject::BeginMethodEnumeration](https://msdn.microsoft.com/library/aa391435(v=vs.85).aspx)方法。
+此函式會包裝在呼叫[IWbemClassObject::BeginMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-beginmethodenumeration)方法。
 
-如果目前的物件類別定義，才支援這個方法呼叫。 方法操作中未提供[IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)指向執行個體的指標。 方法會列舉中的順序保證能夠針對指定的執行個體而異[IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)。
+如果目前的物件類別定義才支援這個方法呼叫。 方法操作不是可從[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)指標，指向 執行個體。 方法會列舉在其中的順序保證為指定的執行個體而異[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)。
 
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.idl  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

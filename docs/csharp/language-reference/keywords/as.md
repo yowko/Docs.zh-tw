@@ -8,12 +8,12 @@ helpviewer_keywords:
 - type conversion [C#], as keyword
 - as keyword [C#]
 ms.assetid: a9be126b-cbf4-4990-a70d-d0e1983cad0e
-ms.openlocfilehash: cc5bb62d94e6999bf9174bd2221fb68e7c711588
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: aee80b3262ccd9432d7c311dddec47185b66d05f
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207901"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003069"
 ---
 # <a name="as-c-reference"></a>as (C# 參考)
 您可以使用 `as` 運算子，以在相容的參考型別或[可為 Null 的型別](../../../csharp/programming-guide/nullable-types/index.md)之間執行特定轉換類型。 下列程式碼示範範例。  
@@ -43,9 +43,9 @@ expression is type ? (type)expression : (type)null
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
- [is](../../../csharp/language-reference/keywords/is.md)  
- [?: 運算子](../../../csharp/language-reference/operators/conditional-operator.md)  
- [運算子關鍵字](../../../csharp/language-reference/keywords/operator-keywords.md)
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+- [is](../../../csharp/language-reference/keywords/is.md)  
+- [?: 運算子](../../../csharp/language-reference/operators/conditional-operator.md)  
+- [運算子關鍵字](../../../csharp/language-reference/keywords/operator-keywords.md)

@@ -12,14 +12,14 @@ ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cb5d3b4c50a9c22880bdcc8406835cf51481e3cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654365"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003121"
 ---
 # <a name="-reference-visual-basic"></a>-參考 (Visual Basic)
-會導致編譯器提供給目前正在編譯的專案中指定的組件的類型資訊。  
+可讓編譯器進行指定的組件中的類型資訊提供給您目前編譯的專案。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,9 +36,9 @@ ms.locfileid: "33654365"
 |`fileList`|必要。 以逗號分隔的組件檔案名稱清單。 如果檔案名稱包含空格，請用引號括住名稱。|  
   
 ## <a name="remarks"></a>備註  
- 您匯入的檔案必須包含組件中繼資料。 只有公用型別是在組件外部可見的。 [/Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)選項從模組匯入中繼資料。  
+ 您匯入的檔案必須包含組件中繼資料。 只有公用型別是組件外部可見的。 [/Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)選項，從模組匯入中繼資料。  
   
- 如果您參考的組件 （組件 A） 本身參考另一個組件 (組件 B)，如果您需要參考組件 B:  
+ 如果您參考的組件 （組件 A） 本身參考另一個組件 (組件 B)，如果您需要參考 B 組件：  
   
 -   組件 A 的類型繼承自組件 B 的類型，或是實作組件 B 的介面。  
   
@@ -46,14 +46,14 @@ ms.locfileid: "33654365"
   
  使用[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)指定一或多個組件參考所在的目錄。  
   
- 編譯器無法辨識的組件 （而非模組） 中的型別，它必須強制解析類型。 不要這樣的其中一個範例是定義類型的執行個體。 其他的方式可用來解析組件的編譯器中的類型名稱。 例如，如果您繼承自組件中的類型，型別名稱就會知道編譯器。  
+ 編譯器無法辨識的組件 （而非模組） 中的型別，它必須強制執行解析的型別。 執行這其中一個範例是定義類型的執行個體。 其他方式可解決編譯器的組件中的型別名稱。 比方說，如果您繼承自組件中的類型，類型名稱就會知道給編譯器。  
   
- 參考常用 Vbc.rsp 回應檔[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]組件，預設會使用。 使用`-noconfig`如果您不要使用 Vbc.rsp 編譯器。  
+ 參考常用的 Vbc.rsp 回應檔[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]組件，預設會使用。 使用`-noconfig`若不想讓編譯器使用 Vbc.rsp。  
   
  `-reference` 的簡短形式為 `/r`。  
   
 ## <a name="example"></a>範例  
- 下列命令會編譯原始程式檔`Input.vb`和參考組件從`Metad1.dll`和`Metad2.dll`產生`Out.exe`。  
+ 下列命令會編譯原始程式檔`Input.vb`，並參考來自組件`Metad1.dll`並`Metad2.dll`產生`Out.exe`。  
   
 ```console
 vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb  
@@ -62,6 +62,6 @@ vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb
 ## <a name="see-also"></a>另請參閱  
  [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)  
  [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)  
- [-目標 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
+ [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
  [Public](../../../visual-basic/language-reference/modifiers/public.md)  
  [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

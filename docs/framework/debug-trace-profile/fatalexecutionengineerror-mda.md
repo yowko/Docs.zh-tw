@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8b559e44-2393-4e4e-8160-7558d37a4a89
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4595049d4ea71de30cf13334e32cd4bb2699f2ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f12b94198b88111d559cfe372c28bdbf4b37e3fe
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392534"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999131"
 ---
 # <a name="fatalexecutionengineerror-mda"></a>fatalExecutionEngineError MDA
-在 Common Language Runtime (CLR) 中偵測到嚴重錯誤時，就會啟動 `fatalExecutionEngine``Error` Managed 偵錯助理 (MDA)。 處理程序會終止。  
+在 Common Language Runtime (CLR) 中偵測到嚴重錯誤時，就會啟動 `fatalExecutionEngineError` Managed 偵錯助理 (MDA)。 處理程序會終止。  
   
 ## <a name="symptoms"></a>徵兆  
  未預期的處理序終止。 因為 CLR 失敗的發生原因各種各樣，所以無法判斷其他症狀。  

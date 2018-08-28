@@ -3,11 +3,11 @@ title: XDocument 類別概觀 (C#)
 ms.date: 07/20/2015
 ms.assetid: 63305603-ab54-49fc-84e4-f76eecc59549
 ms.openlocfilehash: 999d570725acbf328858b0ef6c69f709317f10fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333345"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003162"
 ---
 # <a name="xdocument-class-overview-c"></a>XDocument 類別概觀 (C#)
 本主題說明 <xref:System.Xml.Linq.XDocument> 類別。  

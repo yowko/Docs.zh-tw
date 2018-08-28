@@ -7,12 +7,12 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: bc040e17f5c612b9fc43a9ef24fb6f15f0942b8e
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 8607c79a8b1e9a9fd999e4f5b77ecfac786161b3
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39243990"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003147"
 ---
 # <a name="where-clause-c-reference"></a>where 子句 (C# 參考)
 `where` 子句用於查詢運算式中，以指定將在查詢運算式中傳回資料來源中的項目。 它會將布林值條件 (*predicate*) 套用到每個來源項目 (透過範圍變數所參考)，並傳回所指定條件為 true 的項目。 單一查詢運算式可能會包含多個 `where` 子句，而單一子句可能會包含多個述詞子運算式。  
@@ -39,10 +39,11 @@ ms.locfileid: "39243990"
   
  在編譯時間，`where` 關鍵字會轉換為 <xref:System.Linq.Enumerable.Where%2A> 標準查詢運算子方法呼叫。  
   
-## <a name="see-also"></a>請參閱  
- [查詢關鍵字 (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
- [from 子句](../../../csharp/language-reference/keywords/from-clause.md)  
- [select 子句](../../../csharp/language-reference/keywords/select-clause.md)  
- [篩選資料](../../programming-guide/concepts/linq/filtering-data.md)  
- [LINQ 查詢運算式](../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [開始使用 C# 中的 LINQ](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+## <a name="see-also"></a>請參閱
+
+- [查詢關鍵字 (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
+- [from 子句](../../../csharp/language-reference/keywords/from-clause.md)  
+- [select 子句](../../../csharp/language-reference/keywords/select-clause.md)  
+- [篩選資料](../../programming-guide/concepts/linq/filtering-data.md)  
+- [LINQ 查詢運算式](../../../csharp/programming-guide/linq-query-expressions/index.md)  
+- [開始使用 C# 中的 LINQ](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

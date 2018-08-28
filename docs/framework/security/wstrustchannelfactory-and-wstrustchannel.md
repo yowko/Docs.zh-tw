@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 3fabd7e3cad76e17061751d0fe0bb4ae06bf6fb6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78bf58b6d1b9059d2513b9f81eb382487bb4004b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410451"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998462"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory 和 WSTrustChannel
 如果您已熟悉 Windows Communication Foundation (WCF)，則應該知道 WCF 已是同盟感知用戶端。 若以 <xref:System.ServiceModel.WSFederationHttpBinding> 或類似的自訂繫結設定 WCF 用戶端，您就可以啟用對服務的同盟驗證。  
@@ -34,10 +34,10 @@ ms.locfileid: "33410451"
 > [!TIP]
 >  ActAs 和 OnBehalfOf 之間有何不同？  
 >   
->  從 WS-Trust 通訊協定的觀點而言：  
+>  從 Ws-trust 通訊協定的觀點而言：  
 >   
->  1.  ActAs RST 元素指出要求者需要包含有關兩個不同實體之宣告的權杖，這兩個實體是：要求者，以及 ActAs 元素中的權杖所代表的外部實體。  
-> 2.  OnBehalfOf RST 元素指出要求者需要只包含有關一個實體之宣告的權杖：OnBehalfOf 元素中的權杖所代表的外部實體。  
+> 1. ActAs RST 元素指出要求者需要包含有關兩個不同實體之宣告的權杖，這兩個實體是：要求者，以及 ActAs 元素中的權杖所代表的外部實體。  
+> 2. OnBehalfOf RST 元素指出要求者需要只包含有關一個實體之宣告的權杖：OnBehalfOf 元素中的權杖所代表的外部實體。  
 >   
 >  ActAs 功能通常用於需要複合委派的狀況，此時收到發行權杖的最後一位收件者可以檢查整個委派鏈結，而且不只會看到用戶端，而是會看到所有的中繼媒介。 這樣它便可執行存取控制、稽核工作，以及其他架構在整個身分識別委派鏈結上的相關活動。 ActAs 功能一般是在多介層系統中用於在層與層之間驗證和傳遞身分識別相關資訊，而不需要將這項資訊傳遞到應用程式/商務邏輯層。  
 >   

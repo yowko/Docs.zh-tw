@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebdcda655a186d54065e98f8b9c5c7ae2fda4955
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f19cbf305165c2553d5a493f7011a6aea19fb23
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569899"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931855"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>在規則運算式中執行字元逸出
 規則運算式中的反斜線 (\\) 表示下列其中之一：  
@@ -38,7 +38,7 @@ ms.locfileid: "33569899"
   
 |字元或序列|描述|  
 |---------------------------|-----------------|  
-|下列字元以外的所有字元：<br /><br /> 。 $ ^ { [ ( &#124; ) * + ? \|不同於列在 [字元或序列] 資料行中的其他字元在規則運算式中沒有任何特殊的意義；它們符合其本身。<br /><br /> [字元或序列] 資料行中所包含的字元是規則運算式的特殊語言項目。 若要在規則運算式中進行比對，它們必須逸出或包含在[正字元群組](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。 例如，規則運算式 `\$\d+` 或 `[$]\d+` 符合「$1200」。|  
+|下列字元以外的所有字元：<br /><br /> 。 $ ^ { [ ( &#124; ) * + ? \ |不同於列在 [字元或序列] 資料行中的其他字元在規則運算式中沒有任何特殊的意義；它們符合其本身。<br /><br /> [字元或序列] 資料行中所包含的字元是規則運算式的特殊語言項目。 若要在規則運算式中進行比對，它們必須逸出或包含在[正字元群組](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。 例如，規則運算式 `\$\d+` 或 `[$]\d+` 符合「$1200」。|  
 |`\a`|符合警鈴 (警示) 字元 `\u0007`。|  
 |`\b`|在 `[`*character_group*`]` 字元類別，比對退格鍵 `\u0008`。  (請參閱[字元類別](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。)在字元類別之外， `\b` 符合文字邊界錨點。 (請參閱[錨點](../../../docs/standard/base-types/anchors-in-regular-expressions.md)。)|  
 |`\t`|符合索引標籤， `\u0009`。|  
