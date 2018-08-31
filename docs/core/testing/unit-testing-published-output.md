@@ -4,24 +4,24 @@ description: 了解如何使用 dotnet vstest 命令在已發行的輸出上執�
 author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
-ms.openlocfilehash: dbce1b6e616916e60e56318b773e8fcecbc55580
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e99000996f5dfa9f9d4f9b823e36ecbe325da835
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33210249"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42936022"
 ---
-# <a name="test-published-output-with-dotnet-vstest"></a><span data-ttu-id="a2d7b-103">使用 dotnet vstest 測試已發行的輸出</span><span class="sxs-lookup"><span data-stu-id="a2d7b-103">Test published output with dotnet vstest</span></span>
+# <a name="test-published-output-with-dotnet-vstest"></a><span data-ttu-id="91f96-103">使用 dotnet vstest 測試已發行的輸出</span><span class="sxs-lookup"><span data-stu-id="91f96-103">Test published output with dotnet vstest</span></span>
 
-<span data-ttu-id="a2d7b-104">您可以使用 `dotnet vstest` 命令在已經發行的輸出上執行測試。</span><span class="sxs-lookup"><span data-stu-id="a2d7b-104">You can run tests on already published output by using the `dotnet vstest` command.</span></span> <span data-ttu-id="a2d7b-105">此作法適用於 xUnit、MSTest 和 NUnit 測試。</span><span class="sxs-lookup"><span data-stu-id="a2d7b-105">This will work on xUnit, MSTest, and NUnit tests.</span></span> <span data-ttu-id="a2d7b-106">只需找到已發行輸出之一部分的 DLL 檔，並執行：</span><span class="sxs-lookup"><span data-stu-id="a2d7b-106">Simply locate the DLL file that was part of your published output and run:</span></span>
+<span data-ttu-id="91f96-104">您可以使用 `dotnet vstest` 命令在已經發行的輸出上執行測試。</span><span class="sxs-lookup"><span data-stu-id="91f96-104">You can run tests on already published output by using the `dotnet vstest` command.</span></span> <span data-ttu-id="91f96-105">此作法適用於 xUnit、MSTest 和 NUnit 測試。</span><span class="sxs-lookup"><span data-stu-id="91f96-105">This will work on xUnit, MSTest, and NUnit tests.</span></span> <span data-ttu-id="91f96-106">只需找到已發行輸出之一部分的 DLL 檔，並執行：</span><span class="sxs-lookup"><span data-stu-id="91f96-106">Simply locate the DLL file that was part of your published output and run:</span></span>
 
 ```
 dotnet vstest <MyPublishedTests>.dll
 ```
 
-<span data-ttu-id="a2d7b-107">其中 `<MyPublishedTests>` 是已發行測試專案的名稱。</span><span class="sxs-lookup"><span data-stu-id="a2d7b-107">where `<MyPublishedTests>` is the name of your published test project.</span></span>
+<span data-ttu-id="91f96-107">其中 `<MyPublishedTests>` 是已發行測試專案的名稱。</span><span class="sxs-lookup"><span data-stu-id="91f96-107">where `<MyPublishedTests>` is the name of your published test project.</span></span>
 
-## <a name="example-of-running-tests-on-a-published-dll"></a><span data-ttu-id="a2d7b-108">在已發行的 DLL 上執行測試的範例</span><span class="sxs-lookup"><span data-stu-id="a2d7b-108">Example of running tests on a published DLL</span></span>
+## <a name="example-of-running-tests-on-a-published-dll"></a><span data-ttu-id="91f96-108">在已發行的 DLL 上執行測試的範例</span><span class="sxs-lookup"><span data-stu-id="91f96-108">Example of running tests on a published DLL</span></span>
 
 ```
 dotnet new mstest -o MyProject.Tests
@@ -31,8 +31,9 @@ dotnet vstest out/MyProject.Tests.dll
 ```
 
 > [!NOTE]
-> <span data-ttu-id="a2d7b-109">注意：如果您的應用程式是以 `netcoreapp` 以外的架構為目標，您仍然能以架構旗標傳入目標架構，來執行 `dotnet vstest` 命令。</span><span class="sxs-lookup"><span data-stu-id="a2d7b-109">Note: If your app is targeting a framework other than `netcoreapp` you can still run the `dotnet vstest` command by passing in the targeted framework with a framework flag.</span></span> <span data-ttu-id="a2d7b-110">例如，`dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"`。</span><span class="sxs-lookup"><span data-stu-id="a2d7b-110">For example, `dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"`.</span></span> <span data-ttu-id="a2d7b-111">在 Visual Studio 2017 Update 5 中，系統會自動偵測所需架構。</span><span class="sxs-lookup"><span data-stu-id="a2d7b-111">In Visual Studio 2017 Update 5 the desired framework is automatically detected.</span></span>
+> <span data-ttu-id="91f96-109">注意：如果您的應用程式是以 `netcoreapp` 以外的架構為目標，您仍然能以架構旗標傳入目標架構，來執行 `dotnet vstest` 命令。</span><span class="sxs-lookup"><span data-stu-id="91f96-109">Note: If your app is targeting a framework other than `netcoreapp` you can still run the `dotnet vstest` command by passing in the targeted framework with a framework flag.</span></span> <span data-ttu-id="91f96-110">例如，`dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"`。</span><span class="sxs-lookup"><span data-stu-id="91f96-110">For example, `dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"`.</span></span> <span data-ttu-id="91f96-111">在 Visual Studio 2017 Update 5 中，系統會自動偵測所需架構。</span><span class="sxs-lookup"><span data-stu-id="91f96-111">In Visual Studio 2017 Update 5 the desired framework is automatically detected.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="a2d7b-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a2d7b-112">See also</span></span>
- [<span data-ttu-id="a2d7b-113">使用 dotnet test 及 xUnit 執行單元測試</span><span class="sxs-lookup"><span data-stu-id="a2d7b-113">Unit Testing with dotnet test and xUnit</span></span>](unit-testing-with-dotnet-test.md)  
- [<span data-ttu-id="a2d7b-114">使用 dotnet test 及 MSTest 執行單元測試</span><span class="sxs-lookup"><span data-stu-id="a2d7b-114">Unit Testing with dotnet test and MSTest</span></span>](unit-testing-with-mstest.md)  
+## <a name="see-also"></a><span data-ttu-id="91f96-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="91f96-112">See also</span></span>
+- [<span data-ttu-id="91f96-113">使用 dotnet test 及 xUnit 執行單元測試</span><span class="sxs-lookup"><span data-stu-id="91f96-113">Unit Testing with dotnet test and xUnit</span></span>](unit-testing-with-dotnet-test.md)
+- [<span data-ttu-id="91f96-114">使用 dotnet test 和 NUnit 執行單元測試</span><span class="sxs-lookup"><span data-stu-id="91f96-114">Unit Testing with dotnet test and NUnit</span></span>](unit-testing-with-nunit.md)
+- [<span data-ttu-id="91f96-115">使用 dotnet test 及 MSTest 執行單元測試</span><span class="sxs-lookup"><span data-stu-id="91f96-115">Unit Testing with dotnet test and MSTest</span></span>](unit-testing-with-mstest.md)

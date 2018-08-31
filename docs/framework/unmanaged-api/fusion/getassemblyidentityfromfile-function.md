@@ -19,16 +19,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6dfb0b404413351761d269c800be19e75acfb41f
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42754569"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43258689"
 ---
-# <a name="getassemblyidentityfromfile-function"></a><span data-ttu-id="82dff-102">GetAssemblyIdentityFromFile 函式</span><span class="sxs-lookup"><span data-stu-id="82dff-102">GetAssemblyIdentityFromFile Function</span></span>
-<span data-ttu-id="82dff-103">取得指標`IUnknown`使用指定的物件`IID`中指定的檔案路徑中的組件。</span><span class="sxs-lookup"><span data-stu-id="82dff-103">Gets a pointer to an `IUnknown` object with the specified `IID` in the assembly at the specified file path.</span></span>  
+# <a name="getassemblyidentityfromfile-function"></a><span data-ttu-id="9efd0-102">GetAssemblyIdentityFromFile 函式</span><span class="sxs-lookup"><span data-stu-id="9efd0-102">GetAssemblyIdentityFromFile Function</span></span>
+<span data-ttu-id="9efd0-103">取得指標`IUnknown`使用指定的物件`IID`中指定的檔案路徑中的組件。</span><span class="sxs-lookup"><span data-stu-id="9efd0-103">Gets a pointer to an `IUnknown` object with the specified `IID` in the assembly at the specified file path.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="82dff-104">語法</span><span class="sxs-lookup"><span data-stu-id="82dff-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9efd0-104">語法</span><span class="sxs-lookup"><span data-stu-id="9efd0-104">Syntax</span></span>  
   
 ```  
 HRESULT GetAssemblyIdentityFromFile (  
@@ -38,23 +38,23 @@ HRESULT GetAssemblyIdentityFromFile (
  );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="82dff-105">參數</span><span class="sxs-lookup"><span data-stu-id="82dff-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="9efd0-105">參數</span><span class="sxs-lookup"><span data-stu-id="9efd0-105">Parameters</span></span>  
  `pwzFilePath`  
- <span data-ttu-id="82dff-106">[in]要求的組件的有效路徑。</span><span class="sxs-lookup"><span data-stu-id="82dff-106">[in] A valid path to the requested assembly.</span></span>  
+ <span data-ttu-id="9efd0-106">[in]要求的組件的有效路徑。</span><span class="sxs-lookup"><span data-stu-id="9efd0-106">[in] A valid path to the requested assembly.</span></span>  
   
  `riid`  
- <span data-ttu-id="82dff-107">[in]`IID`来傳回的介面。</span><span class="sxs-lookup"><span data-stu-id="82dff-107">[in] The `IID` of the interface to return.</span></span>  
+ <span data-ttu-id="9efd0-107">[in]`IID`来傳回的介面。</span><span class="sxs-lookup"><span data-stu-id="9efd0-107">[in] The `IID` of the interface to return.</span></span>  
   
  `ppIdentity`  
- <span data-ttu-id="82dff-108">[out]傳回的介面指標。</span><span class="sxs-lookup"><span data-stu-id="82dff-108">[out] The returned interface pointer.</span></span>  
+ <span data-ttu-id="9efd0-108">[out]傳回的介面指標。</span><span class="sxs-lookup"><span data-stu-id="9efd0-108">[out] The returned interface pointer.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="82dff-109">需求</span><span class="sxs-lookup"><span data-stu-id="82dff-109">Requirements</span></span>  
- <span data-ttu-id="82dff-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="82dff-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9efd0-109">需求</span><span class="sxs-lookup"><span data-stu-id="9efd0-109">Requirements</span></span>  
+ <span data-ttu-id="9efd0-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9efd0-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="82dff-111">**標頭：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="82dff-111">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="9efd0-111">**標頭：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="9efd0-111">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="82dff-112">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="82dff-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="9efd0-112">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9efd0-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="82dff-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="82dff-113">See Also</span></span>  
- [<span data-ttu-id="82dff-114">IUnknown</span><span class="sxs-lookup"><span data-stu-id="82dff-114">IUnknown</span></span>](/cpp/atl/iunknown)  
- [<span data-ttu-id="82dff-115">融合全域靜態函式</span><span class="sxs-lookup"><span data-stu-id="82dff-115">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="9efd0-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9efd0-113">See Also</span></span>  
+ [<span data-ttu-id="9efd0-114">IUnknown</span><span class="sxs-lookup"><span data-stu-id="9efd0-114">IUnknown</span></span>](/cpp/atl/iunknown)  
+ [<span data-ttu-id="9efd0-115">融合全域靜態函式</span><span class="sxs-lookup"><span data-stu-id="9efd0-115">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

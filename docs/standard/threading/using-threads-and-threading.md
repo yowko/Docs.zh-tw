@@ -1,6 +1,6 @@
 ---
 title: 使用執行緒和執行緒處理
-ms.date: 03/30/2017
+ms.date: 08/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - threading [.NET Framework], about threading
@@ -8,38 +8,52 @@ helpviewer_keywords:
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 725a47cae6e3e91cf9e7385427bceece81f3c918
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 871a0a06c9f1cc09fb86f20c85163fb8fcdf4100
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934127"
 ---
-# <a name="using-threads-and-threading"></a><span data-ttu-id="74975-102">使用執行緒和執行緒處理</span><span class="sxs-lookup"><span data-stu-id="74975-102">Using Threads and Threading</span></span>
-<span data-ttu-id="74975-103">本節中的主題將討論受控執行緒的建立和管理、如何將資料傳遞至受控執行緒並取得結果，以及如何終結執行緒和處理 <xref:System.Threading.ThreadAbortException>。</span><span class="sxs-lookup"><span data-stu-id="74975-103">The topics in this section discuss the creation and management of managed threads, how to pass data to managed threads and get results back, and how to destroy threads and handle a <xref:System.Threading.ThreadAbortException>.</span></span>  
+# <a name="using-threads-and-threading"></a><span data-ttu-id="9845d-102">使用執行緒和執行緒處理</span><span class="sxs-lookup"><span data-stu-id="9845d-102">Using threads and threading</span></span>
+
+<span data-ttu-id="9845d-103">使用 .NET，您可以撰寫同時執行多項作業的應用程式。</span><span class="sxs-lookup"><span data-stu-id="9845d-103">With .NET, you can write applications that perform multiple operations at the same time.</span></span> <span data-ttu-id="9845d-104">可能妨礙其他作業的作業可以在另外的執行緒上執行，這類處理序稱為「多執行緒」或「無限制執行緒」。</span><span class="sxs-lookup"><span data-stu-id="9845d-104">Operations with the potential of holding up other operations can execute on separate threads, a process known as *multithreading* or *free threading*.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="74975-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="74975-104">In This Section</span></span>  
- [<span data-ttu-id="74975-105">建立執行緒並在啟動時間傳遞資料</span><span class="sxs-lookup"><span data-stu-id="74975-105">Creating Threads and Passing Data at Start Time</span></span>](../../../docs/standard/threading/creating-threads-and-passing-data-at-start-time.md)  
- <span data-ttu-id="74975-106">討論並示範受控執行緒的建立，包括如何將資料傳遞給至新的執行緒，以及如何取得資料。</span><span class="sxs-lookup"><span data-stu-id="74975-106">Discusses and demonstrates the creation of managed threads, including how to pass data to new threads and how to get data back.</span></span>  
+<span data-ttu-id="9845d-105">使用多執行緒的應用程式回應使用者輸入會更快，因為當處理器密集工作在另外的執行緒上執行時，使用者介面會保持使用中。</span><span class="sxs-lookup"><span data-stu-id="9845d-105">Applications that use multithreading are more responsive to user input because the user interface stays active as processor-intensive tasks execute on separate threads.</span></span> <span data-ttu-id="9845d-106">當您建立可擴充的應用程式時，多執行緒也很有幫助，因為您可以隨著工作負載增加而新增執行緒。</span><span class="sxs-lookup"><span data-stu-id="9845d-106">Multithreading is also useful when you create scalable applications, because you can add threads as the workload increases.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="9845d-107">如果您需要對應用程式執行緒行為有更大的掌控力，您可以自行管理執行緒。</span><span class="sxs-lookup"><span data-stu-id="9845d-107">If you need more control over the behavior of the application's threads, you can manage the threads yourself.</span></span> <span data-ttu-id="9845d-108">但是，從 .NET Framework 4 開始，多執行緒的程式設計已透過 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 類別、[平行 LINQ (PLINQ)](../parallel-programming/parallel-linq-plinq.md)、<xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空間中的新並行集合類別，以及以工作 (而非執行緒) 概念為基礎的新程式設計模型，而做出簡化。</span><span class="sxs-lookup"><span data-stu-id="9845d-108">However, starting with the .NET Framework 4, multithreaded programming is greatly simplified with the <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> and <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> classes, [Parallel LINQ (PLINQ)](../parallel-programming/parallel-linq-plinq.md), new concurrent collection classes in the <xref:System.Collections.Concurrent?displayProperty=nameWithType> namespace, and a new programming model that is based on the concept of tasks rather than threads.</span></span> <span data-ttu-id="9845d-109">如需詳細資訊，請參閱[平行程式設計](../parallel-programming/index.md)和[工作平行程式庫 (TPL)](../parallel-programming/task-parallel-library-tpl.md)。</span><span class="sxs-lookup"><span data-stu-id="9845d-109">For more information, see [Parallel Programming](../parallel-programming/index.md) and [Task Parallel Library (TPL)](../parallel-programming/task-parallel-library-tpl.md).</span></span>
+
+## <a name="how-to-create-and-start-a-new-thread"></a><span data-ttu-id="9845d-110">如何：建立及啟動新的執行緒</span><span class="sxs-lookup"><span data-stu-id="9845d-110">How to: Create and start a new thread</span></span>
+
+<span data-ttu-id="9845d-111">您可以透過建立 <xref:System.Threading.Thread?displayProperty=nameWithType> 類別的新執行個體，並將您希望在新的執行緒上執行的方法名稱提供給建構函式，來建立新的執行緒。</span><span class="sxs-lookup"><span data-stu-id="9845d-111">You create a new thread by creating a new instance of the <xref:System.Threading.Thread?displayProperty=nameWithType> class and providing the name of the method that you want to execute on a new thread to the constructor.</span></span> <span data-ttu-id="9845d-112">若要啟動已建立的執行緒，請呼叫 <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="9845d-112">To start a created thread, call the <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="9845d-113">如需詳細資訊和範例，請參閱[建立執行緒並在啟動時傳遞資料](creating-threads-and-passing-data-at-start-time.md)一文和 <xref:System.Threading.Thread> API 參考。</span><span class="sxs-lookup"><span data-stu-id="9845d-113">For more information and examples, see the [Creating threads and passing data at start time](creating-threads-and-passing-data-at-start-time.md) article and the <xref:System.Threading.Thread> API reference.</span></span>
+
+## <a name="how-to-stop-a-thread"></a><span data-ttu-id="9845d-114">如何：停止執行緒</span><span class="sxs-lookup"><span data-stu-id="9845d-114">How to: Stop a thread</span></span>
+
+<span data-ttu-id="9845d-115">若要終止執行緒的執行，請使用 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="9845d-115">To terminate the execution of a thread, use the <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="9845d-116">該方法會在叫用該方法的執行緒上引發 <xref:System.Threading.ThreadAbortException>。</span><span class="sxs-lookup"><span data-stu-id="9845d-116">That method raises a <xref:System.Threading.ThreadAbortException> on the thread on which it's invoked.</span></span> <span data-ttu-id="9845d-117">如需詳細資訊，請參閱[終結執行緒](destroying-threads.md)。</span><span class="sxs-lookup"><span data-stu-id="9845d-117">For more information, see [Destroying threads](destroying-threads.md).</span></span>
+
+<span data-ttu-id="9845d-118">從 .NET Framework 4 開始，您可以使用 <xref:System.Threading.CancellationToken?displayProperty=nameWithType> 來合作取消執行緒。</span><span class="sxs-lookup"><span data-stu-id="9845d-118">Beginning with the .NET Framework 4, you can use the <xref:System.Threading.CancellationToken?displayProperty=nameWithType> to cancel a thread cooperatively.</span></span> <span data-ttu-id="9845d-119">如需詳細資訊，請參閱[合作取消執行緒](canceling-threads-cooperatively.md)。</span><span class="sxs-lookup"><span data-stu-id="9845d-119">For more information, see [Canceling threads cooperatively](canceling-threads-cooperatively.md).</span></span>
+
+<span data-ttu-id="9845d-120">使用 <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> 方法讓呼叫的執行緒等待叫用該方法的執行緒終結。</span><span class="sxs-lookup"><span data-stu-id="9845d-120">Use the <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> method to make the calling thread wait for the termination of the thread on which the method is invoked.</span></span>
+
+## <a name="how-to-pause-or-interrupt-a-thread"></a><span data-ttu-id="9845d-121">如何：暫停或插斷執行緒</span><span class="sxs-lookup"><span data-stu-id="9845d-121">How to: Pause or interrupt a thread</span></span>
+
+<span data-ttu-id="9845d-122">您可以使用 <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> 方法在指定的時間內暫停目前的執行緒。</span><span class="sxs-lookup"><span data-stu-id="9845d-122">You use the <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> method to pause the current thread for a specified amount of time.</span></span> <span data-ttu-id="9845d-123">您可以透過呼叫 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 方法來插斷封鎖的執行緒。</span><span class="sxs-lookup"><span data-stu-id="9845d-123">You can interrupt a blocked thread by calling the <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="9845d-124">如需詳細資訊，請參閱[暫停及插斷執行緒](pausing-and-resuming-threads.md)。</span><span class="sxs-lookup"><span data-stu-id="9845d-124">For more information, see [Pausing and interrupting threads](pausing-and-resuming-threads.md).</span></span>
+
+## <a name="thread-properties"></a><span data-ttu-id="9845d-125">執行緒屬性</span><span class="sxs-lookup"><span data-stu-id="9845d-125">Thread properties</span></span>
+
+<span data-ttu-id="9845d-126">下表列出 <xref:System.Threading.Thread>屬性的一部分：</span><span class="sxs-lookup"><span data-stu-id="9845d-126">The following table presents some of the <xref:System.Threading.Thread> properties:</span></span>  
   
- [<span data-ttu-id="74975-107">暫止和繼續執行緒</span><span class="sxs-lookup"><span data-stu-id="74975-107">Pausing and Resuming Threads</span></span>](../../../docs/standard/threading/pausing-and-resuming-threads.md)  
- <span data-ttu-id="74975-108">討論暫停和繼續受控執行緒的後果。</span><span class="sxs-lookup"><span data-stu-id="74975-108">Discusses the ramifications of pausing and resuming managed threads.</span></span>  
-  
- [<span data-ttu-id="74975-109">終結執行緒</span><span class="sxs-lookup"><span data-stu-id="74975-109">Destroying Threads</span></span>](../../../docs/standard/threading/destroying-threads.md)  
- <span data-ttu-id="74975-110">討論終結受控執行緒的後果，以及如何處理 <xref:System.Threading.ThreadAbortException>。</span><span class="sxs-lookup"><span data-stu-id="74975-110">Discusses the ramifications of destroying managed threads, and how to handle a <xref:System.Threading.ThreadAbortException>.</span></span>  
-  
- [<span data-ttu-id="74975-111">排程執行緒</span><span class="sxs-lookup"><span data-stu-id="74975-111">Scheduling Threads</span></span>](../../../docs/standard/threading/scheduling-threads.md)  
- <span data-ttu-id="74975-112">討論執行緒的優先順序，以及它們如何影響執行緒排程。</span><span class="sxs-lookup"><span data-stu-id="74975-112">Discusses thread priorities and how they affect thread scheduling.</span></span>  
-  
-## <a name="reference"></a><span data-ttu-id="74975-113">參考資料</span><span class="sxs-lookup"><span data-stu-id="74975-113">Reference</span></span>  
- <xref:System.Threading.Thread>  
- <span data-ttu-id="74975-114">提供 <xref:System.Threading.Thread> 類別的參考文件，不論這個類別來自非受控碼或在受控應用程式中所建立，都代表受控執行緒。</span><span class="sxs-lookup"><span data-stu-id="74975-114">Provides reference documentation for the <xref:System.Threading.Thread> class, which represents a managed thread, whether it came from unmanaged code or was created in a managed application.</span></span>  
-  
- <xref:System.Threading.ThreadStart>  
- <span data-ttu-id="74975-115">提供 <xref:System.Threading.ThreadStart> 委派的參考文件，這個委派代表無參數的執行緒程序。</span><span class="sxs-lookup"><span data-stu-id="74975-115">Provides reference documentation for the <xref:System.Threading.ThreadStart> delegate that represents parameterless thread procedures.</span></span>  
-  
- <xref:System.Threading.ParameterizedThreadStart>  
- <span data-ttu-id="74975-116">儘管沒有強式類型，還是會提供一個簡單的方法來將資料傳遞給執行緒程序。</span><span class="sxs-lookup"><span data-stu-id="74975-116">Provides an easy way to pass data to a thread procedure, although without strong typing.</span></span>  
-  
-## <a name="related-sections"></a><span data-ttu-id="74975-117">相關章節</span><span class="sxs-lookup"><span data-stu-id="74975-117">Related Sections</span></span>  
- [<span data-ttu-id="74975-118">執行緒和執行緒處理</span><span class="sxs-lookup"><span data-stu-id="74975-118">Threads and Threading</span></span>](../../../docs/standard/threading/threads-and-threading.md)  
- <span data-ttu-id="74975-119">提供受控執行緒的簡介。</span><span class="sxs-lookup"><span data-stu-id="74975-119">Provides an introduction to managed threading.</span></span>
+|<span data-ttu-id="9845d-127">屬性</span><span class="sxs-lookup"><span data-stu-id="9845d-127">Property</span></span>|<span data-ttu-id="9845d-128">描述</span><span class="sxs-lookup"><span data-stu-id="9845d-128">Description</span></span>|  
+|--------------|-----------|  
+|<xref:System.Threading.Thread.IsAlive%2A>|<span data-ttu-id="9845d-129">若執行緒已啟動且尚未正常終止或中止，則傳回 `true`。</span><span class="sxs-lookup"><span data-stu-id="9845d-129">Returns `true` if a thread has been started and has not yet terminated normally or aborted.</span></span>|  
+|<xref:System.Threading.Thread.IsBackground%2A>|<span data-ttu-id="9845d-130">取得或設定布林值，指出執行緒是否為背景執行緒。</span><span class="sxs-lookup"><span data-stu-id="9845d-130">Gets or sets a Boolean that indicates if a thread is a background thread.</span></span> <span data-ttu-id="9845d-131">背景執行緒與前景執行緒相似，但背景執行緒不會防止處理序停止。</span><span class="sxs-lookup"><span data-stu-id="9845d-131">Background threads are like foreground threads, but a background thread doesn't prevent a process from stopping.</span></span> <span data-ttu-id="9845d-132">一旦屬於處理程序的所有前景執行緒停止，通用語言執行平台會呼叫背景執行緒上仍在執行的 <xref:System.Threading.Thread.Abort%2A> 方法來結束處理程序。</span><span class="sxs-lookup"><span data-stu-id="9845d-132">Once all foreground threads that belong to a process have stopped, the common language runtime ends the process by calling the <xref:System.Threading.Thread.Abort%2A> method on background threads that are still alive.</span></span> <span data-ttu-id="9845d-133">如需詳細資訊，請參閱[前景與背景執行緒](foreground-and-background-threads.md)。</span><span class="sxs-lookup"><span data-stu-id="9845d-133">For more information, see [Foreground and Background Threads](foreground-and-background-threads.md).</span></span>|  
+|<xref:System.Threading.Thread.Name%2A>|<span data-ttu-id="9845d-134">取得或設定執行緒名稱。</span><span class="sxs-lookup"><span data-stu-id="9845d-134">Gets or sets the name of a thread.</span></span> <span data-ttu-id="9845d-135">最常用於在偵錯時探索個別執行緒。</span><span class="sxs-lookup"><span data-stu-id="9845d-135">Most frequently used to discover individual threads when you debug.</span></span>|  
+|<xref:System.Threading.Thread.Priority%2A>|<span data-ttu-id="9845d-136">取得或設定作業系統使用的 <xref:System.Threading.ThreadPriority> 值，以設定執行緒排程的優先權。</span><span class="sxs-lookup"><span data-stu-id="9845d-136">Gets or sets a <xref:System.Threading.ThreadPriority> value that is used by the operating system to prioritize thread scheduling.</span></span> <span data-ttu-id="9845d-137">如需詳細資訊，請參閱[排程執行緒](scheduling-threads.md)和 <xref:System.Threading.ThreadPriority> 參考。</span><span class="sxs-lookup"><span data-stu-id="9845d-137">For more information, see [Scheduling threads](scheduling-threads.md) and the <xref:System.Threading.ThreadPriority> reference.</span></span>|  
+|<xref:System.Threading.Thread.ThreadState%2A>|<span data-ttu-id="9845d-138">取得包含執行緒目前狀態的 <xref:System.Threading.ThreadState> 值。</span><span class="sxs-lookup"><span data-stu-id="9845d-138">Gets a <xref:System.Threading.ThreadState> value containing the current states of a thread.</span></span>|  
+
+## <a name="see-also"></a><span data-ttu-id="9845d-139">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9845d-139">See also</span></span>
+
+ <xref:System.Threading.Thread?displayProperty=nameWithType>  
+ [<span data-ttu-id="9845d-140">執行緒和執行緒處理</span><span class="sxs-lookup"><span data-stu-id="9845d-140">Threads and Threading</span></span>](threads-and-threading.md)  
+ [<span data-ttu-id="9845d-141">平行程式設計</span><span class="sxs-lookup"><span data-stu-id="9845d-141">Parallel Programming</span></span>](../parallel-programming/index.md)  

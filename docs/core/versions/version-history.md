@@ -1,0 +1,26 @@
+---
+title: .NET Core 版本歷程記錄
+description: 請參閱 .NET Core 執行階段、.NET Core SDK、C# 編譯器和 VB.NET 編譯器的版本時間軸。
+ms.date: 07/26/2018
+ms.openlocfilehash: 90fd4ba57620a3a005f2148c0335a76a6fa54a30
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42936641"
+---
+# <a name="net-core-version-history"></a><span data-ttu-id="f82b2-103">NET Core 版本歷程記錄</span><span class="sxs-lookup"><span data-stu-id="f82b2-103">NET Core version history</span></span>
+
+<span data-ttu-id="f82b2-104">判斷 .NET Core 的版本號碼非常困難，因為 .NET Core SDK 和 .NET Core Runtime 是以不同的步調發行的。</span><span class="sxs-lookup"><span data-stu-id="f82b2-104">Version numbers for .NET Core are challenging because .NET Core SDK and .NET Core Runtime release on different cadences.</span></span> <span data-ttu-id="f82b2-105">不同的步調表示小組只能進行下列三項行為中的其中兩項：</span><span class="sxs-lookup"><span data-stu-id="f82b2-105">The different cadences mean the team was forced to do only two of the following three things:</span></span>
+
+1. <span data-ttu-id="f82b2-106">獨立發行，並特別讓工具、C# 和 VB 的進展速度比 .NET Core Runtime 更快。</span><span class="sxs-lookup"><span data-stu-id="f82b2-106">Release independently, specifically allowing tools, C# and VB to advance faster than the .NET Core Runtime.</span></span>
+2. <span data-ttu-id="f82b2-107">校準 .NET Core SDK 和 .NET Core Runtime 間的版本號碼。</span><span class="sxs-lookup"><span data-stu-id="f82b2-107">Maintain alignment in version numbers between .NET Core SDK and .NET Core Runtime.</span></span>
+3. <span data-ttu-id="f82b2-108">針對 .NET Core SDK 和 .NET Core Runtime 使用語意式版本設定。</span><span class="sxs-lookup"><span data-stu-id="f82b2-108">Use semantic versioning for both the .NET Core SDK and .NET Core Runtime.</span></span>
+
+<span data-ttu-id="f82b2-109">2.0.0 曾強制校準版本，並順暢地繼續前進一個版本。</span><span class="sxs-lookup"><span data-stu-id="f82b2-109">2.0.0 forced version alignment and proceeded smoothly for one release.</span></span> <span data-ttu-id="f82b2-110">2017 年 12 月，.NET Core SDK 發行了新功能，但在 .NET Core Runtime 中卻沒有對應的版本。</span><span class="sxs-lookup"><span data-stu-id="f82b2-110">In December 2017 .NET Core SDK had a feature release, with no corresponding release in the .NET Core Runtime.</span></span> <span data-ttu-id="f82b2-111">小組選擇了目標 1 和 3，遺失 .NET Core Runtime 和 SDK 間的校準。</span><span class="sxs-lookup"><span data-stu-id="f82b2-111">The team chose goals 1 and 3, losing alignment between the .NET Core Runtime and SDK.</span></span> <span data-ttu-id="f82b2-112">在 .NET Core Runtime 2.1 之前已發行過數個 .NET Core SDK 2.1.x 版本。</span><span class="sxs-lookup"><span data-stu-id="f82b2-112">Several .NET Core SDK 2.1.x versions were released before .NET Core Runtime 2.1.</span></span> <span data-ttu-id="f82b2-113">因為 SDK 與先前本版本不相容，這些 2.1.x SDK 版本無法瞄準 .NET Core Runtime 2.1。</span><span class="sxs-lookup"><span data-stu-id="f82b2-113">Since the SDK is not forwards compatible, these 2.1.x SDK versions could not target .NET Core Runtime 2.1.</span></span> <span data-ttu-id="f82b2-114">為了回應極度混淆狀況，小組又切換至目標 1 和 2，放棄 [.NET Core 版本設定](index.md#versioning-details)中描述的語意式版本設定。</span><span class="sxs-lookup"><span data-stu-id="f82b2-114">The team responded to the considerable confusion by switching to goals 1 and 2, abandoning semantic versioning as described in [.NET Core versioning](index.md#versioning-details).</span></span>
+
+<span data-ttu-id="f82b2-115">由於決定放棄語意式版本設定時機的關係，在 2.1.10x 和 2.1.20x 版本號碼範圍間也有無法瞄準 .NET Core Runtime 2.1 的轉換期版本。</span><span class="sxs-lookup"><span data-stu-id="f82b2-115">Because of the timing of the decision to abandon semantic versioning, there were transitional releases in the 2.1.10x and 2.1.20x version number ranges that also can't target .NET Core Runtime 2.1.</span></span>
+
+<span data-ttu-id="f82b2-116">版本號碼的前兩個數字與 .NET Core Runtime 的 2.1.0 版本和 .NET Core SDK 的 2.1.300 版本重新校準。</span><span class="sxs-lookup"><span data-stu-id="f82b2-116">The first two digits of the version numbers realign with the 2.1.0 version of the .NET Core Runtime and the 2.1.300 version of the .NET Core SDK.</span></span>
+
+<span data-ttu-id="f82b2-117">您可以在 [.NET Core downloads page](https://www.microsoft.com/net/download/dotnet-core/current) (.NET Core 下載頁面) 上找到個別元件版本的相關資訊，包括架構及語言編譯器版本。</span><span class="sxs-lookup"><span data-stu-id="f82b2-117">Detailed information about the versions of individual components, including framework and language compiler versions, can be found on the [.NET Core downloads page](https://www.microsoft.com/net/download/dotnet-core/current).</span></span> <span data-ttu-id="f82b2-118">如需先前版本的詳細資訊，請從 [.NET Core download archives page](https://www.microsoft.com/net/download/archives) (.NET Core 下載封存頁面) 選取要求的版本。</span><span class="sxs-lookup"><span data-stu-id="f82b2-118">For detailed information about previous versions, select the requested version from the [.NET Core download archives page](https://www.microsoft.com/net/download/archives).</span></span> <span data-ttu-id="f82b2-119">您可以在描述正式 [.NET Support Policy](https://www.microsoft.com/net/Support/Policy) (.NET 支援原則) 的文章中找到詳細的支援資訊。</span><span class="sxs-lookup"><span data-stu-id="f82b2-119">Detailed support information can be found in the article describing the official [.NET Support Policy](https://www.microsoft.com/net/Support/Policy).</span></span>
