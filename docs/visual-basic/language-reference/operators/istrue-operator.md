@@ -8,43 +8,43 @@ helpviewer_keywords:
 - OrElse operator [Visual Basic]
 ms.assetid: b6cec0f2-61b1-4331-a7f0-4d07ee3179d6
 ms.openlocfilehash: bf81384b0cecfd1ee3d438e4463949381279a181
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43003186"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254875"
 ---
-# <a name="istrue-operator-visual-basic"></a><span data-ttu-id="ed87e-102">IsTrue 運算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ed87e-102">IsTrue Operator (Visual Basic)</span></span>
-<span data-ttu-id="ed87e-103">判斷運算式是否為`True`。</span><span class="sxs-lookup"><span data-stu-id="ed87e-103">Determines whether an expression is `True`.</span></span>  
+# <a name="istrue-operator-visual-basic"></a><span data-ttu-id="a24f5-102">IsTrue 運算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a24f5-102">IsTrue Operator (Visual Basic)</span></span>
+<span data-ttu-id="a24f5-103">判斷運算式是否為`True`。</span><span class="sxs-lookup"><span data-stu-id="a24f5-103">Determines whether an expression is `True`.</span></span>  
   
- <span data-ttu-id="ed87e-104">您不能呼叫`IsTrue`明確地在您的程式碼，但 Visual Basic 編譯器可以用它來產生程式碼從`OrElse`子句。</span><span class="sxs-lookup"><span data-stu-id="ed87e-104">You cannot call `IsTrue` explicitly in your code, but the Visual Basic compiler can use it to generate code from `OrElse` clauses.</span></span> <span data-ttu-id="ed87e-105">如果您定義類別或結構，然後使用 在該類型的變數`OrElse`子句中，您必須定義`IsTrue`該類別或結構上。</span><span class="sxs-lookup"><span data-stu-id="ed87e-105">If you define a class or structure and then use a variable of that type in an `OrElse` clause, you must define `IsTrue` on that class or structure.</span></span>  
+ <span data-ttu-id="a24f5-104">您不能呼叫`IsTrue`明確地在您的程式碼，但 Visual Basic 編譯器可以用它來產生程式碼從`OrElse`子句。</span><span class="sxs-lookup"><span data-stu-id="a24f5-104">You cannot call `IsTrue` explicitly in your code, but the Visual Basic compiler can use it to generate code from `OrElse` clauses.</span></span> <span data-ttu-id="a24f5-105">如果您定義類別或結構，然後使用 在該類型的變數`OrElse`子句中，您必須定義`IsTrue`該類別或結構上。</span><span class="sxs-lookup"><span data-stu-id="a24f5-105">If you define a class or structure and then use a variable of that type in an `OrElse` clause, you must define `IsTrue` on that class or structure.</span></span>  
   
- <span data-ttu-id="ed87e-106">編譯器會考慮`IsTrue`並`IsFalse`做為運算子*比對組*。</span><span class="sxs-lookup"><span data-stu-id="ed87e-106">The compiler considers the `IsTrue` and `IsFalse` operators as a *matched pair*.</span></span> <span data-ttu-id="ed87e-107">這表示，如果您定義其中一個，您也必須定義，另一個。</span><span class="sxs-lookup"><span data-stu-id="ed87e-107">This means that if you define one of them, you must also define the other one.</span></span>  
+ <span data-ttu-id="a24f5-106">編譯器會考慮`IsTrue`並`IsFalse`做為運算子*比對組*。</span><span class="sxs-lookup"><span data-stu-id="a24f5-106">The compiler considers the `IsTrue` and `IsFalse` operators as a *matched pair*.</span></span> <span data-ttu-id="a24f5-107">這表示，如果您定義其中一個，您也必須定義，另一個。</span><span class="sxs-lookup"><span data-stu-id="a24f5-107">This means that if you define one of them, you must also define the other one.</span></span>  
   
-## <a name="compiler-use-of-istrue"></a><span data-ttu-id="ed87e-108">IsTrue 的編譯器使用</span><span class="sxs-lookup"><span data-stu-id="ed87e-108">Compiler Use of IsTrue</span></span>  
- <span data-ttu-id="ed87e-109">當您已定義類別或結構時，您可以使用在該類型的變數`For`， `If`， `Else If`，或`While`陳述式，或在`When`子句。</span><span class="sxs-lookup"><span data-stu-id="ed87e-109">When you have defined a class or structure, you can use a variable of that type in a `For`, `If`, `Else If`, or `While` statement, or in a `When` clause.</span></span> <span data-ttu-id="ed87e-110">如果您這麼做時，編譯器需要轉換成您類型的運算子`Boolean`值讓它可以測試條件。</span><span class="sxs-lookup"><span data-stu-id="ed87e-110">If you do this, the compiler requires an operator that converts your type into a `Boolean` value so it can test a condition.</span></span> <span data-ttu-id="ed87e-111">它會搜尋適當的運算子，以下列順序：</span><span class="sxs-lookup"><span data-stu-id="ed87e-111">It searches for a suitable operator in the following order:</span></span>  
+## <a name="compiler-use-of-istrue"></a><span data-ttu-id="a24f5-108">IsTrue 的編譯器使用</span><span class="sxs-lookup"><span data-stu-id="a24f5-108">Compiler Use of IsTrue</span></span>  
+ <span data-ttu-id="a24f5-109">當您已定義類別或結構時，您可以使用在該類型的變數`For`， `If`， `Else If`，或`While`陳述式，或在`When`子句。</span><span class="sxs-lookup"><span data-stu-id="a24f5-109">When you have defined a class or structure, you can use a variable of that type in a `For`, `If`, `Else If`, or `While` statement, or in a `When` clause.</span></span> <span data-ttu-id="a24f5-110">如果您這麼做時，編譯器需要轉換成您類型的運算子`Boolean`值讓它可以測試條件。</span><span class="sxs-lookup"><span data-stu-id="a24f5-110">If you do this, the compiler requires an operator that converts your type into a `Boolean` value so it can test a condition.</span></span> <span data-ttu-id="a24f5-111">它會搜尋適當的運算子，以下列順序：</span><span class="sxs-lookup"><span data-stu-id="a24f5-111">It searches for a suitable operator in the following order:</span></span>  
   
-1.  <span data-ttu-id="ed87e-112">擴展的轉換運算子，從您的類別或結構`Boolean`。</span><span class="sxs-lookup"><span data-stu-id="ed87e-112">A widening conversion operator from your class or structure to `Boolean`.</span></span>  
+1.  <span data-ttu-id="a24f5-112">擴展的轉換運算子，從您的類別或結構`Boolean`。</span><span class="sxs-lookup"><span data-stu-id="a24f5-112">A widening conversion operator from your class or structure to `Boolean`.</span></span>  
   
-2.  <span data-ttu-id="ed87e-113">擴展的轉換運算子，從您的類別或結構`Boolean?`。</span><span class="sxs-lookup"><span data-stu-id="ed87e-113">A widening conversion operator from your class or structure to `Boolean?`.</span></span>  
+2.  <span data-ttu-id="a24f5-113">擴展的轉換運算子，從您的類別或結構`Boolean?`。</span><span class="sxs-lookup"><span data-stu-id="a24f5-113">A widening conversion operator from your class or structure to `Boolean?`.</span></span>  
   
-3.  <span data-ttu-id="ed87e-114">`IsTrue`運算子，在您自己的類別或結構。</span><span class="sxs-lookup"><span data-stu-id="ed87e-114">The `IsTrue` operator on your class or structure.</span></span>  
+3.  <span data-ttu-id="a24f5-114">`IsTrue`運算子，在您自己的類別或結構。</span><span class="sxs-lookup"><span data-stu-id="a24f5-114">The `IsTrue` operator on your class or structure.</span></span>  
   
-4.  <span data-ttu-id="ed87e-115">若要縮小轉換`Boolean?`，未牽涉到從轉換`Boolean`至`Boolean?`。</span><span class="sxs-lookup"><span data-stu-id="ed87e-115">A narrowing conversion to `Boolean?` that does not involve a conversion from `Boolean` to `Boolean?`.</span></span>  
+4.  <span data-ttu-id="a24f5-115">若要縮小轉換`Boolean?`，未牽涉到從轉換`Boolean`至`Boolean?`。</span><span class="sxs-lookup"><span data-stu-id="a24f5-115">A narrowing conversion to `Boolean?` that does not involve a conversion from `Boolean` to `Boolean?`.</span></span>  
   
-5.  <span data-ttu-id="ed87e-116">縮小的轉換運算子，從您的類別或結構`Boolean`。</span><span class="sxs-lookup"><span data-stu-id="ed87e-116">A narrowing conversion operator from your class or structure to `Boolean`.</span></span>  
+5.  <span data-ttu-id="a24f5-116">縮小的轉換運算子，從您的類別或結構`Boolean`。</span><span class="sxs-lookup"><span data-stu-id="a24f5-116">A narrowing conversion operator from your class or structure to `Boolean`.</span></span>  
   
- <span data-ttu-id="ed87e-117">如果您還沒有定義任何轉換成`Boolean`或`IsTrue`運算子，編譯器會發出錯誤信號。</span><span class="sxs-lookup"><span data-stu-id="ed87e-117">If you have not defined any conversion to `Boolean` or an `IsTrue` operator, the compiler signals an error.</span></span>  
+ <span data-ttu-id="a24f5-117">如果您還沒有定義任何轉換成`Boolean`或`IsTrue`運算子，編譯器會發出錯誤信號。</span><span class="sxs-lookup"><span data-stu-id="a24f5-117">If you have not defined any conversion to `Boolean` or an `IsTrue` operator, the compiler signals an error.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="ed87e-118">`IsTrue`運算子只能*多載*，這表示，類別或結構可以重新定義其行為時其運算元的該類別或結構的類型。</span><span class="sxs-lookup"><span data-stu-id="ed87e-118">The `IsTrue` operator can be *overloaded*, which means that a class or structure can redefine its behavior when its operand has the type of that class or structure.</span></span> <span data-ttu-id="ed87e-119">如果您的程式碼會使用這個運算子，這類類別或結構上，請務必了解其已重新定義的行為。</span><span class="sxs-lookup"><span data-stu-id="ed87e-119">If your code uses this operator on such a class or structure, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="ed87e-120">如需詳細資訊，請參閱 <<c0> [ 運算子程序](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。</span><span class="sxs-lookup"><span data-stu-id="ed87e-120">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
+>  <span data-ttu-id="a24f5-118">`IsTrue`運算子只能*多載*，這表示，類別或結構可以重新定義其行為時其運算元的該類別或結構的類型。</span><span class="sxs-lookup"><span data-stu-id="a24f5-118">The `IsTrue` operator can be *overloaded*, which means that a class or structure can redefine its behavior when its operand has the type of that class or structure.</span></span> <span data-ttu-id="a24f5-119">如果您的程式碼會使用這個運算子，這類類別或結構上，請務必了解其已重新定義的行為。</span><span class="sxs-lookup"><span data-stu-id="a24f5-119">If your code uses this operator on such a class or structure, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="a24f5-120">如需詳細資訊，請參閱 <<c0> [ 運算子程序](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。</span><span class="sxs-lookup"><span data-stu-id="a24f5-120">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ed87e-121">範例</span><span class="sxs-lookup"><span data-stu-id="ed87e-121">Example</span></span>  
- <span data-ttu-id="ed87e-122">下列程式碼範例會定義結構，其中包含定義的外框`IsFalse`和`IsTrue`運算子。</span><span class="sxs-lookup"><span data-stu-id="ed87e-122">The following code example defines the outline of a structure that includes definitions for the `IsFalse` and `IsTrue` operators.</span></span>  
+## <a name="example"></a><span data-ttu-id="a24f5-121">範例</span><span class="sxs-lookup"><span data-stu-id="a24f5-121">Example</span></span>  
+ <span data-ttu-id="a24f5-122">下列程式碼範例會定義結構，其中包含定義的外框`IsFalse`和`IsTrue`運算子。</span><span class="sxs-lookup"><span data-stu-id="a24f5-122">The following code example defines the outline of a structure that includes definitions for the `IsFalse` and `IsTrue` operators.</span></span>  
   
  [!code-vb[VbVbalrOperators#28](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/istrue-operator_1.vb)]  
   
-## <a name="see-also"></a><span data-ttu-id="ed87e-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ed87e-123">See Also</span></span>  
- [<span data-ttu-id="ed87e-124">IsFalse 運算子</span><span class="sxs-lookup"><span data-stu-id="ed87e-124">IsFalse Operator</span></span>](../../../visual-basic/language-reference/operators/isfalse-operator.md)  
- [<span data-ttu-id="ed87e-125">如何：定義運算子</span><span class="sxs-lookup"><span data-stu-id="ed87e-125">How to: Define an Operator</span></span>](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)  
- [<span data-ttu-id="ed87e-126">OrElse 運算子</span><span class="sxs-lookup"><span data-stu-id="ed87e-126">OrElse Operator</span></span>](../../../visual-basic/language-reference/operators/orelse-operator.md)
+## <a name="see-also"></a><span data-ttu-id="a24f5-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a24f5-123">See Also</span></span>  
+ [<span data-ttu-id="a24f5-124">IsFalse 運算子</span><span class="sxs-lookup"><span data-stu-id="a24f5-124">IsFalse Operator</span></span>](../../../visual-basic/language-reference/operators/isfalse-operator.md)  
+ [<span data-ttu-id="a24f5-125">如何：定義運算子</span><span class="sxs-lookup"><span data-stu-id="a24f5-125">How to: Define an Operator</span></span>](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)  
+ [<span data-ttu-id="a24f5-126">OrElse 運算子</span><span class="sxs-lookup"><span data-stu-id="a24f5-126">OrElse Operator</span></span>](../../../visual-basic/language-reference/operators/orelse-operator.md)
