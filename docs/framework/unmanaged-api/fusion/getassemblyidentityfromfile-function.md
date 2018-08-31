@@ -19,11 +19,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6dfb0b404413351761d269c800be19e75acfb41f
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42754569"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43258689"
 ---
 # <a name="getassemblyidentityfromfile-function"></a>GetAssemblyIdentityFromFile 函式
 取得指標`IUnknown`使用指定的物件`IID`中指定的檔案路徑中的組件。  

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f4680187de7318a6438bf6a5e6bd7c5f3acd05c2
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42998899"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43256774"
 ---
 # <a name="startupflags-enumeration"></a>STARTUP_FLAGS 列舉
 包含值，表示 common language runtime (CLR) 的啟動行為。 根據預設，記憶體回收是非並行，而且只有基底類別程式庫載入定義域中性的區域。  

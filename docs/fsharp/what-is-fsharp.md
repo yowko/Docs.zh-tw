@@ -3,11 +3,11 @@ title: '什麼是 F #'
 description: '了解什麼 F # 程式設計語言和 F # 程式設計的如下。 了解豐富的資料類型、 函式，以及它們如何相互配合。'
 ms.date: 08/03/2018
 ms.openlocfilehash: 193747f380c61a387ed79ecca6abbcd90ee74376
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "40240635"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43256706"
 ---
 # <a name="what-is-f"></a>什麼是 F # #
 

@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: aa9e7a4dacceb492dfe037b4b64f22f231323de5
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933218"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43258329"
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags 列舉
 包含在開啟資訊清單檔案時控制中繼資料行為的旗標值。  

@@ -10,20 +10,20 @@ helpviewer_keywords:
 - strings [Visual Basic], concatenating
 - sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
-ms.openlocfilehash: ccf79c700cf852c0febb9c3f3464cbacdd39296e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 91806c204c313956b292eb9c9be078991f733b4e
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605221"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43258094"
 ---
 # <a name="-operator-visual-basic"></a>+ 運算子 (Visual Basic)
-兩個數字相加或傳回數值運算式的正值。 也可以用來串連兩個字串運算式。  
+兩個數字相加，或傳回數值運算式的正值。 也可以用來串連兩個字串運算式。  
   
 ## <a name="syntax"></a>語法  
   
-```  
-      expression1 + expression2  
+```vb
+expression1 + expression2  
 - or -  
 + expression1  
 ```  
@@ -33,66 +33,66 @@ ms.locfileid: "33605221"
 |詞彙|定義|  
 |---|---|  
 |`expression1`|必要。 任何數值或字串的運算式。|  
-|`expression2`|除非`+`運算子會計算為負值。 任何數值或字串的運算式。|  
+|`expression2`|除非`+`運算子會計算為負數值。 任何數值或字串的運算式。|  
   
 ## <a name="result"></a>結果  
- 如果`expression1`和`expression2`都是數值，則結果會是其算術的總和。  
+ 如果`expression1`和`expression2`兩者都是數值，結果就是其算術的總和。  
   
- 如果`expression2`不存在，`+`運算子是*一元*未變更的運算式值的相同比較運算子。 就這個意義而言，作業會組成保留正負號的`expression1`，所以結果為負如果`expression1`為負數。  
+ 如果`expression2`不存在，`+`運算子*一元*身分識別操作員未變更值的運算式。 在這種情況下，作業會組成保留正負號的`expression1`，結果為負的因此如果`expression1`為負數。  
   
- 如果`expression1`和`expression2`都是字串，其值的串連後得出結果。  
+ 如果`expression1`和`expression2`都是字串，結果就是其值的串連。  
   
- 如果`expression1`和`expression2`是混合的類型，所採取的動作取決於其類型、 其內容，以及設定[Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)。 如需詳細資訊，請參閱 < 備註 >。 中的資料表  
+ 如果`expression1`並`expression2`是混合的類型，所採取的動作取決於其類型、 其內容，以及設定[Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)。 如需詳細資訊，請參閱 < 備註 >。 中的資料表  
   
 ## <a name="supported-types"></a>支援的型別  
- 所有數字類型，包括不帶正負號和浮點類型和`Decimal`，和`String`。  
+ 所有的數字類型，包括不帶正負號和浮點類型和`Decimal`，和`String`。  
   
 ## <a name="remarks"></a>備註  
- 一般情況下，`+`執行算術加法，如果可能的話，然後將串連只有當這兩個運算式都是字串。  
+ 一般情況下，`+`執行算術加法，如果可能的話，並串連僅當這兩個運算式都是字串。  
   
  如果兩個運算式是`Object`，Visual Basic 會採取下列動作。  
   
 |資料類型的運算式|編譯器的動作|  
 |---|---|  
-|這兩個運算式都是數值資料類型 (`SByte`， `Byte`， `Short`， `UShort`， `Integer`， `UInteger`， `Long`， `ULong`， `Decimal`， `Single`，或`Double`)|加入。 結果資料類型是數值類型適合的資料型別`expression1`和`expression2`。 請參閱中的 「 整數算術 」 資料表[運算子結果的資料類型的](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)。|  
-|這兩個運算式都是類型 `String`|串連。|  
-|一個運算式為數值資料類型，另一個是字串|如果`Option Strict`是`On`，然後產生編譯器錯誤。<br /><br /> 如果`Option Strict`是`Off`，隱含地轉換`String`至`Double`並加入。<br /><br /> 如果`String`無法轉換成`Double`，就會擲回<xref:System.InvalidCastException>例外狀況。|  
-|一個運算式是數值資料類型，而另一個方法是[做任何動作](../../../visual-basic/language-reference/nothing.md)|新增，請使用`Nothing`值為零。|  
-|一個運算式是字串，而且另一個方法是 `Nothing`|串連與`Nothing`值為""。|  
+|這兩個運算式都是數值資料類型 (`SByte`， `Byte`， `Short`， `UShort`， `Integer`， `UInteger`， `Long`， `ULong`， `Decimal`， `Single`，或`Double`)|新增。 將結果資料類型是數值類型適合的資料型別`expression1`和`expression2`。 請參閱中的 「 整數算術 」 表格[資料類型的運算子結果](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)。|  
+|這兩個運算式屬於類型 `String`|串連。|  
+|一個運算式為數值資料類型，另一個是字串|如果`Option Strict`是`On`，然後產生編譯器錯誤。<br /><br /> 如果`Option Strict`是`Off`，然後以隱含方式轉換`String`到`Double`並新增。<br /><br /> 如果`String`無法轉換成`Double`，然後擲回<xref:System.InvalidCastException>例外狀況。|  
+|一個運算式為數值資料類型，而另一個是[Nothing](../../../visual-basic/language-reference/nothing.md)|新增，請使用`Nothing`值為零。|  
+|一個運算式是字串，而且另一個則是 `Nothing`|串連，與`Nothing`值為""。|  
   
- 如果一個運算式為`Object`運算式中，Visual Basic 會採取下列動作。  
-  
-|資料類型的運算式|編譯器的動作|  
-|---|---|  
-|`Object` 運算式會保留一個數字值，另一個是數值資料類型|如果`Option Strict`是`On`，然後產生編譯器錯誤。<br /><br /> 如果`Option Strict`是`Off`，然後加入。|  
-|`Object` 運算式會保留一個數字值，另一個是型別 `String`|如果`Option Strict`是`On`，然後產生編譯器錯誤。<br /><br /> 如果`Option Strict`是`Off`，隱含地轉換`String`至`Double`並加入。<br /><br /> 如果`String`無法轉換成`Double`，就會擲回<xref:System.InvalidCastException>例外狀況。|  
-|`Object` 運算式會保留一個字串，另一個是數值資料類型|如果`Option Strict`是`On`，然後產生編譯器錯誤。<br /><br /> 如果`Option Strict`是`Off`，隱含地轉換字串`Object`至`Double`並加入。<br /><br /> 如果字串`Object`無法轉換成`Double`，就會擲回<xref:System.InvalidCastException>例外狀況。|  
-|`Object` 運算式會保留一個字串，另一個是型別 `String`|如果`Option Strict`是`On`，然後產生編譯器錯誤。<br /><br /> 如果`Option Strict`是`Off`，隱含地轉換`Object`至`String`處理並串連。|  
-  
- 如果這兩個運算式都是`Object`運算式中，Visual Basic 會採取下列動作 (`Option Strict Off`只)。  
+ 如果一個運算式`Object`運算式中，Visual Basic 會採取下列動作。  
   
 |資料類型的運算式|編譯器的動作|  
 |---|---|  
-|同時`Object`運算式保存數值|加入。|  
-|同時`Object`運算式屬於類型 `String`|串連。|  
-|一個`Object`運算式會保留一個數字值，其他保留字串|將字串隱含轉換`Object`至`Double`並加入。<br /><br /> 如果字串`Object`無法轉換成數值，則會擲回<xref:System.InvalidCastException>例外狀況。|  
+|`Object` 運算式包含數值，另一個是數值資料類型|如果`Option Strict`是`On`，然後產生編譯器錯誤。<br /><br /> 如果`Option Strict`是`Off`，然後新增。|  
+|`Object` 運算式會保留一個數字值，另一個是類型 `String`|如果`Option Strict`是`On`，然後產生編譯器錯誤。<br /><br /> 如果`Option Strict`是`Off`，然後以隱含方式轉換`String`到`Double`並新增。<br /><br /> 如果`String`無法轉換成`Double`，然後擲回<xref:System.InvalidCastException>例外狀況。|  
+|`Object` 運算式會保留為字串，另一個是數值資料類型|如果`Option Strict`是`On`，然後產生編譯器錯誤。<br /><br /> 如果`Option Strict`是`Off`，然後以隱含方式將字串轉換`Object`到`Double`並新增。<br /><br /> 如果字串`Object`無法轉換成`Double`，然後擲回<xref:System.InvalidCastException>例外狀況。|  
+|`Object` 運算式會保留為字串，另一個是類型 `String`|如果`Option Strict`是`On`，然後產生編譯器錯誤。<br /><br /> 如果`Option Strict`是`Off`，然後以隱含方式轉換`Object`到`String`和串連。|  
   
- 如果`Object`運算式評估為[Nothing](../../../visual-basic/language-reference/nothing.md)或<xref:System.DBNull>、`+`運算子會將它視為`String`值是""。  
+ 如果這兩個運算式都`Object`運算式，Visual Basic 會採取下列動作 (`Option Strict Off`只)。  
+  
+|資料類型的運算式|編譯器的動作|  
+|---|---|  
+|兩者`Object`運算式保存數值|新增。|  
+|兩者`Object`運算式屬於類型 `String`|串連。|  
+|一個`Object`運算式包含數值，而其他則會保留字串|將字串隱含轉換`Object`至`Double`並新增。<br /><br /> 如果字串`Object`無法轉換成數值，則會擲回<xref:System.InvalidCastException>例外狀況。|  
+  
+ 如果有任一個`Object`運算式會評估為[Nothing](../../../visual-basic/language-reference/nothing.md)或<xref:System.DBNull>，則`+`運算子會將其視為`String`值是""。  
   
 > [!NOTE]
->  當您使用`+`運算子，可能無法判斷發生加法或字串串連。 使用`&`運算子串連避免模稜兩可，以及提供自我記錄程式碼。  
+>  當您使用`+`運算子，可能無法判斷是否會發生加法或字串的串連。 使用`&`運算子串連消除模稜兩可，並提供自我記錄程式碼。  
   
 ## <a name="overloading"></a>多載化  
- `+`運算子可以是*多載*，這表示，類別或結構可以重新定義它的行為時的運算元有該類別或結構的類型。 如果您的程式碼會使用此運算子，這類類別或結構上，請確定您了解其重新定義的行為。 如需詳細資訊，請參閱[運算子程序](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+ `+`運算子只能*多載*，這表示，類別或結構可以重新定義其行為時運算元具有該類別或結構的型別。 如果您的程式碼會使用這個運算子，這類類別或結構上，請務必了解其已重新定義的行為。 如需詳細資訊，請參閱 <<c0> [ 運算子程序](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用`+`運算子，將數字。 如果運算元都是數字的同時，Visual Basic 會計算算術的結果。 算術結果代表兩個運算元的總和。  
+ 下列範例會使用`+`運算子，將數字。 如果運算元是數字的同時，Visual Basic 會計算算術的結果。 算術的結果表示兩個運算元的總和。  
   
  [!code-vb[VbVbalrOperators#6](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_1.vb)]  
   
- 您也可以使用`+`運算子來串連字串。 如果運算元都是字串，Visual Basic 將它們串連。 串連結果代表之後的其他內容的兩個運算元一個組成的單一字串。  
+ 您也可以使用`+`運算子來串連字串。 如果運算元都是字串，Visual Basic 會串連它們。 串連結果代表接續所組成的兩個運算元其中一個內容的單一字串。  
   
- 如果運算元都是混合型別，結果會隨著設定[Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)。 下列範例說明結果時`Option Strict`是`On`。  
+ 如果混合類型的運算元，結果會取決於設定[Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)。 下列範例說明結果時`Option Strict`是`On`。  
   
  [!code-vb[VbVbalrOperators#53](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_2.vb)]  
   
@@ -106,7 +106,7 @@ ms.locfileid: "33605221"
  [!code-vb[VbVbalrOperators#50](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_3.vb)]  
 [!code-vb[VbVbalrOperators#52](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_6.vb)]  
   
- 若要避免模稜兩可，您應該使用`&`運算子，而不是`+`串連。  
+ 若要避免模稜兩可，您應該使用`&`運算子來取代`+`串連。  
   
 ## <a name="see-also"></a>另請參閱  
  [& 運算子](../../../visual-basic/language-reference/operators/concatenation-operator.md)  

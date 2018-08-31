@@ -1,51 +1,39 @@
 ---
-title: 如何：識別可為 Null 的類型 (C# 程式設計手冊)
-ms.date: 07/20/2015
+title: 如何：識別可為 Null 的型別 (C# 程式設計手冊)
+description: 了解如何判斷某個類型或執行個體是否屬於可為 Null 的型別
+ms.date: 08/06/2018
 helpviewer_keywords:
 - nullable types [C#], identifying
 ms.assetid: d4b67ee2-66e8-40c1-ae9d-545d32c71387
-ms.openlocfilehash: f3ac4ebd77fc92a133eb326919d5ba55264ced97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb7ab2b8c13c2b8b4b6cd60e7959a391cd7e75c1
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333179"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42754952"
 ---
-# <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>如何：識別可為 Null 的類型 (C# 程式設計手冊)
-您可以使用 C# [typeof](../../../csharp/language-reference/keywords/typeof.md) 運算子來建立代表可為 Null 類型的 <xref:System.Type> 物件：  
+# <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>如何：識別可為 Null 的型別 (C# 程式設計手冊)
+
+下列範例示範如何判斷 <xref:System.Type?displayProperty=nameWithType> 執行個體是否代表可為 Null 的型別：
+
+[!code-csharp-interactive[whether Type is nullable](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#1)]
+
+如範例所示，您使用 [typeof](../../language-reference/keywords/typeof.md) 運算子來建立 <xref:System.Type?displayProperty=nameWithType> 物件。  
   
-```  
-System.Type type = typeof(int?);  
-```  
+如果您想要判斷某個執行個體是否屬於可為 Null 的型別，請勿使用 <xref:System.Object.GetType%2A?displayProperty=nameWithType> 方法透過上述程式碼來測試 <xref:System.Type> 執行個體。 當您在可為 Null 的型別執行個體上呼叫 <xref:System.Object.GetType%2A?displayProperty=nameWithType> 方法時，該執行個體會 [Boxing](using-nullable-types.md#boxing-and-unboxing) 處理為 <xref:System.Object>。 由於對可為 Null 型別的非 Null 執行個體進行 Boxing 處理相當於對基礎類型的值進行 Boxing 處理，因此 <xref:System.Object.GetType%2A> 會傳回<xref:System.Type> 物件，代表可為 Null 型別的基礎型別：
+
+[!code-csharp-interactive[GetType example](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#2)]
+
+請勿使用 [is](../../language-reference/keywords/is.md) 運算子來判斷某個執行個體是否屬於可為 Null 的型別。 如下列範例所示，您無法使用 `is` 運算子來區別可為 Null 型別及其基礎類型的執行個體類型：
+
+[!code-csharp-interactive[is operator example](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#3)]
+
+您可以使用下列範例所示的程式碼來判斷某個執行個體是否屬於可為 Null 的型別：
+
+[!code-csharp-interactive[whether an instance is of a nullable type](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#4)]
   
- 您也可以使用 <xref:System.Reflection> 命名空間的類別和方法，產生代表可為 Null 類型的 <xref:System.Type> 物件。 不過，如果您使用 <xref:System.Object.GetType%2A> 方法或 `is` 運算子嘗試在執行階段從可為 Null 的變數取得類型資訊，結果會是代表基礎類型的 <xref:System.Type>，不是可為 Null 的類型本身。  
-  
- 當類型以隱含方式轉換成 <xref:System.Object> 時，在可為 Null 的類型上呼叫 `GetType`，會導致執行 boxing 作業。 因此 <xref:System.Object.GetType%2A> 一律會傳回表示基礎類型的 <xref:System.Type> 物件，不是可為 Null 的類型。  
-  
-```  
-int? i = 5;  
-Type t = i.GetType();  
-Console.WriteLine(t.FullName); //"System.Int32"  
-```  
-  
- C# [是](../../../csharp/language-reference/keywords/is.md)運算子，也會在可為 Null 的基礎類型上運作。 因此，您無法使用 `is` 判斷變數是否是可為 Null 的類型。 下例顯示 `is` 運算子將 Nullable\<int> 變數當做 int。  
-  
-```  
-static void Main(string[] args)  
-{  
-  int? i = 5;  
-  if (i is int) // true  
-    //…  
-}  
-```  
-  
-## <a name="example"></a>範例  
- 使用下列程式碼判斷 <xref:System.Type> 物件是否代表可為 Null 的類型。 請記住，如果 `Type` 物件是從對 <xref:System.Object.GetType%2A> 的呼叫所傳回，這段程式碼一律會傳回 false，如本主題前文所述。  
-  
-```  
-if (type.IsGenericType && type.GetGenericTypeDefinition() == typeof(Nullable<>)) {…}  
-```  
-  
-## <a name="see-also"></a>請參閱  
- [可為 Null 的型別](../../../csharp/programming-guide/nullable-types/index.md)  
- [對可為 Null 的型別進行 boxing](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)
+## <a name="see-also"></a>另請參閱
+
+[可為 Null 的型別](index.md)  
+[使用可為 Null 的型別](using-nullable-types.md)  
+<xref:System.Nullable.GetUnderlyingType%2A>  
