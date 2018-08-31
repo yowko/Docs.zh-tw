@@ -15,40 +15,40 @@ helpviewer_keywords:
 - snaplines
 - controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
-ms.openlocfilehash: 6db021f2b1a29c3ef52a182c45bbc7878feebb97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6843c22fec964de92c41760f1108d1c83e1f5bf8
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538708"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332477"
 ---
 # <a name="how-to-position-controls-on-windows-forms"></a>如何：將控制項定位在 Windows Form 上
-若要定位控制項、 使用 Windows Form 設計工具，或指定<xref:System.Windows.Forms.Control.Location%2A>屬性。  
+若要調整控制項的位置，使用 Windows Form 設計工具中，或指定<xref:System.Windows.Forms.Control.Location%2A>屬性。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
-### <a name="to-position-a-control-on-the-design-surface-of-the-windows-forms-designer"></a>若要將 Windows Form 設計工具的設計介面上的控制項  
+### <a name="to-position-a-control-on-the-design-surface-of-the-windows-forms-designer"></a>若要將控制項放置在 Windows Form 設計工具的設計介面上  
   
 -   將控制項拖曳至適當的位置，使用滑鼠。  
   
     > [!NOTE]
-    >  選取控制項，並將它的箭號，更精確地將它定位索引鍵。 此外，*對齊線*協助您放置在表單上的精確控制項。 如需詳細資訊，請參閱[逐步解說： 在 Windows Form 使用對齊線排列的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)。  
+    >  選取的控制項，然後移動它具有箭號將它放在更精確索引鍵。 此外，*對齊線*協助您放置在表單上精確的控制項。 如需詳細資訊，請參閱 <<c0> [ 逐步解說： 在 Windows Form 使用對齊線排列的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)。  
   
 ### <a name="to-position-a-control-using-the-properties-window"></a>若要將使用 [屬性] 視窗的控制項  
   
 1.  按一下您要放置的控制項。  
   
-2.  在**屬性** 視窗中，型別值<xref:System.Windows.Forms.Control.Location%2A>屬性，來定位控制項容器中的控制項的逗號分隔。  
+2.  在 [**屬性**] 視窗中，型別值<xref:System.Windows.Forms.Control.Location%2A>屬性，以逗號分隔，其容器內控制項的位置。  
   
-     第一個數字 (X) 是從容器; 左框線的距離第二個數字 (Y) 是從容器區域中，以像素表示上框線的距離。  
+     第一個數字 (X) 是從容器; 左框線的距離第二個數字 (Y) 是從容器工作區，以像素表示上框線的距離。  
   
     > [!NOTE]
-    >  您可以展開<xref:System.Windows.Forms.Control.Location%2A>屬性輸入**X**和**Y**個別值。  
+    >  您可以展開<xref:System.Windows.Forms.Control.Location%2A>類型的屬性**X**並**Y**個別值。  
   
 ### <a name="to-position-a-control-programmatically"></a>若要以程式設計方式調整控制項的位置  
   
-1.  設定<xref:System.Windows.Forms.Control.Location%2A>控制項的屬性<xref:System.Drawing.Point>。  
+1.  設定<xref:System.Windows.Forms.Control.Location%2A>屬性來控制<xref:System.Drawing.Point>。  
   
     ```vb  
     Button1.Location = New Point(100, 100)  
@@ -93,7 +93,7 @@ ms.locfileid: "33538708"
     ```  
   
     > [!NOTE]
-    >  使用<xref:System.Windows.Forms.Control.Location%2A>同時將屬性設定控制項的 X 和 Y。 若要個別設定的位置，使用控制項的<xref:System.Windows.Forms.Control.Left%2A>(**X**) 或<xref:System.Windows.Forms.Control.Top%2A>(**Y**) 子屬性。 不會嘗試隱含地設定的 X 和 Y 座標<xref:System.Drawing.Point>結構，表示按鈕的位置，因為此結構包含一份按鈕的座標。  
+    >  使用<xref:System.Windows.Forms.Control.Location%2A>屬性來設定控制項的 X 和 Y 位置同時。 若要個別設定的位置，使用控制項的<xref:System.Windows.Forms.Control.Left%2A>(**X**) 或<xref:System.Windows.Forms.Control.Top%2A>(**Y**) 子屬性。 請勿嘗試將隱含地設定 X 和 Y 座標<xref:System.Drawing.Point>結構，表示按鈕的位置，因為此結構包含一份按鈕的座標。  
   
 ## <a name="see-also"></a>另請參閱  
  [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)  
@@ -104,4 +104,4 @@ ms.locfileid: "33538708"
  [標記個別 Windows Forms 控制項並提供其捷徑](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
  [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  [依功能區分 Windows Forms 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
- [如何： 設定 Windows Form 的畫面位置](http://msdn.microsoft.com/library/cb023ab7-dea7-4284-9aa6-8c03c59b60c6)
+ [如何： 設定 Windows Form 的畫面位置](https://msdn.microsoft.com/library/cb023ab7-dea7-4284-9aa6-8c03c59b60c6)

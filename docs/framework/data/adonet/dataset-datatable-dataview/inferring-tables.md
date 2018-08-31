@@ -2,11 +2,12 @@
 title: 推斷資料表
 ms.date: 03/30/2017
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
-ms.openlocfilehash: b14cbc39b02136ac7f226faf2636a69ac072f529
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 38709f91e01c7f85d9e8482bdd49bc0892121f09
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332849"
 ---
 # <a name="inferring-tables"></a>推斷資料表
 從 XML 文件推斷 <xref:System.Data.DataSet> 的結構描述時，ADO.NET 首先會決定要用哪些 XML 項目來表示資料表。 下列 XML 結構會導致資料表**資料集**結構描述：  
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
  **資料集：** DocumentElement  
   
- **Table:** Element1  
+ **資料表：** Element1  
   
 |attr1|Element1_Text|  
 |-----------|--------------------|  
@@ -53,13 +54,13 @@ ms.lasthandoff: 05/03/2018
   
  **資料集：** DocumentElement  
   
- **Table:** Element1  
+ **資料表：** Element1  
   
 |ChildElement1|  
 |-------------------|  
 |Text1|  
   
- 如果文件或根項目具有將推斷為資料行的屬性或項目子系，便會產生推斷資料表。 如果文件項目沒有屬性和任何子項目會推斷為資料行，項目會推斷為**資料集**。 例如，請考量下列 XML：  
+ 如果文件或根項目具有將推斷為資料行的屬性或項目子系，便會產生推斷資料表。 如果文件項目沒有屬性和任何子項目會推斷為資料行，將項目被推斷為**資料集**。 例如，請考量下列 XML：  
   
 ```xml  
 <DocumentElement>  
@@ -72,7 +73,7 @@ ms.lasthandoff: 05/03/2018
   
  **資料集：** NewDataSet  
   
- **Table:** DocumentElement  
+ **資料表：** DocumentElement  
   
 |Element1|Element2|  
 |--------------|--------------|  
@@ -86,11 +87,11 @@ ms.lasthandoff: 05/03/2018
 </DocumentElement>  
 ```  
   
- 推斷程序產生**資料集**名為"DocumentElement"，其中包含名為"Element1。 」 的資料表  
+ 推斷程序會產生**資料集**名為"DocumentElement"，其中包含名為"Element1。 」  
   
  **資料集：** DocumentElement  
   
- **Table:** Element1  
+ **資料表：** Element1  
   
 |attr1|attr2|  
 |-----------|-----------|  
@@ -110,7 +111,7 @@ ms.lasthandoff: 05/03/2018
   
  **資料集：** DocumentElement  
   
- **Table:** Element1  
+ **資料表：** Element1  
   
 |Element1_Text|  
 |--------------------|  
@@ -123,4 +124,4 @@ ms.lasthandoff: 05/03/2018
  [從 XML 載入資料集結構描述資訊](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
  [在 DataSet 中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d70b502f-6a15-4120-b4fe-500b173ad9cc
-ms.openlocfilehash: f9230e9b5ac0c906652c03111b82df5147267143
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: dccf3ab1a619222cdf2db54673718eb103aee2fb
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760761"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43331718"
 ---
 # <a name="expressions-in-linq-to-entities-queries"></a>LINQ to Entities 查詢中的運算式
 運算式是可以評估為單一值、物件、方法或命名空間的程式碼片段。 運算式可以包含常值、方法呼叫、運算子及其運算元，或是簡單名稱。 簡單名稱可以是變數、型別成員、方法參數、命名空間或型別的名稱。 運算式可以使用運算子 (後者又可能使用其他運算式當做參數) 或方法呼叫 (它的參數又可能是其他方法呼叫)。 因此，運算式可以很簡單，也可以非常複雜。  
   
- 在[!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]查詢運算式可包含任何項目內類型所允許<xref:System.Linq.Expressions>命名空間，包括 lambda 運算式。 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查詢中可以使用的運算式是可用於查詢 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 之運算式的超集。  針對查詢運算式[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]僅限於所支援的作業`ObjectQuery<T>`和基礎資料來源。  
+ 在 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]查詢運算式可以包含內類型所允許的任何項目<xref:System.Linq.Expressions>命名空間，包括 lambda 運算式。 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查詢中可以使用的運算式是可用於查詢 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 之運算式的超集。  運算式所產生的查詢部分[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]所支援的作業僅限於`ObjectQuery<T>`和基礎資料來源。  
   
  在以下範例中，`Where` 子句中的比較就是個運算式：  
   
@@ -34,7 +34,7 @@ ms.locfileid: "32760761"
   
  [初始化運算式](../../../../../../docs/framework/data/adonet/ef/language-reference/initialization-expressions.md)  
   
- [導覽屬性](http://msdn.microsoft.com/library/41e1e6b9-8a57-467d-99d9-1857d2ca2ea5)  
+ [導覽屬性](https://msdn.microsoft.com/library/41e1e6b9-8a57-467d-99d9-1857d2ca2ea5)  
   
 ## <a name="see-also"></a>另請參閱  
  [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)

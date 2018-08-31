@@ -2,11 +2,12 @@
 title: 只有在 File 關閉時，才能執行這項作業
 ms.date: 07/20/2015
 ms.assetid: 79fe95ae-4aff-469f-beda-d5a85c91d421
-ms.openlocfilehash: b737275b2f18adadc5e9d4b5888d26cc595720d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a7f6afc7f9ecb232e24d5536d2274db57d1d820
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43331924"
 ---
 # <a name="this-operation-can-only-be-done-when-the-file-is-closed"></a>只有在 File 關閉時，才能執行這項作業
 開啟檔案時，嘗試執行的作業只能在關閉檔案時執行。  
@@ -18,4 +19,4 @@ ms.lasthandoff: 05/04/2018
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Security.Permissions.FileIOPermission>  
  <xref:Microsoft.VisualBasic.FileSystem.FileClose%2A>  
- [如何： 取得 Visual Basic 中檔案的相關資訊](http://msdn.microsoft.com/library/ca0720ec-f40e-4c11-9748-0ce1685c78f0)
+ [如何： 取得 Visual Basic 中檔案的相關資訊](https://msdn.microsoft.com/library/ca0720ec-f40e-4c11-9748-0ce1685c78f0)
