@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: f362bd1e4a644488e85cdeca674d46ca340bde05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd792c2c26898cd3dfd7b52d865fa83636c426eb
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491744"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253969"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>HOW TO：安裝和設定 WCF 啟用元件
 本主題說明設定 Windows Process Activation Service (亦稱為 WAS) 所需的步驟上[!INCLUDE[wv](../../../../includes/wv-md.md)]來裝載 Windows Communication Foundation (WCF) 服務不會透過 HTTP 通訊的網路通訊協定。 下列各節將概述此組態的各項步驟：  
@@ -18,19 +18,19 @@ ms.locfileid: "33491744"
   
 -   設定 WAS 支援非 HTTP 通訊協定。 下列程序將設定 [!INCLUDE[wv](../../../../includes/wv-md.md)] 以啟動 TCP。  
   
- 安裝和設定 WAS，請參閱之後[如何： 將 WCF 服務裝載於 WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)程序來建立會公開非 HTTP 端點採用 WAS 的 WCF 服務。  
+ 安裝與設定 WAS，請參閱之後[如何： 將 WCF 服務裝載於 WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)以建立 WCF 服務來公開使用 WAS 的非 HTTP 端點的程序。  
   
 ### <a name="to-install-the-wcf-non-http-activation-components"></a>若要安裝 WCF 非 HTTP 啟動元件  
   
-1.  按一下**啟動**按鈕，然後再按一下**控制台**。  
+1.  按一下 **開始**按鈕，然後再按一下**控制台**。  
   
-2.  按一下**程式**，然後按一下 **程式和功能**。  
+2.  按一下 **程式**，然後按一下**程式和功能**。  
   
-3.  在**工作**功能表上，按一下 **開啟或關閉 Windows 功能**。  
+3.  在上**任務**功能表上，按一下**開啟或關閉開啟的 Windows 功能**。  
   
 4.  找出並選取 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 節點，然後將它展開。  
   
-5.  選取**WCF 非 Http 啟動元件**方塊，然後儲存設定。  
+5.  選取  **WCF 非 Http 啟動元件**方塊，然後儲存設定。  
   
 ### <a name="to-configure-the-was-to-support-tcp-activation"></a>若要設定 WAS 來支援 TCP 啟動  
   
@@ -51,7 +51,7 @@ ms.locfileid: "33491744"
     ```  
   
     > [!NOTE]
-    >  這個命令是單行文字。 此命令會啟用 /\<*WCF 應用程式*> 應用程式来使用這兩個存取http://localhost  */ \<WCF 應用程式 >* 和 net.tcp://localhost /*\<WCF 應用程式 >*。  
+    >  這個命令是單行文字。 此命令會啟用 /\<*WCF 應用程式*> 存取使用這兩個應用程式`http://localhost/<WCF Application>`和`net.tcp://localhost/<WCF Application>`。
   
      移除您為此範例新增的 net.tcp 網站繫結。  
   
@@ -104,4 +104,4 @@ ms.locfileid: "33491744"
  [TCP 啟用](../../../../docs/framework/wcf/samples/tcp-activation.md)  
  [MSMQ 啟用](../../../../docs/framework/wcf/samples/msmq-activation.md)  
  [NamedPipe 啟用](../../../../docs/framework/wcf/samples/namedpipe-activation.md)  
- [Windows Server App Fabric 裝載功能](http://go.microsoft.com/fwlink/?LinkId=201276)
+ [Windows Server App Fabric 主控功能](http://go.microsoft.com/fwlink/?LinkId=201276)

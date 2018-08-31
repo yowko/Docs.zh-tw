@@ -15,65 +15,57 @@ helpviewer_keywords:
 - easing functions [WPF], customizing
 - animations [WPF], applying
 ms.assetid: 075b9c2b-82c4-43fa-b3cd-de0b6236eb38
-ms.openlocfilehash: 3ce7c1824dc53c154ba1091ea62c1b8950b757c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 038d9423ddae6f16165ed0618beab8391c462ac9
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557559"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253207"
 ---
 # <a name="easing-functions"></a>Easing 函式
 Easing 函式可讓您將自訂的數學公式套用至動畫。 例如，您可能想要物件實際表現出反彈或像是在彈簧上一樣。 您可以使用主要畫面格或甚至 From/To/By 動畫來模擬這些效果，但所需的工作量可能很大，而且和使用數學公式相比，動畫會較不精確。  
   
- 除了繼承以建立您自己自訂的 easing 函式從<xref:System.Windows.Media.Animation.EasingFunctionBase>，您可以使用其中一個執行階段提供的幾個 easing 函式來建立通用的效果。  
+ 除了建立您自己自訂的 easing 函式，藉由繼承自<xref:System.Windows.Media.Animation.EasingFunctionBase>，您可以使用其中一個執行階段所提供的數個 easing 函式來建立常見效果。  
   
--   <xref:System.Windows.Media.Animation.BackEase>： 會撤銷動畫的動畫看的起來稍有後，才開始以動畫方式顯示在指定的路徑。  
+-   <xref:System.Windows.Media.Animation.BackEase>： 會撤銷動畫的動作稍有之前就會開始在指示的路徑中建立動畫。  
   
--   <xref:System.Windows.Media.Animation.BounceEase>： 建立彈跳的效果。  
+-   <xref:System.Windows.Media.Animation.BounceEase>： 建立彈跳效果。  
   
--   <xref:System.Windows.Media.Animation.CircleEase>： 建立的動畫加速或減速使用循環函式。  
+-   <xref:System.Windows.Media.Animation.CircleEase>： 建立加速和/或減速使用循環函式的動畫。  
   
--   <xref:System.Windows.Media.Animation.CubicEase>： 建立的動畫加速或減速使用公式*f*(*t*) = *t*<sup>3</sup>。  
+-   <xref:System.Windows.Media.Animation.CubicEase>： 建立加速和/或減速使用公式的動畫*f*(*t*) = *t*<sup>3</sup>。  
   
--   <xref:System.Windows.Media.Animation.ElasticEase>： 建立類似 spring，直到到達貼齊來回擺動的動畫。  
+-   <xref:System.Windows.Media.Animation.ElasticEase>： 建立類似彈簧來回擺動直到來回的動畫。  
   
--   <xref:System.Windows.Media.Animation.ExponentialEase>： 建立的動畫加速或減速使用指數的公式。  
+-   <xref:System.Windows.Media.Animation.ExponentialEase>： 建立加速和/或減速使用指數公式的動畫。  
   
--   <xref:System.Windows.Media.Animation.PowerEase>： 建立的動畫加速或減速使用公式*f*(*t*) = *t*<sup>p</sup> p 等於<xref:System.Windows.Media.Animation.PowerEase.Power%2A>屬性。  
+-   <xref:System.Windows.Media.Animation.PowerEase>： 建立加速和/或減速使用公式的動畫*f*(*t*) = *t*<sup>p</sup>其中 p 等於<xref:System.Windows.Media.Animation.PowerEase.Power%2A>屬性。  
   
--   <xref:System.Windows.Media.Animation.QuadraticEase>： 建立的動畫加速或減速使用公式*f*(*t*) = *t*<sup>2</sup>。  
+-   <xref:System.Windows.Media.Animation.QuadraticEase>： 建立加速和/或減速使用公式的動畫*f*(*t*) = *t*<sup>2</sup>。  
   
--   <xref:System.Windows.Media.Animation.QuarticEase>： 建立的動畫加速或減速使用公式*f*(*t*) = *t*<sup>4</sup>。  
+-   <xref:System.Windows.Media.Animation.QuarticEase>： 建立加速和/或減速使用公式的動畫*f*(*t*) = *t*<sup>4</sup>。  
   
--   <xref:System.Windows.Media.Animation.QuinticEase>： 建立的動畫加速或減速使用公式*f*(*t*) = *t*<sup>5</sup>。  
+-   <xref:System.Windows.Media.Animation.QuinticEase>： 建立加速和/或減速使用公式的動畫*f*(*t*) = *t*<sup>5</sup>。  
   
--   <xref:System.Windows.Media.Animation.SineEase>： 建立的動畫加速或減速使用正弦的公式。  
+-   <xref:System.Windows.Media.Animation.SineEase>： 建立加速和/或減速使用正弦公式的動畫。  
   
- 您可以使用下列範例來探索這些 easing 函式的行為。  
-  
- [執行這個範例](http://go.microsoft.com/fwlink/?LinkId=139798&sref=easing_functions_gallery)  
-  
- 若要套用至動畫的 easing 函式，使用`EasingFunction`動畫屬性指定要套用至動畫的 easing 函式。 下列範例會套用<xref:System.Windows.Media.Animation.BounceEase>easing 函式可<xref:System.Windows.Media.Animation.DoubleAnimation>建立彈跳的效果。  
-  
- [執行這個範例](http://go.microsoft.com/fwlink/?LinkId=139798&sref=BounceEase)  
+ 若要套用至動畫的 easing 函式，使用`EasingFunction`動畫的屬性會指定要套用至動畫的 easing 函式。 下列範例會套用<xref:System.Windows.Media.Animation.BounceEase>easing 函式以<xref:System.Windows.Media.Animation.DoubleAnimation>建立彈跳效果。  
   
  [!code-xaml[BounceEase_snippet#BounceEase](../../../../samples/snippets/csharp/VS_Snippets_Wpf/bounceease_snippet/CS/window1.xaml#bounceease)]  
   
  在上述範例中，easing 函式套用至 From/To/By 動畫。 您也可以將這些 easing 函式套用至主要畫面格動畫。 下列範例示範如何使用主要畫面格搭配其相關聯的 easing 函式，來建立收縮向上，減慢，然後向下展開 (如同下降)，然後不斷彈跳直到停止的動畫。  
   
- [執行這個範例](http://go.microsoft.com/fwlink/?LinkId=139798&sref=EasingFunctionDoubleKeyFrame)  
-  
  [!code-xaml[EasingFunctionDoubleKeyFrame_snippet#EasingFunctionDoubleKeyFrame](../../../../samples/snippets/csharp/VS_Snippets_Wpf/easingfunctiondoublekeyframe_snippet/CS/window1.xaml#easingfunctiondoublekeyframe)]  
   
- 您可以使用<xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>改變 easing 函式的行為，亦即，屬性變更動畫的插補。 有三個可能的值，您可以提供<xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>:  
+ 您可以使用<xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>屬性來改變 easing 函式的運作方式，也就是變更動畫插入的方式。 有三個可能的值，您可以為<xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>:  
   
--   <xref:System.Windows.Media.Animation.EasingMode.EaseIn>： 插補遵循 easing 函式相關聯的數學公式。  
+-   <xref:System.Windows.Media.Animation.EasingMode.EaseIn>： 插補會遵循相關聯的 easing 函式的數學公式。  
   
--   <xref:System.Windows.Media.Animation.EasingMode.EaseOut>： 插補如下輸出減去 easing 函式相關聯的公式的 100%插補。  
+-   <xref:System.Windows.Media.Animation.EasingMode.EaseOut>： 插補會遵循 100%插補減去輸出相關聯的 easing 函式的公式。  
   
--   <xref:System.Windows.Media.Animation.EasingMode.EaseInOut>： 使用插補<xref:System.Windows.Media.Animation.EasingMode.EaseIn>前半的動畫和<xref:System.Windows.Media.Animation.EasingMode.EaseOut>第二個半。  
+-   <xref:System.Windows.Media.Animation.EasingMode.EaseInOut>︰ 內插補點會使用<xref:System.Windows.Media.Animation.EasingMode.EaseIn>動畫的前半和<xref:System.Windows.Media.Animation.EasingMode.EaseOut>的後半部。  
   
- 下列圖表示範不同的值<xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>其中*f*(*x*) 表示的動畫進度和*t*代表時間。  
+ 下圖示範不同的值<xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>何處*f*(*x*) 代表動畫進度並*t*代表時間。  
   
  <xref:System.Windows.Media.Animation.BackEase>  
   
@@ -120,11 +112,9 @@ Easing 函式可讓您將自訂的數學公式套用至動畫。 例如，您可
  ![使用不同 EasingMode 值的 SineEase](../../../../docs/framework/wpf/graphics-multimedia/media/sineease-graph.png "SineEase_Graph")  
   
 > [!NOTE]
->  您可以使用<xref:System.Windows.Media.Animation.PowerEase>建立相同的行為<xref:System.Windows.Media.Animation.CubicEase>， <xref:System.Windows.Media.Animation.QuadraticEase>， <xref:System.Windows.Media.Animation.QuarticEase>，和<xref:System.Windows.Media.Animation.QuinticEase>使用<xref:System.Windows.Media.Animation.PowerEase.Power%2A>屬性。 例如，如果您想要使用<xref:System.Windows.Media.Animation.PowerEase>替換<xref:System.Windows.Media.Animation.CubicEase>，指定<xref:System.Windows.Media.Animation.PowerEase.Power%2A>值為 3。  
+>  您可以使用<xref:System.Windows.Media.Animation.PowerEase>來建立相同的行為<xref:System.Windows.Media.Animation.CubicEase>， <xref:System.Windows.Media.Animation.QuadraticEase>， <xref:System.Windows.Media.Animation.QuarticEase>，並<xref:System.Windows.Media.Animation.QuinticEase>使用<xref:System.Windows.Media.Animation.PowerEase.Power%2A>屬性。 例如，如果您想要<xref:System.Windows.Media.Animation.PowerEase>來替代<xref:System.Windows.Media.Animation.CubicEase>，指定<xref:System.Windows.Media.Animation.PowerEase.Power%2A>3 的值。  
   
- 除了使用加/減速函數包含在執行階段中，您可以建立您自己自訂的加/減速函數透過繼承自<xref:System.Windows.Media.Animation.EasingFunctionBase>。 下列範例將示範如何建立簡單的自訂 easing 函式。 您可以加入您自己的 easing 函式藉由覆寫的操作方式的數學邏輯<xref:System.Windows.Media.Animation.EasingFunctionBase.EaseInCore%2A>方法。  
-  
- [執行這個範例](http://go.microsoft.com/fwlink/?LinkId=139798&sref=CustomEasingFunction)  
+ 除了使用包含在執行階段的 easing 函式，您可以建立您自己自訂的 easing 函式，藉由繼承自<xref:System.Windows.Media.Animation.EasingFunctionBase>。 下列範例將示範如何建立簡單的自訂 easing 函式。 您可以新增您自己的 easing 函式藉由覆寫的運作方式的數學邏輯<xref:System.Windows.Media.Animation.EasingFunctionBase.EaseInCore%2A>方法。   
   
  [!code-csharp[CustomEasingFunction#CustomEasingFunction](../../../../samples/snippets/csharp/VS_Snippets_Wpf/customeasingfunction/csharp/customlog10easingfunction.cs#customeasingfunction)]
  [!code-vb[CustomEasingFunction#CustomEasingFunction](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/customeasingfunction/visualbasic/customlog10easingfunction.vb#customeasingfunction)]

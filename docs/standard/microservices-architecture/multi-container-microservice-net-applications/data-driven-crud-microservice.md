@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 建立簡單�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: d99480c1b703bc46228e25f6acd7e7fbbcae6228
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 18ffbf56cf9d324e86fc288a2ba4a387831af925
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106443"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935389"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>建立簡單資料驅動 CRUD 微服務
 
@@ -340,7 +340,7 @@ Swashbuckle 會結合 API 總管及 Swagger 或 [swagger-ui](https://github.com/
 
 API 總管此時並不是最重要的。 當您有了可在 Swagger 中繼資料中描述自身的 Web API 後，您的 API 便可從 Swagger 式工具隨選即用，包含可瞄準許多平台的用戶端 Proxy 類別產生器。 例如，如前所述，[AutoRest](https://github.com/Azure/AutoRest) 會自動產生 .NET 用戶端類別。 但其他像是 [swagger-codegen](https://github.com/swagger-api/swagger-codegen) 的工具也可供使用，自動允許 API 用戶端程式庫、伺服器 Stub 及文件的程式碼產生。
 
-目前，Swashbuckle 由兩個位於適用於 ASP.NET Core 應用程式之 [Swashbuckle.Swashbuckle.AspNetCoreSwaggerGen](https://www.nuget.org/packages/Swashbuckle.AspNetCore/) 版本 1.0.0 或更新版本之下的幾個內部 NuGet 套件組成。
+目前，Swashbuckle 由數個內部 NuGet 套件組成，這些套件位在適用於 ASP.NET Core 應用程式的高階中繼套件 [Swashbuckle.AspNetCore](https://www.nuget.org/packages/Swashbuckle.AspNetCore/) 1.0.0 版或更新版本下。
 
 在您將這些 NuGet 套件安裝在您的 Web API 專案中之後，您需要在 Startup 類別中設定 Swagger，如下列程式碼所示：
 

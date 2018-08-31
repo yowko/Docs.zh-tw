@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 62bf3ce4bc7a0ff8109ec34fba77dd854c7679b8
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: f56445e9bdd030d591f9fc6300f9a24d330dbc20
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697114"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43257366"
 ---
 # <a name="working-with-certificates"></a>使用憑證
 在針對 Windows Communication Foundation (WCF) 安全性設計程式時，通常會採用 X.509 數位憑證來驗證用戶端與伺服器、加密，以及數位簽署訊息。 本主題將簡要說明 X.509 數位憑證功能及如何在 WCF 中使用這些憑證，同時針對這些概念的進一步說明以及如何運用 WCF 與憑證來完成一般工作的主題說明提供連結。  
@@ -102,9 +102,9 @@ ms.locfileid: "34697114"
  關於憑證常見的問題包括該使用哪些憑證以及為何使用這些憑證。 答案需視您是要針對用戶端或服務設計程式而定。 下列資訊將提供您一般性的指示，可能無法完全解答這些問題。  
   
 ### <a name="service-certificates"></a>服務憑證  
- 服務憑證的主要工作就是對用戶端驗證伺服器。 當用戶端驗證伺服器時，首先要執行的檢查項目之一就是將 [主體] 欄位的值與用來連絡服務的統一資源識別元 (URI) 加以比較：兩者的 DNS 必須相符。 例如，如果服務的 URI 是 "http://www.contoso.com/endpoint/"，則 [主體] 欄位必須同樣包含值 "www.contoso.com"。  
+ 服務憑證的主要工作就是對用戶端驗證伺服器。 當用戶端驗證伺服器時，首先要執行的檢查項目之一就是將 [主體] 欄位的值與用來連絡服務的統一資源識別元 (URI) 加以比較：兩者的 DNS 必須相符。 例如，如果服務的 URI 是`http://www.contoso.com/endpoint/`則**主旨**欄位也必須包含值`www.contoso.com`。  
   
- 請注意，該欄位可以包含數個值，每個值都可加上代表該值的初始化前置詞。 最常見的初始化前置詞就是用 "CN" 代表一般名稱，例如，"CN = www.contoso.com"。 您也可以將 [主體] 欄位留空，在這種情況下，[主體別名] 欄位則可包含 [DNS 名稱] 值。  
+ 請注意，該欄位可以包含數個值，每個值都可加上代表該值的初始化前置詞。 大多數情況下，初始化是"CN"代表一般名稱，例如`CN = www.contoso.com`。 您也可以將 [主體] 欄位留空，在這種情況下，[主體別名] 欄位則可包含 [DNS 名稱] 值。  
   
  另請注意，憑證的 [使用目的] 欄位值應該包含適當的值，例如 [伺服器驗證] 或 [用戶端驗證]。  
   
@@ -170,7 +170,7 @@ ms.locfileid: "34697114"
   
  在第一版的 WCF 中，您不需要諮詢網域原則便可進行對應。 因此，當啟用對應功能且 X.509 憑證無法滿足網域原則要求時，以往在第一版中能夠順利執行的舊版應用程式可能會無法執行。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Channels>  
  <xref:System.ServiceModel.Security>  
  <xref:System.ServiceModel>  

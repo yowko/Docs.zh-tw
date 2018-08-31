@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 846d41c31687df98b019f103e42cf586a23d8ff1
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: bf5604472331f336c427ded36fc1666f16310ea2
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457549"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254349"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>撰寫大型、可回應的 .NET Framework 應用程式
 本文針對大型 .NET Framework 應用程式或處理大量資料 (例如檔案或資料庫) 的應用程式，提供可提升其效能的提示。 這些提示來自於以 Managed 程式碼重寫 C# 和 Visual Basic 編譯器，本文包含數個 C# 編譯器的實際範例。  
@@ -23,7 +23,7 @@ ms.locfileid: "34457549"
   
  當您的使用者與您的應用程式互動時，他們期望應用程式會有回應。  因此，請不要封鎖輸入或命令處理等動作。  說明應該迅速快顯，或在使用者繼續輸入時放棄顯示。  您的應用程式應該避免冗長的運算使得應用程式緩慢，而導致封鎖 UI 執行緒。  
   
- 如需 Roslyn 編譯器的詳細資訊，請瀏覽[dotnet/roslyn](https://github.com/dotnet/roslyn) GitHub 上的儲存機制。
+ 如需有關 Roslyn 編譯器的詳細資訊，請瀏覽[dotnet/roslyn](https://github.com/dotnet/roslyn) GitHub 上的存放庫。
  <!-- TODO: replace with link to Roslyn conceptual docs once that's published -->
   
 ## <a name="just-the-facts"></a>認清事實  
@@ -196,7 +196,7 @@ private bool TrimmedStringStartsWith(string text, int start, string prefix) {
 // etc...  
 ```  
   
- `WriteFormattedDocComment()` 的第一個版本已配置一個陣列、數個子字串、經修剪的子字串，以及空的 `params` 陣列。  它也會檢查 `"///"`。  修訂過的程式碼只會使用索引，而不會進行任何配置。  它會找出非空格的第一個字元，並接著逐字元檢查以查看字串的開頭是否為 `"///"`。  新程式碼使用 `IndexOfFirstNonWhiteSpaceChar` (而不是 <xref:System.String.TrimStart%2A>) 傳回出現非空白字元的第一個索引 (在指定的起始索引之後)。  此修正並不完整，不過您可以查看如何套用類似的修正以取得完整的解決方法。  您可以在整個程式碼中應用此方法，來移除 `WriteFormattedDocComment()` 中的所有配置。  
+ `WriteFormattedDocComment()` 的第一個版本已配置一個陣列、數個子字串、經修剪的子字串，以及空的 `params` 陣列。  它也會檢查 `"///"`。  修訂過的程式碼只會使用索引，而不會進行任何配置。  它會找出非空格的第一個字元，並接著逐字元檢查以查看字串的開頭是否為 `"///"`。  新的程式碼會使用`IndexOfFirstNonWhiteSpaceChar`而不是<xref:System.String.TrimStart%2A>後，傳回第一個索引 （指定的起始索引） 發生非空格字元。  此修正並不完整，不過您可以查看如何套用類似的修正以取得完整的解決方法。  您可以在整個程式碼中應用此方法，來移除 `WriteFormattedDocComment()` 中的所有配置。  
   
  **範例 4：StringBuilder**  
   
@@ -277,7 +277,7 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
  此簡單的快取策略遵守良好的快取設計，因為該策略具有大小限制。  但是，現在的程式碼比原始程式碼更多，這表示維護成本會更高。  您應該僅在發現效能問題時才採用快取策略，而 PerfView 顯示 <xref:System.Text.StringBuilder> 配置是影響效能的主要因素。  
   
 ### <a name="linq-and-lambdas"></a>LINQ 和 Lambdas  
- 使用 Language-Integrated Query (LINQ) 和 Lambda 運算式是使用生產力功能的絕佳範例，稍後如果程式碼對效能造成很大的影響，您可能需要重寫程式碼。  
+Language Integrated Query (LINQ)，搭配使用 lambda 運算式是產能功能的範例。 不過，它的使用可能會對經過一段時間，效能的重大的影響，而且您可能會發現您需要重寫程式碼。
   
  **範例 5：Lambdas、List\<T> 和 IEnumerable\<T>**  
   
@@ -305,7 +305,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- 在第一行中，[Lambda 運算式](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` 會[覆蓋](http://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx)區域變數 `name`。  這表示除了配置 `predicate` 保存的[委派](~/docs/csharp/language-reference/keywords/delegate.md)物件之外，此程式碼還會配置靜態類別，以維持可擷取 `name` 值的環境。  此編譯器產生類似如下的程式碼：  
+ 在第一行中， [lambda 運算式](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [覆蓋](http://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx)區域變數`name`。  這表示除了配置 `predicate` 保存的[委派](~/docs/csharp/language-reference/keywords/delegate.md)物件之外，此程式碼還會配置靜態類別，以維持可擷取 `name` 值的環境。  此編譯器產生類似如下的程式碼：  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -462,12 +462,12 @@ class Compilation { /*...*/
 -   重點在於配置 - 這是編譯器平台小組花費最多時間提升新編譯器效能的地方。  
   
 ## <a name="see-also"></a>另請參閱  
- [本主題的簡報的視訊](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
+ [本主題的簡報影片](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
  [效能分析的初級開發人員指南](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
  [效能](../../../docs/framework/performance/index.md)  
- [.NET 效能秘訣](http://msdn.microsoft.com/library/ms973839.aspx)  
- [Windows Phone 效能分析工具](http://msdn.microsoft.com/magazine/hh781024.aspx)  
- [找出應用程式與 Visual Studio 分析工具的瓶頸](http://msdn.microsoft.com/magazine/cc337887.aspx)  
+ [.NET 效能祕訣](http://msdn.microsoft.com/library/ms973839.aspx)  
+ [Windows Phone Performance Analysis tool 工具](http://msdn.microsoft.com/magazine/hh781024.aspx)  
+ [尋找與 Visual Studio Profiler 的應用程式瓶頸](http://msdn.microsoft.com/magazine/cc337887.aspx)  
  [Channel 9 PerfView 教學課程](http://channel9.msdn.com/Series/PerfView-Tutorial)  
- [高層級的效能提示](http://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
- [dotnet/roslyn GitHub 上的儲存機制](https://github.com/dotnet/roslyn)
+ [高階效能祕訣](http://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
+ [在 GitHub 上的 dotnet/roslyn 存放庫](https://github.com/dotnet/roslyn)

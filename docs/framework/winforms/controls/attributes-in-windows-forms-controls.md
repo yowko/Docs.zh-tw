@@ -7,12 +7,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], control properties
 - attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
-ms.openlocfilehash: e06836e53a69394ad899bedc8e545dbff9b9c29d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 272ce198a61e0d1bbe9c44514aaf51db72f5d04c
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525774"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43257919"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Windows Form 控制項中的屬性
 .NET Framework 提供各種不同的屬性，供您套用至自訂控制項和元件的成員。 其中一些屬性會影響類別的執行階段行為，有些則會影響設計階段行為。  
@@ -24,10 +24,10 @@ ms.locfileid: "33525774"
 |---------------|-----------------|  
 |<xref:System.ComponentModel.AmbientValueAttribute>|指定要傳遞至屬性的值，讓屬性從其他來源取得其值。 這稱為「環境」。|  
 |<xref:System.ComponentModel.BrowsableAttribute>|指定是否應該在 [屬性] 視窗中顯示屬性或事件。|  
-|<xref:System.ComponentModel.CategoryAttribute>|指定用來分組的屬性或事件時顯示在類別目錄名稱<xref:System.Windows.Forms.PropertyGrid>控制項設定為<xref:System.Windows.Forms.PropertySort.Categorized>模式。|  
+|<xref:System.ComponentModel.CategoryAttribute>|指定用來分組的屬性或事件時顯示在類別目錄的名稱<xref:System.Windows.Forms.PropertyGrid>控制項設定為<xref:System.Windows.Forms.PropertySort.Categorized>模式。|  
 |<xref:System.ComponentModel.DefaultValueAttribute>|指定屬性的預設值。|  
 |<xref:System.ComponentModel.DescriptionAttribute>|指定屬性或事件的描述。|  
-|<xref:System.ComponentModel.DisplayNameAttribute>|指定不接受引數的屬性、事件或 `public``void` 方法的顯示名稱。|  
+|<xref:System.ComponentModel.DisplayNameAttribute>|指定不接受引數的屬性、事件或 `public void` 方法的顯示名稱。|  
 |<xref:System.ComponentModel.EditorAttribute>|指定用來變更屬性的編輯器。|  
 |<xref:System.ComponentModel.EditorBrowsableAttribute>|指定在編輯器中可檢視的屬性或方法。|  
 |<xref:System.ComponentModel.Design.HelpKeywordAttribute>|指定類別或成員的內容關鍵字。|  

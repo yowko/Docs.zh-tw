@@ -5,11 +5,11 @@ helpviewer_keywords:
 - My.Computer.Clock object
 ms.assetid: a362b270-8a1b-404a-95c8-516a60c607dd
 ms.openlocfilehash: 431610030480ce4eb54882e519a5a7f7bbffe90a
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43000173"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253486"
 ---
 # <a name="mycomputerclock-object"></a>My.Computer.Clock 物件
 提供屬性，以從系統時鐘存取目前當地時間與國際標準時間 (相當於格林威治標準時間)。  

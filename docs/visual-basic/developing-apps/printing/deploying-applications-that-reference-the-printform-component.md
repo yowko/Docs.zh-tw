@@ -5,11 +5,11 @@ helpviewer_keywords:
 - PrintForm component [Visual Basic], deploying
 ms.assetid: b595ea44-a712-4625-a761-190c64f59bbe
 ms.openlocfilehash: 3dd7c348c4dc36a7ff64e76a93c05ddb24837079
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584692"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254698"
 ---
 # <a name="deploying-applications-that-reference-the-printform-component-visual-basic"></a>部署參考 PrintForm 元件 (Visual Basic) 的應用程式
 如果您想要部署參考 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 元件的應用程式，則該元件必須安裝在目的電腦上。  
@@ -19,7 +19,7 @@ ms.locfileid: "33584692"
 ## <a name="installing-the-printform-as-a-prerequisite"></a>安裝 PrintForm 作為必要條件  
  若要順利部署應用程式，您也必須部署應用程式參考的所有元件。 安裝必要條件元件的程序稱為 *「啟動載入」*(Bootstrapping)。  
   
- 當<xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>開發電腦上安裝元件，Microsoft Visual Basic Power Pack 啟動載入器套件新增至 Visual Studio 啟動載入器目錄。 接著，當您遵循程序加入 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 或 Windows Installer 部署的必要條件時，就可以使用這個套件。  
+ 當<xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>開發電腦上已安裝元件，Microsoft Visual Basic Power Pack 啟動載入器套件新增至 Visual Studio 啟動載入器目錄。 接著，當您遵循程序加入 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 或 Windows Installer 部署的必要條件時，就可以使用這個套件。  
   
  預設會從安裝套件所在的相同位置來部署啟動載入的元件。 或者，您也可以視需要選擇從使用者可下載元件的 URL 或檔案共用位置來部署元件。  
   

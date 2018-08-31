@@ -10,16 +10,16 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: a4ffe9a278aa8c73909b7f6a78cc80e78009aeba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cdd636a1854b891605abadaf31b1667e235eea92
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557806"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253194"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 瀏覽器應用程式概觀
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 結合的 Web 應用程式與豐富型用戶端應用程式的功能。 如同 Web 應用程式，XBAP 可以部署至 Web 伺服器，並且從 Internet Explorer 或 Firefox 啟動。 如同豐富型用戶端應用程式，XBAP 可以利用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的功能。 開發 XBAP 也類似於豐富型用戶端開發。 本主題提供 XBAP 開發的簡單、高階介紹，並且描述 XBAP 開發與標準豐富型用戶端開發的不同之處。  
+[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 結合的 Web 應用程式和豐富型用戶端應用程式的功能。 如同 Web 應用程式，XBAP 可以部署至 Web 伺服器，並且從 Internet Explorer 或 Firefox 啟動。 如同豐富型用戶端應用程式，Xbap 可以利用 WPF 的功能。 開發 XBAP 也類似於豐富型用戶端開發。 本主題提供 XBAP 開發的簡單、高階介紹，並且描述 XBAP 開發與標準豐富型用戶端開發的不同之處。  
   
  此主題包括下列章節：  
   
@@ -35,12 +35,12 @@ ms.locfileid: "33557806"
   
 <a name="creating_a_new_xaml_browser_application_xbap"></a>   
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>建立新的 XAML 瀏覽器應用程式 (XBAP)  
- 建立新的 XBAP 專案最簡單的方法是使用 [!INCLUDE[vs_dev10_ext](../../../../includes/vs-dev10-ext-md.md)]。 建立新專案時，從範本清單選取 [WPF 瀏覽器應用程式]。 如需更多詳細資訊，請參閱[如何：建立新的 WPF 瀏覽器應用程式專案](http://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f)。  
+ 若要建立新的 XBAP 專案最簡單的方式是使用 Microsoft Visual Studio。 建立新專案時，從範本清單選取 [WPF 瀏覽器應用程式]。 如需更多詳細資訊，請參閱[如何：建立新的 WPF 瀏覽器應用程式專案](http://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f)。  
   
- 當您執行 XBAP 專案時，它會在瀏覽器視窗中開啟，而不是在獨立視窗中開啟。 當您從 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 針對 XBAP 進行偵錯時，應用程式會使用網際網路區域權限執行，因此如果超過這些權限，則會擲回安全性例外狀況。 如需詳細資訊，請參閱[安全性](../../../../docs/framework/wpf/security-wpf.md)和 [WPF 部分信任安全性](../../../../docs/framework/wpf/wpf-partial-trust-security.md)。  
+ 當您執行 XBAP 專案時，它會在瀏覽器視窗中開啟，而不是在獨立視窗中開啟。 當您偵錯 XBAP 從 Visual Studio 時，應用程式會使用網際網路區域權限執行，並因此如果會擲回安全性例外狀況會在超過這些權限。 如需詳細資訊，請參閱[安全性](../../../../docs/framework/wpf/security-wpf.md)和 [WPF 部分信任安全性](../../../../docs/framework/wpf/wpf-partial-trust-security.md)。  
   
 > [!NOTE]
->  如果您不是使用 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 開發，或者想要深入了解專案檔，請參閱[建置 WPF 應用程式](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)。  
+>  如果您使用 Visual Studio 或您想来深入了解專案檔不進行開發，請參閱[建置 WPF 應用程式](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)。  
   
 <a name="deploying_a_xbap"></a>   
 ## <a name="deploying-an-xbap"></a>部署 XBAP  
@@ -50,11 +50,11 @@ ms.locfileid: "33557806"
 |----------|-----------------|  
 |可執行檔 (.exe)|它包含已編譯的程式碼，副檔名為 .exe。|  
 |應用程式資訊清單 (.manifest)|它包含與應用程式相關聯的中繼資料，副檔名為 .manifest。|  
-|部署資訊清單 (.xbap)|這個檔案包含資訊，[!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] 用來部署應用程式，副檔名為 .xbap。|  
+|部署資訊清單 (.xbap)|此檔案包含 ClickOnce 部署應用程式會使用與副檔名為.xbap 的資訊。|  
   
- 您將 XBAP 部署至 Web 伺服器，例如，[!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] 或更新版本。 您不必安裝.NET Framework 的 Web 伺服器上，但您需要註冊[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)][!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)]類型和檔案名稱的擴充功能。 如需詳細資訊，請參閱[設定 IIS 5.0 和 IIS 6.0 以部署 WPF 應用程式](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)。  
+ 您將 XBAP 部署至 Web 伺服器，例如，[!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] 或更新版本。 您不必安裝.NET Framework 的 Web 伺服器上，但您必須註冊[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)][!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)]類型和副檔名。 如需詳細資訊，請參閱[設定 IIS 5.0 和 IIS 6.0 以部署 WPF 應用程式](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)。  
   
- 若要準備您的 XBAP 以進行部署，將 .exe 和相關聯的資訊清單複製到 Web 伺服器。 建立 HTML 網頁，其中包含可開啟部署資訊清單 (它是副檔名為 .xbap 的檔案) 的超連結。 當使用者按一下 .xbap 檔案的連結，[!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 會自動處理下載和啟動應用程式的機制。 下列範例程式碼顯示包含指向 XBAP 之超連結的 HTML 網頁。  
+ 若要準備您的 XBAP 以進行部署，將 .exe 和相關聯的資訊清單複製到 Web 伺服器。 建立 HTML 網頁，其中包含可開啟部署資訊清單 (它是副檔名為 .xbap 的檔案) 的超連結。 當使用者按一下.xbap 檔案的連結時，ClickOnce 會自動處理下載和啟動應用程式的機制。 下列範例程式碼顯示包含指向 XBAP 之超連結的 HTML 網頁。  
   
 ```html
 <html>   
@@ -82,13 +82,13 @@ ms.locfileid: "33557806"
 ### <a name="clearing-cached-xbaps"></a>清除快取 XBAP  
  在某些情況下，重新建置並啟動您的 XBAP 之後，您可能會發現舊版 XBAP 開啟。 例如，當 XBAP 組件版本號碼是靜態的，且您從命令列啟動 XBAP 時，可能會發生這種行為。 在此情況下，因為快取版本 (先前已啟動的版本) 與新版本之間的版本號碼維持不變，所以不會下載新版本的 XBAP。 相反地，會載入快取版本。  
   
- 在這些情況下，您可以藉由在命令提示字元使用 **Mage** 命令 (與 Visual Studio 一起安裝或 [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)])，移除快取版本。 下列命令會清除應用程式快取。  
+ 在這些情況下，您可以藉由移除快取的版本**Mage**命令 （與 Visual Studio 或 Windows SDK 一起安裝），在命令提示字元。 下列命令會清除應用程式快取。  
   
  ```console
  Mage.exe -cc
  ```
   
- 此命令可確保啟動最新版本的 XBAP。 當您在 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 中針對應用程式進行偵錯時，應該會啟動最新版本的 XBAP。 一般而言，您應該以每個組建更新您的部署版本號碼。 如需 Mage 的詳細資訊，請參閱 [Mage.exe (資訊清單產生和編輯工具)](../../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)。  
+ 此命令可確保啟動最新版本的 XBAP。 當您偵錯您的應用程式，在 Visual Studio 中時，應該會啟動最新版本的 XBAP。 一般而言，您應該以每個組建更新您的部署版本號碼。 如需 Mage 的詳細資訊，請參閱 [Mage.exe (資訊清單產生和編輯工具)](../../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)。  
   
 <a name="communicating_with_the_host_web_page"></a>   
 ## <a name="communicating-with-the-host-web-page"></a>與主機網頁通訊  
@@ -98,7 +98,7 @@ ms.locfileid: "33557806"
  [!code-vb[XbapBrowserInterop#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/xbapbrowserinterop/vb/page1.xaml.vb#10)]  
   
 ### <a name="debugging-xbaps-that-use-hostscript"></a>針對使用 HostScript 的 XBAP 進行偵錯  
- 如果您 XBAP 使用<xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A>通訊與 [HTML] 視窗中，有兩個設定，您必須指定的物件執行和偵錯中的應用程式[!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]。 應用程式必須能夠存取它的來源網站，而且您必須使用包含 XBAP 的 HTML 網頁來啟動應用程式。 下列步驟說明如何檢查這兩項設定︰  
+ 如果您的 XBAP 使用<xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A>通訊 [HTML] 視窗中，有兩個設定，您必須指定執行和偵錯 Visual Studio 中的應用程式的物件。 應用程式必須能夠存取它的來源網站，而且您必須使用包含 XBAP 的 HTML 網頁來啟動應用程式。 下列步驟說明如何檢查這兩項設定︰  
   
 1.  在 Visual Studio 中，開啟專案屬性。  
   
@@ -123,25 +123,25 @@ ms.locfileid: "33557806"
      變更在重新啟動 Internet Explorer 之後才會生效。  
   
 > [!CAUTION]
->  在 Internet Explorer 中啟用主動式內容可能會讓電腦面臨風險。 如需詳細資訊，請參閱 [Internet Explorer 中的安全性和隱私權功能](http://go.microsoft.com/fwlink/?LinkId=179286)。 如果您不想要變更 Internet Explorer 安全性設定，您可以從伺服器啟動 HTML 網頁，並且將 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 偵錯工具連接至流程。  
+>  在 Internet Explorer 中啟用主動式內容可能會讓電腦面臨風險。 如果您不要變更 Internet Explorer 安全性設定，您可以啟動從伺服器 HTML 網頁，並將 Visual Studio 偵錯工具附加至處理程序。  
   
 <a name="xbap_security_considerations"></a>   
 ## <a name="xbap-security-considerations"></a>XBAP 安全性考量  
- XBAP 通常會在部分信任安全性沙箱中執行，它限制為網際網路區域權限集合。 因此，您的實作必須支援 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 元素的子集，它在網際網路區域受到支援，或者必須提高應用程式的權限。 如需詳細資訊，請參閱[安全性](../../../../docs/framework/wpf/security-wpf.md)。  
+ XBAP 通常會在部分信任安全性沙箱中執行，它限制為網際網路區域權限集合。 因此，您的實作必須支援的支援在網際網路區域中的 WPF 項目子集，或您必須提高您的應用程式的權限。 如需詳細資訊，請參閱[安全性](../../../../docs/framework/wpf/security-wpf.md)。  
   
- 當您使用<xref:System.Windows.Controls.WebBrowser>應用程式中，WPF 控制項在內部具現化的原生 WebBrowser ActiveX 控制項。 當您的應用程式是在 Internet Explorer 中執行的部分信任 XBAP 時，ActiveX 控制項會在 Internet Explorer 流程的專用執行緒中執行。 因此，會套用下列限制：  
+ 當您使用<xref:System.Windows.Controls.WebBrowser>應用程式中，WPF 控制項在內部具現化原生 WebBrowser ActiveX 控制項。 當您的應用程式是在 Internet Explorer 中執行的部分信任 XBAP 時，ActiveX 控制項會在 Internet Explorer 流程的專用執行緒中執行。 因此，會套用下列限制：  
   
--   <xref:System.Windows.Controls.WebBrowser>控制項應該提供類似於主機的瀏覽器，包括安全性限制的行為。 其中一些安全性限制可以透過 Internet Explorer 安全性設定來控制。 如需詳細資訊，請參閱[安全性](../../../../docs/framework/wpf/security-wpf.md)。  
+-   <xref:System.Windows.Controls.WebBrowser>控制項應該提供類似主機瀏覽器，包括安全性限制的行為。 其中一些安全性限制可以透過 Internet Explorer 安全性設定來控制。 如需詳細資訊，請參閱[安全性](../../../../docs/framework/wpf/security-wpf.md)。  
   
 -   當 XBAP 在 HTML 網頁跨網域載入時，則會擲回例外狀況。  
   
--   輸入是另一個執行緒從 WPF <xref:System.Windows.Controls.WebBrowser>，因此無法攔截的鍵盤輸入，而且不共用的輸入法狀態。  
+-   輸入是來自 WPF 的另一個執行緒上<xref:System.Windows.Controls.WebBrowser>，因此無法攔截鍵盤輸入，並不會共用 IME 狀態。  
   
 -   因為在另一個執行緒上執行的 ActiveX 控制項，瀏覽的時間或順序可能不同。 例如，瀏覽至頁面不一定會因為啟動另一個瀏覽要求而取消。  
   
 -   自訂 ActiveX 控制項可能會遇到通訊問題，因為 WPF 應用程式是在個別執行緒中執行。  
   
--   <xref:System.Windows.Interop.HwndHost.MessageHook> 不會不取得引發因為<xref:System.Windows.Interop.HwndHost>無法在另一個執行緒或處理序中執行視窗子類別。  
+-   <xref:System.Windows.Interop.HwndHost.MessageHook> 不會引發，因為<xref:System.Windows.Interop.HwndHost>無法在另一個執行緒或處理序中執行的視窗的子類別。  
   
 ### <a name="creating-a-full-trust-xbap"></a>建立完全信任 XBAP  
  如果您的 XBAP 需要完全信任，您可以變更專案以啟用此權限。 下列步驟描述如何啟用完全信任︰  
@@ -184,7 +184,7 @@ ms.locfileid: "33557806"
   
  從 [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)] 開始，藉由在部署週期早期顯示 unmanaged 進度頁面，降低 XBAP 冷啟動時間。 進度頁面幾乎是在應用程式啟動之後立即出現，因為它是由原生裝載程式碼顯示，並且以 HTML 轉譯。  
   
- 此外，改善的並行 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 下載序列，會改善最多 10% 的開始時間。 在 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 下載和驗證資訊清單之後，應用程式下載會啟動且更新進度列開始更新。  
+ 此外，ClickOnce 下載順序的改善的並行會改善最多 10%的開始時間。 ClickOnce 下載和驗證之後資訊清單、 應用程式的下載會啟動，而進度列開始更新。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定 Visual Studio 來偵錯 XAML 瀏覽器應用程式以呼叫 Web 服務](../../../../docs/framework/wpf/app-development/configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)  

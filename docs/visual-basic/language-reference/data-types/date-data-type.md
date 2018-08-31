@@ -15,12 +15,12 @@ helpviewer_keywords:
 - literals [Visual Basic], Date
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
-ms.openlocfilehash: b7827206d6e145b559d9716df5ec4a98ac4ea0b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32bd0912b0bae3340cffed010fc67431d0efb376
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591816"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43252943"
 ---
 # <a name="date-data-type-visual-basic"></a>Date 資料類型 (Visual Basic)
 具有 IEEE 64 位元 (8 位元組) 值，以代表從 0001 年 1 月 1 日到 9999 年 12 月 31 日的日期，以及從上午 (午夜) 12:00:00 到下午 11:59:59.9999999 的時間。 每個增量代表西曆日曆 1 年 1 月 1 日開始之後經過 100 奈秒的時間。 最大值代表 10000 年 1 月 1 開始之前的 100 奈秒。  
@@ -65,7 +65,7 @@ Dim dateInMay As New System.DateTime(1993, 5, 31, 12, 14, 0)
   
 -   **類型字元。** `Date` 沒有任何常值類型字元或識別項類型字元。 不過，編譯器會將包含在數字符號 (`# #`) 內的常值視為 `Date`。  
   
--   **架構類型。** 在 .NET Framework 中對應的類型為 <xref:System.DateTime?displayProperty=nameWithType> 結構。  
+-   **Framework 型別。** 在 .NET Framework 中對應的類型為 <xref:System.DateTime?displayProperty=nameWithType> 結構。  
   
 ## <a name="example"></a>範例  
  `Date` 資料類型的變數或常數會同時包含日期和時間。 下列範例將說明這點。  
@@ -76,7 +76,7 @@ Dim someDateAndTime As Date = #8/13/2002 12:14 PM#
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.DateTime?displayProperty=nameWithType>  
- [資料類型](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [資料類型](../../../visual-basic/language-reference/data-types/index.md)  
  [標準日期和時間格式字串](../../../standard/base-types/standard-date-and-time-format-strings.md)  
  [自訂日期和時間格式字串](../../../standard/base-types/custom-date-and-time-format-strings.md)  
  [類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  

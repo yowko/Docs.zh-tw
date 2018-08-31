@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Let clause [Visual Basic]
 - Let statement [Visual Basic]
 ms.assetid: 981aa516-16eb-4c53-b1f1-5aa3e82f316e
-ms.openlocfilehash: 6484da5329c8240735b7c35f506637dd01cbeda4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34c0fd239d9e08dab4a107cb8447941e7ab3ecbe
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604467"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43255817"
 ---
 # <a name="let-clause-visual-basic"></a>Let 子句 (Visual Basic)
-計算值，並將它指派給查詢中的新變數。  
+計算值，並將它指派給在查詢中的新變數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,9 +32,9 @@ Let variable = expression [, ...]
 |`expression`|必要。 運算式，會進行評估，並指派給指定的變數。|  
   
 ## <a name="remarks"></a>備註  
- `Let`子句可讓您用來計算每個值查詢結果，並使用別名來參考它們。 別名可用於其他子句，例如`Where`子句。 `Let`子句可讓您建立更容易讀取，因為您可以指定包含在查詢運算式子句的別名，並以別名取代每次使用時的運算式子句的查詢陳述式。  
+ `Let`子句可讓您計算值，每個查詢結果，並使用別名來參考它們。 別名可用於其他子句，例如`Where`子句。 `Let`子句可讓您建立可以更輕鬆地讀取，因為您可以指定包含在查詢運算式子句的別名，並以別名取代每次使用運算式子句的查詢陳述式。  
   
- 您可以包含任意數目的`variable`和`expression`中的指派`Let`子句。 請以逗號 （，） 分隔每個指派。  
+ 您可以包含任意數目的`variable`並`expression`中的指派`Let`子句。 請以逗號 （，） 分隔每個指派。  
   
 ## <a name="example"></a>範例  
  下列程式碼範例使用`Let`子句來計算產品的 10%折扣。  
@@ -43,7 +43,7 @@ Let variable = expression [, ...]
   
 ## <a name="see-also"></a>另請參閱  
  [Visual Basic 中的 LINQ 簡介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [查詢](../../../visual-basic/language-reference/queries/queries.md)  
+ [查詢](../../../visual-basic/language-reference/queries/index.md)  
  [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)  
  [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)  
  [Where 子句](../../../visual-basic/language-reference/queries/where-clause.md)
