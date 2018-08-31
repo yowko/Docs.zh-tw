@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: de5ff06e660d3c4e976c10043a7ebc72d102cff5
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: f9b4e3d885725afc4181256e02e3b174318e3ece
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314639"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931549"
 ---
 # <a name="tour-of-net"></a>.NET 教學課程
 
@@ -79,7 +79,7 @@ Microsoft 積極地開發並支援三種 .NET 語言：C#、F# 與 Visual Basic 
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
 
-C#、VB 與 F# 支援本機「型別推斷」。 型別推斷表示編譯器會從右邊的運算式推算左邊的運算式類型。 這並不會破壞或規避型別安全。 產生的類型確實具有強型別，其中包含其所指的所有項目。 上述範例中的 `dog` 和 `cat` 已重寫並引入型別推斷，範例的其餘部分則保持不變：
+C#、VB 與 F# 支援本機「型別推斷」。 型別推斷表示編譯器會從右邊的運算式推算左邊的運算式類型。 這並不會破壞或規避型別安全。 產生的類型確實具有強型別，其中包含其所指的所有項目。 上述範例中的 `dog` 已重寫並引入型別推斷，範例的其餘部分則保持不變：
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 

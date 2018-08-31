@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 747b2d420beeb63b89b21dd16d2977d12bc5d580
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: d14c196babb03b7f13dde6ab5b46508a30ba26d6
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244185"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930780"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>互通性概觀 (C# 程式設計手冊)
 本主題說明可在 C# Managed 程式碼和 Unmanaged 程式碼之間啟用互通性的方法。  
@@ -24,7 +24,7 @@ ms.locfileid: "39244185"
  如需詳細資訊，請參閱[使用 Unmanaged DLL 函式](../../../framework/interop/consuming-unmanaged-dll-functions.md)和[如何：使用平台叫用播放 WAV 檔](../../../csharp/programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md)。  
   
 > [!NOTE]
->  [Common Language Runtime](../../../standard/clr.md) (CLR) 管理對系統資源的存取。 在 CLR 外部呼叫 Unmanaged 程式碼會略過此安全性機制，因而造成安全性風險。 例如，Unmanaged 程式碼可能會直接呼叫 Unmanaged 程式碼中的資源，並略過 CLR 安全性機制。 如需詳細資訊，請參閱 [.NET Framework 安全性](https://technet.microsoft.com/en-us/security/)。  
+>  [Common Language Runtime](../../../standard/clr.md) (CLR) 管理對系統資源的存取。 在 CLR 外部呼叫 Unmanaged 程式碼會略過此安全性機制，因而造成安全性風險。 例如，Unmanaged 程式碼可能會直接呼叫 Unmanaged 程式碼中的資源，並略過 CLR 安全性機制。 如需詳細資訊，請參閱 [.NET 的安全性](../../../standard/security/index.md)。  
   
 ## <a name="c-interop"></a>C++ Interop  
  您可以使用 C++ Interop (也稱為 It Just Works (IJW)) 包裝原生 C++ 類別，以供使用 C# 或其他 .NET Framework 語言撰寫的程式碼取用。 若要這樣做，您可以撰寫 C++ 程式碼來包裝原生 DLL 或 COM 元件。 不同於其他 .NET Framework 語言，[!INCLUDE[vcprvc](~/includes/vcprvc-md.md)] 提供互通性支援，因此可將 Managed 和 Unmanaged 程式碼放置在相同的應用程式，甚至是相同的檔案中。 您接著可使用 **/clr** 編譯器參數建立 C++ 程式碼，以產生 Managed 組件。 最後，您可以在 C# 專案中新增組件的參考，並使用包裝的物件，就像是使用其他 Managed 類別一樣。  

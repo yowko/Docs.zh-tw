@@ -8,15 +8,15 @@ ms.assetid: 0da481a9-b414-4230-beb0-e3ceba882fe5
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: c10cff979a18d8e07a1e7089f96157e4c38f040e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 244315b5df4200524685bc5b9fb75a0d7fd9b39e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393902"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930824"
 ---
 # <a name="how-to-override-a-global-proxy-selection"></a>如何：覆寫全域 Proxy 的選取範圍
-這個範例會在連接埠 80 上將 **WebRequest** 傳送到 www.contoso.com，以使用名為 `alternateproxy` 的 Proxy 伺服器覆寫全域 Proxy 的選取範圍。  
+這個範例會在連接埠 80 上將 **WebRequest** 傳送到 `www.contoso.com`，以使用名為 `alternateproxy` 的 Proxy 伺服器覆寫全域 Proxy 的選取範圍。  
   
 ## <a name="example"></a>範例  
   
@@ -33,7 +33,7 @@ req.Proxy = New WebProxy("http://alternateproxy:80/")
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   對 **System.Net** 命名空間的參考。  
+-   **System.Net** 命名空間的[`using`指示詞](~/docs/csharp/language-reference/keywords/using-directive.md)。  
   
 ## <a name="see-also"></a>請參閱  
  [使用應用程式通訊協定](../../../docs/framework/network-programming/using-application-protocols.md)  

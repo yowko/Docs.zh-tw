@@ -4,12 +4,12 @@ description: 本指南說明您在 .NET 中建置伺服器應用程式時應考�
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: a9eaeae515041ee1d99ede5b004ecc85e453de2d
-ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
+ms.openlocfilehash: 541bcdf69d658fd37271169c028fb64611a35655
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298184"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934529"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇
 
@@ -102,8 +102,8 @@ ms.locfileid: "36298184"
 某些 Microsoft 或協力廠商平台不支援 .NET Core。 例如，某些 Azure 服務 (例如 Service Fabric Stateful Reliable Services 和 Service Fabric Reliable Actors) 需要 .NET Framework。 部分其他服務提供尚無法在 .NET Core 上使用的 SDK。 這是過渡期，因為所有的 Azure 服務都會使用 .NET Core。 在此同時，您永遠都能使用對等的 REST API，而非用戶端 SDK。
 
 ## <a name="see-also"></a>另請參閱
- [在 ASP.NET 和 ASP.NET Core 之間進行選擇](/aspnet/core/choose-aspnet-framework)  
- [.NET Core 指南](../core/index.md)  
+
+ [在 ASP.NET 和 ASP.NET Core 之間進行選擇](/aspnet/core/choose-aspnet-framework) [目標 Framework](frameworks.md) [.NET Core 指南](../core/index.md)  
  [從 .NET Framework 移植到 .NET Core](../core/porting/index.md)  
  [Docker 上的 .NET Framework 指南](../framework/docker/index.md)  
  [.NET 偵錯概觀](components.md)  

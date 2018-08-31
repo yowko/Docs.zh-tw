@@ -1,103 +1,101 @@
 ---
-title: 使用可為 Null 的類型 (C# 程式設計手冊)
-ms.date: 07/20/2015
+title: 使用可為 Null 的型別 (C# 程式設計指南)
+description: 了解如何使用可為 Null 的型別
+ms.date: 08/02/2018
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-ms.openlocfilehash: d2fe0f34c45d3de0516a71ca5ed4dc807df4bf93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 600a18cc4dc9d3eda5577336f209c5814a7edb88
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336917"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933120"
 ---
-# <a name="using-nullable-types-c-programming-guide"></a>使用可為 Null 的類型 (C# 程式設計手冊)
-可為 Null 的型別能代表基礎類型的所有值，以及額外的 [null](../../../csharp/language-reference/keywords/null.md) 值。 可為 Null 的型別會以下列兩種方法之一宣告︰  
+# <a name="using-nullable-types-c-programming-guide"></a>使用可為 Null 的型別 (C# 程式設計指南)
+
+可為 Null 的型別為代表所有基礎實值型別 `T` 值的型別，以及一個額外的 [null](../../language-reference/keywords/null.md) 值。 如需詳細資訊，請參閱[可為 Null 的型別](index.md)主題。
+
+您可以下列任何一種形式參考可為 Null 的型別：`Nullable<T>` 或 `T?`。 這兩種形式可互換。  
   
- `System.Nullable<T> variable`  
+## <a name="declaration-and-assignment"></a>宣告與指派
+
+與實值型別可隱含轉換為對應可為 Null 的型別相同，您可以用為其基礎實值型別指派值的相同方式，將值指派給可為 Null 的型別。 您也可以指派 `null` 值。  例如: 
   
- -或-  
+[!code-csharp[declare and assign](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#1)]
+
+## <a name="examination-of-a-nullable-type-value"></a>檢查可為 Null 型別的值
+
+使用下列唯讀屬性檢查可為 Null 型別的執行個體，擷取 null 或基礎型別的值：  
   
- `T? variable`  
+- <xref:System.Nullable%601.HasValue%2A?displayProperty=nameWithType> 指出可為 Null 型別的執行個體是否有其基礎型別的值。
   
- `T` 是可為 Null 類型的基礎類型。 `T` 可以是包括 `struct` 在內的任何實值型別，不能是參考型別。  
+- 若 <xref:System.Nullable%601.HasValue%2A> 為 `true`，則 <xref:System.Nullable%601.Value%2A?displayProperty=nameWithType> 會取得基礎型別的值。 若 <xref:System.Nullable%601.HasValue%2A> 為 `false`，則 <xref:System.Nullable%601.Value%2A> 屬性會擲回 <xref:System.InvalidOperationException>。
   
- 如需可能使用可為 Null 類型的範例，請考慮一般的布林值變數如何能有兩個值︰true 和 false。 沒有任何表示「未定義」的值。 在許多程式設計應用程式最值得注意的資料庫互動中，變數會出現在未定義的狀態。 例如，資料庫的欄位可能包含值 true 或 false，但也可能完全不包含任何值。 同樣地，參考型別可以設為 `null` 以表示其尚未初始化。  
+下列範例中的程式碼會使用 `HasValue` 屬性，在顯示之前測試變數是否包含值：
   
- 此差異會造成額外的程式設計工作、使用額外的變數儲存狀態資訊、使用特殊值等等。 可為 Null 的型別修飾詞可讓 C# 建立實值型別變數，指出未定義的值。  
+[!code-csharp-interactive[use HasValue](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#2)]
   
-## <a name="examples-of-nullable-types"></a>可為 Null 類型的範例  
- 任何實值型別皆可用為可為 Null 類型的基礎。 例如:   
+您也可以使用 `null` 而非 `HasValue` 屬性，比較可為 Null 型別的變數，如以下範例所示：  
   
- [!code-csharp[csProgGuideTypes#4](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_1.cs)]  
+[!code-csharp-interactive[use comparison with null](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#3)]
+
+從 C# 7.0 開始，您可以使用[模式比對](../../pattern-matching.md)檢查及取得可為 Null 型別的值：
+
+[!code-csharp-interactive[use pattern matching](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#4)]
+
+## <a name="conversion-from-a-nullable-type-to-an-underlying-type"></a>從可為 Null 型別轉換至基礎型別
+
+若您需要將可為 Null 型別的值指派給不可為 Null 的型別，請使用 [null-coalescing 運算子 `??`](../../language-reference/operators/null-coalescing-operator.md) 指定當可為 Null 型別的值為 null 時，要指派的值 (您也可以使用 <xref:System.Nullable%601.GetValueOrDefault(%600)?displayProperty=nameWithType> 方法進行同樣的動作)：
   
-## <a name="the-members-of-nullable-types"></a>可為 Null 類型的成員  
- 每個可為 Null 類型的執行個體皆有兩個公用唯讀屬性：  
+[!code-csharp-interactive[?? operator](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#5)]
+
+若可為 Null 型別的值為 Null 時要使用的值為基礎實值型別的預設值，請使用 <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> 方法。
   
--   `HasValue`  
+您也可以明確將可為 Null 的型別轉換為不可為 Null 的型別。 例如:   
   
-     `HasValue` 是 `bool` 類型。 當變數包含非 Null 值時，它會設成 `true`。  
+[!code-csharp[explicit cast](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#6)]
+
+在執行階段，若可為 Null 型別的值為 Null，則明確轉換會擲回 <xref:System.InvalidOperationException>。
+
+不可為 Null 的實值型別會隱含轉換成對應的可為 Null 型別。
   
--   `Value`  
+## <a name="operators"></a>運算子
+
+預先定義的一元和二元運算子，以及針對實值型別而存在的任何使用者定義的運算子，也能為可為 Null 的型別所用。 若其中一或兩個運算元皆為 Null，這些運算子便會產生 Null 值；否則，運算子會使用包含的值來計算結果。 例如:   
   
-     `Value` 是與基礎類型相同的類型。 如果 `HasValue` 為 `true`，則 `Value` 包含有意義的值。 如果 `HasValue` 為 `false`，存取 `Value` 將會擲回 <xref:System.InvalidOperationException>。  
+[!code-csharp[operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#7)]
   
- 本例使用 `HasValue` 成員先測試變數是否包含值，再嘗試顯示它。  
+針對關係運算子 (`<`、`>`、`<=`、`>=`)，若其中一或兩個運算元皆為 Null，則結果為 `false`。 請不要因為特定的比較 (例如 `<=`) 傳回 `false`，就假設相反的比較 (`>`) 就會傳回 `true`。 下列範例會顯示 10
+
+- 既不大於，也不等於 Null，
+- 也不小於 Null。
   
- [!code-csharp[csProgGuideTypes#5](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_2.cs)]  
+[!code-csharp-interactive[relational and equality operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#8)]
   
- 您也可以如下列範例所示測試值︰  
+上述範例也顯示兩個可為 Null 的型別，當其值皆為 Null 時，其相等比較評估結果為 `true`。
+
+## <a name="boxing-and-unboxing"></a>Boxing 和 Unboxing
+
+根據下列規則，可為 Null 的實值型別將為 [boxed](../types/boxing-and-unboxing.md)：
+
+- 若 <xref:System.Nullable%601.HasValue%2A> 傳回 `false`，則會產生 Null 參考。  
+- 若 <xref:System.Nullable%601.HasValue%2A> 傳回 `true`，則基礎實值型別 `T` 的值為 boxed，而非 <xref:System.Nullable%601> 的執行個體。
+
+您可以將已為 boxed 的實值型別 unbox 為對應的可為 Null 型別，如下列範例所示：
+
+[!code-csharp-interactive[boxing and unboxing](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#9)]
+
+## <a name="the-bool-type"></a>bool? 類型
+
+`bool?` 可為 Null 的型別可以包含三個不同的值︰[true](../../language-reference/keywords/true-literal.md)、[false](../../language-reference/keywords/false-literal.md) 和 [null](../../language-reference/keywords/null.md)。 `bool?` 型別與 SQL 中使用的 Boolean 變數型別相似。 為確定 `&` 和 `|` 運算子所產生的結果與 SQL 的三個布林值類型一致，會提供下列預先定義的運算子︰
+
+- `bool? operator &(bool? x, bool? y)`  
+- `bool? operator |(bool? x, bool? y)`  
   
- [!code-csharp[csProgGuideTypes#6](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_3.cs)]  
+這些運算子的語意是由下列表格定義的：  
   
-## <a name="explicit-conversions"></a>明確轉換  
- 可為 Null 的型別可以明確轉換，或使用 `Value` 屬性轉換成一般類型。 例如:   
-  
- [!code-csharp[csProgGuideTypes#7](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_4.cs)]  
-  
- 如果在兩種資料類別之間定義使用者定義轉換，則這些資料類型的可為 Null 版本也可使用相同的轉換。  
-  
-## <a name="implicit-conversions"></a>隱含轉換  
- 可為 Null 類型的變數可以 `null` 關鍵字設定為 Null，如下例所示︰  
-  
- [!code-csharp[csProgGuideTypes#8](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_5.cs)]  
-  
- 一般類型是隱含轉換成可為 Null 的型別。  
-  
- [!code-csharp[csProgGuideTypes#9](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_6.cs)]  
-  
-## <a name="operators"></a>運算子  
- 預先定義的一元和二元運算子，以及針對實值型別而存在的任何使用者定義的運算子，也能為可為 Null 的型別所用。 如果運算元是 Null，則這些運算子會產生 Null 值；否則，運算子會使用所包含的值來計算結果。 例如:   
-  
- [!code-csharp[csProgGuideTypes#10](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_7.cs)]  
-  
- 當您使用可為 Null 的型別執行比較時，如果其中一個可為 Null 類型的值為 Null 而另一個不是時，除 `!=` (不等於) 之外，所有的比較都會評估為 `false`。 請絕對不要因為特定的比較傳回 `false`，所以就假設相反的情況會傳回 `true`。 在下列範例中，10 不大於、小於、也不等於 Null。 只有 `num1 != num2` 評估為 `true`。  
-  
- [!code-csharp[csProgGuideTypes#11](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_8.cs)]  
-  
- 兩個都是 Null 的可為 Null 類型的相等比較評估為 `true`。  
-  
-## <a name="the--operator"></a>?? 運算子  
- `??` 運算子定義的預設值，會在可為 Null 的型別指派給不可為 Null 的型別時傳回。  
-  
- [!code-csharp[csProgGuideTypes#12](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_9.cs)]  
-  
- 這個運算子也可以搭配多個可為 Null 的型別使用。 例如:   
-  
- [!code-csharp[csProgGuideTypes#13](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_10.cs)]  
-  
-## <a name="the-bool-type"></a>bool? 類型  
- `bool?` 可為 Null 的型別可以包含三個不同的值︰[true](../../../csharp/language-reference/keywords/true.md)、[false](../../../csharp/language-reference/keywords/false.md) 和 [null](../../../csharp/language-reference/keywords/null.md)。 如需如何從 bool? 轉換成 bool 的資訊，請參閱[如何：從 bool? 安全轉型到 bool](../../../csharp/programming-guide/nullable-types/how-to-safely-cast-from-bool-to-bool.md)。  
-  
- 可為 Null 的布林值就像 SQL 中使用的布林值變數類型。 為確定 `&` 和 `|` 運算子所產生的結果與 SQL 的三個布林值類型一致，會提供下列預先定義的運算子︰  
-  
- `bool? operator &(bool? x, bool? y)`  
-  
- `bool? operator |(bool? x, bool? y)`  
-  
- 下表列出這些運算子的結果：  
-  
-|X|y|x&y|x&#124;y|  
+|x|y|x&y|x&#124;y|  
 |-------|-------|---------|--------------|  
 |true|true|true|true|  
 |true|False|false|true|  
@@ -108,9 +106,11 @@ ms.locfileid: "33336917"
 |null|true|null|true|  
 |null|False|False|null|  
 |null|null|null|null|  
+
+請注意，這兩個運算子不會遵循[運算子](#operators)一節中描述的規則：即使其中一個運算元為 Null，運算子評估的結果也可能為非 Null。
   
-## <a name="see-also"></a>請參閱  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [可為 Null 的型別](../../../csharp/programming-guide/nullable-types/index.md)  
- [對可為 Null 的型別進行 boxing](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)  
- [可為 Null 的值類型](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+## <a name="see-also"></a>另請參閱
+
+ [可為 Null 的型別](index.md)  
+ [C# 程式設計指南](../../programming-guide/index.md)  
+ [「增益」(Lift) 的真正意義是什麼？(英文)](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)  

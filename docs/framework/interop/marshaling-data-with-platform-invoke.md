@@ -1,6 +1,6 @@
 ---
 title: 使用平台叫用封送處理資料
-ms.date: 03/30/2017
+ms.date: 07/31/2018
 dev_langs:
 - cpp
 helpviewer_keywords:
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2eb55d8490eae64e909ada68223983c570ef9afa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0501bb2b67c6bbe23c46dc350aedea7d7be09ba1
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391312"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42911727"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>使用平台叫用封送處理資料
 若要呼叫從 Unmanaged 程式庫匯出的函式，.NET Framework 應用程式需要代表此 Unmanaged 函式之 Managed 程式碼中的函式原型。 若要建立使平台叫用正確地封送處理資料的原型，您必須執行下列動作：  
@@ -33,7 +33,8 @@ ms.locfileid: "33391312"
   
 |在 Wtypes.h 中的 Unmanaged 類型|Unmanaged C 語言類型|Managed 類別名稱|描述|  
 |--------------------------------|-------------------------------|------------------------|-----------------|  
-|**HANDLE**|**void\***|<xref:System.IntPtr?displayProperty=nameWithType>|在 32 位元 Windows 作業系統上為 32 位元，在 64 位元 Windows 作業系統上為 64 位元。|  
+|**VOID**|**void**|<xref:System.Void?displayProperty=nameWithType>|套用至未傳回值的函式。|
+|**HANDLE**|**void \***|<xref:System.IntPtr?displayProperty=nameWithType>|在 32 位元 Windows 作業系統上為 32 位元，在 64 位元 Windows 作業系統上為 64 位元。|  
 |**BYTE**|**unsigned char**|<xref:System.Byte?displayProperty=nameWithType>|8 位元|  
 |**SHORT**|**short**|<xref:System.Int16?displayProperty=nameWithType>|16 位元|  
 |**WORD**|**unsigned short**|<xref:System.UInt16?displayProperty=nameWithType>|16 位元|  
@@ -45,10 +46,10 @@ ms.locfileid: "33391312"
 |**ULONG**|**unsigned long**|<xref:System.UInt32?displayProperty=nameWithType>|32 位元|  
 |**CHAR**|**char**|<xref:System.Char?displayProperty=nameWithType>|使用 ANSI 裝飾。|  
 |**WCHAR**|**wchar_t**|<xref:System.Char?displayProperty=nameWithType>|使用 Unicode 裝飾。|  
-|**LPSTR**|**char\***|<xref:System.String?displayProperty=nameWithType> 或 <xref:System.Text.StringBuilder?displayProperty=nameWithType>|使用 ANSI 裝飾。|  
+|**LPSTR**|**char \***|<xref:System.String?displayProperty=nameWithType> 或 <xref:System.Text.StringBuilder?displayProperty=nameWithType>|使用 ANSI 裝飾。|  
 |**LPCSTR**|**Const char\***|<xref:System.String?displayProperty=nameWithType> 或 <xref:System.Text.StringBuilder?displayProperty=nameWithType>|使用 ANSI 裝飾。|  
-|**LPWSTR**|**wchar_t\***|<xref:System.String?displayProperty=nameWithType> 或 <xref:System.Text.StringBuilder?displayProperty=nameWithType>|使用 Unicode 裝飾。|  
-|**LPCWSTR**|**Const wchar_t\***|<xref:System.String?displayProperty=nameWithType> 或 <xref:System.Text.StringBuilder?displayProperty=nameWithType>|使用 Unicode 裝飾。|  
+|**LPWSTR**|**wchar_t \***|<xref:System.String?displayProperty=nameWithType> 或 <xref:System.Text.StringBuilder?displayProperty=nameWithType>|使用 Unicode 裝飾。|  
+|**LPCWSTR**|**Const wchar_t \***|<xref:System.String?displayProperty=nameWithType> 或 <xref:System.Text.StringBuilder?displayProperty=nameWithType>|使用 Unicode 裝飾。|  
 |**FLOAT**|**Float**|<xref:System.Single?displayProperty=nameWithType>|32 位元|  
 |**DOUBLE**|**Double**|<xref:System.Double?displayProperty=nameWithType>|64 位元|  
   

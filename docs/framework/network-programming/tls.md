@@ -13,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 author: blowdart
-ms.openlocfilehash: 41814129d038f8cb1ab98db0c7a4e0cbd7e7cd54
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adde8f3bd387a3e283ae1c3cd69e42b12b443b8c
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397256"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925500"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework 的傳輸層安全性 (TLS) 最佳做法
 
@@ -119,7 +119,7 @@ WCF 會使用和其他 .NET Framework 相同的網路堆疊。
 
 WCF 架構會自動選擇可用的最高版本通訊協定 (最高版本為 TLS 1.2)，除非您明確設定通訊協定版本。 如需詳細資訊，請參閱先前的[針對搭配憑證認證使用傳輸安全性的 WCF TCP 傳輸](#wcf-tcp-cert)一節。
 
-### <a name="for-net-framework-35---451-and-not-wcf"></a>針對 .NET Framework 3.5 至 4.5.1 且非 WCF
+### <a name="for-net-framework-35---452-and-not-wcf"></a>針對 .NET Framework 3.5 至 4.5.2 且非 WCF
 
 我們建議您將應用程式升級至 .NET Framework 4.7 或更新版本。 如果您無法升級，請採取下列步驟。 在未來的某個時間點，若不將您的應用程式升級至 .NET Framework 4.7 或更新版本，該應用程式可能會失敗。
 

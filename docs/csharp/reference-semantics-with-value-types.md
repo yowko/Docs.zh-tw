@@ -3,12 +3,12 @@ title: 具備實值型別的參考語意
 description: 了解最小化安全地複製結構的語言功能
 ms.date: 11/10/2017
 ms.custom: mvc
-ms.openlocfilehash: 0646a7fbc01ed76883fb6b16ce04006049ef054a
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: f241219994d7a03192a4aea69b912bf1ac5ed29c
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34566276"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930645"
 ---
 # <a name="reference-semantics-with-value-types"></a>具備實值型別的參考語意
 

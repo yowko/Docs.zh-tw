@@ -5,12 +5,12 @@ ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f163de89a3edbf3a4ca8509fdecd10f1aa1adf1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bdeb0e92dca723b64ee82b70f58fe910fd0c2edb
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396788"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931046"
 ---
 # <a name="certificate-selection-and-validation"></a>憑證的選取和驗證
 <xref:System.Net> 類別支援數種方式來選取並驗證 <xref:System.Security.Cryptography.X509Certificates>，以進行安全通訊端層 (SSL) 連線。 用戶端可以選取一或多個憑證，以向伺服器驗證它自己。 伺服器可能需要用戶端憑證具有一或多個特定屬性，來進行驗證。  
@@ -43,7 +43,7 @@ ms.locfileid: "33396788"
   
  *Winhttpcertcfg.exe* 工具可以用來設定用戶端憑證。 *Winhttpcertcfg.exe* 工具隨附為 Windows Server 2003 Resource Kit 的其中一個工具。 您可以在 www.microsoft.com 下載此工具，作為 Windows Server 2003 Resource Kit Tools 的一部分。  
   
- *HttpCfg.exe* 工具可以用來設定 <xref:System.Net.HttpListener> 類別的伺服器憑證。 *HttpCfg.exe* 工具隨附為 Windows Server 2003 和 Windows XP Service Pack 2 的其中一個支援工具。 在 Windows Server 2003 或 Windows XP 上，預設不會安裝 *HttpCfg.exe* 和其他支援工具。 在 Windows Server 2003 上。 從 Windows Server 2003 CD-ROM 的下列資料夾和檔案中個別安裝支援工具：  
+*HttpCfg.exe* 工具可以用來設定 <xref:System.Net.HttpListener> 類別的伺服器憑證。 *HttpCfg.exe* 工具隨附為 Windows Server 2003 和 Windows XP Service Pack 2 的其中一個支援工具。 在 Windows Server 2003 或 Windows XP 上，預設不會安裝 *HttpCfg.exe* 和其他支援工具。 在 Windows Server 2003 上。 從 Windows Server 2003 CD-ROM 的下列資料夾和檔案中個別安裝支援工具：  
   
  \Support\Tools\Suptools.msi  
   

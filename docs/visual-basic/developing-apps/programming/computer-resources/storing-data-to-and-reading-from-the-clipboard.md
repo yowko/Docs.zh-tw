@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data [Visual Basic], Clipboard
 - reading data, from Clipboard
 ms.assetid: f690119a-4378-4f7d-b20e-d9377ef49496
-ms.openlocfilehash: eb8ae25f260ed434c4aafcc064be8fb6bebaaac1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7964a39bb84ac6af6b6c196c053f51c30301985c
+ms.sourcegitcommit: 8c6c62ba1eefa492701e264e41890ee20fae77a3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591375"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "42792347"
 ---
 # <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a>在剪貼簿儲存和讀取資料 (Visual Basic)
 剪貼簿可以用來儲存資料，例如文字和影像。 因為所有使用中處理序都共用剪貼簿，所以可以使用它在這兩者之間傳輸資料。 `My.Computer.Clipboard` 物件可讓您輕鬆地存取剪貼簿，以及讀取和寫入它。  
@@ -57,7 +57,7 @@ ms.locfileid: "33591375"
   
  [!code-vb[VbVbcnMyClipboard#2](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_6.vb)]  
   
- 使用 <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetData%2A> 方法，將資料寫入剪貼簿。 這個範例會以自訂格式 `specialFormat`，將 `DataObject``dataChunk` 寫入至剪貼簿。  
+ 使用 <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetData%2A> 方法，將資料寫入剪貼簿。 這個範例會以自訂格式 `specialFormat`，將 `DataObject` `dataChunk` 寫入至剪貼簿。  
   
  [!code-vb[VbVbcnMyClipboard#7](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_7.vb)]  
   

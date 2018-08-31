@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6aa309f2c6c44934f491229ac43003a05301bacb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8bb84f2e26471e004678afde99a1dd725db6832
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569742"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42755102"
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>如何：在 ConcurrentDictionary 中加入和移除項目
 這個範例示範如何新增、擷取、更新和移除 <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> 中的項目。 這個集合類別是安全執行緒實作。 只要多個執行緒可能嘗試同時存取元素，就建議您使用它。  
@@ -36,15 +36,15 @@ ms.locfileid: "33569742"
   
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 是針對多執行緒案例所設計。 您不需要在程式碼中使用鎖定，即可新增或移除集合中的項目。 不過，其中一個執行緒一定要可以擷取一個值，而另一個執行緒要將新的值提供給相同的索引鍵來立即更新集合。  
   
- 此外，雖然 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 的所有方法都是安全執行緒，但是並非所有方法都是不可部分完成，尤其是 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> 和 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>。 傳遞給這些方法的使用者委派是在字典內部鎖定外部進行叫用 (完成這項作業是要防止未知程式碼封鎖所有執行緒)。因此，可能會發生這系列的事件︰  
+ 此外，雖然 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 的所有方法都是安全執行緒，但是並非所有方法都是不可部分完成，尤其是 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> 和 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>。 傳遞給這些方法的使用者委派是在字典內部鎖定的外部進行叫用 (完成這項作業是要防止未知程式碼封鎖所有執行緒)。 因此，可能會發生下列序列事件：  
   
  1\) threadA 會呼叫 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>、找不到項目，並叫用 valueFactory 委派來建立要新增的新項目。  
   
  2\) threadB 同時呼叫 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>、叫用其 valueFactory 委派，並且在 threadA 之前到達內部鎖定，因此會將其新的索引鍵/值組新增至字典。  
   
- 3\) threadA 的使用者委派完成，而且執行緒到達鎖定，但現在會看到這個項目已存在。  
+ 3\) threadA 的使用者委派完成，而且執行緒到達鎖定，但是現在會看到這個項目已經存在。  
   
- 4\) threadA 執行 "Get"，並傳回 threadB 先前所加入的資料。  
+ 4\) threadA 執行 "Get"，並傳回 threadB 先前所新增的資料。  
   
  因此，不保證 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> 所傳回的資料就是執行緒 valueFactory 所建立的相同資料。 呼叫 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> 時，可能會發生一系列類似的事件。  
   

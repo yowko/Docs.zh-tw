@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
 manager: douge
-ms.openlocfilehash: c33b8badcacd4e228d70f8e770d4bf27144c29eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 73f61ee3358edf50c11ae10ee53650c66b1c1400
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520509"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925798"
 ---
 # <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a>逐步解說：在元件設計工具中建立 Windows 服務應用程式
 本文示範如何在 Visual Studio 中建立簡單的 Windows 服務應用程式，以將訊息寫入至事件記錄檔。 以下是建立及使用服務的基本執行步驟：  
@@ -55,7 +55,7 @@ ms.locfileid: "33520509"
   
 2.  在 Visual Basic 或 Visual C# 專案範本清單中，選擇 [Windows 服務] ，並將專案命名為 **MyNewService**。 選擇 [確定] 。  
   
-     專案範本會自動加入繼承自 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 且名稱為 `Service1` 的元件類別。  
+     專案範本會自動加入繼承自 `Service1` 且名稱為 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 的元件類別。  
   
 3.  在 [編輯]  功能表上，依序選擇 [尋找和取代] 、[檔案中尋找]  (鍵盤：CTRL+SHIFT+F)。 將所有 `Service1` 的出現變更為 `MyNewService`。 Service1.cs、Program.cs 和 Service1.Designer.cs (或它們的 .vb 對應項) 中可找到這些情況。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "33520509"
   
 <a name="BK_SetStatus"></a>   
 ## <a name="setting-service-status"></a>設定服務狀態  
- 服務將它們的狀態報告給服務控制管理員，讓使用者也可以知道服務是否運作正常。 根據預設，繼承自 <xref:System.ServiceProcess.ServiceBase> 的服務，會報告一組有限的狀態設定，包括「已停止」、「已暫停」及「執行中」。 如果服務需要一些時間才啟動，則報告「開始暫止」狀態可能會很有幫助。 您也可以將呼叫的程式碼加入 Windows [SetServiceStatus 函式](http://msdn.microsoft.com/library/windows/desktop/ms686241.aspx)中，以實作「開始暫止」和「停止暫止」狀態設定。  
+ 服務將它們的狀態報告給服務控制管理員，讓使用者也可以知道服務是否運作正常。 根據預設，繼承自 <xref:System.ServiceProcess.ServiceBase> 的服務，會報告一組有限的狀態設定，包括「已停止」、「已暫停」及「執行中」。 如果服務需要一些時間才啟動，則報告「開始暫止」狀態可能會很有幫助。 您也可以將呼叫的程式碼新增至 Windows [SetServiceStatus 函式](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus)，以實作「開始暫止」和「停止暫止」狀態設定。  
   
 #### <a name="to-implement-service-pending-status"></a>實作服務暫止狀態  
   
@@ -225,7 +225,7 @@ ms.locfileid: "33520509"
     End Structure  
     ```  
   
-3.  接著，在 `MyNewService` 類別中，使用平台叫用宣告 [SetServiceStatus 函式](http://msdn.microsoft.com/library/windows/desktop/ms686241.aspx) ：  
+3.  接著，在 `MyNewService` 類別中，使用平台叫用宣告 [SetServiceStatus 函式](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus)：  
   
     ```csharp  
     [DllImport("advapi32.dll", SetLastError=true)]  
@@ -271,7 +271,7 @@ ms.locfileid: "33520509"
 6.  (選擇性) 為 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 方法重複這個程序。  
   
 > [!CAUTION]
->  [服務控制管理員](http://msdn.microsoft.com/library/windows/desktop/ms685150.aspx) 使用 `dwWaitHint` 和 `dwCheckpoint` 和 [dwCheckpoint](http://msdn.microsoft.com/library/windows/desktop/ms685996.aspx) 來判斷啟動或關閉 Windows 服務需要多少時間。 如果您的 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 方法需長時間執行，則您可以使用遞增的 [dwCheckPoint](http://msdn.microsoft.com/library/windows/desktop/ms686241.aspx) 值再次呼叫 `dwCheckPoint` ，以要求更多時間。  
+>  [服務控制管理員](/windows/desktop/Services/service-control-manager)使用 [SERVICE_STATUS 結構](/windows/desktop/api/winsvc/ns-winsvc-_service_status)的 `dwWaitHint` 和 `dwCheckpoint` 成員來判斷等候啟動或關閉 Windows 服務的時間。 如果您的 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 方法需長時間執行，則您可以使用遞增的 `dwCheckPoint` 值再次呼叫 [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus)，以要求更多時間。  
   
 <a name="BK_AddInstallers"></a>   
 ## <a name="adding-installers-to-the-service"></a>將安裝程式加入服務  
@@ -443,7 +443,7 @@ End Sub
   
      現在您應該可以看到 **MyNewService** 列在 [服務]  視窗中。  
   
-     ![在 [服務] 視窗中的 MyNewService。] (../../../docs/framework/windows-services/media/windowsservices-serviceswindow.PNG "WindowsServices_ServicesWindow")  
+     ![在 [服務] 視窗中的 MyNewService。](../../../docs/framework/windows-services/media/windowsservices-serviceswindow.PNG "WindowsServices_ServicesWindow")  
   
 2.  在 [服務]  視窗中，開啟您服務的捷徑功能表，然後選擇 [開始] 。  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27d97d38c903cbb33097db0e109758d98527e00f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 14c046094db52f2db55bb095839d354c7e6c691e
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591933"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42912038"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>使用接續工作鏈結工作
 在非同步程式設計中，非同步作業完成時叫用第二個作業，並將資料傳遞給它，是非常普遍的。 傳統上，這項作業使用回呼方法完成。 在工作平行程式庫中，由 *「接續工作」*(continuation task) 提供相同的功能。 接續工作 (也只稱為接續) 是另一項稱為 *「前項」*(antecedent) 的工作所叫用的非同步工作，此時會完成前項。  
@@ -44,7 +44,7 @@ ms.locfileid: "33591933"
  接續本身是 <xref:System.Threading.Tasks.Task> ，啟動時並不會封鎖執行緒。 呼叫 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法來封鎖，直到完成接續工作。  
   
 ## <a name="creating-a-continuation-for-a-single-antecedent"></a>建立單一前項的接續  
- 您可建立當前項藉由呼叫 <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> 方法完成時執行的接續。 下列範例顯示其基本模式 (為求清楚明瞭，省略例外狀況處理)。 它會執行前項工作 `taskA`，這會傳回表示今天是星期幾之名稱的 <xref:System.DayOfWeek> 物件。 當前項完成時，接續工作 `taskB`由其前項傳遞，並顯示包含結果的字串。  
+ 您可建立當前項藉由呼叫 <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> 方法完成時執行的接續。 下列範例顯示其基本模式 (為求清楚明瞭，省略例外狀況處理)。 它會執行前項工作 `taskA`，這會傳回表示今天是星期幾之名稱的 <xref:System.DayOfWeek> 物件。 當前項完成時，接續工作 `continuation` 由其前項傳遞，並顯示包含結果的字串。  
   
  [!code-csharp[TPL_Continuations#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/simple1.cs#1)]
  [!code-vb[TPL_Continuations#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/simple1.vb#1)]  

@@ -4,12 +4,12 @@ description: 了解如何使用 Ocelot 實作 API 閘道，並了解如何在以
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 7400603aa11b2a741db727c97c2e4b2a17268ac0
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: dbb3fdb27175a86291d3a942ff168a5aae787c0c
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37878609"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930794"
 ---
 # <a name="implementing-api-gateways-with-ocelot"></a>使用 Ocelot 實作 API 閘道
 
@@ -65,6 +65,7 @@ ms.locfileid: "37878609"
 ```csharp
 [HttpGet]
 [Route("items/{id:int}")]
+[ProducesResponseType((int)HttpStatusCode.BadRequest)]
 [ProducesResponseType((int)HttpStatusCode.NotFound)]
 [ProducesResponseType(typeof(CatalogItem),(int)HttpStatusCode.OK)]
 public async Task<IActionResult> GetItemById(int id)
@@ -545,7 +546,7 @@ services.AddAuthentication(options =>
 
 -   `/` 代表用戶端 SPA Web 應用程式
 -   `/webmvc` 代表用戶端 MVC Web 應用程式
--   `/webstatus` 代表顯示狀態/健康情況檢查的用戶端 Web 應用程式
+-   `/webstatus` 代表顯示狀態/健康狀態檢查的用戶端 Web 應用程式
 -   `/webshoppingapigw` 代表 Web BFF 和購物商務程序
 -   `/webmarketingapigw` 代表 Web BFF 和行銷商務程序
 -   `/mobileshoppingapigw` 代表行動 BFF 和購物商務程序

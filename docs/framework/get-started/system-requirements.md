@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 22e1ee593fd9599fb1fc1ab7825c79f410f109c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aaa508963bc4920aae65b1d172e2dc15f13451bf
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395888"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925112"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework 系統需求
 
@@ -81,6 +81,7 @@ ms.locfileid: "33395888"
 
 | 作業系統 | 支援的版本 | 與作業系統一起預先安裝 | 可個別安裝 |
 | ---------------- | ------------------ | ------------------------ | ---------------------- |
+| Windows Server，版本 1803 | 64 位元 | .NET Framework 4.7.2 | -- |
 | Windows Server，版本 1709 | 64 位元 | .NET Framework 4.7.1 | .NET Framework 4.7.2 | 
 | Windows Server 2016 | 64 位元 | [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] | .NET Framework 4.7<br/><br/> .NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2 |
 | Windows Server 2012 R2 | 64 位元 | [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] | [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET Framework 4.7<br/><br/> .NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2 |

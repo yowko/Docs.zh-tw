@@ -8,12 +8,12 @@ helpviewer_keywords:
 - from clause [C#]
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
-ms.openlocfilehash: e8bb7782fc60a3af20d5926e609a5edea68fd1a3
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 6efcdb720e0d83e69df647c5176feaa9dcc9b023
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027976"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42753992"
 ---
 # <a name="from-clause-c-reference"></a>from 子句 (C# 參考)
 
@@ -25,7 +25,7 @@ ms.locfileid: "37027976"
 
 範圍變數和資料來源都是強型別。 `from` 子句中參考的資料來源，必須有 <xref:System.Collections.IEnumerable>、<xref:System.Collections.Generic.IEnumerable%601> 類型，或 <xref:System.Linq.IQueryable%601> 等衍生類型。
 
-在下例中，`numbers` 是資料來源，而 `num` 是範圍變數。 請注意，這兩個變數都是強型別，即使透過使用 [var](var.md) 關鍵字。
+在下例中，`numbers` 是資料來源，而 `num` 是範圍變數。 請注意，即使使用 [var](var.md) 關鍵字，這兩個變數都是強型別。
 
 [!code-csharp[cscsrefQueryKeywords#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/From.cs#1)]
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14bb5cd242a45b98a23a9d807b22aa4487d2591e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 869d64902c53e20667907b99276b9f8c6f3a2e20
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392186"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932845"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 開發人員部署手冊
 開發人員若要讓自己的應用程式一起安裝從 .NET Framework 4.5 至 [!INCLUDE[net_current](../../../includes/net-current-version.md)] 的任何 .NET Framework 版本，可參考本主題提供的資訊。
@@ -47,7 +47,7 @@ ms.locfileid: "33392186"
 
 - [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其點發行版本是以 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]為基礎累加建置。 當您在已安裝 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 的系統上安裝 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或其小數點版本時，第 4 版組件就會被新版本取代。
 
-- 如果您參考應用程式中的 Microsoft [Out-of-Band 封裝](http://msdn.microsoft.com/library/dn151288\(v=vs.110\).aspx) ，應用程式封裝中就會包含該組件。
+- 如果您參考應用程式中的 Microsoft [Out-of-Band 封裝](../get-started/the-net-framework-and-out-of-band-releases.md) ，應用程式封裝中就會包含該組件。
 
 - 您必須具有系統管理員權限才能安裝 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其點發行版本。
 
@@ -80,7 +80,7 @@ ms.locfileid: "33392186"
 |下載大小|較小 (僅包含目標平台的安裝程式)*|較大*|
 |語言套件|包含**|除非您使用以所有作業系統為目標的套件，否則必須 [單獨安裝](#chain_langpack)。|
 |部署方法|支援所有方法：<br /><br />- [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [手動安裝](#installing_manually)<br />- [自訂安裝 (鏈結)](#chaining)|支援所有方法：<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [手動安裝](#installing_manually)<br />- [自訂安裝 (鏈結)](#chaining)|
-|下載 ClickOnce 部署的位置|Microsoft 下載中心：<br /><br /> - [.NET Framework 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852092) <br/> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825298) <br/> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780596)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671728)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528222)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/?LinkId=397703)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310158)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|您的伺服器或 Microsoft 下載中心：<br /><br /> - [.NET Framework 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852104)<br /> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825302)<br /> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780600)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671743)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528232)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/p/?LinkId=397706)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310159)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|
+|下載 ClickOnce 部署的位置|Microsoft 下載中心：<br /><br /> - [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkId=863262) <br/> - [.NET Framework 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852092) <br/> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825298) <br/> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780596)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671728)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528222)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/?LinkId=397703)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310158)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|您的伺服器或 Microsoft 下載中心：<br /><br /> - [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkId=863265)<br /> - [.NET Framework 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852104)<br /> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825302)<br /> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780600)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671743)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528232)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/p/?LinkId=397706)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310159)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|
 
  \* 離線安裝程式比較大，因為其中包含適用所有目標平台的元件。 當您完成執行安裝程式後，Windows 作業系統只會快取所使用的安裝程式。 如果在安裝完成之後刪除離線安裝程式，則使用的磁碟空間與 Web 安裝程式所使用的磁碟空間相同。 如果用來建立應用程式安裝程式的工具 (例如，[InstallAware](#installaware-deployment) 或 [InstallShield](#installshield-deployment)) 提供了安裝程式檔案資料夾，而這個資料夾會在安裝完成後移除，則將離線安裝程式放在安裝程式資料夾中，便可自動刪除離線安裝程式。
 
@@ -247,14 +247,14 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 |版本|Release DWORD 的值|
 |-------------|--------------------------------|
-|Windows 10 2018 4 月更新上安裝的 .NET Framework 4.7.2|461808|
-|.NET Framework 4.7.2 安裝在 Windows 10 2018 4 月更新以外的所有作業系統版本|461814|
-|.NET Framework 4.7.1 安裝於 Windows 10 Fall Creators Update|461308|
-|.NET Framework 4.7.1 安裝於 Windows 10 Fall Creators Update 以外的所有作業系統版本|461310|
+|Windows 10 2018 年 4 月更新及 Windows Server，版本 1803 上安裝的 .NET Framework 4.7.2|461808|
+|Windows 10 2018 年 4 月更新及 Windows Server，版本 1803 以外所有 OS 版本上安裝的 .NET Framework 4.7.2|461814|
+|Windows 10 Fall Creators Update 及 Windows Server，版本 1709 上安裝的 .NET Framework 4.7.1|461308|
+|Windows 10 Fall Creators Update 及 Windows Server，版本 1709 以外所有 OS 版本上安裝的 .NET Framework 4.7.1|461310|
 |Windows 10 Creators Update 上安裝的 .NET Framework 4.7|460798|
 |.NET Framework 4.7 安裝在 Windows 10 Creators Update 以外的所有作業系統版本|460805|
-|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 安裝在 Windows 10 Anniversary Edition|394802|
-|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 安裝在 Windows 10 Anniversary Edition 以外的所有作業系統版本|394806|
+|Windows 10 Anniversary Edition 和 Windows Server 2016 上安裝的 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|394802|
+|Windows 10 Anniversary Edition 和 Windows Server 2016 以外所有 OS 版本上安裝的 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|394806|
 |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 安裝在 Windows 10 11 月更新|394254|
 |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 安裝在 Windows 10 11 月更新以外的所有作業系統版本|394271|
 |[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 安裝在 Windows 10|393295|

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: fc15818883736015419f8599d482185bbab5120a
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 5d1860a5703c79bd77331cfd821c3bff69f317ff
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960507"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925814"
 ---
 # <a name="finalizers-c-programming-guide"></a>完成項 (C# 程式設計手冊)
 完成項是用來解構類別的執行個體。  
@@ -57,7 +57,9 @@ protected override void Finalize()
 > [!NOTE]
 >  不應該使用空的完成項。 類別包含完成項時，會在 `Finalize` 佇列中建立一個項目。 呼叫完成項時，會叫用記憶體回收行程來處理佇列。 空的完成項只會導致不必要的效能損失。  
   
- 因為這是由記憶體回收行程所決定，所以程式設計人員無法控制完成項的呼叫時機。 記憶體回收行程會檢查應用程式不再使用的物件。 如果它認為物件適合進行完成，則會呼叫完成項 (如果有的話)，並回收用來儲存物件的記憶體。 程式結束時，也會呼叫完成項。  
+ 因為這是由記憶體回收行程所決定，所以程式設計人員無法控制完成項的呼叫時機。 記憶體回收行程會檢查應用程式不再使用的物件。 如果它認為物件適合進行完成，則會呼叫完成項 (如果有的話)，並回收用來儲存物件的記憶體。 
+ 
+ 在 .NET Framework 應用程式 (而非 .NET Core 應用程式) 中，程式結束時也會呼叫完成項。 
   
  呼叫 <xref:System.GC.Collect%2A> 可能會強制執行記憶體回收，但在大部分的情況下，這種情況可能會造成效能問題，因此應該予以避免。  
   

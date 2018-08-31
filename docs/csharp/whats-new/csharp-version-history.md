@@ -3,12 +3,12 @@ title: C# 的歷史 - C# 指南
 description: 最早的語言版本有哪些內容，而在之後有什麼演變？
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 227cb2899a509d56910a2a07533a2178f53ef818
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 90f480d7b25ebe308d1f1cb3d4c117f36f7dd9bf
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404589"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42751978"
 ---
 # <a name="the-history-of-c"></a>C# 的歷史 #
 
@@ -105,7 +105,11 @@ C# 4.0 版要堅守 3.0 版的奠基狀態會很困難。 3.0 版開始，C# 讓
 C# 5.0 版是該語言的一個聚焦版本。 幾乎該版本的所有心血都投入了另一項奠基的語言概念：非同步程式設計的 `async` 和 `await` 模型。  以下是主要的功能清單：
 
 - [非同步成員](../async.md)
-- [呼叫端資訊屬性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+- [呼叫端資訊屬性](../programming-guide/concepts/caller-information.md)
+
+### <a name="see-also"></a>請參閱
+
+* [程式碼專案：C# 5.0 中的呼叫端資訊屬性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
 呼叫端資訊屬性可讓您輕鬆地擷取您正在執行的內容，而不必依賴大量的未定案反映程式碼。 它在診斷和記錄工作方面有許多用途。
 

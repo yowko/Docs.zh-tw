@@ -9,19 +9,20 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 0c17fc89d93bdbb01bdef7935e72f8a7d96b0a55
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 971f85b2cabe79237ff62eb36de43873df1d2ae5
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39296139"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933583"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>轉型和類型轉換 (C# 程式設計手冊)
-因為 C# 在編譯時期是靜態類型，所以宣告變數之後，除非該類型可轉換為變數的類型，否則無法再次宣告或用來儲存另一個類型的值。 例如，沒有從整數到任何任意字串的轉換。 因此，將 `i` 宣告為整數之後，無法對其指派字串 "Hello"，如下列程式碼所示。  
+
+因為 C# 在編譯時期是靜態型別，所以宣告變數之後，除非該型別隱含轉換為變數的型別，否則無法再次宣告或指派另一個型別的值。 例如，`string` 無法隱含轉換為 `int`。 因此，在您宣告 `i` 為 `int` 之後，您便無法將字串 "Hello" 指派給它，如以下程式碼所示：
   
 ```csharp  
 int i;  
-i = "Hello"; // Error: "Cannot implicitly convert type 'string' to 'int'"  
+i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
 ```  
   
  不過，您有時可能需要將值複製至另一種類型的變數或方法參數。 例如，您的整數變數可能需要傳遞給參數類型為 `double` 的方法。 或者，您可能需要將類別變數指派給介面類型的變數。 這些類型的作業稱為「類型轉換」。 在 C# 中，您可以執行下列類型的轉換：  
@@ -35,7 +36,7 @@ i = "Hello"; // Error: "Cannot implicitly convert type 'string' to 'int'"
 -   **使用協助程式類別轉換**：若要轉換不相容類型 (例如，整數和 <xref:System.DateTime?displayProperty=nameWithType> 物件，或十六進位字串和位元組陣列)，您可以使用 <xref:System.BitConverter?displayProperty=nameWithType> 類別、<xref:System.Convert?displayProperty=nameWithType> 類別，以及內建數字類型的 `Parse` 方法 (例如，<xref:System.Int32.Parse%2A?displayProperty=nameWithType>)。 如需詳細資訊，請參閱[如何：將位元組陣列轉換為整數](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)、[如何：將字串轉換為數值](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)和[如何：在十六進位字串和數字類型間轉換](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)。  
   
 ## <a name="implicit-conversions"></a>隱含轉換  
- 針對內建數字類型，如果要儲存的值可以放入變數中，而不需進行截斷或四捨五入，則可以進行隱含轉換。 例如，[long](../../../csharp/language-reference/keywords/long.md) (8 位元組整數) 類型的變數可以儲存 [int](../../../csharp/language-reference/keywords/int.md) (32 位元電腦上的 4 個位元組) 可儲存的任何值。 在下列範例中，編譯器會先將右側的值隱含地轉換為類型 `long`，再將它指派給 `bigNum`。  
+ 針對內建數字類型，如果要儲存的值可以放入變數中，而不需進行截斷或四捨五入，則可以進行隱含轉換。 例如，型別為 [long](../../../csharp/language-reference/keywords/long.md) 的變數 (64 位元整數) 可儲存任何 [int](../../../csharp/language-reference/keywords/int.md) (32 位元整數) 能儲存的值。 在下列範例中，編譯器會將位於右側的 `num` 值隱含轉換為 `long` 型別，再將它指派給 `bigNum`。  
   
  [!code-csharp[csProgGuideTypes#34](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_1.cs)]  
   

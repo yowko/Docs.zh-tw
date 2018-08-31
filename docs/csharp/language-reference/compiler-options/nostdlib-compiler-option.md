@@ -8,38 +8,46 @@ helpviewer_keywords:
 - -nostdlib compiler option [C#]
 - /nostdlib compiler option [C#]
 ms.assetid: ec197989-fa49-4725-a455-e06b551eb65f
-ms.openlocfilehash: 1dc0ab70ca28626c4a3f505c13ec1d6f828a4b05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70007c74efe9a41bdfc15e8fa7daf3c8fc0221ed
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216131"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935520"
 ---
 # <a name="-nostdlib-c-compiler-options"></a>-nostdlib (C# 編譯器選項)
-**-nostdlib** 會導致無法匯入 mscorlib.dll，而此檔案定義整個系統命名空間。  
-  
-## <a name="syntax"></a>語法  
-  
-```console  
--nostdlib[+ | -]  
-```  
-  
-## <a name="remarks"></a>備註  
- 如果您想要定義或建立自己的系統命名空間和物件，請使用此選項。  
-  
- 如果您未指定 **-nostdlib**，則 mscorlib.dll 會匯入至您的程式 (與指定 **-nostdlib-** 相容)。 指定 **-nostdlib** 等同於指定 **-nostdlib+**。  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
-  
-1.  開啟專案的 [屬性]  頁面。  
-  
-2.  按一下 [建置]  屬性頁面。  
-  
-3.  按一下 [ **進階** ] 按鈕。  
-  
-4.  修改 [不要參考 mscorlib.dll]  屬性。  
-  
- 如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.NoStdLib%2A>。  
-  
-## <a name="see-also"></a>請參閱  
- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
+
+**-nostdlib** 會導致無法匯入 mscorlib.dll，而此檔案定義整個系統命名空間。
+
+## <a name="syntax"></a>語法
+
+```console
+-nostdlib[+ | -]
+```
+
+## <a name="remarks"></a>備註
+
+如果您想要定義或建立自己的系統命名空間和物件，請使用此選項。
+
+若您沒有指定 **-nostdlib**，mscorlib.dll 會匯入您的程式中 (與指定 **-nostdlib-** 相同)。 指定 **-nostdlib** 等同於指定 **-nostdlib+**。
+
+### <a name="to-set-this-compiler-option-in-visual-studio"></a>在 Visual Studio 中設定這個編譯器選項
+
+> [!NOTE]
+> 下列指示僅適用於 Visual Studio 2015 (及更早版本)。 [不要參考 mscorlib.dl] 建置屬性在 Visual Studio 2017 中不存在。
+
+1. 開啟專案的 [屬性]  頁面。
+
+2. 按一下 [建置]  屬性頁面。
+
+3. 按一下 [ **進階** ] 按鈕。
+
+4. 修改 [不要參考 mscorlib.dll]  屬性。
+
+### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
+
+如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.NoStdLib%2A>。
+
+## <a name="see-also"></a>請參閱
+
+- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)

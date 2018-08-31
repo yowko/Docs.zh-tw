@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09a113130d29336ecabb52095ca7f5809f5f0ade
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae29553b6a431c3f20f0e5e34614842946532a9b
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592544"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925607"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic 的新功能
 
@@ -23,33 +23,33 @@ ms.locfileid: "33592544"
   
 ## <a name="current-version"></a>目前版本
 
-Visual Basic 15.5   
+Visual Basic 15.5 / Visual Studio 2017 15.5 版  
 如需了解新功能，請參閱 [Visual Basic 15.5](#visual-basic-155)
 
 ## <a name="previous-versions"></a>舊版本
 
-Visual Basic 15.3   
+Visual Basic 15.3 / Visual Studio 2017 15.3 版  
 如需了解新功能，請參閱 [Visual Basic 15.3](#visual-basic-153)
 
-Visual Basic 2017   
+Visual Basic 2017 / Visual Studio 2017  
 如需了解新功能，請參閱 [Visual Basic 2017](#visual-basic-2017)。
 
-Visual Basic / Visual Studio .NET 2015   
+Visual Basic / Visual Studio 2015   
 如需了解新功能，請參閱 [Visual Basic 14](#visual-basic-14)。
 
-Visual Basic / Visual Studio .NET 2013  
+Visual Basic / Visual Studio 2013  
 .NET 編譯器平台 ("Roslyn") 的技術預覽
 
-Visual Basic / Visual Studio .NET 2012   
+Visual Basic / Visual Studio 2012   
 `Async` 和 `await` 關鍵字、迭代器、呼叫端資訊屬性
 
-Visual Basic / Visual Studio .NET 2010   
+Visual Basic / Visual Studio 2010   
 自動實作的屬性、集合初始設定式、隱含行接續符號、動態、泛型共變數/反變數、全域命名空間存取
 
-Visual Basic / Visual Studio .NET 2008   
+Visual Basic / Visual Studio 2008   
 Language Integrated Query (LINQ)、XML 常值、區域類型推斷、物件初始設定式、匿名類型、擴充方法、區域 `var` 類型推斷、Lambda 運算式、`if` 運算子、部分方法、可為 Null 的實值類型  
 
-Visual Basic / Visual Studio .NET 2005   
+Visual Basic / Visual Studio 2005   
 `My` 類型和協助程式類型 (應用程式、電腦、檔案系統、網路的存取)
 
 Visual Basic / Visual Studio .NET 2003   
@@ -123,7 +123,7 @@ Tuple 的 Visual Basic 支援可讓您快速定義 Tuple、選擇性地將語意
 
 如需詳細資訊，請參閱 [Byte](../language-reference/data-types/byte-data-type.md#literal-assignments)、[Integer](../language-reference/data-types/integer-data-type.md#literal-assignments)、[Long](../language-reference/data-types/long-data-type.md#literal-assignments)、[Short](../language-reference/data-types/short-data-type.md#literal-assignments)、[SByte](../language-reference/data-types/sbyte-data-type.md#literal-assignments)、[UInteger](../language-reference/data-types/uinteger-data-type.md#literal-assignments)、[ULong](../language-reference/data-types/ulong-data-type.md#literal-assignments) 和 [UShort](../language-reference/data-types/ushort-data-type.md#literal-assignments) 資料類型的＜常值指派＞一節。
 
-**C# 參考傳回值的支援**
+[**C# 參考傳回值的支援**](../programming-guide/language-features/procedures/ref-return-values.md)
 
 從 C# 7.0 開始，C# 支援參考傳回值。 也就是說，當呼叫方法收到參考傳回的值時，它可以變更參考的值。 Visual Basic 不允許您撰寫使用參考傳回值的方法，但允許您使用和修改參考傳回值。
 
@@ -159,25 +159,25 @@ Tuple 的 Visual Basic 支援可讓您快速定義 Tuple、選擇性地將語意
 [多行字串常值](../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
  字串常值可包含新行字元序列。  您不再需要使用 `<xml><![CDATA[...text with newlines...]]></xml>.Value` 的舊解決方法  
   
-註解  
+**註解**  
 您可以將註解放到隱含行接續符號之後、初始設定式運算式之內和 LINQ 運算式詞彙之間。  
   
- 更聰明的完整名稱解析  
+**更聰明的完整名稱解析**  
  以程式碼 `Threading.Thread.Sleep(1000)` 為例，Visual Basic 之前會查詢命名空間 "Threading"，發現它在 System.Threading 和 System.Windows.Threading 之間模稜兩可，然後回報錯誤。  Visual Basic 現在會同時考慮這兩種可能的命名空間。  如果您顯示完成清單，Visual Studio 編輯器會在完成清單中列出這兩種類型的成員。  
   
- 以年起始的日期常值  
+ **以年起始的日期常值**  
  您可以有 yyyy-mm-dd 格式的日期常值 (`#2015-03-17 16:10 PM#`)。  
   
- 唯讀介面屬性  
+ **唯讀介面屬性**  
  您可以使用讀寫屬性來實作唯讀介面屬性。  這個介面可確保提供基本功能，並且不會防止實作類別允許設定屬性。  
   
  [TypeOf \<expr> IsNot \<類型>](../../visual-basic/language-reference/operators/typeof-operator.md)  
  為了增加程式碼的可讀性，您現在可以搭配使用 `TypeOf` 和 `IsNot`。  
   
- [#Disable Warning \<識別碼> 和 #Enable Warning \<識別碼>](../../visual-basic/language-reference/directives/directives.md)  
+ [#Disable Warning \<識別碼> 和 #Enable Warning \<識別碼>](../../visual-basic/language-reference/directives/index.md)  
  您可以停用及啟用原始程式檔中區域的特定警告。  
   
- XML 文件註解增強功能  
+ **XML 文件註解改善**  
  撰寫文件註解時，您會取得智慧型編輯器，以及驗證參數名稱、適當處理 `crefs` (泛型、運算子等)、色彩標示和重構的建置支援。  
   
  [部分模組和介面定義](../../visual-basic/language-reference/modifiers/partial.md)  
@@ -189,10 +189,10 @@ Tuple 的 Visual Basic 支援可讓您快速定義 Tuple、選擇性地將語意
  [Overrides 定義隱含為 Overloads](../../visual-basic/language-reference/modifiers/overrides.md)  
  如果您將 `Overrides` 修飾詞加入定義，編譯器會隱含加入 `Overloads`，讓您可以在一般情況下輸入較少的程式碼。  
   
- 屬性引數允許 CObj  
+ **屬性引數允許 CObj**  
  編譯器之前會提供錯誤，指出 CObj(…) 用於屬性建構時不是常數。  
   
- 從不同的介面宣告及使用模稜兩可的方法  
+ **從不同的介面宣告及使用模稜兩可的方法**  
  之前，下列程式碼會產生錯誤，使您無法宣告 `IMock` 或呼叫 `GetDetails` (如果已在 C# 中宣告這些項目)：  
   
 ```vb  
