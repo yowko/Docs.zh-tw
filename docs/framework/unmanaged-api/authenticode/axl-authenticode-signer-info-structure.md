@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 81c0f8b4-ce35-4716-8651-b642d40648a2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd07707b5a80ec0980fc50b27caddf0a24398fd1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4b9f54c7c57d122ac1214b9f31cc4e1d1cddd71c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400441"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392175"
 ---
 # <a name="axlauthenticodesignerinfo-structure"></a>AXL_AUTHENTICODE_SIGNER_INFO 結構
 定義 Authenticode 簽署人資訊。  
@@ -38,7 +38,7 @@ typedef struct _AXL_AUTHENTICODE_SIGNER_INFO {
 |`pwszHash`|雜湊。|  
 |`pwszDescription`|描述。|  
 |`pwszDescriptionUrl`|描述的 URL。|  
-|`pChainContext`|簽署人的鏈結內容。 請參閱[CERT_CONTEXT](http://msdn.microsoft.com/library/windows/desktop/aa377189.aspx)結構。|  
+|`pChainContext`|簽署人的鏈結內容。 請參閱[CERT_CONTEXT](/windows/desktop/api/wincrypt/ns-wincrypt-_cert_context)結構。|  
   
 ## <a name="see-also"></a>另請參閱  
  [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)

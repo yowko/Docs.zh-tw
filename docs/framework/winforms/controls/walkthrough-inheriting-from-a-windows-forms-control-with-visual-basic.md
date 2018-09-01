@@ -10,18 +10,18 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
-ms.openlocfilehash: a6b1e78d17d952590510bdda80bf802ccc094285
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c70de1bf6a5340b6f5b2c652110ed9be5536665
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541433"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389976"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>逐步解說：使用 Visual Basic 繼承自 Windows Form 控制項
-使用 Visual Basic 中，您可以建立功能強大的自訂控制項，透過*繼承*。 您可以透過繼承建立控制項，不僅保留標準 Windows Forms 控制項的所有固有功能，同時也納入自訂功能。 在本逐步解說中，您將會建立簡單的繼承控制項，名為 `ValueButton`。 這個按鈕就會繼承標準 Windows Form 功能<xref:System.Windows.Forms.Button>控制項，然後將公開名為的自訂屬性`ButtonValue`。  
+使用 Visual Basic 中，您可以建立功能強大的自訂控制項，透過*繼承*。 您可以透過繼承建立控制項，不僅保留標準 Windows Forms 控制項的所有固有功能，同時也納入自訂功能。 在本逐步解說中，您將會建立簡單的繼承控制項，名為 `ValueButton`。 此按鈕會繼承標準 Windows Form 的功能<xref:System.Windows.Forms.Button>控制項，並會公開 （expose） 的自訂屬性，稱為`ButtonValue`。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 ## <a name="creating-the-project"></a>建立專案  
  當您建立新的專案時，您會指定其名稱以設定根命名空間、組件名稱和專案名稱，並且確定預設元件將會在正確的命名空間中。  
@@ -30,7 +30,7 @@ ms.locfileid: "33541433"
   
 1.  在 [檔案] 功能表上，指向 [新增]，然後按一下 [專案]，開啟 [新增專案] 對話方塊。  
   
-2.  選取**Windows Form 控制項程式庫**專案範本，從 Visual Basic 專案類型的清單`ValueButtonLib`中**名稱**方塊。  
+2.  選取 [ **Windows Form 控制項程式庫**專案範本，從清單中的 Visual Basic 專案，然後輸入`ValueButtonLib`中**名稱**] 方塊中。  
   
      專案名稱，`ValueButtonLib`，預設也會指派給根命名空間。 根命名空間是用來限定組件中的元件名稱。 例如，如果兩個組件提供元件，名為 `ValueButton`，您可以使用 `ValueButtonLib.ValueButton` 指定您的 `ValueButton` 元件。 如需詳細資訊，請參閱 [Visual Basic 中的命名空間](~/docs/visual-basic/programming-guide/program-structure/namespaces.md)。  
   
@@ -40,13 +40,13 @@ ms.locfileid: "33541433"
   
 5.  開啟 [ValueButton.vb] 節點以顯示設計工具產生的程式碼檔案，**ValueButton.Designer.vb**。 在 [程式碼編輯器] 中開啟此檔案。  
   
-6.  找出`Class`陳述式， `Partial Public Class ValueButton`，並將變更從這個控制項繼承的類型<xref:System.Windows.Forms.UserControl>至<xref:System.Windows.Forms.Button>。 這可讓繼承的控制項可以繼承的所有功能<xref:System.Windows.Forms.Button>控制項。  
+6.  找出`Class`陳述式中， `Partial Public Class ValueButton`，並將變更從這個控制項繼承的型別<xref:System.Windows.Forms.UserControl>至<xref:System.Windows.Forms.Button>。 這可讓繼承的控制項繼承的所有功能<xref:System.Windows.Forms.Button>控制項。  
   
-7.  找出`InitializeComponent`方法並移除指定的行<xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>屬性。 這個屬性不存在於<xref:System.Windows.Forms.Button>控制項。  
+7.  找出`InitializeComponent`方法，並移除行，該指派<xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>屬性。 這個屬性不存在於<xref:System.Windows.Forms.Button>控制項。  
   
 8.  從 [檔案] 功能表選擇 [全部儲存] 以儲存專案。  
   
-     請注意，視覺化設計工具再也無法使用。 因為<xref:System.Windows.Forms.Button>控制項沒有自己的繪製，您就無法修改其設計工具中的外觀。 其視覺表示法將會完全與它所繼承的類別相同 (也就是<xref:System.Windows.Forms.Button>) 除非修改程式碼中。  
+     請注意，視覺化設計工具再也無法使用。 因為<xref:System.Windows.Forms.Button>控制項沒有自己的繪製，您就無法修改其外觀的設計工具中。 其視覺表示將會完全與它所繼承之類別的相同 (也就是<xref:System.Windows.Forms.Button>) 除非修改程式碼中。  
   
 > [!NOTE]
 >  您仍然可以將元件 (其中沒有任何 UI 元素) 新增至設計介面。  
@@ -94,7 +94,7 @@ ms.locfileid: "33541433"
   
 1.  在 [檔案] 功能表上，指向 [新增]，然後選取 [新增專案]，以開啟 [加入新的專案]對話方塊。  
   
-2.  選取 [Visual Basic 專案] 節點，然後按一下**Windows Forms 應用程式**。  
+2.  選取 [Visual Basic] 專案節點，然後按一下**Windows Forms 應用程式**。  
   
 3.  在 [名稱] 方塊中，輸入 `Test`。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "33541433"
   
 5.  將 `ButtonValue` 屬性設定為 `5`。  
   
-6.  上**所有 Windows Form**  索引標籤**工具箱**，連按兩下**標籤**新增<xref:System.Windows.Forms.Label>控制項加入至表單。  
+6.  上**所有的 Windows Form**索引標籤**工具箱**，連按兩下**標籤**新增<xref:System.Windows.Forms.Label>控制項至表單。  
   
 7.  重新將標籤放置在表單的中央。  
   
@@ -150,5 +150,5 @@ ms.locfileid: "33541433"
  [逐步解說：使用 Visual Basic 撰寫複合控制項](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
  [操作說明：在選擇工具箱項目對話方塊中顯示控制項](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
  [使用 .NET Framework 開發自訂的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- [繼承基本概念 (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
- [元件撰寫逐步解說](http://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)
+ [繼承的基本概念 (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
+ [元件撰寫逐步解說](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)

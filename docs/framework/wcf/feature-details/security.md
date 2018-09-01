@@ -8,24 +8,24 @@ helpviewer_keywords:
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: fb48ae39d269f21a7120ecf143dc4c4680efe39d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a070800ea15c5a7f16b52ca69c7e454c92618e1a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499085"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384924"
 ---
 # <a name="windows-communication-foundation-security"></a>Windows Communication Foundation 安全性
-本節主題說明 Windows Communication Foundation (WCF) 安全性功能，以及如何使用它們來保護訊息。  
+在本節中的主題會描述 Windows Communication Foundation (WCF) 安全性功能，以及如何使用它們來保護訊息。  
   
- 如需有關 Windows Server AppFabric 和安全性的詳細資訊，請參閱[安全性模型的 Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
+ 如需有關 Windows Server AppFabric 和安全性的詳細資訊，請參閱[安全性模型的 Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
   
 ## <a name="in-this-section"></a>本節內容  
  [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- 描述在 WCF 中的安全性功能。  
+ 說明 WCF 中的安全性功能。  
   
  [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- 描述基本術語與使用 WCF 安全性概念。  
+ 描述基本術語與使用 WCF 安全性的概念。  
   
  [常見的安全性案例](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
  描述各種案例與拓撲，您可以使用 WCF 設定。  
@@ -37,7 +37,7 @@ ms.locfileid: "33499085"
  安全性導向的繫結檢視，包括示範如何建立自訂安全性繫結的各個主題。  
   
  [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- 描述如何保護訊息使用 WCF 安全性功能。  
+ 說明如何保護使用 WCF 安全性功能的訊息。  
   
  [驗證](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
  示範一般驗證工作。  

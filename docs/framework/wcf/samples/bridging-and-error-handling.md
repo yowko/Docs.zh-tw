@@ -2,22 +2,22 @@
 title: 橋接及錯誤處理
 ms.date: 03/30/2017
 ms.assetid: 4ae87d1a-b615-4014-a494-a53f63ff0137
-ms.openlocfilehash: 20f5af5736e5869ead0f7c50ce0fff22391ea730
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 6afaddc75855b7e95ad708b2179cabb9aee35001
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804387"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389064"
 ---
 # <a name="bridging-and-error-handling"></a>橋接及錯誤處理
-這個範例會示範 Windows Communication Foundation (WCF) 路由服務如何用於通訊的用戶端和服務使用不同繫結之間的橋接。 此範例也會示範如何針對容錯移轉情況使用備份服務。 路由服務是 WCF 元件，以簡化應用程式中加入內容架構的路由器。 此範例會調整標準 WCF 計算機範例，以便使用路由服務進行通訊。  
+這個範例會示範 Windows Communication Foundation (WCF) 路由服務如何用於橋接用戶端和服務使用不同繫結之間的通訊。 此範例也會示範如何針對容錯移轉情況使用備份服務。 路由服務是一種 WCF 元件，可讓您更輕鬆地在您的應用程式中加入內容為基礎的路由器。 此範例會調整標準 WCF 計算機範例，以便使用路由服務進行通訊。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\ErrorHandlingAndBridging`  
   
@@ -39,7 +39,7 @@ ms.locfileid: "33804387"
   
 2.  在 Visual Studio 中按下 F5 或 CTRL+SHIFT+B。  
   
-    1.  如果您想要按下 F5 時自動啟動必要的專案，以滑鼠右鍵按一下方案，請選取**屬性**，然後在**啟始專案**節點下的**的通用屬性**，選取**多個啟始專案**，並將所有專案都設定為**啟動**。  
+    1.  如果您想要按 F5 時自動啟動必要的專案，以滑鼠右鍵按一下方案，請選取**屬性**，然後在**啟始專案**節點下的**的通用屬性**，選取**多個啟始專案**，並將所有專案都設定為**啟動**。  
   
     2.  如果您使用 CTRL+SHIFT+B 來建置專案，請啟動下列應用程式：  
   
@@ -67,7 +67,7 @@ ms.locfileid: "33804387"
  此範例示範當做通訊協定橋接器與錯誤處理常式的服務路由器。 在此案例中，沒有發生內容架構的路由；路由服務會當做傳輸 Proxy 節點，而此節點設定為將訊息直接傳遞到一組預先設定的目的地端點。 路由服務也會執行嘗試傳送到設定為與其進行通訊之端點時所發生的其他透明處理錯誤步驟。 路由服務藉由當做路由橋接器使用，可讓使用者為外部通訊定義一個通訊協定，並為內部通訊定義另一個通訊協定。  
   
 ### <a name="real-world-scenario"></a>真實情節  
- Contoso 想要在內部最佳化效能時，提供互通的服務端點給外界。 因此，它會在內部使用路由服務將該連線橋接到使用其服務所使用之 NetTcpBinding 的端點時，透過端點使用 BasicHttpBinding，向外界公開其服務。 此外，Contoso 希望提供服務時能夠容許其中任何一個實際執行服務暫時中斷，然後使用錯誤處理功能視覺化路由器服務背後的多個端點，以便在需要時，自動容錯移轉到備份端點。  
+ Contoso 想要在內部最佳化效能時，提供互通的服務端點給外界。 因此，它會在內部使用路由服務將該連線橋接到使用其服務所使用之 NetTcpBinding 的端點時，透過端點使用 BasicHttpBinding，向外界公開其服務。 此外，Contoso 希望提供服務供應項目時能夠容許其中任何一個實際執行服務暫時中斷，然後使用錯誤處理功能視覺化路由器服務背後的多個端點，以便在需要時，自動容錯移轉到備份端點。  
   
 ## <a name="see-also"></a>另請參閱  
- [AppFabric 主控與持續性範例](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric 主控與持續性範例](https://go.microsoft.com/fwlink/?LinkId=193961)

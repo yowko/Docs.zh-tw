@@ -9,12 +9,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating simple controls using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-ms.openlocfilehash: 04cedc0df60ef95acb79b651ddcbcbb34ae5e920
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07a4de944e36b0be1a6196d08df33c4f3ab24bcc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539662"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387034"
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>如何：開發簡單的 Windows Forms 控制項
 本節將逐步引導您完成撰寫自訂 Windows Forms 控制項的重要步驟。 在本逐步解說中開發的簡單控制項允許的對齊方式與其<xref:System.Windows.Forms.Control.Text%2A>来變更屬性。 它不會引發或處理事件。  
@@ -31,22 +31,22 @@ ms.locfileid: "33539662"
     ```  
   
     ```csharp  
-    public class FirstControl:Control{}  
+    public class FirstControl:Control {}  
     ```  
   
-2.  定義屬性。 (您不需要定義屬性，因為控制項繼承從許多內容<xref:System.Windows.Forms.Control>類別，但大部分的自訂控制項通常定義的其他屬性。)下列程式碼片段會定義名為屬性`TextAlignment`，`FirstControl`的顯示格式會使用<xref:System.Windows.Forms.Control.Text%2A>屬性繼承自<xref:System.Windows.Forms.Control>。 如需有關定義屬性的詳細資訊，請參閱[屬性概觀](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52)。  
+2.  定義屬性。 (您不需要定義屬性，因為控制項繼承許多屬性，從<xref:System.Windows.Forms.Control>類別，但大部分的自訂控制項通常會定義其他屬性。)下列程式碼片段會定義名為的屬性`TextAlignment`所`FirstControl`使用的顯示格式<xref:System.Windows.Forms.Control.Text%2A>屬性繼承自<xref:System.Windows.Forms.Control>。 如需有關定義屬性的詳細資訊，請參閱[屬性概觀](https://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52)。  
   
      [!code-csharp[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#3)]
      [!code-vb[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#3)]  
   
-     當您設定屬性，可變更控制項的視覺顯示時，您必須叫用<xref:System.Windows.Forms.Control.Invalidate%2A>重繪控制項的方法。 <xref:System.Windows.Forms.Control.Invalidate%2A> 定義於基底類別<xref:System.Windows.Forms.Control>。  
+     當您設定可變更控制項的視覺顯示屬性時，您必須叫用<xref:System.Windows.Forms.Control.Invalidate%2A>方法來重繪控制項。 <xref:System.Windows.Forms.Control.Invalidate%2A> 定義於基底類別<xref:System.Windows.Forms.Control>。  
   
-3.  覆寫的受保護<xref:System.Windows.Forms.Control.OnPaint%2A>方法繼承自<xref:System.Windows.Forms.Control>提供控制項的呈現邏輯。 如果您不覆寫<xref:System.Windows.Forms.Control.OnPaint%2A>，您的控制項不能繪製本身。 在下列程式碼片段中，<xref:System.Windows.Forms.Control.OnPaint%2A>方法顯示<xref:System.Windows.Forms.Control.Text%2A>屬性繼承自<xref:System.Windows.Forms.Control>所指定的對齊`alignmentValue`欄位。  
+3.  覆寫受保護<xref:System.Windows.Forms.Control.OnPaint%2A>方法繼承自<xref:System.Windows.Forms.Control>提供呈現邏輯移至您的控制項。 如果您不會覆寫<xref:System.Windows.Forms.Control.OnPaint%2A>，您的控制項將無法繪製本身。 在下列程式碼片段中，<xref:System.Windows.Forms.Control.OnPaint%2A>方法會顯示<xref:System.Windows.Forms.Control.Text%2A>屬性繼承自<xref:System.Windows.Forms.Control>所指定的對齊`alignmentValue`欄位。  
   
      [!code-csharp[System.Windows.Forms.FirstControl#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#4)]
      [!code-vb[System.Windows.Forms.FirstControl#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#4)]  
   
-4.  為您的控制項提供屬性 (attribute)。 屬性可讓視覺化設計工具在設計階段適當地顯示您的控制項及其屬性與事件。 下列程式碼片段會將屬性 (attribute) 套用至 `TextAlignment` 屬性 (property)。 在 Visual Studio 中，例如設計工具<xref:System.ComponentModel.CategoryAttribute.Category%2A>屬性 （如程式碼片段所示） 會造成邏輯類別底下顯示的屬性。 <xref:System.ComponentModel.DescriptionAttribute.Description%2A>屬性會造成在底部顯示描述性字串**屬性**視窗時`TextAlignment`選取屬性。 如需屬性的詳細資訊，請參閱[元件的設計階段屬性](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)。  
+4.  為您的控制項提供屬性 (attribute)。 屬性可讓視覺化設計工具在設計階段適當地顯示您的控制項及其屬性與事件。 下列程式碼片段會將屬性 (attribute) 套用至 `TextAlignment` 屬性 (property)。 Visual Studio 中，例如設計工具中<xref:System.ComponentModel.CategoryAttribute.Category%2A>屬性 （如程式碼片段所示） 會造成屬性會顯示在邏輯類別之下。 <xref:System.ComponentModel.DescriptionAttribute.Description%2A>屬性會造成描述性字串顯示在底部**屬性** 視窗時`TextAlignment`選取屬性。 如需屬性的詳細資訊，請參閱[元件的設計階段屬性](https://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)。  
   
      [!code-csharp[System.Windows.Forms.FirstControl#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#5)]
      [!code-vb[System.Windows.Forms.FirstControl#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#5)]  
@@ -69,7 +69,7 @@ ms.locfileid: "33539662"
   
          `/t:library` 編譯器選項會告知編譯器您所建立的組件是程式庫 (而不是可執行檔)。 `/out` 選項指定組件的路徑和名稱。 `/r` 選項會提供您的程式碼所參考的組件名稱。 在此範例中，您會建立只有您的應用程式可以使用的私人組件。 因此，您必須將它儲存在您應用程式的目錄中。 如需有關封裝和部署控制項以供散發的詳細資訊，請參閱[部署](../../../../docs/framework/deployment/index.md)。  
   
- 下列範例顯示 `FirstControl` 的程式碼。 控制項會包含在 `CustomWinControls` 命名空間中。 命名空間會提供相關類型的邏輯分組。 您可以在新的或現有命名空間中建立您的控制項。 在 C# 中，`using` 宣告 (在 Visual Basic 中為 `Imports`) 允許從命名空間存取類型，而不需使用完整的類型名稱。 在下列範例中，`using`宣告可讓程式碼，以存取該類別<xref:System.Windows.Forms.Control>從<xref:System.Windows.Forms?displayProperty=nameWithType>為<xref:System.Windows.Forms.Control>而不需使用完整限定的名稱<xref:System.Windows.Forms.Control?displayProperty=nameWithType>。  
+ 下列範例顯示 `FirstControl` 的程式碼。 控制項會包含在 `CustomWinControls` 命名空間中。 命名空間會提供相關類型的邏輯分組。 您可以在新的或現有命名空間中建立您的控制項。 在 C# 中，`using` 宣告 (在 Visual Basic 中為 `Imports`) 允許從命名空間存取類型，而不需使用完整的類型名稱。 在下列範例中，`using`宣告可讓程式碼，以存取該類別<xref:System.Windows.Forms.Control>從<xref:System.Windows.Forms?displayProperty=nameWithType>只要<xref:System.Windows.Forms.Control>而不需使用完整格式的名稱<xref:System.Windows.Forms.Control?displayProperty=nameWithType>。  
   
  [!code-csharp[System.Windows.Forms.FirstControl#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#1)]
  [!code-vb[System.Windows.Forms.FirstControl#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#1)]  

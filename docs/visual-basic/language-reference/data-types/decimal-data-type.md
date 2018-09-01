@@ -20,30 +20,30 @@ helpviewer_keywords:
 - '@ identifier type character'
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
-ms.openlocfilehash: 9e256e93d7857c8674a1d711fa9cafd3ed9a29f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ffc1cd141ba624d2ce26e4b1c070431ff0ddd6fe
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591612"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390895"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Decimal 資料類型 (Visual Basic)
-保存帶正負號的 128 位元 （16 位元） 值，表示以可變倍率 10 倍的 96 位元 （12 個位元組） 整數數字。 縮放比例指定小數點右邊位數的數目它的範圍是從 0 到 28。 小數位數為 0 （沒有小數位數），最大的可能值是 + /-79228162514264337593543950335 (+ /-7.9228162514264337593543950335E + 28)。 具有 28 的小數位數，最大值是 + /--7.9228162514264337593543950335，和最小的非零值是 + /-0.0000000000000000000000000001 （+ /-1E 28)。  
+保存帶正負號的 128 位元 （16 個位元組） 值，表示調整變數的 10 乘冪的 96 位元 （12 個位元組） 整數數字。 縮放比例指定小數點; 右邊的數字的數目其範圍從 0 到 28。 數位數為 0 （沒有小數位數），最大的可能值是 + /-79228162514264337593543950335 (+ /-7.9228162514264337593543950335E + 28)。 28 的小數位數，最大值是 + /--7.9228162514264337593543950335，與最小的非零值是 + /-0.0000000000000000000000000001 （+ /-1E-28)。  
   
 ## <a name="remarks"></a>備註  
- `Decimal`資料類型提供數個有效位數的最大數目。 它支援高達 29 個有效位數，而且可以代表值超過 7.9228 x 10 ^28。 它特別適用於計算，例如財務、，需要大量的數字，但不能容忍捨入錯誤。  
+ `Decimal`資料類型提供許多有效位數的最大數目。 它支援多達 29 個有效位數，而且可以代表值超出 7.9228 x 10 ^28。 它是特別適合用來計算，例如財務、，需要大量的數字，但無法容忍捨入錯誤。  
   
  `Decimal` 的預設值為 0。  
   
 ## <a name="programming-tips"></a>程式設計提示  
   
--   **有效位數。** `Decimal` 不是浮點數資料類型。 `Decimal`結構包含二進位整數值，以及正負號位元和縮放比例，指定值的哪些部分是十進位小數的整數。 因為這個緣故，`Decimal`數字比浮點類型的記憶體中有更精確地表示法 (`Single`和`Double`)。  
+-   **有效位數。** `Decimal` 不是浮點資料類型。 `Decimal`結構包含二進位整數值，以及正負號位元和縮放比例，指定哪些部分的值為十進位小數的整數。 基於這個原因，`Decimal`數字中的記憶體比浮點數類型有更精確的表示法 (`Single`和`Double`)。  
   
 -   **效能。** `Decimal`資料類型是最慢的所有數字的類型。 您應該衡量精確度和效能，再選擇的資料類型的重要性。  
   
--   **擴展。** `Decimal`資料類型可擴展成`Single`或`Double`。 這表示您可以將轉換`Decimal`而不會發生這些類型的任何一個<xref:System.OverflowException?displayProperty=nameWithType>錯誤。  
+-   **擴展。** `Decimal`資料類型可擴展為`Single`或`Double`。 這表示您可以將轉換`Decimal`而不會發生這些類型的任何一個<xref:System.OverflowException?displayProperty=nameWithType>時發生錯誤。  
   
--   **尾端零。** Visual Basic 不會儲存尾端零`Decimal`常值。 不過，`Decimal`變數會保留運算資源取得任何尾端零。 下列範例將說明這點。  
+-   **尾端零。** Visual Basic 不會儲存的尾端零`Decimal`常值。 不過，`Decimal`變數會保留運算資源取得任何尾端零。 下列範例將說明這點。  
   
     ```  
     Dim d1, d2, d3, d4 As Decimal  
@@ -55,16 +55,16 @@ ms.locfileid: "33591612"
           ", d3 = " & CStr(d3) & ", d4 = " & CStr(d4))  
     ```  
   
-     輸出`MsgBox`在上述範例如下所示：  
+     輸出`MsgBox`前一個範例如下所示：  
   
      d1 = 2.375，d2 = 1.625，d3 = 4.000，d4 = 4  
   
 -   **類型字元。** 將常值類型字元 `D` 附加到常值，會強制其成為 `Decimal` 資料類型。 將識別項類型字元 `@` 附加到任何識別項，會強制其成為 `Decimal`。  
   
--   **架構類型。** 在 .NET Framework 中對應的類型為 <xref:System.Decimal?displayProperty=nameWithType> 結構。  
+-   **Framework 型別。** 在 .NET Framework 中對應的類型為 <xref:System.Decimal?displayProperty=nameWithType> 結構。  
   
 ## <a name="range"></a>範圍  
- 您可能需要使用`D`輸入字元到大型值指派給`Decimal`變數或常數。 這是因為編譯器會解譯為常值`Long`除非常值類型字元後面常值，如下列範例所示。  
+ 您可能需要使用`D`型別字元，將大型值指派給`Decimal`變數或常數。 此需求是因為編譯器會解譯為常值`Long`除非常值類型字元會遵循常值，如下列範例所示。  
   
 ```  
 Dim bigDec1 As Decimal = 9223372036854775807   ' No overflow.  
@@ -72,17 +72,17 @@ Dim bigDec2 As Decimal = 9223372036854775808   ' Overflow.
 Dim bigDec3 As Decimal = 9223372036854775808D  ' No overflow.  
 ```  
   
- 宣告`bigDec1`不會產生溢位，因為指派給它的值落在範圍內`Long`。 `Long`可指派值給`Decimal`變數。  
+ 宣告`bigDec1`不會產生溢位，因為指派給它的值落在範圍內`Long`。 `Long`可以將值指派給`Decimal`變數。  
   
- 宣告`bigDec2`會產生溢位錯誤，因為指派給它的值太大的`Long`。 因為數值常值第一次無法解譯為`Long`，無法指派給`Decimal`變數。  
+ 宣告`bigDec2`指派給它的值太大，所以會產生溢位錯誤`Long`。 因為數值常值第一次無法解譯為`Long`，不能將它指派給`Decimal`變數。  
   
- 如`bigDec3`，常值類型字元`D`可以解決問題，可能會強制編譯器將解譯為常值`Decimal`而不是做為`Long`。  
+ 針對`bigDec3`，常值類型字元`D`解決問題，強制編譯器將解譯為常值`Decimal`而不是做為`Long`。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Decimal?displayProperty=nameWithType>  
  <xref:System.Decimal.%23ctor%2A?displayProperty=nameWithType>  
  <xref:System.Math.Round%2A?displayProperty=nameWithType>  
- [資料類型](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [資料類型](../../../visual-basic/language-reference/data-types/index.md)  
  [Single 資料類型](../../../visual-basic/language-reference/data-types/single-data-type.md)  
  [Double 資料類型](../../../visual-basic/language-reference/data-types/double-data-type.md)  
  [類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  

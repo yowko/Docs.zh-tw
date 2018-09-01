@@ -2,18 +2,18 @@
 title: 在 IIS 與 WAS 中以組態為基礎的啟動
 ms.date: 03/30/2017
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
-ms.openlocfilehash: aa4a3c682ab1d5d7ca0869fee588934b9ed2bf75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d15202a7d34f3246cd7679687b6a510252fe3541
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488939"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384791"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>在 IIS 與 WAS 中以組態為基礎的啟動
-通常當裝載 Windows Communication Foundation (WCF) 服務在 Internet Information Services (IIS) 或 Windows Process Activation Service (WAS) 下的，您必須提供.svc 檔案。 .svc 檔案包含服務名稱和選擇性自訂服務主機處理站。 此額外的檔案會增加管理能力的負荷。 以組態為基礎的啟動功能可免除 .svc 檔案的需求以及關聯的負荷。  
+通常當裝載在 Internet Information Services (IIS) 或 Windows Process Activation Service (WAS) 下的 Windows Communication Foundation (WCF) 服務，您必須提供.svc 檔案。 .svc 檔案包含服務名稱和選擇性自訂服務主機處理站。 此額外的檔案會增加管理能力的負荷。 以組態為基礎的啟動功能可免除 .svc 檔案的需求以及關聯的負荷。  
   
 ## <a name="configuration-based-activation"></a>以組態為基礎的啟用  
- 以組態為基礎的啟動會使用放置於 .svc 檔案中的中繼資料，並將中繼資料放置於 Web.config 檔案中。 在 <`serviceHostingEnvironment`> 元素沒有 <`serviceActivations`> 項目。 在 <`serviceActivations`> 項目是一或多個 <`add`> 項目、 一個用於每個託管服務。 <`add`> 元素包含可讓您設定服務和服務類型或服務主機處理站的相對位址的屬性。 下列組態範例程式碼會示範此區段的使用方式。  
+ 以組態為基礎的啟動會使用放置於 .svc 檔案中的中繼資料，並將中繼資料放置於 Web.config 檔案中。 在 <`serviceHostingEnvironment`> 元素沒有 <`serviceActivations`> 項目。 在 <`serviceActivations`> 項目是否有一或多個 <`add`> 項目，一個用於每個託管服務。 <`add`> 元素包含可讓您設定服務和服務類型或服務主機處理站的相對位址的屬性。 下列組態範例程式碼會示範此區段的使用方式。  
   
 > [!NOTE]
 >  每個 <`add`> 項目必須指定服務或處理站屬性。 系統允許同時指定服務和處理站屬性。  
@@ -30,7 +30,7 @@ ms.locfileid: "33488939"
   
 > [!NOTE]
 >  -   使用以組態為基礎的啟動時，不支援 .svc 檔案中的內嵌程式碼。  
-> -   `relativeAddress`屬性必須設定為相對位址例如"\<子目錄 > / service.svc"或"~ /\<子-/<sub-directory/service.svc"。  
+> -   `relativeAddress`屬性必須設為相對位址這類 「\<子目錄 > / service.svc"或"~ /\<子 sub-directory/service.svc"。  
 > -   如果您註冊未包含與 WCF 關聯之已知副檔名的相對位址，便會擲回組態例外。  
 > -   指定的相對位址與虛擬應用程式的根相關。  
 > -   由於組態模型為階層式，主機上註冊的相對位址和網站層級會由虛擬應用程式繼承。  
@@ -42,4 +42,4 @@ ms.locfileid: "33488939"
  [裝載服務](../../../../docs/framework/wcf/hosting-services.md)  
  [裝載工作流程服務概觀](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)  
  [\<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)  
- [Windows Server App Fabric 裝載功能](http://go.microsoft.com/fwlink/?LinkId=201276)
+ [Windows Server App Fabric 主控功能](https://go.microsoft.com/fwlink/?LinkId=201276)

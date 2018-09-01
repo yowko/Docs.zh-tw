@@ -1,5 +1,5 @@
 ---
-title: '#Region 指示詞'
+title: '#區域指示詞 (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Region
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - region directive (#region)
 - '#Region keyword [Visual Basic]'
 ms.assetid: 90a6a104-3cbf-47d0-bdc4-b585d0921b87
-ms.openlocfilehash: d25871140ef0674c013fc70d1306b2b4d0858556
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 204b53751fce4f9a3e038ae7c44634522d54657c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588431"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385368"
 ---
 # <a name="region-directive"></a>#Region 指示詞
 摺疊並隱藏 Visual Basic 檔案中的程式碼區段。  
@@ -35,7 +35,7 @@ ms.locfileid: "33588431"
 |`#End Region`|終止 `#Region` 區塊。|  
   
 ## <a name="remarks"></a>備註  
- 使用 `#Region` 指示詞來指定程式碼區段，以在使用 Visual Studio 程式碼編輯器的大綱功能時展開或摺疊。 您可以放置，或*巢狀*，以類似的區域群組在一起的其他區域內。  
+ 使用 `#Region` 指示詞來指定程式碼區段，以在使用 Visual Studio 程式碼編輯器的大綱功能時展開或摺疊。 您可以將放，或*巢狀化*，其他區域來分組類似的區域內。  
   
 ## <a name="example"></a>範例  
  此範例使用 `#Region` 指示詞。  

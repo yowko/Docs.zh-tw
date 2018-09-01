@@ -2,12 +2,12 @@
 title: DynamicActivity 建立
 ms.date: 03/30/2017
 ms.assetid: d8ebe82f-98c8-4452-aed7-2c60a512b097
-ms.openlocfilehash: 93435be69f90ca0b74dae6b934cb145fabb7afff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 270066fafd5c71b2a720ca305433159c172872aa
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518098"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385257"
 ---
 # <a name="dynamicactivity-creation"></a>DynamicActivity 建立
 這個範例會示範在執行階段使用 <xref:System.Activities.DynamicActivity> 活動建立活動的兩種不同方式。  
@@ -112,13 +112,13 @@ DynamicActivity act = new DynamicActivity()
 </Activity>  
 ```  
   
- XAML 可以透過 [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] 來以視覺方式建立。 如果它包含在 Visual Studio 專案中，請務必設定其 [建置動作] 為 [無] 以防止它正在進行編譯。 然後可以使用下列呼叫來動態載入 XAML。  
+ XAML 可以透過 [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] 來以視覺方式建立。 如果它包含在 Visual Studio 專案，請務必設定其 [建置動作] 為 「 無 」 以防止它正在進行編譯。 然後可以使用下列呼叫來動態載入 XAML。  
   
 ```  
 Activity act2 = ActivityXamlServices.Load(@"FindAverage.xaml");  
 ```  
   
- 可以使用透過程式設計方式或是載入 XAML 工作流程所建立的 <xref:System.Activities.DynamicActivity> 執行個體，如下列程式碼範例所示。 請注意，「 處理 」 傳遞給`WorkflowInvoker.Invoke`是"act"<xref:System.Activities.Activity>第一個程式碼範例中所定義。  
+ 可以使用透過程式設計方式或是載入 XAML 工作流程所建立的 <xref:System.Activities.DynamicActivity> 執行個體，如下列程式碼範例所示。 請注意，「 處理 」 傳遞至`WorkflowInvoker.Invoke`是 「 動作 」<xref:System.Activities.Activity>第一個程式碼範例中所定義。  
   
 ```  
 IDictionary<string, object> results = WorkflowInvoker.Invoke(act, new Dictionary<string, object> { { "Numbers", numbers } });  
@@ -143,6 +143,6 @@ Console.WriteLine("The average calculated using the code activity is = " + resul
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\DynamicActivity\DynamicActivityCreation`
