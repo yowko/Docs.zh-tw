@@ -9,16 +9,16 @@ ms.assetid: 229f341a-477f-434e-b877-4db9973068eb
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: ca9ad34a51d7cc051416dc9e856f886bfbdb28a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cdab82eb1cb0fd63fe00bc3184b19bc1edd561f5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409850"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387603"
 ---
 # <a name="ui-automation-support-for-the-treeitem-control-type"></a>TreeItem 控制項類型的 UI 自動化支援
 > [!NOTE]
->  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱 < [Windows Automation API： 使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主題提供 TreeItem 控制項類型的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支援相關資訊。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，控制項類型是一組控制項條件，控制項必須符合條件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 屬性。 這些條件包括 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性值和控制項模式的特定方針。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "33409850"
   
 |控制項檢視|內容檢視|  
 |------------------|------------------|  
-|TreeItem<br /><br /> -核取方塊 （0 或 1）<br />影像 （0 或 1）<br />按鈕 （0 或 1）<br />-TreeItem （0 個以上）|TreeItem<br /><br /> -TreeItem （0 個以上）|  
+|TreeItem<br /><br /> -核取方塊 （0 或 1）<br />-映像 （0 或 1）<br />按鈕 （0 或 1）<br />-TreeItem （0 或以上）|TreeItem<br /><br /> -TreeItem （0 或以上）|  
   
  樹狀結構項目控制項在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的內容檢視中可以有零個以上的樹狀結構項目子項。 如果樹狀結構項目控制項的功能超出下列控制項模式所公開的功能，則控制項應根據 Data Item 控制項類型而定。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "33409850"
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>必要的使用者介面自動化屬性  
- 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與清單控制項特別有關。 如需有關[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]屬性，請參閱[用戶端的使用者介面自動化屬性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+ 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與清單控制項特別有關。 如需詳細資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]屬性，請參閱[UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性|值|注意|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
@@ -66,11 +66,11 @@ ms.locfileid: "33409850"
 |控制項模式/模式屬性|支援/值|注意|  
 |---------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IInvokeProvider>|視情況而定|如果樹狀結構項目有個別可執行動作的命令，即實作此控制項模式。|  
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|[是]|所有樹狀結構項目都可以展開或摺疊。|  
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|是|所有樹狀結構項目都可以展開或摺疊。|  
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|已展開、已摺疊或分葉節點|當樹狀結構項目未展開或摺疊時，表示是分葉節點。|  
 |<xref:System.Windows.Automation.Provider.IScrollItemProvider>|視情況而定|如果樹狀結構容器支援捲軸控制項模式，即實作此控制項模式。|  
 |<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|視情況而定|若在使用者回到樹狀結構容器時可以維持作用中的選取範圍，即實作此控制項模式。|  
-|<xref:System.Windows.Automation.Provider.ISelectionItemProvider.SelectionContainer%2A>|[是]|此屬性將為容器內的所有項目公開相同的容器。|  
+|<xref:System.Windows.Automation.Provider.ISelectionItemProvider.SelectionContainer%2A>|是|此屬性將為容器內的所有項目公開相同的容器。|  
 |<xref:System.Windows.Automation.Provider.IToggleProvider>|視情況而定|如果樹狀結構項目有相關聯的核取方塊，即實作此控制項模式。|  
   
 <a name="Required_UI_Automation_Events"></a>   

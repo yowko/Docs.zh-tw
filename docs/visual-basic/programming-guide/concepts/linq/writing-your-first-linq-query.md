@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: 44fbf35ee4ab5a0c4763269808f0817a33d05b40
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 83a1b7629672c6a74fd29ce698a6b8e6e152b1da
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42998433"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387630"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>撰寫第一個 LINQ 查詢 (Visual Basic)
 「查詢」是指從資料來源中擷取資料的運算式。 查詢會以專用的查詢語言來表示。 經過一段時間，不同的語言所開發的不同類型的資料來源，例如 SQL 用於關聯式資料庫，而 XQuery 用於 XML。 這可讓您所需的應用程式開發人員若要了解新的查詢語言，每種類型的資料來源或支援的資料格式。  
@@ -57,7 +57,7 @@ Dim db As New DataContext("C:\Northwind\Northwnd.mdf")
 Dim customers As Table(Of Customer) = db.GetTable(Of Customer)  
 ```  
   
- 如需如何建立特定資料來源類型的詳細資訊，請參閱各種 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供者的文件。 (如需這些提供者的清單，請參閱 < [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)。)基本規則很簡單：[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]資料來源是支援泛型的任何物件<xref:System.Collections.Generic.IEnumerable%601>介面或繼承自它的介面。  
+ 如需如何建立特定資料來源類型的詳細資訊，請參閱各種 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供者的文件。 (如需這些提供者的清單，請參閱 < [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)。)基本規則很簡單：[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]資料來源是支援泛型的任何物件<xref:System.Collections.Generic.IEnumerable%601>介面或繼承自它的介面。  
   
 > [!NOTE]
 >  類型，例如<xref:System.Collections.ArrayList>支援非泛型<xref:System.Collections.IEnumerable>介面也可用來當做[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]資料來源。 如需使用的範例<xref:System.Collections.ArrayList>，請參閱 <<c2> [ 如何： 使用 LINQ (Visual Basic) 查詢 ArrayList](how-to-query-an-arraylist-with-linq.md)。  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 60e9dd96824b2c9bef81d236bab8f577f9fb2062
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5db0925900a357134cf0103bbebbf5c9aac9e688
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399292"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386861"
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>將使用 WIF 3.5 建置的應用程式移轉至 WIF 4.5 的方針
 ## <a name="applies-to"></a>適用於  
@@ -27,7 +27,7 @@ ms.locfileid: "33399292"
 ### <a name="assembly-and-namespace-changes"></a>組件和命名空間變更  
  在 WIF 3.5 中，所有 WIF 類別都已包含在 `Microsoft.IdentityModel` 組件 (microsoft.identitymicrosoft.identitymodel.dll) 中。 在 WIF 4.5 中，WIF 類別已分成下列組件：`mscorlib`(mscorlib.dll)、`System.IdentityModel` (System.IdentityModel.dll)、`System.IdentityModel.Services` (System.IdentityModel.Services.dll) 和 `System.ServiceModel` (System.ServiceModel.dll)。  
   
- WIF 3.5 類別全部包含在其中一個 `Microsoft.IdentityModel` 命名空間中；例如，`Microsoft.IdentityModel`、`Microsoft.IdentityModel.Tokens`、`Microsoft.IdentityModel.Web` 等等。 在 WIF 4.5 中，WIF 類別現在會散佈到 [System.IdentityModel](http://go.microsoft.com/fwlink/?LinkId=272004) 命名空間、<xref:System.Security.Claims?displayProperty=nameWithType> 命名空間和 <xref:System.ServiceModel.Security?displayProperty=nameWithType> 命名空間。 除了這項重組之外，WIF 4.5 中已卸除一些 WIF 3.5 類別。  
+ WIF 3.5 類別全部包含在其中一個 `Microsoft.IdentityModel` 命名空間中；例如，`Microsoft.IdentityModel`、`Microsoft.IdentityModel.Tokens`、`Microsoft.IdentityModel.Web` 等等。 在 WIF 4.5 中，WIF 類別現在會散佈到 [System.IdentityModel](https://go.microsoft.com/fwlink/?LinkId=272004) 命名空間、<xref:System.Security.Claims?displayProperty=nameWithType> 命名空間和 <xref:System.ServiceModel.Security?displayProperty=nameWithType> 命名空間。 除了這項重組之外，WIF 4.5 中已卸除一些 WIF 3.5 類別。  
   
  下表顯示一些更重要的 WIF 4.5 命名空間以及它們所含的類別類型。 如需 WIF 3.5 與 WIF 4.5 間之命名空間對應方式以及已在 WIF 4.5 中卸除之命名空間和類別的詳細資訊，請參閱 [WIF 3.5 和 WIF 4.5 之間的命名空間對應](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)。  
   
@@ -93,11 +93,11 @@ ms.locfileid: "33399292"
  如需 WIF 4.5 組態項目的完整清單，請參閱 [WIF 組態結構描述](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)。  
   
 ### <a name="visual-studio-tooling-changes"></a>Visual Studio 工具變更  
- WIF 3.5 SDK 已提供獨立同盟公用程式 FedUtil.exe (FedUtil)，可用來將具 WIF 功能之應用程式中的身分識別管理外包到安全性權杖服務 (STS)。 此工具已在應用程式組態檔中新增 WIF 設定，以讓應用程式從一或多個 STS 取得安全性權杖，並透過 [Add STS Service Reference] \(新增 STS 服務參考)  按鈕呈現在 Visual Studio 中。 FedUtil 未隨附於 WIF 4.5。 相反地，WIF 4.5 支援名為「Visual Studio 2012 的身分識別和存取工具」的新 Visual Studio 延伸模組，用來使用將身分識別管理外包到 STS 所需的 WIF 設定來修改應用程式組態檔。 身分識別和存取工具也會實作稱為「本機 STS」的 STS，以用來測試具 WIF 功能的應用程式。 在許多情況下，這項功能都不需要建置自訂 STS，而這些自訂 STS 通常是 WIF 3.5 中測試開發中解決方案的必要項目。 基於這個原因，Visual Studio 2012 中不再支援 STS 範本；不過，WIF 4.5 仍然支援開發 STS 的類別。  
+ WIF 3.5 SDK 已提供獨立同盟公用程式 FedUtil.exe (FedUtil)，可用來將具 WIF 功能之應用程式中的身分識別管理外包到安全性權杖服務 (STS)。 此工具已在應用程式組態檔中新增 WIF 設定，以讓應用程式從一或多個 STS 取得安全性權杖，並透過 [Add STS Service Reference] (新增 STS 服務參考)  按鈕呈現在 Visual Studio 中。 FedUtil 未隨附於 WIF 4.5。 相反地，WIF 4.5 支援名為「Visual Studio 2012 的身分識別和存取工具」的新 Visual Studio 延伸模組，用來使用將身分識別管理外包到 STS 所需的 WIF 設定來修改應用程式組態檔。 身分識別和存取工具也會實作稱為「本機 STS」的 STS，以用來測試具 WIF 功能的應用程式。 在許多情況下，這項功能都不需要建置自訂 STS，而這些自訂 STS 通常是 WIF 3.5 中測試開發中解決方案的必要項目。 基於這個原因，Visual Studio 2012 中不再支援 STS 範本；不過，WIF 4.5 仍然支援開發 STS 的類別。  
   
- 您可以從 Visual Studio 的延伸模組和更新管理員中安裝身分識別和存取工具，也可以從 Code Gallery 的下列頁面下載它：[Code Gallery 上的 Visual Studio 2012 的身分識別和存取工具](http://go.microsoft.com/fwlink/?LinkID=245849)。 下列清單摘要說明 Visual Studio 工具變更：  
+ 您可以從 Visual Studio 的延伸模組和更新管理員中安裝身分識別和存取工具，也可以從 Code Gallery 的下列頁面下載它：[Code Gallery 上的 Visual Studio 2012 的身分識別和存取工具](https://go.microsoft.com/fwlink/?LinkID=245849)。 下列清單摘要說明 Visual Studio 工具變更：  
   
--   已移除 [Add STS Service Reference] \(新增 STS 服務參考) 功能。 取代項目是身分識別和存取工具。  
+-   已移除 [Add STS Service Reference] (新增 STS 服務參考) 功能。 取代項目是身分識別和存取工具。  
   
 -   已移除 Visual Studio STS 範本。 您可以使用透過身分識別和存取工具取得的「本機 STS」來設定您使用 WIF 所開發的身分識別解決方案。 「本機 STS」組態可以修改成自訂它所提供的宣告。  
   
@@ -136,7 +136,7 @@ ms.locfileid: "33399292"
 ## <a name="enabling-wif-35-in-windows-8"></a>在 Windows 8 中啟用 WIF 3.5  
  因為 WIF 4.5 是 .NET 4.5 的一部分，所以會在執行 Windows 8 和 Windows Server 2012 的電腦上自動予以啟用，而且使用 WIF 4.5 所建置的應用程式預設會在 Windows 8 或 Windows Server 2012 下執行。 不過，您可能需要在執行 Windows 8 或 Windows Server 2012 的電腦上執行使用 WIF 3.5 所建置的應用程式。 在此情況下，您需要在目標電腦上啟用 WIF 3.5。 在執行 Windows 8 的電腦上，您可以使用部署映像服務和管理 (DISM) 工具來達成這項作業。 在執行 Windows Server 2012 的電腦上，您可以使用 DISM 工具，也可以使用 Windows PowerShell `Add-WindowsFeature` Cmdlet。 在這兩種情況下，可以在命令列或從 Windows PowerShell 環境中叫用適當的命令。  
   
- 下列命令示範如何從命令列或 Windows PowerShell 環境中使用 DISM 工具。 根據預設，DISM PowerShell 模組包含在 Windows 8 和 Windows Server 2012 中，因此不需要進行匯入。 如需搭配使用 DISM 與 Windows PowerShell 的詳細資訊，請參閱[在 Windows PowerShell 中使用 DISM](http://go.microsoft.com/fwlink/?LinkId=254419)。  
+ 下列命令示範如何從命令列或 Windows PowerShell 環境中使用 DISM 工具。 根據預設，DISM PowerShell 模組包含在 Windows 8 和 Windows Server 2012 中，因此不需要進行匯入。 如需搭配使用 DISM 與 Windows PowerShell 的詳細資訊，請參閱[在 Windows PowerShell 中使用 DISM](https://go.microsoft.com/fwlink/?LinkId=254419)。  
   
  使用 DISM 啟用 WIF 3.5：  
   

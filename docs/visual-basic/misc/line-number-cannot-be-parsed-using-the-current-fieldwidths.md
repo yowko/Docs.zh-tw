@@ -1,17 +1,17 @@
 ---
-title: 行&lt;數目&gt;無法使用目前的 FieldWidths 剖析
+title: 線條&lt;數字&gt;無法使用目前的 FieldWidths 剖析
 ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_MalFormedFixedWidthLine
 ms.assetid: 84e14245-dfdf-4b62-8b84-e83a31608899
-ms.openlocfilehash: d827398234301e2e39245cbf4531b45f0e3d2146
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 57390700ab0ef47cc7e6b5521a3691a8e5812a9e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33637913"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387407"
 ---
-# <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-fieldwidths"></a>行&lt;數目&gt;無法使用目前的 FieldWidths 剖析
+# <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-fieldwidths"></a>線條&lt;數字&gt;無法使用目前的 FieldWidths 剖析
 無法剖析指定的行，因為其欄位的寬度不是指定的寬度。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
@@ -23,5 +23,5 @@ ms.locfileid: "33637913"
  [My.Computer.FileSystem.OpenTextFieldParser](xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A)  
  [使用 TextFieldParser 物件剖析文字檔](../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
  [TextFieldParser 物件](../../visual-basic/language-reference/objects/textfieldparser-object.md)  
- [TextFieldParser.FieldWidths 屬性](http://msdn.microsoft.com/library/c6985360-60c6-494e-89e7-43b6b73f2597)  
- [TextFieldParser.SetFieldWidths 方法](http://msdn.microsoft.com/library/958fed9f-e0f3-4fc5-83b4-386156bdf036)
+ [TextFieldParser.FieldWidths 屬性](https://msdn.microsoft.com/library/c6985360-60c6-494e-89e7-43b6b73f2597)  
+ [TextFieldParser.SetFieldWidths 方法](https://msdn.microsoft.com/library/958fed9f-e0f3-4fc5-83b4-386156bdf036)

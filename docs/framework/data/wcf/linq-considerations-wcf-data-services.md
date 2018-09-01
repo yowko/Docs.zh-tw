@@ -9,34 +9,34 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: 030c8e12b45cfc11d1440a410c69d8bc911c56c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 92b3444f81f00ee709c22836126073d342c6fa05
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365965"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394636"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>LINQ 考量 (WCF Data Services)
-本主題所提供的資訊是關於您要使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端時所撰寫和執行 LINQ 查詢的方式，以及使用 LINQ 查詢實作 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 之資料服務的限制。 如需有關撰寫及執行針對查詢[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-基礎資料服務，請參閱[查詢資料服務](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)。  
+本主題所提供的資訊是關於您要使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端時所撰寫和執行 LINQ 查詢的方式，以及使用 LINQ 查詢實作 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 之資料服務的限制。 如需有關撰寫和執行查詢，針對[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-型資料服務，請參閱 <<c2> [ 查詢資料服務](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)。  
   
 ## <a name="composing-linq-queries"></a>撰寫 LINQ 查詢  
- LINQ 可讓您針對實作 <xref:System.Collections.Generic.IEnumerable%601> 之物件的集合，撰寫查詢。 這兩個**加入服務參考**Visual Studio 中的對話方塊和 DataSvcUtil.exe 工具用來產生表示[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]服務的實體容器類別繼承自<xref:System.Data.Services.Client.DataServiceContext>，以及代表摘要中傳回的實體物件。 這些工具也會針對服務公開為摘要的集合，產生實體容器類別的屬性。 封裝資料服務之類別的這些每個屬性都會傳回 <xref:System.Data.Services.Client.DataServiceQuery%601>。 <xref:System.Data.Services.Client.DataServiceQuery%601> 類別會實作 LINQ 所定義的 <xref:System.Linq.IQueryable%601> 介面，因此，您可以針對資料服務所公開的摘要，撰寫 LINQ 查詢，用戶端程式庫會將這些摘要轉譯為執行時傳送至資料服務的查詢要求 URI。  
+ LINQ 可讓您針對實作 <xref:System.Collections.Generic.IEnumerable%601> 之物件的集合，撰寫查詢。 這兩個**加入服務參考**Visual Studio 中的對話方塊和 DataSvcUtil.exe 工具用來產生表示[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]服務的實體容器類別繼承自<xref:System.Data.Services.Client.DataServiceContext>，以及物件，表示摘要中傳回的實體。 這些工具也會針對服務公開為摘要的集合，產生實體容器類別的屬性。 封裝資料服務之類別的這些每個屬性都會傳回 <xref:System.Data.Services.Client.DataServiceQuery%601>。 <xref:System.Data.Services.Client.DataServiceQuery%601> 類別會實作 LINQ 所定義的 <xref:System.Linq.IQueryable%601> 介面，因此，您可以針對資料服務所公開的摘要，撰寫 LINQ 查詢，用戶端程式庫會將這些摘要轉譯為執行時傳送至資料服務的查詢要求 URI。  
   
 > [!IMPORTANT]
->  可以用 LINQ 語法表示的查詢集合會比在 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 資料服務所使用之 URI 語法中啟用的查詢集合更廣泛。 當查詢無法對應至目標資料服務中的 URI 時，就會引發 <xref:System.NotSupportedException>。 如需詳細資訊，請參閱[不受支援的 LINQ 方法](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md#unsupportedMethods)本主題中。  
+>  可以用 LINQ 語法表示的查詢集合會比在 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 資料服務所使用之 URI 語法中啟用的查詢集合更廣泛。 當查詢無法對應至目標資料服務中的 URI 時，就會引發 <xref:System.NotSupportedException>。 如需詳細資訊，請參閱 <<c0> [ 不支援的 LINQ 方法](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md#unsupportedMethods)本主題中。  
   
  下列範例是 LINQ 查詢，它會傳回運費成本超過美金 $30 元的 `Orders`，並依運送日期排序結果 (從最近的運送日期開始)：  
   
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addqueryoptionslinqspecific)]      
 [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addqueryoptionslinqspecific)]    
   
- 此 LINQ 查詢會轉譯為下列的查詢執行針對 Northwind 架構的 URI[快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)資料服務：  
+ 此 LINQ 查詢轉譯為下列查詢會針對以 Northwind 為基礎執行的 URI[快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)資料服務：  
   
 ```  
 http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight gt 30  
 ```  
   
- 多個一般 LINQ 的詳細資訊，請參閱[LINQ (Language-Integrated Query ()](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)。  
+ 如需一般 LINQ 的詳細資訊，請參閱[LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)。  
   
  LINQ 可讓您同時使用語言專屬的宣告式查詢語法 (如以上範例所示)，以及所謂標準查詢運算子的一組查詢方法來撰寫查詢。 相當於以上範例的查詢僅能使用以方法為基礎的語法撰寫，如以下範例所示：  
   
@@ -46,11 +46,11 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端可以將這兩種撰寫查詢轉譯成查詢 URI，而且您可以藉由將查詢方法附加到查詢運算式，來擴充 LINQ 查詢。 當您藉由將方法語法附加到查詢運算式或 <xref:System.Data.Services.Client.DataServiceQuery%601> 來撰寫 LINQ 查詢時，會以呼叫方法的順序，將運算加入至查詢 URI。 這相當於呼叫 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 方法，將每個查詢選項加入至查詢 URI。  
   
 ## <a name="executing-linq-queries"></a>執行 LINQ 查詢  
- 當 <xref:System.Linq.Enumerable.First%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> 或 <xref:System.Linq.Enumerable.Single%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> 之類的特定 LINQ 查詢方法附加至查詢時，會執行該查詢。 以隱含的方式列舉結果時 (例如在 `foreach` 執行迴圈期間)，或將查詢指派到 `List` 集合時，也會執行查詢。 如需詳細資訊，請參閱[查詢資料服務](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)。  
+ 當 <xref:System.Linq.Enumerable.First%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> 或 <xref:System.Linq.Enumerable.Single%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> 之類的特定 LINQ 查詢方法附加至查詢時，會執行該查詢。 以隱含的方式列舉結果時 (例如在 `foreach` 執行迴圈期間)，或將查詢指派到 `List` 集合時，也會執行查詢。 如需詳細資訊，請參閱 <<c0> [ 查詢資料服務](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)。  
   
- 用戶端會以兩個部分執行 LINQ 查詢。 如果可能，查詢中的 LINQ 運算式會先在用戶端上進行評估，然後產生 URI 架構的查詢，並將其傳送至資料服務，以便針對服務中的資料進行評估。 如需詳細資訊，請參閱下節[用戶端與伺服器執行](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md#executingQueries)中[查詢資料服務](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)。  
+ 用戶端會以兩個部分執行 LINQ 查詢。 如果可能，查詢中的 LINQ 運算式會先在用戶端上進行評估，然後產生 URI 架構的查詢，並將其傳送至資料服務，以便針對服務中的資料進行評估。 如需詳細資訊，請參閱[用戶端與伺服器執行的比較](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md#executingQueries)中[查詢資料服務](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)。  
   
- 在與 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 相容的查詢 URI 中無法轉譯 LINQ 查詢時，如果嘗試執行，就會引發例外狀況。 如需詳細資訊，請參閱[查詢資料服務](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)。  
+ 在與 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 相容的查詢 URI 中無法轉譯 LINQ 查詢時，如果嘗試執行，就會引發例外狀況。 如需詳細資訊，請參閱 <<c0> [ 查詢資料服務](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)。  
   
 ## <a name="linq-query-examples"></a>LINQ 查詢範例  
  以下各節中的範例會示範可以針對 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 服務執行的 LINQ 查詢種類。  
@@ -137,7 +137,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
 <a name="expand"></a>   
 ### <a name="expand"></a>展開  
- 當您查詢 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 資料服務時，可以要求與查詢做為目標之實體相關的實體包含傳回的摘要。 系統會針對 LINQ 查詢做為目標的實體集，在 <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 上呼叫 <xref:System.Data.Services.Client.DataServiceQuery%601> 方法，並將相關的實體集名稱當做 `path` 參數提供。 如需詳細資訊，請參閱[載入延後內容](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)。  
+ 當您查詢 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 資料服務時，可以要求與查詢做為目標之實體相關的實體包含傳回的摘要。 系統會針對 LINQ 查詢做為目標的實體集，在 <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 上呼叫 <xref:System.Data.Services.Client.DataServiceQuery%601> 方法，並將相關的實體集名稱當做 `path` 參數提供。 如需詳細資訊，請參閱 <<c0> [ 載入延後內容](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)。  
   
  下列範例示範相當於在查詢中使用 <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 方法的方式：  
   
@@ -195,7 +195,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 |<xref:System.DateTime.Second>|`int second(DateTime p0)`|  
 |<xref:System.DateTime.Year>|`int year(DateTime p0)`|  
   
- <sup>1</sup>相等的日期和時間內容的<xref:Microsoft.VisualBasic.DateAndTime?displayProperty=nameWithType>，並將<xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>也支援在 Visual Basic 中的方法。  
+ <sup>1</sup>相等的日期和時間屬性<xref:Microsoft.VisualBasic.DateAndTime?displayProperty=nameWithType>，以及<xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>也支援在 Visual Basic 中的方法。  
   
 |<xref:System.Math> 成員|支援的 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 函數|  
 |---------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|  
@@ -216,4 +216,4 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  [查詢資料服務](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
  [查詢投影](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)  
  [物件具體化](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)  
- [OData: URI 慣例](http://go.microsoft.com/fwlink/?LinkID=185564)
+ [OData: URI 慣例](https://go.microsoft.com/fwlink/?LinkID=185564)

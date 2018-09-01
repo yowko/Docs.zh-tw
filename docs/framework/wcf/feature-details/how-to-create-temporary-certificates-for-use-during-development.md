@@ -5,22 +5,22 @@ helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 8310e7c465d0e3494482b6a38a7b2a67b67ae842
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3b051c7ea152606721388ea35b6f508eada1c5d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495362"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385173"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>HOW TO：建立開發時要使用的暫時憑證
-在開發安全的服務或用戶端會使用 Windows Communication Foundation (WCF) 時，則通常需要提供來做為認證的 X.509 憑證。 憑證通常是憑證鏈結的一部分，在電腦的 [受信任的根憑證授權單位] 存放區中有根授權。 具有憑證鏈結可讓您設定一組憑證的範圍，其中根授權通常來自您的組織或企業單位。 如果要在開發期間進行模擬，您可以建立兩種憑證以滿足安全性需求。 第一種是放在 [受信任的根憑證授權單位] 存放區中的自我簽署憑證，而第二種憑證是從第一種建立的，並放在個人存放區或本機位置，或目前使用者位置的個人存放區。 本主題將逐步帶領您使用由 [SDK 所提供的](http://go.microsoft.com/fwlink/?LinkId=248185)憑證建立工具 (MakeCert.exe) [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 來建立這兩種憑證。  
+開發安全的服務或使用 Windows Communication Foundation (WCF) 用戶端時，通常必須提供要用做為認證的 X.509 憑證。 憑證通常是憑證鏈結的一部分，在電腦的 [受信任的根憑證授權單位] 存放區中有根授權。 具有憑證鏈結可讓您設定一組憑證的範圍，其中根授權通常來自您的組織或企業單位。 如果要在開發期間進行模擬，您可以建立兩種憑證以滿足安全性需求。 第一種是放在 [受信任的根憑證授權單位] 存放區中的自我簽署憑證，而第二種憑證是從第一種建立的，並放在個人存放區或本機位置，或目前使用者位置的個人存放區。 本主題逐步解說建立使用這兩種憑證的步驟[憑證建立工具 (MakeCert.exe)](https://go.microsoft.com/fwlink/?LinkId=248185)，這由提供[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]SDK。  
   
 > [!IMPORTANT]
 >  憑證建立工具所產生的憑證僅針對測試用途提供。 當部署服務或用戶端時，請確定使用由憑證授權單位所提供的適當憑證。 這可能是來自您組織中的 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 憑證伺服器或協力廠商。  
 >   
->  根據預設， [Makecert.exe （憑證建立工具）](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)建立的憑證的根授權稱為 「 根代理者 **。 」** 由於「根代理者」不是在 [受信任的根憑證授權單位] 存放區中，因此會讓這些憑證變得不安全。 建立位於 [受信任的根憑證授權單位] 存放區中的自我簽署憑證，可讓您建立一個更能夠模擬您開發環境的開發環境。  
+>  根據預設， [Makecert.exe （憑證建立工具）](https://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)會建立的憑證的根授權稱為 「 根代理者 **。 」** 由於「根代理者」不是在 [受信任的根憑證授權單位] 存放區中，因此會讓這些憑證變得不安全。 建立位於 [受信任的根憑證授權單位] 存放區中的自我簽署憑證，可讓您建立一個更能夠模擬您開發環境的開發環境。  
   
- 如需有關建立及使用憑證的詳細資訊，請參閱[使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。 如需使用憑證做為認證的詳細資訊，請參閱[保護服務和用戶端](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)。 如需有關使用 Microsoft Authenticode 技術的教學課程，請參閱 [Authenticode 概觀與教學課程 (英文)](http://go.microsoft.com/fwlink/?LinkId=88919)。  
+ 如需有關建立及使用憑證的詳細資訊，請參閱 < [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。 如需使用憑證做為認證的詳細資訊，請參閱[Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)。 如需有關使用 Microsoft Authenticode 技術的教學課程，請參閱 < [Authenticode 概觀與教學課程](https://go.microsoft.com/fwlink/?LinkId=88919)。  
   
 ### <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>建立自我簽署根授權憑證及匯出私密金鑰  
   
@@ -63,7 +63,7 @@ ms.locfileid: "33495362"
   
 #### <a name="to-install-a-self-signed-certificate-in-the-trusted-root-certification-authorities"></a>在受信任的根憑證授權單位中安裝自我簽署憑證  
   
-1.  請開啟憑證嵌入式管理單元。 如需詳細資訊，請參閱[How to： 使用 MMC 嵌入式管理單元檢視憑證](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。  
+1.  請開啟憑證嵌入式管理單元。 如需詳細資訊，請參閱[如何：使用 MMC 嵌入式管理單元來檢視憑證](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。  
   
 2.  開啟資料夾以儲存憑證，可以是 [ **本機電腦** ] 或 [ **目前使用者**]。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "33495362"
     </bindings>  
     ```  
   
- 在用戶端組態檔中，使用下列 XML 指定憑證位於使用者的存放區，而且可以找到 SubjectName 欄位中搜尋值"CohoWinery"。  
+ 在用戶端的組態檔，請使用下列 XML 來指定憑證位於使用者的存放區，並且可搜尋在 SubjectName 欄位中的值"CohoWinery"。  
   
 ```xml  
 <behaviors>  

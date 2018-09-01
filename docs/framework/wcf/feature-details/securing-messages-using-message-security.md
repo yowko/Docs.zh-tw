@@ -4,30 +4,30 @@ ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 1ebe2526e564ef24d20f1602fd5824b44e2e2bbd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d895524d36895ad087f7394fcc3380573355eaad
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498686"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392026"
 ---
 # <a name="securing-messages-using-message-security"></a>使用訊息安全性來保護訊息的安全
 本章節將討論 WCF 訊息安全性時使用<xref:System.ServiceModel.NetMsmqBinding>。  
   
 > [!NOTE]
->  先閱讀本主題，建議您先閱讀[安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)。  
+>  之前閱讀本主題，建議您先閱讀[安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)。  
   
  下圖提供使用 WCF 的佇列通訊概念模型。 此圖例和術語是要用來說明  
   
  傳輸安全性概念。  
   
- ![排入佇列的應用程式圖表](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "分散式佇列圖")  
+ ![已排入佇列應用程式圖表](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "分散式佇列圖")  
   
- 當傳送佇列使用 WCF 訊息時，會將 WCF 訊息附加為 Message Queuing (MSMQ) 訊息本文。 傳輸安全性會保護整個 MSMQ 訊息的安全，而訊息 (或 SOAP) 安全性只能保護 MSMQ 訊息本文的安全。  
+ 當傳送佇列使用 WCF 訊息時，WCF 訊息附加做為訊息佇列 (MSMQ) 訊息的主體。 傳輸安全性會保護整個 MSMQ 訊息的安全，而訊息 (或 SOAP) 安全性只能保護 MSMQ 訊息本文的安全。  
   
- 訊息安全性的重要概念是用戶端必須保護接收應用程式 (服務) 之訊息安全，這點不同於用戶端要保護目標佇列之訊息安全的傳輸安全性。 因此，MSMQ 並無任何作用，確保使用訊息安全性的 WCF 訊息時。  
+ 訊息安全性的重要概念是用戶端必須保護接收應用程式 (服務) 之訊息安全，這點不同於用戶端要保護目標佇列之訊息安全的傳輸安全性。 保護 WCF 訊息使用訊息安全性時，此情況下，MSMQ 並無任何作用。  
   
- WCF 訊息安全性會將安全性標頭加入至 WCF 訊息與現有安全性基礎結構，例如憑證或 Kerberos 通訊協定整合。  
+ WCF 訊息安全性會將與現有安全性基礎結構，例如憑證或 Kerberos 通訊協定整合的 WCF 訊息中的安全性標頭。  
   
 ## <a name="message-credential-type"></a>訊息認證類型  
  使用訊息安全性時，服務和用戶端可提供認證來彼此驗證。 您可以將 <xref:System.ServiceModel.NetMsmqBinding.Security%2A> 模式設定為 `Message` 或 `Both` (也就是同時使用傳輸安全性與訊息安全性) 來選取訊息安全性。  
@@ -43,7 +43,7 @@ ms.locfileid: "33498686"
   
  由於佇列中斷的關係，用戶端和服務可能不會在同時位於線上。 因此，用戶端和服務必須超出範圍地交換憑證。 尤其是用戶端因為有在其信任的存放區中保存服務的憑證 (該憑證可以鏈結至憑證授權單位)，所以它必定會信任自己是與正確的服務進行通訊。 為了驗證用戶端，服務會使用訊息附加的 X.509 憑證來比對在其存放區中的憑證，以便確認該用戶端的真實性。 同樣的，該憑證一定會鏈結至憑證授權單位。  
   
- 在執行 Windows 的電腦上，憑證會保存在幾種存放區中。 如需不同的存放區的詳細資訊，請參閱[憑證存放區](http://go.microsoft.com/fwlink/?LinkId=87787)。  
+ 在執行 Windows 的電腦上，憑證會保存在幾種存放區中。 如需有關不同存放區的詳細資訊，請參閱[憑證存放區](https://go.microsoft.com/fwlink/?LinkId=87787)。  
   
 ### <a name="windows"></a>Windows  
  Windows 訊息認證類型會使用 Kerberos 通訊協定。  
@@ -54,7 +54,7 @@ ms.locfileid: "33498686"
   
  請注意，當使用這個認證類型時，服務必須在 SERVICE 帳戶下執行。  
   
- 選擇訊息認證時會預設使用 Kerberos 通訊協定。 如需詳細資訊，請參閱[瀏覽 Kerberos、 Windows 2000 中的分散式安全性的通訊協定](http://go.microsoft.com/fwlink/?LinkId=87790)。  
+ 選擇訊息認證時會預設使用 Kerberos 通訊協定。 如需詳細資訊，請參閱 <<c0> [ 探索 Kerberos、 Windows 2000 中的分散式安全性的通訊協定](https://go.microsoft.com/fwlink/?LinkId=87790)。  
   
 ### <a name="username-password"></a>Username Password  
  使用這個屬性，用戶端便可使用訊息之安全性標頭中的使用者名稱密碼，來向伺服器進行驗證。  

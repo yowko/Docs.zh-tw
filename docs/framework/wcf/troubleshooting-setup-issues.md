@@ -2,12 +2,12 @@
 title: 疑難排解安裝程式問題
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 3c750aa4f9a4ec4750aa24ffcd685c9c349a45a7
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 0270bd8c1006b39805e3486c4fef0cb379089ea8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806509"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390075"
 ---
 # <a name="troubleshooting-setup-issues"></a>疑難排解安裝程式問題
 本主題描述如何疑難排解 Windows Communication Foundation (WCF) 設定問題。  
@@ -25,7 +25,7 @@ ms.locfileid: "33806509"
   
 -   HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSDTC Bridge 3.0.0.0  
   
- 索引鍵不會重新建立如果使用.NET Framework 3.0 安裝程式從啟動執行修復**新增/移除程式**applet 中的**控制台**。 若要正確地重新建立這些機碼，使用者必須解除安裝並重新安裝 .NET Framework 3.0。  
+ 索引鍵不會重新建立如果您使用.NET Framework 3.0 安裝程式從啟動執行修復**新增/移除程式**在 applet**控制台**。 若要正確地重新建立這些機碼，使用者必須解除安裝並重新安裝 .NET Framework 3.0。  
   
 ## <a name="wmi-service-corruption-blocks-installation-of-the-windows-communication-foundation-wmi-provider-during-installation-of-net-framework-30-package"></a>WMI 服務損毀在 .NET Framework 3.0 套件安裝期間封鎖 Windows Communication Foundation WMI 提供者的安裝  
  WMI 服務損毀可能會封鎖 Windows Communication Foundation WMI 提供者的安裝。 在進行安裝時，Windows Communication Foundation 安裝程式無法使用 mofcomp.exe 元件來註冊 WCF .mof 檔。 可能徵兆如下所示：  
@@ -52,22 +52,22 @@ ms.locfileid: "33806509"
   
  您必須遵循下列步驟才能解決上述問題。  
   
-1.  執行[WMI Diagnosis Utility，2.0 版](http://go.microsoft.com/fwlink/?LinkId=94685)修復 WMI 服務。 如需有關使用此工具的詳細資訊，請參閱[WMI Diagnosis Utility](http://go.microsoft.com/fwlink/?LinkId=94686)主題。  
+1.  執行[WMI Diagnosis Utility，2.0 版](https://go.microsoft.com/fwlink/?LinkId=94685)以修復 WMI 服務。 如需使用此工具的詳細資訊，請參閱[WMI Diagnosis Utility](https://go.microsoft.com/fwlink/?LinkId=94686)主題。  
   
- 使用修復.NET Framework 3.0 安裝**新增/移除程式**小程式位於**控制台**，或是解除安裝/重新安裝.NET Framework 3.0。  
+ 使用修復.NET Framework 3.0 安裝**新增/移除程式**小程式位於**控制台**，或解除安裝/重新安裝.NET Framework 3.0。  
   
 ## <a name="repairing-net-framework-30-after-net-framework-35-installation-removes-configuration-elements-introduced-by-net-framework-35-in-machineconfig"></a>在安裝 .NET Framework 3.5 後修復 .NET Framework 3.0 會將 machine.config 中由 .NET Framework 3.5 引入的組態項目移除  
- 如果您要在安裝 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 後修復 .NET Framework 3.0，則會將 machine.config 中由 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 引入的組態項目移除。 不過，web.config 會保持不變。 因應措施是修復[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]之後透過 ARP 或使用[WorkFlow 服務登錄工具 (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)與`/c`切換。  
+ 如果您要在安裝 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 後修復 .NET Framework 3.0，則會將 machine.config 中由 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 引入的組態項目移除。 不過，web.config 會保持不變。 因應措施是要修復[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]先透過 ARP 或使用[WorkFlow 服務登錄工具 (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)使用`/c`切換。  
   
  [WorkFlow 服務登錄工具 (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)位於 %windir%\Microsoft.NET\framework\v3.5\ 或 %windir%\Microsoft.NET\framework64\v3.5\  
   
 ## <a name="configure-iis-properly-for-wcfwf-webhost-after-installing-net-framework-35"></a>在安裝 .NET Framework 3.5 之後，適當地為 WCF/WF Webhost 設定 IIS  
- 當[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]安裝無法設定其他 WCF 相關的 IIS 組態設定，它在安裝記錄檔中記錄錯誤，並繼續進行。 任何執行 WorkflowServices 應用程式的嘗試都將失敗，因為缺少必要的組態設定。 例如，無法載入 xoml 或規則服務。  
+ 當[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]安裝無法設定額外的 WCF 相關的 IIS 組態設定，，它在安裝記錄檔中記錄錯誤並繼續進行。 任何執行 WorkflowServices 應用程式的嘗試都將失敗，因為缺少必要的組態設定。 例如，無法載入 xoml 或規則服務。  
   
- 若要解決這個問題，請使用[WorkFlow 服務登錄工具 (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)與`/c`切換到正確的電腦上設定 IIS 指令碼對應。 [WorkFlow 服務登錄工具 (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)位於 %windir%\Microsoft.NET\framework\v3.5\ 或 %windir%\Microsoft.NET\framework64\v3.5\  
+ 若要解決這個問題，請使用[WorkFlow 服務登錄工具 (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)使用`/c`切換到正確的電腦上設定 IIS 指令碼對應。 [WorkFlow 服務登錄工具 (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)位於 %windir%\Microsoft.NET\framework\v3.5\ 或 %windir%\Microsoft.NET\framework64\v3.5\  
   
 ## <a name="could-not-load-type-systemservicemodelactivationhttpmodule-from-assembly-systemservicemodel-version-3000-cultureneutral-publickeytokenb77a5c561934e089"></a>無法從組件 ‘System.ServiceModel, Version 3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089’ 載入類型 ‘System.ServiceModel.Activation.HttpModule’  
- 如果發生此錯誤[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]已安裝，然後啟用 WCF HTTP 啟用。 若要解決這個問題，請從 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)] 命令提示字元內部執行下列命令列：  
+ 如果發生此錯誤[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]安裝，然後啟用 WCF HTTP 啟用。 若要解決這個問題，請從 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)] 命令提示字元內部執行下列命令列：  
   
 ```Output  
 aspnet_regiis.exe -i -enable  

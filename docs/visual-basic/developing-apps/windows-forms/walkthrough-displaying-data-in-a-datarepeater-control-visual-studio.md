@@ -8,11 +8,11 @@ helpviewer_keywords:
 - DataRepeater, walkthrough
 ms.assetid: 65dcdb95-6c3e-47cc-987d-190000f71653
 ms.openlocfilehash: 8e64a819e9670a29e97140a32c81f5ff9006f83e
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35231501"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388548"
 ---
 # <a name="walkthrough-displaying-data-in-a-datarepeater-control-visual-studio"></a>逐步解說：在 DataRepeater 控制項中顯示資料 (Visual Studio)
 本逐步解說提供在 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控制項中顯示繫結資料的基本完整情節。  
@@ -20,7 +20,7 @@ ms.locfileid: "35231501"
 ## <a name="prerequisite"></a>必要條件  
  這個逐步解說需要使用 Northwind 範例資料庫。  
   
- 如果您在開發電腦上沒有這個資料庫，您可以從 Microsoft 下載中心下載它。 如需指示，請參閱[下載範例資料庫](../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
+ 如果您的開發電腦上沒有這個資料庫，您可以從 Microsoft 下載中心下載它。 如需相關指示，請參閱 <<c0> [ 下載範例資料庫](../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
   
 ## <a name="overview"></a>總覽  
  本逐步解說的第一個部分包含四項主要工作：  
@@ -88,7 +88,7 @@ ms.locfileid: "35231501"
   
          -或-  
   
-    -   按一下 [新增連接]  ，設定新的資料連接。 如需詳細資訊，請參閱[加入新連接](/visualstudio/data-tools/add-new-connections)。  
+    -   按一下 [新增連接]  ，設定新的資料連接。 如需詳細資訊，請參閱 <<c0> [ 新增連線](/visualstudio/data-tools/add-new-connections)。  
   
 5.  如果資料庫需要密碼，請選取選項來加入敏感性資料，然後按 [下一步] 。  
   

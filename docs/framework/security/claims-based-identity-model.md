@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: dadcc397783e003574d417aa6253ebc561ed28db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 169a16126df395eabecfa969f63a004b9e27cb41
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398891"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385338"
 ---
 # <a name="claims-based-identity-model"></a>宣告式身分識別模型
 當您建置宣告感知應用程式時，使用者識別會在應用程式中以一組宣告表示。 一個宣告可以是使用者的名稱，另一個可能是電子郵件地址。 這個概念是外部識別系統設定為提供應用程式一切必要資訊，使其了解是哪位使用者在提出要求，並且確保會使用密碼編譯您自受信任來源取得的識別資料。  
@@ -40,7 +40,7 @@ ms.locfileid: "33398891"
  為了描述 Windows Identity Foundation (WIF) 中的程式設計模型，我們將使用「身分識別」一詞來表示一組屬性，這組屬性可用來描述要在系統中保護其安全性的使用者或其他某些實體。  
   
 ### <a name="claim"></a>宣告  
- 將宣告當做一小段識別資訊，例如名稱、 電子郵件地址、 年齡、 「 銷售 」 角色的成員資格。 應用程式接收的宣告愈多，也能讓您愈了解使用者。 您可能會好奇為什麼要使用「宣告」一詞，而不是像通常用於描述企業目錄的「屬性」一詞。 其中原因和傳遞方法有關。 在這個模型中，應用程式不會在目錄中查詢使用者屬性， 而是使用者提供宣告給應用程式，然後應用程式再檢查這些宣告。 每個宣告都是由簽發者發出呈現，而且您信任宣告的程度就如同信任簽發者一樣。 例如，與使用者本身發出的宣告相比，您更信任公司的網域控制站發出的宣告。 WIF 表示的宣告都包含 <xref:System.Security.Claims.Claim> 類型，這個類型的 <xref:System.Security.Claims.Claim.Issuer%2A> 屬性可讓您了解宣告的簽發者是誰。  
+ 將一個宣告當做一項身分識別資訊，例如名稱、 電子郵件地址、 年齡、 「 銷售 」 角色的成員資格。 應用程式接收的宣告愈多，也能讓您愈了解使用者。 您可能會好奇為什麼要使用「宣告」一詞，而不是像通常用於描述企業目錄的「屬性」一詞。 其中原因和傳遞方法有關。 在這個模型中，應用程式不會在目錄中查詢使用者屬性， 而是使用者提供宣告給應用程式，然後應用程式再檢查這些宣告。 每個宣告都是由簽發者發出呈現，而且您信任宣告的程度就如同信任簽發者一樣。 例如，與使用者本身發出的宣告相比，您更信任公司的網域控制站發出的宣告。 WIF 表示的宣告都包含 <xref:System.Security.Claims.Claim> 類型，這個類型的 <xref:System.Security.Claims.Claim.Issuer%2A> 屬性可讓您了解宣告的簽發者是誰。  
   
 ### <a name="security-token"></a>安全性權杖  
  使用者隨著要求提供一組宣告給應用程式。 在 Web 服務中，這些宣告是位於 SOAP 封套的安全性標頭內進行傳送。 在瀏覽器架構 Web 應用程式中，這些宣告則會從使用者的瀏覽器透過 HTTP POST 送出，而且如果工作階段有需要，之後就會被快取在 Cookie 中。 無論這些宣告如何抵達，都必須將它們序列化，這也是需要安全性權杖的地方。 安全性權杖是發行單位以數位方式簽署且經過序列化的宣告集合。 簽章重要之處在於，它可以確保使用者不是僅建立一大堆宣告然後就傳送給您。 雖然在不需要加密的低安全性情況下，您可以使用未簽署的權杖，但是這種情況不屬於本主題的說明範圍。  
@@ -53,7 +53,7 @@ ms.locfileid: "33398891"
  無論您選擇哪個發行單位，該單位在識別解決方案中都扮演著核心角色。 藉由信賴宣告的方式將驗證與應用程式分開，表示您要將責任移交給該單位並要求它代替您驗證使用者。  
   
 ### <a name="security-token-service-sts"></a>安全性權杖服務 (STS)  
- Security Token Service (STS) 這個服務元件可根據 WS-Trust 和 WS-Federation 通訊協定，建置、簽署和發行安全性權杖。 實作這些通訊協定是一項大工程，但是 WIF 會為您完成這些工作，讓不熟悉通訊協定領域的人也可以輕易使用和執行 STS。 您可以使用預先建置的 STS (例如 [Active Directory® Federation Services (AD FS) 2.0](http://go.microsoft.com/fwlink/?LinkID=247516)) 或雲端 STS (例如 [Windows Azure Access Control Service (ACS)](http://go.microsoft.com/fwlink/?LinkID=247517))。或者，如果您要發行自訂權杖或是提供自訂驗證或授權，也可以使用 WIF 建置專屬自訂 STS。 WIF 可讓您輕鬆建置專屬 STS。  
+ Security Token Service (STS) 這個服務元件可根據 WS-Trust 和 WS-Federation 通訊協定，建置、簽署和發行安全性權杖。 實作這些通訊協定是一項大工程，但是 WIF 會為您完成這些工作，讓不熟悉通訊協定領域的人也可以輕易使用和執行 STS。 您可以使用預先建置的 STS (例如 [Active Directory® Federation Services (AD FS) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516)) 或雲端 STS (例如 [Windows Azure Access Control Service (ACS)](https://go.microsoft.com/fwlink/?LinkID=247517))。或者，如果您要發行自訂權杖或是提供自訂驗證或授權，也可以使用 WIF 建置專屬自訂 STS。 WIF 可讓您輕鬆建置專屬 STS。  
   
 ### <a name="relying-party-application"></a>信賴憑證者應用程式  
  當您建置依賴宣告的應用程式時，表示您建立的是信賴憑證者 (RP) 應用程式。 RP 的同義字包含「宣告感知應用程式」和「宣告式應用程式」。 Web 應用程式和 Web 服務都可以是 RP。 RP 應用程式會使用 STS 發行的權杖，並從權杖擷取宣告方便進行識別相關工作。 WIF 可提供相關功能，協助您建置 RP 應用程式。  

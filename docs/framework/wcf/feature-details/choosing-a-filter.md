@@ -2,12 +2,12 @@
 title: 選擇篩選
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: 91b3802217a920ef3eeeccb5c4f85c66afee2430
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bc3bba9a2b00b35f3e0cff1786ea98cfa881f311
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494123"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386507"
 ---
 # <a name="choosing-a-filter"></a>選擇篩選
 設定路由服務時，務必選取正確的訊息篩選條件，並將它們設定為可針對您所接收的訊息進行正確的比對。 如果您選取的篩選條件在比對中過度廣泛，或設定不正確，則無法正確傳送訊息。 如果篩選條件過於嚴格，則部分訊息可能會沒有可用的有效路由。  
@@ -16,7 +16,7 @@ ms.locfileid: "33494123"
  選取由路由服務所使用的篩選條件時，務必了解每個篩選條件的運作方式，以及傳入訊息中有何可用的資訊。 例如，如果所有的訊息都是由相同的端點接收，Address 和 EndpointName 篩選條件的用處便不大，因為所有的訊息都符合這些篩選條件。  
   
 ### <a name="action"></a>動作  
- Action 篩選條件會檢查 <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A> 屬性。 如果訊息中的 Action 標頭內容符合在篩選組態中指定的篩選資料值，則此篩選條件會傳回 `true`。 下列範例會定義`FilterElement`使用動作篩選條件要比對訊息動作標頭，其中包含值"http://namespace/contract/operation/"。  
+ Action 篩選條件會檢查 <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A> 屬性。 如果訊息中的 Action 標頭內容符合在篩選組態中指定的篩選資料值，則此篩選條件會傳回 `true`。 下列範例會定義`FilterElement`使用動作篩選條件來比對訊息使用 action 標頭，其中包含值 「 http://namespace/contract/operation/"。  
   
 ```xml  
 <filter name="action1" filterType="Action" filterData="http://namespace/contract/operation/" />  
@@ -29,7 +29,7 @@ ActionMessageFilter action1 = new ActionMessageFilter(new string[] { "http://nam
  當路由訊息包含唯一的動作標頭時，應該使用此篩選條件。  
   
 ### <a name="endpointaddress"></a>EndpointAddress  
- EndpointAddress 篩選條件會檢查收到訊息的 EndpointAddress。 如果訊息到達的位址完全符合在篩選組態中指定的篩選位址，則此篩選條件會傳回 `true`。 下列範例會定義`FilterElement`比對定址到的任何訊息使用的位址篩選器"http://\<主機名稱 > / vdir/s.svc/b"。  
+ EndpointAddress 篩選條件會檢查收到訊息的 EndpointAddress。 如果訊息到達的位址完全符合在篩選組態中指定的篩選位址，則此篩選條件會傳回 `true`。 下列範例會定義`FilterElement`比對傳送到任何訊息使用的位址篩選器 」 http://\<主機名稱 > / vdir/s.svc/b"。  
   
 ```xml  
 <filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b" />  
@@ -80,7 +80,7 @@ StrictAndMessageFilter and1=new StrictAndMessageFilter(address1, action1);
  當您必須從多個篩選條件中結合邏輯，以便決定何時進行比對時，應使用此篩選。 例如，如果您有多個必須接收僅部分動作和特定位址訊息結合的目的地，便可使用 AND 篩選條件來結合必要的 Action 和 Address 篩選條件。  
   
 ### <a name="custom"></a>自訂  
- 當選取 Custom 篩選條件類型時，您必須提供包含組件，其中包含的類型的 customType 值**MessageFilter**實作来用於此篩選條件。 另外，filterData 必須包含自訂篩選在其訊息評估中可能需要的任何值。 下列範例會定義 `FilterElement`，其使用 `CustomAssembly.MyCustomMsgFilter` MessageFilter 實作。  
+ 選取自訂篩選條件類型時，您必須提供包含該組件包含的類型的 customType 值**MessageFilter**来用於此篩選器的實作。 另外，filterData 必須包含自訂篩選在其訊息評估中可能需要的任何值。 下列範例會定義 `FilterElement`，其使用 `CustomAssembly.MyCustomMsgFilter` MessageFilter 實作。  
   
 ```xml  
 <filter name="custom1" filterType="Custom" customType="CustomAssembly.MyCustomMsgFilter, CustomAssembly" filterData="Custom Data" />  
@@ -90,10 +90,10 @@ StrictAndMessageFilter and1=new StrictAndMessageFilter(address1, action1);
 MyCustomMsgFilter custom1=new MyCustomMsgFilter("Custom Data");  
 ```  
   
- 如果您需要執行針對訊息所提供的篩選不涵蓋自訂比對邏輯[!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]，您必須建立自訂篩選器的實作**MessageFilter**類別。 例如，您可能要建立自訂篩選條件，此篩選條件會針對做為組態之篩選的已知值清單，在傳入訊息中比較欄位；或建立特定訊息項目雜湊，然後檢查該值以決定篩選是否應傳回 `true` 或 `false`。  
+ 如果您需要執行自訂比對的邏輯，針對訊息所提供的篩選所未涵蓋[!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]，您必須建立自訂篩選器的實作**MessageFilter**類別。 例如，您可能要建立自訂篩選條件，此篩選條件會針對做為組態之篩選的已知值清單，在傳入訊息中比較欄位；或建立特定訊息項目雜湊，然後檢查該值以決定篩選是否應傳回 `true` 或 `false`。  
   
 ### <a name="endpointname"></a>EndpointName  
- EndpointName 篩選條件會檢查已接受到訊息的端點名稱。 下列範例會定義`FilterElement`使用 EndpointName 篩選條件，將"SvcEndpoint"上收到訊息的路由。  
+ EndpointName 篩選條件會檢查已接受到訊息的端點名稱。 下列範例會定義`FilterElement`使用 EndpointName 篩選條件，將在"SvcEndpoint"上收到訊息的路由。  
   
 ```xml  
 <filter name="name1" filterType="Endpoint" filterData="SvcEndpoint" />  
@@ -119,7 +119,7 @@ MatchAllMessageFilter matchAll1 = new MatchAllMessageFilter();
 ```  
   
 ### <a name="xpath"></a>XPath  
- XPath 篩選條件可讓您指定 XPath 查詢，該查詢是用來檢查訊息中的特定項目。 XPath 篩選是相當強大的篩選選項，可讓您直接檢查訊息中的任何 XML 位址項目，不過您必須對所接收之訊息的結構有一定程度的了解。 下列範例會定義`FilterElement`，其使用 XPath 篩選條件檢查名為"element""ns"命名空間前置詞所參考的命名空間內的項目訊息。  
+ XPath 篩選條件可讓您指定 XPath 查詢，該查詢是用來檢查訊息中的特定項目。 XPath 篩選是相當強大的篩選選項，可讓您直接檢查訊息中的任何 XML 位址項目，不過您必須對所接收之訊息的結構有一定程度的了解。 下列範例會定義`FilterElement`，會使用 XPath 篩選條件，以檢查名為"element""ns"命名空間前置詞所參考的命名空間內的項目訊息。  
   
 ```xml  
 <filter name="xpath1" filterType="XPath" filterData="//ns:element" />  
@@ -131,9 +131,9 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
   
  如果您知道正在接收的訊息包含特定值時，此篩選便非常有用。 例如，如果您正在裝載相同服務的兩個不同版本，而且知道傳送到較新服務版本的訊息，在自訂標頭中包含唯一的值，便可建立使用 XPath 的篩選條件來導覽至此標頭，並將出現在標頭中的值與篩選組態中另一個值進行比較，以決定篩選條件是否相符。  
   
- 由於 XPath 查詢通常包含唯一的命名空間，而該空間通常有冗長或複雜的字串值，因此 XPath 篩選條件可讓您使用命名空間資料表來為您的命名空間定義唯一的前置詞。 如需命名空間資料表的詳細資訊，請參閱[訊息篩選條件](../../../../docs/framework/wcf/feature-details/message-filters.md)。  
+ 由於 XPath 查詢通常包含唯一的命名空間，而該空間通常有冗長或複雜的字串值，因此 XPath 篩選條件可讓您使用命名空間資料表來為您的命名空間定義唯一的前置詞。 如需有關命名空間資料表的詳細資訊，請參閱[訊息篩選條件](../../../../docs/framework/wcf/feature-details/message-filters.md)。  
   
- 如需設計 XPath 查詢的詳細資訊，請參閱[的 XPath 語法](http://go.microsoft.com/fwlink/?LinkId=164592)。  
+ 如需有關如何設計 XPath 查詢的詳細資訊，請參閱[XPath 語法](https://go.microsoft.com/fwlink/?LinkId=164592)。  
   
 ## <a name="see-also"></a>另請參閱  
  [訊息篩選](../../../../docs/framework/wcf/feature-details/message-filters.md)  

@@ -2,11 +2,12 @@
 title: 提供者資訊清單規格
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 02faee9ad69bd75f4df608b9a4767560945c7bb3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9875f0ce8d7b10532d7545c05d58ab43146120f0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387298"
 ---
 # <a name="provider-manifest-specification"></a>提供者資訊清單規格
 本節將討論資料存放區提供者如何支援資料存放區中的型別與函式。  
@@ -22,7 +23,7 @@ ms.lasthandoff: 05/03/2018
   
  提供者資訊清單必須能夠在設計階段中由工具載入，而不需要開啟資料存放區的連接。  
   
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]是大小寫區分大小寫，但可能不到基礎資料存放區。 在資訊清單中定義和使用 EDM 成品 (例如，識別碼和型別名稱) 時，它們必須使用 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 區分大小寫。 如果可能區分大小寫的資料存放區項目出現在提供者資訊清單中，就必須在提供者資訊清單中保留該大小寫設定。  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]是區分大小寫，但可能不到基礎資料存放區。 在資訊清單中定義和使用 EDM 成品 (例如，識別碼和型別名稱) 時，它們必須使用 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 區分大小寫。 如果可能區分大小寫的資料存放區項目出現在提供者資訊清單中，就必須在提供者資訊清單中保留該大小寫設定。  
   
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 需要所有資料提供者的提供者資訊清單。 如果您嘗試使用沒有提供者的提供者資訊清單與[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，您會收到錯誤。  
   
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/03/2018
  提供者應該支援下列案例：  
   
 ### <a name="writing-a-provider-with-symmetric-type-mapping"></a>使用對稱型別對應撰寫提供者  
- 您可以撰寫的提供者[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]其中每個存放區型別會對應至單一 EDM 型別，不論對應方向為何。 若為具有非常簡單對應 (與某個 EDM 型別對應) 的提供者型別，您就可以使用對稱方案，因為型別系統很簡單或符合 EDM 型別。  
+ 您可以撰寫的提供者[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]其中每個存放區類型會對應至單一 EDM 型別，不論對應方向為何。 若為具有非常簡單對應 (與某個 EDM 型別對應) 的提供者型別，您就可以使用對稱方案，因為型別系統很簡單或符合 EDM 型別。  
   
  您可以使用其網域的簡易性並產生靜態宣告式提供者資訊清單。  
   
@@ -90,7 +91,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 ```  
   
 #### <a name="using-a-provider-manifest-token"></a>使用提供者資訊清單語彙基元  
- 在離線案例中，系統會從 SSDL 表示中挑選語彙基元。 SSDL 可讓您指定 ProviderManifestToken (請參閱[結構描述項目 (SSDL)](http://msdn.microsoft.com/library/fec75ae4-7f16-4421-9265-9dac61509222)如需詳細資訊)。 例如，如果無法開啟連接，SSDL 就會具有指定資訊清單之相關資訊的提供者資訊清單語彙基元。  
+ 在離線案例中，系統會從 SSDL 表示中挑選語彙基元。 SSDL 可讓您指定 ProviderManifestToken (請參閱[結構描述項目 (SSDL)](https://msdn.microsoft.com/library/fec75ae4-7f16-4421-9265-9dac61509222)如需詳細資訊)。 例如，如果無法開啟連接，SSDL 就會具有指定資訊清單之相關資訊的提供者資訊清單語彙基元。  
   
 ```  
 public DbProviderManifest GetProviderManifest(string manifestToken);  
@@ -265,7 +266,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |NiladicFunction|Boolean|否|False|如果此函式不需要參數，而且會在不使用任何參數的情況下呼叫，則為 True。|  
 |ParameterType<br /><br /> 語意|ParameterSemantics|否|AllowImplicit<br /><br /> 轉換|選擇查詢管線應該如何處理參數型別替代項目：<br /><br /> -   ExactMatchOnly<br />-AllowImplicitPromotion<br />-AllowImplicitConversion|  
   
- **[參數] 節點**  
+ **參數節點**  
   
  每個函式都具有一個或多個 Parameter 節點的集合。  
   

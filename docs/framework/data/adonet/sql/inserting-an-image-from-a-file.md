@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
-ms.openlocfilehash: 3b5b6f2f267f19b3ea42c352a8a1e3721a1ceb86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3cbf4fa0eb0b261bb752370c95cdfb2bca0b7e6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359311"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387460"
 ---
 # <a name="inserting-an-image-from-a-file"></a>從檔案插入影像
 您可以將二進位大型物件 (BLOB) 做為二進位或字元資料寫入資料庫，端視資料來源的欄位類型而定。 BLOB 是參考 `text`、`ntext` 和 `image` 資料型別的一般詞彙，其中通常包含文件和圖片。  
   
- 若要您的資料庫中寫入 BLOB 值，發出適當的 INSERT 或 UPDATE 陳述式，並將 BLOB 值傳遞做為輸入參數 (請參閱[設定參數和參數資料型別](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md))。 如果 BLOB 儲存為 SQL Server `text` 欄位之類的文字，即可將 BOLB 傳遞為字串參數。 如果 BLOB 儲存為 SQL Server `image` 欄位之類的二進位格式，即可將型別 `byte` 的陣列傳遞為二進位參數。  
+ 若要將 BLOB 值寫入您的資料庫，會發出適當的 INSERT 或 UPDATE 陳述式，並將 BLOB 值傳遞做為輸入參數 (請參閱[設定參數和參數資料類型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md))。 如果 BLOB 儲存為 SQL Server `text` 欄位之類的文字，即可將 BOLB 傳遞為字串參數。 如果 BLOB 儲存為 SQL Server `image` 欄位之類的二進位格式，即可將型別 `byte` 的陣列傳遞為二進位參數。  
   
 ## <a name="example"></a>範例  
  下列程式碼範例將員工資料加入至 Northwind 資料庫的 Employees 資料表中。 員工的相片會從檔案中讀取，並加入資料表的 Photo 欄位 (這是影像欄位)。  
@@ -135,4 +135,4 @@ public static byte[] GetPhoto(string filePath)
  [擷取二進位資料](../../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
  [SQL Server 二進位和大量數值資料](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
  [SQL Server 資料類型對應](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

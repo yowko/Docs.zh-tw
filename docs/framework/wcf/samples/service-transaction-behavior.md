@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: e49404626f6de1bfe260f0abb692d68ad779a7ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69f65ca833dc9a0f719541733be9e6066db37f6e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508497"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43391846"
 ---
 # <a name="service-transaction-behavior"></a>服務異動行為
-這個範例會示範如何使用用戶端協調的異動，以及設定 ServiceBehaviorAttribute 和 OperationBehaviorAttribute，以控制服務異動行為。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)實作的計算器服務，但會擴充以維護伺服器記錄檔中的資料庫資料表和累計總數的計算機作業可設定狀態的執行作業。 對伺服器記錄資料表的持續性寫入會依用戶端協調的交易結果而定，如果用戶端交易沒有完成，Web 服務交易就會確保資料庫的更新並未經過認可。  
+這個範例會示範如何使用用戶端協調的異動，以及設定 ServiceBehaviorAttribute 和 OperationBehaviorAttribute，以控制服務異動行為。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)，實作計算機服務，但經過擴充，來維護資料庫資料表和具狀態執行總數計算機作業中所執行作業的伺服器記錄檔。 對伺服器記錄資料表的持續性寫入會依用戶端協調的交易結果而定，如果用戶端交易沒有完成，Web 服務交易就會確保資料庫的更新並未經過認可。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -100,7 +100,7 @@ client.Close();
   
     -   `ReleaseServiceInstanceOnTransactionComplete` 屬性會指定是否要在交易完成時回收服務執行個體。 設定為 `false` 時，服務會維護多個作業要求中的相同服務執行個體。 這是維護執行總數的必要項。 如果設定為 `true`，就會在每次完成動作之後產生新執行個體。  
   
-    -   `TransactionAutoCompleteOnSessionClose` 屬性會指定是否要在工作階段關閉時完成未完成的交易。 設定為`false`，個別的作業所需設定`OperationBehaviorAttribute``TransactionAutoComplete`屬性`true`或明確呼叫`SetTransactionComplete`方法來完成交易。 這個範例會示範這兩種方法。  
+    -   `TransactionAutoCompleteOnSessionClose` 屬性會指定是否要在工作階段關閉時完成未完成的交易。 藉由將它設定為`false`，個別的作業所需設定`OperationBehaviorAttribute``TransactionAutoComplete`屬性設`true`或是明確要求呼叫`SetTransactionComplete`方法來完成異動。 這個範例會示範這兩種方法。  
   
 -   在 `ServiceContractAttribute` 上：  
   
@@ -210,23 +210,23 @@ Creating new service instance...
   
 2.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-3.  若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
- 如果要跨電腦執行範例，您必須設定 Microsoft Distributed Transaction Coordinator (MSDTC) 以啟用網路交易流程，並使用 WsatConfig.exe 工具來啟用 Windows Communication Foundation (WCF) 交易網路支援。  
+ 如果您是跨電腦執行範例，您必須設定 Microsoft Distributed Transaction Coordinator (MSDTC) 以啟用網路交易流程，並使用 WsatConfig.exe 工具來啟用 Windows Communication Foundation (WCF) 交易的網路支援。  
   
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample-across-machines"></a>若要設定 Microsoft Distributed Transaction Coordinator (MSDTC) 以支援跨電腦執行範例  
   
 1.  在服務電腦上，設定 MSDTC 以允許傳入網路異動。  
   
-    1.  從**啟動**功能表上，瀏覽至**控制台**，然後**系統管理工具**，然後**元件服務**。  
+    1.  從**開始** 功能表中，瀏覽至**控制台**，然後**系統管理工具**，然後**元件服務**。  
   
-    2.  以滑鼠右鍵按一下**我的電腦**選取**屬性**。  
+    2.  以滑鼠右鍵按一下**我的電腦**，然後選取**屬性**。  
   
-    3.  在**MSDTC**索引標籤上，按一下 **安全性組態**。  
+    3.  在  **MSDTC**索引標籤上，按一下**安全性設定**。  
   
-    4.  請檢查**網路 DTC 存取**和**允許輸入**。  
+    4.  請檢查**網路 DTC 存取**並**允許輸入**。  
   
-    5.  按一下**是**重新啟動 MS DTC 服務，然後按一下**確定**。  
+    5.  按一下  **是**重新啟動 MS DTC 服務，然後按一下**確定**。  
   
     6.  按一下 [確定]  關閉對話方塊。  
   
@@ -234,25 +234,25 @@ Creating new service instance...
   
     1.  從 [控制台] 執行 [Windows 防火牆] 應用程式。  
   
-    2.  從**例外狀況**索引標籤上，按一下 **新增程式**。  
+    2.  從**例外狀況**索引標籤上，按一下**新增程式**。  
   
     3.  瀏覽至資料夾 C:\WINDOWS\System32。  
   
-    4.  選取 Msdtc.exe，然後按一下 **開啟**。  
+    4.  選取 Msdtc.exe，然後按一下**開啟**。  
   
-    5.  按一下 **[確定]** 關閉**新增程式**對話方塊中，然後按一下**確定**] 以關閉 [Windows 防火牆 applet。  
+    5.  按一下 [ **[確定]** 以關閉**新增程式**] 對話方塊中，然後按一下 [**確定**] 以關閉 [Windows 防火牆] 小程式。  
   
 3.  在用戶端電腦上，設定 MSDTC 以允許傳出網路異動：  
   
-    1.  從**啟動**功能表上，瀏覽至**控制台**，然後**系統管理工具**，然後**元件服務**。  
+    1.  從**開始** 功能表中，瀏覽至**控制台**，然後**系統管理工具**，然後**元件服務**。  
   
-    2.  以滑鼠右鍵按一下**我的電腦**選取**屬性**。  
+    2.  以滑鼠右鍵按一下**我的電腦**，然後選取**屬性**。  
   
-    3.  在**MSDTC**索引標籤上，按一下 **安全性組態**。  
+    3.  在  **MSDTC**索引標籤上，按一下**安全性設定**。  
   
-    4.  請檢查**網路 DTC 存取**和**允許輸出**。  
+    4.  請檢查**網路 DTC 存取**並**允許輸出**。  
   
-    5.  按一下**是**重新啟動 MS DTC 服務，然後按一下**確定**。  
+    5.  按一下  **是**重新啟動 MS DTC 服務，然後按一下**確定**。  
   
     6.  按一下 [確定]  關閉對話方塊。  
   
@@ -261,7 +261,7 @@ Creating new service instance...
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Transactions`  
   

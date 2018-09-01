@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-ms.openlocfilehash: e574c20ec259953fea4b11d8f65e546373a4fe8c
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: ad49e5443016dc4fed57be4a991df9f6d6095b55
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332570"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43391390"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>擴展和縮小轉換 (Visual Basic)
 使用類型轉換的重要考量是轉換的結果是否在目的地資料類型的範圍內。  
@@ -114,5 +114,5 @@ shape = square
  [字串與其他類型之間的轉換](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
  [如何： 將物件轉換成 Visual Basic 中的另一個類型](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
  [陣列轉換](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
- [資料類型](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [資料類型](../../../../visual-basic/language-reference/data-types/index.md)  
  [類型轉換函式](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

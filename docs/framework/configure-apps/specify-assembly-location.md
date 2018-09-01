@@ -1,5 +1,5 @@
 ---
-title: 指定組件&#39;s 位置
+title: 指定組件&#39;位置
 ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [.NET Framework], applications
@@ -9,25 +9,26 @@ ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 65bd075115e33486e86e8081b01b96db665e9da5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4a83f1e67377a5ce699301770ff0369f8f760884
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387324"
 ---
-# <a name="specifying-an-assembly39s-location"></a>指定組件&#39;s 位置
-有兩種方式來指定組件的位置：  
+# <a name="specifying-an-assembly39s-location"></a>指定組件&#39;位置
+有兩種方式可指定組件的位置：  
   
 -   使用[\<程式碼基底 >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)項目。  
   
 -   使用[\<探查 >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)項目。  
   
- 您也可以使用[.NET Framework 組態工具 (Mscorcfg.msc)](http://msdn.microsoft.com/library/a7106c52-68da-490e-b129-971b2c743764)來指定組件的位置，或指定的 common language runtime 來探查組件位置。  
+ 您也可以使用[.NET Framework 組態工具 (Mscorcfg.msc)](https://msdn.microsoft.com/library/a7106c52-68da-490e-b129-971b2c743764)來指定組件的位置，或指定通用語言執行平台，來探查組件的位置。  
   
 ## <a name="using-the-codebase-element"></a>使用\<程式碼基底 > 項目  
- 您可以使用**\<程式碼基底 >** 只能在電腦組態檔或發行者原則檔，也會重新導向組件版本中的項目。 當執行階段會判定要使用的組件版本時，它會套用決定版本的檔案的程式碼基底設定。 如果指示沒有程式碼基底，執行階段會以一般方式探查組件。 如需詳細資訊，請參閱[執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)。  
+ 您可以使用**\<程式碼基底 >** 只能在機器組態或發行者原則檔案，也將重新導向組件版本中的項目。 當執行階段判斷要使用的組件版本時，它適用於決定版本檔案的程式碼基底設定。 如果沒有程式碼基底指示，執行階段會以一般方式探查組件。 如需詳細資訊，請參閱 <<c0> [ 執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)。  
   
- 下列範例會示範如何指定組件的位置。  
+ 下列範例示範如何指定組件的位置。  
   
 ```xml  
 <configuration>  
@@ -45,15 +46,15 @@ ms.lasthandoff: 05/03/2018
 </configuration>  
 ```  
   
- **版本**屬性是必要的所有強式名稱組件，但應該省略不是強式名稱的組件。 **\<程式碼基底 >** 元素需要**href**屬性。 您不能指定版本範圍中的**\<程式碼基底 >** 項目。  
+ **版本**屬性所需的所有強式名稱組件，但應該不是強式名稱的組件中省略。 **\<程式碼基底 >** 項目需要**href**屬性。 您不能指定版本範圍**\<程式碼基底 >** 項目。  
   
 > [!NOTE]
 >  如果您不是強式名稱組件提供的程式碼基底的提示，此提示必須指向應用程式基底或應用程式基底目錄的子目錄。  
   
 ## <a name="using-the-probing-element"></a>使用\<探查 > 項目  
- 執行階段找出不需要程式碼基底探查的組件。 如需探查的詳細資訊，請參閱[執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)。  
+ 執行階段找出並沒有程式碼基底所探查的組件。 如需有關探查的詳細資訊，請參閱[執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)。  
   
- 您可以使用[\<探查 >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)應用程式組態檔來指定執行階段尋找組件時，應該搜尋的子目錄中的項目。 下列範例會示範如何指定執行階段應該搜尋的目錄。  
+ 您可以使用[\<探查 >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)應用程式組態檔來指定執行階段尋找組件時，應該搜尋的子目錄中的項目。 下列範例示範如何指定執行階段應該搜尋的目錄。  
   
 ```xml  
 <configuration>  
@@ -65,10 +66,10 @@ ms.lasthandoff: 05/03/2018
 </configuration>  
 ```  
   
- **Bin**屬性包含執行階段應該搜尋組件的目錄。 如果應用程式位於 C:\Program Files\MyApp，執行階段會尋找 C:\Program Files\MyApp\Bin、 C:\Program Files\MyApp\Bin2\Subbin 和 C:\Program Files\MyApp\Bin3 中未指定程式碼基底的組件。 指定之目錄**Bin**必須是應用程式基底目錄的子目錄。  
+ **Bin**屬性包含執行階段應該搜尋組件的目錄。 如果應用程式位於 C:\Program Files\MyApp，執行階段會尋找組件不會在 C:\Program Files\MyApp\Bin、 C:\Program Files\MyApp\Bin2\Subbin 和 C:\Program Files\MyApp\Bin3 中指定的程式碼基底。 中指定的目錄**Bin**必須是應用程式基底目錄的子目錄。  
   
 ## <a name="see-also"></a>另請參閱  
  [Common Language Runtime 中的組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [設定.NET Framework 應用程式](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+ [設定.NET Framework 應用程式](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)

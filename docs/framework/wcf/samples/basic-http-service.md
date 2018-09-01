@@ -2,26 +2,26 @@
 title: 基本 HTTP 服務
 ms.date: 03/30/2017
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-ms.openlocfilehash: 0f93b43a08f586e99d8a49379cfb2e283ff7918d
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 914ad5f04d980fd53cd07251461367356f00b4cc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808854"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390376"
 ---
 # <a name="basic-http-service"></a>基本 HTTP 服務
-這個範例示範如何實作 HTTP、 RPC 服務，也就是一般稱為"POX"(Plain Old XML) 服務 – 使用 Windows Communication Foundation (WCF) REST 程式設計模型。 這個範例是由兩個元件所組成： 自我裝載的 WCF HTTP 服務 (Service.cs) 和主控台應用程式 (Program.cs) 建立服務並呼叫它。  
+此範例示範如何實作 HTTP、 RPC 的服務，也就是一般稱為"POX"(Plain Old XML) 服務 – 使用 Windows Communication Foundation (WCF) REST 程式設計模型。 這個範例是由兩個元件所組成： 自我裝載的 WCF HTTP 服務 (Service.cs) 和主控台應用程式 (Program.cs) 建立服務並給它的呼叫。  
   
 ## <a name="sample-details"></a>範例詳細資料  
- WCF 服務會公開 2 的作業，`EchoWithGet`和`EchoWithPost`，它會傳回當做輸入傳遞的字串。  
+ WCF 服務會公開 2 個作業，`EchoWithGet`和`EchoWithPost`，它會傳回當做輸入傳遞的字串。  
   
  `EchoWithGet` 作業是以 <xref:System.ServiceModel.Web.WebGetAttribute> 加上附註，表示此作業會處理 HTTP `GET` 要求。 <xref:System.ServiceModel.Web.WebGetAttribute> 不會明確地指定 <xref:System.UriTemplate>，因此，此作業預期使用查詢字串參數和名稱 `s` 來傳入輸入字串。 請注意，此服務預期的 URI 格式可以使用 <xref:System.ServiceModel.Web.WebGetAttribute.UriTemplate%2A> 屬性自訂。  
   
  `EchoWithPost` 作業是以 <xref:System.ServiceModel.Web.WebInvokeAttribute> 加上附註，表示它不是 `GET` 作業 (它有副作用)。 <xref:System.ServiceModel.Web.WebInvokeAttribute> 不會明確地指定 `Method`，因此，此作業會處理 HTTP `POST` 要求，而且這些要求在要求主體中擁有字串 (例如，以 XML 格式)。 請注意，HTTP 方法和要求的 URI 格式可以分別使用 <xref:System.ServiceModel.Web.WebInvokeAttribute.Method%2A> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute.UriTemplate> 屬性自訂。  
   
- App.config 檔案會以預設的 <xref:System.ServiceModel.Description.WebHttpEndpoint> 設定 WCF 服務，且 <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> 屬性設定為 `true`。 如此一來，WCF 基礎結構會建立自動 HTML 說明網頁`http://localhost:8000/Customers/help`，提供如何建構服務的 HTTP 要求以及如何取用服務之 HTTP 回應的相關資訊。  
+ App.config 檔案會以預設的 <xref:System.ServiceModel.Description.WebHttpEndpoint> 設定 WCF 服務，且 <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> 屬性設定為 `true`。 如此一來，WCF 基礎結構會建立自動 HTML 說明頁`http://localhost:8000/Customers/help`，提供如何建構服務的 HTTP 要求以及如何取用服務之 HTTP 回應的相關資訊。  
   
- Program.cs 會示範如何使用 WCF 通道處理站，來呼叫服務以及處理回應。 請注意，這只是存取 WCF 服務的其中一種方式。 您也可以使用其他 .NET Framework 類別 (例如 <xref:System.Net.HttpWebRequest> 和 <xref:System.Net.WebClient>) 來存取服務。 SDK 中的其他範例 (例如[自動格式選取](../../../../docs/framework/wcf/samples/automatic-format-selection.md)範例和[基本資源服務](../../../../docs/framework/wcf/samples/basic-resource-service.md)範例) 示範如何使用這些類別，與 WCF 服務進行通訊。  
+ Program.cs 會示範如何使用 WCF 通道處理站，才能呼叫服務以及處理回應。 請注意，這只是存取 WCF 服務的其中一種方式。 您也可以使用其他 .NET Framework 類別 (例如 <xref:System.Net.HttpWebRequest> 和 <xref:System.Net.WebClient>) 來存取服務。 SDK 中的其他範例 (例如[自動格式選取](../../../../docs/framework/wcf/samples/automatic-format-selection.md)範例並[基本資源服務](../../../../docs/framework/wcf/samples/basic-resource-service.md)範例) 示範如何使用這些類別與 WCF 服務進行通訊。  
   
  此範例包含同時在主控台應用程式中執行的自我裝載服務和用戶端。 當主控台應用程式執行時，用戶端會對服務發出要求，然後將相關的資訊從回應寫入至主控台視窗。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "33808854"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicHttpService`  
   

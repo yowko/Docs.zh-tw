@@ -10,12 +10,12 @@ helpviewer_keywords:
 - property pages [Windows Forms], creating
 - tab dialog boxes
 ms.assetid: 915091af-93ac-4d3d-8283-738dd2d21ea7
-ms.openlocfilehash: 91a9930a3678e08fc0e46335f1eb95330bd171a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75f0fc416ad29137c119b571acd658a7e56fc009
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536757"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384950"
 ---
 # <a name="tabcontrol-control-windows-forms"></a>TabControl 控制項 (Windows Form)
 Windows Form `TabControl` 顯示多個索引標籤，像是在筆記本中的分隔線或在檔案櫃中一組資料夾的標籤。 索引標籤可以包含圖片和其他控制項。 使用 `TabControl` 建立屬性頁。  
@@ -36,7 +36,7 @@ Windows Form `TabControl` 顯示多個索引標籤，像是在筆記本中的分
  [操作說明：停用索引標籤頁](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)  
  說明如何限制存取索引標籤頁，可能會根據使用者認證而限制。  
   
- 另請參閱[如何： 加入和移除的索引標籤與使用 Windows Form TabControl 設計工具](http://msdn.microsoft.com/library/ms233654\(v=vs.110\))， [How to： 將控制項加入索引標籤頁面使用設計工具](http://msdn.microsoft.com/library/ms233668\(v=vs.110\))  
+ 另請參閱[如何： 新增和移除的索引標籤與 Windows Form TabControl 使用設計工具](add-and-remove-tabs-with-wf-tabcontrol-using-the-designer.md)， [How to： 將控制項加入索引標籤頁面使用設計工具](how-to-add-a-control-to-a-tab-page-using-the-designer.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.TabControl> 類別  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: e5ef455a-e049-429c-8005-30c93132fb79
-ms.openlocfilehash: 49bf94959b2efb19ff6e3a273f4cd09905089b31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 72ce238fdcbdcb81fc710a21d1675de67f4adc15
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540702"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393546"
 ---
 # <a name="toolstrip-control-windows-forms"></a>ToolStrip 控制項 (Windows Form)
 <xref:System.Windows.Forms.ToolStrip> 控制項可以在 Windows Form 應用程式中裝載功能表、控制項和使用者控制項的工具列。  
@@ -68,22 +68,22 @@ ms.locfileid: "33540702"
  描述如何建立支援 <xref:System.Windows.Forms.ToolStrip> 控制項和合併功能表的 MDI 表單。  
   
  [操作說明：建立專業樣式的 ToolStrip 控制項](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md)  
- 描述如何使用<xref:System.Windows.Forms.ToolStripProfessionalRenderer>類別以建立複合控制項，以模擬**瀏覽窗格**Microsoft® Outlook® 提供的。  
+ 描述如何使用<xref:System.Windows.Forms.ToolStripProfessionalRenderer>類別來建立複合控制項，以模擬**瀏覽窗格**Microsoft® Outlook® 提供的。  
   
  [操作說明：實作自訂的 ToolStripRenderer](../../../../docs/framework/winforms/controls/how-to-implement-a-custom-toolstriprenderer.md)  
  描述如何實作衍生自 <xref:System.Windows.Forms.ToolStripRenderer> 的類別，自訂 <xref:System.Windows.Forms.ToolStrip> 控制項的外觀。  
   
--   [如何： 建立具有標準項目的使用設計工具的基本 Windows Form](http://msdn.microsoft.com/library/571c1z99\(v=vs.110\))  
+-   [如何： 建立具有標準項目的使用設計工具的基本 Windows Form](https://msdn.microsoft.com/library/571c1z99\(v=vs.110\))  
   
--   [操作說明：將 ToolStrip 移出 ToolStripContainer 並移至表單上](http://msdn.microsoft.com/library/ms171701\(v=vs.110\))  
+-   [操作說明：將 ToolStrip 移出 ToolStripContainer 並移至表單上](how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md)  
   
--   [逐步解說：建立專業樣式的 ToolStrip 控制項](http://msdn.microsoft.com/library/ms233664\(v=vs.110\))  
+-   [逐步解說：建立專業樣式的 ToolStrip 控制項](walkthrough-creating-a-professionally-styled-toolstrip-control.md)  
   
--   [逐步解說：使用功能表合併和 ToolStrip 控制項建立 MDI 表單](http://msdn.microsoft.com/library/ms233676\(v=vs.110\))  
+-   [逐步解說：使用功能表合併和 ToolStrip 控制項建立 MDI 表單](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)  
   
--   [ToolStrip 工作對話方塊](http://msdn.microsoft.com/library/ms233648\(v=vs.110\))  
+-   [ToolStrip 工作對話方塊](https://msdn.microsoft.com/library/ms233648\(v=vs.110\))  
   
--   [ToolStrip 項目集合編輯器](http://msdn.microsoft.com/library/ms233643\(v=vs.110\))  
+-   [ToolStrip 項目集合編輯器](https://msdn.microsoft.com/library/ms233643\(v=vs.110\))  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.ToolStrip> 類別  

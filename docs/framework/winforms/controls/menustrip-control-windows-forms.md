@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms]
 - menus
 ms.assetid: e361bf98-eed8-4ed3-9dfb-5a2e865e3ce6
-ms.openlocfilehash: eb4ea812318e5a7df6a1bffefa5d47bf2c929f2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03328b324399c7500f2cf3a8b6ab12c843115e29
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540186"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385116"
 ---
 # <a name="menustrip-control-windows-forms"></a>MenuStrip 控制項 (Windows Form)
 此控制項會將應用程式的命令分組，並使其容易存取。  
@@ -55,19 +55,19 @@ ms.locfileid: "33540186"
  [操作說明：設定 MDI 應用程式的自動功能表合併功能](../../../../docs/framework/winforms/controls/how-to-set-up-automatic-menu-merging-for-mdi-applications.md)  
  描述如何在執行階段自動合併功能表項目。  
   
--   [MenuStrip 項目集合編輯器](http://msdn.microsoft.com/library/ms233625\(v=vs.110\))  
+-   [MenuStrip 項目集合編輯器](https://msdn.microsoft.com/library/ms233625\(v=vs.110\))  
   
--   [操作說明：複製 ToolStripMenuItems](http://msdn.microsoft.com/library/ms171653\(v=vs.110\))  
+-   [操作說明：複製 ToolStripMenuItems](how-to-copy-toolstripmenuitems.md)  
   
--   [操作說明：使用設計工具隱藏 ToolStripMenuItems](http://msdn.microsoft.com/library/ms171658\(v=vs.110\))  
+-   [操作說明：使用設計工具隱藏 ToolStripMenuItems](how-to-hide-toolstripmenuitems-using-the-designer.md)  
   
--   [操作說明：使用設計工具停用 ToolStripMenuItems](http://msdn.microsoft.com/library/ms171656\(v=vs.110\))  
+-   [操作說明：使用設計工具停用 ToolStripMenuItems](how-to-disable-toolstripmenuitems-using-the-designer.md)  
   
--   [操作說明：移動 ToolStripMenuItems](http://msdn.microsoft.com/library/ms171660\(v=vs.110\))  
+-   [操作說明：移動 ToolStripMenuItems](how-to-move-toolstripmenuitems.md)  
   
--   [逐步解說：對表單提供標準功能表項目](http://msdn.microsoft.com/library/ms233662\(v=vs.110\))  
+-   [逐步解說：對表單提供標準功能表項目](walkthrough-providing-standard-menu-items-to-a-form.md)  
   
--   [MenuStrip 工作對話方塊](http://msdn.microsoft.com/library/ms233645\(v=vs.110\))  
+-   [MenuStrip 工作對話方塊](https://msdn.microsoft.com/library/ms233645\(v=vs.110\))  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.MenuStrip>  

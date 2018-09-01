@@ -2,24 +2,24 @@
 title: 實體活動
 ms.date: 03/30/2017
 ms.assetid: c04f7413-7fb8-40c6-819e-dc92b145b62e
-ms.openlocfilehash: 96301c15b849749299e744a435068c3ec9be2e3a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03bd0e42c70f1226558d492bcb3b2cfa5c7010f2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519132"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385800"
 ---
 # <a name="entity-activities"></a>實體活動
-這個範例示範如何使用 Windows Workflow Foundation 中的 ADO.NET Entity Framework，以簡化資料存取。  
+此範例示範如何使用 Windows Workflow Foundation 中的 ADO.NET Entity Framework，以簡化資料存取。  
   
- ADO.NET Entity Framework 可讓開發人員使用網域特有之物件、屬性和關聯性形式的資料，例如客戶、訂單、訂單詳細資料以及這些實體之間的關聯性。 ADO.NET Entity Framework 處理這項作業的方式，是提供可針對概念應用程式模型來進行程式設計的抽象層級，而不是直接針對關聯式儲存結構描述來進行程式設計。 如需有關 ADO.NET Entity Framework，請參閱[ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549)。  
+ ADO.NET Entity Framework 可讓開發人員使用網域特有之物件、屬性和關聯性形式的資料，例如客戶、訂單、訂單詳細資料以及這些實體之間的關聯性。 ADO.NET Entity Framework 處理這項作業的方式，是提供可針對概念應用程式模型來進行程式設計的抽象層級，而不是直接針對關聯式儲存結構描述來進行程式設計。 如需 ADO.NET Entity Framework 請參閱[ADO.NET Entity Framework](https://go.microsoft.com/fwlink/?LinkId=165549)。  
   
 ## <a name="sample-details"></a>範例詳細資料  
  這個範例會使用 `Northwind` 資料庫，而且包含了用來建立及移除 `Northwind` 資料庫的指令碼 (Setup.cmd 和 Cleanup.cmd)。 此範例中的專案包含了根據 `Northwind` 資料庫的實體資料模型。 您可以開啟專案中包含的 `Northwind.edmx` 檔案來尋找此模型。 這個模型會定義可以使用 ADO.NET Entity Framework 存取之物件的形狀。  
   
  下列活動包含在此範例中：  
   
--   `EntitySQLQuery`：`EntitySQLQuery` 活動可讓您從根據 Entity SQL 查詢字串的資料庫中擷取物件。 Entity SQL 是一種與存放區無關的語言而且與 SQL 非常類似，它可讓您指定以概念模型為基礎的查詢以及屬於模型或網域之一部分的實體。 如需有關 Entity SQL 語言的詳細資訊，請參閱[Entity SQL 語言](http://go.microsoft.com/fwlink/?LinkId=165646)。  
+-   `EntitySQLQuery`：`EntitySQLQuery` 活動可讓您從根據 Entity SQL 查詢字串的資料庫中擷取物件。 Entity SQL 是一種與存放區無關的語言而且與 SQL 非常類似，它可讓您指定以概念模型為基礎的查詢以及屬於模型或網域之一部分的實體。 如需 Entity SQL 語言的詳細資訊，請參閱[Entity SQL 語言](https://go.microsoft.com/fwlink/?LinkId=165646)。  
   
 -   `EntityLinqQuery`：這個活動可讓您從根據 LINQ 查詢或述詞的資料庫中擷取物件。  
   
@@ -227,7 +227,7 @@ return new ObjectContextScope
   
 2.  在新的命令提示字元視窗中，巡覽至 EntityActivities\CS 資料夾。  
   
-3.  型別`setup.cmd`按下 ENTER。  
+3.  型別`setup.cmd`按 ENTER 鍵。  
   
 #### <a name="to-run-the-sample"></a>若要執行範例  
   
@@ -245,13 +245,13 @@ return new ObjectContextScope
   
 2.  在新的命令提示字元視窗中，巡覽至 EntityActivities\CS 資料夾。  
   
-3.  型別`cleanup.cmd`按下 ENTER。  
+3.  型別`cleanup.cmd`按 ENTER 鍵。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\EntityActivities`

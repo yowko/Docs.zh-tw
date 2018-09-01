@@ -2,12 +2,12 @@
 title: 異動和並行存取
 ms.date: 03/30/2017
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
-ms.openlocfilehash: 9ea136a34c478f3619c81ad3cbbae0765fb99374
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd47c5e0e2b2086e5fd0482bf4319ebab5674a54
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365263"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386681"
 ---
 # <a name="transactions-and-concurrency"></a>異動和並行存取
 異動是由單一命令或當做封裝 (Package) 執行的命令群組所組成。 交易可讓您將多項作業結合成單一工作單位。 如果交易的某一處失敗，則所有更新都會復原到交易之前的狀態。  
@@ -19,7 +19,7 @@ ms.locfileid: "33365263"
   
  如果某筆交易包含相同資料庫或伺服器中的多個資料表，則預存程序 (Stored Procedure) 中的明確交易通常會有較佳的效能。 您可以使用 Transact-SQL `BEGIN TRANSACTION`、`COMMIT TRANSACTION` 和 `ROLLBACK TRANSACTION` 陳述式，在 SQL Server 預存程序中建立交易。 如需詳細資訊，請參閱《SQL Server 線上叢書》。  
   
- 包含不同資源管理員，例如 SQL Server 與 Oracle 之間的交易的交易都需要分散式的交易。  
+ 包含不同資源管理員，例如 SQL Server 與 Oracle 之間的交易的交易需要分散式的交易。  
   
 ## <a name="in-this-section"></a>本節內容  
  [本機異動](../../../../docs/framework/data/adonet/local-transactions.md)  
@@ -29,7 +29,7 @@ ms.locfileid: "33365263"
  說明如何在 ADO.NET 中執行分散式異動。  
   
  [System.Transactions 與 SQL Server 整合](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
- 描述<xref:System.Transactions>整合到 SQL Server 使用分散式交易。  
+ 描述<xref:System.Transactions>與 SQL Server 的整合使用分散式交易。  
   
  [開放式並行存取](../../../../docs/framework/data/adonet/optimistic-concurrency.md)  
  說明開放式與封閉式同步存取，以及如何測試並行違規。  
@@ -40,4 +40,4 @@ ms.locfileid: "33365263"
  [命令和參數](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [DataAdapter 和 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

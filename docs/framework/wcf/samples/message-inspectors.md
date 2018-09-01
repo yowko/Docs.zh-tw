@@ -2,12 +2,12 @@
 title: 訊息偵測器
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 05dbee820a002feb1f2a1672220be0c4a397f952
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 253be4d13649d4f6394aad1bb002f5cd555d8af2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508991"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385840"
 ---
 # <a name="message-inspectors"></a>訊息偵測器
 這個範例會示範如何實作與設定用戶端和服務訊息偵測器。  
@@ -202,7 +202,7 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
 ```  
   
 ## <a name="behavior"></a>行為  
- 訊息偵測器為用戶端執行階段或分派執行階段的延伸項目。 這類延伸模組使用設定*行為*。 行為就是類別，而這個類別會透過變更預設組態或新增延伸項目 (例如訊息偵測器)，來變更服務模型執行階段的行為。  
+ 訊息偵測器為用戶端執行階段或分派執行階段的延伸項目。 此類擴充功能會設定為使用*行為*。 行為就是類別，而這個類別會透過變更預設組態或新增延伸項目 (例如訊息偵測器)，來變更服務模型執行階段的行為。  
   
  下列 `SchemaValidationBehavior` 類別是用來將此範例的訊息偵測器新增至用戶端或分派執行階段的行為。 在這兩個例子中，實作都相當基本。 在 <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%2A> 和 <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A> 中，會建立訊息偵測器並新增至相對之執行階段的 <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> 集合中。  
   
@@ -259,7 +259,7 @@ public class SchemaValidationBehavior : IEndpointBehavior
 >  此特定行為不會兼做屬性，因此無法以宣告方式新增至服務類型的合約類型。 這是根據設計所做的決策，因為結構描述集合無法載入屬性宣告，而參考至此屬性中額外的組態位置 (例如，應用程式設定) 則表示所建立的組態項目，會與其他服務模型組態不一致。 因此，您只能以命令方式，透過程式碼和服務模型組態延伸項目新增此行為。  
   
 ## <a name="adding-the-message-inspector-through-configuration"></a>透過組態新增訊息偵測器  
- 在應用程式組態檔中的端點上設定的自訂行為，服務模型會需要實作器建立組態*延伸項目*衍生自的類別所表示<xref:System.ServiceModel.Configuration.BehaviorExtensionElement>。 針對如本節所討論之下列延伸項目所示的延伸項目，此延伸項目必須新增至服務模型的組態區段。  
+ 如需在應用程式組態檔中的端點上設定自訂行為，服務模型會需要實作器建立組態*延伸模組項目*衍生自的類別所代表<xref:System.ServiceModel.Configuration.BehaviorExtensionElement>。 針對如本節所討論之下列延伸項目所示的延伸項目，此延伸項目必須新增至服務模型的組態區段。  
   
 ```xml  
 <system.serviceModel>  
@@ -398,18 +398,18 @@ catch (Exception e)
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要建置此方案，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+2.  若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-3.  若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageInspectors`  
   

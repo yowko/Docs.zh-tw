@@ -2,24 +2,24 @@
 title: Windows Workflow Foundation 功能內容
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: 0f9bc81609379414ce022499e20791073d259cdc
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: b18c6dd76762f4495ac475cd3dfa4e1995733b59
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809858"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386087"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation 功能內容
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 在 Windows Workflow Foundation 中加入一些功能。 本文件將描述一些新功能，並且詳細說明適合使用這些功能的案例。  
   
 ## <a name="messaging-activities"></a>傳訊活動  
- 傳訊活動 (<xref:System.ServiceModel.Activities.Receive>， <xref:System.ServiceModel.Activities.SendReply>， <xref:System.ServiceModel.Activities.Send>， <xref:System.ServiceModel.Activities.ReceiveReply>) 用來傳送和接收 WCF 訊息從您的工作流程。  <xref:System.ServiceModel.Activities.Receive> 和<xref:System.ServiceModel.Activities.SendReply>活動用來形成透過 WSDL 公開就像標準的 WCF web 服務的 Windows Communication Foundation (WCF) 服務作業。  <xref:System.ServiceModel.Activities.Send> 和<xref:System.ServiceModel.Activities.ReceiveReply>用來取用 web 服務與 WCF <xref:System.ServiceModel.ChannelFactory>;**加入服務參考**經驗也有會產生預先設定的活動的 Workflow Foundation。  
+ 傳訊活動 (<xref:System.ServiceModel.Activities.Receive>， <xref:System.ServiceModel.Activities.SendReply>， <xref:System.ServiceModel.Activities.Send>， <xref:System.ServiceModel.Activities.ReceiveReply>) 用來傳送和接收 WCF 訊息，從您的工作流程。  <xref:System.ServiceModel.Activities.Receive> 和<xref:System.ServiceModel.Activities.SendReply>活動用來形成可透過 WSDL 公開，就像標準的 WCF web 服務的 Windows Communication Foundation (WCF) 服務作業。  <xref:System.ServiceModel.Activities.Send> 並<xref:System.ServiceModel.Activities.ReceiveReply>用來取用 web 服務，類似於 WCF <xref:System.ServiceModel.ChannelFactory>;**加入服務參考**體驗也存在會產生預先設定的活動的 Workflow Foundation。  
   
 ### <a name="getting-started-with-messaging-activities"></a>傳訊活動使用者入門  
   
 -   在 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 中，建立 WCF 工作流程服務應用程式專案。 一組 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 將置於畫布上。  
   
--   以滑鼠右鍵按一下專案，然後選取**加入服務參考**。  指向現有的 web 服務 WSDL，按一下**確定**。  建置專案，以顯示所產生的活動 (使用實作<xref:System.ServiceModel.Activities.Send>和<xref:System.ServiceModel.Activities.ReceiveReply>) 在工具箱中。  
+-   以滑鼠右鍵按一下專案，然後選取**加入服務參考**。  指向現有的 web 服務 WSDL，然後按一下 **確定**。  建置您的專案，以顯示產生的活動 (使用實作<xref:System.ServiceModel.Activities.Send>和<xref:System.ServiceModel.Activities.ReceiveReply>) 在工具箱中。  
   
 -   您可以在下列章節中找到這些活動的範例：  
   
@@ -27,15 +27,15 @@ ms.locfileid: "33809858"
   
     -   案例：[服務](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
   
--   [概念文件](http://go.microsoft.com/fwlink/?LinkId=204801)  
+-   [概念文件](https://go.microsoft.com/fwlink/?LinkId=204801)  
   
--   [傳訊活動設計工具文件](http://go.microsoft.com/fwlink/?LinkId=204802)  
+-   [傳訊活動設計工具的文件](https://go.microsoft.com/fwlink/?LinkId=204802)  
   
 ### <a name="messaging-activities-example-scenario"></a>傳訊活動範例案例  
- A`BestPriceFinder`服務呼叫以尋找最佳的票證價格特定路由的多個 airline 服務。  實作此案例會要求您使用訊息活動來接收價格要求、 擷取後端服務的價格和價格的價格要求回覆。  它也會要求您使用其他現成的活動，以建立計算最佳的價格的商務邏輯。  
+ A`BestPriceFinder`服務會呼叫多個航空公司服務，以便尋找最佳票證的特定路由。  實作此案例會要求您使用訊息活動來接收價格要求、 從後端服務擷取價格回覆價格要求，以最佳價格。  它也需要您使用其他的全新活動來建立計算最佳價格的商務邏輯。  
   
 ## <a name="workflowservicehost"></a>WorkflowServiceHost  
- <xref:System.ServiceModel.WorkflowServiceHost> （雖然這些工作流程不需要使用訊息，就能夠裝載） 支援多個執行個體、 組態和 WCF 訊息的預設工作流程主機。  此外，它也會透過一組服務行為，與持續性、追蹤和執行個體控制項整合。  就像 WCF 的<xref:System.ServiceModel.ServiceHost>、<xref:System.ServiceModel.WorkflowServiceHost>可以自行裝載於主控台/WinForms/WPF 應用程式或 Windows 服務或 web 裝載 （成為.xamlx 檔案） 在 IIS 或 WAS。  
+ <xref:System.ServiceModel.WorkflowServiceHost>是立即可用的工作流程主應用程式支援多個執行個體、 組態和 WCF 傳訊 （雖然這些工作流程不需要使用訊息，就能夠裝載）。  此外，它也會透過一組服務行為，與持續性、追蹤和執行個體控制項整合。  就像 WCF 的<xref:System.ServiceModel.ServiceHost>，則<xref:System.ServiceModel.WorkflowServiceHost>可以自我裝載於主控台/WinForms/WPF 應用程式或 Windows 服務或 web 裝載 （成為.xamlx 檔案） 在 IIS 或 WAS 中。  
   
 ### <a name="getting-started-with-workflow-service-host"></a>工作流程服務主機使用者入門  
   
@@ -55,10 +55,10 @@ ms.locfileid: "33809858"
   
     -   應用程式：[暫止執行個體管理](../../../docs/framework/windows-workflow-foundation/samples/suspended-instance-management.md)  
   
--   [WorkflowServiceHost 概念文件](http://go.microsoft.com/fwlink/?LinkId=204807)  
+-   [WorkflowServiceHost 概念文件](https://go.microsoft.com/fwlink/?LinkId=204807)  
   
 ### <a name="workflowservicehost-scenario"></a>WorkflowServiceHost 案例  
- BestPriceFinder 服務呼叫以尋找最佳的票證價格特定路由的多個 airline 服務。  實作此案例會需要您裝載中的工作流程<xref:System.ServiceModel.WorkflowServiceHost>。  它也會使用訊息活動來接收價格要求、 擷取後端服務的價格和價格的價格要求回覆。  
+ BestPriceFinder 服務會呼叫多個航空公司服務，以便尋找最佳票證的特定路由。  實作此案例需要您裝載中的工作流程<xref:System.ServiceModel.WorkflowServiceHost>。  它也會使用訊息活動來接收價格要求、 從後端服務擷取價格回覆價格要求，以最佳價格。  
   
 ## <a name="correlation"></a>相互關聯  
  相互關聯是指下列其中一種情況：  
@@ -73,9 +73,9 @@ ms.locfileid: "33809858"
   
 -   用來將訊息群組在一起之相互關聯的範例就是，將訊息群組在一起的要求-回覆相互關聯。  
   
-    -   在<xref:System.ServiceModel.Activities.Receive>活動，請按一下 <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A>屬性並新增<xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer>使用 CorrelationHandle 在上述第一個步驟中建立。  
+    -   在 <xref:System.ServiceModel.Activities.Receive>活動上，按一下<xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A>屬性，並新增<xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer>使用 CorrelationHandle 上述的第一個步驟中建立。  
   
-    -   建立<xref:System.ServiceModel.Activities.SendReply>活動，以滑鼠右鍵按一下<xref:System.ServiceModel.Activities.Receive>，然後按一下 [建立 SendReply]。 接著，將它貼入工作流程中 <xref:System.ServiceModel.Activities.Receive> 活動的後面。  
+    -   建立<xref:System.ServiceModel.Activities.SendReply>活動上按一下滑鼠右鍵<xref:System.ServiceModel.Activities.Receive>，然後按一下 「 建立 SendReply。 接著，將它貼入工作流程中 <xref:System.ServiceModel.Activities.Receive> 活動的後面。  
   
 -   將資料片段對應至服務執行個體的範例就是內容架構的相互關聯，它會將資料片段 (例如訂單 ID) 對應至特定工作流程執行個體。  
   
@@ -87,15 +87,15 @@ ms.locfileid: "33809858"
   
     -   案例：[服務](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
   
-    -   [相互關聯概念文件](http://go.microsoft.com/fwlink/?LinkId=204939)  
+    -   [相互關聯概念文件](https://go.microsoft.com/fwlink/?LinkId=204939)  
   
 ### <a name="correlation-scenario"></a>相互關聯案例  
- 訂單處理工作流程用來處理新的順序建立及更新程序中之現有訂單。  實作此案例會需要您裝載中的工作流程<xref:System.ServiceModel.WorkflowServiceHost>和使用訊息活動。  它也會需要為基礎的相互關聯`orderId`以確保正確的工作流程進行更新。  
+ 訂單處理工作流程用來處理新訂單建立和更新程序中的現有訂單。  實作此案例需要您裝載中的工作流程<xref:System.ServiceModel.WorkflowServiceHost>和使用傳訊活動。  它也需要為基礎的相互關聯`orderId`以確保系統會對更新正確的工作流程。  
   
 ## <a name="simplified-configuration"></a>簡化的組態  
- WCF 組態結構描述很複雜，而且使用者提供了許多難以找到的功能。 在[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]，我們已經著重於協助 WCF 使用者設定其服務的下列功能：  
+ WCF 組態結構描述很複雜，而且使用者提供許多不易發現的功能。 在  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]，我們已經著重於協助 WCF 使用者設定其服務的下列功能：  
   
--   移除每項服務明確組態的需求。 如果您未設定任何\<服務 > 項目，為您的服務，而且您的服務不會定義任何端點以程式設計的方式，則一組端點將會自動加入至您的服務，其中每個服務基底位址和每個合約實作您的服務。  
+-   移除每項服務明確組態的需求。 如果您未設定任何\<服務 > 您的服務，而您服務的項目並未定義任何端點以程式設計的方式，則一組端點將會自動新增至您的服務，其中每個服務基底位址和每個合約實作您的服務。  
   
 -   讓使用者定義 WCF 繫結和行為的預設值，以便套用至沒有明確組態的服務。  
   
@@ -105,15 +105,15 @@ ms.locfileid: "33809858"
   
 ### <a name="getting-started"></a>快速入門  
   
--   [Wcf 4.0 開發人員指南](http://go.microsoft.com/fwlink/?LinkId=204940)  
+-   [WCF 4.0 開發人員指南](https://go.microsoft.com/fwlink/?LinkId=204940)  
   
--   [組態通道處理站](http://go.microsoft.com/fwlink/?LinkId=204941)  
+-   [組態通道處理站](https://go.microsoft.com/fwlink/?LinkId=204941)  
   
--   [標準端點項目](http://go.microsoft.com/fwlink/?LinkId=204942)  
+-   [標準端點項目](https://go.microsoft.com/fwlink/?LinkId=204942)  
   
--   [服務組態改良在.Net Framework 4](http://go.microsoft.com/fwlink/?LinkId=204943)  
+-   [服務組態改良在.Net Framework 4](https://go.microsoft.com/fwlink/?LinkId=204943)  
   
--   [.NET 4 中的常見使用者錯誤： //go.microsoft.com/fwlink/？ Linkid WF/WCF 服務組態名稱](http://go.microsoft.com/fwlink/?LinkId=204944)  
+-   [.NET 4 中的常見使用者錯誤： 拼錯 WF/WCF 服務組態名稱](https://go.microsoft.com/fwlink/?LinkId=204944)  
   
 ### <a name="simplified-configuration-scenarios"></a>簡化的組態案例  
   
@@ -130,13 +130,13 @@ ms.locfileid: "33809858"
   
 -   使用者無法指定想要顯示在 Wire 上的 xsi:type，以便降低 Wire 上序列化執行個體的大小。  
   
- [DataContractResolver](../../../docs/framework/wcf/samples/datacontractresolver.md)解決這些問題，在.NET 4.5。  
+ [DataContractResolver](../../../docs/framework/wcf/samples/datacontractresolver.md)可以解決這些問題在.NET 4.5 中的。  
   
 ### <a name="getting-started"></a>快速入門  
   
--   [資料合約解析程式 API 文件](http://go.microsoft.com/fwlink/?LinkId=204946)  
+-   [資料合約解析程式 API 文件](https://go.microsoft.com/fwlink/?LinkId=204946)  
   
--   [導入的資料合約解析程式](http://go.microsoft.com/fwlink/?LinkId=204947)  
+-   [資料合約解析程式簡介](https://go.microsoft.com/fwlink/?LinkId=204947)  
   
 -   範例：  
   
@@ -182,7 +182,7 @@ ms.locfileid: "33809858"
     -   [Flowchart 活動設計工具](/visualstudio/workflow-designer/flowchart-activity-designers)  
   
 ### <a name="flowchart-scenarios"></a>流程圖案例  
- 流程圖活動可用來實作猜測遊戲。 猜測遊戲非常簡單：電腦會選取一個隨機數字，而玩家必須猜測該數字。 當玩家送出每項猜測時，電腦會顯示一個提示 （也就是 「 再一次低的數字 」）。 如果玩家在 7 次內猜到數字，電腦會對使用者顯示特別的恭賀畫面。 您可以透過組合下列程序性活動來實作此遊戲：  
+ 流程圖活動可用來實作猜測遊戲。 猜測遊戲非常簡單：電腦會選取一個隨機數字，而玩家必須猜測該數字。 當玩家送出每項猜測時，電腦會顯示一個提示 （亦即 「 試試看較低數字 」）。 如果玩家在 7 次內猜到數字，電腦會對使用者顯示特別的恭賀畫面。 您可以透過組合下列程序性活動來實作此遊戲：  
   
 -   <xref:System.Activities.Statements.Sequence>  
   
@@ -217,7 +217,7 @@ ms.locfileid: "33809858"
   
 ### <a name="procedural-activity-scenarios"></a>程序性活動案例  
   
--   <xref:System.Activities.Statements.Parallel>： 這是內部網路文件管理系統具有文件核准工作流程。 文件必須先由數個部門的人員核准，然後才能發行至內部網路。 沒有建立的訂單的核准。文件處於 「 待核准 」 階段時前, 可能發生在任何時間。 當使用者送出文件以供檢閱時，其直屬經理、內部網路管理員和內部通訊經理就必須核准該份文件。  
+-   <xref:System.Activities.Statements.Parallel>： 這是內部網路文件管理系統具有文件核准工作流程。 文件必須先由數個部門的人員核准，然後才能發行至內部網路。 沒有已建立的訂單核准;文件處於 「 待核准 」 階段時可能發生在任何時間。 當使用者送出文件以供檢閱時，其直屬經理、內部網路管理員和內部通訊經理就必須核准該份文件。  
   
 -   <xref:System.Activities.Statements.ParallelForEach%601>：WF 應用程式可管理大型公司內部的企業採購。 企業規則表示，規劃任何採購作業之前，需要三家不同廠商的估價。 採購部門的員工會從公司的廠商清單中選取三家廠商。 選取並通知這些廠商之後，公司將等候其經濟提案。 這些提案可以按照任何順序提出。 為了在 WF 中實作此案例，我們使用了 <xref:System.Activities.Statements.ParallelForEach%601>，以便逐一查看廠商的集合並且要求其經濟提案。 蒐集所有提案之後，系統會選取並顯示最佳提案。  
   
@@ -253,7 +253,7 @@ ms.locfileid: "33809858"
   
     2.  [使用程序性活動](../../../docs/framework/windows-workflow-foundation/samples/using-procedural-activities.md)  
   
--   設計工具的文件：[錯誤處理活動設計工具](/visualstudio/workflow-designer/error-handling-activity-designers)  
+-   設計工具的文件： [Error Handling 活動設計工具](/visualstudio/workflow-designer/error-handling-activity-designers)  
   
 ### <a name="error-handling-scenarios"></a>錯誤處理案例  
  需要執行一組活動，而且需要在發生錯誤時執行特定邏輯。 如果在錯誤處理邏輯期間發現錯誤無法復原，就會重新擲回例外狀況，而且父活動 (或主機) 將會處理此問題。  
@@ -273,7 +273,7 @@ ms.locfileid: "33809858"
  系統需要提示使用者輸入。 在一般情況下，開發人員會使用 <xref:System.Console.ReadLine%2A> 之類的方法呼叫來提示使用者輸入。 這種設定的問題在於，直到使用者輸入某些內容為止，程式都會處於等候狀態。 在此案例中，您需要使用逾時將封鎖的活動解除封鎖。 常見的案例就是要求在指定的一段時間內完成工作。 讓封鎖的活動逾時則為 Pick 發揮功能的案例。  
   
 ## <a name="wcf-routing-service"></a>WCF 路由服務  
- 路由服務被設計為一般的軟體路由器，可讓您控制 WCFmessages 您的用戶端和服務之間的流程為何。  路由服務可讓您分離您的用戶端，從您的服務，它將提供更多的自由，組態設定方面，您可以在支援彈性時，您必須考慮如何裝載您的服務。  在.NET 3.5 用戶端和服務所緊密結合。用戶端必須知道所有的服務，需要向他們不到。 此外，.Net Framework 3.5 中的 WCF 具有下列限制：  
+ 路由服務被設計為泛型軟體路由器，可讓您控制 WCFmessages 您的用戶端和服務之間流動的方式。  路由服務可讓您減少您的用戶端，從您的服務，讓您根據設定的更多自由可支援，和彈性，您必須考慮如何裝載您的服務時。  在.NET 3.5 中，用戶端和服務必須緊密關聯;用戶端必須知道的所有服務與互動所需和它們所在位置。 此外，.Net Framework 3.5 中的 WCF 具有下列限制：  
   
 -   錯誤處理很複雜，因為此邏輯必須透過硬式編碼寫入用戶端。  
   
@@ -293,11 +293,11 @@ ms.locfileid: "33809858"
   
 ### <a name="getting-started"></a>快速入門  
   
-1.  文件集：[路由](../../../docs/framework/wcf/feature-details/routing.md)  
+1.  文件：[路由](../../../docs/framework/wcf/feature-details/routing.md)  
   
 2.  範例：[路由服務&#91;WCF 範例&#93;](../../../docs/framework/wcf/samples/routing-services.md)  
   
-3.  部落格：[路由規則 ！](http://go.microsoft.com/fwlink/?LinkId=204956)  
+3.  部落格：[路由規則 ！](https://go.microsoft.com/fwlink/?LinkId=204956)  
   
 ### <a name="routing-scenarios"></a>路由案例  
  在下列案例中，路由服務很有用：  
@@ -313,7 +313,7 @@ ms.locfileid: "33809858"
 -   用戶端可以具備更健全的功能，以防範失敗或無法使用服務的情況。  
   
 ## <a name="wcf-discovery"></a>WCF 探索  
- WCF 探索是一項架構技術，可讓您應用程式基礎結構探索機制併入。 您可以使用這項技術，讓服務成為可探索的服務，並且設定用戶端來搜尋服務。 用戶端不再需要對端點進行硬式編碼，讓應用程式更健全並提高容錯能力。 探索是在應用程式中建置自動組態功能的完美平台。  
+ WCF 探索是一種架構的技術，可讓您將應用程式基礎結構的探索機制。 您可以使用這項技術，讓服務成為可探索的服務，並且設定用戶端來搜尋服務。 用戶端不再需要對端點進行硬式編碼，讓應用程式更健全並提高容錯能力。 探索是在應用程式中建置自動組態功能的完美平台。  
   
  此產品是以 WS-Discovery 標準為建置基礎。 其設計目的是要成為可互通、可擴充且泛型的產品。 此產品支援兩種作業模式：  
   
@@ -321,11 +321,11 @@ ms.locfileid: "33809858"
   
 2.  臨機操作：用戶端會使用多點傳送訊息來找出服務。  
   
- 此外，探索訊息無從驗證網路通訊協定。您可以在支援模式需求的任何通訊協定上使用這些訊息。 例如，探索可以透過 UDP 通道或支援多點傳送訊息的其他任何網路傳送多點傳送的訊息。  這些設計點，結合功能的彈性，可讓您調整探索，特別是以您的方案。  
+ 此外，探索訊息無從驗證網路通訊協定。您可以在支援模式需求的任何通訊協定上使用這些訊息。 例如，透過 UDP 通道或支援多點傳送訊息的任何其他網路傳送多點傳送的訊息。  這些設計與功能彈性結合可讓您調整方案明確地探索的點。  
   
 ### <a name="getting-started"></a>快速入門  
   
--   文件集： [WCF 探索](../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
+-   文件： [WCF 探索](../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
   
 -   範例：[探索 （範例）](../../../docs/framework/wcf/samples/discovery-samples.md)  
   
@@ -333,7 +333,7 @@ ms.locfileid: "33809858"
  開發人員不想要對端點進行硬式編碼，因為它在服務可用時處於未知狀態。 不過，開發人員想要在執行階段選擇服務。 因此，應用程式的元件之間需要降低耦合、提高健全度，以及自動組態功能。  
   
 ## <a name="tracking"></a>追蹤  
- 工作流程追蹤提供深入了解在執行工作流程執行個體。  從工作流程執行個體層級和活動工作流程中的執行工作流程不會發出追蹤事件。 您必須將工作流程追蹤參與者加入至工作流程主機，才能訂閱追蹤記錄。 系統會使用追蹤設定檔來篩選追蹤記錄。 .Net Framework 提供了 ETW (Windows 事件追蹤) 追蹤參與者，而且基本設定檔安裝在 machine.config 檔案中。  
+ 工作流程追蹤可執行的工作流程執行個體的深入解析。  從工作流程工作流程執行個體層級，並在工作流程內的活動執行時，會發出追蹤事件。 您必須將工作流程追蹤參與者加入至工作流程主機，才能訂閱追蹤記錄。 系統會使用追蹤設定檔來篩選追蹤記錄。 .Net Framework 提供了 ETW (Windows 事件追蹤) 追蹤參與者，而且基本設定檔安裝在 machine.config 檔案中。  
   
 ### <a name="getting-started"></a>快速入門  
   
@@ -343,7 +343,7 @@ ms.locfileid: "33809858"
   
     1.  系統會使用預設設定檔。  
   
-    2.  開啟 事件檢視器並啟用下列節點中的分析通道：**事件檢視器**， **Applications and Services Logs**， **Microsoft**， **Windows**，**應用程式伺服器-應用程式**。 以滑鼠右鍵按一下**分析**選取**啟用記錄**。  
+    2.  開啟 事件檢視器並啟用下列節點中的分析通道：**事件檢視器**， **Applications and Services Logs**， **Microsoft**， **Windows**，**應用程式伺服器-應用程式**。 以滑鼠右鍵按一下**分析**，然後選取**啟用記錄**。  
   
     3.  執行工作流程服務。  
   

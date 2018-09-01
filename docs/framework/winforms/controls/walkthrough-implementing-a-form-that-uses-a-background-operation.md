@@ -15,12 +15,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-ms.openlocfilehash: 428dae2d10cd0f49a337c5b0439c5dcc72f83432
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 435bc1c04bfd2f9b8a94ff8151369b5ef2fae6f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43257379"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385868"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>逐步解說：實作使用背景作業的表單
 如果您有會花費很長的時間才能完成，且不想您的使用者介面 (UI) 停止回應或 「 擱置 」，您可以使用<xref:System.ComponentModel.BackgroundWorker>類別，以另一個執行緒上執行作業。  
@@ -57,7 +57,7 @@ ms.locfileid: "43257379"
   
 5.  重新命名第一個<xref:System.Windows.Forms.Button>控制`startAsyncButton`並設定<xref:System.Windows.Forms.Control.Text%2A>屬性設`Start Async`。 重新命名第二個<xref:System.Windows.Forms.Button>控制`cancelAsyncButton`，並將<xref:System.Windows.Forms.Control.Text%2A>屬性設`Cancel Async`。 設定其<xref:System.Windows.Forms.Control.Enabled%2A>屬性設`false`。  
   
-6.  這兩個建立的事件處理常式<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Click>事件。 如需詳細資訊，請參閱[如何：使用設計工具建立事件處理常式](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)。  
+6.  這兩個建立的事件處理常式<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Click>事件。 如需詳細資訊，請參閱[如何：使用設計工具建立事件處理常式](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)。  
   
 7.  拖曳<xref:System.Windows.Forms.Label>控制項從**工具箱**拖曳至表單，並重新命名`resultLabel`。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "43257379"
   
 #### <a name="to-implement-asynchronous-event-handlers"></a>若要實作非同步事件處理常式  
   
-1.  在 [**屬性**] 視窗中，使用<xref:System.ComponentModel.BackgroundWorker>元件保持選取，按一下 [**事件**] 按鈕。 按兩下<xref:System.ComponentModel.BackgroundWorker.DoWork>和<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>事件建立事件處理常式。 如需如何建立事件處理常式的詳細資訊，請參閱[如何：使用設計工具建立事件處理常式](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)。  
+1.  在 [**屬性**] 視窗中，使用<xref:System.ComponentModel.BackgroundWorker>元件保持選取，按一下 [**事件**] 按鈕。 按兩下<xref:System.ComponentModel.BackgroundWorker.DoWork>和<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>事件建立事件處理常式。 如需如何建立事件處理常式的詳細資訊，請參閱[如何：使用設計工具建立事件處理常式](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)。  
   
 2.  在表單中，建立名為 `ComputeFibonacci` 的新方法。 這個方法會執行實際的工作，並且會在背景執行。 此程式碼會示範 Fibonacci 演算法的遞迴實作，它非常沒有效率，對於較大的數字要耗費更長的時間才能完成。 它在這裡是針對說明目的使用，以示範會導致應用程式長時間延遲的作業。  
   
@@ -166,8 +166,8 @@ ms.locfileid: "43257379"
 ## <a name="see-also"></a>另請參閱  
  <xref:System.ComponentModel.BackgroundWorker>  
  [Managed 執行緒處理的最佳實施方針](../../../../docs/standard/threading/managed-threading-best-practices.md)  
- [元件中的多執行緒](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
- [不在組建中：Visual Basic 中的多執行緒處理](http://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
+ [元件中的多執行緒](https://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
+ [不在組建中：Visual Basic 中的多執行緒處理](https://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
  [操作說明：實作使用背景作業的表單](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
  [逐步解說：在背景執行作業](../../../../docs/framework/winforms/controls/walkthrough-running-an-operation-in-the-background.md)  
  [BackgroundWorker 元件](../../../../docs/framework/winforms/controls/backgroundworker-component.md)

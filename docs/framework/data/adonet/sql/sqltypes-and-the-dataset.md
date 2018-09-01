@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9172c20a-9876-4b3b-9c97-1963c02b1993
-ms.openlocfilehash: 14c341a014de5d0b3ede4d11841b34c1426d95fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe00e669449d40320a2038697976423db83ade5b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355616"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394203"
 ---
 # <a name="sqltypes-and-the-dataset"></a>SqlTypes 和資料集
 ADO.NET 2.0 透過 `DataSet` 命名空間 (Namespace) 導入了 <xref:System.Data.SqlTypes> 的增強型別支援。 <xref:System.Data.SqlTypes> 中型別的設計目的是要提供與 SQL Server 資料庫中的資料型別具有相同語意 (Semantics) 及精確度的資料型別。 <xref:System.Data.SqlTypes> 中的每個資料型別，在 SQL Server 中都具有對應的資料型別，並且具有相同的基礎資料表示。  
@@ -26,4 +26,4 @@ ADO.NET 2.0 透過 `DataSet` 命名空間 (Namespace) 導入了 <xref:System.Dat
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 資料類型對應](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
  [設定參數和參數資料類型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

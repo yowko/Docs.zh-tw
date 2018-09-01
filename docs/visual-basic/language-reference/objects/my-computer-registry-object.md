@@ -1,32 +1,32 @@
 ---
-title: My.Computer.Registry 物件
+title: My.Computer.Registry 物件 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - DeleteSetting function [Visual Basic], increasing performance
 - My.Computer.Registry object
 ms.assetid: afd9edf9-ef9b-438b-a390-d71a02dc8203
-ms.openlocfilehash: 89554cc71e180dc48c6d165d53111cabde48f0b3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a37c7cc903279b284921a0e9c2628ef9a0fcc769
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33596066"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388564"
 ---
 # <a name="mycomputerregistry-object"></a>My.Computer.Registry 物件
 提供屬性和方法，以操作登錄。  
   
 ## <a name="remarks"></a>備註  
- 如需方法和屬性`My.Computer.Registry`物件，請參閱<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>。  
+ 如需方法和屬性資訊`My.Computer.Registry`資訊，請參閱<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>。  
   
- 如需詳細資訊，請參閱[讀取和寫入登錄](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 讀取和寫入登錄](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)。  
   
 > [!NOTE]
->  您也可以使用方法來操作登錄<xref:Microsoft.Win32.Registry?displayProperty=nameWithType>類別。  
+>  您也可以使用的方法來操作登錄<xref:Microsoft.Win32.Registry?displayProperty=nameWithType>類別。  
   
 ## <a name="requirements"></a>需求  
  **命名空間：** <xref:Microsoft.VisualBasic.MyServices>  
   
- **類別：** <xref:Microsoft.VisualBasic.MyServices.RegistryProxy> (提供存取<xref:Microsoft.Win32.Registry>)  
+ **類別：** <xref:Microsoft.VisualBasic.MyServices.RegistryProxy> (可存取<xref:Microsoft.Win32.Registry>)  
   
  **組件︰** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   

@@ -2,18 +2,18 @@
 title: 聯合範例
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: a9c2b91f7d8bdf24476c76fcd479b7f2fb44c90f
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 49a13b292a627c054510a10445e1e64ab869162c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806844"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389484"
 ---
 # <a name="federation-sample"></a>聯合範例
 這個範例將示範聯合安全性。  
   
 ## <a name="sample-details"></a>範例詳細資料  
- Windows Communication Foundation (WCF) 提供支援部署聯合的安全性架構透過`wsFederationHttpBinding`。 `wsFederationHttpBinding` 提供安全、可靠以及可互通的繫結，其中包括使用 HTTP 做為要求/回覆通訊的基礎傳輸機制，以及採用文字/XML 做為編碼的 Wire 格式。 如需在 WCF 中的同盟的詳細資訊，請參閱[同盟](../../../../docs/framework/wcf/feature-details/federation.md)。  
+ Windows Communication Foundation (WCF) 提供支援，對部署聯合的安全性架構，透過`wsFederationHttpBinding`。 `wsFederationHttpBinding` 提供安全、可靠以及可互通的繫結，其中包括使用 HTTP 做為要求/回覆通訊的基礎傳輸機制，以及採用文字/XML 做為編碼的 Wire 格式。 如需在 WCF 中的同盟的詳細資訊，請參閱[同盟](../../../../docs/framework/wcf/feature-details/federation.md)。  
   
  本案例由 4 個部分組成：  
   
@@ -82,7 +82,7 @@ ms.locfileid: "33806844"
  請參閱下列指示，以了解如何安裝和執行這個範例。  
   
 > [!NOTE]
->  您必須擁有寫入權限**wwwroot**才能執行此範例的目錄。  
+>  您必須具有寫入權限**wwwroot**才能執行這個範例的目錄。  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
@@ -95,9 +95,9 @@ ms.locfileid: "33806844"
   
 3.  按兩下 BookStoreClient.exe。 BookStoreClient 視窗隨即顯示。  
   
-4.  您可以按一下瀏覽書店中的書籍**瀏覽書籍**。  
+4.  您可以按一下 瀏覽書店中的書籍**瀏覽書籍**。  
   
-5.  若要購買特定書籍，在清單中選取活頁簿，然後按一下**購買書籍**。 應用程式隨即啟動，然後會使用 Windows 驗證向 HomeRealm 安全性權杖服務進行驗證。  
+5.  若要購買特定書籍，請在選取清單中的活頁簿，然後按一下**購買書籍**。 應用程式隨即啟動，然後會使用 Windows 驗證向 HomeRealm 安全性權杖服務進行驗證。  
   
      此範例已設定為允許使用者購買價值在 $15 (含) 以下的書籍。 嘗試購買價值超過 15 美元的書籍，會導致用戶端從「書店服務」(Book Store Service) 收到「拒絕存取」訊息。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "33806844"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  
   
