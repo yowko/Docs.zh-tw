@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f950779514975a3ee76af76506c7579e046537f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 323dfe7d68f5a6f6274ce23f82e25a337956b23c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393181"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386424"
 ---
 # <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 本主題提供 .NET Framework 4 中引入的 Managed Extensibility Framework 之概觀。  
@@ -62,7 +62,7 @@ ms.locfileid: "33393181"
 ## <a name="simplecalculator-an-example-application"></a>SimpleCalculator：範例應用程式  
  了解 MEF 用途的最簡單方式是建置一個簡單的 MEF 應用程式。 在這個範例中，您建置一個十分簡單的計算機 (名稱為 SimpleCalculator)。 SimpleCalculator 的目標是建立一個接受基本算術命令 (格式為 "5+3" 或 "6-2") 的主控台應用程式，並傳回正確的答案。 使用 MEF，將可以新增運算子，而不需要變更應用程式程式碼。  
   
- 若要下載這個範例的完整程式碼，請參閱 [SimpleCalculator 範例](http://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e) \(英文\)。  
+ 若要下載這個範例的完整程式碼，請參閱 [SimpleCalculator 範例](https://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e) \(英文\)。  
   
 > [!NOTE]
 >  SimpleCalculator 的目的是示範 MEF 的概念和語法，不一定會提供其實際使用案例。 許多從 MEF 功能獲得最多益處的應用程式，比 SimpleCalculator 更為複雜。 如需更多範例，請參閱 GitHub 上的 [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef) \(英文\)。
@@ -471,6 +471,6 @@ public class Mod : SimpleCalculator.IOperation
   
 <a name="where_do_i_go_now"></a>   
 ## <a name="where-do-i-go-now"></a>現在我該怎麼做？  
- 若要下載這個範例的完整程式碼，請參閱 [SimpleCalculator 範例](http://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e) \(英文\)。  
+ 若要下載這個範例的完整程式碼，請參閱 [SimpleCalculator 範例](https://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e) \(英文\)。  
   
- 如需詳細資訊和更多程式碼範例，請參閱 [Managed Extensibility Framework](http://go.microsoft.com/fwlink/?LinkId=144282) \(英文\)。 如需 MEF 類型的清單，請參閱 <xref:System.ComponentModel.Composition?displayProperty=nameWithType> 命名空間。
+ 如需詳細資訊和更多程式碼範例，請參閱 [Managed Extensibility Framework](https://go.microsoft.com/fwlink/?LinkId=144282) \(英文\)。 如需 MEF 類型的清單，請參閱 <xref:System.ComponentModel.Composition?displayProperty=nameWithType> 命名空間。

@@ -2,12 +2,12 @@
 title: 操作說明文章 (C# 指南)
 description: 集結了快速提示與簡要的程式碼範例
 ms.date: 12/20/2017
-ms.openlocfilehash: db3ba1982a26097c3d69ba91493164c8f2371be9
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 86e245873c8316cc4ddd52fe59a06f2cac648e6c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999559"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421193"
 ---
 # <a name="how-to-c"></a>操作說明 (C#)
 
@@ -21,7 +21,7 @@ ms.locfileid: "42999559"
 - [了解向方法傳遞結構及類別的不同](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)。
 - [如何使用 Lambda 運算式](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md)。
 - [使用全域命名空間別名解決類型名稱衝突](../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)。
-- [使用運算子多載](../programming-guide/statements-expressions-operators/how-to-use-operator-overloading-to-create-a-complex-number-class.md)。
+- [使用運算子多載](../language-reference/keywords/operator.md)。
 - [實作和呼叫自訂擴充方法](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md)。
 - 連 C# 程式設計人員都可能想要[從 VB 使用`My` 命名空間](../programming-guide/namespaces/how-to-use-the-my-namespace.md)。
 - [使用擴充方法建立 `enum` 類型的新方法](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md)。

@@ -2,12 +2,12 @@
 title: 使用 Async 和 Await 進行非同步程式設計 (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: b1797a6d37728021820f5dfa5c01a7ee0c972f1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f38247969260fecd2fe527efb1ddb0c097fa2a47
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339095"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390229"
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>使用 async 和 await 進行非同步程式設計 (C#)
 您可以使用非同步程式設計，避免發生效能瓶頸並增強應用程式的整體回應性。 不過，撰寫非同步應用程式的傳統技術可能很複雜，因而難以撰寫、偵錯和維護。  
@@ -140,7 +140,7 @@ string urlContents = await client.GetStringAsync();
 ##  <a name="BKMK_APIAsyncMethods"></a> API 非同步方法  
  您可能會想知道哪裡可以找到支援非同步程式設計的方法，例如 `GetStringAsync`。 .NET Framework 4.5 或更新版本以及 .NET Core 包含許多使用 `async` 和 `await` 的成員。 您也可以透過附加至成員名稱的 "Async" 後置字元以及傳回型別 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 來進行辨識。 例如，相對於同步方法 <xref:System.IO.Stream.CopyTo%2A>、<xref:System.IO.Stream.Read%2A> 和 <xref:System.IO.Stream.Write%2A>，`System.IO.Stream` 類別也包含一些方法，例如 <xref:System.IO.Stream.CopyToAsync%2A>、<xref:System.IO.Stream.ReadAsync%2A> 和 <xref:System.IO.Stream.WriteAsync%2A>。  
   
- Windows 執行階段也包含許多您可以在 Windows 應用程式中與 `async` 和 `await` 搭配使用的方法。 如需詳細資訊，請參閱適用於 UWP 開發的[執行緒和非同步程式設計](/windows/uwp/threading-async/)，如果您使用舊版的 Windows 執行階段，則請參閱[非同步程式設計 (Microsoft Store 應用程式)](/previous-versions/windows/apps/hh464924(v=win.10)) 和[快速入門：在 C# 或 Visual Basic 中呼叫非同步 API](/previous-versions/windows/apps/hh452713(v=win.10))。  
+ Windows 執行階段也包含許多您可以在 Windows 應用程式中與 `async` 和 `await` 搭配使用的方法。 如需詳細資訊，請參閱適用於 UWP 開發的[執行緒和非同步程式設計](/windows/uwp/threading-async/)，如果您使用舊版的 Windows 執行階段，則請參閱[非同步程式設計 (Microsoft Store 應用程式)](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10)) 和[快速入門：在 C# 或 Visual Basic 中呼叫非同步 API](https://docs.microsoft.com/previous-versions/windows/apps/hh452713(v=win.10))。  
   
 ##  <a name="BKMK_Threads"></a> 執行緒  
 非同步方法主要做為非封鎖作業使用。 當等候的工作正在執行時，非同步方法的 `await` 運算式不會封鎖目前的執行緒。 運算式會改為註冊方法的其餘部分做為接續，並將控制權交還給非同步方法的呼叫端。  

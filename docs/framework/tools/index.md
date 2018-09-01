@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4034a23b076bc0f3041f09dc4756646a926d6915
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 208dc3048b52cc895a5142a7686829390d1d4503
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314681"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332516"
 ---
 # <a name="net-framework-tools"></a>.NET Framework 工具
 .NET Framework 工具可讓您更輕鬆地建立、部署和管理以 .NET Framework 為目標的應用程式和元件。  
@@ -129,7 +129,7 @@ ms.locfileid: "36314681"
  幫助您當地語系化 Windows Forms 所使用的使用者介面 (UI) 資源 (.resx 或 .resources 檔案)。 您可以解譯字串，然後調整大小、移動和隱藏控制項來容納當地語系化的字串。  
   
 ## <a name="related-sections"></a>相關章節  
- [工具](http://msdn.microsoft.com/library/f533241c-317c-445e-88ca-c80c8d078fca)  
+ [工具](https://msdn.microsoft.com/library/f533241c-317c-445e-88ca-c80c8d078fca)  
  包括 isXPS Conformance 工具 (isXPS.exe) 和效能程式碼剖析工具這類工具。  
   
  [Windows Communication Foundation 工具](../../../docs/framework/wcf/tools.md)  

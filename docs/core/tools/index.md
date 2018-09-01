@@ -4,12 +4,12 @@ description: .NET Core 命令列介面 (CLI) 工具與功能概觀。
 author: mairaw
 ms.author: mairaw
 ms.date: 08/14/2017
-ms.openlocfilehash: e6519ef560026899344c7fc36d91c2409cf1df9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ef69f98171da98b50aae4cdd2f5f88f37ad0c63
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217928"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403402"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET Core 命令列介面 (CLI) 工具
 
@@ -119,7 +119,6 @@ dotnet build --output /build_output
 dotnet /build_output/my_app.dll
 ```
 
-
 ---
 
 ### <a name="driver"></a>驅動器
@@ -140,7 +139,7 @@ dotnet /build_output/my_app.dll
 
 ### <a name="options"></a>選項
 
-您在命令列上傳遞的選項即為叫用命令的選項。 例如當您執行 `dotnet publish --output /build_output`，`--output` 選項及其值會傳遞給 `publish` 命令。 
+您在命令列上傳遞的選項即為叫用命令的選項。 例如當您執行 `dotnet publish --output /build_output`，`--output` 選項及其值會傳遞給 `publish` 命令。
 
 ## <a name="migration-from-projectjson"></a>從 project.json 移轉
 
@@ -148,5 +147,5 @@ dotnet /build_output/my_app.dll
 
 ## <a name="see-also"></a>另請參閱
 
- [dotnet/CLI GitHub 存放庫 (英文)](https://github.com/dotnet/cli/)  
- [.NET core 安裝指南 (英文)](https://aka.ms/dotnetcoregs)  
+* [dotnet/CLI GitHub 存放庫 (英文)](https://github.com/dotnet/cli/)  
+* [.NET core 安裝指南 (英文)](https://aka.ms/dotnetcoregs)  

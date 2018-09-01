@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 在 Linux 或
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: 56c41a51cddeca6c74b09710f9536195a6a88904
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 45be99a86a52ed450b795ca5f91c01ab82c7da47
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404495"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388624"
 ---
 # <a name="deploying-single-container-based-net-core-web-applications-on-linux-or-windows-nano-server-hosts"></a>在 Linux 或 Windows Nano Server 主機上部署單一容器 .NET Core Web 應用程式
 
@@ -41,7 +41,7 @@ eShopOnContainers 的大幅簡化版本 (名為 [eShopWeb](https://github.com/do
 
 該應用程式使用 SQL Server 資料庫來存放目錄。 在容器部署中，此整合型應用程式可以存取與微服務應用程式相同的資料存放區。 該應用程式會在整合型應用程式所在的容器中執行 SQL Server。 在生產環境中，SQL Server 會在 Docker 主機外部的高可用性電腦上執行。 為了開發或測試環境方便起見，建議在專屬的容器中執行 SQL Server。
 
-初始功能集只會啟用目錄瀏覽。 更新後即會啟用容器化應用程式的完整功能集。 如需深入了解整合型 Web 應用程式架構，請參閱 [ASP.NET Web 應用程式架構做法](https://aka.ms/webappebook)電子書和相關的 [eShopOnWeb 範例應用程式](http://aka.ms/WebAppArchitecture)。
+初始功能集只會啟用目錄瀏覽。 更新後即會啟用容器化應用程式的完整功能集。 如需深入了解整合型 Web 應用程式架構，請參閱 [ASP.NET Web 應用程式架構做法](https://aka.ms/webappebook)電子書和相關的 [eShopOnWeb 範例應用程式](https://aka.ms/WebAppArchitecture)。
 
 ## <a name="docker-support"></a>Docker 支援
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba72d648-9553-4849-b829-069ad5ea014b
 author: ghogen
 manager: douge
-ms.openlocfilehash: af6e4bf7697b3139f6809295737fdd0d90b7f013
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c7fb148b96d5ff9804bcb0bb7c842c475c0f117
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33512264"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385977"
 ---
 # <a name="developing-windows-service-applications"></a>開發 Windows 服務應用程式
 您可以使用 Microsoft Visual Studio 或 Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK，藉由建立要安裝為服務的應用程式，以輕鬆地建立服務。 這種類型的應用程式稱為 Windows 服務。 您可以使用架構功能，以建立服務、安裝服務，以及啟動、停止及控制服務的行為。  
@@ -48,5 +48,5 @@ ms.locfileid: "33512264"
  <xref:System.ServiceProcess.ServiceInstaller>  
  描述 <xref:System.ServiceProcess.ServiceInstaller> 類別的功能，其可與 <xref:System.ServiceProcess.ServiceProcessInstaller> 類別搭配使用來安裝和解除安裝您的服務。  
   
- [NIB 根據範本建立專案](http://msdn.microsoft.com/library/7c36d86a-6b79-4480-8228-0f925f1204b2) \(機器翻譯\)  
+ [NIB 根據範本建立專案](https://msdn.microsoft.com/library/7c36d86a-6b79-4480-8228-0f925f1204b2) \(機器翻譯\)  
  描述本章所使用的專案類型，以及如何在兩者之間進行選擇。

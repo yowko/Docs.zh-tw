@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f03935c1ee38cec4ee20c4306213be484933f0bb
-ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
+ms.openlocfilehash: 653a39d1e217d0478ff7c9b01c6ac146fe6b5fac
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2018
-ms.locfileid: "35250995"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419143"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>全球化與當地語系化 .NET 應用程式
-開發[世界通用的應用程式](http://msdn.microsoft.com/goglobal/bb978433.aspx)，包括可以當地語系化為一種或多種語言的應用程式，這項開發工作包含三個步驟：全球化、可當地語系化檢閱，以及當地語系化。  
+開發[世界通用的應用程式](https://msdn.microsoft.com/goglobal/bb978433.aspx)，包括可以當地語系化為一種或多種語言的應用程式，這項開發工作包含三個步驟：全球化、可當地語系化檢閱，以及當地語系化。  
   
  [全球化](../../../docs/standard/globalization-localization/globalization.md)  
  這個步驟包含設計和撰寫文化特性中性和語言中性的應用程式程式碼，且該應用程式支援當地語系化使用者介面和所有使用者的區域資料。 這個步驟包含不是根據文化特性假設做出的設計和開發決策。 即使全球化的應用程式並未當地語系化，但是它的設計和撰寫方式讓後續能夠相對方便地進行一種或多種語言的當地語系化。  
