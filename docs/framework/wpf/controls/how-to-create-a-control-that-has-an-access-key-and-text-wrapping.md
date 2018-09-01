@@ -1,13 +1,6 @@
 ---
-title: "操作說明：建立具有便捷鍵和自動換行功能的控制項"
-ms.custom: 
+title: 操作說明：建立具有便捷鍵和自動換行功能的控制項
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - access keys [WPF], control for
 - controls [WPF], text wrapping
@@ -16,36 +9,32 @@ helpviewer_keywords:
 - controls [WPF], access keys
 - text wrapping [WPF]
 ms.assetid: 205099d9-2551-4302-a25e-a15af9f67e04
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c8ef62b06e97e5db22fde0085e21d7a998bfdf22
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: bc170334496ca4c2a2028b9c493385674d235ca6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43391477"
 ---
-# <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a><span data-ttu-id="c98be-102">操作說明：建立具有便捷鍵和自動換行功能的控制項</span><span class="sxs-lookup"><span data-stu-id="c98be-102">How to: Create a Control That Has an Access Key and Text Wrapping</span></span>
-<span data-ttu-id="c98be-103">此範例示範如何建立具有便捷鍵並支援自動換行的控制項。</span><span class="sxs-lookup"><span data-stu-id="c98be-103">This example shows how to create a control that has an access key and supports text wrapping.</span></span> <span data-ttu-id="c98be-104">此範例會使用<xref:System.Windows.Controls.Label>來說明這些概念的控制項。</span><span class="sxs-lookup"><span data-stu-id="c98be-104">The example uses a <xref:System.Windows.Controls.Label> control to illustrate these concepts.</span></span>  
+# <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a><span data-ttu-id="25942-102">操作說明：建立具有便捷鍵和自動換行功能的控制項</span><span class="sxs-lookup"><span data-stu-id="25942-102">How to: Create a Control That Has an Access Key and Text Wrapping</span></span>
+<span data-ttu-id="25942-103">此範例示範如何建立具有便捷鍵並支援自動換行的控制項。</span><span class="sxs-lookup"><span data-stu-id="25942-103">This example shows how to create a control that has an access key and supports text wrapping.</span></span> <span data-ttu-id="25942-104">此範例會使用<xref:System.Windows.Controls.Label>來說明這些概念的控制項。</span><span class="sxs-lookup"><span data-stu-id="25942-104">The example uses a <xref:System.Windows.Controls.Label> control to illustrate these concepts.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c98be-105">範例</span><span class="sxs-lookup"><span data-stu-id="c98be-105">Example</span></span>  
- <span data-ttu-id="c98be-106">**將自動換行功能新增到您的標籤**</span><span class="sxs-lookup"><span data-stu-id="c98be-106">**Add Text Wrapping to Your Label**</span></span>  
+## <a name="example"></a><span data-ttu-id="25942-105">範例</span><span class="sxs-lookup"><span data-stu-id="25942-105">Example</span></span>  
+ <span data-ttu-id="25942-106">**將自動換行功能新增到您的標籤**</span><span class="sxs-lookup"><span data-stu-id="25942-106">**Add Text Wrapping to Your Label**</span></span>  
   
- <span data-ttu-id="c98be-107"><xref:System.Windows.Controls.Label>控制項不支援文字換行。</span><span class="sxs-lookup"><span data-stu-id="c98be-107">The <xref:System.Windows.Controls.Label> control does not support text wrapping.</span></span> <span data-ttu-id="c98be-108">如果您需要一個多行換行的標籤，您可以將支援自動換行的另一個元素內嵌在巢狀結構中，並將該元素放在標籤內。</span><span class="sxs-lookup"><span data-stu-id="c98be-108">If you need a label that wraps across multiple lines, you can nest another element that does support text wrapping and put the element inside the label.</span></span> <span data-ttu-id="c98be-109">下列範例示範如何使用<xref:System.Windows.Controls.TextBlock>讓包裝幾行文字標籤。</span><span class="sxs-lookup"><span data-stu-id="c98be-109">The following example shows how to use a <xref:System.Windows.Controls.TextBlock> to make a label that wraps several lines of text.</span></span>  
+ <span data-ttu-id="25942-107"><xref:System.Windows.Controls.Label>控制項不支援文字換行。</span><span class="sxs-lookup"><span data-stu-id="25942-107">The <xref:System.Windows.Controls.Label> control does not support text wrapping.</span></span> <span data-ttu-id="25942-108">如果您需要一個多行換行的標籤，您可以將支援自動換行的另一個元素內嵌在巢狀結構中，並將該元素放在標籤內。</span><span class="sxs-lookup"><span data-stu-id="25942-108">If you need a label that wraps across multiple lines, you can nest another element that does support text wrapping and put the element inside the label.</span></span> <span data-ttu-id="25942-109">下列範例示範如何使用<xref:System.Windows.Controls.TextBlock>讓會包裝數行文字的標籤。</span><span class="sxs-lookup"><span data-stu-id="25942-109">The following example shows how to use a <xref:System.Windows.Controls.TextBlock> to make a label that wraps several lines of text.</span></span>  
   
  [!code-xaml[LabelSnippet#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#5)]  
   
- <span data-ttu-id="c98be-110">**將便捷鍵和自動換行功能新增到您的標籤**</span><span class="sxs-lookup"><span data-stu-id="c98be-110">**Add an Access Key and Text Wrapping to Your Label**</span></span>  
+ <span data-ttu-id="25942-110">**將便捷鍵和自動換行功能新增到您的標籤**</span><span class="sxs-lookup"><span data-stu-id="25942-110">**Add an Access Key and Text Wrapping to Your Label**</span></span>  
   
- <span data-ttu-id="c98be-111">如果您需要<xref:System.Windows.Controls.Label>便捷鍵 （助憶鍵） 時，使用<xref:System.Windows.Controls.AccessText>內的項目<xref:System.Windows.Controls.Label>。</span><span class="sxs-lookup"><span data-stu-id="c98be-111">If you need a <xref:System.Windows.Controls.Label> that has an access key (mnemonic), use the <xref:System.Windows.Controls.AccessText> element that is inside the <xref:System.Windows.Controls.Label>.</span></span>  
+ <span data-ttu-id="25942-111">如果您需要<xref:System.Windows.Controls.Label>具有便捷鍵 （助憶鍵），請使用<xref:System.Windows.Controls.AccessText>內的項目<xref:System.Windows.Controls.Label>。</span><span class="sxs-lookup"><span data-stu-id="25942-111">If you need a <xref:System.Windows.Controls.Label> that has an access key (mnemonic), use the <xref:System.Windows.Controls.AccessText> element that is inside the <xref:System.Windows.Controls.Label>.</span></span>  
   
- <span data-ttu-id="c98be-112">例如，控制<xref:System.Windows.Controls.Label>， <xref:System.Windows.Controls.Button>， <xref:System.Windows.Controls.RadioButton>， <xref:System.Windows.Controls.CheckBox>， <xref:System.Windows.Controls.MenuItem>， <xref:System.Windows.Controls.TabItem>， <xref:System.Windows.Controls.Expander>，和<xref:System.Windows.Controls.GroupBox>有預設控制項範本。</span><span class="sxs-lookup"><span data-stu-id="c98be-112">Controls such as <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.RadioButton>, <xref:System.Windows.Controls.CheckBox>, <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.TabItem>, <xref:System.Windows.Controls.Expander>, and <xref:System.Windows.Controls.GroupBox> have default control templates.</span></span> <span data-ttu-id="c98be-113">這些範本包含<xref:System.Windows.Controls.ContentPresenter>。</span><span class="sxs-lookup"><span data-stu-id="c98be-113">These templates contain a <xref:System.Windows.Controls.ContentPresenter>.</span></span> <span data-ttu-id="c98be-114">您可以設定屬性的其中一個<xref:System.Windows.Controls.ContentPresenter>是<xref:System.Windows.Controls.ContentPresenter.RecognizesAccessKey%2A>="true"，您可以用來指定控制項的便捷鍵。</span><span class="sxs-lookup"><span data-stu-id="c98be-114">One of the properties that you can set on the <xref:System.Windows.Controls.ContentPresenter> is <xref:System.Windows.Controls.ContentPresenter.RecognizesAccessKey%2A>="true", which you can use to specify an access key for the control.</span></span>  
+ <span data-ttu-id="25942-112">控制這類<xref:System.Windows.Controls.Label>， <xref:System.Windows.Controls.Button>， <xref:System.Windows.Controls.RadioButton>， <xref:System.Windows.Controls.CheckBox>， <xref:System.Windows.Controls.MenuItem>， <xref:System.Windows.Controls.TabItem>， <xref:System.Windows.Controls.Expander>，以及<xref:System.Windows.Controls.GroupBox>有預設控制項範本。</span><span class="sxs-lookup"><span data-stu-id="25942-112">Controls such as <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.RadioButton>, <xref:System.Windows.Controls.CheckBox>, <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.TabItem>, <xref:System.Windows.Controls.Expander>, and <xref:System.Windows.Controls.GroupBox> have default control templates.</span></span> <span data-ttu-id="25942-113">這些範本包含<xref:System.Windows.Controls.ContentPresenter>。</span><span class="sxs-lookup"><span data-stu-id="25942-113">These templates contain a <xref:System.Windows.Controls.ContentPresenter>.</span></span> <span data-ttu-id="25942-114">您可以設定的屬性之一<xref:System.Windows.Controls.ContentPresenter>是<xref:System.Windows.Controls.ContentPresenter.RecognizesAccessKey%2A>="true"，可用來指定控制項的便捷鍵。</span><span class="sxs-lookup"><span data-stu-id="25942-114">One of the properties that you can set on the <xref:System.Windows.Controls.ContentPresenter> is <xref:System.Windows.Controls.ContentPresenter.RecognizesAccessKey%2A>="true", which you can use to specify an access key for the control.</span></span>  
   
- <span data-ttu-id="c98be-115">下列範例示範如何建立<xref:System.Windows.Controls.Label>，具有存取金鑰，並支援文字換行。</span><span class="sxs-lookup"><span data-stu-id="c98be-115">The following example shows how to create a <xref:System.Windows.Controls.Label> that has an access key and supports text wrapping.</span></span> <span data-ttu-id="c98be-116">若要啟用文字換行，範例會設定<xref:System.Windows.Controls.AccessText.TextWrapping%2A>屬性，並使用底線字元來指定存取金鑰。</span><span class="sxs-lookup"><span data-stu-id="c98be-116">To enable text wrapping, the example sets the <xref:System.Windows.Controls.AccessText.TextWrapping%2A> property and uses an underline character to specify the access key.</span></span> <span data-ttu-id="c98be-117">(緊接在底線字元之後的字元就是便捷鍵)。</span><span class="sxs-lookup"><span data-stu-id="c98be-117">(The character that immediately follows the underline character is the access key.)</span></span>  
+ <span data-ttu-id="25942-115">下列範例示範如何建立<xref:System.Windows.Controls.Label>，具有便捷鍵，並支援文字換行。</span><span class="sxs-lookup"><span data-stu-id="25942-115">The following example shows how to create a <xref:System.Windows.Controls.Label> that has an access key and supports text wrapping.</span></span> <span data-ttu-id="25942-116">若要啟用文字換行，範例會設定<xref:System.Windows.Controls.AccessText.TextWrapping%2A>屬性，並使用底線字元來指定存取金鑰。</span><span class="sxs-lookup"><span data-stu-id="25942-116">To enable text wrapping, the example sets the <xref:System.Windows.Controls.AccessText.TextWrapping%2A> property and uses an underline character to specify the access key.</span></span> <span data-ttu-id="25942-117">(緊接在底線字元之後的字元就是便捷鍵)。</span><span class="sxs-lookup"><span data-stu-id="25942-117">(The character that immediately follows the underline character is the access key.)</span></span>  
   
  [!code-xaml[LabelSnippet#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#4)]  
   
-## <a name="see-also"></a><span data-ttu-id="c98be-118">請參閱</span><span class="sxs-lookup"><span data-stu-id="c98be-118">See Also</span></span>  
- [<span data-ttu-id="c98be-119">操作說明：設定標籤的目標屬性</span><span class="sxs-lookup"><span data-stu-id="c98be-119">How to: Set the Target Property of a Label</span></span>](http://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)
+## <a name="see-also"></a><span data-ttu-id="25942-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="25942-118">See Also</span></span>  
+ [<span data-ttu-id="25942-119">操作說明：設定標籤的目標屬性</span><span class="sxs-lookup"><span data-stu-id="25942-119">How to: Set the Target Property of a Label</span></span>](https://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)

@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
-ms.openlocfilehash: 3b5b6f2f267f19b3ea42c352a8a1e3721a1ceb86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3cbf4fa0eb0b261bb752370c95cdfb2bca0b7e6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359311"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387460"
 ---
-# <a name="inserting-an-image-from-a-file"></a><span data-ttu-id="b952d-102">從檔案插入影像</span><span class="sxs-lookup"><span data-stu-id="b952d-102">Inserting an Image from a File</span></span>
-<span data-ttu-id="b952d-103">您可以將二進位大型物件 (BLOB) 做為二進位或字元資料寫入資料庫，端視資料來源的欄位類型而定。</span><span class="sxs-lookup"><span data-stu-id="b952d-103">You can write a binary large object (BLOB) to a database as either binary or character data, depending on the type of field at your data source.</span></span> <span data-ttu-id="b952d-104">BLOB 是參考 `text`、`ntext` 和 `image` 資料型別的一般詞彙，其中通常包含文件和圖片。</span><span class="sxs-lookup"><span data-stu-id="b952d-104">BLOB is a generic term that refers to the `text`, `ntext`, and `image` data types, which typically contain documents and pictures.</span></span>  
+# <a name="inserting-an-image-from-a-file"></a><span data-ttu-id="d9f73-102">從檔案插入影像</span><span class="sxs-lookup"><span data-stu-id="d9f73-102">Inserting an Image from a File</span></span>
+<span data-ttu-id="d9f73-103">您可以將二進位大型物件 (BLOB) 做為二進位或字元資料寫入資料庫，端視資料來源的欄位類型而定。</span><span class="sxs-lookup"><span data-stu-id="d9f73-103">You can write a binary large object (BLOB) to a database as either binary or character data, depending on the type of field at your data source.</span></span> <span data-ttu-id="d9f73-104">BLOB 是參考 `text`、`ntext` 和 `image` 資料型別的一般詞彙，其中通常包含文件和圖片。</span><span class="sxs-lookup"><span data-stu-id="d9f73-104">BLOB is a generic term that refers to the `text`, `ntext`, and `image` data types, which typically contain documents and pictures.</span></span>  
   
- <span data-ttu-id="b952d-105">若要您的資料庫中寫入 BLOB 值，發出適當的 INSERT 或 UPDATE 陳述式，並將 BLOB 值傳遞做為輸入參數 (請參閱[設定參數和參數資料型別](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md))。</span><span class="sxs-lookup"><span data-stu-id="b952d-105">To write a BLOB value to your database, issue the appropriate INSERT or UPDATE statement and pass the BLOB value as an input parameter (see [Configuring Parameters and Parameter Data Types](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)).</span></span> <span data-ttu-id="b952d-106">如果 BLOB 儲存為 SQL Server `text` 欄位之類的文字，即可將 BOLB 傳遞為字串參數。</span><span class="sxs-lookup"><span data-stu-id="b952d-106">If your BLOB is stored as text, such as a SQL Server `text` field, you can pass the BLOB as a string parameter.</span></span> <span data-ttu-id="b952d-107">如果 BLOB 儲存為 SQL Server `image` 欄位之類的二進位格式，即可將型別 `byte` 的陣列傳遞為二進位參數。</span><span class="sxs-lookup"><span data-stu-id="b952d-107">If the BLOB is stored in binary format, such as a SQL Server `image` field, you can pass an array of type `byte` as a binary parameter.</span></span>  
+ <span data-ttu-id="d9f73-105">若要將 BLOB 值寫入您的資料庫，會發出適當的 INSERT 或 UPDATE 陳述式，並將 BLOB 值傳遞做為輸入參數 (請參閱[設定參數和參數資料類型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md))。</span><span class="sxs-lookup"><span data-stu-id="d9f73-105">To write a BLOB value to your database, issue the appropriate INSERT or UPDATE statement and pass the BLOB value as an input parameter (see [Configuring Parameters and Parameter Data Types](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)).</span></span> <span data-ttu-id="d9f73-106">如果 BLOB 儲存為 SQL Server `text` 欄位之類的文字，即可將 BOLB 傳遞為字串參數。</span><span class="sxs-lookup"><span data-stu-id="d9f73-106">If your BLOB is stored as text, such as a SQL Server `text` field, you can pass the BLOB as a string parameter.</span></span> <span data-ttu-id="d9f73-107">如果 BLOB 儲存為 SQL Server `image` 欄位之類的二進位格式，即可將型別 `byte` 的陣列傳遞為二進位參數。</span><span class="sxs-lookup"><span data-stu-id="d9f73-107">If the BLOB is stored in binary format, such as a SQL Server `image` field, you can pass an array of type `byte` as a binary parameter.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b952d-108">範例</span><span class="sxs-lookup"><span data-stu-id="b952d-108">Example</span></span>  
- <span data-ttu-id="b952d-109">下列程式碼範例將員工資料加入至 Northwind 資料庫的 Employees 資料表中。</span><span class="sxs-lookup"><span data-stu-id="b952d-109">The following code example adds employee information to the Employees table in the Northwind database.</span></span> <span data-ttu-id="b952d-110">員工的相片會從檔案中讀取，並加入資料表的 Photo 欄位 (這是影像欄位)。</span><span class="sxs-lookup"><span data-stu-id="b952d-110">A photo of the employee is read from a file and added to the Photo field in the table, which is an image field.</span></span>  
+## <a name="example"></a><span data-ttu-id="d9f73-108">範例</span><span class="sxs-lookup"><span data-stu-id="d9f73-108">Example</span></span>  
+ <span data-ttu-id="d9f73-109">下列程式碼範例將員工資料加入至 Northwind 資料庫的 Employees 資料表中。</span><span class="sxs-lookup"><span data-stu-id="d9f73-109">The following code example adds employee information to the Employees table in the Northwind database.</span></span> <span data-ttu-id="d9f73-110">員工的相片會從檔案中讀取，並加入資料表的 Photo 欄位 (這是影像欄位)。</span><span class="sxs-lookup"><span data-stu-id="d9f73-110">A photo of the employee is read from a file and added to the Photo field in the table, which is an image field.</span></span>  
   
 ```vb  
 Public Shared Sub AddEmployee( _  
@@ -130,9 +130,9 @@ public static byte[] GetPhoto(string filePath)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b952d-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b952d-111">See Also</span></span>  
- [<span data-ttu-id="b952d-112">使用命令修改資料</span><span class="sxs-lookup"><span data-stu-id="b952d-112">Using Commands to Modify Data</span></span>](../../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
- [<span data-ttu-id="b952d-113">擷取二進位資料</span><span class="sxs-lookup"><span data-stu-id="b952d-113">Retrieving Binary Data</span></span>](../../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
- [<span data-ttu-id="b952d-114">SQL Server 二進位和大量數值資料</span><span class="sxs-lookup"><span data-stu-id="b952d-114">SQL Server Binary and Large-Value Data</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [<span data-ttu-id="b952d-115">SQL Server 資料類型對應</span><span class="sxs-lookup"><span data-stu-id="b952d-115">SQL Server Data Type Mappings</span></span>](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
- [<span data-ttu-id="b952d-116">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="b952d-116">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="d9f73-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d9f73-111">See Also</span></span>  
+ [<span data-ttu-id="d9f73-112">使用命令修改資料</span><span class="sxs-lookup"><span data-stu-id="d9f73-112">Using Commands to Modify Data</span></span>](../../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
+ [<span data-ttu-id="d9f73-113">擷取二進位資料</span><span class="sxs-lookup"><span data-stu-id="d9f73-113">Retrieving Binary Data</span></span>](../../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
+ [<span data-ttu-id="d9f73-114">SQL Server 二進位和大量數值資料</span><span class="sxs-lookup"><span data-stu-id="d9f73-114">SQL Server Binary and Large-Value Data</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
+ [<span data-ttu-id="d9f73-115">SQL Server 資料類型對應</span><span class="sxs-lookup"><span data-stu-id="d9f73-115">SQL Server Data Type Mappings</span></span>](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
+ [<span data-ttu-id="d9f73-116">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="d9f73-116">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
