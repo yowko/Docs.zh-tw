@@ -15,16 +15,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a43863477e902f6f02007ba291a25d2469283e91
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43003251"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425168"
 ---
-# <a name="iclrdatatarget3getexceptionrecord-method"></a><span data-ttu-id="928ad-102">ICLRDataTarget3::GetExceptionRecord 方法</span><span class="sxs-lookup"><span data-stu-id="928ad-102">ICLRDataTarget3::GetExceptionRecord Method</span></span>
-<span data-ttu-id="928ad-103">由通用語言執行平台 (CLR) 資料存取服務呼叫，用於擷取與目標處理序相關聯的例外狀況記錄。</span><span class="sxs-lookup"><span data-stu-id="928ad-103">Called by the common language runtime (CLR) data access services to retrieve the exception record associated with the target process.</span></span> <span data-ttu-id="928ad-104">例如，針對傾印目標，這相當於透過傳入例外狀況記錄`ExceptionParam`引數[MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) Windows Debug Help Library (DbgHelp) 中的函式。</span><span class="sxs-lookup"><span data-stu-id="928ad-104">For example, for a dump target, this would be equivalent to the exception record passed in via the `ExceptionParam` argument to the [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) function in the Windows Debug Help Library (DbgHelp).</span></span>  
+# <a name="iclrdatatarget3getexceptionrecord-method"></a><span data-ttu-id="2e784-102">ICLRDataTarget3::GetExceptionRecord 方法</span><span class="sxs-lookup"><span data-stu-id="2e784-102">ICLRDataTarget3::GetExceptionRecord Method</span></span>
+<span data-ttu-id="2e784-103">由通用語言執行平台 (CLR) 資料存取服務呼叫，用於擷取與目標處理序相關聯的例外狀況記錄。</span><span class="sxs-lookup"><span data-stu-id="2e784-103">Called by the common language runtime (CLR) data access services to retrieve the exception record associated with the target process.</span></span> <span data-ttu-id="2e784-104">例如，針對傾印目標，這相當於透過傳入例外狀況記錄`ExceptionParam`引數[MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) Windows Debug Help Library (DbgHelp) 中的函式。</span><span class="sxs-lookup"><span data-stu-id="2e784-104">For example, for a dump target, this would be equivalent to the exception record passed in via the `ExceptionParam` argument to the [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) function in the Windows Debug Help Library (DbgHelp).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="928ad-105">語法</span><span class="sxs-lookup"><span data-stu-id="928ad-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2e784-105">語法</span><span class="sxs-lookup"><span data-stu-id="2e784-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetExceptionRecord(  
@@ -34,40 +34,40 @@ HRESULT GetExceptionRecord(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="928ad-106">參數</span><span class="sxs-lookup"><span data-stu-id="928ad-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="2e784-106">參數</span><span class="sxs-lookup"><span data-stu-id="2e784-106">Parameters</span></span>  
  `bufferSize`  
- <span data-ttu-id="928ad-107">[in] 輸入緩衝區大小 (位元組)。</span><span class="sxs-lookup"><span data-stu-id="928ad-107">[in] The input buffer size, in bytes.</span></span> <span data-ttu-id="928ad-108">這必須等於`sizeof(` [MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception)`)`。</span><span class="sxs-lookup"><span data-stu-id="928ad-108">This must be equal to `sizeof(`[MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception)`)`.</span></span>  
+ <span data-ttu-id="2e784-107">[in] 輸入緩衝區大小 (位元組)。</span><span class="sxs-lookup"><span data-stu-id="2e784-107">[in] The input buffer size, in bytes.</span></span> <span data-ttu-id="2e784-108">這必須等於`sizeof(` [MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception)`)`。</span><span class="sxs-lookup"><span data-stu-id="2e784-108">This must be equal to `sizeof(`[MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception)`)`.</span></span>  
   
  `bufferUsed`  
- <span data-ttu-id="928ad-109">[out] `ULONG32` 類型的指標，此類型會接收實際寫入緩衝區的位元組數目。</span><span class="sxs-lookup"><span data-stu-id="928ad-109">[out] A pointer to a `ULONG32` type that receives the number of bytes actually written to the buffer.</span></span>  
+ <span data-ttu-id="2e784-109">[out] `ULONG32` 類型的指標，此類型會接收實際寫入緩衝區的位元組數目。</span><span class="sxs-lookup"><span data-stu-id="2e784-109">[out] A pointer to a `ULONG32` type that receives the number of bytes actually written to the buffer.</span></span>  
   
  `buffer`  
- <span data-ttu-id="928ad-110">[out] 接收例外狀況記錄複本之記憶體緩衝區的指標。</span><span class="sxs-lookup"><span data-stu-id="928ad-110">[out] A pointer to a memory buffer that receives a copy of the exception record.</span></span> <span data-ttu-id="928ad-111">例外狀況記錄會當成[MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception)型別。</span><span class="sxs-lookup"><span data-stu-id="928ad-111">The exception record is returned as a [MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception) type.</span></span>  
+ <span data-ttu-id="2e784-110">[out] 接收例外狀況記錄複本之記憶體緩衝區的指標。</span><span class="sxs-lookup"><span data-stu-id="2e784-110">[out] A pointer to a memory buffer that receives a copy of the exception record.</span></span> <span data-ttu-id="2e784-111">例外狀況記錄會當成[MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception)型別。</span><span class="sxs-lookup"><span data-stu-id="2e784-111">The exception record is returned as a [MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception) type.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="928ad-112">傳回值</span><span class="sxs-lookup"><span data-stu-id="928ad-112">Return Value</span></span>  
- <span data-ttu-id="928ad-113">如果成功，傳回值為 `S_OK`，如果失敗，則傳回失敗 `HRESULT` 程式碼。</span><span class="sxs-lookup"><span data-stu-id="928ad-113">The return value is `S_OK` on success, or a failure `HRESULT` code on failure.</span></span> <span data-ttu-id="928ad-114">`HRESULT` 程式碼可以包括 (但不限於) 下列項目：</span><span class="sxs-lookup"><span data-stu-id="928ad-114">The `HRESULT` codes can include but are not limited to the following:</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2e784-112">傳回值</span><span class="sxs-lookup"><span data-stu-id="2e784-112">Return Value</span></span>  
+ <span data-ttu-id="2e784-113">如果成功，傳回值為 `S_OK`，如果失敗，則傳回失敗 `HRESULT` 程式碼。</span><span class="sxs-lookup"><span data-stu-id="2e784-113">The return value is `S_OK` on success, or a failure `HRESULT` code on failure.</span></span> <span data-ttu-id="2e784-114">`HRESULT` 程式碼可以包括 (但不限於) 下列項目：</span><span class="sxs-lookup"><span data-stu-id="2e784-114">The `HRESULT` codes can include but are not limited to the following:</span></span>  
   
-|<span data-ttu-id="928ad-115">傳回碼</span><span class="sxs-lookup"><span data-stu-id="928ad-115">Return code</span></span>|<span data-ttu-id="928ad-116">描述</span><span class="sxs-lookup"><span data-stu-id="928ad-116">Description</span></span>|  
+|<span data-ttu-id="2e784-115">傳回碼</span><span class="sxs-lookup"><span data-stu-id="2e784-115">Return code</span></span>|<span data-ttu-id="2e784-116">描述</span><span class="sxs-lookup"><span data-stu-id="2e784-116">Description</span></span>|  
 |-----------------|-----------------|  
-|`S_OK`|<span data-ttu-id="928ad-117">方法成功。</span><span class="sxs-lookup"><span data-stu-id="928ad-117">Method succeeded.</span></span> <span data-ttu-id="928ad-118">例外狀況記錄已複製到輸出緩衝區。</span><span class="sxs-lookup"><span data-stu-id="928ad-118">The exception record has been copied to the output buffer.</span></span>|  
-|`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|<span data-ttu-id="928ad-119">沒有與目標相關聯的例外狀況記錄。</span><span class="sxs-lookup"><span data-stu-id="928ad-119">No exception record is associated with the target.</span></span>|  
-|`HRESULT_FROM_WIN32(ERROR_BAD_LENGTH)`|<span data-ttu-id="928ad-120">輸入緩衝區大小等於 `sizeof(MINIDUMP_EXCEPTION)`。</span><span class="sxs-lookup"><span data-stu-id="928ad-120">The input buffer size is not equal to `sizeof(MINIDUMP_EXCEPTION)`.</span></span>|  
+|`S_OK`|<span data-ttu-id="2e784-117">方法成功。</span><span class="sxs-lookup"><span data-stu-id="2e784-117">Method succeeded.</span></span> <span data-ttu-id="2e784-118">例外狀況記錄已複製到輸出緩衝區。</span><span class="sxs-lookup"><span data-stu-id="2e784-118">The exception record has been copied to the output buffer.</span></span>|  
+|`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|<span data-ttu-id="2e784-119">沒有與目標相關聯的例外狀況記錄。</span><span class="sxs-lookup"><span data-stu-id="2e784-119">No exception record is associated with the target.</span></span>|  
+|`HRESULT_FROM_WIN32(ERROR_BAD_LENGTH)`|<span data-ttu-id="2e784-120">輸入緩衝區大小等於 `sizeof(MINIDUMP_EXCEPTION)`。</span><span class="sxs-lookup"><span data-stu-id="2e784-120">The input buffer size is not equal to `sizeof(MINIDUMP_EXCEPTION)`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="928ad-121">備註</span><span class="sxs-lookup"><span data-stu-id="928ad-121">Remarks</span></span>  
- <span data-ttu-id="928ad-122">[MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception)是 dbghelp.h 及 imagehlp.h 中 Windows SDK 中所定義的結構。</span><span class="sxs-lookup"><span data-stu-id="928ad-122">[MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception) is a structure defined in dbghelp.h and imagehlp.h in the Windows SDK.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2e784-121">備註</span><span class="sxs-lookup"><span data-stu-id="2e784-121">Remarks</span></span>  
+ <span data-ttu-id="2e784-122">[MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception)是 dbghelp.h 及 imagehlp.h 中 Windows SDK 中所定義的結構。</span><span class="sxs-lookup"><span data-stu-id="2e784-122">[MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception) is a structure defined in dbghelp.h and imagehlp.h in the Windows SDK.</span></span>  
   
- <span data-ttu-id="928ad-123">此方法是由偵錯應用程式的作者來實作。</span><span class="sxs-lookup"><span data-stu-id="928ad-123">This method is implemented by the writer of the debugging application.</span></span>  
+ <span data-ttu-id="2e784-123">此方法是由偵錯應用程式的作者來實作。</span><span class="sxs-lookup"><span data-stu-id="2e784-123">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="928ad-124">需求</span><span class="sxs-lookup"><span data-stu-id="928ad-124">Requirements</span></span>  
- <span data-ttu-id="928ad-125">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="928ad-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2e784-124">需求</span><span class="sxs-lookup"><span data-stu-id="2e784-124">Requirements</span></span>  
+ <span data-ttu-id="2e784-125">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2e784-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="928ad-126">**標頭：** ClrData.idl、 ClrData.h</span><span class="sxs-lookup"><span data-stu-id="928ad-126">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="2e784-126">**標頭：** ClrData.idl、 ClrData.h</span><span class="sxs-lookup"><span data-stu-id="2e784-126">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="928ad-127">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="928ad-127">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2e784-127">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2e784-127">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="928ad-128">**.NET framework 版本：**[!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]</span><span class="sxs-lookup"><span data-stu-id="928ad-128">**.NET Framework Versions:** [!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]</span></span>  
+ <span data-ttu-id="2e784-128">**.NET framework 版本：**[!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2e784-128">**.NET Framework Versions:** [!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="928ad-129">另請參閱</span><span class="sxs-lookup"><span data-stu-id="928ad-129">See Also</span></span>  
- [<span data-ttu-id="928ad-130">ICLRDataTarget3 介面</span><span class="sxs-lookup"><span data-stu-id="928ad-130">ICLRDataTarget3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)  
- [<span data-ttu-id="928ad-131">GetExceptionContextRecord 方法</span><span class="sxs-lookup"><span data-stu-id="928ad-131">GetExceptionContextRecord Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptioncontextrecord-method.md)  
- [<span data-ttu-id="928ad-132">GetExceptionThreadID 方法</span><span class="sxs-lookup"><span data-stu-id="928ad-132">GetExceptionThreadID Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionthreadid-method.md)
+## <a name="see-also"></a><span data-ttu-id="2e784-129">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2e784-129">See Also</span></span>  
+ [<span data-ttu-id="2e784-130">ICLRDataTarget3 介面</span><span class="sxs-lookup"><span data-stu-id="2e784-130">ICLRDataTarget3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)  
+ [<span data-ttu-id="2e784-131">GetExceptionContextRecord 方法</span><span class="sxs-lookup"><span data-stu-id="2e784-131">GetExceptionContextRecord Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptioncontextrecord-method.md)  
+ [<span data-ttu-id="2e784-132">GetExceptionThreadID 方法</span><span class="sxs-lookup"><span data-stu-id="2e784-132">GetExceptionThreadID Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionthreadid-method.md)
