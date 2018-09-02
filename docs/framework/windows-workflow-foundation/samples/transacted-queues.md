@@ -2,15 +2,15 @@
 title: 交易的佇列
 ms.date: 03/30/2017
 ms.assetid: b1b011dd-5e0b-482c-9bb0-9d8727038f14
-ms.openlocfilehash: b125158a113079d87eb6926393d5a2b5fe326824
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: db6a9686334eefb02b9360827a23ca8363127eb5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519677"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408811"
 ---
 # <a name="transacted-queues"></a>交易的佇列
-這個範例示範如何整合佇列和交易中 Windows Workflow Foundation (WF) 來建立可靠和可擴充的服務。 A <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope`在用戶端工作流程中用於傳送訊息至佇列，以在交易使用<xref:System.ServiceModel.NetMsmqBinding>。 在伺服器上使用 <xref:System.ServiceModel.Activities.TransactedReceiveScope>，在相同交易下從佇列接收訊息並更新工作流程狀態。  
+此範例示範如何整合佇列和交易中 Windows Workflow Foundation (WF) 來建立可靠和可擴充的服務。 A <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope`在用戶端工作流程中用來傳送訊息至佇列，以在使用<xref:System.ServiceModel.NetMsmqBinding>。 在伺服器上使用 <xref:System.ServiceModel.Activities.TransactedReceiveScope>，在相同交易下從佇列接收訊息並更新工作流程狀態。  
   
 ## <a name="demonstrates"></a>示範  
  <xref:System.Activities.Statements.TransactionScope>、<xref:System.ServiceModel.Activities.TransactedReceiveScope>、<xref:System.ServiceModel.NetMsmqBinding>、<xref:System.ServiceModel.Activities.Receive> 和內容架構的相互關聯  
@@ -24,7 +24,7 @@ ms.locfileid: "33519677"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  安裝及設定 MSMQ。 請參閱[安裝訊息佇列](http://go.microsoft.com/fwlink/?LinkId=178526)如需詳細資訊。  
+1.  安裝及設定 MSMQ。 請參閱[安裝訊息佇列](https://go.microsoft.com/fwlink/?LinkId=178526)如需詳細資訊。  
   
 2.  在命令列中執行下列命令，以確認 MSDTC 正在執行中。 `net start msdtc`  
   
@@ -35,6 +35,6 @@ ms.locfileid: "33519677"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\TransactedQueues`

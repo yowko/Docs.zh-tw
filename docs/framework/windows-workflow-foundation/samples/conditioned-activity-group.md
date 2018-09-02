@@ -2,12 +2,12 @@
 title: ConditionedActivityGroup
 ms.date: 03/30/2017
 ms.assetid: f76ef924-34ce-48ae-8c8d-48faf9697754
-ms.openlocfilehash: 3560542b912f9697ec2e77c8d5c82e148a41d485
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 144a6c76ea6314c553e201fe4e2364890d869f34
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514061"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418165"
 ---
 # <a name="conditioned-activity-group"></a>ConditionedActivityGroup
 本範例會示範旅遊預約應用程式。 <xref:System.Workflow.Activities.ConditionedActivityGroup> (CAG) 具有兩個程式碼活動：Car 活動與 Airline 活動。 在 `SimpleCAGWorkflow` 建構函式 (Constructor) 中，"travelNeedType" ArrayList 物件中會填入 (Populate) 所需的旅遊預約類型。 藉由將一個或兩個 `travelNeeds.Add` 陳述式標記為註解，您便可以修改 CAG 行為。 Car 與 Airline 活動兩者都有已填入 <xref:System.Workflow.Activities.ConditionedActivityGroup.WhenConditionProperty> 的 <xref:System.Workflow.Activities.CodeCondition> 條件。 Car 活動只會在 `travelNeeds` 集合具有 `TravelNeeds.Car` 項目時執行。Airline 活動則只會在 `travelNeeds` 集合具有 `TravelNeeds.Airline` 項目時執行。  
@@ -31,7 +31,7 @@ ms.locfileid: "33514061"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄：  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\SimpleCAG`  
   

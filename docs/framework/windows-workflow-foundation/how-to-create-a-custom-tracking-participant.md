@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-ms.openlocfilehash: 6439a056ec1baccf6c059f779a577723761c489b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9a83f64b7ea0de275631d7d3b8d2755671223ce
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519528"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418074"
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>HOW TO：建立自訂追蹤參與者
-工作流程追蹤會提供工作流程執行狀態的可見性。 工作流程執行階段會發出追蹤記錄，其中描述工作流程開發週期事件、活動開發週期事件、書籤繼續及錯誤。 這些追蹤記錄由追蹤參與者使用。 Windows Workflow Foundation (WF) 包含寫入追蹤記錄當做 Windows 事件追蹤的 (ETW) 事件的標準追蹤參與者。 如果不符合需求，您也可以寫入自訂的追蹤參與者。 本教學課程步驟描述如何建立擷取 `WriteLine` 活動輸出的自訂追蹤參與者和追蹤設定檔，以便向使用者顯示這些項目。  
+工作流程追蹤會提供工作流程執行狀態的可見性。 工作流程執行階段會發出追蹤記錄，其中描述工作流程開發週期事件、活動開發週期事件、書籤繼續及錯誤。 這些追蹤記錄由追蹤參與者使用。 Windows Workflow Foundation (WF) 包含寫入追蹤記錄當做事件追蹤的 Windows (ETW) 事件的標準追蹤參與者。 如果不符合需求，您也可以寫入自訂的追蹤參與者。 本教學課程步驟描述如何建立擷取 `WriteLine` 活動輸出的自訂追蹤參與者和追蹤設定檔，以便向使用者顯示這些項目。  
   
 > [!NOTE]
->  「快速入門」教學課程中的每個主題都與之前的主題息息相關。 若要完成此主題，您必須先完成之前的主題。 若要下載完整的版或觀看影片逐步解說的教學課程，請參閱[Windows Workflow Foundation (WF45)-入門教學課程](http://go.microsoft.com/fwlink/?LinkID=248976)。  
+>  「快速入門」教學課程中的每個主題都與之前的主題息息相關。 若要完成此主題，您必須先完成之前的主題。 若要下載完整的版或觀看視訊逐步解說教學課程，請參閱[Windows Workflow Foundation (WF45)-入門教學課程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
   
 ## <a name="in-this-topic"></a>本主題內容  
   
 -   [若要建立自訂追蹤參與者](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_CustomTrackingParticipant)  
   
--   [建立追蹤設定檔並註冊追蹤參與者](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile)  
+-   [若要建立追蹤設定檔，並註冊追蹤參與者](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile)  
   
 -   [若要顯示的追蹤資訊](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_DisplayTracking)  
   
@@ -30,7 +30,7 @@ ms.locfileid: "33519528"
   
 ###  <a name="BKMK_CustomTrackingParticipant"></a> 若要建立自訂追蹤參與者  
   
-1.  以滑鼠右鍵按一下**NumberGuessWorkflowHost**中**方案總管 中**選擇**新增**，**類別**。 型別`StatusTrackingParticipant`到**名稱**方塊，然後按一下**新增**。  
+1.  以滑鼠右鍵按一下**NumberGuessWorkflowHost**中**方案總管**，然後選擇 **新增**，**類別**。 型別`StatusTrackingParticipant`成**名稱**方塊，然後按一下**新增**。  
   
 2.  將下列 `using` (或 `Imports`) 陳述式加入至檔案最上方的其他 `using` (或 `Imports`) 陳述式。  
   
@@ -102,11 +102,11 @@ ms.locfileid: "33519528"
     }  
     ```  
   
-     未指定任何追蹤設定檔時，會使用預設的追蹤設定檔。 使用預設追蹤設定檔時，會發出所有 `ActivityStates` 的追蹤記錄。 因為我們只需要擷取 `WriteLine` 活動開發週期當中某個時間的文字，我們只能從 `ActivityStates.Executing` 狀態擷取該文字。 在[建立追蹤設定檔並註冊追蹤參與者](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile)，會建立追蹤設定檔，只指定`WriteLine``ActivityStates.Executing`發出追蹤記錄。  
+     未指定任何追蹤設定檔時，會使用預設的追蹤設定檔。 使用預設追蹤設定檔時，會發出所有 `ActivityStates` 的追蹤記錄。 因為我們只需要擷取 `WriteLine` 活動開發週期當中某個時間的文字，我們只能從 `ActivityStates.Executing` 狀態擷取該文字。 在 [建立追蹤設定檔並註冊追蹤參與者](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile)，會建立追蹤設定檔，只指定`WriteLine``ActivityStates.Executing`時會發出追蹤記錄。  
   
-###  <a name="BKMK_TrackingProfile"></a> 建立追蹤設定檔並註冊追蹤參與者  
+###  <a name="BKMK_TrackingProfile"></a> 若要建立追蹤設定檔，並註冊追蹤參與者  
   
-1.  以滑鼠右鍵按一下**WorkflowHostForm**中**方案總管 中**選擇**檢視程式碼**。  
+1.  以滑鼠右鍵按一下**WorkflowHostForm**中**方案總管**，然後選擇 **檢視程式碼**。  
   
 2.  將下列 `using` (或 `Imports`) 陳述式加入至檔案最上方的其他 `using` (或 `Imports`) 陳述式。  
   
@@ -227,7 +227,7 @@ ms.locfileid: "33519528"
   
 ###  <a name="BKMK_DisplayTracking"></a> 若要顯示的追蹤資訊  
   
-1.  以滑鼠右鍵按一下**WorkflowHostForm**中**方案總管 中**選擇**檢視程式碼**。  
+1.  以滑鼠右鍵按一下**WorkflowHostForm**中**方案總管**，然後選擇 **檢視程式碼**。  
   
 2.  在 `InstanceId_SelectedIndexChanged` 處理常式中，將下列程式碼加入至清除狀態視窗的程式碼之後。  
   
@@ -326,7 +326,7 @@ ms.locfileid: "33519528"
   
 2.  按 Ctrl + F5 啟動應用程式。  
   
-3.  選取範圍，以取得猜測遊戲及要開始，然後按一下 工作流程的型別**新遊戲**。 中輸入謎題中的**猜測**方塊，然後按一下**移**提交猜測。 請注意，工作流程的狀態會顯示在狀態視窗中。 此輸出是從 `WriteLine` 活動擷取的。 選取從切換至不同的工作流程**工作流程執行個體識別碼**下拉式方塊和注意目前的工作流程的狀態已移除。 切換回上一個工作流程，注意其狀態已還原，類似下列範例。  
+3.  選取的範圍猜測遊戲和要開始，然後按一下 工作流程的型別**新遊戲**。 輸入在猜測**猜測**方塊，然後按一下**移**提交猜測。 請注意，工作流程的狀態會顯示在狀態視窗中。 此輸出是從 `WriteLine` 活動擷取的。 切換至不同的工作流程中，選取其中一項從**工作流程執行個體識別碼**下拉式方塊，並請注意，也會移除目前的工作流程的狀態。 切換回上一個工作流程，注意其狀態已還原，類似下列範例。  
   
     > [!NOTE]
     >  如果您切換的工作流程在啟用追蹤之前就已經啟動，就不會顯示任何狀態。 但是，如果您做其他猜測，會儲存這些猜測的狀態，因為現在已啟用追蹤。  
@@ -335,7 +335,7 @@ ms.locfileid: "33519528"
 **您猜得過長。**   
 **請輸入介於 1 到 10 之間的數字**    
     > [!NOTE]
-    >  此資訊可用於判斷隨機數字的範圍，但不包含任何先前猜測的相關資訊。 這項資訊會在下一個步驟中， [How to： 主機的工作流程-並存的多個版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。  
+    >  此資訊可用於判斷隨機數字的範圍，但不包含任何先前猜測的相關資訊。 這項資訊會在下一個步驟中，[如何： 主應用程式的工作流程-並存的多個版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。  
   
      請記下工作流程執行個體識別碼，並玩遊戲直到結束。  
   
@@ -345,4 +345,4 @@ ms.locfileid: "33519528"
 **您猜得過長。**   
 **請輸入介於 1 到 10 之間的數字**   
 **您猜得過長。**   
-**請輸入介於 1 到 10 之間的數字**使用者的猜測不存在，除了這個追蹤資料不包含工作流程最後猜測的相關資訊。 這是因為追蹤資訊僅包含工作流程的 `WriteLine` 輸出，在工作流程完成後顯示的最後一個訊息，是由 `Completed` 處理常式完成的。 教學課程中下, 一個步驟中[How to： 主機的工作流程-並存的多個版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)，現有`WriteLine`活動會顯示使用者的猜測和額外修改`WriteLine`新增的活動會顯示最後的結果。 整合這些變更之後， [How to： 主機的工作流程-並存的多個版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)示範如何同時裝載多個工作流程的版本。
+**請輸入介於 1 到 10 之間的數字**沒有該使用者的猜測時，除了這個追蹤資料並不包含工作流程最後猜測的相關資訊。 這是因為追蹤資訊僅包含工作流程的 `WriteLine` 輸出，在工作流程完成後顯示的最後一個訊息，是由 `Completed` 處理常式完成的。 在下一個步驟的教學課程中，[如何： 主應用程式的工作流程-並存的多個版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)，現有`WriteLine`活動會修改成顯示該使用者的猜測和額外`WriteLine`新增的活動會顯示最後的結果。 整合這些變更之後，[如何： 主應用程式的工作流程-並存的多個版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)示範如何同時裝載工作流程的多個版本。

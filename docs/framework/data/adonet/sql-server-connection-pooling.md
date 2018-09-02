@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 79749f5e593fbf4ea282cc5c8000be88098b702f
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: f416ae8252d9991905da7eeaf4ce6398ff0e7461
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874591"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406492"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server 連接共用 (ADO.NET)
 連接到資料庫伺服器通常需要執行幾個很費時的步驟。 必須要建立實體頻道 (如通訊端或具名管道)，必須建立與伺服器的初始信號交換、必須剖析連接字串資訊、伺服器必須要驗證連接，以及必須檢查是否已在現行交易中登記等。  
@@ -124,7 +124,7 @@ using (SqlConnection connection = new SqlConnection(
 ```  
   
 ## <a name="application-roles-and-connection-pooling"></a>應用程式角色和連接共用  
- 呼叫 `sp_setapprole` 系統預存程序來啟動 SQL Server 應用程式角色後，便無法重設該連接的安全性內容。 不過，啟用共用後，連接會傳回到集區，並且在重複使用共用連接時發生錯誤。 如需詳細資訊，請參閱知識庫文件中，「[OLE DB 資源共用的 SQL 應用程式角色錯誤](http://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)。 」  
+ 呼叫 `sp_setapprole` 系統預存程序來啟動 SQL Server 應用程式角色後，便無法重設該連接的安全性內容。 不過，啟用共用後，連接會傳回到集區，並且在重複使用共用連接時發生錯誤。 如需詳細資訊，請參閱知識庫文件中，「[OLE DB 資源共用的 SQL 應用程式角色錯誤](https://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)。 」  
   
 ### <a name="application-role-alternatives"></a>應用程式角色替代方案  
  建議您善加利用安全機制，以取代應用程式角色。 如需詳細資訊，請參閱 < [SQL Server 中建立應用程式角色](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)。  
@@ -133,4 +133,4 @@ using (SqlConnection connection = new SqlConnection(
  [連接共用](../../../../docs/framework/data/adonet/connection-pooling.md)  
  [SQL Server 和 ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
  [效能計數器](../../../../docs/framework/data/adonet/performance-counters.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

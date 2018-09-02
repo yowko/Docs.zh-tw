@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 933b8385a336a087f7af5245024af209582120cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: da9b0fd4fd7c7eadf09f0b76a17e60b1840fdf48
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404906"
 ---
 # <a name="iclrstrongnamestrongnamesignatureverificationex-method"></a>ICLRStrongName::StrongNameSignatureVerificationEx 方法
-取得值，指出是否在提供的路徑上組件資訊清單包含強式名稱簽章。  
+取得值，指出是否提供之路徑上的組件資訊清單包含強式名稱簽章。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,28 +39,28 @@ HRESULT StrongNameSignatureVerificationEx (
   
 #### <a name="parameters"></a>參數  
  `wszFilePath`  
- [in]可攜式執行檔 （.exe 或.dll） 檔案要驗證的組件路徑。  
+ [in]可攜式可執行檔 （.exe 或.dll） 檔來進行驗證的組件的路徑。  
   
  `fForceVerification`  
- [in]`true`執行驗證，即使它是必要的登錄設定會覆寫，否則`false`。  
+ [in]`true`進行驗證，即使它是必要的登錄設定會覆寫，否則`false`。  
   
  `pfWasVerified`  
- [out]`true`強式名稱簽章已通過驗證，否則如果`false`。 `pfWasVerified` 也會設為`false`如果驗證已成功登錄設定所造成。  
+ [out]`true`強式名稱簽章是否已驗證，否則`false`。 `pfWasVerified` 也會設定為`false`若驗證成功因登錄設定。  
   
 ## <a name="return-value"></a>傳回值  
- `S_OK` 如果驗證成功。否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](http://go.microsoft.com/fwlink/?LinkId=213878)清單)。  
+ `S_OK` 如果驗證成功;否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)清單)。  
   
 ## <a name="remarks"></a>備註  
- [Iclrstrongname:: Strongnamesignatureverificationex](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)方法提供的功能類似於[iclrstrongname:: Strongnamesignatureverification](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)方法。 不過，第二個輸入參數和輸出參數[iclrstrongname:: Strongnamesignatureverificationex](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)類型`BOOLEAN`而不是`DWORD`。  
+ [Iclrstrongname:: Strongnamesignatureverificationex](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)方法會提供功能類似[iclrstrongname:: Strongnamesignatureverification](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)方法。 不過，第二個輸入參數和輸出參數[iclrstrongname:: Strongnamesignatureverificationex](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)的型別`BOOLEAN`而不是`DWORD`。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MetaHost.h  
   
- **程式庫：**包含做為 MSCorEE.dll 中的資源  
+ **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [StrongNameSignatureVerification 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)  

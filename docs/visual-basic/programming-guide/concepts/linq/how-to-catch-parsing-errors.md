@@ -3,10 +3,11 @@ title: 如何： 攔截剖析錯誤 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 22e9068e-ea58-447b-816e-cd1852c11787
 ms.openlocfilehash: aa72b914d4640410a4d47ba49e774dcee31a54c0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406544"
 ---
 # <a name="how-to-catch-parsing-errors-visual-basic"></a>如何： 攔截剖析錯誤 (Visual Basic)
 這個主題顯示如何偵測格式錯誤或無效的 XML。  

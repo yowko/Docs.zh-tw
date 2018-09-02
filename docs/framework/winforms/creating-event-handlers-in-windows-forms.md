@@ -8,12 +8,12 @@ helpviewer_keywords:
 - events [Windows Forms], event handlers
 - event handlers [Windows Forms]
 ms.assetid: 6514e530-c6b8-489c-a8d2-eda7b7072701
-ms.openlocfilehash: 96697fa54b569b6d1ce092ebfc76ef593f2ac66f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9095946d52360c69fd6c4dd6285039fb3e1874d5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539149"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401592"
 ---
 # <a name="creating-event-handlers-in-windows-forms"></a>在 Windows Form 中建立事件處理常式
 事件處理常式是程式碼中的一項程序，可以決定發生事件時 (例如當使用者按一下按鈕，或訊息佇列收到訊息時) 所應執行的動作。 當事件引發時，收到事件的事件處理常式或處理常式會隨即執行。 事件可以指派給多個處理常式，而處理特定事件的方法也可隨機變更。 您也可以使用 Windows Forms 設計工具建立事件處理常式。  
@@ -34,7 +34,7 @@ ms.locfileid: "33539149"
  [Windows Forms 中的事件順序](../../../docs/framework/winforms/order-of-events-in-windows-forms.md)  
  說明事件在 Windows Forms 控制項中的引發順序。  
   
- [如何：使用設計工具建立事件處理常式](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)  
+ [如何：使用設計工具建立事件處理常式](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)  
  說明如何使用 Windows Forms 設計工具建立事件處理常式。  
   
 ## <a name="related-sections"></a>相關章節  

@@ -2,20 +2,20 @@
 title: HOW TO：使用 Svcutil.exe 來下載中繼資料文件
 ms.date: 03/30/2017
 ms.assetid: 15524274-3167-4627-b722-d6cedb9fa8c6
-ms.openlocfilehash: a8872bbf04e688906fb0229e3d8215fb92cdbc3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75068608c2b44ab772175aba7af8d8123457fb7c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492394"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403555"
 ---
 # <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>HOW TO：使用 Svcutil.exe 來下載中繼資料文件
-您可以使用 Svcutil.exe 從正在執行的服務下載中繼資料，並將該中繼資料儲存至本機檔案。 對於 HTTP 和 HTTPS URL 結構描述，Svcutil.exe 會嘗試使用 Ws-metadataexchange 擷取中繼資料和[XML Web 服務探索](http://go.microsoft.com/fwlink/?LinkId=94950)。 對於所有其他的 URL 配置，Svcutil.exe 只會使用 WS-MetadataExchange。  
+您可以使用 Svcutil.exe 從正在執行的服務下載中繼資料，並將該中繼資料儲存至本機檔案。 對於 HTTP 和 HTTPS URL 配置，Svcutil.exe 會嘗試使用 Ws-metadataexchange 擷取中繼資料並[XML Web Service 探索](https://go.microsoft.com/fwlink/?LinkId=94950)。 對於所有其他的 URL 配置，Svcutil.exe 只會使用 WS-MetadataExchange。  
   
  根據預設，Svcutil.exe 會使用定義於 <xref:System.ServiceModel.Description.MetadataExchangeBindings> 類別的繫結。 若要設定用於 WS-MetadataExchange 的繫結，您必須在 Svcutil.exe 的組態檔 (svcutil.exe.config) 中定義用戶端端點，該端點會使用 `IMetadataExchange` 合約，而且使用名稱就是中繼資料端點位址的統一資源識別元 (URI) 配置。  
   
 > [!CAUTION]
->  當執行 Svcutil.exe 取得中繼資料之服務公開兩個不同的服務合約，每個包含相同名稱的作業時，Svcutil.exe 就會顯示 「 無法取得中繼資料從...」 的錯誤訊息，比方說，如果您有公開稱為 「 服務合約的服務作業的某 Get (Car c) 和相同的服務會公開名為 IBookService 具有 Get (Book b) 作業的服務合約。 為了解決此問題，請執行下列其中一項：  
+>  當執行 Svcutil.exe 以取得中繼資料服務公開兩個不同的服務合約，每個包含相同名稱的作業時，Svcutil.exe 會顯示錯誤說: 「 無法取得中繼資料從...」比方說，如果您有公開稱為 「 服務合約的服務有一項作業的 ICarService Get (Car c) 和相同的服務會公開為具有 Get (Book b) 作業的 IBookService 的服務合約。 為了解決此問題，請執行下列其中一項：  
 >   
 >  -   重新命名其中一項作業  
 > -   將 <xref:System.ServiceModel.OperationContractAttribute.Name%2A> 設定為另一個名稱。  
@@ -35,9 +35,9 @@ ms.locfileid: "33492394"
   
      您必須指定 `/t:metadata` 選項才能下載中繼資料。 否則，便會產生用戶端程式碼與組態。  
   
-3.  <`url`> 引數會指定提供中繼資料之服務端點或裝載於線上之中繼資料文件的 URL。 <`epr`> 引數會指定包含 WS 定址為 XML 檔案的路徑`EndpointAddress`支援 Ws-metadataexchange 之服務端點。  
+3.  <`url`> 引數指定的 url 提供服務端點的中繼資料或是線上裝載之中繼資料文件 URL。 <`epr`> 引數會指定要包含之 Ws-addressing 的 XML 檔案的路徑`EndpointAddress`支援 Ws-metadataexchange 之服務端點。  
   
- 如需使用中繼資料下載此工具的更多選項，請參閱[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。  
+ 如需使用此工具來下載中繼資料的其他選項，請參閱[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。  
   
 ## <a name="example"></a>範例  
  下列命令會從正在執行的服務下載中繼資料文件。  

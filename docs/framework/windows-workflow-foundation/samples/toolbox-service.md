@@ -2,12 +2,12 @@
 title: 工具箱服務
 ms.date: 03/30/2017
 ms.assetid: 742212d0-445e-41ed-9739-9ee848ce7f1b
-ms.openlocfilehash: 0b3ea56d28d202bd8356fea1783b6675a708631d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b21f10c763f3f82591f947eb4cc48cf90f4ac79
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516187"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406458"
 ---
 # <a name="toolbox-service"></a>工具箱服務
 這個範例示範如何根據工作流程的內容來更新 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 工具箱活動。 此範例包含會隨著自訂活動是否選取而變更工具箱內容的工作流程。  
@@ -39,19 +39,19 @@ public interface IActivityToolboxService
   
 3.  開啟 Workflow.xaml 檔案。  
   
-4.  新增**CustomActivity**藉由拖放從 [工具箱]。 請注意，額外的工具箱類別目錄名稱為：**新增 WF 類別目錄**具有額外的活動**指派**。  
+4.  新增**CustomActivity**拖放從 [工具箱]。 請注意，額外的工具箱類別目錄名稱為：**新增 WF 類別目錄**與其他活動**指派**。  
   
-5.  現在請取消選取**CustomActivity**將另一個活動拖曳至其中。  
+5.  現在請取消選取**CustomActivity**將另一個活動拖曳到其中。  
   
-6.  項目**指派**分類中**新增 WF 類別目錄**現在已移除工具箱底下。 此外，因為類別目錄中沒有其他項目，類別目錄也會移除。  
+6.  項目**指派**分類中**新增 WF 類別目錄**現在已移除 [工具箱] 底下。 此外，因為類別目錄中沒有其他項目，類別目錄也會移除。  
   
-7.  選取**CustomActivity**一次，類別目錄和**指派**活動就會重新加入。  
+7.  選取  **CustomActivity**再次和分類並**指派**活動就會重新加入。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\IActivityToolboxService`

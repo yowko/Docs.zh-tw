@@ -2,23 +2,23 @@
 title: SAML 權杖提供者
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 519bde6b2849328efdeb2f295bde4749fbb652ca
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 509469404e2c3866c26b5e1817a819519203c175
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808776"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418035"
 ---
 # <a name="saml-token-provider"></a>SAML 權杖提供者
-這個範例會示範如何實作自訂的用戶端 SAML 權杖提供者。 Windows Communication Foundation (WCF) 的權杖提供者用來提供認證給安全性基礎結構。 一般而言，權杖提供者會檢查目標並發行適當的認證，讓安全性基礎結構能夠保護訊息的安全。 WCF 隨附預設的認證管理員權杖提供者。 WCF 還隨附[!INCLUDE[infocard](../../../../includes/infocard-md.md)]權杖提供者。 自訂權杖提供者適用於下列情況：  
+這個範例會示範如何實作自訂的用戶端 SAML 權杖提供者。 Windows Communication Foundation (WCF) 中的權杖提供者用來提供認證給安全性基礎結構。 一般而言，權杖提供者會檢查目標並發行適當的認證，讓安全性基礎結構能夠保護訊息的安全。 WCF 隨附預設的 「 認證管理員權杖提供者。 WCF 也隨附[!INCLUDE[infocard](../../../../includes/infocard-md.md)]權杖提供者。 自訂權杖提供者適用於下列情況：  
   
 -   如果您有這些權杖提供者無法使用的認證存放區。  
   
--   如果您想要提供您自己自訂的機制，轉換認證從使用者提供詳細資料，當 WCF 用戶端架構使用認證時。  
+-   如果您想要提供您自己自訂的機制，來轉換認證從使用者提供詳細資訊，以 WCF 用戶端架構時使用的認證時。  
   
 -   如果您要建置自訂權杖。  
   
- 這個範例示範如何建置自訂權杖提供者，可讓外部 WCF 用戶端架構，用於從取得的 SAML 權杖。  
+ 此範例示範如何建置自訂權杖提供者可從用於 WCF 用戶端架構外部取得的 SAML 權杖。  
   
  簡而言之，這個範例示範下面的情形：  
   
@@ -111,7 +111,7 @@ ms.locfileid: "33808776"
 </system.serviceModel>  
 ```  
   
- 下列步驟示範如何開發自訂 SAML 權杖提供者，並將其整合與 WCF： 安全性架構：  
+ 下列步驟示範如何開發自訂 SAML 權杖提供者，並將它與 WCF 整合： 安全性架構：  
   
 1.  撰寫自訂 SAML 權杖提供者。  
   
@@ -353,9 +353,9 @@ ms.locfileid: "33808776"
   
 #### <a name="to-set-up-and-build-the-sample"></a>若要設定和建置範例  
   
-1.  請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要建置此方案，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+2.  若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
 > [!NOTE]
 >  如果您使用 Svcutil.exe 重新產生這個範例的組態，請務必修改用戶端組態中的端點名稱，以符合用戶端程式碼。  
@@ -371,7 +371,7 @@ ms.locfileid: "33808776"
   
 3.  從 \client\bin 啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-4.  如果用戶端和服務無法通訊，請參閱[疑難排解提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+4.  如果用戶端和服務能夠進行通訊，請參閱[疑難排解祕訣](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 #### <a name="to-run-the-sample-across-computers"></a>若要跨電腦執行範例  
   
@@ -393,7 +393,7 @@ ms.locfileid: "33808776"
   
 9. 在用戶端電腦上，從命令提示字元視窗啟動 `Client.exe`。  
   
-10. 如果用戶端和服務無法通訊，請參閱[疑難排解提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+10. 如果用戶端和服務能夠進行通訊，請參閱[疑難排解祕訣](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 #### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   

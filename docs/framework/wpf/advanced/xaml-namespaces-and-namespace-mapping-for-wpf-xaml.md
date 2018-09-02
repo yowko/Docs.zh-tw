@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: dbf9c9c16488a58a07aa29d16b3d00dd83c7c232
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e93d3cd417d0d075fcebb8327ec51799884f8d6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33549392"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416107"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>WPF XAML 的 XAML 命名空間和命名空間對應
 本主題會進一步說明 WPF XAML 檔案根標記中常見的兩個 XAML 命名空間對應之現況與目的。 本文也會說明如何產生類似的對應，以使用自己的程式碼中所定義的項目和 (或) 個別組件內的項目。  
@@ -50,9 +50,9 @@ ms.locfileid: "33549392"
   
  `clr-namespace:` CLR 命名空間，其宣告位置是在包含要以項目形式公開之公用型別的組件中。  
   
- `assembly=` 組件，其包含部分或全部參考的 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 命名空間。 這個值通常只是組件的名稱，而不是路徑，亦不包含副檔名 (例如 .dll 或 .exe)。 您必須將該組件的路徑建立為專案檔中的專案參考，且專案檔中包含您要對應的 XAML。 若要加入版本控制和強式名稱簽署，`assembly`所定義的值可以是字串<xref:System.Reflection.AssemblyName>，而不是簡單的字串名稱。  
+ `assembly=` 組件，其包含部分或全部參考的 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 命名空間。 這個值通常只是組件的名稱，而不是路徑，亦不包含副檔名 (例如 .dll 或 .exe)。 您必須將該組件的路徑建立為專案檔中的專案參考，且專案檔中包含您要對應的 XAML。 為了加入版本控制和強式名稱簽署`assembly`所定義的值可以是字串<xref:System.Reflection.AssemblyName>，而不是簡單的字串名稱。  
   
- 請注意，用來分隔 `clr-namespace` 語彙基元與其值的字元是冒號 (:)，而用來分隔 `assembly` 語彙基元與其值的字元是等號 (=)。 這兩個語彙基元之間要用的字元則是分號。 此外，宣告中的任何位置皆不得包含任何空格。  
+ 請注意，用來分隔 `clr-namespace` 語彙基元與其值的字元是冒號 (:)，而用來分隔 `assembly` 語彙基元與其值的字元是等號 (=)。 這兩個語彙基元之間要用的字元則是分號。 此外，不包含任何空白字元任何位置宣告中。  
   
 ### <a name="a-basic-custom-mapping-example"></a>基本的自訂對應範例  
  下列程式碼可定義範例自訂類別：  
@@ -106,9 +106,9 @@ End Namespace
   
 <a name="Mapping_CLR_Namespaces_to_XML_Namespaces_in_an"></a>   
 ## <a name="mapping-clr-namespaces-to-xml-namespaces-in-an-assembly"></a>將 CLR 命名空間對應至組件中的 XML 命名空間  
- WPF 定義的 CLR 屬性是由 XAML 處理器使用，以便將多個 CLR 命名空間對應至單一的 XAML 命名空間。 這個屬性， <xref:System.Windows.Markup.XmlnsDefinitionAttribute>，放在組件層級會產生組件的原始程式碼中。 WPF 組件來源的程式碼會使用這個屬性對應各種常見命名空間，例如<xref:System.Windows>和<xref:System.Windows.Controls>至[!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)]命名空間。  
+ WPF 定義的 CLR 屬性是由 XAML 處理器使用，以便將多個 CLR 命名空間對應至單一的 XAML 命名空間。 這個屬性， <xref:System.Windows.Markup.XmlnsDefinitionAttribute>，放在產生組件的原始程式碼中的組件層級。 WPF 組件原始程式碼使用這個屬性來對應各種常見的命名空間，例如<xref:System.Windows>並<xref:System.Windows.Controls>至[!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)]命名空間。  
   
- <xref:System.Windows.Markup.XmlnsDefinitionAttribute>接受兩個參數： XML/XAML 命名空間名稱，而 CLR 命名空間名稱。 多個<xref:System.Windows.Markup.XmlnsDefinitionAttribute>可以存在多個 CLR 命名空間對應至相同的 XML 命名空間。 一旦對應之後，即可在部分類別程式碼後置頁面中提供適當的 `using` 陳述式，視需要參考這些命名空間的成員，而不使用完整限定性條件。 如需詳細資訊，請參閱 <xref:System.Windows.Markup.XmlnsDefinitionAttribute>。  
+ <xref:System.Windows.Markup.XmlnsDefinitionAttribute>採用兩個參數︰ XML/XAML 命名空間名稱，而 CLR 命名空間名稱。 多個<xref:System.Windows.Markup.XmlnsDefinitionAttribute>可以存在多個 CLR 命名空間對應至相同的 XML 命名空間。 一旦對應之後，即可在部分類別程式碼後置頁面中提供適當的 `using` 陳述式，視需要參考這些命名空間的成員，而不使用完整限定性條件。 如需詳細資訊，請參閱 <xref:System.Windows.Markup.XmlnsDefinitionAttribute>。  
   
 ## <a name="designer-namespaces-and-other-prefixes-from-xaml-templates"></a>設計工具命名空間和其他來自 XAML 範本的前置詞  
  如果您是使用 WPF XAML 的開發環境及/或設計工具，您可能會注意到 XAML 標記內含有其他已定義的 XAML 命名空間/前置詞。  
@@ -118,24 +118,24 @@ End Namespace
  另一個您可能會看到的對應前置詞是 `mc:`。 `mc:` 適用於標記相容性，其可運用的標記相容性模式不一定為 XAML 特有。 標記相容性功能在某種程度來說，可以用來在架構之間或跨支援實作的其他界限交換 XAML、進行 XAML 結構描述內容之間的工作、在設計工具中的限制模式提供相容性等等。 如需標記相容性概念以及其與 WPF 之關聯的詳細資訊，請參閱[標記相容性 (mc:) 語言功能](../../../../docs/framework/wpf/advanced/markup-compatibility-mc-language-features.md)。  
   
 ## <a name="wpf-and-assembly-loading"></a>WPF 和組件載入  
- WPF 應用程式模型，接著會使用 CLR 定義的概念與整合，WPF 的 XAML 結構描述內容<xref:System.AppDomain>。 下列順序說明 XAML 結構描述內容如何解譯如何載入組件或尋找在執行的階段或設計階段類型，根據 WPF 使用<xref:System.AppDomain>和其他因素而定。  
+ WPF 的 XAML 結構描述內容整合了 WPF 應用程式模型，它會使用 CLR 定義的概念<xref:System.AppDomain>。 下列序列說明 XAML 結構描述內容如何解譯如何載入組件，或尋找型別在執行的階段或設計階段，根據 WPF 使用<xref:System.AppDomain>以及其他因素。  
   
-1.  逐一查看<xref:System.AppDomain>、 尋找符合名稱的所有層面的已載入組件，從 最近開始載入的組件。  
+1.  逐一查看<xref:System.AppDomain>，尋找符合名稱的所有層面的已載入組件，從最近載入的組件。  
   
-2.  如果限定的名稱，呼叫<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>上的限定名稱。  
+2.  如果為限定名稱，呼叫<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>限定名稱。  
   
 3.  如果限定名稱的簡短名稱 + 公開金鑰語彙基元與載入標記的組件相符，即會傳回這個組件。  
   
-4.  使用的簡短名稱再加上公開金鑰語彙基元來呼叫<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>。  
+4.  使用簡短名稱 + 公開金鑰語彙基元來呼叫<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>。  
   
 5.  如果非限定名稱，呼叫<xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>。  
   
  鬆散式 XAML 不會使用步驟 3；因為沒有任何載入來源組件。  
   
- 編譯的 XAML wpf （透過 XamlBuildTask 產生） 不會使用已載入的組件，從<xref:System.AppDomain>(步驟 1)。 此外，名稱不得為來自 XamlBuildTask 輸出的非限定名稱，因此不適用步驟 5。  
+ WPF （透過 XamlBuildTask 產生） 的已編譯的 XAML 不會使用已載入的組件，從<xref:System.AppDomain>(步驟 1)。 此外，名稱不得為來自 XamlBuildTask 輸出的非限定名稱，因此不適用步驟 5。  
   
  雖然 BAML 也不應包含非限定的組件名稱，但編譯的 BAML (透過 PresentationBuildTask 產生) 仍會使用所有的步驟。  
   
 ## <a name="see-also"></a>另請參閱  
- [了解 XML 命名空間](http://go.microsoft.com/fwlink/?LinkId=98069)  
+ [了解 XML 命名空間](https://go.microsoft.com/fwlink/?LinkId=98069)  
  [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

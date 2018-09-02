@@ -2,19 +2,19 @@
 title: 等候輸入活動
 ms.date: 03/30/2017
 ms.assetid: d58c344e-9ee8-4ce2-b199-75b3fe45237f
-ms.openlocfilehash: 750a217699abe8b2eb2eaaa364002137d335a41a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e878e8c91c5da12a68da848694ce790896517c7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518988"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401205"
 ---
 # <a name="wait-for-input-activity"></a>等候輸入活動
-此範例示範如何在工作流程中建立具名書籤。 Windows Workflow Foundation (WF) 並不會提供用來建立宣告式的書籤的活動。 因此，當您想要在工作流程中建立書籤時，您必須撰寫可建立書籤的自訂活動。 此範例中定義的 `WaitForInput` 活動會提供這個功能，所以使用者可在工作流程中以宣告方式建立書籤。  
+此範例示範如何在工作流程中建立具名書籤。 Windows Workflow Foundation (WF) 不提供宣告式書籤建立的活動。 因此，當您想要在工作流程中建立書籤時，您必須撰寫可建立書籤的自訂活動。 此範例中定義的 `WaitForInput` 活動會提供這個功能，所以使用者可在工作流程中以宣告方式建立書籤。  
   
 ## <a name="projects-in-this-sample"></a>這個範例中的專案  
   
-|**專案名稱**|**描述**|**主要檔案**|  
+|**專案名稱**|**描述**|**主要的檔案**|  
 |-|-|-|  
 |WaitForInput|包含 `WaitForInput` 活動和其設計工具|WaitForInput.cs<br /><br /> `WaitForInput` 活動定義。|  
 |||WaitForInputDesigner.xaml<br /><br /> `WaitForInput` 活動的自訂設計工具。|  
@@ -38,7 +38,7 @@ ms.locfileid: "33518988"
 ## <a name="waitforinput-activity-designer"></a>WaitForInput 活動設計工具  
  `WaitForInput` 活動設計工具會在 WaitForInputDesigner.xaml 檔案中實作。 `WaitForInput` 活動和它的設計工具會包含在相同的組件中。 下圖顯示工具箱中某個分類的 `WaitForInput` 活動，該分類的名稱與組件相同。  
   
- ![WaitForInput 工具箱螢幕擷取畫面](../../../../docs/framework/windows-workflow-foundation/samples/media/waitforinputtoolbox.jpg "WaitForInputToolbox")  
+ ![WaitForInput toolbox 螢幕擷取畫面](../../../../docs/framework/windows-workflow-foundation/samples/media/waitforinputtoolbox.jpg "WaitForInputToolbox")  
   
  下圖顯示 `WaitForInput` 設計工具。 因為 `WaitForInput` 活動非常基本，所以設計工具允許直接在設計工具介面中設定它的所有引數。  
   
@@ -57,6 +57,6 @@ ms.locfileid: "33518988"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\WaitForInput`

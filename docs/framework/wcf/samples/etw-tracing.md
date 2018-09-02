@@ -2,15 +2,15 @@
 title: ETW 追蹤
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: 4aa836650663a2918b51d5f9df95b55f410b8ded
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e4dd141bd5f6a9d137b2fe981b3b412ec0c81e2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33506038"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407163"
 ---
 # <a name="etw-tracing"></a>ETW 追蹤
-這個範例示範如何使用 Event Tracing for Windows (ETW) 和範例隨附的 `ETWTraceListener`，以實作端對端 (E2E) 追蹤。 範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)並包含 ETW 追蹤。  
+這個範例示範如何使用 Event Tracing for Windows (ETW) 和範例隨附的 `ETWTraceListener`，以實作端對端 (E2E) 追蹤。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)並附有 ETW 追蹤。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -50,11 +50,11 @@ ms.locfileid: "33506038"
  使用這個接聽項之前，必須先啟動 ETW 追蹤工作階段。 您可以使用 Logman.exe 或 Tracelog.exe 啟動這個工作階段。 此範例隨附可供您設定 ETW 追蹤工作階段的 SetupETW.bat 檔案，以及可用來關閉工作階段與完成記錄檔的 CleanupETW.bat 檔案。  
   
 > [!NOTE]
->  此範例的安裝程序與建置指示位於本主題的結尾。 如需有關這些工具的詳細資訊，請參閱 [http://go.microsoft.com/fwlink/?LinkId=56580](http://go.microsoft.com/fwlink/?LinkId=56580)  
+>  此範例的安裝程序與建置指示位於本主題的結尾。 如需有關這些工具的詳細資訊，請參閱 [https://go.microsoft.com/fwlink/?LinkId=56580](https://go.microsoft.com/fwlink/?LinkId=56580)  
   
- 使用 ETWTraceListener 時，追蹤會記錄在二進位的 .etl 檔案中。 開啟 ServiceModel 追蹤之後，所有產生的追蹤都會出現在同一個檔案中。 使用[服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)檢視.etl 和.svclog 記錄檔。 此檢視器會建立系統的端對端檢視，讓您能夠從訊息的來源至其目的端及消費點追蹤該訊息。  
+ 使用 ETWTraceListener 時，追蹤會記錄在二進位的 .etl 檔案中。 開啟 ServiceModel 追蹤之後，所有產生的追蹤都會出現在同一個檔案中。 使用[Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)來檢視.etl 和.svclog 記錄檔。 此檢視器會建立系統的端對端檢視，讓您能夠從訊息的來源至其目的端及消費點追蹤該訊息。  
   
- ETW 追蹤接聽項支援循環記錄。 若要啟用這項功能，請移至**啟動**，**執行**和型別`cmd`以啟動命令主控台。 以記錄檔名稱取代下列命令中的 `<logfilename>` 參數。  
+ ETW 追蹤接聽項支援循環記錄。 若要啟用這項功能，請前往**開始**，**執行**並輸入`cmd`啟動命令主控台。 以記錄檔名稱取代下列命令中的 `<logfilename>` 參數。  
   
 ```  
 logman create trace Wcf -o <logfilename> -p "{411a0819-c24b-428c-83e2-26b41091702e}" -f bincirc -max 1000  
@@ -74,22 +74,22 @@ Logman start Wcf
 Logman stop Wcf  
 ```  
   
- 此程序會產生與選擇的工具，您可以處理的二進位循環記錄檔包括[服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)或 Tracerpt。  
+ 此程序會產生二進位循環記錄，您可以使用您所選的工具來處理，包括[Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)或 Tracerpt。  
   
- 您也可以檢閱[循環追蹤](../../../../docs/framework/wcf/samples/circular-tracing.md)範例如需有關執行循環記錄功能的替代接聽程式。  
+ 您也可以檢閱[循環追蹤](../../../../docs/framework/wcf/samples/circular-tracing.md)範例，以替代的接聽程式來執行循環記錄的詳細資訊。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  確認您已經執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要建置此方案，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+2.  若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
     > [!NOTE]
-    >  若要使用 RegisterProvider.bat、SetupETW.bat 與 CleanupETW.bat 命令，您必須使用本機系統管理員帳戶執行。 如果您使用的是 [!INCLUDE[wv](../../../../includes/wv-md.md)] 或更新版本，也必須使用更高的權限來執行命令提示字元。 若要這樣做，請以滑鼠右鍵按一下命令提示字元圖示，然後按一下 **系統管理員身分執行**。  
+    >  若要使用 RegisterProvider.bat、SetupETW.bat 與 CleanupETW.bat 命令，您必須使用本機系統管理員帳戶執行。 如果您使用的是 [!INCLUDE[wv](../../../../includes/wv-md.md)] 或更新版本，也必須使用更高的權限來執行命令提示字元。 若要這樣做，請以滑鼠右鍵按一下 命令提示字元 圖示，然後按一下 **系統管理員身分執行**。  
   
 3.  執行範例前，請先在用戶端和伺服器上執行 RegisterProvider.bat。 這會設定產生的 ETWTracingSampleLog.etl 檔案，以產生可由服務追蹤檢視器讀取的追蹤。 您可以在 C:\logs 資料夾中找到這個檔案。 如果此資料夾不存在，必須先建立一個才能產生追蹤。 然後，在用戶端和伺服器電腦上執行 SetupETW.bat，以便開始 ETW 追蹤工作階段。 SetupETW.bat 檔案可以在 CS\Client 資料夾中找到。  
   
-4.  若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+4.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 5.  當您完成範例時，請執行 CleanupETW.bat 以完成建立 ETWTracingSampleLog.etl 檔案的工作。  
   
@@ -102,9 +102,9 @@ Logman stop Wcf
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\AnalyticTrace`  
   
 ## <a name="see-also"></a>另請參閱  
- [AppFabric 監控範例](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [AppFabric 監控範例](https://go.microsoft.com/fwlink/?LinkId=193959)

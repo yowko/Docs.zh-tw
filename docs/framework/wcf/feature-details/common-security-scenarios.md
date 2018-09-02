@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 0fb51ea0624c4fa686e4e99ffb9c30decedfea10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 220795488d6e4bedf40e0764040470c18d3a3b48
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490899"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402778"
 ---
 # <a name="common-security-scenarios"></a>常見的安全性案例
 本章節中的主題列出一些可能的用戶端和服務安全性組態。 組態會視一些因素而改變。 例如，服務或用戶端是否在內部網路，或安全性是由 Windows 或傳輸 (例如 HTTPS) 所提供。  
@@ -21,7 +21,7 @@ ms.locfileid: "33490899"
  公開、不安全的用戶端與服務範例。  
   
  [沒有安全保障的內部網路用戶端與服務](../../../../docs/framework/wcf/feature-details/intranet-unsecured-client-and-service.md)  
- 基本 Windows Communication Foundation (WCF) 服務開發來提供安全的私人網路，以 WCF 應用程式的相關資訊。  
+ 基本 Windows Communication Foundation (WCF) 服務開發提供安全的私人網路，以 WCF 應用程式的相關資訊。  
   
  [使用基本驗證的傳輸安全性](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
  應用程式允許用戶端使用自訂驗證登入。  
@@ -36,7 +36,7 @@ ms.locfileid: "33490899"
  顯示由憑證保護的用戶端和服務。  
   
  [匿名用戶端的訊息安全性](../../../../docs/framework/wcf/feature-details/message-security-with-an-anonymous-client.md)  
- 顯示的用戶端和服務 WCF 訊息安全性所保護。  
+ 顯示用戶端與受保護的 WCF 訊息安全性的服務。  
   
  [使用者名稱用戶端的訊息安全性](../../../../docs/framework/wcf/feature-details/message-security-with-a-user-name-client.md)  
  用戶端是 Windows Forms 應用程式，允許用戶端使用網域使用者名稱和密碼登入。  
@@ -83,4 +83,4 @@ ms.locfileid: "33490899"
   
 ## <a name="see-also"></a>另請參閱  
  [安全性指引和最佳做法](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
- [Windows Server App Fabric 的安全性模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

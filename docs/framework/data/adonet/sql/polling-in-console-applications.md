@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
-ms.openlocfilehash: 4fc9a787aa03af311ed219f0831a4d0e41544be8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b0d298e1959ff2fdcd46a9f218eb980671407be
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363389"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416704"
 ---
 # <a name="polling-in-console-applications"></a>在主控台應用程式中輪詢
 ADO.NET 中的非同步作業可讓您在另一個執行緒上執行其他工作的同時，在一個執行緒上起始耗時的資料庫工作。 不過，在大多數案例中，最後仍會形成資料庫作業若未完成，則應用程式將無法繼續的狀況。 對於這些狀況，輪詢非同步作業以判定作業是否完成是很有用的。  
@@ -18,7 +18,7 @@ ADO.NET 中的非同步作業可讓您在另一個執行緒上執行其他工作
  您可使用 <xref:System.IAsyncResult.IsCompleted%2A> 屬性，查明作業是否已完成。  
   
 ## <a name="example"></a>範例  
- 下列主控台應用程式會更新資料內**AdventureWorks**範例資料庫中，以非同步方式執行其工作。 為了模擬長期執行的處理序，此範例會將 WAITFOR 陳述式插入命令文字中。 一般來說，您不會嘗試讓命令執行得較慢，但在此案例中這樣做會更容易示範非同步的行為。  
+ 下列主控台應用程式更新中的資料**AdventureWorks**範例資料庫中，以非同步方式執行其工作。 為了模擬長期執行的處理序，此範例會將 WAITFOR 陳述式插入命令文字中。 一般來說，您不會嘗試讓命令執行得較慢，但在此案例中這樣做會更容易示範非同步的行為。  
   
 ```vb  
 Imports System  
@@ -192,4 +192,4 @@ class Class1
   
 ## <a name="see-also"></a>另請參閱  
  [非同步作業](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

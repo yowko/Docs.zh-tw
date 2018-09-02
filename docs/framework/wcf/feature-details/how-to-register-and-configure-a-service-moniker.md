@@ -5,19 +5,19 @@ helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: 1d245327c1e7d53de9a88c93ff0399d8e231a1df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd3b6bbb47dfd72bf70091c9ca4d6fc5e228d950
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493310"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406933"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>HOW TO：註冊和設定服務 Moniker
-之前使用型別之合約的 COM 應用程式中的 Windows Communication Foundation (WCF) 服務 moniker，您必須向 COM 註冊必要的屬性的類型，並使用必要的繫結設定 COM 應用程式和 moniker組態設定。  
+之前使用型別之合約中的 Windows Communication Foundation (WCF) 服務 moniker，在 COM 應用程式中的，您必須向 COM 註冊必要的屬性的類型，並使用必要的繫結設定 COM 應用程式和 moniker組態設定。  
   
 ### <a name="to-register-the-required-attributed-types-with-com"></a>使用 COM 註冊必要的屬性化型別  
   
-1.  使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具，可從 WCF 服務擷取中繼資料合約。 這會原始程式碼產生 WCF 用戶端組件和用戶端應用程式組態檔。  
+1.  使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具從 WCF 服務擷取中繼資料合約。 此 WCF 用戶端組件和用戶端應用程式組態檔中產生的原始程式碼。  
   
 2.  請確定組件中的型別已標示為 `ComVisible`。 若要這樣做，請在 Visual Studio 專案中將下列屬性新增至 AssemblyInfo.cs 檔。  
   
@@ -25,7 +25,7 @@ ms.locfileid: "33493310"
     [assembly: ComVisible(true)]  
     ```  
   
-3.  編譯 managed 的 WCF 用戶端，做為強式名稱組件。 這樣做將需要以密碼金鑰組 (Key Pairs) 進行簽署。 如需詳細資訊，請參閱[簽署以強式名稱組件](http://go.microsoft.com/fwlink/?LinkId=94874).NET 開發人員指南中。  
+3.  編譯 managed 的 WCF 用戶端，做為強式名稱組件。 這樣做將需要以密碼金鑰組 (Key Pairs) 進行簽署。 如需詳細資訊，請參閱 <<c0> [ 簽署以強式名稱組件](https://go.microsoft.com/fwlink/?LinkId=94874).NET 開發人員指南中。  
   
 4.  使用組件註冊 (Regasm.exe) 工具並搭配 `/tlb` 選項，以使用 COM 註冊組件中的型別。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "33493310"
   
 ### <a name="to-configure-the-com-application-and-the-moniker-with-the-required-binding-configuration"></a>使用必要的繫結組態設定 COM 應用程式和 Moniker  
   
--   將繫結定義 (所產生[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)產生的用戶端應用程式組態檔中) 用戶端應用程式組態檔中。 例如，若是名稱為 CallCenterClient.exe 的 Visual Basic 6.0 可執行檔，應該將組態放置在與可執行檔相同之目錄內的 CallCenterConfig.exe.config 檔案中。 用戶端應用程式現在就可使用 Moniker。 請注意，如果使用其中一種標準繫結 WCF 所提供的類型，不需要繫結組態。  
+-   將繫結定義放 (所產生[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)產生的用戶端應用程式組態檔中) 用戶端應用程式組態檔中。 例如，若是名稱為 CallCenterClient.exe 的 Visual Basic 6.0 可執行檔，應該將組態放置在與可執行檔相同之目錄內的 CallCenterConfig.exe.config 檔案中。 用戶端應用程式現在就可使用 Moniker。 請注意，如果使用其中一個標準繫結 WCF 所提供的型別，不需要繫結設定。  
   
      接著會註冊下列型別。  
   

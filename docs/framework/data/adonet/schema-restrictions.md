@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
-ms.openlocfilehash: c62f934561fa4a6c352ff84b8c1201461c42de39
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 040ecd8a2ce223f89601de735b77ccc81638c7af
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357253"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417078"
 ---
 # <a name="schema-restrictions"></a>結構描述限制
-第二個選擇性參數**GetSchema**方法會傳回用來限制的結構描述資訊量的限制，並將它傳遞至**GetSchema**方法的字串陣列. 陣列中的位置決定您可以傳遞的值，它相當於限制號碼。  
+第二個選擇性參數**GetSchema**方法會傳回用來限制結構描述資訊量的限制，並將它傳遞至**GetSchema**方法作為字串的陣列. 陣列中的位置決定您可以傳遞的值，它相當於限制號碼。  
   
  例如，下表說明使用 .NET Framework Data Provider for SQL Server 之 "Tables" 結構描述集合所支援的限制。 SQL Server 結構描述集合的其他限制將列於本主題的結尾。  
   
@@ -25,7 +25,7 @@ ms.locfileid: "33357253"
 |TableType|@TableType|TABLE_TYPE|4|  
   
 ## <a name="specifying-restriction-values"></a>指定限制值  
- 若要使用 "Tables" 結構描述集合的其中一個限制，只需使用四個元素建立字串陣列，然後將符合限制數目的值置於元素中。 例如，以限制資料表所傳回**GetSchema**只有"Sales"結構描述中的資料表的方法之前將其傳遞至設定為"Sales"陣列的第二個項目**GetSchema**方法。  
+ 若要使用 "Tables" 結構描述集合的其中一個限制，只需使用四個元素建立字串陣列，然後將符合限制數目的值置於元素中。 例如，若要限制資料表所傳回**GetSchema**方法，以只有"Sales"結構描述中的資料表設定為"Sales"陣列的第二個項目之前將其傳遞給**GetSchema**方法。  
   
 > [!NOTE]
 >  `SqlClient` 及 `OracleClient` 的限制集合具有其他 `ParameterName` 資料行。 限制預設值資料行仍存在，用於回溯相容性，但目前會忽略它. 指定限制值時，應使用參數化查詢而不是字串取代，來將 SQL 資料隱碼攻擊的風險減至最小。  
@@ -33,10 +33,10 @@ ms.locfileid: "33357253"
 > [!NOTE]
 >  陣列中的項目數目必須少於或等於指定結構描述集合所支援的限制數目，否則將擲回 <xref:System.ArgumentException>。 可以少於限制的最大數目。 假設遺漏的限制為 Null (未限制)。  
   
- 您可以查詢.NET Framework managed 提供者以決定支援的限制清單，藉由呼叫**GetSchema**方法具有限制結構描述集合，也就是 「 限制 」 的名稱。 這將傳回 <xref:System.Data.DataTable>，其包含集合名稱、限制名稱、預設限制值及限制號碼的清單。  
+ 您可以查詢來判斷支援的限制清單，藉由呼叫.NET Framework managed 提供者**GetSchema**方法具有限制結構描述集合，也就是 「 限制 」 的名稱。 這將傳回 <xref:System.Data.DataTable>，其包含集合名稱、限制名稱、預設限制值及限制號碼的清單。  
   
 ### <a name="example"></a>範例  
- 下列範例示範如何使用<xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>方法的.NET Framework Data Provider for SQL Server<xref:System.Data.SqlClient.SqlConnection>類別來擷取所有所包含的資料表結構描述資訊**AdventureWorks**範例資料庫，以及限制的資訊傳回至只有"Sales"結構描述中的資料表：  
+ 下列範例示範如何使用<xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>的.NET Framework Data Provider for SQL Server 的方法<xref:System.Data.SqlClient.SqlConnection>類別來擷取相關的所有資料表中所包含的結構描述資訊**AdventureWorks**範例資料庫，並將資訊限制傳回只有"Sales"結構描述中的資料表：  
   
 ```vb  
 Imports System.Data.SqlClient  
@@ -137,7 +137,7 @@ class Program
   
 |限制名稱|參數名稱|預設限制值|限制號碼|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|User_Name|@Name|name|1|  
+|User_Name|@Name|名稱|1|  
   
 ### <a name="databases"></a>資料庫  
   
@@ -262,4 +262,4 @@ class Program
 |資料行|@Column|COLUMN_NAME|4|  
   
 ## <a name="see-also"></a>另請參閱  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: bf5604472331f336c427ded36fc1666f16310ea2
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 4c90e914273de9f9121a979accdb4798b31e05cb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254349"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418961"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>撰寫大型、可回應的 .NET Framework 應用程式
 本文針對大型 .NET Framework 應用程式或處理大量資料 (例如檔案或資料庫) 的應用程式，提供可提升其效能的提示。 這些提示來自於以 Managed 程式碼重寫 C# 和 Visual Basic 編譯器，本文包含數個 C# 編譯器的實際範例。  
@@ -38,7 +38,7 @@ ms.locfileid: "43254349"
  您應該為應用程式中的關鍵客戶體驗或案例設定效能目標，並撰寫測試以測量效能。  應用科學方法來調查失敗的測試：使用程式碼剖析來引導您、假設可能的問題，以及透過實驗或變更程式碼來測試您的假設。  透過定期測試建立一段時間的基準效能測量資料，以便您隔離出導致效能降低的變更。  當您以嚴謹的方式來處理效能工作時，便可避免浪費時間在不必要的程式碼更新。  
   
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>事實 3：使用良好工具的成果大不相同  
- 良好工具可讓您快速鑽研最大的效能問題 (CPU、記憶體或磁碟)，並協助您找出導致這些瓶頸的程式碼。  Microsoft 提供各種效能工具，例如 [Visual Studio 程式碼剖析工具](/visualstudio/profiling/beginners-guide-to-performance-profiling)、[Windows Phone 分析工具](http://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f)和 [PerfView](http://www.microsoft.com/download/details.aspx?id=28567)。  
+ 良好工具可讓您快速鑽研最大的效能問題 (CPU、記憶體或磁碟)，並協助您找出導致這些瓶頸的程式碼。  Microsoft 提供各種效能工具，例如 [Visual Studio 程式碼剖析工具](/visualstudio/profiling/beginners-guide-to-performance-profiling)、[Windows Phone 分析工具](https://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f)和 [PerfView](https://www.microsoft.com/download/details.aspx?id=28567)。  
   
  PerfView 是非常強大的免費工具，可協助您專注於深入的問題，例如磁碟 I/O、GC 事件和記憶體。  您可以擷取與效能相關的 [Windows 事件追蹤](../../../docs/framework/wcf/samples/etw-tracing.md) (ETW) 事件，並輕鬆檢視每種應用程式、處理序、堆疊和執行緒的資訊。  PerfView 顯示您的應用程式配置的記憶體數量和類型，以及哪些函式或呼叫堆疊佔用了多少記憶體配置。 如需詳細資訊，請參閱工具隨附的豐富說明主題、示範和影片 (例如 Channel 9 上的 [PerfView Tutorial](http://channel9.msdn.com/Series/PerfView-Tutorial) (PerfView 教學課程)。  
   
@@ -281,7 +281,7 @@ Language Integrated Query (LINQ)，搭配使用 lambda 運算式是產能功能�
   
  **範例 5：Lambdas、List\<T> 和 IEnumerable\<T>**  
   
- 這個範例會使用 [LINQ 和功能樣式程式碼](http://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx)來找出編譯器模型中的符號，並指定名稱字串：  
+ 這個範例會使用 [LINQ 和功能樣式程式碼](https://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx)來找出編譯器模型中的符號，並指定名稱字串：  
   
 ```csharp  
 class Symbol {  
@@ -305,7 +305,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- 在第一行中， [lambda 運算式](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [覆蓋](http://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx)區域變數`name`。  這表示除了配置 `predicate` 保存的[委派](~/docs/csharp/language-reference/keywords/delegate.md)物件之外，此程式碼還會配置靜態類別，以維持可擷取 `name` 值的環境。  此編譯器產生類似如下的程式碼：  
+ 在第一行中， [lambda 運算式](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [覆蓋](https://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx)區域變數`name`。  這表示除了配置 `predicate` 保存的[委派](~/docs/csharp/language-reference/keywords/delegate.md)物件之外，此程式碼還會配置靜態類別，以維持可擷取 `name` 值的環境。  此編譯器產生類似如下的程式碼：  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -362,7 +362,7 @@ public Symbol FindMatchingSymbol(string name)
  此程式碼不使用 LINQ 擴充方法、Lambdas 或列舉值，並且不會造成配置。  由於編譯器會將 `symbols` 集合視為 <xref:System.Collections.Generic.List%601>，並且可以將列舉值 (結構) 繫結至具有正確類型的區域變數，以避免 Boxing，因此不會有配置。  此函式的原始版本即為展示 C# 能力和 .NET Framework 生產力的絕佳範例。  此新的和更有效率的版本會保留這些品質，但不會加入要維護的任何複雜程式碼。  
   
 ### <a name="async-method-caching"></a>非同步方法快取  
- 下一個範例顯示當您嘗試在[非同步](http://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)方法中使用快取的結果時，所發生的常見問題。  
+ 下一個範例顯示當您嘗試在[非同步](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)方法中使用快取的結果時，所發生的常見問題。  
   
  **範例 6：在非同步方法中快取**  
   
@@ -465,9 +465,9 @@ class Compilation { /*...*/
  [本主題的簡報影片](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
  [效能分析的初級開發人員指南](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
  [效能](../../../docs/framework/performance/index.md)  
- [.NET 效能祕訣](http://msdn.microsoft.com/library/ms973839.aspx)  
- [Windows Phone Performance Analysis tool 工具](http://msdn.microsoft.com/magazine/hh781024.aspx)  
- [尋找與 Visual Studio Profiler 的應用程式瓶頸](http://msdn.microsoft.com/magazine/cc337887.aspx)  
+ [.NET 效能祕訣](https://msdn.microsoft.com/library/ms973839.aspx)  
+ [Windows Phone Performance Analysis tool 工具](https://msdn.microsoft.com/magazine/hh781024.aspx)  
+ [尋找與 Visual Studio Profiler 的應用程式瓶頸](https://msdn.microsoft.com/magazine/cc337887.aspx)  
  [Channel 9 PerfView 教學課程](http://channel9.msdn.com/Series/PerfView-Tutorial)  
- [高階效能祕訣](http://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
+ [高階效能祕訣](https://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
  [在 GitHub 上的 dotnet/roslyn 存放庫](https://github.com/dotnet/roslyn)

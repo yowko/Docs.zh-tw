@@ -2,11 +2,12 @@
 title: '&lt;behaviorExtensions&gt;'
 ms.date: 03/30/2017
 ms.assetid: 59f2791a-c78f-40d7-aa80-0d9cd10135d9
-ms.openlocfilehash: bb59ceeb478d0324fddc98a206a00dbd170b5ac9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d025497956715913923e839cb6c482f44f96babb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415788"
 ---
 # <a name="ltbehaviorextensionsgt"></a>&lt;behaviorExtensions&gt;
 行為延伸可讓使用者建立使用者定義的行為項目。 這些項目可以和標準的 Windows Communication Foundation (WCF) 行為項目並列使用。 `behaviorExtensions` 區段會定義項目，讓項目可用於組態中。 以下是典型行為擴充的範例。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/03/2018
   
  攻擊者可能會利用 CLR 搜尋順序並執行未經授權的程式碼。 使用完整 (強式) 名稱來唯一識別型別，可進一步增加您系統的安全性。  
   
- 如需詳細資訊，請參閱[執行階段如何找出組件](http://go.microsoft.com/fwlink/?LinkId=95336)和<xref:System.AppDomain.TypeResolve>。  
+ 如需詳細資訊，請參閱 <<c0> [ 執行階段如何找出組件](https://go.microsoft.com/fwlink/?LinkId=95336)和<xref:System.AppDomain.TypeResolve>。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>  

@@ -9,20 +9,20 @@ ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 7d8814f3797be33f22d4249df1d1b8d852e755e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad69367f616236d239587293022935bc3ef4e3ce
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409473"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401605"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>伺服器端 UI 自動化提供者實作
 > [!NOTE]
->  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱 < [Windows Automation API： 使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本節描述如何為自訂控制項實作伺服器端使用者介面自動化提供者。  
   
- 實作 Windows Presentation Foundation (WPF) 項目和非-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]項目 (例如針對[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) 本質上不同。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 項目透過衍生自 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的類別提供 <xref:System.Windows.Automation.Peers.AutomationPeer>的支援。 非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 項目透過提供者介面的實作提供支援。  
+ 實作中的，Windows Presentation Foundation (WPF) 項目，且非位[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]項目 (例如專為[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) 本質上不同。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 項目透過衍生自 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的類別提供 <xref:System.Windows.Automation.Peers.AutomationPeer>的支援。 非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 項目透過提供者介面的實作提供支援。  
   
 <a name="Security_Considerations"></a>   
 ## <a name="security-considerations"></a>安全性考量  
@@ -179,5 +179,5 @@ ms.locfileid: "33409473"
  [UI 自動化提供者引發事件](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)  
  [在 UI 自動化片段提供者中啟用導覽](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)  
  [支援 UI 自動化提供者的控制項模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
- [簡單的提供者範例](http://msdn.microsoft.com/library/c10a6255-e8dc-494b-a051-15111b47984a)  
- [片段提供者範例](http://msdn.microsoft.com/library/778ef1bc-8610-4bc9-886e-aeff94a8a13e)
+ [簡單的提供者範例](https://msdn.microsoft.com/library/c10a6255-e8dc-494b-a051-15111b47984a)  
+ [片段提供者範例](https://msdn.microsoft.com/library/778ef1bc-8610-4bc9-886e-aeff94a8a13e)

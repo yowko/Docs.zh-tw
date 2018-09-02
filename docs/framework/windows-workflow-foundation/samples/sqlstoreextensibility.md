@@ -2,12 +2,12 @@
 title: SQLStoreExtensibility
 ms.date: 03/30/2017
 ms.assetid: 5da1b5a3-f144-41ba-b9c4-02818b28b15d
-ms.openlocfilehash: 37c83a9c1062fe074e41ec5db211fd513355c045
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f49d05244cf9f65a8e06f39c7e40391aaebd9f77
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518482"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408761"
 ---
 # <a name="sqlstoreextensibility"></a>SQLStoreExtensibility
 這個範例示範 SQL 工作流程執行個體存放區中已提升屬性的使用方式和組態。 SQL 工作流程執行個體存放區是以 SQL 為基礎的執行個體存放區實作。 它允許執行個體在 SQL Server 或 SQL Server Express 資料庫中來回儲存及載入其狀態。 存放區擴充性功能可讓使用者定義儲存在執行個體存放區中的屬性。 這些屬性會顯示在提升屬性檢視表中，供使用者查詢屬性。  
@@ -48,19 +48,19 @@ ms.locfileid: "33518482"
     > [!WARNING]
     >  如果在非預設的 SQL Server 執行個體上安裝資料庫，請在建置方案之前，先更新程式碼中的連接字串。  
   
-3.  瀏覽至專案的 bin 目錄 (\WF\Basic\Persistence\SqlStoreExtensibility\bin\Debug) 中執行範例，以系統管理員權限[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]、 以滑鼠右鍵按一下 SqlStoreExtensibility.exe 並選取**身分執行系統管理員**。  
+3.  瀏覽至專案的 bin 目錄 (\WF\Basic\Persistence\SqlStoreExtensibility\bin\Debug) 中，系統管理員權限執行此範例[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]、 以滑鼠右鍵按一下 SqlStoreExtensibility.exe 並選取 **身分執行系統管理員**。  
   
 ### <a name="to-verify-the-sample-is-working-correctly"></a>若要驗證範例是否正常執行  
   
-1.  若要檢視選取的執行個體資料表的內容中使用 SQL Server Management Studio**資料庫**， **InstanceStore**，然後**System.ServiceModel.Activities.DurableInstancing.InstanceTable**在 [物件總管] 中，以滑鼠右鍵按一下**System.ServiceModel.Activities.DurableInstancing.InstanceTable**選取**選取前 1000 個資料列**。 如需有關 SQL Server Management Studio 的詳細資訊，請參閱[SQL Server Management Studio 簡介](http://go.microsoft.com/fwlink/?LinkId=165645)  
+1.  若要檢視選取的執行個體資料表的內容中使用 SQL Server Management Studio**資料庫**， **InstanceStore**，然後**System.ServiceModel.Activities.DurableInstancing.InstanceTable**在 [物件總管] 中，以滑鼠右鍵按一下**System.ServiceModel.Activities.DurableInstancing.InstanceTable** ，然後選取**選取前 1000 個資料列**。 如需有關 SQL Server Management Studio 的詳細資訊，請參閱[簡介 SQL Server Management Studio](https://go.microsoft.com/fwlink/?LinkId=165645)  
   
 2.  觀察列出的工作流程執行個體。  
   
 3.  在 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 命令提示字元中，執行位於範例目錄 (\WF\Basic\Persistence\SqlStoreExtensibility) 的 QueryInstanceStore.cmd 指令碼。  
   
-4.  觀察計數器值顯示在底下**CountStatus**。  
+4.  觀察下顯示的計數器值**CountStatus**。  
   
-5.  執行幾次指令碼以查看**CountStats**值變更。  
+5.  執行指令碼數次以查看**CountStats**值變更。  
   
 6.  按 Enter 鍵，結束工作流程應用程式。  
   
@@ -73,11 +73,11 @@ ms.locfileid: "33518482"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\SQLStoreExtensibility`  
   
 ## <a name="see-also"></a>另請參閱  
  [工作流程持續性](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)  
  [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [AppFabric 主控與持續性範例](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric 主控與持續性範例](https://go.microsoft.com/fwlink/?LinkId=193961)

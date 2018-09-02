@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Visual Basic code, COM interop
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
-ms.openlocfilehash: 08e7c488d6a546f3efd6098c38ca601b5f443a26
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6da65a0c94875f73c8e1094448d76a72823404d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643564"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405946"
 ---
 # <a name="com-interop-visual-basic"></a>COM Interop (Visual Basic)
-元件物件模型 (COM) 可讓物件向其他元件公開其功能以及主控應用程式。 大部分的現今軟體都會包括 COM 物件。 雖然 .NET 組件是新應用程式的最佳選擇，但您有時可能需要採用 COM 物件。 本節涵蓋一些建立和使用 Visual Basic 中使用 COM 物件相關聯的問題。  
+元件物件模型 (COM) 可讓物件向其他元件公開其功能以及主控應用程式。 大部分的現今軟體都會包括 COM 物件。 雖然 .NET 組件是新應用程式的最佳選擇，但您有時可能需要採用 COM 物件。 本節涵蓋一些與建立和使用 Visual Basic 中使用 COM 物件相關聯的問題。  
   
 ## <a name="in-this-section"></a>本節內容  
  [COM Interop 簡介](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
@@ -23,7 +23,7 @@ ms.locfileid: "33643564"
  涵蓋如何將參考新增至具有型別程式庫的 COM 物件。  
   
  [操作說明：使用 ActiveX 控制項](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
- 示範如何使用現有的 ActiveX 控制項，將功能加入 Visual Studio 工具箱。  
+ 示範如何使用現有的 ActiveX 控制項來將功能加入至 Visual Studio 工具箱。  
   
  [逐步解說：呼叫 Windows API](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
  逐步解說如何呼叫屬於 Windows 作業系統之 API 的程序。  
@@ -50,10 +50,10 @@ ms.locfileid: "33643564"
  [與 Unmanaged 程式碼互通](../../../framework/interop/index.md)  
  描述 Common Language Runtime 提供的互通性服務。  
   
- [將 COM 元件公開給 .NET Framework](http://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730)  
+ [將 COM 元件公開給 .NET Framework](https://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730)  
  描述如何透過 COM Interop 呼叫 COM 類型的程序。  
   
- [將 .NET Framework 元件公開給 COM](http://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)  
+ [將 .NET Framework 元件公開給 COM](https://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)  
  描述如何從 COM 準備和使用 Managed 類型。  
   
  [套用 Interop 屬性](../../../framework/interop/applying-interop-attributes.md)  

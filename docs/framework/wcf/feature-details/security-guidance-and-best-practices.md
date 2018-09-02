@@ -6,15 +6,15 @@ helpviewer_keywords:
 ms.assetid: 79e4e6f7-0c00-4045-b0f0-e6a7c37c7788
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 498e05b7b9cfb3b7ea5e2c37e029d19ddae63b55
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 95836865bcf8908583e3a5c347bfcef805997fdc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497499"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407621"
 ---
 # <a name="security-guidance-and-best-practices"></a>安全性指引與最佳做法
-本節中的主題提供指導方針和建立安全的 Windows Communication Foundation (WCF) 應用程式時要考量的項目。 如需有關 Windows Server AppFabric 和安全性，請參閱[安全性模型的 Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
+在本節中的主題提供指導方針和建立安全的 Windows Communication Foundation (WCF) 應用程式時要考量的項目。 如需有關 Windows Server AppFabric 和安全性，請參閱[安全性模型的 Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
   
 ## <a name="in-this-section"></a>本節內容  
  [安全性的最佳做法](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)  
@@ -28,4 +28,4 @@ ms.locfileid: "33497499"
   
 ## <a name="see-also"></a>另請參閱  
  [基本 WCF 程式設計](../../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Windows Server App Fabric 的安全性模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -2,12 +2,12 @@
 title: 在 ASP.NET 中使用 System.Transactions
 ms.date: 03/30/2017
 ms.assetid: 1982c300-7ea6-4242-95ed-dc28ccfacac9
-ms.openlocfilehash: 142f5e18682b02dfb659959a19b79c10fb3110c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b73ec970776f39a0c056e2a706d4818cda6cd72
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364748"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417616"
 ---
 # <a name="using-systemtransactions-in-aspnet"></a>在 ASP.NET 中使用 System.Transactions
 本主題說明如何成功運用 <xref:System.Transactions> 應用程式中的 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 。  
@@ -17,9 +17,9 @@ ms.locfileid: "33364748"
   
  每當交易的管理擴大至需由「Microsoft 分散式交易協調器」(MSDTC) 管理的情況時，就會要求<xref:System.Transactions.DistributedTransactionPermission> 。 這種情況會使用整個處理序的資源，特別是全域資源 (亦即在 MSDTC 記錄中保留的空格)。 資料庫的 Web 前端或是將資料庫當成所提供的服務一部分來使用的應用程式，都是這類用法的例子。  
   
- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 擁有專屬的信任層級，並透過原則檔將這些信任層級關聯至特定的權限。 如需詳細資訊，請參閱[ASP.NET 信任層級和原則檔](http://msdn.microsoft.com/library/f897c794-10d3-414c-86b7-59b66564bbf1)。 在您初次安裝 Windows SDK 時，沒有任何預設的 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 原則檔會與 <xref:System.Transactions.DistributedTransactionPermission>關聯。 因此，當 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 應用程式中的交易規模擴大至需由 MSDTC 管理時，在要求 <xref:System.Security.SecurityException> 時，擴大規模會失敗，並傳回 <xref:System.Transactions.DistributedTransactionPermission>。 若要在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 部分信任環境中啟用交易擴大規模，您應該在同一個預設信任層級中授與 <xref:System.Transactions.DistributedTransactionPermission> 權限 (與在 <xref:System.Data.SqlClient.SqlClientPermission>中所授與的權限一樣)。 您可以選擇設定自訂的信任層級與原則檔來支援這項作業，或者也可以修改預設的原則檔，亦即 **Web_hightrust.config** 和 **Web_mediumtrust.config**。  
+ [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 擁有專屬的信任層級，並透過原則檔將這些信任層級關聯至特定的權限。 如需詳細資訊，請參閱 < [ASP.NET 信任 Levels and Policy Files](https://msdn.microsoft.com/library/f897c794-10d3-414c-86b7-59b66564bbf1)。 在您初次安裝 Windows SDK 時，沒有任何預設的 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 原則檔會與 <xref:System.Transactions.DistributedTransactionPermission>關聯。 因此，當 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 應用程式中的交易規模擴大至需由 MSDTC 管理時，在要求 <xref:System.Security.SecurityException> 時，擴大規模會失敗，並傳回 <xref:System.Transactions.DistributedTransactionPermission>。 若要在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 部分信任環境中啟用交易擴大規模，您應該在同一個預設信任層級中授與 <xref:System.Transactions.DistributedTransactionPermission> 權限 (與在 <xref:System.Data.SqlClient.SqlClientPermission>中所授與的權限一樣)。 您可以選擇設定自訂的信任層級與原則檔來支援這項作業，或者也可以修改預設的原則檔，亦即 **Web_hightrust.config** 和 **Web_mediumtrust.config**。  
   
- 若要修改原則檔，請加入**SecurityClass**元素**DistributedTransactionPermission**至**SecurityClasses**項目底下**PolicyLevel**元素並加入對應**IPermission**項目底下[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] **NamedPermissionSet** system.transactions。 下列組態檔示範如何進行。  
+ 若要修改原則檔，請新增**Distributedtransactionpermission**項目**DistributedTransactionPermission**來**Policylevel**項目底下**Securityclasses**項目並將對應**IPermission**項目底下[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] **NamedPermissionSet** system.transactions。 下列組態檔示範如何進行。  
   
 ```xml  
 <SecurityClasses>  
@@ -40,7 +40,7 @@ ms.locfileid: "33364748"
 </PermissionSet>  
 ```  
   
- 如需有關[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]安全性原則，請參閱[securityPolicy 項目 （ASP.NET 設定結構描述）](http://msdn.microsoft.com/library/469d8d22-d263-46bb-8400-40d8d027faba)。  
+ 如需詳細資訊[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]安全性原則，請參閱 < [securityPolicy 項目 （ASP.NET 設定結構描述）](https://msdn.microsoft.com/library/469d8d22-d263-46bb-8400-40d8d027faba)。  
   
 ## <a name="dynamic-compilation"></a>動態編譯  
  如果您希望匯入並使用 <xref:System.Transactions> 應用程式中的 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] (在存取時動態編譯)，您可以在組態檔中放置 <xref:System.Transactions> 組件的參考。 具體來說，您應該將參考加入預設根 **Web.config**/**compilation** / **assemblies** 區段底下。 下列範例為其示範。  
@@ -57,9 +57,9 @@ ms.locfileid: "33364748"
 </configuration>  
 ```  
   
- 如需詳細資訊，請參閱[新增項目 （ASP.NET 設定結構描述） 編譯組件的](http://msdn.microsoft.com/library/602197e8-108d-4249-b752-ba2a318f75e4)。  
+ 如需詳細資訊，請參閱 < [（ASP.NET 設定結構描述） 的組件的 add 項目](https://msdn.microsoft.com/library/602197e8-108d-4249-b752-ba2a318f75e4)。  
   
 ## <a name="see-also"></a>另請參閱  
- [ASP.NET 的信任層級和原則檔](http://msdn.microsoft.com/library/f897c794-10d3-414c-86b7-59b66564bbf1)  
- [securityPolicy 項目 （ASP.NET 設定結構描述）](http://msdn.microsoft.com/library/469d8d22-d263-46bb-8400-40d8d027faba)  
+ [ASP.NET Trust Levels and Policy Files](https://msdn.microsoft.com/library/f897c794-10d3-414c-86b7-59b66564bbf1)  
+ [securityPolicy 項目 （ASP.NET 設定結構描述）](https://msdn.microsoft.com/library/469d8d22-d263-46bb-8400-40d8d027faba)  
  [異動管理擴大規模](../../../../docs/framework/data/transactions/transaction-management-escalation.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: ab866356e979ec6c041d12620cfb6abfc8928668
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 073cd3a57f254f639fac44900ff6bf022e1fb165
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364875"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408395"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>啟用 Multiple Active Result Sets
 Multiple Active Result Set (MARS) 是與 SQL Server 搭配使用的功能，它允許在單一連接中執行多個批次作業。 啟用 MARS 以與 SQL Server 搭配使用時，使用的每個命令物件都會在連接中加入工作階段。  
@@ -21,7 +21,7 @@ Multiple Active Result Set (MARS) 是與 SQL Server 搭配使用的功能，它�
 ## <a name="enabling-and-disabling-mars-in-the-connection-string"></a>在連接字串中啟用及停用 MARS  
   
 > [!NOTE]
->  下列連接字串使用範例**AdventureWorks**隨附於 SQL Server 資料庫。 提供的連接字串會假設伺服器上已安裝名為 MSSQL1 的資料庫。 視環境需要修改連接字串。  
+>  下列連接字串使用範例**AdventureWorks**隨附於 SQL Server 的資料庫。 提供的連接字串會假設伺服器上已安裝名為 MSSQL1 的資料庫。 視環境需要修改連接字串。  
   
  預設會停用 MARS 功能。 藉由將 "MultipleActiveResultSets=True" 關鍵字配對加入連接字串，可啟用該功能。 "True" 是啟用 MARS 的唯一有效值。 下列範例會說明如何連接至 SQL Server 的執行個體，以及如何指定應該啟用 MARS。  
   
@@ -90,7 +90,7 @@ string connectionString = "Data Source=MSSQL1;" +
 ### <a name="parallel-execution"></a>平行執行  
  MARS 未設計為在應用程式內移除對多重連接的所有需求。 如果應用程式確實需要針對伺服器平行執行命令，則應使用多重連接。  
   
- 例如，請考量下列案例。 建立兩個命令物件，一個用於處理結果集，另一個用於更新資料，它們透過 MARS 共用通用連接。 在此案例中， `Transaction`。`Commit` 會無法更新，直到已經讀取所有結果上的第一個命令物件，進而產生下列例外狀況：  
+ 例如，請考量下列案例。 建立兩個命令物件，一個用於處理結果集，另一個用於更新資料，它們透過 MARS 共用通用連接。 在此案例中， `Transaction`。`Commit` 更新失敗，直到在第一個命令物件，進而產生下列例外狀況已讀取所有結果：  
   
  訊息：其他工作階段正在使用異動內容。  
   
@@ -113,4 +113,4 @@ string connectionString = "Data Source=MSSQL1;" +
   
 ## <a name="see-also"></a>另請參閱  
  [Multiple Active Result Set (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

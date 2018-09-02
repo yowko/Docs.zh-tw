@@ -9,20 +9,20 @@ helpviewer_keywords:
 - user controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: e5a8e088-7ec8-4fd9-bcb3-9078fd134829
-ms.openlocfilehash: 267a56cbfd9025e2e20f1468535e5544146535a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b58318a3e0e9881725d3c260251288c720fa4132
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529855"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406819"
 ---
 # <a name="developing-windows-forms-controls-at-design-time"></a>在設計階段開發 Windows Form 控制項
 針對控制項作者，.NET Framework 提供豐富的控制項撰寫技術。 作者不再只能設計作為預先存在之控制項集合的複合控制項。 透過繼承，您可以從預先存在的複合控制項或預先存在的 Windows Forms 控制項來建立自己的控制項。 您也可以設計可實作自訂繪製的專屬控制項。 這些選項可提供視覺介面設計和功能的大量彈性。 若要利用這些功能，您應該熟悉物件程式設計概念。  
   
 > [!NOTE]
->  不需要完全了解的繼承，但您可能會有用來參考[繼承基本概念 (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)。  
+>  您不需要完全了解繼承，但您可能會有用來參考[繼承的基本概念 (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)。  
   
- 如果您想要建立自訂控制項以在 Web Forms 上使用，請參閱[開發自訂 ASP.NET 伺服器控制項](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef)。  
+ 如果您想要建立自訂控制項以在 Web Forms 上使用，請參閱[開發自訂 ASP.NET 伺服器控制項](https://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef)。  
   
 ## <a name="in-this-section"></a>本節內容  
  [逐步解說：使用 Visual Basic 撰寫複合控制項](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
@@ -41,7 +41,7 @@ ms.locfileid: "33529855"
  示範如何在 Windows Forms 控制項上使用智慧標籤功能。  
   
  [逐步解說：使用 DesignerSerializationVisibilityAttribute 序列化標準類型的集合](../../../../docs/framework/winforms/controls/serializing-collections-designerserializationvisibilityattribute.md)  
- 示範如何使用<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content?displayProperty=nameWithType>序列化集合的屬性。  
+ 示範如何使用<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content?displayProperty=nameWithType>來序列化集合的屬性。  
   
  [逐步解說：在設計階段偵錯自訂的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
  示範如何偵錯 Windows Forms 控制項的設計階段行為。  
@@ -59,19 +59,19 @@ ms.locfileid: "33529855"
  提供如何建立複合控制項之程序的概觀。  
   
  [操作說明：繼承自現有的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)  
- 示範如何建立擴充的控制項，透過繼承自<xref:System.Windows.Forms.Button>控制項類別。  
+ 示範如何建立擴充的控制項，藉由繼承自<xref:System.Windows.Forms.Button>控制項類別。  
   
  [操作說明：繼承自 Control 類別](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)  
  提供如何建立擴充控制項的概觀。  
   
  [操作說明：在設計階段將控制項對齊表單邊緣](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
- 示範如何使用<xref:System.Windows.Forms.Control.Dock%2A>屬性，以您的控制項，會佔用的表單的邊緣對齊。  
+ 示範如何使用<xref:System.Windows.Forms.Control.Dock%2A>屬性，以符合您的控制項，它會佔用表單的邊緣。  
   
  [操作說明：在選擇工具箱項目對話方塊中顯示控制項](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
  示範如何安裝控制項的程序，讓它出現在 [自訂工具箱] 對話方塊中。  
   
  [操作說明：為控制項提供工具箱點陣圖](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md)  
- 示範如何使用<xref:System.Drawing.ToolboxBitmapAttribute>顯示自訂控制項旁的圖示**工具箱**。  
+ 示範如何使用<xref:System.Drawing.ToolboxBitmapAttribute>若要在您的自訂控制項旁邊顯示圖示**工具箱**。  
   
  [操作說明：測試 UserControl 的執行階段行為](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
  示範如何使用 [UserControl 測試容器] 來測試複合控制項的行為。  

@@ -2,12 +2,12 @@
 title: '&lt;textMessageEncoding&gt;'
 ms.date: 03/30/2017
 ms.assetid: e6d834d0-356e-45eb-b530-bbefbb9ec3f0
-ms.openlocfilehash: 640cf8fce766f7107e297143e061f4f60d9f263d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e684c21c0b1360a9b270214ebe7b3ad00b42657f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753478"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417791"
 ---
 # <a name="lttextmessageencodinggt"></a>&lt;textMessageEncoding&gt;
 指定字元編碼和訊息版本處理，用於文字 XML 訊息。  
@@ -37,13 +37,13 @@ ms.locfileid: "32753478"
 |maxReadPoolSize|整數，指定可以同時讀取而不需配置新讀取器的訊息數。 較大的集區大小可讓系統容許更多活動失效的情況，但是會產生較大的工作集。 預設值為 64。|  
 |maxWritePoolSize|整數，指定可以同時傳送而不需配置新寫入器的訊息數。 較大的集區大小可讓系統容許更多活動失效的情況，但是會產生較大的工作集。 預設值為 16。|  
 |messageVersion|指定使用這個繫結所傳送訊息的 SOAP 版本。 有效值為<br /><br /> -   Soap11Addressing10<br />-   Soap12Addressing10<br /><br /> 預設為 Soap12Addressing10。 此屬性的型別為 <xref:System.ServiceModel.Channels.MessageVersion>。|  
-|writeEncoding|指定要在繫結上發出訊息時使用的字元集編碼方式。 有效值為<br /><br /> -UnicodeFffeTextEncoding: Unicode BigEndian 編碼方式<br />-Utf16TextEncoding: Unicode 編碼方式<br />-Utf8TextEncoding: 8 位元編碼方式<br /><br /> 預設為 Utf8TextEncoding。 此屬性的型別為 <xref:System.Text.Encoding>。|  
+|writeEncoding|指定要在繫結上發出訊息時使用的字元集編碼方式。 有效值為<br /><br /> -UnicodeFffeTextEncoding: Unicode BigEndian 編碼方式<br />-Utf16textencoding:unicode 編碼方式<br />-Utf8TextEncoding: 8 位元編碼<br /><br /> 預設為 Utf8TextEncoding。 此屬性的型別為 <xref:System.Text.Encoding>。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<readerQuotas>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|定義 SOAP 訊息複雜度的條件約束，而這些條件約束可由以此繫結所設定的端點處理。 此項目的型別為 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
+|[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|定義 SOAP 訊息複雜度的條件約束，而這些條件約束可由以此繫結所設定的端點處理。 此項目的型別為 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
   
 ### <a name="parent-elements"></a>父項目  
   

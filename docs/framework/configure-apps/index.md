@@ -27,11 +27,12 @@ ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 709f5c021a0e923641c01632bc2da2bc3e285ee9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4bd30b26a3e05f97904200cab40234d00924820c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402397"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>使用組態檔設定應用程式
 .NET Framework 透過組態檔賦予開發人員和系統管理員對於應用程式執行方式的控制和彈性。 組態檔是可以按需要變更的 XML 檔。 系統管員能夠控制應用程式可以存取哪些受保護的資源、應用程式將使用之組件的版本為何，以及遠端應用程式和物件要位於何處。 開發人員則可以將設定值置於組態檔，排除每當設定值變更時重新編譯應用程式的需要。 本章節說明可以設定些什麼以及設定應用程式會很有用處的原因。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 ## <a name="machine-configuration-files"></a>電腦組態檔  
- 電腦組態檔 Machine.config 包含套用於整個電腦的設定值。 這個檔案位於 %*runtime install path*%\Config 目錄中。 Machine.config 包含全電腦的組件繫結、內建[遠端通道](http://msdn.microsoft.com/library/6e9b60e0-9bc0-47b4-a8ef-3b78585f9a18)和 ASP.NET 的組態設定。  
+ 電腦組態檔 Machine.config 包含套用於整個電腦的設定值。 這個檔案位於 %*runtime install path*%\Config 目錄中。 Machine.config 包含全電腦的組件繫結、內建[遠端通道](https://msdn.microsoft.com/library/6e9b60e0-9bc0-47b4-a8ef-3b78585f9a18)和 ASP.NET 的組態設定。  
   
  組態系統首先會在電腦組態檔中尋找 [**\<appSettings>** 項目](~/docs/framework/configure-apps/file-schema/appsettings/index.md)以及開發人員可能定義的其他組態區段。 接著會查看應用程式組態檔。 若要讓電腦組態檔易於管理，最好將這些設定值放在應用程式組態檔中。 然而，將設定值置於電腦組態檔可讓您的系統更容易維護。 例如，如果您有用戶端和伺服器應用程式都使用到的協力廠商元件，將那元件的設定值放在一個地方會比較容易。 在這個情況中，電腦組態檔是設定值的適當位置，所以您在兩個不同檔案中沒有相同的設定值。  
   
@@ -125,9 +126,9 @@ ms.lasthandoff: 05/03/2018
  [組態檔結構描述](../../../docs/framework/configure-apps/file-schema/index.md)  
  [指定組件的位置](../../../docs/framework/configure-apps/specify-assembly-location.md)  
  [重新導向組件版本](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  
- [註冊遠端物件使用組態檔](http://msdn.microsoft.com/library/bc503ee1-c811-4f82-9525-470343326adc)  
- [ASP.NET 網站管理](http://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)  
- [NIB： 安全性原則管理](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)  
+ [使用組態檔註冊遠端物件](https://msdn.microsoft.com/library/bc503ee1-c811-4f82-9525-470343326adc)  
+ [ASP.NET 網站管理](https://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)  
+ [NIB： 安全性原則管理](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)  
  [Caspol.exe (程式碼存取安全性原則工具)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)  
  [Common Language Runtime 中的組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [遠端物件](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)
+ [遠端物件](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)

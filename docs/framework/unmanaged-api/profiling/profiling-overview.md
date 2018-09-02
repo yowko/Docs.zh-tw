@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d7b12004efce76f9ac591f18fd0f4e06fdd7fd0
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: dd0fef0e8a2c4b94cd5dd7beb140e669c52a07a8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934947"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416956"
 ---
 # <a name="profiling-overview"></a>分析概觀
 <a name="top"></a> 分析工具是監視另一個應用程式執行的工具。 Common Language Runtime (CLR) 分析工具是動態連結程式庫 (DLL) 由數個函式所組成，可使用分析 API，從 CLR 接收訊息，以及傳送訊息至 CLR。 CLR 會在執行階段載入分析工具 DLL。  
@@ -209,7 +209,7 @@ ms.locfileid: "42934947"
 ### <a name="stack-snapshot"></a>堆疊快照  
  堆疊快照是執行緒堆疊的即時追蹤。 分析 API 支援追蹤堆疊上的 Managed 函式，但會將 Unmanaged 函式的追蹤交由分析工具本身的堆疊查核器處理。  
   
- 如需如何進行程式設計以查核 managed 的堆疊的詳細資訊，請參閱[ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)本文件集中的方法和[Profiler 堆疊查核行程.NET Framework 2.0 中：基礎與進階](http://go.microsoft.com/fwlink/?LinkId=73638)。
+ 如需如何進行程式設計以查核 managed 的堆疊的詳細資訊，請參閱[ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)本文件集中的方法和[Profiler 堆疊查核行程.NET Framework 2.0 中：基礎與進階](https://go.microsoft.com/fwlink/?LinkId=73638)。
   
 ### <a name="shadow-stack"></a>陰影堆疊  
  過於頻繁使用快照方法，很快就會產生效能問題。 如果您想要經常進行堆疊追蹤，您的程式碼剖析工具應該改為陰影堆疊使用建置[FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)， [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)， [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)，並[ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)例外狀況的回呼。 每當需要堆疊快照時，陰影堆疊一定都是當前的，而且可以快速複製到儲存體。  

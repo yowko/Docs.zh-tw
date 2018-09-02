@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Where clause [Visual Basic]
 ms.assetid: 48b5c2c5-3181-429c-8545-894296798c89
 ms.openlocfilehash: de7b4bf3e7dc1145b7e95197c7bd05c66acdabd6
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934326"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406776"
 ---
 # <a name="where-clause-visual-basic"></a>Where 子句 (Visual Basic)
 指定查詢的篩選條件。  

@@ -2,18 +2,18 @@
 title: 使用追蹤來疑難排解應用程式
 ms.date: 03/30/2017
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
-ms.openlocfilehash: ee9aaaae80f213f026a222ac1754ae8b4fdf2d37
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f991533b61705c8d0a1a8e71b632dd53f24dd979
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517039"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401273"
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>使用追蹤來疑難排解應用程式
-Windows Workflow Foundation (WF) 可讓您追蹤工作流程相關資訊，Windows Workflow Foundation 應用程式或服務的執行會提供詳細資料。 Windows Workflow Foundation 主機就能夠在工作流程執行個體執行期間擷取工作流程事件。 如果您的工作流程會產生錯誤或例外狀況，您可以使用 Windows Workflow Foundation 追蹤來疑難排解其處理的詳細資料。  
+Windows Workflow Foundation (WF) 可讓您追蹤工作流程相關資訊，提供執行的 Windows Workflow Foundation 應用程式或服務的詳細資料。 Windows Workflow Foundation 主機就能夠在工作流程執行個體執行期間擷取工作流程事件。 如果您的工作流程產生錯誤或例外狀況，您可以使用 Windows Workflow Foundation 追蹤詳細資訊來疑難排解其處理程序。  
   
 ## <a name="troubleshooting-a-wf-using-wf-tracking"></a>使用 WF 追蹤疑難排解 WF  
- 若要偵測的 Windows Workflow Foundation 活動的程序內的錯誤，您可以啟用追蹤的追蹤設定檔，以查詢<xref:System.Activities.Tracking.ActivityStateRecord>Faulted 狀態。 下列程式碼中指定對應的查詢。  
+ 若要偵測的 Windows Workflow Foundation 活動處理作業中錯誤，您可以啟用查詢的追蹤設定檔的追蹤<xref:System.Activities.Tracking.ActivityStateRecord>為 Faulted 狀態。 下列程式碼中指定對應的查詢。  
   
 ```xml  
 <activityStateQueries>  
@@ -47,10 +47,10 @@ Windows Workflow Foundation (WF) 可讓您追蹤工作流程相關資訊，Windo
   
  當工作流程執行個體遇到未處理的例外狀況，<xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>如果 Windows Workflow Foundation 追蹤已啟用，就會發出物件。  
   
- 這個追蹤記錄包含例外狀況堆疊形式的錯誤詳細資料。 它有錯誤 （例如，活動），發生錯誤，導致未處理的例外狀況的來源詳細資料。若要從 Windows Workflow Foundation 訂閱錯誤事件，請加入追蹤參與者啟用追蹤。 使用會查詢 `ActivityStateQuery (state="Faulted")`、<xref:System.Activities.Tracking.FaultPropagationRecord> 和 `WorkflowInstanceQuery (state="UnhandledException")` 的追蹤設定檔來設定這個參與者。  
+ 這個追蹤記錄包含例外狀況堆疊形式的錯誤詳細資料。 它有錯誤 （例如，活動），發生錯誤，導致未處理的例外狀況來源的詳細資料。若要訂閱 Windows Workflow Foundation 錯誤事件，請加入追蹤參與者啟用追蹤。 使用會查詢 `ActivityStateQuery (state="Faulted")`、<xref:System.Activities.Tracking.FaultPropagationRecord> 和 `WorkflowInstanceQuery (state="UnhandledException")` 的追蹤設定檔來設定這個參與者。  
   
- 如果使用 ETW 追蹤參與者啟用追蹤，會將錯誤事件發出至 ETW 工作階段。 使用事件檢視器即可檢視這些事件。 在節點下找到此**事件檢視器-> 應用程式及服務記錄檔]-> [Microsoft]-> [Windows]-> [應用程式伺服器-應用程式**在分析通道。  
+ 如果使用 ETW 追蹤參與者啟用追蹤，會將錯誤事件發出至 ETW 工作階段。 使用事件檢視器即可檢視這些事件。 這可以在節點下找到**事件檢視器-> 應用程式及服務記錄檔]-> [Microsoft]-> [Windows]-> [應用程式伺服器-應用程式**在分析通道。  
   
 ## <a name="see-also"></a>另請參閱  
- [Windows Server App Fabric 監控](http://go.microsoft.com/fwlink/?LinkId=201273)  
- [使用 App Fabric 監控應用程式](http://go.microsoft.com/fwlink/?LinkId=201275)
+ [Windows Server App Fabric 監控](https://go.microsoft.com/fwlink/?LinkId=201273)  
+ [使用 App Fabric 監控應用程式](https://go.microsoft.com/fwlink/?LinkId=201275)

@@ -5,17 +5,17 @@ helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-ms.openlocfilehash: 3446b6b8eeb646fa8929efa10366cb6a83627eae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8f6da4dc42244fbadbaf0e96b0dd281a3f7ccb2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652008"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402611"
 ---
 # <a name="visual-basic-language-features"></a>Visual Basic 語言功能
-下列主題將介紹並討論 Visual Basic 中，物件導向程式設計語言的基本元件。 使用表單和控制項建立應用程式的使用者介面之後，您必須撰寫程式碼來定義應用程式的行為。 如同任何現代程式設計語言，Visual Basic 支援許多通用程式設計建構和語言項目。  
+下列主題將介紹並討論 Visual Basic 中，物件導向的程式設計語言的基本元件。 使用表單和控制項建立應用程式的使用者介面之後，您必須撰寫程式碼來定義應用程式的行為。 如同任何新式的程式設計語言，Visual Basic 支援許多通用程式設計建構和語言項目。  
   
- 如果您曾經使用其他語言進行程式設計，則可能會覺得本節涵蓋的大多數內容似曾相識。 雖然大部分的結構類似於其他語言，Visual Basic 的事件導向性質導入了只有些微的差異。  
+ 如果您曾經使用其他語言進行程式設計，則可能會覺得本節涵蓋的大多數內容似曾相識。 雖然大部分的結構類似於其他語言，Visual Basic 的事件導向本質導入了一些微妙的差異。  
   
  如果您是程式設計的新手，可將本節的內容當做用來撰寫程式碼的基本建置組塊簡介。 一旦您了解基本概念，您可以建立功能強大的應用程式使用 Visual Basic。  
   
@@ -78,8 +78,8 @@ ms.locfileid: "33652008"
  提供主題連結來說明如何在 Visual Basic 中使用 XML。  
   
 ## <a name="related-sections"></a>相關章節  
- [集合](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+ [集合](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
  說明部分由 .NET Framework 提供的集合型別。 示範如何使用簡單集合及金鑰/值組集合。  
   
  [Visual Basic 語言參考](../../../visual-basic/language-reference/index.md)  
- 提供 Visual Basic 程式設計的各種層面的參考資訊。
+ 提供 Visual Basic 程式設計的各個層面的參考資訊。

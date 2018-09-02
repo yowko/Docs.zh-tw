@@ -2,19 +2,19 @@
 title: 從 XML 結構描述 (XSD) 衍生資料集關聯式結構
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: 7599577c4e0f485e336e7f79a6c3bd17f0f0c316
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: fd5c41272d3b050427804f08f7387328012065f4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759604"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417200"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>從 XML 結構描述 (XSD) 衍生資料集關聯式結構
-這個章節提供如何從 XML 結構描述定義語言 (XSD) 結構描述文件來建置 `DataSet` 關聯式結構描述的概觀。 一般情況下，每個`complexType`結構描述元素的子元素，在中，所產生的資料表`DataSet`。 資料表結構由複雜型別的定義來決定。 資料表會建立在`DataSet`結構描述中的最上層項目。 不過，會僅針對建立資料表的最上層`complexType`項目時`complexType`內的另一個巢狀項目`complexType`中的項目大小寫的巢狀`complexType`元素會對應至`DataTable`內`DataSet`。  
+這個章節提供如何從 XML 結構描述定義語言 (XSD) 結構描述文件來建置 `DataSet` 關聯式結構描述的概觀。 一般情況下，每個`complexType`結構描述元素的子項目，在中，所產生的資料表`DataSet`。 資料表結構由複雜型別的定義來決定。 資料表會建立在`DataSet`結構描述中的最上層項目。 不過，如果資料表僅建立最上層`complexType`項目時`complexType`項目放到另一個巢狀`complexType`項目，在這種情況下巢狀`complexType`元素會對應到`DataTable`內`DataSet`。  
   
- 如需 XSD 的詳細資訊，請參閱全球資訊網協會 (W3C) XML 結構描述第 0： 入門建議事項，XML 結構描述第 1 部分： 結構建議和 XML 結構描述第 2 部分： datatypes > 建議，位於[ http://www.w3.org/](http://www.w3.org/TR/).  
+ 如需有關 XSD 的詳細資訊，請參閱 World Wide Web Consortium (W3C) XML 結構描述第 0： 入門建議事項，XML 結構描述第 1 部分： 結構建議事項 >，以及 XML 結構描述第 2 部分： 資料型別建議事項，位於[ http://www.w3.org/](http://www.w3.org/TR/).  
   
- 下列範例會示範 XML 結構描述位置`customers`是元素的子元素`MyDataSet`項目，這是**資料集**項目。  
+ 下列範例示範 XML 結構描述所在`customers`是子元素`MyDataSet`項目，也就是**資料集**項目。  
   
 ```xml  
 <xs:schema id="SomeID"   
@@ -50,9 +50,9 @@ Customers (CustomerID , CompanyName, Phone)
  資料表內每個資料行的資料型別都衍生自對應項目的 XML 結構描述型別或指定屬性。  
   
 > [!NOTE]
->  如果項目`customers`是簡單的 XML 結構描述資料類型例如**整數**，不會產生資料表。 因為資料表僅會針對複雜型別的最上層項目產生。  
+>  如果項目`customers`這類是簡單的 XML 結構描述資料型別的**整數**，不會產生資料表。 因為資料表僅會針對複雜型別的最上層項目產生。  
   
- 在下列的 XML 結構描述，**結構描述**項目具有兩個項目子系，`InStateCustomers`和`OutOfStateCustomers`。  
+ 下列 XML 結構描述**結構描述**項目有兩個項目子系`InStateCustomers`和`OutOfStateCustomers`。  
   
 ```xml  
 <xs:schema id="SomeID"   
@@ -84,10 +84,10 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
   
 ## <a name="in-this-section"></a>本節內容  
  [將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- 說明用來建立唯一外部索引鍵條件約束中的 XML 結構描述項目`DataSet`。  
+ 描述用來建立唯一外部索引鍵條件約束中的 XML 結構描述項目`DataSet`。  
   
  [從 XML 結構描述 (XSD) 產生資料集關聯](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
- 說明用來在資料表資料行間建立關聯的 XML 結構描述項目`DataSet`。  
+ 描述用來建立資料表中的資料行之間的關聯性的 XML 結構描述項目`DataSet`。  
   
  [XML 結構描述條件約束和關聯性](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/xml-schema-constraints-and-relationships.md)  
  描述如何隱含建立關聯時建立條件約束中的使用 XML 結構描述項目`DataSet`。  
@@ -97,4 +97,4 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
  描述如何載入及保存資料與關聯式結構`DataSet`為 XML 資料。  
   
 ## <a name="see-also"></a>另請參閱  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

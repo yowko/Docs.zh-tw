@@ -7,12 +7,12 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], controls
 - Windows Forms controls, labels
 ms.assetid: 6eaf868c-819f-4131-8f59-048e20c286f7
-ms.openlocfilehash: 0b75a4f59cdba4ff732a92996086b77bc65cf46c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5504095814cdfc04699bf24b9b96191e94b22c3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535511"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43409016"
 ---
 # <a name="labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them"></a>標記個別 Windows Form 控制項並提供其捷徑
 加入 Windows Form 的控制項具有可用來進一步特製化使用者經驗的屬性和方法。 對於設計良好的 Windows 應用程式而言，依使用者的需要自訂使用者介面是非常重要的。  
@@ -34,4 +34,4 @@ ms.locfileid: "33535511"
  [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)  
  連結到其他可以使用控制項執行的基本作業。  
   
- 另請參閱[How to： 建立存取金鑰的 Windows Form 控制項使用設計工具](http://msdn.microsoft.com/library/ms233673\(v=vs.110\))， [How to： 設定 Windows Form 控制項使用的文字顯示在設計工具](http://msdn.microsoft.com/library/ms233665\(v=vs.110\))， [How to： 設定影像顯示 Windows Form 控制項使用設計工具](http://msdn.microsoft.com/library/ms233656\(v=vs.110\))。
+ 另請參閱[如何： 建立存取金鑰的 Windows Form 控制項使用設計工具](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md)，[如何： 設定 Windows Form 控制項使用的文字顯示設計工具](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md)， [How to： 設定映像顯示 Windows Form 控制項使用設計工具](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md)。

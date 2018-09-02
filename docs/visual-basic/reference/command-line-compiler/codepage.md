@@ -1,19 +1,19 @@
 ---
-title: -字碼頁 (Visual Basic)
+title: -codepage (Visual Basic)
 ms.date: 03/09/2018
 helpviewer_keywords:
 - -codepage compiler option [Visual Basic]
 - codepage compiler option [Visual Basic]
 - -codepage compiler option [Visual Basic]
 ms.assetid: be36ec33-6800-4505-838c-4124564f5cc9
-ms.openlocfilehash: 383b6adae94c27efdd236de31ddfa8d16a6d4648
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8aee51df3ba9f92ca662fbbfbd73998e4a3b4538
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648524"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405692"
 ---
-# <a name="-codepage-visual-basic"></a>-字碼頁 (Visual Basic)
+# <a name="-codepage-visual-basic"></a>-codepage (Visual Basic)
 指定編譯過程中所有原始程式碼檔使用的字碼頁。  
   
 ## <a name="syntax"></a>語法  
@@ -26,15 +26,15 @@ ms.locfileid: "33648524"
   
 |詞彙|定義|  
 |---|---|  
-|`id`|必要。 編譯器會使用所指定的字碼頁`id`解譯原始程式檔的編碼方式。|  
+|`id`|必要。 編譯器會使用指定的字碼頁`id`來解譯原始程式檔的編碼方式。|  
   
 ## <a name="remarks"></a>備註  
- 若要編譯原始程式碼，以特定編碼方式儲存，您可以使用`-codepage`來指定應該使用的字碼頁。 `-codepage`選項適用於您所編譯的所有原始程式碼檔。 如需詳細資訊，請參閱[字元編碼方式在.NET Framework](http://msdn.microsoft.com/library/bf6d9823-4c2d-48af-b280-919c5af66ae9)。  
+ 若要編譯原始程式碼，以特定的編碼方式儲存，您可以使用`-codepage`指定應該使用的字碼頁。 `-codepage`選項會套用至您所編譯的所有原始程式碼檔案。 如需詳細資訊，請參閱 < [.NET Framework 中的字元編碼](https://msdn.microsoft.com/library/bf6d9823-4c2d-48af-b280-919c5af66ae9)。  
   
- `-codepage`如果原始程式檔儲存具有簽章中使用目前的 ANSI 字碼頁、 Unicode 或 utf-8，則不需要選項。 Visual Studio 會儲存所有原始程式檔與目前的 ANSI 字碼頁根據預設，除非使用者另外指定其他編碼方式在**編碼** 對話方塊。 Visual Studio 會使用**編碼**對話方塊來開啟原始程式碼檔使用不同的字碼頁儲存。  
+ `-codepage`如果原始程式檔已儲存的簽章中使用目前的 ANSI 字碼頁、 Unicode 或 utf-8，則不需要 選項。 Visual Studio 會儲存所有的原始程式檔與目前的 ANSI 字碼頁預設情況下，除非使用者指定中的另一個編碼**編碼** 對話方塊。 Visual Studio 會使用**編碼**對話方塊以開啟原始程式碼檔使用不同的字碼頁儲存。  
   
 > [!NOTE]
->  `-codepage`選項不是從 Visual Studio 開發環境中使用; 其只有在從命令列編譯時。  
+>  `-codepage`選項不是從 Visual Studio 開發環境中使用; 只有在從命令列編譯時均可使用。  
   
 ## <a name="see-also"></a>另請參閱  
  [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)

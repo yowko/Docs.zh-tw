@@ -2,12 +2,12 @@
 title: 使用 Windows Management Instrumentation 進行診斷
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: b1ebb6b438df6d7efb5342a82e42220a58ea5cbd
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: b7c898f1af91f639939e5480687b5967bf57d246
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42908142"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406916"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>使用 Windows Management Instrumentation 進行診斷
 Windows Communication Foundation (WCF) 公開服務，以在透過 WCF Windows Management Instrumentation (WMI) 提供者的執行階段檢查的資料。  
@@ -30,7 +30,7 @@ Windows Communication Foundation (WCF) 公開服務，以在透過 WCF Windows M
  這個組態項目會公開 WMI 介面。 現在，管理應用程式可以透過這個介面進行連線，並存取應用程式的管理測試設備。  
   
 ## <a name="accessing-wmi-data"></a>存取 WMI 資料  
- 您可以使用各種不同的方式來存取 WMI 資料。 Microsoft 指令碼、 Visual Basic 應用程式、 c + + 應用程式，提供了 WMI Api 和[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]。 如需詳細資訊，請參閱 <<c0> [ 使用 WMI](http://go.microsoft.com/fwlink/?LinkId=95183)。  
+ 您可以使用各種不同的方式來存取 WMI 資料。 Microsoft 指令碼、 Visual Basic 應用程式、 c + + 應用程式，提供了 WMI Api 和[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]。 如需詳細資訊，請參閱 <<c0> [ 使用 WMI](https://go.microsoft.com/fwlink/?LinkId=95183)。  
   
 > [!CAUTION]
 >  如果您使用 .NET Framework 提供的方法，以程式設計方式存取 WMI 資料，您要注意，當連線建立時，這類方法可能會擲回例外狀況。 連線不是在建構 <xref:System.Management.ManagementObject> 執行個體期間建立的，而是在第一次要求實際資料交換時建立。 因此，您應該使用 `try..catch` 區塊攔截可能的例外狀況。  
@@ -147,13 +147,13 @@ Windows Communication Foundation (WCF) 公開服務，以在透過 WCF Windows M
 Whoami /user  
 ```  
   
- 這個方法會提供目前使用者的 SID，但無法用來取得任意使用者的 SID。 另一個取得 SID，方法是使用[getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467)工具[Windows 2000 Resource Kit 工具用於系統管理工作](http://go.microsoft.com/fwlink/?LinkId=178660)。 此工具會比較兩個使用者 (本機或網域) 的 SID，並以副作用方式將兩個 SID 列印至命令列。 如需詳細資訊，請參閱 <<c0> [ 已知 Sid](http://go.microsoft.com/fwlink/?LinkId=186468)。  
+ 這個方法會提供目前使用者的 SID，但無法用來取得任意使用者的 SID。 另一個取得 SID，方法是使用[getsid.exe](https://go.microsoft.com/fwlink/?LinkId=186467)工具[Windows 2000 Resource Kit 工具用於系統管理工作](https://go.microsoft.com/fwlink/?LinkId=178660)。 此工具會比較兩個使用者 (本機或網域) 的 SID，並以副作用方式將兩個 SID 列印至命令列。 如需詳細資訊，請參閱 <<c0> [ 已知 Sid](https://go.microsoft.com/fwlink/?LinkId=186468)。  
   
 ## <a name="accessing-remote-wmi-object-instances"></a>存取遠端 WMI 物件執行個體  
  如果您需要存取 WCF WMI 執行個體，在遠端電腦上的，您必須啟用您用來存取的工具上的封包私密性。 下列小節說明如何使用 WMI CIM Studio、Windows Management Instrumentation 測試器以及 .NET SDK 2.0 來完成這項工作。  
   
 ### <a name="wmi-cim-studio"></a>WMI CIM Studio  
- 如果您已安裝[WMI 系統管理工具](http://go.microsoft.com/fwlink/?LinkId=95185)，您可以使用 WMI CIM Studio 來存取 WMI 執行個體。 工具位於下列資料夾中  
+ 如果您已安裝[WMI 系統管理工具](https://go.microsoft.com/fwlink/?LinkId=95185)，您可以使用 WMI CIM Studio 來存取 WMI 執行個體。 工具位於下列資料夾中  
   
  **%windir%\Program Files\WMI 工具\\**  
   

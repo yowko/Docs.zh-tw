@@ -7,12 +7,12 @@ helpviewer_keywords:
 - list items [Windows Forms], Windows Forms controls that display
 - TreeView control [Windows Forms]
 ms.assetid: 879438b4-4eac-45c6-b345-0229c9b21ab0
-ms.openlocfilehash: ee6c5583718f871c96929d659fe4a681528b27ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b4db06eedc0ada7c34f3ba6f6c80b783866bed2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538232"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404153"
 ---
 # <a name="treeview-control-windows-forms"></a>TreeView 控制項 (Windows Form)
 Windows Form `TreeView` 控制項會顯示節點的階層，就像 Windows 作業系統中 Windows 檔案總管功能左窗格顯示檔案和資料夾的方式。  
@@ -38,8 +38,8 @@ Windows Form `TreeView` 控制項會顯示節點的階層，就像 Windows 作�
   
  [操作說明：將捷徑功能表附加至 TreeView 節點](../../../../docs/framework/winforms/controls/how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
  示範如何將捷徑功能表加入樹狀檢閱節點。  
-  
- 另請參閱[如何： 新增和移除節點與使用 Windows Form TreeView 控制項的設計工具](http://msdn.microsoft.com/library/ms233651\(v=vs.110\))， [How to： 將捷徑功能表附加至 TreeNode 使用設計工具](http://msdn.microsoft.com/library/ms171708\(v=vs.110\))。  
+
+另請參閱[如何： 新增和移除 Windows Form TreeView 控制項使用設計工具節點](add-and-remove-nodes-with-wf-treeview-control-using-the-designer.md)，並[如何： 將捷徑功能表附加至 TreeNode 使用設計工具](how-to-attach-a-shortcut-menu-to-a-treenode-using-the-designer.md)。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.TreeView> 類別  

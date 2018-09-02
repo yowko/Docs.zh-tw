@@ -2,12 +2,12 @@
 title: 傳送及處理錯誤
 ms.date: 03/30/2017
 ms.assetid: 98e8e04d-2ac9-4a33-ae08-462f757a7a14
-ms.openlocfilehash: 6796b4daccd88adc3bd006f454ce96ca155fbcb3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 896f209e7daeeab2bb33c1fde15298aae96c8776
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516122"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406654"
 ---
 # <a name="sending-and-handling-faults"></a>傳送及處理錯誤
 這個範例示範如何使用 <xref:System.ServiceModel.Activities.SendReply> 和 <xref:System.ServiceModel.Activities.ReceiveReply> 訊息活動，傳送及接收預期和非預期的錯誤。 在這個案例中，第一個用戶端要求產生已包含在 <xref:System.ServiceModel.Activities.Send.KnownTypes%2A> 集合中的預期錯誤。 後面幾個用戶端要求會在最終要求成功之前產生非預期的錯誤。  
@@ -22,7 +22,7 @@ ms.locfileid: "33516122"
   
 4.  執行服務專案。  
   
-    1.  在**方案總管 中**，以滑鼠右鍵按一下`FaultService`專案，然後選取**設定為啟始專案**。  
+    1.  在 **方案總管**，以滑鼠右鍵按一下`FaultService`專案，然後選取**設定為啟始專案**。  
   
     2.  按下 CTRL+F5。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "33516122"
   
 7.  執行用戶端專案。  
   
-    1.  在**方案總管 中**，以滑鼠右鍵按一下`FaultClient`專案，然後選取**設定為啟始專案**。  
+    1.  在 **方案總管**，以滑鼠右鍵按一下`FaultClient`專案，然後選取**設定為啟始專案**。  
   
     2.  按下 CTRL+F5。  
   
@@ -41,6 +41,6 @@ ms.locfileid: "33516122"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\Faults`

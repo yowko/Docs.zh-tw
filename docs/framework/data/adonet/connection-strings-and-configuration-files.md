@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 629d08b60330125a7bb491a58499b5e2bc7d2091
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: 8030c0323a2f742de19a4761e24c66294c6dd5d4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805681"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405971"
 ---
 # <a name="connection-strings-and-configuration-files"></a>連接字串和組態檔
 在應用程式的程式碼中嵌入連接字串可能會導致安全性漏洞和維護問題。 編譯到應用程式原始程式碼中的未加密連接字串，可使用 [Ildasm.exe (IL 反組譯工具)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 工具進行檢視。 此外，如果連接字串變更，應用程式就必須重新編譯。 基於上述理由，建議您將連接字串儲存在應用程式組態檔中。  
@@ -70,7 +70,7 @@ ms.locfileid: "34805681"
  從 .NET Framework 2.0 開始，在本機電腦上使用組態檔時，就會使用 <xref:System.Configuration.ConfigurationManager> 來取代已被取代的 <xref:System.Configuration.ConfigurationSettings>。 <xref:System.Web.Configuration.WebConfigurationManager> 則會用於搭配 ASP.NET 組態檔。 這是為了在 Web 伺服器上使用組態檔而設計，可透過程式設計的方式存取 **system.web** 之類的組態檔區段。  
   
 > [!NOTE]
->  您必須為呼叫端授與權限，才能在執行階段存取組態檔；所需的權限則根據應用程式類型、組態檔以及位置而有所不同。 如需詳細資訊，請參閱[使用組態類別](http://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)和 <xref:System.Web.Configuration.WebConfigurationManager> (適用於 ASP.NET 應用程式) 以及 <xref:System.Configuration.ConfigurationManager> (適用於 Windows 應用程式)。  
+>  您必須為呼叫端授與權限，才能在執行階段存取組態檔；所需的權限則根據應用程式類型、組態檔以及位置而有所不同。 如需詳細資訊，請參閱[使用組態類別](https://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)和 <xref:System.Web.Configuration.WebConfigurationManager> (適用於 ASP.NET 應用程式) 以及 <xref:System.Configuration.ConfigurationManager> (適用於 Windows 應用程式)。  
   
  您可以利用 <xref:System.Configuration.ConnectionStringSettingsCollection> 從應用程式組態檔擷取連接字串。 此項目包含 <xref:System.Configuration.ConnectionStringSettings> 物件的集合，而其中每個物件都代表 **connectionStrings** 區段中的單一項目。 其屬性會對應至連接字串屬性，讓您可以藉由指定名稱或提供者名稱而擷取連接字串。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "34805681"
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/VB/source.vb#1)]  
   
 ## <a name="encrypting-configuration-file-sections-using-protected-configuration"></a>使用受保護的組態來加密組態檔區段  
- ASP.NET 2.0 導入一項稱為「受保護的組態」的新功能，可用於加密組態檔中的機密資訊。 雖然主要是針對 ASP.NET 所設計，但這項功能仍可用來加密 Windows 應用程式中的組態檔區段。 如需受保護之組態功能的詳細描述，請參閱[使用受保護的組態加密組態資訊](http://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1)。  
+ ASP.NET 2.0 導入一項稱為「受保護的組態」的新功能，可用於加密組態檔中的機密資訊。 雖然主要是針對 ASP.NET 所設計，但這項功能仍可用來加密 Windows 應用程式中的組態檔區段。 如需受保護之組態功能的詳細描述，請參閱[使用受保護的組態加密組態資訊](https://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1)。  
   
  下列組態檔片段顯示加密之後的 **connectionStrings** 區段。 **configProtectionProvider** 會指定用於加密及解密連接字串的受保護組態提供者。 **EncryptedData** 區段包含加密文字。  
   
@@ -136,16 +136,16 @@ ms.locfileid: "34805681"
   
 |提供者|描述|  
 |--------------|-----------------|  
-|<xref:System.Configuration.RsaProtectedConfigurationProvider>|使用 RSA 加密演算法來加密及解密資料。 RSA 演算法可用於公開金鑰 (Public Key) 加密及數位簽章。 這種演算法也稱為「公開金鑰」或非對稱加密，因為它會使用兩種不同的金鑰。 您可以使用 [ASP.NET IIS 註冊工具 (Aspnet_regiis.exe)](http://msdn.microsoft.com/library/6491c41e-e2b0-481f-9863-db3614d5f96b) 來加密 Web.config 檔案中的區段並管理加密金鑰。 ASP.NET 會在處理檔案時對組態檔進行解密。 ASP.NET 應用程式的識別必須可以讀取用於對區段進行加密及解密的加密金鑰。|  
+|<xref:System.Configuration.RsaProtectedConfigurationProvider>|使用 RSA 加密演算法來加密及解密資料。 RSA 演算法可用於公開金鑰 (Public Key) 加密及數位簽章。 這種演算法也稱為「公開金鑰」或非對稱加密，因為它會使用兩種不同的金鑰。 您可以使用 [ASP.NET IIS 註冊工具 (Aspnet_regiis.exe)](https://msdn.microsoft.com/library/6491c41e-e2b0-481f-9863-db3614d5f96b) 來加密 Web.config 檔案中的區段並管理加密金鑰。 ASP.NET 會在處理檔案時對組態檔進行解密。 ASP.NET 應用程式的識別必須可以讀取用於對區段進行加密及解密的加密金鑰。|  
 |<xref:System.Configuration.DpapiProtectedConfigurationProvider>|使用 Windows Data Protection API (DPAPI) 來加密組態區段。 DPAPI 使用 Windows 內建的密碼編譯服務，可以針對電腦特定或使用者帳戶特定的保護進行設定。 電腦特定的保護特別適用於相同伺服器上需要共用資訊的多個應用程式。 使用者特定的保護則可用於使用特定使用者識別執行的服務，例如共用的裝載環境。 每個應用程式都會在不同的識別之下執行，如此可限制對檔案和資料庫等資源的存取。|  
   
- 這兩種提供者都提供高度加密的資料。 不過，如果您打算在多個伺服器 (例如 Web 伺服陣列) 上使用相同的加密組態檔，則只有使用 `RsaProtectedConfigurationProvider` 才能匯出用於加密資料的加密金鑰並將其匯入另一個伺服器。 如需詳細資訊，請參閱[匯入和匯出受保護的組態 RSA 金鑰容器](http://msdn.microsoft.com/library/f3022b39-f17f-48c1-b067-025eab0ce8bc)。  
+ 這兩種提供者都提供高度加密的資料。 不過，如果您打算在多個伺服器 (例如 Web 伺服陣列) 上使用相同的加密組態檔，則只有使用 `RsaProtectedConfigurationProvider` 才能匯出用於加密資料的加密金鑰並將其匯入另一個伺服器。 如需詳細資訊，請參閱[匯入和匯出受保護的組態 RSA 金鑰容器](https://msdn.microsoft.com/library/f3022b39-f17f-48c1-b067-025eab0ce8bc)。  
   
 ### <a name="using-the-configuration-classes"></a>使用組態類別  
  <xref:System.Configuration> 命名空間 (Namespace) 提供類別 (Class)，以透過程式設計的方式使用組態設定。 <xref:System.Configuration.ConfigurationManager> 類別可用於存取電腦、應用程式及使用者組態檔。 如果要建立 ASP.NET 應用程式，則可以使用 <xref:System.Web.Configuration.WebConfigurationManager> 類別，此類別不但提供相同的功能，還可用於存取 ASP.NET 應用程式唯一的設定，例如 **\<system.web>** 中的設定。  
   
 > [!NOTE]
->  <xref:System.Security.Cryptography> 命名空間包含可為資料加密及解密提供額外選項的類別。 如果需要無法使用受保護組態而提供的密碼編譯服務，請使用這些類別。 這其中某些類別是 Unmanaged Microsoft CryptoAPI 的包裝函式，某些則純粹是 Managed 實作 (Implementation)。 如需詳細資訊，請參閱[密碼編譯服務](http://msdn.microsoft.com/library/68a1e844-c63c-44af-9247-f6716eb23781)。  
+>  <xref:System.Security.Cryptography> 命名空間包含可為資料加密及解密提供額外選項的類別。 如果需要無法使用受保護組態而提供的密碼編譯服務，請使用這些類別。 這其中某些類別是 Unmanaged Microsoft CryptoAPI 的包裝函式，某些則純粹是 Managed 實作 (Implementation)。 如需詳細資訊，請參閱[密碼編譯服務](https://msdn.microsoft.com/library/68a1e844-c63c-44af-9247-f6716eb23781)。  
   
 ### <a name="appconfig-example"></a>App.config 範例  
  此範例示範如何在 Windows 應用程式的 **app.config** 檔案中切換 **connectionStrings** 區段的加密。 在此範例中，程序會採用應用程式的名稱做為引數，例如 "MyApplication.exe"。 接下來會加密 **app.config** 檔案，並將其複製到 "MyApplication.exe.config" 名稱下包含可執行檔的資料夾。  
@@ -167,12 +167,12 @@ ms.locfileid: "34805681"
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/VB/source.vb#1)]  
   
- 如需保護 ASP.NET 應用程式的詳細資訊，請參閱 ASP.NET 開發人員中心的 [NIB：ASP.NET 安全性](http://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d)和 [ASP.NET 2.0 Security Practices at a Glance](http://go.microsoft.com/fwlink/?LinkId=59997) (ASP.NET 2.0 安全性實行方法簡介)。  
+ 如需保護 ASP.NET 應用程式的詳細資訊，請參閱 ASP.NET 開發人員中心的 [NIB：ASP.NET 安全性](https://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d)和 [ASP.NET 2.0 Security Practices at a Glance](https://go.microsoft.com/fwlink/?LinkId=59997) (ASP.NET 2.0 安全性實行方法簡介)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [連接字串產生器](../../../../docs/framework/data/adonet/connection-string-builders.md)  
  [保護連線資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
- [使用組態類別](http://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)  
+ [使用組態類別](https://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)  
  [設定應用程式](../../../../docs/framework/configure-apps/index.md)  
- [ASP.NET 網站管理](http://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ASP.NET 網站管理](https://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)  
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

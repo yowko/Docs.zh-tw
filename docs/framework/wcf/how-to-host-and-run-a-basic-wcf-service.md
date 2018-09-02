@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: f1c56ed83fa214cf781a833e05642635ac24b0c5
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: e2bf16bd07c7ac9d918a4ae95d7f4aa185d436ec
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753496"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404667"
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>HOW TO：裝載和執行基本 Windows Communication Foundation 服務
 這是建立 Windows Communication Foundation (WCF) 應用程式所需之六個工作中的第三個工作。 如需這六個工作的概觀，請參閱[使用者入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)主題。  
@@ -151,7 +151,7 @@ ms.locfileid: "34753496"
   
     2.  步驟 2：建立 <xref:System.ServiceModel.ServiceHost> 類別的執行個體以裝載服務。 建構函式接受兩個參數：實作服務合約之類別的型別以及服務的基底位址。  
   
-    3.  步驟 3：建立 <xref:System.ServiceModel.Description.ServiceEndpoint> 執行個體。 服務端點是由位址、繫結和服務合約所組成。 因此 <xref:System.ServiceModel.Description.ServiceEndpoint> 建構函式會接受服務合約介面型別、繫結和位址。 服務合約是您在服務類型中所定義和實作的 `ICalculator`。 這個範例使用的繫結是 <xref:System.ServiceModel.WSHttpBinding>，這是用來連接至符合 WS-* 規格之端點的內建繫結。 如需 WCF 繫結的詳細資訊，請參閱 [WCF 繫結概觀](../../../docs/framework/wcf/bindings-overview.md)。 位址會附加至基底位址以識別端點。 此程式碼中指定的位址是 "CalculatorService"，因此端點的完整位址是 `"http://localhost:8000/GettingStarted/CalculatorService"`。在使用 .NET Framework 4.0 或更新版本時，新增服務端點為選用。 在這些版本中，如果沒有在程式碼或組態中加入端點，則 WCF 會為服務所實作之合約與基底位址的每個組合加入一個預設端點。 如需預設端點的詳細資訊，請參閱[指定端點位址](../../../docs/framework/wcf/specifying-an-endpoint-address.md)。 如需預設端點、繫結和行為的詳細資訊，請參閱[簡化的組態](../../../docs/framework/wcf/simplified-configuration.md)和 [WCF 服務的簡化組態](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
+    3.  步驟 3：建立 <xref:System.ServiceModel.Description.ServiceEndpoint> 執行個體。 服務端點是由位址、繫結和服務合約所組成。 因此 <xref:System.ServiceModel.Description.ServiceEndpoint> 建構函式會接受服務合約介面型別、繫結和位址。 服務合約是您在服務類型中所定義和實作的 `ICalculator`。 這個範例使用的繫結是 <xref:System.ServiceModel.WSHttpBinding>，這是用來連接至符合 WS-* 規格之端點的內建繫結。 如需 WCF 繫結的詳細資訊，請參閱 [WCF 繫結概觀](../../../docs/framework/wcf/bindings-overview.md)。 位址會附加至基底位址以識別端點。 此程式碼中指定的位址是"CalculatorService"，因此端點的完整的位址是`"http://localhost:8000/GettingStarted/CalculatorService"`。  
   
         > [!IMPORTANT]
         >  使用 .NET Framework 4 (含) 以後版本時，加入服務端點是選擇性的。 在這些版本中，如果沒有在程式碼或組態中加入端點，則 WCF 會為服務所實作之合約與基底位址的每個組合加入一個預設端點。 如需預設端點的詳細資訊，請參閱[指定端點位址](../../../docs/framework/wcf/specifying-an-endpoint-address.md)。 如需預設端點、繫結和行為的詳細資訊，請參閱[簡化的組態](../../../docs/framework/wcf/simplified-configuration.md)和 [WCF 服務的簡化組態](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
@@ -160,6 +160,12 @@ ms.locfileid: "34753496"
   
     5.  步驟 5：開啟 <xref:System.ServiceModel.ServiceHost> 以開始接聽傳入訊息。 注意程式碼會等待使用者按下 Enter。 如果不這麼做，應用程式會立即關閉而服務也將關閉。另外也要注意使用的 try/catch 區塊。 在 <xref:System.ServiceModel.ServiceHost> 具現化之後，會將所有其他程式碼放置在 try/catch 區塊中。 如需安全攔截 <xref:System.ServiceModel.ServiceHost> 擲回之例外狀況的詳細資訊，請參閱[避免 Using 陳述式發生問題](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)  
   
+> [!IMPORTANT]
+> 編輯 App.config 以反映在程式碼中所做的變更 GettingStartedLib 中： 
+> 1. 變更至第 14 行 `<service name="GettingStartedLib.CalculatorService">`
+> 2. 變更第 17 行至 `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`
+> 3. 變更到第 22 行 `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.ICalculator">`
+        
 ### <a name="to-verify-the-service-is-working"></a>若要驗證服務是否執行中  
   
 1.  從 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 中執行 GettingStartedHost 主控台應用程式。 在 [!INCLUDE[wv](../../../includes/wv-md.md)] (含) 以後版本的作業系統中執行時，必須以系統管理員權限來執行服務。 因為 Visual Studio 是以系統管理員權限的身分執行，所以 GettingStartedHost 也要以系統管理員權限的身分執行。 您也可以利用系統管理員權限開啟命令提示字元執行，然後透過命令提示字元執行 service.exe。  
@@ -420,6 +426,6 @@ End Module
   
  服務目前正在執行中。 繼續進行[如何：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 如需針對資訊進行疑難排解，請參閱[針對使用者入門教學課程進行疑難排解](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [快速入門](../../../docs/framework/wcf/samples/getting-started-sample.md)  
  [自我裝載](../../../docs/framework/wcf/samples/self-host.md)

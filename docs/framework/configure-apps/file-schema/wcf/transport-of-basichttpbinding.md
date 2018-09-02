@@ -2,12 +2,12 @@
 title: '&lt;basicHttpBinding&gt; 的 &lt;transport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
-ms.openlocfilehash: 0111a1f0b7697caa584cd7fc45ad6347207100ea
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f3f9ad2c8b587a87abea7dc22abb98fdfb6ea77e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751265"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415997"
 ---
 # <a name="lttransportgt-of-ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt; 的 &lt;transport&gt;
 定義可控制 HTTP 傳輸之驗證參數的屬性。  
@@ -46,8 +46,8 @@ ms.locfileid: "32751265"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|clientCredentialType|-指定要執行使用 HTTP 驗證的用戶端驗證時使用的認證類型。  預設值為 `None`。 此屬性的型別為 <xref:System.ServiceModel.HttpClientCredentialType>。|  
-|proxyCredentialType|-指定要執行使用 proxy over HTTP 的網域內，從用戶端驗證時使用的認證類型。 這個屬性僅適用於父 `mode` 項目的 `security` 屬性是 `Transport` 或 `TransportCredentialsOnly` 時。 此屬性的型別為 <xref:System.ServiceModel.HttpProxyCredentialType>。|  
+|clientCredentialType|-指定要執行使用 HTTP 驗證的用戶端驗證時使用的認證類型。  預設為 `None`。 此屬性的型別為 <xref:System.ServiceModel.HttpClientCredentialType>。|  
+|proxyCredentialType|-指定要執行使用 proxy over HTTP 網域內的用戶端驗證時使用的認證類型。 這個屬性僅適用於父 `mode` 項目的 `security` 屬性是 `Transport` 或 `TransportCredentialsOnly` 時。 此屬性的型別為 <xref:System.ServiceModel.HttpProxyCredentialType>。|  
 |realm|字串，指定摘要式驗證或基本驗證的 HTTP 驗證配置所使用的領域。 預設為空字串。|  
 |policyEnforcement|此列舉指定了應該強制執行 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> 的時間。<br /><br /> 1.Never：絕不強制執行此原則 (延伸保護已停用)。<br />2.WhenSupported：只有當用戶端支援延伸保護時，才強制執行此原則。<br />3.Always：一律強制執行此原則。 不支援延伸保護的用戶端將無法驗證。|  
 |protectionScenario|此列舉會指定原則強制執行的保護案例。|  
@@ -66,21 +66,21 @@ ms.locfileid: "32751265"
   
 |值|描述|  
 |-----------|-----------------|  
-|無|傳輸期間並未保護訊息數。|  
+|無|訊息在傳輸期間並未受到保護。|  
 |基本|指定依照 RFC 2617 – HTTP Authentication: Basic and Digest Authentication 所定義的基本驗證。|  
 |摘要|指定依照 RFC 2617 – HTTP Authentication: Basic and Digest Authentication 所定義的摘要式驗證。|  
 |Ntlm|指定可能的情況下以及 Windows 驗證失敗時的 NTLM 驗證。|  
 |Windows|指定 Windows 整合式驗證。|  
 |憑證|使用憑證執行用戶端驗證。 這個選項只有在父 `Mode` 項目的 `security` 屬性設為 Transport 時才能使用，如果該屬性設為 TransportCredentialOnly，則無法使用。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|定義之安全性功能[ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)。|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|定義的安全性功能[ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)。|  
   
 ## <a name="example"></a>範例  
  下列範例示範透過基本繫結來使用 SSL 傳輸安全性。 根據預設，基本繫結支援 HTTP 通訊。  
@@ -125,5 +125,5 @@ ms.locfileid: "32751265"
  [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [使用繫結來設定 Windows Communication Foundation 服務和用戶端](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<繫結 >](../../../../../docs/framework/misc/binding.md)

@@ -2,12 +2,12 @@
 title: SQL Server 中的伺服器和資料庫角色
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: 196ca0791f42414b9da8dff32eb8285045fd7e63
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 5fd706d886ea050eb578d5f889d55055665c3a44
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925461"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403140"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>SQL Server 中的伺服器和資料庫角色
 所有的 SQL Server 版本都會使用角色架構的安全性，讓您可以將權限指派給角色或使用者群組，而不是個別的使用者。 固定伺服器角色和固定資料庫角色都指派有固定的權限組。  
@@ -27,8 +27,8 @@ ms.locfileid: "42925461"
   
 |資源|描述|  
 |--------------|-----------------|  
-|[伺服器層級角色](/sql/relational-databases/security/authentication-access/server-level-roles)並[固定的伺服器角色的權限](http://msdn.microsoft.com/library/ms175892.aspx)中 SQL Server 線上叢書|說明固定的伺服器角色與 SQL Server 中與其相關聯的權限。|  
-|[資料庫層級角色](/sql/relational-databases/security/authentication-access/database-level-roles)並[固定的資料庫角色的權限](http://msdn.microsoft.com/library/ms189612.aspx)中 SQL Server 線上叢書|說明 SQL Server 2005 中的固定資料庫角色和與其相關的權限。|  
+|[伺服器層級角色](/sql/relational-databases/security/authentication-access/server-level-roles)並[固定的伺服器角色的權限](https://msdn.microsoft.com/library/ms175892.aspx)中 SQL Server 線上叢書|說明固定的伺服器角色與 SQL Server 中與其相關聯的權限。|  
+|[資料庫層級角色](/sql/relational-databases/security/authentication-access/database-level-roles)並[固定的資料庫角色的權限](https://msdn.microsoft.com/library/ms189612.aspx)中 SQL Server 線上叢書|說明 SQL Server 2005 中的固定資料庫角色和與其相關的權限。|  
   
 ## <a name="database-roles-and-users"></a>資料庫角色和使用者  
  登入必須對應至資料庫使用者帳戶，才能使用資料庫物件。 接著可以將資料庫使用者加入至資料庫角色、繼承任何與這些角色相關聯的權限集合。 所有權限都可授與。  
@@ -58,7 +58,7 @@ ms.locfileid: "42925461"
   
 |資源|描述|  
 |--------------|-----------------|  
-|[識別和存取控制](http://msdn.microsoft.com/library/bb510418.aspx)中 SQL Server 線上叢書|包含說明主體、角色、認證、安全性實體和權限的主題連結。|  
+|[識別和存取控制](https://msdn.microsoft.com/library/bb510418.aspx)中 SQL Server 線上叢書|包含說明主體、角色、認證、安全性實體和權限的主題連結。|  
 |[主體](/sql/relational-databases/security/authentication-access/principals-database-engine)中 SQL Server 線上叢書|說明主體並包含說明伺服器和資料庫角色的主題連結。|  
   
 ## <a name="see-also"></a>另請參閱  
@@ -67,4 +67,4 @@ ms.locfileid: "42925461"
  [在 SQL Server 中進行驗證](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
  [SQL Server 中的擁有權和使用者結構描述分離](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
  [SQL Server 中的授權和權限](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

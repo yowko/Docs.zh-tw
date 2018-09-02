@@ -7,20 +7,20 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
-ms.openlocfilehash: cf3ba2a13d56aae56ed7a1444169056b9905a145
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0fbf01de05a02c03782af9e392a79b6dd3e8bee
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363962"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402517"
 ---
 # <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>HOW TO：指定資料服務要求的用戶端認證 (WCF Data Services)
 預設情況下，將要求傳送至 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 服務時，用戶端程式庫不提供認證。 不過，您可以透過為 <xref:System.Net.NetworkCredential> 的 <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> 屬性提供 <xref:System.Data.Services.Client.DataServiceContext>，藉以指定要傳送的認證來驗證要求。 如需詳細資訊，請參閱 [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)。 本主題中的範例會示範如何在從資料服務要求資料時，明確地提供 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端所使用的認證。  
   
- 本主題中的範例使用 Northwind 範例資料服務和自動產生的用戶端資料服務類別。 當您完成建立此服務和用戶端資料類別[WCF Data Services 快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。 您也可以使用[Northwind 範例資料服務](http://go.microsoft.com/fwlink/?LinkId=187426)上發行[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]網站; 這個範例資料服務是唯讀的並嘗試將變更儲存傳回錯誤。 上的範例資料服務[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]網站允許匿名驗證。  
+ 本主題中的範例使用 Northwind 範例資料服務和自動產生的用戶端資料服務類別。 當您完成建立這項服務和用戶端資料類別[WCF Data Services 快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。 您也可以使用[Northwind 範例資料服務](https://go.microsoft.com/fwlink/?LinkId=187426)上發行的[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]網站; 此範例資料服務是唯讀的並在嘗試儲存變更傳回錯誤。 範例資料服務上[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]網站允許匿名驗證。  
   
 ## <a name="example"></a>範例  
- 下列範例是 Windows Presentation Framework 應用程式的主頁面的 Extensible Application Markup Language (XAML) 檔案的程式碼後置頁面。 此範例會顯示 `LoginWindow` 執行個體，以便向使用者收集驗證認證，然後在要求資料服務時使用這些認證。  
+ 下列範例是從 Windows Presentation Framework 應用程式的主頁面的 Extensible Application Markup Language (XAML) 檔案的程式碼後置頁面。 此範例會顯示 `LoginWindow` 執行個體，以便向使用者收集驗證認證，然後在要求資料服務時使用這些認證。  
   
  [!code-csharp[Astoria Northwind Client#ClientCredentials](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/clientcredentials.xaml.cs#clientcredentials)]  
  [!code-vb[Astoria Northwind Client#ClientCredentials](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/clientcredentials.xaml.vb#clientcredentials)]

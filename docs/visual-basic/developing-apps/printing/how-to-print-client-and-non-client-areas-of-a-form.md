@@ -8,17 +8,17 @@ helpviewer_keywords:
 - entire form
 - non-client area [Visual Basic], printing
 ms.assetid: 856bb0e4-dbc3-47e2-81cd-4b376cf07757
-ms.openlocfilehash: 566cf295462945a6bc90bc96f8907de34646bd00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5109993146a8d53d5cbeebcc52c018a6f0f57ed5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584738"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408435"
 ---
 # <a name="how-to-print-client-and-non-client-areas-of-a-form-visual-basic"></a>如何：列印表單的工作區和非工作區 (Visual Basic)
 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 元件可讓您完全依照螢幕所示，快速列印表單的影像，而不需要使用 <xref:System.Drawing.Printing.PrintDocument> 元件。 下列程序示範如何列印表單，包括工作區和非工作區。 非工作區包含標題列、框線和捲軸。  
   
- Visual Studio 中已不再包含 PowerPack 控制項，但您可以從 [下載中心](http://www.microsoft.com/en-us/download/details.aspx?id=25169)下載這些控制項。  
+ 在 Visual Studio 中，已不再包含 PowerPack 控制項，但您可以下載從[下載中心](https://www.microsoft.com/en-us/download/details.aspx?id=25169)。  
   
 ### <a name="to-print-both-the-client-and-the-non-client-areas-of-a-form"></a>列印表單的工作區和非工作區  
   

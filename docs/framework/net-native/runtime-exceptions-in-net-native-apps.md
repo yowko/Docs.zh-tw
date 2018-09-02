@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a18dd97fcd9825867f85ba7e8798b12f8953725
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: efb16c1e947cd832da88b53a3522a5928e77ae06
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390730"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415445"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>.NET 原生 App 中的執行階段例外狀況
 因為偵錯和發行組態完全不同，所以請務必在目標平台上測試通用 Windows 平台 App 的發行組建。 根據預設，偵錯組態會使用 .NET Core 執行階段來編譯 App，但此發行組態會使用 .NET 原生將 App 編譯為原生程式碼。  
@@ -60,5 +60,5 @@ Additional information: Value does not fall within the expected range.
  若要取得完整的堆疊，請改為執行偵錯組建。  
   
 ## <a name="see-also"></a>另請參閱  
- [偵錯.NET 原生 Windows 通用應用程式](http://blogs.msdn.com/b/visualstudioalm/archive/2015/07/29/debugging-net-native-windows-universal-apps.aspx)  
+ [偵錯.NET 原生 Windows 通用應用程式](https://blogs.msdn.com/b/visualstudioalm/archive/2015/07/29/debugging-net-native-windows-universal-apps.aspx)  
  [快速入門](../../../docs/framework/net-native/getting-started-with-net-native.md)

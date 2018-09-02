@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c4b73ed36d3334e983b960ce972292a190bad85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 89e7a0929bd5f07c5a1986d885984332d692d3a9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393584"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415875"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>範例：處理繫結資料時所發生的例外狀況
 > [!NOTE]
->  本主題討論 .NET 原生開發人員預覽，這是發行前版本的軟體。 您可以從 [Microsoft Connect 網站](http://go.microsoft.com/fwlink/?LinkId=394611)下載預覽 (需要註冊)。  
+>  本主題討論 .NET 原生開發人員預覽，這是發行前版本的軟體。 您可以從 [Microsoft Connect 網站](https://go.microsoft.com/fwlink/?LinkId=394611)下載預覽 (需要註冊)。  
   
  下列範例顯示如何解決當以 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具鏈編譯的應用程式嘗試繫結資料時，所擲回的 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 例外狀況。 以下是例外狀況資訊：  
   
@@ -39,7 +39,7 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ```  
   
 ## <a name="what-was-the-app-doing"></a>應用程式做了什麼？  
- 在堆疊的基底，[Windows.UI.Xaml](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.aspx) 命名空間中的框架會指出 XAML 轉譯引擎正在執行。   使用 <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> 方法會指出，在已移除中繼資料的類型上，以反映方式查閱屬性的值。  
+ 在堆疊的基底，[Windows.UI.Xaml](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.aspx) 命名空間中的框架會指出 XAML 轉譯引擎正在執行。   使用 <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> 方法會指出，在已移除中繼資料的類型上，以反映方式查閱屬性的值。  
   
  提供中繼資料指示詞的第一個步驟，就是為該類型加入 `serialize` 中繼資料，讓它的所有屬性皆可供存取：  
   
@@ -57,7 +57,7 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ## <a name="could-the-code-be-rewritten-to-not-use-reflection"></a>可以將程式碼改寫為不使用反映嗎？  
  因為資料繫結是是反映密集作業，所以變更程式碼來避免反映並不可行。  
   
- 不過，有一些方法可以將 `ViewModel` 指定至 XAML 頁面，讓工具鏈可以在編譯時將屬性繫結與正確的類型建立關聯，並且在不使用執行階段指示詞的情況下保留中繼資料。  例如，您可以在屬性 (property) 上套用 [Windows.UI.Xaml.Data.BindableAttribute](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindableattribute.aspx) 屬性 (attribute)。 這會導致 XAML 編譯器產生必要的查閱資訊，並避免 Default.rd.xml 檔案中需要執行階段指示詞。  
+ 不過，有一些方法可以將 `ViewModel` 指定至 XAML 頁面，讓工具鏈可以在編譯時將屬性繫結與正確的類型建立關聯，並且在不使用執行階段指示詞的情況下保留中繼資料。  例如，您可以在屬性 (property) 上套用 [Windows.UI.Xaml.Data.BindableAttribute](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindableattribute.aspx) 屬性 (attribute)。 這會導致 XAML 編譯器產生必要的查閱資訊，並避免 Default.rd.xml 檔案中需要執行階段指示詞。  
   
 ## <a name="see-also"></a>另請參閱  
  [快速入門](../../../docs/framework/net-native/getting-started-with-net-native.md)  

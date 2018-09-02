@@ -5,19 +5,19 @@ helpviewer_keywords:
 - Windows Forms Designer [Windows Forms], interoperability with WPF
 - interoperability [WPF]
 ms.assetid: 03c85dce-26ad-44cd-bc1d-8e0cb56de096
-ms.openlocfilehash: 8dcf79d449a8f8443774b133904e819dfd925288
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 30b84f05898f823227415c410dc7ba5f89d58664
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526600"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406322"
 ---
 # <a name="using-wpf-controls"></a>使用 WPF 控制項
-您可以在 Windows form 應用程式中使用 Windows Presentation Foundation (WPF) 控制項。 雖然這些是兩個不同的檢視技術，但是它們順暢的互通。  
+您可以在 Windows form 應用程式中使用 Windows Presentation Foundation (WPF) 控制項。 雖然這些都是兩個不同的檢視技術，它們順暢的互通。  
   
- Windows Form 設計工具提供視覺化設計環境來裝載 Windows Presentation Foundation 控制項。 由名為特殊 Windows Form 控制項裝載 WPF 控制項<xref:System.Windows.Forms.Integration.ElementHost>。 這個控制項可讓 WPF 控制項加入表單的版面配置，並接收鍵盤和滑鼠的訊息。 您可以在設計階段排列<xref:System.Windows.Forms.Integration.ElementHost>控制就如同任何 Windows Form 控制項。  
+ Windows Form 設計工具提供視覺化設計環境來裝載 Windows Presentation Foundation 控制項。 由特殊的 Windows Form 控制項是名為裝載 WPF 控制項<xref:System.Windows.Forms.Integration.ElementHost>。 這個控制項可讓 WPF 控制項加入表單的版面配置，並接收鍵盤和滑鼠的訊息。 您可以在設計階段排列<xref:System.Windows.Forms.Integration.ElementHost>控制就如同任何 Windows Form 控制項。  
   
- 您也可以使用 Windows Form 控制項以 WPF 為基礎的應用程式中。 如需詳細資訊，請參閱[WPF 設計工具](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)。  
+ 您也可以在您以 WPF 為基礎的應用程式中使用 Windows Form 控制項。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)。  
   
 ## <a name="in-this-section"></a>本節內容  
  [操作說明：在設計階段複製和貼上 ElementHost 控制項](../../../../docs/framework/winforms/advanced/how-to-copy-and-paste-an-elementhost-control-at-design-time.md)  
@@ -30,27 +30,27 @@ ms.locfileid: "33526600"
  顯示 Windows Form 設計工具之間的工作流程和[!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)]變更 WPF 控制項的屬性。  
   
  [逐步解說：在設計階段建立 Windows Forms 的新 WPF 內容](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)  
- 示範如何建立使用 Windows Presentation Foundation 控制項在 Windows Form 為基礎的應用程式。  
+ 示範如何建立 Windows Presentation Foundation 控制項，以便在 Windows form 應用程式中。  
   
  [逐步解說：將 ElementHost 控制項複製並貼至另外的 Windows Forms](../../../../docs/framework/winforms/advanced/copy--paste-an-elementhost-control-into-forms.md)  
- 示範如何在 Windows Presentation Foundation 控制項複製到另一個 Windows Form。  
+ 示範如何在 Windows Presentation Foundation 控制項複製到另一個 Windows 表單。  
   
  [逐步解說：在設計階段指派 Windows Forms 的 WPF 內容](../../../../docs/framework/winforms/advanced/walkthrough-assigning-wpf-content-on-windows-forms-at-design-time.md)  
- 顯示如何選取您想要顯示在表單上的 Windows Presentation Foundation 控制項類型。  
+ 顯示如何選取您想要在表單上顯示的 Windows Presentation Foundation 控制項類型。  
   
  [逐步解說：設定 WPF 內容的樣式](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md)  
  顯示 Windows Form 設計工具之間的工作流程和[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]將樣式套用至 Windows Presentation Foundation 控制項。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.Integration.ElementHost>  
- 描述您可以在 Windows form 應用程式中使用主機的 Windows Presentation Foundation 控制項的類別。  
+ 描述您可以在 Windows form 應用程式中使用來裝載 Windows Presentation Foundation 控制項的類別。  
   
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- 描述您可以在 Windows Presentation Foundation 應用程式中使用主機的 Windows Form 控制項的類別。  
+ 描述您可以在 Windows Presentation Foundation 架構應用程式中使用來裝載 Windows Forms 控制項的類別。  
   
 ## <a name="related-sections"></a>相關章節  
  [移轉和互通性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
  描述 Windows Presentation Foundation 和 Windows Form 技術之間的互通性。  
   
- [WPF 設計工具](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [在 Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)  
  描述如何設計 Visual Studio 中的 Windows Presentation Foundation 控制項。

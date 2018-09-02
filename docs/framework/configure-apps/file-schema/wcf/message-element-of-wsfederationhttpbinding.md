@@ -2,15 +2,15 @@
 title: '&lt;wsFederationHttpBinding&gt; 的 &lt;message&gt; 項目'
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
-ms.openlocfilehash: 24d7370eaadba08d449b886a09cb9903ca0a64c2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 820ee7015a51ecc5510889516faef20292cfbc07
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751099"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416590"
 ---
 # <a name="ltmessagegt-element-of-ltwsfederationhttpbindinggt"></a>&lt;wsFederationHttpBinding&gt; 的 &lt;message&gt; 項目
-定義的訊息層級安全性的設定[ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)。  
+定義訊息層級安全性設定[ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)。  
   
  \<system.ServiceModel>  
 \<繫結 >  
@@ -88,7 +88,7 @@ ms.locfileid: "32751099"
 |屬性|描述|  
 |---------------|-----------------|  
 |algorithmSuite|設定訊息加密和金鑰包裝演算法。 請參閱「algorithmSuite 屬性」表格中此屬性的有效值。 預設值是 `Basic256`。<br /><br /> 此屬性的型別為 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>。 這些演算法會對應至安全性原則語言 (WS-SecurityPolicy) 規格中指定的演算法。|  
-|issuedKeyType|指定要發行的金鑰類型。 有效值包括以下的值：<br /><br /> -   SymmetricKey<br />-PublicKey<br /><br /> 預設值為 `SymmetricKey`。 此屬性的型別為 <xref:System.IdentityModel.Tokens.SecurityKeyType>。|  
+|issuedKeyType|指定要發行的金鑰類型。 有效值包括以下的值：<br /><br /> -   SymmetricKey<br />-PublicKey<br /><br /> 預設為 `SymmetricKey`。 此屬性的型別為 <xref:System.IdentityModel.Tokens.SecurityKeyType>。|  
 |issuedTokenType|字串，其中包含的 URI 指定要發行的權杖型別。 預設為 `null`。|  
 |negotiateServiceCredential|布林值，指定服務認證是否應交換做為交涉的一部分，或可供超出範圍使用。 預設為 `true`，意指交涉服務認證。|  
   
@@ -113,7 +113,7 @@ ms.locfileid: "32751099"
 |Basic256Sha256Rsa15|將 Basic256 用於訊息加密，Sha256 用於訊息摘要，Rsa15 用於金鑰包裝。|  
 |TripleDesSha256Rsa15|將 TripleDes 用於訊息加密，Sha256 用於訊息摘要，Rsa15 用於金鑰包裝。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -135,5 +135,5 @@ ms.locfileid: "32751099"
  `System.ServiceModel.Configuration.FederatedMessageSecurityElement` [保護服務和用戶端](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [使用繫結來設定 Windows Communication Foundation 服務和用戶端](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<繫結 >](../../../../../docs/framework/misc/binding.md)

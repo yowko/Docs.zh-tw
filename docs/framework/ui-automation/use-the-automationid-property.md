@@ -12,16 +12,16 @@ ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: bd5985dd531b13ca91efd9c0aa7987ff6a57e56a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84aa8dd866d5870d8cd4e6c8c4951fa1e49a4052
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401036"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400262"
 ---
 # <a name="use-the-automationid-property"></a>使用 AutomationID 屬性
 > [!NOTE]
->  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱 < [Windows Automation API： 使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主題包含的案例和範例程式碼，說明如何及何時可以使用 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 找出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構內的項目。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "33401036"
   
 #### <a name="use-a-persistent-path-to-return-to-a-previously-identified-automationelement"></a>使用持續性路徑，返回先前識別的 AutomationElement  
   
--   用戶端應用程式 (從簡單的測試指令碼到完整的錄製和播放公用程式) 可能需要存取目前未具現化因此並不存在於使用者介面自動化樹狀結構中的項目，例如檔案開啟對話方塊或功能表項目。 這些項目只能在重現或透過使用 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 屬性 (例如 AutomationID、控制項模式和事件接聽程式) 來「播放」特定的一連串 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 動作時，才會具現化。 請參閱[測試指令碼產生器範例](http://msdn.microsoft.com/library/028467fd-2980-4691-9522-0131dcef23a0)的範例，會使用[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]產生根據使用者互動的測試指令碼[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]。  
+-   用戶端應用程式 (從簡單的測試指令碼到完整的錄製和播放公用程式) 可能需要存取目前未具現化因此並不存在於使用者介面自動化樹狀結構中的項目，例如檔案開啟對話方塊或功能表項目。 這些項目只能在重現或透過使用 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 屬性 (例如 AutomationID、控制項模式和事件接聽程式) 來「播放」特定的一連串 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 動作時，才會具現化。 請參閱[Tla_uiautomation](https://msdn.microsoft.com/library/028467fd-2980-4691-9522-0131dcef23a0)如需範例，會使用[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]產生根據使用者互動的測試指令碼[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]。  
   
  [!code-csharp[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#uiaworkerthread)]
  [!code-vb[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#uiaworkerthread)]  

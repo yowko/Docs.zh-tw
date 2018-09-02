@@ -2,12 +2,12 @@
 title: 修改 SQL 產生
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: 1d24775a7a50da1008a5097e1a2caf4e72c946e2
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 8e0568e32094b6cc27137409f3d908928d82cebb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071948"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417243"
 ---
 # <a name="modification-sql-generation"></a>修改 SQL 產生
 本節將討論如何為您的 (SQL:1999 相容資料庫) 提供者開發修改 SQL 產生模組。 這個模組負責將修改命令樹轉譯為適當的 SQL INSERT、UPDATE 或 DELETE 陳述式。  
@@ -25,11 +25,11 @@ ms.locfileid: "37071948"
   
 -   DbDeleteCommandTree  
   
- DbModificationCommandTree 和其所產生的實作[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]永遠代表單一資料列作業。 這一節會描述 .NET Framework 3.5 版中的這些型別以及其條件約束。  
+ DbModificationCommandTree 及其實作所產生的[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]永遠都代表單一資料列作業。 這一節會描述 .NET Framework 3.5 版中的這些型別以及其條件約束。  
   
  ![圖表](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
   
- DbModificationCommandTree 有一個目標屬性，此屬性代表針對修改作業設定的目標。 定義輸入集的目標運算式屬性一定是 DbScanExpression。  DbScanExpression 可以是代表資料表或檢視，或一組資料定義查詢如果中繼資料屬性"Defining Query"其目標為非 null。  
+ DbModificationCommandTree 有一個目標屬性，此屬性代表針對修改作業設定的目標。 定義輸入集的目標運算式屬性一定是 DbScanExpression。  DbScanExpression 可以是會代表資料表或檢視，或一組資料使用查詢定義如果中繼資料屬性"Defining Query"其目標為非 null。  
   
  只有當集合是使用模型中的定義查詢所定義，但是未針對對應的修改作業提供任何功能時，代表查詢的 DbScanExpression 才能當做修改目標聯繫提供者。 提供者可能無法支援這種案例 (例如 SqlClient 就無法支援)。  
   
@@ -83,7 +83,7 @@ The elements of the list are specified as type DbModificationClause, which speci
 -   DbOrExpression  
   
 ## <a name="modification-sql-generation-in-the-sample-provider"></a>範例提供者中的修改 SQL 產生  
- [Entity Framework 範例提供者](http://go.microsoft.com/fwlink/?LinkId=180616)示範之 ADO.NET 資料提供者支援的元件[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]。 它會以 SQL Server 2005 資料庫為目標，並且實作成 System.Data.SqlClient ADO.NET 2.0 資料提供者上層的包裝函式。  
+ [Entity Framework 範例提供者](https://go.microsoft.com/fwlink/?LinkId=180616)之 ADO.NET 資料提供者支援的元件會示範[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]。 它會以 SQL Server 2005 資料庫為目標，並且實作成 System.Data.SqlClient ADO.NET 2.0 資料提供者上層的包裝函式。  
   
  範例提供者的修改 SQL 產生模組 (位於 SQL Generation\DmlSqlGenerator.cs 檔案中) 會採用 DbModificationCommandTree 輸入，並產生單一修改 SQL 陳述式，後面可能接著 select 陳述式來傳回讀取器 (如果 DbModificationCommandTree 有指定)。 請注意，產生之命令的形狀會受到目標 SQL Server 資料庫所影響。  
   
@@ -104,7 +104,7 @@ The elements of the list are specified as type DbModificationClause, which speci
 ## <a name="generating-an-insert-sql-command"></a>產生插入 SQL 命令  
  如果範例提供者中有提供 DbInsertCommandTree，產生的插入命令會遵循底下的其中一個插入範本。  
   
- 第一個範本有一個命令可在提供 SetClauses 清單中的值時執行插入，也有一個 SELECT 陳述式，可在 Returning 屬性不是 null 時，傳回 Returning 屬性中針對插入的資料列所指定的屬性。 述詞的項目 」\@ @ROWCOUNT > 0"為 true，如果已插入一個資料列。 述詞的項目"keyMemberI = keyValueI &#124; scope_identity （) 」 圖形會採用"keyMemberI = scope_identity （） 」 只有當 keyMemeberI 為存放區產生的索引鍵，，因為 scope_identity （） 傳回插入識別 （最後一個識別值存放區產生） 資料行。  
+ 第一個範本有一個命令可在提供 SetClauses 清單中的值時執行插入，也有一個 SELECT 陳述式，可在 Returning 屬性不是 null 時，傳回 Returning 屬性中針對插入的資料列所指定的屬性。 述詞的項目 」\@ @ROWCOUNT > 0"為 true，如果已插入資料列。 述詞的項目"keyMemberI = keyValueI &#124; scope_identity （) 」 會在圖形"keyMemberI = scope_identity （）"才因為 scope_identity （） 會傳回插入識別 （最後一個識別值，只有當 keyMemeberI 為存放區所產生的金鑰，存放區所產生） 的資料行。  
   
 ```  
 -- first insert Template  
@@ -199,7 +199,7 @@ WHERE <predicate>
  WHERE @@ROWCOUNT > 0 AND keyMember0 = keyValue0 AND .. keyMemberI =  keyValueI | scope_identity()  .. AND  keyMemberN = keyValueN]  
 ```  
   
- Set 子句有假的 set 子句 ("@i = 0") 不指定任何 set 子句時，才。 這是為了確保任何存放區計算的資料行都會重新計算。  
+ Set 子句具有假的 set 子句 ("@i = 0") 不指定任何 set 子句時，才。 這是為了確保任何存放區計算的資料行都會重新計算。  
   
  只有當 Returning 屬性不是 null 時，才會產生 select 陳述式來傳回 Returning 屬性中指定的屬性。  
   

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data type conversion [Visual Basic]
 ms.assetid: 1cdacd21-ba31-4b62-b5be-395e41eeaa17
 ms.openlocfilehash: 026b2a250abfac0782feb0946bc50a94f504f7ed
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932282"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404053"
 ---
 # <a name="type-conversions-in-visual-basic"></a>Visual Basic 中的類型轉換
 值從一種資料類型變更為另一種類型的程序稱為*轉換*。 轉換為*widening*或是*縮小*，取決於相關類型的資料容量。 它們也是*隱含*或是*明確*，取決於在原始程式碼中的語法。  

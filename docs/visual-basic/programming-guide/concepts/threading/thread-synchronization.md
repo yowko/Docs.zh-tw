@@ -2,12 +2,12 @@
 title: 執行緒同步處理 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 04f485d1-8333-4510-9e72-c334e7427e7e
-ms.openlocfilehash: 9922230e1c7f2bd30c575bd66387feb4850a298b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3278ed1e98f71e11d47f55a0d4cb50f44ae02027
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655087"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406620"
 ---
 # <a name="thread-synchronization-visual-basic"></a>執行緒同步處理 (Visual Basic)
 下列各節描述可用來同步處理多執行緒應用程式中資源存取的功能和類別。  
@@ -26,8 +26,8 @@ ms.locfileid: "33655087"
   
 -   [Managed 執行緒處理的最佳實施方針](../../../../standard/threading/managed-threading-best-practices.md)  
   
-## <a name="the-lock-and-synclock-keywords"></a>鎖定和 SyncLock 關鍵字  
- Visual Basic`SyncLock`陳述式可以由其他執行緒用來確保一段程式碼會執行到完成為止，而不會中斷。 這項作業的完成方式是取得程式碼區塊期間內所指定物件的互斥鎖定。  
+## <a name="the-lock-and-synclock-keywords"></a>Lock 和 SyncLock 關鍵字  
+ Visual Basic`SyncLock`陳述式可以由其他執行緒用來確保程式碼區塊執行到完成為止，而不中斷。 這項作業的完成方式是取得程式碼區塊期間內所指定物件的互斥鎖定。  
   
  `SyncLock` 陳述式是將物件指定為引數，而且後面接著一次只由一個執行緒執行的程式碼區塊。 例如:   
   
@@ -147,7 +147,6 @@ End Module
  <xref:System.Threading>  
  <xref:System.Threading.EventWaitHandle.Set%2A>  
  <xref:System.Threading.Monitor>  
- [多執行緒應用程式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)  
  [SyncLock 陳述式](../../../../visual-basic/language-reference/statements/synclock-statement.md)  
  [Mutex](../../../../standard/threading/mutexes.md)  
  [Interlocked 作業](../../../../standard/threading/interlocked-operations.md)  

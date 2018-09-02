@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 8f2d962f40f2b56b1d1dda68129f477e4277ae1d
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: c2948cf76f7763eae51689973346965bc6c720a8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728348"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404212"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>同步和非同步作業
 本主題討論實作和呼叫非同步服務作業。  
@@ -73,7 +73,7 @@ public class SampleService:ISampleService
 }  
 ```  
   
- SampleMethodTaskAsync 作業會傳回 Task\<string>，因為邏輯作業傳回的是字串。 如需工作架構非同步模式的詳細資訊，請參閱[工作架構非同步模式](http://go.microsoft.com/fwlink/?LinkId=232504) \(英文\)。  
+ SampleMethodTaskAsync 作業會傳回 Task\<string>，因為邏輯作業傳回的是字串。 如需工作架構非同步模式的詳細資訊，請參閱[工作架構非同步模式](https://go.microsoft.com/fwlink/?LinkId=232504) \(英文\)。  
   
 > [!WARNING]
 >  使用工作架構非同步模式時，如果在等待作業完成期間發生例外狀況，則可能擲回 T:System.AggregateException。 這個例外狀況可能在用戶端或服務上發生  
@@ -107,7 +107,7 @@ public class AsyncExample
 }  
 ```  
   
- 如需事件架構非同步模式的詳細資訊，請參閱[事件架構非同步模式](http://go.microsoft.com/fwlink/?LinkId=232515)。  
+ 如需事件架構非同步模式的詳細資訊，請參閱[事件架構非同步模式](https://go.microsoft.com/fwlink/?LinkId=232515)。  
   
 #### <a name="iasyncresult-asynchronous-pattern"></a>IAsyncResult 非同步模式  
  使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 非同步程式設計模式並使 `<Begin>` 方法的 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> 屬性設定為 `true`，即可以非同步方式實作服務作業。 在此情況下，會使用和同步作業相同的形式，在中繼資料中公開非同步作業：非同步作業會公開為具有要求訊息和相關聯之回應訊息的單一作業。 用戶端程式設計模型接著就會做出選擇。 只要在叫用服務時發生要求/回應訊息交換，這些程式設計模型就會將此模式表示為同步作業或非同步作業。  
@@ -192,6 +192,6 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async
   
  如果您要以 `Result` 屬性的形式接收訊息物件，並讓傳回值以該物件屬性的形式呈現，請使用 **/messageContract** 命令選項。 這會產生一個簽章，此簽章會將回應訊息傳回做為 `Result` 物件的 <xref:System.EventArgs> 屬性。 然後，所有的內部傳回值都成為回應訊息物件的屬性。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>  
  <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A>

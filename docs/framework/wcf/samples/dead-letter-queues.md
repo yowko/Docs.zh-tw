@@ -2,15 +2,15 @@
 title: 寄不出的信件佇列
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 9f92aeb02d997820fa2955419a3cdcf1c4369b45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4f30e9486c8798e3610e13e6abe1c2612c70b69f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507977"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417129"
 ---
 # <a name="dead-letter-queues"></a>寄不出的信件佇列
-這個範例示範如何處理已傳遞失敗的訊息。 它基礎[交易 MSMQ 繫結](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)範例。 這個範例會使用 `netMsmqBinding` 繫結。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。  
+這個範例示範如何處理已傳遞失敗的訊息。 它根據[交易 MSMQ 繫結](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)範例。 這個範例會使用 `netMsmqBinding` 繫結。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -49,7 +49,7 @@ public interface IOrderProcessor
 }  
 ```
 
- 服務中的程式碼範例是屬於[交易 MSMQ 繫結](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)。  
+ 服務程式碼範例中的是屬於[交易 MSMQ 繫結](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)。  
   
  與服務進行的通訊會在異動範圍內發生。 服務會讀取佇列中的訊息、執行作業，然後顯示作業的結果。 應用程式也會為寄不出的信件訊息建立寄不出的信件佇列。  
 
@@ -169,7 +169,7 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
 }
 ```
 
- 寄不出的信件佇列中的訊息是針對處理訊息之服務所發出的訊息。 因此，當寄不出的信件訊息服務從佇列讀取訊息，Windows Communication Foundation (WCF) 通道層會發覺端點中，而且不會分派訊息。 在本例中，訊息是針對訂單處理服務發出的，但是會由寄不出的信件訊息服務接收。 為了接收針對不同端點發出的訊息，在 `ServiceBehavior` 中會指定用來比對所有位址的位址篩選條件。 若要順利處理從寄不出的信件佇列中讀取的訊息，就必須這麼做。  
+ 寄不出的信件佇列中的訊息是針對處理訊息之服務所發出的訊息。 因此，當無法投遞的信件訊息服務會從佇列讀取訊息，Windows Communication Foundation (WCF) 通道層端點中尋找不符合，從而不分派訊息。 在本例中，訊息是針對訂單處理服務發出的，但是會由寄不出的信件訊息服務接收。 為了接收針對不同端點發出的訊息，在 `ServiceBehavior` 中會指定用來比對所有位址的位址篩選條件。 若要順利處理從寄不出的信件佇列中讀取的訊息，就必須這麼做。  
   
  在這個範例中，如果失敗的原因是訊息逾時，寄不出的信件訊息服務將會重新傳送訊息。對於其他所有原因，則顯示傳遞失敗，如下列範例程式碼所示：  
 
@@ -310,23 +310,23 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2.  如果服務優先執行，它就會檢查以確定佇列存在。 如果佇列不存在，服務將建立一個佇列。 您可以先執行服務來建立佇列，也可以透過 MSMQ 佇列管理員建立佇列。 請依照下列步驟，在 Windows 2008 中建立佇列。  
   
     1.  在 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 中開啟伺服器管理員。  
   
-    2.  展開**功能** 索引標籤。  
+    2.  依序展開**功能** 索引標籤。  
   
     3.  以滑鼠右鍵按一下**私用訊息佇列**，然後選取**新增**，**私用佇列**。  
   
-    4.  請檢查**交易式**方塊。  
+    4.  請檢查**Transactional**  方塊中。  
   
     5.  輸入`ServiceModelSamplesTransacted`做為新佇列的名稱。  
   
 3.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-4.  此範例中執行單一或跨電腦組態變更佇列名稱適當地使用電腦的完整名稱取代 localhost，依照[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  若要執行本範例中單一或跨電腦組態變更佇列名稱，並以完整的電腦名稱取代 localhost，並依照[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>若要在加入至工作群組的電腦上執行範例  
   
@@ -357,7 +357,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  
   

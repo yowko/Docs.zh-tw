@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 459d74f3faf9fab4cba047a87ccff77d193e9026
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17650e06cb505dd778a9c0980c2a32fda8099cb4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399543"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407569"
 ---
 # <a name="how-to-enable-wif-tracing"></a>如何：啟用 WIF 追蹤
 ## <a name="applies-to"></a>適用於  
@@ -19,7 +19,7 @@ ms.locfileid: "33399543"
 -   ASP.NET® Web Forms  
   
 ## <a name="summary"></a>總結  
- 這個操作說明提供了在 ASP.NET 應用程式中啟用 WIF 追蹤的詳細逐步程序。 還提供了一些指示，說明如何測試應用程式以確認追蹤接聽項和記錄檔正常運作。 這篇使用方法文章並沒有提供建立 Security Token Service (STS) 的詳細指示，而是使用識別和存取工具隨附的「開發 STS」。 「開發 STS」並不會執行實際的驗證，而只是用於測試用途。 您必須安裝識別和存取工具才能完成這篇使用方法文章。 您可以從下列位置下載：[Identity and Access Tool](http://go.microsoft.com/fwlink/?LinkID=245849) (身分識別與存取工具)  
+ 這個操作說明提供了在 ASP.NET 應用程式中啟用 WIF 追蹤的詳細逐步程序。 還提供了一些指示，說明如何測試應用程式以確認追蹤接聽項和記錄檔正常運作。 這篇使用方法文章並沒有提供建立 Security Token Service (STS) 的詳細指示，而是使用識別和存取工具隨附的「開發 STS」。 「開發 STS」並不會執行實際的驗證，而只是用於測試用途。 您必須安裝識別和存取工具才能完成這篇使用方法文章。 您可以從下列位置下載：[Identity and Access Tool](https://go.microsoft.com/fwlink/?LinkID=245849) (身分識別與存取工具)  
   
 > [!IMPORTANT]
 >  為被動應用程式 (也就是使用 WS-同盟通訊協定的應用程式) 啟用 WIF 追蹤，可能會使應用程式暴露於阻斷服務 (DoS) 攻擊或洩漏資訊給惡意方的風險下。 這同時包括被動 RP 和被動 STS。 基於這個理由，建議您不要在生產環境中為被動 RP 或 STS 啟用 WIF 追蹤。  

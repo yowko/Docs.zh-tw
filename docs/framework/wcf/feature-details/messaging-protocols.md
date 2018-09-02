@@ -2,17 +2,17 @@
 title: 訊息通訊協定
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-ms.openlocfilehash: d188c79d3879ef383d24f56c81d66973266636bc
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 3e56636e8364eec333f9585a0f62f6510561d1cc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37072718"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405055"
 ---
 # <a name="messaging-protocols"></a>訊息通訊協定
-Windows Communication Foundation (WCF) 通道堆疊利用編碼和傳輸通道內部訊息表示法轉換為其 wire 格式，並將其傳送使用特定的傳輸。 最常用於 Web 服務互通性的傳輸為 HTTP，而 Web 服務最常用的編碼為 XML 架構的 SOAP 1.1、SOAP 1.2 和訊息傳輸最佳化機制 (MTOM)。  
+Windows Communication Foundation (WCF) 通道堆疊利用編碼和傳輸通道轉換為其 wire 格式的內部訊息表示法，並將其傳送使用特定的傳輸。 最常用於 Web 服務互通性的傳輸為 HTTP，而 Web 服務最常用的編碼為 XML 架構的 SOAP 1.1、SOAP 1.2 和訊息傳輸最佳化機制 (MTOM)。  
   
- 本主題涵蓋下列通訊協定所採用的 WCF 實作細節<xref:System.ServiceModel.Channels.HttpTransportBindingElement>。  
+ 本主題涵蓋 WCF 實作詳細資料，如下列所採用的通訊協定<xref:System.ServiceModel.Channels.HttpTransportBindingElement>。  
   
 |規格/文件|連結|  
 |-----------------------------|----------|  
@@ -20,7 +20,7 @@ Windows Communication Foundation (WCF) 通道堆疊利用編碼和傳輸通道�
 |SOAP 1.1 HTTP 繫結|http://www.w3.org/TR/2000/NOTE-SOAP-20000508/第 7 節|  
 |SOAP 1.2 HTTP 繫結|http://www.w3.org/TR/soap12-part2/第 7 節|  
   
- 本主題涵蓋 WCF 實作詳細資料，下列通訊協定，<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>和<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>採用。  
+ 本主題涵蓋 WCF 實作詳細資料，如下列通訊協定<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>和<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>採用。  
   
 |規格/文件|連結|  
 |-----------------------------|----------|  
@@ -35,7 +35,7 @@ W3C Web 服務定址 1.0 - 中繼資料|http://www.w3.org/TR/ws-addr-metadata/|
 |WSDL SOAP1.1 繫結|http://www.w3.org/TR/wsdl/|  
 |WSDL SOAP1.2 繫結|http://www.w3.org/Submission/wsdl11soap12/|  
   
- 本主題涵蓋 WCF 實作詳細資料，下列通訊協定，<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>採用。  
+ 本主題涵蓋 WCF 實作詳細資料，如下列通訊協定<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>採用。  
   
 |規格/文件|連結|  
 |-----------------------------|----------|  
@@ -64,25 +64,25 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 ### <a name="envelope-and-processing-model"></a>封套和處理模型  
  WCF 實作 SOAP 1.1 封套，以處理下列 Basic Profile 1.1 (BP11) 和 Basic Profile 1.0 (SSBP10)。 SOAP 1.2 封套處理實作了下列 SOAP12-Part1。  
   
- 本節說明對於 BP11 和 SOAP12 Part1 WCF 所採取的某些實作選項。  
+ 本章節將說明 WCF 對於 BP11 和 SOAP12-Part1 所採取的某些實作選項。  
   
 #### <a name="mandatory-header-processing"></a>強制處理標頭  
- WCF 會遵循規則處理標頭標記為`mustUnderstand`SOAP 1.1 和 SOAP 1.2 規格中，具有下列變化中所述。  
+ WCF 會遵循規則處理標頭標示`mustUnderstand`在 SOAP 1.1 和 SOAP 1.2 規格中，下列變化所述。  
   
  輸入 WCF 通道堆疊的訊息是由個別的通道相關聯的繫結項目，例如設定、 文字訊息編碼、 安全性、 可靠傳訊和交易處理。 每個通道都會從關聯的命名空間辨識標頭，並將其標記為已辨識。 一旦訊息進入發送器，作業格式器便會讀取對應之訊息/作業合約所需的標頭，並將其標記為已辨識。 接著發送器便會檢查是否有任何剩餘之未辨識，但標記為 `mustUnderstand` 的標頭，並擲回例外狀況。 包含 `mustUnderstand` 標頭的訊息會以尚未由收件者應用程式碼處理的收件者為目標。  
   
  此類分層式處理可將 SOAP 節點的基礎結構層與應用程式層分割：  
   
--   B1111： 無法辨識的標頭會偵測到由 WCF 基礎結構通道堆疊中，處理訊息之後，但它由應用程式處理之前  
+-   B1111： 無法辨識的標頭會偵測到由 WCF 基礎結構通道堆疊中，處理訊息之後但在應用程式處理之前  
   
      SOAP 1.1 和 SOAP 1.2 之間的 `mustUnderstand` 標頭值不同。 Basic Profile 1.1 要求 SOAP 1.1 訊息的 `mustUnderstand` 值必須為 0 或 1。 SOAP 1.2 允許 0、1、`false` 和 `true` 等值，但建議發出 `xs:boolean` 值的標準表示 (`false`、`true`)。  
   
--   B1112: WCF 發出`mustUnderstand`值 0，1 表示 SOAP 1.1 和 SOAP 1.2 版的 SOAP 封套。 WCF 接受的整個值空間`xs:boolean`如`mustUnderstand`標頭 (0、 1、 `false`， `true`)  
+-   B1112: WCF 所發出`mustUnderstand`值 0，1 表示 SOAP 1.1 和 SOAP 1.2 版的 SOAP 封套。 WCF 會接受的整個值空間`xs:boolean`for`mustUnderstand`標頭 (0、 1、 `false`， `true`)  
   
 #### <a name="soap-faults"></a>SOAP 錯誤  
- 下列是 WCF 特定 SOAP 錯誤實作清單。  
+ 下列是 WCF 特定 SOAP 錯誤實作的清單。  
   
--   B2121: WCF 會傳回下列 SOAP 1.1 錯誤代碼： `s11:mustUnderstand`， `s11:Client`，和`s11:Server`。  
+-   B2121: WCF 會傳回下列的 SOAP 1.1 錯誤代碼： `s11:mustUnderstand`， `s11:Client`，和`s11:Server`。  
   
 -   B2122: WCF 會傳回下列 SOAP 1.2 錯誤碼： `s12:MustUnderstand`， `s12:Sender`，和`s12:Receiver`。  
   
@@ -91,12 +91,12 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 #### <a name="soap-11-http-binding"></a>SOAP 1.1 HTTP 繫結  
  WCF 實作 SOAP1.1 HTTP 繫結 Basic Profile 1.1 規格 3.4 節，以下列說明：  
   
--   B2211: WCF 服務未實作 HTTP POST 要求重新導向。  
+-   B2211: WCF 服務不會實作 HTTP POST 要求重新導向。  
   
 -   B2212: WCF 用戶端支援 HTTP Cookie 3.4.8。  
   
 #### <a name="soap-12-http-binding"></a>SOAP 1.2 HTTP 繫結  
- SOAP 1.2-2 (SOAP12Part2) 規格以下列說明所述，WCF 會實作 SOAP 1.2 HTTP 繫結。  
+ SOAP 1.2-part 2 (SOAP12Part2) 規格以下列說明中所述，WCF 會實作 SOAP 1.2 HTTP 繫結。  
   
  SOAP 1.2 為 `application/soap+xml` 媒體類型引入了選擇性的動作參數。 這個參數對於最佳化訊息分派非常有用，不需要在未使用 WS-Addressing 的情況下剖析 SOAP 訊息的主體。  
   
@@ -107,7 +107,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
  當 WS-Addressing 已停用，且傳入的要求未包含動作參數時，訊息 `Action` 會視為未指定。  
   
 ## <a name="ws-addressing"></a>WS-Addressing  
- WCF 實作 Ws-addressing 的 3 的版本：  
+ WCF 實作 3 個 Ws-addressing 版本：  
   
 -   WS-Addressing 2004/08  
   
@@ -116,21 +116,21 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 -   WS-Addressing 1.0 - 中繼資料  
   
 ### <a name="endpoint-references"></a>端點參考  
- 所有 WCF 實作的 Ws-addressing 版本來描述端點都使用了端點參考。  
+ 所有版本的 Ws-addressing 可實作 WCF 都使用了端點參考來描述端點。  
   
 #### <a name="endpoint-references-and-ws-addressing-versions"></a>端點參考和 WS-Addressing 版本  
- WCF 會實作一些使用 Ws-addressing 的基礎結構通訊協定，以及在特定`EndpointReference`項目和`W3C.WsAddressing.EndpointReferenceType`類別 （例如，Ws-reliablemessaging、 Ws-secureconversation 和 Ws-trust）。 WCF 還支援使用任一版本的 Ws-addressing 其他基礎結構通訊協定。 WCF 端點支援每個端點的 Ws-addressing 版本。  
+ WCF 會實作一些使用 Ws-addressing 的基礎結構通訊協定，特別`EndpointReference`項目和`W3C.WsAddressing.EndpointReferenceType`類別 （比方說，WS-ReliableMessaging、 Ws-secureconversation 和 Ws-trust）。 WCF 支援任一版本的 Ws-addressing 與其他基礎結構通訊協定的使用。 WCF 端點支援每個端點的 Ws-addressing 版本。  
   
- R3111 的命名空間`EndpointReference`項目或與 WCF 端點交換訊息中使用的類型必須符合的 WS 定址此端點實作版本。  
+ 若是 R3111 的命名空間`EndpointReference`項目或與 WCF 端點交換訊息中所使用的型別必須符合 Ws-addressing 由此端點所實作的版本。  
   
- 例如，如果 WCF 端點實作了 Ws-reliablemessaging，`AcksTo`內此類端點所傳回的標頭`CreateSequenceResponse`會使用 Ws-addressing 的版本，`EncodingBinding`項目會指定此端點。  
+ 比方說，如果 WCF 端點實作了 WS-ReliableMessaging，`AcksTo`內的這類端點所傳回的標頭`CreateSequenceResponse`使用 Ws-addressing 版本，`EncodingBinding`項目會指定這個端點。  
   
 #### <a name="endpoint-references-and-metadata"></a>端點參考和中繼資料  
  有許多案例都需要與中繼資料通訊，或需要參考指定之端點的中繼資料。  
   
- B3121: WCF 採用 Ws-metadataexchange (MEX) 規格第 6 節以傳值方式或傳址包含端點參考中繼資料中所述的機制。  
+ B3121: WCF 會採用 Ws-metadataexchange (MEX) 規格第 6 節，以傳值或傳址包含端點參考的中繼資料中所述的機制。  
   
- 假設 WCF 服務需要使用在權杖簽發者所發出的安全性判斷提示標記語言 (SAML) 權杖進行驗證的 http://sts.fabrikam123.com 。 WCF 端點描述這項驗證需求使用`sp:IssuedToken`含有巢狀判斷提示`sp:Issuer`指向權杖簽發者的判斷提示。 存取 `sp:Issuer` 判斷提示的用戶端應用程式必須知道如何與權杖簽發者端點進行通訊。 用戶端需要知道與權杖簽發者有關的中繼資料。 使用 MEX 中定義的端點參考中繼資料延伸，WCF 會提供權杖簽發者中繼資料的參考。  
+ 假設 WCF 服務需要使用在權杖簽發者所發出的安全性判斷提示標記語言 (SAML) 權杖進行驗證的 http://sts.fabrikam123.com 。 WCF 端點使用中描述這項驗證需求`sp:IssuedToken`含有巢狀判斷提示`sp:Issuer`指向權杖簽發者的判斷提示。 存取 `sp:Issuer` 判斷提示的用戶端應用程式必須知道如何與權杖簽發者端點進行通訊。 用戶端需要知道與權杖簽發者有關的中繼資料。 使用 MEX 中定義的端點參考中繼資料延伸模組，WCF 會提供權杖簽發者中繼資料的參考。  
   
 ```xml  
 <sp:IssuedToken>  
@@ -156,11 +156,11 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 ### <a name="message-addressing-headers"></a>訊息定址標頭  
   
 #### <a name="message-headers"></a>訊息標頭  
- 這兩個 Ws-addressing 版本，WCF 會使用下列的訊息標頭如規格所規定`wsa:To`， `wsa:ReplyTo`， `wsa:Action`， `wsa:MessageID`，和`wsa:RelatesTo`。  
+ 這兩個 Ws-addressing 版本，WCF 會使用下列的訊息標頭規格所規定`wsa:To`， `wsa:ReplyTo`， `wsa:Action`， `wsa:MessageID`，和`wsa:RelatesTo`。  
   
- B3211： 對於 Ws-addressing 的所有版本，WCF 會為準，但根據預設，Ws-addressing 訊息標頭不會產生`wsa:FaultTo`和`wsa:From`。  
+ B3211： 對於 Ws-addressing 的所有版本，WCF 會接受，但不會產生 Ws-addressing 訊息標頭`wsa:FaultTo`和`wsa:From`。  
   
- 與 WCF 應用程式互動的應用程式可以將這些訊息標頭和 WCF 將會處理它們。  
+ WCF 應用程式互動的應用程式可以將這些訊息標頭和 WCF 將會處理它們。  
   
 #### <a name="reference-parameters-and-properties"></a>參考參數和屬性  
  WCF 實作端點參考參數和參考 p 的處理  
@@ -170,12 +170,12 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
  B3221： 當設定為使用 Ws-addressing 2004/08，WCF 端點不會區分處理參考屬性和參考參數。  
   
 ### <a name="message-exchange-patterns"></a>訊息交換模式  
- 包含在 Web 服務作業叫用的訊息順序稱為*訊息交換模式*。 WCF 支援單向、 要求-回覆和雙工訊息交換模式。 本章節將根據所使用的訊息交換模式，釐清訊息處理上的 WS-Addressing 需求。  
+ 包含 Web 服務作業引動過程中的訊息順序稱為*訊息交換模式*。 WCF 支援單向、 要求-回覆和雙工訊息交換模式。 本章節將根據所使用的訊息交換模式，釐清訊息處理上的 WS-Addressing 需求。  
   
  在本章節中，要求者會傳送第一個訊息，而回應程式將會接收第一個訊息。  
   
 #### <a name="one-way-message"></a>單向訊息  
- 當 WCF 端點設定為支援訊息與給定`Action`採用單向模式時，WCF 端點便會遵循下列行為和需求。 除非另行指定，則行為和規則將套用這兩個版本的 Ws-addressing WCF 中支援：  
+ 當設定為支援訊息的 WCF 端點指定`Action`遵循單向模式，WCF 端點會遵循下列行為和需求。 除非另有指定，則行為和規則將套用這兩個版本的 Ws-addressing 在 WCF 中支援：  
   
 -   R3311：要求者必須加入由端點參考指定的 `wsa:To`、`wsa:Action` 和所有參考參數的標頭。 在使用了 WS-Addressing 2004/08，並且以端點參考指定 [reference properties] 時，也必須在訊息內加入對應的標頭。  
   
@@ -188,15 +188,15 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 -   B3314: WCF 回應程式不會在回應單向訊息傳送的錯誤訊息。  
   
 #### <a name="request-reply"></a>要求-回覆  
- 當 WCF 端點設定的訊息指定`Action`採用要求-回覆模式時，WCF 端點便會遵循行為和需求。 除非另行指定，則行為和規則將套用這兩個版本的 Ws-addressing WCF 中支援：  
+ 當設定的 WCF 端點的訊息指定`Action`遵循要求-回覆模式，WCF 結束點前面接行為和需求。 除非另有指定，則行為和規則將套用這兩個版本的 Ws-addressing 在 WCF 中支援：  
   
 -   R3321： 要求者必須在要求中包含`wsa:To`， `wsa:Action`， `wsa:MessageID`，和所有參考參數或參考屬性 （或兩者） 的端點參照所指定的標頭。  
   
 -   R3322：使用 WS-Addressing 2004/08 時，`ReplyTo` 也必須包含在要求中。  
   
--   R3323： 使用 Ws-addressing 1.0 時和`ReplyTo`不存在於要求時，[address] 屬性等於預設端點參考 」http://www.w3.org/2005/08/addressing/anonymous"使用。  
+-   R3323： 使用 Ws-addressing 1.0 時，`ReplyTo`不存在於要求中，使用等於 [address] 屬性的預設端點參考"http://www.w3.org/2005/08/addressing/anonymous」 會使用。  
   
--   R3324： 要求者必須加入`wsa:To`， `wsa:Action`，和`wsa:RelatesTo`在回覆訊息中的標頭，以及所有的參考參數或參考屬性 （或兩者） 所指定的標頭`ReplyTo`端點參考要求。  
+-   R3324： 要求者必須包含`wsa:To`， `wsa:Action`，並`wsa:RelatesTo`回覆訊息中的標頭，以及所有的參考參數或參考屬性 （或兩者） 所指定的標頭`ReplyTo`中的端點參考要求。  
   
 ### <a name="web-services-addressing-faults"></a>Web 服務定址錯誤  
  R3411: WCF 會產生下列由 Ws-addressing 2004/08 定義的錯誤。  
@@ -210,7 +210,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
 |程式碼|原因|  
 |----------|-----------|  
-|wsa10:InvalidAddressingHeader|重複的`wsa:To`， `wsa:ReplyTo`，`wsa:From`或`wsa:MessageID`。 重複的`wsa:RelatesTo`具有相同`RelationshipType`。|  
+|wsa10:InvalidAddressingHeader|重複`wsa:To`， `wsa:ReplyTo`，`wsa:From`或`wsa:MessageID`。 重複`wsa:RelatesTo`具有相同`RelationshipType`。|  
 |wsa10:MessageAddressingHeaderRequired|所需的定址標頭遺失。|  
 |wsa10:DestinationUnreachable|以 `ReplyTo` 到達的訊息，其回覆位址與為此通道所建立的不同。 而且沒有端點可在 To 標頭內指定的位址上進行接聽。|  
 |wsa10:ActionNotSupported|在 `Action` 標頭內指定的動作，不會由基礎結構通道或與端點關聯的發送器進行辨識。|  
@@ -221,7 +221,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 ### <a name="wsdl-11-binding-and-ws-policy-assertions"></a>WSDL 1.1 繫結和 WS-Policy 判斷提示  
   
 #### <a name="indicating-use-of-ws-addressing"></a>指出使用了 WS-Addressing  
- WCF 使用原則判斷提示來指出端點的 Ws-addressing 的特定版本的支援。  
+ WCF 會使用原則判斷提示來指出端點支援特定之 Ws-addressing 版本。  
   
  下列原則判斷提示具有端點原則主體 [WS-PA]，並指出必須使用 WS-Addressing 2004/08，從端點傳送及接收訊息。  
   
@@ -265,7 +265,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
  不過，有一些訊息交換模式可從要求者和回應程式之間所建立的兩個獨立反向 HTTP 連線中獲益，例如，由回應程式所傳送之未經要求的單向訊息。  
   
- WCF 提供的功能，這兩個基礎傳輸通道可用以構成複合雙工通道，其中一個通道用於輸入訊息，而其他則用於輸出訊息。 在使用 HTTP 傳輸的情況下，複合雙工提供了兩種反向的 HTTP 連線。 要求者會使用其中一個連線傳送訊息給回應程式，而回應程式則使用另一個連線將訊息傳回給要求者。  
+ WCF 提供的兩個基礎傳輸通道可用以構成複合雙工通道，其中一個通道用於輸入訊息，而其他則用於輸出訊息的功能。 在使用 HTTP 傳輸的情況下，複合雙工提供了兩種反向的 HTTP 連線。 要求者會使用其中一個連線傳送訊息給回應程式，而回應程式則使用另一個連線將訊息傳回給要求者。  
   
  若為透過個別 HTTP 要求傳送的回覆，WS-AM 判斷提示為：  
   
@@ -291,11 +291,11 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
  上一個陳述式會導致在要求訊息的 `wsa:ReplyTo` 標頭上，必須有以下需求：  
   
--   R3514： 要求傳送至端點的訊息必須要有`ReplyTo`具有標頭`[address]`屬性不等於"http://www.w3.org/2005/08/addressing/anonymous"如果端點使用 WSDL 1.1 SOAP 1.x HTTP 繫結，並有替代的原則`wsap10:UsingAddressing`或`wsap:UsingAddressing`判斷提示搭配`cdp:CompositeDuplex`附加。  
+-   R3514： 要求傳送至端點的訊息必須要有`ReplyTo`標頭`[address]`屬性不等於 」 http://www.w3.org/2005/08/addressing/anonymous「 如果端點使用 WSDL 1.1 SOAP 1.x HTTP 繫結，並有替代的原則`wsap10:UsingAddressing`或`wsap:UsingAddressing`判斷提示搭配`cdp:CompositeDuplex`附加。  
   
--   R3515： 要求傳送至端點的訊息必須要有`ReplyTo`具有標頭`[address]`屬性等於"http://www.w3.org/2005/08/addressing/anonymous"，或沒有`ReplyTo`all、 如果端點使用 WSDL 1.1 SOAP 1.x HTTP 繫結，並有原則替代的標頭與`wsap10:UsingAddressing`判斷提示，且沒有`cdp:CompositeDuplex`附加的判斷提示。  
+-   R3515： 要求傳送至端點的訊息必須要有`ReplyTo`標頭`[address]`屬性等於"http://www.w3.org/2005/08/addressing/anonymous"，或沒有`ReplyTo`標頭中，如果端點使用 WSDL 1.1 SOAP 1.x HTTP 繫結，並有替代的原則具有`wsap10:UsingAddressing`判斷提示，但沒有`cdp:CompositeDuplex`附加的判斷提示。  
   
--   R3516： 要求傳送至端點的訊息必須要有`ReplyTo`具有標頭`[address]`屬性等於"http://www.w3.org/2005/08/addressing/anonymous"如果端點使用 WSDL 1.1 SOAP 1.x HTTP 繫結，並有替代的原則`wsap:UsingAddressing`判斷提示，以及任何`cdp:CompositeDuplex`附加的判斷提示。  
+-   R3516： 要求傳送至端點的訊息必須要有`ReplyTo`標頭`[address]`屬性等於"http://www.w3.org/2005/08/addressing/anonymous「 如果端點使用 WSDL 1.1 SOAP 1.x HTTP 繫結，並有替代的原則`wsap:UsingAddressing`判斷提示，而且沒有`cdp:CompositeDuplex`連結的判斷提示。  
   
  WS-Addressing WSDL 規格會試圖描述類似的通訊協定繫結，藉由引入具有三種文字值 (必要項、選擇性和禁止) 的 `<wsaw:Anonymous/>` 項目，指出`wsa:ReplyTo` 標頭 (第 3.2 節) 上的需求。 不巧的是，此類項目定義並無法特別當做 WS-Policy 內容的判斷提示使用，因為它需要網域專屬的延伸，以支援其他使用此類項目做為判斷提示的交集。 此類項目定義也指出了 `ReplyTo` 標頭的值，而非網路上的端點行為，如此將使其成為 HTTP 傳輸專屬的定義。  
   
@@ -304,22 +304,22 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
  兩者間的不同處就只是預設的動作模式語意，這些部分分別在 WS-ADDR 的第 3.3.2 節和 WS-ADDR10-WSDL 的第 4.4.4 節中描述。  
   
- 是具有兩個端點共用相同的合理`portType`（或合約，在 WCF 術語） 但會使用不同的 Ws-addressing 版本。 但考慮到該動作是由 `portType` 所定義，不應在實作 `portType` 的端點上變更，如此將難以支援兩種預設的動作模式。  
+ 很合理，有兩個端點共用相同`portType`（或合約，在 WCF 術語中），但使用不同的 Ws-addressing 版本。 但考慮到該動作是由 `portType` 所定義，不應在實作 `portType` 的端點上變更，如此將難以支援兩種預設的動作模式。  
   
  若要解決這個爭論，WCF 支援的單一版本`Action`屬性。  
   
- B3521: WCF 使用`wsaw10:Action`屬性`wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]`元素，若要判斷 WS-ADDR10-WSDL 中定義`Action`URI 對應的訊息，不論端點所使用的 Ws-addressing 版本。  
+ B3521: WCF 會使用`wsaw10:Action`屬性`wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]`若要判斷 WS-ADDR10-WSDL 中定義的項目`Action`URI 對應的訊息，不論端點所使用的 Ws-addressing 版本。  
   
 #### <a name="use-endpoint-reference-inside-wsdl-port"></a>使用 WSDL 連接埠內部的端點參考  
- WS-ADDR10-WSDL 第 4.1 節將 `wsdl:port` 元素延伸為包含 `<wsa10:EndpointReference…/>` 子元素，以便使用 WS-Addressing 的詞彙描述端點。 WCF 擴充的 Ws-addressing 2004/08 時，此公用程式允許`<wsa:EndpointReference…/>`顯示為的子元素`wsdl:port`。  
+ WS-ADDR10-WSDL 第 4.1 節將 `wsdl:port` 元素延伸為包含 `<wsa10:EndpointReference…/>` 子元素，以便使用 WS-Addressing 的詞彙描述端點。 WCF 擴充上 Ws-addressing 2004/08，此公用程式可讓`<wsa:EndpointReference…/>`顯示為子項目`wsdl:port`。  
   
 -   R3531：如果端點含有以 `<wsaw10:UsingAddressing/>`原則判斷提示取代之附加原則，則對應的 `wsdl:port` 項目可以包含一個子項目 `<wsa10:EndpointReference …/>`。  
   
--   R3532： 如果`wsdl:port`包含子元素`<wsa10:EndpointReference …/>`、`wsa10:EndpointReference/wsa10:Address`子項目值必須符合的值`@address`屬性的同層級`wsdl:port` / `wsdl:location`項目。  
+-   R3532： 如果`wsdl:port`包含子元素`<wsa10:EndpointReference …/>`，則`wsa10:EndpointReference/wsa10:Address`子項目值必須符合的值`@address`屬性的同層級`wsdl:port` / `wsdl:location`項目。  
   
 -   R3533：如果端點含有以 `<wsap:UsingAddressing/>` 原則判斷提示替代的附加原則，則對應的 `wsdl:port` 項目可以包含子項目 `<wsa:EndpointReference …/>`。  
   
--   R3534： 如果`wsdl:port`包含子元素`<wsa:EndpointReference …/>`、`wsa:EndpointReference/wsa:Address`子項目值必須符合的值`@address`屬性的同層級`wsdl:port` / `wsdl:location`項目。  
+-   R3534： 如果`wsdl:port`包含子元素`<wsa:EndpointReference …/>`，則`wsa:EndpointReference/wsa:Address`子項目值必須符合的值`@address`屬性的同層級`wsdl:port` / `wsdl:location`項目。  
   
 ### <a name="composition-with-ws-security"></a>與 WS-Security 組合  
  根據 WS-ADDR 和 WS-ADDR10 的安全性考量章節，建議將所有定址訊息標頭與訊息本文一起簽署，以將其繫結在一起。  
@@ -376,7 +376,7 @@ Content-Length: 0
 ```  
   
 ## <a name="soap-message-transmission-optimization-mechanism"></a>SOAP 訊息傳輸最佳化機制  
- 本章節將描述 HTTP SOAP MTOM 的 WCF 實作詳細資料。 MTOM 技術是類別的傳統的 text/XML 編碼或 WCF 二進位編碼相同的 SOAP 訊息編碼機制。 MTOM 包含下列各項：  
+ 本節會說明 HTTP SOAP MTOM 的 WCF 實作詳細資料。 MTOM 技術是類別的相同為傳統的 text/XML 編碼或 WCF 二進位編碼的 SOAP 訊息編碼機制。 MTOM 包含下列各項：  
   
 -   由 [XOP] 描述的 XML 編碼和封裝機制，會將 XML 資訊項目最佳化，將包含了以 Base64 編碼的二進位資料分割為不同的二進位部分。  
   
@@ -386,7 +386,7 @@ Content-Length: 0
   
 -   HTTP 傳輸繫結。  
   
- 您可搭配使用 WCF 非 HTTP 傳輸的 MTOM。 不過，在本主題中，我們將專注在 HTTP 上。  
+ 可以搭配使用 WCF 非 HTTP 傳輸的 MTOM。 不過，在本主題中，我們將專注在 HTTP 上。  
   
  MTOM 格式利用了大量的規格集，其中涵蓋了 MTOM 本身、XOP 和 MIME。 此規格集的模組化使其稍微難以重新建構格式及處理語意的正確需求。 本節將描述 MTOM HTTP 繫結的格式和處理需求。  
   
@@ -397,11 +397,11 @@ Content-Length: 0
   
  下列步驟的順序即描述了 MTOM 專屬的編碼程序：  
   
-1.  確定 SOAP 封套已編碼包含沒有項目資訊項目`[namespace name]`的"http://www.w3.org/2004/08/xop/include"和`[local name]`的`Include`。  
+1.  確定 SOAP 封套已編碼包含任何項目資訊項目`[namespace name]`的 「 http://www.w3.org/2004/08/xop/include"，`[local name]`的`Include`。  
   
 2.  建立空白的 MIME 封裝。  
   
-3.  識別原始 XML Infoset 內要進行最佳化的項目資訊項目。 對於要進行最佳化的項目，項目資訊項目標記為 `[children]` 的字元必須採用 `xs:base64Binary` 的標準格式 (請參閱 XSD-2、3.2.16 base64Binary)，並且在非空白字元內容之前、中間或之後，都不能有任何空白字元。  
+3.  識別原始 XML Infoset 內要進行最佳化的項目資訊項目。 要進行最佳化的項目，如字元組成`[children]`的項目資訊項目必須是中的標準格式`xs:base64Binary`(請參閱 xsd-2、 3.2.16 base64Binary)，且不得包含任何空格字元，前面的內嵌，或下列非空白字元內容。  
   
 4.  建立 XOP SOAP 封套 (為原始 SOAP 封套的複本)，但具有在先前步驟中以 `xop:Include` 項目資訊項目建構取代而識別的每個項目資訊項目，如下所示：  
   
@@ -415,7 +415,7 @@ Content-Length: 0
   
     5.  產生新的二進位 MIME 部分，具有採用二進位資料形式之內容，這些資料是從處理為 Base64 的取代字元解碼而來、來自 4b 的 Content-ID 標頭、來自 4c 的 Content- Transfer-Encoding 標頭、若在步驟 4d 產生則為 Content-Type 標頭。  
   
-    6.  將 `href` 屬性加入至 `xop:Include` 項目，該項目具有 cid: uri 值，衍生自步驟 4b 中產生的 Content-ID 標頭值。 移除封閉"\<"和">"字元、 URL 逸出的剩餘字串，並加入前置詞`cid:`。 下列最小字元集為 RFC1738 和 RFC2396 逸出所需。 其他可以逸出的字元。  
+    6.  將 `href` 屬性加入至 `xop:Include` 項目，該項目具有 cid: uri 值，衍生自步驟 4b 中產生的 Content-ID 標頭值。 移除封閉 」\<"和">"字元、 URL 逸出的剩餘字串，並加上前置詞`cid:`。 下列最小字元集為 RFC1738 和 RFC2396 逸出所需。 其他可以逸出的字元。  
   
         ```  
         Hexadecimal 00-1F , 7F, 20, "<" | ">" | "#" | "%" | <">  
@@ -444,7 +444,7 @@ Content-Length: 0
     3.  取代 `xop:Include` 項目資訊項目，它出現在每個項目的 `children` 屬性中，具有代表標準 Base64 編碼的字元資訊項目 (請參閱 XSD-2、3.2.16 base64Binary)，這些項目是步驟 3b 內識別的 MIME 部分之實體主體 (實際上以從封裝部分重新建構的資料取代 `xop:Include` 項目資訊項目)。  
   
 #### <a name="http-content-type-header"></a>HTTP Content-Type 標頭  
- 下列是 WCF 說明 SOAP 1.x MTOM 編碼訊息的衍生自 MTOM 規格本身內的 HTTP Content-type 標頭格式的清單，以及衍生自 MTOM 和 RFC 2387。  
+ 下列是 WCF 釐清以 SOAP 1.x MTOM 編碼之訊息衍生自 MTOM 規格本身所述需求的 HTTP Content-type 標頭格式的清單，並衍生自 MTOM 和 RFC 2387。  
   
 -   R4131：HTTP Content-Type 標頭必須具有多重/相關 (區分大小寫) 的值，以及其參數。 參數名稱是區分大小寫的。 參數的順序並不重要。  
   
@@ -452,7 +452,7 @@ Content-Length: 0
   
 -   R4132：HTTP Content-Type 標頭必須具有含 `application/xop+xml` 值的型別參數，以雙引號括住。  
   
- 雖然使用雙引號不是在 RFC 2387 中明確陳述，文字會遵守多重/相關媒體型別參數的最可能會包含保留的字元，例如"\@"或"/"，因此需要使用雙引號標記。  
+ 雖然不是在 RFC 2387 中明確的需求使用雙引號，文字會遵守多重/相關媒體型別參數的所有最有可能包含保留的字元，例如 「\@"或"/"，因此需要雙引號標記。  
   
 -   R4133：HTTP Content-Type 標頭應該具有起始參數，其中具有包含 SOAP 1.x 封套之 MIME 部分的 Content-ID 標頭值，以雙引號括住。 如果省略了起始參數，則第一個 MIME 部分必須包含 SOAP 1.x 封套。  
   
@@ -508,11 +508,11 @@ Content-Length: 0
 msg-id    =       [CFWS] "<" id-left "@" id-right ">" [CFWS]  
 ```  
   
- 和都有效的電子郵件地址住"\<"和">"。 RFC 2822 內加入了 `[CFWS]` 前置和後置字元，用以帶出註解，且不應用於保留互通性。  
+ 有效的電子郵件地址括住並 「\<"和">"。 RFC 2822 內加入了 `[CFWS]` 前置和後置字元，用以帶出註解，且不應用於保留互通性。  
   
  R4143：Infoset MIME 部分的 Content-ID 標頭值必須遵守 RFC 2822 實際執行的 `msg-id`，其中省略了 `[CFWS]` 前置和後置字元部分。  
   
- 許多 MIME 實作嚴謹需求住值"\<"和">"是電子郵件地址並用`absoluteURI`括住"\<"，">"除了電子郵件地址。 這個版本的 WCF 使用表單的 CONTENT-ID MIME 標頭的值：  
+ 許多 MIME 實作放寬需求括住的值"\<"和">"電子郵件地址，並用`absoluteURI`括住"\<"，">"除了電子郵件地址。 這個版本的 WCF 會使用表單的 CONTENT-ID MIME 標頭的值：  
   
 ```  
 Content-ID: <http://tempuri.org/0>   
@@ -535,14 +535,14 @@ mail-address   =     id-left "@" id-right
   
 -   根據 [XOP] 第 5 節，  
   
--   R4148: SOAP1.1 Infoset 部分必須包含 Content-type 標頭與媒體類型的應用程式/xop + xml，且參數類型 ="text/xml"和字元集  
+-   R4148: SOAP1.1 Infoset 部分必須包含 Content-type 標頭的媒體類型 application/xop + xml，且參數類型 ="text/xml"和字元集  
   
     ```  
     Content-Type: application/xop+xml;  
                   charset=utf-8;type="text/xml"  
     ```  
   
--   R4149: SOAP 1.2 Infoset 部分必須包含 Content-type 標頭與媒體類型`application/xop+xml`且參數類型 ="`application/soap+xml`"和`charset`。  
+-   R4149: SOAP 1.2 Infoset 部分必須包含媒體類型的內容類型標頭`application/xop+xml`且參數類型 ="`application/soap+xml`"和`charset`。  
   
     ```  
     Content-Type: application/xop+xml;  
@@ -558,9 +558,9 @@ mail-address   =     id-left "@" id-right
   
 -   R4151：任何包含 Base64 編碼資料的項目資訊項目可能都已進行了最佳化。  
   
--   B4152: WCF 最佳化項目資訊項目包含 base64 編碼資料，且超過 1024 個位元組的長度。  
+-   B4152: WCF 最佳化項目資訊項目，其中包含 base64 編碼的資料，並能超過 1024 個位元組的長度。  
   
- 設定為使用 MTOM 的 WCF 端點仍會一律傳送 MTOM 編碼訊息。 即使沒有任何部分滿足所要求的準則，訊息仍舊會以 MTOM 編碼 (序列化為 MIME 封裝，其中具有含 SOAP 封套的單一 MIME 部分)。  
+ 設定為使用 MTOM 的 WCF 端點仍會一律傳送 MTOM 編碼的訊息。 即使沒有任何部分滿足所要求的準則，訊息仍舊會以 MTOM 編碼 (序列化為 MIME 封裝，其中具有含 SOAP 封套的單一 MIME 部分)。  
   
 ### <a name="ws-policy-assertion-for-mtom"></a>MTOM 的 WS-Policy 判斷提示  
  WCF 會使用下列原則判斷提示，指出 MTOM 使用量端點：  
@@ -574,7 +574,7 @@ mail-address   =     id-left "@" id-right
 -   B4212： 當設定為使用 MTOM 最佳化時，WCF 端點將 MTOM 原則判斷提示附加至對應的原則`wsdl:binding`。  
   
 ### <a name="composition-with-ws-security"></a>與 WS-Security 組合  
- MTOM 是一種編碼機制，類似於`text/xml`和 WCF 二進位 XML。 MTOM 可與 WS-Security 和其他 WS-* 通訊協定自然組合：使用 MTOM，可以使 WS-Security 保護的訊息最佳化。  
+ MTOM 是類似於編碼機制`text/xml`和 WCF 二進位 XML。 MTOM 可與 WS-Security 和其他 WS-* 通訊協定自然組合：使用 MTOM，可以使 WS-Security 保護的訊息最佳化。  
   
 ### <a name="examples"></a>範例  
   
@@ -612,7 +612,7 @@ Content-Type: application/octet-stream
 ```  
   
 #### <a name="wcf-secure-soap-12-message-encoded-using-mtom"></a>使用 MTOM 對 WCF Secure SOAP 1.2 訊息進行編碼  
- 在此範例中，訊息是以 MTOM 和 SOAP 1.2 進行編碼，並使用 WS-Security 予以保護。 用於識別編碼的二進位部分是 `BinarySecurityToken`的內容，以及對應於已加密簽章和已加密主體之 `CipherValue` 的 `EncryptedData`。 請注意，`CipherValue`的`EncryptedKey`未識別最佳化由 WCF，因為其長度小於 1024 位元組。  
+ 在此範例中，訊息是以 MTOM 和 SOAP 1.2 進行編碼，並使用 WS-Security 予以保護。 用於識別編碼的二進位部分是 `BinarySecurityToken`的內容，以及對應於已加密簽章和已加密主體之 `CipherValue` 的 `EncryptedData`。 請注意，`CipherValue`的`EncryptedKey`無法識別最佳化 wcf，因為其長度小於 1024 位元組。  
   
 ```  
 POST http://131.107.72.15/Mtom/service.svc/Soap12MtomSecureSignEncrypt HTTP/1.1  

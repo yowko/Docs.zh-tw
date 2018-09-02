@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: a2815c7c63e9ba9615904028081956b138b1befa
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: cc81e7ad45c308f5ecf476641dfd65fe47b36098
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925474"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404563"
 ---
 # <a name="endpoint-addresses"></a>端點位址
 每個端點都有與其相關聯的位址，以便用來找出並識別端點。 這個位址主要包含一個可指定端點位置的統一資源識別元 (URI)。 在由 Windows Communication Foundation (WCF) 程式設計模型中表示端點位址<xref:System.ServiceModel.EndpointAddress>類別，其中包含選擇性<xref:System.ServiceModel.EndpointAddress.Identity%2A>屬性可讓其他端點之端點的驗證，交換訊息，以及一組選擇性的<xref:System.ServiceModel.EndpointAddress.Headers%2A>屬性，定義取用服務時所需任何其他 SOAP 標頭。 選擇性標頭會提供額外與更詳細的定址資訊，以便識別端點或與服務端點互動。 端點位址會在網路上表示為 WS-Addressing 端點參考 (EPR)。  
   
 ## <a name="uri-structure-of-an-address"></a>位址的 URI 結構  
- 大部分傳輸的位址 URI 具有四個部分。 例如，URI 的四個部分http://www.fabrikam.com:322/mathservice.svc/secureEndpoint可以分項列出，如下所示：  
+ 大部分傳輸的位址 URI 具有四個部分。 例如，URI 的四個部分 http://www.fabrikam.com:322/mathservice.svc/secureEndpoint可以分項列出，如下所示：  
   
 -   配置：http:  
   
@@ -75,7 +75,7 @@ ms.locfileid: "42925474"
 </system.serviceModel>  
 ```  
   
- 在上述範例中，//payroll.myorg.com: 8000 和http://shipping.myorg.com:8000會的唯一基底位址，對於其各自的結構描述，都會通過。  
+ 在上述範例中，//payroll.myorg.com: 8000 和 http://shipping.myorg.com:8000會的唯一基底位址，對於其各自的結構描述，都會通過。  
   
  `baseAddressPrefixFilter` 不支援萬用字元。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "42925474"
   
 -   在程式碼中，可以使用 <xref:System.ServiceModel.Channels.AddressHeader> 類別來建立自訂位址標頭，然後用來建構 <xref:System.ServiceModel.EndpointAddress>。  
   
--   在組態中，自訂[\<標頭 >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)指定為的子系[\<端點 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)項目。  
+-   在組態中，自訂[\<標頭 >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)指定為的子系[\<端點 >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)項目。  
   
  與程式碼相較之下，建議您使用組態，因為程式碼可讓您在部署後變更標頭。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "42925474"
   
 -   在程式碼中，可以將 <xref:System.ServiceModel.Description.ClientViaBehavior> 類別新增至端點的行為集合中，以指定自訂接聽位址。  
   
--   在組態中，指定 使用自訂接聽位址`ListenUri`的服務屬性[\<端點 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)項目。  
+-   在組態中，指定 使用自訂接聽位址`ListenUri`的服務屬性[\<端點 >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)項目。  
   
 ### <a name="custom-soap-address-filter"></a>自訂 SOAP 位址篩選條件  
  <xref:System.ServiceModel.EndpointAddress.Uri%2A> 可以與任何 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 屬性搭配使用，以定義端點的 SOAP 位址篩選條件 (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>)。 根據預設，這項篩選條件會確認傳入訊息所包含的 `To` 訊息標頭符合端點 URI，而且所有必要的端點標頭都出現在訊息中。  

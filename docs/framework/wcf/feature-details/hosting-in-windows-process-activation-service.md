@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: 5cd2244c4b44592e436dfd983985dca3c1a50144
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0fe38b690d093e5a0bbe90d2b62e56b5d0cb4816
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492443"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417395"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>在 Windows Process Activation Service 中裝載
-Windows Process Activation Service (WAS) 管理啟用和包含該主機的 Windows Communication Foundation (WCF) 服務的應用程式的工作者處理序的存留期。 WAS 處理序模型會藉由移除 HTTP 上的相依性，將 HTTP 伺服器的 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 處理序模型一般化。 這可讓 WCF 服務使用 HTTP 和非 HTTP 通訊協定，例如 Net.TCP，可支援訊息型啟用，並提供裝載大量給定機器上的應用程式之能力的裝載環境中。  
+Windows Process Activation Service (WAS) 管理啟動和包含該主機的 Windows Communication Foundation (WCF) 服務的應用程式的工作者處理序的存留期。 WAS 處理序模型會藉由移除 HTTP 上的相依性，將 HTTP 伺服器的 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 處理序模型一般化。 這可讓 WCF 服務使用 HTTP 和非 HTTP 通訊協定，例如 Net.TCP，請在裝載環境中支援訊息型啟用，並可讓您裝載大量應用程式，在指定電腦上。  
   
- WAS 裝載環境中執行建置的 WCF 服務的相關詳細資訊，請參閱[How to： 將 WCF 服務裝載於 WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)。  
+ 如在 WAS 裝載環境中，執行建置 WCF 服務的詳細資訊，請參閱 <<c0> [ 如何： 將 WCF 服務裝載於 WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)。  
   
  WAS 處理序模型提供的幾項功能，可將應用程式裝載得更為穩固、容易管理，而且能夠更有效率地運用資源：  
   
@@ -26,14 +26,14 @@ Windows Process Activation Service (WAS) 管理啟用和包含該主機的 Windo
   
 -   可讓應用程式善用 IIS 處理序模型的優勢，而不需要部署完整的 IIS 安裝項目。  
   
- 如需 WAS 功能的詳細資訊，請參閱[IIS 7.0 Beta: IIS 7.0 Web 管理](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。  
+ 如需 WAS 功能的詳細資訊，請參閱 < [IIS 7.0 Beta: IIS 7.0 Web Administration](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。  
   
- [Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=196496)搭配[!INCLUDE[iisver](../../../../includes/iisver-md.md)]和 Windows Process Activation Service (WAS) 提供豐富的應用程式裝載環境為 NET4 WCF 和 WF 服務。 這些優點包括處理序生命週期管理、處理序回收、共用裝載、快速失敗保護、處理序損壞、隨選啟動和健康監視。 如需詳細資訊，請參閱[AppFabric 主控功能](http://go.microsoft.com/fwlink/?LinkId=196494)和[AppFabric 主控概念](http://go.microsoft.com/fwlink/?LinkId=196495)。  
+ [Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496)搭配[!INCLUDE[iisver](../../../../includes/iisver-md.md)]和 Windows Process Activation Service (WAS) 來提供豐富的應用程式裝載環境，為 NET4 WCF 和 WF 服務。 這些優點包括處理序生命週期管理、處理序回收、共用裝載、快速失敗保護、處理序損壞、隨選啟動和健康監視。 如需詳細資訊，請參閱 < [AppFabric 主控功能](https://go.microsoft.com/fwlink/?LinkId=196494)並[AppFabric 主控概念](https://go.microsoft.com/fwlink/?LinkId=196495)。  
   
 ## <a name="elements-of-the-was-addressing-model"></a>WAS 定址模型項目  
- 包含統一資源識別元 (URI) 位址的應用程式，這些程式碼單元會經由伺服器來管理自身的存留期和執行環境。 單一 WAS 伺服器執行個體可以裝載許多不同的應用程式。 伺服器組織成群組呼叫的應用程式*網站*。 同一個網站中的應用程式會依階層架構順序加以排列，以反映做為應用程式外部位址使用的 URI 結構。  
+ 包含統一資源識別元 (URI) 位址的應用程式，這些程式碼單元會經由伺服器來管理自身的存留期和執行環境。 單一 WAS 伺服器執行個體可以裝載許多不同的應用程式。 伺服器會組織成群組呼叫的應用程式*站台*。 同一個網站中的應用程式會依階層架構順序加以排列，以反映做為應用程式外部位址使用的 URI 結構。  
   
- 應用程式位址包含兩個部分：基底 URI 前置詞和應用程式專屬的相對位址 (路徑)，兩者混合使用時，可以提供應用程式的外部位址。 基底 URI 前置詞是根據網站繫結所建構，並且用於該網站中的所有應用程式。 然後會由特定應用程式的路徑片段建構應用程式位址 (例如，"/ /applicationone") 並將它們附加至基底 URI 前置詞 (例如，"net.tcp: //localhost") 以完整應用程式的 URI。  
+ 應用程式位址包含兩個部分：基底 URI 前置詞和應用程式專屬的相對位址 (路徑)，兩者混合使用時，可以提供應用程式的外部位址。 基底 URI 前置詞是根據網站繫結所建構，並且用於該網站中的所有應用程式。 然後應用程式專屬的路徑片段建構應用程式位址 (例如，"/ /applicationone") 並將它們附加至基底 URI 前置詞 (例如"net.tcp: //localhost") 以完整的應用程式 URI。  
   
  下表針對 WAS 網站 (包含 HTTP 和非 HTTP 網站繫結) 說明幾個可能的定址案例。  
   
@@ -56,4 +56,4 @@ net.tcp://contoso.com/Billing/GetOrders.svc/SecureEndpoint
  [設定用於 WCF 的 WAS](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
  [如何：安裝和設定 WCF 啟用元件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)  
  [如何：在 WAS 中裝載 WCF 服務](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)  
- [Windows Server App Fabric 裝載功能](http://go.microsoft.com/fwlink/?LinkId=201276)
+ [Windows Server App Fabric 主控功能](https://go.microsoft.com/fwlink/?LinkId=201276)

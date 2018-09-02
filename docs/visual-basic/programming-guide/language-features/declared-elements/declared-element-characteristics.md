@@ -13,43 +13,43 @@ helpviewer_keywords:
 - data types [Visual Basic], declared elements
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-ms.openlocfilehash: 26c9ec247a0b848d46df063bc7b85ceec30d81c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27dad8b2fbfbc8d17090df201bf36eb080966f51
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650890"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407369"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>宣告項目特性 (Visual Basic)
-A*特性*宣告的項目是會影響程式碼可以使用了該項目的外觀。 每個宣告的項目有一或多個與它相關的下列特性：  
+A*特性*的宣告的項目是如何與其互動的程式碼會影響該元素的層面。 每個宣告的項目有一或多個與它相關的下列特性：  
   
--   *資料型別*— 項目可以保留的值，以及如何儲存這些值。 如需詳細資訊，請參閱[資料型別](../../../../visual-basic/language-reference/data-types/data-type-summary.md)。  
+-   *資料型別*-項目可以保留的值，以及它如何儲存這些值。 如需詳細資訊，請參閱[資料類型](../../../../visual-basic/language-reference/data-types/index.md)。  
   
--   *存留期*— 這段期間的項目是可供使用的執行時間。 如需詳細資訊，請參閱[在 Visual Basic 中的存留期](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)。  
+-   *存留期*— 這段期間執行期間的項目是可供使用。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Basic 中的存留期](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)。  
   
--   *範圍*— 可以參考項目而不需要限定其名稱的所有程式碼。 如需詳細資訊，請參閱[如何： 控制變數的範圍](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)。  
+-   *範圍*— 可以參考的項目未限定其名稱的所有程式碼的集合。 如需詳細資訊，請參閱 <<c0> [ 如何： 控制變數的範圍](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)。  
   
--   *存取層級*： 進行程式碼的權限的項目使用。 如需詳細資訊，請參閱[如何： 控制變數的可用性](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)。  
+-   *存取層級*— 進行程式碼的權限使用的項目。 如需詳細資訊，請參閱 <<c0> [ 如何： 控制變數的可用性](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)。  
   
 ## <a name="characteristics-of-the-elements"></a>項目特性  
- 下表顯示宣告的項目，並套用至每一個的特性。  
+ 下表顯示宣告的項目並套用至每一個的特性。  
   
-|項目|資料類型|存留期|範圍<sup>1</sup>|存取層級|  
+|元素|資料類型|存留期|範圍<sup>1</sup>|存取層級|  
 |-------------|---------------|--------------|------------------------|------------------|  
-|變數|[是]|是|是|[是]|  
-|常數|[是]|否|是|[是]|  
-|列舉|[是]|否|是|[是]|  
-|結構|否|否|是|[是]|  
-|屬性|[是]|是|是|[是]|  
-|方法|否|是|是|[是]|  
-|程序 (`Sub`或`Function`)|否|是|是|[是]|  
-|程序參數|[是]|是|是|否|  
-|函式傳回|[是]|是|是|否|  
-|運算子|[是]|否|是|[是]|  
-|介面|否|否|是|[是]|  
-|類別|否|否|是|[是]|  
-|Event - 事件|否|否|是|[是]|  
-|Delegate - 委派|否|否|是|[是]|  
+|變數|是|是|是|是|  
+|常數|是|否|是|是|  
+|列舉|是|否|是|是|  
+|結構|否|否|是|是|  
+|屬性|是|是|是|是|  
+|方法|否|是|是|是|  
+|程序 (`Sub`或`Function`)|否|是|是|是|  
+|程序參數|是|是|是|否|  
+|函式傳回|是|是|是|否|  
+|運算子|是|否|是|是|  
+|介面|否|否|是|是|  
+|類別|否|否|是|是|  
+|Event - 事件|否|否|是|是|  
+|Delegate - 委派|否|否|是|是|  
   
  <sup>1</sup>範圍有時稱為*可視性*。  
   

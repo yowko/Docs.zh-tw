@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5de4388f4d3c4117ed71abd9741d2616638038d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 21a373b946c3ce9f4606e870ae10e23a63398bc9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397503"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406365"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>範例：動態程式設計疑難排解
 > [!NOTE]
->  本主題討論 .NET 原生開發人員預覽，這是發行前版本的軟體。 您可以從 [Microsoft Connect 網站](http://go.microsoft.com/fwlink/?LinkId=394611)下載預覽 (需要註冊)。  
+>  本主題討論 .NET 原生開發人員預覽，這是發行前版本的軟體。 您可以從 [Microsoft Connect 網站](https://go.microsoft.com/fwlink/?LinkId=394611)下載預覽 (需要註冊)。  
   
  在使用 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具鏈開發的應用程式中，並非所有的中繼資料查閱失敗都會導致例外狀況。  有些中繼資料查閱失敗會在應用程式中以無法預期的方式顯露出來。  下列範例顯示因為參考 null 物件而造成的存取違規：  
   

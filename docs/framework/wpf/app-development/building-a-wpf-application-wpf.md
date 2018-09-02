@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 1bb092ed74a2c4c67be9a52d9cab25dc98520a01
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 89ceb39b08250bc400eed6ca8f8c24013446b453
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33549379"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417287"
 ---
 # <a name="building-a-wpf-application-wpf"></a>建置 WPF 應用程式 (WPF)
-Windows Presentation Foundation (WPF) 應用程式可以建置成[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]可執行檔 (.exe)、 程式庫 (.dll)，或是結合這兩種類型的組件。 本主題介紹如何建置 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式，並說明建置流程中的主要步驟。  
+Windows Presentation Foundation (WPF) 應用程式可以建置為[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]可執行檔 (.exe)、 程式庫 (.dll) 或這兩種類型的組件的組合。 本主題介紹如何建置 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式，並說明建置流程中的主要步驟。  
   
   
 <a name="Building_a_WPF_Application_using_Command_Line"></a>   
@@ -26,7 +26,7 @@ Windows Presentation Foundation (WPF) 應用程式可以建置成[!INCLUDE[dnprd
   
 -   Microsoft Build Engine (MSBuild)。 除了程式碼和 XAML 檔案，應用程式還必須包含 MSBuild 專案檔。 如需詳細資訊，請參閱＜MSBuild＞。  
   
--   Visual Studio。 Visual Studio 是整合式開發環境，可使用 MSBuild 編譯 WPF 應用程式，並包含用於建立 UI 的視覺化設計工具。 如需詳細資訊，請參閱 [Visual Studio 應用程式開發](http://msdn.microsoft.com/library/97490c1b-a247-41fb-8f2c-bc4c201eff68)和 [WPF 設計工具](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)。  
+-   Visual Studio。 Visual Studio 是整合式開發環境，可使用 MSBuild 編譯 WPF 應用程式，並包含用於建立 UI 的視覺化設計工具。 如需詳細資訊，請參閱 < [Visual Studio 中的應用程式開發](https://msdn.microsoft.com/library/97490c1b-a247-41fb-8f2c-bc4c201eff68)並[在 Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)。  
   
 <a name="The_Windows_Presentation_Foundation_Build_Pipeline"></a>   
 ## <a name="wpf-build-pipeline"></a>WPF 組建管線  
@@ -50,7 +50,7 @@ Windows Presentation Foundation (WPF) 應用程式可以建置成[!INCLUDE[dnprd
   
 <a name="Resolving_references"></a>   
 ### <a name="resolving-references"></a>解析參考  
- 建置流程會找出並繫結建置應用程式專案所需的組件。 此邏輯包含在 `ResolveAssemblyReference` 工作中。 在專案檔中宣告為 `Reference` 的所有組件會連同有關系統上已安裝組件之搜尋路徑和中繼資料的資訊，一起提供給工作。 此工作會尋找組件，然後使用已安裝組件的中繼資料，篩選出不需要顯示在輸出資訊清單中的核心 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 組件。 這樣做是為了避免在 ClickOnce 資訊清單中出現多餘的資訊。 例如，由於 PresentationFramework.dll 可以視為代表建置的應用程式和[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，而且因為所有[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]組件存在於已.NET Framework 之每部電腦上的相同位置安裝之後，沒有需要包含在資訊清單中的所有.NET Framework 參考組件上的所有資訊。  
+ 建置流程會找出並繫結建置應用程式專案所需的組件。 此邏輯包含在 `ResolveAssemblyReference` 工作中。 在專案檔中宣告為 `Reference` 的所有組件會連同有關系統上已安裝組件之搜尋路徑和中繼資料的資訊，一起提供給工作。 此工作會尋找組件，然後使用已安裝組件的中繼資料，篩選出不需要顯示在輸出資訊清單中的核心 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 組件。 這樣做是為了避免在 ClickOnce 資訊清單中出現多餘的資訊。 例如，由於 PresentationFramework.dll 可以視為代表建置的應用程式上，也可[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，而且因為[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]存在於.NET Framework 之每部電腦上的相同位置的組件安裝，則不需要包含資訊清單中的所有.NET Framework 參考組件上的所有資訊。  
   
 <a name="Markup_Compilation___Pass_1"></a>   
 ### <a name="markup-compilationpass-1"></a>標記編譯 - 第一階段  
@@ -64,9 +64,9 @@ Windows Presentation Foundation (WPF) 應用程式可以建置成[!INCLUDE[dnprd
   
 3.  建立新部分類別的 CodeDOM 表示，並複製到 obj\Release 資料夾。  
   
- 此外，每個 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案會產生特定語言的程式碼檔。 例如，對於 Visual Basic 專案中的 [Page1.xaml] 頁面上，就會產生 Page1.g.vb;針對 C# 專案中的 [Page1.xaml] 頁面上，都會產生 Page1.g.cs。 檔案名稱中的 ".g" 表示檔案是產生的程式碼，其具有標記檔案最上層項目 (例如 `Page` 或 `Window`) 的部分類別宣告。 這個類別的宣告與`partial`在 C# 修飾詞 (`Extends`在 Visual Basic 中) 若要表示另一個宣告的類別，其他地方，通常是程式碼後置檔案中 Page1.xaml.cs。  
+ 此外，每個 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案會產生特定語言的程式碼檔。 例如，在 Visual Basic 專案中的 Page1.xaml 頁面，就會產生 Page1.g.vb;C# 專案中的 Page1.xaml 頁面，就會產生 Page1.g.cs。 檔案名稱中的 ".g" 表示檔案是產生的程式碼，其具有標記檔案最上層項目 (例如 `Page` 或 `Window`) 的部分類別宣告。 類別以宣告`partial`C# 中的修飾詞 (`Extends` Visual Basic 中) 表示類別在其他地方的另一個宣告，通常是在程式碼後置檔案 page1.xaml.cs。  
   
- 部分類別擴充，從適當的基底類別 (例如<xref:System.Windows.Controls.Page>頁面)，並實作<xref:System.Windows.Markup.IComponentConnector?displayProperty=nameWithType>介面。 <xref:System.Windows.Markup.IComponentConnector>介面有方法可以初始化元件和連線名稱和其內容中的項目上的事件。 因此，產生的程式碼檔具有如下的方法實作：  
+ 部分類別擴充從適當的基底類別 (例如<xref:System.Windows.Controls.Page>頁面)，並會實作<xref:System.Windows.Markup.IComponentConnector?displayProperty=nameWithType>介面。 <xref:System.Windows.Markup.IComponentConnector>介面具有方法，以初始化元件，並連線名稱和其內容中的項目上的事件。 因此，產生的程式碼檔具有如下的方法實作：  
   
 ```csharp  
 public void InitializeComponent() {  
@@ -98,7 +98,7 @@ Public Sub InitializeComponent() _
 End Sub  
 ```  
   
- 根據預設，標記編譯會執行相同<xref:System.AppDomain>為[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]引擎。 這會大幅提升效能。 您可以使用 `AlwaysCompileMarkupFilesInSeparateDomain` 屬性來切換此行為。 這樣做的好處的卸載個別卸載所有參考組件<xref:System.AppDomain>。  
+ 根據預設，標記編譯執行所在的相同<xref:System.AppDomain>做為[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]引擎。 這會大幅提升效能。 您可以使用 `AlwaysCompileMarkupFilesInSeparateDomain` 屬性來切換此行為。 這樣做的好處，卸載所有參考組件，藉由卸載個別<xref:System.AppDomain>。  
   
 <a name="Pass_2_of_Markup_Compilation"></a>   
 ### <a name="markup-compilationpass-2"></a>標記編譯 - 第二階段  
@@ -124,7 +124,7 @@ End Sub
   
  若是 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]，一律會建立這些資訊清單檔。 若是已安裝的應用程式，除非將專案檔中的 `GenerateManifests` 屬性指定為 `true` 值，否則不會建立這些檔案。  
   
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 取得兩個額外的權限，除了一般網際網路區域應用程式來指派這些權限：<xref:System.Security.Permissions.WebBrowserPermission>和<xref:System.Security.Permissions.MediaPermission>。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 建置系統會在應用程式資訊清單中宣告這些權限。  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 取得兩個額外的權限，比那些指派給一般網際網路區域應用程式的權限：<xref:System.Security.Permissions.WebBrowserPermission>和<xref:System.Security.Permissions.MediaPermission>。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 建置系統會在應用程式資訊清單中宣告這些權限。  
   
 <a name="Incremental_Build_Support"></a>   
 ## <a name="incremental-build-support"></a>累加建置支援  
@@ -148,7 +148,7 @@ End Sub
   
     -   如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 在專案中宣告為 `Page`：如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 沒有本機定義的類型參考，請重新編譯該 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，再加上所有具有本機參考的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面；如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 有本機參考，請重新編譯所有具有本機參考的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面。  
   
-    -   如果[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]宣告為`ApplicationDefinition`專案中： 重新編譯所有[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]頁面 (原因： 每個[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]具有參考<xref:System.Windows.Application>可能已變更的類型)。  
+    -   如果[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]宣告為`ApplicationDefinition`專案中： 重新編譯所有[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]頁面 (原因： 每個[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]具有參考<xref:System.Windows.Application>可能已變更的型別)。  
   
 -   如果專案檔將程式碼檔宣告為應用程式定義，而不是 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案：  
   

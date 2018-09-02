@@ -5,11 +5,11 @@ helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
 ms.openlocfilehash: 96d54efbabbd95a24f1fb7118305ddbff4dfd110
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935402"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415820"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>逐步解說：使用 XAML 建立按鈕
 本逐步解說的目的是要了解如何在 Windows Presentation Foundation (WPF) 應用程式中建立動畫的按鈕，供使用。 本逐步解說會使用樣式和範本來建立自訂的按鈕資源可讓您重複使用程式碼及從按鈕宣告按鈕的邏輯分隔開來。 本逐步解說完全在撰寫[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
@@ -361,7 +361,7 @@ ms.locfileid: "42935402"
   
      按 f5 鍵執行應用程式，然後按一下其中一個按鈕。 請注意，[] 按鈕之後會保持反白顯示您按一下它因為它仍具有焦點。 如果您按一下另一個按鈕時，[新增] 按鈕時的最後一個會失去它，就會取得焦點。  
   
-4.  **新增動畫**<xref:System.Windows.UIElement.MouseEnter> **並** <xref:System.Windows.UIElement.MouseLeave> **:** 接下來我們將一些動畫新增至觸發程序。   新增下列任何一處內的標記`ControlTemplate.Triggers`區塊。  
+4.  **新增動畫**<xref:System.Windows.UIElement.MouseEnter> **並** <xref:System.Windows.UIElement.MouseLeave> **:** 接下來我們將一些動畫新增至觸發程序。 新增下列任何一處內的標記`ControlTemplate.Triggers`區塊。  
   
     ```  
     <!-- Animations that start when mouse enters and leaves button. -->  

@@ -2,12 +2,12 @@
 title: 基本 TransactionScope
 ms.date: 03/30/2017
 ms.assetid: 1e22b76a-76de-43b4-9be7-7a86ed3d5a44
-ms.openlocfilehash: fe6877c4b2d72dc3d571740395fd4dc92ca8e99c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b3c673040d40ca91d8ab4a79e847d61e6f507ed1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516798"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415419"
 ---
 # <a name="basic-transactionscope"></a>基本 TransactionScope
 這個範例包含四個案例，會示範如何巢狀處理 <xref:System.Activities.Statements.TransactionScope> 執行個體。 第一個案例會示範巢狀處理協力廠商活動，作者對於這個活動的結構並不清楚。 第二和第三個案例示範如何採用逾時，最後一個案例則示範 <xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure%2A> 設定。  
@@ -27,15 +27,15 @@ ms.locfileid: "33516798"
   
 1.  在 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 中開啟 BasicTransactionScopeSample.sln 方案。  
   
-2.  若要建置此方案，請按 CTRL + SHIFT + B 或選取**建置方案**從**建置**功能表。  
+2.  若要建置方案，請按 CTRL + SHIFT + B 或選取**建置方案**從**建置**功能表。  
   
-3.  成功建置後，按 F5 或選取**開始偵錯**從**偵錯**功能表。 或者您可以按 CTRL + F5 或選取**啟動但不偵錯**從**偵錯**執行，而不偵錯 功能表。  
+3.  成功組建後，按 F5 或選取**開始偵錯**從**偵錯**功能表。 或者您可以按 CTRL + F5 或選取**啟動但不偵錯**從**偵錯**執行，而不偵錯 功能表。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Transactions\BasicTransactionScope`

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], freezing columns
 - DataGridView control [Windows Forms], columns always in view
 ms.assetid: 2ef8b1de-782e-4867-af8d-58171ab5c106
-ms.openlocfilehash: 6eb6fab4b147365221ba79a682c4eaf744d24b25
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df8ac7e7db74d4e8df8872b5ec7f8f2ec774b3c8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532665"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407294"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control"></a>如何：凍結 Windows Form DataGridView 控制項中的資料行
 當使用者檢視顯示於 Windows Form <xref:System.Windows.Forms.DataGridView> 控制項的資料時，有時候需要經常參考單一資料行或資料行集合。 例如，在顯示包含許多資料行的客戶資訊資料表時，如果其他資料行可在可見區域外捲動時，仍一直顯示客戶的名稱，將會非常有用。  
@@ -26,7 +26,7 @@ ms.locfileid: "33532665"
   
  資料行的 <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A> 屬性會決定資料行在格線內是否一律顯示。  
   
- 在 Visual Studio 中會支援這項工作。  另請參閱[如何： 凍結 Windows Form DataGridView 控制項使用設計工具中的資料行](http://msdn.microsoft.com/library/717ss6s6\(v=vs.110\))。  
+ 在 Visual Studio 中會支援這項工作。  另請參閱[如何： 凍結 Windows Form DataGridView 控制項使用設計工具中的資料行](https://msdn.microsoft.com/library/717ss6s6\(v=vs.110\))。  
   
 ### <a name="to-freeze-a-column-programmatically"></a>以程式設計方式凍結資料行  
   

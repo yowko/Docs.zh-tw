@@ -2,12 +2,12 @@
 title: 執行屬性
 ms.date: 03/30/2017
 ms.assetid: 31c009db-397c-4653-87e2-32dc77fa4b13
-ms.openlocfilehash: 201fe222de1cb2029696a1694ae97815db5f913d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4906c2ad11c8b5822764435d2b39a5b51f2673ba
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33513018"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43409085"
 ---
 # <a name="execution-properties"></a>執行屬性
 這個範例示範如何使用定義及使用自訂活動中的執行屬性。 在這個範例中，執行屬性決定主控台的前景色彩。 範例工作流程將示範不同的執行邏輯路徑 (<xref:System.Activities.Statements.Parallel> 活動的分支) 如何在活動交錯執行 (跨 <xref:System.Activities.Statements.Parallel> 活動的分支) 的情況下維持不同的主控台色彩。  
@@ -26,6 +26,6 @@ ms.locfileid: "33513018"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\Code-Bodied\ExecutionProperties`

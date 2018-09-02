@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RFC 3066 standard [XAML Services]
 - standards [XAML Services], RFC 3066
 ms.assetid: 7aac0078-a1c5-41f8-b8b0-975510d9dca0
-ms.openlocfilehash: 886f4063fa8c793fdce93431a29219cf86078593
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 025e4b2865fe3938e5f1454f87e90bae7a85bcfd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562020"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399659"
 ---
 # <a name="xmllang-handling-in-xaml"></a>XAML 中的 xml:lang 處理
 `xml:lang` 屬性是 [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]定義的屬性，會宣告 XML 中項目的語言和文化特性資訊。 在 XAML 中有保存與這個屬性相同的意義，但仍須考量一些其他事項。  
@@ -27,7 +27,7 @@ ms.locfileid: "33562020"
   
 |||  
 |-|-|  
-|*rfc3066lang*|衍生自 [RFC 3066](http://go.microsoft.com/fwlink/?LinkId=132454) 標準的字串，這個字串會識別語言或語言地區。 如果是後者，則語言和區域會由單一連字號分隔。 如需值和格式的詳細資訊，請參閱 <xref:System.Windows.Markup.XmlLanguage> 。|  
+|*rfc3066lang*|字串，衍生自[RFC 3066](https://go.microsoft.com/fwlink/?LinkId=132454)標準，並識別語言地區。 如果是後者，則語言和區域會由單一連字號分隔。 如需值和格式的詳細資訊，請參閱 <xref:System.Windows.Markup.XmlLanguage> 。|  
   
 ## <a name="remarks"></a>備註  
  在 `xml:lang` 中， [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 屬性的定義都是衍生自 `xml:lang` ，該項目已經由 [!INCLUDE[TLA#tla_w3c](../../../includes/tlasharptla-w3c-md.md)] 定義為 [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]的「特殊屬性」。 項目在處理語言和文化特性時，其方式可能隨著不同的實作而改變，但是 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 屬性並沒有預設的 `xml:lang` 處理。  

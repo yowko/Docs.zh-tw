@@ -6,15 +6,15 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], bindings
 - bindings [WCF]
 ms.assetid: 83639133-89f7-43f0-b4ef-8d9e57c08d25
-ms.openlocfilehash: edbcba1cda914d58dee7a11fcb3309254a52a66c
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 1930826cf51d67ceb789e20920ca42f04d1adc1b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198139"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416738"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Windows Communication Foundation 繫結
-Windows Communication Foundation (WCF) 會分隔應用程式軟體從它如何與其他軟體通訊的撰寫方式。 繫結可用來指定必要的傳輸、編碼與通訊協定詳細資料，以供用戶端與服務彼此通訊。 WCF 會使用繫結來產生端點的基礎 wire 表示，因此大部分的繫結詳細資料必須同意所要通訊的合作對象。 要達到這個目的之最簡單方式，就是讓服務用戶端使用服務端點所使用的相同繫結。 如需如何執行這項操作的詳細資訊，請參閱[來設定 Windows Communication Foundation 服務和用戶端使用的繫結](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)。  
+Windows Communication Foundation (WCF) 會分隔應用程式軟體從它如何與其他軟體通訊的撰寫方式。 繫結可用來指定必要的傳輸、編碼與通訊協定詳細資料，以供用戶端與服務彼此通訊。 WCF 會使用繫結來產生端點的基礎 wire 表示，因此大部分的繫結詳細資料必須同意所要通訊的合作對象。 要達到這個目的之最簡單方式，就是讓服務用戶端使用服務端點所使用的相同繫結。 如需如何執行這項操作的詳細資訊，請參閱[來設定 Windows Communication Foundation 服務和用戶端使用的繫結](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)。  
   
  繫結是由繫結項目集合所組成。 每個項目負責針對端點與用戶端通訊的方式稍加描述。 繫結程序必須包含至少一個傳輸繫結程序項目、一個訊息編碼繫結程序項目 (根據預設，可由傳輸繫結程序項目來提供)，以及任意數量的其他通訊協定繫結程序項目。 由此描述來建立執行階段的處理序，可讓每個繫結項目將程式碼撰寫到該執行階段中。  
   
@@ -26,7 +26,7 @@ Windows Communication Foundation (WCF) 會分隔應用程式軟體從它如何�
  [設定系統提供的繫結](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  描述如何使用及修改 WCF 提供來支援常見案例的繫結。  
   
- [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [使用繫結來設定 Windows Communication Foundation 服務和用戶端](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  描述如何在程式碼和以宣告方式使用組態中以命令方式定義服務和用戶端的 Windows Communication Foundation (WCF) 繫結。  
   
  [自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)  

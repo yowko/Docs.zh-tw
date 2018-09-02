@@ -2,15 +2,15 @@
 title: 裝載工作流程服務
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-ms.openlocfilehash: b42dd42b9697d87d7721fc5edc2dfde01f1d37c2
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: f75b8cc4cde0372b995c39a5da3ae4b71590743e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932829"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416361"
 ---
 # <a name="hosting-workflow-services"></a>裝載工作流程服務
-您必須裝載工作流程服務，才能讓它回應傳入的訊息。 工作流程服務使用了 WCF 訊息基礎結構，因此會以類似的方式裝載。 就像 WCF 服務，可在任何受管理的應用程式，在網際網路資訊服務 (IIS) 或在 Windows Process Activation Services (WAS) 裝載工作流程服務。 此外，工作流程服務可以裝載 Windows Server App Fabric 底下。 如需 Windows Server App Fabric 的詳細資訊請參閱 < [Windows Server App Fabric 文件](http://go.microsoft.com/fwlink/?LinkId=193037)， [AppFabric 主控功能](http://go.microsoft.com/fwlink/?LinkId=196494)，並[AppFabric 主控概念](http://go.microsoft.com/fwlink/?LinkId=196495)。 針對服務中裝載 WCF 的各種方式的詳細資訊，請參閱[裝載的服務](../../../../docs/framework/wcf/hosting-services.md)。
+您必須裝載工作流程服務，才能讓它回應傳入的訊息。 工作流程服務使用了 WCF 訊息基礎結構，因此會以類似的方式裝載。 就像 WCF 服務，可在任何受管理的應用程式，在網際網路資訊服務 (IIS) 或在 Windows Process Activation Services (WAS) 裝載工作流程服務。 此外，工作流程服務可以裝載 Windows Server App Fabric 底下。 如需 Windows Server App Fabric 的詳細資訊請參閱 < [Windows Server App Fabric 文件](https://go.microsoft.com/fwlink/?LinkId=193037)， [AppFabric 主控功能](https://go.microsoft.com/fwlink/?LinkId=196494)，並[AppFabric 主控概念](https://go.microsoft.com/fwlink/?LinkId=196495)。 針對服務中裝載 WCF 的各種方式的詳細資訊，請參閱[裝載的服務](../../../../docs/framework/wcf/hosting-services.md)。
 
 ## <a name="hosting-in-a-managed-application"></a>在 Managed 應用程式中裝載
  若要在 Managed 應用程式中裝載工作流程服務，請使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 類別。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 建構函式可讓您指定單一工作流程服務執行個體、工作流程服務定義，或是一個活動使用工作流程訊息的多個活動。 呼叫 <<!--zz xref:System.ServiceModel.Activities.WorkflowServiceHost.Open%2A--> `System.ServiceModel.Activities.WorkflowServiceHost.Open`>，會導致以開始接聽傳入訊息的服務。
@@ -51,7 +51,7 @@ ms.locfileid: "42932829"
  參考自訂活動必須加入至 <`Assemblies`> 區段底下 <`System.Web.Compilation`> 以便載入應用程式定義域，而且 XAML 還原序列化程式能夠找到型別。 這些設定可以在應用程式層級進行，如果設定值應該套用到電腦上的所有應用程式，則可以在根 Web.config 進行這些設定。
 
 ## <a name="deployment"></a>部署
- Web 部署工具的建立，是要讓部署的工作更容易進行。 此工具可讓您在 IIS 6.0 與 IIS 7.0 之間移轉應用程式、同步處理伺服器陣列，以及封裝、封存及部署 Web 應用程式。 如需詳細資訊，請參閱 < [MS 部署工具](http://go.microsoft.com/fwlink/?LinkId=178690)。
+ Web 部署工具的建立，是要讓部署的工作更容易進行。 此工具可讓您在 IIS 6.0 與 IIS 7.0 之間移轉應用程式、同步處理伺服器陣列，以及封裝、封存及部署 Web 應用程式。 如需詳細資訊，請參閱 < [MS 部署工具](https://go.microsoft.com/fwlink/?LinkId=178690)。
 
 ## <a name="see-also"></a>另請參閱
 

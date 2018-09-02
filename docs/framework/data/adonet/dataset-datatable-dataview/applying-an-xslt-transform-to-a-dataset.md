@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-ms.openlocfilehash: 05894431f819b968877a4a971027850efe37126a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: abcb3231aa92bd62edefc7f7341da5fcb3321e4b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756549"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405744"
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>將 XSLT 轉換套用至 DataSet
-**WriteXml**方法<xref:System.Data.DataSet>可讓您撰寫的內容**資料集**為 XML 資料。 接下來，通用工作會使用 XML 轉換 (XSLT)，將這個 XML 轉換為另一種格式。 不過，同步處理**資料集**與<xref:System.Xml.XmlDataDocument>可讓您套用 XSLT 樣式表的內容**資料集**而不必先撰寫的內容**資料集**做為 XML 資料使用**WriteXml**。  
+**WriteXml**方法<xref:System.Data.DataSet>可讓您的內容寫入**DataSet**為 XML 資料。 接下來，通用工作會使用 XML 轉換 (XSLT)，將這個 XML 轉換為另一種格式。 不過，同步處理**資料集**具有<xref:System.Xml.XmlDataDocument>可讓您套用 XSLT 樣式表的內容**DataSet**而不必先寫入的內容**資料集**做為 XML 資料使用**WriteXml**。  
   
- 下列範例會填入**資料集**與資料表和關聯性，同步處理**資料集**與**XmlDataDocument**，並將寫入的一部分**資料集**為 HTML 檔案使用 XSLT 樣式表。 下列為 XSLT 樣式表的內容。  
+ 下列範例會填入**資料集**與資料表和關聯性，同步處理**資料集**具有**XmlDataDocument**，並將寫入一部分**資料集**為 HTML 檔案中使用的 XSLT 樣式表。 下列為 XSLT 樣式表的內容。  
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">  
@@ -59,7 +59,7 @@ ms.locfileid: "32756549"
  下列程式碼會填入**資料集**並套用 XSLT 樣式表。  
   
 > [!NOTE]
->  如果您要套用 XSLT 樣式表以**資料集**包含關聯性，您會達成最佳效能，如果您設定**巢狀**屬性<xref:System.Data.DataRelation>至**true**每個巢狀關聯性。 這樣您就可以使用一般由上往下執行的 XSLT 樣式表，而不使用增強效能的 XPath 位置軸 (例如，樣式表中之前和之後同層級節點測試運算式)，來巡覽階層並轉換資料。 如需有關巢狀關聯的詳細資訊，請參閱[巢狀 Datarelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)。  
+>  如果您要套用至 XSLT 樣式表**資料集**，其中包含的關聯，即可達到最佳效能，如果您將設定**巢狀**屬性<xref:System.Data.DataRelation>至**true**每個巢狀關聯性。 這樣您就可以使用一般由上往下執行的 XSLT 樣式表，而不使用增強效能的 XPath 位置軸 (例如，樣式表中之前和之後同層級節點測試運算式)，來巡覽階層並轉換資料。 如需有關巢狀關聯的詳細資訊，請參閱[巢狀 Datarelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)。  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -125,4 +125,4 @@ writer.Close();
   
 ## <a name="see-also"></a>另請參閱  
  [資料集和 XmlDataDocument 同步處理](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

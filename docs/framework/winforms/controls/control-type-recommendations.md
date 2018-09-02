@@ -7,18 +7,18 @@ helpviewer_keywords:
 - custom controls [Windows Forms], types
 - controls [Windows Forms], creating
 ms.assetid: 5235fe9d-c36a-4c08-ae76-6cb90b50085e
-ms.openlocfilehash: d6a2b663c566aae48c694ffc335fcef0ce24034f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ce801a96bc4ef48934b983838dcf8578a5bc6e6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528940"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405343"
 ---
 # <a name="control-type-recommendations"></a>控制項類型建議
 .NET Framework 可讓您有能力開發及實作新的控制項。 除了熟悉的使用者控制項，現在您會發現您也可以撰寫自訂控制項來執行它們自己的繪製，而且甚至能夠透過繼承，擴充現有控制項的功能。 決定要建立的控制項類型可能會令人困擾。 本章節強調您可以繼承的各類型控制項之間的差異，並提供關於為您的專案選擇類型的注意事項。  
   
 > [!NOTE]
->  如果您想要撰寫 Web Forms 上使用的控制項，請參閱[開發自訂 ASP.NET 伺服器控制項](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef)。  
+>  如果您想要撰寫 Web Forms 上使用的控制項，請參閱[開發自訂 ASP.NET 伺服器控制項](https://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef)。  
   
 ## <a name="inheriting-from-a-windows-forms-control"></a>繼承 Windows Form 控制項  
  您可以從任何現有的 Windows Form 控制項衍生繼承的控制項。 這種方法可讓您保留 Windows Form 控制項的所有固有功能，然後藉由加入自訂屬性、方法或其他功能，以擴充該功能。 例如，您可以建立從 <xref:System.Windows.Forms.TextBox> 衍生的控制項，它只接受數字，而且會自動將輸入轉換成值。 這類控制項可能會包含在文字方塊中的文字變更呼叫的驗證程式碼，而且可能會有一個額外的屬性 Value。 在一些控制項中，您也可以藉由覆寫基底類別的 <xref:System.Windows.Forms.Control.OnPaint%2A> 方法，將自訂外觀加入至控制項的圖形化介面。  
@@ -45,39 +45,39 @@ ms.locfileid: "33528940"
   
 -   您需要實作無法透過標準控制項使用的自訂功能。  
   
--   [操作說明：在選擇工具箱項目對話方塊中顯示控制項](http://msdn.microsoft.com/library/9yxtkx75\(v=vs.110\))  
+-   [操作說明：在選擇工具箱項目對話方塊中顯示控制項](https://msdn.microsoft.com/library/9yxtkx75\(v=vs.110\))  
   
--   [逐步解說：使用 DesignerSerializationVisibilityAttribute 序列化標準類型的集合](http://msdn.microsoft.com/library/ms171731\(v=vs.110\))  
+-   [逐步解說：使用 DesignerSerializationVisibilityAttribute 序列化標準類型的集合](serializing-collections-designerserializationvisibilityattribute.md)  
   
--   [逐步解說：使用 Visual C# 繼承自 Windows Forms 控制項](http://msdn.microsoft.com/library/5h0k2e6x\(v=vs.110\))  
+-   [逐步解說：使用 Visual C# 繼承自 Windows Forms 控制項](https://msdn.microsoft.com/library/5h0k2e6x\(v=vs.110\))  
   
--   [操作說明：為控制項提供工具箱點陣圖](http://msdn.microsoft.com/library/4wk1wc0a\(v=vs.110\))  
+-   [操作說明：為控制項提供工具箱點陣圖](https://msdn.microsoft.com/library/4wk1wc0a\(v=vs.110\))  
   
--   [操作說明：繼承自現有的 Windows Forms 控制項](http://msdn.microsoft.com/library/7h62478z\(v=vs.110\))  
+-   [操作說明：繼承自現有的 Windows Forms 控制項](https://msdn.microsoft.com/library/7h62478z\(v=vs.110\))  
   
--   [逐步解說：在設計階段偵錯自訂的 Windows Forms 控制項](http://msdn.microsoft.com/library/5ytx0z24\(v=vs.110\))  
+-   [逐步解說：在設計階段偵錯自訂的 Windows Forms 控制項](https://msdn.microsoft.com/library/5ytx0z24\(v=vs.110\))  
   
--   [如何：繼承自 Control 類別](http://msdn.microsoft.com/library/skcysbt2\(v=vs.110\))  
+-   [如何：繼承自 Control 類別](https://msdn.microsoft.com/library/skcysbt2\(v=vs.110\))  
   
--   [操作說明：測試 UserControl 的執行階段行為](http://msdn.microsoft.com/library/ms171738\(v=vs.110\))  
+-   [操作說明：測試 UserControl 的執行階段行為](how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
   
--   [操作說明：在設計階段將控制項對齊表單邊緣](http://msdn.microsoft.com/library/1fxyb15b\(v=vs.110\))  
+-   [操作說明：在設計階段將控制項對齊表單邊緣](https://msdn.microsoft.com/library/1fxyb15b\(v=vs.110\))  
   
--   [操作說明：繼承自 UserControl 類別](http://msdn.microsoft.com/library/00ctb4z0\(v=vs.110\))  
+-   [操作說明：繼承自 UserControl 類別](https://msdn.microsoft.com/library/00ctb4z0\(v=vs.110\))  
   
--   [如何：撰寫 Windows Forms 的控制項](http://msdn.microsoft.com/library/bs3yhkh7\(v=vs.110\))  
+-   [如何：撰寫 Windows Forms 的控制項](https://msdn.microsoft.com/library/bs3yhkh7\(v=vs.110\))  
   
--   [如何：撰寫複合控制項](http://msdn.microsoft.com/library/3sf86w5h\(v=vs.110\))  
+-   [如何：撰寫複合控制項](https://msdn.microsoft.com/library/3sf86w5h\(v=vs.110\))  
   
--   [逐步解說：使用 Visual Basic 撰寫複合控制項](http://msdn.microsoft.com/library/c316f119\(v=vs.110\))  
+-   [逐步解說：使用 Visual Basic 撰寫複合控制項](https://msdn.microsoft.com/library/c316f119\(v=vs.110\))  
   
--   [逐步解說：使用 Visual C# 撰寫複合控制項](http://msdn.microsoft.com/library/a6h7e207\(v=vs.110\))  
+-   [逐步解說：使用 Visual C# 撰寫複合控制項](https://msdn.microsoft.com/library/a6h7e207\(v=vs.110\))  
   
--   [逐步解說：使用 Visual Basic 繼承自 Windows Forms 控制項](http://msdn.microsoft.com/library/w2a8y03d\(v=vs.110\))  
+-   [逐步解說：使用 Visual Basic 繼承自 Windows Forms 控制項](https://msdn.microsoft.com/library/w2a8y03d\(v=vs.110\))  
   
--   [如何：建立採用設計階段功能的 Windows Forms 控制項](http://msdn.microsoft.com/library/307hck25\(v=vs.110\))  
+-   [如何：建立採用設計階段功能的 Windows Forms 控制項](https://msdn.microsoft.com/library/307hck25\(v=vs.110\))  
   
--   [如何：建立採用設計階段功能的 Windows Forms 控制項](http://msdn.microsoft.com/library/307hck25\(v=vs.120\))  
+-   [如何：建立採用設計階段功能的 Windows Forms 控制項](https://msdn.microsoft.com/library/307hck25\(v=vs.120\))  
   
 ## <a name="see-also"></a>另請參閱  
  [操作說明：開發簡單的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)  

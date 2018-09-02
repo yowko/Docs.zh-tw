@@ -2,12 +2,12 @@
 title: 當取消剩餘的非同步工作是完成 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
-ms.openlocfilehash: baf18ed4c2a4693f0765358d9f9a56842991cf29
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 5dab0c4aa14710fe78d2473675aea8b8c8bb73b9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728335"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402253"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>當取消剩餘的非同步工作是完成 (Visual Basic)
 搭配使用 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 方法與 <xref:System.Threading.CancellationToken>，即可在其中一個工作完成時取消所有剩餘的工作。 `WhenAny` 方法會接受本身為一組工作的引數。 這個方法會啟動所有工作，並傳回單一工作。 集合中的任何工作完成時，單一工作即完成。  
@@ -24,7 +24,7 @@ ms.locfileid: "34728335"
   
 2.  在功能表列上，依序選擇 [檔案] 、[開啟舊檔] 及 [專案/方案] 。  
   
-3.  在**開啟專案**對話方塊中，開啟保存您解壓縮範例程式碼的資料夾，然後再開啟進行 AsyncFineTuningVB 的 方案 (.sln) 檔案。  
+3.  在 [**開啟專案**] 對話方塊中，開啟您解壓縮之範例程式碼的資料夾，然後再開啟 AsyncFineTuningVB 的方案 (.sln) 檔案。  
   
 4.  在方案總管中，開啟 **CancelAfterOneTask** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。  
   
@@ -34,14 +34,14 @@ ms.locfileid: "34728335"
   
 6.  執行程式數次，確認先完成不同的下載。  
   
- 如果您不想要下載的專案，您可以檢閱本主題結尾處 MainWindow.xaml.vb 檔案。  
+ 如果您不想要下載的專案，您可以檢閱本主題結尾的 MainWindow.xaml.vb 檔案。  
   
 ## <a name="building-the-example"></a>建置範例  
- 本主題中的範例將加入專案中開發時，[取消一項非同步工作或工作清單](http://msdn.microsoft.com/library/d6e4e801-df64-4705-98fc-df725a577fb0)取消的工作清單。 雖然未明確地使用 [取消] 按鈕，但是此範例會使用相同的 UI。  
+ 本主題中的範例將加入專案中所開發[取消一項非同步工作或工作清單](https://msdn.microsoft.com/library/d6e4e801-df64-4705-98fc-df725a577fb0)取消工作清單。 雖然未明確地使用 [取消] 按鈕，但是此範例會使用相同的 UI。  
   
  若要自行逐步建置範例，請遵循＜下載範例＞一節中的指示，但選擇 [CancelAListOfTasks] 作為 [啟始專案]。 將本主題中的變更新增至該專案。  
   
- 中的 MainWindow.xaml.vb 檔案**CancelAListOfTasks**專案中，於迴圈中移動每個網站的處理步驟開始轉換`AccessTheWebAsync`下列的非同步方法。  
+ 中的 MainWindow.xaml.vb 檔案**CancelAListOfTasks**專案，以開始轉換，藉由移動每個網站的處理步驟中的迴圈從`AccessTheWebAsync`至下列非同步方法。  
   
 ```vb  
 ' ***Bundle the processing steps for a website into one async method.  

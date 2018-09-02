@@ -7,12 +7,12 @@ dev_langs:
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 93bf7a038a46ff6c03f89e576f3e4150cd069dba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b2c71af169018f272a6ca538bba9191f9ddbc0dd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491471"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418125"
 ---
 # <a name="internet-unsecured-client-and-service"></a>沒有安全保障的網際網路用戶端與服務
 下圖顯示的公用、 不安全 Windows Communication Foundation (WCF) 用戶端和服務的範例。  
@@ -80,7 +80,7 @@ ms.locfileid: "33491471"
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>程式碼  
- 下列程式碼會示範使用不安全端點的基本 WCF 用戶端。  
+ 下列程式碼會顯示基本的 WCF 用戶端使用不安全端點。  
   
  [!code-csharp[C_UnsecuredClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#1)]
  [!code-vb[C_UnsecuredClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#1)]  
@@ -114,4 +114,4 @@ ms.locfileid: "33491471"
 ## <a name="see-also"></a>另請參閱  
  [常見的安全性案例](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
  [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Windows Server App Fabric 的安全性模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

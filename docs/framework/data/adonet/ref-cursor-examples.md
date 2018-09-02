@@ -2,12 +2,12 @@
 title: REF CURSOR 範例
 ms.date: 03/30/2017
 ms.assetid: c257da03-c6c9-4cf8-b591-b7740a962c40
-ms.openlocfilehash: 9593a30524b7d8161903b840e1bdb0ee007027a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 803c921b76369aa9268c7fd34d1f15dd51bb17f3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353543"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406054"
 ---
 # <a name="ref-cursor-examples"></a>REF CURSOR 範例
 REF CURSOR 範例包括下列三個 Microsoft Visual Basic 範例，示範如何使用 REF CURSOR：  
@@ -15,7 +15,7 @@ REF CURSOR 範例包括下列三個 Microsoft Visual Basic 範例，示範如何
 |範例|描述|  
 |------------|-----------------|  
 |[OracleDataReader 中的 REF CURSOR 參數](../../../../docs/framework/data/adonet/ref-cursor-parameters-in-an-oracledatareader.md)|此範例執行可傳回 REF CURSOR 參數的 PL/SQL 預存程序，並以 <xref:System.Data.OracleClient.OracleDataReader> 讀取值。|  
-|[使用 OracleDataReader 從多個 REF CURSOR 擷取資料](../../../../docs/framework/data/adonet/retrieving-data-from-multiple-ref-cursors.md)|此範例會執行傳回兩個 REF CURSOR 參數，並讀取值使用的 PL/SQL 預存程序**OracleDataReader**。|  
+|[使用 OracleDataReader 從多個 REF CURSOR 擷取資料](../../../../docs/framework/data/adonet/retrieving-data-from-multiple-ref-cursors.md)|此範例執行傳回兩個 REF CURSOR 參數，並讀取使用的值的 PL/SQL 預存程序**OracleDataReader**。|  
 |[使用一或多個 REF CURSOR 填入資料集](../../../../docs/framework/data/adonet/filling-a-dataset-using-one-or-more-ref-cursors.md)|此範例執行可傳回兩個 REF CURSOR 參數的 PL/SQL 預存程序，並使用傳回的資料列填入 <xref:System.Data.DataSet>。|  
   
  若要使用這些範例，您可能需要建立 Oracle 資料表，且必須建立 PL/SQL 封裝及封裝主體。  
@@ -81,4 +81,4 @@ END CURSPKG;
   
 ## <a name="see-also"></a>另請參閱  
  [Oracle REF CURSOR](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
