@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: c6b3151a95f949100e10e630da848e34ebbf1187
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 25d7f49644996d87ddb5d191dc313916c0ca6fbb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764394"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423905"
 ---
 # <a name="working-with-data-definition-language"></a>使用資料定義語言
-從開始[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]第 4 版[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]支援資料定義語言 (DDL)。 這可讓您根據連接字串和儲存體 (SSDL) 模型的中繼資料，建立或刪除資料庫執行個體。  
+開頭[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]第 4 版，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]支援資料定義語言 (DDL)。 這可讓您根據連接字串和儲存體 (SSDL) 模型的中繼資料，建立或刪除資料庫執行個體。  
   
  <xref:System.Data.Objects.ObjectContext> 的下列方法會使用連接字串和 SSDL 內容來達成下列目的：建立或刪除資料庫、檢查資料庫是否存在，以及檢視產生的 DDL 指令碼：  
   
@@ -40,11 +40,11 @@ ms.locfileid: "32764394"
   
 2.  將現有的模型加入至應用程式。  
   
-    1.  加入名為空的模型`SchoolModel`。 若要建立空的模型，請參閱[How to： 建立新的.edmx 檔案](http://msdn.microsoft.com/library/beb8189e-e51c-4051-839c-9902c224abf2)主題。  
+    1.  新增名為空的模型`SchoolModel`。 若要建立空的模型，請參閱[如何： 建立新.edmx 檔案](https://msdn.microsoft.com/library/beb8189e-e51c-4051-839c-9902c224abf2)主題。  
   
      SchoolModel.edmx 檔案就會加入至您的專案。  
   
-    1.  複製的概念，儲存體，並將對應從 School 模型的內容[School 模型](http://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac)主題。  
+    1.  複製概念、 儲存體，並將對應從 School 模型的內容[School 模型](https://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac)主題。  
   
     2.  開啟 SchoolModel.edmx 檔案並在 `edmx:Runtime` 標記中貼上內容。  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09bfa08589bda68258883e6f080392f534e8c5df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a444b7eace18fa579324f540e8cf7537c420a6a8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365874"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425752"
 ---
 # <a name="code-contracts"></a>程式碼合約
 程式碼合約可讓您指定程式碼中的前置條件、後置條件和物件非變異值。 前置條件是輸入方法或屬性時，必須符合的需求。 後置條件描述在方法或屬性程式碼結束時的期望。 物件非變異值描述針對處於良好狀態的類別，所預期的狀態。  
@@ -35,7 +35,7 @@ ms.locfileid: "33365874"
   
  合約類別中的大部分方法都是有條件地編譯；也就是說，唯有當您使用 `#define` 指示詞，來定義特殊符號 CONTRACTS_FULL 時，編譯器才會發出呼叫至這些方法。 CONTRACTS_FULL 可讓您在程式碼中撰寫合約，而不需使用 `#ifdef` 指示詞；您可以產生不同的組建，有些有合約，有些則沒有。  
   
- 如需使用程式碼協定的工具和詳細指示，請參閱 MSDN DevLabs 網站上的[程式碼合約](http://go.microsoft.com/fwlink/?LinkId=152461)。  
+ 如需使用程式碼協定的工具和詳細指示，請參閱 MSDN DevLabs 網站上的[程式碼合約](https://go.microsoft.com/fwlink/?LinkId=152461)。  
   
 ## <a name="preconditions"></a>前置條件  
  您可以使用 <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=nameWithType> 方法來表示前置條件。 前置條件可指定叫用方法時的狀態。 其通常是用來指定有效的參數值。 前置條件中提及之所有成員的可存取性，必須至少與方法本身相同，否則可能無法讓方法的所有呼叫端都了解該前置條件。 該條件必須沒有副作用。 失敗前置條件的執行階段行為，取決於執行階段分析器。  

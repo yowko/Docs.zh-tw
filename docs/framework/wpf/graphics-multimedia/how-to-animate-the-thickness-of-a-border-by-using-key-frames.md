@@ -6,27 +6,28 @@ helpviewer_keywords:
 - key frames [WPF], animating border thickness with
 - border thickness [WPF], animating with key frames
 ms.assetid: 3a9cb463-0a63-407d-aae7-3fbb1a559947
-ms.openlocfilehash: 3081bff4cc3f05593d644121fbaff58bb652151b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a601fd6779a4d912166366652435aff9ae37613f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421406"
 ---
 # <a name="how-to-animate-the-thickness-of-a-border-by-using-key-frames"></a>操作說明：使用主要畫面格建立框線粗細的動畫
-此範例示範如何以動畫方式顯示<xref:System.Windows.Controls.Control.BorderThickness%2A>屬性<xref:System.Windows.Controls.Border>。  
+此範例示範如何建立動畫<xref:System.Windows.Controls.Control.BorderThickness%2A>屬性<xref:System.Windows.Controls.Border>。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用<xref:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames>類別以動畫方式顯示<xref:System.Windows.Controls.Control.BorderThickness%2A>屬性<xref:System.Windows.Controls.Border>。 這個動畫會以下列方式使用三個主要畫面格：  
+ 下列範例會使用<xref:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames>類別以動畫顯示<xref:System.Windows.Controls.Control.BorderThickness%2A>屬性<xref:System.Windows.Controls.Border>。 這個動畫會以下列方式使用三個主要畫面格：  
   
-1.  在第一個半秒，會使用的執行個體<xref:System.Windows.Media.Animation.LinearThicknessKeyFrame>類別來逐漸增加框線的粗細。 此範例會使用<xref:System.Windows.Media.Animation.LinearThicknessKeyFrame>建立平滑的線性增加值之間。  
+1.  在前半秒，期間使用的執行個體<xref:System.Windows.Media.Animation.LinearThicknessKeyFrame>類別來逐漸增加的框線粗細。 此範例會使用<xref:System.Windows.Media.Animation.LinearThicknessKeyFrame>建立平滑的線性增加值之間。  
   
-2.  在下一個結尾半秒，使用的執行個體<xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame>類別以突然增加框線的粗細。 特定的主要畫面格，例如衍生自<xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame>建立突然跳躍點之間的值，也就是為動畫移動不穩定。  
+2.  在下一步結尾半秒，使用的執行個體<xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame>突然增加的框線粗細的類別。 特定主要畫面格，例如衍生自<xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame>建立突然跳躍點之間的值，也就是為動畫的移動不穩定。  
   
-3.  在最後的兩秒中，會使用的執行個體<xref:System.Windows.Media.Animation.SplineThicknessKeyFrame>類別，以減少框線的粗細。 曲線主要畫面格一樣衍生自<xref:System.Windows.Media.Animation.SplineThicknessKeyFrame>建立變數的值根據值之間轉換<xref:System.Windows.Media.Animation.SplineThicknessKeyFrame.KeySpline%2A>屬性。 在此主要畫面格中，動畫一開始速度緩慢，然後在接近時間區段結尾時會以指數方式加速。  
+3.  在最後的兩秒期間使用的執行個體<xref:System.Windows.Media.Animation.SplineThicknessKeyFrame>類別，以減少框線的粗細。 曲線主要畫面格，例如衍生自<xref:System.Windows.Media.Animation.SplineThicknessKeyFrame>變數之間建立轉換的值根據<xref:System.Windows.Media.Animation.SplineThicknessKeyFrame.KeySpline%2A>屬性。 在此主要畫面格中，動畫一開始速度緩慢，然後在接近時間區段結尾時會以指數方式加速。  
   
  [!code-xaml[keyframes_snip#ThicknessAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/ThicknessAnimationUsingKeyFramesExample.xaml#thicknessanimationusingkeyframeswholepage)]  
   
- 如需完整的範例，請參閱[主要畫面格動畫範例](http://go.microsoft.com/fwlink/?LinkID=160012)。  
+ 如需完整的範例，請參閱[主要畫面格動畫範例](https://go.microsoft.com/fwlink/?LinkID=160012)。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame>  

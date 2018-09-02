@@ -2,18 +2,18 @@
 title: SQL Server 中的擁有權和使用者結構描述分離
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: 69d0c0dee6141b80908c8cdc36dfe21ff318f423
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b1cda211fdc89732afa8eed1eaaf2c98309a969
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358403"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421573"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>SQL Server 中的擁有權和使用者結構描述分離
 SQL Server 安全性的核心概念是物件的擁有者具有不可撤銷的物件管理權限。 您無法移除物件擁有者的權限，而使用者只要擁有資料庫中的物件，就無法將其從資料庫卸除。  
   
 ## <a name="user-schema-separation"></a>使用者結構描述分隔  
- 使用者結構描述分隔可讓資料庫物件權限的管理更有彈性。 A*結構描述*是資料庫物件，可讓您進行群組物件至不同的命名空間的命名的容器。 例如，AdventureWorks 範例資料庫包含 Production、Sales 和 HumanResources 的結構描述。  
+ 使用者結構描述分隔可讓資料庫物件權限的管理更有彈性。 A*結構描述*是資料庫物件，可讓您將物件分組到不同的命名空間的命名的容器。 例如，AdventureWorks 範例資料庫包含 Production、Sales 和 HumanResources 的結構描述。  
   
  參考物件的四部分命名語法會指定結構描述名稱。  
   
@@ -55,7 +55,7 @@ Server.Database.DatabaseSchema.DatabaseObject
   
 |資源|描述|  
 |--------------|-----------------|  
-|[使用者結構描述分隔](http://msdn.microsoft.com/library/ms190387.aspx)SQL Server 線上叢書中|說明由使用者結構描述分隔引入的變更。 包括新增行為、對擁有權的影響、目錄檢視和權限。|  
+|[707fe4226858"&gt;user-Schema Separation&lt](https://msdn.microsoft.com/library/ms190387.aspx)中 SQL Server 線上叢書|說明由使用者結構描述分隔引入的變更。 包括新增行為、對擁有權的影響、目錄檢視和權限。|  
   
 ## <a name="see-also"></a>另請參閱  
  [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
@@ -63,4 +63,4 @@ Server.Database.DatabaseSchema.DatabaseObject
  [在 SQL Server 中進行驗證](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
  [SQL Server 中的伺服器和資料庫角色](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
  [SQL Server 中的授權和權限](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

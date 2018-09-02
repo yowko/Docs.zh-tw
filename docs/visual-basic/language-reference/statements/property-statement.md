@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Property keyword [Visual Basic]
 ms.assetid: 3155edaf-8ebd-45c6-9cef-11d5d2dc8d38
 ms.openlocfilehash: 21ca15d6a6939d884c7e6abedc1f7919be079edd
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999521"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420377"
 ---
 # <a name="property-statement"></a>Property Statement
 宣告屬性，以及用來儲存及擷取屬性值的屬性程序的名稱。  

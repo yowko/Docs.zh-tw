@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 664785bc97574eff73dc1c2be64f407641df6b00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ccb16a0996386f3518bc52e95c1892c56e8bbad2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33484565"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420828"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>追蹤的安全性考量及實用秘訣
 此主題描述如何保護敏感資訊以防公開，以及使用 WebHost 時的實用秘訣。  
@@ -82,13 +82,13 @@ ms.locfileid: "33484565"
 </system.diagnostics>  
 ```  
   
- 如果`<machineSettings enableLoggingKnownPii="Boolean"/>`Machine.config 檔案外部的項目存在，系統會擲回<xref:System.Configuration.ConfigurationErrorsException>。  
+ 如果`<machineSettings enableLoggingKnownPii="Boolean"/>`t:system.configuration.configurationerrorsexception 項目不在 Machine.config 檔案，系統會擲回<xref:System.Configuration.ConfigurationErrorsException>。  
   
  只有在應用程式啟動或重新啟動時，才能讓變更生效。 當這兩個屬性都設定為 `true` 時，啟動時會記錄事件。 如果 `logKnownPii` 設定為 `true`，但 `enableLoggingKnownPii` 設定為 `false`，也會記錄事件。  
   
  如需有關 PII 記錄的詳細資訊，請參閱[PII 安全性鎖定](../../../../../docs/framework/wcf/samples/pii-security-lockdown.md)範例。  
   
- 電腦的系統管理員和應用程式部署人員在使用這兩個參數時，應該特別小心謹慎。 如果啟用 PII 記錄，則會記錄安全性金鑰和 PII。 如果停用，敏感資料和應用程式特定資料仍然會記錄在訊息標頭和本文中。 隱私權和保護 PII 中公開的更完整討論，請參閱[使用者隱私權](http://go.microsoft.com/fwlink/?LinkID=94647)。  
+ 電腦的系統管理員和應用程式部署人員在使用這兩個參數時，應該特別小心謹慎。 如果啟用 PII 記錄，則會記錄安全性金鑰和 PII。 如果停用，敏感資料和應用程式特定資料仍然會記錄在訊息標頭和本文中。 如需隱私權和保護 PII 免於遭到公開的更完整討論，請參閱 <<c0> [ 使用者隱私權](https://go.microsoft.com/fwlink/?LinkID=94647)。  
   
  此外，每次連線以進行連線導向的傳輸，或是每次以其他方式傳送訊息時，都會記錄一次訊息寄件者的 IP 位址。 這不需要寄件者的同意就能進行。 但是，這種記錄行為只會發生在 [資訊] 或 [詳細資料] 追蹤層級中 (不屬於實際執行的預設或建議追蹤層級)，除了即時偵錯以外。  
   

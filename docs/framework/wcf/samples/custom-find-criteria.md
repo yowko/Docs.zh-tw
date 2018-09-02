@@ -2,11 +2,12 @@
 title: 自訂尋找準則
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
-ms.openlocfilehash: 6c9363add13e38ded75685e4115a5084629d6505
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 699260fcef7680710f721d213dbf1126ebf7a896
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421446"
 ---
 # <a name="custom-find-criteria"></a>自訂尋找準則
 此範例示範如何使用邏輯建立自訂範圍比對，以及如何實作自訂探索服務。 用戶端使用自訂範圍比對功能來精簡並進一步建立在 WCF 探索之系統提供的尋找功能之上。 此範例包含的案例如下：  
@@ -24,7 +25,7 @@ ms.lasthandoff: 05/04/2018
 -   透過演算法實作自訂範圍比對。  
   
 ## <a name="discussion"></a>討論  
- 用戶端正在尋找"OR"類型比對準則。 如果端點上的範圍符合用戶端提供的任何範圍，服務就會回應。 在此情況下，用戶端會在下列清單中尋找擁有任何範圍的計算機服務：  
+ 用戶端會尋找"OR"類型比對準則。 如果端點上的範圍符合用戶端提供的任何範圍，服務就會回應。 在此情況下，用戶端會在下列清單中尋找擁有任何範圍的計算機服務：  
   
 1.  `net.tcp://Microsoft.Samples.Discovery/RedmondLocation`  
   
@@ -38,9 +39,9 @@ ms.lasthandoff: 05/04/2018
   
  開啟服務專案。 實作自訂探索服務要使用三個檔案：  
   
-1.  **AsyncResult.cs**： 這是的實作`AsyncResult`所需的探索方法。  
+1.  **AsyncResult.cs**： 這是實作`AsyncResult`所需的探索方法。  
   
-2.  **CustomDiscoveryService.cs**： 此檔案會實作自訂探索服務。 此實作會擴充 <xref:System.ServiceModel.Discovery.DiscoveryService> 類別並覆寫必要的方法。 請注意 <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A> 方法的實作。 此方法會檢查用戶端是否依照規則指定自訂範圍比對。 這是用戶端先前指定的相同自訂 URI。 如果指定自訂規則，就會遵循實作"OR"比對邏輯的程式碼路徑。  
+2.  **CustomDiscoveryService.cs**： 這個檔案會實作自訂探索服務。 此實作會擴充 <xref:System.ServiceModel.Discovery.DiscoveryService> 類別並覆寫必要的方法。 請注意 <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A> 方法的實作。 此方法會檢查用戶端是否依照規則指定自訂範圍比對。 這是用戶端先前指定的相同自訂 URI。 如果指定的自訂規則，則會遵循實作"OR"比對邏輯的程式碼路徑。  
   
      這個自訂邏輯會通過服務所擁有之每個端點上的所有範圍。 如果有任何端點的範圍符合用戶端提供的任何範圍，探索服務會將該端點加入至傳回用戶端的回應中。  
   
@@ -65,6 +66,6 @@ ms.lasthandoff: 05/04/2018
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\CustomFindCriteria`

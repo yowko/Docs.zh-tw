@@ -2,17 +2,17 @@
 title: 弱型別 JSON 序列化範例
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: 294c00bd18b5fabba5baa20770fd593031a98994
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 07166b89729fed7911cb842313269e420ae401b7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805716"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417808"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>弱型別 JSON 序列化範例
 當將使用者定義的型別序列化為指定的 Wire 格式，或是將 Wire 格式還原序列化為使用者定義的型別時，服務和用戶端都必須提供指定的使用者定義型別，以供使用。 一般而言，若要完成這項操作， <xref:System.Runtime.Serialization.DataContractAttribute> 屬性會套用至這些使用者定義的型別，而 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性會套用至其成員。 這個機制也適用於使用 JavaScript Object Notation (JSON) 物件的情況，如主題 [How to: Serialize and Deserialize JSON Data](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)中所述。  
   
- 在某些情況下，Windows Communication Foundation (WCF) 服務或用戶端必須存取服務或不受開發人員控制的用戶端所產生的 JSON 物件。 隨著更多的 Web 服務公開 JSON Api，它變得不切實際 WCF 開發人員建構本機的使用者定義型別，在其中還原序列化任意 JSON 物件。 這個範例提供一套機制，可讓 WCF 開發人員使用已還原序列化的任意 JSON 物件，而不需要建立使用者定義型別。 這稱為 JSON 物件的「 *弱型別序列化* 」(Weakly-Typed Serialization)，因為在編譯時期尚不知 JSON 物件要還原序列化成何種型別。  
+ 在某些情況下，Windows Communication Foundation (WCF) 服務或用戶端必須存取服務或用戶端開發人員的控制之外，所產生的 JSON 物件。 如需詳細的 Web 服務公開 JSON Api，它變得不切實際 WCF 開發人員建構本機的使用者定義型別，在其中還原序列化任意 JSON 物件。 此範例提供一種機制，可讓 WCF 開發人員可以使用已還原序列化的任意 JSON 物件，而不建立使用者定義型別。 這稱為 JSON 物件的「 *弱型別序列化* 」(Weakly-Typed Serialization)，因為在編譯時期尚不知 JSON 物件要還原序列化成何種型別。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -23,7 +23,7 @@ ms.locfileid: "33805716"
 {"personal": {"name": "Paul", "age": 23, "height": 1.7, "isSingle": true, "luckyNumbers": [5,17,21]}, "favoriteBands": ["Band ABC", "Band XYZ"]}  
 ```  
   
- 若要還原序列化這個物件，WCF 用戶端必須實作下列使用者定義型別。  
+ 若要還原序列化此物件，WCF 用戶端必須實作下列使用者定義型別。  
   
 ```  
 [DataContract]  
@@ -110,7 +110,7 @@ XmlDictionaryReader reader = channel.GetMemberProfile().GetReaderAtBodyContents(
 JsonObject json = new JsonObject(reader);  
 ```  
   
- `JsonObject` 建構函式會採用透過 <xref:System.Xml.XmlDictionaryReader>方法取得的 <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> 。 讀取器包含用戶端所接收之 JSON 訊息的 XML 表示。 如需詳細資訊，請參閱主題[對應之間 JSON 和 XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)。  
+ `JsonObject` 建構函式會採用透過 <xref:System.Xml.XmlDictionaryReader>方法取得的 <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> 。 讀取器包含用戶端所接收之 JSON 訊息的 XML 表示。 如需詳細資訊，請參閱主題[Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)。  
   
  此程式會產生下列輸出：  
   
@@ -125,7 +125,7 @@ My favorite bands are Band ABC and Band XYZ.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2.  依照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)所述，建置方案 WeaklyTypedJson.sln。  
   
@@ -136,7 +136,7 @@ My favorite bands are Band ABC and Band XYZ.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Ajax\WeaklyTypedJson`  
   

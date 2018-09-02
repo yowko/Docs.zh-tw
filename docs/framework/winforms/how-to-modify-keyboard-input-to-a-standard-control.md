@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows Forms, modifying keyboard input
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 626d3712-d866-4988-bcda-a2d5b36ec0ba
-ms.openlocfilehash: 726444e1decb3e03989317431e1f8c4a5fc4a697
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c109615b9a0eb61d18f7f44e3248d2b24934ee5f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540286"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420523"
 ---
 # <a name="how-to-modify-keyboard-input-to-a-standard-control"></a>如何：將鍵盤輸入修改為標準控制項
 Windows Form 提供使用和修改鍵盤輸入的功能。 使用按鍵表示在方法或事件處理常式中處理按鍵，讓訊息佇列較後面的其他方法和事件不會收到按鍵值。 修改按鍵表示修改按鍵的值，讓訊息佇列較後面的方法和事件處理常式會收到不同的按鍵值。 本主題將示範如何完成這些工作。  
@@ -49,7 +49,7 @@ Windows Form 提供使用和修改鍵盤輸入的功能。 使用按鍵表示在
   
 -   覆寫處理 Windows 訊息的 <xref:System.Windows.Forms.Control> 方法，偵測 WM_KEYDOWN 或 WM_SYSKEYDOWN 訊息，並將 <xref:System.Windows.Forms.Message> 參數的 <xref:System.Windows.Forms.Message.WParam%2A> 屬性設定為代表新非字元按鍵的 <xref:System.Windows.Forms.Keys> 值。  
   
-     下列程式碼範例示範如何覆寫控制項的 <xref:System.Windows.Forms.Control.PreProcessMessage%2A> 方法，以偵測按鍵 F1 至 F9，並將任何 F3 按鍵修改為 F1。 如需有關<xref:System.Windows.Forms.Control>方法，您可以覆寫以攔截鍵盤訊息，請參閱[Windows Forms 應用程式中的使用者輸入](../../../docs/framework/winforms/user-input-in-a-windows-forms-application.md)和[鍵盤輸入的運作方式](../../../docs/framework/winforms/how-keyboard-input-works.md)。  
+     下列程式碼範例示範如何覆寫控制項的 <xref:System.Windows.Forms.Control.PreProcessMessage%2A> 方法，以偵測按鍵 F1 至 F9，並將任何 F3 按鍵修改為 F1。 如需詳細資訊<xref:System.Windows.Forms.Control>方法，您可以覆寫以攔截鍵盤訊息，請參閱[在 Windows Forms 應用程式中的使用者輸入](../../../docs/framework/winforms/user-input-in-a-windows-forms-application.md)並[鍵盤輸入的運作方式](../../../docs/framework/winforms/how-keyboard-input-works.md)。  
   
      [!code-csharp[System.Windows.Forms.KeyBoardInput#12](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyboardInput/CS/form1.cs#12)]
      [!code-vb[System.Windows.Forms.KeyBoardInput#12](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyboardInput/VB/form1.vb#12)]  
@@ -65,7 +65,7 @@ Windows Form 提供使用和修改鍵盤輸入的功能。 使用按鍵表示在
   
 -   System、System.Drawing 和 System.Windows.Forms 組件的參考。  
   
- Visual Basic 或 Visual C# 中建置這個範例，從命令列的相關資訊，請參閱[從命令列建置](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[使用 csc.exe 建置](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置 Visual Studio 中的這個範例。  另請參閱 [如何：使用 Visual Studio 編譯及執行完整的 Windows Form 程式碼範例](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
+ Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  另請參閱[如何：使用 Visual Studio 編譯及執行完整的 Windows Forms 程式碼範例](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
   
 ## <a name="see-also"></a>另請參閱  
  [Windows Forms 應用程式中的鍵盤輸入](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  

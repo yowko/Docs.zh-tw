@@ -2,12 +2,12 @@
 title: 組態
 ms.date: 03/30/2017
 ms.assetid: 8637aeaf-ac9e-49b8-93f4-da15dee45277
-ms.openlocfilehash: 334ac362333565626dd2bb8dcaede27fbab16f33
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: caa712aa52da01ce44335a361fd6c9f5215316bf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518841"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419486"
 ---
 # <a name="confirmation"></a>組態
 這個範例示範四個有關 <xref:System.Activities.Statements.CompensableActivity> 和確認用法的一般案例。 範例中會執行四個工作流程以示範確認。 這個範例有宣告式和命令式版本。  
@@ -32,13 +32,13 @@ ms.locfileid: "33518841"
   
 3.  觀察下列輸出：  
   
- **明確確認： 開始的 workflowCompensableActivity1: BodyCompensableActivity2: BodyCompensableActivity1: workflowCompensableActivity2 的確認 HandlerEnd： 確認 HandlerExplicit 補償： 開頭workflowCompensableActivity1: BodyCompensableActivity2: BodyCompensableActivity1: workflowCompensableActivity2 的補償 HandlerEnd： 確認 HandlerCustom 確認處理常式： 開頭 workflowCompensableActivity1:BodyCompensableActivity2: BodyCompensableActivity3: BodyEnd 的 workflowCompensableActivity1： 確認 HandlerCompensableActivity2： 確認 HandlerCompensableActivity3： 確認 HandlerVariable 存取確認處理常式中：開頭 workflowCompensableActivity1: BodyCompensableActivity1： 總和是： 15CompensableActivity2: BodyCompensableActivity2： 加入 7 sumCompensableActivity2： 總和現在為： 22End 的 workflowCompensableActivity2： 確認HandlerCompensableActivity1： 確認 HandlerCompensableActivity2： 總和為： 22CompensableActivity2： 減去 12 後總和現在為： 10Press ENTER 以結束。**  
+ **明確確認： 開頭 workflowCompensableActivity1: BodyCompensableActivity2: BodyCompensableActivity1： 確認 HandlerEnd 的 workflowCompensableActivity2： 確認 HandlerExplicit 補償： Start 的workflowCompensableActivity1: BodyCompensableActivity2: BodyCompensableActivity1: workflowCompensableActivity2 的補償 HandlerEnd： 確認 HandlerCustom 確認處理常式： 開頭 workflowCompensableActivity1:BodyCompensableActivity2: BodyCompensableActivity3： 的 workflowCompensableActivity1 BodyEnd： 確認 HandlerCompensableActivity2： 確認 HandlerCompensableActivity3： 確認處理常式中的確認 HandlerVariable 存取：開頭 workflowCompensableActivity1: BodyCompensableActivity1： 總和為： 15CompensableActivity2: BodyCompensableActivity2： 新增 7 sumCompensableActivity2： 總和現在為： 的 workflowCompensableActivity2 22End： 確認HandlerCompensableActivity1： 確認 HandlerCompensableActivity2： 總和為： 22CompensableActivity2： 減去 12 後總和現在為： 10Press ENTER 以結束。**  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Compensation\Confirmation`

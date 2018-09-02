@@ -2,15 +2,15 @@
 title: 架構與設計
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: c2e8ff5f21a2941d75b21915552e6935a1423978
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5a0d8aac401a3485bc5f158bcda893ad9ab424e8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766864"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419600"
 ---
 # <a name="architecture-and-design"></a>架構與設計
-中的 SQL 產生模組[範例提供者](http://go.microsoft.com/fwlink/?LinkId=180616)實作為上代表命令樹運算式樹狀結構的造訪者。 此產生作業是透過運算式樹狀，在單一行程中完成。  
+中的 SQL 產生模組[範例提供者](https://go.microsoft.com/fwlink/?LinkId=180616)會實作成運算式樹狀架構表示的命令樹上的造訪者。 此產生作業是透過運算式樹狀，在單一行程中完成。  
   
  樹狀結構節點的處理方式是由下而上。 首先，系統會產生中繼結構：SqlSelectStatement 或 SqlBuilder (都會實作 ISqlFragment)。 接著，系統會根據該結構產生 SQL 陳述式字串。 使用中繼結構的原因有兩個：  
   
@@ -25,7 +25,7 @@ ms.locfileid: "32766864"
  在第二個階段中，產生實際字串時，就會重新命名別名。  
   
 ## <a name="data-structures"></a>資料結構  
- 本章節將討論使用中的型別[範例提供者](http://go.microsoft.com/fwlink/?LinkId=180616)您用於建立 SQL 陳述式。  
+ 本章節將討論使用中的型別[範例提供者](https://go.microsoft.com/fwlink/?LinkId=180616)您用於建立 SQL 陳述式。  
   
 ### <a name="isqlfragment"></a>ISqlFragment  
  本節內容涵蓋了實作 ISqlFragment 介面的類別，而這個介面具有兩種用途：  
@@ -52,7 +52,7 @@ internal sealed class SqlBuilder : ISqlFragment {
 ```  
   
 #### <a name="sqlselectstatement"></a>SqlSelectStatement  
- SqlSelectStatement 代表標準 SQL SELECT 陳述式的 [選取...] 圖形 從... WHERE... GROUP BY... ORDER BY。 」  
+ SqlSelectStatement 代表標準 SQL SELECT 陳述式的圖形"SELECT... 從... WHERE... 分組依據... ORDER BY。 」  
   
  其中每個 SQL 子句都由 StringBuilder 表示。 此外，它會追蹤是否已經指定 Distinct 以及此陳述式是否為最上層。 如果此陳述式不是最上層，除非此陳述式也具有 TOP 子句，否則就會省略 ORDER BY 子句。  
   
@@ -212,13 +212,13 @@ private bool IsParentAJoin{get}
 ### <a name="input-alias-redirecting"></a>輸入別名重新導向  
  輸入別名重新導向是使用符號表來達成。  
   
- 為了說明輸入的別名重新導向，請參閱中的第一個範例[產生的 SQL，從命令樹的最佳作法](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md)。  在該範例中，"a" 必須重新導向至投影中的 "b"。  
+ 若要說明輸入的別名重新導向，請參閱中的第一個範例[產生的 SQL，從命令樹-最佳作法](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md)。  在該範例中，"a" 必須重新導向至投影中的 "b"。  
   
  建立 SqlSelectStatement 物件時，屬於節點之輸入的範圍就會放入 SqlSelectStatement 的 From 屬性。 符號 (<symbol_b>) 是根據輸入繫結名稱 ("b") 建立以表示該範圍，而且 "AS  " + <symbol_b> 會附加至 From 子句。  此符號也會加入至 FromExtents 屬性。  
   
  此符號也會加入至符號表，以便將輸入繫結名稱連結至該符號 ("b", <symbol_b>)。  
   
- 如果後續節點重複使用該 SqlSelectStatement，它就會在符號表中加入一個項目，以便將其輸入繫結名稱連結至該符號。 在本例中，輸入繫結名稱為"a"的 DbProjectExpression 會重複使用 SqlSelectStatement 並將 ("a"、 \< symbol_b >) 到資料表。  
+ 如果後續節點重複使用該 SqlSelectStatement，它就會在符號表中加入一個項目，以便將其輸入繫結名稱連結至該符號。 在本例中，輸入繫結名稱為"a"的 DbProjectExpression 會重複使用 SqlSelectStatement 並新增 ("a"、 \< symbol_b >) 的資料表。  
   
  當運算式參考正在重複使用 SqlSelectStatement 之節點的輸入繫結名稱時，就會使用符號表，將該參考解析成正確的重新導向符號。 造訪代表 "a" 的 DbVariableReferenceExpression 時，如果從 "a.x" 解析了 "a"，它就會解析成符號 <symbol_b>。  
   
@@ -324,7 +324,7 @@ ORDER BY sk1, sk2, ...
 <leftSqlSelectStatement> <setOp> <rightSqlSelectStatement>  
 ```  
   
- 其中\<leftSqlSelectStatement > 和\<rightSqlSelectStatement > 會造訪每個輸入時所取得的 Sqlselectstatement 並\<setOp > 是對應的作業 (例如 UNION ALL)。  
+ 其中\<leftSqlSelectStatement > 並\<rightSqlSelectStatement > 會造訪每個輸入，取得的 Sqlselectstatement 並\<setOp > 是對應的作業 (例如 UNION ALL)。  
   
 ### <a name="dbscanexpression"></a>DbScanExpression  
  如果在聯結內容中造訪 (當做屬於另一個聯結左子系之聯結的輸入)，DbScanExpression 就會傳回 SqlBuilder 並將目標 SQL 設定為對應的目標 (定義查詢、資料表或檢視表)。 否則，就會建立新的 SqlSelectStatement 並將 FROM 欄位設定為對應至對應的目標。  

@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-ms.openlocfilehash: a389f75ca6516f8bad55934717bee056aca65f1f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ccf95ff250cc7c23b1ff981087de0f1310472880
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757056"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418748"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>從 DataView 建立 DataTable
 從資料來源擷取資料並將資料填入 <xref:System.Data.DataTable> 後，您可能想要排序、篩選，或限制所傳回的資料，而不想再次擷取該資料。 <xref:System.Data.DataView> 類別使這成為可行。 此外，如果您需要建立新<xref:System.Data.DataTable>從<xref:System.Data.DataView>，您可以使用<xref:System.Data.DataView.ToTable%2A>方法，將所有資料列和資料行或資料的子集複製到新<xref:System.Data.DataTable>。 <xref:System.Data.DataView.ToTable%2A> 方法提供多載，以進行下列作業：  
   
 -   建立含有資料行的 <xref:System.Data.DataTable>，其中的資料行是 <xref:System.Data.DataView> 之資料行的子集。  
   
--   建立<xref:System.Data.DataTable>包含從只包含相異資料列<xref:System.Data.DataView>，類似地以在 TRANSACT-SQL 的 DISTINCT 關鍵字。  
+-   建立<xref:System.Data.DataTable>包含從只包含相異資料列<xref:System.Data.DataView>，類似以於 TRANSACT-SQL 的 DISTINCT 關鍵字。  
   
 ## <a name="example"></a>範例  
- 下列主控台應用程式範例會建立<xref:System.Data.DataTable>，其中包含從資料**Person.Contact**資料表中**AdventureWorks**範例資料庫。 接下來，此範例會建立已排序和篩選的<xref:System.Data.DataView>根據<xref:System.Data.DataTable>。 顯示的內容之後<xref:System.Data.DataTable>和<xref:System.Data.DataView>，此範例會建立新<xref:System.Data.DataTable>從<xref:System.Data.DataView>藉由呼叫<xref:System.Data.DataView.ToTable%2A>方法中，選取可用的資料行的子集。 最後，此範例會顯示新 <xref:System.Data.DataTable> 的內容。  
+ 下列主控台應用程式範例會建立<xref:System.Data.DataTable>其中包含來自**Person.Contact**資料表中**AdventureWorks**範例資料庫。 接下來，此範例會建立已排序和篩選<xref:System.Data.DataView>根據<xref:System.Data.DataTable>。 顯示的內容之後<xref:System.Data.DataTable>而<xref:System.Data.DataView>，此範例會建立新<xref:System.Data.DataTable>從<xref:System.Data.DataView>藉由呼叫<xref:System.Data.DataView.ToTable%2A>方法中，選取可用的資料行的子集。 最後，此範例會顯示新 <xref:System.Data.DataTable> 的內容。  
   
 ```vb  
 Private Sub DemonstrateDataView()  
@@ -208,4 +208,4 @@ Console.WriteLine();
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Data.DataView.ToTable%2A>  
  [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

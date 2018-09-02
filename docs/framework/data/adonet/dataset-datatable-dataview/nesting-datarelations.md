@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9530f9c9-dd98-4b93-8cdb-40d7f1e8d0ab
-ms.openlocfilehash: 3f17d81ac41c90e7f1c48523a4ced91bc788a962
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9255615c7786773f1d4f453b910fdccdf191721f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761892"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420270"
 ---
 # <a name="nesting-datarelations"></a>巢狀 DataRelation
-關聯式資料表示中，個別資料表所包含的資料列使用一個或一組資料行彼此相關。 在 ADO.NET <xref:System.Data.DataSet> 中，是使用 <xref:System.Data.DataRelation> 來實作資料表間的關聯性。 當您建立**DataRelation**，僅透過關聯性所管理的資料行的父子式關聯性。 而資料表和資料行是個別的實體。 XML 提供的階層式資料表示中，父子關係是由包含巢狀項目子系的父項目表示。  
+關聯式資料表示中，個別資料表所包含的資料列使用一個或一組資料行彼此相關。 在 ADO.NET <xref:System.Data.DataSet> 中，是使用 <xref:System.Data.DataRelation> 來實作資料表間的關聯性。 當您建立**DataRelation**，只透過關聯性所管理的資料行的父子式關聯性。 而資料表和資料行是個別的實體。 XML 提供的階層式資料表示中，父子關係是由包含巢狀項目子系的父項目表示。  
   
- 若要加速子物件的巢狀時**資料集**與同步處理<xref:System.Xml.XmlDataDocument>或寫為 XML 資料使用**WriteXml**、 **DataRelation**公開**巢狀**屬性。 設定**巢狀**屬性**DataRelation**至**true**造成子資料列寫入為 XML 資料時，父資料行內巢狀關聯或與同步處理**XmlDataDocument**。 **巢狀**屬性**DataRelation**是**false**，根據預設。  
+ 若要加速子物件的巢狀時**資料集**會與同步處理<xref:System.Xml.XmlDataDocument>或撰寫為 XML 資料使用**WriteXml**，則**DataRelation**會公開**巢狀**屬性。 設定**巢狀**屬性**DataRelation**來**true**導致子系的巢狀寫入為 XML 資料時，父資料行內的關聯性的資料列或與同步處理**XmlDataDocument**。 **巢狀**屬性**DataRelation**會**false**，根據預設。  
   
  例如，請考慮下列**資料集**。  
   
@@ -59,9 +59,9 @@ DataRelation customerOrders = dataSet.Relations.Add(
   dataSet.Tables["Orders"].Columns["CustomerID"]);  
 ```  
   
- 因為**巢狀**屬性**DataRelation**物件未設定為**true**這個**資料集**，無巢狀的子物件父項目內時這**資料集**表示為 XML 資料。 轉換的 XML 表示法**資料集**，其中包含相關**資料集**使用非巢狀資料關聯可能會導致效能變慢。 因此，我們建議您巢狀化資料關聯。 若要這樣做，請設定**巢狀**屬性**true**。 然後，在 XSLT 樣式表中寫入程式碼，以便使用由上而下階層式 XPath 查詢運算式來找出並轉換資料。  
+ 因為**巢狀**屬性**DataRelation**物件不設定為**true**這個**資料集**，未巢狀的子物件父項目內時這**資料集**表示為 XML 資料。 轉換的 XML 表示法**資料集**，其中包含相關**DataSet**與非巢狀資料關聯可能會導致效能變慢。 因此，我們建議您巢狀化資料關聯。 若要這樣做，請設定**巢狀**屬性設 **，則為 true**。 然後，在 XSLT 樣式表中寫入程式碼，以便使用由上而下階層式 XPath 查詢運算式來找出並轉換資料。  
   
- 下列程式碼範例示範呼叫結果**WriteXml**上**資料集**。  
+ 下列程式碼範例示範呼叫的結果**WriteXml**上**DataSet**。  
   
 ```xml  
 <CustomerOrders>  
@@ -91,7 +91,7 @@ DataRelation customerOrders = dataSet.Relations.Add(
 </CustomerOrders>  
 ```  
   
- 請注意，**客戶**項目和**訂單**項目會顯示為同層級項目。 如果您想**訂單**項目顯示為其個別父項目子系**巢狀**屬性**DataRelation**必須設為**true**並加入下列：  
+ 請注意，**客戶**項目並**訂單**項目會顯示為同層級項目。 如果您想**訂單**顯示為其個別父項目中，子系的項目**巢狀**屬性**DataRelation**必須設為 **，則為 true**並加入下列：  
   
 ```vb  
 customerOrders.Nested = True  
@@ -101,7 +101,7 @@ customerOrders.Nested = True
 customerOrders.Nested = true;  
 ```  
   
- 下列程式碼將示範所產生的輸出外觀，與**訂單**項目巢狀其個別父項目。  
+ 下列程式碼顯示產生的輸出會像這樣，與**訂單**其個別父項目內的項目巢狀。  
   
 ```xml  
 <CustomerOrders>  
@@ -135,4 +135,4 @@ customerOrders.Nested = true;
  [在 DataSet 中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  [新增 DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)  
  [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

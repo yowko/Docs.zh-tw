@@ -6,12 +6,12 @@ helpviewer_keywords:
 - layout [Windows Forms]
 - Windows Forms, arranging contents
 ms.assetid: 630c9305-9ecf-4f99-94f9-ddf06de82713
-ms.openlocfilehash: c164a77314f7127056e2367e7e9c4fac331d723d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 714613253c5d3e90750f4ffad1cab34064995877
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524396"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418048"
 ---
 # <a name="flowlayoutpanel-control-windows-forms"></a>FlowLayoutPanel 控制項 (Windows Form)
 `FlowLayoutPanel` 控制項會以水平或垂直的流動方向來排列其內容。 其內容可以從某一資料列換行至下一個資料列，或從某一資料行換行至下一個資料行。 此外，也可裁剪其內容而不換行。  
@@ -25,7 +25,7 @@ ms.locfileid: "33524396"
  [操作說明：錨定和停駐 FlowLayoutPanel 控制項中的子控制項](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)  
  說明如何使用 <xref:System.Windows.Forms.Control.Anchor%2A> 和 <xref:System.Windows.Forms.Control.Dock%2A> 屬性，來錨定和停駐 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項中的子控制項。  
   
- 另請參閱[逐步解說： 在 Windows Form 使用 FlowLayoutPanel 排列的控制項](http://msdn.microsoft.com/library/z9w7ek2f\(v=vs.110\))。  
+ 另請參閱[逐步解說： 在 Windows Form 使用 FlowLayoutPanel 排列的控制項](https://msdn.microsoft.com/library/z9w7ek2f\(v=vs.110\))。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.FlowLayoutPanel>  

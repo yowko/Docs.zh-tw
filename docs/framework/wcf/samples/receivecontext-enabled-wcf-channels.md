@@ -2,12 +2,12 @@
 title: 已啟用 ReceiveContext 的 WCF 通道
 ms.date: 03/30/2017
 ms.assetid: d990d119-7321-4b8c-852b-10256f59f9b0
-ms.openlocfilehash: 3e5ac914ae4d0c97ed617ea4a8d5a893ec740179
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7f80d0874606129876fbf7dfa30c0327680b922
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502930"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43442742"
 ---
 # <a name="receivecontext-enabled-wcf-channels"></a>已啟用 ReceiveContext 的 WCF 通道
 這個範例示範具備 <xref:System.ServiceModel.Channels.ReceiveContext> 能力之 WCF 通道的用處。 這個範例會實作服務，以使用 NetMSMQ 通道尋找兩個數字的乘積。  
@@ -19,7 +19,7 @@ ms.locfileid: "33502930"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄：  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\ReceiveContextProductGenerator`  
   
@@ -29,25 +29,25 @@ ms.locfileid: "33502930"
   
     1.  若要在 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 上安裝 MSMQ：  
   
-        1.  在**伺服器管理員**，按一下 **功能**。  
+        1.  在 **伺服器管理員**，按一下**功能**。  
   
-        2.  在底下的右窗格中**功能摘要**，按一下 **新增功能**。  
+        2.  在右窗格底下**功能摘要**，按一下**新增功能**。  
   
-        3.  在結果視窗中，依序展開**訊息佇列**。  
+        3.  在 [結果] 視窗中，展開**訊息佇列**。  
   
-        4.  展開**訊息佇列服務**。  
+        4.  依序展開**訊息佇列服務**。  
   
-        5.  按一下**目錄服務整合**（針對加入網域電腦），然後按一下  **HTTP 支援**。  
+        5.  按一下 **目錄服務整合**（適用於加入網域電腦），然後按一下**HTTP 支援**。  
   
-        6.  按一下**下一步**，然後按一下 **安裝**。  
+        6.  按一下 **下一步**，然後按一下**安裝**。  
   
     2.  若要在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上安裝 MSMQ：  
   
-        1.  開啟**控制台**。  
+        1.  開啟**控制台中**。  
   
-        2.  按一下**程式**然後在**程式和功能**，按一下 **開啟或關閉 Windows 功能**。  
+        2.  按一下 **程式**然後在**程式和功能**，按一下 **開啟或關閉 Windows 功能**。  
   
-        3.  展開**Microsoft Message Queue (MSMQ) 伺服器**，依序展開**Microsoft Message Queue (MSMQ) 伺服器核心**，然後選取要安裝的下列訊息佇列功能的核取方塊：  
+        3.  依序展開**Microsoft Message Queue (MSMQ) 伺服器**，展開**Microsoft Message Queue (MSMQ) 伺服器核心**，然後選取要安裝的下列訊息佇列功能的核取方塊：  
   
             -   訊息佇列伺服器  
   
@@ -57,7 +57,7 @@ ms.locfileid: "33502930"
   
         4.  按一下 [確定 **Deploying Office Solutions**]。  
   
-        5.  如果提示您重新啟動電腦時，請按一下**確定**以完成安裝。  
+        5.  如果提示您重新啟動電腦時，請按一下**確定**才能完成安裝。  
   
 2.  請確定電腦上已安裝 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]。  
   

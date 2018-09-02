@@ -2,12 +2,12 @@
 title: 使用集合活動
 ms.date: 03/30/2017
 ms.assetid: e1977cf8-1695-4071-b946-7046fe39601e
-ms.openlocfilehash: 3c30a7fb46d9b155ec645a7b6845715d808d63b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a92208583ddf1c0d5d85b5af6a250a15ac8851b9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516591"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422623"
 ---
 # <a name="using-collection-activities"></a>使用集合活動
 這個範例會示範如何透過實作 <xref:System.Activities.Statements.AddToCollection%601> 介面的類別使用集合活動 (<xref:System.Activities.Statements.ClearCollection%601>、<xref:System.Activities.Statements.ExistsInCollection%601>、<xref:System.Activities.Statements.RemoveFromCollection%601> 和 <xref:System.Collections.ICollection>)，以及如何建立自訂活動，以便逐一查看集合以列印集合中每一個項目的內容。 名為 `PrintCollection` 的自訂活動會將名為 `Numbers` 之集合的項目成員列印到主控台。  
@@ -25,8 +25,8 @@ ms.locfileid: "33516591"
   
 |方案|描述|主要檔案|  
 |-|-|-|  
-|CodedWorkflow|範例用戶端應用程式，可示範如何以程式設計方式叫用集合活動。|**PrintCollection.cs**： 列印到主控台每個項目集合中的協助程式活動。<br /><br /> **Program.cs**： 以程式設計方式建立序列活動，其中包含一系列集合活動，並加以執行。|  
-|DesignerWorkflow|範例用戶端應用程式，可示範如何以宣告方式在工作流程設計工具中使用集合活動。|**CollectionWorkflow.xaml**： 使用集合活動的設計工具以宣告方式建立工作流程。<br /><br /> **PrintCollection.cs**： 列印到主控台每個項目集合中的協助程式活動。<br /><br /> **Program.cs**： 叫用 CollectionWorkflow.xaml 中所描述的工作流程。|  
+|CodedWorkflow|範例用戶端應用程式，可示範如何以程式設計方式叫用集合活動。|**PrintCollection.cs**： 列印到主控台每個項目集合中的協助程式活動。<br /><br /> **Program.cs**： 以程式設計方式建立序列活動，會包含一系列集合活動，並執行它。|  
+|DesignerWorkflow|範例用戶端應用程式，可示範如何以宣告方式在工作流程設計工具中使用集合活動。|**CollectionWorkflow.xaml**： 以宣告方式建立與使用集合活動設計工具的工作流程。<br /><br /> **PrintCollection.cs**： 列印到主控台每個項目集合中的協助程式活動。<br /><br /> **Program.cs**： 叫用 CollectionWorkflow.xaml 中所述的工作流程。|  
   
  在示範中，將會使用稱為 `Numbers` 的自訂活動，將 `PrintCollection` 集合的項目成員列印到主控台。  
   
@@ -43,6 +43,6 @@ ms.locfileid: "33516591"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Collection`

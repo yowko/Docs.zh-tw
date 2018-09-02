@@ -2,15 +2,15 @@
 title: 使用文字檔追蹤
 ms.date: 03/30/2017
 ms.assetid: 56a82682-73c2-4b91-a206-4d8bb12c561b
-ms.openlocfilehash: aa59ab8304c68873c938f42fc585be883b234ecc
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 19b4d544bc1d1c5bc9ebfa51b4ba28eb82c525d0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805794"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422885"
 ---
 # <a name="tracking-using-a-text-file"></a>使用文字檔追蹤
-這個範例示範如何建立自訂追蹤參與者來擴充追蹤中 Windows Workflow Foundation (WF)。 追蹤參與者是可接收執行階段所發出之追蹤記錄的 .NET Framework 類別。 您可以建立追蹤參與者，將追蹤事件傳輸至特定狀況所需的任何目的地。 例如，ETW (Windows 事件追蹤) 追蹤參與者是在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中提供的。 這個範例中的追蹤參與者會將 XML 格式的記錄寫入至文字檔。  
+此範例示範如何建立自訂追蹤參與者來擴充追蹤在 Windows Workflow Foundation (WF)。 追蹤參與者是可接收執行階段所發出之追蹤記錄的 .NET Framework 類別。 您可以建立追蹤參與者，將追蹤事件傳輸至特定狀況所需的任何目的地。 例如，ETW (Windows 事件追蹤) 追蹤參與者是在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中提供的。 這個範例中的追蹤參與者會將 XML 格式的記錄寫入至文字檔。  
   
 ## <a name="sample-details"></a>範例詳細資料  
  若要最佳化追蹤參與者的實用性和強固性，必須完成一些額外步驟，將追蹤參與者適當連接至執行階段。 下表描述這個範例中建立以最佳作法編譯之追蹤參與者所用的類別。  
@@ -53,7 +53,7 @@ ms.locfileid: "33805794"
   
 4.  在瀏覽器中，按一下 StockPriceService.xamlx。  
   
-5.  瀏覽器顯示**StockPriceService**頁面，其中包含本機服務 wsdl 位址。 複製此位址。  
+5.  瀏覽器會顯示**StockPriceService**頁面，其中包含本機服務 wsdl 位址。 複製此位址。  
   
      本機服務 wsdl 位址的範例是 http://localhost:53797/StockPriceService.xamlx?wsdl 。  
   
@@ -61,21 +61,21 @@ ms.locfileid: "33805794"
   
 7.  按兩下 WcfTestClient.exe 檔案以啟動 WCF 測試用戶端。  
   
-8.  在 WCF 測試用戶端中，選取**加入服務...** 從**檔案**功能表。  
+8.  在 WCF 測試用戶端中，選取 **新增服務...** 從**檔案**功能表。  
   
 9. 將剛才複製的 URL 貼到文字方塊中。  
   
-10. 按一下**確定**以關閉對話方塊。  
+10. 按一下 **確定**以關閉對話方塊。  
   
 11. 使用 WCF 測試用戶端測試此服務。  
   
-    1.  在 WCF 測試用戶端中，按兩下**Istockpriceservice**下**getstockprice （)** 節點。  
+    1.  在 WCF 測試用戶端中，按兩下**Istockpriceservice**下方**getstockprice （)** 節點。  
   
          **Istockpriceservice**方法會出現在右窗格中，具有一個參數。  
   
     2.  輸入 Contoso 做為參數值。  
   
-    3.  按一下**叫用**。  
+    3.  按一下 **叫用**。  
   
 12. 查看位於應用程式目錄之記錄檔 (即 %APPDATA%\trackingRecords.log) 的追蹤事件。  
   
@@ -87,9 +87,9 @@ ms.locfileid: "33805794"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\TextFileTracking`  
   
 ## <a name="see-also"></a>另請參閱  
- [AppFabric 監控範例](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [AppFabric 監控範例](https://go.microsoft.com/fwlink/?LinkId=193959)

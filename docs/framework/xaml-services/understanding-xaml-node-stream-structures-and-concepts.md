@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: fc27426e4d48ae519fc743c8a4f7eb3d1e6a4e81
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 100de0a897538527b76b1a53cf40d59a8804d3ae
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566648"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423240"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>認識 XAML 節點資料流結構和概念
 XAML 讀取器和 XAML 寫入器在 .NET Framework XAML 服務中實作，根據 XAML 節點資料流的設計概念。 XAML 節點資料流是一組 XAML 節點的概念化。 在此概念化中，XAML 處理器會逐步查核 XAML 中的節點關聯性結構，一次一個 XAML。 在任何時候，只能有一個目前的記錄或目前的位置存在於開啟的 XAML 節點資料流中，而應用程式開發介面的許多層面只會報告從該位置取得的資訊。 XAML 節點資料流中的目前節點可以描述成物件、成員或值。 若將 XAML 視為 XAML 節點資料流，XAML 讀取器可以與 XAML 寫入器進行通訊，並可讓程式在有關 XAML 的載入路徑或儲存路徑作業期間，檢視、變更 XAML 節點資料流的內容，或與其互動。 XAML 讀取器和寫入器應用程式開發介面的設計和 XAML 節點資料流概念，類似先前相關讀取器和寫入器的設計和概念，例如 [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] ，以及 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 類別。 本主題討論 XAML 節點資料流概念，並說明如何撰寫在 XAML 節點層級與 XAML 表示法互動的常式。  
@@ -80,7 +80,7 @@ while (xxr.Read()) {
  除了 XAML 節點迴圈之外，還有其他處理 XAML 表示的可能方式。 例如，可能存在著可以讀取索引節點的 XAML 讀取器，或特別是直接以 `x:Name`、以 `x:Uid`或透過其他識別項存取節點的 XAML 讀取器。 .NET Framework XAML 服務沒有提供完整的實作，但會透過服務和支援類型來提供建議的模式。 如需詳細資訊，請參閱 <xref:System.Xaml.IXamlIndexingReader> 與 <xref:System.Xaml.XamlNodeList>。  
   
 > [!TIP]
->  Microsoft 也有生產名為 Microsoft XAML Toolkit 的 Out-of-Band 版本。 這個 Out-of-Band 版本仍在其發行前階段。 不過，如果您願意使用發行前元件，Microsoft XAML Toolkit 有提供一些有趣的資源，可用於 XAML 工具和 XAML 的靜態分析。 Microsoft XAML Toolkit 包含 XAML DOM 應用程式開發介面、FxCop 分析的支援，以及適用於 Silverlight 的 XAML 結構描述內容。 如需詳細資訊，請參閱 [Microsoft XAML Toolkit](http://code.msdn.microsoft.com/XAML)。  
+>  Microsoft 也有生產名為 Microsoft XAML Toolkit 的 Out-of-Band 版本。 這個 Out-of-Band 版本仍在其發行前階段。 不過，如果您願意使用發行前元件，Microsoft XAML Toolkit 有提供一些有趣的資源，可用於 XAML 工具和 XAML 的靜態分析。 Microsoft XAML Toolkit 包含 XAML DOM 應用程式開發介面、FxCop 分析的支援，以及適用於 Silverlight 的 XAML 結構描述內容。 如需詳細資訊，請參閱 < [Microsoft XAML Toolkit](https://code.msdn.microsoft.com/XAML)。  
   
 <a name="working_with_the_current_node"></a>   
 ## <a name="working-with-the-current-node"></a>使用目前的節點  

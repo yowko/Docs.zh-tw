@@ -9,19 +9,19 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column order
 - data grids [Windows Forms], changing column order
 ms.assetid: 5e9ac3bc-b0f0-48cb-a3d5-b005af905395
-ms.openlocfilehash: 75362a2623cfe685f38259b9e581b593b2bd8d17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3b1ddd583f76ab135d13108f8c62775ab894c83
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530610"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419174"
 ---
 # <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control"></a>如何：變更 Windows Form DataGridView 控制項資料行的順序
 當您使用 <xref:System.Windows.Forms.DataGridView> 顯示來自資料來源的資料時，資料來源結構描述中的資料行有時不會以您想要的順序顯示。 您可以使用 <xref:System.Windows.Forms.DataGridViewColumn> 類別的 <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A> 屬性來變更資料行的顯示順序。  
   
- 下列程式碼範例會重新調整繫結至 Northwind 範例資料庫中的 Customers 資料表時，所自動產生之一些資料行的位置。 如需有關如何將繫結<xref:System.Windows.Forms.DataGridView>控制權傳輸至資料庫資料表，請參閱[How to： 將資料繫結至 Windows Form DataGridView 控制項](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)。  
+ 下列程式碼範例會重新調整繫結至 Northwind 範例資料庫中的 Customers 資料表時，所自動產生之一些資料行的位置。 如需有關如何將繫結<xref:System.Windows.Forms.DataGridView>控制資料庫資料表，請參閱 <<c2> [ 如何： 將資料繫結至 Windows Form DataGridView 控制項](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)。  
   
- 在 Visual Studio 中會支援這項工作。  另請參閱[如何： 變更 Windows Form DataGridView 控制項使用設計工具中的資料行順序](http://msdn.microsoft.com/library/hb1dk7ax\(v=vs.110\))  
+ 在 Visual Studio 中會支援這項工作。  另請參閱[如何： 變更 Windows Form DataGridView 控制項使用設計工具中的資料行順序](https://msdn.microsoft.com/library/hb1dk7ax\(v=vs.110\))  
   
 ## <a name="example"></a>範例  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#040](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#040)]

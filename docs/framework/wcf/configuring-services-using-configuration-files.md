@@ -4,31 +4,31 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 19ba0e585dfdd2ee47781b04a3d1a5bbdba60371
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 904abff4f3cae5873fe3cc9705dee84f73e2a523
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807429"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419740"
 ---
 # <a name="configuring-services-using-configuration-files"></a>使用組態檔設定服務
-使用組態檔設定 Windows Communication Foundation (WCF) 服務可讓您彈性提供端點和服務行為資料在部署而不是在設計階段。 本主題概要說明可用的主要技巧。  
+使用組態檔中設定 Windows Communication Foundation (WCF) 服務可讓您彈性提供端點，並設計階段部署而不是在服務行為資料。 本主題概要說明可用的主要技巧。  
   
- WCF 服務是可設定使用[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]技術設定。 最常見的是，XML 項目新增至裝載 WCF 服務的 Internet Information Services (IIS) 網站的 Web.config 檔案。 這些項目允許您變更詳細資料，例如各電腦的端點位址 (用於與服務通訊的實際位址)。 此外，WCF 會包含數個系統提供的項目可讓您快速選取最基本功能的服務。 從開始[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]，WCF 隨附可簡化 WCF 組態需求的新預設組態模型。 如果您未提供任何特定服務的 WCF 組態，執行階段會以一些標準端點和預設繫結/行為自動設定服務。 事實上，撰寫組態是主要的撰寫 WCF 應用程式一部分。  
+ WCF 服務是可設定使用[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]技術設定。 大多數情況下，XML 項目會新增至裝載的 WCF 服務的 Internet Information Services (IIS) 網站的 Web.config 檔案。 這些項目允許您變更詳細資料，例如各電腦的端點位址 (用於與服務通訊的實際位址)。 此外，WCF 會包含數個系統提供的項目可讓您快速地選取 服務最基本的功能。 從開始[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]，WCF 本身就有新的預設組態模型，可簡化 WCF 組態需求。 如果您未提供任何特定服務的 WCF 組態，執行階段會使用一些標準端點和預設繫結/行為自動設定您的服務。 在實務上，撰寫組態是主要的程式設計 WCF 應用程式一部分。  
   
- 如需詳細資訊，請參閱[設定服務的繫結](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)。 如需的最常用的項目，請參閱 <<c0> [ 之繫結](../../../docs/framework/wcf/system-provided-bindings.md)。 如需有關預設端點、 繫結和行為的詳細資訊，請參閱[簡化的組態](../../../docs/framework/wcf/simplified-configuration.md)和[簡化 WCF 服務的組態](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 服務的設定繫結](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)。 如需的最常用的項目，請參閱 < [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)。 如需預設端點、繫結和行為的詳細資訊，請參閱[簡化的組態](../../../docs/framework/wcf/simplified-configuration.md)和 [WCF 服務的簡化組態](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
 > [!IMPORTANT]
 >  部署並存案例時，如果部署了兩個不同的服務版本，您就必須指定組態檔所參考之組件的部分名稱。 這是因為組態檔會在所有服務版本之間共用，而且它們可能會在不同的 .NET Framework 版本底下執行。  
   
 ## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration：Web.config 和 App.config  
- WCF 中使用的 System.Configuration 組態系統[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]。  
+ WCF 會使用的 System.Configuration 組態系統[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]。  
   
- 設定服務時 Visual Studio 中，使用 Web.config 檔或 App.config 檔案以指定的設定。 組態檔名稱的選擇取決於您為服務選擇的裝載環境。 如果您選擇使用 IIS 來裝載服務，請使用 Web.config 檔。 如果您使用其他任何裝載環境，請使用 App.config 檔。  
+ 設定服務時在 Visual Studio 中，使用 web.config 或 App.config 檔案以指定的設定。 組態檔名稱的選擇取決於您為服務選擇的裝載環境。 如果您選擇使用 IIS 來裝載服務，請使用 Web.config 檔。 如果您使用其他任何裝載環境，請使用 App.config 檔。  
   
  在 Visual Studio 中，名為 App.config 的檔案用來建立最後的組態檔。 最後實際使用的組態名稱取決於組件名稱。 例如，名為 "Cohowinery.exe" 的組件，其最後的組態檔名為 "Cohowinery.exe.config"。 但是，您只需要修改 App.config 檔案。 對該檔案進行的變更，會在編譯階段自動套用至最後的應用程式組態檔中。  
   
- 在使用 App.config 檔案時，一旦應用程式啟動且套用了組態，組態系統會將 App.config 檔案與 Machine.config 檔案的內容合併。 這項機制可讓您透過 Machine.config 檔案來設定整部電腦。 App.config 檔案可以用來覆寫 Machine.config 檔案的設定，您也可以鎖定 Machine.config 檔案的設定以便加以取用。 在 Web.config 情況中，組態系統會將所有目錄乃至應用程式目錄中的 Web.config 檔案合併至已套用的組態。 如需設定和設定值優先權的詳細資訊，請參閱本節中的主題<xref:System.Configuration>命名空間。  
+ 在使用 App.config 檔案時，一旦應用程式啟動且套用了組態，組態系統會將 App.config 檔案與 Machine.config 檔案的內容合併。 這項機制可讓您透過 Machine.config 檔案來設定整部電腦。 App.config 檔案可以用來覆寫 Machine.config 檔案的設定，您也可以鎖定 Machine.config 檔案的設定以便加以取用。 在 Web.config 情況中，組態系統會將所有目錄乃至應用程式目錄中的 Web.config 檔案合併至已套用的組態。 如需有關組態和設定值優先權的詳細資訊，請參閱主題<xref:System.Configuration>命名空間。  
   
 ## <a name="major-sections-of-the-configuration-file"></a>組態檔的主要區段  
  組態檔的主要區段包含下列項目。  
@@ -80,7 +80,7 @@ ms.locfileid: "33807429"
   
 -   [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
   
-### <a name="the-endpoint-element"></a>\<結束點 > 項目  
+### <a name="the-endpoint-element"></a>\<端點 > 項目  
  每個端點都需要下列屬性代表的位址、繫結和合約：  
   
 -   `address`. 指定服務的統一資源識別元 (URI)，此識別元可以是絕對位址，或是相對於服務基底位址的相對位址。 如果設為空字串，則代表在建立服務的 <xref:System.ServiceModel.ServiceHost> 時，指定的基底位址將有可用的端點。  
@@ -91,7 +91,7 @@ ms.locfileid: "33807429"
   
 -   `contract`. 指定可定義合約的介面。 這個介面是由 `name` 項目的 `service` 屬性所指定的 Common Language Runtime (CLR) 型別所實作。  
   
--   [\<結束點 > 項目參考](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)  
+-   [\<結束點 > 項目參考](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)  
   
 ### <a name="the-bindings-element"></a>\<繫結 > 項目  
  `bindings` 項目包含所有繫結的規格，在任何服務中定義的任何端點都可以使用這些繫結。  
@@ -99,9 +99,9 @@ ms.locfileid: "33807429"
  [\<繫結 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
   
 ### <a name="the-binding-element"></a>\<繫結 > 項目  
- `binding`內的項目`bindings`項目可以是其中一個系統提供的繫結 (請參閱[之繫結](../../../docs/framework/wcf/system-provided-bindings.md)) 或自訂繫結 (請參閱[自訂繫結](../../../docs/framework/wcf/extending/custom-bindings.md))。 `binding` 項目具有的 `name` 屬性可將繫結與 `bindingConfiguration` 項目的 `endpoint` 屬性所指定的端點相互關聯。 如果未指定名稱，則該繫結會對應於該繫結型別的預設值。  
+ `binding`中所包含的項目`bindings`項目可以是其中一個系統提供繫結 (請參閱[System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)) 或自訂繫結 (請參閱[自訂繫結](../../../docs/framework/wcf/extending/custom-bindings.md))。 `binding` 項目具有的 `name` 屬性可將繫結與 `bindingConfiguration` 項目的 `endpoint` 屬性所指定的端點相互關聯。 如果未指定名稱，則該繫結會對應於該繫結型別的預設值。  
   
- 如需有關如何設定服務和用戶端的詳細資訊，請參閱[設定的 Windows Communication Foundation 應用程式](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)。  
+ 如需有關如何設定服務和用戶端的詳細資訊，請參閱 <<c0> [ 設定的 Windows Communication Foundation 應用程式](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)。  
   
  [\<繫結 >](../../../docs/framework/misc/binding.md)  
   
@@ -148,7 +148,7 @@ ms.locfileid: "33807429"
 </configuration>  
 ```  
   
- `name` 的 `bindingConfiguration` 會在 `<binding>` 項目中設定。 `name`必須繫結類型的範圍內的唯一字串，在此情況下[< basicHttpBinding\>](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)，或為參考預設繫結的空值。 端點會將 `bindingConfiguration` 屬性設為此字串來連結至組態。  
+ `name` 的 `bindingConfiguration` 會在 `<binding>` 項目中設定。 `name`必須是唯一的字串繫結類型的範圍內，在此情況下[< basicHttpBinding\>](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)，或空的值來參考預設繫結。 端點會將 `bindingConfiguration` 屬性設為此字串來連結至組態。  
   
  如下列範例所示， `behaviorConfiguration` 也是以同樣方式來實作。  
   
@@ -260,10 +260,10 @@ ms.locfileid: "33807429"
   
  行為合併會同時套用至組態中的端點行為和服務行為。  
   
- 如果子行為集合包含已經存在父行為集合中的行為，子行為就會覆寫父代。 因此，如果父行為集合具有`<serviceMetadata httpGetEnabled="False" />`而且子行為集合具有`<serviceMetadata httpGetEnabled="True" />`，子行為就會覆寫行為集合中的父行為，而且 httpGetEnabled 會是"true"。  
+ 如果子行為集合包含已經存在父行為集合中的行為，子行為就會覆寫父代。 因此，如果父行為集合具有`<serviceMetadata httpGetEnabled="False" />`，而且子行為集合具有`<serviceMetadata httpGetEnabled="True" />`，子行為將會覆寫行為集合中的父行為，而且 httpGetEnabled 會是"true"。  
   
 ## <a name="see-also"></a>另請參閱  
  [簡化設定](../../../docs/framework/wcf/simplified-configuration.md)  
- [設定 Windows Communication Foundation 應用程式](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
+ [設定 Windows Communication Foundation 應用程式](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
  [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
  [\<繫結 >](../../../docs/framework/misc/binding.md)

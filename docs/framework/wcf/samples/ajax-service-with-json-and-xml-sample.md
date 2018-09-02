@@ -2,24 +2,24 @@
 title: 含 JSON 和 XML 的 AJAX 服務範例
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-ms.openlocfilehash: 32964c287b0064daf529aa4c1e28f0927d29a6d5
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 1beb89c11fccefec24ccbebc3fe30033a646718d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807341"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43452686"
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>含 JSON 和 XML 的 AJAX 服務範例
-這個範例示範如何使用 Windows Communication Foundation (WCF) 建立傳回 JavaScript 物件標記法 (JSON) 或 XML 資料的 Asynchronous JavaScript and XML (AJAX) 服務。 您可以從 Web 瀏覽器用戶端使用 JavaScript 程式碼存取 AJAX 服務。 這個範例是根據[基本 AJAX 服務](../../../../docs/framework/wcf/samples/basic-ajax-service.md)範例。  
+此範例示範如何使用 Windows Communication Foundation (WCF) 建立會傳回 JavaScript 物件標記法 (JSON) 或 XML 資料的 Asynchronous JavaScript and XML (AJAX) 服務。 您可以從 Web 瀏覽器用戶端使用 JavaScript 程式碼存取 AJAX 服務。 這個範例是根據[基本 AJAX 服務](../../../../docs/framework/wcf/samples/basic-ajax-service.md)範例。  
   
- 不像其他 AJAX 範例，這個範例不會使用 ASP.NET AJAX 以及 <xref:System.Web.UI.ScriptManager> 控制項。 搭配一些額外的組態，可以從 JavaScript 中，透過任何 HTML 網頁存取 WCF AJAX 服務，此案例如下所示。 如需使用 WCF 與 ASP.NET AJAX 的範例，請參閱[AJAX 範例](http://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e)。  
+ 不像其他 AJAX 範例，這個範例不會使用 ASP.NET AJAX 以及 <xref:System.Web.UI.ScriptManager> 控制項。 搭配一些額外的組態，可以從任何 HTML 網頁，透過 JavaScript 存取 WCF AJAX 服務，以及此案例如下所示。 使用 WCF 與 ASP.NET AJAX 的範例，請參閱[AJAX 範例](https://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e)。  
   
  這個範例會示範如何從 JSON 和 XML 之間切換作業的回應型別。 不論是設定由 ASP.NET AJAX 或 HTML/JavaScript 用戶端頁面存取此服務，這項功能都會提供使用。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
   
- 若要啟用非 ASP.NET AJAX 用戶端，請使用 .svc 檔案中的 <xref:System.ServiceModel.Activation.WebServiceHostFactory> (而非 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>)。 <xref:System.ServiceModel.Activation.WebServiceHostFactory> 會將 <xref:System.ServiceModel.Description.WebHttpEndpoint> 標準端點加入至服務。 在與.svc 檔; 相對的空位址設定端點這表示服務的位址是http://localhost/ServiceModelSamples/service.svc，與作業名稱以外的任何其他後置字元。  
+ 若要啟用非 ASP.NET AJAX 用戶端，請使用 .svc 檔案中的 <xref:System.ServiceModel.Activation.WebServiceHostFactory> (而非 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>)。 <xref:System.ServiceModel.Activation.WebServiceHostFactory> 會將 <xref:System.ServiceModel.Description.WebHttpEndpoint> 標準端點加入至服務。 此端點被設定在相對於.svc 檔案中; 的空位址這表示服務的位址是 http://localhost/ServiceModelSamples/service.svc，使用作業名稱以外的任何其他後置字元。  
   
 ```svc
 <%@ServiceHost language="c#" Debug="true" Service="Microsoft.Samples.XmlAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebServiceHostFactory" %>  
@@ -38,9 +38,9 @@ ms.locfileid: "33807341"
 </system.serviceModel>  
 ```  
   
- 預設資料格式<xref:System.ServiceModel.Description.WebHttpEndpoint>為 XML，而預設資料格式<xref:System.ServiceModel.Description.WebScriptEndpoint>為 JSON。 如需詳細資訊，請參閱[不含 ASP.NET 建立 WCF AJAX 服務](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md)。  
+ 預設資料格式<xref:System.ServiceModel.Description.WebHttpEndpoint>時的預設資料格式為 XML，<xref:System.ServiceModel.Description.WebScriptEndpoint>是 JSON。 如需詳細資訊，請參閱 <<c0> [ 不含 ASP.NET 中建立 WCF AJAX 服務](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md)。  
   
- 下列範例中的服務是標準的 WCF 服務，有兩個作業。 這兩種作業的 <xref:System.ServiceModel.Web.WebMessageBodyStyle.Wrapped> 或 <xref:System.ServiceModel.Web.WebGetAttribute> 屬性上都必須是 <xref:System.ServiceModel.Web.WebInvokeAttribute> 本文樣式，這是 `webHttp` 行為的特定需求，而且不會影響 JSON/XML 資料格式切換。  
+ 下列範例中的服務是標準的 WCF 服務的兩項作業。 這兩種作業的 <xref:System.ServiceModel.Web.WebMessageBodyStyle.Wrapped> 或 <xref:System.ServiceModel.Web.WebGetAttribute> 屬性上都必須是 <xref:System.ServiceModel.Web.WebInvokeAttribute> 本文樣式，這是 `webHttp` 行為的特定需求，而且不會影響 JSON/XML 資料格式切換。  
 
 ```csharp
 [OperationContract]  
@@ -48,7 +48,7 @@ ms.locfileid: "33807341"
 MathResult DoMathXml(double n1, double n2);  
 ```
 
- 指定作業的回應格式為 XML，這是預設設定[ \<webHttp >](../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)行為。 然而，明確指定回應格式是較好的做法。  
+ 作業的回應格式會指定為 XML，這是預設值設定為[ \<webHttp >](../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)行為。 然而，明確指定回應格式是較好的做法。  
   
  其他作業會使用 `WebInvokeAttribute` 屬性，並且明確地指定回應型別為 JSON 而不是 XML。  
 
@@ -58,9 +58,9 @@ MathResult DoMathXml(double n1, double n2);
 MathResult DoMathJson(double n1, double n2);  
 ```
 
- 請注意，這兩種情況的作業傳回複雜類型， `MathResult`，這是標準的 WCF 資料合約型別。  
+ 請注意這兩種情況的作業傳回複雜類型， `MathResult`，這是標準的 WCF 資料合約型別。  
   
- 用戶端網頁 XmlAjaxClientPage.htm 包含的 JavaScript 程式碼叫用前述兩項作業的其中一個當使用者按一下**執行計算 (傳回 JSON)** 或**執行計算 (傳回 XML)** 網頁上的按鈕。 叫用此服務的程式碼會建構 JSON 本文，然後使用 HTTP POST 加以傳送。 建立要求以手動方式在 JavaScript 中，不同於[基本 AJAX 服務](../../../../docs/framework/wcf/samples/basic-ajax-service.md)範例，並使用 ASP.NET AJAX 的其他範例。  
+ 用戶端網頁 XmlAjaxClientPage.htm 包含叫用上述兩項作業的其中一個當使用者按一下的 JavaScript 程式碼**執行計算 (傳回 JSON)** 或**執行計算 (傳回 XML)** 網頁上的按鈕。 叫用此服務的程式碼會建構 JSON 本文，然後使用 HTTP POST 加以傳送。 建立要求以手動方式在 JavaScript 中，不同於[基本 AJAX 服務](../../../../docs/framework/wcf/samples/basic-ajax-service.md)範例，並使用 ASP.NET AJAX 的其他範例。  
 
 ```csharp
 // Create HTTP request  
@@ -99,17 +99,17 @@ xmlHttp.onreadystatechange=function(){
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\AJAX\XmlAjaxService`  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  中所述，建置此方案 XmlAjaxService.sln[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+2.  中所述，建置方案 XmlAjaxService.sln[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-3.  瀏覽至http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm（不要在瀏覽器從專案目錄開啟 XmlAjaxClientPage.htm）。  
+3.  瀏覽至 http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm（不要在瀏覽器從專案目錄開啟 XmlAjaxClientPage.htm）。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 HTTP POST 的 AJAX 服務](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)

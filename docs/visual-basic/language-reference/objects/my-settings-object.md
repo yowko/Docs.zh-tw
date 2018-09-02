@@ -1,5 +1,5 @@
 ---
-title: My.Settings 物件
+title: My.Settings 物件 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - My.MySettingsProperty.Settings
@@ -7,29 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
-ms.openlocfilehash: 54176ae6706311b17227c7dc21a5060c9b369753
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83bba35340a917b649369fc1eb7a01a2bc6a2188
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603028"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43442768"
 ---
 # <a name="mysettings-object"></a>My.Settings 物件
-提供屬性和方法來存取應用程式的設定。  
+提供屬性和方法，以存取應用程式的設定。  
   
 ## <a name="remarks"></a>備註  
- `My.Settings`物件存取應用程式的設定，並可讓您動態儲存及擷取屬性設定和應用程式的其他資訊。 如需詳細資訊，請參閱[管理應用程式設定 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)。  
+ `My.Settings`物件可讓您存取應用程式的設定，並可讓您以動態方式儲存及擷取屬性設定和應用程式的其他資訊。 如需詳細資訊，請參閱[管理應用程式設定 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)。  
   
 ## <a name="properties"></a>屬性  
  `My.Settings` 物件的屬性可存取您應用程式的設定。 若要新增或移除設定，使用**設定設計工具**。  
   
- 每個設定都**名稱**，**類型**，**範圍**，和**值**，以及這些設定會決定如何存取每個設定的屬性會出現在`My.Settings`物件：  
+ 每個設定都**名稱**，**型別**，**範圍**，和**值**，以及這些設定會決定如何用來存取每個設定屬性會出現在`My.Settings`物件：  
   
 -   **名稱**判斷屬性的名稱。  
   
 -   **型別**判斷屬性的型別。  
   
--   **範圍**指出屬性是否為唯讀。 如果值為**應用程式**，屬性是唯讀的; 如果值為**使用者**，屬性是讀寫。  
+-   **範圍**指出屬性是否為唯讀。 如果值為**應用程式**，此屬性是唯讀的; 如果值為**使用者**，屬性是讀寫。  
   
 -   **值**是屬性的預設值。  
   
@@ -37,13 +37,13 @@ ms.locfileid: "33603028"
   
 |方法|描述|  
 |---|---|  
-|`Reload`|重新載入使用者設定，從上次儲存的值。|  
+|`Reload`|重新載入使用者設定從上次儲存的值。|  
 |`Save`|儲存目前的使用者設定。|  
   
  `My.Settings`物件也提供進階的屬性和方法，繼承自<xref:System.Configuration.ApplicationSettingsBase>類別。  
   
 ## <a name="tasks"></a>工作  
- 下表列出包含工作的範例`My.Settings`物件。  
+ 下表列出與工作的範例`My.Settings`物件。  
   
 |以|請參閱|  
 |---|---|  

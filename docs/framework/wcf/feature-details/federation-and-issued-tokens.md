@@ -6,15 +6,15 @@ helpviewer_keywords:
 - issued tokens [WCF]
 - federation [WCF], issued tokens
 ms.assetid: 4c31ee7d-a820-4067-8b84-a83049021bb6
-ms.openlocfilehash: b6a5411b74b53cb5e3b18cced7fd8fc09e9a9676
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bdbd5c49197b65816da9b0f2c87d97afb893d79f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491571"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420206"
 ---
 # <a name="federation-and-issued-tokens"></a>聯合與發行的權杖
-使用 Windows Communication Foundation (WCF)，您可以建立與實作 WS-同盟和 Ws-trust 規格的服務進行安全通訊的用戶端。 這些規格使用 XML、SOAP 和 Web 服務描述語言 (WSDL)，提供跨不同信任領域的驗證和授權。  
+使用 Windows Communication Foundation (WCF) 中，您可以建立與實作 WS-同盟和 Ws-trust 規格的服務安全地通訊的用戶端。 這些規格使用 XML、SOAP 和 Web 服務描述語言 (WSDL)，提供跨不同信任領域的驗證和授權。  
   
 ## <a name="in-this-section"></a>本節內容  
  [同盟](../../../../docs/framework/wcf/feature-details/federation.md)  
@@ -24,7 +24,7 @@ ms.locfileid: "33491571"
  列出建立聯合服務或用戶端時應注意的設計問題。  
   
  [如何：建立同盟用戶端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- 說明使用 WCF 建立聯合用戶端的基本概念。  
+ 說明建立聯合用戶端使用 WCF 的基本概念。  
   
  [如何：設定同盟服務的認證](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
  說明建立聯盟服務的步驟。  
@@ -64,4 +64,4 @@ ms.locfileid: "33491571"
 ## <a name="see-also"></a>另請參閱  
  [授權](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
  [自訂權杖](../../../../docs/framework/wcf/extending/custom-tokens.md)  
- [Windows Server App Fabric 的安全性模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

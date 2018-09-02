@@ -9,12 +9,12 @@ helpviewer_keywords:
 - linkres compiler option [Visual Basic]
 - -linkres compiler option [Visual Basic]
 ms.assetid: cf4dcad8-17b7-404c-9184-29358aa05b15
-ms.openlocfilehash: 38740ed7ab7904feb2ca95eb70c916fbdbaef71e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4f4b3db768b5466f8912b66a0a4709d0f773c1f3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654339"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425514"
 ---
 # <a name="-linkresource-visual-basic"></a>-linkresource (Visual Basic)
 建立與 Managed 資源的連結。  
@@ -35,21 +35,21 @@ ms.locfileid: "33654339"
  選擇性。 資源的邏輯名稱。 用來載入資源的名稱。 預設值是檔案的名稱。 您可以選擇性地指定檔案是否公用或私用組件資訊清單中，例如： `-linkres:filename.res,myname.res,public`。 根據預設，`filename`是公用的組件中。  
   
 ## <a name="remarks"></a>備註  
- `-linkresource`選項不會在輸出檔中內嵌資源檔; 使用`-resource`選項來執行這項操作。  
+ `-linkresource`選項不會將資源檔內嵌至輸出檔; 使用`-resource`選項來執行這項操作。  
   
- `-linkresource`選項需要一個`-target`選項以外`-target:module`。  
+ `-linkresource`選項需要其中一個`-target`以外的其他選項`-target:module`。  
   
- 如果`filename`是[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]建立資源檔，例如，藉由[Resgen.exe （資源檔產生器）](http://msdn.microsoft.com/library/8ef159de-b660-4bec-9213-c3fbc4d1c6f4) ，或是在開發環境中，它可以存取與其中成員保持<xref:System.Resources>命名空間。 (如需詳細資訊，請參閱 <xref:System.Resources.ResourceManager>)。若要在執行階段存取所有其他資源，可使用的方式開頭`GetManifestResource`中<xref:System.Reflection.Assembly>類別。  
+ 如果`filename`已[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]建立的資源檔，例如，藉由[Resgen.exe （資源檔產生器）](https://msdn.microsoft.com/library/8ef159de-b660-4bec-9213-c3fbc4d1c6f4)或在開發環境中，它可以存取使用中的成員<xref:System.Resources>命名空間。 (如需詳細資訊，請參閱 <xref:System.Resources.ResourceManager>)。若要在執行階段存取所有其他資源，請使用 開頭的方法`GetManifestResource`在<xref:System.Reflection.Assembly>類別。  
   
  檔案名稱可以是任何檔案格式。 例如，您可能需要產生組件的原生 DLL 部分，以便安裝到全域組件快取中，並從組件的 Managed 程式碼存取。  
   
  `-linkresource` 的簡短形式為 `-linkres`。  
   
 > [!NOTE]
->  `-linkresource`選項不可以從 Visual Studio 開發環境，則可以使用只有當您編譯從命令列。  
+>  `-linkresource`選項不是可從 Visual Studio 開發環境; 它是使用只有您在編譯時從命令列。  
   
 ## <a name="example"></a>範例  
- 下列程式碼編譯`in.vb`以及資源檔連結`rf.resource`。  
+ 下列程式碼會編譯`in.vb`以及資源檔的連結`rf.resource`。  
   
 ```console  
 vbc -linkresource:rf.resource in.vb  
@@ -57,6 +57,6 @@ vbc -linkresource:rf.resource in.vb
   
 ## <a name="see-also"></a>另請參閱  
  [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-目標 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
+ [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
  [-資源 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)  
  [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

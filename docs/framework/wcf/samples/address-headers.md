@@ -2,12 +2,12 @@
 title: 位址標頭
 ms.date: 03/30/2017
 ms.assetid: b0c94d4a-3bde-4b4d-bb6d-9f12bc3a6940
-ms.openlocfilehash: 276649c17a04822eb27eb4e3ed9cbe711b384edc
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: d2e38c674e0a3ea10df2e8363e90f4adf7edc9da
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803786"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420553"
 ---
 # <a name="address-headers"></a>位址標頭
 位址標頭範例會示範用戶端如何參考參數傳遞給使用 Windows Communication Foundation (WCF) 服務。  
@@ -15,7 +15,7 @@ ms.locfileid: "33803786"
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
   
- WS-Addressing 規格會將端點參考的概念定義成針對特定 Web 服務端點的定址方式。 在 WCF 中，端點參考使用建立模型`EndpointAddress`類別-`EndpointAddress`的 [位址] 欄位的類型`ServiceEndpoint`類別。  
+ WS-Addressing 規格會將端點參考的概念定義成針對特定 Web 服務端點的定址方式。 在 WCF 中，端點參考會使用建立模型`EndpointAddress`類別-`EndpointAddress`的 [位址] 欄位的類型`ServiceEndpoint`類別。  
   
  端點參考模型的一部分，是每個參考可以包含一些會新增額外識別資訊的參考參數。 在 WCF 中，這些參考參數會模型化為的執行個體`AddressHeader`類別。  
   
@@ -68,18 +68,18 @@ return "Hello, " + id;
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-3.  若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\AddressHeaders`  
   
