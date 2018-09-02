@@ -2,12 +2,12 @@
 title: 執行緒 (C#)
 ms.date: 07/20/2015
 ms.assetid: 236d157d-37c0-4ee8-89fc-721e6c596325
-ms.openlocfilehash: 35f0ee3bfd67104d9eaab7c4dde7e35a28a374c5
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: ca5b2b2d38e72d3511a570c22a153e792a27a04a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934697"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456911"
 ---
 # <a name="threading-c"></a>執行緒 (C#)
 C# 程式可以透過執行緒執行並行處理，讓您可以一次執行多項作業。 例如，您可以使用執行緒監視使用者的輸入、執行背景工作，以及處理同時的輸入資料流。  
@@ -31,7 +31,7 @@ C# 程式可以透過執行緒執行並行處理，讓您可以一次執行多�
  您可以其中一些類別來同步多執行緒的活動，但有一些執行緒的支援則來自 C# 語言。 例如 [Lock 陳述式](../../../../csharp/language-reference/keywords/lock-statement.md)可以透過隱含使用<xref:System.Threading.Monitor>來提供同步功能。  
   
 > [!NOTE]
->  自 [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] 起，多執行緒程式設計因為 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 及 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 類別、[平行 LINQ (PLINQ)](https://msdn.microsoft.com/library/dd460688)、<xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空間中的新並行集合類別，以及以工作 (而非執行緒) 概念為基礎的新程式設計模型而獲得大幅簡化。 如需詳細資訊，請參閱[平行程式設計](../../../../../docs/standard/parallel-programming/index.md)。  
+>  自 [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] 起，多執行緒程式設計因為 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 及 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 類別、[平行 LINQ (PLINQ)](../../../../standard/parallel-programming/parallel-linq-plinq.md)、<xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空間中的新並行集合類別，以及以工作 (而非執行緒) 概念為基礎的新程式設計模型而獲得大幅簡化。 如需詳細資訊，請參閱[平行程式設計](../../../../../docs/standard/parallel-programming/index.md)。  
   
 ## <a name="related-topics"></a>相關主題  
   
