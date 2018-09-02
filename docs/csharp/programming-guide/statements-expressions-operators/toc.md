@@ -13,7 +13,6 @@
 ### [使用轉換運算子](using-conversion-operators.md)
 ### [如何：在結構之間實作使用者定義的轉換](how-to-implement-user-defined-conversions-between-structs.md)
 ## [預設值運算式](default-value-expressions.md)
-## [如何：使用運算子多載建立複數類別](how-to-use-operator-overloading-to-create-a-complex-number-class.md)
 ## [相等比較](equality-comparisons.md)
 ### [如何：定義型別的實值相等](how-to-define-value-equality-for-a-type.md)
 ### [如何：參考相等 (識別) 的測試](how-to-test-for-reference-equality-identity.md)
