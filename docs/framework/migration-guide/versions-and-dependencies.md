@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2575d6fbc5e8a26da301826ef8f7b0611a84871e
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: c18659fa3db1f2e7e047f1bbdc4f75ba6e96f0c6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255557"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464096"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 版本和相依性
 每一版 .NET Framework 都包含通用語言執行平台 (CLR)、基底類別庫及其他 Managed 程式庫。 本主題將說明各版 .NET Framework 的主要功能、提供有關基礎 CLR 版本和相關聯開發環境的資訊，以及識別 Windows 作業系統所安裝的版本。  
@@ -61,7 +61,7 @@ ms.locfileid: "43255557"
   
      [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 及 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 在這裡僅作示範用途。 此準則適用於目標較安裝於執行所在系統上版本更新之 .NET Framework 的任何應用程式。  
   
- .NET Framework 中的某些變更可能需要您變更應用程式程式碼；在您執行 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或更新版本的現有應用程式之前，請參閱[應用程式相容性](../../../docs/framework/migration-guide/application-compatibility.md)。 如需安裝目前版本的詳細資訊，請參閱[安裝適用於開發人員的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。 如需 .NET Framework 支援的資訊，請參閱 Microsoft 技術支援網站上的 [Microsoft .NET Framework 支援週期原則](http://go.microsoft.com/fwlink/?LinkId=196607)。  
+ .NET Framework 中的某些變更可能需要您變更應用程式程式碼；在您執行 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或更新版本的現有應用程式之前，請參閱[應用程式相容性](../../../docs/framework/migration-guide/application-compatibility.md)。 如需安裝目前版本的詳細資訊，請參閱[安裝適用於開發人員的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。 如需 .NET Framework 支援的資訊，請參閱 Microsoft 技術支援網站上的 [Microsoft .NET Framework 支援週期原則](https://go.microsoft.com/fwlink/?LinkId=196607)。  
   
 ## <a name="targeting-and-running-apps-for-older-versions"></a>鎖定及執行舊版的應用程式  
  .NET Framework 2.0、3.0 及 3.5 版是用相同版本的 CLR (CLR 2.0) 所建置。 這些版本代表單一安裝的連續執行層。 每個版本都是以累加方式建置於舊版之上。 2.0、3.0 和 3.5 版無法在電腦上並存執行。 當您安裝 3.5 版時，會自動取得 2.0 和 3.0 執行層，而針對 2.0、3.0 和 3.5 版所建置的應用程式全都可以在 3.5 版上執行。 但在 .NET Framework 4 中已不再使用此圖層方法，而其與更新的版本 (.NET Framework 4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1 與 4.7.2) 也會出現單一安裝的連續圖層。  從 .NET Framework 4 開始，您可以使用同處理序並存裝載功能，在單一處理序中執行多個 CLR 版本。 如需詳細資訊，請參閱[組件和並存執行](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md)。  
@@ -81,5 +81,5 @@ ms.locfileid: "43255557"
 ## <a name="see-also"></a>另請參閱
 
 [版本相容性](../../../docs/framework/migration-guide/version-compatibility.md)   
-[Microsoft .NET Framework 支援週期原則](http://go.microsoft.com/fwlink/?LinkId=196607)   
+[Microsoft .NET Framework 支援週期原則](https://go.microsoft.com/fwlink/?LinkId=196607)   
 [疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
