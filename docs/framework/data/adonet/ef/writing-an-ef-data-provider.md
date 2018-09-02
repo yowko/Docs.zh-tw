@@ -2,15 +2,15 @@
 title: 撰寫 Entity Framework 資料提供者
 ms.date: 03/30/2017
 ms.assetid: 092e88c4-a301-453a-b5c3-5740c6575a9f
-ms.openlocfilehash: 578de94aa191d7302b762f1cdc87d4a6810037e3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 50c0555d84c5b5f180c8c49a8419e8a414a4befe
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762630"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401457"
 ---
 # <a name="writing-an-entity-framework-data-provider"></a>撰寫 Entity Framework 資料提供者
-本章節將討論如何撰寫[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]提供者來支援非 SQL Server 資料來源。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]包含支援 SQL Server 提供者。  
+本節討論如何撰寫[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]支援 SQL Server 以外的資料來源的提供者。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]包含支援 SQL Server 的提供者。  
   
 ## <a name="introducing-the-entity-framework-provider-model"></a>Entity Framework 提供者模型簡介  
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 與資料庫無關，而且您可以使用 ADO.NET 提供者模型來撰寫提供者，以便連接到各種不同的資料來源。  
@@ -32,7 +32,7 @@ ms.locfileid: "32762630"
  ![b42a7a5c&#45;0ac0&#45;4911&#45;86be&#45;0460a78760ba](../../../../../docs/framework/data/adonet/ef/media/b42a7a5c-0ac0-4911-86be-0460a78760ba.gif "b42a7a5c-0ac0-4911-86be-0460a78760ba")  
   
 ## <a name="sample"></a>範例  
- 請參閱[Entity Framework 範例提供者](http://go.microsoft.com/fwlink/?LinkId=180616)某個[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]支援非 SQL Server 資料來源的提供者。  
+ 請參閱[Entity Framework 範例提供者](https://go.microsoft.com/fwlink/?LinkId=180616)如需範例的[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]支援 SQL Server 以外的資料來源的提供者。  
   
 ## <a name="in-this-section"></a>本節內容  
  [SQL 產生](../../../../../docs/framework/data/adonet/ef/sql-generation.md)  

@@ -2,20 +2,20 @@
 title: 傳輸通訊協定
 ms.date: 03/30/2017
 ms.assetid: 2820b0ec-2f32-430c-b299-1f0e95e1f2dc
-ms.openlocfilehash: 8841a9cf414ae94da7e63bd7312a3c541ab6de1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e4f464d88a63a0aad17982d0329971de4fc5a07
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508434"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398816"
 ---
 # <a name="transaction-protocols"></a>傳輸通訊協定
 Windows Communication Foundation (WCF) 會實作 Ws-atomic Transaction 和 Ws-coordination 通訊協定。  
   
 |規格/文件|版本|連結|  
 |-----------------------------|-------------|----------|  
-|WS-Coordination|1.0<br /><br /> 1.1|[http://go.microsoft.com/fwlink/?LinkId=96104](http://go.microsoft.com/fwlink/?LinkId=96104)<br /><br /> [http://go.microsoft.com/fwlink/?LinkId=96079](http://go.microsoft.com/fwlink/?LinkId=96079)|  
-|WS-AtomicTransaction|1.0<br /><br /> 1.1|[http://go.microsoft.com/fwlink/?LinkId=96080](http://go.microsoft.com/fwlink/?LinkId=96080)<br /><br /> http://go.microsoft.com/fwlink/?LinkId=96081|  
+|WS-Coordination|1.0<br /><br /> 1.1|[https://go.microsoft.com/fwlink/?LinkId=96104](https://go.microsoft.com/fwlink/?LinkId=96104)<br /><br /> [https://go.microsoft.com/fwlink/?LinkId=96079](https://go.microsoft.com/fwlink/?LinkId=96079)|  
+|WS-AtomicTransaction|1.0<br /><br /> 1.1|[https://go.microsoft.com/fwlink/?LinkId=96080](https://go.microsoft.com/fwlink/?LinkId=96080)<br /><br /> https://go.microsoft.com/fwlink/?LinkId=96081|  
   
  這些通訊協定規格的互通性需要滿足兩個層級：在應用程式之間，以及在異動管理員之間的層級 (請參閱下圖)。 規格詳細描述兩種互通性層級的訊息格式和訊息交換。 對應用程式之間的交換也會如同針對標準應用程式交換一樣，套用特定安全性、可靠性和編碼。 但是，交易管理員之間若要成功地達成互通性，便需要有一致的特定繫結，因為使用者通常不會設定它。  
   
@@ -23,7 +23,7 @@ Windows Communication Foundation (WCF) 會實作 Ws-atomic Transaction 和 Ws-co
   
  下圖描述兩個異動管理員之間：異動管理員 1 和異動管理員 2，以及兩個應用程式之間：應用程式 1 和應用程式 2 的互通性。  
   
- ![交易通訊協定](../../../../docs/framework/wcf/feature-details/media/transactionmanagers.gif "異動管理員")  
+ ![異動通訊協定](../../../../docs/framework/wcf/feature-details/media/transactionmanagers.gif "異動管理員")  
   
  使用一個啟動器 (I) 和一個參與者 (P) 考量一般的 WS-Coordination/WS-Atomic Transaction 案例。 啟動器和參與者都有異動管理員 (分別是 ITM 和 PTM)。 在此主題中，兩階段交易認可會稱為 2PC。  
   
@@ -59,16 +59,16 @@ Windows Communication Foundation (WCF) 會實作 Ws-atomic Transaction 和 Ws-co
   
 |前置詞|版本|命名空間 URI|  
 |------------|-------------|-------------------|  
-|s11||[http://go.microsoft.com/fwlink/?LinkId=96014](http://go.microsoft.com/fwlink/?LinkId=96014)|  
-|wsa|Pre 1.0<br /><br /> 1.0|http://www.w3.org/2004/08/addressing<br /><br /> [http://go.microsoft.com/fwlink/?LinkId=96022](http://go.microsoft.com/fwlink/?LinkId=96022)|  
-|wscoor|1.0<br /><br /> 1.1|[http://go.microsoft.com/fwlink/?LinkId=96078](http://go.microsoft.com/fwlink/?LinkId=96078)<br /><br /> [http://go.microsoft.com/fwlink/?LinkId=96079](http://go.microsoft.com/fwlink/?LinkId=96079)|  
-|wsat|1.0<br /><br /> 1.1|[http://go.microsoft.com/fwlink/?LinkId=96080](http://go.microsoft.com/fwlink/?LinkId=96080)<br /><br /> [http://go.microsoft.com/fwlink/?LinkId=96081](http://go.microsoft.com/fwlink/?LinkId=96081)|  
-|t|Pre-1.3<br /><br /> 1.3|[http://go.microsoft.com/fwlink/?LinkId=96082](http://go.microsoft.com/fwlink/?LinkId=96082)<br /><br /> [http://go.microsoft.com/fwlink/?LinkId=96100](http://go.microsoft.com/fwlink/?LinkId=96100)|  
-|o||[http://go.microsoft.com/fwlink/?LinkId=96101](http://go.microsoft.com/fwlink/?LinkId=96101)|  
-|xsd||[http://go.microsoft.com/fwlink/?LinkId=96102](http://go.microsoft.com/fwlink/?LinkId=96102)|  
+|s11||[https://go.microsoft.com/fwlink/?LinkId=96014](https://go.microsoft.com/fwlink/?LinkId=96014)|  
+|wsa|Pre 1.0<br /><br /> 1.0|http://www.w3.org/2004/08/addressing<br /><br /> [https://go.microsoft.com/fwlink/?LinkId=96022](https://go.microsoft.com/fwlink/?LinkId=96022)|  
+|wscoor|1.0<br /><br /> 1.1|[https://go.microsoft.com/fwlink/?LinkId=96078](https://go.microsoft.com/fwlink/?LinkId=96078)<br /><br /> [https://go.microsoft.com/fwlink/?LinkId=96079](https://go.microsoft.com/fwlink/?LinkId=96079)|  
+|wsat|1.0<br /><br /> 1.1|[https://go.microsoft.com/fwlink/?LinkId=96080](https://go.microsoft.com/fwlink/?LinkId=96080)<br /><br /> [https://go.microsoft.com/fwlink/?LinkId=96081](https://go.microsoft.com/fwlink/?LinkId=96081)|  
+|t|Pre-1.3<br /><br /> 1.3|[https://go.microsoft.com/fwlink/?LinkId=96082](https://go.microsoft.com/fwlink/?LinkId=96082)<br /><br /> [https://go.microsoft.com/fwlink/?LinkId=96100](https://go.microsoft.com/fwlink/?LinkId=96100)|  
+|o||[https://go.microsoft.com/fwlink/?LinkId=96101](https://go.microsoft.com/fwlink/?LinkId=96101)|  
+|xsd||[https://go.microsoft.com/fwlink/?LinkId=96102](https://go.microsoft.com/fwlink/?LinkId=96102)|  
   
 ## <a name="transaction-manager-bindings"></a>異動管理員繫結程序  
- R1001： 參與 WS-AT 1.0 交易的交易管理員必須使用 SOAP 1.1 和 Ws-addressing 2004/08 以便 Ws-atomic Transaction 和 Ws-coordination 訊息交換。  
+ R1001： 參與 WS-AT 1.0 交易的交易管理員必須使用 SOAP 1.1 和 Ws-addressing 2004/08 Ws-atomic Transaction 和 Ws-coordination 訊息交換。  
   
  R1002：參與 WS-AT 1.1 交易的交易管理員必須使用 SOAP 1.1，並使用 WS-Addressing 2005/08 以便交換 WS-Atomic Transaction 和 WS-Coordination 訊息。  
   
@@ -85,12 +85,12 @@ Windows Communication Foundation (WCF) 會實作 Ws-atomic Transaction 和 Ws-co
 -   B1112：在系統中每個傳送者與接收者組之間的 DNS 都必須正常運作，X.509 主體名稱檢查才會成功。  
   
 #### <a name="activation-and-registration-binding-configuration"></a>啟動和登錄繫結組態  
- WCF 會透過 HTTPS 需要要求/回覆相互關聯的雙工繫結。 (如需有關相互關聯與要求/回覆訊息交換模式描述的詳細資訊，請參閱第 8 節的「WS-Atomic 異動」)。  
+ WCF 要求透過 HTTPS 的要求/回覆相互關聯的雙工繫結。 (如需有關相互關聯與要求/回覆訊息交換模式描述的詳細資訊，請參閱第 8 節的「WS-Atomic 異動」)。  
   
 #### <a name="2pc-protocol-binding-configuration"></a>2PC 通訊協定繫結組態  
- WCF 還支援單向 （資料包） 訊息透過 HTTPS。 訊息間的相互關聯則留待實作詳細資料中說明。  
+ WCF 支援透過 HTTPS 的單向 （資料包） 訊息。 訊息間的相互關聯則留待實作詳細資料中說明。  
   
- B1131: 實作必須支援`wsa:ReferenceParameters`Ws-addressing 來達成的 WCF 的 2PC 訊息相互關聯中所述。  
+ B1131: 實作必須支援`wsa:ReferenceParameters`Ws-addressing 達成的 WCF 的 2PC 訊息相互關聯所述。  
   
 ### <a name="transaction-manager-mixed-security-binding"></a>交易管理員混合安全性繫結  
  這是個替代 (混合模式) 繫結，會針對識別建立目的同時使用傳輸安全性和 WS-Coordination 發行權杖模型。 啟動與登錄是兩個繫結之間唯一不同的項目。  
@@ -101,7 +101,7 @@ Windows Communication Foundation (WCF) 會實作 Ws-atomic Transaction 和 Ws-co
 #### <a name="activation-message-binding-configuration"></a>啟動訊息繫結組態  
  啟動訊息通常不會參與互通性，因為啟動訊息一般會發生在應用程式與其本機異動管理員之間。  
   
- B1221: WCF 使用雙工的 HTTPS 繫結 (述[傳訊通訊協定](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) 的啟動訊息。 要求與回覆訊息使用 WS-AT 1.0 的 WS-Addressing 2004/08 以及 WS-AT 1.1 的 WS-Addressing 2005/08 產生相互關聯。  
+ B1221: WCF 使用雙向 HTTPS 繫結 (中所述[傳訊通訊協定](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) 啟動訊息。 要求與回覆訊息使用 WS-AT 1.0 的 WS-Addressing 2004/08 以及 WS-AT 1.1 的 WS-Addressing 2005/08 產生相互關聯。  
   
  第 8 節的 WS-Atomic 交易規格進一步描述有關相互關聯與訊息交換模式的詳細資料。  
   
@@ -112,18 +112,18 @@ Windows Communication Foundation (WCF) 會實作 Ws-atomic Transaction 和 Ws-co
  新`t:IssuedTokens`應產生標頭附加至傳出`wscoor:CreateCoordinationContextResponse`訊息。  
   
 #### <a name="registration-message-binding-configuration"></a>登錄訊息繫結組態  
- B1231: WCF 使用雙工的 HTTPS 繫結 (述[傳訊通訊協定](../../../../docs/framework/wcf/feature-details/messaging-protocols.md))。 要求與回覆訊息使用 WS-AT 1.0 的 WS-Addressing 2004/08 以及 WS-AT 1.1 的 WS-Addressing 2005/08 產生相互關聯。  
+ B1231: WCF 使用雙向 HTTPS 繫結 (中所述[傳訊通訊協定](../../../../docs/framework/wcf/feature-details/messaging-protocols.md))。 要求與回覆訊息使用 WS-AT 1.0 的 WS-Addressing 2004/08 以及 WS-AT 1.1 的 WS-Addressing 2005/08 產生相互關聯。  
   
  第 8 節的 WS-AtomicTransaction 進一步描述有關相互關聯與訊息交換模式描述的詳細資料。  
   
- R1232： 傳出`wscoor:Register`訊息必須使用`IssuedTokenOverTransport`驗證模式中所述[安全性通訊協定](../../../../docs/framework/wcf/feature-details/security-protocols.md)。  
+ R1232： 傳出`wscoor:Register`必須使用訊息`IssuedTokenOverTransport`中所述的驗證模式[安全性通訊協定](../../../../docs/framework/wcf/feature-details/security-protocols.md)。  
   
  `wsse:Timestamp`項目必須使用簽署`SecurityContextToken``STx`發出。 這個簽章是證明與特定異動關聯之權杖的所有權，並且用來驗證異動中登錄的參與者。 RegistrationResponse 訊息會透過 HTTPS 傳回。  
   
 #### <a name="2pc-protocol-binding-configuration"></a>2PC 通訊協定繫結組態  
- WCF 還支援單向 （資料包） 訊息透過 HTTPS。 訊息間的相互關聯則留待實作詳細資料中說明。  
+ WCF 支援透過 HTTPS 的單向 （資料包） 訊息。 訊息間的相互關聯則留待實作詳細資料中說明。  
   
- B1241： 實作必須支援`wsa:ReferenceParameters`Ws-addressing 來達成的 WCF 的 2PC 訊息相互關聯中所述。  
+ B1241： 實作必須支援`wsa:ReferenceParameters`Ws-addressing 達成的 WCF 的 2PC 訊息相互關聯所述。  
   
 ## <a name="application-message-exchange"></a>應用程式訊息交換  
  應用程式可以隨意使用應用程式之間訊息的任何特定繫結程序，只要繫結程序符合下列安全性需求：  
@@ -132,9 +132,9 @@ Windows Communication Foundation (WCF) 會實作 Ws-atomic Transaction 和 Ws-co
   
 -   R2002：必須提供 `t:IssuedToken` 的完整性與機密性。  
   
- `CoordinationContext` 標頭包含 `wscoor:Identifier`。 雖然定義`xsd:AnyURI`允許絕對和相對 Uri，使用 WCF 只支援`wscoor:Identifiers`，絕對 uri。  
+ `CoordinationContext` 標頭包含 `wscoor:Identifier`。 雖然定義`xsd:AnyURI`允許使用絕對和相對 Uri，WCF 只支援`wscoor:Identifiers`，絕對 uri。  
   
- B2003： 如果`wscoor:Identifier`的`wscoor:CoordinationContext`是相對 URI，交易式 WCF 服務會傳回錯誤。  
+ B2003： 如果`wscoor:Identifier`的`wscoor:CoordinationContext`是相對 URI，異動的 WCF 服務會傳回錯誤。  
   
 ## <a name="message-examples"></a>訊息範例  
   

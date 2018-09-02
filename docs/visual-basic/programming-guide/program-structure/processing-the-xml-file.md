@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XML comments [Visual Basic], parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
 ms.openlocfilehash: 524a54443b8f2365252f11282ca29fc492bef351
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43000229"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398569"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>處理 XML 檔案 (Visual Basic)
 編譯器會針對程式碼中，標記為要產生文件的每個建構產生識別碼字串。 (如需如何標記您的程式碼的資訊，請參閱[XML 註解標記](../../../visual-basic/language-reference/xmldoc/index.md)。)識別碼字串可唯一識別此建構。 處理 XML 檔案的程式可以使用識別碼字串，來識別對應[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]中繼資料/反映項目。  

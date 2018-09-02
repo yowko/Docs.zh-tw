@@ -2,12 +2,12 @@
 title: 使用 CancellationScope
 ms.date: 03/30/2017
 ms.assetid: 39c5c338-b316-43d6-b7fe-a543281dd1ec
-ms.openlocfilehash: 62b798b29149e30a2fae680b507f62ef0a2e23d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 82d44fff869f207c09dc7685fc3470630e001a59
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517462"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401778"
 ---
 # <a name="using-cancellationscope"></a>使用 CancellationScope
 這個範例示範如何使用 <xref:System.Activities.Statements.CancellationScope> 活動取消應用程式中的工作。  
@@ -35,6 +35,6 @@ ms.locfileid: "33517462"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\CancellationScope`

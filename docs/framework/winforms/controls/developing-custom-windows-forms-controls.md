@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], developing using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 236cebc0-bd71-4f18-9fd6-5d0e592375df
-ms.openlocfilehash: 935358664f93b6428b9153a9bcbed862aeee07ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ab459f37e825d71163e375e10f30fbe3e23911a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528664"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397599"
 ---
 # <a name="developing-custom-windows-forms-controls-with-the-net-framework"></a>使用 .NET Framework 開發自訂的 Windows Form 控制項
 Windows Form 控制項是可重複使用的元件，這些控制項可封裝使用者介面功能，並可用於用戶端 Windows 應用程式。 Windows Form 不僅提供許多立即可用的控制項，也提供用以開發您自己的控制項的基礎結構。 您可以結合現有的控制項、擴充現有的控制項，或撰寫您自己的自訂控制項。 本節提供背景資訊和範例，以協助您開發 Windows Form 控制項。  
@@ -51,13 +51,13 @@ Windows Form 控制項是可重複使用的元件，這些控制項可封裝使�
  描述這個類別，並且提供其所有成員的連結。  
   
 ## <a name="related-sections"></a>相關章節  
- [元件的設計階段屬性](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)  
+ [元件的設計階段屬性](https://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)  
  列出要套用至元件和控制項的中繼資料屬性，以便在設計階段於視覺設計工具中正確顯示這些屬性。  
   
- [擴充設計階段支援](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ [擴充設計階段支援](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
  描述如何實作類別，例如提供設計階段支援的編輯器和設計工具。  
   
- [如何：授權元件和控制項](http://msdn.microsoft.com/library/8e66c1ed-a445-4b26-8185-990b6e2bbd57)  
+ [如何：授權元件和控制項](https://msdn.microsoft.com/library/8e66c1ed-a445-4b26-8185-990b6e2bbd57)  
  描述如何在您的控制項或元件中實作授權。  
   
- 另請參閱[在設計階段開發 Windows Forms 控制項](http://msdn.microsoft.com/library/w29y3h59\(v=vs.110\))。
+ 另請參閱[在設計階段開發 Windows Forms 控制項](https://msdn.microsoft.com/library/w29y3h59\(v=vs.110\))。

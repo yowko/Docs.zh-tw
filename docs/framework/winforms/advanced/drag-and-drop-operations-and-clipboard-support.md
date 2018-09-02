@@ -6,12 +6,12 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Clipboard [Windows Forms], Windows Forms
 ms.assetid: 7cce79b6-5835-46fd-b690-73f12ad368b2
-ms.openlocfilehash: 05cc79abdeb41cd3bfb7db21ebb206eb309ad5d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2bb3c24298ffe5308af03c5af5bae697a22c33b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522568"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398628"
 ---
 # <a name="drag-and-drop-operations-and-clipboard-support"></a>拖放作業和剪貼簿支援
 若要在 Windows 架構應用程式內啟用使用者拖放作業，您可以處理一系列的事件，最值得注意的是 <xref:System.Windows.Forms.Control.DragEnter>、<xref:System.Windows.Forms.Control.DragLeave> 和 <xref:System.Windows.Forms.Control.DragDrop> 事件。  
@@ -42,4 +42,4 @@ ms.locfileid: "33522568"
  說明開始拖曳作業之主要方法的複雜性。  
   
  <xref:System.Windows.Forms.Clipboard>  
- 另請參閱[如何： 傳送資料至作用中 MDI 子系](http://msdn.microsoft.com/library/y0hkh2c8\(v=vs.110\))。
+ 另請參閱[如何： 將資料傳送至作用中的 MDI 子系](https://msdn.microsoft.com/library/y0hkh2c8\(v=vs.110\))。

@@ -9,16 +9,16 @@ ms.assetid: bb321126-4770-41da-983a-67b7b89d45dd
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 61e387462126bc7b0752932ca617f7a97235a1c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25d27faeac2c60a50801b817185aa1d5196e506d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409529"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398556"
 ---
 # <a name="ui-automation-support-for-the-combobox-control-type"></a>ComboBox 控制項類型的 UI 自動化支援
 > [!NOTE]
->  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱 < [Windows Automation API： 使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主題提供 ComboBox 控制項類型的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支援相關資訊。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，控制項類型是一組控制項條件，控制項必須符合條件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 屬性。 這些條件包括 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性值、控制項模式和 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件的特定指導方針。  
   
@@ -60,8 +60,8 @@ ms.locfileid: "33409529"
   
 |控制項模式|支援|注意|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|[是]|下拉式方塊控制項必須一律包含下拉式按鈕才能成為下拉式方塊。|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider>|[是]|在下拉式方塊中顯示目前選取範圍。 這項支援委派給下拉式方塊下方的清單方塊。|  
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|是|下拉式方塊控制項必須一律包含下拉式按鈕才能成為下拉式方塊。|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider>|是|在下拉式方塊中顯示目前選取範圍。 這項支援委派給下拉式方塊下方的清單方塊。|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|視情況而定|如果下拉式方塊能夠接受任意文字值，則必須支援值模式。 此模式會提供以程式設計方式設定下拉式方塊字串內容的能力。 如果值模式不受支援，這表示使用者必須從下拉式方塊子樹狀結構中的清單項目進行選取。|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|永不|一律不會直接在下拉式方塊上支援捲動模式。 如果包含在下拉式方塊內的清單方塊可以捲動，便支援它。 只有當清單方塊顯示在螢幕上時才可支援它。|  
   
