@@ -6,40 +6,40 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Clipboard [Windows Forms], Windows Forms
 ms.assetid: 7cce79b6-5835-46fd-b690-73f12ad368b2
-ms.openlocfilehash: 05cc79abdeb41cd3bfb7db21ebb206eb309ad5d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2bb3c24298ffe5308af03c5af5bae697a22c33b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522568"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398628"
 ---
-# <a name="drag-and-drop-operations-and-clipboard-support"></a><span data-ttu-id="6e5c8-102">拖放作業和剪貼簿支援</span><span class="sxs-lookup"><span data-stu-id="6e5c8-102">Drag-and-Drop Operations and Clipboard Support</span></span>
-<span data-ttu-id="6e5c8-103">若要在 Windows 架構應用程式內啟用使用者拖放作業，您可以處理一系列的事件，最值得注意的是 <xref:System.Windows.Forms.Control.DragEnter>、<xref:System.Windows.Forms.Control.DragLeave> 和 <xref:System.Windows.Forms.Control.DragDrop> 事件。</span><span class="sxs-lookup"><span data-stu-id="6e5c8-103">You can enable user drag-and-drop operations within a Windows-based application by handling a series of events, most notably the <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, and <xref:System.Windows.Forms.Control.DragDrop> events.</span></span>  
+# <a name="drag-and-drop-operations-and-clipboard-support"></a><span data-ttu-id="a24f7-102">拖放作業和剪貼簿支援</span><span class="sxs-lookup"><span data-stu-id="a24f7-102">Drag-and-Drop Operations and Clipboard Support</span></span>
+<span data-ttu-id="a24f7-103">若要在 Windows 架構應用程式內啟用使用者拖放作業，您可以處理一系列的事件，最值得注意的是 <xref:System.Windows.Forms.Control.DragEnter>、<xref:System.Windows.Forms.Control.DragLeave> 和 <xref:System.Windows.Forms.Control.DragDrop> 事件。</span><span class="sxs-lookup"><span data-stu-id="a24f7-103">You can enable user drag-and-drop operations within a Windows-based application by handling a series of events, most notably the <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, and <xref:System.Windows.Forms.Control.DragDrop> events.</span></span>  
   
- <span data-ttu-id="6e5c8-104">您也可以使用簡單的方法呼叫，將使用者剪下/複製/貼上支援和使用者資料傳輸實作至 Windows 架構應用程式中的剪貼簿。</span><span class="sxs-lookup"><span data-stu-id="6e5c8-104">You can also implement user cut/copy/paste support and user data transfer to the Clipboard within your Windows-based applications by using simple method calls.</span></span>  
+ <span data-ttu-id="a24f7-104">您也可以使用簡單的方法呼叫，將使用者剪下/複製/貼上支援和使用者資料傳輸實作至 Windows 架構應用程式中的剪貼簿。</span><span class="sxs-lookup"><span data-stu-id="a24f7-104">You can also implement user cut/copy/paste support and user data transfer to the Clipboard within your Windows-based applications by using simple method calls.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="6e5c8-105">本節內容</span><span class="sxs-lookup"><span data-stu-id="6e5c8-105">In This Section</span></span>  
- [<span data-ttu-id="6e5c8-106">逐步解說：在 Windows Forms 中執行拖放作業</span><span class="sxs-lookup"><span data-stu-id="6e5c8-106">Walkthrough: Performing a Drag-and-Drop Operation in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)  
- <span data-ttu-id="6e5c8-107">說明如何開始拖放作業。</span><span class="sxs-lookup"><span data-stu-id="6e5c8-107">Explains how to start a drag-and-drop operation.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="a24f7-105">本節內容</span><span class="sxs-lookup"><span data-stu-id="a24f7-105">In This Section</span></span>  
+ [<span data-ttu-id="a24f7-106">逐步解說：在 Windows Forms 中執行拖放作業</span><span class="sxs-lookup"><span data-stu-id="a24f7-106">Walkthrough: Performing a Drag-and-Drop Operation in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)  
+ <span data-ttu-id="a24f7-107">說明如何開始拖放作業。</span><span class="sxs-lookup"><span data-stu-id="a24f7-107">Explains how to start a drag-and-drop operation.</span></span>  
   
- [<span data-ttu-id="6e5c8-108">操作說明：在應用程式間執行拖放作業</span><span class="sxs-lookup"><span data-stu-id="6e5c8-108">How to: Perform Drag-and-Drop Operations Between Applications</span></span>](../../../../docs/framework/winforms/advanced/how-to-perform-drag-and-drop-operations-between-applications.md)  
- <span data-ttu-id="6e5c8-109">說明如何跨應用程式完成拖放作業。</span><span class="sxs-lookup"><span data-stu-id="6e5c8-109">Illustrates how to accomplish drag-and-drop operations across applications.</span></span>  
+ [<span data-ttu-id="a24f7-108">操作說明：在應用程式間執行拖放作業</span><span class="sxs-lookup"><span data-stu-id="a24f7-108">How to: Perform Drag-and-Drop Operations Between Applications</span></span>](../../../../docs/framework/winforms/advanced/how-to-perform-drag-and-drop-operations-between-applications.md)  
+ <span data-ttu-id="a24f7-109">說明如何跨應用程式完成拖放作業。</span><span class="sxs-lookup"><span data-stu-id="a24f7-109">Illustrates how to accomplish drag-and-drop operations across applications.</span></span>  
   
- [<span data-ttu-id="6e5c8-110">操作說明：將資料新增至剪貼簿</span><span class="sxs-lookup"><span data-stu-id="6e5c8-110">How to: Add Data to the Clipboard</span></span>](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md)  
- <span data-ttu-id="6e5c8-111">說明如何以程式設計方式，在剪貼簿上插入資訊。</span><span class="sxs-lookup"><span data-stu-id="6e5c8-111">Describes a way to programmatically insert information on the Clipboard.</span></span>  
+ [<span data-ttu-id="a24f7-110">操作說明：將資料新增至剪貼簿</span><span class="sxs-lookup"><span data-stu-id="a24f7-110">How to: Add Data to the Clipboard</span></span>](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md)  
+ <span data-ttu-id="a24f7-111">說明如何以程式設計方式，在剪貼簿上插入資訊。</span><span class="sxs-lookup"><span data-stu-id="a24f7-111">Describes a way to programmatically insert information on the Clipboard.</span></span>  
   
- [<span data-ttu-id="6e5c8-112">操作說明：從剪貼簿擷取資料</span><span class="sxs-lookup"><span data-stu-id="6e5c8-112">How to: Retrieve Data from the Clipboard</span></span>](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)  
- <span data-ttu-id="6e5c8-113">說明如何存取儲存在剪貼簿上的資料。</span><span class="sxs-lookup"><span data-stu-id="6e5c8-113">Describes how to access the data stored on the Clipboard.</span></span>  
+ [<span data-ttu-id="a24f7-112">操作說明：從剪貼簿擷取資料</span><span class="sxs-lookup"><span data-stu-id="a24f7-112">How to: Retrieve Data from the Clipboard</span></span>](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)  
+ <span data-ttu-id="a24f7-113">說明如何存取儲存在剪貼簿上的資料。</span><span class="sxs-lookup"><span data-stu-id="a24f7-113">Describes how to access the data stored on the Clipboard.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="6e5c8-114">相關章節</span><span class="sxs-lookup"><span data-stu-id="6e5c8-114">Related Sections</span></span>  
- [<span data-ttu-id="6e5c8-115">Windows Forms 中的拖放功能</span><span class="sxs-lookup"><span data-stu-id="6e5c8-115">Drag-and-Drop Functionality in Windows Forms</span></span>](../../../../docs/framework/winforms/drag-and-drop-functionality-in-windows-forms.md)  
- <span data-ttu-id="6e5c8-116">說明用來實作拖放行為的方法、事件和類別。</span><span class="sxs-lookup"><span data-stu-id="6e5c8-116">Describes the methods, events, and classes used to implement drag-and-drop behavior.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="a24f7-114">相關章節</span><span class="sxs-lookup"><span data-stu-id="a24f7-114">Related Sections</span></span>  
+ [<span data-ttu-id="a24f7-115">Windows Forms 中的拖放功能</span><span class="sxs-lookup"><span data-stu-id="a24f7-115">Drag-and-Drop Functionality in Windows Forms</span></span>](../../../../docs/framework/winforms/drag-and-drop-functionality-in-windows-forms.md)  
+ <span data-ttu-id="a24f7-116">說明用來實作拖放行為的方法、事件和類別。</span><span class="sxs-lookup"><span data-stu-id="a24f7-116">Describes the methods, events, and classes used to implement drag-and-drop behavior.</span></span>  
   
  <xref:System.Windows.Forms.Control.QueryContinueDrag>  
- <span data-ttu-id="6e5c8-117">說明要求權限以繼續拖曳作業之事件的複雜性。</span><span class="sxs-lookup"><span data-stu-id="6e5c8-117">Describes the intricacies of the event that asks permission to continue the drag operation.</span></span>  
+ <span data-ttu-id="a24f7-117">說明要求權限以繼續拖曳作業之事件的複雜性。</span><span class="sxs-lookup"><span data-stu-id="a24f7-117">Describes the intricacies of the event that asks permission to continue the drag operation.</span></span>  
   
  <xref:System.Windows.Forms.Control.DoDragDrop%2A>  
- <span data-ttu-id="6e5c8-118">說明開始拖曳作業之主要方法的複雜性。</span><span class="sxs-lookup"><span data-stu-id="6e5c8-118">Describes the intricacies of the method that is central to beginning a drag operation.</span></span>  
+ <span data-ttu-id="a24f7-118">說明開始拖曳作業之主要方法的複雜性。</span><span class="sxs-lookup"><span data-stu-id="a24f7-118">Describes the intricacies of the method that is central to beginning a drag operation.</span></span>  
   
  <xref:System.Windows.Forms.Clipboard>  
- <span data-ttu-id="6e5c8-119">另請參閱[如何： 傳送資料至作用中 MDI 子系](http://msdn.microsoft.com/library/y0hkh2c8\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="6e5c8-119">Also see [How to: Send Data to the Active MDI Child](http://msdn.microsoft.com/library/y0hkh2c8\(v=vs.110\)).</span></span>
+ <span data-ttu-id="a24f7-119">另請參閱[如何： 將資料傳送至作用中的 MDI 子系](https://msdn.microsoft.com/library/y0hkh2c8\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="a24f7-119">Also see [How to: Send Data to the Active MDI Child](https://msdn.microsoft.com/library/y0hkh2c8\(v=vs.110\)).</span></span>
