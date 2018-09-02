@@ -2,29 +2,29 @@
 title: 處理非同步應用程式 (Visual Basic) 中的重新進入
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 4b899a695fef0e626eb9db3d376a74acba17b086
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: b633e3cf9a499cd5f364692cd0461aed640fe54d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697153"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401886"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>處理非同步應用程式 (Visual Basic) 中的重新進入
 當您將非同步程式碼納入您的應用程式時，應該考慮並防止可能發生的重新進入，也就是在完成前重新進入的非同步作業。 如果您不找出並處理重新進入的可能性，它可能會導致非預期的結果。  
   
  **本主題內容**  
   
--   [辨識重新進入](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [辨識重新進入](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
--   [處理重新進入](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [處理重新進入](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
-    -   [停用開始按鈕](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [停用開始按鈕](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
-    -   [取消後再重新啟動作業](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [取消後再重新啟動作業](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
-    -   [執行多個作業並將輸出加入佇列](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [執行多個作業並將輸出加入佇列](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
--   [檢閱及執行範例應用程式](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [檢閱及執行範例應用程式](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
 > [!NOTE]
 >  若要執行範例，您必須在電腦上安裝 Visual Studio 2012 或更新版本以及 .NET Framework 4.5 或更新版本。  
@@ -84,20 +84,20 @@ TOTAL bytes returned:  890591
 TOTAL bytes returned:  890591  
 ```  
   
- 您可以捲動到本主題的結尾來檢閱產生此輸出的程式碼。 您可以將方案下載到本機電腦，然後執行 WebsiteDownload 專案；或使用本主題結尾的程式碼來建立您自己的專案，以實驗程式碼。如需詳細資訊和指示，請參閱[檢閱及執行範例應用程式](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)。  
+ 您可以捲動到本主題的結尾來檢閱產生此輸出的程式碼。 您可以將方案下載到本機電腦，然後執行 WebsiteDownload 專案；或使用本主題結尾的程式碼來建立您自己的專案，以實驗程式碼。如需詳細資訊和指示，請參閱[檢閱及執行範例應用程式](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)。  
   
 ##  <a name="BKMK_HandlingReentrancy"></a>處理重新進入  
  您可以各種不同的方式重新進入，視您要應用程式執行的工作而定。 本主題提供下列範例：  
   
--   [停用開始按鈕](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [停用開始按鈕](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
      在執行作業時停用 [開始] 按鈕，讓使用者無法中斷它。  
   
--   [取消後再重新啟動作業](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [取消後再重新啟動作業](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
      當使用者再次選擇 [開始] 按鈕，然後讓最近要求的作業繼續進行時，取消仍在執行的任何作業。  
   
--   [執行多個作業並將輸出加入佇列](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [執行多個作業並將輸出加入佇列](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
      允許所有要求的作業以非同步方式執行，但協調輸出的顯示，以一起並循序顯示每個作業的結果。  
   
@@ -132,9 +132,9 @@ End Sub
 ###  <a name="BKMK_CancelAndRestart"></a> 取消後再重新啟動作業  
  您不必停用 [開始] 按鈕，您可以讓按鈕保持作用中，但如果使用者再次選擇該按鈕，請取消已在執行的作業，並讓最近啟動的作業繼續執行。  
   
- 如需取消的詳細資訊，請參閱[微調非同步應用程式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)。  
+ 如需有關取消的詳細資訊，請參閱 <<c0> [ 微調非同步應用程式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)。  
   
- 若要設定此案例，請對[檢閱及執行範例應用程式](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)中提供的基本程式碼進行下列變更。 您也可以從[非同步範例︰重新進入 .NET 桌面應用程式](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下載完成的應用程式。 此專案的名稱是 CancelAndRestart。  
+ 若要設定此案例，請對[檢閱及執行範例應用程式](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)中提供的基本程式碼進行下列變更。 您也可以從[非同步範例︰重新進入 .NET 桌面應用程式](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下載完成的應用程式。 此專案的名稱是 CancelAndRestart。  
   
 1.  宣告 <xref:System.Threading.CancellationTokenSource> 變數 `cts`，這是在所有方法的範圍內。  
   
@@ -145,7 +145,7 @@ End Sub
         Dim cts As CancellationTokenSource  
     ```  
   
-2.  在 `StartButton_Click` 中，判定作業是否已在進行中。 如果值`cts`是`Nothing`，任何作業已在使用中。 如果此值不`Nothing`，已在執行中的作業已取消。  
+2.  在 `StartButton_Click` 中，判定作業是否已在進行中。 如果值`cts`是`Nothing`，沒有任何作業已在使用中。 如果值不是`Nothing`，已在執行的作業已取消。  
   
     ```vb  
     ' *** If a download process is already underway, cancel it.  
@@ -162,7 +162,7 @@ End Sub
     cts = newCTS  
     ```  
   
-4.  在結尾`StartButton_Click`、 目前的處理序完成，所以設定的值`cts`回到`Nothing`。  
+4.  在結尾`StartButton_Click`目前的程序已完成，因此設定的值`cts`回到`Nothing`。  
   
     ```vb  
     ' *** When the process completes, signal that another process can proceed.  
@@ -285,11 +285,11 @@ TOTAL bytes returned:  890591
  若要排除部分清單，請取消註解 `StartButton_Click` 中程式碼的第一行，以清除每次使用者重新啟動作業時出現的文字方塊。  
   
 ###  <a name="BKMK_RunMultipleOperations"></a> 執行多個作業並將輸出加入佇列  
- 此第三個範例是最複雜的，因為每當使用者選擇 [開始] 按鈕時，應用程式就會啟動另一個非同步作業，而且所有作業都會執行到完成為止。 所有要求的作業會以非同步方式從清單下載網站，但作業的輸出會以循序方式呈現。 也就是隨[辨識重新進入](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)顯示輸出，實際的下載活動會交錯進行，但每個群組的結果清單會循序呈現。  
+ 此第三個範例是最複雜的，因為每當使用者選擇 [開始] 按鈕時，應用程式就會啟動另一個非同步作業，而且所有作業都會執行到完成為止。 所有要求的作業會以非同步方式從清單下載網站，但作業的輸出會以循序方式呈現。 也就是隨[辨識重新進入](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)顯示輸出，實際的下載活動會交錯進行，但每個群組的結果清單會循序呈現。  
   
  作業會共用全域 <xref:System.Threading.Tasks.Task>，`pendingWork`，做為顯示程序的閘道管理員。  
   
- 您可以執行這個範例，方法是將變更貼至[建置應用程式](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)中的程式碼，或者遵循[下載應用程式](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)的指示來下載範例，然後執行 QueueResults 專案。  
+ 您可以執行這個範例，方法是將變更貼至[建置應用程式](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)中的程式碼，或者遵循[下載應用程式](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)的指示來下載範例，然後執行 QueueResults 專案。  
   
  下列輸出顯示當使用者只選擇 [開始] 按鈕一次時的結果。 字母標籤 A，表示第一次選擇 [開始] 按鈕時的結果。 數字顯示下載目標清單中的 URL 順序。  
   
@@ -473,7 +473,7 @@ Private Async Function FinishOneGroupAsync(urls As List(Of String), contentTasks
 End Function  
 ```  
   
- 您可以執行這個範例，方法是將變更貼至[建置應用程式](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)中的程式碼，或者遵循[下載應用程式](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)的指示來下載範例，然後執行 QueueResults 專案。  
+ 您可以執行這個範例，方法是將變更貼至[建置應用程式](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)中的程式碼，或者遵循[下載應用程式](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)的指示來下載範例，然後執行 QueueResults 專案。  
   
 #### <a name="points-of-interest"></a>參考資訊  
  在輸出中以井字號 (#) 開頭的資訊行會釐清此範例的運作方式。  
@@ -516,7 +516,7 @@ End Function
     TOTAL bytes returned:  915908  
     ```  
   
--   `pendingWork`工作是`Nothing`開頭`FinishOneGroupAsync`僅針對群組 A 啟動第一次。 當群組 A 到達 `FinishOneGroupAsync` 時，它尚未完成 await 運算式。 因此，尚未將控制項返回 `AccessTheWebAsync`，且尚未針對 `pendingWork` 進行第一次指派。  
+-   `pendingWork`任務`Nothing`開頭的`FinishOneGroupAsync`只有針對群組 A 啟動第一個。 當群組 A 到達 `FinishOneGroupAsync` 時，它尚未完成 await 運算式。 因此，尚未將控制項返回 `AccessTheWebAsync`，且尚未針對 `pendingWork` 進行第一次指派。  
   
 -   下列兩行一律會在輸出中一起出現。 在 `StartButton_Click` 中啟動群組的作業，與將群組的工作指派給 `pendingWork` 之間，程式碼永遠不會中斷  
   
@@ -558,7 +558,7 @@ End Function
   
      [ **新增專案** ] 對話方塊隨即開啟。  
   
-3.  在**已安裝的範本**] 窗格中，展開 [ **Visual Basic**，然後展開**Windows**。  
+3.  在 **已安裝的範本**窗格中，展開**Visual Basic**，然後展開**Windows**。  
   
 4.  在專案類型清單中，選擇 [WPF 應用程式]。  
   
@@ -592,9 +592,9 @@ End Function
   
 8.  加入 <xref:System.Net.Http> 的參考。  
   
-9. 在**方案總管] 中**MainWindow.xaml.vb，開啟捷徑功能表，然後選擇 [**檢視程式碼**。  
+9. 在 **方案總管**，開啟 MainWindow.xaml.vb，捷徑功能表，然後選擇**檢視程式碼**。  
   
-10. 在 MainWindow.xaml.vb，請將程式碼取代下列程式碼。  
+10. 在 MainWindow.xaml.vb，取代下列程式碼中的程式碼。  
   
     ```vb  
     ' Add the following Imports statements, and add a reference for System.Net.Http.  
@@ -674,7 +674,7 @@ End Function
   
 11. 選擇 CTRL+F5 鍵以執行程式，然後選擇 [開始] 按鈕數次。  
   
-12. 從[停用開始按鈕](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)、[取消後再重新啟動作業](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)或[執行多個作業並將輸出加入佇列](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)進行變更以處理重新進入。  
+12. 從[停用開始按鈕](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)、[取消後再重新啟動作業](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)或[執行多個作業並將輸出加入佇列](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)進行變更以處理重新進入。  
   
 ## <a name="see-also"></a>另請參閱  
  [逐步解說：使用 Async 和 Await 存取 Web (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  

@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: f56445e9bdd030d591f9fc6300f9a24d330dbc20
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: d0e54aeda1ee51fe7ba87c3ac69c556ea25e320f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43257366"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395447"
 ---
 # <a name="working-with-certificates"></a>使用憑證
 在針對 Windows Communication Foundation (WCF) 安全性設計程式時，通常會採用 X.509 數位憑證來驗證用戶端與伺服器、加密，以及數位簽署訊息。 本主題將簡要說明 X.509 數位憑證功能及如何在 WCF 中使用這些憑證，同時針對這些概念的進一步說明以及如何運用 WCF 與憑證來完成一般工作的主題說明提供連結。  
   
- 簡單地說，數位憑證是「公開金鑰基礎結構」(Public Key Infrastructure，PKI) 的一部分，這是一套結合數位憑證、憑證授權單位，與其他登錄授權單位，並以公開金鑰密碼編譯法來驗證參與電子異動每一方之有效性的系統。 憑證授權單位會發出憑證，而每個憑證都會有一組欄位，其中包含如「主體」(也就是接受發行憑證的實體)、有效日期 (當憑證有效時)、簽發者 (發行憑證的實體) 與公開金鑰之類的資料。 在 WCF 中，每一個屬性都會被當成 <xref:System.IdentityModel.Claims.Claim> 處理，而且每個宣告還會進一步分成兩種類型：身分識別與權限。 如需 X.509 憑證的詳細資訊，請參閱 [X.509 公用金鑰憑證](http://go.microsoft.com/fwlink/?LinkId=209952)。 如需宣告和 WCF 授權的詳細資訊，請參閱[使用身分識別模型來管理宣告與授權](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。 如需實作 PKI 的詳細資訊，請參閱 [Windows Server 2008 R2 - 憑證服務](http://go.microsoft.com/fwlink/?LinkId=209949)。  
+ 簡單地說，數位憑證是「公開金鑰基礎結構」(Public Key Infrastructure，PKI) 的一部分，這是一套結合數位憑證、憑證授權單位，與其他登錄授權單位，並以公開金鑰密碼編譯法來驗證參與電子異動每一方之有效性的系統。 憑證授權單位會發出憑證，而每個憑證都會有一組欄位，其中包含如「主體」(也就是接受發行憑證的實體)、有效日期 (當憑證有效時)、簽發者 (發行憑證的實體) 與公開金鑰之類的資料。 在 WCF 中，每一個屬性都會被當成 <xref:System.IdentityModel.Claims.Claim> 處理，而且每個宣告還會進一步分成兩種類型：身分識別與權限。 如需 X.509 憑證的詳細資訊，請參閱 [X.509 公用金鑰憑證](https://go.microsoft.com/fwlink/?LinkId=209952)。 如需宣告和 WCF 授權的詳細資訊，請參閱[使用身分識別模型來管理宣告與授權](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。 如需實作 PKI 的詳細資訊，請參閱 [Windows Server 2008 R2 - 憑證服務](https://go.microsoft.com/fwlink/?LinkId=209949)。  
   
  憑證的主要功能就是向其他人驗證憑證擁有者的身分識別。 憑證包含擁有者的「公開金鑰」，而擁有者本身則保留私密金鑰。 公開金鑰可以用來加密傳送給憑證擁有者的訊息。 只有擁有者才能存取私密金鑰，因此只有擁有者可以解密這些訊息。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "43257366"
   
 -   **個人**。 此存放區可用來存放與電腦使用者相關聯的憑證。 一般來說，此存放區是用來存放 [受信任的根憑證授權單位] 存放區中所找到的其中一個憑證授權單位所發行的憑證。 另外，此處找到的憑證可能是自動發行並由某個應用程式所信任。  
   
- 如需憑證存放區的詳細資訊，請參閱[憑證存放區](http://go.microsoft.com/fwlink/?LinkId=88912)。  
+ 如需憑證存放區的詳細資訊，請參閱[憑證存放區](https://go.microsoft.com/fwlink/?LinkId=88912)。  
   
 ### <a name="selecting-a-store"></a>選取存放區  
  選取存放憑證的位置時，必須考量服務或用戶端執行的方式與時機， 並套用下列一般規則：  
@@ -52,7 +52,7 @@ ms.locfileid: "43257366"
 -   如果服務或用戶端是透過使用者帳戶執行的應用程式，則請使用 [目前使用者] 存放區。  
   
 ### <a name="accessing-stores"></a>存取存放區  
- 存放區會受到存取控制清單 (ACL) 的保護，就像電腦上的資料夾一樣。 當您建立由網際網路資訊服務 (IIS) 所裝載的服務時，[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 處理序會透過 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 帳戶來執行。 該帳戶必須能夠存取包含服務所使用之憑證的存放區。 每一個主要存放區都會以預設的存取清單加以保護，但是您可以修改此清單。 如果您建立個別的角色來存取存放區，則必須授予該角色存取權限。 若要了解如何使用 WinHttpCertConfig.exe 工具來修改存取清單，請參閱[如何：建立開發時要使用的暫時憑證](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)。 如需將用戶端憑證搭配 IIS 一起使用的詳細資訊，請參閱[如何在 ASP.NET Web 應用程式中使用用戶端憑證呼叫 Web 服務進行驗證](http://go.microsoft.com/fwlink/?LinkId=88914)。  
+ 存放區會受到存取控制清單 (ACL) 的保護，就像電腦上的資料夾一樣。 當您建立由網際網路資訊服務 (IIS) 所裝載的服務時，[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 處理序會透過 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 帳戶來執行。 該帳戶必須能夠存取包含服務所使用之憑證的存放區。 每一個主要存放區都會以預設的存取清單加以保護，但是您可以修改此清單。 如果您建立個別的角色來存取存放區，則必須授予該角色存取權限。 若要了解如何使用 WinHttpCertConfig.exe 工具來修改存取清單，請參閱[如何：建立開發時要使用的暫時憑證](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)。 如需將用戶端憑證搭配 IIS 一起使用的詳細資訊，請參閱[如何在 ASP.NET Web 應用程式中使用用戶端憑證呼叫 Web 服務進行驗證](https://go.microsoft.com/fwlink/?LinkId=88914)。  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>鏈結信任與憑證授權單位  
  憑證是在階層中建立的，其中每個個別憑證都會連結到核發憑證的 CA。 此連結連至 CA 的憑證。 接著，CA 的憑證會連結至核發 CA 原始憑證的 CA。 在找到根 CA 的憑證之前，會一直重複這個程序。 根 CA 的憑證在本質上會受到信任。  
@@ -146,9 +146,9 @@ ms.locfileid: "43257366"
  您也可以使用組態來設定憑證。 如果您正在建立服務，則包括憑證的認證都會在 [\<serviceBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) 底下指定。 當您正在對用戶端設計程式時，憑證會於 [\<endpointBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) 底下指定。  
   
 ## <a name="mapping-a-certificate-to-a-user-account"></a>將憑證對應至使用者帳戶  
- IIS 與 Active Directory 的其中一項功能，就是能夠將憑證對應至 Windows 使用者帳戶。 如需功能的詳細資訊，請參閱[將憑證對應至使用者帳戶](http://go.microsoft.com/fwlink/?LinkId=88917)。  
+ IIS 與 Active Directory 的其中一項功能，就是能夠將憑證對應至 Windows 使用者帳戶。 如需功能的詳細資訊，請參閱[將憑證對應至使用者帳戶](https://go.microsoft.com/fwlink/?LinkId=88917)。  
   
- 如需使用 Active Directory 對應的詳細資訊，請參閱[將用戶端憑證與目錄服務進行對應](http://go.microsoft.com/fwlink/?LinkId=88918)。  
+ 如需使用 Active Directory 對應的詳細資訊，請參閱[將用戶端憑證與目錄服務進行對應](https://go.microsoft.com/fwlink/?LinkId=88918)。  
   
  一旦您啟用這項功能，就可以將 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> 類別的 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 屬性設為 `true`。 在組態中，您可以將 [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) 元素的 `mapClientCertificateToWindowsAccount` 屬性設為 `true`，如下列程式碼所示。  
   

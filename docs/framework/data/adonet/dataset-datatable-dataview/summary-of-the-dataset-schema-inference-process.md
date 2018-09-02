@@ -2,12 +2,12 @@
 title: 資料集結構描述推斷程序摘要
 ms.date: 03/30/2017
 ms.assetid: fd0891c8-d068-4e30-a76f-7c375f078bf7
-ms.openlocfilehash: 9bcc5ce1574eed60d2ef1aa35bdafe8c6050e44c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1583d5232a3dd483bbe2a6fa0b1bc8a3ae6a659f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760267"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395819"
 ---
 # <a name="summary-of-the-dataset-schema-inference-process"></a>資料集結構描述推斷程序摘要
 推斷程序首先會決定要將 XML 文件的哪個項目推斷為資料表， 再從剩餘的 XML 決定這些資料表的資料行， 若為巢狀資料表，推斷程序會產生巢狀的 <xref:System.Data.DataRelation> 和 <xref:System.Data.ForeignKeyConstraint> 物件。  
@@ -26,9 +26,9 @@ ms.locfileid: "32760267"
   
 -   沒有屬性或項目子系且不重複的項目，會推斷為資料行。  
   
--   項目會推斷為巢狀資料表內其他項目也被推斷為資料表，巢狀**DataRelation**建立兩個資料表之間。 新的主要索引鍵資料行名為**TableName_Id**加入兩個資料表，並使用**DataRelation**。 A **ForeignKeyConstraint**使用兩個資料表之間會建立**TableName_Id**資料行。  
+-   會推斷為巢狀資料表也被推斷其他項目中的項目做為資料表、 巢狀**DataRelation**建立兩個資料表之間。 新的主要索引鍵資料行名為**TableName_Id**加入兩個資料表，並使用**DataRelation**。 A **ForeignKeyConstraint**會使用兩個資料表之間建立**TableName_Id**資料行。  
   
--   針對項目，會推斷為資料表，而且會包含文字，但沒有子元素，新的資料行名為**TableName_Text**建立的每個元素的文字。 如果項目是推斷為資料表且同時具有文字和項目子系，則會忽略文字。  
+-   針對項目，會推斷為資料表，並可包含文字，但不有任何子項目，新的資料行名為**TableName_Text**建立每個元素的文字。 如果項目是推斷為資料表且同時具有文字和項目子系，則會忽略文字。  
   
 ## <a name="see-also"></a>另請參閱  
  [從 XML 推斷資料集關聯式結構](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
@@ -36,4 +36,4 @@ ms.locfileid: "32760267"
  [從 XML 載入資料集結構描述資訊](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
  [在 DataSet 中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

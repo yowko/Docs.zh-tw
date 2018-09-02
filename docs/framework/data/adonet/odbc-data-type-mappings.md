@@ -2,12 +2,12 @@
 title: ODBC 資料類型對應
 ms.date: 03/30/2017
 ms.assetid: 43c35d32-831d-480f-a150-78f7e869d17f
-ms.openlocfilehash: bfabdb73b9435a98b4d0d625a8392723bdcdbc37
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ece9397e8c8e8b9d26f8aac2298aa25173ac2d93
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765421"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397318"
 ---
 # <a name="odbc-data-type-mappings"></a>ODBC 資料類型對應
 下表顯示來自 .NET Framework Data Provider for ODBC ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]) 之資料型別的推斷 <xref:System.Data.Odbc> 型別。 同時也一併列出 <xref:System.Data.Odbc.OdbcDataReader> 具型別的存取子方法。  
@@ -37,4 +37,4 @@ ms.locfileid: "32765421"
   
 ## <a name="see-also"></a>另請參閱  
  [在 ADO.NET 中擷取和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

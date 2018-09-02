@@ -2,12 +2,12 @@
 title: 服務：每秒失敗的呼叫數
 ms.date: 03/30/2017
 ms.assetid: 5a2c7939-107d-4f0c-b43c-e02e079e8a9d
-ms.openlocfilehash: 6af8f79d1fe163967a5c6e8220697aa11bee66c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9cd649788e1304c68caa1bbf4b5fd27e6fc9d508
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33473823"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396414"
 ---
 # <a name="service-calls-failed-per-second"></a>服務：每秒失敗的呼叫數
 計數器名稱：每秒失敗的呼叫數。  
@@ -15,7 +15,7 @@ ms.locfileid: "33473823"
 ## <a name="description"></a>描述  
  未處理之例外狀況的呼叫數，以及此服務在一秒之內所收到的呼叫數。  
   
- 這個計數器的效能計數器型別是[PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649)，其值使用以下公式計算。  
+ 這個計數器的效能計數器型別是[PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649)，使用下列公式來計算其值。  
   
  (N 1 - N 0 ) / ( (D 1 -D 0 ) / F)  
   

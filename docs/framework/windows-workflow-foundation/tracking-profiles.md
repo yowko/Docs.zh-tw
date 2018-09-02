@@ -2,12 +2,12 @@
 title: 追蹤設定檔
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: 4f70964ea7e2456f82aeac4bfb9aedfdb239d58a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6651b79a474125f57c1cad773ae858dc7654d58a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519980"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396986"
 ---
 # <a name="tracking-profiles"></a>追蹤設定檔
 追蹤設定檔包含有追蹤查詢，這些查詢允許追蹤參與者訂閱工作流程執行個體狀態在執行時期變更時所發出的工作流程事件。  
@@ -57,13 +57,13 @@ TrackingProfile profile = new TrackingProfile()
 };  
 ```  
   
- 追蹤記錄是利用 <xref:System.Activities.Tracking.ImplementationVisibility> 屬性，透過追蹤設定檔內的可見性模式所篩選的。 複合活動是最上層的活動，其中包含構成其實作的其他活動。 可見性模式會透過指定從工作流程活動內的複合活動發出的追蹤記錄，指定是否要追蹤形成實作的活動。  可見性模式會在追蹤設定檔層級套用。 工作流程中個別活動的追蹤記錄篩選，是由追蹤設定檔中的查詢進行控制。 如需詳細資訊，請參閱**追蹤設定檔查詢類型**這份文件中的一節。  
+ 追蹤記錄是利用 <xref:System.Activities.Tracking.ImplementationVisibility> 屬性，透過追蹤設定檔內的可見性模式所篩選的。 複合活動是最上層的活動，其中包含構成其實作的其他活動。 可見性模式會透過指定從工作流程活動內的複合活動發出的追蹤記錄，指定是否要追蹤形成實作的活動。  可見性模式會在追蹤設定檔層級套用。 工作流程中個別活動的追蹤記錄篩選，是由追蹤設定檔中的查詢進行控制。 如需詳細資訊，請參閱 <<c0>  **追蹤設定檔查詢類型**這份文件中的一節。  
   
  追蹤設定檔中，以 `implementationVisibility` 屬性指定的兩個可見性模式為 `RootScope` 和 `All`。 若複合活動不是工作流程的根，使用 `RootScope` 模式會隱藏形成活動之實作的追蹤記錄。  也就是說，將使用其他活動實作的活動加入至工作流程中，且 `implementationVisibility` 設定為 RootScope 時，只會追蹤該複合活動內的最上層活動。 若活動是工作流程的根，則該活動的實作會是工作流程本身，且會針對形成實作的活動發出追蹤記錄。 使用 All 模式可發出根活動及所有其複合活動的全部追蹤記錄。  
   
- 例如，假設*MyActivity*是複合活動，其實作包含兩個活動， *Activity1*和*Activity2*。  當這個活動加入至工作流程，並已啟用追蹤的追蹤設定檔與`implementationVisibility`設`RootScope`，追蹤記錄只會發出*MyActivity*。  不過，活動會發出任何記錄*Activity1*和*Activity2*。  
+ 例如，假設*MyActivity*其實作包含兩個活動，是複合活動*Activity1*並*Activity2*。  當這個活動加入至工作流程，並追蹤已啟用的追蹤設定檔`implementationVisibility`設定為`RootScope`，追蹤記錄只會發出*MyActivity*。  不過，活動會發出任何記錄*Activity1*並*Activity2*。  
   
- 不過，如果`implementationVisisbility`屬性的追蹤設定檔設定為`All`，則不只發出追蹤記錄*MyActivity*，但也會針對活動*Activity1*和*Activity2*。  
+ 不過，如果`implementationVisisbility`屬性 (attribute) 的追蹤設定檔設定為`All`，則不只發出追蹤記錄*MyActivity*，，而且還可活動*Activity1*並*Activity2*。  
   
  `implementationVisibility` 旗標適用於下列追蹤記錄類型：  
   
@@ -147,7 +147,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
     };  
     ```  
   
--   <xref:System.Activities.Tracking.ActivityStateQuery> - 使用這個查詢，即可追蹤組成工作流程執行個體之活動的生命週期變更。 比方說，您可能想要追蹤的每一次 「 傳送電子郵件 」 活動完成的工作流程執行個體中。 <xref:System.Activities.Tracking.TrackingParticipant> 訂閱 <xref:System.Activities.Tracking.ActivityStateRecord> 物件時，必須要有這個查詢。 可供訂閱的狀態可於 <xref:System.Activities.Tracking.ActivityStates> 中指定。  
+-   <xref:System.Activities.Tracking.ActivityStateQuery> - 使用這個查詢，即可追蹤組成工作流程執行個體之活動的生命週期變更。 例如，您可能要追蹤的每次在 「 傳送電子郵件 」 活動完成的工作流程執行個體內。 <xref:System.Activities.Tracking.TrackingParticipant> 訂閱 <xref:System.Activities.Tracking.ActivityStateRecord> 物件時，必須要有這個查詢。 可供訂閱的狀態可於 <xref:System.Activities.Tracking.ActivityStates> 中指定。  
   
      下列範例示範訂閱使用 <xref:System.Activities.Tracking.ActivityStateQuery> 做為 `SendEmailActivity` 活動之活動狀態追蹤記錄的組態和程式碼。  
   
@@ -304,7 +304,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
     ```  
   
 ### <a name="annotations"></a>標註  
- 附註可讓您使用值任意標記追蹤記錄，該值可在建置階段後設定。 例如，您可能需要數個追蹤記錄之間加上"Mail Server"的多個工作流程 = ="Mail Server1"。 當您稍後查詢追蹤記錄時，就可以更輕鬆地找到所有具有這個標記的記錄。  
+ 附註可讓您使用值任意標記追蹤記錄，該值可在建置階段後設定。 比方說，您可能會想數個追蹤記錄，跨多個工作流程，加上"Mail Server"= ="Mail Server1"。 當您稍後查詢追蹤記錄時，就可以更輕鬆地找到所有具有這個標記的記錄。  
   
  若要完成這個目的，就需要將附註加入至追蹤查詢，如下列範例所示。  
   
@@ -339,9 +339,9 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 > [!WARNING]
 >  針對使用工作流程服務主機的 WF，追蹤設定檔通常會使用組態檔建立。 您也可以使用追蹤設定檔和追蹤查詢 API，以程式碼建立追蹤設定檔。  
   
- 設定為 XML 組態檔的設定檔會使用行為擴充套用至追蹤參與者。 後面的章節中所述，這會加入至 WorkflowServiceHost[流程設定追蹤](../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)。  
+ 設定為 XML 組態檔的設定檔會使用行為擴充套用至追蹤參與者。 這加入至 WorkflowServiceHost，如稍後章節所述[設定工作流程追蹤](../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)。  
   
- 主機發出之追蹤記錄的詳細資訊取決於追蹤設定檔內的組態設定。 追蹤參與者可將查詢加入至追蹤設定檔，以訂閱追蹤記錄。 若要訂閱所有追蹤記錄，追蹤設定檔，必須先指定所有追蹤查詢，使用"*"中每個查詢的名稱欄位。  
+ 主機發出之追蹤記錄的詳細資訊取決於追蹤設定檔內的組態設定。 追蹤參與者可將查詢加入至追蹤設定檔，以訂閱追蹤記錄。 若要訂閱所有追蹤記錄，追蹤設定檔，必須先指定所有追蹤查詢，使用"*"查詢中的 [名稱] 欄位中。  
   
  以下是追蹤設定檔的一些通用範例。  
   
@@ -382,5 +382,5 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
   
 ## <a name="see-also"></a>另請參閱  
  [SQL 追蹤](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)  
- [Windows Server App Fabric 監控](http://go.microsoft.com/fwlink/?LinkId=201273)  
- [使用 App Fabric 監控應用程式](http://go.microsoft.com/fwlink/?LinkId=201275)
+ [Windows Server App Fabric 監控](https://go.microsoft.com/fwlink/?LinkId=201273)  
+ [使用 App Fabric 監控應用程式](https://go.microsoft.com/fwlink/?LinkId=201275)

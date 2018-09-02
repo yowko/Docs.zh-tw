@@ -9,19 +9,19 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: c3cede1eb90b963f4c0b567a8df48925bca9b02d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0595bcbd3dcae7977c8734b7d3858df2412c962
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494825"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395302"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>HOW TO：使用 SSL 憑證設定連接埠
-當建立自我裝載的 Windows Communication Foundation (WCF) 服務與<xref:System.ServiceModel.WSHttpBinding>類別使用傳輸安全性的中，您也必須使用 X.509 憑證設定連接埠。 如果您沒有建立自我裝載的服務，可以將您的服務裝載在 Internet Information Services (IIS) 上。 如需詳細資訊，請參閱[HTTP 傳輸安全性](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
+建立自我裝載的 Windows Communication Foundation (WCF) 服務使用時<xref:System.ServiceModel.WSHttpBinding>類別使用傳輸安全性的中，您也必須使用 X.509 憑證設定連接埠。 如果您沒有建立自我裝載的服務，可以將您的服務裝載在 Internet Information Services (IIS) 上。 如需詳細資訊，請參閱 < [HTTP 傳輸安全性](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
   
  若要設定連接埠，使用的工具取決於電腦上執行的作業系統。  
   
- 如果您是執行 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]，請使用 HttpCfg.exe 工具。 這個工具會隨 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 進行安裝。 與[!INCLUDE[wxp](../../../../includes/wxp-md.md)]，您可以下載此工具在[Windows XP Service Pack 2 支援工具](http://go.microsoft.com/fwlink/?LinkId=88606)。 如需詳細資訊，請參閱[Httpcfg 概觀](http://go.microsoft.com/fwlink/?LinkId=88605)。 [Windows 支援工具文件](http://go.microsoft.com/fwlink/?LinkId=94840)說明 Httpcfg.exe 工具的語法。  
+ 如果您是執行 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]，請使用 HttpCfg.exe 工具。 這個工具會隨 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 進行安裝。 具有[!INCLUDE[wxp](../../../../includes/wxp-md.md)]，您可以下載此工具，在[Windows XP Service Pack 2 支援工具](https://go.microsoft.com/fwlink/?LinkId=88606)。 如需詳細資訊，請參閱 < [Httpcfg 概觀](https://go.microsoft.com/fwlink/?LinkId=88605)。 [Windows 支援工具文件](https://go.microsoft.com/fwlink/?LinkId=94840)說明 Httpcfg.exe 工具的語法。  
   
  如果您是執行 [!INCLUDE[wv](../../../../includes/wv-md.md)]，可以使用已安裝的 Netsh.exe 工具。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "33494825"
   
 ### <a name="to-determine-how-ports-are-configured"></a>決定如何設定連接埠  
   
-1.  在[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]或[!INCLUDE[wxp](../../../../includes/wxp-md.md)]，若要檢視目前的連接埠組態，請使用 HttpCfg.exe 工具使用**查詢**和**ssl**切換時，如下列範例所示。  
+1.  在[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]或[!INCLUDE[wxp](../../../../includes/wxp-md.md)]，使用 HttpCfg.exe 工具來檢視目前的連接埠組態中，使用**查詢**並**ssl**切換時，如下列範例所示。  
   
     ```  
     httpcfg query ssl  
@@ -55,9 +55,9 @@ ms.locfileid: "33494825"
   
 ### <a name="to-get-a-certificates-thumbprint"></a>若要取得憑證的指紋  
   
-1.  使用憑證 MMC 嵌入式管理單元，尋找目的為用戶端驗證的 X.509 憑證。 如需詳細資訊，請參閱[How to： 使用 MMC 嵌入式管理單元檢視憑證](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。  
+1.  使用憑證 MMC 嵌入式管理單元，尋找目的為用戶端驗證的 X.509 憑證。 如需詳細資訊，請參閱[如何：使用 MMC 嵌入式管理單元來檢視憑證](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。  
   
-2.  存取憑證的指紋。 如需詳細資訊，請參閱[How to： 擷取憑證的指紋](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。  
+2.  存取憑證的指紋。 如需詳細資訊，請參閱 <<c0> [ 如何： 擷取憑證的指紋](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。  
   
 3.  將憑證的指紋複製到文字編輯器中，例如「記事本」。  
   
@@ -71,9 +71,9 @@ ms.locfileid: "33494825"
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
     ```  
   
-    -   **-I**參數語法的`IP`:`port`並指示工具來設定憑證至電腦的連接埠 8012。 或者，號碼前面的四個零也可以使用電腦的實際 IP 位址來取代。  
+    -   **-I**交換器有的語法`IP`:`port` ，並指示工具將憑證設定電腦的連接埠 8012。 或者，號碼前面的四個零也可以使用電腦的實際 IP 位址來取代。  
   
-    -   **-H**參數指定憑證的指紋。  
+    -   **-H**參數會指定憑證的指紋。  
   
 2.  在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中，使用 Netsh.exe 工具，如下列範例所示：  
   
@@ -85,7 +85,7 @@ ms.locfileid: "33494825"
   
     -   **Ipport**參數指定的 IP 位址和連接埠，以及運作方式就像是 **-i**上述 Httpcfg.exe 工具的參數。  
   
-    -   **Appid**參數是可以用來識別擁有端應用程式的 GUID。  
+    -   **Appid**參數是可用來識別擁有端應用程式的 GUID。  
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>繫結 SSL 憑證與連接埠號碼並支援用戶端憑證  
   
@@ -111,7 +111,7 @@ ms.locfileid: "33494825"
     httpcfg query ssl>myMachinePorts.txt  
     ```  
   
-2.  在[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]或[!INCLUDE[wxp](../../../../includes/wxp-md.md)]，使用 HttpCfg.exe 工具搭配**刪除**和**ssl**關鍵字。 使用 **-i**參數來指定`IP`:`port`數目，而 **-h**參數來指定憑證指紋。  
+2.  在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]或是[!INCLUDE[wxp](../../../../includes/wxp-md.md)]，使用 HttpCfg.exe 工具搭配**刪除**並**ssl**關鍵字。 使用 **-i**參數來指定`IP`:`port`數字，而 **-h**參數來指定憑證指紋。  
   
     ```  
     httpcfg delete ssl -i 0.0.0.0:8005 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  

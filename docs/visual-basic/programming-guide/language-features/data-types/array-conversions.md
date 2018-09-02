@@ -13,11 +13,11 @@ helpviewer_keywords:
 - object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
 ms.openlocfilehash: 93e6365a70f52f730b016cd4d4ac9382baeeba55
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255146"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396545"
 ---
 # <a name="array-conversions-visual-basic"></a>陣列轉換 (Visual Basic)
 您可以將陣列型別轉換成不同的陣列型別，提供符合下列條件：  

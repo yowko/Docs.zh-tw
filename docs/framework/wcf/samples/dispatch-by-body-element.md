@@ -2,12 +2,12 @@
 title: 按本文項目分派
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-ms.openlocfilehash: a59f639fc0f1adad48bfda5fd8105340ac004cef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 449c153092d80bb457a2059b80158ea665bfc645
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507872"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396374"
 ---
 # <a name="dispatch-by-body-element"></a>按本文項目分派
 這個範例會示範如何實作將傳入訊息指派至作業的替代演算法。  
@@ -69,9 +69,9 @@ private Message CreateMessageCopy(Message message,
 ```  
   
 ## <a name="adding-an-operation-selector-to-a-service"></a>將作業選取器新增至服務  
- 服務分派作業選取器是以 Windows Communication Foundation (WCF) 發送器的延伸模組。 若要選取雙工合約之回呼通道上的方法，也會使用用戶端作業選取器，其運作相當類似於此處描述的分派作業選取器，不過並沒有明確涵蓋在本範例中。  
+ 服務分派作業選取器是 Windows Communication Foundation (WCF) 發送器擴充功能。 若要選取雙工合約之回呼通道上的方法，也會使用用戶端作業選取器，其運作相當類似於此處描述的分派作業選取器，不過並沒有明確涵蓋在本範例中。  
   
- 和大多數服務模型延伸項目一樣，分派作業選取器也會使用行為新增至發送器。 A*行為*是組態物件，可將一或多個擴充功能加入至分派執行階段 （或用戶端執行階段），或者變更其設定。  
+ 和大多數服務模型延伸項目一樣，分派作業選取器也會使用行為新增至發送器。 A*行為*是組態物件，其中一或多個延伸模組會新增至分派執行階段 （或用戶端執行階段），或變更其設定。  
   
  由於作業選取器具有合約範圍，在這裡可適當實作的行為則是 <xref:System.ServiceModel.Description.IContractBehavior>。 由於會在 <xref:System.Attribute> 衍生類別上實作介面 (如下列程式碼所示)，可以透過宣告方式將行為新增至服務合約。 每次開啟 <xref:System.ServiceModel.ServiceHost> 以及建置分派執行階段時，所有找到的行為便會做為合約上的屬性、作業和服務實作或者服務組態中的項目，接著自動新增這些行為並要求它們做為延伸項目或修改預設組態。  
   
@@ -119,9 +119,9 @@ public void ApplyDispatchBehavior(ContractDescription contractDescription, Servi
 ## <a name="implementing-the-service"></a>實作服務  
  在此範例中實作的行為會直接影響解譯和分派網路訊息的方式，也就是服務合約的函式。 最後，應該在選擇要使用該行為的服務實作中，於服務合約層級宣告行為。  
   
- 範例專案服務套用`DispatchByBodyElementBehaviorAttribute`合約行為`IDispatchedByBody`服務合約和標籤每兩個作業`OperationForBodyA()`和`OperationForBodyB()`與`DispatchBodyElementAttribute`作業行為。 已開啟實作此合約之服務的服務主機時，發送器產生器 (Builder) 會如前所述挑選此中繼資料。  
+ 範例專案服務會套用`DispatchByBodyElementBehaviorAttribute`合約行為`IDispatchedByBody`服務合約和標籤每兩個作業`OperationForBodyA()`並`OperationForBodyB()`使用`DispatchBodyElementAttribute`作業行為。 已開啟實作此合約之服務的服務主機時，發送器產生器 (Builder) 會如前所述挑選此中繼資料。  
   
- 由於作業選取器只會根據訊息本文項目進行分派，而忽略 "Action"，因此需要告知執行階段不要在傳回的回覆上檢查 "Action" 標頭，方法是將萬用字元 "*" 指派給 `ReplyAction` 的 <xref:System.ServiceModel.OperationContractAttribute> 屬性即可。 此外，並需要讓預設作業具有"Action"屬性設定為萬用字元"\*"。 預設作業會接收無法分派也沒有 `DispatchBodyElementAttribute` 的所有訊息：  
+ 由於作業選取器只會根據訊息本文項目進行分派，而忽略 "Action"，因此需要告知執行階段不要在傳回的回覆上檢查 "Action" 標頭，方法是將萬用字元 "*" 指派給 `ReplyAction` 的 <xref:System.ServiceModel.OperationContractAttribute> 屬性即可。 此外，它才可讓預設作業具有"Action"屬性設定為萬用字元"\*」。 預設作業會接收無法分派也沒有 `DispatchBodyElementAttribute` 的所有訊息：  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"),  
@@ -163,18 +163,18 @@ public interface IDispatchedByBody
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要建置此方案，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+2.  若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-3.  若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\AdvancedDispatchByBody`  
   

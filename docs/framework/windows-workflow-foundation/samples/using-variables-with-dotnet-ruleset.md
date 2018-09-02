@@ -2,12 +2,12 @@
 title: 搭配 .NET Framework 3.5 Ruleset 使用變數
 ms.date: 03/30/2017
 ms.assetid: 27b56249-22fe-4252-840f-74c0d6c7a6b3
-ms.openlocfilehash: 9fa6eaf58aaddc4673f08ec9a9001647a494877d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 64d47564076e19e152e30b6ab0cb3900ce53cfa1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516852"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395150"
 ---
 # <a name="using-variables-with-a-net-framework-35-ruleset"></a>搭配 .NET Framework 3.5 Ruleset 使用變數
 這個範例示範如何建立使用 <xref:System.Activities.Statements.Interop> 活動整合 [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] 中使用原則和規則所撰寫自訂活動的工作流程。 工作流程會透過將變數繫結至自訂活動公開之相依性屬性的方式，將資料傳遞至自訂活動。  
@@ -26,9 +26,9 @@ ms.locfileid: "33516852"
   
      規則編輯器會出現並顯示規則。  
   
-4.  以滑鼠右鍵按一下`DiscountPolicy`選取**檢視程式碼**選項，檢查程式碼旁置 C# 程式碼活動。  
+4.  以滑鼠右鍵按一下`DiscountPolicy`，然後選取**檢視程式碼**選項，檢查程式碼旁置 C# 程式碼活動。  
   
-     您會看見 `DiscountLevel` 的相依性屬性設定。 這相當於 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 中的引數。 如需有關引數的詳細資訊，請參閱[變數和引數](../../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md)。  
+     您會看見 `DiscountLevel` 的相依性屬性設定。 這相當於 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 中的引數。 如需有關引數的詳細資訊，請參閱 <<c0> [ 變數和引數](../../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md)。  
   
 ## <a name="interopwith35ruleset"></a>InteropWith35RuleSet  
  這是循序工作流程專案，該專案會使用 <xref:System.Activities.Statements.Interop> 活動整合 `TravelRuleLibrary` 專案中建立的自訂規則集。 變數會在 <xref:System.Activities.Statements.Sequence> 活動的最上層建立。 <xref:System.Activities.Statements.Interop> 活動會用來與 `TravelRuleSet` 活動整合。 <xref:System.Activities.Statements.Sequence> 上宣告的變數會用來繫結至相依性屬性。  
@@ -46,6 +46,6 @@ ms.locfileid: "33516852"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\InteropWith35RuleSet`

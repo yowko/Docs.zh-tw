@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-ms.openlocfilehash: f2b07b8d42069fa98ba51dea75f9695e7adce0b0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7013f855fb54f6c67c569ccabda91727359d22b2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759149"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398756"
 ---
 # <a name="handling-dataadapter-events"></a>處理 DataAdapter 的事件
 ADO.NET <xref:System.Data.Common.DataAdapter> 公開 (Expose) 的三個事件可讓您用來回應資料來源中的資料變更。 下表說明 `DataAdapter` 事件。  
@@ -39,7 +39,7 @@ ADO.NET <xref:System.Data.Common.DataAdapter> 公開 (Expose) 的三個事件可
   
  您也可以使用 `ContinueUpdateOnError` 屬性來處理更新資料列的錯誤。 如果 `DataAdapter.ContinueUpdateOnError` 為 `true`，則當資料列的更新造成擲回例外狀況時，會將例外狀況的文字放入特定資料列的 `RowError` 資訊中，並繼續作業，而不擲回例外狀況。 這樣一來，您就可以在完成 `Update` 後才回應錯誤，而 `RowUpdated` 事件則是讓您在發生錯誤時立即回應該錯誤。  
   
- 下列程式碼範例顯示如何加入和移除事件處理常式。 `RowUpdating` 事件處理常式將所有的刪除記錄和時間戳記寫入記錄檔。 `RowUpdated`事件處理常式會將錯誤資訊加入`RowError`屬性中的資料列`DataSet`、 隱藏例外狀況，然後繼續處理 (鏡像的行為`ContinueUpdateOnError`  =  `true`)。  
+ 下列程式碼範例顯示如何加入和移除事件處理常式。 `RowUpdating` 事件處理常式將所有的刪除記錄和時間戳記寫入記錄檔。 `RowUpdated`事件處理常式會將錯誤資訊`RowError`屬性中的資料列`DataSet`中，會隱藏例外狀況，然後繼續處理 (鏡像的行為`ContinueUpdateOnError`  =  `true`)。  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection object.  
@@ -191,4 +191,4 @@ protected static void FillError(object sender, FillErrorEventArgs args)
  [處理 DataSet 的事件](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)  
  [處理 DataTable 事件](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
  [事件](../../../../docs/standard/events/index.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

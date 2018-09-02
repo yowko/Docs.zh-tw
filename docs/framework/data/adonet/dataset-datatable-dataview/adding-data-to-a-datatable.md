@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
-ms.openlocfilehash: c58f64dba0bceb4a35c67e16193a6627837436e0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c1ebe2d735924c559f450f4041884dc9845e4fe0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767124"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396081"
 ---
 # <a name="adding-data-to-a-datatable"></a>將資料加入至 DataTable
-建立 <xref:System.Data.DataTable> 並使用資料行和條件約束定義其結構之後，即可將新資料列加入資料表。 若要加入新資料列，請將新變數宣告為 <xref:System.Data.DataRow> 型別。 新**DataRow**呼叫時，會傳回物件<xref:System.Data.DataTable.NewRow%2A>方法。 **DataTable**接著會建立**DataRow**物件基礎的資料表，結構所定義的<xref:System.Data.DataColumnCollection>。  
+建立 <xref:System.Data.DataTable> 並使用資料行和條件約束定義其結構之後，即可將新資料列加入資料表。 若要加入新資料列，請將新變數宣告為 <xref:System.Data.DataRow> 型別。 新**DataRow**當您呼叫時，會傳回物件<xref:System.Data.DataTable.NewRow%2A>方法。 **DataTable**然後建立**DataRow**物件基礎的資料表，結構所定義<xref:System.Data.DataColumnCollection>。  
   
- 下列範例示範如何建立新的資料列，藉由呼叫**NewRow**方法。  
+ 下列範例示範如何藉由呼叫建立新的資料列**NewRow**方法。  
   
 ```vb  
 Dim workRow As DataRow = workTable.NewRow()  
@@ -37,7 +37,7 @@ workRow["CustLName"] = "Smith";
 workRow[1] = "Smith";  
 ```  
   
- 資料會插入新的資料列之後**新增**方法用來新增列<xref:System.Data.DataRowCollection>，下列程式碼所示。  
+ 資料會插入新的資料列之後,**新增**方法用來加入資料列<xref:System.Data.DataRowCollection>，下列程式碼所示。  
   
 ```vb  
 workTable.Rows.Add(workRow)  
@@ -47,7 +47,7 @@ workTable.Rows.Add(workRow)
 workTable.Rows.Add(workRow);  
 ```  
   
- 您也可以呼叫**新增**方法，藉由傳遞陣列的值，將新的資料列型別為<xref:System.Object>，如下列範例所示。  
+ 您也可以呼叫**新增**方法來加入新的資料列，藉由傳入的值，陣列型別為<xref:System.Object>，如下列範例所示。  
   
 ```vb  
 workTable.Rows.Add(new Object() {1, "Smith"})  
@@ -57,9 +57,9 @@ workTable.Rows.Add(new Object() {1, "Smith"})
 workTable.Rows.Add(new Object[] {1, "Smith"});  
 ```  
   
- 傳遞做為輸入的值的陣列**物件**至**新增**方法會建立新資料表內的資料列，並將其資料行值設定為物件陣列中的值。 請注意，陣列值將根據其在資料表出現的順序，依序和資料行相符。  
+ 傳遞的值，型別為陣列**物件**至**新增**方法會建立新的資料列的資料表，並將其資料行值設定為物件陣列中的值。 請注意，陣列值將根據其在資料表出現的順序，依序和資料行相符。  
   
- 下列範例將 10 個資料列加入至新建立**客戶**資料表。  
+ 下列範例會加入至新建立的 10 個資料列**客戶**資料表。  
   
 ```vb  
 Dim workRow As DataRow  
@@ -91,4 +91,4 @@ for (int i = 0; i <= 9; i++)
  <xref:System.Data.DataRowCollection>  
  <xref:System.Data.DataTable>  
  [在 DataTable 中操作資料](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

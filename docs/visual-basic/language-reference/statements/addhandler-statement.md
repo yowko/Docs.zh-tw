@@ -1,5 +1,5 @@
 ---
-title: AddHandler 陳述式
+title: AddHandler 陳述式 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.AddHandlerMethod
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - AddHandler statement [Visual Basic]
 ms.assetid: cfe69799-2a0f-42c0-a99e-09fed954da01
-ms.openlocfilehash: bc0dce442db9d62b9fbee857b6e711696ad87fb8
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: f731ff150bd901e325726fca5aa682ff1770f979
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936811"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396483"
 ---
 # <a name="addhandler-statement"></a>AddHandler 陳述式
 將事件與事件處理常式在執行階段。  

@@ -2,17 +2,17 @@
 title: SQL Server 安全性概觀
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
-ms.openlocfilehash: 84b6724417d03a30c131700e197744839d3a020d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25f9f96a550438d242ee409da0d09b7df06de33c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362230"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395798"
 ---
 # <a name="overview-of-sql-server-security"></a>SQL Server 安全性概觀
 具有重疊安全性層的深入防禦策略是抵禦安全性威脅的最佳方式。 SQL Server 提供了一種安全性架構，其設計目的是為了允許資料庫管理員和開發人員建立安全的資料庫應用程式並抵禦威脅。 每個 SQL Server 版本都會透過引進新的特性和功能來改善舊版 SQL Server。 不過，安全性無法一體適用。 每個應用程式的安全性需求都是唯一的。 開發人員必須瞭解哪些特性和功能的組合最適合用來抵禦已知威脅，以及預期未來可能會發生的威脅。  
   
- SQL Server 執行個體包含階層式實體 (Entity) 集合，從伺服器開始。 每個伺服器都包含多個資料庫，而每個資料庫都包含安全性實體物件的集合。 具有相關聯的安全性實體的每個 SQL Server*權限*，可授與*主體*，這是個人、 群組或處理程序授與存取權 SQL Server。 SQL Server 安全性架構會處理透過安全性實體的實體存取權*驗證*和*授權*。  
+ SQL Server 執行個體包含階層式實體 (Entity) 集合，從伺服器開始。 每個伺服器都包含多個資料庫，而每個資料庫都包含安全性實體物件的集合。 每個 SQL Server 安全性實體相關聯*權限*，可以授與*主體*，這是個人、 群組或處理程序授與存取權給 SQL Server。 SQL Server 安全性架構會處理透過安全性實體的實體存取權*驗證*並*授權*。  
   
 -   驗證是指登入 SQL Server 的程序，其中主體會透過提交伺服器評估的認證來要求存取。 驗證會建立正在進行驗證之使用者或處理序的識別。  
   
@@ -43,4 +43,4 @@ ms.locfileid: "33362230"
  [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 安全性](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

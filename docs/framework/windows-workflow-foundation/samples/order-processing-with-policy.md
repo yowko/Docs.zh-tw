@@ -2,12 +2,12 @@
 title: 使用原則處理訂
 ms.date: 03/30/2017
 ms.assetid: 66833724-dc36-4fad-86b0-59ffeaa3ba6a
-ms.openlocfilehash: 15e274a7a513a3208e3a54575dc354310743b731
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b927d8e7090f96b22c0510f9651070ab999c91be
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519414"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398366"
 ---
 # <a name="order-processing-with-policy"></a>使用原則處理訂
 訂單處理原則範例將示範在 Windows Workflow Foundation (WF) 的 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] 中引入的一些主要功能。 下列是 WF 規則引擎的新功能：  
@@ -24,7 +24,7 @@ ms.locfileid: "33519414"
  此範例將示範 `OrderProcessingPolicy` 專案，其中會輸入包含可用項目的編號清單以及郵遞區號的客戶訂單。 如果兩個項目都正確，訂單便會成功處理，否則，原則會建立錯誤物件，並利用多載 `+` 運算子和預先定義的擴充方法來通知使用者發生錯誤。  
   
 > [!NOTE]
->  如需擴充方法的詳細資訊，請參閱[C# 3.0 版規則](http://go.microsoft.com/fwlink/?LinkId=95402)。  
+>  如需擴充方法的詳細資訊，請參閱[C# 版本 3.0 規格](https://go.microsoft.com/fwlink/?LinkId=95402)。  
   
  此範例是由下列專案所組成：  
   
@@ -64,7 +64,7 @@ ms.locfileid: "33519414"
   
          這個規則會檢查在兩個 `OrderErrorCollection` 物件 (`invalidItemNumErrorCollection` 和 `invalidIZipCodeErrorCollection`) 中的先前兩個規則是否有新增任何錯誤。 如果有發生錯誤 (`invalidItemNumErrorCollection` 或 `invalidZipCodeErrorCollection` 不是 `null`)，規則便會執行下列動作：  
   
-        1.  呼叫多載`+`要複製的內容運算子`invalidItemNumErrorCollection`和`invalidZipCodeErrorCollection`至`invalidOrdersCollection``OrderErrorCollection`執行個體。  
+        1.  呼叫多載`+`複製的內容運算子`invalidItemNumErrorCollection`並`invalidZipCodeErrorCollection`至`invalidOrdersCollection``OrderErrorCollection`執行個體。  
   
         2.  在 `PrintOrderErrors` 上呼叫 `invalidOrdersCollection` 擴充方法，並輸出 `ErrorText` 中所有 `orderError` 物件上的 `invalidOrdersCollection` 屬性。  
   
@@ -140,6 +140,6 @@ Another Order? (Y/N): n
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄：  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\Policy\OrderProcessingPolicy`

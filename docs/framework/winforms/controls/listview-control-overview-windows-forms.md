@@ -8,24 +8,24 @@ helpviewer_keywords:
 - ListView control [Windows Forms], about ListView control
 - list views
 ms.assetid: c9ef56c1-3bb1-4101-9f4e-e95e720f2756
-ms.openlocfilehash: f92b5f5ae40287c95da10ef96aad0fa764fa00e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ab2d0d9456f64f215ddbc0003833db1858f0ce1a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540669"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395100"
 ---
 # <a name="listview-control-overview-windows-forms"></a>ListView 控制項概觀 (Windows Form)
-Windows Form <xref:System.Windows.Forms.ListView> 控制項顯示具有圖示的項目清單。 若要建立像 Windows 檔案總管右窗格的使用者介面，您可以使用清單檢視。 控制項有四個檢視模式： 使用 LargeIcon、 SmallIcon、 清單和詳細資料。  
+Windows Form <xref:System.Windows.Forms.ListView> 控制項顯示具有圖示的項目清單。 若要建立像 Windows 檔案總管右窗格的使用者介面，您可以使用清單檢視。 控制項有四種檢視模式： LargeIcon、 SmallIcon、 清單和詳細資料。  
   
-## <a name="what-you-can-do-with-the-listview-control"></a>您可以執行使用 ListView 控制項  
+## <a name="what-you-can-do-with-the-listview-control"></a>您可以執行與 ListView 控制項  
   
 > [!NOTE]
->  額外的檢視模式中，圖格，才可以使用 Windows XP 和 Windows Server 2003 作業系統。 如需詳細資訊，請參閱[How to： 在 Windows Form ListView 控制項中啟用並排顯示檢視](../../../../docs/framework/winforms/controls/how-to-enable-tile-view-in-a-windows-forms-listview-control.md)。  
+>  額外的檢視模式中，圖格，才可使用 Windows XP 和 Windows Server 2003 作業系統上。 如需詳細資訊，請參閱 <<c0> [ 如何： 在 Windows Form ListView 控制項中啟用並排顯示檢視](../../../../docs/framework/winforms/controls/how-to-enable-tile-view-in-a-windows-forms-listview-control.md)。  
   
- 使用 LargeIcon 模式會顯示大圖示旁邊的項目文字。如果控制項為夠大，項目會出現在多個資料行中。 不同之處在於它會顯示小圖示的 SmallIcon 模式都是相同的。 清單模式顯示小圖示，但一律是單一資料行中。 詳細資料模式下顯示多個資料行中的項目。 如需詳細資訊，請參閱[How to： 將資料行加入 Windows Form ListView 控制項](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)。 檢視模式由<xref:System.Windows.Forms.ListView.View%2A>屬性。 所有的檢視模式可以顯示從影像清單的映像。 如需詳細資訊，請參閱[如何： 顯示 Windows Form ListView 控制項的圖示](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md)。  
+ LargeIcon 模式會顯示項目文字旁的大圖示如果控制項是夠大，項目會出現在多個資料行。 不同之處在於它會顯示小圖示的 [smallicon] 模式都是相同的。 清單模式會顯示小圖示，但一律為單一資料行。 詳細資料模式會顯示多個資料行中的項目。 如需詳細資訊，請參閱 <<c0> [ 如何： 將資料行新增至 Windows Forms ListView 控制項](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)。 檢視模式由<xref:System.Windows.Forms.ListView.View%2A>屬性。 所有的檢視模式來顯示從影像清單的影像。 如需詳細資訊，請參閱 <<c0> [ 如何： 顯示 Windows Form ListView 控制項的圖示](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md)。  
   
- 下表列出一些<xref:System.Windows.Forms.ListView>成員以及中是有效的檢視。  
+ 下表列出一些<xref:System.Windows.Forms.ListView>成員和檢視中有效。  
   
 |ListView 成員|檢視|  
 |---------------------|----------|  
@@ -37,15 +37,15 @@ Windows Form <xref:System.Windows.Forms.ListView> 控制項顯示具有圖示的
 |<xref:System.Windows.Forms.ListView.FindItemWithText%2A> 方法|<xref:System.Windows.Forms.View.Details>、 <xref:System.Windows.Forms.View.List>或 <xref:System.Windows.Forms.View.Tile>|  
 |<xref:System.Windows.Forms.ListView.FindNearestItem%2A> 方法|<xref:System.Windows.Forms.View.SmallIcon> 或 <xref:System.Windows.Forms.View.LargeIcon>|  
 |<xref:System.Windows.Forms.ListView.GetItemAt%2A> 方法|<xref:System.Windows.Forms.View.Details> 或 <xref:System.Windows.Forms.View.Tile>|  
-|<xref:System.Windows.Forms.ListView.Groups%2A> 屬性|以外的所有模式 <xref:System.Windows.Forms.View.List>|  
+|<xref:System.Windows.Forms.ListView.Groups%2A> 屬性|以外的所有檢視 <xref:System.Windows.Forms.View.List>|  
 |<xref:System.Windows.Forms.ListView.HeaderStyle%2A> 屬性|<xref:System.Windows.Forms.View.Details>.|  
 |<xref:System.Windows.Forms.ListView.InsertionMark%2A> 屬性|<xref:System.Windows.Forms.View.LargeIcon>、 <xref:System.Windows.Forms.View.SmallIcon>或 <xref:System.Windows.Forms.View.Tile>|  
   
- 索引鍵內容<xref:System.Windows.Forms.ListView>控制項是<xref:System.Windows.Forms.ListView.Items%2A>，其中包含由控制項所顯示的項目。 <xref:System.Windows.Forms.ListView.SelectedItems%2A>屬性包含控制項中目前選取的項目集合。 使用者可以選取多個項目，例如拖放到另一個控制項，一次的數個項目，如果<xref:System.Windows.Forms.ListView.MultiSelect%2A>屬性設定為`true`。 <xref:System.Windows.Forms.ListView>控制項可以顯示的項目旁邊的核取方塊，如果<xref:System.Windows.Forms.ListView.CheckBoxes%2A>屬性設定為`true`。  
+ 索引鍵內容<xref:System.Windows.Forms.ListView>控制項是<xref:System.Windows.Forms.ListView.Items%2A>，其中包含控制項所顯示的項目。 <xref:System.Windows.Forms.ListView.SelectedItems%2A>屬性包含控制項中目前選取的項目集合。 使用者可以選取多個項目，例如拖放到另一個控制項，一次的數個項目，如果<xref:System.Windows.Forms.ListView.MultiSelect%2A>屬性設定為`true`。 <xref:System.Windows.Forms.ListView>控制項可以顯示的項目旁的核取方塊，如果<xref:System.Windows.Forms.ListView.CheckBoxes%2A>屬性設定為`true`。  
   
- <xref:System.Windows.Forms.ListView.Activation%2A>屬性會決定使用者必須採取的動作類型啟用清單中的項目： 選項<xref:System.Windows.Forms.ItemActivation.Standard>， <xref:System.Windows.Forms.ItemActivation.OneClick>，和<xref:System.Windows.Forms.ItemActivation.TwoClick>。 <xref:System.Windows.Forms.ItemActivation.OneClick> 啟用需要只要按一下来啟動的項目。 <xref:System.Windows.Forms.ItemActivation.TwoClick> 啟用要求使用者按兩下以啟動項目。只要按一下變更項目文字的色彩。 <xref:System.Windows.Forms.ItemActivation.Standard> 啟用要求使用者按兩下以啟動項，但項目不會變更外觀。  
+ <xref:System.Windows.Forms.ListView.Activation%2A>屬性會決定使用者必須採取的動作類型啟動清單中的項目： 選項<xref:System.Windows.Forms.ItemActivation.Standard>， <xref:System.Windows.Forms.ItemActivation.OneClick>，和<xref:System.Windows.Forms.ItemActivation.TwoClick>。 <xref:System.Windows.Forms.ItemActivation.OneClick> 啟用需要只要按一下以啟動項目。 <xref:System.Windows.Forms.ItemActivation.TwoClick> 啟用要求使用者必須按兩下來啟動項目;只要按一下變更項目文字的色彩。 <xref:System.Windows.Forms.ItemActivation.Standard> 啟用要求使用者必須按兩下來啟動項目，但項目不會變更外觀。  
   
- <xref:System.Windows.Forms.ListView>控制項也支援視覺化樣式和其他可用的功能在 Windows XP 平台，包括群組、 並排顯示檢視和 插入標記。 如需詳細資訊，請參閱[Windows XP 功能和 Windows Form 控制項](http://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)。  
+ <xref:System.Windows.Forms.ListView>控制項也支援視覺化樣式，以及其他可用的功能在 Windows XP 平台，包括群組、 並排顯示檢視和 插入標記。 如需詳細資訊，請參閱 < [Windows XP 功能和 Windows Form 控制項](https://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.ListView>  

@@ -2,22 +2,22 @@
 title: 動態重新組態
 ms.date: 03/30/2017
 ms.assetid: b20786ae-cce6-4f91-b6cb-9cae116faf8b
-ms.openlocfilehash: 81a2b494c48476e683053e12e58264e756201124
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: a147a1d6cf61001832661376363ecc850ecad309
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33810376"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401336"
 ---
 # <a name="dynamic-reconfiguration"></a>動態重新組態
-這個範例會示範 Windows Communication Foundation (WCF) 路由服務。 路由服務是 WCF 元件，以簡化應用程式中加入內容架構的路由器。 此範例會調整標準 WCF 計算機範例，以便使用路由服務進行通訊。 此範例示範如何在執行階段以動態方式重新設定路由服務。  
+這個範例會示範 Windows Communication Foundation (WCF) 路由服務。 路由服務是一種 WCF 元件，可讓您更輕鬆地在您的應用程式中加入內容為基礎的路由器。 此範例會調整標準 WCF 計算機範例，以便使用路由服務進行通訊。 此範例示範如何在執行階段以動態方式重新設定路由服務。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\DynamicReconfiguration`  
   
@@ -30,13 +30,13 @@ ms.locfileid: "33810376"
   
 1.  使用 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 開啟 DynamicReconfiguration.sln。  
   
-2.  若要開啟**方案總管 中**，選取**方案總管 中**從**檢視**功能表。  
+2.  若要開啟 [**方案總管**，選取**方案總管]** 從**檢視**功能表。  
   
-3.  按**F5**或**CTRL + SHIFT + B** Visual Studio 中。  
+3.  按下**F5**或是**CTRL + SHIFT + B** Visual Studio 中。  
   
-    1.  如果您想要自動啟動必要的專案時按下**F5**，以滑鼠右鍵按一下方案，然後選取**屬性**。 選取**啟始專案**節點下的**通用屬性**的左窗格中。 選取**多個啟始專案**選項按鈕，並將所有的專案設定**啟動**動作。  
+    1.  如果您想要自動啟動必要的專案時按下**F5**，以滑鼠右鍵按一下方案，然後選取**屬性**。 選取 **啟始專案**下方的節點**通用屬性**的左窗格中。 選取 **多個啟始專案**選項按鈕，並將所有要有的專案設定**開始**動作。  
   
-    2.  如果您使用建置專案**CTRL + SHIFT + B**，您必須啟動下列應用程式：  
+    2.  如果您要建置的專案**CTRL + SHIFT + B**，您必須啟動下列應用程式：  
   
         1.  計算機用戶端 (./CalculatorClient/bin/client.exe)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "33810376"
   
 6.  計算機服務與四捨五入計算機服務也會列印出針對其個別主控台視窗叫用之作業的記錄檔。  
   
-7.  在用戶端主控台視窗中，輸入"quit"，然後按 ENTER 以結束。  
+7.  在用戶端主控台視窗中，輸入"quit"然後按 ENTER 以結束。  
   
 8.  在服務主控台視窗中按 ENTER 鍵，以終止服務。  
   
@@ -83,4 +83,4 @@ ms.locfileid: "33810376"
  Contoso 想要虛擬化其所有服務，僅公開一個端點，透過這個端點可以存取多個不同類型的服務。 在此情況下，它們會利用路由服務以內容為基礎的路由功能，決定應該將傳入要求傳送至何處。  
   
 ## <a name="see-also"></a>另請參閱  
- [AppFabric 主控與持續性範例](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric 主控與持續性範例](https://go.microsoft.com/fwlink/?LinkId=193961)

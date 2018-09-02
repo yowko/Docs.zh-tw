@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b38526cd-a62a-48cb-822a-e91dfa68e02d
-ms.openlocfilehash: b7ad989dce39a8e9a0ed7b6cd988e06304e7b40f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1a0d92c7acad58d3618c3f50b7463022352cf542
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764927"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396227"
 ---
 # <a name="obtaining-a-single-value-from-a-database"></a>從資料庫取得單一值
-或許您需要以單一數值傳回資料庫資訊，而非以資料表或資料流的形式。 比方說，您可能想要傳回的結果，例如計數彙總函式 (\*)、 sum (price) 或 AVG(Quantity)。 **命令**物件可讓您傳回單一值使用**ExecuteScalar**方法。 **ExecuteScalar**方法傳回時，做為純量值，結果集的第一個資料列的第一個資料行的值。  
+或許您需要以單一數值傳回資料庫資訊，而非以資料表或資料流的形式。 比方說，您可能想要傳回的結果，例如計數彙總函式 (\*)，sum （price） 或 AVG(Quantity)。 **命令**物件可讓您使用的單一值傳回到**ExecuteScalar**方法。 **ExecuteScalar**方法傳回時，為純量值時，結果集的第一個資料列的第一個資料行的值。  
   
  下列程式碼範例會使用 <xref:System.Data.SqlClient.SqlCommand>，在資料庫中插入新的值。 <xref:System.Data.SqlClient.SqlCommand.ExecuteScalar%2A> 方法是用來傳回所插入資料錄的識別資料行值。  
   
@@ -24,4 +24,4 @@ ms.locfileid: "32764927"
  [命令和參數](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [執行命令](../../../../docs/framework/data/adonet/executing-a-command.md)  
  [DbConnection、DbCommand 和 DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

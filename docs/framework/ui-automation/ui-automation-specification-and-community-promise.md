@@ -5,16 +5,16 @@ ms.assetid: b238fd69-2f62-499c-bea0-b91dfb9204f0
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: c65c66fb02594f366fefe5ea8908f97892a0da36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 14a9f6215b8d45092bb0df5993dc62f1ef42efd2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401150"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394762"
 ---
 # <a name="ui-automation-specification-and-community-promise"></a>UI 自動化規格和社群承諾
-使用者介面自動化提供以程式設計方式存取大部分的使用者介面 (UI) 項目在桌面上，啟用輔助技術產品，例如螢幕助讀程式 UI 的相關資訊提供給使用者，以及標準輸入以外的方式來操作 UI.  
+使用者介面自動化提供以程式設計方式存取大部分的使用者介面 (UI) 項目在桌面上，讓 UI 的相關資訊提供給使用者，並從標準輸入以外的方式操作 UI 的螢幕助讀程式之類的輔助技術產品.  
   
 ## <a name="see-also"></a>另請參閱  
- [UI 自動化規格](http://go.microsoft.com/fwlink/?LinkId=108541)  
- [UI 自動化社群承諾](http://go.microsoft.com/fwlink/?LinkId=108542)
+ [使用者介面自動化規格](https://go.microsoft.com/fwlink/?LinkId=108541)  
+ [UI 自動化社群承諾](https://go.microsoft.com/fwlink/?LinkId=108542)
