@@ -2,18 +2,18 @@
 title: 在具有 Interop 活動的 .NET Framework 4 中使用 .NET Framework 3.0 WF 活動
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
-ms.openlocfilehash: 8110c86ab8bf5c557dbf8eb361d4ead2e256a3b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b2dac91ffa0f4bf5e1c1afea1fc6f6629c345857
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518407"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467501"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>在具有 Interop 活動的 .NET Framework 4 中使用 .NET Framework 3.0 WF 活動
 <xref:System.Activities.Statements.Interop> 活動是 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4.5) 活動，它會將 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] (WF 3.5) 活動包裝在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流程中。 WF 3 活動可以是單一分葉活動，也可以是完整的活動樹狀結構。 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 活動的執行 (包括取消及例外狀況處理) 與保存會發生於執行中的 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流程執行個體的內容中。  
   
 > [!NOTE]
->  <xref:System.Activities.Statements.Interop>活動不會顯示在工作流程設計工具的工具箱除非工作流程的專案具有其**目標 Framework**設定設為 **.NET Framework 4.5**。  
+>  <xref:System.Activities.Statements.Interop>活動不會顯示在工作流程設計工具工具箱除非工作流程的專案具有其**目標 Framework**設定設為 **.NET Framework 4.5**。  
   
 ## <a name="criteria-for-using-a-wf-3-activity-with-an-interop-activity"></a>搭配 Interop 活動使用 WF 3 活動的準則  
  若要讓 WF 3 活動順利在 <xref:System.Activities.Statements.Interop> 活動中執行，必須符合下列準則：  
@@ -24,7 +24,7 @@ ms.locfileid: "33518407"
   
 -   WF 3 活動必須具有公用的預設建構函式。  
   
--   由於 <xref:System.Activities.Statements.Interop> 活動可支援的介面型別有限，所以無法直接使用<xref:System.Workflow.Activities.HandleExternalEventActivity> 與 <xref:System.Workflow.Activities.CallExternalMethodActivity>，但可使用以 [工作流程通訊活動] 工具 (WCA.exe) 所建立的衍生活動。 請參閱[Windows Workflow Foundation 工具](http://go.microsoft.com/fwlink/?LinkId=178889)如需詳細資訊。  
+-   由於 <xref:System.Activities.Statements.Interop> 活動可支援的介面型別有限，所以無法直接使用<xref:System.Workflow.Activities.HandleExternalEventActivity> 與 <xref:System.Workflow.Activities.CallExternalMethodActivity>，但可使用以 [工作流程通訊活動] 工具 (WCA.exe) 所建立的衍生活動。 請參閱[Windows Workflow Foundation 工具](https://go.microsoft.com/fwlink/?LinkId=178889)如需詳細資訊。  
   
 ## <a name="configuring-a-wf-3-activity-within-an-interop-activity"></a>設定 Interop 活動內的 WF3 活動  
  為了設定資料並跨互通性界限在 WF3 活動內外傳遞該資料，WF 3 活動的屬性和中繼資料屬性會由 <xref:System.Activities.Statements.Interop> 活動公開。 WF 3 活動的中繼資料屬性 (例如 <xref:System.Workflow.ComponentModel.Activity.Name%2A>) 會透過 <xref:System.Activities.Statements.Interop.ActivityMetaProperties%2A> 集合公開。 這是名稱/值組的集合，用於定義 WF3 活動之中繼資料屬性的值。 中繼資料屬性是相依性屬性 (已設定其 <xref:System.Workflow.ComponentModel.DependencyPropertyOptions.Metadata> 旗標) 所支援的屬性。  

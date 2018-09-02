@@ -2,12 +2,12 @@
 title: SQL Server 資料類型對應
 ms.date: 03/30/2017
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
-ms.openlocfilehash: 26ba7aa730eb9c30cfeaf50c59d6b9721fe5857d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9bc2747dff7b6f2bffdca4186519f2a36083e5f0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362461"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456392"
 ---
 # <a name="sql-server-data-type-mappings"></a>SQL Server 資料類型對應
 SQL Server 和 .NET Framework 是以不同的型別系統為基礎。 例如，.NET Framework <xref:System.Decimal> 結構的最大小數點位數為 28，而 SQL Server decimal 和 numeric 資料型別的最大小數點位數為 38。 為了在讀取和寫入資料時維持資料完整性，<xref:System.Data.SqlClient.SqlDataReader> 會公開 (Expose) SQL Server 特有的具型別存取子方法 (可傳回 <xref:System.Data.SqlTypes> 的物件) 以及存取子方法 (可傳回 .NET Framework 型別)。 SQL Server 型別和 .NET Framework 型別也會由 <xref:System.Data.DbType> 和 <xref:System.Data.SqlDbType> 類別 (Class) 中的列舉型別 (Enumeration) 表示，而且您可以在指定 <xref:System.Data.SqlClient.SqlParameter> 資料型別時使用這些類別。  
@@ -50,14 +50,15 @@ SQL Server 和 .NET Framework 是以不同的型別系統為基礎。 例如，.
 |xml|Xml|<xref:System.Data.SqlDbType.Xml>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlXml%2A>|<xref:System.Data.DbType.Xml>|無|  
   
 <sup>1</sup>無法設定`DbType`屬性`SqlParameter`至`SqlDbType.Date`。  
-<sup>2</sup>使用特定具型別的存取子，如果您知道的基礎型別`sql_variant`。  
+<sup>2</sup>使用特定的具型別存取子，如果您知道的基礎型別`sql_variant`。  
   
-## <a name="sql-server-books-online-reference"></a>SQL Server 線上叢書參考  
- 如需有關 SQL Server 資料類型的詳細資訊，請參閱[資料類型 (Database Engine)](http://go.microsoft.com/fwlink/?LinkID=107468)。  
+## <a name="sql-server-documentation"></a>SQL Server 文件
+
+如需 SQL Server 資料類型的詳細資訊，請參閱[資料類型 & Amp;#40;transact-SQL&AMP;#41;](/sql/t-sql/data-types/data-types-transact-sql)。
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 資料類型和 ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
  [SQL Server 二進位和大量數值資料](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
  [ADO.NET 中的資料類型對應](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
  [設定參數和參數資料類型](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

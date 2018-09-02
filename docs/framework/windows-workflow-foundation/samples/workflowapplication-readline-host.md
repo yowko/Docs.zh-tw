@@ -2,12 +2,12 @@
 title: WorkflowApplication ReadLine 主機
 ms.date: 03/30/2017
 ms.assetid: f7b362be-cb42-40d7-b9ef-cfc4aed2455b
-ms.openlocfilehash: 8da8a5bb4c80a86fe5ae9e133ea545c00ee17fba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4388ff0285de58b0dc6f86af93aad84b2894373f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518534"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470849"
 ---
 # <a name="workflowapplication-readline-host"></a>WorkflowApplication ReadLine 主機
 這個範例為泛型 ReadLine 主機。 您可以使用包含的 `ReadLine` 活動來載入及執行任何工作流程 (或是與它類似的其他活動，從使用字串繼續的書籤中取得資料)。 來自 `WriteLine` 活動的輸出或是寫入 <xref:System.Activities.Statements.WriteLine.TextWriter%2A> 延伸模組的任何內容都會導向主機視窗。 當執行個體閒置時，該執行個體可用的書籤會出現在下拉式方塊中。 選取書籤、輸入某些文字並按下繼續書籤按鈕，將會繼續執行工作流程。 您也可以取消、中止或終止選取的工作流程。 預設會啟用持續性，您可以關閉主機並將它開啟，執行個體清單就會填入資料庫內所存放的執行個體。 追蹤是用來將 <xref:System.Activities.WorkflowApplication> 層級的事件輸出到主機，而且包含了加入活動層級之詳細追蹤的選項。  
@@ -33,17 +33,17 @@ ms.locfileid: "33518534"
   
 6.  一旦執行專案之後，您可以選擇開啟或關閉持續性。 您可以進一步選擇開啟或關閉詳細活動追蹤。  
   
-7.  按下省略符號按鈕旁的 **執行**按鈕瀏覽 XAML 檔案中定義的工作流程  
+7.  按省略符號按鈕旁**執行**按鈕來瀏覽 XAML 檔案中定義的工作流程  
   
      您可以在 SampleWorkflows 資料夾底下找到兩個範例。 parallel1.xaml 範例會進入閒置狀態。  
   
-8.  一旦選取範例之後，按**執行** 按鈕。  
+8.  一旦選取範例之後，請按下**執行** 按鈕。  
   
-9. 如果連接或在工作流程閒置時**書籤**下拉式方塊會填入可用的書籤。  
+9. 如果或在工作流程閒置**書籤**下拉式方塊會填入可用的書籤。  
   
 10. 此時的選項包括繼續書籤、取消、中止或終止工作流程。 您也可以關閉主機，然後重新啟動。 如果將持續性保留在開啟狀態，關閉主機時會卸載執行個體，並在啟動時重新載入。  
   
-     若要繼續書籤，選取所需的書籤、 輸入的值，在文字方塊旁邊的下拉式方塊，然後按**繼續書籤**。  
+     若要繼續書籤，選取所需的書籤、 輸入的值，在文字方塊中，旁邊的下拉式方塊，然後按**繼續書籤**。  
   
 #### <a name="to-remove-the-instance-store-database"></a>若要移除執行個體存放區資料庫  
   
@@ -56,6 +56,6 @@ ms.locfileid: "33518534"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\ControllingWorkflowApplications`

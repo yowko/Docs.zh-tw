@@ -6,17 +6,17 @@ dev_langs:
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: 2a2be40195bf3afaadfc92c5f2983452a6f8568c
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: b37ec57a0fde6617d84590cc0b0d7a4235b5573e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254889"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467933"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>逐步解說：在 Win32 中裝載 WPF 內容
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。 不過，如果您已長期開發 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 程式碼，將 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能加入應用程式，可能會比重寫原始程式碼更有效率。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供簡單的機制，來裝載[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中的內容[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]視窗。  
   
- 本教學課程說明如何撰寫範例應用程式[在 Win32 視窗範例中裝載 WPF 內容](http://go.microsoft.com/fwlink/?LinkID=160004)，、 該主機[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中的內容[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]視窗。 您可以擴充這個範例，以裝載任何 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗。 因為這牽涉到混合 Managed 和 Unmanaged程式碼，所以是以 [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] 撰寫應用程式。  
+ 本教學課程說明如何撰寫範例應用程式[在 Win32 視窗範例中裝載 WPF 內容](https://go.microsoft.com/fwlink/?LinkID=160004)，、 該主機[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中的內容[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]視窗。 您可以擴充這個範例，以裝載任何 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗。 因為這牽涉到混合 Managed 和 Unmanaged程式碼，所以是以 [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] 撰寫應用程式。  
   
  
   
@@ -27,7 +27,7 @@ ms.locfileid: "43254889"
  因為隨附本教學課程的範例中實作[!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)]，本教學課程假設您使用熟悉[!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)]程式[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] managed 程式碼的程式設計，並且了解。 熟悉 [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] 會有幫助，但並非必要。  
   
 > [!NOTE]
->  本教學課程包含一些來自相關範例的程式碼範例。 不過，為了方便閱讀，並未包含完整的範例程式碼。 完整範例程式碼，請參閱[Win32 視窗範例中裝載 WPF 內容](http://go.microsoft.com/fwlink/?LinkID=160004)。  
+>  本教學課程包含一些來自相關範例的程式碼範例。 不過，為了方便閱讀，並未包含完整的範例程式碼。 完整範例程式碼，請參閱[Win32 視窗範例中裝載 WPF 內容](https://go.microsoft.com/fwlink/?LinkID=160004)。  
   
 <a name="basic_procedure"></a>   
 ## <a name="the-basic-procedure"></a>基本程序  

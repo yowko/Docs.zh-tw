@@ -2,12 +2,12 @@
 title: OLE DB 資料類型對應
 ms.date: 03/30/2017
 ms.assetid: 04bcb259-59d3-4fd7-894d-4f0dd0c68069
-ms.openlocfilehash: 4287b125b26bc0c7233f59322c84e2ac27c0c594
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2dbea33140e6cdd7370c1822d2bd6513917a31ea
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758928"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43457101"
 ---
 # <a name="ole-db-data-type-mappings"></a>OLE DB 資料類型對應
 下表顯示來自 .NET Framework Data Provider for ADO 和 OLE DB ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]) 之資料型別的推斷 <xref:System.Data.OleDb> 型別。 同時也一併列出 <xref:System.Data.OleDb.OleDbDataReader> 具型別的存取子方法。  
@@ -51,4 +51,4 @@ ms.locfileid: "32758928"
   
 ## <a name="see-also"></a>另請參閱  
  [在 ADO.NET 中擷取和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

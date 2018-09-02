@@ -9,16 +9,16 @@ ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 55795a0176f70925fd89fe6f8065dfa481f76a15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2fe3d511b92ff055e80999fa498c24a44f771ebf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410081"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43457001"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>使用 UI 自動化進行自動化測試
 > [!NOTE]
->  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱 < [Windows Automation API： 使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本概觀說明 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 在自動化測試案例中做為程式設計存取的架構有何幫助。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "33410081"
   
 <a name="Implementing_UI_Automation"></a>   
 ### <a name="implementing-ui-automation"></a>實作使用者介面自動化  
- 如上所述，如果沒有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]所提供的一致模型，測試工具和開發人員就必須知道架構特定的資訊，才能公開該架構中控制項的屬性和行為。 因為可能有數個不同的 UI 架構在任何 Windows 作業系統內的時候，包括[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]， [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]，而且 Windows Presentation Foundation (WPF)，它可以是鉅的任務的工作，若要測試多個應用程式看起來類似的控制項。 例如，下表列出擷取與按鈕控制項相關名稱 (或文字) 時所需的架構特定屬性名稱，並顯示單一對等的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性。  
+ 如上所述，如果沒有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]所提供的一致模型，測試工具和開發人員就必須知道架構特定的資訊，才能公開該架構中控制項的屬性和行為。 因為可能有數個不同的 UI 架構在 Windows 作業系統內的任何時候，包括[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]， [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]，而且 Windows Presentation Foundation (WPF)，它可以是令人怯步的工作，若要測試多個應用程式看起來很類似的控制項。 例如，下表列出擷取與按鈕控制項相關名稱 (或文字) 時所需的架構特定屬性名稱，並顯示單一對等的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性。  
   
 |使用者介面自動化控制項類型|使用者介面架構|架構特定的屬性|使用者介面自動化屬性|  
 |--------------------------------|------------------|---------------------------------|----------------------------|  
@@ -95,10 +95,10 @@ ms.locfileid: "33410081"
   
 |||  
 |-|-|  
-|加入使用者介面自動化參考。|以下列出使用者介面自動化用戶端所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] DLL。<br /><br /> -UIAutomationClient.dll 會提供存取[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]用戶端應用程式開發介面。<br />-UIAutomationClientSideProvider.dll 提供了可自動化[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]控制項。 請參閱 [UI Automation Support for Standard Controls](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)。<br />-UIAutomationTypes.dll 提供特定類型中定義的存取[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]。|  
+|加入使用者介面自動化參考。|以下列出使用者介面自動化用戶端所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] DLL。<br /><br /> -UIAutomationClient.dll 會提供存取[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]用戶端 Api。<br />-UIAutomationClientSideProvider.dll 提供能夠自動化[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]控制項。 請參閱 [UI Automation Support for Standard Controls](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)。<br />-UIAutomationTypes.dll 會提供存取權中定義的特定類型[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]。|  
 |加入 <xref:System.Windows.Automation> 命名空間。|這個命名空間包含使用者介面自動化用戶端使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 功能 (文字處理除外) 時需要的所有要件。|  
 |加入 <xref:System.Windows.Automation.Text> 命名空間。|這個命名空間包含使用者介面自動化用戶端使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 文字處理時需要的所有要件。|  
-|尋找想要的控制項|自動化測試指令碼會在自動化樹狀結構中尋找代表相關控制項的使用者介面自動化項目。<br /><br /> 您可透過多種方式使用程式碼取得使用者介面自動化項目。<br /><br /> -查詢[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]使用<xref:System.Windows.Automation.Condition>陳述式。 通常會在此使用語言中性的 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 。 **注意：** <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>可透過使用能夠詳細列出 Inspect.exe 之類的工具[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]控制項的屬性。 <br /><br /> -使用<xref:System.Windows.Automation.TreeWalker>類別來周遊整個[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]樹狀目錄或其子集。<br />-追蹤焦點。<br />-使用控制項的 hWnd。<br />-使用畫面位置，例如滑鼠游標的位置。<br /><br /> 請參閱 [Obtaining UI Automation Elements](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)|  
+|尋找想要的控制項|自動化測試指令碼會在自動化樹狀結構中尋找代表相關控制項的使用者介面自動化項目。<br /><br /> 您可透過多種方式使用程式碼取得使用者介面自動化項目。<br /><br /> -Query[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]使用<xref:System.Windows.Automation.Condition>陳述式。 通常會在此使用語言中性的 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 。 **注意︰** <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>可以使用可以條列的 Inspect.exe 之類的工具來取得[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]控制項的屬性。 <br /><br /> -使用<xref:System.Windows.Automation.TreeWalker>類別來周遊整個[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]樹狀目錄或其子集。<br />-追蹤焦點。<br />-使用控制項的 hWnd。<br />-使用畫面位置，例如滑鼠游標的位置。<br /><br /> 請參閱 [Obtaining UI Automation Elements](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)|  
 |取得控制項模式|控制項模式會公開功能類似之控制項的一般行為。<br /><br /> 找到需要測試的控制項之後，自動化測試指令碼會從這些使用者介面自動化項目中取得想要的控制項模式。 例如，代表一般按鈕功能的 <xref:System.Windows.Automation.InvokePattern> 控制項模式，或是代表視窗功能的 <xref:System.Windows.Automation.WindowPattern> 控制項模式。<br /><br /> 請參閱 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。|  
 |自動化使用者介面|自動化測試指令碼現在可以使用 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 控制項模式公開的資訊和功能，從 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 架構中控制想要的任何 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 。|  
   
@@ -106,7 +106,7 @@ ms.locfileid: "33410081"
 ## <a name="related-tools-and-technologies"></a>相關工具和技術  
  有一些相關工具和技術會支援使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]來進行自動化測試。  
   
--   Inspect.exe 是[!INCLUDE[TLA#tla_gui](../../../includes/tlasharptla-gui-md.md)]應用程式可以用來收集[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]提供者和用戶端開發和偵錯資訊。 Inspect.exe 隨附於[!INCLUDE[TLA#tla_winfxsdk](../../../includes/tlasharptla-winfxsdk-md.md)]。  
+-   是 Inspect.exe[!INCLUDE[TLA#tla_gui](../../../includes/tlasharptla-gui-md.md)]應用程式，可用來收集[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]提供者和用戶端開發和偵錯資訊。 Inspect.exe 納入[!INCLUDE[TLA#tla_winfxsdk](../../../includes/tlasharptla-winfxsdk-md.md)]。  
   
 -   MSAABridge 會將 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 資訊公開給 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 用戶端。 橋接 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 至 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 的主要目標是，提供現有 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 用戶端與任何架構 (已經實作 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]) 互動的能力。  
   

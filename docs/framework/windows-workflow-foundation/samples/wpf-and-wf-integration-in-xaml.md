@@ -2,15 +2,15 @@
 title: XAML 中的 WPF 及 WF 整合
 ms.date: 03/30/2017
 ms.assetid: a4f53b48-fc90-4315-bca0-ba009562f488
-ms.openlocfilehash: 2fb145a8511383c37be536a78522a256514c08c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 619f3b7ce2b854e27fe9229fd08727627ce37f1a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518186"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43455688"
 ---
 # <a name="wpf-and-wf-integration-in-xaml"></a>XAML 中的 WPF 及 WF 整合
-這個範例示範如何建立使用 Windows Presentation Foundation (WPF) 和 Windows Workflow Foundation (WF) 功能在單一 XAML 文件中的應用程式。 若要完成這項作業，此範例會使用 Windows Workflow Foundation (WF) 和 XAML 擴充性。  
+此範例示範如何建立使用 Windows Presentation Foundation (WPF) 和 Windows Workflow Foundation (WF) 功能在單一 XAML 文件中的應用程式。 若要這麼做，此範例會使用 Windows Workflow Foundation (WF) 和 XAML 擴充性。  
   
 ## <a name="sample-details"></a>範例詳細資料  
  ShowWindow.xaml 檔案會還原序列化為 <xref:System.Activities.Statements.Sequence> 活動，其包含的兩個字串變數是由序列的活動所操作：`ShowWindow` 和 `WriteLine`。 <xref:System.Activities.Statements.WriteLine> 活動會將指派給 <xref:System.Activities.Statements.WriteLine.Text%2A> 屬性的運算式輸出到主控台視窗。 `ShowWindow` 活動的執行邏輯中會顯示 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] 視窗。 視窗的 <xref:System.Activities.ActivityContext.DataContext%2A> 包含序列中宣告的變數。 `ShowWindow` 活動中宣告的視窗控制項使用資料繫結來操作這些變數。 最後，視窗包含按鈕控制項。 按鈕的 `Click` 事件是由名為 <xref:System.Activities.ActivityDelegate> 的 `MarkupExtension` 處理，其中包含 `CloseWindow` 活動。 `MarkUpExtension` 會叫用所包含的活動，以內容形式提供 `x:Name` 所識別的任何物件，以及包含視窗的 <xref:System.Activities.ActivityContext.DataContext%2A>。 因此，`CloseWindow.InArgument<Window>` 可透過參考視窗名稱的運算式來繫結。  
@@ -41,6 +41,6 @@ ms.locfileid: "33518186"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\WPFWFIntegration`

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - errors [Visual Basic], run-time
 - run-time errors [Visual Basic], Visual Basic
 ms.assetid: 130f7c2b-8eb1-4a6e-81aa-e30e27d3d4f7
-ms.openlocfilehash: de291aebe3bef156dab414635c3cb2c00a2300f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ce61401dec875ac1dea01e1e5a892d06974a3d36
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644455"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463502"
 ---
 # <a name="visual-basic-run-time-messages"></a>Visual Basic 執行階段訊息
-本章節包含在執行階段發生的 Visual Basic 錯誤訊息。  
+本節包含在執行階段發生的 Visual Basic 錯誤訊息。  
   
  [\<位址 > 不是有效的遠端檔案位址](../../visual-basic/misc/address-is-not-a-valid-remote-file-address.md)  
   
@@ -41,15 +41,15 @@ ms.locfileid: "33644455"
   
  [應用程式定義或物件定義的錯誤](../../visual-basic/misc/application-defined-or-object-defined-error.md)  
   
- [引數 '\<引數 1 >' 必須小於或等於引數的長度'\<引數 2 >'](../../visual-basic/misc/argument-argument1-must-be-less-than-or-equal-to-the-length-of-argument2.md)  
+ [引數 '\<引數 1 >' 必須是小於或等於引數的長度'\<引數 2 >'](../../visual-basic/misc/argument-argument1-must-be-less-than-or-equal-to-the-length-of-argument2.md)  
   
- [引數 '\<引數名稱 >' 不可以是多維度陣列](../../visual-basic/misc/argument-argumentname-cannot-be-a-multidimensional-array.md)  
+ [引數 '\<引數名稱 >' 不可以是多維陣列](../../visual-basic/misc/argument-argumentname-cannot-be-a-multidimensional-array.md)  
   
- [引數\<引數名稱 > 不能為空字串或 Nothing](../../visual-basic/misc/argument-argumentname-cannot-be-an-empty-string-or-nothing.md)  
+ [引數\<引數名稱 > 不能是空字串或 Nothing](../../visual-basic/misc/argument-argumentname-cannot-be-an-empty-string-or-nothing.md)  
   
  [引數 '\<引數名稱 >' 無法轉換成數值](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-a-numeric-value.md)  
   
- [引數 '\<引數名稱 >' 無法轉換成類型'\<類型名稱 >'](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-type-typename.md)  
+ [引數 '\<引數名稱 >' 無法轉換為類型'\<類型名稱 >'](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-type-typename.md)  
   
  [引數 '\<引數名稱 >' 無法轉換成類型 'Date'](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-type-date.md)  
   
@@ -71,15 +71,15 @@ ms.locfileid: "33644455"
   
  [引數 '\<引數名稱 >' 必須大於或等於零](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-zero.md)  
   
- [引數 '\<引數名稱 >' 必須是大於零](../../visual-basic/misc/argument-argumentname-must-be-greater-than-zero.md)  
+ [引數 '\<引數名稱 >' 必須是小於或等於零](../../visual-basic/misc/argument-argumentname-must-be-greater-than-zero.md)  
   
  [引數 '\<引數名稱 >' 必須在-32768 到 65535 的範圍內](../../visual-basic/misc/argument-argumentname-must-be-in-the-range-of-32768-to-65535.md)  
   
- [引數 '\<引數名稱 >' 必須在 0 到 99 的範圍內](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-0-to-99.md)  
+ [引數 '\<引數名稱 >' 必須是介於 0 到 99 之間](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-0-to-99.md)  
   
  [引數 '\<引數名稱 >' 必須在 1 到 255 的範圍內](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-1-to-255.md)  
   
- [引數 '\<argumentname1 >' 必須是小於或等於引數的長度'\<引數名稱 2 >'](../../visual-basic/misc/argument-argumentname1-must-be-less-than-or-equal-the-length-of-argumentname2.md)  
+ [引數 '\<引數名稱 1&gt >' 必須是小於或等於引數的長度'\<引數名稱 2 >'](../../visual-basic/misc/argument-argumentname1-must-be-less-than-or-equal-the-length-of-argumentname2.md)  
   
  [引數 'Access' 無效。Append 模式的有效值是 'OpenAccess.Write' 和 'OpenAccess.Default'](../../visual-basic/misc/argument-access-is-not-valid-append-mode.md)  
   
@@ -109,7 +109,7 @@ ms.locfileid: "33644455"
   
  [引數 'Period' 必須小於或等於引數 'Life'](../../visual-basic/misc/argument-period-must-be-less-than-or-equal-to-argument-life.md)  
   
- [引數值 '\<路徑名稱 >' 包含在路徑名稱中無效的字元](../../visual-basic/misc/argument-value-pathname-contains-characters-that-are-not-valid-in-a-path-name.md)  
+ [引數值 '\<路徑名稱 >' 包含不是有效的路徑名稱的字元](../../visual-basic/misc/argument-value-pathname-contains-characters-that-are-not-valid-in-a-path-name.md)  
   
  [引數無效](../../visual-basic/misc/arguments-are-not-valid.md)  
   
@@ -141,11 +141,11 @@ ms.locfileid: "33644455"
   
  [無法在不是定義類別執行個體的物件上呼叫 Friend 函式](../../visual-basic/misc/cannot-call-friend-function-on-object-which-is-not-instance-of-defining-class.md)  
   
- [無法將轉換的引數 '\<引數名稱 >' 的型別'\<type1 >' 為類型 '\<type2 >'](../../visual-basic/misc/cannot-convert-argument-argumentname-of-type-type1-to-type-type2.md)  
+ [無法轉換引數 '\<引數名稱 >' 的類型'\<type1 >' 為類型 '\<type2 >'](../../visual-basic/misc/cannot-convert-argument-argumentname-of-type-type1-to-type-type2.md)  
   
- [無法轉換類型的起始值 '\<type1 >' 和類型的間距值'\<type2 >' 為一般類型](../../visual-basic/misc/cannot-convert-start-value-of-type1-and-step-value-of-type2-to-a-common-type.md)  
+ [無法轉換類型的起始值 '\<type1 >' 的間距值和'\<type2 >' 為一般類型](../../visual-basic/misc/cannot-convert-start-value-of-type1-and-step-value-of-type2-to-a-common-type.md)  
   
- [無法轉換類型的起始值 '\<type1 >'，限制的值'\<type2 >' 和間距的值 '\<type3 >' 為一般類型](../../visual-basic/misc/cannot-convert-start-value-to-a-common-type.md)  
+ [無法轉換類型的起始值 '\<type1 >'，限制的值'\<type2 >' 的間距值和 '\<類型 3> >' 為一般類型](../../visual-basic/misc/cannot-convert-start-value-to-a-common-type.md)  
   
  [無法建立 ActiveX 元件](../../visual-basic/language-reference/error-messages/cannot-create-activex-component.md)  
   
@@ -161,9 +161,9 @@ ms.locfileid: "33644455"
   
  [無法執行所要求的作業 (Visual Basic)](../../visual-basic/misc/cant-perform-requested-operation.md)  
   
- [字串轉換成"\<字串 >"為類型 '\<類型名稱 >' 無效](../../visual-basic/misc/cast-from-string-string-to-type-typename-is-not-valid.md)  
+ [從字串轉換 」\<字串 >"為類型 '\<類型名稱 >' 無效](../../visual-basic/misc/cast-from-string-string-to-type-typename-is-not-valid.md)  
   
- [類型轉換成 '\<typename1 >' 為類型'\<2> >' 無效](../../visual-basic/misc/cast-from-type-typename1-to-type-typename2-is-not-valid.md)  
+ [從類型轉換成 '\<typename1 >' 為類型'\<2&gt >' 無效](../../visual-basic/misc/cast-from-type-typename1-to-type-typename2-is-not-valid.md)  
   
  [類別\<類別名稱 >' 未實作 System.Collections.ICollection 介面](../../visual-basic/misc/class-classname-does-not-implement-the-system-collections-icollection-interface.md)  
   
@@ -203,7 +203,7 @@ ms.locfileid: "33644455"
   
  [除數為零 (Visual Basic 執行階段錯誤)](../../visual-basic/misc/division-by-zero-run-time-error.md)  
   
- [磁碟機 '\<drivename >' 找不到](../../visual-basic/misc/drive-drivename-not-found.md)  
+ [磁碟機 '\<磁碟機名稱 >' 找不到](../../visual-basic/misc/drive-drivename-not-found.md)  
   
  [編碼不能設定為 Nothing](../../visual-basic/misc/encoding-cannot-be-set-to-nothing.md)  
   
@@ -217,11 +217,11 @@ ms.locfileid: "33644455"
   
  [尚未實作功能](../../visual-basic/misc/feature-not-yet-implemented.md)  
   
- [欄位 '\<欄位名稱 >' 的型別'\<類型名稱 >' 是 'ReadOnly'](../../visual-basic/misc/field-fieldname-of-type-typename-is-readonly.md)  
+ [欄位 '\<欄位名稱 >' 的類型'\<類型名稱 >' 是 'ReadOnly'](../../visual-basic/misc/field-fieldname-of-type-typename-is-readonly.md)  
   
- [檔案 '\<檔案名稱 >' 已開啟，所以無法刪除](../../visual-basic/misc/file-filename-cannot-be-deleted-because-it-is-open.md)  
+ [檔案 '\<檔案名稱 >' 無法刪除，因為它已開啟](../../visual-basic/misc/file-filename-cannot-be-deleted-because-it-is-open.md)  
   
- [檔案 '\<檔案名稱 >' 寫入保護](../../visual-basic/misc/file-filename-is-write-protected.md)  
+ [檔案 '\<檔案名稱 >' 有防寫保護](../../visual-basic/misc/file-filename-is-write-protected.md)  
   
  [檔案 '\<檔案名稱 >' 找不到](../../visual-basic/misc/file-filename-not-found.md)  
   
@@ -241,7 +241,7 @@ ms.locfileid: "33644455"
   
  [檔案太大，無法讀入位元組陣列中](../../visual-basic/language-reference/error-messages/file-is-too-large-to-read-into-a-byte-array.md)  
   
- [檔案名稱或 Automation 作業 (Visual Basic) 期間找不到類別名稱](../../visual-basic/language-reference/error-messages/file-name-or-class-name-not-found-during-automation-operation.md)  
+ [檔案名稱或自動化的作業 (Visual Basic) 時找不到的類別名稱](../../visual-basic/language-reference/error-messages/file-name-or-class-name-not-found-during-automation-operation.md)  
   
  [找不到檔案 (Visual Basic 執行階段錯誤)](../../visual-basic/language-reference/error-messages/file-not-found-visual-basic-run-time-error.md)  
   
@@ -269,7 +269,7 @@ ms.locfileid: "33644455"
   
  [內部錯誤 (Visual Basic)](../../visual-basic/misc/internal-error.md)  
   
- [內部錯誤發生了\<位置 >](../../visual-basic/language-reference/error-messages/internal-error-happened-at-location.md)  
+ [在發生內部錯誤\<位置 >](../../visual-basic/language-reference/error-messages/internal-error-happened-at-location.md)  
   
  [Microsoft Visual Basic 執行階段發生內部錯誤](../../visual-basic/misc/internal-error-in-the-microsoft-visual-basic-runtime.md)  
   
@@ -277,15 +277,15 @@ ms.locfileid: "33644455"
   
  [機碼不能刪除，因為它有子機碼](../../visual-basic/misc/key-cannot-be-deleted-because-it-has-subkeys.md)  
   
- [晚期繫結指派至欄位的值類型 '\<類型名稱 >' 不是有效的時機'\<名稱 >' 是晚期繫結運算式的結果](../../visual-basic/misc/late-bound-assignment-to-a-field-of-value-type-typename-is-not-valid.md)  
+ [晚期繫結指派至欄位的實值型別 '\<類型名稱 >' 時無效'\<名稱 >' 是晚期繫結運算式的結果](../../visual-basic/misc/late-bound-assignment-to-a-field-of-value-type-typename-is-not-valid.md)  
   
- [引數的長度 '\<引數名稱 >' 必須是大於零](../../visual-basic/misc/length-of-argument-argumentname-must-be-greater-than-zero.md)  
+ [引數的長度 '\<引數名稱 >' 必須是小於或等於零](../../visual-basic/misc/length-of-argument-argumentname-must-be-greater-than-zero.md)  
   
  [行\<數字 > 無法使用目前的分隔符號剖析](../../visual-basic/misc/line-number-cannot-be-parsed-using-the-current-delimiters.md)  
   
  [行\<數字 > 無法使用目前的 FieldWidths 剖析](../../visual-basic/misc/line-number-cannot-be-parsed-using-the-current-fieldwidths.md)  
   
- [行\<數字 > 無法讀取，因為它已超過最大線條大小。](../../visual-basic/misc/line-number-cannot-be-read-because-it-exceeds-the-maximum-line-size.md)  
+ [行\<數字 > 無法讀取，因為它超過最大線條大小。](../../visual-basic/misc/line-number-cannot-be-read-because-it-exceeds-the-maximum-line-size.md)  
   
  [地區設定 ID '\<名稱 >' 不支援此系統上](../../visual-basic/misc/locale-id-name-is-not-supported-on-this-system.md)  
   
@@ -295,13 +295,13 @@ ms.locfileid: "33644455"
   
  [方法 '\<方法名稱 >' 無法使用呼叫\<數字 > 引數](../../visual-basic/misc/method-methodname-cannot-be-called-with-number-arguments.md)  
   
- [方法 '\<方法名稱 >' 沒有名為的參數'\<參數名稱 >'](../../visual-basic/misc/method-methodname-has-no-parameter-named-parametername.md)  
+ [方法 '\<方法名稱 >' 沒有名稱為參數'\<參數名稱 >'](../../visual-basic/misc/method-methodname-has-no-parameter-named-parametername.md)  
   
  [找不到方法或資料成員](../../visual-basic/misc/method-or-data-member-not-found.md)  
   
  [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)  
   
- [具名引數 '\<引數名稱 >' 已經指定多次](../../visual-basic/misc/named-argument-argumentname-specified-multiple-times.md)  
+ [具名引數 '\<引數名稱 >' 已指定多次](../../visual-basic/misc/named-argument-argumentname-specified-multiple-times.md)  
   
  [找不到具名引數 (Visual Basic)](../../visual-basic/misc/named-argument-not-found.md)  
   
@@ -315,13 +315,13 @@ ms.locfileid: "33644455"
   
  [沒有可存取的多載 '\<方法名稱 >' 可以擴展轉換這些引數呼叫：\<清單 >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-without-widening.md)  
   
- [沒有可存取的多載 '\<方法名稱 >' 可以使用這些引數呼叫：\<清單 >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list.md)  
+ [沒有可存取的多載 '\<方法名稱 >' 無法使用這些引數呼叫：\<清單 >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list.md)  
   
  [沒有預設成員找到類型 '\<類型名稱 >'](../../visual-basic/misc/no-default-member-found-for-type-typename.md)  
   
- [找不到檔案對應 '\<檔案名稱 >'](../../visual-basic/misc/no-files-found-matching-filename.md)  
+ [找不到檔案比對 '\<檔案名稱 >'](../../visual-basic/misc/no-files-found-matching-filename.md)  
   
- [沒有方法 '\<方法名稱 >' 可以接受類型的引數'\<類型名稱 >' 的參數 '\<參數名稱 >'](../../visual-basic/misc/no-method-methodname-can-accept-an-argument-of-type-typename-for-parameter.md)  
+ [沒有方法 '\<方法名稱 >' 可接受類型的引數'\<類型名稱 >' 參數 '\<參數名稱 >'](../../visual-basic/misc/no-method-methodname-can-accept-an-argument-of-type-typename-for-parameter.md)  
   
  [滑鼠不存在](../../visual-basic/misc/no-mouse-is-present.md)  
   
@@ -377,9 +377,9 @@ ms.locfileid: "33644455"
   
  [處理序的\<processname >' 找不到](../../visual-basic/misc/process-processname-was-not-found.md)  
   
- [屬性\<屬性名稱 > 不能設定為空字串或 Nothing](../../visual-basic/misc/property-propertyname-cannot-be-set-to-an-empty-string-or-nothing.md)  
+ [屬性\<屬性名稱 > 不能設為空字串或 Nothing](../../visual-basic/misc/property-propertyname-cannot-be-set-to-an-empty-string-or-nothing.md)  
   
- [屬性\<屬性名稱 > 不能設定為 Nothing](../../visual-basic/misc/property-propertyname-cannot-be-set-to-nothing.md)  
+ [屬性\<屬性名稱 > 不能設為 Nothing](../../visual-basic/misc/property-propertyname-cannot-be-set-to-nothing.md)  
   
  [無效的屬性陣列索引](../../visual-basic/language-reference/error-messages/property-array-index-is-not-valid.md)  
   
@@ -489,7 +489,7 @@ ms.locfileid: "33644455"
   
  [值\<引數名稱 > 必須大於或等於 1000年](../../visual-basic/misc/the-value-of-argumentname-must-be-greater-than-or-equal-to-1000.md)  
   
- [此陣列為固定長度或暫時鎖定 (Visual Basic)](../../visual-basic/language-reference/error-messages/this-array-is-fixed-or-temporarily-locked.md)  
+ [這個陣列為固定長度或暫時鎖定 (Visual Basic)](../../visual-basic/language-reference/error-messages/this-array-is-fixed-or-temporarily-locked.md)  
   
  [此索引鍵已經和此集合的項目建立關聯性](../../visual-basic/language-reference/error-messages/this-key-is-already-associated-with-an-element-of-this-collection.md)  
   
@@ -511,7 +511,7 @@ ms.locfileid: "33644455"
   
  [類型不符 (Visual Basic)](../../visual-basic/language-reference/error-messages/type-mismatch.md)  
   
- [引數型別 '\<引數名稱 >' 是'\<類型名稱 >'，不是數值](../../visual-basic/misc/type-of-argument-argumentname-is-typename-which-is-not-numeric.md)  
+ [引數的類型 '\<引數名稱 >' 是'\<類型名稱 >'，不是數字](../../visual-basic/misc/type-of-argument-argumentname-is-typename-which-is-not-numeric.md)  
   
  [發生內部系統錯誤，因此無法取得序列埠名稱](../../visual-basic/language-reference/error-messages/unable-to-get-serial-port-names-because-of-an-internal-system-error.md)  
   

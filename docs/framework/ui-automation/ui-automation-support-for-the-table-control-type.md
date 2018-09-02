@@ -9,16 +9,16 @@ ms.assetid: 9050dde5-6469-4c83-abb7-f861c24ff985
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 8635188732f31a69eeff21a545a92f5607ff5891
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f565ef28d0b4d872f7878999c19ef7756e4f7c93
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400259"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467415"
 ---
 # <a name="ui-automation-support-for-the-table-control-type"></a>Table 控制項類型的 UI 自動化支援
 > [!NOTE]
->  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱 < [Windows Automation API： 使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主題提供表格控制項類型的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支援相關資訊。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，控制項類型是一組控制項條件，控制項必須符合條件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 屬性。 這些條件包括 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性值和控制項模式的特定方針。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "33400259"
   
 |控制項檢視|內容檢視|  
 |------------------|------------------|  
-|資料表<br /><br /> 標頭 （0 或 1）<br />文字 （0 或 1）<br />-不同控制項 （0 個以上）|資料表<br /><br /> 文字 （0 個以上）<br />-不同控制項 （0 個以上）|  
+|資料表<br /><br /> 標頭 （0 或 1）<br />文字 （0 或 1）<br />-各種控制項 （0 或以上）|資料表<br /><br /> 文字 （0 或以上）<br />-各種控制項 （0 或以上）|  
   
  如果資料表控制項具有資料列或資料行標頭，這些標頭必須顯示於使用者介面自動化樹狀中的控制項檢視中。 內容檢視不需要公開此資訊，因為使用 TablePattern 即可加以存取。  
   
@@ -60,9 +60,9 @@ ms.locfileid: "33400259"
   
 |控制項模式|支援|注意|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider>|[是]|表格控制項一律支援此控制項模式，因為其中包含的項目具有以格線顯示的資料。|  
+|<xref:System.Windows.Automation.Provider.IGridProvider>|是|表格控制項一律支援此控制項模式，因為其中包含的項目具有以格線顯示的資料。|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider>|是 (必須配合子物件使用)|資料表的內部物件應同時支援 GridItem 和 TableItem 控制項模式。 除非此資料表是另一個資料表的一部份，否則資料表本身不需要支援 GridItem 或 TableItem 控制項模式。|  
-|<xref:System.Windows.Automation.Provider.ITableProvider>|[是]|資料表控制項一律有能力建立標頭與內容的關聯。|  
+|<xref:System.Windows.Automation.Provider.ITableProvider>|是|資料表控制項一律有能力建立標頭與內容的關聯。|  
 |<xref:System.Windows.Automation.Provider.ITableItemProvider>|是 (必須配合子物件使用)|資料表的內部物件應同時支援 GridItem 和 TableItem 控制項模式。 除非此資料表是另一個資料表的一部份，否則資料表本身不需要支援 GridItem 或 TableItem 控制項模式。|  
   
 <a name="Required_UI_Automation_Events"></a>   

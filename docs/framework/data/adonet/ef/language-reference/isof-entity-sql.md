@@ -2,12 +2,12 @@
 title: ISOF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b2b0d34-d0a7-4bcd-baf2-58aa8456d00b
-ms.openlocfilehash: 7aecb8e2740ffd711278bfd5735c71c2dacf9c3c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: dbea0c3a0087c88bf5ffda7b921764b8a0f9f21d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762136"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465443"
 ---
 # <a name="isof-entity-sql"></a>ISOF (Entity SQL)
 判斷運算式的型別是否不屬於所指定的型別或它的其中一個子型別。  
@@ -35,7 +35,7 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
  如果 `true` 為 T 型別，且 T 為基底類型或 `expression` 的衍生型別，則為 `type`；如果 `expression` 在執行階段為 null 則為 null ；否則為 `false`。  
   
 ## <a name="remarks"></a>備註  
- 運算式`expression IS NOT OF (type)`和`expression IS NOT OF (ONLY type)`語法相當於`NOT (expression IS OF (type))`和`NOT (expression IS OF (ONLY type))`分別。  
+ 運算式`expression IS NOT OF (type)`並`expression IS NOT OF (ONLY type)`語法上等同於`NOT (expression IS OF (type))`和`NOT (expression IS OF (ONLY type))`分別。  
   
  下表所示為 `IS OF` 運算子在某些一般及邊角模式中的行為。 所有例外狀況都是在叫用提供者之前從用戶端擲回：  
   
@@ -52,7 +52,7 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
 |RowType IS OF (RowType)|擲回|  
   
 ## <a name="example"></a>範例  
- 下列[!INCLUDE[esql](../../../../../../includes/esql-md.md)]查詢使用 IS OF 運算子來判斷查詢運算式的類型，然後使用 TREAT 運算子將 Course 型別的物件轉換成 OnsiteCourse 型別的物件集合。 此查詢根據[School 模型](http://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac)。  
+ 下列[!INCLUDE[esql](../../../../../../includes/esql-md.md)]查詢使用 IS OF 運算子來判斷查詢運算式的類型，然後使用 TREAT 運算子將 Course 型別的物件轉換成 onsitecourse 型別的物件的集合。 此查詢根據[School 模型](https://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac)。  
   
  [!code-csharp[DP EntityServices Concepts 2#TREAT_ISOF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#treat_isof)]  
   

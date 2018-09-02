@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 98bce126-18a9-401b-b20d-67ee462a5f8a
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: f97406ccf826bfa5b7c3ed87bdb58478b272a216
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 04c2f4bdfe2a6309fde0821db308ee2a83887323
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399106"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456366"
 ---
 # <a name="wif-session-management"></a>WIF 工作階段管理
 當用戶端第一次嘗試存取由信賴憑證者裝載的受保護資源時，用戶端必須先向信賴憑證者所信任的安全性權杖服務 (STS) 驗證其本身。 接著，STS 會發出安全性權杖給用戶端。 用戶端將這個權杖出示給信賴憑證者後，信賴憑證者便可授與用戶端存取受保護資源的權限。 不過，您不希望用戶端針對每個要求向 STS 重新進行驗證，特別是因為它還可能與信賴憑證者不在同一部電腦或同一個網域中。 相反地，Windows Identity Foundation (WIF) 會讓用戶端和信賴憑證者建立一個工作階段，用戶端可在其中針對第一個要求之後的所有要求，使用工作階段安全性權杖向信賴憑證者驗證其本身。 信賴憑證者可以使用儲存在 Cookie 內的這個工作階段安全性權杖，用來重新建構用戶端的 <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType>。  
@@ -30,4 +30,4 @@ ms.locfileid: "33399106"
 ## <a name="extensibility"></a>擴充性  
  您可以擴充工作階段管理機制。 進行此操作的其中一個原因是為了改善效能。 例如，您可以建立自訂的 Cookie 處理常式，以便在其記憶體內部狀態與 Cookie 傳入內容之間轉換或最佳化工作階段安全性權杖。 若要這樣做，您可以設定 <xref:System.IdentityModel.Services.SessionAuthenticationModule?displayProperty=nameWithType> 的 <xref:System.IdentityModel.Services.SessionAuthenticationModule.CookieHandler%2A?displayProperty=nameWithType> 屬性來使用衍生自 <xref:System.IdentityModel.Services.CookieHandler?displayProperty=nameWithType> 的自訂 Cookie 處理常式。 由於 Cookie 超過超文字傳輸通訊協定 (HTTP) 所允許的大小，因此 <xref:System.IdentityModel.Services.ChunkedCookieHandler?displayProperty=nameWithType> 是預設的 Cookie 處理常式；如果您改為使用自訂的 Cookie 處理常式，則必須實作區塊處理。  
   
- 如需詳細資訊，請參閱[ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) (http://go.microsoft.com/fwlink/?LinkID=248408)範例。 此範例示範伺服陣列就緒的工作階段快取 (相對於 tokenreplycache)，讓您能夠透過參考使用工作階段，而非交換大型 Cookie；此範例也示範了一種更簡單的方法，用來保護伺服陣列中的 Cookie。 工作階段快取是以 WCF 為基礎。 關於工作階段保護，此範例示範了在 WIF 4.5 中根據 MachineKey 進行 Cookie 轉換的新功能，只要在 web.config 中貼上適當的程式碼片段，就能啟用此功能。此範例本身沒有「伺服陣列」，但它會示範要讓應用程式伺服陣列就緒所需執行的作業。
+ 如需詳細資訊，請參閱 < [ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408)範例。 此範例示範伺服陣列就緒的工作階段快取 (相對於 tokenreplycache)，讓您能夠透過參考使用工作階段，而非交換大型 Cookie；此範例也示範了一種更簡單的方法，用來保護伺服陣列中的 Cookie。 工作階段快取是以 WCF 為基礎。 關於工作階段保護，此範例示範了在 WIF 4.5 中根據 MachineKey 進行 Cookie 轉換的新功能，只要在 web.config 中貼上適當的程式碼片段，就能啟用此功能。此範例本身沒有「伺服陣列」，但它會示範要讓應用程式伺服陣列就緒所需執行的作業。

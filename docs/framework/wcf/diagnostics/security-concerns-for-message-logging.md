@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 0ca5eee4d4a1fd0dfaabbf9160488eb2d88f3d3d
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 6da641ec5da20c80f4c1034ded8a3be7d036b5a8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804127"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466487"
 ---
 # <a name="security-concerns-for-message-logging"></a>訊息記錄的安全性考量
 此主題描述如何保護訊息記錄以及記錄訊息時所產生之事件中的敏感性資料，使其不會被公開。  
@@ -86,11 +86,11 @@ ms.locfileid: "33804127"
 </system.diagnostics>  
 ```  
   
- 如果`<machineSettings enableLoggingKnownPii="Boolean"/>`Machine.config 檔案外部的項目存在，系統會擲回<xref:System.Configuration.ConfigurationErrorsException>。  
+ 如果`<machineSettings enableLoggingKnownPii="Boolean"/>`t:system.configuration.configurationerrorsexception 項目不在 Machine.config 檔案，系統會擲回<xref:System.Configuration.ConfigurationErrorsException>。  
   
  只有在應用程式啟動或重新啟動時，才能讓變更生效。 當這兩個屬性都設定為 `true` 時，啟動時會記錄事件。 如果 `logKnownPii` 設定為 `true`，但 `enableLoggingKnownPii` 設定為 `false`，也會記錄事件。  
   
- 電腦的系統管理員和應用程式部署人員在使用這兩個參數時，應該特別小心謹慎。 如果啟用 PII 記錄，則會記錄安全性金鑰和 PII。 如果停用，敏感資料和應用程式特定資料仍然會記錄在訊息標頭和本文中。 如需隱私權和保護 PII 中公開的更完整討論，請參閱[使用者隱私權](http://go.microsoft.com/fwlink/?LinkID=94647)。  
+ 電腦的系統管理員和應用程式部署人員在使用這兩個參數時，應該特別小心謹慎。 如果啟用 PII 記錄，則會記錄安全性金鑰和 PII。 如果停用，敏感資料和應用程式特定資料仍然會記錄在訊息標頭和本文中。 如需隱私權和保護 PII 免於遭到公開的更完整討論，請參閱 <<c0> [ 使用者隱私權](https://go.microsoft.com/fwlink/?LinkID=94647)。  
   
 > [!CAUTION]
 >  格式錯誤的訊息中不會隱藏 PII。 這類訊息會依現狀記錄，不做任何修改。 上述的屬性在此不會有任何作用。  
@@ -105,9 +105,9 @@ ms.locfileid: "33804127"
   
 -   Message logging off：在組態中或透過 WMI 停用訊息記錄時，會發出這個事件。 事件內容為「已關閉訊息記錄」。  
   
--   Log Known PII On：啟用已知 PII 記錄時，會發出這個事件。 發生這種情況時`enableLoggingKnownPii`屬性`machineSettings`Machine.config 檔案的元素設定為`true`，而`logKnownPii`屬性`source`App.config 或 Web.config 檔案中的元素設定為`true`.  
+-   Log Known PII On：啟用已知 PII 記錄時，會發出這個事件。 發生這種情況時`enableLoggingKnownPii`屬性中`machineSettings`Machine.config 檔案的元素設定為`true`，而`logKnownPii`屬性`source`App.config 或 Web.config 檔案中的項目設為`true`.  
   
--   Log Known PII Not Allowed：不允許記錄已知 PII 時，會發出這個事件。 發生這種情況時`logKnownPii`屬性`source`App.config 或 Web.config 檔案中的元素設定為`true`，但`enableLoggingKnownPii`屬性`machineSettings`Machine.config 檔案的元素設定為`false`. 不會有例外狀況擲回。  
+-   Log Known PII Not Allowed：不允許記錄已知 PII 時，會發出這個事件。 發生這種情況時`logKnownPii`的屬性`source`App.config 或 Web.config 檔案中的項目設為`true`，但`enableLoggingKnownPii`屬性中`machineSettings`Machine.config 檔案的項目設為`false`. 不會有例外狀況擲回。  
   
  您可以在 Windows 的 [事件檢視器] 工具中檢視這些事件。 如需詳細資訊，請參閱[事件記錄](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)。  
   

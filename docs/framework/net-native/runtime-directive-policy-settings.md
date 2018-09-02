@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51a0538670a834435aff8d2b6c81b78450fe47f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac5d80664bbca8cf950eb2e6f37badc485c398d2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396756"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474073"
 ---
 # <a name="runtime-directive-policy-settings"></a>執行階段指示詞原則設定
 > [!NOTE]
->  本主題討論 .NET 原生開發人員預覽，這是發行前版本的軟體。 您可以從 [Microsoft Connect 網站](http://go.microsoft.com/fwlink/?LinkId=394611)下載預覽 (需要註冊)。  
+>  本主題討論 .NET 原生開發人員預覽，這是發行前版本的軟體。 您可以從 [Microsoft Connect 網站](https://go.microsoft.com/fwlink/?LinkId=394611)下載預覽 (需要註冊)。  
   
  .NET Native 的執行階段指示詞原則設定，可決定類型和類型成員的中繼資料在執行階段的可用性。 如果沒有必要的中繼資料，依賴反映、序列化和還原序列化的作業，或是將 .NET Framework 類型封送處理至 COM 或 Windows 執行階段的作業會失敗，並擲回例外狀況。 最常見的例外狀況是 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 和 (在 Interop 的案例中) [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)。  
   

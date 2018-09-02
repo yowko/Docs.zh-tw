@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 869c05e7-4ebe-467d-95ab-c8f8de4e6b9e
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 734b6d0625cfda79b600a0920ab39bda25ee2e8b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 023e0dd2a89c005928625cf95f3de61af81c7b6b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750488"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464995"
 ---
 # <a name="ltsecuritygt-of-ltwsdualhttpbindinggt"></a>&lt;wsDualHttpBinding&gt; 的 &lt;security&gt;
 定義的安全性功能[ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)。  
@@ -38,7 +38,7 @@ ms.locfileid: "32750488"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|模式|選擇性的。 指定套用的安全性類型。 預設值是 `Message`。 此屬性的型別為 <xref:System.ServiceModel.WSDualHttpSecurityMode>。|  
+|模式|-選擇性。 指定套用的安全性類型。 預設值是 `Message`。 此屬性的型別為 <xref:System.ServiceModel.WSDualHttpSecurityMode>。|  
   
 ## <a name="mode-attribute"></a>Mode 屬性  
   
@@ -47,7 +47,7 @@ ms.locfileid: "32750488"
 |無|停用安全性。|  
 |訊息|系統會使用 SOAP 訊息安全性來提供安全性。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -68,5 +68,5 @@ ms.locfileid: "32750488"
  [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [使用繫結來設定 Windows Communication Foundation 服務和用戶端](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<繫結 >](../../../../../docs/framework/misc/binding.md)

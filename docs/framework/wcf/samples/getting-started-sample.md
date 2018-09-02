@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: dfba7062d4226f3644aa6c4cc0efcd7c5fb9eab8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dda11511904d452a3a5101417f8ab8a33c00204f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33505765"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469904"
 ---
 # <a name="getting-started-sample"></a>使用者入門範例
 使用者入門範例會示範如何實作一般服務與一般用戶端使用 Windows Communication Foundation (WCF)。 這個範例是所有其他基本技術範例的基礎。  
@@ -25,7 +25,7 @@ ms.locfileid: "33505765"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\GettingStarted\GettingStarted`  
   
@@ -36,7 +36,7 @@ ms.locfileid: "33505765"
  在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，服務會裝載在 Windows Activation Service (WAS) 中。 在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)][!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]和 上，服務會由網際網路資訊服務 (IIS) 與 ASP.NET 加以裝載。 使用 IIS 或 WAS 裝載服務，便可以讓服務在第一次存取時就自動啟動。  
   
 > [!NOTE]
->  如果您想要開始使用範例所裝載的主控台應用程式，而不是 IIS 中的服務，請參閱[自我裝載](../../../../docs/framework/wcf/samples/self-host.md)範例。  
+>  如果您想要開始使用範例裝載的主控台應用程式，而不是 IIS 中的服務，請參閱 <<c0> [ 自我裝載](../../../../docs/framework/wcf/samples/self-host.md)範例。  
   
  服務與用戶端會在組態檔設定中指定存取詳細資訊，而這些設定可提供部署期間的彈性。 其中包含指定位址、繫結與合約的端點定義。 繫結會指定如何存取服務的傳輸與安全性詳細資訊。  
   
@@ -173,7 +173,7 @@ public class CalculatorService : ICalculator
 </system.serviceModel>  
 ```  
   
- 用戶端通訊，使用指定的合約類型由所產生的用戶端類別來[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 這個產生的用戶端會包含在 generatedClient.cs 或 generatedClient.vb 檔中。 這個公用程式會擷取指定服務的中繼資料，然後產生用戶端應用程式透過指定合約型別來進行通訊的用戶端。 裝載的服務必須可用來產生用戶端程式碼，因為該服務將被用來擷取更新的中繼資料。  
+ 使用指定的合約類型使用用戶端類別所產生的用戶端通訊[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 這個產生的用戶端會包含在 generatedClient.cs 或 generatedClient.vb 檔中。 這個公用程式會擷取指定服務的中繼資料，然後產生用戶端應用程式透過指定合約型別來進行通訊的用戶端。 裝載的服務必須可用來產生用戶端程式碼，因為該服務將被用來擷取更新的中繼資料。  
   
  從用戶端目錄中的 SDK 命令提示字元執行下列命令，以產生具型別的 Proxy：  
   
@@ -272,15 +272,15 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
- 使用者入門範例會示範建立服務與用戶端的標準方式。 其他[基本](../../../../docs/framework/wcf/samples/basic-sample.md)建置此範例來示範特定的產品功能。  
+ 使用者入門範例會示範建立服務與用戶端的標準方式。 另[基本](../../../../docs/framework/wcf/samples/basic-sample.md)建置此範例來示範特定產品功能。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-3.  若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [如何：於受管理的應用程式中裝載 WCF 服務](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)  

@@ -12,24 +12,24 @@ ms.assetid: ac3c5eaa-49c7-4653-b83e-532e2a2604a2
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 874eada0714ed0f96248ebac8edb0efe205d9f21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8be813a16e1cdbf8367a358d91cf3b958ac36398
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407179"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466321"
 ---
 # <a name="expose-the-content-of-a-table-using-ui-automation"></a>利用 UI 自動化公開資料表的內容
 > [!NOTE]
->  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱 < [Windows Automation API： 使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
- 本主題說明如何[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]可以用來公開在表格式控制項內的每個資料格的內容和內建屬性。  
+ 本主題說明如何[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]可用來公開表格式控制項內的每個資料格的內容與內建屬性。  
   
 ## <a name="example"></a>範例  
- 下列程式碼範例示範如何取得<xref:System.Windows.Automation.AutomationElement>表示表格儲存格的內容，則也會取得儲存格內容，例如資料列和資料行的索引、 資料列和資料範圍和資料列和資料行的標頭資訊。 此範例使用的焦點變更事件處理常式來模擬鍵盤周遊實作表格控制項[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]。 焦點變更事件上公開的每個資料表項目資訊。  
+ 下列程式碼範例示範如何取得<xref:System.Windows.Automation.AutomationElement>表示表格儲存格的內容; 也會取得資料列和資料行的索引、 資料列和資料行的 span，等資料列和資料行的標頭資訊的資料格屬性。 此範例中使用的焦點變更事件處理常式來模擬鍵盤周遊實作的表格式控制項[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]。 每個資料表項目資訊公開所在的焦點變更事件。  
   
 > [!NOTE]
->  由於焦點變更全域桌面的事件，應篩選至資料表外部的焦點變更事件。 請參閱[TrackFocus 範例](http://msdn.microsoft.com/library/4a91c0af-6bb5-4d38-a743-cf136f268fc9)相關的實作。  
+>  因為焦點變更全域桌面的事件，則應該篩選資料表外部的焦點變更事件。 請參閱[TrackFocus 範例](https://msdn.microsoft.com/library/4a91c0af-6bb5-4d38-a743-cf136f268fc9)相關的實作。  
   
  [!code-csharp[UIATableItemPattern_snip#StartTarget](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#starttarget)]
  [!code-vb[UIATableItemPattern_snip#StartTarget](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#starttarget)]  

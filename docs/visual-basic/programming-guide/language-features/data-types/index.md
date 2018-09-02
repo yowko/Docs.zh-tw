@@ -9,11 +9,11 @@ helpviewer_keywords:
 - data types [Visual Basic], improving speed with
 ms.assetid: 5e1b9aaf-c7ca-4b29-9b22-0e82ed8e85e2
 ms.openlocfilehash: 83c3d9976f61513165e917da73dd50e846db3e83
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43330941"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463519"
 ---
 # <a name="data-types-in-visual-basic"></a>Visual Basic 中的資料類型
 程式設計元素的「資料類型」是指其可以保留何種資料，以及儲存該資料的方式。 資料類型會應用於所有能儲存在電腦記憶體中的值，或是所有參與運算式評估的值。 每個變數、常值、常數、列舉、屬性、程序參數、程序引數和程序傳回值都具有資料類型。  

@@ -11,16 +11,16 @@ ms.assetid: 09576b1a-291f-435c-980e-dee32d899ae1
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 73678433692f5532f712f0d2c7a3c5bf138a87b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9876aa894c49ec7af1ecd240e12e0f70eccfd89f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405573"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467353"
 ---
 # <a name="get-ui-automation-element-properties"></a>取得 UI 自動化項目屬性
 > [!NOTE]
->  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱 < [Windows Automation API： 使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主題示範如何擷取屬性的[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]項目。  
   
@@ -28,13 +28,13 @@ ms.locfileid: "33405573"
   
 1.  取得<xref:System.Windows.Automation.AutomationElement>您想要取得其屬性。  
   
-2.  呼叫<xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>，或擷取<xref:System.Windows.Automation.AutomationElement.Current%2A>屬性結構，以及如何取得其成員的值。  
+2.  呼叫<xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>，或擷取<xref:System.Windows.Automation.AutomationElement.Current%2A>屬性結構，以及如何取得其成員之一的值。  
   
 ### <a name="get-a-cached-property-value"></a>取得快取的屬性值  
   
 1.  取得<xref:System.Windows.Automation.AutomationElement>您想要取得其屬性。 屬性必須具有在指定<xref:System.Windows.Automation.CacheRequest>。  
   
-2.  呼叫<xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>，或擷取<xref:System.Windows.Automation.AutomationElement.Cached%2A>屬性結構，以及如何取得其成員的值。  
+2.  呼叫<xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>，或擷取<xref:System.Windows.Automation.AutomationElement.Cached%2A>屬性結構，以及如何取得其成員之一的值。  
   
 ## <a name="example"></a>範例  
  下列範例示範各種方式來擷取目前的屬性<xref:System.Windows.Automation.AutomationElement>。  

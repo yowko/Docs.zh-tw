@@ -2,15 +2,15 @@
 title: '&lt;netTcpBinding&gt; 的 &lt;transport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-ms.openlocfilehash: 9369351e4e197f321feb4ae56939bec2a8280a64
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8c2a0de73db2ec4a1c2150fc7e62b7a3a9f086bc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752555"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43473997"
 ---
 # <a name="lttransportgt-of-ltnettcpbindinggt"></a>&lt;netTcpBinding&gt; 的 &lt;transport&gt;
-定義的訊息層級安全性需求與設定之端點的型別[ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)。  
+定義設定之端點的訊息層級安全性需求的型別[ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)。  
   
  \<system.ServiceModel>  
 \<繫結 >  
@@ -46,7 +46,7 @@ ms.locfileid: "32752555"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|clientCredentialType|選擇項。 指定當使用傳輸安全性執行用戶端驗證時，要使用的認證類型。<br /><br /> -預設值是`Windows`。<br />-這個屬性是屬於型別<xref:System.ServiceModel.TcpClientCredentialType>。|  
+|clientCredentialType|選擇項。 指定當使用傳輸安全性執行用戶端驗證時，要使用的認證類型。<br /><br /> -預設值是`Windows`。<br />-此屬性為類型<xref:System.ServiceModel.TcpClientCredentialType>。|  
 |protectionLevel|選擇項。 定義 TCP 傳輸層級的安全性。 簽章訊息可降低訊息在傳輸期間遭第三方竄改的風險。 加密會提供傳輸期間的資料層級隱私權。<br /><br /> 預設值是 `EncryptAndSign`。|  
 |sslProtocols|SslProtocols 列舉旗標值，可指定所支援的 SslProtocols。 預設值是 Tls&#124;Tls11&#124;Tls12。|  
 |policyEnforcement|此列舉指定了應該強制執行 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> 的時間。<br /><br /> 1.Never：絕不強制執行此原則 (延伸保護已停用)。<br />2.WhenSupported：只有當用戶端支援延伸保護時，才強制執行此原則。<br />3.Always：一律強制執行此原則。 不支援延伸保護的用戶端將無法驗證。|  
@@ -65,9 +65,9 @@ ms.locfileid: "32752555"
 |-----------|-----------------|  
 |無|無保護。|  
 |Sign|訊息會經過簽署。|  
-|EncryptAndSign|-訊息會加密並簽署。|  
+|EncryptAndSign|-訊息會經過加密及簽署。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無  
   
 ### <a name="parent-elements"></a>父項目  
@@ -87,5 +87,5 @@ ms.locfileid: "32752555"
  [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [使用繫結來設定 Windows Communication Foundation 服務和用戶端](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<繫結 >](../../../../../docs/framework/misc/binding.md)

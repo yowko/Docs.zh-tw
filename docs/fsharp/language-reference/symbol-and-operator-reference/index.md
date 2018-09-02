@@ -1,13 +1,13 @@
 ---
 title: 符號和運算子參考 (F#)
-description: '深入了解符號和 F # 程式語言中所使用的運算子。'
+description: '深入了解符號和運算子，可在 F # 程式設計語言。'
 ms.date: 04/04/2018
-ms.openlocfilehash: 79518b990f3a5c794f7658490bdadc2d5b985504
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a52fc7539027f0cf86a82223a5970d86d7ec60c5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566700"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43457196"
 ---
 # <a name="symbol-and-operator-reference"></a>符號和運算子參考
 
@@ -29,7 +29,7 @@ ms.locfileid: "33566700"
 |`$`|沒有可用的詳細資訊。|<ul><li>使用於內部，用於特定編譯器產生的變數與函式名稱。<br /></li><ul/>|
 |`%`|[算術運算子](arithmetic-operators.md)<br /><br />[程式碼引號](../code-quotations.md)|<ul><li>計算整數餘數。<br /></li><li>用於將運算式接合成具類型的程式碼引號。<br /></li><ul/>|
 |`%%`|[程式碼引號](../code-quotations.md)|<ul><li>用於將運算式接合成不具類型的程式碼引號。<br /></li><ul/>|
-|`%?`|[可為 Null 的運算子](nullable-operators.md)|<ul><li>當右側是可為 null 的型別時，計算整數餘數。<br /></li><ul/>|
+|`%?`|[可為 Null 的運算子](nullable-operators.md)|<ul><li>當右側是可為 null 的型別時，會計算整數餘數。<br /></li><ul/>|
 |`&`|[比對運算式](../match-expressions.md)|<ul><li>計算可變動值的位址，以在與其他語言相互操作時使用。<br /></li><li>用於 AND 模式中。<br /></li><ul/>|
 |`&&`|[布林運算子](boolean-operators.md)|<ul><li>計算布林值 AND 運算。<br /></li><ul/>|
 |`&&&`|[位元運算子](bitwise-operators.md)|<ul><li>計算位元 AND 運算。<br /></li><ul/>|
@@ -82,10 +82,10 @@ ms.locfileid: "33566700"
 |`=?`|[可為 Null 的運算子](nullable-operators.md)|<ul><li>當右側是可為 null 的類型時，計算「等於」運算。<br /></li><ul/>|
 |`==`|不適用。|<ul><li>F# 中不使用。 使用 `=` 進行等號比較運算。<br /></li><ul/>|
 |`>`|[算術運算子](arithmetic-operators.md)|<ul><li>如果左側大於右側，即傳回 `true`；否則傳回 `false`。<br /></li><ul/>|
-|`>?`|[可為 Null 的運算子](nullable-operators.md)|<ul><li>當右側是可為 null 的類型時，計算「大於」運算。<br /></li><ul/>|
+|`>?`|[可為 Null 的運算子](nullable-operators.md)|<ul><li>當右側是可為 null 的型別時，請計算 「 大於 」 運算。<br /></li><ul/>|
 |`>>`|[函式](../functions/index.md)|<ul><li>撰寫兩個函式 (正向撰寫運算子)。<br /></li><ul/>|
 |`>>>`|[位元運算子](bitwise-operators.md)|<ul><li>將左側數量中的位元，向右移位右側指定的位數。<br /></li><ul/>|
-|`>=`|[算術運算子](arithmetic-operators.md)|<ul><li>傳回`true`的左邊是否大於或等於右側，即; 否則傳回`false`。<br /></li><ul/>|
+|`>=`|[算術運算子](arithmetic-operators.md)|<ul><li>會傳回`true`左側是大於或等於右側，否則會傳回`false`。<br /></li><ul/>|
 |`>=?`|[可為 Null 的運算子](nullable-operators.md)|<ul><li>當右側是可為 null 的類型時，計算「大於或等於」運算。<br /></li><ul/>|
 |`?`|[參數和引數](../parameters-and-arguments.md)|<ul><li>指定選擇性引數。<br /></li><li>用做為動態方法及屬性呼叫的運算子。 您必須提供自己的實作。<br /></li><ul/>|
 |`? ... <- ...`|沒有可用的詳細資訊。|<ul><li>用來做為設定動態屬性的運算子。 您必須提供自己的實作。<br /></li><ul/>|

@@ -2,12 +2,12 @@
 title: 動態更新
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: f50c8e8ed7ebaab71421ff1615051d9b828d9e4b
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: dea930de2103a24aa48b1d0a31a3cbf5fc0ae26c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207517"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43455766"
 ---
 # <a name="dynamic-update"></a>動態更新
 動態更新提供的機制可讓工作流程應用程式開發人員更新持續性工作流程執行個體的工作流程定義。 這可以是實作錯誤修復、新要求，或是適應突如其來的變化。 本主題提供 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引進的動態更新功能概觀。  
@@ -15,7 +15,7 @@ ms.locfileid: "36207517"
 ## <a name="dynamic-update"></a>動態更新  
  若要將動態更新套用於持續性的工作流程執行個體，需建立<xref:System.Activities.DynamicUpdate.DynamicUpdateMap>，其中包含執行階段指示，描述如何修改保存的工作流程執行個體以反映所需的變更。 建立更新對應之後，會將其套用至所需保存的工作流程執行個體。 套用動態更新後，可以使用新更新的工作流程定義繼續工作流程執行個體。 建立及套用更新對應需要四個步驟。  
   
-1.  [準備動態更新的工作流程定義](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Prepare)  
+1.  [準備動態更新工作流程定義](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Prepare)  
   
 2.  [更新工作流程定義，以反映所需的變更](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Update)  
   
@@ -28,13 +28,13 @@ ms.locfileid: "36207517"
   
  本主題提供動態更新流程概觀，說明如何將新活動加入到已編譯 XAML 工作流程內持續性的執行個體中。  
   
-###  <a name="Prepare"></a> 準備動態更新的工作流程定義  
+###  <a name="Prepare"></a> 準備動態更新工作流程定義  
  動態更新程序中的第一步，是準備更新所需的工作流程定義。 呼叫 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> 方法並傳入要修改的工作流程定義，即可準備完成。 這個方法會先驗證再一一查核工作流程樹狀結構，找出所有需要標記的物件 (例如公用活動和變數)，之後可將這些物件與修改過的工作流程定義進行比較。 完成此步驟後，會複製工作流程樹狀結構，並將其附加到原始的工作流程定義。 建立更新對應時，會比較更新版工作流程定義與原始工作流程定義，並根據差異產生更新對應。  
   
  為準備 XAML 工作流程以進行動態更新，會將其載入到 <xref:System.Activities.ActivityBuilder> 中，然後將 <xref:System.Activities.ActivityBuilder> 傳遞到 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> 中。  
   
 > [!NOTE]
->  如需有關使用序列化工作流程和<xref:System.Activities.ActivityBuilder>，請參閱[序列化工作流程和活動 xaml](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md)。  
+>  如需有關使用序列化工作流程並<xref:System.Activities.ActivityBuilder>，請參閱 <<c2> [ 序列化工作流程和活動與 XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md)。  
   
  以下範例中，會將 `MortgageWorkflow` 定義 (包含有數個子活動的 <xref:System.Activities.Statements.Sequence>) 載入到 <xref:System.Activities.ActivityBuilder> 中，然後準備進行動態更新。 方法傳回後，<xref:System.Activities.ActivityBuilder> 會包含原始工作流程定義及複本。  
   
@@ -57,7 +57,7 @@ DynamicUpdateServices.PrepareForUpdate(ab);
 ```  
   
 > [!NOTE]
->  若要下載本主題相關的範例程式碼，請參閱[動態更新程式碼範例](http://go.microsoft.com/fwlink/?LinkId=227905)。  
+>  若要下載本主題相關的範例程式碼，請參閱[動態更新範例程式碼](https://go.microsoft.com/fwlink/?LinkId=227905)。  
   
 ###  <a name="Update"></a> 更新工作流程定義，以反映所需的變更  
  準備好用於更新的工作流程定義後，即可進行所需的修改。 您可以新增或移除活動；新增、移動或刪除公用變數；新增或移除引數，也可以變更活動委派的特徵標記。 您不能移除執行中的活動，也不能變更執行中委派的特徵標記。 您可以使用程式碼進行這些變更，也可以在重新裝載的工作流程設計工具中進行。 下列範例中，會將自訂的 `VerifyAppraisal` 活動加入序列中，這個序列組成上一個範例中 `MortgageWorkflow` 的主體。  
@@ -164,7 +164,7 @@ foreach (Guid id in ids)
  套用動態更新之後，即可繼續該工作流程執行個體。 請注意，必須使用更新過的新定義和 <xref:System.Activities.WorkflowIdentity>。  
   
 > [!NOTE]
->  如需有關使用<xref:System.Activities.WorkflowApplication>和<xref:System.Activities.WorkflowIdentity>，請參閱[使用 WorkflowIdentity 與版本控制](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md)。  
+>  如需使用詳細資訊<xref:System.Activities.WorkflowApplication>並<xref:System.Activities.WorkflowIdentity>，請參閱[使用 WorkflowIdentity 與版本控制](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md)。  
   
  在下列範例中，上一個範例中的 `MortgageWorkflow_v1.1.xaml` 工作流程已編譯完畢，並且已使用更新過的工作流程定義載入及繼續。  
   
@@ -191,4 +191,4 @@ wfApp.Load(InstanceId);
 ```  
   
 > [!NOTE]
->  若要下載本主題相關的範例程式碼，請參閱[動態更新程式碼範例](http://go.microsoft.com/fwlink/?LinkId=227905)。
+>  若要下載本主題相關的範例程式碼，請參閱[動態更新範例程式碼](https://go.microsoft.com/fwlink/?LinkId=227905)。

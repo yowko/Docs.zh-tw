@@ -2,22 +2,22 @@
 title: Hello World 自訂活動
 ms.date: 03/30/2017
 ms.assetid: 72b1dd0a-9aad-47d5-95a9-a1024ee1d0a1
-ms.openlocfilehash: 35ae5933515b3280b0d8d95157c8dd5f40f7b320
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fde745fae7470ec763b6b5030a60436a6525e3c0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515835"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470771"
 ---
 # <a name="hello-world-custom-activity"></a>Hello World 自訂活動
-這個範例會示範數個關鍵功能的 Windows Workflow Foundation (WF)，包括如何建立簡單的自訂活動。 這個範例中示範的部分功能是以 C# 建立自訂活動，以及使用 `in` 和 `out` 引數 (<xref:System.Activities.InArgument> 和 <xref:System.Activities.OutArgument>)。  
+這個範例會示範幾個重要功能的 Windows Workflow Foundation (WF)，包括如何建立簡單的自訂活動。 這個範例中示範的部分功能是以 C# 建立自訂活動，以及使用 `in` 和 `out` 引數 (<xref:System.Activities.InArgument> 和 <xref:System.Activities.OutArgument>)。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\Code-Bodied\HelloWorld`  
   
@@ -33,7 +33,7 @@ ms.locfileid: "33515835"
  下列檔案包含在此專案中。  
   
  AppendString.cs  
- 附加字串的自訂活動。 它會採用在字串中，並將它與結合常值文字字串"says hello world"以形成完整訊息做為輸出。  
+ 附加字串的自訂活動。 它會接受字串，並將它與結合常值文字字串"says hello world 」 以形成完整訊息做為輸出。  
   
  PrependString.cs  
  這個活動會將預先定義的字串前置到輸入字串。  

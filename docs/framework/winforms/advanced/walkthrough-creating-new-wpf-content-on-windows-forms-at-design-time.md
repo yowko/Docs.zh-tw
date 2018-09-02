@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ElementHost control
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
-ms.openlocfilehash: dd68911abfa6bd6315091fb4630134532053efa1
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: dc72b86a69d44ad282e30b000313b73211cad09c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999867"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43461744"
 ---
 # <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>逐步解說：在設計階段建立 Windows Form 的新 WPF 內容
 
@@ -61,7 +61,7 @@ ms.locfileid: "42999867"
 
     - UserControl1.xaml 檔案會在 [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 中開啟。
 
-2. 在 [設計] 檢視中，確定已選取 `UserControl1`。 如需詳細資訊，請參閱 <<c0> [ 如何： 選取和移動設計介面上的項目](http://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474)。
+2. 在 [設計] 檢視中，確定已選取 `UserControl1`。 如需詳細資訊，請參閱 <<c0> [ 如何： 選取和移動設計介面上的項目](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474)。
 
 3. 在 **屬性**視窗中，設定的值<xref:System.Windows.FrameworkElement.Width%2A>並<xref:System.Windows.FrameworkElement.Height%2A>屬性，以**200**。
 
@@ -114,4 +114,4 @@ Windows Form 和 WPF 是不同的技術，不過可以藉由設計密切地相�
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [移轉和互通性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
 - [使用 WPF 控制項](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
-- [WPF 設計工具](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)
+- [在 Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)

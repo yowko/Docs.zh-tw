@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a44819e8a8c0b07b3ffbfb2d92533cbdc558ef6
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 3909855db109938794fad3e0afc99d492009b81c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874740"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43461783"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>將您的 Windows 市集應用程式移轉至 .NET Native
-.NET 原生提供靜態編譯的應用程式在 Windows 市集或開發人員的電腦上。 這不同於 just-in-time (JIT) 編譯器或裝置上的 [原生映像產生器 (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 為 Windows 市集應用程式執行的動態編譯。 儘管有所差異，.NET Native 會嘗試維持與相容性[適用於 Windows 市集應用程式](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)。 大部分的情況下，在適用於 Windows 市集應用程式運作的項目也適用於.NET 原生。  不過，在某些情況下，您可能會遇到行為上的變更。 本文將探討這些差異適用於 Windows 市集應用程式的標準和.NET Native 在下列區域：  
+.NET 原生提供靜態編譯的應用程式在 Windows 市集或開發人員的電腦上。 這不同於 just-in-time (JIT) 編譯器或裝置上的 [原生映像產生器 (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 為 Windows 市集應用程式執行的動態編譯。 儘管有所差異，.NET Native 會嘗試維持與相容性[適用於 Windows 市集應用程式](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)。 大部分的情況下，在適用於 Windows 市集應用程式運作的項目也適用於.NET 原生。  不過，在某些情況下，您可能會遇到行為上的變更。 本文將探討這些差異適用於 Windows 市集應用程式的標準和.NET Native 在下列區域：  
   
 -   [一般執行階段的差異](#Runtime)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "37874740"
   
 -   不支援 <xref:System.RuntimeFieldHandle> 和 <xref:System.RuntimeMethodHandle> 結構上的公用成員。 只有針對 LINQ、運算式樹狀架構和靜態陣列初始設定，才會支援這些類型。  
   
--   <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> 和 <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> 將隱藏的成員包含基底類別中，因此可能會在非明確覆寫的情況下被覆寫。 針對其他 [RuntimeReflectionExtensions.GetRuntime*](http://msdn.microsoft.com/library/system.reflection.runtimereflectionextensions_methods.aspx) 方法也是如此。  
+-   <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> 和 <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> 將隱藏的成員包含基底類別中，因此可能會在非明確覆寫的情況下被覆寫。 這也是如此另[runtimereflectionextensions.getruntime *](https://msdn.microsoft.com/library/system.reflection.runtimereflectionextensions_methods.aspx)方法。  
   
 -   當您嘗試建立特定的組合 (例如 byref 的陣列) 時，<xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> 和 <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> 不會失敗。  
   
@@ -151,13 +151,13 @@ ms.locfileid: "37874740"
   
 -   如果沒有將 <xref:System.Reflection.TypeInfo.GUID%2A?displayProperty=nameWithType> 屬性 (attribute) 套用至類型，則 <xref:System.PlatformNotSupportedException> 屬性 (property) 會擲回 <xref:System.Runtime.InteropServices.GuidAttribute> 例外狀況。 GUID 主要用於 COM 支援。  
   
--   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>方法正確地剖析包含在.NET 原生的簡短日期的字串。 不過，它不會維護 Microsoft 知識庫文章 [KB2803771](http://support.microsoft.com/kb/2803771) 和 [KB2803755](http://support.microsoft.com/kb/2803755)中描述之日期和時間剖析變更的相容性。  
+-   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>方法正確地剖析包含在.NET 原生的簡短日期的字串。 不過，它不會變更的相容性維護中的日期和時間剖析 Microsoft Knowledge Base 文章所述[KB2803771](https://support.microsoft.com/kb/2803771)並[KB2803755](https://support.microsoft.com/kb/2803755)。  
   
 -   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` 正確地在.NET 原生四捨五入。 在某些版本的 CLR 中，會將結果字串無條件捨去，而不是四捨五入。  
   
 <a name="HttpClient"></a>   
 ### <a name="httpclient-differences"></a>HttpClient 差異  
- 在.NET Native<xref:System.Net.Http.HttpClientHandler>類別在內部使用 WinINet (透過[HttpBaseProtocolFilter](http://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx)類別) 而非<xref:System.Net.WebRequest>和<xref:System.Net.WebResponse>標準適用於 Windows 市集應用程式中使用的類別。  WinINet 並未支援 <xref:System.Net.Http.HttpClientHandler> 類別支援的所有組態選項。  因此：  
+ 在.NET Native<xref:System.Net.Http.HttpClientHandler>類別在內部使用 WinINet (透過[HttpBaseProtocolFilter](https://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx)類別) 而非<xref:System.Net.WebRequest>和<xref:System.Net.WebResponse>標準適用於 Windows 市集應用程式中使用的類別。  WinINet 並未支援 <xref:System.Net.Http.HttpClientHandler> 類別支援的所有組態選項。  因此：  
   
 -   部分功能屬性會在<xref:System.Net.Http.HttpClientHandler>會傳回`false`.NET native，則會傳回`true`適用於 Windows 市集應用程式的標準。  
   
@@ -167,11 +167,11 @@ ms.locfileid: "37874740"
   
  **Proxy**  
   
- [HttpBaseProtocolFilter](http://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx) 類別不支援依個別要求來設定或覆寫 Proxy。  這表示在.NET 原生的所有要求都使用系統設定的 proxy 伺服器或未使用 proxy 伺服器，根據的值<xref:System.Net.Http.HttpClientHandler.UseProxy%2A?displayProperty=nameWithType>屬性。  在適用於 Windows 市集應用程式的 .NET 中，是由 <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> 屬性來定義 Proxy 伺服器。  在.NET Native 上，設定<xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType>以外的值來`null`就會擲回<xref:System.PlatformNotSupportedException>例外狀況。  <xref:System.Net.Http.HttpClientHandler.SupportsProxy%2A?displayProperty=nameWithType>屬性會傳回`false`.NET native，則會傳回`true`適用於 Windows 市集.NET Framework 應用程式的標準。  
+ [HttpBaseProtocolFilter](https://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx)類別不支援設定或覆寫個別要求上的 proxy。  這表示在.NET 原生的所有要求都使用系統設定的 proxy 伺服器或未使用 proxy 伺服器，根據的值<xref:System.Net.Http.HttpClientHandler.UseProxy%2A?displayProperty=nameWithType>屬性。  在適用於 Windows 市集應用程式的 .NET 中，是由 <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> 屬性來定義 Proxy 伺服器。  在.NET Native 上，設定<xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType>以外的值來`null`就會擲回<xref:System.PlatformNotSupportedException>例外狀況。  <xref:System.Net.Http.HttpClientHandler.SupportsProxy%2A?displayProperty=nameWithType>屬性會傳回`false`.NET native，則會傳回`true`適用於 Windows 市集.NET Framework 應用程式的標準。  
   
  **自動重新導向**  
   
- [HttpBaseProtocolFilter](http://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx) 類別不允許設定自動重新導向的數目上限。  在適用於 Windows 市集應用程式的標準 .NET 中，<xref:System.Net.Http.HttpClientHandler.MaxAutomaticRedirections%2A?displayProperty=nameWithType> 屬性的值預設為 50，而且可以修改。 .NET native，這個屬性的值會是 10，而且嘗試修改它會擲回<xref:System.PlatformNotSupportedException>例外狀況。  <xref:System.Net.Http.HttpClientHandler.SupportsRedirectConfiguration%2A?displayProperty=nameWithType>屬性會傳回`false`.NET native，則會傳回`true`適用於 Windows 市集應用程式中。  
+ [HttpBaseProtocolFilter](https://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx)類別不允許設定自動重新導向的最大數目。  在適用於 Windows 市集應用程式的標準 .NET 中，<xref:System.Net.Http.HttpClientHandler.MaxAutomaticRedirections%2A?displayProperty=nameWithType> 屬性的值預設為 50，而且可以修改。 .NET native，這個屬性的值會是 10，而且嘗試修改它會擲回<xref:System.PlatformNotSupportedException>例外狀況。  <xref:System.Net.Http.HttpClientHandler.SupportsRedirectConfiguration%2A?displayProperty=nameWithType>屬性會傳回`false`.NET native，則會傳回`true`適用於 Windows 市集應用程式中。  
   
  **自動解壓縮**  
   
@@ -217,9 +217,9 @@ ms.locfileid: "37874740"
 |<xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>|  
 |<xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>|  
   
- <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> 支援，但在它擲回例外狀況，請在某些情況下，例如當它搭配[IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx)或 byref 變異數。  
+ <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> 支援，但在它擲回例外狀況，請在某些情況下，例如當它搭配[IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)或 byref 變異數。  
   
- [IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx) 被取代API 的支援：  
+ 已被取代的 Api [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)支援：  
   
 |類型|成員|  
 |----------|------------|  
@@ -318,7 +318,7 @@ ms.locfileid: "37874740"
   
     -   `BStr`  
   
-    -   [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509.aspx)  
+    -   [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)  
   
  不過，.NET 原生不支援下列功能：  
   
@@ -326,7 +326,7 @@ ms.locfileid: "37874740"
   
 -   在 Managed 類型上實作 <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> 介面  
   
--   實作[IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx)介面，透過在 managed 類型上的<xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType>屬性。 不過，請注意您不能透過 `IDispatch`來呼叫 COM 物件，而且您的 Managed 物件不能實作 `IDispatch`。  
+-   實作[IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)介面，透過在 managed 類型上的<xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType>屬性。 不過，請注意您不能透過 `IDispatch`來呼叫 COM 物件，而且您的 Managed 物件不能實作 `IDispatch`。  
   
  不支援使用反映來叫用平台叫用方法。 若要解除決這項限制，您可以將此方法呼叫包裝在另一個方法中，並改用反映來呼叫包裝函式。  
   
@@ -400,7 +400,7 @@ ms.locfileid: "37874740"
   
  **Windows Communication Foundation (WCF) (System.ServiceModel.\*)**  
   
- 中的型別[system.servicemodel.* 命名空間](http://msdn.microsoft.com/library/gg145010.aspx)不在.NET 原生支援。 其中包括下列類型：  
+ 中的型別[system.servicemodel.* 命名空間](https://msdn.microsoft.com/library/gg145010.aspx)不在.NET 原生支援。 其中包括下列類型：  
   
 ||  
 |-|  
@@ -673,5 +673,5 @@ ms.locfileid: "37874740"
 ## <a name="see-also"></a>另請參閱  
  [快速入門](../../../docs/framework/net-native/getting-started-with-net-native.md)  
  [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [適用於 Windows 市集應用程式的概觀](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
+ [適用於 Windows 市集應用程式的概觀](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
  [Windows 市集應用程式和 Windows 執行階段的 .NET Framework 支援](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

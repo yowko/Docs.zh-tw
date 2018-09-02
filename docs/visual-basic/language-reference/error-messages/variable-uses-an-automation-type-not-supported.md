@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID458
 ms.assetid: bde4f4da-493b-452c-b6e4-1d370edba4cd
-ms.openlocfilehash: cda67199b3862699a668abd00b14dabc4ddb32e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae9fe183fd3ac2cf9e122b161f5456dc3eef6b58
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594341"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474138"
 ---
 # <a name="variable-uses-an-automation-type-not-supported-in-visual-basic"></a>變數使用在 Visual Basic 中不支援的 Automation 類型
 您嘗試使用類型程式庫或 Visual Basic 不支援的資料類型的物件程式庫中定義的變數。  
@@ -20,7 +20,7 @@ ms.locfileid: "33594341"
   
      -或-  
   
--   如果您遇到這個錯誤時使用`FileGet`或`FileGetOBject`，請確定您嘗試使用的檔案寫入與`FilePut`或`FilePutObject`。  
+-   如果您遇到這個錯誤時使用`FileGet`或是`FileGetOBject`，請確定您嘗試使用的檔案已寫入`FilePut`或`FilePutObject`。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料類型](../../../visual-basic/language-reference/data-types/data-type-summary.md)
+ [資料類型](../../../visual-basic/language-reference/data-types/index.md)

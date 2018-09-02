@@ -2,12 +2,12 @@
 title: CustomDiscoveryMetadata
 ms.date: 03/30/2017
 ms.assetid: c42455fd-3652-4b7e-b698-ab3a2bb52e48
-ms.openlocfilehash: 3e3a173d99f2ba0a2fb33dfd8f91908f03e3e871
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 181910db3f1dd6da892f6ae2ddcbf7bd5859ff17
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33501045"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465573"
 ---
 # <a name="customdiscoverymetadata"></a>CustomDiscoveryMetadata
 這個範例示範如何將自訂 XML 中繼資料插入服務公開之可探索端點的探索中繼資料。 接著在範例中會示範用戶端如何搜尋服務及擷取這項自訂資料。 這個範例包含二個專案，也就是服務和用戶端。  
@@ -31,7 +31,7 @@ ms.locfileid: "33501045"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\DiscoveryExtensibility\CustomDiscoveryMetadata`  
   

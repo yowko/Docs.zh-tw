@@ -2,15 +2,15 @@
 title: 下載範例資料庫 (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
-ms.openlocfilehash: f2488b0e1bfc578679a2a2802c332439f374a341
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7830095b7c98c0926783324ee7dc2bc1eb345aca
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763049"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469839"
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>下載範例資料庫 (LINQ to DataSet)
-範例和逐步解說中的[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]文件會使用 AdventureWorks 範例資料庫。 您可以從 Microsoft 下載網站免費下載這個產品。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 文件中的範例和逐步解說會使用 SQL Server 當做資料存放區。 除了 SQL Server 以外，可免費取得的 SQL Server Express Edition 也可以當做資料存放區使用。  
+範例和逐步解說[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]文件會使用 AdventureWorks 範例資料庫。 您可以從 Microsoft 下載網站免費下載這個產品。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 文件中的範例和逐步解說會使用 SQL Server 當做資料存放區。 除了 SQL Server 以外，可免費取得的 SQL Server Express Edition 也可以當做資料存放區使用。  
   
 ## <a name="downloading-and-installing-the-adventureworks-database"></a>下載和安裝 AdventureWorks 資料庫  
   
@@ -18,7 +18,7 @@ ms.locfileid: "32763049"
   
 1.  開啟 Internet Explorer。  
   
-2.  移至[SQL Server 2005 範例和範例資料庫](http://go.microsoft.com/fwlink/?linkid=31046)網站。  
+2.  移至[SQL Server 2005 範例和範例資料庫](https://go.microsoft.com/fwlink/?linkid=31046)網站。  
   
 3.  請遵循指示進行，以便下載適用於您處理器類型的 AdventureWorks 範例資料庫 (例如 AdventureWorksDB.msi)，並將 .MSI 檔儲存至本機電腦。  
   
@@ -28,27 +28,27 @@ ms.locfileid: "32763049"
   
 1.  卸除 AdventureWorks 或 AdventureWorksDW 資料庫。  
   
-2.  從**新增或移除程式**，選取**AdventureWorksDB**或**AdventureWorksBI**按一下**移除**。  
+2.  從**新增或移除程式**，選取**AdventureWorksDB**或是**AdventureWorksBI**然後按一下**移除**。  
   
 #### <a name="to-remove-an-adventureworks-sample-database-previously-installed-using-setup"></a>若要移除先前使用安裝程式安裝的 AdventureWorks 範例資料庫  
   
 1.  卸除 AdventureWorks 或 AdventureWorksDW 資料庫。  
   
-2.  從**新增或移除程式**，選取**Microsoft SQL Server 2005**按一下**變更**。  
+2.  從**新增或移除程式**，選取**Microsoft SQL Server 2005**然後按一下**變更**。  
   
-3.  從**元件選擇**，選取**工作站元件**，然後按一下 **下一步**。  
+3.  從**選擇的元件**，選取**工作站元件**，然後按一下 [**下一步]**。  
   
-4.  從**歡迎使用 SQL Server 安裝精靈**，按一下 **下一步**。  
+4.  從**歡迎使用 SQL Server 安裝精靈**，按一下**下一步**。  
   
-5.  從**系統組態檢查**，按一下 **下一步**。  
+5.  從**系統組態檢查**，按一下**下一步**。  
   
-6.  從**變更或移除執行個體**，按一下 **變更安裝的元件**。  
+6.  從**變更或移除執行個體**，按一下**變更安裝的元件**。  
   
-7.  從**特徵選取**，依序展開**文件、 範例和範例資料庫**節點。  
+7.  從**特徵**，展開**文件、 範例和範例資料庫**節點。  
   
-8.  選取**範例程式碼和應用程式**。 展開**範例資料庫**，選取要移除，然後選取的範例資料庫**整個功能將無法使用**。 按 [ **下一步**]。  
+8.  選取 **範例程式碼和應用程式**。 依序展開**範例資料庫**，選取範例資料庫來移除，然後選取**整個功能將無法使用**。 按 [ **下一步**]。  
   
-9. 按一下**安裝**並完成安裝精靈。  
+9. 按一下 **安裝**並完成安裝精靈。  
   
 #### <a name="to-attach-the-adventureworks-sample-database-files-to-an-instance-of-sql-server"></a>若要將 AdventureWorks 範例資料庫檔案附加至 SQL Server 的執行個體  
   
@@ -63,13 +63,13 @@ ms.locfileid: "32763049"
      如果您已將這些檔案安裝至不同的磁碟機或目錄，就必須先適當地修訂路徑，然後再執行 `sp_attach_db` 預存程序 (Stored Procedure)。  
   
 ## <a name="downloading-sql-server-express-edition"></a>下載 SQL Server Express Edition  
- 範例和逐步解說中的[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]區段使用 SQL Server 2005 做為資料存放區，而改為使用 SQL Server Express Edition，則可修改。 SQL Server Express Edition 可免費取得，而且可以將它連同應用程式一起轉散發。 如果您使用 Visual Studio，SQL Server Express Edition 隨附於專業版 （含） 以上版本。  
+ 範例和逐步解說[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]區段做為資料存放區中使用 SQL Server 2005，但可以改為使用 SQL Server Express Edition，修改。 SQL Server Express Edition 可免費取得，而且可以將它連同應用程式一起轉散發。 如果您使用 Visual Studio 時，SQL Server Express Edition 包含在 Pro 和更高版本。  
   
 #### <a name="to-download-and-install-sql-server-express-edition"></a>若要下載並安裝 SQL Server Express Edition  
   
 1.  啟動 Internet Explorer。  
   
-2.  移至[Microsoft SQL Server 2005 Express 的 Edition](http://go.microsoft.com/fwlink/?LinkID=31070)下載頁面。  
+2.  移至[Microsoft SQL Server 2005 Express 的 Edition](https://go.microsoft.com/fwlink/?LinkID=31070)下載頁面。  
   
 3.  請遵循網站上的安裝指示進行。  
   

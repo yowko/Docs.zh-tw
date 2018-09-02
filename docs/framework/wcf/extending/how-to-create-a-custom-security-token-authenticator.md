@@ -9,17 +9,17 @@ helpviewer_keywords:
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: ba554ed23ae039796f51f4a699d368c4a6c0587e
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: cbd45580e84a0723d28bab538bc0ffe388899d61
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809384"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43462405"
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>HOW TO：建立自訂安全性權杖驗證器
 本主題會示範如何建立自訂安全性權杖驗證器，以及如何將其與自訂的安全性權杖管理員整合。 安全性權杖驗證器會驗證傳入訊息所提供之安全性權杖的內容。 如果驗證成功，驗證器便會傳回在進行評估時會傳回一組宣告之 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 執行個體的集合。  
   
- 若要使用 Windows Communication Foundation (WCF) 的自訂安全性權杖驗證器，您必須先建立自訂認證和安全性權杖管理員實作。 如需有關如何建立自訂認證和安全性權杖管理員的詳細資訊，請參閱[逐步解說： 建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。 如需有關認證、 安全性權杖管理員，以及提供者和驗證器類別的詳細資訊，請參閱[安全性架構](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)。  
+ 若要使用的自訂安全性權杖驗證器的 Windows Communication Foundation (WCF) 中，您必須先建立自訂認證和安全性權杖管理員實作。 如需建立自訂認證和安全性權杖管理員的詳細資訊，請參閱 <<c0> [ 逐步解說： 建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。 如需有關認證、 安全性權杖管理員，以及提供者和驗證器類別的詳細資訊，請參閱 <<c0> [ 安全性架構](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)。  
   
 ## <a name="procedures"></a>程序  
   
@@ -34,7 +34,7 @@ ms.locfileid: "33809384"
      [!code-csharp[C_CustomTokenAuthenticator#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#1)]
      [!code-vb[C_CustomTokenAuthenticator#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#1)]  
   
- 上述程式碼會透過 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateToken%28System.IdentityModel.Tokens.SecurityToken%29> 方法傳回授權原則的集合。 WCF 不提供此介面的公用實作。 下列程序會示範如何根據您的需求來完成這項工作。  
+ 上述程式碼會透過 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateToken%28System.IdentityModel.Tokens.SecurityToken%29> 方法傳回授權原則的集合。 WCF 不會提供這個介面的公用實作。 下列程序會示範如何根據您的需求來完成這項工作。  
   
 #### <a name="to-create-a-custom-authorization-policy"></a>建立自訂授權原則  
   
@@ -44,7 +44,7 @@ ms.locfileid: "33809384"
   
 3.  實作 <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Issuer%2A> 唯讀屬性。 這個屬性需要傳回從權杖取得之宣告集的簽發者。 這個簽發者應該會對應至權杖的簽發者，或是負責驗證該權杖內容的授權單位。 下列範例會使用從上述程序所建立自訂安全性權杖驗證器傳遞到這個類別的簽發者宣告。 自訂安全性權杖驗證器會使用系統提供的宣告集 (由 <xref:System.IdentityModel.Claims.ClaimSet.System%2A> 屬性傳回) 來表示使用者名稱權杖的簽發者。  
   
-4.  實作 <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> 方法。 這個方法會用以傳入安全性權杖內容為基礎的宣告，填入 (Populate) <xref:System.IdentityModel.Policy.EvaluationContext> 類別的執行個體 (當做引數傳入)。 此方法會在完成評估時傳回 `true`。 當實作依賴對評估內容提供其他資訊之授權原則的存在，而需要的資訊尚未存在於評估內容時，這個方法便會傳回 `false`。 在此情況下，WCF 會評估所有其他產生的內送訊息，如果至少一個授權原則，這些修改評估內容的授權原則之後，再次呼叫方法。  
+4.  實作 <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> 方法。 這個方法會用以傳入安全性權杖內容為基礎的宣告，填入 (Populate) <xref:System.IdentityModel.Policy.EvaluationContext> 類別的執行個體 (當做引數傳入)。 此方法會在完成評估時傳回 `true`。 當實作依賴對評估內容提供其他資訊之授權原則的存在，而需要的資訊尚未存在於評估內容時，這個方法便會傳回 `false`。 在此情況下，WCF 會在評估所有其他內送訊息產生，如果至少一個授權原則，這些修改評估內容的授權原則之後，再次呼叫方法。  
   
      [!code-csharp[c_CustomTokenAuthenticator#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#2)]
      [!code-vb[c_CustomTokenAuthenticator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#2)]  
@@ -67,4 +67,4 @@ ms.locfileid: "33809384"
  <xref:System.IdentityModel.Tokens.UserNameSecurityToken>  
  [逐步解說：建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
  [如何：建立自訂安全性權杖提供者](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
- [安全性架構](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)
+ [安全性架構](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

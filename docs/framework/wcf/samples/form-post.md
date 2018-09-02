@@ -2,12 +2,12 @@
 title: 表單張貼
 ms.date: 03/30/2017
 ms.assetid: fa6f84f9-2e07-4e3c-92d0-a245308b7dff
-ms.openlocfilehash: 005aba6ab8a8fcbe4f4e4f79055e04cff059f47d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9115b9abfa7039bf409bb9bbce54e5012d05a074
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33503759"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464930"
 ---
 # <a name="form-post"></a>表單張貼
 這個範例示範如何擴充 WCF REST 程式設計模型，以支援新的傳入要求格式。 這個範例還包括格式子的實作，可將 HTML 表單張貼的要求還原序列化為 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 類型。 此外，這個範例使用 T4 範本傳回 HTML 頁面，該頁面提供可讓使用者回傳至 WCF REST 服務的 HTML 表單。  
@@ -25,13 +25,13 @@ ms.locfileid: "33503759"
   
  HtmlFormProcessing 程式庫專案還包括抽象基底類別 `RequestBodyDispatchFormatter`，可用來建立其他自訂要求格式子。 衍生自 `RequestBodyDispatchFormatter` 的方式可讓開發人員著重於要求主體還原序列化邏輯，該邏輯可讓基底類別將 URI 範本參數對應至作業的方法參數。 另外，HtmlFormProcessing 程式庫專案還包括 `HtmlFormProcessingBehavior` 類別，該類別會示範如何衍生自 <xref:System.ServiceModel.Description.WebHttpBehavior>，以便將預設要求格式子取代為自訂要求格式子。  
   
- 此主控台應用程式專案擴充[基本資源服務](../../../../docs/framework/wcf/samples/basic-resource-service.md)範例。 「基本資源服務」範例會示範如何以使用 WCF REST 程式設計模型的方式公開資源。 在「基本資源服務」範例中會公開客戶集合資源，以便建立、擷取、更新和刪除集合中的客戶。 「基本資源服務」範例僅使用兩種原本就支援的傳入要求格式：XML 和 JSON。  
+ 此主控台應用程式專案會擴充[基本資源服務](../../../../docs/framework/wcf/samples/basic-resource-service.md)範例。 「基本資源服務」範例會示範如何以使用 WCF REST 程式設計模型的方式公開資源。 在「基本資源服務」範例中會公開客戶集合資源，以便建立、擷取、更新和刪除集合中的客戶。 「基本資源服務」範例僅使用兩種原本就支援的傳入要求格式：XML 和 JSON。  
   
- 在這個「表單張貼」範例中的主控台應用程式會利用 HtmlFormProcessing 程式庫中的自訂格式子，該程式庫可讓使用者使用瀏覽器從 HTML 表單張貼傳送要求，藉此建立客戶。 它還會加入傳回 HTML 頁面的作業，該頁面包括回傳至服務的表單。 這個 HTML 頁面是使用預先處理的 T4 範本產生，而這個範本是由 .tt 檔和自動產生的 .cs 檔所組成。 .tt 檔可讓開發人員以包含變數和控制項結構的範本形式撰寫回應。 如需 T4 的詳細資訊，請參閱[所使用文字範本產生成品](http://go.microsoft.com/fwlink/?LinkId=178139)。  
+ 在這個「表單張貼」範例中的主控台應用程式會利用 HtmlFormProcessing 程式庫中的自訂格式子，該程式庫可讓使用者使用瀏覽器從 HTML 表單張貼傳送要求，藉此建立客戶。 它還會加入傳回 HTML 頁面的作業，該頁面包括回傳至服務的表單。 這個 HTML 頁面是使用預先處理的 T4 範本產生，而這個範本是由 .tt 檔和自動產生的 .cs 檔所組成。 .tt 檔可讓開發人員以包含變數和控制項結構的範本形式撰寫回應。 如需 T4 的詳細資訊，請參閱[藉由使用文字範本產生成品](https://go.microsoft.com/fwlink/?LinkId=178139)。  
   
 #### <a name="to-run-the-sample"></a>若要執行範例  
   
-1.  開啟「表單張貼範例」的方案。 啟動 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 時，您必須以系統管理員身分執行，才能成功執行範例。 執行這項操作，以滑鼠右鍵按一下[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]圖示，然後從內容功能表中選擇 「 系統管理員身分執行 」。  
+1.  開啟「表單張貼範例」的方案。 啟動 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 時，您必須以系統管理員身分執行，才能成功執行範例。 執行這項操作，以滑鼠右鍵按一下[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]圖示，然後從操作功能表選擇"Run as Administrator"。  
   
 2.  按下 CTRL+SHIFT+B 建置方案，然後按下 CTRL+F5 執行主控台應用程式 FormPost 專案。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "33503759"
   
 4.  範例執行時，用戶端將目前活動的狀態 (無論是加入客戶、更新客戶、刪除客戶或取得目前客戶的清單) 從服務寫入至主控台視窗。  
   
-5.  接著會提示您瀏覽至客戶表單的 URI。 開啟瀏覽器並瀏覽至指定的 URI。 輸入名稱和地址做為客戶按一下**送出** 按鈕。  
+5.  接著會提示您瀏覽至客戶表單的 URI。 開啟瀏覽器並瀏覽至指定的 URI。 輸入名稱和客戶，然後按一下 [地址**送出**] 按鈕。  
   
 6.  按下主控台視窗的任意鍵，即可繼續執行範例。  
   
@@ -52,6 +52,6 @@ ms.locfileid: "33503759"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Web\FormPost`

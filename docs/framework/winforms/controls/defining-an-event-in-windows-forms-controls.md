@@ -8,17 +8,17 @@ helpviewer_keywords:
 - events [Windows Forms], defining within Windows Forms custom controls
 - custom controls [Windows Forms], events using code
 ms.assetid: d89f1096-8061-42e2-a855-a1f053f1940a
-ms.openlocfilehash: 552f2b8441ae5323f55f236fabb9f50f8f8b5ab0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 60ae01ca63f895bfb1c7aabbe3337596cd13933d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524029"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466265"
 ---
 # <a name="defining-an-event-in-windows-forms-controls"></a>定義 Windows Form 控制項中的事件
-如需有關定義自訂事件的詳細資訊，請參閱[事件](../../../../docs/standard/events/index.md)。 若定義的事件沒有任何相關聯的資料，請為事件資料使用基底類型 <xref:System.EventArgs>，並以 <xref:System.EventHandler> 做為事件委派。 若要定義事件成員及受保護的就是所有`On` *EventName*引發事件的方法。  
+如需如何定義自訂事件的詳細資訊，請參閱 <<c0> [ 事件](../../../../docs/standard/events/index.md)。 若定義的事件沒有任何相關聯的資料，請為事件資料使用基底類型 <xref:System.EventArgs>，並以 <xref:System.EventHandler> 做為事件委派。 就是定義事件成員及受保護的所有`On` *EventName*引發事件的方法。  
   
- 下列程式碼片段示範 `FlashTrackBar` 自訂控制項如何定義自訂事件 `ValueChanged`。 如需完整的程式碼`FlashTrackBar`範例，請參閱[How to： 建立 Windows Form 控制項，顯示進度](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)。  
+ 下列程式碼片段示範 `FlashTrackBar` 自訂控制項如何定義自訂事件 `ValueChanged`。 完整程式碼`FlashTrackBar`範例，請參閱[如何： 建立 Windows Form 控制項可顯示進度](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)。  
   
 ```vb  
 Option Explicit  
@@ -69,15 +69,14 @@ public class FlashTrackBar : Control {
    // The protected method that raises the ValueChanged  
    // event when the value has actually   
    // changed. Derived controls can override this method.    
-   protected virtual void OnValueChanged(EventArgs e) {  
-      if (ValueChanged != null) {  
-         ValueChanged(this, e);  
-      }  
+   protected virtual void OnValueChanged(EventArgs e) 
+   {  
+       ValueChanged?.Invoke(this, e);  
    }  
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [Windows Forms 控制項中的事件](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)  
- [事件](../../../../docs/standard/events/index.md)  
- [事件](../../../../docs/standard/events/index.md)
+## <a name="see-also"></a>另請參閱
+
+- [Windows Forms 控制項中的事件](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)
+- [事件](../../../../docs/standard/events/index.md)

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - controls [WPF], ComboBox
 - ComboBox control [WPF]
 ms.assetid: fe0c2f62-fec2-4c41-a37e-5773d284170c
-ms.openlocfilehash: 3c74bd33e726dc5a34f55989357218a3e2c46e3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40dc767d830b3834eedf3581d544aa53d40fae50
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551187"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466352"
 ---
 # <a name="combobox"></a>ComboBox
-<xref:System.Windows.Controls.ComboBox>控制向使用者呈現選項的清單。 清單會顯示和隱藏控制項展開和摺疊。 在其預設狀態下，清單會摺疊，顯示只有一個選擇。 使用者按一下按鈕以查看完整的選項清單。  
+<xref:System.Windows.Controls.ComboBox>控制項將使用者提供的選項清單。 清單是顯示和隱藏控制項展開和摺疊。 在其預設狀態下，清單會摺疊，顯示只有一個選擇。 使用者按一下按鈕，以查看完整的選項清單。  
   
  下圖顯示<xref:System.Windows.Controls.ComboBox>不同狀態。  
   
@@ -23,7 +23,7 @@ ms.locfileid: "33551187"
 摺疊和展開  
   
 ## <a name="in-this-section"></a>本節內容  
- [如何： 取得 ComboBoxItem](http://msdn.microsoft.com/library/8a0d2622-64b6-41fc-bf80-9669a1eacb53)  
+ [如何： 取得 ComboBoxItem](https://msdn.microsoft.com/library/8a0d2622-64b6-41fc-bf80-9669a1eacb53)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.ComboBox>

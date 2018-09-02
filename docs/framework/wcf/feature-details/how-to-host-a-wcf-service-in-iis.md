@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-ms.openlocfilehash: a1759434d259cdffe1dac6b19a6582bfb83784bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 207010f594959708322aed2e630935252c873cf8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492479"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466167"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>HOW TO：在 IIS 中裝載 WCF 服務
-本主題概要說明建立 Windows Communication Foundation (WCF) 服務裝載在網際網路資訊服務 (IIS) 所需的基本步驟。 本主題假設您熟悉 IIS，而且了解如何使用 IIS 管理工具建立與管理 IIS 應用程式。 如需 IIS 的詳細資訊，請參閱[Internet Information Services](http://go.microsoft.com/fwlink/?LinkId=132449)。 WCF 服務的 IIS 環境中的執行可充分利用 IIS 功能，例如處理序回收、 閒置關機、 處理序健康狀態監控，以及訊息啟動。 這個裝載選項要求必須正確設定 IIS，但不要求您將任何裝載程式碼撰寫為應用程式的一部分。 IIS 裝載只能和 HTTP 傳輸一起使用。  
+本主題概要說明建立 Windows Communication Foundation (WCF) 服務裝載在網際網路資訊服務 (IIS) 所需的基本步驟。 本主題假設您熟悉 IIS，而且了解如何使用 IIS 管理工具建立與管理 IIS 應用程式。 如需 IIS 的詳細資訊，請參閱[Internet Information Services](https://go.microsoft.com/fwlink/?LinkId=132449)。 WCF 服務會在 IIS 環境中的執行採用完整的 IIS 功能，例如處理序回收、 閒置關機、 處理序健康狀態監控，以及訊息啟動。 這個裝載選項要求必須正確設定 IIS，但不要求您將任何裝載程式碼撰寫為應用程式的一部分。 IIS 裝載只能和 HTTP 傳輸一起使用。  
   
- 如需有關如何 WCF 和[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]互動，請參閱[WCF 服務與 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。 如需有關如何設定安全性的詳細資訊，請參閱[安全性](../../../../docs/framework/wcf/feature-details/security.md)。  
+ 如需有關如何 WCF 及[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]互動，請參閱 < [WCF 服務與 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。 如需有關如何設定安全性的詳細資訊，請參閱 <<c0> [ 安全性](../../../../docs/framework/wcf/feature-details/security.md)。  
   
- 此範例的來源副本，請參閱[IIS 裝載使用內嵌程式碼](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)。  
+ 如需此範例中的來源複本，請參閱[IIS 裝載使用內嵌程式碼](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)。  
   
 ### <a name="to-create-a-service-hosted-by-iis"></a>若要建立 IIS 裝載的服務  
   
-1.  確認您的電腦上已安裝 IIS 且正在執行中。 如需有關安裝及設定 IIS，請參閱[安裝和設定 IIS 7.0](http://go.microsoft.com/fwlink/?LinkID=132128)  
+1.  確認您的電腦上已安裝 IIS 且正在執行中。 如需安裝和設定 IIS 的詳細資訊，請參閱[安裝和設定 IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=132128)  
   
 2.  為您的應用程式檔案建立稱為 "IISHostedCalcService" 新的資料夾，確保 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 能夠存取資料夾內容，然後使用 IIS 管理工具來建立實際位於此應用程式目錄中的新 IIS 應用程式。 建立應用程式目錄的別名時，請使用 "IISHostedCalc"。  
   
@@ -60,11 +60,11 @@ ms.locfileid: "33492479"
      [!code-csharp[c_HowTo_HostInIIS#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/cs/source.cs#12)]
      [!code-vb[c_HowTo_HostInIIS#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostiniis/vb/source.vb#12)]  
   
-10. 在應用程式目錄中建立名為 "Web.config" 的檔案，並將下列組態程式碼加入至該檔案中。 在執行階段，WCF 基礎結構使用的資訊來建構用戶端應用程式可以與通訊的端點。  
+10. 在應用程式目錄中建立名為 "Web.config" 的檔案，並將下列組態程式碼加入至該檔案中。 在執行階段，WCF 基礎結構會使用資訊以建構用戶端應用程式可以與通訊的端點。  
   
      [!code-xml[c_HowTo_HostInIIS#100](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/common/web.config#100)]      
   
-     此範例會在組態檔中明確地指定端點。 如果您沒有將任何端點加入至服務中，執行階段會為您加入預設端點。 如需有關預設端點、 繫結和行為，請參閱[簡化的組態](../../../../docs/framework/wcf/simplified-configuration.md)和[簡化 WCF 服務的組態](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
+     此範例會在組態檔中明確地指定端點。 如果您沒有將任何端點加入至服務中，執行階段會為您加入預設端點。 如需有關預設端點、 繫結和行為，請參閱[Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md)並[Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
 11. 若要確認服務裝載正確，請開啟 Internet Explorer 的執行個體，然後瀏覽到服務的 URL：`http://localhost/IISHostedCalc/Service.svc`  
   
@@ -80,4 +80,4 @@ ms.locfileid: "33492479"
  [裝載服務](../../../../docs/framework/wcf/hosting-services.md)  
  [WCF 服務與 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)  
  [安全性](../../../../docs/framework/wcf/feature-details/security.md)  
- [Windows Server App Fabric 裝載功能](http://go.microsoft.com/fwlink/?LinkId=201276)
+ [Windows Server App Fabric 主控功能](https://go.microsoft.com/fwlink/?LinkId=201276)

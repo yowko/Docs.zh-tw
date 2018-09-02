@@ -11,38 +11,38 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: 783c75ed4577831b7ca444870c97063e8a057346
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 781f56c7e710f5130d821ca4796398379dfa4c6e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646667"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43456486"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>如何：在變數中存放多個值 (Visual Basic)
-如果您將它的宣告，變數會保留多個值*複合資料類型*。  
+變數會保留多個值，如果您將它的宣告*複合資料型別*。  
   
- [複合資料類型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)包含結構、 陣列和類別。 複合資料類型的變數可以保存基本資料類型和其他複合類型的組合。 結構和類別可以保存的程式碼，以及資料。  
+ [複合資料型別](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)包括結構、 陣列和類別。 複合資料類型的變數可以保留基礎資料類型和其他複合類型的組合。 結構和類別可以在程式碼，以及資料保留。  
   
 ### <a name="to-hold-more-than-one-value-in-a-variable"></a>若要在變數中存放多個值  
   
-1.  決定您想要用於您的變數的複合資料類型。  
+1.  判斷複合資料類型要使用您的變數。  
   
 2.  如果沒有已定義的複合資料類型，其定義，讓您的變數可以使用它。  
   
-    -   定義與結構[Structure 陳述式](../../../../visual-basic/language-reference/statements/structure-statement.md)。  
+    -   定義結構[Structure 陳述式](../../../../visual-basic/language-reference/statements/structure-statement.md)。  
   
     -   定義與陣列[Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)。  
   
-    -   定義具有類別[Class 陳述式](../../../../visual-basic/language-reference/statements/class-statement.md)。  
+    -   定義具有的類別[Class 陳述式](../../../../visual-basic/language-reference/statements/class-statement.md)。  
   
 3.  您以宣告變數`Dim`陳述式。  
   
 4.  變數名稱後面加`As`子句。  
   
-5.  請遵循`As`關鍵字搭配適當的複合資料類型的名稱。  
+5.  請依照下列`As`關鍵字搭配適當的複合資料類型的名稱。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料類型](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [資料類型](../../../../visual-basic/language-reference/data-types/index.md)  
  [類型字元](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
  [複合資料類型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
  [結構](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  

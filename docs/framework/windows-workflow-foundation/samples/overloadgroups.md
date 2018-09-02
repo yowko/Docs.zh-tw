@@ -2,12 +2,12 @@
 title: OverloadGroups
 ms.date: 03/30/2017
 ms.assetid: d1d547d2-f5fb-4de3-a959-ee6139a4f1ad
-ms.openlocfilehash: 489d27e05c96d3b3893052254a879d1c9d75788c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0773e76d36b25ad5485cc8912c7012815412de9f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515619"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469865"
 ---
 # <a name="overloadgroups"></a>OverloadGroups
 這個範例是由 (`CreateLocation`) 活動所組成，這個活動有兩個有趣的特性：  
@@ -35,6 +35,6 @@ ms.locfileid: "33515619"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Validation\OverloadGroups`

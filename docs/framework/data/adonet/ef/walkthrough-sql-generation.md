@@ -2,15 +2,15 @@
 title: 逐步解說：SQL 產生
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-ms.openlocfilehash: ab08b404dc60483a39e5c6ae56d82b63932c3f3e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5551eb4088e7529c61d5c517fed6877c23ae12f2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766318"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43472068"
 ---
 # <a name="walkthrough-sql-generation"></a>逐步解說：SQL 產生
-本主題將說明 SQL 產生就會發生在[範例提供者](http://go.microsoft.com/fwlink/?LinkId=180616)。 下列 Entity SQL 查詢會使用範例提供者所隨附的模型：  
+本主題說明中的 SQL 產生如何發[範例提供者](https://go.microsoft.com/fwlink/?LinkId=180616)。 下列 Entity SQL 查詢會使用範例提供者所隨附的模型：  
   
 ```  
 SELECT  j1.ProductId, j1.ProductName, j1.CategoryName, j2.ShipCountry, j2.ProductId  
@@ -126,7 +126,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  ![Diagram](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")  
   
- 下一個 "false" 會推送到 IsParentAJoin 堆疊上，而且會處理聯結條件 Var(Extent1).CategoryID == Var(Extent2).CategoryID。 Var(Extenent1) 會在查詢符號表之後解析為 <symbol_Extent1>。 因為執行個體解析成簡單的符號，這是處理 Var(Extent1) 結果。CategoryID、 sqlbuilder 並包含\<symbol1 >。 」會傳回 CategoryID"。 同樣地，將會處理比較的另一端，而且瀏覽聯結條件的結果會附加到 SelectStatement1 的 FROM 子句，並從 IsParentAJoin 堆疊推出 "false" 的值。  
+ 下一個 "false" 會推送到 IsParentAJoin 堆疊上，而且會處理聯結條件 Var(Extent1).CategoryID == Var(Extent2).CategoryID。 Var(Extenent1) 會在查詢符號表之後解析為 <symbol_Extent1>。 執行個體已解析為簡單的符號，處理 Var(Extent1) 的結果。CategoryID、 sqlbuilder 並包含\<symbol1 >。 」會傳回 CategoryID"。 同樣地，將會處理比較的另一端，而且瀏覽聯結條件的結果會附加到 SelectStatement1 的 FROM 子句，並從 IsParentAJoin 堆疊推出 "false" 的值。  
   
  這樣就已經完整處理 Join1，而且會從符號表推出範圍。  
   

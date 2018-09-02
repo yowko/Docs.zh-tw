@@ -2,12 +2,12 @@
 title: '&lt;netHttpBinding&gt; 的 &lt;message&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9def5a35-475d-40d6-b716-ccdbd93863c7
-ms.openlocfilehash: be96306b61b3eb6bfb8d3305ccbb05bb3ec4549d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 30098d2b9a9087eb0543bdd7c8a899cd66c91ed8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354108"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466707"
 ---
 # <a name="ltmessagegt-of-ltnethttpbindinggt"></a>&lt;netHttpBinding&gt; 的 &lt;message&gt;
 定義訊息層級安全性的設定[ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)。  
@@ -41,10 +41,10 @@ ms.locfileid: "33354108"
   
 |值|描述|  
 |-----------|-----------------|  
-|使用者名稱|-需要使用 UserName 認證伺服器驗證用戶端。 這個認證必須使用 <`clientCredentials`> 項目來指定。<br />WCF 不支援傳送密碼摘要或衍生金鑰，使用密碼，甚至對訊息安全性使用該金鑰。 因此，WCF 會強制使用 UserName 認證時保護傳輸。 對於 `basicHttpBinding`，這需要設定 SSL 通道。|  
-|憑證|需要使用憑證對伺服器驗證用戶端。 此案例中的用戶端認證必須使用 <`clientCredentials`> 和 <`clientCertificate`> 來指定。 此外，當使用訊息安全性模式時，必須提供服務憑證給用戶端。 在此情況下必須指定使用服務認證<xref:System.ServiceModel.Description.ClientCredentials>類別或`ClientCredentials`行為項目，並指定服務憑證使用\<serviceCertificate > serviceCredentials 的項目。|  
+|使用者名稱|-需要使用 UserName 認證的伺服器驗證用戶端。 這個認證必須使用 <`clientCredentials`> 項目來指定。<br />WCF 不支援傳送密碼摘要或衍生金鑰使用密碼，並使用訊息安全性這類金鑰。 因此，傳輸保護使用 UserName 認證時，會強制執行 WCF。 對於 `basicHttpBinding`，這需要設定 SSL 通道。|  
+|憑證|需要使用憑證對伺服器驗證用戶端。 此案例中的用戶端認證必須使用 <`clientCredentials`> 和 <`clientCertificate`> 來指定。 此外，當使用訊息安全性模式時，必須提供服務憑證給用戶端。 在此情況下必須使用指定的服務認證<xref:System.ServiceModel.Description.ClientCredentials>類別或`ClientCredentials`行為項目，並指定服務憑證使用\<serviceCertificate > serviceCredentials 項目。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無  
   
 ### <a name="parent-elements"></a>父項目  
@@ -129,5 +129,5 @@ ms.locfileid: "33354108"
  [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [使用繫結來設定 Windows Communication Foundation 服務和用戶端](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<繫結 >](../../../../../docs/framework/misc/binding.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: 60e33f9f3ab767a6fd1d5489721fd2a82950155e
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 685c68967f69e8933ff3dd2cd062e0893c7e2da6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754493"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465984"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>逐步解說：當地語系化混合應用程式
 
@@ -28,7 +28,7 @@ ms.locfileid: "42754493"
 
 -   使用 LocBaml 工具產生附屬組件。
 
-在此逐步解說中所述工作的完整程式碼清單，請參閱 <<c0> [ 當地語系化混合式應用程式範例](http://go.microsoft.com/fwlink/?LinkID=160015)。
+在此逐步解說中所述工作的完整程式碼清單，請參閱 <<c0> [ 當地語系化混合式應用程式範例](https://go.microsoft.com/fwlink/?LinkID=160015)。
 
 完成之後，就會有當地語系化的混合應用程式。
 
@@ -44,7 +44,7 @@ ms.locfileid: "42754493"
 
 ### <a name="to-create-the-host-project"></a>建立主專案
 
-1.  建立**WPF 應用程式**專案，命名為`LocalizingWpfInWf`。 如需詳細資訊，請參閱[如何：建立 Windows 應用程式專案](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)。
+1.  建立**WPF 應用程式**專案，命名為`LocalizingWpfInWf`。  (**檔案** > **新** > **專案** > **Visual C#** 或**Visual Basic**  > **傳統桌面** > **WPF 應用程式**)。
 
 2.  新增[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.UserControl>項目稱為`SimpleControl`至專案。
 
@@ -177,5 +177,5 @@ Windows Forms 設計工具提供在附屬組件中啟用當地語系化的設定
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [將應用程式當地語系化](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)
-- [逐步解說： 當地語系化 Windows Forms](http://msdn.microsoft.com/library/9a96220d-a19b-4de0-9f48-01e5d82679e5)
-- [WPF 設計工具](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)
+- [逐步解說： 當地語系化 Windows Forms](https://msdn.microsoft.com/library/9a96220d-a19b-4de0-9f48-01e5d82679e5)
+- [在 Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - mouse input [Windows Forms], using in Windows Forms
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 1486075f-1e06-4c9e-82c6-f948331db6d6
-ms.openlocfilehash: 2a618dae8d5f2f5ea6a6581fff2758fe8419f511
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fef51f57dd3c14c91572041a72c805823d6019a3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537729"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43456661"
 ---
 # <a name="user-input-in-windows-forms"></a>Windows Form 中的使用者輸入
 Windows Form 包含一種使用者輸入模型，這種模型是以在處理相關 Windows 訊息時所引發的事件為基礎。 本節中的主題提供滑鼠和鍵盤使用者輸入的相關資訊，包括示範如何執行特定工作的程式碼範例。  
@@ -37,4 +37,4 @@ Windows Form 包含一種使用者輸入模型，這種模型是以在處理相�
  描述在 Windows Forms 應用程式中驗證使用者輸入的方法。  
   
 ## <a name="related-sections"></a>相關章節  
- 另請參閱[建立 Windows Form 中的事件處理常式](http://msdn.microsoft.com/library/dacysss4\(v=vs.110\))。
+ 另請參閱[在 Windows Forms 中建立事件處理常式](https://msdn.microsoft.com/library/dacysss4\(v=vs.110\))。

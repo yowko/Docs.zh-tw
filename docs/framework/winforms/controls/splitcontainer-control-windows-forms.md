@@ -5,18 +5,18 @@ helpviewer_keywords:
 - splitter windows
 - SplitContainer control [Windows Forms]
 ms.assetid: 2e36f17f-5c39-4fb4-bb09-7ce3ef823402
-ms.openlocfilehash: 42eccbf88db2a407c6dd40209ecd615f0c19eb7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63b1a4b9b2483d017a686819573f91744d8a565a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539197"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463690"
 ---
 # <a name="splitcontainer-control-windows-forms"></a>SplitContainer 控制項 (Windows Form)
 Windows Form `SplitContainer` 控制項可視為一個複合控制項，其中包含兩個可移動的分隔列所分隔的面板。 將滑鼠指標移到分隔列上時，指標會變更形狀，以顯示分隔列是可移動的。  
   
 > [!NOTE]
->  在**工具箱**，這個控制項取代<xref:System.Windows.Forms.Splitter>是否有舊版的 Visual Studio 中的控制項。 `SplitContainer` 控制項會比 <xref:System.Windows.Forms.Splitter> 控制項合用。 .NET Framework 中仍會包含 <xref:System.Windows.Forms.Splitter> 類別，以與現有的應用程式相容，但強烈建議您在新專案中使用 `SplitContainer` 控制項。  
+>  在 **工具箱**，這個控制項取代了<xref:System.Windows.Forms.Splitter>是否有舊版的 Visual Studio 中的控制項。 `SplitContainer` 控制項會比 <xref:System.Windows.Forms.Splitter> 控制項合用。 .NET Framework 中仍會包含 <xref:System.Windows.Forms.Splitter> 類別，以與現有的應用程式相容，但強烈建議您在新專案中使用 `SplitContainer` 控制項。  
   
  `SplitContainer` 控制項可讓您建立複雜的使用者介面；通常，在某個面板中選取的項目會決定在另一個面板中所顯示的物件。 這種排列方式可有效地顯示及瀏覽資訊。 擁有兩個面板可讓您彙總區域中的資訊，而分隔列 (或「分隔器」) 可讓使用者輕鬆調整面板的大小。  
   
@@ -33,7 +33,7 @@ Windows Form `SplitContainer` 控制項可視為一個複合控制項，其中�
  [逐步解說：利用 Windows Forms 建立多窗格使用者介面](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  建立與 Microsoft Outlook 中所用類似的多窗格使用者介面。  
   
- 另請參閱[如何： 分割視窗水平使用設計工具](http://msdn.microsoft.com/library/ms233667\(v=vs.110\))，[如何： 在 Windows Form 上建立 Windows 檔案總管樣式介面](http://msdn.microsoft.com/library/zh2fe5a5\(v=vs.110\))， [How to： 建立與 Multipane 使用者介面使用設計工具的 Windows Form](http://msdn.microsoft.com/library/ms233661\(v=vs.110\))。  
+ 另請參閱[如何： 分割視窗水平使用設計工具](how-to-split-a-window-horizontally-using-the-designer.md)，[如何： 建立 Windows Form 上的 Windows 檔案總管樣式介面](https://msdn.microsoft.com/library/zh2fe5a5\(v=vs.110\))， [How to： 建立具有的 Multipane 使用者介面使用設計工具的 Windows Form](create-a-multipane-user-interface-with-wf-using-the-designer.md)。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.SplitContainer> 類別  

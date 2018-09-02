@@ -10,21 +10,21 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: d65ea58bc2e98ab2607ce105b496ac0a870362b0
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 543d095c88670024a53fad7c865883ecaab1c6e0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805469"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474335"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>資料流處理提供者 (WCF Data Services)
-資料服務可以公開大型物件二進位資料。 這項二進位資料可能代表視訊和音訊資料流、影像、文件檔案，或其他類型的二進位媒體。 當資料模型中的實體包含一個或多個二進位屬性時，資料服務會在回應摘要的項目內，傳回這個 base-64 編碼形式的二進位資料。 載入及序列化大型二進位資料，以這種方式可能會影響效能，因為[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]定義一個機制來擷取二進位資料所屬的實體無關。 只要將實體中的二進位資料分成一個或多個資料流就可以完成這項處理。  
+資料服務可以公開大型物件二進位資料。 這項二進位資料可能代表視訊和音訊資料流、影像、文件檔案，或其他類型的二進位媒體。 當資料模型中的實體包含一個或多個二進位屬性時，資料服務會在回應摘要的項目內，傳回這個 base-64 編碼形式的二進位資料。 載入及序列化大型二進位資料，以這種方式可能會影響效能，因為[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]定義一個機制來獨立擷取二進位資料與其所屬的實體無關。 只要將實體中的二進位資料分成一個或多個資料流就可以完成這項處理。  
   
 -   媒體資源 - 屬於實體的二進位資料，例如視訊、音訊、影像或其他類型的媒體資源資料流。  
   
 -   媒體連結項目 - 具有相關媒體資源資料流之參考的實體。  
   
- 透過 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，您可以實作資料流處理資料提供者來定義二進位資源資料流。 資料流處理提供者實作會提供資料服務做為特定實體相關聯的媒體資源資料流與<xref:System.IO.Stream>物件。 這個實作可讓資料服務透過 HTTP 接受並傳回媒體資源當做指定之 MIME 類型的二進位資料流。  
+ 透過 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，您可以實作資料流處理資料提供者來定義二進位資源資料流。 資料流處理提供者實作會隨附做為特定實體相關聯的媒體資源資料流中的資料服務<xref:System.IO.Stream>物件。 這個實作可讓資料服務透過 HTTP 接受並傳回媒體資源當做指定之 MIME 類型的二進位資料流。  
   
  設定資料服務來支援二進位資料的資料流處理需要進行以下步驟：  
   
@@ -38,7 +38,7 @@ ms.locfileid: "33805469"
   
 5.  啟用伺服器上或資料來源中之二進位資源的存取權。  
   
- 本主題中的範例根據資料流處理相片服務，在 post 要求中深入討論的樣本[資料服務資料流處理提供者系列： 實作資料流處理提供者 (第 1 部分)](http://go.microsoft.com/fwlink/?LinkID=198989)。 此範例服務的原始程式碼位於[資料流處理相片資料服務範例頁面](http://go.microsoft.com/fwlink/?LinkID=198988)MSDN Code Gallery 上。  
+ 本主題中的範例以資料流處理相片服務，後者的討論文章中深入了解的範例為基礎[資料服務資料流處理提供者系列： 實作資料流處理提供者 (第 1 部分)](https://go.microsoft.com/fwlink/?LinkID=198989)。 此範例服務的原始程式碼位於[資料流處理相片資料服務範例頁面](https://go.microsoft.com/fwlink/?LinkID=198988)MSDN Code Gallery 上。  
   
 ## <a name="defining-a-media-link-entry-in-the-data-model"></a>在資料模型中定義媒體連結項目  
  資料來源提供者會判斷實體定義為資料模型中媒體連結項目的方式。  
@@ -50,13 +50,13 @@ ms.locfileid: "33805469"
   
  您也必須將命名空間 `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` 加入至實體或定義資料模型之 .edmx 或 .csdl 檔案的根。  
   
- 如需使用的資料服務的範例[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供者和公開媒體資源，請參閱下列文章[資料服務資料流處理提供者系列： 實作資料流處理提供者 (第 1 部分)](http://go.microsoft.com/fwlink/?LinkID=198989)。  
+ 如需使用的資料服務的範例[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供者和公開媒體資源，請參閱文章[資料服務資料流處理提供者系列： 實作資料流處理提供者 (第 1 部分)](https://go.microsoft.com/fwlink/?LinkID=198989)。  
   
  **反映提供者**  
  若要指出某個實體為媒體連結項目，請將 <xref:System.Data.Services.Common.HasStreamAttribute> 加入至在反映提供者內定義實體類型的類別。  
   
  **自訂資料服務提供者**  
- 使用自訂服務提供者時，您必須實作 <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> 介面來定義資料服務的中繼資料。 如需詳細資訊，請參閱[自訂資料服務提供者](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)。 您可以在代表實體類型 (媒體連結項目) 的 <xref:System.Data.Services.Providers.ResourceType> 上，將 <xref:System.Data.Services.Providers.ResourceType.IsMediaLinkEntry%2A> 屬性設定為 `true`，藉以指出二進位資源資料流屬於 <xref:System.Data.Services.Providers.ResourceType>。  
+ 使用自訂服務提供者時，您必須實作 <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> 介面來定義資料服務的中繼資料。 如需詳細資訊，請參閱 <<c0> [ 自訂資料服務提供者](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)。 您可以在代表實體類型 (媒體連結項目) 的 <xref:System.Data.Services.Providers.ResourceType> 上，將 <xref:System.Data.Services.Providers.ResourceType.IsMediaLinkEntry%2A> 屬性設定為 `true`，藉以指出二進位資源資料流屬於 <xref:System.Data.Services.Providers.ResourceType>。  
   
 ## <a name="implementing-the-idataservicestreamprovider-interface"></a>實作 IDataServiceStreamProvider 介面  
  若要建立支援二進位資料流的資料服務，您必須實作 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 介面。 這個實作可讓資料服務將二進位資料當做資料流傳回給用戶端，並將二進位資料當做從用戶端傳送的資料流來取用。 每當資料服務需要存取二進位資料當做資料流時，它就會建立此介面的執行個體。 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 介面會指定下列成員：  
@@ -85,16 +85,16 @@ ms.locfileid: "33805469"
   
   
 > [!NOTE]
->  您必須使用<xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType>以確保要求和回應訊息中的二進位資料會進行資料流處理，且未緩衝處理由 WCF 傳輸模式。  
+>  您必須使用<xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType>以確保要求和回應訊息中的二進位資料會串流處理，並由 WCF 所未緩衝的傳輸模式。  
   
- 如需詳細資訊，請參閱[資料流訊息傳輸](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md)和[傳輸配額](../../../../docs/framework/wcf/feature-details/transport-quotas.md)。  
+ 如需詳細資訊，請參閱 < [Streaming Message Transfer](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md)並[傳輸配額](../../../../docs/framework/wcf/feature-details/transport-quotas.md)。  
   
- 根據預設，Internet Information Services (IIS) 也會將要求的大小限制為 4MB。 若要啟用資料服務來接收大於 4 MB 的資料流，在 IIS 上執行時，您也必須設定`maxRequestLength`屬性[httpRuntime 元素 （ASP.NET 設定結構描述）](http://msdn.microsoft.com/library/e9b81350-8aaf-47cc-9843-5f7d0c59f369)中`<system.web />`組態區段，做為下列範例所示：  
+ 根據預設，Internet Information Services (IIS) 也會將要求的大小限制為 4MB。 若要啟用您的資料服務，以接收大於 4 MB 的資料流，在 IIS 上執行時，您也必須設定`maxRequestLength`的屬性[httpRuntime 項目 （ASP.NET 設定結構描述）](https://msdn.microsoft.com/library/e9b81350-8aaf-47cc-9843-5f7d0c59f369)在`<system.web />`組態 區段中，為下列範例所示：  
   
   
   
 ## <a name="using-data-streams-in-a-client-application"></a>在用戶端應用程式中使用資料流  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端程式庫可讓您將這些公開的資源當做用戶端的二進位資料流來擷取及更新。 如需詳細資訊，請參閱[使用二進位資料](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)。  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端程式庫可讓您將這些公開的資源當做用戶端的二進位資料流來擷取及更新。 如需詳細資訊，請參閱 <<c0> [ 使用二進位資料](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)。  
   
 ## <a name="considerations-for-working-with-a-streaming-provider"></a>使用資料流處理提供者的考量  
  下列是當您實作資料流處理提供者以及從資料服務存取媒體資源時，所要考量的事項。  
@@ -111,7 +111,7 @@ ms.locfileid: "33805469"
   
     -   屬於媒體資源的二進位屬性不應該包含在資料模型中。 資料模型中公開的所有屬性都會在回應摘要的項目中傳回。  
   
-    -   為了改良大型二進位資料流的效能，我們建議您最好建立自訂資料流類別，將二進位資料儲存在資料庫中。 這個類別是由 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 實作所傳回，而且會以區塊傳送二進位資料給資料庫。 SQL Server 資料庫，我們建議您串流處理資料的 FILESTREAM 至資料庫時使用的二進位資料大於 1 MB。  
+    -   為了改良大型二進位資料流的效能，我們建議您最好建立自訂資料流類別，將二進位資料儲存在資料庫中。 這個類別是由 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 實作所傳回，而且會以區塊傳送二進位資料給資料庫。 SQL Server 資料庫，建議您到資料庫使用資料流資料的 FILESTREAM，大於 1 MB 的二進位資料時。  
   
     -   請確定資料庫設計為可儲存二進位大型資料流，而且您的資料服務將會收到這些資料流。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "33805469"
   
 -   當您實作 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>、<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A> 或 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 方法時，您必須使用當做方法參數提供的 eTag 和 Content-Type 值。 請勿在 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 提供者實作中設定 eTag 或 Content-Type 標頭。  
   
--   根據預設，用戶端會使用區塊式 HTTP Transfer-Encoding 來傳送大型二進位資料流。 因為[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]程式開發伺服器不支援這種編碼方式，您無法使用此 Web 伺服器來裝載必須接受大型二進位資料流的資料流資料服務。 如需有關[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]程式開發伺服器，請參閱[ASP.NET Web 專案的 Visual Studio 中的 Web 伺服器](http://msdn.microsoft.com/library/31d4f588-df59-4b7e-b9ea-e1f2dd204328)。  
+-   根據預設，用戶端會使用區塊式 HTTP Transfer-Encoding 來傳送大型二進位資料流。 因為[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]程式開發伺服器不支援這種編碼方式，您無法使用此網頁伺服器來裝載必須接受大型二進位資料流的資料流資料服務。 如需詳細資訊[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]程式開發伺服器，請參閱 < [ASP.NET Web 專案的 Visual Studio 中的 Web 伺服器](https://msdn.microsoft.com/library/31d4f588-df59-4b7e-b9ea-e1f2dd204328)。  
   
 <a name="versioning"></a>   
 ## <a name="versioning-requirements"></a>版本控制需求  
@@ -127,7 +127,7 @@ ms.locfileid: "33805469"
   
 -   資料流處理提供者要求資料服務支援 2.0 版的 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 通訊協定和更新版本。  
   
- 如需詳細資訊，請參閱[資料服務版本控制](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 資料服務版本控制](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料服務提供者](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  

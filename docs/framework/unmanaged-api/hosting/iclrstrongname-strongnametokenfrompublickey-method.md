@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 587e2086a03e9c9ba57ae3b68de841f12543404e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 98c0dbbbe65d8f8c0b0196c82db1a8fd2b0ee3dd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435604"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468242"
 ---
 # <a name="iclrstrongnamestrongnametokenfrompublickey-method"></a>ICLRStrongName::StrongNameTokenFromPublicKey 方法
-取得代表公開金鑰 token。 為強式名稱語彙基元是公開金鑰縮短形式。  
+取得代表公開金鑰 token。 強式名稱語彙基元是公開金鑰的縮短格式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,31 +40,31 @@ HRESULT StrongNameTokenFromPublicKey (
   
 #### <a name="parameters"></a>參數  
  `pbPublicKeyBlob`  
- [in]型別的結構[PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) ，其中包含用來產生強式名稱簽章金鑰組的公開部分。  
+ [in]類型的結構[PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) ，其中包含用來產生強式名稱簽章金鑰組的公開部分。  
   
  `cbPublicKeyBlob`  
  [in]大小，以位元組為單位的`pbPublicKeyBlob`。  
   
  `ppbStrongNameToken`  
- [out]對應到索引鍵的強式名稱語彙基元傳入`pbPublicKeyBlob`。 Common language runtime 配置的記憶體，以傳回語彙基元。 呼叫端必須釋放這個記憶體使用[iclrstrongname:: Strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)方法。  
+ [out]對應到索引鍵的強式名稱語彙基元傳遞`pbPublicKeyBlob`。 Common language runtime 配置的記憶體，在其中傳回的語彙基元。 呼叫端必須使用釋放這個記憶體[iclrstrongname:: Strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)方法。  
   
  `pcbStrongNameToken`  
- [out]大小，以位元組為單位傳回強式名稱語彙基元。  
+ [out]大小 （位元組），傳回的強式名稱語彙基元。  
   
 ## <a name="return-value"></a>傳回值  
- `S_OK` 如果方法成功。否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](http://go.microsoft.com/fwlink/?LinkId=213878)清單)。  
+ `S_OK` 如果這個方法順利完成否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)清單)。  
   
 ## <a name="remarks"></a>備註  
- 為強式名稱語彙基元是公開金鑰的用來將索引鍵資訊儲存在中繼資料時，儲存空間縮短形式。 具體來說，強式名稱語彙基元會在組件參考中用來參考相依組件。  
+ 強式名稱語彙基元是公開金鑰的用來儲存空間，將金鑰資訊儲存在中繼資料中的縮短格式。 具體來說，強式名稱語彙基元會在組件參考中用來參考相依的組件。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MetaHost.h  
   
  **程式庫：** 包含做為 mscoree.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [StrongNameGetPublicKey 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)  

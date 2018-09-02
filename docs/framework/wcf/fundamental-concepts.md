@@ -7,32 +7,32 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 41bef6bf5a69a51738c6848050972a1a4e01c153
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: c19169d61a96314e9fcfad94b013af18440e1ff5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808048"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474086"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Windows Communication Foundation 的主要概念
-本文件提供 Windows Communication Foundation (WCF) 架構的高階檢視。 以說明重要概念，以及如何搭配運用這些概念。 如需建立簡單的 WCF 服務和用戶端版本的教學課程，請參閱[入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)。 若要深入了解 WCF 程式設計，請參閱[基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)。  
+本文件提供 Windows Communication Foundation (WCF) 架構的高階檢視。 以說明重要概念，以及如何搭配運用這些概念。 如需建立 WCF 服務和用戶端的最簡單版本的教學課程，請參閱 <<c0> [ 入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)。 若要深入了解 WCF 程式設計，請參閱[基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)。  
   
 ## <a name="wcf-fundamentals"></a>WCF 基本概念  
- WCF 是的執行階段和一組 Api 來建立服務和用戶端之間傳送訊息的系統。 相同的基礎結構和 API 可用來在同一個電腦系統或位於其他電腦且透過網際網路存取的系統上，建立與其他應用程式通訊的應用程式。  
+ WCF 會建立服務和用戶端之間傳送訊息的系統是執行階段和一組 Api。 相同的基礎結構和 API 可用來在同一個電腦系統或位於其他電腦且透過網際網路存取的系統上，建立與其他應用程式通訊的應用程式。  
   
 ### <a name="messaging-and-endpoints"></a>傳訊和端點  
- WCF 根據訊息為基礎的通訊，以及任何的概念，可模型化為訊息 （例如，HTTP 要求或訊息佇列 (也稱為 MSMQ) 訊息） 可以表示的程式設計模型中統一的方式。 如此一來，不同傳輸機制上就可以有統一的 API。  
+ WCF 為基礎的訊息式通訊，以及任何可模型化為訊息 （例如，HTTP 要求或訊息佇列 (也稱為 MSMQ) 訊息） 可以表示以統一的方式，在程式設計模型概念。 如此一來，不同傳輸機制上就可以有統一的 API。  
   
- 此模型區別*用戶端*，這是起始通訊，應用程式和*服務*，這是等候用戶端與其通訊並回應的應用程式通訊。 單一應用程式可以同時做為用戶端和服務。 如需範例，請參閱[雙工服務](../../../docs/framework/wcf/feature-details/duplex-services.md)和[對等網路](../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)。  
+ 此模型區別*用戶端*，這是起始通訊的應用程式並*服務*，它們在等待用戶端通訊，並會回應的應用程式通訊。 單一應用程式可以同時做為用戶端和服務。 如需範例，請參閱[雙工服務](../../../docs/framework/wcf/feature-details/duplex-services.md)並[對等網路](../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)。  
   
- 訊息會在端點間傳送。 *端點*傳送或接收訊息的位置 （或兩者），而且會定義所有訊息交換所需的資訊。 服務會公開一或多個應用程式端點 (以及零或多個基礎結構端點)，而用戶端則會產生與其中一個服務端點相容的端點。  
+ 訊息會在端點間傳送。 *端點*傳送或接收訊息的位置 （或兩者），而且它們會定義訊息交換所需的所有資訊。 服務會公開一或多個應用程式端點 (以及零或多個基礎結構端點)，而用戶端則會產生與其中一個服務端點相容的端點。  
   
- *端點*描述以標準為基礎的方式應該傳送訊息的位置、 方式應該傳送，以及訊息的顯示方式。 服務可以公開此資訊做為用戶端可以處理以產生適當的 WCF 用戶端與通訊的中繼資料*堆疊*。  
+ *端點*描述以標準為基礎的方式傳送訊息的、 如何應該傳送，以及訊息的顯示方式。 服務可以公開這項資訊做為用戶端可以處理以產生適當的 WCF 用戶端和通訊的中繼資料*堆疊*。  
   
 ### <a name="communication-protocols"></a>通訊協定  
- 其中一個所需的通訊堆疊的項目是*傳輸通訊協定*。 使用通用傳輸 (例如 HTTP 和 TCP)，就可以在內部網路和網際網路上傳送訊息。 另外，當中也包括了其他傳輸，以支援與訊息佇列應用程式和對等網路 mesh 上的節點通訊。 使用 WCF 的內建擴充點，可以加入其他傳輸機制。  
+ 其中一個必要的通訊堆疊的項目是*傳輸通訊協定*。 使用通用傳輸 (例如 HTTP 和 TCP)，就可以在內部網路和網際網路上傳送訊息。 另外，當中也包括了其他傳輸，以支援與訊息佇列應用程式和對等網路 mesh 上的節點通訊。 可以使用 WCF 的內建擴充點來新增更多的傳輸機制。  
   
- 通訊堆疊中的另一個必要元素是編碼方式，這會指定要以何種方式格式化任何給定訊息。 WCF 提供下列編碼：  
+ 通訊堆疊中的另一個必要元素是編碼方式，這會指定要以何種方式格式化任何給定訊息。 WCF 會提供下列編碼方式：  
   
 -   文字編碼方式，互通的編碼方式。  
   
@@ -40,13 +40,13 @@ ms.locfileid: "33808048"
   
 -   二進位編碼方式，可有效進行傳輸。  
   
- 您可以使用 WCF 的內建擴充點新增更多的編碼機制 （例如，壓縮編碼方式）。  
+ 可以使用 WCF 的內建擴充點來新增更多的編碼機制 （例如，壓縮編碼）。  
   
 ### <a name="message-patterns"></a>訊息模式  
- WCF 還支援數種傳訊模式，包括要求-回覆、 單向和雙工通訊。 不同傳輸支援不同傳訊模式，因此會影響所支援的互動類型。 WCF 應用程式開發介面和執行階段，也有助於安全可靠地傳送訊息的項目。  
+ WCF 支援數種傳訊模式，包括要求-回覆、 單向和雙工通訊。 不同傳輸支援不同傳訊模式，因此會影響所支援的互動類型。 WCF Api 和執行階段也協助您安全且可靠地傳送訊息。  
   
 ## <a name="wcf-terms"></a>WCF 詞彙  
- 其他概念和詞彙用於 WCF 文件包括下列項目。  
+ 其他概念和 WCF 文件中使用的詞彙包含下列項目。  
   
  訊息  
  這是獨立的資料單位，可由數個部分組成，其中包括本文和標頭。  
@@ -75,7 +75,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 ```  
   
  繫結  
- 定義端點如何與外界通訊。 它是由一組稱為繫結項目的元件所建構，這些元件會彼此「堆疊」，以建立通訊基礎結構。 繫結至少會定義傳輸 (例如 HTTP 或 TCP) 和使用的編碼方式 (例如文字或二進位)。 繫結可以包含用來指定像是安全性機制 (用來保護訊息) 等詳細資料的繫結項目，或端點所使用的訊息模式。 如需詳細資訊，請參閱[設定 Services](../../../docs/framework/wcf/configuring-services.md)。  
+ 定義端點如何與外界通訊。 它是由一組稱為繫結項目的元件所建構，這些元件會彼此「堆疊」，以建立通訊基礎結構。 繫結至少會定義傳輸 (例如 HTTP 或 TCP) 和使用的編碼方式 (例如文字或二進位)。 繫結可以包含用來指定像是安全性機制 (用來保護訊息) 等詳細資料的繫結項目，或端點所使用的訊息模式。 如需詳細資訊，請參閱 < [Configuring](../../../docs/framework/wcf/configuring-services.md)。  
   
  Binding Element - 繫結項目  
  表示一項特定的繫結，例如傳輸、編碼方式、基礎結構層級通訊協定的實作 (例如 WS-ReliableMessaging)，或通訊堆疊的任何其他元件。  
@@ -128,23 +128,23 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  WCF Client - WCF 用戶端  
  一種用戶端應用程式建構，會將服務作業公開為方法 (在您所選的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 程式語言中，例如 Visual Basic 或 Visual C#)。 任何應用程式都可以裝載 WCF 用戶端，包括裝載服務的應用程式， 因此，您可以建立包含其他服務之 WCF 用戶端的服務。  
   
- WCF 用戶端可以使用自動產生[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)和它指向發行中繼資料執行中服務。  
+ WCF 用戶端可以使用自動產生[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)和它指向發行中繼資料執行服務。  
   
  中繼資料  
- 在服務中描述服務的特性，外部實體必須了解這些服務特性，才能與此服務通訊。 中繼資料可供[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)產生 WCF 用戶端和用戶端應用程式可以用來與服務互動的伴隨組態。  
+ 在服務中描述服務的特性，外部實體必須了解這些服務特性，才能與此服務通訊。 中繼資料可供[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)產生 WCF 用戶端和用戶端應用程式可用來與服務互動的伴隨組態。  
   
  服務公開的中繼資料包括 XML 結構描述文件 (定義服務的資料合約) 和 WSDL 文件 (描述服務的方法)。  
   
  啟用時，WCF 會藉由檢查服務及其端點，自動產生服務的中繼資料。 若要從服務發行中繼資料，您必須明確啟用中繼資料行為。  
   
  安全性  
- 在 WCF 中，包含機密性 （加密訊息以防竊聽）、 完整性 （偵測竄改訊息的方法）、 驗證 （驗證伺服器和用戶端） 和授權 （控制存取權資源）。 運用現有的安全性機制 (例如 TLS over HTTP，也稱為 HTTPS)，或實作一或多個不同的 WS-* 安全性規格，都能提供這些功能。  
+ 在 WCF 中，包含機密性 （加密訊息以防止竊聽）、 完整性 （偵測竄改訊息的方法）、 驗證 （驗證伺服器和用戶端） 和授權 （控制存取權資源）。 運用現有的安全性機制 (例如 TLS over HTTP，也稱為 HTTPS)，或實作一或多個不同的 WS-* 安全性規格，都能提供這些功能。  
   
  傳輸安全性模式  
  指定由傳輸層機制 (例如 HTTPS) 提供機密性、完整性和驗證。 在使用如 HTTPS 的傳輸時，這個模式的優點在於效能會更有效率，而且易於理解 (因為普遍使用在網際網路上)。 缺點是，這種類型的安全性是個別套用在通訊路徑上的每個躍點，因此通訊容易受到「攔截式」攻擊。  
   
  訊息安全性模式  
- 指定安全性會提供實作一或多個安全性規格，例如規格名為[Web 服務安全性： SOAP 訊息安全性](http://go.microsoft.com/fwlink/?LinkId=94684)。 每個訊息都會包含必要機制，以便在訊息傳輸期間提供安全性，並讓接收者可以偵測竄改及解密訊息。 就這個意義而言，安全性是封裝在每個訊息內，可以在多個躍點間提供端對端安全性。 因為安全性資訊成為訊息的一部分，所以也可以將多種認證包含在訊息 (這些指*宣告*)。 這個方法的優點是，訊息可以透過任何傳輸安全地傳送，包括來源和目的地之間的多個傳輸。 缺點是使用的密碼編譯機制很複雜，因此會影響效能。  
+ 指定安全性提供藉由實作一或多個安全性規格，例如名為規格[Web 服務安全性： SOAP 訊息安全性](https://go.microsoft.com/fwlink/?LinkId=94684)。 每個訊息都會包含必要機制，以便在訊息傳輸期間提供安全性，並讓接收者可以偵測竄改及解密訊息。 就這個意義而言，安全性是封裝在每個訊息內，可以在多個躍點間提供端對端安全性。 因為安全性資訊成為訊息的一部分，它也可包含多種認證包含在訊息 (這些指*宣告*)。 這個方法的優點是，訊息可以透過任何傳輸安全地傳送，包括來源和目的地之間的多個傳輸。 缺點是使用的密碼編譯機制很複雜，因此會影響效能。  
   
  使用訊息認證的傳輸安全性模式  
  指定使用傳輸層來提供訊息的機密性、驗證和完整性，而每個訊息都包含訊息接收者所需的多個認證 (宣告)。  
@@ -155,4 +155,4 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 ## <a name="see-also"></a>另請參閱  
  [什麼是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
  [Windows Communication Foundation 架構](../../../docs/framework/wcf/architecture.md)  
- [安全性架構](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)
+ [安全性架構](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

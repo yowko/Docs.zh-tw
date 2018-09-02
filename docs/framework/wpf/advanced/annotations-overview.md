@@ -9,17 +9,17 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: 80555ad714ffe5cab6722d2d6d45fb6a6bb45609
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 690ec5f2bca7c10aba291cdde6e8bc455e7fd43a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540839"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463963"
 ---
 # <a name="annotations-overview"></a>附註概觀
 在書面文件上撰寫附註或註解是相當稀鬆平常的事，我們幾乎將它視為理所當然。 這些附註或註解是我們新增至文件的「註釋」，用以標記資訊，或反白顯示感興趣的項目以供日後參考。 雖然在書面文件上撰寫附註很容易且平常，不過在電子文件中新增個人註解的功能通常非常有限，如果有的話。  
   
- 本主題會檢閱數個常見的註解，特別是自黏便箋和反白顯示，並說明如何[!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)]有助於進行這些類型的應用程式可以透過 Windows Presentation Foundation (WPF) 文件中的註解檢視控制項。  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 支援註解的文件檢視控制項包括<xref:System.Windows.Controls.FlowDocumentReader>和<xref:System.Windows.Controls.FlowDocumentScrollViewer>，以及控制項衍生自<xref:System.Windows.Controls.Primitives.DocumentViewerBase>例如<xref:System.Windows.Controls.DocumentViewer>和<xref:System.Windows.Controls.FlowDocumentPageViewer>。  
+ 本主題會檢閱幾種常見的註釋，特別是自黏便箋和醒目提示，並說明如何[!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)]有助於這些類型的應用程式可以透過 Windows Presentation Foundation (WPF) 文件中的註解檢視控制項。  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 支援註釋的文件檢視控制項包含<xref:System.Windows.Controls.FlowDocumentReader>並<xref:System.Windows.Controls.FlowDocumentScrollViewer>，以及控制項衍生自<xref:System.Windows.Controls.Primitives.DocumentViewerBase>這類<xref:System.Windows.Controls.DocumentViewer>和<xref:System.Windows.Controls.FlowDocumentPageViewer>。  
   
   
 <a name="caf1_type_stickynotes"></a>   
@@ -28,7 +28,7 @@ ms.locfileid: "33540839"
   
  下圖顯示一些反白顯示、文字自黏便箋和筆跡自黏便箋註釋的範例。  
   
- ![反白顯示、 文字和筆跡自黏便箋註釋.](../../../../docs/framework/wpf/advanced/media/caf-stickynote.jpg "CAF_StickyNote")  
+ ![反白顯示、文字和筆跡自黏便箋註釋。](../../../../docs/framework/wpf/advanced/media/caf-stickynote.jpg "CAF_StickyNote")  
   
  下列範例顯示您可用來在應用程式中啟用註釋支援的方法。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "33540839"
   
  ![反白顯示註釋](../../../../docs/framework/wpf/advanced/media/caf-callouts.png "CAF_Callouts")  
   
- 使用者通常會先選取 一些文字或感興趣的項目，然後按一下滑鼠右鍵來顯示建立註解<xref:System.Windows.Controls.ContextMenu>的註解的選項。  下列範例所示[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]您可以使用宣告<xref:System.Windows.Controls.ContextMenu>路由的使用者可以存取來建立和管理註釋的命令。  
+ 使用者通常會先選取 一些文字或感興趣的項目，然後按一下滑鼠右鍵以顯示建立註解<xref:System.Windows.Controls.ContextMenu>註釋選項。  下列範例所示[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]可用來宣告<xref:System.Windows.Controls.ContextMenu>路由的使用者可以存取來建立和管理註釋的命令。  
   
  [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
   
@@ -62,7 +62,7 @@ ms.locfileid: "33540839"
  [!code-csharp[FlowDocumentAnnotatedViewer#Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/CSharp/Window1.xaml.cs#handler)]
  [!code-vb[FlowDocumentAnnotatedViewer#Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/visualbasic/window1.xaml.vb#handler)]  
   
- 另一個範例案例會涉及啟用交換註解和透過電子郵件的文件讀取器之間的自黏便箋的應用程式。 這項功能讓這些應用程式可讓讀者巡覽至包含要交換之註釋的頁面。  
+ 另一個範例情節牽涉到應用程式，讓交換註釋和文件讀者能透過電子郵件的自黏便箋。 這項功能讓這些應用程式可讓讀者巡覽至包含要交換之註釋的頁面。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Controls.Primitives.DocumentViewerBase>  
@@ -75,4 +75,4 @@ ms.locfileid: "33540839"
  [ContextMenu 概觀](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
  [命令概觀](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
  [非固定格式文件概觀](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [如何：將命令新增至 MenuItem](http://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)
+ [如何：將命令新增至 MenuItem](https://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)

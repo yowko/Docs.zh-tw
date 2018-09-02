@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - PrintForm component [Visual Basic]
 ms.assetid: 03de98b8-b54c-4764-91d7-83c64e974750
-ms.openlocfilehash: 6cb7cfe022b2b4d23f47a47ec70f08d5c0ccbc7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 879d31c5a572689d84af6b2e46f3d33e1a8841c8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591404"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43472081"
 ---
 # <a name="printform-component-visual-basic"></a>PrintForm 元件 (Visual Basic)
 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> Visual basic 中的元件可讓您在執行階段列印 Windows Form 的影像。 其行為取代了舊版 Visual Basic 中 `PrintForm` 方法的行為。  
   
- Visual Studio 中已不再包含 PowerPack 控制項，但您可以從 [下載中心](http://www.microsoft.com/en-us/download/details.aspx?id=25169)下載這些控制項。  
+ 在 Visual Studio 中，已不再包含 PowerPack 控制項，但您可以下載從[下載中心](https://www.microsoft.com/en-us/download/details.aspx?id=25169)。  
   
 ## <a name="printform-component-overview"></a>PrintForm 元件概觀  
  Windows Form 的常見案例是建立一個表單，其格式類似紙本表單或報表，然後再列印表單的影像。 雖然您可以使用 <xref:System.Drawing.Printing.PrintDocument> 元件來執行這項作業，但這樣做需要撰寫許多程式碼。 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 元件可讓您將表單的影像列印至印表機、[預覽列印] 視窗或檔案，而不需要使用 <xref:System.Drawing.Printing.PrintDocument> 元件。  

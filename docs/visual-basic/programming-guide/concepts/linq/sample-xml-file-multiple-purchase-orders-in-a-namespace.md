@@ -1,13 +1,13 @@
 ---
-title: 範例 XML 檔： 多份採購訂單中 Namespace3
+title: 範例 XML 檔： 多份採購訂單中 3
 ms.date: 07/20/2015
 ms.assetid: 03f754c6-89f7-4143-8456-4963044be7e5
 ms.openlocfilehash: 20d1807b58e0cf9302413cf9007c62d0fbec9c16
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645573"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465743"
 ---
 # <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a>範例 XML 檔：命名空間中的多份採購訂單
 下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。 這個檔案包含數個採購訂單。 XML 位於命名空間中。  

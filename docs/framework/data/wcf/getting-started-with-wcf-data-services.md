@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: c832fa5b-cf86-4690-be5a-a226c0e49530
-ms.openlocfilehash: 23c5ef0afb11b259c207746c1e0943cbe7c2caba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5fc37ed215ada6aa35ac8801ef33e5787ba77584
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359487"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468893"
 ---
 # <a name="getting-started-with-wcf-data-services"></a>WCF 資料服務使用者入門
-本節中的主題可協助您快速了解[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]以及如何使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]公開及取用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要說明基礎技術。 本節包括概念性內容和[快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)教學課程。  
+在本節中的主題可協助您快速了解[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]以及如何使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]來公開及取用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要說明基礎技術。 本節包括概念性內容及[快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)教學課程。  
   
 ## <a name="in-this-section"></a>本節內容  
  下列主題將描述如何使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 來建立資料服務。  
@@ -24,10 +24,10 @@ ms.locfileid: "33359487"
  描述如何使用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要。  
   
  [在用戶端應用程式中使用資料服務](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
- 描述如何使用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].NET Framework 用戶端應用程式中的摘要。  
+ 描述如何使用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要中的.NET Framework 用戶端應用程式。  
   
  [快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
- 示範如何建立及存取簡單[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]為基礎的摘要，根據 Northwind 範例資料庫會公開的服務。  
+ 示範如何建立及存取簡單[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-架構會公開摘要，根據 Northwind 範例資料庫的服務。  
   
  [應用程式案例](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)  
  強調 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 所支援的一組核心 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 案例。  
@@ -36,9 +36,9 @@ ms.locfileid: "33359487"
  提供的連結[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]和[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]資源。  
   
 ## <a name="related-sections"></a>相關章節  
- [WCF Data Services (Silverlight)](http://go.microsoft.com/fwlink/?LinkID=143149)  
+ [WCF Data Services (Silverlight)](https://go.microsoft.com/fwlink/?LinkID=143149)  
   
  [快速入門](../../../../docs/framework/data/adonet/ef/getting-started.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [OData SDK](http://go.microsoft.com/fwlink/?LinkID=185248)
+ [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185248)

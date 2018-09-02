@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-ms.openlocfilehash: 35c4e23298a8af9fdba92b7e4b6231c08861cc72
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: acf3ba12a9a7e6ba9a8e378892098f5f265a23d9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33549314"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43461796"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>WPF 的 XAML 和自訂類別
 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 架構中所實作的 XAML 支援使用任何 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 語言定義自訂類別或結構，然後使用 XAML 標記來存取該類別。 您可以在相同的標記檔案內混用 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 定義的類型與您的自訂類型，方法一般是透過將自訂類型對應至 XAML 命名空間前置詞。 本主題討論自訂類別必須滿足才能用作 XAML 項目的需求。  
@@ -43,35 +43,35 @@ ms.locfileid: "33549314"
   
 <a name="Requirements_for_Properties_of_a_Custom_Class_as_XAML"></a>   
 ## <a name="requirements-for-properties-of-a-custom-class-as-xaml-attributes"></a>作為 XAML 屬性之自訂類別的屬性需求  
- 屬性必須參考值類型 (例如基本類型)，或針對具有預設建構函式或 XAML 處理器可存取之專用類型轉換子的類型來使用類別。 在 CLR XAML 實作中，XAML 處理器可以尋找透過原生支援的語言基本類型，或透過應用程式的這類轉換<xref:System.ComponentModel.TypeConverterAttribute>為型別或成員支援類型定義中  
+ 屬性必須參考值類型 (例如基本類型)，或針對具有預設建構函式或 XAML 處理器可存取之專用類型轉換子的類型來使用類別。 在 CLR XAML 實作中，XAML 處理器尋找這類轉換子透過原生支援的語言基本類型，或藉由套用<xref:System.ComponentModel.TypeConverterAttribute>為型別或成員支援類型定義中  
   
  或者，屬性可以參考抽象類別類型或介面。 針對抽象類別或介面，XAML 剖析預期屬性值必須填入可實作介面的實體類別執行個體，或衍生自抽象類別之類型的執行個體。  
   
  屬性可以宣告於抽象類別上，但只可以設定於衍生自抽象類別的實值類別上。 這是因為建立類別的物件項目只需要類別上的公用預設建構函式。  
   
 ### <a name="typeconverter-enabled-attribute-syntax"></a>TypeConverter 啟用屬性語法  
- 如果您在類別層級提供專用屬性化類型轉換子，則套用的類型轉換可啟用任何需要具現化該類型之屬性 (property) 的屬性 (attribute) 語法。 類型轉換子不會啟用類型的物件項目用法；只有該類型的預設建構函式存在時，才可啟用物件項目用法。 因此，除非類型本身也支援物件項目語法，否則已啟用類型轉換子的屬性一般無法用於屬性語法。 這個的例外狀況是您可以指定屬性項目語法，但讓屬性項目包含字串。 該用法基本上等同於屬性語法用法；因此，除非需要屬性值的更強固空白字元處理，否則這類用法不常見。 例如，以下是取用字串的屬性 (property) 項目用法以及對等的屬性 (attribute) 用法︰  
+ 如果您在類別層級提供專用屬性化類型轉換子，則套用的類型轉換可啟用任何需要具現化該類型之屬性 (property) 的屬性 (attribute) 語法。 類型轉換子不會啟用類型的物件項目用法；只有該類型的預設建構函式存在時，才可啟用物件項目用法。 因此，除非類型本身也支援物件項目語法，否則已啟用類型轉換子的屬性一般無法用於屬性語法。 這個的例外狀況是您可以指定屬性項目語法，但讓屬性項目包含字串。 該用法基本上等同於屬性語法用法，而這類用法不常見，除非需要屬性值的更強固空白字元處理。 例如，以下是取用字串的屬性 (property) 項目用法以及對等的屬性 (attribute) 用法︰  
   
  [!code-xaml[XamlOvwSupport#GoofyTCPE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#goofytcpe)]  
   
  [!code-xaml[XamlOvwSupport#GoofyTCPE2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#goofytcpe2)]  
   
- 不允許屬性的語法，但透過 XAML 屬性項目語法，其中包含物件項目不允許的屬性的範例會採取的各種屬性<xref:System.Windows.Input.Cursor>型別。 <xref:System.Windows.Input.Cursor>類別具有專用的類型轉換器<xref:System.Windows.Input.CursorConverter>，但不會公開預設建構函式，所以<xref:System.Windows.FrameworkElement.Cursor%2A>屬性只能設定透過屬性語法即使實際<xref:System.Windows.Input.Cursor>類型是參考類型。  
+ 屬性允許屬性語法，但透過 XAML 不允許包含物件元素的屬性項目語法的範例是採用的各種屬性<xref:System.Windows.Input.Cursor>型別。 <xref:System.Windows.Input.Cursor>類別具有專用的類型轉換子<xref:System.Windows.Input.CursorConverter>，但不會公開預設建構函式，因此<xref:System.Windows.FrameworkElement.Cursor%2A>屬性可以設定只透過屬性語法即使實際<xref:System.Windows.Input.Cursor>型別是參考型別。  
   
 ### <a name="per-property-type-converters"></a>每個屬性的類型轉換子  
- 或者，屬性本身可以宣告屬性層級的類型轉換子。 這可讓處理傳入的字串值的屬性做為輸入，內嵌的屬性，類型的物件具現化"迷你 language"<xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>作業會根據適當的型別。 這項作業一般是要提供方便使用的存取子，而不是在 XAML 中設定屬性的唯一方法。 不過，您也可使用屬性的類型轉換子，其中，您要使用不提供預設建構函式或屬性化類型轉換子的現有 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 類型。 從範例[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]API 所採取的特定屬性<xref:System.Globalization.CultureInfo>型別。 在此情況下，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用現有的 Microsoft.NET Framework<xref:System.Globalization.CultureInfo>更完善地處理架構，較舊版本中所使用的相容性和移轉案例的型別但<xref:System.Globalization.CultureInfo>類型不支援必要的建構函式或類型層級型別轉換，可做為 XAML 屬性值直接。  
+ 或者，屬性本身可以宣告屬性層級的類型轉換子。 這可讓具現化內嵌屬性之型別的物件處理傳入的字串值的屬性做為輸入 「 迷你語言 」<xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>作業根據適當的型別。 這項作業一般是要提供方便使用的存取子，而不是在 XAML 中設定屬性的唯一方法。 不過，您也可使用屬性的類型轉換子，其中，您要使用不提供預設建構函式或屬性化類型轉換子的現有 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 類型。 從範例[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]API 會採用特定屬性<xref:System.Globalization.CultureInfo>型別。 在此情況下，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用現有的 Microsoft.NET Framework<xref:System.Globalization.CultureInfo>類型更恰當地處理舊版架構中所使用的相容性和移轉案例，但<xref:System.Globalization.CultureInfo>類型不支援必要建構函式或類型層級類型轉換用作 XAML 屬性值直接。  
   
- 只要公開具有 XAML 用法的屬性，特別的是，如果您是控制項作者，則應該強烈考慮支援該屬性與相依性屬性。 特別是如果您使用現有[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]實作 XAML 處理器，您可以使用來改善效能，因為<xref:System.Windows.DependencyProperty>備份。 相依性屬性會公開使用者預期 XAML 可存取屬性之屬性的屬性系統功能。 這包括動畫、資料繫結和樣式支援這類功能。 如需詳細資訊，請參閱[自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)和 [XAML 載入和相依性屬性](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)。  
+ 只要公開具有 XAML 用法的屬性，特別的是，如果您是控制項作者，則應該強烈考慮支援該屬性與相依性屬性。 這特別是當您使用現有[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]實作的 XAML 處理器資源，因為您可以使用，以改善效能<xref:System.Windows.DependencyProperty>備份。 相依性屬性會公開使用者預期 XAML 可存取屬性之屬性的屬性系統功能。 這包括動畫、資料繫結和樣式支援這類功能。 如需詳細資訊，請參閱[自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)和 [XAML 載入和相依性屬性](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)。  
   
 ### <a name="writing-and-attributing-a-type-converter"></a>撰寫並屬性化類型轉換子  
- 您偶爾會需要撰寫自訂<xref:System.ComponentModel.TypeConverter>衍生的類別提供的屬性類型的類型轉換。 如需有關如何從衍生，並建立的類型轉換器，可以支援使用 XAML，以及如何將套用指示<xref:System.ComponentModel.TypeConverterAttribute>，請參閱[TypeConverters 和 XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)。  
+ 您偶爾會需要撰寫自訂<xref:System.ComponentModel.TypeConverter>衍生類別，以提供屬性類型的類型轉換。 如需有關如何衍生和建立型別轉換子可支援 XAML 用法，以及如何套用<xref:System.ComponentModel.TypeConverterAttribute>，請參閱 < [TypeConverters 和 XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)。  
   
 <a name="Requirements_for_Events_of_a_Custom_Class_as_XAML"></a>   
 ## <a name="requirements-for-xaml-event-handler-attribute-syntax-on-events-of-a-custom-class"></a>自訂類別事件上 XAML 事件處理常式屬性語法的需求  
- 若要可以用作 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 事件，則必須在支援預設建構函式的類別上，或可在衍生類別上存取事件的抽象類別上，將事件公開為公用事件。 以方便做為路由的事件，讓使用您[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]事件應該實作明確`add`和`remove`的方法，加入和移除處理常式[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]事件簽章和轉送這些處理常式以<xref:System.Windows.UIElement.AddHandler%2A>和<xref:System.Windows.UIElement.RemoveHandler%2A>方法。 這些方法會在附加事件的執行個體上新增或移除路由事件處理常式存放區的處理常式。  
+ 若要可以用作 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 事件，則必須在支援預設建構函式的類別上，或可在衍生類別上存取事件的抽象類別上，將事件公開為公用事件。 為了方便當成路由事件，您[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]事件應該實作明確`add`並`remove`方法，以新增和移除處理常式[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]事件簽章並將這些處理常式來<xref:System.Windows.UIElement.AddHandler%2A>和<xref:System.Windows.UIElement.RemoveHandler%2A>方法。 這些方法會在附加事件的執行個體上新增或移除路由事件處理常式存放區的處理常式。  
   
 > [!NOTE]
->  可以註冊事件處理常式直接路由使用<xref:System.Windows.UIElement.AddHandler%2A>，以及如果故意不定義[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]公開路由的事件的事件。 通常不會建議您使用此方式，因為事件不會啟用用於附加處理常式的 XAML 屬性語法，而且產生的類別將針對該類型的功能提供較不容易明瞭的 XAML 檢視。  
+>  可註冊處理常式直接使用的路由事件<xref:System.Windows.UIElement.AddHandler%2A>，以及故意不定義[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]公開路由的事件的事件。 通常不會建議您使用此方式，因為事件不會啟用用於附加處理常式的 XAML 屬性語法，而且產生的類別將針對該類型的功能提供較不容易明瞭的 XAML 檢視。  
   
 <a name="Collection_Properties"></a>   
 ## <a name="writing-collection-properties"></a>撰寫集合屬性  
@@ -85,16 +85,16 @@ ms.locfileid: "33549314"
   
 -   實作<xref:System.Collections.IList>。  
   
--   實作<xref:System.Collections.IDictionary>或泛型的對等項目 (<xref:System.Collections.Generic.IDictionary%602>)。  
+-   Implements<xref:System.Collections.IDictionary>或泛型對等項目 (<xref:System.Collections.Generic.IDictionary%602>)。  
   
--   衍生自<xref:System.Array>(如需 XAML 中的陣列的詳細資訊，請參閱[X:array 標記延伸](../../../../docs/framework/xaml-services/x-array-markup-extension.md)。)  
+-   衍生自<xref:System.Array>(如需 XAML 中陣列的詳細資訊，請參閱[X:array 標記延伸](../../../../docs/framework/xaml-services/x-array-markup-extension.md)。)  
   
--   實作<xref:System.Windows.Markup.IAddChild>(所定義的介面[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)])。  
+-   Implements <xref:System.Windows.Markup.IAddChild> (所定義的介面[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)])。  
   
  CLR 中的所有這些類型都會有 `Add` 方法，而 XAML 處理器使用此方法，在建立物件圖形時，將項目新增至基礎集合。  
   
 > [!NOTE]
->  泛型`List`和`Dictionary`介面 (<xref:System.Collections.Generic.IList%601>和<xref:System.Collections.Generic.IDictionary%602>) 不支援使用集合偵測[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]XAML 處理器。 不過，您可以使用<xref:System.Collections.Generic.List%601>類別做為基底類別，因為它實作<xref:System.Collections.IList>直接或<xref:System.Collections.Generic.Dictionary%602>做為基底類別，因為它實作<xref:System.Collections.IDictionary>直接。  
+>  泛型`List`並`Dictionary`介面 (<xref:System.Collections.Generic.IList%601>並<xref:System.Collections.Generic.IDictionary%602>) 不支援的集合偵測[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]XAML 處理器。 不過，您可以使用<xref:System.Collections.Generic.List%601>類別做為基底類別，因為它會實作<xref:System.Collections.IList>直接，或是<xref:System.Collections.Generic.Dictionary%602>做為基底類別，因為它會實作<xref:System.Collections.IDictionary>直接。  
   
  當您宣告採用集合的屬性時，請注意如何在類型的新執行個體中初始化該屬性值。 如果您未將屬性實作為相依性屬性，則讓屬性使用可呼叫集合類型建構函式的支援欄位就已足夠。 如果您的屬性是相依性屬性，則可能需要將集合屬性初始化為預設類型建構函式的一部分。 這是因為相依性屬性會從中繼資料取得其預設值，而且您通常不想要集合屬性的初始值成為靜態共用集合。 一個包含類型執行個體應該要有一個集合執行個體。 如需詳細資訊，請參閱[自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)。  
   
@@ -102,11 +102,11 @@ ms.locfileid: "33549314"
   
 <a name="XAMLCONtent"></a>   
 ## <a name="declaring-xaml-content-properties"></a>宣告 XAML 內容屬性  
- XAML 語言定義 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 內容屬性的概念。 每個可用於物件語法中的類別都只能有一個 XAML 內容屬性。 若要宣告為類別的 XAML 內容屬性的屬性時，套用<xref:System.Windows.Markup.ContentPropertyAttribute>類別定義的一部分。 指定為預期的 XAML 內容屬性名稱<xref:System.Windows.Markup.ContentPropertyAttribute.Name%2A>屬性中。 屬性會指定為字串名稱，不是反映建構例如<xref:System.Reflection.PropertyInfo>。  
+ XAML 語言定義 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 內容屬性的概念。 每個可用於物件語法中的類別都只能有一個 XAML 內容屬性。 若要宣告類別的 XAML 內容屬性的屬性，套用<xref:System.Windows.Markup.ContentPropertyAttribute>為類別定義的一部分。 指定做為預期的 XAML 內容屬性的名稱<xref:System.Windows.Markup.ContentPropertyAttribute.Name%2A>屬性中。 屬性會指定為字串名稱，不是反映建構這類<xref:System.Reflection.PropertyInfo>。  
   
  您可以將集合屬性指定為 XAML 內容屬性。 這會導致使用該屬性，藉此，物件項目可以有一或多個子項目，而不需要任何中介集合物件項目或屬性項目標記。 這些項目則是視為 XAML 內容屬性的值，並新增至支援集合執行個體。  
   
- 一些現有的 XAML 內容屬性使用 `Object` 屬性類型。 這可讓內容可以採用基本的屬性值，例如 XAML<xref:System.String>以及採取的單一參考物件的值。 如果您遵循此模型，則您的類型會負責類型判斷，以及可能類型的處理。 常見的原因<xref:System.Object>內容型別是為了支援這兩個簡單的方法加入物件內容當做字串 （這會接收預設展示處理），或以進階的方式加入的物件指定非預設呈現方式的內容或其他資料。  
+ 一些現有的 XAML 內容屬性使用 `Object` 屬性類型。 這可讓內容可以採用基本的屬性值，例如 XAML<xref:System.String>以及採用單一參考物件值。 如果您遵循此模型，則您的類型會負責類型判斷，以及可能類型的處理。 常見的原因<xref:System.Object>內容型別是為了支援這兩個簡單的方法加入物件內容當做字串 （它會接收預設呈現處理），或進階的方式來新增的物件指定非預設呈現的內容或其他資料。  
   
 <a name="Serializing"></a>   
 ## <a name="serializing-xaml"></a>序列化 XAML  

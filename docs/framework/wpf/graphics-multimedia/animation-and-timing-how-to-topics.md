@@ -7,15 +7,15 @@ helpviewer_keywords:
 - timing system [WPF]
 - animation [WPF]
 ms.assetid: 587e36f6-1957-424e-9d89-c43724f26d84
-ms.openlocfilehash: bc14c0563be631662737b6d5f244d3c369d57901
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7c61e1bbd3b9c93785393c729f2af27f29d1dc40
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557637"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468663"
 ---
 # <a name="animation-and-timing-how-to-topics"></a>動畫和計時 HOW TO 主題
-下列主題示範如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]動畫和您的應用程式中的計時系統。  
+下列主題示範如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]動畫和計時系統在您的應用程式。  
   
 ## <a name="in-this-section"></a>本節內容  
  [動畫加速或減速](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md)  
@@ -31,7 +31,6 @@ ms.locfileid: "33557637"
  [使用 From、To 和 By 控制動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-an-animation-using-from-to-and-by.md)  
  [定義名稱範圍](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-name-scope.md)  
  [時鐘的狀態變更時接收通知](../../../../docs/framework/wpf/graphics-multimedia/how-to-receive-notification-when-clock-state-changes.md)  
- [如何： 移除分鏡腳本](http://msdn.microsoft.com/library/7fe39531-de2f-46a0-a69f-b783d04235ee)  
  [重複動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-an-animation.md)  
  [尋找分鏡腳本](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard.md)  
  [同步搜尋分鏡腳本](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard-synchronously.md)  

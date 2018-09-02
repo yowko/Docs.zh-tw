@@ -2,12 +2,12 @@
 title: 設定工作流程的追蹤
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: 23a20b014962b74b6408c8b3c9ac6764d4a42d56
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: ae6b61bf572da1757920b737b03861c891637f51
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809699"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468576"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>設定工作流程的追蹤
 工作流程可透過三種方法執行：  
@@ -134,10 +134,10 @@ if (null != workflowServiceHost)
 ```  
   
 > [!NOTE]
->  如需追蹤設定檔的詳細資訊，請參閱[追蹤設定檔](http://go.microsoft.com/fwlink/?LinkId=201310)。  
+>  如需有關追蹤設定檔的詳細資訊，請參閱[追蹤設定檔](https://go.microsoft.com/fwlink/?LinkId=201310)。  
   
 ### <a name="configuring-tracking-using-workflowinvoker"></a>使用 WorkflowInvoker 設定追蹤  
- 若要為使用 <xref:System.Activities.WorkflowInvoker> 執行的工作流程設定追蹤，請加入追蹤提供者做為 <xref:System.Activities.WorkflowInvoker> 執行個體的延伸。 下列程式碼範例是來自[自訂追蹤](../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md)範例。  
+ 若要為使用 <xref:System.Activities.WorkflowInvoker> 執行的工作流程設定追蹤，請加入追蹤提供者做為 <xref:System.Activities.WorkflowInvoker> 執行個體的延伸。 下列程式碼範例取自[自訂追蹤](../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md)範例。  
   
 ```  
 WorkflowInvoker invoker = new WorkflowInvoker(BuildSampleWorkflow());  
@@ -150,13 +150,13 @@ invoker.Invoke();
   
  偵錯追蹤事件會寫入到偵錯記錄中。 若要收集事件檢視器中的 WF 偵錯追蹤事件，請啟用偵錯記錄。  
   
-1.  若要開啟 事件檢視器，請按一下**啟動**，然後按一下 **執行。** 在 [執行] 對話方塊中，輸入`eventvwr`。  
+1.  若要開啟 事件檢視器，請按一下**開始**，然後按一下 **執行。** 在 [執行] 對話方塊中，輸入`eventvwr`。  
   
-2.  在 事件檢視器 對話方塊中，展開  **Applications and Services Logs**節點。  
+2.  在 [事件檢視器] 對話方塊中，依序展開**Applications and Services Logs**節點。  
   
-3.  展開**Microsoft**， **Windows**，和**應用程式伺服器-應用程式**節點。  
+3.  依序展開**Microsoft**， **Windows**，並**應用程式伺服器-應用程式**節點。  
   
-4.  以滑鼠右鍵按一下**偵錯**節點下的**應用程式伺服器-應用程式**節點，然後選取**啟用記錄**。  
+4.  以滑鼠右鍵按一下**偵錯**下方的節點**應用程式伺服器-應用程式**節點，然後選取**啟用記錄**。  
   
 5.  執行可啟用追蹤的應用程式，以產生追蹤事件。  
   
@@ -166,13 +166,13 @@ invoker.Invoke();
   
  若要檢視追蹤記錄，請遵循下列步驟。  
   
-1.  若要開啟 事件檢視器，請按一下**啟動**，然後按一下 **執行。** 在 [執行] 對話方塊中，輸入`eventvwr`。  
+1.  若要開啟 事件檢視器，請按一下**開始**，然後按一下 **執行。** 在 [執行] 對話方塊中，輸入`eventvwr`。  
   
-2.  在 事件檢視器 對話方塊中，展開  **Applications and Services Logs**節點。  
+2.  在 [事件檢視器] 對話方塊中，依序展開**Applications and Services Logs**節點。  
   
-3.  展開**Microsoft**， **Windows**，和**應用程式伺服器-應用程式**節點。  
+3.  依序展開**Microsoft**， **Windows**，並**應用程式伺服器-應用程式**節點。  
   
-4.  以滑鼠右鍵按一下**分析**節點下的**應用程式伺服器-應用程式**節點，然後選取**啟用記錄**。  
+4.  以滑鼠右鍵按一下**分析**下方的節點**應用程式伺服器-應用程式**節點，然後選取**啟用記錄**。  
   
 5.  執行您的啟用追蹤的應用程式，以產生追蹤記錄。  
   
@@ -193,7 +193,7 @@ invoker.Invoke();
     </system.serviceModel>  
     ```  
   
-2.  資訊清單檔案複製 %windir%\Microsoft.NET\Framework\\< 最新版本的[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man 到暫存位置，並將它重新命名Microsoft.Windows.ApplicationServer.Applications_Provider1.man  
+2.  資訊清單檔案複製 %windir%\Microsoft.NET\Framework\\< 的最新版本[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man 到暫存位置，並重新命名為Microsoft.windows.applicationserver.applications_provider1.man。  
   
 3.  將資訊清單檔中的 GUID 變更為新的 GUID。  
   
@@ -219,7 +219,7 @@ invoker.Invoke();
   
 6.  遵循下列步驟產生資源 DLL。  
   
-    1.  安裝 Windows SDK。 Windows SDK 包含訊息編譯器 ([mc.exe](http://go.microsoft.com/fwlink/?LinkId=184606)) 和資源編輯器 ([rc.exe](http://go.microsoft.com/fwlink/?LinkId=184605))。  
+    1.  安裝 Windows SDK。 Windows SDK 包含訊息編輯器 ([mc.exe](https://go.microsoft.com/fwlink/?LinkId=184606)) 和資源編輯器 ([rc.exe](https://go.microsoft.com/fwlink/?LinkId=184605))。  
   
     2.  在 Windows SDK 命令提示字元中，對新的資訊清單檔執行 mc.exe。  
   
@@ -247,12 +247,12 @@ invoker.Invoke();
         <provider name="Microsoft-Windows-Application Server-Applications_Provider1" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}" symbol="Microsoft_Windows_ApplicationServer_ApplicationEvents" resourceFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll" messageFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll">  
         ```  
   
-    7.  使用[wevtutil](http://go.microsoft.com/fwlink/?LinkId=184608)註冊資訊清單。  
+    7.  使用[wevtutil](https://go.microsoft.com/fwlink/?LinkId=184608)註冊資訊清單。  
   
         ```  
         wevtutil im Microsoft.Windows.ApplicationServer.Applications_Provider1.man  
         ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Windows Server App Fabric 監控](http://go.microsoft.com/fwlink/?LinkId=201273)  
- [使用 App Fabric 監控應用程式](http://go.microsoft.com/fwlink/?LinkId=201275)
+ [Windows Server App Fabric 監控](https://go.microsoft.com/fwlink/?LinkId=201273)  
+ [使用 App Fabric 監控應用程式](https://go.microsoft.com/fwlink/?LinkId=201275)

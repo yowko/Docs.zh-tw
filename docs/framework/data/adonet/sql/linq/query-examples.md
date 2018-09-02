@@ -2,18 +2,18 @@
 title: 查詢範例
 ms.date: 03/30/2017
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
-ms.openlocfilehash: b7fe03a951b6b8cfccc0c0bc4a1ccfc90e903dc2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 38454890e05b00cd92bca909ce0c7975f5ef1f6e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362623"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464350"
 ---
 # <a name="query-examples"></a>查詢範例
-本節提供典型的 Visual Basic 和 C# 範例[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]查詢。 使用 Visual Studio 的開發人員可以提供的範例方案中找到更多的範例中範例 > 一節。 如需詳細資訊，請參閱[範例](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)。  
+本節提供典型的 Visual Basic 和 C# 範例[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]查詢。 使用 Visual Studio 的開發人員可以找到更多的範例中提供的範例方案的範例區段中。 如需詳細資訊，請參閱 <<c0> [ 範例](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)。  
   
 > [!IMPORTANT]
->  *db*常用程式碼範例中[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文件。 *db*假設為執行個體*Northwind*類別，繼承自<xref:System.Data.Linq.DataContext>。  
+>  *db*通常用於中的程式碼範例[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文件。 *db*假設為執行個體*Northwind*類別，繼承自<xref:System.Data.Linq.DataContext>。  
   
 ## <a name="in-this-section"></a>本節內容  
  [彙總查詢](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)  
@@ -62,10 +62,10 @@ ms.locfileid: "33362623"
  提供在 `from`、`where` 和 `select` 子句中進行外部索引鍵巡覽的使用範例。  
   
  [制定投影](../../../../../../docs/framework/data/adonet/sql/linq/formulate-projections.md)  
- 提供的合併範例`select`與其他功能 (例如，*匿名型別*) 以構成查詢投影。  
+ 提供的合併範例`select`與其他功能 (例如*匿名型別*) 以構成查詢投影。  
   
 ## <a name="related-sections"></a>相關章節  
- [標準查詢運算子概觀](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
+ [標準查詢運算子概觀](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
  說明標準查詢運算子的概念。  
   
  [查詢概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  

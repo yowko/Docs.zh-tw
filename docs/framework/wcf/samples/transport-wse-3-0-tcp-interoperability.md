@@ -2,12 +2,12 @@
 title: 傳輸：WSE 3.0 TCP 互通性
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 8cdd88b354f2e07c84ccfda85c8552d37ca2f519
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: b727da998736944afd23f7dcfbf45a1f6049d1d0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808008"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43461692"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>傳輸：WSE 3.0 TCP 互通性
 WSE 3.0 TCP 互通性傳輸範例示範如何實作 TCP 雙工工作階段做為自訂的 Windows Communication Foundation (WCF) 傳輸。 也會示範如何使用通道層的擴充性，透過網路與現有的已部署系統相連結。 下列步驟示範如何建置此自訂 WCF 傳輸：  
@@ -37,7 +37,7 @@ WSE 3.0 TCP 互通性傳輸範例示範如何實作 TCP 雙工工作階段做為
   
  `return encoder.WriteMessage(message, maxBufferSize, bufferManager);`  
   
- 一旦將 <xref:System.ServiceModel.Channels.Message> 編碼為位元組，就必須在網路上傳輸。 此時需要系統來定義訊息界限。 WSE 3.0 中使用的版本[DIME](http://go.microsoft.com/fwlink/?LinkId=94999)做為其框架處理通訊協定。 `WriteData` 會封裝框架邏輯，以將 byte[] 包裝在一組 DIME 記錄中。  
+ 一旦將 <xref:System.ServiceModel.Channels.Message> 編碼為位元組，就必須在網路上傳輸。 此時需要系統來定義訊息界限。 WSE 3.0 會使用新版[DIME](https://go.microsoft.com/fwlink/?LinkId=94999)做為其框架通訊協定。 `WriteData` 會封裝框架邏輯，以將 byte[] 包裝在一組 DIME 記錄中。  
   
  接收訊息的邏輯也十分類似。 主要的複雜度是在於處理通訊端讀取會傳回少於所要求之位元組的情況。 若要接收訊息，`WseTcpDuplexSessionChannel` 會讀取網路上的位元組、解碼 DIME 框架，然後使用 <xref:System.ServiceModel.Channels.MessageEncoder> 將 byte[] 轉換為 <xref:System.ServiceModel.Channels.Message>。  
   
@@ -129,7 +129,7 @@ WSE 3.0 TCP 互通性傳輸範例示範如何實作 TCP 雙工工作階段做為
   
  `binding.Elements.Add(new WseTcpTransportBindingElement());`  
   
- 其中包含兩個測試：第一個測試會使用 WSE 3.0 WSDL 產生的程式碼來設定具型別的用戶端。 第二個測試會使用 WCF 做為用戶端和伺服器所傳送訊息，直接在通道 Api 之上。  
+ 其中包含兩個測試：第一個測試會使用 WSE 3.0 WSDL 產生的程式碼來設定具型別的用戶端。 第二項測試會使用 WCF 作為用戶端和伺服器傳送的訊息，直接在通道 Api 之上。  
   
  執行範例時，預期會產生下列輸出。  
   
@@ -172,7 +172,7 @@ Symbols:
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  如果要執行這個範例，您必須已安裝 WSE 3.0 和 WSE `TcpSyncStockService` 範例。 您可以下載[從 MSDN 的 WSE 3.0](http://go.microsoft.com/fwlink/?LinkId=95000)。  
+1.  如果要執行這個範例，您必須已安裝 WSE 3.0 和 WSE `TcpSyncStockService` 範例。 您可以下載[從 MSDN 的 WSE 3.0](https://go.microsoft.com/fwlink/?LinkId=95000)。  
   
 > [!NOTE]
 >  由於 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 上不支援 WSE 3.0，因此您無法在該作業系統上安裝或執行 `TcpSyncStockService` 範例。  
@@ -183,7 +183,7 @@ Symbols:
   
     2.  將 StockService 專案設定為啟始專案。  
   
-    3.  開啟 StockService 專案中的 StockService.cs，並將 `StockService` 類別中的 [Policy] 屬性標記為註解。 這樣就會停用範例的安全性。 WCF 可以與 WSE 3.0 安全端點相互操作，而安全性已停用保留此範例著重於自訂 TCP 傳輸。  
+    3.  開啟 StockService 專案中的 StockService.cs，並將 `StockService` 類別中的 [Policy] 屬性標記為註解。 這樣就會停用範例的安全性。 雖然 WCF 與 WSE 3.0 安全端點相互操作，將此範例著重於自訂 TCP 傳輸已停用安全性。  
   
     4.  按 F5 以啟動 `TcpSyncStockService`。 將在新主控台視窗中啟動服務。  
   

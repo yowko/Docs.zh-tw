@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e544db23abf89a20bd2f7763cfdb1256ea4a326c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 09bd32172bcad298eebc2921461fdc953e9c6d6e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441360"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468289"
 ---
 # <a name="runtimeinfoflags-enumeration"></a>RUNTIME_INFO_FLAGS 列舉
 包含值，指出應該傳回 common language runtime (CLR) 的相關資訊。  
@@ -47,14 +47,14 @@ typedef enum {
   
 |成員|描述|  
 |------------|-----------------|  
-|`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|指出不應該包含目錄資訊。|  
-|`RUNTIME_INFO_DONT_RETURN_VERSION`|指出不應該包含版本資訊。|  
-|`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|表示不應該在發生錯誤時顯示錯誤對話方塊。|  
-|`RUNTIME_INFO_IGNORE_ERROR_MODE`|表示呼叫的效果[SetErrorMode](http://go.microsoft.com/fwlink/p/?LinkId=255242) SEM_FAILCRITICALERRORS 旗標的函式應該覆寫。 也就是在發生錯誤，而不是要隱藏應該會顯示 [安裝] 對話方塊。|  
+|`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|表示不應該包含目錄資訊。|  
+|`RUNTIME_INFO_DONT_RETURN_VERSION`|表示不應該包含版本資訊。|  
+|`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|表示不應在失敗時顯示錯誤對話方塊。|  
+|`RUNTIME_INFO_IGNORE_ERROR_MODE`|指出呼叫的效果[SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242)應該覆寫 SEM_FAILCRITICALERRORS 旗標的函式。 亦即，[安裝] 對話方塊中，應該會顯示發生錯誤時，而不是要隱藏。|  
 |`RUNTIME_INFO_REQUEST_AMD64`|表示要求的執行階段的 AMD 64 相容版本的相關資訊。|  
-|`RUNTIME_INFO_REQUEST_IA64`|表示要求的執行階段 IA 64 相容版本的相關資訊。|  
+|`RUNTIME_INFO_REQUEST_IA64`|表示要求的執行階段的 IA-64-相容版本的相關資訊。|  
 |`RUNTIME_INFO_REQUEST_X86`|表示要求的執行階段與 x86 相容的版本資訊。|  
-|`RUNTIME_INFO_UPGRADE_VERSION`|表示應該包含版本升級的資訊。|  
+|`RUNTIME_INFO_UPGRADE_VERSION`|表示應該包含版本升級資訊。|  
   
 ## <a name="remarks"></a>備註  
  下列平台架構旗標可以一次只能指定的一個，而且無法結合：  
@@ -66,13 +66,13 @@ typedef enum {
 -   RUNTIME_INFO_REQUEST_X86  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
  **程式庫：** MSCorEE.dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [裝載列舉](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

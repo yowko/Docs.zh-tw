@@ -8,11 +8,11 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.openlocfilehash: 65c997e12aa033b3b08d32c8ab76372e3c52a803
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42936551"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467103"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>停用 Visual Studio 中的 DPI 感知
 

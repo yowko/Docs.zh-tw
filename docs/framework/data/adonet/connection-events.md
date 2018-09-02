@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5a29de74-acfc-4134-8616-829dd7ce0710
-ms.openlocfilehash: aebd38cf57d602fef61c1ad4e6679f37227b1355
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: c1ef9ff9cc4d77e4951e99ed74c96cf78eb71506
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42930858"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465521"
 ---
 # <a name="connection-events"></a>Connection 的事件
 所有.NET Framework 資料提供者都有**連接**具有兩個事件，您可以使用擷取的資料來源的參考用訊息，或判斷物件的狀態**連線**具有變更。 下表描述的事件**連線**物件。  
@@ -107,4 +107,4 @@ protected static void OnStateChange(object sender,
   
 ## <a name="see-also"></a>另請參閱  
  [連接至資料來源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

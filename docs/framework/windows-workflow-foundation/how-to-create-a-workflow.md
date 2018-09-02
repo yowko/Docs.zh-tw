@@ -2,21 +2,21 @@
 title: 'How to: Create a Workflow'
 ms.date: 03/30/2017
 ms.assetid: 87234108-8e21-4cb3-9340-4a1a13f3f98c
-ms.openlocfilehash: 98235eac9309ecb0229281160f210079e712b755
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adaa322d4129f56abcad4fd848204ee373e907bd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33513259"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43462294"
 ---
 # <a name="how-to-create-a-workflow"></a>How to: Create a Workflow
-工作流程可以從內建活動建構，也可以從自訂活動建構。 此區段步驟，完成建立這類使用這兩個內建活動的工作流程中的主題<xref:System.Activities.Statements.Flowchart>活動，並從先前的自訂活動[How to： 建立活動](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)主題。 此工作流程會以數字猜測遊戲為模型。 只要閱讀本節其中一個主題即可完成教學課程；請選擇您感興趣的樣式並依照該步驟進行。 但是，您也可以完成所有的主題。  
+工作流程可以從內建活動建構，也可以從自訂活動建構。 本主題中建立的工作流程會使用這兩個內建的活動時，例如，這一節逐步<xref:System.Activities.Statements.Flowchart>活動和自訂活動，從先前[How to: Create an Activity](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)主題。 此工作流程會以數字猜測遊戲為模型。 只要閱讀本節其中一個主題即可完成教學課程；請選擇您感興趣的樣式並依照該步驟進行。 但是，您也可以完成所有的主題。  
   
 > [!NOTE]
->  「快速入門」教學課程中的每個主題都與之前的主題息息相關。 若要完成本主題，您必須先完成[How to： 建立活動](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)。  
+>  「快速入門」教學課程中的每個主題都與之前的主題息息相關。 若要完成本主題，您必須先完成[How to: Create an Activity](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)。  
   
 > [!NOTE]
->  若要下載教學課程的完整版本，請參閱 [Windows Workflow Foundation (WF45) - 快速入門教學課程](http://go.microsoft.com/fwlink/?LinkID=248976)。  
+>  若要下載教學課程的完整的版本，請參閱[Windows Workflow Foundation (WF45)-入門教學課程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
   
 ## <a name="in-this-section"></a>本節內容  
  [如何：建立循序工作流程](../../../docs/framework/windows-workflow-foundation/how-to-create-a-sequential-workflow.md)  

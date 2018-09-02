@@ -8,17 +8,17 @@ helpviewer_keywords:
 - forms [Windows Forms], displaying images
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 4dc7b973-afb1-4276-8322-20825af96655
-ms.openlocfilehash: 5eb85c6f3ca232f8b53ac01d57ee71f73415cf83
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e01e5d1dc0fad8171e705e85debc2b15d6a506eb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533539"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466530"
 ---
 # <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>如何：使用設計工具載入圖片 (Windows Form)
-使用 Windows Form<xref:System.Windows.Forms.PictureBox>控制項，您可以載入並設定在表單上顯示圖片在設計階段<xref:System.Windows.Forms.PictureBox.Image%2A>有效圖片的屬性。 下表顯示可接受的檔案類型。  
+使用 Windows Form<xref:System.Windows.Forms.PictureBox>控制項，您可以載入並設定表單上顯示一張圖片在設計階段<xref:System.Windows.Forms.PictureBox.Image%2A>屬性，以有效的圖片。 下表顯示可接受的檔案類型。  
   
-|類型|檔案名稱副檔名|  
+|類型|副檔名|  
 |----------|-------------------------|  
 |Bitmap|.bmp|  
 |圖示|.ico|  
@@ -27,21 +27,21 @@ ms.locfileid: "33533539"
 |JPEG|.jpg|  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 ### <a name="to-display-a-picture-at-design-time"></a>若要在設計階段顯示的圖片  
   
-1.  繪製<xref:System.Windows.Forms.PictureBox>控制項在表單上的。  
+1.  繪製<xref:System.Windows.Forms.PictureBox>表單上的控制項。  
   
-2.  在 屬性 視窗中，選取<xref:System.Windows.Forms.PictureBox.Image%2A>屬性，然後按一下省略符號按鈕，以顯示**開啟** 對話方塊。  
+2.  在 屬性 視窗中，選取<xref:System.Windows.Forms.PictureBox.Image%2A>屬性，然後按一下省略符號按鈕，顯示**開啟** 對話方塊。  
   
-3.  如果您要尋找特定檔案類型 （例如，.gif 檔案），請選取在**檔案類型**方塊。  
+3.  如果您要尋找特定檔案類型 （例如，.gif 檔案），選取 [在**類型的檔案**] 方塊中。  
   
 4.  選取您想要顯示的檔案。  
   
 ### <a name="to-clear-the-picture-at-design-time"></a>若要在設計階段清除圖片  
   
-1.  在**屬性**視窗中，選取<xref:System.Windows.Forms.PictureBox.Image%2A>屬性，以滑鼠右鍵按一下映像物件的名稱左邊的小型縮圖影像。 選擇**重設**。  
+1.  在 **屬性**視窗中，選取<xref:System.Windows.Forms.PictureBox.Image%2A>屬性並以滑鼠右鍵按一下左邊的映像物件的名稱會出現的小型縮圖影像。 選擇**重設**。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.PictureBox>  

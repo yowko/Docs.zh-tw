@@ -9,12 +9,12 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-ms.openlocfilehash: 45b9ee94b35f368a9d0c96381083aa58c9a23f77
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: e8fa4c084ae9c775a18de06c344b2c0b439c2b1b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255484"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467811"
 ---
 # <a name="mcignorable-attribute"></a>mc:Ignorable 屬性
 指定哪些[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]標記檔案中遇到的命名空間前置詞可能會忽略[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器。 `mc:Ignorable`屬性支援標記相容性，以及自訂的命名空間對應性[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]版本控制。  
@@ -62,8 +62,8 @@ ms.locfileid: "43255484"
  根據預設，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器將會忽略已忽略的項目內的內容。 不過，您可以指定一個額外的屬性[mc: processcontent 屬性](../../../../docs/framework/wpf/advanced/mc-processcontent-attribute.md)，需要繼續的處理下一個可用的父元素所忽略的元素內的內容。  
   
  可以指定多個前置詞，在屬性中，使用一或多個空格字元作為分隔符號，例如： `mc:Ignorable="ignore1 ignore2"`。  
-  
- [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)]命名空間會定義其他項目和屬性的這個區域中未記載之[!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)]。 如需詳細資訊，請參閱 < [XML 標記相容性規格](http://go.microsoft.com/fwlink/?LinkId=73824)。  
+
+ [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)]命名空間會定義其他項目和屬性的這個區域中未記載之[!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)]。 如需詳細資訊，請參閱 < [XML 標記相容性規格](/office/open-xml/introduction-to-markup-compatibility#markup-compatibility-in-the-open-xml-file-formats-specification)。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Markup.XamlReader>  

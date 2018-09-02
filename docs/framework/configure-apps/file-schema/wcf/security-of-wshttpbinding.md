@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 8658b162-2ddf-4162-a869-aa517a42288a
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 836e920ef7c95d4a7a2b752c2f76f29d8c880e7c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: de2fc0f562b079d5310ed2cd81211e14d4257515
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750462"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468542"
 ---
 # <a name="ltsecuritygt-of-ltwshttpbindinggt"></a>&lt;wsHttpBinding&gt; 的 &lt;security&gt;
 代表的安全性功能[ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。  
@@ -46,7 +46,7 @@ ms.locfileid: "32750462"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|模式|選擇性的。 指定套用的安全性類型。 預設值為 `Message`。<br />-這個屬性是屬於型別<xref:System.ServiceModel.SecurityMode>。|  
+|模式|-選擇性。 指定套用的安全性類型。 預設為 `Message`。<br />-此屬性為類型<xref:System.ServiceModel.SecurityMode>。|  
   
 ## <a name="mode-attribute"></a>Mode 屬性  
   
@@ -57,7 +57,7 @@ ms.locfileid: "32750462"
 |訊息|系統會使用 SOAP 訊息安全性來提供安全性。 根據預設，SOAP 本文會經過加密與簽署。 這個模式提供各種功能，如超出範圍的用戶端是否可使用服務認證、使用的演算法套件，以及透過 Security.Message 屬性將何種保護層級套用至訊息主體。 每個工作階段會執行一次用戶端驗證，並會快取工作階段期間的驗證結果。|  
 |TransportWithMessageCredential|在這個模式中，HTTPS 會提供完整性、機密性和伺服器驗證，而 SOAP 訊息安全性會提供用戶端驗證。 根據預設，每個工作階段會執行一次用戶端驗證，並會快取工作階段期間的驗證結果。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -81,5 +81,5 @@ ms.locfileid: "32750462"
  [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [使用繫結來設定 Windows Communication Foundation 服務和用戶端](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<繫結 >](../../../../../docs/framework/misc/binding.md)

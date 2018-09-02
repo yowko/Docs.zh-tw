@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-ms.openlocfilehash: 47f89feb90efbafb6c43bbad78f05292213a0c58
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 274a6e87b272002a567fd92605c4e690c03b6e26
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365861"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466913"
 ---
 # <a name="single-bulk-copy-operations"></a>單一大量複製作業
 執行 SQL Server 大量複製作業的最簡單方法是：針對資料庫執行單一作業。 根據預設，會以隔離作業執行大量複製作業：複製作業會以非交易性方式執行，且沒有復原的機會。  
   
 > [!NOTE]
->  如果需要在發生錯誤時，復原全部或部分大量複製，您可以使用 <xref:System.Data.SqlClient.SqlBulkCopy> 管理的交易，或在現有交易內執行大量複製作業。 **SqlBulkCopy**也可搭配<xref:System.Transactions>如果登記連接 （隱含或明確） 到**System.Transactions**交易。  
+>  如果需要在發生錯誤時，復原全部或部分大量複製，您可以使用 <xref:System.Data.SqlClient.SqlBulkCopy> 管理的交易，或在現有交易內執行大量複製作業。 **SqlBulkCopy**也適用於<xref:System.Transactions>如果將連接登記 （隱含或明確） 成**System.Transactions**交易。  
 >   
->  如需詳細資訊，請參閱[異動和大量複製作業](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md)。  
+>  如需詳細資訊，請參閱 <<c0> [ 異動和大量複製作業](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md)。  
   
  執行大量複製作業的一般步驟如下：  
   
@@ -28,22 +28,22 @@ ms.locfileid: "33365861"
   
 3.  建立 <xref:System.Data.SqlClient.SqlBulkCopy> 物件，設定所有必要的屬性。  
   
-4.  設定**DestinationTableName**屬性以表示目標資料表的大量插入作業。  
+4.  設定**DestinationTableName**屬性來指定目標資料表，進行大量插入作業。  
   
 5.  呼叫其中一種**WriteToServer**方法。  
   
-6.  （選擇性） 更新的屬性和呼叫**WriteToServer**視需要再次。  
+6.  （選擇性） 更新屬性，並呼叫**WriteToServer**視一次。  
   
 7.  呼叫 <xref:System.Data.SqlClient.SqlBulkCopy.Close%2A>，或將大量複製作業包裝至 `Using` 陳述式內。  
   
 > [!CAUTION]
->  建議來源與目標資料行的資料型別相符。 如果資料類型不相符， **SqlBulkCopy**嘗試將每個來源值轉換成目標資料類型，使用所採用的規則<xref:System.Data.SqlClient.SqlParameter.Value%2A>。 轉換可能會影響效能，亦可能導致意外的錯誤。 例如，`Double` 資料型別通常可轉換為 `Decimal` 資料型別，但並非始終如此。  
+>  建議來源與目標資料行的資料型別相符。 如果不相符的資料類型， **SqlBulkCopy**會嘗試將每個來源值轉換成目標資料類型，使用所採用的規則<xref:System.Data.SqlClient.SqlParameter.Value%2A>。 轉換可能會影響效能，亦可能導致意外的錯誤。 例如，`Double` 資料型別通常可轉換為 `Decimal` 資料型別，但並非始終如此。  
   
 ## <a name="example"></a>範例  
- 下列主控台應用程式示範如何使用 <xref:System.Data.SqlClient.SqlBulkCopy> 類別來載入資料。 在此範例中，<xref:System.Data.SqlClient.SqlDataReader>用來將資料從複製**Production.Product** SQL Server 中的資料表**AdventureWorks**相同資料庫中的類似資料表的資料庫。  
+ 下列主控台應用程式示範如何使用 <xref:System.Data.SqlClient.SqlBulkCopy> 類別來載入資料。 在此範例中，<xref:System.Data.SqlClient.SqlDataReader>用來複製資料，從**Production.Product** SQL Server 中的表格**AdventureWorks**相同資料庫中的類似資料表的資料庫。  
   
 > [!IMPORTANT]
->  此範例不會執行，除非您已建立工作資料表中所述[大量複製範例設定](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)。 此程式碼可示範如何使用的語法**SqlBulkCopy**只。 如果來源及目的地資料表位於相同的 SQL Server 執行個體中，則使用 Transact-SQL `INSERT … SELECT` 陳述式來複製資料會更方便且快速。  
+>  此範例不會執行，除非您已建立的工作資料表中所述[大量複製範例設定](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)。 此程式碼可示範使用語法**SqlBulkCopy**只。 如果來源及目的地資料表位於相同的 SQL Server 執行個體中，則使用 Transact-SQL `INSERT … SELECT` 陳述式來複製資料會更方便且快速。  
   
  [!code-csharp[DataWorks BulkCopy.Single#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks BulkCopy.Single/CS/source.cs#1)]
  [!code-vb[DataWorks BulkCopy.Single#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks BulkCopy.Single/VB/source.vb#1)]  
@@ -81,4 +81,4 @@ command.ExecuteNonQuery();
   
 ## <a name="see-also"></a>另請參閱  
  [在 SQL Server 中執行大量複製作業](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

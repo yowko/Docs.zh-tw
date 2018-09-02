@@ -10,15 +10,15 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: ca989c1cd7baa1eaeb10c65bd9ebef8e400968c3
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: d53892f9823474ea14640e352548b55432e7744b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255218"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43461059"
 ---
 # <a name="query-projections-wcf-data-services"></a>查詢投影 (WCF 資料服務)
-投影提供一種機制，在[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]減少，僅傳回特定屬性的實體會在回應中藉由指定查詢所傳回之摘要中的資料量。 如需詳細資訊，請參閱 < [OData: Select 系統查詢選項 ($select)](http://go.microsoft.com/fwlink/?LinkId=186076)。  
+投影提供一種機制，在[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]減少，僅傳回特定屬性的實體會在回應中藉由指定查詢所傳回之摘要中的資料量。 如需詳細資訊，請參閱 < [OData: Select 系統查詢選項 ($select)](https://go.microsoft.com/fwlink/?LinkId=186076)。  
   
  本主題描述如何定義查詢投影、實體與非實體類型的需求為何、對投影結果進行更新、建立投影類型，以及列出一些投影考量因素。  
   

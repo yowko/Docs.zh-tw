@@ -2,15 +2,15 @@
 title: 區塊處理通道
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: 1acb635be23b9a838abee714156d818abee6bcd5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9572ad6f88786af34252cea1f3c62d5067257b8b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508827"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470086"
 ---
 # <a name="chunking-channel"></a>區塊處理通道
-傳送大型訊息使用 Windows Communication Foundation (WCF) 時，通常會限制用來緩衝處理這些訊息的記憶體數量。 一個可能的方案為以資料流處理訊息本文 (假設本文中有大量資料)。 然而，有些通訊協定需要緩衝處理整個訊息。 例如，可靠的傳訊和安全性。 另一個可能的方案為將較大訊息分成較小的訊息 (稱為區塊 (Chunk))，一次以單一區塊傳送這些區塊，然後在接收端重新構成較大訊息。 應用程式本身便可執行此區塊處理和取消區塊處理，或可以使用自訂通道來進行此作業。 區塊處理通道範例會顯示如何使用自訂通訊協定或層次通道，以便區塊處理和取消區塊處理任意較大訊息。  
+傳送使用 Windows Communication Foundation (WCF) 的大型訊息時，它通常會限制用來緩衝處理這些訊息的記憶體數量。 一個可能的方案為以資料流處理訊息本文 (假設本文中有大量資料)。 然而，有些通訊協定需要緩衝處理整個訊息。 例如，可靠的傳訊和安全性。 另一個可能的方案為將較大訊息分成較小的訊息 (稱為區塊 (Chunk))，一次以單一區塊傳送這些區塊，然後在接收端重新構成較大訊息。 應用程式本身便可執行此區塊處理和取消區塊處理，或可以使用自訂通道來進行此作業。 區塊處理通道範例會顯示如何使用自訂通訊協定或層次通道，以便區塊處理和取消區塊處理任意較大訊息。  
   
  區塊處理應該只能在要傳送的整個訊息已建構完成之後運用。 區塊處理通道應該只能是安全性通道和可靠工作階段通道下的一層。  
   
@@ -22,7 +22,7 @@ ms.locfileid: "33508827"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ChunkingChannel`  
   
@@ -271,7 +271,7 @@ interface ITestService
  `OnOpen` 會呼叫 `innerChannel.Open`，以開啟內部通道。  
   
 ### <a name="onclose"></a>OnClose  
- `OnClose` 會先將 `stopReceive` 設定為 `true`，以將擱置的 `ReceiveChunkLoop` 標示為停止。 接著會等待`receiveStopped``ManualResetEvent`，設定何時`ReceiveChunkLoop`停止。 假設在指定的逾時內停止 `ReceiveChunkLoop`，`OnClose` 會利用剩下的逾時呼叫 `innerChannel.Close`。  
+ `OnClose` 會先將 `stopReceive` 設定為 `true`，以將擱置的 `ReceiveChunkLoop` 標示為停止。 接著會等待`receiveStopped``ManualResetEvent`，此值會設定當`ReceiveChunkLoop`會停止。 假設在指定的逾時內停止 `ReceiveChunkLoop`，`OnClose` 會利用剩下的逾時呼叫 `innerChannel.Close`。  
   
 ### <a name="onabort"></a>OnAbort  
  `OnAbort` 會呼叫 `innerChannel.Abort`，以中止內部通道。 如果有擱置的 `ReceiveChunkLoop`，會從擱置的 `innerChannel.Receive` 呼叫中收到例外狀況。  
@@ -290,9 +290,9 @@ interface ITestService
  `ChunkingChannelListener` 是內部通道接聽程式周圍的包裝函式。 除了該內部通道接聽程式的委派呼叫以外，其主要函式會包裝新的 `ChunkingDuplexSessionChannels` (從內部通道接聽程式接受之通道的周圍)。 會在 `OnAcceptChannel` 和 `OnEndAcceptChannel` 中進行此動作。 新建立的 `ChunkingDuplexSessionChannel` 會傳遞內部通道，以及先前描述的其他參數。  
   
 ## <a name="implementing-binding-element-and-binding"></a>實作繫結項目和繫結  
- `ChunkingBindingElement` 會負責建立 `ChunkingChannelFactory` 和 `ChunkingChannelListener`。 `ChunkingBindingElement`會檢查是否在 T `CanBuildChannelFactory` \<T > 和`CanBuildChannelListener` \<T > 的型別`IDuplexSessionChannel`（僅支援區塊處理通道的通道） 和繫結中的其他繫結項目支援此通道型別。  
+ `ChunkingBindingElement` 會負責建立 `ChunkingChannelFactory` 和 `ChunkingChannelListener`。 `ChunkingBindingElement`檢查是否在 T `CanBuildChannelFactory` \<T > 和`CanBuildChannelListener` \<T > 的類型`IDuplexSessionChannel`（僅支援區塊處理通道的通道） 和繫結中的其他繫結項目支援此通道型別。  
   
- `BuildChannelFactory`\<T > 會先檢查要求的通道型別可以建置，然後取得要區塊處理的訊息動作清單。 如需詳細資訊，請參閱下列章節。 接著會建立新的 `ChunkingChannelFactory`，並傳遞內部通道處理站 (從 `context.BuildInnerChannelFactory<IDuplexSessionChannel>` 傳回)、訊息動作清單和要緩衝處理的區塊數上限。 從 `MaxBufferedChunks` 屬性取得的區塊數上限會由 `ChunkingBindingElement` 公開。  
+ `BuildChannelFactory`\<T > 先檢查要求的通道型別可以建置，然後取得要區塊處理的訊息動作清單。 如需詳細資訊，請參閱下列章節。 接著會建立新的 `ChunkingChannelFactory`，並傳遞內部通道處理站 (從 `context.BuildInnerChannelFactory<IDuplexSessionChannel>` 傳回)、訊息動作清單和要緩衝處理的區塊數上限。 從 `MaxBufferedChunks` 屬性取得的區塊數上限會由 `ChunkingBindingElement` 公開。  
   
  `BuildChannelListener<T>` 擁有可建立 `ChunkingChannelListener` 並傳遞至內部通道接聽程式的相似實作。  
   
@@ -303,7 +303,7 @@ interface ITestService
 ### <a name="determining-which-messages-to-chunk"></a>判斷要區塊處理的訊息  
  區塊處理通道只會區塊處理透過 `ChunkingBehavior` 屬性識別的訊息。 `ChunkingBehavior` 類別會實作 `IOperationBehavior`，並可透過呼叫 `AddBindingParameter` 方法來實作。 在此方法中，`ChunkingBehavior` 會檢查其 `AppliesTo` 屬性的值 (`InMessage`、`OutMessage` 或這兩者)，以判斷應該區塊處理的訊息。 接著會取得每個訊息的動作 (從 `OperationDescription` 上的訊息集合)，並將該動作新增至 `ChunkingBindingParameter` 執行個體中所含的字串集合。 接著會將此 `ChunkingBindingParameter` 新增至提供的 `BindingParameterCollection`。  
   
- 當繫結項目建置通道處理站或通道接聽程式時，此 `BindingParameterCollection` 會從 `BindingContext` 內部傳遞至繫結中的每個繫結項目。 `ChunkingBindingElement`的實作`BuildChannelFactory<T>`和`BuildChannelListener<T>`提取此`ChunkingBindingParameter`超出`BindingContext’`s `BindingParameterCollection`。 `ChunkingBindingParameter` 中內含的動作集合接著會傳遞至 `ChunkingChannelFactory` 或 `ChunkingChannelListener`，後者接著會將動作集合傳遞至 `ChunkingDuplexSessionChannel`。  
+ 當繫結項目建置通道處理站或通道接聽程式時，此 `BindingParameterCollection` 會從 `BindingContext` 內部傳遞至繫結中的每個繫結項目。 `ChunkingBindingElement`的實作`BuildChannelFactory<T>`並`BuildChannelListener<T>`提取此`ChunkingBindingParameter`共`BindingContext’`s `BindingParameterCollection`。 `ChunkingBindingParameter` 中內含的動作集合接著會傳遞至 `ChunkingChannelFactory` 或 `ChunkingChannelListener`，後者接著會將動作集合傳遞至 `ChunkingDuplexSessionChannel`。  
   
 ## <a name="running-the-sample"></a>執行範例  
   
@@ -315,11 +315,11 @@ interface ITestService
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+2.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-3.  若要建置此方案，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+3.  若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-4.  若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+4.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 5.  先執行 Service.exe，然後執行 Client.exe，再查看兩個主控台視窗上的輸出。  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
-ms.openlocfilehash: 89d2c6476334080fb162eadd4b2bf5984970f3fd
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 34119d889c8d6600fdda12cac33192c32d8e0fa6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934677"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467120"
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>逐步解說：使用 ElementHost 控制項對應屬性
 
@@ -29,7 +29,7 @@ ms.locfileid: "42934677"
 
 -   擴充預設屬性對應。
 
-在此逐步解說中所述工作的完整程式碼清單，請參閱 <<c0> [ 對應屬性使用 ElementHost 控制項範例](http://go.microsoft.com/fwlink/?LinkID=160018)。
+在此逐步解說中所述工作的完整程式碼清單，請參閱 <<c0> [ 對應屬性使用 ElementHost 控制項範例](https://go.microsoft.com/fwlink/?LinkID=160018)。
 
 當您完成時，您將能夠對應[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]屬性，以對應[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]上裝載的項目屬性。
 
@@ -62,7 +62,7 @@ ms.locfileid: "42934677"
 
 4.  在 Windows Form 設計工具中開啟 `Form1`。 按兩下表單，以新增事件處理常式<xref:System.Windows.Forms.Form.Load>事件。
 
-5.  返回 Windows Form 設計工具，並新增事件處理常式的表單<xref:System.Windows.Forms.Control.Resize>事件。 如需詳細資訊，請參閱 <<c0> [ 如何： 使用設計工具建立事件處理常式](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)。
+5.  返回 Windows Form 設計工具，並新增事件處理常式的表單<xref:System.Windows.Forms.Control.Resize>事件。 如需詳細資訊，請參閱 <<c0> [ 如何： 使用設計工具建立事件處理常式](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)。
 
 6.  宣告<xref:System.Windows.Forms.Integration.ElementHost>欄位中`Form1`類別。
 
@@ -146,5 +146,5 @@ ms.locfileid: "42934677"
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Windows Forms 和 WPF 屬性對應](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
-- [WPF 設計工具](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)
+- [在 Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)
 - [逐步解說：在 Windows Forms 中裝載 WPF 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

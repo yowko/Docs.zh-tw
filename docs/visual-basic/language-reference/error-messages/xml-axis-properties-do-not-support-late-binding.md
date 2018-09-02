@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC31168
 ms.assetid: 45707363-55e4-4151-892d-d8729106355b
 ms.openlocfilehash: 8546ed0a5032d93bcf7320c96424b02b3b6d5fa3
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43000907"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467861"
 ---
 # <a name="xml-axis-properties-do-not-support-late-binding"></a>XML 軸屬性不支援晚期繫結
 不具類型的物件已參考 XML 軸屬性。  
