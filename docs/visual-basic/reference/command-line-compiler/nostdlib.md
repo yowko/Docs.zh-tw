@@ -9,11 +9,11 @@ ms.assetid: 140381b8-dc96-4ad5-ae11-792c9ed0be4d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3764409f13a00f6d8a050bfbdd0f59e537a5ded3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652714"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43456288"
 ---
 # <a name="-nostdlib-visual-basic"></a>-nostdlib (Visual Basic)
 可讓編譯器不會自動參考標準程式庫。  
@@ -25,16 +25,16 @@ ms.locfileid: "33652714"
 ```  
   
 ## <a name="remarks"></a>備註  
- `-nostdlib`選項會自動參考之 System.dll 組件，並可防止編譯器讀取 Vbc.rsp 檔案進行。 Vbc.rsp 檔案，位於與 Vbc.exe 檔案相同的目錄中，參考常用[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]組件和匯入`System`和`Microsoft.VisualBasic`命名空間。  
+ `-nostdlib`選項會移除自動 System.dll 組件參考，並可防止編譯器讀取 Vbc.rsp 檔案。 Vbc.rsp 檔案，位於與 Vbc.exe 檔案相同的目錄中，參考常用[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]組件和匯入`System`和`Microsoft.VisualBasic`命名空間。  
   
 > [!NOTE]
 >  一律會參考 Mscorlib.dll 和 Microsoft.VisualBasic.dll 的組件。  
   
 > [!NOTE]
->  `-nostdlib`選項不是從 Visual Studio 開發環境中使用; 其只有在從命令列編譯時。  
+>  `-nostdlib`選項不是從 Visual Studio 開發環境中使用; 只有在從命令列編譯時均可使用。  
   
 ## <a name="example"></a>範例  
- 下列程式碼編譯`T2.vb`不需參考標準程式庫。 您必須設定`_MYTYPE`字串 「 空白 」 移除的條件式編譯常數`My`物件。  
+ 下列程式碼編譯`T2.vb`而不需要參考標準程式庫。 您必須設定`_MYTYPE`字串 「 空白 」，若要移除的條件式編譯常數`My`物件。  
   
 ```console
 vbc -nostdlib -define:_MYTYPE=\"Empty\" T2.vb  

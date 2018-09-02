@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 0f2126a83e6a5638eb492bb2a529dbf4cdab1714
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69c7e30168686eeb7d530b167b1f87c567c63874
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408628"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463191"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>操作說明：使用 WIF 追蹤對宣告感知應用程式和服務進行偵錯
 ## <a name="applies-to"></a>適用於  
@@ -60,7 +60,7 @@ ms.locfileid: "33408628"
   
 #### <a name="to-configure-wif-tracing-using-webconfig-configuration-file"></a>使用 Web.config 組態檔來設定 WIF 追蹤  
   
-1.  在方案總管中按兩下根 **Web.config** 或 **App.config** 組態檔，以在 Visual Studio 編輯器中將其開啟。 如果您的方案沒有 **Web.config** 或 **App.config** 組態檔，請在方案總管 中，以滑鼠右鍵按一下該方案，並按一下 [新增]，然後按一下 [新增項目...]，以新增檔案。 在 [新增項目] 對話方塊中，從清單選取 [應用程式組態檔] \(若要使用 **App.config**) 或 [Web 組態檔] \(若要使用 **Web.config**)，然後按一下 [確定]。  
+1.  在方案總管中按兩下根 **Web.config** 或 **App.config** 組態檔，以在 Visual Studio 編輯器中將其開啟。 如果您的方案沒有 **Web.config** 或 **App.config** 組態檔，請在方案總管 中，以滑鼠右鍵按一下該方案，並按一下 [新增]，然後按一下 [新增項目...]，以新增檔案。 在 [新增項目] 對話方塊中，從清單選取 [應用程式組態檔] (若要使用 **App.config**) 或 [Web 組態檔] (若要使用 **Web.config**)，然後按一下 [確定]。  
   
 2.  將類似下列的組態項目新增至組態檔，位於組態檔結尾的 **\<configuration>** 節點中：  
   
@@ -77,14 +77,14 @@ ms.locfileid: "33408628"
     </system.diagnostics>  
     ```  
   
-3.  上述組態會指示 WIF 產生詳細追蹤事件，並將其記錄在 *WIFTrace.e2e* 檔案中。 如需 **switchValue** 變數值的完整清單，請參閱下列主題中的「追蹤層級」表格：[設定追蹤](http://msdn.microsoft.com/library/ms733025.aspx)。  
+3.  上述組態會指示 WIF 產生詳細追蹤事件，並將其記錄在 *WIFTrace.e2e* 檔案中。 如需 **switchValue** 變數值的完整清單，請參閱下列主題中的「追蹤層級」表格：[設定追蹤](../wcf/diagnostics/tracing/configuring-tracing.md)。  
   
 ## <a name="step-2--analyze-wif-trace-files-using-trace-viewer-tool"></a>步驟 2 – 使用追蹤檢視器工具來分析 WIF 追蹤檔案  
  在此步驟中，您要使用追蹤檢視器工具 (SvcTraceViewer.exe) 來分析 WIF 追蹤記錄檔。  
   
 #### <a name="to-analyze-wif-trace-logs-using-trace-viewer-tool-svctraceviewerexe"></a>使用追蹤檢視器工具 (SvcTraceViewer.exe) 來分析 WIF 追蹤記錄檔  
   
-1.  追蹤檢視器工具 (SvcTraceViewer.exe) 隨附於 Windows SDK。 如果您還沒有安裝 Windows SDK，可以在這裡下載：[Windows SDK](http://www.microsoft.com/download/en/details.aspx?id=8279)。  
+1.  追蹤檢視器工具 (SvcTraceViewer.exe) 隨附於 Windows SDK。 如果您還沒有安裝 Windows SDK，可以在這裡下載：[Windows SDK](https://www.microsoft.com/download/en/details.aspx?id=8279)。  
   
 2.  執行追蹤檢視器工具 (SvcTraceViewer.exe)。 它通常會在安裝路徑的 **Bin** 資料夾中。  
   
@@ -105,8 +105,8 @@ ms.locfileid: "33408628"
   
 |**錯誤識別碼**|**錯誤訊息**|**修正錯誤所需的動作**|  
 |-|-|-|  
-|ID4175|IssuerNameRegistry 無法辨識安全性權杖的簽發者。  若要接受來自這個簽發者的安全性權杖，請設定 IssuerNameRegistry，以傳回此簽發者的有效名稱。|造成此錯誤的原因，可能是您從 MMC 嵌入式管理單元複製指紋，並將其貼到 *Web.config* 檔案中。 具體而言，您可以在從憑證屬性視窗複製時，在文字字串中取得額外的不可列印字元。 這個額外的字元導致憑證指紋比對會失敗。可以在這裡找到正確複製憑證指紋的程序： [http://msdn.microsoft.com/library/ff359102.aspx](http://msdn.microsoft.com/library/ff359102.aspx)|  
+|ID4175|IssuerNameRegistry 無法辨識安全性權杖的簽發者。  若要接受來自這個簽發者的安全性權杖，請設定 IssuerNameRegistry，以傳回此簽發者的有效名稱。|造成此錯誤的原因，可能是您從 MMC 嵌入式管理單元複製指紋，並將其貼到 *Web.config* 檔案中。 具體而言，您可以在從憑證屬性視窗複製時，在文字字串中取得額外的不可列印字元。 這個額外的字元導致指紋比對會失敗。可以在這裡找到正確複製指紋的程序： [http://msdn.microsoft.com/library/ff359102.aspx](https://msdn.microsoft.com/library/ff359102.aspx)|  
   
 ## <a name="related-items"></a>相關項目  
   
--   [使用服務追蹤檢視器檢視相關追蹤並進行疑難排解](http://msdn.microsoft.com/library/aa751795.aspx)
+-   [使用服務追蹤檢視器檢視相關追蹤並進行疑難排解](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
