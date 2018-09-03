@@ -8,108 +8,108 @@ helpviewer_keywords:
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c397a325edb49e3f10a46b242888b8d138957af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 44ca428c028f9c3ee0a5e9a087f95af627d49f25
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33462373"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470099"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>強式命名 (Unmanaged API 參考)
-強式命名 API 可讓用戶端管理強式名稱簽署組件。  
+強式命名 API 可讓用戶端管理組件的強式命名簽署。  
   
- 使用強式名稱簽署組件，就會將公開金鑰加密加入含有組件資訊清單的檔案中。 強式名稱簽署可協助驗證唯一名稱，可防止冒用名稱，並解析參考時呼叫端提供的唯一識別。 不過，任何層級不是信任的強式名稱與相關聯。  
+ 使用強式名稱簽署組件，就會將公開金鑰加密加入含有組件資訊清單的檔案中。 強式名稱簽署可協助驗證名稱唯一性，防止名稱冒用，並且在解析參考時為呼叫者提供唯一身分識別。 但是，並沒有任何信任等級與強式名稱關聯。  
   
 ## <a name="in-this-section"></a>本節內容  
- [強式命名全域靜態函式](http://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
- 描述的 unmanaged 全域靜態函式強式命名 API 所使用。  
+ [強式命名全域靜態函式](https://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
+ 說明強式命名 API 所使用的非受控全域靜態函式。  
   
 > [!NOTE]
->  所有這些函式被取代開頭為[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。 建議的替代項目，請參閱[ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)介面。  
+>  從 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] 開始，所有這些函式都已過時。 如需建議的替代函式，請參閱 [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md) 介面。  
   
  [GetHashFromAssemblyFile 函式](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromassemblyfile-function.md)  
- 取得指定的組件檔案，使用指定的雜湊演算法的雜湊。 起過時的[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。  
+ 使用指定的雜湊演算法取得所指定組件檔案的雜湊。 從 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 開始過時。  
   
  [GetHashFromAssemblyFileW 函式](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromassemblyfilew-function.md)  
- 取得指定的 Unicode 字串，使用指定的雜湊演算法的組件檔案的雜湊。 起過時的[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。  
+ 使用指定的雜湊演算法取得以 Unicode 字串形式指定的組件檔案雜湊。 從 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 開始過時。  
   
  [GetHashFromBlob 函式](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromblob-function.md)  
- 取得該組件的雜湊指定的記憶體位址，使用指定的雜湊演算法。 起過時的[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。  
+ 使用指定的雜湊演算法取得位於指定記憶體位址之組件的雜湊。 從 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 開始過時。  
   
  [GetHashFromFile 函式](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromfile-function.md)  
- 透過指定檔案的內容中產生之雜湊。  起過時的[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。  
+ 產生指定檔案內容的雜湊。  從 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 開始過時。  
   
  [GetHashFromFileW 函式](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromfilew-function.md)  
- 產生之雜湊的 Unicode 字串所指定的檔案內容。 起過時的[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。  
+ 產生以 Unicode 字串指定之檔案內容的雜湊。 從 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 開始過時。  
   
  [GetHashFromHandle 函式](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromhandle-function.md)  
- 產生之雜湊與指定的檔案控制代碼，使用指定的雜湊演算法檔案的內容。  起過時的[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。  
+ 使用指定的雜湊演算法產生以指定檔案控制代碼指定之檔案的雜湊。  從 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 開始過時。  
   
  [StrongNameCompareAssemblies 函式](../../../../docs/framework/unmanaged-api/strong-naming/strongnamecompareassemblies-function.md)  
- 判斷兩個組件是否只有其強式名稱簽章不同。 起過時的[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。  
+ 判斷兩個組件是否只有強制名稱簽章不同。 從 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 開始過時。  
   
  [StrongNameErrorInfo 函式](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)  
- 取得其中一個強式名稱的函式所引發的最後一個錯誤碼。  
+ 取得由其中一強式名稱函式所引發的最後一個錯誤代碼。  
   
  [StrongNameFreeBuffer 函式](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md)  
- 釋放記憶體配置與先前的強式名稱的函式呼叫這類[StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)， [StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md)，或[StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md).   起過時的[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。  
+ 釋放使用對強式名稱函式 (例如 [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)、[StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md) 或 [StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)) 的上一個呼叫所配置的記憶體。   從 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 開始過時。  
   
  [StrongNameGetBlob 函式](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetblob-function.md)  
- 在指定位址之可執行檔的二進位表示法中填入指定的緩衝區。 起過時的[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。  
+ 使用位於所指定位址之可執行檔的二進位表示法填滿指定的緩衝區。 從 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 開始過時。  
   
  [StrongNameGetBlobFromImage 函式](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetblobfromimage-function.md)  
- 取得組件映像的二進位表示法，在指定的記憶體位址。 起過時的[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。  
+ 取得位於所指定記憶體位置之組件影像的二進位表示法。 從 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 開始過時。  
   
  [StrongNameGetPublicKey 函式](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)  
- 從私密/公開金鑰組取得的公開金鑰。 起過時的[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。  
+ 從私密/公開金鑰組取得公開金鑰。 從 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 開始過時。  
   
  [StrongNameHashSize 函式](../../../../docs/framework/unmanaged-api/strong-naming/strongnamehashsize-function.md)  
- 取得所需的雜湊，並使用指定的雜湊演算法的緩衝區大小。  起過時的[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。  
+ 使用指定的雜湊演算法取得雜湊所需的緩衝區大小。  從 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 開始過時。  
   
  [StrongNameKeyDelete 函式](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeydelete-function.md)  
- 刪除指定的金鑰容器。 起過時的[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。  
+ 刪除指定的金鑰容器。 從 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 開始過時。  
   
  [StrongNameKeyGen 函式](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeygen-function.md)  
- 建立新公用/私密金鑰組的強式名稱使用。  起過時的[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。  
+ 建立將供強式名稱使用的新公開/私密金鑰組。  從 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 開始過時。  
   
  [StrongNameKeyGenEx 函式](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeygenex-function.md)  
- 會產生新的公用/私用金鑰組的強式名稱使用指定的金鑰大小。 起過時的[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。  
+ 使用指定的金鑰大小產生將供強式名稱使用的新公開/私密金鑰組。 從 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 開始過時。  
   
  [StrongNameKeyInstall 函式](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeyinstall-function.md)  
- 匯入容器的公開/私密金鑰組。  起過時的[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。  
+ 將公開/私密金鑰組匯入到容器中。  從 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 開始過時。  
   
  [StrongNameSignatureGeneration 函式](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)  
- 產生強式名稱簽章的指定組件。   起過時的[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。  
+ 產生指定組件的強式名稱簽章。   從 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 開始過時。  
   
  [StrongNameSignatureGenerationEx 函式](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegenerationex-function.md)  
- 指定的組件，並根據指定的旗標產生的強式名稱簽章。    起過時的[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。  
+ 以指定的旗標為基礎產生指定組件的強式名稱簽章。    從 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 開始過時。  
   
  [StrongNameSignatureSize 函式](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturesize-function.md)  
- 傳回強式名稱簽章的大小。 起過時的[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。  
+ 傳回強式名稱簽章的大小。 從 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 開始過時。  
   
  [StrongNameSignatureVerification 函式](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignatureverification-function.md)  
- 取得值，指出是否在提供的路徑上組件資訊清單包含強式名稱簽章，根據指定的旗標加以確認。 起過時的[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。  
+ 取得指出位於所指定路徑之組件資訊清單是否包含強式名稱簽章的值 (會根據指定的旗標驗證此值)。 從 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 開始過時。  
   
  [StrongNameSignatureVerificationEx 函式](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignatureverificationex-function.md)  
- 取得值，指出是否在提供的路徑上組件資訊清單包含強式名稱簽章。  起過時的[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。  
+ 取得指出位於指定路徑的組件資訊清單是否包含強式名稱簽章的值。  從 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 開始過時。  
   
  [StrongNameSignatureVerificationFromImage 函式](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignatureverificationfromimage-function.md)  
- 請確認已對應到記憶體的組件適用於相關聯的公開金鑰。 起過時的[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。  
+ 驗證已對應到記憶體的組件對關聯的公開金鑰而言有效。 從 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 開始過時。  
   
  [StrongNameTokenFromAssembly 函式](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md)  
- 從指定的組件檔案中建立強式名稱語彙基元。  起過時的[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。  
+ 從指定的組件檔案建立強式名稱權杖。  從 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 開始過時。  
   
  [StrongNameTokenFromAssemblyEx 函式](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassemblyex-function.md)  
- 從指定的組件檔案中，建立強式名稱語彙基元，並傳回公開金鑰。 起過時的[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。  
+ 從指定組件檔案建立強式名稱權杖，並傳回公開金鑰。 從 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 開始過時。  
   
  [StrongNameTokenFromPublicKey 函式](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md)  
- 取得代表公開金鑰的語彙基元。 起過時的[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。  
+ 取得代表公開金鑰的權杖。 從 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 開始過時。  
   
- [強式命名結構](http://msdn.microsoft.com/library/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  
- 描述強式命名 API 來管理強式名稱簽署組件所使用的 unmanaged 的結構...  
+ [強式命名結構](https://msdn.microsoft.com/library/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  
+ 說明非強式命名 API 用來管理組件之強式名稱簽署的非受控結構。  
   
  [PublicKeyBlob 結構](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
- 表示以二進位格式公開/私密金鑰組的公開金鑰。  
+ 代表公開/私密金鑰組的公開金鑰 (二進位格式)。  
   
 ## <a name="see-also"></a>另請參閱  
  [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)  

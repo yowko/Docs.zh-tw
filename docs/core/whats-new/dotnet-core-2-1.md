@@ -4,12 +4,12 @@ description: 了解 .NET Core 2.1 所提供的新功能。
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/06/2018
-ms.openlocfilehash: ec9a8d238dc47f604a1ac0ee7628bf079e89b9c2
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 2599908c81cbe046889778bbdf7aeb9f8272b215
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935575"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43392845"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 的新功能
 
@@ -49,7 +49,7 @@ ms.locfileid: "42935575"
    ```console
    dotnet watch -- --verbose build
    ```
-  
+
    請注意到位於 `--verbose` 選項之前的 `--` 選項。 它能將直接傳遞給 `dotnet watch` 命令的選項，與傳遞給子 `dotnet` 處理序的引數分隔開來。 如果沒有它的話，`--verbose` 選項將會套用至 `dotnet watch` 命令，而非 `dotnet build` 命令。
   
    如需詳細資訊，請參閱[使用 dotnet watch 開發 ASP.NET Core 應用程式](/aspnet/core/tutorials/dotnet-watch)
@@ -88,7 +88,7 @@ dotnet tool install -g dotnetsay
 
 ## <a name="roll-forward"></a>向前復原
 
-從 .NET Core 2.0 開始，所有 .NET Core 應用程式都會自動向前復原至系統上安裝的最新*次要版本*。 
+從 .NET Core 2.0 開始，所有 .NET Core 應用程式都會自動向前復原至系統上安裝的最新*次要版本*。
 
 從 .NET Core 2.0 開始，如果用來建置應用程式的 .NET Core 版本不存在於執行階段中，則應用程式會自動針對已安裝的最新 .NET Core *次要版本*執行。 換句話說，如果應用程式是使用 .NET Core 2.0 建置，而主機系統上不存在 .NET Core 2.0，但是有 .NET Core 2.1，則該應用程式會搭配 NET Core 2.1 執行。
 
@@ -233,6 +233,6 @@ AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", False)
 
 ## <a name="see-also"></a>另請參閱
 
-[.NET Core 的新功能](index.md)  
-[EF Core 2.1 的新功能](/ef/core/what-is-new/ef-core-2.1)  
-[ASP.NET Core 2.1 的新功能](/aspnet/core/aspnetcore-2.1)
+* [.NET Core 的新功能](index.md)  
+* [EF Core 2.1 的新功能](/ef/core/what-is-new/ef-core-2.1)  
+* [ASP.NET Core 2.1 的新功能](/aspnet/core/aspnetcore-2.1)

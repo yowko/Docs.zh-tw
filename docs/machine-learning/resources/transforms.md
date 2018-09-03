@@ -5,11 +5,11 @@ ms.date: 08/08/2018
 author: jralexander
 ms.author: johalex
 ms.openlocfilehash: 3c483f4a263052eb15435775a47f514893eee049
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43000853"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43397139"
 ---
 # <a name="data-transforms"></a>資料轉換
 

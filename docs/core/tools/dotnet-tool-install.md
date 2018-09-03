@@ -4,12 +4,12 @@ description: dotnet tool install 命令會在您的電腦上安裝指定的 .NET
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: f3068848910d6672a10ecfb639bac8e18a72818d
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: aad5a3e815936749d90f40975a8b13d34e89386c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697283"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43418717"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
@@ -21,7 +21,7 @@ ms.locfileid: "34697283"
 
 ## <a name="synopsis"></a>概要
 
-```
+```console
 dotnet tool install <PACKAGE_NAME> <-g|--global> [--add-source] [--configfile] [--framework] [-v|--verbosity] [--version]
 dotnet tool install <PACKAGE_NAME> <--tool-path> [--add-source] [--configfile] [--framework] [-v|--verbosity] [--version]
 dotnet tool install <-h|--help>
@@ -33,7 +33,7 @@ dotnet tool install <-h|--help>
 
 當您指定 `-g` (或 `--global`) 選項時，通用工具預設會安裝在下列目錄中：
 
-| OS          | 路徑                          |
+| 作業系統          | 路徑                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
@@ -98,4 +98,4 @@ dotnet tool install <-h|--help>
 
 ## <a name="see-also"></a>另請參閱
 
-[.NET Core 通用工具](global-tools.md)
+* [.NET Core 通用工具](global-tools.md)

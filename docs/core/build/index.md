@@ -4,12 +4,12 @@ description: 了解如何從原始程式碼建置 .NET Core 和 .NET Core CLI。
 author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: 55a35223a4bc11156e056cceb7f86365c4906222
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2623c5d21121b71960d174301c35bdd0d7f8558a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216005"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468794"
 ---
 # <a name="build-net-core-from-source"></a>從原始檔建置 .NET Core
 
@@ -21,6 +21,7 @@ ms.locfileid: "33216005"
 您可以在 GitHub 上的 [dotnet/coreclr](https://github.com/dotnet/coreclr/) 存放庫中找到 .NET Core CLR 的原始程式碼。
 
 此組建目前相依於下列必要條件：
+
 * [Git](https://git-scm.com/)
 * [CMake](https://cmake.org/)
 * [Python](https://www.python.org/)
@@ -30,35 +31,35 @@ ms.locfileid: "33216005"
 
 安裝的元件會隨著作業系統 (OS) 而有所不同。 請參閱特定 OS 的建置指示：
 
- * [Windows](https://github.com/dotnet/coreclr/blob/master/Documentation/building/windows-instructions.md)
- * [Linux](https://github.com/dotnet/coreclr/blob/master/Documentation/building/linux-instructions.md)
- * [macOS](https://github.com/dotnet/coreclr/blob/master/Documentation/building/osx-instructions.md)
- * [FreeBSD](https://github.com/dotnet/coreclr/blob/master/Documentation/building/freebsd-instructions.md) 
- * [NetBSD](https://github.com/dotnet/coreclr/blob/master/Documentation/building/netbsd-instructions.md)
+* [Windows](https://github.com/dotnet/coreclr/blob/master/Documentation/building/windows-instructions.md)
+* [Linux](https://github.com/dotnet/coreclr/blob/master/Documentation/building/linux-instructions.md)
+* [macOS](https://github.com/dotnet/coreclr/blob/master/Documentation/building/osx-instructions.md)
+* [FreeBSD](https://github.com/dotnet/coreclr/blob/master/Documentation/building/freebsd-instructions.md)
+* [NetBSD](https://github.com/dotnet/coreclr/blob/master/Documentation/building/netbsd-instructions.md)
 
 無法跨 OS 建置 (僅適用於建置在 X64 上的 ARM)。  
 您必須在特定平台上，才能建置該平台。  
 
 組建有兩個主要的 `buildTypes`：
 
- * 偵錯 (預設)：以最低最佳化來編譯執行階段，並進行額外的執行階段檢查 (判斷提示)。 降低最佳化層級與額外的檢查會讓執行階段的執行變慢，但是有助於偵錯。 這是開發和測試環境的建議設定。
- * 發行：以完整最佳化來編譯執行階段，且沒有額外的執行階段檢查。 如此會提高執行階段的效能，但是需要較長的建置時間，且偵錯較為困難。 若要選取此建置類型，請將 `release` 傳遞至建置指令碼。
+* 偵錯 (預設)：以最低最佳化來編譯執行階段，並進行額外的執行階段檢查 (判斷提示)。 降低最佳化層級與額外的檢查會讓執行階段的執行變慢，但是有助於偵錯。 這是開發和測試環境的建議設定。
+* 發行：以完整最佳化來編譯執行階段，且沒有額外的執行階段檢查。 如此會提高執行階段的效能，但是需要較長的建置時間，且偵錯較為困難。 若要選取此建置類型，請將 `release` 傳遞至建置指令碼。
 
 此外根據預設，組建不只會建立執行階段可執行檔，也會建立所有測試。
 由於有相當多的測試，因此如果您只想要試驗變更，這些測試會花費不必要的大量時間。
 您可以將 `skiptests` 引數新增至建置指令碼來略過建立測試，如下列範例所示 (在 Unix 電腦上請將 `.\build` 取代為 `./build.sh`)：
 
 ```bat
-    .\build skiptests 
+    .\build skiptests
 ```
 
 前一個範例示範如何建置啟用開發階段檢查 (判斷提示) 並停用最佳化的 `Debug` 類別。 若要建置發行 (全速) 類別，請執行下列程式碼：
 
-```bat 
+```bat
     .\build release skiptests
 ```
 
-您可以使用 -? 或 -help 限定詞，找到此組建的更多建置選項。   
+您可以使用 -? 或 -help 限定詞，找到此組建的更多建置選項。
 
 ### <a name="using-your-build"></a>使用您的組建
 
@@ -71,7 +72,7 @@ ms.locfileid: "33216005"
 您有兩個基本技術可使用新的執行階段：
 
  1. **使用 dotnet.exe 和 NuGet 撰寫應用程式**。
-    如需使用您剛建立的 NuGet 套件和 'dotnet' 命令列介面 (CLI) 來建立使用新執行階段之程式的指示，請參閱 [Using your .NET Core Runtime Build](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingYourBuild.md) (使用您的 .NET Core 執行階段組建)。 非執行階段開發人員預期可能會使用這項技術來取用您的新執行階段。    
+    如需使用您剛建立的 NuGet 套件和 'dotnet' 命令列介面 (CLI) 來建立使用新執行階段之程式的指示，請參閱 [Using your .NET Core Runtime Build](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingYourBuild.md) (使用您的 .NET Core 執行階段組建)。 非執行階段開發人員預期可能會使用這項技術來取用您的新執行階段。
 
  2. **使用 corerun.exe 透過未封裝的 DLL 執行應用程式**。
     此存放庫也會定義一個與 NuGet 沒有任何相依性的簡單主機，稱為 corerun.exe。
@@ -86,11 +87,11 @@ ms.locfileid: "33216005"
 若要建置 .NET Core CLI，您需要在電腦上安裝下列項目。
 
 * Windows 和 Linux：
-    - PATH 上的 git
+  * PATH 上的 git
 * macOS：
-    - PATH 上的 git
-    - Xcode
-    - Openssl
+  * PATH 上的 git
+  * Xcode
+  * Openssl
 
 若要建置，請從根目錄執行 `build.cmd` (在 Windows 上) 或 `build.sh` (在 Linux 和 macOS 上)。 如果您不想要執行測試，請執行 `build.cmd /t:Compile` 或 `./build.sh /t:Compile`。 若要在 macOS Sierra 中建置 CLI，您必須執行 `export DOTNET_RUNTIME_ID=osx.10.11-x64` 來設定 DOTNET_RUNTIME_ID 環境變數。
 

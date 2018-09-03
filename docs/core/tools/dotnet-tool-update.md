@@ -4,12 +4,12 @@ description: dotnet tool update 命令會更新您電腦上指定的 .NET Core �
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 35a0bd0f85f0beed06d4250d8f195ce4fe4fcca4
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 90b0dc91f74d890420dc7185642aa89100cadba8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696685"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389468"
 ---
 # <a name="dotnet-tool-update"></a>dotnet tool update
 
@@ -21,7 +21,7 @@ ms.locfileid: "34696685"
 
 ## <a name="synopsis"></a>概要
 
-```
+```console
 dotnet tool update <PACKAGE_NAME> <-g|--global> [--configfile] [--framework] [-v|--verbosity]
 dotnet tool update <PACKAGE_NAME> <--tool-path> [--configfile] [--framework] [-v|--verbosity]
 dotnet tool update <-h|--help>
@@ -83,4 +83,4 @@ dotnet tool update <-h|--help>
 
 ## <a name="see-also"></a>另請參閱
 
-[.NET Core 通用工具](global-tools.md)
+* [.NET Core 通用工具](global-tools.md)

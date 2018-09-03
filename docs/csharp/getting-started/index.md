@@ -7,13 +7,14 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/23/2017
-ms.openlocfilehash: 8c9b2803819b4ffcf0edce7994b9fdbc1c6c6951
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aa34c181073d089d137ac0ef64c85c8fe2772093
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398063"
 ---
-# <a name="get-started-with-c"></a>開始使用 C# #
+# <a name="get-started-with-c"></a>開始使用 C\#
 
 本節提供簡短且簡單的教學課程，可讓您使用 C# 和 .NET Core 快速建置應用程式。 本節內容涵蓋適用於 Visual Studio 2017 和 Visual Studio Code 的使用者入門主題。 您可以建置一個簡單的 Hello World 應用程式，或者，如果您擁有 Visual Studio 2017，則能建置可供其他應用程式使用的簡單類別庫。
 
@@ -62,4 +63,5 @@ ms.lasthandoff: 05/04/2018
     提供使用 C# 之程式設計逐步解說及個別逐步解說之簡短描述的連結。
 
 ## <a name="see-also"></a>另請參閱
- [使用 Visual Studio 的 Visual C# 和 Visual Basic 使用者入門](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+
+* [使用 Visual Studio 的 Visual C# 和 Visual Basic 使用者入門](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

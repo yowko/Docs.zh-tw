@@ -63,6 +63,7 @@
 
 <!-- .NET Core Content -->
 # [.NET Core 指南](core/index.md)
+## [關於 .NET Core](core/about.md)
 ## [開始使用](core/get-started.md)
 ### [C# 與 Visual Studio Code 使用者入門](core/tutorials/with-visual-studio-code.md)
 ### [在 Visual Studio 2017 中使用 .NET Core 建置 C# Hello World 應用程式](core/tutorials/with-visual-studio.md)
@@ -108,6 +109,7 @@
 ### [建置 .NET Core 應用程式的 Docker 映像](core/docker/building-net-docker-images.md)
 ### [Visual Studio Tools for Docker](/aspnet/core/publishing/visual-studio-tools-for-docker)
 ## [單元測試](core/testing/index.md)
+### [單元測試最佳做法](core/testing/unit-testing-best-practices.md)
 ### [使用 xUnit 進行 C# 單元測試](core/testing/unit-testing-with-dotnet-test.md)
 ### [使用 NUnit 進行 C# 單元測試](core/testing/unit-testing-with-nunit.md)
 ### [使用 MSTest 進行 C# 單元測試](core/testing/unit-testing-with-mstest.md)
@@ -121,7 +123,10 @@
 ### [單元測試已發行輸出](core/testing/unit-testing-published-output.md)
 ### [搭配 Visual Studio 的 .NET Core 專案即時單元測試](/visualstudio/test/live-unit-testing-start)
 ## [版本控制](core/versions/index.md)
+### [.NET Core 版本歷程記錄](core/versions/version-history.md)
 ### [.NET Core 版本選取項目](core/versions/selection.md)
+### [.NET Core 安裝管理](core/versions/install-management.md)
+### [移除過時的執行階段與 SDK](core/versions/remove-runtime-sdk-versions.md)
 ## [執行階段識別項目錄](core/rid-catalog.md)
 ## [.NET Core SDK 概觀](core/sdk.md)
 ## [.NET Core CLI 工具](core/tools/index.md)
@@ -293,7 +298,6 @@
 <!-- F# Content -->
 # [F# 指南](fsharp/index.md)
 
-## [F# 的教學課程](fsharp/tour.md)
 ## [開始使用](fsharp/get-started/index.md)
 ### [安裝 F#](fsharp/get-started/install-fsharp.md)
 ### [Visual Studio 使用者入門](fsharp/get-started/get-started-visual-studio.md)
@@ -301,38 +305,19 @@
 ### [Visual Studio Code 和 Ionide 開始使用](fsharp/get-started/get-started-vscode.md)
 ### [開始使用 .NET Core CLI](fsharp/get-started/get-started-command-line.md)
 
-## [F# 樣式指南](fsharp/style-guide/index.md)
-### [F# 程式碼格式化方針](fsharp/style-guide/formatting.md)
-### [F# 程式碼慣例](fsharp/style-guide/conventions.md)
-### [F# 元件設計方針](fsharp/style-guide/component-design-guidelines.md)
+## [F# 是什麼](fsharp/what-is-fsharp.md)
+## [F# 的教學課程](fsharp/tour.md)
 
 ## 教學課程
-### [F# Interactive](fsharp/tutorials/fsharp-interactive/index.md)
+### 函式程式設計簡介
+#### [作為優先使用值的函式](fsharp/introduction-to-functional-programming/functions-as-first-class-values.md)
+### 非同步和並行程式設計
+#### [非同步程式設計](fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
 ### [類型提供者](fsharp/tutorials/type-providers/index.md)
 #### [建立型別提供者](fsharp/tutorials/type-providers/creating-a-type-provider.md)
 #### [類型提供者安全性](fsharp/tutorials/type-providers/type-provider-security.md)
 #### [類型提供者疑難排解](fsharp/tutorials/type-providers/troubleshooting-type-providers.md)
-
-<!--## [Introduction to Functional Programming](fsharp/introduction-to-functional-programming/index.md)-->
-## 函式程式設計簡介
-### [作為優先使用值的函式](fsharp/introduction-to-functional-programming/functions-as-first-class-values.md)
-
-<!--### [Asynchronous and Concurrent Programming](fsharp/tutorials/asynchronous-and-concurrent-programming/index.md)-->
-### 非同步和並行程式設計
-#### [非同步程式設計](fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
-
-<!--## [Using F# in Visual Studio](fsharp/using-fsharp-in-visual-studio/index.md)-->
-### [Visual F# 開發環境功能](fsharp/using-fsharp-in-visual-studio/visual-fsharp-development-environment-features.md)
-### [設定專案](fsharp/using-fsharp-in-visual-studio/configuring-projects.md)
-### [以舊版 .NET 為目標](fsharp/using-fsharp-in-visual-studio/targeting-older-versions-of-net.md)
-
-## [在 Azure 上使用 F#](fsharp/using-fsharp-on-azure/index.md)
-### [開始使用 F# 來使用 Azure Blob 儲存體](fsharp/using-fsharp-on-azure/blob-storage.md)
-### [開始使用 F# 來使用 Azure 檔案儲存體](fsharp/using-fsharp-on-azure/file-storage.md)
-### [開始使用 F# 來使用 Azure 佇列儲存體](fsharp/using-fsharp-on-azure/queue-storage.md)
-### [開始使用 F# 來使用 Azure 資料表儲存體](fsharp/using-fsharp-on-azure/table-storage.md)
-<!--### [Using F# on Azure Service Fabric](fsharp/using-fsharp-on-azure/using-fsharp-on-azure-service-fabric.md)-->
-### [F# Azure 相依性的套件管理](fsharp/using-fsharp-on-azure/package-management.md)
+### [F# Interactive](fsharp/tutorials/fsharp-interactive/index.md)
 
 ## [F# 語言參考](fsharp/language-reference/index.md)
 ### [關鍵字參考](fsharp/language-reference/keyword-reference.md)
@@ -361,6 +346,7 @@
 ### [F# 集合類型](fsharp/language-reference/fsharp-collection-types.md)
 ### [清單](fsharp/language-reference/lists.md)
 ### [選項](fsharp/language-reference/options.md)
+### [值選項](fsharp/language-reference/value-options.md)
 ### [結果](fsharp/language-reference/results.md)
 ### [序列](fsharp/language-reference/sequences.md)
 ### [陣列](fsharp/language-reference/arrays.md)
@@ -431,26 +417,37 @@
 ### [原始碼程式行、檔案與路徑識別項](fsharp/language-reference/source-line-file-path-identifiers.md)
 ### [呼叫端資訊](fsharp/language-reference/caller-information.md)
 ### [詳細語法](fsharp/language-reference/verbose-syntax.md)
-### [程式碼格式化方針](fsharp/language-reference/code-formatting-guidelines.md)
+
+## [F# 樣式指南](fsharp/style-guide/index.md)
+### [F# 程式碼格式化方針](fsharp/style-guide/formatting.md)
+### [F# 程式碼慣例](fsharp/style-guide/conventions.md)
+### [F# 元件設計方針](fsharp/style-guide/component-design-guidelines.md)
+
+## [在 Azure 上使用 F#](fsharp/using-fsharp-on-azure/index.md)
+### [開始使用 F# 來使用 Azure Blob 儲存體](fsharp/using-fsharp-on-azure/blob-storage.md)
+### [開始使用 F# 來使用 Azure 檔案儲存體](fsharp/using-fsharp-on-azure/file-storage.md)
+### [開始使用 F# 來使用 Azure 佇列儲存體](fsharp/using-fsharp-on-azure/queue-storage.md)
+### [開始使用 F# 來使用 Azure 資料表儲存體](fsharp/using-fsharp-on-azure/table-storage.md)
+### [F# Azure 相依性的套件管理](fsharp/using-fsharp-on-azure/package-management.md)
 <!-- End F# Content -->
 
 <!-- VB Content -->
 # [Visual Basic 指南](visual-basic/index.md)
+## [Visual Basic 的新功能](visual-basic/getting-started/whats-new.md)
 ## [開始使用](visual-basic/getting-started/index.md)
-### [Visual Basic 的新功能](visual-basic/getting-started/whats-new.md)
 ### [Visual Studio 中 Visual Basic 的重大變更](visual-basic/getting-started/breaking-changes-in-visual-studio.md)
 ### [Visual Basic 程式設計人員的其他資源](visual-basic/getting-started/additional-resources.md)
 
 ## [開發應用程式](visual-basic/developing-apps/index.md)
 
 ### [Visual Basic 中的程式設計](visual-basic/developing-apps/programming/index.md)
-#### [存取電腦資源](visual-basic/developing-apps/programming/computer-resources/computer-resources.md)
-#### [記錄來自應用程式的資訊](visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
+#### [存取電腦資源](visual-basic/developing-apps/programming/computer-resources/index.md)
+#### [記錄來自應用程式的資訊](visual-basic/developing-apps/programming/log-info/index.md)
 #### [存取使用者資料](visual-basic/developing-apps/programming/accessing-user-data.md)
 #### [存取應用程式表單](visual-basic/developing-apps/programming/accessing-application-forms.md)
 #### [存取應用程式 Web 服務](visual-basic/developing-apps/programming/accessing-application-web-services.md)
 ##### [操作說明：非同步呼叫 Web 服務](visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)
-#### [存取應用程式設定](visual-basic/developing-apps/programming/app-settings/accessing-application-settings.md)
+#### [存取應用程式設定](visual-basic/developing-apps/programming/app-settings/index.md)
 #### [處理磁碟機、目錄和檔案](visual-basic/developing-apps/programming/drives-directories-files/processing.md)
 
 ### [使用 My 進行開發](visual-basic/developing-apps/development-with-my/index.md)
@@ -463,7 +460,7 @@
 ### [存取資料](visual-basic/developing-apps/accessing-data.md)
 ### [建立和使用元件](visual-basic/developing-apps/creating-and-using-components.md)
 
-### [列印和報告](visual-basic/developing-apps/printing/printing-and-reporting.md)
+### [列印和報告](visual-basic/developing-apps/printing/index.md)
 #### [PrintForm 元件](visual-basic/developing-apps/printing/printform-component.md)
 #### [操作說明：列印可捲動的表單](visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)
 #### [操作說明：列印表單的工作區和非工作區](visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)
@@ -472,29 +469,9 @@
 #### [部署參考 PrintForm 元件的應用程式](visual-basic/developing-apps/printing/deploying-applications-that-reference-the-printform-component.md)
 #### [將可列印的報表加入至 Visual Studio 應用程式](visual-basic/developing-apps/printing/adding-printable-reports-to-visual-studio-applications.md)
 
-### [Windows Form 應用程式的基本概念](visual-basic/developing-apps/windows-forms/windows-forms-application-basics.md)
-### [Power Pack 控制項](visual-basic/developing-apps/windows-forms/power-packs-controls.md)
-### [DataRepeater 控制項](visual-basic/developing-apps/windows-forms/datarepeater-control-visual-studio.md)
-#### [DataRepeater 控制項簡介](visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)
-#### [DataRepeater 控制項中的虛擬模式](visual-basic/developing-apps/windows-forms/virtual-mode-in-the-datarepeater-control-visual-studio.md)
-#### [操作說明：在 DataRepeater 控制項中顯示繫結資料](visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)
-#### [操作說明：在 DataRepeater 控制項中顯示未繫結的控制項](visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)
-#### [操作說明：變更 DataRepeater 控制項的配置](visual-basic/developing-apps/windows-forms/how-to-change-the-layout-of-a-datarepeater-control-visual-studio.md)
-#### [操作說明：變更 DataRepeater 控制項的外觀](visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)
-#### [操作說明：在 DataRepeater 控制項中顯示項目標題](visual-basic/developing-apps/windows-forms/how-to-display-item-headers-in-a-datarepeater-control-visual-studio.md)
-#### [操作說明：停用加入和刪除 DataRepeater 項目](visual-basic/developing-apps/windows-forms/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio.md)
-#### [操作說明：搜尋 DataRepeater 控制項中的資料](visual-basic/developing-apps/windows-forms/how-to-search-data-in-a-datarepeater-control-visual-studio.md)
-#### [操作說明：使用兩個 DataRepeater 控制項建立主從式表單](visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md)
-#### [逐步解說：在 DataRepeater 控制項中顯示資料](visual-basic/developing-apps/windows-forms/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio.md)
-#### [ DataRepeater 控制項進行疑難排解](visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)
-### [Line 和 Shape 控制項](visual-basic/developing-apps/windows-forms/line-and-shape-controls-visual-studio.md)
-#### [Line 和 Shape 控制項簡介](visual-basic/developing-apps/windows-forms/introduction-to-the-line-and-shape-controls-visual-studio.md)
-#### [操作說明：使用 LineShape 控制項繪製線條](visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)
-#### [操作說明：使用 OvalShape 和 RectangleShape 控制項繪製圖案](visual-basic/developing-apps/windows-forms/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls.md)
-#### [操作說明：在圖案間啟用定位停駐點](visual-basic/developing-apps/windows-forms/how-to-enable-tabbing-between-shapes-visual-studio.md)
-#### [部署參考 Power Pack 控制項的應用程式](visual-basic/developing-apps/windows-forms/deploying-applications-that-reference-power-packs-controls-visual-studio.md)
+### [Windows Form 應用程式的基本概念](visual-basic/developing-apps/windows-forms/index.md)
 
-### [使用 Visual Basic 自訂專案和擴充 My](visual-basic/developing-apps/customizing-extending-my/customizing-projects-and-extending-my.md)
+### [使用 Visual Basic 自訂專案和擴充 My](visual-basic/developing-apps/customizing-extending-my/index.md)
 #### [擴充 My 命名空間](visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)
 #### [封裝和部署自訂的 My 擴充](visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)
 #### [擴充 Visual Basic 應用程式模型](visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)
@@ -588,7 +565,7 @@
 #### [字串操作摘要](visual-basic/language-reference/keywords/string-manipulation-summary.md)
 ### [屬性](visual-basic/language-reference/attributes.md)
 ### [常數和列舉](visual-basic/language-reference/constants-and-enumerations.md)
-### [資料類型摘要](visual-basic/language-reference/data-types/data-type-summary.md)
+### [資料類型摘要](visual-basic/language-reference/data-types/index.md)
 #### [Boolean 資料類型](visual-basic/language-reference/data-types/boolean-data-type.md)
 #### [Byte 資料類型](visual-basic/language-reference/data-types/byte-data-type.md)
 #### [Char 資料類型](visual-basic/language-reference/data-types/char-data-type.md)
@@ -606,7 +583,7 @@
 #### [ULong 資料類型](visual-basic/language-reference/data-types/ulong-data-type.md)
 #### [使用者定義的資料類型](visual-basic/language-reference/data-types/user-defined-data-type.md)
 #### [UShort 資料類型](visual-basic/language-reference/data-types/ushort-data-type.md)
-### [指示詞](visual-basic/language-reference/directives/directives.md)
+### [指示詞](visual-basic/language-reference/directives/index.md)
 #### [#Const 指示詞](visual-basic/language-reference/directives/const-directive.md)
 #### [#ExternalSource 指示詞](visual-basic/language-reference/directives/externalsource-directive.md)
 #### [#If...Then...#Else 指示詞](visual-basic/language-reference/directives/if-then-else-directives.md)
@@ -737,7 +714,7 @@
 #### [邏輯位元運算子](visual-basic/language-reference/operators/logical-bitwise-operators.md)
 #### [其他運算子](visual-basic/language-reference/operators/miscellaneous-operators.md)
 ### [屬性](visual-basic/language-reference/properties.md)
-### [查詢](visual-basic/language-reference/queries/queries.md)
+### [查詢](visual-basic/language-reference/queries/index.md)
 #### [Aggregate 子句](visual-basic/language-reference/queries/aggregate-clause.md)
 #### [Distinct 子句](visual-basic/language-reference/queries/distinct-clause.md)
 #### [Equals 子句](visual-basic/language-reference/queries/equals-clause.md)
@@ -827,7 +804,7 @@
 #### [屬性清單](visual-basic/language-reference/statements/attribute-list.md)
 #### [參數清單](visual-basic/language-reference/statements/parameter-list.md)
 #### [類型清單](visual-basic/language-reference/statements/type-list.md)
-### [XML 註解標記](visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+### [XML 註解標記](visual-basic/language-reference/xmldoc/index.md)
 #### [<c>](visual-basic/language-reference/xmldoc/c.md)
 #### [<code>](visual-basic/language-reference/xmldoc/code.md)
 #### [<example>](visual-basic/language-reference/xmldoc/example.md)
@@ -845,7 +822,7 @@
 #### [<summary>](visual-basic/language-reference/xmldoc/summary.md)
 #### [<typeparam>](visual-basic/language-reference/xmldoc/typeparam.md)
 #### [<value>](visual-basic/language-reference/xmldoc/value.md)
-### [XML 軸屬性](visual-basic/language-reference/xml-axis/xml-axis-properties.md)
+### [XML 軸屬性](visual-basic/language-reference/xml-axis/index.md)
 #### [XML 屬性 (Attribute) 軸屬性 (Property)](visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
 #### [XML 子代軸屬性](visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
 #### [XML 子系軸屬性](visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)
@@ -1140,6 +1117,7 @@
 ### [機器學習服務字彙](machine-learning/resources/glossary.md)
 ### [機器學習服務基本概念](machine-learning/resources/basics.md)
 ### [機器學習服務工作](machine-learning/resources/tasks.md)
+### [資料轉換](machine-learning/resources/transforms.md)
 
 <!-- End ML.NET Content -->
 

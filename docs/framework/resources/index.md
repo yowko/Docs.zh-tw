@@ -1,8 +1,9 @@
 ---
-title: 桌面應用程式中的資源
-ms.date: 03/30/2017
+title: .NET 應用程式中的資源
+ms.date: 07/25/2018
 helpviewer_keywords:
 - deploying applications [.NET Framework], resources
+- deploying applications [.NET Core], resources
 - application resources
 - resource files
 - satellite assemblies
@@ -12,23 +13,21 @@ helpviewer_keywords:
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 023099adeeebf21b7dba631bde75332524eb0cc3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4bc91f5f3872ee5f4a55f3e3cd9e0e9de9bcc422
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399253"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408281"
 ---
-# <a name="resources-in-desktop-apps"></a>桌面應用程式中的資源
+# <a name="resources-in-net-apps"></a>.NET 應用程式中的資源
 幾乎每個實際執行品質應用程式都必須使用資源。 資源是任何使用應用程式以邏輯方式部署的非執行檔資料。 資源可能在應用程式中顯示作錯誤訊息，或做為使用者介面的一部分。 資源可以含有一些表單中的資料，包括字串、影像和永續性物件。 (若要將保留物件寫入資源檔，物件必須是可序列化的)。將資料儲存在資源檔中，可讓您不需要重新編譯整個應用程式即可變更資料。 也可讓您將資料儲存在單一位置，不需要依賴儲存在多個位置的硬式編碼資料。  
   
- .NET Framework 提供桌面應用程式中建立和當地語系化資源的完整支援。 此外，.NET Framework 支援簡單的模型以在桌面應用程式中封裝和部署這些當地語系化資源。  
+ .NET Framework 與 .NET Core 提供桌建立和當地語系化資源的完整支援。 此外，.NET 也支援簡單的模型以封裝及部署當地語系化資源。  
   
- 如需 ASP.NET 中資源的詳細資訊，請參閱 Internet Explorer 開發人員中心的 [ASP.NET 網頁資源概觀](http://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd)。  
+ 如需 ASP.NET 中資源的詳細資訊，請參閱 [ASP.NET 網頁資源概觀](https://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd)。  
   
- [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式使用的資源模型與傳統型應用程式不同，並且會將資源儲存在單一封裝資源索引 (PRI) 檔中。 如需 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式中資源的詳細資訊，請參閱 Windows 開發人員中心的[建立和擷取 Windows 市集應用程式中的資源](http://go.microsoft.com/fwlink/p/?LinkId=241674)。  
-  
-## <a name="creating-and-localizing-resources"></a>建立和當地語系化資源  
+ ## <a name="creating-and-localizing-resources"></a>建立和當地語系化資源  
  在非當地語系化的應用程式中，您可以使用資源檔做為應用程式資料的存放庫，特別是針對原始程式碼中多個位置的硬式編碼字串。 大多數情況下，您建立的資源是文字 (.txt) 或 XML (.resx) 檔案，並且使用 [Resgen.exe (資源檔產生器)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) 將它們編譯成二進位 .resources 檔。 然後這些檔案會由語言編譯器內嵌在應用程式的可執行檔。 如需有關建立資源檔的詳細資訊，請參閱[建立資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)。  
   
  您也可以針對特定文化特性當地語系化應用程式的資源。 這可讓您建置應用程式的當地語系化 (轉譯) 版本。 當您開發使用當地語系化資源的應用程式時，如果沒有適當的資源可供使用，您會指定文化特性做為其資源使用的中性或後援文化特性。 一般而言，中性文化特性的資源是儲存在應用程式的可執行檔中。 個別當地語系化文化特性的其餘資源會儲存在獨立的附屬組件。 如需詳細資訊，請參閱[建立附屬組件](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)。  
@@ -47,11 +46,11 @@ ms.locfileid: "33399253"
   
 -   如果未明確指派文化特性，則會從 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> 屬性擷取預設執行緒 UI 文化特性。  
   
--   如果未明確指派預設執行緒 UI 文化特性，為本機電腦上的目前使用者呼叫 Windows `GetUserDefaultUILanguage` 函式來擷取文化特性。  
+-   如果未明確指派預設執行緒 UI 文化特性 (透過在本機電腦上擷取目前使用者的文化特性)。 在 Windows 上執行的 .NET 實作透過呼叫 Windows [`GetUserDefaultUILanguage`](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage) 函式來執行此動作。  
   
  如需如何設定目前 UI 文化特性的詳細資訊，請參閱 <xref:System.Globalization.CultureInfo> 和 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> 參考頁面。  
   
- 然後，您可以使用 <xref:System.Resources.ResourceManager?displayProperty=nameWithType> 類別，針對目前 UI 文化特性或特定文化特性擷取資源。 雖然 <xref:System.Resources.ResourceManager> 類別最常用於擷取傳統型應用程式中的資源，<xref:System.Resources?displayProperty=nameWithType> 命名空間包含您可以用來擷取資源的額外類型。 它們包括：  
+ 然後，您可以使用 <xref:System.Resources.ResourceManager?displayProperty=nameWithType> 類別，針對目前 UI 文化特性或特定文化特性擷取資源。 雖然 <xref:System.Resources.ResourceManager> 類別最常用於擷取資源，<xref:System.Resources?displayProperty=nameWithType> 命名空間包含您可以用來擷取資源的額外類型。 它們包括：  
   
 -   <xref:System.Resources.ResourceReader> 類別，可讓您列舉內嵌在組件中，或儲存在獨立二進位 .resources 檔中的資源。 當您不知道資源在執行階段可用的確切名稱時，這個項目很有用。  
   
@@ -61,7 +60,7 @@ ms.locfileid: "33399253"
   
 -   <xref:System.Resources.ResXResourceSet> 類別，可讓您將 XML 資源檔中的所有項目擷取至記憶體。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Globalization.CultureInfo>  
  <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>  
  [應用程式基本概念](../../../docs/standard/application-essentials.md)  

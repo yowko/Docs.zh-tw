@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6c86870bf0089c25d402cf8f28a513e953ef28f
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 628c571ce645710482a29c813adb4fe1a59fd349
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933699"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400178"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>可攜式類別庫的跨平台開發
 Visual Studio 中的 .NET Framework 可攜式類別庫專案類型可幫助您快速、輕鬆地建立適用於 Microsoft 平台的跨平台應用程式和程式庫。  
@@ -25,7 +25,7 @@ Visual Studio 中的 .NET Framework 可攜式類別庫專案類型可幫助您�
   
  即使在 Visual Studio 中建立可攜式類別庫專案並開始開發之後，您還是可以變更目標平台。 Visual Studio 會用新組件來編譯您的程式庫，可幫助您識別程式碼中需要進行的變更。  
   
- 本文討論 Visual Studio 中的應用程式開發，但是 Microsoft 也有提供可攜式類別庫參考組件，可供您用來搭配其他工具 (例如 Xamarin) 開發應用程式和程式庫。 您可以在非 Microsoft 平台上的任何 .NET Framework 執行階段中使用這些應用程式和程式庫。 如需詳細的參考組件的詳細資訊，請參閱部落格文章[可攜式類別庫 (PCL) 現在適用於所有平台](http://blogs.msdn.com/b/dotnet/archive/2013/10/14/portable-class-library-pcl-now-available-on-all-platforms.aspx)。 若要下載組件，請參閱[Microsoft.NET 可攜式程式庫參考組件](http://www.microsoft.com/download/details.aspx?id=40727)在 Microsoft 下載中心取得。 如需如何搭配 Xamarin 使用組件的詳細資訊，請參閱部落格文章[PCL 和.NET NuGet 程式庫現在已為 Xamarin 啟用](http://blogs.msdn.com/b/dotnet/archive/2013/11/13/pcl-and-net-nuget-libraries-are-now-enabled-for-xamarin.aspx)。  
+ 本文討論 Visual Studio 中的應用程式開發，但是 Microsoft 也有提供可攜式類別庫參考組件，可供您用來搭配其他工具 (例如 Xamarin) 開發應用程式和程式庫。 您可以在非 Microsoft 平台上的任何 .NET Framework 執行階段中使用這些應用程式和程式庫。 如需詳細的參考組件的詳細資訊，請參閱部落格文章[可攜式類別庫 (PCL) 現在適用於所有平台](https://blogs.msdn.com/b/dotnet/archive/2013/10/14/portable-class-library-pcl-now-available-on-all-platforms.aspx)。 若要下載組件，請參閱[Microsoft.NET 可攜式程式庫參考組件](https://www.microsoft.com/download/details.aspx?id=40727)在 Microsoft 下載中心取得。 如需如何搭配 Xamarin 使用組件的詳細資訊，請參閱部落格文章[PCL 和.NET NuGet 程式庫現在已為 Xamarin 啟用](https://blogs.msdn.com/b/dotnet/archive/2013/11/13/pcl-and-net-nuget-libraries-are-now-enabled-for-xamarin.aspx)。  
   
  Visual Studio 有提供範本，可協助您用可攜式類別庫進行開發。 依據您使用的 Visual Studio 版本，可用的範本和功能表可能會與本文說明的內容不同。  
   
@@ -110,7 +110,7 @@ Visual Studio 2013 Update 2 的可攜式類別庫屬性頁
   
  當您變更目標時，可供您用來開發專案的 API 會變更，以配合您的選項。 Visual Studio 會提報因為目標變更而可能發生的錯誤和警告。  
   
- 如果您想要評估的可攜性的組件之前，請在 Visual Studio 中進行變更，您可以使用[.NET Portability Analyzer](http://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)。  
+ 如果您想要評估的可攜性的組件之前，請在 Visual Studio 中進行變更，您可以使用[.NET Portability Analyzer](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)。  
   
  功能表選項會依據您使用的 Visual Studio 版本而不同。  
   
@@ -224,6 +224,6 @@ Visual Studio 2012 中的變更目標對話方塊
 ## <a name="see-also"></a>另請參閱  
  [搭配 MVVM 使用可攜式類別庫](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)  
  [以多平台為目標之程式庫的應用程式資源](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)  
- [.NET portability Analyzer](http://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)  
+ [.NET portability Analyzer](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)  
  [Windows 市集應用程式和 Windows 執行階段的 .NET Framework 支援](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
  [部署](../../../docs/framework/deployment/net-framework-applications.md)

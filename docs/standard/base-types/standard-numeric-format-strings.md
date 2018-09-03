@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f20db5cfb13f788ae0f8670f0d1c3b221db3e43b
-ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
+ms.openlocfilehash: 7f304adb567e3568fb4624b3c5e9ec4585009a05
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2018
-ms.locfileid: "42753618"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403185"
 ---
 # <a name="standard-numeric-format-strings"></a>標準數值格式字串
 
@@ -33,8 +33,10 @@ ms.locfileid: "42753618"
   
 -   `xx` 是稱為「精確度規範」的選用性整數。 精確度規範的範圍從 0 到 99，而且會影響結果內的位數。 請注意，精確度規範可控制數字字串表示法中的位數。 它不會捨入數字本身。 若要執行捨入運算，請使用 <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>、<xref:System.Math.Floor%2A?displayProperty=nameWithType> 或 <xref:System.Math.Round%2A?displayProperty=nameWithType> 方法。  
   
-     當「有效位數規範」會控制結果字串中小數點後數字的位數時，結果字串就會反映往背離於零的方式捨入的數字 (亦即，使用 <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>)。  
-  
+    當「有效位數規範」控制結果字串中小數點後的位數，結果字串會反映已四捨五入為最接近無限精確度之可代表結果的數字。 若有兩個相等的近似可代表結果：
+    - **在 .NET Framework 與 .NET Core (最高版本 .NET Core 2.0) 上**，執行階段會選取具有較大之最不顯著位數 (亦即，使用 <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>) 的結果。
+    - **在 .NET Core 2.1 與更新版本上**，執行階段會選取具有偶數最不顯著位數 (亦即，使用 <xref:System.MidpointRounding.ToEven?displayProperty=nameWithType>) 的結果。 
+
     > [!NOTE]
     >  有效位數規範可判斷結果字串中的位數。 若要使用前置或尾端空格填補結果字串，請使用[複合格式設定](../../../docs/standard/base-types/composite-formatting.md)功能，並在格式項目中定義「對齊元件」。  
   
@@ -357,7 +359,7 @@ ms.locfileid: "42753618"
  [!code-csharp-interactive[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#1)]
  [!code-vb[system.x.tostring-and-culture#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.X.ToString-and-Culture/vb/xts.vb#1)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Globalization.NumberFormatInfo>  
  [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
  [格式化類型](../../../docs/standard/base-types/formatting-types.md)  

@@ -4,12 +4,12 @@ description: 了解 .NET Core 所提供的新功能。
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 59a1f61de365218d649e3392fbce84cd6d530ed5
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 02aac2dab2b892927c0c98fae30bb287a6e24ad6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34566320"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456883"
 ---
 # <a name="whats-new-in-net-core-20"></a>.NET Core 2.0 的新功能
 
@@ -30,7 +30,7 @@ ms.locfileid: "34566320"
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-您也可以透過將 `--no-restore` 參數傳遞至 `new`、`run`、`build`、`publish`、`pack`，以及 `test` 命令，來停用 `dotnet restore` 的自動引動過程。 
+您也可以透過將 `--no-restore` 參數傳遞至 `new`、`run`、`build`、`publish`、`pack`，以及 `test` 命令，來停用 `dotnet restore` 的自動引動過程。
 
 ### <a name="retargeting-to-net-core-20"></a>將目標重定至 .NET Core 2.0
 
@@ -76,7 +76,7 @@ ms.locfileid: "34566320"
 
    該命令會建立具有 `.vbproj` 副檔名的專案檔，以及名為 *Program.vb* 的 Visual Basic 原始程式碼檔。 此檔案包含將 "Hello World!" 字串寫入至主控台視窗的原始程式碼。
 
-1.  輸入 `dotnet run` 命令。 [.NET Core CLI](../tools/index.md) 會自動編譯並執行應用程式，該應用程式則會在主控台視窗中顯示 "Hello World!" 。
+1. 輸入 `dotnet run` 命令。 [.NET Core CLI](../tools/index.md) 會自動編譯並執行應用程式，該應用程式則會在主控台視窗中顯示 "Hello World!" 。
 
 ### <a name="support-for-c-71"></a>針對 C# 7.1 的支援
 
@@ -162,4 +162,5 @@ Visual Studio 2017 15.3 版 (以及某些情況下的 Visual Studio for Mac) 能
 - [使用 Azure 部署至雲端的應用程式](/azure/architecture/reference-architectures/index.md)
 
 ## <a name="see-also"></a>另請參閱
-[ASP.NET Core 2.0 的新功能](/aspnet/core/aspnetcore-2.0)
+
+* [ASP.NET Core 2.0 的新功能](/aspnet/core/aspnetcore-2.0)
