@@ -2,49 +2,390 @@
 title: 數學函式
 ms.date: 03/30/2017
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
-ms.openlocfilehash: 9dfd1faf9bdab995b19c38e32f64a88ed67cb280
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e6c58d781d7138f8295f2d0a2f0db110ad4b1dd6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766968"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456447"
 ---
-# <a name="mathematical-functions"></a><span data-ttu-id="49dda-102">數學函式</span><span class="sxs-lookup"><span data-stu-id="49dda-102">Mathematical Functions</span></span>
-<span data-ttu-id="49dda-103">.NET Framework Data Provider for SQL Server (SqlClient) 提供了數學函式，這些函式會在當做引數提供的輸入值上執行計算，並傳回數值結果。</span><span class="sxs-lookup"><span data-stu-id="49dda-103">The .NET Framework Data Provider for SQL Server (SqlClient) provides math functions that perform calculations on input values that are provided as arguments, and return a numeric value result.</span></span> <span data-ttu-id="49dda-104">這些函式位於您使用 SqlClient 時可以使用的 SqlServer 命名空間 (Namespace) 內。</span><span class="sxs-lookup"><span data-stu-id="49dda-104">These functions are in the SqlServer namespace, which is available when you use SqlClient.</span></span> <span data-ttu-id="49dda-105">提供者命名空間屬性可以讓 Entity Framework 了解此提供者對特定建構 (例如型別和函式) 所使用的前置詞。下表將描述 SqlClient 數學函式。</span><span class="sxs-lookup"><span data-stu-id="49dda-105">A provider's namespace property allows the Entity Framework to discover which prefix is used by this provider for specific constructs, such as types and functions.The following table describes the SqlClient math functions.</span></span>  
+# <a name="mathematical-functions"></a><span data-ttu-id="a7ba0-102">數學函式</span><span class="sxs-lookup"><span data-stu-id="a7ba0-102">Mathematical Functions</span></span>
+
+<span data-ttu-id="a7ba0-103">.NET Framework Data Provider for SQL Server (SqlClient) 提供了數學函式，這些函式會在當做引數提供的輸入值上執行計算，並傳回數值結果。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-103">The .NET Framework Data Provider for SQL Server (SqlClient) provides math functions that perform calculations on input values that are provided as arguments, and return a numeric value result.</span></span> <span data-ttu-id="a7ba0-104">這些函式位於您使用 SqlClient 時可以使用的 SqlServer 命名空間 (Namespace) 內。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-104">These functions are in the SqlServer namespace, which is available when you use SqlClient.</span></span> <span data-ttu-id="a7ba0-105">提供者命名空間屬性可以讓 Entity Framework 了解此提供者對特定建構 (例如型別和函式) 所使用的前置詞。下表將描述 SqlClient 數學函式。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-105">A provider's namespace property allows the Entity Framework to discover which prefix is used by this provider for specific constructs, such as types and functions.The following table describes the SqlClient math functions.</span></span>  
   
-|<span data-ttu-id="49dda-106">函式</span><span class="sxs-lookup"><span data-stu-id="49dda-106">Function</span></span>|<span data-ttu-id="49dda-107">描述</span><span class="sxs-lookup"><span data-stu-id="49dda-107">Description</span></span>|  
-|--------------|-----------------|  
-|<span data-ttu-id="49dda-108">`ABS(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="49dda-108">`ABS(` `expression` `)`</span></span>|<span data-ttu-id="49dda-109">執行絕對值函式。</span><span class="sxs-lookup"><span data-stu-id="49dda-109">Performs the absolute value function.</span></span><br /><br /> <span data-ttu-id="49dda-110">**引數**</span><span class="sxs-lookup"><span data-stu-id="49dda-110">**Arguments**</span></span><br /><br /> <span data-ttu-id="49dda-111">`expression`：`Int32`、`Int64`、`Double` 或 `Decimal`。</span><span class="sxs-lookup"><span data-stu-id="49dda-111">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="49dda-112">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="49dda-112">**Return Value**</span></span><br /><br /> <span data-ttu-id="49dda-113">指定之運算式的絕對值。</span><span class="sxs-lookup"><span data-stu-id="49dda-113">The absolute value of the specified expression.</span></span><br /><br /> <span data-ttu-id="49dda-114">**範例**</span><span class="sxs-lookup"><span data-stu-id="49dda-114">**Example**</span></span><br /><br /> `SqlServer.ABS(-2)`|  
-|<span data-ttu-id="49dda-115">`ACOS(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="49dda-115">`ACOS(` `expression` `)`</span></span>|<span data-ttu-id="49dda-116">傳回指定之運算式的反餘弦函數 (Arccosine) 值。</span><span class="sxs-lookup"><span data-stu-id="49dda-116">Returns the arccosine value of the specified expression.</span></span><br /><br /> <span data-ttu-id="49dda-117">**引數**</span><span class="sxs-lookup"><span data-stu-id="49dda-117">**Arguments**</span></span><br /><br /> <span data-ttu-id="49dda-118">`expression`：`Double`。</span><span class="sxs-lookup"><span data-stu-id="49dda-118">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="49dda-119">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="49dda-119">**Return Value**</span></span><br /><br /> <span data-ttu-id="49dda-120">`Double`。</span><span class="sxs-lookup"><span data-stu-id="49dda-120">A `Double`.</span></span><br /><br /> <span data-ttu-id="49dda-121">**範例**</span><span class="sxs-lookup"><span data-stu-id="49dda-121">**Example**</span></span><br /><br /> `SqlServer.ACOS(.9)`|  
-|<span data-ttu-id="49dda-122">`ASIN(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="49dda-122">`ASIN(` `expression` `)`</span></span>|<span data-ttu-id="49dda-123">傳回指定之運算式的反正弦函數 (Arcsine) 值。</span><span class="sxs-lookup"><span data-stu-id="49dda-123">Returns the arcsine value of the specified expression.</span></span><br /><br /> <span data-ttu-id="49dda-124">**引數**</span><span class="sxs-lookup"><span data-stu-id="49dda-124">**Arguments**</span></span><br /><br /> <span data-ttu-id="49dda-125">`expression`：`Double`。</span><span class="sxs-lookup"><span data-stu-id="49dda-125">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="49dda-126">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="49dda-126">**Return Value**</span></span><br /><br /> <span data-ttu-id="49dda-127">`Double`。</span><span class="sxs-lookup"><span data-stu-id="49dda-127">A `Double`.</span></span><br /><br /> <span data-ttu-id="49dda-128">**範例**</span><span class="sxs-lookup"><span data-stu-id="49dda-128">**Example**</span></span><br /><br /> `SqlServer.ASIN(.9)`|  
-|<span data-ttu-id="49dda-129">`ATAN(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="49dda-129">`ATAN(` `expression` `)`</span></span>|<span data-ttu-id="49dda-130">傳回指定之數值運算式的反正切函數 (Arctangent) 值。</span><span class="sxs-lookup"><span data-stu-id="49dda-130">Returns the arctangent value of the specified numeric expression.</span></span><br /><br /> <span data-ttu-id="49dda-131">**引數**</span><span class="sxs-lookup"><span data-stu-id="49dda-131">**Arguments**</span></span><br /><br /> <span data-ttu-id="49dda-132">`expression`：`Double`。</span><span class="sxs-lookup"><span data-stu-id="49dda-132">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="49dda-133">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="49dda-133">**Return Value**</span></span><br /><br /> <span data-ttu-id="49dda-134">`Double`。</span><span class="sxs-lookup"><span data-stu-id="49dda-134">A `Double`.</span></span><br /><br /> <span data-ttu-id="49dda-135">**範例**</span><span class="sxs-lookup"><span data-stu-id="49dda-135">**Example**</span></span><br /><br /> `SqlServer.ATAN(9)`|  
-|<span data-ttu-id="49dda-136">`ATN2(` `expression`, `expression``)`</span><span class="sxs-lookup"><span data-stu-id="49dda-136">`ATN2(` `expression`, `expression``)`</span></span>|<span data-ttu-id="49dda-137">傳回其正切函數 (Tangent) 介於兩個指定數值運算式之間的角度 (以弧度為單位)。</span><span class="sxs-lookup"><span data-stu-id="49dda-137">Returns the angle, in radians, whose tangent is between the two specified numeric expressions.</span></span><br /><br /> <span data-ttu-id="49dda-138">**引數**</span><span class="sxs-lookup"><span data-stu-id="49dda-138">**Arguments**</span></span><br /><br /> <span data-ttu-id="49dda-139">`expression`：`Double`。</span><span class="sxs-lookup"><span data-stu-id="49dda-139">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="49dda-140">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="49dda-140">**Return Value**</span></span><br /><br /> <span data-ttu-id="49dda-141">`Double`。</span><span class="sxs-lookup"><span data-stu-id="49dda-141">A `Double`.</span></span><br /><br /> <span data-ttu-id="49dda-142">**範例**</span><span class="sxs-lookup"><span data-stu-id="49dda-142">**Example**</span></span><br /><br /> `SqlServer.ATN2(9, 8)`|  
-|<span data-ttu-id="49dda-143">`CEILING(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="49dda-143">`CEILING(` `expression` `)`</span></span>|<span data-ttu-id="49dda-144">將指定的運算式轉換成大於或等於它的最小整數。</span><span class="sxs-lookup"><span data-stu-id="49dda-144">Converts the specified expression to the smallest integer that is greater than or equal to it.</span></span><br /><br /> <span data-ttu-id="49dda-145">**引數**</span><span class="sxs-lookup"><span data-stu-id="49dda-145">**Arguments**</span></span><br /><br /> <span data-ttu-id="49dda-146">`expression`：`Int32`、`Int64`、`Double` 或 `Decimal`。</span><span class="sxs-lookup"><span data-stu-id="49dda-146">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="49dda-147">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="49dda-147">**Return Value**</span></span><br /><br /> <span data-ttu-id="49dda-148">`Int32`， `Int64`， `Double`，或`Decimal`。</span><span class="sxs-lookup"><span data-stu-id="49dda-148">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="49dda-149">**範例**</span><span class="sxs-lookup"><span data-stu-id="49dda-149">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_CEILING](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_ceiling)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_CEILING](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_ceiling)]|  
-|<span data-ttu-id="49dda-150">`COS(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="49dda-150">`COS(` `expression` `)`</span></span>|<span data-ttu-id="49dda-151">計算指定之角度的三角餘弦函數 (Cosine) (以弧度為單位)。</span><span class="sxs-lookup"><span data-stu-id="49dda-151">Calculates the trigonometric cosine of the specified angle in radians.</span></span><br /><br /> <span data-ttu-id="49dda-152">**引數**</span><span class="sxs-lookup"><span data-stu-id="49dda-152">**Arguments**</span></span><br /><br /> <span data-ttu-id="49dda-153">`expression`：`Double`。</span><span class="sxs-lookup"><span data-stu-id="49dda-153">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="49dda-154">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="49dda-154">**Return Value**</span></span><br /><br /> <span data-ttu-id="49dda-155">`Double`。</span><span class="sxs-lookup"><span data-stu-id="49dda-155">A `Double`.</span></span><br /><br /> <span data-ttu-id="49dda-156">**範例**</span><span class="sxs-lookup"><span data-stu-id="49dda-156">**Example**</span></span><br /><br /> `SqlServer.COS(45)`|  
-|<span data-ttu-id="49dda-157">`COT(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="49dda-157">`COT(` `expression` `)`</span></span>|<span data-ttu-id="49dda-158">計算指定之角度的三角餘切函數 (Cotangent) (以弧度為單位)。</span><span class="sxs-lookup"><span data-stu-id="49dda-158">Calculates the trigonometric cotangent of the specified angle in radians.</span></span><br /><br /> <span data-ttu-id="49dda-159">**引數**</span><span class="sxs-lookup"><span data-stu-id="49dda-159">**Arguments**</span></span><br /><br /> <span data-ttu-id="49dda-160">`expression`：`Double`。</span><span class="sxs-lookup"><span data-stu-id="49dda-160">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="49dda-161">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="49dda-161">**Return Value**</span></span><br /><br /> <span data-ttu-id="49dda-162">`Double`。</span><span class="sxs-lookup"><span data-stu-id="49dda-162">A `Double`.</span></span><br /><br /> <span data-ttu-id="49dda-163">**範例**</span><span class="sxs-lookup"><span data-stu-id="49dda-163">**Example**</span></span><br /><br /> `SqlServer.COT(60)`|  
-|<span data-ttu-id="49dda-164">`DEGREES(` `radians` `)`</span><span class="sxs-lookup"><span data-stu-id="49dda-164">`DEGREES(` `radians` `)`</span></span>|<span data-ttu-id="49dda-165">傳回以度數表示的對應角度。</span><span class="sxs-lookup"><span data-stu-id="49dda-165">Returns the corresponding angle in degrees.</span></span><br /><br /> <span data-ttu-id="49dda-166">**引數**</span><span class="sxs-lookup"><span data-stu-id="49dda-166">**Arguments**</span></span><br /><br /> <span data-ttu-id="49dda-167">`expression`：`Int32`、`Int64`、`Double` 或 `Decimal`。</span><span class="sxs-lookup"><span data-stu-id="49dda-167">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="49dda-168">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="49dda-168">**Return Value**</span></span><br /><br /> <span data-ttu-id="49dda-169">`Int32`， `Int64`， `Double`，或`Decimal`。</span><span class="sxs-lookup"><span data-stu-id="49dda-169">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="49dda-170">**範例**</span><span class="sxs-lookup"><span data-stu-id="49dda-170">**Example**</span></span><br /><br /> `SqlServer.DEGREES(3.1)`|  
-|<span data-ttu-id="49dda-171">`EXP(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="49dda-171">`EXP(` `expression` `)`</span></span>|<span data-ttu-id="49dda-172">計算指定之數值運算式的指數值。</span><span class="sxs-lookup"><span data-stu-id="49dda-172">Calculates the exponential value of a specified numeric expression.</span></span><br /><br /> <span data-ttu-id="49dda-173">**引數**</span><span class="sxs-lookup"><span data-stu-id="49dda-173">**Arguments**</span></span><br /><br /> <span data-ttu-id="49dda-174">`expression`：`Double`。</span><span class="sxs-lookup"><span data-stu-id="49dda-174">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="49dda-175">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="49dda-175">**Return Value**</span></span><br /><br /> <span data-ttu-id="49dda-176">`Double`。</span><span class="sxs-lookup"><span data-stu-id="49dda-176">A `Double`.</span></span><br /><br /> <span data-ttu-id="49dda-177">**範例**</span><span class="sxs-lookup"><span data-stu-id="49dda-177">**Example**</span></span><br /><br /> `SqlServer.EXP(1)`|  
-|<span data-ttu-id="49dda-178">`FLOOR(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="49dda-178">`FLOOR(` `expression` `)`</span></span>|<span data-ttu-id="49dda-179">將指定的運算式轉換成小於或等於它的最大整數。</span><span class="sxs-lookup"><span data-stu-id="49dda-179">Converts the specified expression to the largest integer less than or equal to it.</span></span><br /><br /> <span data-ttu-id="49dda-180">**引數**</span><span class="sxs-lookup"><span data-stu-id="49dda-180">**Arguments**</span></span><br /><br /> <span data-ttu-id="49dda-181">`expression`：`Double`。</span><span class="sxs-lookup"><span data-stu-id="49dda-181">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="49dda-182">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="49dda-182">**Return Value**</span></span><br /><br /> <span data-ttu-id="49dda-183">`Double`。</span><span class="sxs-lookup"><span data-stu-id="49dda-183">A `Double`.</span></span><br /><br /> <span data-ttu-id="49dda-184">**範例**</span><span class="sxs-lookup"><span data-stu-id="49dda-184">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_FLOOR](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_floor)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_FLOOR](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_floor)]|  
-|<span data-ttu-id="49dda-185">`LOG(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="49dda-185">`LOG(` `expression` `)`</span></span>|<span data-ttu-id="49dda-186">計算指定之 `float` 運算式的自然對數。</span><span class="sxs-lookup"><span data-stu-id="49dda-186">Calculates the natural logarithm of the specified `float` expression.</span></span><br /><br /> <span data-ttu-id="49dda-187">**引數**</span><span class="sxs-lookup"><span data-stu-id="49dda-187">**Arguments**</span></span><br /><br /> <span data-ttu-id="49dda-188">`expression`：`Double`。</span><span class="sxs-lookup"><span data-stu-id="49dda-188">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="49dda-189">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="49dda-189">**Return Value**</span></span><br /><br /> <span data-ttu-id="49dda-190">`Double`。</span><span class="sxs-lookup"><span data-stu-id="49dda-190">A `Double`.</span></span><br /><br /> <span data-ttu-id="49dda-191">**範例**</span><span class="sxs-lookup"><span data-stu-id="49dda-191">**Example**</span></span><br /><br /> `SqlServer.LOG(100)`|  
-|<span data-ttu-id="49dda-192">`LOG10(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="49dda-192">`LOG10(` `expression` `)`</span></span>|<span data-ttu-id="49dda-193">傳回指定 `Double` 運算式的以 10 為基底之對數。</span><span class="sxs-lookup"><span data-stu-id="49dda-193">Returns the base-10 logarithm of the specified `Double` expression.</span></span><br /><br /> <span data-ttu-id="49dda-194">**引數**</span><span class="sxs-lookup"><span data-stu-id="49dda-194">**Arguments**</span></span><br /><br /> <span data-ttu-id="49dda-195">`expression`：`Double`。</span><span class="sxs-lookup"><span data-stu-id="49dda-195">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="49dda-196">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="49dda-196">**Return Value**</span></span><br /><br /> <span data-ttu-id="49dda-197">`Double`。</span><span class="sxs-lookup"><span data-stu-id="49dda-197">A `Double`.</span></span><br /><br /> <span data-ttu-id="49dda-198">**範例**</span><span class="sxs-lookup"><span data-stu-id="49dda-198">**Example**</span></span><br /><br /> `SqlServer.LOG10(100)`|  
-|`PI()`|<span data-ttu-id="49dda-199">以 `Double` 形式傳回 pi 的常數值。</span><span class="sxs-lookup"><span data-stu-id="49dda-199">Returns the constant value of pi as a `Double`.</span></span><br /><br /> <span data-ttu-id="49dda-200">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="49dda-200">**Return Value**</span></span><br /><br /> <span data-ttu-id="49dda-201">`Double`。</span><span class="sxs-lookup"><span data-stu-id="49dda-201">A `Double`.</span></span><br /><br /> <span data-ttu-id="49dda-202">**範例**</span><span class="sxs-lookup"><span data-stu-id="49dda-202">**Example**</span></span><br /><br /> `SqlServer.PI()`|  
-|<span data-ttu-id="49dda-203">`POWER(` `numeric_expression, power_expression` `)`</span><span class="sxs-lookup"><span data-stu-id="49dda-203">`POWER(` `numeric_expression, power_expression` `)`</span></span>|<span data-ttu-id="49dda-204">將指定之運算式的值計算至指定的乘冪。</span><span class="sxs-lookup"><span data-stu-id="49dda-204">Calculates the value of a specified expression to a specified power.</span></span><br /><br /> <span data-ttu-id="49dda-205">**引數**</span><span class="sxs-lookup"><span data-stu-id="49dda-205">**Arguments**</span></span><br /><br /> <span data-ttu-id="49dda-206">`numeric_expression`：`Int32`、`Int64`、`Double` 或 `Decimal`。</span><span class="sxs-lookup"><span data-stu-id="49dda-206">`numeric_expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="49dda-207">`power_expression`：代表 `Double` 乘冪數的 `numeric_expression`。</span><span class="sxs-lookup"><span data-stu-id="49dda-207">`power_expression`: A `Double` that represents the power to which to raise the `numeric_expression`.</span></span><br /><br /> <span data-ttu-id="49dda-208">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="49dda-208">**Return Value**</span></span><br /><br /> <span data-ttu-id="49dda-209">指定之 `numeric_expression` 自乘至指定之 `power_expression` 的值。</span><span class="sxs-lookup"><span data-stu-id="49dda-209">The value of the specified `numeric_expression` to the specified `power_expression`.</span></span><br /><br /> <span data-ttu-id="49dda-210">**範例**</span><span class="sxs-lookup"><span data-stu-id="49dda-210">**Example**</span></span><br /><br /> `SqlServer.POWER(2,7)`|  
-|<span data-ttu-id="49dda-211">`RADIANS(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="49dda-211">`RADIANS(` `expression` `)`</span></span>|<span data-ttu-id="49dda-212">將度數轉換成弧度。</span><span class="sxs-lookup"><span data-stu-id="49dda-212">Converts degrees to radians.</span></span><br /><br /> <span data-ttu-id="49dda-213">**引數**</span><span class="sxs-lookup"><span data-stu-id="49dda-213">**Arguments**</span></span><br /><br /> <span data-ttu-id="49dda-214">`expression`：`Int32`、`Int64`、`Double` 或 `Decimal`。</span><span class="sxs-lookup"><span data-stu-id="49dda-214">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="49dda-215">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="49dda-215">**Return Value**</span></span><br /><br /> <span data-ttu-id="49dda-216">`Int32`， `Int64`，</span><span class="sxs-lookup"><span data-stu-id="49dda-216">An `Int32`, `Int64`,</span></span><br /><br /> <span data-ttu-id="49dda-217">`Double` 或</span><span class="sxs-lookup"><span data-stu-id="49dda-217">`Double`, or</span></span><br /><br /> <span data-ttu-id="49dda-218">`Decimal`.</span><span class="sxs-lookup"><span data-stu-id="49dda-218">`Decimal`.</span></span><br /><br /> <span data-ttu-id="49dda-219">**範例**</span><span class="sxs-lookup"><span data-stu-id="49dda-219">**Example**</span></span><br /><br /> `SqlServer.RADIANS(360.0)`|  
-|<span data-ttu-id="49dda-220">`RAND(`[seed]`)`</span><span class="sxs-lookup"><span data-stu-id="49dda-220">`RAND(`[seed]`)`</span></span>|<span data-ttu-id="49dda-221">傳回 0 到 1 的隨機值。</span><span class="sxs-lookup"><span data-stu-id="49dda-221">Returns a random value from 0 through 1.</span></span><br /><br /> <span data-ttu-id="49dda-222">**引數**</span><span class="sxs-lookup"><span data-stu-id="49dda-222">**Arguments**</span></span><br /><br /> <span data-ttu-id="49dda-223">將初始值當做 `Int32` 傳回。</span><span class="sxs-lookup"><span data-stu-id="49dda-223">Retruns the seed value as an `Int32`.</span></span> <span data-ttu-id="49dda-224">如果沒有指定初始值，SQL Server Database Engine 就會隨機指派一個初始值。</span><span class="sxs-lookup"><span data-stu-id="49dda-224">If the seed is not specified, the SQL Server Database Engine assigns a seed value at random.</span></span> <span data-ttu-id="49dda-225">只要指定初始值之後，傳回的結果一律相同。</span><span class="sxs-lookup"><span data-stu-id="49dda-225">For a specified seed value, the result returned is always the same.</span></span><br /><br /> <span data-ttu-id="49dda-226">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="49dda-226">**Return Value**</span></span><br /><br /> <span data-ttu-id="49dda-227">0 到 1 的隨機 `Double` 值。</span><span class="sxs-lookup"><span data-stu-id="49dda-227">A random `Double` value from 0 through 1.</span></span><br /><br /> <span data-ttu-id="49dda-228">**範例**</span><span class="sxs-lookup"><span data-stu-id="49dda-228">**Example**</span></span><br /><br /> `SqlServer.RAND()`|  
-|<span data-ttu-id="49dda-229">`ROUND(` `numeric_expression, length` [ ,`function` ]`)`</span><span class="sxs-lookup"><span data-stu-id="49dda-229">`ROUND(` `numeric_expression, length` [ ,`function` ]`)`</span></span>|<span data-ttu-id="49dda-230">傳回已經進位到指定長度或有效位數的數值運算式。</span><span class="sxs-lookup"><span data-stu-id="49dda-230">Returns a numeric expression, rounded to the specified length or precision.</span></span><br /><br /> <span data-ttu-id="49dda-231">**引數**</span><span class="sxs-lookup"><span data-stu-id="49dda-231">**Arguments**</span></span><br /><br /> <span data-ttu-id="49dda-232">`numeric_expression`：`Int32`、`Int64`、`Double` 或 `Decimal`。</span><span class="sxs-lookup"><span data-stu-id="49dda-232">`numeric_expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="49dda-233">`length`：`Int32`，代表 `numeric_expression` 要四捨五入的精確度。</span><span class="sxs-lookup"><span data-stu-id="49dda-233">`length`: An `Int32` that represents the precision to which `numeric_expression` is to be rounded.</span></span> <span data-ttu-id="49dda-234">當 `length` 是正數時，`numeric_expression` 會四捨五入到 `length` 所指定的十進位數。</span><span class="sxs-lookup"><span data-stu-id="49dda-234">When `length` is a positive number, `numeric_expression` is rounded to the number of decimal positions specified by `length`.</span></span> <span data-ttu-id="49dda-235">當 `length` 是負數時，`numeric_expression` 會依照 `length` 所指定，在小數點左側四捨五入。</span><span class="sxs-lookup"><span data-stu-id="49dda-235">When `length` is a negative number, `numeric_expression` is rounded on the left side of the decimal point, as specified by `length`.</span></span><br /><br /> <span data-ttu-id="49dda-236">`function`: (選擇性) `Int32` ，代表要執行的作業類型。</span><span class="sxs-lookup"><span data-stu-id="49dda-236">`function`:(optional) An `Int32` that represents the type of operation to perform.</span></span> <span data-ttu-id="49dda-237">當省略 function，或具有值為 0 （預設）、`numeric_expression`會捨入。</span><span class="sxs-lookup"><span data-stu-id="49dda-237">When function is omitted or has a value of 0 (default), `numeric_expression` is rounded.</span></span> <span data-ttu-id="49dda-238">指定 0 以外的值時，`numeric_expression`會被截斷。</span><span class="sxs-lookup"><span data-stu-id="49dda-238">When a value other than 0 is specified, `numeric_expression` is truncated.</span></span><br /><br /> <span data-ttu-id="49dda-239">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="49dda-239">**Return Value**</span></span><br /><br /> <span data-ttu-id="49dda-240">指定之 `numeric_expression` 自乘至指定之 `power_expression` 的值。</span><span class="sxs-lookup"><span data-stu-id="49dda-240">The value of the specified `numeric_expression` to the specified `power_expression`.</span></span><br /><br /> <span data-ttu-id="49dda-241">**範例**</span><span class="sxs-lookup"><span data-stu-id="49dda-241">**Example**</span></span><br /><br /> `SqlServer.ROUND(748.58, -3)`|  
-|<span data-ttu-id="49dda-242">`SIGN(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="49dda-242">`SIGN(` `expression` `)`</span></span>|<span data-ttu-id="49dda-243">傳回指定運算式的正 (+1)、零 (0) 或負 (-1) 號。</span><span class="sxs-lookup"><span data-stu-id="49dda-243">Returns the positive (+1), zero (0), or negative (-1) sign of the specified expression.</span></span><br /><br /> <span data-ttu-id="49dda-244">**引數**</span><span class="sxs-lookup"><span data-stu-id="49dda-244">**Arguments**</span></span><br /><br /> <span data-ttu-id="49dda-245">`expression`：`Int32`、`Int64`、`Double` 或 `Decimal`</span><span class="sxs-lookup"><span data-stu-id="49dda-245">`expression`: `Int32`, `Int64`, `Double`, or `Decimal`</span></span><br /><br /> <span data-ttu-id="49dda-246">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="49dda-246">**Return Value**</span></span><br /><br /> <span data-ttu-id="49dda-247">`Int32`， `Int64`， `Double`，或`Decimal`。</span><span class="sxs-lookup"><span data-stu-id="49dda-247">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="49dda-248">**範例**</span><span class="sxs-lookup"><span data-stu-id="49dda-248">**Example**</span></span><br /><br /> `SqlServer.SIGN(-10)`|  
-|<span data-ttu-id="49dda-249">`SIN(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="49dda-249">`SIN(` `expression` `)`</span></span>|<span data-ttu-id="49dda-250">計算指定之角度的三角正弦函數 (Sine) (以弧度為單位)，並傳回 `Double` 運算式。</span><span class="sxs-lookup"><span data-stu-id="49dda-250">Calculates the trigonometric sine of the specified angle in radians, and returns a `Double` expression.</span></span><br /><br /> <span data-ttu-id="49dda-251">**引數**</span><span class="sxs-lookup"><span data-stu-id="49dda-251">**Arguments**</span></span><br /><br /> <span data-ttu-id="49dda-252">`expression`：`Double`。</span><span class="sxs-lookup"><span data-stu-id="49dda-252">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="49dda-253">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="49dda-253">**Return Value**</span></span><br /><br /> <span data-ttu-id="49dda-254">`Double`。</span><span class="sxs-lookup"><span data-stu-id="49dda-254">A `Double`.</span></span><br /><br /> <span data-ttu-id="49dda-255">**範例**</span><span class="sxs-lookup"><span data-stu-id="49dda-255">**Example**</span></span><br /><br /> `SqlServer.SIN(20)`|  
-|<span data-ttu-id="49dda-256">`SQRT(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="49dda-256">`SQRT(` `expression` `)`</span></span>|<span data-ttu-id="49dda-257">傳回指定之運算式的平方根。</span><span class="sxs-lookup"><span data-stu-id="49dda-257">Returns the square root of the specified expression.</span></span><br /><br /> <span data-ttu-id="49dda-258">**引數**</span><span class="sxs-lookup"><span data-stu-id="49dda-258">**Arguments**</span></span><br /><br /> <span data-ttu-id="49dda-259">`expression`：`Double`。</span><span class="sxs-lookup"><span data-stu-id="49dda-259">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="49dda-260">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="49dda-260">**Return Value**</span></span><br /><br /> <span data-ttu-id="49dda-261">`Double`。</span><span class="sxs-lookup"><span data-stu-id="49dda-261">A `Double`.</span></span><br /><br /> <span data-ttu-id="49dda-262">**範例**</span><span class="sxs-lookup"><span data-stu-id="49dda-262">**Example**</span></span><br /><br /> `SqlServer.SQRT(3600)`|  
-|<span data-ttu-id="49dda-263">`SQUARE(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="49dda-263">`SQUARE(` `expression` `)`</span></span>|<span data-ttu-id="49dda-264">傳回指定之運算式的平方。</span><span class="sxs-lookup"><span data-stu-id="49dda-264">Returns the square of the specified expression.</span></span><br /><br /> <span data-ttu-id="49dda-265">**引數**</span><span class="sxs-lookup"><span data-stu-id="49dda-265">**Arguments**</span></span><br /><br /> <span data-ttu-id="49dda-266">`expression`：`Double`。</span><span class="sxs-lookup"><span data-stu-id="49dda-266">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="49dda-267">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="49dda-267">**Return Value**</span></span><br /><br /> <span data-ttu-id="49dda-268">`Double`。</span><span class="sxs-lookup"><span data-stu-id="49dda-268">A `Double`.</span></span><br /><br /> <span data-ttu-id="49dda-269">**範例**</span><span class="sxs-lookup"><span data-stu-id="49dda-269">**Example**</span></span><br /><br /> `SqlServer.SQUARE(25)`|  
-|<span data-ttu-id="49dda-270">`TAN(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="49dda-270">`TAN(` `expression` `)`</span></span>|<span data-ttu-id="49dda-271">計算指定之運算式的正切函數。</span><span class="sxs-lookup"><span data-stu-id="49dda-271">Calculates the tangent of a specified expression.</span></span><br /><br /> <span data-ttu-id="49dda-272">**引數**</span><span class="sxs-lookup"><span data-stu-id="49dda-272">**Arguments**</span></span><br /><br /> <span data-ttu-id="49dda-273">`expression`: `Double`</span><span class="sxs-lookup"><span data-stu-id="49dda-273">`expression`: `Double`</span></span><br /><br /> <span data-ttu-id="49dda-274">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="49dda-274">**Return Value**</span></span><br /><br /> `Double`<br /><br /> <span data-ttu-id="49dda-275">**範例**</span><span class="sxs-lookup"><span data-stu-id="49dda-275">**Example**</span></span><br /><br /> `SqlServer.TAN(45.0)`|  
+## <a name="absexpression"></a><span data-ttu-id="a7ba0-106">ABS(expression)</span><span class="sxs-lookup"><span data-stu-id="a7ba0-106">ABS(expression)</span></span>
+
+<span data-ttu-id="a7ba0-107">執行絕對值函式。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-107">Performs the absolute value function.</span></span>
+
+<span data-ttu-id="a7ba0-108">**引數**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-108">**Arguments**</span></span>
+
+<span data-ttu-id="a7ba0-109">`expression`：`Int32`、`Int64`、`Double` 或 `Decimal`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-109">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span>
+
+<span data-ttu-id="a7ba0-110">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-110">**Return Value**</span></span>
+
+<span data-ttu-id="a7ba0-111">指定之運算式的絕對值。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-111">The absolute value of the specified expression.</span></span>
+
+<span data-ttu-id="a7ba0-112">**範例**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-112">**Example**</span></span>
+
+`SqlServer.ABS(-2)`
+
+## <a name="acosexpression"></a><span data-ttu-id="a7ba0-113">ACOS(expression)</span><span class="sxs-lookup"><span data-stu-id="a7ba0-113">ACOS(expression)</span></span>
+
+<span data-ttu-id="a7ba0-114">傳回指定之運算式的反餘弦函數 (Arccosine) 值。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-114">Returns the arccosine value of the specified expression.</span></span>
+
+<span data-ttu-id="a7ba0-115">**引數**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-115">**Arguments**</span></span>
+
+<span data-ttu-id="a7ba0-116">`expression`：`Double`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-116">`expression`: A `Double`.</span></span>
+
+<span data-ttu-id="a7ba0-117">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-117">**Return Value**</span></span>
+
+<span data-ttu-id="a7ba0-118">`Double`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-118">A `Double`.</span></span>
+
+<span data-ttu-id="a7ba0-119">**範例**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-119">**Example**</span></span>
+
+`SqlServer.ACOS(.9)`
+
+## <a name="asinexpression"></a><span data-ttu-id="a7ba0-120">ASIN(expression)</span><span class="sxs-lookup"><span data-stu-id="a7ba0-120">ASIN(expression)</span></span>
+
+<span data-ttu-id="a7ba0-121">傳回指定之運算式的反正弦函數 (Arcsine) 值。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-121">Returns the arcsine value of the specified expression.</span></span>
+
+<span data-ttu-id="a7ba0-122">**引數**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-122">**Arguments**</span></span>
+
+<span data-ttu-id="a7ba0-123">`expression`：`Double`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-123">`expression`: A `Double`.</span></span>
+
+<span data-ttu-id="a7ba0-124">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-124">**Return Value**</span></span>
+
+<span data-ttu-id="a7ba0-125">`Double`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-125">A `Double`.</span></span>
+
+<span data-ttu-id="a7ba0-126">**範例**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-126">**Example**</span></span>
+
+`SqlServer.ASIN(.9)`
+
+## <a name="atanexpression"></a><span data-ttu-id="a7ba0-127">ATAN(expression)</span><span class="sxs-lookup"><span data-stu-id="a7ba0-127">ATAN(expression)</span></span>
+
+<span data-ttu-id="a7ba0-128">傳回指定之數值運算式的反正切函數 (Arctangent) 值。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-128">Returns the arctangent value of the specified numeric expression.</span></span>
+
+<span data-ttu-id="a7ba0-129">**引數**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-129">**Arguments**</span></span>
+
+<span data-ttu-id="a7ba0-130">`expression`：`Double`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-130">`expression`: A `Double`.</span></span>
+
+<span data-ttu-id="a7ba0-131">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-131">**Return Value**</span></span>
+
+<span data-ttu-id="a7ba0-132">`Double`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-132">A `Double`.</span></span>
+
+<span data-ttu-id="a7ba0-133">**範例**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-133">**Example**</span></span>
+
+`SqlServer.ATAN(9)`
+
+## <a name="atn2expression-expression"></a><span data-ttu-id="a7ba0-134">ATN2(expression, expression)</span><span class="sxs-lookup"><span data-stu-id="a7ba0-134">ATN2(expression, expression)</span></span>
+
+<span data-ttu-id="a7ba0-135">傳回其正切函數 (Tangent) 介於兩個指定數值運算式之間的角度 (以弧度為單位)。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-135">Returns the angle, in radians, whose tangent is between the two specified numeric expressions.</span></span>
+
+<span data-ttu-id="a7ba0-136">**引數**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-136">**Arguments**</span></span>
+
+<span data-ttu-id="a7ba0-137">`expression`：`Double`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-137">`expression`: A `Double`.</span></span>
+
+<span data-ttu-id="a7ba0-138">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-138">**Return Value**</span></span>
+
+<span data-ttu-id="a7ba0-139">`Double`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-139">A `Double`.</span></span>
+
+<span data-ttu-id="a7ba0-140">**範例**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-140">**Example**</span></span>
+
+`SqlServer.ATN2(9, 8)`
+ 
+## <a name="ceilingexpression"></a><span data-ttu-id="a7ba0-141">CEILING(expression)</span><span class="sxs-lookup"><span data-stu-id="a7ba0-141">CEILING(expression)</span></span>
+
+<span data-ttu-id="a7ba0-142">將指定的運算式轉換成大於或等於它的最小整數。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-142">Converts the specified expression to the smallest integer that is greater than or equal to it.</span></span>
+
+<span data-ttu-id="a7ba0-143">**引數**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-143">**Arguments**</span></span>
+
+<span data-ttu-id="a7ba0-144">`expression`：`Int32`、`Int64`、`Double` 或 `Decimal`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-144">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span>
+
+<span data-ttu-id="a7ba0-145">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-145">**Return Value**</span></span>
+
+<span data-ttu-id="a7ba0-146">`Int32`， `Int64`， `Double`，或`Decimal`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-146">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span>
+
+<span data-ttu-id="a7ba0-147">**範例**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-147">**Example**</span></span> 
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_CEILING](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_ceiling)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_CEILING](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_ceiling)]
+
+## <a name="cosexpression"></a><span data-ttu-id="a7ba0-148">COS(expression)</span><span class="sxs-lookup"><span data-stu-id="a7ba0-148">COS(expression)</span></span>
+
+<span data-ttu-id="a7ba0-149">計算指定之角度的三角餘弦函數 (Cosine) (以弧度為單位)。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-149">Calculates the trigonometric cosine of the specified angle in radians.</span></span> 
+
+<span data-ttu-id="a7ba0-150">**引數**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-150">**Arguments**</span></span> 
+
+<span data-ttu-id="a7ba0-151">`expression`：`Double`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-151">`expression`: A `Double`.</span></span> 
+
+<span data-ttu-id="a7ba0-152">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-152">**Return Value**</span></span> 
+
+<span data-ttu-id="a7ba0-153">`Double`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-153">A `Double`.</span></span> 
+
+<span data-ttu-id="a7ba0-154">**範例**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-154">**Example**</span></span> 
+
+`SqlServer.COS(45)`
+
+## <a name="cotexpression"></a><span data-ttu-id="a7ba0-155">COT(expression)</span><span class="sxs-lookup"><span data-stu-id="a7ba0-155">COT(expression)</span></span>
+
+<span data-ttu-id="a7ba0-156">計算指定之角度的三角餘切函數 (Cotangent) (以弧度為單位)。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-156">Calculates the trigonometric cotangent of the specified angle in radians.</span></span> 
+
+<span data-ttu-id="a7ba0-157">**引數**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-157">**Arguments**</span></span> 
+
+<span data-ttu-id="a7ba0-158">`expression`：`Double`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-158">`expression`: A `Double`.</span></span> 
+
+<span data-ttu-id="a7ba0-159">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-159">**Return Value**</span></span> 
+
+<span data-ttu-id="a7ba0-160">`Double`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-160">A `Double`.</span></span> 
+
+<span data-ttu-id="a7ba0-161">**範例**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-161">**Example**</span></span> 
+
+`SqlServer.COT(60)`
   
- <span data-ttu-id="49dda-276">如需 SqlClient 支援之數學函式的詳細資訊，請參閱 SqlClient 提供者資訊清單中所指定之 SQL Server 版本的說明文件：</span><span class="sxs-lookup"><span data-stu-id="49dda-276">For more information about the mathematical functions that SqlClient supports, see the documentation for the SQL Server version that you specified in the SqlClient provider manifest:</span></span>  
+## <a name="degreesradians"></a><span data-ttu-id="a7ba0-162">DEGREES(radians)</span><span class="sxs-lookup"><span data-stu-id="a7ba0-162">DEGREES(radians)</span></span>
+
+<span data-ttu-id="a7ba0-163">傳回以度數表示的對應角度。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-163">Returns the corresponding angle in degrees.</span></span> 
+
+<span data-ttu-id="a7ba0-164">**引數**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-164">**Arguments**</span></span> 
+
+<span data-ttu-id="a7ba0-165">`expression`：`Int32`、`Int64`、`Double` 或 `Decimal`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-165">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
+
+<span data-ttu-id="a7ba0-166">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-166">**Return Value**</span></span> 
+
+<span data-ttu-id="a7ba0-167">`Int32`， `Int64`， `Double`，或`Decimal`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-167">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
+
+<span data-ttu-id="a7ba0-168">**範例**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-168">**Example**</span></span> 
+
+`SqlServer.DEGREES(3.1)`
+
+## <a name="expexpression"></a><span data-ttu-id="a7ba0-169">EXP(expression)</span><span class="sxs-lookup"><span data-stu-id="a7ba0-169">EXP(expression)</span></span>
+
+<span data-ttu-id="a7ba0-170">計算指定之數值運算式的指數值。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-170">Calculates the exponential value of a specified numeric expression.</span></span> 
+
+<span data-ttu-id="a7ba0-171">**引數**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-171">**Arguments**</span></span> 
+
+<span data-ttu-id="a7ba0-172">`expression`：`Double`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-172">`expression`: A `Double`.</span></span> 
+
+<span data-ttu-id="a7ba0-173">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-173">**Return Value**</span></span> 
+
+<span data-ttu-id="a7ba0-174">`Double`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-174">A `Double`.</span></span> 
+
+<span data-ttu-id="a7ba0-175">**範例** `SqlServer.EXP(1)`</span><span class="sxs-lookup"><span data-stu-id="a7ba0-175">**Example** `SqlServer.EXP(1)`</span></span>
+
+## <a name="floorexpression"></a><span data-ttu-id="a7ba0-176">FLOOR(expression)</span><span class="sxs-lookup"><span data-stu-id="a7ba0-176">FLOOR(expression)</span></span>
+
+<span data-ttu-id="a7ba0-177">將指定的運算式轉換成小於或等於它的最大整數。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-177">Converts the specified expression to the largest integer less than or equal to it.</span></span> 
+
+<span data-ttu-id="a7ba0-178">**引數**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-178">**Arguments**</span></span> 
+
+<span data-ttu-id="a7ba0-179">`expression`：`Double`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-179">`expression`: A `Double`.</span></span> 
+
+<span data-ttu-id="a7ba0-180">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-180">**Return Value**</span></span> 
+
+<span data-ttu-id="a7ba0-181">`Double`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-181">A `Double`.</span></span> 
+
+<span data-ttu-id="a7ba0-182">**範例**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-182">**Example**</span></span> 
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_FLOOR](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_floor)] 
+[!code-sql[DP EntityServices Concepts#SQLSERVER_FLOOR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_floor)]
+
+## <a name="logexpression"></a><span data-ttu-id="a7ba0-183">LOG(expression)</span><span class="sxs-lookup"><span data-stu-id="a7ba0-183">LOG(expression)</span></span>
+
+<span data-ttu-id="a7ba0-184">計算指定之 `float` 運算式的自然對數。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-184">Calculates the natural logarithm of the specified `float` expression.</span></span> 
+
+<span data-ttu-id="a7ba0-185">**引數**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-185">**Arguments**</span></span> 
+
+<span data-ttu-id="a7ba0-186">`expression`：`Double`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-186">`expression`: A `Double`.</span></span> 
+
+<span data-ttu-id="a7ba0-187">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-187">**Return Value**</span></span> 
+
+<span data-ttu-id="a7ba0-188">`Double`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-188">A `Double`.</span></span> 
+
+<span data-ttu-id="a7ba0-189">**範例**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-189">**Example**</span></span> 
+
+`SqlServer.LOG(100)`
+
+## <a name="log10expression"></a><span data-ttu-id="a7ba0-190">LOG10(expression)</span><span class="sxs-lookup"><span data-stu-id="a7ba0-190">LOG10(expression)</span></span>
+
+<span data-ttu-id="a7ba0-191">傳回指定 `Double` 運算式的以 10 為基底之對數。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-191">Returns the base-10 logarithm of the specified `Double` expression.</span></span> 
+
+<span data-ttu-id="a7ba0-192">**引數**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-192">**Arguments**</span></span> 
+
+<span data-ttu-id="a7ba0-193">`expression`：`Double`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-193">`expression`: A `Double`.</span></span> 
+
+<span data-ttu-id="a7ba0-194">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-194">**Return Value**</span></span> 
+
+<span data-ttu-id="a7ba0-195">`Double`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-195">A `Double`.</span></span> 
+
+<span data-ttu-id="a7ba0-196">**範例**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-196">**Example**</span></span> 
+
+`SqlServer.LOG10(100)`
+
+## <a name="pi"></a><span data-ttu-id="a7ba0-197">PI （)</span><span class="sxs-lookup"><span data-stu-id="a7ba0-197">PI()</span></span>
+
+<span data-ttu-id="a7ba0-198">以 `Double` 形式傳回 pi 的常數值。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-198">Returns the constant value of pi as a `Double`.</span></span> 
+
+<span data-ttu-id="a7ba0-199">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-199">**Return Value**</span></span> 
+
+<span data-ttu-id="a7ba0-200">`Double`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-200">A `Double`.</span></span> 
+
+<span data-ttu-id="a7ba0-201">**範例**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-201">**Example**</span></span> 
+
+`SqlServer.PI()`
+
+## <a name="powernumericexpression-powerexpression"></a><span data-ttu-id="a7ba0-202">POWER （numeric_expression，power_expression）</span><span class="sxs-lookup"><span data-stu-id="a7ba0-202">POWER(numeric_expression, power_expression)</span></span>
+
+<span data-ttu-id="a7ba0-203">將指定之運算式的值計算至指定的乘冪。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-203">Calculates the value of a specified expression to a specified power.</span></span>
+
+<span data-ttu-id="a7ba0-204">**引數**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-204">**Arguments**</span></span> 
+
+|  |  |
+|--|--|
+|`numeric_expression`| <span data-ttu-id="a7ba0-205">`Int32`， `Int64`， `Double`，或`Decimal`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-205">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span>|
+|`power_expression`| <span data-ttu-id="a7ba0-206">A`Double`表示要引發 power `numeric_expression`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-206">A `Double` that represents the power to which to raise the `numeric_expression`.</span></span>| 
+
+<span data-ttu-id="a7ba0-207">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-207">**Return Value**</span></span> 
+
+<span data-ttu-id="a7ba0-208">指定之 `numeric_expression` 自乘至指定之 `power_expression` 的值。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-208">The value of the specified `numeric_expression` to the specified `power_expression`.</span></span> 
+
+<span data-ttu-id="a7ba0-209">**範例**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-209">**Example**</span></span> 
+
+`SqlServer.POWER(2,7)`
+
+## <a name="radiansexpression"></a><span data-ttu-id="a7ba0-210">RADIANS(expression)</span><span class="sxs-lookup"><span data-stu-id="a7ba0-210">RADIANS(expression)</span></span>
+
+<span data-ttu-id="a7ba0-211">將度數轉換成弧度。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-211">Converts degrees to radians.</span></span> 
+
+<span data-ttu-id="a7ba0-212">**引數**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-212">**Arguments**</span></span> 
+
+<span data-ttu-id="a7ba0-213">`expression`：`Int32`、`Int64`、`Double` 或 `Decimal`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-213">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
+
+<span data-ttu-id="a7ba0-214">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-214">**Return Value**</span></span> 
+
+<span data-ttu-id="a7ba0-215">`Int32`， `Int64`， `Double`，或`Decimal`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-215">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
+
+<span data-ttu-id="a7ba0-216">**範例**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-216">**Example**</span></span> 
+
+`SqlServer.RADIANS(360.0)`
+
+## <a name="randseed"></a><span data-ttu-id="a7ba0-217">RAND([seed])</span><span class="sxs-lookup"><span data-stu-id="a7ba0-217">RAND([seed])</span></span>
+
+<span data-ttu-id="a7ba0-218">傳回 0 到 1 的隨機值。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-218">Returns a random value from 0 through 1.</span></span> 
+
+<span data-ttu-id="a7ba0-219">**引數**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-219">**Arguments**</span></span> 
+
+<span data-ttu-id="a7ba0-220">初始值為`Int32`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-220">The seed value as an `Int32`.</span></span> <span data-ttu-id="a7ba0-221">如果沒有指定初始值，SQL Server Database Engine 就會隨機指派一個初始值。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-221">If the seed is not specified, the SQL Server Database Engine assigns a seed value at random.</span></span> <span data-ttu-id="a7ba0-222">只要指定初始值之後，傳回的結果一律相同。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-222">For a specified seed value, the result returned is always the same.</span></span>
+
+<span data-ttu-id="a7ba0-223">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-223">**Return Value**</span></span> 
+
+<span data-ttu-id="a7ba0-224">0 到 1 的隨機 `Double` 值。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-224">A random `Double` value from 0 through 1.</span></span> 
+
+<span data-ttu-id="a7ba0-225">**範例**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-225">**Example**</span></span> 
+
+`SqlServer.RAND()`
   
-|<span data-ttu-id="49dda-277">SQL Server 2000</span><span class="sxs-lookup"><span data-stu-id="49dda-277">SQL Server 2000</span></span>|<span data-ttu-id="49dda-278">SQL Server 2005</span><span class="sxs-lookup"><span data-stu-id="49dda-278">SQL Server 2005</span></span>|<span data-ttu-id="49dda-279">SQL Server 2008</span><span class="sxs-lookup"><span data-stu-id="49dda-279">SQL Server 2008</span></span>|  
-|---------------------|---------------------|---------------------|  
-|[<span data-ttu-id="49dda-280">數學函數 (TRANSACT-SQL)</span><span class="sxs-lookup"><span data-stu-id="49dda-280">Mathematical Functions (Transact-SQL)</span></span>](http://go.microsoft.com/fwlink/?LinkId=115913)|[<span data-ttu-id="49dda-281">數學函數 (TRANSACT-SQL)</span><span class="sxs-lookup"><span data-stu-id="49dda-281">Mathematical Functions (Transact-SQL)</span></span>](http://go.microsoft.com/fwlink/?LinkId=115911)|[<span data-ttu-id="49dda-282">數學函數 (TRANSACT-SQL)</span><span class="sxs-lookup"><span data-stu-id="49dda-282">Mathematical Functions (Transact-SQL)</span></span>](http://go.microsoft.com/fwlink/?LinkId=115912)|  
+## <a name="roundnumericexpression-lengthfunction"></a><span data-ttu-id="a7ba0-226">ROUND(numeric_expression, length[,function])</span><span class="sxs-lookup"><span data-stu-id="a7ba0-226">ROUND(numeric_expression, length[,function])</span></span>
+
+<span data-ttu-id="a7ba0-227">傳回已經進位到指定長度或有效位數的數值運算式。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-227">Returns a numeric expression, rounded to the specified length or precision.</span></span> 
+
+<span data-ttu-id="a7ba0-228">**引數**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-228">**Arguments**</span></span> 
+
+|  |  |
+|--|--|
+|`numeric_expression`| <span data-ttu-id="a7ba0-229">`Int32`， `Int64`， `Double`，或`Decimal`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-229">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
+|`length`| <span data-ttu-id="a7ba0-230">`Int32`，代表 `numeric_expression` 要四捨五入的精確度。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-230">An `Int32` that represents the precision to which `numeric_expression` is to be rounded.</span></span> <span data-ttu-id="a7ba0-231">當 `length` 是正數時，`numeric_expression` 會四捨五入到 `length` 所指定的十進位數。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-231">When `length` is a positive number, `numeric_expression` is rounded to the number of decimal positions specified by `length`.</span></span> <span data-ttu-id="a7ba0-232">當 `length` 是負數時，`numeric_expression` 會依照 `length` 所指定，在小數點左側四捨五入。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-232">When `length` is a negative number, `numeric_expression` is rounded on the left side of the decimal point, as specified by `length`.</span></span>|
+|`function` | <span data-ttu-id="a7ba0-233">選擇性。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-233">Optional.</span></span> <span data-ttu-id="a7ba0-234">`Int32` ，表示要執行的作業類型。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-234">An `Int32` that represents the type of operation to perform.</span></span> <span data-ttu-id="a7ba0-235">當函式遭到省略或者值為 0 （預設）、`numeric_expression`會捨入。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-235">When function is omitted or has a value of 0 (default), `numeric_expression` is rounded.</span></span> <span data-ttu-id="a7ba0-236">指定 0 以外的值時，`numeric_expression`會被截斷。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-236">When a value other than 0 is specified, `numeric_expression` is truncated.</span></span> |
+
+<span data-ttu-id="a7ba0-237">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-237">**Return Value**</span></span> 
+
+<span data-ttu-id="a7ba0-238">指定之 `numeric_expression` 自乘至指定之 `power_expression` 的值。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-238">The value of the specified `numeric_expression` to the specified `power_expression`.</span></span>
+
+<span data-ttu-id="a7ba0-239">**範例**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-239">**Example**</span></span> 
+
+`SqlServer.ROUND(748.58, -3)`
+
+## <a name="signexpression"></a><span data-ttu-id="a7ba0-240">SIGN(expression)</span><span class="sxs-lookup"><span data-stu-id="a7ba0-240">SIGN(expression)</span></span> 
+
+<span data-ttu-id="a7ba0-241">傳回指定運算式的正 (+1)、零 (0) 或負 (-1) 號。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-241">Returns the positive (+1), zero (0), or negative (-1) sign of the specified expression.</span></span> 
+
+<span data-ttu-id="a7ba0-242">**引數**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-242">**Arguments**</span></span> 
+
+<span data-ttu-id="a7ba0-243">`expression`：`Int32`、`Int64`、`Double` 或 `Decimal`</span><span class="sxs-lookup"><span data-stu-id="a7ba0-243">`expression`: `Int32`, `Int64`, `Double`, or `Decimal`</span></span> 
+
+<span data-ttu-id="a7ba0-244">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-244">**Return Value**</span></span> 
+
+<span data-ttu-id="a7ba0-245">`Int32`， `Int64`， `Double`，或`Decimal`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-245">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
+
+<span data-ttu-id="a7ba0-246">**範例**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-246">**Example**</span></span> 
+
+`SqlServer.SIGN(-10)`
+
+## <a name="sinexpression"></a><span data-ttu-id="a7ba0-247">SIN(expression)</span><span class="sxs-lookup"><span data-stu-id="a7ba0-247">SIN(expression)</span></span>
+
+<span data-ttu-id="a7ba0-248">計算指定之角度的三角正弦函數 (Sine) (以弧度為單位)，並傳回 `Double` 運算式。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-248">Calculates the trigonometric sine of the specified angle in radians, and returns a `Double` expression.</span></span> 
+
+<span data-ttu-id="a7ba0-249">**引數**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-249">**Arguments**</span></span> 
+
+<span data-ttu-id="a7ba0-250">`expression`：`Double`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-250">`expression`: A `Double`.</span></span> 
+
+<span data-ttu-id="a7ba0-251">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-251">**Return Value**</span></span> 
+
+<span data-ttu-id="a7ba0-252">`Double`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-252">A `Double`.</span></span> 
+
+<span data-ttu-id="a7ba0-253">**範例** `SqlServer.SIN(20)`</span><span class="sxs-lookup"><span data-stu-id="a7ba0-253">**Example** `SqlServer.SIN(20)`</span></span>
+
+## <a name="sqrtexpression"></a><span data-ttu-id="a7ba0-254">SQRT(expression)</span><span class="sxs-lookup"><span data-stu-id="a7ba0-254">SQRT(expression)</span></span>
+
+<span data-ttu-id="a7ba0-255">傳回指定之運算式的平方根。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-255">Returns the square root of the specified expression.</span></span> 
+
+<span data-ttu-id="a7ba0-256">**引數**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-256">**Arguments**</span></span> 
+
+<span data-ttu-id="a7ba0-257">`expression`：`Double`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-257">`expression`: A `Double`.</span></span> 
+
+<span data-ttu-id="a7ba0-258">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-258">**Return Value**</span></span> 
+
+<span data-ttu-id="a7ba0-259">`Double`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-259">A `Double`.</span></span> 
+
+<span data-ttu-id="a7ba0-260">**範例** `SqlServer.SQRT(3600)`</span><span class="sxs-lookup"><span data-stu-id="a7ba0-260">**Example** `SqlServer.SQRT(3600)`</span></span>
+
+## <a name="squareexpression"></a><span data-ttu-id="a7ba0-261">SQUARE(expression)</span><span class="sxs-lookup"><span data-stu-id="a7ba0-261">SQUARE(expression)</span></span>
+
+<span data-ttu-id="a7ba0-262">傳回指定之運算式的平方。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-262">Returns the square of the specified expression.</span></span> 
+
+<span data-ttu-id="a7ba0-263">**引數**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-263">**Arguments**</span></span> 
+
+<span data-ttu-id="a7ba0-264">`expression`：`Double`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-264">`expression`: A `Double`.</span></span> 
+
+<span data-ttu-id="a7ba0-265">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-265">**Return Value**</span></span> 
+
+<span data-ttu-id="a7ba0-266">`Double`。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-266">A `Double`.</span></span> 
+
+<span data-ttu-id="a7ba0-267">**範例**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-267">**Example**</span></span> 
+
+`SqlServer.SQUARE(25)`
+
+## <a name="tanexpression"></a><span data-ttu-id="a7ba0-268">TAN(expression)</span><span class="sxs-lookup"><span data-stu-id="a7ba0-268">TAN(expression)</span></span>
+
+<span data-ttu-id="a7ba0-269">計算指定之運算式的正切函數。</span><span class="sxs-lookup"><span data-stu-id="a7ba0-269">Calculates the tangent of a specified expression.</span></span>
+
+<span data-ttu-id="a7ba0-270">**引數**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-270">**Arguments**</span></span> 
+
+<span data-ttu-id="a7ba0-271">`expression`: `Double`</span><span class="sxs-lookup"><span data-stu-id="a7ba0-271">`expression`: `Double`</span></span> 
+
+<span data-ttu-id="a7ba0-272">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-272">**Return Value**</span></span> 
+
+`Double` 
+
+<span data-ttu-id="a7ba0-273">**範例**</span><span class="sxs-lookup"><span data-stu-id="a7ba0-273">**Example**</span></span> 
+
+`SqlServer.TAN(45.0)`
   
-## <a name="see-also"></a><span data-ttu-id="49dda-283">另請參閱</span><span class="sxs-lookup"><span data-stu-id="49dda-283">See Also</span></span>  
- [<span data-ttu-id="49dda-284">適用於 Entity Framework 的 SqlClient 函式</span><span class="sxs-lookup"><span data-stu-id="49dda-284">SqlClient for Entity Framework Functions</span></span>](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)
+## <a name="see-also"></a><span data-ttu-id="a7ba0-274">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a7ba0-274">See also</span></span>
+
+<span data-ttu-id="a7ba0-275">如需 SqlClient 支援之數學函式的詳細資訊，請參閱 SqlClient 提供者資訊清單中所指定之 SQL Server 版本的說明文件：</span><span class="sxs-lookup"><span data-stu-id="a7ba0-275">For more information about the mathematical functions that SqlClient supports, see the documentation for the SQL Server version that you specified in the SqlClient provider manifest:</span></span>  
+  
+<span data-ttu-id="a7ba0-276">**SQL Server 2005:** [數學函數 & Amp;#40;transact-SQL&AMP;#41;](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))</span><span class="sxs-lookup"><span data-stu-id="a7ba0-276">**SQL Server 2005:** [Mathematical Functions (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))</span></span>  
+<span data-ttu-id="a7ba0-277">**SQL Server 2008:** [數學函數 & Amp;#40;transact-SQL&AMP;#41;](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))</span><span class="sxs-lookup"><span data-stu-id="a7ba0-277">**SQL Server 2008:** [Mathematical Functions (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))</span></span>  
+<span data-ttu-id="a7ba0-278">**SQL Server 2012 及更新版本：** [數學函數 & Amp;#40;transact-SQL&AMP;#41;](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)</span><span class="sxs-lookup"><span data-stu-id="a7ba0-278">**SQL Server 2012 and later:** [Mathematical Functions (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)</span></span>   
+
+ [<span data-ttu-id="a7ba0-279">適用於 Entity Framework 的 SqlClient 函式</span><span class="sxs-lookup"><span data-stu-id="a7ba0-279">SqlClient for Entity Framework Functions</span></span>](sqlclient-for-ef-functions.md)
