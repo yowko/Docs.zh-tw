@@ -2,12 +2,12 @@
 title: '&lt;httpDigest&gt; 項目'
 ms.date: 03/30/2017
 ms.assetid: 3da4f276-dfd9-4247-8c07-01d83618727c
-ms.openlocfilehash: 8ea4597dbfc704f669a514b0d6c5976c80c5c3a6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4f3edb4a525429bfc55c4e4cfaffbfc5726dcef8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748889"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43477954"
 ---
 # <a name="lthttpdigestgt-element"></a>&lt;httpDigest&gt; 項目
 指定對服務驗證用戶端時，所使用的摘要式類型認證。  
@@ -32,9 +32,9 @@ ms.locfileid: "32748889"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`impersonationLevel`|設定用戶端與伺服器通訊的模擬喜好設定。 用戶端選取的模擬模式不會在伺服器上強制使用。 有效值包括以下的值：<br /><br /> -Identification： 伺服器可取得的身分識別和權限的用戶端，但無法模擬用戶端。<br />模擬： 伺服器可以模擬用戶端的本機系統上的安全性內容。<br />-Delegation： 伺服器可以模擬用戶端的安全性內容，在遠端系統上。<br />匿名： 伺服器無法模擬或識別用戶端。<br />-無： 模擬層級未指派。<br /><br /> 預設為 Identification。 此屬性的型別為 <xref:System.Security.Principal.TokenImpersonationLevel>。|  
+|`impersonationLevel`|設定用戶端與伺服器通訊的模擬喜好設定。 用戶端選取的模擬模式不會在伺服器上強制使用。 有效值包括以下的值：<br /><br /> 識別： 伺服器可以取得身分識別和權限的用戶端，但無法模擬用戶端。<br />模擬： 伺服器可以模擬用戶端的本機系統上的安全性內容。<br />-Delegation： 伺服器可以模擬用戶端的安全性內容，在遠端系統上。<br />-Anonymous： 伺服器無法模擬或識別用戶端。<br />-None： 模擬層級未指派。<br /><br /> 預設為 Identification。 此屬性的型別為 <xref:System.Security.Principal.TokenImpersonationLevel>。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無  
   
 ### <a name="parent-elements"></a>父項目  
@@ -46,7 +46,7 @@ ms.locfileid: "32748889"
 ## <a name="remarks"></a>備註  
  摘要是指使用演算法和一組輸入所決定的雜湊。 驗證者和被驗證者一致同意某個演算法，並交換做為輸入的資料。 用戶端可計算雜湊，並將它傳送至服務。 服務也會計算雜湊並比較兩者的值。 比對會驗證用戶端。  
   
- 此功能必須與 Windows 和 Internet Information Services (IIS) 上的 Active Directory 一起啟用。 如需詳細資訊，請參閱[IIS 6.0 中的摘要式驗證](http://go.microsoft.com/fwlink/?LinkId=88443)。  
+ 此功能必須與 Windows 和 Internet Information Services (IIS) 上的 Active Directory 一起啟用。 如需詳細資訊，請參閱 <<c0> [ 在 IIS 6.0 中的摘要式驗證](https://go.microsoft.com/fwlink/?LinkId=88443)。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  

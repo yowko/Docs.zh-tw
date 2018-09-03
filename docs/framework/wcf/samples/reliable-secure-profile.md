@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 65523fcc1d08bd48a432e6cf599dfcb73ade8747
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: dfdafbcdc461c80192e310a86d5bff50f0885283
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805742"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486905"
 ---
 # <a name="reliable-secure-profile"></a>可靠的安全設定檔
-這個範例會示範如何撰寫 WCF 和[可靠的安全設定檔](http://go.microsoft.com/fwlink/?LinkId=178140)(RSP)。 這個範例會示範實作[建立連線](http://go.microsoft.com/fwlink/?LinkId=178141)通道可以在與可信賴傳訊，並選擇性地撰寫安全的通道，以建立可靠的安全繫結根據 RSP 規格。  
+這個範例會示範如何撰寫 WCF 及[可靠的安全設定檔](https://go.microsoft.com/fwlink/?LinkId=178140)(RSP)。 這個範例會示範實作[建立連線](https://go.microsoft.com/fwlink/?LinkId=178141)通道可以使用來撰寫與可靠的傳訊，並選擇性地建立可靠的安全繫結的安全通道根據 RSP 規格。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ReliableSecureProfile`  
   
@@ -28,11 +28,11 @@ ms.locfileid: "33805742"
   
 ## <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  開啟**ReliableSecureProfile**方案。  
+1.  開啟**ReliableSecureProfile**解決方案。  
   
-2.  以滑鼠右鍵按一下**服務**專案中**方案總管 中**，選取**偵錯**，**開始新執行個體**從內容功能表。 這會啟動服務主機。  
+2.  以滑鼠右鍵按一下**服務**專案中**方案總管**，選取**偵錯**，**開始新執行個體**從內容功能表。 這會啟動服務主機。  
   
-3.  以滑鼠右鍵按一下**用戶端**專案中**方案總管 中**，選取**偵錯**，**開始新執行個體**從內容功能表。 這會啟動用戶端。  
+3.  以滑鼠右鍵按一下**用戶端**專案中**方案總管**，選取**偵錯**，**開始新執行個體**從內容功能表。 這會啟動用戶端。  
   
 4.  在用戶端主控台視窗的提示中輸入任何字串，然後按一下 ENTER。這會將輸入字串傳送到服務，然後計算此字串的雜湊。  
   

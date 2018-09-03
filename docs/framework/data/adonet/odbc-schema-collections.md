@@ -2,18 +2,18 @@
 title: ODBC 結構描述集合
 ms.date: 03/30/2017
 ms.assetid: 1bb126a5-ceec-4649-a4bc-8aa19e801046
-ms.openlocfilehash: 36d0859b897bfcea33803c219ade14722ed90421
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bdedbb11960f02b99dcca6388abf663635238f74
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766643"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43479976"
 ---
 # <a name="odbc-schema-collections"></a>ODBC 結構描述集合
 本節將討論 Microsoft SQL Server、Oracle 和 Microsoft Jet 之 ODBC 驅動程式的結構描述集合支援。  
   
 ## <a name="microsoft-sql-server-odbc-driver"></a>Microsoft SQL Server ODBC 驅動程式  
- Microsoft SQL Server ODBC 驅動程式還支援下列特定的結構描述集合除了通用結構描述集合：  
+ Microsoft SQL Server ODBC 驅動程式支援下列特定結構描述集合除了通用結構描述集合：  
   
 -   資料表  
   
@@ -153,7 +153,7 @@ ms.locfileid: "32766643"
 |SS_DATA_TYPE|Byte|  
   
 ## <a name="microsoft-oracle-odbc-driver"></a>Microsoft Oracle ODBC 驅動程式  
- Microsoft SQL Server Oracle ODBC 驅動程式還支援下列特定的結構描述集合除了通用結構描述集合：  
+ Microsoft SQL Server Oracle ODBC 驅動程式支援下列特定結構描述集合除了通用結構描述集合：  
   
 -   資料表  
   
@@ -333,4 +333,4 @@ ms.locfileid: "32766643"
 |IS_NULLABLE|String|  
   
 ## <a name="see-also"></a>另請參閱  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

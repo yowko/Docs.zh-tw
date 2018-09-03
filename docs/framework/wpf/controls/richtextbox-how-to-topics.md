@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF], how-to topics
 ms.assetid: 36e9f98e-f968-42d8-adb6-9e78c814aec0
-ms.openlocfilehash: 412c3af39af33ab52d2a255b03c6452adf7a2637
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8542076ca9552ae0d5ace74f1a287f5cd39aff21
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555047"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481798"
 ---
 # <a name="richtextbox-how-to-topics"></a>RichTextBox HOW TO 主題
-本節提供範例示範如何完成一般工作，使用<xref:System.Windows.Controls.RichTextBox>控制項。  
+本節提供範例，示範如何完成一般工作，使用<xref:System.Windows.Controls.RichTextBox>控制項。  
   
 ## <a name="in-this-section"></a>本節內容  
  [擷取 RichTextBox 的文字內容](../../../../docs/framework/wpf/controls/how-to-extract-the-text-content-from-a-richtextbox.md)  
  [以程式設計方式變更 RichTextBox 中的選項](../../../../docs/framework/wpf/controls/change-selection-in-a-richtextbox-programmatically.md)  
  [儲存、載入和列印 RichTextBox 內容](../../../../docs/framework/wpf/controls/how-to-save-load-and-print-richtextbox-content.md)  
  [在 RichTextBox 中放置自訂內容功能表](../../../../docs/framework/wpf/controls/how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
- [如何： 取代在 RichTextBox 的預設內容主機](http://msdn.microsoft.com/library/dec1b2ce-9ca5-4bb2-bf54-f8a80a3c8beb)  
+ [如何： 將 RichTextBox 的預設內容主機](https://msdn.microsoft.com/library/dec1b2ce-9ca5-4bb2-bf54-f8a80a3c8beb)  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Controls.TextBox>  

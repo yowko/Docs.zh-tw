@@ -2,12 +2,12 @@
 title: 變數及引數追蹤
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-ms.openlocfilehash: f1938da55d2e1d88c88f83ff75f357e23f1eb81f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45ed3761cd7ead82650023b93a2f32a43e847339
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516980"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481488"
 ---
 # <a name="variable-and-argument-tracking"></a>變數及引數追蹤
 追蹤工作流程的執行時，擷取資料通常很實用。 它可在存取追蹤記錄後期執行時，提供額外的內容。 在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中，您可以在使用追蹤的工作流程中的任何活動範圍內擷取任何可見的變數或引數。 追蹤設定檔讓擷取資料變得非常容易。  
@@ -17,7 +17,7 @@ ms.locfileid: "33516980"
   
 -   如果以變數名稱指定變數，則追蹤會在目前所追蹤的活動及父活動內尋找該變數。 追蹤會在目前活動範圍及父範圍中搜尋變數。  
   
--   如果要擷取的變數會指定利用名稱 ="*"，則會擷取目前正在追蹤的活動內的所有變數。 在此情況下，則不會擷取在範圍內但未在父活動中定義的變數。  
+-   如果要擷取的變數會指定利用名稱 ="*"，則會擷取目前追蹤之活動內的所有變數。 在此情況下，則不會擷取在範圍內但未在父活動中定義的變數。  
   
  擷取引數時，會根據活動的狀態擷取引數。 當活動的狀態是 Executing 時，則只有 `InArguments` 可供擷取。 若為其他任何活動狀態 (Closed、Faulted、Canceled)，則 InArgument 和 OutArgument 皆可供擷取。  
   
@@ -47,5 +47,5 @@ ms.locfileid: "33516980"
 3.  若為自訂追蹤參與者，請確定 WF 程式碼不會公開儲存在變數或引數中的機密資訊。  
   
 ## <a name="see-also"></a>另請參閱  
- [Windows Server App Fabric 監控](http://go.microsoft.com/fwlink/?LinkId=201273)  
- [使用 App Fabric 監控應用程式](http://go.microsoft.com/fwlink/?LinkId=201275)
+ [Windows Server App Fabric 監控](https://go.microsoft.com/fwlink/?LinkId=201273)  
+ [使用 App Fabric 監控應用程式](https://go.microsoft.com/fwlink/?LinkId=201275)

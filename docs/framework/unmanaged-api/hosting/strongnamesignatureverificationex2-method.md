@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d2ac3788b68626eb04a6f2cbac995b8e5b4ebf5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e47c2ac69317b2d2db489dce9a0102b5fe304c05
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442578"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483051"
 ---
 # <a name="strongnamesignatureverificationex2-method"></a>StrongNameSignatureVerificationEx2 方法
-驗證簽章是強式名稱組件，並提供從 ECMA 金鑰對應至實際的索引鍵。  
+驗證強式名稱的組件中，簽章，並提供實際的索引鍵與 ECMA 索引鍵的對應。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,31 +40,31 @@ HRESULT StrongNameSignatureVerificationEx (
   
 #### <a name="parameters"></a>參數  
  `wszFilePath`  
- [in]可攜式執行檔 （.exe 或.dll） 檔案要驗證的組件路徑。  
+ [in]可攜式可執行檔 （.exe 或.dll） 檔來進行驗證的組件的路徑。  
   
  `fForceVerification`  
- [in]`true`執行驗證，即使它是必要的登錄設定會覆寫，否則`false`。  
+ [in]`true`進行驗證，即使它是必要的登錄設定會覆寫，否則`false`。  
   
  `pbEcmaPublicKey`  
- [in]實際的索引鍵的 ECMA 公開金鑰對應的指標會用於驗證。  
+ [in]從實際的索引鍵的 ECMA 公開金鑰對應的指標，用來驗證。  
   
  `cbEcmaPublicKey`  
- [in]真實的 ECMA 公用金鑰長度。  
+ [in]實際的 ECMA 公開金鑰長度。  
   
  `pfWasVerified`  
- [out]`true`強式名稱簽章已通過驗證，否則如果`false`。 這個參數也會設為`false`如果驗證已成功登錄設定所造成。  
+ [out]`true`強式名稱簽章是否已驗證，否則`false`。 這個參數也會設定為`false`若驗證成功因登錄設定。  
   
 ## <a name="return-value"></a>傳回值  
- `S_OK` 如果驗證成功。否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](http://go.microsoft.com/fwlink/?LinkId=213878)清單)。  
+ `S_OK` 如果驗證成功;否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)清單)。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MetaHost.h  
   
  **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [StrongNameSignatureVerification 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3ea47b8402f1bd2f66c957ff9126c8dff094a7ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2a2a27f788fa84c41ccb818266fffc816237bb48
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397750"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486944"
 ---
 # <a name="net-native-reflection-api-reference"></a>.NET 原生反映 API 參考
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 包含三個新的例外狀況類型： [System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)、 [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)和 [System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)。 請注意有關下列三個例外狀況類型的資訊：  
@@ -25,7 +25,7 @@ ms.locfileid: "33397750"
 -   針對方法的 [MissingMetadataException 疑難排解工具](http://dotnet.github.io/native/troubleshooter/method.html) 。  
   
 > [!NOTE]
->  此參考文件記載 [!INCLUDE[net_native](../../../includes/net-native-md.md)]特有的三個例外狀況類型。 如需 .NET Framework 核心反映 API 的參考文件，請參閱 [System.Reflection 命名空間](http://msdn.microsoft.com/library/gg145033.aspx)。 如需 .NET Framework 核心 interop API 的參考文件，請參閱 <xref:System.Runtime.InteropServices>。  
+>  此參考文件記載 [!INCLUDE[net_native](../../../includes/net-native-md.md)]特有的三個例外狀況類型。 如需.NET Framework 核心反映 API 參考文件，請參閱 < [System.Reflection 命名空間](https://msdn.microsoft.com/library/gg145033.aspx)。 如需 .NET Framework 核心 interop API 的參考文件，請參閱 <xref:System.Runtime.InteropServices>。  
   
 ## <a name="systemreflection-namespace"></a>System.Reflection 命名空間  
  <xref:System.Reflection> 命名空間包含用於在 .NET Framework 中反映的核心類型。 針對 [!INCLUDE[net_native](../../../includes/net-native-md.md)]，它還包含兩個新的例外狀況類型：  

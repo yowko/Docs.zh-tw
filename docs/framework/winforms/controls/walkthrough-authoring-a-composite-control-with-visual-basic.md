@@ -13,18 +13,18 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 - custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
-ms.openlocfilehash: d919112cf1a1462b4a60ef6dbdf60798d72c3e56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: be2265f62092e6fdf43d8647a71d2c441beeefef
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541972"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482386"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>逐步解說：使用 Visual Basic 撰寫複合控制項
 複合控制項提供可以建立及重複使用自訂圖形介面的方法。 複合控制項基本上是具有視覺表示的元件。 因此，它可能包含一或多個 Windows Forms 控制項、元件或程式碼區塊，可以藉由驗證使用者輸入、修改顯示屬性，或執行作者需要的其他工作來擴充功能。 複合控制項可以放在 Windows Forms 上，與其他控制項的方式相同。 在本逐步解說的第一個部分中，您可以建立簡單的複合控制項，稱為 `ctlClock`。 在逐步解說的第二個部分中，您透過繼承擴充 `ctlClock` 的功能。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 ## <a name="creating-the-project"></a>建立專案  
  當您建立新的專案時，您會指定其名稱以設定根命名空間、組件名稱和專案名稱，並且確定預設元件將會在正確的命名空間中。  
@@ -40,7 +40,7 @@ ms.locfileid: "33541972"
 3.  以滑鼠右鍵按一下 [方案總管] 中的 [UserControl1.vb]，然後按一下 [重新命名]。 將檔案名稱變更為 `ctlClock.vb`。 當系統詢問您是否要重新命名程式碼元素 "UserControl1" 的所有參考時，按一下 [是]按鈕。  
   
     > [!NOTE]
-    >  根據預設，複合控制項繼承自<xref:System.Windows.Forms.UserControl>系統所提供的類別。 <xref:System.Windows.Forms.UserControl>類別提供的功能所需的所有複合控制項，並會實作標準的方法和屬性。  
+    >  根據預設，複合控制項是繼承自<xref:System.Windows.Forms.UserControl>系統所提供的類別。 <xref:System.Windows.Forms.UserControl>類別提供所有複合控制項，所需的功能，並會實作標準方法和屬性。  
   
 4.  在 [檔案] 功能表上按一下 [全部儲存] 以儲存專案。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "33541972"
   
 2.  在 [工具箱] 中展開 [通用控制項] 節點，然後再按兩下 [標籤]。  
   
-     A<xref:System.Windows.Forms.Label>控制項，名為`Label1`加入至您的控制項設計工具介面上。  
+     A<xref:System.Windows.Forms.Label>控制項，名為`Label1`新增至您的控制項設計工具介面上。  
   
 3.  在設計工具中，按一下 [Label1]。 在 [屬性] 視窗中設定下列屬性。  
   
@@ -66,11 +66,11 @@ ms.locfileid: "33541972"
   
 4.  在 [工具箱] 中展開 [元件] 節點，然後再按兩下 [計時器]。  
   
-     因為<xref:System.Windows.Forms.Timer>是元件，它已在執行階段沒有視覺表示。 因此，它不會與控制項一起出現在設計工具介面上，而是會出現在元件設計工具中 (位於設計工具介面底部的系統匣)。  
+     因為<xref:System.Windows.Forms.Timer>是元件，它有在執行階段沒有視覺表示法。 因此，它不會與控制項一起出現在設計工具介面上，而是會出現在元件設計工具中 (位於設計工具介面底部的系統匣)。  
   
-5.  在元件設計工具中，按一下**Timer1**，然後設定<xref:System.Windows.Forms.Timer.Interval%2A>屬性`1000`和<xref:System.Windows.Forms.Timer.Enabled%2A>屬性`True`。  
+5.  在元件設計工具中，按一下  **Timer1**，然後將<xref:System.Windows.Forms.Timer.Interval%2A>屬性設`1000`而<xref:System.Windows.Forms.Timer.Enabled%2A>屬性設`True`。  
   
-     <xref:System.Windows.Forms.Timer.Interval%2A>屬性控制與刻度 timer 元件的頻率。 每次 `Timer1` 走動時，它會執行 `Timer1_Tick` 事件中的程式碼。 間隔代表刻度之間的毫秒數。  
+     <xref:System.Windows.Forms.Timer.Interval%2A>屬性會控制計時器元件走動的頻率。 每次 `Timer1` 走動時，它會執行 `Timer1_Tick` 事件中的程式碼。 間隔代表刻度之間的毫秒數。  
   
 6.  在元件設計工具中，按兩下 [Timer1] 以前往 `ctlClock` 的 `Timer1_Tick` 事件。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "33541972"
 9. 在 [檔案] 功能表上按一下 [全部儲存] 以儲存專案。  
   
 ## <a name="adding-properties-to-the-composite-control"></a>將屬性新增至複合控制項  
- 您的時鐘控制項現在會封裝<xref:System.Windows.Forms.Label>控制項和<xref:System.Windows.Forms.Timer>元件，各有其各自的繼承屬性集。 雖然這些控制項的個別屬性無法供控制項的後續使用者存取，但是您可以建立並公開自訂屬性，方法是撰寫適當的程式碼區塊。 在下列程序中，您會將屬性新增至控制項，讓使用者變更背景與文字的色彩。  
+ 您的時鐘控制項現在會封裝<xref:System.Windows.Forms.Label>控制項和<xref:System.Windows.Forms.Timer>元件，各有其自己的固有的屬性集。 雖然這些控制項的個別屬性無法供控制項的後續使用者存取，但是您可以建立並公開自訂屬性，方法是撰寫適當的程式碼區塊。 在下列程序中，您會將屬性新增至控制項，讓使用者變更背景與文字的色彩。  
   
 #### <a name="to-add-a-property-to-your-composite-control"></a>若要將屬性新增至複合控制項  
   
@@ -238,9 +238,9 @@ ms.locfileid: "33541972"
     > [!NOTE]
     >  如果您想要讓複合控制項的後續使用者可以存取其內部控制項，請將它們宣告為 `Public` 或 `Protected`。 這可讓您使用適當的程式碼，設定及修改包含在複合控制項中的控制項屬性。  
   
-3.  新增<xref:System.Windows.Forms.Label>複合控制項的控制項。  
+3.  新增<xref:System.Windows.Forms.Label>至複合控制項的控制項。  
   
-4.  使用滑鼠拖曳<xref:System.Windows.Forms.Label>緊接位於顯示方塊的控制項。 在 [屬性] 視窗中設定下列屬性。  
+4.  使用滑鼠，拖曳<xref:System.Windows.Forms.Label>正下方的顯示方塊中的控制項。 在 [屬性] 視窗中設定下列屬性。  
   
     |屬性|設定|  
     |--------------|-------------|  
@@ -350,7 +350,7 @@ ms.locfileid: "33541972"
   
 8.  按兩下 [ctlAlarmClock] 以將 `ctlAlarmClock` 的執行個體新增至表單。  
   
-9. 在**工具箱**，找出並按兩下**DateTimePicker**新增<xref:System.Windows.Forms.DateTimePicker>控制項加入至表單，然後再加入<xref:System.Windows.Forms.Label>按兩下控制項**標籤**.  
+9. 在**工具箱**，找出並按兩下**DateTimePicker**加入<xref:System.Windows.Forms.DateTimePicker>控制項至表單，然後再加入<xref:System.Windows.Forms.Label>按兩下控制項**標籤**.  
   
 10. 使用滑鼠將控制項放置在表單上方便的位置。  
   
@@ -383,9 +383,9 @@ ms.locfileid: "33541972"
   
 15. 按一下 [偵錯] 功能表上的 [開始偵錯]。  
   
-     測試程式隨即啟動。 請注意，目前的時間在更新`ctlAlarmClock`控制項，以及所示的開始時間<xref:System.Windows.Forms.DateTimePicker>控制項。  
+     測試程式隨即啟動。 請注意，目前的時間在更新`ctlAlarmClock`控制項，以及開始時間所示<xref:System.Windows.Forms.DateTimePicker>控制項。  
   
-16. 按一下<xref:System.Windows.Forms.DateTimePicker>顯示分鐘數的位置。  
+16. 按一下 <xref:System.Windows.Forms.DateTimePicker>其中會顯示在一小時的分鐘。  
   
 17. 使用鍵盤，將分鐘值設定為大於 `ctlAlarmClock` 顯示的目前時間一分鐘。  
   
@@ -399,4 +399,4 @@ ms.locfileid: "33541972"
  [各種自訂控制項](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
  [操作說明：撰寫複合控制項](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)  
  [操作說明：在選擇工具箱項目對話方塊中顯示控制項](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
- [元件撰寫逐步解說](http://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)
+ [元件撰寫逐步解說](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)

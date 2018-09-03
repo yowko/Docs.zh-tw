@@ -10,22 +10,22 @@ helpviewer_keywords:
 - ToolStripRenderer class [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: c208b2f6-8105-474b-9075-d582e1792870
-ms.openlocfilehash: 3fe99fadc7ddccd5c4921c4694c5b546f4fd4749
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 10799ad4db103fb50a25e600418fb8b5003c24ea
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533181"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486052"
 ---
 # <a name="how-to-create-a-professionally-styled-toolstrip-control"></a>如何：建立專業樣式的 ToolStrip 控制項
 您可以藉由自行撰寫衍生自 <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 類型的類別，賦與應用程式的 <xref:System.Windows.Forms.ToolStrip> 控制項專業外觀和行為 (外觀及操作)。  
   
- 沒有對 Visual Studio 中的這項功能有廣泛的支援。  
+ 沒有這項功能在 Visual Studio 中的廣泛支援。  
   
  請參閱[逐步解說：建立專業樣式的 ToolStrip 控制項](../../../../docs/framework/winforms/controls/walkthrough-creating-a-professionally-styled-toolstrip-control.md)。  
   
 ## <a name="example"></a>範例  
- 下列程式碼範例示範如何使用<xref:System.Windows.Forms.ToolStrip>控制項建立複合控制項，以模擬**瀏覽窗格**Microsoft® Outlook® 提供的。  
+ 下列程式碼範例示範如何使用<xref:System.Windows.Forms.ToolStrip>控制項，以建立複合控制項，以模擬**瀏覽窗格**Microsoft® Outlook® 提供的。  
   
  [!code-csharp[System.Windows.Forms.ToolStrip.StackView#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#1)]
  [!code-vb[System.Windows.Forms.ToolStrip.StackView#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#1)]  
@@ -35,7 +35,7 @@ ms.locfileid: "33533181"
   
 -   System.Drawing 和 System.Windows.Forms 組件的參考。  
   
- Visual Basic 或 Visual C# 中建置這個範例，從命令列的相關資訊，請參閱[從命令列建置](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[使用 csc.exe 建置](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置 Visual Studio 中的這個範例。  另請參閱[逐步解說：建立專業樣式的 ToolStrip 控制項](http://msdn.microsoft.com/library/ms233664\(v=vs.110\))。  
+ Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  另請參閱[逐步解說：建立專業樣式的 ToolStrip 控制項](walkthrough-creating-a-professionally-styled-toolstrip-control.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.MenuStrip>  

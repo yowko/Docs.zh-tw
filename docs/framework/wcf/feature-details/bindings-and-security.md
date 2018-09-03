@@ -9,26 +9,26 @@ helpviewer_keywords:
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 938b04f6c612f38be41d278273aa18d41677f84c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7d2e55f84ed99ccb25e9966dc72112c0113eabc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496744"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43487251"
 ---
 # <a name="bindings-and-security"></a>繫結和安全性
-包含與 Windows Communication Foundation (WCF) 系統提供繫結提供 WCF 應用程式的快速方法。 除了一個例外狀況以外，所有繫結預設都會啟用安全性配置。 本主題將根據您的安全性需求，協助您選取正確的繫結。  
+包含與 Windows Communication Foundation (WCF) 的系統提供繫結會提供程式 WCF 應用程式的快速方法。 除了一個例外狀況以外，所有繫結預設都會啟用安全性配置。 本主題將根據您的安全性需求，協助您選取正確的繫結。  
   
- 如需 WCF 安全性的概觀，請參閱[安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)。 如需程式設計使用繫結的 WCF 的詳細資訊，請參閱[程式設計 WCF 安全性](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)。  
+ 如需 WCF 安全性的概觀，請參閱 <<c0> [ 安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)。 如需程式設計使用繫結的 WCF 的詳細資訊，請參閱[Programming WCF 安全性](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)。  
   
- 如果您已經選取繫結，您可以進一步了解與中安全性相關聯的執行階段行為[安全性行為](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)。  
+ 如果您已經選取繫結，您可以深入了解與安全性相關聯的執行階段行為[安全性行為](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)。  
   
- 某些安全性功能無法使用系統提供的繫結進行程式設計。 如需使用自訂繫結的控制項，請參閱[自訂繫結的安全性功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)。  
+ 某些安全性功能無法使用系統提供的繫結進行程式設計。 如需使用自訂繫結的控制項，請參閱 <<c0> [ 自訂繫結的安全性功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)。  
   
 ## <a name="security-functions-of-bindings"></a>繫結的安全性功能  
- WCF 包含一些系統提供繫結，可滿足大部分的需求。 如果特定繫結不敷使用，您也可以建立自訂繫結。 如需系統提供繫結的清單，請參閱[之繫結](../../../../docs/framework/wcf/system-provided-bindings.md)。 如需有關自訂繫結的詳細資訊，請參閱[自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
+ WCF 包含一些滿足大多數需求的系統提供繫結。 如果特定繫結不敷使用，您也可以建立自訂繫結。 如需系統提供繫結的清單，請參閱 < [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md)。 如需有關自訂繫結的詳細資訊，請參閱 <<c0> [ 自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
- 在 WCF 中的每一個繫結有兩種形式： 為應用程式開發介面，以及組態檔中使用的 XML 項目。 例如， `WSHttpBinding` (API) 中有對應的[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。  
+ 在 WCF 中的每個繫結有兩種形式： 為 API，以及使用組態檔中的 XML 項目。 例如， `WSHttpBinding` (API) 中有對應[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。  
   
  下列章節將列出每個繫結的兩種型式，並摘要說明其安全功能。  
   
@@ -41,11 +41,11 @@ ms.locfileid: "33496744"
   
 -   Web Service Enhancements (WSE) 應用程式。  
   
--   Web 服務互通性中所定義的基本設定檔 (WS-I) 規格 ([http://go.microsoft.com/fwlink/?LinkId=38955](http://go.microsoft.com/fwlink/?LinkId=38955))。  
+-   基本設定檔中的 Web 服務互通性所定義 (WS-我) 規格 ([https://go.microsoft.com/fwlink/?LinkId=38955](https://go.microsoft.com/fwlink/?LinkId=38955))。  
   
 -   如 WS-I 中定義的 Basic Security Profile。  
   
- 根據預設，這個繫結是不安全的。 它是針對與 ASMX 服務相互操作所設計的。 啟用安全性時，繫結是設計成可用來與 Internet Information Services (IIS) 安全性機制進行順暢互通的，例如：基本的驗證、摘要和整合式 Windows 安全性。 如需詳細資訊，請參閱[傳輸安全性概觀](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)。 這個繫結支援下列各項：  
+ 根據預設，這個繫結是不安全的。 它是針對與 ASMX 服務相互操作所設計的。 啟用安全性時，繫結是設計成可用來與 Internet Information Services (IIS) 安全性機制進行順暢互通的，例如：基本的驗證、摘要和整合式 Windows 安全性。 如需詳細資訊，請參閱 <<c0> [ 傳輸安全性概觀](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)。 這個繫結支援下列各項：  
   
 -   HTTPS 傳輸安全性。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "33496744"
   
 -   用於驗證呼叫者的 HTTPS 傳輸保護 (具 SOAP 訊息認證安全性)。  
   
- 如需詳細資訊，請參閱<xref:System.ServiceModel.WSHttpSecurity>， <xref:System.ServiceModel.MessageSecurityOverHttp>， <xref:System.ServiceModel.MessageCredentialType>， <xref:System.ServiceModel.SecurityMode>， <xref:System.ServiceModel.HttpTransportSecurity>， <xref:System.ServiceModel.HttpClientCredentialType>，和<xref:System.ServiceModel.HttpProxyCredentialType>。  
+ 如需詳細資訊，請參閱 < <xref:System.ServiceModel.WSHttpSecurity>， <xref:System.ServiceModel.MessageSecurityOverHttp>， <xref:System.ServiceModel.MessageCredentialType>， <xref:System.ServiceModel.SecurityMode>， <xref:System.ServiceModel.HttpTransportSecurity>， <xref:System.ServiceModel.HttpClientCredentialType>，和<xref:System.ServiceModel.HttpProxyCredentialType>。  
   
 ### <a name="wsdualhttpbinding"></a>WSDualHttpBinding  
  在程式碼，使用<xref:System.ServiceModel.WSDualHttpBinding>類別; 在組態中，使用[ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)。  
@@ -114,7 +114,7 @@ ms.locfileid: "33496744"
   
 -   使用訊息認證的傳輸安全性，其機密性和完整性是由透過 TCP 之上的傳輸層安全性 (TLS) 所提供，而授權的認證則是由 WS-Security 提供。  
   
- 如需詳細資訊，請參閱<xref:System.ServiceModel.NetTcpSecurity>， <xref:System.ServiceModel.TcpTransportSecurity>， <xref:System.ServiceModel.TcpClientCredentialType>， <xref:System.ServiceModel.MessageSecurityOverTcp>，和<xref:System.ServiceModel.MessageCredentialType>。  
+ 如需詳細資訊，請參閱 < <xref:System.ServiceModel.NetTcpSecurity>， <xref:System.ServiceModel.TcpTransportSecurity>， <xref:System.ServiceModel.TcpClientCredentialType>， <xref:System.ServiceModel.MessageSecurityOverTcp>，和<xref:System.ServiceModel.MessageCredentialType>。  
   
 ### <a name="netnamedpipebinding"></a>NetNamedPipeBinding  
  在程式碼，使用<xref:System.ServiceModel.NetNamedPipeBinding>類別; 在組態中，使用[ \<netNamedPipeBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)。  
@@ -138,7 +138,7 @@ ms.locfileid: "33496744"
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  在程式碼，使用<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>類別; 在組態中，使用[ \<msmqIntegrationBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)。  
   
- 這個繫結適合使用非 WCF Microsoft 訊息佇列 MSMQ 端點建立 WCF 用戶端與服務相互操作。  
+ 這個繫結最適合使用非 WCF Microsoft 訊息佇列 MSMQ 端點建立 WCF 用戶端和服務相互操作。  
   
  根據預設，這個繫結會使用傳輸安全性，並提供下列安全性特性：  
   
@@ -174,10 +174,10 @@ ms.locfileid: "33496744"
   
  根據預設，這個繫結會使用 WS-Security (訊息層安全性)。  
   
- 如需詳細資訊，請參閱[同盟](../../../../docs/framework/wcf/feature-details/federation.md)， <xref:System.ServiceModel.WSFederationHttpSecurity>，和<xref:System.ServiceModel.WSFederationHttpSecurityMode>。  
+ 如需詳細資訊，請參閱 <<c0> [ 同盟](../../../../docs/framework/wcf/feature-details/federation.md)， <xref:System.ServiceModel.WSFederationHttpSecurity>，和<xref:System.ServiceModel.WSFederationHttpSecurityMode>。  
   
 ## <a name="custom-bindings"></a>自訂繫結  
- 如果系統提供的繫結程序都不符合您的需求，您可以以自訂的安全性繫結程序項目建立自訂繫結程序。 如需詳細資訊，請參閱[自訂繫結的安全性功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)。  
+ 如果系統提供的繫結程序都不符合您的需求，您可以以自訂的安全性繫結程序項目建立自訂繫結程序。 如需詳細資訊，請參閱 <<c0> [ 自訂繫結的安全性功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)。  
   
 ## <a name="binding-choices"></a>繫結選擇  
  下表摘要說明了安全性模式設定中提供的功能，也就是說，列出了當安全性模式設定為 `Transport`、`Message` 或 `TransportWithMessageCredential` 時可以使用的功能。 此表可協助您找出應用程式所需的安全性功能。  
@@ -192,14 +192,14 @@ ms.locfileid: "33496744"
   
 |繫結|傳輸模式支援|訊息模式支援|TransportWithMessageCredential 支援|  
 |-------------|----------------------------|--------------------------|--------------------------------------------|  
-|`BasicHttpBinding`|[是]|是|是|  
+|`BasicHttpBinding`|是|是|是|  
 |`WSHttpBinding`|是|是|是|  
 |`WSDualHttpBinding`|否|是|否|  
 |`NetTcpBinding`|是|是|是|  
 |`NetNamedPipeBinding`|是|否|否|  
 |`NetMsmqBinding`|是|是|否|  
 |`MsmqIntegrationBinding`|是|否|否|  
-|`wsFederationHttpBinding`|否|是|[是]|  
+|`wsFederationHttpBinding`|否|是|是|  
   
 ## <a name="transport-credentials-in-bindings"></a>繫結中的傳輸認證  
  下表列出在傳輸安全性模式中使用 `BasicHttpBinding` 或 `WSHttpBinding` 時，可以使用的用戶端認證類型。  
@@ -207,12 +207,12 @@ ms.locfileid: "33496744"
 |類型|描述|  
 |----------|-----------------|  
 |無|指定用戶端不需要提出任何認證。 這會轉譯成匿名用戶端。|  
-|基本|基本驗證。 如需詳細資訊，請參閱 RFC 2617 – HTTP Authentication: Basic and Digest Authentication，可以在[ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023)。|  
-|摘要|摘要式驗證。 如需詳細資訊，請參閱 RFC 2617 – HTTP Authentication: Basic and Digest Authentication，可以在[ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023)。|  
+|基本|基本驗證。 如需詳細資訊，請參閱 RFC 2617 – HTTP 驗證： 基本與摘要式驗證，網址[ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023)。|  
+|摘要|摘要式驗證。 如需詳細資訊，請參閱 RFC 2617 – HTTP 驗證： 基本與摘要式驗證，網址[ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023)。|  
 |NTLM|NT LAN Manager (NTLM) 驗證。|  
 |Windows|Windows 驗證。|  
 |憑證|使用憑證執行的驗證。|  
-|IssuedToken|允許服務要求用戶端必須以安全性權杖服務或 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 所發出的權杖進行驗證。 如需詳細資訊，請參閱[同盟和發出的權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。|  
+|IssuedToken|允許服務要求用戶端必須以安全性權杖服務或 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 所發出的權杖進行驗證。 如需詳細資訊，請參閱 <<c0> [ 聯合與發行權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。|  
   
 ### <a name="message-client-credentials-in-bindings"></a>繫結中的訊息用戶端認證  
  下表列出在訊息安全性模式中使用繫結時，可以使用的用戶端認證類型。  
@@ -221,7 +221,7 @@ ms.locfileid: "33496744"
 |----------|-----------------|  
 |無|允許服務與匿名用戶端互動。|  
 |Windows|允許在 Windows 認證的已驗證內容中進行 SOAP 訊息交換。|  
-|使用者名稱|允許服務要求用戶端必須以使用者名稱認證進行驗證。 請注意，當安全性模式設定為`TransportWithMessageCredential`，WCF 不支援傳送密碼摘要，或是衍生的金鑰使用的密碼，甚至針對訊息模式安全性使用該金鑰。 因此，WCF 會強制執行使用使用者名稱認證時，保護傳輸。|  
+|使用者名稱|允許服務要求用戶端必須以使用者名稱認證進行驗證。 請注意，當安全性模式設定為`TransportWithMessageCredential`，WCF 不支援傳送密碼摘要或衍生的金鑰使用的密碼，並使用訊息模式安全性這類金鑰。 因此，WCF 會強制使用使用者名稱認證時，保護傳輸。|  
 |憑證|允許服務要求用戶端使用憑證進行驗證。|  
 |IssuedToken|允許服務使用安全性權杖服務提供自訂權杖。|  
   
@@ -231,4 +231,4 @@ ms.locfileid: "33496744"
  [選取認證類型](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
  [自訂繫結的安全性功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
  [安全性行為](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Windows Server App Fabric 的安全性模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

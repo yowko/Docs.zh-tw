@@ -2,15 +2,15 @@
 title: DataAdapter 和 DataReader
 ms.date: 03/30/2017
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
-ms.openlocfilehash: 7fd7013478bbf30c2a7e915045e3dd192ca92540
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6e711b11ef9a3eca53806b825f1e721169ab662d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758096"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43476218"
 ---
 # <a name="dataadapters-and-datareaders"></a>DataAdapter 和 DataReader
-您可以使用 ADO.NET **DataReader**從資料庫擷取資料的唯讀、 順向資料流。 時會傳回結果的查詢會執行，而且會儲存在用戶端上的網路緩衝區中，直到您提出要求時使用**讀取**方法**DataReader**。 使用**DataReader**可以提高應用程式效能，並使用，以擷取資料及 （依預設） 只有一個資料列一次將儲存在記憶體中，可降低系統額外負荷。  
+您可以使用 ADO.NET **DataReader**從資料庫擷取資料的唯讀、 順向資料流。 結果會傳回查詢執行，並會儲存在用戶端上的網路緩衝區中，直到您提出要求時使用**讀取**方法**DataReader**。 使用**DataReader**可以提高應用程式的效能，會透過形式擷取資料及 （依預設） 只有一個資料列一次將儲存在記憶體中，進而減少系統負擔。  
   
  <xref:System.Data.Common.DataAdapter> 可用於從資料來源擷取資料，並填入 <xref:System.Data.DataSet> 內的資料表。 `DataAdapter` 亦可將對 `DataSet` 所做的變更解析回資料來源。 `DataAdapter` 會使用 .NET Framework 資料提供者的 `Connection` 物件連接到資料來源，並使用 `Command` 物件從資料來源擷取資料，以及將變更解析回資料來源。  
   
@@ -18,7 +18,7 @@ ms.locfileid: "32758096"
   
 ## <a name="in-this-section"></a>本節內容  
  [使用 DataReader 擷取資料](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)  
- 說明 ADO.NET **DataReader**物件，以及如何使用它來從資料來源傳回的結果資料流。  
+ 說明 ADO.NET **DataReader**物件，以及如何使用它來從資料來源傳回結果資料流。  
   
  [從 DataAdapter 填入 DataSet](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
  說明如何使用 `DataSet` 來以資料表、資料行及資料列填入 `DataAdapter`。  
@@ -49,4 +49,4 @@ ms.locfileid: "32758096"
  [命令和參數](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [異動和並行存取](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
  [DataSet、DataTable 和 DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

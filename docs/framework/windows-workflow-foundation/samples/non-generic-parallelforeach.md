@@ -2,17 +2,17 @@
 title: 非泛型 ParallelForEach
 ms.date: 03/30/2017
 ms.assetid: de17e7a2-257b-48b3-91a1-860e2e9bf6e6
-ms.openlocfilehash: 0bdaaac04162cf065d847f5071ba21953f042223
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70d5de587dda3cb61205a8d77f2173df9b93498b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519385"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480842"
 ---
 # <a name="non-generic-parallelforeach"></a>非泛型 ParallelForEach
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 工具箱中隨附一組控制流程活動，包括<xref:System.Activities.Statements.ParallelForEach%601>，允許逐一<!--zz <xref:System.Collections.IEnumerable%601> -->`System.Collections.IEnumerable`集合。  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 工具箱中隨附的控制流程的活動，包括一組<xref:System.Activities.Statements.ParallelForEach%601>，允許逐一<!--zz <xref:System.Collections.IEnumerable%601> -->`System.Collections.IEnumerable`集合。  
   
- <xref:System.Activities.Statements.ParallelForEach%601> 需要其<xref:System.Activities.Statements.ParallelForEach%601.Values%2A>屬性型別<!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable`。 這會防止使用者逐一查看實作資料結構<!--zz <xref:System.Collections.IEnumerable%601> -->`System.Collections.IEnumerable`介面 (例如， <xref:System.Collections.ArrayList>)。 非泛型 <xref:System.Activities.Statements.ParallelForEach%601> 版本沒有這項需求，但在執行階段更複雜，以確保集合中數值型別的相容性。  
+ <xref:System.Activities.Statements.ParallelForEach%601> 需要其<xref:System.Activities.Statements.ParallelForEach%601.Values%2A>類型的屬性<!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable`。 這會防止使用者逐一查看資料結構，可實作<!--zz <xref:System.Collections.IEnumerable%601> -->`System.Collections.IEnumerable`介面 (例如<xref:System.Collections.ArrayList>)。 非泛型 <xref:System.Activities.Statements.ParallelForEach%601> 版本沒有這項需求，但在執行階段更複雜，以確保集合中數值型別的相容性。  
   
  這個範例示範如何實作非泛型 <xref:System.Activities.Statements.ParallelForEach%601> 活動及其設計工具。 這個活動可用來逐一查看 <xref:System.Collections.ArrayList>。  
   
@@ -76,7 +76,7 @@ Activity sampleUsage =
 ```  
   
 ## <a name="parallelforeach-designer"></a>ParallelForEach 設計工具  
- 此範例的活動設計工具在外觀上與針對內建 <xref:System.Activities.Statements.ParallelForEach%601> 活動所提供的設計工具類似。 設計工具隨即出現在工具箱的**範例**，**非泛型活動**類別目錄。 在設計工具名為**ParallelForEachWithBodyFactory**在工具箱中，因為活動會公開<xref:System.Activities.Presentation.IActivityTemplateFactory>建立有適當設定活動工具箱 中<xref:System.Activities.ActivityAction>。  
+ 此範例的活動設計工具在外觀上與針對內建 <xref:System.Activities.Statements.ParallelForEach%601> 活動所提供的設計工具類似。 在工具箱 中的設計工具隨即出現**範例**，**非泛型活動**類別目錄。 名為設計工具**ParallelForEachWithBodyFactory**在工具箱中，因為活動會公開<xref:System.Activities.Presentation.IActivityTemplateFactory>建立有適當設定的 [活動工具箱] 中<xref:System.Activities.ActivityAction>。  
   
 ```  
 public sealed class ParallelForEachWithBodyFactory : IActivityTemplateFactory  
@@ -101,7 +101,7 @@ public sealed class ParallelForEachWithBodyFactory : IActivityTemplateFactory
   
 1.  將您選擇的專案設定為方案的啟始專案。  
   
-    1.  **CodeTestClient**示範如何透過程式碼使用活動。  
+    1.  **CodeTestClient**示範如何使用使用程式碼的活動。  
   
     2.  **DesignerTestClient**示範如何使用設計工具內的活動。  
   
@@ -112,6 +112,6 @@ public sealed class ParallelForEachWithBodyFactory : IActivityTemplateFactory
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NonGenericParallelForEach`

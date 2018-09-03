@@ -3,17 +3,17 @@ title: 檔案名稱中指定的檔案不是有效的 XML 檔案
 ms.date: 07/20/2015
 ms.assetid: c4c30bf3-e0ad-4bc8-89e0-2c3e49e9793b
 ms.openlocfilehash: 3aecb0c2c87539717656a29f5b48f94fce3c8453
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33639184"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481872"
 ---
 # <a name="file-specified-in-filename-is-not-a-valid-xml-file"></a>檔案名稱中指定的檔案不是有效的 XML 檔案
 您提供的檔案名稱不是有效的 XML 檔案。 若要指定 XML 文件所允許的結構和內容，您可以使用文件類型定義 (DTD)、Microsoft XDR (XML-Data Reduced) 結構描述或 XML 結構描述定義語言 (XSD) 結構描述。 建議使用 XSD 結構描述來指定 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]中的 XML 文法。  
   
 > [!NOTE]
->  在某些舊版 Visual Studio 中， **XML 設計工具** 是具類型資料集和 XML 結構描述的設計工具。 **XML 設計工具** 仍可用來建立及編輯 XML 結構描述檔案。 不過，在 [!INCLUDE[vs_current_long](~/includes/vs-current-long-md.md)]中，用於建立及編輯具類型資料集的設計工具是 **DataSet 設計工具**。 如需詳細資訊，請參閱[建立和編輯具類型資料集](/visualstudio/data-tools/creating-and-editing-typed-datasets)。  
+>  在某些舊版 Visual Studio 中， **XML 設計工具** 是具類型資料集和 XML 結構描述的設計工具。 **XML 設計工具** 仍可用來建立及編輯 XML 結構描述檔案。 不過，在 [!INCLUDE[vs_current_long](~/includes/vs-current-long-md.md)]中，用於建立及編輯具類型資料集的設計工具是 **DataSet 設計工具**。 如需詳細資訊，請參閱 <<c0> [ 建立和編輯具類型資料集](/visualstudio/data-tools/creating-and-editing-typed-datasets)。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   

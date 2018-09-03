@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: 9c0b6d250dcedc9b5996c50ccdb2f183707e54e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 039a6f5aab2f1b857f98803f8b3d6425cc549877
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364267"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486037"
 ---
 # <a name="handling-null-values"></a>處理 Null 值
 當資料行中的值未知或遺失時，便會使用關聯式資料庫中的 Null 值。 Null 既不是空字串 (針對字元或 datetime 資料型別)，也不是零值 (針對數值資料型別)。 根據 ANSI SQL-92 規格的內容，對所有的資料型別而言，Null 必須都是相同的，以便可一致處理所有的 Null。 藉由實作 <xref:System.Data.SqlTypes> 介面，<xref:System.Data.SqlTypes.INullable> 命名空間可以提供 Null 語意。 <xref:System.Data.SqlTypes> 中的每個資料型別都具有自己的 `IsNull` 屬性及 `Null` 值，而該值可以指派給該資料型別的執行個體 (Instance)。  
   
 > [!NOTE]
->  .NET Framework 2.0 版開始支援可為 Null 型別，這讓程式設計人員得以擴充實值型別，以表示基礎型別所有的值。 這些 CLR 可為 Null 的型別代表 <xref:System.Nullable> 結構的執行個體。 當實質型別為 boxed 和 unboxed 時，這項功能特別有用，可強化與物件型別的相容性。 CLR 可為 Null 的型別不適用於儲存資料庫 Null，因為 ANSI SQL Null 的行為方式與 `null` 參考不同 (在 Visual Basic 中為 `Nothing`)。 若要使用資料庫 ANSI SQL Null 值，請利用 <xref:System.Data.SqlTypes> Null 而非 <xref:System.Nullable>。 如需有關使用 CLR 可為 null 的類型，在 Visual Basic 中，請參閱[可為 Null 的實值型別](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)，並如 C#，請參閱[使用可為 Null 的型別](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)。  
+>  .NET Framework 2.0 版開始支援可為 Null 型別，這讓程式設計人員得以擴充實值型別，以表示基礎型別所有的值。 這些 CLR 可為 Null 的型別代表 <xref:System.Nullable> 結構的執行個體。 當實質型別為 boxed 和 unboxed 時，這項功能特別有用，可強化與物件型別的相容性。 CLR 可為 Null 的型別不適用於儲存資料庫 Null，因為 ANSI SQL Null 的行為方式與 `null` 參考不同 (在 Visual Basic 中為 `Nothing`)。 若要使用資料庫 ANSI SQL Null 值，請利用 <xref:System.Data.SqlTypes> Null 而非 <xref:System.Nullable>。 如需有關使用 CLR 的詳細資訊可為 null 的類型，在 Visual Basic 中，請參閱[可為 Null 的實值型別](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)，以及 C#，請參閱[使用可為 Null 的型別](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)。  
   
 ## <a name="nulls-and-three-valued-logic"></a>Null 及三種值的邏輯  
  在資料行定義中允許 Null 值會將三種值的邏輯引進應用程式。 比較可評估為下列三個條件之一：  
@@ -32,12 +32,12 @@ ms.locfileid: "33364267"
 ## <a name="nulls-and-sqlboolean"></a>Null 及 SqlBoolean  
  任何 <xref:System.Data.SqlTypes> 之間的比較都將傳回 <xref:System.Data.SqlTypes.SqlBoolean>。 每個 `IsNull` 的 `SqlType` 函式都會傳回 <xref:System.Data.SqlTypes.SqlBoolean>，並可用於檢查是否有 Null 值。 下列 True 值資料表顯示存在 Null 值時，AND、OR 及 NOT 運算子將如何運作。 (T=true、F=false 及 U=unknown 或 Null)。  
   
- ![事實資料表](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
+ ![真值表](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansinulls-option"></a>瞭解 ANSI_NULLS 選項  
- <xref:System.Data.SqlTypes> 提供的語意與在 SQL Server 中設定 ANSI_NULLS 選項時的語意相同。 所有算術運算子 (+、-，*，/，%)，位元運算子 (~、 &、 &#124;)，及大部分函式都會傳回 null，如果有任何運算元或引數為 null，除了屬性`IsNull`。  
+ <xref:System.Data.SqlTypes> 提供的語意與在 SQL Server 中設定 ANSI_NULLS 選項時的語意相同。 所有算術運算子 (+、-，*，/、 %)，位元運算子 (~、 &、 &#124;)，以及大部分函數都會傳回 null，如果任何運算元或引數是 null，但屬性除外`IsNull`。  
   
- ANSI sql-92 標準不支援*columnName* = null，則 WHERE 子句中。 在 SQL Server 中，ANSI_NULLS 選項可控制資料庫中的預設 Null 屬性及針對 Null 值的比較評估。 如果啟用 ANSI_NULLS (預設值)，則當測試 Null 值時，必須在運算式中使用 IS NULL 運算子。 例如，當啟用 ANSI_NULLS 時，下列比較永遠會產生 Unknown：  
+ ANSI SQL-92 標準不支援*columnName* = null，則 WHERE 子句中。 在 SQL Server 中，ANSI_NULLS 選項可控制資料庫中的預設 Null 屬性及針對 Null 值的比較評估。 如果啟用 ANSI_NULLS (預設值)，則當測試 Null 值時，必須在運算式中使用 IS NULL 運算子。 例如，當啟用 ANSI_NULLS 時，下列比較永遠會產生 Unknown：  
   
 ```  
 colname > NULL  
@@ -118,7 +118,7 @@ isColumnNull=True, ID=Null, Description=Null
 ```  
   
 ## <a name="comparing-null-values-with-sqltypes-and-clr-types"></a>將 Null 值與 SqlType 及 CLR 型別進行比較  
- 比較 Null 值時，瞭解 `Equals` 方法評估 <xref:System.Data.SqlTypes> 中 Null 值的方式，與其處理 CLR 型別之方式相比較的差異很重要。 所有的<xref:System.Data.SqlTypes>`Equals`方法是使用資料庫語意來評估 null 值： 如果其中一個或兩個值是 null，則該比較會產生 null。 另一方面，針對兩個 `Equals` 使用 CLR <xref:System.Data.SqlTypes> 方法時，如果二者都為 Null，則會產生 True。 這反映出使用執行個體方法 (例如 CLR `String.Equals` 方法) 與使用靜態/共用方法 (`SqlString.Equals`) 之間的差異。  
+ 比較 Null 值時，瞭解 `Equals` 方法評估 <xref:System.Data.SqlTypes> 中 Null 值的方式，與其處理 CLR 型別之方式相比較的差異很重要。 所有<xref:System.Data.SqlTypes>`Equals`方法是使用資料庫語意來評估 null 值： 如果其中一個或兩個值是 null，則該比較會產生 null。 另一方面，針對兩個 `Equals` 使用 CLR <xref:System.Data.SqlTypes> 方法時，如果二者都為 Null，則會產生 True。 這反映出使用執行個體方法 (例如 CLR `String.Equals` 方法) 與使用靜態/共用方法 (`SqlString.Equals`) 之間的差異。  
   
  下列範例示範當針對每個方法傳遞一對 Null 值，然後傳遞一對空字串時，`SqlString.Equals` 方法及 `String.Equals` 方法之間結果的差異。  
   
@@ -143,4 +143,4 @@ String.Equals instance method:
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 資料類型和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

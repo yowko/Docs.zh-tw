@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95fbab459355c237157d43cee0211e42f6d26c62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a8d9e7d593c2a8a9cce798724b2705dee21a740e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432621"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480488"
 ---
 # <a name="iclrstrongnamegethashfromassemblyfile-method"></a>ICLRStrongName::GetHashFromAssemblyFile 方法
-取得指定的組件檔案，使用指定的雜湊演算法的雜湊。  
+使用指定的雜湊演算法取得所指定組件檔案的雜湊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,25 +47,25 @@ HRESULT GetHashFromAssemblyFile (
  [in、 out]常數，指定的雜湊演算法。 使用預設雜湊演算法的零。  
   
  `pbHash`  
- [out]傳回雜湊緩衝區。  
+ [out]傳回的雜湊緩衝區。  
   
  `cchHash`  
- [in]要求的大小上限的`pbHash`。  
+ [in]要求的最大大小的`pbHash`。  
   
  `pchHash`  
- [out]傳回的大小，以位元組為單位， `pbHash`。  
+ [out]傳回大小，以位元組為單位， `pbHash`。  
   
 ## <a name="return-value"></a>傳回值  
- `S_OK` 如果方法成功。否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](http://go.microsoft.com/fwlink/?LinkId=213878)清單)。  
+ `S_OK` 如果這個方法順利完成否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)清單)。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MetaHost.h  
   
  **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [GetHashFromAssemblyFileW 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)  

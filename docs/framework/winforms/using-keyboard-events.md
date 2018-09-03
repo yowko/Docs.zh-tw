@@ -9,15 +9,15 @@ helpviewer_keywords:
 - keyboard events
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
-ms.openlocfilehash: 706b4d87ddbb6afadfd90af866520e6feaa58ca7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c6059e5d0957de09dd2c4832573c784935eb510
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542258"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484905"
 ---
 # <a name="using-keyboard-events"></a>使用鍵盤事件
-大部分的 Windows Form 程式藉由處理鍵盤事件來處理鍵盤輸入。 本主題提供鍵盤事件的概觀，包含何時使用每個事件的詳細資訊，以及提供給每個事件的資料。  另請參閱[事件處理常式概觀 (Windows Form)](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\))，[事件概觀 (Windows Form)](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))。  
+大部分的 Windows Form 程式藉由處理鍵盤事件來處理鍵盤輸入。 本主題提供鍵盤事件的概觀，包含何時使用每個事件的詳細資訊，以及提供給每個事件的資料。  另請參閱[事件處理常式概觀 (Windows Form)](https://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\))，[事件概觀 (Windows Form)](https://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))。  
   
 ## <a name="keyboard-events"></a>鍵盤事件  
  Windows Form 提供兩個在使用者按下鍵盤按鍵時會發生的事件，也提供一個當使用者鬆開鍵盤按鍵時會發生的事件：  
@@ -28,7 +28,7 @@ ms.locfileid: "33542258"
   
 -   當使用者鬆開按鍵，就會發生 <xref:System.Windows.Forms.Control.KeyUp> 事件一次。  
   
- 當使用者按下按鍵時，Windows Form 會依據鍵盤訊息指定字元鍵或實體鍵來決定要引發哪個事件。 如需字元和實體索引鍵的詳細資訊，請參閱[鍵盤輸入的運作方式](../../../docs/framework/winforms/how-keyboard-input-works.md)。  
+ 當使用者按下按鍵時，Windows Form 會依據鍵盤訊息指定字元鍵或實體鍵來決定要引發哪個事件。 如需有關字元鍵與實體鍵的詳細資訊，請參閱[鍵盤輸入的運作方式](../../../docs/framework/winforms/how-keyboard-input-works.md)。  
   
  下表描述這三個鍵盤事件。  
   

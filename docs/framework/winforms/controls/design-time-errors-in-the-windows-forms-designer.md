@@ -8,12 +8,12 @@ helpviewer_keywords:
 - errors [Windows Forms Designer]
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
-ms.openlocfilehash: 00296b51563a5f973b8e5d64c55867568ff0324e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec1801a1b695867a7edcd99394feebe1d0f6853a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527783"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480931"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Windows Form 設計工具的設計階段錯誤
 本主題說明當 Windows Forms 設計工具載入失敗時，Microsoft Visual Studio 中所出現的設計階段錯誤清單的意義與用法。 如果出現此錯誤清單，您不應該將它視為是設計工具中的錯誤，而是協助您更正程式碼中的錯誤。  
@@ -45,15 +45,15 @@ ms.locfileid: "33527783"
 ### <a name="forum-posts-about-this-error"></a>此錯誤的相關論壇文章  
  額外說明包含與錯誤相關之 MSDN 論壇文章的連結。 系統是根據錯誤訊息的字串來搜尋論壇。 您也可以嘗試搜尋下列論壇︰  
   
--   [Windows Forms 設計工具論壇](http://go.microsoft.com/fwlink/?LinkId=203524)  
+-   [Windows Forms 設計工具論壇](https://go.microsoft.com/fwlink/?LinkId=203524)  
   
--   [Windows Forms 論壇](http://go.microsoft.com/fwlink/?LinkId=203523)  
+-   [Windows Forms 論壇](https://go.microsoft.com/fwlink/?LinkId=203523)  
   
 ### <a name="ignore-and-continue"></a>忽略並繼續  
  您可以選擇忽略錯誤狀況並繼續載入設計工具。 選擇此動作可能會導致非預期的行為。 例如，控制項可能不會出現在設計介面上。  
   
 ## <a name="see-also"></a>另請參閱  
- [疑難排解設計階段開發](http://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)  
+ [疑難排解設計階段開發](https://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)  
  [針對控制項和元件撰寫進行疑難排解](../../../../docs/framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
  [在設計階段開發 Windows Forms 控制項](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
- [Windows Forms 設計工具錯誤訊息](http://msdn.microsoft.com/library/cf610bf4-5fe4-471c-bce7-6a05ece07bd2)
+ [Windows Forms 設計工具錯誤訊息](https://msdn.microsoft.com/library/cf610bf4-5fe4-471c-bce7-6a05ece07bd2)

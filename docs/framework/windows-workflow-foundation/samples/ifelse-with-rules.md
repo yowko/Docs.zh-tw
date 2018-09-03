@@ -2,17 +2,17 @@
 title: 搭配規則的 IfElse
 ms.date: 03/30/2017
 ms.assetid: c4ad9bb2-9037-413a-8b14-59ed7b927a9e
-ms.openlocfilehash: 179ec29f957894433fb527a14048460f5ff6ee5b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31906f04149a0ca7659201965ca565c7fa2af305
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515117"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483002"
 ---
 # <a name="ifelse-with-rules"></a>搭配規則的 IfElse
 這個範例會示範搭配 <xref:System.Workflow.Activities.IfElseActivity> 活動來使用規則條件。  
   
- 此範例會從主機傳入 `OrderValue` 參數。 該參數的值會在 <xref:System.Workflow.Activities.IfElseActivity> 活動的第一個分支上的規則條件中使用。 如果值小於 10000，第一個分支便會執行，而<xref:System.Workflow.Activities.CodeActivity>中的第一個分支的活動會列印**取得管理員核准**至主控台。 如果值大於 10000，<xref:System.Workflow.Activities.CodeActivity>執行第二個分支的活動，並列印**取得副總裁核准**。  
+ 此範例會從主機傳入 `OrderValue` 參數。 該參數的值會在 <xref:System.Workflow.Activities.IfElseActivity> 活動的第一個分支上的規則條件中使用。 如果值小於 10000，第一個分支便會執行，而<xref:System.Workflow.Activities.CodeActivity>中的第一個分支的活動會列印**Get Manager Approval**到主控台。 如果值大於 10000，<xref:System.Workflow.Activities.CodeActivity>第二個分支中的活動執行，並列印**Get VP Approval**。  
   
 ### <a name="to-build-the-sample"></a>若要建置範例  
   
@@ -31,7 +31,7 @@ ms.locfileid: "33515117"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄：  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\IfElseWithRules`  
   

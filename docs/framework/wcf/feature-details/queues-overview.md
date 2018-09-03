@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-ms.openlocfilehash: 85c8cb1fbbda9be14754174c7cb7c76513bd94c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c181a415c8702c3032077728139b23e86d85d1f0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497009"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480400"
 ---
 # <a name="queues-overview"></a>佇列概觀
-本節將介紹已佇列通訊背後的一般和核心概念。 後續各節移到此處所述的佇列概念會列印文件的顯示，請在 Windows Communication Foundation (WCF) 的相關詳細資料。  
+本節將介紹已佇列通訊背後的一般和核心概念。 後續各節討論有關此處所述的佇列概念會列印文件的顯示，請在 Windows Communication Foundation (WCF) 的詳細資料。  
   
 ## <a name="basic-queuing-concepts"></a>基本佇列概念  
  當設計分散式應用程式時，為服務和用戶端之間的通訊選擇正確的傳輸是很重要的。 有數個因素會影響所使用的傳輸種類。 服務、用戶端和傳輸之間的隔離是一個重要的因素，它會決定要使用佇列傳輸或直接傳輸，例如 TCP 或 HTTP。 由於直接傳輸 (例如 TCP 和 HTTP) 的性質之故，如果服務或用戶端停止運作或網路失敗，通訊也會一起停止。 服務、用戶端和網路必須同時執行，應用程式才能運作。 已佇列之傳輸提供隔離，意指如果服務或用戶端失敗或它們之間的通訊連結失敗，用戶端和服務可以繼續運作。  
   
- 即使通訊方或網路失敗，佇列仍會提供可靠的通訊。 佇列會擷取及傳遞在通訊方之間交換的訊息。 佇列通常是受到某種存放區所支持，它可能是永久性或變動性的。 佇列會代表服務儲存來自用戶端的訊息，稍後再將這些訊息轉送至服務。 由於間接佇列為任一方的失敗提供保護隔離，因此讓它成為高度可用的系統和連線中斷的服務慣用的通訊機制。 間接所伴隨的代價是高延遲時間。 *延遲*是用戶端傳送訊息的時間以及服務所收到的時間之間的時間延遲。 這表示訊息一旦送出，您就不知道可能何時才會處理該訊息。 大部分的佇列應用程式都會處理高延遲時間的問題。 下圖顯示已佇列通訊的概念模型。  
+ 即使通訊方或網路失敗，佇列仍會提供可靠的通訊。 佇列會擷取及傳遞在通訊方之間交換的訊息。 佇列通常是受到某種存放區所支持，它可能是永久性或變動性的。 佇列會代表服務儲存來自用戶端的訊息，稍後再將這些訊息轉送至服務。 由於間接佇列為任一方的失敗提供保護隔離，因此讓它成為高度可用的系統和連線中斷的服務慣用的通訊機制。 間接所伴隨的代價是高延遲時間。 *延遲*是用戶端傳送訊息的時間和服務接收它的時間之間的時間延遲。 這表示訊息一旦送出，您就不知道可能何時才會處理該訊息。 大部分的佇列應用程式都會處理高延遲時間的問題。 下圖顯示已佇列通訊的概念模型。  
   
- ![模型的佇列通訊](../../../../docs/framework/wcf/feature-details/media/qconceptual-figure1c.gif "QConceptual Figure1c")  
+ ![已排入佇列的通訊模型](../../../../docs/framework/wcf/feature-details/media/qconceptual-figure1c.gif "QConceptual Figure1c")  
   
  已佇列通訊概念模型  
   
@@ -27,7 +27,7 @@ ms.locfileid: "33497009"
   
  當用戶端將訊息傳送至佇列時，它會將訊息定址到目標佇列，也就是由服務的佇列管理員所管理的佇列。 用戶端上的佇列管理員會將訊息傳送至傳輸 (或傳出) 佇列。 傳輸佇列是用戶端佇列管理員上的佇列，其中儲存傳輸至目標佇列的訊息。 然後佇列管理員會尋找擁有目標佇列之佇列管理員的路徑，再將訊息傳輸給它。 為確保可靠的通訊，佇列管理員會實作可靠的傳輸通訊協定，以防資料遺失。 目的佇列管理員會接受定址到其擁有之目標佇列的訊息，並儲存訊息。 服務會要求從目標佇列讀取，然後此時佇列管理員會將訊息傳遞至目的應用程式。 下圖顯示四方之間的通訊。  
   
- ![排入佇列的應用程式圖表](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "分散式佇列圖")  
+ ![已排入佇列應用程式圖表](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "分散式佇列圖")  
   
  一般部署案例中的已佇列通訊  
   
@@ -81,6 +81,6 @@ ms.locfileid: "33497009"
  [變動性佇列通訊](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
  [Windows Communication Foundation 至訊息佇列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
  [安裝訊息佇列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
- [訊息佇列整合繫結範例](http://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
+ [訊息佇列整合繫結範例](https://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
  [訊息佇列至 Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
  [訊息佇列上的訊息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

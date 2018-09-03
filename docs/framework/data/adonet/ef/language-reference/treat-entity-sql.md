@@ -2,12 +2,12 @@
 title: TREAT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b77f156-55de-4cb4-8154-87f707d4c635
-ms.openlocfilehash: 932f335bf6a502b031dcf09b8050e278a0bbe9f8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c3291dc6d5bc79430c8bf011ee6a2f4dc213ffad
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763972"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486892"
 ---
 # <a name="treat-entity-sql"></a>TREAT (Entity SQL)
 將特定基底類型的物件視為所指定之衍生型別的物件。  
@@ -48,7 +48,7 @@ WHERE p IS OF (NamespaceName.Employee)
  這個查詢將 `Person` 實體向上轉型成為 `Employee` 型別。 如果 p 的值實際上不是 `Employee`型別，此運算式將會產生值 `null`。  
   
 > [!NOTE]
->  指定的運算式`Employee`必須是指定的資料型別的子型別`Person`，或資料類型必須是運算式的子類型。 否則此運算式將會造成編譯時期錯誤。  
+>  指定的運算式`Employee`指定的資料型別的型別必須是`Person`，或資料類型必須是運算式的子型別。 否則此運算式將會造成編譯時期錯誤。  
   
  下表所示為 TREAT 在某些一般模式及一些較不常見的模式中的行為。 所有例外狀況都是在叫用提供者之前從用戶端擲回：  
   
@@ -62,7 +62,7 @@ WHERE p IS OF (NamespaceName.Employee)
 |`TREAT (RowType AS RowType)`|擲回例外狀況。|  
   
 ## <a name="example"></a>範例  
- 下列 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查詢使用 TREAT 運算子將 Course 型別的物件轉換成 OnsiteCourse 型別的物件集合。 此查詢根據[School 模型](http://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac)。  
+ 下列 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查詢使用 TREAT 運算子將 Course 型別的物件轉換成 OnsiteCourse 型別的物件集合。 此查詢根據[School 模型](https://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac)。  
   
  [!code-csharp[DP EntityServices Concepts 2#TREAT_ISOF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#treat_isof)]  
   

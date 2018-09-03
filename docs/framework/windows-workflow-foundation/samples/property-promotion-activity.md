@@ -2,12 +2,12 @@
 title: 屬性促銷活動
 ms.date: 03/30/2017
 ms.assetid: 802196b7-1159-4c05-b41b-d3bfdfcc88d9
-ms.openlocfilehash: 46e74c8c479e545778db92e15de3cb8798dafa11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e059a0d344e6c62833feaa890c459c141a49673
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519921"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481133"
 ---
 # <a name="property-promotion-activity"></a>屬性促銷活動
 此範例提供了端對端方案，此方案會將 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 提升功能直接整合到工作流程撰寫經驗。 將會提供組態元素、工作流程活動、可簡化使用提升功能之工作流程延伸模組的集合。 此外，此範例也包含一個簡單的工作流程，可示範如何使用這個集合。  
@@ -23,7 +23,7 @@ ms.locfileid: "33519921"
   
 ## <a name="sample-projects"></a>範例專案  
   
--   **PropertyPromotionActivity**專案包含了有關提升特有的組態項目、 工作流程活動和工作流程延伸模組檔案。  
+-   **PropertyPromotionActivity**專案會包含有關提升特有組態項目、 工作流程活動和工作流程延伸模組的檔案。  
   
 -   **CounterServiceApplication**專案包含使用的範例工作流程**SqlWorkflowInstanceStorePromotion**專案。  
   
@@ -37,11 +37,11 @@ ms.locfileid: "33519921"
   
     1.  巡覽至範例目錄 (\WF\Basic\Persistence\PropertyPromotionActivity)，並執行 CreateInstanceStore.cmd。  
   
-    2.  如果未提供系統管理員權限，請建立 SQL Server 登入。 在 SQL Server Management Studio，請移至**安全性**，**登入**。 以滑鼠右鍵按一下**登入**並建立新的登入。 將 ACL 使用者加入至 SQL 角色，藉由開啟**資料庫**， **InstanceStore**，**安全性**。 以滑鼠右鍵按一下**使用者**選取**新使用者**。 設定**登入名稱**上面建立的使用者。 將使用者加入至資料庫角色成員資格 System.Activities.DurableInstancing.InstanceStoreUsers (和其他成員資格)。 請注意，使用者可能已存在 (例如 dbo 使用者)。  
+    2.  如果未提供系統管理員權限，請建立 SQL Server 登入。 在 SQL Server Management Studio，請移至**安全性**，**登入**。 以滑鼠右鍵按一下**登入**並建立新的登入。 將 ACL 使用者新增至 SQL 角色中，開啟**資料庫**， **InstanceStore**，**安全性**。 以滑鼠右鍵按一下**使用者**，然後選取**新使用者**。 設定**登入名稱**上面建立的使用者。 將使用者加入至資料庫角色成員資格 System.Activities.DurableInstancing.InstanceStoreUsers (和其他成員資格)。 請注意，使用者可能已存在 (例如 dbo 使用者)。  
   
 2.  在 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 中開啟 PropertyPromotionActivity.sln 方案檔案。  
   
-3.  如果您在 SQL Server Express 本機安裝以外的資料庫中建立執行個體存放區，您必須更新資料庫連接字串。 更改 App.config 檔案下的**CounterServiceApplication**所設定的值`connectionString`屬性`sqlWorkflowInstanceStorePromotion`節點，讓它指向已初始化的持續性資料庫中步驟 1。  
+3.  如果您在 SQL Server Express 本機安裝以外的資料庫中建立執行個體存放區，您必須更新資料庫連接字串。 更改 App.config 檔案底下**CounterServiceApplication**藉由設定的值`connectionString`屬性`sqlWorkflowInstanceStorePromotion`節點，讓它指向已初始化的持續性資料庫中步驟 1。  
   
 4.  建置並執行方案。 這樣會啟動計數器 WF 服務，並自動啟動工作流程執行個體。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "33519921"
   
 -   **CounterServiceApplication**是裝載簡單計數器 WF 服務的主控台應用程式。 一旦透過 `Start` 端點收到單向訊息之後，工作流程就會從 0 開始算到 29，每隔兩秒鐘累加計數器變數。 在每次累加計數器之後，工作流程會保存而提升屬性則會在 [dbo].[CounterService] 檢視表中更新。 當執行主控台應用程式時，它會裝載 WF 服務並將訊息傳送給 `Start` 端點，以建立計數器 WF 執行個體。  
   
--   **PropertyPromotionActivity**是一個類別庫包含組態項目、 工作流程活動和工作流程延伸模組， **CounterServiceApplication**使用。  
+-   **PropertyPromotionActivity**是類別程式庫包含組態項目、 工作流程活動和工作流程延伸模組所**CounterServiceApplication**使用。  
   
 -   **PropertyPromotionActivitySQLSample.sql**建立，並將檢視 [dbo]。 [CounterService] 資料庫。  
   
@@ -99,7 +99,7 @@ go
  `promotedValue` 元素的順序與提升屬性在 `InstancePromotedProperties` 檢視中的位置相關。 `Count` 是第一個 `promotedValue` 元素。 因此，它會對應到 `Value1` 檢視表中的 `InstancePromotedProperties` 資料行。 `LastIncrementedAt` 是第二個 `promotedValue` 元素。 因此，它會對應到 `Value2` 檢視表中的 `InstancePromotedProperties` 資料行。  
   
 #### <a name="using-the-promotevalue-activity"></a>使用 PromoteValue 活動  
- 檢查 CounterService.xamlx 檔案中 Windows Workflow Foundation Designer。 請注意 WF 定義中有兩個特殊活動：`PromoteValue<DateTime>` 和 `PromoteValue<Int32>`。  
+ 檢查 CounterService.xamlx 檔案在 Windows Workflow Foundation 設計工具中。 請注意 WF 定義中有兩個特殊活動：`PromoteValue<DateTime>` 和 `PromoteValue<Int32>`。  
   
  `PromoteValue<Int32>` 活動將它的 `Name` 成員定義為 `Count`。 這會符合組態中的第一個 `promotedValue` 元素，並將其 `Value` 定義為 `Counter` 工作流程變數。 當保存此工作流程時，`Counter` 工作流程變數會當做提升屬性保存到 `Value1` 檢視表的 `InstancePromotedProperties` 資料行中。  
   
@@ -107,17 +107,17 @@ go
   
  請注意，`PromotedValue` 活動也有一個名為 `ClearExistingPromotedData` 的布林成員。 當這個成員設定為 `true` 時，這會在工作流程中清除到該點為止的所有提升屬性值。 例如，如果序列活動定義如下：  
   
-1.  PromoteValue {Name ="Count"，值 = 3}  
+1.  PromoteValue {名稱 ="Count"，值 = 3}  
   
-2.  PromoteValue {Name ="LastIncrementedAt"，值 = 1-1-2000年}  
+2.  PromoteValue {名稱 ="LastIncrementedAt"，值 = 2000 年 1 月 1 日}  
   
 3.  保存  
   
-4.  PromoteValue {Name ="Count"，值 = 4，ClearExistingPromotedData = true}  
+4.  PromoteValue {名稱 ="Count"，值 = 4，ClearExistingPromotedData = true}  
   
 5.  保存  
   
- 在第二個保存中，`Count` 的提升值將會是 4。 不過的提升的值`LastIncrementedAt`將`NULL`。 如果 `ClearExistingPromotedData` 在步驟 4 未設定為 `true`，則在第二個保存之後，Count 的提升值會是 4。 因此，`LastIncrementedAt` 的提升值仍然是 1-1-2000。  
+ 在第二個保存中，`Count` 的提升值將會是 4。 不過的提升的值`LastIncrementedAt`會`NULL`。 如果 `ClearExistingPromotedData` 在步驟 4 未設定為 `true`，則在第二個保存之後，Count 的提升值會是 4。 因此，`LastIncrementedAt` 的提升值仍然是 1-1-2000。  
   
 ### <a name="propertypromotionactivity"></a>PropertyPromotionActivity  
  此類別庫包含下列公用類別，以簡化 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 提升功能的使用。  
@@ -142,7 +142,7 @@ public class PromoteValue<T> : CodeActivity
  清除在這個活動之前提升的所有值。  
   
  Name (string)  
- 代表這個屬性的名稱。 這應該符合的名稱屬性\<promotedValue > 組態中的項目。  
+ 代表這個屬性的名稱。 這應該符合的 name 屬性\<promotedValue > 組態中的項目。  
   
  值 (InArgument\<T >)  
  您想要儲存在資料行中的變數 / 值。  
@@ -186,9 +186,9 @@ public class SqlWorkflowInstanceStorePromotionBehavior :
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄：  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\PropertyPromotionActivity`  
   
 ## <a name="see-also"></a>另請參閱  
- [AppFabric 主控與持續性範例](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric 主控與持續性範例](https://go.microsoft.com/fwlink/?LinkId=193961)

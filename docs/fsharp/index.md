@@ -4,11 +4,11 @@ description: '本指南提供的各種學習教材，F #，函式的程式設計
 author: cartermp
 ms.date: 08/03/2018
 ms.openlocfilehash: d3e10b6eb99f35b8eddeaa1f0ae257dd17d5cc41
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933918"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480674"
 ---
 # <a name="f-guide"></a>F# 指南
 

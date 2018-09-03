@@ -2,12 +2,12 @@
 title: 使用 FlowChart 及 Pick 組合的 StateMachine 案例
 ms.date: 03/30/2017
 ms.assetid: 88d81395-f7a3-41d8-8439-20a425c538a6
-ms.openlocfilehash: 0f7fc809b2fb7107de355546ca52a4d2ba2b39f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b0f8e884a8a6c62c4e7edaf5cc9727bf7bfe8603
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517932"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485510"
 ---
 # <a name="statemachine-scenario-using-a-combination-of-flowchart-and-pick"></a>使用 FlowChart 及 Pick 組合的 StateMachine 案例
 這個範例示範如何實作一個使用 <xref:System.Activities.Statements.Flowchart> 和 <xref:System.Activities.Statements.Pick> 活動組合的簡單馬錶案例。 在 Pick 活動中使用 Receive 和 Send 以接聽馬錶事件。  
@@ -35,7 +35,7 @@ ms.locfileid: "33517932"
   
 2.  若要建置此方案，請按 CTRL+SHIFT+B。  
   
-3.  開始從 StopWatchService.exe[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]身為系統管理員，以滑鼠右鍵按一下的.exe 檔案，並選取**系統管理員身分執行**。  
+3.  開始從 StopWatchService.exe[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]身為系統管理員，以滑鼠右鍵按一下.exe 檔案，然後選取**系統管理員身分執行**。  
   
     1.  巡覽至 StateMachineWithPick\CS\StopWatchService\bin\Debug 資料夾。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "33517932"
   
 4.  從 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 中啟動 StopWatchClient 用戶端應用程式。  
   
-    1.  在**方案總管 中**，選取**StopWatchClient**專案，並以滑鼠右鍵按一下**設定為啟始專案**。  
+    1.  在 **方案總管**，選取**StopWatchClient**專案，然後以滑鼠右鍵按一下**設定為啟始專案**。  
   
     2.  若要執行此方案，請按下 CTRL+F5。  
   
@@ -54,6 +54,6 @@ ms.locfileid: "33517932"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\StateMachineWithPick`

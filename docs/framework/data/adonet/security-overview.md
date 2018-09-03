@@ -2,12 +2,12 @@
 title: 安全性 Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 4e8d1502096dc452d21158e4fb3684298be9b982
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 18a7496d39cd08e8b340e23c57fcd10dae5ed281
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361935"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481727"
 ---
 # <a name="security-overview"></a>安全性概觀
 保護應用程式是持續進行的工作。 開發人員無法絕對保證應用程式可避開所有攻擊，因為您無法預測未來的新科技會帶來哪些類型的攻擊。 反之，也不能因為至目前為止，沒有人察覺 (或公佈) 系統上的安全性漏洞，就表示安全性漏洞確實存在或確實不存在。 您需要在專案的設計階段就進行安全性的規劃，也必須規劃該如何在應用程式的存留期維護安全性。  
@@ -18,7 +18,7 @@ ms.locfileid: "33361935"
  最後一刻才實作安全性，也可能會導致更多的錯誤，因為軟體會在新的限制下毀損，或者必須重新撰寫以納入之前未想到的功能。 每行修改的程式碼都可能會引進新的錯誤。 因此，您應該在開發過程中儘早考慮安全性，以便在開發新功能時一併處理。  
   
 ### <a name="threat-modeling"></a>威脅模型  
- 除非您了解系統可能遭受的所有潛伏攻擊，否則就無法保護系統。 評估安全性威脅的程序呼叫*威脅模型*，是為了判斷可能性和分岐的 ADO.NET 應用程式中的安全性漏洞。  
+ 除非您了解系統可能遭受的所有潛伏攻擊，否則就無法保護系統。 評估安全性威脅的程序稱為*威脅模型化*，必須判斷的可能性和分岐的 ADO.NET 應用程式中的安全性漏洞。  
   
  威脅模型是由三個高階步驟所組成：了解敵人的觀點、描繪系統安全性的特徵，以及判斷威脅來源。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "33361935"
   
 |資源|描述|  
 |--------------|-----------------|  
-|[威脅模型](http://go.microsoft.com/fwlink/?LinkId=98353)MSDN Security Developer Center 上的站台|此網頁上的資源可協助您了解威脅模型程序，並建立可用來確保應用程式安全性的威脅模型。|  
+|[威脅模型化](https://go.microsoft.com/fwlink/?LinkId=98353)MSDN Security Developer Center 上的站台|此網頁上的資源可協助您了解威脅模型程序，並建立可用來確保應用程式安全性的威脅模型。|  
   
 ## <a name="the-principle-of-least-privilege"></a>最小權限的原則  
  在設計、建立及部署應用程式時，必須假設應用程式將遭受攻擊。 這些攻擊往往來自惡意程式碼，而這些程式碼常藉由執行程式碼的使用者權限而執行。 其他攻擊則可能源自本意良好，但遭到攻擊者利用的程式碼。 在規劃安全性時，請務必假設會發生最糟的狀況。  
@@ -67,7 +67,7 @@ ms.locfileid: "33361935"
 |資源|描述|  
 |--------------|-----------------|  
 |[程式碼存取安全性和 ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|從 ADO.NET 應用程式的角度，描述在程式碼存取安全性、以角色為基礎的安全性與部分信任環境之間的互動。|  
-|[程式碼存取安全性](http://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)|包含說明 .NET Framework 中的 CAS 的其他主題連結。|  
+|[程式碼存取安全性](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)|包含說明 .NET Framework 中的 CAS 的其他主題連結。|  
   
 ## <a name="database-security"></a>資料庫安全性  
  最小權限的原則也適用於資料來源。 資料庫安全性的一些一般方針包括：  
@@ -89,7 +89,7 @@ ms.locfileid: "33361935"
 |資源|描述|  
 |--------------|-----------------|  
 |[SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)|使用應用程式案例提供 SQL Server 安全性概觀，可針對建立以 SQL Server 為目標的安全 ADO.NET 應用程式提供指引。|  
-|[資料存取策略的建議](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|提供存取資料及執行資料庫作業的建議。|  
+|[資料存取策略的建議](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|提供存取資料及執行資料庫作業的建議。|  
   
 ## <a name="security-policy-and-administration"></a>安全性原則和管理  
  如果程式碼存取安全性 (CAS) 原則管理不當，可能會造成安全上的弱點。 部署應用程式後，必須使用監視安全性的技術，並評估新威脅所帶來的風險。  
@@ -98,11 +98,11 @@ ms.locfileid: "33361935"
   
 |資源|描述|  
 |--------------|-----------------|  
-|[NIB： 安全性原則管理](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|提供建立和管理安全性原則的資訊。|  
-|[NIB： 安全性原則的最佳作法](http://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|提供說明如何管理安全性原則的連結。|  
+|[NIB： 安全性原則管理](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|提供建立和管理安全性原則的資訊。|  
+|[NIB： 安全性原則的最佳作法](https://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|提供說明如何管理安全性原則的連結。|  
   
 ## <a name="see-also"></a>另請參閱  
  [設定 ADO.NET 應用程式的安全性](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [PAVE 機器碼和 .NET Framework 程式碼中的安全性](http://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
+ [PAVE 機器碼和 .NET Framework 程式碼中的安全性](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
  [SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

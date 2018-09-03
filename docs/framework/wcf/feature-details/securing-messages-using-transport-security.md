@@ -4,24 +4,24 @@ ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 50e450f4241abc7d8b688c58a121f64c3ca0e709
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ab04326404a4b90e30036594a7152e6118c2138
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499459"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482837"
 ---
 # <a name="securing-messages-using-transport-security"></a>使用傳輸安全性來確保訊息的安全
 本節討論訊息佇列 (MSMQ) 的傳輸安全性，您可以使用這項傳輸安全性確保傳送至佇列之訊息的安全。  
   
 > [!NOTE]
->  先閱讀本主題，建議您先閱讀[安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)。  
+>  之前閱讀本主題，建議您先閱讀[安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)。  
   
  下圖提供使用 Windows Communication Foundation (WCF) 的佇列通訊概念模型。 這張圖與用語可用來解釋傳輸安全性的概念。  
   
- ![排入佇列的應用程式圖表](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "分散式佇列圖")  
+ ![已排入佇列應用程式圖表](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "分散式佇列圖")  
   
- 當傳送佇列訊息時使用 WCF 與<xref:System.ServiceModel.NetMsmqBinding>，WCF 訊息附加為 MSMQ 訊息本文。 傳輸安全性保障整個 MSMQ 訊息 (MSMQ 訊息標頭或屬性和訊息本文) 的安全。 因為 MSMQ 訊息本文，所以使用傳輸安全性也可保護 WCF 訊息。  
+ 當傳送佇列訊息時使用 WCF 與<xref:System.ServiceModel.NetMsmqBinding>，WCF 訊息會附加為 MSMQ 訊息本文。 傳輸安全性保障整個 MSMQ 訊息 (MSMQ 訊息標頭或屬性和訊息本文) 的安全。 因為是 MSMQ 訊息本文，使用傳輸安全性也會保護 WCF 訊息。  
   
  傳輸安全性的重要概念是用戶端必須滿足安全性要求，才能讓訊息傳至目標佇列。 這種概念與訊息安全性不同，訊息安全性保障訊息的目的是為了接收該訊息之應用程式的安全。  
   
@@ -40,14 +40,14 @@ ms.locfileid: "33499459"
   
  MSMQ 也能對未以 Active Directory 註冊的訊息附加憑證。 在這種狀況下，它能確保訊息使用附加的憑證進行簽章。  
   
- WCF MSMQ 傳輸安全性的過程中提供這兩個選項並且使用傳輸安全性的重要樞紐。  
+ WCF 會提供這兩個選項為 MSMQ 傳輸安全性的一部分，而且是傳輸安全性的重要樞紐。  
   
  根據預設，傳輸安全性為啟用狀態。  
   
  有了這些基礎之後，下列章節將詳述隨附於 <xref:System.ServiceModel.NetMsmqBinding> 與 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>的傳輸安全性屬性。  
   
 #### <a name="msmq-authentication-mode"></a>MSMQ 驗證模式  
- <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> 會要求使用 Windows 網域安全性或外部以憑證為基礎的安全性，藉此保障訊息的安全。 在這兩種驗證模式中，WCF 佇列之的傳輸通道會使用`CertificateValidationMode`服務組態中指定。 憑證驗證模式可指定用來檢查憑證效力的機制。  
+ <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> 會要求使用 Windows 網域安全性或外部以憑證為基礎的安全性，藉此保障訊息的安全。 在這兩種驗證模式中，WCF 已排入佇列的傳輸通道會使用`CertificateValidationMode`服務組態中指定。 憑證驗證模式可指定用來檢查憑證效力的機制。  
   
  啟用傳輸安全性後，預設的設定值為 <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "33499459"
   
  傳送 WCF 訊息時<xref:System.ServiceModel.MsmqAuthenticationMode.Certificate>，WCF 通道不會將 Windows SID 附加至 MSMQ 訊息。 如此一來，目標佇列 ACL 必須允許 `Anonymous` 使用者存取，才可傳送至佇列。 接收方的佇列管理員會檢查 MSMQ 訊息是否使用憑證簽章，但不會進行任何驗證。  
   
- 包含宣告與識別資訊的憑證都已填妥<xref:System.ServiceModel.ServiceSecurityContext>WCF 佇列之的傳輸通道。 服務可使用此資訊執行它自己對寄件人的驗證。  
+ 其宣告和身分識別資訊的憑證中已填入<xref:System.ServiceModel.ServiceSecurityContext>WCF 已排入佇列的傳輸通道。 服務可使用此資訊執行它自己對寄件人的驗證。  
   
 ### <a name="msmq-protection-level"></a>MSMQ 保護層級  
  保護層級會說明如何保護 MSMQ 訊息以確保不會被竄改。 它是在 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 屬性中指定。 預設值是 <xref:System.Net.Security.ProtectionLevel.Sign>。  
@@ -96,9 +96,9 @@ ms.locfileid: "33499459"
 ### <a name="msmq-hash-algorithm"></a>MSMQ 雜湊演算法  
  雜湊演算法會指定建立 MSMQ 訊息數位簽章所使用的演算法。 接收佇列管理員會使用與此相同的演算法，驗證 MSMQ 訊息。 只有在 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 設為 <xref:System.Net.Security.ProtectionLevel.Sign> 或 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> 時，才會使用這個屬性。  
   
- 支援的演算法為 `MD5`、`SHA1`、`SHA256` 和 `SHA512`。 預設值為 `SHA1`。  
+ 支援的演算法為 `MD5`、`SHA1`、`SHA256` 和 `SHA512`。 預設為 `SHA1`。  
   
 ## <a name="see-also"></a>另請參閱  
- [訊息佇列](http://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)  
+ [訊息佇列](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)  
  [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
  [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

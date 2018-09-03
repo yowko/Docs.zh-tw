@@ -10,17 +10,17 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 0fe20ffa19d14dcaecac30198c5c0e2d19fb9fa5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58d65ee9842270b07a76ff438c975955689197e9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556909"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482972"
 ---
 # <a name="control-styles-and-templates"></a>控制項的樣式和範本
-在 Windows Presentation Foundation (WPF) 控制項有<xref:System.Windows.Controls.ControlTemplate>，其中包含該控制項的視覺化樹狀結構。 您可以藉由修改變更控制項的外觀和結構<xref:System.Windows.Controls.ControlTemplate>該控制項。 沒有任何方法來取代一部分的視覺化樹狀結構的控制項。若要變更的視覺化樹狀結構的控制項，您必須設定<xref:System.Windows.Controls.Control.Template%2A>至其新且完整的控制項屬性<xref:System.Windows.Controls.ControlTemplate>。  
+在 Windows Presentation Foundation (WPF) 控制項有<xref:System.Windows.Controls.ControlTemplate>包含該控制項的視覺化樹狀結構。 您可以變更的結構和外觀的控制項，藉由修改<xref:System.Windows.Controls.ControlTemplate>該控制項。 沒有任何方法來取代一部分控制項之視覺化樹狀結構若要變更，您必須設定的控制項的視覺化樹狀結構<xref:System.Windows.Controls.Control.Template%2A>至其新且完整的控制項屬性<xref:System.Windows.Controls.ControlTemplate>。  
   
- 桌面佈景主題決定所使用的資源字典。 若要取得桌面佈景主題的資源字典，請參閱[預設 WPF 佈景主題](http://go.microsoft.com/fwlink/?LinkID=158252)。  
+ 桌面佈景主題決定所使用的資源字典。 若要取得桌面佈景主題的資源字典，請參閱[預設 WPF 佈景主題](https://go.microsoft.com/fwlink/?LinkID=158252)。  
   
  下表說明資源字典檔案名稱及其對應的桌面佈景主題。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "33556909"
  [StatusBar 樣式和範本](../../../../docs/framework/wpf/controls/statusbar-styles-and-templates.md)  
  [TabControl 樣式和範本](../../../../docs/framework/wpf/controls/tabcontrol-styles-and-templates.md)  
  [TextBox 樣式和範本](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)  
- [捲動方塊樣式和範本](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
+ [Thumb 樣式和範本](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
  [ToggleButton 樣式和範本](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
  [ToolBar 樣式和範本](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md)  
  [ToolTip 樣式和範本](../../../../docs/framework/wpf/controls/tooltip-styles-and-templates.md)  

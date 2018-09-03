@@ -2,12 +2,12 @@
 title: 分散式異動
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-ms.openlocfilehash: 7792a719a73ca5183d57bcecc5d346153d824570
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1f45f572b4336e52f7eee224ec80d9b7f423f991
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766084"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486323"
 ---
 # <a name="distributed-transactions"></a>分散式異動
 異動是一組相關工作，尤其是它會做為一個單位的成功 (認可) 或失敗 (中止)。 A*分散式交易*是影響幾個資源的交易。 對於要認可的分散式異動，所有參與者都必須保證資料的任何變更都是永久的。 不管系統是否當機，還是發生其他不可預見的事件，變更必須持續。 如果單一參與者無法做出此保證，則整個交易會失敗，交易範圍內的任何資料變更都將復原。  
@@ -16,11 +16,11 @@ ms.locfileid: "32766084"
 >  如果在交易作用期間啟動了 `DataReader`，而您嘗試認可或復原該交易，就會擲回例外狀況 (Exception)。  
   
 ## <a name="working-with-systemtransactions"></a>使用 System.Transactions  
- 在 .NET Framework 中，會透過 <xref:System.Transactions> 命名空間中的 API 來管理分散式交易。 當涉及多個持續性資源管理員時，<xref:System.Transactions> API 會將分散式交易處理委派給交易監視器，如 Microsoft 分散式交易協調器 (MS DTC)。 如需詳細資訊，請參閱[交易基本概念](../../../../docs/framework/data/transactions/transaction-fundamentals.md)。  
+ 在 .NET Framework 中，會透過 <xref:System.Transactions> 命名空間中的 API 來管理分散式交易。 當涉及多個持續性資源管理員時，<xref:System.Transactions> API 會將分散式交易處理委派給交易監視器，如 Microsoft 分散式交易協調器 (MS DTC)。 如需詳細資訊，請參閱 <<c0> [ 交易基礎觀念](../../../../docs/framework/data/transactions/transaction-fundamentals.md)。  
   
- ADO.NET 2.0 支援使用 `EnlistTransaction` 方法在分散式交易中登記，該方法會在 <xref:System.Transactions.Transaction> 執行個體中登記連接。 在舊版 ADO.NET 中，會使用連接的 `EnlistDistributedTransaction` 方法在分散式交易中進行明確登記，以在支援回溯相容性的 <xref:System.EnterpriseServices.ITransaction> 執行個體 (Instance) 中登記連接。 如需 Enterprise Services 交易的詳細資訊，請參閱[互通性與 Enterprise Services 和 COM + 交易](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md)。  
+ ADO.NET 2.0 支援使用 `EnlistTransaction` 方法在分散式交易中登記，該方法會在 <xref:System.Transactions.Transaction> 執行個體中登記連接。 在舊版 ADO.NET 中，會使用連接的 `EnlistDistributedTransaction` 方法在分散式交易中進行明確登記，以在支援回溯相容性的 <xref:System.EnterpriseServices.ITransaction> 執行個體 (Instance) 中登記連接。 如需企業服務交易的詳細資訊，請參閱[與 Enterprise Services 和 COM + 交易的互通性](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md)。  
   
- 當針對 SQL Server 資料庫，使用具有 SQL Server 的 .NET Framework 提供者之 <xref:System.Transactions> 交易時，會自動使用輕量型 <xref:System.Transactions.Transaction>。 然後，異動可視需要提升為完全分散式異動。 如需詳細資訊，請參閱[System.Transactions 與 SQL Server 整合](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)。  
+ 當針對 SQL Server 資料庫，使用具有 SQL Server 的 .NET Framework 提供者之 <xref:System.Transactions> 交易時，會自動使用輕量型 <xref:System.Transactions.Transaction>。 然後，異動可視需要提升為完全分散式異動。 如需詳細資訊，請參閱 < [System.Transactions 與 SQL Server 整合](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)。  
   
 > [!NOTE]
 >  Oracle 資料庫一次可參與的分散式異動數目上限預設為 10。 與 Oracle 資料庫連接時，在第 10 次交易後會擲回例外狀況。 Oracle 不支援分散式交易內的 `DDL`。  
@@ -50,4 +50,4 @@ ms.locfileid: "32766084"
 ## <a name="see-also"></a>另請參閱  
  [異動和並行存取](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
  [System.Transactions 與 SQL Server 整合](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

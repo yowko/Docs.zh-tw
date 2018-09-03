@@ -2,12 +2,12 @@
 title: 內建組態
 ms.date: 03/30/2017
 ms.assetid: 34e85c9b-088d-4347-816c-0f77cb73ef2f
-ms.openlocfilehash: 8488a753cb1c540d9c34d9bcf7b2a3112302a122
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e76c019d9fc1b416e6fa8175a70b5fd01d9ff53e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518616"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43476114"
 ---
 # <a name="built-in-configuration"></a>內建組態
 這個範例示範使用和設定 SQL 工作流程執行個體存放區。 SQL 工作流程執行個體存放區是以 SQL 為基礎的執行個體存放區實作。 它允許執行個體在 SQL Server 或 SQL Server Express 資料庫中來回儲存及載入。  
@@ -26,7 +26,7 @@ ms.locfileid: "33518616"
   
  計數工作流程是由工作流程服務主機自我主控的。 程式的 `Main` 方法會建立裝載計數工作流程之工作流程服務主機的執行個體。 它會定義可用來連接至計數工作流程的端點。 定義端點之後，它會定義 SQL 工作流程執行個體存放區行為，用來設定 SQL 工作流程執行個體存放區。 接著程式會建立呼叫計數工作流程 Start 方法的用戶端。  
   
- 一旦程式啟動，計數器會自動開始計數。 請注意，載入執行個體以及設定 SQL 工作流程執行個體存放區可能要花幾秒才能完成。 如需工作流程執行個體存放區的詳細資訊，請參閱[SQL 工作流程執行個體存放區](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)。  
+ 一旦程式啟動，計數器會自動開始計數。 請注意，載入執行個體以及設定 SQL 工作流程執行個體存放區可能要花幾秒才能完成。 如需有關工作流程執行個體存放區的詳細資訊，請參閱 < [SQL 工作流程執行個體存放區](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)。  
   
  此範例包含二個部分：  
   
@@ -71,11 +71,11 @@ ms.locfileid: "33518616"
   
 3.  如果未提供系統管理員權限，請建立 SQL Server 登入。 移至`Security`，**登入**。 以滑鼠右鍵按一下**登入**並建立新的登入。  
   
-4.  將 ACL 使用者加入至 SQL 角色。 開啟**資料庫**， **InstanceStore**，**安全性**。 以滑鼠右鍵按一下**使用者**選取**新使用者**。 設定**登入名稱**上一個步驟中建立的使用者。 將使用者加入資料庫角色成員資格**System.Activities.DurableInstancing.InstanceStoreUsers** （以及其他）。 請注意，使用者可能已存在 (例如 dbo 使用者)。  
+4.  將 ACL 使用者加入至 SQL 角色。 開啟**資料庫**， **InstanceStore**，**安全性**。 以滑鼠右鍵按一下**使用者**，然後選取**新手**。 設定**登入名稱**上一個步驟中建立的使用者。 將使用者新增至資料庫角色成員資格**System.Activities.DurableInstancing.InstanceStoreUsers** （以及其他）。 請注意，使用者可能已存在 (例如 dbo 使用者)。  
   
 5.  在 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 中開啟 InstanceStore.sln 檔案，然後按 CTRL+SHIFT+B 建置方案。  
   
-6.  在[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]、 巡覽至範例的適當 bin\debug 目錄 (\WF\Basic\Persistence\BuiltInConfiguration\cs\InstanceStore(1 or 2)\bin\debug)、 以滑鼠右鍵按一下 InstanceStore.exe 和選取**系統管理員身分執行**. 這個範例必須以系統管理權限執行，因為它會開啟通道接聽程式。  
+6.  在  [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]、 瀏覽至範例的適當 bin\debug 目錄 (\WF\Basic\Persistence\BuiltInConfiguration\cs\InstanceStore(1 or 2)\bin\debug)、 以滑鼠右鍵按一下 InstanceStore.exe 和選取**以系統管理員身分**. 這個範例必須以系統管理權限執行，因為它會開啟通道接聽程式。  
   
 7.  如果您在 SQL Server Express 的本機安裝以外的資料庫中建立了執行個體存放區，則必須更新範例中的資料庫連接字串 (InstanceStore1 專案的 Program.cs 中為 `const string ConnectionString`，InstanceStore2 專案的 App.config 中為 `connectionString` 屬性)，並且重新編譯範例。  
   
@@ -83,15 +83,15 @@ ms.locfileid: "33518616"
   
 1.  在範例正在執行時，啟動 SQL Server Management Studio。  
   
-2.  在**物件總管 中**，選取**資料庫**， **InstanceStore**，**資料表**，然後**System.Activities.DurableInstancing.InstanceTable**。  
+2.  在 [**物件總管] 中**，選取**資料庫**， **InstanceStore**，**資料表**，然後**System.Activities.DurableInstancing.InstanceTable**。  
   
-3.  以滑鼠右鍵按一下**InstanceTable**選取**選取前 1000 個資料列**。  
+3.  以滑鼠右鍵按一下**InstanceTable** ，然後選取**選取前 1000 個資料列**。  
   
-4.  觀察有新的項目，且**鎖定期限**每 5 秒會改變 (按一下工作列上的**Execute**按鈕重新整理查詢)。 這是設定的結果**Host Lock Renewal Period**為 5。  
+4.  觀察有新的項目，且**鎖定到期**變更每隔 5 秒 (按一下工作列上的**Execute**按鈕以重新整理查詢)。 這是設定的結果**Host Lock Renewal Period**為 5。  
   
-5.  在計時完成之後，您會看見執行個體表中該項目已移除。 這是設定的結果**執行個體完成動作**至**DeleteAll**。  
+5.  在計時完成之後，您會看見執行個體表中該項目已移除。 這是設定的結果**執行個體完成動作**要**DeleteAll**。  
   
-6.  按下 ENTER 終止工作流程主應用程式，並觀察**LockOwnersTable**被刪除。  
+6.  按下 ENTER 終止工作流程主應用程式，並觀察**LockOwnersTable**會被刪除。  
   
 #### <a name="to-uninstall-the-sample"></a>若要解除安裝範例  
   
@@ -102,9 +102,9 @@ ms.locfileid: "33518616"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\BuiltInConfiguration`  
   
 ## <a name="see-also"></a>另請參閱  
- [AppFabric 主控與持續性範例](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric 主控與持續性範例](https://go.microsoft.com/fwlink/?LinkId=193961)

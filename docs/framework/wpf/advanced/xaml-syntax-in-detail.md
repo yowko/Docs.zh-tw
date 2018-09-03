@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: f2c3aab20dc5bcf9b0f9f7053323ccd7a04443cc
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: eabb9c84824a4604319a346612e84563abaf2b76
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42755047"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485725"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 語法詳細資料
 本主題定義詞彙，用來說明 XAML 語法的項目。 這些詞彙常用的本文件中，WPF 文件的其餘具體來說，並使用 XAML 或啟用 System.Xaml 層級的 XAML 語言支援的基本 XAML 概念的架構。 本主題會詳述主題所介紹的基本術語[XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)。  
@@ -45,7 +45,7 @@ ms.locfileid: "42755047"
 ## <a name="the-xaml-language-specification"></a>XAML 語言規格  
  此處定義的 XAML 語法術語也是定義，或在 XAML 語言規格參考。 XAML 是以 XML 為基礎的語言和後續動作，或進一步延伸了 XML 的結構化規則。 一些術語所共用，或為基礎時描述 XML 語言或 XML 文件物件模型的常用術語。  
   
- 如需 XAML 語言規格的詳細資訊，請下載[ \[MS XAML\] ](http://go.microsoft.com/fwlink/?LinkId=114525)從 Microsoft 下載中心取得。  
+ 如需 XAML 語言規格的詳細資訊，請下載[ \[MS XAML\] ](https://go.microsoft.com/fwlink/?LinkId=114525)從 Microsoft 下載中心取得。  
   
 <a name="xaml_and_clr"></a>   
 ## <a name="xaml-and-clr"></a>XAML 和 CLR  

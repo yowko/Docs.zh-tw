@@ -9,16 +9,16 @@ ms.assetid: e91a7393-a7f9-4838-a1a6-857438b24bc9
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 752ac4cfddd5ca8c8b42d05e1a452cd0ef60ee36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d5f40c19d537ffb48a1077a30e1a9b0d66c4f791
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409514"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484563"
 ---
 # <a name="ui-automation-support-for-the-calendar-control-type"></a>Calendar 控制項類型的 UI 自動化支援
 > [!NOTE]
->  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱 < [Windows Automation API： 使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主題提供月曆控制項類型的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支援相關資訊。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，控制項類型是一組控制項條件，控制項必須符合條件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 屬性。 這些條件包括 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性值、控制項模式和 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件的特定指導方針。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "33409514"
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>必要的使用者介面自動化屬性  
- 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與月曆控制項特別有關。 如需有關[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]屬性，請參閱[用戶端的使用者介面自動化屬性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+ 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與月曆控制項特別有關。 如需詳細資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]屬性，請參閱[UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性|值|注意|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
@@ -59,10 +59,10 @@ ms.locfileid: "33409514"
   
 |控制項模式/模式屬性|支援|注意|  
 |---------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider>|[是]|月曆控制項一律支援格線模式，因為月份的日期是需要空間來巡覽的項目。|  
+|<xref:System.Windows.Automation.Provider.IGridProvider>|是|月曆控制項一律支援格線模式，因為月份的日期是需要空間來巡覽的項目。|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|視情況而定|大部分的月曆控制項都支援依頁面翻閱檢視。 建議使用捲軸模式，以支援分頁巡覽。|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider>|視情況而定|大部分月曆控制項都會保留特定日、月或年做為子項目的選項。 部分月曆可複選，而其他則僅允許單選。|  
-|<xref:System.Windows.Automation.Provider.ITableProvider>|[是]|月曆控制項在其子樹狀結構一律會有星期幾的標題，因此必須支援表格模式。|  
+|<xref:System.Windows.Automation.Provider.ITableProvider>|是|月曆控制項在其子樹狀結構一律會有星期幾的標題，因此必須支援表格模式。|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|否|因為您無法在月曆控制項上直接設定值，所以該控制項不需要值控制項模式。 如果有與控制項相關聯的特定日期，則應由選取控制項模式提供資訊。|  
   
 <a name="Required_UI_Automation_Events"></a>   

@@ -2,12 +2,12 @@
 title: 組態通道處理站
 ms.date: 03/30/2017
 ms.assetid: 3b749493-bd8a-4ccb-893e-5948901a1486
-ms.openlocfilehash: fc3a564128e520133c2404a82438e692b1381875
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 1f95356b0b473b297b36c7661c849589e9c0d6ef
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806574"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483732"
 ---
 # <a name="configuration-channel-factory"></a>組態通道處理站
 此範例涵蓋 <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> 的使用方法。 <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>允許從中央管理 WCF 用戶端組態。 如果在應用程式網域載入時間之後選取或變更組態，這可能也相當實用。  
@@ -37,17 +37,17 @@ ICalculatorChannel client1 = factory1.CreateChannel();
   
 2.  以滑鼠右鍵按一下 ConfigurationChannelFactory 方案 （2 個專案），然後選取**屬性**。  
   
-3.  在**通用屬性**，選取**啟始專案**，然後按一下 **多個啟始專案**。  
+3.  在 **通用屬性**，選取**啟始專案**，然後按一下**多個啟始專案**。  
   
-4.  移動**服務**與專案的清單中，開頭**動作 'Start'**，然後移動**用戶端**專案之後**服務**專案，也與**動作 'Start'**，因此**用戶端**之後執行專案時**服務**專案。  
+4.  移動**服務**專案的清單中，開頭**動作 'Start'**，然後移動**用戶端**專案之後**服務**專案，也可以搭配**動作 'Start'**，因此**用戶端**之後執行專案**服務**專案。  
   
-5.  按一下**確定**，然後按下 F5 （或 CTRL + F5） 執行範例。  
+5.  按一下 **確定**，然後按下 F5 （或 CTRL + F5） 執行範例。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigurationChannelFactory`

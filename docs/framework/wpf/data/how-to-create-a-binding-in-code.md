@@ -8,31 +8,32 @@ helpviewer_keywords:
 - binding data [WPF], creating
 - data binding [WPF], creating
 ms.assetid: 1a606db9-cf5f-42ed-a1c5-9e4722ec77a0
-ms.openlocfilehash: 62c5610bf5590594f34a3401b9397bb17d23f5ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d13650cb3e9a4e97a6642992b7211f323b9ea96
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483017"
 ---
 # <a name="how-to-create-a-binding-in-code"></a>如何：使用程式碼建立繫結
-此範例示範如何建立及設定<xref:System.Windows.Data.Binding>程式碼中。  
+此範例示範如何建立並設定<xref:System.Windows.Data.Binding>在程式碼中。  
   
 ## <a name="example"></a>範例  
- <xref:System.Windows.FrameworkElement>類別和<xref:System.Windows.FrameworkContentElement>類別同時公開`SetBinding`方法。 如果您要繫結任一種類別繼承的項目，您可以呼叫<xref:System.Windows.FrameworkElement.SetBinding%2A>直接的方法。  
+ <xref:System.Windows.FrameworkElement>類別和<xref:System.Windows.FrameworkContentElement>類別兩者公開`SetBinding`方法。 如果您要繫結項目繼承這些類別其中一種方法，您可以呼叫<xref:System.Windows.FrameworkElement.SetBinding%2A>直接方法。  
   
- 下列範例會建立名為，類別`MyData`，其中包含一個名為屬性`MyDataProperty`。  
+ 下列範例會建立名為類別`MyData`，其中包含一個名為屬性`MyDataProperty`。  
   
  [!code-csharp[CodeOnlyBinding#DataObject](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/MyData.cs#dataobject)]
  [!code-vb[CodeOnlyBinding#DataObject](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/MyData.vb#dataobject)]  
   
- 下列範例會示範如何建立繫結物件來設定繫結來源。  此範例會使用<xref:System.Windows.FrameworkElement.SetBinding%2A>繫結<xref:System.Windows.Controls.TextBlock.Text%2A>屬性`myText`，也就是<xref:System.Windows.Controls.TextBlock>控制，請為`MyDataProperty`。  
+ 下列範例示範如何建立繫結物件，以設定繫結的來源。  此範例會使用<xref:System.Windows.FrameworkElement.SetBinding%2A>繫結<xref:System.Windows.Controls.TextBlock.Text%2A>屬性`myText`，即<xref:System.Windows.Controls.TextBlock>控制項，為`MyDataProperty`。  
   
  [!code-csharp[CodeOnlyBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#1)]
  [!code-vb[CodeOnlyBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#1)]  
   
- 如需完整的程式碼範例，請參閱[純程式碼的繫結範例](http://msdn.microsoft.com/library/764aaf0b-2216-4941-9548-9c98da18d1a6)。  
+ 如需完整的程式碼範例，請參閱[僅適用程式碼的繫結範例](https://msdn.microsoft.com/library/764aaf0b-2216-4941-9548-9c98da18d1a6)。  
   
- 而不是呼叫<xref:System.Windows.FrameworkElement.SetBinding%2A>，您可以使用<xref:System.Windows.Data.BindingOperations.SetBinding%2A>靜態方法<xref:System.Windows.Data.BindingOperations>類別。 下列範例會呼叫<xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>而不是<xref:System.Windows.FrameworkElement.SetBinding%2A?displayProperty=nameWithType>繫結`myText`至`myDataProperty`。  
+ 而不是呼叫<xref:System.Windows.FrameworkElement.SetBinding%2A>，您可以使用<xref:System.Windows.Data.BindingOperations.SetBinding%2A>靜態方法<xref:System.Windows.Data.BindingOperations>類別。 下列範例中，會呼叫<xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>而非<xref:System.Windows.FrameworkElement.SetBinding%2A?displayProperty=nameWithType>繫結`myText`至`myDataProperty`。  
   
  [!code-csharp[CodeOnlyBinding#BOSetBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#bosetbinding)]
  [!code-vb[CodeOnlyBinding#BOSetBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#bosetbinding)]  

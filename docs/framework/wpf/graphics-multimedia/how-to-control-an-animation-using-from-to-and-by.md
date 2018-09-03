@@ -7,32 +7,32 @@ helpviewer_keywords:
 - animation [WPF], basic animation
 - From/to/by animation
 ms.assetid: 59afba57-6fc1-44c8-987e-8a5f4142adad
-ms.openlocfilehash: c6f2bfb207163136d79e815e7f910673e8fafade
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e422c008ae3051ecd69b3278eb05fc0e2d1b1a0b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561682"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480792"
 ---
 # <a name="how-to-control-an-animation-using-from-to-and-by"></a>操作說明：使用 From、To 和 By 控制動畫
-「 從/至/者 」 或 「 基本動畫 」 會建立兩個目標值之間的轉換 (請參閱[動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)的不同類型的動畫簡介)。 若要設定的基本動畫目標值，使用其<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>， <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>，和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>屬性。  下表摘要說明如何<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>， <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>，和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>可能使用屬性一起或分開來判斷動畫的目標值。  
+「 From/To/By"或 「 基本動畫 」 會建立兩個目標值之間的轉換 (請參閱[動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)不同類型動畫的簡介)。 若要設定基本動畫目標值時，使用其<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>， <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>，和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>屬性。  下表摘要說明如何<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>， <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>，和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>屬性可能會一起或分開來決定動畫的目標值。  
   
 |指定的屬性|產生的行為|  
 |--------------------------|------------------------|  
-|<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>|動畫會從所指定的值<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>屬性正在顯示動畫之屬性的基底值或前一個動畫的輸出值，根據前一個動畫的設定方式。|  
+|<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>|動畫會從所指定的值<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>屬性要繪製之屬性的基底值或上一個動畫輸出值，根據上一個動畫的設定方式。|  
 |<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 和 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>|動畫會從所指定的值<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>屬性所指定的值為<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>屬性。|  
-|<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 和 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>|動畫會從所指定的值<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>屬性指定的總和值<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>屬性。|  
-|<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>|進展動畫的屬性的基底值的動畫，或前一個動畫的輸出所指定的值的值<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>屬性。|  
-|<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>|動畫會從正在顯示動畫之屬性的基底值或前一個動畫的輸出值，該值與所指定的值的總和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>屬性。|  
+|<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 和 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>|動畫會從所指定的值<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>屬性設為值的總和所指定<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>屬性。|  
+|<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>|從動畫的屬性的基底值的動畫進展或上一個動畫輸出值所指定的值來<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>屬性。|  
+|<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>|動畫會從要繪製之屬性的基底值或上一個動畫輸出值，該值與所指定之值的總和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>屬性。|  
   
 > [!NOTE]
->  無法同時設定<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>屬性和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>上相同的動畫的屬性。  
+>  未設定兩者<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>屬性和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>上相同的動畫屬性。  
   
  若要使用其他插補方法，或建立兩個以上的目標值之間的動畫，請使用主要畫面格動畫。 請參閱[主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)如需詳細資訊。  
   
  將多個動畫套用至單一屬性的相關資訊，請參閱[主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)。  
   
- 下列範例示範的設定不同的效果<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>， <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>，和<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>動畫的屬性。  
+ 下列範例顯示的設定不同的效果<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>， <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>，和<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>動畫的屬性。  
   
 ## <a name="example"></a>範例  
  [!code-xaml[BasicAnimations_snippet#AnimationTargetValuesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snippet/CS/AnimationTargetValuesExample.xaml#animationtargetvalueswholepage)]  
@@ -40,4 +40,4 @@ ms.locfileid: "33561682"
 ## <a name="see-also"></a>另請參閱  
  [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [From、To 和 By 動畫目標值範例](http://go.microsoft.com/fwlink/?LinkID=159988)
+ [From、To 和 By 動畫目標值範例](https://go.microsoft.com/fwlink/?LinkID=159988)

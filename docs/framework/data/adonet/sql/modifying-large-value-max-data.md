@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: 285803d92474efd3268816d1af06eb3ff4abbc79
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ea079a0b55dde8df7b3442f3d604b2b6467ba785
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365588"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484717"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>在 ADO.NET 中修改大量數值 (max) 資料
 大型物件 (LOB) 資料型別是指資料列大小上限超過 8 KB 的資料型別。 SQL Server 可提供 `max`、`varchar` 和 `nvarchar` 資料型別的 `varbinary` 規範，允許儲存最大達 2^32 位元組的值。 資料表資料行及 Transact-SQL 變數可指定 `varchar(max)`、`nvarchar(max)` 或 `varbinary(max)` 資料型別。 在 ADO.NET 中，`max` 資料型別可透過 `DataReader` 來擷取，也可指定為輸入及輸出參數值，並且不需要任何特殊處理。 對於大型 `varchar` 資料型別，可透過遞增方式擷取及更新資料。  
@@ -21,7 +21,7 @@ ms.locfileid: "33365588"
   
  **SQL Server 線上叢書**  
   
-1.  [使用大數值資料類型](http://go.microsoft.com/fwlink/?LinkId=120498)  
+1.  [使用大數值資料類型](https://go.microsoft.com/fwlink/?LinkId=120498)  
   
 ## <a name="large-value-type-restrictions"></a>大數值型別限制  
  下列限制適用於 `max` 資料型別，而小型資料型別則沒有這些限制：  
@@ -37,9 +37,9 @@ ms.locfileid: "33365588"
   
  `OPENROWSET` 函式包含 `BULK` 資料列集提供者，可讓您直接從檔案讀取資料，不需將資料載入目標資料表中。 這可讓您在簡單的 INSERT SELECT 陳述式中使用 `OPENROWSET`。  
   
- `OPENROWSET``BULK`選項引數可有效地控制何處開始及結束讀取資料、 如何處理錯誤，以及如何解譯資料。 例如，您可以指定將資料檔案讀取為具有型別 `varbinary`、`varchar` 或 `nvarchar` 的單一資料列及單一資料行資料列集。 如需完整的語法及選項，請參閱《SQL Server 線上叢書》。  
+ `OPENROWSET BULK`選項引數可有效地控制何處開始及結束讀取資料、 如何處理錯誤，以及如何解譯資料。 例如，您可以指定將資料檔案讀取為具有型別 `varbinary`、`varchar` 或 `nvarchar` 的單一資料列及單一資料行資料列集。 如需完整的語法及選項，請參閱《SQL Server 線上叢書》。  
   
- 下列範例會將相片插入 AdventureWorks 範例資料庫中的 ProductPhoto 資料表。 當使用`BULK``OPENROWSET`提供者，您必須提供偶數的資料行的具名的清單，如果您未將值插入每個資料行。 在此情況下，將主索引鍵定義為識別欄位，也可從資料行清單省略。 請注意，您還必須提供關聯名稱，將其置於 `OPENROWSET` 陳述式的結尾處 (此情況中為 ThumbnailPhoto)。 這會與要載入檔案之 `ProductPhoto` 資料表中的資料行關聯。  
+ 下列範例會將相片插入 AdventureWorks 範例資料庫中的 ProductPhoto 資料表。 當使用`BULK OPENROWSET`提供者，您必須提供偶數的資料行的具名的清單，如果您未將值插入每個資料行。 在此情況下，將主索引鍵定義為識別欄位，也可從資料行清單省略。 請注意，您還必須提供關聯名稱，將其置於 `OPENROWSET` 陳述式的結尾處 (此情況中為 ThumbnailPhoto)。 這會與要載入檔案之 `ProductPhoto` 資料表中的資料行關聯。  
   
 ```  
 INSERT Production.ProductPhoto (  
@@ -63,12 +63,12 @@ FROM OPENROWSET
   
  { *column_name* = {。寫入 (*運算式*， @Offset ， @Length )}  
   
- WRITE 方法指定值的區段*column_name*將予修改。 運算式是將複製到的值*column_name*、`@Offset`是起始點速率將寫入運算式，而`@Length`引數是資料行中區段的長度。  
+ WRITE 方法指定的值的一個區段*column_name*將予修改。 運算式是值，將會複製到*column_name*，則`@Offset`是要寫入的運算式的起點和`@Length`引數是資料行中區段的長度。  
   
 |如果|然後|  
 |--------|----------|  
-|運算式設為 NULL|`@Length` 會忽略中的值和*column_name*會截斷在指定`@Offset`。|  
-|`@Offset` 為 NULL|更新作業處附加運算式結尾現有*column_name*值和`@Length`會被忽略。|  
+|運算式設為 NULL|`@Length` 會忽略與中的值*column_name*截斷指定`@Offset`。|  
+|`@Offset` 為 NULL|更新作業將附加至結尾的現有運算式*column_name*值並`@Length`會被忽略。|  
 |`@Offset` 大於 column_name 值的長度|SQL Server 會傳回錯誤。|  
 |`@Length` 為 NULL|更新作業會移除從 `@Offset` 到 `column_name` 值結尾的所有資料。|  
   
@@ -104,7 +104,7 @@ GO
 ```  
   
 ## <a name="working-with-large-value-types-in-adonet"></a>在 ADO.NET 中使用大數值型別  
- 您可以使用大數值類型在 ADO.NET 中藉由指定做為大數值類型<xref:System.Data.SqlClient.SqlParameter>中的物件<xref:System.Data.SqlClient.SqlDataReader>傳回結果集，或使用<xref:System.Data.SqlClient.SqlDataAdapter>填滿`DataSet` / `DataTable`。 大型值型別與其相關的小型值資料型別在使用方式上並無差異。  
+ 您可以使用 ADO.NET 中的大型值型別指定為大型值型別<xref:System.Data.SqlClient.SqlParameter>中的物件<xref:System.Data.SqlClient.SqlDataReader>才會傳回結果集，或使用<xref:System.Data.SqlClient.SqlDataAdapter>填滿`DataSet` / `DataTable`。 大型值型別與其相關的小型值資料型別在使用方式上並無差異。  
   
 ### <a name="using-getsqlbytes-to-retrieve-data"></a>使用 GetSqlBytes 擷取資料  
  `GetSqlBytes` 的 <xref:System.Data.SqlClient.SqlDataReader> 方法可用於擷取 `varbinary(max)` 資料行的內容。 下列程式碼片段假設名為 <xref:System.Data.SqlClient.SqlCommand> 的 `cmd` 物件會從資料表選取 `varbinary(max)` 資料；名為 <xref:System.Data.SqlClient.SqlDataReader> 的 `reader` 物件會以 <xref:System.Data.SqlTypes.SqlBytes> 形式擷取資料。  
@@ -222,7 +222,7 @@ while (reader.Read())
 ```  
   
 ### <a name="example"></a>範例  
- 下列程式碼會從 `LargePhoto` 資料庫中的 `ProductPhoto` 資料表擷取名稱及 `AdventureWorks` 物件，並將其儲存至檔案。 組件 (Assembly) 需要參考 <xref:System.Drawing> 命名空間 (Namespace) 才能進行編譯。  <xref:System.Data.SqlClient.SqlDataReader.GetSqlBytes%2A> 的 <xref:System.Data.SqlClient.SqlDataReader> 方法會傳回 <xref:System.Data.SqlTypes.SqlBytes> 物件，其會公開 `Stream` 屬性。 程式碼會使用此建立新`Bitmap`物件，然後再將它儲存在 Gif `ImageFormat`。  
+ 下列程式碼會從 `LargePhoto` 資料庫中的 `ProductPhoto` 資料表擷取名稱及 `AdventureWorks` 物件，並將其儲存至檔案。 組件 (Assembly) 需要參考 <xref:System.Drawing> 命名空間 (Namespace) 才能進行編譯。  <xref:System.Data.SqlClient.SqlDataReader.GetSqlBytes%2A> 的 <xref:System.Data.SqlClient.SqlDataReader> 方法會傳回 <xref:System.Data.SqlTypes.SqlBytes> 物件，其會公開 `Stream` 屬性。 程式碼所使用的是這來建立新`Bitmap`物件，然後再將它儲存在 Gif `ImageFormat`。  
   
  [!code-csharp[DataWorks LargeValueType.Photo#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks LargeValueType.Photo/CS/source.cs#1)]
  [!code-vb[DataWorks LargeValueType.Photo#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Photo/VB/source.vb#1)]  
@@ -244,7 +244,7 @@ WHERE   DocumentID=@DocumentID
 ```  
   
 ### <a name="example"></a>範例  
- ADO.NET 程式碼會建立 <xref:System.Data.SqlClient.SqlConnection> 及 <xref:System.Data.SqlClient.SqlCommand> 物件來執行 GetDocumentSummary 預存程序並擷取文件摘要 (以大型值型別儲存)。 程式碼會將值傳遞@DocumentID輸入參數，並顯示結果傳遞回@DocumentSummary輸出在主控台視窗中的參數。  
+ ADO.NET 程式碼會建立 <xref:System.Data.SqlClient.SqlConnection> 及 <xref:System.Data.SqlClient.SqlCommand> 物件來執行 GetDocumentSummary 預存程序並擷取文件摘要 (以大型值型別儲存)。 程式碼會將值傳遞@DocumentID輸入參數，並顯示結果傳回到@DocumentSummary輸出在主控台視窗中的參數。  
   
  [!code-csharp[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/CS/source.cs#1)]
  [!code-vb[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/VB/source.vb#1)]  
@@ -253,4 +253,4 @@ WHERE   DocumentID=@DocumentID
  [SQL Server 二進位和大量數值資料](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
  [SQL Server 資料類型對應](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
  [ADO.NET 中的 SQL Server 資料作業](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

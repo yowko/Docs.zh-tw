@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: 50c88aec8ac57be2ab317ac91464d68503607738
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 897d6fb8e0a150cc7fa498bb904b10d89ece9943
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541722"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486231"
 ---
 # <a name="windows-forms-overview"></a>Windows Form 概觀
 以下概觀將討論智慧型用戶端應用程式的優點、Windows Form 程式設計的主要功能，以及如何使用 Windows Form 來建置智慧型用戶端，以符合當今企業和終端使用者的需求。  
@@ -19,7 +19,7 @@ ms.locfileid: "33541722"
  使用 Windows Form 來開發智慧型用戶端。 「智慧型用戶端」是豐富的圖形化應用程式，容易部署及更新，無論是否連接至網際網路都能運作，而且在存取本機電腦上的資源時，所使用的方法比傳統的 Windows 應用程式更安全。  
   
 ### <a name="building-rich-interactive-user-interfaces"></a>建置豐富、互動式的使用者介面  
- Windows Form 是一種適用於 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的智慧型用戶端技術，它是一組 Managed 程式庫，可簡化常見的應用程式工作，例如讀取和寫入檔案系統。 當您使用類似 Visual Studio 開發環境時，則您可以透過網路來建立與遠端電腦 Windows Form 智慧型用戶端應用程式顯示資訊、 要求使用者，輸入，並進行通訊。  
+ Windows Form 是一種適用於 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的智慧型用戶端技術，它是一組 Managed 程式庫，可簡化常見的應用程式工作，例如讀取和寫入檔案系統。 當您使用像是 Visual Studio 的開發環境時，則您可以透過網路來建立與遠端電腦來顯示資訊、 要求輸入使用者，以及通訊的 Windows Form 智慧型用戶端應用程式。  
   
  在 Windows Forms 中，「表單」是一種視覺化介面，您可以在上面顯示要提供給使用者的資訊。 通常在建置 Windows Forms 應用程式時，您會將控制項加入表單，以及開發對使用者動作的回應，例如滑鼠點選或是按下按鍵。 「控制項」是獨立的使用者介面 (UI) 項目，可顯示資料或接受資料輸入。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "33541722"
   
  Windows Form 有豐富的 UI 控制項，可以模擬高階應用程式 (例如 Microsoft Office) 中的功能。 當您使用 <xref:System.Windows.Forms.ToolStrip> 和 <xref:System.Windows.Forms.MenuStrip> 控制項時，您可以建立包含文字和影像的工具列和功能表、顯示子功能表，以及裝載其他控制項，例如文字方塊和下拉式方塊。  
   
- 使用 Visual Studio 拖放 Windows Form 設計工具，您可以輕鬆地建立 Windows Forms 應用程式。 只要用您的游標選取控制項，然後將其加入表單上您想要的位置即可。 設計工具提供像是格線和對齊線之類的工具，可讓您輕鬆對齊控制項。 當您使用 Visual Studio，或在命令列進行編譯，您可以使用<xref:System.Windows.Forms.FlowLayoutPanel>，<xref:System.Windows.Forms.TableLayoutPanel>和<xref:System.Windows.Forms.SplitContainer>控制項來建立進階表單配置，以較少的時間。  
+ 使用 Visual Studio 拖放 Windows Form 設計工具中，您可以輕鬆建立 Windows Forms 應用程式。 只要用您的游標選取控制項，然後將其加入表單上您想要的位置即可。 設計工具提供像是格線和對齊線之類的工具，可讓您輕鬆對齊控制項。 無論您使用 Visual Studio，或在命令列進行編譯，您可以使用<xref:System.Windows.Forms.FlowLayoutPanel>，<xref:System.Windows.Forms.TableLayoutPanel>和<xref:System.Windows.Forms.SplitContainer>控制項來建立進階表單配置較少的時間。  
   
  最後，如果您必須建立自己的自訂 UI 項目，<xref:System.Drawing> 命名空間包含許多類別選項，可直接在表單上呈現線條、圓形和其他形狀。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "33541722"
   
  您可以使用 [資料來源] 視窗，輕鬆地建立資料繫結控制項。 此視窗會顯示您專案中的資料來源，例如資料庫、Web 服務和物件。 將項目從這個視窗拖曳到專案中的表單上，即可建立資料繫結控制項。 您也可以將物件從 [資料來源] 視窗拖曳至現有的控制項，以將現有的控制項繫結至資料。  
   
- 在 Windows Forms 中，另一種管理資料繫結的方法是「設定」。 大部分的智慧型用戶端應用程式必須保留其執行階段狀態的一些相關資訊 (例如表單的最後已知大小)，以及保留使用者偏好設定資料 (例如儲存檔案的預設位置)。 應用程式設定功能為因應這些需求，提供了一種簡單的方法，可將這兩種設定都儲存在用戶端電腦上。 使用 Visual Studio 或程式碼編輯器中定義這些設定之後，設定會保存為 XML，並且在執行階段自動讀回記憶體。  
+ 在 Windows Forms 中，另一種管理資料繫結的方法是「設定」。 大部分的智慧型用戶端應用程式必須保留其執行階段狀態的一些相關資訊 (例如表單的最後已知大小)，以及保留使用者偏好設定資料 (例如儲存檔案的預設位置)。 應用程式設定功能為因應這些需求，提供了一種簡單的方法，可將這兩種設定都儲存在用戶端電腦上。 使用 Visual Studio 或程式碼編輯器中定義這些設定之後，設定是保存為 XML，並在執行階段自動讀回記憶體。  
   
 #### <a name="help-displaying-and-manipulating-data"></a>顯示和操作資料的說明  
  如需如何使用這些功能的逐步解說資訊，請參閱下列說明主題。  
@@ -62,7 +62,7 @@ ms.locfileid: "33541722"
 |-----------------|----------------|  
 |使用 <xref:System.Windows.Forms.BindingSource> 元件|[操作說明：使用設計工具將 Windows Forms 控制項和 BindingSource 元件加以繫結](../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
 |使用 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 資料來源|[操作說明：使用 Windows Forms BindingSource 元件排序和篩選 ADO.NET 資料](../../../docs/framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|  
-|使用資料來源視窗|[逐步解說：顯示 Windows Form 上的資料](http://msdn.microsoft.com/library/f6e08c2c-c792-43de-adf3-3e52c0100225)|  
+|使用資料來源視窗|[逐步解說：顯示 Windows Form 上的資料](https://msdn.microsoft.com/library/f6e08c2c-c792-43de-adf3-3e52c0100225)|  
 |使用應用程式設定|[如何：建立應用程式設定](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)|  
   
 ### <a name="deploying-applications-to-client-computers"></a>將應用程式部署到用戶端電腦  

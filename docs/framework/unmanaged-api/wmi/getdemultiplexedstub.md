@@ -1,6 +1,6 @@
 ---
 title: GetDemultiplexedStub 函式 （Unmanaged API 參考）
-description: GetDemultiplexedStub 函式會建立物件轉寄站接收可協助用戶端從 Windows 管理接收非同步呼叫。
+description: GetDemultiplexedStub 函式會建立物件轉寄站接收器，以協助用戶端接收 Windows 管理中的非同步呼叫。
 ms.date: 11/06/2017
 api_name:
 - GetDemultiplexedStub
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b195d3a512c537ca409bd2039add9e69abaf4df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4311a77c9159428bf7beacc99d4479acb28b91b6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456358"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482352"
 ---
 # <a name="getdemultiplexedstub-function"></a>GetDemultiplexedStub 函式
-建立物件轉寄站接收可協助用戶端從 Windows 管理接收非同步呼叫。
+建立物件轉寄站接收以協助用戶端從 Windows Management 接收非同步呼叫。
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -41,26 +41,26 @@ HRESULT GetDemultiplexedStub (
 ## <a name="parameters"></a>參數
 
 `pObject`  
-[in]用戶端的程序中實作的指標[IWbemObjectSink](https://msdn.microsoft.com/library/aa391787(v=vs.85).aspx)。
+[in]用戶端的程序中實作的指標[IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink)。
 
 `isLocal`  
 [in]指出事件是否位於本機的旗標 (`true`)，否則`false`。
 
 `ppObject`  
-[out]若要協助用戶端從 Windows 管理接收非同步呼叫物件轉寄站接收。
+[out]若要協助用戶端接收非同步呼叫，從 Windows 管理物件轉寄站接收。
 
 ## <a name="return-value"></a>傳回值
 
-如果函式成功，傳回值是`S_OK`(0)。
+如果此函數成功，傳回的值是`S_OK`(0)。
 
 如果函式失敗，傳回的值就會為非零的錯誤碼。 若要取得延伸錯誤資訊，請呼叫[GetErrorInfo](geterrorinfo.md)函式。
     
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.idl  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

@@ -2,12 +2,12 @@
 title: 絕對延遲
 ms.date: 03/30/2017
 ms.assetid: b483139a-39bb-4560-8003-8969a8fc2cd1
-ms.openlocfilehash: 3a104f6b879e9cdc899bad2201ad1ed320a38a2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 30719a4340b738a7462584c4dca00f6d5d90ac72
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518381"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486098"
 ---
 # <a name="absolute-delay"></a>絕對延遲
 這個範例的主要案例是在工作流程應用程式中使用永久性計時器，以便延遲到指定的 <xref:System.DateTime> 為止。 這項作業與使用內建的 <xref:System.Activities.Statements.Delay> 活動不同，因為這樣做只會允許您延遲給定的 <xref:System.TimeSpan> (或分鐘/秒數)。  
@@ -39,7 +39,7 @@ ms.locfileid: "33518381"
   
  這個範例也會示範如何開啟 <xref:System.Activities.WorkflowApplication> 的持續性。 在此特定範例中，我們將使用永久性計時器，以便在等候計時器過期的閒置時間內，將工作流程資料卸載至持續性資料庫中。 這項實作也可用於其他持續性動作。 此範例會示範如何使用 SQL Server 來設定持續性連接字串，以及如何建立執行個體存放區，以便保存工作流程執行個體的資料。 所提供的邏輯是有關如何在引發事件之後繼續工作流程，讓工作流程執行個體可執行。  
   
- 當您逐步執行此範例中，您會看到的時間內建延遲開始和完成時，這又會導致傳送電子郵件訊息。 之後，AbsoluteDelay 活動將中止直到指定的 <xref:System.DateTime> (或 0 秒，如果 <xref:System.DateTime> 已過期的話) 為止，接著便在過期時送出電子郵件。 這將顯示內建 <xref:System.Activities.Statements.Delay> 功能與使用 AbsoluteDelay 活動的兩種不同使用案例。  
+ 當您逐步執行此範例中，您會看到的時間內建延遲開始和完成時，它接著會傳送電子郵件訊息。 之後，AbsoluteDelay 活動將中止直到指定的 <xref:System.DateTime> (或 0 秒，如果 <xref:System.DateTime> 已過期的話) 為止，接著便在過期時送出電子郵件。 這將顯示內建 <xref:System.Activities.Statements.Delay> 功能與使用 AbsoluteDelay 活動的兩種不同使用案例。  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
@@ -60,13 +60,13 @@ ms.locfileid: "33518381"
   
 7.  選取 建置方案**建置**，**建置方案**。  
   
-8.  執行方案，請按**F5**。  
+8.  執行方案，藉由按下**F5**。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\AbsoluteDelay`

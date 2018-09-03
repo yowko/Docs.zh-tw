@@ -2,12 +2,12 @@
 title: Multiple Active Result Sets (MARS)
 ms.date: 03/30/2017
 ms.assetid: c90ef863-bac7-44cf-adc1-f05c36fcf57d
-ms.openlocfilehash: e7c3f1e18980d6b34e9261cda000b6e77ae1c53b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 67df210fa48c1b72323177b627b17e537f9fb180
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358421"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480749"
 ---
 # <a name="multiple-active-result-sets-mars"></a>Multiple Active Result Sets (MARS)
 Multiple Active Result Set (MARS) 是允許在單一連接中執行多個批次作業的功能。 在先前版本中，在單一連接上一次只能執行一個批次作業。 以 MARS 執行多個批次作業並不表示同時執行作業。  
@@ -25,4 +25,4 @@ Multiple Active Result Set (MARS) 是允許在單一連接中執行多個批次�
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

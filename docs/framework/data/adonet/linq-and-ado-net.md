@@ -2,27 +2,27 @@
 title: LINQ 和 ADO.NET
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-ms.openlocfilehash: 1385b2d9b49a7615810025141e111b7d7bf71eac
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 13532401a56c6ab2c77a2df575d5b3dde573df2d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766123"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485686"
 ---
 # <a name="linq-and-adonet"></a>LINQ 和 ADO.NET
-現在，許多企業開發人員必須使用兩個 （或以上） 的程式語言： 高階語言的商務邏輯層與展示層 （例如 Visual C# 或 Visual Basic），以及與資料庫互動的查詢語言 (例如[!INCLUDE[tsql](../../../../includes/tsql-md.md)])。 因此，開發人員必須精通許多語言才能具有效率，而且也會在開發環境中產生語言不符的情況。 例如，使用資料存取 API 針對資料庫執行查詢的應用程式會使用引號，將查詢指定成字串常值 (String Literal)。 編譯器 (Compiler) 無法讀取這個查詢字串而且不會檢查是否有錯誤，例如語法無效或它所參考的資料行或資料列是否實際存在。 此外，系統無法提供查詢參數的型別檢查和 `IntelliSense` 支援。  
+現今許多商務程式開發人員必須使用兩個 （含） 以上的程式設計語言： 適用於高階語言 （例如 Visual C# 或 Visual Basic）、 商務邏輯和展示層及可與資料庫互動的查詢語言 (例如[!INCLUDE[tsql](../../../../includes/tsql-md.md)])。 因此，開發人員必須精通許多語言才能具有效率，而且也會在開發環境中產生語言不符的情況。 例如，使用資料存取 API 針對資料庫執行查詢的應用程式會使用引號，將查詢指定成字串常值 (String Literal)。 編譯器 (Compiler) 無法讀取這個查詢字串而且不會檢查是否有錯誤，例如語法無效或它所參考的資料行或資料列是否實際存在。 此外，系統無法提供查詢參數的型別檢查和 `IntelliSense` 支援。  
   
- [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 可讓開發人員在其應用程式程式碼中撰寫以集合為基礎的查詢，而不需要使用不同的查詢語言。 您可以針對各種可列舉的資料來源 (亦即，實作 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 介面的資料來源) 撰寫 <xref:System.Collections.IEnumerable> 查詢，而這些資料來源包括記憶體中資料結構、XML 文件、SQL 資料庫和 <xref:System.Data.DataSet> 物件。 雖然這些可列舉的資料來源是以各種不同的方式實作，但是它們全部都會公開 (Expose) 相同的語法和語言建構。 由於您可以用程式語言本身來撰寫查詢，因此不需要使用另一種查詢語言，進而內嵌為編譯器無法了解或驗證的字串常值。 將查詢整合至程式語言，也可讓 Visual Studio 程式設計人員透過提供編譯時期型別和語法檢查產能和`IntelliSense`。 這些功能會減少查詢偵錯和錯誤修正的需要。  
+ [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 可讓開發人員在其應用程式程式碼中撰寫以集合為基礎的查詢，而不需要使用不同的查詢語言。 您可以針對各種可列舉的資料來源 (亦即，實作 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 介面的資料來源) 撰寫 <xref:System.Collections.IEnumerable> 查詢，而這些資料來源包括記憶體中資料結構、XML 文件、SQL 資料庫和 <xref:System.Data.DataSet> 物件。 雖然這些可列舉的資料來源是以各種不同的方式實作，但是它們全部都會公開 (Expose) 相同的語法和語言建構。 由於您可以用程式語言本身來撰寫查詢，因此不需要使用另一種查詢語言，進而內嵌為編譯器無法了解或驗證的字串常值。 整合的程式設計語言中的查詢也可讓 Visual Studio 程式設計人員可以藉由提供編譯時期型別和語法檢查，可提高生產力和`IntelliSense`。 這些功能會減少查詢偵錯和錯誤修正的需要。  
   
  將資料從 SQL 資料表傳輸至記憶體中物件通常很費時而且容易產生錯誤。 由 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 和 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 所實作的 [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] 提供者會將來源資料轉換成以 <xref:System.Collections.IEnumerable> 為基礎的物件集合。 當您查詢和更新時，程式設計人員永遠會將資料視為 <xref:System.Collections.IEnumerable> 集合。 針對這些集合撰寫查詢可獲得完整的 `IntelliSense` 支援。  
   
- 有三種不同的 ADO.NET [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 技術：[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]、[!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] 和 [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 提供更豐富且最佳化查詢透過<xref:System.Data.DataSet>和[!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]可讓您直接查詢 SQL Server 資料庫結構描述，和[!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]可讓您查詢[!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)]。  
+ 有三種不同的 ADO.NET [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 技術：[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]、[!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] 和 [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 提供更豐富且最佳化的查詢<xref:System.Data.DataSet>並[!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]可讓您直接查詢 SQL Server 資料庫結構描述，以及[!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]可讓您查詢[!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)]。  
   
  下圖將提供 ADO.NET LINQ 技術如何與高階程式語言和啟用 LINQ 之資料來源相關聯的概觀。  
   
  ![LINQ to ADO.NET 概觀](../../../../docs/framework/data/adonet/media/dpue-linqtoadonetoverview-bpuedev11.gif "DPUE_LinqToAdoNetOverview_bpuedev11")  
   
- 如需 LINQ 語言功能的一般資訊，請參閱[LINQ 簡介](http://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e)。 在您的應用程式中使用 LINQ 相關資訊，請參閱[不在組建中： LINQ 的一般程式設計指南](http://msdn.microsoft.com/library/609c7a6b-cbdd-429d-99f3-78d13d3bc049)，其中包含詳細說明如何使用 LINQ 技術的相關資訊。  
+ 如需有關 LINQ 的詳細資訊，請參閱 < [Language Integrated Query (LINQ)](../../../csharp/programming-guide/concepts/linq/index.md)。
   
  下列各節將提供有關 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]、[!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] 和 [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)] 的詳細資訊。  
   
@@ -39,9 +39,10 @@ ms.locfileid: "32766123"
   
  透過 [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)]，關聯式資料會公開為 .NET 環境內的物件。 如此一來，物件層就成為理想的 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 支援目標，讓程式開發人員可以根據用於建置商務邏輯的語言，針對資料庫編寫查詢。 這項功能稱為 [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]。 如需詳細資訊，請參閱 [LINQ to Entities](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)  
- [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)  
- [LINQ to Entities](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)  
- [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱
+
+- [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)  
+- [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)  
+- [LINQ to Entities](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)  
+- [Language-Integrated Query (LINQ)](../../../csharp/programming-guide/concepts/linq/index.md)
+- [ADO.NET 概觀](ado-net-overview.md)
