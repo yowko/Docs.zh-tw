@@ -4,13 +4,13 @@ ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
 ms.openlocfilehash: d4be2aa42c667460232f6aa3cd8dc707805750e0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ms.locfileid: "33365237"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>使用動作實作伺服器端行為
-OData 動作可實作一種行為，以依據從 OData 服務擷取的資源而動作。  例如，將數位影片視為資源時，您可以對數位影片進行許多動作：簽出、評比/加註或簽入。 這些是管理數位影片之 WCF 資料服務可實作的所有動作範例。 動作描述於 OData 回應中，而這個回應包含可叫用動作的資源。 當使用者要求代表數位影片的資源時，從 WCF 資料服務傳回的回應就會包含可用於該項資源之動作的相關資訊。 動作的可用性可能會取決於資料服務或資源的狀態。 例如，一旦數位影片已簽出之後，就無法由其他使用者簽出。 用戶端只要指定 URL，就可以叫用動作。 例如http://MyServer/MovieService.svc/Movies(6)會識別特定的數位影片和http://MyServer/MovieService.svc/Movies(6)/Checkout會叫用特定的影片中的動作。 動作可讓您公開服務模型，而不公開資料模型。 繼續處理影片服務範例時，您可能會想要讓使用者評比影片，但不直接以資源的形式公開評比資料。 此時，您可以實作評比動作，讓使用者評比影片，但不直接以資源的形式存取評比資料。  
+OData 動作可實作一種行為，以依據從 OData 服務擷取的資源而動作。  例如，將數位影片視為資源時，您可以對數位影片進行許多動作：簽出、評比/加註或簽入。 這些是管理數位影片之 WCF 資料服務可實作的所有動作範例。 動作描述於 OData 回應中，而這個回應包含可叫用動作的資源。 當使用者要求代表數位影片的資源時，從 WCF 資料服務傳回的回應就會包含可用於該項資源之動作的相關資訊。 動作的可用性可能會取決於資料服務或資源的狀態。 例如，一旦數位影片已簽出之後，就無法由其他使用者簽出。 用戶端只要指定 URL，就可以叫用動作。 例如 http://MyServer/MovieService.svc/Movies(6) 會識別特定的數位影片和 http://MyServer/MovieService.svc/Movies(6)/Checkout 會叫用特定的影片中的動作。 動作可讓您公開服務模型，而不公開資料模型。 繼續處理影片服務範例時，您可能會想要讓使用者評比影片，但不直接以資源的形式公開評比資料。 此時，您可以實作評比動作，讓使用者評比影片，但不直接以資源的形式存取評比資料。  
   
 ## <a name="implementing-an-action"></a>實作動作  
  若要實作服務動作，您必須實作<xref:System.IServiceProvider>， [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx)，和[IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx)介面。 <xref:System.IServiceProvider> 可讓 WCF Data Services 取得您的實作[IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx)。 [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx)可讓 WCF Data Services 建立、 尋找、 描述和叫用服務動作。 [IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx)可讓您叫用實作服務動作之行為的程式碼，並取得結果，如果有的話。 請記住，WCF Data Services 是每次呼叫的 WCF 服務，亦即每次呼叫服務時，都會建立新的服務執行個體。  請確定建立服務時，不會進行任何不必要的工作。  
