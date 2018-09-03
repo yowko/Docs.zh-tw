@@ -12,58 +12,59 @@ helpviewer_keywords:
 - w compiler option [C#]
 - warn compiler option [C#]
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
-ms.openlocfilehash: 65a6348bb0364d79ed0e69daf3a31ea7aa1bf8ea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 14656fa25ea1d01339bd63efb999e938e1243db8
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218867"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43331937"
 ---
-# <a name="-warn-c-compiler-options"></a><span data-ttu-id="6454a-102">-warn (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="6454a-102">-warn (C# Compiler Options)</span></span>
-<span data-ttu-id="6454a-103">**-warn** 選項指定要針對編譯器顯示的警告層級。</span><span class="sxs-lookup"><span data-stu-id="6454a-103">The **-warn** option specifies the warning level for the compiler to display.</span></span>  
+# <a name="-warn-c-compiler-options"></a><span data-ttu-id="2a372-102">-warn (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="2a372-102">-warn (C# Compiler Options)</span></span>
+<span data-ttu-id="2a372-103">**-warn** 選項指定要針對編譯器顯示的警告層級。</span><span class="sxs-lookup"><span data-stu-id="2a372-103">The **-warn** option specifies the warning level for the compiler to display.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6454a-104">語法</span><span class="sxs-lookup"><span data-stu-id="6454a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2a372-104">語法</span><span class="sxs-lookup"><span data-stu-id="2a372-104">Syntax</span></span>  
   
 ```console  
 -warn:option  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="6454a-105">引數</span><span class="sxs-lookup"><span data-stu-id="6454a-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="2a372-105">引數</span><span class="sxs-lookup"><span data-stu-id="2a372-105">Arguments</span></span>  
  `option`  
- <span data-ttu-id="6454a-106">您想要針對編譯顯示的警告層級：較低的數字只會顯示高嚴重性警告；較高的數字則顯示更多的警告。</span><span class="sxs-lookup"><span data-stu-id="6454a-106">The warning level you want displayed for the compilation: Lower numbers show only high severity warnings; higher numbers show more warnings.</span></span> <span data-ttu-id="6454a-107">有效值為 0-4：</span><span class="sxs-lookup"><span data-stu-id="6454a-107">Valid values are 0-4:</span></span>  
+ <span data-ttu-id="2a372-106">您想要針對編譯顯示的警告層級：較低的數字只會顯示高嚴重性警告；較高的數字則顯示更多的警告。</span><span class="sxs-lookup"><span data-stu-id="2a372-106">The warning level you want displayed for the compilation: Lower numbers show only high severity warnings; higher numbers show more warnings.</span></span> <span data-ttu-id="2a372-107">有效值為 0-4：</span><span class="sxs-lookup"><span data-stu-id="2a372-107">Valid values are 0-4:</span></span>  
   
-|<span data-ttu-id="6454a-108">警告層級</span><span class="sxs-lookup"><span data-stu-id="6454a-108">Warning level</span></span>|<span data-ttu-id="6454a-109">意義</span><span class="sxs-lookup"><span data-stu-id="6454a-109">Meaning</span></span>|  
+|<span data-ttu-id="2a372-108">警告層級</span><span class="sxs-lookup"><span data-stu-id="2a372-108">Warning level</span></span>|<span data-ttu-id="2a372-109">意義</span><span class="sxs-lookup"><span data-stu-id="2a372-109">Meaning</span></span>|  
 |-------------------|-------------|  
-|<span data-ttu-id="6454a-110">0</span><span class="sxs-lookup"><span data-stu-id="6454a-110">0</span></span>|<span data-ttu-id="6454a-111">關閉發出所有警告訊息。</span><span class="sxs-lookup"><span data-stu-id="6454a-111">Turns off emission of all warning messages.</span></span>|  
-|<span data-ttu-id="6454a-112">1</span><span class="sxs-lookup"><span data-stu-id="6454a-112">1</span></span>|<span data-ttu-id="6454a-113">顯示嚴重警告訊息。</span><span class="sxs-lookup"><span data-stu-id="6454a-113">Displays severe warning messages.</span></span>|  
-|<span data-ttu-id="6454a-114">2</span><span class="sxs-lookup"><span data-stu-id="6454a-114">2</span></span>|<span data-ttu-id="6454a-115">顯示層級 1 警告，以及特定較不嚴重的警告，例如隱藏類別成員的警告。</span><span class="sxs-lookup"><span data-stu-id="6454a-115">Displays level 1 warnings plus certain, less-severe warnings, such as warnings about hiding class members.</span></span>|  
-|<span data-ttu-id="6454a-116">3</span><span class="sxs-lookup"><span data-stu-id="6454a-116">3</span></span>|<span data-ttu-id="6454a-117">顯示層級 2 警告，以及特定較不嚴重的警告，例如一律評估為 `true` 或 `false` 之運算式的警告。</span><span class="sxs-lookup"><span data-stu-id="6454a-117">Displays level 2 warnings plus certain, less-severe warnings, such as warnings about expressions that always evaluate to `true` or `false`.</span></span>|  
-|<span data-ttu-id="6454a-118">4 (預設值)</span><span class="sxs-lookup"><span data-stu-id="6454a-118">4 (the default)</span></span>|<span data-ttu-id="6454a-119">顯示所有層級 3 警告以及告知性警告。</span><span class="sxs-lookup"><span data-stu-id="6454a-119">Displays all level 3 warnings plus informational warnings.</span></span>|  
+|<span data-ttu-id="2a372-110">0</span><span class="sxs-lookup"><span data-stu-id="2a372-110">0</span></span>|<span data-ttu-id="2a372-111">關閉發出所有警告訊息。</span><span class="sxs-lookup"><span data-stu-id="2a372-111">Turns off emission of all warning messages.</span></span>|  
+|<span data-ttu-id="2a372-112">1</span><span class="sxs-lookup"><span data-stu-id="2a372-112">1</span></span>|<span data-ttu-id="2a372-113">顯示嚴重警告訊息。</span><span class="sxs-lookup"><span data-stu-id="2a372-113">Displays severe warning messages.</span></span>|  
+|<span data-ttu-id="2a372-114">2</span><span class="sxs-lookup"><span data-stu-id="2a372-114">2</span></span>|<span data-ttu-id="2a372-115">顯示層級 1 警告，以及特定較不嚴重的警告，例如隱藏類別成員的警告。</span><span class="sxs-lookup"><span data-stu-id="2a372-115">Displays level 1 warnings plus certain, less-severe warnings, such as warnings about hiding class members.</span></span>|  
+|<span data-ttu-id="2a372-116">3</span><span class="sxs-lookup"><span data-stu-id="2a372-116">3</span></span>|<span data-ttu-id="2a372-117">顯示層級 2 警告，以及特定較不嚴重的警告，例如一律評估為 `true` 或 `false` 之運算式的警告。</span><span class="sxs-lookup"><span data-stu-id="2a372-117">Displays level 2 warnings plus certain, less-severe warnings, such as warnings about expressions that always evaluate to `true` or `false`.</span></span>|  
+|<span data-ttu-id="2a372-118">4 (預設值)</span><span class="sxs-lookup"><span data-stu-id="2a372-118">4 (the default)</span></span>|<span data-ttu-id="2a372-119">顯示所有層級 3 警告以及告知性警告。</span><span class="sxs-lookup"><span data-stu-id="2a372-119">Displays all level 3 warnings plus informational warnings.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6454a-120">備註</span><span class="sxs-lookup"><span data-stu-id="6454a-120">Remarks</span></span>  
- <span data-ttu-id="6454a-121">若要取得錯誤或警告資訊，您可以查閱 [說明索引] 中的錯誤碼。</span><span class="sxs-lookup"><span data-stu-id="6454a-121">To get information about an error or warning, you can look up the error code in the Help Index.</span></span> <span data-ttu-id="6454a-122">如需取得錯誤或警告資訊的其他方式，請參閱 [C# 編譯器錯誤](../../../csharp/language-reference/compiler-messages/index.md)。</span><span class="sxs-lookup"><span data-stu-id="6454a-122">For other ways to get information about an error or warning, see [C# Compiler Errors](../../../csharp/language-reference/compiler-messages/index.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2a372-120">備註</span><span class="sxs-lookup"><span data-stu-id="2a372-120">Remarks</span></span>  
+ <span data-ttu-id="2a372-121">若要取得錯誤或警告資訊，您可以查閱 [說明索引] 中的錯誤碼。</span><span class="sxs-lookup"><span data-stu-id="2a372-121">To get information about an error or warning, you can look up the error code in the Help Index.</span></span> <span data-ttu-id="2a372-122">如需取得錯誤或警告資訊的其他方式，請參閱 [C# 編譯器錯誤](../../../csharp/language-reference/compiler-messages/index.md)。</span><span class="sxs-lookup"><span data-stu-id="2a372-122">For other ways to get information about an error or warning, see [C# Compiler Errors](../../../csharp/language-reference/compiler-messages/index.md).</span></span>  
   
- <span data-ttu-id="6454a-123">使用 [-warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md) 將所有警告都視為錯誤。</span><span class="sxs-lookup"><span data-stu-id="6454a-123">Use [-warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md) to treat all warnings as errors.</span></span> <span data-ttu-id="6454a-124">使用 [-nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) 停用特定警告。</span><span class="sxs-lookup"><span data-stu-id="6454a-124">Use [-nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) to disable certain warnings.</span></span>  
+ <span data-ttu-id="2a372-123">使用 [-warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md) 將所有警告都視為錯誤。</span><span class="sxs-lookup"><span data-stu-id="2a372-123">Use [-warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md) to treat all warnings as errors.</span></span> <span data-ttu-id="2a372-124">使用 [-nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) 停用特定警告。</span><span class="sxs-lookup"><span data-stu-id="2a372-124">Use [-nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) to disable certain warnings.</span></span>  
   
- <span data-ttu-id="6454a-125">**-w** 是 **-warn** 的簡短形式。</span><span class="sxs-lookup"><span data-stu-id="6454a-125">**-w** is the short form of **-warn**.</span></span>  
+ <span data-ttu-id="2a372-125">**-w** 是 **-warn** 的簡短形式。</span><span class="sxs-lookup"><span data-stu-id="2a372-125">**-w** is the short form of **-warn**.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="6454a-126">在 Visual Studio 開發環境中設定這個編譯器選項</span><span class="sxs-lookup"><span data-stu-id="6454a-126">To set this compiler option in the Visual Studio development environment</span></span>  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="2a372-126">在 Visual Studio 開發環境中設定這個編譯器選項</span><span class="sxs-lookup"><span data-stu-id="2a372-126">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  <span data-ttu-id="6454a-127">開啟專案的 [屬性] 頁面。</span><span class="sxs-lookup"><span data-stu-id="6454a-127">Open the project's **Properties** page.</span></span>  
+1.  <span data-ttu-id="2a372-127">開啟專案的 [屬性] 頁面。</span><span class="sxs-lookup"><span data-stu-id="2a372-127">Open the project's **Properties** page.</span></span>  
   
-2.  <span data-ttu-id="6454a-128">按一下 [建置] 屬性頁面。</span><span class="sxs-lookup"><span data-stu-id="6454a-128">Click the **Build** property page.</span></span>  
+2.  <span data-ttu-id="2a372-128">按一下 [建置] 屬性頁面。</span><span class="sxs-lookup"><span data-stu-id="2a372-128">Click the **Build** property page.</span></span>  
   
-3.  <span data-ttu-id="6454a-129">修改 [警告層級] 屬性。</span><span class="sxs-lookup"><span data-stu-id="6454a-129">Modify the **Warning Level** property.</span></span>  
+3.  <span data-ttu-id="2a372-129">修改 [警告層級] 屬性。</span><span class="sxs-lookup"><span data-stu-id="2a372-129">Modify the **Warning Level** property.</span></span>  
   
- <span data-ttu-id="6454a-130">如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>。</span><span class="sxs-lookup"><span data-stu-id="6454a-130">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>.</span></span>  
+ <span data-ttu-id="2a372-130">如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>。</span><span class="sxs-lookup"><span data-stu-id="2a372-130">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6454a-131">範例</span><span class="sxs-lookup"><span data-stu-id="6454a-131">Example</span></span>  
- <span data-ttu-id="6454a-132">編譯 `in.cs`，並讓編譯器只顯示層級 1 警告：</span><span class="sxs-lookup"><span data-stu-id="6454a-132">Compile `in.cs` and have the compiler only display level 1 warnings:</span></span>  
+## <a name="example"></a><span data-ttu-id="2a372-131">範例</span><span class="sxs-lookup"><span data-stu-id="2a372-131">Example</span></span>  
+ <span data-ttu-id="2a372-132">編譯 `in.cs`，並讓編譯器只顯示層級 1 警告：</span><span class="sxs-lookup"><span data-stu-id="2a372-132">Compile `in.cs` and have the compiler only display level 1 warnings:</span></span>  
   
 ```console  
 csc -warn:1 in.cs  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6454a-133">請參閱</span><span class="sxs-lookup"><span data-stu-id="6454a-133">See Also</span></span>  
- [<span data-ttu-id="6454a-134">C# 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="6454a-134">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
- [<span data-ttu-id="6454a-135">管理專案和方案屬性</span><span class="sxs-lookup"><span data-stu-id="6454a-135">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+## <a name="see-also"></a><span data-ttu-id="2a372-133">請參閱</span><span class="sxs-lookup"><span data-stu-id="2a372-133">See Also</span></span>  
+
+- [<span data-ttu-id="2a372-134">C# 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="2a372-134">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+- [<span data-ttu-id="2a372-135">管理專案和方案屬性</span><span class="sxs-lookup"><span data-stu-id="2a372-135">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

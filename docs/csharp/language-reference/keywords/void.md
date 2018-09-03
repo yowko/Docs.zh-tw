@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - void keyword [C#]
 ms.assetid: 0d2d8a95-fe20-4fbd-bf5d-c1e54bce71d4
-ms.openlocfilehash: e66efc287fc3ed0fcc15963a827fccb788c38753
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 223db893dd42181c234d9a07c1a1c00af26f0c30
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960556"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397083"
 ---
-# <a name="void-c-reference"></a><span data-ttu-id="d7a35-102">void (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="d7a35-102">void (C# Reference)</span></span>
-<span data-ttu-id="d7a35-103">當 `void` 作為方法的傳回型別時，其可指定方法不要傳回值。</span><span class="sxs-lookup"><span data-stu-id="d7a35-103">When used as the return type for a method, `void` specifies that the method doesn't return a value.</span></span>
+# <a name="void-c-reference"></a><span data-ttu-id="325ce-102">void (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="325ce-102">void (C# Reference)</span></span>
+<span data-ttu-id="325ce-103">當 `void` 作為方法的傳回型別時，其可指定方法不要傳回值。</span><span class="sxs-lookup"><span data-stu-id="325ce-103">When used as the return type for a method, `void` specifies that the method doesn't return a value.</span></span>
 
-<span data-ttu-id="d7a35-104">方法的參數清單中不允許 `void`。</span><span class="sxs-lookup"><span data-stu-id="d7a35-104">`void` isn't allowed in the parameter list of a method.</span></span> <span data-ttu-id="d7a35-105">如果某方法不採用任何參數，且不傳回任何值，其宣告方法如下所示：</span><span class="sxs-lookup"><span data-stu-id="d7a35-105">A method that takes no parameters and returns no value is declared as follows:</span></span>
+<span data-ttu-id="325ce-104">方法的參數清單中不允許 `void`。</span><span class="sxs-lookup"><span data-stu-id="325ce-104">`void` isn't allowed in the parameter list of a method.</span></span> <span data-ttu-id="325ce-105">如果某方法不採用任何參數，且不傳回任何值，其宣告方法如下所示：</span><span class="sxs-lookup"><span data-stu-id="325ce-105">A method that takes no parameters and returns no value is declared as follows:</span></span>
 
 ```csharp
 public void SampleMethod()
@@ -26,18 +26,19 @@ public void SampleMethod()
 }
 ```
 
-<span data-ttu-id="d7a35-106">`void` 也可用於不安全的內容中，以宣告未知類型的指標。</span><span class="sxs-lookup"><span data-stu-id="d7a35-106">`void` is also used in an unsafe context to declare a pointer to an unknown type.</span></span> <span data-ttu-id="d7a35-107">如需詳細資訊，請參閱[指標類型](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)。</span><span class="sxs-lookup"><span data-stu-id="d7a35-107">For more information, see [Pointer types](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md).</span></span>
+<span data-ttu-id="325ce-106">`void` 也可用於不安全的內容中，以宣告未知類型的指標。</span><span class="sxs-lookup"><span data-stu-id="325ce-106">`void` is also used in an unsafe context to declare a pointer to an unknown type.</span></span> <span data-ttu-id="325ce-107">如需詳細資訊，請參閱[指標類型](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)。</span><span class="sxs-lookup"><span data-stu-id="325ce-107">For more information, see [Pointer types](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md).</span></span>
 
-<span data-ttu-id="d7a35-108">`void` 是 .NET Framework <xref:System.Void?displayProperty=nameWithType> 類型的別名。</span><span class="sxs-lookup"><span data-stu-id="d7a35-108">`void` is an alias for the .NET Framework <xref:System.Void?displayProperty=nameWithType> type.</span></span>
+<span data-ttu-id="325ce-108">`void` 是 .NET Framework <xref:System.Void?displayProperty=nameWithType> 類型的別名。</span><span class="sxs-lookup"><span data-stu-id="325ce-108">`void` is an alias for the .NET Framework <xref:System.Void?displayProperty=nameWithType> type.</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="d7a35-109">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="d7a35-109">C# Language Specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="325ce-109">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="325ce-109">C# Language Specification</span></span>
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="d7a35-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d7a35-110">See also</span></span>
- [<span data-ttu-id="d7a35-111">C# 參考</span><span class="sxs-lookup"><span data-stu-id="d7a35-111">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="d7a35-112">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="d7a35-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="d7a35-113">C# 關鍵字</span><span class="sxs-lookup"><span data-stu-id="d7a35-113">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
- [<span data-ttu-id="d7a35-114">參考型別</span><span class="sxs-lookup"><span data-stu-id="d7a35-114">Reference Types</span></span>](../../../csharp/language-reference/keywords/reference-types.md)  
- [<span data-ttu-id="d7a35-115">實值型別</span><span class="sxs-lookup"><span data-stu-id="d7a35-115">Value Types</span></span>](../../../csharp/language-reference/keywords/value-types.md)  
- [<span data-ttu-id="d7a35-116">方法</span><span class="sxs-lookup"><span data-stu-id="d7a35-116">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)  
- [<span data-ttu-id="d7a35-117">Unsafe 程式碼和指標</span><span class="sxs-lookup"><span data-stu-id="d7a35-117">Unsafe Code and Pointers</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
+## <a name="see-also"></a><span data-ttu-id="325ce-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="325ce-110">See also</span></span>
+
+- [<span data-ttu-id="325ce-111">C# 參考</span><span class="sxs-lookup"><span data-stu-id="325ce-111">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="325ce-112">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="325ce-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="325ce-113">C# 關鍵字</span><span class="sxs-lookup"><span data-stu-id="325ce-113">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+- [<span data-ttu-id="325ce-114">參考型別</span><span class="sxs-lookup"><span data-stu-id="325ce-114">Reference Types</span></span>](../../../csharp/language-reference/keywords/reference-types.md)  
+- [<span data-ttu-id="325ce-115">實值型別</span><span class="sxs-lookup"><span data-stu-id="325ce-115">Value Types</span></span>](../../../csharp/language-reference/keywords/value-types.md)  
+- [<span data-ttu-id="325ce-116">方法</span><span class="sxs-lookup"><span data-stu-id="325ce-116">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [<span data-ttu-id="325ce-117">Unsafe 程式碼和指標</span><span class="sxs-lookup"><span data-stu-id="325ce-117">Unsafe Code and Pointers</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
