@@ -8,12 +8,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 17bbb0280c4db7d91e5d3cc3d3b6233b8db89cdc
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 3bbaea9247d975c27ed6f49dedb749312f675296
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754965"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43487061"
 ---
 # <a name="value-types-c-reference"></a>實值型別 (C# 參考)
 實值型別包含兩種主要類別：  
@@ -97,11 +97,12 @@ Point p = new Point(); // Invoke default constructor for the struct.
   
  如需格式化數值類型輸出的資訊，請參閱[格式化數值結果表](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)。  
   
-## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
- [型別](../../../csharp/language-reference/keywords/types.md)  
- [型別的參考表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
- [參考型別](../../../csharp/language-reference/keywords/reference-types.md)  
- [可為 Null 的型別](../../programming-guide/nullable-types/index.md)  
+## <a name="see-also"></a>請參閱
+
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+- [型別](../../../csharp/language-reference/keywords/types.md)  
+- [型別的參考表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
+- [參考型別](../../../csharp/language-reference/keywords/reference-types.md)  
+- [可為 Null 的型別](../../programming-guide/nullable-types/index.md)  
