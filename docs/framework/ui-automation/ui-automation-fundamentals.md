@@ -9,30 +9,30 @@ ms.assetid: d270ab45-542b-45c0-a240-e80aa4a61b95
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 04a0cab64e8e2a7df1cfb256e8e86fe20659ff60
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 82c123e50e58c162a8cc6758bcb446e3484d9bb8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400766"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486931"
 ---
-# <a name="ui-automation-fundamentals"></a><span data-ttu-id="def28-102">UI 自動化基礎觀念</span><span class="sxs-lookup"><span data-stu-id="def28-102">UI Automation Fundamentals</span></span>
+# <a name="ui-automation-fundamentals"></a><span data-ttu-id="6b7a5-102">UI 自動化基礎觀念</span><span class="sxs-lookup"><span data-stu-id="6b7a5-102">UI Automation Fundamentals</span></span>
 > [!NOTE]
->  <span data-ttu-id="def28-103">這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。</span><span class="sxs-lookup"><span data-stu-id="def28-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="def28-104">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="def28-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
+>  <span data-ttu-id="6b7a5-103">這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。</span><span class="sxs-lookup"><span data-stu-id="6b7a5-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="6b7a5-104">如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱 < [Windows Automation API： 使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="6b7a5-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- <span data-ttu-id="def28-105">此章節包含的高階概觀[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="def28-105">This section contains high-level overviews of the [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)].</span></span>  
+ <span data-ttu-id="6b7a5-105">此章節包含的高階概觀[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="6b7a5-105">This section contains high-level overviews of the [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="def28-106">本節內容</span><span class="sxs-lookup"><span data-stu-id="def28-106">In This Section</span></span>  
- [<span data-ttu-id="def28-107">UI 自動化概觀</span><span class="sxs-lookup"><span data-stu-id="def28-107">UI Automation Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-overview.md)  
- [<span data-ttu-id="def28-108">UI 自動化和 Microsoft Active Accessibility</span><span class="sxs-lookup"><span data-stu-id="def28-108">UI Automation and Microsoft Active Accessibility</span></span>](../../../docs/framework/ui-automation/ui-automation-and-microsoft-active-accessibility.md)  
- [<span data-ttu-id="def28-109">UI 自動化樹狀目錄概觀</span><span class="sxs-lookup"><span data-stu-id="def28-109">UI Automation Tree Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [<span data-ttu-id="def28-110">UI 自動化控制項模式概觀</span><span class="sxs-lookup"><span data-stu-id="def28-110">UI Automation Control Patterns Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
- [<span data-ttu-id="def28-111">UI 自動化屬性概觀</span><span class="sxs-lookup"><span data-stu-id="def28-111">UI Automation Properties Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)  
- [<span data-ttu-id="def28-112">UI 自動化事件概觀</span><span class="sxs-lookup"><span data-stu-id="def28-112">UI Automation Events Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-events-overview.md)  
- [<span data-ttu-id="def28-113">UI 自動化安全性概觀</span><span class="sxs-lookup"><span data-stu-id="def28-113">UI Automation Security Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-security-overview.md)  
- [<span data-ttu-id="def28-114">使用 UI 自動化進行自動化測試</span><span class="sxs-lookup"><span data-stu-id="def28-114">Using UI Automation for Automated Testing</span></span>](../../../docs/framework/ui-automation/using-ui-automation-for-automated-testing.md)  
+## <a name="in-this-section"></a><span data-ttu-id="6b7a5-106">本節內容</span><span class="sxs-lookup"><span data-stu-id="6b7a5-106">In This Section</span></span>  
+ [<span data-ttu-id="6b7a5-107">UI 自動化概觀</span><span class="sxs-lookup"><span data-stu-id="6b7a5-107">UI Automation Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-overview.md)  
+ [<span data-ttu-id="6b7a5-108">UI 自動化和 Microsoft Active Accessibility</span><span class="sxs-lookup"><span data-stu-id="6b7a5-108">UI Automation and Microsoft Active Accessibility</span></span>](../../../docs/framework/ui-automation/ui-automation-and-microsoft-active-accessibility.md)  
+ [<span data-ttu-id="6b7a5-109">UI 自動化樹狀目錄概觀</span><span class="sxs-lookup"><span data-stu-id="6b7a5-109">UI Automation Tree Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
+ [<span data-ttu-id="6b7a5-110">UI 自動化控制項模式概觀</span><span class="sxs-lookup"><span data-stu-id="6b7a5-110">UI Automation Control Patterns Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [<span data-ttu-id="6b7a5-111">UI 自動化屬性概觀</span><span class="sxs-lookup"><span data-stu-id="6b7a5-111">UI Automation Properties Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)  
+ [<span data-ttu-id="6b7a5-112">UI 自動化事件概觀</span><span class="sxs-lookup"><span data-stu-id="6b7a5-112">UI Automation Events Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-events-overview.md)  
+ [<span data-ttu-id="6b7a5-113">UI 自動化安全性概觀</span><span class="sxs-lookup"><span data-stu-id="6b7a5-113">UI Automation Security Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-security-overview.md)  
+ [<span data-ttu-id="6b7a5-114">使用 UI 自動化進行自動化測試</span><span class="sxs-lookup"><span data-stu-id="6b7a5-114">Using UI Automation for Automated Testing</span></span>](../../../docs/framework/ui-automation/using-ui-automation-for-automated-testing.md)  
   
-## <a name="reference"></a><span data-ttu-id="def28-115">參考資料</span><span class="sxs-lookup"><span data-stu-id="def28-115">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="6b7a5-115">參考資料</span><span class="sxs-lookup"><span data-stu-id="6b7a5-115">Reference</span></span>  
  <xref:System.Windows.Automation>  
   
  <xref:System.Windows.Automation.Provider>  
