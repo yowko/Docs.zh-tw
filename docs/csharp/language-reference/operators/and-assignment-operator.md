@@ -8,11 +8,11 @@ helpviewer_keywords:
 - '&= operator [C#]'
 ms.assetid: e8d58f3f-72dd-4b5a-b995-452fcce7e6bb
 ms.openlocfilehash: f3a6fe20ca89a90b5a64118d73fb39e9a364d1e9
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933948"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406731"
 ---
 # <a name="amp-operator-c-reference"></a>&amp;= 運算子 (C# 參考)
 AND 指派運算子。  

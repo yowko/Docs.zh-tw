@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e70324192f56214d273ae2a819a9c08be7d49b1e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ae36736ac7174ff7f77ae5bba45e1fd3880169c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409209"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43406021"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (PEVerify 工具)
 PEVerify 工具可以協助像是編譯器撰寫者、指令碼引擎開發人員等產生 Microsoft Intermediate Language (MSIL) 的開發人員，判斷其 MSIL 程式碼和相關聯的中繼資料是否符合類型安全需求。 只有在避免使用某些語言建構時，某些編譯器才會產生可驗證的類型安全程式碼。 如果您是使用這類編譯器的開發人員，可能會想要驗證您並未損及程式碼的類型安全。 在這種情況下，您可以在檔案上執行 PEVerify 工具來檢查 MSIL 和中繼資料。  
@@ -57,7 +57,7 @@ peverify filename [options]
 |**/?**|顯示工具的命令語法和選項。|  
   
 ## <a name="remarks"></a>備註  
- 通用語言執行平台透過以類型安全的方式執行應用程式程式碼，協助強制執行安全性和隔離機制。 正常情況下，不是[可驗證型別安全](http://msdn.microsoft.com/library/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc)的程式碼無法執行，但是您可以設定安全性原則，讓受信任但無法驗證的程式碼執行。  
+ 通用語言執行平台透過以類型安全的方式執行應用程式程式碼，協助強制執行安全性和隔離機制。 正常情況下，不是[可驗證型別安全](https://msdn.microsoft.com/library/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc)的程式碼無法執行，但是您可以設定安全性原則，讓受信任但無法驗證的程式碼執行。  
   
  如果 **/md** 和 **/il** 兩個選項都未指定，則 Peverify.exe 會執行這兩種檢查。 Peverify.exe 會先執行 **/md** 檢查。 如果沒有任何錯誤，則會執行 **/il** 檢查。 如果您同時指定 **/md** 和 **/il**，則即使中繼資料有錯誤，還是會執行 **/il** 檢查。 因此，如果中繼資料沒有錯誤，**peverify** *filename* 就相當於 **peverify** *filename* **/md** **/il**。  
   
@@ -122,6 +122,6 @@ peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp
   
 ## <a name="see-also"></a>請參閱  
  [工具](../../../docs/framework/tools/index.md)  
- [NIB：撰寫可驗證的型別安全程式碼](http://msdn.microsoft.com/library/d18f10ef-3b48-4f47-8726-96714021547b)  
- [型別安全和安全性](http://msdn.microsoft.com/library/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc)  
+ [NIB：撰寫可驗證的型別安全程式碼](https://msdn.microsoft.com/library/d18f10ef-3b48-4f47-8726-96714021547b)  
+ [型別安全和安全性](https://msdn.microsoft.com/library/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc)  
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

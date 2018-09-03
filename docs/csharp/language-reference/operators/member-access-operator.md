@@ -8,12 +8,12 @@ helpviewer_keywords:
 - . operator [C#]
 - dot operator (.) [C#]
 ms.assetid: a1f54b52-b686-4ae5-a48e-a2a9ebd0eb7b
-ms.openlocfilehash: 088f1991cafa92a69e11ca14bd2d983b36c0e3ca
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: a092c1a916e3dc4bf6d96660c532540945e57554
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244695"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43408003"
 ---
 # <a name="-operator-c-reference"></a>。 運算子 (C# 參考)
 點運算子 (`.`) 是用於成員存取。 點運算子可指定型別或命名空間的成員。 例如，點運算子可用來存取 .NET Framework 類別庫中的特定方法：  
@@ -45,7 +45,8 @@ ms.locfileid: "39244695"
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [C# 運算子](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 運算子](../../../csharp/language-reference/operators/index.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - struct keyword [C#]
 - structs [C#], struct keyword
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: ddea59e76835ccccd07c299f819796336cddada8
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 7931da2e5f5c493b54eb1f33a1d6f57b38592f6e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172145"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399014"
 ---
 # <a name="struct-c-reference"></a>struct (C# 參考)
 `struct` 類型是實值類型，通常可用來封裝一小組相關變數，例如矩形的座標，或詳細目錄中某個項目的特性。 下列範例示範簡單結構宣告：  
@@ -41,14 +41,15 @@ public struct Book
 ## <a name="c-language-specification"></a>C# 語言規格  
  如需範例，請參閱[使用結構](../../../csharp/programming-guide/classes-and-structs/using-structs.md)。  
   
-## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
- [預設值表](../../../csharp/language-reference/keywords/default-values-table.md)  
- [內建型別表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
- [型別](../../../csharp/language-reference/keywords/types.md)  
- [實值型別](../../../csharp/language-reference/keywords/value-types.md)  
- [class](../../../csharp/language-reference/keywords/class.md)  
- [interface](../../../csharp/language-reference/keywords/interface.md)  
- [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+- [預設值表](../../../csharp/language-reference/keywords/default-values-table.md)  
+- [內建型別表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [型別](../../../csharp/language-reference/keywords/types.md)  
+- [實值型別](../../../csharp/language-reference/keywords/value-types.md)  
+- [class](../../../csharp/language-reference/keywords/class.md)  
+- [interface](../../../csharp/language-reference/keywords/interface.md)  
+- [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)

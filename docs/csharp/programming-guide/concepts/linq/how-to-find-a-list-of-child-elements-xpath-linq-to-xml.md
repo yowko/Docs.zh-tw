@@ -3,11 +3,11 @@ title: 如何：尋找子項目清單 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c589dd8-f680-4cdb-9d6a-78d57e2555e8
 ms.openlocfilehash: 742b0843e3287bd8de6c7b1f5d3706d66e5d344f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340043"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418262"
 ---
 # <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-c"></a>如何：尋找子項目清單 (XPath-LINQ to XML) (C#)
 這個主題會比較 XPath 子項目座標軸與 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> 座標軸。  

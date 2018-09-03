@@ -2,12 +2,12 @@
 title: 建立 GamePieceCollection 類別
 ms.date: 03/30/2017
 ms.assetid: e4b037ee-1201-4a55-b198-0d6532ed6f35
-ms.openlocfilehash: 6473f7afce1422ee31d4f1872f8310bdeeb9a3b6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6323122735273f77bfe9d61bf2df84cabe3e5d6c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742136"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43395837"
 ---
 # <a name="creating-the-gamepiececollection-class"></a>建立 GamePieceCollection 類別
 **GamePieceCollection** 類別衍生自泛型清單類別，並引入可更輕鬆管理多個 **GamePiece** 物件的方法。  
@@ -17,7 +17,7 @@ ms.locfileid: "32742136"
   
  [!code-csharp[ManipulationXNA#_GamePieceCollection_PrivateMembersAndConstructor](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiececollection.cs#_gamepiececollection_privatemembersandconstructor)]  
   
- **ProcessInertia** 和 **Draw** 方法簡化了遊戲 [Game.Update](http://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) 和 [Game.Draw](http://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx) 方法中必要的程式碼，因為會列舉集合中的所有遊戲片段，並在每個 **GamePiece** 物件上呼叫個別的方法。  
+ **ProcessInertia** 和 **Draw** 方法簡化了遊戲 [Game.Update](https://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) 和 [Game.Draw](https://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx) 方法中必要的程式碼，因為會列舉集合中的所有遊戲片段，並在每個 **GamePiece** 物件上呼叫個別的方法。  
   
  [!code-csharp[ManipulationXNA#_GamePieceCollection_ProcessInertiaAndDraw](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiececollection.cs#_gamepiececollection_processinertiaanddraw)]  
   

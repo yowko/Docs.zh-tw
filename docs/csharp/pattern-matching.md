@@ -3,12 +3,12 @@ title: 模式比對 - C# 手冊
 description: 了解 C# 中的模式比對運算式
 ms.date: 01/24/2017
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 635ab45c89a38f3dedac2d60ea1e31ebf394c9b2
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.openlocfilehash: fa327dafe3f924d22b5f0d459eb0b6c7ba60a684
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35231472"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43255337"
 ---
 # <a name="pattern-matching"></a>模式比對 #
 
@@ -21,7 +21,7 @@ ms.locfileid: "35231472"
 這些技術不是用來處理非以類別階層結構化的資料。 當資料和方法分開時，您需要其他工具。 新的「模式比對」建構能用更簡潔的語法來檢視資料，並根據該資料的任何條件來管理控制流程。 您已經撰寫測試變數值的 `if` 陳述式和 `switch`。 您撰寫了測試變數類型的 `is` 陳述式。 「模式比對」將新功能加 入這些陳述式。
 
 在本主題中，您會建置一種方法，計算不同幾何圖形的面積。 但是，您在執行作業時不必訴諸物件導向技術，也不用建置不同圖形的類別階層。
-您要改用「模式比對」。 為進一步強調我們不使用繼承，您需要將每個圖形變成 `struct` 而非類別。 請注意，不同的 `struct` 型別不能指定一般使用者定義的基底型別，因此繼承不是可行的設計。
+您要改用「模式比對」。
 當您瀏覽此範例時，請將此程式碼與它如何結構化為物件階層進行對比。 當您必須查詢及操作的資料不是類別階層時，模式比對可使用非常簡潔的設計。
 
 不是從抽象圖形定義與加入不同的特定圖形類別開始，讓我們改從只定義每個幾何圖形的簡單資料開始︰

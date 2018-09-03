@@ -5,12 +5,12 @@ ms.author: ronpet
 author: rpetrusha
 ms.date: 11/22/2016
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
-ms.openlocfilehash: e37f0e72ee02915d16509fb2ff48bd114e8ad466
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2469e8a0fbf8181a720201637ab5ac5ef02055d4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217970"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400861"
 ---
 # <a name="lambda-expressions"></a>Lambda 運算式 #
 
@@ -78,7 +78,7 @@ Lambda 運算式使用 [Lambda 宣告運算子](language-reference/operators/lam
 
 ## <a name="lambda-expressions-and-tuples"></a>Lambda 運算式和元組 ##
 
-從 C# 7.0 開始，C# 語言提供元組的內建支援。 您可以將元組當做引數提供給 Lambda 運算式，而您的 Lambda 運算式也可以傳回元組。 在某些情況下，C# 編譯器會使用型別推斷來判斷元組元件的類型。 
+從 C# 7.0 開始，C# 語言提供元組的內建支援。 您可以將元組當做引數提供給 Lambda 運算式，而您的 Lambda 運算式也可以傳回元組。 在某些情況下，C# 編譯器會使用型別推斷來判斷元組元件的類型。
 
 若要定義元組，請以括號括住其元件的逗號分隔清單。 下列範例使用具有 5 個元件的元組將一連串數字傳遞至 Lambda 運算式，這會使每個值加倍，並傳回內含乘法運算結果之具有 5 個元件的元組。
 
@@ -154,6 +154,6 @@ Lambda 可以參考「外部變數」(請參閱[匿名方法](programming-guide/
 
 ## <a name="see-also"></a>另請參閱 ##
 
-[LINQ (Language-Integrated Query)](../standard/using-linq.md)   
-[匿名方法](programming-guide/statements-expressions-operators/anonymous-methods.md)   
-[運算式樹狀架構](expression-trees.md)
+- [LINQ (Language-Integrated Query)](../standard/using-linq.md)
+- [匿名方法](programming-guide/statements-expressions-operators/anonymous-methods.md)
+- [運算式樹狀架構](expression-trees.md)

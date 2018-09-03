@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /nowarn compiler option [C#]
 - -nowarn compiler option [C#]
 ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
-ms.openlocfilehash: 1c5e8bc7ad065c4662cd489930b2226e8a4b8962
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 76bb008c40d84ed6048b8f960f050048319273b9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215481"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43421924"
 ---
 # <a name="-nowarn-c-compiler-options"></a>-nowarn (C# 編譯器選項)
 **-nowarn** 選項可讓您隱藏編譯器不顯示一或多個警告。 請以逗點分隔多個警告編號。  
@@ -52,6 +52,7 @@ ms.locfileid: "33215481"
  如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>。  
   
 ## <a name="see-also"></a>請參閱  
- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
- [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)  
- [C# 編譯器錯誤](../../../csharp/language-reference/compiler-messages/index.md)
+
+- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
+- [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)  
+- [C# 編譯器錯誤](../../../csharp/language-reference/compiler-messages/index.md)

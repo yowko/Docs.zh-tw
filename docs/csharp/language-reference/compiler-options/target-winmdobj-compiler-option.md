@@ -2,12 +2,12 @@
 title: -target:winmdobj (C# 編譯器選項)
 ms.date: 07/20/2015
 ms.assetid: 1819a045-659d-498a-9457-c466e902986f
-ms.openlocfilehash: b0b1ec0bed174484e9ed7b9ecddbe82b0c705325
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 38d0dedbca56475d4f2561c99e8b29e01e9d7a90
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218654"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43473927"
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a>-target:winmdobj (C# 編譯器選項)
 如果您使用 **-target:winmdobj** 編譯器選項，編譯器會建立一個可轉換成 Windows 執行階段二進位檔案 (.winmd) 的中繼 .winmdobj 檔案。 除了 Managed 語言程式之外，JavaScript 和 C++ 程式也可以使用 .winmd 檔案。  
@@ -47,5 +47,6 @@ csc -target:winmdobj filename.cs
 ```  
   
 ## <a name="see-also"></a>請參閱  
- [-target (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
+
+- [-target (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)

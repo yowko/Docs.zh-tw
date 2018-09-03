@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 設計微服�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 6cbe4512c8ed89540599d1257046bd080b464165
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 4adf7e759d4475d0bb9b3aa0abe8dbdc5e57edd3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105955"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470112"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>設計微服務導向應用程式
 
@@ -63,7 +63,7 @@ ms.locfileid: "37105955"
 
 ### <a name="eshoponcontainers-a-reference-application-for-net-core-and-microservices-deployed-using-containers"></a>eShopOnContainers：.NET Core 及使用容器部署之微服務的參考應用程式
 
-您可以專注於架構和技術，相對於考慮使用您可能不知道的假設公司領域，我們選取了已知的公司領域，也就是呈現產品目錄、從客戶取得訂單、確認庫存及執行其他商務功能的簡化電子商務 (電子商店) 應用程式。 此容器應用程式原始程式碼位於 [eShopOnContainers](http://aka.ms/MicroservicesArchitecture) GitHub 存放庫中。
+您可以專注於架構和技術，相對於考慮使用您可能不知道的假設公司領域，我們選取了已知的公司領域，也就是呈現產品目錄、從客戶取得訂單、確認庫存及執行其他商務功能的簡化電子商務 (電子商店) 應用程式。 此容器應用程式原始程式碼位於 [eShopOnContainers](https://aka.ms/MicroservicesArchitecture) GitHub 存放庫中。
 
 此應用程式包含多個子系統，包括數個存放區 UI 前端 (Web 應用程式和原生行動應用程式)，以及用來執行所有必要伺服器端作業的後端微服務和容器。 圖 8-1 顯示參考應用程式的架構。
 
@@ -171,7 +171,7 @@ ms.locfileid: "37105955"
 
 -   [領域導向設計 N 分層](https://blogs.msdn.microsoft.com/cesardelatorre/2011/07/03/published-first-alpha-version-of-domain-oriented-n-layered-architecture-v2-0/).
 
--   [乾淨架構](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) (可搭配 [eShopOnWeb](http://aka.ms/WebAppArchitecture) 使用)
+-   [乾淨架構](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) (可搭配 [eShopOnWeb](https://aka.ms/WebAppArchitecture) 使用)
 
 -   [命令與查詢職責分離](https://martinfowler.com/bliki/CQRS.html) (CQRS)。
 

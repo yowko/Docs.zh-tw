@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
 author: ghogen
 manager: douge
-ms.openlocfilehash: faece1d7ee752e4c17f39027ff8a97fc95ed451b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 77f41e696fed3d33282b6437e99129fda9e209e9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514356"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43472016"
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>如何：加入 Installer 至服務應用程式
 Visual Studio 隨附安裝元件，可安裝與您服務應用程式相關聯的資源。 安裝元件會在其安裝所在的系統上註冊個別服務，並讓服務控制管理員知道服務的存在。 當您使用服務應用程式時，可以選取 [屬性] 視窗中的連結，以便自動將適當的安裝程式加入您的專案。  
@@ -30,7 +30,7 @@ Visual Studio 隨附安裝元件，可安裝與您服務應用程式相關聯的
  您不需要在安裝程式內進行任何特殊編碼，即可正確安裝您的服務。 不過，如果您需要將特殊功能加入至安裝程序，偶爾可能需要修改安裝程式的內容。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 ### <a name="to-add-installers-to-your-service-application"></a>將安裝程式加入服務應用程式  
   

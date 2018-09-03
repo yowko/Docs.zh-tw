@@ -6,11 +6,11 @@ helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
 ms.openlocfilehash: 600a18cc4dc9d3eda5577336f209c5814a7edb88
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933120"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417871"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>使用可為 Null 的型別 (C# 程式設計指南)
 

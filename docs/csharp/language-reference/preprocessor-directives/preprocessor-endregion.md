@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#endregion directive [C#]'
 ms.assetid: 16099660-91b2-49e5-9646-77f9ef069526
-ms.openlocfilehash: aa015b818a57480d4c243ea9834465a18f453cf6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ac711740a3d20d83787882b5ff38954bed2ac14
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268192"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43384434"
 ---
 # <a name="endregion-c-reference"></a>#endregion (C# 參考)
 `#endregion` 會標示 [#region](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md) 區塊的結尾。 例如:   
@@ -27,7 +27,8 @@ class MyClass
 #endregion  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [C# 前置處理器指示詞](../../../csharp/language-reference/preprocessor-directives/index.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 前置處理器指示詞](../../../csharp/language-reference/preprocessor-directives/index.md)

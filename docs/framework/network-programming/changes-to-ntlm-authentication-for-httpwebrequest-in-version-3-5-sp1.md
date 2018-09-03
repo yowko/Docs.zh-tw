@@ -5,12 +5,12 @@ ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f5affc15607ddae76ec90a90928cb42fa0ad49e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 619aa1f34b91c1a883f9c76351302880ff453c13
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397906"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400164"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>3.5 SP1 版中 HttpWebRequest 之 NTLM 驗證的變更
 已在 .NET Framework 版本 3.5 SP1 和更新版本中進行安全性變更，這些變更會影響 <xref:System.Net.HttpWebRequest>、<xref:System.Net.HttpListener>、<xref:System.Net.Security.NegotiateStream> 以及 System.Net 命名空間中的相關類別處理整合式 Windows 驗證的方式。 這些變更可能會影響使用這些類別提出 Web 要求並接收回應的應用程式，而且其中使用根據 NTLM 的整合式 Windows 驗證。 這項變更可能會影響設定成使用整合式 Windows 驗證的網頁伺服器和用戶端應用程式。  
@@ -51,7 +51,7 @@ ms.locfileid: "33397906"
   
  7. 結束登錄編輯程式，然後重新啟動 IISAdmin 服務並執行 IISReset。  
   
- 較不安全的因應措施是停用迴圈檢查，如 [http://support.microsoft.com/kb/896861](http://go.microsoft.com/fwlink/?LinkID=179657) 中所述。 這會停用反映攻擊的保護。 因此，最好只將這組替代名稱限制為預期電腦實際使用的替代名稱。  
+ 較不安全的因應措施是停用迴圈檢查，如 [http://support.microsoft.com/kb/896861](https://go.microsoft.com/fwlink/?LinkID=179657) 中所述。 這會停用反映攻擊的保護。 因此，最好只將這組替代名稱限制為預期電腦實際使用的替代名稱。  
   
 ## <a name="see-also"></a>請參閱  
  <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>  

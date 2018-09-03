@@ -2,12 +2,12 @@
 title: 啟動多項非同步工作並在它們完成時進行處理 (C#)
 ms.date: 07/20/2015
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: 29dc629abae13bb7ba3a9b0cb87300e6d1cbe2d9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d59b65e456c528c63c79c97f6c75c328066be631
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333719"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43416394"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>啟動多項非同步工作並在它們完成時進行處理 (C#)
 使用 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>，即可同時啟動多個工作，並在完成時逐一進行處理，而不是依啟動順序進行處理。  
@@ -37,7 +37,7 @@ ms.locfileid: "33333719"
  如果您不想要下載專案，則可以檢閱本主題結尾的 MainWindow.xaml.cs 檔案。  
   
 ## <a name="building-the-example"></a>建置範例  
- 這個範例會新增至在[當其中一項工作完成時，取消剩餘的非同步工作 (C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)[當其中一項工作完成時，取消剩餘的非同步工作](http://msdn.microsoft.com/library/8e800b58-235a-44b7-a02c-fa4375591d76)中開發的程式碼，並使用相同的 UI。  
+ 這個範例會新增至在[當其中一項工作完成時，取消剩餘的非同步工作 (C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)[當其中一項工作完成時，取消剩餘的非同步工作](https://msdn.microsoft.com/library/8e800b58-235a-44b7-a02c-fa4375591d76)中開發的程式碼，並使用相同的 UI。  
   
  若要自行逐步建置範例，請遵循＜下載範例＞一節中的指示，但選擇 [CancelAfterOneTask] 作為 [啟始專案]。 將本主題中的變更新增至該專案中的 `AccessTheWebAsync` 方法。 變更會標上星號。  
   

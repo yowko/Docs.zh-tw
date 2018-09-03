@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - using keyword [C#]
 ms.assetid: 124e1a63-2a4b-4132-b269-3b6d8d3ef72d
-ms.openlocfilehash: 46b3f6b95e3b80ab324267704ead1f0187a56385
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d96301e083b5c5340bea8b04943ca90c90e71ac
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266564"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43471896"
 ---
 # <a name="using-c-reference"></a>using (C# 參考)
 `using` 關鍵字有兩個主要用途：  
@@ -23,10 +23,11 @@ ms.locfileid: "33266564"
   
 此外，[using static](using-static.md) 指示詞可讓您定義一種類型，讓您不需要指定類型名稱，即可存取其靜態成員。
 
-## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
- [命名空間關鍵字](../../../csharp/language-reference/keywords/namespace-keywords.md)  
- [命名空間](../../../csharp/programming-guide/namespaces/index.md)  
- [extern](../../../csharp/language-reference/keywords/extern.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+- [命名空間關鍵字](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+- [命名空間](../../../csharp/programming-guide/namespaces/index.md)  
+- [extern](../../../csharp/language-reference/keywords/extern.md)

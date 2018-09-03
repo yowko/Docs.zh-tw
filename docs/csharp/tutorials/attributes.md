@@ -5,11 +5,11 @@ author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
 ms.openlocfilehash: db6db50ac59e804225bdc11c435fef3d53fa685e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352691"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390515"
 ---
 # <a name="using-attributes-in-c"></a>在 C# 中使用屬性 #
 

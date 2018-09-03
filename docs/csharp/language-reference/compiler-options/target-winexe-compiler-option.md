@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -target compiler options [C#], /target:winexe
 - target compiler options [C#], /target:winexe
 ms.assetid: b5a0619c-8caa-46a5-a743-1cf68408ad7a
-ms.openlocfilehash: 9243f3b83f3a3d5f0a7f61c1c23b2dddbcc41f62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f77137e3cc2f734435d3b1d391a303fcd3e16332
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216619"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468835"
 ---
 # <a name="-targetwinexe-c-compiler-options"></a>-target:winexe (C# 編譯器選項)
 **-target:winexe** 選項可讓編譯器建立可執行檔 (EXE)，其為一個 Windows 程式。  
@@ -53,5 +53,6 @@ csc -target:winexe in.cs
 ```  
   
 ## <a name="see-also"></a>請參閱  
- [-target (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
+
+- [-target (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)

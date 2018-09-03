@@ -4,12 +4,12 @@ description: HttpClientFactory 是意向明確的處理站，自 .NET Core 2.1 �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 89382f266eacc97b5e1ee5416c92dbd662427cd1
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 6fd30a9358ca9c07b2a6e2ec591e4c5d7db54ccb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37878618"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43395536"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>使用 HttpClientFactory 實作復原 HTTP 要求
 
@@ -78,7 +78,7 @@ services.AddHttpClient<IOrderingService, OrderingService>();
 集區中的 HttpMessageHandler 物件有存留期，也就是集區中該 HttpMessageHandler 執行個體可重複使用的時間長度。 預設值為 2 分鐘，但是可針對各個具名用戶端或具型別用戶端分別覆寫。 若要覆寫該值，請在建立用戶端時傳回的 IHttpClientBuilder 上呼叫 SetHandlerLifetime()，如下列程式碼所示。
 
 ```csharp
-//Set 5 min as the lifetime for the HttpMessageHandler objects in the pool used for the Basket Typed Client 
+//Set 5 min as the lifetime for the HttpMessageHandler objects in the pool used for the Catalog Typed Client 
 services.AddHttpClient<ICatalogService, CatalogService>()
                  .SetHandlerLifetime(TimeSpan.FromMinutes(5));  
 ```
@@ -87,7 +87,7 @@ services.AddHttpClient<ICatalogService, CatalogService>()
 
 ### <a name="implement-your-typed-client-classes-that-use-the-injected-and-configured-httpclient"></a>實作使用已插入和已設定之 HttpClient 的具型別用戶端類別
 
-在上一個步驟中，您必須先定義具型別用戶端類別，例如範例程式碼中的類別，像是 'BasketService'、'CatalogService'、'OrderingService' 等等，具型別用戶端是接受 `HttpClient` 物件 (透過建構函式插入) 並使用該物件來呼叫某些遠端 HTTP 服務的類別。 例如：
+在上一個步驟中，您必須先定義具型別用戶端類別，例如範例程式碼中的類別，像是 'BasketService'、'CatalogService'、'OrderingService' 等等，具型別用戶端是接受 `HttpClient` 物件 (透過建構函式插入) 並使用該物件來呼叫某些遠端 HTTP 服務的類別。 例如: 
 
 ```csharp
 public class CatalogService : ICatalogService

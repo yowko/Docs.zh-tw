@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 84bd96f27e8276546bef0dd9994163ccd843ac20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8c27bdb75ef9950d0b2b32f742b38e141cf4981b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393305"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43472042"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>如何：取得 .NET Framework 4.5 安裝程式的進度
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 是可轉散發套件的執行階段。 如果您為這個 .NET Framework 版本開發應用程式，可以在應用程式安裝程式中包含 (鏈結) [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安裝程式做為必要條件。 若要呈現自訂或整合的安裝體驗，您可能要以無訊息模式啟動 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安裝程式並追蹤其進度，同時顯示應用程式的安裝進度。 若要啟用無訊息追蹤，[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安裝程式 (可監控) 會使用記憶體對應 I/O (MMIO) 區段定義通訊協定，以便與您的安裝程式 (監控程式或 Chainer) 進行通訊。 此通訊協定會定義一種方式讓 Chainer 取得進度資訊、取得詳細結果、回應訊息，以及取消 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安裝程式。  
@@ -55,13 +55,13 @@ ms.locfileid: "33393305"
 > [!WARNING]
 >  您必須以系統管理員身分執行此範例。  
   
- 您可以從 MSDN 範例庫下載適用於 [.NET Framework 4.5 Chainer 範例](http://go.microsoft.com/fwlink/?LinkId=231345)的完整 Visual Studio 方案。  
+ 您可以從 MSDN 範例庫下載適用於 [.NET Framework 4.5 Chainer 範例](https://go.microsoft.com/fwlink/?LinkId=231345)的完整 Visual Studio 方案。  
   
  以下各節會說明此範例中的重要檔案：MMIOChainer.h、ChainingdotNet4.cpp 和 IProgressObserver.h。  
   
 #### <a name="mmiochainerh"></a>MMIOChainer.h  
   
--   MMIOChainer.h 檔案 (請參閱[完整程式碼](http://go.microsoft.com/fwlink/?LinkId=231369)) 包含資料結構定義和基底類別 (Chainer 類別會從其中衍生)。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 會擴充 MMIO 資料結構，處理 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安裝程式需要的資料。 MMIO 結構的變更與舊版相容，因此 .NET Framework 4 Chainer 不需要重新編譯，即可使用 .NET Framework 4.5 安裝程式。 不過，本案例不支援減少系統重新啟動的功能。  
+-   MMIOChainer.h 檔案 (請參閱[完整程式碼](https://go.microsoft.com/fwlink/?LinkId=231369)) 包含資料結構定義和基底類別 (Chainer 類別會從其中衍生)。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 會擴充 MMIO 資料結構，處理 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安裝程式需要的資料。 MMIO 結構的變更與舊版相容，因此 .NET Framework 4 Chainer 不需要重新編譯，即可使用 .NET Framework 4.5 安裝程式。 不過，本案例不支援減少系統重新啟動的功能。  
   
      版本欄位會提供識別結構和訊息格式修訂的方法。  .NET Framework 安裝程式會呼叫 `VirtualQuery` 函式來判斷檔案對應的大小，以判斷 Chainer 介面的版本。  如果大小足以容納版本欄位，.NET Framework 安裝程式就會使用指定的值。 如果檔案對應太小無法包含版本欄位，也就是 .NET Framework 4 的情況，則安裝程序會假設版本 0 (4)。 如果 Chainer 不支援 .NET Framework 安裝程式想要傳送的訊息版本，.NET Framework 安裝程式會假設忽略回應。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "33393305"
   
 #### <a name="iprogressobserverh"></a>IProgressObserver.h  
   
--   IProgressObserver.h 檔案會實作進度觀察器 ([請參閱完整程式碼](http://go.microsoft.com/fwlink/?LinkId=231370))。 這個觀察器會收到下載和安裝進度通知 (指定為不帶正負號的 `char`，即 0-255，指出完成度 1%-100%)。 當 Chainee 傳送訊息時也會通知觀察器，而觀察器應該傳送回應。  
+-   IProgressObserver.h 檔案會實作進度觀察器 ([請參閱完整程式碼](https://go.microsoft.com/fwlink/?LinkId=231370))。 這個觀察器會收到下載和安裝進度通知 (指定為不帶正負號的 `char`，即 0-255，指出完成度 1%-100%)。 當 Chainee 傳送訊息時也會通知觀察器，而觀察器應該傳送回應。  
   
     ```cpp  
         class IProgressObserver  
@@ -112,7 +112,7 @@ ms.locfileid: "33393305"
   
 #### <a name="chainingdotnet45cpp"></a>ChainingdotNet4.5.cpp  
   
--   衍生自 `MmioChainer` 類別的 [ChainingdotNet4.5.cpp](http://go.microsoft.com/fwlink/?LinkId=231368) 檔案會實作 `Server` 類別，並覆寫適當的方法以顯示進度資訊。 MmioChainer 會以指定的區段名稱建立區段，並以指定的事件名稱初始化 Chainer。 事件名稱會儲存在對應的資料結構中。 您應該使用唯一的區段和事件名稱。 下列程式碼中的 `Server` 類別會啟動指定的安裝程式、監視其進度，並傳回結束代碼。  
+-   衍生自 `MmioChainer` 類別的 [ChainingdotNet4.5.cpp](https://go.microsoft.com/fwlink/?LinkId=231368) 檔案會實作 `Server` 類別，並覆寫適當的方法以顯示進度資訊。 MmioChainer 會以指定的區段名稱建立區段，並以指定的事件名稱初始化 Chainer。 事件名稱會儲存在對應的資料結構中。 您應該使用唯一的區段和事件名稱。 下列程式碼中的 `Server` 類別會啟動指定的安裝程式、監視其進度，並傳回結束代碼。  
   
     ```cpp  
     class Server : public ChainerSample::MmioChainer, public ChainerSample::IProgressObserver  

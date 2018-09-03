@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 465fdcf9-ba24-4d8d-a43f-d983b7cb0cc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d69336bd9e4f4ec06e8319d19c1cdab5cf6e1c89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4a6950d17fef60298a2e47b63bec068554b2b8b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583314"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43390497"
 ---
 # <a name="manualresetevent-and-manualreseteventslim"></a>ManualResetEvent 和 ManualResetEventSlim
 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 類別代表必須在收到訊號之後手動重設的本機等候控制代碼事件。 此類別代表其基底類別 <xref:System.Threading.EventWaitHandle?displayProperty=nameWithType> 的特殊案例。 如需手動重設事件的用法和功能，請參閱 [EventWaitHandle](../../../docs/standard/threading/eventwaithandle.md) 概念文件。  
@@ -25,7 +25,7 @@ ms.locfileid: "33583314"
 ## <a name="see-also"></a>請參閱  
  [執行緒處理](../../../docs/standard/threading/index.md)  
  [執行緒物件和功能](../../../docs/standard/threading/threading-objects-and-features.md)  
- [等候控制代碼](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
+ [等候控制代碼](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
  [AutoResetEvent](../../../docs/standard/threading/autoresetevent.md)  
  [SpinWait](../../../docs/standard/threading/spinwait.md)  
  [Semaphore 和 SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)

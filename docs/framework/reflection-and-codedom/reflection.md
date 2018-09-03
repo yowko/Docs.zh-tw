@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef4e2918b682d964b7f65eb98d497715d1e4ac57
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6a03e6760fbb233c656909fb99b48a84bddedef8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399054"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405568"
 ---
 # <a name="reflection-in-the-net-framework"></a>.NET Framework 中的反映
-<xref:System.Reflection> 命名空間中的類別，連同 <xref:System.Type?displayProperty=nameWithType>，可讓您取得已載入[組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)和其中所定義類型的資訊，例如[類別](http://msdn.microsoft.com/library/ad7d3561-271e-4546-82fc-e00b059f27a9)、[介面](http://msdn.microsoft.com/library/fd9d5975-5363-4bc9-b883-609f887895e5)和[實值型別](http://msdn.microsoft.com/library/c9c567f8-8ab1-4d88-834d-00f7d92418de)。 您也可以使用反映在執行階段建立類型執行個體，並叫用和存取它們。 如需反映特定層面的主題，請參閱此概觀結尾的[相關主題](#related_topics)。  
+<xref:System.Reflection> 命名空間中的類別，連同 <xref:System.Type?displayProperty=nameWithType>，可讓您取得已載入[組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)和其中所定義類型的資訊，例如[類別](https://msdn.microsoft.com/library/ad7d3561-271e-4546-82fc-e00b059f27a9)、[介面](https://msdn.microsoft.com/library/fd9d5975-5363-4bc9-b883-609f887895e5)和[實值型別](https://msdn.microsoft.com/library/c9c567f8-8ab1-4d88-834d-00f7d92418de)。 您也可以使用反映在執行階段建立類型執行個體，並叫用和存取它們。 如需反映特定層面的主題，請參閱此概觀結尾的[相關主題](#related_topics)。  
   
  [Common Language Runtime](../../../docs/standard/clr.md) 載入器會管理[應用程式定義域](../../../docs/framework/app-domains/application-domains.md)，這會在有相同應用程式範圍的物件周圍構成定義的界限。 這個管理包含載入每個組件至適當的應用程式定義域和控制每個組件內類型階層的記憶體配置。  
   

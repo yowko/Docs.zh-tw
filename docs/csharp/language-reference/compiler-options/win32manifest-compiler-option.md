@@ -8,11 +8,12 @@ helpviewer_keywords:
 - win32manifest compiler option [C#]
 - -win32manifest compiler option [C#]
 ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
-ms.openlocfilehash: 3ac2b60b5e638290ea7e17e539519e3a0d355c12
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88932ad30e30d53312e6d76f70415969b9e86675
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43468224"
 ---
 # <a name="-win32manifest-c-compiler-options"></a>-win32manifest (C# 編譯器選項)
 使用 **-win32manifest** 選項，指定要內嵌到專案之可攜式執行檔 (PE) 中的使用者定義 Win32 應用程式資訊清單檔。  
@@ -66,6 +67,7 @@ ms.lasthandoff: 05/04/2018
 ```  
   
 ## <a name="see-also"></a>請參閱  
- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
- [-nowin32manifest (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md)  
- [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
+- [-nowin32manifest (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md)  
+- [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

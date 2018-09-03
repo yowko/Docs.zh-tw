@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - long keyword [C#]
 ms.assetid: f9b24319-1f39-48be-a42b-d528ee28a7fd
-ms.openlocfilehash: 106b832801a373ca387be455ef1c0df4233621d0
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 52755e0914ead3ab61930dd8bfb9ecdd8ced0a14
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961335"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400832"
 ---
 # <a name="long-c-reference"></a>long (C# 參考)
 
@@ -87,7 +87,7 @@ SampleMethod(5L);   // Calls the method with the long parameter
   
 ```csharp  
 int x = 8L;        // Error: no implicit conversion from long to int  
-int x = (int)8L;   // OK: explicit conversion to int  
+int y = (int)8L;   // OK: explicit conversion to int  
 ```  
   
  針對從 [sbyte](../../../csharp/language-reference/keywords/sbyte.md)、[byte](../../../csharp/language-reference/keywords/byte.md)、[short](../../../csharp/language-reference/keywords/short.md)、 [ushort](../../../csharp/language-reference/keywords/ushort.md)、[int](../../../csharp/language-reference/keywords/int.md)、[uint](../../../csharp/language-reference/keywords/uint.md) 或 [char](../../../csharp/language-reference/keywords/char.md) 轉換為 `long`，有一項預先定義的隱含轉換。  
@@ -102,12 +102,13 @@ long y = (long)3.0;   // OK: explicit conversion
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Int64>  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
- [整數型別表](../../../csharp/language-reference/keywords/integral-types-table.md)  
- [內建型別表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
- [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
- [明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+## <a name="see-also"></a>請參閱
+
+- <xref:System.Int64>  
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+- [整數型別表](../../../csharp/language-reference/keywords/integral-types-table.md)  
+- [內建型別表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- [明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

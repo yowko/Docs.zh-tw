@@ -5,12 +5,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - operators [C#], keywords
 ms.assetid: f745c81f-f8d8-4673-86a1-0f3a85cc63c3
-ms.openlocfilehash: 19be5aadf68f7812f2cb4a4e694a6600c5203af4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6a7fbc08647ace73676403937f4b0f79e7ff585
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273311"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392694"
 ---
 # <a name="operator-keywords-c-reference"></a>運算子關鍵字 (C# 參考)
 用來執行其他動作，例如建立物件、檢查物件的執行階段類型，取得類型的大小和其他動作。 本節將介紹下列關鍵字：  
@@ -55,8 +55,9 @@ ms.locfileid: "33273311"
   
 -   [unchecked](../../../csharp/language-reference/keywords/unchecked.md) 指定 unchecked 內容。  
   
-## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
- [C# 運算子](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+- [C# 運算子](../../../csharp/language-reference/operators/index.md)

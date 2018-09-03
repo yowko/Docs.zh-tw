@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: 88ae18b11a48fd8b9610032e913c97d4c15d1c21
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: 891e5eac249f4bd22b6eadde7509de2d07cd1576
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472408"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43479834"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>依分類列出的 C# 編譯器選項
 
@@ -114,6 +114,6 @@ ms.locfileid: "34472408"
 
 ## <a name="see-also"></a>請參閱
 
- [C# 編譯器選項](index.md)  
- [依字母順序列出 C# 編譯器選項](listed-alphabetically.md)  
- [如何：為 Visual Studio 命令列設定環境變數](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [C# 編譯器選項](index.md)  
+- [依字母順序列出 C# 編譯器選項](listed-alphabetically.md)  
+- [如何：為 Visual Studio 命令列設定環境變數](how-to-set-environment-variables-for-the-visual-studio-command-line.md)

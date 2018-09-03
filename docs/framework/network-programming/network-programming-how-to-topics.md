@@ -10,12 +10,12 @@ ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: ed8de7c4271483a878ee422aac188adbf4700985
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 703d3c2260f46f46e85831f809386d5a3af647a4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395352"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406530"
 ---
 # <a name="network-programming-how-to-topics"></a>網路程式設計 HOW TO 主題
 下列清單包含網路程式設計概念文件中找到之「如何」主題的連結。  
@@ -83,4 +83,4 @@ ms.locfileid: "33395352"
 ## <a name="see-also"></a>請參閱  
  [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)  
  [網路程式設計範例](../../../docs/framework/network-programming/network-programming-samples.md)  
- [MSDN Code Gallery 上的 .NET 網路範例](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+ [MSDN Code Gallery 上的 .NET 網路範例](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

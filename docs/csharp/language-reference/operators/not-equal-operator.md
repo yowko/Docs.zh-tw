@@ -8,12 +8,12 @@ helpviewer_keywords:
 - not equals operator (!=) [C#]
 - '!= operator [C#]'
 ms.assetid: eeff7a4e-ad6f-462d-9f8d-49e9b91c6c97
-ms.openlocfilehash: e409e2a80886fd5f7f4cdbeaa9b4e3325f8a967b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e974ffb1b25944e24fca23864dc7e932ec1876d5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272435"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415377"
 ---
 # <a name="-operator-c-reference"></a>!= 運算子 (C# 參考)
 不等比較運算子 (`!=`) 會在其運算元相等時傳回 false，否則傳回 true。 所有類型 (包括字串和物件) 已預先定義不等比較運算子。 使用者定義型別可以多載 `!=` 運算子。  
@@ -26,7 +26,8 @@ ms.locfileid: "33272435"
 ## <a name="example"></a>範例  
  [!code-csharp[csRefOperators#33](../../../csharp/language-reference/operators/codesnippet/CSharp/not-equal-operator_1.cs)]  
   
-## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [C# 運算子](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 運算子](../../../csharp/language-reference/operators/index.md)

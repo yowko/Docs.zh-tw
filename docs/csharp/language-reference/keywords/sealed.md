@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sealed keyword [C#]
 ms.assetid: 8e4ed5d3-10be-47db-9488-0da2008e6f3f
-ms.openlocfilehash: be13e04dce12dfb60a1179e05a0a47eca1df1af4
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 674c7e1cd87b95318f739ab22876f4bfe5ae73d8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42752071"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43386636"
 ---
 # <a name="sealed-c-reference"></a>sealed (C# 參考)
 套用至類別時，`sealed` 修飾詞可防止其他類別繼承自它。 在下列範例中，`B` 類別繼承自 `A`類別，但類別無法繼承自 `B` 類別。  
@@ -62,13 +62,14 @@ sealed class B : A {}
   
 -   衍生類別可能會修改您的類別，因此它們無法再正確運作或如預期運作。  
   
-## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
- [靜態類別和靜態類別成員](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)  
- [抽象和密封類別以及類別成員](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
- [存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
- [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)  
- [override](../../../csharp/language-reference/keywords/override.md)  
- [virtual](../../../csharp/language-reference/keywords/virtual.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+- [靜態類別和靜態類別成員](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)  
+- [抽象和密封類別以及類別成員](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
+- [存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+- [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)  
+- [override](../../../csharp/language-reference/keywords/override.md)  
+- [virtual](../../../csharp/language-reference/keywords/virtual.md)

@@ -3,11 +3,11 @@ title: 如何：控制命名空間前置字元 (C#) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 64de5186-b81a-4ddd-8327-8693df59a01b
 ms.openlocfilehash: af864139d56bd3ebb22cca6369b82539b9d007da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327749"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417367"
 ---
 # <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>如何：控制命名空間前置字元 (C#) (LINQ to XML)
 這個主題描述如何在序列化 XML 樹狀時控制命名空間前置詞。  

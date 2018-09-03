@@ -7,11 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4deb355a7b523437ae31a1d2b9c79e3b8d4f40a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e30b1a5a4d3b50c80edaac29cbd6b90f3ddd103b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43400499"
 ---
 # <a name="how-to-create-com-wrappers"></a>如何：建立 COM 包裝函式
 您可以使用 [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] 功能或 .NET Framework 工具 Tlbimp.exe 和 Regasm.exe 來建立元件物件模型 (COM) 包裝函式。 這兩種方法會產生兩種類型的 COM 包裝函式：  
@@ -39,7 +40,7 @@ ms.lasthandoff: 05/04/2018
  現在，您可以撰寫程式碼以存取 COM 物件。 您可以從宣告物件開始，例如使用 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 的 `Imports` 陳述式或是 [!INCLUDE[csprcslong](../../../includes/csprcslong-md.md)] 的 `Using` 陳述式。  
   
 > [!NOTE]
->  如果您想要開發 Microsoft Office 元件，請先安裝可從 Microsoft 下載中心取得的 [Microsoft Office 主要 Interop 組件](http://go.microsoft.com/fwlink/?LinkId=50479) (PIA)。 在步驟 4 中，選取您所需之 Office 產品的最新版可用物件程式庫，例如 **Microsoft Word 11.0 物件程式庫**。  
+>  如果您想要開發 Microsoft Office 元件，請先安裝可從 Microsoft 下載中心取得的 [Microsoft Office 主要 Interop 組件](https://go.microsoft.com/fwlink/?LinkId=50479) (PIA)。 在步驟 4 中，選取您所需之 Office 產品的最新版可用物件程式庫，例如 **Microsoft Word 11.0 物件程式庫**。  
   
 #### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>使用 .NET Framework 工具建立執行階段可呼叫包裝函式  
   

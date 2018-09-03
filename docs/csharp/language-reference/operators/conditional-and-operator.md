@@ -8,11 +8,11 @@ helpviewer_keywords:
 - logical AND operator [C#]
 ms.assetid: 2e4f0a1c-92a3-40f8-8e3b-17b607f20c31
 ms.openlocfilehash: 459b791fde3e4d3940dbd3d916f940e81f365da6
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999726"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388289"
 ---
 # <a name="ampamp-operator-c-reference"></a>&amp;&amp; 運算子 (C# 參考)
 條件式 AND 運算子 (`&&`) 會執行其 `bool` 運算元的邏輯 AND，但只有在必要時才會評估其第二個運算元。  

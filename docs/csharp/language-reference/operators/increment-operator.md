@@ -7,12 +7,12 @@ helpviewer_keywords:
 - increment operator (++) [C#]
 - ++ operator [C#]
 ms.assetid: e9dec353-070b-44fb-98ed-eb8fdf753feb
-ms.openlocfilehash: 0fe1150ca7267d02feeab33168eab7f79734c2a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a52f614ce1bbfb8e9d9be686b277c1e69f6f9d35
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275060"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43399306"
 ---
 # <a name="-operator-c-reference"></a>++ 運算子 (C# 參考)
 遞增運算子 (`++`) 的運算元遞增量為 1。 遞增運算子可以出現在其運算元的前後： `++variable` 和 `variable++`。  
@@ -27,7 +27,8 @@ ms.locfileid: "33275060"
 ## <a name="example"></a>範例  
  [!code-csharp[csRefOperators#3](../../../csharp/language-reference/operators/codesnippet/CSharp/increment-operator_1.cs)]  
   
-## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [C# 運算子](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 運算子](../../../csharp/language-reference/operators/index.md)

@@ -1,6 +1,6 @@
 ---
 title: 執行不區分文化特性的字串比較
-ms.date: 03/30/2017
+ms.date: 08/22/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35805d1760b0e06d33498efeeb3104979da26bc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84b1c10b655fefcd420a0c3cf038dba00e688d3e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573603"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43461653"
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>執行不區分文化特性的字串比較
 根據預設，<xref:System.String.Compare%2A?displayProperty=nameWithType> 方法會執行區分文化特性和區分大小寫的比較。 這個方法也包含幾個多載，這些多載會提供 `culture` 參數 (讓您指定要使用的文化特性) 及 `comparisonType` 參數 (讓您指定要使用的比較規則)。 呼叫這些方法 (而不是預設多載) 會消除有關特定方法呼叫中使用之規則的任何模稜兩可情況，而且可以釐清特定比較是否區分文化特性。  
@@ -38,9 +38,12 @@ ms.locfileid: "33573603"
   
  [!code-csharp[Conceptual.Strings.CultureInsensitiveComparison#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.cultureinsensitivecomparison/cs/cultureinsensitive1.cs#1)]
  [!code-vb[Conceptual.Strings.CultureInsensitiveComparison#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.cultureinsensitivecomparison/vb/cultureinsensitive1.vb#1)]  
-  
-## <a name="see-also"></a>請參閱  
- <xref:System.String.Compare%2A?displayProperty=nameWithType>  
- <xref:System.String.CompareTo%2A?displayProperty=nameWithType>  
- [執行不區分文化特性的字串作業](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)  
- [使用字串的最佳做法](../../../docs/standard/base-types/best-practices-strings.md)
+
+您可以下載 [Sorting Weight Tables](https://www.microsoft.com/en-us/download/details.aspx?id=10921) (排序權數表)，該文字檔集合包含在 Windows 作業系統排序及比較作業中使用的字元權數資訊。
+
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.String.Compare%2A?displayProperty=nameWithType>  
+- <xref:System.String.CompareTo%2A?displayProperty=nameWithType>  
+- [執行不區分文化特性的字串作業](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)  
+- [使用字串的最佳做法](../../../docs/standard/base-types/best-practices-strings.md)

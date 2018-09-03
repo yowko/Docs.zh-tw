@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f4712970b2d3ebecf12cbb7b8f9b7fcdb317986
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9d00fb16ac5b71c8fb8f8560f68d20f1f33987d7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410347"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43396882"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (.NET Security Annotator 工具)
 .NET Security Annotator 工具 (SecAnnotate.exe) 是識別一個或多個組件之 `SecurityCritical` 和 `SecuritySafeCritical` 部分的命令列應用程式。  
   
- Visual Studio 延伸模組 ([Security Annotator](http://go.microsoft.com/fwlink/?LinkId=198007)) 提供 SecAnnotate.exe 的圖形化使用者介面，讓您能夠從 Visual Studio 執行該工具。  
+ Visual Studio 延伸模組 ([Security Annotator](https://go.microsoft.com/fwlink/?LinkId=198007)) 提供 SecAnnotate.exe 的圖形化使用者介面，讓您能夠從 Visual Studio 執行該工具。  
   
  此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [開發人員命令提示字元] \(或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
@@ -52,6 +52,6 @@ SecAnnotate.exe [parameters] [assemblies]
 ## <a name="remarks"></a>備註  
  在命令列指定且前面加上一個 at 符號 (@) 的回應檔也可能會提供參數和組件。 回應檔中的每一行應該包含單一參數或組件名稱。  
   
- 如需 .NET Security Annotator 的詳細資訊，請參閱 .NET Security 部落格中的項目[使用 SecAnnotate 分析您的組件是否發生透明度違規](http://go.microsoft.com/fwlink/?LinkId=187648)。  
+ 如需 .NET Security Annotator 的詳細資訊，請參閱 .NET Security 部落格中的項目[使用 SecAnnotate 分析您的組件是否發生透明度違規](https://go.microsoft.com/fwlink/?LinkId=187648)。  
   
 ## <a name="examples"></a>範例

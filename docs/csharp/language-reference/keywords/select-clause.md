@@ -8,12 +8,12 @@ helpviewer_keywords:
 - select keyword [C#]
 - select clause [C#]
 ms.assetid: df01e266-5781-4aaa-80c4-67cf28ea093f
-ms.openlocfilehash: 6e7277b5d714e48059fe1ed7e8b85e46a14a840c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dcab29cdbe98b5e49463d9a2781d43d4b9ee9544
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279980"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467337"
 ---
 # <a name="select-clause-c-reference"></a>select 子句 (C# 參考)
 在查詢運算式中，`select` 子句指定將在執行查詢時產生之值的類型。 結果是根據評估所有先前子句以及 `select` 子句本身中的任何運算式而來。 查詢運算式必須以 `select` 子句或 [group](../../../csharp/language-reference/keywords/group-clause.md) 子句來終止。  
@@ -34,11 +34,12 @@ ms.locfileid: "33279980"
 ## <a name="remarks"></a>備註  
  在編譯時間，`select` 子句會轉譯為 <xref:System.Linq.Enumerable.Select%2A> 標準查詢運算子的方法呼叫。  
   
-## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [查詢關鍵字 (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
- [from 子句](../../../csharp/language-reference/keywords/from-clause.md)  
- [partial (方法) (C# 參考)](../../../csharp/language-reference/keywords/partial-method.md)  
- [匿名類型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
- [LINQ 查詢運算式](../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [開始使用 C# 中的 LINQ](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [查詢關鍵字 (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
+- [from 子句](../../../csharp/language-reference/keywords/from-clause.md)  
+- [partial (方法) (C# 參考)](../../../csharp/language-reference/keywords/partial-method.md)  
+- [匿名類型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+- [LINQ 查詢運算式](../../../csharp/programming-guide/linq-query-expressions/index.md)  
+- [開始使用 C# 中的 LINQ](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

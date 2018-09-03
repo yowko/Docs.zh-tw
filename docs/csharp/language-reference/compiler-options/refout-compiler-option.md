@@ -7,12 +7,12 @@ helpviewer_keywords:
 - refout compiler option [C#]
 - /refout compiler option [C#]
 - -refout compiler option [C#]
-ms.openlocfilehash: cb0e26b03841c093f223b3013a0d3c52ffd914c5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e204a053f6f68a4b848d22c95c98f04edff58716
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215273"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43391430"
 ---
 # <a name="-refout-c-compiler-options"></a>-refout (C# 編譯器選項)
 
@@ -45,5 +45,6 @@ ms.locfileid: "33215273"
 `-refout` 和 [`-refonly`](refonly-compiler-option.md) 選項互斥。
 
 ## <a name="see-also"></a>請參閱
- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
- [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
+- [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 根據微服�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 4e1e1671238d3cc5944bfe53b49f7d0ddd969aff
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 79b63c376d25725b2bcb6c16cdb4d06e107d5c07
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105365"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43418636"
 ---
 # <a name="creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices"></a>根據微服務建立複合 UI，包括多個微服務所產生的視覺 UI 形狀和配置
 
@@ -35,7 +35,7 @@ ms.locfileid: "37105365"
 
 根據您所使用的 UI 技術，微服務導向的複合 UI 方法可能挑戰性很高，也可能很低。 例如，您不會使用與用來建置 SPA 或原生行動應用程式相同的技術來建置傳統 Web 應用程式 (例如開發 Xamarin 應用程式時，此方法的挑戰性可能更高)。
 
-[eShopOnContainers](http://aka.ms/MicroservicesArchitecture) 範例應用程式使用整合型 UI 方法的原因有很多。 首先，它是微服務和容器的前導。 複合 UI 更進階，但在設計及開發 UI 時也需要更高的複雜度。 其次，eShopOnContainers 也提供以 Xamarin 為基礎的原生行動應用程式，因此在用戶端 \# 側會更複雜。
+[eShopOnContainers](https://aka.ms/MicroservicesArchitecture) 範例應用程式使用整合型 UI 方法的原因有很多。 首先，它是微服務和容器的前導。 複合 UI 更進階，但在設計及開發 UI 時也需要更高的複雜度。 其次，eShopOnContainers 也提供以 Xamarin 為基礎的原生行動應用程式，因此在用戶端 \# 側會更複雜。
 
 不過，建議您使用下列參考，深入了解以微服務為基礎的複合 UI。
 

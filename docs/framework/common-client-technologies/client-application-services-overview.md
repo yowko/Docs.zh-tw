@@ -5,11 +5,12 @@ helpviewer_keywords:
 - client application services, classes
 - client application services, about client application services
 ms.assetid: f0a2da13-e282-4fd7-88a1-f9102c9aeab1
-ms.openlocfilehash: 7ec8d2423c8f9d25ef48c0f0cc0d9627864c9c27
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 55d96039f430bece3cda6136d63dbf287e8fc744
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43408557"
 ---
 # <a name="client-application-services-overview"></a>用戶端應用程式服務概觀
 用戶端應用程式服務簡化了從 Windows Forms 和 Windows Presentation Foundation (WPF) 應用程式對 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 登入、角色和設定檔服務的存取。 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 應用程式服務隨附於 [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] 和 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] 的 Microsoft ASP.NET 2.0 AJAX Extensions 中。 這些服務可讓多個 Web 和 Windows 應用程式從單一伺服器共用使用者資訊與使用者管理功能。  
@@ -24,7 +25,7 @@ ms.lasthandoff: 05/03/2018
   
 -   與 Visual Studio 應用程式設定設計工具整合。 當您將設定加入 Visual Studio 中的專案時，可以指定要透過用戶端設定服務提供者來存取的設定。  
   
- 下列章節將詳述這些功能。 如需 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 應用程式服務的詳細資訊，請參閱 [ASP.NET 應用程式服務概觀](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)。  
+ 下列章節將詳述這些功能。 如需 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 應用程式服務的詳細資訊，請參閱 [ASP.NET 應用程式服務概觀](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)。  
   
 ## <a name="authentication"></a>驗證  
  您可以透過現有 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 驗證服務，使用用戶端應用程式服務來驗證使用者。 您可以使用 Windows 或表單驗證來驗證使用者。 Windows 驗證表示使用者登入電腦或網域時，是使用作業系統所提供的使用者識別。 通常您會對部署在公司內部網路上的應用程式使用 Windows 驗證。 表單驗證表示您必須在應用程式中加入登入控制項，並將取得的認證傳遞給驗證提供者。 通常您會對部署在網際網路上的應用程式使用表單驗證。  
@@ -39,17 +40,17 @@ ms.lasthandoff: 05/03/2018
   
  當您設定應用程式使用具有表單驗證的認證提供者時，必須傳遞空字串或 `null` 做為 <xref:System.Web.Security.Membership.ValidateUser%2A> 方法的參數。 服務提供者會接著呼叫您的 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A?displayProperty=nameWithType> 方法實作。 一般而言，您會實作此方法來顯示對話方塊，並傳回填入的 <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials> 物件。  
   
- 如需驗證的詳細資訊，請參閱 [ASP.NET 驗證](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)。 如需如何設定 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 驗證服務的資訊，請參閱[透過 Microsoft Ajax 使用表單驗證](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)。  
+ 如需驗證的詳細資訊，請參閱 [ASP.NET 驗證](https://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)。 如需如何設定 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 驗證服務的資訊，請參閱[透過 Microsoft Ajax 使用表單驗證](https://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)。  
   
 ## <a name="roles"></a>角色  
  您可以使用用戶端應用程式服務，從現有的 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 角色服務擷取角色資訊。 若要判斷目前已經過驗證的使用者是否具有特定角色，可呼叫擷取自 `static` <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 屬性之 <xref:System.Security.Principal.IPrincipal> 參考的 <xref:System.Security.Principal.IPrincipal.IsInRole%2A> 方法 。 <xref:System.Security.Principal.IPrincipal.IsInRole%2A> 方法會以角色名稱作為參數，並傳回 <xref:System.Boolean> 值，指出目前的使用者是否為指定的角色。 若使用者尚未經過驗證，或不是指定的角色，此方法會傳回 `false`。  
   
- 如需如何設定 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 角色服務的相關資訊，請參閱[透過 Microsoft Ajax 使用角色資訊](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)。  
+ 如需如何設定 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 角色服務的相關資訊，請參閱[透過 Microsoft Ajax 使用角色資訊](https://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)。  
   
 ## <a name="settings"></a>設定  
  您可以利用用戶端服務，從現有的 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 設定檔服務擷取使用者應用程式設定。 用戶端應用程式服務的 Web 設定功能，會與 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 中所提供的應用程式設定功能相整合。 若要擷取 Web 設定，請先使用 Visual Studio 專案設計工具的 [設定] 索引標籤，為您的專案產生 `Settings` 類別 (在 C# 中以 `Properties.Settings.Default` 存取，在 Visual Basic 中以 `My.Settings` 存取)。 在 [設定] 索引標籤上，您可以使用 [載入 Web 設定] 按鈕，擷取 Web 設定並將其加入所產生的 `Settings` 類別。 您可以使用設定要供所有經過驗證的使用者或所有匿名使用者使用的 Web 設定。  
   
- 如需應用程式設定的詳細資訊，請參閱[應用程式設定概觀](../../../docs/framework/winforms/advanced/application-settings-overview.md)。 如需如何實作您自己的設定類別，而不是如何在 Visual Studio 中產生此設定類別的相關資訊，請參閱[如何：建立應用程式設定](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)。 如需如何設定 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 設定檔服務的相關資訊，請參閱[透過 Microsoft Ajax 使用設定檔資訊](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)。  
+ 如需應用程式設定的詳細資訊，請參閱[應用程式設定概觀](../../../docs/framework/winforms/advanced/application-settings-overview.md)。 如需如何實作您自己的設定類別，而不是如何在 Visual Studio 中產生此設定類別的相關資訊，請參閱[如何：建立應用程式設定](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)。 如需如何設定 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 設定檔服務的相關資訊，請參閱[透過 Microsoft Ajax 使用設定檔資訊](https://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)。  
   
 ## <a name="client-application-services-classes"></a>用戶端應用程式服務類別  
  下列資料表描述實作用戶端應用程式服務功能的類別。  
@@ -81,10 +82,10 @@ ms.lasthandoff: 05/03/2018
  [操作說明：使用用戶端應用程式服務實作使用者登入](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
  [逐步解說：使用用戶端應用程式服務](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
  [應用程式設定概觀](../../../docs/framework/winforms/advanced/application-settings-overview.md)  
- [ASP.NET 應用程式服務概觀](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)  
- [使用表單驗證搭配 Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)  
- [透過 Microsoft Ajax 使用角色資訊](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)  
- [透過 Microsoft Ajax 使用設定檔資訊](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)  
- [ASP.NET 驗證](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)  
- [使用角色管理授權](http://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195)  
- [建立及設定 SQL Server 的應用程式服務資料庫](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)
+ [ASP.NET 應用程式服務概觀](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)  
+ [使用表單驗證搭配 Microsoft Ajax](https://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)  
+ [透過 Microsoft Ajax 使用角色資訊](https://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)  
+ [透過 Microsoft Ajax 使用設定檔資訊](https://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)  
+ [ASP.NET 驗證](https://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)  
+ [使用角色管理授權](https://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195)  
+ [建立及設定 SQL Server 的應用程式服務資料庫](https://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)

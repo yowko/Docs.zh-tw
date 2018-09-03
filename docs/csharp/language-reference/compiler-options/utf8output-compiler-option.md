@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /utf8output compiler option [C#]
 - -utf8output compiler option [C#]
 ms.assetid: 27ff7381-c281-45d7-b2eb-1ad644b1354e
-ms.openlocfilehash: 85cd06da673d0d24c936acf81765169e0778b437
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32c239f7563101cb1dddedbf868d298806353492
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213255"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43476257"
 ---
 # <a name="-utf8output-c-compiler-options"></a>-utf8output (C# 編譯器選項)
 **-utf8output** 選項會使用 UTF-8 編碼來顯示編譯器輸出。  
@@ -30,4 +30,5 @@ ms.locfileid: "33213255"
  Visual Studio 不提供這個編譯器選項，您亦無法以程式設計方式變更。  
   
 ## <a name="see-also"></a>請參閱  
- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
+
+- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)

@@ -16,12 +16,12 @@ ms.assetid: 3aab4bcc-8397-4e1a-a1b6-bbd837a21430
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 7a6b52509899431907a432ba7b620603dcb65aca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 158a68d97a52bb5a72985d260a3dd5c6bfd0bd41
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394861"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43408483"
 ---
 # <a name="using-application-protocols"></a>使用應用程式通訊協定
 .NET Framework 支援常用的網際網路應用程式通訊協定。 本節包含有關使用 [HTTP](../../../docs/framework/network-programming/http.md)、"TCP"和 "UDP" 通訊協定的資訊，以及有關使用 [Windows Sockets](../../../docs/framework/network-programming/sockets.md) 介面以實作自訂通訊協定的資訊。  
@@ -29,4 +29,4 @@ ms.locfileid: "33394861"
 ## <a name="see-also"></a>請參閱  
  [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)  
  [網路程式設計範例](../../../docs/framework/network-programming/network-programming-samples.md)  
- [MSDN Code Gallery 上的 .NET 網路範例](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+ [MSDN Code Gallery 上的 .NET 網路範例](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

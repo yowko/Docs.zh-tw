@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - client application services, configuring
 ms.assetid: 34a8688a-a32c-40d3-94be-c8e610c6a4e8
-ms.openlocfilehash: 004798ce8cf429f2a94d856e6b3a55447c2ad5fa
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a65c216397f240b77eb81f88d8f2a2da122e1ccf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744752"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43399234"
 ---
 # <a name="how-to-configure-client-application-services"></a>如何：設定用戶端應用程式服務
-本主題說明如何使用 Visual Studio **專案設計工具**啟用及設定用戶端應用程式服務。 您可以使用用戶端應用程式服務來驗證使用者，以及從現有的 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 應用程式服務擷取使用者角色和設定。 設定後，您可以依照[用戶端應用程式服務概觀](../../../docs/framework/common-client-technologies/client-application-services-overview.md)中所述，在應用程式程式碼中存取已啟用的服務。 如需 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 應用程式服務的詳細資訊，請參閱 [ASP.NET 應用程式服務概觀](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)。  
+本主題說明如何使用 Visual Studio **專案設計工具**啟用及設定用戶端應用程式服務。 您可以使用用戶端應用程式服務來驗證使用者，以及從現有的 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 應用程式服務擷取使用者角色和設定。 設定後，您可以依照[用戶端應用程式服務概觀](../../../docs/framework/common-client-technologies/client-application-services-overview.md)中所述，在應用程式程式碼中存取已啟用的服務。 如需 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 應用程式服務的詳細資訊，請參閱 [ASP.NET 應用程式服務概觀](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)。  
   
  您可以在 [專案設計工具] 的 [服務] 頁面上，啟用及設定用戶端應用程式服務。 [服務] 頁面會更新專案之 App.config 檔中的值。 若要存取 [專案設計工具]，請使用 [專案] 功能表上的 [屬性] 命令。 如需 [服務] 頁面的詳細資訊，請參閱[專案設計工具、服務頁](https://msdn.microsoft.com/library/bb398109)。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "32744752"
   
 2.  選取或清除 [在本機儲存密碼雜湊以啟用離線登入]。 當您選取這個選項時，即會在本機以加密格式快取使用者的密碼。 如果您實作應用程式的離線模式，這個選項會很有用。 選取這個選項時，即使 <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A> 屬性已設定為 `true`，也可以驗證使用者。  
   
-3.  選取或清除 [要求使用者在伺服器 Cookie 過期時必須再次登入]。 驗證 Cookie 會在遠端服務上設定，表示使用者登入保持使用中的時間長度。 如需如何設定 Cookie 的詳細資訊，請參閱[驗證的 forms 項目 (ASP.NET 設定結構描述)](http://msdn.microsoft.com/library/8163b8b5-ea6c-46c8-b5a9-c4c3de31c0b3) 中的 `timeout` 屬性。  
+3.  選取或清除 [要求使用者在伺服器 Cookie 過期時必須再次登入]。 驗證 Cookie 會在遠端服務上設定，表示使用者登入保持使用中的時間長度。 如需如何設定 Cookie 的詳細資訊，請參閱[驗證的 forms 項目 (ASP.NET 設定結構描述)](https://msdn.microsoft.com/library/8163b8b5-ea6c-46c8-b5a9-c4c3de31c0b3) 中的 `timeout` 屬性。  
   
      如果您選取這個選項，在驗證 Cookie 過期後嘗試存取遠端角色或 Web 設定服務，將會擲回 <xref:System.Net.WebException>。 您可以處理這個例外狀況，然後顯示登入對話方塊以重新驗證使用者。 如需這個行為的範例，請參閱[逐步解說：使用用戶端應用程式服務](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)。 您可以針對部署在公用位置的應用程式，使用這個選項來確保使用應用程式後讓應用程式繼續執行的使用者，不會無限期地保持已驗證的狀態。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "32744752"
 ## <a name="using-custom-providers"></a>使用自訂提供者  
  根據預設，用戶端應用程式服務功能會使用 <xref:System.Web.ClientServices.Providers?displayProperty=nameWithType> 命名空間中的提供者。 當您使用 [專案設計工具] 的 [服務] 頁面設定應用程式時，會將這些提供者的參考新增至您的 App.config 檔。 這些預設提供者會存取伺服器上的對應提供者。 Web 服務通常會設定為透過 <xref:System.Web.Security.SqlMembershipProvider> 和 <xref:System.Web.Security.SqlRoleProvider> 等提供者存取使用者資料。  
   
- 如果您想要使用自訂服務提供者，通常會在伺服器端變更提供者，以便影響存取該伺服器的所有用戶端應用程式。 但是，您也可以選擇在用戶端使用非預設的提供者。 您可以在專案的 App.config 檔中指定自訂驗證或角色提供者，如下列程序所示。 如需如何建立自訂驗證和角色提供者的相關資訊，請參閱[實作成員資格提供者](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582)和[實作角色提供者](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)。 您也可以修改專案的 `Settings` 類別 (在 C# 中是當作 `Properties.Settings.Default` 存取，而在 Visual Basic 中是當作 `My.Settings` 存取)，來使用自訂設定提供者。 如需詳細資訊，請參閱[應用程式設定架構](../../../docs/framework/winforms/advanced/application-settings-architecture.md)。  
+ 如果您想要使用自訂服務提供者，通常會在伺服器端變更提供者，以便影響存取該伺服器的所有用戶端應用程式。 但是，您也可以選擇在用戶端使用非預設的提供者。 您可以在專案的 App.config 檔中指定自訂驗證或角色提供者，如下列程序所示。 如需如何建立自訂驗證和角色提供者的相關資訊，請參閱[實作成員資格提供者](https://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582)和[實作角色提供者](https://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)。 您也可以修改專案的 `Settings` 類別 (在 C# 中是當作 `Properties.Settings.Default` 存取，而在 Visual Basic 中是當作 `My.Settings` 存取)，來使用自訂設定提供者。 如需詳細資訊，請參閱[應用程式設定架構](../../../docs/framework/winforms/advanced/application-settings-architecture.md)。  
   
 #### <a name="to-configure-client-application-services-to-use-non-default-providers"></a>設定用戶端應用程式服務使用非預設的提供者  
   
@@ -147,7 +147,7 @@ ms.locfileid: "32744752"
  [服務對話方塊的進階設定](/visualstudio/ide/reference/advanced-settings-for-services-dialog-box)  
  [如何：使用用戶端應用程式服務實作使用者登入](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
  [逐步解說：使用用戶端應用程式服務](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
- [實作成員資格提供者](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582)  
- [實作角色提供者](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)  
+ [實作成員資格提供者](https://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582)  
+ [實作角色提供者](https://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)  
  [應用程式設定架構](../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
- [建立及設定 SQL Server 的應用程式服務資料庫](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)
+ [建立及設定 SQL Server 的應用程式服務資料庫](https://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)

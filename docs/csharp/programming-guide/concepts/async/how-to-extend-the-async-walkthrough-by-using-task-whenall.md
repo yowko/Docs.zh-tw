@@ -2,12 +2,12 @@
 title: 如何：使用 Task.WhenAll 擴充非同步逐步解說的內容 (C#)
 ms.date: 07/20/2015
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-ms.openlocfilehash: 4bdd3f32d2fa502de8ada352c522198a89a17f97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7df5c1f1ffbcc8c60fd6ed0596088f0842ef9ea
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339465"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482810"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>如何：使用 Task.WhenAll 擴充非同步逐步解說的內容 (C#)
 您可以使用 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 方法，來提升[逐步解說：使用 Async 和 Await 存取 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) 中非同步方案的效能。 此方法會以非同步方式等候多個非同步作業進行，這些作業是以工作集合來表示。  
@@ -61,7 +61,7 @@ ms.locfileid: "33339465"
     //}  
     ```  
   
-3.  建立工作集合。 下列程式碼定義一個[查詢](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)，當 <xref:System.Linq.Enumerable.ToArray%2A> 方法執行此查詢時，會建立工作集合以下載每個網站的內容。 工作會在評估查詢之後啟動。  
+3.  建立工作集合。 下列程式碼定義一個[查詢](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)，當 <xref:System.Linq.Enumerable.ToArray%2A> 方法執行此查詢時，會建立工作集合以下載每個網站的內容。 工作會在評估查詢之後啟動。  
   
      將下列程式碼新增至 `urlList` 宣告後面的 `SumPageSizesAsync` 方法。  
   
@@ -136,7 +136,7 @@ ms.locfileid: "33339465"
     //}  
     ```  
   
-3.  定義一個[查詢](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)，當 <xref:System.Linq.Enumerable.ToArray%2A> 方法執行此查詢時，會建立工作集合以下載每個網站的內容。 工作會在評估查詢之後啟動。  
+3.  定義一個[查詢](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)，當 <xref:System.Linq.Enumerable.ToArray%2A> 方法執行此查詢時，會建立工作集合以下載每個網站的內容。 工作會在評估查詢之後啟動。  
   
      將下列程式碼新增至 `client` 和 `urlList` 宣告後面的 `SumPageSizesAsync` 方法。  
   

@@ -6,12 +6,12 @@ f1_keywords:
 - stackalloc
 helpviewer_keywords:
 - stackalloc keyword [C#]
-ms.openlocfilehash: 905873cf7f576ff35a9bc1c182ce7ebe17920288
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5926550eea1f5a2f8fb74645f22ca54c2bed3136
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269164"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484050"
 ---
 # <a name="stackalloc-c-reference"></a>stackalloc (C# 參考)
 unsafe 程式碼內容中使用 `stackalloc` 關鍵字來配置堆疊上的記憶體區塊。
@@ -63,8 +63,9 @@ int* third = stackalloc[] { 1, 2, 3 };
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>請參閱
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
- [運算子關鍵字](../../../csharp/language-reference/keywords/operator-keywords.md)  
- [Unsafe 程式碼和指標](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
+
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+- [運算子關鍵字](../../../csharp/language-reference/keywords/operator-keywords.md)  
+- [Unsafe 程式碼和指標](../../../csharp/programming-guide/unsafe-code-pointers/index.md)

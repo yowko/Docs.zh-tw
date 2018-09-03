@@ -6,11 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#endif directive [C#]'
 ms.assetid: 6a5fca55-5aee-441f-86f6-1c99fbe9ec05
-ms.openlocfilehash: 1686e706ce5cae3b2eaa28a7e1c89b5694b2be88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a652c1226f8f0c624ec8ebf0e665a4aa77ddf6f0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43420810"
 ---
 # <a name="endif-c-reference"></a>#endif (C# 參考)
 `#endif` 指定條件指示詞的結尾，而其開始於 [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) 指示詞。 例如，套用至物件的  
@@ -26,7 +27,8 @@ ms.lasthandoff: 05/04/2018
 ## <a name="remarks"></a>備註  
  以 `#if` 指示詞開頭的條件指示詞必須明確地以 `#endif` 指示詞終止。 如需如何使用 `#endif` 的範例，請參閱 [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)。  
   
-## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [C# 前置處理器指示詞](../../../csharp/language-reference/preprocessor-directives/index.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 前置處理器指示詞](../../../csharp/language-reference/preprocessor-directives/index.md)

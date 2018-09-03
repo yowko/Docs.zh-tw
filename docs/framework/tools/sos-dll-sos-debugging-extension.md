@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 608211221d0f6f6a24b85561cd16fb21e15c336b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c038b66e4ed62d614a25e717c52fdcc9c5f9a23
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409902"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483784"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (SOS 偵錯擴充功能)
-SOS 偵錯延伸模組副檔名 (SOS.dll) 提供內部 Common Language Runtime (CLR) 環境的相關資訊，以協助您在 Windows 偵錯工具 (WinDbg.exe) 和 Visual Studio 中偵錯受控程式。 這個工具需要您的專案已啟用非 Managed 偵錯。 SOS.dll 會隨著 .NET Framework 自動安裝。 若要在 Visual Studio 中使用 SOS.dll，請安裝 [Windows 驅動程式套件 (WDK)](http://msdn.microsoft.com/windows/hardware/hh852362)。  
+SOS 偵錯延伸模組副檔名 (SOS.dll) 提供內部 Common Language Runtime (CLR) 環境的相關資訊，以協助您在 Windows 偵錯工具 (WinDbg.exe) 和 Visual Studio 中偵錯受控程式。 這個工具需要您的專案已啟用非 Managed 偵錯。 SOS.dll 會隨著 .NET Framework 自動安裝。 若要在 Visual Studio 中使用 SOS.dll，請安裝 [Windows 驅動程式套件 (WDK)](https://msdn.microsoft.com/windows/hardware/hh852362)。  
   
 > [!NOTE]
 >  如果您使用的是 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)]，Visual Studio 中的 Windows 偵錯工具支援 SOS.dll，但是 Visual Studio 偵錯工具的即時運算視窗中則不支援。  
@@ -89,7 +89,7 @@ SOS 偵錯延伸模組副檔名 (SOS.dll) 提供內部 Common Language Runtime (
 |**Token2EE** \<*module name*> \<*token*>|將所指定模組中的已指定中繼資料語彙基元轉變成 `MethodTable` 結構或 `MethodDesc` 結構。<br /><br /> 您可以將 `*` 當做模組名稱參數傳遞，便可了解該語彙基元對應至每一個載入之 Managed 模組中的哪個項目。 您也可以傳遞模組的偵錯工具名稱，例如 `mscorlib` 或 `image00400000`。|  
 |**Threads** [**-live**] [**-special**]|顯示處理序中的所有 Managed 執行緒。<br /><br /> **Threads** 命令會顯示偵錯工具簡略識別碼、CLR 執行緒識別碼，以及作業系統執行緒識別碼。  此外，**Threads** 命令也會顯示 Domain 資料行、APT 資料行和 Exception 資料行，分別指出執行緒執行所在的應用程式定義域、COM Apartment 模式和執行緒中最近一次擲回的例外狀況。<br /><br /> **-live** 選項會顯示與運作中執行緒建立關聯的執行緒。<br /><br /> **-special** 選項會顯示由 CLR 建立的所有特殊執行緒。 特殊執行緒包括記憶體回收執行緒 (在並行和伺服器記憶體回收中)、偵錯工具 Helper 執行緒、完成項執行緒、<xref:System.AppDomain> 卸載執行緒，以及執行緒集區計時器執行緒。|  
 |**ThreadState \<** *State value field* **>**|顯示執行緒的狀態。 `value` 參數為 **Threads** 報告輸出中 `State` 欄位的值。<br /><br /> 範例：<br /><br /> `0:003> !Threads     ThreadCount:      2     UnstartedThread:  0     BackgroundThread: 1     PendingThread:    0     DeadThread:       0     Hosted Runtime:   no                                           PreEmptive   GC Alloc           Lock            ID OSID ThreadOBJ    State     GC       Context       Domain   Count APT Exception        0    1  250 0019b068      a020 Disabled 02349668:02349fe8 0015def0     0 MTA        2    2  944 001a6020      b220 Enabled  00000000:00000000 0015def0     0 MTA (Finalizer)     0:003> !ThreadState b220         Legal to Join         Background         CLR Owns         CoInitialized         In Multi Threaded Apartment`|  
-|**TraverseHeap** [**-xml**] \<*filename*>|使用 CLR 分析工具可了解的格式，將堆積資訊寫入至指定的檔案。 **-xml** 選項會使 **TraverseHeap** 命令將檔案的格式設定為 XML。<br /><br /> 您可以從 [Microsoft 下載中心](http://go.microsoft.com/fwlink/?LinkID=67325)下載 CLR 分析工具。|  
+|**TraverseHeap** [**-xml**] \<*filename*>|使用 CLR 分析工具可了解的格式，將堆積資訊寫入至指定的檔案。 **-xml** 選項會使 **TraverseHeap** 命令將檔案的格式設定為 XML。<br /><br /> 您可以從 [Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkID=67325)下載 CLR 分析工具。|  
 |**U** [**-gcinfo**] [**-ehinfo**] [**-n**] \<*MethodDesc address*> &#124; \<*Code address*>|顯示由方法之 `MethodDesc` 結構指標，或是由方法主體內之程式碼位址所指定 Managed 方法的標註反組譯碼。 **U** 命令會顯示從開始到結束的整個方法，以及將中繼資料語彙基元轉換成名稱的註釋。<br /><br /> **-gcinfo** 選項會使 **U** 命令顯示方法的 `GCInfo` 結構。<br /><br /> **-ehinfo** 選項會顯示方法的例外狀況資訊。 您也可以使用 **EHInfo** 命令取得這項資訊。<br /><br /> **-n** 選項會停用原始程式檔名稱和行號的顯示。 如果偵錯工具有指定 SYMOPT_LOAD_LINES 選項，SOS 就會查詢每個 Managed 框架的符號，而且如果成功，就會顯示對應的原始程式檔名稱和行號。 您可以指定 **-n** 選項以停用這種行為。|  
 |**VerifyHeap**|檢查記憶體回收行程堆積是否有損毀徵兆，並顯示任何所發現的錯誤。<br /><br /> 堆積損毀的原因可能是平台叫用架構不正確的呼叫。|  
 |**VerifyObj** \<*object address*>|檢查傳遞為引數的物件以找出損毀的症狀。|  
@@ -99,9 +99,9 @@ SOS 偵錯延伸模組副檔名 (SOS.dll) 提供內部 Common Language Runtime (
 ## <a name="remarks"></a>備註  
  SOS 偵錯延伸模組讓您能夠檢視在 CLR 內執行之程式碼的相關資訊。 例如，您可以使用 SOS 偵錯擴充功能來顯示 Managed 堆積的相關資訊、尋找堆積損毀、顯示執行階段所使用的內部資料類型，並檢視在執行階段內執行之所有 Managed 程式碼的資訊。  
   
- 若要在 Visual Studio 中使用 SOS 偵錯擴充功能，請安裝 [Windows 驅動程式套件 (WDK)](http://msdn.microsoft.com/windows/hardware/hh852362)。 如需 Visual Studio 的整合式偵錯環境的詳細資訊，請參閱 Windows 開發人員中心內的[Debugging Environments](http://msdn.microsoft.com/library/windows/hardware/hh406268.aspx)(偵錯環境)。  
+ 若要在 Visual Studio 中使用 SOS 偵錯擴充功能，請安裝 [Windows 驅動程式套件 (WDK)](https://msdn.microsoft.com/windows/hardware/hh852362)。 如需 Visual Studio 的整合式偵錯環境的詳細資訊，請參閱 Windows 開發人員中心內的[Debugging Environments](https://msdn.microsoft.com/library/windows/hardware/hh406268.aspx)(偵錯環境)。  
   
- 您可以將它載入 WinDbg.exe 偵錯工具 (可從 [WDK 和開發人員工具網站](http://go.microsoft.com/fwlink/?LinkId=103787)取得)，以及在 WinDbg.exe 中執行命令，以使用 SOS 偵錯擴充功能。  
+ 您可以將它載入 WinDbg.exe 偵錯工具 (可從 [WDK 和開發人員工具網站](https://go.microsoft.com/fwlink/?LinkId=103787)取得)，以及在 WinDbg.exe 中執行命令，以使用 SOS 偵錯擴充功能。  
   
  若要將 SOS 偵錯擴充功能載入至 WinDbg.exe 偵錯工具，請在此工具中執行下列命令：  
   

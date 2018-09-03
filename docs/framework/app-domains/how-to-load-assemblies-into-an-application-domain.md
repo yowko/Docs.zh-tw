@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0925f7445c4451f61bd1c878cc66300d62bdc855
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: fd6f14f89d143edd03f8b5d028ec84315b2f2e97
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741902"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43455714"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>如何：將組件載入應用程式定義域
 有數種方式可以將組件載入應用程式定義域。 建議的方法是使用 <xref:System.Reflection.Assembly?displayProperty=nameWithType> 類別的 `static` (在 Visual Basic 中為 `Shared`) <xref:System.Reflection.Assembly.Load%2A> 方法。 其他可以載入組件的方式包括：  
@@ -37,7 +37,7 @@ ms.locfileid: "32741902"
 > [!NOTE]
 >  從 .NET Framework 2.0 版開始，執行階段不會載入使用 .NET Framework 版本所編譯的組件，而這個版本的版本號碼高於目前載入的執行階段。 這適用於版本號碼的主要與次要元件組合。  
   
- 您可以指定在應用程式定義域之間共用所載入組件之 Just-In-Time (JIT) 編譯程式碼的方式。 如需詳細資訊，請參閱[應用程式定義域和組件](http://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)。  
+ 您可以指定在應用程式定義域之間共用所載入組件之 Just-In-Time (JIT) 編譯程式碼的方式。 如需詳細資訊，請參閱[應用程式定義域和組件](https://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)。  
   
 ## <a name="example"></a>範例  
  下列程式碼會將名為 "example.exe" 或 "example.dll" 的組件載入目前應用程式定義域、從組件取得名為 `Example` 的類型、取得適用於該類型且名為 `MethodA` 的無參數方法，並且執行方法。 如需從載入的組件取得資訊的完整討論，請參閱[動態載入和使用類型](../../../docs/framework/reflection-and-codedom/dynamically-loading-and-using-types.md)。  
@@ -52,4 +52,4 @@ ms.locfileid: "32741902"
  [反映](../../../docs/framework/reflection-and-codedom/reflection.md)  
  [使用應用程式定義域](../../../docs/framework/app-domains/use.md)  
  [操作說明：將組件載入僅限反映的內容](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)  
- [應用程式定義域和組件](http://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)
+ [應用程式定義域和組件](https://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)

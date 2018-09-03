@@ -9,11 +9,11 @@ helpviewer_keywords:
 - try-finally statement [C#]
 ms.assetid: c27623fb-7261-4464-862c-7a369d3c8f0a
 ms.openlocfilehash: beb54cf6c4e6dc87b9a08b81586b24d72f92b84b
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43001418"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481952"
 ---
 # <a name="try-finally-c-reference"></a>try-finally (C# 參考)
 使用 `finally` 區塊，即可清除 [try](../../../csharp/language-reference/keywords/try-catch.md) 區塊中所配置的任何資源，以及執行程式碼，即使 `try` 區塊中發生例外狀況也是一樣。 一般而言，會在控制權離開 `try` 陳述式時，執行 `finally` 區塊的陳述式。 控制權轉移可能是正常執行、執行 `break`、`continue`、`goto` 或 `return` 陳述式，或是傳播 `try` 陳述式的例外狀況所造成。  

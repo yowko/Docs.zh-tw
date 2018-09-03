@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -warnaserror compiler option [C#]
 - warnaserror compiler option [C#]
 ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
-ms.openlocfilehash: 762db1b3d72b5b4c3d606f3517f0b384f466d231
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a29b0a6095453e3d2747cad9d9f71b463d8f6b1f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218942"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43406191"
 ---
 # <a name="-warnaserror-c-compiler-options"></a>-warnaserror (C# 編譯器選項)
 **-warnaserror+** 選項會將所有警告都視為錯誤  
@@ -52,5 +52,6 @@ csc -warnaserror:642,649,652 in.cs
 ```  
   
 ## <a name="see-also"></a>請參閱  
- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
- [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
+- [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

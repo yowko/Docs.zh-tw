@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: d2fcc19bb7bc6de373412e7728f3025647c0435d
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 54ec003683953b53dedf8885a41350daf5338f83
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961478"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399438"
 ---
 # <a name="internal-c-reference"></a>internal (C# 參考)
 `internal` 關鍵字是類型和類型成員的[存取修飾詞](../../../csharp/language-reference/keywords/access-modifiers.md)。 
@@ -75,7 +75,7 @@ public class BaseClass
   
 ```csharp  
 // Assembly2_a.cs  
-// Compile with: /reference:Assembly1.dll  
+// Compile with: /reference:Assembly2.dll  
 public class TestAccess   
 {  
    static void Main()   
@@ -89,13 +89,14 @@ public class TestAccess
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
- [存取修飾詞](../../../csharp/language-reference/keywords/access-modifiers.md)  
- [存取範圍層級](../../../csharp/language-reference/keywords/accessibility-levels.md)  
- [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)  
- [public](../../../csharp/language-reference/keywords/public.md)  
- [private](../../../csharp/language-reference/keywords/private.md)  
- [protected](../../../csharp/language-reference/keywords/protected.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+- [存取修飾詞](../../../csharp/language-reference/keywords/access-modifiers.md)  
+- [存取範圍層級](../../../csharp/language-reference/keywords/accessibility-levels.md)  
+- [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)  
+- [public](../../../csharp/language-reference/keywords/public.md)  
+- [private](../../../csharp/language-reference/keywords/private.md)  
+- [protected](../../../csharp/language-reference/keywords/protected.md)

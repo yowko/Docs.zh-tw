@@ -13,12 +13,12 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 4a96da3668a73368dd98055a9082479f162b7b45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 76a53d6adcf4c55faa57c25f851e46dd4c2c6c22
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218172"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393207"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference (C# 編譯器選項)
 **-reference** 選項可讓編譯器將指定檔案的 [public](../../../csharp/language-reference/keywords/public.md) 類型資訊匯入至目前的專案，以讓您透過指定的組件檔案來參考中繼資料。  
@@ -91,5 +91,6 @@ GridV2::Grid
 ```  
   
 ## <a name="see-also"></a>請參閱  
- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
- [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
+- [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

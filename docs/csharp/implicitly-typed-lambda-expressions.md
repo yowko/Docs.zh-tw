@@ -3,12 +3,12 @@ title: 隱含型別 Lambda 運算式
 description: 了解您為何無法使用隱含型別變數宣告來宣告 Lambda 運算式。
 ms.date: 06/20/2016
 ms.assetid: a3851da9-e018-4389-9922-233db7d0f841
-ms.openlocfilehash: f06c55f51c30c941d6d507ac8e2edd95c5152742
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a6b52ba49ea39c0cb37e72b0ad40e18986c9be0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33211819"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43401496"
 ---
 # <a name="implicitly-typed-lambda-expressions"></a>隱含型別 Lambda 運算式
 
@@ -17,6 +17,6 @@ ms.locfileid: "33211819"
 
 指派兩邊都無法告知編譯器檢視指派運算子另一邊的物件，並查看我的類型是否相符。
 
-您可以閱讀[這篇文章](http://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/type-inference.pdf) (PDF 下載)，以取得更多有關 C# 語言為什麼會指定該行為的詳細資訊
+您可以閱讀[這篇文章](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/type-inference.pdf) (PDF 下載)，以取得更多有關 C# 語言為什麼會指定該行為的詳細資訊
 
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
 ms.openlocfilehash: c11e1f0c99b3189c7a353e6778c701667b0a1d12
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43000026"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332529"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>在 Visual Basic 中使用應用程式記錄檔
 `My.Applicaton.Log` 和 `My.Log` 物件讓您輕鬆地將記錄和追蹤資訊寫入記錄檔。  

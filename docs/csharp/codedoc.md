@@ -3,23 +3,24 @@ title: 使用 XML 註解記錄您的程式碼
 description: 了解如何使用 XML 文件註解記錄您的程式碼，並在編譯時期產生 XML 文件檔案。
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 1284f179c7debb323ea3bbd302df1f02bf8b31b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4c94e98478e71449a3f9cc4bf1f21462e17a371b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218501"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43392492"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>使用 XML 註解記錄您的程式碼
 
-XML 文件註解是一種特殊類型的註解，新增於任何使用者定義型別或成員的定義上方。 XML 文件註解具特殊性，因為編譯器可以處理它們以在編譯時期產生 XML 文件檔案。
+XML 文件註解是一種特殊類型的註解，新增於任何使用者定義型別或成員的定義上方。
+XML 文件註解具特殊性，因為編譯器可以處理它們以在編譯時期產生 XML 文件檔案。
 編譯器所產生的 XML 檔案可以隨著 .NET 組件一起散發，因此 Visual Studio 和其他 IDE 可以使用 IntelliSense 來顯示類型或成員的快速資訊。 此外，可以透過 [DocFX](https://dotnet.github.io/docfx/) 和 [Sandcastle](https://github.com/EWSoftware/SHFB) 這類工具執行 XML 檔案來產生 API 參考網站。
 
 編譯器會忽略 XML 文件註解 (例如所有其他註解)。
 
 您可以執行下列其中一項動作，以在編譯時期產生 XML 檔案︰
 
-- 如果您正在從命令列使用 .NET Core 開發應用程式，則可以將 [DocumentationFile 項目](http://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties)新增至 .csproj 專案檔的 `<PropertyGroup>` 區段。 下列範例會在根檔案名稱與組件相同的專案目錄中產生 XML 檔案：
+- 如果您正在從命令列使用 .NET Core 開發應用程式，則可以將 [DocumentationFile 項目](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties)新增至 .csproj 專案檔的 `<PropertyGroup>` 區段。 下列範例會在根檔案名稱與組件相同的專案目錄中產生 XML 檔案：
 
    ```xml
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
@@ -27,11 +28,11 @@ XML 文件註解是一種特殊類型的註解，新增於任何使用者定義�
 
    您也可以指定 XML 檔案的確切絕對或相對路徑和名稱。 下列範例會在與應用程式的偵錯版本相同的目錄中產生 XML 檔案︰
 
-    ```xml
+   ```xml
    <DocumentationFile>bin\Debug\netcoreapp1.0\App.xml</DocumentationFile>
    ```
 
-- 如果您正在使用 Visual Studio 開發應用程式，請以滑鼠右鍵按一下專案，然後選取 [屬性]。 在屬性對話方塊中，選取 [建置] 索引標籤，然後檢查 [XML 文件檔案]。 您也可以變更編譯器寫入檔案的位置。 
+- 如果您正在使用 Visual Studio 開發應用程式，請以滑鼠右鍵按一下專案，然後選取 [屬性]。 在屬性對話方塊中，選取 [建置] 索引標籤，然後檢查 [XML 文件檔案]。 您也可以變更編譯器寫入檔案的位置。
 
 - 如果您正在從命令列編譯 .NET Framework 應用程式，請在編譯時新增 [/doc 編譯器選項](language-reference/compiler-options/doc-compiler-option.md)。  
 
@@ -121,7 +122,8 @@ XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 �
 
 [!code-csharp[See Tag](../../samples/snippets/csharp/concepts/codedoc/see-tag.cs)]
 
-`cref` 為**必要**屬性，代表可從目前編譯環境取得的類型或其成員的參考。 這可以是專案或已參考組件中所定義的任何類型。
+`cref` 為**必要**屬性，代表可從目前編譯環境取得的類型或其成員的參考。
+這可以是專案或已參考組件中所定義的任何類型。
 
 ### <a name="ltseealsogt"></a>&lt;seealso&gt;
 
@@ -174,7 +176,8 @@ XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 �
 [!code-csharp[Tagged Library](../../samples/snippets/csharp/concepts/codedoc/tagged-library.cs)]
 
 從程式碼中，您可以產生使用可按式交互參照完成的詳細文件網站。 但您會面臨另一個問題︰您的程式碼變得難以閱讀。
-因為有太多資訊需要仔細檢查，這會是想要參與這個程式碼之開發人員的夢魘。 還好有 XML 標記可協助您處理這個問題︰
+因為有太多資訊需要仔細檢查，這會是想要參與這個程式碼之開發人員的夢魘。
+還好有 XML 標記可協助您處理這個問題︰
 
 ### <a name="ltincludegt"></a>&lt;include&gt;
 
@@ -184,11 +187,12 @@ XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 �
 
 [!code-xml[Sample XML](../../samples/snippets/csharp/concepts/codedoc/include.xml)]
 
-在上述 XML 中，每個成員的文件註解都會直接顯示在執行動作之後所命名的標記內。 您可以選擇自己的策略。 現在，您的 XML 註解位於在不同的檔案中，請查看如何使用 `<include>` 標記讓您的程式碼更容易閱讀：
+在上述 XML 中，每個成員的文件註解都會直接顯示在執行動作之後所命名的標記內。 您可以選擇自己的策略。
+現在，您的 XML 註解位於在不同的檔案中，請查看如何使用 `<include>` 標記讓您的程式碼更容易閱讀：
 
 [!code-csharp[Include Tag](../../samples/snippets/csharp/concepts/codedoc/include-tag.cs)]
 
-目前您已經準備好了：我們的程式碼又再次為可讀，而且未遺失文件資訊。 
+目前您已經準備好了：我們的程式碼又再次為可讀，而且未遺失文件資訊。
 
 `filename` 屬性代表包含文件的 XML 檔案名稱。
 
@@ -217,6 +221,6 @@ Sandcastle 這類工具會支援 [`<event>`](http://ewsoftware.github.io/XMLComm
 - 編譯器會驗證包含程式碼其他部分的檔案路徑和參考的參數。
 
 ## <a name="see-also"></a>另請參閱
-[XML 文件註解 (C# 程式設計手冊)](programming-guide/xmldoc/xml-documentation-comments.md)
 
-[建議使用的文件註解標記 (C# 程式設計手冊)](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+* [XML 文件註解 (C# 程式設計手冊)](programming-guide/xmldoc/xml-documentation-comments.md)
+* [建議使用的文件註解標記 (C# 程式設計手冊)](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

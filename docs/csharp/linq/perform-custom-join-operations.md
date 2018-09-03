@@ -3,12 +3,12 @@ title: 執行自訂的聯結作業 (C# 中的 LINQ)
 description: 了解如何在 C# 中執行自訂的 LINQ 聯結作業。
 ms.date: 12/1/2016
 ms.assetid: 56a2a4a5-7299-497d-b3c3-23c848678911
-ms.openlocfilehash: 09ed0a202627a07ac8958de6ac46d7dc6c2837d0
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: a0e08396c006f68949357c50a28b3b0982f0dd83
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37403966"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468106"
 ---
 # <a name="perform-custom-join-operations"></a>執行自訂的聯結作業
 
@@ -43,6 +43,6 @@ ms.locfileid: "37403966"
 
 ## <a name="see-also"></a>另請參閱
 
-[Language-Integrated Query (LINQ)](index.md)  
-[join 子句](../language-reference/keywords/join-clause.md)  
-[排序 Join 子句的結果](order-the-results-of-a-join-clause.md)  
+- [Language-Integrated Query (LINQ)](index.md)  
+- [join 子句](../language-reference/keywords/join-clause.md)  
+- [排序 Join 子句的結果](order-the-results-of-a-join-clause.md)  

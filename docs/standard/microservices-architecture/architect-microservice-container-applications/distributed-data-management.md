@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 分散式資�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: aeafaa8e618e02cab127593a19dda1d72780e091
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 7e539067b20f0e018496b0076582619cb88072e1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42998680"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480661"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>分散式資料管理的挑戰和解決方案
 
@@ -43,7 +43,7 @@ ms.locfileid: "42998680"
 
 如前所述，每項微服務所擁有的資料都是該微服務私用的，只能使用其微服務 API 存取。 因此，呈現的挑戰就是如何實作端對端商務程序，同時跨多項微服務保持一致性。
 
-請參閱 [eShopOnContainers 參考應用程式](http://aka.ms/eshoponcontainers)的範例來分析此問題。 目錄微服務會維護包括庫存量在內的所有產品相關資訊。 訂購微服務會管理訂單，並一定會確認新訂單不能超過可用目錄產品存貨量。 (或者此案例可能涉及處理缺貨產品的邏輯。)在此應用程式的假設整合型版本中，訂購子系統只會使用 ACID 交易來檢查可用的存貨、在訂單資料表中建立訂單，然後更新產品資料表中可用的存貨。
+請參閱 [eShopOnContainers 參考應用程式](https://aka.ms/eshoponcontainers)的範例來分析此問題。 目錄微服務會維護包括庫存量在內的所有產品相關資訊。 訂購微服務會管理訂單，並一定會確認新訂單不能超過可用目錄產品存貨量。 (或者此案例可能涉及處理缺貨產品的邏輯。)在此應用程式的假設整合型版本中，訂購子系統只會使用 ACID 交易來檢查可用的存貨、在訂單資料表中建立訂單，然後更新產品資料表中可用的存貨。
 
 不過，在微服務型的應用程式中，Order 和 Product 資料表分別為其微服務所擁有。 沒有任何一項微服務會在自己的交易或查詢中包含其他微服務所擁有的資料庫，如圖 4-9 所示。
 
@@ -51,7 +51,7 @@ ms.locfileid: "42998680"
 
 **圖 4-9**。 微服務無法直接存取其他微服務的資料表
 
-訂購微服務不應該直接更新產品資料表，因為產品資料表為目錄微服務所擁有。 為更新目錄微服務，訂購微服務只會使用非同步通訊，例如整合事件 (訊息和事件通訊)。 這是 [eShopOnContainers](http://aka.ms/eshoponcontainers) 參考應用程式執行這類更新的方式。
+訂購微服務不應該直接更新產品資料表，因為產品資料表為目錄微服務所擁有。 為更新目錄微服務，訂購微服務只會使用非同步通訊，例如整合事件 (訊息和事件通訊)。 這是 [eShopOnContainers](https://aka.ms/eshoponcontainers) 參考應用程式執行這類更新的方式。
 
 如 [CAP theorem](https://en.wikipedia.org/wiki/CAP_theorem) (CAP 定理) 所述，您需要在可用性與 ACID 強式一致性中擇一。 大部分的微服務型案例都會要求可用性和高延展性，而不是強式一致性。 關鍵任務應用程式必須保持啟用及執行，開發人員才能透過處理弱式或最終一致性的技術，處理強式一致性。 這是大部分微服務型架構採用的方法。
 

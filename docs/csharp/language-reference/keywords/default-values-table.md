@@ -12,11 +12,11 @@ helpviewer_keywords:
 - constructors [C#], default constructor
 - types [C#], default constructor return values
 ms.openlocfilehash: 184a9f42ddd3654a81aef0b7ce35e404de2d4bb9
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935835"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43255430"
 ---
 # <a name="default-values-table-c-reference"></a>預設值表 (C# 參考)
 
@@ -69,7 +69,7 @@ int a = new int();
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
-- [型別的參考表格](reference-tables-for-types.md)
+- [型別的參考表](reference-tables-for-types.md)
 - [實值型別](value-types.md)
 - [實值型別表](value-types-table.md)
 - [內建型別表](built-in-types-table.md)

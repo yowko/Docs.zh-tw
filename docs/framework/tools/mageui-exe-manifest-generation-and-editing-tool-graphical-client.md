@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 0772fcb32ce4d7500b358db312241e489b3a24c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb93e53e7b77ee2747bce3fb9a45d7061450e65c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404949"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43390256"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (圖形用戶端、資訊清單產生和編輯工具)
 MageUI.exe 與命令列工具 Mage.exe 支援相同的功能，不過前者會採用 Windows 使用者介面 (UI)。 您可以利用此工具建立、編輯和簽章部署與應用程式資訊清單。 使用 MageUI.exe 建立的新資訊清單是以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 為目標。 若要以舊版 .NET Framework 為目標，則應該使用舊版 MageUI.exe。 在資訊清單中加入或移除組件或重新簽署現有資訊清單時，MageUI.exe 並不會更新資訊清單，使其以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 為目標。 如需詳細資訊，請參閱 [Mage.exe (資訊清單產生和編輯工具)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)。  
@@ -65,7 +65,7 @@ MageUI.exe 與命令列工具 Mage.exe 支援相同的功能，不過前者會�
 |**新增**|產生新的 .pfx，這個檔案無法透過憑證授權單位 (CA) 進行驗證。 如需用於簽署 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 部署所使用之憑證類型的詳細資訊，請參閱[受信任的應用程式部署概觀](/visualstudio/deployment/trusted-application-deployment-overview)。|  
 |**密碼**|提供輸入密碼的區域，此密碼會在使用此憑證簽署時使用。 如果不適用，可以保持空白。|  
 |**用儲存的憑證簽署**|以可選取清單的形式，顯示儲存在電腦憑證存放區內的數位憑證。|  
-|**時間戳記 URI**|顯示數位時間戳記服務的統一資源定位器 (URI)。 在資訊清單加上時間戳記之後，若數位憑證在您部署應用程式的下一個版本之前到期，就無須重新簽署資訊清單。 如需詳細資訊，請參閱 [Windows 根憑證計劃成員](http://go.microsoft.com/fwlink/?LinkId=159000)和 [ClickOnce 和 Authenticode](/visualstudio/deployment/clickonce-and-authenticode)。|  
+|**時間戳記 URI**|顯示數位時間戳記服務的統一資源定位器 (URI)。 在資訊清單加上時間戳記之後，若數位憑證在您部署應用程式的下一個版本之前到期，就無須重新簽署資訊清單。 如需詳細資訊，請參閱 [Windows 根憑證計劃成員](https://go.microsoft.com/fwlink/?LinkId=159000)和 [ClickOnce 和 Authenticode](/visualstudio/deployment/clickonce-and-authenticode)。|  
 |**不簽署**|可讓您儲存資訊清單，而不需要從數位憑證加入簽章。|  
   
 ## <a name="tab-and-panel-descriptions"></a>索引標籤和面板描述  
@@ -127,7 +127,7 @@ MageUI.exe 與命令列工具 Mage.exe 支援相同的功能，不過前者會�
   
 |UI 項目|描述|  
 |----------------|-----------------|  
-|**使用權限集合類型**|指定要在用戶端上執行的應用程式所需的最低權限集合。 如需這些權限集合的描述和其所會要求的權限，請參閱 [NIB：具名使用權限集合](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3)。|  
+|**使用權限集合類型**|指定要在用戶端上執行的應用程式所需的最低權限集合。 如需這些權限集合的描述和其所會要求的權限，請參閱 [NIB：具名使用權限集合](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3)。|  
 |**詳細資料**|建立應用程式資訊清單的 XML 來表示權限設定。 除非您有充分的了解應用程式資訊清單 XML 格式，否則您應該手動編輯此 XML。 如需詳細資訊，請參閱 [ClickOnce 應用程式資訊清單](/visualstudio/deployment/clickonce-application-manifest)。|  
   
 ### <a name="deployment-manifest-tab"></a>部署資訊清單索引標籤  

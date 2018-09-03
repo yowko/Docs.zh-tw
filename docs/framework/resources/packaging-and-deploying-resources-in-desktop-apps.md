@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a6e6219d6449fedabe6e7cb0b349efb6fc74ee6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7aca04c191234686de5a15cb3dc1336080a3a344
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399687"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485699"
 ---
 # <a name="packaging-and-deploying-resources-in-desktop-apps"></a>在桌面應用程式中封裝和部署資源
 應用程式會依賴 <xref:System.Resources.ResourceManager> 類別所代表的 .NET Framework Resource Manager，來擷取當地語系化的資源。 Resource Manager 假設使用中樞和支點模型來封裝和部署資源。 中樞是主要組件，其中包含未當地語系化的可執行程式碼以及稱為中性或預設文化特性之單一文化特性的資源。 預設文化特性是應用程式的後援文化特性；如果找不到當地語系化的資源，則它是使用其資源的文化特性。 每個支點都會連線至附屬組件，其中包含單一文化特性但未包含任何程式碼的資源。  
@@ -53,7 +53,7 @@ ms.locfileid: "33399687"
 -   因為您必須測試數個組態，所以測試應用程式的初始成本會增加。 請注意，長期而言，測試一個具有數個附屬的核心應用程式，與測試並維護數個平行國際版本相較之下，較為簡單且費用較少。  
   
 ## <a name="resource-naming-conventions"></a>資源命名慣例  
- 當您封裝應用程式的資源時，必須使用 Common Language Runtime 所預期的資源命名慣例來命名它們。 執行階段會依文化特性名稱識別資源。 每個文化特性都會獲指定唯一名稱，此名稱通常是下列項目的組合：與語言建立關聯的兩個字母小寫文化特性名稱以及與國家或地區建立關聯的兩個字母大寫子文化特性名稱 (必要時)。 子文化特性名稱遵循文化特性名稱，以破折號 (-) 分隔。 範例包括 ja-JP (代表在日本日文)、en-US (美式英文)、de-DE (德國德文)，或 de-AT (奧地利德文)。 如需文化特性名稱的完整清單，請參閱全球化開發人員中心上的[國家語言支援 (NLS) API 參考](http://go.microsoft.com/fwlink/?LinkId=200048)。  
+ 當您封裝應用程式的資源時，必須使用 Common Language Runtime 所預期的資源命名慣例來命名它們。 執行階段會依文化特性名稱識別資源。 每個文化特性都會獲指定唯一名稱，此名稱通常是下列項目的組合：與語言建立關聯的兩個字母小寫文化特性名稱以及與國家或地區建立關聯的兩個字母大寫子文化特性名稱 (必要時)。 子文化特性名稱遵循文化特性名稱，以破折號 (-) 分隔。 範例包括 ja-JP (代表在日本日文)、en-US (美式英文)、de-DE (德國德文)，或 de-AT (奧地利德文)。 如需文化特性名稱的完整清單，請參閱全球化開發人員中心上的[國家語言支援 (NLS) API 參考](https://go.microsoft.com/fwlink/?LinkId=200048)。  
   
 > [!NOTE]
 >  如需建立資源檔的資訊，請參閱[建立資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)和[建立附屬組件](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)。  

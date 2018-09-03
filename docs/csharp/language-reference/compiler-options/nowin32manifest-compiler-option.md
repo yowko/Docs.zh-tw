@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -nowin32manifest compiler option [C#]
 - /nowin32manifest compiler option [C#]
 ms.assetid: 6f06365b-b87b-46a2-b187-b3bfeaf4862d
-ms.openlocfilehash: a07ead99ddd4e230fff8d1452ef81171ed849b29
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3ab52d541c169850f6ae7ba7e7cfded290f890e7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214928"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43420615"
 ---
 # <a name="-nowin32manifest-c-compiler-options"></a>-nowin32manifest (C# 編譯器選項)
 使用 **-nowin32manifest** 選項指示編譯器不要將任何應用程式資訊清單內嵌在可執行檔中。  
@@ -32,5 +32,6 @@ ms.locfileid: "33214928"
  如需建立資訊清單的詳細資訊，請參閱 [-win32manifest (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md)。  
   
 ## <a name="see-also"></a>請參閱  
- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
- [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
+- [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

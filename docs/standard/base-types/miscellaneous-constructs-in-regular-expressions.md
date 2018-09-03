@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9fabf1a133ca3c3b3ba39a4898ce0aceb378f76d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbea588604ebd5ad39e134a4ecfe771c89fb1121
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571978"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43390564"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>規則運算式中的其他建構
 .NET 中的規則運算式包含三個其他語言建構。 其中一個可讓您在規則運算式模式的中間，啟用或停用特定比對選項。 其餘兩個可讓您在規則運算式中包含註解。  
@@ -63,7 +63,7 @@ ms.locfileid: "33571978"
 ## <a name="inline-comment"></a>內嵌註解  
  `(?#` *comment*`)` 建構可讓您在規則運算式中包含內嵌註解。 規則運算式引擎不會在模式比對中使用註解的任一部分，不過，會將註解包含在 <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType> 方法所傳回的字串中。 註解會在第一個右括號結束。  
   
- 下列範例會重複上一節範例中的第一個規則運算式模式。 它會將兩個內嵌註解加入規則運算式，以指出比較是否區分大小寫。 規則運算式模式 `\b((?# case-sensitive comparison)D\w+)\s((?#case-insensitive comparison)d\w+)\b` 定義如下。  
+ 下列範例會重複上一節範例中的第一個規則運算式模式。 它會將兩個內嵌註解加入規則運算式，以指出比較是否區分大小寫。 規則運算式模式 `\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b` 定義如下。  
   
 |模式|描述|  
 |-------------|-----------------|  
@@ -92,7 +92,6 @@ ms.locfileid: "33571978"
 |`\d+`|比對一個或多個十進位數字。|  
 |`(,-*\d+)*`|比對零個或一個出現的逗號，後面接著一個選擇性減號，再接著一個或多個十進位數字。|  
 |`(\:\w{1,4}?)*`|比對零個或一個出現的冒號，後面接著一到四個 (但越少越好) 空白字元。|  
-|`(?#case insensitive comparison)`|內嵌註解。 它不會影響模式比對行為。|  
 |`\}`|比對右括號。|  
 |`(?x)`|啟用忽略模式空白字元選項，以辨識行結尾註解。|  
 |`# Looks for a composite format item.`|行結尾註解。|  

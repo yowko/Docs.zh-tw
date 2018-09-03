@@ -2,17 +2,17 @@
 title: 在 XNA 應用程式中使用操作和慣性
 ms.date: 03/30/2017
 ms.assetid: b7c18905-850c-4da4-8977-a074406a4263
-ms.openlocfilehash: 78deee127f43aac71a1a4daaab808598065c2fe5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 70b8d0c5c098089b6f16ef817ff86698f68cf7c3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741668"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43478139"
 ---
 # <a name="using-manipulations-and-inertia-in-an-xna-application"></a>在 XNA 應用程式中使用操作和慣性
 本文說明如何在 Microsoft XNA 應用程式中使用操作和慣性處理，來控制遊戲個件的移動。 在閱讀本文之前，您應該先熟悉[操作和慣性概觀](../../../docs/framework/common-client-technologies/manipulations-and-inertia-overview.md)主題和基本 XNA 程式設計概念。  
   
- 若要執行本文描述的工作，您的 XNA 專案必須參考 <xref:System.Windows.Input.Manipulations> 組件，而您的電腦上必須安裝 [XNA Game Studio](http://msdn.microsoft.com/library/bb200104.aspx) ([下載](http://www.microsoft.com/downloads/details.aspx?FamilyId=7D70D6ED-1EDD-4852-9883-9A33C0AD8FEE&displaylang=en))，以便專案可以參考 XNA 組件。  
+ 若要執行本文描述的工作，您的 XNA 專案必須參考 <xref:System.Windows.Input.Manipulations> 組件，而您的電腦上必須安裝 [XNA Game Studio](https://msdn.microsoft.com/library/bb200104.aspx) ([下載](https://www.microsoft.com/downloads/details.aspx?FamilyId=7D70D6ED-1EDD-4852-9883-9A33C0AD8FEE&displaylang=en))，以便專案可以參考 XNA 組件。  
   
 ## <a name="overview-of-functionality"></a>功能概觀  
  本文示範如何建立代表使用操作和慣性處理之遊戲個件的自訂類別。 這個類別可讓您透過使用滑鼠拖曳再放開的方式，在畫面上操作遊戲個件。 放開滑鼠之後，慣性處理會讓遊戲個件保持移動，但速度會逐漸變慢。 移動方式包括線性移動和角度移動。  

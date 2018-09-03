@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: 1da11548e95a2eedb8a16cf27807ff59daeb2bc5
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: d0a51afe61e75b750ed8bf336ca4636cb58dfbba
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34566120"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43396895"
 ---
 # <a name="abstract-c-reference"></a>abstract (C# 參考)
 `abstract` 修飾詞表示要修改的項目具有遺失或不完整的實作。 抽象修飾詞可以與類別、方法、屬性、索引子和事件搭配使用。 在類別宣告中使用 `abstract` 修飾詞，來表示某一類別只是要作為其他類別的基底類別。 標記為抽象或包括在抽象類別中的成員，必須由衍生自抽象類別的類別所實作。  
@@ -81,9 +81,10 @@ BaseClass bc = new BaseClass();   // Error
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)  
- [virtual](../../../csharp/language-reference/keywords/virtual.md)  
- [override](../../../csharp/language-reference/keywords/override.md)  
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)
+
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)  
+- [virtual](../../../csharp/language-reference/keywords/virtual.md)  
+- [override](../../../csharp/language-reference/keywords/override.md)  
+- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)

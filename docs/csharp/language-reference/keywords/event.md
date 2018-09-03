@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
-ms.openlocfilehash: b58e06c87ebf601daf231c83993ebe512f51ecd9
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 35a42692bc87da63c69d7ccbce1b49396a84f5a2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961491"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393948"
 ---
 # <a name="event-c-reference"></a>event (C# 參考)
 `event` 關鍵字用來在發行者類別中宣告事件。  
@@ -46,10 +46,11 @@ ms.locfileid: "37961491"
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
- [add](../../../csharp/language-reference/keywords/add.md)  
- [remove](../../../csharp/language-reference/keywords/remove.md)  
- [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)  
- [如何：組合委派 (多點傳送委派)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
+
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+- [add](../../../csharp/language-reference/keywords/add.md)  
+- [remove](../../../csharp/language-reference/keywords/remove.md)  
+- [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)  
+- [如何：組合委派 (多點傳送委派)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)

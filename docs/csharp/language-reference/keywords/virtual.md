@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-ms.openlocfilehash: af5b7e3efdc98910ebbe7e061eba250cbe2d0c50
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 384cc442e51ec96cafe9b44ef945bb913b0e65f6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207345"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484037"
 ---
 # <a name="virtual-c-reference"></a>virtual (C# 參考)
 `virtual` 關鍵字可用來修改方法、屬性、索引子或事件宣告，並可在衍生類別中受到覆寫。 例如，繼承這個方法的任何類別均可將其覆寫：  
@@ -57,12 +57,13 @@ public Cylinder(double r, double h): base(r, h) {}
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)  
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
- [多型](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)  
- [abstract](../../../csharp/language-reference/keywords/abstract.md)  
- [override](../../../csharp/language-reference/keywords/override.md)  
- [new](../../../csharp/language-reference/keywords/new.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)  
+- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+- [多型](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)  
+- [abstract](../../../csharp/language-reference/keywords/abstract.md)  
+- [override](../../../csharp/language-reference/keywords/override.md)  
+- [new](../../../csharp/language-reference/keywords/new.md)

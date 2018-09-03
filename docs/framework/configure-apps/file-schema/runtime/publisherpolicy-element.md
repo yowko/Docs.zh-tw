@@ -24,9 +24,9 @@ ms.locfileid: "32746094"
   
  \<configuration>  
 \<執行階段 >  
-\<assemblyBinding >  
-\<y >  
-\<p >  
+\<assemblyBinding>  
+\<dependentAssembly>  
+\<publisherPolicy>  
   
 ## <a name="syntax"></a>語法  
   

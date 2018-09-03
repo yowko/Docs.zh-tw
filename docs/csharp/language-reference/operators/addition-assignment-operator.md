@@ -8,11 +8,11 @@ helpviewer_keywords:
 - addition assignment operator (+=) [C#]
 ms.assetid: 9cdf97e6-331d-492b-85e1-3ec3171484e9
 ms.openlocfilehash: bd0997ec5b7d79a41e01f9c2b17533293e412c1e
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933783"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468405"
 ---
 # <a name="-operator-c-reference"></a>+= 運算子 (C# 參考)
 加法指派運算子。  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ee74c0f2ae316c7dd36dd943dc5c8636ee53fb2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c42311368bf94a2629f656b61b09cb7c2c5f68b6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391094"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387985"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework 開發指南
 本節說明如何建立、設定、偵錯、保護和部署 .NET Framework 應用程式。 本節也提供有關技術領域的資訊，例如動態程式設計、互通性、擴充性、記憶體管理和執行緒。  
@@ -65,7 +65,7 @@ ms.locfileid: "33391094"
  [效能](../../docs/framework/performance/index.md)  
  提供有關快取、延遲初始設定、可靠性和 ETW 事件的資訊。  
   
- <!--zz [Advanced Reading for the .NET Framework](http://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)  
+ <!--zz [Advanced Reading for the .NET Framework](https://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)  
  Provides information about advanced development tasks and techniques in the .NET Framework, including extensibility, interoperability, and reflection. Also includes the reference topics for unmanaged APIs that can be used by managed apps, such as runtime hosts, compilers, disassemblers, debuggers, and profilers.  --> 
   
 ## <a name="reference"></a>參考資料  
@@ -82,5 +82,5 @@ ms.locfileid: "33391094"
  [工具](../../docs/framework/tools/index.md)  
  說明如何應用 .NET Framework 技術，協助您開發、設定及部署應用程式的工具。  
   
- [.NET Framework 範例](http://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)  
+ [.NET Framework 範例](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)  
  提供 MSDN 程式碼範例庫中之範例應用程式的連結，以示範 .NET Framework 技術。

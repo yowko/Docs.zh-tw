@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sbyte keyword [C#]
 ms.assetid: 1a9c7b48-73d1-4d33-b485-c4faf0a816bc
-ms.openlocfilehash: 94968ed61fced9716112740613a4e3a86622e2e3
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 1dca23c4a4216f1edc79b7701a002a28652aed26
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028054"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419161"
 ---
 # <a name="sbyte-c-reference"></a>sbyte (C# 參考)
 
@@ -104,12 +104,13 @@ sbyte y = (sbyte)3.0;  // OK: explicit conversion
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.SByte>  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
- [整數型別表](../../../csharp/language-reference/keywords/integral-types-table.md)  
- [內建型別表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
- [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
- [明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+## <a name="see-also"></a>請參閱
+
+- <xref:System.SByte>  
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+- [整數型別表](../../../csharp/language-reference/keywords/integral-types-table.md)  
+- [內建型別表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- [明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

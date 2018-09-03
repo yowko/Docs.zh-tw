@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5bf162a3ef9f66e7c7d74c96f13c055857818a2b
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: f414e5b0463e28427c8c60e2f8b8774ad6973da2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37070950"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464133"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>資料平行處理原則 (工作平行程式庫)
 「資料平行處理原則」是指在來源集合或陣列中的元素上，同時 (也就是平行) 執行相同作業的情節。 在資料平行作業中，會將來源集合分割，讓多個執行緒可以同時在不同區段上操作。  
   
- 工作平行程式庫 (TPL) 會透過 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 類別支援資料平行處理原則。 這個類別針對 [for](~/docs/csharp/language-reference/keywords/for.md) 和 [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) 迴圈 (在 Visual Basic 中為 `For` 和 `For Each`)，提供以方法為基礎的平行實作。 針對 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 迴圈撰寫迴圈邏輯的方式，和撰寫循序迴圈很像。 您不必建立執行緒或佇列工作項目。 在基本迴圈中，您不必採用鎖定。 TPL 會為您處理所有低階工作。 如需有關 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 之用途的深入資訊，請下載這份文件：[平行程式設計模式：了解及套用 .NET Framework 4 中的平行模式](http://www.microsoft.com/download/details.aspx?id=19222) \(英文\)。 下列程式碼範例顯示簡單的 `foreach` 迴圈及其平行對等項目。  
+ 工作平行程式庫 (TPL) 會透過 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 類別支援資料平行處理原則。 這個類別針對 [for](~/docs/csharp/language-reference/keywords/for.md) 和 [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) 迴圈 (在 Visual Basic 中為 `For` 和 `For Each`)，提供以方法為基礎的平行實作。 針對 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 迴圈撰寫迴圈邏輯的方式，和撰寫循序迴圈很像。 您不必建立執行緒或佇列工作項目。 在基本迴圈中，您不必採用鎖定。 TPL 會為您處理所有低階工作。 如需有關 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 之用途的深入資訊，請下載這份文件：[平行程式設計模式：了解及套用 .NET Framework 4 中的平行模式](https://www.microsoft.com/download/details.aspx?id=19222) \(英文\)。 下列程式碼範例顯示簡單的 `foreach` 迴圈及其平行對等項目。  
   
 > [!NOTE]
 >  本文件使用 Lambda 運算式來定義 TPL 中的委派。 如果您不熟悉 C# 或 Visual Basic 中的 Lambda 運算式，請參閱 [PLINQ 和 TPL 中的 Lambda 運算式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)。  
@@ -31,7 +31,7 @@ ms.locfileid: "37070950"
  當平行迴圈執行時，TPL 會分割資料來源，讓迴圈可以同時在多個部分上操作。 在幕後，工作排程器會依據系統資源和工作負載來分割工作。 如果工作負載變得不平衡，在可能的情況下，排程器會在多個執行緒與處理器之間轉散發工作。  
   
 > [!NOTE]
->  您也可以提供您自己的自訂 Partitioner 或排程器。 如需詳細資訊，請參閱 [PLINQ 和 TPL 的自訂 Partitioner](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md) 和[工作排程器](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)。  
+>  您也可以提供您自己的自訂 Partitioner 或排程器。 如需詳細資訊，請參閱 [PLINQ 和 TPL 的自訂 Partitioner](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md) 和[工作排程器](https://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)。  
   
  <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 方法都有數個多載，可讓您停止或中斷迴圈執行、監視其他執行緒上的迴圈狀態、維護執行緒區域狀態、完成執行緒區域物件、控制並行程度等等。 啟用這個功能的 Helper 類型包括 <xref:System.Threading.Tasks.ParallelLoopState>、<xref:System.Threading.Tasks.ParallelOptions>、<xref:System.Threading.Tasks.ParallelLoopResult>、<xref:System.Threading.CancellationToken> 和 <xref:System.Threading.CancellationTokenSource>。  
   

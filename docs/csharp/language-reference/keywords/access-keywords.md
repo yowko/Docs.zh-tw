@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - access keywords [C#]
 ms.assetid: 3b680d9c-0998-42df-8ba7-5783f7abda75
-ms.openlocfilehash: f16e8ed779e8e6af4d1af00f9fb63fad8c318e45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7700c49a609a90faf9b3b8b90719a223952d7e9e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216016"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43391626"
 ---
 # <a name="access-keywords-c-reference"></a>存取關鍵字 (C# 參考)
 本節將介紹下列存取關鍵字：  
@@ -23,7 +23,8 @@ ms.locfileid: "33216016"
      表示類別目前的執行個體。  
   
 ## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [存取修飾詞](../../../csharp/language-reference/keywords/access-modifiers.md)  
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)
+
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [存取修飾詞](../../../csharp/language-reference/keywords/access-modifiers.md)  
+- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)

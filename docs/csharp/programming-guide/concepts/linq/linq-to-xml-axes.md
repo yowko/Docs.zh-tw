@@ -3,11 +3,11 @@ title: LINQ to XML 座標軸 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3f7d54ff-b608-43a1-9e2d-e70668b72df8
 ms.openlocfilehash: d12d35a6f9b02056946ba201a7bd5a961f64ba36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331486"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43408651"
 ---
 # <a name="linq-to-xml-axes-c"></a>LINQ to XML 座標軸 (C#)
 建立 XML 樹狀結構，或將 XML 文件載入到 XML 樹狀結構後，您可以進行查詢以尋找項目和屬性並擷取其值。  

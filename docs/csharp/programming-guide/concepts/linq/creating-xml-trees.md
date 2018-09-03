@@ -2,12 +2,12 @@
 title: 建立 XML 樹狀結構 (C#)
 ms.date: 07/20/2015
 ms.assetid: bccc3e0a-c08c-468e-9d30-e075670fdace
-ms.openlocfilehash: f9367cd795104020c88c40e820c6af15054e38be
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: a9e9cfd82434de0fabc8119aa500ad9d9ef8155a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999405"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481371"
 ---
 # <a name="creating-xml-trees-c"></a>建立 XML 樹狀結構 (C#)
 其中一個最常見的 XML 工做為建構 XML 樹狀結構。 本節描述數種建立這些樹狀結構的方式。  
@@ -18,7 +18,6 @@ ms.locfileid: "42999405"
 |-----------|-----------------|  
 |[函數式建構 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)|提供 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中的功能結構概觀。 功能結構可讓您利用單一陳述式建立所有或部分 XML 樹狀結構。 這個主題也顯示如何在建構 XML 樹狀時內嵌查詢。|  
 |[在 C# 中建立 XML 樹狀結構 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees-linq-to-xml-2.md)|顯示如何在 C# 中建立樹狀。|  
-|[複製與附加 (C#)](../../../../csharp/programming-guide/concepts/linq/cloning-vs-attaching.md)|示範從現有 XML 樹狀結構加入節點 (系統會複製節點然後再加入) 以及加入沒有父代之節點 (只是附加這些節點) 之間的差異。|  
 |[剖析 XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)|顯示如何從各種來源剖析 XML。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的層級位於用來剖析 XML 的 <xref:System.Xml.XmlReader> 頂端。|  
 |[如何：使用 XmlWriter 填入 XML 樹狀結構 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml.md)|顯示如何使用 <xref:System.Xml.XmlWriter> 填入 XML 樹狀結構。|  
 |[如何：使用 XSD 進行驗證 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md)|顯示如何使用 XSD 驗證 XML 樹狀。|  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
 ms.openlocfilehash: 6b943da442d2ec1210911cb9f4b6a0d56c7216d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336348"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465881"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>LINQ 中的查詢語法及方法語法 (C#)
 介紹性 Language Integrated Query ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) 文件中的大多數查詢都是使用 LINQ 宣告式查詢語法所撰寫。 不過，編譯程式碼時，必須將查詢語法轉譯成 .NET Common Language Runtime (CLR) 的方法呼叫。 這些方法呼叫會叫用標準查詢運算子，而其具有 `Where`、`Select`、`GroupBy`、`Join`、`Max` 和 `Average` 這類名稱。 您可以使用方法語法來直接呼叫它們，而不是使用查詢語法。  

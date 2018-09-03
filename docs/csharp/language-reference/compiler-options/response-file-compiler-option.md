@@ -7,12 +7,12 @@ helpviewer_keywords:
 - response files, specifying for compilation [C#]
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
-ms.openlocfilehash: facf2d45aff424d54dde45973cfec8cc8f93cb6a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f342f26ee8abe29e6c5a1477469c8b7292cd702e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215065"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43456499"
 ---
 # <a name="-c-compiler-options"></a>@ (C# 編譯器選項)
 @ 選項可讓您指定檔案，內含要編譯的編譯器選項和原始程式碼檔。  
@@ -55,4 +55,5 @@ ms.locfileid: "33215065"
 ```  
   
 ## <a name="see-also"></a>請參閱  
- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
+
+- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)

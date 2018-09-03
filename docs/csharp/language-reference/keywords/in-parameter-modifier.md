@@ -4,12 +4,12 @@ ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: 913957e6afad1d9d516a01f4bb0e377b94a40aea
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 54abd5192d0d9bb49be0a9feb8e5e4eaeb691a0c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924984"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43461718"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>in 參數修飾詞 (C# 參考)
 
@@ -118,9 +118,10 @@ Method(in i); // passed by readonly reference, explicitly using `in`
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>請參閱  
- [C# 參考](../index.md)  
- [C# 程式設計指南](../../programming-guide/index.md)  
- [C# 關鍵字](index.md)  
- [方法參數](method-parameters.md)  
- [具備實值型別的參考語意](../../reference-semantics-with-value-types.md)  
+## <a name="see-also"></a>請參閱
+
+- [C# 參考](../index.md)  
+- [C# 程式設計指南](../../programming-guide/index.md)  
+- [C# 關鍵字](index.md)  
+- [方法參數](method-parameters.md)  
+- [具備實值型別的參考語意](../../reference-semantics-with-value-types.md)  

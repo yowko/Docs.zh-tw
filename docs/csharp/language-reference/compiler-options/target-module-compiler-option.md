@@ -8,12 +8,12 @@ helpviewer_keywords:
 - target compiler options [C#], /target:module
 - /target compiler options [C#], /target:module
 ms.assetid: 9af1e4fa-c749-44e7-ae58-90a3d05d4e72
-ms.openlocfilehash: d02a46390ca34b8063320df6ec237a00c0423c88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7cc0e48a7a4a3ec3f28c89e80fadf6aa7e1130f2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214250"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43393122"
 ---
 # <a name="-targetmodule-c-compiler-options"></a>-target:module (C# 編譯器選項)
 這個選項可讓編譯器不要產生組件資訊清單。  
@@ -43,5 +43,6 @@ csc -target:module in.cs
 ```  
   
 ## <a name="see-also"></a>請參閱  
- [-target (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
+
+- [-target (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)

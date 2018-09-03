@@ -2,12 +2,12 @@
 title: 聯結作業 (C#)
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-ms.openlocfilehash: caf93848450bcef35fef492985ef9703321b1dcb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 23d1432d32b22964c333640ccd3ac8dc7a2394d4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325340"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480305"
 ---
 # <a name="join-operations-c"></a>聯結作業 (C#)
 兩個資料來源的「聯結」，就是某個資料來源中的物件，和另一個資料來源中共用通用屬性的物件的關聯。  
@@ -31,7 +31,7 @@ ms.locfileid: "33325340"
  <xref:System.Linq>  
  [標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
  [匿名類型](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
- [制定聯結和交叉乘積查詢](http://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)  
+ [制定聯結和交叉乘積查詢](https://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)  
  [join 子句](../../../../csharp/language-reference/keywords/join-clause.md)  
  [如何：使用複合索引鍵執行聯結](../../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)  
  [如何：從不同的檔案聯結內容 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)  

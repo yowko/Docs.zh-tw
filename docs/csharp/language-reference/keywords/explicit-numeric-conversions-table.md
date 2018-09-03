@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-ms.openlocfilehash: 7363df3e4b2449924222745de409fd68349b93de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ca052dea4ee4abc866d2b02055188b0707499d4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218380"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43475929"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>明確數值轉換表 (C# 參考)
 明確數值轉換是使用 cast 運算式，用來將任何數值類型轉換成任何其他數值類型，沒有任何隱含的轉換。 下表顯示這些轉換。  
@@ -56,11 +56,12 @@ ms.locfileid: "33218380"
   
  如需明確轉換的詳細資訊，請參閱＜C# 語言規格＞中的＜明確＞。 如需如何存取規格的詳細資訊，請參閱 [C# 語言規格](../../../csharp/language-reference/language-specification/index.md)。  
   
-## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [轉換和型別轉換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
- [() 運算子](../../../csharp/language-reference/operators/invocation-operator.md)  
- [整數型別表](../../../csharp/language-reference/keywords/integral-types-table.md)  
- [內建型別表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
- [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [轉換和型別轉換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
+- [() 運算子](../../../csharp/language-reference/operators/invocation-operator.md)  
+- [整數型別表](../../../csharp/language-reference/keywords/integral-types-table.md)  
+- [內建型別表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)

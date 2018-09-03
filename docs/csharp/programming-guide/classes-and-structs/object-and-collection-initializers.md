@@ -5,12 +5,12 @@ helpviewer_keywords:
 - object initializers [C#]
 - collection initializers [C#]
 ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
-ms.openlocfilehash: ad8127bfdd7178051077e6f3fe75c777acf5d345
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9986a91b18c536773f4ca20b71c54588c3e95f32
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321944"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43476127"
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>物件和集合初始設定式 (C# 程式設計手冊)
 物件初始設定式可讓您在建立期間將值指派給物件的任何可存取欄位或屬性，而不用叫用後面接著幾行指派陳述式的建構函式。 物件初始設定式語法可讓您為建構函式指定引數或省略引數 (以及括號語法)。  下列範例將示範如何使用有具名類型 `Cat` 的物件初始設定式，以及如何叫用預設建構函式。 請注意 `Cat` 類別中自動實作屬性的用法。 如需詳細資訊，請參閱[自動實作的屬性](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)。  
@@ -43,9 +43,6 @@ foreach(var p in productInfos){...}
 ```csharp
 select new {p.ProductName, Price = p.UnitPrice};  
 ```  
-  
-## <a name="object-initializers-with-nullable-types"></a>具有可為 null 類型的物件初始設定式  
- 使用具有可為 null 類型的物件初始設定式是編譯時期錯誤。  
   
 ## <a name="collection-initializers"></a>集合初始設定式  
  如果集合類別是實作 <xref:System.Collections.IEnumerable>，且具有 `Add` 與適當簽章以作為執行個體方法或擴充方法，集合初始設定式可讓您在初始化這類集合類別時，指定一或多個項目初始設定式。 項目初始設定式可以是簡單的值、運算式或物件初始設定式。 藉由使用集合初始設定式，您就不需要在原始程式碼中指定多個對類別之 `Add` 方法的呼叫，編譯器會加入呼叫。  

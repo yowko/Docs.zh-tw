@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parse strings
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
-ms.openlocfilehash: e2d788b27f54ac068922f0ebe558a2aea8a475ca
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: b6170be2dbb3f11906bbaa6e5c3be3e48a976246
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960006"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43403430"
 ---
 # <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>如何：使用 String.Split 剖析字串 (C# 指南)
 
@@ -32,9 +32,11 @@ ms.locfileid: "37960006"
 
 此行為可以更輕鬆地使用格式，例如代表表格式資料的逗號分隔值 (CSV) 檔案。 連續的逗號表示空白資料行。
 
-您可以傳遞選擇性 <xref:System.StringSplitOptions.RemoveEmptyEntries?displayProperty=nameWithType> 參數，以排除已傳回陣列中的任何空字串。 針對更複雜處理的已傳回集合，您可以使用 [LINQ](../programming-guide/concepts/linq/index.md) 來操作結果序列。    
+您可以傳遞選擇性 <xref:System.StringSplitOptions.RemoveEmptyEntries?displayProperty=nameWithType> 參數，以排除已傳回陣列中的任何空字串。 針對更複雜處理的已傳回集合，您可以使用 [LINQ](../programming-guide/concepts/linq/index.md) 來操作結果序列。
 
-<xref:System.String.Split%2A?displayProperty=nameWithType> 可以使用多個分隔符號字元。 下列範例會使用空格、逗號、句號、冒號和定位點，全部以包含這些分隔符號的陣列傳遞至 <xref:System.String.Split%2A>。  程式碼底部的迴圈會顯示所傳回陣列中的每個字組。  
+<xref:System.String.Split%2A?displayProperty=nameWithType> 可以使用多個分隔符號字元。
+下列範例會使用空格、逗號、句號、冒號和定位點，全部以包含這些分隔符號的陣列傳遞至 <xref:System.String.Split%2A>。
+程式碼底部的迴圈會顯示所傳回陣列中的每個字組。  
 
 [!code-csharp-interactive[split strings using multiple separators](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#3)]
 
@@ -48,7 +50,8 @@ ms.locfileid: "37960006"
 
 您可以查看 [GitHub 存放庫](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)中的程式碼，來嘗試這些範例。 或者，您可以將範例下載[為 ZIP 檔案](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)。
 
-## <a name="see-also"></a>請參閱  
- [C# 程式設計指南](../programming-guide/index.md)  
- [字串](../programming-guide/strings/index.md)  
- [.NET 規則運算式](../../standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 程式設計指南](../programming-guide/index.md)  
+- [字串](../programming-guide/strings/index.md)  
+- [.NET 規則運算式](../../standard/base-types/regular-expressions.md)

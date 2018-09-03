@@ -2,11 +2,12 @@
 title: 執行緒同步處理 (C#)
 ms.date: 07/20/2015
 ms.assetid: e42b1be6-c93c-479f-a148-be0759f1a4e1
-ms.openlocfilehash: 138b94ef8ae5fc54e42277127f9b22f88803457f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ed6cad647c965882a63282ce32c998cec138eec
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463152"
 ---
 # <a name="thread-synchronization-c"></a>執行緒同步處理 (C#)
 下列各節描述可用來同步處理多執行緒應用程式中資源存取的功能和類別。  
@@ -159,7 +160,6 @@ class ThreadingExample
  <xref:System.Threading>  
  <xref:System.Threading.EventWaitHandle.Set%2A>  
  <xref:System.Threading.Monitor>  
- [多執行緒應用程式 (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)  
  [lock 陳述式](../../../../csharp/language-reference/keywords/lock-statement.md)  
  [Mutex](../../../../standard/threading/mutexes.md)  
  [Interlocked 作業](../../../../standard/threading/interlocked-operations.md)  

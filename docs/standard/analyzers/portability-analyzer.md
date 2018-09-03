@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 07/26/2017
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: f310e5fe45315dfa41d596c92d9412dc6b3bc125
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 515dd7a393d87811377aa5d9fb02de35943b6966
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567558"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43415684"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -39,7 +39,7 @@ ms.locfileid: "33567558"
 
 ![可攜性報表](./media/portability-analyzer/portability-report.png)
 
-不想使用 Visual Studio？ 您也可以從命令提示字元使用 Portability Analyzer。 下載 [API Portability Analyzer](http://www.microsoft.com/download/details.aspx?id=42678)。
+不想使用 Visual Studio？ 您也可以從命令提示字元使用 Portability Analyzer。 下載 [API Portability Analyzer](https://www.microsoft.com/download/details.aspx?id=42678)。
 
 *   輸入下列命令分析目前的目錄︰`\...\ApiPort.exe analyze -f .`
 *   若要分析特定的 .dll 檔案清單，請輸入下列命令︰`\...\ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`

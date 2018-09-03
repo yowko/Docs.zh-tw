@@ -7,12 +7,12 @@ helpviewer_keywords:
 - String.Format method
 - Console.Write method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: cc215971d63a0ee61eb25ac45834a81fbbc50b96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8d034955d5d5d31788eafc0c21246451d7fd1f35
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216908"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474290"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>格式化數值結果表 (C# 參考)
 您可以使用 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法、透過會呼叫 `String.Format` 的 <xref:System.Console.Write%2A?displayProperty=nameWithType> 或 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 方法，或使用[字串內插補點](../tokens/interpolated.md)來格式化數值結果。 使用格式字串來指定格式。 下表包含支援的標準格式字串。 格式字串的格式如下︰`Axx`，其中 `A` 是格式規範，而 `xx` 是有效位數規範。 格式規範控制套用到數值之格式的類型，而有效位數規範控制格式化輸出的有效位數或小數位數。 有效位數規範的值範圍是從 0 到 99。  
@@ -29,9 +29,10 @@ ms.locfileid: "33216908"
 |N 或 n|number|Console.Write("{0:N}", 2500000);|2,500,000.00|  
 |X 或 x|十六進位|Console.Write("{0:X}", 250);<br /><br /> Console.Write("{0:X}", 0xffff);|FA<br /><br /> FFFF|  
   
-## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [標準數值格式字串](../../../standard/base-types/standard-numeric-format-strings.md)  
- [型別的參考表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
- [string](../../../csharp/language-reference/keywords/string.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [標準數值格式字串](../../../standard/base-types/standard-numeric-format-strings.md)  
+- [型別的參考表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
+- [string](../../../csharp/language-reference/keywords/string.md)

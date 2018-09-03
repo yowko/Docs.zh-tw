@@ -3,11 +3,11 @@ title: 範例 XML 檔：數值資料 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 365cae86-a166-46df-b56a-0209d9771c27
 ms.openlocfilehash: 6528175407c29a17667c33769643d15502e98f90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327589"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43387311"
 ---
 # <a name="sample-xml-file-numerical-data-linq-to-xml"></a>範例 XML 檔：數值資料 (LINQ to XML)
 下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。 此檔案包含數值資料以進行加總、平均和群組。  

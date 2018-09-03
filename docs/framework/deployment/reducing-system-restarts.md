@@ -8,14 +8,15 @@ helpviewer_keywords:
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e54dcb585c06f2bf49c41f763e03e5624a033442
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f7e45a863c46090dd62d5e1c80b5f0149d9460cf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43424073"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安裝程式會使用[重新啟動管理員](http://go.microsoft.com/fwlink/?LinkId=231425)，盡可能在安裝時防止系統重新啟動。 如果您的應用程式安裝程式安裝 .NET Framework，則可以與 [重新啟動管理員] 互動來利用這項功能。 如需詳細資訊，請參閱[如何：取得 .NET Framework 4.5 安裝程式的進度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)。  
+[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安裝程式會使用[重新啟動管理員](https://go.microsoft.com/fwlink/?LinkId=231425)，盡可能在安裝時防止系統重新啟動。 如果您的應用程式安裝程式安裝 .NET Framework，則可以與 [重新啟動管理員] 互動來利用這項功能。 如需詳細資訊，請參閱[如何：取得 .NET Framework 4.5 安裝程式的進度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)。  
   
 ## <a name="reasons-for-a-restart"></a>重新啟動的原因  
  如果在安裝期間正在使用 .NET Framework 4 應用程式，則 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安裝需要重新啟動系統。 這是因為 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 會取代 .NET Framework 4 檔案，並且需要這些檔案可在安裝期間使用。 在許多情況下，事先偵測和關閉正在使用的 .NET Framework 4 應用程式，即可避免重新啟動。 不過，不應該關閉部分系統應用程式。 在這些情況下，無法避免重新啟動。  

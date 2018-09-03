@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6fe59075f04443ba40c209b6cda5a5071d16c79e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a30fe0aac4bfacc71137474837b95371e7d85b09
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392144"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43394737"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework 初始化錯誤：管理使用者經驗
 Common Language Runtime (CLR) 啟用系統會決定將用來執行 Managed 應用程式碼的 CLR 版本。 在某些情況下，啟用系統可能找不到要載入的 CLR 版本。 應用程式需要無效或未安裝在指定電腦上的 CLR 版本時，通常會發生這種情況。 如果找不到要求的版本，CLR 啟用系統會從已呼叫的函式或介面傳回 HRESULT 錯誤碼，而且可能會向執行應用程式的使用者顯示錯誤訊息。 本文提供 HRESULT 代碼清單，並說明如何防止顯示錯誤訊息。  
@@ -55,7 +55,7 @@ Common Language Runtime (CLR) 啟用系統會決定將用來執行 Managed 應�
   
  [ICLRMetaHostPolicy::GetRequestedRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) 方法會接受 [METAHOST_POLICY_FLAGS](../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) 列舉成員作為輸入。 如果找不到所要求的 CLR 版本，您可以包括 METAHOST_POLICY_SHOW_ERROR_DIALOG 旗標來要求錯誤訊息。 根據預設，不會顯示錯誤訊息 ([ICLRMetaHost::GetRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md) 方法不接受這個旗標，並且不提供任何其他方式來顯示錯誤訊息)。  
   
- Windows 提供了 [SetErrorMode](http://go.microsoft.com/fwlink/p/?LinkID=255242) 函式，可讓您用來宣告是否要顯示處理序內執行的程式碼所造成的錯誤訊息。 您可以指定 SEM_FAILCRITICALERRORS 旗標，以防止顯示錯誤訊息。  
+ Windows 提供了 [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkID=255242) 函式，可讓您用來宣告是否要顯示處理序內執行的程式碼所造成的錯誤訊息。 您可以指定 SEM_FAILCRITICALERRORS 旗標，以防止顯示錯誤訊息。  
   
  不過，在某些情況下，務必覆寫應用程式處理序所設定的 SEM_FAILCRITICALERRORS 設定。 例如，如果您的原生 COM 元件裝載 CLR，並裝載在設定 SEM_FAILCRITICALERRORS 的處理序中，則根據在該特定應用程式處理序中顯示錯誤訊息的影響，您可能會想要覆寫旗標。 在此情況下，您可以使用下列其中一個旗標來覆寫 SEM_FAILCRITICALERRORS：  
   

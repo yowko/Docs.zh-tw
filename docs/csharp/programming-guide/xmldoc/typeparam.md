@@ -7,12 +7,12 @@ helpviewer_keywords:
 - <typeparam> C# XML tag
 - typeparam C# XML tag
 ms.assetid: 9b99d400-e911-4e55-99c6-64367c96aa4f
-ms.openlocfilehash: 8c7fc1aba05af731d3df80e0b10c2981b5784197
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5af03c8176672685b02a23019812f1aeded28dc8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348774"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389272"
 ---
 # <a name="lttypeparamgt-c-programming-guide"></a>&lt;typeparam&gt; (C# 程式設計手冊)
 ## <a name="syntax"></a>語法  
@@ -33,7 +33,7 @@ ms.locfileid: "33348774"
   
  如需詳細資訊，請參閱[泛型](../../../csharp/programming-guide/generics/index.md)。  
   
- `<typeparam>` 標記的文字將會顯示於 IntelliSense，即 [Object Browser Window](http://msdn.microsoft.com/library/3c7f1673-1f0d-41b1-94ca-a3dcfcb82cda) (物件瀏覽器視窗) 程式碼註解 Web 報告。  
+ `<typeparam>` 標記的文字將會顯示於 IntelliSense，即 [Object Browser Window](https://msdn.microsoft.com/library/3c7f1673-1f0d-41b1-94ca-a3dcfcb82cda) (物件瀏覽器視窗) 程式碼註解 Web 報告。  
   
  編譯搭配 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 可處理檔案的文件註解。  
   

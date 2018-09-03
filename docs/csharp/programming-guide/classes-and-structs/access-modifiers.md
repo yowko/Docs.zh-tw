@@ -6,11 +6,11 @@ helpviewer_keywords:
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
 ms.openlocfilehash: 4be248b1d86692bd35491e55b1c649cd8428a33b
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42751958"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43406351"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>存取修飾詞 (C# 程式設計手冊)
 所有類型和類型成員都具有存取範圍層級，以控制是否可以從組件中的其他程式碼或其他組件中使用它們。 您可以使用下列存取修飾詞，以在宣告類型或成員時指定其存取範圍：  

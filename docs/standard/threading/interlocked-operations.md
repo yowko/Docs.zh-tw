@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cbda7114-c752-4f3e-ada1-b1e8dd262f2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38532228f7a5d07bb1b9fcf7e90d2be53a28b04c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 361e618578e836e10cf8655f027bed42eac7affd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589967"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393135"
 ---
 # <a name="interlocked-operations"></a>Interlocked 作業
 <xref:System.Threading.Interlocked> 類別提供方法來同步處理多個執行緒所共用之變數的存取權。 如果變數位於共用的記憶體中，則不同處理序的執行緒可以使用這個機制。 Interlocked 作業不可部分完成，亦即，整個作業是一個單位，同一個變數上的另一個 Interlocked 作業不可將此 Interlocked 作業中斷。 在使用先佔式多執行緒的作業系統中，這一點很重要，因為執行緒可在從記憶體位址載入值後便加以暫停，而不致於有機會受到修改並儲存。  
@@ -36,7 +36,7 @@ ms.locfileid: "33589967"
   
  在新型處理器上，<xref:System.Threading.Interlocked> 類別的方法通常可透過單一指令來實作。 因此，這些方法能提供極高效能的同步處理作業，並可用來建置更高層級的同步處理機制，例如微調鎖定。  
   
- 如需使用 <xref:System.Threading.Monitor> 和 <xref:System.Threading.Interlocked> 類別組合的範例，請參閱[監視](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db) \(英文\)。  
+ 如需使用 <xref:System.Threading.Monitor> 和 <xref:System.Threading.Interlocked> 類別組合的範例，請參閱[監視](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db) \(英文\)。  
   
 ## <a name="compareexchange-example"></a>CompareExchange 範例  
  <xref:System.Threading.Interlocked.CompareExchange%2A> 方法可用來保護比簡單遞增和遞減更複雜的計算。 下列範例示範安全執行緒方法，此方法可新增到儲存為浮點數的計算加總  (對於整數，<xref:System.Threading.Interlocked.Add%2A> 方法是較簡單的解決方案)。如需完整的程式碼範例，請參閱 <xref:System.Threading.Interlocked.CompareExchange%2A> 的多載，其可接受單精確度和雙精度浮點引數 (<xref:System.Threading.Interlocked.CompareExchange%28System.Single%40%2CSystem.Single%2CSystem.Single%29> 和 <xref:System.Threading.Interlocked.CompareExchange%28System.Double%40%2CSystem.Double%2CSystem.Double%29>)。  

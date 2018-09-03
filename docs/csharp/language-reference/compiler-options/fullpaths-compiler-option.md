@@ -10,12 +10,12 @@ helpviewer_keywords:
 - full paths [C#]
 - -fullpaths compiler option [C#]
 ms.assetid: d2a5f857-cbb2-430b-879c-d648aaf0b8c4
-ms.openlocfilehash: 29320ae2dc4b13381ecce76fb04101f18d214bba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f23bb683067c55f5b5213065c3082b843dd7dce
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215306"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388275"
 ---
 # <a name="-fullpaths-c-compiler-options"></a>-fullpaths (C# 編譯器選項)
 列出編譯錯誤和警告時，**-fullpaths** 選項可讓編譯器指定檔案的完整路徑。  
@@ -32,4 +32,5 @@ ms.locfileid: "33215306"
  Visual Studio 不提供這個編譯器選項，您亦無法以程式設計方式變更。  
   
 ## <a name="see-also"></a>請參閱  
- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
+
+- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)

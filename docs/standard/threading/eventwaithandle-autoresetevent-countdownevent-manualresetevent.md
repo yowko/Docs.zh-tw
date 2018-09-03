@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: cd94fc34-ac15-427f-b723-a1240a4fab7d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 543853f581436a5fb7e5c897012b99bef20dc289
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f818ecf52ae1179d6d32d0b76cea3cc2a8f36ea8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582929"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43416408"
 ---
 # <a name="eventwaithandle-autoresetevent-countdownevent-manualresetevent"></a>EventWaitHandle、AutoResetEvent、CountdownEvent、ManualResetEvent
 事件等候控制代碼可讓執行緒藉由互相發出訊號並等候彼此的信號來同步處理活動。 這些同步處理事件是以 Win32 等候控制代碼為基礎，可以分成兩種類型︰收到訊號時自動重設的事件，以及手動重設的事件。  
@@ -35,7 +35,7 @@ ms.locfileid: "33582929"
  <xref:System.Threading.CountdownEvent> 類別提供一個簡化的方式，可在使用等候控制代碼的程式碼中實作分支/聯結平行處理原則模式。  
   
 ## <a name="related-sections"></a>相關章節  
- [等候控制代碼](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
+ [等候控制代碼](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
  <xref:System.Threading.WaitHandle> 類別是 <xref:System.Threading.EventWaitHandle>、<xref:System.Threading.Semaphore> 及 <xref:System.Threading.Mutex> 類別的基底類別。 其中包含 <xref:System.Threading.WaitHandle.SignalAndWait%2A> 和 <xref:System.Threading.WaitHandle.WaitAll%2A> 之類的靜態方法，在搭配所有類型的等候控制代碼運作時很實用。  
   
 ## <a name="see-also"></a>請參閱  

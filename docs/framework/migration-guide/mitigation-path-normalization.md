@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36433dcce1e47b329f5407e86ce3923a44cb6444
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aa31641cc325f15b9afe677038deb33c57e77fd1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389503"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43388348"
 ---
 # <a name="mitigation-path-normalization"></a>風險降低︰路徑正規化
 從以 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 為目標的應用程式開始，.NET Framework 中的路徑正規化已有所變更。  
@@ -28,7 +28,7 @@ ms.locfileid: "33389503"
 ## <a name="the-changes"></a>變更  
  從以 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 為目標的應用程式開始，路徑正規化在以下方面已有所變更：  
   
--   執行階段會延後至作業系統的 [GetFullPathName](https://msdn.microsoft.com/library/windows/desktop/aa364963\(v=vs.85\).aspx) 函式再進行路徑正規化。  
+-   執行階段會延後至作業系統的 [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) 函式再進行路徑正規化。  
   
 -   正規化不再涉及修剪目錄區段的結尾 (例如目錄名稱結尾的空格)。  
   

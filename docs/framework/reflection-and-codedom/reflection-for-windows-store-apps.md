@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 598acd746949369ffec7d153b6870bebeeafe532
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 192ac28610f596bc6b6f4ebf1c80962ab2d71cbf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398787"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463561"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>適用於 Windows 市集應用程式之 .NET Framework 中的反映
-從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 開始，.NET Framework 包含一組反映類型和成員，以便用於 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式。 這些類型和成員提供於完整 .NET Framework，以及[適用於 Windows 市集應用程式的 .NET](http://go.microsoft.com/fwlink/?LinkID=225700)。 本文件說明這些與其對應項目在 .NET Framework 4 和舊版之間的主要差異。  
+從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 開始，.NET Framework 包含一組反映類型和成員，以便用於 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式。 這些類型和成員提供於完整 .NET Framework，以及[適用於 Windows 市集應用程式的 .NET](https://go.microsoft.com/fwlink/?LinkID=225700)。 本文件說明這些與其對應項目在 .NET Framework 4 和舊版之間的主要差異。  
   
  如果您要建立 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式，必須使用 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] 中的反映類型和成員。 這些類型和成員也可用於 (但不是必要) 桌面應用程式，因此您可以對這兩種應用程式使用相同的程式碼。  
   
@@ -36,11 +36,11 @@ ms.locfileid: "33398787"
  在 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式中，對於某些 .NET Framework 類型和成員的存取會受到限制。 例如，您不能藉由使用 <xref:System.Reflection.MethodInfo> 物件，呼叫未包含在 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] 的 .NET Framework 方法。 此外，在 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式的內容中不被視為安全的特定類型和成員會被封鎖，就如同 <xref:System.Runtime.InteropServices.Marshal> 和 <xref:System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMarshal> 成員一樣。 這項限制只會影響 .NET Framework 類型和成員；您可以如常呼叫您的程式碼或協力廠商程式碼。  
   
 ## <a name="example"></a>範例  
- 此範例使用 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] 中的反映類型和成員來擷取 <xref:System.Globalization.Calendar> 類型的方法和屬性，包括繼承的方法和屬性。 若要執行此程式碼，請將它貼入 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 頁面的程式碼檔案，該頁面在名為 Reflection 的專案中包含名為 `textblock1` 的 [Windows.UI.Xaml.Controls.Textblock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) 控制項。 如果您在不同名稱的專案內貼上這段程式碼，只要確定您變更命名空間名稱以符合專案即可。  
+ 此範例使用 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] 中的反映類型和成員來擷取 <xref:System.Globalization.Calendar> 類型的方法和屬性，包括繼承的方法和屬性。 若要執行此程式碼，請將它貼入 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 頁面的程式碼檔案，該頁面在名為 Reflection 的專案中包含名為 `textblock1` 的 [Windows.UI.Xaml.Controls.Textblock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) 控制項。 如果您在不同名稱的專案內貼上這段程式碼，只要確定您變更命名空間名稱以符合專案即可。  
   
  [!code-csharp[System.ReflectionWinStoreApp#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.reflectionwinstoreapp/cs/mainpage.xaml.cs#1)]
  [!code-vb[System.ReflectionWinStoreApp#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflectionwinstoreapp/vb/mainpage.xaml.vb#1)]  
   
 ## <a name="see-also"></a>請參閱  
  [反映](../../../docs/framework/reflection-and-codedom/reflection.md)  
- [適用於 Windows 市集應用程式的 .NET - 所支援的應用程式開發介面](http://go.microsoft.com/fwlink/?LinkID=225700)
+ [適用於 Windows 市集應用程式的 .NET - 所支援的應用程式開發介面](https://go.microsoft.com/fwlink/?LinkID=225700)

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
 manager: douge
-ms.openlocfilehash: 0d42a37b2e84c310569666771ded38e5feca3608
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9d8e84280b5821f8d8df36694198bd85fb8470d4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33513135"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416904"
 ---
 # <a name="how-to-install-and-uninstall-services"></a>如何：安裝及解除安裝服務
-如果您正在使用 .NET Framework 開發 Windows 服務，您可以使用稱為 InstallUtil.exe 的命令列公用程式來快速安裝服務應用程式。 如果您是開發人員並且想發行使用者可安裝及解除安裝的 Windows 服務，則應該使用 InstallShield。 請參閱 [Windows Installer 部署](http://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0) \(機器翻譯\)。  
+如果您正在使用 .NET Framework 開發 Windows 服務，您可以使用稱為 InstallUtil.exe 的命令列公用程式來快速安裝服務應用程式。 如果您是開發人員並且想發行使用者可安裝及解除安裝的 Windows 服務，則應該使用 InstallShield。 請參閱 [Windows Installer 部署](https://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0) \(機器翻譯\)。  
   
 > [!WARNING]
 >  如果您想要從電腦解除安裝服務，則不要遵循本文中的步驟。 請改為找出安裝服務的程式或軟體套件，然後在 [控制台] 中選擇 [新增/移除程式] 以解除安裝該程式。 請注意，許多服務都是 Windows 不可或缺的一部分；如果移除這些服務，可能會導致系統不穩定。  
@@ -61,7 +61,7 @@ ms.locfileid: "33513135"
     installutil /u <yourproject>.exe  
     ```  
   
-3.  有時候，刪除服務的可執行檔之後，服務可能還是會在登錄中。 在那種情況下，請使用命令 [sc delete](http://technet.microsoft.com/library/cc742045.aspx) 來從登錄中移除服務項目。  
+3.  有時候，刪除服務的可執行檔之後，服務可能還是會在登錄中。 在那種情況下，請使用命令 [sc delete](https://technet.microsoft.com/library/cc742045.aspx) 來從登錄中移除服務項目。  
   
 ## <a name="see-also"></a>請參閱  
  [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  

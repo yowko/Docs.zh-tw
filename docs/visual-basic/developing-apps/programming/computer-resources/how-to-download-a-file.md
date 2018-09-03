@@ -9,11 +9,11 @@ helpviewer_keywords:
 - files [Visual Basic], transferring
 ms.assetid: ac479f81-c0e2-4b99-af73-217f446b73da
 ms.openlocfilehash: b0dc95674e17a7aba9b04a8b7e0b82c9c97c4180
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590722"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43385545"
 ---
 # <a name="how-to-download-a-file-in-visual-basic"></a>如何：在 Visual Basic 中下載檔案
 <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> 方法可以用來下載遠端檔案，並將它儲存到特定位置。 如果 `ShowUI` 參數設定為 `True`，則會顯示對話方塊以顯示下載進度，並允許使用者取消作業。 根據預設，不會覆寫具有相同名稱的現有檔案；如果您想要覆寫現有檔案，請將 `overwrite` 參數設定為 `True`。  

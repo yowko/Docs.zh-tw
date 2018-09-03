@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
-ms.openlocfilehash: 64bd5ce7d7dfe3265c3c645467493ab7d8792172
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: be7e081b18702710c00b5b86a9bc152800f0cf3d
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936874"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253163"
 ---
 # <a name="volatile-c-reference"></a>volatile (C# 參考)
 `volatile` 關鍵字指出某個欄位可能是由同時執行的多個執行緒所修改。 宣告 `volatile` 的欄位並不適用編譯器最佳化，因為編譯器最佳化是假設由單一執行緒進行存取。 這些限制可確保所有的執行緒將會觀察任何其他執行緒執行的 volatile 寫入會按照其執行的順序進行。 不保證 volatile 寫入的單一總排序如所有執行緒的執行中所示。  
@@ -48,8 +48,9 @@ ms.locfileid: "37936874"
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
- [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+- [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)

@@ -2,12 +2,12 @@
 title: 尋找預設段落樣式 (C#)
 ms.date: 07/20/2015
 ms.assetid: be102177-8ab0-444a-b671-7023e555ffdb
-ms.openlocfilehash: e29ca281e1867a72a76a28765912c39675ca0f27
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7c81ad1aed25eea3b8363caebe0eb980ca69c557
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335948"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43479821"
 ---
 # <a name="finding-the-default-paragraph-style-c"></a>尋找預設段落樣式 (C#)
 ＜管理 WordprocessingML 文件中的資訊＞教學課程中的第一個工作是，尋找文件中的預設段落樣式。  
@@ -89,4 +89,4 @@ The default style is: Normal
 -   [擷取段落及其樣式 (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
   
 ## <a name="see-also"></a>請參閱  
- [教學課程：操作 WordprocessingML 文件中的內容](http://msdn.microsoft.com/library/2696355e-4f83-4eaf-91b2-baa721f42fb4)
+ [教學課程：操作 WordprocessingML 文件中的內容](https://msdn.microsoft.com/library/2696355e-4f83-4eaf-91b2-baa721f42fb4)

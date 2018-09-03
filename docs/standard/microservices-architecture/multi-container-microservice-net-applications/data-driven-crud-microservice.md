@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 建立簡單�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 18ffbf56cf9d324e86fc288a2ba4a387831af925
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 28955b2309b3efb321e40e19db821052b8ce42ab
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935389"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396112"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>建立簡單資料驅動 CRUD 微服務
 
@@ -326,7 +326,7 @@ Microsoft Flow、PowerApps 及 Azure Logic Apps 會使用 Swagger 中繼資料�
 
 ### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>如何使用 Swashbuckle NuGet 套件來自動化產生 API Swagger 中繼資料
 
-手動產生 Swagger 中繼資料 (JSON 或 YAML 檔案) 是一件冗長的工作。 然而，您可以藉由使用 [Swashbuckle NuGet 套件](http://aka.ms/swashbuckledotnetcore)動態產生 Swagger API 中繼資料，來自動化 ASP.NET Web API 服務的 API 探索。
+手動產生 Swagger 中繼資料 (JSON 或 YAML 檔案) 是一件冗長的工作。 然而，您可以藉由使用 [Swashbuckle NuGet 套件](https://aka.ms/swashbuckledotnetcore)動態產生 Swagger API 中繼資料，來自動化 ASP.NET Web API 服務的 API 探索。
 
 Swashbuckle 會為您的 ASP.NET Web API 專案自動產生 Swagger 中繼資料。 它支援 ASP.NET Core Web API 專案及傳統式 ASP.NET Web API 和任何其他類別，例如 Azure API 應用程式、Azure 行動應用程式及基於 ASP.NET 的 Azure Service Fabric 微服務。 它也支援部署在容器上的單純 Web API，如同在參考應用程式中的情況。
 

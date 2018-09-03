@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - while keyword [C#]
 ms.assetid: 72a0765c-6852-4aca-b327-4a11cb7f5c59
-ms.openlocfilehash: c082107472ac53d05b3b43dd4d9d8afc508a16cb
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: e3e9493b5371fbd6f53a779ba73743efc6d6e05b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34565861"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43390020"
 ---
 # <a name="while-c-reference"></a>while (C# 參考)
 
@@ -36,9 +36,9 @@ ms.locfileid: "34565861"
 
 ## <a name="see-also"></a>另請參閱
 
- [C# 參考](../index.md)  
- [C# 程式設計指南](../../programming-guide/index.md)  
- [C# 關鍵字](index.md)  
- [while 陳述式 (C++)](/cpp/cpp/while-statement-cpp)  
- [反覆運算陳述式](iteration-statements.md)  
- [do 陳述式](do.md)  
+- [C# 參考](../index.md)  
+- [C# 程式設計指南](../../programming-guide/index.md)  
+- [C# 關鍵字](index.md)  
+- [while 陳述式 (C++)](/cpp/cpp/while-statement-cpp)  
+- [反覆運算陳述式](iteration-statements.md)  
+- [do 陳述式](do.md)  

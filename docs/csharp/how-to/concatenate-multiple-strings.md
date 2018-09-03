@@ -7,12 +7,12 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-ms.openlocfilehash: d4e57347a11b804f3ea7f4bb9736c134c4b71929
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 355e56acf36b6212ee4563f34722b10b56a0fb47
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961302"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468650"
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>如何：串連多個字串 (C# 指南)
 
@@ -23,7 +23,6 @@ ms.locfileid: "37961302"
 下例使用串連將長字串常值分割成較小的字串，以改善原始程式碼的可讀性。 這些組件在編譯時期會串連成單一字串。 不論範圍涵蓋多少字串，都不會產生執行階段效能成本。  
   
  [!code-csharp-interactive[Combining strings at compile time](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#1)]  
-  
 
 若要串連字串變數，您可以使用 `+` 或 `+=` 運算子、[字串內插補點](../language-reference/tokens/interpolated.md)，或是 <xref:System.String.Format%2A?displayProperty=nameWithType>、<xref:System.String.Concat%2A?displayProperty=nameWithType>、<xref:System.String.Join%2A?displayProperty=nameWithType> 或 <xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType> 方法。 `+` 運算子簡單易用，且容易建立直覺化程式碼。 即使一個陳述式使用數個 `+` 運算子，字串內容也只會複製一次。 下列程式碼示範使用 `+` 和 `+=` 運算子來串連字串的範例：
 
@@ -34,7 +33,7 @@ ms.locfileid: "37961302"
 [!code-csharp-interactive[building strings using string interpolation](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#3)]  
   
 > [!NOTE]
->  在字串串連作業中，C# 編譯器會將 null 字串視同空字串。
+> 在字串串連作業中，C# 編譯器會將 null 字串視同空字串。
 
 <xref:System.String.Format%2A?displayProperty=nameWithType> 也是串連字串的方法。 當您從少量元件字串建置字串時，此方法能順利執行。
 
@@ -54,8 +53,9 @@ ms.locfileid: "37961302"
 
 您可以查看 [GitHub 存放庫](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)中的程式碼，來嘗試這些範例。 或者，您可以將範例下載[為 ZIP 檔案](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)。
 
-## <a name="see-also"></a>請參閱  
- <xref:System.String>  
- <xref:System.Text.StringBuilder>  
- [C# 程式設計指南](../programming-guide/index.md)  
- [字串](../programming-guide/strings/index.md)
+## <a name="see-also"></a>請參閱
+
+- <xref:System.String>  
+- <xref:System.Text.StringBuilder>  
+- [C# 程式設計指南](../programming-guide/index.md)  
+- [字串](../programming-guide/strings/index.md)

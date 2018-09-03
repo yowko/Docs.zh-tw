@@ -2,12 +2,12 @@
 title: 物件導向程式設計 (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 0dee6edf966e8e2a3e430e60f1c3d51354d08bf3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a6194cb93b10d5b9f5d25fc42cff6c071627d411
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340589"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43415484"
 ---
 # <a name="object-oriented-programming-c"></a>物件導向程式設計 (C#)
 C# 為包括封裝、繼承和多型在內的物件導向程式設計提供完整支援。  
@@ -307,7 +307,7 @@ var sampleObject =
  若要繼承基底類別：  
   
 ```csharp  
-class DerivedClass:BaseClass{}  
+class DerivedClass:BaseClass {}  
 ```  
   
  所有類別預設都可以被繼承。 不過，您可以指定類別是否不得當做基底類別，或是建立只能當做基底類別的類別。  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 author: blowdart
-ms.openlocfilehash: adde8f3bd387a3e283ae1c3cd69e42b12b443b8c
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: a45d57af1069bba9e3afe8c2e6e6d463115a4e39
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925500"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389773"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework 的傳輸層安全性 (TLS) 最佳做法
 
@@ -231,7 +231,7 @@ Windows Registry Editor Version 5.00
 
 ## <a name="configuring-schannel-protocols-in-the-windows-registry"></a>在 Windows 登錄中設定安全通道通訊協定
 
-您可以使用登錄以對您用戶端和/或伺服器應用程式交涉的通訊協定進行細微的控制。 您應用程式的網路功能會透過[安全通道](https://msdn.microsoft.com/library/windows/desktop/aa380123) \(英文\) 進行。 透過設定 `Schannel`，您便可以設定應用程式的行為。
+您可以使用登錄以對您用戶端和/或伺服器應用程式交涉的通訊協定進行細微的控制。 您應用程式的網路功能會透過[安全通道](/windows/desktop/SecAuthN/secure-channel) \(英文\) 進行。 透過設定 `Schannel`，您便可以設定應用程式的行為。
 
 請從 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols` 登錄機碼開始。 在該機碼底下，您可以在 `SSL 2.0`、`SSL 3.0`、`TLS 1.0`、`TLS 1.1` 及 `TLS 1.2` 集合中建立任何子機碼。 在那些子機碼底下，您可以建立子機碼 `Client` 和/或 `Server`。 在 `Client` 和 `Server` 底下，您可以建立 DWORD 值 `DisabledByDefault` (0 或 1) 和 `Enabled` (0 或 0xFFFFFFFF)。
 
@@ -239,8 +239,8 @@ Windows Registry Editor Version 5.00
 
 啟用 `SCH_USE_STRONG_CRYPTO` 旗標時 (預設會由 `AppContext` 參數或 Windows 登錄啟用)，.NET Framework 會在您的應用程式要求 TLS 安全性通訊協定時使用此旗標。 `SCH_USE_STRONG_CRYPTO` 旗標可以依預設啟用、搭配 `AppContext` 參數啟用，或是搭配登錄啟用。 OS 會將旗標傳遞至 `Schannel`，以指示它停用已知的弱式加密演算法、加密套件，以及 TLS/SSL 通訊協定版本；若不這樣做，系統可能會為了取得更佳的互通性而啟用這些項目。 如需詳細資訊，請參閱:
 
-- [安全通道](https://msdn.microsoft.com/library/windows/desktop/aa380123) \(英文\)
-- [SCHANNEL_CRED 結構](https://msdn.microsoft.com/library/windows/desktop/aa379810) \(英文\)
+- [安全通道](/windows/desktop/SecAuthN/secure-channel) \(英文\)
+- [SCHANNEL_CRED 結構](/windows/desktop/api/schannel/ns-schannel-_schannel_cred) \(英文\)
 
 當您明確使用 <xref:System.Net.SecurityProtocolType> 或 <xref:System.Security.Authentication.SslProtocols> 的 `Tls` (TLS 1.0)、`Tls11` 或 `Tls12` 列舉值時，`SCH_USE_STRONG_CRYPTO` 旗標也會傳遞至 `Schannel`。
 

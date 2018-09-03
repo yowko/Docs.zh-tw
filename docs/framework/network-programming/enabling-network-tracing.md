@@ -14,12 +14,12 @@ ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 56a24f93e92fbfbd2dbb1156a1c3ef786f59034e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0ab0aeecdbd6cf763ae34cfa3bcd50af1874d39
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390457"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421486"
 ---
 # <a name="enabling-network-tracing"></a>啟用網路追蹤
 針對方法叫用及 Managed 應用程式所產生的網路流量，網路追蹤能提供對這些相關資訊的存取。 您必須完成下列工作，才能在您的應用程式中啟用網路追蹤：  
@@ -51,4 +51,4 @@ ms.locfileid: "33390457"
 ## <a name="see-also"></a>請參閱  
  [解譯網路追蹤](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
  [以 .NET Framework 進行網路追蹤](../../../docs/framework/network-programming/network-tracing.md)  
- [檢測和追蹤的簡介](http://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
+ [檢測和追蹤的簡介](https://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)

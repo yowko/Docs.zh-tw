@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 0444ddf3-c3f6-44ed-a999-f710d9c3e0cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95d28dd2255b7579cc646f8f8107b76c39cba3fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50ff6e2baaee683674f82cff178eeef7b7e43de4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399015"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486208"
 ---
 # <a name="using-the-codedom"></a>使用 CodeDOM
 CodeDOM 提供的類型代表許多常見的原始程式碼項目類型。 您可以設計程式，建置使用 CodeDOM 項目的原始程式碼模型，組合物件圖形。 此物件圖形可以轉譯成使用 CodeDOM 程式碼產生器的原始程式碼，處理受支援的程式設計語言。 您也可以使用 CodeDOM 將原始程式碼編譯成二進位組件。  
@@ -127,4 +127,4 @@ CodeDOM 提供的類型代表許多常見的原始程式碼項目類型。 您�
   
  如需 CodeDOM 各類型的文件，請參閱 <xref:System.CodeDom> 命名空間的參考文件。  
   
- 如需快速圖表，找出表示特定程式碼項目類型的 CodeDOM 項目，請參閱 [CodeDOM 快速參考](http://msdn.microsoft.com/library/c77b8bfd-0a32-4e36-b59a-4f687f32c524)。
+ 如需快速圖表，找出表示特定程式碼項目類型的 CodeDOM 項目，請參閱 [CodeDOM 快速參考](https://msdn.microsoft.com/library/c77b8bfd-0a32-4e36-b59a-4f687f32c524)。

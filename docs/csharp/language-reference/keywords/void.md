@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - void keyword [C#]
 ms.assetid: 0d2d8a95-fe20-4fbd-bf5d-c1e54bce71d4
-ms.openlocfilehash: e66efc287fc3ed0fcc15963a827fccb788c38753
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 223db893dd42181c234d9a07c1a1c00af26f0c30
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960556"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397083"
 ---
 # <a name="void-c-reference"></a>void (C# 參考)
 當 `void` 作為方法的傳回型別時，其可指定方法不要傳回值。
@@ -34,10 +34,11 @@ public void SampleMethod()
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>另請參閱
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
- [參考型別](../../../csharp/language-reference/keywords/reference-types.md)  
- [實值型別](../../../csharp/language-reference/keywords/value-types.md)  
- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  
- [Unsafe 程式碼和指標](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
+
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+- [參考型別](../../../csharp/language-reference/keywords/reference-types.md)  
+- [實值型別](../../../csharp/language-reference/keywords/value-types.md)  
+- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [Unsafe 程式碼和指標](../../../csharp/programming-guide/unsafe-code-pointers/index.md)

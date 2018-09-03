@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 904657175d87e0d78e518248ed89b3720227360f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 96cad879c843a7b70dc748675123b792137d290e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339166"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43463113"
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- 您的第一個程式 (C# 程式設計手冊)
 下列程序會建立 C# 版本的傳統 "Hello World!" 程式。 此程式會顯示字串 `Hello World!`  
@@ -78,7 +78,7 @@ ms.locfileid: "33339166"
   
  `Main` 方法的參數 `args`，是包含用來叫用程式的命令列引數的 `string` 陣列。 不像在 C++ 中，陣列不包含可執行檔 (exe) 的檔案名稱。  
   
- 如需如何使用命令列引數的詳細資訊，請參閱 [Main() 和命令列引數](../../../csharp/programming-guide/main-and-command-args/index.md)以及[如何：使用命令列建立和使用組件](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)。  
+ 如需如何使用命令列引數的詳細資訊，請參閱 [Main() 和命令列引數](../../../csharp/programming-guide/main-and-command-args/index.md)以及[如何：使用命令列建立和使用組件](https://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)。  
   
  在 `Main` 方法的結尾呼叫 <xref:System.Console.ReadKey%2A>，可讓您在按下 F5 以於偵錯模式中執行程式時，防止主控台視窗在您有機會讀取輸出之前關閉。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "33339166"
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [C# 程式內部](../../../csharp/programming-guide/inside-a-program/index.md)  
  [字串](../../../csharp/programming-guide/strings/index.md)  
- [\<paveover>C# 範例應用程式](http://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
+ [\<paveover>C# 範例應用程式](https://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
  [C# 參考](../../../csharp/language-reference/index.md)  
  [Main() 和命令列引數](../../../csharp/programming-guide/main-and-command-args/index.md)  
  [Visual C# 和 Visual Basic 使用者入門](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

@@ -2,12 +2,12 @@
 title: 範例 XML 文件 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 9ec89809-41a1-484c-b1e3-6c4ecdca7b8d
-ms.openlocfilehash: ce653f5067869a3ac568cd9c25e47a92b3148dbe
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 1d9e45e3d7e3131cf37b3373156a6a136d0a5cfd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754917"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43420219"
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a>範例 XML 文件 (LINQ to XML)
 下列範例檔案用於整個 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的程式碼範例和程式碼片段。  
@@ -26,7 +26,7 @@ ms.locfileid: "42754917"
 |[範例 XML 檔：測試組態 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)|包含某些虛擬測試組態資料的 XML 文件。|  
 |[範例 XML 檔：命名空間中的測試組態](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace1.md)|在命名空間中，包含某些虛擬測試組態資料的 XML 文件。|  
 |[範例 XML 檔：客戶和訂單 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)|包含客戶和訂單的 XML 文件。|  
-|[範例 XSD 檔：客戶和訂單](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md)|驗證 [範例 XML 檔：客戶和訂單 (LINQ to XML)](http://msdn.microsoft.com/library/26790c41-5976-4558-a096-d0f67bfc4d92) 的 XML 結構描述定義 (XSD)。|  
+|[範例 XSD 檔：客戶和訂單](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md)|驗證 [範例 XML 檔：客戶和訂單 (LINQ to XML)](https://msdn.microsoft.com/library/26790c41-5976-4558-a096-d0f67bfc4d92) 的 XML 結構描述定義 (XSD)。|  
 |[範例 XML 檔：位於相同命名空間中的客戶和訂單](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)|在命名空間中，包含客戶和訂單的 XML 文件。|  
 |[範例 XML 檔：數值資料 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)|包含適合加總與群組之資料的 XML 文件。|  
 |[範例 XML 檔：命名空間中的數值資料](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)|在命名空間中，包含適合加總與群組之資料的 XML 文件。|  
