@@ -2,39 +2,39 @@
 title: 屬性方格擴充性
 ms.date: 03/30/2017
 ms.assetid: 3530c3a3-756d-4712-9f10-fb2897414d3a
-ms.openlocfilehash: 50fb2fce2fa8c52942a221401f88523c7b407dab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7c3e3dbc3ccd95fc12dffd40927b3e2bbbc8226
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519590"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43660252"
 ---
-# <a name="property-grid-extensibliity"></a><span data-ttu-id="e13c5-102">屬性方格擴充性</span><span class="sxs-lookup"><span data-stu-id="e13c5-102">Property Grid Extensibliity</span></span>
-<span data-ttu-id="e13c5-103">開發人員可以自訂在設計工具內選取指定活動時顯示的屬性方格。</span><span class="sxs-lookup"><span data-stu-id="e13c5-103">A developer can customize the property grid that is displayed when a given activity is selected within the designer.</span></span> <span data-ttu-id="e13c5-104">這樣做可以製造豐富的編輯經驗。</span><span class="sxs-lookup"><span data-stu-id="e13c5-104">This can be done to create a rich editing experience.</span></span> <span data-ttu-id="e13c5-105">這個範例將示範其做法。</span><span class="sxs-lookup"><span data-stu-id="e13c5-105">This sample shows how this can be done.</span></span>  
+# <a name="property-grid-extensibliity"></a><span data-ttu-id="3ea87-102">屬性方格擴充性</span><span class="sxs-lookup"><span data-stu-id="3ea87-102">Property Grid Extensibliity</span></span>
+<span data-ttu-id="3ea87-103">開發人員可以自訂在設計工具內選取指定活動時顯示的屬性方格。</span><span class="sxs-lookup"><span data-stu-id="3ea87-103">A developer can customize the property grid that is displayed when a given activity is selected within the designer.</span></span> <span data-ttu-id="3ea87-104">這樣做可以製造豐富的編輯經驗。</span><span class="sxs-lookup"><span data-stu-id="3ea87-104">This can be done to create a rich editing experience.</span></span> <span data-ttu-id="3ea87-105">這個範例將示範其做法。</span><span class="sxs-lookup"><span data-stu-id="3ea87-105">This sample shows how this can be done.</span></span>  
   
-## <a name="demonstrates"></a><span data-ttu-id="e13c5-106">示範</span><span class="sxs-lookup"><span data-stu-id="e13c5-106">Demonstrates</span></span>  
- <span data-ttu-id="e13c5-107">工作流程設計工具屬性方格擴充性。</span><span class="sxs-lookup"><span data-stu-id="e13c5-107">Workflow designer property grid extensibility.</span></span>  
+## <a name="demonstrates"></a><span data-ttu-id="3ea87-106">示範</span><span class="sxs-lookup"><span data-stu-id="3ea87-106">Demonstrates</span></span>  
+ <span data-ttu-id="3ea87-107">工作流程設計工具屬性方格擴充性。</span><span class="sxs-lookup"><span data-stu-id="3ea87-107">Workflow designer property grid extensibility.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="e13c5-108">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="e13c5-108">The samples may already be installed on your machine.</span></span> <span data-ttu-id="e13c5-109">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="e13c5-109">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="3ea87-108">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="3ea87-108">The samples may already be installed on your machine.</span></span> <span data-ttu-id="3ea87-109">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="3ea87-109">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="e13c5-110">如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。</span><span class="sxs-lookup"><span data-stu-id="e13c5-110">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="e13c5-111">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="e13c5-111">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="3ea87-110">如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。</span><span class="sxs-lookup"><span data-stu-id="3ea87-110">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="3ea87-111">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="3ea87-111">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\PropertyGridExtensibility`  
   
-## <a name="discussion"></a><span data-ttu-id="e13c5-112">討論</span><span class="sxs-lookup"><span data-stu-id="e13c5-112">Discussion</span></span>  
- <span data-ttu-id="e13c5-113">若要擴充屬性方格，開發人員可以選擇自訂屬性方格編輯器的內嵌外觀，或是提供對話方塊，顯示更進階的編輯介面。</span><span class="sxs-lookup"><span data-stu-id="e13c5-113">To extend the property grid, a developer has options to customize the inline appearance of a property grid editor or provide a dialog that appears for a more advanced editing surface.</span></span> <span data-ttu-id="e13c5-114">本範例中會示範兩種不同的編輯器：內嵌編輯器和對話方塊編輯器。</span><span class="sxs-lookup"><span data-stu-id="e13c5-114">There are two different editors demonstrated in this sample; an inline editor and a dialog editor.</span></span>  
+## <a name="discussion"></a><span data-ttu-id="3ea87-112">討論</span><span class="sxs-lookup"><span data-stu-id="3ea87-112">Discussion</span></span>  
+ <span data-ttu-id="3ea87-113">若要擴充屬性方格，開發人員可以選擇自訂屬性方格編輯器的內嵌外觀，或是提供對話方塊，顯示更進階的編輯介面。</span><span class="sxs-lookup"><span data-stu-id="3ea87-113">To extend the property grid, a developer has options to customize the inline appearance of a property grid editor or provide a dialog that appears for a more advanced editing surface.</span></span> <span data-ttu-id="3ea87-114">本範例中會示範兩種不同的編輯器：內嵌編輯器和對話方塊編輯器。</span><span class="sxs-lookup"><span data-stu-id="3ea87-114">There are two different editors demonstrated in this sample; an inline editor and a dialog editor.</span></span>  
   
-## <a name="inline-editor"></a><span data-ttu-id="e13c5-115">內嵌編輯器</span><span class="sxs-lookup"><span data-stu-id="e13c5-115">Inline Editor</span></span>  
- <span data-ttu-id="e13c5-116">內嵌編輯器範例會示範下列操作：</span><span class="sxs-lookup"><span data-stu-id="e13c5-116">The inline editor sample demonstrates the following:</span></span>  
+## <a name="inline-editor"></a><span data-ttu-id="3ea87-115">內嵌編輯器</span><span class="sxs-lookup"><span data-stu-id="3ea87-115">Inline Editor</span></span>  
+ <span data-ttu-id="3ea87-116">內嵌編輯器範例會示範下列操作：</span><span class="sxs-lookup"><span data-stu-id="3ea87-116">The inline editor sample demonstrates the following:</span></span>  
   
--   <span data-ttu-id="e13c5-117">建立衍生自 <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor> 的型別。</span><span class="sxs-lookup"><span data-stu-id="e13c5-117">Creates a type that derives from <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor>.</span></span>  
+-   <span data-ttu-id="3ea87-117">建立衍生自 <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor> 的型別。</span><span class="sxs-lookup"><span data-stu-id="3ea87-117">Creates a type that derives from <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor>.</span></span>  
   
--   <span data-ttu-id="e13c5-118">在建構函式，<xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A>使用 Windows Presentation Foundation (WPF) 資料範本設定值。</span><span class="sxs-lookup"><span data-stu-id="e13c5-118">In the constructor, the <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> value is set with a Windows Presentation Foundation (WPF) data template.</span></span> <span data-ttu-id="e13c5-119">這個值可繫結至 XAML 範本，但是本範例會使用程式碼初始化資料繫結。</span><span class="sxs-lookup"><span data-stu-id="e13c5-119">This can be bound to a XAML template, but in this sample, code is used to initialize data binding.</span></span>  
+-   <span data-ttu-id="3ea87-118">在建構函式，<xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A>值會設定使用 Windows Presentation Foundation (WPF) 資料範本。</span><span class="sxs-lookup"><span data-stu-id="3ea87-118">In the constructor, the <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> value is set with a Windows Presentation Foundation (WPF) data template.</span></span> <span data-ttu-id="3ea87-119">這個值可繫結至 XAML 範本，但是本範例會使用程式碼初始化資料繫結。</span><span class="sxs-lookup"><span data-stu-id="3ea87-119">This can be bound to a XAML template, but in this sample, code is used to initialize data binding.</span></span>  
   
--   <span data-ttu-id="e13c5-120">資料範本擁有屬性方格中所呈現項目之 <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> 的資料內容。</span><span class="sxs-lookup"><span data-stu-id="e13c5-120">The data template has a data context of the <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> of the item rendered in the property grid.</span></span> <span data-ttu-id="e13c5-121">請注意，在下列程式碼 (來自 CustomInlineEditor.cs) 中，此內容會接著繫結至 `Value` 屬性。</span><span class="sxs-lookup"><span data-stu-id="e13c5-121">Note in the following code (from CustomInlineEditor.cs) that this context then binds to the `Value` property.</span></span>  
+-   <span data-ttu-id="3ea87-120">資料範本擁有屬性方格中所呈現項目之 <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> 的資料內容。</span><span class="sxs-lookup"><span data-stu-id="3ea87-120">The data template has a data context of the <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> of the item rendered in the property grid.</span></span> <span data-ttu-id="3ea87-121">請注意，在下列程式碼 (來自 CustomInlineEditor.cs) 中，此內容會接著繫結至 `Value` 屬性。</span><span class="sxs-lookup"><span data-stu-id="3ea87-121">Note in the following code (from CustomInlineEditor.cs) that this context then binds to the `Value` property.</span></span>  
   
     ```csharp  
     FrameworkElementFactory stack = new FrameworkElementFactory(typeof(StackPanel));  
@@ -47,7 +47,7 @@ ms.locfileid: "33519590"
     stack.AppendChild(slider);  
     ```  
   
--   <span data-ttu-id="e13c5-122">由於活動和設計工具位於相同組件中，因此活動設計工具屬性的登錄是在活動本身的靜態建構函式中完成，如 SimpleCodeActivity.cs 中的下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="e13c5-122">Because the activity and the designer are in the same assembly, registration of the activity designer attributes are accomplished in the static constructor of the activity itself, as shown in the following example from SimpleCodeActivity.cs.</span></span>  
+-   <span data-ttu-id="3ea87-122">由於活動和設計工具位於相同組件中，因此活動設計工具屬性的登錄是在活動本身的靜態建構函式中完成，如 SimpleCodeActivity.cs 中的下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="3ea87-122">Because the activity and the designer are in the same assembly, registration of the activity designer attributes are accomplished in the static constructor of the activity itself, as shown in the following example from SimpleCodeActivity.cs.</span></span>  
   
     ```  
     static SimpleCodeActivity()  
@@ -59,14 +59,14 @@ ms.locfileid: "33519590"
     }  
     ```  
   
-## <a name="dialog-editor"></a><span data-ttu-id="e13c5-123">對話方塊編輯器</span><span class="sxs-lookup"><span data-stu-id="e13c5-123">Dialog Editor</span></span>  
- <span data-ttu-id="e13c5-124">對話方塊編輯器範例會示範下列操作：</span><span class="sxs-lookup"><span data-stu-id="e13c5-124">The dialog editor sample demonstrates the following:</span></span>  
+## <a name="dialog-editor"></a><span data-ttu-id="3ea87-123">對話方塊編輯器</span><span class="sxs-lookup"><span data-stu-id="3ea87-123">Dialog Editor</span></span>  
+ <span data-ttu-id="3ea87-124">對話方塊編輯器範例會示範下列操作：</span><span class="sxs-lookup"><span data-stu-id="3ea87-124">The dialog editor sample demonstrates the following:</span></span>  
   
-1.  <span data-ttu-id="e13c5-125">建立衍生自 <xref:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor> 的型別。</span><span class="sxs-lookup"><span data-stu-id="e13c5-125">Creates a type that derives from <xref:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor>.</span></span>  
+1.  <span data-ttu-id="3ea87-125">建立衍生自 <xref:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor> 的型別。</span><span class="sxs-lookup"><span data-stu-id="3ea87-125">Creates a type that derives from <xref:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor>.</span></span>  
   
-2.  <span data-ttu-id="e13c5-126">使用 <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> 資料範本設定建構函式中的 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] 值。</span><span class="sxs-lookup"><span data-stu-id="e13c5-126">Sets the <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> value in the constructor with a [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] data template.</span></span> <span data-ttu-id="e13c5-127">這個值可在 XAML 中建立，但是在本範例中會使用程式碼建立。</span><span class="sxs-lookup"><span data-stu-id="e13c5-127">This can be created in XAML, but in this sample, this is created in code.</span></span>  
+2.  <span data-ttu-id="3ea87-126">使用 <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> 資料範本設定建構函式中的 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] 值。</span><span class="sxs-lookup"><span data-stu-id="3ea87-126">Sets the <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> value in the constructor with a [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] data template.</span></span> <span data-ttu-id="3ea87-127">這個值可在 XAML 中建立，但是在本範例中會使用程式碼建立。</span><span class="sxs-lookup"><span data-stu-id="3ea87-127">This can be created in XAML, but in this sample, this is created in code.</span></span>  
   
-3.  <span data-ttu-id="e13c5-128">資料範本擁有屬性方格中所呈現項目之 <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> 的資料內容。</span><span class="sxs-lookup"><span data-stu-id="e13c5-128">The data template has a data context of the <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> of the item rendered in the property grid.</span></span> <span data-ttu-id="e13c5-129">在下列程式碼中，此內容會接著繫結至 `Value` 屬性。</span><span class="sxs-lookup"><span data-stu-id="e13c5-129">In the following code, this then binds to the `Value` property.</span></span> <span data-ttu-id="e13c5-130">此外務必包含 <xref:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton>，以提供在 FilePickerEditor.cs 中引發對話方塊的按鈕。</span><span class="sxs-lookup"><span data-stu-id="e13c5-130">It is critical to also include an <xref:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton> to provide the button that raises the dialog in FilePickerEditor.cs.</span></span>  
+3.  <span data-ttu-id="3ea87-128">資料範本擁有屬性方格中所呈現項目之 <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> 的資料內容。</span><span class="sxs-lookup"><span data-stu-id="3ea87-128">The data template has a data context of the <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> of the item rendered in the property grid.</span></span> <span data-ttu-id="3ea87-129">在下列程式碼中，此內容會接著繫結至 `Value` 屬性。</span><span class="sxs-lookup"><span data-stu-id="3ea87-129">In the following code, this then binds to the `Value` property.</span></span> <span data-ttu-id="3ea87-130">此外務必包含 <xref:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton>，以提供在 FilePickerEditor.cs 中引發對話方塊的按鈕。</span><span class="sxs-lookup"><span data-stu-id="3ea87-130">It is critical to also include an <xref:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton> to provide the button that raises the dialog in FilePickerEditor.cs.</span></span>  
   
     ```  
     this.InlineEditorTemplate = new DataTemplate();  
@@ -89,7 +89,7 @@ ms.locfileid: "33519590"
     this.InlineEditorTemplate.VisualTree = stack;  
     ```  
   
-4.  <span data-ttu-id="e13c5-131">覆寫<!--zz <xref:Microsoft.Windows.Design.PropertyEditing.ShowDialog%2A>-->`Microsoft.Windows.Design.PropertyEditing.ShowDialog`設計工具的型別，以處理對話方塊的顯示中的方法。</span><span class="sxs-lookup"><span data-stu-id="e13c5-131">Overrides the <!--zz <xref:Microsoft.Windows.Design.PropertyEditing.ShowDialog%2A>--> `Microsoft.Windows.Design.PropertyEditing.ShowDialog` method in the designer type to handle the display of the dialog.</span></span> <span data-ttu-id="e13c5-132">在這個範例中會顯示基本的 <xref:System.Windows.Forms.FileDialog>。</span><span class="sxs-lookup"><span data-stu-id="e13c5-132">In this sample, a basic <xref:System.Windows.Forms.FileDialog> is shown.</span></span>  
+4.  <span data-ttu-id="3ea87-131">覆寫<!--zz <xref:Microsoft.Windows.Design.PropertyEditing.ShowDialog%2A>-->`Microsoft.Windows.Design.PropertyEditing.ShowDialog`設計工具的型別，以處理對話方塊的顯示中的方法。</span><span class="sxs-lookup"><span data-stu-id="3ea87-131">Overrides the <!--zz <xref:Microsoft.Windows.Design.PropertyEditing.ShowDialog%2A>--> `Microsoft.Windows.Design.PropertyEditing.ShowDialog` method in the designer type to handle the display of the dialog.</span></span> <span data-ttu-id="3ea87-132">在這個範例中會顯示基本的 <xref:System.Windows.Forms.FileDialog>。</span><span class="sxs-lookup"><span data-stu-id="3ea87-132">In this sample, a basic <xref:System.Windows.Forms.FileDialog> is shown.</span></span>  
   
     ```  
     public override void ShowDialog(PropertyValue propertyValue, IInputElement commandSource)  
@@ -102,7 +102,7 @@ ms.locfileid: "33519590"
     }  
     ```  
   
-5.  <span data-ttu-id="e13c5-133">由於活動和設計工具位於相同組件中，因此活動設計工具屬性的登錄是在活動本身的靜態建構函式中完成，如 SimpleCodeActivity.cs 中的下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="e13c5-133">Because the activity and the designer are in the same assembly, registration of the activity designer attributes are accomplished in the static constructor of the activity itself, as shown in the following example from SimpleCodeActivity.cs.</span></span>  
+5.  <span data-ttu-id="3ea87-133">由於活動和設計工具位於相同組件中，因此活動設計工具屬性的登錄是在活動本身的靜態建構函式中完成，如 SimpleCodeActivity.cs 中的下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="3ea87-133">Because the activity and the designer are in the same assembly, registration of the activity designer attributes are accomplished in the static constructor of the activity itself, as shown in the following example from SimpleCodeActivity.cs.</span></span>  
   
     ```  
     static SimpleCodeActivity()  
@@ -114,19 +114,19 @@ ms.locfileid: "33519590"
     }  
     ```  
   
-## <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="e13c5-134">若要安裝、建置及執行範例</span><span class="sxs-lookup"><span data-stu-id="e13c5-134">To set up, build, and run the sample</span></span>  
+## <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="3ea87-134">若要安裝、建置及執行範例</span><span class="sxs-lookup"><span data-stu-id="3ea87-134">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="e13c5-135">建置方案，然後開啟 Workflow1.xaml。</span><span class="sxs-lookup"><span data-stu-id="e13c5-135">Build the solution, and then open Workflow1.xaml.</span></span>  
+1.  <span data-ttu-id="3ea87-135">建置方案，然後開啟 Workflow1.xaml。</span><span class="sxs-lookup"><span data-stu-id="3ea87-135">Build the solution, and then open Workflow1.xaml.</span></span>  
   
-2.  <span data-ttu-id="e13c5-136">拖曳**SimpleCodeActivity**從 [工具箱] 拖曳至設計工具的畫布。</span><span class="sxs-lookup"><span data-stu-id="e13c5-136">Drag a **SimpleCodeActivity** from the toolbox onto the designer canvas.</span></span>  
+2.  <span data-ttu-id="3ea87-136">拖曳**SimpleCodeActivity**從 [工具箱] 拖曳至設計工具的畫布。</span><span class="sxs-lookup"><span data-stu-id="3ea87-136">Drag a **SimpleCodeActivity** from the toolbox onto the designer canvas.</span></span>  
   
-3.  <span data-ttu-id="e13c5-137">按一下**SimpleCodeActivity** ，然後開啟屬性方格，其中會有滑桿控制項和檔案挑選控制項。</span><span class="sxs-lookup"><span data-stu-id="e13c5-137">Click the **SimpleCodeActivity** and then open the property grid where there is a slider control and a file picking control.</span></span>  
+3.  <span data-ttu-id="3ea87-137">按一下  **SimpleCodeActivity** ，然後開啟屬性方格，其中會有滑桿控制項和檔案挑選控制項。</span><span class="sxs-lookup"><span data-stu-id="3ea87-137">Click the **SimpleCodeActivity** and then open the property grid where there is a slider control and a file picking control.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="e13c5-138">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="e13c5-138">The samples may already be installed on your machine.</span></span> <span data-ttu-id="e13c5-139">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="e13c5-139">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="3ea87-138">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="3ea87-138">The samples may already be installed on your machine.</span></span> <span data-ttu-id="3ea87-139">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="3ea87-139">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="e13c5-140">如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。</span><span class="sxs-lookup"><span data-stu-id="e13c5-140">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="e13c5-141">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="e13c5-141">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="3ea87-140">如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。</span><span class="sxs-lookup"><span data-stu-id="3ea87-140">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="3ea87-141">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="3ea87-141">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\PropertyGridExtensibility`
