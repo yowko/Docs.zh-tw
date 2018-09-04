@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 02d55147-9b3a-4557-a45f-fa936fadae3b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8ef6d73aa6cd044cf6808878bf6142a735d015c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc3796e3e79112b14d45bb410e63656a81d474c8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391244"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526716"
 ---
 # <a name="migration-guide-to-the-net-framework-47-46-and-45"></a>.NET Framework 4.7、4.6 和 4.5 移轉手冊 
 如果您使用舊版的 .NET Framework 建立應用程式，通常可以輕鬆地將它升級到 .NET Framework 4.5 及其小數點版本 (4.5.1 和 4.5.2)、.NET Framework 4.6 及其小數點版本 (4.6.1 和 4.6.2) 或 .NET Framework 4.7 及其小數點版本 (4.7.1 和 4.7.2)。 在 Visual Studio 中開啟專案。 如果您的專案是使用舊版 Visual Studio 所建立，則會自動開啟 [專案相容性] 對話方塊。 如需升級 Visual Studio 專案的詳細資訊，請參閱[移植、移轉及升級 Visual Studio 專案](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)和 [Visual Studio 2017 平台目標及相容性](/visualstudio/productinfo/vs2017-compatibility-vs)。  
@@ -39,5 +39,5 @@ ms.locfileid: "33391244"
  [操作說明：設定應用程式以支援 .NET Framework 4 或 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)  
  [新功能](../../../docs/framework/whats-new/index.md)  
  [類別庫中已淘汰的功能](../../../docs/framework/whats-new/whats-obsolete.md)  
- [.NET Framework 版本和組件資訊](http://go.microsoft.com/fwlink/?LinkId=201701)  
- [Microsoft .NET Framework 支援週期原則](http://go.microsoft.com/fwlink/?LinkId=196607)[.NET Framework 4 移轉問題](net-framework-4-migration-issues.md)
+ [.NET Framework 版本和組件資訊](https://go.microsoft.com/fwlink/?LinkId=201701)  
+ [Microsoft .NET Framework 支援週期原則](https://go.microsoft.com/fwlink/?LinkId=196607)[.NET Framework 4 移轉問題](net-framework-4-migration-issues.md)

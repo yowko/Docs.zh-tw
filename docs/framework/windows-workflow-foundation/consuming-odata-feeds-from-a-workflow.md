@@ -2,12 +2,12 @@
 title: 從流程中使用 OData 摘要
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-ms.openlocfilehash: 7b9b55d92d81772ed1601ec246cfc2e8aa96c016
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: a7e2a0658294681b154b11f48563ebc562c47210
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42754549"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562476"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>從流程中使用 OData 摘要
 
@@ -15,7 +15,7 @@ WCF 資料服務是 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]
 
 ## <a name="using-the-sample-northwind-odata-service"></a>使用範例 Northwind OData 服務
 
-本主題中的範例使用的範例 Northwind 資料服務位於[ http://services.odata.org/Northwind/Northwind.svc/ ](http://go.microsoft.com/fwlink/?LinkID=187426)。 這項服務是 [OData SDK](http://go.microsoft.com/fwlink/?LinkID=185248) 的一部分，而且會提供範例 Northwind 資料庫的唯讀存取。 如果需要寫入存取或者需要本機 WCF 資料服務，您可以遵循 [WCF 資料服務快速入門](http://go.microsoft.com/fwlink/?LinkID=131076) 的步驟，建立本機 OData 服務來提供 Northwind 資料庫的存取。 如果您遵循快速入門的步驟，請使用本機 URI 來替代本主題的範例程式碼所提供的 URI。
+本主題中的範例使用的範例 Northwind 資料服務位於[ http://services.odata.org/Northwind/Northwind.svc/ ](https://go.microsoft.com/fwlink/?LinkID=187426)。 這項服務提供做為一部分[OData SDK](https://go.microsoft.com/fwlink/?LinkID=185248) ，並提供範例 Northwind 資料庫的唯讀存取。 如果寫入存取或者需要本機 WCF 資料服務，您可以遵循的步驟[WCF Data Services 快速入門](https://go.microsoft.com/fwlink/?LinkID=131076)建立本機 OData 服務來提供 Northwind 資料庫的存取權。 如果您遵循快速入門的步驟，請使用本機 URI 來替代本主題的範例程式碼所提供的 URI。
 
 ## <a name="consuming-an-odata-feed-using-the-client-libraries"></a>使用用戶端程式庫取用 OData 摘要
 
@@ -30,14 +30,14 @@ WCF 資料服務包含用戶端程式庫，可讓您更輕鬆地從 [!INCLUDE[dn
 請注意，此服務不會公開任何服務作業，而且 [ **服務** ] 清單中有項目代表 Northwind 資料服務所公開的實體。 當加入服務參考時，將會針對這些實體產生類別，而且這些類別可用於用戶端程式碼。 本主題的範例會使用這些類別和 `NorthwindEntities` 類別來執行查詢。
 
 > [!NOTE]
-> 如需詳細資訊，請參閱 <<c0> [ 產生資料服務用戶端程式庫 (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkID=191611)。
+> 如需詳細資訊，請參閱 <<c0> [ 產生資料服務用戶端程式庫 (WCF Data Services)](https://go.microsoft.com/fwlink/?LinkID=191611)。
 
 ### <a name="using-asynchronous-methods"></a>使用非同步方法
 
 為了對付透過 Web 存取資源時可能發生的延遲問題，我們建議您以非同步方式存取 WCF 資料服務。 WCF Data Services 用戶端程式庫包含叫用查詢的非同步方法，並在 Windows Workflow Foundation (WF) 提供<xref:System.Activities.AsyncCodeActivity>類別來撰寫非同步活動。 您可以撰寫<xref:System.Activities.AsyncCodeActivity> 衍生活動，以利用具有非同步方法的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 類別，或者可以將要非同步執行的程式碼放在方法中，然後使用委派來叫用此程式碼。 本章節提供 <xref:System.Activities.AsyncCodeActivity> 衍生活動的兩個範例，一個範例會使用 WCF 資料服務用戶端程式庫的非同步方法，另一個範例則使用委派。
 
 > [!NOTE]
-> 如需詳細資訊，請參閱 <<c0> [ 非同步作業 (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193396)並[建立非同步活動](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md)。
+> 如需詳細資訊，請參閱 <<c0> [ 非同步作業 (WCF Data Services)](https://go.microsoft.com/fwlink/?LinkId=193396)並[建立非同步活動](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md)。
 
 ### <a name="using-client-library-asynchronous-methods"></a>使用用戶端程式庫非同步方法
 
@@ -77,7 +77,7 @@ Calling WCF Data Service...
 在下列範例中，會定義 `ListCustomers` 活動。 這個活動會查詢範例 Northwind 資料服務，並傳回 `List<Customer>` ，其中包含了 Northwind 資料庫中的所有客戶。 非同步工作是由 `GetCustomers` 方法所執行。 這個方法會查詢此服務中的所有客戶，然後將這些客戶複製到 `List<Customer>`。 接著它會檢查結果是否分頁。 如果是的話，它會查詢此服務中的下一頁結果、將這些結果加入至清單中，並繼續進行，直到擷取所有客戶資料為止。
 
 > [!NOTE]
-> 如需有關 WCF Data Services 中的分頁的詳細資訊，請參閱。 [如何：載入分頁結果 (WCF 資料服務)](http://go.microsoft.com/fwlink/?LinkId=193452)。
+> 如需有關 WCF Data Services 中的分頁的詳細資訊，請參閱。 [如何： 載入分頁結果 (WCF Data Services)](https://go.microsoft.com/fwlink/?LinkId=193452)。
 
 一旦加入所有客戶之後，就會傳回清單。 `GetCustomers` 方法會指定於活動的 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 覆寫中。 因為此方法具有傳回值，所以會建立 `Func<string, List<Customer>>` 來指定此方法。
 
@@ -154,4 +154,4 @@ xmlns="http://www.w3.org/2005/Atom">
 ...
 ```
 
-此範例提供一種方法，可讓工作流程應用程式作者耗用從 OData 服務傳回的原始資料。 如需有關如何使用存取 WCF 資料服務 Uri 的詳細資訊，請參閱 <<c0> [ 存取資料服務資源 (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193397)並[OData: URI 慣例](http://go.microsoft.com/fwlink/?LinkId=185564)。
+此範例提供一種方法，可讓工作流程應用程式作者耗用從 OData 服務傳回的原始資料。 如需有關如何使用存取 WCF 資料服務 Uri 的詳細資訊，請參閱 <<c0> [ 存取資料服務資源 (WCF Data Services)](https://go.microsoft.com/fwlink/?LinkId=193397)並[OData: URI 慣例](https://go.microsoft.com/fwlink/?LinkId=185564)。

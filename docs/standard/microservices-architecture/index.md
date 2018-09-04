@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 微服務是�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/06/2018
-ms.openlocfilehash: 154cb0eafb8f14d61191b7cad749cb93d269ff34
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 6b57f66068409ade24eecff636b9dd3f4084fd71
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105060"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516147"
 ---
 ![](./media/cover.png)
 
@@ -143,7 +143,7 @@ Docker 成為容器產業的既定標準，並受到 Windows 和 Linux 生態系
 
 eShopOnContainers 應用程式是 .NET Core 和微服務的參考應用程式，專為使用 Docker 容器進行部署所設計。 此應用程式是由多個子系統所組成，包括數個電子商店 UI 前端 (Web 應用程式和原生行動應用程式)。 它也包含用來執行所有必要伺服器端作業的後端微服務和容器。
 
-此微服務和容器應用程式原始碼是開放原始碼，並位於 [eShopOnContainers](http://aka.ms/MicroservicesArchitecture) GitHub 存放庫中。
+此微服務和容器應用程式原始碼是開放原始碼，並位於 [eShopOnContainers](https://aka.ms/MicroservicesArchitecture) GitHub 存放庫中。
 
 ## <a name="send-us-your-feedback"></a>將您的意見反應傳送給我們！
 

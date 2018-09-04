@@ -132,7 +132,7 @@ ms.locfileid: "42754579"
             filterData="http://localhost/routingservice/router/rounding/"/>  
     ```  
   
-     如果在開頭的位址上收到訊息 「http://localhost/routingservice/router/rounding/"則此篩選條件會評估為 **，則為 true**。 因為此設定所使用的基底位址是"http://localhost/routingservice/router"and"rounding/calculator"roundingEndpoint 的指定的位址，用來與此端點通訊的完整位址是"http://localhost/routingservice/router/rounding/calculator」，其符合此篩選器。  
+     如果在開頭的位址上收到訊息 "http://localhost/routingservice/router/rounding/" 則此篩選條件會評估為，則為 **true**。 因為此設定所使用的基底位址是"http://localhost/routingservice/router"and"rounding/calculator"roundingEndpoint 的指定的位址，用來與此端點通訊的完整位址是"http://localhost/routingservice/router/rounding/calculator」，其符合此篩選器。  
   
     > [!NOTE]
     >  PrefixEndpointAddress 篩選條件執行比對時不會評估主機名稱，因為可以使用多種主機名稱 (均為從用戶端應用程式參考主機的有效方式) 參考單一主機。 例如，下列所有名稱皆可參考同一個主機：  

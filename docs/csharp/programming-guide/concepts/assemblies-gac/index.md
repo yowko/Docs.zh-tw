@@ -2,12 +2,12 @@
 title: 組件和全域組件快取 (C#)
 ms.date: 07/20/2015
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
-ms.openlocfilehash: 07ee54fc19abecba5e8335f063277418ede80b36
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: ed5ecff57035b4d3cf47f8325fe5c172180f9d40
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408914"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534319"
 ---
 # <a name="assemblies-and-the-global-assembly-cache-c"></a>組件和全域組件快取 (C#)
 組件會構成 .NET 型應用程式之部署、版本控制、重複使用、啟動範圍和安全性權限的基本單位。 組件會採用可執行檔 (.exe) 或動態連結程式庫 (.dll) 的格式，而且是 .NET Framework 的建置組塊。 它們為通用語言執行平台提供了感知型別實作所需的資訊。 您可以將組件視為型別和資源的集合，其構成功能的邏輯單元，而且是為了共同運作而建置。  
@@ -50,13 +50,14 @@ ms.locfileid: "43408914"
 > [!NOTE]
 >  若要在 Visual Studio 中建置組件，請在[建置] 功能表中選擇 [建置]。  
   
-## <a name="see-also"></a>請參閱  
- [C# 程式設計指南](../../../../csharp/programming-guide/index.md)  
- [Common Language Runtime 中的組件](../../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [Friend 組件 (C#)](friend-assemblies.md)  
- [如何：與其他應用程式共用組件 (C#)](how-to-share-an-assembly-with-other-applications.md)  
- [如何：載入和卸載組件 (C#)](how-to-load-and-unload-assemblies.md)  
- [如何：判斷檔案是否為組件 (C#)](how-to-determine-if-a-file-is-an-assembly.md)  
- [如何：使用命令列建立和使用組件 (C#)](how-to-create-and-use-assemblies-using-the-command-line.md)  
- [逐步解說：在 Visual Studio 中內嵌來自 Managed 組件的類型 (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
- [逐步解說：在 Visual Studio 中內嵌來自 Microsoft Office 組件的類型資訊 (C#)](walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 程式設計指南](../../../../csharp/programming-guide/index.md)  
+- [Common Language Runtime 中的組件](../../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+- [Friend 組件 (C#)](friend-assemblies.md)  
+- [如何：與其他應用程式共用組件 (C#)](how-to-share-an-assembly-with-other-applications.md)  
+- [如何：載入和卸載組件 (C#)](how-to-load-and-unload-assemblies.md)  
+- [如何：判斷檔案是否為組件 (C#)](how-to-determine-if-a-file-is-an-assembly.md)  
+- [如何：使用命令列建立和使用組件 (C#)](how-to-create-and-use-assemblies-using-the-command-line.md)  
+- [逐步解說：在 Visual Studio 中內嵌來自 Managed 組件的類型 (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
+- [逐步解說：在 Visual Studio 中內嵌來自 Microsoft Office 組件的類型資訊 (C#)](walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)

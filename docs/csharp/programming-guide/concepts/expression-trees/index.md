@@ -2,12 +2,12 @@
 title: 運算式樹狀架構 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
-ms.openlocfilehash: 14ca5394a21b8dddb6c4431e6cabbf44a2f9add2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f17b4fba92c502ca6d53fef7ac6d01f2fdefc02e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326494"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526861"
 ---
 # <a name="expression-trees-c"></a>運算式樹狀架構 (C#)
 運算式樹狀架構代表類似樹狀目錄之資料結構中的程式碼，其中，每個節點都是一個運算式，例如，方法呼叫或二進位運算 (如 `x < y`)。  
@@ -147,10 +147,11 @@ Console.WriteLine(expr.Compile()(4));
   
  如需詳細資訊，請參閱[如何︰執行運算式樹狀架構 (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Linq.Expressions>  
- [如何：執行運算式樹狀架構 (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
- [如何：修改運算式樹狀架構 (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)  
- [Lambda 運算式](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
- [Dynamic Language Runtime 概觀](../../../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
- [程式設計概念 (C#)](../../../../csharp/programming-guide/concepts/index.md)
+## <a name="see-also"></a>請參閱
+
+- <xref:System.Linq.Expressions>  
+- [如何：執行運算式樹狀架構 (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
+- [如何：修改運算式樹狀架構 (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)  
+- [Lambda 運算式](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+- [Dynamic Language Runtime 概觀](../../../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
+- [程式設計概念 (C#)](../../../../csharp/programming-guide/concepts/index.md)

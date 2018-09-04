@@ -205,7 +205,7 @@ docker run -it --rm --name aspnetcore_sample aspnetapp
 ```
 
 > [!IMPORTANT]
-> 使用 Windows 容器時，您必須在瀏覽器中直接巡覽至**容器 IP 位址** (相對於 http://localhost))。 您可以使用下列步驟來取得容器的 IP 位址：
+> 使用 Windows 容器時，您必須在瀏覽器中直接巡覽至**容器 IP 位址** (相對於 http://localhost) )。 您可以使用下列步驟來取得容器的 IP 位址：
 
 * 開啟另一個命令提示字元。
 * 執行 `docker ps` 以查看您的執行中容器。 其中應該會有 "aspnetcore_sample" 容器。
