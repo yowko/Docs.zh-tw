@@ -3,11 +3,11 @@ title: Visual Studio IDE 和工具支援的 LINQ (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: e3bfe0d9-4a79-49cf-a31c-93297c688829
 ms.openlocfilehash: d284b47a0745b0c514f5e8c530d649c49b4cfa4f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403852"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43661772"
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-visual-basic"></a>Visual Studio IDE 和工具支援的 LINQ (Visual Basic)
 Visual Studio 整合式開發環境 (IDE) 提供支援 LINQ 應用程式開發的下列功能：  

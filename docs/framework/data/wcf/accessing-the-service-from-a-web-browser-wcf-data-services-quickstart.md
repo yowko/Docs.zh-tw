@@ -3,11 +3,11 @@ title: 從 Web 瀏覽器存取服務 (WCF 資料服務快速入門)
 ms.date: 03/30/2017
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
 ms.openlocfilehash: 01184969b7bfcc0f68351db7c8daeebe79be583c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43392319"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43660123"
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>從 Web 瀏覽器存取服務 (WCF 資料服務快速入門)
 

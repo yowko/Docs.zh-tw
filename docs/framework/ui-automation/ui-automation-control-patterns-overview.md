@@ -9,11 +9,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 73ac290c688436e7ce74e1baaf9f7dbbbecb66bf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43418735"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43661568"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI 自動化控制項模式概觀
 > [!NOTE]

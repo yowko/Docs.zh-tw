@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
 ms.openlocfilehash: a8f6da4dc42244fbadbaf0e96b0dd281a3f7ccb2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402611"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43659703"
 ---
 # <a name="visual-basic-language-features"></a>Visual Basic 語言功能
 下列主題將介紹並討論 Visual Basic 中，物件導向的程式設計語言的基本元件。 使用表單和控制項建立應用程式的使用者介面之後，您必須撰寫程式碼來定義應用程式的行為。 如同任何新式的程式設計語言，Visual Basic 支援許多通用程式設計建構和語言項目。  

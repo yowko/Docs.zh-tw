@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5f25777402fa31e72cbbf36f58a6c4cc65542979
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482232"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43660979"
 ---
 # <a name="geterrorinfo-function"></a>GetErrorInfo 函式
 從上一個函式呼叫擷取錯誤資訊。  

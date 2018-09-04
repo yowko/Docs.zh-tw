@@ -19,11 +19,11 @@ helpviewer_keywords:
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
 ms.openlocfilehash: 54f7dcd7de28e8aaa5376bb4ddd67fd53518511e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481607"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43661550"
 ---
 # <a name="string-data-type-visual-basic"></a>String 資料類型 (Visual Basic)
 會保留該範圍的不帶正負號的 16 位元 （2 個位元組） 字碼指標順序中從 0 到 65535 的值。 每個*字碼指標*，或字元碼表示單一 Unicode 字元。 字串可以包含從 0 至大約兩個 10 億個 (2 ^31) 的 Unicode 字元。  

@@ -3,11 +3,11 @@ title: 流速控制平行 ForEach
 ms.date: 03/30/2017
 ms.assetid: f2855b5f-e9a7-433d-96a4-40fc31025215
 ms.openlocfilehash: 7149e6db8992bff5b436ffae4a77d985ec255986
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397909"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564901"
 ---
 # <a name="throttled-parallel-foreach"></a>流速控制平行 ForEach
 `ThrottleParallelForEach`活動十分類似<!--zz <xref:System.Activities.Statements.ParallelForEach>-->`System.Activities.Statements.ParallelForEach`有一個例外狀況的活動它允許設定並行因數來限制同時執行的分支數目。 `ThrottleParallelForEach` 活動衍生自 <xref:System.Activities.NativeActivity>，因為它必須排程其他活動 (子活動)，而且這只能透過 <xref:System.Activities.NativeActivityContext> 類別存取。  

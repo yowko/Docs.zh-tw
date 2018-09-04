@@ -8,11 +8,11 @@ ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 0dbc06afd4695b85f426fad2859b4c6d4b6684d6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402909"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43661070"
 ---
 # <a name="distributed-application-security"></a>分散式應用程式安全性
 Windows Communication Foundation (WCF) 安全性分為三個主要的功能區域： 傳輸安全性、 存取控制和稽核。 傳輸安全性提供完整性、機密性與驗證。 傳輸安全性是由下列其中一項提供：傳輸安全性、訊息安全性或 `TransportWithMessageCredential`。  

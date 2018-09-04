@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: 4486b5be42f4a356b2017fe8629bc96f6ad47eda
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fafc80cc4847e9ec05f19fc7f3d31d2d5b11197a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650965"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43661148"
 ---
 # <a name="comments-in-code-visual-basic"></a>程式碼中的註解 (Visual Basic)
 當您閱讀程式碼範例時，常會遇到註解符號 (`'`)。 這個符號會告知 Visual Basic 編譯器忽略它後面的文字或*註解*。 註解是為了閱讀者方便而加入至程式碼的簡短說明。  
@@ -54,14 +54,14 @@ ms.locfileid: "33650965"
   
 -   註解不可以跟隨在同一行的行接續序列之後。  
   
- 您可以加入或移除選取的程式碼的一或多行，然後選擇一段程式碼的註解符號**註解**(![VisualBasicWinAppCodeEditorCommentButton](../../../visual-basic/programming-guide/program-structure/media/vacommentbutton.gif "vaCommentButton")) 和**取消註解**(![VisualStudioWinAppProjectUncommentButton](../../../visual-basic/programming-guide/program-structure/media/vauncommentbutton.gif "vaUncommentButton")) 上的按鈕**編輯**工具列。  
+ 您可以新增或移除程式碼區塊的註解符號，選取一或多個行程式碼，然後選擇**註解**(![VisualBasicWinAppCodeEditorCommentButton](../../../visual-basic/programming-guide/program-structure/media/vacommentbutton.gif "vaCommentButton")) 和**取消註解**(![VisualStudioWinAppProjectUncommentButton](../../../visual-basic/programming-guide/program-structure/media/vauncommentbutton.gif "vaUncommentButton")) 按鈕**編輯**工具列。  
   
 > [!NOTE]
 >  您也可以藉由在文字前方置入 `REM` 關鍵字，將註解加入至您的程式碼中。 不過，`'`符號和**註解**/**取消註解**按鈕比較容易使用，而且需要較少的空間和記憶體。  
   
 ## <a name="see-also"></a>另請參閱  
- [記錄程式碼使用 XML 註解](http://msdn.microsoft.com/magazine/dd722812.aspx)  
+ [使用 XML 註解記錄程式碼](https://msdn.microsoft.com/magazine/dd722812.aspx)  
  [如何：建立 XML 文件](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)  
- [XML 註解標記](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)  
+ [XML 註解標記](../../../visual-basic/language-reference/xmldoc/index.md)  
  [程式結構和程式碼慣例](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
  [REM 陳述式](../../../visual-basic/language-reference/statements/rem-statement.md)
