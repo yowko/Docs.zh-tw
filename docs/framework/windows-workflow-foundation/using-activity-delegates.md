@@ -2,12 +2,12 @@
 title: 使用活動委派
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
-ms.openlocfilehash: 96a412a066342fb9c459e1388c5b58847ebac390
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb23f6a79b6f2390952f9aadc1cf08099acb289b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518948"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43489925"
 ---
 # <a name="using-activity-delegates"></a>使用活動委派
 活動委派可讓活動作者使用特定的簽章以公開回呼，活動使用者可以此為依據來提供活動處理常式。 活動委派有兩種型別可用：<xref:System.Activities.ActivityAction%601>，用來定義沒有傳回值的活動委派，以及 <xref:System.Activities.ActivityFunc%601>，用來定義有傳回值的活動委派。  
@@ -27,9 +27,9 @@ ms.locfileid: "33518948"
   
  [!code-csharp[CFX_ActivityExample#7](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]  
   
- 如需物件初始設定式的詳細資訊，請參閱[如何： 初始化的物件，而不呼叫建構函式 （C# 程式設計手冊）](http://go.microsoft.com/fwlink/?LinkId=161015)和[How to： 使用物件初始設定式宣告物件](http://go.microsoft.com/fwlink/?LinkId=161016)。  
+ 如需物件初始設定式的詳細資訊，請參閱[如何： 初始化物件但不呼叫建構函式 （C# 程式設計手冊）](https://go.microsoft.com/fwlink/?LinkId=161015)並[如何： 使用物件初始設定式宣告物件](https://go.microsoft.com/fwlink/?LinkId=161016)。  
   
- 在下列範例中，<xref:System.Activities.Statements.TryCatch> 活動會用於工作流程中。 <xref:System.ApplicationException> 是由工作流程所擲回而且是由 <xref:System.Activities.Statements.Catch%601> 活動所處理。 處理常式<xref:System.Activities.Statements.Catch%601>活動的活動動作是<xref:System.Activities.Statements.WriteLine>活動和例外狀況詳細資料會流向它使用`ex` <xref:System.Activities.DelegateInArgument%601>。  
+ 在下列範例中，<xref:System.Activities.Statements.TryCatch> 活動會用於工作流程中。 <xref:System.ApplicationException> 是由工作流程所擲回而且是由 <xref:System.Activities.Statements.Catch%601> 活動所處理。 處理常式<xref:System.Activities.Statements.Catch%601>活動的活動動作<xref:System.Activities.Statements.WriteLine>活動，以及例外狀況詳細資料會流經使用`ex` <xref:System.Activities.DelegateInArgument%601>。  
   
  [!code-csharp[CFX_WorkflowApplicationExample#33](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#33)]  
   

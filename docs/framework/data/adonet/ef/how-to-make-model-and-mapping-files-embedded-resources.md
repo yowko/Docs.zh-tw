@@ -2,27 +2,28 @@
 title: 如何：讓模型和對應檔成為內嵌資源
 ms.date: 03/30/2017
 ms.assetid: 20dfae4d-e95a-4264-9540-f5ad23b462d3
-ms.openlocfilehash: 3fd3c3628e94b4727dfc711e02a9f4b754aa8a2c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 35507f92d0ba9f434156773c8dc5621ed3c423c0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43489847"
 ---
 # <a name="how-to-make-model-and-mapping-files-embedded-resources"></a>如何：讓模型和對應檔成為內嵌資源
-[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]可讓您部署模型和對應檔案做為內嵌資源的應用程式。 具有內嵌模型和對應檔的組件必須載入與實體連接相同的應用程式定義域中。 如需詳細資訊，請參閱[連接字串](../../../../../docs/framework/data/adonet/ef/connection-strings.md)。 根據預設，[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] 工具會內嵌模型和對應檔。 當您手動定義模型和對應檔時，請使用這個程序，確保檔案與 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式已一起部署為內嵌資源。  
+[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]可讓您部署模型和對應檔做為內嵌資源的應用程式。 具有內嵌模型和對應檔的組件必須載入與實體連接相同的應用程式定義域中。 如需詳細資訊，請參閱[連接字串](../../../../../docs/framework/data/adonet/ef/connection-strings.md)。 根據預設，[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] 工具會內嵌模型和對應檔。 當您手動定義模型和對應檔時，請使用這個程序，確保檔案與 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式已一起部署為內嵌資源。  
   
 > [!NOTE]
 >  若要維護內嵌資源，您必須在每次修改模型和對應檔時重複這個程序。  
   
 ### <a name="to-embed-model-and-mapping-files"></a>內嵌模型和對應檔  
   
-1.  在**方案總管 中**，選取概念 (.csdl) 檔案。  
+1.  在 [**方案總管] 中**，選取概念 (.csdl) 檔案。  
   
-2.  在**屬性** 窗格中，設定**建置動作**至**內嵌資源**。  
+2.  在 **屬性**窗格中，將**建置動作**來**內嵌資源**。  
   
 3.  針對儲存 (.ssdl) 檔和對應檔 (.msl) 重複步驟 1 和 2。  
   
-4.  在**方案總管 中**、 按兩下 App.config 檔案，然後修改`Metadata`中的參數`connectionString`屬性根據下列格式之一：  
+4.  在**方案總管**中，按兩下 App.config 檔案，然後修改`Metadata`中的參數`connectionString`屬性根據下列格式之一：  
   
     -   `Metadata=` `res://<assemblyFullName>/<resourceName>;`  
   
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/03/2018
      如需詳細資訊，請參閱[連接字串](../../../../../docs/framework/data/adonet/ef/connection-strings.md)。  
   
 ## <a name="example"></a>範例  
- 下列連接字串參考內嵌的模型和對應檔[AdventureWorks Sales Model](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832)。 此連接字串儲存在專案的 App.config 檔案中。  
+ 下列連接字串參考內嵌的模型和對應檔[AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832)。 此連接字串儲存在專案的 App.config 檔案中。  
   
   
   
@@ -41,4 +42,4 @@ ms.lasthandoff: 05/03/2018
  [建立模型和對應](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)  
  [如何：定義連接字串](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)  
  [如何：建置 EntityCollection 連接字串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
- [ADO.NET 實體資料模型工具](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)
+ [ADO.NET 實體資料模型工具](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)

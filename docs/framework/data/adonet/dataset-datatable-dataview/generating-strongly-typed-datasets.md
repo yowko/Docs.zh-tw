@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: 95bb536416a043fc392d0c4e94378239ae3ee37f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: MT
+ms.openlocfilehash: 9accfb68c57384e12a59bae40ebe30a2d3e22877
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758025"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43489717"
 ---
 # <a name="generating-strongly-typed-datasets"></a>產生強類型資料集
 如果 XML 結構描述是採用 XML 結構描述定義語言 (XSD) 標準進行編譯，則可以使用 <xref:System.Data.DataSet> 所提供的 XSD.exe 工具產生強型別 [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)]。  
   
- (若要從資料庫資料表建立 xsd，請參閱<xref:System.Data.DataSet.WriteXmlSchema%2A>或[使用 Visual Studio 中的資料集](http://msdn.microsoft.com/library/8bw9ksd6.aspx))。  
+ (若要從資料庫資料表建立 xsd，請參閱<xref:System.Data.DataSet.WriteXmlSchema%2A>或是[使用 Visual Studio 中的資料集](https://msdn.microsoft.com/library/8bw9ksd6.aspx))。  
   
  下列程式碼顯示產生的語法**資料集**使用此工具。  
   
@@ -23,7 +23,7 @@ ms.locfileid: "32758025"
 xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace  
 ```  
   
- 在此語法中，`/d`指示詞告訴工具產生**資料集**，而`/l:`告訴工具 （例如，C# 或 Visual Basic.NET） 使用哪一種語言。 選擇性`/eld`指示詞會指定您可以使用[!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)]來查詢產生**資料集。** 這個選項會在也有指定 `/d` 選項時使用。 如需詳細資訊，請參閱[查詢具類型資料集](../../../../../docs/framework/data/adonet/querying-typed-datasets.md)。 選擇性`/n:`指示詞告訴工具也會產生的命名空間**資料集**呼叫**XSDSchema.Namespace**。 命令的輸出為 XSDSchemaFileName.cs，可以在 ADO.NET 應用程式中編譯和使用。 產生的程式碼可以編譯為程式庫或模組。  
+ 在這個語法中，`/d`指示詞告訴工具，以產生**資料集**，和`/l:`告訴工具 （例如，C# 或 Visual Basic.NET） 使用哪一種語言。 選擇性`/eld`指示詞會指定您可以使用[!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)]來查詢產生**資料集。** 這個選項會在也有指定 `/d` 選項時使用。 如需詳細資訊，請參閱 <<c0> [ 查詢具型別 DataSets](../../../../../docs/framework/data/adonet/querying-typed-datasets.md)。 選擇性`/n:`指示詞會告訴工具也會產生的命名空間**資料集**稱為**XSDSchema.Namespace**。 命令的輸出為 XSDSchemaFileName.cs，可以在 ADO.NET 應用程式中編譯和使用。 產生的程式碼可以編譯為程式庫或模組。  
   
  下列程式碼顯示使用 C# 編譯器 (csc.exe)，將產生的程式碼編譯成程式庫的語法。  
   
@@ -43,7 +43,7 @@ Imports XSDSchema.Namespace
 using XSDSchema.Namespace;  
 ```  
   
- 下列程式碼範例會使用具型別的**資料集**名為**CustomerDataSet**載入一份客戶從**Northwind**資料庫。 一旦資料載入使用**填滿**方法，此範例迴圈中每個客戶**客戶**資料表使用具型別的**CustomersRow** (**DataRow**) 物件。 這可用來直接存取**CustomerID**資料行，與透過**DataColumnCollection**。  
+ 下列程式碼範例會使用具型別**資料集**名為**CustomerDataSet**載入一份客戶來自**Northwind**資料庫。 資料載入使用後**填滿**方法，此範例每個客戶中執行迴圈**客戶**資料表使用具型別**Datarow** (**DataRow**) 物件。 這可直接存取**CustomerID**資料行，而不是透過**DataColumnCollection**。  
   
 ```vb  
 Dim customers As CustomerDataSet= New CustomerDataSet()  
@@ -99,4 +99,4 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
  <xref:System.Data.DataSet>  
  [具類型的 DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)  
  [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

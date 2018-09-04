@@ -2,24 +2,25 @@
 title: ADO.NET 概觀
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 50881c05c8b6f2602d19817373a16e4661d3d133
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 697911201171a540d6749d03c51f14efba945765
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43489808"
 ---
 # <a name="adonet-overview"></a>ADO.NET 概觀
 ADO.NET 可讓您以一致的方式存取資料來源 (例如 SQL Server 與 XML)，以及透過 OLE DB 和 ODBC 所公開的資料來源。 資料共用的消費者應用程式可使用 ADO.NET 來連接至這些資料來源，並且擷取、處理及更新其中所含的資料。  
   
  ADO.NET 可將資料管理的資料存取分成不連續的元件，這些元件可分開使用，也可串聯使用。 ADO.NET 也包含 .NET Framework 資料提供者，以用於連接資料庫、執行命令和擷取結果。 這些結果會直接處理、放入 ADO.NET <xref:System.Data.DataSet> 物件中以便利用臨機操作 (Ad Hoc) 的方式公開給使用者、與多個來源的資料結合，或在各層之間進行傳遞。 `DataSet` 物件也可以與 .NET Framework 資料提供者分開使用，以便管理應用程式本機的資料或來自 XML 的資料。  
   
- ADO.NET 類別 (Class) 位於 System.Data.dll 中，而且會與 System.Xml.dll 中的 XML 類別整合。 範例程式碼連接至資料庫時，擷取資料，然後顯示該資料在主控台視窗中，請參閱[ADO.NET 程式碼範例](../../../../docs/framework/data/adonet/ado-net-code-examples.md)。  
+ ADO.NET 類別 (Class) 位於 System.Data.dll 中，而且會與 System.Xml.dll 中的 XML 類別整合。 如範例程式碼連接至資料庫中，從，擷取資料，然後顯示該資料，在主控台視窗中，請參閱[ADO.NET 程式碼範例](../../../../docs/framework/data/adonet/ado-net-code-examples.md)。  
   
  ADO.NET 可為撰寫 Managed 程式碼的開發人員提供類似於 ActiveX Data Objects (ADO) 提供給原生元件物件模型 (Component Object Model，COM) 開發人員的功能。 我們建議您使用 ADO.NET (而非 ADO) 來存取 .NET 應用程式中的資料。  
   
- ADO.NET 會提供最直接的方法，讓您在 .NET Framework 中進行資料存取。 較高層級的抽象概念，可讓應用程式來處理針對概念模型，而不是基礎儲存體模型，請參閱[ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)。  
+ ADO.NET 會提供最直接的方法，讓您在 .NET Framework 中進行資料存取。 較高層級的抽象概念，可讓應用程式，以針對概念模型，而不是基礎的儲存體模型運作，請參閱 < [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)。  
   
- **隱私權聲明**: System.Data.dll、 System.Data.Design.dll、 System.Data.OracleClient.dll、 System.Data.SqlXml.dll、 System.Data.Linq.dll、 System.Data.SqlServerCe.dll 和 System.Data.DataSetExtensions.dll 組件不相符區分使用者的私用資料和非私用資料。  這些組件不會收集、儲存或傳輸任何使用者的私用資料。 不過，協力廠商應用程式可能會使用這些組件來收集、儲存或傳輸使用者的私用資料。  
+ **隱私權聲明**: System.Data.dll、 System.Data.Design.dll、 System.Data.OracleClient.dll、 System.Data.SqlXml.dll、 System.Data.Linq.dll、 System.Data.SqlServerCe.dll 和 System.Data.DataSetExtensions.dll 組件則否區分使用者的私用資料與非私用資料。  這些組件不會收集、儲存或傳輸任何使用者的私用資料。 不過，協力廠商應用程式可能會使用這些組件來收集、儲存或傳輸使用者的私用資料。  
   
 ## <a name="in-this-section"></a>本節內容  
  [ADO.NET 架構](../../../../docs/framework/data/adonet/ado-net-architecture.md)  
@@ -59,4 +60,4 @@ ADO.NET 可讓您以一致的方式存取資料來源 (例如 SQL Server 與 XML
 ## <a name="see-also"></a>另請參閱  
  [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
  [存取 Visual Studio 中的資料](/visualstudio/data-tools/accessing-data-in-visual-studio)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
