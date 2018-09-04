@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ContextMenuStrip control [Windows Forms]
 - shortcut menus
 ms.assetid: 76e070b2-65d7-457f-8300-d104e4e01e5e
-ms.openlocfilehash: 45b37a3cc542295368a9304cb49078d88c347228
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c5f2246ef70ed627ecd311c1f3e5666afcd9b5ef
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525532"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552175"
 ---
 # <a name="contextmenustrip-control"></a>ContextMenuStrip 控制項
 <xref:System.Windows.Forms.ContextMenuStrip> 控制項提供您要使其與控制項產生關聯的捷徑功能表。  
@@ -35,7 +35,7 @@ ms.locfileid: "33525532"
  [操作說明：處理 ContextMenuStrip Opening 事件](../../../../docs/framework/winforms/controls/how-to-handle-the-contextmenustrip-opening-event.md)  
  說明如何處理 <xref:System.Windows.Forms.ToolStripDropDown.Opening> 事件，以自訂 <xref:System.Windows.Forms.ContextMenuStrip> 控制項的行為。  
   
- 另請參閱[ContextMenuStrip 工作對話方塊](http://msdn.microsoft.com/library/ms233646\(v=vs.110\))或[ContextMenuStrip 項目集合編輯器](http://msdn.microsoft.com/library/ms233641\(v=vs.110\))。  
+ 另請參閱[ContextMenuStrip 工作對話方塊](https://msdn.microsoft.com/library/ms233646\(v=vs.110\))或是[ContextMenuStrip 項目集合編輯器](https://msdn.microsoft.com/library/ms233641\(v=vs.110\))。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.MenuStrip>  

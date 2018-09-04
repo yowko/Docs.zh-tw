@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-ms.openlocfilehash: ab6ca46fad8ee1ededef5cc14a9654b79b2e6a8e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 185bcb64522115d0c60ae90ee22a73610139c8c3
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494653"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536630"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>HOW TO：與 WCF 端點交換佇列訊息
-佇列確保即使服務目前無法在通訊時，可信賴傳訊不會發生在用戶端和 Windows Communication Foundation (WCF) 服務，之間。 下列程序示範如何實作 WCF 服務時，持久的用戶端與服務之間通訊使用標準佇列繫結確保。  
+佇列會確保用戶端和 Windows Communication Foundation (WCF) 服務，之間可能發生可靠的傳訊即使服務目前無法在通訊時。 下列程序示範如何確保實作 WCF 服務時，長期用戶端與服務間通訊使用標準佇列繫結。  
   
  本節說明如何使用<xref:System.ServiceModel.NetMsmqBinding>WCF 用戶端與 WCF 服務之間的佇列通訊。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "33494653"
      [!code-csharp[S_Msmq_Transacted#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#4)]
      [!code-vb[S_Msmq_Transacted#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#4)]  
   
-5.  在組態中定義 <xref:System.ServiceModel.Description.ServiceEndpoint>，以指定服務位址，並使用標準 <xref:System.ServiceModel.NetMsmqBinding> 繫結。 如需有關如何使用 WCF 組態的詳細資訊，請參閱[設定的 Windows Communication Foundation 應用程式](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)。  
+5.  在組態中定義 <xref:System.ServiceModel.Description.ServiceEndpoint>，以指定服務位址，並使用標準 <xref:System.ServiceModel.NetMsmqBinding> 繫結。 如需使用 WCF 組態的詳細資訊，請參閱 <<c0> [ 設定的 Windows Communication Foundation 應用程式](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)。  
   
   
   
@@ -52,7 +52,7 @@ ms.locfileid: "33494653"
   
 ### <a name="to-create-a-client-for-the-queued-service"></a>若要建立佇列服務的用戶端  
   
-1.  下列範例會示範如何執行裝載應用程式，並使用 Svcutil.exe 工具來建立 WCF 用戶端。  
+1.  下列範例示範如何執行裝載應用程式，並使用 Svcutil.exe 工具來建立 WCF 用戶端。  
   
     ```  
     svcutil http://localhost:8000/ServiceModelSamples/service  
@@ -62,7 +62,7 @@ ms.locfileid: "33494653"
   
   
   
-3.  建立交易範圍以寫入異動式佇列，也就是呼叫`SubmitPurchaseOrder`作業和關閉 WCF 用戶端，如下列範例所示。  
+3.  建立異動範圍以寫入異動式佇列，也就是呼叫`SubmitPurchaseOrder`作業並關閉 WCF 用戶端，如下列範例所示。  
   
      [!code-csharp[S_Msmq_Transacted#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/client.cs#8)]
      [!code-vb[S_Msmq_Transacted#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/client.vb#8)]  
@@ -90,6 +90,6 @@ ms.locfileid: "33494653"
  [如何：與 WCF 端點和訊息佇列應用程式交換訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
  [Windows Communication Foundation 至訊息佇列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
  [安裝訊息佇列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
- [訊息佇列整合繫結範例](http://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
+ [訊息佇列整合繫結範例](https://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
  [訊息佇列至 Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
  [訊息佇列上的訊息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

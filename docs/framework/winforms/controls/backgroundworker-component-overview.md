@@ -18,11 +18,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 64e9b3ab-7443-4a77-ab17-b8b8c0cb3f62
 ms.openlocfilehash: 1f7da963db34434ee2631e9e2c0367abbd628656
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43488218"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43539232"
 ---
 # <a name="backgroundworker-component-overview"></a>BackgroundWorker 元件概觀
 有許多經常執行的作業都需要長時間執行。 例如：  

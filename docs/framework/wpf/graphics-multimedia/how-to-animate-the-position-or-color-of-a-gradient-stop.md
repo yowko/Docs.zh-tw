@@ -13,11 +13,11 @@ helpviewer_keywords:
 - GradientStop objects [WPF], animating position of
 ms.assetid: 6f5b8b47-6c32-4b8e-98ee-fdf6515ec843
 ms.openlocfilehash: fcbb546b64810416d3f7dbe052da77b7bc941e7a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43395319"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43535581"
 ---
 # <a name="how-to-animate-the-position-or-color-of-a-gradient-stop"></a>如何：建立漸層停駐點位置或色彩的動畫
 此範例示範如何建立動畫<xref:System.Windows.Media.GradientStop.Color%2A>並<xref:System.Windows.Media.GradientStop.Offset%2A>的<xref:System.Windows.Media.GradientStop>物件。  

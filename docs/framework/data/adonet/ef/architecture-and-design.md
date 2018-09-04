@@ -3,11 +3,11 @@ title: 架構與設計
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
 ms.openlocfilehash: 5a0d8aac401a3485bc5f158bcda893ad9ab424e8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43419600"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43530466"
 ---
 # <a name="architecture-and-design"></a>架構與設計
 中的 SQL 產生模組[範例提供者](https://go.microsoft.com/fwlink/?LinkId=180616)會實作成運算式樹狀架構表示的命令樹上的造訪者。 此產生作業是透過運算式樹狀，在單一行程中完成。  

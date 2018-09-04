@@ -2,12 +2,12 @@
 title: 異動防護範圍
 ms.date: 03/30/2017
 ms.assetid: 37141708-a29f-4b6a-81fe-f8a11f825061
-ms.openlocfilehash: 4b053c15768a20ade4a469c9a40af797f49c268b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa1da6df5ad5256665610c9b3c2df7d706cef63c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516561"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536087"
 ---
 # <a name="transaction-convoy-scope"></a>異動防護範圍
 這個範例示範如何建立 Parallel Convoy 訊息活動模式搭配 <xref:System.ServiceModel.Activities.TransactedReceiveScope>，以建立多個作業可依任何順序同時在相同交易中發生的通訊協定模型。 這個範例也示範 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 如何在沒有交易流向伺服器時自動建立新交易，因此用戶端不會利用任何交易。  
@@ -24,9 +24,9 @@ ms.locfileid: "33516561"
   
 3.  確認兩個專案都是設為起始專案。  
   
-    1.  在**方案總管 中**，以滑鼠右鍵按一下方案，然後選取**設定啟始專案**。  
+    1.  在 **方案總管**，以滑鼠右鍵按一下方案，然後選取**設定啟始專案**。  
   
-    2.  選取**多個啟始專案**，請確定這兩個專案的動作設定為**啟動**。  
+    2.  選取 **多個啟始專案**並確定這兩個專案的動作設定為**開始**。  
   
 4.  若要執行此方案，請按下 CTRL+F5。  
   
@@ -39,6 +39,6 @@ ms.locfileid: "33516561"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\TransactedConvoyScope`

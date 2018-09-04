@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-ms.openlocfilehash: 51b63a11fd2987d82f9a7599b39d15856a0abb1d
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 1100afd89b27e789c0db713291ed3656092fb0c7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39243824"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43533638"
 ---
 # <a name="imports-statement-xml-namespace"></a>Imports 陳述式 (XML 命名空間)
 匯入適用於 XML 常值和 XML 軸屬性的 XML 命名空間前置詞。  
@@ -35,7 +35,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## <a name="remarks"></a>備註  
  您可以使用`Imports`陳述式來定義通用的 XML 命名空間，您可以使用 XML 常值和 XML 軸屬性，或做為參數傳遞至`GetXmlNamespace`運算子。 (如需有關使用資訊`Imports`陳述式匯入別名可用型別名稱，用於您的程式碼，請參閱[Imports 陳述式 （.NET 命名空間和類型）](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。)宣告 XML 命名空間所使用的語法`Imports`陳述式是用於 XML 的語法相同。 因此，您可以從 XML 檔案複製命名空間宣告，並將它用於`Imports`陳述式。  
   
- 當您想要重複建立來自相同的命名空間的 XML 項目，則 XML 命名空間前置詞會很有用。 使用 XML 命名空間前置詞宣告`Imports`陳述式是全域的因為它可供在檔案中的所有程式碼。 當您建立 XML 元素常值和 XML 軸屬性的存取時，您可以使用它。 如需詳細資訊，請參閱 < [XML 元素常值](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)並[XML 軸屬性](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)。  
+ 當您想要重複建立來自相同的命名空間的 XML 項目，則 XML 命名空間前置詞會很有用。 使用 XML 命名空間前置詞宣告`Imports`陳述式是全域的因為它可供在檔案中的所有程式碼。 當您建立 XML 元素常值和 XML 軸屬性的存取時，您可以使用它。 如需詳細資訊，請參閱 < [XML 元素常值](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)並[XML 軸屬性](../../../visual-basic/language-reference/xml-axis/index.md)。  
   
  如果您定義不含命名空間前置詞的全域 XML 命名空間 (例如`Imports <xmlns="http://SomeNameSpace>"`)，該命名空間會被視為預設 XML 命名空間。 預設 XML 命名空間用於任何 XML 元素常值或未明確指定命名空間的 XML 屬性軸屬性。 如果指定的命名空間是空的命名空間，也會使用預設命名空間 (也就是`xmlns=""`)。 預設 XML 命名空間不適用於 XML 常值中的 XML 屬性或沒有命名空間的 XML 屬性軸屬性。  
   
@@ -90,6 +90,6 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
   
 ## <a name="see-also"></a>另請參閱  
  [XML 項目常值](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [XML 軸屬性](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ [XML 軸屬性](../../../visual-basic/language-reference/xml-axis/index.md)  
  [宣告的 XML 項目和屬性的名稱](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)  
  [GetXmlNamespace 運算子](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
 ms.openlocfilehash: 27dad8b2fbfbc8d17090df201bf36eb080966f51
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407369"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536517"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>宣告項目特性 (Visual Basic)
 A*特性*的宣告的項目是如何與其互動的程式碼會影響該元素的層面。 每個宣告的項目有一或多個與它相關的下列特性：  

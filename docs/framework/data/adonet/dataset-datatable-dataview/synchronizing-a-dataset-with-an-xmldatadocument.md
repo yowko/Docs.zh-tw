@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
-ms.openlocfilehash: d026a425f7a38777fcb5bbb4b18816c39a99aa72
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5aeb5fc3ad1008871b6c54d6c096cb3a76c3416e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763263"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538463"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>使用 XmlDataDocument 同步處理資料集
-本節將使用已與 <xref:System.Data.DataSet> 同步處理的強型別 <xref:System.Xml.XmlDataDocument>，來示範處理採購單的其中一個步驟。 請依照下列範例會建立**資料集**的最小化的結構描述，比對只包含來源 XML 文件的一部分。 這些範例使用**XmlDataDocument**來保留來源 XML 文件精確度啟用**資料集**用來公開 XML 文件的子集。  
+本節將使用已與 <xref:System.Data.DataSet> 同步處理的強型別 <xref:System.Xml.XmlDataDocument>，來示範處理採購單的其中一個步驟。 請依照下列範例會建立**資料集**與最小化的結構描述符合只包含來源 XML 文件的一部分。 範例會使用**XmlDataDocument**保留來源 XML 文件，而想要啟用**資料集**來公開 XML 文件的一部分。  
   
  下列 XML 文件包含所有採購單的相關資訊：客戶資訊、訂購項目、運送資訊等。  
   
@@ -109,9 +109,9 @@ ms.locfileid: "32763263"
 </PurchaseOrder>  
 ```  
   
- 前述 XML 文件中處理採購單資訊的其中一個步驟，是從公司目前的存貨中提領採購單的貨品。 負責從公司的倉儲提供採購訂單貨品的員工不需要檢視整份採購訂單內容，而是只需要看到訂單的產品資訊即可。 若要只公開的產品資訊從 XML 文件，建立強型別**資料集**結構描述時，寫入為 XML 結構描述定義語言 (XSD) 結構描述，且對應至產品和數量排序。 如需有關強型別**資料集**物件，請參閱[型別資料集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)。  
+ 前述 XML 文件中處理採購單資訊的其中一個步驟，是從公司目前的存貨中提領採購單的貨品。 負責從公司的倉儲提供採購訂單貨品的員工不需要檢視整份採購訂單內容，而是只需要看到訂單的產品資訊即可。 若要公開僅將 XML 文件的產品資訊，請建立強型別**資料集**結構描述中，撰寫為 XML 結構描述定義語言 (XSD) 結構描述，所訂購之產品和數量的對應。 如需有關強型別**資料集**物件，請參閱[Typed DataSets](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)。  
   
- 下列程式碼所顯示的結構描述的強型別**資料集**產生此範例。  
+ 下列程式碼會顯示來源結構描述的強型別**資料集**此範例會產生。  
   
 ```xml  
 <?xml version="1.0" standalone="yes"?>  
@@ -157,11 +157,11 @@ ms.locfileid: "32763263"
 </xs:schema>  
 ```  
   
- 請注意，唯一的資訊從**OrderDetails**和**產品**的結構描述中包含的原始 XML 文件項目**資料集**。 同步處理**資料集**與**XmlDataDocument**可確保不包含在項目**資料集**會保存在 XML 文件。  
+ 請注意，唯一的資訊，從**OrderDetails**並**產品**中的結構描述包含原始 XML 文件項目**資料集**。 同步處理**資料集**具有**XmlDataDocument**可確保不會納入的項目**資料集**都會存在於 XML 文件。  
   
- 強型別**資料集**產生自 XML 結構描述 (命名空間為**Northwind.FillOrder**)，才能公開原始 XML 文件的一部分，請同步處理**資料集**與**XmlDataDocument**載入自來源 XML 文件。 請注意，**資料集**從產生的結構描述包含的結構，但沒有資料。 將 XML 載入時，填入資料**XmlDataDocument**。 如果您嘗試載入**XmlDataDocument** ，是否已同步處理與**資料集**已經包含資料，將會擲回例外狀況。  
+ 強型別**資料集**產生從 XML 結構描述 (命名空間為**Northwind.FillOrder**)，才能公開原始 XML 文件的一部分，請同步處理**資料集**具有**XmlDataDocument**載入從來源 XML 文件。 請注意，**資料集**從產生的結構描述包含的結構，但沒有任何資料。 當您載入將 XML 載入資料會填入**XmlDataDocument**。 如果您嘗試載入**XmlDataDocument** ，以同步處理**DataSet**已經包含資料，將會擲回例外狀況。  
   
- 之後**資料集**(和**XmlDataDocument**) 已更新， **XmlDataDocument**即可忽略項目的接著寫出修改過的 XML 文件**資料集**仍保持不變，如下所示。 在採購單案例中，當提領出訂單項目後，已修改的 XML 文件便會接著傳遞給訂單處理過程中的下一個步驟，例如傳送至公司的運送部門。  
+ 之後**資料集**(並**XmlDataDocument**) 已更新， **XmlDataDocument**可以忽略的項目然後寫出修改過的 XML 文件**資料集**仍保持不變，如下所示。 在採購單案例中，當提領出訂單項目後，已修改的 XML 文件便會接著傳遞給訂單處理過程中的下一個步驟，例如傳送至公司的運送部門。  
   
 ```vb  
 Imports System  
@@ -233,4 +233,4 @@ public class Sample
   
 ## <a name="see-also"></a>另請參閱  
  [資料集和 XmlDataDocument 同步處理](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

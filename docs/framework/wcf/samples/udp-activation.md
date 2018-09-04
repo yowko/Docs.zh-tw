@@ -2,15 +2,15 @@
 title: UDP 啟用
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: 9f7600bff17c015f28c3fb94ed5360561d45c65b
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: c64540db555d7cac56dd46c6ffb63ec95ca81f91
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33810027"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538512"
 ---
 # <a name="udp-activation"></a>UDP 啟用
-這個範例根據[傳輸： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例。 它會擴充[傳輸： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例以支援使用 Windows Process Activation Service (WAS) 的處理序啟用。  
+此樣本根據[傳輸： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例。 它會擴充[傳輸： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例，以支援使用 Windows Process Activation Service (WAS) 處理序啟動。  
   
  此範例包含三個主要部分：  
   
@@ -56,7 +56,7 @@ ms.locfileid: "33810027"
  UDP 通訊協定接聽程式是通訊協定啟動程式內部的模組，會代表虛擬應用程式接聽 UDP 端點。 會在類別 `UdpSocketListener` 中實作此項。 端點會表示為 `IPEndpoint`，而這是針對站台從通訊協定繫結擷取的連接埠號。  
   
 ### <a name="control-service"></a>控制服務  
- 在此範例中，我們會使用 WCF 啟動程式和 WAS 背景工作處理序之間的通訊。 常駐在啟動程式中的服務稱為「控制服務」。  
+ 在此範例中，我們可以使用 WCF 啟動程式和 WAS 背景工作處理序之間進行通訊。 常駐在啟動程式中的服務稱為「控制服務」。  
   
 ## <a name="protocol-handlers"></a>通訊協定處理常式  
  在接聽程式配接器呼叫 `WebhostOpenListenerChannelInstance` 之後，WAS 處理序管理員就會啟動背景工作處理序 (如果尚未啟動)。 背景工作處理序內的應用程式管理員接著會載入 UDP 處理序通訊協定處理常式 (PPH)，以及針對該 `ListenerChannelId` 所發出的要求。 Pph 接著會呼叫`IAdphManager`。`StartAppDomainProtocolListenerChannel` 若要啟動 UDP AppDomain 通訊協定處理常式 (ADPH)。  
@@ -89,13 +89,13 @@ ms.locfileid: "33810027"
   
     -   也會對此虛擬應用程式啟用 "net.udp" 通訊協定。  
   
-3.  啟動使用者介面應用程式 "WasNetActivator.exe"。 按一下**安裝**索引標籤上，檢查下列核取方塊，然後按一下**安裝**安裝它們：  
+3.  啟動使用者介面應用程式 "WasNetActivator.exe"。 按一下 **安裝程式**索引標籤上，勾選下列核取方塊，然後按一下**安裝**安裝它們：  
   
     -   UDP 接聽程式配接器  
   
     -   UDP 通訊協定處理常式  
   
-4.  按一下**啟用**的使用者介面應用程式"WasNetActivator.exe"的索引標籤。 按一下**啟動**按鈕以啟動接聽程式介面卡。 您現在可以準備執行程式。  
+4.  按一下 **啟用**的使用者介面應用程式"WasNetActivator.exe"的索引標籤。 按一下 **啟動**按鈕以啟動接聽程式配接器。 您現在可以準備執行程式。  
   
     > [!NOTE]
     >  完成這個範例時，必須執行 Cleanup.bat 以移除「預設的網站」的 net.udp 繫結。  
@@ -119,7 +119,7 @@ ms.locfileid: "33810027"
   
     -   Internet Information Services (IIS)：W3SVC。  
   
-2.  接著啟動啟動程式：WasNetActivator.exe。 在下**啟用**索引標籤，唯一的通訊協定， **UDP**，下拉式清單中選取。 按一下**啟動**按鈕來開始啟動程式。  
+2.  接著啟動啟動程式：WasNetActivator.exe。 底下**啟用**索引標籤，唯一的通訊協定**UDP**，在下拉式清單中選取。 按一下 [**啟動**] 按鈕來開始啟動程式。  
   
 3.  一旦開始執行啟動程式，就可以從命令視窗中執行 Client.exe 以執行用戶端程式碼。 下列是範例輸出：  
   
@@ -158,7 +158,7 @@ ms.locfileid: "33810027"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\UdpActivation`  
   

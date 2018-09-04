@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4354e5eb-dd45-469d-97fb-1c495705ee59
-ms.openlocfilehash: 790bb8d4ea1e146d94ea7cf153b8909c6cc1af7a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4e7c94dce5b50fe93f00aaaa72206be3394faf62
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762841"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43542202"
 ---
 # <a name="how-to-call-custom-database-functions"></a>如何：呼叫自訂資料庫函式
 本主題描述如何呼叫資料庫中定義的自訂資料庫函式，而資料庫是來自 LINQ to Entities 查詢。  
@@ -23,18 +23,18 @@ ms.locfileid: "32762841"
   
 1.  在您的資料庫中建立自訂函式。  
   
-     如需在 SQL Server 中建立自訂函式的詳細資訊，請參閱[CREATE FUNCTION (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkID=139871)。  
+     如需 SQL Server 中建立自訂函式的詳細資訊，請參閱[CREATE FUNCTION & Amp;#40;transact-SQL&AMP;#41;](https://go.microsoft.com/fwlink/?LinkID=139871)。  
   
 2.  在 .edmx 檔案的存放結構定義語言 (SSDL) 中宣告函式。 函式的名稱必須和資料庫中宣告的函式名稱一樣。  
   
-     如需詳細資訊，請參閱[函式項目 (SSDL)](http://msdn.microsoft.com/library/b60cfc3d-8b93-423e-8c99-b867256640a4)。  
+     如需詳細資訊，請參閱 <<c0> [ 函式項目 (SSDL)](https://msdn.microsoft.com/library/b60cfc3d-8b93-423e-8c99-b867256640a4)。  
   
 3.  將對應的方法加入至應用程式程式碼的類別中，然後將 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> 套用至方法。請注意，屬性的 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> 和 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> 參數分別是概念模型的命名空間名稱和概念模型中的函式名稱。 LINQ 的函式名稱解析是區分大小寫的。  
   
 4.  呼叫 LINQ to Entities 查詢中的方法。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何從 LINQ to Entities 查詢中呼叫自訂資料庫函式。 範例使用 School 模型。 School 模型的相關資訊，請參閱[建立 School 範例資料庫](http://msdn.microsoft.com/library/c1bec483-a0ea-4660-aa0b-7b0a8b68fed0)和[產生學校.edmx 檔案](http://msdn.microsoft.com/library/c48b3907-a8be-4fe6-884c-e95af1852758)。  
+ 下列範例示範如何從 LINQ to Entities 查詢中呼叫自訂資料庫函式。 範例使用 School 模型。 如需 School 模型的詳細資訊，請參閱[建立 School 範例資料庫](https://msdn.microsoft.com/library/c1bec483-a0ea-4660-aa0b-7b0a8b68fed0)並[產生 School.edmx 檔案](https://msdn.microsoft.com/library/c48b3907-a8be-4fe6-884c-e95af1852758)。  
   
  下列程式碼會將 `AvgStudentGrade` 函式加入至 School 範例資料庫。  
   
@@ -61,5 +61,5 @@ ms.locfileid: "32762841"
  [!code-vb[DP L2E MapToDBFunction#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e maptodbfunction/vb/module1.vb#4)]  
   
 ## <a name="see-also"></a>另請參閱  
- [.edmx 檔案概觀](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
+ [.edmx 檔案概觀](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
  [LINQ to Entities 中的查詢](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

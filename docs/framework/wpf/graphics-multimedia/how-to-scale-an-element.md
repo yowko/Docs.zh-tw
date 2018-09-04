@@ -5,28 +5,28 @@ helpviewer_keywords:
 - scaling [WPF], elements
 - graphics [WPF], scaling elements
 ms.assetid: 18158d94-bbe7-4f6a-814e-84d27fa748bf
-ms.openlocfilehash: f39bb4408e5b61912da30088de7c9f62587bc278
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 44c638b58d828e5beb0b9de5c7bb0b67c8e82d87
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562163"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43553167"
 ---
 # <a name="how-to-scale-an-element"></a>操作說明：縮放元素
-這個範例示範如何使用<xref:System.Windows.Media.ScaleTransform>調整項目。  
+此範例示範如何使用<xref:System.Windows.Media.ScaleTransform>來縮放元素。  
   
- 使用<xref:System.Windows.Media.ScaleTransform.ScaleX%2A>和<xref:System.Windows.Media.ScaleTransform.ScaleY%2A>屬性，以調整元素大小依您指定的比例。 例如，<xref:System.Windows.Media.ScaleTransform.ScaleX%2A>值為 1.5 延伸到 150%其原始寬度的項目。 A<xref:System.Windows.Media.ScaleTransform.ScaleY%2A>值為 0.5 壓縮百分之 50 項目的高度。  
+ 使用<xref:System.Windows.Media.ScaleTransform.ScaleX%2A>和<xref:System.Windows.Media.ScaleTransform.ScaleY%2A>屬性所指定的因數調整元素的大小。 比方說，<xref:System.Windows.Media.ScaleTransform.ScaleX%2A>的 1.5 倍的值會自動縮放其原始寬度的 150%的項目。 A <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> 50%的值為 0.5 會縮小的項目的高度。  
   
- 使用<xref:System.Windows.Media.ScaleTransform.CenterX%2A>和<xref:System.Windows.Media.ScaleTransform.CenterY%2A>屬性，以指定的調整規模作業的中心點。 根據預設，<xref:System.Windows.Media.ScaleTransform>會集中在時間點 (0，0)，對應至矩形左上角。 這是移動項目，讓它看起來更大，因為當您將套用的效果<xref:System.Windows.Media.Transform>，變更座標空間存放物件。  
+ 使用<xref:System.Windows.Media.ScaleTransform.CenterX%2A>和<xref:System.Windows.Media.ScaleTransform.CenterY%2A>屬性，以指定的縮放作業中心點。 根據預設，<xref:System.Windows.Media.ScaleTransform>中心點 (0，0)，其對應至矩形左上角。 這具有移動元素同時也使它看起來更大的程式，因為當您將套用的效果<xref:System.Windows.Media.Transform>，變更物件所在的座標空間。  
   
- 下列範例會使用<xref:System.Windows.Media.ScaleTransform>x 50 50 的大小增加兩倍<xref:System.Windows.Shapes.Rectangle>。 <xref:System.Windows.Media.ScaleTransform>兩個具有值為 0 （預設值）<xref:System.Windows.Media.ScaleTransform.CenterX%2A>和<xref:System.Windows.Media.ScaleTransform.CenterY%2A>。  
+ 下列範例會使用<xref:System.Windows.Media.ScaleTransform>x 50 50 大小的兩倍<xref:System.Windows.Shapes.Rectangle>。 <xref:System.Windows.Media.ScaleTransform>具有值為 0 （預設值），同時<xref:System.Windows.Media.ScaleTransform.CenterX%2A>和<xref:System.Windows.Media.ScaleTransform.CenterY%2A>。  
   
 ## <a name="example"></a>範例  
  [!code-xaml[transformsSample#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/ScaleTransformExample.xaml#21)]  
   
- 通常您設定<xref:System.Windows.Media.ScaleTransform.CenterX%2A>和<xref:System.Windows.Media.ScaleTransform.CenterY%2A>縮放物件的中央: (<xref:System.Windows.FrameworkElement.Width%2A>/2，  <xref:System.Windows.FrameworkElement.Height%2A> /2)。  
+ 一般而言，您設定<xref:System.Windows.Media.ScaleTransform.CenterX%2A>並<xref:System.Windows.Media.ScaleTransform.CenterY%2A>之物件的縮放中心: (<xref:System.Windows.FrameworkElement.Width%2A>/2，  <xref:System.Windows.FrameworkElement.Height%2A> /2)。  
   
- 下列範例示範另一個<xref:System.Windows.Shapes.Rectangle>，就會加倍大小; 不過，這<xref:System.Windows.Media.ScaleTransform>兩者中的值為 25<xref:System.Windows.Media.ScaleTransform.CenterX%2A>和<xref:System.Windows.Media.ScaleTransform.CenterY%2A>，它會對應到中央的矩形。  
+ 下列範例示範另一個<xref:System.Windows.Shapes.Rectangle>，會增加一倍的大小; 不過，這<xref:System.Windows.Media.ScaleTransform>兩個具有的值為 25<xref:System.Windows.Media.ScaleTransform.CenterX%2A>和<xref:System.Windows.Media.ScaleTransform.CenterY%2A>，它會對應至矩形的中心。  
   
  [!code-xaml[transformsSample#22](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/ScaleTransformExample.xaml#22)]  
   
@@ -35,7 +35,7 @@ ms.locfileid: "33562163"
  ![採用不同中心點的 2 倍縮放](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-scalecenter.gif "wcpsdk_graphicsmm_scalecenter")  
 兩個有相同 ScaleX 和 ScaleY 值，但不同中心的 ScaleTransform 作業  
   
- 如需完整範例，請參閱 [2D 轉換範例](http://go.microsoft.com/fwlink/?LinkID=158252)。  
+ 如需完整範例，請參閱 [2D 轉換範例](https://go.microsoft.com/fwlink/?LinkID=158252)。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Media.Transform>  

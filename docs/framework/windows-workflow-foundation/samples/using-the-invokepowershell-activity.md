@@ -2,12 +2,12 @@
 title: 使用 InvokePowerShell 活動
 ms.date: 03/30/2017
 ms.assetid: 956251a0-31ca-4183-bf76-d277c08585df
-ms.openlocfilehash: c5609556af94ed3e372538047ff6309a105975ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa42cddd930b755e9938a02a137ee77ee273fad0
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520236"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538863"
 ---
 # <a name="using-the-invokepowershell-activity"></a>使用 InvokePowerShell 活動
 InvokePowerShell 範例示範如何使用 `InvokePowerShell` 活動叫用 Windows PowerShell 命令。  
@@ -25,7 +25,7 @@ InvokePowerShell 範例示範如何使用 `InvokePowerShell` 活動叫用 Window
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\PowerShell`  
   
@@ -35,8 +35,8 @@ InvokePowerShell 範例示範如何使用 `InvokePowerShell` 活動叫用 Window
 |專案名稱|描述|主要檔案|  
 |------------------|-----------------|----------------|  
 |CodedClient|使用 PowerShell 活動的範例用戶端應用程式。|-   **Program.cs**： 以程式設計方式建立循序工作流程可呼叫 InvokePowerShell 活動。|  
-|DesignerClient|包含 `InvokePowerShell` 自訂活動和其他自訂活動在內的一組自訂活動，以及使用它們的工作流程。|<ul><li>活動：<br /><br /> <ul><li>**PrintCollection.cs**： 協助程式活動會列印到主控台的集合中的所有項目。</li><li>**ReadLine.cs**： 從主控台讀取輸入的協助程式活動。</li></ul></li><li>檔案系統：<br /><br /> <ul><li>**Copy.xaml**： 將檔案複製的活動。</li><li>**CreateFile.xaml**： 建立檔案的活動。</li><li>**DeleteFile.xaml**： 刪除檔案活動。</li><li>**MakeDir.xaml**： 建立目錄的活動。</li><li>**Move.xaml**： 移動檔案的活動。</li><li>**ReadFile.xaml**： 讀取檔案，並傳回其內容的活動。</li><li>**TestPath.xaml**： 測試路徑是否存在的活動。</li></ul></li><li>處理序：<br /><br /> <ul><li>**GetProcess.xaml**： 取得執行中處理序清單的活動。</li><li>**StopProcess.xaml**： 停止特定處理序的活動。</li></ul></li><li>**Program.cs**： 呼叫 Sequence1 工作流程。</li><li>**Sequence1.xaml**： 循序工作流程。</li></ul>|  
-|PowerShell|`InvokePowerShell` 活動及其相關聯的設計工具。|活動檔案<br /><br /> -   **ExecutePowerShell.cs**： 主要執行邏輯的活動。<br />-   **InvokePowerShell.cs**： 主要執行邏輯，其中包含泛型 （傳回值） 版本和非泛型 （非傳回值） 版本的包裝函式。 這是活動的公用介面。<br />-   **NoPersistZone.cs**： 這個活動會防止任何子活動保存。 在 `InvokePowerShell` 活動實作中使用這個類別，以防止活動於執行中保存。<br /><br /> 設計工具檔案：<br /><br /> 1.**ArgumentDictionaryEditor.cs**: Windows 對話方塊，可讓使用者編輯的引數`InvokePowerShell`活動。<br />2.**GenericInvokePowerShellDesigner.xaml**和**GenericInvokePowerShellDesigner.xaml.cs**： 定義泛型外觀`InvokePowerShell`中的活動[!INCLUDE[wfd2](../../../../includes/wfd2-md.md)]。<br />3.**InvokePowerShellDesigner.xaml**和**InvokePowerShellDesigner.cs**： 定義非泛型的外觀`InvokePowerShell`中的活動[!INCLUDE[wfd2](../../../../includes/wfd2-md.md)]。|  
+|DesignerClient|包含 `InvokePowerShell` 自訂活動和其他自訂活動在內的一組自訂活動，以及使用它們的工作流程。|<ul><li>活動：<br /><br /> <ul><li>**PrintCollection.cs**： 協助程式活動列印至主控台的集合中的所有項目。</li><li>**ReadLine.cs**： 從主控台讀取輸入的協助程式活動。</li></ul></li><li>檔案系統：<br /><br /> <ul><li>**Copy.xaml**： 將檔案複製的活動。</li><li>**CreateFile.xaml**： 建立檔案的活動。</li><li>**DeleteFile.xaml**： 刪除檔案活動。</li><li>**MakeDir.xaml**： 建立目錄的活動。</li><li>**Move.xaml**： 移動檔案的活動。</li><li>**ReadFile.xaml**： 讀取的檔案，並傳回其內容的活動。</li><li>**TestPath.xaml**： 測試路徑是否存在的活動。</li></ul></li><li>處理序：<br /><br /> <ul><li>**GetProcess.xaml**: 活動，取得執行程序的清單。</li><li>**StopProcess.xaml**： 停止特定處理序的活動。</li></ul></li><li>**Program.cs**： 呼叫 Sequence1 工作流程。</li><li>**Sequence1.xaml**： 循序工作流程。</li></ul>|  
+|PowerShell|`InvokePowerShell` 活動及其相關聯的設計工具。|活動檔案<br /><br /> -   **ExecutePowerShell.cs**: 活動的主要執行邏輯。<br />-   **InvokePowerShell.cs**： 主要執行邏輯，其中包含泛型 （傳回值） 版本和非泛型 （非傳回值） 版本的包裝函式。 這是活動的公用介面。<br />-   **NoPersistZone.cs**： 此活動可防止任何子活動保存。 在 `InvokePowerShell` 活動實作中使用這個類別，以防止活動於執行中保存。<br /><br /> 設計工具檔案：<br /><br /> 1.**ArgumentDictionaryEditor.cs**: Windows 對話方塊，可讓使用者編輯的引數`InvokePowerShell`活動。<br />2.**GenericInvokePowerShellDesigner.xaml**並**GenericInvokePowerShellDesigner.xaml.cs**： 定義的泛型出現`InvokePowerShell`中的活動[!INCLUDE[wfd2](../../../../includes/wfd2-md.md)]。<br />3.**InvokePowerShellDesigner.xaml**並**InvokePowerShellDesigner.cs**： 定義非泛型的外觀`InvokePowerShell`中的活動[!INCLUDE[wfd2](../../../../includes/wfd2-md.md)]。|  
   
  先討論用戶端專案，因為了解 PowerShell 活動的用法後，就會比較容易了解其內部功能。  
   
@@ -166,10 +166,10 @@ new ForEach<PSObject>
     Grid.Row="1" Grid.Column="1" />  
 ```  
   
- 設計工具自訂並不止於在設計畫布上定義活動外觀的 .xaml 檔案。 用來顯示活動參數的對話方塊也可以自訂。 這些參數和 PowerShell 變數會影響 PowerShell 命令的行為。 活動將它們當做公開<!--zz <xref:System.Collections.Generic.Dictionary%601>-->`System.Collections.Generic.Dictionary`型別。 ArgumentDictionaryEditor.cs、PropertyEditorResources.xaml 和 PropertyEditorResources.cs 定義可讓您編輯這些類型的對話方塊。  
+ 設計工具自訂並不止於在設計畫布上定義活動外觀的 .xaml 檔案。 用來顯示活動參數的對話方塊也可以自訂。 這些參數和 PowerShell 變數會影響 PowerShell 命令的行為。 活動將它們做為公開<!--zz <xref:System.Collections.Generic.Dictionary%601>-->`System.Collections.Generic.Dictionary`型別。 ArgumentDictionaryEditor.cs、PropertyEditorResources.xaml 和 PropertyEditorResources.cs 定義可讓您編輯這些類型的對話方塊。  
   
 ## <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
- 您必須安裝 Windows PowerShell，才能執行這個範例。 可以從下列位置安裝 Windows PowerShell: [Windows PowerShell](http://go.microsoft.com/fwlink/?LinkId=150383)。  
+ 您必須安裝 Windows PowerShell，才能執行這個範例。 Windows PowerShell 可以從下列位置安裝： [Windows PowerShell](https://go.microsoft.com/fwlink/?LinkId=150383)。  
   
 #### <a name="to-run-the-coded-client"></a>若要執行程式碼用戶端  
   
@@ -204,6 +204,6 @@ new ForEach<PSObject>
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\PowerShell`

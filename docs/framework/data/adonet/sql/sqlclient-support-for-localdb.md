@@ -2,18 +2,18 @@
 title: LocalDB 的 SqlClient 支援
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: 33368ca4b2dc5397087d29e515db6c1094e350bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ef75def3f3de44b5e23cb1197a4410dcf6b547f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359793"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43532705"
 ---
 # <a name="sqlclient-support-for-localdb"></a>LocalDB 的 SqlClient 支援
-SQL Server code name Denali 中從開始，SQL Server，名為 LocalDB，輕量版可。 本主題討論如何連接到 LocalDB 資料庫。  
+從 SQL Server 代號 Denali，輕量版的 SQL Server，名為 LocalDB，將可。 本主題討論如何連接到 LocalDB 資料庫。  
   
 ## <a name="remarks"></a>備註  
- 如需有關 LocalDB 的詳細資訊，包括如何安裝 LocalDB 和設定 LocalDB 執行個體，請參閱 SQL Server 線上叢書 》。  
+ 如需有關 LocalDB 的詳細資訊，包括如何安裝 LocalDB 和設定您的 LocalDB 執行個體，請參閱 SQL Server 線上叢書 》。  
   
  LocalDB 功能摘要：  
   
@@ -31,7 +31,7 @@ SQL Server code name Denali 中從開始，SQL Server，名為 LocalDB，輕量�
   
  連接至 LocalDB 資料庫時不允許`User Instance=True` 。  
   
- 您可以從 [Microsoft SQL Server 2012 功能套件](http://www.microsoft.com/download/en/details.aspx?id=29065)下載 LocalDB。 如果您將使用 sqlcmd.exe 來修改 LocalDB 執行個體中的資料，您必須從 SQL Server 2012，您也可以從 SQL Server 2012 功能套件取得 sqlcmd。  
+ 您可以下載從 LocalDB [Microsoft SQL Server 2012 功能套件](https://www.microsoft.com/download/en/details.aspx?id=29065)。 如果您將使用 sqlcmd.exe 來修改 LocalDB 執行個體中的資料，您必須從 SQL Server 2012，您也可以從 SQL Server 2012 功能套件取得 sqlcmd。  
   
 ## <a name="programmatically-create-a-named-instance"></a>以程式設計方式建立具名執行個體  
  應用程式可以建立具名執行個體並指定資料庫，如下所示：  
@@ -60,4 +60,4 @@ SQL Server code name Denali 中從開始，SQL Server，名為 LocalDB，輕量�
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 功能和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

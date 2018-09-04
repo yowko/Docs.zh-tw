@@ -2,12 +2,12 @@
 title: SQL 工作流程執行個體存放區的屬性
 ms.date: 03/30/2017
 ms.assetid: 5bf75f3c-8f33-450d-967f-6ee862c14c67
-ms.openlocfilehash: 575a46a6f261a7666263fb8bdc67fd94a56c50ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3707e4912628380e5e06eeae1a6d608a4b0d5555
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514433"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43539246"
 ---
 # <a name="properties-of-sql-workflow-instance-store"></a>SQL 工作流程執行個體存放區的屬性
 本節中的主題描述 SQL 工作流程執行個體存放區的詳細資訊。  
@@ -27,5 +27,5 @@ ms.locfileid: "33514433"
 -   [連接字串與連接字串名稱](../../../docs/framework/windows-workflow-foundation/connection-string-and-connection-string-name.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Windows Server App Fabric 執行個體存放區](http://go.microsoft.com/fwlink/?LinkId=201201)  
- [App Fabric SQL Server 持續性資料庫](http://go.microsoft.com/fwlink/?LinkId=201202)
+ [Windows Server App Fabric 執行個體存放區](https://go.microsoft.com/fwlink/?LinkId=201201)  
+ [App Fabric SQL Server 持續性資料庫](https://go.microsoft.com/fwlink/?LinkId=201202)

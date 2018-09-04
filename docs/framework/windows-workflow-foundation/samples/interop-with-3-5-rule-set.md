@@ -2,15 +2,15 @@
 title: 和 3.5 規則集互通
 ms.date: 03/30/2017
 ms.assetid: 969f3295-d874-428c-a9c6-623e3d578e51
-ms.openlocfilehash: 9d42198d336e38c4ad9fc6c686a019814bd571bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ea5454ef80bfd83611ed20392782d99cd8c0c25
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517903"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538548"
 ---
 # <a name="interop-with-35-rule-set"></a>和 3.5 規則集互通
-這個範例示範如何使用<xref:System.Activities.Statements.Interop>活動中的自訂活動整合[!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]使用<!--zz <xref:System.Workflow.Activities.Policy> -->`System.Workflow.Activities.Policy`和規則。 範例中會透過將 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 變數繫結至自訂活動公開之相依性屬性的方式，將資料傳遞至自訂活動。  
+此範例示範如何使用<xref:System.Activities.Statements.Interop>活動中的自訂活動的整合[!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]使用<!--zz <xref:System.Workflow.Activities.Policy> -->`System.Workflow.Activities.Policy`和規則。 範例中會透過將 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 變數繫結至自訂活動公開之相依性屬性的方式，將資料傳遞至自訂活動。  
   
 ## <a name="requirements"></a>需求  
   
@@ -21,7 +21,7 @@ ms.locfileid: "33517903"
 3.  [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]  
   
 ## <a name="demonstrates"></a>示範  
- <xref:System.Activities.Statements.Interop> 活動， <!--zz <xref:System.Workflow.Activities.Policy> --> `System.Workflow.Activities.Policy`中的活動[!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]具有相依性屬性  
+ <xref:System.Activities.Statements.Interop> 活動<!--zz <xref:System.Workflow.Activities.Policy> -->`System.Workflow.Activities.Policy`中的活動[!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]與相依性屬性  
   
 ## <a name="discussion"></a>討論  
  此範例示範整合 [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] 活動的其中一個整合案例。 此範例包含[!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]叫用的自訂活動<!--zz <xref:System.Workflow.Activities.Policy> -->`System.Workflow.Activities.Policy`活動。  
@@ -62,11 +62,11 @@ base.SetValue(TravelRuleSet.DiscountLevelProperty, value);
   
  ![變數](../../../../docs/framework/windows-workflow-foundation/samples/media/interoprulesvariables.jpg "InteropRulesVariables")  
   
- ![方案總管 中](../../../../docs/framework/windows-workflow-foundation/samples/media/interoprulessolutionexplorer.jpg "InteropRulesSolutionExplorer")  
+ ![方案總管](../../../../docs/framework/windows-workflow-foundation/samples/media/interoprulessolutionexplorer.jpg "InteropRulesSolutionExplorer")  
   
  最後，<xref:System.Activities.Statements.Interop> 活動會用來與 TravelRuleSet 整合。 稍早在 <xref:System.Activities.Statements.Sequence> 上宣告的變數會用來繫結至相依性屬性。  
   
- ![活動類型](../../../../docs/framework/windows-workflow-foundation/samples/media/interoprules.jpg "InteropRules")  
+ ![活動型別](../../../../docs/framework/windows-workflow-foundation/samples/media/interoprules.jpg "InteropRules")  
   
  ![箭號](../../../../docs/framework/windows-workflow-foundation/samples/media/interoprulesarrow.jpg "InteropRulesArrow")  
   
@@ -77,6 +77,6 @@ base.SetValue(TravelRuleSet.DiscountLevelProperty, value);
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\InteropWith35RuleSet`

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - windows [Windows Forms], splitting horizontally
 ms.assetid: 3872a176-891f-4c70-9779-b2ce85b0b102
 ms.openlocfilehash: c2b605a08ea29d1d0a1e92cb2b7e4dc1f2059c26
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421374"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43542917"
 ---
 # <a name="how-to-split-a-window-horizontally-using-the-designer"></a>如何：使用設計工具水平分隔視窗
 這個範例會將分割的分隔器<xref:System.Windows.Forms.SplitContainer>控制水平。  

@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: 5bb9b6a2-7b57-4aea-8809-32b28bc73e88
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7855007c7566d3be0012bbff2cb124ee2681cb6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d59416ea2d9a2d7b001421271b9907bb3e84c086
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398049"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536949"
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>Common Language Runtime 中的 ETW 事件
 Common language runtime (CLR) 透過各式各樣的偵錯和分析事件，提供有用的 Windows 事件追蹤 (ETW) 診斷資訊。 CLR ETW 事件會運用 Windows ETW 追蹤系統，來增強 Common Language Runtime 提供的現有分析和偵錯支援。  
   
- 您可以在 MSDN 上的[使用 ETW 改善偵錯和效能調整](http://go.microsoft.com/fwlink/?LinkID=161142)一文中取得 ETW 的詳細資訊。 您可以在 NTDebugging 部落格的 [Windows 效能工具組 - Xperf](http://go.microsoft.com/fwlink/?LinkID=161144) 一文中找到 Xperf 的相關資訊。  
+ 您可以在 MSDN 上的[使用 ETW 改善偵錯和效能調整](https://go.microsoft.com/fwlink/?LinkID=161142)一文中取得 ETW 的詳細資訊。 您可以在 NTDebugging 部落格的 [Windows 效能工具組 - Xperf](https://go.microsoft.com/fwlink/?LinkID=161144) 一文中找到 Xperf 的相關資訊。  
   
  這些事件主題中所描述的所有事件都需要 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] (含) 以後版本。 Windows Vista 作業系統是支援的最低需求用戶端，而 Windows Server 2008 是支援的最低需求伺服器。  
   

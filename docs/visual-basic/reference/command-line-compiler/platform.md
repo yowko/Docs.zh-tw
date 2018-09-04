@@ -9,11 +9,11 @@ ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ec3a7e01e62b60688080fee95cf70e0ed38917f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656174"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552188"
 ---
 # <a name="-platform-visual-basic"></a>-平台 (Visual Basic)
 指定通用語言執行平台 (CLR) 的哪個平台版本可以執行輸出檔。  
@@ -50,7 +50,7 @@ ms.locfileid: "33656174"
   
 -   使用其元件不存在於所有平台的平台叫用或 COM Interop。  
   
- **-平台**選項可以減少一些問題，如果您知道您所做的假設有關您的程式碼將在執行的架構。 尤其是：  
+ **-平台**選項可以減少一些問題，如果您知道您所做的假設會執行您的程式碼的架構。 尤其是：  
   
 -   如果您決定以 64 位元平台為目標，並在 32 位元電腦上執行應用程式，錯誤訊息會遠遠較早出現，而且會較以平台為目標，超過以不使用這個參數所發生的錯誤為目標。  
   
@@ -66,15 +66,15 @@ ms.locfileid: "33656174"
   
 -   使用 `-platform:anycpu32bitpreferred` 編譯的可執行檔將在 32 位元 CLR 上執行。  
   
- 如需如何開發在 64 位元版本的 Windows 上執行的應用程式的詳細資訊，請參閱[64 位元應用程式](../../../framework/64-bit-apps.md)。  
+ 如需如何開發應用程式在 64 位元版本的 Windows 上執行的詳細資訊，請參閱[64 位元應用程式](../../../framework/64-bit-apps.md)。  
   
 ### <a name="to-set--platform-in-the-visual-studio-ide"></a>若要設定-Visual Studio IDE 中的平台  
   
-1.  在**方案總管 中**，選擇專案，開啟**專案**功能表，然後再按一下**屬性**。  
+1.  在 **方案總管**，選擇專案，開啟**專案**功能表，然後再按一下**屬性**。  
   
-2.  在**編譯**索引標籤上，選取或清除**建議使用 32 位元**核取方塊，或在**目標 CPU**清單中，選擇一個值。  
+2.  在上**編譯**索引標籤上，選取或清除**偏好 32 位元**核取方塊，或者，在**目標 CPU**清單中，選擇一個值。  
   
-     如需詳細資訊，請參閱[編譯的頁面上，專案設計工具 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)。  
+     如需詳細資訊，請參閱 <<c0> [ 編譯的 Page，Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)。  
   
 ## <a name="example"></a>範例  
  下列範例說明如何使用 `-platform` 編譯器選項。  

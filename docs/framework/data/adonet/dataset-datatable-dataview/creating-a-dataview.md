@@ -5,20 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b1cc02d1-23b1-4439-a998-0da1899f3442
-ms.openlocfilehash: d118f97e425782dbdf89c7e5d1eccd4d371b419c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b88df66ef2e065d1db8d4033eb1fb0e47ebdd189
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536452"
 ---
 # <a name="creating-a-dataview"></a>建立 DataView
-建立 <xref:System.Data.DataView> 的方法有兩種。 您可以使用**DataView**建構函式，或者您可以建立參考<xref:System.Data.DataTable.DefaultView%2A>屬性<xref:System.Data.DataTable>。 **DataView**建構函式可以是空的或者也可採用任一**DataTable**做為單一引數，或**DataTable**配合篩選準則、 排序準則和資料列狀態篩選器。 如需有關其他引數可用於**DataView**，請參閱[排序及篩選資料](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)。  
+建立 <xref:System.Data.DataView> 的方法有兩種。 您可以使用**DataView**建構函式，或者您可以建立參考<xref:System.Data.DataTable.DefaultView%2A>屬性<xref:System.Data.DataTable>。 **DataView**建構函式可以是空的或者也可採用任一**DataTable**做為單一引數，或有**DataTable**篩選準則、 排序條件及一個資料列狀態篩選器。 如需有關其他引數可用以搭配**DataView**，請參閱[排序及篩選資料](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)。  
   
- 因為索引**DataView**會**DataView**建立時，以及當任一**排序**， **RowFilter**，或**RowStateFilter**修改屬性、 您達到最佳效能提供任何初始排序順序或篩選準則做為建構函式引數，當您建立**DataView**。 建立**DataView**而不指定排序或篩選準則，然後設定**排序**， **RowFilter**，或**RowStateFilter**屬性稍後會導致索引建立至少兩次： 一旦時**DataView**建立時，以及重新排序或篩選屬性的任何會修改。  
+ 因為索引**DataView**會**DataView**建立時，以及當任一**排序**， **RowFilter**，或**RowStateFilter**屬性會經過修改，即可藉由提供任何初始排序順序或篩選準則做為建構函式引數，當您建立時達到最佳效能**DataView**。 建立**DataView**而不指定排序或篩選準則，然後設定**排序**， **RowFilter**，或**RowStateFilter**屬性稍後會導致至少兩次建立索引： 一旦時**DataView**建立時，並一次的任何排序或篩選屬性修改時。  
   
- 請注意，如果您建立**DataView**使用不接受任何引數的建構函式，您將無法使用**DataView**除非您已設定**資料表**屬性.  
+ 請注意，如果您建立**DataView**使用未採用任何引數的建構函式，您將無法再使用**DataView**除非您已設定**表格**屬性.  
   
- 下列程式碼範例示範如何建立**DataView**使用**DataView**建構函式。 A **RowFilter**，**排序**資料行，和**DataViewRowState**一併提供**DataTable**。  
+ 下列程式碼範例示範如何建立**DataView**使用**DataView**建構函式。 A **RowFilter**，**排序**資料行，並**DataViewRowState**提供**DataTable**。  
   
 ```vb  
 Dim custDV As DataView = New DataView(custDS.Tables("Customers"), _  
@@ -34,7 +35,7 @@ DataView custDV = new DataView(custDS.Tables["Customers"],
     DataViewRowState.CurrentRows);  
 ```  
   
- 下列程式碼範例示範如何取得預設的參考**DataView**的**DataTable**使用**DefaultView**資料表屬性。  
+ 下列程式碼範例示範如何取得預設值的參考**DataView**的**DataTable**使用**DefaultView**資料表屬性。  
   
 ```vb  
 Dim custDV As DataView = custDS.Tables("Customers").DefaultView  
@@ -50,4 +51,4 @@ DataView custDV = custDS.Tables["Customers"].DefaultView;
  [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
  [排序和篩選資料](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)  
  [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

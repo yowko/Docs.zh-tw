@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Button control [Windows Forms]
 ms.assetid: d38bc40c-8040-4f19-9e88-2c665b0ab80b
 ms.openlocfilehash: a2f421afe8e64b38851b3063c7091d9ee105ade9
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43332015"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43537438"
 ---
 # <a name="button-control-windows-forms"></a>Button 控制項 (Windows Form)
 Windows Form `Button` 控制項可讓使用者按一下以執行動作。 `Button` 控制項可以顯示文字和影像。 按一下按鈕時，按鈕看起來就像被推入又釋放。  

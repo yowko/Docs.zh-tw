@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fd7a4b19613ea771a055af7dd91ec368859ee191
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43475968"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529130"
 ---
 # <a name="publickeyblob-structure"></a>PublicKeyBlob 結構
 以二進位格式，表示公用/私密金鑰組的公開金鑰。  

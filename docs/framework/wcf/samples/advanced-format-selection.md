@@ -3,11 +3,11 @@ title: 進階格式選取
 ms.date: 03/30/2017
 ms.assetid: e02d9082-4d55-41d8-9329-98f6d1c77f06
 ms.openlocfilehash: e5c396ce22e9021d453a70f3826b0bd3cc6aaf42
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466619"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43535086"
 ---
 # <a name="advanced-format-selection"></a>進階格式選取
 此範例示範如何擴充 Windows Communication Foundation (WCF) REST 程式設計模型，以支援新的傳出回應格式。 此外，這個範例使用 T4 範本將回應當做 XHTML 頁面傳回，示範如何實作檢視樣式程式設計模型。  

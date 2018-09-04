@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
 ms.openlocfilehash: b85fb6ebf56b110330be121c87d2492b0cfac536
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401940"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43535368"
 ---
 # <a name="copying-dataset-contents"></a>複製資料集內容
 您可以建立一份<xref:System.Data.DataSet>，讓您可以使用資料，而不會影響原始的資料，或處理的資料子集**資料集**。 當複製**資料集**，您可以：  

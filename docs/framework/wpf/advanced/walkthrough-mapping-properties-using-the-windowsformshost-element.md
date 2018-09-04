@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
-ms.openlocfilehash: 77027d771cf471e563e24c46d7794a18ad223541
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 4841ce260adfb5d0c0d4b0f359ac9998521d584b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258514"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529643"
 ---
 # <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>逐步解說：使用 WindowsFormsHost 項目對應屬性
 
@@ -33,7 +33,7 @@ ms.locfileid: "43258514"
 
 -   擴充預設屬性對應。
 
-在此逐步解說中所述工作的完整程式碼清單，請參閱 <<c0> [ 對應屬性使用 WindowsFormsHost 項目範例](http://go.microsoft.com/fwlink/?LinkID=160019)。
+在此逐步解說中所述工作的完整程式碼清單，請參閱 <<c0> [ 對應屬性使用 WindowsFormsHost 項目範例](https://go.microsoft.com/fwlink/?LinkID=160019)。
 
 當您完成時，您將能夠對應[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]上裝載的對應屬性的屬性[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項。
 

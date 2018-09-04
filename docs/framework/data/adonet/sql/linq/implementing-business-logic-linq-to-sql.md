@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-ms.openlocfilehash: 6216a3d6dd21f1dcb3348565a9f1870be7c7905a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d739e4bba96873740c53c07eccf687b060d82003
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362047"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552227"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>實作商務邏輯 (LINQ to SQL)
 本主題中的「商務邏輯」一詞，指的是您套用到資料的任何自訂規則或驗證測試，待套用之後，資料才會在資料庫中插入、更新或刪除。 商務邏輯有時也稱為「商務規則」或「定義域邏輯」。 在 N-Tier 應用程式中，這通常會設計為邏輯層，以便與展示層或資料存取層分開修改。 資料存取層可在資料庫中的資料更新、插入或刪除之前或之後叫用 (Invoke) 商務邏輯。  
   
- 商務邏輯可以簡單如結構描述驗證，用來確定欄位的型別與資料表資料行相容。 或者也可以包含一組物件，以各種複雜的方式互動。 這些規則可實作為資料庫上的預存程序 (Stored Procedure) 或實作為記憶體中的物件。 不論如何實作商務邏輯，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]可讓您使用部分類別和部分方法，商務邏輯與資料存取程式碼分開。  
+ 商務邏輯可以簡單如結構描述驗證，用來確定欄位的型別與資料表資料行相容。 或者也可以包含一組物件，以各種複雜的方式互動。 這些規則可實作為資料庫上的預存程序 (Stored Procedure) 或實作為記憶體中的物件。 不過實作商務邏輯，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]可讓您將商務邏輯分開資料存取程式碼使用部分類別和部分方法。  
   
 ## <a name="how-linq-to-sql-invokes-your-business-logic"></a>LINQ to SQL 如何叫用商務邏輯  
  當您在設計階段產生實體類別 (手動或者使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]或 SQLMetal) 時，它會定義為部分類別。 這表示，您可以在不同的程式碼檔案中，定義包含自訂商務邏輯之實體類別的另一個部分。 在編譯階段，這兩個部分會合併成單一類別。 但如果您必須使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]或 SQLMetal 重新產生實體類別，您還是可以這麼做，但您的類別部分將不會修改。  
@@ -25,7 +25,7 @@ ms.locfileid: "33362047"
  您可以在另外一個程式碼檔案撰寫的實作定義中，執行任何必要的自訂邏輯。 您可以使用部分類別本身當做定義域層，或可以從部分方法的實作定義呼叫到另外的物件。 無論使用哪種方式，商務邏輯都能完全與資料存取程式碼和展示層程式碼分開。  
   
 ## <a name="a-closer-look-at-the-extensibility-points"></a>詳述擴充點  
- 下列範例顯示產生的程式碼的一部分[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]如`DataContext`有兩個資料表的類別：`Customers`和`Orders`。 請注意，這個類別中的每個資料表都定義了 Insert、Update 和 Delete 方法。  
+ 下列範例顯示產生的程式碼的一部分[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]for`DataContext`有兩個資料表的類別：`Customers`和`Orders`。 請注意，這個類別中的每個資料表都定義了 Insert、Update 和 Delete 方法。  
   
 ```vb  
 Partial Public Class Northwnd  
@@ -69,7 +69,7 @@ public partial class MyNorthWindDataContext : System.Data.Linq.DataContext
         #endregion  
 ```  
   
- 如果您在部分類別中實作 Insert、Update 和 Delete 方法，則當 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 被呼叫時，<xref:System.Data.Linq.DataContext.SubmitChanges%2A> 執行階段會呼叫這些方法，而不會呼叫自己的預設方法。 這可讓您覆寫建立/讀取/更新/刪除作業的預設行為。 如需詳細資訊，請參閱[逐步解說： 自訂插入、 更新和刪除實體類別的行為](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)。  
+ 如果您在部分類別中實作 Insert、Update 和 Delete 方法，則當 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 被呼叫時，<xref:System.Data.Linq.DataContext.SubmitChanges%2A> 執行階段會呼叫這些方法，而不會呼叫自己的預設方法。 這可讓您覆寫建立/讀取/更新/刪除作業的預設行為。 如需詳細資訊，請參閱 <<c0> [ 逐步解說： 自訂插入、 更新和刪除實體類別的行為](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)。  
   
  `OnCreated` 方法是在類別建構函式中呼叫的。  
   
@@ -155,7 +155,7 @@ public string CustomerID
 }  
 ```  
   
- 在您的類別部分中，您可以撰寫方法的實作定義。 在 Visual Studio 中，輸入值之後`partial`您會看到 IntelliSense 為類別另一部分中的方法定義。  
+ 在您的類別部分中，您可以撰寫方法的實作定義。 在 Visual Studio 中，輸入之後`partial`您會看到 IntelliSense 中的其他部分類別的方法定義。  
   
 ```vb  
 Partial Public Class Customer  
@@ -181,7 +181,7 @@ partial class Customer
   
  [逐步解說：自訂實體類別的插入、更新和刪除行為](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
   
- [逐步解說： 為實體類別加入驗證](http://msdn.microsoft.com/library/85b06a02-b2e3-4534-95b8-d077c8d4c1d7)  
+ [逐步解說： 將驗證新增至實體類別](https://msdn.microsoft.com/library/85b06a02-b2e3-4534-95b8-d077c8d4c1d7)  
   
 ## <a name="see-also"></a>另請參閱  
  [部分類別和方法](~/docs/csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)  

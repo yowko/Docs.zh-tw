@@ -2,12 +2,12 @@
 title: 探索繫結項目範例
 ms.date: 03/30/2017
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
-ms.openlocfilehash: 853f5cebfd745b3413d605dcfbf0e395e103b4f1
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: d906d9a389c50095f2af5d52e3874c3e43199e68
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805664"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43535773"
 ---
 # <a name="discovery-binding-element-sample"></a>探索繫結項目範例
 此範例示範如何使用探索用戶端繫結項目探索服務。 此功能可讓開發人員將探索用戶端通道加入至其現有的用戶端通道堆疊中，讓程式設計模型變得非常直覺。 開啟相關聯的通道時，就會使用探索解析服務的位址。 這個範例包含下列專案：  
@@ -23,7 +23,7 @@ ms.locfileid: "33805664"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryBindingElement`  
   
@@ -82,7 +82,7 @@ static CustomBinding CreateCustomBindingWithDiscoveryElement()
             return customBinding; }  
 ```  
   
- 具現化 <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> 之後，開發人員會指定搜尋服務時使用的準則。 在此情況下，探索尋找準則為 `ICalculatorService` 類型。 此外，開發人員會指定 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>，以傳回指定搜尋服務之位置的 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>。 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> 會傳回新的 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> 執行個體。 如需詳細資訊，請參閱[使用具有探索用戶端通道的自訂繫結](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md)。  
+ 具現化 <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> 之後，開發人員會指定搜尋服務時使用的準則。 在此情況下，探索尋找準則為 `ICalculatorService` 類型。 此外，開發人員會指定 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>，以傳回指定搜尋服務之位置的 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>。 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> 會傳回新的 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> 執行個體。 如需詳細資訊，請參閱 <<c0> [ 使用具有探索用戶端通道的自訂繫結](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md)。  
   
 ```  
 // Extend DiscoveryEndpointProvider class to change the default DiscoveryEndpoint  

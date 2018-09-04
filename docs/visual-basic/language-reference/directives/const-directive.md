@@ -1,5 +1,5 @@
 ---
-title: '#Const 指示詞'
+title: '#Const 指示詞 (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.#Const
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Const statement [Visual Basic], directive (#Const)
 - 'declaring constants [Visual Basic], #const directive'
 ms.assetid: 707669e5-23f9-4f17-8622-a0d534429386
-ms.openlocfilehash: a3b3318f6b44f7d1798e08195be5aeb920b61c0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58d786c5e16b1e667f7c7c78b0f7857cd9711239
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588063"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43541610"
 ---
 # <a name="const-directive"></a>#Const 指示詞
 適用於 Visual Basic 中定義條件式編譯器常數。  
@@ -36,12 +36,12 @@ ms.locfileid: "33588063"
  必要。 所定義的常數名稱。  
   
  `expression`  
- 必要。 常值、 其他的條件式編譯器常數或包含任何或所有算術或邏輯運算子以外的任何組合`Is`。  
+ 必要。 常值、 條件式編譯器常數或任何組合，包括任何或所有算術或邏輯運算子，除了`Is`。  
   
 ## <a name="remarks"></a>備註  
- 條件式編譯器常數一定是私用，以它們出現的檔案。 您無法建立使用公用編譯器常數`#Const`指示詞; 您可以只在使用者介面或藉由建立它們`/define`編譯器選項。  
+ 條件式編譯器常數一律是以其出現的檔案公開的。 您無法建立使用的公用編譯器常數`#Const`指示詞; 您可以只在使用者介面，或與建立它們`/define`編譯器選項。  
   
- 您可以只使用條件式編譯器常數和常值中的`expression`。 使用標準的常數，以定義`Const`會造成錯誤。 相反地，您可以使用常數定義`#Const`條件式編譯的關鍵字。 常數也可以定義，在此情況下，它們的值為`Nothing`。  
+ 您只能使用條件式編譯器常數和常值中的`expression`。 使用標準的常數，以定義`Const`會造成錯誤。 相反地，您可以使用常數定義`#Const`條件式編譯的關鍵字。 常數也可以定義，在此情況下，它們的值為`Nothing`。  
   
 ## <a name="example"></a>範例  
  此範例使用 `#Const` 指示詞。  

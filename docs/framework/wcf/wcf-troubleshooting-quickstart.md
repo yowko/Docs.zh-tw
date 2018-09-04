@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: e752f6f4428d01474d643f1571935cb7d96d41ca
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 368faf0881c5c0073fe8367a051b6c6c802b9110
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808519"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536000"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF 疑難排解快速入門
 本主題列出客戶在開發 WCF 用戶端和服務時會碰到的幾個已知問題。 如果您遇到的問題不在此清單中，建議您為您的服務設定追蹤。 這會產生一個追蹤檔案，您可以使用追蹤檔案檢視器檢視這個檔案，並取得服務中可能會發生之例外狀況的詳細資訊。 如需設定追蹤的詳細資訊，請參閱： [Configuring Tracing](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。 如需追蹤檔案檢視器的詳細資訊，請參閱： [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。  
@@ -27,7 +27,7 @@ ms.locfileid: "33808519"
   
 5.  [我的服務和用戶端運作良好，但是當用戶端在另一台電腦上時，它們就無法運作。這是為什麼？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q4)  
   
-6.  [當我擲回 FaultException\<例外狀況 > 類型的例外狀況，我一定會收到一般的 FaultException 型別，用戶端上並不是泛型類型。這是為什麼？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q5)  
+6.  [當我擲回 FaultException\<例外狀況 > 其中型別是例外狀況，我一定會收到一般的 FaultException 型別，用戶端上並不是泛型類型。這是為什麼？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q5)  
   
 7.  [當回覆未包含任何資料時，單向和要求與回覆作業似乎會以大約相同的速度傳回。這是為什麼？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q6)  
   
@@ -47,15 +47,15 @@ ms.locfileid: "33808519"
   
  HTTP 錯誤 404.3 – 找不到。由於延伸組態的緣故，無法提供您要求的網頁。 若網頁是指令碼，請加入處理常式。 如應下載檔案，請加入 MIME 對應。 詳細的錯誤 InformationModule StaticFileModule。  
   
- 在控制台中未明確設定 「 Windows Communication Foundation HTTP 啟動 」 時，就會發生這個錯誤訊息。 若要設定此項目，請移至控制台，按一下視窗左下角的 [程式]。 按一下 [開啟或關閉 Windows 功能]。 展開 [Microsoft .NET Framework 3.5.1]，並選取 [Windows Communication Foundation Http 啟動]。  
+ 在控制台中未明確設定 「 Windows Communication Foundation HTTP 啟動 」，就會發生此錯誤訊息。 若要設定此項目，請移至控制台，按一下視窗左下角的 [程式]。 按一下 [開啟或關閉 Windows 功能]。 展開 [Microsoft .NET Framework 3.5.1]，並選取 [Windows Communication Foundation Http 啟動]。  
   
 <a name="BKMK_q1"></a>   
 ## <a name="sometimes-i-receive-a-messagesecurityexception-on-the-second-request-if-my-client-is-idle-for-a-while-after-the-first-request-what-is-happening"></a>如果我的用戶端在第一個要求之後閒置一陣子，有時我會在第二個要求收到 MessageSecurityException。 這是為什麼？  
- 第二個要求會失敗的主要原因有兩個：(1) 工作階段已逾時或 (2) 主控服務的 Web 伺服器已回收。 第一種情況中，在服務逾時之前工作階段都是有效的。當服務未在服務繫結中指定的時間內收到來自用戶端的要求時 (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>)，服務會終止安全性工作階段。 後續的用戶端訊息會造成 <xref:System.ServiceModel.Security.MessageSecurityException>。 用戶端必須以此服務重新建立安全工作階段，以傳送未來的訊息或使用可設定狀態的安全性內容權杖。 可設定狀態的安全性內容權杖也允許安全工作階段存留已回收的 Web 伺服器。 如需使用安全工作階段的可設定狀態的安全性內容權杖的詳細資訊，請參閱[How to： 建立安全工作階段的安全性內容權杖](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。 或者，您可以停用安全工作階段。 當您使用[ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)繫結，您可以設定`establishSecurityContext`屬性`false`停用安全工作階段。 如果要為其他繫結停用安全工作階段，必須建立自訂繫結。 如需有關建立自訂繫結的詳細資料，請參閱 [How to: Create a Custom Binding Using the SecurityBindingElement](../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。 在您套用其中任何一種選項之前，必須瞭解您應用程式的安全性需求。  
+ 第二個要求會失敗的主要原因有兩個：(1) 工作階段已逾時或 (2) 主控服務的 Web 伺服器已回收。 第一種情況中，在服務逾時之前工作階段都是有效的。當服務未在服務繫結中指定的時間內收到來自用戶端的要求時 (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>)，服務會終止安全性工作階段。 後續的用戶端訊息會造成 <xref:System.ServiceModel.Security.MessageSecurityException>。 用戶端必須以此服務重新建立安全工作階段，以傳送未來的訊息或使用可設定狀態的安全性內容權杖。 可設定狀態的安全性內容權杖也允許安全工作階段存留已回收的 Web 伺服器。 如需使用安全工作階段的可設定狀態的安全性內容權杖的詳細資訊，請參閱[如何： 為安全工作階段建立安全性內容權杖](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。 或者，您可以停用安全工作階段。 當您使用[ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)繫結，您可以設定`establishSecurityContext`屬性設`false`停用安全工作階段。 如果要為其他繫結停用安全工作階段，必須建立自訂繫結。 如需有關建立自訂繫結的詳細資料，請參閱 [How to: Create a Custom Binding Using the SecurityBindingElement](../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。 在您套用其中任何一種選項之前，必須瞭解您應用程式的安全性需求。  
   
 <a name="BKMK_q2"></a>   
 ## <a name="my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening"></a>我的服務在與大約 10 個用戶端互動之後，開始拒絕新的用戶端。 這是為什麼？  
- 根據預設，服務同時只能有 10 個工作階段。 因此，如果服務繫結使用工作階段，服務會接受新用戶端連線直到到達該數目，然後拒絕新用戶端連線，直到其中一個目前工作階段結束為止。 您可以使用許多種方法來支援多個用戶端。 如果您的服務不需要工作階段，請勿使用工作階段繫結 (如需詳細資訊，請參閱[Sessions<](../../../docs/framework/wcf/using-sessions.md)。)另一種選擇是將 <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A> 屬性的值變更為適合您情況的數目，以增加工作階段限制。  
+ 根據預設，服務同時只能有 10 個工作階段。 因此，如果服務繫結使用工作階段，服務會接受新用戶端連線直到到達該數目，然後拒絕新用戶端連線，直到其中一個目前工作階段結束為止。 您可以使用許多種方法來支援多個用戶端。 如果您的服務不需要工作階段，請勿使用工作階段繫結 (如需詳細資訊，請參閱 <<c0> [ 使用工作階段的](../../../docs/framework/wcf/using-sessions.md)。)另一種選擇是將 <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A> 屬性的值變更為適合您情況的數目，以增加工作階段限制。  
   
 <a name="BKMK_q3"></a>   
 ## <a name="can-i-load-my-service-configuration-from-somewhere-other-than-the-wcf-applications-configuration-file"></a>我可以從 WCF 應用程式的組態檔以外的地方載入我的服務組態嗎？  
@@ -102,7 +102,7 @@ public class MyServiceHost : ServiceHost
   
 -   您可能需要對應用程式開放連接埠。 如需詳細資料，請參閱 SDK 範例的 [Firewall Instructions](../../../docs/framework/wcf/samples/firewall-instructions.md) 。  
   
--   如需其他可能的問題，請參閱範例主題[在工作群組與跨電腦執行範例](http://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)。  
+-   如需其他可能的問題，請參閱範例主題[Workgroup and Across Machines 中執行範例](https://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)。  
   
 -   如果您的用戶端是使用 Windows 認證，且例外狀況為 <xref:System.ServiceModel.Security.SecurityNegotiationException>，請設定 Kerberos 如下。  
   
@@ -132,29 +132,29 @@ public class MyServiceHost : ServiceHost
   
     4.  使用 SetSPN 向網域註冊新的 SPN。 請注意，您必須是網域系統管理員才能執行這項操作。  
   
- 如需有關 Kerberos 通訊協定的詳細資訊，請參閱[WCF 中使用的安全性概念](../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md)和：  
+ 如需有關 Kerberos 通訊協定的詳細資訊，請參閱 < [Security Concepts Used in WCF](../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md)和：  
   
 -   [偵錯 Windows 驗證錯誤](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
   
--   [使用 Http.sys 登錄 Kerberos 服務主要名稱](http://go.microsoft.com/fwlink/?LinkId=86943)  
+-   [使用 Http.sys 登錄 Kerberos 服務主要名稱](https://go.microsoft.com/fwlink/?LinkId=86943)  
   
--   [Kerberos 說明](http://go.microsoft.com/fwlink/?LinkId=86946)  
+-   [Kerberos 說明](https://go.microsoft.com/fwlink/?LinkId=86946)  
   
 <a name="BKMK_q5"></a>   
-## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>當我擲回 FaultException\<例外狀況 > 類型的例外狀況，我一定會收到一般的 FaultException 型別，用戶端上並不是泛型類型。 發生什麼事？  
+## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>當我擲回 FaultException\<例外狀況 > 其中型別是例外狀況，我一定會收到一般的 FaultException 型別，用戶端上並不是泛型類型。 發生什麼事？  
  強烈建議您建議自己的自訂錯誤資料型別，並宣告為您的錯誤合約中的詳細型別。 原因是使用系統提供的例外狀況類型：  
   
 -   建立類型依存性，移除服務導向應用程式的其中一個最大的強度。  
   
 -   無法依存以標準方式序列化的例外狀況。 有些 (例如 <xref:System.Security.SecurityException>) 可能完全不能序列化。  
   
--   對用戶端公開內部實作詳細資料。 如需詳細資訊，請參閱[指定與處理合約和服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
+-   對用戶端公開內部實作詳細資料。 如需詳細資訊，請參閱 <<c0> [ 指定及處理合約和服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
   
  然而，如果您是對應用程式進行偵錯，可以使用 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 類別來序列化例外狀況資訊，並傳回用戶端。  
   
 <a name="BKMK_q6"></a>   
 ## <a name="it-seems-like-one-way-and-request-reply-operations-return-at-roughly-the-same-speed-when-the-reply-contains-no-data-whats-happening"></a>當回覆未包含任何資料時，單向和要求與回覆作業似乎會以大約相同的速度傳回。 這是為什麼？  
- 將作業指定為單向只是表示作業合約接受輸入訊息，而沒有傳回輸出訊息。 在 WCF 中，所有用戶端叫用時，傳回的輸出資料寫入網路或擲回例外狀況。 單向作業的運作方式相同，如果找不到服務可以擲回，或如果服務尚未準備好從網路接受資料便會封鎖。 通常在 WCF 中，這造成單向呼叫比要求與回覆; 更快傳回用戶端但是任何減慢傳出資料傳送透過網路的條件會減慢單向作業以及要求與回覆作業。 如需詳細資訊，請參閱[單向服務](../../../docs/framework/wcf/feature-details/one-way-services.md)和[使用 WCF 用戶端存取服務](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)。  
+ 將作業指定為單向只是表示作業合約接受輸入訊息，而沒有傳回輸出訊息。 在 WCF 中，所有的用戶端叫用時，傳回的輸出資料寫入網路或擲回例外狀況。 單向作業的運作方式相同，如果找不到服務可以擲回，或如果服務尚未準備好從網路接受資料便會封鎖。 通常在 WCF 中，這會導致單向呼叫比要求與回覆; 更快速地傳回給用戶端但是任何減慢傳出資料傳送透過網路的條件會減慢單向作業以及要求-回覆作業。 如需詳細資訊，請參閱 <<c0> [ 單向服務](../../../docs/framework/wcf/feature-details/one-way-services.md)並[使用 WCF 用戶端存取服務](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)。  
   
 <a name="BKMK_q77"></a>   
 ## <a name="im-using-an-x509-certificate-with-my-service-and-i-get-a-systemsecuritycryptographycryptographicexception-whats-happening"></a>我使用 X.509 憑證搭配我的服務，然後得到 System.Security.Cryptography.CryptographicException。 發生什麼事？  
@@ -162,7 +162,7 @@ public class MyServiceHost : ServiceHost
   
  如果是這種情況，您必須提供存取權限給處理序的帳戶，檔案才能包含私密金鑰。 例如，如果 IIS 背景工作處理序正在 Bob 帳戶下執行，則您會需要為 Bob 提供含有私密金鑰的檔案的讀取權。  
   
- 如需如何以正確的使用者帳戶存取權給含有特定 X.509 憑證的私密金鑰檔案的詳細資訊，請參閱[如何： 使能夠存取 X.509 憑證至 WCF](../../../docs/framework/wcf/feature-details/how-to-make-x-509-certificates-accessible-to-wcf.md)。  
+ 如需如何授與正確的使用者帳戶存取權包含特定的 X.509 憑證的私密金鑰之檔案的詳細資訊，請參閱[How to: Make X.509 Certificates Accessible wcf](../../../docs/framework/wcf/feature-details/how-to-make-x-509-certificates-accessible-to-wcf.md)。  
   
 <a name="BKMK_q88"></a>   
 ## <a name="i-changed-the-first-parameter-of-an-operation-from-uppercase-to-lowercase-now-my-client-throws-an-exception-whats-happening"></a>我將作業的第一個參數從大寫變更為小寫；現在我的用戶端擲回了例外狀況。 這是為什麼？  
@@ -170,7 +170,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q99"></a>   
 ## <a name="im-using-one-of-my-tracing-tools-and-i-get-an-endpointnotfoundexception-whats-happening"></a>我正在使用我的其中一種追蹤工具，而我得到 EndpointNotFoundException。 發生什麼事？  
- 如果您使用一種追蹤工具不是系統提供 WCF 追蹤機制，而您收到<xref:System.ServiceModel.EndpointNotFoundException>，指出有位址篩選不符的情況，您必須使用<xref:System.ServiceModel.Description.ClientViaBehavior>類別，以將訊息導向追蹤公用程式和讓公用程式將這些訊息重新導向至服務位址。 <xref:System.ServiceModel.Description.ClientViaBehavior> 類別會變更 `Via` 位址標頭，以指定與最終接收者不同的下一個網路位址，由 `To` 位址標頭指示。 然而，執行這項操作時，請勿變更端點位址，它是用於建立 `To` 值的。  
+ 如果您使用一種追蹤工具，不是系統提供的 WCF 追蹤機制，而且您會收到<xref:System.ServiceModel.EndpointNotFoundException>表示，位址篩選不符的情況，您需要使用<xref:System.ServiceModel.Description.ClientViaBehavior>追蹤公用程式將訊息導向的類別和已將這些訊息重新導向至服務位址的公用程式。 <xref:System.ServiceModel.Description.ClientViaBehavior> 類別會變更 `Via` 位址標頭，以指定與最終接收者不同的下一個網路位址，由 `To` 位址標頭指示。 然而，執行這項操作時，請勿變更端點位址，它是用於建立 `To` 值的。  
   
  下列程式碼範例顯示用戶端組態檔範例。  
   
@@ -224,7 +224,7 @@ public class MyServiceHost : ServiceHost
 </bindings>  
 ```  
   
- 您會看到類似下面的錯誤： 未處理例外狀況： System.ServiceModel.AddressAlreadyInUseException: IP 端點 0.0.0.0:9000 可以解決這個錯誤藉由指定完整的 URL 使用不同的連接埠上已經有一個接聽程式MEX 端點中的下列組態片段所示：  
+ 您會看到類似下列錯誤： 未處理的例外狀況： System.ServiceModel.AddressAlreadyInUseException: IP 端點 0.0.0.0:9000，您可以暫時解決這個錯誤，藉由指定完整的 URL 使用不同的連接埠上已有接聽程式MEX 端點如下列組態片段所示：  
   
 ```xml
 <services>  
@@ -237,7 +237,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BK_MK99"></a>   
 ## <a name="when-calling-a-wcf-web-http-application-from-a-wcf-soap-application-the-service-returns-the-following-error-405-method-not-allowed"></a>從 WCF SOAP 應用程式呼叫 WCF Web HTTP 應用程式時，服務傳回下列錯誤：405 不允許的方法。  
- 呼叫 WCF Web HTTP 應用程式 (使用的服務<xref:System.ServiceModel.WebHttpBinding>和<xref:System.ServiceModel.Description.WebHttpBehavior>) 從 WCF 服務可能會產生下列例外狀況： `Unhandled Exception: System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: 遠端伺服器傳回未預期的回應: (405) 方法不允許。 ' 發生這個例外狀況，因為 WCF 覆寫傳出<xref:System.ServiceModel.OperationContext>以傳入<xref:System.ServiceModel.OperationContext>。 若要解決這個問題，請在 WCF Web HTTP 服務作業中建立 <xref:System.ServiceModel.OperationContextScope> 。 例如:   
+ 呼叫 WCF Web HTTP 應用程式 (使用的服務<xref:System.ServiceModel.WebHttpBinding>並<xref:System.ServiceModel.Description.WebHttpBehavior>) 從 WCF 服務可能會產生下列例外狀況： `Unhandled Exception: System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: 遠端伺服器傳回未預期的回應: (405) 方法不允許。 ' 發生這個例外狀況，因為 WCF 覆寫傳出<xref:System.ServiceModel.OperationContext>以傳入<xref:System.ServiceModel.OperationContext>。 若要解決這個問題，請在 WCF Web HTTP 服務作業中建立 <xref:System.ServiceModel.OperationContextScope> 。 例如:   
   
 ```csharp
 public string Echo(string input)  
