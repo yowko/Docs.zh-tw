@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], basic programming
 - Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
-ms.openlocfilehash: cbdc693197344fe570c1462f6ca3115018eb69d6
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 7095784c2c9e2dc3c0ebafe84b89f9657321e1c5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803737"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558887"
 ---
 # <a name="basic-wcf-programming"></a>基本 WCF 程式設計
-本節提供建立 Windows Communication Foundation (WCF) 應用程式的基本概念。  
+此章節提供建立 Windows Communication Foundation (WCF) 應用程式基本概念。  
   
 ## <a name="in-this-section"></a>本節內容  
  [基本程式設計週期](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
@@ -26,13 +26,13 @@ ms.locfileid: "33803737"
  說明如何設計和實作服務合約、選擇訊息交換模式、指定錯誤合約，以及其他服務的基本部分。  
   
  [設定服務](../../../docs/framework/wcf/configuring-services.md)  
- 描述如何設定 WCF 服務以支援合約要求、 自訂本機執行階段行為，以及指示發行服務的位址。  
+ 描述如何設定 WCF 服務，以支援合約需求，自訂本機執行階段行為，並指出要發行服務的位址。  
   
  [裝載服務](../../../docs/framework/wcf/hosting-services.md)  
  說明在應用程式中裝載服務的基本概念。  
   
  [建置用戶端](../../../docs/framework/wcf/building-clients.md)  
- 描述如何從服務取得中繼資料、 將其轉換為 WCF 用戶端程式碼、 處理安全性問題，以及建置、 設定和裝載 WCF 用戶端。  
+ 描述如何從服務取得中繼資料、 將其轉換成 WCF 用戶端程式碼、 處理安全性問題，以及建置、 設定及裝載的 WCF 用戶端。  
   
  [擴充性簡介](../../../docs/framework/wcf/introduction-to-extensibility.md)  
  說明如何擴充 WCF 來建立自訂解決方案。  
@@ -61,7 +61,7 @@ ms.locfileid: "33803737"
   
  [Windows Communication Foundation 工具](../../../docs/framework/wcf/tools.md)  
   
- [Windows Communication Foundation 範例](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Windows Communication Foundation 範例](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
   
  [快速入門](../../../docs/framework/wcf/samples/getting-started-sample.md)  
   

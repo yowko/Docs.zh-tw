@@ -2,12 +2,12 @@
 title: '&lt;tcpTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 4141b0f6493c51048ad60accdc1d5ee9bac01231
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 92590f556d93859e8681eea8f8f05da4f560e150
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751073"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43563935"
 ---
 # <a name="lttcptransportgt"></a>&lt;tcpTransport&gt;
 定義 TCP 傳輸，通道可使用此傳輸來傳輸自訂繫結的訊息。  
@@ -63,11 +63,11 @@ ms.locfileid: "32751073"
 |maxPendingConnections|取得或設定服務上等待分派之連線的數目上限。|  
 |maxReceivedMessageSize|取得及設定可接收之可允許的訊息大小上限。|  
 |portSharingEnabled|布林值，指定是否啟用這個連線的 TCP 連接埠共用功能。 如果這是 `false`，則每個繫結將使用它自己的獨佔連接埠。 預設為 `false`。<br /><br /> 這個設定只與服務有關。 用戶端不受影響。<br /><br /> 使用這個設定必須將 [啟動類型] 改為 [手動] 或 [自動]，以啟用 Windows Communication Foundation (WCF) TCP Port Sharing Service。|  
-|teredoEnabled|布林值，指定是否啟用 Teredo (對防火牆後的用戶端進行定址的技術)。 預設為 `false`。<br /><br /> 這個屬性會針對基礎 TCP 通訊端啟用 Teredo。 如需詳細資訊，請參閱[Teredo 概觀](http://go.microsoft.com/fwlink/?LinkId=95339)。<br /><br /> 這個屬性只適用於 [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] 和 [!INCLUDE[ws2003](../../../../../includes/ws2003-md.md)]。 [!INCLUDE[wv](../../../../../includes/wv-md.md)] 具有整部機器的 Teredo 組態選項，所以在執行 Vista 時，會忽略這個屬性。 Teredo 需要用戶端和服務電腦都已安裝 Microsoft IPv6 堆疊並正確設定，才能使用 Teredo。 如需設定 Teredo 的詳細資訊，請參閱[Teredo 概觀](http://go.microsoft.com/fwlink/?LinkId=95339)。 如需詳細資訊，請參閱[Windows Server 2003 技術中心](http://go.microsoft.com/fwlink/?LinkId=49888)。|  
+|teredoEnabled|布林值，指定是否啟用 Teredo (對防火牆後的用戶端進行定址的技術)。 預設為 `false`。<br /><br /> 這個屬性會針對基礎 TCP 通訊端啟用 Teredo。 如需詳細資訊，請參閱 < [Teredo 概觀](https://go.microsoft.com/fwlink/?LinkId=95339)。<br /><br /> 這個屬性只適用於 [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] 和 [!INCLUDE[ws2003](../../../../../includes/ws2003-md.md)]。 [!INCLUDE[wv](../../../../../includes/wv-md.md)] 具有整部機器的 Teredo 組態選項，所以在執行 Vista 時，會忽略這個屬性。 Teredo 需要用戶端和服務電腦都已安裝 Microsoft IPv6 堆疊並正確設定，才能使用 Teredo。 如需設定 Teredo 的詳細資訊，請參閱[Teredo 概觀](https://go.microsoft.com/fwlink/?LinkId=95339)。 如需詳細資訊，請參閱 < [Windows Server 2003 技術中心](https://go.microsoft.com/fwlink/?LinkId=49888)。|  
 |transferMode|取得或設定值，這個值表示訊息是否使用連線導向傳輸進行緩衝或資料流處理。|  
 |connectionPoolSettings|為具名管道繫結指定其他連線集區設定。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無  
   
 ### <a name="parent-elements"></a>父項目  

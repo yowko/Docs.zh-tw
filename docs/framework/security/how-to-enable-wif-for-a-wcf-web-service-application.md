@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: bfc64b3d-64e9-4093-a6a4-72e933917af7
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: bd0ad5392010772c3205d8f148c985de2706de01
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 71897299d68c2f0e43def8e70730ea456d6e9e24
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398981"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564713"
 ---
 # <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>如何：啟用 WCF Web 服務應用程式的 WIF
 ## <a name="applies-to"></a>適用於  
@@ -19,7 +19,7 @@ ms.locfileid: "33398981"
 -   Microsoft® Windows® Communication Foundation (WCF)  
   
 ## <a name="summary"></a>總結  
- 這篇使用方法文章提供了在 WCF Web 服務中啟用 WIF 的詳細逐步程序。 此外，它還提供如何測試應用程式以確認應用程式執行時 Web 服務可正確提出宣告的指示。 這篇使用方法文章並沒有提供建立 Security Token Service (STS) 的詳細指示，而是使用識別和存取工具隨附的「開發 STS」。 「開發 STS」並不會執行實際的驗證，而只是用於測試用途。 您必須安裝識別和存取工具才能完成這篇使用方法文章。 您可以從下列位置下載：[Identity and Access Tool](http://go.microsoft.com/fwlink/?LinkID=245849) (身分識別與存取工具)  
+ 這篇使用方法文章提供了在 WCF Web 服務中啟用 WIF 的詳細逐步程序。 此外，它還提供如何測試應用程式以確認應用程式執行時 Web 服務可正確提出宣告的指示。 這篇使用方法文章並沒有提供建立 Security Token Service (STS) 的詳細指示，而是使用識別和存取工具隨附的「開發 STS」。 「開發 STS」並不會執行實際的驗證，而只是用於測試用途。 您必須安裝識別和存取工具才能完成這篇使用方法文章。 您可以從下列位置下載：[Identity and Access Tool](https://go.microsoft.com/fwlink/?LinkID=245849) (身分識別與存取工具)  
   
 ## <a name="contents"></a>內容  
   

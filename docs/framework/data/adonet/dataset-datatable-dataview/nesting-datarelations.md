@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 9530f9c9-dd98-4b93-8cdb-40d7f1e8d0ab
 ms.openlocfilehash: 9255615c7786773f1d4f453b910fdccdf191721f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43420270"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552523"
 ---
 # <a name="nesting-datarelations"></a>巢狀 DataRelation
 關聯式資料表示中，個別資料表所包含的資料列使用一個或一組資料行彼此相關。 在 ADO.NET <xref:System.Data.DataSet> 中，是使用 <xref:System.Data.DataRelation> 來實作資料表間的關聯性。 當您建立**DataRelation**，只透過關聯性所管理的資料行的父子式關聯性。 而資料表和資料行是個別的實體。 XML 提供的階層式資料表示中，父子關係是由包含巢狀項目子系的父項目表示。  

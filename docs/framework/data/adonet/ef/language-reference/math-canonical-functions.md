@@ -3,11 +3,11 @@ title: 數學標準函式
 ms.date: 03/30/2017
 ms.assetid: 6f6cddc6-b561-4ebe-84b6-841ef5b4113b
 ms.openlocfilehash: 0fc9f4942c3f76f139ab7e4400005f0bfe80204e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43442781"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564801"
 ---
 # <a name="math-canonical-functions"></a>數學標準函式
 

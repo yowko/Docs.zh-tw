@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: 0af929de17a29d497ce6cf6c8cb055d416ab8761
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31c0efbe953b56304c264444082185b9a9227d60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365406"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43658973"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express 使用者執行個體
 Microsoft SQL Server Express Edition (SQL Server Express) 支援使用者執行個體功能，只有在使用 .NET Framework Data Provider for SQL Server (`SqlClient`) 時才提供此功能。 使用者執行個體是 SQL Server Express Database Engine 的獨立執行個體，由父執行個體所產生。 不是系統管理員的使用者可以透過使用者執行個體，從本機電腦附加及連接至 SQL Server Express 資料庫。 每個執行個體都會依照「每個使用者一個執行個體」的基礎，在個別使用者的安全性內容下執行。  
@@ -24,7 +24,7 @@ Microsoft SQL Server Express Edition (SQL Server Express) 支援使用者執行�
 >  對於已是自己電腦系統管理員的使用者，或在牽涉到多個資料庫使用者的案例中，就不需要使用者執行個體。  
   
 ## <a name="enabling-user-instances"></a>啟用使用者執行個體  
- 若要產生使用者執行個體，必須有執行中的 SQL Server Express 父執行個體。 依預設會啟用使用者執行個體，SQL Server Express 安裝時，而且它們可以明確地啟用或停用系統管理員執行**sp_configure**系統預存程序與父執行個體上。  
+ 若要產生使用者執行個體，必須有執行中的 SQL Server Express 父執行個體。 SQL Server Express 會安裝，而且它們可以明確地啟用或停用由系統管理員執行時，依預設會啟用使用者執行個體**sp_configure**系統預存程序，在父執行個體上。  
   
 ```  
 -- Enable user instances.  
@@ -37,7 +37,7 @@ sp_configure 'user instances enabled','0'
  使用者執行個體的網路通訊協定必須為本機「具名管道」(Named Pipe)。 無法在 SQL Server 的遠端執行個體上啟動使用者執行個體，也不允許 SQL Server 登入。  
   
 ## <a name="connecting-to-a-user-instance"></a>連接至使用者執行個體  
- `User Instance`和`AttachDBFilename`<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>關鍵字可以讓<xref:System.Data.SqlClient.SqlConnection>連接到使用者執行個體。 使用者執行個體也受到 <xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` 和 `AttachDBFilename` 屬性的支援。  
+ `User Instance`並`AttachDBFilename`<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>關鍵字允許<xref:System.Data.SqlClient.SqlConnection>連接到使用者執行個體。 使用者執行個體也受到 <xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` 和 `AttachDBFilename` 屬性的支援。  
   
  請注意下列所示的範例連接字串：  
   
@@ -119,13 +119,13 @@ private static void OpenSqlConnection()
 >  在 SQL Server 內執行的 Common Language Runtime (CLR) 程式碼中不支援使用者執行個體。 如果在連接字串中有 <xref:System.InvalidOperationException> 的 `Open` 上呼叫 <xref:System.Data.SqlClient.SqlConnection>，則會擲回 `User Instance=true`。  
   
 ## <a name="lifetime-of-a-user-instance-connection"></a>使用者執行個體連接的存留期  
- 與以服務方式執行的 SQL Server 版本不同，SQL Server Express 執行個體不需要以手動方式啟動及停止。 使用者每次登入及連接至使用者執行個體時，使用者執行個體即會啟動 (如果尚未執行)。 使用者執行個體資料庫會設定 `AutoClose` 選項，如此資料庫在一段時間未使用後，就會自動關閉。 啟動的 sqlservr.exe 處理序會在最後的執行個體連接關閉後持續執行一段有限的逾時期限，這樣如果在逾時過期之前開啟另一個連接，就不需要重新啟動此處理序。 如果在逾時期限過期之前沒有開啟任何新的連接，使用者執行個體就會自動關閉。 父執行個體上的系統管理員可以使用設定的使用者執行個體的逾時期限的持續時間**sp_configure**變更**使用者執行個體逾時**選項。 預設值是 60 分鐘。  
+ 與以服務方式執行的 SQL Server 版本不同，SQL Server Express 執行個體不需要以手動方式啟動及停止。 使用者每次登入及連接至使用者執行個體時，使用者執行個體即會啟動 (如果尚未執行)。 使用者執行個體資料庫會設定 `AutoClose` 選項，如此資料庫在一段時間未使用後，就會自動關閉。 啟動的 sqlservr.exe 處理序會在最後的執行個體連接關閉後持續執行一段有限的逾時期限，這樣如果在逾時過期之前開啟另一個連接，就不需要重新啟動此處理序。 如果在逾時期限過期之前沒有開啟任何新的連接，使用者執行個體就會自動關閉。 父執行個體上的系統管理員可以透過設定使用者執行個體的逾時期限持續時間**sp_configure**若要變更**使用者執行個體逾時**選項。 預設值是 60 分鐘。  
   
 > [!NOTE]
 >  如果在連接字串中使用值大於零的 `Min Pool Size`，則連接集區一定會維持一些開啟的連接，而使用者執行個體也不會自動關閉。  
   
 ## <a name="how-user-instances-work"></a>使用者執行個體的運作方式  
- 每個使用者產生使用者執行個體第一次**主要**和**msdb**系統資料庫會從 Template Data 資料夾複製到下使用者的本機應用程式資料儲存機制的路徑專供使用者執行個體的目錄。 這個路徑通常是 `C:\Documents and Settings\<UserName>\Local Settings\Application Data\Microsoft\Microsoft SQL Server Data\SQLEXPRESS`。 當使用者執行個體啟動時， **tempdb**、 記錄檔，以及追蹤檔案也會寫入到這個目錄。 接著執行個體的名稱就會產生，而每個使用者的名稱保證都是唯一的。  
+ 每位使用者產生使用者執行個體的第一次**主要**並**msdb**系統資料庫從 Template Data 資料夾複製到使用者的本機應用程式資料儲存機制下的路徑使用者執行個體獨佔使用的目錄。 這個路徑通常是 `C:\Documents and Settings\<UserName>\Local Settings\Application Data\Microsoft\Microsoft SQL Server Data\SQLEXPRESS`。 當使用者執行個體啟動時， **tempdb**、 記錄檔，以及追蹤檔案也會寫入到這個目錄。 接著執行個體的名稱就會產生，而每個使用者的名稱保證都是唯一的。  
   
  根據預設，Windows Builtin\Users group 的所有成員都將獲得本機執行個體的連接權限，以及 SQL Server 二進位檔的讀取及執行權限。 一旦確認裝載使用者執行個體的呼叫使用者認證，該使用者即可成為該執行個體的 `sysadmin`。 只能針對使用者執行個體啟用共用記憶體，這表示只能在本機電腦上進行作業。  
   
@@ -146,7 +146,7 @@ private static void OpenSqlConnection()
   
 -   任何不需共用資料的單一使用者應用程式。  
   
--   ClickOnce 佈署。 如果目標電腦上已安裝 .NET Framework 2.0 (或更新版本) 和 SQL Server Express，則非系統管理員的使用者也可以安裝及使用因採取 ClickOnce 動作而下載的安裝套件。 請注意，如果 SQL Server Express 是安裝的一部分，則系統管理員必須加以安裝。 如需詳細資訊，請參閱[ClickOnce 部署的 Windows Form 應用程式](http://msdn.microsoft.com/library/34d8c770-48f2-460c-8d67-4ea5684511df)。  
+-   ClickOnce 佈署。 如果目標電腦上已安裝 .NET Framework 2.0 (或更新版本) 和 SQL Server Express，則非系統管理員的使用者也可以安裝及使用因採取 ClickOnce 動作而下載的安裝套件。 請注意，如果 SQL Server Express 是安裝的一部分，則系統管理員必須加以安裝。 如需詳細資訊，請參閱 < [ClickOnce 部署的 Windows Forms 應用程式](https://msdn.microsoft.com/library/34d8c770-48f2-460c-8d67-4ea5684511df)。  
   
 -   使用「Windows 驗證」的專屬 ASP . NET 裝載。 單一的 SQL Server Express 執行個體可以裝載在內部網路上。 應用程式會使用 ASPNET Windows 帳戶連接，而不是使用模擬。 使用者執行個體不該用於協力廠商或共用裝載的案例，因為在這些情況下，所有的應用程式都會共用相同的使用者執行個體，而無法彼此保持隔離。  
   
@@ -154,4 +154,4 @@ private static void OpenSqlConnection()
  [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
  [連接字串](../../../../../docs/framework/data/adonet/connection-strings.md)  
  [連接至資料來源](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

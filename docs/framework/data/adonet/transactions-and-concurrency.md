@@ -3,11 +3,11 @@ title: 異動和並行存取
 ms.date: 03/30/2017
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
 ms.openlocfilehash: bd47c5e0e2b2086e5fd0482bf4319ebab5674a54
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43386681"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43563383"
 ---
 # <a name="transactions-and-concurrency"></a>異動和並行存取
 異動是由單一命令或當做封裝 (Package) 執行的命令群組所組成。 交易可讓您將多項作業結合成單一工作單位。 如果交易的某一處失敗，則所有更新都會復原到交易之前的狀態。  

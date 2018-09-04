@@ -6,11 +6,11 @@ helpviewer_keywords:
 - object variables [Visual Basic], null reference
 ms.assetid: e6d30578-bdae-4142-a3ac-a10697bf696a
 ms.openlocfilehash: 8f85ba0adea522851e45b20ef5024491874c9a29
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482944"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564524"
 ---
 # <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a>如何：讓物件變數不參考執行個體 (Visual Basic)
 您可以藉由將它設定為取消關聯的物件變數，從任何物件執行個體[Nothing](../../../../visual-basic/language-reference/nothing.md)。  

@@ -9,16 +9,16 @@ ms.assetid: 54bce311-3d23-40b9-ba90-1bdbdaf8fbba
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 618a28d5a58880166087dd77016353f9d7efd3ea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff1b7320f26e63b9f9d0f6fea923374663802b1f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409335"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43659920"
 ---
 # <a name="ui-automation-support-for-the-menuitem-control-type"></a>MenuItem 控制項類型的 UI 自動化支援
 > [!NOTE]
->  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱 < [Windows Automation API： 使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主題提供 MenuItem 類型的 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 支援相關資訊。 其中說明控制項的 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 樹狀結構，並提供 MenuItem 類型的必要屬性和控制項模式。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "33409335"
   
 |控制項檢視|內容檢視|  
 |------------------|------------------|  
-|MenuItem 的「說明」<br /><br /> <ul><li>功能表 ([說明] 功能表項目的子功能表)<br /><br /> <ul><li>MenuItem 的「說明主題」</li><li>MenuItem 的「關於記事本」</li></ul></li></ul>|MenuItem 的「說明」<br /><br /> 的 MenuItem 「 說明主題 」<br />-MenuItem 的 「 關於記事本 」|  
+|MenuItem 的「說明」<br /><br /> <ul><li>功能表 ([說明] 功能表項目的子功能表)<br /><br /> <ul><li>MenuItem 的「說明主題」</li><li>MenuItem 的「關於記事本」</li></ul></li></ul>|MenuItem 的「說明」<br /><br /> -MenuItem"說明主題"<br />-MenuItem 的 「 關於記事本 」|  
   
  在功能表項目控制項的控制項檢視中， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構顯示如上。 請注意，其中包含 [說明]  功能表項目，讓一般功能表到子功能表階層的結構更為清楚。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "33409335"
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>必要的使用者介面自動化屬性  
- 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與功能表項目控制項特別有關。 如需有關[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]屬性，請參閱[用戶端的使用者介面自動化屬性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+ 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與功能表項目控制項特別有關。 如需詳細資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]屬性，請參閱[UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
   
 |屬性|值|描述|  
 |--------------|-----------|-----------------|  

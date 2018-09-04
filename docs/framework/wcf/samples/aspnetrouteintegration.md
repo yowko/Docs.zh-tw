@@ -3,11 +3,11 @@ title: AspNetRouteIntegration
 ms.date: 03/30/2017
 ms.assetid: 0638ce0e-d053-47df-a447-688e447a03fb
 ms.openlocfilehash: 8d9a0710e5106cbc3d02a06e81f4f8ed9ae3e03b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43475877"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43561828"
 ---
 # <a name="aspnetrouteintegration"></a>AspNetRouteIntegration
 此範例示範如何裝載 Windows Communication Foundation (WCF) REST 服務，使用 ASP.NET 路由。 [基本資源服務](../../../../docs/framework/wcf/samples/basic-resource-service.md)範例示範此案例的自我裝載的版本，並討論服務實作，深入了解。 本主題著重在 ASP.NET 整合功能。 如需有關 ASP.NET 路由的詳細資訊，請參閱<xref:System.Web.Routing>。  

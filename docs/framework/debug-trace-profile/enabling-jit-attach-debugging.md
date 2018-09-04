@@ -8,11 +8,11 @@ ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b92592500f0babf29891710cedf1228b0ddcb0e4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483891"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43563609"
 ---
 # <a name="enabling-jit-attach-debugging"></a>啟用 JIT 附加偵錯
 JIT 附加偵錯是當您將偵錯工具附加至處理序發生錯誤時，所使用的描述語句，或者可為特定的方法或函式所觸發。  

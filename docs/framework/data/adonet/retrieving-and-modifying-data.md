@@ -2,15 +2,15 @@
 title: 在 ADO.NET 中傳送和修改資料
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.openlocfilehash: 0c970c01352aecf6a25bac1b89b9f79c96f80d31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ef5191cf89f22fbaf0bb1bf4fbf47db1d4c06a1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361539"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562559"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>在 ADO.NET 中傳送和修改資料
-任何資料庫應用程式都有一個主要功能，那就是連接到資料來源並擷取其內含的資料。 ADO.NET 的.NET Framework 資料提供者做為應用程式和資料來源之間的橋樑可讓您執行命令以及有關使用擷取資料**DataReader**或**DataAdapter**. 任何資料庫應用程式都有一個主要功能，那就是更新資料庫中儲存的資料。 在 ADO.NET 中，更新資料牽涉到使用**DataAdapter**和<xref:System.Data.DataSet>，和**命令**物件; 並且也可能需要使用交易。  
+任何資料庫應用程式都有一個主要功能，那就是連接到資料來源並擷取其內含的資料。 ADO.NET 的.NET Framework 資料提供者做為應用程式和資料來源之間的橋樑可讓您執行命令也使用擷取資料**DataReader**或是**DataAdapter**. 任何資料庫應用程式都有一個主要功能，那就是更新資料庫中儲存的資料。 在 ADO.NET 中，更新資料牽涉到使用**DataAdapter**並<xref:System.Data.DataSet>，以及**命令**物件; 並且也可能需要使用交易。  
   
 ## <a name="in-this-section"></a>本節內容  
  [連接至資料來源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
@@ -32,10 +32,10 @@ ms.locfileid: "33361539"
  包含一些主題，其中說明如何執行本機異動、分散式異動，以及使用開放式並行存取 (Optimistic Concurrency)。  
   
  [擷取身分識別或自動編號值](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- 提供將產生的值對應的範例**識別**或 SQL Server 資料表中的資料行**Autonumber**欄位在 Microsoft Access 資料表中，資料表中插入資料列資料行。 討論如何在 `DataTable` 中合併識別值。  
+ 提供的對應產生的值範例**身分識別**資料行中的 SQL Server 資料表或針對**Autonumber**欄位在 Microsoft Access 資料表中，資料表中插入資料列的資料行。 討論如何在 `DataTable` 中合併識別值。  
   
  [擷取二進位資料](../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
- 描述如何擷取二進位資料或使用大型資料結構`CommandBehavior`。`SequentialAccess` 若要修改的預設行為`DataReader`。  
+ 描述如何擷取二進位資料或大型資料結構使用`CommandBehavior`。`SequentialAccess` 若要修改的預設行為`DataReader`。  
   
  [使用預存程序修改資料](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
  說明如何使用預存程序 (Stored Procedure) 輸入參數和輸出參數，將資料列插入資料庫中，並傳回新的識別值。  
@@ -56,11 +56,11 @@ ms.locfileid: "33361539"
  描述 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 支援非同步程式設計。  
   
  [SqlClient 資料流支援](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
- 討論如何撰寫應用程式的資料流資料從 SQL Server 不會完全載入記憶體中。  
+ 討論如何撰寫的應用程式的資料流資料從 SQL Server 而不需要它完全載入記憶體中。  
   
 ## <a name="see-also"></a>另請參閱  
  [ADO.NET 中的資料類型對應](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
  [DataSet、DataTable 和 DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [設定 ADO.NET 應用程式的安全性](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 和 ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

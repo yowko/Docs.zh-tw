@@ -8,19 +8,19 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - visual styles [Windows Forms]
 ms.assetid: 95de9b9c-d804-405c-b2d1-49a88c1e0fe1
-ms.openlocfilehash: 2d714ad020f2f7b6a6343c8f8e3901b59dfd23a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4684e277335a119d41d5bd79d504ed37a76d6fc
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545619"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552856"
 ---
 # <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a>如何：在混合應用程式中啟用視覺化樣式
-本主題說明如何啟用[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]上的視覺樣式[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項裝載於[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]為基礎的應用程式。  
+本主題說明如何啟用[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]視覺化樣式上[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項裝載於[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]為基礎的應用程式。  
   
- 如果您的應用程式呼叫<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>方法中，大部分的程式[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]上執行您的應用程式時，控制項將會自動使用視覺化樣式[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]。 如需詳細資訊，請參閱[視覺化樣式呈現控制項](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)。  
+ 如果您的應用程式呼叫<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>方法，則大部分您[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]上執行您的應用程式時，控制項將會自動使用視覺化樣式[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]。 如需詳細資訊，請參閱 <<c0> [ 呈現具有視覺化樣式的控制項](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)。  
   
- 如本主題中所述的工作的完整程式碼清單，請參閱[啟用混合式應用程式範例中的視覺化樣式](http://go.microsoft.com/fwlink/?LinkID=159986)。  
+ 如本主題中所述工作的完整程式碼清單，請參閱 <<c0> [ 啟用混合式應用程式範例中的視覺化樣式](https://go.microsoft.com/fwlink/?LinkID=159986)。  
   
 ## <a name="enabling-windows-forms-visual-styles"></a>啟用 Windows Forms 視覺化樣式  
   
@@ -34,11 +34,11 @@ ms.locfileid: "33545619"
   
     -   System.Windows.Forms  
   
-3.  在 [工具箱] 中按兩下<xref:System.Windows.Controls.Grid>圖示，以放置<xref:System.Windows.Controls.Grid>設計介面上的項目。  
+3.  在 [工具箱] 中，按兩下<xref:System.Windows.Controls.Grid>圖示，以放置<xref:System.Windows.Controls.Grid>設計介面上的項目。  
   
-4.  在 [屬性] 視窗中設定的值<xref:System.Windows.FrameworkElement.Height%2A>和<xref:System.Windows.FrameworkElement.Width%2A>屬性**自動**。  
+4.  在 [屬性] 視窗中設定的值<xref:System.Windows.FrameworkElement.Height%2A>並<xref:System.Windows.FrameworkElement.Width%2A>屬性，以**自動**。  
   
-5.  在 [設計] 檢視或 [XAML] 檢視中，選取<xref:System.Windows.Window>。  
+5.  在 設計 檢視或 XAML 檢視中，選取  <xref:System.Windows.Window>。  
   
 6.  在 屬性 視窗中，按一下**事件** 索引標籤。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "33545619"
   
 9. 按 F5 鍵建置並執行應用程式。  
   
-     [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]使用視覺化樣式繪製控制項。  
+     [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項繪製具有視覺化樣式。  
   
 ## <a name="disabling-windows-forms-visual-styles"></a>停用 Windows Forms 視覺化樣式  
  若要停用視覺化樣式，只要移除呼叫<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>方法。  
@@ -60,11 +60,11 @@ ms.locfileid: "33545619"
   
 1.  在程式碼編輯器中，開啟 MainWindow.xaml.vb 或 MainWindow.xaml.cs。  
   
-2.  註解的呼叫<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>方法。  
+2.  標記為註解的呼叫<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>方法。  
   
 3.  按 F5 鍵建置並執行應用程式。  
   
-     [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]與預設系統樣式繪製控制項。  
+     [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項使用預設系統樣式所繪製。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>  

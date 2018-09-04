@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.openlocfilehash: 78db191bdec4c25c11728d819d89eaaaff4bd7da
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43257353"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564608"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker 應用程式中的狀態和資料
 

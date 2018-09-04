@@ -2,23 +2,23 @@
 title: While 活動中的模擬中斷
 ms.date: 03/30/2017
 ms.assetid: ddff715d-d623-4b54-b841-60bacbc3ca21
-ms.openlocfilehash: 37c64c2b8dc03d58f9c2802edef644fe4888e87d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4938e07364609520f6528688877bce112be26d3f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514709"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560421"
 ---
 # <a name="emulating-breaking-in-a-while-activity"></a>While 活動中的模擬中斷
 這個範例會示範如何中斷下列活動的迴圈機制：<xref:System.Activities.Statements.DoWhile>、<xref:System.Activities.Statements.ForEach%601>、<xref:System.Activities.Statements.While> 和 <xref:System.Activities.Statements.ParallelForEach%601>。  
   
- 這是很有用，因為 Windows Workflow Foundation (WF) 不包括可中斷這些迴圈執行的任何活動。  
+ 這是很有用，因為 Windows Workflow Foundation (WF) 不包含任何可中斷這些迴圈執行的活動。  
   
 ## <a name="scenario"></a>情節  
  此範例會從廠商清單中尋找第一家可靠的廠商 (`Vendor` 類別的執行個體)。 每一家廠商都有 `ID`、`Name` 以及數值信賴值 (可決定廠商的信賴度)。 此範例會建立一個名為 `FindReliableVendor` 的自訂活動，此活動會接收兩個輸入參數 (廠商清單及最低信賴值)，並傳回清單中符合提供之準則的第一家廠商。  
   
 ## <a name="breaking-a-loop"></a>中斷迴圈  
- Windows Workflow Foundation (WF) 不會包括可中斷迴圈的活動。 此程式碼範例會使用 <xref:System.Activities.Statements.If> 活動和幾個變數來完成中斷迴圈的工作。 在範例中，一旦 <xref:System.Activities.Statements.While> 變數指派了 `reliableVendor` 以外的值，`null` 活動就會中斷。  
+ Windows Workflow Foundation (WF) 不包含用來中斷迴圈的活動。 此程式碼範例會使用 <xref:System.Activities.Statements.If> 活動和幾個變數來完成中斷迴圈的工作。 在範例中，一旦 <xref:System.Activities.Statements.While> 變數指派了 `reliableVendor` 以外的值，`null` 活動就會中斷。  
   
  下列程式碼範例示範此範例如何中斷 while 迴圈。  
   
@@ -77,6 +77,6 @@ new While(env => i.Get(env) < this.Vendors.Get(env).Count && reliableVendor.Get(
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\EmulatingBreakInWhile`

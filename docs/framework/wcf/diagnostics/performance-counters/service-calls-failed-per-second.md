@@ -3,11 +3,11 @@ title: 服務：每秒失敗的呼叫數
 ms.date: 03/30/2017
 ms.assetid: 5a2c7939-107d-4f0c-b43c-e02e079e8a9d
 ms.openlocfilehash: 9cd649788e1304c68caa1bbf4b5fd27e6fc9d508
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396414"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43559060"
 ---
 # <a name="service-calls-failed-per-second"></a>服務：每秒失敗的呼叫數
 計數器名稱：每秒失敗的呼叫數。  

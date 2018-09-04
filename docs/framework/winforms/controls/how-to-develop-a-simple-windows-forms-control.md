@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
 ms.openlocfilehash: 07a4de944e36b0be1a6196d08df33c4f3ab24bcc
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387034"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560128"
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>如何：開發簡單的 Windows Forms 控制項
 本節將逐步引導您完成撰寫自訂 Windows Forms 控制項的重要步驟。 在本逐步解說中開發的簡單控制項允許的對齊方式與其<xref:System.Windows.Forms.Control.Text%2A>来變更屬性。 它不會引發或處理事件。  

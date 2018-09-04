@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8f9ce4fd-e84f-48c0-bb64-89e217236d3e
 ms.openlocfilehash: 13aa01fdc86e59c8cd132158df1dc4bd298b9710
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416079"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564765"
 ---
 # <a name="method-based-query-syntax-examples-ordering-linq-to-dataset"></a>以方法為基礎的查詢語法範例：排序 (LINQ to DataSet)
 此主題中的範例將示範如何使用 <xref:System.Linq.Enumerable.OrderBy%2A>、<xref:System.Linq.Enumerable.Reverse%2A> 和 <xref:System.Linq.Enumerable.ThenBy%2A> 方法並搭配方法查詢語法來查詢 <xref:System.Data.DataSet> 以及排序結果。  

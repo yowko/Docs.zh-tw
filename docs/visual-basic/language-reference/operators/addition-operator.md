@@ -11,11 +11,11 @@ helpviewer_keywords:
 - sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
 ms.openlocfilehash: 91806c204c313956b292eb9c9be078991f733b4e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43420898"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43555029"
 ---
 # <a name="-operator-visual-basic"></a>+ 運算子 (Visual Basic)
 兩個數字相加，或傳回數值運算式的正值。 也可以用來串連兩個字串運算式。  

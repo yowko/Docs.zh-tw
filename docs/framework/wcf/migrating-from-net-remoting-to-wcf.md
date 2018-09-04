@@ -2,12 +2,12 @@
 title: 從 .NET 遠端處理移轉到 WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: 6041cd9ac066d932811cc489222c8cbf03debb75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e260ecaf422b5654364143b1fc529112b5ea0656
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33509134"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43659728"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>從 .NET 遠端處理移轉到 WCF
 此文章說明如何將使用 .NET 遠端處理的應用程式移轉為使用 Windows Communication Foundation (WCF)。 此文章會先比較這這些產品的類似概念，再說明如何在 WCF 中完成幾個常見的遠端處理案例。  
@@ -24,7 +24,7 @@ ms.locfileid: "33509134"
 |序列化|ISerializable 或 [Serializable]|DataContractSerializer 或 XmlSerializer|  
 |已傳遞的物件|傳值或傳址|僅限傳值|  
 |錯誤/例外狀況|任何可序列化的例外狀況|FaultContract\<TDetail>|  
-|用戶端 Proxy 物件|強型別 Transparent Proxy 是從 MarshalByRefObjects 自動建立|產生強型別的 proxy 是隨使用 ChannelFactory\<TChannel >|  
+|用戶端 Proxy 物件|強型別 Transparent Proxy 是從 MarshalByRefObjects 自動建立|產生強型別的 proxy 是視需要使用 ChannelFactory\<TChannel >|  
 |所需的平台|用戶端和伺服器都必須使用 Microsoft 作業系統與 .NET|跨平台|  
 |訊息格式|Private|業界標準 (SOAP、WS-* 等)|  
   
@@ -143,7 +143,7 @@ Console.WriteLine(String.Format("  Customer {0} {1} received.",
                     customer.FirstName, customer.LastName));  
 ```  
   
- 此範例顯示如何在通道層級進行程式設計，因為它最類似遠端處理範例。 也可以使用**加入服務參考**會產生可簡化程式設計的用戶端程式碼的 Visual Studio 中的方法。 如需詳細資訊，請參閱下列主題：  
+ 此範例顯示如何在通道層級進行程式設計，因為它最類似遠端處理範例。 也可**加入服務參考**產生程式碼以簡化用戶端程式設計的 Visual Studio 中的方法。 如需詳細資訊，請參閱下列主題：  
   
 -   [用戶端通道層級的程式設計](./extending/client-channel-level-programming.md)  
   
@@ -161,7 +161,7 @@ Console.WriteLine(String.Format("  Customer {0} {1} received.",
 #### <a name="serialization-in-net-remoting"></a>.NET 遠端處理的序列化  
  .NET 遠端處理支援以兩種方式在用戶端與伺服器之間序列化及還原序列化物件：  
   
--   *依值*-跨階層界限序列化物件的值，並在另一個階層上建立該物件的新執行個體。 對新執行個體的方法或屬性所做的任何呼叫只會在本機執行，並不會影響原始物件或階層。  
+-   *依值*– 跨階層界限序列化物件的值，並在另一個階層上建立該物件的新執行個體。 對新執行個體的方法或屬性所做的任何呼叫只會在本機執行，並不會影響原始物件或階層。  
   
 -   *傳址*– 跨階層界限序列化特殊 「 物件參考 」。 當某個階層與該物件的方法或屬性互動時，它會回到原始階層與原始物件通訊。 傳址物件流向可為任一方向 (從伺服器到用戶端，或從用戶端到伺服器)。  
   
@@ -214,7 +214,7 @@ public class WCFCustomer
   
 -   [序列化和還原序列化](./feature-details/serialization-and-deserialization.md)  
   
--   [Windows Communication Foundation 序列化](http://msdn.microsoft.com/magazine/cc163569.aspx)  
+-   [Windows Communication Foundation 序列化](https://msdn.microsoft.com/magazine/cc163569.aspx)  
   
 ### <a name="exception-handling-capabilities"></a>例外狀況處理功能  
   
@@ -286,15 +286,15 @@ catch (FaultException<CustomerServiceFault> fault)
   
 -   [安全性](./feature-details/security.md)  
   
--   [WCF 安全性指導方針](./feature-details/security-guidance-and-best-practices.md)  
+-   [WCF 安全性指引](./feature-details/security-guidance-and-best-practices.md)  
   
 ## <a name="migrating-to-wcf"></a>移轉至 WCF  
   
 ### <a name="why-migrate-from-remoting-to-wcf"></a>為什麼要從遠端處理移轉至 WCF？  
   
--   **.NET 遠端處理是舊版產品。** 中所述[.NET 遠端處理](http://msdn.microsoft.com/library/vstudio/72x4h507\(v=vs.100\).aspx)，它會被視為舊版產品，並不建議用於新的開發。 建議針對新的和現有的應用程式使用 WCF 或 ASP.NET Web 應用程式開發介面。  
+-   **.NET 遠端處理是舊版產品。** 中所述[.NET 遠端處理](https://msdn.microsoft.com/library/vstudio/72x4h507\(v=vs.100\).aspx)，它會被視為舊版產品，並不建議用於新的開發。 建議針對新的和現有的應用程式使用 WCF 或 ASP.NET Web 應用程式開發介面。  
   
--   **WCF 使用跨平台標準。** WCF 的設計將跨平台互通性納入考量，並支援許多業界標準 (SOAP、WS-Security、WS-Trust 等)。 WCF 服務可以與在非 Windows 作業系統上執行的用戶端互通。 遠端處理的設計主要是針對在 Windows 作業系統上使用 .NET Framework 執行伺服器和用戶端應用程式的環境。  
+-   **WCF 會使用跨平台標準。** WCF 的設計將跨平台互通性納入考量，並支援許多業界標準 (SOAP、WS-Security、WS-Trust 等)。 WCF 服務可以與在非 Windows 作業系統上執行的用戶端互通。 遠端處理的設計主要是針對在 Windows 作業系統上使用 .NET Framework 執行伺服器和用戶端應用程式的環境。  
   
 -   **WCF 具有內建的安全性。** WCF 的設計將安全性納入考量，並提供驗證、傳輸層級安全性、訊息層級安全性等許多選項。遠端處理的設計是為了讓應用程式輕鬆地互通，而不是為了確保在未受信任環境中的安全性。 WCF 的設計是為了在受信任和未受信任的環境中都能夠正常運作。  
   
@@ -307,7 +307,7 @@ catch (FaultException<CustomerServiceFault> fault)
   
 -   **建立錯誤合約 （選擇性）。** 建立遇到錯誤時，要在伺服器與用戶端之間交換的類型。 以 [DataContract] 和 [DataMember] 標記這些類型，使這些類型可序列化。 針對已標記為 [OperationContract] 的所有服務作業，您也應該將它們標記為 [FaultContract]，以指出這些服務作業可能傳回的錯誤。  
   
--   **設定及裝載服務。** 建立服務合約之後，下一個步驟是設定繫結，以公開端點上的服務。 如需詳細資訊，請參閱[端點： 位址、 繫結和合約](./feature-details/endpoints-addresses-bindings-and-contracts.md)。  
+-   **設定及裝載服務。** 建立服務合約之後，下一個步驟是設定繫結，以公開端點上的服務。 如需詳細資訊，請參閱 <<c0> [ 端點： 位址、 繫結和合約](./feature-details/endpoints-addresses-bindings-and-contracts.md)。  
   
  將遠端處理應用程式移轉至 WCF 之後，還必須移除與 .NET 遠端處理的相依性。 如此可確保移除應用程式中的任何遠端處理安全性弱點。 這些步驟包括：  
   
@@ -425,9 +425,9 @@ public class RemotingServer : MarshalByRefObject
        customerServiceHost.Open();  
    ```  
   
-     當啟動這個 ServiceHost 時，它會使用 web.config 檔案來建立適當的合約、繫結與端點。 如需組態檔的詳細資訊，請參閱[設定服務使用組態檔](./configuring-services-using-configuration-files.md)。 這種啟動伺服器的方式稱為自我裝載。 若要深入了解裝載 WCF 服務的其他選項，請參閱[裝載服務](./hosting-services.md)。  
+     當啟動這個 ServiceHost 時，它會使用 web.config 檔案來建立適當的合約、繫結與端點。 如需有關組態檔的詳細資訊，請參閱 <<c0> [ 設定服務使用組態檔](./configuring-services-using-configuration-files.md)。 這種啟動伺服器的方式稱為自我裝載。 若要深入了解裝載 WCF 服務的其他選擇，請參閱[裝載的服務](./hosting-services.md)。  
   
-6.  用戶端專案的 app.config 必須宣告服務端點的相符繫結資訊。 若要這樣做的 Visual Studio 中的最簡單方式是使用**加入服務參考**，這會自動更新 app.config 檔案。 您也可以手動加入這些相同的變更。  
+6.  用戶端專案的 app.config 必須宣告服務端點的相符繫結資訊。 若要這樣做的 Visual Studio 中的最簡單方式是使用**加入服務參考**，它將會自動更新 app.config 檔案。 您也可以手動加入這些相同的變更。  
   
     ```xml  
     <configuration>  
@@ -442,7 +442,7 @@ public class RemotingServer : MarshalByRefObject
     </configuration>  
     ```  
   
-     如需有關使用**加入服務參考**，請參閱[如何： 加入、 更新或移除服務參考](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)。  
+     如需使用詳細資訊**加入服務參考**，請參閱[如何： 加入、 更新或移除服務參考](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)。  
   
 7.  現在我們可以從用戶端呼叫 WCF 服務。 若要執行此作業，請建立該服務的通道處理站，針對通道要求通道處理站，然後在該通道上直接呼叫所需的方法。 我們可以這樣做的原因，是因為通道會實作服務的介面並為我們處理基礎要求/回覆邏輯。 從該方法呼叫傳回的值是伺服器回應的已還原序列化複本。  
   
@@ -533,7 +533,7 @@ public class RemotingServer : MarshalByRefObject
   
 4.  我們需要執行下列兩個動作，來修改伺服器的組態檔，如下列範例所示：  
   
-    1.  宣告\<用戶端 > 一節描述工作階段物件端點。 由於在這種情況下伺服器也會當做用戶端，因此必須執行這個動作。  
+    1.  宣告\<用戶端 > 區段，其中說明工作階段物件端點。 由於在這種情況下伺服器也會當做用戶端，因此必須執行這個動作。  
   
     2.  宣告處理站與工作階段物件的端點。 這樣才能讓用戶端與服務端點通訊，以取得 EndpointAddress10 並建立工作階段通道。  
   
@@ -665,7 +665,7 @@ public class RemotingServer : MarshalByRefObject
     > [!NOTE]
     >  這個程式碼也會說明如何傳送衍生類型 (PremiumCustomer)。 服務介面必須有 Customer 物件，但 Customer 類別上的 [KnownType] 屬性表示也允許 PremiumCustomer。 WCF 對於透過這個服務介面序列化或還原序列化其他任何類型所做的任何嘗試都將會失敗。  
   
- 一般 WCF 交換資料的方式是傳值。 如此可確保在其中一個資料物件上叫用方法的作業只會在本機執行，而不會在另一個階層上叫用程式碼。 雖然可以達到所傳回的傳址物件類似*從*伺服器，不可能將傳址物件傳送用戶端*至*伺服器。 如果需要在用戶端與伺服器之間來回溝通，可透過雙工服務在 WCF 中達成。 如需詳細資訊，請參閱[雙工服務](./feature-details/duplex-services.md)。  
+ 一般 WCF 交換資料的方式是傳值。 如此可確保在其中一個資料物件上叫用方法的作業只會在本機執行，而不會在另一個階層上叫用程式碼。 雖然您可以傳回的傳址物件類似*從*伺服器，不可能將傳址物件傳遞的用戶端*至*伺服器。 如果需要在用戶端與伺服器之間來回溝通，可透過雙工服務在 WCF 中達成。 如需詳細資訊，請參閱 <<c0> [ 雙工服務](./feature-details/duplex-services.md)。  
   
 ## <a name="summary"></a>總結  
  .NET 遠端處理是只能在完全信任的環境中使用的通訊架構。 它是只為了回溯相容性所支援的舊版產品。 不應該用來建置新的應用程式。 相反地，WCF 的設計將安全性納入考量，建議針對新的與現有的應用程式使用。 Microsoft 建議將現有的遠端處理應用程式移轉為改用 WCF 或 ASP.NET Web API。

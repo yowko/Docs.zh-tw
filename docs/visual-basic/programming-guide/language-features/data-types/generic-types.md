@@ -37,11 +37,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
 ms.openlocfilehash: c13bdc47568aa8bbd934bb2b86410e17bbc485dc
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397360"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562805"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic 中的泛型類型 (Visual Basic)
 *「泛型類型」* (generic type) 是單一程式設計項目，適用於為各種資料類型執行相同的功能。 當您定義泛型類別或程序時，不需要為想要執行該功能的每種資料類型定義不同的版本。  

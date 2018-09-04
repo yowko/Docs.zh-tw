@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
 ms.openlocfilehash: 56ece9c2c81f05047e85ab681e7cfe0da65f35b9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43419613"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43555821"
 ---
 # <a name="securing-wcf-data-services"></a>保護 WCF Data Services 的安全
 本主題描述與開發、部署和執行 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，以及存取支援 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 之服務的應用程式有關的安全性考量。 您也應該遵循建立安全 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 應用程式的建議事項。  

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-ms.openlocfilehash: 320a45af1c2f3b460c23d8320c456120643902f7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7bb68a7d08d983e93119804db6c1f5a01cd047c9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759539"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43659385"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>設定參數和參數資料類型
 命令物件會使用參數將值傳遞至 SQL 陳述式或預存程序 (Stored Procedure)，以提供型別檢查及驗證。 與命令文字不同的是，參數輸入會被視為常值 (Literal)，而非可執行程式碼。 這有助於防衛「SQL 插入式」攻擊，在此類攻擊中，攻擊者會將危害伺服器安全的命令插入 SQL 陳述式中。  
   
- 參數型命令 (Parameterized Command) 也可以改善查詢執行效能，因為它們可以協助資料庫伺服器正確地比對內送命令與正確快取的查詢計畫。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的 [執行計畫快取與重複使用](http://go.microsoft.com/fwlink/?LinkId=120424) 和 [參數和執行計畫的重複使用](http://go.microsoft.com/fwlink/?LinkId=120423) 。 除了安全性和效能的優點以外，參數型命令也提供方便的方法，可讓您安排傳遞至資料來源的值。  
+ 參數型命令 (Parameterized Command) 也可以改善查詢執行效能，因為它們可以協助資料庫伺服器正確地比對內送命令與正確快取的查詢計畫。 如需詳細資訊，請參閱 <<c0> [ 執行計畫快取和重複使用](/sql/relational-databases/query-processing-architecture-guide#execution-plan-caching-and-reuse)並[參數和執行計畫的重複使用](/sql/relational-databases/query-processing-architecture-guide#PlanReuse)。 除了安全性和效能的優點以外，參數型命令也提供方便的方法，可讓您安排傳遞至資料來源的值。  
   
  <xref:System.Data.Common.DbParameter> 物件可透過其建構函式建立，或者透過呼叫 <xref:System.Data.Common.DbCommand.DbParameterCollection%2A> 集合的 `Add` 方法，將其加入 <xref:System.Data.Common.DbParameterCollection> 來建立。 `Add` 方法會將建構函式引數或現有的參數物件當做輸出，依資料提供者而定。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "32759539"
 |-------------------------|------------|---------------|---------------|--------------|----------------|  
 |<xref:System.Boolean>|Boolean|位元|Boolean|位元|Byte|  
 |<xref:System.Byte>|Byte|TinyInt|UnsignedTinyInt|TinyInt|Byte|  
-|byte[]|二元|VarBinary`.`如果位元組陣列超過 VarBinary 的最大大小即 8000 個位元組，這項隱含轉換將會失敗。大於 8000 個位元組的位元組陣列，明確地設定<xref:System.Data.SqlDbType>。|VarBinary|二元|Raw|  
+|byte[]|二元|VarBinary`.`如果位元組陣列超過 VarBinary 的最大大小即 8000 個位元組，這項隱含轉換將會失敗。大於 8000 個位元組的位元組陣列，請明確設定<xref:System.Data.SqlDbType>。|VarBinary|二元|Raw|  
 |<xref:System.Char>|``|不支援從 char 推斷 <xref:System.Data.SqlDbType> 。|Char|Char|Byte|  
 |<xref:System.DateTime>|DateTime|DateTime|DBTimeStamp|DateTime|DateTime|  
 |<xref:System.DateTimeOffset>|DateTimeOffset|SQL Server 2008 中的 DateTimeOffset。 SQL Server 2008 之前的 SQL Server 版本不支援從 DateTimeOffset 推斷 <xref:System.Data.SqlDbType> 。|||DateTime|  
@@ -56,7 +56,7 @@ ms.locfileid: "32759539"
 |<xref:System.Double>|Double|浮動|Double|Double|Double|  
 |<xref:System.Single>|Single|Real|Single|Real|浮動|  
 |<xref:System.Guid>|Guid|UniqueIdentifier|Guid|UniqueIdentifier|Raw|  
-|<xref:System.Int16 >|Int16|SmallInt|SmallInt|SmallInt|Int16|  
+|<xref:System.Int16>|Int16|SmallInt|SmallInt|SmallInt|Int16|  
 |<xref:System.Int32>|Int32|Int|Int|Int|Int32|  
 |<xref:System.Int64>|Int64|BigInt|BigInt|BigInt|數字|  
 |<xref:System.Object>|物件|變異|變異|不支援從 Object 推斷 OdbcType。|Blob|  
@@ -79,7 +79,7 @@ ms.locfileid: "32759539"
 >  將十進位值轉換為其他型別的過程稱為窄化轉換，此類轉換會將十進位值向零的方向取整數。 如果目的型別無法代表此項轉換的結果，則會擲回 <xref:System.OverflowException> 。  
   
 > [!NOTE]
->  當您傳送 null 參數值到伺服器時，您必須指定<xref:System.DBNull>，而非`null`(`Nothing`在 Visual Basic 中)。 系統中的 Null 值是沒有值的空物件。 <xref:System.DBNull> 用於表示 null 值。 如需資料庫 null 值的詳細資訊，請參閱 [Handling Null Values](../../../../docs/framework/data/adonet/sql/handling-null-values.md)。  
+>  當您將 null 參數值傳送至伺服器時，您必須指定<xref:System.DBNull>，而非`null`(`Nothing` Visual Basic 中)。 系統中的 Null 值是沒有值的空物件。 <xref:System.DBNull> 用於表示 null 值。 如需資料庫 null 值的詳細資訊，請參閱 [Handling Null Values](../../../../docs/framework/data/adonet/sql/handling-null-values.md)。  
   
 ## <a name="deriving-parameter-information"></a>衍生參數資訊  
  您也可以使用 `DbCommandBuilder` 類別 (Class) 從預存程序衍生參數。 `SqlCommandBuilder` 和 `OleDbCommandBuilder` 類別都能提供靜態方法 ( `DeriveParameters`)，該方法會在使用預存程序之參數資訊的命令物件，自動填入參數集合。 請注意， `DeriveParameters` 將會覆寫命令所有的現有參數資訊。  
@@ -87,13 +87,13 @@ ms.locfileid: "32759539"
 > [!NOTE]
 >  衍生參數資訊會造成效能降低，因為這項作業需要對資料來源進行額外的來回行程才能擷取資訊。 若在設計階段已知參數資訊，您便可以明確設定參數，改善應用程式的效能。  
   
- 如需詳細資訊，請參閱[Commandbuilder 產生命令](../../../../docs/framework/data/adonet/generating-commands-with-commandbuilders.md)。  
+ 如需詳細資訊，請參閱 < [Commandbuilder 產生命令](../../../../docs/framework/data/adonet/generating-commands-with-commandbuilders.md)。  
   
 ## <a name="using-parameters-with-a-sqlcommand-and-a-stored-procedure"></a>使用參數配合 SqlCommand 和預存程序  
  預存程序對資料驅動應用程式有許多好處。 藉由使用預存程序，資料庫作業可以封裝在單一命令中、最佳化為最佳效能，並且可進一步提升安全性。 雖然只要將後接參數引數的預存程序名稱當成 SQL 陳述式傳遞即可呼叫預存程序，但是使用 <xref:System.Data.Common.DbCommand.Parameters%2A> [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 物件的 <xref:System.Data.Common.DbCommand> 集合，可以讓您更明確地定義預存程序參數，以及存取輸出參數和傳回值。  
   
 > [!NOTE]
->  參數化陳述式能在伺服器上執行，都是透過允許查詢計畫重複使用的 `sp_executesql,` 。 呼叫 `sp_executesql` 的批次無法見到 `sp_executesql`批次中的本機資料指標或變數。 資料庫內容中的變更只會持續到 `sp_executesql` 陳述式結束。 如需詳細資訊，請參閱《SQL Server 線上叢書》。  
+> 參數化陳述式能在伺服器上執行，都是透過允許查詢計畫重複使用的 `sp_executesql,` 。 呼叫 `sp_executesql` 的批次無法見到 `sp_executesql`批次中的本機資料指標或變數。 資料庫內容中的變更只會持續到 `sp_executesql` 陳述式結束。 如需詳細資訊，請參閱 < [sp_executesql & Amp;#40;transact-SQL&AMP;#41;](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql)。
   
  將參數與 <xref:System.Data.SqlClient.SqlCommand> 搭配使用以執行 SQL Server 預存程序時，加入 <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> 集合的參數名稱必須與預存程序中的參數標記名稱相符。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server 不支援以問號 (?) 預留位置來傳遞參數至 SQL 陳述式或預存程序。 它會將預存程式中的參數視為具名參數，並搜尋相符的參數標記。 例如， `CustOrderHist` 預存程序是使用名為 `@CustomerID`的參數所定義的。 則當您的程式碼執行預存程序時，也必須使用名為 `@CustomerID`的參數。  
   
@@ -199,4 +199,4 @@ parameter.Direction = ParameterDirection.Output;
  [命令和參數](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [DataAdapter 參數](../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
  [ADO.NET 中的資料類型對應](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

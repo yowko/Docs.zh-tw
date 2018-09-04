@@ -3,11 +3,11 @@ title: HOW TO：使用組態新增 ASP.NET AJAX 端點
 ms.date: 03/30/2017
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
 ms.openlocfilehash: 3a3474dc04ce2cda63157e68597d1184e9b2bf15
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934403"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43559947"
 ---
 # <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>HOW TO：使用組態新增 ASP.NET AJAX 端點
 Windows Communication Foundation (WCF) 可讓您建立的服務，ASP.NET ajax 的端點可供使用，可以從 JavaScript 呼叫用戶端網站上。 若要建立此類端點，您可以使用組態檔，如同所有其他的 Windows Communication Foundation (WCF) 端點，或使用不需要任何組態項目的的方法。 本主題示範組態方法。  

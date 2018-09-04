@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
 ms.openlocfilehash: 7c9b713571cea3d2c8c5f6511f2cfab7e87b80ee
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387439"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43559964"
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>WCF 資料服務用戶端公用程式 (DataSvcUtil.exe)
 

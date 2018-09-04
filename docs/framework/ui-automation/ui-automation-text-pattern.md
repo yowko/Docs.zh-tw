@@ -12,11 +12,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 31dacad6b2b7c891ff8c32151f9bf02e8639375f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396360"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43556393"
 ---
 # <a name="ui-automation-text-pattern"></a>UI 自動化的文字模式
 > [!NOTE]

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
 ms.openlocfilehash: 040ecd8a2ce223f89601de735b77ccc81638c7af
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417078"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43563425"
 ---
 # <a name="schema-restrictions"></a>結構描述限制
 第二個選擇性參數**GetSchema**方法會傳回用來限制結構描述資訊量的限制，並將它傳遞至**GetSchema**方法作為字串的陣列. 陣列中的位置決定您可以傳遞的值，它相當於限制號碼。  

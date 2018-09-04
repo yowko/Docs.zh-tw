@@ -6,11 +6,11 @@ helpviewer_keywords:
 - ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
 ms.openlocfilehash: 816ac0d81ddcaa461a842c0f69fe5ed5b21a32d1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466280"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43559829"
 ---
 # <a name="toolbar-overview"></a>ToolBar 概觀
 <xref:System.Windows.Controls.ToolBar> 控制項是一組命令或其功能通常彼此相關的控制項的容器。 A<xref:System.Windows.Controls.ToolBar>通常包含會叫用命令的按鈕。  

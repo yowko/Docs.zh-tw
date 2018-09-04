@@ -10,11 +10,11 @@ helpviewer_keywords:
 - security policy [Windows Forms], Windows Forms
 ms.assetid: 932d438a-5285-46d8-a958-8c93d0ad6cae
 ms.openlocfilehash: 75016e9e04cf47782add18c87f7c677931743a4e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397246"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43556174"
 ---
 # <a name="windows-forms-security"></a>Windows Form 安全性
 Windows Form 的特色是程式碼為基礎 （安全性層級所設定的程式碼，不論執行的程式碼的使用者） 的安全性模型。 這是除了可能已在您的電腦系統上的位置中的任何安全性結構描述。 這些可能包括瀏覽器 （例如區域為基礎的安全性提供 Internet Explorer） 或作業系統 （例如 Windows NT 的認證為基礎的安全性） 中。  

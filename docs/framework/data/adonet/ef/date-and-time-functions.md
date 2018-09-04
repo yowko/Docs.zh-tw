@@ -3,11 +3,11 @@ title: 日期及時間函式
 ms.date: 03/30/2017
 ms.assetid: 971762d0-663b-4b64-8c61-352a8e6d3949
 ms.openlocfilehash: 56ef2f0b0a62f6b2cf6db5fe2c6713c58228ff6f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43451632"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43556868"
 ---
 # <a name="date-and-time-functions"></a>日期及時間函式
 .NET Framework Data Provider for SQL Server (SqlClient) 提供了日期和時間函式，這些函式會在 `System.DateTime` 輸入值上執行作業，並傳回 `string`、數值或 `System.DateTime` 值結果。 這些函式位於您使用 SqlClient 時可以使用的 SqlServer 命名空間 (Namespace) 內。 提供者命名空間屬性可以讓 Entity Framework 了解此提供者對特定建構 (例如型別和函式) 所使用的前置詞。下表將顯示 SqlClient 日期和時間函式。  

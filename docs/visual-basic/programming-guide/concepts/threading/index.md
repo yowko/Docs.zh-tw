@@ -2,12 +2,12 @@
 title: 執行緒處理 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 704bb04b-ff23-471d-ab12-3cec1c2bca59
-ms.openlocfilehash: fd1530a2b03c01b0a1cba0ce3ed4e18f2bf29046
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: f477a36c6ffa0b5a809c8ba899b21d19a8c9a2d8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874829"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43555782"
 ---
 # <a name="threading-visual-basic"></a>執行緒處理 (Visual Basic)
 Visual Basic 程式可以透過執行緒執行並行處理，讓您可以一次執行多項作業。 例如，您可以使用執行緒監視使用者的輸入、執行背景工作，以及處理同時的輸入資料流。  
@@ -31,16 +31,11 @@ Visual Basic 程式可以透過執行緒執行並行處理，讓您可以一次�
  您可以其中一些類別來同步多執行緒的活動，但有一些執行緒的支援則來自 Visual Basic 語言。 例如 [SyncLock 陳述式](../../../../visual-basic/language-reference/statements/synclock-statement.md)可以透過隱含使用 <xref:System.Threading.Monitor> 來提供同步功能。  
   
 > [!NOTE]
->  自 [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] 起，多執行緒程式設計因為 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 及 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 類別、[平行 LINQ (PLINQ)](https://msdn.microsoft.com/library/dd460688)、<xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空間中的新並行集合類別，以及以工作 (而非執行緒) 概念為基礎的新程式設計模型而獲得大幅簡化。 如需詳細資訊，請參閱[平行程式設計](../../../../standard/parallel-programming/index.md)。  
+>  自 [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] 起，多執行緒程式設計因為 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 及 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 類別、[平行 LINQ (PLINQ)](../../../../standard/parallel-programming/parallel-linq-plinq.md)、<xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空間中的新並行集合類別，以及以工作 (而非執行緒) 概念為基礎的新程式設計模型而獲得大幅簡化。 如需詳細資訊，請參閱[平行程式設計](../../../../standard/parallel-programming/index.md)。  
   
 ## <a name="related-topics"></a>相關主題  
   
 |標題|描述|  
 |-----------|-----------------|  
-|[多執行緒應用程式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)|說明如何建立及使用執行緒。|  
-|[多執行緒程序的參數和傳回值 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md)|說明多執行緒應用程式如何傳遞及傳回參數。|  
-|[逐步解說：使用 BackgroundWorker 元件進行多執行緒處理 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/walkthrough-multithreading-with-the-backgroundworker-component.md)|示範如何建立簡單的多執行緒應用程式。|  
 |[執行緒同步處理 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-synchronization.md)|說明如何控制執行緒的互動。|  
-|[執行緒集區 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)|說明如何使用系統管理的背景工作執行緒集區。|  
-|[如何：使用執行緒集區 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|示範如何同步執行緒集區中多執行緒的使用。|  
 |[執行緒處理](../../../../standard/threading/index.md)|說明如何在.NET Framework 中實作執行緒。|

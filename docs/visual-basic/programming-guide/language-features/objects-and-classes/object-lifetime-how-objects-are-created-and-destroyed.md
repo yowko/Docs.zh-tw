@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 441fe91c8c884e59c6399d57e7e55bf6591cb1bb
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 1782748749df171ec8d6e3bc8873b4a42c83c0e6
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42754087"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43556051"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>物件存留期：物件的建立和終結 (Visual Basic)
 您可以使用 `New` 關鍵字來建立類別的執行個體，即物件。 在使用新物件之前，經常必須在新物件上執行初始設定工作。 常見的初始設定工作包括開啟檔案、連線到資料庫，以及讀取登錄機碼的值。 Visual Basic 控制項的使用程序呼叫的新物件初始化*建構函式*（允許控制初始化的特殊方法）。  
@@ -148,7 +148,7 @@ End Sub
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.IDisposable.Dispose%2A>  
- [初始化及終止元件](http://msdn.microsoft.com/library/58444076-a9d2-4c91-b3f6-0e180dc0695d)  
+ [初始化及終止元件](https://msdn.microsoft.com/library/58444076-a9d2-4c91-b3f6-0e180dc0695d)  
  [New 運算子](../../../../visual-basic/language-reference/operators/new-operator.md)  
  [清除 Unmanaged 資源](../../../../standard/garbage-collection/unmanaged.md)  
  [Nothing](../../../../visual-basic/language-reference/nothing.md)

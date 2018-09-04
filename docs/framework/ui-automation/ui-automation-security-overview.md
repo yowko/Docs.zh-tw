@@ -8,16 +8,16 @@ ms.assetid: 1d853695-973c-48ae-b382-4132ae702805
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 293cee72e80e88215fccb3902eb88963814cb2ce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f55112c5eead082eae10aa50590b915f5049d5a6
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400194"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43565950"
 ---
 # <a name="ui-automation-security-overview"></a>UI 自動化安全性概觀
 > [!NOTE]
->  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱 < [Windows Automation API： 使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本概觀說明 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 中 [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)]的安全性模型。  
   
@@ -61,4 +61,4 @@ ms.locfileid: "33400194"
   
  `UIAccess` 預設為 "false"；也就是說，如果省略這個屬性，或者組件沒有資訊清單，應用程式就無法取得受保護的 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]的存取權。  
   
- 如需 [!INCLUDE[TLA#tla_longhorn2](../../../includes/tlasharptla-longhorn2-md.md)] 安全性、簽署應用程式和建立組件資訊清單的詳細資訊，請參閱  [MSDN](http://msdn.microsoft.com/library/default.asp?url=/library/dnlong/html/AccProtVista.asp)中的＜最低權限環境中之應用程式的開發人員最佳做法和方針＞。
+ 如需詳細資訊[!INCLUDE[TLA#tla_longhorn2](../../../includes/tlasharptla-longhorn2-md.md)]安全性、 簽署應用程式和建立組件資訊清單，請參閱 「 開發人員最佳做法和指導方針應用程式環境中之最低特殊權限 > [MSDN](https://msdn.microsoft.com/library/default.asp?url=/library/dnlong/html/AccProtVista.asp)。

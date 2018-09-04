@@ -7,11 +7,11 @@ helpviewer_keywords:
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
 ms.openlocfilehash: 27f856b895f48dc2365a1721dbc90294269899c7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401845"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562851"
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>如何：偵測有無安裝 .NET Framework 3.0
 系統管理員可以部署的系統上的 Microsoft.NET Framework 應用程式之前，他們必須先確認.NET Framework 執行階段已存在。 本主題提供以 HTML/JavaScript 撰寫的指令碼，可用來判斷是否存在於系統上的.NET Framework 系統管理員。  

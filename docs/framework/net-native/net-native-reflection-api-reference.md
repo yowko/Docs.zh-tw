@@ -5,11 +5,11 @@ ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2a2a27f788fa84c41ccb818266fffc816237bb48
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486944"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554960"
 ---
 # <a name="net-native-reflection-api-reference"></a>.NET 原生反映 API 參考
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 包含三個新的例外狀況類型： [System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)、 [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)和 [System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)。 請注意有關下列三個例外狀況類型的資訊：  

@@ -3,11 +3,11 @@ title: '&lt;ws2007HttpBinding&gt; 的 &lt;message&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9ffd8db6-84a8-4b38-a9fe-2cb1a87a1c97
 ms.openlocfilehash: a8f448f40dbbf5fabbbd833cb9366c3911045f95
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43470021"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43557658"
 ---
 # <a name="ltmessagegt-of-ltws2007httpbindinggt"></a>&lt;ws2007HttpBinding&gt; 的 &lt;message&gt;
 定義的訊息層級安全性設定[ \<lt;ws2007httpbinding&gt >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)項目。  

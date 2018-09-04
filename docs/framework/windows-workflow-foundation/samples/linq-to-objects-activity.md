@@ -2,12 +2,12 @@
 title: LINQ to Objects 活動
 ms.date: 03/30/2017
 ms.assetid: 403c82e8-7f2b-42f6-93cd-95c35bc76ead
-ms.openlocfilehash: e2c2be52a88d8f9a886f0e59c027e1d6c737497c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fca4a94a951c9713a61914de6ef33e0cbb74f75e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516665"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552764"
 ---
 # <a name="linq-to-objects-activity"></a>LINQ to Objects 活動
 這個範例示範如何建立活動，以使用 LINQ to Objects 查詢集合項目。  
@@ -109,10 +109,10 @@ Activity sampleWorkflow = new Sequence
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\Linq\LinqToObjects`  
   
 ## <a name="see-also"></a>另請參閱  
- [Lambda 運算式 （C# 程式設計手冊）](http://go.microsoft.com/fwlink/?LinkId=150381)  
- [LINQ to Objects](http://go.microsoft.com/fwlink/?LinkID=150380)
+ [Lambda 運算式 （C# 程式設計手冊）](https://go.microsoft.com/fwlink/?LinkId=150381)  
+ [LINQ to Objects](https://go.microsoft.com/fwlink/?LinkID=150380)

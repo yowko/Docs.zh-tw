@@ -6,11 +6,11 @@ helpviewer_keywords:
 - exception XML tag
 ms.assetid: c0517549-171e-4dae-ab88-a9c1700b6eee
 ms.openlocfilehash: 047805ad91d87550da80448fd10883ae58647bd6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43420050"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554750"
 ---
 # <a name="ltexceptiongt-visual-basic"></a>&lt;例外狀況&gt;(Visual Basic)
 指定可以擲回的例外狀況。  

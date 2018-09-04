@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 2a0d716c3689b506ad29d99f006f1a4bb7c53a3a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61e8be6f7f621340a684bff69ec5c9d64ab36c61
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507025"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43565186"
 ---
 # <a name="custom-binding-security"></a>自訂繫結安全性
 這個範例會示範如何使用自訂繫結來設定安全性。 它會顯示如何使用自訂繫結同時啟用訊息層級安全性和安全傳輸。 當在用戶端和服務之間傳輸訊息需要安全傳輸，且同時必須保護訊息層級上訊息的安全時，這是相當有用的。 系統提供的繫結不支援這個組態。  
@@ -25,7 +25,7 @@ ms.locfileid: "33507025"
   
 -   Windows 訊息安全性。  
   
- 自訂繫結組態會同時啟用訊息層級安全性以啟用安全傳輸。 繫結項目的順序很重要定義自訂繫結，因為每個表示通道堆疊中的圖層中 (請參閱[自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md))。 自訂繫結會定義在服務與用戶端組態檔中，如下列範例組態所示。  
+ 自訂繫結組態會同時啟用訊息層級安全性以啟用安全傳輸。 繫結項目的順序很重要定義自訂繫結，因為每個都代表通道堆疊中的圖層 (請參閱[自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md))。 自訂繫結會定義在服務與用戶端組態檔中，如下列範例組態所示。  
   
 ```xml  
 <bindings>  
@@ -107,11 +107,11 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-3.  若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 ### <a name="to-run-the-sample-on-the-same-computer"></a>若要在同一部電腦上執行範例  
   
@@ -124,7 +124,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
 3.  從 \client\bin 啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-4.  如果用戶端和服務無法通訊，請參閱[疑難排解提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+4.  如果用戶端和服務能夠進行通訊，請參閱[疑難排解祕訣](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 ### <a name="to-run-the-sample-across-computers"></a>若要跨電腦執行範例  
   
@@ -136,12 +136,12 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
     3.  將 Setup.bat 和 Cleanup.bat 檔案複製到服務電腦中。  
   
-    4.  執行下列命令，在 Visual Studio 命令提示字元中的使用系統管理員權限開啟： `Setup.bat service`。 這會建立服務憑證，其主體名稱與批次檔執行於其中之電腦的名稱相符。  
+    4.  執行下列命令在 Visual Studio 命令提示字元開啟系統管理員權限： `Setup.bat service`。 這會建立服務憑證，其主體名稱與批次檔執行於其中之電腦的名稱相符。  
   
         > [!NOTE]
         >  Setup.bat 批次檔是設計用來從 Visual Studio 2010 命令提示字元執行。 它要求 path 環境變數指向安裝 SDK 的目錄。 這個環境變數是自動在 Visual Studio 2010 命令提示字元中設定。  
   
-    5.  變更[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) Service.exe.config 檔，以反映上一個步驟中產生的憑證的主體名稱中。  
+    5.  變更[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) Service.exe.config 檔以反映上一個步驟中產生的憑證的主體名稱。  
   
     6.  從命令提示字元執行 Service.exe。  
   
@@ -180,7 +180,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
         </client>  
         ```  
   
-    7.  如果用於執行服務的帳戶有別於網域環境中的 NetworkService 或 LocalSystem 帳戶，您可能需要修改用戶端 App.config 檔中服務端點的端點身分識別，以根據用來執行服務之帳戶設定適當的 UPN 或 SPN。 如需端點身分識別的詳細資訊，請參閱[服務識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)主題。  
+    7.  如果用於執行服務的帳戶有別於網域環境中的 NetworkService 或 LocalSystem 帳戶，您可能需要修改用戶端 App.config 檔中服務端點的端點身分識別，以根據用來執行服務之帳戶設定適當的 UPN 或 SPN。 如需端點身分識別的詳細資訊，請參閱[服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)主題。  
   
     8.  從命令提示字元執行 Client.exe。  
   

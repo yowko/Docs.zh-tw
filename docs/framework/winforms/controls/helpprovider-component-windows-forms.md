@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Help [Windows Forms], displaying on Windows Forms
 - HelpProvider component [Windows Forms]
 ms.assetid: a09a6e0b-79d8-457f-bb36-86fad2beeada
-ms.openlocfilehash: 9a88e34de40d04b89b909afeb8a9b273078dd4c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63574e6a4f7a9c5a1c2bcb267c64baa5c5e392f3
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524153"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43658947"
 ---
 # <a name="helpprovider-component-windows-forms"></a>HelpProvider 元件 (Windows Form)
 Windows Form `HelpProvider` 元件用來將 HTML 說明 1.x 說明檔 (以 HTML Help Workshop 產生的 .chm 檔案，或 .htm 檔) 與 Windows 架構應用程式產生關聯。  
@@ -33,4 +33,4 @@ Windows Form `HelpProvider` 元件用來將 HTML 說明 1.x 說明檔 (以 HTML 
  [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  提供 Windows Form 控制項的完整清單，以及其用法的資訊連結。  
   
- 另請參閱[Windows Forms 應用程式中的說明系統](http://msdn.microsoft.com/library/55dct0a1\(v=vs.110\))。
+ 另請參閱[Windows Forms 應用程式中的說明系統](https://msdn.microsoft.com/library/55dct0a1\(v=vs.110\))。

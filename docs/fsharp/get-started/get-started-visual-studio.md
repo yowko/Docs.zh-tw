@@ -3,11 +3,11 @@ title: '開始使用 Visual Studio 中的 F #'
 description: '了解如何使用 F # 與 Visual Studio。'
 ms.date: 07/03/2018
 ms.openlocfilehash: 3dac8466501338873aeb308ceac9274a7934a8a9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43415730"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43563842"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>開始使用 Visual Studio 中的 F #
 

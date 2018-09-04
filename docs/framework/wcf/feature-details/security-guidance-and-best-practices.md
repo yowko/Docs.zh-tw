@@ -7,11 +7,11 @@ ms.assetid: 79e4e6f7-0c00-4045-b0f0-e6a7c37c7788
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 95836865bcf8908583e3a5c347bfcef805997fdc
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407621"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43561678"
 ---
 # <a name="security-guidance-and-best-practices"></a>安全性指引與最佳做法
 在本節中的主題提供指導方針和建立安全的 Windows Communication Foundation (WCF) 應用程式時要考量的項目。 如需有關 Windows Server AppFabric 和安全性，請參閱[安全性模型的 Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  

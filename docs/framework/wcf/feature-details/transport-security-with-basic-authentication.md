@@ -7,15 +7,15 @@ dev_langs:
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 65d076a9fef716fca4fe87df6bc5c7773e2dda0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f29087b01dbd55f936462d3c4ee2a26bbfe97b9a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499111"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558961"
 ---
 # <a name="transport-security-with-basic-authentication"></a>基本驗證的傳輸安全性
-下圖顯示 Windows Communication Foundation (WCF) 服務和用戶端。 伺服器需要可用於 Secure Sockets Layer (SSL) 的有效 X.509 憑證，而用戶端必須信任伺服器的憑證。 此外，Web 服務已經有可以使用的 SSL 實作。 如需啟用基本驗證網際網路資訊服務 (IIS)，請參閱[ http://go.microsoft.com/fwlink/?LinkId=83822 ](http://go.microsoft.com/fwlink/?LinkId=83822)。  
+下圖顯示 Windows Communication Foundation (WCF) 服務和用戶端。 伺服器需要可用於 Secure Sockets Layer (SSL) 的有效 X.509 憑證，而用戶端必須信任伺服器的憑證。 此外，Web 服務已經有可以使用的 SSL 實作。 如需啟用基本驗證在網際網路資訊服務 (IIS)，請參閱[ https://go.microsoft.com/fwlink/?LinkId=83822 ](https://go.microsoft.com/fwlink/?LinkId=83822)。  
   
  ![傳輸安全性來搭配基本驗證](../../../../docs/framework/wcf/feature-details/media/securedbyusername.gif "SecuredbyUsername")  
   
@@ -37,7 +37,7 @@ ms.locfileid: "33499111"
 -   使用提供的組態建立服務，但不要定義任何端點。  
   
 ### <a name="code"></a>程式碼  
- 下列程式碼顯示如何為傳輸安全性建立使用 Windows 網域使用者名稱和密碼的服務端點。 請注意，服務需要 X.509 憑證來驗證用戶端。 如需詳細資訊，請參閱[使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)和[How to： 使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
+ 下列程式碼顯示如何為傳輸安全性建立使用 Windows 網域使用者名稱和密碼的服務端點。 請注意，服務需要 X.509 憑證來驗證用戶端。 如需詳細資訊，請參閱 < [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)並[如何： 使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
   
  [!code-csharp[C_SecurityScenarios#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#1)]
  [!code-vb[C_SecurityScenarios#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#1)]  
@@ -119,4 +119,4 @@ ms.locfileid: "33499111"
  [如何：使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
  [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [\<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)  
- [Windows Server App Fabric 的安全性模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

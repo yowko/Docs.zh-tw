@@ -10,11 +10,11 @@ ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 1a58260ecf5a4126554c23f1a5f8d7b3ba43f215
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417746"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43553043"
 ---
 # <a name="programming-wcf-security"></a>WCF 安全性程式設計
 本主題描述用來建立安全的 Windows Communication Foundation (WCF) 應用程式的基本程式設計工作。 本主題涵蓋驗證、 機密性和完整性，統稱為*傳輸安全性*。 本主題並未涵蓋授權 （控制存取資源或服務）;如需授權資訊，請參閱[授權](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)。  

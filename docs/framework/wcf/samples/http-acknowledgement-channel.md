@@ -2,11 +2,12 @@
 title: HTTP 要求認可通道
 ms.date: 03/30/2017
 ms.assetid: 469f3056-5ef2-4753-8acf-b574d23d83cf
-ms.openlocfilehash: c56b2fbe9d0bac3143ee7d234fd36a75f7b8071c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d83f3aa590471aa3d83b8f7bd1464ec1e6e106fc
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43559539"
 ---
 # <a name="http-acknowledgement-channel"></a>HTTP 要求認可通道
 HTTP 確認通道 (HTTP Acknowledgement Channel) 是層次通道的一個範例，此通道可以變更單向訊息模式，讓服務確認或拒絕傳入訊息，而不會在收到後就自動傳送確認。 HTTP 確認通道也會讓服務延遲確認，直到它可以保證商務層級的訊息將經過處理。  
@@ -25,11 +26,11 @@ HTTP 確認通道 (HTTP Acknowledgement Channel) 是層次通道的一個範例�
   
 1.  以系統管理員權限開啟 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]。  
   
-2.  開啟**HttpAckChannel**方案。  
+2.  開啟**HttpAckChannel**解決方案。  
   
-3.  啟動的新執行個體**服務**專案中的專案上按一下滑鼠右鍵**方案總管 中**，然後選取**偵錯**，**開始新執行個體**從內容功能表。  
+3.  啟動的新執行個體**服務**專案中的專案上按一下滑鼠右鍵**方案總管**，然後選取**偵錯**，**開始新執行個體**從內容功能表。  
   
-4.  啟動的新執行個體**用戶端**專案中的專案上按一下滑鼠右鍵**方案總管 中**，然後選取**偵錯**，和**開始新執行個體**從內容功能表。  
+4.  啟動的新執行個體**用戶端**專案中的專案上按一下滑鼠右鍵**方案總管**，然後選取**偵錯**，和**開始新執行個體**從內容功能表。  
   
 5.  一旦服務啟動後，按下用戶端視窗中的 ENTER，讓用戶端傳送訊息給服務。  
   
@@ -42,6 +43,6 @@ HTTP 確認通道 (HTTP Acknowledgement Channel) 是層次通道的一個範例�
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpAckChannel`

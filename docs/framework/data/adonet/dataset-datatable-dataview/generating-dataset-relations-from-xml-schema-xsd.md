@@ -3,11 +3,11 @@ title: 從 XML 結構描述 (XSD) 產生資料集關聯
 ms.date: 03/30/2017
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
 ms.openlocfilehash: 7c73dcec3d23b094436791af6649de83b9eacad9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416348"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560952"
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>從 XML 結構描述 (XSD) 產生資料集關聯
 您可以在 <xref:System.Data.DataSet> 內建立父子關係，以建立兩個或多個資料行之間的關聯。 有三種方式來代表**資料集**XML 結構描述定義語言 (XSD) 結構描述內的關聯性：  

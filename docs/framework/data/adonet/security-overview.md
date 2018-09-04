@@ -3,11 +3,11 @@ title: 安全性 Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
 ms.openlocfilehash: 18a7496d39cd08e8b340e23c57fcd10dae5ed281
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481727"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43557088"
 ---
 # <a name="security-overview"></a>安全性概觀
 保護應用程式是持續進行的工作。 開發人員無法絕對保證應用程式可避開所有攻擊，因為您無法預測未來的新科技會帶來哪些類型的攻擊。 反之，也不能因為至目前為止，沒有人察覺 (或公佈) 系統上的安全性漏洞，就表示安全性漏洞確實存在或確實不存在。 您需要在專案的設計階段就進行安全性的規劃，也必須規劃該如何在應用程式的存留期維護安全性。  

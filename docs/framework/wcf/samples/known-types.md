@@ -2,12 +2,12 @@
 title: 已知型別
 ms.date: 03/30/2017
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
-ms.openlocfilehash: 003f2e39804bb393c9d8c54a6fc208fdd1b22e97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec1dfa426c19b5471acb1c359f5068854fa8aa71
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33503815"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554946"
 ---
 # <a name="known-types"></a>已知型別
 這個範例會示範如何在資料合約中指定有關衍生型別的資訊。 資料合約可以讓您在服務間來回傳遞結構化資料。 在物件導向程式設計中，繼承自另一個型別的型別可以用來取代原始型別。 在服務導向程式設計中，會使用結構描述而不是型別進行通訊，因此不會保留型別之間的關係。 <xref:System.Runtime.Serialization.KnownTypeAttribute> 屬性可以讓關於衍生型別的資訊包含到資料合約中。 如果不使用這個機制，這時將無法傳送或接收衍生型別，因為預期是使用基底型別 (Base Type)。  
@@ -71,7 +71,7 @@ public class ComplexNumberWithMagnitude : ComplexNumber
 }  
 ```  
   
- 為了示範已知型別功能，例如實作服務的方式，它會傳回`ComplexNumberWithMagnitude`僅適用於加法和減法。 (雖然合約會指定 `ComplexNumber`，但是因為 `KnownTypeAttribute` 屬性的關係，所以仍會允許這項行為)。 乘法與除法仍然會傳回基底`ComplexNumber`型別。  
+ 為了示範已知型別功能，以便實作服務的方式，它會傳回`ComplexNumberWithMagnitude`僅適用於加法和減法。 (雖然合約會指定 `ComplexNumber`，但是因為 `KnownTypeAttribute` 屬性的關係，所以仍會允許這項行為)。 乘法與除法仍然會傳回基底`ComplexNumber`型別。  
   
 ```  
 public class DataContractCalculatorService : IDataContractCalculator  
@@ -114,7 +114,7 @@ public class DataContractCalculatorService : IDataContractCalculator
 }  
 ```  
   
- 在用戶端，服務合約和資料合約中定義所產生來源檔案 generatedClient.cs [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)取自服務中繼資料。 因為服務資料合約中是指定 <xref:System.Runtime.Serialization.KnownTypeAttribute> 屬性，所以用戶端在使用服務時便能夠同時接收 `ComplexNumber` 和 `ComplexNumberWithMagnitude` 類別。 用戶端會偵測其是否收到 `ComplexNumberWithMagnitude`，然後產生適當的輸出：  
+ 在用戶端，服務合約與資料合約定義在來源檔 generatedclient.cs 中，會產生[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)從服務中繼資料。 因為服務資料合約中是指定 <xref:System.Runtime.Serialization.KnownTypeAttribute> 屬性，所以用戶端在使用服務時便能夠同時接收 `ComplexNumber` 和 `ComplexNumberWithMagnitude` 類別。 用戶端會偵測其是否收到 `ComplexNumberWithMagnitude`，然後產生適當的輸出：  
   
 ```  
 // Create a client  
@@ -156,18 +156,18 @@ No magnitude was sent from the service
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-3.  若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownTypes`  
   

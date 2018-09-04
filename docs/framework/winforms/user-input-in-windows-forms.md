@@ -8,11 +8,11 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 1486075f-1e06-4c9e-82c6-f948331db6d6
 ms.openlocfilehash: fef51f57dd3c14c91572041a72c805823d6019a3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43456661"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43658856"
 ---
 # <a name="user-input-in-windows-forms"></a>Windows Form 中的使用者輸入
 Windows Form 包含一種使用者輸入模型，這種模型是以在處理相關 Windows 訊息時所引發的事件為基礎。 本節中的主題提供滑鼠和鍵盤使用者輸入的相關資訊，包括示範如何執行特定工作的程式碼範例。  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 3fa0ac7d-e266-4954-bfac-3fbe2f913153
 ms.openlocfilehash: d865f76b1a3e1ef72717fe790d3f1bc8895f8f58
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401129"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43557918"
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>從 DataAdapter 填入資料集
 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataSet> 是常駐記憶體的資料表示，可提供與資料來源無關的一致性關聯式程式設計模型。 `DataSet` 表示一組完整的資料，包括資料表、條件約束和資料表間的關係。 因為 `DataSet` 與資料來源無關，所以 `DataSet` 可包含應用程式的本機資料，以及來自多個資料來源的資料。 而您與現有資料來源的互動則是透過 `DataAdapter`。  

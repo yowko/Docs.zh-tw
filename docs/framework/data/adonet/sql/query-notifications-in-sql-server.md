@@ -2,12 +2,12 @@
 title: SQL Server 中的查詢通知
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: 60ab686437f764a006fca5a2043d02288ea46d0e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c4e58a3eecc18fb5693e9850163533b0a1a6a574
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364067"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43563654"
 ---
 # <a name="query-notifications-in-sql-server"></a>SQL Server 中的查詢通知
 依據 Service Broker 基礎結構所建置的查詢通知可讓應用程式在資料變更時收到通知。 此功能對於從資料庫中提供資訊快取的應用程式 (如 Web 應用程式)，及需要在來源資料變更時收到通知的應用程式來說非常有用。  
@@ -24,19 +24,19 @@ ms.locfileid: "33364067"
   
  您可以針對 SELECT 和 EXECUTE 陳述式設定通知。 使用 EXECUTE 陳述式時，SQL Server 會針對執行的命令而非 EXECUTE 陳述式本身註冊通知。 此命令必須符合 SELECT 陳述式的需求和限制。 當註冊通知的命令包含一個以上的陳述式時，Database Engine 就會針對批次中的每個陳述式建立通知。  
   
- 如果您正在開發應用程式的資料變更時，需要可靠的次秒通知，請檢閱各節**規劃有效率的查詢通知策略**和**替代項目查詢通知**中[通知計畫](http://go.microsoft.com/fwlink/?LinkId=211984)SQL Server 線上叢書 》 中的主題。 如需查詢通知和 SQL Server Service Broker 的詳細資訊，請參閱下列《SQL Server 線上叢書》主題的連結。  
+ 如果您正在開發應用程式的資料變更時，會需要可靠的次秒通知，請檢閱章節**規劃有效率的查詢通知策略**和**替代項目查詢通知**中[通知計畫](https://go.microsoft.com/fwlink/?LinkId=211984)SQL Server 線上叢書 》 中的主題。 如需查詢通知和 SQL Server Service Broker 的詳細資訊，請參閱下列《SQL Server 線上叢書》主題的連結。  
   
  **SQL Server 線上叢書**  
   
--   [使用查詢通知](http://msdn.microsoft.com/library/ms175110.aspx)  
+-   [使用查詢通知](https://msdn.microsoft.com/library/ms175110.aspx)  
   
--   [為通知建立查詢](http://msdn.microsoft.com/library/ms181122.aspx)  
+-   [建立查詢通知](https://msdn.microsoft.com/library/ms181122.aspx)  
   
--   [Service Broker](http://msdn.microsoft.com/library/bb522889.aspx)  
+-   [Service Broker](https://msdn.microsoft.com/library/bb522889.aspx)  
   
--   [Service Broker 開發人員資訊中心](http://msdn.microsoft.com/library/ms166100.aspx)  
+-   [Service Broker 開發人員資訊中心](https://msdn.microsoft.com/library/ms166100.aspx)  
   
--   [開發 (Service Broker)](http://msdn.microsoft.com/library/bb522908.aspx)  
+-   [開發 (Service Broker)](https://msdn.microsoft.com/library/bb522908.aspx)  
   
 ## <a name="in-this-section"></a>本節內容  
  [啟用查詢通知](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)  
@@ -63,4 +63,4 @@ ms.locfileid: "33364067"
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

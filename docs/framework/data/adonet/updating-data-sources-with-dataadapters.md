@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
 ms.openlocfilehash: c334fb695f80bcac19167e9347d27d40f5139580
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397345"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43565428"
 ---
 # <a name="updating-data-sources-with-dataadapters"></a>使用 DataAdapter 更新資料來源
 呼叫 `Update` 的 <xref:System.Data.Common.DataAdapter> 方法，可將 <xref:System.Data.DataSet> 的變更解析回資料來源。 `Update` 方法類似 `Fill` 方法，會將 `DataSet` 的執行個體以及選擇性 (Optional) <xref:System.Data.DataTable> 物件或 `DataTable` 名稱做為引數。 `DataSet` 執行個體是包含已進行之變更的 `DataSet`，而 `DataTable` 則識別要從中擷取變更的資料表。 如果沒有指定任何 `DataTable`，就會使用 `DataTable` 中的第一個 `DataSet`。  

@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: 06bc79e059300d448ababa87974b590f54f7984c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5eb4caee5c2057e112ed4f5a88f46fa82b1f57cc
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496795"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554689"
 ---
 # <a name="data-contract-schema-reference"></a>資料合約結構描述參考
 本主題說明 <xref:System.Runtime.Serialization.DataContractSerializer> 用來描述 XML 序列化之 Common Language Runtime (CLR) 型別的 XML 結構描述 (XSD) 子集。  
   
 ## <a name="datacontractserializer-mappings"></a>DataContractSerializer 對應  
- `DataContractSerializer`將 CLR 類型對應至 XSD 中，從 Windows Communication Foundation (WCF) 服務使用中繼資料端點匯出中繼資料時或[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 如需詳細資訊，請參閱[資料合約序列化程式](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md)。  
+ `DataContractSerializer`從 Windows Communication Foundation (WCF) 服務使用中繼資料端點匯出中繼資料時，將 CLR 型別對應至 XSD 或[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 如需詳細資訊，請參閱 <<c0> [ 資料合約序列化程式](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md)。  
   
  當您使用 Svcutil.exe 來存取 Web 服務描述語言 (WSDL) 或 XSD 文件並產生服務或用戶端的資料合約時， `DataContractSerializer` 也會將 XSD 對應至 CLR 型別。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "33496795"
   
 ## <a name="general-information"></a>一般資訊  
   
--   [XML 結構描述](http://go.microsoft.com/fwlink/?LinkId=95475)(英文) 將說明結構描述命名空間。 本文使用 "xs" 前置詞。  
+-   說明結構描述命名空間[XML 結構描述](https://go.microsoft.com/fwlink/?LinkId=95475)。 本文使用 "xs" 前置詞。  
   
 -   任何包含非結構描述命名空間的屬性都會被忽略。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "33496795"
 |---------------|------------------|  
 |`attributeFormDefault`|忽略。|  
 |`blockDefault`|忽略。|  
-|`elementFormDefault`|必須限定。 所有項目必須限定，以便由 `DataContractSerializer`支援結構描述。 這可以透過設定xs:schema/@elementFormDefault為"qualified"或藉由設定xs:element/@form為"qualified"在每個個別項目宣告。|  
+|`elementFormDefault`|必須限定。 所有項目必須限定，以便由 `DataContractSerializer`支援結構描述。 這可藉由設定任一xs:schema/@elementFormDefault為"qualified"或藉由設定xs:element/@form為"qualified"上每個個別的項目宣告。|  
 |`finalDefault`|忽略。|  
 |`Id`|忽略。|  
 |`targetNamespace`|支援且對應至資料合約命名空間。 如果沒有指定此屬性，便會使用空白的命名空間。 不能保留的命名空間 http://schemas.microsoft.com/2003/10/Serialization/ 。|  
@@ -92,11 +92,11 @@ ms.locfileid: "33496795"
 |`choice`|禁止|  
 |`sequence`|支援，且對應至資料合約的資料成員。|  
 |`attribute`|已禁止，即使 use="prohibited" (有一個例外狀況) 亦然。 僅支援來自標準序列化結構描述命名空間的選用屬性。 它們無法對應至資料合約程式設計模型中的資料成員。 目前，只有此類屬性具有意義，而且會在「ISerializable」一節中討論。 其他所有項目都會被忽略。|  
-|`attributeGroup`|禁止。 在 WCF v1 版中，`DataContractSerializer`忽略與否`attributeGroup`內`xs:complexType`。|  
+|`attributeGroup`|禁止。 在 WCF v1 版本中，`DataContractSerializer`會忽略出現與否`attributeGroup`內`xs:complexType`。|  
 |`anyAttribute`|禁止。|  
 |(空白)|對應至不包含資料成員的資料合約。|  
   
-### <a name="xssequence-in-a-complex-type-attributes"></a>\<xs > 複雜類型中： 屬性  
+### <a name="xssequence-in-a-complex-type-attributes"></a>\<sequence > 複雜類型中： 屬性  
   
 |屬性|結構描述|  
 |---------------|------------|  
@@ -104,7 +104,7 @@ ms.locfileid: "33496795"
 |`maxOccurs`|必須為 1 (預設)。|  
 |`minOccurs`|必須為 1 (預設)。|  
   
-### <a name="xssequence-in-a-complex-type-contents"></a>\<xs > 複雜類型中： 內容  
+### <a name="xssequence-in-a-complex-type-contents"></a>\<sequence > 複雜類型中： 內容  
   
 |內容|結構描述|  
 |--------------|------------|  
@@ -166,7 +166,7 @@ ms.locfileid: "33496795"
 |`minOccurs`|忽略。|  
 |`nillable`|影響型別對應。 字典集合會忽略此屬性。|  
   
-### <a name="xselement-within-an-xsschema-global-element-declaration"></a>\<xs: element > 內\<schema> > 全域項目宣告  
+### <a name="xselement-within-an-xsschema-global-element-declaration"></a>\<xs: element > 內\<schema> > 元素的全域宣告  
   
 -   與結構描述中的型別具有相同名稱與命名空間的全域項目宣告 (GED)，或是可在本身內部定義匿名型別的項目，稱為與型別關聯。  
   
@@ -200,9 +200,9 @@ ms.locfileid: "33496795"
 |`keyref`|忽略。|  
 |(空白)|支援。|  
   
- \* 當使用`simpleType`和`complexType,`匿名型別對應是與非匿名型別相同，不同之處在於沒有任何匿名資料合約，會建立具名的資料合約，以產生的名稱衍生自項目名稱。 下表為匿名型別的規則：  
+ \* 使用時`simpleType`和`complexType,`匿名型別對應是與非匿名型別相同，只不過沒有任何的匿名資料合約，因此建立具名的資料合約時，產生的名稱衍生自項目名稱。 下表為匿名型別的規則：  
   
--   WCF 實作詳細資料： 如果`xs:element`名稱不包含句點，匿名型別會對應至外部資料合約型別的內部型別。 如果名稱包含句點，則結果的資料合約型別是獨立的 (不是內部型別)。  
+-   WCF 實作詳細資料： 如果`xs:element`名稱不包含句號，則匿名型別會對應至外部資料合約型別的內部型別。 如果名稱包含句點，則結果的資料合約型別是獨立的 (不是內部型別)。  
   
 -   產生之內部型別的資料合約名稱為外部型別的資料合約名稱，後面並跟著句點、項目名稱，以及字串 "Type"。  
   
@@ -232,7 +232,7 @@ ms.locfileid: "33496795"
   
 -   只包含 `xs:string` 限制 Facet 的 `xs:enumeration` 簡單型別限制會對應至列舉資料合約。  
   
--   其他所有簡單型別限制則會對應至所限制的型別上。 例如， `xs:int` 的限制會對應至整數，就像 `xs:int` 本身一樣。 如需基本類型對應的詳細資訊，請參閱 < 類型/基本對應。  
+-   其他所有簡單型別限制則會對應至所限制的型別上。 例如， `xs:int` 的限制會對應至整數，就像 `xs:int` 本身一樣。 如需有關基本類型對應的詳細資訊，請參閱型別/基本對應。  
   
 ### <a name="xsrestriction-attributes"></a>\<xs: restriction >： 屬性  
   
@@ -241,7 +241,7 @@ ms.locfileid: "33496795"
 |`base`|必須是支援的簡單型別或 `xs:anyType`。|  
 |`id`|忽略。|  
   
-### <a name="xsrestriction-for-all-other-cases-contents"></a>\<xs: restriction > 針對其他所有案例： 內容  
+### <a name="xsrestriction-for-all-other-cases-contents"></a>\<xs: restriction > 所有其他案例： 內容  
   
 |內容|結構描述|  
 |--------------|------------|  
@@ -329,17 +329,17 @@ public enum MyEnum
 </xs:simpleType>  
 ```  
   
-### <a name="xslist"></a>\<: list >  
+### <a name="xslist"></a>\<x: list> >  
  `DataContractSerializer` 會將標示為 `System.FlagsAttribute` 的列舉型別對應至衍生自 `xs:list` 的 `xs:string`。 不支援其他任何 `xs:list` 變化。  
   
-### <a name="xslist-attributes"></a>\<: list >： 屬性  
+### <a name="xslist-attributes"></a>\<x: list> >： 屬性  
   
 |屬性|結構描述|  
 |---------------|------------|  
 |`itemType`|禁止。|  
 |`id`|忽略。|  
   
-### <a name="xslist-contents"></a>\<: list >： 內容  
+### <a name="xslist-contents"></a>\<x: list> >： 內容  
   
 |內容|結構描述|  
 |--------------|------------|  
@@ -451,14 +451,14 @@ public class Employee : Person
 |`restriction`|禁止，除了當 base="`xs:anyType`" 以外。 後者等同於將 `xs:restriction` 的內容直接放在 `xs:complexContent`容器底下。|  
 |`extension`|支援。 對應至資料合約繼承。|  
   
-### <a name="xsextension-in-xscomplexcontent-attributes"></a>\<xs: extension > 中\<complexcontent> >： 屬性  
+### <a name="xsextension-in-xscomplexcontent-attributes"></a>\<xs: extension > 在\<complexcontent> >： 屬性  
   
 |屬性|結構描述|  
 |---------------|------------|  
 |`id`|忽略。|  
 |`base`|支援。 對應至此型別所繼承的基底資料合約型別。|  
   
-### <a name="xsextension-in-xscomplexcontent-contents"></a>\<xs: extension > 中\<complexcontent> >： 內容  
+### <a name="xsextension-in-xscomplexcontent-contents"></a>\<xs: extension > 在\<complexcontent> >： 內容  
  其規則與 `<xs:complexType>` 內容的規則一樣。  
   
  如果提供了 `<xs:sequence>` ，則其成員項目會對應至額外資料成員 (存在衍生的資料合約中)。  
@@ -536,7 +536,7 @@ public class Employee : Person
 </xs:complexType>  
 ```  
   
- 在資料合約序列化結構描述中宣告的選用屬性 `ser:FactoryType` 會參考可以還原序列化型別的處理站類別。 處理站類別必須是正在使用之 `DataContractSerializer` 執行個體的已知型別集合的一部分。 如需已知型別的詳細資訊，請參閱[資料合約已知型別](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。  
+ 在資料合約序列化結構描述中宣告的選用屬性 `ser:FactoryType` 會參考可以還原序列化型別的處理站類別。 處理站類別必須是正在使用之 `DataContractSerializer` 執行個體的已知型別集合的一部分。 如需已知型別的詳細資訊，請參閱[Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。  
   
 ## <a name="datacontract-serialization-schema"></a>DataContract 序列化結構描述  
  由 `DataContractSerializer` 匯出的一些結構描述使用來自特殊資料合約序列化命名空間的型別、項目和屬性：  

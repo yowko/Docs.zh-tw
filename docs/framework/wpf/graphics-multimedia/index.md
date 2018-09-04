@@ -12,16 +12,16 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-ms.openlocfilehash: 74375c468170d58cfa79031ab0030477c29bd445
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c7cae5be1d7e52186752d67354927084d118beb9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566625"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43559007"
 ---
 # <a name="graphics-and-multimedia"></a>圖形和多媒體
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供支援多媒體、 向量圖形、 動畫和內容的組合，方便開發人員建置有趣的使用者介面和內容。 使用 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]，您可以建立向量圖形或複雜的動畫，並將媒體整合到應用程式中。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 支援多媒體、 向量圖形、 動畫和內容的組合，方便開發人員建置有趣的使用者介面和內容。 使用 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]，您可以建立向量圖形或複雜的動畫，並將媒體整合到應用程式中。  
   
  本主題介紹 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的圖形、動畫和媒體功能，其可讓您將圖形、轉換效果、音效以及視訊新增至您的應用程式。  
   
@@ -34,19 +34,19 @@ ms.locfileid: "33566625"
   
 -   版面配置進位  
   
-     當物件邊緣位於像素裝置中間時，DPI 獨立圖形系統可以建立轉譯成品，例如模糊或半透明的邊緣。 先前的 WPF 版本包含像素貼齊功能來協助處理這種情況。 Silverlight 2 引進版面配置進位，這是另一種移動元素以讓邊緣落在整個像素邊界上的方法。 WPF 現在支援版面配置進位與<xref:System.Windows.FrameworkElement.UseLayoutRounding%2A>附加屬性上<xref:System.Windows.FrameworkElement>。  
+     當物件邊緣位於像素裝置中間時，DPI 獨立圖形系統可以建立轉譯成品，例如模糊或半透明的邊緣。 先前的 WPF 版本包含像素貼齊功能來協助處理這種情況。 Silverlight 2 引進版面配置進位，這是另一種移動元素以讓邊緣落在整個像素邊界上的方法。 WPF 現在支援與捨入的版面配置<xref:System.Windows.FrameworkElement.UseLayoutRounding%2A>附加屬性上<xref:System.Windows.FrameworkElement>。  
   
 -   快取的組合  
   
-     使用新<xref:System.Windows.Media.BitmapCache>和<xref:System.Windows.Media.BitmapCacheBrush>類別，您可以快取複雜為點陣圖的視覺化樹狀結構的一部分，並大幅改善轉譯時間。 點陣圖仍可持續回應滑鼠點選之類的使用者輸入，您也可以將它繪製在其他元素上，就像筆刷一般。  
+     使用新<xref:System.Windows.Media.BitmapCache>和<xref:System.Windows.Media.BitmapCacheBrush>類別，您可以快取為點陣圖的視覺化樹狀結構的複雜部分，並大幅改善轉譯時間。 點陣圖仍可持續回應滑鼠點選之類的使用者輸入，您也可以將它繪製在其他元素上，就像筆刷一般。  
   
 -   像素著色器 3 支援  
   
-     WPF 4 根據<xref:System.Windows.Media.Effects.ShaderEffect>WPF 3.5 SP1 中導入，藉由使用應用程式撰寫效果使用像素著色器 (PS) 3.0 版的支援。 PS 3.0 著色器模型比 PS 2.0 更為複雜，其在支援的硬體上允許使用更多效果。  
+     WPF 4 建置的<xref:System.Windows.Media.Effects.ShaderEffect>WPF 3.5 SP1 中導入，藉由使用來撰寫效果使用像素著色器 (PS) 3.0 版的應用程式的支援。 PS 3.0 著色器模型比 PS 2.0 更為複雜，其在支援的硬體上允許使用更多效果。  
   
 -   Easing 函式  
   
-     您可以利用 Easing 函式讓您進一步控制動畫的行為來美化動畫。 例如，您可以套用<xref:System.Windows.Media.Animation.ElasticEase>來提供彈性的行為動畫的動畫。 如需詳細資訊，請參閱中的加/減速類型<xref:System.Windows.Media.Animation>命名空間。  
+     您可以利用 Easing 函式讓您進一步控制動畫的行為來美化動畫。 例如，您可以套用<xref:System.Windows.Media.Animation.ElasticEase>至動畫，讓動畫產生彈力。 如需詳細資訊，請參閱中的加/減速類型<xref:System.Windows.Media.Animation>命名空間。  
   
 <a name="graphics_and_rendering"></a>   
 ## <a name="graphics-and-rendering"></a>圖形和轉譯  
@@ -57,7 +57,7 @@ ms.locfileid: "33566625"
   
  ![橢圓形和矩形](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure4.PNG "WPFIntroFigure4")  
   
- 這些內建 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 圖形不只是圖形︰它們也是可程式化元素，能實作許多最常見控制項的功能，包括鍵盤和滑鼠輸入。 下列範例示範如何處理<xref:System.Windows.UIElement.MouseUp>按一下引發的事件<xref:System.Windows.Shapes.Ellipse>項目。  
+ 這些內建 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 圖形不只是圖形︰它們也是可程式化元素，能實作許多最常見控制項的功能，包括鍵盤和滑鼠輸入。 下列範例示範如何處理<xref:System.Windows.UIElement.MouseUp>事件引發按一下<xref:System.Windows.Shapes.Ellipse>項目。  
   
 ```xaml  
 <Window  
@@ -91,21 +91,21 @@ End Class
   
  ![包含 "you clicked the ellipse&#33;" 文字的視窗](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure12.png "WPFIntroFigure12")  
   
- 如需詳細資訊，請參閱 [WPF 中圖案和基本繪圖概觀](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)。 如需簡介範例，請參閱[圖形元素範例](http://go.microsoft.com/fwlink/?LinkID=160037)。  
+ 如需詳細資訊，請參閱 [WPF 中圖案和基本繪圖概觀](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)。 如需簡介範例，請參閱[圖形元素範例](https://go.microsoft.com/fwlink/?LinkID=160037)。  
   
 ### <a name="2-d-geometries"></a>2D 幾何  
  當 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供的 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 圖形不敷使用時，您可以使用 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 來支援您自己建立的幾何和路徑。 下圖示範如何使用幾何來建立圖形，當做繪圖筆刷並裁剪其他 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 元素。  
   
  ![Path 的各種用法](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure5.PNG "WPFIntroFigure5")  
   
- 如需詳細資訊，請參閱[幾何概觀](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)。 如需簡介範例，請參閱[幾何範例](http://go.microsoft.com/fwlink/?LinkID=159989)。  
+ 如需詳細資訊，請參閱[幾何概觀](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)。 如需簡介範例，請參閱[幾何範例](https://go.microsoft.com/fwlink/?LinkID=159989)。  
   
 ### <a name="2-d-effects"></a>2D 效果  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 類別的程式庫可讓您建立各種不同的效果。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 轉譯功能可讓您繪製具有漸層的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 元素、點陣圖、繪圖和影片，以及使用旋轉、縮放和傾斜來操作。 下圖提供您可以使用 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 筆刷達到許多效果的範例。  
   
  ![不同筆刷的圖例](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure6.PNG "WPFIntroFigure6")  
   
- 如需詳細資訊，請參閱 [WPF 筆刷概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)。 如需簡介範例，請參閱[筆刷範例](http://go.microsoft.com/fwlink/?LinkID=159973)。  
+ 如需詳細資訊，請參閱 [WPF 筆刷概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)。 如需簡介範例，請參閱[筆刷範例](https://go.microsoft.com/fwlink/?LinkID=159973)。  
   
 <a name="rendering"></a>   
 ## <a name="3-d-rendering"></a>3D 轉譯  
@@ -113,7 +113,7 @@ End Class
   
  ![Visual3D 範例螢幕擷取畫面](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure13.png "WPFIntroFigure13")  
   
- 如需詳細資訊，請參閱 [3D 圖形診斷](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)。 如需簡介範例，請參閱 [3D 單色範例](http://go.microsoft.com/fwlink/?LinkID=159964)。  
+ 如需詳細資訊，請參閱 [3D 圖形診斷](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)。 如需簡介範例，請參閱 [3D 單色範例](https://go.microsoft.com/fwlink/?LinkID=159964)。  
   
 <a name="animation"></a>   
 ## <a name="animation"></a>動畫  
@@ -121,7 +121,7 @@ End Class
   
  ![動畫效果立方體的影像](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure7.png "WPFIntroFigure7")  
   
- 如需詳細資訊，請參閱 [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。 如需簡介範例，請參閱[動畫範例圖庫](http://go.microsoft.com/fwlink/?LinkID=159969)。  
+ 如需詳細資訊，請參閱 [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。 如需簡介範例，請參閱[動畫範例圖庫](https://go.microsoft.com/fwlink/?LinkID=159969)。  
   
 <a name="media"></a>   
 ## <a name="media"></a>媒體  
@@ -141,7 +141,7 @@ End Class
 <MediaElement Source="media\numbers.wmv" Width="450" Height="250" />  
 ```  
   
- <xref:System.Windows.Controls.MediaElement> 都能播放視訊和音訊，且夠擴充，以允許自訂讓您輕鬆建立[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]。  
+ <xref:System.Windows.Controls.MediaElement> 是可播放視訊和音訊，而是可延伸，足以讓您輕鬆建立自訂[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]。  
   
  如需詳細資訊，請參閱[多媒體概觀](../../../../docs/framework/wpf/graphics-multimedia/multimedia-overview.md)。  
   
@@ -153,6 +153,6 @@ End Class
  [WPF 中圖案和基本繪圖概觀](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
  [使用純色和漸層繪製的概觀](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
  [使用影像、繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [動畫和計時](http://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
- [3d 圖形](http://msdn.microsoft.com/library/565c1f3c-235b-47de-b05b-3b53ed63f1b8)  
- [多媒體](http://msdn.microsoft.com/library/44a8dcd0-80cb-4db0-a222-87cde68c2fac)
+ [動畫和計時](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
+ [3d 圖形](https://msdn.microsoft.com/library/565c1f3c-235b-47de-b05b-3b53ed63f1b8)  
+ [多媒體](https://msdn.microsoft.com/library/44a8dcd0-80cb-4db0-a222-87cde68c2fac)

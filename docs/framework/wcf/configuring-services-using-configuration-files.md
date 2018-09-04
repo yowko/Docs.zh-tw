@@ -5,11 +5,11 @@ helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
 ms.openlocfilehash: 904abff4f3cae5873fe3cc9705dee84f73e2a523
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43419740"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43565155"
 ---
 # <a name="configuring-services-using-configuration-files"></a>使用組態檔設定服務
 使用組態檔中設定 Windows Communication Foundation (WCF) 服務可讓您彈性提供端點，並設計階段部署而不是在服務行為資料。 本主題概要說明可用的主要技巧。  

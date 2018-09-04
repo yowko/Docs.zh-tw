@@ -3,11 +3,11 @@ title: 選擇篩選
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
 ms.openlocfilehash: bc3bba9a2b00b35f3e0cff1786ea98cfa881f311
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43386507"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558801"
 ---
 # <a name="choosing-a-filter"></a>選擇篩選
 設定路由服務時，務必選取正確的訊息篩選條件，並將它們設定為可針對您所接收的訊息進行正確的比對。 如果您選取的篩選條件在比對中過度廣泛，或設定不正確，則無法正確傳送訊息。 如果篩選條件過於嚴格，則部分訊息可能會沒有可用的有效路由。  

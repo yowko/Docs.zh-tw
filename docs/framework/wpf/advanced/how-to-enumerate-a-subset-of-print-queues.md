@@ -9,22 +9,22 @@ helpviewer_keywords:
 - enumerating [WPF], subset of print queues
 - print queues [WPF], enumerating subset of
 ms.assetid: cc4a1b5b-d46f-4c5e-bc26-22c226e4bee0
-ms.openlocfilehash: 3e616b3b61b4b1b561d5bdb7e51525f391901a22
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf45d6fb3fb161ca5171e94b9ab7af1e0e6f0c3d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543585"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562065"
 ---
 # <a name="how-to-enumerate-a-subset-of-print-queues"></a>如何：列舉列印佇列的子集
-管理印表機的全公司的設定資訊技術 (IT) 專業人員所面臨的常見情況是產生一份具有特定特性的印表機。 這項功能由<xref:System.Printing.PrintServer.GetPrintQueues%2A>方法<xref:System.Printing.PrintServer>物件和<xref:System.Printing.EnumeratedPrintQueueTypes>列舉型別。  
+管理印表機的全公司組的資訊技術 (IT) 專業人員所面臨的常見情況是產生一份具有特定特性的印表機。 此功能會由<xref:System.Printing.PrintServer.GetPrintQueues%2A>方法<xref:System.Printing.PrintServer>物件和<xref:System.Printing.EnumeratedPrintQueueTypes>列舉型別。  
   
 ## <a name="example"></a>範例  
- 在下列範例程式碼一開始會建立指定的特性，我們要列出的列印佇列的旗標的陣列。 在此範例中，我們正在為列印伺服器上本機安裝，並共用的列印佇列。 <xref:System.Printing.EnumeratedPrintQueueTypes>列舉型別提供許多其他的可能性。  
+ 在下列範例程式碼一開始會建立指定我們想要列出之列印佇列的特性的旗標的陣列。 在此範例中，我們正在尋找的列印伺服器上本機安裝和共用的列印佇列。 <xref:System.Printing.EnumeratedPrintQueueTypes>列舉提供許多其他的可能性。  
   
  程式碼接著會建立<xref:System.Printing.LocalPrintServer>物件的類別衍生自<xref:System.Printing.PrintServer>。 本機列印伺服器是應用程式執行所在的電腦。  
   
- 最後一個的重要步驟是將陣列傳遞給<xref:System.Printing.PrintServer.GetPrintQueues%2A>方法。  
+ 最後一個重要步驟是將傳遞的陣列<xref:System.Printing.PrintServer.GetPrintQueues%2A>方法。  
   
  最後，結果會呈現給使用者。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "33543585"
  [!code-csharp[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/CSharp/Program.cs#listsubsetofprintqueues)]
  [!code-vb[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/visualbasic/program.vb#listsubsetofprintqueues)]  
   
- 您可以擴充這個範例有`foreach`迴圈每個列印佇列會逐步執行進一步的檢測。 比方說，您無法篩選出印表機，讓迴圈呼叫不支援雙面列印每個列印佇列<xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>方法，並測試傳回值出現的雙工。  
+ 您可以擴充此範例由`foreach`透過每個列印佇列的步驟執行進一步的迴圈檢測。 比方說，您無法篩選出由迴圈呼叫不支援雙面列印的印表機每個列印佇列<xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>方法，測試傳回的值是否存在的雙面列印。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Printing.PrintServer.GetPrintQueues%2A>  
@@ -43,4 +43,4 @@ ms.locfileid: "33543585"
  <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>  
  [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [列印概觀](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [Microsoft XPS Document Writer](http://go.microsoft.com/fwlink/?LinkId=147319)
+ [Microsoft XPS Document Writer](https://go.microsoft.com/fwlink/?LinkId=147319)

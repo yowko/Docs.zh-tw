@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5112c3c8d5fef6efada4bffdfa575716503515e6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43488244"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562546"
 ---
 # <a name="corelementtype-enumeration1"></a>CorElementType 列舉 1
 指定 common language runtime <xref:System.Type>、 型別修飾詞或在 中繼資料型別簽章類型的相關資訊。  

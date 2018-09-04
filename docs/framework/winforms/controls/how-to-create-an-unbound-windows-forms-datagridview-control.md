@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], displaying data without binding to a data source
 - data [Windows Forms], unbound
 ms.assetid: b5d4b47d-9a28-4d88-9dba-0a3c90fba71d
-ms.openlocfilehash: 6b297b95ee97262ab3ad2d24c539f88bde066099
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0441f0ce1005c82ae7ea9a0daecb3ec7ff41f59b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33531062"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564118"
 ---
 # <a name="how-to-create-an-unbound-windows-forms-datagridview-control"></a>如何：建立未繫結的 Windows Form DataGridView 控制項
 下列程式碼範例示範如何以程式設計方式填入 <xref:System.Windows.Forms.DataGridView> 控制項，而不用將這個控制項繫結至資料來源。 當您擁有想以資料表格式來顯示的少量資料時，這將會非常有用。  
@@ -30,7 +30,7 @@ ms.locfileid: "33531062"
   
 -   System、System.Drawing 和 System.Windows.Forms 組件的參考。  
   
- 建置此範例從 visual Basic 或 Visual C# 命令列的相關資訊，請參閱[從命令列建置](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[使用 csc.exe 建置](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置 Visual Studio 中的這個範例。  另請參閱 [如何：使用 Visual Studio 編譯及執行完整的 Windows Form 程式碼範例](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
+ 建置此範例從命令列 visual Basic 或 Visual C# 的相關資訊，請參閱[從命令列建置](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  另請參閱[如何：使用 Visual Studio 編譯及執行完整的 Windows Forms 程式碼範例](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.DataGridView>  

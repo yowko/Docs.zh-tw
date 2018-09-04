@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: f32b1c9f800a1ec2d80511cbbf46aba9840075d9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d52c6bfdadf0a53ac4c5f62c37f1056c6702a82c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365981"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43553760"
 ---
 # <a name="provider-statistics-for-sql-server"></a>SQL Server 的提供者統計資料
 從 .NET Framework 2.0 版開始，.NET Framework Data Provider for SQL Server 便支援執行階段統計資料。 建立有效的連接物件後，您必須藉由將 <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> 物件的 <xref:System.Data.SqlClient.SqlConnection> 屬性設為 `True`，以啟用統計資料。 統計資料啟用後，透過 <xref:System.Collections.IDictionary> 物件的 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 方法擷取 <xref:System.Data.SqlClient.SqlConnection> 參考，可以將它們做為「某時間的快照集」進行檢閱。 您可使用一組名稱/值配對字典項目的形式透過清單列舉。 這些名稱/值配對沒有排列順序。 您可以隨時呼叫 <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> 物件的 <xref:System.Data.SqlClient.SqlConnection> 方法，以重設計數器。 如果尚未啟用統計資料蒐集，則不會產生例外狀況。 此外，如果呼叫 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 時未先呼叫 <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A>，則擷取的值會是每個項目的初始值。 如果啟用統計資料，並執行應用程式一段時間，然後停用統計資料，則擷取的值會反映到停用統計資料時所收集的值。 蒐集的所有統計資料值都是以每個連接為基礎。  
   
 ## <a name="statistical-values-available"></a>可用的統計值  
- Microsoft SQL Server 提供者目前有 18 個不同的可用項目。 可以透過可用的項目數目**計數**屬性<xref:System.Collections.IDictionary>介面所傳回的參考<xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>。 提供者統計資料計數器的所有使用 common language runtime<xref:System.Int64>類型 (**長**在 C# 和 Visual Basic 中)，這是 64 位元寬。 最大值**int64**資料類型所定義的**int64。MaxValue**欄位中，為 ((2^63) 1))。 計數器的值達到此最大值時，則不應再將其視為精確值。 這表示**int64。MaxValue**-1((2^63)-2) 實際上就是任何統計資料的最大有效值。  
+ Microsoft SQL Server 提供者目前有 18 個不同的可用項目。 可透過存取的可用項目數**計數**屬性<xref:System.Collections.IDictionary>介面所傳回的參考<xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>。 所有提供者統計資料計數器使用 common language runtime<xref:System.Int64>型別 (**長**C# 和 Visual Basic 中)，這是 64 位元寬。 最大值**int64**資料類型所定義**int64。MaxValue**欄位中，為 ((2^63) 1))。 計數器的值達到此最大值時，則不應再將其視為精確值。 這表示**int64。MaxValue**-1((2^63)-2) 實際上是任何統計資料的最大有效值。  
   
 > [!NOTE]
 >  因為傳回之統計資料的數目、名稱及順序將來可能會變更，所以會使用字典來傳回提供者統計資料。 應用程式不應依賴在字典中發現的特定值，而應檢查該值是否存在，並相應地進行分支。  
@@ -48,7 +48,7 @@ ms.locfileid: "33365981"
  下列主控台應用程式會顯示如何在連接上啟用統計資料、如何擷取四個個別的統計資料值，以及如何將它們寫入至主控台視窗。  
   
 > [!NOTE]
->  下列範例使用範例**AdventureWorks**隨附於 SQL Server 資料庫。 範例程式碼中提供的連接字串假設本機電腦已安裝並可使用資料庫。 視環境需要修改連接字串。  
+>  下列範例使用範例**AdventureWorks**隨附於 SQL Server 的資料庫。 範例程式碼中提供的連接字串假設本機電腦已安裝並可使用資料庫。 視環境需要修改連接字串。  
   
 ```vb  
 Option Strict On  
@@ -204,7 +204,7 @@ namespace CS_Stats_Console_GetValue
  下列主控台應用程式會顯示如何在連接上啟用統計資料、如何使用列舉值擷取所有可用的統計資料值，以及如何將它們寫入至主控台視窗。  
   
 > [!NOTE]
->  下列範例使用範例**AdventureWorks**隨附於 SQL Server 資料庫。 範例程式碼中提供的連接字串假設本機電腦已安裝並可使用資料庫。 視環境需要修改連接字串。  
+>  下列範例使用範例**AdventureWorks**隨附於 SQL Server 的資料庫。 範例程式碼中提供的連接字串假設本機電腦已安裝並可使用資料庫。 視環境需要修改連接字串。  
   
 ```vb  
 Option Strict On  
@@ -340,4 +340,4 @@ namespace CS_Stats_Console_GetAll
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

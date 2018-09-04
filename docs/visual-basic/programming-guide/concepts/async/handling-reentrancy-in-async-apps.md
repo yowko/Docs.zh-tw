@@ -3,11 +3,11 @@ title: 處理非同步應用程式 (Visual Basic) 中的重新進入
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
 ms.openlocfilehash: b633e3cf9a499cd5f364692cd0461aed640fe54d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401886"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43555685"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>處理非同步應用程式 (Visual Basic) 中的重新進入
 當您將非同步程式碼納入您的應用程式時，應該考慮並防止可能發生的重新進入，也就是在完成前重新進入的非同步作業。 如果您不找出並處理重新進入的可能性，它可能會導致非預期的結果。  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 027176bdff644a6ff3314df7484ed88ace93001b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8bfe0db3d6fcbdbbcfb90ff488ab19cdbfaab75e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745015"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43658804"
 ---
 # <a name="ltgcservergt-element"></a>&lt;gcServer&gt;項目
 指定 Common Language Runtime 是否執行伺服器記憶體回收。  
@@ -47,7 +47,7 @@ ms.locfileid: "32745015"
 |`false`|不執行伺服器記憶體回收。 這是預設值。|  
 |`true`|執行伺服器記憶體回收。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -65,7 +65,7 @@ ms.locfileid: "32745015"
  此項目只能用在應用程式組態檔中；如果是在或電腦組態檔中，就會忽略此項目。  
   
 > [!NOTE]
->  在 .NET Framework 4 (含) 以前版本中，當伺服器記憶體回收啟用時，無法使用並行記憶體回收。 從 [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] 開始，伺服器記憶體回收為並行。 若要使用非並行伺服器記憶體回收，`<gcServer>`元素`true`和[ \<gcConcurrent > 項目](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)至`false`。  
+>  在 .NET Framework 4 (含) 以前版本中，當伺服器記憶體回收啟用時，無法使用並行記憶體回收。 從 [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] 開始，伺服器記憶體回收為並行。 若要使用非並行伺服器記憶體回收，將`<gcServer>`項目`true`並[ \<gcConcurrent > 項目](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)來`false`。  
   
 ## <a name="example"></a>範例  
  下列範例會啟用伺服器記憶體回收。  
@@ -82,4 +82,4 @@ ms.locfileid: "32745015"
  <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>  
  [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [如何： 停用並行記憶體回收](http://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)
+ [如何： 停用並行記憶體回收](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)

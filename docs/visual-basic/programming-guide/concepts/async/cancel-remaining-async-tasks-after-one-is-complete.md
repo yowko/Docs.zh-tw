@@ -3,11 +3,11 @@ title: 當取消剩餘的非同步工作是完成 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
 ms.openlocfilehash: 5dab0c4aa14710fe78d2473675aea8b8c8bb73b9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402253"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562210"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>當取消剩餘的非同步工作是完成 (Visual Basic)
 搭配使用 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 方法與 <xref:System.Threading.CancellationToken>，即可在其中一個工作完成時取消所有剩餘的工作。 `WhenAny` 方法會接受本身為一組工作的引數。 這個方法會啟動所有工作，並傳回單一工作。 集合中的任何工作完成時，單一工作即完成。  

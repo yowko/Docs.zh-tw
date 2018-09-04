@@ -2,28 +2,28 @@
 title: Oracle LOB
 ms.date: 03/30/2017
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
-ms.openlocfilehash: 04789b385d7a956b65b7cd99594fc92001183af3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 39ff8f1c21fc1161f4f3726548713d384c7d7400
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758772"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560213"
 ---
 # <a name="oracle-lobs"></a>Oracle LOB
 .NET Framework Data Provider for Oracle 包含<xref:System.Data.OracleClient.OracleLob>類別，用來處理 Oracle **LOB**資料型別。  
   
- **OracleLob**可能是下列其中一種<xref:System.Data.OracleClient.OracleType>資料類型：  
+ **OracleLob**可能是其中一種<xref:System.Data.OracleClient.OracleType>資料類型：  
   
 |資料類型|描述|  
 |---------------|-----------------|  
-|**Blob**|Oracle **BLOB**包含最大值 4 gb 之二進位資料的資料類型。 這會對應到**陣列**型別的**位元組**。|  
-|**Clob**|Oracle **CLOB**設定在伺服器上，最大值 4 gb 的資料類型包含字元資料，根據預設字元。 這會對應到**字串**。|  
-|**NClob**|Oracle **NCLOB**包含字元資料的資料型別會根據最大值 4 gb 之伺服器上的國家字元集。 這會對應到**字串**。|  
+|**Blob**|Oracle **BLOB**包含二進位資料，其大小上限為 4 gb 的資料型別。 這會對應至**陣列**型別的**位元組**。|  
+|**Clob**|Oracle **CLOB**設定在伺服器上，大小上限為 4 gb 的資料類型，包含字元資料，根據預設的字元。 這會對應至**字串**。|  
+|**NClob**|Oracle **NCLOB**包含字元資料的資料類型會根據最大值 4 gb 之伺服器上的國家字元集。 這會對應至**字串**。|  
   
- **OracleLob**不同於<xref:System.Data.OracleClient.OracleBFile>，資料會儲存於作業系統中的實體檔案而不是伺服器上。 它也可以是讀寫物件不同於**OracleBFile**，這一律是唯讀的。  
+ **OracleLob**有別<xref:System.Data.OracleClient.OracleBFile>，因為資料會儲存在的伺服器，而不是在作業系統中的實體檔案。 它也可以是讀寫物件，不同於**OracleBFile**，一律為唯讀。  
   
 ## <a name="creating-retrieving-and-writing-to-a-lob"></a>建立、擷取及寫入 LOB  
- 下列 C# 範例會示範如何您可以建立 Lob 在 Oracle 資料表中，然後擷取並的形式寫入**OracleLob**物件。 此範例示範如何使用<xref:System.Data.OracleClient.OracleDataReader>物件和**OracleLob** **讀取**和**寫入**方法。 此範例會使用 Oracle **BLOB**， **CLOB**，和**NCLOB**資料型別。  
+ 下列 C# 範例示範如何您可以建立 Lob 在 Oracle 資料表中，然後擷取並的形式寫入**OracleLob**物件。 此範例示範如何使用<xref:System.Data.OracleClient.OracleDataReader>物件和**OracleLob** **讀取**並**撰寫**方法。 此範例會使用 Oracle **BLOB**， **CLOB**，並**NCLOB**資料型別。  
   
 ```csharp  
 using System;  
@@ -249,4 +249,4 @@ tx.Commit();
   
 ## <a name="see-also"></a>另請參閱  
  [Oracle 和 ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

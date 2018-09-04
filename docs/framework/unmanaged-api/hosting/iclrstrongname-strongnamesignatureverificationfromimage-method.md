@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60dbb8d8461015c791a70d6c2617b1c81e5ba17f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fdbf2126d3da152ce68b6dbb47f5772e3b13d2c6
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434264"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43660303"
 ---
 # <a name="iclrstrongnamestrongnamesignatureverificationfromimage-method"></a>ICLRStrongName::StrongNameSignatureVerificationFromImage 方法
-請確認已對應到記憶體的組件適用於相關聯的公開金鑰。  
+驗證已對應到記憶體的組件對關聯的公開金鑰而言有效。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,39 +43,39 @@ HRESULT StrongNameSignatureVerificationFromImage (
  [in]對應的組件資訊清單的相對虛擬位址。  
   
  `dwLength`  
- [in]以位元組為單位的對應影像大小。  
+ [in]以位元組為單位，對應的映像的大小。  
   
  `dwInFlags`  
  [in]影響驗證行為的旗標。 支援下列值：  
   
 -   `SN_INFLAG_FORCE_VER` (0x00000001)-強制執行驗證，即使它是需要覆寫登錄設定。  
   
--   `SN_INFLAG_INSTALL` (0x00000002)-指定此映像上執行的第一個驗證。  
+-   `SN_INFLAG_INSTALL` (0x00000002)-指定此映像上執行的第一次驗證。  
   
--   `SN_INFLAG_ADMIN_ACCESS` (0x00000004)-指定快取可讓擁有系統管理權限的使用者存取。  
+-   `SN_INFLAG_ADMIN_ACCESS` (0x00000004)-指定快取可讓具有系統管理權限的使用者存取。  
   
--   `SN_INFLAG_USER_ACCESS` (0x00000008)-指定的組件都是只能由目前的使用者存取。  
+-   `SN_INFLAG_USER_ACCESS` (0x00000008)-指定的組件都是僅供目前的使用者存取。  
   
 -   `SN_INFLAG_ALL_ACCESS` (0x00000010)-指定快取會提供任何保證的存取限制。  
   
--   `SN_INFLAG_RUNTIME` (0x80000000)-保留供內部偵錯。  
+-   `SN_INFLAG_RUNTIME` (0x80000000)-保留給內部偵錯。  
   
  `pdwOutFlags`  
- [out]其他輸出資訊的旗標。 支援下列值：  
+ [out]其他輸出資訊之旗標。 支援下列值：  
   
--   `SN_OUTFLAG_WAS_VERIFIED` (0x00000001)-此值設為`false`來指定驗證成功登錄設定所造成。  
+-   `SN_OUTFLAG_WAS_VERIFIED` (0x00000001)-此值設為`false`，指定驗證成功，因為登錄設定。  
   
 ## <a name="return-value"></a>傳回值  
- `S_OK` 如果方法成功。否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](http://go.microsoft.com/fwlink/?LinkId=213878)清單)。  
+ `S_OK` 如果這個方法順利完成否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)清單)。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MetaHost.h  
   
  **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

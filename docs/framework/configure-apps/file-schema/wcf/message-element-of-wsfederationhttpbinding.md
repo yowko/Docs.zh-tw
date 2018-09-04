@@ -3,11 +3,11 @@ title: '&lt;wsFederationHttpBinding&gt; 的 &lt;message&gt; 項目'
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
 ms.openlocfilehash: 820ee7015a51ecc5510889516faef20292cfbc07
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416590"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43565325"
 ---
 # <a name="ltmessagegt-element-of-ltwsfederationhttpbindinggt"></a>&lt;wsFederationHttpBinding&gt; 的 &lt;message&gt; 項目
 定義訊息層級安全性設定[ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)。  

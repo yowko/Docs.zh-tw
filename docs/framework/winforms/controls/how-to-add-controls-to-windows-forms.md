@@ -10,11 +10,11 @@ helpviewer_keywords:
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
 ms.openlocfilehash: 1b803a93f865eaa4db6751187213c4bb01d2a5ee
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43422545"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43557727"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>如何：將控制項加入至 Windows Form
 大部分的表單都設計成將控制項加入表單的介面，來定義使用者介面 (UI)。 A*控制*是用來顯示資訊，或接受使用者輸入表單上的元件。 如需控制項的詳細資訊，請參閱[Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)。  

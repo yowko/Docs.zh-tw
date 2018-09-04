@@ -21,11 +21,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ad328d484ba01e22557d7d23d1cfa21813de9c8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481965"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560584"
 ---
 # <a name="strongnameerrorinfo-function"></a>StrongNameErrorInfo 函式
 取得由其中一強式名稱函式所引發的最後一個錯誤代碼。  

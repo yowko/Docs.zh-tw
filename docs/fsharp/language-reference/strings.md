@@ -2,12 +2,12 @@
 title: 字串 (F#)
 description: "了解 F # 'string' 類型以一連串的 Unicode 字元所表示的不可變的文字。"
 ms.date: 05/16/2016
-ms.openlocfilehash: d8bfce9ac47cb137456e02b1b213fd2c6a53594d
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 7309e93bf0a6518d03a9f850804a4f580e2c96b1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404268"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43561287"
 ---
 # <a name="strings"></a>字串
 
@@ -42,7 +42,7 @@ let xmlFragment1 = @"<book author=""Milton, John"" title=""Paradise Lost"">"
 let xmlFragment2 = """<book author="Milton, John" title="Paradise Lost">"""
 ```
 
-程式碼中，接受已換行的字串，並換行符號會解譯為常值為換行符號，除非反斜線字元換行之前的最後一個字元。 使用反斜線字元時，會忽略在下一行的開頭空白。 下列程式碼產生的字串`str1`具有值`"abc\ndef"`和字串`str2`具有值`"abcdef"`。
+程式碼中，接受已換行的字串，並換行符號會解譯為常值為換行符號，除非反斜線字元換行之前的最後一個字元。 使用反斜線字元時，會忽略在下一行的前置空白字元。 下列程式碼產生的字串`str1`具有值`"abc\ndef"`和字串`str2`具有值`"abcdef"`。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1001.fs)]
 

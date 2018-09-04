@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
 ms.openlocfilehash: a57bf400288c11e5ba651515feba42437b93148f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43389571"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43559815"
 ---
 # <a name="large-udts"></a>大型 UDT
 使用者定義型別 (UDT) 可透過在 SQL Server 資料庫中儲存 Common Language Runtime (CLR) 物件，讓開發人員擴充伺服器的純量型別 (Scalar Type) 系統。 UDT 可以包含多個項目而且可以具有行為，這點與單一 SQL Server 系統資料型別所組成的傳統別名資料型別不同。  

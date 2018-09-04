@@ -10,11 +10,11 @@ helpviewer_keywords:
 - FlowLayoutPanel control [Windows Forms], about FlowLayoutPanel control
 ms.assetid: 3883e024-f5a0-456d-9c27-b4dfa1cc9045
 ms.openlocfilehash: 73767114da1c04222fb8ceaf812153421c4597aa
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425500"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43563808"
 ---
 # <a name="flowlayoutpanel-control-overview"></a>FlowLayoutPanel 控制項概觀
 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項會以水平或垂直的流動方向來排列其內容。 您可以將控制項的內容從一個資料列包裝至下一個資料列，或從一個資料行包裝至下一個資料行。 或者，您可以用裁剪的方式，而不是包裝其內容。  
