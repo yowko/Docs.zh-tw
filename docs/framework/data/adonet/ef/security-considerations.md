@@ -2,15 +2,15 @@
 title: 安全性考量 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 337424395186532969734e0977ea111d8995a154
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: MT
+ms.openlocfilehash: 25d313f9c6f71d946ed8d9cc5db2e99dc84983b3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766617"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456840"
 ---
 # <a name="security-considerations-entity-framework"></a>安全性考量 (Entity Framework)
-本主題將描述與開發、部署和執行 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式有關的安全性考量。 您也應該遵循建立安全 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 應用程式的建議事項。 如需詳細資訊，請參閱[安全性概觀](../../../../../docs/framework/data/adonet/security-overview.md)。  
+本主題將描述與開發、部署和執行 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式有關的安全性考量。 您也應該遵循建立安全 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 應用程式的建議事項。 如需詳細資訊，請參閱 <<c0> [ 安全性概觀](../../../../../docs/framework/data/adonet/security-overview.md)。  
   
 ## <a name="general-security-considerations"></a>一般安全性考量  
  下列安全性考量適用於使用 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 的所有應用程式。  
@@ -27,7 +27,7 @@ ms.locfileid: "32766617"
  進行登入作業期間，以使用者密碼為基礎的資訊會透過基礎資料來源的網路程式庫傳遞至伺服器。 惡意提供者可能會竊取使用者認證、產生惡意查詢，或竄改結果集。  
   
 #### <a name="encrypt-your-connection-to-protect-sensitive-data"></a>加密您的連接以便保護機密資料。  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 不會直接處理資料加密 (Encryption)。 如果使用者透過公用 (Public) 網路存取資料，您的應用程式就應該建立資料來源的加密連接，以便提升安全性。 如需詳細資訊，請參閱資料來源的安全性相關文件。 SQL Server 資料來源，請參閱[加密對 SQL Server 的連線](http://go.microsoft.com/fwlink/?LinkId=119544)。  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 不會直接處理資料加密 (Encryption)。 如果使用者透過公用 (Public) 網路存取資料，您的應用程式就應該建立資料來源的加密連接，以便提升安全性。 如需詳細資訊，請參閱資料來源的安全性相關文件。 針對 SQL Server 資料來源，請參閱[加密 SQL Server 的連接](https://go.microsoft.com/fwlink/?LinkId=119544)。  
   
 #### <a name="secure-the-connection-string"></a>保護連接字串的安全。  
  保護應用程式時的最重要目標之一就是保護資料來源的存取。 如果連接字串未受保護，或者建構方式不當，它就會成為可能的弱點。 如果您以純文字方式儲存連接資訊，或將它保存在記憶體中，就會面臨危害整個系統的風險。 下面是保護連接字串安全的建議方法：  
@@ -38,7 +38,7 @@ ms.locfileid: "32766617"
   
 -   使用受保護的組態來加密組態檔區段。  
   
-     ASP.NET 提供了一項稱為受保護組態的功能，可讓您加密組態檔中的機密資訊。 雖然主要是針對 ASP.NET 所設計，不過您也可以使用受保護的組態來加密 Windows 應用程式中組態檔的區段。 新的受保護的組態功能的詳細說明，請參閱[加密組態資訊使用受保護的組態](http://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1)。  
+     ASP.NET 提供了一項稱為受保護組態的功能，可讓您加密組態檔中的機密資訊。 雖然主要是針對 ASP.NET 所設計，不過您也可以使用受保護的組態來加密 Windows 應用程式中組態檔的區段。 新的受保護的組態功能的詳細說明，請參閱 <<c0> [ 組態加密組態資訊使用受保護的](https://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1)。  
   
 -   將連接字串儲存在受保護的組態檔中。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "32766617"
   
 -   以動態方式建立連接時使用連接字串產生器 (Builder)。  
   
-     如果您必須在執行階段建構連接字串，請使用 <xref:System.Data.EntityClient.EntityConnectionStringBuilder> 類別 (Class)。 這個字串產生器類別會透過驗證和逸出無效的輸入資訊，協助避免連接字串插入式攻擊。 如需詳細資訊，請參閱[如何： 建置 Entitycollection 連接字串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)。 也使用適當的字串產生器類別來建構資料來源連接字串一部分[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]連接字串。 ADO.NET 提供者的連接字串產生器的相關資訊，請參閱[連接字串產生器](../../../../../docs/framework/data/adonet/connection-string-builders.md)。  
+     如果您必須在執行階段建構連接字串，請使用 <xref:System.Data.EntityClient.EntityConnectionStringBuilder> 類別 (Class)。 這個字串產生器類別會透過驗證和逸出無效的輸入資訊，協助避免連接字串插入式攻擊。 如需詳細資訊，請參閱 <<c0> [ 如何： 建置 Entitycollection 連接字串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)。 也使用適當的字串產生器類別，來建構資料來源連接字串一部分[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]連接字串。 如需 ADO.NET 提供者的連接字串產生器資訊，請參閱[連接字串產生器](../../../../../docs/framework/data/adonet/connection-string-builders.md)。  
   
  如需詳細資訊，請參閱[保護連線資訊](../../../../../docs/framework/data/adonet/protecting-connection-information.md)。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "32766617"
   
 -   <xref:System.Security.Permissions.SecurityPermission>：<xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> (用以使用 <xref:System.Runtime.Serialization.ISerializable> 介面來序列化例外狀況 (Exception))。  
   
--   開啟資料庫連接及執行命令，針對資料庫中，例如權限<xref:System.Data.SqlClient.SqlClientPermission>為 SQL Server 資料庫。  
+-   開啟資料庫連線，而這類執行命令，針對資料庫的權限<xref:System.Data.SqlClient.SqlClientPermission>SQL Server 資料庫。  
   
  如需詳細資訊，請參閱 [Code Access Security and ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "32766617"
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 不會強制執行任何安全性權限，而且將會以同處理序方式叫用 (Invoke) 使用者提供的資料物件程式碼，不論它是否受信任都一樣。 請確定資料存放區和應用程式都會執行用戶端的驗證與授權。  
   
 #### <a name="restrict-access-to-all-configuration-files"></a>限制所有組態檔的存取權。  
- 系統管理員必須限制對指定的應用程式，包括 enterprisesec.config、 security.config、 machine.conf 組態的所有檔案和應用程式組態檔的寫入存取\<*應用程式*>.exe.config。  
+ 管理員必須限制指定應用程式，包括 enterprisesec.config、 security.config、 machine.conf 組態的所有檔案和應用程式組態檔的寫入權限\<*應用程式*>.exe.config。  
   
  提供者非變異名稱可在 app.config 中修改。用戶端應用程式必須負責使用強式名稱 (Strong Name) 透過標準提供者 Factory 模型存取基礎提供者。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "32766617"
   
      使用者可能會透過提供惡意輸入給查詢述詞 (Predicate) 和參數名稱所使用的值，在 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 中執行 SQL 插入式攻擊。 若要避免 SQL 插入式攻擊的風險，請勿結合使用者輸入與 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 命令文字。  
   
-     [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查詢會在可接受常值 (Literal) 的任何位置接受參數。 您應該使用參數型查詢，而非直接將外部代理程式的常值插入查詢中。 您也應該考慮使用查詢產生器方法安全地建構[Entity SQL](http://msdn.microsoft.com/library/05685434-05e6-41c2-8d5e-8933b88a40b0)。  
+     [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查詢會在可接受常值 (Literal) 的任何位置接受參數。 您應該使用參數型查詢，而非直接將外部代理程式的常值插入查詢中。 您也應該考慮使用查詢產生器方法安全地建構[Entity SQL](https://msdn.microsoft.com/library/05685434-05e6-41c2-8d5e-8933b88a40b0)。  
   
 -   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] 插入式攻擊：  
   
@@ -113,7 +113,7 @@ ms.locfileid: "32766617"
   
 -   在巢狀 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查詢中。  
   
- 接受使用者輸入時，您必須確定輸入不會導致結果集變成超過系統能夠處理的大小。 您也可以使用<xref:System.Linq.Queryable.Take%2A>方法中的[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]或[限制](../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)中的運算子[!INCLUDE[esql](../../../../../includes/esql-md.md)]限制結果集的大小。  
+ 接受使用者輸入時，您必須確定輸入不會導致結果集變成超過系統能夠處理的大小。 您也可以使用<xref:System.Linq.Queryable.Take%2A>方法中的[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]或[限制](../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)中的運算子[!INCLUDE[esql](../../../../../includes/esql-md.md)]來限制結果集的大小。  
   
 #### <a name="avoid-returning-iqueryable-results-when-exposing-methods-to-potentially-untrusted-callers"></a>避免在將方法公開至可能未受信任的呼叫端時傳回 IQueryable 結果。  
  基於下列原因，應避免從公開至可能未受信任之呼叫端的方法傳回 <xref:System.Linq.IQueryable%601> 類型：  
@@ -132,7 +132,7 @@ ms.locfileid: "32766617"
  下列安全性考量會在產生和使用實體類型時適用。  
   
 #### <a name="do-not-share-an-objectcontext-across-application-domains"></a>請勿在應用程式定義域中共用 ObjectContext。  
- 與多個應用程式定義域共用 <xref:System.Data.Objects.ObjectContext> 可能會公開連接字串中的資訊。 您應該改為將序列化物件或物件圖形傳輸至其他應用程式定義域，然後將這些物件附加至該應用程式定義域中的 <xref:System.Data.Objects.ObjectContext>。 如需詳細資訊，請參閱[序列化物件](http://msdn.microsoft.com/library/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99)。  
+ 與多個應用程式定義域共用 <xref:System.Data.Objects.ObjectContext> 可能會公開連接字串中的資訊。 您應該改為將序列化物件或物件圖形傳輸至其他應用程式定義域，然後將這些物件附加至該應用程式定義域中的 <xref:System.Data.Objects.ObjectContext>。 如需詳細資訊，請參閱 <<c0> [ 序列化的物件](https://msdn.microsoft.com/library/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99)。  
   
 #### <a name="prevent-type-safety-violations"></a>避免型別安全 (Type Safety) 違規。  
  如果違反了型別安全，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 便無法保證物件中資料的完整性。 如果您允許未受信任的應用程式使用完全信任的程式碼存取安全性來執行，可能就會發生型別安全違規。  
