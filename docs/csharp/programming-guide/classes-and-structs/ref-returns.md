@@ -4,12 +4,12 @@ description: 了解如何定義和使用 ref 傳回值和 ref 區域變數值
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: e749b9c9309a4b1a737a0c1d0b5e1cfe5748114a
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: a869cd50c5512c9893b6e5056aa58e1f92ee26f4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "33339614"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510561"
 ---
 # <a name="ref-returns-and-ref-locals"></a>ref 傳回值和 ref 區域變數
 
@@ -122,7 +122,7 @@ refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to differe
 
 如果搜尋數目較接近陣列結尾，則這個第二個版本對較長的序列更具效率。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[ref 關鍵字](../../language-reference/keywords/ref.md)  
-[具備實值型別的參考語意](../../../csharp/reference-semantics-with-value-types.md)
+- [ref 關鍵字](../../language-reference/keywords/ref.md)  
+- [具備實值型別的參考語意](../../../csharp/reference-semantics-with-value-types.md)
