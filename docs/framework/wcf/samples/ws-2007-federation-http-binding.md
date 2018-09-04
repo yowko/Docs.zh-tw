@@ -2,11 +2,12 @@
 title: WS 2007 聯合 HTTP 繫結
 ms.date: 03/30/2017
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
-ms.openlocfilehash: 0fe4c0e62dbff3ae7f99f3a6dde34940abf90ae9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 53f2cb893476cdfa0517bd6586f38951dff1f2af
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513058"
 ---
 # <a name="ws-2007-federation-http-binding"></a>WS 2007 聯合 HTTP 繫結
 這個範例會示範使用 <xref:System.ServiceModel.WS2007FederationHttpBinding>，這是能夠用來建置支援 WS-Trust 規格 1.3 版之聯合案例的標準繫結。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/04/2018
 </bindings>  
 ```  
   
- 在[\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)、`security`值會指定應該使用的安全性模式。 在此範例中，`message`使用安全性，這就是為什麼[\<訊息 >](../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md)內部指定[\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)。 [\<簽發者 >](../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)元素內[\<訊息 >](../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md)指定的位址與為 STS 發出安全性權杖給用戶端，如此用戶端的繫結向`ICalculator`服務。  
+ 在  [\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)，則`security`值會指定應該使用的安全性模式。 在此範例中，`message`使用安全性時，這就是為什麼[\<訊息 >](../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md)內部指定[\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)。 [\<簽發者 >](../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)內的項目[\<訊息 >](../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md)指定的位址與 STS 所簽發的安全性權杖給用戶端，以便讓用戶端可以繫結向`ICalculator`服務。  
   
  在下列程式碼中，將示範服務上的這個繫結組態。  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 05/04/2018
 </bindings>  
 ```  
   
- 在[\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)、`security`值會指定應該使用的安全性模式。 在此範例中，`message`使用安全性，這就是為什麼[\<訊息 >](../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md)內部指定[\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)。 [ \<IssuerMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)元素`ws2007FederationHttpBinding`內[\<訊息 >](../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md)指定位址以及可以用來擷取端點身分識別STS 中繼資料。  
+ 在  [\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)，則`security`值會指定應該使用的安全性模式。 在此範例中，`message`使用安全性時，這就是為什麼[\<訊息 >](../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md)內部指定[\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)。 [ \<IssuerMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)項目`ws2007FederationHttpBinding`內[\<訊息 >](../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md)指定的位址與身分識別，可以用來擷取端點sts 的中繼資料。  
   
  服務的行為如下列程式碼中所示。  
   
@@ -109,7 +110,7 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2.  使用系統管理員權限來開啟 Visual Studio 命令提示字元，然後執行 Setup.bat 檔案，以便建立必要的憑證。  
   
@@ -117,14 +118,14 @@ Press <ENTER> to terminate client.
   
 1.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-2.  若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。 如果您使用[!INCLUDE[windowsver](../../../../includes/windowsver-md.md)]，您必須執行 Service.exe、 Client.exe 和 SecurityTokenService.exe 使用提升的權限 (以滑鼠右鍵按一下檔案，然後按一下**系統管理員身分執行**)。  
+2.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。 如果您使用[!INCLUDE[windowsver](../../../../includes/windowsver-md.md)]中，您必須執行 Service.exe、 Client.exe 和 SecurityTokenService.exe 使用提升的權限 (以滑鼠右鍵按一下檔案，然後按一下**系統管理員身分執行**)。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\WS2007FederationHttp`  
   

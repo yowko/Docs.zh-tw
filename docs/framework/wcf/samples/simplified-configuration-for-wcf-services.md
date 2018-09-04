@@ -3,11 +3,11 @@ title: WCF 服務的簡化組態
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
 ms.openlocfilehash: ebdf7ab62676bb0c8ac99a5335a3047fcdd5a9b3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482887"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500709"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>WCF 服務的簡化組態
 此範例示範如何實作與設定一般服務和用戶端使用 Windows Communication Foundation (WCF)。 這個範例是所有其他基本技術範例的基礎。  

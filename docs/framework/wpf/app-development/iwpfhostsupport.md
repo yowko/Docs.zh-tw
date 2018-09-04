@@ -5,11 +5,11 @@ helpviewer_keywords:
 - IWpfHostSupport interface [WPF]
 ms.assetid: cc5a0281-de81-4cc1-87e4-0e46b1a811e9
 ms.openlocfilehash: 57d9ef87a078655a89a5869a48a1bd16f21b000f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385150"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500922"
 ---
 # <a name="iwpfhostsupport"></a>IWpfHostSupport
 裝載的應用程式[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]內容 PresentationHost.exe 透過實作這個介面來提供主機和 PresentationHost.exe 之間的整合點。  

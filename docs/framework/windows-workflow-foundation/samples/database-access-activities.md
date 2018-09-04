@@ -2,15 +2,15 @@
 title: 資料庫存取活動
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: e9c7627738d3c5313a4f3e6e4451daf78b87839a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e315742226ab086a865fa53d7aab9e7f15add08
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520405"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502824"
 ---
 # <a name="database-access-activities"></a>資料庫存取活動
-資料庫存取活動可讓您存取工作流程內的資料庫。 這些活動可讓您存取資料庫，以擷取或修改資訊和使用[ADO.NET](http://go.microsoft.com/fwlink/?LinkId=166081)來存取資料庫。  
+資料庫存取活動可讓您存取工作流程內的資料庫。 這些活動可讓您存取資料庫以擷取或修改資訊以及使用[ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081)來存取資料庫。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
@@ -88,7 +88,7 @@ Public class DbUpdate: AsyncCodeActivity
   
  要執行的查詢是在其 `Sql` 屬性中設定，而參數是透過 `Parameters` 集合傳遞。  
   
- 之後`DbQueryScalar`會執行，會傳回純量中`Result``out`引數 (型別`TResult`，也就是基底類別中定義<xref:System.Activities.AsyncCodeActivity%601>)。  
+ 之後`DbQueryScalar`會執行，會傳回純量中`Result``out`引數 (型別的`TResult`，也就是在基底類別中定義<xref:System.Activities.AsyncCodeActivity%601>)。  
   
 ```  
 public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>  
@@ -133,13 +133,13 @@ public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
 |結果|查詢執行之後取得的純量。 這個引數的型別為 `TResult`。|  
   
 ## <a name="dbquery"></a>DbQuery  
- 執行擷取物件清單的查詢。 執行查詢之後，會執行對應函式 (它可以是<xref:System.Func%601> < `DbDataReader`， `TResult`> 或<xref:System.Activities.ActivityFunc%601> < `DbDataReader`， `TResult`>)。 這個對應的函式會取得 `DbDataReader` 中的記錄，並且將它對應至要傳回的物件。  
+ 執行擷取物件清單的查詢。 執行查詢之後，會執行對應的函式 (它可以是<xref:System.Func%601> < `DbDataReader`， `TResult`> 或有<xref:System.Activities.ActivityFunc%601> < `DbDataReader`， `TResult`>)。 這個對應的函式會取得 `DbDataReader` 中的記錄，並且將它對應至要傳回的物件。  
   
  透過設定提供者非變異名稱 (`ProviderName`) 和連接字串 (`ConnectionString`)，或僅使用來自應用程式組態檔的連接字串組態名稱 (`ConfigFileSectionName`)，即可設定連接資訊。  
   
  要執行的查詢是在其 `Sql` 屬性中設定，而參數是透過 `Parameters` 集合傳遞。  
   
- SQL 查詢的結果會使用 `DbDataReader` 擷取。 活動會逐一查看 `DbDataReader`，並且將 `DbDataReader` 中的資料列對應至 `TResult` 的執行個體。 使用者的`DbQuery`必須提供對應程式碼，可以完成兩種方式： 使用<xref:System.Func%601> < `DbDataReader`， `TResult`> 或<xref:System.Activities.ActivityFunc%601> < `DbDataReader`， `TResult`>。 在第一個案例中，對應會在單一執行 Pulse 中完成。 因此這種方式速度較快，但是無法序列化為 XAML。 在第二個案例中，對應是在多次 Pulse 中執行。 因此，這種方式的速度較慢，但是可以序列化為 XAML，並且以宣告方式編寫 (任何存在的活動都可以參與對應)。  
+ SQL 查詢的結果會使用 `DbDataReader` 擷取。 活動會逐一查看 `DbDataReader`，並且將 `DbDataReader` 中的資料列對應至 `TResult` 的執行個體。 使用者`DbQuery`必須提供對應程式碼，可在兩種方式： 使用<xref:System.Func%601> < `DbDataReader`， `TResult`> 或<xref:System.Activities.ActivityFunc%601> < `DbDataReader`， `TResult`>。 在第一個案例中，對應會在單一執行 Pulse 中完成。 因此這種方式速度較快，但是無法序列化為 XAML。 在第二個案例中，對應是在多次 Pulse 中執行。 因此，這種方式的速度較慢，但是可以序列化為 XAML，並且以宣告方式編寫 (任何存在的活動都可以參與對應)。  
   
 ```  
 public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult : class  
@@ -194,13 +194,13 @@ public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult 
 |結果|物件清單，該清單是執行查詢以及針對 `DataReader` 中的每項記錄執行對應函式而取得。|  
   
 ## <a name="dbquerydataset"></a>DbQueryDataSet  
- 執行傳回 <xref:System.Data.DataSet> 的查詢。 這個類別會以非同步方式執行其工作。 它衍生自<xref:System.Activities.AsyncCodeActivity> < `TResult`>，並使用其非同步功能。  
+ 執行傳回 <xref:System.Data.DataSet> 的查詢。 這個類別會以非同步方式執行其工作。 它衍生自<xref:System.Activities.AsyncCodeActivity> < `TResult`> 並且使用其非同步功能。  
   
  透過設定提供者非變異名稱 (`ProviderName`) 和連接字串 (`ConnectionString`)，或僅使用來自應用程式組態檔的連接字串組態名稱 (`ConfigFileSectionName`)，即可設定連接資訊。  
   
  要執行的查詢是在其 `Sql` 屬性中設定，而參數是透過 `Parameters` 集合傳遞。  
   
- 之後`DbQueryDataSet`執行`DataSet`中傳回`Result``out`引數 (型別`TResult`，也就是基底類別中定義<xref:System.Activities.AsyncCodeActivity%601>)。  
+ 之後`DbQueryDataSet`會執行`DataSet`會傳回`Result``out`引數 (型別的`TResult`，也就是基底類別中定義<xref:System.Activities.AsyncCodeActivity%601>)。  
   
 ```  
 public class DbQueryDataSet : AsyncCodeActivity<DataSet>  
@@ -325,6 +325,6 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`

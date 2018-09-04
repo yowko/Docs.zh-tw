@@ -8,11 +8,11 @@ ms.assetid: 0d3da389-6b7b-40f6-a877-fac546d6019c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 865b7b16d5807bd9161855f453128a63c84eab96
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43400818"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505219"
 ---
 # <a name="exception-thrownv1-etw-event"></a>Exception Thrown_V1 ETW 事件
 此事件會擷取被擲回的例外狀況相關資訊。  

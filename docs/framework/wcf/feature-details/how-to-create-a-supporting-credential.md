@@ -2,30 +2,30 @@
 title: HOW TO：建立支援的認證
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: 6ec7412d1de2bca349c7cfbf4a37c98ca60cc78d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef4d9a406e6fc929e4ad59911d587e462c9b2b65
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495882"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43499987"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>HOW TO：建立支援的認證
-您可能具有需要多個認證的自訂安全性配置。 例如，服務對用戶端的要求可能不只是提供使用者名稱和密碼，可能也要提供可證明用戶端已超過 18 歲的認證。 第二個認證是*支援認證*。 本主題說明如何實作這類認證的 Windows Communication Foundation (WCF) 用戶端中。  
+您可能具有需要多個認證的自訂安全性配置。 例如，服務對用戶端的要求可能不只是提供使用者名稱和密碼，可能也要提供可證明用戶端已超過 18 歲的認證。 第二個認證已*支援認證*。 本主題說明如何在 Windows Communication Foundation (WCF) 用戶端實作這類認證。  
   
 > [!NOTE]
->  支援認證的規格為 WS-SecurityPolicy 規格的一部分。 如需詳細資訊，請參閱[Web 服務安全性規格](http://go.microsoft.com/fwlink/?LinkId=88537)。  
+>  支援認證的規格為 WS-SecurityPolicy 規格的一部分。 如需詳細資訊，請參閱 < [Web 服務安全性規格](https://go.microsoft.com/fwlink/?LinkId=88537)。  
   
 ## <a name="supporting-tokens"></a>支援權杖  
- 簡單地說，當您使用訊息安全性，*主要認證*永遠用來保護訊息 （例如，X.509 憑證或 Kerberos 票證）。  
+ 簡單地說，當使用訊息安全性時才*主要認證*一律用來保護訊息 （例如，X.509 憑證或 Kerberos 票證）。  
   
- 如規格所定義，安全性繫結會使用*語彙基元*來保護訊息交換。 A*語彙基元*是安全性認證的表示法。  
+ 如規格所定義，會使用安全性繫結*語彙基元*來保護訊息交換。 A*語彙基元*是一種安全性認證。  
   
  安全性繫結會使用安全性繫結原則中識別的主要權杖來建立簽章。 此簽章指*訊息簽章*。  
   
  您也可以指定其他權杖，以擴大與訊息簽章相關聯的權杖所提供的宣告。  
   
 ## <a name="endorsing-signing-and-encrypting"></a>簽署 (Endorsing)、簽署 (Signing) 和加密  
- 支援的認證會導致*支援權杖*訊息內進行傳輸。 WS-SecurityPolicy 規格定義了四種可將支援權杖附加至訊息的方法，如下表所述。  
+ 支援的認證將會導致*支援權杖*訊息內進行傳輸。 WS-SecurityPolicy 規格定義了四種可將支援權杖附加至訊息的方法，如下表所述。  
   
 |用途|描述|  
 |-------------|-----------------|  
@@ -35,7 +35,7 @@ ms.locfileid: "33495882"
 |已簽署和加密|已簽署的加密支援權杖是出現在 `wsse:SecurityHeader` 時，也會進行加密的已簽署支援權杖。|  
   
 ## <a name="programming-supporting-credentials"></a>程式設計的支援認證  
- 若要建立的服務，您必須建立的支援權杖會使用[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。 (如需詳細資訊，請參閱[How to： 建立自訂繫結使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。)  
+ 若要建立會使用支援的權杖，您必須建立服務[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。 (如需詳細資訊，請參閱 <<c0> [ 如何： 建立自訂繫結使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。)  
   
  建立自訂繫結的第一個步驟為建立安全性繫結項目，可以是下列三種類型的其中之一：  
   
@@ -60,7 +60,7 @@ ms.locfileid: "33495882"
   
 -   *支援權杖的端點*支援所有作業的端點。 這也就是支援權杖所表示的認證，可以在每次叫用端點作業時使用此認證。  
   
--   *支援權杖的作業*支援特定的端點作業。  
+-   *支援權杖的作業*支援只在特定端點的作業。  
   
  如屬性名稱所指出，支援認證可以為必要項目或選用項目。 也就是說，如果在出現支援認證時使用該認證 (雖然不需要該認證)，在沒有出現該認證時驗證也不會失敗。  
   

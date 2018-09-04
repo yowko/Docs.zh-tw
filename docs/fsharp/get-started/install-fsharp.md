@@ -1,13 +1,13 @@
 ---
 title: '安裝 F #'
 description: '了解如何安裝 F # 根據您的環境。'
-ms.date: 07/03/2018
-ms.openlocfilehash: 142265a95e1d3ee1603a89f650a24c6a45709181
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.date: 08/28/2018
+ms.openlocfilehash: 6c10b958e35bf7925965d076a48839b0ce19d2c0
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37878841"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515893"
 ---
 # <a name="install-f"></a>安裝 F # #
 
@@ -29,34 +29,34 @@ F # 預設會安裝在[Visual Studio for Mac](https://visualstudio.microsoft.com
 
 ## <a name="install-f-with-visual-studio-code"></a>安裝 F # 與 Visual Studio Code
 
-您必須擁有[安裝 git](https://git-scm.com/download) ，可在您的路徑，請使用在 ionide 使用者專案範本。 您可以確認它已正確安裝輸入`git --version`在命令提示字元並按下**Enter**。
+您必須擁有[安裝 git](https://git-scm.com/download) ，可在您的路徑，請使用專案範本。 您可以確認它已正確安裝輸入`git --version`在命令提示字元並按下**Enter**。
 
 ### <a name="macostabmacos"></a>[macOS](#tab/macos)
 
-使用 Ionide [Mono](http://www.mono-project.com)。 在 macOS 上安裝 Mono 的最簡單方式是透過 Homebrew。 只要您的終端機中輸入下列：
+[Mono](http://www.mono-project.com)使用於[F # Interactive](../tutorials/fsharp-interactive/index.md)支援。 在 macOS 上安裝 Mono 的最簡單方式是透過 Homebrew。 只要您的終端機中輸入下列：
 
 ```console
 brew install mono
 ```
 
-您也必須安裝[.NET Core SDK](https://www.microsoft.com/net/download)。
+也會安裝[.NET Core SDK](https://www.microsoft.com/net/download)。
 
 ### <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
-在 Linux 上，ionide 使用者也會使用[Mono](https://www.mono-project.com)。 如果您是在 Debian 或 Ubuntu 上，您可以使用下列項目：
+[Mono](https://www.mono-project.com)使用於[F # Interactive](../tutorials/fsharp-interactive/index.md)支援。 如果您是在 Debian 或 Ubuntu 上，您可以使用下列項目：
 
 ```console
 sudo apt-get update
 sudo apt-get install mono-complete fsharp
 ```
 
-您也必須安裝[.NET Core SDK](https://www.microsoft.com/net/download)。
+也會安裝[.NET Core SDK](https://www.microsoft.com/net/download)。
 
 ### <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
-如果您是在 Windows 上，您必須[安裝 Visual Studio 與 F # 支援](#install-f-with-visual-studio)。 這會安裝所有必要的元件，來撰寫、 編譯及執行 F # 程式碼。
+安裝[Visual Studio 中使用 F # 支援](#install-f-with-visual-studio)。 這會安裝所有必要的元件，來撰寫、 編譯及執行 F # 程式碼。
 
-您也必須安裝[.NET Core SDK](https://www.microsoft.com/net/download/)。
+也會安裝[.NET Core SDK](https://www.microsoft.com/net/download/)。
 
 ---
 

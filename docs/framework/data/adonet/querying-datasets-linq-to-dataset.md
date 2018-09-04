@@ -3,11 +3,11 @@ title: 查詢資料集 (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: bb68d2e4-623d-4d60-85e3-965254f6fee7
 ms.openlocfilehash: 5ecf85a73cd38fc1fa575bd591618e5273b390e0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43422438"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510138"
 ---
 # <a name="querying-datasets-linq-to-dataset"></a>查詢資料集 (LINQ to DataSet)
 當 <xref:System.Data.DataSet> 物件已經填入 (Populate) 資料之後，您就可以開始查詢它。 使用 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 來編寫查詢與針對其他啟用 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 的資料來源使用 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 很相似。 記住，不過，當您使用[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]透過查詢<xref:System.Data.DataSet>物件，您要查詢的列舉<xref:System.Data.DataRow>物件，而不是自訂類型的列舉型別。 這表示，您可以使用任何的成員清單<xref:System.Data.DataRow>類別中您[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]查詢。 這可讓您建立內容豐富且複雜的查詢。  

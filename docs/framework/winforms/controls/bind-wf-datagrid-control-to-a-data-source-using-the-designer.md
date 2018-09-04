@@ -12,37 +12,37 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - bound controls [Windows Forms]
 ms.assetid: 4e96e3d0-b1cc-4de1-8774-bc9970ec4554
-ms.openlocfilehash: 1be8a31957bc439c140c1b6c5fc24e3221860c80
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 409d94e46cae3e4daf7df930097f0a3d46360633
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529505"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500582"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source-using-the-designer"></a>如何：使用設計工具將 Windows Form DataGrid 控制項繫結至資料來源
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
   
- Windows Form<xref:System.Windows.Forms.DataGrid>控制項特別設計來顯示資料來源的資訊。 您將控制項繫結在設計階段藉由設定<xref:System.Windows.Forms.DataGrid.DataSource%2A>和<xref:System.Windows.Forms.DataGrid.DataMember%2A>屬性，或藉由呼叫的執行階段<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>方法。 雖然您可以顯示來自各種資料來源的資料，但最常見的來源是資料集和資料的檢視。  
+ Windows Form<xref:System.Windows.Forms.DataGrid>控制項專為顯示從資料來源的資訊。 您將控制項繫結在設計階段藉由設定<xref:System.Windows.Forms.DataGrid.DataSource%2A>並<xref:System.Windows.Forms.DataGrid.DataMember%2A>屬性，或藉由呼叫的執行階段<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>方法。 雖然您可以顯示來自各種資料來源的資料，但最常見的來源是資料集] 和 [資料檢視。  
   
- 如果在執行階段可使用資料來源 — 比方說，如果表單包含多個資料集或資料檢視的執行個體，您可以在設計階段格線繫結至資料來源。 然後，您可以預覽資料方格中的外觀為何。  
+ 如果在設計階段所使用資料來源，比方說，如果表單包含資料集或資料檢視的執行個體，您可以在設計階段方格繫結至資料來源。 然後，您可以預覽資料方格中如下。  
   
- 您也可以在執行階段以程式設計的方式，結合方格。 當您想要設定資料來源，根據您在執行階段取得的資訊，這非常有用。 例如，應用程式可能會讓使用者指定要檢視之資料表的名稱。 它也是必要的資料來源不在執行階段存在。 這包括資料來源，例如陣列、 集合、 不具類型資料集，以及資料讀取器。  
+ 您也可以繫結方格以程式設計的方式，在執行階段。 當您想要設定資料來源，根據您在執行階段取得的資訊時，這非常有用。 例如，應用程式可能會讓使用者指定要檢視之資料表的名稱。 它也是必要的資料來源不在執行階段存在的情況。 這包括資料來源，例如陣列、 集合、 不具類型的資料集，以及資料讀取器。  
   
- 下列程序需要**Windows 應用程式**表單，其中包含與專案<xref:System.Windows.Forms.DataGrid>控制項。 設定這類專案的詳細資訊，請參閱[How to： 建立 Windows 應用程式專案](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)和[How to： 將控制項加入 Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。 在[!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]、<xref:System.Windows.Forms.DataGrid>控制項不是在**工具箱**預設。 如需將它加入資訊，請參閱[How to： 將項目加入工具箱](http://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0)。 此外在[!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]，您可以使用**資料來源**設計階段資料繫結的視窗。 如需詳細資訊，請參閱[控制項繫結至 Visual Studio 中的資料](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)。  
+ 下列程序需要**Windows 應用程式**表單，其中包含專案<xref:System.Windows.Forms.DataGrid>控制項。 如需這類專案的設定資訊，請參閱[如何： 建立 Windows 應用程式專案](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)並[如何： 將控制項加入 Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。 在  [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]，則<xref:System.Windows.Forms.DataGrid>控制項不在**工具箱**預設。 如需將它加入資訊，請參閱[如何： 加入項目至工具箱](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0)。 此外在[!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]，您可以使用**Zdroje dat**設計階段資料繫結的視窗。 如需詳細資訊，請參閱[控制項繫結至 Visual Studio 中的資料](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
-### <a name="to-data-bind-the-datagrid-control-to-a-single-table-in-the-designer"></a>若要進行資料繫結 DataGrid 控制項設計工具中的單一資料表  
+### <a name="to-data-bind-the-datagrid-control-to-a-single-table-in-the-designer"></a>以資料繫結 DataGrid 控制項至設計工具中的單一資料表  
   
-1.  將控制項的<xref:System.Windows.Forms.DataGrid.DataSource%2A>包含您想要繫結至資料項目物件的屬性。  
+1.  將控制項的<xref:System.Windows.Forms.DataGrid.DataSource%2A>包含您想要繫結至的資料項目物件的屬性。  
   
-2.  如果資料來源的資料集，請設定<xref:System.Windows.Forms.DataGrid.DataMember%2A>屬性設為要繫結至資料表的名稱。  
+2.  如果資料來源的資料集，請設定<xref:System.Windows.Forms.DataGrid.DataMember%2A>屬性繫結至資料表的名稱。  
   
-3.  如果資料來源之資料集或資料集資料表為基礎的資料檢視，請將程式碼加入至表單，以填入資料集。  
+3.  如果資料來源之資料集或資料集資料表為基礎的資料檢視，請將程式碼加入表單，以填入資料集。  
   
-     您使用的實際程式碼會取決於資料集從何處取得資料。 如果直接從資料庫填入資料集，您通常會呼叫`Fill`資料配接器，如下列程式碼範例，會填入資料集呼叫的方法`DsCategories1`:  
+     您使用的確切程式碼取決於資料集從何處取得資料。 如果直接從資料庫填入資料集，您通常會呼叫`Fill`方法的資料配接器，如下列程式碼範例中，會填入資料集所示`DsCategories1`:  
   
     ```vb  
     sqlDataAdapter1.Fill(DsCategories1)  
@@ -56,15 +56,15 @@ ms.locfileid: "33529505"
     sqlDataAdapter1->Fill(dsCategories1);  
     ```  
   
-4.  （選擇性）將適當的資料表樣式和資料行樣式加入至方格中。  
+4.  （選擇性）將適當的資料表樣式和資料行樣式加入方格中。  
   
-     如果有任何資料表樣式，您會看到資料表，但最少的格式和可見的所有資料行。  
+     如果不有任何資料表樣式，您會看到資料表，但搭配最少的格式與可見的所有資料行。  
   
 ### <a name="to-data-bind-the-datagrid-control-to-multiple-tables-in-a-dataset-in-the-designer"></a>若要進行資料繫結 DataGrid 控制項中的資料集設計工具中的多個資料表  
   
-1.  將控制項的<xref:System.Windows.Forms.DataGrid.DataSource%2A>包含您想要繫結至資料項目物件的屬性。  
+1.  將控制項的<xref:System.Windows.Forms.DataGrid.DataSource%2A>包含您想要繫結至的資料項目物件的屬性。  
   
-2.  如果資料集包含相關的資料表 （亦即，如果它包含關聯物件），將<xref:System.Windows.Forms.DataGrid.DataMember%2A>屬性設為父資料表的名稱。  
+2.  如果資料集包含相關的資料表 （也就是如果它包含的關聯性物件），將<xref:System.Windows.Forms.DataGrid.DataMember%2A>屬性設為父資料表的名稱。  
   
 3.  撰寫程式碼以填入資料集。  
   

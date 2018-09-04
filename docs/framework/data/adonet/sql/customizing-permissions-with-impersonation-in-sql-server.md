@@ -2,12 +2,12 @@
 title: 在 SQL Server 中使用模擬來自訂權限
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: ac2c6805a9ab49d95f68e56306d7d9fb8aab2a2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bfee153a1293ec89285dbeabd1ed64a89764a717
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362639"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513968"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>在 SQL Server 中使用模擬來自訂權限
 許多應用程式會使用預存程序 (Stored Procedure) 來存取資料，並仰賴擁有權鏈結來限制基底資料表的存取。 您可以授與預存程序的 EXECUTE 權限，並撤銷或拒絕基底資料表的權限。 如果預存程序和資料表具有相同的擁有者，SQL Server 就不會檢查呼叫端的權限。 不過，如果物件具有不同的擁有者或在動態 SQL 的情況中，擁有權鏈結便沒有作用。  
@@ -54,7 +54,7 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 ### <a name="using-execute-as-with-revert"></a>使用 EXECUTE AS 搭配 REVERT  
  您可以使用 Transact-SQL REVERT 陳述式來還原成原始執行內容。  
   
- 選擇性子句 WITH NO REVERT COOKIE = @variableName，可讓您執行內容切換回呼叫端如果@variableName變數包含正確的值。 這樣可讓您在使用連接共用 (Connection Pooling) 的環境中，將執行內容切換回呼叫端。 因為值@variableName只有知道呼叫端的 EXECUTE AS 陳述式，呼叫端可以保證叫用應用程式的使用者無法變更執行內容。 關閉連接時，它就會傳回集區。 如需有關連接集區在 ADO.NET 中，請參閱[SQL Server 連接共用 (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)。  
+ 選擇性子句 WITH NO REVERT COOKIE = @variableName，可讓您將執行內容切換回呼叫端若@variableName變數包含正確的值。 這樣可讓您在使用連接共用 (Connection Pooling) 的環境中，將執行內容切換回呼叫端。 因為值@variableName只有知道呼叫端的 EXECUTE AS 陳述式，呼叫端可以保證叫用應用程式的使用者無法變更執行內容。 關閉連接時，它就會傳回集區。 如需有關連接集區在 ADO.NET 中，請參閱[SQL Server 連線共用 (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)。  
   
 ### <a name="specifying-the-execution-context"></a>指定執行內容  
  除了指定使用者以外，您也可以使用 EXECUTE AS 搭配下列任何關鍵字。  
@@ -65,14 +65,6 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
   
 -   SELF： 以 SELF 的身分執行會在預存程序之建立者的安全性內容中執行。 這相當於以指定之使用者的身分執行，而該指定的使用者是建立或更改程序的人員。  
   
-## <a name="external-resources"></a>外部資源  
- 如需詳細資訊，請參閱下列資源。  
-  
-|資源|描述|  
-|--------------|-----------------|  
-|[內容切換](http://msdn.microsoft.com/library/ms188268.aspx)SQL Server 線上叢書中|包含說明如何使用 EXECUTE AS 子句之主題的連結。|  
-|[使用 EXECUTE AS 建立自訂權限集](http://msdn.microsoft.com/library/ms190384.aspx)和[在模組中使用 EXECUTE AS](http://msdn.microsoft.com/library/ms178106.aspx) SQL Server 線上叢書中|說明如何使用 EXECUTE AS 子句的主題。|  
-  
 ## <a name="see-also"></a>另請參閱  
  [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 安全性概觀](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
@@ -81,4 +73,4 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
  [在 SQL Server 中撰寫安全的動態 SQL](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
  [在 SQL Server 中簽署預存程序](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
  [使用預存程序修改資料](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

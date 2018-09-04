@@ -2,16 +2,16 @@
 title: .NET Framework 4.5 中的外顯化原則活動
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: a98dedace72ef9d43d9b65335b462f6ad4f649b0
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 4d107188bbcb46006ba6a6eab491ccb97aa4a83d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254403"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503403"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5 中的外顯化原則活動
 
-這個範例會示範 ExternalizedPolicy4 活動如何讓執行現有[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]Windows Workflow Foundation (WF 3.5)<xref:System.Workflow.Activities.Rules.RuleSet>中的物件[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]直接透過使用 「 規則引擎的 Windows Workflow Foundation (WF 4.5)WF 3.5 隨附的。 您可以使用這個活動來開啟及執行任何現有的 WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>。 如需有關 Windows Workflow Foundation 的一部分的 WF 3.5 規則引擎的詳細資訊，請閱讀[Windows Workflow Foundation Rules Engine 簡介](http://go.microsoft.com/fwlink/?LinkId=166079)。 如需有關移轉規則至[!INCLUDE[wf1](../../../../includes/wf1-md.md)]中[!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]，請閱讀移轉指引[移轉指引](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。
+這個範例會示範 ExternalizedPolicy4 活動如何讓執行現有[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]Windows Workflow Foundation (WF 3.5)<xref:System.Workflow.Activities.Rules.RuleSet>中的物件[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]直接透過使用 「 規則引擎的 Windows Workflow Foundation (WF 4.5)WF 3.5 隨附的。 您可以使用這個活動來開啟及執行任何現有的 WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>。 如需有關 Windows Workflow Foundation 的一部分的 WF 3.5 規則引擎的詳細資訊，請閱讀[Windows Workflow Foundation Rules Engine 簡介](https://go.microsoft.com/fwlink/?LinkId=166079)。 如需有關移轉規則至[!INCLUDE[wf1](../../../../includes/wf1-md.md)]中[!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]，請閱讀移轉指引[移轉指引](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。
 
 ## <a name="projects-in-this-sample"></a>這個範例中的專案
 
@@ -87,7 +87,7 @@ ExternalizedPolicy4 設計工具讓您不需要撰寫程式碼，即可設定活
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。
+> 如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。
 >
 > 此範例位於下列目錄：
 >

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: a582c53f-f203-44ae-a797-d7f169a4fbb5
 ms.openlocfilehash: 6664336b1873008ae193120ce800f9d266f58857
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402309"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507290"
 ---
 # <a name="method-based-query-syntax-examples-partitioning-linq"></a>以方法為基礎的查詢語法範例：分割 (LINQ to DataSet)
 此主題中的範例將示範如何使用 <xref:System.Linq.Enumerable.Skip%2A>、<xref:System.Linq.Enumerable.SkipWhile%2A>、<xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.TakeWhile%2A> 方法並搭配查詢運算式語法來查詢 <xref:System.Data.DataSet>。  

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
 ms.openlocfilehash: d97798dd44e9661e82a303023e041f5af2f43711
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397048"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501774"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>使用屬性控制 XML 序列化
 

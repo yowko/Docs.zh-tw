@@ -7,11 +7,11 @@ helpviewer_keywords:
 - binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
 ms.openlocfilehash: 5e91ab9fbd2fdeb0aa5d836a1eedfb5e0b45ecba
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425793"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510448"
 ---
 # <a name="how-to-implement-binding-validation"></a>操作說明：實作繫結驗證
 此範例示範如何使用<xref:System.Windows.Controls.Validation.ErrorTemplate%2A>和樣式觸發程序提供視覺化回應以通知使用者，當您輸入了無效的值，根據自訂驗證規則。  

@@ -3,11 +3,11 @@ title: TransactedReceiveScope 的使用
 ms.date: 03/30/2017
 ms.assetid: d455f1dc-bfc5-43d6-8ae9-bc3b3a3ea08a
 ms.openlocfilehash: bc1c418f3fa116f5e1c1647af3543a38122842f5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481467"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501638"
 ---
 # <a name="use-of-transactedreceivescope"></a>TransactedReceiveScope 的使用
 這個範例示範如何將交易從用戶端流送至伺服器，方式是使用 <xref:System.Activities.Statements.TransactionScope> 在用戶端建立新交易，以及在伺服器上使用 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 接收有流動交易之訊息並設定交易存留期範圍。 這個範例包含兩個專案，可扮演用戶端和伺服器的角色。  

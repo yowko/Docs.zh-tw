@@ -5,16 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 1974ac71e367203b8b94375e43d4fde13f2df51f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c66a11e0662cd007797243c136ec0617ce5be47c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513143"
 ---
 # <a name="annotating-typed-datasets"></a>註釋具類型資料集
-註釋可讓您在無需修改基礎結構描述的情況下，修改具型別之 <xref:System.Data.DataSet> 中的項目名稱。 修改您的基礎結構描述中的項目名稱可能會造成具型別的**資料集**來執行不存在於資料來源，也會遺失的資料來源中存在的物件參考的物件參考。  
+註釋可讓您在無需修改基礎結構描述的情況下，修改具型別之 <xref:System.Data.DataSet> 中的項目名稱。 修改基礎結構描述中元素的名稱可能會造成具型別的**資料集**來執行不存在於資料來源，以及遺失的資料來源中存在的物件參考的物件參考。  
   
- 使用註釋，您可以自訂物件的名稱將具型別的**資料集**為更有意義的名稱，使程式碼更容易閱讀，將具型別的**資料集**便於使用，同時保留的用戶端基礎結構描述不變。 例如，下列結構描述項目為**客戶**資料表**Northwind**資料庫會導致**DataRow**物件名稱的**CustomersRow**和<xref:System.Data.DataRowCollection>名為**客戶**。  
+ 使用註釋，您可以自訂物件的名稱將具型別的**資料集**使用更有意義的名稱，使程式碼更容易閱讀，將具型別的**DataSet**用戶端使用，同時讓您更輕鬆基礎結構描述保持不變。 例如，下列結構描述項目**客戶**的資料表**Northwind**資料庫會導致**DataRow**物件名稱**Datarow**並<xref:System.Data.DataRowCollection>名為**客戶**。  
   
 ```xml  
 <xs:element name="Customers">  
@@ -26,7 +27,7 @@ ms.lasthandoff: 05/03/2018
 </xs:element>  
 ```  
   
- A **DataRowCollection**名稱**客戶**是用戶端程式碼中，有意義，但**DataRow**名稱**CustomersRow**容易發生錯誤因為它是單一物件。 此外，在一般情況下，物件會正確參考**列**識別項，而是會直接稱為**客戶**物件。 解決方法是結構描述註解，並找出新名稱**DataRow**和**DataRowCollection**物件。 下列為上述結構描述的標註版本。  
+ A **DataRowCollection**名稱**客戶**才有意義的用戶端程式碼，但**DataRow**名稱**Datarow**也會產生誤導因為它是單一物件。 此外，在一般情況下，物件會參考而不需要**資料列**識別碼，而是會直接稱為**客戶**物件。 解決方法是結構描述註解並找出新的名稱，如**DataRow**並**DataRowCollection**物件。 下列為上述結構描述的標註版本。  
   
 ```xml  
 <xs:element name="Customers" codegen:typedName="Customer" codegen:typedPlural="Customers">  
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/03/2018
 </xs:element>  
 ```  
   
- 指定**Customer**值**客戶**會導致**DataRow**物件名稱的**客戶**。 指定**Customers**值**客戶**保留**DataRowCollection**名稱**客戶**。  
+ 指定**typedName**的值**客戶**將會導致**DataRow**物件名稱**客戶**。 指定**typedPlural**的值**客戶**保留**DataRowCollection**名稱**客戶**。  
   
  下列表格顯示可供使用的註釋。  
   
@@ -48,38 +49,38 @@ ms.lasthandoff: 05/03/2018
 |**typedPlural**|物件集合名稱。|  
 |**typedParent**|在父關聯性中所參考的物件名稱。|  
 |**typedChildren**|從子關聯性傳回物件的方法名稱。|  
-|**nullValue**|值，如果基礎值為**DBNull**。 請參閱下的表針對**nullValue**註解。 預設值是 **_throw**。|  
+|**nullValue**|如果基礎值是值**DBNull**。 請參閱下列表格**nullValue**註解。 預設值是 **_throw**。|  
   
- 下表顯示可以針對指定的值**nullValue**註解。  
+ 下表顯示可針對指定的值**nullValue**註釋。  
   
 |nullValue 值|描述|  
 |---------------------|-----------------|  
 |*取代值*|指定要傳回的值。 傳回值必須與項目的型別相符。 例如，使用 `nullValue="0"` 可為 null 整數欄位傳回 0。|  
 |**_throw**|擲回例外狀況。 這是預設值。|  
 |**_null**|如果遇到基本型別，則會傳回 Null 參考或發生例外狀況。|  
-|**_empty**|字串，則傳回**String.Empty**，否則會傳回空的建構函式從建立物件。 如果遇到基本型別，則會發生例外狀況。|  
+|**_empty**|針對字串，傳回**String.Empty**，否則會傳回空的建構函式建立的物件。 如果遇到基本型別，則會發生例外狀況。|  
   
- 下表顯示在具類型之物件的預設值**資料集**和可用的註釋。  
+ 下表顯示之物件的預設值，在具型別**資料集**和可用的註解。  
   
 |物件/方法/事件|預設|註釋|  
 |---------------------------|-------------|----------------|  
 |**DataTable**|TableNameDataTable|typedPlural|  
 |**DataTable**方法|NewTableNameRow<br /><br /> AddTableNameRow<br /><br /> DeleteTableNameRow|typedName|  
 |**DataRowCollection**|TableName|typedPlural|  
-|**dataRow**|TableNameRow|typedName|  
+|**DataRow**|TableNameRow|typedName|  
 |**DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|typedName|  
 |**Property**|PropertyName|typedName|  
 |**子**存取子|GetChildTableNameRows|typedChildren|  
 |**父**存取子|TableNameRow|typedParent|  
 |**資料集**事件|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
   
- 若使用具型別**資料集**註解，您必須包含下列**xmlns** XML 結構描述定義語言 (XSD) 結構描述中的參考。 (若要從資料庫資料表建立 xsd，請參閱<xref:System.Data.DataSet.WriteXmlSchema%2A>或[使用 Visual Studio 中的資料集](http://msdn.microsoft.com/library/8bw9ksd6.aspx))。  
+ 若使用具型別**資料集**註解，您必須包含下列**xmlns** XML 結構描述定義語言 (XSD) 結構描述中的參考。 (若要從資料庫資料表建立 xsd，請參閱<xref:System.Data.DataSet.WriteXmlSchema%2A>或是[使用 Visual Studio 中的資料集](https://msdn.microsoft.com/library/8bw9ksd6.aspx))。  
   
 ```  
 xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  
 ```  
   
- 以下是範例的註解式結構描述會公開**客戶**資料表**Northwind**資料庫的關聯性**訂單**包含資料表中。  
+ 以下是範例的註解式結構描述會公開**客戶**的資料表**Northwind**資料庫的關聯**訂單**包含的資料表。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -133,7 +134,7 @@ codegen:typedParent="Customer" codegen:typedChildren="GetOrders">
 </xs:schema>  
 ```  
   
- 下列程式碼範例會使用強型別**資料集**從範例結構描述建立。 它會使用其中一個<xref:System.Data.SqlClient.SqlDataAdapter>填入**客戶**資料表，而另一個<xref:System.Data.SqlClient.SqlDataAdapter>填入**訂單**資料表。 強型別**資料集**定義**Datarelation**。  
+ 下列程式碼範例會使用強型別**資料集**從範例結構描述建立。 它會使用其中一個<xref:System.Data.SqlClient.SqlDataAdapter>來填入**客戶**資料表，另一個<xref:System.Data.SqlClient.SqlDataAdapter>填入**訂單**資料表。 強型別**資料集**定義**Datarelation**。  
   
 ```vb  
 ' Assumes a valid SqlConnection object named connection.  
@@ -158,7 +159,7 @@ AddHandler customers.Customers.CustomerChanged, &
   
 ' Add a strongly typed DataRow.  
 Dim newCustomer As CustomerDataSet.Customer = _  
-    customers.Customers.NewCustomeromer()  
+    customers.Customers.NewCustomer()  
 newCustomer.CustomerID = "NEW01"  
 newCustomer.CompanyName = "My New Company"  
 customers.Customers.AddCustomer(newCustomer)  
@@ -202,7 +203,7 @@ customers.Customers.CustomerChanged += new
   
 // Add a strongly typed DataRow.  
 CustomerDataSet.Customer newCustomer =   
-    customers.Customers.NewCustomeromer();  
+    customers.Customers.NewCustomer();  
 newCustomer.CustomerID = "NEW01";  
 newCustomer.CompanyName = "My New Company";  
 customers.Customers.AddCustomer(newCustomer);  
@@ -226,4 +227,4 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
  <xref:System.Data.DataSet>  
  [具類型的 DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)  
  [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

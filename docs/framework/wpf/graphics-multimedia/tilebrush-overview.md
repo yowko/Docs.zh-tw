@@ -9,11 +9,11 @@ helpviewer_keywords:
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
 ms.openlocfilehash: e590732419396660221aa781e3c333311b6e88b4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480902"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505135"
 ---
 # <a name="tilebrush-overview"></a>TileBrush 概觀
 <xref:System.Windows.Media.TileBrush> 物件可讓您充分掌控使用影像，繪製區域的足夠<xref:System.Windows.Media.Drawing>，或<xref:System.Windows.Media.Visual>。 本主題描述如何使用<xref:System.Windows.Media.TileBrush>功能以獲得更充分掌控如何<xref:System.Windows.Media.ImageBrush>， <xref:System.Windows.Media.DrawingBrush>，或<xref:System.Windows.Media.VisualBrush>繪製區域。  

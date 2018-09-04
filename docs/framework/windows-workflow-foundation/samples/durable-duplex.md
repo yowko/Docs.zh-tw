@@ -2,18 +2,18 @@
 title: 永久性雙工
 ms.date: 03/30/2017
 ms.assetid: 4e76d1a1-f3d8-4a0f-8746-4a322cdff6eb
-ms.openlocfilehash: 3df5ba962ef33594df1eaebc20789fa9e2d35244
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 107c617fa4a8ee0279dcaa07e495587c617b866e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809423"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513349"
 ---
 # <a name="durable-duplex"></a>永久性雙工
-這個範例示範如何安裝及設定使用訊息活動中 Windows Workflow Foundation (WF) 的永久性雙工訊息交換。 永久性的雙工訊息交換是長時間進行的雙向訊息交換。 此訊息交換的存留期間可能比通訊通道的存留期間以及服務執行個體的記憶體中存留期間還要長。  
+此範例示範如何安裝及設定使用傳訊活動中 Windows Workflow Foundation (WF) 的永久性雙工訊息交換。 永久性的雙工訊息交換是長時間進行的雙向訊息交換。 此訊息交換的存留期間可能比通訊通道的存留期間以及服務執行個體的記憶體中存留期間還要長。  
   
 ## <a name="sample-details"></a>範例詳細資料  
- 在此範例中，使用 Windows Workflow Foundation 實作兩個 Windows Communication Foundation (WCF) 服務會設定成具有永久性雙工訊息交換。 永久性雙工訊息交換由兩個單向訊息透過 MSMQ 傳送並使用相互關聯[.NET Context Exchange](http://go.microsoft.com/fwlink/?LinkID=166059)。 訊息是使用 <xref:System.ServiceModel.Activities.Send> 和 <xref:System.ServiceModel.Activities.Receive> 訊息活動來傳送。 .NET Context Exchange 用來在傳送的訊息上指定回呼位址。 兩個服務是透過使用 Windows Process Activation Services (WAS) 所主控，並設定為啟用服務執行個體的持續性。  
+ 在此範例中，使用 Windows Workflow Foundation 實作的兩個 Windows Communication Foundation (WCF) 服務已設定為擁有的永久性雙工訊息交換。 此永久性的雙工訊息交換由兩個單向訊息透過 MSMQ 傳送並使用相互關聯[.NET Context Exchange](https://go.microsoft.com/fwlink/?LinkID=166059)。 訊息是使用 <xref:System.ServiceModel.Activities.Send> 和 <xref:System.ServiceModel.Activities.Receive> 訊息活動來傳送。 .NET Context Exchange 用來在傳送的訊息上指定回呼位址。 兩個服務是透過使用 Windows Process Activation Services (WAS) 所主控，並設定為啟用服務執行個體的持續性。  
   
  第一個服務 (Service1.xamlx) 會傳送要求給傳送服務 (Service2.xamlx)，使其做些工作。 一旦工作完成，Service2.xamlx 會傳回通知給 Service1.xamlx，表示工作已完成。 工作流程主控台應用程式會設定這些服務接聽的佇列，並傳送初始開始訊息以啟動 Service1.xamlx。 一旦 Service1.xamlx 從 Service2.xamlx 收到所要求工作已完成的通知，Service1.xamlx 會將結果儲存至 XML 檔案。 在等候回呼訊息時，Service1.xamlx 會使用預設 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> 保存其執行個體狀態。 Service2.xamlx 會在完成 Service1.xamlx 所要求工作的過程中保存其執行個體狀態。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "33809423"
 >  這個範例所使用的繫結並不安全。 當您部署應用程式時，應該根據應用程式的安全性需求來設定繫結。  
   
 > [!NOTE]
->  這個範例所使用的佇列不是異動式。 如需示範如何設定 WCF 使用交易佇列的訊息交換的範例，請參閱[MSMQ 啟用](../../../../docs/framework/wcf/samples/msmq-activation.md)範例。  
+>  這個範例所使用的佇列不是異動式。 如需示範如何設定使用交易式佇列的 WCF 訊息交換的範例，請參閱[MSMQ 啟用](../../../../docs/framework/wcf/samples/msmq-activation.md)範例。  
   
  由 Service1.xamlx 傳送至 Service2.xamlx 的訊息是透過設定有 Service2.xamlx 位址和先前定義之自訂繫結的用戶端端點所傳送。 從 Service2.xamlx 到 Service1.xamlx 的回呼是透過不含明確設定之位址的用戶端端點所傳送，因為位址是取自 Service1.xamlx 所傳送的回呼內容。 下列程式碼範例定義用戶端端點。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "33809423"
         aspnet_regiis -i  
         ```  
   
-    2.  執行[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]以管理員權限，以滑鼠右鍵按一下[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]，然後選取**系統管理員身分執行**。  
+    2.  執行[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]系統管理員權限，以滑鼠右鍵按一下[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]，然後選取**系統管理員身分執行**。  
   
     3.  使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 開啟 DurableDuplex.sln 檔案。  
   
@@ -128,23 +128,23 @@ ms.locfileid: "33809423"
   
     1.  若要執行 DurableDuplex 用戶端，按下 F5。  
   
-    2.  開啟**電腦管理**主控台執行`Compmgmt.msc`從命令提示字元。  
+    2.  開啟**電腦管理**主控台中的，執行`Compmgmt.msc`從命令提示字元。  
   
-    3.  展開**服務和應用程式**，**訊息佇列**。 **私用佇列**。  
+    3.  依序展開**服務和應用程式**， **Message Queuing**。 **私用佇列**。  
   
-    4.  以滑鼠右鍵按一下 durableduplex/service1.xamlx 和 durableduplex/service2.xamlx 佇列，並選取**屬性**。  
+    4.  以滑鼠右鍵按一下 durableduplex/service1.xamlx 和 durableduplex/service2.xamlx 佇列，然後選取**屬性**。  
   
-    5.  選取**安全性**索引標籤上，並允許**Everyone 接收訊息**，**查看訊息**和**傳送訊息**這兩個佇列的權限。  
+    5.  選取 **安全性**索引標籤，並允許**Everyone 接收訊息**，**查看訊息**並**傳送訊息**這兩個佇列權限。  
   
     6.  開啟 Internet Information Services (IIS) 管理員。  
   
-    7.  瀏覽至**伺服器**，**網站**， **Default Web site**，**私人**，**永久性雙工**選取**進階選項**。  
+    7.  瀏覽至**伺服器**，**站台**， **Default Web site**，**私人**，**永久性雙工**，然後選取**進階選項**。  
   
-    8.  變更**啟用的通訊協定**至**http，net.msmq**。  
+    8.  變更**啟用的通訊協定**要**http，net.msmq**。  
   
 4.  執行範例。  
   
-    1.  瀏覽至http://localhost/private/durableduplex/service1.xamlx和http://localhost/private/durableduplex/service2.xamlx以確保這兩個服務正在執行。  
+    1.  瀏覽至 http://localhost/private/durableduplex/service1.xamlx和 http://localhost/private/durableduplex/service2.xamlx以確保這兩項服務正在執行。  
   
     2.  按下 F5，執行 DurableDuplexClient。  
   
@@ -160,7 +160,7 @@ ms.locfileid: "33809423"
   
 2.  移除服務的虛擬應用程式。  
   
-    1.  開啟 網際網路資訊服務 (IIS) 管理員執行`Inetmgr.exe`從命令提示字元。  
+    1.  開啟 [Internet Information Services (IIS) 管理員]，請執行`Inetmgr.exe`從命令提示字元。  
   
     2.  瀏覽至預設的網站，並移除**私人**虛擬目錄。  
   
@@ -168,7 +168,7 @@ ms.locfileid: "33809423"
   
     1.  開啟 [電腦管理] 主控台執行`Compmgmt.msc`從命令提示字元。  
   
-    2.  展開**服務和應用程式**，**訊息佇列**，**私用佇列**。  
+    2.  依序展開**服務和應用程式**， **Message Queuing**，**私用佇列**。  
   
     3.  刪除 durableduplex/service1.xamlx 和 durableduplex/service2.xamlx 佇列。  
   
@@ -179,6 +179,6 @@ ms.locfileid: "33809423"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\DurableDuplex`

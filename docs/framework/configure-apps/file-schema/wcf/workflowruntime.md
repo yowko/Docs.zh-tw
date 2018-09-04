@@ -3,11 +3,11 @@ title: '&lt;workflowRuntime&gt;'
 ms.date: 03/30/2017
 ms.assetid: 304c70fa-78d1-4d0f-b89f-0ca23d734c6f
 ms.openlocfilehash: 849b09936f303c21fe55a6a46d561590c6a4c808
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43455753"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504957"
 ---
 # <a name="ltworkflowruntimegt"></a>&lt;workflowRuntime&gt;
 指定的執行個體設定<xref:System.Workflow.Runtime.WorkflowRuntime>用於裝載工作流程為基礎的 Windows Communication Foundation (WCF) 服務。  

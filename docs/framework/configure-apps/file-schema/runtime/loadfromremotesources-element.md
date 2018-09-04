@@ -8,11 +8,11 @@ ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7a8858059159edddb4456561719c572fb9268be7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484063"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509479"
 ---
 # <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt;項目
 指定是否從遠端來源載入的組件，應該就會具有完全信任，在.NET Framework 4 和更新版本。

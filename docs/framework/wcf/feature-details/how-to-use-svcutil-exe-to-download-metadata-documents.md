@@ -3,11 +3,11 @@ title: HOW TO：使用 Svcutil.exe 來下載中繼資料文件
 ms.date: 03/30/2017
 ms.assetid: 15524274-3167-4627-b722-d6cedb9fa8c6
 ms.openlocfilehash: 75068608c2b44ab772175aba7af8d8123457fb7c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403555"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510945"
 ---
 # <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>HOW TO：使用 Svcutil.exe 來下載中繼資料文件
 您可以使用 Svcutil.exe 從正在執行的服務下載中繼資料，並將該中繼資料儲存至本機檔案。 對於 HTTP 和 HTTPS URL 配置，Svcutil.exe 會嘗試使用 Ws-metadataexchange 擷取中繼資料並[XML Web Service 探索](https://go.microsoft.com/fwlink/?LinkId=94950)。 對於所有其他的 URL 配置，Svcutil.exe 只會使用 WS-MetadataExchange。  

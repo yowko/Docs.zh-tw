@@ -9,11 +9,11 @@ ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 983c38567667da911132217dcfda37c009dc833c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423481"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504125"
 ---
 # <a name="clr-etw-events"></a>CLR ETW 事件
 本節中的主題描述 Windows (ETW) 事件的事件追蹤。 每個事件都有相關聯的關鍵字和層級，如 [CLR ETW 關鍵字和層級](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)主題中所述。 CLR 具有事件的兩個提供者：  

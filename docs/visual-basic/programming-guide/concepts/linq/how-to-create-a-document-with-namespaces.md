@@ -3,11 +3,11 @@ title: 如何：建立包含命名空間的文件 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cc5b0d4d-360c-4ada-94fa-2d2916e989be
 ms.openlocfilehash: 204d8a9cbb6ce47c6334c7309d27910c75b90ae0
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42754169"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43499922"
 ---
 # <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>如何：建立包含命名空間的文件 (LINQ to XML) (Visual Basic)
 本主題顯示如何在 Visual Basic 中建立具有命名空間 (Namespace) 的文件。  

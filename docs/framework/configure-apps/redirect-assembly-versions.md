@@ -11,12 +11,12 @@ ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 3459ebd2f1df38ac70e9211fd4865e227cd996cb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: aad369b35837089d05f5d7517e023671f0178011
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759266"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507800"
 ---
 # <a name="redirecting-assembly-versions"></a>重新導向組件版本
 您可以將編譯時間繫結參考重新導向至 .NET Framework 組件、協力廠商組件或您自己的應用程式組件。 您可以用多種方式將應用程式重新導向為使用其他版本的組件：透過發行者原則、透過應用程式設定檔或透過電腦設定檔。 本文討論 .NET Framework 中的組件繫結如何運作，以及其設定方式。  
@@ -66,11 +66,11 @@ ms.locfileid: "32759266"
   
  `<bindingRedirect oldVersion="1.0.0.0" newVersion="2.0.0.0" />`  
   
- 如果您的應用程式以 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)]中的舊版 .NET Framework 為目標，您可以啟用自動繫結重新導向。 您可以為任何組件提供 app.config 檔中的繫結重新導向資訊，藉此覆寫此預設行為，或關閉繫結重新導向功能。 如需如何開啟或關閉這項功能的資訊，請參閱[How to： 啟用和停用自動繫結重新導向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)。  
+ 如果您的應用程式以 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)]中的舊版 .NET Framework 為目標，您可以啟用自動繫結重新導向。 您可以為任何組件提供 app.config 檔中的繫結重新導向資訊，藉此覆寫此預設行為，或關閉繫結重新導向功能。 如需有關如何開啟或關閉這項功能的資訊，請參閱 <<c0> [ 如何： 啟用和停用自動繫結重新導向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)。  
   
 <a name="bypass_PP"></a>   
 ### <a name="bypassing-publisher-policy"></a>略過發行者原則  
- 您可以在必要時覆寫應用程式設定檔中的發行者原則。 例如，宣告與舊版相容的新版組件仍可能中斷應用程式。 如果您想略過發行者原則，新增[ \<p >](../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md)元素[ \<dependentAssembly >](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)組與應用程式組態檔中的項目**套用**屬性**沒有**，它會覆寫任何先前**是**設定。  
+ 您可以在必要時覆寫應用程式設定檔中的發行者原則。 例如，宣告與舊版相容的新版組件仍可能中斷應用程式。 如果您想略過發行者原則，新增[ \<publisherPolicy >](../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md)項目[ \<dependentAssembly >](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)組與應用程式組態檔中的項目**套用**屬性設定為**沒有**，它會覆寫任何先前**是**設定。  
   
  `<publisherPolicy apply="no" />`  
   
@@ -86,7 +86,7 @@ ms.locfileid: "32759266"
   
  下列程式碼範例示範多種繫結重新導向情節。 此範例為一個範圍的 `myAssembly`版本指定重新導向，並為 `mySecondAssembly`指定單一繫結重新導向。 範例同時指定發行者原則檔不會覆寫 `myThirdAssembly`的繫結重新導向。  
   
- 要繫結組件，您必須指定字串"描述 urn:-microsoft-: asm.v1"與**xmlns**屬性[ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)標記。  
+ 要繫結組件，您必須指定字串"urn: schemas-microsoft-microsoft-com:asm.v1"與**xmlns**屬性中[ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)標記。  
   
 ```xml  
 <configuration>  
@@ -120,7 +120,7 @@ ms.locfileid: "32759266"
 ```  
   
 ### <a name="limiting-assembly--bindings-to-a-specific-version"></a>將組件繫結限制在特定版本  
- 您可以使用**appliesTo**屬性[ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)重新導向組件繫結參考至特定版本的.NET 應用程式組態檔中的項目架構。 這個選擇性屬性會使用 .NET Framework 版本號碼，以表示它適用於哪一個版本。 如果未指定 **appliesTo** 屬性，則 [\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) 項目會套用至所有的 .NET Framework 版本。  
+ 您可以使用**appliesTo**屬性上[ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)程式來重新導向至特定版本的.net 組件繫結參考的應用程式組態檔中的項目架構。 這個選擇性屬性會使用 .NET Framework 版本號碼，以表示它適用於哪一個版本。 如果未指定 **appliesTo** 屬性，則 [\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) 項目會套用至所有的 .NET Framework 版本。  
   
  例如，若要將 .NET Framework 3.5 組件的組件繫結重新導向，您會將下列 XML 程式碼加入您的應用程式設定檔中。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "32759266"
  [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [設定應用程式](../../../docs/framework/configure-apps/index.md)  
- [設定.NET Framework 應用程式](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
+ [設定.NET Framework 應用程式](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
  [執行階段設定結構描述](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../docs/framework/configure-apps/file-schema/index.md)  
  [如何：建立發行者原則](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)

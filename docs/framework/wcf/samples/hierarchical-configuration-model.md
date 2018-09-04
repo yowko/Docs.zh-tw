@@ -2,12 +2,12 @@
 title: 階層式組態模型
 ms.date: 03/30/2017
 ms.assetid: 28dcc698-226c-4b77-9e51-8bf45a36216c
-ms.openlocfilehash: ce0bc69424495594e0ee9c6b950a5fa9c4d5f993
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 8ca9b01eb022e2e2ab940866a6230e8227ceb2dc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43000097"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43499337"
 ---
 # <a name="hierarchical-configuration-model"></a>階層式組態模型
 此範例示範如何針對服務實作組態檔的階層。 它也會示範如何從階層中較高的層級繼承繫結、服務行為與端點行為。  
@@ -69,9 +69,9 @@ public interface IDesc
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigHierarchicalModel`  
   
 ## <a name="see-also"></a>另請參閱  
- [AppFabric 管理範例](http://go.microsoft.com/fwlink/?LinkId=193960)
+ [AppFabric 管理範例](https://go.microsoft.com/fwlink/?LinkId=193960)

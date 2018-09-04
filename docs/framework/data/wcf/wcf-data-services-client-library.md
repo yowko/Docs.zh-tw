@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DataServiceContext class, about DataServiceContext class
 ms.assetid: 21075e50-8917-413e-a8ea-35a0f6e65aa5
 ms.openlocfilehash: 4f389530b287d1c7a11a88972ef948347d3ea533
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421591"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508956"
 ---
 # <a name="wcf-data-services-client-library"></a>WCF 資料服務用戶端程式庫
 任何可以傳送 HTTP 要求並處理資料服務傳回之 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 摘要的應用程式，都可以與 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 型資料服務互動。 這個互通性可讓您存取許多 Web 架構應用程式的 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 型服務。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 包含提供更豐富的程式設計體驗，當您使用的用戶端程式庫[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]從.NET Framework 或 Silverlight 架構應用程式摘要。  

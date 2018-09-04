@@ -3,11 +3,11 @@ title: ADO.NET 技術選項和方針
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
 ms.openlocfilehash: 7312b2eae0e307fa50c89d37918403ee33412ec3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403931"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507988"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>ADO.NET 技術選項和方針
 ADO.NET 資料平台是一種多重發行策略，可讓開發人員針對概念實體資料模型進行程式設計，藉以減少所需程式碼和維護的工作量。 這個平台包含 ADO.NET Entity Framework 和相關的技術。  

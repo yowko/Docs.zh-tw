@@ -10,11 +10,11 @@ helpviewer_keywords:
 - key frames [WPF], animating colors with
 ms.assetid: ab04ffa6-4de9-4d5b-a3b4-4e35d5b2ef35
 ms.openlocfilehash: cb09a54df3d99e05e89ec0f3d9f17b0e9fe78647
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43419073"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501174"
 ---
 # <a name="how-to-animate-color-by-using-key-frames"></a>操作說明：使用主要畫面格建立色彩的動畫
 此範例示範如何建立動畫<xref:System.Windows.Media.SolidColorBrush.Color%2A>的<xref:System.Windows.Media.SolidColorBrush>使用主要畫面格。  

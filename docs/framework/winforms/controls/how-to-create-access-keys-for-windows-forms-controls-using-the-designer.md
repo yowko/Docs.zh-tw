@@ -15,22 +15,22 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4c374c4c-4ca9-4a68-ac96-9dc3ab0f518a
-ms.openlocfilehash: 023973e7fa4ab1e8b802d8c7cd8abef8201ed720
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d077de1636888f0e3b763344206692fee2cb2296
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532547"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502967"
 ---
 # <a name="how-to-create-access-keys-for-windows-forms-controls-using-the-designer"></a>如何：使用設計工具建立 Windows Form 控制項的便捷鍵
-*便捷鍵*是功能表或功能表項目，例如按鈕控制項的標籤文字中加底線的字元。 它可讓使用者 「 按一下 」 按鈕，然後按下 ALT 鍵組合中的預先定義的存取金鑰。 例如，按鈕會執行程序來列印表單中，因此其`Text`屬性設定為"Print"，新增以連字號 (&)"P"字母"P"加上底線的按鈕文字會在執行期間造成的字母前面。 使用者可以執行命令與按鈕按下 ALT + P 關聯。 您不能有無法接收焦點的控制項的便捷鍵。  
+*便捷鍵*是功能表、 功能表項目，或按鈕等控制項的標籤文字中加上底線的字元。 它可讓使用者 「 按一下 」 按鈕，然後按下 ALT 鍵組合中的預先定義的存取金鑰。 例如，如果按鈕會執行將表單，列印程序，因此其`Text`屬性設定為"Print"，將連字號 (&)"P"會導致字母"P"會加上底線的按鈕文字在執行階段的字母前面。 使用者可以執行命令與按鈕關聯，藉由按下 ALT + P。 您不能有無法接收焦點的控制項的便捷鍵。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 ### <a name="to-create-an-access-key-for-a-control"></a>若要建立控制項的便捷鍵  
   
-1.  在**屬性**視窗中，將`Text`屬性為字串，包含連字號 (&) 會成為存取索引鍵的字母前面。 例如，若要將設定字母"P"的存取金鑰，請輸入 **& 列印**到方格內。  
+1.  在 **屬性**視窗中，將`Text`屬性設為字串，包含連字號 (&) 要存取的索引鍵的字母前面。 例如，若要設定為便捷鍵的字母"P"，輸入**列印 &** 到方格內。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.Button>  

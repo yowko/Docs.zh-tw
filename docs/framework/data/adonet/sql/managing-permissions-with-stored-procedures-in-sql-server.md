@@ -3,11 +3,11 @@ title: 使用預存程序管理 SQL Server 中的權限
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
 ms.openlocfilehash: e6161195682964ac9063cbee65d26ade601ef66c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425194"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501684"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>使用預存程序管理 SQL Server 中的權限
 為資料庫建立多重防線的方法之一，就是使用預存程序 (Stored Procedure) 或使用者定義的函式來實作所有資料存取。 您可以撤銷或拒絕基礎物件 (例如資料表) 的所有權限，然後在預存程序上授與 EXECUTE 權限。 如此即可有效地在資料和資料庫物件周圍建立安全性防線。  

@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 26dfac36-ae23-4909-9867-62495b55fb5e
-ms.openlocfilehash: 6492b08b45cf9e7767a14233c6aeb0dd648a3c82
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c3d870e9e5ad8129a5cf24c63c2a7884e91f9630
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520298"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43498983"
 ---
 # <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>HOW TO：更新執行中工作流程執行個體的定義
-動態更新提供的機制可讓工作流程應用程式開發人員更新持續性工作流程執行個體的工作流程定義。 必要的變更可以是實作錯誤修復、新要求，或是適應突如其來的變化。 此教學課程中的步驟示範如何使用動態更新來修改保存的執行個體`v1`數字猜測工作流程來比對中引進的新功能[How to： 主機的工作流程-並存的多個版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
+動態更新提供的機制可讓工作流程應用程式開發人員更新持續性工作流程執行個體的工作流程定義。 必要的變更可以是實作錯誤修復、新要求，或是適應突如其來的變化。 此教學課程中的步驟示範如何使用動態更新來修改保存的執行個體`v1`數字猜測工作流程來比對中引進的新功能[How to： 主應用程式的工作流程-並存的多個版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
   
 > [!NOTE]
->  若要下載完整的版或觀看影片逐步解說的教學課程，請參閱[Windows Workflow Foundation (WF45)-入門教學課程](http://go.microsoft.com/fwlink/?LinkID=248976)。  
+>  若要下載完整的版或觀看視訊逐步解說教學課程，請參閱[Windows Workflow Foundation (WF45)-入門教學課程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
   
 ## <a name="in-this-topic"></a>本主題內容  
   
@@ -42,26 +42,26 @@ ms.locfileid: "33520298"
   
 ###  <a name="BKMK_CreateProject"></a> 若要建立 CreateUpdateMaps 專案  
   
-1.  以滑鼠右鍵按一下**WF45GettingStartedTutorial**中**方案總管 中**選擇**新增**，**新專案**。  
+1.  以滑鼠右鍵按一下**WF45GettingStartedTutorial**中**方案總管**，然後選擇 **新增**，**新專案**。  
   
-2.  在**已安裝**節點中，選取**Visual C#**， **Windows** (或**Visual Basic**， **Windows**)。  
+2.  在 **已安裝**節點中，選取**Visual C#**， **Windows** (或**Visual Basic**， **Windows**)。  
   
     > [!NOTE]
     >  依據設定哪個程式語言為 Visual Studio 主要語言而異，[ **Visual C#** ] 或 [ **Visual Basic** ] 節點可能會顯示在 [ **已安裝** ] 節點中的 [ **其他語言** ] 節點下。  
   
-     確認已選取 [.NET Framework 版本] 下拉式清單中的 [ **.NET Framework 4.5** ]。 選取**主控台應用程式**從**Windows**清單。 型別**CreateUpdateMaps**到**名稱**方塊，然後按一下**確定**。  
+     確認已選取 [.NET Framework 版本] 下拉式清單中的 [ **.NET Framework 4.5** ]。 選取 **主控台應用程式**從**Windows**清單。 型別**CreateUpdateMaps**成**名稱**方塊，然後按一下**確定**。  
   
-3.  以滑鼠右鍵按一下**CreateUpdateMaps**中**方案總管 中**選擇**加入參考**。  
+3.  以滑鼠右鍵按一下**CreateUpdateMaps**中**方案總管**，然後選擇 **加入參考**。  
   
-4.  選取**Framework**從**組件**節點**加入參考**清單。 型別**System.Activities**到**搜尋組件**方塊以篩選組件，並讓您更容易選取所需的參考。  
+4.  選取  **Framework**從**組件**節點中的**加入參考**清單。 型別**System.Activities**成**搜尋組件**方塊，以篩選組件，並讓您更容易選取所需的參考。  
   
-5.  核取方塊旁的**System.Activities**從**搜尋結果**清單。  
+5.  核取方塊旁邊**System.Activities**從**搜尋結果**清單。  
   
-6.  型別**序列化**到**搜尋組件**方塊中，並檢查旁邊的核取方塊**System.Runtime.Serialization**從**搜尋結果**清單。  
+6.  型別**序列化**成**搜尋組件**方塊，然後選取旁邊的核取方塊**System.Runtime.Serialization**從**搜尋結果**清單。  
   
-7.  型別**System.Xaml**到**搜尋組件**方塊中，並檢查旁邊的核取方塊**System.Xaml**從**搜尋結果**清單。  
+7.  型別**System.Xaml**成**搜尋組件**方塊，然後選取旁邊的核取方塊**System.Xaml**從**搜尋結果**清單。  
   
-8.  按一下**確定**關閉**參考管理員**並加入參考。  
+8.  按一下  **確定**以關閉**參考管理員**並新增參考。  
   
 9. 將下列 `using` (或 `Imports`) 陳述式加入至檔案最上方的其他 `using` (或 `Imports`) 陳述式。  
   
@@ -256,7 +256,7 @@ ms.locfileid: "33520298"
     StateMachine sm = wf.Implementation as StateMachine;  
     ```  
   
-3.  接下來，更新兩個運算式`WriteLine`活動顯示使用者的猜測是太大或太小，使其一致中所做的更新是否[How to： 主機的工作流程-並存的多個版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。  
+3.  接下來，更新兩個運算式`WriteLine`活動，顯示使用者的猜測是否過高或太低，使其符合所做的更新[How to： 主應用程式的工作流程-並存的多個版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。  
   
     ```vb  
     'Update the Text of the two WriteLine activities that write the  
@@ -636,12 +636,12 @@ ms.locfileid: "33520298"
     }  
     ```  
   
-2.  以滑鼠右鍵按一下**CreateUpdateMaps**中**方案總管 中**選擇**設定為啟始專案**。  
+2.  以滑鼠右鍵按一下**CreateUpdateMaps**中**方案總管**，然後選擇 **設定為啟始專案**。  
   
 3.  按 CTRL + SHIFT + B 建置方案，然後按 CTRL + F5 執行 `CreateUpdateMaps` 應用程式。  
   
     > [!NOTE]
-    >  `CreateUpdateMaps`應用程式不會顯示任何狀態資訊，執行時，但如果您查看**NumberGuessWorkflowActivities_du**資料夾和**PreviousVersions**資料夾，您會看到已更新工作流程定義檔和更新對應。  
+    >  `CreateUpdateMaps`應用程式不會顯示任何狀態資訊，同時執行，但如果您查看**NumberGuessWorkflowActivities_du**資料夾， **PreviousVersions**您會看到的資料夾更新的工作流程定義檔案並更新對應。  
   
      建立更新對應並更新工作流程定義後，下一步就是建置包含更新定義的更新工作流程組件。  
   
@@ -649,19 +649,19 @@ ms.locfileid: "33520298"
   
 1.  開啟第二個 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 執行個體。  
   
-2.  選擇**開啟**，**專案/方案**從**檔案**功能表。  
+2.  選擇**開放**，**專案/方案**從**檔案**功能表。  
   
-3.  瀏覽至**NumberGuessWorkflowActivities_du**您在建立的資料夾[How to： 主機的工作流程-並存的多個版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)，選取**NumberGuessWorkflowActivities.csproj** (或**vbproj**)，然後按一下**開啟**。  
+3.  瀏覽至**NumberGuessWorkflowActivities_du**資料夾中建立[How to： 主應用程式的工作流程-並存的多個版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)，選取**NumberGuessWorkflowActivities.csproj** (或**vbproj**)，然後按一下**開啟**。  
   
-4.  在**方案總管 中**，以滑鼠右鍵按一下**SequentialNumberGuessWorkflow.xaml**選擇**從專案移除**。 執行相同的動作， **FlowchartNumberGuessWorkflow.xaml**和**StateMachineNumberGuessWorkflow.xaml**。 此步驟會從專案中移除舊版的工作流程定義。  
+4.  在 **方案總管 中**，以滑鼠右鍵按一下**SequentialNumberGuessWorkflow.xaml** ，然後選擇 **從專案移除**。 執行相同的動作**FlowchartNumberGuessWorkflow.xaml**並**StateMachineNumberGuessWorkflow.xaml**。 此步驟會從專案中移除舊版的工作流程定義。  
   
 5.  選擇**加入現有項目**從**專案**功能表。  
   
-6.  瀏覽至**NumberGuessWorkflowActivities_du**您在建立的資料夾[How to： 主機的工作流程-並存的多個版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。  
+6.  瀏覽至**NumberGuessWorkflowActivities_du**資料夾中建立[How to： 主應用程式的工作流程-並存的多個版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。  
   
-7.  選擇**XAML 檔案 (\*.xaml;\*。xoml)** 從**檔案類型**下拉式清單。  
+7.  選擇**XAML 檔案 (\*.xaml;\*。xoml)** 從**類型的檔案**下拉式清單。  
   
-8.  選取**SequentialNumberGuessWorkflow_du.xaml**， **FlowchartNumberGuessWorkflow_du.xaml**，和**StateMachineNumberGuessWorkflow_du.xaml**按一下**新增**。  
+8.  選取  **SequentialNumberGuessWorkflow_du.xaml**， **FlowchartNumberGuessWorkflow_du.xaml**，並**StateMachineNumberGuessWorkflow_du.xaml** ，按一下  **新增**。  
   
     > [!NOTE]
     >  按住 CTRL + 按一下以同時選取多個項目。  
@@ -670,17 +670,17 @@ ms.locfileid: "33520298"
   
 9. 按 CTRL+SHIFT+B 以建置專案。  
   
-10. 選擇**關閉方案**從**檔案**功能表。 方案檔的專案不是必要項目，因此按一下**否**以關閉 Visual Studio，而不儲存方案檔。 選擇**結束**從**檔案**以關閉 Visual Studio 的功能表。  
+10. 選擇**關閉方案**從**檔案**功能表。 方案檔的專案不是必要的因此請按一下**No**以關閉 Visual Studio，而不儲存方案檔。 選擇**結束**從**檔案**以關閉 Visual Studio 的功能表。  
   
 11. 開啟 Windows 檔案總管並瀏覽至**NumberGuessWorkflowActivities_du\bin\Debug**資料夾 (或**bin\Release**取決於您的專案設定)。  
   
-12. 重新命名**NumberGuessWorkflowActivities.dll**至**NumberGuessWorkflowActivities_v15.dll**，並將它複製到**PreviousVersions** 中建立的資料夾[How to： 裝載工作流程-並存的多個版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。  
+12. 重新命名**NumberGuessWorkflowActivities.dll**要**NumberGuessWorkflowActivities_v15.dll**，並將它複製到**PreviousVersions** 中建立的資料夾[How to： 裝載工作流程-並存的多個版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。  
   
 ###  <a name="BKMK_UpdateWorkflowVersionMap"></a> 若要使用新的版本更新 WorkflowVersionMap  
   
 1.  切換回 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 的初始執行個體。  
   
-2.  按兩下**Numberguessworkflowhost** (或**Workflowversionmap.cs**) 下**NumberGuessWorkflowHost**專案加以開啟。  
+2.  按兩下**Numberguessworkflowhost** (或**Workflowversionmap.cs**) 底下**NumberGuessWorkflowHost**專案加以開啟。  
   
 3.  將三個新的工作流程識別加入到六個現有工作流程識別宣告的正下方。 在本教學課程中，會使用 `1.5.0.0` 做為動態更新識別的 `WorkflowIdentity.Version`。 這些新的 `v15` 工作流程識別，會為動態更新的持續性工作流程執行個體提供正確的工作流程定義。  
   
@@ -1065,30 +1065,30 @@ ms.locfileid: "33520298"
   
 ###  <a name="BKMK_ApplyUpdate"></a> 若要套用動態更新  
   
-1.  以滑鼠右鍵按一下**WF45GettingStartedTutorial**中**方案總管 中**選擇**新增**，**新專案**。  
+1.  以滑鼠右鍵按一下**WF45GettingStartedTutorial**中**方案總管**，然後選擇 **新增**，**新專案**。  
   
-2.  在**已安裝**節點中，選取**Visual C#**， **Windows** (或**Visual Basic**， **Windows**)。  
+2.  在 **已安裝**節點中，選取**Visual C#**， **Windows** (或**Visual Basic**， **Windows**)。  
   
     > [!NOTE]
     >  依據設定哪個程式語言為 Visual Studio 主要語言而異，[ **Visual C#** ] 或 [ **Visual Basic** ] 節點可能會顯示在 [ **已安裝** ] 節點中的 [ **其他語言** ] 節點下。  
   
-     確認已選取 [.NET Framework 版本] 下拉式清單中的 [ **.NET Framework 4.5** ]。 選取**主控台應用程式**從**Windows**清單。 型別**ApplyDynamicUpdate**到**名稱**方塊，然後按一下**確定**。  
+     確認已選取 [.NET Framework 版本] 下拉式清單中的 [ **.NET Framework 4.5** ]。 選取 **主控台應用程式**從**Windows**清單。 型別**ApplyDynamicUpdate**成**名稱**方塊，然後按一下**確定**。  
   
-3.  以滑鼠右鍵按一下**ApplyDynamicUpdate**中**方案總管 中**選擇**加入參考**。  
+3.  以滑鼠右鍵按一下**ApplyDynamicUpdate**中**方案總管**，然後選擇 **加入參考**。  
   
-4.  按一下**方案**旁的核取方塊和**NumberGuessWorkflowHost**。 `ApplyDynamicUpdate` 需要此參考才能使用 `NumberGuessWorkflowHost.WorkflowVersionMap` 類別。  
+4.  按一下 **解決方案**旁的核取方塊**NumberGuessWorkflowHost**。 `ApplyDynamicUpdate` 需要此參考才能使用 `NumberGuessWorkflowHost.WorkflowVersionMap` 類別。  
   
-5.  選取**Framework**從**組件**節點**加入參考**清單。 型別**System.Activities**到**搜尋組件**方塊。 如此即會篩選組件，讓您更容易選取所需的參考。  
+5.  選取  **Framework**從**組件**節點中的**加入參考**清單。 型別**System.Activities**成**搜尋組件** 方塊中。 如此即會篩選組件，讓您更容易選取所需的參考。  
   
-6.  核取方塊旁的**System.Activities**從**搜尋結果**清單。  
+6.  核取方塊旁邊**System.Activities**從**搜尋結果**清單。  
   
-7.  型別**序列化**到**搜尋組件**方塊中，並檢查旁邊的核取方塊**System.Runtime.Serialization**從**搜尋結果**清單。  
+7.  型別**序列化**成**搜尋組件**方塊，然後選取旁邊的核取方塊**System.Runtime.Serialization**從**搜尋結果**清單。  
   
-8.  型別**DurableInstancing**到**搜尋組件**方塊中，並檢查旁邊的核取方塊**System.runtime.durableinstancing**和**System.activities.durableinstancing**從**搜尋結果**清單。  
+8.  型別**DurableInstancing**成**搜尋組件**方塊，然後選取旁邊的核取方塊**System.Activities.DurableInstancing**並**System.activities.durableinstancing**從**搜尋結果**清單。  
   
-9. 按一下**確定**關閉**參考管理員**並加入參考。  
+9. 按一下  **確定**以關閉**參考管理員**並新增參考。  
   
-10. 以滑鼠右鍵按一下**ApplyDynamicUpdate**方案總管] 中，然後選擇 [**新增**，**類別**。 型別`DynamicUpdateInfo`到**名稱**方塊，然後按一下**新增**。  
+10. 以滑鼠右鍵按一下**ApplyDynamicUpdate**方案總管 中，然後選擇**新增**，**類別**。 型別`DynamicUpdateInfo`成**名稱**方塊，然後按一下**新增**。  
   
 11. 將下列兩個成員加入至 `DynamicUpdateInfo` 類別。 下列範例是已完成的 `DynamicUpdateInfo` 類別。 此類別包含更新對應的資訊，以及更新工作流程執行個體時所使用的新工作流程識別。  
   
@@ -1119,7 +1119,7 @@ ms.locfileid: "33520298"
     using System.Activities.DynamicUpdate;  
     ```  
   
-13. 按兩下**Program.cs** (或**Module1.vb**) 在 [方案總管]。  
+13. 按兩下**Program.cs** (或**Module1.vb**) 在 [方案總管] 中。  
   
 14. 將下列 `using` (或 `Imports`) 陳述式加入至檔案最上方的其他 `using` (或 `Imports`) 陳述式。  
   
@@ -1408,7 +1408,7 @@ ms.locfileid: "33520298"
     }  
     ```  
   
-20. 以滑鼠右鍵按一下**ApplyDynamicUpdate**中**方案總管 中**選擇**設定為啟始專案**。  
+20. 以滑鼠右鍵按一下**ApplyDynamicUpdate**中**方案總管**，然後選擇 **設定為啟始專案**。  
   
 21. 按下 CTRL + SHIFT + B 建置方案，然後按下 CTRL + F5 執行 `ApplyDynamicUpdate` 應用程式，並更新持續性工作流程執行個體。 您應該會看到類似下方的輸出。 1.0.0.0 版工作流程會更新為 1.5.0.0 版，但不會更新 2.0.0.0 版工作流程。  
   
@@ -1436,49 +1436,49 @@ ms.locfileid: "33520298"
 **檢查： FlowchartNumberGuessWorkflow;版本 = 2.0.0.0**   
 **檢查： SequentialNumberGuessWorkflow;版本 = 2.0.0.0**   
 **檢查： SequentialNumberGuessWorkflow;版本 = 2.0.0.0**   
-**請按任意鍵繼續...**  
+**按任意鍵繼續...**  
   
 ###  <a name="BKMK_BuildAndRun"></a> 若要更新的工作流程執行應用程式  
   
-1.  以滑鼠右鍵按一下**NumberGuessWorkflowHost**中**方案總管 中**選擇**設定為啟始專案**。  
+1.  以滑鼠右鍵按一下**NumberGuessWorkflowHost**中**方案總管**，然後選擇 **設定為啟始專案**。  
   
 2.  按 CTRL+F5 執行應用程式。  
   
-3.  按一下**新遊戲**啟動新的工作流程，並記下版本以下資訊指出工作流程狀態視窗是`v2`工作流程。  
+3.  按一下 **新遊戲**啟動新的工作流程，並記下版本以下的資訊指出工作流程的 狀態 視窗是`v2`工作流程。  
   
-4.  選取其中一個`v1`工作流程的開頭啟動[How to： 主機的工作流程-並存的多個版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)主題。 請注意在狀態視窗下的版本資訊，表示工作流程是版本**1.5.0.0**工作流程。 請注意，除太大或太小之外，沒有任何資訊指示先前的猜測。  
+4.  選取其中一個`v1`您開始在開頭的工作流程[How to： 主應用程式的工作流程-並存的多個版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)主題。 請注意，在狀態視窗下的版本資訊會表示工作流程是版本**1.5.0.0**工作流程。 請注意，除太大或太小之外，沒有任何資訊指示先前的猜測。  
   
  **請輸入介於 1 到 10 之間的數字**  
-**您猜得就太低。**  
+**您的猜測過低。**  
   
 5.  記下 `InstanceId`，然後輸入猜測值，直到工作流程完成。 狀態視窗會顯示猜測內容的相關資訊，因為動態更新已更新 `WriteLine` 活動。  
   
  **請輸入介於 1 到 10 之間的數字**  
-**您猜得就太低。**   
+**您的猜測過低。**   
 **請輸入介於 1 到 10 之間的數字**   
-**5 就太低。**   
+**5 是過低。**   
 **請輸入介於 1 到 10 之間的數字**   
 **7 太高。**   
 **請輸入介於 1 到 10 之間的數字**   
-**恭喜，您了 4 猜到數字。**  
+**恭喜，您猜數字到 4。**  
   
-6.  開啟 Windows 檔案總管並瀏覽至**NumberGuessWorkflowHost\bin\debug**資料夾 (或**bin\release**取決於您的專案設定)，然後開啟使用 [記事本]，對應的追蹤檔案若要完成的工作流程。 如果您未進行記下`InstanceId`您可以使用來識別正確的追蹤檔案**修改日期**Windows 檔案總管 中的資訊。 追蹤資訊的最後一行包含新加入之 `WriteLine` 活動的輸出。  
+6.  開啟 Windows 檔案總管並瀏覽至**NumberGuessWorkflowHost\bin\debug**資料夾 (或**bin\release**取決於您的專案設定)，並開啟追蹤檔案使用對應的 [記事本]若要完成的工作流程。 如果您未進行記`InstanceId`您可以使用來識別正確的追蹤檔案**修改日期**Windows 檔案總管中的資訊。 追蹤資訊的最後一行包含新加入之 `WriteLine` 活動的輸出。  
   
  **請輸入介於 1 到 10 之間的數字**  
-**您猜得就太低。**   
+**您的猜測過低。**   
 **請輸入介於 1 到 10 之間的數字**   
-**5 就太低。**   
+**5 是過低。**   
 **請輸入介於 1 到 10 之間的數字**   
 **7 太高。**   
 **請輸入介於 1 到 10 之間的數字**   
-**6 是正確的。您猜到它了 4。**  
+**6 是正確的。您猜猜看 4。**  
   
 ###  <a name="BKMK_StartPreviousVersions"></a> 若要啟用 啟動工作流程的舊版本  
  如果您執行完工作流程來進行更新，可以修改 `NumberGuessWorkflowHost` 應用程式，使其能啟動工作流程的舊版本。  
   
-1.  按兩下**WorkflowHostForm**中**方案總管 中**，然後選取**WorkflowType**下拉式方塊。  
+1.  按兩下**WorkflowHostForm**中**方案總管**，然後選取**WorkflowType**下拉式方塊。  
   
-2.  在**屬性**視窗中，選取**項目**屬性，然後按一下省略符號按鈕，以編輯**項目**集合。  
+2.  在 **屬性**視窗中，選取**項目**屬性，然後按一下省略符號按鈕，以編輯**項目**集合。  
   
 3.  將下列三個項目加入至集合。  
   
@@ -1499,9 +1499,9 @@ ms.locfileid: "33520298"
     SequentialNumberGuessWorkflow v1  
     ```  
   
-4.  按兩下**WorkflowHostForm**中**方案總管 中**，然後選取**檢視程式碼**。  
+4.  按兩下**WorkflowHostForm**中**方案總管**，然後選取**檢視程式碼**。  
   
-5.  將三個新案例加入`switch`(或`Select Case`) 中的陳述式`NewGame_Click`處理常式對應中的新項目**WorkflowType**下拉式方塊，以比對的工作流程識別。  
+5.  加入三個新案例`switch`(或`Select Case`) 中的陳述式`NewGame_Click`處理常式對應中的新項目**WorkflowType**下拉式方塊，以比對的工作流程識別。  
   
     ```vb  
     Case "SequentialNumberGuessWorkflow v1"  
@@ -1581,4 +1581,4 @@ ms.locfileid: "33520298"
     };  
     ```  
   
-6.  按 CTRL+F5 建置並執行應用程式。 您現在可以啟動工作流程的 `v1` 版本以及目前版本。 若要動態更新這些新執行個體，執行**ApplyDynamicUpdate**應用程式。
+6.  按 CTRL+F5 建置並執行應用程式。 您現在可以啟動工作流程的 `v1` 版本以及目前版本。 若要以動態方式更新這些新的執行個體，執行**ApplyDynamicUpdate**應用程式。

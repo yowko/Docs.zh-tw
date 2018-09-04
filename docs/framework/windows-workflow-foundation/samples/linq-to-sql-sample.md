@@ -2,22 +2,22 @@
 title: LINQ to SQL 範例
 ms.date: 03/30/2017
 ms.assetid: 5f39db9e-0e62-42c9-8c98-bb8b54cec98c
-ms.openlocfilehash: 3cfcaf3de1a22b8bb5505083f127a9888b99dbd8
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 83dc8433459f64860baaca2e8309fbc85e2bb3a2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806714"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515364"
 ---
 # <a name="linq-to-sql-sample"></a>LINQ to SQL 範例
 這個範例示範如何建立活動，以使用 SQL Server 資料庫資料表中的 LINQ to SQL 查詢實體。  
   
 > [!IMPORTANT]
->  WCF 範例可能已安裝在電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
+>  WCF 範例可能已經安裝在電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\Samples\WCFWFCardspace`  
 >   
->  如果此目錄不存在，請按一下頁面最上方的 [下載範例] 連結。 請注意，此連結會下載及安裝所有[!INCLUDE[wf1](../../../../includes/wf1-md.md)]，WCF，和[!INCLUDE[infocard](../../../../includes/infocard-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請按一下頁面最上方的 [下載範例] 連結。 請注意，此連結，下載並安裝的所有[!INCLUDE[wf1](../../../../includes/wf1-md.md)]，WCF 和[!INCLUDE[infocard](../../../../includes/infocard-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\Samples\WCFWFCardSpace\WF\Scenario\ActivityLibrary\Linq\LinqToSql`  
   
@@ -84,10 +84,10 @@ new FindInSqlTable<Employee>
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\Liiinq\LinqToSql`  
   
 ## <a name="see-also"></a>另請參閱  
- [LINQ to SQL](http://go.microsoft.com/fwlink/?LinkId=150376)  
- [使用者入門 (LINQ to SQL)](http://go.microsoft.com/fwlink/?LinkId=150377)
+ [LINQ to SQL](https://go.microsoft.com/fwlink/?LinkId=150376)  
+ [使用者入門 (LINQ to SQL)](https://go.microsoft.com/fwlink/?LinkId=150377)

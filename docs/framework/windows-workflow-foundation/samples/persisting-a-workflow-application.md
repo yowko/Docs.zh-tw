@@ -2,12 +2,12 @@
 title: 持續工作流程應用程式
 ms.date: 03/30/2017
 ms.assetid: abcff14c-f047-4195-ba26-d27f4a82c24e
-ms.openlocfilehash: e5c0cf23dd238c0c5a81519b5e6c415f4ef75f1d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c225a9ed56a742fce0aaff3704bab31dabb0b9a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519183"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500000"
 ---
 # <a name="persisting-a-workflow-application"></a>持續工作流程應用程式
 這個範例示範如何執行 <xref:System.Activities.WorkflowApplication>，當它變成閒置時加以卸載，然後重新載入以繼續執行。  
@@ -17,11 +17,11 @@ ms.locfileid: "33519183"
   
  範例工作流程是提示使用者輸入名稱的 <xref:System.Activities.Statements.WriteLine> 活動、透過繼續使用 `ReadLine` 接收名稱做為輸入的 <xref:System.Activities.Bookmark> 活動，以及對使用者回應祝賀詞的另一個 <xref:System.Activities.Statements.WriteLine>。 當工作流程等候輸入時，這會提供自然的保存點。 這通常稱為 <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Idle> 點。 每當工作流程程式可保存、正在等候書籤繼續，而且沒有其他工作正在執行時，<xref:System.Activities.WorkflowApplication> 就會引發 <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Idle> 事件。 在這個範例的工作流程中，在 `ReadLine` 活動開始執行之後，隨即出現該點。  
   
- A<xref:System.Activities.WorkflowApplication>並將設定為執行與持續性<!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore`。 這個範例會使用 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>。 <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore`必須指派給<xref:System.Activities.WorkflowApplication.InstanceStore%2A>屬性之後再<xref:System.Activities.WorkflowApplication>執行。  
+ A<xref:System.Activities.WorkflowApplication>設定為執行與持續性<!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore`。 這個範例會使用 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>。 <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore`必須指派給<xref:System.Activities.WorkflowApplication.InstanceStore%2A>屬性，才能<xref:System.Activities.WorkflowApplication>執行。  
   
  範例將處理常式加入至 <xref:System.Activities.WorkflowApplication.PersistableIdle%2A> 事件。 此事件處理常式傳回 <xref:System.Activities.WorkflowApplication>，藉以指示 <xref:System.Activities.PersistableIdleAction> 應該執行的工作。 如果傳回 <xref:System.Activities.PersistableIdleAction.Unload>，則會卸載 <xref:System.Activities.WorkflowApplication>。  
   
- 範例接著接受使用者輸入並將保存的工作流程載入至新的 <xref:System.Activities.WorkflowApplication>。 它是藉由建立新<xref:System.Activities.WorkflowApplication>、 重新建立<!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore`，並將執行個體，已完成和卸載事件產生關聯，然後再呼叫<xref:System.Activities.WorkflowApplication.Load%2A>目標工作流程執行個體的識別碼。 一旦取得執行個體，則會繼續使用 `ReadLine` 活動的書籤。 工作流程會從 `ReadLine` 活動中繼續執行，直到完成為止。 當工作流程完成並卸載<!--zz <xref:System.Runtime.Persistence.InstanceStore> -->`System.Runtime.Persistence.InstanceStore`最後一次呼叫以刪除工作流程。  
+ 範例接著接受使用者輸入並將保存的工作流程載入至新的 <xref:System.Activities.WorkflowApplication>。 它是藉由建立新<xref:System.Activities.WorkflowApplication>、 重新建立<!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore`，並將執行個體，已完成和卸載事件產生關聯，然後呼叫<xref:System.Activities.WorkflowApplication.Load%2A>與目標工作流程執行個體的識別碼。 一旦取得執行個體，則會繼續使用 `ReadLine` 活動的書籤。 工作流程會從 `ReadLine` 活動中繼續執行，直到完成為止。 當工作流程完成並卸載<!--zz <xref:System.Runtime.Persistence.InstanceStore> -->`System.Runtime.Persistence.InstanceStore`最後一次呼叫來刪除工作流程。  
   
 #### <a name="to-use-this-sample"></a>若要使用這個範例  
   
@@ -39,7 +39,7 @@ ms.locfileid: "33519183"
     > [!CAUTION]
     >  如果在非預設的 SQL Server 執行個體上安裝資料庫，請在建置方案之前，先更新程式碼中的連接字串。  
   
-4.  瀏覽至專案的 bin 目錄 (\WF\Basic\Persistence\InstancePersistence\bin\Debug) 中執行範例，以系統管理員權限[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]、 以滑鼠右鍵按一下 Workflow.exe 並選取**系統管理員身分執行**.  
+4.  瀏覽至專案的 bin 目錄 (\WF\Basic\Persistence\InstancePersistence\bin\Debug) 中，系統管理員權限執行此範例[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]、 以滑鼠右鍵按一下 Workflow.exe 並選取  **的系統管理員身分執行**.  
   
 #### <a name="to-remove-the-instance-store-database"></a>若要移除執行個體存放區資料庫  
   
@@ -52,9 +52,9 @@ ms.locfileid: "33519183"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\InstancePersistence`  
   
 ## <a name="see-also"></a>另請參閱  
- [AppFabric 主控與持續性範例](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric 主控與持續性範例](https://go.microsoft.com/fwlink/?LinkId=193961)

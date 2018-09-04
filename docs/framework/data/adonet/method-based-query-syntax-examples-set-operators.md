@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fa93af15-28af-4b5e-846b-897308410edb
 ms.openlocfilehash: 75918450d3e08436578b1535316f19d2adf32695
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43476231"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511253"
 ---
 # <a name="method-based-query-syntax-examples-set-operators-linq-to-dataset"></a>以方法為基礎的查詢語法範例：集合運算子 (LINQ to DataSet)
 本主題中的範例將示範如何使用<xref:System.Linq.Enumerable.Distinct%2A>， <xref:System.Linq.Enumerable.Except%2A>， <xref:System.Linq.Enumerable.Intersect%2A>，以及<xref:System.Linq.Enumerable.Union%2A>運算子，以執行一組資料列的值為基礎的比較作業。[載入資料至資料集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)請參閱 <<c12> [ 比較 Datarow](../../../../docs/framework/data/adonet/comparing-datarows-linq-to-dataset.md)如需有關<xref:System.Data.DataRowComparer>。  

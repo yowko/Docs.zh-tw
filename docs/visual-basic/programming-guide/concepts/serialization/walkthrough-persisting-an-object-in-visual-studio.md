@@ -3,11 +3,11 @@ title: 保存物件在 Visual Studio (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
 ms.openlocfilehash: 25951327028b9b8ced8506b3ba6395e8c9e6abed
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483680"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506979"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>逐步解說：在 Visual Studio 中保存物件 (Visual Basic)
 雖然您可以在設計階段將物件的屬性設為預設值，但當物件終結時，於執行階段輸入的任何值都會遺失。 您可以使用序列化來保存執行個體之間的物件資料，藉此儲存值，並在下次將物件具現化時加以擷取。  

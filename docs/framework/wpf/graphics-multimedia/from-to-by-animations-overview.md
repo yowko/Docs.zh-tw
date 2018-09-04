@@ -9,11 +9,11 @@ helpviewer_keywords:
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
 ms.openlocfilehash: c1aaaca83b8631a87a8987b9676b53161e821117
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407206"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502512"
 ---
 # <a name="fromtoby-animations-overview"></a>From/To/By 動畫概觀
 本主題說明如何使用 From/To/By 動畫以動畫顯示相依性屬性。 From/To/By 動畫可建立兩個值之間的轉換。  

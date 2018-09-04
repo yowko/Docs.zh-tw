@@ -3,11 +3,11 @@ title: x:Property 指示詞
 ms.date: 03/30/2017
 ms.assetid: 618555a8-c893-455c-810f-ac54cd24ef10
 ms.openlocfilehash: 34f982c30a345f95c7a1c7e70de8c5cc4de62cbb
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43419769"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508182"
 ---
 # <a name="xproperty-directive"></a>x:Property 指示詞
 在標記中宣告 XAML 屬性。  

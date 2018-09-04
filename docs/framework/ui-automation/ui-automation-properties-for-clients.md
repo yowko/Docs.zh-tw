@@ -12,11 +12,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: c1ab9a9eeae6de29fc838e263225050ec4122f2d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480238"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505637"
 ---
 # <a name="ui-automation-properties-for-clients"></a>用戶端的 UI 自動化屬性
 > [!NOTE]

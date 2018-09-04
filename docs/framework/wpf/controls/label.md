@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Label control [WPF]
 ms.assetid: 241c1ce2-60f8-4613-a0ec-9b9bb25fb6af
 ms.openlocfilehash: ec5dda6c2a4690106e47ecb447ea2a409e474856
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43476062"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500291"
 ---
 # <a name="label"></a>ThisAddIn
 <xref:System.Windows.Controls.Label> 控制項通常會提供資訊[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。  在過去，<xref:System.Windows.Controls.Label>包含僅限文字，但是由於<xref:System.Windows.Controls.Label>隨附[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]是<xref:System.Windows.Controls.ContentControl>，它可以包含文字或<xref:System.Windows.UIElement>。  

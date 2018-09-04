@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 3dadd7f1-d207-4ea5-a73b-3e8aa44407f8
 ms.openlocfilehash: 9d7cb4869e9e460373bffbf33f61f61ecb6e9948
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486723"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505451"
 ---
 # <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>HOW TO：將 WCF 用戶端設為與 WSE3.0 服務交互操作
 當 WCF 用戶端會設定為使用 August 2004 版本的 Ws-addressing 規格，Windows Communication Foundation (WCF) 用戶端會將與 Web Services Enhancements 3.0 for Microsoft.NET (WSE) 服務的連線層級相容性。  

@@ -8,20 +8,20 @@ helpviewer_keywords:
 - ToolTip control [WPF], positioning
 - positioning ToolTip controls [WPF]
 ms.assetid: cddf3757-9e5f-4ce3-a6eb-44489cf3804a
-ms.openlocfilehash: 218d8814cf75cd80a63c94397ed00e92c6a9a8fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e51be52301197a66ef49339245e60404d823b36c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555934"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512289"
 ---
 # <a name="how-to-position-a-tooltip"></a>如何：置放工具提示
-這個範例示範如何在螢幕上指定工具提示的位置。  
+此範例示範如何在螢幕上指定工具提示的位置。  
   
 ## <a name="example"></a>範例  
- 您可以使用放置在工具提示的五個屬性定義中的一組<xref:System.Windows.Controls.ToolTip>和<xref:System.Windows.Controls.ToolTipService>類別。 下表顯示這兩個集合的五個屬性，並提供根據類別參考文件的連結。  
+ 您可以使用一組五個屬性定義在置放工具提示<xref:System.Windows.Controls.ToolTip>和<xref:System.Windows.Controls.ToolTipService>類別。 下表顯示這兩個集合的五個屬性，並提供其根據類別的參考文件的連結。  
   
-### <a name="corresponding-tooltip-properties-according-to-class"></a>對應的工具提示屬性，根據類別  
+### <a name="corresponding-tooltip-properties-according-to-class"></a>對應的工具提示屬性，它是根據類別  
   
 |<xref:System.Windows.Controls.ToolTip?displayProperty=nameWithType> 類別屬性|<xref:System.Windows.Controls.ToolTipService?displayProperty=nameWithType> 類別屬性|  
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
@@ -31,20 +31,20 @@ ms.locfileid: "33555934"
 |<xref:System.Windows.Controls.ToolTip.HorizontalOffset%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.ToolTipService.HorizontalOffset%2A?displayProperty=nameWithType>|  
 |<xref:System.Windows.Controls.ToolTip.VerticalOffset%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.ToolTipService.VerticalOffset%2A?displayProperty=nameWithType>|  
   
- 如果您定義工具提示的內容使用<xref:System.Windows.Controls.ToolTip>物件，您可以使用其中一個類別的屬性; 不過，<xref:System.Windows.Controls.ToolTipService>屬性的優先順序。 使用<xref:System.Windows.Controls.ToolTipService>內容為未定義的工具提示<xref:System.Windows.Controls.ToolTip>物件。  
+ 如果您使用定義的工具提示內容<xref:System.Windows.Controls.ToolTip>物件，您可以使用任一類別的屬性; 不過，<xref:System.Windows.Controls.ToolTipService>屬性更高的優先順序。 使用<xref:System.Windows.Controls.ToolTipService>屬性未定義為的工具提示<xref:System.Windows.Controls.ToolTip>物件。  
   
- 下圖顯示如何使用放置在工具提示的這些屬性。 雖然、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]這些圖中的範例示範如何設定所定義的屬性<xref:System.Windows.Controls.ToolTip>類別的對應屬性<xref:System.Windows.Controls.ToolTipService>類別遵循相同的配置規則。 如需可能的值為位置屬性的詳細資訊，請參閱[快顯視窗放置行為](../../../../docs/framework/wpf/controls/popup-placement-behavior.md)。  
+ 下列圖例顯示如何使用這些屬性來置放工具提示。 雖然，則[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]在這些實例中的範例示範如何設定所定義的屬性<xref:System.Windows.Controls.ToolTip>類別的對應屬性<xref:System.Windows.Controls.ToolTipService>類別遵循相同的配置規則。 如需有關放置屬性的可能值的詳細資訊，請參閱[快顯放置行為](../../../../docs/framework/wpf/controls/popup-placement-behavior.md)。  
   
  ![ToolTip 位置](../../../../docs/framework/wpf/controls/media/tooltipplacement.png "ToolTipPlacement")  
-ToolTip 位置使用放置屬性  
+ToolTip 位置所使用的位置屬性  
   
  ![使用定位矩形放置 ToolTip](../../../../docs/framework/wpf/controls/media/tooltipplacementrectangle.png "ToolTipPlacementRectangle")  
-ToolTip 位置使用 Placement 與 PlacementRectangle 屬性  
+ToolTip 位置，藉由使用放置與 PlacementRectangle 屬性  
   
  ![ToolTip 位置圖表](../../../../docs/framework/wpf/controls/media/tooltipplacementprhv.png "ToolTipPlacementPRHV")  
-ToolTip 位置使用的位置、 PlacementRectangle 和位移屬性  
+ToolTip 位置，藉由使用放置、 PlacementRectangle 和位移屬性  
   
- 下列範例示範如何使用<xref:System.Windows.Controls.ToolTip>屬性，以指定的內容會以工具提示的位置<xref:System.Windows.Controls.ToolTip>物件。  
+ 下列範例示範如何使用<xref:System.Windows.Controls.ToolTip>屬性，以指定其內容是為工具提示的位置<xref:System.Windows.Controls.ToolTip>物件。  
   
  [!code-xaml[ToolTipService#ToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
   
@@ -63,4 +63,4 @@ ToolTip 位置使用的位置、 PlacementRectangle 和位移屬性
  <xref:System.Windows.Controls.ToolTipService>  
  [HOW-TO 主題](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)  
  [工具提示概觀](../../../../docs/framework/wpf/controls/tooltip-overview.md)  
- [使用 ContextMenuService 和 ToolTipService](http://msdn.microsoft.com/library/809b0e9c-d612-4cda-b8af-1a698c68f4d1)
+ [使用 ContextMenuService 和 ToolTipService](https://msdn.microsoft.com/library/809b0e9c-d612-4cda-b8af-1a698c68f4d1)

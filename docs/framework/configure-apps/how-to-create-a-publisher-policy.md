@@ -11,11 +11,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 3fdc3786be3307e8c882a33b5139ee34344733b8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43404406"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504814"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>如何：建立發行者原則
 組件的廠商可以應用程式應該使用較新版的組件，包含與升級後的組件的發行者原則檔的狀態。 發行者原則檔會指定組件重新導向和程式碼基底設定，並使用應用程式組態檔相同的格式。 發行者原則檔會編譯成組件，並放置於全域組件快取。  
@@ -92,7 +92,7 @@ ms.locfileid: "43404406"
   
 1.  在命令提示字元中輸入下列命令：  
   
-     **gacutil /i***publisherPolicyAssemblyFile*   
+     **gacutil /i***publisherPolicyAssemblyFile*  
   
      下列命令會將`policy.1.0.myAssembly.dll`至全域組件快取。  
   

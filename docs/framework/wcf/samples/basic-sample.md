@@ -3,11 +3,11 @@ title: 基本範例
 ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
 ms.openlocfilehash: 8c99b4955dcc00015d54391dcb509b312190ddab
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43392246"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508705"
 ---
 # <a name="basic-sample"></a>基本範例
 這個範例示範如何建立可探索的服務，以及如何搜尋和呼叫可探索的服務。 這個範例包含二個專案：服務和用戶端。  

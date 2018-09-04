@@ -2,12 +2,12 @@
 title: 在 SQL Server 中加密資料
 ms.date: 03/30/2017
 ms.assetid: 83b992f7-b351-4678-b4b9-f4ffd58134cc
-ms.openlocfilehash: d662f04cb54e12abfc481487cb5172f63edf0316
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 4d02e93cddef57cc42e03ecc6b094b34c24b3f93
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932740"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509091"
 ---
 # <a name="data-encryption-in-sql-server"></a>在 SQL Server 中加密資料
 SQL Server 提供使用憑證、非對稱金鑰或對稱金鑰來加密及解密資料的功能， 而且可在內部的憑證存放區內管理上述所有項目。 此存放區會使用加密階層，藉由階層中的上層層級來確保下層層級的憑證及金鑰。 SQL Server 的此功能區也稱為「秘密儲存區」(Secret Storage)。  
@@ -36,4 +36,4 @@ SQL Server 提供使用憑證、非對稱金鑰或對稱金鑰來加密及解密
  [SQL Server 中的伺服器和資料庫角色](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
  [SQL Server 中的擁有權和使用者結構描述分離](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
  [SQL Server 中的授權和權限](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

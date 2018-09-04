@@ -6,11 +6,11 @@ helpviewer_keywords:
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
 ms.openlocfilehash: 8de22ae6667446620867f3c15aac3c4af65582bf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423918"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511134"
 ---
 # <a name="how-to-lock-controls-to-windows-forms"></a>如何：鎖定 Windows Form 的控制項
 當您設計您的 Windows 應用程式的使用者介面 (UI) 時，您可以在之後放置的位置正確，因此，您不小心移動或調整其大小設定其他屬性時，鎖定控制項。  

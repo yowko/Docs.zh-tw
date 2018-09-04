@@ -3,11 +3,11 @@ title: 使用集合活動
 ms.date: 03/30/2017
 ms.assetid: e1977cf8-1695-4071-b946-7046fe39601e
 ms.openlocfilehash: a92208583ddf1c0d5d85b5af6a250a15ac8851b9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43422623"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506547"
 ---
 # <a name="using-collection-activities"></a>使用集合活動
 這個範例會示範如何透過實作 <xref:System.Activities.Statements.AddToCollection%601> 介面的類別使用集合活動 (<xref:System.Activities.Statements.ClearCollection%601>、<xref:System.Activities.Statements.ExistsInCollection%601>、<xref:System.Activities.Statements.RemoveFromCollection%601> 和 <xref:System.Collections.ICollection>)，以及如何建立自訂活動，以便逐一查看集合以列印集合中每一個項目的內容。 名為 `PrintCollection` 的自訂活動會將名為 `Numbers` 之集合的項目成員列印到主控台。  

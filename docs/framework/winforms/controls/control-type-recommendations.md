@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [Windows Forms], creating
 ms.assetid: 5235fe9d-c36a-4c08-ae76-6cb90b50085e
 ms.openlocfilehash: 5ce801a96bc4ef48934b983838dcf8578a5bc6e6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43405343"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503013"
 ---
 # <a name="control-type-recommendations"></a>控制項類型建議
 .NET Framework 可讓您有能力開發及實作新的控制項。 除了熟悉的使用者控制項，現在您會發現您也可以撰寫自訂控制項來執行它們自己的繪製，而且甚至能夠透過繼承，擴充現有控制項的功能。 決定要建立的控制項類型可能會令人困擾。 本章節強調您可以繼承的各類型控制項之間的差異，並提供關於為您的專案選擇類型的注意事項。  

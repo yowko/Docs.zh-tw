@@ -3,11 +3,11 @@ title: 模型宣告函式
 ms.date: 03/30/2017
 ms.assetid: aba87f13-5685-4f6b-ad14-918e8a7d5c2a
 ms.openlocfilehash: f92bdfedaefca7182b5de72abae9852965d83ff7
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43332042"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511511"
 ---
 # <a name="model-declared-function"></a>模型宣告函式
 A*模型宣告函式*是宣告在概念模型中，但該概念模型中未定義的函式。 該函式可能是在裝載或儲存環境中定義的。 例如，模型宣告函式可能對應到在資料庫中定義的函式，因而在概念模型中公開伺服器端的功能。  

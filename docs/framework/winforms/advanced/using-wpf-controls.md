@@ -6,11 +6,11 @@ helpviewer_keywords:
 - interoperability [WPF]
 ms.assetid: 03c85dce-26ad-44cd-bc1d-8e0cb56de096
 ms.openlocfilehash: 30b84f05898f823227415c410dc7ba5f89d58664
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406322"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504701"
 ---
 # <a name="using-wpf-controls"></a>使用 WPF 控制項
 您可以在 Windows form 應用程式中使用 Windows Presentation Foundation (WPF) 控制項。 雖然這些都是兩個不同的檢視技術，它們順暢的互通。  

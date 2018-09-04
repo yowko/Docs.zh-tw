@@ -3,11 +3,11 @@ title: 以方法為基礎的查詢語法範例 (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: d340775c-7f39-4087-a290-5cbec6cfa68e
 ms.openlocfilehash: 569292cc03f7cbcbaff2d8625849285ff6e2146e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482531"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500794"
 ---
 # <a name="method-based-query-examples-linq-to-dataset"></a>以方法為基礎的查詢語法範例 (LINQ to DataSet)
 本節將透過以方法為基礎的查詢語法，提供使用標準查詢運算子的 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 程式設計範例。 <xref:System.Data.DataSet>這些範例中使用由使用擴展`FillDataSet`方法中指定[載入資料至資料集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。 如需詳細資訊，請參閱 <<c0> [ 標準查詢運算子概觀](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。  

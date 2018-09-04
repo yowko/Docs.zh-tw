@@ -3,11 +3,11 @@ title: 下載範例資料庫 (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
 ms.openlocfilehash: 7830095b7c98c0926783324ee7dc2bc1eb345aca
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43469839"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502811"
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>下載範例資料庫 (LINQ to DataSet)
 範例和逐步解說[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]文件會使用 AdventureWorks 範例資料庫。 您可以從 Microsoft 下載網站免費下載這個產品。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 文件中的範例和逐步解說會使用 SQL Server 當做資料存放區。 除了 SQL Server 以外，可免費取得的 SQL Server Express Edition 也可以當做資料存放區使用。  

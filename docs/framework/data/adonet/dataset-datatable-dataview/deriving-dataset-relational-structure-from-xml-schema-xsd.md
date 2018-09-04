@@ -3,11 +3,11 @@ title: 從 XML 結構描述 (XSD) 衍生資料集關聯式結構
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
 ms.openlocfilehash: fd5c41272d3b050427804f08f7387328012065f4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417200"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504943"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>從 XML 結構描述 (XSD) 衍生資料集關聯式結構
 這個章節提供如何從 XML 結構描述定義語言 (XSD) 結構描述文件來建置 `DataSet` 關聯式結構描述的概觀。 一般情況下，每個`complexType`結構描述元素的子項目，在中，所產生的資料表`DataSet`。 資料表結構由複雜型別的定義來決定。 資料表會建立在`DataSet`結構描述中的最上層項目。 不過，如果資料表僅建立最上層`complexType`項目時`complexType`項目放到另一個巢狀`complexType`項目，在這種情況下巢狀`complexType`元素會對應到`DataTable`內`DataSet`。  

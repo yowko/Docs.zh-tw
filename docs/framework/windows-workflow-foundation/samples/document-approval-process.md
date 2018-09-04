@@ -2,35 +2,35 @@
 title: 文件核准程序
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: c28dafd3b0a1cb6dbee37fed2b3df8923ccd82c8
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 874ee560407c3054b4f270a35e5100eaf9e174b8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809488"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508926"
 ---
 # <a name="document-approval-process"></a>文件核准程序
-這個範例會示範一起使用的 Windows Workflow Foundation (WF) 和 Windows Communication Foundation (WCF) 的許多功能。 結合這些功能來實作文件核准程序案例。 用戶端應用程式會提交文件以供核准，以及核准文件。 核准管理員應用程式是用來促進用戶端之間的通訊，以及強制執行核准程序的規則。 核准程序是可執行數個核准類型的工作流程。 活動是用來取得單一核准、仲裁核准 (核准者集合的百分比)，以及在序列中包含仲裁和單一核准的複雜核准程序。  
+這個範例會示範一起使用的許多 Windows Workflow Foundation (WF) 和 Windows Communication Foundation (WCF) 的功能。 結合這些功能來實作文件核准程序案例。 用戶端應用程式會提交文件以供核准，以及核准文件。 核准管理員應用程式是用來促進用戶端之間的通訊，以及強制執行核准程序的規則。 核准程序是可執行數個核准類型的工作流程。 活動是用來取得單一核准、仲裁核准 (核准者集合的百分比)，以及在序列中包含仲裁和單一核准的複雜核准程序。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\DocumentApprovalProcess`  
   
 ## <a name="sample-details"></a>範例詳細資料  
  下圖示範此文件核准程序工作流程。  
   
- ![文件核准程序工作流程](../../../../docs/framework/windows-workflow-foundation/samples/media/approvalprocess.jpg "ApprovalProcess")  
+ ![文件核准工作流程](../../../../docs/framework/windows-workflow-foundation/samples/media/approvalprocess.jpg "ApprovalProcess")  
   
  從用戶端的觀點來看，核准程序的運作方式如下：  
   
 1.  用戶端在核准程序系統中訂閱成為使用者。  
   
-2.  WCF 用戶端傳送給核准管理員應用程式所裝載 WCF 服務。  
+2.  WCF 用戶端會傳送至核准管理員應用程式所裝載的 WCF 服務。  
   
 3.  唯一的使用者識別碼傳回至用戶端。 用戶端現在會參與核准程序。  
   
@@ -48,19 +48,19 @@ ms.locfileid: "33809488"
   
 10. 用戶端隨時可能收到核准要求，並回應要求。  
   
-11. 在用戶端上託管的 WCF 服務可以從核准管理員應用程式收到核准要求。  
+11. 在用戶端上裝載的 WCF 服務可以從核准管理員應用程式收到核准要求。  
   
 12. 文件資訊在用戶端上呈現以供檢閱。  
   
 13. 使用者可以核准或拒絕文件。  
   
-14. WCF 用戶端用於傳送核准回應送回核准管理員應用程式。  
+14. WCF 用戶端用來傳送核准回應送回核准管理員應用程式。  
   
  從核准管理員應用程式的觀點來看，核准程序的運作方式如下：  
   
 1.  用戶端要求參與核准程序系統。  
   
-2.  WCF 服務上核准管理員收到核准程序系統一部分的要求。  
+2.  WCF 服務的核准管理員收到核准程序系統一部分的要求。  
   
 3.  產生用戶端的唯一識別碼。 將使用者資訊儲存在資料庫中。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "33809488"
   
 2.  若要建置此方案，請按 CTRL+SHIFT+B。  
   
-3.  若要執行此方案，請啟動核准管理員應用程式中的 ApprovalManager 專案上按一下滑鼠右鍵**方案總管 中**按一下**偵錯**->**開始**從快顯功能表的新執行個體。  
+3.  若要執行方案，請啟動核准管理員應用程式中的 ApprovalManager 專案上按一下滑鼠右鍵**方案總管**，然後按一下**偵錯**->**開始**從快顯功能表的新執行個體。  
   
      等候管理員輸出，通知已準備就緒。  
   
@@ -100,13 +100,13 @@ ms.locfileid: "33809488"
   
 3.  巡覽至 ApprovalClient\Bin\Debug 資料夾，並執行兩個 ApprovalClient.exe 執行個體。  
   
-4.  按一下**探索**，等到**訂閱**按鈕啟用。  
+4.  按一下 **探索**，等到**訂閱**按鈕已啟用。  
   
 5.  輸入任何使用者名稱，然後按一下**訂閱**。 對其中一個用戶端，使用 `UserType1`，對另一個輸入 `UserType2`。  
   
-6.  在 `UserType1` 用戶端中，從下拉式功能表中選取單一核准類型，然後輸入文件名稱和內容。 按一下**要求核准**。  
+6.  在 `UserType1` 用戶端中，從下拉式功能表中選取單一核准類型，然後輸入文件名稱和內容。 按一下 **要求核准**。  
   
-7.  在 `UserType2` 用戶端中，待核准的文件隨即出現。 選取它，然後按**核准**或**拒絕**。 `UserType1` 用戶端中應該會顯示結果。  
+7.  在 `UserType2` 用戶端中，待核准的文件隨即出現。 選取它，然後按**核准**或是**拒絕**。 `UserType1` 用戶端中應該會顯示結果。  
   
 ##### <a name="to-run-the-quorum-approval-scenario"></a>若要執行仲裁核准案例  
   
@@ -116,13 +116,13 @@ ms.locfileid: "33809488"
   
 3.  巡覽至 ApprovalClient\Bin\Debug 資料夾，並執行三個 ApprovalClient.exe 執行個體。  
   
-4.  按一下**探索**，等到**訂閱**按鈕啟用。  
+4.  按一下 **探索**，等到**訂閱**按鈕已啟用。  
   
 5.  輸入任何使用者名稱，然後按一下**訂閱**。 對其中一個用戶端，使用 `UserType1`，對另外兩個輸入 `UserType2`。  
   
-6.  在 `UserType1` 用戶端中，從下拉式功能表中選取仲裁核准類型，然後輸入文件名稱和內容。 按一下**要求核准**。 這會要求兩個 `UserType2` 用戶端核准或拒絕文件。 雖然兩個 `UserType2` 用戶端都必須回應，但是只要一個用戶端核准文件，文件就會獲得已核准狀態。  
+6.  在 `UserType1` 用戶端中，從下拉式功能表中選取仲裁核准類型，然後輸入文件名稱和內容。 按一下 **要求核准**。 這會要求兩個 `UserType2` 用戶端核准或拒絕文件。 雖然兩個 `UserType2` 用戶端都必須回應，但是只要一個用戶端核准文件，文件就會獲得已核准狀態。  
   
-7.  在 `UserType2` 用戶端中，待核准的文件隨即出現。 選取它，然後按**核准**或**拒絕**。 `UserType1` 用戶端中應該會顯示結果。  
+7.  在 `UserType2` 用戶端中，待核准的文件隨即出現。 選取它，然後按**核准**或是**拒絕**。 `UserType1` 用戶端中應該會顯示結果。  
   
 ##### <a name="to-run-the-complex-approval-scenario"></a>若要執行複雜核准案例  
   
@@ -132,13 +132,13 @@ ms.locfileid: "33809488"
   
 3.  巡覽至 ApprovalClient\Bin\Debug 資料夾，並執行四個 ApprovalClient.exe 執行個體。  
   
-4.  按一下**探索**，等到**訂閱**按鈕啟用。  
+4.  按一下 **探索**，等到**訂閱**按鈕已啟用。  
   
 5.  輸入任何使用者名稱，然後按一下**訂閱**。 對其中一個用戶端，使用 `UserType1`，在兩個用戶端中輸入 `UserType2`，並在最後一個用戶端中使用 `UserType3`。  
   
-6.  在 `UserType1` 用戶端中，從下拉式功能表中選取單一核准類型，然後輸入文件名稱和內容。 按一下**要求核准**。  
+6.  在 `UserType1` 用戶端中，從下拉式功能表中選取單一核准類型，然後輸入文件名稱和內容。 按一下 **要求核准**。  
   
-7.  在 `UserType2` 用戶端中，待核准的文件隨即出現。 選取它，然後按**核准**，文件傳遞至`UserType3`用戶端。  
+7.  在 `UserType2` 用戶端中，待核准的文件隨即出現。 選取它，然後按**核准**，在文件傳遞至`UserType3`用戶端。  
   
      如果第一個 `UserType2` 仲裁核准文件，文件會傳遞至 `UserType3` 用戶端。  
   

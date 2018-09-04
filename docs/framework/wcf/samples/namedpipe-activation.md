@@ -2,15 +2,15 @@
 title: NamedPipe 啟用
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: 46b59dab0f67c66ca364d9e880ef519386d0df94
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 97221bfd00fb6b50b63eab11ed82356b002a38de
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806379"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504268"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe 啟用
-此範例示範裝載服務，該服務使用 Windows Process Activation Service (WAS) 啟用透過名稱管道通訊的服務。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)且需要[!INCLUDE[wv](../../../../includes/wv-md.md)]執行。  
+此範例示範裝載服務，該服務使用 Windows Process Activation Service (WAS) 啟用透過名稱管道通訊的服務。 此樣本根據[快速入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，而且需要[!INCLUDE[wv](../../../../includes/wv-md.md)]執行。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -20,7 +20,7 @@ ms.locfileid: "33806379"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\NamedPipeActivation`  
   
@@ -159,17 +159,17 @@ Press <ENTER> to terminate client.
   
 1.  請確定已安裝 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]。 因為 WAS 啟用時需要 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]。  
   
-2.  確認您已經執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+2.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
      此外，您必須安裝 WCF 非 HTTP 啟動元件：  
   
-    1.  從**啟動**功能表上，選擇**控制台**。  
+    1.  從**開始**功能表上，選擇**控制台**。  
   
-    2.  選取**程式和功能**。  
+    2.  選取 **程式和功能**。  
   
-    3.  按一下**開啟或關閉 Windows 元件**。  
+    3.  按一下 **開啟或關閉 Windows 元件**。  
   
-    4.  展開**Microsoft.NET Framework 3.0**節點，然後核取**Windows Communication Foundation 非 HTTP 啟動**功能。  
+    4.  依序展開**Microsoft.NET Framework 3.0**節點，並檢查**Windows Communication Foundation 非 HTTP 啟動**功能。  
   
 3.  設定 Windows Process Activation Service (WAS) 以支援具名管道啟動。  
   
@@ -196,7 +196,7 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         >  這個命令是單行文字。  
   
-         此命令會啟用 /servicemodelsamples 應用程式使用兩者來存取http://localhost/servicemodelsamples和 net.tcp: //localhost/servicemodelsamples。  
+         此命令會啟用 /servicemodelsamples 應用程式使用兩者來存取 http://localhost/servicemodelsamples和 net.tcp: //localhost/servicemodelsamples。  
   
 4.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
@@ -223,4 +223,4 @@ Press <ENTER> to terminate client.
         >  這個命令必須輸入為單行文字。  
   
 ## <a name="see-also"></a>另請參閱  
- [AppFabric 主控與持續性範例](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric 主控與持續性範例](https://go.microsoft.com/fwlink/?LinkId=193961)

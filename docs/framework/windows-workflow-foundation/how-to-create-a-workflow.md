@@ -3,11 +3,11 @@ title: 'How to: Create a Workflow'
 ms.date: 03/30/2017
 ms.assetid: 87234108-8e21-4cb3-9340-4a1a13f3f98c
 ms.openlocfilehash: adaa322d4129f56abcad4fd848204ee373e907bd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43462294"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502480"
 ---
 # <a name="how-to-create-a-workflow"></a>How to: Create a Workflow
 工作流程可以從內建活動建構，也可以從自訂活動建構。 本主題中建立的工作流程會使用這兩個內建的活動時，例如，這一節逐步<xref:System.Activities.Statements.Flowchart>活動和自訂活動，從先前[How to: Create an Activity](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)主題。 此工作流程會以數字猜測遊戲為模型。 只要閱讀本節其中一個主題即可完成教學課程；請選擇您感興趣的樣式並依照該步驟進行。 但是，您也可以完成所有的主題。  

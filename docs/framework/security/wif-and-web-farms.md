@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: ed6a7fbe550dad85cf505eaf20a446803b84c96f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 365416a82881c32b8fdcd3211aa42acb9f273483
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410412"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502725"
 ---
 # <a name="wif-and-web-farms"></a>WIF 和 Web 伺服陣列
 當您使用 Windows Identity Foundation (WIF) 來保護部署於 Web 伺服陣列中的信賴憑證者 (RP) 應用程式的資源時，必須採取特定的步驟，以確保 WIF 可以處理伺服陣列中不同電腦上所執行之 RP 應用程式執行個體的權杖。 這項處理包含驗證工作階段權杖簽章、加密和解密工作階段權杖、快取工作階段權杖，以及偵測重新執行的安全性權杖。  
@@ -56,7 +56,7 @@ ms.locfileid: "33410412"
 -   如果您的應用程式偵測到重新執行的權杖，您必須針對權杖重新執行快取遵循類似的分散式快取策略，做法是衍生自 <xref:System.IdentityModel.Tokens.TokenReplayCache>，並指向 [\<tokenReplayCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) 組態元素中的權杖重新執行快取服務。  
   
 > [!IMPORTANT]
->  所有的範例 XML 和本主題中的程式碼取自[ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) (http://go.microsoft.com/fwlink/?LinkID=248408)範例。  
+>  所有的範例 XML 和本主題中的程式碼取自[ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408)範例。  
   
 > [!IMPORTANT]
 >  本主題中的範例是依現況提供，若未經修改，不適用於實際執行程式碼。  

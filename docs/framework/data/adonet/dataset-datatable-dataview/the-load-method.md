@@ -4,26 +4,27 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: e22e5812-89c6-41f0-9302-bb899a46dbff
-ms.openlocfilehash: 04defffc724875e691fd7b87331c28e6b6c0cd28
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 21868f808a6d39c935b612f745d720180df2dd73
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507258"
 ---
 # <a name="the-load-method"></a>Load 方法
-您可以使用 <xref:System.Data.DataTable.Load%2A> 方法，載入具有資料來源之資料列的 <xref:System.Data.DataTable>。 這是多載的方法，其最簡單的形式接受單一參數， **DataReader**。 在這種形式，它只會載入**DataTable**與資料列。 您可以選擇性地指定**LoadOption**參數來控制如何將資料加入至**DataTable**。  
+您可以使用 <xref:System.Data.DataTable.Load%2A> 方法，載入具有資料來源之資料列的 <xref:System.Data.DataTable>。 這是多載的方法，在最簡單的形式，會接受單一參數， **DataReader**。 在此表單中，它只會載入**DataTable**與資料列。 您可以選擇性地指定**LoadOption**參數來控制如何將資料加入至**DataTable**。  
   
- **LoadOption**參數是在情況下特別有用， **DataTable**已經包含資料列，因為它會說明如何內送資料來源的資料會結合資料已在表格中。 比方說， **PreserveCurrentValues** （預設值） 指定在資料列會標示為的情況下**Added**中**DataTable**、**原始**值或每個資料行設為相符的資料列的內容從資料來源。 **目前**值將會保留已加入資料列，所指派的值和**RowState**的資料列將會設定為**Changed**。  
+ **LoadOption**參數就特別有用，萬一其中**DataTable**已經包含資料列，因為它會說明如何傳入的資料，從資料來源會結合資料已在資料表中。 例如， **PreserveCurrentValues** （預設值） 指定在資料列會標示為的情況下**Added**中**DataTable**，**原始**值或每個資料行設定為相符的資料列的內容從資料來源。 **目前**值會保留資料列已新增時，所指派的值並**RowState**的資料列將會設定為**Changed**。  
   
  下列表格簡短說明 <xref:System.Data.LoadOption> 列舉值。  
   
 |LoadOption 值|描述|  
 |----------------------|-----------------|  
-|**OverwriteRow**|如果內送資料列具有相同**PrimaryKey**為已在一個資料列的值**DataTable**、**原始**和**目前**每個值資料行所取代之傳入的資料列中的值和**RowState**屬性設定為**Unchanged**。<br /><br /> 還不存在於資料來源的資料列**DataTable**加入的**RowState**值**Unchanged**。<br /><br /> 此選項會實際重新整理的內容**DataTable**使其符合資料來源的內容。|  
-|**PreserveCurrentValues （預設值）**|如果內送資料列具有相同**PrimaryKey**值為一個資料列已在**DataTable**、**原始**值設定為內容的內送的資料列，以及**目前**不會變更值。<br /><br /> 如果**RowState**是**Added**或**Modified**，設為**Modified**。<br /><br /> 如果**RowState**已**刪除**，它就會維持**刪除**。<br /><br /> 還不存在於資料來源的資料列**DataTable**加入，而**RowState**設**Unchanged**。|  
-|**UpdateCurrentValues**|如果內送資料列具有相同**PrimaryKey**已在資料列的值**DataTable**、**目前**值複製到**原始**值，而**目前**值會設定內容的內送資料列。<br /><br /> 如果**RowState**中**DataTable**已**Added**、 **RowState**維持**Added**。 針對資料列標示為**Modified**或**刪除**、 **RowState**是**Modified**。<br /><br /> 還不存在於資料來源的資料列**DataTable**加入，而**RowState**設**Added**。|  
+|**OverwriteRow**|內送資料列都有相同**PrimaryKey**為已在資料列的值**DataTable**，則**原始**並**目前**的每個值資料行所取代的值中的內送的資料列，而**RowState**屬性設定為**Unchanged**。<br /><br /> 還不存在於資料來源的資料列**DataTable**會加上**RowState**的值**Unchanged**。<br /><br /> 此選項會實際重新整理的內容**DataTable** ，使其符合資料來源的內容。|  
+|**PreserveCurrentValues （預設值）**|如果內送資料列具有相同**PrimaryKey**為已在資料列的值**DataTable**，則**原始**值設定為內容的內送的資料列，以及**目前**值不會變更。<br /><br /> 如果**RowState**是**Added**或**Modified**，它會設定為**Modified**。<br /><br /> 如果**RowState**已**Deleted**，則仍會保持**Deleted**。<br /><br /> 還不存在於資料來源的資料列**DataTable**加入，而**RowState**設定為**Unchanged**。|  
+|**UpdateCurrentValues**|如果內送資料列具有相同**PrimaryKey**已在資料列的值**DataTable**，則**目前**值複製到**原始**值，而**目前**值會設定內送資料列的內容。<br /><br /> 如果**RowState**中**DataTable**已**Added**，則**RowState**保持**Added**。 資料列標示為**Modified**或**Deleted**，則**RowState**是**Modified**。<br /><br /> 還不存在於資料來源的資料列**DataTable**加入，而**RowState**設定為**Added**。|  
   
- 下列範例會使用**負載**方法，以顯示中的員工生日清單**Northwind**資料庫。  
+ 下列範例會使用**負載**方法，以顯示生日清單中的員工**Northwind**資料庫。  
   
 ```vb  
 Private Sub LoadBirthdays(ByVal connectionString As String)  
@@ -69,4 +70,4 @@ End Sub
   
 ## <a name="see-also"></a>另請參閱  
  [在 DataTable 中操作資料](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

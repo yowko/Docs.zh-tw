@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
 ms.openlocfilehash: 185d46d041ee342962c624ad6a3592e5a426cc6e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43474021"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502147"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>HOW TO：建立流程圖工作流程
 工作流程可以從內建活動建構，也可以從自訂活動建構。 本主題將逐步解說如何建立這類使用內建活動的工作流程<xref:System.Activities.Statements.Flowchart>活動和自訂活動，從先前[How to: Create an Activity](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)主題。 此工作流程會以數字猜測遊戲為模型。  

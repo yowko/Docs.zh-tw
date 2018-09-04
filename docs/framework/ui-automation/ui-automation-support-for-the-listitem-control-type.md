@@ -9,16 +9,16 @@ ms.assetid: 34f533bf-fc14-4e78-8fee-fb7107345fab
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 2ad93923ecc41b7a8b564d2f53129a09a78b1085
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 69fe598fc38d9a82d0b95318774d16a49bbdf49f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410107"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43499311"
 ---
 # <a name="ui-automation-support-for-the-listitem-control-type"></a>ListItem 控制項類型的 UI 自動化支援
 > [!NOTE]
->  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱 < [Windows Automation API： 使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主題提供 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控制項類型的 <xref:System.Windows.Automation.ControlType.ListItem> 支援相關資訊。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，控制項類型是一組控制項條件，控制項必須符合條件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 屬性。 這些條件包括 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性值和控制項模式的特定方針。  
   
@@ -32,13 +32,13 @@ ms.locfileid: "33410107"
   
 |控制項檢視|內容檢視|  
 |------------------|------------------|  
-|ListItem<br /><br /> 影像 （0 個以上）<br />文字 （0 個以上）<br />編輯 （0 個以上）|ListItem|  
+|ListItem<br /><br /> -映像 （0 或以上）<br />文字 （0 或以上）<br />編輯 （0 或以上）|ListItem|  
   
- 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的內容檢視中，清單項目控制項的子系必須一律為 "0"。 若控制項結構的其他項目包含底下的清單項目，則它應該遵循的需求[TreeItem 控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-treeitem-control-type.md)控制項類型。  
+ 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的內容檢視中，清單項目控制項的子系必須一律為 "0"。 如果控制項結構，其他項目都包含底下的清單項目，則其應遵循的需求[TreeItem 控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-treeitem-control-type.md)控制項類型。  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>必要的使用者介面自動化屬性  
- 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與清單項目控制項特別有關。 如需有關[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]屬性，請參閱[用戶端的使用者介面自動化屬性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+ 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與清單項目控制項特別有關。 如需詳細資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]屬性，請參閱[UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性|值|注意|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
@@ -62,7 +62,7 @@ ms.locfileid: "33410107"
   
 |控制項模式|支援|注意|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|[是]|清單項目控制項必須實作此控制項模式。 這可讓清單項目控制項傳遞已選取的訊息。|  
+|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|是|清單項目控制項必須實作此控制項模式。 這可讓清單項目控制項傳遞已選取的訊息。|  
 |<xref:System.Windows.Automation.Provider.IScrollItemProvider>|視情況而定|如果清單項目位於可捲動的容器內，則必須實作此控制項模式。|  
 |<xref:System.Windows.Automation.Provider.IToggleProvider>|視情況而定|如果清單項目是可以核取的，而且動作不會變更選取狀態，則必須實作此控制項模式。|  
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|視情況而定|如果可以操作項目隱藏或顯示資訊，則必須實作此控制項模式。|  

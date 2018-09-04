@@ -3,11 +3,11 @@ title: 彙總標準函式
 ms.date: 03/30/2017
 ms.assetid: 3bcff826-ca90-41b3-a791-04d6ff0e5085
 ms.openlocfilehash: e4772176130fc72a22645462921c90dd5b7967b2
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42754616"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506634"
 ---
 # <a name="aggregate-canonical-functions"></a>彙總標準函式
 

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
 ms.openlocfilehash: 90357b96d570ec1b2f80f8809ccfde69977bbc25
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481906"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509799"
 ---
 # <a name="database-mirroring-in-sql-server"></a>在 SQL Server 中建立資料庫鏡像
 SQL Server 中的資料庫鏡像可讓您將 SQL Server 資料庫的複本或鏡像保存在待命伺服器上。 鏡像可確保永遠存在兩份分開的資料複本，這會提供高可用性及完整的資料重複性。 .NET Data Provider for SQL Server 提供對資料庫鏡像的隱含支援，這樣將其設定給 SQL Server 資料庫後，開發人員即無需採取任何動作或撰寫任何程式碼。 此外，<xref:System.Data.SqlClient.SqlConnection> 物件支援明確連接模式，可在 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 中提供容錯移轉夥伴伺服器的名稱。  

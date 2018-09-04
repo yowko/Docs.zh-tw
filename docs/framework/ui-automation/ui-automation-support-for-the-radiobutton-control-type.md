@@ -9,16 +9,16 @@ ms.assetid: 87170464-7857-41f1-bcf7-bb41be31cb53
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 0fb24b42518b6ffdeb30dc8daa926d598fb542ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a4fd5c0b35e2d99cd81720aa0c7dd587f5cb3298
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409684"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510206"
 ---
 # <a name="ui-automation-support-for-the-radiobutton-control-type"></a>RadioButton 控制項類型的 UI 自動化支援
 > [!NOTE]
->  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱 < [Windows Automation API： 使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主題提供 RadioButton 控制項類型的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支援相關資訊。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，控制項類型是一組控制項條件，控制項必須符合條件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 屬性。 這些條件包括 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性值和控制項模式的特定方針。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "33409684"
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>必要的使用者介面自動化屬性  
- 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與 RadioButton 控制項類型特別有關。 如需有關[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]屬性，請參閱[用戶端的使用者介面自動化屬性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+ 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與 RadioButton 控制項類型特別有關。 如需詳細資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]屬性，請參閱[UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性|值|注意|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
@@ -59,7 +59,7 @@ ms.locfileid: "33409684"
   
 |控制項模式/控制項模式屬性|支援/值|注意|  
 |-----------------------------------------------|--------------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|[是]|所有選項按鈕控制項都必須支援選取項目模式，才能夠被選取。|  
+|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|是|所有選項按鈕控制項都必須支援選取項目模式，才能夠被選取。|  
 |<xref:System.Windows.Automation.Provider.ISelectionItemProvider.SelectionContainer%2A>|請參閱備註。|必須填寫 `SelectionContainerProperty` ，才能讓使用者介面自動化用戶端對於特定內容中的其他選項按鈕，判斷有哪些彼此相關聯。  若為 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 版本的選項按鈕，將不會支援這個屬性，因為無法從該舊版架構取得此資訊。|  
 |<xref:System.Windows.Automation.Provider.IToggleProvider>|永不|選項按鈕一旦設定就無法循環其狀態。  選項按鈕絕對一律不支援此模式。|  
   

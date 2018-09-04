@@ -3,11 +3,11 @@ title: 在 LINQ to Entities 查詢中呼叫函式
 ms.date: 03/30/2017
 ms.assetid: 12a525a9-727c-4464-a0c7-71a0ef541792
 ms.openlocfilehash: 4aed9fd59cceb72baac9dc12a85c52787c4b3866
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43388511"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506940"
 ---
 # <a name="calling-functions-in-linq-to-entities-queries"></a>在 LINQ to Entities 查詢中呼叫函式
 本章節的主題描述如何使用呼叫 LINQ to Entities 查詢中的函式。  

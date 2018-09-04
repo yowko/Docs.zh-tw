@@ -15,11 +15,11 @@ ms.assetid: 8dd45b02-7218-40f9-857d-40d7b98b850b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eb2485f2ecf0426360dba80d443500a92b5a7af6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482219"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510050"
 ---
 # <a name="add-ins-and-extensibility"></a>增益集和擴充性
 <a name="top"></a> 增益集可以為主應用程式提供擴充的功能或服務。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供程式設計模型，開發人員可用來開發增益集，並且在其主應用程式中加以啟動。 模型的做法是在主應用程式與增益集之間建構通訊管線。 此模型是藉由使用 <xref:System.AddIn>、 <xref:System.AddIn.Hosting>、 <xref:System.AddIn.Pipeline>和 <xref:System.AddIn.Contract> 命名空間中的類型來實作。  

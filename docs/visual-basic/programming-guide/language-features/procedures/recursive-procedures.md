@@ -10,32 +10,32 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-ms.openlocfilehash: 8ea7741c943ea563fbd0c7649ac0ff85b2f9ebba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0bb89ac855d65d7677a062346db8665698dbb805
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650211"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514338"
 ---
 # <a name="recursive-procedures-visual-basic"></a>遞迴程序 (Visual Basic)
-A*遞迴*程序會呼叫本身。 一般情況下，這不是撰寫 Visual Basic 程式碼的最有效方式。  
+A*遞迴*程序會呼叫其本身。 一般情況下，這不是撰寫 Visual Basic 程式碼的最有效方式。  
   
- 下列程序會使用遞迴，計算其原始的引數的階乘。  
+ 下列程序會使用遞迴來計算其原始的引數的階乘。  
   
  [!code-vb[VbVbcnProcedures#51](./codesnippet/VisualBasic/recursive-procedures_1.vb)]  
   
 ## <a name="considerations-with-recursive-procedures"></a>遞迴程序的考量  
- **限制條件**。 您必須設計遞迴程序以測試可以終止遞迴的至少一個條件，而且您也必須處理在合理的遞迴呼叫數內滿足任何這類狀況，其中的情況。 至少一個可以失敗不符合的條件，您的程序會執行在無限迴圈中執行的高風險。  
+ **限制條件**。 您必須設計的遞迴程序，以測試可終止遞迴時，至少一個條件，而且您也必須處理在合理的遞迴呼叫數內中成立到任何這類條件的情況。 缺少至少一個可以在不失敗的情況下符合的條件，您的程序會執行無限迴圈中執行的較高的風險。  
   
- **記憶體使用量**。 您的應用程式具有有限的本機變數的空間。 每次程序呼叫本身，它會使用更多空間其區域變數的額外複本。 如果會無限期繼續此程序，它最終會導致<xref:System.StackOverflowException>錯誤。  
+ **記憶體使用量**。 您的應用程式具有本機變數的空間量有限。 每次程序呼叫本身，它會使用更多空間其本機變數的其他複本。 如果會無限期繼續此程序，它最終會導致<xref:System.StackOverflowException>時發生錯誤。  
   
- **效率**。 您幾乎可以取代遞迴迴圈。 迴圈沒有傳遞引數，初始化其他存放裝置，並傳回值的額外負荷。 您的效能可能會比較好沒有遞迴呼叫。  
+ **效率**。 您幾乎可以取代遞迴迴圈。 迴圈並沒有傳遞引數，初始化其他的儲存體，並傳回值的額外負荷。 您的效能可能會遞迴呼叫沒有更好的。  
   
- **相互遞迴**。 您可能發現很差的效能或甚至無限迴圈，如果兩個程序彼此呼叫。 此種設計顯示與單一遞迴程序的相同問題，但可能更難偵測及偵錯。  
+ **相互遞迴**。 您可能發現，效能非常低落或甚至是無限迴圈，如果兩個程序彼此呼叫。 此種設計呈現單一的遞迴程序中，相同的問題，但可以就很難偵測及偵錯。  
   
- **以括號呼叫**。 當`Function`程序呼叫本身以遞迴方式，您必須請依照下列程序名稱，加上括弧，即使沒有引數清單。 否則，函式名稱會以表示函式的傳回值。  
+ **呼叫以括號**。 當`Function`程序呼叫本身以遞迴方式，您必須請依照下列程序名稱，加上括弧，即使沒有任何引數清單。 否則，函式名稱會視為函式的傳回值。  
   
- **測試**。 如果您撰寫的遞迴程序時，應該先確定它永遠符合某些限制狀況非常仔細地測試它。 您也應該確定您有太多的遞迴呼叫，因為記憶體不足無法執行。  
+ **測試**。 如果您撰寫遞迴程序，您應該測試它非常小心地以確定它一律符合某些限制狀況。 您也應該確定您無法執行太多遞迴呼叫，因為記憶體不足。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.StackOverflowException>  
@@ -48,4 +48,4 @@ A*遞迴*程序會呼叫本身。 一般情況下，這不是撰寫 Visual Basic
  [程序多載化](./procedure-overloading.md)  
  [程序的疑難排解](./troubleshooting-procedures.md)  
  [迴圈結構](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [疑難排解例外狀況：System.StackOverflowException](http://msdn.microsoft.com/library/51b71217-c507-4f5b-bc35-0236180d7968)
+ [疑難排解例外狀況：System.StackOverflowException](https://msdn.microsoft.com/library/51b71217-c507-4f5b-bc35-0236180d7968)

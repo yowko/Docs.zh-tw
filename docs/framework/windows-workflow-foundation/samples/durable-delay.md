@@ -3,11 +3,11 @@ title: 永久性延遲
 ms.date: 03/30/2017
 ms.assetid: 220ec240-b958-430c-81ff-b734a6aa97ae
 ms.openlocfilehash: 2a7692e28d60232913ae5d11a90025e59664c0e5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406572"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507629"
 ---
 # <a name="durable-delay"></a>永久性延遲
 這個範例示範如何使用永久性延遲，此延遲會在延遲期間將工作流程保存至永久性裝置。 範例工作流程包含兩個主控台訊息，兩者之間會以延遲區隔。 當延遲觸發時，工作流程便會卸載，並且在工作流程執行個體存放區中等待 5 秒鐘，再重新載入記憶體中。  

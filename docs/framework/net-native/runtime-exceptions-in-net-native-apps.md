@@ -5,11 +5,11 @@ ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: efb16c1e947cd832da88b53a3522a5928e77ae06
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43415445"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501707"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>.NET 原生 App 中的執行階段例外狀況
 因為偵錯和發行組態完全不同，所以請務必在目標平台上測試通用 Windows 平台 App 的發行組建。 根據預設，偵錯組態會使用 .NET Core 執行階段來編譯 App，但此發行組態會使用 .NET 原生將 App 編譯為原生程式碼。  

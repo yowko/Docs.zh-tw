@@ -9,16 +9,16 @@ ms.assetid: 79761191-4449-4630-899c-9cbdb8867d3f
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 4a46f29f5e399da446b185aa1226f1baac67f6bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c5f60bf260288f448e6862484d68b01a2c18dd0
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409951"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509233"
 ---
 # <a name="ui-automation-support-for-the-pane-control-type"></a>Pane 控制項類型的 UI 自動化支援
 > [!NOTE]
->  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱 < [Windows Automation API： 使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主題提供窗格控制項類型的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支援相關資訊。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，控制項類型是一組控制項條件，控制項必須符合條件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 屬性。 這些條件包括 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性值和控制項模式的特定方針。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "33409951"
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>必要的使用者介面自動化屬性  
- 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與窗格控制項特別有關。 如需有關[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]屬性，請參閱[用戶端的使用者介面自動化屬性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+ 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與窗格控制項特別有關。 如需詳細資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]屬性，請參閱[UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性|值|注意|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
@@ -90,11 +90,11 @@ ms.locfileid: "33409951"
 ## <a name="pane-control-type-example"></a>窗格控制項類型範例  
  下圖顯示實作窗格控制項類型的控制項。  
   
- ![兩個窗格的 applet 視窗的螢幕擷取畫面](../../../docs/framework/ui-automation/media/uiauto-pane.GIF "uiauto_pane")  
+ ![包含兩個窗格的 applet 視窗的螢幕擷取畫面](../../../docs/framework/ui-automation/media/uiauto-pane.GIF "uiauto_pane")  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構 - 控制項檢視|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構 - 內容檢視|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|<ul><li>窗格</li><li>樹狀結構 (捲動模式)<br /><br /> <ul><li>TreeItem</li><li>窗格</li><li>編輯 (捲動模式</li></ul></li></ul>|窗格<br />-樹狀 （捲動模式）<br />-TreeItem<br />-...窗格<br />-編輯<br />-（捲動模式）|  
+|<ul><li>窗格</li><li>樹狀結構 (捲動模式)<br /><br /> <ul><li>TreeItem</li><li>窗格</li><li>編輯 (捲動模式</li></ul></li></ul>|窗格<br />-樹狀結構 （捲動模式）<br />-TreeItem<br />-...窗格<br />-編輯<br />-（捲動模式）|  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Automation.ControlType.Pane>  
