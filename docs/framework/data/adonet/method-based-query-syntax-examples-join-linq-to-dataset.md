@@ -5,46 +5,46 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4fd5ed2c-b03a-4054-a3ed-3ddb380d7d9d
-ms.openlocfilehash: e061c5fea0a406169ba9de29d62192dbff6fb7f6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6ec65cad0070bdbd1d510bcc822f3b71f9cf69dc
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766019"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560470"
 ---
-# <a name="method-based-query-syntax-examples-join-linq-to-dataset"></a><span data-ttu-id="6900c-102">以方法為基礎的查詢語法範例：聯結 (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="6900c-102">Method-Based Query Syntax Examples: Join (LINQ to DataSet)</span></span>
-<span data-ttu-id="6900c-103">在以彼此沒有可瀏覽關聯性之資料來源 (例如關聯式資料庫資料表) 為目標的查詢中，聯結 (Join) 是一項重要的作業。</span><span class="sxs-lookup"><span data-stu-id="6900c-103">Joining is an important operation in queries that target data sources that have no navigable relationships to each other, such as relational database tables.</span></span> <span data-ttu-id="6900c-104">兩個資料來源的聯結是指某個資料來源中的物件與另一個資料來源中共用相同屬性之物件的關聯。</span><span class="sxs-lookup"><span data-stu-id="6900c-104">A join of two data sources is the association of objects in one data source with objects that share a common attribute in the other data source.</span></span> <span data-ttu-id="6900c-105">如需詳細資訊，請參閱[標準查詢運算子概觀](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。</span><span class="sxs-lookup"><span data-stu-id="6900c-105">For more information, see [Standard Query Operators Overview](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).</span></span>  
+# <a name="method-based-query-syntax-examples-join-linq-to-dataset"></a><span data-ttu-id="a878a-102">以方法為基礎的查詢語法範例：聯結 (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="a878a-102">Method-Based Query Syntax Examples: Join (LINQ to DataSet)</span></span>
+<span data-ttu-id="a878a-103">在以彼此沒有可瀏覽關聯性之資料來源 (例如關聯式資料庫資料表) 為目標的查詢中，聯結 (Join) 是一項重要的作業。</span><span class="sxs-lookup"><span data-stu-id="a878a-103">Joining is an important operation in queries that target data sources that have no navigable relationships to each other, such as relational database tables.</span></span> <span data-ttu-id="a878a-104">兩個資料來源的聯結是指某個資料來源中的物件與另一個資料來源中共用相同屬性之物件的關聯。</span><span class="sxs-lookup"><span data-stu-id="a878a-104">A join of two data sources is the association of objects in one data source with objects that share a common attribute in the other data source.</span></span> <span data-ttu-id="a878a-105">如需詳細資訊，請參閱 <<c0> [ 標準查詢運算子概觀](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。</span><span class="sxs-lookup"><span data-stu-id="a878a-105">For more information, see [Standard Query Operators Overview](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).</span></span>  
   
- <span data-ttu-id="6900c-106">此主題中的範例將示範如何使用 <xref:System.Linq.Enumerable.Join%2A> 方法並搭配方法查詢語法來查詢 <xref:System.Data.DataSet>。</span><span class="sxs-lookup"><span data-stu-id="6900c-106">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.Join%2A> method to query a <xref:System.Data.DataSet> using the method query syntax.</span></span>  
+ <span data-ttu-id="a878a-106">此主題中的範例將示範如何使用 <xref:System.Linq.Enumerable.Join%2A> 方法並搭配方法查詢語法來查詢 <xref:System.Data.DataSet>。</span><span class="sxs-lookup"><span data-stu-id="a878a-106">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.Join%2A> method to query a <xref:System.Data.DataSet> using the method query syntax.</span></span>  
   
- <span data-ttu-id="6900c-107">`FillDataSet`這些範例中使用的方法會指定於[載入資料至資料集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。</span><span class="sxs-lookup"><span data-stu-id="6900c-107">The `FillDataSet` method used in these examples is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span>  
+ <span data-ttu-id="a878a-107">`FillDataSet`這些範例中使用的方法指定於[載入資料至資料集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。</span><span class="sxs-lookup"><span data-stu-id="a878a-107">The `FillDataSet` method used in these examples is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span>  
   
- <span data-ttu-id="6900c-108">此主題中的範例將使用 AdventureWorks 範例資料庫中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 資料表。</span><span class="sxs-lookup"><span data-stu-id="6900c-108">The examples in this topic use the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
+ <span data-ttu-id="a878a-108">此主題中的範例將使用 AdventureWorks 範例資料庫中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 資料表。</span><span class="sxs-lookup"><span data-stu-id="a878a-108">The examples in this topic use the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
   
- <span data-ttu-id="6900c-109">本主題中的範例使用下列`using` / `Imports`陳述式：</span><span class="sxs-lookup"><span data-stu-id="6900c-109">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
+ <span data-ttu-id="a878a-109">本主題中的範例使用下列`using` / `Imports`陳述式：</span><span class="sxs-lookup"><span data-stu-id="a878a-109">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#importsusing)]  
   
- <span data-ttu-id="6900c-110">如需詳細資訊，請參閱[How to： 建立 LINQ to DataSet 專案在 Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md)。</span><span class="sxs-lookup"><span data-stu-id="6900c-110">For more information, see [How to: Create a LINQ to DataSet Project In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span></span>  
+ <span data-ttu-id="a878a-110">如需詳細資訊，請參閱 <<c0> [ 如何： 建立 LINQ to DataSet 專案在 Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md)。</span><span class="sxs-lookup"><span data-stu-id="a878a-110">For more information, see [How to: Create a LINQ to DataSet Project In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span></span>  
   
-## <a name="join"></a><span data-ttu-id="6900c-111">Join</span><span class="sxs-lookup"><span data-stu-id="6900c-111">Join</span></span>  
+## <a name="join"></a><span data-ttu-id="a878a-111">Join</span><span class="sxs-lookup"><span data-stu-id="a878a-111">Join</span></span>  
   
-### <a name="example"></a><span data-ttu-id="6900c-112">範例</span><span class="sxs-lookup"><span data-stu-id="6900c-112">Example</span></span>  
- <span data-ttu-id="6900c-113">這則範例會在 `Contact` 和 `SalesOrderHeader` 資料表上方執行聯結。</span><span class="sxs-lookup"><span data-stu-id="6900c-113">This example performs a join over the `Contact` and `SalesOrderHeader` tables.</span></span>  
+### <a name="example"></a><span data-ttu-id="a878a-112">範例</span><span class="sxs-lookup"><span data-stu-id="a878a-112">Example</span></span>  
+ <span data-ttu-id="a878a-113">這則範例會在 `Contact` 和 `SalesOrderHeader` 資料表上方執行聯結。</span><span class="sxs-lookup"><span data-stu-id="a878a-113">This example performs a join over the `Contact` and `SalesOrderHeader` tables.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#JoinSimple_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#joinsimple_mq)]
  [!code-vb[DP LINQ to DataSet Examples#JoinSimple_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#joinsimple_mq)]  
   
-### <a name="example"></a><span data-ttu-id="6900c-114">範例</span><span class="sxs-lookup"><span data-stu-id="6900c-114">Example</span></span>  
- <span data-ttu-id="6900c-115">這則範例會在 `Contact` 和 `SalesOrderHeader` 資料表上方執行聯結，並依據連絡人識別碼分組結果。</span><span class="sxs-lookup"><span data-stu-id="6900c-115">This example performs a join over the `Contact` and `SalesOrderHeader` tables, grouping the results by contact ID.</span></span>  
+### <a name="example"></a><span data-ttu-id="a878a-114">範例</span><span class="sxs-lookup"><span data-stu-id="a878a-114">Example</span></span>  
+ <span data-ttu-id="a878a-115">這則範例會在 `Contact` 和 `SalesOrderHeader` 資料表上方執行聯結，並依據連絡人識別碼分組結果。</span><span class="sxs-lookup"><span data-stu-id="a878a-115">This example performs a join over the `Contact` and `SalesOrderHeader` tables, grouping the results by contact ID.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#JoinWithGroupedResults_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#joinwithgroupedresults_mq)]
  [!code-vb[DP LINQ to DataSet Examples#JoinWithGroupedResults_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#joinwithgroupedresults_mq)]  
   
-## <a name="see-also"></a><span data-ttu-id="6900c-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6900c-116">See Also</span></span>  
- [<span data-ttu-id="6900c-117">將資料載入至資料集</span><span class="sxs-lookup"><span data-stu-id="6900c-117">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
- [<span data-ttu-id="6900c-118">LINQ to DataSet 範例</span><span class="sxs-lookup"><span data-stu-id="6900c-118">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
- [<span data-ttu-id="6900c-119">標準查詢運算子概觀</span><span class="sxs-lookup"><span data-stu-id="6900c-119">Standard Query Operators Overview</span></span>](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
- [<span data-ttu-id="6900c-120">聯結範例</span><span class="sxs-lookup"><span data-stu-id="6900c-120">Join Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=187357)  
- [<span data-ttu-id="6900c-121">資料集範例</span><span class="sxs-lookup"><span data-stu-id="6900c-121">Dataset Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=187358)
+## <a name="see-also"></a><span data-ttu-id="a878a-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a878a-116">See Also</span></span>  
+ [<span data-ttu-id="a878a-117">將資料載入至資料集</span><span class="sxs-lookup"><span data-stu-id="a878a-117">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
+ [<span data-ttu-id="a878a-118">LINQ to DataSet 範例</span><span class="sxs-lookup"><span data-stu-id="a878a-118">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
+ [<span data-ttu-id="a878a-119">標準查詢運算子概觀</span><span class="sxs-lookup"><span data-stu-id="a878a-119">Standard Query Operators Overview</span></span>](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
+ [<span data-ttu-id="a878a-120">加入範例</span><span class="sxs-lookup"><span data-stu-id="a878a-120">Join Samples</span></span>](https://go.microsoft.com/fwlink/?LinkId=187357)  
+ [<span data-ttu-id="a878a-121">資料集範例</span><span class="sxs-lookup"><span data-stu-id="a878a-121">Dataset Samples</span></span>](https://go.microsoft.com/fwlink/?LinkId=187358)

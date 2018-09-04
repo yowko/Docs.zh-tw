@@ -3,26 +3,26 @@ title: Multiple Active Result Sets (MARS)
 ms.date: 03/30/2017
 ms.assetid: c90ef863-bac7-44cf-adc1-f05c36fcf57d
 ms.openlocfilehash: 67df210fa48c1b72323177b627b17e537f9fb180
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480749"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564405"
 ---
-# <a name="multiple-active-result-sets-mars"></a><span data-ttu-id="d3e79-102">Multiple Active Result Sets (MARS)</span><span class="sxs-lookup"><span data-stu-id="d3e79-102">Multiple Active Result Sets (MARS)</span></span>
-<span data-ttu-id="d3e79-103">Multiple Active Result Set (MARS) 是允許在單一連接中執行多個批次作業的功能。</span><span class="sxs-lookup"><span data-stu-id="d3e79-103">Multiple Active Result Sets (MARS) is a feature that allows the execution of multiple batches on a single connection.</span></span> <span data-ttu-id="d3e79-104">在先前版本中，在單一連接上一次只能執行一個批次作業。</span><span class="sxs-lookup"><span data-stu-id="d3e79-104">In previous versions, only one batch could be executed at a time against a single connection.</span></span> <span data-ttu-id="d3e79-105">以 MARS 執行多個批次作業並不表示同時執行作業。</span><span class="sxs-lookup"><span data-stu-id="d3e79-105">Executing multiple batches with MARS does not imply simultaneous execution of operations.</span></span>  
+# <a name="multiple-active-result-sets-mars"></a><span data-ttu-id="014d9-102">Multiple Active Result Sets (MARS)</span><span class="sxs-lookup"><span data-stu-id="014d9-102">Multiple Active Result Sets (MARS)</span></span>
+<span data-ttu-id="014d9-103">Multiple Active Result Set (MARS) 是允許在單一連接中執行多個批次作業的功能。</span><span class="sxs-lookup"><span data-stu-id="014d9-103">Multiple Active Result Sets (MARS) is a feature that allows the execution of multiple batches on a single connection.</span></span> <span data-ttu-id="014d9-104">在先前版本中，在單一連接上一次只能執行一個批次作業。</span><span class="sxs-lookup"><span data-stu-id="014d9-104">In previous versions, only one batch could be executed at a time against a single connection.</span></span> <span data-ttu-id="014d9-105">以 MARS 執行多個批次作業並不表示同時執行作業。</span><span class="sxs-lookup"><span data-stu-id="014d9-105">Executing multiple batches with MARS does not imply simultaneous execution of operations.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d3e79-106">本節內容</span><span class="sxs-lookup"><span data-stu-id="d3e79-106">In This Section</span></span>  
- [<span data-ttu-id="d3e79-107">啟用 Multiple Active Result Set</span><span class="sxs-lookup"><span data-stu-id="d3e79-107">Enabling Multiple Active Result Sets</span></span>](../../../../../docs/framework/data/adonet/sql/enabling-multiple-active-result-sets.md)  
- <span data-ttu-id="d3e79-108">討論如何搭配使用 MARS 與 SQL Server。</span><span class="sxs-lookup"><span data-stu-id="d3e79-108">Discusses how to use MARS with SQL Server.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="014d9-106">本節內容</span><span class="sxs-lookup"><span data-stu-id="014d9-106">In This Section</span></span>  
+ [<span data-ttu-id="014d9-107">啟用 Multiple Active Result Set</span><span class="sxs-lookup"><span data-stu-id="014d9-107">Enabling Multiple Active Result Sets</span></span>](../../../../../docs/framework/data/adonet/sql/enabling-multiple-active-result-sets.md)  
+ <span data-ttu-id="014d9-108">討論如何搭配使用 MARS 與 SQL Server。</span><span class="sxs-lookup"><span data-stu-id="014d9-108">Discusses how to use MARS with SQL Server.</span></span>  
   
- [<span data-ttu-id="d3e79-109">操作資料</span><span class="sxs-lookup"><span data-stu-id="d3e79-109">Manipulating Data</span></span>](../../../../../docs/framework/data/adonet/sql/manipulating-data.md)  
- <span data-ttu-id="d3e79-110">提供 MARS 應用程式程式碼撰寫範例。</span><span class="sxs-lookup"><span data-stu-id="d3e79-110">Provides examples of coding MARS applications.</span></span>  
+ [<span data-ttu-id="014d9-109">操作資料</span><span class="sxs-lookup"><span data-stu-id="014d9-109">Manipulating Data</span></span>](../../../../../docs/framework/data/adonet/sql/manipulating-data.md)  
+ <span data-ttu-id="014d9-110">提供 MARS 應用程式程式碼撰寫範例。</span><span class="sxs-lookup"><span data-stu-id="014d9-110">Provides examples of coding MARS applications.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="d3e79-111">相關章節</span><span class="sxs-lookup"><span data-stu-id="d3e79-111">Related Sections</span></span>  
- [<span data-ttu-id="d3e79-112">非同步作業</span><span class="sxs-lookup"><span data-stu-id="d3e79-112">Asynchronous Operations</span></span>](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
- <span data-ttu-id="d3e79-113">提供在 ADO.NET 中使用新非同步功能的詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="d3e79-113">Provides details on using the new asynchronous features in ADO.NET.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="014d9-111">相關章節</span><span class="sxs-lookup"><span data-stu-id="014d9-111">Related Sections</span></span>  
+ [<span data-ttu-id="014d9-112">非同步作業</span><span class="sxs-lookup"><span data-stu-id="014d9-112">Asynchronous Operations</span></span>](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
+ <span data-ttu-id="014d9-113">提供在 ADO.NET 中使用新非同步功能的詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="014d9-113">Provides details on using the new asynchronous features in ADO.NET.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d3e79-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d3e79-114">See Also</span></span>  
- [<span data-ttu-id="d3e79-115">SQL Server 和 ADO.NET</span><span class="sxs-lookup"><span data-stu-id="d3e79-115">SQL Server and ADO.NET</span></span>](../../../../../docs/framework/data/adonet/sql/index.md)  
- [<span data-ttu-id="d3e79-116">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="d3e79-116">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="014d9-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="014d9-114">See Also</span></span>  
+ [<span data-ttu-id="014d9-115">SQL Server 和 ADO.NET</span><span class="sxs-lookup"><span data-stu-id="014d9-115">SQL Server and ADO.NET</span></span>](../../../../../docs/framework/data/adonet/sql/index.md)  
+ [<span data-ttu-id="014d9-116">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="014d9-116">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)

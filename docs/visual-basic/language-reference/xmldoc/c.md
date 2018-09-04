@@ -6,36 +6,36 @@ helpviewer_keywords:
 - <c> XML tag
 ms.assetid: 36ad5d1b-11f7-4012-8932-41962ac327d1
 ms.openlocfilehash: 06c6899895f278fdf652725a05ecc7229805f4d4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43455701"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43563868"
 ---
-# <a name="ltcgt-visual-basic"></a><span data-ttu-id="51533-102">&lt;c&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="51533-102">&lt;c&gt; (Visual Basic)</span></span>
-<span data-ttu-id="51533-103">表示描述內的文字是程式碼。</span><span class="sxs-lookup"><span data-stu-id="51533-103">Indicates that text within a description is code.</span></span>  
+# <a name="ltcgt-visual-basic"></a><span data-ttu-id="5513d-102">&lt;c&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5513d-102">&lt;c&gt; (Visual Basic)</span></span>
+<span data-ttu-id="5513d-103">表示描述內的文字是程式碼。</span><span class="sxs-lookup"><span data-stu-id="5513d-103">Indicates that text within a description is code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="51533-104">語法</span><span class="sxs-lookup"><span data-stu-id="51533-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5513d-104">語法</span><span class="sxs-lookup"><span data-stu-id="5513d-104">Syntax</span></span>  
   
 ```xml  
 <c>text</c>  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="51533-105">參數</span><span class="sxs-lookup"><span data-stu-id="51533-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="5513d-105">參數</span><span class="sxs-lookup"><span data-stu-id="5513d-105">Parameters</span></span>  
   
-|<span data-ttu-id="51533-106">參數</span><span class="sxs-lookup"><span data-stu-id="51533-106">Parameter</span></span>|<span data-ttu-id="51533-107">描述</span><span class="sxs-lookup"><span data-stu-id="51533-107">Description</span></span>|  
+|<span data-ttu-id="5513d-106">參數</span><span class="sxs-lookup"><span data-stu-id="5513d-106">Parameter</span></span>|<span data-ttu-id="5513d-107">描述</span><span class="sxs-lookup"><span data-stu-id="5513d-107">Description</span></span>|  
 |---|---|  
-|`text`|<span data-ttu-id="51533-108">您要指定為程式碼的文字。</span><span class="sxs-lookup"><span data-stu-id="51533-108">The text you would like to indicate as code.</span></span>|  
+|`text`|<span data-ttu-id="5513d-108">您要指定為程式碼的文字。</span><span class="sxs-lookup"><span data-stu-id="5513d-108">The text you would like to indicate as code.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="51533-109">備註</span><span class="sxs-lookup"><span data-stu-id="51533-109">Remarks</span></span>  
- <span data-ttu-id="51533-110">`<c>`標記可讓您一個方法來指示應該標記為程式碼，在一段描述的文字。</span><span class="sxs-lookup"><span data-stu-id="51533-110">The `<c>` tag gives you a way to indicate that text within a description should be marked as code.</span></span> <span data-ttu-id="51533-111">請使用 [\<code>](../../../visual-basic/language-reference/xmldoc/code.md) 將多行指定為程式碼。</span><span class="sxs-lookup"><span data-stu-id="51533-111">Use [\<code>](../../../visual-basic/language-reference/xmldoc/code.md) to indicate multiple lines as code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5513d-109">備註</span><span class="sxs-lookup"><span data-stu-id="5513d-109">Remarks</span></span>  
+ <span data-ttu-id="5513d-110">`<c>`標記可讓您一個方法來指示應該標記為程式碼，在一段描述的文字。</span><span class="sxs-lookup"><span data-stu-id="5513d-110">The `<c>` tag gives you a way to indicate that text within a description should be marked as code.</span></span> <span data-ttu-id="5513d-111">請使用 [\<code>](../../../visual-basic/language-reference/xmldoc/code.md) 將多行指定為程式碼。</span><span class="sxs-lookup"><span data-stu-id="5513d-111">Use [\<code>](../../../visual-basic/language-reference/xmldoc/code.md) to indicate multiple lines as code.</span></span>  
   
- <span data-ttu-id="51533-112">編譯搭配 [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) 可處理檔案的文件註解。</span><span class="sxs-lookup"><span data-stu-id="51533-112">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="5513d-112">編譯搭配 [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) 可處理檔案的文件註解。</span><span class="sxs-lookup"><span data-stu-id="5513d-112">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="51533-113">範例</span><span class="sxs-lookup"><span data-stu-id="51533-113">Example</span></span>  
- <span data-ttu-id="51533-114">這個範例會使用`<c>`表示的摘要區段中的標記`Counter`是程式碼。</span><span class="sxs-lookup"><span data-stu-id="51533-114">This example uses the `<c>` tag in the summary section to indicate that `Counter` is code.</span></span>  
+## <a name="example"></a><span data-ttu-id="5513d-113">範例</span><span class="sxs-lookup"><span data-stu-id="5513d-113">Example</span></span>  
+ <span data-ttu-id="5513d-114">這個範例會使用`<c>`表示的摘要區段中的標記`Counter`是程式碼。</span><span class="sxs-lookup"><span data-stu-id="5513d-114">This example uses the `<c>` tag in the summary section to indicate that `Counter` is code.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/c_1.vb)]  
   
-## <a name="see-also"></a><span data-ttu-id="51533-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="51533-115">See Also</span></span>  
- [<span data-ttu-id="51533-116">XML 註解標記</span><span class="sxs-lookup"><span data-stu-id="51533-116">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a><span data-ttu-id="5513d-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5513d-115">See Also</span></span>  
+ [<span data-ttu-id="5513d-116">XML 註解標記</span><span class="sxs-lookup"><span data-stu-id="5513d-116">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
