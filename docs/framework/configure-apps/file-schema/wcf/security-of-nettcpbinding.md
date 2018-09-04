@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 286cd191-4fd5-4c4e-a223-9c71cf7fdead
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: f58dd0ee1b00785e82628e5442c736866ffe7db5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 13aeb3261fdb9689caa1dea1ec7382fdb9d9b1ce
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751229"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516969"
 ---
 # <a name="ltsecuritygt-of-ltnettcpbindinggt"></a>&lt;netTcpBinding&gt; 的 &lt;security&gt;
 定義繫結的安全性設定。  
@@ -51,7 +51,7 @@ ms.locfileid: "32751229"
 |訊息|系統會使用 SOAP 訊息安全性來提供安全性。 根據預設，SOAP 本文會經過加密與簽署。 這個模式提供各種功能，如超出範圍的用戶端是否可使用服務認證、使用的演算法套件，以及訊息主體要套用何種保護層級。 每個工作階段會執行一次用戶端驗證，並會快取工作階段期間的驗證結果。|  
 |TransportWithMessageCredential|傳輸安全性會與訊息安全性結合在一起。 傳輸安全性是由 TLS over TCP 或 SPNego 提供，並會確保完整性、機密性和伺服器驗證。 SOAP 訊息安全性提供用戶端驗證。 根據預設，每個工作階段會執行一次用戶端驗證，並會快取工作階段期間的驗證結果。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -79,5 +79,5 @@ ms.locfileid: "32751229"
  [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [使用繫結來設定 Windows Communication Foundation 服務和用戶端](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<繫結 >](../../../../../docs/framework/misc/binding.md)

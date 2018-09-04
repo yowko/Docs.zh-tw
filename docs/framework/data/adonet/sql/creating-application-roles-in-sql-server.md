@@ -2,12 +2,12 @@
 title: 在 SQL Server 中建立應用程式角色
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-ms.openlocfilehash: cb3bcb08877d8a17ea40ea48440c1d71560d0e5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 811654b73cd1cc0b8c17565b45613253de3c0e81
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362523"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522009"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>在 SQL Server 中建立應用程式角色
 應用程式角色可以用於將權限指派給應用程式，而不是資料庫角色或使用者。 使用者可以連接到資料庫、啟動應用程式角色，並採用授與應用程式的權限。 授與應用程式角色的權限在連接期間內都會維持有效。  
@@ -47,19 +47,19 @@ ms.locfileid: "33362523"
   
  您可能要考慮以下的替代方案。  
   
--   藉由 EXECUTE AS 陳述式 (使用 NO REVERT 和 WITH COOKIE 子句) 使用內容切換。 您可以在資料庫中建立不與登入對應的使用者帳戶， 然後再將權限指派給這個帳戶。 以無登入的使用者來使用 EXECUTE AS 比較安全，因為這種方式是以權限為基礎，而不是以密碼為基礎。 如需詳細資訊，請參閱[模擬 SQL Server 中的自訂權限](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)。  
+-   藉由 EXECUTE AS 陳述式 (使用 NO REVERT 和 WITH COOKIE 子句) 使用內容切換。 您可以在資料庫中建立不與登入對應的使用者帳戶， 然後再將權限指派給這個帳戶。 以無登入的使用者來使用 EXECUTE AS 比較安全，因為這種方式是以權限為基礎，而不是以密碼為基礎。 如需詳細資訊，請參閱 <<c0> [ 自訂權限，在 SQL Server 中使用模擬](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)。  
   
--   使用憑證來簽署預存程序，且僅授與執行程序的權限。 如需詳細資訊，請參閱[SQL Server 中簽署預存程序](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)。  
+-   使用憑證來簽署預存程序，且僅授與執行程序的權限。 如需詳細資訊，請參閱 < [SQL Server 中簽署預存程序](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)。  
   
 ## <a name="external-resources"></a>外部資源  
  如需詳細資訊，請參閱下列資源。  
   
 |資源|描述|  
 |--------------|-----------------|  
-|[應用程式角色](http://msdn.microsoft.com/library/ms190998.aspx)SQL Server 線上叢書中|說明如何在 SQL Server 2008 中建立及使用應用程式角色。|  
+|[應用程式角色](/sql/relational-databases/security/authentication-access/application-roles)|說明如何在 SQL Server 2008 中建立及使用應用程式角色。|  
   
 ## <a name="see-also"></a>另請參閱  
  [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 安全性概觀](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
  [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

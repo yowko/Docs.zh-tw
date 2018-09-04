@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Panel control [WPF]
 - custom Panel elements [WPF]
 ms.assetid: e0df4f1e-8c07-4e86-89a3-e22acfffdc2a
-ms.openlocfilehash: 2d1581ef1d0130a6952becf36d668e6a198e1ee9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bca8900ccb3c31a78066a43709a5e9334bc09eab
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552396"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43531780"
 ---
 # <a name="how-to-create-a-custom-panel-element"></a>如何：建立自訂面板項目
 ## <a name="example"></a>範例  
- 這個範例示範如何覆寫預設配置行為<xref:System.Windows.Controls.Panel>項目及建立自訂版面配置項目衍生自<xref:System.Windows.Controls.Panel>。  
+ 此範例示範如何覆寫預設版面配置行為<xref:System.Windows.Controls.Panel>項目，並建立自訂的版面配置項目衍生自<xref:System.Windows.Controls.Panel>。  
   
- 此範例會定義簡單的自訂<xref:System.Windows.Controls.Panel>項目稱為`PlotPanel`，其中放置子項目根據兩個硬式編碼 x 和 y 座標。 在此範例中，`x`和`y`都設定為`50`; 因此，所有子項目會都放置在該位置上的 x 和 y 軸。  
+ 此範例會定義簡單的自訂<xref:System.Windows.Controls.Panel>項目稱為`PlotPanel`，其中放置子項目根據兩個硬式編碼 x 和 y 座標。 在此範例中，`x`並`y`都設為`50`; 因此，所有子項目都位於此位置的 x 和 y 軸。  
   
  若要實作自訂<xref:System.Windows.Controls.Panel>行為，此範例會使用<xref:System.Windows.FrameworkElement.MeasureOverride%2A>和<xref:System.Windows.FrameworkElement.ArrangeOverride%2A>方法。 每個方法會傳回<xref:System.Windows.Size>定位和呈現子項目所需的資料。  
   
@@ -31,4 +31,4 @@ ms.locfileid: "33552396"
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Controls.Panel>  
  [面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [建立自訂的內容換行面板範例](http://go.microsoft.com/fwlink/?LinkID=159979)
+ [建立自訂的內容換行面板範例](https://go.microsoft.com/fwlink/?LinkID=159979)

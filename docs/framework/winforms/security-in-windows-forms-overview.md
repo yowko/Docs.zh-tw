@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: ef90daa9700a60e3d88f75439bf8511b67a71dda
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54fc56e5e7d6ee5cd0e7bc55bd22c7d4127eb4d3
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541407"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43532114"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows Form 中的安全性概觀
 在 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 發行之前，在使用者電腦上執行的所有程式碼，對資源的存取權限都和電腦的使用者相同。 例如，如果使用者可以存取檔案系統，程式碼就可以存取檔案系統，如果使用者可以存取某個資料庫，程式碼就可以存取該資料庫。 就使用者明確安裝在本機電腦上的可執行檔中的程式碼而言，也許這些權限是可接受的，但是就來自網際網路或近端內部網路的潛在惡意程式碼而言，可能就無法接受了。 不應該讓這個程式碼在沒有權限的情況下，存取使用者的電腦資源。  
@@ -23,14 +23,14 @@ ms.locfileid: "33541407"
  您用來部署 Windows Form 應用程式的 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 技術，可協助您更輕鬆地開發可在部分信任、完全信任或提高權限的部分信任中執行的應用程式。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 提供「提高權限」和「受信任的應用程式部署」之類的功能，讓您的應用程式能夠以負責任的方式，向本機使用者要求完全信任或提高權限。  
   
 ## <a name="understanding-security-in-the-net-framework"></a>了解 .NET Framework 中的安全性  
- 程式碼存取安全性可依據程式碼的來源，以及程式碼其他方面的身分識別，提供程式碼各種程度的信任等級。 如需 Common Language Runtime 用來判斷安全性原則的辨識項相關資訊，請參閱[辨識項](http://msdn.microsoft.com/library/64ceb7c8-a0b4-46c4-97dc-6c22da0539da)。 它可以幫助保護電腦系統不受惡意程式碼的威脅，並幫助防止受信任的程式碼有意或無意地危及安全性。 程式碼存取安全性也讓您更充分掌控您的應用程式可以執行哪些動作，因為您可以只指定您要讓應用程式擁有的那些權限。 程式碼存取安全性會影響以 Common Language Runtime 為目標的所有 Managed 程式碼，即使該程式碼沒有進行單一程式碼存取安全性權限檢查也一樣。 如需 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中安全性的詳細資訊，請參閱[重要的安全性概念](../../../docs/standard/security/key-security-concepts.md)和[程式碼存取安全性基本概念](../../../docs/framework/misc/code-access-security-basics.md)。  
+ 程式碼存取安全性可依據程式碼的來源，以及程式碼其他方面的身分識別，提供程式碼各種程度的信任等級。 如需 Common Language Runtime 用來判斷安全性原則的辨識項相關資訊，請參閱[辨識項](https://msdn.microsoft.com/library/64ceb7c8-a0b4-46c4-97dc-6c22da0539da)。 它可以幫助保護電腦系統不受惡意程式碼的威脅，並幫助防止受信任的程式碼有意或無意地危及安全性。 程式碼存取安全性也讓您更充分掌控您的應用程式可以執行哪些動作，因為您可以只指定您要讓應用程式擁有的那些權限。 程式碼存取安全性會影響以 Common Language Runtime 為目標的所有 Managed 程式碼，即使該程式碼沒有進行單一程式碼存取安全性權限檢查也一樣。 如需 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中安全性的詳細資訊，請參閱[重要的安全性概念](../../../docs/standard/security/key-security-concepts.md)和[程式碼存取安全性基本概念](../../../docs/framework/misc/code-access-security-basics.md)。  
   
  如果使用者不透過 Web 伺服器或檔案共用，而直接執行 Windows Form 可執行檔，則授與應用程式的信任層級，取決於程式碼所在的位置，以及其啟動方式。 當應用程式執行時，會自動受到評估，並且會從 Common Language Runtime 收到具名權限集合。 根據預設，來自本機電腦的程式碼會被授與完全信任權限集合，來自區域網路的程式碼會被授與近端內部網路權限集合，而來自網際網路的程式碼會被授與網際網路權限集合。  
   
 > [!NOTE]
 >  在 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 1.0 版 Service Pack 1 和 Service Pack 2 中，網際網路區域程式碼群組會收到 Nothing 權限集合。 在 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的所有其他版本中，網際網路區域程式碼群組都會收到網際網路權限集合。  
 >   
->  各權限集合中授與的預設權限詳列於[預設安全性原則](http://msdn.microsoft.com/library/2c086873-0894-4f4d-8f7e-47427c1a3b55)主題中。 根據應用程式接收的權限，它會正確執行，或是產生安全性例外狀況。  
+>  各權限集合中授與的預設權限詳列於[預設安全性原則](https://msdn.microsoft.com/library/2c086873-0894-4f4d-8f7e-47427c1a3b55)主題中。 根據應用程式接收的權限，它會正確執行，或是產生安全性例外狀況。  
 >   
 >  許多 Windows Form 應用程式都會使用 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 來部署。 用來產生 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 部署的工具所擁有的安全性預設值不同於先前討論的內容。 如需詳細資訊，請參閱下列討論：  
   
@@ -45,11 +45,11 @@ ms.locfileid: "33541407"
   
  如果您的應用程式所需的權限，超出部分信任的限制，但是您不想要在完全信任中執行，您可以在部分信任中執行，並且只確立您需要的那些額外權限。 例如，如果您想要在部分信任中執行，但必須為您的應用程式授與使用者檔案系統上之目錄的唯讀存取權，您可以只針對該目錄要求 <xref:System.Security.Permissions.FileIOPermission>。 如果正確使用，這種方法可以給予應用程式更多功能，並且讓使用者的安全性風險降到最低。  
   
- 當您開發要在部分信任中執行的應用程式時，請追蹤應用程式必須執行的權限，以及應用程式可以選擇性使用的權限。 在已知所有權限的情況下，您應針對應用程式層級的權限提出宣告式要求。 要求權限時會通知 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 執行階段您的應用程式需要哪些權限，以及明確不想要哪些權限。 如需有關要求權限的詳細資訊，請參閱[要求權限](http://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2)。  
+ 當您開發要在部分信任中執行的應用程式時，請追蹤應用程式必須執行的權限，以及應用程式可以選擇性使用的權限。 在已知所有權限的情況下，您應針對應用程式層級的權限提出宣告式要求。 要求權限時會通知 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 執行階段您的應用程式需要哪些權限，以及明確不想要哪些權限。 如需有關要求權限的詳細資訊，請參閱[要求權限](https://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2)。  
   
  當您要求選擇性權限時，您必須處理當應用程式執行的動作需要未被授與的權限時，所產生的安全性例外狀況。 適當處理 <xref:System.Security.SecurityException> 可確保您的應用程式能夠繼續運作。 您的應用程式可以使用例外狀況來判斷是否應該為使用者停用某功能。 例如，如果未授與必要的檔案權限，應用程式可以停用 [儲存] 功能表選項。  
   
- 有時候，很難知道您是否已確立所有適當的權限。 比方說，表面上看起來無害的方法呼叫，可能會在其執行期間的某個時間點存取檔案系統。 如果您未以所有的必要權限來部署應用程式，在桌面上偵錯時，測試可能沒問題，但部署時可能會失敗。 這兩個[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK 和[!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]包含用來計算應用程式所需的權限： MT.exe 可命令列工具及 Visual studio 中，「 計算使用權限 」 功能分別。  
+ 有時候，很難知道您是否已確立所有適當的權限。 比方說，表面上看起來無害的方法呼叫，可能會在其執行期間的某個時間點存取檔案系統。 如果您未以所有的必要權限來部署應用程式，在桌面上偵錯時，測試可能沒問題，但部署時可能會失敗。 這兩個[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK 和[!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]包含用來計算應用程式所需的權限： MT.exe 命令列工具的 Visual Studio 中，「 計算權限 」 功能分別。  
   
  下列主題說明其他 Windows Form 安全性功能。  
   
@@ -75,12 +75,12 @@ ms.locfileid: "33541407"
   
  您要選擇哪一種技術，將取決於您的部署環境。 如需詳細資訊，請參閱[選擇 ClickOnce 部署策略](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy)。  
   
- 根據預設，[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]部署使用 Visual Studio 的應用程式或[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK 工具 （Mage.exe 和 MageUI.exe） 設定為具有完全信任的用戶端電腦上執行。 如果您在部署應用程式時，是使用部分信任，或是只有使用某些額外的權限，則必須變更這個預設值。 您可以使用 Visual Studio 或[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK 工具 MageUI.exe，當您設定您的部署。 如需有關如何使用 MageUI.exe 的詳細資訊，請參閱＜逐步解說：從命令列部署 ClickOnce 應用程式＞。  另請參閱[如何：設定 ClickOnce 應用程式的自訂權限](http://msdn.microsoft.com/library/hafybdaa\(v=vs.110\))或[如何：設定 ClickOnce 應用程式的自訂權限](http://msdn.microsoft.com/library/hafybdaa\(v=vs.120\))。  
+ 根據預設，[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]使用 Visual Studio 部署的應用程式或[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK 工具 （Mage.exe 和 MageUI.exe） 設定為具有完全信任的用戶端電腦上執行。 如果您在部署應用程式時，是使用部分信任，或是只有使用某些額外的權限，則必須變更這個預設值。 您可以使用 Visual Studio 或[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK 工具 MageUI.exe，當您設定您的部署。 如需有關如何使用 MageUI.exe 的詳細資訊，請參閱＜逐步解說：從命令列部署 ClickOnce 應用程式＞。  另請參閱[如何：設定 ClickOnce 應用程式的自訂權限](https://msdn.microsoft.com/library/hafybdaa\(v=vs.110\))或[如何：設定 ClickOnce 應用程式的自訂權限](https://msdn.microsoft.com/library/hafybdaa\(v=vs.120\))。  
   
  如需有關 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 安全性層面和權限提高的詳細資訊，請參閱[保護 ClickOnce 應用程式](/visualstudio/deployment/securing-clickonce-applications)。 如需有關受信任的應用程式部署的詳細資訊，請參閱[受信任的應用程式部署概觀](/visualstudio/deployment/trusted-application-deployment-overview)。  
   
 ### <a name="testing-the-application"></a>測試應用程式  
- 如果您已經使用 Visual Studio 部署 Windows Forms 應用程式，您可以啟用偵錯部分信任或受限制的使用權限集合從開發環境中。  另請參閱[如何：以限制使用權限偵錯 ClickOnce 應用程式](http://msdn.microsoft.com/library/593zkfdf\(v=vs.110\))或[如何：以限制使用權限偵錯 ClickOnce 應用程式](http://msdn.microsoft.com/library/593zkfdf\(v=vs.120\))。  
+ 如果您使用 Visual Studio 部署您的 Windows Forms 應用程式，您可以啟用偵錯部分信任或受限制的使用權限集合從開發環境中。  另請參閱[如何：以限制使用權限偵錯 ClickOnce 應用程式](https://msdn.microsoft.com/library/593zkfdf\(v=vs.110\))或[如何：以限制使用權限偵錯 ClickOnce 應用程式](https://msdn.microsoft.com/library/593zkfdf\(v=vs.120\))。  
   
 ## <a name="see-also"></a>另請參閱  
  [Windows Forms 安全性](../../../docs/framework/winforms/windows-forms-security.md)  

@@ -2,15 +2,15 @@
 title: 權杖驗證器
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: 4681dea4fd39b039346d22c02c478323ff53e240
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 5c103f5a5a4f95761a5c19e6a8d6159a7439d05a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808323"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523216"
 ---
 # <a name="token-authenticator"></a>權杖驗證器
-這個範例示範如何實作自訂權杖驗證器。 Windows Communication Foundation (WCF) 的權杖驗證器用來驗證郵件時，所使用的權杖驗證前後一致，以及驗證身分識別相關聯的語彙基元。  
+這個範例示範如何實作自訂權杖驗證器。 Windows Communication Foundation (WCF) 中的權杖驗證器用來驗證語彙基元，用訊息，確認它是前後一致，而且驗證身分識別相關聯的語彙基元。  
   
  自訂權杖驗證器適用於各種情況，例如：  
   
@@ -24,11 +24,11 @@ ms.locfileid: "33808323"
   
 -   伺服器如何使用自訂權杖驗證器驗證用戶端認證。  
   
--   如何 WCF 服務程式碼會結合自訂權杖驗證器。  
+-   如何使用自訂權杖驗證器繫結的 WCF 服務程式碼。  
   
 -   如何使用伺服器的 X.509 憑證來驗證伺服器。  
   
- 這個範例也示範如何呼叫者身分識別可從 WCF 自訂權杖驗證程序之後。  
+ 這個範例也示範如何呼叫者身分識別是可以由存取 WCF 自訂權杖驗證程序之後。  
   
  服務會公開 (Expose) 單一的端點來與已使用組態檔 App.config 定義之服務進行通訊。 端點是由位址、繫結及合約所組成。 繫結已設定成標準 `wsHttpBinding`，以及將安全性模式設為訊息 (`wsHttpBinding` 的預設模式)。 這個範例會將標準 `wsHttpBinding` 設定為使用用戶端使用者名稱驗證。 服務也會使用 `serviceCredentials` 行為來設定服務憑證。 `securityCredentials` 行為允許您指定服務憑證。 服務憑證是由用戶端用來驗證服務並提供訊息保護。 下列組態會參考在安裝範例期間所安裝的 localhost 憑證，如下列安裝指示中所述。  
   
@@ -324,9 +324,9 @@ static void DisplayIdentityInformation()
   
 #### <a name="to-set-up-and-build-the-sample"></a>若要設定和建置範例  
   
-1.  請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要建置此方案，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+2.  若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
 #### <a name="to-run-the-sample-on-the-same-computer"></a>若要在同一部電腦上執行範例  
   
@@ -339,7 +339,7 @@ static void DisplayIdentityInformation()
   
 3.  從 \client\bin 啟動 client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-4.  如果用戶端和服務無法通訊，請參閱[疑難排解提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+4.  如果用戶端和服務能夠進行通訊，請參閱[疑難排解祕訣](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 #### <a name="to-run-the-sample-across-computers"></a>若要跨電腦執行範例  
   
@@ -361,7 +361,7 @@ static void DisplayIdentityInformation()
   
 9. 在用戶端電腦上，從命令提示字元啟動 Client.exe。  
   
-10. 如果用戶端和服務無法通訊，請參閱[疑難排解提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+10. 如果用戶端和服務能夠進行通訊，請參閱[疑難排解祕訣](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 #### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID51
 ms.assetid: 21266dbb-f4a1-4c5d-a646-27909cf53248
-ms.openlocfilehash: a97852e53ce7f1a3bee7e70d9cdcfe5e7987f9b3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7f43ce3781fa2a38bb34e84e37ff0f367b5c274d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33638389"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518434"
 ---
 # <a name="internal-error-visual-basic"></a>內部錯誤 (Visual Basic)
 在 Visual Basic 中發生內部問題。  
@@ -20,4 +20,4 @@ ms.locfileid: "33638389"
   
 ## <a name="see-also"></a>另請參閱  
  [On Error 陳述式](../../visual-basic/language-reference/statements/on-error-statement.md)  
- [Raise 方法 (Err 物件)](http://msdn.microsoft.com/library/80ffe307-57f1-4ef5-92d7-8ae7b6ec3f42)
+ [Raise 方法 (Err 物件)](https://msdn.microsoft.com/library/80ffe307-57f1-4ef5-92d7-8ae7b6ec3f42)

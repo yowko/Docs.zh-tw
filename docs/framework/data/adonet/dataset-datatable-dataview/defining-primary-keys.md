@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2ea85959-e763-4669-8bd9-46a9dab894bd
-ms.openlocfilehash: 21d63aa33e20019f8392b81fb69881296a52cb26
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: aecd16357857dca7393eac879159c916d8cf8ac7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757576"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520214"
 ---
 # <a name="defining-primary-keys"></a>定義主索引鍵
 資料庫資料表通常會有資料行或資料行群組，可唯一識別資料表的每個資料列。 這個識別欄位或資料行群組又稱為主索引鍵。  
   
- 當您識別單一<xref:System.Data.DataColumn>為<xref:System.Data.DataTable.PrimaryKey%2A>的<xref:System.Data.DataTable>，資料表會自動設定<xref:System.Data.DataColumn.AllowDBNull%2A>屬性的資料行**false**和<xref:System.Data.DataColumn.Unique%2A>屬性**true**。 多重資料行主索引鍵，只能**AllowDBNull**屬性會自動設定為**false**。  
+ 當您找出單一<xref:System.Data.DataColumn>做為<xref:System.Data.DataTable.PrimaryKey%2A>如<xref:System.Data.DataTable>，資料表會自動設定<xref:System.Data.DataColumn.AllowDBNull%2A>的資料行的屬性**false**和<xref:System.Data.DataColumn.Unique%2A>屬性設**true**。 針對多個資料行主要金鑰時，只有**AllowDBNull**屬性會自動設為**false**。  
   
- **PrimaryKey**屬性<xref:System.Data.DataTable>接收其值為一或多個陣列**DataColumn**物件，如下列範例所示。 第一個範例定義單一資料行為主索引鍵。  
+ **PrimaryKey**屬性<xref:System.Data.DataTable>做為其值會接收一或多個陣列**DataColumn**物件，如下列範例所示。 第一個範例定義單一資料行為主索引鍵。  
   
 ```vb  
 workTable.PrimaryKey = New DataColumn() {workTable.Columns("CustID")}  
@@ -69,4 +69,4 @@ workTable.PrimaryKey = keyColumn;
  <xref:System.Data.DataTable>  
  [DataTable 結構描述定義](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
  [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

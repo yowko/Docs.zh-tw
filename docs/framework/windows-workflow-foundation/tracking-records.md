@@ -2,12 +2,12 @@
 title: 追蹤記錄
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
-ms.openlocfilehash: b07175943f85b61024030c1e0251e24d1eb35c86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2be8dbcdd740dee1c5cddd1121716058bfa5c175
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520275"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527035"
 ---
 # <a name="tracking-records"></a>追蹤記錄
 工作流程執行階段經檢測會發出追蹤記錄，以追蹤工作流程執行個體的執行。  
@@ -30,23 +30,23 @@ ms.locfileid: "33520275"
   
 -   **WorkflowInstanceAbortedRecord** -這個<xref:System.Activities.Tracking.TrackingRecord>中止工作流程執行個體時，就會發出。 記錄包含工作流程執行個體中止的原因。 這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.WorkflowInstanceAbortedRecord> 中找到。  
   
--   **WorkflowInstanceUnhandledExceptionRecord** -這個<xref:System.Activities.Tracking.TrackingRecord>如果工作流程執行個體，就會發生例外狀況，而不由任何活動處理，就會發出。 記錄包含例外狀況的詳細資訊。 這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord> 中找到。  
+-   **WorkflowInstanceUnhandledExceptionRecord** -這個<xref:System.Activities.Tracking.TrackingRecord>如果例外狀況發生在工作流程執行個體，而且不會處理任何活動，就會發出。 記錄包含例外狀況的詳細資訊。 這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord> 中找到。  
   
--   **WorkflowInstanceSuspendedRecord** -這個<xref:System.Activities.Tracking.TrackingRecord>每當工作流程執行個體被擱置時，就會發出。 記錄包含工作流程執行個體暫停的原因。 這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord> 中找到。  
+-   **WorkflowInstanceSuspendedRecord** -這個<xref:System.Activities.Tracking.TrackingRecord>，就會發出工作流程執行個體被擱置。 記錄包含工作流程執行個體暫停的原因。 這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord> 中找到。  
   
--   **WorkflowInstanceTerminatedRecord** -這個<xref:System.Activities.Tracking.TrackingRecord>只要終止工作流程執行個體就會發出。 記錄包含工作流程執行個體終止的原因。 這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord> 中找到。  
+-   **WorkflowInstanceTerminatedRecord** -這個<xref:System.Activities.Tracking.TrackingRecord>每當工作流程執行個體終止時，就會發出。 記錄包含工作流程執行個體終止的原因。 這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord> 中找到。  
   
--   **ActivityStateRecord** -這個<xref:System.Activities.Tracking.TrackingRecord>工作流程內的活動執行時，就會發出。 這些記錄會指出工作流程執行個體內之活動的狀態。 這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.ActivityStateRecord> 中找到。  
+-   **ActivityStateRecord** -這個<xref:System.Activities.Tracking.TrackingRecord>工作流程內活動執行時，就會發出。 這些記錄會指出工作流程執行個體內之活動的狀態。 這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.ActivityStateRecord> 中找到。  
   
--   **ActivityScheduledRecord** -這個<xref:System.Activities.Tracking.TrackingRecord>當活動排程的子活動，就會發出。 這個記錄包含父活動 (排程活動) 及排程之子活動的詳細資訊。 這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.ActivityScheduledRecord> 中找到。  
+-   **ActivityScheduledRecord** -這個<xref:System.Activities.Tracking.TrackingRecord>活動排定子活動時，就會發出。 這個記錄包含父活動 (排程活動) 及排程之子活動的詳細資訊。 這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.ActivityScheduledRecord> 中找到。  
   
--   **FaultPropagationRecord** -這個<xref:System.Activities.Tracking.TrackingRecord>為每個處理常式在記錄處理它之前發出。 這個記錄會用於表示錯誤在工作流程執行個體中採取的路徑。 這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.FaultPropagationRecord> 中找到。  
+-   **FaultPropagationRecord** -這個<xref:System.Activities.Tracking.TrackingRecord>，就會發出每個處理常式處理前查看記錄。 這個記錄會用於表示錯誤在工作流程執行個體中採取的路徑。 這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.FaultPropagationRecord> 中找到。  
   
 -   **CancelRequestedRecord** -這個<xref:System.Activities.Tracking.TrackingRecord>只要活動嘗試取消子活動就會發出。 這個記錄包含父活動及要取消之子活動的詳細資訊。 這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.CancelRequestedRecord> 中找到。  
   
--   **BookmarkResumptionRecord** -這個<xref:System.Activities.Tracking.TrackingRecord>會追蹤順利繼續的任何書籤。 這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.BookmarkResumptionRecord> 中找到。  
+-   **BookmarkResumptionRecord** -這個<xref:System.Activities.Tracking.TrackingRecord>會追蹤任何已順利繼續的書籤。 這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.BookmarkResumptionRecord> 中找到。  
   
--   **CustomTrackingRecord** -這個<xref:System.Activities.Tracking.TrackingRecord>建立後，工作流程作者在自訂工作流程活動所發出。 自訂追蹤記錄中可以填入要發出的資料與記錄。 這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.CustomTrackingRecord> 中找到。  
+-   **CustomTrackingRecord** -這個<xref:System.Activities.Tracking.TrackingRecord>建立並由工作流程作者在自訂工作流程活動發出。 自訂追蹤記錄中可以填入要發出的資料與記錄。 這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.CustomTrackingRecord> 中找到。  
   
  例如，若有包含 <xref:System.Activities.Statements.Sequence> 作業的簡單 <xref:System.Activities.Statements.WriteLine> 活動，其追蹤記錄是按下列順序發出的：  
   
@@ -61,5 +61,5 @@ ms.locfileid: "33520275"
 5.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> 表示工作流程正在完成。  
   
 ## <a name="see-also"></a>另請參閱  
- [Windows Server App Fabric 監控](http://go.microsoft.com/fwlink/?LinkId=201273)  
- [使用 App Fabric 監控應用程式](http://go.microsoft.com/fwlink/?LinkId=201275)
+ [Windows Server App Fabric 監控](https://go.microsoft.com/fwlink/?LinkId=201273)  
+ [使用 App Fabric 監控應用程式](https://go.microsoft.com/fwlink/?LinkId=201275)

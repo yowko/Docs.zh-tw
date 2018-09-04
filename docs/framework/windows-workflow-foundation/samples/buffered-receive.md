@@ -2,15 +2,15 @@
 title: 緩衝的接收
 ms.date: 03/30/2017
 ms.assetid: 9d46d9b9-96c9-4531-9695-ab526b4d704a
-ms.openlocfilehash: ee53edafc94fd5efd4e412b1b9198a8763b79462
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b95577c71493275f30703b4366fab32a51097bd2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518707"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526800"
 ---
 # <a name="buffered-receive"></a>緩衝的接收
-這個範例示範如何安裝及設定緩衝的接收功能在 Windows Workflow Foundation (WF)。 緩衝接收可讓工作流程作者建立工作流程時不必擔心接收訊息的順序。 緩衝接收功能會在本機緩衝處理訊息，並在工作流程準備要接收訊息時傳遞訊息。  
+此範例示範如何安裝和設定的緩衝的接收功能在 Windows Workflow Foundation (WF)。 緩衝接收可讓工作流程作者建立工作流程時不必擔心接收訊息的順序。 緩衝接收功能會在本機緩衝處理訊息，並在工作流程準備要接收訊息時傳遞訊息。  
   
 ## <a name="demonstrates"></a>示範  
  使用緩衝接收搭配訊息活動的失序訊息處理。  
@@ -20,12 +20,12 @@ ms.locfileid: "33518707"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\BufferedReceive`  
   
 ## <a name="discussion"></a>討論  
- 在此範例中，Windows Communication Foundation (WCF) 服務會實作使用[!INCLUDE[wf1](../../../../includes/wf1-md.md)]且一連串<xref:System.ServiceModel.Activities.Receive>活動。 這個工作流程是以簡單貸款核准程序為模型，其中工作流程預期接收三個通知，才會核准貸款。 Windows Communication Foundation (WCF) 用戶端應用程式以服務預期的相反順序傳送三個相互關聯的通知。 因為在服務開啟緩衝接收功能，所以每個失序訊息會在服務緩衝處理，並在工作流程準備要接收訊息時加以處理。  
+ 在此範例中，Windows Communication Foundation (WCF) 服務會實作使用[!INCLUDE[wf1](../../../../includes/wf1-md.md)]且具有一連串<xref:System.ServiceModel.Activities.Receive>活動。 這個工作流程是以簡單貸款核准程序為模型，其中工作流程預期接收三個通知，才會核准貸款。 Windows Communication Foundation (WCF) 用戶端應用程式會以服務預期的相反順序傳送三個相互關聯的通知。 因為在服務開啟緩衝接收功能，所以每個失序訊息會在服務緩衝處理，並在工作流程準備要接收訊息時加以處理。  
   
  緩衝接收功能需要繫結的 <xref:System.ServiceModel.Activities.ReceiveContent> 支援，因此服務使用 <xref:System.ServiceModel.NetMsmqBinding>。 不需要繫結的特殊組態檔，因此會使用預設值。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "33518707"
   
  服務也會使用 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 來公開服務的中繼資料。  
   
- 同樣地，用戶端端點也是使用 <xref:System.ServiceModel.NetMsmqBinding> 設定的。 用戶端程式碼和組態使用所產生**加入服務參考**Visual Studio 功能。 下列範例是在 App.config 檔案中產生的用戶端端點。  
+ 同樣地，用戶端端點也是使用 <xref:System.ServiceModel.NetMsmqBinding> 設定的。 使用產生的用戶端程式碼和組態**加入服務參考**Visual Studio 功能。 下列範例是在 App.config 檔案中產生的用戶端端點。  
   
 ```xml  
 <endpoint address="net.msmq://localhost/private/LoanService/Service1.xamlx"  
@@ -71,17 +71,17 @@ ms.locfileid: "33518707"
   
 2.  開啟**電腦管理**從命令提示字元執行 Compmgmt.msc 主控台。  
   
-3.  在**電腦管理**主控台中，展開**服務**，**應用程式**，**訊息佇列**，**私用佇列**.  
+3.  在 **電腦管理**主控台中，展開**服務**，**應用程式**， **Message Queuing**，**私用佇列**.  
   
-4.  以滑鼠右鍵按一下 loanservice/service1.xamlx 佇列，並選取**屬性**。  
+4.  以滑鼠右鍵按一下 loanservice/service1.xamlx 佇列，然後選取**屬性**。  
   
-5.  選取**安全性**索引標籤，並加入**Everyone 接收訊息**，**查看訊息**和**傳送訊息**權限。  
+5.  選取 **安全性**索引標籤，並加入**Everyone 接收訊息**，**查看訊息**並**傳送訊息**權限。  
   
 6.  開啟 [[!INCLUDE[iis60](../../../../includes/iis60-md.md)] 管理員]。  
   
-7.  瀏覽至**伺服器**，**網站**， **Default Web site**，**私人**， **LoanService**選取**進階的選項**  
+7.  瀏覽至**伺服器**，**站台**， **Default Web site**，**私人**， **LoanService**選取**進階的選項**  
   
-8.  變更**啟用的通訊協定**是**http**， **net.msmq**。  
+8.  變更**啟用的通訊協定**要**http**， **net.msmq**。  
   
 #### <a name="to-run-the-sample"></a>若要執行範例  
   
@@ -93,7 +93,7 @@ ms.locfileid: "33518707"
   
 1.  開啟**電腦管理**從命令提示字元執行 Compmgmt.msc 主控台。  
   
-2.  展開**服務**和**應用程式**，**訊息佇列**，**私用佇列**。  
+2.  依序展開**服務**並**應用程式**， **Message Queuing**，**私用佇列**。  
   
 3.  刪除 loanservice/service1.xamlx 佇列。  
   
@@ -104,6 +104,6 @@ ms.locfileid: "33518707"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\BufferedReceive`

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, about Windows Forms controls
 ms.assetid: f050de8f-4ebd-4042-94b8-edf9a1dbd52a
-ms.openlocfilehash: f1111e05d485993b29b97f48f92a27a3af26fb4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b3b49ca61d491a2593db7b43bf3efd0b63af650
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537599"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526243"
 ---
 # <a name="windows-forms-controls"></a>Windows Form 控制項
 當您設計及修改 Windows Forms 應用程式的使用者介面時，您必須新增、對齊和調整控制項的位置。 控制項是表單物件內所包含的物件。 每一種控制項都有自己適合特定用途的一組屬性、方法和事件。 您可以在設計工具中操作控制項和撰寫程式碼以在執行階段以動態方式加入控制項。  
@@ -39,5 +39,5 @@ ms.locfileid: "33537599"
  [用戶端應用程式](../../../../docs/framework/develop-client-apps.md)  
  提供開發 Windows 應用程式的概觀。  
   
- [Windows Forms 逐步解說](http://msdn.microsoft.com/library/fd44d13d-4733-416f-aefc-32592e59e5d9)  
+ [Windows Forms 逐步解說](https://msdn.microsoft.com/library/fd44d13d-4733-416f-aefc-32592e59e5d9)  
  列出有關 Windows Forms 和控制項的逐步解說主題。

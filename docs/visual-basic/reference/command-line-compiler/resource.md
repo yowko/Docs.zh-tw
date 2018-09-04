@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: eee2f227-91f2-4f2b-a9d6-1c51c5320858
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab5593455546e65bdd760d9e60532031dc1f12a9
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 77c80332e663596244b35fe002218e7bcbaeb46a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931442"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523320"
 ---
 # <a name="-resource-visual-basic"></a>-資源 (Visual Basic)
 將 Managed 資源內嵌至組件中。  
@@ -39,7 +39,7 @@ ms.locfileid: "42931442"
 ## <a name="remarks"></a>備註  
  使用`-linkresource`將資源連結至組件，不需將資源檔放在輸出檔。  
   
- 如果`filename`已[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]建立的資源檔，例如，藉由[Resgen.exe （資源檔產生器）](http://msdn.microsoft.com/library/8ef159de-b660-4bec-9213-c3fbc4d1c6f4)或在開發環境中，它可以存取使用中的成員<xref:System.Resources>命名空間 （請參閱<xref:System.Resources.ResourceManager>如需詳細資訊)。 若要在執行階段存取所有其他資源，請使用其中一種下列方法： <xref:System.Reflection.Assembly.GetManifestResourceInfo%2A>， <xref:System.Reflection.Assembly.GetManifestResourceNames%2A>，或<xref:System.Reflection.Assembly.GetManifestResourceStream%2A>。  
+ 如果`filename`已[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]建立的資源檔，例如，藉由[Resgen.exe （資源檔產生器）](https://msdn.microsoft.com/library/8ef159de-b660-4bec-9213-c3fbc4d1c6f4)或在開發環境中，它可以存取使用中的成員<xref:System.Resources>命名空間 （請參閱<xref:System.Resources.ResourceManager>如需詳細資訊)。 若要在執行階段存取所有其他資源，請使用其中一種下列方法： <xref:System.Reflection.Assembly.GetManifestResourceInfo%2A>， <xref:System.Reflection.Assembly.GetManifestResourceNames%2A>，或<xref:System.Reflection.Assembly.GetManifestResourceStream%2A>。  
   
  `-resource` 的簡短形式為 `-res`。  
   
