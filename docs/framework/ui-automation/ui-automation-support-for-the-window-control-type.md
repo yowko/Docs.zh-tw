@@ -10,11 +10,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 0aa921480d4aee0ec87103491018f2843a1d7b37
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466516"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512800"
 ---
 # <a name="ui-automation-support-for-the-window-control-type"></a>Window 控制項類型的 UI 自動化支援
 > [!NOTE]

@@ -3,11 +3,11 @@ title: ADO.NET 中的資料追蹤
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
 ms.openlocfilehash: 037db6f4e5695e00401c81e1490953efe2fc9b99
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421095"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522416"
 ---
 # <a name="data-tracing-in-adonet"></a>ADO.NET 中的資料追蹤
 ADO.NET 具備內建資料追蹤功能的.NET 資料提供者所支援的 SQL Server、 Oracle、 OLE DB 和 ODBC，以及 ADO.NET <xref:System.Data.DataSet>，和 SQL Server 網路通訊協定。  

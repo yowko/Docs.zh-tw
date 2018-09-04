@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
 ms.openlocfilehash: 4370a7a700a01943548bf067827e6640245caf4e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482160"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516787"
 ---
 # <a name="retrieving-data-using-a-datareader"></a>使用 DataReader 擷取資料
 使用擷取的資料**DataReader**牽涉到建立的執行個體**命令**物件，然後再建立**DataReader**藉由呼叫**Command.ExecuteReader**從資料來源擷取資料列。 下列範例說明如何利用**DataReader**何處`reader`代表有效的 DataReader 和`command`代表有效的命令物件。  

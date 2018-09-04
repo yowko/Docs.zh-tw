@@ -2,12 +2,12 @@
 title: 背景資訊
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: 66d2047a064663cfe93823d92d30f682d557c493
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd2531dd141cfc6f0b67d1f58766327c218610f5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363213"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515628"
 ---
 # <a name="background-information"></a>背景資訊
 本節中的主題是有關於使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 之基本概念以外的概念和程序。  
@@ -16,9 +16,9 @@ ms.locfileid: "33363213"
   
 -   搜尋特定問題的 Microsoft 文件。  
   
--   參與[LINQ 論壇](http://go.microsoft.com/fwlink/?LinkId=76488)，您可以在其中討論與專家更複雜的主題的詳細資料。  
+-   參與[LINQ 論壇](https://go.microsoft.com/fwlink/?LinkId=76488)，您可以與專家討論更複雜的主題的詳細資料。  
   
--   研讀詳述白皮書[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]技術，包含 Visual Basic 和 C# 程式碼範例。 如需詳細資訊，請參閱[LINQ to SQL： 關聯式資料的.net language-integrated Query](http://go.microsoft.com/fwlink/?LinkId=93205)。  
+-   研究 （英文） 白皮書會詳細說明[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]技術，其中包含 Visual Basic 和 C# 程式碼範例。 如需詳細資訊，請參閱 < [LINQ to SQL： 關聯式資料的.net language-integrated Query](https://go.microsoft.com/fwlink/?LinkId=93205)。  
   
 ## <a name="in-this-section"></a>本節內容  
  [ADO.NET 和 LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/ado-net-and-linq-to-sql.md)  

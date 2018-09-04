@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ca392dda-16e3-45c7-8d87-12d8d4ee0578
 ms.openlocfilehash: 62c2a1737c6c253effc496f2569c42812732946b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43392952"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514119"
 ---
 # <a name="query-expression-syntax-examples-element-operators-linq-to-dataset"></a>查詢運算式語法範例：項目運算子 (LINQ to DataSet)
 此主題中的範例將示範如何使用 <xref:System.Linq.Enumerable.First%2A> 和 <xref:System.Linq.Enumerable.ElementAt%2A> 方法並搭配查詢運算式語法來取得 <xref:System.Data.DataRow> 中的 <xref:System.Data.DataSet> 項目。  

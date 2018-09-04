@@ -3,11 +3,11 @@ title: 搭配 .NET Framework 3.5 Ruleset 使用變數
 ms.date: 03/30/2017
 ms.assetid: 27b56249-22fe-4252-840f-74c0d6c7a6b3
 ms.openlocfilehash: 64d47564076e19e152e30b6ab0cb3900ce53cfa1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43395150"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512850"
 ---
 # <a name="using-variables-with-a-net-framework-35-ruleset"></a>搭配 .NET Framework 3.5 Ruleset 使用變數
 這個範例示範如何建立使用 <xref:System.Activities.Statements.Interop> 活動整合 [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] 中使用原則和規則所撰寫自訂活動的工作流程。 工作流程會透過將變數繫結至自訂活動公開之相依性屬性的方式，將資料傳遞至自訂活動。  

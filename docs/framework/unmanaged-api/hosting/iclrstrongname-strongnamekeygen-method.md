@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55b4fbb8785f788c9eb34f32b5078201f8253066
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d925e30786c742708f345fc23f14c79521cbc6f3
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433324"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519948"
 ---
 # <a name="iclrstrongnamestrongnamekeygen-method"></a>ICLRStrongName::StrongNameKeyGen 方法
-建立新公用/私密金鑰組的強式名稱使用。  
+建立將供強式名稱使用的新公開/私密金鑰組。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,14 +40,14 @@ HRESULT StrongNameKeyGen (
   
 #### <a name="parameters"></a>參數  
  `wszKeyContainer`  
- [in]要求的金鑰容器名稱。 `wszKeyContainer` 必須是非空白字串或 null 以產生暫時的名稱。  
+ [in]要求的金鑰容器名稱。 `wszKeyContainer` 必須是非空白字串或 null 來產生暫存名稱。  
   
  `dwFlags`  
- [in]值，指定是否要保留已註冊的鍵。 支援下列值：  
+ [in]值，指定是否要保留已註冊的金鑰。 支援下列值：  
   
 -   0x00000000-時使用`wszKeyContainer`以產生暫時的金鑰容器名稱為 null。  
   
--   0x00000001 (`SN_LEAVE_KEY`)-指定應該向左登錄機碼。  
+-   0x00000001 (`SN_LEAVE_KEY`)-指定應該向左註冊金鑰。  
   
  `ppbKeyBlob`  
  [out]傳回的 public/private 金鑰組。  
@@ -56,19 +56,19 @@ HRESULT StrongNameKeyGen (
  [out]大小，以位元組為單位的`ppbKeyBlob`。  
   
 ## <a name="return-value"></a>傳回值  
- `S_OK` 如果方法成功。否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](http://go.microsoft.com/fwlink/?LinkId=213878)清單)。  
+ `S_OK` 如果這個方法順利完成否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)清單)。  
   
 ## <a name="remarks"></a>備註  
- [Iclrstrongname:: Strongnamekeygen](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)方法會建立為 1024年位元金鑰。 擷取索引鍵之後，您應該呼叫[iclrstrongname:: Strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)方法，以釋放配置的記憶體。  
+ [Iclrstrongname:: Strongnamekeygen](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)方法會建立為 1024年位元金鑰。 擷取索引鍵之後，您應該呼叫[iclrstrongname:: Strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)方法來釋放配置的記憶體。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MetaHost.h  
   
  **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [StrongNameKeyGenEx 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)  

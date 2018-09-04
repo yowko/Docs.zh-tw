@@ -3,11 +3,11 @@ title: 橋接及錯誤處理
 ms.date: 03/30/2017
 ms.assetid: 4ae87d1a-b615-4014-a494-a53f63ff0137
 ms.openlocfilehash: 6afaddc75855b7e95ad708b2179cabb9aee35001
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43389064"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514538"
 ---
 # <a name="bridging-and-error-handling"></a>橋接及錯誤處理
 這個範例會示範 Windows Communication Foundation (WCF) 路由服務如何用於橋接用戶端和服務使用不同繫結之間的通訊。 此範例也會示範如何針對容錯移轉情況使用備份服務。 路由服務是一種 WCF 元件，可讓您更輕鬆地在您的應用程式中加入內容為基礎的路由器。 此範例會調整標準 WCF 計算機範例，以便使用路由服務進行通訊。  

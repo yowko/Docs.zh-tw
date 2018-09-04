@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 ms.assetid: 75db9126-e70c-4e81-921d-b83c0a4a9f50
 ms.openlocfilehash: bf43d27ed728d11b5cde5b9250cfc4614077ed94
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43395705"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512986"
 ---
 # <a name="how-to-provide-standard-menu-items-to-a-form"></a>如何：對表單提供標準功能表項目
 您可以使用 <xref:System.Windows.Forms.MenuStrip> 控制項來為您的表單提供標準功能表。  

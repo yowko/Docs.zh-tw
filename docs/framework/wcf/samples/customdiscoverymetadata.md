@@ -3,11 +3,11 @@ title: CustomDiscoveryMetadata
 ms.date: 03/30/2017
 ms.assetid: c42455fd-3652-4b7e-b698-ab3a2bb52e48
 ms.openlocfilehash: 181910db3f1dd6da892f6ae2ddcbf7bd5859ff17
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43465573"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525417"
 ---
 # <a name="customdiscoverymetadata"></a>CustomDiscoveryMetadata
 這個範例示範如何將自訂 XML 中繼資料插入服務公開之可探索端點的探索中繼資料。 接著在範例中會示範用戶端如何搜尋服務及擷取這項自訂資料。 這個範例包含二個專案，也就是服務和用戶端。  

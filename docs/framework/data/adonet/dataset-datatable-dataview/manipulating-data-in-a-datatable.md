@@ -2,11 +2,12 @@
 title: 在 DataTable 中操作資料
 ms.date: 03/30/2017
 ms.assetid: 5cb86d48-a987-4af4-80e0-8cc2c8373d62
-ms.openlocfilehash: f21ac216ed69db99001e324eb34cacf1254fcf6e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a09edc6ce3098ab135d8c27ba0f6ad56cceed159
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521304"
 ---
 # <a name="manipulating-data-in-a-datatable"></a>在 DataTable 中操作資料
 當您在 <xref:System.Data.DataTable> 中建立 <xref:System.Data.DataSet> 後，您可以執行的活動會與在資料庫中使用資料表的活動相同。 您可以加入、檢視、編輯和刪除資料表的資料、監視錯誤和事件，以及查詢資料表的資料。 在修改資料時**DataTable**，您也可以確認變更是否正確，並判斷是否要以程式設計的方式接受或拒絕變更。  
@@ -39,4 +40,4 @@ ms.lasthandoff: 05/03/2018
 ## <a name="see-also"></a>另請參閱  
  [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
  [處理 DataTable 事件](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

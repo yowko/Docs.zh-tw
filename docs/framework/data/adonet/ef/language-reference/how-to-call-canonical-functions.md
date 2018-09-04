@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b3d84873-7403-4957-8e20-b4ae39f50214
 ms.openlocfilehash: 1a936c5374137dbe25e16ababfa8a4f0c86edbbb
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43392724"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521766"
 ---
 # <a name="how-to-call-canonical-functions"></a>如何：呼叫標準函式
 <xref:System.Data.Objects.EntityFunctions> 類別包含可公開標準函式以用於 LINQ to Entities 查詢的方法。 如需標準函式的資訊，請參閱[標準函式](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)。  

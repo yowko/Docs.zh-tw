@@ -3,11 +3,11 @@ title: 數值與比較運算子
 ms.date: 03/30/2017
 ms.assetid: 25b4a26a-06f2-4f80-87a9-76705ed46197
 ms.openlocfilehash: a7a455730860e2b11a5ceff5a70934502b312e19
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401911"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515062"
 ---
 # <a name="numeric-and-comparison-operators"></a>數值與比較運算子
 除了下列幾點以外，在 Common Language Runtime (CLR) 中算術和比較運算子都會如預期運作：  

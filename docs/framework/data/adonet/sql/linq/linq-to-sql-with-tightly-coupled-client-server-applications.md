@@ -3,11 +3,11 @@ title: LINQ to SQL 搭配緊密結合的用戶端-伺服器應用程式
 ms.date: 03/30/2017
 ms.assetid: e083d805-dcf6-459d-b9af-9ef0563f2dd7
 ms.openlocfilehash: 9c36fc1f402d3791611af47a3a6d997db4f31167
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408956"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521876"
 ---
 # <a name="linq-to-sql-with-tightly-coupled-client-server-applications"></a>LINQ to SQL 搭配緊密結合的用戶端-伺服器應用程式
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 可以使用中介層上與緊密結合的展示層上的智慧型用戶端。 在唯讀資料存取的案例中，不需要開放式並行存取 (Optimistic Concurrency) 檢查或使用時間戳記的開放式並行存取，處理起來並不複雜，與簡單的非遠端案例相去不遠。 不過，當資料庫需要使用原始值的開放式並行存取檢查時，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 無法提供與資料集中反覆存取資料相同的支援能力。 不過，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中介層可與任何平台上的用戶端交換資料。  

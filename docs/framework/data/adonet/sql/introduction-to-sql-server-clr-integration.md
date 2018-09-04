@@ -2,12 +2,12 @@
 title: SQL Server CLR 整合簡介
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
-ms.openlocfilehash: dd0ef041db13aa842554c70533770bf99c369941
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df5ead7d640446a3832b485ecf82cd4a2a11b1fb
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365575"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523001"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>SQL Server CLR 整合簡介
 做為 Microsoft .NET Framework 核心的 Common Language Runtime (CLR)，提供了所有 .NET Framework 程式碼的執行環境。 CLR 中執行的程式碼稱為 Managed 程式碼。 CLR 提供程式執行所需的各種功能及服務，包括 just-in-time (JIT) 編譯、配置及管理記憶體、強制使用型別安全性、例外處理、執行緒管理及安全性。  
@@ -20,7 +20,7 @@ ms.locfileid: "33365575"
   
  **SQL Server 線上叢書**  
   
--   [Common Language Runtime (CLR) 整合概觀](http://go.microsoft.com/fwlink/?LinkId=115242)  
+-   [Common Language Runtime (CLR) 整合概觀](https://go.microsoft.com/fwlink/?LinkId=115242)  
   
 ## <a name="enabling-clr-integration"></a>啟用 CLR 整合  
  預設會在 Microsoft SQL Server 中停用 Common Language Runtime (CLR) 整合功能，且為了使用 CLR 整合所實作的物件，必須啟用這個功能。 若要啟用使用 Transact-SQL 進行 CLR 整合，請使用 `clr enabled` 預存程序的 `sp_configure` 選項，如下所示：  
@@ -38,14 +38,14 @@ GO
   
  **SQL Server 線上叢書**  
   
--   [啟用 CLR 整合](http://go.microsoft.com/fwlink/?LinkId=115230)  
+-   [啟用 CLR 整合](https://go.microsoft.com/fwlink/?LinkId=115230)  
   
 ## <a name="deploying-a-clr-assembly"></a>部署 CLR 組件  
  一旦 CLR 方法已經在測試伺服器上測試並驗證，您就可以使用部署指令碼，將它們散發至實際執行伺服器 (Production Server)。 您可以手動產生部署指令碼，也可以使用 SQL Server Management Studio 來產生部署指令碼。 如需詳細資訊，請參閱您所使用之 SQL Server 版本的《SQL Server 線上叢書》版本。  
   
  **SQL Server 線上叢書**  
   
-1.  [部署 CLR 資料庫物件](http://go.microsoft.com/fwlink/?LinkId=115232)  
+1.  [部署 CLR 資料庫物件](https://go.microsoft.com/fwlink/?LinkId=115232)  
   
 ## <a name="clr-integration-security"></a>CLR 整合安全性  
  Microsoft SQL Server 與 Microsoft .NET Framework Common Language Runtime (CLR) 的整合安全性模型，可管理及保護在 SQL Server 內執行之不同類型 CLR 及非 CLR 物件的存取權。 這些物件可由 Transact-SQL 陳述式或在伺服器中執行的其他 CLR 物件呼叫。  
@@ -54,7 +54,7 @@ GO
   
  **SQL Server 線上叢書**  
   
--   [CLR 整合安全性](http://go.microsoft.com/fwlink/?LinkId=115234)  
+-   [CLR 整合安全性](https://go.microsoft.com/fwlink/?LinkId=115234)  
   
 ## <a name="debugging-a-clr-assembly"></a>偵錯 CLR 組件  
  Microsoft SQL Server 支援在資料庫中偵錯 Transact-SQL 及 Common Language Runtime (CLR) 物件。 偵錯可跨語言運作：使用者可以從 Transact-SQL 無接縫地進入 CLR 物件，反之亦然。  
@@ -63,9 +63,9 @@ GO
   
  **SQL Server 線上叢書**  
   
--   [偵錯 CLR 資料庫物件](http://go.microsoft.com/fwlink/?LinkId=115236)  
+-   [偵錯 CLR 資料庫物件](https://go.microsoft.com/fwlink/?LinkId=115236)  
   
 ## <a name="see-also"></a>另請參閱  
- [在 Managed 程式碼中建立 SQL Server 2005 物件](http://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
+ [在 Managed 程式碼中建立 SQL Server 2005 物件](https://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
  [程式碼存取安全性和 ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

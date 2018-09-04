@@ -2,20 +2,20 @@
 title: 永久性執行個體內容
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: fb331fc0e5f384f0ffb268c1c6f7a5ffc99478ec
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: f5c066ae06e44f6cac4b9a7b98487aa6226b969f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808604"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524422"
 ---
 # <a name="durable-instance-context"></a>永久性執行個體內容
-這個範例示範如何自訂 Windows Communication Foundation (WCF) 執行階段，以啟用永久性執行個體內容。 它會使用 SQL Server 2005 做為備份存放區 (在此例中為 SQL Server 2005 Express)。 不過，也會提供存取自訂儲存機制的方法。  
+此範例示範如何自訂 Windows Communication Foundation (WCF) 執行階段，以啟用永久性執行個體內容。 它會使用 SQL Server 2005 做為備份存放區 (在此例中為 SQL Server 2005 Express)。 不過，也會提供存取自訂儲存機制的方法。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
   
- 這個範例牽涉到擴充通道層和 WCF 的服務模型層。 因此，在進入實作的詳細資訊之前，您必須先了解一些基礎概念。  
+ 這個範例牽涉到擴充通道層和 WCF 服務模型層。 因此，在進入實作的詳細資訊之前，您必須先了解一些基礎概念。  
   
  在現實生活中，您經常可以發現永久性執行個體內容的例子。 例如，購物車應用程式可以在購物到一半時先暫停，改天再繼續購物。 因此當我們隔天造訪購物車時，已還原原始的內容。 請特別注意，當您中斷連線時，購物車應用程式 (在伺服器上) 不會維護購物車執行個體。 而是將其狀態保存至永久性儲存媒體，並在您對還原的內容建構新執行個體時使用該狀態。 因此，提供相同內容的服務執行個體與之前的執行個體不同 (因為它們沒有相同的記憶體位址)。  
   
@@ -120,7 +120,7 @@ if (isFirstMessage)
 }  
 ```  
   
- 這些通道實作接著會加入至 WCF 通道執行階段由`DurableInstanceContextBindingElement`類別和`DurableInstanceContextBindingElementSection`適當類別。 請參閱[HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md)通道繫結項目和繫結項目區段的更多詳細的範例文件。  
+ 這些通道實作將會新增至 WCF 通道執行階段`DurableInstanceContextBindingElement`類別和`DurableInstanceContextBindingElementSection`適當類別。 請參閱[HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md)通道繫結項目和繫結項目區段的更多詳細的範例文件。  
   
 ## <a name="service-model-layer-extensions"></a>服務模型層延伸項目  
  現在內容識別碼已周遊至各個通道層，您就可以實作服務行為以自訂執行個體化 (Instantiation)。 在此範例中，可以使用存放管理員，在持續存放區中載入及儲存狀態。 如先前所述，這個範例提供使用 SQL Server 2005 做為其備份存放區的存放管理員。 不過，您也可以將自訂存放機制新增至此延伸項目。 若要這樣做，將會宣告公用介面，而所有存放管理員都必須實作此公用介面。  
@@ -229,15 +229,15 @@ else
   
  現在已實作從持續性儲存體 (Persistent Storage) 中讀取及寫入執行個體的必要基礎結構。 接著便需要採取變更服務行為的必要步驟。  
   
- 此處理序的第一個步驟為儲存內容識別碼，而這個內容識別碼會從通道層周遊至目前的 InstanceContext。 InstanceContext 是一種執行階段元件，可做為 WCF 發送器和服務執行個體之間的連結。 可以用於對服務執行個體提供額外的狀態和行為。 而這是很重要的一點，因為在工作階段通訊中，只有第一個訊息會一起傳送內容識別碼。  
+ 此處理序的第一個步驟為儲存內容識別碼，而這個內容識別碼會從通道層周遊至目前的 InstanceContext。 InstanceContext 是執行階段元件，做為 WCF 發送器和服務執行個體之間的連結。 可以用於對服務執行個體提供額外的狀態和行為。 而這是很重要的一點，因為在工作階段通訊中，只有第一個訊息會一起傳送內容識別碼。  
   
- WCF 可讓您藉由加入新的狀態和使用其可擴充物件模式的行為進而擴充 InstanceContext 執行階段元件。 可擴充物件模式用在 WCF 中，搭配來擴充現有執行階段類別的新功能，或新增狀態功能到物件。 IExtensibleObject 可擴充物件模式中有三種介面\<T >，IExtension\<T >，和 Iextensioncollection<t>。\<T >:  
+ WCF 可讓您藉由加入新的狀態和使用其可擴充物件模式的行為擴充其 InstanceContext 執行階段元件。 可擴充物件模式可在 WCF 中，搭配來擴充現有的執行階段類別的新功能，或新增狀態功能到物件。 有三個介面，在可延伸物件模式-IExtensibleObject\<T >，IExtension\<T >，並 IExtensionCollection\<T >:  
   
--   IExtensibleObject\<T > 介面由允許自訂其功能的延伸模組的物件實作。  
+-   IExtensibleObject\<T > 介面藉由允許自訂其功能的延伸模組的物件。  
   
--   IExtension\<T > 介面由物件實作的擴充功能的類別為類型 t。  
+-   IExtension\<T > 類別的型別 t 的延伸模組的物件會實作介面  
   
--   Iextensioncollection<t>\<T > 介面是 IExtensions 集合，可允許擷取 IExtensions 依其型別。  
+-   IExtensionCollection\<T > 介面是 IExtensions 集合，允許型別擷取 IExtensions 依其類型。  
   
  因此，您應該建立 InstanceContextExtension 類別，並實作 IExtension 介面及定義必要的狀態以儲存內容識別碼。 這個類別也會提供一種狀態，保留正在使用的存放管理員。 一旦儲存新狀態，就無法進行修改。 所以您應該在建構執行個體時提供狀態，並將該狀態儲存至執行個體，並只能透過唯讀屬性來進行存取。  
   
@@ -279,7 +279,7 @@ public void Initialize(InstanceContext instanceContext, Message message)
   
  如先前所述，您會從 `Properties` 類別的 `Message` 集合中讀取內容識別碼，並將它傳遞至延伸類別的建構函式。 這樣便可示範如何使用一致的方法，在各層之間交換資訊。  
   
- 下一個重要的步驟為覆寫服務執行個體的建立處理序。 WCF 可讓實作自訂的執行個體化行為，並將它們連結至執行階段使用 IInstanceProvider 介面。 將實作新 `InstanceProvider` 類別以執行該工作。 在建構函式中，將會接受預期來自執行個體提供者的服務類型。 稍後將使用此服務類型來建立新的執行個體。 在 `GetInstance` 實作中，將會建立用來尋找持續性執行個體的存放管理員執行個體。 如果傳回 `null`，則會執行個體化服務類型的新執行個體，並傳回呼叫者。  
+ 下一個重要的步驟為覆寫服務執行個體的建立處理序。 實作自訂的執行個體化行為，並將它們連結至執行階段使用 IInstanceProvider 介面，可讓 WCF。 將實作新 `InstanceProvider` 類別以執行該工作。 在建構函式中，將會接受預期來自執行個體提供者的服務類型。 稍後將使用此服務類型來建立新的執行個體。 在 `GetInstance` 實作中，將會建立用來尋找持續性執行個體的存放管理員執行個體。 如果傳回 `null`，則會執行個體化服務類型的新執行個體，並傳回呼叫者。  
   
 ```  
 public object GetInstance(InstanceContext instanceContext, Message message)  
@@ -352,7 +352,7 @@ foreach (ChannelDispatcherBase cdb in serviceHostBase.ChannelDispatchers)
   
  不會變得是將服務執行個體儲存至持續性儲存體。 如前所述，已提供必要的功能讓您在 `IStorageManager` 實作中儲存狀態。 我們現在必須整合這與 WCF 執行階段。 也需要適用於服務實作類別方法的其他屬性。 而這個屬性應該會套用至變更服務執行個體狀態的方法。  
   
- `SaveStateAttribute` 類別會實作此功能。 它也會實作`IOperationBehavior`類別以修改 WCF 執行階段針對每項作業。 當以這個屬性標示方法時，WCF 執行階段會叫用`ApplyBehavior`方法並適當`DispatchOperation`所建構。 在這個方法實作中，程式碼只需要一行：  
+ `SaveStateAttribute` 類別會實作此功能。 它也會實作`IOperationBehavior`修改 WCF 執行階段針對每個作業的類別。 當方法標記有這個屬性時，WCF 執行階段會叫用`ApplyBehavior`方法並適當`DispatchOperation`所建構。 在這個方法實作中，程式碼只需要一行：  
   
 ```  
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);  
@@ -374,7 +374,7 @@ return result;
 ```  
   
 ## <a name="using-the-extension"></a>使用延伸項目  
- 同時完成通道層和服務模型層延伸項目，而現在可以使用 WCF 應用程式中。 服務必須使用自訂繫結將通道新增至通道堆疊，然後以適當的屬性標示服務實作類別。  
+ 同時完成通道層和服務模型層延伸，現在可以使用在 WCF 應用程式。 服務必須使用自訂繫結將通道新增至通道堆疊，然後以適當的屬性標示服務實作類別。  
   
 ```  
 [DurableInstanceContext]  
@@ -442,11 +442,11 @@ Press ENTER to shut down client
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要建置此方案，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+2.  若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-3.  若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 > [!NOTE]
 >  您必須執行 SQL Server 2005 或 SQL Express 2005，才能執行此範例。 如果正在執行 SQL Server 2005，則必須修改服務之連線字串的組態。 在多台電腦中執行時，只有伺服器電腦上需要 SQL Server。  
@@ -456,7 +456,7 @@ Press ENTER to shut down client
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Durable`  
   

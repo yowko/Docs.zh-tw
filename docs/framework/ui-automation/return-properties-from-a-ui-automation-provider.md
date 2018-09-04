@@ -13,11 +13,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 3e24d9bebc891ecdae9d3a68d700d053194374ce
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408200"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527063"
 ---
 # <a name="return-properties-from-a-ui-automation-provider"></a>從 UI 自動化提供者傳回屬性
 > [!NOTE]

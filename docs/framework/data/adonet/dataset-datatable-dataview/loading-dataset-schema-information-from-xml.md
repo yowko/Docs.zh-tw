@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
 ms.openlocfilehash: a076dcbbe79a7ec0dfbd727e0d0c752bd4675eef
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398602"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515978"
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>從 XML 載入資料集結構描述資訊
 結構描述<xref:System.Data.DataSet>（其資料表、 資料行、 關聯和條件約束） 可以定義以程式設計的方式，由**填滿**或是**FillSchema**方法<xref:System.Data.Common.DataAdapter>，或從載入XML 文件。 載入**資料集**結構描述資訊從 XML 文件，您可以使用**ReadXmlSchema**或**InferXmlSchema**方法**的資料集**. **ReadXmlSchema**可讓您載入或推斷**資料集**從包含 XML 結構描述定義語言 (XSD) 結構描述或內嵌 XML 結構描述的 XML 文件的文件的結構描述資訊。 **InferXmlSchema**可讓您來推斷 XML 文件的結構描述，但略過您指定特定 XML 命名空間。  

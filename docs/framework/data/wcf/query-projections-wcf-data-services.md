@@ -11,11 +11,11 @@ helpviewer_keywords:
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
 ms.openlocfilehash: d53892f9823474ea14640e352548b55432e7744b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43461059"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526684"
 ---
 # <a name="query-projections-wcf-data-services"></a>查詢投影 (WCF 資料服務)
 投影提供一種機制，在[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]減少，僅傳回特定屬性的實體會在回應中藉由指定查詢所傳回之摘要中的資料量。 如需詳細資訊，請參閱 < [OData: Select 系統查詢選項 ($select)](https://go.microsoft.com/fwlink/?LinkId=186076)。  

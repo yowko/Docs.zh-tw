@@ -2,25 +2,25 @@
 title: EDM 產生器 (EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: 90d67af0d2ba3ff04ee5c78b7d0a3f061a69bc1d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: edec83b187afc74f3ad93181c4737a4d6cec8d0e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766266"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516119"
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM 產生器 (EdmGen.exe)
 EdmGen.exe 是用於處理 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 模型和對應檔案的命令列工具。 您可以使用 EdmGen.exe 工具執行下列動作：  
   
--   使用資料來源特定的 .NET Framework 資料提供者連接至資料來源，並產生 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 使用的概念模型 (.csdl)、儲存體模型 (.ssdl) 和對應 (.msl) 檔案。 如需詳細資訊，請參閱[How to： 使用 EdmGen.exe 產生模型和對應檔](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)。  
+-   使用資料來源特定的 .NET Framework 資料提供者連接至資料來源，並產生 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 使用的概念模型 (.csdl)、儲存體模型 (.ssdl) 和對應 (.msl) 檔案。 如需詳細資訊，請參閱 <<c0> [ 如何： 使用 EdmGen.exe 產生模型和對應檔](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)。  
   
--   驗證現有模型。 如需詳細資訊，請參閱[How to： 使用 EdmGen.exe 驗證模型和對應檔案](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)。  
+-   驗證現有模型。 如需詳細資訊，請參閱 <<c0> [ 如何： 使用 EdmGen.exe 驗證模型和對應檔](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)。  
   
--   產生 C# 或 Visual Basic 程式碼檔案，其中包含從概念模型 (.csdl) 檔案產生的物件類別 (Class)。 如需詳細資訊，請參閱[How to： 使用 EdmGen.exe 產生物件層程式碼](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md)。  
+-   產生 C# 或 Visual Basic 程式碼檔案，其中包含從概念模型 (.csdl) 檔案產生的物件類別 (Class)。 如需詳細資訊，請參閱 <<c0> [ 如何： 使用 EdmGen.exe 產生物件層程式碼](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md)。  
   
--   產生 C# 或 Visual Basic 程式碼檔案，其中包含為現有模型預先產生的檢視表。 如需詳細資訊， [How to: Pre-Generate 檢視，以改善查詢效能](http://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579)。  
+-   產生 C# 或 Visual Basic 程式碼檔案，其中包含為現有模型預先產生的檢視表。 如需詳細資訊，[如何： Pre-Generate 檢視，以改善查詢效能](https://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579)。  
   
- EdmGen.exe 工具是安裝在 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 目錄。 在許多情況下，這是位於 C:\windows\Microsoft.NET\Framework\v4.0。 若為 64 位元系統，則是位於 C:\windows\Microsoft.NET\Framework64\v4.0。 您也可以從 Visual Studio 命令提示字元存取 EdmGen.exe 工具 (按一下**啟動**，指向 **所有程式**，指向  **Microsoft Visual Studio 2010**，指向**Visual Studio Tools**，然後按一下  **Visual Studio 2010 命令提示字元**)。  
+ EdmGen.exe 工具是安裝在 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 目錄。 在許多情況下，這是位於 C:\windows\Microsoft.NET\Framework\v4.0。 若為 64 位元系統，則是位於 C:\windows\Microsoft.NET\Framework64\v4.0。 您也可以存取 EdmGen.exe 工具從 Visual Studio 命令提示字元 (按一下**開始**，指向**所有程式**，指向**Microsoft Visual Studio 2010**，指向**Visual Studio Tools**，然後按一下**Visual Studio 2010 命令提示字元**)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,8 +43,8 @@ EdmGen /mode:choice [options]
   
 |選項|描述|  
 |------------|-----------------|  
-|`/p[roject]:`\<string>|指定要使用的專案名稱。 專案名稱會當成命名空間 (Namespace) 設定的預設值、模型和對應檔案的名稱、物件來源檔案的名稱和檢視表產生來源檔案的名稱。 實體容器名稱設\<專案 > 內容。|  
-|`/prov[ider]:`\<string>|要用來產生儲存模型 (.ssdl) 檔案的 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 資料提供者的名稱。 預設提供者是[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]Data Provider for SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>)。|  
+|`/p[roject]:`\<string>|指定要使用的專案名稱。 專案名稱會當成命名空間 (Namespace) 設定的預設值、模型和對應檔案的名稱、物件來源檔案的名稱和檢視表產生來源檔案的名稱。 實體容器名稱設為\<專案 > 內容。|  
+|`/prov[ider]:`\<string>|要用來產生儲存模型 (.ssdl) 檔案的 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 資料提供者的名稱。 預設提供者[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]Data Provider for SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>)。|  
 |`/c[onnectionstring]:`\<連接字串 >|指定用來連接至資料來源的字串。|  
 |`/incsdl:`\<file>|指定 .csdl 檔案或 .csdl 檔案所在的目錄。 這個引數可多次指定，因此您能指定數個目錄或 .csdl 檔案。 當概念模型被分割成數個檔案後，指定多個目錄會有助於產生類別 (`/mode:EntityClassGeneration`) 或檢視表 (`/mode:ViewGeneration`)， 而這也有助於驗證多個模型 (`/mode:ValidateArtifacts`)。|  
 |`/refcsdl:`\<file>|指定用於解析來源 .csdl 檔案中任何參考的其他 .csdl 檔案  (來源 .csdl 檔案是由 `/incsdl` 選項所指定的檔案)。 `/refcsdl` 檔案包含來源 .csdl 檔案相依的類型。 這個引數可多次指定。|  
@@ -58,7 +58,7 @@ EdmGen /mode:choice [options]
 |`/language:`[VB&#124;CSharp]|指定所產生之原始程式碼檔案的語言。 預設語言為 C#。|  
 |`/namespace:`\<string>|指定要使用的模型命名空間。 執行 `/mode:FullGeneration` 或 `/mode:FromSSDLGeneration` 時會在 .csdl 檔案中設定命名空間。 執行 `/mode:EntityClassGeneration` 時不會使用命名空間。|  
 |`/entitycontainer:`\<string>|指定要套用到產生的模型和對應檔案中 `<EntityContainer>` 項目的名稱。|  
-|`/pl[uralize]`|將英語的單數和複數規則套用到概念模型中的 `Entity`、`EntitySet` 和 `NavigationProperty` 名稱。 這個選項會執行下列動作：<br /><br /> -請所有`EntityType`單數名稱。<br />-請所有`EntitySet`複數名稱。<br />-針對每個`NavigationProperty`，傳回最多一個實體，讓名稱成為唯一。<br />-針對每個`NavigationProperty`傳回多個實體，讓名稱成為複數。|  
+|`/pl[uralize]`|將英語的單數和複數規則套用到概念模型中的 `Entity`、`EntitySet` 和 `NavigationProperty` 名稱。 這個選項會執行下列動作：<br /><br /> -使所有`EntityType`單數名稱。<br />-使所有`EntitySet`複數名稱。<br />-針對每個`NavigationProperty`傳回大部分實體，將名稱變為單數。<br />-針對每個`NavigationProperty`傳回多個實體，將其名稱的複數。|  
 |`/SupressForeignKeyProperties or /nofk`|防止外部索引鍵資料行公開為概念模型中實體類型上的純量屬性。|  
 |`/help` 或 `?`|顯示工具的命令語法和選項。|  
 |`/nologo`|隱藏著作權訊息。|  
@@ -72,6 +72,6 @@ EdmGen /mode:choice [options]
  [如何：使用 EdmGen.exe 驗證模型和對應檔](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [ADO.NET 實體資料模型工具](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)  
+ [ADO.NET 實體資料模型工具](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)  
  [實體資料模型](../../../../../docs/framework/data/adonet/entity-data-model.md)  
  [CSDL、SSDL 和 MSL 規格](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

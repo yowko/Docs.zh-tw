@@ -22,11 +22,11 @@ helpviewer_keywords:
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
 ms.openlocfilehash: d9c9bea26cfc3d5b2cfc4484173a7680ff2fc34d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399322"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525031"
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>如何：設定由 Windows Form 控制項所顯示的文字
 Windows Form 控制項通常會顯示與控制項主要功能相關的一些文字。 例如，<xref:System.Windows.Forms.Button> 控制項通常會顯示一個標題，指出當按下按鈕時，就會執行什麼動作。 針對所有控制項，您都可以使用 <xref:System.Windows.Forms.Control.Text%2A> 屬性來設定或傳回該文字。 您可以使用 <xref:System.Windows.Forms.Control.Font%2A> 屬性來變更字型。 您也可以使用設計工具來設定文字。  另請參閱[如何： 建立存取金鑰的 Windows Form 控制項使用設計工具](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md)，[如何： 設定 Windows Form 控制項使用的文字顯示設計工具](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md)， [How to： 設定映像顯示 Windows Form 控制項使用設計工具](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md)。  

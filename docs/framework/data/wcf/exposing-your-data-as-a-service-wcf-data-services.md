@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: df0bbcee-f66f-4a88-abb4-4e73c8b9c908
 ms.openlocfilehash: ba316aeda0a0a7e80af8e37a6a62e88652b9635b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463048"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520411"
 ---
 # <a name="expose-your-data-as-a-service-wcf-data-services"></a>將您的資料公開為服務 (WCF Data Services)
 

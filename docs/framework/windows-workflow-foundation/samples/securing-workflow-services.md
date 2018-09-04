@@ -2,19 +2,19 @@
 title: 保護工作流程服務
 ms.date: 03/30/2017
 ms.assetid: 53f84ad5-1ed1-4114-8d0d-b12e8a021c6e
-ms.openlocfilehash: 5dbd724f3a2f8febfc74719584f4d69cbf75b567
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 28c34ecf7d6d781bfa461b2737cb9325a657f47e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806665"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524331"
 ---
 # <a name="securing-workflow-services"></a>保護工作流程服務
 安全工作流程服務範例示範下列程序：  
   
 -   使用 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 活動建立基本工作流程服務。  
   
--   您可以使用 Windows Communication Foundation (WCF) 組態來定義工作流程服務所使用的安全端點。  
+-   您可以使用 Windows Communication Foundation (WCF) 組態來定義工作流程服務使用的安全端點。  
   
 -   在自訂原則中建立宣告，並使用 <xref:System.ServiceModel.ServiceAuthorizationManager> 驗證宣告。  
   
@@ -22,7 +22,7 @@ ms.locfileid: "33806665"
  使用 WCF 安全性保護用戶端和工作流程服務之間的通訊、宣告架構的授權  
   
 ## <a name="discussion"></a>討論  
- 這個範例示範如何使用 WCF 安全性基礎結構來保護工作流程服務，就如同正常的 WCF 服務使用。 特別是對授權使用自訂宣告。 在這個範例中，會使用 <xref:System.ServiceModel.WSHttpBinding> 和訊息模式安全性搭配 Windows 認證。  
+ 此範例示範如何使用 WCF 安全性基礎結構來保護工作流程服務，就如同正常的 WCF 服務。 特別是對授權使用自訂宣告。 在這個範例中，會使用 <xref:System.ServiceModel.WSHttpBinding> 和訊息模式安全性搭配 Windows 認證。  
   
  自訂 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> (`CustomNameCheckerPolicy`) 會檢查用戶端的 Windows 使用者名稱和特定字元。 如果該字元存在，則會建立宣告並將它加入至 <xref:System.IdentityModel.Policy.EvaluationContext>。 透過這種方式，自訂原則表示用戶端的使用者名稱中有這個字元。 在呼叫的存留期間，可以查詢這個宣告。 您可以在 `Constants.cs` 中找到該字元。  
   
@@ -49,6 +49,6 @@ ms.locfileid: "33806665"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\SecuringWorkflowServices`

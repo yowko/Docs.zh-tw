@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-ms.openlocfilehash: 8acfd0640478cf67309fe53a99707c7d96c5a635
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 38f679dff1f4e23f0aae541a775ef727917b03e4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519577"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527605"
 ---
 # <a name="workflow-security"></a>工作流程安全性
-Windows Workflow Foundation (WF) 已與幾種不同技術的詳細資訊，例如 Microsoft SQL Server 和 Windows Communication Foundation (WCF) 整合。 如果與這些技術互動的方式不適當，可能會造成工作流程上的安全性問題。  
+Windows Workflow Foundation (WF) 與數個不同的技術，例如 Microsoft SQL Server 和 Windows Communication Foundation (WCF) 整合。 如果與這些技術互動的方式不適當，可能會造成工作流程上的安全性問題。  
   
 ## <a name="persistence-security-concerns"></a>持續性安全性考量  
   
@@ -30,22 +30,22 @@ Windows Workflow Foundation (WF) 已與幾種不同技術的詳細資訊，例�
   
 -   當使用大量子活動、位置、書籤、主機延伸或範圍時，或當使用有大量承載的書籤時，可能會耗盡記憶體，或在持續性期間過度配置不當的資料庫空間。 可使用物件層級與資料庫層級的安全性來減少這種情況。  
   
--   使用 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 時，必須保護執行個體存放區的安全。 如需詳細資訊，請參閱[SQL Server 最佳作法](http://go.microsoft.com/fwlink/?LinkId=164972)。  
+-   使用 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 時，必須保護執行個體存放區的安全。 如需詳細資訊，請參閱 < [SQL Server 最佳作法](https://go.microsoft.com/fwlink/?LinkId=164972)。  
   
--   應加密執行個體存放區中的敏感資料。 如需詳細資訊，請參閱[SQL 安全性加密](http://go.microsoft.com/fwlink/?LinkId=164976)。  
+-   應加密執行個體存放區中的敏感資料。 如需詳細資訊，請參閱 < [SQL 安全性加密](https://go.microsoft.com/fwlink/?LinkId=164976)。  
   
 -   因為資料庫連接字串通常包含在組態檔中，應該使用 Windows 層級的安全性 (ACL) 以確保組態檔 (通常為 Web.Config) 是安全的，且登入和密碼資訊沒有包含在連接字串中。 資料庫和 Web 伺服器之間應改用 Windows 驗證。  
   
 ## <a name="considerations-for-workflowservicehost"></a>WorkflowServiceHost 的考量  
   
--   應該保護在工作流程中所用的 Windows Communication Foundation (WCF) 端點。 如需詳細資訊，請參閱[WCF 安全性概觀](http://go.microsoft.com/fwlink/?LinkID=164975)。  
+-   工作流程中所用的 Windows Communication Foundation (WCF) 端點應該受到保護。 如需詳細資訊，請參閱 < [WCF 安全性概觀](https://go.microsoft.com/fwlink/?LinkID=164975)。  
   
--   可使用 <xref:System.ServiceModel.ServiceAuthorizationManager> 實作主機層級授權。 請參閱[How To： 建立自訂授權管理員服務](http://go.microsoft.com/fwlink/?LinkId=192228)如需詳細資訊。 這也會在下列範例示範：[保護工作流程服務](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md)。  
+-   可使用 <xref:System.ServiceModel.ServiceAuthorizationManager> 實作主機層級授權。 請參閱[How To： 為服務建立自訂授權管理員](https://go.microsoft.com/fwlink/?LinkId=192228)如需詳細資訊。 這也會示範在下列範例：[保護工作流程服務](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md)。  
   
 -   傳入訊息的 ServiceSecurityContext 也可在工作流程內取得，方法是存取 OperationContext。  請參閱[從工作流程服務的存取 OperationContext](../../../docs/framework/wcf/feature-details/accessing-operationcontext-from-a-workflow-service.md)如需詳細資訊。  
   
 ## <a name="wf-security-pack-ctp"></a>WF Security Pack CTP  
- Microsoft WF Security Pack CTP 1 是一組活動及其實作根據第一個 community technology preview (CTP) 版本[Windows Workflow Foundation](http://msdn.microsoft.com/netframework/aa663328.aspx)中[.NET Framework 4](http://msdn.microsoft.com/netframework/default.aspx) (WF4） 以及[Windows Identity Foundation (WIF)](http://msdn.microsoft.com/security/aa570351.aspx)。  Microsoft WF Security Pack CTP 1 包含活動及其設計工具，說明如何使用工作流程輕鬆進行各種安全性相關的案例，包括：  
+ Microsoft WF Security Pack CTP 1 是一組活動及其實作，根據第一個 community technology preview (CTP) 版本[Windows Workflow Foundation](https://msdn.microsoft.com/netframework/aa663328.aspx)中[.NET Framework 4](https://msdn.microsoft.com/netframework/default.aspx) (WF4） 以及[Windows Identity Foundation (WIF)](https://msdn.microsoft.com/security/aa570351.aspx)。  Microsoft WF Security Pack CTP 1 包含活動及其設計工具，說明如何使用工作流程輕鬆進行各種安全性相關的案例，包括：  
   
 1.  在工作流程中模擬用戶端身分識別  
   

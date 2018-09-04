@@ -3,11 +3,11 @@ title: 異動模型
 ms.date: 03/30/2017
 ms.assetid: 48a8bc1b-128b-4cf1-a421-8cc73223c340
 ms.openlocfilehash: 8731b72d0657aa420dbb020e216c3af059916ce9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43474222"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517779"
 ---
 # <a name="transaction-models"></a>異動模型
 本主題描述異動程式設計模型與 Microsoft 提供的基礎結構元件之間的關係。  

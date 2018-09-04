@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
-ms.openlocfilehash: 8ee47ddce273e564673d96d2b2e276b68879373f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d5031136b48b50ef7ad34b97942b7f6d8054d340
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760462"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522312"
 ---
 # <a name="adding-columns-to-a-datatable"></a>將資料行加入至 DataTable
 A<xref:System.Data.DataTable>包含的集合<xref:System.Data.DataColumn>所參考的物件**資料行**資料表屬性。 這個資料行集合 (可搭配任何條件約束) 可定義資料表的結構描述 (或結構)。  
   
- 您建立**DataColumn**內使用的資料表物件**DataColumn**建構函式，或藉由呼叫**新增**方法**資料行**屬性的資料表，也就是<xref:System.Data.DataColumnCollection>。 **新增**方法可接受選擇**ColumnName**， **DataType**，和**運算式**引數，並建立新**DataColumn**為集合的成員。 它也可接受現有**DataColumn**物件，並將它加入至集合中，然後將參考傳回給已加入**DataColumn**要求。 因為**DataTable**物件並非特定用於任何資料來源、 指定的資料型別時使用.NET Framework 型別**DataColumn**。  
+ 您建立**DataColumn**使用資料表中的物件**DataColumn**建構函式，或藉由呼叫**新增**方法**資料行**資料表，也就是屬性<xref:System.Data.DataColumnCollection>。 **新增**方法會接受選擇性**ColumnName**， **DataType**，並**運算式**引數，並建立新**DataColumn**為集合的成員。 它也會接受現有**DataColumn**物件，並將它加入至集合中，並傳回的參考加入**DataColumn**如果要求。 因為**DataTable**物件並非特定用於任何資料來源、 指定的資料類型時，會使用.NET Framework 型別**DataColumn**。  
   
- 下列範例會將四欄以**DataTable**。  
+ 下列範例會將四個資料行**DataTable**。  
   
 ```vb  
 Dim workTable As DataTable = New DataTable("Customers")  
@@ -44,10 +44,10 @@ workTable.Columns.Add("CustFName", typeof(String));
 workTable.Columns.Add("Purchases", typeof(Double));  
 ```  
   
- 在範例中，請注意，屬性**CustID**資料行設定為不允許**DBNull**值，並限制為唯一的值。 不過，如果您定義**CustID**為資料表主索引鍵資料行的資料行**AllowDBNull**屬性將會自動設定為**false**和**Unique**屬性將會自動設定為**true**。 如需詳細資訊，請參閱[定義主索引鍵](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)。  
+ 在範例中，請注意，屬性**CustID**資料行設定為不允許**DBNull**值並限制為唯一的值。 不過，如果您定義**CustID**資料行做為資料表的主索引鍵資料行**AllowDBNull**屬性會自動設為**false**和**Unique**屬性會自動設為 **，則為 true**。 如需詳細資訊，請參閱 <<c0> [ 定義主索引鍵](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)。  
   
 > [!CAUTION]
->  如果資料行名稱未提供資料行中，指定資料行的資料行的遞增預設名稱*N*起"Column1"，當它加入**DataColumnCollection**。 我們建議您避免命名慣例 」 資料行*N*「 當您提供的資料行名稱，因為您提供的名稱與現有的預設資料行名稱中可能發生衝突**DataColumnCollection**。 如果提供的名稱已經存在，便會發生例外狀況。  
+>  如果資料行名稱未提供資料行中，指定資料行的資料行的遞增預設名稱*N* "Column1"從開始，當它加入**DataColumnCollection**。 我們建議您避免命名慣例 」 資料行*N*「 當您提供的資料行名稱，因為您提供的名稱可能會與在現有的預設資料行名稱衝突**DataColumnCollection**。 如果提供的名稱已經存在，便會發生例外狀況。  
   
  如果您要使用 <xref:System.Xml.Linq.XElement> 當做 <xref:System.Data.DataColumn.DataType%2A> 中 <xref:System.Data.DataColumn> 的 <xref:System.Data.DataTable>，當您讀入資料時，XML 序列化將無法運作。 例如，如果您使用 <xref:System.Xml.XmlDocument> 方法來寫出 `DataTable.WriteXml`，在序列化至 XML 時，<xref:System.Xml.Linq.XElement> 就會存在額外的父節點。 若要解決此問題，請使用 <xref:System.Data.SqlTypes.SqlXml> 型別而非 <xref:System.Xml.Linq.XElement>。 `ReadXml` 和 `WriteXml` 會搭配 <xref:System.Data.SqlTypes.SqlXml> 正確運作。  
   
@@ -57,4 +57,4 @@ workTable.Columns.Add("Purchases", typeof(Double));
  <xref:System.Data.DataTable>  
  [DataTable 結構描述定義](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
  [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
 ms.openlocfilehash: f77864d827ce12d40971dd7f7159e985ab4096ae
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417900"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520970"
 ---
 # <a name="guide-to-the-documentation"></a>文件指南
 提供以下是 Windows Communication Foundation (WCF) 文件的相關指引。 連結文件是建議的起點，並且根據特定興趣和專業等級分群組。  

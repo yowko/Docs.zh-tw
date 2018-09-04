@@ -3,11 +3,11 @@ title: 在 .NET Framework 4 工作流程中使用 Interop 活動
 ms.date: 03/30/2017
 ms.assetid: 9bb747f0-eb33-4f70-84cd-317382372dcd
 ms.openlocfilehash: 02eeaf5bb7ff484ba5982197fc395e247cd5a87f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466721"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528106"
 ---
 # <a name="using-the-interop-activity-in-a-net-framework-4-workflow"></a>在 .NET Framework 4 工作流程中使用 Interop 活動
 使用 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 或 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 建立的活動，可以經由使用 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 活動，在 <xref:System.Activities.Statements.Interop> 工作流程中使用。 本主題提供使用 <xref:System.Activities.Statements.Interop> 活動的概觀。  

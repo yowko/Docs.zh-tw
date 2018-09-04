@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
 ms.openlocfilehash: c1ebe2d735924c559f450f4041884dc9845e4fe0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396081"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514511"
 ---
 # <a name="adding-data-to-a-datatable"></a>將資料加入至 DataTable
 建立 <xref:System.Data.DataTable> 並使用資料行和條件約束定義其結構之後，即可將新資料列加入資料表。 若要加入新資料列，請將新變數宣告為 <xref:System.Data.DataRow> 型別。 新**DataRow**當您呼叫時，會傳回物件<xref:System.Data.DataTable.NewRow%2A>方法。 **DataTable**然後建立**DataRow**物件基礎的資料表，結構所定義<xref:System.Data.DataColumnCollection>。  

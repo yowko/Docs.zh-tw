@@ -5,11 +5,11 @@ ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 5b4abd570f8bb40f2faa72f2debf2dee563d3a23
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43394938"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526597"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>驗證的延伸保護概觀
 驗證的延伸保護有助於防範中間人 (MITM) 攻擊，以免用戶端的認證遭攻擊者攔截後再轉送至伺服器。  

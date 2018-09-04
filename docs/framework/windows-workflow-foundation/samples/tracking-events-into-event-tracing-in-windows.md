@@ -2,15 +2,15 @@
 title: 在 Windows 事件追蹤中追蹤事件
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 82de8ee74c12019f815adc63f2ca4441ad95d325
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b2e43e169faade06d8816d9ae517b6957fbf1ee
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519502"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527092"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>在 Windows 事件追蹤中追蹤事件
-這個範例示範如何啟用 Windows Workflow Foundation (WF) 追蹤工作流程服務上以及發出追蹤事件中事件的 Windows 追蹤 (ETW)。 為了將工作流程追蹤記錄發出到 ETW，此範例會使用 ETW 追蹤參與者 (<xref:System.Activities.Tracking.EtwTrackingParticipant>)。  
+此範例示範如何啟用 Windows Workflow Foundation (WF) 工作流程服務上追蹤，以及發出追蹤事件的事件追蹤的 Windows (ETW)。 為了將工作流程追蹤記錄發出到 ETW，此範例會使用 ETW 追蹤參與者 (<xref:System.Activities.Tracking.EtwTrackingParticipant>)。  
   
  範例中的工作流程會接收要求、將對等的輸入資料指派給輸入變數，並將對等項目傳回用戶端。 當輸入資料為 0 時，將會發生除以零的例外狀況而無法處理，所以導致工作流程中止。 當啟用追蹤時，錯誤追蹤記錄會發出到 ETW，有助於之後的疑難排解。 ETW 追蹤參與者會設定追蹤設定檔來訂閱追蹤記錄。 追蹤設定檔會定義於 Web.config 檔案中，並當做組態參數提供給 ETW 追蹤參與者。 ETW 追蹤參與者會在工作流程服務的 Web.config 檔案中設定，而且會當做服務行為套用到此服務。 在這個範例中，您會使用事件檢視器檢視事件記錄檔中的追蹤事件。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "33519502"
   
 3.  若要執行此方案，請按 F5。  
   
-     根據預設，服務會接聽連接埠 53797 (http://localhost:53797/SampleWorkflowService.xamlx)。  
+     根據預設，此服務會接聽連接埠 53797 (http://localhost:53797/SampleWorkflowService.xamlx)。  
   
 4.  使用 [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] 開啟 WCF 測試用戶端。  
   
@@ -53,29 +53,29 @@ ms.locfileid: "33519502"
   
      預設 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 安裝資料夾為 C:\Program Files\Microsoft Visual Studio 10.0。  
   
-5.  在 WCF 測試用戶端中，選取**加入服務**從**檔案**功能表。  
+5.  在 WCF 測試用戶端中，選取**新增服務**從**檔案**功能表。  
   
-     在輸入方塊中加入端點位址。 預設值為 http://localhost:53797/SampleWorkflowService.xamlx。  
+     在輸入方塊中加入端點位址。 預設為 http://localhost:53797/SampleWorkflowService.xamlx。  
   
 6.  開啟 [事件檢視器] 應用程式。  
   
-     在之前叫用服務，啟動 事件檢視器，從**啟動**功能表上，選取**執行**，並在輸入`eventvwr.exe`。 確認事件記錄檔正在接聽從工作流程服務發出的追蹤事件。  
+     之前叫用服務，啟動 事件檢視器，從**開始**功能表上，選取**執行**中輸入`eventvwr.exe`。 確認事件記錄檔正在接聽從工作流程服務發出的追蹤事件。  
   
-7.  在 事件檢視器的樹狀檢視中，瀏覽至**事件檢視器**， **Applications and Services Logs**，和**Microsoft**。 以滑鼠右鍵按一下**Microsoft**選取**檢視**然後**顯示分析與偵錯記錄檔**啟用分析與偵錯記錄檔  
+7.  在 事件檢視器 樹狀 檢視中，瀏覽至**事件檢視器**， **Applications and Services Logs**，並**Microsoft**。 以滑鼠右鍵按一下**Microsoft** ，然後選取**檢視**，然後**顯示分析與偵錯記錄檔**啟用分析和偵錯記錄檔  
   
      請確認**顯示分析與偵錯記錄檔**核取選項。  
   
-8.  在樹狀檢視中事件檢視器中，瀏覽至**事件檢視器**， **Applications and Services Logs**， **Microsoft**， **Windows**， **應用程式伺服器-應用程式**。 以滑鼠右鍵按一下**分析**選取**啟用記錄**啟用**分析**記錄檔。  
+8.  在樹狀檢視中 事件檢視器中，瀏覽至**事件檢視器**， **Applications and Services Logs**， **Microsoft**， **Windows**， **應用程式伺服器-應用程式**。 以滑鼠右鍵按一下**分析**，然後選取**啟用的記錄檔**以啟用**分析**記錄檔。  
   
 9. 若要使用 WCF 測試用戶端測試此服務，請按兩下 `GetData`。  
   
      這樣會開啟 `GetData` 方法。 此要求會接受一個參數，並確定值為 0 (預設值)。  
   
-     按一下**叫用**。  
+     按一下 **叫用**。  
   
 10. 請查看工作流程所發出的事件。  
   
-     切換回 [事件檢視器] 並瀏覽至**事件檢視器**， **Applications and Services Logs**， **Microsoft**， **Windows**， **應用程式伺服器-應用程式**。 以滑鼠右鍵按一下**分析**選取**重新整理**。  
+     切換回 [事件檢視器] 並瀏覽至**事件檢視器**， **Applications and Services Logs**， **Microsoft**， **Windows**， **應用程式伺服器-應用程式**。 以滑鼠右鍵按一下**分析**，然後選取**重新整理**。  
   
      工作流程事件會顯示在事件檢視器中。 請注意，將會顯示工作流程執行事件，而且其中一個是未處理的例外狀況且對應到工作流程中的錯誤。 此外，也會從工作流程活動發出警告事件，指出活動正在擲回錯誤。  
   
@@ -125,11 +125,11 @@ ms.locfileid: "33519502"
   
 1.  開啟 [事件檢視器]。  
   
-2.  瀏覽至**事件檢視器**， **Applications and Services Logs**， **Microsoft**， **Windows**，**應用程式伺服器應用程式**。 以滑鼠右鍵按一下**分析**選取**停用記錄**。  
+2.  瀏覽至**事件檢視器**， **Applications and Services Logs**， **Microsoft**， **Windows**，**應用程式伺服器-應用程式**。 以滑鼠右鍵按一下**分析**，然後選取**停用記錄**。  
   
-3.  瀏覽至**事件檢視器**， **Applications and Services Logs**， **Microsoft**， **Windows**，**應用程式伺服器應用程式**。 以滑鼠右鍵按一下**分析**選取**清除記錄檔**。  
+3.  瀏覽至**事件檢視器**， **Applications and Services Logs**， **Microsoft**， **Windows**，**應用程式伺服器-應用程式**。 以滑鼠右鍵按一下**分析**，然後選取**清除記錄檔**。  
   
-4.  選擇**清除**選項可清除事件。  
+4.  選擇**清除**選項來清除事件。  
   
 ## <a name="known-issue"></a>已知問題  
   
@@ -145,9 +145,9 @@ ms.locfileid: "33519502"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`  
   
 ## <a name="see-also"></a>另請參閱  
- [AppFabric 監控範例](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [AppFabric 監控範例](https://go.microsoft.com/fwlink/?LinkId=193959)

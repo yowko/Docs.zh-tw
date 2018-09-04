@@ -6,11 +6,11 @@ helpviewer_keywords:
 - status bars
 ms.assetid: eb1e59da-0a48-4ce5-af7d-13b8e75af4b1
 ms.openlocfilehash: 157db8b9fbbbb6e1c6af41b4cf3903f4a762d763
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385722"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528093"
 ---
 # <a name="statusstrip-control"></a>StatusStrip 控制項
 Windows Form `StatusStrip` 控制項在表單裡被當做區域來使用，通常會顯示在視窗底部，在其中應用程式可以顯示各種狀態資訊。 `StatusStrip` 控制項的上方通常會有 `ToolStripStatusLabel` 控制項，它們顯示文字或圖示以表示狀態，或 <xref:System.Windows.Forms.ToolStripProgressBar> 以圖形方式顯示處理程序的完成狀態。  

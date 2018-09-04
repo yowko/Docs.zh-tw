@@ -3,11 +3,11 @@ title: 內容交換相互關聯
 ms.date: 03/30/2017
 ms.assetid: 1e2852be-3601-45ae-b507-ccc465d45c60
 ms.openlocfilehash: d9de111fa08b4a398bba52bc903ea1fec8c7f298
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483693"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519728"
 ---
 # <a name="context-exchange-correlation"></a>內容交換相互關聯
 內容相互關聯以中所述的內容交換機制為基礎[.NET 內容交換通訊協定規格](https://go.microsoft.com/fwlink/?LinkId=166059)。 內容相互關聯使用一般熟知的內容標頭或 Cookie，將訊息關聯至正確的執行個體。 若要使用內容相互關聯，您必須在提供給 <xref:System.ServiceModel.BasicHttpContextBinding> 的端點上使用以內容為基礎的繫結，例如 <xref:System.ServiceModel.WSHttpContextBinding>、<xref:System.ServiceModel.NetTcpContextBinding> 或 <xref:System.ServiceModel.Activities.WorkflowServiceHost>。 本主題說明如何在工作流程服務中使用內容相互關聯搭配訊息活動。  

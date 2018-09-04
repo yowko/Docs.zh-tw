@@ -6,11 +6,11 @@ helpviewer_keywords:
 - My.Application.AssemblyInfo object
 ms.assetid: 2f4782ed-3da2-4d88-b341-0c6f480fb7bb
 ms.openlocfilehash: dff32eb29e9299274cc137a07fe1b080911ab420
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198792"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513737"
 ---
 # <a name="myapplicationinfo-object"></a>My.Application.Info 物件
 提供用於取得屬性的資訊，請在應用程式，例如版本號碼、 描述、 載入的組件等等。  

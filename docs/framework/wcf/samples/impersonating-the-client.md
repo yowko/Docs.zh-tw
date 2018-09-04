@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 4c5d911bfbfcd33248e15b9fc822abdc9cf4046c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5a13ab73e48616b38e583b1c9948fc1bf5eb8a64
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33505006"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522284"
 ---
 # <a name="impersonating-the-client"></a>模擬用戶端
 此模擬範例會示範如何在服務端模擬呼叫者應用程式，以便讓服務能夠代表該呼叫者存取系統資源。  
   
- 這個範例根據[自我裝載](../../../../docs/framework/wcf/samples/self-host.md)範例。 服務和用戶端設定檔的相同[自我裝載](../../../../docs/framework/wcf/samples/self-host.md)範例。  
+ 此樣本根據[自我裝載](../../../../docs/framework/wcf/samples/self-host.md)範例。 服務和用戶端設定檔的相同[自我裝載](../../../../docs/framework/wcf/samples/self-host.md)範例。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -102,18 +102,18 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  當您執行範例時，作業要求和回應會顯示在服務與用戶端主控台視窗中。 在每個主控台視窗中按下 ENTER 鍵，即可關閉服務與用戶端。  
   
 > [!NOTE]
->  服務必須使用系統管理帳戶執行，或是它執行的帳戶必須被授與註冊權限 http://localhost:8000/ServiceModelSamples 向 HTTP 層的 URI。 這類權限可以授與設定[命名空間保留](http://go.microsoft.com/fwlink/?LinkId=95012)使用[Httpcfg.exe 工具](http://go.microsoft.com/fwlink/?LinkId=95010)。  
+>  服務必須使用系統管理帳戶執行，或是它執行的帳戶必須被授與註冊權限 http://localhost:8000/ServiceModelSamples 向 HTTP 層的 URI。 可以授與這類權限，藉由設定[命名空間保留區](https://go.microsoft.com/fwlink/?LinkId=95012)使用[Httpcfg.exe 工具](https://go.microsoft.com/fwlink/?LinkId=95010)。  
   
 > [!NOTE]
->  在執行 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 的電腦上，只有在 Host.exe 應用程式擁有「模擬」權限的情況下才支援模擬  (根據預設，只有系統管理員具有此權限)。若要將此權限加入至服務執行帳戶，請前往**系統管理工具**，開啟**本機安全性原則**，開啟**本機原則**，按一下**使用者權限指派**，然後選取**驗證後模擬用戶端**按兩下**屬性**新增使用者或群組。  
+>  在執行 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 的電腦上，只有在 Host.exe 應用程式擁有「模擬」權限的情況下才支援模擬  (根據預設，只有系統管理員具有此權限)。若要新增此權限來執行服務的帳戶，請前往**系統管理工具**，開啟**本機安全性原則**，開啟**本機原則**，按一下  **使用者權限指派**，然後選取**驗證後模擬用戶端**，然後按兩下**屬性**，加入使用者或群組。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-3.  若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 4.  若要示範此服務模擬呼叫者，請使用與執行服務之帳戶不同的帳戶執行用戶端。 若要這麼做，請在命令提示字元輸入：  
   

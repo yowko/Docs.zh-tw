@@ -3,11 +3,11 @@ title: Bookmarks2
 ms.date: 03/30/2017
 ms.assetid: 035fadb2-49fa-4ac7-b398-daf138f66e87
 ms.openlocfilehash: 6bcc4e27566b9c8553e0792558c281a6b1f1caf4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387385"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528986"
 ---
 # <a name="bookmarks"></a>書籤
 這個範例示範如何撰寫自訂活動，建立可接收外部輸入的書籤。 範例中還包括在工作流程中使用自訂活動的基本主控台應用程式，並且示範如何探索和繼續與執行中工作流程執行個體相關聯的書籤。 如需有關書籤的詳細資訊，請參閱[書籤](../../../../docs/framework/windows-workflow-foundation/bookmarks.md)。  

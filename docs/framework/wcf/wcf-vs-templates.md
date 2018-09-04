@@ -3,11 +3,11 @@ title: WCF Visual Studio 範本
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
 ms.openlocfilehash: 73d2645977381602ef028d091675a22fb933d60b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423027"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512705"
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio 範本
 Windows Communication Foundation (WCF) Visual Studio 範本是預先定義的專案和項目範本，您可以使用 Visual Studio 中，快速建置 WCF 服務和相關的應用程式。  

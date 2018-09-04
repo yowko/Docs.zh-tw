@@ -3,11 +3,11 @@ title: 已啟用 ReceiveContext 的 WCF 通道
 ms.date: 03/30/2017
 ms.assetid: d990d119-7321-4b8c-852b-10256f59f9b0
 ms.openlocfilehash: d7f80d0874606129876fbf7dfa30c0327680b922
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43442742"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515926"
 ---
 # <a name="receivecontext-enabled-wcf-channels"></a>已啟用 ReceiveContext 的 WCF 通道
 這個範例示範具備 <xref:System.ServiceModel.Channels.ReceiveContext> 能力之 WCF 通道的用處。 這個範例會實作服務，以使用 NetMSMQ 通道尋找兩個數字的乘積。  

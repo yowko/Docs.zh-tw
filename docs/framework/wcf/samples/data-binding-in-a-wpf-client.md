@@ -3,11 +3,11 @@ title: Windows Presentation Foundation 用戶端中的資料繫結
 ms.date: 03/30/2017
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
 ms.openlocfilehash: 69e61a52adc3d5058b9ccd65d2cde2ca7d74bbe6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43393857"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514311"
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Windows Presentation Foundation 用戶端中的資料繫結
 這個範例示範使用 Windows Presentation Foundation (WPF) 用戶端中的資料繫結。 此範例會使用隨機產生的用戶端的專輯陣列的 Windows Communication Foundation (WCF) 服務。 每張專輯各有名稱、價格和曲目表。 曲目有名稱和時間長度。 Windows Presentation Foundation (WPF) 用戶端所提供的使用者介面 (UI) 時，會自動繫結的服務所傳回的資訊。  
