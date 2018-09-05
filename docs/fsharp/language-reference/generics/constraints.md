@@ -2,12 +2,12 @@
 title: 條件約束 (F#)
 description: '深入了解 F # 的條件約束套用至泛型型別參數的泛型型別或函式中指定型別引數的需求。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 7af064159d2722256f0db8286a99fc02435a99cd
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 0e79cf5b1a25ada49bf30416f85c1d59f8f2fd23
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936861"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525601"
 ---
 # <a name="constraints"></a>條件約束
 
@@ -35,7 +35,7 @@ type-parameter-list when constraint1 [ and constraint2]
 |委派條件約束|： 將委派&lt;*tuple 參數型別*，*傳回型別*&gt;|提供的型別必須是委派類型具有指定的引數和傳回值;不適用於一般用途。|
 |比較條件約束|： 比較|提供的型別必須支援的比較。|
 |等號比較條件約束|： 等號比較|提供的型別必須支援等號比較。|
-|未受管理的條件約束|： 未受管理|提供的型別必須是 unmanaged 型別。 未受管理的類型為特定基本型別 (`sbyte`， `byte`， `char`， `nativeint`， `unativeint`， `float32`， `float`， `int16`， `uint16`， `int32`， `uint32`， `int64`， `uint64`，或`decimal`)，列舉型別`nativeptr&lt;_&gt;`，或其欄位為未受管理的所有類型的非泛型結構。|
+|未受管理的條件約束|： 未受管理|提供的型別必須是 unmanaged 型別。 未受管理的類型為特定基本型別 (`sbyte`， `byte`， `char`， `nativeint`， `unativeint`， `float32`， `float`， `int16`， `uint16`， `int32`， `uint32`， `int64`， `uint64`，或`decimal`)，列舉型別`nativeptr<_>`，或其欄位為未受管理的所有類型的非泛型結構。|
 您必須加入條件約束，當您的程式碼需要使用一般的條件約束的型別，但不要依賴型別上可用的功能。 例如，如果您使用的類型條件約束來指定類別類型時，您可以使用任何一種類型的泛型函式中該類別的方法。
 
 指定條件約束時，有時必須撰寫型別參數明確，因為沒有任何限制，編譯器無法驗證您所使用的功能將會在可能會提供在執行階段類型的任何類型參數。
