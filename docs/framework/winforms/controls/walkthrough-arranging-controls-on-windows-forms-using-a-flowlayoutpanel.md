@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [Windows Forms], arranging with FlowLayoutPanel
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
-ms.openlocfilehash: 573a0b8ee8e3fafea15b1fd111334da773beef11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c1f4ec53831662bd25f1f15dc1973440067b32c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541764"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43674040"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項
 有些應用程式需要表單能在調整表單大小或變更內容大小時，自行適當排列配置。 當需要動態配置但不想用程式碼明確處理 <xref:System.Windows.Forms.Control.Layout> 事件時，請考慮使用配置面板。  
   
  <xref:System.Windows.Forms.FlowLayoutPanel> 控制項和 <xref:System.Windows.Forms.TableLayoutPanel> 控制項提供直覺的方式，排列表單上的控制項。 這兩者都提供自動且可設定的功能，可用來控制其內含子控制項的相對位置，而且也都能為執行階段提供動態配置功能，所以每當父表單變更維度時，子控制項的大小和位置就會相應調整。 配置面板可以巢嵌在配置面板內，從而提供精緻的使用者介面。  
   
- <xref:System.Windows.Forms.TableLayoutPanel>排列其內容在方格中，提供的功能類似於 HTML\<表格 > 項目。 其儲存格依資料列和資料行排列，大小可以各不相同。 如需詳細資訊，請參閱 [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)。  
+ <xref:System.Windows.Forms.TableLayoutPanel>排列其內容在方格中，提供功能類似於 HTML\<表格 > 項目。 其儲存格依資料列和資料行排列，大小可以各不相同。 如需詳細資訊，請參閱 [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)。  
   
  <xref:System.Windows.Forms.FlowLayoutPanel> 會以特定的水平或垂直文字方向排列其內容。 其內容可以從某一資料列換行至下一個資料列，或從某一資料行換行至下一個資料行。 此外，也可裁剪其內容而不換行。 這個逐步解說中所述的工作包括：  
   
@@ -44,14 +44,14 @@ ms.locfileid: "33541764"
  完成後，您就會了解這些重要配置功能所扮演的角色。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 ## <a name="creating-the-project"></a>建立專案  
  第一個步驟是建立專案並設定表單。  
   
 #### <a name="to-create-the-project"></a>若要建立專案  
   
-1.  建立名為 "FlowLayoutPanelExample" 的 Windows 應用程式專案。 如需詳細資訊，請參閱[如何：建立 Windows 應用程式專案](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
+1.  建立以 Windows 為基礎的應用程式專案，名"為 FlowLayoutPanelExample"(**檔案** > **新增** > **專案** > **Visual C#** 或是**Visual Basic** > **傳統桌面** > **Windows Forms 應用程式**).  
   
 2.  選取 [表單設計工具] 中的表單。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "33541764"
   
 1.  變更 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的 <xref:System.Windows.Forms.Control.Dock%2A> 屬性值為 <xref:System.Windows.Forms.DockStyle.Fill>。 如果表單夠大， <xref:System.Windows.Forms.Button> 控制項就會移到 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的第一個資料行。  
   
-2.  展開 [屬性] <xref:System.Windows.Forms.FlowLayoutPanel><xref:System.Windows.Forms.Control.Padding%2A> 視窗的 <xref:System.Windows.Forms.Control.Padding%2A> 項目，將 **屬性設為** 20 <xref:System.Windows.Forms.Padding.All%2A> ，以變更 **控制項的**屬性值。 如需詳細資訊，請參閱[逐步解說： 用來配置 Windows Form 控制項的邊框距離、 邊界和 AutoSize 屬性](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)。 請注意，子控制項朝 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的中心移動。 <xref:System.Windows.Forms.Control.Padding%2A> 屬性增加的值會將子控制項推離 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的邊線。  
+2.  展開 [屬性] <xref:System.Windows.Forms.FlowLayoutPanel><xref:System.Windows.Forms.Control.Padding%2A> 視窗的 <xref:System.Windows.Forms.Control.Padding%2A> 項目，將 **屬性設為** 20 <xref:System.Windows.Forms.Padding.All%2A> ，以變更 **控制項的**屬性值。 如需詳細資訊，請參閱 <<c0> [ 逐步解說： 以配置出 Windows Form 控制項和邊框距離、 邊界和 AutoSize 屬性](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)。 請注意，子控制項朝 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的中心移動。 <xref:System.Windows.Forms.Control.Padding%2A> 屬性增加的值會將子控制項推離 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的邊線。  
   
 3.  選取 <xref:System.Windows.Forms.Button> 的全部 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項，將 <xref:System.Windows.Forms.Control.Margin%2A> 屬性的值設為 **20**。 請注意， <xref:System.Windows.Forms.Button> 控制項之間的間距增加，所以它們移得更開。 您可能需要調整 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的大小，大到能看見所有的子控制項。  
   
@@ -155,7 +155,7 @@ ms.locfileid: "33541764"
   
 #### <a name="to-insert-a-control-using-the-caret"></a>使用插入號以插入控制項  
   
-1.  將 <xref:System.Windows.Forms.Button> 控制項從 [工具箱]  拖曳到 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項，指向兩個 <xref:System.Windows.Forms.Button> 控制項之間的空白處。 請注意，已繪製插入列，指出要在何處<xref:System.Windows.Forms.Button>會放置到卸除時<xref:System.Windows.Forms.FlowLayoutPanel>控制項。 請先移動滑鼠指標，觀察插入列的移動方式，再將新的 <xref:System.Windows.Forms.Button> 控制項放入 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項。  
+1.  將 <xref:System.Windows.Forms.Button> 控制項從 [工具箱]  拖曳到 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項，指向兩個 <xref:System.Windows.Forms.Button> 控制項之間的空白處。 請注意已繪製插入列，指出要在何處<xref:System.Windows.Forms.Button>放入<xref:System.Windows.Forms.FlowLayoutPanel>控制項。 請先移動滑鼠指標，觀察插入列的移動方式，再將新的 <xref:System.Windows.Forms.Button> 控制項放入 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項。  
   
 2.  將新的 <xref:System.Windows.Forms.Button> 控制項放入 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項。 請注意，新的 <xref:System.Windows.Forms.Button> 控制項未對齊其他控制項，因為其 <xref:System.Windows.Forms.Control.Margin%2A> 屬性有不同的值。  
   
@@ -192,7 +192,7 @@ ms.locfileid: "33541764"
  <xref:System.Windows.Forms.TableLayoutPanel>  
  [逐步解說：使用 TableLayoutPanel 排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
  [逐步解說：使用對齊線排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
- [Microsoft Windows 使用者經驗, 使用者介面開發人員和設計人員的正式方針。Redmond, WA: Microsoft Press, 1999.(USBN: 0-7356-0566-1)](http://www.microsoft.com/mspress/southpacific/books/book11588.htm)  
+ [Microsoft Windows 使用者經驗, 使用者介面開發人員和設計人員的正式方針。Redmond, WA: Microsoft Press, 1999.(USBN: 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)  
  [AutoSize 屬性概觀](../../../../docs/framework/winforms/controls/autosize-property-overview.md)  
  [操作說明：將控制項停駐在 Windows Forms 上](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  
  [操作說明：錨定 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)  

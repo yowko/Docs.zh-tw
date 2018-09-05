@@ -5,11 +5,11 @@ ms.assetid: 81c0f8b4-ce35-4716-8651-b642d40648a2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4b9f54c7c57d122ac1214b9f31cc4e1d1cddd71c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43392175"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43670528"
 ---
 # <a name="axlauthenticodesignerinfo-structure"></a>AXL_AUTHENTICODE_SIGNER_INFO 結構
 定義 Authenticode 簽署人資訊。  

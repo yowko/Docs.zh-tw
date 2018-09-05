@@ -2,15 +2,15 @@
 title: 自訂權杖
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: c7219b94861cd23f27b331d1d3e5509654263430
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 03472f76310fa99568f13f0aa49d9e2a3453ac30
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809845"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43671095"
 ---
 # <a name="custom-token"></a>自訂權杖
-這個範例示範如何新增自訂權杖實作 Windows Communication Foundation (WCF) 應用程式。 範例會使用 `CreditCardToken`，將用戶端的信用卡資訊安全地傳遞至服務。 權杖會在 WS-Security 訊息標頭中傳遞，並且是使用對稱安全性繫結項目，與訊息本文及其他訊息標頭一起經過簽署和加密。 當內建權杖的安全性不足時，這會十分有幫助。 這個範例將示範如何提供自訂安全性權杖給服務，而不使用其中一個內建權杖。 服務會實作定義要求-回覆通訊模式的合約。  
+此範例示範如何新增自訂權杖實作 Windows Communication Foundation (WCF) 應用程式。 範例會使用 `CreditCardToken`，將用戶端的信用卡資訊安全地傳遞至服務。 權杖會在 WS-Security 訊息標頭中傳遞，並且是使用對稱安全性繫結項目，與訊息本文及其他訊息標頭一起經過簽署和加密。 當內建權杖的安全性不足時，這會十分有幫助。 這個範例將示範如何提供自訂安全性權杖給服務，而不使用其中一個內建權杖。 服務會實作定義要求-回覆通訊模式的合約。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -21,7 +21,7 @@ ms.locfileid: "33809845"
   
 -   服務如何取用並驗證自訂安全性權杖。  
   
--   WCF 服務程式碼如何取得所接收的安全性權杖包含自訂安全性權杖的相關資訊。  
+-   WCF 服務程式碼如何取得接收到的安全性權杖，包括自訂安全性權杖的相關資訊。  
   
 -   如何使用伺服器的 X.509 憑證保護用於訊息加密和簽章的對稱金鑰。  
   
@@ -115,9 +115,9 @@ channelFactory.Close();
 ```  
   
 ## <a name="custom-security-token-implementation"></a>自訂安全性權杖實作  
- 若要啟用自訂安全性權杖在 WCF 中的，建立自訂安全性權杖的物件表示。 範例會在 `CreditCardToken` 類別中產生這個表示。 此物件表示負責保存所有相關的安全性權杖資訊，並提供安全性權杖所含安全性金鑰的清單。 在本例中，信用卡安全性權杖未包含任何安全性金鑰。  
+ 若要啟用 WCF 中的自訂安全性權杖，建立自訂安全性權杖的物件表示。 範例會在 `CreditCardToken` 類別中產生這個表示。 此物件表示負責保存所有相關的安全性權杖資訊，並提供安全性權杖所含安全性金鑰的清單。 在本例中，信用卡安全性權杖未包含任何安全性金鑰。  
   
- 下一節會說明什麼必須完成，以啟用要在網路上傳輸的自訂語彙基元並供 WCF 端點。  
+ 下一節會描述什麼必須完成，以啟用透過網路傳輸的自訂權杖和由 WCF 端點。  
   
 ```  
 class CreditCardToken : SecurityToken  
@@ -155,7 +155,7 @@ class CreditCardToken : SecurityToken
 ```  
   
 ## <a name="getting-the-custom-credit-card-token-to-and-from-the-message"></a>在訊息中存取自訂信用卡權杖  
- 在 WCF 中的安全性權杖序列化程式必須負責從訊息中的 XML 建立安全性權杖的物件表示，並建立安全性權杖的 XML 表單項目。 它們還負責像是讀取和寫入指向安全性權杖之金鑰識別項等其他的功能，但是本範例僅使用與安全性權杖相關的功能。 若要啟用自訂權杖，就必須實作您自己的安全性權杖序列化程式。 本範例會使用 `CreditCardSecurityTokenSerializer` 類別來達到這個目的。  
+ 在 WCF 中的安全性權杖序列化程式會負責從訊息中的 XML 建立安全性權杖的物件表示，以及建立安全性權杖的 XML 格式。 它們還負責像是讀取和寫入指向安全性權杖之金鑰識別項等其他的功能，但是本範例僅使用與安全性權杖相關的功能。 若要啟用自訂權杖，就必須實作您自己的安全性權杖序列化程式。 本範例會使用 `CreditCardSecurityTokenSerializer` 類別來達到這個目的。  
   
  在服務上，自訂序列化程式會讀取自訂權杖的 XML 表單，並由其中建立自訂權杖物件表示。  
   
@@ -593,9 +593,9 @@ string GetCallerCreditCardNumber()
   
 #### <a name="to-set-up-and-build-the-sample"></a>若要設定和建置範例  
   
-1.  請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要建置此方案，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+2.  若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
 #### <a name="to-run-the-sample-on-the-same-computer"></a>若要在同一部電腦上執行範例  
   
@@ -606,7 +606,7 @@ string GetCallerCreditCardNumber()
   
 1.  從 \client\bin 目錄啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-2.  如果用戶端和服務無法通訊，請參閱[疑難排解提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+2.  如果用戶端和服務能夠進行通訊，請參閱[疑難排解祕訣](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 #### <a name="to-run-the-sample-across-computer"></a>若要跨電腦執行範例  
   
@@ -628,7 +628,7 @@ string GetCallerCreditCardNumber()
   
 9. 在用戶端電腦上，從命令提示字元視窗啟動 Client.exe。  
   
-10. 如果用戶端和服務無法通訊，請參閱[疑難排解提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+10. 如果用戶端和服務能夠進行通訊，請參閱[疑難排解祕訣](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 #### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   

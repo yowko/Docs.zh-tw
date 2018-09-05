@@ -19,12 +19,12 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-ms.openlocfilehash: c5ff9d097c0660956a9751a23511d8273766227c
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 9bbc7f51de9899354184d051d8f1a584651dd030
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245667"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43671787"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>疑難排解資料類型 (Visual Basic)
 此頁面會列出您的內建資料型別上執行作業時所發生的一些常見問題。  
@@ -117,6 +117,6 @@ ms.locfileid: "39245667"
  [類型字元](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
  [值類型和參考類型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
  [在 Visual Basic 中的類型轉換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [資料類型](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [資料類型](../../../../visual-basic/language-reference/data-types/index.md)  
  [類型轉換函式](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [有效率地使用資料類型](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

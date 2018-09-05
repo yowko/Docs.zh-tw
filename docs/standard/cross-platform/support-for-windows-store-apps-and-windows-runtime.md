@@ -12,11 +12,11 @@ ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5f587d45f046a3f7b8556052df63220f9f1cac42
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482403"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672717"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>適用於 Windows 市集應用程式和 Windows 執行階段的 .NET Framework 支援
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 支援多個 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 的軟體開發案例。 這些案例可分成三個類別︰  

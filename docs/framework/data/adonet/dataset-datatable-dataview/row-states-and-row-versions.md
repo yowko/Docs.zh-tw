@@ -1,16 +1,16 @@
 ---
 title: 資料列狀態和資料列版本
-ms.date: 03/30/2017
+ms.date: 07/19/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
-ms.openlocfilehash: d36556b62a95a7af1097d8fe88597569c81c0111
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 629e8b0bea1cd5c1dd80409acd7c03e0e033b5bc
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759409"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672810"
 ---
 # <a name="row-states-and-row-versions"></a>資料列狀態和資料列版本
 ADO.NET 使用資料列狀態和版本來管理資料表中的資料列。 資料列狀態表示資料列的狀態；修改資料列時，資料列版本會維護存放在資料列中的值，包括目前值、原始值和預設值。 例如，修改資料列中的資料行後，資料列的狀態為 `Modified`，並有兩個資料列版本：`Current` (包含目前的資料列值) 和 `Original` (包含修改資料行之前的資料列值)。  
@@ -44,7 +44,7 @@ string custID = custRow["CustomerID", DataRowVersion.Original].ToString();
 |DataRowVersion 值|描述|  
 |--------------------------|-----------------|  
 |<xref:System.Data.DataRowVersion.Current>|資料列的目前值。 對於 `RowState` 為 `Deleted` 的資料列，此資料列版本不存在。|  
-|<xref:System.Data.DataRowVersion.Default>|指定資料列的預設資料列版本。 `Added`、`Modified` 或 `Unchanged` 資料列的預設資料列版本為 `Current`。 `Deleted` 資料列的預設資料列版本為 `Original`。 `Detached` 資料列的預設資料列版本為 `Proposed`。|  
+|<xref:System.Data.DataRowVersion.Default>|指定資料列的預設資料列版本。 `Added`、`Modified` 或 `Deleted` 資料列的預設資料列版本為 `Current`。 `Detached` 資料列的預設資料列版本為 `Proposed`。|  
 |<xref:System.Data.DataRowVersion.Original>|資料列的原始值。 對於 `RowState` 為 `Added` 的資料列，此資料列版本不存在。|  
 |<xref:System.Data.DataRowVersion.Proposed>|資料列的建議值。 這個資料列版本存在於資料列的編輯作業期間，或是當資料列不屬於 `DataRowCollection` 時。|  
   
@@ -98,4 +98,4 @@ foreach (DataRow delRow in delRows)
  [在 DataTable 中操作資料](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
  [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [DataAdapter 和 DataReader](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

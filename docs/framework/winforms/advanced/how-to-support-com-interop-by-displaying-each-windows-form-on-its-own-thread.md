@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], COM interop
 - Windows Forms, interop
 ms.assetid: a9e04765-d2de-4389-a494-a9a6d07aa6ee
-ms.openlocfilehash: c78bcc8d784fc481af2449f2d81cfde42891e7fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0d8dfd4a19b31be790d2643847396d136098278
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522885"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43673531"
 ---
 # <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a>如何：在自己的執行緒上顯示每個 Windows Form 以支援 COM Interop
 您可以藉由在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 訊息迴圈上顯示表單來解決 COM 互通性問題，這可使用 <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> 方法來建立。  
@@ -26,9 +26,9 @@ ms.locfileid: "33522885"
   
 -   在個別執行緒上顯示每個 Windows Form。  
   
- 沒有對 Visual Studio 中的這項功能有廣泛的支援。  
+ 沒有這項功能在 Visual Studio 中的廣泛支援。  
   
- 另請參閱 [逐步解說：在自己的執行緒上顯示每個 Windows Form 以支援 COM Interop](http://msdn.microsoft.com/library/ms233639\(v=vs.110\))。  
+ 另請參閱[逐步解說： 在自己的執行緒上顯示每個 Windows form 以支援 COM Interop](https://msdn.microsoft.com/library/ms233639\(v=vs.110\))。  
   
 ## <a name="example"></a>範例  
  下列程式碼範例示範如何在個別的執行緒上顯示表單，並呼叫 <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> 方法在該執行緒上啟動 Windows Form 訊息幫浦。 若要使用此方法，您必須使用 <xref:System.Windows.Forms.Control.Invoke%2A> 方法封送處理任何呼叫至來自 Unmanaged 應用程式的表單。  

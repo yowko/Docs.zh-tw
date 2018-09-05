@@ -2,18 +2,18 @@
 title: 推斷資料行
 ms.date: 03/30/2017
 ms.assetid: 0e022699-c922-454c-93e2-957dd7e7247a
-ms.openlocfilehash: da98bcbc4537e08a6f8565b36f8b84b476efd027
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 56de4b4d6cf704473ec46957625ad1c376f595c2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761073"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43671406"
 ---
 # <a name="inferring-columns"></a>推斷資料行
-ADO.NET 從 XML 文件中判斷要將哪些項目推斷成 <xref:System.Data.DataSet> 的資料表後，接著就會推斷這些資料表的資料行。 ADO.NET 2.0 導入了新的結構描述推斷引擎，為每個推斷強型別的資料型別**simpleType**項目。 在較舊的版本中的資料型別推斷**simpleType**項目一律為**xsd: string**。  
+ADO.NET 從 XML 文件中判斷要將哪些項目推斷成 <xref:System.Data.DataSet> 的資料表後，接著就會推斷這些資料表的資料行。 ADO.NET 2.0 導入了新結構描述推斷引擎，可推斷每個強型別的資料型別**simpleType**項目。 在舊版中中的資料型別推斷**simpleType**項目向來**xsd: string**。  
   
 ## <a name="migration-and-backward-compatibility"></a>移轉和回溯相容性  
- **ReadXml**方法接受型別引數**InferSchema**。 這個引數可讓您指定與舊版本相容的推斷行為。 可用的值**InferSchema**列舉型別會顯示下表中。  
+ **ReadXml**方法會採用類型的引數**InferSchema**。 這個引數可讓您指定與舊版本相容的推斷行為。 可用的值**InferSchema**列舉型別會顯示下表中。  
   
  <xref:System.Data.XmlReadMode.InferSchema>  
  將簡單型別永遠推斷為 <xref:System.String>，以提供回溯相容性 (Backward Compatibility)。  
@@ -25,7 +25,7 @@ ADO.NET 從 XML 文件中判斷要將哪些項目推斷成 <xref:System.Data.Dat
  忽略任何內嵌結構描述，並將資料讀入現有的 <xref:System.Data.DataSet> 結構描述中。  
   
 ## <a name="attributes"></a>屬性  
- 中所定義[推斷資料表](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-tables.md)，具有屬性的項目會推斷為資料表。 然後，該項目的屬性會推斷為資料表的資料行。 **ColumnMapping**的資料行的屬性會設定為**MappingType.Attribute**，以確保做為屬性將寫入的資料行名稱，如果結構描述寫回為 XML。 屬性的值儲存在資料表的資料列中。 例如，請考量下列 XML：  
+ 中所定義[推斷資料表](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-tables.md)，具有屬性的項目會推斷為資料表。 然後，該項目的屬性會推斷為資料表的資料行。 **ColumnMapping**資料行的屬性會設定為**MappingType.Attribute**，以確保為屬性將寫入的資料行名稱，如果結構描述會寫回至 XML。 屬性的值儲存在資料表的資料列中。 例如，請考量下列 XML：  
   
 ```xml  
 <DocumentElement>  
@@ -33,11 +33,11 @@ ADO.NET 從 XML 文件中判斷要將哪些項目推斷成 <xref:System.Data.Dat
 </DocumentElement>  
 ```  
   
- 推斷程序將會產生名為的資料表**Element1**具有兩個資料行， **attr1**和**attr2**。 **ColumnMapping**的兩個資料行的屬性會設定為**MappingType.Attribute**。  
+ 推斷程序會產生一個名為資料表**Element1**具有兩個資料行**attr1**並**attr2**。 **ColumnMapping**的兩個資料行的屬性會設定為**MappingType.Attribute**。  
   
  **資料集：** DocumentElement  
   
- **Table:** Element1  
+ **資料表：** Element1  
   
 |attr1|attr2|  
 |-----------|-----------|  
@@ -55,11 +55,11 @@ ADO.NET 從 XML 文件中判斷要將哪些項目推斷成 <xref:System.Data.Dat
 </DocumentElement>  
 ```  
   
- 推斷程序將會產生名為的資料表**Element1**具有兩個資料行， **ChildElement1**和**ChildElement2**。 **ColumnMapping**的兩個資料行的屬性會設定為**MappingType.Element**。  
+ 推斷程序會產生一個名為資料表**Element1**具有兩個資料行**ChildElement1**並**ChildElement2**。 **ColumnMapping**的兩個資料行的屬性會設定為**MappingType.Element**。  
   
  **資料集：** DocumentElement  
   
- **Table:** Element1  
+ **資料表：** Element1  
   
 |ChildElement1|ChildElement2|  
 |-------------------|-------------------|  
@@ -71,4 +71,4 @@ ADO.NET 從 XML 文件中判斷要將哪些項目推斷成 <xref:System.Data.Dat
  [從 XML 載入資料集結構描述資訊](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
  [在 DataSet 中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

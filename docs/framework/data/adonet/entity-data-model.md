@@ -3,11 +3,11 @@ title: 實體資料模型
 ms.date: 03/30/2017
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
 ms.openlocfilehash: e76527b497434ada06762fcab931522fffa2a16b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385590"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43674014"
 ---
 # <a name="entity-data-model"></a>實體資料模型
 實體資料模型 (EDM) 是描述資料結構的概念集，不論其預存形式為何。 EDM 借用 Peter Chen 於 1976 年描述的實體關聯模型 (Entity-Relationship Model)，但同時補強實體關聯模型並延伸其傳統用法。  

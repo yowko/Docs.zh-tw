@@ -2,15 +2,15 @@
 title: 非同步通訊
 ms.date: 03/30/2017
 ms.assetid: 128dc092-9eb2-4e33-9470-9a7f62b60df6
-ms.openlocfilehash: 9eafeab89aefb181ae016dc0219f9155d9bd2a25
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e85f7efb0de1326ceb5091c305b20f34809eab57
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515156"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43670713"
 ---
 # <a name="asynchronous-communication"></a>非同步通訊
-這個範例會示範如何兩個不同的 Windows Workflow Foundation (WF) 服務之間的通訊是以非同步方式進行預設。  
+這個範例會示範如何兩個不同的 Windows Workflow Foundation (WF) 服務之間的通訊是以非同步方式預設值。  
   
 ## <a name="demonstrates"></a>示範  
  [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 服務之間的非同步通訊。  
@@ -31,19 +31,19 @@ ms.locfileid: "33515156"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  以滑鼠右鍵按一下**AsynchronousCommunication**方案、 選取**屬性**。  
+1.  以滑鼠右鍵按一下**AsynchronousCommunication**方案，然後選取**屬性**。  
   
-2.  在**通用屬性**，選取**啟始專案**，然後選取**多個啟始專案**。  
+2.  在 **通用屬性**，選取**啟始專案**，然後選取**多個啟始專案**。  
   
-3.  移動**RentalApprovalService**清單中的第一個位置，後面接著**CreditCheckService**，後面接著**用戶端**。 設定**啟動**三個專案上的動作。  
+3.  移動**RentalApprovalService**清單中第一個位置，後面接著**CreditCheckService**，後面接著**用戶端**。 設定**啟動**三個專案上的動作。  
   
-4.  按一下**確定**，然後按 F5 執行範例。  
+4.  按一下 **確定**，然後按 F5 執行範例。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\AsynchronousCommunication`

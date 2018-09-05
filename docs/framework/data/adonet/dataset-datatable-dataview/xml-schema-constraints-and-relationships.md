@@ -3,11 +3,11 @@ title: XML 結構描述條件約束和關聯性
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
 ms.openlocfilehash: bcb6e257a40040701612b73768a98e056bccd6c5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43479993"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43673748"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>XML 結構描述條件約束和關聯性
 中的 XML 結構描述定義語言 (XSD) 結構描述中，您可以指定條件約束 (唯一的索引鍵和 keyref 條件約束) 和關聯性 (使用**msdata: relationship**註釋)。 這個主題會說明 XML 結構描述中指定的條件約束和關聯性如何經過解譯以產生 <xref:System.Data.DataSet>。  

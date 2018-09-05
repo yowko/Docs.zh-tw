@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
-ms.openlocfilehash: c0cc0834dc087df89131a720f517cd34f757a0f3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 38d716552c4a52e01ef803ce197e4d588ed562c3
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763666"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672257"
 ---
 # <a name="merging-dataset-contents"></a>合併資料集內容
 您可以使用 <xref:System.Data.DataSet.Merge%2A> 方法，將 <xref:System.Data.DataSet>、<xref:System.Data.DataTable> 或 <xref:System.Data.DataRow> 陣列的內容合併至現有的 `DataSet` 中。 有許多因素和選項會影響新資料合併至現有 `DataSet` 的方式。  
@@ -31,7 +31,7 @@ ms.locfileid: "32763666"
 >  這個行為在 .NET Framework 2.0 版中已變更。 在 1.1 版中，雖然系統支援命名空間 (Namespace)，但是會在合併作業期間忽略命名空間。 因此，使用 <xref:System.Data.DataSet> 屬性值的 <xref:System.Data.DataTable.Namespace%2A> 將根據您正在執行的 .NET Framework 版本而具有不同的行為。 例如，假設您有兩個 `DataSets`，其中包含 `DataTables` 屬性值相同但 <xref:System.Data.DataTable.TableName%2A> 屬性值不同的 <xref:System.Data.DataTable.Namespace%2A>。 在 .NET Framework 1.1 版中，當您合併這兩個 <xref:System.Data.DataTable.Namespace%2A> 物件時，系統會忽略不同的 <xref:System.Data.DataSet> 名稱。 不過，從 2.0 版開始，合併會導致系統在目標 `DataTables` 中建立兩個新的 <xref:System.Data.DataSet>。 原始 `DataTables` 將不會受到合併的影響。  
   
 ## <a name="preservechanges"></a>PreserveChanges  
- 當您將 `DataSet`、`DataTable` 或 `DataRow` 陣列傳遞給 `Merge` 方法時，可以包含選擇性參數來指定是否要保留現有 `DataSet` 的變更，以及如何處理內送資料中發現的新結構描述項目。 內送資料後續參數中的第一個參數是布林值 (Boolean) 旗標 <xref:System.Data.LoadOption.PreserveChanges>，它可指定是否要保留現有 `DataSet` 的變更。 如果 `PreserveChanges` 旗標設定為 `true`，內送值就不會覆寫現有資料列之 `Current` 資料列版本中現有的值。 如果 `PreserveChanges` 旗標設定為 `false`，內送值就會覆寫現有資料列之 `Current` 資料列版本中現有的值。 如果您沒有指定 `PreserveChanges` 旗標，它預設會設定為 `false`。 如需詳細資料列版本的詳細資訊，請參閱[資料列狀態和資料列版本](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)。  
+ 當您將 `DataSet`、`DataTable` 或 `DataRow` 陣列傳遞給 `Merge` 方法時，可以包含選擇性參數來指定是否要保留現有 `DataSet` 的變更，以及如何處理內送資料中發現的新結構描述項目。 內送資料後續參數中的第一個參數是布林值 (Boolean) 旗標 <xref:System.Data.LoadOption.PreserveChanges>，它可指定是否要保留現有 `DataSet` 的變更。 如果 `PreserveChanges` 旗標設定為 `true`，內送值就不會覆寫現有資料列之 `Current` 資料列版本中現有的值。 如果 `PreserveChanges` 旗標設定為 `false`，內送值就會覆寫現有資料列之 `Current` 資料列版本中現有的值。 如果您沒有指定 `PreserveChanges` 旗標，它預設會設定為 `false`。 如需有關資料列版本的詳細資訊，請參閱[資料列狀態和資料列版本](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)。  
   
  當 `PreserveChanges` 為 `true` 時，現有資料列的資料會保留在現有資料列的 <xref:System.Data.DataRowVersion.Current> 資料列版本中，而現有資料列之 <xref:System.Data.DataRowVersion.Original> 資料列版本的資料則會以內送資料列之 `Original` 資料列版本的資料加以覆寫。 現有資料列的 <xref:System.Data.DataRow.RowState%2A> 會設定為 <xref:System.Data.DataRowState.Modified>。 下列情況則例外：  
   
@@ -63,7 +63,7 @@ ms.locfileid: "32763666"
  假設 `DataSet` 中的現有資料列是主索引鍵值為 1 的 `Unchanged` 資料列。 當它與 `Modified` 主索引鍵值為 2 而 `Original` 主索引鍵值為 1 的 `Current` 內送資料列進行合併時，現有資料列和內送資料列不會被視為相符，因為 `Original` 主索引鍵值不同。 但是，在合併完成而且檢查過條件約束之後，系統會擲回例外狀況，因為該 `Current` 主索引鍵值違反了主索引鍵資料行的唯一條件約束。  
   
 > [!NOTE]
->  當資料列插入含有自動遞增資料行 (例如識別資料行) 的資料庫資料表時，插入作業所傳回的識別資料行值可能會與 `DataSet` 中的值不符，因而導致系統附加而非合併傳回的資料列。 如需詳細資訊，請參閱[擷取識別或自動編號值](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)。  
+>  當資料列插入含有自動遞增資料行 (例如識別資料行) 的資料庫資料表時，插入作業所傳回的識別資料行值可能會與 `DataSet` 中的值不符，因而導致系統附加而非合併傳回的資料列。 如需詳細資訊，請參閱 <<c0> [ 擷取識別或自動編號值](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)。  
   
  下列程式碼範例會將兩個具有不同結構描述的 `DataSet` 物件合併成結合了兩個內送 `DataSet` 物件之結構描述的單一 `DataSet`。  
   
@@ -84,4 +84,4 @@ ms.locfileid: "32763666"
  [DataAdapter 和 DataReader](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [在 ADO.NET 中擷取和修改資料](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [擷取身分識別或自動編號值](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
