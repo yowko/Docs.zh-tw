@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic, developing applications
 - applications [Visual Basic]
 ms.assetid: 1e1c0c81-6d95-4167-a98b-44b1efb6d25f
-ms.openlocfilehash: b4434d6f66ea8329903c92fe664d9704bce19625
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ecb2c0a09ce92a11a021b45576b5499900b25356
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584193"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43748485"
 ---
 # <a name="developing-applications-with-visual-basic"></a>使用 Visual Basic 開發應用程式
 本章節內容涵蓋 Visual Basic 語言的概念文件。  
@@ -28,13 +28,13 @@ ms.locfileid: "33584193"
  [在 Visual Basic 中建立和使用元件](../../visual-basic/developing-apps/creating-and-using-components.md)  
  定義字詞「元件」，並探討建立元建的方式與時機。  
   
- [列印和報告](../../visual-basic/developing-apps/printing/printing-and-reporting.md)  
+ [列印和報告](../../visual-basic/developing-apps/printing/index.md)  
  提供列印及報告的相關文件概觀及連結。  
   
- [Windows Form 應用程式的基本概念](../../visual-basic/developing-apps/windows-forms/windows-forms-application-basics.md)  
+ [Windows Form 應用程式的基本概念](../../visual-basic/developing-apps/windows-forms/index.md)  
  提供使用 Visual Studio 建立 Windows Forms 應用程式的相關資訊。  
   
- [自訂專案和擴充 My](../../visual-basic/developing-apps/customizing-extending-my/customizing-projects-and-extending-my.md)  
+ [自訂專案和擴充 My](../../visual-basic/developing-apps/customizing-extending-my/index.md)  
  說明您可以如何自訂專案範本，以提供額外 `My` 物件。  
   
 ## <a name="related-sections"></a>相關章節  
