@@ -7,26 +7,26 @@ dev_langs:
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 715c813015fdb4b52444efca0bdcfc99acc92c21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 10bc84cbd1d8bf2ff3a858f09909673a8848f2ef
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507752"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528960"
 ---
 # <a name="securitybindingelement-authentication-modes"></a>SecurityBindingElement 驗證模式
-Windows Communication Foundation (WCF) 提供數個用戶端和服務驗證彼此的模式。 您可以在 <xref:System.ServiceModel.Channels.SecurityBindingElement> 類別上使用靜態方法或透過組態，建立這些驗證模式的安全性繫結項目。 本主題會簡短說明這 18 種驗證模式。  
+Windows Communication Foundation (WCF) 提供數種模式的用戶端和服務來相互驗證。 您可以在 <xref:System.ServiceModel.Channels.SecurityBindingElement> 類別上使用靜態方法或透過組態，建立這些驗證模式的安全性繫結項目。 本主題會簡短說明這 18 種驗證模式。  
   
- 使用的驗證模式的其中一個元素的範例，請參閱[How to： 指定的驗證模式建立 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)。  
+ 如需範例的其中一種驗證模式使用項目，請參閱[如何： 為指定的驗證模式建立 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)。  
   
 ## <a name="basic-configuration-programming"></a>基本組態程式設計  
  下列程序會說明如何使用組態檔來設定驗證模式。  
   
 #### <a name="to-set-the-authentication-mode-in-configuration"></a>使用組態來設定驗證模式  
   
-1.  若要[\<繫結 >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)項目，加入[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
+1.  若要[\<繫結 >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)項目，新增[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
   
-2.  做為子項目，加入[\<繫結 >](../../../../docs/framework/misc/binding.md)元素`<customBinding>`項目。  
+2.  做為子項目中，新增[\<繫結 >](../../../../docs/framework/misc/binding.md)項目`<customBinding>`項目。  
   
 3.  將 `<security>` 項目加入至 `<binding>` 項目。  
   
@@ -51,12 +51,12 @@ Windows Communication Foundation (WCF) 提供數個用戶端和服務驗證彼�
      [!code-csharp[c_CustomBindingsAuthMode#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombindingsauthmode/cs/source.cs#3)]
      [!code-vb[c_CustomBindingsAuthMode#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_custombindingsauthmode/vb/source.vb#3)]  
   
-3.  使用繫結項目來建立自訂繫結。 如需詳細資訊，請參閱[自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
+3.  使用繫結項目來建立自訂繫結。 如需詳細資訊，請參閱 <<c0> [ 自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
 ## <a name="mode-descriptions"></a>模式描述  
   
 ### <a name="anonymousforcertificate"></a>AnonymousForCertificate  
- 在此驗證模式中，用戶端為匿名，而服務會使用 X.509 憑證來進行驗證。 安全性繫結項目是由 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 方法傳回的 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateAnonymousForCertificateBindingElement%2A>。 或者，設定`authenticationMode`屬性 <`security`> 項目`AnonymousForCertificate`。  
+ 在此驗證模式中，用戶端為匿名，而服務會使用 X.509 憑證來進行驗證。 安全性繫結項目是由 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 方法傳回的 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateAnonymousForCertificateBindingElement%2A>。 或者，設定`authenticationMode`屬性的 <`security`> 項目`AnonymousForCertificate`。  
   
 ### <a name="anonymousforsslnegotiated"></a>AnonymousForSslNegotiated  
  在此驗證模式中，用戶端為匿名，而服務會使用在執行階段交涉的 X.509 憑證來進行驗證。 如果為第一個參數傳遞的值是 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 時，安全性繫結項目就是由 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSslNegotiationBindingElement%2A> 方法傳回的 `false`。 或者，可以將 `authenticationMode` 屬性設定為 `AnonymousForSslNegotiated`。  
@@ -80,7 +80,7 @@ Windows Communication Foundation (WCF) 提供數個用戶端和服務驗證彼�
  在此驗證模式中，用戶端會使用 Kerberos 票證向服務進行驗證。 相同的票證也會提供伺服器驗證。 安全性繫結項目是由 `SymmetricSecurityBindingElement` 方法傳回的 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A>。 或者，可以將 `authenticationMode` 屬性設定為 `Kerberos`。  
   
 > [!NOTE]
->  為了使用此驗證模式，服務帳戶必須與某個服務主要名稱 (SPN) 相關聯。 如果要這樣做，請以 NETWORK SERVICE 帳戶或 LOCAL SYSTEM 帳戶執行此服務。 或者，使用 SetSpn.exe 工具來建立服務帳戶的 SPN。 在任一情況下，用戶端必須使用正確的 SPN 中[ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md)項目，或使用<xref:System.ServiceModel.EndpointAddress>建構函式。 如需詳細資訊，請參閱[服務識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+>  為了使用此驗證模式，服務帳戶必須與某個服務主要名稱 (SPN) 相關聯。 如果要這樣做，請以 NETWORK SERVICE 帳戶或 LOCAL SYSTEM 帳戶執行此服務。 或者，使用 SetSpn.exe 工具來建立服務帳戶的 SPN。 在任一情況下，用戶端必須使用正確的 SPN [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md)項目，或使用<xref:System.ServiceModel.EndpointAddress>建構函式。 如需詳細資訊，請參閱 <<c0> [ 服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
 > [!NOTE]
 >  當使用 `Kerberos` 驗證模式時，就不會支援 <xref:System.Security.Principal.TokenImpersonationLevel.Anonymous> 與 <xref:System.Security.Principal.TokenImpersonationLevel.Delegation> 模擬等級。  
@@ -89,7 +89,7 @@ Windows Communication Foundation (WCF) 提供數個用戶端和服務驗證彼�
  在此驗證模式中，用戶端會使用 Kerberos 票證向服務進行驗證。 Kerberos 權杖會當做簽署支援權杖 (也就是簽署訊息簽章的權杖) 出現在 SOAP 層中。 服務會在傳輸層上使用 X.509 憑證來進行驗證。 安全性繫結項目是由 `TransportSecurityBindingElement` 方法傳回的 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosOverTransportBindingElement%2A>。 或者，可以將 `authenticationMode` 屬性設定為 `KerberosOverTransport`。  
   
 > [!NOTE]
->  為了使用此驗證模式，服務帳戶必須與某個 SPN 相關聯。 如果要這樣做，請以 NETWORK SERVICE 帳戶或 LOCAL SYSTEM 帳戶執行此服務。 或者，使用 SetSpn.exe 工具來建立服務帳戶的 SPN。 在任一情況下，用戶端必須使用正確的 SPN 中[ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md)項目，或使用<xref:System.ServiceModel.EndpointAddress>建構函式。 如需詳細資訊，請參閱[服務識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+>  為了使用此驗證模式，服務帳戶必須與某個 SPN 相關聯。 如果要這樣做，請以 NETWORK SERVICE 帳戶或 LOCAL SYSTEM 帳戶執行此服務。 或者，使用 SetSpn.exe 工具來建立服務帳戶的 SPN。 在任一情況下，用戶端必須使用正確的 SPN [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md)項目，或使用<xref:System.ServiceModel.EndpointAddress>建構函式。 如需詳細資訊，請參閱 <<c0> [ 服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
 ### <a name="mutualcertificate"></a>MutualCertificate  
  在此驗證模式中，用戶端會使用出現在 SOAP 層中當做簽署支援權杖 (也就是簽署訊息簽章的權杖) 的 X.509 憑證來進行驗證。 服務也會使用 X.509 憑證來進行驗證。 安全性繫結項目是由 `SymmetricSecurityBindingElement` 方法傳回的 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>。 或者，可以將 `authenticationMode` 屬性設定為 `MutualCertificate`。  
@@ -97,7 +97,7 @@ Windows Communication Foundation (WCF) 提供數個用戶端和服務驗證彼�
 ### <a name="mutualcertificateduplex"></a>MutualCertificateDuplex  
  在此驗證模式中，用戶端會使用出現在 SOAP 層中當做簽署支援權杖 (也就是簽署訊息簽章的權杖) 的 X.509 憑證來進行驗證。 服務也會使用 X.509 憑證來進行驗證。 繫結是由 `AsymmetricSecurityBindingElement` 方法傳回的 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateDuplexBindingElement%2A>。 或者，可以將 `authenticationMode` 屬性設定為 `MutualCertificateDuplex`。  
   
-### <a name="mutalsslnegotiation"></a>MutalSslNegotiation  
+### <a name="mutualsslnegotiated"></a>MutualSslNegotiated  
  在此驗證模式中，用戶端和服務會使用 X.509 憑證來進行驗證。 如果為第一個參數傳遞的值是 `SymmetricSecurityBindingElement` 時，安全性繫結項目就是由 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSslNegotiationBindingElement%2A> 方法傳回的 `true`。 或者，可以將 `authenticationMode` 屬性設定為 `MutualSslNegotiated`。  
   
 ### <a name="secureconversation"></a>SecureConversation  

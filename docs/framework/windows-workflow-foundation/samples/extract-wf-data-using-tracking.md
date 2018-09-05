@@ -2,18 +2,18 @@
 title: 使用追蹤擷取 WF 資料
 ms.date: 03/30/2017
 ms.assetid: e30c68f5-8c6a-495a-bd20-667a4364c68e
-ms.openlocfilehash: 22b147521d4ce0c72fadfb7adc81e05f10ce52b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef8118df2c5834e32c40760ef31f75660893d89b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519869"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501579"
 ---
 # <a name="extract-wf-data-using-tracking"></a>使用追蹤擷取 WF 資料
 此範例會示範如何使用工作流程追蹤，從活動中擷取工作流程變數和引數。 也會示範如何加入追蹤記錄的註釋，以及在自訂追蹤記錄內擷取資料裝載。 此範例會使用 Windows 事件追蹤 (ETW) 追蹤參與者，從工作流程中擷取資料。  
   
 ## <a name="sample-details"></a>範例詳細資料  
- Windows Workflow Foundation (WF) 提供追蹤，以掌握執行工作流程執行個體。 追蹤執行階段會在工作流程執行期間發出工作流程追蹤記錄。 連同工作流程追蹤記錄，工作流程執行個體內的資料也可以從工作流程中擷取。 下列清單詳述可以從追蹤記錄中擷取的資料型別：  
+ Windows Workflow Foundation (WF) 提供透徹地執行工作流程執行個體的追蹤。 追蹤執行階段會在工作流程執行期間發出工作流程追蹤記錄。 連同工作流程追蹤記錄，工作流程執行個體內的資料也可以從工作流程中擷取。 下列清單詳述可以從追蹤記錄中擷取的資料型別：  
   
 1.  活動內的工作流程變數以及活動執行期間的追蹤記錄。  
   
@@ -96,13 +96,13 @@ ms.locfileid: "33519869"
   
 6.  叫用服務之前，啟動 [事件檢視器] 並確認事件記錄正在接聽從工作流程服務發出的追蹤事件。  
   
-7.  從**啟動**功能表上，選取**系統管理工具**然後**事件檢視器**。  
+7.  從**開始**功能表上，選取**系統管理工具**，然後**事件檢視器**。  
   
-8.  在樹狀檢視中事件檢視器中，瀏覽至**事件檢視器**， **Applications and Services Logs**，和**Microsoft**。 以滑鼠右鍵按一下**Microsoft**選取**檢視**然後**顯示分析與偵錯記錄檔**。  
+8.  在樹狀檢視中 事件檢視器中，瀏覽至**事件檢視器**， **Applications and Services Logs**，並**Microsoft**。 以滑鼠右鍵按一下**Microsoft** ，然後選取**檢視**，然後**顯示分析與偵錯記錄檔**。  
   
      請確認**顯示分析與偵錯記錄檔**核取選項。  
   
-9. 在樹狀檢視中事件檢視器中，瀏覽至**事件檢視器**， **Applications and Services Logs**， **Microsoft**， **Windows**， **應用程式伺服器-應用程式**。 以滑鼠右鍵按一下**分析**選取**啟用記錄**。  
+9. 在樹狀檢視中 事件檢視器中，瀏覽至**事件檢視器**， **Applications and Services Logs**， **Microsoft**， **Windows**， **應用程式伺服器-應用程式**。 以滑鼠右鍵按一下**分析**，然後選取**啟用記錄**。  
   
 10. 使用 [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] 開啟 WCF 測試用戶端。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "33519869"
   
      預設 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 安裝資料夾為 C:\Program Files\Microsoft Visual Studio 10.0。  
   
-11. 在 WCF 測試用戶端中，選取**加入服務**從**檔案**功能表。  
+11. 在 WCF 測試用戶端中，選取**新增服務**從**檔案**功能表。  
   
      新增您之前在輸入方塊中複製的本機服務 WSDL 位址。  
   
@@ -118,9 +118,9 @@ ms.locfileid: "33519869"
   
      這樣會開啟 `GetStockPrice` 方法。 要求會接受一個參數。 使用值**Contoso**。  
   
-13. 按一下**叫用**。  
+13. 按一下 **叫用**。  
   
-14. 切換回 [事件檢視器] 並瀏覽至**事件檢視器**， **Applications and Services Logs**， **Microsoft**， **Windows**， **應用程式伺服器-應用程式**。 以滑鼠右鍵按一下**分析**選取**重新整理**。 工作流程事件位於事件識別碼範圍 100-199。  
+14. 切換回 [事件檢視器] 並瀏覽至**事件檢視器**， **Applications and Services Logs**， **Microsoft**， **Windows**， **應用程式伺服器-應用程式**。 以滑鼠右鍵按一下**分析**，然後選取**重新整理**。 工作流程事件位於事件識別碼範圍 100-199。  
   
      事件包括可以在事件檢視器中檢視的註釋、變數、引數和自訂追蹤記錄。  
   
@@ -131,11 +131,11 @@ ms.locfileid: "33519869"
   
 1.  開啟 [事件檢視器]。  
   
-2.  瀏覽至**事件檢視器**， **Applications and Services Logs**， **Microsoft**， **Windows**，**應用程式伺服器應用程式**。 以滑鼠右鍵按一下**分析**選取**停用記錄**。  
+2.  瀏覽至**事件檢視器**， **Applications and Services Logs**， **Microsoft**， **Windows**，**應用程式伺服器-應用程式**。 以滑鼠右鍵按一下**分析**，然後選取**停用記錄**。  
   
-3.  瀏覽至**事件檢視器**， **Applications and Services Logs**， **Microsoft**， **Windows**，**應用程式伺服器應用程式**。 以滑鼠右鍵按一下**分析**選取**清除記錄檔**。  
+3.  瀏覽至**事件檢視器**， **Applications and Services Logs**， **Microsoft**， **Windows**，**應用程式伺服器-應用程式**。 以滑鼠右鍵按一下**分析**，然後選取**清除記錄檔**。  
   
-     選擇**清除**選項可清除事件。  
+     選擇**清除**選項來清除事件。  
   
 ## <a name="known-issue"></a>已知問題  
   
@@ -151,9 +151,9 @@ ms.locfileid: "33519869"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\ExtractWfData`  
   
 ## <a name="see-also"></a>另請參閱  
- [AppFabric 監控範例](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [AppFabric 監控範例](https://go.microsoft.com/fwlink/?LinkId=193959)
