@@ -11,7 +11,7 @@
 | Windows Phone              | 8.1   | 8.1    | 8.1   |       |       |            |            |            |
 | Windows Phone Silverlight  | 8.0   |        |       |       |       |            |            |            |
 
-<sup>1 為 .NET Framework 列出的版本適用於 .NET Core SDK 2.0 和更新版本的工具。較舊的版本為 .NET Standard 1.5 和更新版本使用了其他對應。</sup>
+<sup>1 為 .NET Framework 列出的版本適用於 .NET Core SDK 2.0 和更新版本的工具。較舊的版本為 .NET Standard 1.5 與更新版本使用了不同的對應。若您無法升級到 Visual Studio 2017，您可以[下載適用於 Visual Studio 2015 的 .NET Core 工具的工具](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)。</sup>
 
 - 資料行代表 .NET Standard 版本。 每個標題儲存格都是一個文件連結，該文件說明在該 .NET Standard 版本中新增了哪些 API。
 - 資料列代表不同的 .NET 實作。

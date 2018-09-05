@@ -5,11 +5,11 @@ author: mairaw
 ms.author: mairaw
 ms.date: 08/14/2017
 ms.openlocfilehash: 0ef69f98171da98b50aae4cdd2f5f88f37ad0c63
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403402"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43724951"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET Core 命令列介面 (CLI) 工具
 

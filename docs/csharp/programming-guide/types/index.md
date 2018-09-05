@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 15f3a774255923aba83f15700540369040c02dcd
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: ba019d4104ec6669ef07b608f40fc1489c994cbf
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961530"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525484"
 ---
 # <a name="types-c-programming-guide"></a>類型 (C# 程式設計手冊)
 ## <a name="types-variables-and-values"></a>型別、變數和值  
@@ -99,7 +99,7 @@ int i = 5;
 char c = 'Z';  
 ```  
   
- 實值型別為 *sealed*，其表示您無法從 <xref:System.Int32?displayProperty=nameWithType> 衍生類型，也無法定義從任何使用者定義的類別或結構繼承的結構，因為結構只能從 <xref:System.ValueType?displayProperty=nameWithType> 繼承。 不過，結構可以實作一或多個介面。 您可以將結構類型轉型為介面類型；這會導致 *boxing* 作業將結構包裝在 Managed 堆積上的參考型別物件內。 當您將實值型別傳遞至接受 <xref:System.Object?displayProperty=nameWithType> 做為輸入參數的方法時，就會發生 Boxing 作業。 如需詳細資訊，請參閱 [Boxing 和 Unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)。  
+ 實值型別為 *sealed*，其表示您無法從 <xref:System.Int32?displayProperty=nameWithType> 衍生類型，也無法定義從任何使用者定義的類別或結構繼承的結構，因為結構只能從 <xref:System.ValueType?displayProperty=nameWithType> 繼承。 不過，結構可以實作一或多個介面。 您可以將結構類型轉型為它實作的介面類型；這會導致 *boxing* 作業將結構包裝在受控堆積上的參考型別物件內。 當您將實值型別傳遞至接受 <xref:System.Object?displayProperty=nameWithType> 或任何介面型別做為輸入參數的方法時，就會發生 Boxing 作業。 如需詳細資訊，請參閱 [Boxing 和 Unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)。  
   
  您使用 [struct](../../../csharp/language-reference/keywords/struct.md) 關鍵字來建立您自己自訂的實值型別。 一般來說，會使用結構做為一小組相關變數的容器，如下列範例所示︰  
   
@@ -183,8 +183,9 @@ stringList.Add(4);
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [XML 資料類型轉換](../../../standard/data/xml/conversion-of-xml-data-types.md)  
- [整數型別表](../../../csharp/language-reference/keywords/integral-types-table.md)
+## <a name="see-also"></a>另請參閱
+
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [XML 資料類型轉換](../../../standard/data/xml/conversion-of-xml-data-types.md)  
+- [整數型別表](../../../csharp/language-reference/keywords/integral-types-table.md)

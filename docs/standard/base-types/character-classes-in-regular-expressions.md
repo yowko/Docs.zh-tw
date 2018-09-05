@@ -14,11 +14,11 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8a83f99faa5beaf0fd6a5a53f41cdcba5015fa27
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931176"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43405082"
 ---
 # <a name="character-classes-in-regular-expressions"></a>規則運算式中的字元類別
 <a name="Top"></a> 字元類別會定義一組字元，其中任何字元都可在輸入字串中出現，以便讓比對成功。 .NET 中的規則運算式語言支援下列字元類別：  

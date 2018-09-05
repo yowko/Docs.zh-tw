@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9a716244c779a25ad75c9db37aade0524e9e740
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 955efad34f816cd0445c4ebdf120d8b614f0d351
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442913"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508518"
 ---
 # <a name="unmanaged-api-reference"></a>Unmanaged API 參考
 本節包含與 Managed 程式碼相關之應用程式 (例如執行階段主機、編譯器、反組譯工具、模糊化工具、偵錯工具和分析工具) 可用的 Unmanaged API 的資訊。  
@@ -32,7 +32,7 @@ ms.locfileid: "33442913"
  [常數](../../../docs/framework/unmanaged-api/constants-unmanaged-api-reference.md)  
  描述定義於 CorSym.idl 中的常數。  
   
- [自訂介面屬性](http://msdn.microsoft.com/library/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
+ [自訂介面屬性](https://msdn.microsoft.com/library/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
  描述元件物件模型 (COM) 自訂介面屬性。  
   
  [偵錯](../../../docs/framework/unmanaged-api/debugging/index.md)  
@@ -57,7 +57,7 @@ ms.locfileid: "33442913"
  描述強式命名 API，其可讓用戶端管理組件的強式命名簽署。  
 
  [WMI 和效能計數器](wmi/index.md)  
- 描述包裝 Windows Management Instrumentation (WMI) 程式庫的呼叫的 Api。
+ 說明將呼叫封裝到 Windows Management Instrumentation (WMI) 程式庫的 API。
   
  [Tlbexp Helper 函式](../../../docs/framework/unmanaged-api/tlbexp/index.md)  
  描述組件轉換至類型程式庫的程序期間，類型程式庫匯出工具 (Tlbexp.exe) 所使用的兩個 Helper 函式和介面。  
@@ -65,4 +65,4 @@ ms.locfileid: "33442913"
 ## <a name="related-sections"></a>相關章節  
  [開發指南](../../../docs/framework/development-guide.md)  
   
- [.NET Framework 的進階閱讀](http://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)
+ [.NET Framework 的進階閱讀](https://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)

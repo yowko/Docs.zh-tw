@@ -2,12 +2,12 @@
 title: JSON 和 XML 之間的對應
 ms.date: 03/30/2017
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
-ms.openlocfilehash: e8cc356a30d11a6f07cf4444efbeda2faf5b0471
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 079ca9cebefcc96bffdb0ec4601a675ed83adefe
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931465"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421719"
 ---
 # <a name="mapping-between-json-and-xml"></a>JSON 和 XML 之間的對應
 <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> 所產生的讀取器與寫入器會透過 JavaScript 物件標記法 (JSON) 內容來提供 XML API。 JSON 使用 JavaScript 物件常值的子集對資料進行編碼。 讀取器和寫入器所產生的這個處理站時也會使用 JSON 內容所使用的 Windows Communication Foundation (WCF) 應用程式傳送或接收<xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>或<xref:System.ServiceModel.WebHttpBinding>。  
@@ -38,7 +38,7 @@ ms.locfileid: "42931465"
  此外，如果在範例中的 JSON 訊息是接收 WCF，且記錄，您會看到上述記錄檔中的 XML 片段。  
   
 ## <a name="mapping-between-json-and-the-xml-infoset"></a>JSON 和 XML InfoSet 之間的對應  
- 正式地說，對應是之間 JSON 中所述[RFC 4627](http://go.microsoft.com/fwlink/?LinkId=98808) （除非有特定限制寬鬆及某些加入其他限制） 和 XML infoset （以及非文字 XML） 中所述[XML 資訊設定](http://go.microsoft.com/fwlink/?LinkId=98809)。 請參閱本主題適用於定義*資訊項目*和 [方括號] 中的欄位。  
+ 正式地說，對應是之間 JSON 中所述[RFC 4627](https://go.microsoft.com/fwlink/?LinkId=98808) （除非有特定限制寬鬆及某些加入其他限制） 和 XML infoset （以及非文字 XML） 中所述[XML 資訊設定](https://go.microsoft.com/fwlink/?LinkId=98809)。 請參閱本主題適用於定義*資訊項目*和 [方括號] 中的欄位。  
   
  空白的 JSON 文件對應到空白的 XML 文件，而是空白的 XML 文件對應至空白的 JSON 文件。 在 XML 對 JSON 的對應，泛空白字元開頭與結尾泛空白字元的文件之後不允許。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "42931465"
   
 -   如進一步介紹的資料合約名稱屬性 ("__type")。 如果 JSON 型別屬性同時存在，且其 [normalized value] 為 "object" 的話，才會存在此屬性。 `DataContractJsonSerializer` 可使用此屬性來保存資料合約型別資訊，例如，一個衍生型別已序列化且預期基底型別的多型案例。 如果您不是使用 `DataContractJsonSerializer`，在大部分情況下會忽略此屬性。  
   
--   [在 [in-scope namespaces] 包含"xml"的繫結到 「http://www.w3.org/XML/1998/namespace"如 infoset 規格所託管。  
+-   [在 [in-scope namespaces] 包含"xml"的繫結到 「 http://www.w3.org/XML/1998/namespace"如 infoset 規格所託管。  
   
 -   [children]、[attributes] 和 [in-scope namespaces] 只能包含先前指定的項目，而 [namespace attributes] 不得包含任何成員，但是在讀取從 JSON 對應過來的 XML 時，不能以這些事實為基礎。  
   
