@@ -21,7 +21,7 @@ URI http://www.w3.org/XML/1998/namespace XML 命名空間宣告中使用。 此 
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   移除 XML 命名空間宣告，或取代 URIhttp://www.w3.org/XML/1998/namespace具有有效的命名空間 URI。  
+-   移除 XML 命名空間宣告，或取代 URI http://www.w3.org/XML/1998/namespace 具有有效的命名空間 URI。  
   
 ## <a name="see-also"></a>另請參閱  
  [Imports 陳述式 (XML 命名空間)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)  

@@ -13,7 +13,7 @@ ms.lasthandoff: 09/04/2018
 ms.locfileid: "43556301"
 ---
 # <a name="comparing-guid-and-uniqueidentifier-values"></a>比較 GUID 和 uniqueidentifier 值
-SQL Server 中的全域唯一識別碼 (GUID) 資料型別由 `uniqueidentifier` 資料型別所表示，其儲存 16 個位元組的二進位值。 GUID 是二進位數字，主要當成識別項使用，在許多電腦位於許多站台上的網路中，該識別項必須是唯一的。 可藉由呼叫 Transact-SQL NEWID 函式的方法來產生 GUID，並保證此 GUID 是全球唯一的。 如需詳細資訊，請參閱 < [uniqueidentifier (transact-SQL)](/sql/t-sql/data-types/uniqueidentifier-transact-sql)。  
+SQL Server 中的全域唯一識別碼 (GUID) 資料型別由 `uniqueidentifier` 資料型別所表示，其儲存 16 個位元組的二進位值。 GUID 是二進位數字，主要當成識別項使用，在許多電腦位於許多站台上的網路中，該識別項必須是唯一的。 可藉由呼叫 Transact-SQL NEWID 函式的方法來產生 GUID，並保證此 GUID 是全球唯一的。 如需詳細資訊，請參閱 [uniqueidentifier (transact-SQL)](/sql/t-sql/data-types/uniqueidentifier-transact-sql)。  
   
 ## <a name="working-with-sqlguid-values"></a>使用 SqlGuid 值  
  GUID 值又長又難以理解，對使用者而言不具任何意義。 如果將隨機產生的 GUID 用於索引鍵值，且插入大量資料列，則會使隨機 I/O 進入索引，進而對效能產生負面影響。 而且相較之下，GUID 比其他資料型別還要大。 因此，一般建議僅在其他資料型別都不適用的極少案例中，才使用 GUID。  

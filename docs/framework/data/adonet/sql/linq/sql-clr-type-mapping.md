@@ -2,12 +2,12 @@
 title: SQL-CLR 類型對應
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: 5437529d9293951ad34abda435b538b4f404c600
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: ac00d78fff65f5d44a52f92509db3aa493952949
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33365523"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735432"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR 類型對應
 在 LINQ to SQL 中，關聯式資料庫的資料模型會對應至以您選擇之程式語言表示的物件模型 (Object Model)。 執行應用程式時，LINQ to SQL 會將物件模型中的 Language Integrated Query (LINQ) 轉譯成 SQL，並將這些查詢傳送至資料庫進行執行。 當資料庫傳回結果時，LINQ to SQL 會將結果轉譯回您可以在自己的程式語言中處理的物件。  
@@ -60,7 +60,7 @@ ms.locfileid: "33365523"
   
 -   SQL Server 排序某些資料型別的方式與 CLR 中對等資料型別的排序方式不同。 例如，SQL Server 資料型別 `UNIQUEIDENTIFIER` 的排序方式就與 CLR 資料型別 <xref:System.Guid?displayProperty=nameWithType> 的排序方式不同。  
   
--   SQL Server 處理某些字串比較作業的方式與 CLR 不同。 在 SQL Server 中，字串比較行為會因伺服器的定序 (Collation) 設定而不同。 如需詳細資訊，請參閱 <<c0> [ 使用定序](http://go.microsoft.com/fwlink/?LinkId=115330)Microsoft SQL Server 線上叢書 》 中。  
+-   SQL Server 處理某些字串比較作業的方式與 CLR 不同。 在 SQL Server 中，字串比較行為會因伺服器的定序 (Collation) 設定而不同。 如需詳細資訊，請參閱 <<c0> [ 使用定序](https://go.microsoft.com/fwlink/?LinkId=115330)Microsoft SQL Server 線上叢書 》 中。  
   
 -   SQL Server 與 CLR 可能會針對某些對應函式傳回不同的值。 例如，等號比較函式便有所不同，因為如果兩個字串只有尾端泛空白字元 (White Space) 不同，SQL Server 就會將它們視為相等，而 CLR 則會將它們視為不相等。  
   
@@ -232,11 +232,11 @@ ms.locfileid: "33365523"
 ### <a name="sql-server-filestream"></a>SQL Server FILESTREAM  
  從 Microsoft SQL Server 2008 開始，就提供了 `FILESTREAM` 資料行的 `VARBINARY(MAX)` 屬性。從 .NET Framework 3.5 版 SP1 開始，您就可以透過 LINQ to SQL 對應至此屬性。  
   
- 雖然您可以將具有 `VARBINARY(MAX)` 屬性的 `FILESTREAM` 資料行對應至 <xref:System.Data.Linq.Binary> 物件，但是 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法無法自動建立具有 `FILESTREAM` 屬性的資料行。 如需詳細資訊`FILESTREAM`，請參閱 < [FILESTREAM 概觀](http://go.microsoft.com/fwlink/?LinkId=115291)Microsoft SQL Server 線上叢書 》。  
+ 雖然您可以將具有 `VARBINARY(MAX)` 屬性的 `FILESTREAM` 資料行對應至 <xref:System.Data.Linq.Binary> 物件，但是 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法無法自動建立具有 `FILESTREAM` 屬性的資料行。 如需詳細資訊`FILESTREAM`，請參閱 < [FILESTREAM 概觀](https://go.microsoft.com/fwlink/?LinkId=115291)Microsoft SQL Server 線上叢書 》。  
   
 <a name="BinarySerialization"></a>   
 ### <a name="binary-serialization"></a>二進位序列化  
- 如果某個類別實作 <xref:System.Runtime.Serialization.ISerializable> 介面，您就可以將物件序列化成任何 SQL 二進位欄位 (`BINARY`、`VARBINARY` 或 `IMAGE`)。 此物件會根據 <xref:System.Runtime.Serialization.ISerializable> 介面的實作方式序列化和還原序列化。 如需詳細資訊，請參閱 <<c0> [ 二進位序列化](http://go.microsoft.com/fwlink/?LinkId=115581)。  
+ 如果某個類別實作 <xref:System.Runtime.Serialization.ISerializable> 介面，您就可以將物件序列化成任何 SQL 二進位欄位 (`BINARY`、`VARBINARY` 或 `IMAGE`)。 此物件會根據 <xref:System.Runtime.Serialization.ISerializable> 介面的實作方式序列化和還原序列化。 如需詳細資訊，請參閱 <<c0> [ 二進位序列化](https://go.microsoft.com/fwlink/?LinkId=115581)。  
   
 <a name="MiscMapping"></a>   
 ## <a name="miscellaneous-mapping"></a>其他對應  
