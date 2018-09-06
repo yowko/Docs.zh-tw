@@ -1,5 +1,5 @@
 ---
-title: 如何：在 Windows Forms 中列印多頁文字檔
+title: 如何：在 Windows Form 中列印多頁文字檔
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - printing [Windows Forms], text
 ms.assetid: 362427f8-03d4-4826-b49f-60ab066ad322
 ms.openlocfilehash: b8cfba338bb318139bedf5595df8bad666c201bd
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43565415"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43773533"
 ---
-# <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>如何：在 Windows Forms 中列印多頁文字檔
+# <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>如何：在 Windows Form 中列印多頁文字檔
 Windows 應用程式列印文字的情況極為常見。 <xref:System.Drawing.Graphics> 類別提供將物件 (圖形或文字) 繪製到螢幕或印表機等裝置的方法。  
   
 > [!NOTE]

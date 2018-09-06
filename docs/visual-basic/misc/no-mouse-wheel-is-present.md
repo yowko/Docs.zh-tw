@@ -5,11 +5,11 @@ f1_keywords:
 - vbrMouse_NoWheelIsPresent
 ms.assetid: e924ffba-4af1-4247-9a6f-d19a03738f62
 ms.openlocfilehash: bfb8ea0d5d7a22bd66f477216129ff834023f4ba
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43674001"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43738194"
 ---
 # <a name="no-mouse-wheel-is-present"></a>滑鼠滾輪不存在
 已呼叫 `My.Computer.Mouse.WheelScrollLines` 屬性，但是滑鼠有沒有滾輪。  

@@ -2,18 +2,18 @@
 title: '教學課程： 建立型別提供者 （F #）'
 description: '了解如何在 F # 3.0 中建立您自己 F # 型別提供者，藉由檢查幾個簡單的型別提供者，來說明基本概念。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 25b11a0c6328fc74832e13b6380c983fb14a74a0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 3c998377b2c3a408d536ef416f3799bf7f04b6bd
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499324"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745722"
 ---
 # <a name="tutorial-create-a-type-provider"></a>教學課程： 建立型別提供者
 
 F # 中的型別提供者機制是其支援資訊豐富程式設計的重要部分。 本教學課程說明如何建立您自己的型別提供者，方法是逐步說明的基本概念的幾個簡單的型別提供者的開發。 如需有關 F # 中的型別提供者機制的詳細資訊，請參閱[型別提供者](index.md)。
 
-F # 生態系統包含一組常用的網際網路和企業資料服務的型別提供者。 例如: 
+F # 生態系統包含一組常用的網際網路和企業資料服務的型別提供者。 例如：
 
 - [FSharp.Data](https://fsharp.github.io/FSharp.Data/)包含型別提供者，如 JSON、 XML、 CSV 和 HTML 文件格式。
 
@@ -24,7 +24,6 @@ F # 生態系統包含一組常用的網際網路和企業資料服務的型別�
 - [FSharp.Data.TypeProviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/)是較舊型別提供者只能搭配.NET Framework 程式設計中存取 SQL、 Entity Framework、 OData 及 WSDL 資料服務使用的集合。
 
 必要時，您可以建立自訂的型別提供者，或您可以參考其他人所建立的型別提供者。 例如，您的組織可能會有提供大量且不斷增加的已命名的資料集，各有自己的穩定資料結構描述的資料服務。 您可以建立型別提供者讀取結構描述，並採用強類型的方式，呈現給程式設計人員的目前的資料集。
-
 
 ## <a name="before-you-start"></a>在開始之前
 
@@ -51,7 +50,6 @@ F # 生態系統包含一組常用的網際網路和企業資料服務的型別�
 - 它會在程式執行期間變更嗎？
 
 型別提供者最適合的結構描述在執行階段和編譯的程式碼的存留期內穩定的情況。
-
 
 ## <a name="a-simple-type-provider"></a>簡單的型別提供者
 
@@ -93,8 +91,7 @@ type Type100 =
 
 請注意已確知的一組型別和成員提供。 此範例不會使用提供者能夠提供取決於結構描述的類型。 型別提供者實作會概述下列程式碼，以及本主題稍後的章節涵蓋詳細資料。
 
-
->[!WARNING] 
+>[!WARNING]
 可能會有這段程式碼與線上範例之間的差異。
 
 ```fsharp
@@ -168,7 +165,6 @@ devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 或者，開啟 Visual Studio，開啟 偵錯 功能表，選擇`Debug/Attach to process…`，並將附加至另一個`devenv`您要在其中編輯指令碼的程序。 使用此方法，您可以更輕鬆地以互動方式 （使用完整的 IntelliSense 和其他功能） 的第二個執行個體中輸入運算式目標型別提供者中的特定邏輯。
 
 您可以停用 Just My Code 偵錯，以更精確識別產生程式碼中的錯誤。 如需有關如何啟用或停用這項功能的資訊，請參閱 <<c0> [ 使用偵錯工具巡覽程式碼](/visualstudio/debugger/navigating-through-code-with-the-debugger)。 此外，您也可以設定開啟攔截 first-chance 例外狀況`Debug`功能表，然後選擇`Exceptions`或 [選擇 Ctrl + Alt + E 鍵以開啟`Exceptions`] 對話方塊。 在該對話方塊中，在`Common Language Runtime Exceptions`，選取`Thrown`核取方塊。
-
 
 ### <a name="implementation-of-the-type-provider"></a>型別提供者實作
 
@@ -376,7 +372,6 @@ t.AddMembersDelayed(fun () ->
 
 在此範例中，提供的每一個型別會清除輸入`obj`，所有使用的類型會都顯示為型別及`obj`中編譯的程式碼。 事實上，在這些範例中的基礎物件是字串，但類型會顯示為`System.Object`在.NET 中編譯的程式碼。 所有使用的類型清除，您可以使用明確的 boxing 處理，unboxing，並將轉換可以破壞清除類型。 在此情況下，使用物件時，可能會造成無效轉換例外狀況。 提供者執行階段可以定義自己的私用表示型別，以協助防範 false 表示法。 您無法在 F # 本身中定義它們的類型。 提供的類型可能會被刪除。 您必須了解後果，這兩個實際會加以語意，使用 清除您的型別提供者或提供的提供者的類型清除類型。 它們的類型都有沒有真正的.NET 型別。 因此，您無法準確的反映類型，而且您可能會破壞它們的型別，如果您使用執行階段轉換和其他技術，依賴確切執行階段型別語意。 清除類型的 subversion 經常會導致在執行階段的類型轉換例外狀況。
 
-
 ### <a name="choosing-representations-for-erased-provided-types"></a>選擇表示法，如清除所提供的類型
 
 如需清除的提供類型的一些用途，不表示需要。 比方說，它們提供型別可能會包含靜態屬性和成員並沒有建構函式，而沒有方法或屬性，則會傳回型別的執行個體。 如果您可以連線到它們的執行個體提供型別，您必須考慮下列問題：
@@ -393,7 +388,7 @@ t.AddMembersDelayed(fun () ->
 
 - 一組可能的物件，為它們提供型別會呼叫其表示法。 在本文中範例中，所有清除所提供的表示型別`Type1..Type100`永遠是字串的物件。
 
-所有提供的型別表示法必須與提供的類型清除相容。 （否則 F # 編譯器將會發生錯誤的型別提供者中，使用或無法驗證不是有效的.NET 程式碼將會產生。 如果型別提供者傳回的程式碼提供了無效的表示方式，則該型別提供者無效。
+所有提供的型別表示法必須與提供的類型清除相容。 （否則 F # 編譯器將會發生錯誤的型別提供者中，使用或無法驗證不是有效的.NET 程式碼將會產生。 如果類型提供者傳回的程式碼提供了無效的表示方式，則該類型提供者無效。
 
 您可以使用下列其中一個方法，這兩者都是很常見的其中一種選擇提供物件的表示法：
 
@@ -435,11 +430,9 @@ ProvidedConstructor(…, InvokeCode = (fun args -> <@@ new DataObject() @@>), �
 
 上一節會說明如何建立簡單清除型別提供者提供了各式各樣的型別、 屬性和方法。 本節也說明類型清除，包括的一些優點和缺點提供它們的型別從型別提供者的概念，並討論它們的類型表示法。
 
-
 ## <a name="a-type-provider-that-uses-static-parameters"></a>使用靜態參數的型別提供者
 
 將參數化的靜態資料的型別提供者的能力可讓許多有趣的情況下，即使是在提供者不需要存取任何本機或遠端資料的情況下。 在本節中，您將學習一些基本技術搭配使用這類提供者。
-
 
 ### <a name="type-checked-regex-provider"></a>檢查 Regex 提供者類型。
 
@@ -737,16 +730,13 @@ do ()
 
 本節說明如何建立能在其靜態參數的運作方式的型別提供者。 提供者會檢查靜態參數，並提供其值為基礎的作業。
 
-
 ## <a name="a-type-provider-that-is-backed-by-local-data"></a>型別提供者，並受到本機資料
 
 通常，您可以呈現 Api 的靜態參數不僅從本機或遠端系統的資訊為基礎的型別提供者。 本章節將討論本機資料，例如本機資料檔案為基礎的型別提供者。
 
-
 ### <a name="simple-csv-file-provider"></a>簡易的 CSV 檔案提供者
 
 簡單的範例，請考慮用於存取以逗號分隔值 (CSV) 格式的科學資料的型別提供者。 本節假設，CSV 檔案包含標頭資料列，再浮動點資料，如下表所示：
-
 
 |距離 （計量）|時間 （秒）|
 |----------------|-------------|
@@ -893,11 +883,9 @@ type public MiniCsvProvider(cfg:TypeProviderConfig) as this =
 
 本節說明如何使用簡單的結構描述包含在資料來源本身中建立本機資料來源的型別提供者。
 
-
 ## <a name="going-further"></a>繼續進行
 
 下列各節包含需進一步的研究的建議。
-
 
 ### <a name="a-look-at-the-compiled-code-for-erased-types"></a>看看清除類型的已編譯程式碼
 
@@ -939,8 +927,8 @@ IL_0017:  ret
 
 如範例所示，型別的所有提及`Type1`而`InstanceProperty`屬性已清除，保留所涉及的只有在執行階段型別上的作業。
 
-
 ### <a name="design-and-naming-conventions-for-type-providers"></a>設計和型別提供者的命名慣例
+
 撰寫型別提供者時，請觀察下列慣例。
 
 **提供者的連接通訊協定**一般而言，大部分的提供者 Dll 的資料和服務的連線通訊協定，例如 OData 或 SQL 連接時，名稱應該結束於`TypeProvider`或`TypeProviders`。 例如，使用類似如下的 DLL 名稱：
@@ -980,13 +968,12 @@ let data = Fabrikam.Data.Freebase.Astronomy.Asteroids
 
 如需詳細資訊，請參閱`GetConnection`設計會在本主題稍後描述的慣例。
 
-
 ### <a name="design-patterns-for-type-providers"></a>型別提供者設計模式
 
 下列各節說明您可以撰寫型別提供者時使用的設計模式。
 
-
 #### <a name="the-getconnection-design-pattern"></a>GetConnection 設計模式
+
 大部分的型別提供者應撰寫成使用`GetConnection`模式，可由型別中的提供者 FSharp.Data.TypeProviders.dll，如下列範例所示：
 
 ```fsharp
@@ -1147,10 +1134,7 @@ F # 中的型別提供者機制具有下列限制：
 
   您可以使用列印至 stdout 記錄。
 
-
 ## <a name="see-also"></a>另請參閱
 
-* [類型提供者](index.md)
-
-* [型別提供者 SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK)
-
+- [類型提供者](index.md)
+- [型別提供者 SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK)

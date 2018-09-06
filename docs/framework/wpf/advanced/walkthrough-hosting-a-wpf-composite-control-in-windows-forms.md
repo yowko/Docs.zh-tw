@@ -5,11 +5,11 @@ helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
 ms.openlocfilehash: 09f634c870eb78c16192ed30ffbbfdc71fdd5142
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43456434"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735471"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>逐步解說：在 Windows Form 中裝載 WPF 複合控制項
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。 不過，如果您已長期開發[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]程式碼，它可以更有效率地將現有[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]應用程式與[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]而不從頭重寫程式。 常見的案例是當您想要內嵌一個或多個控制項實作[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Windows Forms 應用程式內。 如需有關自訂 WPF 控制項的詳細資訊，請參閱 <<c0> [ 控制項自訂](../../../../docs/framework/wpf/controls/control-customization.md)。  
@@ -229,7 +229,7 @@ Windows Forms 應用程式中裝載的 WPF 複合控制項
   
 4.  新增下列<xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>控制項加入表單。  
   
-    |名稱|Text|  
+    |名稱|文字|  
     |----------|----------|  
     |groupBox1|背景色彩|  
     |groupBox2|前景色彩|  
@@ -241,7 +241,7 @@ Windows Forms 應用程式中裝載的 WPF 複合控制項
   
 5.  新增下列<xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType>控制項新增至<xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>控制項。  
   
-    |GroupBox|名稱|Text|  
+    |GroupBox|名稱|文字|  
     |--------------|----------|----------|  
     |groupBox1|radioBackgroundOriginal|原始|  
     |groupBox1|radioBackgroundLightGreen|LightGreen|  
@@ -262,9 +262,9 @@ Windows Forms 應用程式中裝載的 WPF 複合控制項
   
 6.  新增下列<xref:System.Windows.Forms.Label?displayProperty=nameWithType>到最後一個控制<xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>。 這些控制項會顯示所傳回的資料[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項。  
   
-    |GroupBox|名稱|Text|  
+    |GroupBox|名稱|文字|  
     |--------------|----------|----------|  
-    |groupBox7|lblName|名稱：|  
+    |groupBox7|lblName|名稱:|  
     |groupBox7|lblAddress|街道地址：|  
     |groupBox7|lblCity|城市：|  
     |groupBox7|lblState|狀態:|  

@@ -2,12 +2,12 @@
 title: 在 SQL Server 中授與資料列層級權限
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: 5f777b47c9b2f92c40fec01b4ff0c35fc28dbd89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a4b45e13a16b357be28a1383648e98890567ea9
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361302"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749151"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>在 SQL Server 中授與資料列層級權限
 在某些案例中，相較於單純地授與、撤銷或拒絕權限，您需要以更細微的層級來控制資料存取。 例如，醫院資料庫應用程式可能需要限制個別醫生只能存取與其病患相關的資訊。 類似的需求存在許多環境中，包括財務、法律、政府和軍事應用程式中。 為了協助解決這些案例，SQL Server 2016 提供 [資料列層級安全性](https://msdn.microsoft.com/library/dn765131.aspx) 功能，以一個安全性原則來簡化並集中管理資料列層級存取邏輯。 針對舊版 SQL Server，您可以使用檢視來制定資料列層級篩選，以達到類似的功能。  
@@ -21,7 +21,7 @@ ms.locfileid: "33361302"
   
 -   啟用資料列層級篩選：  
   
-    -   如果您使用 SQL Server 2016 或更新版本，或[Azure SQL Database](https://docs.microsoft.com/azure/sql-database/)，建立安全性原則，將 限制資料列的資料表上的述詞傳回那些符合目前的資料庫使用者 （使用 CURRENT_USER()內建函式） 或目前的登入名稱 （使用 suser_sname （） 內建函式）：  
+    -   如果您使用 SQL Server 2016 或更新版本，或是[Azure SQL Database](https://docs.microsoft.com/azure/sql-database/)，建立安全性原則，將 限制的資料列的資料表上的述詞傳回給那些符合目前的資料庫使用者 （使用 CURRENT_USER內建函式） 或目前的登入名稱 （使用 suser_sname （） 內建函式）：  
   
         ```tsql  
         CREATE SCHEMA Security  
@@ -64,7 +64,7 @@ ms.locfileid: "33361302"
   
 |||  
 |-|-|  
-|SQL Server TechCenter 網站上的[使用 SQL Server 2005 在分類資料庫中實作資料列和資料格層級安全性](http://go.microsoft.com/fwlink/?LinkId=98227) 。|說明如何使用列和資料格層級安全性來符合分類資料庫的安全性需求。|  
+|[在分類資料庫使用 SQL Server 2005 中實作資料列和資料格層級安全性](https://go.microsoft.com/fwlink/?LinkId=98227)SQL Server TechCenter 網站上。|說明如何使用列和資料格層級安全性來符合分類資料庫的安全性需求。|  
   
 ## <a name="see-also"></a>另請參閱  
  [資料列層級安全性](https://msdn.microsoft.com/library/dn765131.aspx)  
@@ -73,4 +73,4 @@ ms.locfileid: "33361302"
  [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
  [在 SQL Server 中使用預存程序來管理權限](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
  [在 SQL Server 中撰寫安全的動態 SQL](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

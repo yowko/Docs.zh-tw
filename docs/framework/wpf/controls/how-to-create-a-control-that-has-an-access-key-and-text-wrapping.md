@@ -1,5 +1,5 @@
 ---
-title: 操作說明：建立具有便捷鍵和自動換行功能的控制項
+title: 如何：建立有便捷鍵和自動換行的控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - access keys [WPF], control for
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - text wrapping [WPF]
 ms.assetid: 205099d9-2551-4302-a25e-a15af9f67e04
 ms.openlocfilehash: bc170334496ca4c2a2028b9c493385674d235ca6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43552777"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745605"
 ---
-# <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>操作說明：建立具有便捷鍵和自動換行功能的控制項
+# <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>如何：建立有便捷鍵和自動換行的控制項
 此範例示範如何建立具有便捷鍵並支援自動換行的控制項。 此範例會使用<xref:System.Windows.Controls.Label>來說明這些概念的控制項。  
   
 ## <a name="example"></a>範例  

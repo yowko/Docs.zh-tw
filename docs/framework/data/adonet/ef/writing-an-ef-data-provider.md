@@ -3,11 +3,11 @@ title: 撰寫 Entity Framework 資料提供者
 ms.date: 03/30/2017
 ms.assetid: 092e88c4-a301-453a-b5c3-5740c6575a9f
 ms.openlocfilehash: 50c0555d84c5b5f180c8c49a8419e8a414a4befe
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43540829"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43739447"
 ---
 # <a name="writing-an-entity-framework-data-provider"></a>撰寫 Entity Framework 資料提供者
 本節討論如何撰寫[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]支援 SQL Server 以外的資料來源的提供者。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]包含支援 SQL Server 的提供者。  
@@ -34,7 +34,7 @@ ms.locfileid: "43540829"
 ## <a name="sample"></a>範例  
  請參閱[Entity Framework 範例提供者](https://go.microsoft.com/fwlink/?LinkId=180616)如需範例的[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]支援 SQL Server 以外的資料來源的提供者。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [SQL 產生](../../../../../docs/framework/data/adonet/ef/sql-generation.md)  
   
  [修改 SQL 產生](../../../../../docs/framework/data/adonet/ef/modification-sql-generation.md)  

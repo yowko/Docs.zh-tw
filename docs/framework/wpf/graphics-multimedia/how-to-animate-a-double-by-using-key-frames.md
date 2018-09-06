@@ -1,5 +1,5 @@
 ---
-title: 操作說明：使用主要畫面格建立雙精度浮點數的動畫
+title: 如何：使用主要畫面格建立雙精度浮點數的動畫
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - key frames [WPF], animating Doubles with
 ms.assetid: 3a1a7dba-7694-4907-8a2f-3408baebfa82
 ms.openlocfilehash: 67466bbb5fd7e7a46c312e14666c23048bf43d80
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43552253"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43744663"
 ---
-# <a name="how-to-animate-a-double-by-using-key-frames"></a>操作說明：使用主要畫面格建立雙精度浮點數的動畫
+# <a name="how-to-animate-a-double-by-using-key-frames"></a>如何：使用主要畫面格建立雙精度浮點數的動畫
 此範例示範如何以動畫顯示採用屬性的值<xref:System.Double>使用主要畫面格。  
   
 ## <a name="example"></a>範例  

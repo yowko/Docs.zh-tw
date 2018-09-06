@@ -3,11 +3,11 @@ title: 使用 WorkflowInvoker 類別
 ms.date: 03/30/2017
 ms.assetid: 0a966164-3990-4e78-8aa2-c6797ebbee94
 ms.openlocfilehash: d6525dbbd30aae95be4c4ee1de267736e557a541
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43552201"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43748699"
 ---
 # <a name="using-the-workflowinvoker-class"></a>使用 WorkflowInvoker 類別
 這個範例示範如何使用 <xref:System.Activities.WorkflowInvoker> 類別如同方法一般叫用活動。  

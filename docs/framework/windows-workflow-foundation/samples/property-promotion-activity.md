@@ -3,11 +3,11 @@ title: 屬性促銷活動
 ms.date: 03/30/2017
 ms.assetid: 802196b7-1159-4c05-b41b-d3bfdfcc88d9
 ms.openlocfilehash: 6e059a0d344e6c62833feaa890c459c141a49673
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43559101"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43747050"
 ---
 # <a name="property-promotion-activity"></a>屬性促銷活動
 此範例提供了端對端方案，此方案會將 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 提升功能直接整合到工作流程撰寫經驗。 將會提供組態元素、工作流程活動、可簡化使用提升功能之工作流程延伸模組的集合。 此外，此範例也包含一個簡單的工作流程，可示範如何使用這個集合。  

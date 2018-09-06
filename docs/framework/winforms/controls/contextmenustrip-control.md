@@ -7,16 +7,16 @@ helpviewer_keywords:
 - shortcut menus
 ms.assetid: 76e070b2-65d7-457f-8300-d104e4e01e5e
 ms.openlocfilehash: c5f2246ef70ed627ecd311c1f3e5666afcd9b5ef
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43552175"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43748898"
 ---
 # <a name="contextmenustrip-control"></a>ContextMenuStrip 控制項
 <xref:System.Windows.Forms.ContextMenuStrip> 控制項提供您要使其與控制項產生關聯的捷徑功能表。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [ContextMenuStrip 控制項概觀](../../../../docs/framework/winforms/controls/contextmenustrip-control-overview.md)  
  說明此控制項是什麼，並說明其重要功能與屬性。  
   
@@ -49,4 +49,4 @@ ms.locfileid: "43552175"
   
 ## <a name="related-sections"></a>相關章節  
  [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- 提供 Windows Form 控制項的完整清單，以及其用法的資訊連結。
+ 提供 Windows Form 控制項的完整清單及其用法資訊的連結。

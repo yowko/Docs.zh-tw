@@ -7,11 +7,11 @@ helpviewer_keywords:
 - My namespace [Visual Basic], extending
 ms.assetid: fd89c54b-0290-4c50-95a3-ff17d4487a21
 ms.openlocfilehash: 4212f58c39f63be6ba20c3b79e5d9c98d0615c5e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43565238"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745369"
 ---
 # <a name="package-and-deploy-custom-my-extensions-visual-basic"></a>封裝及部署自訂的 My 延伸模組 (Visual Basic)
 
@@ -60,9 +60,9 @@ CustomData 檔案包含 <`VBMyExtensionTemplate>`具有屬性下, 表所列的�
 
 |屬性|描述|
 |---|---|
-|`ID`|必要。 延伸模組的唯一識別碼。 如果有此識別碼的延伸模組已新增至專案，將它再度新增不會提示使用者。|
-|`Version`|必要。 項目範本的版本號碼。|
-|`AssemblyFullName`|選擇性。 組件名稱。 當此組件的參考加入專案中時，會提示使用者加入`My`從這個項目範本的延伸模組。|
+|`ID`|必要項。 延伸模組的唯一識別碼。 如果有此識別碼的延伸模組已新增至專案，將它再度新增不會提示使用者。|
+|`Version`|必要項。 項目範本的版本號碼。|
+|`AssemblyFullName`|選擇項。 組件名稱。 當此組件的參考加入專案中時，會提示使用者加入`My`從這個項目範本的延伸模組。|
 
 ### <a name="add-the-customdatasignature-element-to-the-vstemplate-file"></a>新增\<CustomDataSignature > 的.vstemplate 檔的項目
 

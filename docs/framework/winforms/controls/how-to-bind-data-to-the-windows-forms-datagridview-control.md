@@ -1,5 +1,5 @@
 ---
-title: 如何：將資料繫結至 Windows Forms DataGridView 控制項
+title: 如何：將資料繫結至 Windows Form DataGridView 控制項
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data binding
 ms.assetid: 1660f69c-5711-45d2-abc1-e25bc6779124
 ms.openlocfilehash: 4064ef26ee550c02ac8825ac4c1a417472b64de6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43554037"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43779428"
 ---
-# <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a>如何：將資料繫結至 Windows Forms DataGridView 控制項
+# <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a>如何：將資料繫結至 Windows Form DataGridView 控制項
 <xref:System.Windows.Forms.DataGridView> 控制項支援標準的 Windows Form 資料繫結模型，因此會繫結至各種資料來源。 不過，在大部分情況下，您會繫結至 <xref:System.Windows.Forms.BindingSource> 元件，以便管理與資料來源互動的詳細資料。 <xref:System.Windows.Forms.BindingSource> 元件可代表任何 Windows Form 資料來源，並可讓您更彈性地選擇或修改資料的位置。 如需所支援的資料來源<xref:System.Windows.Forms.DataGridView>控制項，請參閱[DataGridView 控制項概觀](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)。  
   
  在 Visual Studio 中對於本工作有更詳盡的支援。  另請參閱[如何：使用設計工具將資料繫結至 Windows Forms DataGridView 控制項](https://msdn.microsoft.com/library/33w255ac\(v=vs.110\))。  

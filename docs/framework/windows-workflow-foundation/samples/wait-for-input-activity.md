@@ -3,11 +3,11 @@ title: 等候輸入活動
 ms.date: 03/30/2017
 ms.assetid: d58c344e-9ee8-4ce2-b199-75b3fe45237f
 ms.openlocfilehash: 2e878e8c91c5da12a68da848694ce790896517c7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401205"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43741168"
 ---
 # <a name="wait-for-input-activity"></a>等候輸入活動
 此範例示範如何在工作流程中建立具名書籤。 Windows Workflow Foundation (WF) 不提供宣告式書籤建立的活動。 因此，當您想要在工作流程中建立書籤時，您必須撰寫可建立書籤的自訂活動。 此範例中定義的 `WaitForInput` 活動會提供這個功能，所以使用者可在工作流程中以宣告方式建立書籤。  
@@ -29,7 +29,7 @@ ms.locfileid: "43401205"
   
  此活動有三個套用的屬性，可繫結設計工具、加入可以更新的泛型引數功能，以及將預設泛型型別設定為字串。 此活動也有列於下表的引數。  
   
-|**名稱**|**Type**|**描述**|  
+|**名稱**|**型別**|**描述**|  
 |-|-|-|  
 |TResult|泛型引數 (TResult)|書籤的型別。 這是當書籤繼續時要傳遞給書籤的資料型別。|  
 |BookmarkName|InArgument\<字串 >|書籤的名稱。|  

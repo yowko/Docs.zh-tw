@@ -3,11 +3,11 @@ title: 從 WSE 3.0 Web 服務移轉至 WCF
 ms.date: 03/30/2017
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
 ms.openlocfilehash: 21e36be178bb0dd0c52213d8c4c1387a564a0e5a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43560029"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43779808"
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>從 WSE 3.0 Web 服務移轉至 WCF
 WSE 3.0 Web 服務移轉至 Windows Communication Foundation (WCF) 的優點包括更佳的效能和支援其他傳輸、 其他安全案例，以及 WS-* 規格。 從 WSE 3.0 移轉到 WCF Web 服務可以感受到 200%到 400%的效能改進。 如需 WCF 所支援之傳輸的詳細資訊，請參閱[選擇傳輸](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。 如需 WCF 支援的案例，請參閱[常見的安全性案例](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)。 如需 WCF 支援的規格的清單，請參閱 < [Web 服務通訊協定互通性手冊](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)。  
@@ -107,7 +107,7 @@ WSE 3.0 Web 服務移轉至 Windows Communication Foundation (WCF) 的優點包�
 </customBinding>  
 ```  
   
-## <a name="messaging"></a>訊息  
+## <a name="messaging"></a>傳訊  
   
 ### <a name="wse-30-applications-that-use-the-wse-messaging-api"></a>使用 WSE 訊息 API 的 WSE 3.0 應用程式  
  當您使用 WSE 訊息 API 來直接存取於用戶端與 Web 服務之間進行通訊的 XML 時，可以將應用程式轉換為使用 "Plain Old XML" (POX)。 如需 POX 的詳細資訊，請參閱 <<c0> [ 與 POX 應用程式的互通性](../../../../docs/framework/wcf/feature-details/interoperability-with-pox-applications.md)。 如需 WSE 訊息 API 的詳細資訊，請參閱 <<c0> [ 傳送和接收 SOAP 訊息使用 WSE 訊息 API](https://go.microsoft.com/fwlink/?LinkID=73755)。  

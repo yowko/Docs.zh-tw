@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
-ms.openlocfilehash: bae6b4e6bd11074b47c55bf310215f296394c90d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: MT
+ms.openlocfilehash: 29caae11c72ff230d738e9dab1cd763899710843
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751658"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43724652"
 ---
 # <a name="ltmsmqintegrationbindinggt"></a>&lt;msmqIntegrationBinding&gt;
 定義繫結，此繫結可透過 MSMQ 傳遞訊息來提供查詢支援。  
@@ -59,12 +59,12 @@ msmqIntegrationBinding
 |exactlyOnce|布林值，這個值會指出每個訊息是否只傳遞一次。 接著會通知傳送者傳遞失敗。 `durable` 為 `false` 時，會忽略這個屬性，並傳輸訊息，但不具傳遞保證。 預設為 `true`。 如需詳細資訊，請參閱<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A>。|  
 |maxReceivedMessageSize|正整數，定義此繫結可以處理的訊息大小上限 (以位元組為單位，包括標頭)。 超出此限制之訊息的寄件者將會收到 SOAP 錯誤。 收件者會捨棄訊息，然後在追蹤記錄檔中建立此事件的項目。 預設值為 65536。 這項關於訊息大小的限制是為了避免受到阻絕服務 (DoS) 攻擊。|  
 |maxRetryCycles|整數，指出有害訊息偵測功能使用的重試循環次數。 當訊息無法在循環的傳遞嘗試中成功傳遞，便成為有害訊息。 預設值為 2。 如需詳細資訊，請參閱<xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>。|  
-|name|包含繫結之組態名稱的字串。 這個值應該是唯一的，因為它會當做繫結的識別使用。 從 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 開始，繫結和行為都不需要有名稱。 如需有關預設組態沒有名稱繫結和行為的詳細資訊，請參閱[簡化的組態](../../../../../docs/framework/wcf/simplified-configuration.md)和[簡化 WCF 服務的組態](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。|  
+|name|包含繫結之組態名稱的字串。 這個值應該是唯一的，因為它會當做繫結的識別使用。 從 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 開始，繫結和行為都不需要有名稱。 如需有關預設組態和無名稱繫結和行為的詳細資訊，請參閱 < [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md)並[Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。|  
 |openTimeout|<xref:System.TimeSpan> 值，指定提供用來讓開啟作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
 |receiveErrorHandling|<xref:System.ServiceModel.ReceiveErrorHandling> 值，指定如何處理有害和不可分派的訊息。|  
 |receiveRetryCount|整數，這個整數會指定如果從應用程式佇列到應用程式的訊息傳輸失敗，佇列管理員應嘗試的立即重試次數上限。<br /><br /> 如果達到傳遞嘗試的次數上限，且應用程式未存取訊息，訊息便會傳送到重試佇列，以便日後再次傳遞。 在訊息傳回傳送佇列之前的時間長度是由 `retryCycleDelay` 控制。 如果重試循環達到 `maxRetryCycles` 值，則訊息便會傳送到有害訊息佇列，或是負認可會傳回至寄件者。|  
 |receiveTimeout|<xref:System.TimeSpan> 值，指定接收作業完成其作業之時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:10:00。|  
-|receiveContextEnabled|布林值，這個值會指定接收在佇列內處理訊息的內容是否已啟用。 這會設定為`true`、 服務可以列為 「 尖峰 」 的訊息佇列以開始處理它，和如果出錯而擲回例外狀況，它會保留在佇列。 服務也可 「 鎖定 」 訊息以便再重試時間在稍後處理。 ReceiveContext 會提供 「 完成 」 訊息一次處理，因此它可以從佇列移除的機制。訊息，透過網路將不再進行讀取和重新寫入至佇列，並個別訊息在處理期間，不彈跳跨不同的服務執行個體。|  
+|receiveContextEnabled|布林值，這個值會指定接收在佇列內處理訊息的內容是否已啟用。 這會設定為`true`，服務可以列為 「 尖峰 」 以開始處理它，在佇列訊息，如果出錯而擲回例外狀況，它會保持在佇列。 服務也可 「 鎖定 」 訊息，以便在稍後的時間點的處理時間再試一次。 ReceiveContext 提供 「 完成 」 訊息一次處理，因此它可以從佇列中移除的機制。訊息不會再透過網路，在讀取和重新寫入至佇列，並個別訊息在處理期間時，跳躍跨不同的服務執行個體。|  
 |retryCycleDelay|TimeSpan 值，指定嘗試傳遞無法立即傳遞之訊息時，重試循環之間的時間延遲。 該值只定義最小等待時間，因為實際的等待時間會更長。 預設值為 00:30:00。 如需詳細資訊，請參閱<xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A>。|  
 |sendTimeout|<xref:System.TimeSpan> 值，指定提供用來讓傳送作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
 |serializationFormat|定義用來序列化訊息本文的格式。 此屬性的型別為 <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat>。|  
@@ -95,7 +95,7 @@ msmqIntegrationBinding
 |[\<繫結 >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
   
 ## <a name="remarks"></a>備註  
- 這個繫結項目可以用來讓 Windows Communication Foundation (WCF) 應用程式傳送訊息至和接收訊息，從現有的 MSMQ 應用程式使用 COM、 MSMQ 原生 Api 或定義中的型別<xref:System.Messaging?displayProperty=nameWithType>命名空間您可以使用這個組態項目，來指定如何定址佇列、 傳輸保證是否永久儲存訊息，以及應如何保護和驗證訊息。 如需詳細資訊，請參閱[How to： 與 WCF 端點和訊息佇列應用程式交換訊息](../../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)。  
+ 此繫結項目可用來讓 Windows Communication Foundation (WCF) 應用程式傳送和接收訊息，從現有的 MSMQ 應用程式使用 COM、 MSMQ 原生 Api 或定義中的型別<xref:System.Messaging?displayProperty=nameWithType>命名空間您可以使用這個組態項目，指定如何定址佇列、 傳輸保證、 是否永久儲存訊息，以及應如何保護和驗證訊息。 如需詳細資訊，請參閱 <<c0> [ 如何： 與 WCF 端點和訊息佇列應用程式交換訊息](../../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -137,5 +137,5 @@ msmqIntegrationBinding
  [\<繫結 >](../../../../../docs/framework/misc/binding.md)  
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [使用繫結來設定 Windows Communication Foundation 服務和用戶端](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [WCF 中的佇列](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)

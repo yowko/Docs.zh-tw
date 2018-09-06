@@ -19,26 +19,26 @@ helpviewer_keywords:
 - zeros, trailing
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-ms.openlocfilehash: c2d3d7d360ccb240bafbe0e19e9f396adfba7f7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 5d2d84f298b9cf6138e84ef287f6ea9212da2960
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590260"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43734808"
 ---
 # <a name="double-data-type-visual-basic"></a>Double 資料類型 (Visual Basic)
-保存帶正負號的 IEEE 64 位元 （8 個位元組） 雙精確度浮點數，範圍從-1.79769313486231570 e + 308 到-4.94065645841246544-324 負數值，從 4.94065645841246544 e-324 1.79769313486231570 e + 308 至正值。 雙精度數字會儲存實際數字的近似值。  
+保存帶正負號的 IEEE 64 位元 （8 個位元組） 雙精確度浮點數，範圍從-1.79769313486231570 e + 308 到-4.94065645841246544-324 負值進出 4.94065645841246544-324 1.79769313486231570 e + 308 到正的數值。 雙精度數字儲存的是實數的近似值。  
   
 ## <a name="remarks"></a>備註  
- `Double`資料型別提供最大和最小的可能範圍的數字。  
+ `Double`資料類型提供許多最大和最小可能的範圍。  
   
  `Double` 的預設值為 0。  
   
 ## <a name="programming-tips"></a>程式設計提示  
   
--   **有效位數。** 當您使用浮點數時，請記得它們在記憶體中不一定有精確的表示。 這可能會導致非預期的結果從某些作業，例如值比較而`Mod`運算子。 如需詳細資訊，請參閱[疑難排解資料型別](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)。  
+-   **有效位數。** 當您使用浮點數時，請記得它們在記憶體中不一定有精確的表示法。 這可能會導致非預期的結果從某些作業，例如要做數值比較，`Mod`運算子。 如需詳細資訊，請參閱 <<c0> [ 疑難排解資料型別](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)。  
   
--   **尾端零。** 浮點資料類型不需要任何內部表示法的尾端零個字元。 例如，它們不會區分 4.2000 與 4.2。 因此，結尾的零個字元不會出現在顯示或列印的浮點值。  
+-   **尾端零。** 浮點資料類型沒有任何的尾端零個字元的內部表示法。 比方說，它們無法區分 4.2000 與 4.2。 因此，尾端零字元不會出現在顯示或列印的浮點值。  
   
 -   **類型字元。** 將常值類型字元 `R` 附加到常值，會強制其成為 `Double` 資料類型。 例如，如果整數值，後面跟著`R`的值變更為`Double`。  
   
@@ -53,11 +53,11 @@ ms.locfileid: "33590260"
     Dim num# = 3  
     ```  
   
--   **架構類型。** 在 .NET Framework 中對應的類型為 <xref:System.Double?displayProperty=nameWithType> 結構。  
+-   **Framework 型別。** 在 .NET Framework 中對應的類型為 <xref:System.Double?displayProperty=nameWithType> 結構。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Double?displayProperty=nameWithType>  
- [資料類型](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [資料類型](../../../visual-basic/language-reference/data-types/index.md)  
  [Decimal 資料類型](../../../visual-basic/language-reference/data-types/decimal-data-type.md)  
  [Single 資料類型](../../../visual-basic/language-reference/data-types/single-data-type.md)  
  [類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  

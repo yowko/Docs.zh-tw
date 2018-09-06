@@ -3,11 +3,11 @@ title: 選擇訊息編碼器
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
 ms.openlocfilehash: 5d2b55f04954cdd855ff9e224d2bc0405919f7a3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43535184"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43773103"
 ---
 # <a name="choosing-a-message-encoder"></a>選擇訊息編碼器
 本主題將討論 Windows Communication Foundation (WCF) 中包含之訊息編碼器之間選擇的準則： 二進位、 文字和訊息傳輸最佳化機制 (MTOM)。  
@@ -32,14 +32,14 @@ ms.locfileid: "43535184"
   
 |因素|描述|支援這個因素的編碼器|  
 |------------|-----------------|---------------------------------------|  
-|支援的字元集。|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 和 <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`> 只支援 UTF8 及 UTF16 Unicode (*big endian*並*由小到大*) 編碼。 如果不需要如 UTF7 或 ASCII 等其他編碼，則必須使用自訂編碼器。 如需範例自訂編碼器，請參閱 <<c0> [ 自訂訊息編碼器](https://go.microsoft.com/fwlink/?LinkId=119857)。|Text|  
-|檢閱|檢查是傳輸期間檢查訊息的能力。 不論是否使用 SOAP，文字編碼都會讓許多應用程式檢查及分析訊息，而不需要使用特別工具。 請注意，在訊息或傳輸層級上，傳輸安全性的使用會影響檢查訊息的能力。 機密性會保護訊息不受檢查，而完整性則會保護訊息不受修改。|Text|  
+|支援的字元集。|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 和 <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`> 只支援 UTF8 及 UTF16 Unicode (*big endian*並*由小到大*) 編碼。 如果不需要如 UTF7 或 ASCII 等其他編碼，則必須使用自訂編碼器。 如需範例自訂編碼器，請參閱 <<c0> [ 自訂訊息編碼器](https://go.microsoft.com/fwlink/?LinkId=119857)。|文字|  
+|檢閱|檢查是傳輸期間檢查訊息的能力。 不論是否使用 SOAP，文字編碼都會讓許多應用程式檢查及分析訊息，而不需要使用特別工具。 請注意，在訊息或傳輸層級上，傳輸安全性的使用會影響檢查訊息的能力。 機密性會保護訊息不受檢查，而完整性則會保護訊息不受修改。|文字|  
 |可靠性|可靠性是編碼器抵抗傳輸錯誤的能力。 此外，也可以在訊息、傳輸或應用程式層提供可靠性。 所有標準的 WCF 編碼器都假設另一層會提供可靠性。 編碼器不太能從傳輸錯誤復原。|無|  
 |簡單|簡單表示可輕鬆建立某個編碼規格的編碼器和解碼器。 文字編碼對簡單而言特別有利，而且 POX 文字編碼還有不需要支援來處理 SOAP 的額外好處。|文字 (POX)|  
 |大小|編碼方式決定了內容所需的負荷量。 編碼訊息的大小與服務作業的最大輸送量直接相關。 二進位編碼通常比文字編碼更為精簡。 當訊息太大時，請考慮在編碼期間一併壓縮訊息內容。 不過，對於訊息傳送者和接收者，壓縮都會增加處理成本。|二元|  
 |資料流|資料流可讓應用程式在整個訊息送達之前開始處理訊息。 有效使用資料流，會要求訊息開頭便提供訊息的重要資料，因此接收的應用程式不需要等待訊息送達。 而且，使用資料流處理傳輸的應用程式必須累加組織訊息中的資料，因此內容沒有轉接相依性。 在許多情況下，您必須在資料流內容和擁有內容的最小傳輸大小之間妥協。|無|  
 |協力廠商工具支援|編碼方式的支援區域包含開發和診斷。 協力廠商開發人員已經在處理 POX 格式編碼訊息的程式庫和工具組投入大量投資。|文字 (POX)|  
-|互通性|這個因素是指 WCF 編碼器與非 WCF 服務交互操作的能力。|Text<br /><br /> MTOM (部分)|  
+|互通性|這個因素是指 WCF 編碼器與非 WCF 服務交互操作的能力。|文字<br /><br /> MTOM (部分)|  
   
 注意：使用二進位編碼器時，在建立 XMLReader 期間使用 IgnoreWhitespace 設定將會沒有作用。  例如，如果您在服務作業中執行下列動作：  
 

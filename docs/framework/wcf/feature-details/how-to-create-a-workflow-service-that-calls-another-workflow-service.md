@@ -3,11 +3,11 @@ title: HOW TO：建立會呼叫其他工作流程服務的工作流程服務
 ms.date: 03/30/2017
 ms.assetid: 99b3ee3e-aeb7-4e6f-8321-60fe6140eb67
 ms.openlocfilehash: 1b30da34f7c85cccd98b18cd32b81c83630989b2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43452725"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43725052"
 ---
 # <a name="how-to-create-a-workflow-service-that-calls-another-workflow-service"></a>HOW TO：建立會呼叫其他工作流程服務的工作流程服務
 
@@ -115,7 +115,7 @@ ms.locfileid: "43452725"
 
 1.  將名為 Client 的新主控台應用程式專案加入至方案中。
 
-2.  以滑鼠右鍵按一下 用戶端專案，然後選取**新增** > **服務參考**。 在出現的視窗，按一下**探索**。 選取 StringReverserService.xamlx 並輸入 ReverseService 當做命名空間。  按一下 [確定 **Deploying Office Solutions**]。
+2.  以滑鼠右鍵按一下 用戶端專案，然後選取**新增** > **服務參考**。 在出現的視窗，按一下**探索**。 選取 StringReverserService.xamlx 並輸入 ReverseService 當做命名空間。  按一下 [確定] 。
 
 3.  用下列程式碼取代 Program.cs 中的 Main 方法。
 

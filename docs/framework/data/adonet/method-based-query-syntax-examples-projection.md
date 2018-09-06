@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0fc2c8f0-1967-4f30-8b20-39b8dccfb82f
 ms.openlocfilehash: 8d18ed04ad33fe88fb14fd7436ddfd7a164c4303
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43554273"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43744994"
 ---
 # <a name="method-based-query-syntax-examples-projection-linq-to-dataset"></a>以方法為基礎的查詢語法範例：投影 (LINQ to DataSet)
 此主題中的範例將示範如何使用 <xref:System.Linq.Enumerable.Select%2A> 和 <xref:System.Linq.Enumerable.SelectMany%2A> 方法並搭配以方法為基礎的查詢語法來查詢 <xref:System.Data.DataSet>。  
@@ -26,7 +26,7 @@ ms.locfileid: "43554273"
   
  如需詳細資訊，請參閱 <<c0> [ 如何： 建立 LINQ to DataSet 專案在 Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md)。  
   
-## <a name="select"></a>選用版  
+## <a name="select"></a>選取  
   
 ### <a name="example"></a>範例  
  這則範例會使用 <xref:System.Linq.Enumerable.Select%2A> 方法，將 `Name`、`ProductNumber` 和 `ListPrice` 屬性規劃成匿名型別的序列 (Sequence)。  `ListPrice` 屬性也會重新命名為結果型別中的 `Price`。  

@@ -3,18 +3,18 @@ title: 參考資料
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
 ms.openlocfilehash: 3edfbe7d650fead507946610de8e76d27e94136f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43565902"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745797"
 ---
 # <a name="reference"></a>參考資料
 本節提供參考資訊給 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 開發人員。  
   
  您也要搜尋特定問題，Microsoft Docs，以及特別是參與我們鼓勵[LINQ 論壇](https://go.microsoft.com/fwlink/?LinkId=76488)，您可以與專家討論更複雜的主題的詳細資料。 此外，您還可以研讀詳述 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 技術的白皮書，其中包含 Visual Basic 和 C# 程式碼範例。 如需詳細資訊，請參閱 < [LINQ to SQL： 關聯式資料的.net language-integrated Query](https://go.microsoft.com/fwlink/?LinkId=93205)。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [資料類型和函式](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
  描述如何 common language runtime (CLR) 建構在 SQL 中有對應的運算式才[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]明確提供的轉譯引擎中的轉換。  
   

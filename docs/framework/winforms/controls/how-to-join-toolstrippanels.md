@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ToolStripPanel control [Windows Forms], joining together
 ms.assetid: 4eadda6d-e3b8-4151-aaf2-a8d564fbe6b3
 ms.openlocfilehash: 5e1688fb00e6eefa4873284e1ea1ba29536d3227
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482190"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43723622"
 ---
 # <a name="how-to-join-toolstrippanels"></a>如何：聯結 ToolStripPanels
 您可以在執行階段將 <xref:System.Windows.Forms.ToolStrip> 控制項加入 <xref:System.Windows.Forms.ToolStripPanel>，以提供多重文件介面 (MDI) 應用程式的彈性。  

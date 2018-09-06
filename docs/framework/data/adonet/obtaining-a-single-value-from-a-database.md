@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b38526cd-a62a-48cb-822a-e91dfa68e02d
 ms.openlocfilehash: 1a0d92c7acad58d3618c3f50b7463022352cf542
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43560853"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43741957"
 ---
 # <a name="obtaining-a-single-value-from-a-database"></a>從資料庫取得單一值
 或許您需要以單一數值傳回資料庫資訊，而非以資料表或資料流的形式。 比方說，您可能想要傳回的結果，例如計數彙總函式 (\*)，sum （price） 或 AVG(Quantity)。 **命令**物件可讓您使用的單一值傳回到**ExecuteScalar**方法。 **ExecuteScalar**方法傳回時，為純量值時，結果集的第一個資料列的第一個資料行的值。  

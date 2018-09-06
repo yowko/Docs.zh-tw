@@ -12,11 +12,11 @@ helpviewer_keywords:
 - compound assignment statements [Visual Basic]
 ms.assetid: 6f39915d-e398-4045-afcc-da6885e57b9c
 ms.openlocfilehash: bcfc59efda0627f83713fe9ada24cedc20d823e3
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934509"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43776245"
 ---
 # <a name="-operator"></a>\\= 運算子
 將運算式的值的變數或屬性的值除以並指派整數結果給變數或屬性。  
@@ -29,10 +29,10 @@ variableorproperty \= expression
   
 ## <a name="parts"></a>組件  
  `variableorproperty`  
- 必要。 任何數值變數或屬性。  
+ 必要項。 任何數值變數或屬性。  
   
  `expression`  
- 必要。 任何數值運算式。  
+ 必要項。 任何數值運算式。  
   
 ## <a name="remarks"></a>備註  
  在左邊的項目`\=`運算子可以是簡單的純量變數、 屬性或陣列項目。 變數或屬性不可[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)。  

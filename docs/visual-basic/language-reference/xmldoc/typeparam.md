@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typeparam XML tag
 - <typeparam> XML tag
 ms.assetid: 1bb5ba78-f060-478c-905c-77a2e43639af
-ms.openlocfilehash: 76e0e8d4757f29bb5df82ea1482beff3dd43c0e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d362f181921a39d274eaee78e85976522ce4fc15
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598010"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43736188"
 ---
 # <a name="lttypeparamgt-visual-basic"></a>&lt;typeparam&gt; (Visual Basic)
 定義的型別參數名稱和描述。  
@@ -29,7 +29,7 @@ ms.locfileid: "33598010"
  型別參數的描述。  
   
 ## <a name="remarks"></a>備註  
- 使用`<typeparam>`泛型類型或泛型成員宣告描述的其中一個型別參數的註解中的標記。  
+ 使用`<typeparam>`泛型類型或泛型成員宣告來描述的其中一個類型參數的註解中的標記。  
   
  編譯搭配 [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) 可處理檔案的文件註解。  
   
@@ -39,4 +39,4 @@ ms.locfileid: "33598010"
  [!code-vb[VbVbcnXmlDocComments#8](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/typeparam_1.vb)]  
   
 ## <a name="see-also"></a>另請參閱  
- [XML 註解標記](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [XML 註解標記](../../../visual-basic/language-reference/xmldoc/index.md)

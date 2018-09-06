@@ -13,11 +13,11 @@ helpviewer_keywords:
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
 ms.openlocfilehash: d67d9b204c316dce5f3818496d791ed4c1b352f2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43561178"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43748510"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>如何：將 Windows Form 上的物件分層
 當您建立複雜的使用者介面，或使用多個文件介面 (MDI) 表單時，您通常要控制項和子表單，以建立更複雜的使用者介面 (UI) 層級。 移動和追蹤的控制項和 windows 群組的內容中，您可以使用他們的疊置順序。 *疊置順序*是沿著表單的 z 軸 （深度） 的表單上控制項的視覺分層。 在頂端的疊置順序的視窗重疊所有其他視窗。 所有其他視窗重疊視窗底部的疊置順序。  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
 ms.openlocfilehash: c98fd4bb76074c2d96b702a37bf1964600d365e3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43672903"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43738842"
 ---
 # <a name="choosing-a-transport"></a>選擇傳輸
 本主題討論選擇包含 Windows Communication Foundation (WCF) 中的三種主要傳輸的準則： HTTP、 TCP 和具名的管道。 WCF 也包含訊息佇列 (也稱為 MSMQ) 傳輸，但是這份文件不討論訊息佇列。  
@@ -28,7 +28,7 @@ ms.locfileid: "43672903"
 ### <a name="when-to-use-http-transport"></a>使用 HTTP 傳輸的時機  
  HTTP 是用戶端和伺服器之間的要求/回應通訊協定。 最常用的應用程式是由使用 Web 伺服器進行通訊的 Web 瀏覽器用戶端所組成的。 用戶端會將要求傳送至伺服器，接聽用戶端要求訊息。 當伺服器收到要求時，會傳回一個回應，其中包含要求的狀態。 如果成功，會傳回選擇性資料 (例如網頁、錯誤訊息或其他資訊)。 如需 HTTP 通訊協定的詳細資訊，請參閱[HTTP-超文字傳輸協定](https://go.microsoft.com/fwlink/?LinkId=94858)。  
   
- HTTP 通訊協定不是以連線為基礎，一旦傳送回應，便不會維護狀態。 若要處理多頁異動，應用程式必須持續必要的狀態。  
+ HTTP 通訊協定不是以連線為基礎，一旦傳送回應，便不會維護狀態。 若要處理多頁交易，應用程式必須持續必要的狀態。  
   
  在 WCF 中，HTTP 傳輸繫結最適合用於與舊版的非 WCF 系統交互操作。 如果所有的通訊方使用 WCF，TCP 或具名管道繫結會更快。 如需詳細資訊，請參閱 <xref:System.ServiceModel.NetTcpBinding> 與 <xref:System.ServiceModel.NetNamedPipeBinding>。  
   

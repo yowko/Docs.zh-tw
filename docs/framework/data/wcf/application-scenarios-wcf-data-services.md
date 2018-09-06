@@ -5,17 +5,17 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 81a75007f1d4a13828867e6419412ea9f4c28906
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 5446ab5fe65bd6e2b5244e135c0723f3cb28e81a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365056"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735523"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>應用程式案例 (WCF 資料服務)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 支援的公開及取用資料做為一組核心案例[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要。 本主題會為您指出與這些案例有關的主題。  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 支援公開及取用資料的一組核心案例[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要。 本主題會為您指出與這些案例有關的主題。  
   
- 公開關聯式資料與資料庫從[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要。  
+ 為資料庫中的關聯式資料公開 （expose)[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要。  
  -   [快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
   
 -   [將資料當作服務公開](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
@@ -37,20 +37,20 @@ ms.locfileid: "33365056"
 -   [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
   
  在以 Silverlight 為基礎的用戶端應用程式中，取用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要。  
- -   [WCF Data Services (Silverlight)](http://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+ -   [WCF Data Services (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
   
 -   [非同步作業](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [如何： 將資料服務的資料繫結至控制項 (WCF 資料服務/Silverlight)](http://msdn.microsoft.com/library/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
+-   [如何： 將資料服務資料繫結至控制項 (WCF Data Services/Silverlight)](https://msdn.microsoft.com/library/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
   
  在以 AJAX 為基礎的用戶端應用程式中，取用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要。  
  -   [在用戶端應用程式中使用資料服務](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
   
--   [OData: URI 慣例](http://go.microsoft.com/fwlink/?LinkId=185564)  
+-   [OData: URI 慣例](https://go.microsoft.com/fwlink/?LinkId=185564)  
   
--   [OData: JavaScript 物件標記法 (JSON) 格式](http://go.microsoft.com/fwlink/?LinkId=185790)  
+-   [OData: JavaScript 物件標記法 (JSON) 格式](https://go.microsoft.com/fwlink/?LinkId=185790)  
   
- 建立使用端對端資料方案[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]用戶端和伺服器之間傳輸資料。  
+ 建立端對端資料解決方案，以使用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]用戶端和伺服器之間傳輸資料。  
  -   [快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
   
 -   [在用戶端應用程式中使用資料服務](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
@@ -62,9 +62,9 @@ ms.locfileid: "33365056"
   
 -   [非同步作業](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [WCF Data Services (Silverlight)](http://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+-   [WCF Data Services (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
   
- 公開及取用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要，含有存取及變更資料流的形式的二進位大型物件。  
+ 公開及取用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要，含有存取及變更資料流形式的二進位大型物件。  
  -   [資料流提供者](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)  
   
 -   [使用二進位資料](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  

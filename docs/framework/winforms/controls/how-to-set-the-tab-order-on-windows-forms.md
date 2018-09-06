@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
 ms.openlocfilehash: 74244ae4e3692ed210b2a8f1513b035c85e98376
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43561070"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745511"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>如何：在 Windows Form 上設定定位順序
 定位順序是以使用者焦點從某個控制項移動到另一個按下 TAB 鍵的順序。 每個表單有它自己的定位順序。 根據預設，定位順序是您可以在其中建立控制項的順序相同。 定位順序編號從 0 開始。  

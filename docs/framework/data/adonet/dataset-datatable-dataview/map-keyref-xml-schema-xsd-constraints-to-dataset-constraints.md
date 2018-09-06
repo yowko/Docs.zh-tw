@@ -3,11 +3,11 @@ title: 將 keyref XML 結構描述 (XSD) 條件約束對應至資料集條件約
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
 ms.openlocfilehash: 86bc1961fb23b0b2f98a2849eaabd4eecd65cd64
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43533053"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777544"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>將 keyref XML 結構描述 (XSD) 條件約束對應至資料集條件約束
 **Keyref**元素可讓您建立文件內的項目之間的連結。 這與關聯式資料庫中的外部索引鍵關聯性很類似。 如果指定了結構描述**keyref**項目，項目會轉換至對應外部索引鍵條件約束的資料表中的資料行的結構描述對應程序<xref:System.Data.DataSet>。 根據預設， **keyref**項目也會產生關聯，以**ParentTable**， **ChildTable**， **ParentColumn**，以及**ChildColumn**在關聯上指定的屬性。  

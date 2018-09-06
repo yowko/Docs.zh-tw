@@ -2,22 +2,22 @@
 title: 自訂訊息編碼器：壓縮編碼器
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 5dc665da3b28a98f1b3016d38ce706bf77dce06f
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: b70875e385fa32256476f6d1ae53e8cc1f5ff9de
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808737"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735870"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>自訂訊息編碼器：壓縮編碼器
-這個範例示範如何實作自訂編碼器使用的 Windows Communication Foundation (WCF) 平台。  
+此範例示範如何實作自訂編碼器，使用 Windows Communication Foundation (WCF) 平台。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`  
   
@@ -25,9 +25,9 @@ ms.locfileid: "33808737"
  這個範例中包括用戶端主控台程式 (.exe)、自我裝載的服務主控台程式 (.exe) 和壓縮訊息編碼器程式庫 (.dll)。 服務會實作定義要求-回覆通訊模式的合約。 合約是由 `ISampleServer` 介面所定義，而該介面會公開基本字串回應作業 (`Echo` 和 `BigEcho`)。 用戶端會對指定的作業提出同步要求，而服務則會透過重複訊息回覆至用戶端。 主控台視窗上可同時看見用戶端和服務活動。 此範例的目的為顯示如何撰寫自訂編碼器，並示範在網路上壓縮訊息的影響。 您可以將檢測新增至壓縮訊息編碼器，以計算訊息大小、處理時間或同時計算這兩者。  
   
 > [!NOTE]
->  在.NET Framework 4 中，自動解壓縮上已啟用 WCF 用戶端如果伺服器傳送壓縮的回應 （使用 GZip 或 Deflate 之類的演算法建立）。 如果服務在 Internet Information Server (IIS) 中是以 Web 裝載的，則可以為服務將 IIS 設定為傳送壓縮回應。 如果需要同時在用戶端和服務上執行壓縮和解壓縮，或者如果服務是自我裝載的，則可以使用此範例。  
+>  在.NET Framework 4 中，自動解壓縮已啟用 WCF 用戶端上如果伺服器傳送壓縮的回應 （使用 GZip 或 Deflate 之類的演算法建立）。 如果服務在 Internet Information Server (IIS) 中是以 Web 裝載的，則可以為服務將 IIS 設定為傳送壓縮回應。 如果需要同時在用戶端和服務上執行壓縮和解壓縮，或者如果服務是自我裝載的，則可以使用此範例。  
   
- 此範例示範如何建置和 WCF 應用程式中整合自訂訊息編碼器。 將同時使用用戶端和服務來部署程式庫 GZipEncoder.dll。 這個範例也會顯示壓縮訊息所造成的影響。 GZipEncoder.dll 中的程式碼會示範下列各項：  
+ 此範例示範如何建置和整合的 WCF 應用程式的自訂訊息編碼器。 將同時使用用戶端和服務來部署程式庫 GZipEncoder.dll。 這個範例也會顯示壓縮訊息所造成的影響。 GZipEncoder.dll 中的程式碼會示範下列各項：  
   
 -   建置自訂編碼器和編碼器處理站。  
   
@@ -57,13 +57,13 @@ ms.locfileid: "33808737"
   
 5.  編碼器層會實作為類別處理站。 只需要對自訂編碼器對大眾公開編碼器累別處理站。 建立 <xref:System.ServiceModel.ServiceHost> 或 <xref:System.ServiceModel.ChannelFactory%601> 物件時，繫結項目會傳回處理站物件。 您可以在緩衝處理或資料流處理模式中操作訊息編碼器。 這個範例會同時示範緩衝處理模式和資料流處理模式。  
   
- 在每個模式中，抽象 `ReadMessage` 類別上會伴隨 `WriteMessage` 和 `MessageEncoder` 方法。 主要的編碼工作都會透過這些方法進行。 此範例會包裝現有的文字和二進位訊息編碼器。 這樣可讓範例將訊息之網路表示的讀取和撰寫委派給內部編碼器，並讓壓縮編碼器可壓縮或解壓縮結果。 由於訊息編碼中的沒有管線，這是在 WCF 中使用多個編碼器的唯一模型。 一旦解壓縮訊息，產生的訊息就會傳遞至堆疊上層，以供通道堆疊處理。 在壓縮期間，產生的已壓縮訊息會直接寫入提供的資料流。  
+ 在每個模式中，抽象 `ReadMessage` 類別上會伴隨 `WriteMessage` 和 `MessageEncoder` 方法。 主要的編碼工作都會透過這些方法進行。 此範例會包裝現有的文字和二進位訊息編碼器。 這樣可讓範例將訊息之網路表示的讀取和撰寫委派給內部編碼器，並讓壓縮編碼器可壓縮或解壓縮結果。 因為沒有任何管線的訊息編碼，這是在 WCF 中使用多個編碼器的唯一模型。 一旦解壓縮訊息，產生的訊息就會傳遞至堆疊上層，以供通道堆疊處理。 在壓縮期間，產生的已壓縮訊息會直接寫入提供的資料流。  
   
  這個範例會使用 Helper 方法 (`CompressBuffer` 和 `DecompressBuffer`)，將緩衝區轉換為資料流以使用 `GZipStream` 類別。  
   
  緩衝處理的 `ReadMessage` 和 `WriteMessage` 類別則會使用 `BufferManager` 類別。 您只能透過編碼器處理站來存取編碼器。 抽象 `MessageEncoderFactory` 類別會提供名稱為 `Encoder` 的屬性以讓您存取目前的編碼器，並提供名稱為 `CreateSessionEncoder` 的方法，讓您可建立支援工作階段的編碼器。 您可以在通道支援工作階段的案例中，依序且可靠地使用這類編碼器。 此案例在資料寫入至網路的每個工作階段中，都能達到最佳的效果。 如果不需要這樣做，則不應該多載基底方法。 `Encoder` 屬性提供的機制可讓您存取無工作階段的編碼器，並讓 `CreateSessionEncoder` 方法的預設實作可傳回屬性的值。 由於範例會包裝現有的編碼器以提供壓縮功能，`MessageEncoderFactory` 實作便會接受表示內部編碼器處理站的 `MessageEncoderFactory`。  
   
- 既然已定義編碼器和編碼器處理站，它們可以用於使用 WCF 用戶端和服務。 不過，您必須將這些編碼器新增至通道堆疊。 您可以從 <xref:System.ServiceModel.ServiceHost> 和 <xref:System.ServiceModel.ChannelFactory%601> 類別衍生類別，並覆寫 `OnInitialize` 方法以手動新增此編碼器處理站。 您也可以透過自訂繫結項目來公開編碼器處理站。  
+ 現在，定義編碼器和編碼器處理站，它們可以搭配 WCF 用戶端和服務。 不過，您必須將這些編碼器新增至通道堆疊。 您可以從 <xref:System.ServiceModel.ServiceHost> 和 <xref:System.ServiceModel.ChannelFactory%601> 類別衍生類別，並覆寫 `OnInitialize` 方法以手動新增此編碼器處理站。 您也可以透過自訂繫結項目來公開編碼器處理站。  
   
  若要建立新的自訂繫結項目，請從 <xref:System.ServiceModel.Channels.BindingElement> 類別衍生類別。 會有幾種類型的繫結項目。 若要確定自訂繫結項目已辨識為訊息編碼繫結項目，您也必須實作 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>。 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 會公開方法以建立新的訊息編碼器處理站 (`CreateMessageEncoderFactory`)，您會實作此訊息編碼器處理站以傳回相符之訊息編碼器處理站的執行個體。 此外，<xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 具有可指出定址版本的屬性。 由於這個範例會包裝現有的編碼器，範例實作也會包裝現有的編碼器繫結項目，並採用內部編碼器繫結項目做為建構函式的參數，並經由屬性來公開此建構函式。 下列範例程式碼會顯示 `GZipMessageEncodingBindingElement` 類別的實作。  
   
@@ -340,18 +340,18 @@ Press <ENTER> to terminate client.
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+2.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-3.  若要建置此方案，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+3.  若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-4.  若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+4.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`  
   

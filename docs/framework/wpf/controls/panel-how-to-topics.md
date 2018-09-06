@@ -7,18 +7,18 @@ helpviewer_keywords:
 - Panel control [WPF], how-to topics
 - controls [WPF], Panel
 ms.assetid: 28d8faf2-490c-4e17-a447-df25a66f6679
-ms.openlocfilehash: 5b0fbf50455545a12adbc03bf2cd05d52de69936
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d8ead1a799f1bd7524d171beb3e262baeb4b5fbe
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553779"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43746242"
 ---
 # <a name="panel-how-to-topics"></a>Panel HOW TO 主題
-本節中的主題描述如何使用<xref:System.Windows.Controls.Panel>項目與相關[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]。  
+在本節中的主題描述如何使用<xref:System.Windows.Controls.Panel>項目和相關[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]。  
   
-## <a name="in-this-section"></a>本節內容  
- [如何： 將 LayoutTransform 套用至項目](http://msdn.microsoft.com/library/8221db67-d99f-4783-b65e-a6c5a52c03ab)  
+## <a name="in-this-section"></a>本章節內容  
+ [如何： 套用至元素的 LayoutTransform](https://msdn.microsoft.com/library/8221db67-d99f-4783-b65e-a6c5a52c03ab)  
  [建立自訂面板元素](../../../../docs/framework/wpf/controls/how-to-create-a-custom-panel-element.md)  
  [覆寫 Panel 的 OnRender 方法](../../../../docs/framework/wpf/controls/how-to-override-the-panel-onrender-method.md)  
  [設定元素的高度屬性](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  

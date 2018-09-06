@@ -1,5 +1,5 @@
 ---
-title: 操作說明：使用主要畫面格建立矩形幾何的動畫
+title: 如何：使用主要畫面格建立矩形幾何的動畫
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,29 +9,30 @@ helpviewer_keywords:
 - RectangleGeometry objects [WPF], animating with key frames
 - animation [WPF], RectangleGeometry objects with key frames
 ms.assetid: a8b45ceb-0e32-4ba1-928f-df6d30db17c6
-ms.openlocfilehash: 581dc89d21091ad0ce856d7a7ced84fd7bcea9d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9b4a620ea58026c3be1b09d01a595e965e4c2b45
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43722927"
 ---
-# <a name="how-to-animate-a-rectangle-geometry-by-using-key-frames"></a>操作說明：使用主要畫面格建立矩形幾何的動畫
-此範例示範如何以動畫方式顯示<xref:System.Windows.Media.RectangleGeometry.Rect%2A>屬性<xref:System.Windows.Media.RectangleGeometry>所使用的主要畫面格。  
+# <a name="how-to-animate-a-rectangle-geometry-by-using-key-frames"></a>如何：使用主要畫面格建立矩形幾何的動畫
+此範例示範如何建立動畫<xref:System.Windows.Media.RectangleGeometry.Rect%2A>屬性<xref:System.Windows.Media.RectangleGeometry>使用主要畫面格。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用<xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames>類別以動畫方式顯示<xref:System.Windows.Media.RectangleGeometry.Rect%2A>屬性<xref:System.Windows.Media.RectangleGeometry>。 這個動畫會以下列方式使用三個主要畫面格：  
+ 下列範例會使用<xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames>類別以動畫顯示<xref:System.Windows.Media.RectangleGeometry.Rect%2A>屬性<xref:System.Windows.Media.RectangleGeometry>。 這個動畫會以下列方式使用三個主要畫面格：  
   
-1.  在第一個兩秒中，會使用的執行個體<xref:System.Windows.Media.Animation.LinearRectKeyFrame>以動畫方式顯示逐漸變更位置、 寬度和高度的矩形中的類別。 線性的主要畫面格喜歡<xref:System.Windows.Media.Animation.LinearRectKeyFrame>建立值之間的平順地線性轉換。  
+1.  在前的兩秒期間使用的執行個體<xref:System.Windows.Media.Animation.LinearRectKeyFrame>類別以動畫顯示的位置、 寬度和高度的矩形逐漸變更。 線性主要畫面格喜歡<xref:System.Windows.Media.Animation.LinearRectKeyFrame>建立平滑的線性轉換值之間。  
   
-2.  在下個結束半秒，會使用的執行個體<xref:System.Windows.Media.Animation.DiscreteRectKeyFrame>類別突然減少矩形的高度。 獨立的主要畫面格喜歡<xref:System.Windows.Media.Animation.DiscreteRectKeyFrame>建立突變之間的值，也就是，請減少高度發生快速，而且不是難以察覺。  
+2.  下一步 結束期間半秒，使用的執行個體<xref:System.Windows.Media.Animation.DiscreteRectKeyFrame>突然減少矩形的高度的類別。 特定主要畫面格喜歡<xref:System.Windows.Media.Animation.DiscreteRectKeyFrame>突然之間建立變更的值，也就是，高度降低很快就會完成，而不是微量。  
   
-3.  在最後的兩秒中，會使用的執行個體<xref:System.Windows.Media.Animation.SplineRectKeyFrame>類別，以變更回其原始大小和位置的矩形。 曲線主要畫面格喜歡<xref:System.Windows.Media.Animation.SplineRectKeyFrame>建立變數的值根據值之間轉換<xref:System.Windows.Media.Animation.SplineRectKeyFrame.KeySpline%2A>屬性。 在此範例中，變更一開始速度緩慢，然後在接近時間區段結尾時會以指數方式加速。  
+3.  在最後的兩秒期間使用的執行個體<xref:System.Windows.Media.Animation.SplineRectKeyFrame>類別，以變更回其原始大小和位置的矩形。 曲線主要畫面格喜歡<xref:System.Windows.Media.Animation.SplineRectKeyFrame>變數之間建立轉換的值根據<xref:System.Windows.Media.Animation.SplineRectKeyFrame.KeySpline%2A>屬性。 在此範例中，變更一開始速度緩慢，然後在接近時間區段結尾時會以指數方式加速。  
   
  [!code-csharp[keyframes_snip#RectAnimationUsingKeyFramesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/RectAnimationUsingKeyFramesExample.cs#rectanimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#RectAnimationUsingKeyFramesWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/rectanimationusingkeyframesexample.vb#rectanimationusingkeyframeswholepage)]
  [!code-xaml[keyframes_snip#RectAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/RectAnimationUsingKeyFramesExample.xaml#rectanimationusingkeyframeswholepage)]  
   
- 如需完整的範例，請參閱[主要畫面格動畫範例](http://go.microsoft.com/fwlink/?LinkID=160012)。  
+ 如需完整的範例，請參閱[主要畫面格動畫範例](https://go.microsoft.com/fwlink/?LinkID=160012)。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Media.RectangleGeometry>  

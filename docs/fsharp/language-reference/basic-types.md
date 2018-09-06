@@ -2,12 +2,12 @@
 title: '基本類型 （F #）'
 description: '探索基本 F # 語言中使用的基本類型。'
 ms.date: 07/09/2018
-ms.openlocfilehash: fdb5e95e102fcf721569156c7fb3a32604fff1dd
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 8f948d066323527b09b1d3f9f4167b95b1c875cf
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937195"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777203"
 ---
 # <a name="basic-types"></a>基本類型
 
@@ -38,4 +38,5 @@ ms.locfileid: "37937195"
 您也可以使用 64 位元整數類型執行計算整數太大[bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa)型別。 `bigint` 不是基本的類型;它是縮寫`System.Numerics.BigInteger`。
 
 ## <a name="see-also"></a>另請參閱
-[F# 語言參考](index.md)
+
+- [F# 語言參考](index.md)

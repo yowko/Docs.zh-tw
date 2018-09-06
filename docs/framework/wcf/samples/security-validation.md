@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: f77b01633f214d3a8c4ad8d7226375c3ed2368fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0aaa88268959561cabe4613d51feb0f219275634
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33504380"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43746739"
 ---
 # <a name="security-validation"></a>安全性驗證
-這個範例示範如何使用自訂行為驗證電腦上的服務，以確定服務符合特定條件。 在這個範例中，服務會經過驗證，其方式是自訂行為掃描服務上的每個端點，並檢查這些端點是否包含安全繫結項目。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
+這個範例示範如何使用自訂行為驗證電腦上的服務，以確定服務符合特定條件。 在這個範例中，服務會經過驗證，其方式是自訂行為掃描服務上的每個端點，並檢查這些端點是否包含安全繫結項目。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -79,34 +79,34 @@ public void Validate(ServiceDescription serviceDescription,
 > [!NOTE]
 >  將行為新增至所有服務時，建議您最好在進行任何變更前先備份 Machine.config 檔案。  
   
- 現在，請執行本範例 client\bin 目錄中提供的用戶端。 例外狀況，並發生下列訊息: 「 所要求的服務，'http://localhost/servicemodelsamples/service.svc' 無法啟動。" 這是預料中的事，因為端點驗證行為認為該端點不安全，所以不讓服務啟動。 這個行為還會擲回內部例外狀況，以描述哪個端點不安全，並且在系統「事件檢視器」中的 [System.ServiceModel 4.0.0.0] 來源與 [WebHost] 類別下方寫入訊息。 此外，您也可以在這個範例中的服務上開啟追蹤功能。 這將允許使用者使用「服務追蹤檢視器」工具開啟產生的服務追蹤，以檢視端點驗證行為擲回的例外狀況。  
+ 現在，請執行本範例 client\bin 目錄中提供的用戶端。 例外狀況，並出現下列訊息，就會發生: 「 要求的服務，'http://localhost/servicemodelsamples/service.svc' 無法啟動。 」 這是預料中的事，因為端點驗證行為認為該端點不安全，所以不讓服務啟動。 這個行為還會擲回內部例外狀況，以描述哪個端點不安全，並且在系統「事件檢視器」中的 [System.ServiceModel 4.0.0.0] 來源與 [WebHost] 類別下方寫入訊息。 此外，您也可以在這個範例中的服務上開啟追蹤功能。 這將允許使用者使用「服務追蹤檢視器」工具開啟產生的服務追蹤，以檢視端點驗證行為擲回的例外狀況。  
   
-#### <a name="to-view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>在事件檢閱器中檢閱失敗的端點驗證例外狀況訊息  
+#### <a name="to-view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>在事件檢視器中檢視失敗的端點驗證例外狀況訊息  
   
-1.  按一下**啟動**功能表，然後選取**執行...**.  
+1.  按一下 **開始**功能表，然後選取**執行...**.  
   
-2.  型別`eventvwr`按一下**確定**。  
+2.  型別`eventvwr`，按一下  **確定**。  
   
 3.  在 [事件檢視器] 視窗中，按一下**應用程式**。  
   
-4.  按兩下最近加入的 [System.ServiceModel 4.0.0.0] 事件，在 [WebHost] 類別底下**應用程式**視窗來檢視不安全端點訊息。  
+4.  按兩下 [WebHost] 類別中的最近新增的 [System.ServiceModel 4.0.0.0] 事件**應用程式**視窗來檢視不安全端點訊息。  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-3.  若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ServiceValidation`  
   
 ## <a name="see-also"></a>另請參閱  
- [AppFabric 監控範例](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [AppFabric 監控範例](https://go.microsoft.com/fwlink/?LinkId=193959)

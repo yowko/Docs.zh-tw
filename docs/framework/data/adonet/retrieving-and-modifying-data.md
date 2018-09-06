@@ -3,16 +3,16 @@ title: 在 ADO.NET 中傳送和修改資料
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
 ms.openlocfilehash: 5ef5191cf89f22fbaf0bb1bf4fbf47db1d4c06a1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562559"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43779347"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>在 ADO.NET 中傳送和修改資料
 任何資料庫應用程式都有一個主要功能，那就是連接到資料來源並擷取其內含的資料。 ADO.NET 的.NET Framework 資料提供者做為應用程式和資料來源之間的橋樑可讓您執行命令也使用擷取資料**DataReader**或是**DataAdapter**. 任何資料庫應用程式都有一個主要功能，那就是更新資料庫中儲存的資料。 在 ADO.NET 中，更新資料牽涉到使用**DataAdapter**並<xref:System.Data.DataSet>，以及**命令**物件; 並且也可能需要使用交易。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [連接至資料來源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
  說明如何建立資料來源的連接，以及如何使用連接事件。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "43562559"
  包含一些主題，其中說明 DataReader、DataAdapter、參數、處理 DataAdapter 事件，以及執行批次作業。  
   
  [異動和並行存取](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- 包含一些主題，其中說明如何執行本機異動、分散式異動，以及使用開放式並行存取 (Optimistic Concurrency)。  
+ 包含一些主題，其中說明如何執行本機交易、分散式交易，以及使用開放式並行存取 (Optimistic Concurrency)。  
   
  [擷取身分識別或自動編號值](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
  提供的對應產生的值範例**身分識別**資料行中的 SQL Server 資料表或針對**Autonumber**欄位在 Microsoft Access 資料表中，資料表中插入資料列的資料行。 討論如何在 `DataTable` 中合併識別值。  

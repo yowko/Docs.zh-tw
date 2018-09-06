@@ -5,11 +5,11 @@ helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
 ms.openlocfilehash: d4f7ebf784ab02ecdd0203423157da5bef968a87
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43553773"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745498"
 ---
 # <a name="denial-of-service"></a>阻斷服務
 當系統由於無法處理訊息，或者處理訊息的速度極為緩慢而爆滿時，就會發生阻絕服務。  
@@ -75,7 +75,7 @@ ms.locfileid: "43553773"
  當服務順利驗證用戶端而且是藉由服務建立安全工作階段時，服務會持續追蹤工作階段，直到用戶端取消服務或工作階段到期為止。 每個建立的工作階段都不利於服務之同時作用中工作階段的數量上限。 達到這個限制時，將會拒絕嘗試以該服務建立新工作階段的用戶端，直到一或多個作用中工作階段到期或由用戶端所取消為止。 用戶端在服務中可以擁有多個工作階段，而且會對該限制計數每個工作階段。  
   
 > [!NOTE]
->  當您使用具狀態的工作階段時，之前的段落就沒有作用。 如需可設定狀態的工作階段的詳細資訊，請參閱[如何： 建立安全工作階段的安全性內容權杖](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
+>  當您使用可設定狀態的工作階段時，之前的段落就沒有作用。 如需可設定狀態的工作階段的詳細資訊，請參閱[如何： 建立安全工作階段的安全性內容權杖](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
   
  若要避免這個情況，請設定 <xref:System.ServiceModel.Channels.SecurityBindingElement> 類別的 <xref:System.ServiceModel.Channels.SecurityBindingElement> 屬性，以設定作用中工作階段數的上限和工作階段的最長存留時間。  
   

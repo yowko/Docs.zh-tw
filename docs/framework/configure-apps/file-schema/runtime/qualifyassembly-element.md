@@ -12,11 +12,11 @@ ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 59e3f54f4d3ce0c191193ff63a3c2bce5b93a1bd
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43538027"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43747164"
 ---
 # <a name="ltqualifyassemblygt-element"></a>&lt;qualifyAssembly&gt;項目
 指定應該在使用部分名稱時以動態方式載入的組件的完整名稱。  
@@ -35,7 +35,7 @@ ms.locfileid: "43538027"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -44,7 +44,7 @@ ms.locfileid: "43538027"
 |`partialName`|必要屬性。<br /><br /> 在程式碼中所顯示的樣子，請指定組件的部分名稱。|  
 |`fullName`|必要屬性。<br /><br /> 在全域組件快取中所顯示的樣子，請指定組件的完整名稱。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  

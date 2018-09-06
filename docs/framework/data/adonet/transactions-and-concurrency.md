@@ -3,14 +3,14 @@ title: 異動和並行存取
 ms.date: 03/30/2017
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
 ms.openlocfilehash: bd47c5e0e2b2086e5fd0482bf4319ebab5674a54
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43563383"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777447"
 ---
 # <a name="transactions-and-concurrency"></a>異動和並行存取
-異動是由單一命令或當做封裝 (Package) 執行的命令群組所組成。 交易可讓您將多項作業結合成單一工作單位。 如果交易的某一處失敗，則所有更新都會復原到交易之前的狀態。  
+交易是由單一命令或當做封裝 (Package) 執行的命令群組所組成。 交易可讓您將多項作業結合成單一工作單位。 如果交易的某一處失敗，則所有更新都會復原到交易之前的狀態。  
   
  交易必須符合 ACID 屬性 (單元性 (Atomicity)、一致性 (Consistency)、隔離性 (Isolation) 和持續性 (Durability)，才能保證資料一致性。 大多數關聯式資料庫系統 (例如 Microsoft SQL Server) 都可以支援交易，其方法是在每次用戶端應用程式執行更新、插入或刪除作業時，提供鎖定、記錄和交易管理功能。  
   
@@ -21,12 +21,12 @@ ms.locfileid: "43563383"
   
  包含不同資源管理員，例如 SQL Server 與 Oracle 之間的交易的交易需要分散式的交易。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [本機異動](../../../../docs/framework/data/adonet/local-transactions.md)  
- 示範如何針對資料庫執行異動。  
+ 示範如何針對資料庫執行交易。  
   
  [分散式異動](../../../../docs/framework/data/adonet/distributed-transactions.md)  
- 說明如何在 ADO.NET 中執行分散式異動。  
+ 說明如何在 ADO.NET 中執行分散式交易。  
   
  [System.Transactions 與 SQL Server 整合](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
  描述<xref:System.Transactions>與 SQL Server 的整合使用分散式交易。  

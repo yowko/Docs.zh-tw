@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
 ms.openlocfilehash: ccf95ff250cc7c23b1ff981087de0f1310472880
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: MT
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43418748"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735211"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>從 DataView 建立 DataTable
 從資料來源擷取資料並將資料填入 <xref:System.Data.DataTable> 後，您可能想要排序、篩選，或限制所傳回的資料，而不想再次擷取該資料。 <xref:System.Data.DataView> 類別使這成為可行。 此外，如果您需要建立新<xref:System.Data.DataTable>從<xref:System.Data.DataView>，您可以使用<xref:System.Data.DataView.ToTable%2A>方法，將所有資料列和資料行或資料的子集複製到新<xref:System.Data.DataTable>。 <xref:System.Data.DataView.ToTable%2A> 方法提供多載，以進行下列作業：  

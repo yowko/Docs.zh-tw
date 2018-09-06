@@ -1,5 +1,5 @@
 ---
-title: 操作說明：沿著路徑建立物件的動畫 (Double 動畫)
+title: 如何：沿著路徑建立物件的動畫 (Double 動畫)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - double animation [WPF]
 ms.assetid: 5a3c4a99-f303-42ad-a52a-e4794bb1798e
 ms.openlocfilehash: 3dcdf6cfe8631ae0b7b1472e22d027cf9288a1db
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43386218"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749732"
 ---
-# <a name="how-to-animate-an-object-along-a-path-double-animation"></a>操作說明：沿著路徑建立物件的動畫 (Double 動畫)
+# <a name="how-to-animate-an-object-along-a-path-double-animation"></a>如何：沿著路徑建立物件的動畫 (Double 動畫)
 此範例示範如何使用<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>類別以沿著所定義的路徑移動物件<xref:System.Windows.Media.PathGeometry>。  
   
 ## <a name="example"></a>範例  

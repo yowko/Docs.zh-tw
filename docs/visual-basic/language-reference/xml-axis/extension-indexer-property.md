@@ -10,11 +10,11 @@ helpviewer_keywords:
 - XML [Visual Basic], accessing
 ms.assetid: a16a4b13-54be-432c-82b3-a87091464ada
 ms.openlocfilehash: ab9eacc3fb3796139d8ed8382146a4a6c2b28a97
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: MT
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483706"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43736616"
 ---
 # <a name="extension-indexer-property-visual-basic"></a>擴充索引子屬性 (Visual Basic)
 提供集合中個別項目的存取。  
@@ -29,10 +29,10 @@ object(index)
   
 |詞彙|定義|  
 |---|---|  
-|`object`|必要。 可查詢的集合。 也就是集合，實作<xref:System.Collections.Generic.IEnumerable%601>或<xref:System.Linq.IQueryable%601>。|  
-|(|必要。 表示索引子屬性的開頭。|  
-|`index`|必要。 整數運算式，指定集合中項目的以零為起始的位置。|  
-|)|必要。 表示索引子屬性的結尾。|  
+|`object`|必要項。 可查詢的集合。 也就是集合，實作<xref:System.Collections.Generic.IEnumerable%601>或<xref:System.Linq.IQueryable%601>。|  
+|(|必要項。 表示索引子屬性的開頭。|  
+|`index`|必要項。 整數運算式，指定集合中項目的以零為起始的位置。|  
+|)|必要項。 表示索引子屬性的結尾。|  
   
 ## <a name="return-value"></a>傳回值  
  從指定的位置，集合中的物件或`Nothing`如果索引超出範圍。  

@@ -3,11 +3,11 @@ title: 自訂 Demux
 ms.date: 03/30/2017
 ms.assetid: fc54065c-518e-4146-b24a-0fe00038bfa7
 ms.openlocfilehash: 1542743a6e1658bad162d7ee9ca73e6b9b0444e2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: MT
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43395657"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43732364"
 ---
 # <a name="custom-demux"></a>自訂 Demux
 這個範例會示範 MSMQ 訊息標頭如何可以對應至不同的服務作業，以便使用 Windows Communication Foundation (WCF) 服務<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>並不限於使用一項服務作業，如所示[訊息佇列至 Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)並[Windows Communication Foundation 至訊息佇列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)範例。  

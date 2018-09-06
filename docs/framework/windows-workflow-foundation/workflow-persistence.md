@@ -5,11 +5,11 @@ helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
 ms.openlocfilehash: 0a938f2f4d4cc790fe03db1e2b57862e54af48a7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43661005"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43748563"
 ---
 # <a name="workflow-persistence"></a>工作流程持續性
 工作流程持續性是永久擷取工作流程執行個體的狀態，與處理序或電腦資訊無關。 這麼做是為了在發生系統故障時提供已知的工作流程執行個體復原點，或者藉由卸載非正在進行工作的工作流程執行個體來保留記憶體，或者將工作流程執行個體的狀態從某個節點移到伺服器陣列中的另一個節點。  
@@ -20,7 +20,7 @@ ms.locfileid: "43661005"
   
  [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]隨附**SqlWorkflowInstanceStore**類別，可讓資料和工作流程執行個體，在 SQL Server 2005 或 SQL Server 2008 資料庫相關的中繼資料的持續性。 請參閱[SQL 工作流程執行個體存放區](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)如需詳細資訊。  
   
- 若要儲存及載入應用程式特定資料與工作流程執行個體相關資訊，您可以建立擴充 <xref:System.Activities.Persistence.PersistenceParticipant> 類別的持續性參與者。 持續性參與者會參與保存程序，將自訂可序列化資料儲存至持續性存放區中，以便將執行個體存放區中的資料載入記憶體中，以及在持續性異動下執行任何其他邏輯。 如需詳細資訊，請參閱 <<c0> [ 持續性參與者](../../../docs/framework/windows-workflow-foundation/persistence-participants.md)。  
+ 若要儲存及載入應用程式特定資料與工作流程執行個體相關資訊，您可以建立擴充 <xref:System.Activities.Persistence.PersistenceParticipant> 類別的持續性參與者。 持續性參與者會參與保存程序，將自訂可序列化資料儲存至持續性存放區中，以便將執行個體存放區中的資料載入記憶體中，以及在持續性交易下執行任何其他邏輯。 如需詳細資訊，請參閱 <<c0> [ 持續性參與者](../../../docs/framework/windows-workflow-foundation/persistence-participants.md)。  
   
  Windows Server App Fabric 會簡化設定持續性的程序。 如需詳細資訊，請參閱[使用 Windows Server App Fabric 持續性概念](https://go.microsoft.com/fwlink/?LinkId=201200)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "43661005"
   
 -   當使用舊版 Windows Workflow Foundation 開發的工作流程執行個體在互通的執行期間遇到保存點時。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
   
 -   [SQL 工作流程執行個體存放區](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)  
   

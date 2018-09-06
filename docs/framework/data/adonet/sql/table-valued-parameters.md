@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 2cf517e3bd10dbed51c8a98d150bafcb023e438b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 333154f26a575886f19a914ce2f91beebd6be49e
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365939"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43742512"
 ---
 # <a name="table-valued-parameters"></a>資料表值參數
 資料表值參數提供封送處理的簡易方式，可將用戶端應用程式的多個資料列封送處理到 SQL Server，而不需多次來回存取或使用特殊的伺服器端邏輯來處理資料。 您可以使用資料表值參數，在用戶端應用程式中封裝資料列，以及在單一參數型命令 (Parameterized Command) 中，將資料傳送至伺服器。 內送資料列會儲存在資料表變數中，然後您可以使用 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 來操作此變數。  
@@ -24,11 +24,11 @@ ms.locfileid: "33365939"
   
 |資源|描述|  
 |--------------|-----------------|  
-|[資料表值參數 (Database Engine)](http://go.microsoft.com/fwlink/?LinkId=98363) SQL Server 線上叢書中|說明如何建立及使用資料表值參數。|  
-|[使用者定義資料表類型](http://go.microsoft.com/fwlink/?LinkId=98364)SQL Server 線上叢書中|說明用於宣告資料表值參數的使用者定義資料表型別。|  
+|[資料表值參數 (Database Engine)](https://go.microsoft.com/fwlink/?LinkId=98363)中 SQL Server 線上叢書|說明如何建立及使用資料表值參數。|  
+|[使用者定義資料表類型](https://go.microsoft.com/fwlink/?LinkId=98364)中 SQL Server 線上叢書|說明用於宣告資料表值參數的使用者定義資料表型別。|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>在舊版 SQL Server 中傳遞多個資料列  
- 資料表值參數所導入至 SQL Server 2008 之前，將多個資料列傳遞至預存程序或參數化的 SQL 命令的選項有限制。 若要將多個資料列傳遞至伺服器，開發人員可能會從下列選項中選擇：  
+ SQL Server 2008 導入資料表值參數之前，將多個資料列傳遞至預存程序或參數化的 SQL 命令的選項有所限制。 若要將多個資料列傳遞至伺服器，開發人員可能會從下列選項中選擇：  
   
 -   使用一連串個別的參數來代表多個資料行和資料列中的值。 使用這個方法可傳遞的資料量會受到允許的參數數目所限制。 SQL Server 程序最多可以有 2100 個參數。 伺服器端邏輯必須將這些個別的值組合成資料表變數或暫存資料表，以便進行處理。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "33365939"
 -   使用 `bcp` 公用程式或 <xref:System.Data.SqlClient.SqlBulkCopy> 物件，將許多資料列載入資料表中。 雖然這項技術非常有效率，不過除非資料會載入暫存資料表或資料表變數中，否則它不支援伺服器端處理。  
   
 ## <a name="creating-table-valued-parameter-types"></a>建立資料表值參數型別  
- 資料表值參數是以使用 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] CREATE TYPE 陳述式所定義的強型別資料表結構為基礎。 您必須先在 SQL Server 中建立資料表型別並定義此結構，然後才能在用戶端應用程式中使用資料表值參數。 如需有關建立資料表類型的詳細資訊，請參閱[使用者定義資料表類型](http://go.microsoft.com/fwlink/?LinkID=98364)SQL Server 線上叢書 》 中。  
+ 資料表值參數是以使用 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] CREATE TYPE 陳述式所定義的強型別資料表結構為基礎。 您必須先在 SQL Server 中建立資料表型別並定義此結構，然後才能在用戶端應用程式中使用資料表值參數。 如需建立資料表類型的詳細資訊，請參閱[使用者定義資料表類型](https://go.microsoft.com/fwlink/?LinkID=98364)SQL Server 線上叢書 》 中。  
   
  下列陳述式會建立名為 CategoryTableType 的資料表型別，其中包含 CategoryID 和 CategoryName 資料行：  
   
@@ -77,7 +77,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 ## <a name="limitations-of-table-valued-parameters"></a>資料表值參數的限制  
  資料表值參數有許多限制：  
   
--   您無法將資料表值參數傳遞[CLR 使用者定義函數](http://msdn.microsoft.com/library/ms131077.aspx)。  
+-   您無法將資料表值參數傳遞[CLR 使用者定義函式](/sql/relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions)。  
   
 -   資料表值參數只能針對支援 UNIQUE 或 PRIMARY KEY 條件約束 (Constraint) 而建立索引。 SQL Server 不會維護資料表值參數的統計資料。  
   
@@ -86,7 +86,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 -   您無法使用 ALTER TABLE 陳述式來修改資料表值參數的設計。  
   
 ## <a name="configuring-a-sqlparameter-example"></a>設定 SqlParameter 範例  
- <xref:System.Data.SqlClient> 支援填入資料表值參數從<xref:System.Data.DataTable>，<xref:System.Data.Common.DbDataReader>或<xref:System.Collections.Generic.IEnumerable%601>  \  <xref:Microsoft.SqlServer.Server.SqlDataRecord>物件。 您必須使用 <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> 的 <xref:System.Data.SqlClient.SqlParameter> 屬性來指定資料表值參數的型別名稱。 `TypeName` 必須與之前在伺服器上所建立之相容型別的名稱相符。 下列程式碼片段示範如何設定 <xref:System.Data.SqlClient.SqlParameter> 以插入資料。  
+ <xref:System.Data.SqlClient> 支援填入資料表值參數<xref:System.Data.DataTable>，<xref:System.Data.Common.DbDataReader>或是<xref:System.Collections.Generic.IEnumerable%601>  \  <xref:Microsoft.SqlServer.Server.SqlDataRecord>物件。 您必須使用 <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> 的 <xref:System.Data.SqlClient.SqlParameter> 屬性來指定資料表值參數的型別名稱。 `TypeName` 必須與之前在伺服器上所建立之相容型別的名稱相符。 下列程式碼片段示範如何設定 <xref:System.Data.SqlClient.SqlParameter> 以插入資料。  
   
 ```csharp  
 // Configure the command and parameter.  
@@ -275,4 +275,4 @@ insertCommand.ExecuteNonQuery()
  [命令和參數](../../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [DataAdapter 參數](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
  [ADO.NET 中的 SQL Server 資料作業](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

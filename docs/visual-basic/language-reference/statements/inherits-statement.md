@@ -9,13 +9,13 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
 ms.openlocfilehash: 4a98ada39a04730b46f40fe139e72d1855d9b067
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43533244"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43739499"
 ---
-# <a name="inherits-statement"></a>Inherits Statement
+# <a name="inherits-statement"></a>Inherits 陳述式
 會導致目前的類別或介面從另一個類別或介面集合繼承屬性、 變數、 屬性、 程序和事件。  
   
 ## <a name="syntax"></a>語法  
@@ -28,7 +28,7 @@ Inherits basetypenames
   
 |詞彙|定義|  
 |---|---|  
-|`basetypenames`|必要。 從這個類別衍生的類別名稱。<br /><br /> -或-<br /><br /> 從這個介面衍生的介面名稱。 使用逗號來分隔多個名稱。|  
+|`basetypenames`|必要項。 從這個類別衍生的類別名稱。<br /><br /> -或-<br /><br /> 從這個介面衍生的介面名稱。 使用逗號來分隔多個名稱。|  
   
 ## <a name="remarks"></a>備註  
  如果使用，`Inherits`陳述式必須是類別或介面定義中的第一個非空白的非註解一行。 它應該緊接`Class`或`Interface`陳述式。  

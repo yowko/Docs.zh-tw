@@ -3,11 +3,11 @@ title: 部署已裝載網際網路資訊服務的 WCF 服務
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
 ms.openlocfilehash: b2b58de703a0864ac0666cb4738a95726e28bcaf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43395511"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43740097"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>部署已裝載網際網路資訊服務的 WCF 服務
 開發和部署裝載在網際網路資訊服務 (IIS) 中的 Windows Communication Foundation (WCF) 服務包含下列工作：  
@@ -31,7 +31,7 @@ ms.locfileid: "43395511"
   
 -   [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)]、 Windows 7 和[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]： 使用[ServiceModel 註冊工具 (ServiceModelReg.exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md)向 IIS 註冊 WCF 的工具： 若要使用此工具，輸入**ServiceModelReg.exe /i /x**在 Visual Studio命令提示字元。 按一下 [開始] 按鈕，並依序選取 [ **所有程式**, **Microsoft Visual Studio 2012**, **Visual Studio Tools**] 和 [ **Visual Studio 命令提示字元**]，您即可開啟這個命令提示字元。  
   
--   [!INCLUDE[wv](../../../../includes/wv-md.md)]：安裝 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]的 Windows Communication Foundation 啟動元件子元件。 若要這樣做，請在 [控制台] 中，按一下**新增或移除程式**，然後**新增\/移除 Windows 元件**。 這樣會啟動 [ **Windows 元件精靈**]。  
+-   [!INCLUDE[wv](../../../../includes/wv-md.md)]：安裝 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 的 Windows Communication Foundation 啟動元件子元件。 若要這樣做，請在 [控制台] 中，按一下**新增或移除程式**，然後**新增\/移除 Windows 元件**。 這樣會啟動 [ **Windows 元件精靈**]。  
   
 -   Windows 7：  
   
@@ -40,10 +40,10 @@ ms.locfileid: "43395511"
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>建立新的 IIS 應用程式或是重複使用現有的 ASP.NET 應用程式  
  IIS 裝載的 WCF 服務必須駐留的 IIS 應用程式。 您可以只建立新的 IIS 應用程式裝載 WCF 服務。 或者，您可以部署到現有的應用程式已經裝載的 WCF 服務[!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]內容 （例如.aspx 頁面和 ASP.NET Web 服務 [ASMX]）。 如需這些選項的詳細資訊，請參閱 「 主控 WCF-並存使用 ASP.NET"及"裝載 ASP.NET 相容性模式中的 WCF 服務 > 章節中[WCF 服務與 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。  
   
- 請注意， [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 及更新版本會定期重新啟動獨立的物件導向程式設計應用程式。 預設值為 1740 分鐘。 支援的最大值為 71,582 分鐘。 您可以停用這項重新啟動。 如需有關這個屬性的詳細資訊，請參閱 < [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968)。  
+ 請注意，[!INCLUDE[iis601](../../../../includes/iis601-md.md)] 及更新版本會定期重新啟動獨立的物件導向程式設計應用程式。 預設值為 1740 分鐘。 支援的最大值為 71,582 分鐘。 您可以停用這項重新啟動。 如需有關這個屬性的詳細資訊，請參閱 < [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968)。  
   
 ## <a name="create-an-svc-file-for-the-wcf-service"></a>建立 WCF 服務的 .svc 檔案  
- 在 IIS 中裝載的 WCF 服務會以特殊內容檔 （.svc 檔案） 在 IIS 應用程式內部表示。 這個模型與 IIS 應用程式將 ASMX 頁面表示為 .asmx 檔案的方式很類似。 .Svc 檔案包含 WCF 特定的處理指示詞 ([\@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md))，可讓 WCF，裝載基礎結構啟動裝載的服務，以回應傳入的訊息。 以下是 .svc 檔案最常見的語法：  
+ 在 IIS 中裝載的 WCF 服務會以特殊內容檔 （.svc 檔案） 在 IIS 應用程式內部表示。 這個模型與 IIS 應用程式將 ASMX 頁面表示為 .asmx 檔案的方式很類似。 .Svc 檔案包含 WCF 特定的處理指示詞 ([\@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md))，可讓 WCF，裝載基礎結構啟動裝載的服務，以回應傳入的訊息。 以下宣告是最常見的 .svc 檔語法：  
   
 ```  
 <% @ServiceHost Service="MyNamespace.MyServiceImplementationTypeName" %>  
@@ -95,7 +95,7 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
  請務必針對 IIS 裝載服務端點使用相對端點位址。 提供完整的端點位址 (例如 http://localhost/MyService.svc)如果端點位址並未指向 IIS 應用程式裝載服務公開的端點會造成服務的部署中的錯誤。 針對裝載的服務使用相對端點位址可以避免這些潛在的衝突。  
   
 ### <a name="available-transports"></a>可用的傳輸  
- WCF 服務裝載於 IIS 5.1 和[!INCLUDE[iis601](../../../../includes/iis601-md.md)]受限於只能使用 HTTP 通訊。 在這些 IIS 平台上，設定裝載的服務來使用非 HTTP 繫結會在服務啟動期間導致錯誤。 在 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]上，支援的傳輸包括 HTTP、Net.TCP、Net.Pipe、Net.MSMQ，和 msmq.formatname，以便提供與現有 MSMQ 應用程式的回溯相容性。  
+ WCF 服務裝載於 IIS 5.1 和[!INCLUDE[iis601](../../../../includes/iis601-md.md)]受限於只能使用 HTTP 通訊。 在這些 IIS 平台上，設定裝載的服務來使用非 HTTP 繫結會在服務啟動期間導致錯誤。 在 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 上，支援的傳輸包括 HTTP、Net.TCP、Net.Pipe、Net.MSMQ，和 msmq.formatname，以便提供與現有 MSMQ 應用程式的回溯相容性。  
   
 ### <a name="http-transport-security"></a>HTTP 傳輸安全性  
  IIS 裝載的 WCF 服務可以利用 HTTP 傳輸安全性 （例如，HTTPS 和 HTTP 驗證配置例如基本、 摘要式與 Windows 整合式驗證），只要包含服務的 IIS 虛擬目錄支援這些設定。 裝載端點繫結上的 HTTP 傳輸安全性設定必須符合包含該設定之 IIS 虛擬目錄上的傳輸安全性設定。  

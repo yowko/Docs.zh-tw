@@ -11,24 +11,24 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - Help [Windows Forms], adding to dialog boxes
 ms.assetid: 218aa81e-e87e-4d67-af05-11627bbdce3b
-ms.openlocfilehash: 5751bcdb9fe7a16138680f34a4fcc1760f85a1d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47833e734c09e402ab1824b9c629b2ba39acfb9f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523870"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43725003"
 ---
 # <a name="how-to-display-pop-up-help"></a>如何：顯示快顯說明
-Windows Form 上顯示說明的其中一種方式是透過**協助**位於標題列，可透過存取右側的按鈕<xref:System.Windows.Forms.Form.HelpButton%2A>屬性。 這種顯示 [說明] 的方式非常適合與對話方塊一起使用。 以強制回應方式 (使用 <xref:System.Windows.Forms.Form.ShowDialog%2A> 方法) 顯示的對話方塊無法啟動外部 [說明] 系統，因為將焦點轉換至另一個視窗之前，必須先關閉強制回應對話方塊。 此外，使用**協助**按鈕需要有沒有**最小化**按鈕或**最大化**標題列中顯示的按鈕。 這是標準的對話方塊慣例，而表單則通常具有**最小化**和**最大化**按鈕。  
+若要在 Windows Form 上顯示說明的方法之一是透過**幫助**按鈕位於標題列，可透過存取右側<xref:System.Windows.Forms.Form.HelpButton%2A>屬性。 這種顯示 [說明] 的方式非常適合與對話方塊一起使用。 以強制回應方式 (使用 <xref:System.Windows.Forms.Form.ShowDialog%2A> 方法) 顯示的對話方塊無法啟動外部 [說明] 系統，因為將焦點轉換至另一個視窗之前，必須先關閉強制回應對話方塊。 此外，使用**幫助** 按鈕可讓您需要有沒有**最小化** 按鈕或**最大化**標題列中顯示的按鈕。 這是標準的對話方塊慣例，而表單則通常具有**最小化**並**最大化**按鈕。  
   
- 請注意，您也可以使用 <xref:System.Windows.Forms.HelpProvider> 元件將控制項連結至 [說明] 系統中的檔案，即使您已實作快顯 [說明] 亦然。 如需詳細資訊，請參閱[Windows 應用程式中提供說明](../../../../docs/framework/winforms/advanced/how-to-provide-help-in-a-windows-application.md)。  
+ 請注意，您也可以使用 <xref:System.Windows.Forms.HelpProvider> 元件將控制項連結至 [說明] 系統中的檔案，即使您已實作快顯 [說明] 亦然。 如需詳細資訊，請參閱 < [Windows 應用程式中提供幫助](../../../../docs/framework/winforms/advanced/how-to-provide-help-in-a-windows-application.md)。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 ### <a name="to-display-pop-up-help"></a>顯示快顯說明  
   
-1.  拖曳[HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)元件從 [工具箱] 加入至表單。  
+1.  拖曳[HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)元件從工具箱拖曳至表單。  
   
      該元件會位於 Windows Form 設計工具底部的系統匣中。  
   
@@ -36,11 +36,11 @@ Windows Form 上顯示說明的其中一種方式是透過**協助**位於標題
   
 3.  為了顯示 <xref:System.Windows.Forms.Form.HelpButton%2A>，您必須將表單的 <xref:System.Windows.Forms.Form.MinimizeBox%2A> 和 <xref:System.Windows.Forms.Form.MaximizeBox%2A> 屬性設定為 `false`；將 <xref:System.Windows.Forms.Form.ControlBox%2A> 屬性設定為 `true`；並將 <xref:System.Windows.Forms.Form.FormBorderStyle%2A> 屬性設定為下列其中一個值：<xref:System.Windows.Forms.FormBorderStyle.FixedSingle>、<xref:System.Windows.Forms.FormBorderStyle.Fixed3D>、<xref:System.Windows.Forms.FormBorderStyle.FixedDialog> 或 <xref:System.Windows.Forms.FormBorderStyle.Sizable>。  
   
-4.  選取您要在表單上顯示 [說明] 的控制項，並在 [屬性] 視窗中設定 [說明] 字串。 這是將類似的視窗中顯示的文字字串[工具提示](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)。  
+4.  選取您要在表單上顯示 [說明] 的控制項，並在 [屬性] 視窗中設定 [說明] 字串。 這是會在類似於視窗中顯示的文字字串[工具提示](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)。  
   
 5.  請按 **F5**。  
   
-6.  按**協助**按鈕標題列上，按一下的控制項，供您設定的說明字串。  
+6.  按下**協助**按鈕標題列上，然後按一下您要在其設定的說明字串的控制項。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用工具提示來顯示控制項說明](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)  

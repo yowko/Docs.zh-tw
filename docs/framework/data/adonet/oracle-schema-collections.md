@@ -2,12 +2,12 @@
 title: Oracle 結構描述集合
 ms.date: 03/30/2017
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
-ms.openlocfilehash: b86de542e425d6fdc56f238f90063988bee95ffa
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 342c4cbe994eb983713be0f258e3a029df6739f8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766851"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745342"
 ---
 # <a name="oracle-schema-collections"></a>Oracle 結構描述集合
 除通用結構描述集合之外，Microsoft .NET Framework Data Provider for Oracle 還支援下列特定的結構描述集合：  
@@ -101,7 +101,7 @@ ms.locfileid: "32766851"
 |LAST_ANALYZED|DateTime|最近分析此索引的日期。|  
 |DEGREE|String|掃描索引之每個執行個體的執行緒數目。|  
 |INSTANCES|String|要在其上掃描索引的執行個體數目。|  
-|PARTITIONED|String|此索引是否已分割 (YES&#124;否)。|  
+|PARTITIONED|String|此索引是否已分割 ([是]&#124;否)。|  
 |TEMPORARY|String|索引是否在暫存資料表上。|  
 |GENERATED|String|索引的名稱是否是系統產生 (Y&#124;N)。|  
 |SECONDARY|String|索引是否為 Oracle9i Data Cartridge 之 ODCIIndexCreate 方法所建立的次要物件 (Y&#124;N)。|  
@@ -380,4 +380,4 @@ ms.locfileid: "32766851"
 |CHAR_USED|String|指出位元組限制 (B) 或字元限制 (C) 是否為字串的正式限制。|  
   
 ## <a name="see-also"></a>另請參閱  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

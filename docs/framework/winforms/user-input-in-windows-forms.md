@@ -8,16 +8,16 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 1486075f-1e06-4c9e-82c6-f948331db6d6
 ms.openlocfilehash: fef51f57dd3c14c91572041a72c805823d6019a3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43658856"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43740931"
 ---
 # <a name="user-input-in-windows-forms"></a>Windows Form 中的使用者輸入
 Windows Form 包含一種使用者輸入模型，這種模型是以在處理相關 Windows 訊息時所引發的事件為基礎。 本節中的主題提供滑鼠和鍵盤使用者輸入的相關資訊，包括示範如何執行特定工作的程式碼範例。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [Windows Forms 應用程式中的使用者輸入](../../../docs/framework/winforms/user-input-in-a-windows-forms-application.md)  
  提供使用者輸入事件的概觀和處理 Windows 訊息的方法。  
   
@@ -34,7 +34,7 @@ Windows Form 包含一種使用者輸入模型，這種模型是以在處理相�
  顯示處理大部分使用者輸入事件和報告每個事件相關資訊的程式碼範例。  
   
  [Windows Forms 中的使用者輸入驗證](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)  
- 描述在 Windows Forms 應用程式中驗證使用者輸入的方法。  
+ 描述在 Windows Form 應用程式中驗證使用者輸入的方法。  
   
 ## <a name="related-sections"></a>相關章節  
  另請參閱[在 Windows Forms 中建立事件處理常式](https://msdn.microsoft.com/library/dacysss4\(v=vs.110\))。

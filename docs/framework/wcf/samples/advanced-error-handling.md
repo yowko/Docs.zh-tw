@@ -3,14 +3,14 @@ title: 進階的錯誤處理
 ms.date: 03/30/2017
 ms.assetid: ed54b687-78af-4eda-8507-9fd081bdea1a
 ms.openlocfilehash: 72fb9885408759f5781501b548f81625d258d13c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423428"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745247"
 ---
 # <a name="advanced-error-handling"></a>進階的錯誤處理
-這個範例會示範 Windows Communication Foundation (WCF) 路由服務。 路由服務是一種 WCF 元件，可讓您更輕鬆地在您的應用程式中加入內容為基礎的路由器。 此範例示範路由服務如何使用異動和其他更複雜的訊息處理概念，例如多點傳送，以聰明的方式從錯誤中復原。  
+這個範例會示範 Windows Communication Foundation (WCF) 路由服務。 路由服務是一種 WCF 元件，可讓您更輕鬆地在您的應用程式中加入內容為基礎的路由器。 此範例示範路由服務如何使用交易和其他更複雜的訊息處理概念，例如多點傳送，以聰明的方式從錯誤中復原。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
@@ -93,7 +93,7 @@ ms.locfileid: "43423428"
  這個範例示範路由服務可以處理進階訊息處理功能，例如交易和接收內容，以及在正確處理錯誤案例中示範路由服務可以利用這些功能。  
   
 ### <a name="real-world-scenario"></a>真實情節  
- Contoso 想要透過路由服務使用交易式接收，確保即使在錯誤情況下，所有必要的服務都能接收資訊。 除此之外，他們還希望能夠正確地自動處理錯誤，並且在使用錯誤處理邏輯時，於訊息無法傳遞的情況下回報錯誤。 基於這個目的，他們設定讓路由服務依預期容錯移轉至特定端點，且路由服務會處理錯誤情況，包括在必要時建立、完成和復原/中止異動/接收內容。  
+ Contoso 想要透過路由服務使用交易式接收，確保即使在錯誤情況下，所有必要的服務都能接收資訊。 除此之外，他們還希望能夠正確地自動處理錯誤，並且在使用錯誤處理邏輯時，於訊息無法傳遞的情況下回報錯誤。 基於這個目的，他們設定讓路由服務依預期容錯移轉至特定端點，且路由服務會處理錯誤情況，包括在必要時建立、完成和復原/中止交易/接收內容。  
   
 ## <a name="see-also"></a>另請參閱  
  [AppFabric 主控與持續性範例](https://go.microsoft.com/fwlink/?LinkId=193961)

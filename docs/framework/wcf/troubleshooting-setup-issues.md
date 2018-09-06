@@ -1,15 +1,15 @@
 ---
-title: 疑難排解安裝程式問題
+title: 疑難排解安裝問題
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
 ms.openlocfilehash: 0270bd8c1006b39805e3486c4fef0cb379089ea8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: MT
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43390075"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43732867"
 ---
-# <a name="troubleshooting-setup-issues"></a>疑難排解安裝程式問題
+# <a name="troubleshooting-setup-issues"></a>疑難排解安裝問題
 本主題描述如何疑難排解 Windows Communication Foundation (WCF) 設定問題。  
   
 ## <a name="some-windows-communication-foundation-registry-keys-are-not-repaired-by-performing-an-msi-repair-operation-on-the-net-framework-30"></a>有些 Windows Communication Foundation 登錄機碼 (Registry Key) 無法藉由在 .NET Framework 3.0 上執行 MSI 修復作業來加以修復。  

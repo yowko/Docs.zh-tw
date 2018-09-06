@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: 01bbf726ffa8d1c595b1ef53df420431bf28560f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1c65b0c2c9ae19aa008ecd8fb453d8e41b7c4167
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43737499"
 ---
 # <a name="connection-string-builders"></a>連接字串產生器
-在舊版的[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]的編譯時間檢查含有串連字串值並未發生，連接字串，以便在執行階段，產生不正確的關鍵字<xref:System.ArgumentException>。 每個 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者都支援不同語法的連接字串關鍵字，導致人工建構有效連接字串的難度大為增加。 為了處理這個問題，[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 為每個 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者導入了全新的連接字串產生器 (Builder)。 每個資料提供者都具有繼承自 <xref:System.Data.Common.DbConnectionStringBuilder> 強型別連接字串產生器類別。 下表列出 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者和其相關的連接字串產生器類別。  
+在舊版[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]的編譯時間檢查含有串連字串值並未發生，連接字串，以便在執行階段，產生不正確的關鍵字<xref:System.ArgumentException>。 每個 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者都支援不同語法的連接字串關鍵字，導致人工建構有效連接字串的難度大為增加。 為了處理這個問題，[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 為每個 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者導入了全新的連接字串產生器 (Builder)。 每個資料提供者都具有繼承自 <xref:System.Data.Common.DbConnectionStringBuilder> 強型別連接字串產生器類別。 下表列出 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者和其相關的連接字串產生器類別。  
   
 |提供者|ConnectionStringBuilder 類別|  
 |--------------|-----------------------------------|  
@@ -81,4 +82,4 @@ initial catalog="AdventureWorks;NewValue=Bad"
 ## <a name="see-also"></a>另請參閱  
  [連接字串](../../../../docs/framework/data/adonet/connection-strings.md)  
  [隱私權和資料安全性](../../../../docs/framework/data/adonet/privacy-and-data-security.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

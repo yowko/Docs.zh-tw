@@ -1,17 +1,17 @@
 ---
 title: '結果 （F #）'
-description: "了解如何使用 F # '造成' 型別，可協助您撰寫容錯的程式碼。"
+description: "了解如何使用 F # '造成' 型別，可協助您撰寫錯誤容錯的程式碼。"
 ms.date: 04/24/2017
-ms.openlocfilehash: 432e420ba7c2005caa46250dde82c2c67c9d3ae3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7ce2e1f6b8c6a32d99a2feaf9547c4b67b152b8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563004"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749245"
 ---
 # <a name="results"></a>結果
 
-從 F # 4.1 開始，沒有`Result<'T,'TFailure>`類型可讓您撰寫容錯可撰寫其程式碼。
+從 F # 4.1 開始，沒有`Result<'T,'TFailure>`類型可用來撰寫可以組成-容錯的程式碼。
 
 ## <a name="syntax"></a>語法
 
@@ -27,9 +27,9 @@ type Result<'T,'TError> =
 
 ## <a name="remarks"></a>備註
 
-請注意，結果型別是[結構差別聯集](discriminated-unions.md#struct-discriminated-unions)，這是 F # 4.1 中導入的另一項功能。  結構相等語意適用於此處。
+請注意，結果型別是[結構差別聯集](discriminated-unions.md#struct-discriminated-unions)，這是另一個 F # 4.1 中所引進的功能。  結構相等語意適用於此處。
 
-`Result`類型通常用於 monadic 錯誤處理，這通常稱為[鐵路導向程式設計](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html)F # 社群內。  下列簡單範例會示範這種方法。
+`Result`型別通常用於單邊錯誤處理，這通常稱為[鐵路導向程式設計](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html)F # 社群中。  下列的簡單範例會示範這種方法。
 
 ```fsharp
 // Define a simple type which has fields that can be validated
@@ -80,10 +80,9 @@ let test() =
 test()
 ```
 
-如您所見，是很容易就能鏈結在一起各種驗證函式如果您強制全部傳回`Result`。  此讓您分割成小片段，也就是當您需要的組合就像這樣的功能。  這也具有附加價值*強制*使用[模式比對](pattern-matching.md)驗證的結尾，進而強制執行程式正確性較高。
+如您所見，它是很容易就能鏈結各種驗證函式，如果您強制它們全部傳回`Result`。  這樣，您會分解成小片段，也就是當您需要的組合這類功能。  這也具有附加價值*強制*善用[模式比對](pattern-matching.md)結尾的一輪的驗證，進而強制執行較高的程式正確性。
 
 ## <a name="see-also"></a>另請參閱
 
-[差別聯集](discriminated-unions.md)
-
-[模式比對](pattern-matching.md)
+- [差別聯集](discriminated-unions.md)
+- [模式比對](pattern-matching.md)

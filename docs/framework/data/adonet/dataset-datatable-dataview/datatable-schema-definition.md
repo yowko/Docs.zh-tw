@@ -3,11 +3,11 @@ title: DataTable 結構描述定義
 ms.date: 03/30/2017
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
 ms.openlocfilehash: 60e7f6a13bd7fd10398d300690bd73c3abc0d700
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43552149"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43748855"
 ---
 # <a name="datatable-schema-definition"></a>DataTable 結構描述定義
 資料表的結構描述 (或結構) 是由資料行或條件約束來表示。 您可以使用 <xref:System.Data.DataTable> 物件以及 <xref:System.Data.DataColumn> 和 <xref:System.Data.ForeignKeyConstraint> 物件來定義 <xref:System.Data.UniqueConstraint> 的結構描述。 資料表的資料行可對應到資料來源中的資料行、包含運算式所得的值、自動累加其值或包含主索引鍵值。  
@@ -19,7 +19,7 @@ ms.locfileid: "43552149"
 > [!NOTE]
 >  <xref:System.Data.DataTable.CaseSensitive%2A>的屬性**DataTable**不會影響這個行為。 **CaseSensitive**屬性適用於資料中的資料表和影響排序、 搜尋、 篩選、 強制執行條件約束，並依此類推，但不是能參考資料行、 關聯和條件約束。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [將資料行新增至 DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-columns-to-a-datatable.md)  
  描述如何定義的資料表使用的資料行**DataColumn**物件。  
   
