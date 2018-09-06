@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID746
 ms.assetid: 398ff5eb-b580-456f-8f24-b7a8318e1193
 ms.openlocfilehash: 3216ce866cae9a7f59ecfca23d92d82fdb8bc117
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43561576"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43803791"
 ---
 # <a name="replacements-too-long"></a>取代文字太長
 您指定的取代文字超過允許的長度。  

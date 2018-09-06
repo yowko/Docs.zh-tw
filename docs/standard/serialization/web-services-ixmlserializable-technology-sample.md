@@ -2,12 +2,12 @@
 title: Web 服務 IXmlSerializable 技術範例
 ms.date: 03/30/2017
 ms.assetid: 0202d3f1-a50b-427d-a5bb-79208b8f1c22
-ms.openlocfilehash: eb117f720e7541ac6460b5adfd0eecc7901f4fdf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 343755c062fc13891d84131a5f7682e2e1466a5a
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582710"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43866534"
 ---
 # <a name="web-services-ixmlserializable-technology-sample"></a>Web 服務 IXmlSerializable 技術範例
 [下載範例](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/IXmlSerializable.zip.exe)  
@@ -42,13 +42,14 @@ ms.locfileid: "33582710"
   
 2.  型別**http://localhost/IXmlSerializable/Service.asmx**。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Xml.Serialization.IXmlSerializable>  
- <xref:System.Xml.Serialization>  
- <xref:System.Xml.XmlConvert>  
- <xref:System.Xml.XmlQualifiedName>  
- <xref:System.Xml.XmlReader>  
- <xref:System.Xml.Schema.XmlSchema>  
- <xref:System.Xml.Schema.XmlSchemaSet>  
- <xref:System.Xml.XmlUrlResolver>  
- <xref:System.Xml.XmlWriter>
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Xml.Serialization.IXmlSerializable>  
+- <xref:System.Xml.Serialization>  
+- <xref:System.Xml.XmlConvert>  
+- <xref:System.Xml.XmlQualifiedName>  
+- <xref:System.Xml.XmlReader>  
+- <xref:System.Xml.Schema.XmlSchema>  
+- <xref:System.Xml.Schema.XmlSchemaSet>  
+- <xref:System.Xml.XmlUrlResolver>  
+- <xref:System.Xml.XmlWriter>

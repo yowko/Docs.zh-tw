@@ -3,11 +3,11 @@ title: 端點：每秒失敗的呼叫數
 ms.date: 03/30/2017
 ms.assetid: 9840fc0a-0e4d-4638-96fd-40e3ab9e4667
 ms.openlocfilehash: f1b2997a0f1e16c897fc319d1833313141f5c4bf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466826"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43874676"
 ---
 # <a name="endpoint-calls-faulted-per-second"></a>端點：每秒失敗的呼叫數
 計數器名稱：每秒發生錯誤的呼叫數  

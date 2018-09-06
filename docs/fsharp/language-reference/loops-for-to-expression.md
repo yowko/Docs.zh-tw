@@ -1,17 +1,17 @@
 ---
 title: 迴圈：for...to 運算式 (F#)
-description: '請參閱如何 F # for...in..運算式用來在迴圈中反覆迴圈變數的值範圍。'
+description: '請參閱如何 F # for...in...運算式用來在迴圈中逐一查看某個範圍的迴圈變數的值。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 841c7d557abc11e0253cb87ab8081cc77671b44b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8160fd30c4f3afe8bb6b58f468802ef1c0ef32ee
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43800465"
 ---
 # <a name="loops-forto-expression"></a>迴圈：for...to 運算式
 
-`for...to`運算式用來在迴圈中反覆查看的迴圈變數的值範圍。
-
+`for...to`運算式用來在迴圈中逐一查看某個範圍的迴圈變數的值。
 
 ## <a name="syntax"></a>語法
 
@@ -21,9 +21,10 @@ for identifier = start [ to | downto ] finish do
 ```
 
 ## <a name="remarks"></a>備註
-識別項的類型推斷的型別*啟動*和*完成*運算式。 這些運算式的類型必須是 32 位元整數。
 
-雖然技術上的運算式，`for...to`則更像命令式的程式語言中的傳統陳述式。 傳回型別*主體運算式*必須`unit`。 下列範例顯示的各種用法`for...to`運算式。
+識別項型別推斷的型別*開始*並*完成*運算式。 這些運算式的類型必須是 32 位元整數。
+
+雖然技術上的運算式，`for...to`則更像傳統的陳述式，在命令式程式設計語言。 傳回型別*主體運算式*必須是`unit`。 下列範例顯示的各種用法`for...to`運算式。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5101.fs)]
 
@@ -36,8 +37,7 @@ for identifier = start [ to | downto ] finish do
 ```
 
 ## <a name="see-also"></a>另請參閱
-[F# 語言參考](index.md)
 
-[迴圈：`for...in` 運算式](loops-for-in-expression.md)
-
-[迴圈：`while...do` 運算式](loops-while-do-expression.md)
+- [F# 語言參考](index.md)
+- [迴圈：`for...in` 運算式](loops-for-in-expression.md)
+- [迴圈：`while...do` 運算式](loops-while-do-expression.md)

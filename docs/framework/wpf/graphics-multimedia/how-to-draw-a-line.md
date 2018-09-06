@@ -7,11 +7,11 @@ helpviewer_keywords:
 - lines [WPF], drawing
 ms.assetid: 0513ee01-6b27-4bb3-85f3-3a3e6710d80e
 ms.openlocfilehash: bee343676175098493df347823a3bdbdf17b205f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43671182"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43870181"
 ---
 # <a name="how-to-draw-a-line"></a>如何：繪製線條
 此範例將示範如何藉由繪製線條<xref:System.Windows.Shapes.Line>項目。  

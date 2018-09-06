@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: aa87cb7f-e608-4a81-948b-c9b8a1225783
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 656b34a828ef6acd488cc84ca98d5a4bbaaa2cdf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3f9d83a0edb6dc2261931e422b0ae4c735d2e0d1
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589801"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869989"
 ---
 # <a name="cryptographic-signatures"></a>密碼編譯簽章
 <a name="top"></a> 密碼編譯數位簽章會使用公開金鑰演算法來提供資料完整性。 當您使用數位簽章簽署資料時，其他人可以確認簽章，並可以證明資料是來自您，而且在您簽署它之後沒有遭到竄改。 如需有關數位簽章的詳細資訊，請參閱 [The signature is valid](../../../docs/standard/security/cryptographic-services.md)。  
@@ -105,7 +105,7 @@ class Class1
 ### <a name="signing-xml-files"></a>簽署 XML 檔案  
  .NET Framework 會提供 <xref:System.Security.Cryptography.Xml> 命名空間，可讓您簽署 XML。 當您想要確認 XML 是來自特定來源時，簽署 XML 是很重要的。 例如，如果您使用會利用 XML 的股票報價服務，如果 XML 的來源已簽署，您便可以驗證它。  
   
- 此命名空間中的類別遵照[XML 簽章語法和處理建議](https://www.w3.org/TR/xmldsig-core/)全球資訊網協會。  
+ 這個命名空間中的類別遵照[XML 簽章語法和處理建議](https://www.w3.org/TR/xmldsig-core/)全球資訊網協會。  
   
  [回到頁首](#top)  
   
@@ -121,7 +121,7 @@ class Class1
   
 -   簽署人使用的雜湊演算法。  
   
- 若要驗證 <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> 類別所簽署的簽章，請使用 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 類別。 必須提供 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 類別簽署者的公開金鑰。 您將需要模數和指數的值以指定公開金鑰。 (產生公開/私密金鑰組的合作對象應該提供這些值。)第一次建立<xref:System.Security.Cryptography.RSACryptoServiceProvider>物件來保存公開金鑰會驗證簽章，並再初始化<xref:System.Security.Cryptography.RSAParameters>結構，以指定公開金鑰的模數和指數值。  
+ 若要驗證 <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> 類別所簽署的簽章，請使用 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 類別。 必須提供 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 類別簽署者的公開金鑰。 您將需要模數和指數的值以指定公開金鑰。 (產生公開/私密金鑰組的合作對象應該提供這些值。)第一次建立<xref:System.Security.Cryptography.RSACryptoServiceProvider>物件來保存的公開金鑰，將會驗證簽章，然後初始化<xref:System.Security.Cryptography.RSAParameters>結構，以指定公開金鑰的模數和指數值。  
   
  下列程式碼顯示如何建立 <xref:System.Security.Cryptography.RSAParameters> 結構。 `Modulus` 屬性設定為 `ModulusData` 位元組陣列的值，而 `Exponent` 屬性設定為 `ExponentData`位元組陣列的值。  
   
@@ -172,5 +172,6 @@ else
   
  如果簽章有效，此程式碼片段會顯示 "`The signature is valid`"，否則顯示 "`The signature is not valid`"。  
   
-## <a name="see-also"></a>另請參閱  
- [The signature is valid](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>另請參閱
+
+- [The signature is valid](../../../docs/standard/security/cryptographic-services.md)

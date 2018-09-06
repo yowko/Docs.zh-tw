@@ -1,19 +1,20 @@
 ---
 title: 查詢運算式 (F#)
-description: '深入了解 F # 程式語言中的 LINQ 查詢運算式支援。'
+description: '深入了解 F # 程式設計語言中的 LINQ 查詢運算式支援。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 367b362f9f5bd8cbac5fbadd16145bf8047a801d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6586d991dde550380d04c4d9831bb954eb94a715
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43867942"
 ---
 # <a name="query-expressions"></a>查詢運算式
 
 > [!NOTE]
 本文中的 API 參考連結將帶您前往 MSDN。  docs.microsoft.com API 參考不完整。
 
-查詢運算式可讓您查詢資料來源，並將資料放在所要的格式。 查詢運算式可支援 F # 中的 LINQ。
+查詢運算式可讓您查詢資料來源，並將資料放在想要的格式。 查詢運算式提供 F # 中的 LINQ 支援。
 
 ## <a name="syntax"></a>語法
 
@@ -22,7 +23,8 @@ query { expression }
 ```
 
 ## <a name="remarks"></a>備註
-查詢運算式是一種類似循序項運算式的計算運算式。 就如同您提供循序項運算式中的程式碼中指定的順序，您可以指定一組資料提供查詢運算式中的程式碼。 在序列運算式中，`yield`關鍵字識別要產生之序列的一部分傳回的資料。 查詢運算式中`select`關鍵字執行相同的功能。 除了`select`關鍵字，F # 也支援一些很類似於 SQL SELECT 陳述式的組件的查詢運算子。 以下是簡單的查詢運算式，以及連接到 Northwind OData 來源的程式碼的範例。
+
+查詢運算式是一種類似於循序項運算式的計算運算式。 就像您可以指定一系列提供序列運算式中的程式碼，您可以指定一組資料提供查詢運算式中的程式碼。 在序列運算式中，`yield`關鍵字都會識別以產生順序的一部分傳回的資料。 在查詢運算式中，`select`關鍵字執行相同的功能。 除了`select`關鍵字，F # 也支援一些很類似於 SQL SELECT 陳述式的組件的查詢運算子。 以下是簡單的查詢運算式，以及連接到 Northwind OData 來源的程式碼的範例。
 
 ```fsharp
 // Use the OData type provider to create types that can be used to access the Northwind database.
@@ -44,23 +46,23 @@ query1
 |> Seq.iter (fun customer -> printfn "Company: %s Contact: %s" customer.CompanyName customer.ContactName)
 ```
 
-在上述程式碼範例中，查詢運算式是在大括號。 運算式中的程式碼的意義是，在查詢結果中的資料庫中的 Customers 資料表中傳回的每個客戶。 查詢運算式傳回型別可實作<xref:System.Linq.IQueryable%601>和<xref:System.Collections.Generic.IEnumerable%601>，因此它們可以使用可重複[Seq 模組](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)如範例所示。
+在先前的程式碼範例中，查詢運算式是在大括號。 在運算式中的程式碼的意義，傳回查詢結果中的資料庫中的 Customers 資料表中的每位客戶。 查詢運算式傳回型別可實作<xref:System.Linq.IQueryable%601>並<xref:System.Collections.Generic.IEnumerable%601>，並讓它們可以反覆使用[Seq 模組](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)如範例所示。
 
-每個計算的運算式型別是從產生器類別來建置。 查詢計算運算式產生器類別是`QueryBuilder`。 如需詳細資訊，請參閱[計算運算式](computation-expressions.md)和[Linq.QueryBuilder 類別](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)。
-
+每個計算的運算式型別是從產生器類別所建立。 查詢計算運算式產生器類別是`QueryBuilder`。 如需詳細資訊，請參閱 <<c0> [ 計算運算式](computation-expressions.md)並[Linq.QueryBuilder 類別](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)。
 
 ## <a name="query-operators"></a>查詢運算子
-查詢運算子可讓您指定的詳細資料的查詢，例如條件放入要傳回的記錄，或指定結果的排序順序。 查詢來源必須支援的查詢運算子。 如果您嘗試使用不支援的查詢運算子，`System.NotSupportedException`就會擲回。
 
-查詢運算式中允許可轉譯為 SQL 的運算式。 例如，沒有函式呼叫是運算式中允許當您使用`where`查詢運算子。
+查詢運算子可讓您指定這類的查詢的詳細資料，以將條件放在要傳回的記錄，或指定結果的排序順序。 查詢來源必須支援查詢運算子。 如果您嘗試使用不支援的查詢運算子，`System.NotSupportedException`就會擲回。
 
-表 1 顯示可用的查詢運算子。 此外，請參閱 Table2 SQL 查詢和對等 F # 查詢運算式在本主題稍後會比較。 有些查詢運算子不支援某些型別提供者。 特別是，由於 OData 支援的查詢運算子的 OData 型別提供者會受到限制。 如需詳細資訊，請參閱[ODataService 類型提供者 （F #）](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e)。
+查詢運算式中允許可轉譯為 SQL 的運算式。 比方說，不允許函數呼叫運算式中使用時`where`查詢運算子。
 
-此表格假設資料庫，以下列格式：
+表 1 顯示可用的查詢運算子。 此外，請參閱 Table2，SQL 查詢和對等 F # 查詢運算式在本主題稍後會比較。 有些查詢運算子不支援某些型別提供者。 特別的是，它支援限制在 OData 中的查詢運算子中的 OData 型別提供者會受到限制。 如需詳細資訊，請參閱 < [odataservice 型別提供者 （F #）](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e)。
+
+此表格假設資料庫，以下列形式：
 
 ![範例資料庫圖表](../media/StudentCourseDB.png)
 
-請依照下列資料表中的程式碼也會假設下列資料庫連接程式碼。 專案應該加入 System.Data、 System.Data.Linq 和 FSharp.Data.TypeProviders 組件的參考。 建立此資料庫的程式碼是包含在本主題的結尾。
+請依照下列資料表中的程式碼也會假設下列資料庫連接程式碼。 專案應該將參考加入至 System.Data、 System.Data.Linq 和 FSharp.Data.TypeProviders 組件。 建立此資料庫的程式碼就會包含在本主題結尾處。
 
 ```fsharp
 open System
@@ -98,7 +100,6 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </td>
 </tr>
 
-
 <tr>
   <td><code>count</code></td><td>傳回選取的項目數目。<br/><br/>
 
@@ -109,8 +110,9 @@ let data = [ 1; 5; 7; 11; 18; 21]
 }
 </code></pre>
 
-</td></tr><tr>
-<td><code>last</code></td><td>選取那些已選取目前為止的最後一個元素。<br/><br/>
+</td></tr>
+<tr>
+<td><code>last</code></td><td>選取目前的最後一個元素。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -118,18 +120,19 @@ let data = [ 1; 5; 7; 11; 18; 21]
 }
 </code></pre>
 
-</td></tr><tr>
-<td><code>lastOrDefault</code></td><td>如果不找到任何項目，請選取那些已選取目前為止，或預設值的最後一個元素。<br/><br/>
+</td></tr>
+<tr>
+<td><code>lastOrDefault</code></td><td>如果不找到任何項目，請選取那些截至目前為止，已選取則為預設值的最後一個元素。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
-    where (number < 0)
+    where (number &lt; 0)
     lastOrDefault
 }
 </code></pre>
 
 </td></tr><tr>
-<td><code>exactlyOne</code></td><td>選取單一特定項目選取目前為止。 如果有多個項目，則會擲回例外狀況。<br/><br/>
+<td><code>exactlyOne</code></td><td>選取單一特定項目為止。 如果有多個項目，則會擲回例外狀況。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -140,7 +143,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>exactlyOneOrDefault</code></td><td>如果找不到該項目，請選取單一特定項目那些已選取目前為止，或預設值。<br/><br/>
+<td><code>exactlyOneOrDefault</code></td><td>如果找不到該項目，請選取單一特定項目選取到目前為止，或預設值。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -151,7 +154,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>headOrDefault</code></td><td>如果序列不包含任何項目，請選取那些已選取目前為止，或預設值的第一個元素。<br/><br/>
+<td><code>headOrDefault</code></td><td>如果序列不包含任何項目，請選取那些截至目前為止，已選取則為預設值的第一個元素。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -170,7 +173,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>where</code></td><td>選取指定的述詞為基礎的項目。<br/><br/>
+<td><code>where</code></td><td>選取以指定的述詞的元素。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -180,7 +183,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>minBy</code></td><td>選取每個項目到目前為止所選取的值，並傳回產生的最小值。<br/><br/>
+<td><code>minBy</code></td><td>選取目前選取的每個元素的值並傳回最小結果值。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -189,7 +192,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>maxBy</code></td><td>選取每個項目到目前為止所選取的值，並傳回產生的最大值。<br/><br/>
+<td><code>maxBy</code></td><td>選取目前選取的每個元素的值並傳回最大結果值。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -198,7 +201,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>groupBy</code></td><td>群組會根據指定的索引鍵選取器目前選取項目。<br/><br/>
+<td><code>groupBy</code></td><td>群組會根據指定的索引鍵選取器目前選取的項目。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -208,7 +211,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sortBy</code></td><td>排序到目前為止以遞增順序選取所指定的排序索引鍵的項目。<br/><br/>
+<td><code>sortBy</code></td><td>排序以遞增順序目前選取的給定的排序索引鍵的項目。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -218,7 +221,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sortByDescending</code></td><td>排序到目前為止以遞減的順序選取所指定的排序索引鍵的項目。<br/><br/>
+<td><code>sortByDescending</code></td><td>排序依遞減順序目前選取的給定的排序索引鍵的項目。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -228,7 +231,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenBy</code></td><td>執行指定的排序索引鍵以遞增順序目前選取之項目的後續排序作業。 此運算子只可用在之後<code>sortBy</code>， <code>sortByDescending</code>， <code>thenBy</code>，或<code>thenByDescending</code>。<br/><br/>
+<td><code>thenBy</code></td><td>執行以遞增順序目前選取的給定的排序索引鍵之項目的後續排序作業。 此運算子只可用在後<code>sortBy</code>， <code>sortByDescending</code>， <code>thenBy</code>，或<code>thenByDescending</code>。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -240,7 +243,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByDescending</code></td><td>執行指定的排序索引鍵以遞減順序目前選取之項目的後續排序作業。 此運算子只可用在之後<code>sortBy</code>， <code>sortByDescending</code>， <code>thenBy</code>，或<code>thenByDescending</code>。<br/><br/>
+<td><code>thenByDescending</code></td><td>執行以遞減順序目前選取的給定的排序索引鍵之項目的後續排序作業。 此運算子只可用在後<code>sortBy</code>， <code>sortByDescending</code>， <code>thenBy</code>，或<code>thenByDescending</code>。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -252,7 +255,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>groupValBy</code></td><td>選取每個項目到目前為止所選取的值和群組所指定的索引鍵的項目。<br/><br/>
+<td><code>groupValBy</code></td><td>選取目前選取的每個元素的值，並依指定的索引鍵來群組項目。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -262,7 +265,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>join</code></td><td>相互關聯所選的值根據相符索引鍵的兩個集合。 請注意，登入聯結運算式的周圍 = 索引鍵的順序非常重要。 在所有聯結中，如果列分割之後<code>-&gt;</code>符號，縮排至少必須為縮排就關鍵字<code>for</code>。<br/><br/>
+<td><code>join</code></td><td>將兩組選取的值相符的索引鍵為基礎的相互關聯。 請注意，登入聯結運算式的周圍 = 索引鍵的順序很重要。 在所有聯結中，如果分割列之後<code>-&gt;</code>符號，縮排至少必須為縮排關鍵字而言<code>for</code>。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -273,7 +276,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>groupJoin</code></td><td>相互關聯所選的值根據相符索引鍵的兩個集合，並將結果分組。 請注意，登入聯結運算式的周圍 = 索引鍵的順序非常重要。<br/><br/>
+<td><code>groupJoin</code></td><td>將兩組選取的值相符的索引鍵為基礎的相互關聯，並將結果分組。 請注意，登入聯結運算式的周圍 = 索引鍵的順序很重要。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -287,7 +290,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>leftOuterJoin</code></td><td>相互關聯所選的值根據相符索引鍵的兩個集合，並將結果分組。 如果任何群組是空的就會改為使用單一預設值群組。 請注意，登入聯結運算式的周圍 = 索引鍵的順序非常重要。<br/><br/>
+<td><code>leftOuterJoin</code></td><td>將兩組選取的值相符的索引鍵為基礎的相互關聯，並將結果分組。 如果任何群組是空的就會改為使用單一預設值群組。 請注意，登入聯結運算式的周圍 = 索引鍵的順序很重要。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -299,7 +302,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sumByNullable</code></td><td>選取每個項目到目前為止所選取的可為 null 值，並傳回這些值的總和。 如果有任何可為 null 沒有值，則會忽略它。<br/><br/>
+<td><code>sumByNullable</code></td><td>選取每個項目目前選取的可為 null 值，並傳回這些值的總和。 如果有任何可為 null 並沒有值，則會忽略它。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -308,7 +311,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>minByNullable</code></td><td>選取每個項目到目前為止所選取的可為 null 值，並傳回這些值的最小值。 如果有任何可為 null 沒有值，則會忽略它。<br/><br/>
+<td><code>minByNullable</code></td><td>選取每個項目目前選取的可為 null 值，並傳回這些值的最小值。 如果有任何可為 null 並沒有值，則會忽略它。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -317,7 +320,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>maxByNullable</code></td><td>選取每個項目到目前為止所選取的可為 null 值，並傳回這些值的最大值。 如果有任何可為 null 沒有值，則會忽略它。<br/><br/>
+<td><code>maxByNullable</code></td><td>選取每個項目目前選取的可為 null 值，並傳回這些值的最大值。 如果有任何可為 null 並沒有值，則會忽略它。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -326,7 +329,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>averageByNullable</code></td><td>選取每個項目到目前為止所選取的可為 null 值，並傳回這些值的平均值。 如果有任何可為 null 沒有值，則會忽略它。<br/><br/>
+<td><code>averageByNullable</code></td><td>選取每個項目目前選取的可為 null 值，並傳回這些值的平均值。 如果有任何可為 null 並沒有值，則會忽略它。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -335,7 +338,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>averageBy</code></td><td>選取每個項目到目前為止所選取的值，並傳回這些值的平均值。<br/><br/>
+<td><code>averageBy</code></td><td>選取目前選取的每個元素的值並傳回這些值的平均值。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -344,7 +347,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>distinct</code></td><td>選取不同的項目從目前選取的項目。<br/><br/>
+<td><code>distinct</code></td><td>從目前選取的項目中選取不同的項目。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -368,7 +371,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>find</code></td><td>選取第一個選取的項目到目前為止，皆滿足指定的條件。<br/><br/>
+<td><code>find</code></td><td>選取目前選取的符合指定的條件的第一個元素。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -377,7 +380,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>all</code></td><td>決定選取目前為止的所有項目是否符合條件。<br/><br/>
+<td><code>all</code></td><td>判斷目前選取的所有項目是否全都符合條件。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -386,7 +389,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>head</code></td><td>選取第一個項目從那些已選取目前為止。<br/><br/>
+<td><code>head</code></td><td>從目前選取的第一個元素。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -395,7 +398,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>nth</code></td><td>選取在選定的指定索引處的項目為止。<br/><br/>
+<td><code>nth</code></td><td>到目前為止選取之間選取的指定索引處的項目。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for numbers in data do
@@ -404,7 +407,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>skip</code></td><td>略過指定的數目的目前選取的項目，然後選取 剩餘項目。<br/><br/>
+<td><code>skip</code></td><td>略過指定的數目的目前選取的項目，然後選取 剩餘的項目。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -413,17 +416,17 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>skipWhile</code></td><td>只要指定的條件為 true，然後選取 剩餘項目，請略過序列中的項目。<br/><br/>
+<td><code>skipWhile</code></td><td>只要指定的條件為 true，然後選取其餘的項目，請略過序列中的項目。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
-    skipWhile (number < 3)
+    skipWhile (number &lt; 3)
     select student
 }
 </code></pre>
 
 </td></tr><tr>
-<td><code>sumBy</code></td><td>選取每個項目到目前為止所選取的值，並傳回這些值的總和。<br/><br/>
+<td><code>sumBy</code></td><td>選取目前選取的每個元素的值並傳回這些值的總和。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -432,7 +435,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>take</code></td><td>指定的連續的項目數會從選取選定為止。<br/><br/>
+<td><code>take</code></td><td>到目前為止要從選取中選取指定的數目的連續項目。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -442,16 +445,16 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>takeWhile</code></td><td>選取項目序列中，只要指定的條件為 true，而接著會略過其餘項目。<br/><br/>
+<td><code>takeWhile</code></td><td>只要指定的條件為 true，且然後略過其餘項目，則請從序列中選取項目。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
-    takeWhile (number < 10)
+    takeWhile (number &lt; 10)
 }
 </code></pre>
 
 </td></tr><tr>
-<td><code>sortByNullable</code></td><td>排序指定可為 null 的排序索引鍵以遞增順序目前選取的項目。<br/><br/>
+<td><code>sortByNullable</code></td><td>排序以遞增順序目前選取的指定可為 null 的排序索引鍵的項目。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -461,7 +464,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sortByNullableDescending</code></td><td>排序所指定可為 null 的排序索引鍵以遞減的順序選取目前為止的元素。<br/><br/>
+<td><code>sortByNullableDescending</code></td><td>排序依遞減順序目前選取的指定可為 null 的排序索引鍵的項目。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -471,7 +474,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByNullable</code></td><td>執行指定可為 null 的排序索引鍵以遞增順序目前選取之項目的後續排序作業。 此運算子只可用之後立即<code>sortBy</code>， <code>sortByDescending</code>， <code>thenBy</code>，或<code>thenByDescending</code>，或其可為 null 的變異數。<br/><br/>
+<td><code>thenByNullable</code></td><td>執行以遞增順序目前選取的指定可為 null 的排序索引鍵之項目的後續排序作業。 此運算子只可用之後立即<code>sortBy</code>， <code>sortByDescending</code>， <code>thenBy</code>，或<code>thenByDescending</code>，或其可為 null 的變異數。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -482,7 +485,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByNullableDescending</code></td><td>執行指定可為 null 的排序索引鍵以遞減順序目前選取之項目的後續排序作業。 此運算子只可用之後立即<code>sortBy</code>， <code>sortByDescending</code>， <code>thenBy</code>，或<code>thenByDescending</code>，或其可為 null 的變異數。<br/><br/>
+<td><code>thenByNullableDescending</code></td><td>執行以遞減順序目前選取的指定可為 null 的排序索引鍵之項目的後續排序作業。 此運算子只可用之後立即<code>sortBy</code>， <code>sortByDescending</code>， <code>thenBy</code>，或<code>thenByDescending</code>，或其可為 null 的變異數。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -496,7 +499,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </table>
 
 ## <a name="comparison-of-transact-sql-and-f-query-expressions"></a>Transact-SQL 和 F# 查詢運算式的比較
-下表顯示 F # 中的一些常見的 TRANSACT-SQL 查詢以及其對等用法。 此資料表中的程式碼也會假設與先前資料表和相同的初始程式碼來設定類型提供者相同的資料庫。
+下表顯示 F # 中的一些常見的 Transact SQL 查詢和其對等項目。 此資料表中的程式碼也會假設與先前的資料表和相同的初始程式碼設定型別提供者相同的資料庫。
 
 
 ### <a name="table-2-transact-sql-and-f-query-expressions"></a>表 2。 Transact-SQL 和 F# 查詢運算式
@@ -539,7 +542,7 @@ query {
 
 </td></tr><tr>
 <td><code>EXISTS</code>
-</br>
+<br />
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE EXISTS
@@ -584,7 +587,7 @@ query {
 }
 </code></pre>
 </td></tr><tr><td>
-分組條件。<br/>
+與條件的群組。<br/>
 
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * )
 FROM Student
@@ -713,7 +716,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code> 模式具有符合組件。<br/>
+<code>LIKE</code> 使用模式比對組。<br/>
 
 <pre><code class="lang-sql">-- '[abc]%' matches strings where the first character is
 -- 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -764,7 +767,7 @@ WHERE Student.Name LIKE '[^abc]%'
 }
 </code></pre>
 
-</td></tr><tr><td><code>LIKE</code>與子字串的搜尋。<br/>
+</td></tr><tr><td><code>LIKE</code>與子字串搜尋。<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Name like '%A%'
@@ -781,7 +784,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-簡單<code>JOIN</code>與兩份資料表。<br/>
+簡單<code>JOIN</code>具有兩個資料表。<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 JOIN CourseSelection
@@ -799,7 +802,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>LEFT JOIN</code> 與兩份資料表。<br/>
+</td></tr><tr><td><code>LEFT JOIN</code> 具有兩個資料表。<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 LEFT JOIN CourseSelection
@@ -818,7 +821,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>JOIN</code> 與 <code>COUNT</code><br/>
+</td></tr><tr><td><code>JOIN</code> 使用 <code>COUNT</code><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 JOIN CourseSelection
@@ -880,7 +883,7 @@ WHERE Student.Age BETWEEN 10 AND 15
 <pre><code class="lang-fsharp">// Selecting students with ages between 10 and 15.
 query {
     for student in db.Student do
-    where (student.Age ?>= 10 && student.Age ?< 15)
+    where (student.Age ?>= 10 && student.Age ?&lt; 15)
     select student
 }
 </code></pre>
@@ -1076,7 +1079,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>多個左方外部聯結。<br/>
+</td></tr><tr><td>多個的左方外部聯結。<br/>
 
 <pre><code class="lang-sql">SELECT Student.Name, Course.CourseName
 FROM Student
@@ -1103,7 +1106,7 @@ query {
 
 </td></tr></table>
 
-下列程式碼可以用來建立這些範例的範例資料庫。
+下列程式碼可用來建立這些範例的範例資料庫。
 
 <pre><code class="lang-sql">SET ANSI_NULLS ON
 GO
@@ -1225,7 +1228,7 @@ INSERT INTO CourseSelection (ID, StudentID, CourseID)
 VALUES(15, 7, 3);
 </code></pre>
 
-下列程式碼包含本主題中出現的範例程式碼。
+下列程式碼包含本主題中所顯示的範例程式碼。
 
 ```fsharp
 #if INTERACTIVE
@@ -2426,8 +2429,7 @@ end
 ```
 
 ## <a name="see-also"></a>另請參閱
-[F# 語言參考](index.md)
 
-[Linq.QueryBuilder 類別](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)
-
-[計算運算式](Computation-Expressions.md)
+- [F# 語言參考](index.md)
+- [Linq.QueryBuilder 類別](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)
+- [計算運算式](Computation-Expressions.md)

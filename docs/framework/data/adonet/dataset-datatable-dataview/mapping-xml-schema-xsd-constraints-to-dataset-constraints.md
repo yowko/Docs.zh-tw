@@ -3,11 +3,11 @@ title: 將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束
 ms.date: 03/30/2017
 ms.assetid: 3d0d1a4b-9104-434f-ac04-6c01ab5716b5
 ms.openlocfilehash: c9cd97535a0165b82f0823c1f17f621491d4255c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43748598"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43868675"
 ---
 # <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a>將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束
 XML 結構描述定義語言 (XSD) 允許在其定義的項目和屬性上指定條件約束。 對應 XML 結構描述中的關聯式結構描述時<xref:System.Data.DataSet>，XML 結構描述條件約束會對應到資料表和資料行內的適當關聯式條件約束**資料集**。  
@@ -26,7 +26,7 @@ XML 結構描述定義語言 (XSD) 允許在其定義的項目和屬性上指定
   
  對應處理序會將這些結構描述條件約束轉換成適當的條件約束內建立的資料表上**資料集**。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [將 unique XML 結構描述 (XSD) 條件約束對應至資料集條件約束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-unique-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  描述用來建立唯一的條件約束中的 XML 結構描述項目**資料集**。  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
 ms.openlocfilehash: d6b33df8574d9c25380d6d9319480d3c9df28660
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480019"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877446"
 ---
 # <a name="storyboards-overview"></a>分鏡腳本概觀
 本主題說明如何使用<xref:System.Windows.Media.Animation.Storyboard>來組織和套用動畫的物件。 說明如何以互動方式操作<xref:System.Windows.Media.Animation.Storyboard>物件，並說明間接屬性目標語法。  

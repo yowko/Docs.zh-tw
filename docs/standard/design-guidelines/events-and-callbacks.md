@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 48b55c60-495f-4089-9396-97f9122bba7c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 90cc40024de627f151a4d0df879a65e5900004b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 390c12af7107bb78fc261c55ea15390cf9eaa5b7
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573629"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43862945"
 ---
 # <a name="events-and-callbacks"></a>事件和回呼
-回呼是延伸點，可允許呼叫委派透過使用者程式碼的架構。 這些委派通常會透過方法的參數傳遞給架構。  
+回呼是擴充點，讓回呼透過委派的使用者程式碼的架構。 這些委派通常會透過方法的參數傳遞給架構。  
   
- 事件是回呼的支援方便且一致的語法提供委派 （事件處理常式） 的特殊案例。 此外，Visual Studio 的陳述式完成和設計工具提供說明中使用以事件為基礎的 Api。 (請參閱[事件設計](../../../docs/standard/design-guidelines/event.md)。)  
+ 事件是回呼中的特殊案例，用來提供委派 （事件處理常式） 支援方便且一致的語法。 此外，Visual Studio 的陳述式完成和設計工具提供在使用事件為基礎的 Api 說明。 (請參閱[事件設計](../../../docs/standard/design-guidelines/event.md)。)  
   
  **✓ CONSIDER** 使用回呼，以允許使用者提供架構所執行的自訂程式碼。  
   
@@ -32,18 +32,19 @@ ms.locfileid: "33573629"
   
  **✓ DO** 使用新 `Func<...>`， `Action<...>`，或 `Expression<...>` 類型而不是自訂委派，定義應用程式開發介面，以回撥時。  
   
- `Func<...>` 和`Action<...>`代表的泛型委派。 `Expression<...>` 代表函式定義可編譯及後續叫用執行階段，但也會序列化，並傳遞給遠端處理程序。  
+ `Func<...>` 和`Action<...>`代表泛型委派。 `Expression<...>` 代表函式定義可編譯和接著也會在執行階段，但可以叫用可序列化，並傳遞給遠端處理程序。  
   
  **✓ DO** 衡量並且了解使用的效能含意 `Expression<...>`，而不是使用`Func<...>` 和 `Action<...>` 委派。  
   
- `Expression<...>` 類型會在大部分的情況下，邏輯上相當於`Func<...>`和`Action<...>`委派。 主要差異是，為了將委派用於本機處理序的案例;運算式被供情況下，很有幫助和可能用於評估的運算式，在遠端處理序或電腦中。  
+ `Expression<...>` 型別是在大部分的情況下，邏輯上等同於`Func<...>`和`Action<...>`委派。 它們之間的主要差異是委派要用於本機處理程序的案例;運算式適用的情況下，很有幫助和評估的運算式中的遠端程序或機器。  
   
  **✓ DO** 了解呼叫委派時，您會執行任意程式碼，並可能會有安全性、 正確性，以及相容性的影響。  
   
- *部分 © 2005年，2009 Microsoft Corporation。All rights reserved.*  
+ *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- *皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*  
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
   
-## <a name="see-also"></a>另請參閱  
- [擴充性設計](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>另請參閱
+
+- [擴充性設計](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)

@@ -2,12 +2,12 @@
 title: 字串 (F#)
 description: "了解 F # 'string' 類型以一連串的 Unicode 字元所表示的不可變的文字。"
 ms.date: 05/16/2016
-ms.openlocfilehash: 7309e93bf0a6518d03a9f850804a4f580e2c96b1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 21971602093bc84b0df47d4ae46a14fb936c28bb
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43561287"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43799339"
 ---
 # <a name="strings"></a>字串
 
@@ -17,6 +17,7 @@ ms.locfileid: "43561287"
 `string`類型以一連串的 Unicode 字元表示不可變的文字。 `string` 是 `System.String` 在 .NET Framework 中的別名。
 
 ## <a name="remarks"></a>備註
+
 字串常值是以引號 （"） 字元分隔。 反斜線字元 ( \\ ) 來編碼某些特殊字元。 反斜線和放在一起的下一個字元稱為*逸出序列*。 逸出序列支援 F # 常值會顯示下表中的字串。
 
 |字元|逸出序列|
@@ -66,23 +67,27 @@ def
 您可以不帶正負號位元組，型別陣列表示 ASCII 字串`byte[]`。 新增後置詞`B`為字串常值以指出它是 ASCII 字串。 ASCII 字串常值的位元組陣列搭配使用支援相同逸出序列為 Unicode 字串，除了 Unicode 逸出序列。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1004.fs)]
-    
+
 ## <a name="string-operators"></a>字串運算子
+
 有兩種方式來串連字串： 使用`+`運算子或使用`^`運算子。 `+`運算子會維護與.NET Framework 的字串處理功能的相容性。
 
 下列範例說明字串串連。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1006.fs)]
-    
+
 ## <a name="string-class"></a>字串類別
+
 因為字串型別，在 F # 實際上是以.NET Framework`System.String`類型，所有`System.String`成員都可以使用。 這包括`+`運算子，用來串連字串，就`Length`屬性，而`Chars`屬性，會傳回字串的 Unicode 字元陣列。 如需字串的詳細資訊，請參閱`System.String`。
 
 藉由使用`Chars`屬性`System.String`，您可以存取個別字元在字串中的指定的索引，如下列程式碼所示。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1005.fs)]
-    
+
 ## <a name="string-module"></a>字串模組
+
 字串處理的其他功能包含在`String`中的模組`FSharp.Core`命名空間。 如需詳細資訊，請參閱 < [Core.String 模組](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.string-module-%5bfsharp%5d)。
 
 ## <a name="see-also"></a>另請參閱
-[F# 語言參考](index.md)
+
+- [F# 語言參考](index.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - serialization, how-tos
 ms.assetid: 46c972ab-2193-4f72-9413-eca4521ed4b0
-ms.openlocfilehash: 38ec6d2c52e28e54649df2702d5a99b01ec04b1c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c87245d6995e5231cc14d0c39968ec0ebe3c845
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581364"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43866358"
 ---
 # <a name="serialization-how-to-topics"></a>序列化 HOW TO 主題
 下列清單包含序列化概念文件的使用 HOW TO 主題的連結。  
@@ -32,5 +32,6 @@ ms.locfileid: "33581364"
   
 -   [如何：區塊序列化資料](../../../docs/standard/serialization/how-to-chunk-serialized-data.md)  
   
-## <a name="see-also"></a>另請參閱  
- [序列化](../../../docs/standard/serialization/index.md)
+## <a name="see-also"></a>另請參閱
+
+- [序列化](../../../docs/standard/serialization/index.md)

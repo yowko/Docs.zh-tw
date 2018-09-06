@@ -5,11 +5,11 @@ helpviewer_keywords:
 - My.Application.Log object
 ms.assetid: 296147f9-1109-4a55-9b5e-047f1ab9466c
 ms.openlocfilehash: 9a7bf4d26129e488226a562e1fe25149abc1dbe1
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43001316"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857516"
 ---
 # <a name="myapplicationlog-object"></a>My.Application.Log 物件
 提供屬性和方法，以將事件和例外狀況資訊寫入至應用程式的記錄檔接聽程式。  

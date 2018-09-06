@@ -19,11 +19,11 @@ ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 214243f6a8a87f4e4cc15f31be23275fff00d07d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43662121"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863591"
 ---
 # <a name="ulong-data-type-visual-basic"></a>ULong 資料類型 (Visual Basic)
 

@@ -1,5 +1,5 @@
 ---
-title: 如何：建立矩形動畫
+title: 操作說明：建立矩形動畫
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - rectangles [WPF], animating
 ms.assetid: 572ffb95-790d-4ace-adbf-b2ea8a90e75b
 ms.openlocfilehash: c2edf1bc8505b7bda2cc31ded2d2bf53a96243ac
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 09/05/2018
-ms.locfileid: "43732880"
+ms.locfileid: "43800608"
 ---
-# <a name="how-to-animate-a-rectangle"></a>如何：建立矩形動畫
+# <a name="how-to-animate-a-rectangle"></a>操作說明：建立矩形動畫
 這個範例示範如何以動畫顯示矩形的大小和位置變更。  
   
 ## <a name="example"></a>範例  

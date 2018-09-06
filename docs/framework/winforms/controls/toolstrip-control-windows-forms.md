@@ -6,11 +6,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 ms.assetid: e5ef455a-e049-429c-8005-30c93132fb79
 ms.openlocfilehash: 72ce238fdcbdcb81fc710a21d1675de67f4adc15
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43393546"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43872552"
 ---
 # <a name="toolstrip-control-windows-forms"></a>ToolStrip 控制項 (Windows Form)
 <xref:System.Windows.Forms.ToolStrip> 控制項可以在 Windows Form 應用程式中裝載功能表、控制項和使用者控制項的工具列。  

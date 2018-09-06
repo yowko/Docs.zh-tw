@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], custom colors
 ms.assetid: e2752fe2-1afb-489e-ab96-b7805acd96bc
 ms.openlocfilehash: 9a3f712a4d729452ac0d2d4755a5fba59ca102ed
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43732711"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858729"
 ---
 # <a name="how-to-customize-colors-in-toolstrip-applications"></a>如何：自訂 ToolStrip 應用程式中的色彩
 您可以自訂 <xref:System.Windows.Forms.ToolStrip> 的外觀，藉由使用 <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 類別來使用自訂的色彩。  

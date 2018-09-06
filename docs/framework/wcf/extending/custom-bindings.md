@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
 ms.openlocfilehash: 694b4faaafea62799a96aabe8f023a0d495f8d50
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43778322"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43866764"
 ---
 # <a name="custom-bindings"></a>自訂繫結
 當系統提供的其中一個繫結不符合服務的需求時，您可以使用 <xref:System.ServiceModel.Channels.CustomBinding> 類別。 所有繫結都是根據已排序的繫結項目組所建構。 自訂的繫結可以從系統提供的繫結項目建置，或是可以包含使用者定義的自訂繫結項目。 例如，您可以使用自訂繫結項目，以便在服務端點使用新的傳輸或編碼器。 如需實用範例，請參閱[自訂繫結範例](https://msdn.microsoft.com/library/657e8143-beb0-472d-9cfe-ed1a19c2ab08)。 如需詳細資訊，請參閱 < [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
@@ -62,7 +62,7 @@ ms.locfileid: "43778322"
   
  下表摘要列出每一層的選項。  
   
-|圖層|選項|必要項|  
+|圖層|選項|必要|  
 |-----------|-------------|--------------|  
 |異動|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|否|  
 |可靠性|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|否|  

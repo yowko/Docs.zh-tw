@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 56eb10ca-e61d-4ed2-af7a-555fc4c25a25
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f77d86e2ade841b715fc4bea8350d4e043bcb91b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 016f19c7141ebaf9b5c1f03adc263b689489119b
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581787"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43874205"
 ---
 # <a name="how-to-create-a-windowsprincipal-object"></a>如何：建立 WindowsPrincipal 物件
 有兩種方式來建立 <xref:System.Security.Principal.WindowsPrincipal> 物件，視程式碼是否必須重複執行以角色為基礎的驗證，還是它只必須執行一次而定。  
@@ -77,5 +77,6 @@ ms.locfileid: "33581787"
   
 3.  建立主體物件之後，您可以數種方法的其中一種來進行驗證。  
   
-## <a name="see-also"></a>另請參閱  
- [Principal 和 Identity 物件](../../../docs/standard/security/principal-and-identity-objects.md)
+## <a name="see-also"></a>另請參閱
+
+- [Principal 和 Identity 物件](../../../docs/standard/security/principal-and-identity-objects.md)

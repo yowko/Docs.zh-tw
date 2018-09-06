@@ -3,11 +3,11 @@ title: 原始碼程式行、檔案與路徑識別項 (F#)
 description: '了解如何使用內建 F # 識別項值可讓您存取原始程式碼行號、 目錄和檔案名稱，在您的程式碼。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 14f710d1412c3420ec627dc30216ba2e89f16bcd
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777425"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865123"
 ---
 # <a name="source-line-file-and-path-identifiers"></a>原始碼程式行、檔案與路徑識別項
 

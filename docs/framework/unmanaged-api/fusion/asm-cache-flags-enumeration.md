@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddf0f01db73a873d2dd823e1f754b970ae8aa056
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5b712c6ae5978e83dab085f48dd1fd572757384a
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430469"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43870529"
 ---
 # <a name="asmcacheflags-enumeration"></a>ASM_CACHE_FLAGS 列舉
-表示所表示之組件的來源[IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)在全域組件快取中。  
+指出所表示的組件的來源[IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)在全域組件快取中。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,7 +33,7 @@ typedef enum {
     ASM_CACHE_ZAP       = 0x01,  
     ASM_CACHE_GAC       = 0x02,  
     ASM_CACHE_DOWNLOAD  = 0x04,  
-    ASM_CACHE_ROOT      = 0x08  
+    ASM_CACHE_ROOT      = 0x08,  
     ASM_CACHE_ROOT_EX   = 0x80  
 } ASM_CACHE_FLAGS;  
 ```  
@@ -42,20 +42,20 @@ typedef enum {
   
 |成員|描述|  
 |------------|-----------------|  
-|`ASM_CACHE_ZAP`|使用 Ngen.exe 列舉快取的先行編譯的組件。|  
+|`ASM_CACHE_ZAP`|使用 Ngen.exe 列舉先行編譯的組件快取。|  
 |`ASM_CACHE_GAC`|列舉全域組件快取。|  
-|`ASM_CACHE_DOWNLOAD`|列舉視已下載，或者已陰影複製的組件。|  
-|`ASM_CACHE_ROOT`|表示[GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)函式應傳回至全域組件快取的 common language runtime (CLR) 2.0 版的路徑。 呼叫內容中，才有意義[GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)。|  
-|`ASM_CACHE_ROOT_EX`|表示[GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)函式應傳回至全域組件快取路徑 clr 第 4 版。 呼叫內容中，才有意義[GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)。|  
+|`ASM_CACHE_DOWNLOAD`|列舉，具有視需求下載，或者已陰影複製組件。|  
+|`ASM_CACHE_ROOT`|指出[GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)函式應傳回至全域組件快取的 common language runtime (CLR) 2.0 版的路徑。 呼叫內容中，才有意義[GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)。|  
+|`ASM_CACHE_ROOT_EX`|指出[GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)函式應傳回至全域組件快取路徑 clr 第 4 版。 呼叫內容中，才有意義[GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Fusion.h  
   
  **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [GetCachePath 函式](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)  

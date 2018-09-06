@@ -3,11 +3,11 @@ title: x:Member 指示詞
 ms.date: 03/30/2017
 ms.assetid: 4d8394ef-644c-4331-b6c5-be855d392980
 ms.openlocfilehash: dfc08d79bd8206269807d88d2c659f13be487276
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43533351"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43801563"
 ---
 # <a name="xmember-directive"></a>x:Member 指示詞
 在標記中宣告 XAML 成員。  

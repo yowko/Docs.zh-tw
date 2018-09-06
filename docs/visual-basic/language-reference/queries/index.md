@@ -6,11 +6,11 @@ helpviewer_keywords:
 - LINQ, queries
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
 ms.openlocfilehash: abe54fe163919c6ad6b746d70baac2482e80b948
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43536998"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861607"
 ---
 # <a name="queries-visual-basic"></a>查詢 (Visual Basic)
 Visual Basic 可讓您建立[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]程式碼中的運算式。  

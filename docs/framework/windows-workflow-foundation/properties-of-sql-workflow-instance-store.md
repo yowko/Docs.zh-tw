@@ -3,11 +3,11 @@ title: SQL 工作流程執行個體存放區的屬性
 ms.date: 03/30/2017
 ms.assetid: 5bf75f3c-8f33-450d-967f-6ee862c14c67
 ms.openlocfilehash: 3707e4912628380e5e06eeae1a6d608a4b0d5555
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43539246"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869071"
 ---
 # <a name="properties-of-sql-workflow-instance-store"></a>SQL 工作流程執行個體存放區的屬性
 本節中的主題描述 SQL 工作流程執行個體存放區的詳細資訊。  

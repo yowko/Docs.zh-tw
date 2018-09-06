@@ -17,12 +17,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 64e9b3ab-7443-4a77-ab17-b8b8c0cb3f62
-ms.openlocfilehash: 1f7da963db34434ee2631e9e2c0367abbd628656
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d7d99cf87507237b23cb40c58b2308643f7f1056
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43749164"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43872188"
 ---
 # <a name="backgroundworker-component-overview"></a>BackgroundWorker 元件概觀
 有許多經常執行的作業都需要長時間執行。 例如：  
@@ -60,6 +60,8 @@ ms.locfileid: "43749164"
   
  如需有關使用<xref:System.ComponentModel.BackgroundWorker>類別，請參閱[如何： 在背景執行作業](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [不在組建中：Visual Basic 中的多執行緒處理](https://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
- [操作說明：實作使用背景作業的表單](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+## <a name="see-also"></a>另請參閱
+
+- [受控執行緒處理](../../../../docs/standard/threading/index.md)
+- [事件架構非同步模式概觀](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [操作說明：實作使用背景作業的表單](how-to-implement-a-form-that-uses-a-background-operation.md)

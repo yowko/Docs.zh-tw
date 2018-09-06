@@ -5,11 +5,11 @@ f1_keywords:
 - vbrTextFieldParser_MalFormedFixedWidthLine
 ms.assetid: 84e14245-dfdf-4b62-8b84-e83a31608899
 ms.openlocfilehash: 57390700ab0ef47cc7e6b5521a3691a8e5812a9e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43534199"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861525"
 ---
 # <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-fieldwidths"></a>線條&lt;數字&gt;無法使用目前的 FieldWidths 剖析
 無法剖析指定的行，因為其欄位的寬度不是指定的寬度。  

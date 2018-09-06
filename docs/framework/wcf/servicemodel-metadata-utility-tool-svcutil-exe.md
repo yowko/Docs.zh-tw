@@ -8,11 +8,11 @@ helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
 ms.openlocfilehash: 4c47013ebc84c6006d65a89e57217ce1c720b45a
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43000013"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43802518"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel 中繼資料公用程式工具 (Svcutil.exe)
 
@@ -236,7 +236,7 @@ Svcutil.exe 可從應用程式的已編譯組件產生必要的 C# 序列化程�
 
 使用 svcutil 產生服務中繼資料時，可能會出現下列訊息：
 
-錯誤： 無法取得中繼資料從http://localhost:8000/somesservice/mex讀取 XML 資料時已經超過最大名稱表格字元計數配額 (16384)。 名稱表格是一種資料結構，用來儲存在 XML 處理過程中所遇到的字串 - 具有不重複的項目名稱、屬性名稱及屬性值的冗長 XML 文件可能會觸發此配額限制。 在建立 XML 讀取器時變更 XmlDictionaryReaderQuotas 物件上使用的 MaxNameTableCharCount 屬性，便可以增加此配額。
+錯誤： 無法取得中繼資料從 http://localhost:8000/somesservice/mex讀取 XML 資料時已經超過最大名稱表格字元計數配額 (16384)。 名稱表格是一種資料結構，用來儲存在 XML 處理過程中所遇到的字串 - 具有不重複的項目名稱、屬性名稱及屬性值的冗長 XML 文件可能會觸發此配額限制。 在建立 XML 讀取器時變更 XmlDictionaryReaderQuotas 物件上使用的 MaxNameTableCharCount 屬性，便可以增加此配額。
 
 這個錯誤可能是當您要求服務的中繼資料時，傳回大型 WSDL 檔案的服務所導致。 這時候的問題是已超過 svcutil.exe 工具的字元配額。 設定此值是為了防止阻斷服務 (DOS) 攻擊。 可對 svcutil 指定下列組態檔，增加此配額。
 

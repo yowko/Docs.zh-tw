@@ -3,11 +3,11 @@ title: 功能性轉換的 XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: fdbe5b91-f457-4b4e-a11b-def4bdd77bab
 ms.openlocfilehash: 25e5d743b983badaefa3012b8839e4b039419ee9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43532043"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43800689"
 ---
 # <a name="functional-transformation-of-xml-visual-basic"></a>功能性轉換的 XML (Visual Basic)
 本主題討論修改 XML 文件的純功能性轉換方法，並與程序性方法對照。  

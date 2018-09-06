@@ -5,33 +5,33 @@ ms.technology: dotnet-standard
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15d36cc2d3073c9f695de81407ecabcd5e3bba30
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6bfc2e6def94d0830df4a4cdf738cdeef106de9f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574513"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43871208"
 ---
 # <a name="extension-methods"></a>擴充方法
-擴充方法是讓靜態方法，以使用執行個體方法的呼叫語法來呼叫的語言功能。 這些方法必須使用至少一個參數，表示要對方法的執行個體。  
+擴充方法是允許使用執行個體方法呼叫語法來呼叫靜態方法的語言功能。 這些方法必須接受至少一個參數，表示要對方法的執行個體。  
   
- 定義這類的擴充方法的類別稱為 「 贊助者 」 類別，它必須宣告為靜態。 若要使用的擴充方法，一個必須匯入定義贊助者類別的命名空間。  
+ 定義這類的擴充方法的類別稱為 「 贊助商 」 類別，它必須宣告為靜態。 若要使用擴充方法，其中必須匯入定義 「 贊助商 」 類別的命名空間。  
   
  **X AVOID** frivolously 特別是在不屬於您的型別上定義擴充方法。  
   
- 如果您擁有類型的原始程式碼，請考慮改為使用一般的執行個體方法。 如果您並不擁有，而且您想要加入的方法，要非常小心。 盡量使用的擴充方法都有可能會想堆過去並非設計來將這些方法之型別的 Api。  
+ 如果您擁有類型的原始程式碼，請考慮改為使用一般的執行個體方法。 如果不屬於您，而且您想要新增的方法，要非常小心。 自由使用擴充方法有可能會想堆 Api，都不會有這些方法的類型。  
   
  **✓ CONSIDER** 任何下列案例中使用擴充方法：  
   
--   若要提供 helper 可以核心介面來撰寫功能適用於每個實作的介面時，如果說功能。 這是因為介面否則無法指定具象實作。 例如，`LINQ to Objects`運算子當做擴充方法實作所有<xref:System.Collections.Generic.IEnumerable%601>型別。 因此，任何`IEnumerable<>`實作是自動具備 LINQ 功能。  
+-   若要提供協助程式功能如果說功能相關的介面，每個實作都可以撰寫方面的核心介面。 這是因為具象實作否則無法指派給介面。 例如，`LINQ to Objects`運算子時，會實作為擴充方法上，所有<xref:System.Collections.Generic.IEnumerable%601>型別。 因此，任何`IEnumerable<>`實作是自動啟用 LINQ。  
   
--   當執行個體方法會導致相依於某些型別，但是這類相依性會中斷相依性管理規則。 相依性，例如，在從<xref:System.String>至<xref:System.Uri?displayProperty=nameWithType>可能不是恰當的，因此`String.ToUri()`傳回的執行個體方法`System.Uri`就是相依性管理的觀點設計錯誤。 靜態之所以`Uri.ToUri(this string str)`傳回`System.Uri`更好的設計。  
+-   當執行個體方法會產生某種類型的相依性，但這類相依性會中斷相依性管理規則。 比方說，從相依性<xref:System.String>要<xref:System.Uri?displayProperty=nameWithType>不可能需要這樣做，，因此`String.ToUri()`傳回的執行個體方法`System.Uri`會從相依性管理的觀點而言錯誤的設計。 靜態擴充方法`Uri.ToUri(this string str)`傳回`System.Uri`會是更好的設計。  
   
  **X AVOID** 上定義的擴充方法 <xref:System.Object?displayProperty=nameWithType>。  
   
- VB 使用者將無法使用擴充方法語法的物件參考上呼叫這類方法。 VB 不支援呼叫這類方法，因為在 VB 中，宣告參考，因為物件會強制所有的方法引動過程上是晚期繫結 （名為實際的成員在執行階段決定），而繫結至擴充方法在編譯時期 （及早決定繫結）。  
+ VB 使用者將無法使用擴充方法語法的物件參考上呼叫這類方法。 VB 不支援呼叫這類方法，因為，在 VB 中，宣告為參考，為物件會強制所有的方法引動過程上才會晚期繫結 （名為的實際成員在執行階段決定），而繫結到擴充方法在編譯時間 （早期決定繫結）。  
   
- 請注意在相同的繫結行為是存在，或是不支援擴充方法，指導方針適用於其他語言。  
+ 請注意指導方針適用於相同的繫結行為所在的其他語言，或不支援的擴充方法。  
   
  **X DO NOT** 擴充方法放在相同的命名空間擴充的型別，除非它是用於將方法加入至介面或相依性管理。  
   
@@ -39,14 +39,15 @@ ms.locfileid: "33574513"
   
  **✓ CONSIDER** 如果類型是介面，並擴充方法的用意是要用於大部分或所有的情況下，擴充的型別相同的命名空間中定義的擴充方法。  
   
- **X DO NOT** 定義實作一項功能通常會與其他功能相關聯的命名空間中的擴充方法。 相反地，在其所屬的功能與相關聯的命名空間中進行定義。  
+ **X DO NOT** 定義實作一項功能通常會與其他功能相關聯的命名空間中的擴充方法。 相反地，在其所屬的功能與相關聯的命名空間中定義它們。  
   
  **X AVOID** 泛型命名的命名空間專門用來擴充方法 (例如，"Extensions")。 使用描述性名稱 （例如，「 路由 」） 改為。  
   
- *部分 © 2005年，2009 Microsoft Corporation。All rights reserved.*  
+ *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- *皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*  
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
   
-## <a name="see-also"></a>另請參閱  
- [成員設計方針](../../../docs/standard/design-guidelines/member.md)  
- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>另請參閱
+
+- [成員設計方針](../../../docs/standard/design-guidelines/member.md)  
+- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)

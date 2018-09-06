@@ -13,12 +13,12 @@ helpviewer_keywords:
 - serialization, examples
 - binary serialization, examples
 ms.assetid: 22f1b818-7e0d-428a-8680-f17d6ebdd185
-ms.openlocfilehash: ce3d60e6d74594f93be44ae46d36b8ea2212d4bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4b83e841db1afc898c5c3c99ed4186fd264ed2ef
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582697"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43866497"
 ---
 # <a name="how-to-chunk-serialized-data"></a>如何：區塊序列化資料
 
@@ -58,5 +58,6 @@ ms.locfileid: "33582697"
   
 -   程式碼使用下列命名空間：<xref:System>、<xref:System.Runtime.Serialization>、<xref:System.Web.Services>、<xref:System.Web.Services.Protocols>、<xref:System.Xml>、<xref:System.Xml.Serialization> 和 <xref:System.Xml.Schema>。  
   
-## <a name="see-also"></a>另請參閱  
- [自訂序列化](custom-serialization.md)
+## <a name="see-also"></a>另請參閱
+
+- [自訂序列化](custom-serialization.md)

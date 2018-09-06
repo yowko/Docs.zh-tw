@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6038aff0-f92c-4e29-a618-d793410410d8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: da4f65d1510f22e05cef4295a342163bba2d1958
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 38bb22de14ecef618d45f54cced32af57542d3df
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583376"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43866841"
 ---
 # <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>如何：使用對稱金鑰解密 XML 項目
 您可以使用 <xref:System.Security.Cryptography.Xml> 命名空間中的類別來加密 XML 文件內的項目。  XML 加密可讓您儲存或傳輸機密的 XML，而不必擔心資料被輕易讀取。  這個程式碼範例會使用進階加密標準 (AES) 演算法 (也稱為 Rijndael)，來解密 XML 項目。  
   
- 如需如何加密 XML 項目使用此程序資訊，請參閱[How to： 使用對稱金鑰加密 XML 項目](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)。  
+ 如何加密 XML 項目使用此程序的相關資訊，請參閱[如何： 使用對稱金鑰加密 XML 項目](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)。  
   
  當您使用如 AES 的對稱演算法來加密 XML 資料時，您必須使用相同的金鑰來加密和解密 XML 資料。  此程序中的範例假設使用相同的金鑰來加密已加密的 XML，並且加密和解密的雙方同意使用的演算法和金鑰。  此範例不會儲存或加密在已加密 XML 中的 AES 金鑰。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "33583376"
   
 ### <a name="to-decrypt-an-xml-element-with-a-symmetric-key"></a>使用對稱金鑰解密 XML 項目  
   
-1.  加密 XML 項目與先前產生的索引鍵中所描述的技術[How to： 使用對稱金鑰加密 XML 項目](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)。  
+1.  具有使用中所述的技巧先前產生的金鑰加密 XML 項目[如何： 使用對稱金鑰加密 XML 項目](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)。  
   
 2.  在包含加密 XML 的 <xref:System.Xml.XmlDocument> 物件中尋找 <`EncryptedData`> 項目 (由 XML 加密標準定義)，並建立新的 <xref:System.Xml.XmlElement> 物件來代表該項目。  
   
@@ -81,6 +81,7 @@ ms.locfileid: "33583376"
   
  當您完成使用對稱密碼編譯金鑰，請從記憶體清除它，方法是將每個位元組設定為零，或呼叫 Managed 密碼編譯類別的 <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> 方法。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Security.Cryptography.Xml>  
- [操作說明：使用對稱金鑰加密 XML 元素](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Security.Cryptography.Xml>  
+- [操作說明：使用對稱金鑰加密 XML 元素](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)

@@ -1,18 +1,18 @@
 ---
-title: 如何：自訂滑桿上的刻度
+title: 操作說明：自訂滑桿上的刻度
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TickBar [WPF]
 - Slider control [WPF], creating with TickBar
 ms.assetid: 4fa694f2-a620-4b15-be78-5f4286f89361
 ms.openlocfilehash: 045a2f540a37cdea84d2bf2f3ed1e74e122bdbb5
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43746106"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864372"
 ---
-# <a name="how-to-customize-the-ticks-on-a-slider"></a>如何：自訂滑桿上的刻度
+# <a name="how-to-customize-the-ticks-on-a-slider"></a>操作說明：自訂滑桿上的刻度
 此範例示範如何建立<xref:System.Windows.Controls.Slider>具有刻度標記的控制項。  
   
 ## <a name="example"></a>範例  

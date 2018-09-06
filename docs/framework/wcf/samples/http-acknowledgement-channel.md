@@ -3,11 +3,11 @@ title: HTTP 要求認可通道
 ms.date: 03/30/2017
 ms.assetid: 469f3056-5ef2-4753-8acf-b574d23d83cf
 ms.openlocfilehash: d83f3aa590471aa3d83b8f7bd1464ec1e6e106fc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43559539"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856228"
 ---
 # <a name="http-acknowledgement-channel"></a>HTTP 要求認可通道
 HTTP 確認通道 (HTTP Acknowledgement Channel) 是層次通道的一個範例，此通道可以變更單向訊息模式，讓服務確認或拒絕傳入訊息，而不會在收到後就自動傳送確認。 HTTP 確認通道也會讓服務延遲確認，直到它可以保證商務層級的訊息將經過處理。  

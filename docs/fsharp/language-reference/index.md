@@ -2,22 +2,20 @@
 title: F# 語言參考
 description: '尋找 F # 語言的功能資訊此參考以語言的語彙基元、 概念、 類型、 運算式和編譯器支援建構的主題。'
 ms.date: 05/16/2016
-ms.openlocfilehash: e0f0b54ab95e634538fc8511a18aac9d8ee00f26
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: adce37ee393673b7611ad24f385c8b8106f6ce86
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937081"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43873246"
 ---
 # <a name="f-language-reference"></a>F# 語言參考
 
 本節是 F # 語言，以.NET 為目標的多範型程式設計語言的參考。 F# 語言支援函式、物件導向和命令式程式設計語言。
 
-
 ## <a name="f-tokens"></a>F# 語彙基元
+
 下表顯示的參考主題提供作為 F# 語彙基元之關鍵字、符號和常值的表格。
-
-
 
 |標題|描述|
 |-----|-----------|
@@ -26,9 +24,8 @@ ms.locfileid: "37937081"
 |[常值](literals.md)|描述 F# 常值的語法以及如何指定 F# 常值的類型資訊。|
 
 ## <a name="f-language-concepts"></a>F# 語言概念
+
 下表顯示描述語言概念的可用參考主題。
-
-
 
 |標題|描述|
 |-----|-----------|
@@ -56,9 +53,8 @@ ms.locfileid: "37937081"
 |[詳細語法](verbose-syntax.md)|描述未啟用輕量型語法時的 F# 建構語法。 詳細語法是透過程式碼頂端的 `#light "off"` 指示詞所表示。|
 
 ## <a name="f-types"></a>F# 類型
+
 下表顯示描述 F# 語言所支援類型的可用參考主題。
-
-
 
 |標題|描述|
 |-----|-----------|
@@ -88,6 +84,7 @@ ms.locfileid: "37937081"
 |[類型提供者](../tutorials/type-providers/index.md)|描述型別提供者，並且提供逐步解說如何使用內建的型別提供者來存取資料庫和 Web 服務的連結。|
 
 ## <a name="f-expressions"></a>F# 運算式
+
 下表列出描述 F# 運算式的主題。
 
 |標題|描述|
@@ -105,6 +102,7 @@ ms.locfileid: "37937081"
 |[查詢運算式](query-expressions.md)|描述查詢運算式，這種語言功能可為 F# 實作 LINQ，並且可讓您針對資料來源或可列舉集合撰寫查詢。|
 
 ## <a name="compiler-supported-constructs"></a>編譯器支援的建構
+
 下表列出描述編譯器支援之特殊建構的主題。
 
 |主題|描述|
@@ -114,4 +112,5 @@ ms.locfileid: "37937081"
 |[原始碼程式行、檔案與路徑識別項](source-line-file-path-identifiers.md)|描述識別項 `__LINE__`、`__SOURCE_DIRECTORY__` 和 `__SOURCE_FILE__`，這些內建值可讓您存取原始程式碼中的行號、目錄和檔案名稱。|
 
 ## <a name="see-also"></a>另請參閱
-[Visual F#](../index.md)
+
+- [Visual F#](../index.md)

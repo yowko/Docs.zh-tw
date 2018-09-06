@@ -1,121 +1,121 @@
 ---
-title: CBC 模式的對稱式解密使用邊框距離與計時弱點
-description: 了解如何偵測和解決時間的弱點可能會使用加密區塊鏈結 (CBC) 模式對稱解密使用的填補。
+title: 使用 CBC 模式的對稱式解密使用邊框間距的計時弱點
+description: 了解如何偵測及降低計時弱點與 Cipher Block Chaining (CBC) 模式對稱式解密使用的填補。
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: 26f4d19f591ac02d792bebbd648e90b07d84de56
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 6d16b6849bfd4744f1828cda38a537f842243c1d
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208682"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881365"
 ---
-# <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>CBC 模式的對稱式解密使用邊框距離與計時弱點
+# <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>使用 CBC 模式的對稱式解密使用邊框間距的計時弱點
 
-Microsoft 認為有，就無法再解密資料時不含第一個確保完整性的加密文字，除了已套用可驗證的填補加密使用對稱式加密的加密區塊鏈結 (CBC) 模式的安全非常特定情況。 此 judgement 根據目前已知的密碼編譯研究。 
+Microsoft 認為它是無法再解密資料加密使用對稱式加密 Cipher Block Chaining (CBC) 模式，而不先確保完整性的密碼文字，除了已套用可驗證的填補時的安全非常特定情況。 此判斷是以目前已知的密碼編譯研究為基礎。 
 
 ## <a name="introduction"></a>簡介
 
-填補 oracle 攻擊是一種攻擊，可讓攻擊者能夠解密資料的內容，而不需要知道的金鑰加密資料。
+填補 oracle 攻擊是一種攻擊可讓攻擊者來解密資料，而不需要知道金鑰的加密資料。
 
-Oracle 指的是 「 告訴 」，讓它們執行的動作是否為正確的攻擊者資訊。 想像一下棋盤或遊戲卡片具有子系。 當她朝亮起大笑臉與她認為她是因為即將進行的良好移動，是一種 oracle。 為對手，可用於此 oracle 適當地計劃下移動。
+Oracle 指的是 「 告訴 」 讓它們執行的動作是否為正確的攻擊者資訊。 想像一下播放面板或卡片具有子系的遊戲。 當她臉部會點亮並以巨量的笑臉替因為她認為她是即將進行的良好移動，是一種 oracle。 為對手，可以使用此 oracle 適當地規劃下一步的移動。
 
-填補為特定的密碼編譯詞彙。 某些加密方式，也就是用來加密資料的演算法，適用於其中每個區塊都是固定的大小資料區塊。 如果您想要加密的資料不正確的大小以填滿的區塊，直到它會填補資料。 許多形式的填補都需要該填補一律必須存在，即使是正確的大小是原始的輸入。 這可讓永遠可以安全地移除在解密時的填補。
+填補為特定的密碼編譯期間。 某些編碼器，也就是用來加密資料的演算法，適用於其中每個區塊的大小是固定的資料區塊。 如果您想要加密的資料不正確的大小以填滿的區塊，直到它會填補資料。 許多形式的邊框距離要求一律必須存在，即使已正確大小的原始輸入該邊框距離。 這可讓一律可以安全地移除時解密的填補。
 
-將放在一起的兩個項目，與邊框距離 oracle 軟體實作會顯示已解密的資料是否有有效的填補。 Oracle 可能是簡單的為傳回值，指出 「 無效的填補 」 或類似適當地不同的時間，來處理無效的區塊，而不是無效的區塊更複雜的項目。
+將兩個項目放在一起，與邊框距離 oracle 軟體實作，顯示解密的資料是否具有有效的填補。 傳回值，指出 「 無效的邊框距離 」 簡單或更複雜，例如處理而不是無效的區塊是有效區塊的具體不同時間，可能是 oracle。
 
-區塊為基礎的加密方式會有另一個屬性稱為模式，用來決定第一個區塊的第二個區塊中的資料中的資料關聯性，並以此類推。 CBC 其中一個最常使用的模式。 CBC 引進初始的隨機區塊，已知為初始化向量 (IV)，並以靜態加密以容易使用相同的金鑰加密相同的訊息不一定會產生相同的加密的輸出的結果結合在前一個區塊。
+區塊編碼器會有另一個屬性，稱為模式，用來決定第一個區塊的第二個區塊中的資料中的資料關聯性，等等。 其中一個最常使用的模式是 CBC。 CBC 引進初始的隨機區塊，已知為初始化向量 (IV)，並結合的靜態加密，以方便，使用相同的金鑰加密相同的訊息不一定會產生相同加密的輸出結果中的前一個區塊。
 
-攻擊者可以使用填補 oracle，搭配 CBC 資料結構的方式，將稍有變更的訊息傳送至 oracle 公開 （expose） 的程式碼，並保留傳送資料，直到 oracle 告訴他們的資料正確。 從這個回應中，攻擊者可以解密位元組的訊息。
+攻擊者可以使用填補 oracle，搭配 CBC 資料結構的方式，將稍有變更的訊息傳送至 oracle，公開 （expose） 的程式碼，並持續傳送資料，直到 oracle 告訴他們的資料正確。 從這個回應，攻擊者可以解密逐位元組的訊息。
 
-現代電腦的網路是這類高品質的攻擊者可以偵測很小 （少於 0.1 毫秒） 的執行差異時間在遠端系統上。 假設，成功解密只會發生在資料未遭竄改的應用程式可能容易受到攻擊工具，設計來觀察成功與不成功解密的差異。 雖然這項時間差異可能有某些語言或程式庫中比其他更重要，現在相信這是實際服務威脅中的所有語言和程式庫，當應用程式的回應失敗列入考量。
+現代電腦網路都屬於這類高品質攻擊者可以偵測很小 （小於 0.1 毫秒） 在遠端系統上執行的差異時間。 假設資料未曾遭到竄改時，可以只會發生成功解密的應用程式可能容易遭受攻擊的工具，專為觀察在成功和失敗的解密的差異。 雖然這項時間差異可能是在某些語言或程式庫比其他更重要的現在認為這是實際服務威脅中的所有語言和程式庫，當失敗的應用程式的回應會納入考量。
 
-這種攻擊會依賴變更加密的資料和測試結果與 oracle 的能力。 以完全降低攻擊的唯一方法是偵測到加密資料的變更，並拒絕在其上執行任何動作。 若要這樣做的標準方式是建立資料的簽章及執行任何作業之前驗證該簽章。 簽章必須經過驗證，攻擊者無法加以建立，否則它們就可以變更加密的資料，然後計算新的簽章已變更的資料為基礎。 一個常見的適當簽章類型稱為做為索引鍵雜湊訊息驗證碼 (HMAC)。 HMAC 與總和檢查碼的所需的秘密金鑰，已知只產生 HMAC 的人員，並確認它的人員。 未使用擁有金鑰，您不會產生正確的 HMAC。 當您收到您的資料時，請接受加密的資料，您和寄件者共用，然後比較的 HMAC 它們傳送給其中一個針對您計算獨立計算使用之祕密金鑰的 HMAC。 這項比較必須是固定的時間，否則您新增另一個偵測到 oracle，允許不同類型的攻擊。
+這種攻擊會依賴變更加密的資料和測試結果與 oracle 的能力。 完全緩和攻擊的唯一方法是偵測加密資料的變更，並拒絕在其上執行任何動作。 若要這樣做的標準方式是建立資料的簽章，並執行任何作業之前，請驗證該簽章。 簽章必須可供驗證，攻擊者無法加以建立，否則它們就可以變更加密的資料，然後計算新的簽章已變更的資料為基礎。 一個常見的適當簽章的類型稱為金鑰式雜湊訊息驗證碼 (HMAC)。 HMAC 與總和檢查碼不同，在於它會使用祕密金鑰，已知只產生 HMAC 的人員，並確認它的人員。 而不需要擁有金鑰，您無法產生正確的 HMAC。 當您收到您的資料時，您會需要加密的資料，獨立計算 HMAC 使用祕密金鑰，您寄件者共用，然後它們傳送給其中一個您 HMAC 計算的比較。 這項比較必須是固定的時間，否則您已新增另一個偵測到 oracle，可讓不同類型的攻擊。
 
-在 [摘要] 使用填補 CBC 區塊加密安全地，您必須將它們結合 HMAC （或其他資料完整性檢查） 進行驗證再試一次使用常數時間比較，來解密資料。 因為所有已變更的訊息採取相同的時間，以產生回應，防止攻擊。
+總而言之，使用填補 CBC 區塊加密方式安全地，您必須將它們合併 HMAC （或其他資料完整性檢查） 進行驗證再試一次使用固定時間的比較，來解密資料。 由於所有變更的訊息需要產生回應的相同時間量，防止攻擊。
 
 ## <a name="who-is-vulnerable"></a>易受攻擊是誰
 
-這項弱點適用於 managed 和原生應用程式會執行自己的加密與解密。 這包括，例如：
+這項弱點適用於 managed 和原生應用程式會執行自己的加密和解密。 這包括，例如：
 
-- 加密 cookie，以更新解密在伺服器上的應用程式。
-- 可讓您的使用者將資料插入資料表的資料行的資料庫應用程式會稍後進行解密。
-- 資料傳輸應用程式所使用的加密來保護傳輸中的資料使用共用的金鑰。
-- 應用程式來加密及解密訊息 「 內部 」 TLS 通道。
+- 應用程式來加密伺服器上的更新版本解密 cookie。
+- 提供可讓使用者將資料插入資料表的資料行的資料庫應用程式會稍後會進行解密。
+- 使用共用的金鑰來保護傳輸中的資料加密所依賴的應用程式的資料傳輸。
+- 應用程式來加密及解密 「 內部 」 TLS 通道的訊息。
 
-請注意，使用 TLS 單獨可能無法保護您在這些案例。
+請注意，使用 TLS 本身可能不保護您在這些情況下。
 
 易受攻擊的應用程式：
 
-- 使用 CBC 加密模式可驗證的填補模式中，例如 PKCS #7 或 ANSI X.923 解密資料。
-- 執行解密，而不需要執行資料完整性檢查 （透過 MAC 或非對稱的數位簽章）。
+- 使用 CBC 加密模式，可驗證的填補模式，例如 PKCS #7 或 ANSI X.923 解密資料。
+- 執行解密，而不需要執行資料完整性檢查 （透過在 MAC 或非對稱的數位簽章）。
 
-這也適用於之上的抽象概念，透過下列基本類型，例如密碼編譯訊息語法 (PKCS #7/CMS) EnvelopedData 結構頂端的應用程式。
+這也適用於應用程式之上，請在下列基本類型，例如密碼編譯訊息語法 (PKCS #7/CMS) EnvelopedData 結構為基礎的抽象概念。
 
-## <a name="related-areas-of-concern"></a>相關的問題區域
+## <a name="related-areas-of-concern"></a>相關的關切的區域
 
-研究導致 Microsoft 進一步考量到會填補 ISO 10126 等同填補訊息具有已知或可預測的頁尾結構時的 CBC 訊息。 例如，內容備妥的 W3C XML 加密語法和處理建議 (xmlenc EncryptedXml) 的規則。 雖然 W3C 指引，來簽署訊息，然後加密已被視為適當時，Microsoft 現在建議您一律加密後簽署。
+參考資料造成 Microsoft 進一步考量到會填補填補訊息時的已知或可預測的頁尾結構的 ISO 10126-對等的 CBC 訊息。 例如，內容已備妥的 W3C XML 加密語法和處理建議 (xmlenc EncryptedXml) 的規則。 雖然 W3C 指導方針，以簽署訊息，然後加密已被視為適當時，Microsoft 現在會建議一律進行加密再簽署。
 
-應用程式開發人員應該一律留意驗證適用性的非對稱簽章金鑰，因為沒有之間的非對稱金鑰和任意訊息沒有固有的信任關係。
+因為沒有任何固有之間的信任關係的非對稱金鑰和任意的訊息，應用程式開發人員應該一律是留意驗證的非對稱簽章金鑰的適用性。
 
 ## <a name="details"></a>詳細資料
 
-在過去，已經很重要，來加密和驗證很重要的資料，使用方式如 HMAC 或 RSA 簽章的共識。 不過，有較少清楚的指引，來選擇加密和驗證作業的序列。 此文件中詳述的弱點，因為 Microsoft 的指南現在是一律使用 「 加密然後-簽署 」 開發架構。 也就是第一次使用對稱金鑰，加密資料，然後透過加密文字 （已加密的資料） 會計算 MAC 或非對稱簽章。 解密資料，當執行反向。 首先，確認 MAC 或簽章的加密文字，然後再將其解密。
+在過去，已經很重要，來加密和驗證使用 HMAC 或 RSA 簽章等方式的重要資料的共識。 不過，已減少清楚的指引，來選擇要排序的加密和驗證作業。 本文章中的弱點，因為 Microsoft 的指引是現在一律使用 「 加密然後-簽署 」 典範。 也就是第一次使用對稱金鑰，加密資料，則計算加密文字 （加密的資料） 的 MAC 或非對稱簽章。 當解密資料，請執行反向。 首先，確認 MAC 或簽章的加密文字，然後將它解密。
 
-稱為 「 填補 oracle 攻擊"存在於過去 10 年的已知弱點的類別。 這些弱點可能會允許攻擊者來解密使用不超過 4096 嘗試每個資料區塊的區塊對稱演算法，例如 AES 和 3DES 加密資料。 這些弱點請使用下列事實的區塊密碼最常搭配可驗證的邊框距離結尾的資料。 它找不到攻擊者可以竄改加密文字，並找出是否遭到竄改會導致錯誤的尾端填補格式中，是否攻擊者可以解密資料。
+稱為 「 填補 oracle 攻擊 」 存在超過 10 年已知的弱點類別。 這些弱點會允許攻擊者使用來解密資料加密的對稱區塊的演算法，例如 AES 和 3DES，超過 4096 個嘗試每個資料區塊。 進行這些弱點可驗證的邊框距離結尾的資料最常使用的區塊編碼器的事實使用。 它找不到攻擊者可以修改加密文字，並了解是否遭到竄改而造成錯誤的結尾填補格式，是否攻擊者可以解密資料。
 
-一開始，實際的攻擊根據服務，會傳回不同的錯誤代碼，根據是否有效，例如 ASP.NET 的弱點可能會填補[MS10 070](https://technet.microsoft.com/library/security/ms10-070.aspx)。 不過，Microsoft 現在相信會實際進行類似攻擊使用只在處理有效和無效的邊框距離之間的時間差異。
+一開始，會傳回不同的錯誤代碼是否有效，例如 ASP.NET 的弱點可能會填補為基礎的服務以實際的攻擊[MS10 070](https://technet.microsoft.com/library/security/ms10-070.aspx)。 不過，Microsoft 現在認為它是實際進行類似的攻擊使用只在處理有效和無效的邊框距離之間的時間差異。
 
-而不發出任何資訊的加密配置會使用簽章，並指定長度的資料 （不管內容） 的固定執行階段與執行簽章驗證，可以確認資料完整性攻擊者透過[側邊通道](https://en.wikipedia.org/wiki/Side-channel_attack)。 因為完整性檢查會拒絕遭竄改的任何訊息，以降低填補 oracle 威脅。
+而不發出任何資訊，提供的加密配置採用簽章和簽章驗證會使用固定的執行階段指定長度的資料 （不論內容中） 執行的可以驗證資料完整性攻擊者透過[側邊通道](https://en.wikipedia.org/wiki/Side-channel_attack)。 因為完整性檢查會拒絕遭竄改的任何訊息，以降低填補 oracle 威脅。
 
 ## <a name="guidance"></a>指引
 
-首先和最重要，Microsoft 建議透過傳輸層安全性 (TLS)，以安全通訊端層 (SSL) 的後續版本需要傳輸任何資料的機密性。
+首先，Microsoft 建議透過傳輸層安全性 (TLS)，以安全通訊端層 (SSL) 的後續版本需要傳送任何具有機密性的資料。
 
 接下來，分析您的應用程式：
 
-- 了解精確地將您要執行何種加密，並由平台和您所使用的應用程式開發介面提供何種加密。
-- 會確認每個對稱的每個層級的用法[區塊編碼演算法](https://en.wikipedia.org/wiki/Block_cipher#Notable_block_ciphers)，例如 AES 和 3DES、 CBC 模式的合併使用的密碼為索引鍵的資料完整性檢查 (非對稱簽章的 HMAC，或變更的 cipher 模式[驗證加密](https://en.wikipedia.org/wiki/Authenticated_encryption)(AE) 模式，例如 GCM 或 CCM)。
+- 了解精確地將您要執行何種加密，並由平台和您使用的 Api 提供何種加密。
+- 可確定每個使用方式，在每一層的對稱[區塊加密演算法](https://en.wikipedia.org/wiki/Block_cipher#Notable_block_ciphers)，例如 AES 和 3DES，CBC 模式的合併使用的密碼為索引鍵的資料完整性檢查 (非對稱簽章的 HMAC，或若要變更加密模式[驗證加密](https://en.wikipedia.org/wiki/Authenticated_encryption)(AE) 模式，例如 GCM 或 CCM)。
 
-根據目前的參考資料，因此一般認為當驗證及加密的步驟會單獨執行加密的非 AE 模式中，驗證加密文字 （加密--簽署） 是最佳的一般選項。 不過，沒有一體適用接聽正確密碼編譯，這項通則不從專業安全無不如導向的建議。
+以目前研究為基礎，因此一般認為，非 AE 模式，加密的獨立執行的驗證和加密步驟時，驗證加密文字 （加密-然後-簽署） 時，最佳的一般選項。 不過，沒有一體適用的正確解答，密碼編譯，而且這個一般化不專業的解碼員從不如導向的建議。
 
-無法變更其訊息的格式，但執行未經驗證的 CBC 解密的應用程式應該在嘗試併入緩和措施，例如：
+無法變更其訊息的格式，但執行未經驗證的 CBC 解密的應用程式，建議嘗試將緩和措施，例如：
 
 - 不允許的解密程式來驗證或移除填補解密：
-  - 已套用任何填補仍然需要移除或略過，您要移動到您的應用程式的負擔。
-  - 好處是，填補驗證及移除可以會合併到其他應用程式資料的驗證邏輯。 如果填補驗證及資料驗證，就可以完成以常數時間會降低威脅。
-  - 因為填補的解譯會改變認知的訊息長度，仍可能從這種方法發出的計時資訊。
-- 變更 ISO10126 解密填補模式：
-  - ISO10126 解密填補為相容於 PKCS7 加密填補和 ANSIX923 加密填補。
-  - 變更模式會填補 oracle 知識減少至 1 個位元組，而不是整個區塊。 不過，如果內容有已知的頁尾，結尾 XML 項目，例如相關的攻擊可以繼續攻擊其餘的訊息。
-  - 這也不會阻止純文字攻擊者可以強制轉換相同的純文字加密多次以不同的訊息位移的情況下復原。
-- 閘道解密呼叫水輥計時訊號的評估：
-  - 計算的保留時間必須至少有超過最大解密作業會採取任何包含填補的資料區段的時間量。
-  - 時間運算，應該要根據中的指導方針[取得高解析度的時間戳記](https://msdn.microsoft.com/library/windows/desktop/dn55340.aspx)，不是使用<xref:System.Environment.TickCount?displayProperty=nameWithType>（受限於向前復原超過/溢位） 上或減去兩個的系統時間戳記 （受限於 NTP 調整錯誤）。
-  - 時間運算必須包含解密作業，包括所有可能的例外狀況中管理或 c + + 應用程式，不只是尾端填補。
-  - 如果已尚未決定成功或失敗，計時閘道需要過期時傳回失敗。
-- 要執行未經驗證的解密的服務都應該具有監視中用來偵測已通過大量的 「 無效 」 訊息。
-  - 請記住此訊號會誤判 （合法損毀的資料） 和誤否定 （分配段夠長的時間，以避開偵測攻擊）。
+  - 已套用任何填補字元仍必須移除，或略過，您要移動到您的應用程式的負擔。
+  - 優點是，填補驗證及移除，可以合併到其他應用程式資料的驗證邏輯。 如果填補驗證及資料驗證可以以常數時間來完成，則會降低潛在威脅。
+  - 因為填補的解譯變更察覺到的訊息長度，仍可能從這種方法發出的計時資訊。
+- 變更 ISO10126 解密的填補模式：
+  - ISO10126 解密填補是與 PKCS7 加密填補和 ANSIX923 加密填補相容。
+  - 將模式變更成 1 個位元組，而不是整個區塊減少填補 oracle 知識。 不過，如果內容有已知的頁尾中，例如結尾 XML 項目相關的攻擊可以繼續攻擊其餘的訊息。
+  - 這也不會阻止在其中，攻擊者可以強制轉型會以不同的訊息位移加密多次相同的純文字的情況下的純文字復原。
+- 閘道評估的解密呼叫水輥計時訊號：
+  - 等候時間的計算必須解密作業會針對包含填補的任何資料 」 區段所需的時間的最大數量超過最小值。
+  - 時間計算應該根據中的指導方針[取得高解析度的時間戳記](https://msdn.microsoft.com/library/windows/desktop/dn55340.aspx)，不是使用<xref:System.Environment.TickCount?displayProperty=nameWithType>（受限於向前復原移轉/溢位） 上或減去兩個系統的時間戳記，（受限於 NTP 調整錯誤）。
+  - 時間計算必須包括在所有可能的例外狀況解密作業包含管理或 c + + 應用程式，不只是加在尾端填補。
+  - 如果已尚未決定成功或失敗，計時閘道需要它過期時傳回失敗。
+- 監視機制來偵測已通過的 「 無效 」 訊息時，應該執行未經驗證的解密的服務。
+  - 請記住此訊號會誤肯定 （合法的損毀的資料） 和誤否定 （經過一段夠長的時間來規避偵測攻擊散佈）。
 
-## <a name="finding-vulnerable-code---native-applications"></a>尋找受到程式碼的原生應用程式
+## <a name="finding-vulnerable-code---native-applications"></a>尋找易受攻擊的程式碼-原生應用程式
 
-針對 Windows 密碼編譯所建立的程式： Next Generation (CNG) 程式庫：
+建置 Windows 密碼編譯的程式： Next Generation (CNG) 程式庫：
 
-- 解密呼叫[BCryptDecrypt](https://msdn.microsoft.com/library/windows/desktop/aa375391.aspx)，並指定`BCRYPT_BLOCK_PADDING`旗標。
-- 索引鍵的控制代碼已藉由呼叫初始化[BCryptSetProperty](https://msdn.microsoft.com/library/windows/desktop/aa375504.aspx)與[BCRYPT_CHAINING_MODE](https://msdn.microsoft.com/library/windows/desktop/aa376211.aspx#BCRYPT_CHAINING_MODE)設`BCRYPT_CHAIN_MODE_CBC`。
-  - 因為`BCRYPT_CHAIN_MODE_CBC`是預設設定，受影響的程式碼可能未指派任何值`BCRYPT_CHAINING_MODE`。
+- 解密呼叫是對[BCryptDecrypt](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptdecrypt)，並指定`BCRYPT_BLOCK_PADDING`旗標。
+- 藉由呼叫已經初始化的金鑰控制代碼[BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty)具有[BCRYPT_CHAINING_MODE](https://msdn.microsoft.com/library/windows/desktop/aa376211.aspx#BCRYPT_CHAINING_MODE)設定為`BCRYPT_CHAIN_MODE_CBC`。
+  - 由於`BCRYPT_CHAIN_MODE_CBC`是預設設定，受影響的程式碼可能未指派任何值`BCRYPT_CHAINING_MODE`。
 
-針對較舊的 Windows 密碼編譯 API 所建立的程式：
+針對較舊的 Windows 密碼編譯 API 建置的程式：
 
-- 解密呼叫[CryptDecrypt](https://msdn.microsoft.com/library/windows/desktop/aa379913.aspx)與`Final=TRUE`。
-- 索引鍵的控制代碼已藉由呼叫初始化[CryptSetKeyParam](https://msdn.microsoft.com/library/windows/desktop/aa380272.aspx)與[KP_MODE](https://msdn.microsoft.com/library/windows/desktop/aa379949.aspx#KP_MODE)設`CRYPT_MODE_CBC`。
-  - 因為`CRYPT_MODE_CBC`是預設設定，受影響的程式碼可能未指派任何值`KP_MODE`。
+- 解密呼叫是對[CryptDecrypt](/windows/desktop/api/wincrypt/nf-wincrypt-cryptdecrypt)使用`Final=TRUE`。
+- 藉由呼叫已經初始化的金鑰控制代碼[CryptSetKeyParam](/windows/desktop/api/wincrypt/nf-wincrypt-cryptsetkeyparam)具有[KP_MODE](https://msdn.microsoft.com/library/windows/desktop/aa379949.aspx#KP_MODE)設定為`CRYPT_MODE_CBC`。
+  - 由於`CRYPT_MODE_CBC`是預設設定，受影響的程式碼可能未指派任何值`KP_MODE`。
 
-## <a name="finding-vulnerable-code---managed-applications"></a>尋找受到程式碼的 managed 應用程式
+## <a name="finding-vulnerable-code---managed-applications"></a>尋找受到程式碼-受管理的應用程式
 
-- 解密呼叫<xref:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor>或<xref:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor(System.Byte[],System.Byte[])>方法<xref:System.Security.Cryptography.SymmetricAlgorithm?displayProperty=nameWithType>。
-  - 這包括.NET 中的下列衍生型別，但也可能包括第三方類型：
+- 解密呼叫是對<xref:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor>或是<xref:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor(System.Byte[],System.Byte[])>上的方法<xref:System.Security.Cryptography.SymmetricAlgorithm?displayProperty=nameWithType>。
+  - 這包括在.NET 中，下列的衍生型別，但也可能包含協力廠商類型：
     - <xref:System.Security.Cryptography.Aes>
     - <xref:System.Security.Cryptography.AesCng>
     - <xref:System.Security.Cryptography.AesCryptoServiceProvider>
@@ -130,23 +130,23 @@ Oracle 指的是 「 告訴 」，讓它們執行的動作是否為正確的攻�
     - <xref:System.Security.Cryptography.TripleDESCng>
     - <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>
 - <xref:System.Security.Cryptography.SymmetricAlgorithm.Padding?displayProperty=nameWithType>屬性設定為<xref:System.Security.Cryptography.PaddingMode.PKCS7?displayProperty=nameWithType>， <xref:System.Security.Cryptography.PaddingMode.ANSIX923?displayProperty=nameWithType>，或<xref:System.Security.Cryptography.PaddingMode.ISO10126?displayProperty=nameWithType>。
-  - 因為<xref:System.Security.Cryptography.PaddingMode.PKCS7?displayProperty=nameWithType>是預設設定，受影響的程式碼可能永遠不會指派<xref:System.Security.Cryptography.SymmetricAlgorithm.Padding?displayProperty=nameWithType>屬性。
+  - 由於<xref:System.Security.Cryptography.PaddingMode.PKCS7?displayProperty=nameWithType>是預設設定，受影響的程式碼可能永遠不會指派<xref:System.Security.Cryptography.SymmetricAlgorithm.Padding?displayProperty=nameWithType>屬性。
 - <xref:System.Security.Cryptography.SymmetricAlgorithm.Mode?displayProperty=nameWithType>屬性設定為 <xref:System.Security.Cryptography.CipherMode.CBC?displayProperty=nameWithType>
-  - 因為<xref:System.Security.Cryptography.CipherMode.CBC?displayProperty=nameWithType>是預設設定，受影響的程式碼可能永遠不會指派<xref:System.Security.Cryptography.SymmetricAlgorithm.Mode?displayProperty=nameWithType>屬性。
+  - 由於<xref:System.Security.Cryptography.CipherMode.CBC?displayProperty=nameWithType>是預設設定，受影響的程式碼可能永遠不會指派<xref:System.Security.Cryptography.SymmetricAlgorithm.Mode?displayProperty=nameWithType>屬性。
 
-## <a name="finding-vulnerable-code---cryptographic-message-syntax"></a>密碼編譯訊息語法中尋找受到程式碼-
+## <a name="finding-vulnerable-code---cryptographic-message-syntax"></a>尋找易受攻擊的程式碼-密碼編譯訊息語法
 
-未經驗證的 CMS EnvelopedData 訊息其加密的內容會使用 CBC 模式的 AES （2.16.840.1.101.3.4.1.2、 2.16.840.1.101.3.4.1.22、 2.16.840.1.101.3.4.1.42）、 DES (1.3.14.3.2.7)、 3DES (1.2.840.113549.3.7) 或 RC2 (1.2.840.113549.3.2) 是易受攻擊，以及做為訊息使用 CBC 模式的任何其他的區塊加密演算法。
+未驗證的 CMS EnvelopedData 訊息，其加密的內容會使用 CBC 模式的 AES （2.16.840.1.101.3.4.1.2、 2.16.840.1.101.3.4.1.22 2.16.840.1.101.3.4.1.42）、 DES (1.3.14.3.2.7)、 3DES (1.2.840.113549.3.7) 或 RC2 (1.2.840.113549.3.2) 是易受攻擊，以及做為訊息使用 CBC 模式的任何其他的區塊加密演算法。
 
-資料流加密不容易受到這項特定弱點，Microsoft 建議一律在檢查 ContentEncryptionAlgorithm 值進行驗證資料。
+雖然資料流加密不容易受到這項特定弱點，Microsoft 建議一律透過檢查 ContentEncryptionAlgorithm 值進行驗證的資料。
 
-對於受管理的應用程式，blob 可以是 CMS EnvelopedData 偵測到任何值，傳遞至<xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decode(System.Byte[])?displayProperty=fullName>。
+對於受管理的應用程式，blob 可以是 CMS EnvelopedData 偵測到任何值，會傳遞至<xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decode(System.Byte[])?displayProperty=fullName>。
 
-原生應用程式，可以偵測 CMS EnvelopedData blob 做為 CMS 控點，透過提供任何值[CryptMsgUpdate](https://msdn.microsoft.com/library/windows/desktop/aa380231.aspx)其產生[CMSG_TYPE_PARAM](https://msdn.microsoft.com/library/windows/desktop/aa380227.aspx)是`CMSG_ENVELOPED`，及/或 CMS 控制代碼稍後傳送`CMSG_CTRL_DECRYPT`指令透過[CryptMsgControl](https://msdn.microsoft.com/library/windows/desktop/aa380220.aspx)。
+原生應用程式，CMS EnvelopedData blob 可以偵測到的 CMS 控點，透過提供任何值[CryptMsgUpdate](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsgupdate)其產生[CMSG_TYPE_PARAM](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsggetparam)是`CMSG_ENVELOPED`和/或 CMS 控制代碼稍後傳送`CMSG_CTRL_DECRYPT`透過指令[CryptMsgControl](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsgcontrol)。
 
 ## <a name="vulnerable-code-example---managed"></a>易受攻擊的程式碼範例-管理
 
-這個方法會讀取 cookie，然後加以解密及檢視任何資料完整性檢查。 因此，使用者已收到，或任何攻擊者取得加密的 cookie 值，這個方法所讀取的 cookie 的內容可能會遭受攻擊。
+這個方法會讀取 cookie，然後將它解密且可以看見任何資料完整性檢查。 因此，使用者已收到，或任何攻擊者取得加密的 cookie 值，這個方法會讀取 cookie 的內容可能會遭受攻擊。
 
 ```csharp
 private byte[] DecryptCookie(string cookieName)
@@ -171,17 +171,17 @@ private byte[] DecryptCookie(string cookieName)
 }
 ```
 
-## <a name="example-code-following-recommended-practices---managed"></a>範例程式碼下列建議的作法-管理
+## <a name="example-code-following-recommended-practices---managed"></a>下列範例程式碼建議的作法-管理
 
 下列範例程式碼會使用非標準的訊息格式
 
 `cipher_algorithm_id || hmac_algorithm_id || hmac_tag || iv || ciphertext`
 
-其中`cipher_algorithm_id`和`hmac_algorithm_id`演算法識別項是應用程式的本機 （非標準） 的這些演算法。 這些識別項合理的其他部分而不是您現有的訊息通訊協定為裸機串連位元組資料流。
+何處`cipher_algorithm_id`和`hmac_algorithm_id`演算法識別項是這些演算法的應用程式的本機 （非標準） 的表示法。 這些識別碼合理的其他部分，而不是您現有的傳訊通訊協定為裸機串連位元組資料流。
 
-此範例也使用單一的主要金鑰來加密金鑰和 HMAC 金鑰衍生。 這會提供方便同時開啟單一索引鍵的應用程式到做為索引鍵雙重應用程式，並保留兩個索引鍵為不同的值。 進一步可保證沒有進行同步處理無法取得的 HMAC 金鑰和加密金鑰。
+此範例也會使用單一的主要金鑰來加密金鑰和 HMAC 金鑰衍生。 這被提供兩者都是為了方便起見，開啟單一索引應用程式到雙重為索引鍵的應用程式，並鼓勵保留兩個索引鍵為不同的值。 它進一步保證的 HMAC 金鑰和加密金鑰無法取得未執行同步處理。
 
-此範例不接受<xref:System.IO.Stream>加密或解密。 目前的資料格式可讓一段式加密困難因為`hmac_tag`值之前加密文字。 不過，因為它讓剖析器更簡單的開頭會將所有的固定大小的項目已被選擇這種格式。 此資料格式時，一段式解密是可行的實作者 cautioned 呼叫 GetHashAndReset 並驗證的結果，然後再呼叫 TransformFinalBlock 也一樣。 如果資料流加密很重要的不同的 AE 模式可能需要。
+此範例不會接受<xref:System.IO.Stream>加密或解密。 目前的資料格式進行一段式加密不容易因為`hmac_tag`值之前加密文字。 不過，因為它在最開頭一直到簡單的剖析器會將所有固定大小的項目，已選擇這種格式。 此資料格式時，一段式解密是可行的但實作者 cautioned 呼叫 GetHashAndReset 並呼叫 TransformFinalBlock 之前驗證結果。 如果資料流加密很重要的不同的 AE 模式可能需要。
 
 ```csharp
 // ==++==

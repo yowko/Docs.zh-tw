@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Visual Basic, language reference
 ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
 ms.openlocfilehash: 2c0372e0176ea54a975e787631ba2849f79e5493
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43736798"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43876618"
 ---
 # <a name="visual-basic-language-reference"></a>Visual Basic 語言參考
 本節中的各個層面的 Visual Basic 語言的參考資訊。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [印刷樣式與程式碼慣例](../../visual-basic/language-reference/typographic-and-code-conventions.md)  
  摘要說明格式化關鍵字、 預留位置和語言的其他項目，在 Visual Basic 文件中的方式。  
   

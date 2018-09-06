@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serializing objects
 - objects, serializing steps
 ms.assetid: a1207d05-32b2-4953-8582-959607991227
-ms.openlocfilehash: b979d63132b44ee2e05fcc55cfdd4c79309a159b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e4d6e3edb15dbf5ba4b7ec7f8658fec1a618d315
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581442"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875745"
 ---
 # <a name="how-to-serialize-an-object"></a>HOW TO：序列化物件
 若要序列化物件，首先建立要序列化的物件，並設定其公用屬性與欄位。 若要執行這項作業，您必須判斷 XML 資料流儲存 (無論是資料流或檔案) 的傳輸格式。 例如，若 XML 資料流必須以永久形式儲存，請建立 <xref:System.IO.FileStream> 物件。  
@@ -50,6 +50,7 @@ ms.locfileid: "33581442"
     myWriter.Close();  
     ```  
   
-## <a name="see-also"></a>另請參閱  
- [XML 序列化簡介](../../../docs/standard/serialization/introducing-xml-serialization.md)  
- [如何：還原序列化物件](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+## <a name="see-also"></a>另請參閱
+
+- [XML 序列化簡介](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+- [如何：還原序列化物件](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

@@ -2,12 +2,12 @@
 title: 非同步工作流程 (F#)
 description: '了解支援 F # 程式設計語言，以非同步方式執行計算中執行而不會封鎖執行其他工作。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 9516a281701b6c431fc950fe6881359f9c8a672b
-ms.sourcegitcommit: dc02d7d95f1e3efcc7166eaf431b0ec0dc9d8dca
+ms.openlocfilehash: 2a6d5f8b61d63a722744f8f71a037e8bc460c64f
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37143501"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861558"
 ---
 # <a name="asynchronous-workflows"></a>非同步工作流程
 
@@ -67,8 +67,6 @@ let! (result2 : byte[])  = stream.AsyncRead(bufferSize)
 
 ## <a name="see-also"></a>另請參閱
 
-[F# 語言參考](index.md)
-
-[計算運算式](computation-expressions.md)
-
-[Control.Async 類別](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.async-class-%5bfsharp%5d)
+- [F# 語言參考](index.md)
+- [計算運算式](computation-expressions.md)
+- [Control.Async 類別](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.async-class-%5bfsharp%5d)

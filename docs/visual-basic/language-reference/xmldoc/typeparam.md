@@ -6,11 +6,11 @@ helpviewer_keywords:
 - <typeparam> XML tag
 ms.assetid: 1bb5ba78-f060-478c-905c-77a2e43639af
 ms.openlocfilehash: d362f181921a39d274eaee78e85976522ce4fc15
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43736188"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863185"
 ---
 # <a name="lttypeparamgt-visual-basic"></a>&lt;typeparam&gt; (Visual Basic)
 定義的型別參數名稱和描述。  
