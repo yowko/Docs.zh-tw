@@ -6,11 +6,11 @@ helpviewer_keywords:
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
 ms.openlocfilehash: da7a6c15c558fc56dbc6a874d4a28c4434f67668
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777359"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43876592"
 ---
 # <a name="ltincludegt-visual-basic"></a>&lt;包含&gt;(Visual Basic)
 參考描述的類型和成員在原始程式碼中的另一個檔案。  
@@ -23,16 +23,16 @@ ms.locfileid: "43777359"
   
 #### <a name="parameters"></a>參數  
  `filename`  
- 必要項。 包含文件的檔案名稱。 檔案名稱可以使用路徑進行限定。 括住`filename`以雙引號 ("")。  
+ 必要。 包含文件的檔案名稱。 檔案名稱可以使用路徑進行限定。 括住`filename`以雙引號 ("")。  
   
  `tagpath`  
- 必要項。 `filename` 中導致 `name` 標記的標記路徑。 請將路徑括在雙引號 ("")。  
+ 必要。 `filename` 中導致 `name` 標記的標記路徑。 請將路徑括在雙引號 ("")。  
   
  `name`  
- 必要項。 在註解前面的標記名稱規範。 `Name` 將會有`id`。  
+ 必要。 在註解前面的標記名稱規範。 `Name` 將會有`id`。  
   
  `id`  
- 必要項。 位在註解前面的標記識別碼。 請將識別碼括在單引號 (' ')。  
+ 必要。 位在註解前面的標記識別碼。 請將識別碼括在單引號 (' ')。  
   
 ## <a name="remarks"></a>備註  
  使用`<include>`標記來參考另一個檔案中描述的類型的註解和在原始程式碼中的成員。 這是將文件註解直接放在原始程式碼檔中的替代方案。  

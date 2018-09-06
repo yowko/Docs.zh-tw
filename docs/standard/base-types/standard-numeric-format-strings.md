@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7f304adb567e3568fb4624b3c5e9ec4585009a05
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7906426d76cb50f2539593094e87fb325227c411
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43565738"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863465"
 ---
 # <a name="standard-numeric-format-strings"></a>標準數值格式字串
 
@@ -359,10 +359,11 @@ ms.locfileid: "43565738"
  [!code-csharp-interactive[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#1)]
  [!code-vb[system.x.tostring-and-culture#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.X.ToString-and-Culture/vb/xts.vb#1)]  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Globalization.NumberFormatInfo>  
- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
- [格式化類型](../../../docs/standard/base-types/formatting-types.md)  
- [操作說明：以前置字元為零來填補數字](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
- [範例：.NET Framework 4 格式化公用程式](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)  
- [複合格式](../../../docs/standard/base-types/composite-formatting.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Globalization.NumberFormatInfo>  
+- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
+- [格式化類型](../../../docs/standard/base-types/formatting-types.md)  
+- [操作說明：以前置字元為零來填補數字](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
+- [範例：.NET Framework 4 格式化公用程式](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)  
+- [複合格式](../../../docs/standard/base-types/composite-formatting.md)

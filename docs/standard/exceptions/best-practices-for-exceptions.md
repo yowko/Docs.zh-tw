@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd38b59e39f938d6347457100243f09935444d88
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: ee61d01acbf9c409eaedc04ff3e949908e1d595e
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33578076"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43867851"
 ---
 # <a name="best-practices-for-exceptions"></a>例外狀況的最佳做法
 
@@ -106,7 +106,7 @@ ms.locfileid: "33578076"
 
 ## <a name="use-grammatically-correct-error-messages"></a>使用文法正確的錯誤訊息
 
-撰寫清楚的句子並包含結尾標點符號。 在每個指派給 <xref:System.Exception.Message?displayProperty=nameWithType> 屬性的字串中之句子，都應以句點結束。 例如，「記錄資料表已溢位。」 就是正確的訊息字串。
+撰寫清楚的句子並包含結尾標點符號。 在每個指派給 <xref:System.Exception.Message?displayProperty=nameWithType> 屬性的字串中之句子，都應以句點結束。 例如，「記錄資料表已溢位」。 就是正確的訊息字串。
 
 ## <a name="include-a-localized-string-message-in-every-exception"></a>在每個例外狀況中，納入當地語系化的字串訊息
 
@@ -173,5 +173,6 @@ catch (Exception ex)
 }
 ```
 
-## <a name="see-also"></a>請參閱  
-[例外狀況](index.md)
+## <a name="see-also"></a>另請參閱
+
+- [例外狀況](index.md)
