@@ -7,11 +7,11 @@ helpviewer_keywords:
 - federation [WCF], issued tokens
 ms.assetid: 4c31ee7d-a820-4067-8b84-a83049021bb6
 ms.openlocfilehash: bdbd5c49197b65816da9b0f2c87d97afb893d79f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43420206"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43788100"
 ---
 # <a name="federation-and-issued-tokens"></a>聯合與發行的權杖
 使用 Windows Communication Foundation (WCF) 中，您可以建立與實作 WS-同盟和 Ws-trust 規格的服務安全地通訊的用戶端。 這些規格使用 XML、SOAP 和 Web 服務描述語言 (WSDL)，提供跨不同信任領域的驗證和授權。  

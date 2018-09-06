@@ -3,11 +3,11 @@ title: DataTables
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
 ms.openlocfilehash: 2849d159fbfdb0c0739b76fd288a987d4ce3d02f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43560141"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43786056"
 ---
 # <a name="datatables"></a>DataTables
 <xref:System.Data.DataSet> 是由資料表集合、關係和條件約束所組成。 在 ADO.NET 中，<xref:System.Data.DataTable>物件用來代表中的資料表**資料集**。 A **DataTable**表示記憶體中關聯式資料; 的一個資料表資料位於本機。以.NET 為基礎的應用程式它位於，但可以從資料來源，例如 Microsoft SQL Server 使用填入**DataAdapter**如需詳細資訊，請參閱[從 DataAdapter 填入 DataSet](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md).  

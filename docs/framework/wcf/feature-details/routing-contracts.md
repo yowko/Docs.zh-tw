@@ -3,11 +3,11 @@ title: 路由合約
 ms.date: 03/30/2017
 ms.assetid: 9ceea7ae-ea19-4cf9-ba4f-d071e236546d
 ms.openlocfilehash: 73d303c95a636f5e90f256272726c08c581d6fdf
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 09/05/2018
-ms.locfileid: "43735497"
+ms.locfileid: "43785988"
 ---
 # <a name="routing-contracts"></a>路由合約
 路由合約會定義路由服務可以處理的訊息模式。  每一個合約都是無型別合約，可讓服務在不知道訊息結構描述或動作的情況下接收訊息。 如此可讓路由服務以一般方式路由傳送訊息，而不需要額外設定所路由傳送之基礎訊息的細節。  

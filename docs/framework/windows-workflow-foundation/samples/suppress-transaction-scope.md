@@ -3,11 +3,11 @@ title: 隱藏異動範圍
 ms.date: 03/30/2017
 ms.assetid: 49fb6dd4-30d4-4067-925c-c5de44c8c740
 ms.openlocfilehash: 44814d66a4de4b3e72bb33eb46019eb1088ab040
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385190"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43788035"
 ---
 # <a name="suppress-transaction-scope"></a>隱藏異動範圍
 此範例示範如何撰寫自訂 `SuppressTransactionScope` 活動，以隱藏環境執行階段交易 (如果有的話)。  

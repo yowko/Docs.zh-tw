@@ -9,11 +9,11 @@ helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
 ms.openlocfilehash: 41b6eaa39abfab6cda943162c5c10d1cbeaa9e49
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 09/05/2018
-ms.locfileid: "43732984"
+ms.locfileid: "43785336"
 ---
 # <a name="myresources-object"></a>My.Resources 物件
 提供屬性和類別來存取應用程式的資源。  
@@ -38,7 +38,7 @@ ms.locfileid: "43732984"
   
 -   類別會決定屬性的型別：  
   
-|類別|屬性資料型別|  
+|分類|屬性資料型別|  
 |---|---|  
 |**字串**|[String](../../../visual-basic/language-reference/data-types/string-data-type.md)|  
 |**影像**|<xref:System.Drawing.Bitmap>|  

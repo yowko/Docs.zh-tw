@@ -7,11 +7,11 @@ helpviewer_keywords:
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
 ms.openlocfilehash: ce8209c89430988f57c211d388c6e73b2dc17004
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43457272"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43787515"
 ---
 # <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>逐步解說：在 Win32 中裝載 WPF 時鐘
 把[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]應用程式，使用<xref:System.Windows.Interop.HwndSource>，以提供包含 HWND 您[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容。 第一次建立<xref:System.Windows.Interop.HwndSource>，讓它將與 CreateWindow 類似的參數。  接著您告訴<xref:System.Windows.Interop.HwndSource>關於[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容要放在其內。  最後，您可以放大的 HWND <xref:System.Windows.Interop.HwndSource>。 此逐步解說將說明如何建立混合[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]實作作業系統的應用程式**日期和時間內容**對話方塊。  
@@ -80,7 +80,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
                      int       nCmdShow)  
 ```  
   
- 此屬性會告知[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]，在它初始化[!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)]，它應該使用單一執行緒的 apartment 模型 (STA)，這是所需[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (和[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)])。  
+ 此屬性會告知[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]，在它初始化[!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)]，它應該使用單一執行緒的 apartment 模型 (STA)，這是所需[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)](和[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)])。  
   
 ## <a name="create-a-windows-presentation-framework-page"></a>建立 Windows Presentation Framework 頁面  
  接下來，您可以建立定義的 DLL [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Page>。 它通常是最簡單的方式建立[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.Page>做為獨立的應用程式，以及撰寫和偵錯[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]部分如此。  完成後，該專案可以轉換成 DLL 以滑鼠右鍵按一下專案中，按一下**屬性**、 移至應用程式，並輸出類型變更為 Windows 類別庫。  

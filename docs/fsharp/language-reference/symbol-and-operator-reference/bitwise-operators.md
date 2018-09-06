@@ -2,18 +2,19 @@
 title: 位元運算子 (F#)
 description: '深入了解 F # 程式設計語言中可用的位元運算子。'
 ms.date: 07/20/2018
-ms.openlocfilehash: abd2778eba422b3ce2a3472efd458446854b3d2f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ed76fcf5f9c569a2f288cf260e99dc29fd65ef3b
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43559552"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43784364"
 ---
 # <a name="bitwise-operators"></a>位元運算子
 
 本主題說明 F # 語言中可用的位元運算子。
 
 ## <a name="summary-of-bitwise-operators"></a>位元運算子的摘要
+
 下表描述支援 F # 語言中的 unboxed 整數類資料類型的位元運算子。
 
 |運算子|注意|
@@ -28,9 +29,7 @@ ms.locfileid: "43559552"
 與位元運算子，可以使用下列類型： `byte`， `sbyte`， `int16`， `uint16`， `int32 (int)`， `uint32`， `int64`， `uint64`， `nativeint`，以及`unativeint`。
 
 ## <a name="see-also"></a>另請參閱
-[符號和運算子參考](index.md)
 
-[算術運算子](arithmetic-operators.md)
-
-[布林運算子](boolean-operators.md)
-
+- [符號和運算子參考](index.md)
+- [算術運算子](arithmetic-operators.md)
+- [布林運算子](boolean-operators.md)

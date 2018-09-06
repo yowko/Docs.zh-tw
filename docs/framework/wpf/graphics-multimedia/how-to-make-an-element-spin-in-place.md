@@ -6,11 +6,11 @@ helpviewer_keywords:
 - spinning elements [WPF]
 ms.assetid: 1f011976-8b07-4c31-9faf-019e0ddaa24c
 ms.openlocfilehash: 56385d7c31465e25f19486ea5cdaa8876cdb30ff
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43534408"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43784441"
 ---
 # <a name="how-to-make-an-element-spin-in-place"></a>如何：使項目就地旋轉
 此範例示範如何讓組織使用的項目<xref:System.Windows.Media.RotateTransform>和<xref:System.Windows.Media.Animation.DoubleAnimation>。  

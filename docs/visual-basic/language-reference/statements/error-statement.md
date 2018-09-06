@@ -11,11 +11,11 @@ helpviewer_keywords:
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
 ms.openlocfilehash: 84fce92183228cbfa5554a3ba45770a86e83bff5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43400623"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43787047"
 ---
 # <a name="error-statement"></a>Error 陳述式
 模擬錯誤的相符項目。  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
 ms.openlocfilehash: c012eeb7ef7dad8c52b8b9a5f153582710c1fd73
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 09/05/2018
-ms.locfileid: "43725029"
+ms.locfileid: "43788161"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>攔截手寫筆的輸入
 <xref:System.Windows.Input.StylusPlugIns>架構提供一個機制，透過實作的低階控制<xref:System.Windows.Input.Stylus>輸入和建立數位筆墨<xref:System.Windows.Ink.Stroke>物件。 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>類別會提供您實作自訂行為，並將它套用到來自手寫筆裝置，以獲得最佳的效能資料的資料流的機制。  

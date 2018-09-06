@@ -2,12 +2,12 @@
 title: '開始使用 F # 在 Visual Studio for Mac'
 description: '了解如何使用 F # 與 Visual Studio for mac。'
 ms.date: 07/03/2018
-ms.openlocfilehash: 200c3a8fee072797a54d15d8989937f4cadb33e2
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 6aceec299c29e04aecd7999cd1dda6a56dd2779a
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874649"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43785527"
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>開始使用 F # 在 Visual Studio for Mac
 
@@ -114,8 +114,9 @@ val it : bool = true
 如果您還沒有這麼做，請參閱[的 F # 教學課程](../tour.md)，其中涵蓋了一些 F # 語言的核心功能。  它會提供一些 F # 的功能的概觀，並提供很大的程式碼範例，您可以複製到 Visual Studio for Mac，並執行。  也有一些絕佳的外部資源，您可以使用，以展示[F # 指南](../index.md)。
 
 ## <a name="see-also"></a>另請參閱
- [Visual F#](../index.md)  
- [F# 的教學課程](../tour.md)  
- [F # 語言參考](../language-reference/index.md)  
- [型別推斷](../language-reference/type-inference.md)  
- [符號和運算子參考](../language-reference/symbol-and-operator-reference/index.md)  
+
+- [Visual F#](../index.md)  
+- [F# 的教學課程](../tour.md)  
+- [F # 語言參考](../language-reference/index.md)  
+- [型別推斷](../language-reference/type-inference.md)  
+- [符號和運算子參考](../language-reference/symbol-and-operator-reference/index.md)  

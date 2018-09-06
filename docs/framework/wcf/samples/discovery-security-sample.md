@@ -5,11 +5,11 @@ ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 7a8dcd0a835bb669b669d5a510e01142c85ea07a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421220"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43786540"
 ---
 # <a name="discovery-security-sample"></a>探索安全性範例
 探索規格不會要求參與探索程序的端點是安全的。 增強探索訊息的安全性會減少各種攻擊 (訊息變更、阻斷服務、重新執行、詐騙)。 此範例使用精簡簽章格式 (如 WS-Discovery 規格的第 8.2 節所述) 實作計算與驗證訊息簽章的自訂通道。 此範例同時支援[2005年探索規格](https://go.microsoft.com/fwlink/?LinkId=177912)並[1.1 版](https://go.microsoft.com/fwlink/?LinkId=179677)。  

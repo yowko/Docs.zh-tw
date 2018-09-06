@@ -10,11 +10,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 3ea2f89320a58a12c8f43a813337caf4f8992835
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43400929"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43788048"
 ---
 # <a name="ui-automation-support-for-the-button-control-type"></a>Button 控制項類型的 UI 自動化支援
 > [!NOTE]

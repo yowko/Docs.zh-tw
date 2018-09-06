@@ -6,11 +6,11 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], Visual Basic
 ms.assetid: 130f7c2b-8eb1-4a6e-81aa-e30e27d3d4f7
 ms.openlocfilehash: ce61401dec875ac1dea01e1e5a892d06974a3d36
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463502"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43788022"
 ---
 # <a name="visual-basic-run-time-messages"></a>Visual Basic 執行階段訊息
 本節包含在執行階段發生的 Visual Basic 錯誤訊息。  

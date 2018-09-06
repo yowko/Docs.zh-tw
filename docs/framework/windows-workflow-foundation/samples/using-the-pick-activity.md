@@ -3,11 +3,11 @@ title: 使用 Pick 活動
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
 ms.openlocfilehash: 193b60bff7b08c0de9a0957668483eb73be97274
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43563158"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43784669"
 ---
 # <a name="using-the-pick-activity"></a>使用 Pick 活動
 這個範例示範如何使用 <xref:System.Activities.Statements.Pick> 活動。  

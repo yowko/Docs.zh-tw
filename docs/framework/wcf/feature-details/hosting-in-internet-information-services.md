@@ -5,11 +5,11 @@ helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
 ms.openlocfilehash: e9d0e5a165eb2eabae95da9fd1e744a9bd1c201b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43479847"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43786971"
 ---
 # <a name="hosting-in-internet-information-services"></a>在網際網路資訊服務中裝載
 裝載 Windows Communication Foundation (WCF) 服務的其中一個選項是在 Internet Information Services (IIS) 應用程式內。 這個裝載模型與 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 和 ASP.NET (ASMX) Web 服務所使用的模型很類似。  

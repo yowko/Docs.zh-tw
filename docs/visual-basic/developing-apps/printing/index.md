@@ -3,11 +3,11 @@ title: 列印和報告 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 92997b65-0279-4889-8db7-32cb6708be9c
 ms.openlocfilehash: 926526a64cd0b70db4864329454fbc42f3e34b1e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43539036"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43787118"
 ---
 # <a name="printing-and-reporting-visual-basic"></a>列印和報告 (Visual Basic)
 Visual Basic 提供列印和報告的數個的選項。 下列主題提供概觀以及列印和報告的相關文件的連結。  

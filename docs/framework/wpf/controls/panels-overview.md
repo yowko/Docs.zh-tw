@@ -10,11 +10,11 @@ helpviewer_keywords:
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
 ms.openlocfilehash: f8fd3237d71bc1960678565192c7ef9ddcb2c366
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562899"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43787996"
 ---
 # <a name="panels-overview"></a>面板概觀
 <xref:System.Windows.Controls.Panel> 元素是控制元素轉譯的元件，其大小和維度、 其位置和其子內容的排列方式。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供數個預先定義<xref:System.Windows.Controls.Panel>項目，以及能夠建構自訂<xref:System.Windows.Controls.Panel>項目。  

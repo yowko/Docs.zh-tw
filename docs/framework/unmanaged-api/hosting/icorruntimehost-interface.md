@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ecf6bff10e98ab7f008cfd176f59687f34d89553
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43471951"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43784772"
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost 介面
 提供方法，讓主應用程式啟動，並明確地停止 common language runtime (CLR)，來建立及設定應用程式定義域，若要存取預設網域，並列舉處理序中執行的所有網域。  
@@ -65,6 +65,6 @@ ms.locfileid: "43471951"
  <xref:System.AppDomain>  
  [裝載](../../../../docs/framework/unmanaged-api/hosting/index.md)  
  [ICLRRuntimeHost 介面](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)  
- [執行階段主機](https://msdn.microsoft.com/library/99d9246a-b994-4fe5-985c-8588d1d59998)  
+ [執行階段主應用程式](https://msdn.microsoft.com/library/99d9246a-b994-4fe5-985c-8588d1d59998)  
  [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
  [CorRuntimeHost Coclass](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)
