@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0c09832d296033b0790d3e6282763a1163abdfd2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406287"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43747524"
 ---
-# <a name="iclrstrongnamestrongnamehashsize-method"></a><span data-ttu-id="ab17e-102">ICLRStrongName::StrongNameHashSize 方法</span><span class="sxs-lookup"><span data-stu-id="ab17e-102">ICLRStrongName::StrongNameHashSize Method</span></span>
-<span data-ttu-id="ab17e-103">取得雜湊，使用指定的雜湊演算法所需的緩衝區大小。</span><span class="sxs-lookup"><span data-stu-id="ab17e-103">Gets the buffer size required for a hash, using the specified hash algorithm.</span></span>  
+# <a name="iclrstrongnamestrongnamehashsize-method"></a><span data-ttu-id="4fede-102">ICLRStrongName::StrongNameHashSize 方法</span><span class="sxs-lookup"><span data-stu-id="4fede-102">ICLRStrongName::StrongNameHashSize Method</span></span>
+<span data-ttu-id="4fede-103">使用指定的雜湊演算法取得雜湊所需的緩衝區大小。</span><span class="sxs-lookup"><span data-stu-id="4fede-103">Gets the buffer size required for a hash, using the specified hash algorithm.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ab17e-104">語法</span><span class="sxs-lookup"><span data-stu-id="ab17e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4fede-104">語法</span><span class="sxs-lookup"><span data-stu-id="4fede-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameHashSize (  
@@ -36,24 +36,24 @@ HRESULT StrongNameHashSize (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ab17e-105">參數</span><span class="sxs-lookup"><span data-stu-id="ab17e-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="4fede-105">參數</span><span class="sxs-lookup"><span data-stu-id="4fede-105">Parameters</span></span>  
  `ulHashAlg`  
- <span data-ttu-id="ab17e-106">[in]雜湊演算法，用來計算的緩衝區大小。</span><span class="sxs-lookup"><span data-stu-id="ab17e-106">[in] The hash algorithm used to compute the buffer size.</span></span>  
+ <span data-ttu-id="4fede-106">[in]雜湊演算法，用來計算的緩衝區大小。</span><span class="sxs-lookup"><span data-stu-id="4fede-106">[in] The hash algorithm used to compute the buffer size.</span></span>  
   
  `pcbSize`  
- <span data-ttu-id="ab17e-107">[out]傳回的緩衝區大小，以位元組為單位。</span><span class="sxs-lookup"><span data-stu-id="ab17e-107">[out] The returned buffer size, in bytes.</span></span>  
+ <span data-ttu-id="4fede-107">[out]傳回的緩衝區大小，以位元組為單位。</span><span class="sxs-lookup"><span data-stu-id="4fede-107">[out] The returned buffer size, in bytes.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ab17e-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="ab17e-108">Return Value</span></span>  
- <span data-ttu-id="ab17e-109">`S_OK` 如果這個方法順利完成否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)清單)。</span><span class="sxs-lookup"><span data-stu-id="ab17e-109">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4fede-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="4fede-108">Return Value</span></span>  
+ <span data-ttu-id="4fede-109">`S_OK` 如果這個方法順利完成否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)清單)。</span><span class="sxs-lookup"><span data-stu-id="4fede-109">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ab17e-110">需求</span><span class="sxs-lookup"><span data-stu-id="ab17e-110">Requirements</span></span>  
- <span data-ttu-id="ab17e-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ab17e-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4fede-110">需求</span><span class="sxs-lookup"><span data-stu-id="4fede-110">Requirements</span></span>  
+ <span data-ttu-id="4fede-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4fede-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ab17e-112">**標頭：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="ab17e-112">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="4fede-112">**標頭：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="4fede-112">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="ab17e-113">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="ab17e-113">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="4fede-113">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="4fede-113">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ab17e-114">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ab17e-114">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="4fede-114">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4fede-114">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ab17e-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ab17e-115">See Also</span></span>  
- [<span data-ttu-id="ab17e-116">ICLRStrongName 介面</span><span class="sxs-lookup"><span data-stu-id="ab17e-116">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="4fede-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4fede-115">See Also</span></span>  
+ [<span data-ttu-id="4fede-116">ICLRStrongName 介面</span><span class="sxs-lookup"><span data-stu-id="4fede-116">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

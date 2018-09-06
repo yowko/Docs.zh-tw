@@ -6,29 +6,29 @@ dev_langs:
 - vb
 ms.assetid: 1776f48f-9bea-41f6-83a4-c990c7a2c991
 ms.openlocfilehash: 83450e6ace33e89ddd263a1514f74f4d4e231cf7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: MT
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43405799"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43723408"
 ---
-# <a name="sqlcommand-execution-with-a-sqlnotificationrequest"></a><span data-ttu-id="0effe-102">使用 SqlNotificationRequest 執行 SqlCommand</span><span class="sxs-lookup"><span data-stu-id="0effe-102">SqlCommand Execution with a SqlNotificationRequest</span></span>
-<span data-ttu-id="0effe-103">您可以將 <xref:System.Data.SqlClient.SqlCommand> 設定為在從伺服器擷取的資料變更時產生通知，如果再次執行查詢，結果集就會不同。</span><span class="sxs-lookup"><span data-stu-id="0effe-103">A <xref:System.Data.SqlClient.SqlCommand> can be configured to generate a notification when data changes after it has been fetched from the server and the result set would be different if the query were executed again.</span></span> <span data-ttu-id="0effe-104">這對於想要在伺服器上使用自訂通知佇列，或者不想維護使用中物件的情況都很有用。</span><span class="sxs-lookup"><span data-stu-id="0effe-104">This is useful for scenarios where you want to use custom notification queues on the server or when you do not want to maintain live objects.</span></span>  
+# <a name="sqlcommand-execution-with-a-sqlnotificationrequest"></a><span data-ttu-id="cf311-102">使用 SqlNotificationRequest 執行 SqlCommand</span><span class="sxs-lookup"><span data-stu-id="cf311-102">SqlCommand Execution with a SqlNotificationRequest</span></span>
+<span data-ttu-id="cf311-103">您可以將 <xref:System.Data.SqlClient.SqlCommand> 設定為在從伺服器擷取的資料變更時產生通知，如果再次執行查詢，結果集就會不同。</span><span class="sxs-lookup"><span data-stu-id="cf311-103">A <xref:System.Data.SqlClient.SqlCommand> can be configured to generate a notification when data changes after it has been fetched from the server and the result set would be different if the query were executed again.</span></span> <span data-ttu-id="cf311-104">這對於想要在伺服器上使用自訂通知佇列，或者不想維護使用中物件的情況都很有用。</span><span class="sxs-lookup"><span data-stu-id="cf311-104">This is useful for scenarios where you want to use custom notification queues on the server or when you do not want to maintain live objects.</span></span>  
   
-## <a name="creating-the-notification-request"></a><span data-ttu-id="0effe-105">建立通知要求</span><span class="sxs-lookup"><span data-stu-id="0effe-105">Creating the Notification Request</span></span>  
- <span data-ttu-id="0effe-106">您可以將 <xref:System.Data.Sql.SqlNotificationRequest> 物件繫結至 `SqlCommand` 物件，藉此建立通知要求。</span><span class="sxs-lookup"><span data-stu-id="0effe-106">You can use a <xref:System.Data.Sql.SqlNotificationRequest> object to create the notification request by binding it to a `SqlCommand` object.</span></span> <span data-ttu-id="0effe-107">在要求建立之後，就不再需要 `SqlNotificationRequest` 物件。</span><span class="sxs-lookup"><span data-stu-id="0effe-107">Once the request is created, you no longer need the `SqlNotificationRequest` object.</span></span> <span data-ttu-id="0effe-108">您可以查詢佇列以尋找通知並進行適當的回應。</span><span class="sxs-lookup"><span data-stu-id="0effe-108">You can query the queue for any notifications and respond appropriately.</span></span> <span data-ttu-id="0effe-109">即使應用程式關閉後又重新啟動，也可能造成通知。</span><span class="sxs-lookup"><span data-stu-id="0effe-109">Notifications can occur even if the application is shut down and subsequently restarted.</span></span>  
+## <a name="creating-the-notification-request"></a><span data-ttu-id="cf311-105">建立通知要求</span><span class="sxs-lookup"><span data-stu-id="cf311-105">Creating the Notification Request</span></span>  
+ <span data-ttu-id="cf311-106">您可以將 <xref:System.Data.Sql.SqlNotificationRequest> 物件繫結至 `SqlCommand` 物件，藉此建立通知要求。</span><span class="sxs-lookup"><span data-stu-id="cf311-106">You can use a <xref:System.Data.Sql.SqlNotificationRequest> object to create the notification request by binding it to a `SqlCommand` object.</span></span> <span data-ttu-id="cf311-107">在要求建立之後，就不再需要 `SqlNotificationRequest` 物件。</span><span class="sxs-lookup"><span data-stu-id="cf311-107">Once the request is created, you no longer need the `SqlNotificationRequest` object.</span></span> <span data-ttu-id="cf311-108">您可以查詢佇列以尋找通知並進行適當的回應。</span><span class="sxs-lookup"><span data-stu-id="cf311-108">You can query the queue for any notifications and respond appropriately.</span></span> <span data-ttu-id="cf311-109">即使應用程式關閉後又重新啟動，也可能造成通知。</span><span class="sxs-lookup"><span data-stu-id="cf311-109">Notifications can occur even if the application is shut down and subsequently restarted.</span></span>  
   
- <span data-ttu-id="0effe-110">在執行具有相關聯通知的命令時，對原始結果集所做的任何變更，都會傳送訊息至在通知要求中設定的 SQL Server 佇列。</span><span class="sxs-lookup"><span data-stu-id="0effe-110">When the command with the associated notification is executed, any changes to the original result set trigger sending a message to the SQL Server queue that was configured in the notification request.</span></span>  
+ <span data-ttu-id="cf311-110">在執行具有相關聯通知的命令時，對原始結果集所做的任何變更，都會傳送訊息至在通知要求中設定的 SQL Server 佇列。</span><span class="sxs-lookup"><span data-stu-id="cf311-110">When the command with the associated notification is executed, any changes to the original result set trigger sending a message to the SQL Server queue that was configured in the notification request.</span></span>  
   
- <span data-ttu-id="0effe-111">輪詢 SQL Server 佇列及解譯訊息的方式，視應用程式而定。</span><span class="sxs-lookup"><span data-stu-id="0effe-111">How you poll the SQL Server queue and interpret the message is specific to your application.</span></span> <span data-ttu-id="0effe-112">應用程式負責輪詢佇列並依據訊息的內容進行回應。</span><span class="sxs-lookup"><span data-stu-id="0effe-112">The application is responsible for polling the queue and reacting based on the contents of the message.</span></span>  
+ <span data-ttu-id="cf311-111">輪詢 SQL Server 佇列及解譯訊息的方式，視應用程式而定。</span><span class="sxs-lookup"><span data-stu-id="cf311-111">How you poll the SQL Server queue and interpret the message is specific to your application.</span></span> <span data-ttu-id="cf311-112">應用程式負責輪詢佇列並依據訊息的內容進行回應。</span><span class="sxs-lookup"><span data-stu-id="cf311-112">The application is responsible for polling the queue and reacting based on the contents of the message.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="0effe-113">搭配使用 <xref:System.Data.SqlClient.SqlDependency> 與 SQL Server 通知要求時，請建立自己的佇列名稱，而不要使用預設服務名稱。</span><span class="sxs-lookup"><span data-stu-id="0effe-113">When using SQL Server notification requests with <xref:System.Data.SqlClient.SqlDependency>, create your own queue name instead of using the default service name.</span></span>  
+>  <span data-ttu-id="cf311-113">搭配使用 <xref:System.Data.SqlClient.SqlDependency> 與 SQL Server 通知要求時，請建立自己的佇列名稱，而不要使用預設服務名稱。</span><span class="sxs-lookup"><span data-stu-id="cf311-113">When using SQL Server notification requests with <xref:System.Data.SqlClient.SqlDependency>, create your own queue name instead of using the default service name.</span></span>  
   
- <span data-ttu-id="0effe-114"><xref:System.Data.Sql.SqlNotificationRequest> 沒有新的用戶端安全性項目。</span><span class="sxs-lookup"><span data-stu-id="0effe-114">There are no new client-side security elements for <xref:System.Data.Sql.SqlNotificationRequest>.</span></span> <span data-ttu-id="0effe-115">這通常是伺服器功能，並且伺服器已建立使用者要求通知時必須擁有的特殊權限。</span><span class="sxs-lookup"><span data-stu-id="0effe-115">This is primarily a server feature, and the server has created special privileges that users must have to request a notification.</span></span>  
+ <span data-ttu-id="cf311-114"><xref:System.Data.Sql.SqlNotificationRequest> 沒有新的用戶端安全性項目。</span><span class="sxs-lookup"><span data-stu-id="cf311-114">There are no new client-side security elements for <xref:System.Data.Sql.SqlNotificationRequest>.</span></span> <span data-ttu-id="cf311-115">這通常是伺服器功能，並且伺服器已建立使用者要求通知時必須擁有的特殊權限。</span><span class="sxs-lookup"><span data-stu-id="cf311-115">This is primarily a server feature, and the server has created special privileges that users must have to request a notification.</span></span>  
   
-### <a name="example"></a><span data-ttu-id="0effe-116">範例</span><span class="sxs-lookup"><span data-stu-id="0effe-116">Example</span></span>  
- <span data-ttu-id="0effe-117">下列程式碼片段將示範如何建立 <xref:System.Data.Sql.SqlNotificationRequest> 並將它與 <xref:System.Data.SqlClient.SqlCommand> 產生關聯。</span><span class="sxs-lookup"><span data-stu-id="0effe-117">The following code fragment demonstrates how to create a <xref:System.Data.Sql.SqlNotificationRequest> and associate it with a <xref:System.Data.SqlClient.SqlCommand>.</span></span>  
+### <a name="example"></a><span data-ttu-id="cf311-116">範例</span><span class="sxs-lookup"><span data-stu-id="cf311-116">Example</span></span>  
+ <span data-ttu-id="cf311-117">下列程式碼片段將示範如何建立 <xref:System.Data.Sql.SqlNotificationRequest> 並將它與 <xref:System.Data.SqlClient.SqlCommand> 產生關聯。</span><span class="sxs-lookup"><span data-stu-id="cf311-117">The following code fragment demonstrates how to create a <xref:System.Data.Sql.SqlNotificationRequest> and associate it with a <xref:System.Data.SqlClient.SqlCommand>.</span></span>  
   
 ```vb  
 ' Assume connection is an open SqlConnection.  
@@ -70,6 +70,6 @@ command.ExecuteReader();
 // SQL Server queue to see if you have a new message.  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0effe-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0effe-118">See Also</span></span>  
- [<span data-ttu-id="0effe-119">SQL Server 中的查詢通知</span><span class="sxs-lookup"><span data-stu-id="0effe-119">Query Notifications in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
- [<span data-ttu-id="0effe-120">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="0effe-120">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="cf311-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cf311-118">See Also</span></span>  
+ [<span data-ttu-id="cf311-119">SQL Server 中的查詢通知</span><span class="sxs-lookup"><span data-stu-id="cf311-119">Query Notifications in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
+ [<span data-ttu-id="cf311-120">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="cf311-120">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)

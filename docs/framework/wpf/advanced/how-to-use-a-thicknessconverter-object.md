@@ -9,27 +9,27 @@ helpviewer_keywords:
 - ThicknessConverter objects [WPF]
 ms.assetid: 52682194-d7fd-499c-8005-73fcc84e7b2c
 ms.openlocfilehash: 6c8f9e83468a7b189b96efca2e175c0f3fe0dfff
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399349"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735419"
 ---
-# <a name="how-to-use-a-thicknessconverter-object"></a><span data-ttu-id="6a61f-102">如何：使用 ThicknessConverter 物件</span><span class="sxs-lookup"><span data-stu-id="6a61f-102">How to: Use a ThicknessConverter Object</span></span>
-## <a name="example"></a><span data-ttu-id="6a61f-103">範例</span><span class="sxs-lookup"><span data-stu-id="6a61f-103">Example</span></span>  
- <span data-ttu-id="6a61f-104">此範例示範如何建立的執行個體<xref:System.Windows.ThicknessConverter>並用它來變更框線的粗細。</span><span class="sxs-lookup"><span data-stu-id="6a61f-104">This example shows how to create an instance of <xref:System.Windows.ThicknessConverter> and use it to change the thickness of a border.</span></span>  
+# <a name="how-to-use-a-thicknessconverter-object"></a><span data-ttu-id="3f6cb-102">如何：使用 ThicknessConverter 物件</span><span class="sxs-lookup"><span data-stu-id="3f6cb-102">How to: Use a ThicknessConverter Object</span></span>
+## <a name="example"></a><span data-ttu-id="3f6cb-103">範例</span><span class="sxs-lookup"><span data-stu-id="3f6cb-103">Example</span></span>  
+ <span data-ttu-id="3f6cb-104">此範例示範如何建立的執行個體<xref:System.Windows.ThicknessConverter>並用它來變更框線的粗細。</span><span class="sxs-lookup"><span data-stu-id="3f6cb-104">This example shows how to create an instance of <xref:System.Windows.ThicknessConverter> and use it to change the thickness of a border.</span></span>  
   
- <span data-ttu-id="6a61f-105">此範例會定義呼叫的自訂方法`changeThickness`; 這個方法會先將轉換的內容<xref:System.Windows.Controls.ListBoxItem>，因為定義於個別[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]檔案，以執行個體<xref:System.Windows.Thickness>，並稍後將轉換成內容<xref:System.String>。</span><span class="sxs-lookup"><span data-stu-id="6a61f-105">The example defines a custom method called `changeThickness`; this method first converts the contents of a <xref:System.Windows.Controls.ListBoxItem>, as defined in a separate [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] file, to an instance of <xref:System.Windows.Thickness>, and later converts the content into a <xref:System.String>.</span></span> <span data-ttu-id="6a61f-106">此方法會傳遞<xref:System.Windows.Controls.ListBoxItem>要<xref:System.Windows.ThicknessConverter>物件，然後將轉換<xref:System.Windows.Controls.ContentControl.Content%2A>的<xref:System.Windows.Controls.ListBoxItem>的執行個體<xref:System.Windows.Thickness>。</span><span class="sxs-lookup"><span data-stu-id="6a61f-106">This method passes the <xref:System.Windows.Controls.ListBoxItem> to a <xref:System.Windows.ThicknessConverter> object, which converts the <xref:System.Windows.Controls.ContentControl.Content%2A> of a <xref:System.Windows.Controls.ListBoxItem> to an instance of <xref:System.Windows.Thickness>.</span></span> <span data-ttu-id="6a61f-107">此值接著會傳遞的值<xref:System.Windows.Controls.Border.BorderThickness%2A>屬性<xref:System.Windows.Controls.Border>。</span><span class="sxs-lookup"><span data-stu-id="6a61f-107">This value is then passed back as the value of the <xref:System.Windows.Controls.Border.BorderThickness%2A> property of the <xref:System.Windows.Controls.Border>.</span></span>  
+ <span data-ttu-id="3f6cb-105">此範例會定義呼叫的自訂方法`changeThickness`; 這個方法會先將轉換的內容<xref:System.Windows.Controls.ListBoxItem>，因為定義於個別[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]檔案，以執行個體<xref:System.Windows.Thickness>，並稍後將轉換成內容<xref:System.String>。</span><span class="sxs-lookup"><span data-stu-id="3f6cb-105">The example defines a custom method called `changeThickness`; this method first converts the contents of a <xref:System.Windows.Controls.ListBoxItem>, as defined in a separate [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] file, to an instance of <xref:System.Windows.Thickness>, and later converts the content into a <xref:System.String>.</span></span> <span data-ttu-id="3f6cb-106">此方法會傳遞<xref:System.Windows.Controls.ListBoxItem>要<xref:System.Windows.ThicknessConverter>物件，然後將轉換<xref:System.Windows.Controls.ContentControl.Content%2A>的<xref:System.Windows.Controls.ListBoxItem>的執行個體<xref:System.Windows.Thickness>。</span><span class="sxs-lookup"><span data-stu-id="3f6cb-106">This method passes the <xref:System.Windows.Controls.ListBoxItem> to a <xref:System.Windows.ThicknessConverter> object, which converts the <xref:System.Windows.Controls.ContentControl.Content%2A> of a <xref:System.Windows.Controls.ListBoxItem> to an instance of <xref:System.Windows.Thickness>.</span></span> <span data-ttu-id="3f6cb-107">此值接著會傳遞的值<xref:System.Windows.Controls.Border.BorderThickness%2A>屬性<xref:System.Windows.Controls.Border>。</span><span class="sxs-lookup"><span data-stu-id="3f6cb-107">This value is then passed back as the value of the <xref:System.Windows.Controls.Border.BorderThickness%2A> property of the <xref:System.Windows.Controls.Border>.</span></span>  
   
- <span data-ttu-id="6a61f-108">此範例不會執行。</span><span class="sxs-lookup"><span data-stu-id="6a61f-108">This example does not run.</span></span>  
+ <span data-ttu-id="3f6cb-108">此範例不會執行。</span><span class="sxs-lookup"><span data-stu-id="3f6cb-108">This example does not run.</span></span>  
   
  [!code-csharp[ThicknessConverter#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThicknessConverter/CSharp/Window1.xaml.cs#1)]
  [!code-vb[ThicknessConverter#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThicknessConverter/VisualBasic/Window1.xaml.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="6a61f-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6a61f-109">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="3f6cb-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3f6cb-109">See Also</span></span>  
  <xref:System.Windows.Thickness>  
  <xref:System.Windows.ThicknessConverter>  
  <xref:System.Windows.Controls.Border>  
- [<span data-ttu-id="6a61f-110">如何： 變更邊界屬性</span><span class="sxs-lookup"><span data-stu-id="6a61f-110">How to: Change the Margin Property</span></span>](https://msdn.microsoft.com/library/8a313efd-5f99-4097-b4c1-8fa49d8379a2)  
- [<span data-ttu-id="6a61f-111">如何： 將 ListBoxItem 轉換成新的資料類型</span><span class="sxs-lookup"><span data-stu-id="6a61f-111">How to: Convert a ListBoxItem to a new Data Type</span></span>](https://msdn.microsoft.com/library/7a080b88-184e-4b27-bb61-d42bafba9727)  
- [<span data-ttu-id="6a61f-112">面板概觀</span><span class="sxs-lookup"><span data-stu-id="6a61f-112">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)
+ [<span data-ttu-id="3f6cb-110">如何： 變更邊界屬性</span><span class="sxs-lookup"><span data-stu-id="3f6cb-110">How to: Change the Margin Property</span></span>](https://msdn.microsoft.com/library/8a313efd-5f99-4097-b4c1-8fa49d8379a2)  
+ [<span data-ttu-id="3f6cb-111">如何： 將 ListBoxItem 轉換成新的資料類型</span><span class="sxs-lookup"><span data-stu-id="3f6cb-111">How to: Convert a ListBoxItem to a new Data Type</span></span>](https://msdn.microsoft.com/library/7a080b88-184e-4b27-bb61-d42bafba9727)  
+ [<span data-ttu-id="3f6cb-112">面板概觀</span><span class="sxs-lookup"><span data-stu-id="3f6cb-112">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)

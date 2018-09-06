@@ -10,16 +10,16 @@ helpviewer_keywords:
 - expressions [Visual Basic], returning control to
 ms.assetid: ac86e7f0-5a67-42c3-9834-0e0381efa3ec
 ms.openlocfilehash: fe200add4e29fe4bbe0fdf335dcd94107b8ff1eb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43537536"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43747807"
 ---
-# <a name="return-statement-visual-basic"></a><span data-ttu-id="0879a-102">Return 陳述式 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0879a-102">Return Statement (Visual Basic)</span></span>
-<span data-ttu-id="0879a-103">呼叫的程式碼將控制權還給`Function`， `Sub`， `Get`， `Set`，或`Operator`程序。</span><span class="sxs-lookup"><span data-stu-id="0879a-103">Returns control to the code that called a `Function`, `Sub`, `Get`, `Set`, or `Operator` procedure.</span></span>  
+# <a name="return-statement-visual-basic"></a><span data-ttu-id="ed48c-102">Return 陳述式 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ed48c-102">Return Statement (Visual Basic)</span></span>
+<span data-ttu-id="ed48c-103">呼叫的程式碼將控制權還給`Function`， `Sub`， `Get`， `Set`，或`Operator`程序。</span><span class="sxs-lookup"><span data-stu-id="ed48c-103">Returns control to the code that called a `Function`, `Sub`, `Get`, `Set`, or `Operator` procedure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0879a-104">語法</span><span class="sxs-lookup"><span data-stu-id="0879a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ed48c-104">語法</span><span class="sxs-lookup"><span data-stu-id="ed48c-104">Syntax</span></span>  
   
 ```  
 Return  
@@ -27,31 +27,31 @@ Return
 Return expression  
 ```  
   
-## <a name="part"></a><span data-ttu-id="0879a-105">組件</span><span class="sxs-lookup"><span data-stu-id="0879a-105">Part</span></span>  
+## <a name="part"></a><span data-ttu-id="ed48c-105">組件</span><span class="sxs-lookup"><span data-stu-id="ed48c-105">Part</span></span>  
  `expression`  
- <span data-ttu-id="0879a-106">在所需`Function`， `Get`，或`Operator`程序。</span><span class="sxs-lookup"><span data-stu-id="0879a-106">Required in a `Function`, `Get`, or `Operator` procedure.</span></span> <span data-ttu-id="0879a-107">運算式，表示要傳回給呼叫程式碼的值。</span><span class="sxs-lookup"><span data-stu-id="0879a-107">Expression that represents the value to be returned to the calling code.</span></span>  
+ <span data-ttu-id="ed48c-106">在所需`Function`， `Get`，或`Operator`程序。</span><span class="sxs-lookup"><span data-stu-id="ed48c-106">Required in a `Function`, `Get`, or `Operator` procedure.</span></span> <span data-ttu-id="ed48c-107">運算式，表示要傳回給呼叫程式碼的值。</span><span class="sxs-lookup"><span data-stu-id="ed48c-107">Expression that represents the value to be returned to the calling code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0879a-108">備註</span><span class="sxs-lookup"><span data-stu-id="0879a-108">Remarks</span></span>  
- <span data-ttu-id="0879a-109">在 `Sub`或`Set`程序中，`Return`陳述式相當於`Exit Sub`或`Exit Property`陳述式，和`expression`不可提供。</span><span class="sxs-lookup"><span data-stu-id="0879a-109">In a `Sub` or `Set` procedure, the `Return` statement is equivalent to an `Exit Sub` or `Exit Property` statement, and `expression` must not be supplied.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ed48c-108">備註</span><span class="sxs-lookup"><span data-stu-id="ed48c-108">Remarks</span></span>  
+ <span data-ttu-id="ed48c-109">在 `Sub`或`Set`程序中，`Return`陳述式相當於`Exit Sub`或`Exit Property`陳述式，和`expression`不可提供。</span><span class="sxs-lookup"><span data-stu-id="ed48c-109">In a `Sub` or `Set` procedure, the `Return` statement is equivalent to an `Exit Sub` or `Exit Property` statement, and `expression` must not be supplied.</span></span>  
   
- <span data-ttu-id="0879a-110">在  `Function`， `Get`，或`Operator`程序中，`Return`陳述式必須包含`expression`，和`expression`必須評估為可轉換為程序的傳回類型的資料類型。</span><span class="sxs-lookup"><span data-stu-id="0879a-110">In a `Function`, `Get`, or `Operator` procedure, the `Return` statement must include `expression`, and `expression` must evaluate to a data type that is convertible to the return type of the procedure.</span></span> <span data-ttu-id="0879a-111">在 `Function`或是`Get`程序中，您也可以另一種程序名稱，以做為傳回值，指派運算式，然後執行`Exit Function`或`Exit Property`陳述式。</span><span class="sxs-lookup"><span data-stu-id="0879a-111">In a `Function` or `Get` procedure, you also have the alternative of assigning an expression to the procedure name to serve as the return value, and then executing an `Exit Function` or `Exit Property` statement.</span></span> <span data-ttu-id="0879a-112">在 `Operator`程序中，您必須使用`Return expression`。</span><span class="sxs-lookup"><span data-stu-id="0879a-112">In an `Operator` procedure, you must use `Return expression`.</span></span>  
+ <span data-ttu-id="ed48c-110">在  `Function`， `Get`，或`Operator`程序中，`Return`陳述式必須包含`expression`，和`expression`必須評估為可轉換為程序的傳回類型的資料類型。</span><span class="sxs-lookup"><span data-stu-id="ed48c-110">In a `Function`, `Get`, or `Operator` procedure, the `Return` statement must include `expression`, and `expression` must evaluate to a data type that is convertible to the return type of the procedure.</span></span> <span data-ttu-id="ed48c-111">在 `Function`或是`Get`程序中，您也可以另一種程序名稱，以做為傳回值，指派運算式，然後執行`Exit Function`或`Exit Property`陳述式。</span><span class="sxs-lookup"><span data-stu-id="ed48c-111">In a `Function` or `Get` procedure, you also have the alternative of assigning an expression to the procedure name to serve as the return value, and then executing an `Exit Function` or `Exit Property` statement.</span></span> <span data-ttu-id="ed48c-112">在 `Operator`程序中，您必須使用`Return expression`。</span><span class="sxs-lookup"><span data-stu-id="ed48c-112">In an `Operator` procedure, you must use `Return expression`.</span></span>  
   
- <span data-ttu-id="0879a-113">您可以包含更多`Return`視需要在相同的程序的陳述式。</span><span class="sxs-lookup"><span data-stu-id="0879a-113">You can include as many `Return` statements as appropriate in the same procedure.</span></span>  
+ <span data-ttu-id="ed48c-113">您可以包含更多`Return`視需要在相同的程序的陳述式。</span><span class="sxs-lookup"><span data-stu-id="ed48c-113">You can include as many `Return` statements as appropriate in the same procedure.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="0879a-114">中的程式碼`Finally`區塊會執行`Return`中的陳述式`Try`或`Catch`區塊是發生，但在那之前`Return`陳述式會執行。</span><span class="sxs-lookup"><span data-stu-id="0879a-114">The code in a `Finally` block runs after a `Return` statement in a `Try` or `Catch` block is encountered, but before that `Return` statement executes.</span></span> <span data-ttu-id="0879a-115">A`Return`陳述式不能包含在`Finally`區塊。</span><span class="sxs-lookup"><span data-stu-id="0879a-115">A `Return` statement cannot be included in a `Finally` block.</span></span>  
+>  <span data-ttu-id="ed48c-114">中的程式碼`Finally`區塊會執行`Return`中的陳述式`Try`或`Catch`區塊是發生，但在那之前`Return`陳述式會執行。</span><span class="sxs-lookup"><span data-stu-id="ed48c-114">The code in a `Finally` block runs after a `Return` statement in a `Try` or `Catch` block is encountered, but before that `Return` statement executes.</span></span> <span data-ttu-id="ed48c-115">A`Return`陳述式不能包含在`Finally`區塊。</span><span class="sxs-lookup"><span data-stu-id="ed48c-115">A `Return` statement cannot be included in a `Finally` block.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0879a-116">範例</span><span class="sxs-lookup"><span data-stu-id="0879a-116">Example</span></span>  
- <span data-ttu-id="0879a-117">下列範例會使用`Return`陳述式時不需要採取任何動作的程序傳回給呼叫程式碼數次。</span><span class="sxs-lookup"><span data-stu-id="0879a-117">The following example uses the `Return` statement several times to return to the calling code when the procedure does not have to do anything else.</span></span>  
+## <a name="example"></a><span data-ttu-id="ed48c-116">範例</span><span class="sxs-lookup"><span data-stu-id="ed48c-116">Example</span></span>  
+ <span data-ttu-id="ed48c-117">下列範例會使用`Return`陳述式時不需要採取任何動作的程序傳回給呼叫程式碼數次。</span><span class="sxs-lookup"><span data-stu-id="ed48c-117">The following example uses the `Return` statement several times to return to the calling code when the procedure does not have to do anything else.</span></span>  
   
  [!code-vb[VbVbalrStatements#53](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/return-statement_1.vb)]  
   
-## <a name="see-also"></a><span data-ttu-id="0879a-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0879a-118">See Also</span></span>  
- [<span data-ttu-id="0879a-119">Function 陳述式</span><span class="sxs-lookup"><span data-stu-id="0879a-119">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
- [<span data-ttu-id="0879a-120">Sub 陳述式</span><span class="sxs-lookup"><span data-stu-id="0879a-120">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [<span data-ttu-id="0879a-121">Get 陳述式</span><span class="sxs-lookup"><span data-stu-id="0879a-121">Get Statement</span></span>](../../../visual-basic/language-reference/statements/get-statement.md)  
- [<span data-ttu-id="0879a-122">Set 陳述式</span><span class="sxs-lookup"><span data-stu-id="0879a-122">Set Statement</span></span>](../../../visual-basic/language-reference/statements/set-statement.md)  
- [<span data-ttu-id="0879a-123">Operator 陳述式</span><span class="sxs-lookup"><span data-stu-id="0879a-123">Operator Statement</span></span>](../../../visual-basic/language-reference/statements/operator-statement.md)  
- [<span data-ttu-id="0879a-124">Property 陳述式</span><span class="sxs-lookup"><span data-stu-id="0879a-124">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
- [<span data-ttu-id="0879a-125">Exit 陳述式</span><span class="sxs-lookup"><span data-stu-id="0879a-125">Exit Statement</span></span>](../../../visual-basic/language-reference/statements/exit-statement.md)  
- [<span data-ttu-id="0879a-126">Try...Catch...Finally 陳述式</span><span class="sxs-lookup"><span data-stu-id="0879a-126">Try...Catch...Finally Statement</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+## <a name="see-also"></a><span data-ttu-id="ed48c-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ed48c-118">See Also</span></span>  
+ [<span data-ttu-id="ed48c-119">Function 陳述式</span><span class="sxs-lookup"><span data-stu-id="ed48c-119">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [<span data-ttu-id="ed48c-120">Sub 陳述式</span><span class="sxs-lookup"><span data-stu-id="ed48c-120">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [<span data-ttu-id="ed48c-121">Get 陳述式</span><span class="sxs-lookup"><span data-stu-id="ed48c-121">Get Statement</span></span>](../../../visual-basic/language-reference/statements/get-statement.md)  
+ [<span data-ttu-id="ed48c-122">Set 陳述式</span><span class="sxs-lookup"><span data-stu-id="ed48c-122">Set Statement</span></span>](../../../visual-basic/language-reference/statements/set-statement.md)  
+ [<span data-ttu-id="ed48c-123">Operator 陳述式</span><span class="sxs-lookup"><span data-stu-id="ed48c-123">Operator Statement</span></span>](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [<span data-ttu-id="ed48c-124">Property 陳述式</span><span class="sxs-lookup"><span data-stu-id="ed48c-124">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [<span data-ttu-id="ed48c-125">Exit 陳述式</span><span class="sxs-lookup"><span data-stu-id="ed48c-125">Exit Statement</span></span>](../../../visual-basic/language-reference/statements/exit-statement.md)  
+ [<span data-ttu-id="ed48c-126">Try...Catch...Finally 陳述式</span><span class="sxs-lookup"><span data-stu-id="ed48c-126">Try...Catch...Finally Statement</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

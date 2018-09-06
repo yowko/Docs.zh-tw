@@ -5,55 +5,55 @@ helpviewer_keywords:
 - DataRepeater, topic list
 ms.assetid: 68e0cf5e-e2cb-480a-80cc-d13eb6c9b3dd
 ms.openlocfilehash: 0d317310a7ae9369fab32acfe30a61d2c20c96c2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43422513"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43776258"
 ---
-# <a name="datarepeater-control-visual-studio"></a><span data-ttu-id="842af-102">DataRepeater 控制項 (Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="842af-102">DataRepeater Control (Visual Studio)</span></span>
-<span data-ttu-id="842af-103">Visual Basic Power Pack <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控制項是可捲動的容器，用於存放顯示重複資料的控制項，例如資料庫資料表中的資料列。</span><span class="sxs-lookup"><span data-stu-id="842af-103">The Visual Basic Power Packs <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control is a scrollable container for controls that display repeated data, for example, rows in a database table.</span></span> <span data-ttu-id="842af-104">當您需要對資料的版面配置擁有更多控制權時，可以此取代 <xref:System.Windows.Forms.DataGridView> 控制項。</span><span class="sxs-lookup"><span data-stu-id="842af-104">It can be used as an alternative to the <xref:System.Windows.Forms.DataGridView> control when you need more control over the layout of the data.</span></span>  
+# <a name="datarepeater-control-visual-studio"></a><span data-ttu-id="99276-102">DataRepeater 控制項 (Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="99276-102">DataRepeater Control (Visual Studio)</span></span>
+<span data-ttu-id="99276-103">Visual Basic Power Pack <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控制項是可捲動的容器，用於存放顯示重複資料的控制項，例如資料庫資料表中的資料列。</span><span class="sxs-lookup"><span data-stu-id="99276-103">The Visual Basic Power Packs <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control is a scrollable container for controls that display repeated data, for example, rows in a database table.</span></span> <span data-ttu-id="99276-104">當您需要對資料的版面配置擁有更多控制權時，可以此取代 <xref:System.Windows.Forms.DataGridView> 控制項。</span><span class="sxs-lookup"><span data-stu-id="99276-104">It can be used as an alternative to the <xref:System.Windows.Forms.DataGridView> control when you need more control over the layout of the data.</span></span>  
   
- <span data-ttu-id="842af-105">在 Visual Studio 中，已不再包含 PowerPack 控制項，但您可以下載從[下載中心](https://www.microsoft.com/en-us/download/details.aspx?id=25169)。</span><span class="sxs-lookup"><span data-stu-id="842af-105">The PowerPack controls are no longer included in Visual Studio, but you can download them from the [Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=25169).</span></span>  
+ <span data-ttu-id="99276-105">在 Visual Studio 中，已不再包含 PowerPack 控制項，但您可以下載從[下載中心](https://www.microsoft.com/en-us/download/details.aspx?id=25169)。</span><span class="sxs-lookup"><span data-stu-id="99276-105">The PowerPack controls are no longer included in Visual Studio, but you can download them from the [Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=25169).</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="842af-106">本節內容</span><span class="sxs-lookup"><span data-stu-id="842af-106">In This Section</span></span>  
- [<span data-ttu-id="842af-107">DataRepeater 控制項簡介</span><span class="sxs-lookup"><span data-stu-id="842af-107">Introduction to the DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
- <span data-ttu-id="842af-108">介紹並討論 `DataRepeater` 控制項。</span><span class="sxs-lookup"><span data-stu-id="842af-108">Introduces and discusses the `DataRepeater` control.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="99276-106">本章節內容</span><span class="sxs-lookup"><span data-stu-id="99276-106">In This Section</span></span>  
+ [<span data-ttu-id="99276-107">DataRepeater 控制項簡介</span><span class="sxs-lookup"><span data-stu-id="99276-107">Introduction to the DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
+ <span data-ttu-id="99276-108">介紹並討論 `DataRepeater` 控制項。</span><span class="sxs-lookup"><span data-stu-id="99276-108">Introduces and discusses the `DataRepeater` control.</span></span>  
   
- [<span data-ttu-id="842af-109">操作說明：在 DataRepeater 控制項中顯示繫結資料</span><span class="sxs-lookup"><span data-stu-id="842af-109">How to: Display Bound Data in a DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)  
- <span data-ttu-id="842af-110">示範如何使用 `DataRepeater` 控制項來顯示資料來源的資料。</span><span class="sxs-lookup"><span data-stu-id="842af-110">Demonstrates how to use the `DataRepeater` control to display data from a data source.</span></span>  
+ [<span data-ttu-id="99276-109">操作說明：在 DataRepeater 控制項中顯示繫結資料</span><span class="sxs-lookup"><span data-stu-id="99276-109">How to: Display Bound Data in a DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)  
+ <span data-ttu-id="99276-110">示範如何使用 `DataRepeater` 控制項來顯示資料來源的資料。</span><span class="sxs-lookup"><span data-stu-id="99276-110">Demonstrates how to use the `DataRepeater` control to display data from a data source.</span></span>  
   
- [<span data-ttu-id="842af-111">操作說明：在 DataRepeater 控制項中顯示未繫結的控制項</span><span class="sxs-lookup"><span data-stu-id="842af-111">How to: Display Unbound Controls in a DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)  
- <span data-ttu-id="842af-112">示範如何使用 `DataRepeater` 控制項來顯示其他資料。</span><span class="sxs-lookup"><span data-stu-id="842af-112">Demonstrates how to use the `DataRepeater` control to display additional data.</span></span>  
+ [<span data-ttu-id="99276-111">操作說明：在 DataRepeater 控制項中顯示未繫結的控制項</span><span class="sxs-lookup"><span data-stu-id="99276-111">How to: Display Unbound Controls in a DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)  
+ <span data-ttu-id="99276-112">示範如何使用 `DataRepeater` 控制項來顯示其他資料。</span><span class="sxs-lookup"><span data-stu-id="99276-112">Demonstrates how to use the `DataRepeater` control to display additional data.</span></span>  
   
- [<span data-ttu-id="842af-113">操作說明：變更 DataRepeater 控制項的配置</span><span class="sxs-lookup"><span data-stu-id="842af-113">How to: Change the Layout of a DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-layout-of-a-datarepeater-control-visual-studio.md)  
- <span data-ttu-id="842af-114">示範如何變更 `DataRepeater` 控制項的方向。</span><span class="sxs-lookup"><span data-stu-id="842af-114">Demonstrates how to change the orientation of a `DataRepeater` control.</span></span>  
+ [<span data-ttu-id="99276-113">操作說明：變更 DataRepeater 控制項的配置</span><span class="sxs-lookup"><span data-stu-id="99276-113">How to: Change the Layout of a DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-layout-of-a-datarepeater-control-visual-studio.md)  
+ <span data-ttu-id="99276-114">示範如何變更 `DataRepeater` 控制項的方向。</span><span class="sxs-lookup"><span data-stu-id="99276-114">Demonstrates how to change the orientation of a `DataRepeater` control.</span></span>  
   
- [<span data-ttu-id="842af-115">操作說明：變更 DataRepeater 控制項的外觀</span><span class="sxs-lookup"><span data-stu-id="842af-115">How to: Change the Appearance of a DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)  
- <span data-ttu-id="842af-116">示範如何在設計階段和執行階段自訂 `DataRepeater` 控制項。</span><span class="sxs-lookup"><span data-stu-id="842af-116">Demonstrates how to customize a `DataRepeater` control at design time and at run time.</span></span>  
+ [<span data-ttu-id="99276-115">操作說明：變更 DataRepeater 控制項的外觀</span><span class="sxs-lookup"><span data-stu-id="99276-115">How to: Change the Appearance of a DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)  
+ <span data-ttu-id="99276-116">示範如何在設計階段和執行階段自訂 `DataRepeater` 控制項。</span><span class="sxs-lookup"><span data-stu-id="99276-116">Demonstrates how to customize a `DataRepeater` control at design time and at run time.</span></span>  
   
- [<span data-ttu-id="842af-117">操作說明：在 DataRepeater 控制項中顯示項目標題</span><span class="sxs-lookup"><span data-stu-id="842af-117">How to: Display Item Headers in a DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-display-item-headers-in-a-datarepeater-control-visual-studio.md)  
- <span data-ttu-id="842af-118">示範如何在 `DataRepeater` 控制項上控制選取範圍指標。</span><span class="sxs-lookup"><span data-stu-id="842af-118">Demonstrates how to control the selection indicators on a `DataRepeater` control.</span></span>  
+ [<span data-ttu-id="99276-117">操作說明：在 DataRepeater 控制項中顯示項目標題</span><span class="sxs-lookup"><span data-stu-id="99276-117">How to: Display Item Headers in a DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-display-item-headers-in-a-datarepeater-control-visual-studio.md)  
+ <span data-ttu-id="99276-118">示範如何在 `DataRepeater` 控制項上控制選取範圍指標。</span><span class="sxs-lookup"><span data-stu-id="99276-118">Demonstrates how to control the selection indicators on a `DataRepeater` control.</span></span>  
   
- [<span data-ttu-id="842af-119">操作說明：停用加入和刪除 DataRepeater 項目</span><span class="sxs-lookup"><span data-stu-id="842af-119">How to: Disable Adding and Deleting DataRepeater Items</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio.md)  
- <span data-ttu-id="842af-120">示範如何防止使用者加入或刪除 `DataRepeater` 控制項中的項目。</span><span class="sxs-lookup"><span data-stu-id="842af-120">Demonstrates how to prevent users from adding or deleting items in a `DataRepeater` control.</span></span>  
+ [<span data-ttu-id="99276-119">操作說明：停用加入和刪除 DataRepeater 項目</span><span class="sxs-lookup"><span data-stu-id="99276-119">How to: Disable Adding and Deleting DataRepeater Items</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio.md)  
+ <span data-ttu-id="99276-120">示範如何防止使用者加入或刪除 `DataRepeater` 控制項中的項目。</span><span class="sxs-lookup"><span data-stu-id="99276-120">Demonstrates how to prevent users from adding or deleting items in a `DataRepeater` control.</span></span>  
   
- [<span data-ttu-id="842af-121">操作說明：搜尋 DataRepeater 控制項中的資料</span><span class="sxs-lookup"><span data-stu-id="842af-121">How to: Search Data in a DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-search-data-in-a-datarepeater-control-visual-studio.md)  
- <span data-ttu-id="842af-122">示範如何在 `DataRepeater` 控制項中實作搜尋功能。</span><span class="sxs-lookup"><span data-stu-id="842af-122">Demonstrates how to implement search capabilities in a `DataRepeater` control.</span></span>  
+ [<span data-ttu-id="99276-121">操作說明：搜尋 DataRepeater 控制項中的資料</span><span class="sxs-lookup"><span data-stu-id="99276-121">How to: Search Data in a DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-search-data-in-a-datarepeater-control-visual-studio.md)  
+ <span data-ttu-id="99276-122">示範如何在 `DataRepeater` 控制項中實作搜尋功能。</span><span class="sxs-lookup"><span data-stu-id="99276-122">Demonstrates how to implement search capabilities in a `DataRepeater` control.</span></span>  
   
- [<span data-ttu-id="842af-123">如何： 利用兩個 DataRepeater 控制項 (Visual Studio) 來建立主從式表單</span><span class="sxs-lookup"><span data-stu-id="842af-123">How to: Create a Master/Detail Form by Using Two DataRepeater Controls (Visual Studio)</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md)  
- <span data-ttu-id="842af-124">示範如何使用兩個 `DataRepeater` 控制項來顯示相關的記錄。</span><span class="sxs-lookup"><span data-stu-id="842af-124">Demonstrates how to display related records by using two `DataRepeater` controls.</span></span>  
+ [<span data-ttu-id="99276-123">如何： 利用兩個 DataRepeater 控制項 (Visual Studio) 來建立主從式表單</span><span class="sxs-lookup"><span data-stu-id="99276-123">How to: Create a Master/Detail Form by Using Two DataRepeater Controls (Visual Studio)</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md)  
+ <span data-ttu-id="99276-124">示範如何使用兩個 `DataRepeater` 控制項來顯示相關的記錄。</span><span class="sxs-lookup"><span data-stu-id="99276-124">Demonstrates how to display related records by using two `DataRepeater` controls.</span></span>  
   
- [<span data-ttu-id="842af-125">逐步解說：在 DataRepeater 控制項中顯示資料</span><span class="sxs-lookup"><span data-stu-id="842af-125">Walkthrough: Displaying Data in a DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio.md)  
- <span data-ttu-id="842af-126">提供如何使用 `DataRepeater` 控制項的完整示範。</span><span class="sxs-lookup"><span data-stu-id="842af-126">Provides a start-to-finish demonstration of how to use a `DataRepeater` control.</span></span>  
+ [<span data-ttu-id="99276-125">逐步解說：在 DataRepeater 控制項中顯示資料</span><span class="sxs-lookup"><span data-stu-id="99276-125">Walkthrough: Displaying Data in a DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio.md)  
+ <span data-ttu-id="99276-126">提供如何使用 `DataRepeater` 控制項的完整示範。</span><span class="sxs-lookup"><span data-stu-id="99276-126">Provides a start-to-finish demonstration of how to use a `DataRepeater` control.</span></span>  
   
- [<span data-ttu-id="842af-127"> DataRepeater 控制項進行疑難排解</span><span class="sxs-lookup"><span data-stu-id="842af-127">Troubleshooting the DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)  
- <span data-ttu-id="842af-128">描述可能的問題及其解決方式。</span><span class="sxs-lookup"><span data-stu-id="842af-128">Describes potential problems and their solutions.</span></span>  
+ [<span data-ttu-id="99276-127"> DataRepeater 控制項進行疑難排解</span><span class="sxs-lookup"><span data-stu-id="99276-127">Troubleshooting the DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)  
+ <span data-ttu-id="99276-128">描述可能的問題及其解決方式。</span><span class="sxs-lookup"><span data-stu-id="99276-128">Describes potential problems and their solutions.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="842af-129">參考資料</span><span class="sxs-lookup"><span data-stu-id="842af-129">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="99276-129">參考資料</span><span class="sxs-lookup"><span data-stu-id="99276-129">Reference</span></span>  
  <xref:Microsoft.VisualBasic.PowerPacks>  
   
  <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
   
-## <a name="related-sections"></a><span data-ttu-id="842af-130">相關章節</span><span class="sxs-lookup"><span data-stu-id="842af-130">Related Sections</span></span>  
- [<span data-ttu-id="842af-131">DataRepeater 控制項中的虛擬模式</span><span class="sxs-lookup"><span data-stu-id="842af-131">Virtual Mode in the DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/virtual-mode-in-the-datarepeater-control-visual-studio.md)
+## <a name="related-sections"></a><span data-ttu-id="99276-130">相關章節</span><span class="sxs-lookup"><span data-stu-id="99276-130">Related Sections</span></span>  
+ [<span data-ttu-id="99276-131">DataRepeater 控制項中的虛擬模式</span><span class="sxs-lookup"><span data-stu-id="99276-131">Virtual Mode in the DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/virtual-mode-in-the-datarepeater-control-visual-studio.md)

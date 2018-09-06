@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
-ms.openlocfilehash: 1694a6de515e5326264f345f50d0730fe2a62e4f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6c6ea41b9da9c98f8c4ee45ca1e223a29712729a
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763939"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43742490"
 ---
-# <a name="getschema-and-schema-collections"></a><span data-ttu-id="dbe6f-102">GetSchema 和結構描述集合</span><span class="sxs-lookup"><span data-stu-id="dbe6f-102">GetSchema and Schema Collections</span></span>
-<span data-ttu-id="dbe6f-103">**連接**中每個.NET Framework managed 提供者實作的類別**GetSchema**方法用來擷取目前連接的資料庫結構描述資訊和從傳回的結構描述資訊**GetSchema**方法的形式提供<xref:System.Data.DataTable>。</span><span class="sxs-lookup"><span data-stu-id="dbe6f-103">The **Connection** classes in each of the .NET Framework managed providers implement a **GetSchema** method which is used to retrieve schema information about the database that is currently connected, and the schema information returned from the **GetSchema** method comes in the form of a <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="dbe6f-104">**GetSchema**方法是多載的方法，為指定要傳回結構描述集合及限制傳回的資訊量，提供選擇性參數。</span><span class="sxs-lookup"><span data-stu-id="dbe6f-104">The **GetSchema** method is an overloaded method that provides optional parameters for specifying the schema collection to return, and restricting the amount of information returned.</span></span>  
+# <a name="getschema-and-schema-collections"></a><span data-ttu-id="3baac-102">GetSchema 和結構描述集合</span><span class="sxs-lookup"><span data-stu-id="3baac-102">GetSchema and Schema Collections</span></span>
+<span data-ttu-id="3baac-103">**連接**中每個.NET Framework managed 提供者實作類別**GetSchema**方法用來擷取有關目前連接的資料庫結構描述資訊和從傳回的結構描述資訊**GetSchema**方法共有的形式<xref:System.Data.DataTable>。</span><span class="sxs-lookup"><span data-stu-id="3baac-103">The **Connection** classes in each of the .NET Framework managed providers implement a **GetSchema** method which is used to retrieve schema information about the database that is currently connected, and the schema information returned from the **GetSchema** method comes in the form of a <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="3baac-104">**GetSchema**方法是多載的方法，提供選擇性參數指定要傳回的結構描述集合及限制傳回的資訊量。</span><span class="sxs-lookup"><span data-stu-id="3baac-104">The **GetSchema** method is an overloaded method that provides optional parameters for specifying the schema collection to return, and restricting the amount of information returned.</span></span>  
   
-## <a name="specifying-the-schema-collections"></a><span data-ttu-id="dbe6f-105">指定結構描述集合</span><span class="sxs-lookup"><span data-stu-id="dbe6f-105">Specifying the Schema Collections</span></span>  
- <span data-ttu-id="dbe6f-106">第一個選擇性參數**GetSchema**方法是指定為字串的集合名稱。</span><span class="sxs-lookup"><span data-stu-id="dbe6f-106">The first optional parameter of the **GetSchema** method is the collection name which is specified as a string.</span></span> <span data-ttu-id="dbe6f-107">結構描述集合有兩種型別：通用於所有提供者的通用結構描述集合與每個提供者特有的特定結構描述集合。</span><span class="sxs-lookup"><span data-stu-id="dbe6f-107">There are two types of schema collections: common schema collections that are common to all providers, and specific schema collections which are specific to each provider.</span></span>  
+## <a name="specifying-the-schema-collections"></a><span data-ttu-id="3baac-105">指定結構描述集合</span><span class="sxs-lookup"><span data-stu-id="3baac-105">Specifying the Schema Collections</span></span>  
+ <span data-ttu-id="3baac-106">第一個選擇性參數**GetSchema**方法是指定為字串的集合名稱。</span><span class="sxs-lookup"><span data-stu-id="3baac-106">The first optional parameter of the **GetSchema** method is the collection name which is specified as a string.</span></span> <span data-ttu-id="3baac-107">結構描述集合有兩種型別：通用於所有提供者的通用結構描述集合與每個提供者特有的特定結構描述集合。</span><span class="sxs-lookup"><span data-stu-id="3baac-107">There are two types of schema collections: common schema collections that are common to all providers, and specific schema collections which are specific to each provider.</span></span>  
   
- <span data-ttu-id="dbe6f-108">您可以查詢.NET Framework managed 提供者以決定支援的結構描述集合的清單，藉由呼叫**GetSchema**方法沒有引數，或使用結構描述集合名稱"MetaDataCollections"。</span><span class="sxs-lookup"><span data-stu-id="dbe6f-108">You can query a .NET Framework managed provider to determine the list of supported schema collections by calling the **GetSchema** method with no arguments, or with the schema collection name "MetaDataCollections".</span></span> <span data-ttu-id="dbe6f-109">這會傳回 <xref:System.Data.DataTable>，包括支援的結構描述集合清單、每個集合所支援的限制數目，以及集合所使用之識別項部分的數目。</span><span class="sxs-lookup"><span data-stu-id="dbe6f-109">This will return a <xref:System.Data.DataTable> with a list of the supported schema collections, the number of restrictions that they each support, and the number of identifier parts that they use.</span></span>  
+ <span data-ttu-id="3baac-108">您可以查詢來判斷支援的結構描述集合清單，藉由呼叫.NET Framework managed 提供者**GetSchema**方法沒有引數，或以結構描述集合名稱"MetaDataCollections"。</span><span class="sxs-lookup"><span data-stu-id="3baac-108">You can query a .NET Framework managed provider to determine the list of supported schema collections by calling the **GetSchema** method with no arguments, or with the schema collection name "MetaDataCollections".</span></span> <span data-ttu-id="3baac-109">這會傳回 <xref:System.Data.DataTable>，包括支援的結構描述集合清單、每個集合所支援的限制數目，以及集合所使用之識別項部分的數目。</span><span class="sxs-lookup"><span data-stu-id="3baac-109">This will return a <xref:System.Data.DataTable> with a list of the supported schema collections, the number of restrictions that they each support, and the number of identifier parts that they use.</span></span>  
   
-### <a name="retrieving-schema-collections-example"></a><span data-ttu-id="dbe6f-110">擷取結構描述集合範例</span><span class="sxs-lookup"><span data-stu-id="dbe6f-110">Retrieving Schema Collections Example</span></span>  
- <span data-ttu-id="dbe6f-111">下列範例示範如何使用<xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>方法的.NET Framework Data Provider for SQL Server<xref:System.Data.SqlClient.SqlConnection>類別來擷取所有所包含的資料表結構描述資訊**AdventureWorks**範例資料庫：</span><span class="sxs-lookup"><span data-stu-id="dbe6f-111">The following examples demonstrate how to use the <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> method of the .NET Framework Data Provider for the SQL Server <xref:System.Data.SqlClient.SqlConnection> class to retrieve schema information about all of the tables contained in the **AdventureWorks** sample database:</span></span>  
+### <a name="retrieving-schema-collections-example"></a><span data-ttu-id="3baac-110">擷取結構描述集合範例</span><span class="sxs-lookup"><span data-stu-id="3baac-110">Retrieving Schema Collections Example</span></span>  
+ <span data-ttu-id="3baac-111">下列範例示範如何使用<xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>的.NET Framework Data Provider for SQL Server 的方法<xref:System.Data.SqlClient.SqlConnection>類別來擷取相關的所有資料表中所包含的結構描述資訊**AdventureWorks**範例資料庫：</span><span class="sxs-lookup"><span data-stu-id="3baac-111">The following examples demonstrate how to use the <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> method of the .NET Framework Data Provider for the SQL Server <xref:System.Data.SqlClient.SqlConnection> class to retrieve schema information about all of the tables contained in the **AdventureWorks** sample database:</span></span>  
   
 ```vb  
 Imports System.Data.SqlClient  
@@ -104,6 +104,6 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="dbe6f-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="dbe6f-112">See Also</span></span>  
- [<span data-ttu-id="dbe6f-113">擷取資料庫結構描述資訊</span><span class="sxs-lookup"><span data-stu-id="dbe6f-113">Retrieving Database Schema Information</span></span>](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [<span data-ttu-id="dbe6f-114">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="dbe6f-114">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="3baac-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3baac-112">See Also</span></span>  
+ [<span data-ttu-id="3baac-113">擷取資料庫結構描述資訊</span><span class="sxs-lookup"><span data-stu-id="3baac-113">Retrieving Database Schema Information</span></span>](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
+ [<span data-ttu-id="3baac-114">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="3baac-114">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)

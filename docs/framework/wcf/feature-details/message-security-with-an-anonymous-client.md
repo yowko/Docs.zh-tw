@@ -8,44 +8,44 @@ ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: d3e8269fc05caf70f4329ce8f13a3633a8982c0b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43564148"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43738890"
 ---
-# <a name="message-security-with-an-anonymous-client"></a><span data-ttu-id="62985-102">匿名用戶端的訊息安全性</span><span class="sxs-lookup"><span data-stu-id="62985-102">Message Security with an Anonymous Client</span></span>
-<span data-ttu-id="62985-103">下列案例示範用戶端與受保護的 Windows Communication Foundation (WCF) 訊息安全性的服務。</span><span class="sxs-lookup"><span data-stu-id="62985-103">The following scenario shows a client and service secured by Windows Communication Foundation (WCF) message security.</span></span> <span data-ttu-id="62985-104">這樣的設計目的是使用訊息安全性而非傳輸安全性，如此未來可以支援更豐富的宣告型模型。</span><span class="sxs-lookup"><span data-stu-id="62985-104">A design goal is to use message security rather than transport security, so that in the future it can support a richer claims-based model.</span></span> <span data-ttu-id="62985-105">如需使用各種宣告進行授權的詳細資訊，請參閱 <<c0> [ 管理宣告與授權身分識別模型](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。</span><span class="sxs-lookup"><span data-stu-id="62985-105">For more information about using rich claims for authorization, see [Managing Claims and Authorization with the Identity Model](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).</span></span>  
+# <a name="message-security-with-an-anonymous-client"></a><span data-ttu-id="55219-102">匿名用戶端的訊息安全性</span><span class="sxs-lookup"><span data-stu-id="55219-102">Message Security with an Anonymous Client</span></span>
+<span data-ttu-id="55219-103">下列案例示範用戶端與受保護的 Windows Communication Foundation (WCF) 訊息安全性的服務。</span><span class="sxs-lookup"><span data-stu-id="55219-103">The following scenario shows a client and service secured by Windows Communication Foundation (WCF) message security.</span></span> <span data-ttu-id="55219-104">這樣的設計目的是使用訊息安全性而非傳輸安全性，如此未來可以支援更豐富的宣告型模型。</span><span class="sxs-lookup"><span data-stu-id="55219-104">A design goal is to use message security rather than transport security, so that in the future it can support a richer claims-based model.</span></span> <span data-ttu-id="55219-105">如需使用各種宣告進行授權的詳細資訊，請參閱 <<c0> [ 管理宣告與授權身分識別模型](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。</span><span class="sxs-lookup"><span data-stu-id="55219-105">For more information about using rich claims for authorization, see [Managing Claims and Authorization with the Identity Model](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).</span></span>  
   
- <span data-ttu-id="62985-106">範例應用程式，請參閱[訊息安全性匿名](../../../../docs/framework/wcf/samples/message-security-anonymous.md)。</span><span class="sxs-lookup"><span data-stu-id="62985-106">For a sample application, see [Message Security Anonymous](../../../../docs/framework/wcf/samples/message-security-anonymous.md).</span></span>  
+ <span data-ttu-id="55219-106">範例應用程式，請參閱[訊息安全性匿名](../../../../docs/framework/wcf/samples/message-security-anonymous.md)。</span><span class="sxs-lookup"><span data-stu-id="55219-106">For a sample application, see [Message Security Anonymous](../../../../docs/framework/wcf/samples/message-security-anonymous.md).</span></span>  
   
- <span data-ttu-id="62985-107">![訊息安全性與匿名用戶端](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")</span><span class="sxs-lookup"><span data-stu-id="62985-107">![Message security with an anynymous client](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")</span></span>  
+ <span data-ttu-id="55219-107">![訊息安全性與匿名用戶端](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")</span><span class="sxs-lookup"><span data-stu-id="55219-107">![Message security with an anynymous client](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")</span></span>  
   
-|<span data-ttu-id="62985-108">特性</span><span class="sxs-lookup"><span data-stu-id="62985-108">Characteristic</span></span>|<span data-ttu-id="62985-109">描述</span><span class="sxs-lookup"><span data-stu-id="62985-109">Description</span></span>|  
+|<span data-ttu-id="55219-108">特性</span><span class="sxs-lookup"><span data-stu-id="55219-108">Characteristic</span></span>|<span data-ttu-id="55219-109">描述</span><span class="sxs-lookup"><span data-stu-id="55219-109">Description</span></span>|  
 |--------------------|-----------------|  
-|<span data-ttu-id="62985-110">安全性模式</span><span class="sxs-lookup"><span data-stu-id="62985-110">Security Mode</span></span>|<span data-ttu-id="62985-111">訊息</span><span class="sxs-lookup"><span data-stu-id="62985-111">Message</span></span>|  
-|<span data-ttu-id="62985-112">互通性</span><span class="sxs-lookup"><span data-stu-id="62985-112">Interoperability</span></span>|<span data-ttu-id="62985-113">WCF 只</span><span class="sxs-lookup"><span data-stu-id="62985-113">WCF only</span></span>|  
-|<span data-ttu-id="62985-114">驗證 (伺服器)</span><span class="sxs-lookup"><span data-stu-id="62985-114">Authentication (Server)</span></span>|<span data-ttu-id="62985-115">初始交涉需要伺服器驗證，而不需要用戶端驗證</span><span class="sxs-lookup"><span data-stu-id="62985-115">Initial negotiation requires server authentication, but not client authentication</span></span>|  
-|<span data-ttu-id="62985-116">驗證 (用戶端)</span><span class="sxs-lookup"><span data-stu-id="62985-116">Authentication (Client)</span></span>|<span data-ttu-id="62985-117">無</span><span class="sxs-lookup"><span data-stu-id="62985-117">None</span></span>|  
-|<span data-ttu-id="62985-118">完整性</span><span class="sxs-lookup"><span data-stu-id="62985-118">Integrity</span></span>|<span data-ttu-id="62985-119">是，使用共用安全性內容</span><span class="sxs-lookup"><span data-stu-id="62985-119">Yes, using shared security context</span></span>|  
-|<span data-ttu-id="62985-120">機密性</span><span class="sxs-lookup"><span data-stu-id="62985-120">Confidentiality</span></span>|<span data-ttu-id="62985-121">是，使用共用安全性內容</span><span class="sxs-lookup"><span data-stu-id="62985-121">Yes, using shared security context</span></span>|  
-|<span data-ttu-id="62985-122">Transport</span><span class="sxs-lookup"><span data-stu-id="62985-122">Transport</span></span>|<span data-ttu-id="62985-123">HTTP</span><span class="sxs-lookup"><span data-stu-id="62985-123">HTTP</span></span>|  
+|<span data-ttu-id="55219-110">安全性模式</span><span class="sxs-lookup"><span data-stu-id="55219-110">Security Mode</span></span>|<span data-ttu-id="55219-111">訊息</span><span class="sxs-lookup"><span data-stu-id="55219-111">Message</span></span>|  
+|<span data-ttu-id="55219-112">互通性</span><span class="sxs-lookup"><span data-stu-id="55219-112">Interoperability</span></span>|<span data-ttu-id="55219-113">WCF 只</span><span class="sxs-lookup"><span data-stu-id="55219-113">WCF only</span></span>|  
+|<span data-ttu-id="55219-114">驗證 (伺服器)</span><span class="sxs-lookup"><span data-stu-id="55219-114">Authentication (Server)</span></span>|<span data-ttu-id="55219-115">初始交涉需要伺服器驗證，而不需要用戶端驗證</span><span class="sxs-lookup"><span data-stu-id="55219-115">Initial negotiation requires server authentication, but not client authentication</span></span>|  
+|<span data-ttu-id="55219-116">驗證 (用戶端)</span><span class="sxs-lookup"><span data-stu-id="55219-116">Authentication (Client)</span></span>|<span data-ttu-id="55219-117">無</span><span class="sxs-lookup"><span data-stu-id="55219-117">None</span></span>|  
+|<span data-ttu-id="55219-118">完整性</span><span class="sxs-lookup"><span data-stu-id="55219-118">Integrity</span></span>|<span data-ttu-id="55219-119">是，使用共用安全性內容</span><span class="sxs-lookup"><span data-stu-id="55219-119">Yes, using shared security context</span></span>|  
+|<span data-ttu-id="55219-120">機密性</span><span class="sxs-lookup"><span data-stu-id="55219-120">Confidentiality</span></span>|<span data-ttu-id="55219-121">是，使用共用安全性內容</span><span class="sxs-lookup"><span data-stu-id="55219-121">Yes, using shared security context</span></span>|  
+|<span data-ttu-id="55219-122">Transport</span><span class="sxs-lookup"><span data-stu-id="55219-122">Transport</span></span>|<span data-ttu-id="55219-123">HTTP</span><span class="sxs-lookup"><span data-stu-id="55219-123">HTTP</span></span>|  
   
-## <a name="service"></a><span data-ttu-id="62985-124">服務</span><span class="sxs-lookup"><span data-stu-id="62985-124">Service</span></span>  
- <span data-ttu-id="62985-125">下列程式碼和組態要獨立執行。</span><span class="sxs-lookup"><span data-stu-id="62985-125">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="62985-126">執行下列任一步驟：</span><span class="sxs-lookup"><span data-stu-id="62985-126">Do one of the following:</span></span>  
+## <a name="service"></a><span data-ttu-id="55219-124">服務</span><span class="sxs-lookup"><span data-stu-id="55219-124">Service</span></span>  
+ <span data-ttu-id="55219-125">下列程式碼和組態要獨立執行。</span><span class="sxs-lookup"><span data-stu-id="55219-125">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="55219-126">執行下列任一步驟：</span><span class="sxs-lookup"><span data-stu-id="55219-126">Do one of the following:</span></span>  
   
--   <span data-ttu-id="62985-127">使用不含組態的程式碼建立獨立服務。</span><span class="sxs-lookup"><span data-stu-id="62985-127">Create a stand-alone service using the code with no configuration.</span></span>  
+-   <span data-ttu-id="55219-127">使用不含組態的程式碼建立獨立服務。</span><span class="sxs-lookup"><span data-stu-id="55219-127">Create a stand-alone service using the code with no configuration.</span></span>  
   
--   <span data-ttu-id="62985-128">使用提供的組態建立服務，但不要定義任何端點。</span><span class="sxs-lookup"><span data-stu-id="62985-128">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
+-   <span data-ttu-id="55219-128">使用提供的組態建立服務，但不要定義任何端點。</span><span class="sxs-lookup"><span data-stu-id="55219-128">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="62985-129">程式碼</span><span class="sxs-lookup"><span data-stu-id="62985-129">Code</span></span>  
- <span data-ttu-id="62985-130">下列程式碼會顯示如何建立會使用訊息安全性的服務端點。</span><span class="sxs-lookup"><span data-stu-id="62985-130">The following code shows how to create a service endpoint that uses message security.</span></span>  
+### <a name="code"></a><span data-ttu-id="55219-129">程式碼</span><span class="sxs-lookup"><span data-stu-id="55219-129">Code</span></span>  
+ <span data-ttu-id="55219-130">下列程式碼會顯示如何建立會使用訊息安全性的服務端點。</span><span class="sxs-lookup"><span data-stu-id="55219-130">The following code shows how to create a service endpoint that uses message security.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#8)]
  [!code-vb[C_SecurityScenarios#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#8)]  
   
-### <a name="configuration"></a><span data-ttu-id="62985-131">組態</span><span class="sxs-lookup"><span data-stu-id="62985-131">Configuration</span></span>  
- <span data-ttu-id="62985-132">可以使用以下組態來取代程式碼。</span><span class="sxs-lookup"><span data-stu-id="62985-132">The following configuration can be used instead of the code.</span></span> <span data-ttu-id="62985-133">使用服務行為項目來指定用來驗證用戶端服務的憑證。</span><span class="sxs-lookup"><span data-stu-id="62985-133">The service behavior element is used to specify a certificate that is used to authenticate the service to the client.</span></span> <span data-ttu-id="62985-134">服務項目必須使用 `behaviorConfiguration` 屬性來指定行為。</span><span class="sxs-lookup"><span data-stu-id="62985-134">The service element must specify the behavior using the `behaviorConfiguration` attribute.</span></span> <span data-ttu-id="62985-135">繫結項目會指定用戶端認證類型為 `None`，因此可讓匿名用戶端使用服務。</span><span class="sxs-lookup"><span data-stu-id="62985-135">The binding element specifies that the client credential type is `None`, allowing anonymous clients to use the service.</span></span>  
+### <a name="configuration"></a><span data-ttu-id="55219-131">組態</span><span class="sxs-lookup"><span data-stu-id="55219-131">Configuration</span></span>  
+ <span data-ttu-id="55219-132">可以使用以下組態來取代程式碼。</span><span class="sxs-lookup"><span data-stu-id="55219-132">The following configuration can be used instead of the code.</span></span> <span data-ttu-id="55219-133">使用服務行為項目來指定用來驗證用戶端服務的憑證。</span><span class="sxs-lookup"><span data-stu-id="55219-133">The service behavior element is used to specify a certificate that is used to authenticate the service to the client.</span></span> <span data-ttu-id="55219-134">服務項目必須使用 `behaviorConfiguration` 屬性來指定行為。</span><span class="sxs-lookup"><span data-stu-id="55219-134">The service element must specify the behavior using the `behaviorConfiguration` attribute.</span></span> <span data-ttu-id="55219-135">繫結項目會指定用戶端認證類型為 `None`，因此可讓匿名用戶端使用服務。</span><span class="sxs-lookup"><span data-stu-id="55219-135">The binding element specifies that the client credential type is `None`, allowing anonymous clients to use the service.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -86,24 +86,24 @@ ms.locfileid: "43564148"
 </configuration>  
 ```  
   
-## <a name="client"></a><span data-ttu-id="62985-136">用戶端</span><span class="sxs-lookup"><span data-stu-id="62985-136">Client</span></span>  
- <span data-ttu-id="62985-137">下列程式碼和組態要獨立執行。</span><span class="sxs-lookup"><span data-stu-id="62985-137">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="62985-138">執行下列任一步驟：</span><span class="sxs-lookup"><span data-stu-id="62985-138">Do one of the following:</span></span>  
+## <a name="client"></a><span data-ttu-id="55219-136">用戶端</span><span class="sxs-lookup"><span data-stu-id="55219-136">Client</span></span>  
+ <span data-ttu-id="55219-137">下列程式碼和組態要獨立執行。</span><span class="sxs-lookup"><span data-stu-id="55219-137">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="55219-138">執行下列任一步驟：</span><span class="sxs-lookup"><span data-stu-id="55219-138">Do one of the following:</span></span>  
   
--   <span data-ttu-id="62985-139">使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。</span><span class="sxs-lookup"><span data-stu-id="62985-139">Create a stand-alone client using the code (and client code).</span></span>  
+-   <span data-ttu-id="55219-139">使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。</span><span class="sxs-lookup"><span data-stu-id="55219-139">Create a stand-alone client using the code (and client code).</span></span>  
   
--   <span data-ttu-id="62985-140">建立未定義任何端點位址的用戶端，</span><span class="sxs-lookup"><span data-stu-id="62985-140">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="62985-141">然後改用可接受組態名稱當做引數的用戶端建構函式。</span><span class="sxs-lookup"><span data-stu-id="62985-141">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="62985-142">例如：</span><span class="sxs-lookup"><span data-stu-id="62985-142">For example:</span></span>  
+-   <span data-ttu-id="55219-140">建立未定義任何端點位址的用戶端，</span><span class="sxs-lookup"><span data-stu-id="55219-140">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="55219-141">然後改用可接受組態名稱當做引數的用戶端建構函式。</span><span class="sxs-lookup"><span data-stu-id="55219-141">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="55219-142">例如：</span><span class="sxs-lookup"><span data-stu-id="55219-142">For example:</span></span>  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### <a name="code"></a><span data-ttu-id="62985-143">程式碼</span><span class="sxs-lookup"><span data-stu-id="62985-143">Code</span></span>  
- <span data-ttu-id="62985-144">下列程式碼會建立用戶端的執行個體。</span><span class="sxs-lookup"><span data-stu-id="62985-144">The following code creates an instance of the client.</span></span> <span data-ttu-id="62985-145">繫結會使用訊息模式安全性，而且用戶端認證類型設為 none。</span><span class="sxs-lookup"><span data-stu-id="62985-145">The binding uses message mode security, and the client credential type is set to none.</span></span>  
+### <a name="code"></a><span data-ttu-id="55219-143">程式碼</span><span class="sxs-lookup"><span data-stu-id="55219-143">Code</span></span>  
+ <span data-ttu-id="55219-144">下列程式碼會建立用戶端的執行個體。</span><span class="sxs-lookup"><span data-stu-id="55219-144">The following code creates an instance of the client.</span></span> <span data-ttu-id="55219-145">繫結會使用訊息模式安全性，而且用戶端認證類型設為 none。</span><span class="sxs-lookup"><span data-stu-id="55219-145">The binding uses message mode security, and the client credential type is set to none.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#15](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#15)]
  [!code-vb[C_SecurityScenarios#15](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#15)]  
   
-### <a name="configuration"></a><span data-ttu-id="62985-146">組態</span><span class="sxs-lookup"><span data-stu-id="62985-146">Configuration</span></span>  
- <span data-ttu-id="62985-147">下列程式碼會設定用戶端。</span><span class="sxs-lookup"><span data-stu-id="62985-147">The following code configures the client.</span></span>  
+### <a name="configuration"></a><span data-ttu-id="55219-146">組態</span><span class="sxs-lookup"><span data-stu-id="55219-146">Configuration</span></span>  
+ <span data-ttu-id="55219-147">下列程式碼會設定用戶端。</span><span class="sxs-lookup"><span data-stu-id="55219-147">The following code configures the client.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -133,9 +133,9 @@ ms.locfileid: "43564148"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="62985-148">另請參閱</span><span class="sxs-lookup"><span data-stu-id="62985-148">See Also</span></span>  
- [<span data-ttu-id="62985-149">安全性概觀</span><span class="sxs-lookup"><span data-stu-id="62985-149">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [<span data-ttu-id="62985-150">分散式應用程式安全性</span><span class="sxs-lookup"><span data-stu-id="62985-150">Distributed Application Security</span></span>](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
- [<span data-ttu-id="62985-151">訊息安全性匿名</span><span class="sxs-lookup"><span data-stu-id="62985-151">Message Security Anonymous</span></span>](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
- [<span data-ttu-id="62985-152">服務身分識別和驗證</span><span class="sxs-lookup"><span data-stu-id="62985-152">Service Identity and Authentication</span></span>](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [<span data-ttu-id="62985-153">Windows Server App Fabric 的安全性模型</span><span class="sxs-lookup"><span data-stu-id="62985-153">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="55219-148">另請參閱</span><span class="sxs-lookup"><span data-stu-id="55219-148">See Also</span></span>  
+ [<span data-ttu-id="55219-149">安全性概觀</span><span class="sxs-lookup"><span data-stu-id="55219-149">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="55219-150">分散式應用程式安全性</span><span class="sxs-lookup"><span data-stu-id="55219-150">Distributed Application Security</span></span>](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
+ [<span data-ttu-id="55219-151">訊息安全性匿名</span><span class="sxs-lookup"><span data-stu-id="55219-151">Message Security Anonymous</span></span>](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
+ [<span data-ttu-id="55219-152">服務身分識別和驗證</span><span class="sxs-lookup"><span data-stu-id="55219-152">Service Identity and Authentication</span></span>](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [<span data-ttu-id="55219-153">Windows Server App Fabric 的安全性模型</span><span class="sxs-lookup"><span data-stu-id="55219-153">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
