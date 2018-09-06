@@ -3,37 +3,37 @@ title: 實體活動
 ms.date: 03/30/2017
 ms.assetid: c04f7413-7fb8-40c6-819e-dc92b145b62e
 ms.openlocfilehash: 03bd0e42c70f1226558d492bcb3b2cfa5c7010f2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385800"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861149"
 ---
-# <a name="entity-activities"></a><span data-ttu-id="524fa-102">實體活動</span><span class="sxs-lookup"><span data-stu-id="524fa-102">Entity Activities</span></span>
-<span data-ttu-id="524fa-103">此範例示範如何使用 Windows Workflow Foundation 中的 ADO.NET Entity Framework，以簡化資料存取。</span><span class="sxs-lookup"><span data-stu-id="524fa-103">This sample shows how to use the ADO.NET Entity Framework with Windows Workflow Foundation to simplify data access.</span></span>  
+# <a name="entity-activities"></a><span data-ttu-id="246e0-102">實體活動</span><span class="sxs-lookup"><span data-stu-id="246e0-102">Entity Activities</span></span>
+<span data-ttu-id="246e0-103">此範例示範如何使用 Windows Workflow Foundation 中的 ADO.NET Entity Framework，以簡化資料存取。</span><span class="sxs-lookup"><span data-stu-id="246e0-103">This sample shows how to use the ADO.NET Entity Framework with Windows Workflow Foundation to simplify data access.</span></span>  
   
- <span data-ttu-id="524fa-104">ADO.NET Entity Framework 可讓開發人員使用網域特有之物件、屬性和關聯性形式的資料，例如客戶、訂單、訂單詳細資料以及這些實體之間的關聯性。</span><span class="sxs-lookup"><span data-stu-id="524fa-104">The ADO.NET Entity Framework enables developers to work with data in the form of domain-specific objects, properties and relationships such as Customers, Orders, Order Details and the relationships between these entities.</span></span> <span data-ttu-id="524fa-105">ADO.NET Entity Framework 處理這項作業的方式，是提供可針對概念應用程式模型來進行程式設計的抽象層級，而不是直接針對關聯式儲存結構描述來進行程式設計。</span><span class="sxs-lookup"><span data-stu-id="524fa-105">The ADO.NET Entity Framework does this by providing a level of abstraction that enables programming against a conceptual application model instead of programming directly against a relational storage schema.</span></span> <span data-ttu-id="524fa-106">如需 ADO.NET Entity Framework 請參閱[ADO.NET Entity Framework](https://go.microsoft.com/fwlink/?LinkId=165549)。</span><span class="sxs-lookup"><span data-stu-id="524fa-106">For more information about the ADO.NET Entity Framework see [ADO.NET Entity Framework](https://go.microsoft.com/fwlink/?LinkId=165549).</span></span>  
+ <span data-ttu-id="246e0-104">ADO.NET Entity Framework 可讓開發人員使用網域特有之物件、屬性和關聯性形式的資料，例如客戶、訂單、訂單詳細資料以及這些實體之間的關聯性。</span><span class="sxs-lookup"><span data-stu-id="246e0-104">The ADO.NET Entity Framework enables developers to work with data in the form of domain-specific objects, properties and relationships such as Customers, Orders, Order Details and the relationships between these entities.</span></span> <span data-ttu-id="246e0-105">ADO.NET Entity Framework 處理這項作業的方式，是提供可針對概念應用程式模型來進行程式設計的抽象層級，而不是直接針對關聯式儲存結構描述來進行程式設計。</span><span class="sxs-lookup"><span data-stu-id="246e0-105">The ADO.NET Entity Framework does this by providing a level of abstraction that enables programming against a conceptual application model instead of programming directly against a relational storage schema.</span></span> <span data-ttu-id="246e0-106">如需 ADO.NET Entity Framework 請參閱[ADO.NET Entity Framework](https://go.microsoft.com/fwlink/?LinkId=165549)。</span><span class="sxs-lookup"><span data-stu-id="246e0-106">For more information about the ADO.NET Entity Framework see [ADO.NET Entity Framework](https://go.microsoft.com/fwlink/?LinkId=165549).</span></span>  
   
-## <a name="sample-details"></a><span data-ttu-id="524fa-107">範例詳細資料</span><span class="sxs-lookup"><span data-stu-id="524fa-107">Sample details</span></span>  
- <span data-ttu-id="524fa-108">這個範例會使用 `Northwind` 資料庫，而且包含了用來建立及移除 `Northwind` 資料庫的指令碼 (Setup.cmd 和 Cleanup.cmd)。</span><span class="sxs-lookup"><span data-stu-id="524fa-108">This sample uses the `Northwind` database and includes scripts for creating and removing the `Northwind` database (Setup.cmd and Cleanup.cmd).</span></span> <span data-ttu-id="524fa-109">此範例中的專案包含了根據 `Northwind` 資料庫的實體資料模型。</span><span class="sxs-lookup"><span data-stu-id="524fa-109">The projects in this sample include an Entity Data Model based on the `Northwind` database.</span></span> <span data-ttu-id="524fa-110">您可以開啟專案中包含的 `Northwind.edmx` 檔案來尋找此模型。</span><span class="sxs-lookup"><span data-stu-id="524fa-110">You can find the model by opening the `Northwind.edmx` file that is included in the project.</span></span> <span data-ttu-id="524fa-111">這個模型會定義可以使用 ADO.NET Entity Framework 存取之物件的形狀。</span><span class="sxs-lookup"><span data-stu-id="524fa-111">This is the model that defines the shape of the objects that can be accessed using the ADO.NET Entity Framework.</span></span>  
+## <a name="sample-details"></a><span data-ttu-id="246e0-107">範例詳細資料</span><span class="sxs-lookup"><span data-stu-id="246e0-107">Sample details</span></span>  
+ <span data-ttu-id="246e0-108">這個範例會使用 `Northwind` 資料庫，而且包含了用來建立及移除 `Northwind` 資料庫的指令碼 (Setup.cmd 和 Cleanup.cmd)。</span><span class="sxs-lookup"><span data-stu-id="246e0-108">This sample uses the `Northwind` database and includes scripts for creating and removing the `Northwind` database (Setup.cmd and Cleanup.cmd).</span></span> <span data-ttu-id="246e0-109">此範例中的專案包含了根據 `Northwind` 資料庫的實體資料模型。</span><span class="sxs-lookup"><span data-stu-id="246e0-109">The projects in this sample include an Entity Data Model based on the `Northwind` database.</span></span> <span data-ttu-id="246e0-110">您可以開啟專案中包含的 `Northwind.edmx` 檔案來尋找此模型。</span><span class="sxs-lookup"><span data-stu-id="246e0-110">You can find the model by opening the `Northwind.edmx` file that is included in the project.</span></span> <span data-ttu-id="246e0-111">這個模型會定義可以使用 ADO.NET Entity Framework 存取之物件的形狀。</span><span class="sxs-lookup"><span data-stu-id="246e0-111">This is the model that defines the shape of the objects that can be accessed using the ADO.NET Entity Framework.</span></span>  
   
- <span data-ttu-id="524fa-112">下列活動包含在此範例中：</span><span class="sxs-lookup"><span data-stu-id="524fa-112">The following activities are included in this sample:</span></span>  
+ <span data-ttu-id="246e0-112">下列活動包含在此範例中：</span><span class="sxs-lookup"><span data-stu-id="246e0-112">The following activities are included in this sample:</span></span>  
   
--   <span data-ttu-id="524fa-113">`EntitySQLQuery`：`EntitySQLQuery` 活動可讓您從根據 Entity SQL 查詢字串的資料庫中擷取物件。</span><span class="sxs-lookup"><span data-stu-id="524fa-113">`EntitySQLQuery`: The `EntitySQLQuery` activity allows you to retrieve objects from the database based on an Entity SQL query string.</span></span> <span data-ttu-id="524fa-114">Entity SQL 是一種與存放區無關的語言而且與 SQL 非常類似，它可讓您指定以概念模型為基礎的查詢以及屬於模型或網域之一部分的實體。</span><span class="sxs-lookup"><span data-stu-id="524fa-114">Entity SQL is a store independent language that is similar to SQL and it allows you to specify queries based on the conceptual model and the entities that are a part of the model or domain.</span></span> <span data-ttu-id="524fa-115">如需 Entity SQL 語言的詳細資訊，請參閱[Entity SQL 語言](https://go.microsoft.com/fwlink/?LinkId=165646)。</span><span class="sxs-lookup"><span data-stu-id="524fa-115">For more information about Entity SQL Language, see [Entity SQL Language](https://go.microsoft.com/fwlink/?LinkId=165646).</span></span>  
+-   <span data-ttu-id="246e0-113">`EntitySQLQuery`：`EntitySQLQuery` 活動可讓您從根據 Entity SQL 查詢字串的資料庫中擷取物件。</span><span class="sxs-lookup"><span data-stu-id="246e0-113">`EntitySQLQuery`: The `EntitySQLQuery` activity allows you to retrieve objects from the database based on an Entity SQL query string.</span></span> <span data-ttu-id="246e0-114">Entity SQL 是一種與存放區無關的語言而且與 SQL 非常類似，它可讓您指定以概念模型為基礎的查詢以及屬於模型或網域之一部分的實體。</span><span class="sxs-lookup"><span data-stu-id="246e0-114">Entity SQL is a store independent language that is similar to SQL and it allows you to specify queries based on the conceptual model and the entities that are a part of the model or domain.</span></span> <span data-ttu-id="246e0-115">如需 Entity SQL 語言的詳細資訊，請參閱[Entity SQL 語言](https://go.microsoft.com/fwlink/?LinkId=165646)。</span><span class="sxs-lookup"><span data-stu-id="246e0-115">For more information about Entity SQL Language, see [Entity SQL Language](https://go.microsoft.com/fwlink/?LinkId=165646).</span></span>  
   
--   <span data-ttu-id="524fa-116">`EntityLinqQuery`：這個活動可讓您從根據 LINQ 查詢或述詞的資料庫中擷取物件。</span><span class="sxs-lookup"><span data-stu-id="524fa-116">`EntityLinqQuery`: This activity allows you to retrieve objects from the database based on a LINQ query or predicate.</span></span>  
+-   <span data-ttu-id="246e0-116">`EntityLinqQuery`：這個活動可讓您從根據 LINQ 查詢或述詞的資料庫中擷取物件。</span><span class="sxs-lookup"><span data-stu-id="246e0-116">`EntityLinqQuery`: This activity allows you to retrieve objects from the database based on a LINQ query or predicate.</span></span>  
   
--   <span data-ttu-id="524fa-117">`EntityAdd`：`EntityAdd` 活動可讓您將實體或實體集合加入至資料庫。</span><span class="sxs-lookup"><span data-stu-id="524fa-117">`EntityAdd`: The `EntityAdd` activity allows you to add an entity or a collection of entities to the database.</span></span>  
+-   <span data-ttu-id="246e0-117">`EntityAdd`：`EntityAdd` 活動可讓您將實體或實體集合加入至資料庫。</span><span class="sxs-lookup"><span data-stu-id="246e0-117">`EntityAdd`: The `EntityAdd` activity allows you to add an entity or a collection of entities to the database.</span></span>  
   
--   <span data-ttu-id="524fa-118">`EntityDelete`：`EntityDelete` 活動可讓您從資料庫中刪除實體或實體集合。</span><span class="sxs-lookup"><span data-stu-id="524fa-118">`EntityDelete`: The `EntityDelete` activity allows you to delete an entity or a collection of entities from the database.</span></span>  
+-   <span data-ttu-id="246e0-118">`EntityDelete`：`EntityDelete` 活動可讓您從資料庫中刪除實體或實體集合。</span><span class="sxs-lookup"><span data-stu-id="246e0-118">`EntityDelete`: The `EntityDelete` activity allows you to delete an entity or a collection of entities from the database.</span></span>  
   
--   <span data-ttu-id="524fa-119">`ObjectContextScope`：之前提到的活動只能在包含的 `ObjectContextScope` 活動執行個體內使用。</span><span class="sxs-lookup"><span data-stu-id="524fa-119">`ObjectContextScope`: The previously mentioned activities can only be used within a containing `ObjectContextScope` activity instance.</span></span> <span data-ttu-id="524fa-120">`ObjectContextScope` 活動會設定與資料庫之間的連接。</span><span class="sxs-lookup"><span data-stu-id="524fa-120">The `ObjectContextScope` activity sets up the connection to the database.</span></span> <span data-ttu-id="524fa-121">此活動需要連接字串 (使用組態檔設定來傳入或擷取)。</span><span class="sxs-lookup"><span data-stu-id="524fa-121">It requires a connection string (that is either passed in or retrieved using a configuration file setting).</span></span> <span data-ttu-id="524fa-122">`ObjectContextScope` 活動可讓您輕鬆地針對實體執行一組相關作業。</span><span class="sxs-lookup"><span data-stu-id="524fa-122">The `ObjectContextScope` activity makes it easy to perform a group of related operations on entities.</span></span> <span data-ttu-id="524fa-123">因為這個範圍會維護作用中的連接，所以它是「無持續性」範圍。</span><span class="sxs-lookup"><span data-stu-id="524fa-123">Because this scope maintains an active connection, it is a No Persist scope.</span></span> <span data-ttu-id="524fa-124">此外，當 `ObjectContextScope` 活動結束時，使用該範圍內的實體活動所擷取之物件的任何變更都會自動保存回資料庫，而且不需要任何明確或後續的動作來將物件儲存回資料庫。</span><span class="sxs-lookup"><span data-stu-id="524fa-124">In addition, when the `ObjectContextScope` activity exits, any changes that are made to objects retrieved using Entity Activities within that scope automatically get persisted back to the database, and no explicit or subsequent action is required to save objects back to the database.</span></span>  
+-   <span data-ttu-id="246e0-119">`ObjectContextScope`：之前提到的活動只能在包含的 `ObjectContextScope` 活動執行個體內使用。</span><span class="sxs-lookup"><span data-stu-id="246e0-119">`ObjectContextScope`: The previously mentioned activities can only be used within a containing `ObjectContextScope` activity instance.</span></span> <span data-ttu-id="246e0-120">`ObjectContextScope` 活動會設定與資料庫之間的連接。</span><span class="sxs-lookup"><span data-stu-id="246e0-120">The `ObjectContextScope` activity sets up the connection to the database.</span></span> <span data-ttu-id="246e0-121">此活動需要連接字串 (使用組態檔設定來傳入或擷取)。</span><span class="sxs-lookup"><span data-stu-id="246e0-121">It requires a connection string (that is either passed in or retrieved using a configuration file setting).</span></span> <span data-ttu-id="246e0-122">`ObjectContextScope` 活動可讓您輕鬆地針對實體執行一組相關作業。</span><span class="sxs-lookup"><span data-stu-id="246e0-122">The `ObjectContextScope` activity makes it easy to perform a group of related operations on entities.</span></span> <span data-ttu-id="246e0-123">因為這個範圍會維護作用中的連接，所以它是「無持續性」範圍。</span><span class="sxs-lookup"><span data-stu-id="246e0-123">Because this scope maintains an active connection, it is a No Persist scope.</span></span> <span data-ttu-id="246e0-124">此外，當 `ObjectContextScope` 活動結束時，使用該範圍內的實體活動所擷取之物件的任何變更都會自動保存回資料庫，而且不需要任何明確或後續的動作來將物件儲存回資料庫。</span><span class="sxs-lookup"><span data-stu-id="246e0-124">In addition, when the `ObjectContextScope` activity exits, any changes that are made to objects retrieved using Entity Activities within that scope automatically get persisted back to the database, and no explicit or subsequent action is required to save objects back to the database.</span></span>  
   
-## <a name="using-the-entity-activities"></a><span data-ttu-id="524fa-125">使用實體活動</span><span class="sxs-lookup"><span data-stu-id="524fa-125">Using the entity activities</span></span>  
- <span data-ttu-id="524fa-126">下列程式碼片段會示範如何使用這個範例所呈現的實體活動。</span><span class="sxs-lookup"><span data-stu-id="524fa-126">The following code snippets demonstrate how to use the entity activities presented in this sample.</span></span>  
+## <a name="using-the-entity-activities"></a><span data-ttu-id="246e0-125">使用實體活動</span><span class="sxs-lookup"><span data-stu-id="246e0-125">Using the entity activities</span></span>  
+ <span data-ttu-id="246e0-126">下列程式碼片段會示範如何使用這個範例所呈現的實體活動。</span><span class="sxs-lookup"><span data-stu-id="246e0-126">The following code snippets demonstrate how to use the entity activities presented in this sample.</span></span>  
   
-### <a name="entitysql"></a><span data-ttu-id="524fa-127">EntitySql</span><span class="sxs-lookup"><span data-stu-id="524fa-127">EntitySql</span></span>  
- <span data-ttu-id="524fa-128">底下的程式碼片段會示範如何查詢位於倫敦 (London) 的所有客戶 (依據名稱排序)，以及如何逐一查看客戶清單。</span><span class="sxs-lookup"><span data-stu-id="524fa-128">The code snippet below shows how to query all customers in London sorted by name and how to iterate through the list of customers.</span></span>  
+### <a name="entitysql"></a><span data-ttu-id="246e0-127">EntitySql</span><span class="sxs-lookup"><span data-stu-id="246e0-127">EntitySql</span></span>  
+ <span data-ttu-id="246e0-128">底下的程式碼片段會示範如何查詢位於倫敦 (London) 的所有客戶 (依據名稱排序)，以及如何逐一查看客戶清單。</span><span class="sxs-lookup"><span data-stu-id="246e0-128">The code snippet below shows how to query all customers in London sorted by name and how to iterate through the list of customers.</span></span>  
   
 ```  
 Variable<IEnumerable<Customer>> londonCustomers = new Variable<IEnumerable<Customer>>();  
@@ -79,8 +79,8 @@ return new ObjectContextScope
 };     
 ```  
   
-### <a name="entitylinqquery"></a><span data-ttu-id="524fa-129">EntityLinqQuery</span><span class="sxs-lookup"><span data-stu-id="524fa-129">EntityLinqQuery</span></span>  
- <span data-ttu-id="524fa-130">底下的程式碼片段會示範如何查詢位於倫敦 (London) 的所有客戶，以及如何逐一查看產生的客戶清單。</span><span class="sxs-lookup"><span data-stu-id="524fa-130">The code snippet below shows how to query all customers in London and how to iterate through the resulting list of customers.</span></span>  
+### <a name="entitylinqquery"></a><span data-ttu-id="246e0-129">EntityLinqQuery</span><span class="sxs-lookup"><span data-stu-id="246e0-129">EntityLinqQuery</span></span>  
+ <span data-ttu-id="246e0-130">底下的程式碼片段會示範如何查詢位於倫敦 (London) 的所有客戶，以及如何逐一查看產生的客戶清單。</span><span class="sxs-lookup"><span data-stu-id="246e0-130">The code snippet below shows how to query all customers in London and how to iterate through the resulting list of customers.</span></span>  
   
 ```  
 Variable<IEnumerable<Customer>> londonCustomers = new Variable<IEnumerable<Customer>>() { Name = "LondonCustomers" };  
@@ -122,8 +122,8 @@ return new ObjectContextScope
 };  
 ```  
   
-### <a name="entityadd"></a><span data-ttu-id="524fa-131">EntityAdd</span><span class="sxs-lookup"><span data-stu-id="524fa-131">EntityAdd</span></span>  
- <span data-ttu-id="524fa-132">底下的程式碼片段會示範如何將 OrderDetail 記錄加入至現有的訂單。</span><span class="sxs-lookup"><span data-stu-id="524fa-132">The code snippet below shows how to add an OrderDetail record to an existing Order.</span></span>  
+### <a name="entityadd"></a><span data-ttu-id="246e0-131">EntityAdd</span><span class="sxs-lookup"><span data-stu-id="246e0-131">EntityAdd</span></span>  
+ <span data-ttu-id="246e0-132">底下的程式碼片段會示範如何將 OrderDetail 記錄加入至現有的訂單。</span><span class="sxs-lookup"><span data-stu-id="246e0-132">The code snippet below shows how to add an OrderDetail record to an existing Order.</span></span>  
   
 ```  
 Variable<IEnumerable<Order>> orders = new Variable<IEnumerable<Order>>();  
@@ -171,8 +171,8 @@ return new ObjectContextScope
 };  
 ```  
   
-### <a name="entitydelete"></a><span data-ttu-id="524fa-133">EntityDelete</span><span class="sxs-lookup"><span data-stu-id="524fa-133">EntityDelete</span></span>  
- <span data-ttu-id="524fa-134">底下的程式碼片段會示範如何刪除訂單中的現有 OrderDetail 記錄 (如果存在的話)。</span><span class="sxs-lookup"><span data-stu-id="524fa-134">The code snippet below shows how to delete an existing OrderDetail record in an Order (if it exists).</span></span>  
+### <a name="entitydelete"></a><span data-ttu-id="246e0-133">EntityDelete</span><span class="sxs-lookup"><span data-stu-id="246e0-133">EntityDelete</span></span>  
+ <span data-ttu-id="246e0-134">底下的程式碼片段會示範如何刪除訂單中的現有 OrderDetail 記錄 (如果存在的話)。</span><span class="sxs-lookup"><span data-stu-id="246e0-134">The code snippet below shows how to delete an existing OrderDetail record in an Order (if it exists).</span></span>  
   
 ```  
 Variable<IEnumerable<OrderDetail>> orderDetails = new Variable<IEnumerable<OrderDetail>>();              
@@ -218,40 +218,40 @@ return new ObjectContextScope
 };  
 ```  
   
-## <a name="to-use-this-sample"></a><span data-ttu-id="524fa-135">若要使用這個範例</span><span class="sxs-lookup"><span data-stu-id="524fa-135">To use this sample</span></span>  
- <span data-ttu-id="524fa-136">您必須先在本機 SQL Server Express 執行個體中建立 `Northwind` 資料庫，然後才能執行這個範例。</span><span class="sxs-lookup"><span data-stu-id="524fa-136">You must create the `Northwind` database in your local SQL server Express instance before running this sample.</span></span>  
+## <a name="to-use-this-sample"></a><span data-ttu-id="246e0-135">若要使用這個範例</span><span class="sxs-lookup"><span data-stu-id="246e0-135">To use this sample</span></span>  
+ <span data-ttu-id="246e0-136">您必須先在本機 SQL Server Express 執行個體中建立 `Northwind` 資料庫，然後才能執行這個範例。</span><span class="sxs-lookup"><span data-stu-id="246e0-136">You must create the `Northwind` database in your local SQL server Express instance before running this sample.</span></span>  
   
-#### <a name="to-set-up-the-northwind-database"></a><span data-ttu-id="524fa-137">若要設定 Northwind 資料庫</span><span class="sxs-lookup"><span data-stu-id="524fa-137">To set up the Northwind database</span></span>  
+#### <a name="to-set-up-the-northwind-database"></a><span data-ttu-id="246e0-137">若要設定 Northwind 資料庫</span><span class="sxs-lookup"><span data-stu-id="246e0-137">To set up the Northwind database</span></span>  
   
-1.  <span data-ttu-id="524fa-138">開啟命令提示字元。</span><span class="sxs-lookup"><span data-stu-id="524fa-138">Open a command prompt.</span></span>  
+1.  <span data-ttu-id="246e0-138">開啟命令提示字元。</span><span class="sxs-lookup"><span data-stu-id="246e0-138">Open a command prompt.</span></span>  
   
-2.  <span data-ttu-id="524fa-139">在新的命令提示字元視窗中，巡覽至 EntityActivities\CS 資料夾。</span><span class="sxs-lookup"><span data-stu-id="524fa-139">In the new command prompt window, navigate to the EntityActivities\CS folder.</span></span>  
+2.  <span data-ttu-id="246e0-139">在新的命令提示字元視窗中，巡覽至 EntityActivities\CS 資料夾。</span><span class="sxs-lookup"><span data-stu-id="246e0-139">In the new command prompt window, navigate to the EntityActivities\CS folder.</span></span>  
   
-3.  <span data-ttu-id="524fa-140">型別`setup.cmd`按 ENTER 鍵。</span><span class="sxs-lookup"><span data-stu-id="524fa-140">Type `setup.cmd` and press ENTER.</span></span>  
+3.  <span data-ttu-id="246e0-140">型別`setup.cmd`按 ENTER 鍵。</span><span class="sxs-lookup"><span data-stu-id="246e0-140">Type `setup.cmd` and press ENTER.</span></span>  
   
-#### <a name="to-run-the-sample"></a><span data-ttu-id="524fa-141">若要執行範例</span><span class="sxs-lookup"><span data-stu-id="524fa-141">To run the sample</span></span>  
+#### <a name="to-run-the-sample"></a><span data-ttu-id="246e0-141">若要執行範例</span><span class="sxs-lookup"><span data-stu-id="246e0-141">To run the sample</span></span>  
   
-1.  <span data-ttu-id="524fa-142">使用 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 開啟 EntityActivities.sln 方案檔。</span><span class="sxs-lookup"><span data-stu-id="524fa-142">Using [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], open the EntityActivities.sln solution file.</span></span>  
+1.  <span data-ttu-id="246e0-142">使用 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 開啟 EntityActivities.sln 方案檔。</span><span class="sxs-lookup"><span data-stu-id="246e0-142">Using [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], open the EntityActivities.sln solution file.</span></span>  
   
-2.  <span data-ttu-id="524fa-143">若要建置此方案，請按 CTRL+SHIFT+B。</span><span class="sxs-lookup"><span data-stu-id="524fa-143">To build the solution, press CTRL+SHIFT+B.</span></span>  
+2.  <span data-ttu-id="246e0-143">若要建置此方案，請按 CTRL+SHIFT+B。</span><span class="sxs-lookup"><span data-stu-id="246e0-143">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  <span data-ttu-id="524fa-144">若要執行此方案，請按下 CTRL+F5。</span><span class="sxs-lookup"><span data-stu-id="524fa-144">To run the solution, press CTRL+F5.</span></span>  
+3.  <span data-ttu-id="246e0-144">若要執行此方案，請按下 CTRL+F5。</span><span class="sxs-lookup"><span data-stu-id="246e0-144">To run the solution, press CTRL+F5.</span></span>  
   
- <span data-ttu-id="524fa-145">在執行此範例之後，您可能會想要移除 `Northwind` 資料庫。</span><span class="sxs-lookup"><span data-stu-id="524fa-145">After running this sample, you may want to remove the `Northwind` database.</span></span>  
+ <span data-ttu-id="246e0-145">在執行此範例之後，您可能會想要移除 `Northwind` 資料庫。</span><span class="sxs-lookup"><span data-stu-id="246e0-145">After running this sample, you may want to remove the `Northwind` database.</span></span>  
   
-#### <a name="to-uninstall-the-northwind-database"></a><span data-ttu-id="524fa-146">若要解除安裝 Northwind 資料庫</span><span class="sxs-lookup"><span data-stu-id="524fa-146">To uninstall the Northwind database</span></span>  
+#### <a name="to-uninstall-the-northwind-database"></a><span data-ttu-id="246e0-146">若要解除安裝 Northwind 資料庫</span><span class="sxs-lookup"><span data-stu-id="246e0-146">To uninstall the Northwind database</span></span>  
   
-1.  <span data-ttu-id="524fa-147">開啟命令提示字元。</span><span class="sxs-lookup"><span data-stu-id="524fa-147">Open a command prompt.</span></span>  
+1.  <span data-ttu-id="246e0-147">開啟命令提示字元。</span><span class="sxs-lookup"><span data-stu-id="246e0-147">Open a command prompt.</span></span>  
   
-2.  <span data-ttu-id="524fa-148">在新的命令提示字元視窗中，巡覽至 EntityActivities\CS 資料夾。</span><span class="sxs-lookup"><span data-stu-id="524fa-148">In the new command prompt window, navigate to the EntityActivities\CS folder.</span></span>  
+2.  <span data-ttu-id="246e0-148">在新的命令提示字元視窗中，巡覽至 EntityActivities\CS 資料夾。</span><span class="sxs-lookup"><span data-stu-id="246e0-148">In the new command prompt window, navigate to the EntityActivities\CS folder.</span></span>  
   
-3.  <span data-ttu-id="524fa-149">型別`cleanup.cmd`按 ENTER 鍵。</span><span class="sxs-lookup"><span data-stu-id="524fa-149">Type `cleanup.cmd` and press ENTER.</span></span>  
+3.  <span data-ttu-id="246e0-149">型別`cleanup.cmd`按 ENTER 鍵。</span><span class="sxs-lookup"><span data-stu-id="246e0-149">Type `cleanup.cmd` and press ENTER.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="524fa-150">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="524fa-150">The samples may already be installed on your machine.</span></span> <span data-ttu-id="524fa-151">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="524fa-151">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="246e0-150">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="246e0-150">The samples may already be installed on your machine.</span></span> <span data-ttu-id="246e0-151">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="246e0-151">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="524fa-152">如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。</span><span class="sxs-lookup"><span data-stu-id="524fa-152">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="524fa-153">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="524fa-153">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="246e0-152">如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。</span><span class="sxs-lookup"><span data-stu-id="246e0-152">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="246e0-153">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="246e0-153">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\EntityActivities`

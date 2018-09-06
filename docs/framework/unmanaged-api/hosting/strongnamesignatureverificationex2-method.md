@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e47c2ac69317b2d2db489dce9a0102b5fe304c05
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43556594"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856873"
 ---
-# <a name="strongnamesignatureverificationex2-method"></a><span data-ttu-id="a5cc7-102">StrongNameSignatureVerificationEx2 方法</span><span class="sxs-lookup"><span data-stu-id="a5cc7-102">StrongNameSignatureVerificationEx2 Method</span></span>
-<span data-ttu-id="a5cc7-103">驗證強式名稱的組件中，簽章，並提供實際的索引鍵與 ECMA 索引鍵的對應。</span><span class="sxs-lookup"><span data-stu-id="a5cc7-103">Verifies the signature of a strongly named assembly, and provides a mapping from the ECMA key to a real key.</span></span>  
+# <a name="strongnamesignatureverificationex2-method"></a><span data-ttu-id="a6f62-102">StrongNameSignatureVerificationEx2 方法</span><span class="sxs-lookup"><span data-stu-id="a6f62-102">StrongNameSignatureVerificationEx2 Method</span></span>
+<span data-ttu-id="a6f62-103">驗證強式名稱的組件中，簽章，並提供實際的索引鍵與 ECMA 索引鍵的對應。</span><span class="sxs-lookup"><span data-stu-id="a6f62-103">Verifies the signature of a strongly named assembly, and provides a mapping from the ECMA key to a real key.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a5cc7-104">語法</span><span class="sxs-lookup"><span data-stu-id="a5cc7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a6f62-104">語法</span><span class="sxs-lookup"><span data-stu-id="a6f62-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameSignatureVerificationEx (  
@@ -38,35 +38,35 @@ HRESULT StrongNameSignatureVerificationEx (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a5cc7-105">參數</span><span class="sxs-lookup"><span data-stu-id="a5cc7-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="a6f62-105">參數</span><span class="sxs-lookup"><span data-stu-id="a6f62-105">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="a5cc7-106">[in]可攜式可執行檔 （.exe 或.dll） 檔來進行驗證的組件的路徑。</span><span class="sxs-lookup"><span data-stu-id="a5cc7-106">[in] The path to the portable executable (.exe or .dll) file for the assembly to be verified.</span></span>  
+ <span data-ttu-id="a6f62-106">[in]可攜式可執行檔 （.exe 或.dll） 檔來進行驗證的組件的路徑。</span><span class="sxs-lookup"><span data-stu-id="a6f62-106">[in] The path to the portable executable (.exe or .dll) file for the assembly to be verified.</span></span>  
   
  `fForceVerification`  
- <span data-ttu-id="a5cc7-107">[in]`true`進行驗證，即使它是必要的登錄設定會覆寫，否則`false`。</span><span class="sxs-lookup"><span data-stu-id="a5cc7-107">[in] `true` to perform verification, even if it is necessary to override registry settings; otherwise, `false`.</span></span>  
+ <span data-ttu-id="a6f62-107">[in]`true`進行驗證，即使它是必要的登錄設定會覆寫，否則`false`。</span><span class="sxs-lookup"><span data-stu-id="a6f62-107">[in] `true` to perform verification, even if it is necessary to override registry settings; otherwise, `false`.</span></span>  
   
  `pbEcmaPublicKey`  
- <span data-ttu-id="a5cc7-108">[in]從實際的索引鍵的 ECMA 公開金鑰對應的指標，用來驗證。</span><span class="sxs-lookup"><span data-stu-id="a5cc7-108">[in] A pointer to the mapping from the ECMA public key to the real key used for verification.</span></span>  
+ <span data-ttu-id="a6f62-108">[in]從實際的索引鍵的 ECMA 公開金鑰對應的指標，用來驗證。</span><span class="sxs-lookup"><span data-stu-id="a6f62-108">[in] A pointer to the mapping from the ECMA public key to the real key used for verification.</span></span>  
   
  `cbEcmaPublicKey`  
- <span data-ttu-id="a5cc7-109">[in]實際的 ECMA 公開金鑰長度。</span><span class="sxs-lookup"><span data-stu-id="a5cc7-109">[in] The length of the real ECMA public key.</span></span>  
+ <span data-ttu-id="a6f62-109">[in]實際的 ECMA 公開金鑰長度。</span><span class="sxs-lookup"><span data-stu-id="a6f62-109">[in] The length of the real ECMA public key.</span></span>  
   
  `pfWasVerified`  
- <span data-ttu-id="a5cc7-110">[out]`true`強式名稱簽章是否已驗證，否則`false`。</span><span class="sxs-lookup"><span data-stu-id="a5cc7-110">[out] `true` if the strong name signature was verified; otherwise, `false`.</span></span> <span data-ttu-id="a5cc7-111">這個參數也會設定為`false`若驗證成功因登錄設定。</span><span class="sxs-lookup"><span data-stu-id="a5cc7-111">This parameter is also set to `false` if the verification was successful due to registry settings.</span></span>  
+ <span data-ttu-id="a6f62-110">[out]`true`強式名稱簽章是否已驗證，否則`false`。</span><span class="sxs-lookup"><span data-stu-id="a6f62-110">[out] `true` if the strong name signature was verified; otherwise, `false`.</span></span> <span data-ttu-id="a6f62-111">這個參數也會設定為`false`若驗證成功因登錄設定。</span><span class="sxs-lookup"><span data-stu-id="a6f62-111">This parameter is also set to `false` if the verification was successful due to registry settings.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a5cc7-112">傳回值</span><span class="sxs-lookup"><span data-stu-id="a5cc7-112">Return Value</span></span>  
- <span data-ttu-id="a5cc7-113">`S_OK` 如果驗證成功;否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)清單)。</span><span class="sxs-lookup"><span data-stu-id="a5cc7-113">`S_OK` if the verification was successful; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a6f62-112">傳回值</span><span class="sxs-lookup"><span data-stu-id="a6f62-112">Return Value</span></span>  
+ <span data-ttu-id="a6f62-113">`S_OK` 如果驗證成功;否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)清單)。</span><span class="sxs-lookup"><span data-stu-id="a6f62-113">`S_OK` if the verification was successful; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a5cc7-114">需求</span><span class="sxs-lookup"><span data-stu-id="a5cc7-114">Requirements</span></span>  
- <span data-ttu-id="a5cc7-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a5cc7-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a6f62-114">需求</span><span class="sxs-lookup"><span data-stu-id="a6f62-114">Requirements</span></span>  
+ <span data-ttu-id="a6f62-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a6f62-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a5cc7-116">**標頭：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="a5cc7-116">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="a6f62-116">**標頭：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="a6f62-116">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="a5cc7-117">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="a5cc7-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="a6f62-117">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="a6f62-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="a5cc7-118">**.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a5cc7-118">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="a6f62-118">**.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a6f62-118">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a5cc7-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a5cc7-119">See Also</span></span>  
- [<span data-ttu-id="a5cc7-120">StrongNameSignatureVerification 方法</span><span class="sxs-lookup"><span data-stu-id="a5cc7-120">StrongNameSignatureVerification Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)  
- [<span data-ttu-id="a5cc7-121">StrongNameSignatureVerificationEx 方法</span><span class="sxs-lookup"><span data-stu-id="a5cc7-121">StrongNameSignatureVerificationEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)  
- [<span data-ttu-id="a5cc7-122">ICLRStrongName 介面</span><span class="sxs-lookup"><span data-stu-id="a5cc7-122">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="a6f62-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a6f62-119">See Also</span></span>  
+ [<span data-ttu-id="a6f62-120">StrongNameSignatureVerification 方法</span><span class="sxs-lookup"><span data-stu-id="a6f62-120">StrongNameSignatureVerification Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)  
+ [<span data-ttu-id="a6f62-121">StrongNameSignatureVerificationEx 方法</span><span class="sxs-lookup"><span data-stu-id="a6f62-121">StrongNameSignatureVerificationEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)  
+ [<span data-ttu-id="a6f62-122">ICLRStrongName 介面</span><span class="sxs-lookup"><span data-stu-id="a6f62-122">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

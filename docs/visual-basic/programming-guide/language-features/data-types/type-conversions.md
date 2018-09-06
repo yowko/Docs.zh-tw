@@ -11,37 +11,37 @@ helpviewer_keywords:
 - data type conversion [Visual Basic]
 ms.assetid: 1cdacd21-ba31-4b62-b5be-395e41eeaa17
 ms.openlocfilehash: 026b2a250abfac0782feb0946bc50a94f504f7ed
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43565111"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43800660"
 ---
-# <a name="type-conversions-in-visual-basic"></a><span data-ttu-id="cd56b-102">Visual Basic 中的類型轉換</span><span class="sxs-lookup"><span data-stu-id="cd56b-102">Type Conversions in Visual Basic</span></span>
-<span data-ttu-id="cd56b-103">值從一種資料類型變更為另一種類型的程序稱為*轉換*。</span><span class="sxs-lookup"><span data-stu-id="cd56b-103">The process of changing a value from one data type to another type is called *conversion*.</span></span> <span data-ttu-id="cd56b-104">轉換為*widening*或是*縮小*，取決於相關類型的資料容量。</span><span class="sxs-lookup"><span data-stu-id="cd56b-104">Conversions are either *widening* or *narrowing*, depending on the data capacities of the types involved.</span></span> <span data-ttu-id="cd56b-105">它們也是*隱含*或是*明確*，取決於在原始程式碼中的語法。</span><span class="sxs-lookup"><span data-stu-id="cd56b-105">They are also *implicit* or *explicit*, depending on the syntax in the source code.</span></span>  
+# <a name="type-conversions-in-visual-basic"></a><span data-ttu-id="ae660-102">Visual Basic 中的類型轉換</span><span class="sxs-lookup"><span data-stu-id="ae660-102">Type Conversions in Visual Basic</span></span>
+<span data-ttu-id="ae660-103">值從一種資料類型變更為另一種類型的程序稱為*轉換*。</span><span class="sxs-lookup"><span data-stu-id="ae660-103">The process of changing a value from one data type to another type is called *conversion*.</span></span> <span data-ttu-id="ae660-104">轉換為*widening*或是*縮小*，取決於相關類型的資料容量。</span><span class="sxs-lookup"><span data-stu-id="ae660-104">Conversions are either *widening* or *narrowing*, depending on the data capacities of the types involved.</span></span> <span data-ttu-id="ae660-105">它們也是*隱含*或是*明確*，取決於在原始程式碼中的語法。</span><span class="sxs-lookup"><span data-stu-id="ae660-105">They are also *implicit* or *explicit*, depending on the syntax in the source code.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="cd56b-106">本節內容</span><span class="sxs-lookup"><span data-stu-id="cd56b-106">In This Section</span></span>  
- [<span data-ttu-id="cd56b-107">擴展和縮小轉換</span><span class="sxs-lookup"><span data-stu-id="cd56b-107">Widening and Narrowing Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- <span data-ttu-id="cd56b-108">說明轉換的目的型別是否可以存放資料分類。</span><span class="sxs-lookup"><span data-stu-id="cd56b-108">Explains conversions classified by whether the destination type can hold the data.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="ae660-106">本節內容</span><span class="sxs-lookup"><span data-stu-id="ae660-106">In This Section</span></span>  
+ [<span data-ttu-id="ae660-107">擴展和縮小轉換</span><span class="sxs-lookup"><span data-stu-id="ae660-107">Widening and Narrowing Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
+ <span data-ttu-id="ae660-108">說明轉換的目的型別是否可以存放資料分類。</span><span class="sxs-lookup"><span data-stu-id="ae660-108">Explains conversions classified by whether the destination type can hold the data.</span></span>  
   
- [<span data-ttu-id="cd56b-109">隱含和明確轉換</span><span class="sxs-lookup"><span data-stu-id="cd56b-109">Implicit and Explicit Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- <span data-ttu-id="cd56b-110">討論分類是否 Visual Basic 它們會自動執行的轉換。</span><span class="sxs-lookup"><span data-stu-id="cd56b-110">Discusses conversions classified by whether Visual Basic performs them automatically.</span></span>  
+ [<span data-ttu-id="ae660-109">隱含和明確轉換</span><span class="sxs-lookup"><span data-stu-id="ae660-109">Implicit and Explicit Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
+ <span data-ttu-id="ae660-110">討論分類是否 Visual Basic 它們會自動執行的轉換。</span><span class="sxs-lookup"><span data-stu-id="ae660-110">Discusses conversions classified by whether Visual Basic performs them automatically.</span></span>  
   
- [<span data-ttu-id="cd56b-111">字串與其他類型之間的轉換</span><span class="sxs-lookup"><span data-stu-id="cd56b-111">Conversions Between Strings and Other Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- <span data-ttu-id="cd56b-112">說明轉換字串和數字，介於`Boolean`，或日期/時間值。</span><span class="sxs-lookup"><span data-stu-id="cd56b-112">Illustrates converting between strings and numeric, `Boolean`, or date/time values.</span></span>  
+ [<span data-ttu-id="ae660-111">字串與其他類型之間的轉換</span><span class="sxs-lookup"><span data-stu-id="ae660-111">Conversions Between Strings and Other Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
+ <span data-ttu-id="ae660-112">說明轉換字串和數字，介於`Boolean`，或日期/時間值。</span><span class="sxs-lookup"><span data-stu-id="ae660-112">Illustrates converting between strings and numeric, `Boolean`, or date/time values.</span></span>  
   
- [<span data-ttu-id="cd56b-113">如何： 將物件轉換成 Visual Basic 中的另一個類型</span><span class="sxs-lookup"><span data-stu-id="cd56b-113">How to: Convert an Object to Another Type in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- <span data-ttu-id="cd56b-114">示範如何轉換`Object`變數設為任何其他資料類型。</span><span class="sxs-lookup"><span data-stu-id="cd56b-114">Shows how to convert an `Object` variable to any other data type.</span></span>  
+ [<span data-ttu-id="ae660-113">如何： 將物件轉換成 Visual Basic 中的另一個類型</span><span class="sxs-lookup"><span data-stu-id="ae660-113">How to: Convert an Object to Another Type in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
+ <span data-ttu-id="ae660-114">示範如何轉換`Object`變數設為任何其他資料類型。</span><span class="sxs-lookup"><span data-stu-id="ae660-114">Shows how to convert an `Object` variable to any other data type.</span></span>  
   
- [<span data-ttu-id="cd56b-115">陣列轉換</span><span class="sxs-lookup"><span data-stu-id="cd56b-115">Array Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
- <span data-ttu-id="cd56b-116">逐步執行不同的資料類型的陣列之間轉換的程序。</span><span class="sxs-lookup"><span data-stu-id="cd56b-116">Steps you through the process of converting between arrays of different data types.</span></span>  
+ [<span data-ttu-id="ae660-115">陣列轉換</span><span class="sxs-lookup"><span data-stu-id="ae660-115">Array Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
+ <span data-ttu-id="ae660-116">逐步執行不同的資料類型的陣列之間轉換的程序。</span><span class="sxs-lookup"><span data-stu-id="ae660-116">Steps you through the process of converting between arrays of different data types.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="cd56b-117">相關章節</span><span class="sxs-lookup"><span data-stu-id="cd56b-117">Related Sections</span></span>  
- [<span data-ttu-id="cd56b-118">資料類型</span><span class="sxs-lookup"><span data-stu-id="cd56b-118">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- <span data-ttu-id="cd56b-119">介紹 Visual Basic 資料類型，並說明如何使用它們。</span><span class="sxs-lookup"><span data-stu-id="cd56b-119">Introduces the Visual Basic data types and describes how to use them.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="ae660-117">相關章節</span><span class="sxs-lookup"><span data-stu-id="ae660-117">Related Sections</span></span>  
+ [<span data-ttu-id="ae660-118">資料類型</span><span class="sxs-lookup"><span data-stu-id="ae660-118">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ <span data-ttu-id="ae660-119">介紹 Visual Basic 資料類型，並說明如何使用它們。</span><span class="sxs-lookup"><span data-stu-id="ae660-119">Introduces the Visual Basic data types and describes how to use them.</span></span>  
   
- [<span data-ttu-id="cd56b-120">資料類型</span><span class="sxs-lookup"><span data-stu-id="cd56b-120">Data Types</span></span>](../../../../visual-basic/language-reference/data-types/index.md)  
- <span data-ttu-id="cd56b-121">列出 Visual Basic 所提供的基本資料類型。</span><span class="sxs-lookup"><span data-stu-id="cd56b-121">Lists the elementary data types supplied by Visual Basic.</span></span>  
+ [<span data-ttu-id="ae660-120">資料類型</span><span class="sxs-lookup"><span data-stu-id="ae660-120">Data Types</span></span>](../../../../visual-basic/language-reference/data-types/index.md)  
+ <span data-ttu-id="ae660-121">列出 Visual Basic 所提供的基本資料類型。</span><span class="sxs-lookup"><span data-stu-id="ae660-121">Lists the elementary data types supplied by Visual Basic.</span></span>  
   
- [<span data-ttu-id="cd56b-122">資料類型的疑難排解</span><span class="sxs-lookup"><span data-stu-id="cd56b-122">Troubleshooting Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- <span data-ttu-id="cd56b-123">討論使用資料型別時可能發生的一些常見問題。</span><span class="sxs-lookup"><span data-stu-id="cd56b-123">Discusses some common problems that can arise when working with data types.</span></span>
+ [<span data-ttu-id="ae660-122">資料類型的疑難排解</span><span class="sxs-lookup"><span data-stu-id="ae660-122">Troubleshooting Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ <span data-ttu-id="ae660-123">討論使用資料型別時可能發生的一些常見問題。</span><span class="sxs-lookup"><span data-stu-id="ae660-123">Discusses some common problems that can arise when working with data types.</span></span>

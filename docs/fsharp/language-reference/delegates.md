@@ -2,40 +2,40 @@
 title: 委派 (F#)
 description: '了解如何使用 F # 中的委派。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 664b4f80302871d05ea9604ca90219e19bc14ddb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: be58997dffe8fcd949bbc2d47d86ffccc157d43e
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563437"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43801516"
 ---
-# <a name="delegates"></a><span data-ttu-id="a0ccc-103">委派</span><span class="sxs-lookup"><span data-stu-id="a0ccc-103">Delegates</span></span>
+# <a name="delegates"></a><span data-ttu-id="085ab-103">委派</span><span class="sxs-lookup"><span data-stu-id="085ab-103">Delegates</span></span>
 
-<span data-ttu-id="a0ccc-104">委派以物件表示函式呼叫。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-104">A delegate represents a function call as an object.</span></span> <span data-ttu-id="a0ccc-105">在 F # 中，您通常應該使用函式值來表示函式做為第一級值;不過，委派會使用.NET Framework 中，而且當您希望他們的應用程式開發介面與交互操作時，因此需要。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-105">In F#, you ordinarily should use function values to represent functions as first-class values; however, delegates are used in the .NET Framework and so are needed when you interoperate with APIs that expect them.</span></span> <span data-ttu-id="a0ccc-106">此外，它們也可能使用時撰寫的程式庫針對使用其他.NET Framework 語言。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-106">They may also be used when authoring libraries designed for use from other .NET Framework languages.</span></span>
+<span data-ttu-id="085ab-104">委派為物件，表示函式呼叫。</span><span class="sxs-lookup"><span data-stu-id="085ab-104">A delegate represents a function call as an object.</span></span> <span data-ttu-id="085ab-105">在 F # 中，您通常應該使用函式值來表示函式做為第一級值;不過，委派會在.NET Framework 和您預期的 Api 與交互操作時，因此需要。</span><span class="sxs-lookup"><span data-stu-id="085ab-105">In F#, you ordinarily should use function values to represent functions as first-class values; however, delegates are used in the .NET Framework and so are needed when you interoperate with APIs that expect them.</span></span> <span data-ttu-id="085ab-106">此外，它們也可能使用專為撰寫的程式庫會使用從其他.NET Framework 語言時。</span><span class="sxs-lookup"><span data-stu-id="085ab-106">They may also be used when authoring libraries designed for use from other .NET Framework languages.</span></span>
 
-
-## <a name="syntax"></a><span data-ttu-id="a0ccc-107">語法</span><span class="sxs-lookup"><span data-stu-id="a0ccc-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="085ab-107">語法</span><span class="sxs-lookup"><span data-stu-id="085ab-107">Syntax</span></span>
 
 ```fsharp
 type delegate-typename = delegate of type1 -> type2
 ```
 
-## <a name="remarks"></a><span data-ttu-id="a0ccc-108">備註</span><span class="sxs-lookup"><span data-stu-id="a0ccc-108">Remarks</span></span>
-<span data-ttu-id="a0ccc-109">在先前的語法，`type1`表示的引數類型和`type2`表示的傳回型別。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-109">In the previous syntax, `type1` represents the argument type or types and `type2` represents the return type.</span></span> <span data-ttu-id="a0ccc-110">引數型別以表示`type1`自動局部調用。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-110">The argument types that are represented by `type1` are automatically curried.</span></span> <span data-ttu-id="a0ccc-111">這可能表示，此類型局部調用目標函式的引數，如果您使用了 tuple 表單和括號括住 tuple 已 tuple 形式的引數。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-111">This suggests that for this type you use a tuple form if the arguments of the target function are curried, and a parenthesized tuple for arguments that are already in the tuple form.</span></span> <span data-ttu-id="a0ccc-112">自動對移除一組括號，讓符合目標方法的 tuple 引數。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-112">The automatic currying removes a set of parentheses, leaving a tuple argument that matches the target method.</span></span> <span data-ttu-id="a0ccc-113">請參閱程式碼範例，您應該在每個案例中使用的語法。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-113">Refer to the code example for the syntax you should use in each case.</span></span>
+## <a name="remarks"></a><span data-ttu-id="085ab-108">備註</span><span class="sxs-lookup"><span data-stu-id="085ab-108">Remarks</span></span>
 
-<span data-ttu-id="a0ccc-114">委派可以附加至 F # 函式值，與靜態或執行個體方法。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-114">Delegates can be attached to F# function values, and static or instance methods.</span></span> <span data-ttu-id="a0ccc-115">F # 函式值可以直接做為委派建構函式引數傳遞。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-115">F# function values can be passed directly as arguments to delegate constructors.</span></span> <span data-ttu-id="a0ccc-116">對於靜態方法，您可以建構委派使用類別和方法的名稱。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-116">For a static method, you construct the delegate by using the name of the class and the method.</span></span> <span data-ttu-id="a0ccc-117">執行個體方法，為您提供的物件執行個體和一個引數中的方法。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-117">For an instance method, you provide the object instance and method in one argument.</span></span> <span data-ttu-id="a0ccc-118">在這兩種情況下，成員存取運算子 (`.`) 使用。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-118">In both cases, the member access operator (`.`) is used.</span></span>
+<span data-ttu-id="085ab-109">在先前的語法`type1`表示的引數型別或型別和`type2`表示傳回型別。</span><span class="sxs-lookup"><span data-stu-id="085ab-109">In the previous syntax, `type1` represents the argument type or types and `type2` represents the return type.</span></span> <span data-ttu-id="085ab-110">引數類型表示的`type1`自動局部調用。</span><span class="sxs-lookup"><span data-stu-id="085ab-110">The argument types that are represented by `type1` are automatically curried.</span></span> <span data-ttu-id="085ab-111">這可能表示，您會使用 tuple 形式，如果目標函式的引數局部調用，此類型與已在 tuple 形式的引數的括號括住 tuple。</span><span class="sxs-lookup"><span data-stu-id="085ab-111">This suggests that for this type you use a tuple form if the arguments of the target function are curried, and a parenthesized tuple for arguments that are already in the tuple form.</span></span> <span data-ttu-id="085ab-112">自動調用移除一組括號，保留的元組引數，符合目標方法。</span><span class="sxs-lookup"><span data-stu-id="085ab-112">The automatic currying removes a set of parentheses, leaving a tuple argument that matches the target method.</span></span> <span data-ttu-id="085ab-113">請參閱每個案例中，您應該使用的語法的程式碼範例。</span><span class="sxs-lookup"><span data-stu-id="085ab-113">Refer to the code example for the syntax you should use in each case.</span></span>
 
-<span data-ttu-id="a0ccc-119">`Invoke`委派型別上的方法會呼叫封裝函式。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-119">The `Invoke` method on the delegate type calls the encapsulated function.</span></span> <span data-ttu-id="a0ccc-120">此外，委派可以藉由參考沒有括號叫用方法名稱傳遞做為函式值。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-120">Also, delegates can be passed as function values by referencing the Invoke method name without the parentheses.</span></span>
+<span data-ttu-id="085ab-114">委派可以附加至 F # 函式值，與靜態或執行個體方法。</span><span class="sxs-lookup"><span data-stu-id="085ab-114">Delegates can be attached to F# function values, and static or instance methods.</span></span> <span data-ttu-id="085ab-115">F # 函式值可以直接當做委派建構函式的引數傳遞。</span><span class="sxs-lookup"><span data-stu-id="085ab-115">F# function values can be passed directly as arguments to delegate constructors.</span></span> <span data-ttu-id="085ab-116">是靜態的方法中，您可以建構委派使用類別和方法的名稱。</span><span class="sxs-lookup"><span data-stu-id="085ab-116">For a static method, you construct the delegate by using the name of the class and the method.</span></span> <span data-ttu-id="085ab-117">執行個體方法，為您提供的物件執行個體和一個引數中的方法。</span><span class="sxs-lookup"><span data-stu-id="085ab-117">For an instance method, you provide the object instance and method in one argument.</span></span> <span data-ttu-id="085ab-118">在這兩種情況下，成員存取運算子 (`.`) 使用。</span><span class="sxs-lookup"><span data-stu-id="085ab-118">In both cases, the member access operator (`.`) is used.</span></span>
 
-<span data-ttu-id="a0ccc-121">下列程式碼顯示的語法建立代表類別中的各種方法的委派。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-121">The following code shows the syntax for creating delegates that represent various methods in a class.</span></span> <span data-ttu-id="a0ccc-122">根據是否方法為靜態方法或執行個體方法，以及是否有 tuple 或局部調用的表單中的引數，宣告並指派委派的語法會稍有不同。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-122">Depending on whether the method is a static method or an instance method, and whether it has arguments in the tuple form or the curried form, the syntax for declaring and assigning the delegate is a little different.</span></span>
+<span data-ttu-id="085ab-119">`Invoke`的委派類型的方法呼叫的封裝函式。</span><span class="sxs-lookup"><span data-stu-id="085ab-119">The `Invoke` method on the delegate type calls the encapsulated function.</span></span> <span data-ttu-id="085ab-120">此外，委派可以藉由參考沒有括號的 Invoke 方法名稱傳遞為函式值。</span><span class="sxs-lookup"><span data-stu-id="085ab-120">Also, delegates can be passed as function values by referencing the Invoke method name without the parentheses.</span></span>
+
+<span data-ttu-id="085ab-121">下列程式碼顯示建立代表類別中的各種方法的委派的語法。</span><span class="sxs-lookup"><span data-stu-id="085ab-121">The following code shows the syntax for creating delegates that represent various methods in a class.</span></span> <span data-ttu-id="085ab-122">根據是否方法為靜態方法或執行個體方法，以及是否有 tuple 或局部調用的表單中的引數，宣告和指派委派的語法是有點不同。</span><span class="sxs-lookup"><span data-stu-id="085ab-122">Depending on whether the method is a static method or an instance method, and whether it has arguments in the tuple form or the curried form, the syntax for declaring and assigning the delegate is a little different.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4201.fs)]
 
-<span data-ttu-id="a0ccc-123">下列程式碼顯示一些不同的方式，您可以使用委派。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-123">The following code shows some of the different ways you can work with delegates.</span></span>
+<span data-ttu-id="085ab-123">下列程式碼顯示一些不同的方式，您可以使用委派。</span><span class="sxs-lookup"><span data-stu-id="085ab-123">The following code shows some of the different ways you can work with delegates.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4202.fs)]
 
-<span data-ttu-id="a0ccc-124">上述程式碼範例的輸出如下所示。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-124">The output of the previous code example is as follows.</span></span>
+<span data-ttu-id="085ab-124">上述程式碼範例的輸出如下所示。</span><span class="sxs-lookup"><span data-stu-id="085ab-124">The output of the previous code example is as follows.</span></span>
 
 ```console
 aaaaa
@@ -44,9 +44,8 @@ ccccc
 [|"aaa"; "bbb"|]
 ```
 
-## <a name="see-also"></a><span data-ttu-id="a0ccc-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a0ccc-125">See Also</span></span>
-[<span data-ttu-id="a0ccc-126">F# 語言參考</span><span class="sxs-lookup"><span data-stu-id="a0ccc-126">F# Language Reference</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="085ab-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="085ab-125">See also</span></span>
 
-[<span data-ttu-id="a0ccc-127">參數和引數</span><span class="sxs-lookup"><span data-stu-id="a0ccc-127">Parameters and Arguments</span></span>](parameters-and-arguments.md)
-
-[<span data-ttu-id="a0ccc-128">事件</span><span class="sxs-lookup"><span data-stu-id="a0ccc-128">Events</span></span>](members/events.md)
+- [<span data-ttu-id="085ab-126">F# 語言參考</span><span class="sxs-lookup"><span data-stu-id="085ab-126">F# Language Reference</span></span>](index.md)
+- [<span data-ttu-id="085ab-127">參數和引數</span><span class="sxs-lookup"><span data-stu-id="085ab-127">Parameters and Arguments</span></span>](parameters-and-arguments.md)
+- [<span data-ttu-id="085ab-128">事件</span><span class="sxs-lookup"><span data-stu-id="085ab-128">Events</span></span>](members/events.md)
