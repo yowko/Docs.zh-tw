@@ -2,12 +2,12 @@
 title: 計算運算式 (F#)
 description: '了解如何建立方便的語法，撰寫 F #，可以進行排序和合併使用控制流程建構和繫結中的計算。'
 ms.date: 07/27/2018
-ms.openlocfilehash: 4995efc757d99a575ee9fad3abf0465a32398c44
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: ce81af7966a436b3973de277fb2a78ec06f4c471
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "36207429"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43800906"
 ---
 # <a name="computation-expressions"></a>計算運算式
 
@@ -229,8 +229,6 @@ builder.Run(builder.Delay(fun () -> {| cexpr |}))
 
 在上述程式碼來呼叫`Run`和`Delay`會省略所計算的運算式產生器類別中有未定義。 計算運算式，這裡表示為主體`{| cexpr |}`，轉譯成牽涉到的產生器類別方法的呼叫下表中所述的翻譯。 計算運算式`{| cexpr |}`會定義以遞迴方式，根據這些翻譯所在`expr`是 F # 運算式和`cexpr`是計算運算式。
 
-
-
 |運算式|轉譯|
 |----------|-----------|
 |<code>{&#124; let binding in cexpr &#124;}</code>|<code>let binding in {&#124; cexpr &#124;}</code>|
@@ -361,7 +359,7 @@ let comp = eventually {
         printfn " x = %d" x
     return 3 + 4 }
 
-// Try the remaining lines in F# interactive to see how this 
+// Try the remaining lines in F# interactive to see how this
 // computation expression works in practice.
 let step x = Eventually.step x
 
@@ -386,9 +384,11 @@ comp |> step |> step |> step |> step |> step |> step |> step |> step
 計算運算式具有基礎類型，則運算式會傳回。 計算的結果或可執行的延遲的計算，可能代表基礎類型，或者它可能提供逐一查看集合的某種類型的方法。 在上述範例中，基礎類型是**最終**。 序列運算式中，基礎類型是<xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>。 查詢運算式的基礎類型是<xref:System.Linq.IQueryable?displayProperty=nameWithType>。 非同步工作流程的基礎類型是[ `Async` ](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7)。 `Async`物件代表要計算的結果執行的工作。 例如，您呼叫[ `Async.RunSynchronously` ](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b)來執行計算並傳回結果。
 
 ## <a name="custom-operations"></a>自訂作業
+
 您可以定義自訂的作業，在 計算運算式，並為計算運算式中運算子使用的自訂作業。 比方說，您可以在查詢運算式中包含的查詢運算子。 當您定義的自訂作業時，您必須定義在 Yield 和計算運算式中的方法。 若要定義自訂的作業，將它放在 計算運算式產生器類別，然後套用[ `CustomOperationAttribute` ](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19)。 這個屬性會接受字串做為引數，也就是使用中的自訂作業的名稱。 此名稱來自進入範圍內的計算運算式的左大括號開頭。 因此，您不應該使用在這個區塊中有相同名稱的自訂作業的識別碼。 例如，避免識別項使用這類`all`或`last`查詢運算式中。
 
 ### <a name="extending-existing-builders-with-new-custom-operations"></a>擴充現有的產生器與新的自訂作業
+
 如果您已經產生器類別，可以從擴充其自訂作業，此產生器的類別之外。 延伸模組必須在模組中宣告。 命名空間不能包含相同的檔案和相同的命名空間宣告群組定義類型的位置中的擴充成員除外。
 
 下列範例示範的現有擴充`Microsoft.FSharp.Linq.QueryBuilder`類別。
@@ -402,10 +402,8 @@ type Microsoft.FSharp.Linq.QueryBuilder with
 ```
 
 ## <a name="see-also"></a>另請參閱
-[F# 語言參考](index.md)
 
-[非同步工作流程](asynchronous-workflows.md)
-
-[序列](https://msdn.microsoft.com/library/6b773b6b-9c9a-4af8-bd9e-d96585c166db)
-
-[查詢運算式](query-expressions.md)
+- [F# 語言參考](index.md)
+- [非同步工作流程](asynchronous-workflows.md)
+- [序列](https://msdn.microsoft.com/library/6b773b6b-9c9a-4af8-bd9e-d96585c166db)
+- [查詢運算式](query-expressions.md)

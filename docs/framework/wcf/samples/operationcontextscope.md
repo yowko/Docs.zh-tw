@@ -3,11 +3,11 @@ title: OperationContextScope
 ms.date: 03/30/2017
 ms.assetid: 11c11108-8eb4-4d49-95a0-83285a812262
 ms.openlocfilehash: 09ead071c5d8320452724edbb1c7f7f5e0124421
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: MT
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43395000"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43723434"
 ---
 # <a name="operationcontextscope"></a>OperationContextScope
 OperationContextScope 範例會示範如何傳送上使用標頭的 Windows Communication Foundation (WCF) 呼叫的額外資訊。 在此範例中，伺服器與用戶端都是主控台應用程式。  
