@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 07/19/2018
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 8f4490edfc06fcc3ec06daffdb0966ac9ee72e23
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 91dbbefd247b5e175da7dc3560b6323cbec1972b
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "36298171"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892174"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -55,7 +55,7 @@ ms.locfileid: "36298171"
 有兩個主要的版本控制規則：
 
 - 累加：.NET Standard 版本就邏輯而言是同心圓：較新的版本會包含來自較舊版本的所有 API。 版本之間並沒有任何重大變更。
-- 固定：.NET Standard 在發行後，版本即凍結。 新的 API 將先在特定的 .NET 實作 (例如 .NET Core) 中提供。 如果 .NET Standard 審查委員會認為應該為所有 .NET 實作，提供新的 API，會在新的 .NET Standard 版本中加入這些 API。
+- 固定：.NET Standard 在出貨後，版本即凍結。 新的 API 將先在特定的 .NET 實作 (例如 .NET Core) 中提供。 如果 .NET Standard 審查委員會認為應該為所有 .NET 實作，提供新的 API，即會在新的 .NET Standard 版本中加入這些 API。
 
 ## <a name="specification"></a>規格
 
@@ -160,4 +160,4 @@ NuGet 套件是以一個或多個[架構](frameworks.md)為目標。 .NET Standa
 
 ## <a name="see-also"></a>另請參閱
 
-[.NET Standard 版本](https://github.com/dotnet/standard/blob/master/docs/versions.md)
+- [.NET Standard 版本](https://github.com/dotnet/standard/blob/master/docs/versions.md)
