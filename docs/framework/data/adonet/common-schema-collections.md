@@ -3,11 +3,11 @@ title: 一般結構描述集合
 ms.date: 03/30/2017
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
 ms.openlocfilehash: 157330304ac656ddbdbb18408ca5144566746808
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 09/06/2018
-ms.locfileid: "43859995"
+ms.locfileid: "43870259"
 ---
 # <a name="common-schema-collections"></a>一般結構描述集合
 通用結構描述集合是由每個 .NET Framework Managed 提供者所實作的結構描述集合。 您可以查詢來判斷支援的結構描述集合清單，藉由呼叫.NET Framework managed 提供者**GetSchema**方法沒有引數，或以結構描述集合名稱"MetaDataCollections"。 這會傳回 <xref:System.Data.DataTable>，包括支援的結構描述集合清單、每個集合所支援的限制數目，以及集合所使用之識別項部分的數目。 這些集合會描述所有必要資料行。 如果願意，提供者可以隨意加入其他資料行。 例如，`SqlClient` 及 `OracleClient` 會將 ParameterName 加入限制集合。  
