@@ -3,16 +3,16 @@ title: 活動程式庫
 ms.date: 03/30/2017
 ms.assetid: 5323e9d4-71d6-47eb-bfa6-31feac62044d
 ms.openlocfilehash: 29b3efd648ac103526f572a2cac5b8b67c4b220a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43746715"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44036047"
 ---
 # <a name="activity-library"></a>活動程式庫
 本節包含示範進階自訂活動中 Windows Workflow Foundation (WF) 範例。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [.NET Framework 4.5 中的原則活動](../../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md)  
  示範 Policy4 活動如何讓 Windows Workflow Foundation [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5)<xref:System.Workflow.Activities.Rules.RuleSet>使用中的 Windows Workflow foundation 物件[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)](WF 4.5) 是直接使用 WF 3.5 隨附的規則引擎。  
   

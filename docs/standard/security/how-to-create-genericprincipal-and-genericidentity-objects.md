@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 65fd078b6be9dbcdfc03e34285d70a6bfe42d87b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 79b5e05fe9133eb2282eedefa001e64ece5e0f57
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581774"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44035583"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>如何：建立 GenericPrincipal 和 GenericIdentity 物件
-您可以使用<xref:System.Security.Principal.GenericIdentity>類別搭配<xref:System.Security.Principal.GenericPrincipal>類別來建立獨立的 Windows 網域存在的授權配置。  
+您可以使用<xref:System.Security.Principal.GenericIdentity>類別搭配<xref:System.Security.Principal.GenericPrincipal>類別來建立獨立的 Windows 網域的授權配置。  
   
 ### <a name="to-create-a-genericprincipal-object"></a>建立 GenericPrincipal 物件  
   
@@ -47,7 +47,7 @@ ms.locfileid: "33581774"
     GenericPrincipal MyPrincipal = new GenericPrincipal(MyIdentity, MyStringArray);  
     ```  
   
-3.  使用下列程式碼將主體附加至目前的執行緒。 這是其重要性的主體必須驗證數次，它必須驗證您的應用程式中執行其他程式碼，或它必須經過<xref:System.Security.Permissions.PrincipalPermission>物件。 您仍然可以在主體物件上執行角色型驗證，而不需將它附加至執行緒。 如需詳細資訊，請參閱[取代 Principal 物件](../../../docs/standard/security/replacing-a-principal-object.md)。  
+3.  使用下列程式碼將主體附加至目前的執行緒。 這會在其中的主體必須驗證數次、 必須經過您的應用程式中執行其他程式碼或它必須通過驗證的情況下很有用<xref:System.Security.Permissions.PrincipalPermission>物件。 您仍然可以在主體物件上執行角色型驗證，而不需將它附加至執行緒。 如需詳細資訊，請參閱[取代 Principal 物件](../../../docs/standard/security/replacing-a-principal-object.md)。  
   
     ```vb  
     Thread.CurrentPrincipal = MyPrincipal  
@@ -140,9 +140,10 @@ The IsAuthenticated is: True
 Is this a Manager? True  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Security.Principal.GenericIdentity>  
- <xref:System.Security.Principal.GenericPrincipal>  
- <xref:System.Security.Permissions.PrincipalPermission>  
- [取代 Principal 物件](../../../docs/standard/security/replacing-a-principal-object.md)  
- [Principal 和 Identity 物件](../../../docs/standard/security/principal-and-identity-objects.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Security.Principal.GenericIdentity>  
+- <xref:System.Security.Principal.GenericPrincipal>  
+- <xref:System.Security.Permissions.PrincipalPermission>  
+- [取代 Principal 物件](../../../docs/standard/security/replacing-a-principal-object.md)  
+- [Principal 和 Identity 物件](../../../docs/standard/security/principal-and-identity-objects.md)

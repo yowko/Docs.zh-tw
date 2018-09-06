@@ -1,21 +1,21 @@
 ---
 title: 可為 Null 的運算子 (F#)
-description: '深入了解 F # 程式語言中可用的可為 null 運算子。'
+description: '深入了解可為 null 的運算子可在 F # 程式設計語言中使用。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 63ad7da2d584b96eee8765b57fc671befbcbd38b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 42df74a56831fb0a5d6df34db4321f5b228993c2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566346"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44036775"
 ---
 # <a name="nullable-operators"></a>可為 Null 的運算子
 
-可為 null 的運算子都是一或兩端使用可為 null 的算術類型的二進位算術或比較運算子。 經常在您使用的資料來源 （例如資料庫），允許 null 值，用來取代實際的值時，會引發可為 null 的類型。 可為 null 的運算子經常用於查詢運算式。 可為 null 的算術和比較運算子，除了轉換運算子可以用於可為 null 的類型之間轉換。 也有特定的查詢運算子可為 null 的版本。
-
+可為 null 的運算子都是在一端或兩端使用可為 null 的算術類型的二進位算術或比較運算子。 經常當您使用資料來源，例如允許 null 值，用來取代實際值的資料庫時，會發生 null 的型別。 可為 null 的運算子經常用於查詢運算式。 可為 null 的算術和比較運算子，除了轉換運算子可以用於可為 null 的類型之間轉換。 也有特定的查詢運算子的可為 null 的版本。
 
 ## <a name="table-of-nullable-operators"></a>資料表的可為 Null 的運算子
-下表列出可為 null 的運算子在 F # 語言支援。
+
+下表列出可為 null 的 F # 語言支援的運算子。
 
 |在左邊的 可為 null|在右邊的 可為 null|雙方可為 null|
 |---|---|---|
@@ -32,11 +32,12 @@ ms.locfileid: "33566346"
 |[?%](https://msdn.microsoft.com/library/44297bba-1bd9-4ed2-a848-f1e1e598db87)|[%?](https://msdn.microsoft.com/library/a4c178e5-eec4-42e8-847f-90b24fc609fe)|[?%?](https://msdn.microsoft.com/library/dd555f20-1be3-4b8d-81f1-bf1921e62fda)|
 
 ## <a name="remarks"></a>備註
-可為 null 的運算子會包含在[NullableOperators](https://msdn.microsoft.com/library/2c3633c5-3f31-4d62-a9f8-272ad6b19007)命名空間中的模組[Microsoft.FSharp.Linq](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d)。 可為 null 的資料類型是`System.Nullable<'T>`。
 
-在查詢運算式中，從允許 null，而不是值的資料來源選取資料時，會引發可為 null 的類型。 在 SQL Server 資料庫中，資料表中的每個資料行具有屬性，指出是否允許 null。 如果允許 null 值，從資料庫傳回的資料可以包含 null 無法表示的基本資料類型例如`int`， `float`，依此類推。 因此，資料會做為傳回`System.Nullable<int>`而不是`int`，和`System.Nullable<float>`而不是`float`。 實際的值可以取自`System.Nullable<'T>`物件使用`Value`屬性，而且您可以判斷如果`System.Nullable<'T>`物件具有值，藉由呼叫`HasValue`方法。 另一個有用的方法是`System.Nullable<'T>.GetValueOrDefault`方法，可讓您取得的值或預設值是適當的型別。 預設值是某種形式的 「 零 」 值，例如 0、 0.0 或`false`。
+可為 null 的運算子包含在[NullableOperators](https://msdn.microsoft.com/library/2c3633c5-3f31-4d62-a9f8-272ad6b19007)命名空間中的模組[Microsoft.FSharp.Linq](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d)。 可為 null 的資料型別是`System.Nullable<'T>`。
 
-可為 null 的型別可能會轉換成不可為 null 的基本型別使用的一般轉換運算子，例如`int`或`float`。 它也可將從一種可為 null 的類型轉換成另一種可為 null 的類型使用轉換運算子，可為 null 的類型。 適當的轉換運算子有相同的名稱做為標準的但是可以在不同的模組， [Nullable](https://msdn.microsoft.com/library/e7a4ea13-28cc-462e-bc3a-33131ace976e)中的模組[Microsoft.FSharp.Linq](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d)命名空間。 一般而言，使用查詢運算式時開啟此命名空間。 在此情況下，您可以使用可為 null 的轉換運算子，加上前置詞`Nullable.`適當的轉換運算子，如下列程式碼所示。
+在查詢運算式中，從允許 null，而不是值的資料來源選取資料時，會發生 null 的型別。 在 SQL Server 資料庫中，資料表中的每個資料行有屬性，指出是否允許 null 值。 如果允許 null 值，從資料庫傳回的資料可以包含 null 值無法表示的基本資料類型的這類`int`， `float`，依此類推。 因此，資料會做為傳回`System.Nullable<int>`而非`int`，並`System.Nullable<float>`而不是`float`。 實際的值可以取自`System.Nullable<'T>`使用的物件`Value`屬性，而且您可以判斷如果`System.Nullable<'T>`物件具有值，藉由呼叫`HasValue`方法。 另一個有用的方法是`System.Nullable<'T>.GetValueOrDefault`方法，可讓您取得的值或預設值是適當的型別。 預設值是某種形式的 「 零 」 值，例如 0、 0.0 或`false`。
+
+可為 null 的型別可能會轉換成不可為 null 的基本類型，例如使用一般的轉換運算子`int`或`float`。 它也可從一個 null 的型別轉換成另一個可為 null 的型別使用轉換運算子，可為 null 的類型。 適當的轉換運算子具有相同的名稱，作為標準的但在個別的模組，也就是[Nullable](https://msdn.microsoft.com/library/e7a4ea13-28cc-462e-bc3a-33131ace976e)中的模組[Microsoft.FSharp.Linq](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d)命名空間。 一般而言，您開啟此命名空間時使用查詢運算式。 在此情況下，您可以使用可為 null 的轉換運算子，加上前置詞`Nullable.`適當的轉換運算子，如下列程式碼所示。
 
 ```fsharp
 open Microsoft.FSharp.Linq
@@ -52,9 +53,9 @@ printfn "%f" (float nullableFloat)
 
 輸出為 `10.000000`。
 
-查詢運算子，可為 null 的資料欄位，例如`sumByNullable`，同時存在的查詢運算式中使用。 不可為 null 類型的查詢運算子不是可為 null 的類型，類型相容，因此當您使用可為 null 的資料值時，您必須使用適當的查詢運算子的 null 版本。 如需詳細資訊，請參閱[查詢運算式](../query-expressions.md)。
+查詢運算子可為 null 的資料欄位，例如`sumByNullable`，也存在於查詢運算式中使用。 不可為 null 類型的查詢運算子不是可為 null 的型別與型別相容性，因此當您使用可為 null 的資料值時，您必須使用適當的查詢運算子可為 null 版本。 如需詳細資訊，請參閱 <<c0> [ 查詢運算式](../query-expressions.md)。
 
-下列範例會顯示在 F # 查詢運算式中使用可為 null 的運算子。 第一個查詢示範如何撰寫不含可為 null 的運算子; 查詢第二個查詢示範會使用可為 null 的運算子的對等查詢。 完整的內容，包括如何設定資料庫以使用此範例程式碼，請參閱[逐步解說： 存取 SQL 資料庫所使用的型別提供者](../../tutorials/type-providers/accessing-a-sql-database.md)。
+下列範例會顯示在 F # 查詢運算式中使用可為 null 的運算子。 第一個查詢會示範如何撰寫查詢而不是可為 null 的運算子;第二個查詢會示範使用可為 null 的運算子的對等查詢。 完整的內容，包括如何將資料庫設定為使用此範例程式碼，請參閱[逐步解說： 存取 SQL 資料庫所使用的型別提供者](../../tutorials/type-providers/accessing-a-sql-database.md)。
 
 ```fsharp
 open System
@@ -84,6 +85,5 @@ query {
 
 ## <a name="see-also"></a>另請參閱
 
-[類型提供者](../../tutorials/type-providers/index.md)
-
-[查詢運算式](../query-expressions.md)
+- [類型提供者](../../tutorials/type-providers/index.md)
+- [查詢運算式](../query-expressions.md)

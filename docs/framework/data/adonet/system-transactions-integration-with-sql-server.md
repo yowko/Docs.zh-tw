@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
 ms.openlocfilehash: 31edbc8f4cbb09f8720b373780f1b0646a985b20
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481679"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43884178"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>System.Transactions 與 SQL Server 整合
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 2.0 版導入了新的交易架構，可透過 <xref:System.Transactions> 命名空間 (Namespace) 進行存取。 此架構以完全整合到 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (包括 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]) 中的方式來公開交易。  

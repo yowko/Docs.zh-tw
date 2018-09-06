@@ -5,11 +5,11 @@ helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
 ms.openlocfilehash: 29caae11c72ff230d738e9dab1cd763899710843
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43724652"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43885132"
 ---
 # <a name="ltmsmqintegrationbindinggt"></a>&lt;msmqIntegrationBinding&gt;
 定義繫結，此繫結可透過 MSMQ 傳遞訊息來提供查詢支援。  
@@ -82,7 +82,7 @@ msmqIntegrationBinding
 |ByteArray|將物件序列化為位元組陣列。|  
 |資料流|格式化為資料流的本文|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  

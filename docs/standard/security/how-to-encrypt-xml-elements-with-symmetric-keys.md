@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: d8461a44-aa2c-4ef4-b3e4-ab7cbaaee1b5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d9fa06ed0befd82a3efdd46deaa2362b1f10fa35
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f5c221dc05787c6d76d998977069ad327a3dfa83
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586071"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881219"
 ---
 # <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>如何：使用對稱金鑰加密 XML 項目
 您可以使用 <xref:System.Security.Cryptography.Xml> 命名空間中的類別來加密 XML 文件內的項目。  XML 加密可讓您儲存或傳輸機密的 XML，而不必擔心資料被輕易讀取。  這個程序會使用進階加密標準 (AES) 演算法 (也稱為 Rijndael)，來解密 XML 項目。  
   
- 如需如何使用這個程序加密 XML 項目解密的資訊，請參閱[How to： 使用對稱金鑰解密 XML 項目](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)。  
+ 如需如何使用此程序加密 XML 項目解密的資訊，請參閱[如何： 使用對稱金鑰解密 XML 項目](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)。  
   
  當您使用如 AES 的對稱演算法來加密 XML 資料時，您必須使用相同的金鑰來加密和解密 XML 資料。  此程序中的範例假設將使用相同的金鑰來解密已加密的 XML，並且加密和解密的雙方同意使用的演算法和金鑰。  此範例不會儲存或加密在已加密 XML 中的 AES 金鑰。  
   
@@ -101,6 +101,7 @@ ms.locfileid: "33586071"
   
  當您使用完密碼編譯金鑰，請從記憶體清除它，方法是將每個位元組設定為零，或呼叫 Managed 密碼編譯類別的 <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> 方法。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Security.Cryptography.Xml>  
- [操作說明：使用對稱金鑰解密 XML 元素](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Security.Cryptography.Xml>  
+- [操作說明：使用對稱金鑰解密 XML 元素](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)

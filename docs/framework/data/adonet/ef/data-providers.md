@@ -3,16 +3,16 @@ title: Entity Framework 資料提供者
 ms.date: 03/30/2017
 ms.assetid: 5252e639-ff11-4818-82e7-07221ed6ae23
 ms.openlocfilehash: cd18e8b971af9103fdaecaebfe6f0c8e0ae9a0d3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43740295"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44038071"
 ---
 # <a name="entity-framework-data-providers"></a>Entity Framework 資料提供者
 本節提供支援 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 之資料提供者的資訊。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Entity Framework 的 EntityClient 提供者](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)  
  描述 EntityClient 資料提供者 (Data Provider)。 這個提供者會將針對資料模型的查詢轉換成標準命令樹。 然後，此命令可供適用於 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 的 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 資料提供者取用。  
   

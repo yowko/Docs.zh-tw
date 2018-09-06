@@ -3,11 +3,11 @@ title: WCF 的 &lt;workflowInstanceQueries&gt;
 ms.date: 03/30/2017
 ms.assetid: b0852f77-16e4-4d55-8eb7-a19feb0e8fc4
 ms.openlocfilehash: dfa75a7e4729244ba5887e6666c0fdfe840e9faf
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43532685"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891242"
 ---
 # <a name="ltworkflowinstancequeriesgt-of-wcf"></a>WCF 的 &lt;workflowInstanceQueries&gt;
 代表組態項目的集合，可用來追蹤工作流程執行個體生命週期的變更，例如已開始或已完成的事件。  

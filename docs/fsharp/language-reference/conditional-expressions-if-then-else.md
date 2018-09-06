@@ -3,11 +3,11 @@ title: 條件運算式：if... then...else (F#)
 description: '了解如何撰寫 F # 來執行的程式碼的不同分支中的條件運算式。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 10e4224bef772f00520cf5a0fff2f2920147c2fc
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745192"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43890865"
 ---
 # <a name="conditional-expressions-ifthenelse"></a>條件運算式： `if...then...else`
 

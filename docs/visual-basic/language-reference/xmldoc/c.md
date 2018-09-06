@@ -6,11 +6,11 @@ helpviewer_keywords:
 - <c> XML tag
 ms.assetid: 36ad5d1b-11f7-4012-8932-41962ac327d1
 ms.openlocfilehash: 06c6899895f278fdf652725a05ecc7229805f4d4
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: HT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 09/06/2018
-ms.locfileid: "43854726"
+ms.locfileid: "44041118"
 ---
 # <a name="ltcgt-visual-basic"></a>&lt;c&gt; (Visual Basic)
 表示描述內的文字是程式碼。  

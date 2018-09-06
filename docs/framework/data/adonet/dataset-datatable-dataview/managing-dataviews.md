@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b67fab5-1722-4d2b-bfc1-247a75f0f1ee
-ms.openlocfilehash: c292c9f7827e86d48f2006c05f6012ad95da1485
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 76cf9eb70094dfe8bb760490c42503e08f4b1649
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757901"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43885090"
 ---
 # <a name="managing-dataviews"></a>管理 DataView
-您可以使用 <xref:System.Data.DataViewManager> 管理 <xref:System.Data.DataView> 內所有資料表的檢視設定。 如果您有想要繫結至多個資料表的控制項，例如方格的巡覽關聯性**DataViewManager**時非常有用。  
+您可以使用 <xref:System.Data.DataViewManager> 管理 <xref:System.Data.DataView> 內所有資料表的檢視設定。 如果您有想要繫結至多個資料表的控制項，例如方格中，巡覽關聯性**DataViewManager**適合。  
   
- **DataViewManager**包含的集合<xref:System.Data.DataViewSetting>物件，用來設定中的資料表的檢視設定<xref:System.Data.DataSet>。 <xref:System.Data.DataViewSettingCollection>包含一個<xref:System.Data.DataViewSetting>物件中每個資料表**資料集**。 您可以設定預設**ApplyDefaultSort**，**排序**， **RowFilter**，和**RowStateFilter**屬性所參考的資料表使用其**Dataviewsettings**。 您可以參考**Dataviewsettings**特定資料表名稱或序數參考，或藉由傳遞給該特定資料表物件的參考。 您可以存取的集合**Dataviewsettings**中的物件**DataViewManager**使用**Dataviewsetting**屬性。  
+ **DataViewManager**包含的集合<xref:System.Data.DataViewSetting>物件，用來設定中的資料表的檢視設定<xref:System.Data.DataSet>。 <xref:System.Data.DataViewSettingCollection>包含一個<xref:System.Data.DataViewSetting>物件中每個資料表**DataSet**。 您可以設定預設**ApplyDefaultSort**，**排序**， **RowFilter**，以及**RowStateFilter**屬性所參考的資料表使用其**DataViewSetting**。 您可以參考**DataViewSetting**特定資料表名稱或序數參考，或藉由參考傳遞給該特定資料表物件。 您可以存取的集合**DataViewSetting**中的物件**DataViewManager**利用**Dataviewsetting**屬性。  
   
- 下列程式碼範例會填入**資料集**與 SQL Server **Northwind**資料庫資料表**客戶**，**訂單**，和**訂單詳細資料**、 建立資料表之間的關聯性、 使用**DataViewManager**設定預設**DataView**設定，以及繫結**DataGrid**至**DataViewManager**。 此範例會設定預設**DataView**設定中的所有資料表**資料集**來排序資料表的主索引鍵 (**ApplyDefaultSort**  =  **true**)，然後修改的排序次序**客戶**排序所依據的資料表**CompanyName**。  
+ 下列程式碼範例會填入**資料集**與 SQL Server **Northwind**資料庫資料表**客戶**，**訂單**，以及**訂單詳細資料**、 建立資料表之間的關聯性，會使用**DataViewManager**若要設定預設**DataView**設定和繫結**DataGrid**要**DataViewManager**。 此範例設定的預設**DataView**設定中的所有資料表**資料集**來排序資料表的主索引鍵 (**ApplyDefaultSort**  =  **真**)，然後修改的排序次序**客戶**排序所依據的資料表**CompanyName**。  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection to Northwind.  
@@ -125,4 +125,4 @@ grid.SetDataBinding(viewManager, "Customers");
  <xref:System.Data.DataViewSetting>  
  <xref:System.Data.DataViewSettingCollection>  
  [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -9,27 +9,28 @@ helpviewer_keywords:
 ms.assetid: 9a3bd505-90f5-4053-9f0d-3cf5fa3d3ebf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 672d36c6b888ee9a89a76d5d417a7a7e92dd8f36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef0f1c4c9b2d1928d6f96d62ab12df9786756498
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571657"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891373"
 ---
 # <a name="unsealed-classes"></a>非密封類別
-密封的類別無法被繼承，以及它們會防止擴充性。 相反地，可以繼承自的類別稱為未密封的類別。  
+密封的類別無法被繼承，並循環讓擴充性。 相反地，可以繼承自的類別稱為未密封的類別。  
   
  **✓ CONSIDER** 沒有使用未密封的類別新增虛擬或受保護成員，為提供低成本的好方法卻高價值為架構的擴充性。  
   
- 開發人員通常會想要繼承自非密封類別，以新增方便成員，例如自訂建構函式、 新的方法或方法多載。 例如，`System.Messaging.MessageQueue`未密封，因此可讓使用者建立自訂的佇列的特定佇列路徑的預設或加入自訂方法，可簡化針對特定案例的 API。  
+ 開發人員通常會想要繼承自未密封的類別，以便加入方便的成員，例如自訂建構函式、 新的方法或方法多載。 比方說，`System.Messaging.MessageQueue`未密封，因此可讓使用者建立自訂的佇列預設為特定的佇列路徑，或加入自訂的方法，可簡化針對特定案例的 API。  
   
- 根據預設，在最具備程式設計語言中，未密封的類別是，這也是建議的預設值為架構中，大部分的類別。 非密封類型所提供的擴充性是由 framework 使用者很令人激賞和相當耗費大量資源因為相對較低的測試與未密封的型別相關聯的成本提供。  
+ 根據預設，在多數程式設計語言中，未密封的類別是，這也是在架構中的大部分類別的建議預設值。 非密封類型所提供的擴充性是更令人激賞的 framework 使用者，因為非密封類型相關聯的相對較低的測試成本提供成本很低。  
   
- *部分 © 2005年，2009 Microsoft Corporation。All rights reserved.*  
+ *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- *皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*  
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
   
-## <a name="see-also"></a>另請參閱  
- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)  
- [擴充性設計](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
- [密封](../../../docs/standard/design-guidelines/sealing.md)
+## <a name="see-also"></a>另請參閱
+
+- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)  
+- [擴充性設計](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+- [密封](../../../docs/standard/design-guidelines/sealing.md)

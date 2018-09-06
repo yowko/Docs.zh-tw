@@ -3,11 +3,11 @@ title: 'Fixed 的關鍵字 （F #）'
 description: "了解如何在您可以 [pin] 若要避免使用 F # 集合至堆疊本機 'fixed' 關鍵字。"
 ms.date: 04/24/2017
 ms.openlocfilehash: 1bf1b2ad67d2dd7f854e569cfca7c06e8aec7f4c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779222"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44039277"
 ---
 # <a name="the-fixed-keyword"></a>Fixed 的關鍵字
 

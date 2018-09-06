@@ -3,11 +3,11 @@ title: '&lt;netMsmqBinding&gt; 的 &lt;transport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 72e1b338-39f0-4af1-a5d9-7a2fb79f6a0b
 ms.openlocfilehash: 1b0de5e1d581384d00c18dbefbf7b170325e2061
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777320"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44039276"
 ---
 # <a name="lttransportgt-of-ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt; 的 &lt;transport&gt;
 定義傳輸安全性設定。  
@@ -35,7 +35,7 @@ ms.locfileid: "43777320"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -46,7 +46,7 @@ ms.locfileid: "43777320"
 |msmqProtectionLevel|指定在 MSMQ 傳輸層級上保護訊息的方式。 加密可確保訊息的完整性，而簽署和加密可確保訊息的完整性和不可否認性。 也就是，訊息確實來自寄件者，且寄件者就是他本人。 有效值包括以下的值：<br /><br /> -None： 無保護。<br />簽署： 簽署訊息。<br />-EncryptAndSign： 訊息會經過加密及簽署。<br />-預設值是`Sign`。|  
 |msmqSecureHashAlgorithm|指定計算訊息摘要時使用的雜湊演算法。 有效值包括以下的值：<br /><br /> -   MD5<br />-   SHA1<br />-   SHA256<br />-   SHA512<br /><br /> 預設為 `SHA1`。 此屬性的型別為 <xref:System.ServiceModel.MsmqSecureHashAlgorithm>。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無  
   
 ### <a name="parent-elements"></a>父項目  

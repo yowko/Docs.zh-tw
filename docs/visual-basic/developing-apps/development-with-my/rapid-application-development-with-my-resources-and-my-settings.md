@@ -8,11 +8,11 @@ helpviewer_keywords:
 - My.Resources object [Visual Basic], developing applications
 ms.assetid: 68284ab1-b685-4814-a2a4-01ae40445ff8
 ms.openlocfilehash: 7dbb15c43d044e21c9823c4a1652b0408006e5c3
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932563"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44032763"
 ---
 # <a name="rapid-application-development-with-myresources-and-mysettings-visual-basic"></a>使用 My.Resources 和 My.Settings 進行快速應用程式開發 (Visual Basic)
 `My.Resources`物件來存取應用程式的資源，而且可讓您以動態方式擷取您的應用程式的資源。  

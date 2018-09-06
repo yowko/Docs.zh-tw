@@ -3,11 +3,11 @@ title: SQL Server 中的應用程式安全性案例
 ms.date: 03/30/2017
 ms.assetid: 0164f3a4-406e-4693-bec3-03c8e18b46d7
 ms.openlocfilehash: bf4f4adfd5f49bd210026e40bd5fa4e67da10d75
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777804"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892278"
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>SQL Server 中的應用程式安全性案例
 並不只有一種正確方式可以建立安全的 SQL Server 用戶端應用程式。 每個應用程式的需求、部署環境及使用者對象都有其獨特性。 初次部署時還相當安全的應用程式，隨著時間流逝，也可能變得不再那麼安全。 要精確預測未來可能發生什麼威脅是不可能的事。  
@@ -34,7 +34,7 @@ ms.locfileid: "43777804"
   
  即使在使用「Windows 驗證」時，也請務必為 `sa` 帳戶指派強式密碼。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [在 SQL Server 中使用預存程序來管理權限](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
  說明如何使用預存程序 (Stored Procedure) 管理權限並控制資料存取。 使用預存程序是許多安全性威脅的有效回應方式。  
   

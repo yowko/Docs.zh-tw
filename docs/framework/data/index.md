@@ -7,16 +7,16 @@ helpviewer_keywords:
 - data [.NET Framework], accessing
 ms.assetid: 8c37635d-e2c1-4b64-a258-61d9e87405e6
 ms.openlocfilehash: 0db71fd7e48515ad6be3641786fc180f62aacf33
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43724002"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879638"
 ---
 # <a name="data-and-modeling-in-the-net-framework"></a>.NET Framework 中的資料與模型化
 本節將提供如何使用 ADO.NET、Language Integrated Query (LINQ)、WCF 資料服務和 XML 來存取資料的相關資訊。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [ADO.NET](../../../docs/framework/data/adonet/index.md)  
  描述 ADO.NET 架構，以及如何使用 ADO.NET 類別來管理應用程式資料並與資料來源互動，包括 Microsoft SQL Server、OLE DB 資料來源和 XML。  
   
@@ -24,7 +24,7 @@ ms.locfileid: "43724002"
  提供 Language Integrated Query (LINQ) 相關文件的連結。  
   
  [交易處理](../../../docs/framework/data/transactions/index.md)  
- 討論交易的 .NET Framework 支援。  
+ 討論異動的 .NET Framework 支援。  
   
  [WCF Data Services 4.5](../../../docs/framework/data/wcf/index.md)  
  提供如何使用 WCF 資料服務，在 Web 或內部網路上部署資料服務的相關資訊。  

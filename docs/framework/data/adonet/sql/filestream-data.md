@@ -3,11 +3,11 @@ title: FILESTREAM 資料
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
 ms.openlocfilehash: eef03d171d288cb2bc62c3aaa477a95a5ce718c3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43741083"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892687"
 ---
 # <a name="filestream-data"></a>FILESTREAM 資料
 FILESTREAM 儲存體屬性適用於儲存在 varbinary(max) 資料行中的二進位 (BLOB) 資料。 在引進 FILESTREAM 之前，儲存二進位資料需要特殊處理。 文字文件、影像和視訊等非結構化資料通常會儲存在資料庫外部，因而難以管理。  

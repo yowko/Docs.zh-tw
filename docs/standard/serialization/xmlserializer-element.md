@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML serialization, configuration
 - xmlSerializer element
 ms.assetid: d129d10c-3eb7-45d9-8098-5fa853825e47
-ms.openlocfilehash: f80d41701f3e0d62e89a056701bde6fd69ef9ecb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2770b82f71f3c4b43df4c44f75248e5392c528c2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583249"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44031510"
 ---
 # <a name="ltxmlserializergt-element"></a>&lt;xmlSerializer&gt; 元素
 指定是否已完成 <xref:System.Xml.Serialization.XmlSerializer> 進度的其他檢查。  
@@ -35,7 +35,7 @@ ms.locfileid: "33583249"
 |**checkDeserializeAdvances**|指定是否已檢查 <xref:System.Xml.Serialization.XmlSerializer>的進度。 設定屬性為 "true" 或 "false"。 預設為 "true"。|  
 |**useLegacySerializationGeneration**|指定 <xref:System.Xml.Serialization.XmlSerializer> 是否使用舊版序列化產生作業，此作業會將 C# 程式碼寫入至檔案並編譯成組件，藉此產成組件。 預設值為 **false**。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -60,7 +60,8 @@ ms.locfileid: "33583249"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Xml.Serialization.XmlSerializer>  
- [\<system.xml.serialization> 項目](../../../docs/standard/serialization/system-xml-serialization-element.md)  
- [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Xml.Serialization.XmlSerializer>  
+- [\<system.xml.serialization> 項目](../../../docs/standard/serialization/system-xml-serialization-element.md)  
+- [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)

@@ -3,11 +3,11 @@ title: '&lt;custom&gt;'
 ms.date: 03/30/2017
 ms.assetid: a6f65a00-bd1a-4d4a-955a-fe009ec02ab8
 ms.openlocfilehash: 7d558be66b8a1e46d9743c5f8bf0bb9a8b4c349e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43776219"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44031984"
 ---
 # <a name="ltcustomgt"></a>&lt;custom&gt;
 指定自訂對等解析程式服務的設定。  
@@ -30,7 +30,7 @@ ms.locfileid: "43776219"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -39,7 +39,7 @@ ms.locfileid: "43776219"
 |`address`|URI，這個 URI 會指定裝載自訂解析程式服務之對等節點的端點位址。|  
 |`resolverType`|字串，這個字串會指定自訂對等解析服務之型別。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  

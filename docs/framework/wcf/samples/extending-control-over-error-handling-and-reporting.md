@@ -3,11 +3,11 @@ title: 延伸對錯誤處理和報告的控制
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
 ms.openlocfilehash: 6492807b55b50662790cf25807a35ddd65fbe01d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43557782"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44032834"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>延伸對錯誤處理和報告的控制
 這個範例會示範如何擴充對錯誤處理和錯誤報告中使用 Windows Communication Foundation (WCF) 服務的控制<xref:System.ServiceModel.Dispatcher.IErrorHandler>介面。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)搭配其他程式碼新增至服務，以處理錯誤。 用戶端會強制產生數個錯誤狀況。 服務則攔截這些錯誤並記錄在檔案中。  

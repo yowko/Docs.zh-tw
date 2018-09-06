@@ -8,16 +8,16 @@ helpviewer_keywords:
 - controls [WPF], Panel
 ms.assetid: 28d8faf2-490c-4e17-a447-df25a66f6679
 ms.openlocfilehash: d8ead1a799f1bd7524d171beb3e262baeb4b5fbe
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43746242"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44039539"
 ---
 # <a name="panel-how-to-topics"></a>Panel HOW TO 主題
 在本節中的主題描述如何使用<xref:System.Windows.Controls.Panel>項目和相關[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [如何： 套用至元素的 LayoutTransform](https://msdn.microsoft.com/library/8221db67-d99f-4783-b65e-a6c5a52c03ab)  
  [建立自訂面板元素](../../../../docs/framework/wpf/controls/how-to-create-a-custom-panel-element.md)  
  [覆寫 Panel 的 OnRender 方法](../../../../docs/framework/wpf/controls/how-to-override-the-panel-onrender-method.md)  

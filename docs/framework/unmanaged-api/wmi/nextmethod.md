@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1d019c67849197cd24171ff607e60e9f08d5ff70
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43451619"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44040872"
 ---
 # <a name="nextmethod-function"></a>NextMethod 函式
 擷取開頭呼叫列舉中的下一步 方法[BeginMethodEnumeration](beginmethodenumeration.md)。  

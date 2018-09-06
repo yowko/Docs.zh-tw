@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
 ms.openlocfilehash: 7f729e845fe552d523a46a1783404baf4e0bbfca
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779467"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43884051"
 ---
 # <a name="tracing-and-message-logging"></a>追蹤和訊息記錄
 這個範例示範如何啟用追蹤和訊息記錄。 產生的追蹤和訊息記錄則會使用檢視[Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
@@ -48,7 +48,7 @@ ms.locfileid: "43779467"
 ## <a name="activity-tracing-and-propagation"></a>活動追蹤和傳播  
  擁有`ActivityTracing`啟用並`propagateActivity`設為`true`在`system.ServiceModel`用戶端和服務的追蹤來源會提供追蹤的處理 （活動），邏輯單位內的相互關聯跨端點 （內的活動透過活動傳輸），以及跨多個端點 （透過活動識別碼傳播） 活動。  
   
- 這三種機制 (活動、傳輸和傳播) 可以協助您使用 [服務追蹤檢視器] 工具，迅速找到錯誤的根本原因。 如需詳細資訊，請參閱 <<c0> [ 使用服務追蹤檢視器檢視相互關聯的追蹤和疑難排解](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)。  
+ 這三種機制 (活動、傳輸和傳播) 可以協助您使用 [服務追蹤檢閱器] 工具，迅速找到錯誤的根本原因。 如需詳細資訊，請參閱 <<c0> [ 使用服務追蹤檢視器檢視相互關聯的追蹤和疑難排解](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)。  
   
  您可以建立使用者定義的活動追蹤，來延伸 ServiceModel 所提供的追蹤。 使用者定義的活動追蹤允許使用者建立追蹤活動，以進行下列工作：  
   

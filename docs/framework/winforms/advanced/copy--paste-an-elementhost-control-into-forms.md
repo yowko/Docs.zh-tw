@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ElementHost control [Windows Forms], copying and pasting at design time
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 6e81bb13-577c-46c3-a1cf-8d15969fb83e
-ms.openlocfilehash: 1cce981e4cb04ab6ed6ed41e0afac0121b242761
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55b426fbe95bac269183a649ecd839175a8cbdda
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520938"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44037249"
 ---
 # <a name="walkthrough-copying-and-pasting-an-elementhost-control-into-separate-windows-forms"></a>逐步解說：將 ElementHost 控制項複製並貼至另外的 Windows Form
 本逐步解說示範如何將 Windows Presentation Foundation (WPF) 控制項從一個 Windows Form 複製到另一個 Windows Form。  
@@ -24,7 +24,7 @@ ms.locfileid: "33520938"
 -   複製 WPF 控制項。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 ## <a name="prerequisites"></a>必要條件  
  您需要下列元件才能完成此逐步解說：  
@@ -46,13 +46,13 @@ ms.locfileid: "33520938"
   
 #### <a name="to-copy-a-wpf-control"></a>複製 WPF 控制項  
   
-1.  將新的 WPF <xref:System.Windows.Controls.UserControl> 專案加入方案。 使用控制項類型的預設名稱 `UserControl1.xaml`。 如需詳細資訊，請參閱[逐步解說： 建立的新 WPF 內容在設計階段的 Windows Form 上](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。  
+1.  將新的 WPF <xref:System.Windows.Controls.UserControl> 專案加入方案。 使用控制項類型的預設名稱 `UserControl1.xaml`。 如需詳細資訊，請參閱 <<c0> [ 逐步解說： 建立新 WPF 內容在設計階段的 Windows Form 上](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。  
   
 2.  建置專案。  
   
 3.  在 Windows Form 設計工具中開啟 `Form1`。  
   
-4.  從**工具箱**，拖曳的執行個體`UserControl1`拖曳至表單。  
+4.  從**工具箱**，將拖曳的執行個體`UserControl1`拖曳至表單。  
   
      `UserControl1` 的執行個體裝載於名為 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控制項中。  
   
@@ -69,4 +69,4 @@ ms.locfileid: "33520938"
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
  [移轉和互通性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
  [使用 WPF 控制項](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
- [WPF 設計工具](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)
+ [在 Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)

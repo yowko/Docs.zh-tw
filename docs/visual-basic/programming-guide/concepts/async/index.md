@@ -3,11 +3,11 @@ title: 使用 Async 和 Await 進行非同步程式設計 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
 ms.openlocfilehash: 9798136bfa88e19764a064732637783620f77a73
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43739538"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43884672"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>使用 Async 和 Await 進行非同步程式設計 (Visual Basic)
 您可以使用非同步程式設計，避免發生效能瓶頸並增強應用程式的整體回應性。 不過，撰寫非同步應用程式的傳統技術可能很複雜，因而難以撰寫、偵錯和維護。  
@@ -24,7 +24,7 @@ ms.locfileid: "43739538"
 |應用程式區域|包含非同步方法的支援 API|  
 |----------------------|------------------------------------------------|  
 |Web 存取|<xref:System.Net.Http.HttpClient>, <xref:Windows.Web.Syndication.SyndicationClient>|  
-|處理檔案|<xref:Windows.Storage.StorageFile>, <xref:System.IO.StreamWriter>, <xref:System.IO.StreamReader>, <xref:System.Xml.XmlReader>|  
+|處理檔案|<xref:Windows.Storage.StorageFile>、<xref:System.IO.StreamWriter>、<xref:System.IO.StreamReader><xref:System.Xml.XmlReader>|  
 |處理影像|<xref:Windows.Media.Capture.MediaCapture>, <xref:Windows.Graphics.Imaging.BitmapEncoder>, <xref:Windows.Graphics.Imaging.BitmapDecoder>|  
 |WCF 程式設計|[同步和非同步作業](../../../../framework/wcf/synchronous-and-asynchronous-operations.md)|  
 |||  
@@ -93,7 +93,7 @@ Dim urlContents As String = Await client.GetStringAsync()
   
     -   如果您撰寫的是非同步事件處理常式，則為 [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)。  
   
-     如需詳細資訊，請參閱本主題後段的＜傳回類型和參數＞。  
+     如需詳細資訊，請參閱本主題後段的＜傳回型別和參數＞。  
   
 -   方法通常至少包含一個 await 運算式，表示方法在等候的非同步作業完成後才能繼續的點。 此時，方法已暫停，而且控制權返回到方法的呼叫端。 本主題的下一節將說明暫停點會發生什麼情況。  
   

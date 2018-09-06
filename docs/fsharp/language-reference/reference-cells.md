@@ -1,17 +1,17 @@
 ---
 title: 參照儲存格 (F#)
-description: '了解 F # 參考儲存格的儲存位置可讓您參考語意建立可變值的方式。'
+description: '了解 F # 參考儲存格的儲存體位置，可讓您以參考語意建立可變值的方式。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 3a632425356a250f07e5babd2751b9923eec6552
-ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
+ms.openlocfilehash: 133aec6b162a13306a05c9afa172f859890565eb
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2018
-ms.locfileid: "34149058"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892413"
 ---
 # <a name="reference-cells"></a>參考儲存格
 
-*參考儲存格*是可讓您參考語意建立可變值的儲存位置。
+*參考儲存格*是可讓您以參考語意建立可變值的儲存體位置。
 
 ## <a name="syntax"></a>語法
 
@@ -20,6 +20,7 @@ ref expression
 ```
 
 ## <a name="remarks"></a>備註
+
 您可以在值的前面使用 `ref` 運算子，建立可封裝值的新參考儲存格。 由於基礎值是可變的，因此您接著可以變更這個基礎值。
 
 參考儲存格不只是地址，還會保存實際值。 當您使用 `ref` 運算子建立參考儲存格時，會建立基礎值的複本做為已封裝的可變值。
@@ -73,17 +74,17 @@ let ref x = { contents = x }
 
 `contents` 欄位是針對與其他 ML 版本相容而提供，而且會在編譯期間產生警告。 若要停用這個警告，請使用 `--mlcompatibility` 編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。
 
-下列程式碼將示範如何將參考儲存格用於參數傳遞。 增量器類型具有方法採用參數，其中包含 byref 參數類型中的遞增值。 Byref 參數類型中的表示呼叫端，必須傳遞參考儲存格或指定型別的一般變數位址，在此案例的 int。其餘的程式碼示範如何呼叫這兩種類型的引數，與遞增值，並建立參考儲存格 (ref myDelta1) 的變數上將示範如何使用 ref 運算子。 接著，程式碼會示範如何使用傳址運算子 (&amp;) 來產生適當引數。 最後，使用宣告可透過 let 繫結的參考儲存格時再次呼叫 Increment 方法。 最後一行程式碼會示範如何使用 ！ 運算子來取值參考儲存格供列印。
+下列程式碼將示範如何將參考儲存格用於參數傳遞。 增量器類型有一個方法使用參數來包含 byref 參數類型中的 Increment。 Byref 參數類型中的表示呼叫端，必須傳遞參考儲存格或指定型別的一般變數位址，在此案例的 int。其餘的程式碼示範如何使用這兩種類型的引數，呼叫遞增，並示範使用 ref 運算子建立參考儲存格 (ref myDelta1) 的變數上。 接著，程式碼會示範如何使用傳址運算子 (&amp;) 來產生適當引數。 最後，使用參考儲存格所使用的 let 繫結宣告時再次呼叫 Increment 方法。 最後一行程式碼示範如何使用 ！ 運算子來取值 （dereference） 參考儲存格供列印。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2204.fs)]
 
 如需如何以傳址方式傳遞的詳細資訊，請參閱[參數和引數](parameters-and-arguments.md)。
 
 >[!NOTE]
-C# 程式設計人員應該知道運作方式，該 ref F # 中不同於 C#。 比方說，使用 ref 時傳遞引數並沒有相同的效果在 F # 與 C# 中。
+C# 程式設計人員應該了解運作方式不同，該參考 F # 中不同於 C#。 比方說，使用 ref 時傳遞引數並沒有相同的效果在 F # 如同在 C# 中。
 
 >[!NOTE]
-`mutable` 變數可能會自動提升為`'a ref`如果擷取方式，請參閱[值](values/index.md)。
+`mutable` 變數可能會自動升級為`'a ref`如果擷取的 closure; 請參閱[值](values/index.md)。
 
 ## <a name="consuming-c-ref-returns"></a>使用 C#`ref`傳回
 
@@ -112,7 +113,7 @@ namespace RefReturns
 }
 ```
 
-可以被明確地呼叫 F # 與沒有特殊的語法：
+可以明確地呼叫 F # 使用任何特殊的語法：
 
 ```fsharp
 open RefReturns
@@ -122,7 +123,7 @@ let consumeRefReturn() =
     ()
 ```
 
-您也可以宣告的函式也可能需要`ref`傳回做為輸入，例如：
+您也可以宣告函式，這可能需要`ref`傳回做為輸入，例如：
 
 ```fsharp
 let f (x: byref<int>) = &x
@@ -131,10 +132,8 @@ let f (x: byref<int>) = &x
 目前沒有任何方法來產生`ref`在 F # 中無法使用 C# 中傳回。
 
 ## <a name="see-also"></a>另請參閱
-[F# 語言參考](index.md)
 
-[參數和引數](parameters-and-arguments.md)
-
-[符號和運算子參考](symbol-and-operator-reference/index.md)
-
-[值](values/index.md)
+- [F# 語言參考](index.md)
+- [參數和引數](parameters-and-arguments.md)
+- [符號和運算子參考](symbol-and-operator-reference/index.md)
+- [值](values/index.md)

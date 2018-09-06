@@ -9,11 +9,11 @@ helpviewer_keywords:
 - timing key-fram animation
 ms.assetid: b059216f-7d4b-4ca8-a019-bc287ee7bf16
 ms.openlocfilehash: d65bf6f7643adf1d98d468853ae8017a4a6554ac
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43787918"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892674"
 ---
 # <a name="how-to-control-key-frame-animation-timing"></a>如何：控制主要畫面格動畫執行時間
 此範例示範如何控制主要畫面格動畫中的主要畫面格的時間。 如同其他動畫，主要畫面格動畫也有<xref:System.Windows.Media.Animation.Timeline.Duration%2A>屬性。 除了指定動畫的持續時間，您必須指定這段期間的哪個部分配置給每個主要畫面格。 若要配置的時間，您指定<xref:System.Windows.Media.Animation.KeyTime>動畫中的每個主要畫面格。  

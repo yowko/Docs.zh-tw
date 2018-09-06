@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd84702ea761f58fca88a8a72f6706f6cd439b7b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1e8bd2eaa977c9e3546758e9fd0e9fa3b4527634
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43541235"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44039831"
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>XslTransform 類別中的 Discretionary 行為實作
 
@@ -79,13 +79,13 @@ W3C [XSL 轉換 (XSLT) 1.0 版規格錯誤](https://www.w3.org/1999/11/REC-xslt-
 |-------------|------------------------|-----------|
 |`disable-output-escaping` 和 `<xsl:text...>` 標記上的 `<xsl:value-of...>` 屬性。|W3C XSLT 1.0 版建議事項，<br /><br /> 16.4 節|在 `disable-output-escaping`、`xsl:text` 或 `xsl:value-of` 項目中使用 `xsl:comment` 或 `xsl:processing-instruction` 項目時，會忽略 `xsl:attribute` 屬性。<br /><br /> 不支援包含文字且文字輸出已被逸出的結果樹狀結構片段。<br /><br /> 當轉換為 <xref:System.Xml.XmlReader> 或 <xref:System.Xml.XmlWriter> 物件時，disable-output-escaping 屬性會被忽略。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-<xref:System.Xml.Xsl.XslTransform>
-[XslTransform 類別實作 XSLT 處理器](xsltransform-class-implements-the-xslt-processor.md)  
-[使用 XslTransform 類別進行 XSLT 轉換](xslt-transformations-with-the-xsltransform-class.md)  
-[轉換中的 XPathNavigator](xpathnavigator-in-transformations.md)  
-[轉換中的 XPathNodeIterator](xpathnodeiterator-in-transformations.md)  
-[XslTransform 的 XPathDocument 輸入](xpathdocument-input-to-xsltransform.md)  
-[XslTransform 的 XmlDataDocument 輸入](xmldatadocument-input-to-xsltransform.md)  
-[XslTransform 的 XmlDocument 輸入](xmldocument-input-to-xsltransform.md)  
+- <xref:System.Xml.Xsl.XslTransform>
+- [XslTransform 類別實作 XSLT 處理器](xsltransform-class-implements-the-xslt-processor.md)  
+- [使用 XslTransform 類別進行 XSLT 轉換](xslt-transformations-with-the-xsltransform-class.md)  
+- [轉換中的 XPathNavigator](xpathnavigator-in-transformations.md)  
+- [轉換中的 XPathNodeIterator](xpathnodeiterator-in-transformations.md)  
+- [XslTransform 的 XPathDocument 輸入](xpathdocument-input-to-xsltransform.md)  
+- [XslTransform 的 XmlDataDocument 輸入](xmldatadocument-input-to-xsltransform.md)  
+- [XslTransform 的 XmlDocument 輸入](xmldocument-input-to-xsltransform.md)  

@@ -2,17 +2,16 @@
 title: 進入點 (F#)
 description: '了解如何設定為 編譯為可執行檔，正式開始執行 F # 程式的進入點。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 3d6cab755dd89f2d3d669a8763aa08660432a0ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 298500931d49c891a7a243295333df3a9f5d413e
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563616"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43884766"
 ---
 # <a name="entry-point"></a>進入點
 
-本主題描述您用來設定 F # 程式的進入點方法。
-
+本主題說明您使用 F # 程式中設定的進入點方法。
 
 ## <a name="syntax"></a>語法
 
@@ -22,13 +21,14 @@ let-function-binding
 ```
 
 ## <a name="remarks"></a>備註
-在先前的語法，*讓函式繫結*是在函式定義`let`繫結。
 
-會編譯為可執行檔是正式開始執行程式進入點。 您套用指定的 F # 應用程式的進入點`EntryPoint`屬性的程式`main`函式。 此函式 (使用建立`let`繫結) 必須是最後一個編譯檔案中的最後一個函式。 最後一個已編譯的檔案是專案中的最後一個檔案或傳遞至命令列的最後一個檔案。
+在先前的語法*可讓函式繫結*中的函式的定義`let`繫結。
 
-進入點函式具有類型`string array -> int`。 在命令列上所提供的引數會傳遞至`main`函式的字串陣列中。 陣列的第一個項目是第一個引數。可執行檔的名稱不會包含在陣列中，因為它是其他語言中。 處理序結束碼為使用的傳回值。 零通常會表示成功。非零值表示錯誤。 沒有任何特定的意義，則為非零的傳回碼; 的慣例傳回碼的意義是特定應用程式。
+會編譯為可執行檔是正式開始執行的程式進入點。 將套用指定的 F # 應用程式的進入點`EntryPoint`屬性的程式`main`函式。 此函式 (使用建立`let`繫結) 必須是最後一個編譯檔案中的最後一個函式。 專案中的最後一個檔案或傳遞至命令列的最後一個檔案的最後一個編譯的檔案。
 
-下列範例將說明簡單`main`函式。
+進入點函式具有類型`string array -> int`。 在命令列上提供的引數傳遞至`main`函式中的字串陣列。 陣列的第一個項目是第一個引數;可執行檔的名稱不會包含在陣列中，因為它在其他程式設計語言。 傳回值用於程序結束代碼。 零通常表示成功，非零值表示發生錯誤。 不沒有特定的意義，非零的傳回碼; 的任何慣例傳回碼的意義是特定應用程式。
+
+下列範例說明簡單`main`函式。
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/entry-point/snippet501.fs)]
 
@@ -39,10 +39,10 @@ Arguments passed to function : [|"1"; "2"; "3"|]
 ```
 
 ## <a name="implicit-entry-point"></a>隱含的進入點
-當程式沒有任何**EntryPoint**屬性會明確指出 進入點，最後一個檔案中編譯的最上層繫結會用做為進入點。
 
+當程式沒有任何**EntryPoint**明確指出 進入點，最後一個檔案中編譯的最上層繫結的屬性做為進入點。
 
 ## <a name="see-also"></a>另請參閱
-[函式](index.md)
 
-[let 繫結](let-bindings.md)
+- [函式](index.md)
+- [let 繫結](let-bindings.md)

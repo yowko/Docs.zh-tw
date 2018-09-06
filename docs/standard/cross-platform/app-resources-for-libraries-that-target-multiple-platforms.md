@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 11b9bde41e2209a88a042eb6c61de37def9da787
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: a6c589a393ccfb5610a19776af6e33e4046bf5d3
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245489"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879828"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>以多平台為目標之函式庫的應用程式資源
 您可以使用.NET Framework[可攜式類別庫](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)專案類型，以確保您類別庫中的資源，可從多個平台。 這個專案類型會在 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] 中提供，並且以 .NET Framework 類別庫的可攜式子集為目標。 使用[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]可確保能夠從桌面應用程式、Silverlight 應用程式、Windows Phone 應用程式和 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式存取您的程式庫。  
@@ -104,7 +104,8 @@ ms.locfileid: "39245489"
  [!code-csharp[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetroloc/cs/blankpage.xaml.cs#1)]
  [!code-vb[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portablemetroloc/vb/blankpage.xaml.vb#1)]  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Resources.ResourceManager>  
- [桌面應用程式中的資源](../../../docs/framework/resources/index.md)  
- [封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Resources.ResourceManager>  
+- [桌面應用程式中的資源](../../../docs/framework/resources/index.md)  
+- [封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - directives
 ms.assetid: 20d5fe65-490a-4c23-88c2-ee4f490ed762
 ms.openlocfilehash: 38d54feae5cf7bf41a825d1f6000811e2b56f319
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43736603"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44032052"
 ---
 # <a name="directives-visual-basic"></a>指示詞 (Visual Basic)
 本節中的主題記錄 Visual Basic 原始程式碼編譯器指示詞。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [#Const 指示詞](../../../visual-basic/language-reference/directives/const-directive.md)-定義編譯器常數  
   
  [#ExternalSource 指示詞](../../../visual-basic/language-reference/directives/externalsource-directive.md)-表示原始程式行和來源外部文字之間的對應  

@@ -3,11 +3,11 @@ title: SQL Server 和 ADO.NET
 ms.date: 03/30/2017
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.openlocfilehash: 32fc946f46ddac63d87b7e5a3d8f7120799f7223
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43742338"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43885927"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server 和 ADO.NET
 本節說明 .NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) 特有的功能與行為。  
@@ -17,7 +17,7 @@ ms.locfileid: "43742338"
 > [!NOTE]
 >  若要使用 SQL Server 的 .NET Framework 資料提供者，應用程式必須參考 <xref:System.Data.SqlClient> 命名空間。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [SQL Server 安全性](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  提供 SQL Server 安全性功能的概觀，以及可用於建立以 SQL Server 為目標之安全 ADO.NET 應用程式的應用程式案例。  
   

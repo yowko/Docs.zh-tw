@@ -9,36 +9,37 @@ helpviewer_keywords:
 ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fa4227fc4476b86f07216650b22fccc25af7dd98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b92b648e7886fb0214238e32eacae2870b470340
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573083"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892794"
 ---
 # <a name="virtual-members"></a>虛擬成員
-虛擬成員會覆寫，因此變更子類別的行為。 它們是回呼提供，擴充性方面相當類似，但是可以執行效能和記憶體耗用量方面更好。 此外，虛擬成員感覺更自然的案例中，需要建立一個特殊種類的現有類型 （特製化）。  
+虛擬成員可以被覆寫，因此變更子類別的行為。 它們是回呼提供，擴充性方面相當類似，但它們會有較高的執行效能和記憶體耗用量。 此外，虛擬成員覺得在需要建立一種特殊種類的現有類型 （特製化） 的情況下更自然的。  
   
- 虛擬成員的執行效能優於回撥和事件，但不是執行效能優於非虛擬方法。  
+ 虛擬成員會優於回呼和事件，但不是會被執行優於非虛擬方法。  
   
- 虛擬成員的主要缺點是虛擬成員的行為只發生在編譯階段中變更。 回呼的行為可以在執行階段修改。  
+ 虛擬成員的主要缺點是只可以在編譯時修改虛擬成員的行為。 回呼的行為可以在執行階段修改。  
   
- 虛擬成員，例如回呼，可能有多個回呼成本很高設計、 測試和維護，因為任何呼叫虛擬成員會覆寫非預期的方式，而且可以執行任意程式碼。 此外，還要更多的投入時間通常才能清楚地定義合約的虛擬成員，讓設計和撰寫它們的成本較高者為。  
+ 虛擬成員，例如回呼 （和可能有多個回呼），是設計、 測試及維護，因為虛擬成員的任何呼叫可以覆寫非預期的方式，而且可以執行任意程式碼的成本。 此外，更多精力通常需要清楚定義的虛擬成員的合約，讓設計與記錄它們的成本較高。  
   
  **X DO NOT** 讓成員虛擬，除非您有很好的理由，若要這樣做，而且您了解所有設計、 測試及維護虛擬成員與相關的成本。  
   
- 虛擬成員都是較少能夠容許方面可能會對它們而不會中斷相容性的變更。 此外，它們不低於非虛擬的成員，主要是因為不是內嵌的虛擬成員的呼叫。  
+ 虛擬成員會較少能夠容許方面可以對它們而不會中斷相容性的變更。 此外，也就是低於非虛擬成員，這多半是因為呼叫虛擬成員不會內嵌。  
   
  **✓ CONSIDER** 限制只是絕對必要的擴充性。  
   
  **✓ DO** 不用公用存取範圍中的受保護的存取範圍，在虛擬成員。 Public 成員應該提供擴充性 （如有必要） 藉由呼叫受保護的虛擬成員。  
   
- 類別的 public 成員應該提供正確的功能集，該類別的直接取用者。 虛擬成員設計用來覆寫中的子類別，以及受保護的存取範圍是領域可以要使用的所有虛擬擴充性點的好方法。  
+ 類別的 public 成員應該為該類別的直接取用者提供正確的功能集。 虛擬成員設計用來覆寫子類別，在和受保護的存取範圍是範圍可以要使用的所有虛擬擴充性點的好方法。  
   
- *部分 © 2005年，2009 Microsoft Corporation。All rights reserved.*  
+ *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- *皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*  
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
   
-## <a name="see-also"></a>另請參閱  
- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)  
- [擴充性設計](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+## <a name="see-also"></a>另請參閱
+
+- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)  
+- [擴充性設計](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

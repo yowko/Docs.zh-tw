@@ -3,11 +3,11 @@ title: 服務： 通道接聽程式與通道
 ms.date: 03/30/2017
 ms.assetid: 8ccbe0e8-7e55-441d-80de-5765f67542fa
 ms.openlocfilehash: 88bfdc879e4f3c7df6b2c4035c7ed7fdc2b4c41d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43788784"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44035134"
 ---
 # <a name="service-channel-listeners-and-channels"></a>服務： 通道接聽程式與通道
 

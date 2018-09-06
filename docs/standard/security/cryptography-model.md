@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ced7ed2cb8d3ae3bb24211c6e7dafd1744fb9559
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d74ce08197ac76a601202da8e35ca6f619207076
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587452"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43885743"
 ---
 # <a name="net-framework-cryptography-model"></a>.NET Framework 密碼編譯模型
 .NET Framework 提供許多標準密碼編譯演算法的實作。 這些演算法容易使用，並且具有最安全的可能預設屬性。 此外，.NET Framework 的物件繼承、資料流設計與組態的密碼編譯模型非常具可擴充性。  
@@ -87,6 +87,6 @@ ms.locfileid: "33587452"
   
     -   <xref:System.Security.Cryptography.Rfc2898DeriveBytes>  
   
-## <a name="see-also"></a>另請參閱  
- [The signature is valid](../../../docs/standard/security/cryptographic-services.md)  
- 
+## <a name="see-also"></a>另請參閱
+
+- [The signature is valid](../../../docs/standard/security/cryptographic-services.md)  

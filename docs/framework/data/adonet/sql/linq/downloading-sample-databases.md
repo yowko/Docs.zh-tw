@@ -3,11 +3,11 @@ title: 下載範例資料庫
 ms.date: 03/30/2017
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
 ms.openlocfilehash: e0b842385762a486ffcc775974e15334c77b589b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43741698"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44039130"
 ---
 # <a name="downloading-sample-databases"></a>下載範例資料庫
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 文件中的許多範例和逐步解說都使用 Northwind 範例資料庫和 SQL Server Express Edition。 您可以從 Microsoft 下載網站免費下載這些產品。  

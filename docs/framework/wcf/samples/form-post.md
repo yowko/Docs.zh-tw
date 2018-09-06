@@ -3,11 +3,11 @@ title: 表單張貼
 ms.date: 03/30/2017
 ms.assetid: fa6f84f9-2e07-4e3c-92d0-a245308b7dff
 ms.openlocfilehash: 9115b9abfa7039bf409bb9bbce54e5012d05a074
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745459"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43890824"
 ---
 # <a name="form-post"></a>表單張貼
 這個範例示範如何擴充 WCF REST 程式設計模型，以支援新的傳入要求格式。 這個範例還包括格式子的實作，可將 HTML 表單張貼的要求還原序列化為 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 類型。 此外，這個範例使用 T4 範本傳回 HTML 頁面，該頁面提供可讓使用者回傳至 WCF REST 服務的 HTML 表單。  

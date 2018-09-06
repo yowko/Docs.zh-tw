@@ -5,11 +5,11 @@ ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 47ed75d377814a740edece2b6a69e44acbd8ef0c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43747615"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43883957"
 ---
 # <a name="ltpropertygt-element-net-native"></a>&lt;Property&gt; 項目 (.NET Native)
 將執行階段反映原則套用至屬性。  
@@ -24,15 +24,15 @@ ms.locfileid: "43747615"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
 |屬性|屬性類型|描述|  
 |---------------|--------------------|-----------------|  
 |`Name`|一般|必要屬性。 指定屬性名稱。|  
-|`Browse`|反映|選擇性屬性。 控制對屬性相關資訊的查詢，或控制屬性的列舉，但不會在執行階段啟用任何動態存取。|  
-|`Dynamic`|反映|選擇性屬性。 控制對屬性的執行階段存取權，以啟用動態程式設計。 此原則可確保能夠在執行階段動態設定或擷取屬性。|  
+|`Browse`|反射|選擇性屬性。 控制對屬性相關資訊的查詢，或控制屬性的列舉，但不會在執行階段啟用任何動態存取。|  
+|`Dynamic`|反射|選擇性屬性。 控制對屬性的執行階段存取權，以啟用動態程式設計。 此原則可確保能夠在執行階段動態設定或擷取屬性。|  
 |`Serialize`|序列化|選擇性屬性。 控制對屬性的執行階段存取權，使類型執行個體能夠由 Newtonsoft JSON 序列化程式之類的程式庫來序列化，或是用於資料繫結。|  
   
 ## <a name="name-attribute"></a>Name 屬性  
@@ -47,7 +47,7 @@ ms.locfileid: "43747615"
 |-----------|-----------------|  
 |*policy_setting*|要為屬性套用此原則類型的設定。 可能的值為 `Auto`、`Excluded`、`Included` 和 `Required`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -55,7 +55,7 @@ ms.locfileid: "43747615"
 |項目|描述|  
 |-------------|-----------------|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|將反映原則套用至建構的泛型類型及其所有成員。|  
+|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|將反映原則套用至已建構的泛型類型及其所有成員。|  
   
 ## <a name="remarks"></a>備註  
  如果未明確定義屬性的原則，則會繼承其父元素的執行階段原則。  

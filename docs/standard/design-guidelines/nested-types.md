@@ -12,40 +12,41 @@ helpviewer_keywords:
 ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c0eca851746899654636d36dce679acffc07ef0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2593b85dd4747a3fbe365994c3e5d9beae3e3406
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573655"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891535"
 ---
 # <a name="nested-types"></a>巢狀類型
-巢狀型別是另一個類型，稱為封入類型的範圍內定義的類型。 巢狀型別可以存取其封入類型的所有成員。 例如，具有存取權給定義在封入類型，以及受保護的定義中封入類型的所有上階欄位的私用欄位。  
+巢狀型別是另一個類型，稱為封入類型的範圍內定義的類型。 巢狀型別可以存取其封入類型的所有成員。 比方說，它必須定義在封入類型，以及受保護的欄位定義中的封入類型的所有上階的私用欄位的存取。  
   
- 一般情況下，就應該謹慎巢狀型別。 這有幾個原因。 有些開發人員並不完全熟悉概念。 這些開發人員可能會比方說，有巢狀類型的變數的宣告語法問題。 巢狀型別也非常緊密結合其封入類型，並在這種情況不適合一般用途的型別。  
+ 一般情況下，應該謹慎使用巢狀型別。 這有幾個原因。 有些開發人員並不完全熟悉的概念。 這些開發人員，比方說，可能無法使用巢狀型別的變數的宣告語法。 巢狀型別以及其封入類型，也非常緊密結合，並因此不適用於一般用途的型別。  
   
- 巢狀型別是最適合用來建立模型及其封入類型的實作詳細資料。 終端使用者應該很少需要宣告巢狀類型的變數，而幾乎永遠都不應該需要明確具現化巢狀型別。 例如，集合的列舉值可以是該集合的巢狀的類型。 通常會依其封入類型具現化列舉值，因為許多語言都支援 foreach 陳述式，列舉值的變數很少需要使用者宣告。  
+ 巢狀型別是最適合用於模型化其封入類型的實作詳細資料。 終端使用者應該幾乎不需要宣告巢狀類型的變數，而且幾乎不應該明確具現化巢狀型別。 例如，集合的列舉值可以是該集合的巢狀的類型。 列舉值通常是具現化依其封入類型，因為許多語言支援 foreach 陳述式，列舉值的變數很少需要使用者宣告。  
   
  **✓ DO** 時的巢狀的類型和其外部型別之間的關聯性，這類成員存取範圍語法是想要使用巢狀型別。  
   
  **X DO NOT** 使用公用巢狀型別做為邏輯群組建構，則使用這個命名空間。  
   
- **X AVOID** 公開巢狀型別。 唯一的例外是如果需要宣告只有在極少數的情況下，例如 subclassing 或其他進階的自訂案例的巢狀類型的變數。  
+ **X AVOID** 公開巢狀型別。 唯一的例外是如果需要宣告只有在罕見的情況下，例如 subclassing 或其他進階的自訂案例的巢狀類型的變數。  
   
  **X DO NOT** 可能外部包含型別中參考該類型時，使用巢狀型別。  
   
- 例如，傳遞至方法，在類別定義列舉不應定義為類別中的巢狀類型。  
+ 例如，傳遞至方法，類別中定義的列舉不應該定義為類別中的巢狀類型。  
   
  **X DO NOT** 使用巢狀型別，如果它們必須具現化用戶端程式碼。  如果類型具有公用建構函式，它應該可能不是巢狀。  
   
- 如果型別可以具現化，這好像來表示型別具有自己的架構中的位置 （您可以建立、 使用它，和摧毀不需使用外部型別），因此應該不巢狀。 內部的類型應該不能廣泛地重複使用外部型別，如果沒有任何關聯性外部擔保外部型別。  
+ 如果類型可以具現化，這就好像是指出該類型具有本身的架構中的位置 （您可以建立、 使用，並終結不需使用外部型別），因此應該不是巢狀。 內部的類型應該不能廣泛地重複使用之外沒有任何關聯性的外部型別也為外部型別。  
   
  **X DO NOT** 定義巢狀型別為介面的成員。 許多語言不支援這類建構。  
   
- *部分 © 2005年，2009 Microsoft Corporation。All rights reserved.*  
+ *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- *皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*  
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
   
-## <a name="see-also"></a>另請參閱  
- [類型設計方針](../../../docs/standard/design-guidelines/type.md)  
- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>另請參閱
+
+- [類型設計方針](../../../docs/standard/design-guidelines/type.md)  
+- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
