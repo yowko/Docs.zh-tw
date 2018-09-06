@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 3b6cdffdaab508d898e7caa8c93ac0f7b1365d01
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: fdbb220cd856fd7309d54c41a39f91a9316fe434
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408876"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43805152"
 ---
 # <a name="interfaces-c-programming-guide"></a>介面 (C# 程式設計手冊)
 介面包含[類別](../../../csharp/language-reference/keywords/class.md)或 [struct](../../../csharp/language-reference/keywords/struct.md) 可實作的一組相關功能定義。  
@@ -93,6 +93,7 @@ ms.locfileid: "43408876"
 ## <a name="featured-book-chapter"></a>精選書籍章節  
  [了解 C# 3.0：掌握 C# 3.0 的基本概念 (英文)](https://msdn.microsoft.com/library/orm-9780596521066-01.aspx) 中的[介面](https://msdn.microsoft.com/library/orm-9780596521066-01-13.aspx)  
   
-## <a name="see-also"></a>請參閱  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)

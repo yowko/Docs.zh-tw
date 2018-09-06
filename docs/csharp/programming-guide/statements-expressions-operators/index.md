@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C# language, expressions
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
-ms.openlocfilehash: 26a6046ac926a13c4f2a2f2cc4dfd250d998bc93
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 1085de3447bd6101fcccf6cae7b37afac24d37f1
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43386164"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43776523"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>陳述式、運算式和運算子 (C# 程式設計手冊)
 組成應用程式的 C# 程式碼是由包含關鍵字、運算式和運算子的陳述式所構成。 本節包含有關 C# 程式中這些基本項目的資訊。  
@@ -44,6 +44,7 @@ ms.locfileid: "43386164"
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>請參閱  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [轉換和型別轉換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [轉換和型別轉換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)

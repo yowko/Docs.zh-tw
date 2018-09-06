@@ -1,11 +1,12 @@
 ---
-title: 序列化 (C# )
+title: 序列化 (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 03a7cd2d48b79d94674e64e96130e20a86051fb2
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 7d72be92e5568037264438e3fde1e7565366c962
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858313"
 ---
 # <a name="serialization-c"></a>序列化 (C#)
 
