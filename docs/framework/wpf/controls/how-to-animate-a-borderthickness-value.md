@@ -9,28 +9,28 @@ helpviewer_keywords:
 - animation [WPF], changes to border thickness
 ms.assetid: fd021978-f74b-4e7b-a7f7-3987dcad9e0f
 ms.openlocfilehash: d1ead0493d75f708557f0598d603440221182ebc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43673547"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877186"
 ---
-# <a name="how-to-animate-a-borderthickness-value"></a><span data-ttu-id="a7383-102">如何：建立 BorderThickness 值的動畫</span><span class="sxs-lookup"><span data-stu-id="a7383-102">How to: Animate a BorderThickness Value</span></span>
-<span data-ttu-id="a7383-103">此範例示範如何建立變更框線粗細的動畫使用<xref:System.Windows.Media.Animation.ThicknessAnimation>類別。</span><span class="sxs-lookup"><span data-stu-id="a7383-103">This example shows how to animate changes to the thickness of a border by using the <xref:System.Windows.Media.Animation.ThicknessAnimation> class.</span></span>  
+# <a name="how-to-animate-a-borderthickness-value"></a><span data-ttu-id="2df16-102">如何：建立 BorderThickness 值的動畫</span><span class="sxs-lookup"><span data-stu-id="2df16-102">How to: Animate a BorderThickness Value</span></span>
+<span data-ttu-id="2df16-103">此範例示範如何建立變更框線粗細的動畫使用<xref:System.Windows.Media.Animation.ThicknessAnimation>類別。</span><span class="sxs-lookup"><span data-stu-id="2df16-103">This example shows how to animate changes to the thickness of a border by using the <xref:System.Windows.Media.Animation.ThicknessAnimation> class.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a7383-104">範例</span><span class="sxs-lookup"><span data-stu-id="a7383-104">Example</span></span>  
- <span data-ttu-id="a7383-105">下列範例會建立框線粗細的動畫使用<xref:System.Windows.Media.Animation.ThicknessAnimation>。</span><span class="sxs-lookup"><span data-stu-id="a7383-105">The following example animates the thickness of a border by using <xref:System.Windows.Media.Animation.ThicknessAnimation>.</span></span> <span data-ttu-id="a7383-106">此範例會使用<xref:System.Windows.Controls.Border.BorderThickness%2A>屬性<xref:System.Windows.Controls.Border>。</span><span class="sxs-lookup"><span data-stu-id="a7383-106">The example uses the <xref:System.Windows.Controls.Border.BorderThickness%2A> property of <xref:System.Windows.Controls.Border>.</span></span>  
+## <a name="example"></a><span data-ttu-id="2df16-104">範例</span><span class="sxs-lookup"><span data-stu-id="2df16-104">Example</span></span>  
+ <span data-ttu-id="2df16-105">下列範例會建立框線粗細的動畫使用<xref:System.Windows.Media.Animation.ThicknessAnimation>。</span><span class="sxs-lookup"><span data-stu-id="2df16-105">The following example animates the thickness of a border by using <xref:System.Windows.Media.Animation.ThicknessAnimation>.</span></span> <span data-ttu-id="2df16-106">此範例會使用<xref:System.Windows.Controls.Border.BorderThickness%2A>屬性<xref:System.Windows.Controls.Border>。</span><span class="sxs-lookup"><span data-stu-id="2df16-106">The example uses the <xref:System.Windows.Controls.Border.BorderThickness%2A> property of <xref:System.Windows.Controls.Border>.</span></span>  
   
  [!code-csharp[BasicAnimations_snip#ThicknessAnimationWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snip/CSharp/ThicknessAnimationExample.cs#thicknessanimationwholepage)]
  [!code-vb[BasicAnimations_snip#ThicknessAnimationWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BasicAnimations_snip/VisualBasic/ThicknessAnimationExample.vb#thicknessanimationwholepage)]  
   
- <span data-ttu-id="a7383-107">如需完整的範例，請參閱[動畫範例圖庫](https://go.microsoft.com/fwlink/?LinkID=159969)。</span><span class="sxs-lookup"><span data-stu-id="a7383-107">For the complete sample, see [Animation Example Gallery](https://go.microsoft.com/fwlink/?LinkID=159969).</span></span>  
+ <span data-ttu-id="2df16-107">如需完整的範例，請參閱[動畫範例圖庫](https://go.microsoft.com/fwlink/?LinkID=159969)。</span><span class="sxs-lookup"><span data-stu-id="2df16-107">For the complete sample, see [Animation Example Gallery](https://go.microsoft.com/fwlink/?LinkID=159969).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a7383-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a7383-108">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="2df16-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2df16-108">See Also</span></span>  
  <xref:System.Windows.Media.Animation.ThicknessAnimation>  
  <xref:System.Windows.Controls.Border.BorderThickness%2A>  
  <xref:System.Windows.Controls.Border>  
- [<span data-ttu-id="a7383-109">動畫概觀</span><span class="sxs-lookup"><span data-stu-id="a7383-109">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [<span data-ttu-id="a7383-110">動畫和計時</span><span class="sxs-lookup"><span data-stu-id="a7383-110">Animation and Timing</span></span>](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
- [<span data-ttu-id="a7383-111">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="a7383-111">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)  
- [<span data-ttu-id="a7383-112">使用主要畫面格建立框線粗細的動畫</span><span class="sxs-lookup"><span data-stu-id="a7383-112">Animate the Thickness of a Border by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)
+ [<span data-ttu-id="2df16-109">動畫概觀</span><span class="sxs-lookup"><span data-stu-id="2df16-109">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="2df16-110">動畫和計時</span><span class="sxs-lookup"><span data-stu-id="2df16-110">Animation and Timing</span></span>](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
+ [<span data-ttu-id="2df16-111">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="2df16-111">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)  
+ [<span data-ttu-id="2df16-112">使用主要畫面格建立框線粗細的動畫</span><span class="sxs-lookup"><span data-stu-id="2df16-112">Animate the Thickness of a Border by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)

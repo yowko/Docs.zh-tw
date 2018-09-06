@@ -6,30 +6,30 @@ helpviewer_keywords:
 - My.Computer.Clipboard object
 ms.assetid: 05d4ede9-1f9a-4495-87f0-77350b8d2e5d
 ms.openlocfilehash: 2f44908668fc48e8a45cd6f2dc686f3bb7ba4f67
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745205"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44039578"
 ---
-# <a name="mycomputerclipboard-object"></a><span data-ttu-id="87d8e-102">My.Computer.Clipboard 物件</span><span class="sxs-lookup"><span data-stu-id="87d8e-102">My.Computer.Clipboard Object</span></span>
-<span data-ttu-id="87d8e-103">提供用於操作剪貼簿的方法。</span><span class="sxs-lookup"><span data-stu-id="87d8e-103">Provides methods for manipulating the Clipboard.</span></span>  
+# <a name="mycomputerclipboard-object"></a><span data-ttu-id="c6cd7-102">My.Computer.Clipboard 物件</span><span class="sxs-lookup"><span data-stu-id="c6cd7-102">My.Computer.Clipboard Object</span></span>
+<span data-ttu-id="c6cd7-103">提供用於操作剪貼簿的方法。</span><span class="sxs-lookup"><span data-stu-id="c6cd7-103">Provides methods for manipulating the Clipboard.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="87d8e-104">備註</span><span class="sxs-lookup"><span data-stu-id="87d8e-104">Remarks</span></span>  
- <span data-ttu-id="87d8e-105">如需方法和屬性資訊`My.Computer.Clipboard`資訊，請參閱<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>。</span><span class="sxs-lookup"><span data-stu-id="87d8e-105">For information about the methods and properties of the `My.Computer.Clipboard` object, see <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c6cd7-104">備註</span><span class="sxs-lookup"><span data-stu-id="c6cd7-104">Remarks</span></span>  
+ <span data-ttu-id="c6cd7-105">如需方法和屬性資訊`My.Computer.Clipboard`資訊，請參閱<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>。</span><span class="sxs-lookup"><span data-stu-id="c6cd7-105">For information about the methods and properties of the `My.Computer.Clipboard` object, see <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>.</span></span>  
   
- <span data-ttu-id="87d8e-106">如需詳細資訊，請參閱 <<c0> [ 要儲存資料，以及從剪貼簿讀取](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)。</span><span class="sxs-lookup"><span data-stu-id="87d8e-106">For more information, see [Storing Data to and Reading from the Clipboard](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md).</span></span>  
+ <span data-ttu-id="c6cd7-106">如需詳細資訊，請參閱 <<c0> [ 要儲存資料，以及從剪貼簿讀取](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)。</span><span class="sxs-lookup"><span data-stu-id="c6cd7-106">For more information, see [Storing Data to and Reading from the Clipboard](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="87d8e-107">您也可以使用的方法<xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType>類別來操作剪貼簿。</span><span class="sxs-lookup"><span data-stu-id="87d8e-107">You can also use methods of the <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> class to manipulate the Clipboard.</span></span>  
+>  <span data-ttu-id="c6cd7-107">您也可以使用的方法<xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType>類別來操作剪貼簿。</span><span class="sxs-lookup"><span data-stu-id="c6cd7-107">You can also use methods of the <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> class to manipulate the Clipboard.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="87d8e-108">需求</span><span class="sxs-lookup"><span data-stu-id="87d8e-108">Requirements</span></span>  
- <span data-ttu-id="87d8e-109">**命名空間：** <xref:Microsoft.VisualBasic.MyServices></span><span class="sxs-lookup"><span data-stu-id="87d8e-109">**Namespace:** <xref:Microsoft.VisualBasic.MyServices></span></span>  
+## <a name="requirements"></a><span data-ttu-id="c6cd7-108">需求</span><span class="sxs-lookup"><span data-stu-id="c6cd7-108">Requirements</span></span>  
+ <span data-ttu-id="c6cd7-109">**命名空間：** <xref:Microsoft.VisualBasic.MyServices></span><span class="sxs-lookup"><span data-stu-id="c6cd7-109">**Namespace:** <xref:Microsoft.VisualBasic.MyServices></span></span>  
   
- <span data-ttu-id="87d8e-110">**類別：** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> (可存取<xref:System.Windows.Forms.Clipboard>)</span><span class="sxs-lookup"><span data-stu-id="87d8e-110">**Class:** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> (provides access to <xref:System.Windows.Forms.Clipboard>)</span></span>  
+ <span data-ttu-id="c6cd7-110">**類別：** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> (可存取<xref:System.Windows.Forms.Clipboard>)</span><span class="sxs-lookup"><span data-stu-id="c6cd7-110">**Class:** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> (provides access to <xref:System.Windows.Forms.Clipboard>)</span></span>  
   
- <span data-ttu-id="87d8e-111">**組件︰** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]</span><span class="sxs-lookup"><span data-stu-id="87d8e-111">**Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]</span></span>  
+ <span data-ttu-id="c6cd7-111">**組件︰** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c6cd7-111">**Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="87d8e-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="87d8e-112">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="c6cd7-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c6cd7-112">See Also</span></span>  
  <xref:Microsoft.VisualBasic.Devices.Computer.Clipboard%2A>  
- [<span data-ttu-id="87d8e-113">My.Computer 物件</span><span class="sxs-lookup"><span data-stu-id="87d8e-113">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)
+ [<span data-ttu-id="c6cd7-113">My.Computer 物件</span><span class="sxs-lookup"><span data-stu-id="c6cd7-113">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)

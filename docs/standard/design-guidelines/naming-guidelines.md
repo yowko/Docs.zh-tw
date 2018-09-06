@@ -13,32 +13,33 @@ helpviewer_keywords:
 ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53ffb641d3e507a937c304725b3c8590d046338e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70888e068782add5ebe5ae1c7da3bdee842faea8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572966"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44031831"
 ---
-# <a name="naming-guidelines"></a><span data-ttu-id="10931-102">命名方針</span><span class="sxs-lookup"><span data-stu-id="10931-102">Naming Guidelines</span></span>
-<span data-ttu-id="10931-103">下一組一致的命名慣例架構的開發工作可以是主要帳目加入架構的可用性。</span><span class="sxs-lookup"><span data-stu-id="10931-103">Following a consistent set of naming conventions in the development of a framework can be a major contribution to the framework’s usability.</span></span> <span data-ttu-id="10931-104">它可讓廣泛的分開專案的開發人員所使用的架構。</span><span class="sxs-lookup"><span data-stu-id="10931-104">It allows the framework to be used by many developers on widely separated projects.</span></span> <span data-ttu-id="10931-105">表單的一致性，超出架構項目的名稱必須容易了解，並必須傳遞每個項目的函式。</span><span class="sxs-lookup"><span data-stu-id="10931-105">Beyond consistency of form, names of framework elements must be easily understood and must convey the function of each element.</span></span>  
+# <a name="naming-guidelines"></a><span data-ttu-id="41359-102">命名方針</span><span class="sxs-lookup"><span data-stu-id="41359-102">Naming Guidelines</span></span>
+<span data-ttu-id="41359-103">遵循一組一致的開發架構的命名慣例，可以是主要的投稿內容架構的可用性。</span><span class="sxs-lookup"><span data-stu-id="41359-103">Following a consistent set of naming conventions in the development of a framework can be a major contribution to the framework’s usability.</span></span> <span data-ttu-id="41359-104">它可讓廣泛分隔的專案上的許多開發人員所使用的架構。</span><span class="sxs-lookup"><span data-stu-id="41359-104">It allows the framework to be used by many developers on widely separated projects.</span></span> <span data-ttu-id="41359-105">超過表單的一致性，必須容易了解架構元素的名稱，並必須傳達每個項目的函式。</span><span class="sxs-lookup"><span data-stu-id="41359-105">Beyond consistency of form, names of framework elements must be easily understood and must convey the function of each element.</span></span>  
   
- <span data-ttu-id="10931-106">本指南的目標是提供一組連續的命名慣例，導致對開發人員的立即有意義的名稱。</span><span class="sxs-lookup"><span data-stu-id="10931-106">The goal of this chapter is to provide a consistent set of naming conventions that results in names that make immediate sense to developers.</span></span>  
+ <span data-ttu-id="41359-106">本指南的目標是提供一組一致的命名慣例，產生對開發人員的即時運算的有意義的名稱。</span><span class="sxs-lookup"><span data-stu-id="41359-106">The goal of this chapter is to provide a consistent set of naming conventions that results in names that make immediate sense to developers.</span></span>  
   
- <span data-ttu-id="10931-107">雖然因為一般開發指導方針會導致更一致的命名，在整個程式碼，請採用下列命名慣例，您僅需要將它們套用至都公開的 Api (公用或受保護的類型和成員，以及明確實作的介面）。</span><span class="sxs-lookup"><span data-stu-id="10931-107">Although adopting these naming conventions as general code development guidelines would result in more consistent naming throughout your code, you are required only to apply them to APIs that are publicly exposed (public or protected types and members, and explicitly implemented interfaces).</span></span>  
+ <span data-ttu-id="41359-107">雖然因為一般開發指導方針會導致更一致的命名，在整個程式碼，請採用下列命名慣例，您僅需要將它們套用到對外公開的 Api (公用或受保護的類型和成員，以及明確實作介面）。</span><span class="sxs-lookup"><span data-stu-id="41359-107">Although adopting these naming conventions as general code development guidelines would result in more consistent naming throughout your code, you are required only to apply them to APIs that are publicly exposed (public or protected types and members, and explicitly implemented interfaces).</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="10931-108">本節內容</span><span class="sxs-lookup"><span data-stu-id="10931-108">In This Section</span></span>  
- [<span data-ttu-id="10931-109">大小寫慣例</span><span class="sxs-lookup"><span data-stu-id="10931-109">Capitalization Conventions</span></span>](../../../docs/standard/design-guidelines/capitalization-conventions.md)  
- [<span data-ttu-id="10931-110">一般命名慣例</span><span class="sxs-lookup"><span data-stu-id="10931-110">General Naming Conventions</span></span>](../../../docs/standard/design-guidelines/general-naming-conventions.md)  
- [<span data-ttu-id="10931-111">組件和 DLL 的名稱</span><span class="sxs-lookup"><span data-stu-id="10931-111">Names of Assemblies and DLLs</span></span>](../../../docs/standard/design-guidelines/names-of-assemblies-and-dlls.md)  
- [<span data-ttu-id="10931-112">命名空間的名稱</span><span class="sxs-lookup"><span data-stu-id="10931-112">Names of Namespaces</span></span>](../../../docs/standard/design-guidelines/names-of-namespaces.md)  
- [<span data-ttu-id="10931-113">類別、結構和介面的名稱</span><span class="sxs-lookup"><span data-stu-id="10931-113">Names of Classes, Structs, and Interfaces</span></span>](../../../docs/standard/design-guidelines/names-of-classes-structs-and-interfaces.md)  
- [<span data-ttu-id="10931-114">類型成員名稱</span><span class="sxs-lookup"><span data-stu-id="10931-114">Names of Type Members</span></span>](../../../docs/standard/design-guidelines/names-of-type-members.md)  
- [<span data-ttu-id="10931-115">命名參數</span><span class="sxs-lookup"><span data-stu-id="10931-115">Naming Parameters</span></span>](../../../docs/standard/design-guidelines/naming-parameters.md)  
- [<span data-ttu-id="10931-116">命名資源</span><span class="sxs-lookup"><span data-stu-id="10931-116">Naming Resources</span></span>](../../../docs/standard/design-guidelines/naming-resources.md)  
- <span data-ttu-id="10931-117">*部分 © 2005年，2009 Microsoft Corporation。All rights reserved.*</span><span class="sxs-lookup"><span data-stu-id="10931-117">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="41359-108">本節內容</span><span class="sxs-lookup"><span data-stu-id="41359-108">In This Section</span></span>  
+ [<span data-ttu-id="41359-109">大小寫慣例</span><span class="sxs-lookup"><span data-stu-id="41359-109">Capitalization Conventions</span></span>](../../../docs/standard/design-guidelines/capitalization-conventions.md)  
+ [<span data-ttu-id="41359-110">一般命名慣例</span><span class="sxs-lookup"><span data-stu-id="41359-110">General Naming Conventions</span></span>](../../../docs/standard/design-guidelines/general-naming-conventions.md)  
+ [<span data-ttu-id="41359-111">組件和 DLL 的名稱</span><span class="sxs-lookup"><span data-stu-id="41359-111">Names of Assemblies and DLLs</span></span>](../../../docs/standard/design-guidelines/names-of-assemblies-and-dlls.md)  
+ [<span data-ttu-id="41359-112">命名空間的名稱</span><span class="sxs-lookup"><span data-stu-id="41359-112">Names of Namespaces</span></span>](../../../docs/standard/design-guidelines/names-of-namespaces.md)  
+ [<span data-ttu-id="41359-113">類別、結構和介面的名稱</span><span class="sxs-lookup"><span data-stu-id="41359-113">Names of Classes, Structs, and Interfaces</span></span>](../../../docs/standard/design-guidelines/names-of-classes-structs-and-interfaces.md)  
+ [<span data-ttu-id="41359-114">類型成員名稱</span><span class="sxs-lookup"><span data-stu-id="41359-114">Names of Type Members</span></span>](../../../docs/standard/design-guidelines/names-of-type-members.md)  
+ [<span data-ttu-id="41359-115">命名參數</span><span class="sxs-lookup"><span data-stu-id="41359-115">Naming Parameters</span></span>](../../../docs/standard/design-guidelines/naming-parameters.md)  
+ [<span data-ttu-id="41359-116">命名資源</span><span class="sxs-lookup"><span data-stu-id="41359-116">Naming Resources</span></span>](../../../docs/standard/design-guidelines/naming-resources.md)  
+ <span data-ttu-id="41359-117">*Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*</span><span class="sxs-lookup"><span data-stu-id="41359-117">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- <span data-ttu-id="10931-118">*皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*</span><span class="sxs-lookup"><span data-stu-id="10931-118">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
+ <span data-ttu-id="41359-118">獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。</span><span class="sxs-lookup"><span data-stu-id="41359-118">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="10931-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="10931-119">See Also</span></span>  
- [<span data-ttu-id="10931-120">Framework 設計方針</span><span class="sxs-lookup"><span data-stu-id="10931-120">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a><span data-ttu-id="41359-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="41359-119">See also</span></span>
+
+- [<span data-ttu-id="41359-120">Framework 設計方針</span><span class="sxs-lookup"><span data-stu-id="41359-120">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)

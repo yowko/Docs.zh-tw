@@ -5,22 +5,22 @@ ms.assetid: 826219b4-3a16-45fc-832d-0cd7cbbd3b84
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 87f8f3cf296aeb30cd19c7579887ef94e0992ba7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43541686"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44032142"
 ---
-# <a name="ltsecuritygt-element-of-ltws2007federationhttpbindinggt"></a><span data-ttu-id="fb562-102">&lt;ws2007FederationHttpBinding&gt; 的 &lt;security&gt; 項目</span><span class="sxs-lookup"><span data-stu-id="fb562-102">&lt;security&gt; element of &lt;ws2007FederationHttpBinding&gt;</span></span>
-<span data-ttu-id="fb562-103">定義的安全性設定[ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)項目。</span><span class="sxs-lookup"><span data-stu-id="fb562-103">Defines the security settings of the [\<ws2007FederationHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) element.</span></span>  
+# <a name="ltsecuritygt-element-of-ltws2007federationhttpbindinggt"></a><span data-ttu-id="bfdfd-102">&lt;ws2007FederationHttpBinding&gt; 的 &lt;security&gt; 項目</span><span class="sxs-lookup"><span data-stu-id="bfdfd-102">&lt;security&gt; element of &lt;ws2007FederationHttpBinding&gt;</span></span>
+<span data-ttu-id="bfdfd-103">定義的安全性設定[ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)項目。</span><span class="sxs-lookup"><span data-stu-id="bfdfd-103">Defines the security settings of the [\<ws2007FederationHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) element.</span></span>  
   
- <span data-ttu-id="fb562-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="fb562-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="fb562-105">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="fb562-105">\<bindings></span></span>  
-<span data-ttu-id="fb562-106">\<ws2007FederationHttpBinding></span><span class="sxs-lookup"><span data-stu-id="fb562-106">\<ws2007FederationHttpBinding></span></span>  
-<span data-ttu-id="fb562-107">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="fb562-107">\<binding></span></span>  
-<span data-ttu-id="fb562-108">\<安全性 ></span><span class="sxs-lookup"><span data-stu-id="fb562-108">\<security></span></span>  
+ <span data-ttu-id="bfdfd-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="bfdfd-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="bfdfd-105">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="bfdfd-105">\<bindings></span></span>  
+<span data-ttu-id="bfdfd-106">\<ws2007FederationHttpBinding></span><span class="sxs-lookup"><span data-stu-id="bfdfd-106">\<ws2007FederationHttpBinding></span></span>  
+<span data-ttu-id="bfdfd-107">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="bfdfd-107">\<binding></span></span>  
+<span data-ttu-id="bfdfd-108">\<安全性 ></span><span class="sxs-lookup"><span data-stu-id="bfdfd-108">\<security></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fb562-109">語法</span><span class="sxs-lookup"><span data-stu-id="fb562-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bfdfd-109">語法</span><span class="sxs-lookup"><span data-stu-id="bfdfd-109">Syntax</span></span>  
   
 ```xml  
 <ws2007FederationBinding>  
@@ -37,44 +37,44 @@ ms.locfileid: "43541686"
 </ws2007FederationBinding>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="fb562-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="fb562-110">Attributes and Elements</span></span>  
- <span data-ttu-id="fb562-111">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="fb562-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="bfdfd-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="bfdfd-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="bfdfd-111">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="bfdfd-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="fb562-112">屬性</span><span class="sxs-lookup"><span data-stu-id="fb562-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="bfdfd-112">屬性</span><span class="sxs-lookup"><span data-stu-id="bfdfd-112">Attributes</span></span>  
   
-|<span data-ttu-id="fb562-113">屬性</span><span class="sxs-lookup"><span data-stu-id="fb562-113">Attribute</span></span>|<span data-ttu-id="fb562-114">描述</span><span class="sxs-lookup"><span data-stu-id="fb562-114">Description</span></span>|  
+|<span data-ttu-id="bfdfd-113">屬性</span><span class="sxs-lookup"><span data-stu-id="bfdfd-113">Attribute</span></span>|<span data-ttu-id="bfdfd-114">描述</span><span class="sxs-lookup"><span data-stu-id="bfdfd-114">Description</span></span>|  
 |---------------|-----------------|  
-|`mode`|<span data-ttu-id="fb562-115">選擇項。</span><span class="sxs-lookup"><span data-stu-id="fb562-115">Optional.</span></span> <span data-ttu-id="fb562-116">指定套用的安全性類型。</span><span class="sxs-lookup"><span data-stu-id="fb562-116">Specifies the type of security that is applied.</span></span> <span data-ttu-id="fb562-117">預設值是 `Message`。</span><span class="sxs-lookup"><span data-stu-id="fb562-117">The default value is `Message`.</span></span> <span data-ttu-id="fb562-118">此屬性的型別為 <xref:System.ServiceModel.WSFederationHttpSecurityMode>。</span><span class="sxs-lookup"><span data-stu-id="fb562-118">This attribute is of type <xref:System.ServiceModel.WSFederationHttpSecurityMode>.</span></span>|  
+|`mode`|<span data-ttu-id="bfdfd-115">選擇項。</span><span class="sxs-lookup"><span data-stu-id="bfdfd-115">Optional.</span></span> <span data-ttu-id="bfdfd-116">指定套用的安全性類型。</span><span class="sxs-lookup"><span data-stu-id="bfdfd-116">Specifies the type of security that is applied.</span></span> <span data-ttu-id="bfdfd-117">預設值是 `Message`。</span><span class="sxs-lookup"><span data-stu-id="bfdfd-117">The default value is `Message`.</span></span> <span data-ttu-id="bfdfd-118">此屬性的型別為 <xref:System.ServiceModel.WSFederationHttpSecurityMode>。</span><span class="sxs-lookup"><span data-stu-id="bfdfd-118">This attribute is of type <xref:System.ServiceModel.WSFederationHttpSecurityMode>.</span></span>|  
   
-## <a name="mode-attribute"></a><span data-ttu-id="fb562-119">mode 屬性</span><span class="sxs-lookup"><span data-stu-id="fb562-119">mode Attribute</span></span>  
+## <a name="mode-attribute"></a><span data-ttu-id="bfdfd-119">mode 屬性</span><span class="sxs-lookup"><span data-stu-id="bfdfd-119">mode Attribute</span></span>  
   
-|<span data-ttu-id="fb562-120">值</span><span class="sxs-lookup"><span data-stu-id="fb562-120">Value</span></span>|<span data-ttu-id="fb562-121">描述</span><span class="sxs-lookup"><span data-stu-id="fb562-121">Description</span></span>|  
+|<span data-ttu-id="bfdfd-120">值</span><span class="sxs-lookup"><span data-stu-id="bfdfd-120">Value</span></span>|<span data-ttu-id="bfdfd-121">描述</span><span class="sxs-lookup"><span data-stu-id="bfdfd-121">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="fb562-122">無</span><span class="sxs-lookup"><span data-stu-id="fb562-122">None</span></span>|<span data-ttu-id="fb562-123">傳輸期間的 SOAP 訊息是不安全的。</span><span class="sxs-lookup"><span data-stu-id="fb562-123">The SOAP message is not secure during transfer.</span></span>|  
-|<span data-ttu-id="fb562-124">訊息</span><span class="sxs-lookup"><span data-stu-id="fb562-124">Message</span></span>|<span data-ttu-id="fb562-125">完整性、機密性、伺服器驗證與用戶端驗證都可透過 SOAP 訊息安全性來提供。</span><span class="sxs-lookup"><span data-stu-id="fb562-125">Integrity, confidentiality, server authentication and client authentication are provided using SOAP message security.</span></span> <span data-ttu-id="fb562-126">根據預設，本文會經過加密與簽署。</span><span class="sxs-lookup"><span data-stu-id="fb562-126">By default, the body is encrypted and signed.</span></span> <span data-ttu-id="fb562-127">服務必須使用憑證來設定。</span><span class="sxs-lookup"><span data-stu-id="fb562-127">The service must be configured with a certificate.</span></span> <span data-ttu-id="fb562-128">用戶端驗證係以安全性權杖服務對用戶端發行的權杖為基礎。</span><span class="sxs-lookup"><span data-stu-id="fb562-128">Client authentication is based on the token issued to the client by a security token service.</span></span>|  
-|<span data-ttu-id="fb562-129">TransportWithMessageCredential</span><span class="sxs-lookup"><span data-stu-id="fb562-129">TransportWithMessageCredential</span></span>|<span data-ttu-id="fb562-130">完整性、機密性與伺服器驗證都是經由 HTTPS 來提供。</span><span class="sxs-lookup"><span data-stu-id="fb562-130">Integrity, confidentiality and server authentication are provided by HTTPS.</span></span> <span data-ttu-id="fb562-131">服務必須使用憑證來設定。</span><span class="sxs-lookup"><span data-stu-id="fb562-131">The service must be configured with a certificate.</span></span> <span data-ttu-id="fb562-132">用戶端驗證係透過 SOAP 訊息安全性方式提供，並以安全性權杖服務發行給用戶端之權杖為基礎。</span><span class="sxs-lookup"><span data-stu-id="fb562-132">Client authentication is provided by means of SOAP message security and is based on the token issued to the client by a security token service.</span></span>|  
+|<span data-ttu-id="bfdfd-122">無</span><span class="sxs-lookup"><span data-stu-id="bfdfd-122">None</span></span>|<span data-ttu-id="bfdfd-123">傳輸期間的 SOAP 訊息是不安全的。</span><span class="sxs-lookup"><span data-stu-id="bfdfd-123">The SOAP message is not secure during transfer.</span></span>|  
+|<span data-ttu-id="bfdfd-124">訊息</span><span class="sxs-lookup"><span data-stu-id="bfdfd-124">Message</span></span>|<span data-ttu-id="bfdfd-125">完整性、機密性、伺服器驗證與用戶端驗證都可透過 SOAP 訊息安全性來提供。</span><span class="sxs-lookup"><span data-stu-id="bfdfd-125">Integrity, confidentiality, server authentication and client authentication are provided using SOAP message security.</span></span> <span data-ttu-id="bfdfd-126">根據預設，本文會經過加密與簽署。</span><span class="sxs-lookup"><span data-stu-id="bfdfd-126">By default, the body is encrypted and signed.</span></span> <span data-ttu-id="bfdfd-127">服務必須使用憑證來設定。</span><span class="sxs-lookup"><span data-stu-id="bfdfd-127">The service must be configured with a certificate.</span></span> <span data-ttu-id="bfdfd-128">用戶端驗證係以安全性權杖服務對用戶端發行的權杖為基礎。</span><span class="sxs-lookup"><span data-stu-id="bfdfd-128">Client authentication is based on the token issued to the client by a security token service.</span></span>|  
+|<span data-ttu-id="bfdfd-129">TransportWithMessageCredential</span><span class="sxs-lookup"><span data-stu-id="bfdfd-129">TransportWithMessageCredential</span></span>|<span data-ttu-id="bfdfd-130">完整性、機密性與伺服器驗證都是經由 HTTPS 來提供。</span><span class="sxs-lookup"><span data-stu-id="bfdfd-130">Integrity, confidentiality and server authentication are provided by HTTPS.</span></span> <span data-ttu-id="bfdfd-131">服務必須使用憑證來設定。</span><span class="sxs-lookup"><span data-stu-id="bfdfd-131">The service must be configured with a certificate.</span></span> <span data-ttu-id="bfdfd-132">用戶端驗證係透過 SOAP 訊息安全性方式提供，並以安全性權杖服務發行給用戶端之權杖為基礎。</span><span class="sxs-lookup"><span data-stu-id="bfdfd-132">Client authentication is provided by means of SOAP message security and is based on the token issued to the client by a security token service.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="fb562-133">子元素</span><span class="sxs-lookup"><span data-stu-id="fb562-133">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="bfdfd-133">子元素</span><span class="sxs-lookup"><span data-stu-id="bfdfd-133">Child Elements</span></span>  
   
-|<span data-ttu-id="fb562-134">項目</span><span class="sxs-lookup"><span data-stu-id="fb562-134">Element</span></span>|<span data-ttu-id="fb562-135">描述</span><span class="sxs-lookup"><span data-stu-id="fb562-135">Description</span></span>|  
+|<span data-ttu-id="bfdfd-134">項目</span><span class="sxs-lookup"><span data-stu-id="bfdfd-134">Element</span></span>|<span data-ttu-id="bfdfd-135">描述</span><span class="sxs-lookup"><span data-stu-id="bfdfd-135">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="fb562-136">\<message></span><span class="sxs-lookup"><span data-stu-id="fb562-136">\<message></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-ws2007httpbinding.md)|<span data-ttu-id="fb562-137">定義訊息層級安全性的設定。</span><span class="sxs-lookup"><span data-stu-id="fb562-137">Defines the settings for the message-level security.</span></span> <span data-ttu-id="fb562-138">此項目的型別為 <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>。</span><span class="sxs-lookup"><span data-stu-id="fb562-138">This element is of type <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>.</span></span>|  
+|[<span data-ttu-id="bfdfd-136">\<message></span><span class="sxs-lookup"><span data-stu-id="bfdfd-136">\<message></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-ws2007httpbinding.md)|<span data-ttu-id="bfdfd-137">定義訊息層級安全性的設定。</span><span class="sxs-lookup"><span data-stu-id="bfdfd-137">Defines the settings for the message-level security.</span></span> <span data-ttu-id="bfdfd-138">此項目的型別為 <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>。</span><span class="sxs-lookup"><span data-stu-id="bfdfd-138">This element is of type <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="fb562-139">父項目</span><span class="sxs-lookup"><span data-stu-id="fb562-139">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="bfdfd-139">父項目</span><span class="sxs-lookup"><span data-stu-id="bfdfd-139">Parent Elements</span></span>  
   
-|<span data-ttu-id="fb562-140">項目</span><span class="sxs-lookup"><span data-stu-id="fb562-140">Element</span></span>|<span data-ttu-id="fb562-141">描述</span><span class="sxs-lookup"><span data-stu-id="fb562-141">Description</span></span>|  
+|<span data-ttu-id="bfdfd-140">項目</span><span class="sxs-lookup"><span data-stu-id="bfdfd-140">Element</span></span>|<span data-ttu-id="bfdfd-141">描述</span><span class="sxs-lookup"><span data-stu-id="bfdfd-141">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="fb562-142">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="fb562-142">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="fb562-143">定義的所有繫結功能[ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="fb562-143">Defines all binding capabilities of the [\<wsDualHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span></span>|  
+|[<span data-ttu-id="bfdfd-142">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="bfdfd-142">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="bfdfd-143">定義的所有繫結功能[ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="bfdfd-143">Defines all binding capabilities of the [\<wsDualHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="fb562-144">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fb562-144">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="bfdfd-144">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bfdfd-144">See Also</span></span>  
  <xref:System.ServiceModel.WSFederationHttpSecurity>  
  <xref:System.ServiceModel.WSFederationHttpBinding.Security%2A>  
  <xref:System.ServiceModel.Configuration.WSFederationHttpBindingElement.Security%2A>  
  <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>  
- [<span data-ttu-id="fb562-145">如何：建立 WSFederationHttpBinding</span><span class="sxs-lookup"><span data-stu-id="fb562-145">How to: Create a WSFederationHttpBinding</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
- [<span data-ttu-id="fb562-146">保護服務和用戶端的安全</span><span class="sxs-lookup"><span data-stu-id="fb562-146">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [<span data-ttu-id="fb562-147">選取認證類型</span><span class="sxs-lookup"><span data-stu-id="fb562-147">Selecting a Credential Type</span></span>](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
- [<span data-ttu-id="fb562-148">繫結</span><span class="sxs-lookup"><span data-stu-id="fb562-148">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
- [<span data-ttu-id="fb562-149">設定系統提供的繫結</span><span class="sxs-lookup"><span data-stu-id="fb562-149">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [<span data-ttu-id="fb562-150">使用繫結來設定 Windows Communication Foundation 服務和用戶端</span><span class="sxs-lookup"><span data-stu-id="fb562-150">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [<span data-ttu-id="fb562-151">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="fb562-151">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)
+ [<span data-ttu-id="bfdfd-145">如何：建立 WSFederationHttpBinding</span><span class="sxs-lookup"><span data-stu-id="bfdfd-145">How to: Create a WSFederationHttpBinding</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
+ [<span data-ttu-id="bfdfd-146">保護服務和用戶端的安全</span><span class="sxs-lookup"><span data-stu-id="bfdfd-146">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="bfdfd-147">選取認證類型</span><span class="sxs-lookup"><span data-stu-id="bfdfd-147">Selecting a Credential Type</span></span>](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
+ [<span data-ttu-id="bfdfd-148">繫結</span><span class="sxs-lookup"><span data-stu-id="bfdfd-148">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="bfdfd-149">設定系統提供的繫結</span><span class="sxs-lookup"><span data-stu-id="bfdfd-149">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="bfdfd-150">使用繫結來設定 Windows Communication Foundation 服務和用戶端</span><span class="sxs-lookup"><span data-stu-id="bfdfd-150">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="bfdfd-151">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="bfdfd-151">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)
