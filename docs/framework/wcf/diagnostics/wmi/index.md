@@ -3,11 +3,11 @@ title: 使用 Windows Management Instrumentation 進行診斷
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
 ms.openlocfilehash: b7c898f1af91f639939e5480687b5967bf57d246
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43534644"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856201"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>使用 Windows Management Instrumentation 進行診斷
 Windows Communication Foundation (WCF) 公開服務，以在透過 WCF Windows Management Instrumentation (WMI) 提供者的執行階段檢查的資料。  

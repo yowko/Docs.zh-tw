@@ -8,11 +8,11 @@ ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c05e27226a58086c806e8977ba50a55873d1167e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 09/05/2018
-ms.locfileid: "43735884"
+ms.locfileid: "43798178"
 ---
 # <a name="ltprefercominsteadofmanagedremotinggt-element"></a>&lt;PreferComInsteadOfManagedRemoting&gt;項目
 指定是否執行階段會使用 COM interop 而不是遠端處理的所有呼叫跨越應用程式定義域界限。  
@@ -28,7 +28,7 @@ ms.locfileid: "43735884"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -43,7 +43,7 @@ ms.locfileid: "43735884"
 |`false`|執行階段會使用遠端處理跨應用程式定義域界限。 這是預設值。|  
 |`true`|執行階段會跨應用程式定義域界限使用 COM interop。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  

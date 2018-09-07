@@ -3,11 +3,11 @@ title: 存取 OperationContext
 ms.date: 03/30/2017
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
 ms.openlocfilehash: 3c7ce1c9c37ee93b58a07376e0aeae045f0ca408
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43788840"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864296"
 ---
 # <a name="accessing-operationcontext"></a>存取 OperationContext
 這個範例會示範如何傳訊活動 (<xref:System.ServiceModel.Activities.Receive>並<xref:System.ServiceModel.Activities.Send>) 可以與自訂範圍活動用來存取<xref:System.ServiceModel.OperationContext.Current%2A>以及附加或擷取傳出或傳入訊息中的自訂訊息標頭。  

@@ -11,18 +11,18 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 52dcb71a033ba4c2943ccda6787bf4a4e41d53d3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43724200"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43798972"
 ---
 # <a name="ui-automation-control-types"></a>UI 自動化控制項類型
 **附註**這份文件適用於.NET Framework 開發人員想要使用 managed[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中定義的類別<xref:System.Windows.Automation>命名空間。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱 < [Windows Automation API： 使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  此章節包含支援中的控制項類型的相關資訊[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [UI 自動化控制項類型概觀](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
  [Button 控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-button-control-type.md)  
  [Calendar 控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-calendar-control-type.md)  

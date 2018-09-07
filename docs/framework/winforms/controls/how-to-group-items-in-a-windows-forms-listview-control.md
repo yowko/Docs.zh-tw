@@ -13,11 +13,11 @@ helpviewer_keywords:
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 610416a1-8da4-436c-af19-5f19e654769b
 ms.openlocfilehash: 2847b95694eefec524bee9c95b5de91fa5a03f5d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785567"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865705"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control"></a>如何：在 Windows Form ListView 控制項中群組項目
 使用群組功能的<xref:System.Windows.Forms.ListView>控制項，您可以在群組中顯示相關的項目集。 這些群組是在螢幕上分隔包含群組標題的水平群組標頭。 您可以使用<xref:System.Windows.Forms.ListView>群組，使導覽更容易的大型清單依字母順序，分組項目，依日期，或任何其他的邏輯群組。 下圖顯示一些分組的項目。  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], changing column order
 ms.assetid: 5e9ac3bc-b0f0-48cb-a3d5-b005af905395
 ms.openlocfilehash: f3b1ddd583f76ab135d13108f8c62775ab894c83
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43741029"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43880285"
 ---
 # <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control"></a>如何：變更 Windows Form DataGridView 控制項資料行的順序
 當您使用 <xref:System.Windows.Forms.DataGridView> 顯示來自資料來源的資料時，資料來源結構描述中的資料行有時不會以您想要的順序顯示。 您可以使用 <xref:System.Windows.Forms.DataGridViewColumn> 類別的 <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A> 屬性來變更資料行的顯示順序。  

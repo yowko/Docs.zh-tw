@@ -3,11 +3,11 @@ title: 外部 Ruleset 工具組
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
 ms.openlocfilehash: f418c71b39611e64afea168ed40418dbe981521a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43538666"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43803352"
 ---
 # <a name="external-ruleset-toolkit"></a>外部 Ruleset 工具組
 通常在工作流程應用程式內使用規則時，這些規則算是組件的一部分。 在某些案例中，您可能會想要將 RuleSet 與組件分開維護，讓它們不需要重新建置及部署工作流程組件便可加以更新。 這個範例可讓您用資料庫來管理及編輯 RuleSet，並可從執行階段的工作流程中存取這些 RuleSet。 這樣可讓執行中的工作流程執行個體自動納入 RuleSet 變更。  

@@ -7,11 +7,11 @@ ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: e0bed1e47302cc80a04498f39144177acdbc9ae6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43533183"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43871828"
 ---
 # <a name="securing-clients"></a>確保用戶端的安全
 在 Windows Communication Foundation (WCF) 中，服務說明用戶端的安全性需求。 也就是說，服務會指定使用哪一個安全性模式，以及用戶端是否必須提供認證。 因此，保護用戶端安全的程序便十分簡單，只要使用從服務 (如果已發行) 取得的中繼資料並建立用戶端即可。 中繼資料指定如何設定用戶端。 如果服務要求用戶端提供認證，則您必須取得符合要求的認證。 本主題將進一步探討此程序。 如需建立安全服務的詳細資訊，請參閱[Securing Services](../../../docs/framework/wcf/securing-services.md)。  

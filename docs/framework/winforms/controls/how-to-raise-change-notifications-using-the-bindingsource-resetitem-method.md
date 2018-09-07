@@ -13,11 +13,11 @@ helpviewer_keywords:
 - change notifications
 ms.assetid: ab8b4096-37ff-4e30-aabc-de79a2f2e972
 ms.openlocfilehash: cd2a15d5c3cbdf15f055196e63548a1240202479
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43787804"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43880261"
 ---
 # <a name="how-to-raise-change-notifications-using-the-bindingsource-resetitem-method"></a>如何：使用 BindingSource ResetItem 方法引發變更通知
 變更、加入或刪除項目時，控制項的某些資料來源並不會引發變更通知。 利用 <xref:System.Windows.Forms.BindingSource> 元件，您可以繫結至這類資料來源，並從您的程式碼引發變更通知。  

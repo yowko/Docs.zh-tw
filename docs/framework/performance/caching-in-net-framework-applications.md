@@ -8,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
 author: tdykstra
 ms.openlocfilehash: 4d9451f99b0253d0a4de6550b64fedd7fdfeda77
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43558030"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43862013"
 ---
 # <a name="caching-in-net-framework-applications"></a>.NET Framework 應用程式中的快取
 快取可讓您將資料儲存在記憶體中，以進行快速存取。 重新存取資料時，應用程式可以從快取中取得資料，而不是從原始來源進行擷取。 這可以改善效能和延展性。 此外，暫時無法使用資料來源時，快取可讓資料可用。  

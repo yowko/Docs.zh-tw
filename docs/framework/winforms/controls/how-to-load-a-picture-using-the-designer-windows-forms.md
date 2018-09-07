@@ -9,11 +9,11 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 4dc7b973-afb1-4276-8322-20825af96655
 ms.openlocfilehash: e01e5d1dc0fad8171e705e85debc2b15d6a506eb
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466530"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855955"
 ---
 # <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>如何：使用設計工具載入圖片 (Windows Form)
 使用 Windows Form<xref:System.Windows.Forms.PictureBox>控制項，您可以載入並設定表單上顯示一張圖片在設計階段<xref:System.Windows.Forms.PictureBox.Image%2A>屬性，以有效的圖片。 下表顯示可接受的檔案類型。  

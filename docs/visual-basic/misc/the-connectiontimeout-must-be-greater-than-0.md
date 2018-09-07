@@ -5,11 +5,11 @@ f1_keywords:
 - vbrNetwork_BadConnectionTimeout
 ms.assetid: 15ac09a7-47f0-44f3-9e84-5bd10bd07450
 ms.openlocfilehash: d38b2f154ccea066c52e6a7ae067d319ea599ee7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43722966"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43803830"
 ---
 # <a name="the-connectiontimeout-must-be-greater-than-0"></a>ConnectionTimeout 必須大於 0
 當上傳和下載檔案與[My.Computer.Network](xref:Microsoft.VisualBasic.Devices.Network)，您必須指定`connectionTimeout`大於`0`。  

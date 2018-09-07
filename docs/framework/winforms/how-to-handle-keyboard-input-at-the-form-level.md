@@ -11,11 +11,11 @@ helpviewer_keywords:
 - keyboards [Windows Forms], form-level input
 ms.assetid: d7f8b390-dc91-42d2-ae0f-2ffa388127ad
 ms.openlocfilehash: a75c4f116b32499f9ba33dd863f2a5b6952a3e24
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43535855"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43797878"
 ---
 # <a name="how-to-handle-keyboard-input-at-the-form-level"></a>如何：處理表單層級的鍵盤輸入
 在訊息到達控制項之前，Windows Form 提供在表單層級處理鍵盤訊息的能力。 本主題將示範如何完成這些工作。  

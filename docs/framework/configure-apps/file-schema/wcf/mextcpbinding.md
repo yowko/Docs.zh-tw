@@ -3,11 +3,11 @@ title: '&lt;mexTcpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 01baba8d-d784-4255-9ea2-7afff1482bf0
 ms.openlocfilehash: 8c2b149f983c0674b51c2242600a451ff71fc9b5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43540486"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855942"
 ---
 # <a name="ltmextcpbindinggt"></a>&lt;mexTcpBinding&gt;
 指定用於 TCP 上 WS-MetadataExchange (WS-MEX) 訊息交換之繫結的設定。  

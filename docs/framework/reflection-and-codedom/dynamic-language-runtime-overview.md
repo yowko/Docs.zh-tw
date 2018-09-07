@@ -10,11 +10,11 @@ ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5a4645efc9276429cbdb0812f1ca501c89ea5dbb
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855148"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44060684"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Dynamic Language Runtime 概觀
 「動態語言執行階段」(DLR) 是在 Common Language Runtime (CLR) 中新增一組動態語言服務的執行階段環境。 DLR 可讓您輕鬆地開發動態語言以便在 .NET Framework 上執行，以及將動態功能新增至靜態類型語言。  

@@ -9,18 +9,18 @@ ms.assetid: bffbae08-fe2a-42fd-ab84-f37187518916
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: bfe7fb8ab64f148d8ca5af0e419ca60690a1acce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bfe2e62e98dd206d85e87d8885a1c58786a420fc
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408284"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855461"
 ---
 # <a name="implementing-the-ui-automation-griditem-control-pattern"></a>實作 UI 自動化 GridItem 控制項模式
 > [!NOTE]
->  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱 < [Windows Automation API： 使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
- 本主題將介紹實作的方針和慣例<xref:System.Windows.Automation.Provider.IGridItemProvider>，包括屬性的相關資訊。 其他參考的連結會在概觀的結尾列出。  
+ 本主題將介紹的實作方針和慣例<xref:System.Windows.Automation.Provider.IGridItemProvider>，包括內容的相關資訊。 其他參考的連結會在概觀的結尾列出。  
   
  <xref:System.Windows.Automation.GridItemPattern>控制項模式用以支援實作容器的個別子控制項<xref:System.Windows.Automation.Provider.IGridProvider>。 如需實作此控制項模式的控制項範例，請參閱 [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)。  
   
@@ -30,11 +30,11 @@ ms.locfileid: "33408284"
   
 -   方格座標是以零起始，左上資料格座標為 (0, 0)。  
   
--   合併資料格將會回報其<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>和<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>屬性根據其基礎的錨定儲存格的使用者介面自動化提供者所定義。 通常，它會是最上層或最左邊的資料列或資料行。  
+-   合併的資料格將會報告它們<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>和<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>屬性根據其基礎的錨定儲存格所定義的使用者介面自動化提供者。 通常，它會是最上層或最左邊的資料列或資料行。  
   
 -   <xref:System.Windows.Automation.Provider.IGridItemProvider> 不提供例如合併或分割資料格方格的主動操作。  
   
--   控制可實作<xref:System.Windows.Automation.Provider.IGridItemProvider>通常可周遊 （也就是使用者介面自動化用戶端可以移至相鄰的控制項） 使用鍵盤。  
+-   控制實作<xref:System.Windows.Automation.Provider.IGridItemProvider>通常可周遊 （也就是使用者介面自動化用戶端可以移至相鄰的控制項） 使用鍵盤。  
   
 <a name="Required_Members_for_IGridItemProvider"></a>   
 ## <a name="required-members-for-igriditemprovider"></a>IGridItemProvider 的必要成員  

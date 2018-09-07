@@ -18,11 +18,11 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
 ms.openlocfilehash: 5bf1a0e1d4d8f620f83aab50aa50009a0f6a6cf4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43561440"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855968"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF 應用程式資源、內容和資料檔案
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 應用程式經常依賴檔案包含非可執行檔的資料，例如[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]、 影像、 視訊和音訊。 Windows Presentation Foundation (WPF) 提供設定、 用來識別，以及使用這些類型的資料檔案，稱為應用程式資料檔案的特殊支援。 這項支援是以一組特定的應用程式資料檔案類型為中心，包括：  

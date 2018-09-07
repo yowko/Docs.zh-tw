@@ -8,11 +8,11 @@ helpviewer_keywords:
 - RichTextBox control [WPF], how-to topics
 ms.assetid: 36e9f98e-f968-42d8-adb6-9e78c814aec0
 ms.openlocfilehash: 8542076ca9552ae0d5ace74f1a287f5cd39aff21
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43541059"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864325"
 ---
 # <a name="richtextbox-how-to-topics"></a>RichTextBox HOW TO 主題
 本節提供範例，示範如何完成一般工作，使用<xref:System.Windows.Controls.RichTextBox>控制項。  

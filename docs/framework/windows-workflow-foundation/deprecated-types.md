@@ -3,11 +3,11 @@ title: Windows Workflow Foundation 中被取代的類型
 ms.date: 03/30/2017
 ms.assetid: 4aebe928-a964-4c1c-abf7-0dbbd3604b13
 ms.openlocfilehash: b25be26d4c0ad6c423b011cd7cad24a8728333f5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43658895"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857637"
 ---
 # <a name="deprecated-types-in-windows-workflow-foundation"></a>Windows Workflow Foundation 中被取代的類型
 在 .NET 4 中，工作流程小組在 <xref:System.Activities> 命名空間中發行了全新的工作流程引擎。 .NET 4.5 Beta 版本中，我們要標記"WF 3"中類型的大部分<xref:System.Workflow.Activities>， <xref:System.Workflow.ComponentModel>，和<xref:System.Workflow.Runtime>為已過時的命名空間。  

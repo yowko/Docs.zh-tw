@@ -11,11 +11,11 @@ helpviewer_keywords:
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
 ms.openlocfilehash: a29a645a05f0d3b0e8611dd722c5018f295f3070
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43565342"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856188"
 ---
 # <a name="xclass-directive"></a>x:Class 指示詞
 設定要加入標記和程式碼後置的部分類別的 XAML 標記編譯。 在不同的程式碼檔案中定義的程式碼的部分類別[!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]語言，而標記的部分類別通常是由 XAML 編譯期間產生的程式碼。  

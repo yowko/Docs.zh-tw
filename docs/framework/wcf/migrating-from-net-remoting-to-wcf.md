@@ -3,11 +3,11 @@ title: 從 .NET 遠端處理移轉到 WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
 ms.openlocfilehash: e260ecaf422b5654364143b1fc529112b5ea0656
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43659728"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857384"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>從 .NET 遠端處理移轉到 WCF
 此文章說明如何將使用 .NET 遠端處理的應用程式移轉為使用 Windows Communication Foundation (WCF)。 此文章會先比較這這些產品的類似概念，再說明如何在 WCF 中完成幾個常見的遠端處理案例。  

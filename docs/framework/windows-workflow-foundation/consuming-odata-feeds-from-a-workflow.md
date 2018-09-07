@@ -3,11 +3,11 @@ title: 從流程中使用 OData 摘要
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
 ms.openlocfilehash: a7e2a0658294681b154b11f48563ebc562c47210
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785514"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44064146"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>從流程中使用 OData 摘要
 

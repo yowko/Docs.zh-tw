@@ -3,11 +3,11 @@ title: '&lt;netPeerTcpBinding&gt; 的 &lt;transport&gt;'
 ms.date: 03/30/2017
 ms.assetid: c44d86d2-1160-44d7-9c7a-297b12eccc7f
 ms.openlocfilehash: 2b89ae090d24ff6aad1aae1b39a0a18961bd2537
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43735315"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869775"
 ---
 # <a name="lttransportgt-of-ltnetpeertcpbindinggt"></a>&lt;netPeerTcpBinding&gt; 的 &lt;transport&gt;
 使用時，指定傳輸層級安全性設定[ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)。  
@@ -47,7 +47,7 @@ ms.locfileid: "43735315"
 |憑證|對等通道傳輸的驗證作業需要 X509 憑證。|  
 |密碼|對等通道傳輸的驗證作業需要正確的密碼。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無  
   
 ### <a name="parent-elements"></a>父項目  

@@ -13,11 +13,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 4d39dc28082fbed932a60228ac216f2f700c2e9f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43734703"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43860178"
 ---
 # <a name="ltstartupgt-element"></a>&lt;啟動&gt;項目
 指定 common language runtime 的啟動資訊。  
@@ -33,7 +33,7 @@ ms.locfileid: "43734703"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -48,7 +48,7 @@ ms.locfileid: "43734703"
 |`true`|啟用[!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)]執行階段啟用原則，針對所選的執行階段，也就是繫結舊版執行階段啟用技術 (例如[CorBindToRuntimeEx 函式](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)) 至執行階段從組態檔，而不是選擇在 CLR 2.0 版將達到其上限。 因此，如果從組態檔中選擇 CLR 版本 4 或更新版本，則建立與舊版.NET Framework 的混合模式組件會載入與所選的 CLR 版本。 將此值設定防止 CLR 1.1 版或 CLR 2.0 版載入到相同的程序，並有效地停用內含式並排顯示功能。|  
 |`false`|使用預設的啟用原則，如[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]和更新版本中，也就是允許舊版執行階段載入處理序中的 CLR 1.1 或 2.0 版的啟用技術。 將此值可防止混合模式組件載入到.NET Framework 4 或更新版本，除非它們建置在.NET Framework 4 或更新版本。 預設值為這個值。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
