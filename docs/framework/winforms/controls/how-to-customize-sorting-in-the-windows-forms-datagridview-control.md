@@ -1,5 +1,5 @@
 ---
-title: 如何：自訂 Windows Form DataGridView 控制項的排序
+title: 如何：自訂 Windows Forms DataGridView 控制項的排序
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - data grids [Windows Forms], customizing sorting
 ms.assetid: 92fb5c14-afab-4cf5-a97e-924fd9cb99f5
 ms.openlocfilehash: 34a92af246e1145e8d0d1d6874b2d64d7dee7846
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43749479"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44068335"
 ---
-# <a name="how-to-customize-sorting-in-the-windows-forms-datagridview-control"></a>如何：自訂 Windows Form DataGridView 控制項的排序
+# <a name="how-to-customize-sorting-in-the-windows-forms-datagridview-control"></a>如何：自訂 Windows Forms DataGridView 控制項的排序
 <xref:System.Windows.Forms.DataGridView> 控制項提供自動排序，但是根據您的需求，您可能需要自訂排序作業。 例如，您可以使用程式設計排序建立替代的使用者介面 (UI)。 或者為了在排序時獲得更大的彈性，您可以處理 <xref:System.Windows.Forms.DataGridView.SortCompare> 事件或呼叫 <xref:System.Windows.Forms.DataGridView.Sort%2A> 方法的 `Sort(IComparer)` 多載，例如排序多個資料行。  
   
  下列程式碼範例示範自訂排序的三種方法。 如需詳細資訊，請參閱 [Windows Forms DataGridView 控制項中的資料行排序模式](../../../../docs/framework/winforms/controls/column-sort-modes-in-the-windows-forms-datagridview-control.md)。  

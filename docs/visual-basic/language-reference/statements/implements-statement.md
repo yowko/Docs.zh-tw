@@ -10,11 +10,11 @@ helpviewer_keywords:
 - interface implementation [Visual Basic], Implements statement
 ms.assetid: 1fafb83f-f55a-4215-8ea9-681e8622613d
 ms.openlocfilehash: 805813506b957afb326c71ee4bbb15837726e4e5
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43739203"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44076315"
 ---
 # <a name="implements-statement"></a>Implements 陳述式
 指定一個或多個介面，或介面成員必須實作在類別中出現的結構定義。  
@@ -29,10 +29,10 @@ Implements interfacename.interfacemember [, ...]
   
 ## <a name="parts"></a>組件  
  `interfacename`  
- 必要項。 其屬性、 程序和事件會由對應的成員，在類別或結構實作介面。  
+ 必要。 其屬性、 程序和事件會由對應的成員，在類別或結構實作介面。  
   
  `interfacemember`  
- 必要項。 目前正在實作介面成員。  
+ 必要。 目前正在實作介面成員。  
   
 ## <a name="remarks"></a>備註  
  介面是集合的原型代表的成員 （屬性、 程序和事件） 封裝的介面。 介面包含宣告的成員;類別和結構實作這些成員。 如需詳細資訊，請參閱[介面](../../../visual-basic/programming-guide/language-features/interfaces/index.md)。  

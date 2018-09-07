@@ -14,11 +14,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
 ms.openlocfilehash: 09019f24248985c0a1057873f0226ee69a30ca9d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43805100"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084688"
 ---
 # <a name="walkthrough-running-an-operation-in-the-background"></a>逐步解說：在背景執行作業
 如果您有要花費較長時間才能完成的作業，但您不想導致使用者介面發生延遲，就可以使用 <xref:System.ComponentModel.BackgroundWorker> 類別在另一個執行緒上執行該作業。  
@@ -32,7 +32,7 @@ ms.locfileid: "43805100"
   
 1.  與您在 Windows Form 設計工具中的表單，將兩個<xref:System.Windows.Forms.Button>控制項從**工具箱**到表單，並再把`Name`和<xref:System.Windows.Forms.Control.Text%2A>根據下表按鈕的屬性。  
   
-    |按鈕|名稱|Text|  
+    |按鈕|名稱|文字|  
     |------------|----------|----------|  
     |`button1`|`startBtn`|**Start**|  
     |`button2`|`cancelBtn`|**取消**|  

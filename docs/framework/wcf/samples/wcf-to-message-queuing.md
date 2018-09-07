@@ -3,11 +3,11 @@ title: Windows Communication Foundation 至訊息佇列
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
 ms.openlocfilehash: ea0723d178b37b1ff2581981f8f49a6953c913cc
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777518"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44069180"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation 至訊息佇列
 這個範例會示範 Windows Communication Foundation (WCF) 應用程式如何傳送訊息至訊息佇列 (MSMQ) 應用程式。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。 服務與用戶端不需要在相同時間執行。  
@@ -74,7 +74,7 @@ public static void ProcessOrder(Object source,
 > [!NOTE]
 >  佇列名稱會使用點 (.) 來代表本機電腦，並在其路徑中使用反斜線分隔符號。  
   
- 用戶端會建立採購單，然後在交易範圍內提交採購單，如下列範例程式碼所示。  
+ 用戶端會建立採購單，然後在異動範圍內提交採購單，如下列範例程式碼所示。  
 
 ```csharp
 // Create the purchase order  

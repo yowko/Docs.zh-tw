@@ -11,11 +11,11 @@ helpviewer_keywords:
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
 ms.openlocfilehash: 1b34b3369e5a045f45251d3285f10bf74b6f0d33
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43778077"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44080848"
 ---
 # <a name="data-binding-overview"></a>資料繫結概觀
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 資料繫結在資料的展示和互動上，提供應用程式簡單而一致的方式。 項目可以和各種資料來源的資料繫結，資料的形式可以是 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 物件和 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]。 <xref:System.Windows.Controls.ContentControl>這類的 s<xref:System.Windows.Controls.Button>並<xref:System.Windows.Controls.ItemsControl>這類的 s<xref:System.Windows.Controls.ListBox>和<xref:System.Windows.Controls.ListView>有內建的功能，可讓彈性的樣式，單一資料項目的集合。 您可以在資料上方產生排序、篩選和群組檢視。  
@@ -256,7 +256,7 @@ ms.locfileid: "43778077"
   
  下表顯示哪些檢視資料類型會建立為預設集合檢視，或藉由<xref:System.Windows.Data.CollectionViewSource>根據來源集合型別。  
   
-|來源集合型別|集合檢視型別|備註|  
+|來源集合型別|集合檢視型別|注意|  
 |----------------------------|--------------------------|-----------|  
 |<xref:System.Collections.IEnumerable>|根據內部型別 <xref:System.Windows.Data.CollectionView>|無法群組項目。|  
 |<xref:System.Collections.IList>|<xref:System.Windows.Data.ListCollectionView>|最快。|  

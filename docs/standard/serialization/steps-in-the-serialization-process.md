@@ -5,12 +5,12 @@ helpviewer_keywords:
 - binary serialization, steps
 - serialization, steps
 ms.assetid: 4bcbc883-2a91-418f-b968-6c86a25e9737
-ms.openlocfilehash: b44b3b0539237c0f0d0a4af877e8955c6f612003
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef81ecc7ca177fa9360f53a6b66015412d282065
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581816"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084907"
 ---
 # <a name="steps-in-the-serialization-process"></a>序列化程序中的步驟
 在[格式子](xref:System.Runtime.Serialization.Formatter)上呼叫 <xref:System.Runtime.Serialization.Formatter.Serialize*> 方法時，物件序列化會遵循下列規則順序繼續進行：
@@ -25,6 +25,7 @@ ms.locfileid: "33581816"
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
   
-## <a name="see-also"></a>另請參閱  
- [二進位序列化](binary-serialization.md)  
- [XML 和 SOAP 序列化](xml-and-soap-serialization.md)
+## <a name="see-also"></a>另請參閱
+
+- [二進位序列化](binary-serialization.md)  
+- [XML 和 SOAP 序列化](xml-and-soap-serialization.md)

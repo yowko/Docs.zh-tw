@@ -1,15 +1,15 @@
 ---
-title: 以統計方式解析的類型參數 (F#)
+title: 以統計方式解析的型別參數 (F#)
 description: '了解如何使用 F # 以統計方式解析的型別參數，它會取代在編譯時期而不是在執行階段的實際型別。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 747917fef2746dcbf363ef4b717ace5e47229800
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777860"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44080237"
 ---
-# <a name="statically-resolved-type-parameters"></a>以統計方式解析的類型參數
+# <a name="statically-resolved-type-parameters"></a>以統計方式解析的型別參數
 
 A*以統計方式解析的型別參數*是型別參數，在編譯時期而不是在執行階段取代實際的型別。 它們前面附加的插入號 (^) 符號。
 

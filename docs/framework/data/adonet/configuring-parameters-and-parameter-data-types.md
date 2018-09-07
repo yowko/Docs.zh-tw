@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
 ms.openlocfilehash: 7bb68a7d08d983e93119804db6c1f5a01cd047c9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43659385"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44081271"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>設定參數和參數資料類型
 命令物件會使用參數將值傳遞至 SQL 陳述式或預存程序 (Stored Procedure)，以提供型別檢查及驗證。 與命令文字不同的是，參數輸入會被視為常值 (Literal)，而非可執行程式碼。 這有助於防衛「SQL 插入式」攻擊，在此類攻擊中，攻擊者會將危害伺服器安全的命令插入 SQL 陳述式中。  
