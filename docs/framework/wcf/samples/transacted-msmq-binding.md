@@ -3,11 +3,11 @@ title: 交易 MSMQ 繫結
 ms.date: 03/30/2017
 ms.assetid: 71f5cb8d-f1df-4e1e-b8a2-98e734a75c37
 ms.openlocfilehash: 381304bcef40245bac882a4fe4ae18a6998665cf
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43875719"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085088"
 ---
 # <a name="transacted-msmq-binding"></a>交易 MSMQ 繫結
 這個範例會示範如何使用訊息佇列 (MSMQ) 執行交易佇列通訊。  

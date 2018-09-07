@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic], referencing assemblies
 - assemblies [Visual Basic], references
 ms.assetid: 38149bd4-0a6f-4b31-b5f8-94a8c33f1600
-ms.openlocfilehash: 9e31d22cd7502ffd405af23bd1fabe8685190221
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 89d360e5caa3cdb0dd1ecb985ea7ba727e5a6d9d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518122"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44080149"
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a>參考和 Imports 陳述式 (Visual Basic)
 您可以對外部物件可以使用您的專案選擇**加入參考**命令**專案**功能表。 在 Visual Basic 中的參考可以指向組件，就像型別程式庫，但包含更多資訊。  
@@ -48,11 +48,11 @@ ms.locfileid: "43518122"
   
  如果`Imports`陳述式不包含別名名稱，匯入的命名空間內定義的項目可用在不需完整的模組。 如果指定的別名名稱，則它必須用作辨識符號包含在該命名空間的名稱。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:Microsoft.VisualBasic.ControlChars>  
- <xref:Microsoft.VisualBasic>  
-   
- [在 Visual Basic 中的命名空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
- [組件和全域組件快取](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [如何：使用命令列建立和使用組件](https://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)  
- [Imports 陳述式 (.NET 命名空間和類型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:Microsoft.VisualBasic.ControlChars>
+- <xref:Microsoft.VisualBasic>
+- [在 Visual Basic 中的命名空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
+- [組件和全域組件快取](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+- [如何：使用命令列建立和使用組件](../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)  
+- [Imports 陳述式 (.NET 命名空間和類型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)

@@ -15,11 +15,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a02c26b72fc7039a5050ee369043f081c32cd7ec
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43869976"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087494"
 ---
 # <a name="ilcodekind-enumeration"></a>ILCodeKind 列舉
 [在 .NET Framework 4.5.2 及更新版本中支援]  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - PrintForm component [Visual Basic]
 ms.assetid: 03de98b8-b54c-4764-91d7-83c64e974750
 ms.openlocfilehash: 879d31c5a572689d84af6b2e46f3d33e1a8841c8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777843"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44079216"
 ---
 # <a name="printform-component-visual-basic"></a>PrintForm 元件 (Visual Basic)
 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> Visual basic 中的元件可讓您在執行階段列印 Windows Form 的影像。 其行為取代了舊版 Visual Basic 中 `PrintForm` 方法的行為。  

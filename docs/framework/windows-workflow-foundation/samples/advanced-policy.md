@@ -3,11 +3,11 @@ title: 進階原則
 ms.date: 03/30/2017
 ms.assetid: 75a22c88-5e54-4ae8-84cb-fbb22a612f0a
 ms.openlocfilehash: becdc28affd877239474d6f0f007a480297bccb8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43672836"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44083786"
 ---
 # <a name="advanced-policy"></a>進階原則
 這個範例會延續簡單原則範例。 除了簡單原則範例的住家折扣和商務折扣規則外，還新增數個規則。  

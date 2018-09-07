@@ -3,11 +3,11 @@ title: 常值 (F#)
 description: '深入了解 F # 程式設計語言中的常值類型。'
 ms.date: 05/16/2016
 ms.openlocfilehash: e6d34acd928edce8447c793105b08085ab0757b9
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44035774"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087621"
 ---
 # <a name="literals"></a>常值
 

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], ToolStripContainer
 ms.assetid: 378fa5b4-38e1-46f4-8e5c-d0c19dcd0200
 ms.openlocfilehash: eb05627925534820544edc15e1fe06bf57f0ae84
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43740958"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087173"
 ---
 # <a name="toolstripcontainer-control"></a>ToolStripContainer 控制項
 <xref:System.Windows.Forms.ToolStrip> 控制項使用 <xref:System.Windows.Forms.ToolStripContainer> 來進行內建浮動定位 (共用停駐時工具區域內的水平或垂直空間)。  
   
- 本節中的主題描述您可以用來將 <xref:System.Windows.Forms.ToolStripContainer> 功能建置在應用程式中的概念和技術。  
+ 本節中的主題說明您可以用來將 <xref:System.Windows.Forms.ToolStripContainer> 功能建置在應用程式中的概念和技術。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [ToolStripContainer 控制項概觀](../../../../docs/framework/winforms/controls/toolstripcontainer-control-overview.md)  
  提供描述 Windows Form <xref:System.Windows.Forms.ToolStripContainer> 控制項的用途和主要概念的主題。  
   
