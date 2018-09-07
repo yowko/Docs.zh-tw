@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
 ms.openlocfilehash: 7095784c2c9e2dc3c0ebafe84b89f9657321e1c5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43558887"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44060511"
 ---
 # <a name="basic-wcf-programming"></a>基本 WCF 程式設計
 此章節提供建立 Windows Communication Foundation (WCF) 應用程式基本概念。  

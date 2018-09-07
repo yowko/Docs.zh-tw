@@ -2,25 +2,25 @@
 title: 參數和引數 (F#)
 description: '深入了解 F # 語言支援對定義參數，以及將引數傳遞至函式、 方法和屬性。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 9744339110314e4e6b3c3cf8d49b1c988bc25e3c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a3418ec814e0419d08758cf035ecc0f402b5db1a
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43471977"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44062633"
 ---
 # <a name="parameters-and-arguments"></a>參數和引數
 
 本主題描述針對定義參數，以及將引數傳遞至函式、 方法和屬性的語言支援。 它包含如何傳遞的參考，以及如何定義和使用方法可接受可變數目的引數的相關資訊。
 
-
 ## <a name="parameters-and-arguments"></a>參數和引數
+
 詞彙*參數*用來描述應提供的值的名稱。 詞彙*引數*用於提供每個參數的值。
 
 在 tuple、 局部調用的形式，或兩者的一些組合，可以指定參數。 您可以使用明確的參數名稱傳遞引數。 方法的參數可以指定為選擇性，並指定預設值。
 
-
 ## <a name="parameter-patterns"></a>參數模式
+
 提供給函式和方法的參數在一般情況下，是以空格分隔的模式。 這表示，基本上，任何模式中所述[比對運算式](match-expressions.md)可用參數清單中的函式或成員。
 
 方法通常會使用傳遞引數的 tuple 形式。 這也可達到更清楚的結果從其他.NET 語言的觀點來看，因為 tuple 形式符合.NET 方法中傳遞引數的方式。
@@ -90,6 +90,7 @@ let angle (Polar(_, theta)) = theta
 有未完成的比對的模式使用適合快速建立原型和其他暫存的用途。 編譯器會發出這類程式碼的警告。 這種模式無法涵蓋所有可能的輸入的一般情況下，因此不適合元件 Api。
 
 ## <a name="named-arguments"></a>具名引數
+
 方法的引數可以指定以逗號分隔的引數清單中的位置，或可以將它們傳遞至方法明確地提供的名稱，後面接著等號和要傳入的值。 如果指定藉由提供名稱，它們可以出現在宣告中所使用的不同的順序。
 
 具名引數可讓程式碼更容易讀取和可調整某些類型的 API，例如重新排列方法參數中的變更。
@@ -107,6 +108,7 @@ let angle (Polar(_, theta)) = theta
 如需詳細資訊，請參閱 <<c0> [ 建構函式 （F #）](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05)。
 
 ## <a name="optional-parameters"></a>選擇性參數
+
 您可以使用參數名稱前面的問號，以指定方法的選擇性參數。 選擇性參數會被解譯為 F # 選項類型，因此您可以按照一般方式，查詢選項類型，藉由查詢`match`運算式具有`Some`和`None`。 只有在成員，使用所建立的函式上不允許選擇性參數`let`繫結。
 
 您也可以使用函式`defaultArg`，可設定預設值是選擇性的引數。 `defaultArg`函數接受選擇性的參數做為第一個引數和預設值為第二個。
@@ -124,6 +126,7 @@ Baud Rate: 300 Duplex: Half Parity: true
 ```
 
 ## <a name="passing-by-reference"></a>傳址方式傳遞
+
 傳址方式傳遞 F # 值牽涉到`byref`關鍵字，指定參數是實際上傳址方式傳遞值的指標。 任何值傳遞至方法`byref`引數必須是`mutable`。
 
 因為參數是指標，且值是可變動，仍會保留值的任何變更之後執行的函式。
@@ -139,6 +142,7 @@ Baud Rate: 300 Duplex: Half Parity: true
 [!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3810.fs)]
 
 ## <a name="parameter-arrays"></a>參數陣列
+
 偶爾也會需要定義任意數目的異質的型別參數的函式。 它不會實際建立所有可能多載的方法來處理所有可用的類型。 .NET 實作提供這類方法，透過參數陣列功能的支援。 採用在其簽章的參數陣列的方法可供任意數目的參數使用。 參數會放入陣列。 陣列元素的類型會決定可以傳遞至函式的參數型別。 如果您定義的參數陣列`System.Object`做為項目類型，則用戶端程式碼可以傳遞任何類型的值。
 
 在 F # 中，參數陣列只能在方法中定義。 它們不能在獨立函式或模組中定義的函式。
@@ -162,4 +166,5 @@ true
 ```
 
 ## <a name="see-also"></a>另請參閱
-[成員](members/index.md)
+
+- [成員](members/index.md)

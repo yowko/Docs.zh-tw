@@ -12,12 +12,12 @@ api_location:
 ms.assetid: dcc72283-caed-49ee-b45d-ccaf94e97129
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a712414163446606cbc93154bc821d3b1166fe8f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 8935a8c282bbe812ad76ac6d4228c38ab12626a4
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43800082"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44059647"
 ---
 # <a name="windowsruntimestreamextensionsasrandomaccessstreamsystemiostream-method"></a>WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream) 方法
 
@@ -76,5 +76,5 @@ A[!INCLUDE[wrt](../../../includes/wrt-md.md)]隨機存取資料流，表示已�
 
 ## <a name="see-also"></a>另請參閱
 
-[System.io.windowsruntimestreamextensions （英文)](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions(v=vs.110).aspx)  
-[操作說明：在 .NET Framework 資料流與 Windows 執行階段資料流之間轉換](../io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)  
+-[System.io.windowsruntimestreamextensions （英文)](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions(v=vs.110).aspx)
+-[How to:.NET Framework 資料流與 Windows 執行階段資料流之間轉換](../io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)

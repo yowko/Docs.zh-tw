@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 3d830bcd-32b4-4f26-9287-d58a071452c6
 ms.openlocfilehash: eb9d7cd8e62a73f49fd2b0f2fc2572b01109553b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43723671"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44070539"
 ---
 # <a name="how-to-enable-access-to-the-data-service-wcf-data-services"></a>HOW TO：啟用資料服務的存取 (WCF Data Services)
 在 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 中，您必須明確授與資料服務所公開之資源的存取權。 這表示當您建立新的資料服務之後，您仍然必須明確提供個別資源的存取權當做實體集。 本主題說明如何啟用讀取和寫入存取權五個實體集中當您完成時建立的 Northwind 資料服務[快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。 因為 <xref:System.Data.Services.EntitySetRights> 列舉的定義方式是透過使用 <xref:System.FlagsAttribute>，所以您可以使用邏輯 OR 運算子為單一實體集指定多個權限。  

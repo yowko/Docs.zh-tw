@@ -12,11 +12,11 @@ helpviewer_keywords:
 - error handling [Windows Forms], data entry
 ms.assetid: 9004e72f-fdec-4264-a37d-2c99764efc13
 ms.openlocfilehash: 17aff7073af336c0f32effc663eae5f11c194df2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43742789"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44067496"
 ---
 # <a name="how-to-handle-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>如何：處理 Windows Form DataGridView 控制項中的資料輸入期間所發生的錯誤
 下列程式碼範例示範如何使用 <xref:System.Windows.Forms.DataGridView> 控制項，將資料輸入錯誤回報給使用者。  

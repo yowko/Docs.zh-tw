@@ -6,11 +6,11 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
 ms.openlocfilehash: 685c68967f69e8933ff3dd2cd062e0893c7e2da6
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43884467"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44076806"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>逐步解說：當地語系化混合應用程式
 

@@ -1,23 +1,21 @@
 ---
 title: 詳細語法 (F#)
-description: '了解 F # 程式語言中的詳細資訊和輕量型語法之間的差異。'
+description: '了解 F # 程式設計語言中的詳細資訊和輕量型語法之間的差異。'
 ms.date: 05/16/2016
-ms.openlocfilehash: b0bed66b4a76c5ab11e6c9e7aaf695f864e74ca0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4f2354738da4692cb444e5e7dd9531d80d26664
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563780"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44063114"
 ---
 # <a name="verbose-syntax"></a>詳細語法
 
-有兩種形式的語法適用於在 F # 語言中的許多建構：*詳細語法*和*輕量型語法*。 詳細語法不常用，但較不容易縮排的優點。 輕量型語法為較短，並使用縮排訊號的開頭和結尾結構，而不是其他關鍵字喜歡`begin`， `end`， `in`，依此類推。 預設語法是輕量型語法。 本主題描述適用於 F # 建構語法時不會啟用輕量型語法。 永遠啟用詳細語法，因此即使您啟用輕量型語法，您仍然可以使用詳細語法的某些建構。 您可以使用停用輕量型語法`#light "off"`指示詞。
-
+有可供在 F # 語言中的許多建構的兩種形式的語法：*詳細語法*並*輕量型語法*。 詳細的語法不常用，但優點是較不容易縮排。 輕量型語法較短，並使用縮排來表示的開頭和結尾的建構，而非其他關鍵字喜歡`begin`， `end`， `in`，依此類推。 預設語法是輕量型語法。 未啟用輕量型語法時，本主題將描述適用於 F # 建構語法。 永遠啟用詳細語法，因此即使您啟用輕量型語法時，您仍然可以使用詳細語法適用於某些建構。 您可以使用連線，停用輕量型語法`#light "off"`指示詞。
 
 ## <a name="table-of-constructs"></a>資料表的建構
-下表顯示 F # 語言建構的輕量型和冗長語法的內容中沒有兩個形式之間的差異。 這個資料表，請在角括號 (&lt;&gt;) 括住使用者提供的語法元素。 請參閱每一個語言建構，如需詳細資訊，這些建構函式內使用之語法的詳細文件。
 
-
+下表顯示 F # 語言建構的輕量級和詳細語法在內容中沒有兩個形式之間的差異。 下表中角括弧 (&lt;&gt;) 括住使用者提供的語法元素。 文件以取得每個語言建構，這些建構內所使用之語法的詳細資訊，請參閱。
 
 <table>
 <tr>
@@ -164,7 +162,7 @@ in
 
 </td>
 </tr>
-<tr><td>資料錄
+<tr><td>記錄
 </td><td>
 
 ```
@@ -222,7 +220,7 @@ type <structure-name> =
 
 </td>
 </tr>
-<tr><td>差別等位</td><td>
+<tr><td>已區分聯集</td><td>
 
 ```
 type <union-name> =
@@ -343,11 +341,8 @@ module <module-name> =
 </tr>
 </table>
 
-
-
 ## <a name="see-also"></a>另請參閱
-[F# 語言參考](index.md)
 
-[編譯器指示詞](compiler-directives.md)
-
-[程式碼格式化方針](code-formatting-guidelines.md)
+- [F# 語言參考](index.md)
+- [編譯器指示詞](compiler-directives.md)
+- [程式碼格式化方針](code-formatting-guidelines.md)

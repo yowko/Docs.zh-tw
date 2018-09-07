@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: 51d561009a2f497cf4cf720abd5a414cbbbb2e64
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b47be45f00ee03d400383dd45dc6776cff3f816d
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592089"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44060329"
 ---
 # <a name="serialization-guidelines"></a>序列化方針
 本文件列出在設計要序列化的 API 時所要考量的指導方針。  
@@ -104,7 +104,7 @@ ms.locfileid: "33592089"
      [!code-csharp[SerializationGuidelines#6](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#6)]
      [!code-vb[SerializationGuidelines#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#6)]  
   
-2.  如果您希望對序列化 XML 的形狀有更大的控制權，而不是套用 XML 序列化屬性來使用提供的控制權，請考慮實作 <xref:System.Xml.Serialization.IXmlSerializable> 介面。 兩個介面方法<xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A>和<xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>，讓您完整控制序列化的 XML 資料流。 您也可以藉由套用 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 屬性來控制為此型別產生的 XML 結構描述。  
+2.  如果您希望對序列化 XML 的形狀有更大的控制權，而不是套用 XML 序列化屬性來使用提供的控制權，請考慮實作 <xref:System.Xml.Serialization.IXmlSerializable> 介面。 此介面的兩種方法<xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A>和<xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>，可讓您完全控制序列化的 XML 資料流。 您也可以藉由套用 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 屬性來控制為此型別產生的 XML 結構描述。  
   
 #### <a name="supporting-runtime-serialization"></a>支援執行階段序列化  
  「執行階段序列化」是 .NET 遠端處理所使用的技術。 如果您認為您的型別將會使用 .NET 遠端處理來傳輸，則需要確定型別有支援執行階段序列化。  
@@ -138,11 +138,12 @@ ms.locfileid: "33592089"
      [!code-csharp[SerializationGuidelines#11](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#11)]
      [!code-vb[SerializationGuidelines#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#11)]  
   
-## <a name="see-also"></a>另請參閱  
- [使用資料合約](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [資料合約序列化程式](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
- [資料合約序列化程式支援的類型](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
- [二進位序列化](binary-serialization.md)  
- [遠端物件](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
- [XML 和 SOAP 序列化](xml-and-soap-serialization.md)  
- [安全性和序列化](../../../docs/framework/misc/security-and-serialization.md)
+## <a name="see-also"></a>另請參閱
+
+- [使用資料合約](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+- [資料合約序列化程式](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
+- [資料合約序列化程式支援的類型](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
+- [二進位序列化](binary-serialization.md)  
+- [遠端物件](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
+- [XML 和 SOAP 序列化](xml-and-soap-serialization.md)  
+- [安全性和序列化](../../../docs/framework/misc/security-and-serialization.md)

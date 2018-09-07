@@ -17,11 +17,11 @@ ms.assetid: 33660f33-b70f-4dca-8c87-ab35cfc2961a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 16770ea938973372d1d94c628c42d5d5bf10c695
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43874988"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44075581"
 ---
 # <a name="ensuring-data-integrity-with-hash-codes"></a>使用雜湊程式碼確定資料完整性
 雜湊值是可唯一識別資料的固定長度數值。 雜湊值以較小的數值代表大量的資料，所以可和數位簽章一起使用。 比起簽署更大的值，簽署雜湊值更有效率。 如需驗證透過不安全的通道傳送的資料完整性，雜湊值會相當有用。 可比較已接收資料的雜湊值和該資料傳送時的雜湊值，來判斷資料是否已變更。  

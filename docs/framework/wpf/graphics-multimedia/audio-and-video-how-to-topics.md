@@ -7,17 +7,18 @@ helpviewer_keywords:
 - multimedia [WPF]
 - media [WPF]
 ms.assetid: f7d96707-ffb5-486c-9e85-db6f0d5ac547
-ms.openlocfilehash: 446a7993f2c2849c8bdd67683c04c429ce9bc0c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7c3a6b01591dd1c7fc7554a6e660f1ca7b12de1
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44075406"
 ---
 # <a name="audio-and-video-how-to-topics"></a>音訊和視訊 HOW TO 主題
-下列主題示範如何使用<xref:System.Windows.Controls.MediaElement>整合您的應用程式中的音訊及視訊內容。  
+下列主題示範如何使用<xref:System.Windows.Controls.MediaElement>地整合在應用程式中的音訊和視訊內容。  
   
 ## <a name="in-this-section"></a>本節內容  
- [如何： 以動態方式加入項目](http://msdn.microsoft.com/library/d00f258a-7973-4de7-bc54-a3fc1f638419)  
+ [如何： 以動態方式新增項目](https://msdn.microsoft.com/library/d00f258a-7973-4de7-bc54-a3fc1f638419)  
  [控制 MediaElement (播放、暫停、停止、音量和速度)](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)  
  [使用分鏡腳本控制 MediaElement](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md)  
  [以使用者事件觸發媒體播放](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-media-playback-with-a-user-event.md)  

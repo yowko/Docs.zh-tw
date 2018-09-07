@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
 ms.openlocfilehash: 88707ed6c0e3e5a0ecf1f0812d31634bbdca3123
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745242"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44066673"
 ---
 # <a name="group-by-clause-visual-basic"></a>Group By 子句 (Visual Basic)
 群組查詢結果的項目。 也可用來將彙總函式套用至每個群組。 群組作業是根據一個或多個索引鍵。  
@@ -33,19 +33,19 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
 -   `listField1`, `listField2`  
   
-     選擇項。 一或多個查詢變數的欄位，明確識別要包含在群組結果中的欄位。 如果未指定任何欄位，群組結果中會包含查詢變數的所有欄位。  
+     選擇性。 一或多個查詢變數的欄位，明確識別要包含在群組結果中的欄位。 如果未指定任何欄位，群組結果中會包含查詢變數的所有欄位。  
   
 -   `keyExp1`  
   
-     必要項。 識別要用來判斷項目群組之索引鍵的運算式。 您可以指定多個索引鍵，指定複合索引鍵。  
+     必要。 識別要用來判斷項目群組之索引鍵的運算式。 您可以指定多個索引鍵，指定複合索引鍵。  
   
 -   `keyExp2`  
   
-     選擇項。 一或多個額外的金鑰，結合了 `keyExp1` 以建立複合索引鍵。  
+     選擇性。 一或多個額外的金鑰，結合了 `keyExp1` 以建立複合索引鍵。  
   
 -   `aggregateList`  
   
-     必要項。 識別群組彙總方式的一或多個運算式。 若要識別群組結果的成員名稱，請使用 `Group` 關鍵字，它可以是下列任一形式：  
+     必要。 識別群組彙總方式的一或多個運算式。 若要識別群組結果的成員名稱，請使用 `Group` 關鍵字，它可以是下列任一形式：  
   
     ```  
     Into Group  

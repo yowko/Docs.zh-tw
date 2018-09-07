@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
 ms.openlocfilehash: dc72b86a69d44ad282e30b000313b73211cad09c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43854550"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44076793"
 ---
 # <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>逐步解說：在設計階段建立 Windows Form 的新 WPF 內容
 

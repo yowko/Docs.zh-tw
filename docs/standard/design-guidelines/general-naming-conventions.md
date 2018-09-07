@@ -16,24 +16,24 @@ helpviewer_keywords:
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 207227b3e5c52b7c6e0f704543379874f3708c03
-ms.sourcegitcommit: ceca5a1c027627abcca2767567703c3879f33325
+ms.openlocfilehash: cd3defd969b5f26fb95e7feca9c3d533e67272b1
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2018
-ms.locfileid: "36338100"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44071092"
 ---
 # <a name="general-naming-conventions"></a>一般命名慣例
-本章節描述一般命名慣例與相關單字的選擇，如何避免使用特定語言的名稱中使用縮寫和首字母縮略字和建議的指導方針。  
+本章節描述一般命名慣例相關單字的選擇，如何避免使用特定語言名稱中使用縮寫及縮略字，以及建議的指導方針。  
   
 ## <a name="word-choice"></a>字組選擇  
  **✓ DO** 選擇簡單易讀的識別項名稱。  
   
- 例如，名為的屬性`HorizontalAlignment`是英文-可讀性比`AlignmentHorizontal`。  
+ 例如，一個名為的屬性`HorizontalAlignment`是英文-可讀性比`AlignmentHorizontal`。  
   
  **✓ DO** 勝過求簡單明瞭的可讀性。  
   
- 屬性名稱`CanScrollHorizontally`優於`ScrollableX`（x 軸之下參考）。  
+ 屬性名稱`CanScrollHorizontally`優於`ScrollableX`（x 軸的難以理解參考）。  
   
  **X DO NOT** 使用底線、 連字號或任何其他非英數字元。  
   
@@ -41,23 +41,23 @@ ms.locfileid: "36338100"
   
  **X AVOID** 使用廣泛發生衝突之關鍵字的識別項使用的程式設計語言。  
   
- 根據規則 4 的 Common Language Specification (CLS) 中，所有相容的語言必須提供一套機制，可讓使用該語言的關鍵字當做識別項的具名項目的存取權。 C# 中，例如，使用 @ 符號做為逸出機制，在此情況下。 不過，它仍然是個不錯的主意，避免常見的關鍵字，因為它是使用比另一個則不逸出序列使用的方法更為困難。  
+ 根據規則 4 的 Common Language Specification (CLS) 中，所有相容的語言必須提供一種機制，可讓使用該語言的關鍵字當做識別項的具名項目的存取權。 C# 中，例如，使用 @ 符號做為逸出機制，在此情況下。 不過，它仍然是個不錯的主意，以避免常見的關鍵字，因為它是以逸出序列比另一個則不使用的方法更為困難。  
   
-## <a name="using-abbreviations-and-acronyms"></a>使用縮寫和縮略字  
+## <a name="using-abbreviations-and-acronyms"></a>使用縮寫及縮略字  
  **X DO NOT** 縮寫做為識別項名稱的一部分。  
   
- 例如，使用`GetWindow`而不是`GetWin`。  
+ 例如，使用`GetWindow`而非`GetWin`。  
   
  **X DO NOT** 使用任何不是普遍被接受，且即使它們是，只在必要時的縮略字。  
   
-## <a name="avoiding-language-specific-names"></a>避免將語言特定名稱  
+## <a name="avoiding-language-specific-names"></a>避免特定語言的名稱  
  **✓ DO** 語意方面有意義的名稱，而不是語言特有的關鍵字用於型別名稱。  
   
  例如，`GetLength`是更適合的名稱，比`GetInt`。  
   
  **✓ DO** 使用泛型的 CLR 型別名稱，而非語言特定名稱，在極少數的情況下，當識別項不具有任何超出其類型的語意。  
   
- 例如，將轉換成方法<xref:System.Int64>應命名為`ToInt64`，而非`ToLong`(因為<xref:System.Int64>是 C# 的 CLR 名稱-特定別名`long`)。 下表顯示使用 CLR 型別名稱 （以及對應的型別名稱，如 C#、 Visual Basic 和 c + +） 的數個基底資料類型。  
+ 例如，方法將轉換成<xref:System.Int64>應該命名為`ToInt64`，而非`ToLong`(因為<xref:System.Int64>是 C# 的 CLR 名稱-特定別名`long`)。 下表顯示使用 CLR 型別名稱 （以及對應的型別名稱，如 C#、 Visual Basic 和 c + +） 的數個基底資料類型。  
   
 |C#|Visual Basic|C++|CLR|  
 |---------|------------------|-----------|---------|  
@@ -78,14 +78,14 @@ ms.locfileid: "36338100"
   
  **✓ DO** 使用一般名稱，例如 `value` 或 `item`，而不是重複的型別名稱，在極少數的情況下，當識別項具有任何語意和參數的型別並不重要。  
   
-## <a name="naming-new-versions-of-existing-apis"></a>命名新版本的現有應用程式開發介面  
+## <a name="naming-new-versions-of-existing-apis"></a>命名新版本的現有 Api  
  **✓ DO** 建立新版本的現有應用程式開發介面時，使用舊的 API 類似的名稱。  
   
- 這有助於反白顯示的應用程式開發介面之間的關聯性。  
+ 如此可反白顯示 Api 之間的關聯性。  
   
  **✓ DO** 偏好加入後置詞，而不是前置詞，指示現有的應用程式開發介面的新版本。  
   
- 瀏覽文件時，這將可協助探索或使用 IntelliSense。 將新的 Api，接近組織 API 的舊版本，因為大部分的瀏覽器和 IntelliSense 會依字母順序顯示識別項。  
+ 瀏覽文件時，這將可協助探索或使用 IntelliSense。 舊版的 api 將組織接近新的 Api，因為大部分的瀏覽器和 IntelliSense 的識別項則會依字母順序顯示。  
   
  **✓ CONSIDER** 使用全新，但有意義的識別項，而非新增後置字元或前置詞。  
   
@@ -93,12 +93,13 @@ ms.locfileid: "36338100"
   
  **X DO NOT** 使用"Ex"（或類似） 後置字元加以區別較早版本的相同應用程式開發介面識別項。  
   
- **✓ DO** 簡介操作的 64 位元整數 （長整數），而不是 32 位元整數的 Api 版本時，使用"64"後置詞。 您只需要存在現有的 32 位元應用程式開發介面; 時採取這種方式不要做為 64 位元版本的全新 Api。  
+ **✓ DO** 簡介操作的 64 位元整數 （長整數），而不是 32 位元整數的 Api 版本時，使用"64"後置詞。 您只需要採取這種方式，當現有的 32 位元 API 存在;不要這麼做的只有 64 位元版本的全新 Api。  
   
- *部分 © 2005年，2009 Microsoft Corporation。All rights reserved.*  
+ *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- *皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*  
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
   
-## <a name="see-also"></a>另請參閱  
- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)  
- [命名方針](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a>另請參閱
+
+- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)  
+- [命名方針](../../../docs/standard/design-guidelines/naming-guidelines.md)

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
 ms.openlocfilehash: cd3b6bbb47dfd72bf70091c9ca4d6fc5e228d950
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43798328"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44065363"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>HOW TO：註冊和設定服務 Moniker
 之前使用型別之合約中的 Windows Communication Foundation (WCF) 服務 moniker，在 COM 應用程式中的，您必須向 COM 註冊必要的屬性的類型，並使用必要的繫結設定 COM 應用程式和 moniker組態設定。  

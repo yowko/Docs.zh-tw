@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: a164ba4f-e596-4bbe-a9ca-f214fe89ed48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b6840a9005aaca4805252298e1ceaf7e51f38971
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b1ca4f0809659b3e164623f488a8585a33ea718
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591456"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44071722"
 ---
 # <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a>如何：使用非對稱金鑰加密 XML 項目
-您可以使用 <xref:System.Security.Cryptography.Xml> 命名空間中的類別來加密 XML 文件內的項目。  XML 加密是交換或儲存加密 XML 資料的標準方法，不必擔心資料被輕易讀取。  如需 XML 加密標準的詳細資訊，請參閱全球資訊網協會 (W3C) 規格 XML 加密位於http://www.w3.org/TR/xmldsig-core/。  
+您可以使用 <xref:System.Security.Cryptography.Xml> 命名空間中的類別來加密 XML 文件內的項目。  XML 加密是交換或儲存加密 XML 資料的標準方法，不必擔心資料被輕易讀取。  如需 XML 加密標準的詳細資訊，請參閱全球資訊網協會 (W3C) 規格 XML 加密位於 http://www.w3.org/TR/xmldsig-core/。  
   
  您可以使用 XML 加密將任何 XML 元素或文件取代為包含加密 XML 資料的 <`EncryptedData`> 元素。  <`EncryptedData`> 項目也可以包含子項目，而子項目會包含有關加密時所使用之金鑰和程序的資訊。  XML 加密可讓文件中包含多個加密的元素，並允許元素加密多次。  這個程序中的程式碼範例將顯示如何建立 <`EncryptedData`> 項目和數個其他子項目，以便稍後在解密時使用。  
   
  此範例會使用兩個金鑰來加密 XML 元素。  它會產生 RSA 公開/私密金鑰組，並將金鑰組儲存到安全的金鑰容器。  接著這個範例會使用進階加密標準 (AES) 演算法 (也稱為 Rijndael 演算法) 建立不同的工作階段金鑰。  範例會使用 AES 工作階段金鑰來加密 XML 文件，然後使用 RSA 公開金鑰來加密 AES 工作階段金鑰。  最後，範例會將加密的 AES 工作階段金鑰和加密的 XML 資料儲存在 XML 文件內的新 <`EncryptedData`> 項目。  
   
- 若要解密 XML 項目，您可以從金鑰容器中擷取 RSA 私密金鑰、用它來解密工作階段金鑰，然後使用工作階段金鑰來解密文件。  如需如何使用這個程序加密 XML 項目解密的詳細資訊，請參閱[How to： 使用非對稱金鑰解密 XML 項目](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md)。  
+ 若要解密 XML 項目，您可以從金鑰容器中擷取 RSA 私密金鑰、用它來解密工作階段金鑰，然後使用工作階段金鑰來解密文件。  如需如何使用此程序加密 XML 項目解密的詳細資訊，請參閱[如何： 使用非對稱金鑰解密 XML 項目](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md)。  
   
  這個範例適合多個應用程式需要共用加密資料或應用程式需要在它執行時間之間儲存加密資料的情況。  
   
@@ -136,12 +136,13 @@ ms.locfileid: "33591456"
 -   包含下列命名空間：<xref:System.Xml>、<xref:System.Security.Cryptography> 和 <xref:System.Security.Cryptography.Xml>。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
- 絕對不要以純文字儲存對稱密碼編譯金鑰，或以純文字格式在電腦之間傳輸對稱金鑰。  此外，絕對不要以純文字儲存或傳輸非對稱金鑰組的私密金鑰。  如需對稱和非對稱密碼編譯金鑰的詳細資訊，請參閱[產生加密和解密金鑰](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)。  
+ 絕對不要以純文字儲存對稱密碼編譯金鑰，或以純文字格式在電腦之間傳輸對稱金鑰。  此外，絕對不要以純文字儲存或傳輸非對稱金鑰組的私密金鑰。  如需對稱和非對稱密碼編譯金鑰的詳細資訊，請參閱[產生的金鑰來加密和解密](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)。  
   
- 絕對不要直接將金鑰內嵌在您的原始程式碼。  內嵌的金鑰可以輕鬆地從組件使用讀取[Ildasm.exe （IL 解譯器）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)或藉由在文字編輯器例如記事本中開啟組件。  
+ 絕對不要直接將金鑰內嵌在您的原始程式碼。  內嵌的金鑰可以輕鬆地從組件讀取[Ildasm.exe （IL 反組譯工具）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)或是藉由在 [記事本] 之類的文字編輯器中開啟組件。  
   
  當您使用完密碼編譯金鑰，請從記憶體清除它，方法是將每個位元組設定為零，或呼叫 Managed 密碼編譯類別的 <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> 方法。  偵錯工具有時可以從記憶體讀取密碼編譯金鑰，或是在記憶體位置被分頁至磁碟的情況下從硬碟機讀取。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Security.Cryptography.Xml>  
- [操作說明：使用非對稱金鑰解密 XML 元素](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Security.Cryptography.Xml>  
+- [操作說明：使用非對稱金鑰解密 XML 元素](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md)

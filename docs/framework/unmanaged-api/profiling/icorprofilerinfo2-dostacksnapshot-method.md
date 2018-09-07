@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3c65e48595f2b49abe06e649898649d76a0668a0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43733920"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44075771"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot 方法
 引導指定的執行緒的堆疊上的 managed 的框架，並將資訊傳送到透過回呼程式碼剖析工具。  

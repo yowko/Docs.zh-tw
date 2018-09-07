@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
 ms.openlocfilehash: a023d8d8c31131db46cc8535d0e903c2a8d8a345
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785046"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44070754"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>在 Windows Form DataGridView 控制項中的資料行填入模式
 在資料行填滿模式中，<xref:System.Windows.Forms.DataGridView> 控制項會自動調整其資料行的大小，使資料行填滿可用顯示區域的寬度。 只有在必須將每個資料行的寬度保持等於或大於其 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 屬性值時，這個控制項才會顯示水平捲軸。  

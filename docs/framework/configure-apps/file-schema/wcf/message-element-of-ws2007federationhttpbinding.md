@@ -3,11 +3,11 @@ title: '&lt;ws2007FederationHttpBinding&gt; 的 &lt;message&gt; 項目'
 ms.date: 03/30/2017
 ms.assetid: 52cd941d-e230-4c82-8b29-333a7d20eca8
 ms.openlocfilehash: 3f0dbc3128af812c7fd09eed5acd90ab43ec8351
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43746798"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44063478"
 ---
 # <a name="ltmessagegt-element-of-ltws2007federationhttpbindinggt"></a>&lt;ws2007FederationHttpBinding&gt; 的 &lt;message&gt; 項目
 定義訊息層級安全性設定[ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)項目。  
@@ -81,7 +81,7 @@ ms.locfileid: "43746798"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -113,7 +113,7 @@ ms.locfileid: "43746798"
 |Basic256Sha256Rsa15|將 Aes256 用於訊息加密，Sha256 用於訊息摘要，Rsa15 用於金鑰包裝。|  
 |TripleDesSha256Rsa15|將 TripleDes 用於訊息加密，Sha256 用於訊息摘要，Rsa15 用於金鑰包裝。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  

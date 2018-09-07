@@ -10,11 +10,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 39804f7a525a45a4de37e7dded9ac4998280755f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745537"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44070624"
 ---
 # <a name="ui-automation-support-for-the-edit-control-type"></a>Edit 控制項類型的 UI 自動化支援
 > [!NOTE]
@@ -40,7 +40,7 @@ ms.locfileid: "43745537"
 ## <a name="required-ui-automation-properties"></a>必要的使用者介面自動化屬性  
  下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與編輯控制項特別有關。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性的詳細資訊，請參閱 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性|值|備註|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性|值|注意|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|請參閱備註。|此屬性的值在應用程式中的所有控制項都不得重複。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|請參閱備註。|包含整個控制項的最外層矩形。|  
@@ -58,7 +58,7 @@ ms.locfileid: "43745537"
 ## <a name="required-ui-automation-control-patterns-and-properties"></a>必要的使用者介面自動化控制項模式和屬性  
  下表列出所有編輯控制項都必須支援的控制項模式。 如需控制項模式的詳細資訊，請參閱 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。  
   
-|控制項模式/控制項模式屬性|支援/值|備註|  
+|控制項模式/控制項模式屬性|支援/值|注意|  
 |-----------------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.ITextProvider>|視情況而定|編輯控制項應支援文字控制項模式，因為詳細的文字資訊應一律可供用戶端使用。|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|視情況而定|所有採用字串的編輯控制項都必須公開值模式。|  
@@ -75,11 +75,11 @@ ms.locfileid: "43745537"
 ## <a name="required-ui-automation-events"></a>必要的使用者介面自動化事件  
  下表列示所有編輯控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 如需事件的詳細資訊，請參閱 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支援|備註|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支援|注意|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|必要項|無|  
-|<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|必要項|無|  
-|<xref:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent>|必要項|無|  
+|<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|必要|無|  
+|<xref:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent>|必要|無|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。|必要項|無|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 屬性變更事件。|必要項|無|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性變更事件。|必要項|無|  
@@ -92,8 +92,8 @@ ms.locfileid: "43745537"
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> 屬性變更事件。|永不|無|  
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> 屬性變更事件。|永不|無|  
 |<xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> 屬性變更事件。|視情況而定|如果此控制項支援範圍值控制項模式，就必須支援這個事件。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必要項|無|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必要|無|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必要|無|  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Automation.ControlType.Edit>  

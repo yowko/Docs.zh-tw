@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
 ms.openlocfilehash: caad6a76b52a970e133425c484602deb8801d252
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43798351"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44067639"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>控制項和元件撰寫疑難排解
 本主題列出當開發元件和控制項時，會發生下列常見問題。 如需詳細資訊，請參閱[使用元件進行程式設計](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)。  

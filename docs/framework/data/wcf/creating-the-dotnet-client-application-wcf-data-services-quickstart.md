@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
 ms.openlocfilehash: 86ded7351d435b3a7077f0354d8a923b33a3f2b6
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43854953"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44063311"
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>建立 .NET Framework 用戶端應用程式 (WCF 資料服務快速入門)
 

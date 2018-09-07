@@ -7,11 +7,11 @@ helpviewer_keywords:
 - x:FactoryMethod directive [XAML Services]
 ms.assetid: 829bcbdf-5318-4afb-9a03-c310e0d2f23d
 ms.openlocfilehash: 436caa9b93467dcf2a0763bcc0962a2beb722315
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43804314"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44071118"
 ---
 # <a name="xfactorymethod-directive"></a>x:FactoryMethod 指示詞
 指定的 XAML 處理器應該用來解決它的支援型別之後初始化物件的建構函式以外的方法。  

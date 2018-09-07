@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fb187719ff502abe61ac5deb69c6427a4a64ab44
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43488205"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44059677"
 ---
 # <a name="spawninstance-function"></a>SpawnInstance 函式
 建立類別的新執行個體。    

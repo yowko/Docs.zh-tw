@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6d221724-bb21-4d76-90c3-0ee2a2e69be2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2cfc93e1c8d3d9e878d96de164b0d646e62c0998
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ffb1081c80c31353ad38080ae16ef9f8a74b5481
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583964"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44046771"
 ---
 # <a name="security-and-on-the-fly-code-generation"></a>安全性和產生作業中的程式碼
 某些程式庫的運作方式為產生程式碼，然後執行這個程式碼以進行呼叫端的特定作業。 這種方法的基本問題在於程式庫可能會代表較不受信任的程式碼來產生程式碼，然後以較高的信任層級來執行這個程式碼。 當呼叫端可能影響程式碼產生時，這個問題會更嚴重，因此您必須確保產生的程式碼只會是您認為安全的程式碼。  
@@ -26,5 +26,6 @@ ms.locfileid: "33583964"
   
  當您編譯程式碼時，請考慮惡意程式是否有可能修改程式碼。 在編譯器讀取原始程式碼之前，或在您的程式碼載入 .dll 檔案之前，是不是有空檔時間可以讓惡意程式碼變更磁碟上的原始程式碼？ 如果是，您必須視需要使用檔案系統中的存取控制清單，來保護含有這些檔案的目錄。  
   
-## <a name="see-also"></a>另請參閱  
- [安全程式碼撰寫方針](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>另請參閱
+
+- [安全程式碼撰寫方針](../../../docs/standard/security/secure-coding-guidelines.md)

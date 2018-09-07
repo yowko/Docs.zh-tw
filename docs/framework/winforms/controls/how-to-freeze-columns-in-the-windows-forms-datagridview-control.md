@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], columns always in view
 ms.assetid: 2ef8b1de-782e-4867-af8d-58171ab5c106
 ms.openlocfilehash: df8ac7e7db74d4e8df8872b5ec7f8f2ec774b3c8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779936"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44046914"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control"></a>如何：凍結 Windows Form DataGridView 控制項中的資料行
 當使用者檢視顯示於 Windows Form <xref:System.Windows.Forms.DataGridView> 控制項的資料時，有時候需要經常參考單一資料行或資料行集合。 例如，在顯示包含許多資料行的客戶資訊資料表時，如果其他資料行可在可見區域外捲動時，仍一直顯示客戶的名稱，將會非常有用。  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - My.Response object
 ms.assetid: 626359bc-3165-40b4-bfaf-2c610e26eb5b
 ms.openlocfilehash: d5f49529a2593093a234babc22f64b591ea3cc61
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43872948"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44075692"
 ---
 # <a name="myresponse-object"></a>My.Response 物件
 取得<xref:System.Web.HttpResponse>相關聯的物件<xref:System.Web.UI.Page>。 此物件可讓您將 HTTP 回應資料傳送給用戶端，並包含該回應的相關資訊。  

@@ -3,11 +3,11 @@ title: 服務描述
 ms.date: 03/30/2017
 ms.assetid: 7034b5d6-d608-45f3-b57d-ec135f83ff24
 ms.openlocfilehash: 1acd82fddd378a379023c7aa46ead2ce36c5b243
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43734326"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44048041"
 ---
 # <a name="service-description"></a>服務描述
 服務描述範例會示範服務如何在執行階段擷取其服務描述資訊。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)，與其他服務作業定義會傳回描述服務的相關資訊。 傳回的資訊會列出服務的基底位址與端點。 服務會使用 <xref:System.ServiceModel.OperationContext>、<xref:System.ServiceModel.ServiceHost> 和 <xref:System.ServiceModel.Description.ServiceDescription> 類別提供這項資訊。  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3db4afb00367f719391193ebce4053cc5da16164
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5cd157f89797406fbe87c3d70c415d7b192d1a9
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588852"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44061204"
 ---
 # <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>如何：將對稱金鑰儲存在金鑰容器中
 非對稱私密金鑰不應逐字或以純文字儲存到本機電腦上。 如果您需要儲存私密金鑰，您應該使用金鑰容器。 如需金鑰容器的詳細資訊，請參閱[了解電腦層級和使用者層級的 RSA 金鑰容器](https://msdn.microsoft.com/library/9a179f38-8fb7-4442-964c-fb7b9f39f5b9)。  
@@ -31,7 +31,7 @@ ms.locfileid: "33588852"
   
 1.  建立的新執行個體<xref:System.Security.Cryptography.CspParameters>類別，並傳遞您想要呼叫的金鑰容器名稱<xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType>欄位。  
   
-2.  建立衍生自類別的新執行個體<xref:System.Security.Cryptography.AsymmetricAlgorithm>類別 (通常**RSACryptoServiceProvider**或**DSACryptoServiceProvider**) 並將先前建立**CspParameters**其建構函式的物件。  
+2.  建立衍生自類別的新執行個體<xref:System.Security.Cryptography.AsymmetricAlgorithm>類別 (通常**RSACryptoServiceProvider**或是**DSACryptoServiceProvider**)，並傳遞先前建立**一個是 CspParameters**其建構函式的物件。  
   
 ### <a name="to-delete-the-key-from-a-key-container"></a>從金鑰容器中刪除金鑰  
   
@@ -223,8 +223,9 @@ Key added to container:
 Key deleted.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [產生加密和解密金鑰](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
- [加密資料](../../../docs/standard/security/encrypting-data.md)  
- [解密資料](../../../docs/standard/security/decrypting-data.md)  
- [The signature is valid](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>另請參閱
+
+- [產生加密和解密金鑰](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
+- [加密資料](../../../docs/standard/security/encrypting-data.md)  
+- [解密資料](../../../docs/standard/security/decrypting-data.md)  
+- [The signature is valid](../../../docs/standard/security/cryptographic-services.md)

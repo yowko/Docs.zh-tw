@@ -2,12 +2,12 @@
 title: 以 XmlSerializer 自訂序列化順序
 ms.date: 03/30/2017
 ms.assetid: 975abd20-2a1d-42db-aed3-e898025ccce7
-ms.openlocfilehash: 8480644aacf128b430da9881560595bb4b0d3ad5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1dc9a73b45d8e62902ec8c6b7d810154a8a92566
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580961"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44071943"
 ---
 # <a name="custom-serialization-order-with-xmlserializer"></a>以 XmlSerializer 自訂序列化順序
 [下載範例](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/CustomOrder.zip.exe)  
@@ -32,10 +32,11 @@ ms.locfileid: "33580961"
   
 4.  此範例應用程式將建置於預設的 \bin 或 \bin\Debug 子目錄中。  
   
-## <a name="see-also"></a>另請參閱  
- [基本序列化](../../../docs/standard/serialization/basic-serialization.md)  
- [二進位序列化](../../../docs/standard/serialization/binary-serialization.md)  
- [使用屬性控制 XML 序列化](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
- [XML 序列化簡介](../../../docs/standard/serialization/introducing-xml-serialization.md)  
- [序列化](../../../docs/standard/serialization/index.md)  
- [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+## <a name="see-also"></a>另請參閱
+
+- [基本序列化](../../../docs/standard/serialization/basic-serialization.md)  
+- [二進位序列化](../../../docs/standard/serialization/binary-serialization.md)  
+- [使用屬性控制 XML 序列化](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
+- [XML 序列化簡介](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+- [序列化](../../../docs/standard/serialization/index.md)  
+- [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)

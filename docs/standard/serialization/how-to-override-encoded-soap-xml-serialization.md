@@ -5,12 +5,12 @@ helpviewer_keywords:
 - overriding XML serialization
 - SOAP, overriding encoded XML serialization
 ms.assetid: d0791df8-04e3-46b4-a6be-fe0ed09267e8
-ms.openlocfilehash: 1ce2259c482c0e8441b35b41e2303fba5d547416
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 721a27b4bba239f0d22a24e0e159ef36b742d1b7
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585836"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44064852"
 ---
 # <a name="how-to-override-encoded-soap-xml-serialization"></a>HOW TO：覆寫已編碼的 SOAP XML 序列化
 [程式碼範例](#tskhowtooverrideencodedsoapxmlserializationanchor1)  
@@ -278,10 +278,11 @@ public class Run
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
- [可控制編碼 SOAP 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
- [以 XML Web 服務進行 XML 序列化](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)  
- [如何：序列化物件](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
- [如何：還原序列化物件](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
- [如何：將物件序列化為 SOAP 編碼的 XML 資料流](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
+## <a name="see-also"></a>另請參閱
+
+- [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+- [可控制編碼 SOAP 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
+- [以 XML Web 服務進行 XML 序列化](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)  
+- [如何：序列化物件](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+- [如何：還原序列化物件](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
+- [如何：將物件序列化為 SOAP 編碼的 XML 資料流](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)

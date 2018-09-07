@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d04af38123efdbb70b8b917a3c4a59cb3a154262
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b043c5a2173cff9eb82497f6d4ee8b7c0aa3f14c
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582183"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44061022"
 ---
 # <a name="how-to-use-data-protection"></a>如何：使用資料保護
 .NET Framework 提供資料保護 API (DPAPI) 的存取，這可讓您使用目前使用者帳戶或電腦的資訊來加密資料。  當您使用 DPAPI 時，會減少明確產生並儲存密碼編譯金鑰的困難問題。  
@@ -66,6 +66,7 @@ ms.locfileid: "33582183"
   
 -   包含 <xref:System>、<xref:System.IO>、<xref:System.Security.Cryptography> 和 <xref:System.Text> 命名空間。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Security.Cryptography.ProtectedMemory>  
- <xref:System.Security.Cryptography.ProtectedData>
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Security.Cryptography.ProtectedMemory>  
+- <xref:System.Security.Cryptography.ProtectedData>

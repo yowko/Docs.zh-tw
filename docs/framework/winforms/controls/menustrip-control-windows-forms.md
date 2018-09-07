@@ -6,11 +6,11 @@ helpviewer_keywords:
 - menus
 ms.assetid: e361bf98-eed8-4ed3-9dfb-5a2e865e3ce6
 ms.openlocfilehash: 03328b324399c7500f2cf3a8b6ab12c843115e29
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44032406"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44077193"
 ---
 # <a name="menustrip-control-windows-forms"></a>MenuStrip 控制項 (Windows Form)
 此控制項會將應用程式的命令分組，並使其容易存取。  

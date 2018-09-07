@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [.NET Framework], XML serialization
 - serialization, attributes
 ms.assetid: 93ee258c-9c0f-4a08-897c-c10db7a00f91
-ms.openlocfilehash: 07c4c1e9b9a9da2e9a585efdcac644c616012078
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 7b5a48003ff9bfb398c05c8d70a9076d49ad83d6
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43778561"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44065650"
 ---
 # <a name="attributes-that-control-encoded-soap-serialization"></a>控制編碼 SOAP 序列化的屬性
 
@@ -34,10 +34,10 @@ ms.locfileid: "43778561"
 
 ## <a name="see-also"></a>另請參閱
 
-[XML 和 SOAP 序列化](xml-and-soap-serialization.md)  
-[如何：將物件序列化為 SOAP 編碼的 XML 資料流](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
-[如何：覆寫已編碼的 SOAP XML 序列化](how-to-override-encoded-soap-xml-serialization.md)  
-[屬性](../../../docs/standard/attributes/index.md)  
-<xref:System.Xml.Serialization.XmlSerializer>  
-[如何：序列化物件](how-to-serialize-an-object.md)  
-[如何：還原序列化物件](how-to-deserialize-an-object.md)
+- [XML 和 SOAP 序列化](xml-and-soap-serialization.md)  
+- [如何：將物件序列化為 SOAP 編碼的 XML 資料流](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
+- [如何：覆寫已編碼的 SOAP XML 序列化](how-to-override-encoded-soap-xml-serialization.md)  
+- [屬性](../../../docs/standard/attributes/index.md)  
+- <xref:System.Xml.Serialization.XmlSerializer>  
+- [如何：序列化物件](how-to-serialize-an-object.md)  
+- [如何：還原序列化物件](how-to-deserialize-an-object.md)

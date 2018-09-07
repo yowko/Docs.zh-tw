@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 39dd7bfe4e5dd3405e24bf044723dbd92ccc65a3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b583df2eb6098fa28dd8999a6796e5053d13cab4
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589824"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44070377"
 ---
 # <a name="encrypting-data"></a>加密資料
 對稱式加密和非對稱式加密是使用不同的程序執行。 對稱式加密在資料流上執行，因此適用於加密大量資料。 非對稱式加密在少數的位元組上執行，因此只適用於小量的資料。  
@@ -262,7 +262,8 @@ class Class1
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [產生加密和解密金鑰](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
- [解密資料](../../../docs/standard/security/decrypting-data.md)  
- [The signature is valid](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>另請參閱
+
+- [產生加密和解密金鑰](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
+- [解密資料](../../../docs/standard/security/decrypting-data.md)  
+- [The signature is valid](../../../docs/standard/security/cryptographic-services.md)

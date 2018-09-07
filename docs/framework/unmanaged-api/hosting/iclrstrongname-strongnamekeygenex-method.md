@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 93377f82992b8d7d55b21b53abfd7d7c2e9e620b
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43871942"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44075305"
 ---
 # <a name="iclrstrongnamestrongnamekeygenex-method"></a>ICLRStrongName::StrongNameKeyGenEx 方法
 會產生新公用/私密金鑰組以指定的金鑰大小，用於強式名稱。  

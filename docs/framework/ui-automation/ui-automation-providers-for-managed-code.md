@@ -12,11 +12,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 14e00caf666186e2ad25c746334afaff7ae5f664
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745992"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44072255"
 ---
 # <a name="ui-automation-providers-for-managed-code"></a>使用 Managed 程式碼的 UI 自動化提供者
 > [!NOTE]
@@ -24,7 +24,7 @@ ms.locfileid: "43745992"
   
  此章節包含概觀和使用說明主題描述如何撰寫[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]的自訂提供者[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]項目。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [伺服器端 UI 自動化提供者實作](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
  [UI 自動化提供者概觀](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)  
  [用戶端 UI 自動化提供者實作](../../../docs/framework/ui-automation/client-side-ui-automation-provider-implementation.md)  

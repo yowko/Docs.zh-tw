@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 679644c7-e3fc-422c-b14a-b44b683900d0
 ms.openlocfilehash: 665e424ada24e5e2990eccde7193a91dc039b265
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44038562"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44075799"
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>非同步作業 (WCF 資料服務)
 相較於在內部網路中執行的應用程式，Web 應用程式必須可容納用戶端與伺服器之間更高的延遲。 若要最佳化應用程式的效能及使用者經驗，我們建議您在透過 Web 存取 <xref:System.Data.Services.Client.DataServiceContext> 伺服器時，使用 <xref:System.Data.Services.Client.DataServiceQuery%601> 和 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 類別的非同步方法。  

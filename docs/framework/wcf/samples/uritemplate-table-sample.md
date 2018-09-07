@@ -3,11 +3,11 @@ title: UriTemplate 表範例
 ms.date: 03/30/2017
 ms.assetid: 5dd1d38f-1989-4c64-820d-821f5a02216a
 ms.openlocfilehash: 6cd02e5cdf4137efd3254ff1071e5a4a79c2e88a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43883745"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44077206"
 ---
 # <a name="uritemplate-table-sample"></a>UriTemplate 表範例
 <xref:System.UriTemplateTable> 類別會提供可用來處理 `UriTemplate` 執行個體集合的字典式關聯表結構。 這樣便可有效地針對表中的所有樣板比對特定的統一資源識別元 (URI)，並且擷取與符合樣板相關聯的資料。  

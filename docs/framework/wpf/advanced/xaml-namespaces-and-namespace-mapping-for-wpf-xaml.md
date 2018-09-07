@@ -15,11 +15,11 @@ helpviewer_keywords:
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
 ms.openlocfilehash: 9e93d3cd417d0d075fcebb8327ec51799884f8d6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416107"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44064811"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>WPF XAML 的 XAML 命名空間和命名空間對應
 本主題會進一步說明 WPF XAML 檔案根標記中常見的兩個 XAML 命名空間對應之現況與目的。 本文也會說明如何產生類似的對應，以使用自己的程式碼中所定義的項目和 (或) 個別組件內的項目。  

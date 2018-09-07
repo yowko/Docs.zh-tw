@@ -7,11 +7,11 @@ helpviewer_keywords:
 - painting [WPF], with solid colors
 ms.assetid: 5d27d8a7-4bd7-4063-bdf3-2c5c0f19f9d3
 ms.openlocfilehash: 017c685139979ec3aa411be6e6b5fdf0e91657de
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43878440"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44075544"
 ---
 # <a name="how-to-paint-an-area-with-a-solid-color"></a>操作說明：使用純色繪製區域
 若要繪製區域使用純色繪製區域，您可以使用預先定義的系統筆刷，例如<xref:System.Windows.Media.Brushes.Red%2A>或<xref:System.Windows.Media.Brushes.Blue%2A>，或者您可以建立新<xref:System.Windows.Media.SolidColorBrush>，並說明其<xref:System.Windows.Media.SolidColorBrush.Color%2A>使用 alpha、 紅色、 綠色和藍色值。 在 XAML 中，您也可以使用十六進位標記法來以純色繪製區域。  

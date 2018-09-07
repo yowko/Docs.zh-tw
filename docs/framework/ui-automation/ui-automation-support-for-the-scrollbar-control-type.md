@@ -10,11 +10,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 5c2f1ae77585576c8ad1c83b37e6ec530dd31598
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43778902"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44063218"
 ---
 # <a name="ui-automation-support-for-the-scrollbar-control-type"></a>ScrollBar 控制項類型的 UI 自動化支援
 > [!NOTE]
@@ -42,7 +42,7 @@ ms.locfileid: "43778902"
   
  如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性的詳細資訊，請參閱 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性|值|備註|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性|值|注意|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|請參閱備註。|此屬性的值在應用程式中的所有控制項都不得重複。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|請參閱備註。|包含整個控制項的最外層矩形。|  
@@ -60,7 +60,7 @@ ms.locfileid: "43778902"
 ## <a name="required-ui-automation-control-patterns"></a>必要的使用者介面自動化控制項模式  
  下表列出捲軸控制項必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控制項模式。 如需控制項模式的詳細資訊，請參閱 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。 請注意，若捲軸僅當成是滑鼠操作的控制項，就不支援控制項模式。 如果當成應用程式內的滑桿控制項，則必須指定滑桿控制項類型。  
   
-|控制項模式|支援|備註|  
+|控制項模式|支援|注意|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|永不|捲軸絕不會直接支援捲動控制項模式。|  
 |<xref:System.Windows.Automation.Provider.IRangeValueProvider>|視情況而定|當具有捲軸的容器不支援捲動控制項模式時，才需要支援此功能。|  
@@ -69,7 +69,7 @@ ms.locfileid: "43778902"
 ## <a name="required-ui-automation-events"></a>必要的使用者介面自動化事件  
  下表列出所有捲軸控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 如需事件的詳細資訊，請參閱 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支援/值|備註|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支援/值|注意|  
 |---------------------------------------------------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。|必要項|無|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 屬性變更事件。|必要項|無|  
@@ -81,8 +81,8 @@ ms.locfileid: "43778902"
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> 屬性變更事件。|永不|無|  
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> 屬性變更事件。|永不|無|  
 |<xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> 屬性變更事件。|視情況而定|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必要項|無|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必要|無|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必要|無|  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Automation.ControlType.ScrollBar>  

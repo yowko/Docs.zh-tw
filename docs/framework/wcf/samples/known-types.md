@@ -3,11 +3,11 @@ title: 已知型別
 ms.date: 03/30/2017
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
 ms.openlocfilehash: ec1dfa426c19b5471acb1c359f5068854fa8aa71
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43554946"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44068998"
 ---
 # <a name="known-types"></a>已知型別
 這個範例會示範如何在資料合約中指定有關衍生型別的資訊。 資料合約可以讓您在服務間來回傳遞結構化資料。 在物件導向程式設計中，繼承自另一個型別的型別可以用來取代原始型別。 在服務導向程式設計中，會使用結構描述而不是型別進行通訊，因此不會保留型別之間的關係。 <xref:System.Runtime.Serialization.KnownTypeAttribute> 屬性可以讓關於衍生型別的資訊包含到資料合約中。 如果不使用這個機制，這時將無法傳送或接收衍生型別，因為預期是使用基底型別 (Base Type)。  
