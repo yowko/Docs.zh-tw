@@ -10,54 +10,54 @@ helpviewer_keywords:
 - XML [Visual Basic], accessing
 ms.assetid: a16a4b13-54be-432c-82b3-a87091464ada
 ms.openlocfilehash: ab9eacc3fb3796139d8ed8382146a4a6c2b28a97
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43736616"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43803957"
 ---
-# <a name="extension-indexer-property-visual-basic"></a><span data-ttu-id="d9fa5-102">擴充索引子屬性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d9fa5-102">Extension Indexer Property (Visual Basic)</span></span>
-<span data-ttu-id="d9fa5-103">提供集合中個別項目的存取。</span><span class="sxs-lookup"><span data-stu-id="d9fa5-103">Provides access to individual elements in a collection.</span></span>  
+# <a name="extension-indexer-property-visual-basic"></a><span data-ttu-id="2770d-102">擴充索引子屬性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2770d-102">Extension Indexer Property (Visual Basic)</span></span>
+<span data-ttu-id="2770d-103">提供集合中個別項目的存取。</span><span class="sxs-lookup"><span data-stu-id="2770d-103">Provides access to individual elements in a collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d9fa5-104">語法</span><span class="sxs-lookup"><span data-stu-id="d9fa5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2770d-104">語法</span><span class="sxs-lookup"><span data-stu-id="2770d-104">Syntax</span></span>  
   
 ```  
 object(index)  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="d9fa5-105">組件</span><span class="sxs-lookup"><span data-stu-id="d9fa5-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="2770d-105">組件</span><span class="sxs-lookup"><span data-stu-id="2770d-105">Parts</span></span>  
   
-|<span data-ttu-id="d9fa5-106">詞彙</span><span class="sxs-lookup"><span data-stu-id="d9fa5-106">Term</span></span>|<span data-ttu-id="d9fa5-107">定義</span><span class="sxs-lookup"><span data-stu-id="d9fa5-107">Definition</span></span>|  
+|<span data-ttu-id="2770d-106">詞彙</span><span class="sxs-lookup"><span data-stu-id="2770d-106">Term</span></span>|<span data-ttu-id="2770d-107">定義</span><span class="sxs-lookup"><span data-stu-id="2770d-107">Definition</span></span>|  
 |---|---|  
-|`object`|<span data-ttu-id="d9fa5-108">必要項。</span><span class="sxs-lookup"><span data-stu-id="d9fa5-108">Required.</span></span> <span data-ttu-id="d9fa5-109">可查詢的集合。</span><span class="sxs-lookup"><span data-stu-id="d9fa5-109">A queryable collection.</span></span> <span data-ttu-id="d9fa5-110">也就是集合，實作<xref:System.Collections.Generic.IEnumerable%601>或<xref:System.Linq.IQueryable%601>。</span><span class="sxs-lookup"><span data-stu-id="d9fa5-110">That is, a collection that implements <xref:System.Collections.Generic.IEnumerable%601> or <xref:System.Linq.IQueryable%601>.</span></span>|  
-|<span data-ttu-id="d9fa5-111">(</span><span class="sxs-lookup"><span data-stu-id="d9fa5-111">(</span></span>|<span data-ttu-id="d9fa5-112">必要項。</span><span class="sxs-lookup"><span data-stu-id="d9fa5-112">Required.</span></span> <span data-ttu-id="d9fa5-113">表示索引子屬性的開頭。</span><span class="sxs-lookup"><span data-stu-id="d9fa5-113">Denotes the start of the indexer property.</span></span>|  
-|`index`|<span data-ttu-id="d9fa5-114">必要項。</span><span class="sxs-lookup"><span data-stu-id="d9fa5-114">Required.</span></span> <span data-ttu-id="d9fa5-115">整數運算式，指定集合中項目的以零為起始的位置。</span><span class="sxs-lookup"><span data-stu-id="d9fa5-115">An integer expression that specifies the zero-based position of an element of the collection.</span></span>|  
-|<span data-ttu-id="d9fa5-116">)</span><span class="sxs-lookup"><span data-stu-id="d9fa5-116">)</span></span>|<span data-ttu-id="d9fa5-117">必要項。</span><span class="sxs-lookup"><span data-stu-id="d9fa5-117">Required.</span></span> <span data-ttu-id="d9fa5-118">表示索引子屬性的結尾。</span><span class="sxs-lookup"><span data-stu-id="d9fa5-118">Denotes the end of the indexer property.</span></span>|  
+|`object`|<span data-ttu-id="2770d-108">必要。</span><span class="sxs-lookup"><span data-stu-id="2770d-108">Required.</span></span> <span data-ttu-id="2770d-109">可查詢的集合。</span><span class="sxs-lookup"><span data-stu-id="2770d-109">A queryable collection.</span></span> <span data-ttu-id="2770d-110">也就是集合，實作<xref:System.Collections.Generic.IEnumerable%601>或<xref:System.Linq.IQueryable%601>。</span><span class="sxs-lookup"><span data-stu-id="2770d-110">That is, a collection that implements <xref:System.Collections.Generic.IEnumerable%601> or <xref:System.Linq.IQueryable%601>.</span></span>|  
+|<span data-ttu-id="2770d-111">(</span><span class="sxs-lookup"><span data-stu-id="2770d-111">(</span></span>|<span data-ttu-id="2770d-112">必要。</span><span class="sxs-lookup"><span data-stu-id="2770d-112">Required.</span></span> <span data-ttu-id="2770d-113">表示索引子屬性的開頭。</span><span class="sxs-lookup"><span data-stu-id="2770d-113">Denotes the start of the indexer property.</span></span>|  
+|`index`|<span data-ttu-id="2770d-114">必要。</span><span class="sxs-lookup"><span data-stu-id="2770d-114">Required.</span></span> <span data-ttu-id="2770d-115">整數運算式，指定集合中項目的以零為起始的位置。</span><span class="sxs-lookup"><span data-stu-id="2770d-115">An integer expression that specifies the zero-based position of an element of the collection.</span></span>|  
+|<span data-ttu-id="2770d-116">)</span><span class="sxs-lookup"><span data-stu-id="2770d-116">)</span></span>|<span data-ttu-id="2770d-117">必要。</span><span class="sxs-lookup"><span data-stu-id="2770d-117">Required.</span></span> <span data-ttu-id="2770d-118">表示索引子屬性的結尾。</span><span class="sxs-lookup"><span data-stu-id="2770d-118">Denotes the end of the indexer property.</span></span>|  
   
-## <a name="return-value"></a><span data-ttu-id="d9fa5-119">傳回值</span><span class="sxs-lookup"><span data-stu-id="d9fa5-119">Return Value</span></span>  
- <span data-ttu-id="d9fa5-120">從指定的位置，集合中的物件或`Nothing`如果索引超出範圍。</span><span class="sxs-lookup"><span data-stu-id="d9fa5-120">The object from the specified location in the collection, or `Nothing` if the index is out of range.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2770d-119">傳回值</span><span class="sxs-lookup"><span data-stu-id="2770d-119">Return Value</span></span>  
+ <span data-ttu-id="2770d-120">從指定的位置，集合中的物件或`Nothing`如果索引超出範圍。</span><span class="sxs-lookup"><span data-stu-id="2770d-120">The object from the specified location in the collection, or `Nothing` if the index is out of range.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d9fa5-121">備註</span><span class="sxs-lookup"><span data-stu-id="d9fa5-121">Remarks</span></span>  
- <span data-ttu-id="d9fa5-122">您可以使用擴充索引子屬性來存取集合中的個別項目。</span><span class="sxs-lookup"><span data-stu-id="d9fa5-122">You can use the extension indexer property to access individual elements in a collection.</span></span> <span data-ttu-id="d9fa5-123">這個索引子屬性通常是 XML 軸屬性的輸出。</span><span class="sxs-lookup"><span data-stu-id="d9fa5-123">This indexer property is typically used on the output of XML axis properties.</span></span> <span data-ttu-id="d9fa5-124">XML 子代和 XML 子代 axis 屬性傳回的集合<xref:System.Xml.Linq.XElement>物件或屬性值。</span><span class="sxs-lookup"><span data-stu-id="d9fa5-124">The XML child and XML descendent axis properties return collections of <xref:System.Xml.Linq.XElement> objects or an attribute value.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2770d-121">備註</span><span class="sxs-lookup"><span data-stu-id="2770d-121">Remarks</span></span>  
+ <span data-ttu-id="2770d-122">您可以使用擴充索引子屬性來存取集合中的個別項目。</span><span class="sxs-lookup"><span data-stu-id="2770d-122">You can use the extension indexer property to access individual elements in a collection.</span></span> <span data-ttu-id="2770d-123">這個索引子屬性通常是 XML 軸屬性的輸出。</span><span class="sxs-lookup"><span data-stu-id="2770d-123">This indexer property is typically used on the output of XML axis properties.</span></span> <span data-ttu-id="2770d-124">XML 子代和 XML 子代 axis 屬性傳回的集合<xref:System.Xml.Linq.XElement>物件或屬性值。</span><span class="sxs-lookup"><span data-stu-id="2770d-124">The XML child and XML descendent axis properties return collections of <xref:System.Xml.Linq.XElement> objects or an attribute value.</span></span>  
   
- <span data-ttu-id="d9fa5-125">Visual Basic 編譯器會將呼叫中的擴充索引子屬性`ElementAtOrDefault`方法。</span><span class="sxs-lookup"><span data-stu-id="d9fa5-125">The Visual Basic compiler converts extension indexer properties to calls to the `ElementAtOrDefault` method.</span></span> <span data-ttu-id="d9fa5-126">不同於陣列索引子`ElementAtOrDefault`方法會傳回`Nothing`如果索引超出範圍。</span><span class="sxs-lookup"><span data-stu-id="d9fa5-126">Unlike an array indexer, the `ElementAtOrDefault` method returns `Nothing` if the index is out of range.</span></span> <span data-ttu-id="d9fa5-127">當您無法輕易判斷集合中的項目數，則此行為會有所幫助。</span><span class="sxs-lookup"><span data-stu-id="d9fa5-127">This behavior is useful when you cannot easily determine the number of elements in a collection.</span></span>  
+ <span data-ttu-id="2770d-125">Visual Basic 編譯器會將呼叫中的擴充索引子屬性`ElementAtOrDefault`方法。</span><span class="sxs-lookup"><span data-stu-id="2770d-125">The Visual Basic compiler converts extension indexer properties to calls to the `ElementAtOrDefault` method.</span></span> <span data-ttu-id="2770d-126">不同於陣列索引子`ElementAtOrDefault`方法會傳回`Nothing`如果索引超出範圍。</span><span class="sxs-lookup"><span data-stu-id="2770d-126">Unlike an array indexer, the `ElementAtOrDefault` method returns `Nothing` if the index is out of range.</span></span> <span data-ttu-id="2770d-127">當您無法輕易判斷集合中的項目數，則此行為會有所幫助。</span><span class="sxs-lookup"><span data-stu-id="2770d-127">This behavior is useful when you cannot easily determine the number of elements in a collection.</span></span>  
   
- <span data-ttu-id="d9fa5-128">這個索引子屬性就像延伸模組屬性實作的集合<xref:System.Collections.Generic.IEnumerable%601>或<xref:System.Linq.IQueryable%601>： 集合並沒有索引子或預設屬性時，才使用它。</span><span class="sxs-lookup"><span data-stu-id="d9fa5-128">This indexer property is like an extension property for collections that implement <xref:System.Collections.Generic.IEnumerable%601> or <xref:System.Linq.IQueryable%601>: it is used only if the collection does not have an indexer or a default property.</span></span>  
+ <span data-ttu-id="2770d-128">這個索引子屬性就像延伸模組屬性實作的集合<xref:System.Collections.Generic.IEnumerable%601>或<xref:System.Linq.IQueryable%601>： 集合並沒有索引子或預設屬性時，才使用它。</span><span class="sxs-lookup"><span data-stu-id="2770d-128">This indexer property is like an extension property for collections that implement <xref:System.Collections.Generic.IEnumerable%601> or <xref:System.Linq.IQueryable%601>: it is used only if the collection does not have an indexer or a default property.</span></span>  
   
- <span data-ttu-id="d9fa5-129">若要存取的集合中的第一個元素的值<xref:System.Xml.Linq.XElement>或是<xref:System.Xml.Linq.XAttribute>物件，您可以使用 XML`Value`屬性。</span><span class="sxs-lookup"><span data-stu-id="d9fa5-129">To access the value of the first element in a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XAttribute> objects, you can use the XML `Value` property.</span></span> <span data-ttu-id="d9fa5-130">如需詳細資訊，請參閱 < [XML Value 屬性](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)。</span><span class="sxs-lookup"><span data-stu-id="d9fa5-130">For more information, see [XML Value Property](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).</span></span>  
+ <span data-ttu-id="2770d-129">若要存取的集合中的第一個元素的值<xref:System.Xml.Linq.XElement>或是<xref:System.Xml.Linq.XAttribute>物件，您可以使用 XML`Value`屬性。</span><span class="sxs-lookup"><span data-stu-id="2770d-129">To access the value of the first element in a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XAttribute> objects, you can use the XML `Value` property.</span></span> <span data-ttu-id="2770d-130">如需詳細資訊，請參閱 < [XML Value 屬性](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)。</span><span class="sxs-lookup"><span data-stu-id="2770d-130">For more information, see [XML Value Property](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d9fa5-131">範例</span><span class="sxs-lookup"><span data-stu-id="d9fa5-131">Example</span></span>  
- <span data-ttu-id="d9fa5-132">下列範例示範如何使用擴充索引子來存取集合中的第二個的子節點<xref:System.Xml.Linq.XElement>物件。</span><span class="sxs-lookup"><span data-stu-id="d9fa5-132">The following example shows how to use the extension indexer to access the second child node in a collection of <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="d9fa5-133">集合會使用子軸屬性，它會取得所有子項目來存取`phone`在`contact`物件。</span><span class="sxs-lookup"><span data-stu-id="d9fa5-133">The collection is accessed by using the child axis property, which gets all child elements named `phone` in the `contact` object.</span></span>  
+## <a name="example"></a><span data-ttu-id="2770d-131">範例</span><span class="sxs-lookup"><span data-stu-id="2770d-131">Example</span></span>  
+ <span data-ttu-id="2770d-132">下列範例示範如何使用擴充索引子來存取集合中的第二個的子節點<xref:System.Xml.Linq.XElement>物件。</span><span class="sxs-lookup"><span data-stu-id="2770d-132">The following example shows how to use the extension indexer to access the second child node in a collection of <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="2770d-133">集合會使用子軸屬性，它會取得所有子項目來存取`phone`在`contact`物件。</span><span class="sxs-lookup"><span data-stu-id="2770d-133">The collection is accessed by using the child axis property, which gets all child elements named `phone` in the `contact` object.</span></span>  
   
  [!code-vb[VbXMLSamples#24](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/extension-indexer-property_1.vb)]  
   
- <span data-ttu-id="d9fa5-134">此程式碼顯示下列文字：</span><span class="sxs-lookup"><span data-stu-id="d9fa5-134">This code displays the following text:</span></span>  
+ <span data-ttu-id="2770d-134">此程式碼顯示下列文字：</span><span class="sxs-lookup"><span data-stu-id="2770d-134">This code displays the following text:</span></span>  
   
  `Second phone number: 425-555-0145`  
   
-## <a name="see-also"></a><span data-ttu-id="d9fa5-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d9fa5-135">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="2770d-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2770d-135">See Also</span></span>  
  <xref:System.Xml.Linq.XElement>  
- [<span data-ttu-id="d9fa5-136">XML 軸屬性</span><span class="sxs-lookup"><span data-stu-id="d9fa5-136">XML Axis Properties</span></span>](../../../visual-basic/language-reference/xml-axis/index.md)  
- [<span data-ttu-id="d9fa5-137">XML 常值</span><span class="sxs-lookup"><span data-stu-id="d9fa5-137">XML Literals</span></span>](../../../visual-basic/language-reference/xml-literals/index.md)  
- [<span data-ttu-id="d9fa5-138">在 Visual Basic 中建立 XML</span><span class="sxs-lookup"><span data-stu-id="d9fa5-138">Creating XML in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [<span data-ttu-id="d9fa5-139">XML Value 屬性</span><span class="sxs-lookup"><span data-stu-id="d9fa5-139">XML Value Property</span></span>](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
+ [<span data-ttu-id="2770d-136">XML 軸屬性</span><span class="sxs-lookup"><span data-stu-id="2770d-136">XML Axis Properties</span></span>](../../../visual-basic/language-reference/xml-axis/index.md)  
+ [<span data-ttu-id="2770d-137">XML 常值</span><span class="sxs-lookup"><span data-stu-id="2770d-137">XML Literals</span></span>](../../../visual-basic/language-reference/xml-literals/index.md)  
+ [<span data-ttu-id="2770d-138">在 Visual Basic 中建立 XML</span><span class="sxs-lookup"><span data-stu-id="2770d-138">Creating XML in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
+ [<span data-ttu-id="2770d-139">XML Value 屬性</span><span class="sxs-lookup"><span data-stu-id="2770d-139">XML Value Property</span></span>](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)

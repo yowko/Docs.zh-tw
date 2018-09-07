@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fcddca2e435a3f5bf4b8d083784613254d9801a4
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786176"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43880311"
 ---
-# <a name="getpropertyqualifierset-function"></a><span data-ttu-id="5b296-103">GetPropertyQualifierSet 函式</span><span class="sxs-lookup"><span data-stu-id="5b296-103">GetPropertyQualifierSet function</span></span>
-<span data-ttu-id="5b296-104">擷取特定屬性的限定詞集合。</span><span class="sxs-lookup"><span data-stu-id="5b296-104">Retrieves the qualifier set for a particular property.</span></span>
+# <a name="getpropertyqualifierset-function"></a><span data-ttu-id="8c39f-103">GetPropertyQualifierSet 函式</span><span class="sxs-lookup"><span data-stu-id="8c39f-103">GetPropertyQualifierSet function</span></span>
+<span data-ttu-id="8c39f-104">擷取特定屬性的限定詞集合。</span><span class="sxs-lookup"><span data-stu-id="8c39f-104">Retrieves the qualifier set for a particular property.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
-## <a name="syntax"></a><span data-ttu-id="5b296-105">語法</span><span class="sxs-lookup"><span data-stu-id="5b296-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8c39f-105">語法</span><span class="sxs-lookup"><span data-stu-id="8c39f-105">Syntax</span></span>  
   
 ```  
 HRESULT GetPropertyQualifierSet (
@@ -39,49 +39,49 @@ HRESULT GetPropertyQualifierSet (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="5b296-106">參數</span><span class="sxs-lookup"><span data-stu-id="5b296-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="8c39f-106">參數</span><span class="sxs-lookup"><span data-stu-id="8c39f-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="5b296-107">[in]未使用此參數。</span><span class="sxs-lookup"><span data-stu-id="5b296-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="8c39f-107">[in]未使用此參數。</span><span class="sxs-lookup"><span data-stu-id="8c39f-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="5b296-108">[in]指標[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)執行個體。</span><span class="sxs-lookup"><span data-stu-id="5b296-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+<span data-ttu-id="8c39f-108">[in]指標[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)執行個體。</span><span class="sxs-lookup"><span data-stu-id="8c39f-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
 `wszMethod`  
-<span data-ttu-id="5b296-109">[in]屬性名稱。</span><span class="sxs-lookup"><span data-stu-id="5b296-109">[in] The property  name.</span></span> <span data-ttu-id="5b296-110">`wszProperty` 必須指向有效`LPCWSTR`。</span><span class="sxs-lookup"><span data-stu-id="5b296-110">`wszProperty` must point to a valid `LPCWSTR`.</span></span> 
+<span data-ttu-id="8c39f-109">[in]屬性名稱。</span><span class="sxs-lookup"><span data-stu-id="8c39f-109">[in] The property  name.</span></span> <span data-ttu-id="8c39f-110">`wszProperty` 必須指向有效`LPCWSTR`。</span><span class="sxs-lookup"><span data-stu-id="8c39f-110">`wszProperty` must point to a valid `LPCWSTR`.</span></span> 
 
 `ppQualSet`  
-<span data-ttu-id="5b296-111">[out]接收的介面指標，可讓您存取屬性的限定詞。</span><span class="sxs-lookup"><span data-stu-id="5b296-111">[out] Receives the interface pointer that allows access to the qualifiers of the property.</span></span> <span data-ttu-id="5b296-112">`ppQualSet` 不可以是 `null`。</span><span class="sxs-lookup"><span data-stu-id="5b296-112">`ppQualSet` cannot be `null`.</span></span> <span data-ttu-id="5b296-113">如果錯誤時，不會傳回新的物件，而指標會設定為指向`null`。</span><span class="sxs-lookup"><span data-stu-id="5b296-113">If an error occurs, a new object is not returned, and the pointer is set to point to `null`.</span></span> 
+<span data-ttu-id="8c39f-111">[out]接收的介面指標，可讓您存取屬性的限定詞。</span><span class="sxs-lookup"><span data-stu-id="8c39f-111">[out] Receives the interface pointer that allows access to the qualifiers of the property.</span></span> <span data-ttu-id="8c39f-112">`ppQualSet` 不可以是 `null`。</span><span class="sxs-lookup"><span data-stu-id="8c39f-112">`ppQualSet` cannot be `null`.</span></span> <span data-ttu-id="8c39f-113">如果錯誤時，不會傳回新的物件，而指標會設定為指向`null`。</span><span class="sxs-lookup"><span data-stu-id="8c39f-113">If an error occurs, a new object is not returned, and the pointer is set to point to `null`.</span></span> 
 
-## <a name="return-value"></a><span data-ttu-id="5b296-114">傳回值</span><span class="sxs-lookup"><span data-stu-id="5b296-114">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="8c39f-114">傳回值</span><span class="sxs-lookup"><span data-stu-id="8c39f-114">Return value</span></span>
 
-<span data-ttu-id="5b296-115">此函式所傳回的下列值中定義*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼：</span><span class="sxs-lookup"><span data-stu-id="5b296-115">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="8c39f-115">此函式所傳回的下列值中定義*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼：</span><span class="sxs-lookup"><span data-stu-id="8c39f-115">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="5b296-116">常數</span><span class="sxs-lookup"><span data-stu-id="5b296-116">Constant</span></span>  |<span data-ttu-id="5b296-117">值</span><span class="sxs-lookup"><span data-stu-id="5b296-117">Value</span></span>  |<span data-ttu-id="5b296-118">描述</span><span class="sxs-lookup"><span data-stu-id="5b296-118">Description</span></span>  |
+|<span data-ttu-id="8c39f-116">常數</span><span class="sxs-lookup"><span data-stu-id="8c39f-116">Constant</span></span>  |<span data-ttu-id="8c39f-117">值</span><span class="sxs-lookup"><span data-stu-id="8c39f-117">Value</span></span>  |<span data-ttu-id="8c39f-118">描述</span><span class="sxs-lookup"><span data-stu-id="8c39f-118">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | <span data-ttu-id="5b296-119">0x80041001</span><span class="sxs-lookup"><span data-stu-id="5b296-119">0x80041001</span></span> | <span data-ttu-id="5b296-120">已有一般失敗。</span><span class="sxs-lookup"><span data-stu-id="5b296-120">There has been a general failure.</span></span> |
-| `WBEM_E_NOT_FOUND` | <span data-ttu-id="5b296-121">而會收到 0x80041002</span><span class="sxs-lookup"><span data-stu-id="5b296-121">0x80041002</span></span> | <span data-ttu-id="5b296-122">指定的方法不存在。</span><span class="sxs-lookup"><span data-stu-id="5b296-122">The specified method does not exist.</span></span> |
-|`WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="5b296-123">0x80041006</span><span class="sxs-lookup"><span data-stu-id="5b296-123">0x80041006</span></span> | <span data-ttu-id="5b296-124">沒有足夠的記憶體可完成此作業。</span><span class="sxs-lookup"><span data-stu-id="5b296-124">Not enough memory is available to complete the operation.</span></span> |
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="5b296-125">0x80041008</span><span class="sxs-lookup"><span data-stu-id="5b296-125">0x80041008</span></span> | <span data-ttu-id="5b296-126">參數是`null`。</span><span class="sxs-lookup"><span data-stu-id="5b296-126">A parameter is `null`.</span></span> |
-| `WBEM_E_SYSTEM_PROPERTY` | <span data-ttu-id="5b296-127">0x80041030</span><span class="sxs-lookup"><span data-stu-id="5b296-127">0x80041030</span></span> | <span data-ttu-id="5b296-128">函式會嘗試取得系統屬性的限定詞。</span><span class="sxs-lookup"><span data-stu-id="5b296-128">The function attempts to get qualifiers of a system property.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="5b296-129">0</span><span class="sxs-lookup"><span data-stu-id="5b296-129">0</span></span> | <span data-ttu-id="5b296-130">函式呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="5b296-130">The function call was successful.</span></span>  |
+|`WBEM_E_FAILED` | <span data-ttu-id="8c39f-119">0x80041001</span><span class="sxs-lookup"><span data-stu-id="8c39f-119">0x80041001</span></span> | <span data-ttu-id="8c39f-120">已有一般失敗。</span><span class="sxs-lookup"><span data-stu-id="8c39f-120">There has been a general failure.</span></span> |
+| `WBEM_E_NOT_FOUND` | <span data-ttu-id="8c39f-121">而會收到 0x80041002</span><span class="sxs-lookup"><span data-stu-id="8c39f-121">0x80041002</span></span> | <span data-ttu-id="8c39f-122">指定的方法不存在。</span><span class="sxs-lookup"><span data-stu-id="8c39f-122">The specified method does not exist.</span></span> |
+|`WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="8c39f-123">0x80041006</span><span class="sxs-lookup"><span data-stu-id="8c39f-123">0x80041006</span></span> | <span data-ttu-id="8c39f-124">沒有足夠的記憶體可完成此作業。</span><span class="sxs-lookup"><span data-stu-id="8c39f-124">Not enough memory is available to complete the operation.</span></span> |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="8c39f-125">0x80041008</span><span class="sxs-lookup"><span data-stu-id="8c39f-125">0x80041008</span></span> | <span data-ttu-id="8c39f-126">參數是`null`。</span><span class="sxs-lookup"><span data-stu-id="8c39f-126">A parameter is `null`.</span></span> |
+| `WBEM_E_SYSTEM_PROPERTY` | <span data-ttu-id="8c39f-127">0x80041030</span><span class="sxs-lookup"><span data-stu-id="8c39f-127">0x80041030</span></span> | <span data-ttu-id="8c39f-128">函式會嘗試取得系統屬性的限定詞。</span><span class="sxs-lookup"><span data-stu-id="8c39f-128">The function attempts to get qualifiers of a system property.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="8c39f-129">0</span><span class="sxs-lookup"><span data-stu-id="8c39f-129">0</span></span> | <span data-ttu-id="8c39f-130">函式呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="8c39f-130">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="5b296-131">備註</span><span class="sxs-lookup"><span data-stu-id="5b296-131">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="8c39f-131">備註</span><span class="sxs-lookup"><span data-stu-id="8c39f-131">Remarks</span></span>
 
-<span data-ttu-id="5b296-132">此函式會包裝在呼叫[IWbemClassObject::GetPropertyQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyqualifierset)方法。</span><span class="sxs-lookup"><span data-stu-id="5b296-132">This function wraps a call to the [IWbemClassObject::GetPropertyQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyqualifierset) method.</span></span> 
+<span data-ttu-id="8c39f-132">此函式會包裝在呼叫[IWbemClassObject::GetPropertyQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyqualifierset)方法。</span><span class="sxs-lookup"><span data-stu-id="8c39f-132">This function wraps a call to the [IWbemClassObject::GetPropertyQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyqualifierset) method.</span></span> 
 
-<span data-ttu-id="5b296-133">只有當目前的物件是 CIM 類別定義時，才支援此函式的呼叫。</span><span class="sxs-lookup"><span data-stu-id="5b296-133">A call to this function is supported only if the current object is a CIM class definition.</span></span> <span data-ttu-id="5b296-134">方法操作不適用於[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ponters 指向 CIM 執行個體。</span><span class="sxs-lookup"><span data-stu-id="5b296-134">Method manipulation is not available for [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ponters that point to CIM instances.</span></span>
+<span data-ttu-id="8c39f-133">只有當目前的物件是 CIM 類別定義時，才支援此函式的呼叫。</span><span class="sxs-lookup"><span data-stu-id="8c39f-133">A call to this function is supported only if the current object is a CIM class definition.</span></span> <span data-ttu-id="8c39f-134">方法操作不適用於[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ponters 指向 CIM 執行個體。</span><span class="sxs-lookup"><span data-stu-id="8c39f-134">Method manipulation is not available for [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ponters that point to CIM instances.</span></span>
 
-<span data-ttu-id="5b296-135">因為每一種方法可能有它自己的限定詞[IWbemQualifierSet 指標](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)可讓呼叫端新增、 編輯或刪除這些限定詞。</span><span class="sxs-lookup"><span data-stu-id="5b296-135">Because each method may have its own qualifiers, the [IWbemQualifierSet pointer](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) lets the caller add, edit, or delete these qualifiers.</span></span>
+<span data-ttu-id="8c39f-135">因為每一種方法可能有它自己的限定詞[IWbemQualifierSet 指標](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)可讓呼叫端新增、 編輯或刪除這些限定詞。</span><span class="sxs-lookup"><span data-stu-id="8c39f-135">Because each method may have its own qualifiers, the [IWbemQualifierSet pointer](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) lets the caller add, edit, or delete these qualifiers.</span></span>
 
-<span data-ttu-id="5b296-136">由於系統內容不有任何限定詞，則函數會傳回`WBEM_E_SYSTEM_PROPERTY`如果您嘗試取得[IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)指標是否為系統屬性。</span><span class="sxs-lookup"><span data-stu-id="5b296-136">Because system properties have no qualifiers, the function returns `WBEM_E_SYSTEM_PROPERTY` if you attempt to obtain a [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) pointer for a system property.</span></span>
+<span data-ttu-id="8c39f-136">由於系統內容不有任何限定詞，則函數會傳回`WBEM_E_SYSTEM_PROPERTY`如果您嘗試取得[IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)指標是否為系統屬性。</span><span class="sxs-lookup"><span data-stu-id="8c39f-136">Because system properties have no qualifiers, the function returns `WBEM_E_SYSTEM_PROPERTY` if you attempt to obtain a [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) pointer for a system property.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="5b296-137">需求</span><span class="sxs-lookup"><span data-stu-id="5b296-137">Requirements</span></span>  
-<span data-ttu-id="5b296-138">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5b296-138">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8c39f-137">需求</span><span class="sxs-lookup"><span data-stu-id="8c39f-137">Requirements</span></span>  
+<span data-ttu-id="8c39f-138">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8c39f-138">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5b296-139">**標頭：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="5b296-139">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="8c39f-139">**標頭：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="8c39f-139">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="5b296-140">**.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="5b296-140">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="8c39f-140">**.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="8c39f-140">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5b296-141">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5b296-141">See also</span></span>  
-[<span data-ttu-id="5b296-142">WMI 和效能計數器 （Unmanaged API 參考）</span><span class="sxs-lookup"><span data-stu-id="5b296-142">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="8c39f-141">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8c39f-141">See also</span></span>  
+[<span data-ttu-id="8c39f-142">WMI 和效能計數器 （Unmanaged API 參考）</span><span class="sxs-lookup"><span data-stu-id="8c39f-142">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
