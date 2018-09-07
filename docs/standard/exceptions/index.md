@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a278940528966e32646a3551b4c133223de9746e
-ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
+ms.openlocfilehash: 263e6394a57ec3e7ef00eb79671d9b8ac47e724f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298340"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "43883777"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>在 .NET 中處理和擲回例外狀況
 
@@ -60,13 +60,13 @@ ms.locfileid: "36298340"
 
 ## <a name="see-also"></a>另請參閱
 
-[例外狀況類別和屬性](exception-class-and-properties.md)  
-[操作說明：使用 Try/Catch 區塊攔截例外狀況](how-to-use-the-try-catch-block-to-catch-exceptions.md)  
-[操作說明：使用 Catch 區塊中的特定例外狀況](how-to-use-specific-exceptions-in-a-catch-block.md)  
-[操作說明：明確擲回例外狀況](how-to-explicitly-throw-exceptions.md)  
-[操作說明：建立使用者定義的例外狀況](how-to-create-user-defined-exceptions.md)  
-[使用使用者篩選的例外狀況處理常式](using-user-filtered-exception-handlers.md)  
-[操作說明：使用 Finally 區塊](how-to-use-finally-blocks.md)  
-[處理 COM Interop 例外狀況](handling-com-interop-exceptions.md)  
-[例外狀況的最佳做法](best-practices-for-exceptions.md)  
-[每個開發人員針對執行階段中例外狀況所需知道的概念](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md) \(英文\)。
+- [例外狀況類別和屬性](exception-class-and-properties.md)  
+- [操作說明：使用 Try/Catch 區塊攔截例外狀況](how-to-use-the-try-catch-block-to-catch-exceptions.md)  
+- [操作說明：使用 Catch 區塊中的特定例外狀況](how-to-use-specific-exceptions-in-a-catch-block.md)  
+- [操作說明：明確擲回例外狀況](how-to-explicitly-throw-exceptions.md)  
+- [操作說明：建立使用者定義的例外狀況](how-to-create-user-defined-exceptions.md)  
+- [使用使用者篩選的例外狀況處理常式](using-user-filtered-exception-handlers.md)  
+- [操作說明：使用 Finally 區塊](how-to-use-finally-blocks.md)  
+- [處理 COM Interop 例外狀況](handling-com-interop-exceptions.md)  
+- [例外狀況的最佳做法](best-practices-for-exceptions.md)  
+- [每個開發人員針對執行階段中例外狀況所需知道的概念](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md) \(英文\)。

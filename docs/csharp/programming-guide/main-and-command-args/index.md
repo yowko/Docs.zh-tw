@@ -12,12 +12,12 @@ helpviewer_keywords:
 - command line [C#], arguments
 - command-line arguments [C#], Main method
 ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
-ms.openlocfilehash: 03d6e7185a0a16589fb612724be52ce51e813173
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 144d03edf28464717430bd0ae83db637578d8296
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43384503"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "43892252"
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() 和命令列引數 (C# 程式設計指南)
 
@@ -41,8 +41,9 @@ ms.locfileid: "43384503"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>另請參閱
-[使用 csc.exe 建置命令列](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
-[C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-[方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-[C# 程式內部](../../../csharp/programming-guide/inside-a-program/index.md)  
+## <a name="see-also"></a>請參閱
+
+- [使用 csc.exe 建置命令列](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [C# 程式內部](../../../csharp/programming-guide/inside-a-program/index.md)  

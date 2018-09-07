@@ -1,12 +1,12 @@
 ---
 title: 屬性 (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: fe94f0ee778f14581fd7949f705cc22f12058b27
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: c33d93a4af91e0c61546e8d51ab470f2889c095c
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956068"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892382"
 ---
 # <a name="attributes-c"></a>屬性 (C#)
 
@@ -123,9 +123,9 @@ using System.Reflection;
 - [常見屬性 (C#)](common-attributes.md)  
 - [呼叫端資訊 (C#)](../caller-information.md)  
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
- [C# 程式設計指南](../../index.md)  
- [反映 (C#)](../reflection.md)  
- [屬性](../../../../standard/attributes/index.md)  
- [在 C# 中使用屬性](../../../tutorials/attributes.md)  
+- [C# 程式設計指南](../../index.md)  
+- [反映 (C#)](../reflection.md)  
+- [屬性](../../../../standard/attributes/index.md)  
+- [在 C# 中使用屬性](../../../tutorials/attributes.md)  

@@ -10,16 +10,16 @@ ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: be7711fdbe9b2cb45d618e685a6f1ae2a941aa29
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fcc7782b5e2ad2fae876c2b3143caf367332ed5a
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399158"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777960"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>UI 自動化和 Microsoft Active Accessibility
 > [!NOTE]
->  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱 < [Windows Automation API： 使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] 是讓應用程式可供存取的早期解決方案。 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 是 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] 的新式協助工具模型，能滿足輔助科技產品及自動化測試工具的需求。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 透過 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]提供許多改善。  
   
@@ -27,11 +27,11 @@ ms.locfileid: "33399158"
   
 <a name="Programming_Languages_compare"></a>   
 ## <a name="programming-languages"></a>程式語言：  
-<[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 根據[!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)]雙重介面支援，所以 C/c + + 中的 可程式化[!INCLUDE[TLA#tla_vb6](../../../includes/tlasharptla-vb6-md.md)]，以及指令碼語言。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] （包括標準控制項的用戶端提供者程式庫） 以 managed 程式碼，並使用 C# 或 Visual BASIC.NET 最容易設計使用者介面自動化用戶端應用程式。 使用 Managed 程式碼或 C/C++ 皆可撰寫使用者介面自動化提供者，亦即介面實作。  
+<[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 根據[!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)]雙重介面，支援，因此 C/c + + 中的 可程式化[!INCLUDE[TLA#tla_vb6](../../../includes/tlasharptla-vb6-md.md)]，以及指令碼語言。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] （包括標準控制項的用戶端提供者程式庫） 以 managed 程式碼，以及使用者介面自動化用戶端應用程式最容易進行程式設計使用 C# 或 Visual Basic.NET。 使用 Managed 程式碼或 C/C++ 皆可撰寫使用者介面自動化提供者，亦即介面實作。  
   
 <a name="Support_in_Windows_Presentation_Foundation_"></a>   
 ## <a name="support-in-windows-presentation-foundation"></a>Windows Presentation Foundation 的支援  
- Windows Presentation Foundation (WPF) 是新的模型，來建立使用者介面。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 項目不包含 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]的原生支援；但是支援具有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]用戶端橋接支援的 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 只有特別為 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 撰寫的用戶端可完整利用 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]協助工具的功能，例如豐富的文字支援。  
+ Windows Presentation Foundation (WPF) 是新的模型來建立使用者介面。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 項目不包含 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]的原生支援；但是支援具有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]用戶端橋接支援的 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 只有特別為 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 撰寫的用戶端可完整利用 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]協助工具的功能，例如豐富的文字支援。  
   
 <a name="Servers_and_Clients_compare"></a>   
 ## <a name="servers-and-clients"></a>伺服器和用戶端  
@@ -57,7 +57,7 @@ ms.locfileid: "33399158"
   
  在 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]中，於兩個項目間的導覽方式可以是空間式 (例如移至位於畫面左側的的項目)、邏輯式 (例如移至下一個功能表項目，或對話方塊內依索引標籤排序的下一個項目) 或階層式 (例如移至容器中第一個子系，或從子系移至其父系)。 階層式導覽相當複雜，因為事實上子項目不一定是實作 `IAccessible`的物件。  
   
- 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 項目都是支援相同基本功能的 <xref:System.Windows.Automation.AutomationElement> 。 (從提供者的觀點來看，它們是實作繼承自介面的物件<xref:System.Windows.Automation.Provider.IRawElementProviderSimple>。)導覽主要為階層式：從父系到子系，以及同層級之間。 (在同層級間的導覽帶有邏輯項目，因為可能會遵循索引標籤順序。)您可以使用瀏覽任何起始點，從任何已篩選的樹狀目錄中，檢視使用<xref:System.Windows.Automation.TreeWalker>類別。 您也可以使用 <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> 和 <xref:System.Windows.Automation.AutomationElement.FindAll%2A>導覽到特定子系；例如，您可以非常輕易地截取支援特定控制項模式的對話方塊內所有項目。  
+ 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 項目都是支援相同基本功能的 <xref:System.Windows.Automation.AutomationElement> 。 (從提供者的觀點來看，它們是物件，可實作介面繼承自<xref:System.Windows.Automation.Provider.IRawElementProviderSimple>。)導覽主要為階層式：從父系到子系，以及同層級之間。 (在同層級間的導覽帶有邏輯項目，因為可能會遵循索引標籤順序。)您可以從瀏覽任何起始點，使用任何已篩選的樹狀目錄中，檢視使用<xref:System.Windows.Automation.TreeWalker>類別。 您也可以使用 <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> 和 <xref:System.Windows.Automation.AutomationElement.FindAll%2A>導覽到特定子系；例如，您可以非常輕易地截取支援特定控制項模式的對話方塊內所有項目。  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 中的導覽比 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]中的導覽更具一致性。 下拉式清單及彈出視窗等部分項目會在 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 樹狀結構中出現兩次，從這類項目進行導覽也可能會產生意外的結果。 事實上，要為 Rebar 控制項正確實作 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 是不可能的。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 允許重設父代及重新調整位置，因此儘管階層受到視窗擁有權強制，項目仍可放置在樹狀中任何位置。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "33399158"
 |ROLE_SYSTEM_LIST|資料格|  
 |ROLE_SYSTEM_LISTITEM|資料項目|  
 |ROLE_SYSTEM_DOCUMENT|文件|  
-|ROLE_SYSTEM_TEXT|Edit|  
+|ROLE_SYSTEM_TEXT|編輯|  
 |ROLE_SYSTEM_GROUPING|群組|  
 |ROLE_SYSTEM_LIST|頁首|  
 |ROLE_SYSTEM_COLUMNHEADER|標頭項目|  
@@ -104,7 +104,7 @@ ms.locfileid: "33399158"
 |ROLE_SYSTEM_PAGETABLIST|索引標籤|  
 |ROLE_SYSTEM_PAGETAB|索引標籤項目|  
 |ROLE_SYSTEM_TABLE|資料表|  
-|ROLE_SYSTEM_STATICTEXT|Text|  
+|ROLE_SYSTEM_STATICTEXT|文字|  
 |ROLE_SYSTEM_INDICATOR|Thumb|  
 |ROLE_SYSTEM_TITLEBAR|標題列|  
 |ROLE_SYSTEM_TOOLBAR|工具列|  

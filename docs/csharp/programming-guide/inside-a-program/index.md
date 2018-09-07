@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual C#, program structure
 ms.assetid: 9551354b-33f0-4e11-bbf0-1a35e3702b22
 ms.openlocfilehash: a39a7dd3ebdbb7483f0b69169c8e00382f581788
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562587"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43867136"
 ---
 # <a name="inside-a-c-program"></a>C# 程式內部
 本節討論 C# 程式的一般結構，並以標準 "Hello, World!" 為例。  
