@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
 ms.openlocfilehash: 333154f26a575886f19a914ce2f91beebd6be49e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43742512"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042578"
 ---
 # <a name="table-valued-parameters"></a>資料表值參數
 資料表值參數提供封送處理的簡易方式，可將用戶端應用程式的多個資料列封送處理到 SQL Server，而不需多次來回存取或使用特殊的伺服器端邏輯來處理資料。 您可以使用資料表值參數，在用戶端應用程式中封裝資料列，以及在單一參數型命令 (Parameterized Command) 中，將資料傳送至伺服器。 內送資料列會儲存在資料表變數中，然後您可以使用 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 來操作此變數。  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
 ms.openlocfilehash: ac789ba81d728c067be515479e749440bb5809d4
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779389"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042451"
 ---
 # <a name="trusted-subsystem"></a>受信任的子系統
 用戶端會存取分散在網路上的一或多個 Web 服務。 Web 服務的設計會將對其他資源 (例如資料庫或其他 Web 服務) 的存取封裝在 Web 服務的商務邏輯中。 這些資源必須受到保護，以避免未經授權的存取。 下圖說明受信任的子系統處理序。  

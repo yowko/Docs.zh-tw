@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
 ms.openlocfilehash: 24dd4ca5663f2e6d98ed3888f07329724fdc353d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43535470"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042539"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath XAML 語法
 <xref:System.Windows.PropertyPath>物件支援複雜的內嵌[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]語法來設定各種屬性採用<xref:System.Windows.PropertyPath>做為其值的型別。 本主題說明<xref:System.Windows.PropertyPath>套用至繫結和動畫語法的語法。  

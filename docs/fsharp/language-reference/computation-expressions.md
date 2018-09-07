@@ -3,11 +3,11 @@ title: 計算運算式 (F#)
 description: '了解如何建立方便的語法，撰寫 F #，可以進行排序和合併使用控制流程建構和繫結中的計算。'
 ms.date: 07/27/2018
 ms.openlocfilehash: ce81af7966a436b3973de277fb2a78ec06f4c471
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43800906"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44048266"
 ---
 # <a name="computation-expressions"></a>計算運算式
 

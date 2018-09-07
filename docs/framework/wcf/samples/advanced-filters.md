@@ -3,11 +3,11 @@ title: 進階篩選
 ms.date: 03/30/2017
 ms.assetid: 8d81590f-e036-4f96-824a-4a187f462764
 ms.openlocfilehash: 7022384e8abe93f4276eec48785b3243ed926438
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: HT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43805438"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042591"
 ---
 # <a name="advanced-filters"></a>進階篩選
 這個範例會示範 Windows Communication Foundation (WCF) 的路由服務。 路由服務是一種 WCF 元件，可讓您更輕鬆地在您的應用程式中加入內容為基礎的路由器。 此範例會調整標準的 WCF 計算機範例，以便使用路由服務進行通訊。 此範例示範如何透過訊息篩選與訊息篩選資料表的使用，定義以內容為基礎的路由邏輯。  
