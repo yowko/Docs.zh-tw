@@ -13,67 +13,67 @@ helpviewer_keywords:
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
 ms.openlocfilehash: 88707ed6c0e3e5a0ecf1f0812d31634bbdca3123
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745242"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44066673"
 ---
-# <a name="group-by-clause-visual-basic"></a><span data-ttu-id="af6e2-102">Group By 子句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="af6e2-102">Group By Clause (Visual Basic)</span></span>
-<span data-ttu-id="af6e2-103">群組查詢結果的項目。</span><span class="sxs-lookup"><span data-stu-id="af6e2-103">Groups the elements of a query result.</span></span> <span data-ttu-id="af6e2-104">也可用來將彙總函式套用至每個群組。</span><span class="sxs-lookup"><span data-stu-id="af6e2-104">Can also be used to apply aggregate functions to each group.</span></span> <span data-ttu-id="af6e2-105">群組作業是根據一個或多個索引鍵。</span><span class="sxs-lookup"><span data-stu-id="af6e2-105">The grouping operation is based on one or more keys.</span></span>  
+# <a name="group-by-clause-visual-basic"></a><span data-ttu-id="5a871-102">Group By 子句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5a871-102">Group By Clause (Visual Basic)</span></span>
+<span data-ttu-id="5a871-103">群組查詢結果的項目。</span><span class="sxs-lookup"><span data-stu-id="5a871-103">Groups the elements of a query result.</span></span> <span data-ttu-id="5a871-104">也可用來將彙總函式套用至每個群組。</span><span class="sxs-lookup"><span data-stu-id="5a871-104">Can also be used to apply aggregate functions to each group.</span></span> <span data-ttu-id="5a871-105">群組作業是根據一個或多個索引鍵。</span><span class="sxs-lookup"><span data-stu-id="5a871-105">The grouping operation is based on one or more keys.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="af6e2-106">語法</span><span class="sxs-lookup"><span data-stu-id="af6e2-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5a871-106">語法</span><span class="sxs-lookup"><span data-stu-id="5a871-106">Syntax</span></span>  
   
 ```  
 Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]  
   Into aggregateList  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="af6e2-107">組件</span><span class="sxs-lookup"><span data-stu-id="af6e2-107">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="5a871-107">組件</span><span class="sxs-lookup"><span data-stu-id="5a871-107">Parts</span></span>  
   
--   <span data-ttu-id="af6e2-108">`listField1`, `listField2`</span><span class="sxs-lookup"><span data-stu-id="af6e2-108">`listField1`, `listField2`</span></span>  
+-   <span data-ttu-id="5a871-108">`listField1`, `listField2`</span><span class="sxs-lookup"><span data-stu-id="5a871-108">`listField1`, `listField2`</span></span>  
   
-     <span data-ttu-id="af6e2-109">選擇項。</span><span class="sxs-lookup"><span data-stu-id="af6e2-109">Optional.</span></span> <span data-ttu-id="af6e2-110">一或多個查詢變數的欄位，明確識別要包含在群組結果中的欄位。</span><span class="sxs-lookup"><span data-stu-id="af6e2-110">One or more fields of the query variable or variables that explicitly identify the fields to be included in the grouped result.</span></span> <span data-ttu-id="af6e2-111">如果未指定任何欄位，群組結果中會包含查詢變數的所有欄位。</span><span class="sxs-lookup"><span data-stu-id="af6e2-111">If no fields are specified, all fields of the query variable or variables are included in the grouped result.</span></span>  
+     <span data-ttu-id="5a871-109">選擇性。</span><span class="sxs-lookup"><span data-stu-id="5a871-109">Optional.</span></span> <span data-ttu-id="5a871-110">一或多個查詢變數的欄位，明確識別要包含在群組結果中的欄位。</span><span class="sxs-lookup"><span data-stu-id="5a871-110">One or more fields of the query variable or variables that explicitly identify the fields to be included in the grouped result.</span></span> <span data-ttu-id="5a871-111">如果未指定任何欄位，群組結果中會包含查詢變數的所有欄位。</span><span class="sxs-lookup"><span data-stu-id="5a871-111">If no fields are specified, all fields of the query variable or variables are included in the grouped result.</span></span>  
   
 -   `keyExp1`  
   
-     <span data-ttu-id="af6e2-112">必要項。</span><span class="sxs-lookup"><span data-stu-id="af6e2-112">Required.</span></span> <span data-ttu-id="af6e2-113">識別要用來判斷項目群組之索引鍵的運算式。</span><span class="sxs-lookup"><span data-stu-id="af6e2-113">An expression that identifies the key to use to determine the groups of elements.</span></span> <span data-ttu-id="af6e2-114">您可以指定多個索引鍵，指定複合索引鍵。</span><span class="sxs-lookup"><span data-stu-id="af6e2-114">You can specify more than one key to specify a composite key.</span></span>  
+     <span data-ttu-id="5a871-112">必要。</span><span class="sxs-lookup"><span data-stu-id="5a871-112">Required.</span></span> <span data-ttu-id="5a871-113">識別要用來判斷項目群組之索引鍵的運算式。</span><span class="sxs-lookup"><span data-stu-id="5a871-113">An expression that identifies the key to use to determine the groups of elements.</span></span> <span data-ttu-id="5a871-114">您可以指定多個索引鍵，指定複合索引鍵。</span><span class="sxs-lookup"><span data-stu-id="5a871-114">You can specify more than one key to specify a composite key.</span></span>  
   
 -   `keyExp2`  
   
-     <span data-ttu-id="af6e2-115">選擇項。</span><span class="sxs-lookup"><span data-stu-id="af6e2-115">Optional.</span></span> <span data-ttu-id="af6e2-116">一或多個額外的金鑰，結合了 `keyExp1` 以建立複合索引鍵。</span><span class="sxs-lookup"><span data-stu-id="af6e2-116">One or more additional keys that are combined with `keyExp1` to create a composite key.</span></span>  
+     <span data-ttu-id="5a871-115">選擇性。</span><span class="sxs-lookup"><span data-stu-id="5a871-115">Optional.</span></span> <span data-ttu-id="5a871-116">一或多個額外的金鑰，結合了 `keyExp1` 以建立複合索引鍵。</span><span class="sxs-lookup"><span data-stu-id="5a871-116">One or more additional keys that are combined with `keyExp1` to create a composite key.</span></span>  
   
 -   `aggregateList`  
   
-     <span data-ttu-id="af6e2-117">必要項。</span><span class="sxs-lookup"><span data-stu-id="af6e2-117">Required.</span></span> <span data-ttu-id="af6e2-118">識別群組彙總方式的一或多個運算式。</span><span class="sxs-lookup"><span data-stu-id="af6e2-118">One or more expressions that identify how the groups are aggregated.</span></span> <span data-ttu-id="af6e2-119">若要識別群組結果的成員名稱，請使用 `Group` 關鍵字，它可以是下列任一形式：</span><span class="sxs-lookup"><span data-stu-id="af6e2-119">To identify a member name for the grouped results, use the `Group` keyword, which can be in either of the following forms:</span></span>  
+     <span data-ttu-id="5a871-117">必要。</span><span class="sxs-lookup"><span data-stu-id="5a871-117">Required.</span></span> <span data-ttu-id="5a871-118">識別群組彙總方式的一或多個運算式。</span><span class="sxs-lookup"><span data-stu-id="5a871-118">One or more expressions that identify how the groups are aggregated.</span></span> <span data-ttu-id="5a871-119">若要識別群組結果的成員名稱，請使用 `Group` 關鍵字，它可以是下列任一形式：</span><span class="sxs-lookup"><span data-stu-id="5a871-119">To identify a member name for the grouped results, use the `Group` keyword, which can be in either of the following forms:</span></span>  
   
     ```  
     Into Group  
     ```  
   
-     <span data-ttu-id="af6e2-120">-或-</span><span class="sxs-lookup"><span data-stu-id="af6e2-120">-or-</span></span>  
+     <span data-ttu-id="5a871-120">-或-</span><span class="sxs-lookup"><span data-stu-id="5a871-120">-or-</span></span>  
   
     ```  
     Into <alias> = Group  
     ```  
   
-     <span data-ttu-id="af6e2-121">您也可以包含將套用至群組的彙總函式。</span><span class="sxs-lookup"><span data-stu-id="af6e2-121">You can also include aggregate functions to apply to the group.</span></span>  
+     <span data-ttu-id="5a871-121">您也可以包含將套用至群組的彙總函式。</span><span class="sxs-lookup"><span data-stu-id="5a871-121">You can also include aggregate functions to apply to the group.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="af6e2-122">備註</span><span class="sxs-lookup"><span data-stu-id="af6e2-122">Remarks</span></span>  
- <span data-ttu-id="af6e2-123">您可以使用 `Group By` 子句來將查詢的結果分成群組。</span><span class="sxs-lookup"><span data-stu-id="af6e2-123">You can use the `Group By` clause to break the results of a query into groups.</span></span> <span data-ttu-id="af6e2-124">群組是根據索引鍵或多個索引鍵所組成的複合索引鍵。</span><span class="sxs-lookup"><span data-stu-id="af6e2-124">The grouping is based on a key or a composite key consisting of multiple keys.</span></span> <span data-ttu-id="af6e2-125">與相符索引鍵值相關聯的項目會包含在相同的群組。</span><span class="sxs-lookup"><span data-stu-id="af6e2-125">Elements that are associated with matching key values are included in the same group.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5a871-122">備註</span><span class="sxs-lookup"><span data-stu-id="5a871-122">Remarks</span></span>  
+ <span data-ttu-id="5a871-123">您可以使用 `Group By` 子句來將查詢的結果分成群組。</span><span class="sxs-lookup"><span data-stu-id="5a871-123">You can use the `Group By` clause to break the results of a query into groups.</span></span> <span data-ttu-id="5a871-124">群組是根據索引鍵或多個索引鍵所組成的複合索引鍵。</span><span class="sxs-lookup"><span data-stu-id="5a871-124">The grouping is based on a key or a composite key consisting of multiple keys.</span></span> <span data-ttu-id="5a871-125">與相符索引鍵值相關聯的項目會包含在相同的群組。</span><span class="sxs-lookup"><span data-stu-id="5a871-125">Elements that are associated with matching key values are included in the same group.</span></span>  
   
- <span data-ttu-id="af6e2-126">您使用 `aggregateList` 子句的 `Into` 參數和 `Group` 關鍵字來識別用來參考群組的成員名稱。</span><span class="sxs-lookup"><span data-stu-id="af6e2-126">You use the `aggregateList` parameter of the `Into` clause and the `Group` keyword to identify the member name that is used to reference the group.</span></span> <span data-ttu-id="af6e2-127">您也可以在 `Into` 子句中包含彙總函式來計算群組項目的值。</span><span class="sxs-lookup"><span data-stu-id="af6e2-127">You can also include aggregate functions in the `Into` clause to compute values for the grouped elements.</span></span> <span data-ttu-id="af6e2-128">如需標準彙總函式的清單，請參閱 <<c0> [ 彙總子句](../../../visual-basic/language-reference/queries/aggregate-clause.md)。</span><span class="sxs-lookup"><span data-stu-id="af6e2-128">For a list of standard aggregate functions, see [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).</span></span>  
+ <span data-ttu-id="5a871-126">您使用 `aggregateList` 子句的 `Into` 參數和 `Group` 關鍵字來識別用來參考群組的成員名稱。</span><span class="sxs-lookup"><span data-stu-id="5a871-126">You use the `aggregateList` parameter of the `Into` clause and the `Group` keyword to identify the member name that is used to reference the group.</span></span> <span data-ttu-id="5a871-127">您也可以在 `Into` 子句中包含彙總函式來計算群組項目的值。</span><span class="sxs-lookup"><span data-stu-id="5a871-127">You can also include aggregate functions in the `Into` clause to compute values for the grouped elements.</span></span> <span data-ttu-id="5a871-128">如需標準彙總函式的清單，請參閱 <<c0> [ 彙總子句](../../../visual-basic/language-reference/queries/aggregate-clause.md)。</span><span class="sxs-lookup"><span data-stu-id="5a871-128">For a list of standard aggregate functions, see [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="af6e2-129">範例</span><span class="sxs-lookup"><span data-stu-id="af6e2-129">Example</span></span>  
- <span data-ttu-id="af6e2-130">下列程式碼範例根據客戶的位置 (國家/地區) 進行客戶清單的分組，並提供每個群組中的客戶計數。</span><span class="sxs-lookup"><span data-stu-id="af6e2-130">The following code example groups a list of customers based on their location (country) and provides a count of the customers in each group.</span></span> <span data-ttu-id="af6e2-131">結果會依國家/地區名稱排序。</span><span class="sxs-lookup"><span data-stu-id="af6e2-131">The results are ordered by country name.</span></span> <span data-ttu-id="af6e2-132">群組結果會依城市名稱排序。</span><span class="sxs-lookup"><span data-stu-id="af6e2-132">The grouped results are ordered by city name.</span></span>  
+## <a name="example"></a><span data-ttu-id="5a871-129">範例</span><span class="sxs-lookup"><span data-stu-id="5a871-129">Example</span></span>  
+ <span data-ttu-id="5a871-130">下列程式碼範例根據客戶的位置 (國家/地區) 進行客戶清單的分組，並提供每個群組中的客戶計數。</span><span class="sxs-lookup"><span data-stu-id="5a871-130">The following code example groups a list of customers based on their location (country) and provides a count of the customers in each group.</span></span> <span data-ttu-id="5a871-131">結果會依國家/地區名稱排序。</span><span class="sxs-lookup"><span data-stu-id="5a871-131">The results are ordered by country name.</span></span> <span data-ttu-id="5a871-132">群組結果會依城市名稱排序。</span><span class="sxs-lookup"><span data-stu-id="5a871-132">The grouped results are ordered by city name.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#11](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/group-by-clause_1.vb)]  
   
-## <a name="see-also"></a><span data-ttu-id="af6e2-133">另請參閱</span><span class="sxs-lookup"><span data-stu-id="af6e2-133">See Also</span></span>  
- [<span data-ttu-id="af6e2-134">Visual Basic 中的 LINQ 簡介</span><span class="sxs-lookup"><span data-stu-id="af6e2-134">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [<span data-ttu-id="af6e2-135">查詢</span><span class="sxs-lookup"><span data-stu-id="af6e2-135">Queries</span></span>](../../../visual-basic/language-reference/queries/index.md)  
- [<span data-ttu-id="af6e2-136">Select 子句</span><span class="sxs-lookup"><span data-stu-id="af6e2-136">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)  
- [<span data-ttu-id="af6e2-137">From 子句</span><span class="sxs-lookup"><span data-stu-id="af6e2-137">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)  
- [<span data-ttu-id="af6e2-138">Order By 子句</span><span class="sxs-lookup"><span data-stu-id="af6e2-138">Order By Clause</span></span>](../../../visual-basic/language-reference/queries/order-by-clause.md)  
- [<span data-ttu-id="af6e2-139">Aggregate 子句</span><span class="sxs-lookup"><span data-stu-id="af6e2-139">Aggregate Clause</span></span>](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
- [<span data-ttu-id="af6e2-140">Group Join 子句</span><span class="sxs-lookup"><span data-stu-id="af6e2-140">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)
+## <a name="see-also"></a><span data-ttu-id="5a871-133">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5a871-133">See Also</span></span>  
+ [<span data-ttu-id="5a871-134">Visual Basic 中的 LINQ 簡介</span><span class="sxs-lookup"><span data-stu-id="5a871-134">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [<span data-ttu-id="5a871-135">查詢</span><span class="sxs-lookup"><span data-stu-id="5a871-135">Queries</span></span>](../../../visual-basic/language-reference/queries/index.md)  
+ [<span data-ttu-id="5a871-136">Select 子句</span><span class="sxs-lookup"><span data-stu-id="5a871-136">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [<span data-ttu-id="5a871-137">From 子句</span><span class="sxs-lookup"><span data-stu-id="5a871-137">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [<span data-ttu-id="5a871-138">Order By 子句</span><span class="sxs-lookup"><span data-stu-id="5a871-138">Order By Clause</span></span>](../../../visual-basic/language-reference/queries/order-by-clause.md)  
+ [<span data-ttu-id="5a871-139">Aggregate 子句</span><span class="sxs-lookup"><span data-stu-id="5a871-139">Aggregate Clause</span></span>](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
+ [<span data-ttu-id="5a871-140">Group Join 子句</span><span class="sxs-lookup"><span data-stu-id="5a871-140">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)

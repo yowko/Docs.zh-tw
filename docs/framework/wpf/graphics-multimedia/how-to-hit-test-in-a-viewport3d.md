@@ -10,24 +10,24 @@ helpviewer_keywords:
 - Viewport3D [WPF]
 ms.assetid: 42bfbd99-c7c6-43f1-940b-90448faa412e
 ms.openlocfilehash: 297fe17b8844f7542255afcfe442fbf9b7a0d59d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43733377"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44047153"
 ---
-# <a name="how-to-hit-test-in-a-viewport3d"></a><span data-ttu-id="38a52-102">如何：Viewport3D 中的點擊測試</span><span class="sxs-lookup"><span data-stu-id="38a52-102">How to: Hit Test in a Viewport3D</span></span>
-<span data-ttu-id="38a52-103">此範例示範如何進行點擊測試中的 3D 視覺效果<xref:System.Windows.Controls.Viewport3D>。</span><span class="sxs-lookup"><span data-stu-id="38a52-103">This example shows how to hit test for 3D Visuals in a <xref:System.Windows.Controls.Viewport3D>.</span></span>  
+# <a name="how-to-hit-test-in-a-viewport3d"></a><span data-ttu-id="5549c-102">如何：Viewport3D 中的點擊測試</span><span class="sxs-lookup"><span data-stu-id="5549c-102">How to: Hit Test in a Viewport3D</span></span>
+<span data-ttu-id="5549c-103">此範例示範如何進行點擊測試中的 3D 視覺效果<xref:System.Windows.Controls.Viewport3D>。</span><span class="sxs-lookup"><span data-stu-id="5549c-103">This example shows how to hit test for 3D Visuals in a <xref:System.Windows.Controls.Viewport3D>.</span></span>  
   
- <span data-ttu-id="38a52-104">因為<xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>2D 和 3D 的資訊，會傳回可逐一查看測試結果，以讀取只 3D 的結果。</span><span class="sxs-lookup"><span data-stu-id="38a52-104">Because <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> returns 2D and 3D information, it is possible to iterate through the test results to read only 3D results.</span></span>  
+ <span data-ttu-id="5549c-104">因為<xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>2D 和 3D 的資訊，會傳回可逐一查看測試結果，以讀取只 3D 的結果。</span><span class="sxs-lookup"><span data-stu-id="5549c-104">Because <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> returns 2D and 3D information, it is possible to iterate through the test results to read only 3D results.</span></span>  
   
  [!code-csharp[HitTest3D#HitTest3D3DN4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml.cs#hittest3d3dn4)]
  [!code-vb[HitTest3D#HitTest3D3DN4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTest3D/visualbasic/window1.xaml.vb#hittest3d3dn4)]  
   
- <span data-ttu-id="38a52-105"><xref:System.Windows.Media.HitTestResultBehavior>在下列程式碼會決定點擊的測試結果的處理方式。</span><span class="sxs-lookup"><span data-stu-id="38a52-105">The <xref:System.Windows.Media.HitTestResultBehavior> in the following code determines how the hit test results are processed.</span></span>  <span data-ttu-id="38a52-106">`UpdateResultInfo` 和`UpdateMaterial`本機定義的方法。</span><span class="sxs-lookup"><span data-stu-id="38a52-106">`UpdateResultInfo` and `UpdateMaterial` are locally defined methods.</span></span>  
+ <span data-ttu-id="5549c-105"><xref:System.Windows.Media.HitTestResultBehavior>在下列程式碼會決定點擊的測試結果的處理方式。</span><span class="sxs-lookup"><span data-stu-id="5549c-105">The <xref:System.Windows.Media.HitTestResultBehavior> in the following code determines how the hit test results are processed.</span></span>  <span data-ttu-id="5549c-106">`UpdateResultInfo` 和`UpdateMaterial`本機定義的方法。</span><span class="sxs-lookup"><span data-stu-id="5549c-106">`UpdateResultInfo` and `UpdateMaterial` are locally defined methods.</span></span>  
   
  [!code-csharp[HitTest3D#HitTest3D3DN5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml.cs#hittest3d3dn5)]
  [!code-vb[HitTest3D#HitTest3D3DN5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTest3D/visualbasic/window1.xaml.vb#hittest3d3dn5)]  
   
-## <a name="see-also"></a><span data-ttu-id="38a52-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="38a52-107">See Also</span></span>  
- [<span data-ttu-id="38a52-108">3d 點擊測試範例</span><span class="sxs-lookup"><span data-stu-id="38a52-108">3-D Hit Testing Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=159959)
+## <a name="see-also"></a><span data-ttu-id="5549c-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5549c-107">See Also</span></span>  
+ [<span data-ttu-id="5549c-108">3d 點擊測試範例</span><span class="sxs-lookup"><span data-stu-id="5549c-108">3-D Hit Testing Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=159959)

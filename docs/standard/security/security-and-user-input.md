@@ -10,53 +10,54 @@ helpviewer_keywords:
 ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 858ee30479c959f30673725b4ba8088fcc2d8f3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27818d5e1779cd6e10e11830f91a20a3e638639a
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581751"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44066512"
 ---
-# <a name="security-and-user-input"></a><span data-ttu-id="4f118-102">安全性和使用者輸入</span><span class="sxs-lookup"><span data-stu-id="4f118-102">Security and User Input</span></span>
-<span data-ttu-id="4f118-103">使用者資料，也就是任何種類的輸入 (來自 Web 要求或 URL 的資料、對 Microsoft Windows Forms 應用程式之控制項的輸入等等)，可以會對程式碼有不良影響，因為通常該資料會直接做為參數來呼叫其他程式碼。</span><span class="sxs-lookup"><span data-stu-id="4f118-103">User data, which is any kind of input (data from a Web request or URL, input to controls of a Microsoft Windows Forms application, and so on), can adversely influence code because often that data is used directly as parameters to call other code.</span></span> <span data-ttu-id="4f118-104">這種情況類似惡意程式碼使用奇怪的參數呼叫您的程式碼，應該採取相同的預防措施。</span><span class="sxs-lookup"><span data-stu-id="4f118-104">This situation is analogous to malicious code calling your code with strange parameters, and the same precautions should be taken.</span></span> <span data-ttu-id="4f118-105">使用者輸入實際上較難以保護其安全，因為沒有任何堆疊框架，可以追蹤可能不受信任的資料存在。</span><span class="sxs-lookup"><span data-stu-id="4f118-105">User input is actually harder to make safe because there is no stack frame to trace the presence of the potentially untrusted data.</span></span>  
+# <a name="security-and-user-input"></a><span data-ttu-id="96619-102">安全性和使用者輸入</span><span class="sxs-lookup"><span data-stu-id="96619-102">Security and User Input</span></span>
+<span data-ttu-id="96619-103">使用者資料，也就是任何種類的輸入 (來自 Web 要求或 URL 的資料、對 Microsoft Windows Forms 應用程式之控制項的輸入等等)，可以會對程式碼有不良影響，因為通常該資料會直接做為參數來呼叫其他程式碼。</span><span class="sxs-lookup"><span data-stu-id="96619-103">User data, which is any kind of input (data from a Web request or URL, input to controls of a Microsoft Windows Forms application, and so on), can adversely influence code because often that data is used directly as parameters to call other code.</span></span> <span data-ttu-id="96619-104">這種情況類似惡意程式碼使用奇怪的參數呼叫您的程式碼，應該採取相同的預防措施。</span><span class="sxs-lookup"><span data-stu-id="96619-104">This situation is analogous to malicious code calling your code with strange parameters, and the same precautions should be taken.</span></span> <span data-ttu-id="96619-105">使用者輸入實際上較難以保護其安全，因為沒有任何堆疊框架，可以追蹤可能不受信任的資料存在。</span><span class="sxs-lookup"><span data-stu-id="96619-105">User input is actually harder to make safe because there is no stack frame to trace the presence of the potentially untrusted data.</span></span>  
   
- <span data-ttu-id="4f118-106">它們是在最細微且最難以尋找的安全性錯誤當中，因為，雖然它們可以存在於似乎是與安全性沒有相關的程式碼中，但是它們是將錯誤資料傳遞給其他程式碼的閘道。</span><span class="sxs-lookup"><span data-stu-id="4f118-106">These are among the subtlest and hardest security bugs to find because, although they can exist in code that is seemingly unrelated to security, they are a gateway to pass bad data through to other code.</span></span> <span data-ttu-id="4f118-107">若要找出這些錯誤，請依照下列任何一種輸入資料，想像一下可能值的範圍，並且考量查看此資料的程式碼是否可以處理所有這些情況。</span><span class="sxs-lookup"><span data-stu-id="4f118-107">To look for these bugs, follow any kind of input data, imagine what the range of possible values might be, and consider whether the code seeing this data can handle all those cases.</span></span> <span data-ttu-id="4f118-108">您可以透過檢查範圍以及拒絕程式碼無法處理的任何輸入，來修正這些錯誤。</span><span class="sxs-lookup"><span data-stu-id="4f118-108">You can fix these bugs through range checking and rejecting any input the code cannot handle.</span></span>  
+ <span data-ttu-id="96619-106">它們是在最細微且最難以尋找的安全性錯誤當中，因為，雖然它們可以存在於似乎是與安全性沒有相關的程式碼中，但是它們是將錯誤資料傳遞給其他程式碼的閘道。</span><span class="sxs-lookup"><span data-stu-id="96619-106">These are among the subtlest and hardest security bugs to find because, although they can exist in code that is seemingly unrelated to security, they are a gateway to pass bad data through to other code.</span></span> <span data-ttu-id="96619-107">若要找出這些錯誤，請依照下列任何一種輸入資料，想像一下可能值的範圍，並且考量查看此資料的程式碼是否可以處理所有這些情況。</span><span class="sxs-lookup"><span data-stu-id="96619-107">To look for these bugs, follow any kind of input data, imagine what the range of possible values might be, and consider whether the code seeing this data can handle all those cases.</span></span> <span data-ttu-id="96619-108">您可以透過檢查範圍以及拒絕程式碼無法處理的任何輸入，來修正這些錯誤。</span><span class="sxs-lookup"><span data-stu-id="96619-108">You can fix these bugs through range checking and rejecting any input the code cannot handle.</span></span>  
   
- <span data-ttu-id="4f118-109">與使用者資料相關的一些重要考量包括下列項目︰</span><span class="sxs-lookup"><span data-stu-id="4f118-109">Some important considerations involving user data include the following:</span></span>  
+ <span data-ttu-id="96619-109">與使用者資料相關的一些重要考量包括下列項目︰</span><span class="sxs-lookup"><span data-stu-id="96619-109">Some important considerations involving user data include the following:</span></span>  
   
--   <span data-ttu-id="4f118-110">伺服器回應的任何使用者資料會在用戶端的伺服器網站內容中執行。</span><span class="sxs-lookup"><span data-stu-id="4f118-110">Any user data in a server response runs in the context of the server's site on the client.</span></span> <span data-ttu-id="4f118-111">例如，如果您的 Web 伺服器接受使用者資料並將它插入傳回的網頁中，它可能會包含 **\<script>** 標記，並且看起來就像是從伺服器執行。</span><span class="sxs-lookup"><span data-stu-id="4f118-111">If your Web server takes user data and inserts it into the returned Web page, it might, for example, include a **\<script>** tag and run as if from the server.</span></span>  
+-   <span data-ttu-id="96619-110">伺服器回應的任何使用者資料會在用戶端的伺服器網站內容中執行。</span><span class="sxs-lookup"><span data-stu-id="96619-110">Any user data in a server response runs in the context of the server's site on the client.</span></span> <span data-ttu-id="96619-111">例如，如果您的 Web 伺服器接受使用者資料並將它插入傳回的網頁中，它可能會包含 **\<script>** 標記，並且看起來就像是從伺服器執行。</span><span class="sxs-lookup"><span data-stu-id="96619-111">If your Web server takes user data and inserts it into the returned Web page, it might, for example, include a **\<script>** tag and run as if from the server.</span></span>  
   
--   <span data-ttu-id="4f118-112">請記住，用戶端可以要求任何 URL。</span><span class="sxs-lookup"><span data-stu-id="4f118-112">Remember that the client can request any URL.</span></span>  
+-   <span data-ttu-id="96619-112">請記住，用戶端可以要求任何 URL。</span><span class="sxs-lookup"><span data-stu-id="96619-112">Remember that the client can request any URL.</span></span>  
   
--   <span data-ttu-id="4f118-113">請考慮棘手或無效的路徑︰</span><span class="sxs-lookup"><span data-stu-id="4f118-113">Consider tricky or invalid paths:</span></span>  
+-   <span data-ttu-id="96619-113">請考慮棘手或無效的路徑︰</span><span class="sxs-lookup"><span data-stu-id="96619-113">Consider tricky or invalid paths:</span></span>  
   
-    -   <span data-ttu-id="4f118-114">..\，非常長的路徑。</span><span class="sxs-lookup"><span data-stu-id="4f118-114">..\ , extremely long paths.</span></span>  
+    -   <span data-ttu-id="96619-114">..\，非常長的路徑。</span><span class="sxs-lookup"><span data-stu-id="96619-114">..\ , extremely long paths.</span></span>  
   
-    -   <span data-ttu-id="4f118-115">使用萬用字元 (\*)。</span><span class="sxs-lookup"><span data-stu-id="4f118-115">Use of wild card characters (\*).</span></span>  
+    -   <span data-ttu-id="96619-115">使用萬用字元 (\*)。</span><span class="sxs-lookup"><span data-stu-id="96619-115">Use of wild card characters (\*).</span></span>  
   
-    -   <span data-ttu-id="4f118-116">語彙基元展開 (%token%)。</span><span class="sxs-lookup"><span data-stu-id="4f118-116">Token expansion (%token%).</span></span>  
+    -   <span data-ttu-id="96619-116">語彙基元展開 (%token%)。</span><span class="sxs-lookup"><span data-stu-id="96619-116">Token expansion (%token%).</span></span>  
   
-    -   <span data-ttu-id="4f118-117">具有特殊意義的奇怪格式路徑。</span><span class="sxs-lookup"><span data-stu-id="4f118-117">Strange forms of paths with special meaning.</span></span>  
+    -   <span data-ttu-id="96619-117">具有特殊意義的奇怪格式路徑。</span><span class="sxs-lookup"><span data-stu-id="96619-117">Strange forms of paths with special meaning.</span></span>  
   
-    -   <span data-ttu-id="4f118-118">替代的檔案系統資料流名稱，例如 `filename::$DATA`。</span><span class="sxs-lookup"><span data-stu-id="4f118-118">Alternate file system stream names such as `filename::$DATA`.</span></span>  
+    -   <span data-ttu-id="96619-118">替代的檔案系統資料流名稱，例如 `filename::$DATA`。</span><span class="sxs-lookup"><span data-stu-id="96619-118">Alternate file system stream names such as `filename::$DATA`.</span></span>  
   
-    -   <span data-ttu-id="4f118-119">簡短版本的檔案名稱，例如 `longfilename` 的 `longfi~1`。</span><span class="sxs-lookup"><span data-stu-id="4f118-119">Short versions of file names such as `longfi~1` for `longfilename`.</span></span>  
+    -   <span data-ttu-id="96619-119">簡短版本的檔案名稱，例如 `longfilename` 的 `longfi~1`。</span><span class="sxs-lookup"><span data-stu-id="96619-119">Short versions of file names such as `longfi~1` for `longfilename`.</span></span>  
   
--   <span data-ttu-id="4f118-120">請記住，Eval(userdata) 可以執行任何動作。</span><span class="sxs-lookup"><span data-stu-id="4f118-120">Remember that Eval(userdata) can do anything.</span></span>  
+-   <span data-ttu-id="96619-120">請記住，Eval(userdata) 可以執行任何動作。</span><span class="sxs-lookup"><span data-stu-id="96619-120">Remember that Eval(userdata) can do anything.</span></span>  
   
--   <span data-ttu-id="4f118-121">請小心晚期繫結至包含一些使用者資料的名稱。</span><span class="sxs-lookup"><span data-stu-id="4f118-121">Be wary of late binding to a name that includes some user data.</span></span>  
+-   <span data-ttu-id="96619-121">請小心晚期繫結至包含一些使用者資料的名稱。</span><span class="sxs-lookup"><span data-stu-id="96619-121">Be wary of late binding to a name that includes some user data.</span></span>  
   
--   <span data-ttu-id="4f118-122">如果您正在處理 Web 資料，請考慮允許的各種形式逸出，包括︰</span><span class="sxs-lookup"><span data-stu-id="4f118-122">If you are dealing with Web data, consider the various forms of escapes that are permissible, including:</span></span>  
+-   <span data-ttu-id="96619-122">如果您正在處理 Web 資料，請考慮允許的各種形式逸出，包括︰</span><span class="sxs-lookup"><span data-stu-id="96619-122">If you are dealing with Web data, consider the various forms of escapes that are permissible, including:</span></span>  
   
-    -   <span data-ttu-id="4f118-123">十六進位逸出 (%nn)。</span><span class="sxs-lookup"><span data-stu-id="4f118-123">Hexadecimal escapes (%nn).</span></span>  
+    -   <span data-ttu-id="96619-123">十六進位逸出 (%nn)。</span><span class="sxs-lookup"><span data-stu-id="96619-123">Hexadecimal escapes (%nn).</span></span>  
   
-    -   <span data-ttu-id="4f118-124">Unicode 逸出 (%nnn)。</span><span class="sxs-lookup"><span data-stu-id="4f118-124">Unicode escapes (%nnn).</span></span>  
+    -   <span data-ttu-id="96619-124">Unicode 逸出 (%nnn)。</span><span class="sxs-lookup"><span data-stu-id="96619-124">Unicode escapes (%nnn).</span></span>  
   
-    -   <span data-ttu-id="4f118-125">過長 UTF-8 逸出 (%nn%nn)。</span><span class="sxs-lookup"><span data-stu-id="4f118-125">Overlong UTF-8 escapes (%nn%nn).</span></span>  
+    -   <span data-ttu-id="96619-125">過長 UTF-8 逸出 (%nn%nn)。</span><span class="sxs-lookup"><span data-stu-id="96619-125">Overlong UTF-8 escapes (%nn%nn).</span></span>  
   
-    -   <span data-ttu-id="4f118-126">雙逸出 (%nn 變成 %mmnn，其中 %mm 是 '%' 的逸出)。</span><span class="sxs-lookup"><span data-stu-id="4f118-126">Double escapes (%nn becomes %mmnn, where %mm is the escape for '%').</span></span>  
+    -   <span data-ttu-id="96619-126">雙逸出 (%nn 變成 %mmnn，其中 %mm 是 '%' 的逸出)。</span><span class="sxs-lookup"><span data-stu-id="96619-126">Double escapes (%nn becomes %mmnn, where %mm is the escape for '%').</span></span>  
   
--   <span data-ttu-id="4f118-127">請小心可能有一個以上標準格式的使用者名稱。</span><span class="sxs-lookup"><span data-stu-id="4f118-127">Be wary of user names that might have more than one canonical format.</span></span> <span data-ttu-id="4f118-128">例如，您通常可以使用 MYDOMAIN\\username 形式或 username@mydomain.example.com 形式。</span><span class="sxs-lookup"><span data-stu-id="4f118-128">For example, you can often use either the MYDOMAIN\\*username* form or the *username*@mydomain.example.com form.</span></span>  
+-   <span data-ttu-id="96619-127">請小心可能有一個以上標準格式的使用者名稱。</span><span class="sxs-lookup"><span data-stu-id="96619-127">Be wary of user names that might have more than one canonical format.</span></span> <span data-ttu-id="96619-128">例如，您通常可以使用 MYDOMAIN\\username 形式或 username@mydomain.example.com 形式。</span><span class="sxs-lookup"><span data-stu-id="96619-128">For example, you can often use either the MYDOMAIN\\*username* form or the *username*@mydomain.example.com form.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4f118-129">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4f118-129">See Also</span></span>  
- [<span data-ttu-id="4f118-130">安全程式碼撰寫方針</span><span class="sxs-lookup"><span data-stu-id="4f118-130">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a><span data-ttu-id="96619-129">另請參閱</span><span class="sxs-lookup"><span data-stu-id="96619-129">See also</span></span>
+
+- [<span data-ttu-id="96619-130">安全程式碼撰寫方針</span><span class="sxs-lookup"><span data-stu-id="96619-130">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)
