@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 114d24c1fc523d5501deb4aa17f9541c5a918276
-ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
+ms.openlocfilehash: 67a5ffe2075618020f3ab9f801852a1a97fc74d2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "33574643"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44072164"
 ---
 # <a name="writing-custom-attributes"></a>撰寫自訂屬性
 若要設計您自己的自訂屬性，並不需要精通很多新概念。 假如您擅長物件導向的程式設計，且瞭解如何設計類別，那麼您就已經擁有大部分所需的知識。 自訂屬性基本上是一種直接或間接衍生自 <xref:System.Attribute?displayProperty=nameWithType> 的傳統類別。 自訂屬性就像傳統類別一樣，含有儲存和擷取資料的方法。  
@@ -148,7 +148,8 @@ ms.locfileid: "33574643"
   
  第一個範例示範只套用了必要具名參數的屬性，而第二個範例則示範同時套用了必要和選擇性參數的屬性。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Attribute?displayProperty=nameWithType>  
- <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>  
- [屬性](../../../docs/standard/attributes/index.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Attribute?displayProperty=nameWithType>  
+- <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>  
+- [屬性](../../../docs/standard/attributes/index.md)
