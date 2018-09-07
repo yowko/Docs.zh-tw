@@ -9,11 +9,11 @@ ms.assetid: 127cbc0c-cbed-48fd-9c89-7c5d4f98f163
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7e6bc0230afe2dfc03b1aeeae46a3ba54599c8da
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43875443"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084930"
 ---
 # <a name="property-design"></a>屬性設計
 雖然技術上的方法非常類似屬性，它們是根據它們的使用案例相當不同。 應該會看到它們做為智慧的欄位。 它們有呼叫欄位的語法，與彈性的方法。  

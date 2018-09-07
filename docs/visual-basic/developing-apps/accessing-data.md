@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data [Visual Basic]
 - Visual Basic, data access
 ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
-ms.openlocfilehash: 2e6cfc3d6d8752b12fa20a357dedfeb1b3346dce
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 220d662576a5f23194dee7e23317bdbb0027546d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198834"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44098533"
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>在 Visual Basic 應用程式中存取資料
 Visual Basic 包括數個新功能，以協助開發可存取資料的應用程式。 將項目從[資料來源視窗](/visualstudio/data-tools/add-new-data-sources)拖曳至表單，以建立 Windows 應用程式的資料繫結表單。 將項目從 [資料來源] 視窗拖曳至現有控制項，以將控制項繫結至資料。  
@@ -55,5 +55,4 @@ Visual Basic 包括數個新功能，以協助開發可存取資料的應用程�
  [ADO.NET](../../framework/data/adonet/index.md)  
  描述 ADO.NET 類別，此類別會將資料存取服務公開給 .NET Framework 程式設計人員。
 
- [Office 方案的資料](https://msdn.microsoft.com/library/xx069ybh)  
- 包含頁面的連結，這些頁面說明資料在 Office 方案中的運作方式，包括結構描述導向的程式設計、資料快取，以及伺服器端的資料存取。
+ [在 Office 方案中的資料](/visualstudio/vsto/data-in-office-solutions)包含連結，這些頁面說明資料在 Office 方案，包括結構描述導向程式設計、 資料快取，以及伺服器端資料存取的相關資訊中的運作方式。

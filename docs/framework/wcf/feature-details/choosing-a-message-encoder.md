@@ -3,11 +3,11 @@ title: 選擇訊息編碼器
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
 ms.openlocfilehash: 5d2b55f04954cdd855ff9e224d2bc0405919f7a3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43773103"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44080549"
 ---
 # <a name="choosing-a-message-encoder"></a>選擇訊息編碼器
 本主題將討論 Windows Communication Foundation (WCF) 中包含之訊息編碼器之間選擇的準則： 二進位、 文字和訊息傳輸最佳化機制 (MTOM)。  

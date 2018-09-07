@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 899f2ca5ef1b987687f5c065ad3e1965e142d103
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43743962"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44080786"
 ---
 # <a name="imetadataemitmerge-method"></a>IMetaDataEmit::Merge 方法
 將指定的匯入的範圍加入至要合併的範圍清單。  

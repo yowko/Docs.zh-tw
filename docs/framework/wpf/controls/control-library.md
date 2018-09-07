@@ -8,16 +8,16 @@ helpviewer_keywords:
 - libraries [WPF], controls
 ms.assetid: c1b33289-c389-4ac2-b153-3cbb0d8324ad
 ms.openlocfilehash: 26f81a2bfeb5ef4e448ddcbc9b8bac521624a629
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43746119"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44068907"
 ---
 # <a name="control-library"></a>控制項程式庫
 Windows Presentation Foundation (WPF) 控制項程式庫包含提供的 Windows Presentation Foundation (WPF)，依字母順序列出之控制項的資訊。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Border](../../../../docs/framework/wpf/controls/border.md)  
  [BulletDecorator](../../../../docs/framework/wpf/controls/bulletdecorator.md)  
  [Button](../../../../docs/framework/wpf/controls/button.md)  

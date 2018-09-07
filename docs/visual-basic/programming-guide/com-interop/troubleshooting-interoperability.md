@@ -16,12 +16,12 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: 5b92eaf56e337b8a8128bb3a0706ecdb76177c0e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8525fa7eca2f61d3091a7597db94247b4701ed19
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516823"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086514"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>疑難排解互通性 (Visual Basic)
 當您 COM 和 managed 程式碼之間的交互操作[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]，您可能會遇到一或多個下列常見的問題。  
@@ -126,11 +126,12 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
  不會共用的組件應該位於與呼叫的應用程式目錄中的並排顯示。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)  
- [Tlbimp.exe (類型程式庫匯入工具)](../../../framework/tools/tlbimp-exe-type-library-importer.md)  
- [Tlbexp.exe (類型程式庫匯出工具)](https://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
- [逐步解說：實作 COM 物件的繼承](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- [Inherits 陳述式](../../../visual-basic/language-reference/statements/inherits-statement.md)  
- [全域組件快取](../../../framework/app-domains/gac.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
+- [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)  
+- [Tlbimp.exe (類型程式庫匯入工具)](../../../framework/tools/tlbimp-exe-type-library-importer.md)  
+- [Tlbexp.exe (類型程式庫匯出工具)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)  
+- [逐步解說：實作 COM 物件的繼承](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
+- [Inherits 陳述式](../../../visual-basic/language-reference/statements/inherits-statement.md)  
+- [全域組件快取](../../../framework/app-domains/gac.md)

@@ -3,11 +3,11 @@ title: SQL Server 資料類型和 ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
 ms.openlocfilehash: 878bbe41f259f1e50cd0a41669c7a352e78bc0f1
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43739616"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44097031"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server 資料類型和 ADO.NET
 SQL Server 和 .NET Framework 是以不同的型別系統為基礎，而且可能會導致資料遺失。 為了保留資料完整性，.NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) 針對使用 SQL Server 資料提供了具型別的存取子方法。 您可以使用 <xref:System.Data.SqlDbType> 類別 (Class) 中的列舉型別 (Enumeration) 來指定 <xref:System.Data.SqlClient.SqlParameter> 資料型別。  
@@ -22,7 +22,7 @@ SQL Server 和 .NET Framework 是以不同的型別系統為基礎，而且可�
   
 1.  [資料類型 (Database Engine)](https://go.microsoft.com/fwlink/?LinkID=107468)  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [SqlTypes 和資料集](../../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)  
  說明針對 `SqlTypes` 中的 `DataSet` 所提供的型別支援。  
   

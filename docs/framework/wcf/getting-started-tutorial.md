@@ -7,11 +7,11 @@ helpviewer_keywords:
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
 ms.openlocfilehash: e5a07e5264c715f568121403721a3c844b903d99
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43886314"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085658"
 ---
 # <a name="getting-started-tutorial"></a>快速入門教學課程
 在本節中所包含的主題旨在讓您快速獲得至 Windows Communication Foundation (WCF) 程式設計經驗。 每個主題已設計成依本主題結尾的清單順序完成。 循序完成本教學課程可讓您建立 WCF 服務和用戶端應用程式所需的步驟大致了解。 服務會公開一個或多個端點，而其中每個端點都會公開一項或多項服務作業。 *端點*服務的指定位置可以找到服務，包含的資訊，說明服務與合約定義的功能，用戶端必須之間的通訊的繫結位址服務提供給其用戶端。  

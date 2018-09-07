@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ecf6bff10e98ab7f008cfd176f59687f34d89553
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43784772"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44098442"
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost 介面
 提供方法，讓主應用程式啟動，並明確地停止 common language runtime (CLR)，來建立及設定應用程式定義域，若要存取預設網域，並列舉處理序中執行的所有網域。  

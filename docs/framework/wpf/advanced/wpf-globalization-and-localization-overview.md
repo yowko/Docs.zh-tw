@@ -6,11 +6,11 @@ helpviewer_keywords:
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
 ms.openlocfilehash: 54c5caaf3ade07f342e94ad0359f00c1418eace4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43673672"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44076985"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 全球化和當地語系化概觀
 當您限制只有一種語言可以使用您的產品時，就是將潛在客戶群限制為全世界 65 億人口的一小部分。 如果您想要全球對象都可以使用應用程式，則具成本效益的產品當地語系化是更多客戶可以使用的一種最佳且最經濟的方法。  
@@ -175,8 +175,8 @@ ms.locfileid: "43673672"
 |Button_2:System.Windows.Controls.Button.$Content|按鈕|取消|  
 |Button_3:System.Windows.Controls.Button.$Content|按鈕|瀏覽...|  
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||  
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|輸入程式、資料夾、文件或網際網路資源的名稱，Windows 會自動開啟。|  
-|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|開啟：|  
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|文字|輸入程式、資料夾、文件或網際網路資源的名稱，Windows 會自動開啟。|  
+|TextBlock_2:System.Windows.Controls.TextBlock.$Content|文字|開啟：|  
 |Window_1:System.Windows.Window.Title|標題|執行|  
   
  將應用程式當地語系化為德文需要下列翻譯︰  
@@ -188,7 +188,7 @@ ms.locfileid: "43673672"
 |Button_3:System.Windows.Controls.Button.$Content|按鈕|Durchsuchen…|  
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||  
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|Geben Sie den Namen eines Programms, Ordners, Dokuments oder einer Internetresource an.|  
-|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|Öffnen:|  
+|TextBlock_2:System.Windows.Controls.TextBlock.$Content|文字|Öffnen:|  
 |Window_1:System.Windows.Window.Title|標題|執行|  
   
  **產生**  
@@ -258,7 +258,7 @@ ms.locfileid: "43673672"
   
 |資源索引鍵|分類|可讀取|可修改|註解|值|  
 |-|-|-|-|-|-|  
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|true|true|此字元是當成裝飾規則使用。|&#124;|  
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|文字|true|true|此字元是當成裝飾規則使用。|&#124;|  
   
  使用下列語法，可以放入任何項目之內容或屬性的註解︰  
   

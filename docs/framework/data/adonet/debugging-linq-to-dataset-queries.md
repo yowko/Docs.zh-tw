@@ -3,11 +3,11 @@ title: 偵錯 LINQ to DataSet 查詢
 ms.date: 03/30/2017
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
 ms.openlocfilehash: fd10e6c715529ba937ba09732a254d311158b0f1
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892661"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086000"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>偵錯 LINQ to DataSet 查詢
 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 支援針對 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 程式碼進行偵錯。 不過，有一些偵錯之間的差異[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]程式碼和非-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] managed 程式碼。 大部分的偵錯功能搭配[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]陳述式，包括逐步執行、 設定中斷點，以及檢視偵錯工具視窗所示的結果。 但是，延後查詢執行中的有一些副作用，您應該考慮在偵錯時[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]程式碼，並有一些限制，若要使用 [編輯後繼續]。 本主題討論特有的偵錯觀點[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]相較於非[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]managed 程式碼。  

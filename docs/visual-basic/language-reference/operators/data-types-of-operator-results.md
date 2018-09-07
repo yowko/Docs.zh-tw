@@ -10,11 +10,11 @@ helpviewer_keywords:
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
 ms.openlocfilehash: 135c44217debcddb15fd4cef7e73ca2f98903c43
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43872578"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44076549"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>運算子結果的資料類型 (Visual Basic)
 Visual Basic 決定結果資料類型的運算元資料類型為基礎的作業。 在某些情況下，這可能是較大的範圍以外的任一個運算元的資料類型。  

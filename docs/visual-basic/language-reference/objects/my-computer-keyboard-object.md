@@ -5,11 +5,11 @@ helpviewer_keywords:
 - My.Computer.Keyboard object
 ms.assetid: 78dec9be-4e69-4ede-b9be-2ac34bec2b26
 ms.openlocfilehash: a7b3627a22a8e9e5de5ee022836f477fdef00cec
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43875664"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44081975"
 ---
 # <a name="mycomputerkeyboard-object"></a>My.Computer.Keyboard 物件
 提供屬性以存取鍵盤目前的狀態，例如目前已按下哪些按鍵，並提供方法將按鍵輸入傳送至使用中視窗。  
