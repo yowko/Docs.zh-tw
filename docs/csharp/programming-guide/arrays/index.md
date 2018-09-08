@@ -5,12 +5,12 @@ helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-ms.openlocfilehash: 1469336bf034fd22c9d7355b2f8dd8be32721fdf
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e0ed2d678363a29bb870a496846fc6f054769a4b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510634"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44181598"
 ---
 # <a name="arrays-c-programming-guide"></a>陣列 (C# 程式設計手冊)
 
@@ -48,8 +48,6 @@ ms.locfileid: "43510634"
   
 -   [傳遞陣列作為引數](../../../csharp/programming-guide/arrays/passing-arrays-as-arguments.md)  
   
--   [使用 ref 和 out 傳遞陣列](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)   
-  
 ## <a name="c-language-specification"></a>C# 語言規格
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
@@ -57,5 +55,5 @@ ms.locfileid: "43510634"
 ## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [集合](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+- [集合](../../../csharp/programming-guide/concepts/collections.md)  
 - [Array 集合類型 (英文)](https://msdn.microsoft.com/library/8a9964de-8941-47b1-a3cf-a01bc88db9e8)

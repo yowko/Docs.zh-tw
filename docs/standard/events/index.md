@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 623700161ae4587daeb2c7348055d413512f7c87
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f5d106dd3b7b9a7a0aeedca86e63a6fccbb1cc27
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43805633"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192479"
 ---
 # <a name="handling-and-raising-events"></a>處理和引發事件
 .NET Framework 中的事件是以委派模型為基礎。 遵循觀察者設計模式的委派模型，它可讓訂閱者向提供者註冊，並且接收通知。 事件發送者會推播事件已發生的通知，而事件接收器會收到該通告並定義對它的回應。 本文將描述委派模型的主要元件、如何在應用程式中使用事件，以及如何在程式碼中實作事件。  
@@ -87,11 +87,12 @@ ms.locfileid: "43805633"
 |[觀察者設計模式](../../../docs/standard/events/observer-design-pattern.md)|描述設計模式，可讓訂閱者向提供者註冊，並且接收通知。|  
 |[如何：使用 Web Form 應用程式中的事件](../../../docs/standard/events/how-to-consume-events-in-a-web-forms-application.md)|示範如何處理 Web Form 控制項所引發的事件。|  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.EventHandler>  
- <xref:System.EventHandler%601>  
- <xref:System.EventArgs>  
- <xref:System.Delegate>  
- [事件和路由事件概觀 (UWP 應用程式)](/windows/uwp/xaml-platform/events-and-routed-events-overview)  
- [事件 (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)  
- [事件 (C# 程式設計手冊)](../../csharp/programming-guide/events/index.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.EventHandler>  
+- <xref:System.EventHandler%601>  
+- <xref:System.EventArgs>  
+- <xref:System.Delegate>  
+- [事件和路由事件概觀 (UWP 應用程式)](/windows/uwp/xaml-platform/events-and-routed-events-overview)  
+- [事件 (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)  
+- [事件 (C# 程式設計手冊)](../../csharp/programming-guide/events/index.md)
