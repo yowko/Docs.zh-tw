@@ -3,42 +3,42 @@ title: RangeEnumeration 活動
 ms.date: 03/30/2017
 ms.assetid: ca5b78f4-94fa-4aa7-830d-26039ac422c8
 ms.openlocfilehash: c9cf522227620422b414adc26cbc0bf338bf57d4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43868714"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207586"
 ---
-# <a name="rangeenumeration-activity"></a><span data-ttu-id="ae075-102">RangeEnumeration 活動</span><span class="sxs-lookup"><span data-stu-id="ae075-102">RangeEnumeration Activity</span></span>
-<span data-ttu-id="ae075-103">這個範例會示範如何建立自訂活動，此活動會逐一查看數字集合。下表詳述此範例中所包含的主要檔案。</span><span class="sxs-lookup"><span data-stu-id="ae075-103">This sample demonstrates how to create a custom activity that iterates over a collection of numbers.The following table details the main files included in the sample.</span></span>  
+# <a name="rangeenumeration-activity"></a><span data-ttu-id="8fddf-102">RangeEnumeration 活動</span><span class="sxs-lookup"><span data-stu-id="8fddf-102">RangeEnumeration Activity</span></span>
+<span data-ttu-id="8fddf-103">這個範例會示範如何建立自訂活動，此活動會逐一查看數字集合。下表詳述此範例中所包含的主要檔案。</span><span class="sxs-lookup"><span data-stu-id="8fddf-103">This sample demonstrates how to create a custom activity that iterates over a collection of numbers.The following table details the main files included in the sample.</span></span>  
   
-|<span data-ttu-id="ae075-104">檔案名稱</span><span class="sxs-lookup"><span data-stu-id="ae075-104">File name</span></span>|<span data-ttu-id="ae075-105">描述</span><span class="sxs-lookup"><span data-stu-id="ae075-105">Description</span></span>|  
+|<span data-ttu-id="8fddf-104">檔案名稱</span><span class="sxs-lookup"><span data-stu-id="8fddf-104">File name</span></span>|<span data-ttu-id="8fddf-105">描述</span><span class="sxs-lookup"><span data-stu-id="8fddf-105">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="ae075-106">RangeEnumeration.cs</span><span class="sxs-lookup"><span data-stu-id="ae075-106">RangeEnumeration.cs</span></span>|<span data-ttu-id="ae075-107">定義名為 `RangeEnumeration` 的自訂活動，此活動會覆寫 <xref:System.Activities.NativeActivity> 類別，並針對一連串的數字執行迴圈。</span><span class="sxs-lookup"><span data-stu-id="ae075-107">Defines a custom activity named `RangeEnumeration` that overrides the <xref:System.Activities.NativeActivity> class and loops through a series of numbers.</span></span>|  
-|<span data-ttu-id="ae075-108">RangeEnumerationSample.cs</span><span class="sxs-lookup"><span data-stu-id="ae075-108">RangeEnumerationSample.cs</span></span>|<span data-ttu-id="ae075-109">使用 `RangeEnumeration` 活動的用戶端應用程式，可逐一查看數字集合。</span><span class="sxs-lookup"><span data-stu-id="ae075-109">A client application that uses the `RangeEnumeration` activity to iterate over a collection of numbers.</span></span>|  
+|<span data-ttu-id="8fddf-106">RangeEnumeration.cs</span><span class="sxs-lookup"><span data-stu-id="8fddf-106">RangeEnumeration.cs</span></span>|<span data-ttu-id="8fddf-107">定義名為 `RangeEnumeration` 的自訂活動，此活動會覆寫 <xref:System.Activities.NativeActivity> 類別，並針對一連串的數字執行迴圈。</span><span class="sxs-lookup"><span data-stu-id="8fddf-107">Defines a custom activity named `RangeEnumeration` that overrides the <xref:System.Activities.NativeActivity> class and loops through a series of numbers.</span></span>|  
+|<span data-ttu-id="8fddf-108">RangeEnumerationSample.cs</span><span class="sxs-lookup"><span data-stu-id="8fddf-108">RangeEnumerationSample.cs</span></span>|<span data-ttu-id="8fddf-109">使用 `RangeEnumeration` 活動的用戶端應用程式，可逐一查看數字集合。</span><span class="sxs-lookup"><span data-stu-id="8fddf-109">A client application that uses the `RangeEnumeration` activity to iterate over a collection of numbers.</span></span>|  
   
- <span data-ttu-id="ae075-110">下表詳述 `RangeEnumeration` 活動的屬性。</span><span class="sxs-lookup"><span data-stu-id="ae075-110">The following table details the properties of the `RangeEnumeration` activity.</span></span>  
+ <span data-ttu-id="8fddf-110">下表詳述 `RangeEnumeration` 活動的屬性。</span><span class="sxs-lookup"><span data-stu-id="8fddf-110">The following table details the properties of the `RangeEnumeration` activity.</span></span>  
   
-|<span data-ttu-id="ae075-111">屬性</span><span class="sxs-lookup"><span data-stu-id="ae075-111">Property</span></span>|<span data-ttu-id="ae075-112">描述</span><span class="sxs-lookup"><span data-stu-id="ae075-112">Description</span></span>|  
+|<span data-ttu-id="8fddf-111">屬性</span><span class="sxs-lookup"><span data-stu-id="8fddf-111">Property</span></span>|<span data-ttu-id="8fddf-112">描述</span><span class="sxs-lookup"><span data-stu-id="8fddf-112">Description</span></span>|  
 |--------------|-----------------|  
-|<span data-ttu-id="ae075-113">啟動</span><span class="sxs-lookup"><span data-stu-id="ae075-113">Start</span></span>|<span data-ttu-id="ae075-114">開始迴圈的整數。</span><span class="sxs-lookup"><span data-stu-id="ae075-114">The integer to start the loop from.</span></span>|  
-|<span data-ttu-id="ae075-115">停止</span><span class="sxs-lookup"><span data-stu-id="ae075-115">Stop</span></span>|<span data-ttu-id="ae075-116">停止迴圈的整數。</span><span class="sxs-lookup"><span data-stu-id="ae075-116">The integer to stop the loop at.</span></span>|  
-|<span data-ttu-id="ae075-117">步驟</span><span class="sxs-lookup"><span data-stu-id="ae075-117">Step</span></span>|<span data-ttu-id="ae075-118">指定每次要反覆查看的數量。</span><span class="sxs-lookup"><span data-stu-id="ae075-118">Specifies how much to iterate each time.</span></span>|  
-|<span data-ttu-id="ae075-119">本文</span><span class="sxs-lookup"><span data-stu-id="ae075-119">Body</span></span>|<span data-ttu-id="ae075-120">指定每一次反覆查看時所要執行的程式碼。</span><span class="sxs-lookup"><span data-stu-id="ae075-120">Specifies the code to execute during each iteration.</span></span>|  
+|<span data-ttu-id="8fddf-113">啟動</span><span class="sxs-lookup"><span data-stu-id="8fddf-113">Start</span></span>|<span data-ttu-id="8fddf-114">開始迴圈的整數。</span><span class="sxs-lookup"><span data-stu-id="8fddf-114">The integer to start the loop from.</span></span>|  
+|<span data-ttu-id="8fddf-115">停止</span><span class="sxs-lookup"><span data-stu-id="8fddf-115">Stop</span></span>|<span data-ttu-id="8fddf-116">停止迴圈的整數。</span><span class="sxs-lookup"><span data-stu-id="8fddf-116">The integer to stop the loop at.</span></span>|  
+|<span data-ttu-id="8fddf-117">步驟</span><span class="sxs-lookup"><span data-stu-id="8fddf-117">Step</span></span>|<span data-ttu-id="8fddf-118">指定每次要反覆查看的數量。</span><span class="sxs-lookup"><span data-stu-id="8fddf-118">Specifies how much to iterate each time.</span></span>|  
+|<span data-ttu-id="8fddf-119">本文</span><span class="sxs-lookup"><span data-stu-id="8fddf-119">Body</span></span>|<span data-ttu-id="8fddf-120">指定每一次反覆查看時所要執行的程式碼。</span><span class="sxs-lookup"><span data-stu-id="8fddf-120">Specifies the code to execute during each iteration.</span></span>|  
   
-#### <a name="to-use-this-sample"></a><span data-ttu-id="ae075-121">若要使用這個範例</span><span class="sxs-lookup"><span data-stu-id="ae075-121">To use this sample</span></span>  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="8fddf-121">若要使用這個範例</span><span class="sxs-lookup"><span data-stu-id="8fddf-121">To use this sample</span></span>  
   
-1.  <span data-ttu-id="ae075-122">使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 開啟 RangeEnumeration.sln 方案檔。</span><span class="sxs-lookup"><span data-stu-id="ae075-122">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the RangeEnumeration.sln solution file.</span></span>  
+1.  <span data-ttu-id="8fddf-122">使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 開啟 RangeEnumeration.sln 方案檔。</span><span class="sxs-lookup"><span data-stu-id="8fddf-122">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the RangeEnumeration.sln solution file.</span></span>  
   
-2.  <span data-ttu-id="ae075-123">若要建置此方案，請按 CTRL+SHIFT+B。</span><span class="sxs-lookup"><span data-stu-id="ae075-123">To build the solution, press CTRL+SHIFT+B.</span></span>  
+2.  <span data-ttu-id="8fddf-123">若要建置此方案，請按 CTRL+SHIFT+B。</span><span class="sxs-lookup"><span data-stu-id="8fddf-123">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  <span data-ttu-id="ae075-124">若要執行此方案，請按下 CTRL+F5。</span><span class="sxs-lookup"><span data-stu-id="ae075-124">To run the solution, press CTRL+F5.</span></span>  
+3.  <span data-ttu-id="8fddf-124">若要執行此方案，請按下 CTRL+F5。</span><span class="sxs-lookup"><span data-stu-id="8fddf-124">To run the solution, press CTRL+F5.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="ae075-125">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="ae075-125">The samples may already be installed on your machine.</span></span> <span data-ttu-id="ae075-126">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="ae075-126">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="8fddf-125">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="8fddf-125">The samples may already be installed on your machine.</span></span> <span data-ttu-id="8fddf-126">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="8fddf-126">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="ae075-127">如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。</span><span class="sxs-lookup"><span data-stu-id="ae075-127">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="ae075-128">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="ae075-128">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="8fddf-127">如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。</span><span class="sxs-lookup"><span data-stu-id="8fddf-127">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="8fddf-128">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="8fddf-128">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\RangeEnumeration`

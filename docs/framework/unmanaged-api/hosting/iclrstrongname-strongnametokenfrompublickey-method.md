@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 98c0dbbbe65d8f8c0b0196c82db1a8fd2b0ee3dd
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44134489"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44209325"
 ---
-# <a name="iclrstrongnamestrongnametokenfrompublickey-method"></a><span data-ttu-id="4ea33-102">ICLRStrongName::StrongNameTokenFromPublicKey 方法</span><span class="sxs-lookup"><span data-stu-id="4ea33-102">ICLRStrongName::StrongNameTokenFromPublicKey Method</span></span>
-<span data-ttu-id="4ea33-103">取得代表公開金鑰 token。</span><span class="sxs-lookup"><span data-stu-id="4ea33-103">Gets a token that represents a public key.</span></span> <span data-ttu-id="4ea33-104">強式名稱語彙基元是公開金鑰的縮短格式。</span><span class="sxs-lookup"><span data-stu-id="4ea33-104">A strong name token is the shortened form of a public key.</span></span>  
+# <a name="iclrstrongnamestrongnametokenfrompublickey-method"></a><span data-ttu-id="29a0d-102">ICLRStrongName::StrongNameTokenFromPublicKey 方法</span><span class="sxs-lookup"><span data-stu-id="29a0d-102">ICLRStrongName::StrongNameTokenFromPublicKey Method</span></span>
+<span data-ttu-id="29a0d-103">取得代表公開金鑰 token。</span><span class="sxs-lookup"><span data-stu-id="29a0d-103">Gets a token that represents a public key.</span></span> <span data-ttu-id="29a0d-104">強式名稱語彙基元是公開金鑰的縮短格式。</span><span class="sxs-lookup"><span data-stu-id="29a0d-104">A strong name token is the shortened form of a public key.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4ea33-105">語法</span><span class="sxs-lookup"><span data-stu-id="4ea33-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="29a0d-105">語法</span><span class="sxs-lookup"><span data-stu-id="29a0d-105">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameTokenFromPublicKey (   
@@ -38,35 +38,35 @@ HRESULT StrongNameTokenFromPublicKey (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="4ea33-106">參數</span><span class="sxs-lookup"><span data-stu-id="4ea33-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="29a0d-106">參數</span><span class="sxs-lookup"><span data-stu-id="29a0d-106">Parameters</span></span>  
  `pbPublicKeyBlob`  
- <span data-ttu-id="4ea33-107">[in]類型的結構[PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) ，其中包含用來產生強式名稱簽章金鑰組的公開部分。</span><span class="sxs-lookup"><span data-stu-id="4ea33-107">[in] A structure of type [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) that contains the public portion of the key pair used to generate the strong name signature.</span></span>  
+ <span data-ttu-id="29a0d-107">[in]類型的結構[PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) ，其中包含用來產生強式名稱簽章金鑰組的公開部分。</span><span class="sxs-lookup"><span data-stu-id="29a0d-107">[in] A structure of type [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) that contains the public portion of the key pair used to generate the strong name signature.</span></span>  
   
  `cbPublicKeyBlob`  
- <span data-ttu-id="4ea33-108">[in]大小，以位元組為單位的`pbPublicKeyBlob`。</span><span class="sxs-lookup"><span data-stu-id="4ea33-108">[in] The size, in bytes, of `pbPublicKeyBlob`.</span></span>  
+ <span data-ttu-id="29a0d-108">[in]大小，以位元組為單位的`pbPublicKeyBlob`。</span><span class="sxs-lookup"><span data-stu-id="29a0d-108">[in] The size, in bytes, of `pbPublicKeyBlob`.</span></span>  
   
  `ppbStrongNameToken`  
- <span data-ttu-id="4ea33-109">[out]對應到索引鍵的強式名稱語彙基元傳遞`pbPublicKeyBlob`。</span><span class="sxs-lookup"><span data-stu-id="4ea33-109">[out] The strong name token corresponding to the key passed in `pbPublicKeyBlob`.</span></span> <span data-ttu-id="4ea33-110">Common language runtime 配置的記憶體，在其中傳回的語彙基元。</span><span class="sxs-lookup"><span data-stu-id="4ea33-110">The common language runtime allocates the memory in which to return the token.</span></span> <span data-ttu-id="4ea33-111">呼叫端必須使用釋放這個記憶體[iclrstrongname:: Strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="4ea33-111">The caller must free this memory by using the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method.</span></span>  
+ <span data-ttu-id="29a0d-109">[out]對應到索引鍵的強式名稱語彙基元傳遞`pbPublicKeyBlob`。</span><span class="sxs-lookup"><span data-stu-id="29a0d-109">[out] The strong name token corresponding to the key passed in `pbPublicKeyBlob`.</span></span> <span data-ttu-id="29a0d-110">Common language runtime 配置的記憶體，在其中傳回的語彙基元。</span><span class="sxs-lookup"><span data-stu-id="29a0d-110">The common language runtime allocates the memory in which to return the token.</span></span> <span data-ttu-id="29a0d-111">呼叫端必須使用釋放這個記憶體[iclrstrongname:: Strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="29a0d-111">The caller must free this memory by using the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method.</span></span>  
   
  `pcbStrongNameToken`  
- <span data-ttu-id="4ea33-112">[out]大小 （位元組），傳回的強式名稱語彙基元。</span><span class="sxs-lookup"><span data-stu-id="4ea33-112">[out] The size, in bytes, of the returned strong name token.</span></span>  
+ <span data-ttu-id="29a0d-112">[out]大小 （位元組），傳回的強式名稱語彙基元。</span><span class="sxs-lookup"><span data-stu-id="29a0d-112">[out] The size, in bytes, of the returned strong name token.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="4ea33-113">傳回值</span><span class="sxs-lookup"><span data-stu-id="4ea33-113">Return Value</span></span>  
- <span data-ttu-id="4ea33-114">`S_OK` 如果這個方法順利完成否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)清單)。</span><span class="sxs-lookup"><span data-stu-id="4ea33-114">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="29a0d-113">傳回值</span><span class="sxs-lookup"><span data-stu-id="29a0d-113">Return Value</span></span>  
+ <span data-ttu-id="29a0d-114">`S_OK` 如果這個方法順利完成否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)清單)。</span><span class="sxs-lookup"><span data-stu-id="29a0d-114">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="4ea33-115">備註</span><span class="sxs-lookup"><span data-stu-id="4ea33-115">Remarks</span></span>  
- <span data-ttu-id="4ea33-116">強式名稱語彙基元是公開金鑰的用來儲存空間，將金鑰資訊儲存在中繼資料中的縮短格式。</span><span class="sxs-lookup"><span data-stu-id="4ea33-116">A strong name token is the shortened form of a public key that is used to save space when storing key information in metadata.</span></span> <span data-ttu-id="4ea33-117">具體來說，強式名稱語彙基元會在組件參考中用來參考相依的組件。</span><span class="sxs-lookup"><span data-stu-id="4ea33-117">Specifically, strong name tokens are used in assembly references to refer to the dependent assembly.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="29a0d-115">備註</span><span class="sxs-lookup"><span data-stu-id="29a0d-115">Remarks</span></span>  
+ <span data-ttu-id="29a0d-116">強式名稱語彙基元是公開金鑰的用來儲存空間，將金鑰資訊儲存在中繼資料中的縮短格式。</span><span class="sxs-lookup"><span data-stu-id="29a0d-116">A strong name token is the shortened form of a public key that is used to save space when storing key information in metadata.</span></span> <span data-ttu-id="29a0d-117">具體來說，強式名稱語彙基元會在組件參考中用來參考相依的組件。</span><span class="sxs-lookup"><span data-stu-id="29a0d-117">Specifically, strong name tokens are used in assembly references to refer to the dependent assembly.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4ea33-118">需求</span><span class="sxs-lookup"><span data-stu-id="4ea33-118">Requirements</span></span>  
- <span data-ttu-id="4ea33-119">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4ea33-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="29a0d-118">需求</span><span class="sxs-lookup"><span data-stu-id="29a0d-118">Requirements</span></span>  
+ <span data-ttu-id="29a0d-119">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="29a0d-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4ea33-120">**標頭：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="4ea33-120">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="29a0d-120">**標頭：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="29a0d-120">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="4ea33-121">**程式庫：** 包含做為 mscoree.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="4ea33-121">**Library:** Included as a resource in mscoree.dll</span></span>  
+ <span data-ttu-id="29a0d-121">**程式庫：** 包含做為 mscoree.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="29a0d-121">**Library:** Included as a resource in mscoree.dll</span></span>  
   
- <span data-ttu-id="4ea33-122">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4ea33-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="29a0d-122">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="29a0d-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4ea33-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4ea33-123">See Also</span></span>  
- [<span data-ttu-id="4ea33-124">StrongNameGetPublicKey 方法</span><span class="sxs-lookup"><span data-stu-id="4ea33-124">StrongNameGetPublicKey Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)  
- [<span data-ttu-id="4ea33-125">PublicKeyBlob 結構</span><span class="sxs-lookup"><span data-stu-id="4ea33-125">PublicKeyBlob Structure</span></span>](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
- [<span data-ttu-id="4ea33-126">ICLRStrongName 介面</span><span class="sxs-lookup"><span data-stu-id="4ea33-126">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="29a0d-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="29a0d-123">See Also</span></span>  
+ [<span data-ttu-id="29a0d-124">StrongNameGetPublicKey 方法</span><span class="sxs-lookup"><span data-stu-id="29a0d-124">StrongNameGetPublicKey Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)  
+ [<span data-ttu-id="29a0d-125">PublicKeyBlob 結構</span><span class="sxs-lookup"><span data-stu-id="29a0d-125">PublicKeyBlob Structure</span></span>](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
+ [<span data-ttu-id="29a0d-126">ICLRStrongName 介面</span><span class="sxs-lookup"><span data-stu-id="29a0d-126">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
