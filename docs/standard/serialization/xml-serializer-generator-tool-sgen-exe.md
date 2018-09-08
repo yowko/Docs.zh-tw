@@ -2,12 +2,12 @@
 title: XML 序列化程式產生器工具 (Sgen.exe)
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: 54afa99af3365c3be8a9662905467fbcaf4e8aa3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0fee890f86f4e377a9372d7e4c47ef78effc9fa
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589175"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44136988"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>XML 序列化程式產生器工具 (Sgen.exe)
 XML 序列化程式產生器會為指定組件中的型別建立 XML 序列化 (Serialization) 組件，以改善 <xref:System.Xml.Serialization.XmlSerializer> 在序列化或還原序列化指定型別物件時的啟動效能。  
@@ -38,7 +38,7 @@ sgen [options]
 |**/?**|顯示工具的命令語法和選項。|  
   
 ## <a name="remarks"></a>備註  
- 如果未使用 XML 序列化程式產生器，則每當應用程式執行時，<xref:System.Xml.Serialization.XmlSerializer> 便會為每個型別產生序列化程式碼和序列化組件。 若要改善效能的 XML 序列化啟動，使用 Sgen.exe 工具事先產生這些組件。 然後，這些組件便可以與應用程式一起部署。  
+ 如果未使用 XML 序列化程式產生器，則每當應用程式執行時，<xref:System.Xml.Serialization.XmlSerializer> 便會為每個型別產生序列化程式碼和序列化組件。 若要改善 XML 序列化啟動的效能，使用 Sgen.exe 工具來預先產生這些組件。 然後，這些組件便可以與應用程式一起部署。  
   
  XML 序列化程式產生器也可以改善用戶端使用 XML Web Service Proxy 與伺服器進行通訊的效能，因為在第一次載入型別時，序列化處理序並不會影響到效能。  
   
@@ -55,7 +55,8 @@ sgen Data.dll
   
  Data.XmlSerializers.dll 組件可以從程式碼參考，而該程式碼必須序列化及還原序列化 Data.dll 中的型別。  
   
-## <a name="see-also"></a>另請參閱  
- [工具](../../../docs/framework/tools/index.md)  
- [XML Web Service 概觀](https://msdn.microsoft.com/library/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)  
- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>另請參閱
+
+- [工具](../../../docs/framework/tools/index.md)  
+- [XML Web Service 概觀](https://msdn.microsoft.com/library/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)  
+- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

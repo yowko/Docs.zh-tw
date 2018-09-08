@@ -15,12 +15,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-ms.openlocfilehash: 435bc1c04bfd2f9b8a94ff8151369b5ef2fae6f8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 81c7f21e7e331b60d41330c8239893332dbea5a1
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777986"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44135883"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>逐步解說：實作使用背景作業的表單
 如果您有會花費很長的時間才能完成，且不想您的使用者介面 (UI) 停止回應或 「 擱置 」，您可以使用<xref:System.ComponentModel.BackgroundWorker>類別，以另一個執行緒上執行作業。  
@@ -163,11 +163,12 @@ ms.locfileid: "43777986"
     > [!CAUTION]
     >  無論使用何種多執行緒作業，您都可能會面臨嚴重而複雜的錯誤。 請在實作使用多執行緒的任何解決方案之前參閱 [Managed 執行緒最佳做法](../../../../docs/standard/threading/managed-threading-best-practices.md)。  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ComponentModel.BackgroundWorker>  
- [Managed 執行緒處理的最佳實施方針](../../../../docs/standard/threading/managed-threading-best-practices.md)  
- [元件中的多執行緒](https://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
- [不在組建中：Visual Basic 中的多執行緒處理](https://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
- [操作說明：實作使用背景作業的表單](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
- [逐步解說：在背景執行作業](../../../../docs/framework/winforms/controls/walkthrough-running-an-operation-in-the-background.md)  
- [BackgroundWorker 元件](../../../../docs/framework/winforms/controls/backgroundworker-component.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>
+- [受控執行緒處理](../../../../docs/standard/threading/index.md)
+- [Managed 執行緒處理的最佳實施方針](../../../../docs/standard/threading/managed-threading-best-practices.md)
+- [事件架構非同步模式概觀](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [操作說明：實作使用背景作業的表單](how-to-implement-a-form-that-uses-a-background-operation.md)  
+- [逐步解說：在背景執行作業](walkthrough-running-an-operation-in-the-background.md)
+- [BackgroundWorker 元件](backgroundworker-component.md)

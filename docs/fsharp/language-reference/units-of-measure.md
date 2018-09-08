@@ -2,17 +2,16 @@
 title: 測量單位 (F#)
 description: '了解如何浮點數和帶正負號的整數值，F # 中可以有關聯的量值，通常用來表示長度、 磁碟區，以及大量的單位。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 6075742ec80d9510be51d4565e3397931c9f68c7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ad2193e25f3c0cee6e73cd529ab43d1e4b6b549b
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517422"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131256"
 ---
 # <a name="units-of-measure"></a>測量單位
 
 在 F # 浮點和帶正負號的整數值可以具有相關聯的度量單位，通常用來表示長度，磁碟區，大量，依此類推。 藉由使用單位數量，您可以讓編譯器無法驗證算術的關聯性具有正確的單位，這有助於防止程式設計錯誤。
-
 
 ## <a name="syntax"></a>語法
 
@@ -21,6 +20,7 @@ ms.locfileid: "43517422"
 ```
 
 ## <a name="remarks"></a>備註
+
 先前的語法會定義*單位名稱*做為度量單位。 選擇性的部分用來定義新的量值，依據先前定義的單位。 例如下, 面這一行會定義量值`cm`（公分）。
 
 ```fsharp
@@ -72,7 +72,7 @@ let convertg2kg (x : float<g>) = x / 1000.0<g/kg>
 下列範例說明如何使用的測量單位。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6901.fs)]
-    
+
 下列程式碼範例說明如何將此的浮點數轉換為維度的浮動點值。 您只是乘以 1.0 時，將套用至 1.0 的維度。 您可以執行像是函式簡化`degreesFahrenheit`。
 
 此外，當您將維度的值傳遞至預期此浮點數的函式時，您必須先取消外延展單位或轉換成`float`使用`float`運算子。 在此範例中，除以`1.0<degC>`的引數`printf`因為`printf`預期此數量。
@@ -88,20 +88,23 @@ That temperature in degrees Celsius is    32.22.
 ```
 
 ## <a name="using-generic-units"></a>使用泛型的單位
+
 您可以撰寫操作的泛型函式有相關聯的量值單位的資料。 您可以指定類型，以及泛型的單元型別參數，如下列程式碼範例所示。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6903.fs)]
-    
+
 ## <a name="creating-aggregate-types-with-generic-units"></a>使用泛型的單位建立彙總類型
+
 下列程式碼示範如何建立彙總類型，其中包含的個別浮動點值都是泛型的單位。 這可讓單一類型來建立可搭配各種不同的單位。 此外，泛型的單位，來確保泛型型別具有一組的單位類型不同於相同的泛型型別具有一組不同的單位保留型別安全。 這項技術的基礎在於`Measure`屬性可以套用至型別參數。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6904.fs)]
-    
+
 ## <a name="units-at-runtime"></a>在執行階段的單位
+
 測量單位用於靜態類型檢查。 浮點值編譯時，會刪除的測量單位，因此在執行階段的單位都會遺失。 因此，任何嘗試實作取決於在執行階段檢查單位的功能不可能。 比方說，實作`ToString`函式來列印外延展單位不可能。
 
-
 ## <a name="conversions"></a>轉換
+
 若要將具有單位的類型 (例如`float<'u>`) 沒有單位的類型，您可以使用標準轉換函式。 例如，您可以使用`float`要轉換成`float`沒有單位，如下列程式碼所示的值。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6905.fs)]
@@ -109,10 +112,11 @@ That temperature in degrees Celsius is    32.22.
 若要 unitless 值轉換為具有單位的值，可以將由值為 1 或 1.0 標註，利用適當的單位。 不過，撰寫互通性層級，也有一些明確函數可用來將 unitless 值轉換為值，單位。 這些是在[Microsoft.FSharp.Core.LanguagePrimitives](https://msdn.microsoft.com/library/69d08ac5-5d51-4c20-bf1e-850fd312ece3)模組。 例如，若要從 unitless 轉換`float`要`float<cm>`，使用[FloatWithMeasure](https://msdn.microsoft.com/library/69520bc7-d67b-46b8-9004-7cac9646b8d9)，如下列程式碼所示。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6906.fs)]
-    
+
 ## <a name="units-of-measure-in-the-f-core-library"></a>F # 核心程式庫中的測量單位
+
 單位程式庫都有`FSharp.Data.UnitSystems.SI`命名空間。 它包含這兩個符號格式的 SI 單位 (類似`m`個計量器) 中`UnitSymbols`子命名空間和其完整名稱 (例如`meter`個計量器) 中`UnitNames`子命名空間。
 
-
 ## <a name="see-also"></a>另請參閱
-[F# 語言參考](index.md)
+
+- [F# 語言參考](index.md)

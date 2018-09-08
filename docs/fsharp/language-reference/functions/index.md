@@ -2,12 +2,12 @@
 title: 函式 (F#)
 description: '深入了解以 F # 和 F # 如何支援常見的函式程式設計建構函式。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 7a5b54b7bcfdeee7018dba38016db6182ef95ff0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 717eba7e69398048d229173e07ccc376797171bb
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43803908"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44140914"
 ---
 # <a name="functions"></a>函式
 
@@ -112,7 +112,7 @@ let vol = cylinderVolume 2.0 3.0
 
 ## <a name="recursive-functions"></a>遞迴函式
 
-「遞迴函式」是會自我呼叫的函式。 您必須在 **let** 關鍵字後面指定 **rec** 關鍵字來使用遞迴函式。 請從函式主體中叫用遞迴函式，就像叫用任何函式呼叫一樣。 下列遞迴函式會計算第 *n* 個 Fibonacci 數字。 Fibonacci 數字序列自古聞名，此序列中的每個連續數字都是前兩個數字的總和。
+「遞迴函式」是會自我呼叫的函式。 您必須在 **let** 關鍵字後面指定 **rec** 關鍵字來使用遞迴函式。 請從函式主體中叫用遞迴函式，就像叫用任何函式呼叫一樣。 下列遞迴函式會計算*n*<sup>th</sup> Fibonacci 數字。 Fibonacci 數字序列自古聞名，此序列中的每個連續數字都是前兩個數字的總和。
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 

@@ -3,11 +3,11 @@ title: 明確欄位：val 關鍵字 (F#)
 description: "深入了解 F # 'val' 關鍵字，用來宣告類別或結構類型中儲存的值，而不會初始化類型的位置。"
 ms.date: 05/16/2016
 ms.openlocfilehash: 9cd06f7e90192be79490dd0ff67f118cce4339c3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43876235"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44132796"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>明確欄位：val 關鍵字
 

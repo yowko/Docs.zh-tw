@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 964ba19e-8b94-4b5b-b1e3-5a0b531a0bb1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c77f08cd573dc40083718b783ae01233ca00766
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2127497d294cbfd4e1bb24d033f432378627ff13
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573551"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44129798"
 ---
 # <a name="member-overloading"></a>成員多載
-成員多載是指只有不同數目或類型的參數，但具有相同名稱的相同型別上建立兩個或多個成員。 例如，在下列程式碼，`WriteLine`方法多載：  
+成員多載是指的差別只在於參數類型或數目，但具有相同名稱的相同型別上建立兩個或多個成員。 例如，在下列程式碼，`WriteLine`多載方法：  
   
 ```  
 public static class Console {  
@@ -30,21 +30,21 @@ public static class Console {
 }  
 ```  
   
- 因為只有方法、 建構函式和索引的屬性可以有參數，只有那些成員可能會超載。  
+ 只有方法、 建構函式和索引的屬性可以有參數，因為只有這些成員可以多載。  
   
- 多載是其中一個最重要的技術，用於改善可用性、 產能和可重複使用程式庫的可讀性。 多載的參數數目，讓能夠提供更簡單的建構函式和方法的版本。 參數類型多載，可讓使用相同的成員執行相同作業上將選取的不同類型的成員名稱。  
+ 多載是其中一個最重要的技術改進使用性、 生產力及重複使用程式庫的可讀性。 多載的參數數目，讓能夠提供簡單的建構函式和方法的版本。 參數類型多載，讓能夠使用相同的成員名稱，執行相同的作業，在一組選取的不同類型的成員。  
   
  **✓ DO** 試著使用描述性的參數名稱，表示使用較短的多載的預設值。  
   
- **X AVOID** 任意改變在多載的參數名稱。 如果一個多載中的參數表示相同的輸入中另一個多載的參數，參數應該是相同的名稱。  
+ **X AVOID** 任意改變在多載的參數名稱。 如果其中一個多載中的參數代表相同的輸入參數，以在另一個多載，這些參數應該有相同的名稱。  
   
  **X AVOID** 不一致，在此順序中的參數中的多載成員。 具有相同名稱的參數應該會出現在所有多載中的相同位置。  
   
- **✓ DO**（如果是必要的擴充性） 進行的最長多載虛擬。 較短的多載應該只是透過呼叫長的多載。  
+ **✓ DO**（如果是必要的擴充性） 進行的最長多載虛擬。 較短的多載應該只是透過呼叫較長的多載。  
   
  **X DO NOT** 使用 `ref` 或 `out` 多載成員的修飾詞。  
   
- 某些語言無法將呼叫解析為多載，就像這樣。 此外，這種多載通常有完全不同的語意，而且可能不能多載，但兩個各自方法改為。  
+ 有些語言無法解析這類的多載的呼叫。 此外，這類多載通常有完全不同的語意，而且可能不應該多載，但兩個不同的方法而。  
   
  **X DO NOT** 具有多載具有位於相同位置和類似的類型參數，但具有不同的語意。  
   
@@ -54,10 +54,11 @@ public static class Console {
   
  預設引數不符合 CLS 標準。  
   
- *部分 © 2005年，2009 Microsoft Corporation。All rights reserved.*  
+ *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- *皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*  
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
   
-## <a name="see-also"></a>另請參閱  
- [成員設計方針](../../../docs/standard/design-guidelines/member.md)  
- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>另請參閱
+
+- [成員設計方針](../../../docs/standard/design-guidelines/member.md)  
+- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)

@@ -3,11 +3,11 @@ title: 陣列 (F#)
 description: '了解如何建立及使用 F # 程式設計語言中的陣列。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 27b73efc900ac2efc813fe66f81baa2e9ae1e843
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43874822"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44135727"
 ---
 # <a name="arrays"></a>陣列
 

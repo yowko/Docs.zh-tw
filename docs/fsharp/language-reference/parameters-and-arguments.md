@@ -2,12 +2,12 @@
 title: 參數和引數 (F#)
 description: '深入了解 F # 語言支援對定義參數，以及將引數傳遞至函式、 方法和屬性。'
 ms.date: 05/16/2016
-ms.openlocfilehash: a3418ec814e0419d08758cf035ecc0f402b5db1a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: a1e2a70ca560bbb09d2cd10f47485cbe5c5e029d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44062633"
+ms.locfileid: "44131972"
 ---
 # <a name="parameters-and-arguments"></a>參數和引數
 
@@ -127,15 +127,32 @@ Baud Rate: 300 Duplex: Half Parity: true
 
 ## <a name="passing-by-reference"></a>傳址方式傳遞
 
-傳址方式傳遞 F # 值牽涉到`byref`關鍵字，指定參數是實際上傳址方式傳遞值的指標。 任何值傳遞至方法`byref`引數必須是`mutable`。
+傳址方式傳遞 F # 值涉及[byref](byrefs.md)，這是 managed 的指標類型。 若要使用哪種類型時，如下所示的指引：
+
+* 使用`inref<'T>`如果您只需要讀取的指標。
+* 使用`outref<'T>`如果您只需要撰寫的指標。
+* 使用`byref<'T>`如果您需要從讀取和寫入的指標。
+
+```fsharp
+let example1 (x: inref<int>) = printfn "It's %d" x
+
+let example2 (x: outref<int>) = x <- x + 1
+
+let example3 (x: byref<int>) =
+    printfn "It'd %d" x
+    x <- x + 1
+
+// No need to make it mutable, since it's read-only
+let x = 1
+example1 &x
+
+// Needs to be mutable, since we write to it
+let mutable y = 2
+example2 &y
+example3 &y // Now 'y' is 3
+```
 
 因為參數是指標，且值是可變動，仍會保留值的任何變更之後執行的函式。
-
-您可以完成相同的作業[參考儲存格](reference-cells.md)，但務必要注意**參考儲存格並`byref`s 不是相同的東西**。 參考儲存格是值，但您可以檢查和變更的內容，這個值在堆積上運作，而且相當於可變動的值包含在其中有一筆記錄的容器。 A`byref`是實際的指標，因此它是不同的基礎語意和使用方式規則 （這可以是相當嚴格的）。
-
-下列範例說明使用`byref`關鍵字。 請注意，當您使用做為參數的參考儲存格，您必須建立具名值的參考儲存格和使用，做為參數，不只是新增`ref`運算子的第一個呼叫中所示`Increment`下列程式碼。 建立參考儲存格時，會建立基礎值的複本，因為第一次呼叫只會遞增的暫存值。
-
-[!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3809.fs)]
 
 您可以做為傳回值使用 tuple，來儲存任何`out`.NET 程式庫方法中的參數。 或者，您可以將視為`out`參數做為`byref`參數。 下列程式碼範例說明這兩種方式。
 
@@ -155,7 +172,7 @@ Baud Rate: 300 Duplex: Half Parity: true
 
 當執行在專案中，先前的程式碼的輸出如下所示：
 
-```
+```console
 a 1 10 Hello world 1 True
 "a"
 1

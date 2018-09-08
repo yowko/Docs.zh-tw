@@ -2,12 +2,12 @@
 title: '使用命令列工具開始使用 F #'
 description: '了解如何在 F # 在任何作業系統 （Windows、 macOs 或 Linux） 上使用.NET Core CLI 建置簡單的多專案方案'
 ms.date: 03/26/2018
-ms.openlocfilehash: 6cdb2b42781dba6ba00c03b20e6a76d033e03063
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 8a82970f33c8bbe1b8cdd8fb6499b59b16d3cbf3
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37875010"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44134801"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>開始使用 F # 和.NET Core CLI
 
@@ -41,7 +41,7 @@ FSNetCore
 使用`dotnet new`命令，建立類別庫專案中的**src**名為程式庫的資料夾。
 
 ```console
-dotnet new lib -lang F# -o src/Library
+dotnet new classlib -lang F# -o src/Library
 ```
 
 執行上述命令之後，會產生下列目錄結構：

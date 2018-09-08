@@ -5,11 +5,11 @@ ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: d895524d36895ad087f7394fcc3380573355eaad
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44035940"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44128140"
 ---
 # <a name="securing-messages-using-message-security"></a>使用訊息安全性來保護訊息的安全
 本章節將討論 WCF 訊息安全性時使用<xref:System.ServiceModel.NetMsmqBinding>。  

@@ -3,11 +3,11 @@ title: 使用 UDP 傳輸建立多點傳送應用程式
 ms.date: 03/30/2017
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
 ms.openlocfilehash: 89ac99ffec614eeebd076f9868568dcf2c7b04fd
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43867916"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44137002"
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>使用 UDP 傳輸建立多點傳送應用程式
 多點傳送應用程式會在同一時間將小量訊息發送給大量的收件人，而無需建立點對點連接。 這類應用程式著重速度勝於可靠性。 換句話說，及時發送資料要比確保任何特定訊息實際送達來得更重要。 WCF 現在支援使用 <xref:System.ServiceModel.UdpBinding> 撰寫多點傳送應用程式。 這種傳輸適用於服務需要將出小量訊息同時傳送給許多用戶端的情節。 股票行情指示器應用程式是這類服務的範例。  

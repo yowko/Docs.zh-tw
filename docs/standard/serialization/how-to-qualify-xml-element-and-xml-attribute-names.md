@@ -9,12 +9,12 @@ helpviewer_keywords:
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-ms.openlocfilehash: 6b4d58f6b5bf23cbce2ace8fb40730d7b73994de
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3c477923387e5a28dcc14b44b0f77bb6acb686e5
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785488"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44133278"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>HOW TO：限定 XML 元素和 XML 屬性名稱
 
@@ -171,11 +171,11 @@ public class Book
 
 ## <a name="see-also"></a>另請參閱
 
-<xref:System.Xml.Serialization.XmlSerializer>
-[XML 結構描述定義工具和 XML 序列化](the-xml-schema-definition-tool-and-xml-serialization.md)
-[XML 序列化簡介](introducing-xml-serialization.md)
-[XmlSerializer 類別](xref:System.Xml.Serialization.XmlSerializer)
- [控制 XML 序列化的屬性](attributes-that-control-xml-serialization.md)
-[How to： 指定 XML Stream 的替代項目名稱](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-[How to： 序列化物件](how-to-serialize-an-object.md)
-[如何： 還原序列化物件](how-to-deserialize-an-object.md)
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [XML 結構描述定義工具和 XML 序列化](the-xml-schema-definition-tool-and-xml-serialization.md)
+- [XML 序列化簡介](introducing-xml-serialization.md)
+- [XmlSerializer 類別](xref:System.Xml.Serialization.XmlSerializer)
+- [可控制 XML 序列化的屬性](attributes-that-control-xml-serialization.md)
+- [如何：指定 XML 資料流的替代元素名稱](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [如何：序列化物件](how-to-serialize-an-object.md)
+- [如何：還原序列化物件](how-to-deserialize-an-object.md)

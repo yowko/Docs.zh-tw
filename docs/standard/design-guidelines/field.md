@@ -10,11 +10,11 @@ ms.assetid: 7cb4b0f3-7a10-4c93-b84d-733f7134fcf8
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 65c54fe9a076a219c61280a98c390b16f56b5015
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43873938"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44127848"
 ---
 # <a name="field-design"></a>欄位設計
 封裝原則可讓其中一個最重要的概念是物件導向設計中。 此原則就是儲存在物件內的資料必須能夠存取只適用於該物件。  

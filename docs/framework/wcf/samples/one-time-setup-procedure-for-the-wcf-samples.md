@@ -3,11 +3,11 @@ title: Windows Communication Foundation 範例的單次安裝程序
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
 ms.openlocfilehash: 3c3c5934cbbc7dd68f03d888aa0594f9ff61c225
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44063851"
+ms.locfileid: "44137664"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 範例的單次安裝程序
 大部分的 Windows Communication Foundation (WCF) 範例是裝載在網際網路資訊服務 (IIS)，然後執行常見的虛擬目錄中。 這個單次安裝程序會建立磁碟; 上的資料夾它也將虛擬目錄加入至名為 IIS **ServiceModelSamples**。  

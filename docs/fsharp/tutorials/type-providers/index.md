@@ -3,11 +3,11 @@ title: 型別提供者
 description: '了解 F # 型別提供者的元件，可提供型別、 屬性和方法，以供您程式的方式。'
 ms.date: 04/02/2018
 ms.openlocfilehash: 5fa9de229caa2ec3ba4a248ca5cd1c8aa5adb230
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43891664"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44134718"
 ---
 # <a name="type-providers"></a>型別提供者
 

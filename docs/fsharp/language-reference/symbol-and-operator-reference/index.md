@@ -3,11 +3,11 @@ title: 符號和運算子參考 (F#)
 description: '深入了解符號和運算子，可在 F # 程式設計語言。'
 ms.date: 04/04/2018
 ms.openlocfilehash: 0e36f6cfc75b7d2e79bcf7acb89d260fd4e9b1ad
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745563"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131918"
 ---
 # <a name="symbol-and-operator-reference"></a>符號和運算子參考
 
@@ -91,7 +91,7 @@ ms.locfileid: "43745563"
 |`?`|[參數和引數](../parameters-and-arguments.md)|<ul><li>指定選擇性引數。<br /></li><li>用做為動態方法及屬性呼叫的運算子。 您必須提供自己的實作。<br /></li></ul>|
 |`? ... <- ...`|沒有可用的詳細資訊。|<ul><li>用來做為設定動態屬性的運算子。 您必須提供自己的實作。<br /></li></ul>|
 |`?>=`, `?>`, `?<=`, `?<`, `?=`, `?<>`, `?+`, `?-`, `?*`, `?/`|[可為 Null 的運算子](nullable-operators.md)|<ul><li>相當於沒有 ? 前置詞的對應運算子， 其中可為 null 的類型在左側。<br /></li></ul>|
-|`>=?`, `>?`, `<=?`, `<?`, `=?`, `<>?`, `+?`, `-?`, `*?`, `/?`|[可為 Null 的運算子](nullable-operators.md)|<ul><li>相當於沒有 ? 後置字元的對應運算子， 其中可為 null 的類型在右側。<br /></li></ul>|
+|`>=?`, `>?`, `<=?`, `<?`, `=?`, `<>?`, `+?`, `-?`, `*?`, `/?`|[可為 Null 的運算子](nullable-operators.md)|<ul><li>相當於沒有 ? 前置詞的對應運算子， 其中可為 null 的類型在右側。<br /></li></ul>|
 |`?>=?`, `?>?`, `?<=?`, `?<?`, `?=?`, `?<>?`, `?+?`, `?-?`, `?*?`, `?/?`|[可為 Null 的運算子](nullable-operators.md)|<ul><li>相當於沒有問號括住的對應運算子，其兩側都是可為 null 的類型。<br /></li></ul>|
 |`@`|[清單](../lists.md)<br /><br />[字串](../strings.md)|<ul><li>串連兩個清單。<br /></li><li>置於字串常值前面時，表示要逐字解譯字串，但是不解譯逸出字元。<br /></li></ul>|
 |`[...]`|[清單](../lists.md)|<ul><li>分隔清單的元素。<br /></li></ul>|
@@ -125,7 +125,7 @@ ms.locfileid: "43745563"
 |<code>&#124;</code> （管線）|左|
 |`;`|右|
 |`let`|Nonassociative|
-|`function`, `fun`, `match`, `try`|Nonassociative|
+|`function`、`fun`、`match``try`|Nonassociative|
 |`if`|Nonassociative|
 |`->`|右|
 |`:=`|右|

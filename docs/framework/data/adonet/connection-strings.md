@@ -3,11 +3,11 @@ title: ADO.NET 中的連接字串
 ms.date: 03/30/2017
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
 ms.openlocfilehash: b4e057cab4c562fc51893631c35d66409e1c3731
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43748537"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131535"
 ---
 # <a name="connection-strings-in-adonet"></a>ADO.NET 中的連接字串
 .NET Framework 2.0 導入了使用連接字串的新功能，包括在連接字串產生器 (Builder) 類別 (Class) 中引入新的關鍵字，這麼做可在執行階段建立有效的連接字串。  
@@ -24,7 +24,7 @@ ms.locfileid: "43748537"
   
  為了解決這些問題，ADO.NET 2.0 針對每個 .NET Framework 資料提供者導入新的連接字串產生器。 關鍵字會以屬性的方式公開 (Expose)，如此就可在將連接字串提交至資料來源之前先驗證字串語法。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [連接字串產生器](../../../../docs/framework/data/adonet/connection-string-builders.md)  
  示範如何使用 `ConnectionStringBuilder` 類別在執行階段建構有效的連接字串。  
   
