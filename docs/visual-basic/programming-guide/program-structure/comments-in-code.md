@@ -15,11 +15,11 @@ helpviewer_keywords:
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
 ms.openlocfilehash: fafc80cc4847e9ec05f19fc7f3d31d2d5b11197a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43870337"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44194576"
 ---
 # <a name="comments-in-code-visual-basic"></a>程式碼中的註解 (Visual Basic)
 當您閱讀程式碼範例時，常會遇到註解符號 (`'`)。 這個符號會告知 Visual Basic 編譯器忽略它後面的文字或*註解*。 註解是為了閱讀者方便而加入至程式碼的簡短說明。  

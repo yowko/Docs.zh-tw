@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: cdc3e42adcb2c7eae52aab0b14d0f9c6a822eeea
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b900b85b4e3e56dbc587a15edea40f6e3032cbd1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43881971"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192427"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows Forms 應用程式基本概念 (Visual Basic)
 Visual Basic 中很重要的一部分是建立本機使用者的電腦執行的 Windows Forms 應用程式的能力。 您可以使用 Visual Studio 來建立使用 Windows Form 的應用程式和使用者介面。 在 Windows Forms 應用程式的基礎類別<xref:System.Windows.Forms>命名空間。  
@@ -67,7 +67,7 @@ Visual Basic 中很重要的一部分是建立本機使用者的電腦執行的 
 |以|請參閱|  
 |--------|---------|  
 |使用<xref:System.Windows.Forms.BindingSource>元件|[操作說明：使用設計工具將 Windows Forms 控制項和 BindingSource 元件加以繫結](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
-|使用[!INCLUDE[vstecado](~/includes/vstecado-md.md)]資料來源|[操作說明：使用 Windows Forms BindingSource 元件排序和篩選 ADO.NET 資料](https://msdn.microsoft.com/library/ya3sah92.aspx)|  
+|使用[!INCLUDE[vstecado](~/includes/vstecado-md.md)]資料來源|[操作說明：使用 Windows Forms BindingSource 元件排序和篩選 ADO.NET 資料](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |使用 [資料來源] 視窗|[逐步解說：顯示 Windows Form 上的資料](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>將應用程式部署到用戶端電腦  
@@ -95,7 +95,8 @@ Visual Basic 中很重要的一部分是建立本機使用者的電腦執行的 
 |列印表單的內容|[如何：列印 Windows Forms 中的圖形](../../../framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [如何：在 Windows Forms 中列印多頁文字檔](../../../framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|   
 |深入了解 Windows Form 安全性|[Windows Forms 中的安全性概觀](../../../framework/winforms/security-in-windows-forms-overview.md)|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>  
- [Windows Forms 概觀](../../../framework/winforms/windows-forms-overview.md)  
- [My.Forms 物件](../../../visual-basic/language-reference/objects/my-forms-object.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>  
+- [Windows Forms 概觀](../../../framework/winforms/windows-forms-overview.md)  
+- [My.Forms 物件](../../../visual-basic/language-reference/objects/my-forms-object.md)

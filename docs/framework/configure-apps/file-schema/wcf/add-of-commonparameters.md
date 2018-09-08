@@ -3,11 +3,11 @@ title: '&lt;commonParameters&gt; 的 &lt;add&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3713bf25-20c8-455f-bb85-de46b6487932
 ms.openlocfilehash: 93e82aa3bd44a747d1e85986c51c21522d709bd0
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44141096"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192908"
 ---
 # <a name="ltaddgt-of-ltcommonparametersgt"></a>&lt;commonParameters&gt; 的 &lt;add&gt;
 指定跨多項服務全域使用之名稱/值組的參數。 這個參數通常會包含資料庫連線字串，這個字串可能會由長期服務所共用。  

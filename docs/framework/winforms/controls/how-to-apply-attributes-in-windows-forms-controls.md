@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Windows Forms controls, applying attributes
 ms.assetid: af0a3f7f-155b-4ba1-83c4-9cf721331a06
 ms.openlocfilehash: 1ab54b0c6828a0648fecfc293b6a7143b012ad6a
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44138561"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192167"
 ---
 # <a name="how-to-apply-attributes-in-windows-forms-controls"></a>如何：在 Windows Form 控制項中套用屬性
 若要開發元件和控制項的設計環境中正確互動，並在執行階段會正確執行，您需要正確地將屬性套用至類別和成員。  

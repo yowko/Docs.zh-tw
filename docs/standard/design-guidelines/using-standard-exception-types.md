@@ -11,11 +11,11 @@ ms.assetid: ab22ce03-78f9-4dca-8824-c7ed3bdccc27
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ea4a61be3a76c30c564cbf98ba3318fc6c3e7d4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43874959"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44193617"
 ---
 # <a name="using-standard-exception-types"></a>使用標準例外狀況類型
 本章節描述的架構和其使用方式詳細資料所提供的標準例外狀況。 清單並不詳盡。 請參閱.NET Framework 參考文件的使用方式的其他 Framework 例外狀況型別。  

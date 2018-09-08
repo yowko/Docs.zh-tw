@@ -3,11 +3,11 @@ title: 使用 FlowChart 及 Pick 組合的 StateMachine 案例
 ms.date: 03/30/2017
 ms.assetid: 88d81395-f7a3-41d8-8439-20a425c538a6
 ms.openlocfilehash: b0f8e884a8a6c62c4e7edaf5cc9727bf7bfe8603
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44032328"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195682"
 ---
 # <a name="statemachine-scenario-using-a-combination-of-flowchart-and-pick"></a>使用 FlowChart 及 Pick 組合的 StateMachine 案例
 這個範例示範如何實作一個使用 <xref:System.Activities.Statements.Flowchart> 和 <xref:System.Activities.Statements.Pick> 活動組合的簡單馬錶案例。 在 Pick 活動中使用 Receive 和 Send 以接聽馬錶事件。  

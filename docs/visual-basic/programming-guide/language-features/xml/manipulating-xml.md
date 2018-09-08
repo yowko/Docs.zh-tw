@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XML [Visual Basic], manipulating
 ms.assetid: da32cffb-198d-41b1-9af3-260fe32e3b7d
 ms.openlocfilehash: 7fd111f5e885de3389b8f93002db22b48c4edd45
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44130915"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44191972"
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>在 Visual Basic 中管理 XML
 您可以使用*XML 常值*從外部來源，例如字串、 檔案或資料流載入 XML。 然後您可以使用[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]來操作 XML，以及使用[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]來查詢 XML。  
