@@ -13,30 +13,30 @@ helpviewer_keywords:
 - FileOpen function
 ms.assetid: 4c145456-5453-4bda-aab5-578dc8bee59a
 ms.openlocfilehash: 05d849afb50a3b1c4eeecc3db26170bacc3517df
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44066187"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44182917"
 ---
-# <a name="mycomputerfilesystem-object"></a><span data-ttu-id="5dda5-102">My.Computer.FileSystem 物件</span><span class="sxs-lookup"><span data-stu-id="5dda5-102">My.Computer.FileSystem Object</span></span>
-<span data-ttu-id="5dda5-103">提供屬性和方法，以處理磁碟機、檔案和目錄。</span><span class="sxs-lookup"><span data-stu-id="5dda5-103">Provides properties and methods for working with drives, files, and directories.</span></span>  
+# <a name="mycomputerfilesystem-object"></a><span data-ttu-id="1ba82-102">My.Computer.FileSystem 物件</span><span class="sxs-lookup"><span data-stu-id="1ba82-102">My.Computer.FileSystem Object</span></span>
+<span data-ttu-id="1ba82-103">提供屬性和方法，以處理磁碟機、檔案和目錄。</span><span class="sxs-lookup"><span data-stu-id="1ba82-103">Provides properties and methods for working with drives, files, and directories.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="5dda5-104">備註</span><span class="sxs-lookup"><span data-stu-id="5dda5-104">Remarks</span></span>  
- <span data-ttu-id="5dda5-105">如需方法和屬性資訊`My.Computer.FileSystem`資訊，請參閱<xref:Microsoft.VisualBasic.FileIO.FileSystem>。</span><span class="sxs-lookup"><span data-stu-id="5dda5-105">For information about the methods and properties of the `My.Computer.FileSystem` object, see <xref:Microsoft.VisualBasic.FileIO.FileSystem>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1ba82-104">備註</span><span class="sxs-lookup"><span data-stu-id="1ba82-104">Remarks</span></span>  
+ <span data-ttu-id="1ba82-105">如需方法和屬性資訊`My.Computer.FileSystem`資訊，請參閱<xref:Microsoft.VisualBasic.FileIO.FileSystem>。</span><span class="sxs-lookup"><span data-stu-id="1ba82-105">For information about the methods and properties of the `My.Computer.FileSystem` object, see <xref:Microsoft.VisualBasic.FileIO.FileSystem>.</span></span>  
   
- <span data-ttu-id="5dda5-106">如需詳細資訊，請參閱 <<c0> [ 使用 Visual Basic 存取檔案](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)。</span><span class="sxs-lookup"><span data-stu-id="5dda5-106">For more information, see [File Access with Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).</span></span>  
+ <span data-ttu-id="1ba82-106">如需詳細資訊，請參閱 <<c0> [ 使用 Visual Basic 存取檔案](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)。</span><span class="sxs-lookup"><span data-stu-id="1ba82-106">For more information, see [File Access with Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="5dda5-107">您也可以使用中的類別<xref:System.IO?displayProperty=nameWithType>命名空間來使用磁碟機、 檔案和目錄。</span><span class="sxs-lookup"><span data-stu-id="5dda5-107">You can also use classes in the <xref:System.IO?displayProperty=nameWithType> namespace to work with drives, files, and directories.</span></span>  
+>  <span data-ttu-id="1ba82-107">您也可以使用中的類別<xref:System.IO?displayProperty=nameWithType>命名空間來使用磁碟機、 檔案和目錄。</span><span class="sxs-lookup"><span data-stu-id="1ba82-107">You can also use classes in the <xref:System.IO?displayProperty=nameWithType> namespace to work with drives, files, and directories.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5dda5-108">需求</span><span class="sxs-lookup"><span data-stu-id="5dda5-108">Requirements</span></span>  
- <span data-ttu-id="5dda5-109">**命名空間：** <xref:Microsoft.VisualBasic.MyServices></span><span class="sxs-lookup"><span data-stu-id="5dda5-109">**Namespace:** <xref:Microsoft.VisualBasic.MyServices></span></span>  
+## <a name="requirements"></a><span data-ttu-id="1ba82-108">需求</span><span class="sxs-lookup"><span data-stu-id="1ba82-108">Requirements</span></span>  
+ <span data-ttu-id="1ba82-109">**命名空間：** <xref:Microsoft.VisualBasic.MyServices></span><span class="sxs-lookup"><span data-stu-id="1ba82-109">**Namespace:** <xref:Microsoft.VisualBasic.MyServices></span></span>  
   
- <span data-ttu-id="5dda5-110">**類別：** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (可存取<xref:Microsoft.VisualBasic.FileIO.FileSystem>)</span><span class="sxs-lookup"><span data-stu-id="5dda5-110">**Class:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (provides access to <xref:Microsoft.VisualBasic.FileIO.FileSystem>)</span></span>  
+ <span data-ttu-id="1ba82-110">**類別：** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (可存取<xref:Microsoft.VisualBasic.FileIO.FileSystem>)</span><span class="sxs-lookup"><span data-stu-id="1ba82-110">**Class:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (provides access to <xref:Microsoft.VisualBasic.FileIO.FileSystem>)</span></span>  
   
- <span data-ttu-id="5dda5-111">**組件：** Visual Basic 執行階段程式庫 （位於 Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="5dda5-111">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
+ <span data-ttu-id="1ba82-111">**組件：** Visual Basic 執行階段程式庫 （位於 Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="1ba82-111">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5dda5-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5dda5-112">See Also</span></span>  
- [<span data-ttu-id="5dda5-113">My.Computer.FileSystem.SpecialDirectories 物件</span><span class="sxs-lookup"><span data-stu-id="5dda5-113">My.Computer.FileSystem.SpecialDirectories Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-filesystem-specialdirectories-object.md)  
- [<span data-ttu-id="5dda5-114">My.Computer 物件</span><span class="sxs-lookup"><span data-stu-id="5dda5-114">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a><span data-ttu-id="1ba82-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1ba82-112">See Also</span></span>  
+ [<span data-ttu-id="1ba82-113">My.Computer.FileSystem.SpecialDirectories 物件</span><span class="sxs-lookup"><span data-stu-id="1ba82-113">My.Computer.FileSystem.SpecialDirectories Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-filesystem-specialdirectories-object.md)  
+ [<span data-ttu-id="1ba82-114">My.Computer 物件</span><span class="sxs-lookup"><span data-stu-id="1ba82-114">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)

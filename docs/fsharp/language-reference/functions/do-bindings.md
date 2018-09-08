@@ -3,32 +3,32 @@ title: do 繫結 (F#)
 description: "了解如何將 F # 'do' 繫結用來執行程式碼未定義的函式或值。"
 ms.date: 05/16/2016
 ms.openlocfilehash: 78dbf8da0fe40b5af566ad98693df1109eede7e4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43882729"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192145"
 ---
-# <a name="do-bindings"></a><span data-ttu-id="b86c3-103">do 繫結</span><span class="sxs-lookup"><span data-stu-id="b86c3-103">do Bindings</span></span>
+# <a name="do-bindings"></a><span data-ttu-id="62a07-103">do 繫結</span><span class="sxs-lookup"><span data-stu-id="62a07-103">do Bindings</span></span>
 
-<span data-ttu-id="b86c3-104">A`do`繫結會用來執行程式碼，而不需定義的函式或值。</span><span class="sxs-lookup"><span data-stu-id="b86c3-104">A `do` binding is used to execute code without defining a function or value.</span></span> <span data-ttu-id="b86c3-105">此外，執行繫結可以是在類別中使用，請參閱[`do`類別中的繫結](../members/do-bindings-in-classes.md)。</span><span class="sxs-lookup"><span data-stu-id="b86c3-105">Also, do bindings can be used in classes, see [`do` Bindings in Classes](../members/do-bindings-in-classes.md).</span></span>
+<span data-ttu-id="62a07-104">A`do`繫結會用來執行程式碼，而不需定義的函式或值。</span><span class="sxs-lookup"><span data-stu-id="62a07-104">A `do` binding is used to execute code without defining a function or value.</span></span> <span data-ttu-id="62a07-105">此外，執行繫結可以是在類別中使用，請參閱[`do`類別中的繫結](../members/do-bindings-in-classes.md)。</span><span class="sxs-lookup"><span data-stu-id="62a07-105">Also, do bindings can be used in classes, see [`do` Bindings in Classes](../members/do-bindings-in-classes.md).</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="b86c3-106">語法</span><span class="sxs-lookup"><span data-stu-id="b86c3-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="62a07-106">語法</span><span class="sxs-lookup"><span data-stu-id="62a07-106">Syntax</span></span>
 
 ```fsharp
 [ attributes ]
 [ do ]expression
 ```
 
-## <a name="remarks"></a><span data-ttu-id="b86c3-107">備註</span><span class="sxs-lookup"><span data-stu-id="b86c3-107">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="62a07-107">備註</span><span class="sxs-lookup"><span data-stu-id="62a07-107">Remarks</span></span>
 
-<span data-ttu-id="b86c3-108">使用`do`繫結，當您想要執行的函式或值的定義獨立的程式碼。</span><span class="sxs-lookup"><span data-stu-id="b86c3-108">Use a `do` binding when you want to execute code independently of a function or value definition.</span></span> <span data-ttu-id="b86c3-109">中的運算式`do`繫結必須傳回`unit`。</span><span class="sxs-lookup"><span data-stu-id="b86c3-109">The expression in a `do` binding must return `unit`.</span></span> <span data-ttu-id="b86c3-110">在最上層的程式碼`do`模組初始化時，會執行繫結。</span><span class="sxs-lookup"><span data-stu-id="b86c3-110">Code in a top-level `do` binding is executed when the module is initialized.</span></span> <span data-ttu-id="b86c3-111">關鍵字`do`是選擇性的。</span><span class="sxs-lookup"><span data-stu-id="b86c3-111">The keyword `do` is optional.</span></span>
+<span data-ttu-id="62a07-108">使用`do`繫結，當您想要執行的函式或值的定義獨立的程式碼。</span><span class="sxs-lookup"><span data-stu-id="62a07-108">Use a `do` binding when you want to execute code independently of a function or value definition.</span></span> <span data-ttu-id="62a07-109">中的運算式`do`繫結必須傳回`unit`。</span><span class="sxs-lookup"><span data-stu-id="62a07-109">The expression in a `do` binding must return `unit`.</span></span> <span data-ttu-id="62a07-110">在最上層的程式碼`do`模組初始化時，會執行繫結。</span><span class="sxs-lookup"><span data-stu-id="62a07-110">Code in a top-level `do` binding is executed when the module is initialized.</span></span> <span data-ttu-id="62a07-111">關鍵字`do`是選擇性的。</span><span class="sxs-lookup"><span data-stu-id="62a07-111">The keyword `do` is optional.</span></span>
 
-<span data-ttu-id="b86c3-112">屬性可以套用至最上層`do`繫結。</span><span class="sxs-lookup"><span data-stu-id="b86c3-112">Attributes can be applied to a top-level `do` binding.</span></span> <span data-ttu-id="b86c3-113">比方說，如果您的程式使用 COM interop，您可能想要套用`STAThread`屬性設定為您的程式。</span><span class="sxs-lookup"><span data-stu-id="b86c3-113">For example, if your program uses COM interop, you might want to apply the `STAThread` attribute to your program.</span></span> <span data-ttu-id="b86c3-114">您可以使用屬性上`do`繫結，如下列程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="b86c3-114">You can do this by using an attribute on a `do` binding, as shown in the following code.</span></span>
+<span data-ttu-id="62a07-112">屬性可以套用至最上層`do`繫結。</span><span class="sxs-lookup"><span data-stu-id="62a07-112">Attributes can be applied to a top-level `do` binding.</span></span> <span data-ttu-id="62a07-113">比方說，如果您的程式使用 COM interop，您可能想要套用`STAThread`屬性設定為您的程式。</span><span class="sxs-lookup"><span data-stu-id="62a07-113">For example, if your program uses COM interop, you might want to apply the `STAThread` attribute to your program.</span></span> <span data-ttu-id="62a07-114">您可以使用屬性上`do`繫結，如下列程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="62a07-114">You can do this by using an attribute on a `do` binding, as shown in the following code.</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet201.fs)]
 
-## <a name="see-also"></a><span data-ttu-id="b86c3-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b86c3-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="62a07-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="62a07-115">See also</span></span>
 
-- [<span data-ttu-id="b86c3-116">F# 語言參考</span><span class="sxs-lookup"><span data-stu-id="b86c3-116">F# Language Reference</span></span>](../index.md)
-- [<span data-ttu-id="b86c3-117">函式</span><span class="sxs-lookup"><span data-stu-id="b86c3-117">Functions</span></span>](index.md)
+- [<span data-ttu-id="62a07-116">F# 語言參考</span><span class="sxs-lookup"><span data-stu-id="62a07-116">F# Language Reference</span></span>](../index.md)
+- [<span data-ttu-id="62a07-117">函式</span><span class="sxs-lookup"><span data-stu-id="62a07-117">Functions</span></span>](index.md)
