@@ -3,11 +3,11 @@ title: 進入點 (F#)
 description: '了解如何設定為 編譯為可執行檔，正式開始執行 F # 程式的進入點。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 298500931d49c891a7a243295333df3a9f5d413e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43884766"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44189218"
 ---
 # <a name="entry-point"></a>進入點
 

@@ -2,12 +2,12 @@
 title: 功能性轉換的 XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: fdbe5b91-f457-4b4e-a11b-def4bdd77bab
-ms.openlocfilehash: 25e5d743b983badaefa3012b8839e4b039419ee9
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 06803feb0fe23ae4afe2237b64bf920f6e229060
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44070559"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183284"
 ---
 # <a name="functional-transformation-of-xml-visual-basic"></a>功能性轉換的 XML (Visual Basic)
 本主題討論修改 XML 文件的純功能性轉換方法，並與程序性方法對照。  
@@ -32,7 +32,7 @@ ms.locfileid: "44070559"
   
  當來源文件具有不規則的結構時，XSLT 是文件中心轉換的建議工具。 不過，LINQ to XML 也可以執行文件中心的轉換。 如需詳細資訊，請參閱 <<c0> [ 如何： 轉換的 LINQ to XML 樹狀結構，在 XSLT 樣式 (Visual Basic) 中使用註釋](../../../../visual-basic/programming-guide/concepts/linq/how-to-use-annotation-trees-to-transform-linq-to-xml-trees-in-an-xslt-style.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [純函數式轉換 (Visual Basic) 簡介](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
- [LINQ to XML 與其他 XML 技術的比較](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)  
- [LINQ to XML 與其他 XML 技術的比較](https://msdn.microsoft.com/library/7ba1eecf-f09a-42de-bc80-22ca5b2e42d3)
+## <a name="see-also"></a>另請參閱
+
+- [純函數式轉換 (Visual Basic) 簡介](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
+- [LINQ to XML 與其他 XML 技術的比較](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)

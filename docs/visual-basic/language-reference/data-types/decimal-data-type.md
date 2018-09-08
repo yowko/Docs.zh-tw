@@ -21,11 +21,11 @@ helpviewer_keywords:
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
 ms.openlocfilehash: ffc1cd141ba624d2ce26e4b1c070431ff0ddd6fe
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44036190"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44180458"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Decimal 資料類型 (Visual Basic)
 保存帶正負號的 128 位元 （16 個位元組） 值，表示調整變數的 10 乘冪的 96 位元 （12 個位元組） 整數數字。 縮放比例指定小數點; 右邊的數字的數目其範圍從 0 到 28。 數位數為 0 （沒有小數位數），最大的可能值是 + /-79228162514264337593543950335 (+ /-7.9228162514264337593543950335E + 28)。 28 的小數位數，最大值是 + /--7.9228162514264337593543950335，與最小的非零值是 + /-0.0000000000000000000000000001 （+ /-1E-28)。  

@@ -3,18 +3,18 @@ title: 用戶端驗證
 ms.date: 03/30/2017
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
 ms.openlocfilehash: 3f8b5ec3f8652ef50bbda3456669f2abf456472b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43740003"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44176533"
 ---
 # <a name="client-validation"></a>用戶端驗證
 服務經常會發行中繼資料，以便自動產生和設定用戶端 Proxy 型別。 當服務不受信任時，用戶端應用程式應該根據安全性、交易和服務合約類型等條件，驗證中繼資料是否符合用戶端應用程式的原則。 下列範例會示範如何撰寫用戶端端點行為，此行為會驗證服務端點以確定能夠安全地使用服務端點。  
   
  服務會公開 (Expose) 四個服務端點。 第一個端點使用 WSDualHttpBinding，第二個端點會使用 NTLM 驗證，第三個端點會啟用交易流程，而第四個端點會使用憑證架構的驗證。  
   
- 用戶端會使用 <xref:System.ServiceModel.Description.MetadataResolver> 類別來擷取服務的中繼資料。 用戶端會使用驗證行為，強制禁止雙工繫結、NTLM 驗證與交易流程的原則。 每個<xref:System.ServiceModel.Description.ServiceEndpoint>執行個體會從服務的中繼資料，用戶端應用程式匯入將執行個體`InternetClientValidatorBehavior`端點行為<xref:System.ServiceModel.Description.ServiceEndpoint>再嘗試連線到使用 Windows Communication Foundation (WCF) 用戶端端點。 此行為的 `Validate` 方法會在呼叫服務的任何作業之前執行，並且擲回 `InvalidOperationExceptions` 以強制執行該用戶端的原則。  
+ 用戶端會使用 <xref:System.ServiceModel.Description.MetadataResolver> 類別來擷取服務的中繼資料。 用戶端會使用驗證行為，強制禁止雙工繫結程序、NTLM 驗證與異動流程的原則。 每個<xref:System.ServiceModel.Description.ServiceEndpoint>執行個體會從服務的中繼資料，用戶端應用程式匯入將執行個體`InternetClientValidatorBehavior`端點行為<xref:System.ServiceModel.Description.ServiceEndpoint>再嘗試連線到使用 Windows Communication Foundation (WCF) 用戶端端點。 此行為的 `Validate` 方法會在呼叫服務的任何作業之前執行，並且擲回 `InvalidOperationExceptions` 以強制執行該用戶端的原則。  
   
 ### <a name="to-build-the-sample"></a>若要建置範例  
   

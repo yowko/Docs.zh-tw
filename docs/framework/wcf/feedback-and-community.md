@@ -6,11 +6,11 @@ helpviewer_keywords:
 - customer feedback [WCF]
 ms.assetid: ba0fd32b-cbcb-4f5b-b913-d98514ab5650
 ms.openlocfilehash: 5067495aa24d5ae7e60633ed6a0ce5c0af081367
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44076778"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44182079"
 ---
 # <a name="feedback-and-community"></a>意見與社群
 我們非常感謝您的意見與問題相關的 Windows Communication Foundation (WCF) 或[!INCLUDE[infocard](../../../includes/infocard-md.md)]文件。 在 SDK 中每一頁的底部都有一句「請將您對這個主題的意見傳送至 Microsoft」。 請按一下 [意見] 連結，提供您對於特定主題的看法或建議。  

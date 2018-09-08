@@ -7,16 +7,16 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 ms.assetid: a09a6e0b-79d8-457f-bb36-86fad2beeada
 ms.openlocfilehash: 63574e6a4f7a9c5a1c2bcb267c64baa5c5e392f3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43778278"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44179438"
 ---
 # <a name="helpprovider-component-windows-forms"></a>HelpProvider 元件 (Windows Form)
 Windows Form `HelpProvider` 元件用來將 HTML 說明 1.x 說明檔 (以 HTML Help Workshop 產生的 .chm 檔案，或 .htm 檔) 與 Windows 架構應用程式產生關聯。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [HelpProvider 元件概觀](../../../../docs/framework/winforms/controls/helpprovider-component-overview-windows-forms.md)  
  導入 `HelpProvider` 元件的一般概念，可讓您將 HTML 說明檔與 Windows 架構應用程式產生關聯。  
   
@@ -24,13 +24,13 @@ Windows Form `HelpProvider` 元件用來將 HTML 說明 1.x 說明檔 (以 HTML 
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.HelpProvider>  
- 說明這個類別，並且提供其所有成員的連結。  
+ 描述這個類別，並且提供其所有成員的連結。  
   
  <xref:System.Windows.Forms.Help>  
- 說明這個類別，並且提供其所有成員的連結。  
+ 描述這個類別，並且提供其所有成員的連結。  
   
 ## <a name="related-sections"></a>相關章節  
  [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- 提供 Windows Form 控制項的完整清單及其用法資訊的連結。  
+ 提供 Windows Form 控制項的完整清單，以及其用法的資訊連結。  
   
  另請參閱[Windows Forms 應用程式中的說明系統](https://msdn.microsoft.com/library/55dct0a1\(v=vs.110\))。

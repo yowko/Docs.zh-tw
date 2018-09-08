@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic code, COM interop
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
-ms.openlocfilehash: b6da65a0c94875f73c8e1094448d76a72823404d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: dfd256fa7ccd8f089fab6eb1d42579deb2c4a64d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43871055"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183167"
 ---
 # <a name="com-interop-visual-basic"></a>COM Interop (Visual Basic)
 元件物件模型 (COM) 可讓物件向其他元件公開其功能以及主控應用程式。 大部分的現今軟體都會包括 COM 物件。 雖然 .NET 組件是新應用程式的最佳選擇，但您有時可能需要採用 COM 物件。 本節涵蓋一些與建立和使用 Visual Basic 中使用 COM 物件相關聯的問題。  
@@ -50,10 +50,10 @@ ms.locfileid: "43871055"
  [與 Unmanaged 程式碼互通](../../../framework/interop/index.md)  
  描述 Common Language Runtime 提供的互通性服務。  
   
- [將 COM 元件公開給 .NET Framework](https://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730)  
+ [將 COM 元件公開給 .NET Framework](../../../framework/interop/exposing-com-components.md)  
  描述如何透過 COM Interop 呼叫 COM 類型的程序。  
   
- [將 .NET Framework 元件公開給 COM](https://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)  
+ [將 .NET Framework 元件公開給 COM](../../../framework/interop/exposing-dotnet-components-to-com.md)  
  描述如何從 COM 準備和使用 Managed 類型。  
   
  [套用 Interop 屬性](../../../framework/interop/applying-interop-attributes.md)  

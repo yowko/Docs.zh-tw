@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
 ms.openlocfilehash: 790fe629ae709a9fcb57d5b551e9fa7aecfb04f5
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44137144"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44177056"
 ---
 # <a name="wcf-data-services-resources"></a>WCF 資料服務資源
 下列位置可以找到 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 的簡介主題。 這些主題中有許多也包含其中含有詳細資訊的相關主題連結。  

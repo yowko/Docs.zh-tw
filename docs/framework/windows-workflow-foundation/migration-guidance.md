@@ -3,11 +3,11 @@ title: 移轉指引
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
 ms.openlocfilehash: 93d523c51c45f9b6f6235a7645fa126fcb09b6e5
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44129294"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44179818"
 ---
 # <a name="migration-guidance"></a>移轉指引
 在  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]，Microsoft 即將發行的第二個主要版本的 Windows Workflow Foundation (WF)。 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 是在 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 中發佈 (其中包含 System.Workflow.* 命名空間中的型別；現在則是指 WF3)，並在 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 中增強。 WF3 也是屬於[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]，但它有與新的工作流程技術 (System.Activities。 中的型別\*命名空間; 以 WF4)。 在考量何時採用 WF4 時，重要的是要先了解到：您必須控制時機。  

@@ -3,11 +3,11 @@ title: ADO.NET 資料集
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
 ms.openlocfilehash: e4f2aeca72404379a9cebbfacda77f98a9e85bf3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43859487"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44178347"
 ---
 # <a name="adonet-datasets"></a>ADO.NET 資料集
 <xref:System.Data.DataSet> 物件對於支援 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 的中斷連接、分散式的資料案例非常重要。 **資料集**是提供與資料來源無關的一致性關聯式程式設計模型的資料常駐記憶體表示法。 它可與多個不同的資料來源一起使用、與 XML 資料一起使用，或管理應用程式的本機資料。 **資料集**表示一組完整的資料，包括相關的資料表、 條件約束及資料表間的關聯性。 如下圖所示**資料集**物件模型。  

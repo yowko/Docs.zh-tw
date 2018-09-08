@@ -1,5 +1,5 @@
 ---
-title: 如何：套用多重轉換至物件
+title: 操作說明：套用多重轉換至物件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - TransformGroup [WPF]
 ms.assetid: 98cd1921-12bc-4bf5-8193-529228fb7402
 ms.openlocfilehash: 0700a7ae3f18f745b0d479ace3acbf2d7fbd9722
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43749193"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44212057"
 ---
-# <a name="how-to-apply-multiple-transforms-to-an-object"></a>如何：套用多重轉換至物件
+# <a name="how-to-apply-multiple-transforms-to-an-object"></a>操作說明：套用多重轉換至物件
 此範例示範如何使用<xref:System.Windows.Media.TransformGroup>兩個或多個群組<xref:System.Windows.Media.Transform>組成為單一複合物件<xref:System.Windows.Media.Transform>。  
   
 ## <a name="example"></a>範例  

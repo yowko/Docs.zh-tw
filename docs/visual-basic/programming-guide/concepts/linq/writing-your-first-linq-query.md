@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: 83a1b7629672c6a74fd29ce698a6b8e6e152b1da
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
+ms.openlocfilehash: 4c04c00c5392d8ba363346b06c806ec79041c439
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44068946"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44184307"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>撰寫第一個 LINQ 查詢 (Visual Basic)
 「查詢」是指從資料來源中擷取資料的運算式。 查詢會以專用的查詢語言來表示。 經過一段時間，不同的語言所開發的不同類型的資料來源，例如 SQL 用於關聯式資料庫，而 XQuery 用於 XML。 這可讓您所需的應用程式開發人員若要了解新的查詢語言，每種類型的資料來源或支援的資料格式。  
@@ -57,7 +57,7 @@ Dim db As New DataContext("C:\Northwind\Northwnd.mdf")
 Dim customers As Table(Of Customer) = db.GetTable(Of Customer)  
 ```  
   
- 如需如何建立特定資料來源類型的詳細資訊，請參閱各種 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供者的文件。 (如需這些提供者的清單，請參閱 < [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)。)基本規則很簡單：[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]資料來源是支援泛型的任何物件<xref:System.Collections.Generic.IEnumerable%601>介面或繼承自它的介面。  
+ 如需如何建立特定資料來源類型的詳細資訊，請參閱各種 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供者的文件。 (如需這些提供者的清單，請參閱 < [LINQ (Language-Integrated Query)](../../../../visual-basic/programming-guide/concepts/linq/index.md)。)基本規則很簡單：[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]資料來源是支援泛型的任何物件<xref:System.Collections.Generic.IEnumerable%601>介面或繼承自它的介面。  
   
 > [!NOTE]
 >  類型，例如<xref:System.Collections.ArrayList>支援非泛型<xref:System.Collections.IEnumerable>介面也可用來當做[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]資料來源。 如需使用的範例<xref:System.Collections.ArrayList>，請參閱 <<c2> [ 如何： 使用 LINQ (Visual Basic) 查詢 ArrayList](how-to-query-an-arraylist-with-linq.md)。  
@@ -118,10 +118,11 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
  您也可以讓查詢以使用執行`IEnumerable`方法，例如<xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>方法。  
   
-## <a name="see-also"></a>另請參閱  
- [使用 Visual Basic 撰寫 LINQ 入門](getting-started-with-linq.md)  
- [區域類型推斷](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [標準查詢運算子概觀 (Visual Basic)](standard-query-operators-overview.md)  
- [Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [查詢](../../../../visual-basic/language-reference/queries/index.md)
+## <a name="see-also"></a>另請參閱
+
+- [使用 Visual Basic 撰寫 LINQ 入門](getting-started-with-linq.md)  
+- [區域類型推斷](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+- [標準查詢運算子概觀 (Visual Basic)](standard-query-operators-overview.md)  
+- [Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+- [查詢](../../../../visual-basic/language-reference/queries/index.md)

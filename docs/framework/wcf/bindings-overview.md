@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
 ms.openlocfilehash: f171a6380840fe2cb828ee06985317f002b353de
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777755"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44179750"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation 繫結概觀
 繫結是用來指定連接到 Windows Communication Foundation (WCF) 服務的端點所需之通訊詳細資料的物件。 WCF 服務中的每個端點都需要正確指定的繫結。 本主題概述通訊詳細資料所定義的繫結的繫結、 哪些繫結會包含在 WCF 中，以及如何指定繫結的端點項目的類型。  
@@ -30,7 +30,7 @@ ms.locfileid: "43777755"
  繫結基本上是由排列順序的繫結項目堆疊所組成，而每個繫結項目都會指定連線至服務端點時所需的部分通訊資訊。 堆疊中最低的那兩層為必要項。 堆疊基底是傳輸繫結項目，而這個項目的正上方是其中含有訊息編碼規格的項目。 指定其他通訊協定的選用繫結元素則會置於這兩個必要元素之上。 如需有關這些繫結項目，並與其正確順序的詳細資訊，請參閱 <<c0> [ 自訂繫結](../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
 ## <a name="system-provided-bindings"></a>系統提供的繫結  
- 繫結中的資訊可能很複雜，而有些設定也可能彼此不相容。 基於這個理由，WCF 會包含一組系統提供繫結。 這些繫結設計為滿足大多數應用程式需求。 下列類別則表示系統提供之繫結的一些範例：  
+ 繫結中的資訊可能很複雜，而有些設定也可能彼此不相容。 基於這個理由，WCF 會包含一組系統提供繫結。 這些繫結程序設計為滿足大多數應用程式需求。 下列類別則表示系統提供之繫結的一些範例：  
   
 -   <xref:System.ServiceModel.BasicHttpBinding>：一種 HTTP 通訊協定繫結，可用於連線至 Web 服務，並符合 WS-I Basic Profile 規格 (例如，以 ASP.NET Web 服務為基礎的服務)。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "43777755"
 ## <a name="using-bindings"></a>使用繫結  
  使用繫結牽涉到兩個基本步驟：  
   
-1.  選取或定義繫結。 最簡單的方法是選擇其中一個 WCF 所隨附的系統提供繫結，並使用其預設值。 也可以選擇系統提供的繫結，並重設其屬性值以符合您的需求。 此外，您可以建立自訂繫結或使用者定義的繫結，以對這些繫結擁有更高程度的控制權和自訂權。  
+1.  選取或定義繫結。 最簡單的方法是選擇其中一個 WCF 所隨附的系統提供繫結，並使用其預設值。 也可以選擇系統提供的繫結程序，並重設其屬性值以符合您的需求。 此外，您可以建立自訂繫結或使用者定義的繫結，以對這些繫結擁有更高程度的控制權和自訂權。  
   
 2.  建立使用已選取或已定義之繫結的端點。  
   

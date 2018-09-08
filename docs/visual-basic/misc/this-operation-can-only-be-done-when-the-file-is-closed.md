@@ -3,11 +3,11 @@ title: 只有在 File 關閉時，才能執行這項作業
 ms.date: 07/20/2015
 ms.assetid: 79fe95ae-4aff-469f-beda-d5a85c91d421
 ms.openlocfilehash: 0a7f6afc7f9ecb232e24d5536d2274db57d1d820
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44138197"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185450"
 ---
 # <a name="this-operation-can-only-be-done-when-the-file-is-closed"></a>只有在 File 關閉時，才能執行這項作業
 開啟檔案時，嘗試執行的作業只能在關閉檔案時執行。  

@@ -3,11 +3,11 @@ title: Boolean 運算子 (F#)
 description: '深入了解可在 F # 程式設計語言中使用布林運算子。'
 ms.date: 05/16/2016
 ms.openlocfilehash: faa181090efa7c4064a30b42d83afa4888e98b82
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43784510"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44172725"
 ---
 # <a name="boolean-operators"></a>Boolean 運算子
 

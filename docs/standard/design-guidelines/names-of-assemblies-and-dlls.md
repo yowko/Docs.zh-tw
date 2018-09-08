@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: e800b610-31b4-4949-9c14-cb60e9f254be
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6cf175472d68e99598dd56e170bee3d37ae3c2a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 97bd152cff53fb1c2edb107b6d6b34bd91ca1c49
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570420"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44187646"
 ---
 # <a name="names-of-assemblies-and-dlls"></a>組件和 DLL 的名稱
-組件是部署和 managed 程式碼程式的身分識別的單位。 雖然組件可以跨一個或多個檔案，通常是組件以一對一對應的 DLL。 因此，本節會說明只 DLL 命名慣例，然後可以對應至組件命名慣例。  
+組件是部署和 managed 程式碼程式的身分識別的單位。 雖然組件可以跨越一或多個檔案，通常對應一對一與 DLL 組件。 因此，本節會描述唯一 DLL 命名慣例，則可以對應至組件命名慣例。  
   
  **✓ DO** 選擇的組件提供建議的功能，例如 System.Data 大型區塊的 Dll 名稱。  
   
- 組件和 DLL 名稱沒有對應至命名空間名稱，但是很合理命名組件時所應遵循的命名空間名稱。 最佳經驗法則是名稱的組件中包含的命名空間的一般前置詞為基礎的 DLL。 例如，兩個命名空間，與組件`MyCompany.MyTechnology.FirstFeature`和`MyCompany.MyTechnology.SecondFeature`，無法呼叫`MyCompany.MyTechnology.dll`。  
+ 組件和 DLL 的名稱不一定要對應至命名空間名稱，但很合理地命名組件時，請遵循此命名空間名稱。 好的經驗法則是命名為基礎的共同首碼的組件中包含的命名空間的 DLL。 比方說，有兩個命名空間，組件`MyCompany.MyTechnology.FirstFeature`並`MyCompany.MyTechnology.SecondFeature`，可能會呼叫`MyCompany.MyTechnology.dll`。  
   
  **✓ CONSIDER** 命名 Dll 根據下列模式：  
   
@@ -32,10 +32,11 @@ ms.locfileid: "33570420"
   
  `Litware.Controls.dll`.  
   
- *部分 © 2005年，2009 Microsoft Corporation。All rights reserved.*  
+ *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- *皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*  
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
   
-## <a name="see-also"></a>另請參閱  
- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)  
- [命名方針](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a>另請參閱
+
+- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)  
+- [命名方針](../../../docs/standard/design-guidelines/naming-guidelines.md)
