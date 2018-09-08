@@ -3,11 +3,11 @@ title: 具類型資料集
 ms.date: 03/30/2017
 ms.assetid: 033d2548-cf24-4c05-8179-67d8b009c048
 ms.openlocfilehash: 68721bcdbce6bf6d3279d6018ce6bc48d65c55a3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44039802"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44213351"
 ---
 # <a name="typed-datasets"></a>具類型資料集
 <xref:System.Data.DataSet> 可透過弱型別變數，使用晚期繫結存取值，也可透過強型別變數存取資料。 資料表和資料行屬於**資料集**可以使用好記名稱和存取強型別變數。  

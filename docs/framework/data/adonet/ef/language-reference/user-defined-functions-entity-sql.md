@@ -3,11 +3,11 @@ title: 使用者定義函式 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 3f9e6bbd-8e5a-43e1-809f-f8a61338e522
 ms.openlocfilehash: 03146d895c6ca780692228937fafcf25b24902aa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43564944"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44205358"
 ---
 # <a name="user-defined-functions-entity-sql"></a>使用者定義函式 (Entity SQL)
 Entity SQL 支援呼叫查詢中的使用者定義函式。 您可以定義這些函式內嵌在查詢 (請參閱[How to: Call a User-Defined Function](https://msdn.microsoft.com/library/ad131b86-8b4e-4747-8605-d4fc64fb9d02)) 或做為概念模型的一部分 (請參閱[如何： 在概念模型中定義自訂函式](https://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f))。 概念模型函式會定義為 Entity SQL 命令中[DefiningExpression](https://msdn.microsoft.com/library/d3da8d8b-a048-47ee-8d81-0c2ea3acdd3e)項目[函式](https://msdn.microsoft.com/library/dc3beca7-55cf-4977-8db0-5064cdbab134)概念模型中的項目。  

@@ -2,12 +2,12 @@
 title: 如何： 共用組件與其他應用程式 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5388aedc-cb42-4622-8b70-8e701eee057a
-ms.openlocfilehash: a7f6b49e8389108528c44d7464a2e68149dfa940
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 3d29a3558a64c02fc8c59035f2fee5c64c4a776f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44062893"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44200138"
 ---
 # <a name="how-to-share-an-assembly-with-other-applications-visual-basic"></a>如何： 共用組件與其他應用程式 (Visual Basic)
 組件可以是私用或共用的︰根據預設，大多數簡單的程式由於不會供其他應用程式使用，因此只會包含一個私用組件。  
@@ -24,8 +24,10 @@ ms.locfileid: "44062893"
   
 4.  將您的組件新增至全域組件快取。 如需詳細資訊，請參閱[如何：將組件安裝到全域組件快取](../../../../framework/app-domains/how-to-install-an-assembly-into-the-gac.md)。  
   
-5.  從其他應用程式存取組件內含的類型。 如需詳細資訊，請參閱[如何：參考以強式名稱命名的組件](https://msdn.microsoft.com/library/4c6a406a-b5eb-44fa-b4ed-4e95bb95a813)。  
+5.  從其他應用程式存取組件內含的類型。 如需詳細資訊，請參閱[如何：參考以強式名稱命名的組件](../../../../framework/app-domains/how-to-reference-a-strong-named-assembly.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [程式設計概念](../../../../visual-basic/programming-guide/concepts/index.md)[組件和全域組件快取 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [使用組件設計程式](../../../../framework/app-domains/programming-with-assemblies.md)
+## <a name="see-also"></a>另請參閱
+
+- [程式設計概念](../../../../visual-basic/programming-guide/concepts/index.md)
+- [組件和全域組件快取 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+- [使用組件設計程式](../../../../framework/app-domains/programming-with-assemblies.md)

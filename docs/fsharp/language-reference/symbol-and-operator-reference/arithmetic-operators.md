@@ -3,11 +3,11 @@ title: 算術運算子 (F#)
 description: '深入了解可在 F # 程式設計語言中的算術運算子。'
 ms.date: 04/04/2018
 ms.openlocfilehash: 008aa84b8736bb3a734ce8bb9713d34c17f1b76e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43748435"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198630"
 ---
 # <a name="arithmetic-operators"></a>算術運算子
 
@@ -30,7 +30,7 @@ ms.locfileid: "43748435"
 
 下表摘要說明適用於整數和浮點數類型的一元算術運算子。
 
-|一元運算子|備註|
+|一元運算子|注意|
 |--------------|-----|
 |`+` （正）|可以套用至任何算術運算式。 不會變更值的正負號。|
 |`-` （負號、 負）|可以套用至任何算術運算式。 變更值的正負號。|
@@ -42,7 +42,7 @@ ms.locfileid: "43748435"
 
 浮點數應該永遠不會直接比較相等，因為 IEEE 浮點表示不支援的確切的等號比較運算。 您可以輕鬆地驗證要等於所檢查的程式碼的兩個數字實際上可能會有不同的位元表示法。
 
-|運算子|備註|
+|運算子|注意|
 |--------|-----|
 |`=` （等號比較，equals）|這不是指派運算子。 它僅用於比較。 這是一般的運算子。|
 |`>` （大於）|這是一般的運算子。|

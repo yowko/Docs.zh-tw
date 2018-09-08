@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1776f48f-9bea-41f6-83a4-c990c7a2c991
 ms.openlocfilehash: 83450e6ace33e89ddd263a1514f74f4d4e231cf7
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44139068"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44213325"
 ---
 # <a name="sqlcommand-execution-with-a-sqlnotificationrequest"></a>使用 SqlNotificationRequest 執行 SqlCommand
 您可以將 <xref:System.Data.SqlClient.SqlCommand> 設定為在從伺服器擷取的資料變更時產生通知，如果再次執行查詢，結果集就會不同。 這對於想要在伺服器上使用自訂通知佇列，或者不想維護使用中物件的情況都很有用。  

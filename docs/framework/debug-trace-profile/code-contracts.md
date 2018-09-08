@@ -1,6 +1,6 @@
 ---
 title: 程式碼合約
-ms.date: 03/30/2017
+ms.date: 09/05/2018
 dev_langs:
 - csharp
 - vb
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a444b7eace18fa579324f540e8cf7537c420a6a8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: f7f7a779cc10b32d66a184107359b502cf094979
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44080604"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44222119"
 ---
 # <a name="code-contracts"></a>程式碼合約
 程式碼合約可讓您指定程式碼中的前置條件、後置條件和物件非變異值。 前置條件是輸入方法或屬性時，必須符合的需求。 後置條件描述在方法或屬性程式碼結束時的期望。 物件非變異值描述針對處於良好狀態的類別，所預期的狀態。  
@@ -148,7 +148,7 @@ Contract.Invariant(this.x > this.y);
 }  
 ```  
   
- CONTRACTS_FULL 前置處理器符號會有條件地定義非變異值。 在執行階段檢查期間，會在每個公用方法的結尾檢查非變異值。 如果非變異值提及在相同類別中的公用方法，則會停用通常在該公用方法結尾進行的非變異檢查。 此檢查反而只會發生在該類別最外層的方法呼叫結尾。 如果因為呼叫另一個類別上的方法而重新輸入此類別，也會進行這項檢查。 針對物件完成項，或是實作 <xref:System.IDisposable.Dispose%2A> 方法的任何方法，都不會檢查非變異值。  
+ CONTRACTS_FULL 前置處理器符號會有條件地定義非變異值。 在執行階段檢查期間，會在每個公用方法的結尾檢查非變異值。 如果非變異值提及在相同類別中的公用方法，則會停用通常在該公用方法結尾進行的非變異檢查。 此檢查反而只會發生在該類別最外層的方法呼叫結尾。 如果因為呼叫另一個類別上的方法而重新輸入此類別，也會進行這項檢查。 物件完成項不會檢查非變異值和<xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>實作。  
   
 <a name="usage_guidelines"></a>   
 ## <a name="usage-guidelines"></a>用法方針  

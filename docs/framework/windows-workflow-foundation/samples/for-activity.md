@@ -3,11 +3,11 @@ title: 針對活動
 ms.date: 03/30/2017
 ms.assetid: 2ea751b4-36f0-48aa-a115-70a2ab89f6d8
 ms.openlocfilehash: 7a7023abb9057ab4b25552fbf9a81cd2ae2b4e88
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44131746"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44206259"
 ---
 # <a name="for-activity"></a>針對活動
 For 範例示範如何建置繼承自 <xref:System.Activities.NativeActivity> 的自訂活動，以及在工作流程中使用它來執行真實的範例。 本範例中包含的自訂活動作用就像 C# `for` 陳述式。 T  

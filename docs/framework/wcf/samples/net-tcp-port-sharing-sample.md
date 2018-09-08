@@ -3,11 +3,11 @@ title: Net.TCP Port Sharing 範例
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
 ms.openlocfilehash: db4cd5be73e3c170f2feaa1e76f275eb7d9cd226
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44128866"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44212525"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Net.TCP Port Sharing 範例
 TCP/IP 通訊協定使用一個 16 位元的數字 (稱為連接埠) 來區分在同一部電腦上執行的多個網路應用程式連線。 如果應用程式正在接聽某個連接埠，則該連接埠的所有 TCP 流量就會流向該應用程式。 其他應用程式將無法同時接聽該連接埠。  

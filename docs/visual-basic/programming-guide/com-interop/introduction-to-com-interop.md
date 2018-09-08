@@ -6,11 +6,11 @@ helpviewer_keywords:
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
 ms.openlocfilehash: 5e31bfafdc321bb514ecdadd49b7e2c6adf53948
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44097705"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44206230"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>COM Interop 簡介 (Visual Basic)
 元件物件模型 (COM) 可讓您公開其功能給其他元件和主控件應用程式的物件。 雖然 COM 物件已被 Windows 程式設計許多年的基礎，專為 common language runtime (CLR) 所設計的應用程式會提供許多優點。  

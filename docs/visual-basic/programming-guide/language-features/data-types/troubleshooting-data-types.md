@@ -20,11 +20,11 @@ helpviewer_keywords:
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
 ms.openlocfilehash: 9bbc7f51de9899354184d051d8f1a584651dd030
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44079358"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44213935"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>疑難排解資料類型 (Visual Basic)
 此頁面會列出您的內建資料型別上執行作業時所發生的一些常見問題。  

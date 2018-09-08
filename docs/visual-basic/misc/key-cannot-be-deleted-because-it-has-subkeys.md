@@ -3,11 +3,11 @@ title: 機碼不能刪除，因為它有子機碼。
 ms.date: 07/20/2015
 ms.assetid: 71d7f28f-42ef-4eb7-a39e-512c40b79977
 ms.openlocfilehash: da784f0d22e0cdd5db5054645d977918fca47f4b
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44082040"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195204"
 ---
 # <a name="key-cannot-be-deleted-because-it-has-subkeys"></a>機碼不能刪除，因為它有子機碼。
 機碼不能刪除，因為它有子機碼。  

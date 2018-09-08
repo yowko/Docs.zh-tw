@@ -3,11 +3,11 @@ title: 自訂活動以切換到值的範圍
 ms.date: 03/30/2017
 ms.assetid: 441e0a17-421f-430c-ba97-59e4cc6c88e3
 ms.openlocfilehash: cfaf4318b1557a9fc217de8254e164243ea54569
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44133239"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195302"
 ---
 # <a name="custom-activity-to-switch-on-a-range-of-values"></a>自訂活動以切換到值的範圍
 這個範例示範如何建立可擴充 <xref:System.Activities.Statements.Switch%601> 用法的自訂活動。 傳統 <xref:System.Activities.Statements.Switch%601> 陳述式允許根據單一值的切換。 但有些商務狀況中活動必須根據值範圍來切換。 例如，當切換依據的值介於 1 和 5 之間時，活動可能會執行某個動作，當值介於 6 和 10 之間時執行另一個動作，並針對所有其他值執行預設動作。 這個自訂活動正是實現該狀況。  

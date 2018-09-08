@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
 ms.openlocfilehash: cfc77ff3b030ffebf52feab0190f81fc4e581cf9
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44135662"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44222710"
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>使用 DataAdapter 執行批次作業
 ADO.NET 中的批次支援可讓 <xref:System.Data.Common.DataAdapter> 針對從 <xref:System.Data.DataSet> 或 <xref:System.Data.DataTable> 至伺服器的 INSERT、UPDATE 與 DELETE 作業進行分組，而非一次傳送一個作業。 如此可降低往返於伺服器的次數，因此一般都能夠大幅提升作業效能。 SQL Server (<xref:System.Data.SqlClient>) 和 Oracle (<xref:System.Data.OracleClient>) 的 .NET 資料提供者都支援批次更新。  

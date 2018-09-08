@@ -14,11 +14,11 @@ ms.assetid: 694a33c5-a040-450d-aed5-ac49fc88ce61
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5d2aaeaffaf3abbe1e8efcdb57d40e6ae60f89b5
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44080718"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44197579"
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>逐步解說：建立可延伸應用程式
 本逐步解說描述如何建立增益集執行簡單的計算機功能的管線。 它不會示範真實世界的案例;相反地，它會示範管線和如何增益集可以提供服務主機的基本的功能。  

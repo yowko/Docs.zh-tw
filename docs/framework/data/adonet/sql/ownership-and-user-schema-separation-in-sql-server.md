@@ -3,11 +3,11 @@ title: SQL Server 中的擁有權和使用者結構描述分離
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
 ms.openlocfilehash: 7b1cda211fdc89732afa8eed1eaaf2c98309a969
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44097676"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44222314"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>SQL Server 中的擁有權和使用者結構描述分離
 SQL Server 安全性的核心概念是物件的擁有者具有不可撤銷的物件管理權限。 您無法移除物件擁有者的權限，而使用者只要擁有資料庫中的物件，就無法將其從資料庫卸除。  

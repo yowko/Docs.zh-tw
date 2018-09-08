@@ -3,11 +3,11 @@ title: DataContract Surrogate
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
 ms.openlocfilehash: 10b0c2a3e82e39b03291f567ca360c51042b464e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43873428"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44212330"
 ---
 # <a name="datacontract-surrogate"></a>DataContract Surrogate
 這個範例示範如何使用資料合約 Surrogate 類別來自訂像是序列化 (Serialization)、還原序列化 (Deserialization)、結構描述匯出以及結構描述匯入等程序。 此範例示範如何在用戶端和伺服器的案例，其中資料會序列化並傳送 Windows Communication Foundation (WCF) 用戶端與服務之間使用代理。  

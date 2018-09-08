@@ -3,11 +3,11 @@ title: 版本相容序列化技術範例
 ms.date: 03/30/2017
 ms.assetid: 2a183664-bfbf-4ff0-96f6-c836284ea916
 ms.openlocfilehash: 34dccc9065c0100a01a7969a1fe762001e2999a9
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44131655"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44210850"
 ---
 # <a name="version-tolerant-serialization-technology-sample"></a>版本相容序列化技術範例
 [下載範例](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  

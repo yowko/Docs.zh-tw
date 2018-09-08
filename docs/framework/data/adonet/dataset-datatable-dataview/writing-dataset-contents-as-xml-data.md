@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
 ms.openlocfilehash: ff63c63be9bbfab7c3a9600f259abdea81be4260
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43724470"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44216154"
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>將資料集內容當做 XML 資料寫入
 在 ADO.NET 中，您可以寫入使用 XML 形式的 <xref:System.Data.DataSet>，具有或不具有其結構描述皆可。 如果結構描述資訊是以 XML 內嵌的，它就會以 XML 結構描述定義語言 (XSD) 寫入。 結構描述包含 <xref:System.Data.DataSet> 的資料表定義，以及關聯性和條件約束定義。  
@@ -68,9 +68,9 @@ xmlSW.Close();
   
 |MappingType 值|描述|  
 |-----------------------|-----------------|  
-|**目**|這是預設值。 資料行會寫為 XML 項目，其中 ColumnName 為項目名稱，並且資料行內容會寫為項目文字。 例如：<br /><br /> `<ColumnName>Column Contents</ColumnName>`|  
-|**屬性**|資料行會寫為目前資料行 XML 項目的 XML 屬性，其中 ColumnName 是屬性名稱，且資料行內容會寫為屬性值。 例如：<br /><br /> `<RowElement ColumnName="Column Contents" />`|  
-|**SimpleContent**|資料行內容會寫為目前資料行 XML 項目中的文字。 例如：<br /><br /> `<RowElement>Column Contents</RowElement>`<br /><br /> 請注意， **SimpleContent**無法設定資料行的資料表有**項目**資料行或巢狀的關聯。|  
+|**目**|這是預設值。 資料行會寫為 XML 項目，其中 ColumnName 為項目名稱，並且資料行內容會寫為項目文字。 例如: <br /><br /> `<ColumnName>Column Contents</ColumnName>`|  
+|**屬性**|資料行會寫為目前資料行 XML 項目的 XML 屬性，其中 ColumnName 是屬性名稱，且資料行內容會寫為屬性值。 例如: <br /><br /> `<RowElement ColumnName="Column Contents" />`|  
+|**SimpleContent**|資料行內容會寫為目前資料行 XML 項目中的文字。 例如: <br /><br /> `<RowElement>Column Contents</RowElement>`<br /><br /> 請注意， **SimpleContent**無法設定資料行的資料表有**項目**資料行或巢狀的關聯。|  
 |**隱藏**|XML 輸出中不會寫入資料行。|  
   
 ## <a name="see-also"></a>另請參閱  

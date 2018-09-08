@@ -8,11 +8,11 @@ helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
 ms.openlocfilehash: 2264686f34123e74bf7d24ce80877742d952f35d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44133671"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44205045"
 ---
 # <a name="structured-navigation-overview"></a>結構化巡覽概觀
 可由裝載的內容[!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]，則<xref:System.Windows.Controls.Frame>，或<xref:System.Windows.Navigation.NavigationWindow>是可由組件識別的頁面所組成[!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]和超連結巡覽至。 頁面的結構及其可被巡覽的方式，如超連結所定義，稱之為巡覽拓撲。 這種拓撲適合各種不同的應用程式類型，尤其是巡覽文件的應用程式。 針對這類應用程式，使用者可以從一頁巡覽到另一頁，頁面彼此間不需要了解。  

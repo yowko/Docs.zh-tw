@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0b67fab5-1722-4d2b-bfc1-247a75f0f1ee
 ms.openlocfilehash: 76cf9eb70094dfe8bb760490c42503e08f4b1649
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44082265"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44201981"
 ---
 # <a name="managing-dataviews"></a>管理 DataView
 您可以使用 <xref:System.Data.DataViewManager> 管理 <xref:System.Data.DataView> 內所有資料表的檢視設定。 如果您有想要繫結至多個資料表的控制項，例如方格中，巡覽關聯性**DataViewManager**適合。  

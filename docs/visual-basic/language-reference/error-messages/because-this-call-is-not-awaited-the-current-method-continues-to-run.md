@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
 ms.openlocfilehash: fe820b9d2157c09428903a36427d3ff5e4c0045b
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44069610"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44206428"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>因為未等候此呼叫，所以在呼叫完成之前會繼續執行目前方法
 因為未等候此呼叫，所以在呼叫完成之前會繼續執行目前的方法。 請考慮將 'Await' 運算子套用至呼叫的結果。  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - serialization, XML Schema Definition tool
 ms.assetid: 3c03f855-f931-47ff-bbc6-50c0367a16e4
 ms.openlocfilehash: 326a62ab8ccc04b93c9304758ff068f35cf3ecf4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44066463"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44214806"
 ---
 # <a name="the-xml-schema-definition-tool-and-xml-serialization"></a>XML 結構描述定義工具和 XML 序列化
 XML 結構描述定義工具 ([XML Schema Definition Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)) 會隨 .NET Framework 工具當作 Windows® 軟體開發套件 (SDK) 的一部分安裝。 該工具的設計主要有兩個目的：  

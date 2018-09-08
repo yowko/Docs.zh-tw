@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
 ms.openlocfilehash: 90e00e4264ff808151c9e1c58fdaf290765620c8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44076751"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44222642"
 ---
 # <a name="how-to-call-wcf-service-operations-asynchronously"></a>HOW TO：以非同步方式呼叫 WCF 服務作業
 本主題涵蓋用戶端如何能夠非同步地存取服務作業。 本主題中的服務會實作 `ICalculator` 介面。 用戶端可以透過使用事件驅動的非同步呼叫模型，以非同步方式在這個介面上呼叫作業。 (如需事件架構非同步呼叫模型的詳細資訊，請參閱[使用 「 事件架構非同步模式的多執行緒程式設計](https://go.microsoft.com/fwlink/?LinkId=248184))。 如需示範如何在服務中以非同步方式實作作業的範例，請參閱 <<c0> [ 如何： 實作非同步服務作業](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)。 如需有關同步和非同步作業的詳細資訊，請參閱 <<c0> [ 同步和非同步作業](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)。  

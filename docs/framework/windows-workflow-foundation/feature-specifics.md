@@ -3,11 +3,11 @@ title: Windows Workflow Foundation 功能內容
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
 ms.openlocfilehash: b18c6dd76762f4495ac475cd3dfa4e1995733b59
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44140875"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44205071"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation 功能內容
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 在 Windows Workflow Foundation 中加入一些功能。 本文件將描述一些新功能，並且詳細說明適合使用這些功能的案例。  

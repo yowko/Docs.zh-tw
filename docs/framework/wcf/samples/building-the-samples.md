@@ -3,11 +3,11 @@ title: 建置 Windows Communication Foundation 範例
 ms.date: 03/30/2017
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
 ms.openlocfilehash: 46f4015c00916a5cab932e8fd2539c7c86588a30
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43774030"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44213273"
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>建置 Windows Communication Foundation 範例
 

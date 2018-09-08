@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
 ms.openlocfilehash: fb4910e48af58463c5c851173f8e3caf4594cc3a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43876540"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44197468"
 ---
 # <a name="standard-query-operator-translation"></a>標準查詢運算子轉譯
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會將標準查詢運算子轉譯為 SQL 命令。 資料庫的查詢處理器會決定執行語意的 SQL 轉譯。  

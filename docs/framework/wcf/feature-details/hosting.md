@@ -3,11 +3,11 @@ title: Hosting2
 ms.date: 03/30/2017
 ms.assetid: 0820c7e5-0b50-4cde-80e7-74e346513002
 ms.openlocfilehash: 9237518f5bfa48401e60e47ccc40e4ee303dec35
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44075594"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44209234"
 ---
 # <a name="hosting"></a>裝載
 本節中各主題描述服務裝載。 服務可以裝載 Internet Information Services (IIS)、 Windows Process Activation Service (WAS)、 Windows Server AppFabric、 Windows 服務，或受管理的應用程式，此選項通常稱為*自我裝載*。  

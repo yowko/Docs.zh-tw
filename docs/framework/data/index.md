@@ -7,11 +7,11 @@ helpviewer_keywords:
 - data [.NET Framework], accessing
 ms.assetid: 8c37635d-e2c1-4b64-a258-61d9e87405e6
 ms.openlocfilehash: 0db71fd7e48515ad6be3641786fc180f62aacf33
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44138925"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198149"
 ---
 # <a name="data-and-modeling-in-the-net-framework"></a>.NET Framework 中的資料與模型化
 本節將提供如何使用 ADO.NET、Language Integrated Query (LINQ)、WCF 資料服務和 XML 來存取資料的相關資訊。  

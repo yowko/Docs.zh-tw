@@ -5,11 +5,11 @@ ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 7dfe18a55d8c7f56db1906cb2aa982ab043841c7
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43875583"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44197284"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory 和 WSTrustChannel
 如果您已熟悉 Windows Communication Foundation (WCF)，則應該知道 WCF 已是同盟感知用戶端。 若以 <xref:System.ServiceModel.WSFederationHttpBinding> 或類似的自訂繫結設定 WCF 用戶端，您就可以啟用對服務的同盟驗證。  

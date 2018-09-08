@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
 ms.openlocfilehash: 9f1e3fe6d53266a4e1366c1a3d5396688a25df0f
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44076595"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44199631"
 ---
 # <a name="windows-applications-using-callbacks"></a>使用回呼的 Windows 應用程式
 在大多數非同步處理的案例中，使用者都會想要啟動資料庫作業，且無需等到完成該資料庫作業，就能繼續執行其他處理序。 不過許多案例會要求資料庫作業結束後，才能執行其他動作。 例如，在 Windows 應用程式中，可能要在允許使用者介面執行緒保持回應的同時，將長時間執行的作業委派至背景執行緒。 但是，當資料庫作業完成時，您想要用結果來填入表單。 此類案例最好使用回呼來實作。  

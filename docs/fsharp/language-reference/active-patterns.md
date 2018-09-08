@@ -3,11 +3,11 @@ title: 作用中的模式 (F#)
 description: '了解如何使用定義細分 F # 程式設計語言中的輸入的資料的具名分割區的作用中的模式。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 4fb7d3e2b9c7e6f1c1ed9d64a47728c7f40017c8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43881872"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44204808"
 ---
 # <a name="active-patterns"></a>現用模式
 

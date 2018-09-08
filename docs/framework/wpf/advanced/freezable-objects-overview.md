@@ -10,11 +10,11 @@ helpviewer_keywords:
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
 ms.openlocfilehash: a1006816168e405d0d79786b8430b802f1ec0928
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44060342"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44216629"
 ---
 # <a name="freezable-objects-overview"></a>Freezable 物件概觀
 本主題說明如何有效地使用，並建立<xref:System.Windows.Freezable>提供特殊功能，可協助您改善應用程式效能的物件。 Freezable 物件的範例包括筆刷、 畫筆、 轉換、 幾何和動畫。  

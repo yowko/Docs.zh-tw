@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: d0e54aeda1ee51fe7ba87c3ac69c556ea25e320f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 938998a2316af28071e54e909fa60b5edbda0f35
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43870207"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198929"
 ---
 # <a name="working-with-certificates"></a>使用憑證
 在針對 Windows Communication Foundation (WCF) 安全性設計程式時，通常會採用 X.509 數位憑證來驗證用戶端與伺服器、加密，以及數位簽署訊息。 本主題將簡要說明 X.509 數位憑證功能及如何在 WCF 中使用這些憑證，同時針對這些概念的進一步說明以及如何運用 WCF 與憑證來完成一般工作的主題說明提供連結。  
@@ -85,12 +85,12 @@ ms.locfileid: "43870207"
   
  在建立自訂的驗證器時，要覆寫之最重要的方法是 <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> 方法。 如需自訂驗證的範例，請參閱 [X.509 憑證驗證程式](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md)範例。 如需詳細資訊，請參閱[自訂認證與認證驗證](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)。  
   
-## <a name="using-makecertexe-to-build-a-certificate-chain"></a>使用 Makecert.exe 來建置憑證鏈結  
- 憑證建立工具 (Makecert.exe) 可建立 X.509 憑證與私密金鑰/公開金鑰組。 您可以將私密金鑰儲存到磁碟，然後用它來發行並簽署新的憑證，藉此模擬鏈結憑證的階層架構。 此工具主要當作開發服務時的輔助工具用途，請勿用來建立實際部署所需的憑證。 在開發 WCF 服務時，請透過下列步驟使用 Makecert.exe 來建置信任鏈結。  
+## <a name="using-the-powershell-new-selfsignedcertificate-cmdlet-to-build-a-certificate-chain"></a>使用 Powershell New-selfsignedcertificate Cmdlet 來建置憑證鏈結  
+ Powershell New-selfsignedcertificate cmdlet 會建立 X.509 憑證與私用的索引鍵/公開金鑰組。 您可以將私密金鑰儲存到磁碟，然後用它來發行並簽署新的憑證，藉此模擬鏈結憑證的階層架構。 指令程式被供僅為協助開發服務及永遠不應該用來建立實際部署所需的憑證時。 開發 WCF 服務時，請使用下列步驟來建置使用 New-selfsignedcertificate cmdlet 的信任鏈結。  
   
-#### <a name="to-build-a-chain-of-trust-with-makecertexe"></a>若要使用 Makecert.exe 來建置信任鏈結  
+#### <a name="to-build-a-chain-of-trust-with-the-new-selfsignedcertificate-cmdlet"></a>若要建置使用 New-selfsignedcertificate cmdlet 的信任鏈結  
   
-1.  使用 MakeCert.exe 工具來建立暫時的根授權 (自動簽署) 憑證。 將私密金鑰儲存到磁碟。  
+1.  建立暫時的根授權單位 （自我簽署） 憑證使用 New-selfsignedcertificate cmdlet。 將私密金鑰儲存到磁碟。  
   
 2.  使用新的憑證來發行另一個包含公開金鑰的憑證。  
   

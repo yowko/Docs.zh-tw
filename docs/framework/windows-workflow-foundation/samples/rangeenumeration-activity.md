@@ -3,11 +3,11 @@ title: RangeEnumeration 活動
 ms.date: 03/30/2017
 ms.assetid: ca5b78f4-94fa-4aa7-830d-26039ac422c8
 ms.openlocfilehash: c9cf522227620422b414adc26cbc0bf338bf57d4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43868714"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207586"
 ---
 # <a name="rangeenumeration-activity"></a>RangeEnumeration 活動
 這個範例會示範如何建立自訂活動，此活動會逐一查看數字集合。下表詳述此範例中所包含的主要檔案。  

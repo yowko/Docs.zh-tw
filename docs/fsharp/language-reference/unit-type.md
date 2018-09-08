@@ -3,11 +3,11 @@ title: 單位類型 (F#)
 description: "了解如何 F # 'unit' 類型通常用來保存其中值所需的語言語法所需或預期任何值時的位置。"
 ms.date: 05/16/2016
 ms.openlocfilehash: c3dfa5f63c25a1e8abc0f75b905c129b311479af
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44097148"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44204652"
 ---
 # <a name="unit-type"></a>單位類型
 

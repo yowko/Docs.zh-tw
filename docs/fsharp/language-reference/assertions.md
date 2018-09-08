@@ -3,11 +3,11 @@ title: 判斷提示 (F#)
 description: "了解如何使用 '判斷提示' 運算式做為偵錯功能在 F # 程式設計語言中測試運算式。"
 ms.date: 05/16/2016
 ms.openlocfilehash: 85b1e839bfd19bada48b7f1821d15ddd8fa77754
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44097534"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44206415"
 ---
 # <a name="assertions"></a>判斷提示
 

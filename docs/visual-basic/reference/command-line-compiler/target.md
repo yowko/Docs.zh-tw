@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17528bb9faf137029b35e4a9f28bab7a28ae25db
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5e3f691da48db863edd20bc6881785940a5451ef
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864611"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44209377"
 ---
 # <a name="-target-visual-basic"></a>-target (Visual Basic)
 指定編譯器輸出的格式。  
@@ -38,7 +38,7 @@ ms.locfileid: "43864611"
   
  除非您指定`-target:module`，`-target`導致[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]可以加入至輸出檔的組件資訊清單。  
   
- 產生 Vbc.exe 的每個執行個體，最多一個輸出檔案。 如果您指定的編譯器選項，例如`-out`或`-target`一次以上，最後一個編譯器處理序會放入效果。 在編譯中的所有檔案的相關資訊新增至資訊清單。 所有輸出檔案以外建立`-target:module`包含資訊清單中的組件中繼資料。 使用[Ildasm.exe （IL 反組譯工具）](https://msdn.microsoft.com/library/f7dy01k1)檢視的中繼資料中的輸出檔。  
+ 產生 Vbc.exe 的每個執行個體，最多一個輸出檔案。 如果您指定的編譯器選項，例如`-out`或`-target`一次以上，最後一個編譯器處理序會放入效果。 在編譯中的所有檔案的相關資訊新增至資訊清單。 所有輸出檔案以外建立`-target:module`包含資訊清單中的組件中繼資料。 使用[Ildasm.exe （IL 反組譯工具）](../../../framework/tools/ildasm-exe-il-disassembler.md)檢視的中繼資料中的輸出檔。  
   
  `-target` 的簡短形式為 `-t`。  
   
@@ -57,12 +57,13 @@ ms.locfileid: "43864611"
 vbc -target:library in.vb  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-main](../../../visual-basic/reference/command-line-compiler/main.md)  
- [-out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)  
- [-參考 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
- [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)  
- [-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)  
- [組件和全域組件快取](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>另請參閱
+
+- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)  
+- [-main](../../../visual-basic/reference/command-line-compiler/main.md)  
+- [-out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)  
+- [-參考 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
+- [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)  
+- [-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)  
+- [組件和全域組件快取](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+- [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

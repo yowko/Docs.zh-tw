@@ -2,12 +2,12 @@
 title: LINQ to XML 比較DOM (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 18c36130-d598-40b7-9007-828232252978
-ms.openlocfilehash: a0a23a773e927155ca22456ea403549b255718ad
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 4feb0df2e4d3ffe5c79ce61d7b94142833a312c7
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43885626"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44213867"
 ---
 # <a name="linq-to-xml-vs-dom-visual-basic"></a>LINQ to XML 比較DOM (Visual Basic)
 本節描述 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 和目前主流的 XML 程式設計 API (也就是 W3C 文件物件模型 (DOM)) 之間的一些主要差異。  
@@ -125,10 +125,10 @@ doc.AppendChild(name)
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 會將空白字元儲存為 <xref:System.Xml.Linq.XText> 節點，而不是像 DOM 儲存為序列化的 <xref:System.Xml.XmlNodeType.Whitespace> 節點類型。  
   
 ## <a name="support-for-annotations"></a>支援附註  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 項目支援一組可延伸的附註。 這在追蹤項目的其他資訊 (例如，結構描述資訊)、項目是否繫結至 UI 的相關資訊，或任何種類的應用程式專屬資訊時，相當實用。 如需詳細資訊，請參閱 [LINQ to XML 註釋](https://msdn.microsoft.com/library/e2f0052d-61e2-48d4-9ea4-356c9cab35d5)。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 項目支援一組可延伸的附註。 這在追蹤項目的其他資訊 (例如，結構描述資訊)、項目是否繫結至 UI 的相關資訊，或任何種類的應用程式專屬資訊時，相當實用。 如需詳細資訊，請參閱 [LINQ to XML 註釋](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-annotations.md)。  
   
 ## <a name="support-for-schema-information"></a>支援結構描述資訊  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 透過 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空間中的擴充方法，提供 XSD 驗證支援。 您可以驗證 XML 樹狀是以 XSD 編譯。 您可以利用 Post-Schema-Validation Infoset (PSVI) 填入 XML 樹狀。 如需詳細資訊，請參閱[如何：使用 XSD 進行驗證](https://msdn.microsoft.com/library/481a97fa-6e96-46f2-8c9a-415555fac33b)和<xref:System.Xml.Schema.Extensions>。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 透過 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空間中的擴充方法，提供 XSD 驗證支援。 您可以驗證 XML 樹狀是以 XSD 編譯。 您可以利用 Post-Schema-Validation Infoset (PSVI) 填入 XML 樹狀。 如需詳細資訊，請參閱[如何：使用 XSD 進行驗證](../../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md)和<xref:System.Xml.Schema.Extensions>。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用者入門 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

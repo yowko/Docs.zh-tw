@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 48c9f5ed-76bf-4228-ab10-5217bbb295a3
 ms.openlocfilehash: 92e013647b4f4b6ba14d46add24d5d71a6875bb0
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44075731"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44199891"
 ---
 # <a name="query-expression-syntax-examples-projection--linq-to-dataset"></a>查詢運算式語法範例：投影 (LINQ to DataSet)
 此主題中的範例將示範如何使用 <xref:System.Linq.Enumerable.Select%2A> 和 <xref:System.Linq.Enumerable.SelectMany%2A> 方法並搭配查詢運算式語法來查詢 <xref:System.Data.DataSet>。  

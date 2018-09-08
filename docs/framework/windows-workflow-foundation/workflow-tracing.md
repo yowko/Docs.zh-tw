@@ -3,11 +3,11 @@ title: 工作流程追蹤
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
 ms.openlocfilehash: 27e56933043c9eb955500cdd1c5bbd06cb33bde8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44129549"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44210889"
 ---
 # <a name="workflow-tracing"></a>工作流程追蹤
 工作流程追蹤提供使用 .NET Framework 追蹤接聽程式擷取診斷資訊的方式。 如果偵測到應用程式的問題，可以啟用追蹤，等到問題解決再停用追蹤。 您可以運用兩種方式啟用工作流程的偵錯追蹤。 您可以使用事件追蹤檢視器加以設定，也可以使用 <xref:System.Diagnostics>，將追蹤事件傳送至檔案。  

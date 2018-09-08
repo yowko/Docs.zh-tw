@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
 ms.openlocfilehash: e27ef72f0341524524a8f267eeeb13a6f46deb52
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44066437"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44216314"
 ---
 # <a name="childviews-and-relations"></a>子檢視和關聯
 如果 <xref:System.Data.DataSet> 的資料表之間存在關聯性，則可以使用 <xref:System.Data.DataView> 的 <xref:System.Data.DataRowView.CreateChildView%2A> 方法，為父資料表的資料列建立 <xref:System.Data.DataRowView> (其包含來自相關子資料表的資料列)。 例如，下列程式碼會顯示**分類**及其相關**產品**依字母順序排序**CategoryName**和**ProductName**.  

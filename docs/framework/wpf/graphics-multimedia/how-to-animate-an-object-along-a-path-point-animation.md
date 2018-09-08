@@ -9,11 +9,11 @@ helpviewer_keywords:
 - point animation [WPF]
 ms.assetid: 1fa3f817-35bc-41a1-b366-f5a20b70da0c
 ms.openlocfilehash: d6dc79cd7a15aef2a4168fffb293c5e1f33cde08
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43870350"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44197111"
 ---
 # <a name="how-to-animate-an-object-along-a-path-point-animation"></a>操作說明：沿著路徑建立物件的動畫 (點動畫)
 此範例示範如何使用<xref:System.Windows.Media.Animation.PointAnimationUsingPath>物件來以動畫顯示<xref:System.Windows.Point>沿著曲線路徑。  

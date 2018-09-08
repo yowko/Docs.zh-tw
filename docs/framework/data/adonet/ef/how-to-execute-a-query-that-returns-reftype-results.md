@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 7dbbfbcd-93f5-4546-9dbf-e5fa290b69fa
 ms.openlocfilehash: 96e4034c6a2476e1dfcf8e8ef22bae6e5b8d4934
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44062919"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44214940"
 ---
 # <a name="how-to-execute-a-query-that-returns-reftype-results"></a>如何：執行可傳回 RefType 結果的查詢
 本主題顯示如何使用 <xref:System.Data.EntityClient.EntityCommand> 物件，針對概念模型執行命令，以及如何使用 <xref:System.Data.Metadata.Edm.RefType> 擷取 <xref:System.Data.EntityClient.EntityDataReader> 結果。  
