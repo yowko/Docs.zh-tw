@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cfa44187d846c72f0dfd4fb131cacbe41648dd32
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: abb38e4f084575665954bc514584feed760b0666
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33579804"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207638"
 ---
 # <a name="standard-date-and-time-format-strings"></a>標準日期和時間格式字串
 標準日期和時間格式字串使用單一格式規範，定義日期和時間值的文字表示。 任何包含一個以上字元 (包括空白字元) 的日期和時間格式字串都會解譯為自訂日期和時間格式字串；如需詳細資訊，請參閱[自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)。 標準或自訂格式字串有兩種使用方式：  
@@ -413,9 +413,10 @@ ms.locfileid: "33579804"
 ### <a name="datetimeformatinfo-properties"></a>DateTimeFormatInfo 屬性  
  格式會受到目前 <xref:System.Globalization.DateTimeFormatInfo> 物件的影響，而此物件是由目前執行緒文化特性隱含提供或由叫用格式之方法的 <xref:System.IFormatProvider> 參數明確提供。 針對 <xref:System.IFormatProvider> 參數，您的應用程式應指定代表文化特性的 <xref:System.Globalization.CultureInfo> 物件，或是指定代表特定文化特性之日期和時間格式化慣例的 <xref:System.Globalization.DateTimeFormatInfo> 物件。 許多標準日期和時間格式規範都是格式化模式的別名，這些模式是由目前 <xref:System.Globalization.DateTimeFormatInfo> 物件的屬性所定義。 您的應用程式可以變更對應 <xref:System.Globalization.DateTimeFormatInfo> 屬性的對應日期和時間格式模式，藉此改變某些標準日期和時間格式規範所產生的結果。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.DateTime?displayProperty=nameWithType>  
- <xref:System.DateTimeOffset?displayProperty=nameWithType>  
- [格式化類型](../../../docs/standard/base-types/formatting-types.md)  
- [自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
- [範例：.NET Framework 4 格式化公用程式](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.DateTime?displayProperty=nameWithType>  
+- <xref:System.DateTimeOffset?displayProperty=nameWithType>  
+- [格式化類型](../../../docs/standard/base-types/formatting-types.md)  
+- [自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+- [範例：.NET Framework 4 格式化公用程式](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
