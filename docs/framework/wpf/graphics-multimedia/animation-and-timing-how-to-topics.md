@@ -8,11 +8,11 @@ helpviewer_keywords:
 - animation [WPF]
 ms.assetid: 587e36f6-1957-424e-9d89-c43724f26d84
 ms.openlocfilehash: 7c61e1bbd3b9c93785393c729f2af27f29d1dc40
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44038110"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44138977"
 ---
 # <a name="animation-and-timing-how-to-topics"></a>動畫和計時 HOW TO 主題
 下列主題示範如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]動畫和計時系統在您的應用程式。  

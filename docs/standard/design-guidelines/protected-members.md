@@ -12,28 +12,29 @@ helpviewer_keywords:
 ms.assetid: aa0b58ee-3956-494d-ab48-471ae5db8740
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d4d334d9809f374442e19807d3b249a17a1d9df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4574dffc3f9dd1b60d655bfde33a4ddc1a81d350
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571079"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44140940"
 ---
 # <a name="protected-members"></a>Protected 成員
-受保護的成員，本身不提供任何擴充性，但會讓透過子類別化的擴充性功能更強大。 它們可以用於不含不必要地複雜的主要公用介面公開進階的自訂選項。  
+受保護的成員，本身不提供任何擴充性，但它們可以讓透過子類別化的擴充性功能更強大。 它們可以用來公開 （expose） 而不需要不必要地複雜的主要公用介面的進階的自訂選項。  
   
- 架構設計人員必須謹慎使用受保護成員因為 「 受保護 」 的名稱可以提供感應的安全性。 任何人都可以子類別的未密封類別，然後存取受保護成員，用於公用成員的防衛性程式碼撰寫方式完全相同，套用至受保護的成員。  
+ 架構設計人員必須謹慎使用受保護的成員，是因為 「 受保護 」 的名稱可以讓安全性的錯覺。 任何人都能夠子類別的未密封的類別，然後存取受保護成員，因此相同的所有用於公用成員的防禦性程式碼撰寫慣例套用至受保護的成員。  
   
  **✓ CONSIDER** 使用受保護的進階自訂的成員。  
   
  **✓ DO** 為用於安全性、 文件，以及相容性的分析公用非密封類別以處理受保護的成員。  
   
- 任何人都可以繼承自類別，並存取受保護的成員。  
+ 任何人都可以繼承自的類別，並存取受保護的成員。  
   
- *部分 © 2005年，2009 Microsoft Corporation。All rights reserved.*  
+ *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- *皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*  
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
   
-## <a name="see-also"></a>另請參閱  
- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)  
- [擴充性設計](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+## <a name="see-also"></a>另請參閱
+
+- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)  
+- [擴充性設計](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

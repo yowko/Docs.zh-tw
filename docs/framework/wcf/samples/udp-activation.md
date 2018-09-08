@@ -3,11 +3,11 @@ title: UDP 啟用
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
 ms.openlocfilehash: c64540db555d7cac56dd46c6ffb63ec95ca81f91
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43788061"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44138353"
 ---
 # <a name="udp-activation"></a>UDP 啟用
 此樣本根據[傳輸： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例。 它會擴充[傳輸： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例，以支援使用 Windows Process Activation Service (WAS) 處理序啟動。  
