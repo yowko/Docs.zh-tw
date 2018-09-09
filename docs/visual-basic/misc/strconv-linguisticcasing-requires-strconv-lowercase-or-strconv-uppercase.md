@@ -5,11 +5,11 @@ f1_keywords:
 - vbrLinguisticRequirements
 ms.assetid: 99cdb11d-9488-460b-84fb-a27f43da8be4
 ms.openlocfilehash: fc117c6b8993619e0610d5f51287e0fd0369729f
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44139354"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44226966"
 ---
 # <a name="39strconvlinguisticcasing39-requires-39strconvlowercase39-or-39strconvuppercase39"></a>&#39;StrConv.LinguisticCasing&#39;需要&#39;有 StrConv.LowerCase&#39;或&#39;StrConv.UpperCase&#39;
 您嘗試使用 `StrConv.LinguisticCasing`，但這只適用於搭配 `StrConv.LowerCase` 或 `StrConv.UpperCase`。  

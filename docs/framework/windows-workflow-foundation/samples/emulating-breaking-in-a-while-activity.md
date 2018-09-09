@@ -3,11 +3,11 @@ title: While 活動中的模擬中斷
 ms.date: 03/30/2017
 ms.assetid: ddff715d-d623-4b54-b841-60bacbc3ca21
 ms.openlocfilehash: 4938e07364609520f6528688877bce112be26d3f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43773928"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44253295"
 ---
 # <a name="emulating-breaking-in-a-while-activity"></a>While 活動中的模擬中斷
 這個範例會示範如何中斷下列活動的迴圈機制：<xref:System.Activities.Statements.DoWhile>、<xref:System.Activities.Statements.ForEach%601>、<xref:System.Activities.Statements.While> 和 <xref:System.Activities.Statements.ParallelForEach%601>。  
