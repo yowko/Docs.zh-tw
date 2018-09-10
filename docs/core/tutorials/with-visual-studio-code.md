@@ -4,12 +4,12 @@ description: 了解如何在 C# 中使用 Visual Studio Code 建立並偵錯您�
 author: kendrahavens
 ms.author: mairaw
 ms.date: 09/27/2017
-ms.openlocfilehash: 8958c39ba16cadbfab95e35fa36e8e85ce0a4ab8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 321edcebdea141b7290fa57b47c8d9fc91d3521c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213612"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484664"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 與 Visual Studio Code 使用者入門
 
@@ -50,7 +50,7 @@ ms.locfileid: "33213612"
 
 4. 執行 "Hello World" 程式︰
 
-    * 輸入 `dotnet run`。 
+    * 輸入 `dotnet run`。
 
       ![DotNet 執行命令](media/with-visual-studio-code/dotnetrun.png)
 
@@ -62,7 +62,7 @@ ms.locfileid: "33213612"
 
     ![開啟 Program.cs 檔案](media/with-visual-studio-code/opencs.png)
 
-2. Visual Studio Code 應該會提示您新增遺失的資產，以建置和偵錯您的應用程式。 選取 [是]。 
+2. Visual Studio Code 應該會提示您新增遺失的資產，以建置和偵錯您的應用程式。 選取 [是]。
 
     ![遺失資產的提示](media/with-visual-studio-code/missing-assets.png)
 
@@ -74,7 +74,7 @@ ms.locfileid: "33213612"
 
     ![選取 .NET Core](media/with-visual-studio-code/selectcore.png)
 
-5. 按一下第 9 行旁邊的「編輯器邊界」(編輯器中行號左側的空白處)，將中斷點新增至您的專案。
+5. 按一下第 9 行旁邊的 [編輯器邊界] (編輯器中行號左側空白處)，將中斷點新增至您的專案，或將文字游標移至編輯器中的第 9 行，然後按 <kbd>F9</kbd> 鍵。
 
     ![設定中斷點](media/with-visual-studio-code/setbreakpoint.png)
 
@@ -85,9 +85,16 @@ ms.locfileid: "33213612"
 
 7. 選取頂端的綠色箭頭以繼續偵錯，或者選取頂端的紅色正方形以停止偵錯。
 
-> [!TIP] 
+> [!TIP]
 > 如需在 Visual Studio Code 中使用 OmniSharp 進行 .NET Core 偵錯的詳細資訊與疑難排解祕訣，請參閱 [Instructions for setting up the .NET Core debugger](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md) (設定 .NET Core 偵錯工具的指示)。
 
+## <a name="faq"></a>常見問題集
+
+### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>我缺少在 Visual Studio Code 中建置及偵錯 C# 所需的資產。 我的偵錯工具顯示「沒有組態」。
+
+Visual Studio Code C# 延伸模組可為您產生用於建置和偵錯的資產。 Visual Studio Code 會在您第一次開啟 C# 專案時，提示您產生這些資產。 如果您當時未產生資產，仍可以透過開啟 [命令選擇區] ([檢視] > [命令選擇區])，然後鍵入 ">.NET: Generate Assets for Build and Debug" 來執行此命令。 選取此選項會產生您所需的 .vscode、launch.json 和 tasks.json 組態檔。
+
 ## <a name="see-also"></a>另請參閱
-[設定 Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)   
-[在 Visual Studio Code 中偵錯 (英文)](https://code.visualstudio.com/Docs/editor/debugging)
+
+* [設定 Visual Studio Code (英文)](https://code.visualstudio.com/docs/setup/setup-overview)
+* [在 Visual Studio Code 中偵錯 (英文)](https://code.visualstudio.com/Docs/editor/debugging)

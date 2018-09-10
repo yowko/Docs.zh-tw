@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 微服務可�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: ec3ccdd823e00d148bb8a97e906132f44e7fa727
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: ec0617c5a5c1861f3596e12f3d7a7017a448239e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106667"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43388901"
 ---
 # <a name="microservices-addressability-and-the-service-registry"></a>微服務可定址性和服務登錄
 
@@ -19,7 +19,7 @@ ms.locfileid: "37106667"
 
 在某些微服務部署環境中 (稱為叢集，本節稍後將會討論)，服務探索是內建的。 例如，在 Azure Container Service 環境中，Kubernetes 和 DC/OS 搭配 MarathonKubernetes 可以處理服務執行個體註冊和取消註冊。 它們也會在扮演伺服器端探索路由器角色的每部叢集主機上執行 Proxy。 另一個例子是 Azure Service Fabric，它也會透過現成的 Naming Service 來提供服務登錄。
 
-請注意，服務登錄與 API 閘道模式之間一定會有重疊，因此也可協助解決此問題。 例如，[Service Fabric 反向 Proxy](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy) 是一種 API 閘道實作類型，該類型是以 Service Fabrice Naming Service 為基礎，並可協助將位址解析解析為內部服務。
+請注意，服務登錄與 API 閘道模式之間一定會有重疊，因此也可協助解決此問題。 例如，[Service Fabric 反向 Proxy](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy) 是一種 API 閘道實作類型，該類型是以 Service Fabric 命名服務為基礎，並可協助將位址解析加以解析為內部服務。
 
 ## <a name="additional-resources"></a>其他資源
 

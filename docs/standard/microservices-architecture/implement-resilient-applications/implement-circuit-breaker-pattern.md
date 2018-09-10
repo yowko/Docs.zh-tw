@@ -4,18 +4,18 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 實作斷路�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: d5902c5a0744d74ae5086a4df3aee606b24b6030
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 8cd3564e5240ec5a8783edb336957549be27ea6a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37875163"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403523"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>實作斷路器模式
 
 如稍早所述，您應該處理復原所需的時間可能不確定的錯誤，當您嘗試連接到遠端服務或資源時，可能會發生此錯誤。 處理這種類型的錯誤可改善應用程式的穩定性和復原。
 
-在分散式環境中，呼叫遠端資源和服務可能會由於暫時性錯誤 (例如網路連線太慢和逾時)，或是資源變慢或暫時無法使用而失敗。 這些錯誤通常會在很短的時間內自我修正，而且強大的雲端應用程式應該能夠使用「重試模式」之類的策略來處理錯誤。 
+在分散式環境中，呼叫遠端資源和服務可能會由於暫時性錯誤 (例如網路連線太慢和逾時)，或是資源回應緩慢或暫時無法使用而失敗。 這些錯誤通常會在很短的時間內自我修正，而且強大的雲端應用程式應該能夠使用「重試模式」之類的策略來處理錯誤。 
 
 不過有時候，錯誤是由於非預期的事件所致，可能需要更長時間來修正。 這些錯誤的嚴重性可能從失去部分連線到服務完全失敗。 在這些情況下，讓應用程式持續重試不太可能會成功的作業可能毫無意義。 
 
@@ -23,7 +23,7 @@ ms.locfileid: "37875163"
 
 隨意使用 Http 重試可能會導致在您自己的軟體內產生拒絕服務 ([DoS](https://en.wikipedia.org/wiki/Denial-of-service_attack)) 的攻擊。 由於微服務失敗或執行緩慢，因此多個用戶端可能會重複重試失敗的要求。 這會帶來以失敗服務為目標的流量呈指數增加的危險風險。
 
-因此，您需要某種形式的防禦屏障，讓重試作業在不值得繼續嘗試時停止要求。 該防禦屏障正是斷路器。
+因此，您需要某種形式的防禦屏障，在不值得繼續嘗試時停止多餘的要求。 該防禦屏障正是斷路器。
 
 斷路器模式的目的與「重試模式」不同。 「重試模式」可讓應用程式重試作業，期望該作業最終會成功。 斷路器模式可防止應用程式執行可能失敗的作業。 應用程式可以結合這兩種模式。 不過，重試邏輯應該會受到斷路器所傳回之任何例外狀況的影響，而且如果斷路器指出錯誤不是暫時的，就應該放棄重試嘗試。
 
@@ -56,7 +56,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 }
 ```
 
-在上述程式碼範例中，斷路器原則設定為當重試 Http 要求時，若出現五次例外狀況，則中斷或開啟網路。 然後會持續 30 秒或中斷。
+在上述程式碼範例中，斷路器原則設定為在重試 Http 要求時，若連續五次失敗，則會中斷或開啟網路。 發生此情況時，網路會中斷 30 秒：在這段期間，斷路器會立即使呼叫失敗，而不是實際發出。  原則會自動將[相關的例外狀況和 HTTP 狀態碼](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults)解釋為錯誤。  
 
 如果您部署在與執行 HTTP 呼叫的用戶端應用程式或服務不同之環境中的特定資源發生問題，也應該使用斷路器將要求重新導向至後援基礎結構。 這樣一來，如果資料中心的中斷只會影響您的後端微服務，但不會影響您的用戶端應用程式，用戶端應用程式就可以重新導向至後援服務。 Polly 正在規劃新的原則來自動化此[容錯移轉原則](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy)案例。 
 
@@ -65,7 +65,6 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 從使用觀點來看，使用 HttpClient 時，不需要在此新增任何項目，因為使用 HttpClient 時的程式碼與 HttpClientFactory 相同，如先前章節所示。 
 
 ## <a name="testing-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>在 eShopOnContainers 中測試 Http 重試和斷路器
-
 
 只要您在 Docker 主機中啟動 eShopOnContainers 解決方案，就需要啟動多個容器。 某些容器的啟動和初始化速度會比較慢，例如 SQL Server 容器。 特別是當您第一次將 eShopOnContainers 應用程式部署至 Docker 時，因為需要設定映像和資料庫。 某些容器的啟動速度會比其他容器慢，而導致其餘服務一開始擲回 HTTP 例外狀況，即使在 docker-compose 層級設定容器之間的相依性亦然，如先前章節所述。 容器之間的這些 docker-compose 相依性只會在處理序層。 容器的進入點處理序可能已啟動，但 SQL Server 可能尚未就緒而無法查詢。 結果可能是一連串的錯誤，而且嘗試取用該特定容器時，應用程式可能會收到例外狀況。 
 

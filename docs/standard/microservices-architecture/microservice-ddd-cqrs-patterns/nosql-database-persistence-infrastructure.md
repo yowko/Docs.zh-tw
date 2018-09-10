@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 使用 NoSQL 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: cf43f9914a05c2745f914a6e36fcab13fb7feffa
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: a5fce347193921305c264df34be99063920af715
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106641"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416493"
 ---
 # <a name="using-nosql-databases-as-a-persistence-infrastructure"></a>使用 NoSQL 資料庫作為持續性基礎結構
 
@@ -218,7 +218,7 @@ public class Locations
 
 您可以看到有幾個屬性和型別來自 MongoDB NuGet 套件。
 
-NoSQL 資料庫通常非常適合用於處理非關聯式階層式資料。 在此範例中，我們會使用特別針對地理位置所建立的 MongoDB 型別，例如 `GeoJson2DGeographicCoordinates`。
+NoSQL 資料庫通常非常適合用於處理非關聯式階層式資料。 在此範例中，我們會使用特別針對地理位置所建立的 MongoDB 類型，例如 `GeoJson2DGeographicCoordinates`。
 
 #### <a name="retrieve-the-database-and-the-collection"></a>擷取資料庫和集合
 

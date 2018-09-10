@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - double data type [C#]
 ms.assetid: 0980e11b-6004-4102-abcf-cfc280fc6991
-ms.openlocfilehash: 8e3a94bb79d46f2815e46b86f1aca92acc73e5c2
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 4c11065d9354d44c1da8354c6f7b4f52d7b84c10
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027846"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401320"
 ---
 # <a name="double-c-reference"></a>double (C# 參考)
 
@@ -34,9 +34,9 @@ double x = 3D;
 
 您可以在一個運算式中混合使用數值整數型別和浮點類型。 在此情況下，整數型別會轉換成浮點類型。 運算式的評估會根據下列規則來執行：
 
-- 如果其中一個浮點類型是 `double`，則運算式會評估為 `double` 或 [bool](../../../csharp/language-reference/keywords/bool.md) (在關聯或布林運算式中)。
+- 如果其中一個浮點數類型是 `double`，運算式會評估為 `double` 或 [bool](../../../csharp/language-reference/keywords/bool.md) (在關聯和相等比較中)。
 
-- 運算式中沒有 `double` 類型，它會評估為 [float](../../../csharp/language-reference/keywords/float.md) 或 [bool](../../../csharp/language-reference/keywords/bool.md) (在關聯或布林運算式中)。
+- 若在運算式中沒有 `double` 類型，則會評估為 [float](../../../csharp/language-reference/keywords/float.md) 或 [bool](../../../csharp/language-reference/keywords/bool.md) (在關聯和相等比較中)。
 
  浮點運算式可以包含下列值的集合：
 
@@ -62,11 +62,11 @@ double x = 3D;
 
 ## <a name="see-also"></a>請參閱
 
-[C# 參考](../../../csharp/language-reference/index.md)  
-[C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-[C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
-[預設值表](../../../csharp/language-reference/keywords/default-values-table.md)  
-[內建型別表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-[浮點型別表](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
-[隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-[明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+- [預設值表](../../../csharp/language-reference/keywords/default-values-table.md)  
+- [內建型別表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [浮點型別表](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
+- [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- [明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  

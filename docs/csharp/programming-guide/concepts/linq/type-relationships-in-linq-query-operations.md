@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: 274c5eaee2b4bf0e1331fb7a4a1a89a432a567c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 154501d666b467c94f5d1dd721f1e2303189c908
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339575"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484820"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>LINQ 查詢作業中的類型關聯性 (C#)
 若要有效地撰寫查詢，您應該了解完整查詢作業中的變數類型如何彼此相關。 如果您了解這些關聯性，則可更輕鬆地理解文件中的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 範例和程式碼範例。 此外，您將了解使用 `var` 讓變數成為隱含類型時的幕後作業。  
@@ -33,7 +33,7 @@ ms.locfileid: "33339575"
   
 1.  資料來源的類型引數決定範圍變數的類型。  
   
-2.  所選取物件的類型會決定查詢變數的類型。 `name` 是字串。 因此，查詢變數是 `IEnumerable`\<字串>。  
+2.  所選取物件的類型會決定查詢變數的類型。 `name` 是字串。 因此，查詢變數是 `IEnumerable<string>`。  
   
 3.  在 `foreach` 陳述式中，會逐一查看查詢變數。 因為查詢變數是一序列的字串，所以反覆運算變數也是字串。  
   

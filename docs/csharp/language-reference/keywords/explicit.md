@@ -1,26 +1,28 @@
 ---
 title: explicit 關鍵字 (C# 參考)
-ms.date: 07/20/2015
+ms.date: 08/24/2018
 f1_keywords:
 - explicit_CSharpKeyword
 - explicit
 helpviewer_keywords:
 - explicit keyword [C#]
 ms.assetid: cfb8f42a-e411-4db2-af9b-796b05644846
-ms.openlocfilehash: 66d271fdac0bad356ee0bafc1732e2f410854da1
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 3567a2c5aa549aa3141ed59c3e93e7b07975da70
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027937"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43463139"
 ---
 # <a name="explicit-c-reference"></a>explicit (C# 參考)
 
-`explicit` 關鍵字會宣告必須使用轉換叫用的使用者定義型別轉換運算子。 例如，此運算子會將稱為華氏的類別轉換成稱為攝氏的類別︰
+`explicit` 關鍵字會宣告必須使用轉換叫用的使用者定義型別轉換運算子。
+
+下列範例會定義從 `Fahrenheit` 類別轉換成 `Celsius` 類別的運算子。 該運算子必須在 `Fahrenheit` 類別或 `Celsius` 類別中定義：
 
 [!code-csharp[csrefKeywordsConversion#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsConversion/CS/csrefKeywordsConversion.cs#2)]
 
-此轉換運算子可以這樣叫用︰
+您會透過轉換來叫用已定義的轉換運算子，如下列範例所示：
 
 [!code-csharp[csrefKeywordsConversion#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsConversion/CS/csrefKeywordsConversion.cs#3)]
 
@@ -48,10 +50,10 @@ ms.locfileid: "37027937"
 
 ## <a name="see-also"></a>另請參閱
 
-[C# 參考](../index.md)  
-[C# 程式設計指南](../../programming-guide/index.md)  
-[C# 關鍵字](index.md)  
-[implicit](implicit.md)  
-[operator (C# 參考)](operator.md)  
-[如何：在結構之間實作使用者定義的轉換](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
-[C# 中鏈結的使用者定義明確轉換](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/)  
+- [C# 參考](../index.md)  
+- [C# 程式設計指南](../../programming-guide/index.md)  
+- [C# 關鍵字](index.md)  
+- [implicit](implicit.md)  
+- [operator (C# 參考)](operator.md)  
+- [如何：在結構之間實作使用者定義的轉換](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
+- [C# 中鏈結的使用者定義明確轉換](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/)  

@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 每個微服�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 1d66f5d40234e689685b1b8c36367cc9dc2fc7c6
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 6a3fc0e86de673fea5f8e81c14c6456a2256aaa6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106862"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408543"
 ---
 # <a name="data-sovereignty-per-microservice"></a>每個微服務的資料自主性
 
@@ -25,7 +25,7 @@ ms.locfileid: "37106862"
 
 **圖 4-7**. 資料自主性比較：單一資料庫與微服務
 
-集中式資料庫方法一開始看起來較簡單，而且似乎能重複使用不同子系統中的實體，讓一切一致。 但事實上，您會得到很大的資料表，它們會服務許多不同子系統，且包含在大部分情況下不需要的屬性和資料行。 就像是嘗試相同的實體地圖來進行短距離的健走、一整天的汽車旅行，以及學習地理。
+集中式資料庫方法一開始看起來較簡單，而且似乎能重複使用不同子系統中的實體，讓一切一致。 但事實上，您會得到很大的資料表，它們會服務許多不同子系統，且包含在大部分情況下不需要的屬性和資料行。 就像是嘗試使用相同的實體地圖來進行短距離的健走、一整天的汽車旅行，以及學習地理。
 
 具有通常單一關聯式資料庫的單一應用程式有兩個重要優點：[ACID 交易](https://en.wikipedia.org/wiki/ACID)和 SQL 語言，兩者都可在與您應用程式相關的的所有資料表和資料之間使用。 這種方法可用來輕鬆地撰寫查詢，以結合來自多個資料表的資料。
 

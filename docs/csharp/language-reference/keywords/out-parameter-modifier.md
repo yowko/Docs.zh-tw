@@ -4,12 +4,12 @@ ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: 76c2c27d4575918bb2ed4209a7ff7d2b0517b6f1
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: c9fb03560e30bab3cc71a6171c731d887e859f6c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960494"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43423578"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>out 參數修飾詞 (C# 參考)
 `out` 關鍵字會導致引數由參考傳遞。 它類似於 [ref](ref.md) 關鍵字，只是 `ref` 需要在傳遞之前，先初始化變數。 其類似於 [in](in-parameter-modifier.md) 關鍵字，但不同處在於 `in` 不允許呼叫的方法來修改引數的值。 若要使用 `out` 參數，方法定義和呼叫方法都必須明確地使用 `out` 關鍵字。 例如:   
@@ -55,7 +55,7 @@ class CS0663_Example
   
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#3)]  
 
- [Try 模式](/visualstudio/code-quality/ca1021-avoid-out-parameters#try-pattern-methods.md) 牽涉到傳回 `bool` 指出作業成功或失敗，並傳回作業在 `out` 引數中產生的值。 有數種剖析方法 (例如 [DateTime.TryParse](xref:System.DateTime.TryParse(System.String,System.DateTime@)) 方法) 使用此模式。
+ [Try 模式](/visualstudio/code-quality/ca1021-avoid-out-parameters#try-pattern-methods.md)牽涉到傳回 `bool` 指出作業成功或失敗，並傳回作業在 `out` 引數中產生的值。 有數種剖析方法 (例如 [DateTime.TryParse](xref:System.DateTime.TryParse(System.String,System.DateTime@)) 方法) 使用此模式。
    
 ## <a name="calling-a-method-with-an-out-argument"></a>呼叫有 `out` 引數的方法
 
@@ -74,8 +74,9 @@ class CS0663_Example
 ## <a name="c-language-specification"></a>C# 語言規格  
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
- [方法參數](../../../csharp/language-reference/keywords/method-parameters.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+- [方法參數](../../../csharp/language-reference/keywords/method-parameters.md)

@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 用戶端驗�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: c61a08566492a59090b19f99aaf97b5f6082c1fb
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 70a1f716797e03acdcbf1c58d4b0302449d98fa9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104565"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43395672"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>用戶端驗證 (展示層中的驗證)
 
@@ -23,7 +23,7 @@ ms.locfileid: "37104565"
 
 因此，在用戶端程式碼中，您通常會驗證 ViewModel。 您也可以驗證用戶端輸出 DTO 或命令，再將它們傳送至服務。
 
-用戶端驗證的實作取決於您要建置的用戶端應用程式類型。 如果您想要在大部分程式碼是以 .NET 撰寫的 Web MVC Web 應用程式、具有以 JavaScript 或 TypeScript 所撰寫之驗證的 SPA Web 應用程式，或是以 Xamarin 和 C\# 撰寫的行動應用程式中驗證資料，則是不同的情況。
+用戶端驗證的實作取決於您要建置的用戶端應用程式類型。 如果您想要在大部分程式碼是以 .NET 撰寫的 Web MVC Web 應用程式、具有以 JavaScript 或 TypeScript 所撰寫之驗證的 SPA Web 應用程式，或是以 Xamarin 和 C# 撰寫的行動應用程式中驗證資料，則是不同的情況。
 
 ## <a name="additional-resources"></a>其他資源
 
@@ -42,8 +42,8 @@ ms.locfileid: "37104565"
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>SPA Web 應用程式中的驗證 (Angular 2、TypeScript、JavaScript)
 
--   **Ado Kukic：Angular 2 表單驗證** **
-    **[*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
+-   **Ado Kukic：Angular 2 表單驗證**
+    [*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
 
 -   **表單驗證 **
     [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
@@ -53,16 +53,15 @@ ms.locfileid: "37104565"
 
 總而言之，這些是對於驗證而言最重要的概念：
 
--   實體和彙總應該強制執行它們自己的一致性，而且「永遠有效」。 彙總根目錄負責相同彙總內的多實體一致性。
+- 實體和彙總應該強制執行它們自己的一致性，而且「永遠有效」。 彙總根目錄負責相同彙總內的多實體一致性。
 
--   如果您認為實體必須進入無效狀態，請考慮使用不同的物件模型；例如，使用暫存 DTO，直到您建立最後一個領域實體。
+- 如果您認為實體必須進入無效狀態，請考慮使用不同的物件模型；例如，使用暫存 DTO，直到您建立最後一個領域實體。
 
--   如果您需要建立數個相關的物件 (例如彙總)，而且這些物件只有在全部建立之後才有效，請考慮使用 Factory 模式。
+- 如果您需要建立數個相關的物件 (例如彙總)，而且這些物件只有在全部建立之後才有效，請考慮使用 Factory 模式。
 
--   驗證架構是最適合用於特定層級，例如展示層或應用程式/服務層，但通常不適合用於領域模型層，因為您必須強烈依賴基礎結構架構。
+- 驗證架構是最適合用於特定層級，例如展示層或應用程式/服務層，但通常不適合用於領域模型層，因為您必須強烈依賴基礎結構架構。
 
--   在許多情況下，在用戶端重複驗證是不錯的做法，因為應用程式可以採取主動。
-
+- 在許多情況下，在用戶端重複驗證是不錯的做法，因為應用程式可以採取主動。
 
 >[!div class="step-by-step"]
 [上一頁](domain-model-layer-validations.md)

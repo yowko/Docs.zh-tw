@@ -4,18 +4,18 @@ description: 了解 .NET Core 如何尋找及選擇適合您程式的執行階�
 author: billwagner
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: d1b885ebbade4736d5f592d1dc1d4ba25a321a16
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 21697aa773abfbd88288d47323402a48c51d69ae
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874466"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395113"
 ---
 # <a name="net-core-version-selection"></a>.NET Core 版本選取
 
 [!INCLUDE [topic-appliesto-net-core-2plus](../../../includes/topic-appliesto-net-core-2plus.md)]
 
-本文說明 .NET Core 工具、SDK 和執行階段用於選取版本的原則。 這些原則在執行使用指定版本的應用程式，以及輕鬆升級開發人員和終端使用者電腦之間提供平衡。 這些原則執行下列作業：
+本文說明 .NET Core 工具、SDK 和執行階段用於選取版本的原則。 這些原則在執行使用指定版本的應用程式，以及輕鬆升級開發人員和終端使用者電腦之間提供平衡。 這些原則執行下列動作：
 
 - 輕鬆且有效率地部署 .NET Core，包括安全性和可靠性更新。
 - 使用最新的工具和命令，且不受目標執行階段影響。
@@ -31,11 +31,11 @@ ms.locfileid: "37874466"
 
 ## <a name="the-sdk-uses-the-latest-installed-version"></a>SDK 使用最新安裝的版本
 
-SDK 命令包含 `dotnet new`、`dotnet build` 或 `dotnet run`。 `dotnet` CLI 必須為任何命令選擇 SDK 版本。 根據預設，.NET Core CLI 使用電腦上最新安裝的 SDK。 安裝 .NET Core SDK v2.1.301 時，即使您使用的專案以 .NET Core Runtime 2.0 為目標，您也會使用此版本。 請注意，這對預覽版本和發行版本都適用。 您可以利用最新的 SDK 功能和增強功能，同時以舊版 .NET Core 執行階段為目標。 您可以在不同專案上以多個 .NET Core 執行階段版本為目標，並針對所有專案使用相同的 SDK 工具。
+SDK 命令包含 `dotnet new` 或 `dotnet run`。 `dotnet` CLI 必須為任何命令選擇 SDK 版本。 根據預設，.NET Core CLI 使用電腦上最新安裝的 SDK。 安裝 .NET Core SDK v2.1.301 時，即使您使用的專案以 .NET Core Runtime 2.0 為目標，您也會使用此版本。 您將會使用最新的預覽版本和發行版本。 您可以利用最新的 SDK 功能和增強功能，同時以舊版 .NET Core 執行階段為目標。 您可以在不同專案上以多個 .NET Core 執行階段版本為目標，並針對所有專案使用相同的 SDK 工具。
 
 在罕見的情況下，您可能需要使用舊版的 SDK。 您可以在 [*global.json* 檔案](../tools/global-json.md)中指定該版本。 「使用最新版」原則表示您只會使用 *global.json* 指定比最新安裝版本更早的 .NET Core SDK 版本。
 
-*global.json* 可能放在檔案階層中的任何地方。 CLI 會從專案目錄向上搜尋，以找到第一個 *global.json*。 您可以根據指定的 *global.json* 在檔案系統中的位置，來控制其所套用的專案。 .NET CLI 會從目前的工作目錄向上反覆巡覽路徑，以搜尋 *global.json* 檔案。 第一個找到的 *global.json* 檔案指定所使用的版本。 如果安裝該版本，則會使用該版本。 如果找不到 *global.json* 中指定的 SDK，.NET CLI 會向前復原到最新安裝的 SDK。 找不到 *global.json* 檔案時，則會與預設行為相同。
+*global.json* 可能放在檔案階層中的任何地方。 CLI 會從專案目錄向上搜尋，以找到第一個 *global.json*。 您可以根據指定的 *global.json* 在檔案系統中的位置，來控制其所套用的專案。 .NET CLI 會從目前的工作目錄向上反覆巡覽路徑，以搜尋 *global.json* 檔案。 第一個找到的 *global.json* 檔案指定所使用的版本。 如果安裝該版本，則會使用該版本。 如果找不到 *global.json* 中指定的 SDK，.NET CLI 會向前復原到最新安裝的 SDK。 找不到 *global.json* 檔案時，向前復原會與預設行為相同。
 
 下列範例示範 *global.json* 語法：
 
@@ -53,7 +53,7 @@ SDK 命令包含 `dotnet new`、`dotnet build` 或 `dotnet run`。 `dotnet` CLI 
 1. `dotnet` 使用第一個找到的 *global.json* 中指定的 SDK。
 1. 如果找不到 *global.json*，`dotnet` 會使用最新安裝的 SDK。
 
-您可以在 *global.json* 主題的[比對規則](../tools/global-json.md)一節中，深入了解如何選取 SDK 版本。
+您可以在 *global.json* 一文的[比對規則](../tools/global-json.md#matching-rules)一節中，深入了解如何選取 SDK 版本。
 
 ## <a name="target-framework-monikers-define-build-time-apis"></a>目標 Framework Moniker 定義建置時間 API
 

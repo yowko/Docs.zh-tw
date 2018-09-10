@@ -9,12 +9,12 @@ helpviewer_keywords:
 - '& operator [C#]'
 - AND operator (&) [C#]
 ms.assetid: afa346d5-90ec-4b1f-a2c8-3881f018741d
-ms.openlocfilehash: 59813b4bc5781776c9f9741c3e49e660c684bff9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b257c7d41618464e26ab3b54bcfb1f1e2c2e420e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267876"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467370"
 ---
 # <a name="amp-operator-c-reference"></a>&amp; 運算子 (C# 參考)
 `&` 運算子可以作為一元或二元運算子。  
@@ -24,7 +24,7 @@ ms.locfileid: "33267876"
   
  整數型別和 `bool` 會預先定義二元 `&` 運算子。 對於整數型別，& 會計算其運算元的邏輯位元 AND。 對於 `bool` 運算元，& 會計算其運算元的邏輯 AND；亦即，如果且唯有當其兩個運算元都是 `true` 時，結果會是 `true`。  
   
- 二元 `&` 運算子不同於[條件式 AND 運算子](../../../csharp/language-reference/operators/conditional-and-operator.md) `&&`，它會評估兩個運算子，而不論第一個運算子的值為何。 例如:   
+ 不同於[條件式 AND 運算子](../../../csharp/language-reference/operators/conditional-and-operator.md) `&&`，二元 `&` 運算子會評估兩個運算元，不論第一個運算元的值為何。 例如:   
   
  [!code-csharp[csRefOperators#37](../../../csharp/language-reference/operators/codesnippet/CSharp/and-operator_1.cs)]  
   
@@ -33,7 +33,8 @@ ms.locfileid: "33267876"
 ## <a name="example"></a>範例  
  [!code-csharp[csRefOperators#38](../../../csharp/language-reference/operators/codesnippet/CSharp/and-operator_2.cs)]  
   
-## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [C# 運算子](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 運算子](../../../csharp/language-reference/operators/index.md)

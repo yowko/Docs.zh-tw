@@ -2,12 +2,12 @@
 title: 非同步方法的傳回型別 (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 02e3cdd433d5d6d4d58667d56592b9fc2bf374c4
-ms.sourcegitcommit: dc02d7d95f1e3efcc7166eaf431b0ec0dc9d8dca
+ms.openlocfilehash: 9b0ee1c2e9925a1caffca6b7fb83eff34003246b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37143553"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43387575"
 ---
 # <a name="async-return-types-c"></a>非同步方法的傳回型別 (C#)
 非同步方法可有下列傳回型別：
@@ -33,7 +33,7 @@ ms.locfileid: "37143553"
 
 從 `ShowTodaysInfo` 方法的 await 運算式內呼叫 `GetLeisureHours` 時，await 運算式會擷取儲存在 `GetLeisureHours` 方法所傳回之工作中的整數值 (`leisureHours` 的值)。 如需 await 運算式的詳細資訊，請參閱 [await](../../../../csharp/language-reference/keywords/await.md)。  
   
-您可以藉由區隔對 `GetLeisureHours` 的呼叫與 `await` 的應用，深入了解這種運作方式，如下列程式碼所示。 呼叫不會立即等候的 `TaskOfT_MethodAsync` 方法，會傳回 `Task<int>`，如您所預期的方法宣告。 在範例中，工作會指派給 `integerTask` 變數。 因為 `integerTask` 是 <xref:System.Threading.Tasks.Task%601>，所以它包含 `TResult` 類型的 <xref:System.Threading.Tasks.Task%601.Result> 屬性。 在此情況下，TResult 代表整數類型。 當 `await` 套用至 `integerTask` 時，await 運算式評估為 `integerTask` 之 <xref:System.Threading.Tasks.Task%601.Result%2A> 屬性的內容。 值會指派給 `result2` 變數。  
+您可以藉由區隔對 `GetLeisureHours` 的呼叫與 `await` 的應用，深入了解這種運作方式，如下列程式碼所示。 呼叫不會立即等候的 `GetLeisureHours` 方法，會傳回 `Task<int>`，如您所預期的方法宣告。 在範例中，工作會指派給 `infoTask` 變數。 因為 `infoTask` 是 <xref:System.Threading.Tasks.Task%601>，所以它包含 `TResult` 類型的 <xref:System.Threading.Tasks.Task%601.Result> 屬性。 在本例中，`TResult` 代表整數類型。 當 `await` 套用至 `infoTask` 時，await 運算式評估為 `infoTask` 之 <xref:System.Threading.Tasks.Task%601.Result%2A> 屬性的內容。 值會指派給 `ret` 變數。  
   
 > [!IMPORTANT]
 >  <xref:System.Threading.Tasks.Task%601.Result%2A> 屬性是封鎖的屬性。 如果您嘗試在其工作完成之前先存取它，目前使用中的執行緒會封鎖，直到工作完成並且有可用的值為止。 在大部分情況下，您應該使用 `await` 來存取值，而不是直接存取屬性。 <br/> 前一個範例擷取 <xref:System.Threading.Tasks.Task%601.Result%2A> 屬性的值，封鎖主執行緒，讓 `ShowTodaysInfo` 方法在應用程式結束之前可以完成執行。  
@@ -49,20 +49,21 @@ ms.locfileid: "37143553"
   
 `WaitAndApologize` 是透過使用 await 陳述式而非 await 運算式成為等候的，類似同步 void 傳回方法的呼叫陳述式。 在此情況下，await 運算子的應用不會產生值。  
   
-如先前的 <xref:System.Threading.Tasks.Task%601> 範例所示，您可以隔開對 `Task_MethodAsync` 的呼叫和 await 運算子的應用程式，如下列程式碼所示。 不過，請記住，`Task` 沒有 `Result` 屬性，且將 await 運算子套用至 `Task` 時不會產生任何值。  
+如先前的 <xref:System.Threading.Tasks.Task%601> 範例所示，您可以隔開對 `WaitAndApologize` 的呼叫和 await 運算子的應用程式，如下列程式碼所示。 不過，請記住，`Task` 沒有 `Result` 屬性，且將 await 運算子套用至 `Task` 時不會產生任何值。  
   
 下列程式碼隔開呼叫 `WaitAndApologize` 方法與等候方法傳回的工作。  
  
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2a.cs#1)]  
  
-##  <a name="BKMK_VoidReturnType"></a> Void 傳回型別  
+##  <a name="BKMK_VoidReturnType"></a> Void 傳回型別
+
 您在非同步事件處理常式中使用 `void` 傳回型別，這需要 `void` 傳回型別。 對於不傳回值的事件處理常式以外的方法，您應該要改傳回 <xref:System.Threading.Tasks.Task>，因為傳回 `void` 的非同步方法不能是等候的。 這種方法的任何呼叫端必須要能夠繼續完成而不需等待呼叫的非同步方法完成，且呼叫端必須與非同步方法產生的任何值或例外狀況無關。  
   
 傳回 void 的非同步方法的呼叫端無法攔截方法擲回的例外狀況，這類未處理的例外狀況有可能造成應用程式失敗。 如果例外狀況發生在會傳回 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 的非同步方法，則例外狀況會儲存在傳回的工作中，並在等候工作時再次擲回。 因此，請確定任何可能會產生例外狀況的非同步方法具有傳回型別 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>，且會等候對方法的呼叫。  
   
 如需如何在非同步方法中攔截例外狀況的詳細資訊，請參閱 [try-catch](../../../language-reference/keywords/try-catch.md) 主題的[非同步方法中的例外狀況](../../../language-reference/keywords/try-catch.md#exceptions-in-async-methods)一節。  
   
-下例會定義非同步事件處理常式。  
+下列範例示範非同步事件處理常式的行為。 請注意，在範例程式碼中，非同步事件處理常式完成時必須讓主執行緒知道。 然後主執行緒可以等候非同步事件處理常式完成，再結束程式。
  
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns3.cs)]  
  

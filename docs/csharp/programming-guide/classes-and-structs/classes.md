@@ -6,30 +6,34 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 688736aa8556719789b02d7db25858f442b4309e
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 5f4bcf9957f91fe3ee8a62a8dc68448188df4188
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245711"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467038"
 ---
 # <a name="classes-c-programming-guide"></a>類別 (C# 程式設計手冊)
 「類別」是一種建構，可讓您將其他類型、方法和事件的變數群組在一起，以建立您自己的自訂類型。 類別就像藍圖。 它會定義類型的資料和行為。 如果類別未宣告為靜態，則用戶端程式碼可以建立它的「執行個體」。 這些執行個體是指派給變數的「物件」。 除非類別的執行個體的所有參考都超出範圍，否則變數會保留在記憶體中。 此時，CLR 會將它標記為適合進行記憶體回收。 如果類別宣告為 [static](../../../csharp/language-reference/keywords/static.md)，則您無法建立執行個體，而且用戶端程式碼只能透過類別本身存取它。 如需詳細資訊，請參閱[靜態類別和靜態類別成員](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。  
 
 ## <a name="reference-types"></a>參考型別  
-定義為 [class](../../../csharp/language-reference/keywords/class.md) 的類型即為「參考型別」。 在執行階段，當您宣告參考型別的變數時，該變數會包含值 [null](../../../csharp/language-reference/keywords/null.md)，直到您使用 [new](../../../csharp/language-reference/keywords/new.md) 運算子明確地建立類別的執行個體，或為它指派在他處建立的物件為止，如下列範例所示︰
+定義為 [class](../../../csharp/language-reference/keywords/class.md) 的類型即為「參考型別」。 在執行階段，當您宣告參考型別的變數時，該變數會包含 [null](../../../csharp/language-reference/keywords/null.md) 值，直到您使用 [new](../../../csharp/language-reference/keywords/new.md) 運算子明確地建立類別的執行個體，或為其指派在他處建立的相容類型物件為止，如下列範例所示：
 
 ```csharp
+//Declaring a object of type MyClass.
 MyClass mc = new MyClass();
+
+//Declaring another object of the same type, assigning it the value of the first object.
 MyClass mc2 = mc;
 ```
 
-建立物件時，會在 Managed 堆積上配置記憶體，而變數只會保留物件位置的參考。 配置以及由 CLR 的自動記憶體管理功能 (也就是「記憶體回收」) 回收 Managed 堆積上的類型時，都需要額外負荷。 不過，記憶體回收也已獲得高度最佳化，因此在大部分情況下並不會產生效能問題。 如需記憶體回收的詳細資訊，請參閱[自動記憶體管理和記憶體回收](../../../standard/garbage-collection/gc.md)。  
+建立物件時，會在受控堆積上配置足夠的記憶體給該特定物件，而變數只會保留該物件位置的參考。 配置和由 CLR 的自動記憶體管理功能 (也就是「記憶體回收」) 回收受控堆積上的型別時，都需要額外負荷。 不過，記憶體回收也已獲得高度最佳化，因此在大部分情況下並不會產生效能問題。 如需記憶體回收的詳細資訊，請參閱[自動記憶體管理和記憶體回收](../../../standard/garbage-collection/gc.md)。  
   
 ## <a name="declaring-classes"></a>宣告類別  
- 使用 [class](../../../csharp/language-reference/keywords/class.md) 關鍵字宣告類別，如下列範例所示︰
+ 使用 [class](../../../csharp/language-reference/keywords/class.md) 關鍵字並在後面接著唯一識別碼來宣告類別，如下列範例所示：
 
  ```csharp
+//[access modifier] - [class] - [identifier]
  public class Customer
  {
     // Fields, properties, methods and events go here...

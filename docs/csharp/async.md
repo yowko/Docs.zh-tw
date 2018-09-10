@@ -4,12 +4,12 @@ description: 深入了解 .NET Core 提供之 C# 語言層級的非同步程式�
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: b753b887da6f8836e0f4363a479c12c7364ea770
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: ae1c9b1569b5fb6784f50ec9d78a44380242fcd8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34312062"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484963"
 ---
 # <a name="asynchronous-programming"></a>非同步程式設計
 
@@ -118,7 +118,7 @@ calculateButton.Clicked += async (o, e) =>
 
 ### <a name="extracting-data-from-a-network"></a>從網路擷取資料
 
-此程式碼片段會從 www.dotnetfoundation.org 下載 HTML，並計算字串 ".NET" 在 HTML 中的出現次數。  它會使用 ASP.NET MVC 來定義執行此工作的 Web 控制器方法，並傳回數字。
+此程式碼片段會從首頁 ([www.dotnetfoundation.org](https://www.dotnetfoundation.org)) 下載 HTML，並計算字串 ".NET" 在 HTML 中的出現次數。  它會使用 ASP.NET MVC 來定義執行此工作的 Web 控制器方法，並傳回數字。
 
 > [!NOTE]
 > 如果您打算在生產程式碼中執行 HTML 剖析，請不要使用規則運算式。 請改用剖析程式庫。

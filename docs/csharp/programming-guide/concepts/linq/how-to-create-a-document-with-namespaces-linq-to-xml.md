@@ -2,12 +2,12 @@
 title: 如何：建立包含命名空間的文件 (C#) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-ms.openlocfilehash: ab572e0af79d51205167ad60b1b80e8ba6b43707
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5937639fc48b82ee155450a3eaa1c7715ee3f9b9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330687"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43478022"
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>如何：建立包含命名空間的文件 (C#) (LINQ to XML)
 本主題顯示如何利用命名空間建立文件。  
@@ -58,7 +58,7 @@ Console.WriteLine(root);
 ## <a name="example"></a>範例  
  下列範例顯示如何建立包含兩個命名空間的文件。 一個是預設命名空間。 另一個是具有前置詞的命名空間。  
   
- 藉由將命名空間屬性包含到根項目中，系統會序列化命名空間，讓 http://www.adventure-works.com 成為預設命名空間，而 www.fourthcoffie.com 則利用 "fc" 的前置詞序列化。 若要建立宣告預設命名空間的屬性，您可以建立名稱為 "xmlns"，而且沒有命名空間的屬性。 屬性的值為預設的命名空間 URI。  
+ 藉由將命名空間屬性包含到根項目中，系統會序列化命名空間，讓 `http://www.adventure-works.com` 成為預設命名空間，而 `www.fourthcoffee.com` 則利用 "fc" 的前置詞序列化。 若要建立宣告預設命名空間的屬性，您可以建立名稱為 "xmlns"，而且沒有命名空間的屬性。 屬性的值為預設的命名空間 URI。  
   
 ```csharp  
 // The http://www.adventure-works.com namespace is forced to be the default namespace.  

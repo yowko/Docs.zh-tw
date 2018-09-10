@@ -1,26 +1,37 @@
 ---
 title: operator 關鍵字 (C# 參考)
-ms.date: 07/20/2015
+description: 了解如何多載內建 C# 運算子
+ms.date: 08/27/2018
 f1_keywords:
 - operator_CSharpKeyword
 - operator
 helpviewer_keywords:
 - operator keyword [C#]
 ms.assetid: 59218cce-e90e-42f6-a6bb-30300981b86a
-ms.openlocfilehash: c3bfada235993670bf158fe9803a09707b2b3251
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 1e11d7767b61becc39b1158fae9cb2abe997e4bd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42929868"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480648"
 ---
 # <a name="operator-c-reference"></a>operator (C# 參考)
 
 使用 `operator` 關鍵字多載內建運算子，或在類別或結構宣告中提供使用者定義的轉換。
 
+若要在自訂類別或結構上多載運算子，您可以在對應類型中建立運算子宣告。 多載內建 C# 運算子的運算子宣告必須滿足下列規則：
+
+- 它包含 `public` 和 `static` 修飾詞。
+- 它包含 `operator X`，其中 `X` 是所要多載之運算子的名稱或符號。
+- 一元運算子有一個參數，而二元運算子有兩個參數。 在各案例中，至少一個參數必須與宣告運算子的類別或結構擁有相同的類型。
+
+如需如何定義轉換運算子的資訊，請參閱 [explicit](explicit.md) 和 [implicit](implicit.md) 關鍵字文章。
+
+如需可多載的 C# 運算子概觀，請參閱[可多載的運算子](../../programming-guide/statements-expressions-operators/overloadable-operators.md)一文。
+
 ## <a name="example"></a>範例
 
-以下是極簡化的分數類別。 它會多載 `+` 和 `*` 運算子，以執行分數的加法和乘法，也提供將 `Fraction` 類型轉換成 `double` 類型的轉換運算子。
+下列範例定義 `Fraction` 類型，表示分數。 它會多載 `+` 和 `*` 運算子，以執行分數的加法和乘法，也提供將 `Fraction` 類型轉換成 `double` 類型的轉換運算子。
 
 [!code-csharp[csrefKeywordsConversion#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsConversion/CS/csrefKeywordsConversion.cs#6)]
 
@@ -35,4 +46,5 @@ ms.locfileid: "42929868"
 - [C# 關鍵字](index.md)
 - [implicit](implicit.md)
 - [explicit](explicit.md)
+- [多載運算子](../../programming-guide/statements-expressions-operators/overloadable-operators.md)
 - [如何：在結構之間實作使用者定義的轉換](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)

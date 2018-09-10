@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: fbee7e6ad0fad312e9e5524f7b3fcc7c417ad47b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b156d043f5a4b72f4cb7423708b41fdd0e475dd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577419"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43385692"
 ---
 # <a name="async-in-depth"></a>深入了解非同步
 
@@ -114,7 +114,7 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 
 此外，使用 `async` 方法可輕鬆地將工作分派給 UI 執行緒 (例如更新 UI)，而且不需要額外的工作 (例如呼叫安全執行緒委派)。
 
-## <a name="deeper-dive-into-task-and-taskt-for-a-cpu-bound-operation"></a>更深入了解 CPU-Bound 作業的 Task 和 Task<T>
+## <a name="deeper-dive-into-task-and-tasklttgt-for-a-cpu-bound-operation"></a>更深入了解 CPU-Bound 作業的 Task 和 Task&lt;T&gt;
 
 CPU-bound `async` 程式碼與 I/O-bound `async` 程式碼稍微不同。  由於工作會在 CPU 上執行，因此必須指定專門用於計算的執行緒。  使用 `async` 和 `await` 可讓您無障礙地與背景執行緒互動，並確保非同步方法的呼叫端保持回應。  請注意，這不會對共用資料提供任何保護。  如果您要使用共用資料，您仍然需要套用適當的同步處理策略。
 

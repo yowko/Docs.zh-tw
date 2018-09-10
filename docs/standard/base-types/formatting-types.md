@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10dd7e007ecd24ec3f127ab9c102cd758dfc7d75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c26f4602623e1eb8979ef08c5d14404cc84e031
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579843"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484860"
 ---
 # <a name="formatting-types-in-net"></a>在 .NET 中將類型格式化
 <a name="Introduction"></a> 格式化是將類別、結構或列舉值的執行個體轉換成字串表示的過程，通常是為了將結果字串展示予使用者，或是為了將字串藉還原序列化方式還原成原始的資料類型。 這種轉換可能面臨幾項挑戰：  
@@ -120,7 +120,7 @@ ms.locfileid: "33579843"
  [!code-vb[Conceptual.Formatting.Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/default1.vb#1)]  
   
 > [!WARNING]
->  從 [!INCLUDE[win81](../../../includes/win81-md.md)]開始， [!INCLUDE[wrt](../../../includes/wrt-md.md)] 會包含具有單一方法 [IStringable.ToString](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) 的 [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx)介面，該介面會提供預設的格式化支援。 不過，不建議 Managed 類型實作 `IStringable` 介面。 如需詳細資訊，請參閱 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 參考頁面上的＜`IStringable`和 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 介面＞一節。  
+>  從 [!INCLUDE[win81](../../../includes/win81-md.md)] 開始，[!INCLUDE[wrt](../../../includes/wrt-md.md)] 會包含具有單一方法 [IStringable.ToString](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx) 的 [IStringable](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) 介面，該介面會提供預設的格式化支援。 不過，不建議 Managed 類型實作 `IStringable` 介面。 如需詳細資訊，請參閱 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 參考頁面上的＜`IStringable`和 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 介面＞一節。  
   
  因為除介面以外的所有其他類型都會衍生自 <xref:System.Object>，所以您的自訂類別或結構會自動被賦予此功能。 不過，預設的 `ToString` 方法提供的功能有限：它雖然可以識別類型，但無法提供類型執行個體的任何資訊。 若要提供物件的字串表示來表達該物件的相關資訊，您必須覆寫 `ToString` 方法。  
   

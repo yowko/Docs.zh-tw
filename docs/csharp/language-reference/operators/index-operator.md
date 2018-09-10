@@ -9,12 +9,12 @@ helpviewer_keywords:
 - '[] operator [C#]'
 - indexing operator [C#]
 ms.assetid: 5c16bb45-88f7-45ff-b42c-1af1972b042c
-ms.openlocfilehash: 65908bb3bcd8912ef81fc094e5958ae8dc4ae1f1
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 19283a795f8cfc444dfcb186dcecc0ea86eb27fd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961433"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467428"
 ---
 # <a name="-operator-c-reference"></a>[] 運算子 (C# 參考)
 方括號 (`[]`) 可用於陣列、索引子和屬性， 也可與指標搭配使用。  
@@ -30,7 +30,7 @@ ms.locfileid: "37961433"
   
  如果陣列索引超出範圍，則會擲回例外狀況。  
   
- 陣列索引運算子無法多載；不過，類型可以定義索引子，以及接受一或多個參數的屬性。 索引子參數會由方括號括住，就像陣列索引一樣；但索引子參數可以宣告為任何類型，而不像陣列索引必須是整數型別。  
+ 陣列索引運算子無法多載；不過，類型可以定義接受一或多個參數的索引子。 索引子參數會由方括號括住，就像陣列索引一樣；但索引子參數可以宣告為任何類型，而不像陣列索引必須是整數型別。  
   
  例如，.NET Framework 定義 `Hashtable` 類型，該類型會建立任意類型之索引鍵和值的關聯：  
   
@@ -49,11 +49,12 @@ ms.locfileid: "37961433"
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [C# 運算子](../../../csharp/language-reference/operators/index.md)  
- [陣列](../../../csharp/programming-guide/arrays/index.md)  
- [索引子](../../../csharp/programming-guide/indexers/index.md)  
- [Unsafe.DangerousAPI](../../../csharp/language-reference/keywords/unsafe.md)  
- [fixed 陳述式](../../../csharp/language-reference/keywords/fixed-statement.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 運算子](../../../csharp/language-reference/operators/index.md)  
+- [陣列](../../../csharp/programming-guide/arrays/index.md)  
+- [索引子](../../../csharp/programming-guide/indexers/index.md)  
+- [Unsafe.DangerousAPI](../../../csharp/language-reference/keywords/unsafe.md)  
+- [fixed 陳述式](../../../csharp/language-reference/keywords/fixed-statement.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5581f825a23104ff005f3557de26420ee45b5c27
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d44ec0e0601383133e6c59e44cd81031918d4b6d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592479"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43385854"
 ---
 # <a name="dataflow-task-parallel-library"></a>資料流程 (工作平行程式庫)
 <a name="top"></a> 工作平行程式庫 (TPL) 提供資料流程元件，協助讓啟用並行的應用程式更強固。 這些資料流程元件合稱為「TPL 資料流程程式庫」。 此資料流程模型以提供針對廣泛資料流程以及管線工作的同處理序訊息傳遞，將以行動為基礎的程式撰寫升級。 資料流程元件會在 TPL 的類型與排程基礎結構上建置，並整合 C#、Visual Basic 以及 F# 語言對非同步程式設計的支援。 當您有多個必須非同步式互相溝通的作業時，或當您因為資料變為可用而要處理資料時，這些資料流程元件就會相當實用。 例如，請考慮一個應用程式，它會處理來自網路攝影機的影像資料。 使用資料流模型，應用程式就可以在影像畫面可用時處理它們。 例如，如果應用程式因執行光源修正或消除紅眼而增強影像畫面，則您可以建立資料流程元件的「管線」。 此管線的每個階段都可能使用更廣泛的平行處理原則功能 (例如 TPL 提供的功能) 來轉換該影像。  
@@ -72,14 +72,14 @@ ms.locfileid: "33592479"
   
  這個範例示範在執行資料流程區塊的委派中有例外狀況未受處理的案例。 建議您在這類區塊的主體中處理例外狀況。 然而，假如您無法這樣做，區塊會表現得就像已經取消，而不會處理傳入的訊息。  
   
- 當資料流程區塊已明確地取消時，<xref:System.AggregateException> 物件包含 <xref:System.AggregateException.InnerExceptions%2A> 屬性中的 <xref:System.OperationCanceledException>。 如需取消資料流程的詳細資訊，請在文件稍後參閱＜啟用取消＞。  
+ 當資料流程區塊已明確地取消時，<xref:System.AggregateException> 物件包含 <xref:System.AggregateException.InnerExceptions%2A> 屬性中的 <xref:System.OperationCanceledException>。 如需取消資料流程的詳細資訊，請參閱[啟用取消](#enabling-cancellation)一節。  
   
- 第二種判斷資料流程區塊完成狀態的方式為使用此完成工作的接續，或使用 C# 和 Visual Basic 的非同步語言功能來非同步等候此完成工作。 您提供給 <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> 方法的委派會採用代表前項工作的 <xref:System.Threading.Tasks.Task> 物件。 在 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Completion%2A> 屬性的案例中，接續的委派本身會採用完成工作。 下列範例與上一則範例很相似，不同處在於它也會使用 <xref:System.Threading.Tasks.Task.ContinueWith%2A> 方法建立會列印整個資料流程作業狀態的完成工作。  
+ 第二種判斷資料流程區塊完成狀態的方式為使用此完成工作的接續，或使用 C# 和 Visual Basic 的非同步語言功能來非同步等候此完成工作。 您提供給 <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> 方法的委派會採用代表前項工作的 <xref:System.Threading.Tasks.Task> 物件。 在 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Completion%2A> 屬性的案例中，接續的委派本身會採用完成工作。 下列範例與上一則範例很相似，不同之處在於它也會使用 <xref:System.Threading.Tasks.Task.ContinueWith%2A> 方法建立會列印整個資料流程作業狀態的接續工作。  
   
  [!code-csharp[TPLDataflow_Overview#11](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_overview/cs/program.cs#11)]
  [!code-vb[TPLDataflow_Overview#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#11)]  
   
- 您也可以使用在接續工作主體中的屬性 (例如 <xref:System.Threading.Tasks.Task.IsCanceled%2A>)，判斷資料流程區塊完成狀態中的其他資訊。 如需接續工作及其與取消跟錯誤處理之關聯的詳細資訊，請參閱[使用接續工作鏈結工作](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)、[工作取消](../../../docs/standard/parallel-programming/task-cancellation.md)、[例外狀況處理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)，以及[NIB：如何：處理工作擲回的例外狀況](https://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d)。  
+ 您也可以使用在接續工作主體中的屬性 (例如 <xref:System.Threading.Tasks.Task.IsCanceled%2A>)，判斷資料流程區塊完成狀態中的其他資訊。 如需接續工作及其與取消跟錯誤處理之關聯的詳細資訊，請參閱[使用接續工作鏈結工作](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)、[工作取消](../../../docs/standard/parallel-programming/task-cancellation.md)和[例外狀況處理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)。  
   
  [回到頁首](#top)  
   
@@ -124,7 +124,7 @@ ms.locfileid: "33592479"
  執行區塊會為已接受資料的每個部分呼叫使用者提供的委派。 TPL 資料流程程式庫提供三個執行區塊類型：<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType>。  
   
 #### <a name="actionblockt"></a>ActionBlock(T)  
- <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 類別是在接收到資料時呼叫委派的目標區塊。 可將 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 物件視為在資料可用時會非同步執行的委派。 您提供給 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 物件的委派可以是 <xref:System.Action> 類型或 `System.Func\<TInput, Task>` 類型。 當您搭配 <xref:System.Action> 使用 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 物件時，會將每個輸入項目的處理在委派傳回時視為完成。 當您搭配 `System.Func\<TInput, Task>` 使用 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 物件時，只有在傳回的 <xref:System.Threading.Tasks.Task> 物件已完成時，才會將每個輸入項目的處理視為已完成。 使用這兩種機制，您可以使用 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 為每個輸入項目作同步與非同步處理。  
+ <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 類別是在接收到資料時呼叫委派的目標區塊。 可將 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 物件視為在資料可用時會非同步執行的委派。 您提供給 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 物件的委派可以是 <xref:System.Action%601> 類型或 `System.Func<TInput, Task>` 類型。 當您搭配 <xref:System.Action%601> 使用 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 物件時，會將每個輸入項目的處理在委派傳回時視為完成。 當您搭配 `System.Func<TInput, Task>` 使用 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 物件時，只有在傳回的 <xref:System.Threading.Tasks.Task> 物件已完成時，才會將每個輸入項目的處理視為已完成。 使用這兩種機制，您可以使用 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 為每個輸入項目作同步與非同步處理。  
   
  下列基本範例會張貼多個 <xref:System.Int32> 值到 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 物件。 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 物件會列印這些值到主控台。 這個範例接著會設定此區塊為完成狀態，並等候所有資料流程工作完成。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "33592479"
  如需示範如何使用具有 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 類別之委派的完整範例，請參閱[如何：在資料流程區塊收到資料時執行動作](../../../docs/standard/parallel-programming/how-to-perform-action-when-a-dataflow-block-receives-data.md)。  
   
 #### <a name="transformblocktinput-toutput"></a>TransformBlock(TInput, TOutput)  
- <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 類別類似於 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 類別，不同處在於它可同時作為來源和目標。 您傳遞給 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 物件的委派會傳回類型 `TOutput` 的值。 您提供給 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 物件的委派可以是類型 `System.Func<TInput, TOutput>` 或類型 `System.Func<TInput, Task>`。 當您搭配 `System.Func\<TInput, TOutput>` 使用 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 物件時，會將每個輸入項目的處理在委派傳回時視為完成。 當您搭配 `System.Func<TInput, Task<TOutput>>` 使用 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 物件時，只有在傳回的 <xref:System.Threading.Tasks.Task> 物件已完成時，才會將每個輸入項目的處理視為已完成。 如同 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>，使用這兩種機制，您就可以使用 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 為每個輸入項目作同步與非同步處理。  
+ <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 類別類似於 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 類別，不同處在於它可同時作為來源和目標。 您傳遞給 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 物件的委派會傳回類型 `TOutput` 的值。 您提供給 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 物件的委派可以是類型 `System.Func<TInput, TOutput>` 或類型 `System.Func<TInput, Task<TOutput>>`。 當您搭配 `System.Func<TInput, TOutput>` 使用 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 物件時，會將每個輸入項目的處理在委派傳回時視為完成。 當您搭配 `System.Func<TInput, Task<TOutput>>` 使用 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 物件時，只有在傳回的 <xref:System.Threading.Tasks.Task%601> 物件已完成時，才會將每個輸入項目的處理視為已完成。 如同 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>，使用這兩種機制，您就可以使用 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 為每個輸入項目作同步與非同步處理。  
   
  下列基本範例會建立 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 物件，該物件會計算其輸入的平方根。 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 物件會使用 <xref:System.Int32> 值做為輸入，並產生 <xref:System.Double> 值做為輸出。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "33592479"
  如需在於 Windows Forms 應用程式中執行影像處理的資料流程區塊網路中使用 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 的完整範例，請參閱[逐步解說：在 Windows Forms 應用程式中使用資料流程](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)。  
   
 #### <a name="transformmanyblocktinput-toutput"></a>TransformManyBlock(TInput, TOutput)  
- <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 類別相似於 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 類別，不同處在於 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 對每個輸入值會產生零或多個輸出值，而不是只有一個。 您提供給 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 物件的委派可以是類型 `System.Func<TInput, IEnumerable<TOutput>>` 或 `type System.Func<TInput, Task<IEnumerable<TOutput>>>`。 當您搭配 `System.Func<TInput, IEnumerable<TOutput>>` 使用 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 物件時，會將每個輸入項目的處理在委派傳回時視為完成。 當您搭配 `System.Func<TInput, Task<IEnumerable<TOutput>>>` 使用 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 物件時，只有在傳回的 `System.Threading.Tasks.Task<IEnumerable<TOutput>>` 物件已完成時，才會將每個輸入項目的處理視為已完成。  
+ <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 類別相似於 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 類別，不同處在於 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 對每個輸入值會產生零或多個輸出值，而不是只有一個。 您提供給 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 物件的委派可以是類型 `System.Func<TInput, IEnumerable<TOutput>>` 或類型 `System.Func<TInput, Task<IEnumerable<TOutput>>>`。 當您搭配 `System.Func<TInput, IEnumerable<TOutput>>` 使用 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 物件時，會將每個輸入項目的處理在委派傳回時視為完成。 當您搭配 `System.Func<TInput, Task<IEnumerable<TOutput>>>` 使用 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 物件時，只有在傳回的 `System.Threading.Tasks.Task<IEnumerable<TOutput>>` 物件已完成時，才會將每個輸入項目的處理視為已完成。  
   
  下列基本範例會建立 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 物件，該物件會將字串分割成獨立字元的序列。 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 物件會使用 <xref:System.String> 值做為輸入，並產生 <xref:System.Char> 值做為輸出。  
   
@@ -235,7 +235,7 @@ ms.locfileid: "33592479"
  <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.MaxDegreeOfParallelism%2A> 的預設值為 1，以保證該資料流程區塊一次處理一個訊息。 設定此屬性為大於 1 的值可讓資料流程區塊同時處理多個訊息。 設定此屬性為 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.Unbounded?displayProperty=nameWithType> 可啟用基本的工作排程器來管理最大並行刻度。  
   
 > [!IMPORTANT]
->  當您指定大於 1 的最大平行處理原則刻度時，會同時處理多個訊息，因此訊息可能不會依照接收到的順序處理。 然而，從該區塊輸出訊息的順序會正確地排列。  
+>  當您指定大於 1 的最大平行處理原則刻度時，將會同時處理多個訊息，因此訊息可能不會依照接收到的順序處理。 不過，訊息從區塊輸出的順序和收到的順序一樣。  
   
  因為 <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.MaxDegreeOfParallelism%2A> 屬性表示平行處理原則的最大刻度，所以資料流程區塊可能會以比您所指定刻度更小的平行處理原則來執行。 資料流程區塊可能使用較低刻度的平行處理以符合其功能需求，或者是因為缺乏可用的系統資源。 資料流程區塊絕不選擇高於您所指定的平行處理。  
   

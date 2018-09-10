@@ -3,12 +3,12 @@ title: C# 的歷史 - C# 指南
 description: 最早的語言版本有哪些內容，而在之後有什麼演變？
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 90f480d7b25ebe308d1f1cb3d4c117f36f7dd9bf
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 7a7030eb9479ebae553f3bb4d569c9a9f931db9a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42751978"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43391244"
 ---
 # <a name="the-history-of-c"></a>C# 的歷史 #
 
@@ -34,6 +34,10 @@ C# 1.0 的主要功能包含：
 - [陳述式](../programming-guide/statements-expressions-operators/statements.md)
 - [屬性](../programming-guide/concepts/attributes/index.md)
 - 常值
+
+## <a name="c-version-12"></a>C# 1.2 版
+
+Visual Studio 2003 隨附的 C# 1.2 版。 本版內含對語言的小幅功能改善。 最值得注意的是，自本版開始，當 <xref:System.Collections.IEnumerator> 實作 <xref:System.IDisposable> 時，在 `foreach` 迴圈產生的程式碼會在 <xref:System.Collections.IEnumerator> 呼叫 <xref:System.IDisposable.Dispose%2A>。
 
 ## <a name="c-version-20"></a>C# 2.0 版
 

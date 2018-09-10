@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99d62eca26e19d343b3f8f6afb9824c009610fb4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f0b18f33c0cbc83f955c32477a21f77b09c7546c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585083"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43396470"
 ---
 # <a name="data-structures-for-parallel-programming"></a>適用於平行程式設計的資料結構
 .NET Framework 4 版導入了數個適用於平行程式設計的新類型，包括一系列並行集合類別、輕量型同步處理原始物件，以及適用於延遲初始設定的類型。 您可以搭配任何多執行緒應用程式程式碼使用這些類型，其中包括工作平行程式庫和 PLINQ。  
@@ -66,7 +66,7 @@ ms.locfileid: "33585083"
  如需詳細資訊，請參閱[延遲初始化](../../../docs/framework/performance/lazy-initialization.md)。  
   
 ## <a name="aggregate-exceptions"></a>彙總例外狀況  
- <xref:System.AggregateException?displayProperty=nameWithType> 類型可以用來擷取在個別執行緒上並行擲出的多個例外狀況，並將它們以單一例外狀況的形式傳回聯結執行緒。 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 類型，以及 PLINQ 都會針對此目的廣泛使用 <xref:System.AggregateException>。 如需詳細資訊，請參閱 [NIB：如何：處理工作擲回的例外狀況](https://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d)，以及[如何：處理 PLINQ 查詢中的例外狀況](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md)。  
+ <xref:System.AggregateException?displayProperty=nameWithType> 類型可以用來擷取在個別執行緒上並行擲出的多個例外狀況，並將它們以單一例外狀況的形式傳回聯結執行緒。 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 類型，以及 PLINQ 都會針對此目的廣泛使用 <xref:System.AggregateException>。 如需詳細資訊，請參閱[例外狀況處理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)和[如何：處理 PLINQ 查詢中的例外狀況](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md)。  
   
 ## <a name="see-also"></a>請參閱  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>  

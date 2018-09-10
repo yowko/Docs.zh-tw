@@ -4,12 +4,12 @@ description: 透過逐步使用 dotnet test 和 xUnit 建置範例方案的互�
 author: ardalis
 ms.author: wiwagn
 ms.date: 11/29/2017
-ms.openlocfilehash: 6f3b041bf690183f60b687699d878a4d5006be6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 560ba58076fedbb1174da2cfe93796030aa9d46f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213326"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43404291"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>使用 dotnet test 與 xUnit 為 .NET Core 中的 C# 進行單元測試
 
@@ -134,7 +134,7 @@ namespace Prime.UnitTests.Services
 
 `[Fact]` 屬性指出由測試執行器執行的測試方法。 從 *PrimeService.Tests* 資料夾執行 [`dotnet test`](../tools/dotnet-test.md)，建置測試及類別庫，然後執行測試。 xUnit 測試執行器包含執行測試的程式進入點。 `dotnet test` 會使用您建立的單元測試專案來開始測試執行器。
 
-您的測試失敗。 您尚未建立實作。 請在可運作的 `PrimeService` 類別中，撰寫最簡易的程式碼來進行測試。 並使用下列程式碼取代現有的 `IsPrime` 方法實作：
+您的測試失敗。 您尚未建立實作。 在可運作的 `PrimeService` 類別中撰寫最簡單的程式碼，讓此測試成功。 並使用下列程式碼取代現有的 `IsPrime` 方法實作：
 
 ```csharp
 public bool IsPrime(int candidate)
@@ -171,4 +171,4 @@ if (candidate < 2)
 
 ### <a name="additional-resources"></a>其他資源
 
-[測試 ASP.NET Core 中的控制器邏輯](/aspnet/core/mvc/controllers/testing)
+- [測試 ASP.NET Core 中的控制器邏輯](/aspnet/core/mvc/controllers/testing)

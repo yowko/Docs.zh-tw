@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, nullable types
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-ms.openlocfilehash: 64b326b82cd022ed6590a232546690e2ec2a5c78
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: 2af0704abcad00c75a5d40bfe2d0523d07ee6a3f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39245582"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "43885044"
 ---
 # <a name="nullable-types-c-programming-guide"></a>可為 Null 的型別 (C# 程式設計指南)
 
@@ -38,7 +38,7 @@ ms.locfileid: "39245582"
   
 - 您也可以使用 `==` 和 `!=` 運算子搭配可為 Null 的型別，如下列範例所示︰`if (x != null) y = x.Value;`。 如果 `a` 和 `b` 都是 Null，`a == b` 會評估為 `true`。  
 
-- 從 C# 7.0 開始，您可以為兩項檢查使用模式比對，並取得可為 Null 的型別值：`if (x is int xValue) y = xValue;`。
+- 從 C# 7.0 開始，您就可以使用[模式比對](../../pattern-matching.md#the-is-type-pattern-expression)檢查及取得可為 Null 型別的值：`if (x is int valueOfX) y = valueOfX;`。
   
 - `T?` 的預設值為 <xref:System.Nullable%601.HasValue%2A> 屬性傳回 `false` 的執行個體。  
 
@@ -54,12 +54,12 @@ ms.locfileid: "39245582"
 
 如需詳細資訊，請參閱[使用可為 Null 的型別](using-nullable-types.md)和[如何：識別可為 Null 的型別](how-to-identify-a-nullable-type.md)主題。
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
- <xref:System.Nullable%601?displayProperty=nameWithType>  
- <xref:System.Nullable?displayProperty=nameWithType>  
- [??運算子](../../language-reference/operators/null-coalescing-operator.md)  
- [C# 程式設計指南](../index.md)  
- [C# 指南](../../index.md)  
- [C# 參考](../../language-reference/index.md)  
- [可為 Null 的實值型別 (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
+- <xref:System.Nullable%601?displayProperty=nameWithType>  
+- <xref:System.Nullable?displayProperty=nameWithType>  
+- [??運算子](../../language-reference/operators/null-coalescing-operator.md)  
+- [C# 程式設計指南](../index.md)  
+- [C# 指南](../../index.md)  
+- [C# 參考](../../language-reference/index.md)  
+- [可為 Null 的實值型別 (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  

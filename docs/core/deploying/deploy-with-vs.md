@@ -4,11 +4,12 @@ description: 了解使用 Visual Studio 的 .NET Core 應用程式部署
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.openlocfilehash: dedf04a872faf1b35a05f9da0c61b80713fdce51
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2829bb5a2f5857f6124e5c1f78f5247fe8d1f552
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407445"
 ---
 # <a name="deploying-net-core-apps-with-visual-studio"></a>使用 Visual Studio 部署 .NET Core 應用程式
 
@@ -71,11 +72,11 @@ ms.lasthandoff: 05/04/2018
 
 1. 如果 `Newtonsoft.Json` 已安裝在您的系統上，請在 [管理方案的套件] 索引標籤的右窗格中選取您的專案，以將它新增至您的專案中。
 
-請注意，具有協力廠商相依性的 Framework 相依部署，可攜性只與其協力廠商相依性一致。 例如，如果協力廠商程式庫只支援 macOS，則應用程式就無法攜至 Windows 系統。 如果協力廠商相依性本身依賴於原生程式碼，就會發生這種情況。 其中一個絶佳範例是 [Kestrel 伺服器](http://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel)，它需要對 [libuv](https://github.com/libuv/libuv) 的原生相依性。 當具有這類協力廠商相依性的應用程式建立了 FDD 時，已發行輸出就會包含原生相依性支援的每個[執行階段識別碼 (RID)](../rid-catalog.md) 資料夾 (存在於其 NuGet 套件中)。
+請注意，具有協力廠商相依性的 Framework 相依部署，可攜性只與其協力廠商相依性一致。 例如，如果協力廠商程式庫只支援 macOS，則應用程式就無法攜至 Windows 系統。 如果協力廠商相依性本身依賴於原生程式碼，就會發生這種情況。 其中一個絶佳範例是 [Kestrel 伺服器](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel)，它需要對 [libuv](https://github.com/libuv/libuv) 的原生相依性。 當具有這類協力廠商相依性的應用程式建立了 FDD 時，已發行輸出就會包含原生相依性支援的每個[執行階段識別碼 (RID)](../rid-catalog.md) 資料夾 (存在於其 NuGet 套件中)。
 
 ## <a name="simpleSelf"></a> 沒有協力廠商相依性的自封式部署
 
-部署無任何協力廠商相依性的自封式部署，涉及建立專案、修改 *csproj* 檔案、組建、測試以及發行應用程式。 以 C# 撰寫的簡單範例會說明此程序。 
+部署無任何協力廠商相依性的自封式部署，涉及建立專案、修改 *csproj* 檔案、組建、測試以及發行應用程式。 以 C# 撰寫的簡單範例會說明此程序。
 
 1. 建立專案。
 
@@ -91,7 +92,7 @@ ms.lasthandoff: 05/04/2018
 
    1. 以滑鼠右鍵按一下方案總管中的專案 (而非方案)，然後選取 [編輯 SCD.csproj]。
 
-   1. 在定義應用程式目標平台之 *csproj* 檔案的 `<PropertyGroup>` 區段中建立 `<RuntimeIdentifiers>` 標記，並指定每個目標平台的執行階段識別碼 (RID)。 請注意，您也必須加上分號來分隔 RID。 如需執行階段識別碼清單，請參閱 [Runtime IDentifier catalog](../rid-catalog.md)。 
+   1. 在定義應用程式目標平台之 *csproj* 檔案的 `<PropertyGroup>` 區段中建立 `<RuntimeIdentifiers>` 標記，並指定每個目標平台的執行階段識別碼 (RID)。 請注意，您也必須加上分號來分隔 RID。 如需執行階段識別碼清單，請參閱 [Runtime IDentifier catalog](../rid-catalog.md)。
 
    例如，下列範例指出應用程式在 64 位元 Windows 10 作業系統和 64 位元 OS X 版本 10.11 作業系統上執行。
 
@@ -100,6 +101,7 @@ ms.lasthandoff: 05/04/2018
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
 </PropertyGroup>
 ```
+
    請注意，`<RuntimeIdentifiers>` 項目可以移至您 *csproj* 檔案中的任何 `<PropertyGroup>`。 本節稍後會提供完整的 *csproj* 檔案範例。
 
 1. 建立應用程式的偵錯組建。
@@ -114,7 +116,7 @@ ms.lasthandoff: 05/04/2018
 
       1. 在工具列上將方案組態從 [偵錯] 變更為 [發行]，以組建應用程式的發行 (而不是偵錯) 版本。
 
-      1. 以滑鼠右鍵按一下方案總管中的專案 (而非方案)，然後選取 [發行]。 
+      1. 以滑鼠右鍵按一下方案總管中的專案 (而非方案)，然後選取 [發行]。
 
       1. 在 [發行] 索引標籤中，選取 [發行]。 Visual Studio 會將構成應用程式的檔案寫入至本機檔案系統。
 
@@ -179,6 +181,7 @@ ms.lasthandoff: 05/04/2018
 
 請注意，您只能將具有協力廠商程式庫的自封式部署，部署到該程式庫支援的平台上。 這類似於在與 Framework 相依的部署中擁有仰賴原生相依性的協力廠商相依性；在其中，原生相依性不會存在於目標平台上，除非先前已在該處安裝這些相依性。
 
-# <a name="see-also"></a>另請參閱
-[.NET Core 應用程式部署](index.md)   
-[.NET Core 執行階段識別項 (RID) 目錄](../rid-catalog.md)   
+## <a name="see-also"></a>另請參閱
+
+* [.NET Core 應用程式部署](index.md)
+* [.NET Core 執行階段識別項 (RID) 目錄](../rid-catalog.md)

@@ -3,13 +3,13 @@ title: .NET Core 應用程式部署
 description: 部署 .NET Core 應用程式。
 author: rpetrusha
 ms.author: ronpet
-ms.date: 04/18/2017
-ms.openlocfilehash: ab65beaa293f7543a8436f913a1e5bf89ca7281b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.date: 09/03/2018
+ms.openlocfilehash: 2ef63ebd737739b2c8e671d982c3844135689ab4
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562002"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891307"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core 應用程式部署
 
@@ -41,7 +41,9 @@ ms.locfileid: "43562002"
 
 ## <a name="self-contained-deployments-scd"></a>自封式部署 (SCD)
 
-針對自封式部署，您不僅要部署自己的應用程式和所有協力廠商相依性，還要部署建置應用程式所用的 .NET Core 版本。 不過，建立 SCD 不包含各種平台的 [.NET Core 原生相依性](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)本身 (例如，macOS 上的 OpenSSL)，所以在執行應用程式前要先行安裝。 如需執行階段之版本繫結的詳細資訊，請參閱 [.NET Core 中的版本繫結](../versions/selection.md)上的文章
+針對自封式部署，您不僅要部署自己的應用程式和所有協力廠商相依性，還要部署建置應用程式所用的 .NET Core 版本。 不過，建立 SCD 不包含各種平台的 [.NET Core 原生相依性](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)本身 (例如，macOS 上的 OpenSSL)，所以在執行應用程式前要先行安裝。 如需執行階段之版本繫結的詳細資訊，請參閱 [.NET Core 中的版本繫結](../versions/selection.md)上的文章。
+
+從 NET Core 2.1 SDK (2.1.300 版) 開始，.NET Core 就支援*修補版本向前復原*。 當您建立自封式部署時，.NET Core 工具會自動包括您的應用程式以其為目標的最新 .NET Core 維護執行階段版本 (最新的維護執行階段包括安全性修補程式與其他錯誤修正)。維護執行階段不需要存在於您的建置系統上，系統會自動從 NuGet.org 下載它。如需詳細資訊 (包括有關如何選擇退出修補版本向前復原的指示)，請參閱[自封式部署執行階段向前復原](runtime-patch-selection.md)。
 
 FDD 和 SCD 使用不同的主機可執行檔，因此您可以使用自己的發行者簽章，為 SCD 簽署主機可執行檔。
 
@@ -58,6 +60,8 @@ FDD 和 SCD 使用不同的主機可執行檔，因此您可以使用自己的�
 - 因為 .NET Core 包含在您的部署套件中，所以您必須事先選取部署套件建置所在的目標平台。
 
 - 您的部署套件的大小相當大，因為您必須包含 .NET Core 以及應用程式及其協力廠商相依性。
+
+  從 .NET Core 2.0 開始，您就可以使用 .NET Core [*全球化不變模式*](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)來減少 Linux 系統上的部署大小大約 28 MB。 一般而言，Linux 上的 .NET Core 依賴 [ICU 程式庫](https://github.com/dotnet/docs/issues/http%22//icu-project.org)來提供全球化支援。 在不變模式中，程式庫不會包括在您的部署中，而且所有文化特性的行為都如[不變的文化特性](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)一樣。
 
 - 將多個自封式 .NET Core 應用程式部署到系統，會消耗大量的磁碟空間，因為每個應用程式都會重複 .NET Core 檔案。
 

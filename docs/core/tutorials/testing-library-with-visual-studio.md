@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 1733f3fc66d79dafb9bc6f983773f043be6c1006
-ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
+ms.openlocfilehash: 8ea958ad5d3eba394eb914da81111a0eaf707cf4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34483469"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43398874"
 ---
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Core 測試類別庫
 
@@ -38,13 +38,13 @@ ms.locfileid: "34483469"
 
    單元測試範本建立的原始程式碼會執行下列動作︰
 
-   * 它會匯入 [Microsoft.VisualStudio.TestTools.UnitTesting](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.aspx) 命名空間，其中包含用於單元測試的類型。
+   * 它會匯入 <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType> 命名空間，其中包含用於單元測試的類型。
 
-   * 它會將 [\[TestClass\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testclassattribute.aspx) 屬性套用至 `UnitTest1` 類別。 執行單元測試時，在測試類別中標示 \[TestMethod\] 屬性的每個測試方法都將自動執行。
+   * 它會將 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> 屬性套用至 `UnitTest1` 類別。 執行單元測試時，在測試類別中標示 \[TestMethod\] 屬性的每個測試方法都將自動執行。
 
-   * 它會套用 [\[TestMethod\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testmethodattribute.aspx) 屬性，以將 `TestMethod1` 定義為在執行單元測試時自動執行的測試方法。
+   * 它會套用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 屬性，以將 `TestMethod1` 定義為在執行單元測試時自動執行的測試方法。
 
-1. 在方案總管 中，以滑鼠右鍵按一下 **StringLibraryTest** 專案的 [相依性] 節點，然後從內容功能表中選取 [新增參考]。
+1. 在 **方案總管** 中，以滑鼠右鍵按一下 **StringLibraryTest** 專案的 **[相依性]** 節點，然後從內容功能表中選取 **[新增參考]**。
 
    ![StringLibraryTest 相依性的內容功能表](./media/testing-library-with-visual-studio/addreference.png)
 
@@ -67,13 +67,13 @@ ms.locfileid: "34483469"
 
    單元測試範本建立的原始程式碼會執行下列動作︰
 
-   * 它會匯入 [Microsoft.VisualStudio.TestTools.UnitTesting](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.aspx) 命名空間，其中包含用於單元測試的類型。
+   * 它會匯入 [Microsoft.VisualStudio.TestTools.UnitTesting]<xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=namewithType> 命名空間，其中包含用於單元測試的類型。
 
-   * 它會將 [\[TestClass\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testclassattribute.aspx) 屬性套用至 `UnitTest1` 類別。 執行單元測試時，在測試類別中標示 \[TestMethod\] 屬性的每個測試方法都將自動執行。
+   * 它會將 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute>) 屬性套用至 `UnitTest1` 類別。 執行單元測試時，在測試類別中標示 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 屬性的每個測試方法都將自動執行。
 
-   * 它會套用 [\[TestMethod\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testmethodattribute.aspx) 屬性，以將 `TestMethod1` 定義為在執行單元測試時自動執行的測試方法。
+   * 它會套用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 屬性，以將 `TestMethod1` 定義為在執行單元測試時自動執行的測試方法。
 
-1. 在方案總管 中，以滑鼠右鍵按一下 **StringLibraryTest** 專案的 [相依性] 節點，然後從內容功能表中選取 [新增參考]。
+1. 在 **方案總管** 中，以滑鼠右鍵按一下 **StringLibraryTest** 專案的 **[相依性]** 節點，然後從內容功能表中選取 **[新增參考]**。
 
    ![StringLibraryTest 相依性的內容功能表](./media/testing-library-with-visual-studio/addreference.png)
 
@@ -84,9 +84,9 @@ ms.locfileid: "34483469"
 
 ## <a name="adding-and-running-unit-test-methods"></a>新增和執行單元測試方法
 
-Visual Studio 執行單元測試時，它會執行單元測試類別 (即套用 [\[TestClass\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testclassattribute.aspx) 屬性的類別) 中標示 [\[TestMethod\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testmethodattribute.aspx) 屬性的每個方法。 測試方法會在發生第一次失敗時或方法中包含的所有測試均成功時結束。
+Visual Studio 執行單元測試時，會執行單元測試類別 (即套用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> 屬性的類別) 中標示 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 屬性的每個方法。 測試方法會在發生第一次失敗時或方法中包含的所有測試均成功時結束。
 
-最常見的測試會呼叫 [Assert](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.assert.aspx) 類別的成員。 許多判斷提示方法都至少包括兩個參數，一個是預期的測試結果，另一個是實際的測試結果。 它最常呼叫的一些方法如下表所示。
+最常見的測試會呼叫 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> 類別的成員。 許多判斷提示方法都至少包括兩個參數，一個是預期的測試結果，另一個是實際的測試結果。 它最常呼叫的一些方法如下表所示。
 
 Assert 方法 | 功能
 --- | ---
@@ -95,13 +95,13 @@ Assert 方法 | 功能
 `Assert.IsFalse` | 驗證條件為 `false`。 如果條件為 `true`，判斷提示就會失敗。
 `Assert.IsNotNull` | 驗證物件不是 `null`。 如果物件為 `null`，判斷提示就會失敗。
 
-您也可以將 [\[ExpectedException\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.expectedexceptionattribute.aspx) 屬性套用到測試方法。 指出測試方法預期擲回的例外狀況類型。 如果沒有擲回指定的例外狀況，測試便會失敗。
+您也可以將 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute> 屬性套用到測試方法。 指出測試方法預期擲回的例外狀況類型。 如果沒有擲回指定的例外狀況，測試便會失敗。
 
-在測試 `StringLibrary.StartsWithUpper` 方法時，您想提供幾個以大寫字元開頭的字串。 您預期此方法在這些情況下傳回 `true`，因此您可以呼叫 [Assert.IsTrue (布林值,字串)](https://msdn.microsoft.com/library/ms243754.aspx) 方法。 同樣地，您想提供幾個開頭不是大寫字元的字串。 您預期此方法在這些情況下傳回 `false`，因此您可以呼叫 [Assert.IsFalse (布林值,字串)](https://msdn.microsoft.com/library/ms243805.aspx) 方法。
+在測試 `StringLibrary.StartsWithUpper` 方法時，您想提供幾個以大寫字元開頭的字串。 您預期此方法在這些情況下傳回 `true`，因此您可以呼叫 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue%2A> 方法。 同樣地，您想提供幾個開頭不是大寫字元的字串。 您預期此方法在這些情況下傳回 `false`，因此您可以呼叫 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse%2A> 方法。
 
 因為您的程式庫方法會處理字串，您也想確定它會成功處理[空字串 (`String.Empty`)](xref:System.String.Empty)，這是不包含任何字元且其 <xref:System.String.Length> 為 0 的有效字串和尚未初始化的 `null` 字串。 如果在 <xref:System.String> 執行個體上呼叫 `StartsWithUpper` 做為擴充方法，它將無法傳遞 `null` 字串。 不過，您也可以將其作為靜態方法來直接呼叫，並傳遞單一 <xref:System.String> 引數。
 
-您會定義三個方法，每個方法會針對字串陣列中的每個項目重複呼叫其 [Assert](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.assert.aspx) 方法。 因為測試方法會在發生第一次失敗時立即失敗，您將呼叫一個方法多載，以便傳遞一個字串來指示在方法呼叫中使用的字串值。
+您會定義三個方法，每個方法會針對字串陣列中的每個項目重複呼叫其 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> 方法。 因為測試方法會在發生第一次失敗時立即失敗，您將呼叫一個方法多載，以便傳遞一個字串來指示在方法呼叫中使用的字串值。
 
 建立測試方法：
 

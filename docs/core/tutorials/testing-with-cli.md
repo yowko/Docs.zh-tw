@@ -4,12 +4,12 @@ description: 本教學課程說明如何從命令列組織和測試 .NET Core �
 author: cartermp
 ms.author: mairaw
 ms.date: 05/16/2017
-ms.openlocfilehash: a49eb1d398ab80a4ece703b7889083ea967df862
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 5fdbdc115ea5cd6da54f7c43bec2aa6f82e71310
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960979"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400279"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>使用 .NET Core 命令列組織和測試專案
 
@@ -162,7 +162,7 @@ public class PetTests
 選擇性練習︰如果您稍早已將產生 `Tweet!` 的 `Bird` 類型新增至擁有者，請將測試方法新增至 PetTests.cs 檔案，並新增 `BirdTalkToOwnerReturnsTweet` 以確認 `TalkToOwner` 方法正確作用於 `Bird` 類型。
 
 > [!NOTE]
-> 雖然您預期 `expected` 與 `actual` 值相等，但是具有 `Assert.NotEqual` 檢查的初始判斷提示指定它們「不相等」。 一開始一律會讓您的測試失敗一次，以檢查測試邏輯。 這是測試導向設計 (TDD) 方法中的重要步驟。 在您確認測試失敗之後，調整判斷提示以允許它們通過。
+> 雖然您預期 `expected` 與 `actual` 值相等，但是具有 `Assert.NotEqual` 檢查的初始判斷提示指定這些值「不相等」。 一開始一律會讓測試失敗，以檢查測試邏輯。 在您確認測試失敗之後，調整判斷提示以允許測試通過。
 
 下列顯示完整專案結構：
 

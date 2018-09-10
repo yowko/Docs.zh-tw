@@ -3,12 +3,12 @@ title: 開始使用語法轉換 (Roslyn API)
 description: 周遊、查詢和查核語法樹狀結構的簡介。
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 04053645b91e8f74e890340fb9bba66a4efdce0c
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.openlocfilehash: c372b1ba1e08a7d3b57ceea0d4449d03e55a39cf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35231609"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464022"
 ---
 # <a name="get-started-with-syntax-transformation"></a>開始使用語法轉換
 
@@ -30,7 +30,7 @@ ms.locfileid: "35231609"
 
 第一個語法轉換將會示範 Factory 方法。 您會使用 `using System.Collections.Generic;` 陳述式取代 `using System.Collections;` 陳述式。 此範例示範如何使用 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> Factory 方法建立 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode?displayProperty=nameWithType> 物件。 針對每種**節點**、**權杖**或 **Trivia**，會有一個建立該型別執行個體的 Factory 方法。 您會透過由下往上撰寫節點的方式來建立語法樹狀結構。 然後，使用您建立的新樹狀結構來取代現有節點，以轉換現有的程式。
 
-啟動 Visual Studio，然後建立新的 C# **獨立程式碼分析工具**專案。 在 Visual Studio 中，選擇 [檔案] > [新增]* > [專案] 以顯示 [新增專案] 對話方塊。 在 [Visual C#] > [擴充性] 下，選擇 [獨立程式碼分析工具]。 此快速入門有兩個範例專案，因此請將方案命名為 **SyntaxTransformationQuickStart**，並將專案命名為 **ConstructionCS**。 按一下 [確定]。
+啟動 Visual Studio，然後建立新的 C# **獨立程式碼分析工具**專案。 在 Visual Studio 中，選擇 [檔案] > [新增]* > [專案] 以顯示 [新增專案] 對話方塊。 在 [Visual C#] > [擴充性] 下，選擇 [獨立程式碼分析工具]。 此快速入門有兩個範例專案，因此請將方案命名為 **SyntaxTransformationQuickStart**，並將專案命名為 **ConstructionCS**。 按一下 [確定 **Deploying Office Solutions**]。
 
 此專案使用 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> 類別方法來建構代表 `System.Collections.Generic` 命名空間的 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType>。
 
@@ -51,11 +51,11 @@ ms.locfileid: "35231609"
 
 上述程式碼會建立 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.IdentifierNameSyntax> 物件並將它指派給變數 `name`。 許多 Roslyn API 都會傳回基底類別，讓您更容易搭配相關型別使用。 變數 `name` 是一個 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax>，此變數可以在您建置 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.QualifiedNameSyntax> 時重複使用。 建置範例時不要使用型別推斷。 您將會在此專案中將該步驟自動化。
 
-您已建立名稱。 現在，您可以透過建置 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.QualifiedNameSyntax>，以在樹狀結構中建置更多節點。 新的樹狀結構使用 `name` 做為名稱左邊的部分，並使用 `Collections` 命名空間的新 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.IdentifierNameSyntax> 做為 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.QualifiedNameSyntax> 右邊的部分。 將下列程式碼加入到 `program.cs`：
+您已建立名稱。 現在，您可以透過建置 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.QualifiedNameSyntax>，以在樹狀結構中建置更多節點。 新的樹狀結構使用 `name` 做為名稱左邊的部分，並使用 `Collections` 命名空間的新 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.IdentifierNameSyntax> 做為 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.QualifiedNameSyntax> 右邊的部分。 將下列程式碼新增至 `program.cs`：
 
 [!code-csharp[create the collections identifier](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#CreateQualifiedIdentifierName "Build the System.Collections identifier")]
 
-重新執行程式碼，並查看結果。 您是在建置代表程式碼的節點樹狀結構。 您將會繼續使用此模式為命名空間 `System.Collections.Generic` 建置 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.QualifiedNameSyntax>。 將下列程式碼加入到 `Program.cs`：
+重新執行程式碼，並查看結果。 您是在建置代表程式碼的節點樹狀結構。 您將會繼續使用此模式為命名空間 `System.Collections.Generic` 建置 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.QualifiedNameSyntax>。 將下列程式碼新增至 `Program.cs`：
 
 [!code-csharp[create the full identifier](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#CreateFullNamespace "Build the System.Collections.Generic identifier")]
 
@@ -94,7 +94,7 @@ ms.locfileid: "35231609"
 
 `With*` 與 <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> 方法提供簡便的方式讓您轉換語法樹狀結構的個別分支。 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter?displayProperty=nameWithType> 類別會在語法樹狀結構上執行多次轉換。 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter?displayProperty=nameWithType> 類別是 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor%601?displayProperty=nameWithType> 的子類別。 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> 會將轉換套用到 <xref:Microsoft.CodeAnalysis.SyntaxNode> 的特定型別。 您可以將轉換套用到多種型別的 <xref:Microsoft.CodeAnalysis.SyntaxNode> 物件 (當它們出現在語法樹狀結構中時)。 此快速入門中的第二個目標是建立命令列重構，以移除可以使用型別推斷之處的區域變數宣告中的明確型別。
 
-建立新的 C# **獨立程式碼分析工具**專案。 在 Visual Studio 中，以滑鼠右鍵按一下 `SyntaxTransformationQuickStart` 方案節點。 選擇 [加入][新增專案] >  以顯示 [新增專案] 對話方塊。 在 [Visual C#] > [擴充性] 下，選擇 [獨立程式碼分析工具]。 將您的專案命名為 `TransformationCS`，然後按一下 [確定]。
+建立新的 C# **獨立程式碼分析工具**專案。 在 Visual Studio 中，以滑鼠右鍵按一下 `SyntaxTransformationQuickStart` 方案節點。 選擇 [加入][新增專案] >  以顯示 [新增專案] 對話方塊。 在 **Visual C#** > **擴充性**下，選擇 [獨立程式碼分析工具]。 將您的專案命名為 `TransformationCS`，然後按一下 [確定]。
 
 第一個步驟是建立衍生自 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> 的類別以執行轉換。 將新類別檔案加入到專案中。 在 Visual Studio 中，選擇 [專案] > [新增類別]。在 [加入新項目] 對話方塊中，輸入 `TypeInferenceRewriter.cs` 做為檔案名稱。
 
@@ -154,7 +154,7 @@ Type variable;
 
 [!code-csharp[ReplaceNode](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#BindInitializer "Replace the initializer node")]
 
-條件句是必要項目，因為宣告可能會將初始設定式運算式轉換為基底類別或介面。 若這是預期情況，則位於指派左邊與右邊的型別會不相符。 在這些案例中移除明確型別會使得程式的語意變更。 `var` 是指定為識別碼而非關鍵字，因為 `var` 是內容關鍵字。 前置與結尾 Trivia (空白字元) 會從舊型別名稱轉換為 `var` 關鍵字，以維持垂直空白字元與縮排。 相較於 `With*`，使用 `ReplaceNode` 可以更容易轉換 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax>，因為型別名稱實際上是宣告陳述式的下下層。
+條件句是必要項目，因為宣告可能會將初始設定式運算式轉換為基底類別或介面。 若這是預期情況，則位於指派左邊與右邊的型別會不相符。 在這些案例中移除明確型別會使得程式的語意變更。 `var` 是指定為識別碼而非關鍵字，因為 `var` 是內容關鍵字。 前置與結尾 Trivia (空白字元) 會從舊類型名稱轉換為 `var` 關鍵字，以維持垂直空白字元與縮排。 相較於 `With*`，使用 `ReplaceNode` 可以更容易轉換 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax>，因為型別名稱實際上是宣告陳述式的下下層。
 
 您已完成 `TypeInferenceRewriter`。 現在返回您的 `Program.cs` 檔案以完成範例。 建立測試 <xref:Microsoft.CodeAnalysis.Compilation> 並從它取得 <xref:Microsoft.CodeAnalysis.SemanticModel>。 使用該 <xref:Microsoft.CodeAnalysis.SemanticModel> 來嘗試您的 `TypeInferenceRewriter`。 您最後才執行此步驟。 同時，請宣告代表您的測試編譯的預留位置變數：
 

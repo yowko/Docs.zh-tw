@@ -8,12 +8,12 @@ helpviewer_keywords:
 - main compiler option [C#]
 - /main compiler option [C#]
 ms.assetid: 975cf4d5-36ac-4530-826c-4aad0c7f2049
-ms.openlocfilehash: 2df02200578979f9a613f43dc92cc9e7b0cb430e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f3c9daf98bfe77ea9462c8126f7a8368016875c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33212416"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468861"
 ---
 # <a name="-main-c-compiler-options"></a>-main (C# 編譯器選項)
 如果有多個類別包含 **Main** 方法，這個選項會指定含有程式進入點的類別。  
@@ -27,6 +27,7 @@ ms.locfileid: "33212416"
 ## <a name="arguments"></a>引數  
  `class`  
  含有 **Main** 方法的類型。  
+ 提供的類別名稱必須完整。名稱必須包括內含類別的完整命名空間，後面接著類別名稱。 例如，當 `Main` 方法位於 `MyApplication.Core` 命名空間中的 `Program` 類別時，編譯器選項必須是 `-main:MyApplication.Core.Program`。
   
 ## <a name="remarks"></a>備註  
  如果編譯的 [Main](../../../csharp/programming-guide/main-and-command-args/index.md) 方法中包含一個以上的型別，您可以指定哪個型別含有要作為程式進入點的 **Main** 方法。  
@@ -50,6 +51,7 @@ ms.locfileid: "33212416"
 csc t2.cs t3.cs -main:Test2  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
- [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
+## <a name="see-also"></a>請參閱
+
+- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
+- [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

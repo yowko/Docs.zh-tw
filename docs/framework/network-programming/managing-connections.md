@@ -20,19 +20,19 @@ ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 8702f2329b262fc5c5965ae49365d46ba34091d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 29077a1c0f2b803270adb730e0d810143095e709
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391169"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484976"
 ---
 # <a name="managing-connections"></a>管理連接
 使用 HTTP 連線至資料資源的應用程式可以使用 .NET Framework 的 <xref:System.Net.ServicePoint> 和 <xref:System.Net.ServicePointManager> 類別管理網際網路連線，以及協助它們達到最佳規模和效能。  
   
  **ServicePoint** 類別所提供的應用程式具有應用程式可連線以存取網際網路資源的端點。 每個 **ServicePoint** 都會包含資訊來協助最佳化與網際網路伺服器的連線，方法是在連線之間共用最佳化資訊來改善效能。  
   
- 每個 **ServicePoint** 都是透過統一資源識別項 (URI) 進行識別，並且根據 URI 的配置識別碼和主機片段來進行分類。 例如，相同的 **ServicePoint** 執行個體會提供 URI http://www.contoso.com/index.htm 和 http://www.contoso.com/news.htm?date=today 的要求，因為它們具有相同的結構描述識別碼 (http) 和主機片段 (www.contoso.com)。 如果應用程式已持續連線至伺服器 www.contoso.com，則會使用該連線來擷取這兩個要求，避免需要建立兩個連線。  
+ 每個 **ServicePoint** 都是透過統一資源識別項 (URI) 進行識別，並且根據 URI 的配置識別碼和主機片段來進行分類。 例如，相同的 **ServicePoint** 執行個體會提供 URI `http://www.contoso.com/index.htm` 和 `http://www.contoso.com/news.htm?date=today` 的要求，因為它們具有相同的配置識別碼 (http) 和主機片段 (`www.contoso.com`)。 如果應用程式已持續連線至伺服器 `www.contoso.com`，則會使用該連線來擷取這兩個要求，避免需要建立兩個連線。  
   
  **ServicePointManager** 是靜態類別，可管理 **ServicePoint** 執行個體的建立和解構。 應用程式要求不在現有 **ServicePoint** 執行個體集合中的網際網路資源時，**ServicePointManager** 會建立 **ServicePoint**。 **ServicePoint** 執行個體在超過其最大閒置時間或是現有 **ServicePoint** 執行個體數目超過應用程式的最大 **ServicePoint** 執行個體數目時即會予以終結。 預設最大閒置時間和最大 **ServicePoint** 執行個體數目的控制方式是在 **ServicePointManager** 上設定 <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A> 和 <xref:System.Net.ServicePointManager.MaxServicePoints%2A> 屬性。  
   
@@ -53,7 +53,7 @@ ServicePointManager.DefaultConnectionLimit = 4;
 ServicePointManager.DefaultConnectionLimit = 4  
 ```  
   
- 變更 **ServicePointManager.DefaultConnectionLimit** 屬性並不會影響先前初始化的 **ServicePoint** 執行個體。 下列程式碼示範如何將伺服器 http://www.contoso.com 之現有 **ServicePoint** 的連線限制變更為 `newLimit` 中所儲存的值。  
+ 變更 **ServicePointManager.DefaultConnectionLimit** 屬性並不會影響先前初始化的 **ServicePoint** 執行個體。 下列程式碼示範如何將伺服器 `http://www.contoso.com` 之現有 **ServicePoint** 的連線限制變更為 `newLimit` 中所儲存的值。  
   
 ```csharp  
 Uri uri = new Uri("http://www.contoso.com/");  

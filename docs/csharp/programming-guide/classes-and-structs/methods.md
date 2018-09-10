@@ -5,12 +5,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: d3fc4107c10d098d40e4021bef9f6acd06311fab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3c6315daf08ce9931263aa5fb27c80a0bf41ef79
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336394"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43473982"
 ---
 # <a name="methods-c-programming-guide"></a>方法 (C# 程式設計手冊)
 方法是包含一系列陳述式的程式碼區塊。 程式會造成呼叫方法並指定任何所需的方法引數來執行陳述式。 在 C# 中，每個執行的指示是在方法的內容中執行。 Main 方法是每個 C# 應用程式的進入點，而且它是由 Common Language Runtime (CLR) 啟動程式時呼叫。  
@@ -24,7 +24,7 @@ ms.locfileid: "33336394"
 > [!NOTE]
 >  方法的傳回類型不是方法多載用途的方法簽章的一部分。 不過，在判斷委派與所指向的方法之間的相容性時，它是方法簽章的一部分。  
   
- 方法參數會放在括號中，並以逗號分隔。 空括號表示方法不需要任何參數。 這個類別包含三個方法：  
+ 方法參數會放在括號中，並以逗號分隔。 空括號表示方法不需要任何參數。 這個類別包含四個方法：  
   
  [!code-csharp[csProgGuideObjects#40](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_1.cs)]  
   
@@ -88,23 +88,23 @@ ref int distance = plant
 如果呼叫函式已將陣列傳入 `M`，則不需要從修改陣列內容的 `M` 方法傳回多維度陣列。  您可能會從 `M` 針對值的良好樣式或功能流程傳回產生的陣列，但這不需要，因為 C# 會以傳值方式傳遞所有參考型別，而且陣列參考的值是陣列的指標。 在方法 `M` 中，任何陣列內容變更都可以透過任何具有陣列參考的程式碼觀察到，如下列範例所示。  
   
 ```csharp  
-static void Main(string[] args)  
-        {  
-            int[,] matrix = new int[2, 2];  
-            FillMatrix(matrix);  
-            // matrix is now full of -1  
-        }  
-  
-        public static void FillMatrix(int[,] matrix)  
-        {  
-            for (int i = 0; i < matrix.GetLength(0); i++)  
-            {  
-                for (int j = 0; j < matrix.GetLength(1); j++)  
-                {  
-                    matrix[i, j] = -1;  
-                }  
-            }  
-        }  
+static void Main(string[] args)
+{
+    int[,] matrix = new int[2, 2];
+    FillMatrix(matrix);
+    // matrix is now full of -1
+}
+
+public static void FillMatrix(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            matrix[i, j] = -1;
+        }
+    }
+}
 ```  
   
  如需詳細資訊，請參閱 [return](../../../csharp/language-reference/keywords/return.md)。  
@@ -150,7 +150,7 @@ public Customer this[long id] => store.LookupCustomer(id);
   
  迭代器的傳回類型可以是 <xref:System.Collections.IEnumerable>、 <xref:System.Collections.Generic.IEnumerable%601>、 <xref:System.Collections.IEnumerator>或 <xref:System.Collections.Generic.IEnumerator%601>。  
   
- 如需詳細資訊，請參閱 [Iterator](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)。  
+ 如需詳細資訊，請參閱[迭代器](https://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)。  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

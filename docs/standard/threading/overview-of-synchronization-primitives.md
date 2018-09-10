@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e35c2337ff7e416cb5f2c869f8ede160e05d369f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5098eea86ee910baad57115419e147df02e41ed9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592011"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485530"
 ---
 # <a name="overview-of-synchronization-primitives"></a>同步處理原始物件概觀
 <a name="top"></a>.NET Framework 提供同步處理原始物件的範圍，以便控制執行緒的互動，及避免競爭情形。 這些可以大致分為三個類別：鎖定、信號及連鎖作業。  
@@ -40,7 +40,7 @@ ms.locfileid: "33592011"
  鎖定能提供資源的控制，一次給一個執行緒，或給指定數目的執行緒。 正在使用鎖定時要求獨佔鎖定的執行緒會封鎖，直到鎖定可用為止。  
   
 ### <a name="exclusive-locks"></a>獨佔鎖定  
- 鎖定的最簡單形式是 C# 中的 `lock` 陳述式和 Visual Basic 中的 `SyncLock` 陳述式，它能控制程式碼區塊的存取權。 這類區塊經常稱為重要區段。 `lock` 陳述式是透過使用 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> 方法實作，且它會使用 `try…catch…finally` 區塊以確保釋放鎖定。  
+ 鎖定的最簡單形式是 C# 中的 `lock` 陳述式和 Visual Basic 中的 `SyncLock` 陳述式，它能控制程式碼區塊的存取權。 這類區塊經常稱為重要區段。 `lock` 陳述式是透過使用 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> 方法實作，且它會使用 `try…finally` 區塊以確保釋放鎖定。  
   
  一般而言，使用 `lock` 或 `SyncLock` 陳述式保護小型區塊的程式碼，永遠不會跨越超出單一方法，是使用 <xref:System.Threading.Monitor> 類別最佳的方式。 雖然功能強大，但 <xref:System.Threading.Monitor> 類別容易發生遺棄的鎖定和死結。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "33592011"
   
  <xref:System.Threading.Monitor> 類別無法具現化。 其方法是靜態的 (在 Visual Basic 中為 `Shared`)，並且會對可具現化的鎖定物件進行操作。  
   
- 如需概念的概觀，請參閱[監視器](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)。  
+ 如需概念的概觀，請參閱[監視器](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)。  
   
 #### <a name="mutex-class"></a>Mutex 類別  
  執行緒藉由呼叫其 <xref:System.Threading.WaitHandle.WaitOne%2A> 方法的多載來要求 <xref:System.Threading.Mutex>。 會提供具有逾時的多載，好讓執行緒放棄等候。 不同於 <xref:System.Threading.Monitor> 類別，mutex 可以是本機或全域。 全域 mutex，也稱為具名 mutex，可在作業系統各處看到，並可以用來同步處理多個應用程式定義域或處理序中的執行緒。 本機 mutex 衍生自 <xref:System.MarshalByRefObject>，而且可以跨應用程式定義域界限使用。  
@@ -109,7 +109,7 @@ ms.locfileid: "33592011"
   
  執行緒會封鎖在等候控制代碼，方法是呼叫執行個體方法 <xref:System.Threading.WaitHandle.WaitOne%2A> 或其中一個靜態方法 <xref:System.Threading.WaitHandle.WaitAll%2A>、<xref:System.Threading.WaitHandle.WaitAny%2A> 或 <xref:System.Threading.WaitHandle.SignalAndWait%2A>。 釋放的方式取決於所呼叫的方法，以及等候控制代碼的類型。  
   
- 如需概念的概觀，請參閱[等候控制代碼](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)。  
+ 如需概念的概觀，請參閱[等候控制代碼](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)。  
   
 #### <a name="event-wait-handles"></a>事件等候控制代碼  
  事件等候控制代碼包括 <xref:System.Threading.EventWaitHandle> 類別和其衍生的類別，<xref:System.Threading.AutoResetEvent> 和 <xref:System.Threading.ManualResetEvent>。 事件等候控制代碼藉由呼叫其 <xref:System.Threading.EventWaitHandle.Set%2A> 方法或使用 <xref:System.Threading.WaitHandle.SignalAndWait%2A> 方法而收到信號時，執行緒會從事件等候控制代碼釋放。  
@@ -167,11 +167,11 @@ ms.locfileid: "33592011"
   
 ## <a name="see-also"></a>請參閱  
  [同步處理多執行緒處理的資料](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
- [監視](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
+ [監視](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
  [Mutex](../../../docs/standard/threading/mutexes.md)  
  [Semaphore 和 SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)  
  [EventWaitHandle、AutoResetEvent、CountdownEvent、ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
- [等候控制代碼](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
+ [等候控制代碼](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
  [Interlocked 作業](../../../docs/standard/threading/interlocked-operations.md)  
  [Reader-Writer 鎖定](../../../docs/standard/threading/reader-writer-locks.md)  
  [barrier](../../../docs/standard/threading/barrier.md)  
