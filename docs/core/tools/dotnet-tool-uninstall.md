@@ -5,11 +5,11 @@ author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
 ms.openlocfilehash: 93a43e19df4c7f220ac1e2d2db397cba4d791e83
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43389834"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43738165"
 ---
 # <a name="dotnet-tool-uninstall"></a>dotnet tool uninstall
 

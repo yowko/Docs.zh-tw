@@ -5,11 +5,11 @@ author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
 ms.openlocfilehash: aad5a3e815936749d90f40975a8b13d34e89386c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43418717"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512191"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 

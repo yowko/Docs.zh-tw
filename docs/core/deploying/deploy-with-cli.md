@@ -4,12 +4,12 @@ description: 了解使用命令列介面 (CLI) 工具的 .NET Core 應用程式�
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.openlocfilehash: 7b009068422686442ebff83b9400c365f34a3154
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: dbef9d91aa4e7af8e6e0ed2d8f361238385d4976
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244747"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855018"
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>使用命令列介面 (CLI) 工具部署 .NET Core 應用程式
 
@@ -26,7 +26,7 @@ ms.locfileid: "39244747"
 
 ## <a name="framework-dependent-deployment"></a>與 Framework 相依的部署
 
-部署無任何協力廠商相依性的 Framework 相依部署，只涉及建置、測試和發行應用程式。 以 C# 撰寫的簡單範例會說明此程序。 
+部署無任何協力廠商相依性的 Framework 相依部署，只涉及建置、測試和發行應用程式。 以 C# 撰寫的簡單範例會說明此程序。
 
 1. 建立專案目錄。
 
@@ -43,7 +43,7 @@ ms.locfileid: "39244747"
    [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
 1. 更新專案的相依性和工具。
- 
+
    執行 [dotnet restore](../tools/dotnet-restore.md) ([請參閱注意事項](#dotnet-restore-note)) 命令以還原專案中指定的相依性。
 
 1. 建立應用程式的偵錯組建。
@@ -105,7 +105,7 @@ ms.locfileid: "39244747"
 
 1. 定義您應用程式目標的平台。
 
-   在定義應用程式目標平台之 *csproj* 檔案的 `<PropertyGroup>` 區段中建立 `<RuntimeIdentifiers>` 標記，並指定每個目標平台的執行階段識別碼 (RID)。 請注意，您也必須加上分號來分隔 RID。 如需執行階段識別碼清單，請參閱 [Runtime IDentifier catalog](../rid-catalog.md)。 
+   在定義應用程式目標平台之 *csproj* 檔案的 `<PropertyGroup>` 區段中建立 `<RuntimeIdentifiers>` 標記，並指定每個目標平台的執行階段識別碼 (RID)。 請注意，您也必須加上分號來分隔 RID。 如需執行階段識別碼清單，請參閱 [Runtime IDentifier catalog](../rid-catalog.md)。
 
    例如，下列 `<PropertyGroup>` 區段指出應用程式在 64 位元 Windows 10 作業系統和 64 位元 OS X 版本 10.11 作業系統上執行。
 
@@ -188,8 +188,7 @@ ms.locfileid: "39244747"
 <a name="dotnet-restore-note"></a>
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-# <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>另請參閱
 
-[.NET Core 應用程式部署](index.md)   
-[.NET Core 執行階段識別項 (RID) 目錄](../rid-catalog.md)   
-
+* [.NET Core 應用程式部署](index.md)
+* [.NET Core 執行階段識別項 (RID) 目錄](../rid-catalog.md)

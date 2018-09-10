@@ -7,11 +7,11 @@ helpviewer_keywords:
 - files [C#]
 ms.assetid: 0f2511cf-2b02-4b41-b001-b1754677c38f
 ms.openlocfilehash: 3625f7a108675a3a9ab6be16ef94ae7e7c107612
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44181033"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261726"
 ---
 # <a name="file-system-and-the-registry-c-programming-guide"></a>檔案系統和登錄 (C# 程式設計手冊)
 下列主題示範如何使用 C# 和 .NET Framework 來針對檔案、資料夾及登錄執行各種基本作業。  

@@ -4,12 +4,12 @@ description: "'dotnet store' 命令會在執行階段套件存放區中儲存指
 author: bleroy
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 54654522207157f7d49bb86223b7986acccf51ee
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: a12738d0cc8edcbb65d5b6fab6e7c8b209b0f4b5
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696321"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44181059"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
@@ -83,4 +83,4 @@ ms.locfileid: "34696321"
 
 ## <a name="see-also"></a>另請參閱
 
-[執行階段套件存放區](../deploying/runtime-store.md)
+* [執行階段套件存放區](../deploying/runtime-store.md)

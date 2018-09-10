@@ -6,11 +6,11 @@ ms.author: mairaw
 ms.date: 03/08/2017
 ms.technology: dotnet-cli
 ms.openlocfilehash: 5ec7168ebc2ee4fc428d1ab520e986842f111ca7
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43256761"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44200313"
 ---
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>使用命令列在 Windows/Linux/macOS 上開始使用 .NET Core
 

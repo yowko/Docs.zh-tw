@@ -5,11 +5,11 @@ author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
 ms.openlocfilehash: ae314800f789cee363728def8347b5e6990acb0b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33211780"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44193601"
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>減少與 project.json 的封裝相依性
 

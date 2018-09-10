@@ -5,11 +5,11 @@ author: cartermp
 ms.author: mairaw
 ms.date: 05/16/2017
 ms.openlocfilehash: 5fdbdc115ea5cd6da54f7c43bec2aa6f82e71310
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43400279"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185411"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>使用 .NET Core 命令列組織和測試專案
 

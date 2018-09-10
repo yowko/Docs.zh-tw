@@ -4,11 +4,12 @@ description: 協助想要同時針對 .NET Framework 及 .NET Core 編譯解決�
 author: conniey
 ms.author: mairaw
 ms.date: 04/06/2017
-ms.openlocfilehash: e6cd9c6d66996d9fd24fe71d48091723143e5849
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f8ca0d08c9e3802c71d53c831592ee4388ab5512
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512262"
 ---
 # <a name="organizing-your-project-to-support-net-framework-and-net-core"></a>組織專案以支援 .NET Framework 及 .NET Core
 
@@ -50,6 +51,7 @@ ms.lasthandoff: 05/04/2018
 [**原始程式碼**][example-csproj-code]
 
 要注意的變更如下︰
+
 * 將 *packages.config* 和 *\*.csproj* 取代為新的 [.NET Core *\*.csproj*][example-csproj-netcore]。 NuGet 套件是使用 `<PackageReference> ItemGroup` 所指定。
 
 ## <a name="keep-existing-projects-and-create-a-net-core-project"></a>保留現有的專案並建立 .NET Core 專案
@@ -61,12 +63,13 @@ ms.lasthandoff: 05/04/2018
 [**原始程式碼**][example-csproj-different-code]
 
 要注意的變更如下︰
+
 * .NET Core 和現有的專案保存在不同的資料夾中。
-    * 將專案放在不同的資料夾中，可避免強迫使用 Visual Studio 2017。 您可以建立不同的解決方案只開啟舊的專案。
+  * 將專案放在不同的資料夾中，可避免強迫使用 Visual Studio 2017。 您可以建立不同的解決方案只開啟舊的專案。
 
 ## <a name="see-also"></a>請參閱
 
-如需移轉至 .NET Core 的詳細指引，請參閱 [.NET Core 移植文件][porting-doc]。
+* 如需移轉至 .NET Core 的詳細指引，請參閱 [.NET Core 移植文件][porting-doc]。
 
 [porting-doc]: index.md
 [example-initial-project]: media/project-structure/project.png "現有專案"

@@ -5,11 +5,11 @@ author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
 ms.openlocfilehash: e2bea974207d3098ed67b69ed16a72a03c44cd8b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467052"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261940"
 ---
 # <a name="dotnet-tool-list"></a>dotnet tool list
 

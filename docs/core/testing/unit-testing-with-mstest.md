@@ -4,12 +4,12 @@ description: 透過逐步使用 dotnet test 和 MSTest 建置範例方案的互�
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.openlocfilehash: 6cfc389a1ee526d8dc4383c5efd6fb3299eb08d8
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: efeb12eb43539b0a85168b1162e0f8b94ad67e90
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105598"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44213828"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>使用 MSTest 與 .NET Core 為 C# 進行單元測試
 
@@ -144,7 +144,7 @@ public bool IsPrime(int candidate)
 
 現在，您已經讓一個測試順利通過，您可以撰寫更多測試。 還有一些其他適用於質數 0、-1 的簡單案例。 您可以使用 `[TestMethod]` 屬性來加入新測試，但很快就會單調乏味。 因此，還有其他 MSTest 屬性，可讓您撰寫類似的測試套件。  `[DataTestMethod]` 屬性代表執行相同程式碼但有不同輸入引數的測試套件。 您可以使用 `[DataRow]` 屬性來指定這些輸入值。
 
-您不需要建立新測試，只要套用這兩個屬性以建立單一資料驅動測試即可。 資料驅動測試是一種方法，這種方法會測試數個低於二 (最小的質數) 的值：
+您不需要建立新測試，只要套用這兩個屬性以建立單一資料驅動測試即可。 資料驅動型測試是一種測試方法，其會測試數個低於二 (最小質數) 的值：
 
 [!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 

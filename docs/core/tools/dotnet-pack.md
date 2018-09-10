@@ -5,11 +5,11 @@ author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
 ms.openlocfilehash: 8c2569ec7598b21fe9b673176143d0e54b9eb065
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696815"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44204847"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 

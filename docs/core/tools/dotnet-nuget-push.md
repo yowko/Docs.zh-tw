@@ -3,13 +3,13 @@ title: dotnet nuget push 命令 - .NET Core CLI
 description: dotnet nuget push 命令會將套件推送至伺服器並發行。
 author: karann-msft
 ms.author: mairaw
-ms.date: 06/01/2018
-ms.openlocfilehash: 8a64f9cdc11d03bed82a132265c3b4e1de290807
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 09/04/2018
+ms.openlocfilehash: 23d27cef29008955850f9ed9f4a8baed9e7ad982
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728572"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44186457"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -198,7 +198,3 @@ dotnet nuget push [-h|--help]
 將目前目錄中的所有 *.nupkg* 檔案推送至預設推送來源：
 
 `dotnet nuget push *.nupkg`
-
-將目前目錄中的所有 *.nupkg* 檔案推送至預設推送來源，指定自訂組態檔 *./config/My.Config*：
-
-`dotnet nuget push *.nupkg --config-file ./config/My.Config`

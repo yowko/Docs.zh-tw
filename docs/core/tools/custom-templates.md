@@ -4,12 +4,12 @@ description: 了解任何 .NET 專案或檔案類型的自訂範本。
 author: guardrex
 ms.author: mairaw
 ms.date: 08/11/2017
-ms.openlocfilehash: fe888d0bfeeb51d77b73ec481b93fec9b40aa6ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5cb160683ad373f1192945163495bf3e7957567b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217317"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525963"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new 的自訂範本
 
@@ -21,7 +21,7 @@ ms.locfileid: "33217317"
 
 若要遵循逐步解說並建立範本，請參閱[建立 dotnet new 的自訂範本](~/docs/core/tutorials/create-custom-template.md)教學課程。
 
-## <a name="configuration"></a>組態
+## <a name="configuration"></a>Configuration
 
 範本是由下列元件組成：
 
@@ -153,8 +153,8 @@ dotnet new <TEMPLATE>
 
 ## <a name="see-also"></a>另請參閱
 
-[建立 dotnet new 的自訂範本 (教學課程)](../tutorials/create-custom-template.md)  
-[dotnet/templating GitHub repo Wiki](https://github.com/dotnet/templating/wiki) (維基百科：dotnet/templating GitHub 存放庫)  
-[dotnet/dotnet-template-samples GitHub repo](https://github.com/dotnet/dotnet-template-samples) (dotnet/dotnet-template-samples GitHub 存放庫)  
-[如何建立您自己的 dotnet new 範本](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)  
-[JSON 結構描述保存區的 *template.json* 結構描述](http://json.schemastore.org/template)  
+* [建立 dotnet new 的自訂範本 (教學課程)](../tutorials/create-custom-template.md)  
+* [dotnet/templating GitHub repo Wiki](https://github.com/dotnet/templating/wiki) (維基百科：dotnet/templating GitHub 存放庫)  
+* [dotnet/dotnet-template-samples GitHub repo](https://github.com/dotnet/dotnet-template-samples) (dotnet/dotnet-template-samples GitHub 存放庫)  
+* [如何建立您自己的 dotnet new 範本](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)  
+* [JSON 結構描述保存區的 *template.json* 結構描述](http://json.schemastore.org/template)  

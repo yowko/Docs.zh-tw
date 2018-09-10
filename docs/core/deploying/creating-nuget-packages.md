@@ -6,18 +6,18 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
 ms.openlocfilehash: 6be94c2e2cef443f69b2d6df7c2d490cb1fb629d
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207773"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44205058"
 ---
 # <a name="how-to-create-a-nuget-package-with-cross-platform-tools"></a>如何使用跨平台工具建立 NuGet 封裝
 
 > [!NOTE]
 > 下圖顯示使用 Unix 的命令列範例。  此處顯示的 `dotnet pack` 命令，運作運作方式與在 Windows 上如出一轍。
 
-在 .NET Core 1.0，程式庫預期以 NuGet 封裝方式散發。  實際上，所有的 .NET Standard 程式庫都是以這種方式散發及取用。  `dotnet pack` 命令最容易完成此作業。
+在 .NET Core 1.0，程式庫預期以 NuGet 封裝方式散發。  實際上，所有的 .NET 標準程式庫都是以這種方式散發及取用。  `dotnet pack` 命令最容易完成此作業。
 
 假設您剛寫完酷炫的新程式庫，希望透過 NuGet 散發。  您可以使用跨平台工具建立 NuGet 封裝，絲毫不差地完成此作業！  下例假設 **SuperAwesomeLibrary** 程式庫以 `netstandard1.0` 為目標。
 

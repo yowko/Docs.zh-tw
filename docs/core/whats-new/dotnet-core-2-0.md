@@ -5,11 +5,11 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
 ms.openlocfilehash: 02aac2dab2b892927c0c98fae30bb287a6e24ad6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43456883"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44191049"
 ---
 # <a name="whats-new-in-net-core-20"></a>.NET Core 2.0 的新功能
 
