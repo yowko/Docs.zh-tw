@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: a42f98a81ff9e9bdbbf6c61554667aa223c7c269
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb7f5c0239273c04f9f89b4e63335e67fdf5419a
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331668"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084113"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>如何：從文字檔讀取 (C# 程式設計手冊)
 這個範例會使用 <xref:System.IO.File?displayProperty=nameWithType> 類別中的靜態方法 <xref:System.IO.File.ReadAllText%2A> 和 <xref:System.IO.File.ReadAllLines%2A>，來讀取文字檔的內容。  
@@ -40,7 +40,8 @@ ms.locfileid: "33331668"
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  請勿依賴檔案的名稱來判斷檔案的內容。 例如，`myFile.cs` 檔案可能不是 C# 原始程式檔。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.IO?displayProperty=nameWithType>  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [檔案系統和登錄 (C# 程式設計指南)](../../../csharp/programming-guide/file-system/index.md)
+## <a name="see-also"></a>請參閱
+
+- <xref:System.IO?displayProperty=nameWithType>  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [檔案系統和登錄 (C# 程式設計指南)](../../../csharp/programming-guide/file-system/index.md)

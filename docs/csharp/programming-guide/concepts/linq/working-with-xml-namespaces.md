@@ -2,12 +2,12 @@
 title: 處理 XML 命名空間 (C#)
 ms.date: 07/20/2015
 ms.assetid: 05cf4dc7-7b25-40f0-abc9-1bc35de4b48a
-ms.openlocfilehash: e00886281fbccd0e10706575483dd174d7d53052
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 4863794408adbfb8b51c4f125ee340eb718a5abe
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416237"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44189867"
 ---
 # <a name="working-with-xml-namespaces-c"></a>處理 XML 命名空間 (C#)
 本節中的主題描述 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 如何支援命名空間。  
@@ -22,5 +22,6 @@ ms.locfileid: "43416237"
 |[C# 中的預設命名空間範圍](../../../../csharp/programming-guide/concepts/linq/scope-of-default-namespaces.md)|示範在預設的命名空間中，撰寫 XML 之查詢的適當方式。|  
 |[如何：針對命名空間中的 XML 撰寫查詢 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-queries-on-xml-in-namespaces.md)|示範如何在 C# LINQ to XML 查詢中指定 XML 命名空間。|  
   
-## <a name="see-also"></a>請參閱  
- [程式設計手冊 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>請參閱
+
+- [程式設計手冊 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

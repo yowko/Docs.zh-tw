@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-ms.openlocfilehash: 86394f5fed55f57df8928648548fcfca117b00d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b047efb9215675b8c3dfb75438a6dbbc4e6f92d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330703"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084169"
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a>如何：覆寫 ToString 方法 (C# 程式設計手冊)
 C# 中的每個類別或結構都會隱含地繼承 <xref:System.Object> 類別。 因此，C# 中的每個物件都會取得 <xref:System.Object.ToString%2A> 方法，以傳回該物件的字串表示。 例如，所有 `int` 類型的變數都有 `ToString` 方法，並讓它們以字串傳回其內容︰  
@@ -42,13 +42,14 @@ C# 中的每個類別或結構都會隱含地繼承 <xref:System.Object> 類別�
   
      [!code-csharp[csProgGuideInheritance#38](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_3.cs)]  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.IFormattable>  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [字串](../../../csharp/programming-guide/strings/index.md)  
- [string](../../../csharp/language-reference/keywords/string.md)  
- [new](../../../csharp/language-reference/keywords/new.md)  
- [override](../../../csharp/language-reference/keywords/override.md)  
- [virtual](../../../csharp/language-reference/keywords/virtual.md)  
- [格式化類型](../../../standard/base-types/formatting-types.md)
+## <a name="see-also"></a>請參閱
+
+- <xref:System.IFormattable>  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [字串](../../../csharp/programming-guide/strings/index.md)  
+- [string](../../../csharp/language-reference/keywords/string.md)  
+- [new](../../../csharp/language-reference/keywords/new.md)  
+- [override](../../../csharp/language-reference/keywords/override.md)  
+- [virtual](../../../csharp/language-reference/keywords/virtual.md)  
+- [格式化類型](../../../standard/base-types/formatting-types.md)

@@ -2,12 +2,12 @@
 title: 延後執行範例 (C#)
 ms.date: 07/20/2015
 ms.assetid: 50f4fbac-81fe-4f26-aedf-506e21419b19
-ms.openlocfilehash: 8613f2335e5b3cb2a012f5309307e081b9400709
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ad1ed2998cfbd612f7f2b60a0d15c7ffcef0daf
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335922"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518471"
 ---
 # <a name="deferred-execution-example-c"></a>延後執行範例 (C#)
 本主題顯示延後執行與延遲評估如何影響您 LINQ to XML 查詢的執行。  
@@ -63,5 +63,6 @@ Main: str GHI
   
 -   [鏈結查詢範例 (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-queries-example.md)  
   
-## <a name="see-also"></a>請參閱  
- [教學課程：將查詢鏈結在一起 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+## <a name="see-also"></a>請參閱
+
+- [教學課程：將查詢鏈結在一起 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - /nowin32manifest compiler option [C#]
 ms.assetid: 6f06365b-b87b-46a2-b187-b3bfeaf4862d
 ms.openlocfilehash: 3ab52d541c169850f6ae7ba7e7cfded290f890e7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43420615"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43530505"
 ---
 # <a name="-nowin32manifest-c-compiler-options"></a>-nowin32manifest (C# 編譯器選項)
 使用 **-nowin32manifest** 選項指示編譯器不要將任何應用程式資訊清單內嵌在可執行檔中。  

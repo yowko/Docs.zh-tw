@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 8bbf93d14a16b06441ba48b9d4e19cfd249e9146
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25192d57955d15c5707816ee6c4a515893891507
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328441"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523389"
 ---
 # <a name="polymorphism-c-programming-guide"></a>多型 (C# 程式設計手冊)
 多型通常是指物件導向程式設計的第三個重要部分，其重要性僅次於封裝和繼承。 多型在希臘文中表示「多種形狀」，可分成下列兩方面：  
@@ -94,13 +94,14 @@ ms.locfileid: "33328441"
   
 -   [如何：覆寫 ToString 方法](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
   
-## <a name="see-also"></a>請參閱  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
- [抽象和密封類別以及類別成員](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  
- [事件](../../../csharp/programming-guide/events/index.md)  
- [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [索引子](../../../csharp/programming-guide/indexers/index.md)  
- [型別](../../../csharp/programming-guide/types/index.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
+- [抽象和密封類別以及類別成員](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
+- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [事件](../../../csharp/programming-guide/events/index.md)  
+- [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [索引子](../../../csharp/programming-guide/indexers/index.md)  
+- [型別](../../../csharp/programming-guide/types/index.md)

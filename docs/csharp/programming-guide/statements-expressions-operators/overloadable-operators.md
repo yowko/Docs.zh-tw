@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, operator overloading
 - operator overloading [C#]
 ms.assetid: 390d9d01-79fc-40ab-9ed3-0bf448da1b6a
-ms.openlocfilehash: 96a23e71b6b7dbfd9c7ccf99bc58366e7f99f59b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: f819e94fd532c10478ac39da9485126aa4380dd5
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43451671"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44098481"
 ---
 # <a name="overloadable-operators-c-programming-guide"></a>可多載的運算子 (C# 程式設計手冊)
 
@@ -32,7 +32,7 @@ C# 允許使用者定義的類型使用 [operator](../../language-reference/keyw
 
 如需如何多載運算子的資訊，請參閱 [operator](../../language-reference/keywords/operator.md) 關鍵字文章。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [陳述式、運算式和運算子](index.md)

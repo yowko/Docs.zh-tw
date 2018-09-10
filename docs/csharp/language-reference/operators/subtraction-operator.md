@@ -8,11 +8,11 @@ helpviewer_keywords:
 - subtraction operator (-) [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
 ms.openlocfilehash: bd852f96ece9c8d5d5e2ec42e802596e795ce04a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43393424"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44210100"
 ---
 # <a name="--operator-c-reference"></a>- 運算子 (C# 參考)
 `-` 運算子可以作為一元或二元運算子。  

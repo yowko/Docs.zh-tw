@@ -5,14 +5,15 @@ helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: 2f5dcb032c5dea764cdd212bbcd02e1640089d96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2f26fd74a596ada21eef578e58c9cd8e0305d6c
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33313949"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44128546"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>一維陣列 (C# 程式設計手冊)
+
 您可以宣告五個整數的一維陣列，如下列範例所示：  
   
  [!code-csharp[csProgGuideArrays#4](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_1.cs)]  
@@ -23,7 +24,8 @@ ms.locfileid: "33313949"
   
  [!code-csharp[csProgGuideArrays#5](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_2.cs)]  
   
-## <a name="array-initialization"></a>陣列初始化  
+## <a name="array-initialization"></a>陣列初始化
+
  可以在宣告時初始化陣列，在此情況下，不需要陣序規範，因為它已由初始化清單中的項目數所提供。 例如:   
   
  [!code-csharp[csProgGuideArrays#6](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_3.cs)]  
@@ -42,7 +44,8 @@ ms.locfileid: "33313949"
   
  C# 3.0 引進隱含型別陣列。 如需詳細資訊，請參閱[隱含型別陣列](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)。  
   
-## <a name="value-type-and-reference-type-arrays"></a>實值型別和參考型別陣列  
+## <a name="value-type-and-reference-type-arrays"></a>實值型別和參考型別陣列
+
  請考慮下列陣列宣告：  
   
  [!code-csharp[csProgGuideArrays#10](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_7.cs)]  
@@ -51,9 +54,10 @@ ms.locfileid: "33313949"
   
  如需實值型別和參考型別的詳細資訊，請參閱[類型](../../../csharp/language-reference/keywords/types.md)。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Array>  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [陣列](../../../csharp/programming-guide/arrays/index.md)  
- [多維陣列](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)  
- [不規則陣列](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+## <a name="see-also"></a>請參閱
+
+- <xref:System.Array>  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [陣列](../../../csharp/programming-guide/arrays/index.md)  
+- [多維陣列](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)  
+- [不規則陣列](../../../csharp/programming-guide/arrays/jagged-arrays.md)

@@ -4,18 +4,18 @@ description: 深入了解 .NET Core 提供之 C# 語言層級的非同步程式�
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: ae1c9b1569b5fb6784f50ec9d78a44380242fcd8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 971295b85e5f2763eef87bfe9109524db2630120
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484963"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865146"
 ---
 # <a name="asynchronous-programming"></a>非同步程式設計
 
 如果您有任何 I/O 繫結需求 (例如，從網路要求資料，或存取資料庫)，則會想要利用非同步程式設計。  您也可能會有 CPU 繫結程式碼，例如執行耗費資源的計算，這也是不錯的非同步程式碼撰寫案例。
 
-C# 具有語言層級非同步程式設計模型，可輕鬆撰寫非同步程式碼，而不需要竄改回呼或符合支援非同步的程式庫。 它會遵循稱為[工作式非同步模式 (TAP)](https://msdn.microsoft.com/library/hh873175.aspx) 的模式。
+C# 具有語言層級非同步程式設計模型，可輕鬆撰寫非同步程式碼，而不需要竄改回呼或符合支援非同步的程式庫。 它會遵循稱為[工作式非同步模式 (TAP)](../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) 的模式。
 
 ## <a name="basic-overview-of-the-asynchronous-model"></a>非同步模型的基本概觀
 

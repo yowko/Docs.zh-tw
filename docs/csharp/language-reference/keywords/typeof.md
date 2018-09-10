@@ -8,11 +8,11 @@ helpviewer_keywords:
 - typeof keyword [C#]
 ms.assetid: 0c08d880-515e-46bb-8cd2-48b8dd62c08d
 ms.openlocfilehash: 2493e78fd0782eebee17afd979e1c429339d0a3f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486801"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529204"
 ---
 # <a name="typeof-c-reference"></a>typeof (C# 參考)
 用來取得類型的 `System.Type` 物件。 `typeof` 運算式有下列形式：  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - using keyword [C#]
 ms.assetid: 124e1a63-2a4b-4132-b269-3b6d8d3ef72d
 ms.openlocfilehash: 2d96301e083b5c5340bea8b04943ca90c90e71ac
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43471896"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529777"
 ---
 # <a name="using-c-reference"></a>using (C# 參考)
 `using` 關鍵字有兩個主要用途：  

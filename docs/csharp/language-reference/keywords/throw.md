@@ -12,11 +12,11 @@ ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 831c4cce14e902697d84129e54cc54f07d26b9f3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43417354"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865032"
 ---
 # <a name="throw-c-reference"></a>throw (C# 參考)
 在程式執行期間發出出現例外狀況的訊號。  

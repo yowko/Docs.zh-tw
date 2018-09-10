@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: aaf57e666faf18010c7f267f96e6958c73e58bcf
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: a2efaae7cd861842f92ba3cdedc5ae77beec9f6f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935134"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44267124"
 ---
 # <a name="c-walkthroughs"></a>C# 逐步解說
 逐步解說提供常見情節的逐步指示，使其成為開始學習產品或特定功能區域的最佳去處。  
@@ -50,16 +50,16 @@ ms.locfileid: "42935134"
  [在 C# 中撰寫查詢 (LINQ)](../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
  示範用以撰寫 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢運算式的 C# 語言功能。  
   
- [處理資料 (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb386927.aspx)  
+ [處理資料 (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)  
  說明 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 情節，以加入、修改及刪除資料庫中的資料。  
   
- [簡單的物件模型與查詢 (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb386940.aspx)  
+ [簡單的物件模型與查詢 (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)  
  示範如何建立實體類別與簡單的查詢，來篩選實體類別。  
   
- [僅使用預存程序 (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb399407.aspx)  
+ [僅使用預存程序 (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)  
  示範如何使用 LINQ to SQL，透過僅執行預存程序來存取資料。  
   
- [跨關聯性查詢 (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb386951.aspx)  
+ [跨關聯性查詢 (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)  
  示範如何使用 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 關聯，來代表資料庫中的外部索引鍵關聯性。  
 
  [使用 C# 撰寫視覺化檢視](/visualstudio/debugger/walkthrough-writing-a-visualizer-in-csharp)  
@@ -69,6 +69,7 @@ ms.locfileid: "42935134"
  [部署範例和逐步解說](/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)  
  提供通用部署情節的逐步範例。  
   
-## <a name="see-also"></a>請參閱  
- [C# 程式設計指南](../csharp/programming-guide/index.md)  
- [Visual Studio 範例](/visualstudio/ide/visual-studio-samples)
+## <a name="see-also"></a>請參閱
+
+- [C# 程式設計指南](../csharp/programming-guide/index.md)  
+- [Visual Studio 範例](/visualstudio/ide/visual-studio-samples)

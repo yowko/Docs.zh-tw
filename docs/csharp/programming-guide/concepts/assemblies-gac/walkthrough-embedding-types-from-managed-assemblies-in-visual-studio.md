@@ -2,12 +2,12 @@
 title: 逐步解說：在 Visual Studio 中內嵌來自 Managed 組件的型別 (C#)
 ms.date: 07/20/2015
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-ms.openlocfilehash: 90bb523e3eb42cea2cd0a9d1e753e4d9b9873c0c
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 1900c62d1ebaf611f141f8f1bdf95f8d11f82140
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932091"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44201253"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>逐步解說：在 Visual Studio 中內嵌來自 Managed 組件的型別 (C#)
 若要內嵌來自強式名稱 Managed 組件的類型資訊，您可以鬆散地結合應用程式中的類型以確保版本獨立。 也就是說，您可以撰寫程式來使用 Managed 程式庫多個版本的類型，而不需重新編譯每個版本。  
@@ -232,8 +232,9 @@ ms.locfileid: "42932091"
   
 6.  在檔案總管中，開啟輸出路徑資料夾 (例如 C:\TypeEquivalenceSample)。 按兩下 TypeEquivalenceClient.exe 以執行程式。 程式即會反映新版本的 TypeEquivalenceRuntime 組件，而不需重新編譯。  
   
-## <a name="see-also"></a>請參閱  
- [/link (C# 編譯器選項)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)  
- [C# 程式設計指南](../../../../csharp/programming-guide/index.md)  
- [使用組件設計程式](../../../../framework/app-domains/programming-with-assemblies.md)  
- [組件和全域組件快取 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+## <a name="see-also"></a>請參閱
+
+- [/link (C# 編譯器選項)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)  
+- [C# 程式設計指南](../../../../csharp/programming-guide/index.md)  
+- [使用組件設計程式](../../../../framework/app-domains/programming-with-assemblies.md)  
+- [組件和全域組件快取 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)

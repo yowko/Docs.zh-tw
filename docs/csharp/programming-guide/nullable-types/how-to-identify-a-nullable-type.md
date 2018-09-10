@@ -5,12 +5,12 @@ ms.date: 08/06/2018
 helpviewer_keywords:
 - nullable types [C#], identifying
 ms.assetid: d4b67ee2-66e8-40c1-ae9d-545d32c71387
-ms.openlocfilehash: bb7ab2b8c13c2b8b4b6cd60e7959a391cd7e75c1
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: c65f80974154d81b5ddf239b617eeeda68434e09
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754952"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44178241"
 ---
 # <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>如何：識別可為 Null 的型別 (C# 程式設計手冊)
 
@@ -32,8 +32,8 @@ ms.locfileid: "42754952"
 
 [!code-csharp-interactive[whether an instance is of a nullable type](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#4)]
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[可為 Null 的型別](index.md)  
-[使用可為 Null 的型別](using-nullable-types.md)  
-<xref:System.Nullable.GetUnderlyingType%2A>  
+- [可為 Null 的型別](index.md)  
+- [使用可為 Null 的型別](using-nullable-types.md)  
+- <xref:System.Nullable.GetUnderlyingType%2A>  

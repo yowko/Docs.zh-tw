@@ -2,12 +2,12 @@
 title: 基本查詢 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: d333bb7d-20c1-448a-95b7-e5ba07915744
-ms.openlocfilehash: b96fc6f2af7754d2403c2ccdf862e976463838a3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 77ff053e3cf8589cbc44caf66a4e5b532bc54b26
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43392581"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518489"
 ---
 # <a name="basic-queries-linq-to-xml-c"></a>基本查詢 (LINQ to XML) (C#)
 本節提供 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 基本查詢的範例。  
@@ -30,5 +30,6 @@ ms.locfileid: "43392581"
 |[如何：撰寫可根據內容尋找項目的查詢 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-query-that-finds-elements-based-on-context.md)|顯示如何根據樹狀中的其他項目選取項目。|  
 |[如何：偵錯空的查詢結果集 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md)|針對預設命名空間中的 XML 偵錯查詢時，顯示適當的修正。|  
   
-## <a name="see-also"></a>請參閱  
- [查詢 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)
+## <a name="see-also"></a>請參閱
+
+- [查詢 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)

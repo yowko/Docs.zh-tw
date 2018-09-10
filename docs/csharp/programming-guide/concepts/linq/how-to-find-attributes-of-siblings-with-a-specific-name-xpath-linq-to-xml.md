@@ -2,12 +2,12 @@
 title: 如何：利用特定名稱尋找同層級的屬性 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: c3133d64-523f-422d-8838-73d36b945ca0
-ms.openlocfilehash: 0e87208e033c4960843a82c9abd2b4ebd4f74d3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 60b6529f310ccbb02160ff96e1db7870bcc71058
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33315863"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863117"
 ---
 # <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-c"></a>如何：利用特定名稱尋找同層級的屬性 (XPath-LINQ to XML) (C#)
 本主題顯示如何尋找內容節點之同層級的所有屬性。 在集合中，只會傳回具有特定名稱的屬性。  
@@ -55,5 +55,6 @@ id="bk101"
 id="bk102"  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [XPath 使用者適用的 LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>請參閱
+
+- [XPath 使用者適用的 LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

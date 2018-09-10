@@ -8,11 +8,11 @@ helpviewer_keywords:
 - descending keyword [C#]
 ms.assetid: 8d2cd1e5-9c1c-4dfc-b84c-60e2d3240927
 ms.openlocfilehash: a052763cdffeeea1eb9de09b1bc71a592fa70b50
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468004"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44198201"
 ---
 # <a name="descending-c-reference"></a>descending (C# 參考)
 

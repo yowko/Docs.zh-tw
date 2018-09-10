@@ -8,11 +8,11 @@ helpviewer_keywords:
 - -refonly compiler option [C#]
 - refonly compiler option [C#]
 ms.openlocfilehash: c15308d27b504f22b266e28f6db0caf837ae36c5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421207"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518386"
 ---
 # <a name="-refonly-c-compiler-options"></a>-refonly (C# 編譯器選項)
 

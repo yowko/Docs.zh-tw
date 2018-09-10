@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ranges of integral types [C#]
 ms.assetid: 62e86126-46ff-40b0-9028-e61d7558268c
 ms.openlocfilehash: 4ac16d185a52cdb03fcb22f57ebf7506f2fb2745
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467188"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44078844"
 ---
 # <a name="integral-types-table-c-reference"></a>整數型別表 (C# 參考)
 

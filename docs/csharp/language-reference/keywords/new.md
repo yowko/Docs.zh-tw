@@ -8,11 +8,11 @@ helpviewer_keywords:
 - new keyword [C#]
 ms.assetid: e4136516-f058-45a8-84e5-da00a5cf9b6a
 ms.openlocfilehash: 694fcbca370d3ba628a532008af37a96e0568a75
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43456327"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523336"
 ---
 # <a name="new-c-reference"></a>new (C# 參考)
 在 C# 中，`new` 關鍵字可用來當作運算子、修飾詞或條件約束。  

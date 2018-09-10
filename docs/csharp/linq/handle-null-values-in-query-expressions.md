@@ -3,12 +3,12 @@ title: 處理查詢運算式中的 Null 值 (C# 中的 LINQ)
 description: 了解如何處理 C# 之 LINQ 查詢運算式中的 Null 值。
 ms.date: 12/1/2016
 ms.assetid: ac63ae8b-724d-4251-9334-528f4e884ae7
-ms.openlocfilehash: 34cda0be5fa38422415b6c3927f40a0df95fc6a6
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 2c477ef371dbb424c72fb9d34948760b7e3f5609
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404099"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259482"
 ---
 # <a name="handle-null-values-in-query-expressions"></a>處理查詢運算式中的 Null 值
 
@@ -30,6 +30,6 @@ ms.locfileid: "37404099"
 
 ## <a name="see-also"></a>另請參閱
 
-<xref:System.Nullable%601>  
-[Language-Integrated Query (LINQ)](index.md)  
-[可為 Null 的型別](../programming-guide/nullable-types/index.md)  
+- <xref:System.Nullable%601>  
+- [Language-Integrated Query (LINQ)](index.md)  
+- [可為 Null 的型別](../programming-guide/nullable-types/index.md)  

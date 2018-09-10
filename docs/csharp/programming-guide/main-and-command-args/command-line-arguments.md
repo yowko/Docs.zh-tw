@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: ccfac6bd2688a2e02a1b3fcc14748d357acb1aa2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a55e40a4a4880c39c74186c55b0886e06dc33bcb
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43464333"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44083945"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>命令列引數 (C# 程式設計手冊)
 您可以使用下列其中一種方式，透過定義方法以將引數傳送給 `Main` 方法：  
@@ -71,13 +71,14 @@ long num = Convert.ToInt64(s);
 > [!NOTE]
 >  在 Visual Studio 中執行應用程式時，您可以在[專案設計工具、偵錯頁面](/visualstudio/ide/reference/debug-page-project-designer)中指定命令列引數。  
   
- 如需如何使用命令列引數的其他範例，請參閱[如何：使用命令列建立和使用組件](https://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)。  
+ 如需如何使用命令列引數的其他範例，請參閱[如何：使用命令列建立和使用組件](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Environment?displayProperty=nameWithType>  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [Main() 和命令列引數](../../../csharp/programming-guide/main-and-command-args/index.md)  
- [如何：顯示命令列引數](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
- [如何：使用 foreach 存取命令列引數](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
- [Main() 傳回值](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)  
- [類別](../../../csharp/programming-guide/classes-and-structs/classes.md)
+## <a name="see-also"></a>請參閱
+
+- <xref:System.Environment?displayProperty=nameWithType>  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [Main() 和命令列引數](../../../csharp/programming-guide/main-and-command-args/index.md)  
+- [如何：顯示命令列引數](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
+- [如何：使用 foreach 存取命令列引數](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
+- [Main() 傳回值](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)  
+- [類別](../../../csharp/programming-guide/classes-and-structs/classes.md)

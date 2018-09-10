@@ -2,12 +2,12 @@
 title: 如何：從不同的檔案聯結內容 (LINQ) (C#)
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: 444276f6ad68e988b2dbc2cd7401248a6f5da072
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 0984b8fc42a8f242f6adc33e1f3c38d4f6ae94b8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071831"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43741613"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>如何：從不同的檔案聯結內容 (LINQ) (C#)
 
@@ -132,7 +132,7 @@ Tucker, 94, 92, 91, 91
 - NET Framework 4.0 或更高版本。
 - NET Core 1.0 或更高版本。
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
- [LINQ 和字串 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
- [LINQ 和檔案目錄 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ 和字串 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+- [LINQ 和檔案目錄 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

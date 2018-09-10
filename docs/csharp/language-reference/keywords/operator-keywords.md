@@ -6,11 +6,11 @@ helpviewer_keywords:
 - operators [C#], keywords
 ms.assetid: f745c81f-f8d8-4673-86a1-0f3a85cc63c3
 ms.openlocfilehash: b6a7fbc08647ace73676403937f4b0f79e7ff585
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43392694"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262083"
 ---
 # <a name="operator-keywords-c-reference"></a>運算子關鍵字 (C# 參考)
 用來執行其他動作，例如建立物件、檢查物件的執行階段類型，取得類型的大小和其他動作。 本節將介紹下列關鍵字：  

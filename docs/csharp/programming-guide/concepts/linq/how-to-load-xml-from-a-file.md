@@ -2,12 +2,12 @@
 title: 如何：從檔案載入 XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 3ed38487-8028-4209-9872-c8dce0ed4dfe
-ms.openlocfilehash: b276359c9bfd0a45775cf5ecf1e821f776825309
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b8322863ad33f8116e26d98467490b9114339553
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319984"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43746651"
 ---
 # <a name="how-to-load-xml-from-a-file-c"></a>如何：從檔案載入 XML (C#)
 這個主題顯示如何使用 <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> 方法，從 URI 載入 XML。  
@@ -48,5 +48,6 @@ Console.WriteLine(booksFromFile);
 </Catalog>  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [剖析 XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a>請參閱
+
+- [剖析 XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

@@ -2,12 +2,12 @@
 title: 逐步解說：在 Visual Studio 中內嵌來自 Microsoft Office 組件的型別資訊 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3320e866-01f1-4b7f-8932-049a7b2d2a9b
-ms.openlocfilehash: 8e7eb5c797ca87f87950d530112ec64f1327ae0c
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 381173eedc209930e011dfa7f1711167f16d5ef6
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198493"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44187964"
 ---
 # <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-c"></a>逐步解說：在 Visual Studio 中內嵌來自 Microsoft Office 組件的型別資訊 (C#)
 如果您在參考 COM 物件的應用程式中內嵌類型資訊，就不必使用主要 Interop 組件 (PIA)。 此外，內嵌的類型資訊可讓您確保應用程式的版本獨立。 也就是說，您可以撰寫程式來使用 COM 程式庫多個版本的類型，而不需每個版本使用特定的 PIA。 當應用程式使用來自 Microsoft Office 程式庫的物件時，這是十分常見的案例。 當您內嵌類型資訊時，可讓相同組建的程式在個別電腦上使用不同版本的 Microsoft Office，而不需要針對每個版本的 Microsoft Office 重新部署程式或 PIA。  
@@ -116,7 +116,7 @@ ms.locfileid: "39198493"
   
 1.  在 Visual Studio 中，開啟本逐步解說所建立的專案。  
   
-2.  在 [建置] 功能表上，選擇 [發行 CreateExcelWorkbook]。 遵循 [發行精靈] 的步驟，建立應用程式的可安裝版本。 如需詳細資訊，請參閱[發行精靈 (Visual Studio 中的 Office 程式開發)](https://msdn.microsoft.com/library/bb625071)。  
+2.  在 [建置] 功能表上，選擇 [發行 CreateExcelWorkbook]。 遵循 [發行精靈] 的步驟，建立應用程式的可安裝版本。 如需詳細資訊，請參閱[發行精靈 (Visual Studio 中的 Office 程式開發)](/visualstudio/vsto/publish-wizard-office-development-in-visual-studio)。  
   
 3.  在已安裝 .NET Framework 4 或更新版本和不同版本 Excel 的電腦上，安裝應用程式。  
   
@@ -124,6 +124,7 @@ ms.locfileid: "39198493"
   
 5.  確認範例程式碼中指定的位置 (C:\SampleFolder\SampleWorkbook.xls) 已建立 Excel 活頁簿。  
   
-## <a name="see-also"></a>請參閱  
- [逐步解說：在 Visual Studio 中內嵌來自 Managed 組件的類型 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
- [/link (C# 編譯器選項)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)
+## <a name="see-also"></a>請參閱
+
+- [逐步解說：在 Visual Studio 中內嵌來自 Managed 組件的類型 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
+- [/link (C# 編譯器選項)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)

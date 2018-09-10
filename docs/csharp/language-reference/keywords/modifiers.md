@@ -6,11 +6,11 @@ helpviewer_keywords:
 - modifiers [C#]
 ms.assetid: c96691dd-b357-49ec-b5ae-03ca214fadfb
 ms.openlocfilehash: 5000f94a954994769eda2ac09404ba6a71c4639b
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42930360"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524824"
 ---
 # <a name="modifiers-c-reference"></a>修飾詞 (C# 參考)
 修飾詞用來修飾類型和類型成員的宣告。 本節將介紹 C# 修飾詞。  

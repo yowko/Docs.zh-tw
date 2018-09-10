@@ -2,12 +2,12 @@
 title: LINQ 和字串 (C#)
 ms.date: 07/20/2015
 ms.assetid: dbe2d657-b3f3-487e-b645-21fb2d71cd7b
-ms.openlocfilehash: c7a1b86cc611d5f38ceab814b4594f5ad953fbc4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: da7a35f0fd66d1f7b8a72550c175b5428242fbc1
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480635"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43886496"
 ---
 # <a name="linq-and-strings-c"></a>LINQ 和字串 (C#)
 
@@ -72,7 +72,7 @@ ms.locfileid: "43480635"
   
   示範如何針對 .csv 檔案中的文字資料執行數學計算。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Language-Integrated Query (LINQ) (C#)](index.md)
 - [如何：從 CSV 檔案產生 XML](how-to-generate-xml-from-csv-files.md)

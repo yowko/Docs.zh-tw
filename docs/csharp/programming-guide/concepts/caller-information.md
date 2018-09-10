@@ -2,12 +2,12 @@
 title: 呼叫端資訊 (C#)
 ms.date: 07/20/2015
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
-ms.openlocfilehash: 6f0cd4d9d8fc85cb15431ccb4c76eee14b3f67c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 048e91ad337f74ef04a2a03412a44a0be0ef9506
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320686"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44212447"
 ---
 # <a name="caller-information-c"></a>呼叫端資訊 (C#)
 使用 Caller Info 屬性，您就可以取得有關方法之呼叫端的資訊。 您可以取得原始程式碼的檔案路徑、原始程式碼中的行號，以及呼叫端的成員名稱。 這項資訊有助於追蹤、偵錯及建立診斷工具。  
@@ -75,8 +75,9 @@ public void TraceMessage(string message,
 |屬性建構函式|套用屬性的成員名稱。 如果屬性為成員內的任何項目 (例如參數、傳回值或泛型類型參數)，這個結果會是與該項目相關聯的成員名稱。|  
 |無包含的成員 (例如，組件層級或套用至類型的屬性)。|選擇性參數的預設值。|  
   
-## <a name="see-also"></a>請參閱  
- [屬性 (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)  
- [常見屬性 (C#)](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)  
- [具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
- [程式設計概念 (C#)](../../../csharp/programming-guide/concepts/index.md)
+## <a name="see-also"></a>請參閱
+
+- [屬性 (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)  
+- [常見屬性 (C#)](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)  
+- [具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
+- [程式設計概念 (C#)](../../../csharp/programming-guide/concepts/index.md)

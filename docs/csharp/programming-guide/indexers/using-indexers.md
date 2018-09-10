@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: 82de2841a74f58905d3089bb0b320e7501a77045
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e4c1f346b83cf97c57a359984bd08e075b6451b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337609"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44253217"
 ---
 # <a name="using-indexers-c-programming-guide"></a>使用索引子 (C# 程式設計手冊)
 索引子是語法便利性，可讓您建立用戶端應用程式可以就像陣列一樣地存取的 [class](../../../csharp/language-reference/keywords/class.md)、[struct](../../../csharp/language-reference/keywords/struct.md) 或 [interface](../../../csharp/language-reference/keywords/interface.md)。 索引子最常實作於類型中，而類型的主要用途是封裝內部集合或陣列。 例如，假設您的 TempRecord 類別將華氏溫度代表為 24 小時期間記錄於 10 個不同的時間。 這個類別包含浮點類型的 "temps" 陣列以代表溫度，以及代表溫度記錄日期的 <xref:System.DateTime>。 在此類別中實作索引子，用戶端即可將 TempRecord 執行個體中的溫度存取為 `float temp = tr[4]`，而不是 `float temp = tr.temps[4]`。 索引子標記法不僅可簡化用戶端應用程式的語法，還可以讓其他開發人員更直覺地了解類別其用途。  
@@ -71,7 +71,8 @@ public int this [int index]   // Indexer declaration
   
 -   將 `get` 和 [set](../../../csharp/language-reference/keywords/set.md) 存取子的存取範圍設定為合理限制。 這對 `set` 存取子特別重要。 如需詳細資訊，請參閱[限制存取子的存取範圍](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)。  
   
-## <a name="see-also"></a>請參閱  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [索引子](../../../csharp/programming-guide/indexers/index.md)  
- [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [索引子](../../../csharp/programming-guide/indexers/index.md)  
+- [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)

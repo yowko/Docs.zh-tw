@@ -3,12 +3,12 @@ title: C# 版本控制 - C# 手冊
 description: 了解 C# 和 .NET 的版本控制運作方式
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 4dc8e7e521bf209d6ca69a84534d277fb8a93ea8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 949b7414116169cada62b48392f37809f26d7ff9
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351780"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185752"
 ---
 # <a name="versioning-in-c"></a>C# 中的版本控制 #
 
@@ -24,7 +24,7 @@ ms.locfileid: "33351780"
 理想情況是，您提供給文件庫的版本資訊應該能幫助開發人員判斷其與使用同一文件庫舊版本的專案是否相容。
 
 SemVer 最基本的方法是 3 元件格式 `MAJOR.MINOR.PATCH`，其中：
- 
+
 * 當您進行不相容的 API 變更時會遞增 `MAJOR`
 * 當您以回溯相容方式新增功能時會遞增 `MINOR`
 * 當您進行回溯相容的 Bug 修正時會遞增 `PATCH`
@@ -51,7 +51,7 @@ SemVer 最基本的方法是 3 元件格式 `MAJOR.MINOR.PATCH`，其中：
 
 ### <a name="application-configuration-file"></a>應用程式組態檔
 
-身為 .NET 開發人員，您在大多數的專案類型中，有很大的機會遇到[`app.config` 檔案](https://msdn.microsoft.com/library/1fk1t1t0(v=vs.110).aspx)。
+身為 .NET 開發人員，您在大多數的專案類型中，有很大的機會遇到[`app.config` 檔案](../framework/configure-apps/file-schema/index.md)。
 這個簡單的組態檔要很長時間才能改善推出新的更新。 文件庫的設計通常應該是將可能定期變更的資訊儲存在 `app.config` 檔案中，因此當這類資訊更新時，只要將舊版的組態檔替換成新版即可，不需要重新編譯文件庫。
 
 ## <a name="consuming-libraries"></a>使用文件庫
@@ -62,7 +62,7 @@ SemVer 最基本的方法是 3 元件格式 `MAJOR.MINOR.PATCH`，其中：
 
 ### <a name="assembly-binding-redirection"></a>組件繫結重新導向
 
-您可以使用 `app.config` 檔案更新應用程式使用的文件庫版本。 新增所謂的[*繫結重新導向*](https://msdn.microsoft.com/library/7wd6ex19(v=vs.110).aspx)，您可以使用新的文件庫版本，不必重新編譯應用程式。 下例示範如何更新應用程式的 `app.config` 檔案，使用 `ReferencedLibrary` 的 `1.0.1` 修補版本，不使用原先編譯的 `1.0.0` 版。
+您可以使用 `app.config` 檔案更新應用程式使用的文件庫版本。 新增所謂的[*繫結重新導向*](../framework/configure-apps/redirect-assembly-versions.md)，您可以使用新的文件庫版本，不必重新編譯應用程式。 下例示範如何更新應用程式的 `app.config` 檔案，使用 `ReferencedLibrary` 的 `1.0.1` 修補版本，不使用原先編譯的 `1.0.0` 版。
 
 ```xml
 <dependentAssembly>

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - pointers [C#], & operator
 - pointer expressions [C#], address-of operator
 ms.assetid: 44fe2cd9-a64f-4ef5-be2a-09ce807c0182
-ms.openlocfilehash: bb52aee3341194697b40b30ec14afced61a200be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40a7ac34a4e68df7aa316adc3cbd1999d975eabe
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340121"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43741869"
 ---
 # <a name="how-to-obtain-the-address-of-a-variable-c-programming-guide"></a>如何：取得變數位址 (C# 程式設計手冊)
 若要取得評估為固定變數之一元運算式的位址，請使用傳址運算子 `&`：  
@@ -35,11 +35,12 @@ int* p = &number; //address-of operator &
   
  [!code-csharp[address-of-a-variable](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers.cs#8)]  
   
-## <a name="see-also"></a>請參閱  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [指標運算式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
- [指標型別](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
- [型別](../../../csharp/language-reference/keywords/types.md)  
- [Unsafe.DangerousAPI](../../../csharp/language-reference/keywords/unsafe.md)  
- [fixed 陳述式](../../../csharp/language-reference/keywords/fixed-statement.md)  
- [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [指標運算式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
+- [指標型別](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
+- [型別](../../../csharp/language-reference/keywords/types.md)  
+- [Unsafe.DangerousAPI](../../../csharp/language-reference/keywords/unsafe.md)  
+- [fixed 陳述式](../../../csharp/language-reference/keywords/fixed-statement.md)  
+- [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)

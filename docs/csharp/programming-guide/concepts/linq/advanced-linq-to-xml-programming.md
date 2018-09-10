@@ -2,12 +2,12 @@
 title: 進階 LINQ to XML 程式設計 (C#)
 ms.date: 07/20/2015
 ms.assetid: 2e012d40-532b-49ea-b1fc-152e616bdfa3
-ms.openlocfilehash: e455b2b579c56632d5e06b4da5c44a71ea150416
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 684c91724ad8f283dc47f38e31697884f4d216d2
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931833"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855812"
 ---
 # <a name="advanced-linq-to-xml-programming-c"></a>進階 LINQ to XML 程式設計 (C#)
 本節提供的資訊將僅適用於某些 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 案例中的進階開發人員。  
@@ -28,5 +28,6 @@ ms.locfileid: "42931833"
 |[序列化包含 XElement 物件的物件圖形 (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)|描述如何序列化包含 <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XDocument> 物件的物件圖形。|  
 |[WPF 資料繫結與 LINQ to XML](/visualstudio/designers/wpf-data-binding-with-linq-to-xml)|描述如何使用 LINQ to XML 做為 Windows Presentation Foundation 應用程式中資料繫結的資料來源。|  
   
-## <a name="see-also"></a>請參閱  
- [程式設計手冊 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>請參閱
+
+- [程式設計手冊 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

@@ -2,12 +2,12 @@
 title: 概念和術語 (功能性轉換) (C#)
 ms.date: 07/20/2015
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-ms.openlocfilehash: f0d09f8846556dfa0ce70f253d59ddd41f254363
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e42c14965ba3341c812811f6c27ece386c42d7c2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339286"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526991"
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>概念和術語 (功能性轉換) (C#)
 本主題說明純功能性轉換的概念與術語。 轉換資料的功能性轉換方法所產生的程式碼通常比更傳統的命令性程式設計可以更快速地進行程式設計、更明確，而且更容易進行偵錯與維護。  
@@ -71,6 +71,7 @@ ms.locfileid: "33339286"
   
  這些語言功能將用於本節的所有程式碼範例中。  
   
-## <a name="see-also"></a>請參閱  
- [純功能性轉換簡介 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
- [函數式程式設計與命令式程式設計的比較 (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+## <a name="see-also"></a>請參閱
+
+- [純功能性轉換簡介 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
+- [函數式程式設計與命令式程式設計的比較 (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

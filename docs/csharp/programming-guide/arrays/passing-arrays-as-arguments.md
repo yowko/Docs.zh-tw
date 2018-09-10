@@ -4,12 +4,12 @@ ms.date: 07/05/2018
 helpviewer_keywords:
 - arrays [C#], passing as arguments
 ms.assetid: f3a0971e-c87c-4a1f-8262-bc0a3b712772
-ms.openlocfilehash: 0289297be9d7b4989cc95d2b50b92dae9ee831f7
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: b2e6c0134af3b5814e9c9321e1486820311aa5c6
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911795"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042422"
 ---
 # <a name="passing-arrays-as-arguments-c-programming-guide"></a>傳遞陣列當做引數 (C# 程式設計手冊)
 
@@ -57,8 +57,8 @@ ms.locfileid: "42911795"
 
 ## <a name="see-also"></a>另請參閱
 
-[C# 程式設計指南](../index.md)  
-[陣列](index.md)  
-[一維陣列](single-dimensional-arrays.md)  
-[多維陣列](multidimensional-arrays.md)  
-[不規則陣列](jagged-arrays.md)  
+- [C# 程式設計指南](../index.md)  
+- [陣列](index.md)  
+- [一維陣列](single-dimensional-arrays.md)  
+- [多維陣列](multidimensional-arrays.md)  
+- [不規則陣列](jagged-arrays.md)  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - return keyword [C#]
 ms.assetid: 6da6e152-5b58-4448-8f3f-470dd0617ecd
 ms.openlocfilehash: 0d20da39d3f56220c4499f699e542bd24ded93ca
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480525"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43741996"
 ---
 # <a name="return-c-reference"></a>return (C# 參考)
 

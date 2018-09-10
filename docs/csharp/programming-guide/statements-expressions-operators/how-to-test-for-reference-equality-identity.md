@@ -5,12 +5,12 @@ helpviewer_keywords:
 - object identity [C#]
 - reference equality [C#]
 ms.assetid: 91307fda-267b-4fd2-a338-2aada39ee791
-ms.openlocfilehash: 78a6bf1f5d4a93bd561faada91b4a11f52692dbf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d48c2cab7100d8227b33ee0eeefb825dd81a5f88
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322337"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084565"
 ---
 # <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a>如何：參考相等 (識別) 的測試 (C# 程式設計手冊)
 不必實作任何自訂邏輯，就能支援您類型中的參考相等比較。 此功能是透過靜態 <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> 方法提供給所有類型。  
@@ -26,5 +26,6 @@ ms.locfileid: "33322337"
   
  相同的組件中的常數字串一律由執行階段暫留。 也就是說，會維護每個唯一的常值字串只有一個執行個體。 不過，執行階段不保證暫留在執行階段建立的字串，也不保證暫留在不同組件中的兩個相等常數字串。  
   
-## <a name="see-also"></a>請參閱  
- [相等比較](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)
+## <a name="see-also"></a>請參閱
+
+- [相等比較](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - new constraint keyword [C#]
 ms.assetid: 58850b64-cb97-4136-be50-1f3bc7fc1da9
 ms.openlocfilehash: 9948fc65030a4636c5d23db4ef8c3a584018d2f5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482147"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087007"
 ---
 # <a name="new-constraint-c-reference"></a>new 條件約束 (C# 參考)
 

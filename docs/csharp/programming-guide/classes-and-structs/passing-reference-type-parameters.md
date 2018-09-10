@@ -5,12 +5,12 @@ helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-ms.openlocfilehash: ed6c822638c56b3ab95216581f6f39cacb9d06ee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d577754e8cb686c40172abd6c0bbd00bc481f737
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326563"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183206"
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>傳遞參考類型的參數 (C# 程式設計手冊)
 [參考型別](../../../csharp/language-reference/keywords/reference-types.md)的變數不會直接包含其資料；它會包含其資料的參考。 以值的方式傳遞參考型別參數時，可以變更屬於參考資料的資料，例如類別成員的值。 但您無法變更參考本身的值；例如，您無法使用相同的參考，為新的類別配置記憶體，並讓其保存在方法之外。 若要這樣做，請使用 [ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 關鍵字來傳遞參數。 為求簡化，下列範例使用 `ref`。  
@@ -38,11 +38,11 @@ ms.locfileid: "33326563"
   
  如需字串的詳細資訊，請參閱 [string](../../../csharp/language-reference/keywords/string.md)。  
   
-## <a name="see-also"></a>請參閱  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [傳遞參數](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)  
- [使用 ref 和 out 傳遞陣列](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)  
- [ref](../../../csharp/language-reference/keywords/ref.md)  
- [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md)  
- [out](../../../csharp/language-reference/keywords/out.md)  
- [參考型別](../../../csharp/language-reference/keywords/reference-types.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [傳遞參數](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)  
+- [ref](../../../csharp/language-reference/keywords/ref.md)  
+- [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md)  
+- [out](../../../csharp/language-reference/keywords/out.md)  
+- [參考型別](../../../csharp/language-reference/keywords/reference-types.md)

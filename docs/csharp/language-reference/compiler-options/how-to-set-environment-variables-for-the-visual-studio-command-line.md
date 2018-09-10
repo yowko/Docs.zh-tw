@@ -16,11 +16,11 @@ helpviewer_keywords:
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
 ms.openlocfilehash: 77375e428fe0563c0b533ca97abd21070e850682
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43466734"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857845"
 ---
 # <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>如何：為 Visual Studio 命令列設定環境變數
 

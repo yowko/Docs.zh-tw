@@ -2,12 +2,12 @@
 title: 純函數式轉換簡介 (C#)
 ms.date: 07/20/2015
 ms.assetid: 8495c9d9-2d02-4aa0-8a10-9e8794b985fe
-ms.openlocfilehash: 278b3afc66e4c4f222e27e648274cb8cea814d50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f04189c5ae6fc8f6c827f983357ab0126b2c086d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329097"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183180"
 ---
 # <a name="introduction-to-pure-functional-transformations-c"></a>純函數式轉換簡介 (C#)
 本節說明功能性轉換，包括基礎的概念與支援的語言建構。 其中包含程式設計的物件導向與功能性轉換方法，包括如何轉換到後者的建議。 雖然在許多程式設計案例中都可以使用功能性轉換，但是此處使用 XML 轉換做為具體範例。  
@@ -22,5 +22,6 @@ ms.locfileid: "33329097"
 |[函數式轉換的適用性 (C#)](../../../../csharp/programming-guide/concepts/linq/applicability-of-functional-transformation.md)|描述功能性轉換的典型案例。|  
 |[XML 函數式轉換 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)|描述轉換 XML 樹狀內容中的功能性轉換。|  
   
-## <a name="see-also"></a>請參閱  
- [XML 純功能性轉換 (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
+## <a name="see-also"></a>請參閱
+
+- [XML 純功能性轉換 (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)

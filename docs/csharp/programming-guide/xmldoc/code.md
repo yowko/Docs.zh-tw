@@ -8,12 +8,12 @@ helpviewer_keywords:
 - code XML tag
 - <code> C# XML tag
 ms.assetid: f235e3bc-a709-43cf-8a9f-bd57cabdf6da
-ms.openlocfilehash: eec81e62b49e8e203037dd454805301f83637047
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a578e6a1b92ab2db62df7146d7a473d7843ff2e4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334544"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516842"
 ---
 # <a name="ltcodegt-c-programming-guide"></a>&lt;code&gt; (C# 程式設計手冊)
 ## <a name="syntax"></a>語法  
@@ -34,6 +34,7 @@ ms.locfileid: "33334544"
 ## <a name="example"></a>範例  
  如需如何使用 \<code> 標記的範例，請參閱 [\<example>>](../../../csharp/programming-guide/xmldoc/example.md) 主題。  
   
-## <a name="see-also"></a>請參閱  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [建議使用的文件註解標籤](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [建議使用的文件註解標籤](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

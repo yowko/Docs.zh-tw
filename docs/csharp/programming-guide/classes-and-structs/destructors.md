@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 5d1860a5703c79bd77331cfd821c3bff69f317ff
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: b98d5eac29f498672000a7b0354734c15fd7400c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925814"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526031"
 ---
 # <a name="finalizers-c-programming-guide"></a>完成項 (C# 程式設計手冊)
 完成項是用來解構類別的執行個體。  
@@ -85,8 +85,9 @@ protected override void Finalize()
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.IDisposable>  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
- [記憶體回收](../../../standard/garbage-collection/index.md)
+## <a name="see-also"></a>請參閱
+
+- <xref:System.IDisposable>  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [記憶體回收](../../../standard/garbage-collection/index.md)

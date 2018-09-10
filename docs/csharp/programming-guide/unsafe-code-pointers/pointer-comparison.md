@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], comparison
 ms.assetid: fcafd514-7405-4deb-8490-cc58efda5495
-ms.openlocfilehash: af264cd1572faafe25ee170b35cbeb48ed0fb2aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa980c944159c477c333762ffad569332fba9402
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337700"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086635"
 ---
 # <a name="pointer-comparison-c-programming-guide"></a>指標比較 (C# 程式設計手冊)
 您可以套用下列運算子來比較任何類型的指標：  
@@ -28,13 +28,14 @@ ms.locfileid: "33337700"
   
  `False`  
   
-## <a name="see-also"></a>請參閱  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [指標運算式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
- [C# 運算子](../../../csharp/language-reference/operators/index.md)  
- [指標操作](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)  
- [指標型別](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
- [型別](../../../csharp/language-reference/keywords/types.md)  
- [Unsafe.DangerousAPI](../../../csharp/language-reference/keywords/unsafe.md)  
- [fixed 陳述式](../../../csharp/language-reference/keywords/fixed-statement.md)  
- [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [指標運算式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
+- [C# 運算子](../../../csharp/language-reference/operators/index.md)  
+- [指標操作](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)  
+- [指標型別](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
+- [型別](../../../csharp/language-reference/keywords/types.md)  
+- [Unsafe.DangerousAPI](../../../csharp/language-reference/keywords/unsafe.md)  
+- [fixed 陳述式](../../../csharp/language-reference/keywords/fixed-statement.md)  
+- [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)

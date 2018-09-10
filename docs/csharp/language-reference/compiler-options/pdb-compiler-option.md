@@ -9,11 +9,11 @@ helpviewer_keywords:
 - /pdb compiler option [C#]
 ms.assetid: e9d0f96a-5b75-45d6-9765-92538dd5f823
 ms.openlocfilehash: dc7ea6aae6aa429efdf1a2dca23a3d679cb21fb7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43418461"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526577"
 ---
 # <a name="-pdb-c-compiler-options"></a>-pdb (C# 編譯器選項)
 **-pdb** 編譯器選項指定偵錯符號檔的名稱和位置。  

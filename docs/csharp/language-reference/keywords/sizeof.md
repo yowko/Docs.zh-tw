@@ -8,11 +8,11 @@ helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
 ms.openlocfilehash: f2507dd8528e2e66016524873ada890227a74ed8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43487191"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517034"
 ---
 # <a name="sizeof-c-reference"></a>sizeof (C# 參考)
 用來取得 Unmanaged 類型的大小 (以位元組為單位)。

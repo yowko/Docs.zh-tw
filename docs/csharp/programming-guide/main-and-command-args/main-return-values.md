@@ -4,12 +4,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 51a7d821b5705c0ddda96a34663ba0288e0f1da9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ac0d70458d7c3762ae9dc5fc90058f0caafc4ab
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339952"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44184924"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() 傳回值 (C# 程式設計手冊)
 
@@ -92,9 +92,9 @@ private static async Task<int> AsyncConsoleWork()
 > [!NOTE]
 >如果這些範例在 `Main` 方法上使用 `async` 修飾詞，編譯器會產生相同的程式碼。
 
-## <a name="see-also"></a>另請參閱
-[C# 程式設計手冊](../../programming-guide/index.md)
-[C# 參考](../index.md)
-[Main() 和命令列引數](index.md)
-[如何：顯示命令列引數](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-[如何：使用 foreach 存取命令列引數](../../programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
+## <a name="see-also"></a>請參閱
+- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 參考](../index.md)
+- [Main() 和命令列引數](index.md)
+- [如何：顯示命令列引數](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [如何：使用 foreach 存取命令列引數](../../programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
