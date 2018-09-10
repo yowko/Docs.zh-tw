@@ -4,15 +4,15 @@ description: 如何儲存結果。
 ms.date: 11/30/2016
 ms.assetid: 5b863961-1750-4cf9-9607-acea5054d15a
 ms.openlocfilehash: 98a300b2c11eb037ed4ce34caea2673a4e0f8e6b
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258078"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525226"
 ---
-# <a name="store-the-results-of-a-query-in-memory"></a><span data-ttu-id="37f9f-103">將查詢的結果儲存在記憶體中</span><span class="sxs-lookup"><span data-stu-id="37f9f-103">Store the results of a query in memory</span></span>
+# <a name="store-the-results-of-a-query-in-memory"></a><span data-ttu-id="aaa7c-103">將查詢的結果儲存在記憶體中</span><span class="sxs-lookup"><span data-stu-id="aaa7c-103">Store the results of a query in memory</span></span>
 
-<span data-ttu-id="37f9f-104">查詢基本上是如何擷取和組織資料的一組指令。</span><span class="sxs-lookup"><span data-stu-id="37f9f-104">A query is basically a set of instructions for how to retrieve and organize data.</span></span> <span data-ttu-id="37f9f-105">要求結果中的每個後續項目時，會延遲執行查詢。</span><span class="sxs-lookup"><span data-stu-id="37f9f-105">Queries are executed lazily, as each subsequent item in the result is requested.</span></span> <span data-ttu-id="37f9f-106">當您使用 `foreach` 逐一查看結果時，會將項目傳回為已存取。</span><span class="sxs-lookup"><span data-stu-id="37f9f-106">When you use `foreach` to iterate the results, items are returned as accessed.</span></span> <span data-ttu-id="37f9f-107">若要評估查詢，並儲存其結果，而不執行 `foreach` 迴圈，則只要在查詢變數上呼叫下列其中一種方法即可︰</span><span class="sxs-lookup"><span data-stu-id="37f9f-107">To evaluate a query and store its results without executing a `foreach` loop, just call one of the following methods on the query variable:</span></span>
+<span data-ttu-id="aaa7c-104">查詢基本上是如何擷取和組織資料的一組指令。</span><span class="sxs-lookup"><span data-stu-id="aaa7c-104">A query is basically a set of instructions for how to retrieve and organize data.</span></span> <span data-ttu-id="aaa7c-105">要求結果中的每個後續項目時，會延遲執行查詢。</span><span class="sxs-lookup"><span data-stu-id="aaa7c-105">Queries are executed lazily, as each subsequent item in the result is requested.</span></span> <span data-ttu-id="aaa7c-106">當您使用 `foreach` 逐一查看結果時，會將項目傳回為已存取。</span><span class="sxs-lookup"><span data-stu-id="aaa7c-106">When you use `foreach` to iterate the results, items are returned as accessed.</span></span> <span data-ttu-id="aaa7c-107">若要評估查詢，並儲存其結果，而不執行 `foreach` 迴圈，則只要在查詢變數上呼叫下列其中一種方法即可︰</span><span class="sxs-lookup"><span data-stu-id="aaa7c-107">To evaluate a query and store its results without executing a `foreach` loop, just call one of the following methods on the query variable:</span></span>
 
 - <xref:System.Linq.Enumerable.ToList%2A>
 
@@ -22,12 +22,12 @@ ms.locfileid: "43258078"
 
 - <xref:System.Linq.Enumerable.ToLookup%2A>
 
- <span data-ttu-id="37f9f-108">建議當您儲存查詢結果時，將傳回的集合物件指派給新的變數，如下列範例所示︰</span><span class="sxs-lookup"><span data-stu-id="37f9f-108">We recommend that when you store the query results, you assign the returned collection object to a new variable as shown in the following example:</span></span>
+ <span data-ttu-id="aaa7c-108">建議當您儲存查詢結果時，將傳回的集合物件指派給新的變數，如下列範例所示︰</span><span class="sxs-lookup"><span data-stu-id="aaa7c-108">We recommend that when you store the query results, you assign the returned collection object to a new variable as shown in the following example:</span></span>
 
-## <a name="example"></a><span data-ttu-id="37f9f-109">範例</span><span class="sxs-lookup"><span data-stu-id="37f9f-109">Example</span></span>
+## <a name="example"></a><span data-ttu-id="aaa7c-109">範例</span><span class="sxs-lookup"><span data-stu-id="aaa7c-109">Example</span></span>
 
 [!code-csharp[csProgGuideLINQ#25](~/samples/snippets/csharp/concepts/linq/how-to-store-the-results-of-a-query-in-memory_1.cs)]
 
-## <a name="see-also"></a><span data-ttu-id="37f9f-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="37f9f-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="aaa7c-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="aaa7c-110">See also</span></span>
 
-- [<span data-ttu-id="37f9f-111">Language-Integrated Query (LINQ)</span><span class="sxs-lookup"><span data-stu-id="37f9f-111">Language Integrated Query (LINQ)</span></span>](index.md)
+- [<span data-ttu-id="aaa7c-111">Language-Integrated Query (LINQ)</span><span class="sxs-lookup"><span data-stu-id="aaa7c-111">Language Integrated Query (LINQ)</span></span>](index.md)
