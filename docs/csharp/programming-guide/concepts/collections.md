@@ -2,12 +2,12 @@
 title: 集合 (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 7400d4eee4df99cb1e255e428f83028fddf481f4
-ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
+ms.openlocfilehash: 24b2155c07b6b66820d373d6310ff6b1c6ab224f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34549616"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44273290"
 ---
 # <a name="collections-c"></a>集合 (C#)
 在許多應用程式中，您想要建立和管理相關物件的群組。 有兩種方式可以群組物件：建立物件的陣列和建立物件的集合。  
@@ -575,14 +575,15 @@ private static IEnumerable<int> EvenSequence(
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [物件和集合初始設定式](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
- [程式設計概念 (C#)](../../../csharp/programming-guide/concepts/index.md)  
- [Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
- [平行 LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
- [集合和資料結構](../../../standard/collections/index.md)  
- [建立和操作集合](http://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
- [選取集合類別](../../../standard/collections/selecting-a-collection-class.md)  
- [在集合內比較和排序](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
- [何時使用泛型集合](../../../standard/collections/when-to-use-generic-collections.md)  
+## <a name="see-also"></a>請參閱
+
+- [物件和集合初始設定式](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
+- [程式設計概念 (C#)](../../../csharp/programming-guide/concepts/index.md)  
+- [Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+- [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+- [平行 LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
+- [集合和資料結構](../../../standard/collections/index.md)  
+- [建立和操作集合](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
+- [選取集合類別](../../../standard/collections/selecting-a-collection-class.md)  
+- [在集合內比較和排序](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
+- [何時使用泛型集合](../../../standard/collections/when-to-use-generic-collections.md)  

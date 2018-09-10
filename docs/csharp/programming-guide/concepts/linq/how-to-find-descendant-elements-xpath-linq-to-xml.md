@@ -3,11 +3,11 @@ title: 如何：尋找子系項目 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b318da39-bb8b-4c56-a019-e13b12b01831
 ms.openlocfilehash: df1b151948b7b11757f2f8f312fa1f0bba00673a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44099027"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44274670"
 ---
 # <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a>如何：尋找子系項目 (XPath-LINQ to XML) (C#)
 本主題顯示如何利用特定名稱取得子代項目。  

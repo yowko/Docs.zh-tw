@@ -9,11 +9,11 @@ helpviewer_keywords:
 - para C# XML tag
 ms.assetid: c74b8705-29df-40b1-bff5-237492b0e978
 ms.openlocfilehash: e51df23db97aadddbc4c4e8c3cb38bda7ff7e3a4
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44181348"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44277019"
 ---
 # <a name="ltparagt-c-programming-guide"></a>&lt;para&gt; (C# 程式設計手冊)
 ## <a name="syntax"></a>語法  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d4850de5-fa63-4936-a250-5678d118acba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f81db46c20b27517968078c96f9eb484a1aedec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e343d48b5e50fdaef3a3667f066894dea03eeb80
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572069"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44275307"
 ---
 # <a name="automatic-memory-management"></a>Automatic Memory Management
 自動記憶體管理是 Common Language Runtime 在 [Managed 執行](../../docs/standard/managed-execution-process.md)期間所提供的一項服務。 Common Language Runtime 的記憶體回收行程會管理應用程式記憶體的配置和釋放。 這表示開發人員在開發 Managed 應用程式時，不需要撰寫程式碼來執行記憶體管理工作。 自動記憶體管理可排除一些常見的問題，例如，忘記釋放物件而造成記憶體流失 (Memory Leak)，或嘗試存取已經釋放物件的記憶體。 本章節將描述記憶體回收行程如何配置和釋放記憶體。  
@@ -51,7 +51,8 @@ ms.locfileid: "33572069"
 ## <a name="releasing-memory-for-unmanaged-resources"></a>釋放 Unmanaged 資源的記憶體  
  對於應用程式所建立的大部分物件而言，您都可以依賴記憶體回收行程自動執行必要的記憶體管理工作。 但是，Unmanaged 資源需要明確清除。 最常見的 Unmanaged 資源類型就是包裝作業系統資源 (例如檔案控制代碼、視窗控制代碼或網路連接) 的物件。 雖然記憶體回收行程能夠追蹤封裝 Unmanaged 資源的 Managed 物件存留期，但是它並沒有關於如何清除資源的相關資訊。 當建立封裝 Unmanaged 資源的物件時，建議您提供必要的程式碼，在公用 **Dispose** 方法中清除 Unmanaged 資源。 您可以提供 **Dispose** 方法，讓物件的使用者在用完物件後，明確釋放出它所佔用的記憶體。 當您使用封裝 Unmanaged 資源的物件時，應留意 **Dispose** 的用法，並在必要時加以呼叫。 如需清除 Unmanaged 資源的詳細資訊，以及實作 **Dispose** 的設計模式範例，請參閱[記憶體回收](../../docs/standard/garbage-collection/index.md)。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.GC>  
- [記憶體回收](../../docs/standard/garbage-collection/index.md)  
- [Managed 執行程序](../../docs/standard/managed-execution-process.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.GC>  
+- [記憶體回收](../../docs/standard/garbage-collection/index.md)  
+- [Managed 執行程序](../../docs/standard/managed-execution-process.md)

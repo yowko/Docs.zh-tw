@@ -5,11 +5,11 @@ helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
 ms.openlocfilehash: 7b5f79f41306d6e4a8d2f1aa432ba6c2e0879f74
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44176653"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44270717"
 ---
 # <a name="contextual-keywords-c-reference"></a>內容關鍵字 (C# 參考)
 內容關鍵字可用來在程式碼中提供特定的意義，但它不是 C# 中的保留字。 本節介紹下列內容關鍵字︰  

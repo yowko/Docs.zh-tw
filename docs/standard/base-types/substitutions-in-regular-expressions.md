@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53fd4ee63d49b3943fa0b1164591aaddaa764abc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 20050bee696f9d47324f1b095b0b3c1120f78255
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579414"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44277740"
 ---
 # <a name="substitutions-in-regular-expressions"></a>在規則運算式中執行替代
 <a name="Top"></a> 替代是指只有在取代模式內才能辨識的語言項目。 這些項目使用規則運算式模式定義要取代輸入字串中相符文字的全部或部分文字。 取代模式可以包含一個或多個替代，以及常值字元。 取代模式會提供給具有 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 參數的 `replacement` 方法多載，以及提供給 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法。 這些方法會將符合的模式取代為 `replacement` 參數所定義的模式。  
@@ -219,5 +219,6 @@ ms.locfileid: "33579414"
 |1|3|123|ABC**ABC123DEF456**DEF456|  
 |2|5|456|ABCABC123DEF456DEF**ABC123DEF456**|  
   
-## <a name="see-also"></a>請參閱  
- [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+## <a name="see-also"></a>另請參閱
+
+- [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
