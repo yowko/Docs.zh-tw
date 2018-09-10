@@ -2,20 +2,20 @@
 title: 如何：變更整個 XML 樹狀結構的命名空間 (C#)
 ms.date: 07/20/2015
 ms.assetid: 1584ff3b-c77d-4241-ab62-80adfb7bfc1b
-ms.openlocfilehash: 698d5323d712555cf59714323d2cb13d2ee6a371
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cbb7c3d332eea83d6df71812cc18633df6fbb6d0
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328249"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261849"
 ---
-# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-c"></a><span data-ttu-id="72cbf-102">如何：變更整個 XML 樹狀結構的命名空間 (C#)</span><span class="sxs-lookup"><span data-stu-id="72cbf-102">How to: Change the Namespace for an Entire XML Tree (C#)</span></span>
-<span data-ttu-id="72cbf-103">您有時候必須以程式設計的方式，變更項目或屬性的命名空間。</span><span class="sxs-lookup"><span data-stu-id="72cbf-103">You sometimes have to programmatically change the namespace for an element or an attribute.</span></span> <span data-ttu-id="72cbf-104">LINQ to XML 可以簡化這個程序。</span><span class="sxs-lookup"><span data-stu-id="72cbf-104">LINQ to XML makes this easy.</span></span> <span data-ttu-id="72cbf-105">您可以設定 <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> 屬性。</span><span class="sxs-lookup"><span data-stu-id="72cbf-105">The <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> property can be set.</span></span> <span data-ttu-id="72cbf-106">您無法設定 <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> 屬性 (Property)，但是您可以輕易地將屬性 (Attribute) 複製到 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>、移除現有的屬性 (Attribute)，然後加入所需之新命名空間中的新屬性 (Attribute)。</span><span class="sxs-lookup"><span data-stu-id="72cbf-106">The <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> property cannot be set, but you can easily copy the attributes into a <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, remove the existing attributes, and then add new attributes that are in the new desired namespace.</span></span>  
+# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-c"></a><span data-ttu-id="2d4fd-102">如何：變更整個 XML 樹狀結構的命名空間 (C#)</span><span class="sxs-lookup"><span data-stu-id="2d4fd-102">How to: Change the Namespace for an Entire XML Tree (C#)</span></span>
+<span data-ttu-id="2d4fd-103">您有時候必須以程式設計的方式，變更項目或屬性的命名空間。</span><span class="sxs-lookup"><span data-stu-id="2d4fd-103">You sometimes have to programmatically change the namespace for an element or an attribute.</span></span> <span data-ttu-id="2d4fd-104">LINQ to XML 可以簡化這個程序。</span><span class="sxs-lookup"><span data-stu-id="2d4fd-104">LINQ to XML makes this easy.</span></span> <span data-ttu-id="2d4fd-105">您可以設定 <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> 屬性。</span><span class="sxs-lookup"><span data-stu-id="2d4fd-105">The <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> property can be set.</span></span> <span data-ttu-id="2d4fd-106">您無法設定 <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> 屬性 (Property)，但是您可以輕易地將屬性 (Attribute) 複製到 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>、移除現有的屬性 (Attribute)，然後加入所需之新命名空間中的新屬性 (Attribute)。</span><span class="sxs-lookup"><span data-stu-id="2d4fd-106">The <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> property cannot be set, but you can easily copy the attributes into a <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, remove the existing attributes, and then add new attributes that are in the new desired namespace.</span></span>  
   
- <span data-ttu-id="72cbf-107">如需詳細資訊，請參閱[處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)。</span><span class="sxs-lookup"><span data-stu-id="72cbf-107">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+ <span data-ttu-id="2d4fd-107">如需詳細資訊，請參閱[處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)。</span><span class="sxs-lookup"><span data-stu-id="2d4fd-107">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="72cbf-108">範例</span><span class="sxs-lookup"><span data-stu-id="72cbf-108">Example</span></span>  
- <span data-ttu-id="72cbf-109">下列程式碼會在沒有命名空間中建立兩個 XML 樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="72cbf-109">The following code creates two XML trees in no namespace.</span></span> <span data-ttu-id="72cbf-110">接著，它會變更每個樹狀結構的命名空間，然後將這些命名空間結合成單一樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="72cbf-110">It then changes the namespace of each of the trees, and combines them into a single tree.</span></span>  
+## <a name="example"></a><span data-ttu-id="2d4fd-108">範例</span><span class="sxs-lookup"><span data-stu-id="2d4fd-108">Example</span></span>  
+ <span data-ttu-id="2d4fd-109">下列程式碼會在沒有命名空間中建立兩個 XML 樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="2d4fd-109">The following code creates two XML trees in no namespace.</span></span> <span data-ttu-id="2d4fd-110">接著，它會變更每個樹狀結構的命名空間，然後將這些命名空間結合成單一樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="2d4fd-110">It then changes the namespace of each of the trees, and combines them into a single tree.</span></span>  
   
 ```csharp  
 XElement tree1 = new XElement("Data",  
@@ -64,7 +64,7 @@ XElement root = new XElement("Root",
 Console.WriteLine(root);  
 ```  
   
- <span data-ttu-id="72cbf-111">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="72cbf-111">This example produces the following output:</span></span>  
+ <span data-ttu-id="2d4fd-111">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="2d4fd-111">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -77,5 +77,6 @@ Console.WriteLine(root);
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="72cbf-112">請參閱</span><span class="sxs-lookup"><span data-stu-id="72cbf-112">See Also</span></span>  
- [<span data-ttu-id="72cbf-113">修改 XML 樹狀結構 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="72cbf-113">Modifying XML Trees (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="2d4fd-112">請參閱</span><span class="sxs-lookup"><span data-stu-id="2d4fd-112">See Also</span></span>
+
+- [<span data-ttu-id="2d4fd-113">修改 XML 樹狀結構 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="2d4fd-113">Modifying XML Trees (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

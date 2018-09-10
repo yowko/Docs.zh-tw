@@ -9,44 +9,44 @@ helpviewer_keywords:
 - dot operator (.) [C#]
 ms.assetid: a1f54b52-b686-4ae5-a48e-a2a9ebd0eb7b
 ms.openlocfilehash: a092c1a916e3dc4bf6d96660c532540945e57554
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43408003"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520704"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="3b012-103">。</span><span class="sxs-lookup"><span data-stu-id="3b012-103">.</span></span> <span data-ttu-id="3b012-104">運算子 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="3b012-104">Operator (C# Reference)</span></span>
-<span data-ttu-id="3b012-105">點運算子 (`.`) 是用於成員存取。</span><span class="sxs-lookup"><span data-stu-id="3b012-105">The dot operator (`.`) is used for member access.</span></span> <span data-ttu-id="3b012-106">點運算子可指定型別或命名空間的成員。</span><span class="sxs-lookup"><span data-stu-id="3b012-106">The dot operator specifies a member of a type or namespace.</span></span> <span data-ttu-id="3b012-107">例如，點運算子可用來存取 .NET Framework 類別庫中的特定方法：</span><span class="sxs-lookup"><span data-stu-id="3b012-107">For example, the dot operator is used to access specific methods within the .NET Framework class libraries:</span></span>  
+# <a name="-operator-c-reference"></a><span data-ttu-id="5db9f-103">。</span><span class="sxs-lookup"><span data-stu-id="5db9f-103">.</span></span> <span data-ttu-id="5db9f-104">運算子 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="5db9f-104">Operator (C# Reference)</span></span>
+<span data-ttu-id="5db9f-105">點運算子 (`.`) 是用於成員存取。</span><span class="sxs-lookup"><span data-stu-id="5db9f-105">The dot operator (`.`) is used for member access.</span></span> <span data-ttu-id="5db9f-106">點運算子可指定型別或命名空間的成員。</span><span class="sxs-lookup"><span data-stu-id="5db9f-106">The dot operator specifies a member of a type or namespace.</span></span> <span data-ttu-id="5db9f-107">例如，點運算子可用來存取 .NET Framework 類別庫中的特定方法：</span><span class="sxs-lookup"><span data-stu-id="5db9f-107">For example, the dot operator is used to access specific methods within the .NET Framework class libraries:</span></span>  
   
  [!code-csharp[csRefOperators#16](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_1.cs)]  
   
- <span data-ttu-id="3b012-108">例如，請參考下列類別：</span><span class="sxs-lookup"><span data-stu-id="3b012-108">For example, consider the following class:</span></span>  
+ <span data-ttu-id="5db9f-108">例如，請參考下列類別：</span><span class="sxs-lookup"><span data-stu-id="5db9f-108">For example, consider the following class:</span></span>  
   
  [!code-csharp[csRefOperators#17](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_2.cs)]  
   
  [!code-csharp[csRefOperators#18](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_3.cs)]  
   
- <span data-ttu-id="3b012-109">變數 `s` 擁有 `a` 和 `b` 兩個成員；若要存取它們，請使用點運算子：</span><span class="sxs-lookup"><span data-stu-id="3b012-109">The variable `s` has two members, `a` and `b`; to access them, use the dot operator:</span></span>  
+ <span data-ttu-id="5db9f-109">變數 `s` 擁有 `a` 和 `b` 兩個成員；若要存取它們，請使用點運算子：</span><span class="sxs-lookup"><span data-stu-id="5db9f-109">The variable `s` has two members, `a` and `b`; to access them, use the dot operator:</span></span>  
   
  [!code-csharp[csRefOperators#19](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_4.cs)]  
   
- <span data-ttu-id="3b012-110">點也可用來形成限定名稱，例如指定其所屬命名空間或介面的名稱。</span><span class="sxs-lookup"><span data-stu-id="3b012-110">The dot is also used to form qualified names, which are names that specify the namespace or interface, for example, to which they belong.</span></span>  
+ <span data-ttu-id="5db9f-110">點也可用來形成限定名稱，例如指定其所屬命名空間或介面的名稱。</span><span class="sxs-lookup"><span data-stu-id="5db9f-110">The dot is also used to form qualified names, which are names that specify the namespace or interface, for example, to which they belong.</span></span>  
   
  [!code-csharp[csRefOperators#20](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_5.cs)]  
   
- <span data-ttu-id="3b012-111">using 指示詞可讓某些名稱限定成為選擇性項目：</span><span class="sxs-lookup"><span data-stu-id="3b012-111">The using directive makes some name qualification optional:</span></span>  
+ <span data-ttu-id="5db9f-111">using 指示詞可讓某些名稱限定成為選擇性項目：</span><span class="sxs-lookup"><span data-stu-id="5db9f-111">The using directive makes some name qualification optional:</span></span>  
   
  [!code-csharp[csRefOperators#21](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_6.cs)]  
   
- <span data-ttu-id="3b012-112">但若是模稜兩可的識別項，就必須加以限定：</span><span class="sxs-lookup"><span data-stu-id="3b012-112">But when an identifier is ambiguous, it must be qualified:</span></span>  
+ <span data-ttu-id="5db9f-112">但若是模稜兩可的識別項，就必須加以限定：</span><span class="sxs-lookup"><span data-stu-id="5db9f-112">But when an identifier is ambiguous, it must be qualified:</span></span>  
   
  [!code-csharp[csRefOperators#22](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_7.cs)]  
   
-## <a name="c-language-specification"></a><span data-ttu-id="3b012-113">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="3b012-113">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="5db9f-113">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="5db9f-113">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="3b012-114">請參閱</span><span class="sxs-lookup"><span data-stu-id="3b012-114">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5db9f-114">請參閱</span><span class="sxs-lookup"><span data-stu-id="5db9f-114">See Also</span></span>
 
-- [<span data-ttu-id="3b012-115">C# 參考</span><span class="sxs-lookup"><span data-stu-id="3b012-115">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="3b012-116">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="3b012-116">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="3b012-117">C# 運算子</span><span class="sxs-lookup"><span data-stu-id="3b012-117">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+- [<span data-ttu-id="5db9f-115">C# 參考</span><span class="sxs-lookup"><span data-stu-id="5db9f-115">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="5db9f-116">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="5db9f-116">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="5db9f-117">C# 運算子</span><span class="sxs-lookup"><span data-stu-id="5db9f-117">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)

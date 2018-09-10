@@ -8,35 +8,35 @@ helpviewer_keywords:
 - partial types [C#]
 ms.assetid: 27320743-a22e-4c7b-b0b3-53afe3607334
 ms.openlocfilehash: 365d00d2c53d3efe1cd4330bdd3ec48740a49c53
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43422325"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44187047"
 ---
-# <a name="partial-type-c-reference"></a><span data-ttu-id="88a1c-102">部分型別 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="88a1c-102">partial type (C# Reference)</span></span>
+# <a name="partial-type-c-reference"></a><span data-ttu-id="224d9-102">部分型別 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="224d9-102">partial type (C# Reference)</span></span>
 
-<span data-ttu-id="88a1c-103">部分型別定義允許將類別、結構或介面定義分割成多個檔案。</span><span class="sxs-lookup"><span data-stu-id="88a1c-103">Partial type definitions allow for the definition of a class, struct, or interface to be split into multiple files.</span></span>
+<span data-ttu-id="224d9-103">部分型別定義允許將類別、結構或介面定義分割成多個檔案。</span><span class="sxs-lookup"><span data-stu-id="224d9-103">Partial type definitions allow for the definition of a class, struct, or interface to be split into multiple files.</span></span>
 
-<span data-ttu-id="88a1c-104">在 *File1.cs* 中：</span><span class="sxs-lookup"><span data-stu-id="88a1c-104">In *File1.cs*:</span></span>
+<span data-ttu-id="224d9-104">在 *File1.cs* 中：</span><span class="sxs-lookup"><span data-stu-id="224d9-104">In *File1.cs*:</span></span>
 
 [!code-csharp[csrefKeywordsContextual#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#3)]  
 
-<span data-ttu-id="88a1c-105">在 *File2.cs* 中宣告：</span><span class="sxs-lookup"><span data-stu-id="88a1c-105">In *File2.cs* the declaration:</span></span>
+<span data-ttu-id="224d9-105">在 *File2.cs* 中宣告：</span><span class="sxs-lookup"><span data-stu-id="224d9-105">In *File2.cs* the declaration:</span></span>
 
 [!code-csharp[csrefKeywordsContextual#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#4)]  
 
-## <a name="remarks"></a><span data-ttu-id="88a1c-106">備註</span><span class="sxs-lookup"><span data-stu-id="88a1c-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="224d9-106">備註</span><span class="sxs-lookup"><span data-stu-id="224d9-106">Remarks</span></span>
 
-<span data-ttu-id="88a1c-107">將類別、結構或介面型別分割成數個檔案在處理大型專案，或者處理自動產生的程式碼，例如 [Windows Forms 設計工具](../../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)提供的程式碼時，會很有用。</span><span class="sxs-lookup"><span data-stu-id="88a1c-107">Splitting a class, struct or interface type over several files can be useful when you are working with large projects, or with automatically generated code such as that provided by the [Windows Forms Designer](../../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md).</span></span> <span data-ttu-id="88a1c-108">部分類別可包含[部分方法](partial-method.md)。</span><span class="sxs-lookup"><span data-stu-id="88a1c-108">A partial type may contain a [partial method](partial-method.md).</span></span> <span data-ttu-id="88a1c-109">如需詳細資訊，請參閱[部分類別和方法](../../programming-guide/classes-and-structs/partial-classes-and-methods.md)。</span><span class="sxs-lookup"><span data-stu-id="88a1c-109">For more information, see [Partial Classes and Methods](../../programming-guide/classes-and-structs/partial-classes-and-methods.md).</span></span>
+<span data-ttu-id="224d9-107">將類別、結構或介面型別分割成數個檔案在處理大型專案，或者處理自動產生的程式碼，例如 [Windows Forms 設計工具](../../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)提供的程式碼時，會很有用。</span><span class="sxs-lookup"><span data-stu-id="224d9-107">Splitting a class, struct or interface type over several files can be useful when you are working with large projects, or with automatically generated code such as that provided by the [Windows Forms Designer](../../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md).</span></span> <span data-ttu-id="224d9-108">部分類別可包含[部分方法](partial-method.md)。</span><span class="sxs-lookup"><span data-stu-id="224d9-108">A partial type may contain a [partial method](partial-method.md).</span></span> <span data-ttu-id="224d9-109">如需詳細資訊，請參閱[部分類別和方法](../../programming-guide/classes-and-structs/partial-classes-and-methods.md)。</span><span class="sxs-lookup"><span data-stu-id="224d9-109">For more information, see [Partial Classes and Methods](../../programming-guide/classes-and-structs/partial-classes-and-methods.md).</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="88a1c-110">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="88a1c-110">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="224d9-110">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="224d9-110">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="88a1c-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="88a1c-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="224d9-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="224d9-111">See also</span></span>
 
-- [<span data-ttu-id="88a1c-112">C# 參考</span><span class="sxs-lookup"><span data-stu-id="88a1c-112">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="88a1c-113">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="88a1c-113">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="88a1c-114">修飾詞</span><span class="sxs-lookup"><span data-stu-id="88a1c-114">Modifiers</span></span>](modifiers.md)
-- [<span data-ttu-id="88a1c-115">泛型簡介</span><span class="sxs-lookup"><span data-stu-id="88a1c-115">Introduction to Generics</span></span>](../../programming-guide/generics/introduction-to-generics.md)
+- [<span data-ttu-id="224d9-112">C# 參考</span><span class="sxs-lookup"><span data-stu-id="224d9-112">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="224d9-113">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="224d9-113">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="224d9-114">修飾詞</span><span class="sxs-lookup"><span data-stu-id="224d9-114">Modifiers</span></span>](modifiers.md)
+- [<span data-ttu-id="224d9-115">泛型簡介</span><span class="sxs-lookup"><span data-stu-id="224d9-115">Introduction to Generics</span></span>](../../programming-guide/generics/introduction-to-generics.md)

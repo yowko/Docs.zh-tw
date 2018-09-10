@@ -5,40 +5,40 @@ helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
 ms.openlocfilehash: 2bcf2b12d1aa1488e6d3e46f5b37ac9535b138dd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43389347"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44252696"
 ---
-# <a name="restrictions-on-using-accessibility-levels-c-reference"></a><span data-ttu-id="e7371-102">使用存取範圍層級的限制 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="e7371-102">Restrictions on using accessibility levels (C# Reference)</span></span>
+# <a name="restrictions-on-using-accessibility-levels-c-reference"></a><span data-ttu-id="97581-102">使用存取範圍層級的限制 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="97581-102">Restrictions on using accessibility levels (C# Reference)</span></span>
 
-<span data-ttu-id="e7371-103">當您在宣告中指定類型時，請檢查類型的存取範圍層級是否相依於成員或另一個類型的存取範圍層級。</span><span class="sxs-lookup"><span data-stu-id="e7371-103">When you specify a type in a declaration, check whether the accessibility level of the type is dependent on the accessibility level of a member or of another type.</span></span> <span data-ttu-id="e7371-104">例如，直接基底類別至少必須可以像衍生類別一樣地存取。</span><span class="sxs-lookup"><span data-stu-id="e7371-104">For example, the direct base class must be at least as accessible as the derived class.</span></span> <span data-ttu-id="e7371-105">下列宣告會導致編譯器錯誤，因為基底類別 `BaseClass` 比 `MyClass` 更少存取：</span><span class="sxs-lookup"><span data-stu-id="e7371-105">The following declarations cause a compiler error because the base class `BaseClass` is less accessible than `MyClass`:</span></span>
+<span data-ttu-id="97581-103">當您在宣告中指定類型時，請檢查類型的存取範圍層級是否相依於成員或另一個類型的存取範圍層級。</span><span class="sxs-lookup"><span data-stu-id="97581-103">When you specify a type in a declaration, check whether the accessibility level of the type is dependent on the accessibility level of a member or of another type.</span></span> <span data-ttu-id="97581-104">例如，直接基底類別至少必須可以像衍生類別一樣地存取。</span><span class="sxs-lookup"><span data-stu-id="97581-104">For example, the direct base class must be at least as accessible as the derived class.</span></span> <span data-ttu-id="97581-105">下列宣告會導致編譯器錯誤，因為基底類別 `BaseClass` 比 `MyClass` 更少存取：</span><span class="sxs-lookup"><span data-stu-id="97581-105">The following declarations cause a compiler error because the base class `BaseClass` is less accessible than `MyClass`:</span></span>
 
 ```csharp
 class BaseClass {...}
 public class MyClass: BaseClass {...} // Error
 ```
 
-<span data-ttu-id="e7371-106">下表摘要說明所宣告存取範圍層級的限制。</span><span class="sxs-lookup"><span data-stu-id="e7371-106">The following table summarizes the restrictions on declared accessibility levels.</span></span>
+<span data-ttu-id="97581-106">下表摘要說明所宣告存取範圍層級的限制。</span><span class="sxs-lookup"><span data-stu-id="97581-106">The following table summarizes the restrictions on declared accessibility levels.</span></span>
 
-|<span data-ttu-id="e7371-107">內容</span><span class="sxs-lookup"><span data-stu-id="e7371-107">Context</span></span>|<span data-ttu-id="e7371-108">備註</span><span class="sxs-lookup"><span data-stu-id="e7371-108">Remarks</span></span>|
+|<span data-ttu-id="97581-107">內容</span><span class="sxs-lookup"><span data-stu-id="97581-107">Context</span></span>|<span data-ttu-id="97581-108">備註</span><span class="sxs-lookup"><span data-stu-id="97581-108">Remarks</span></span>|
 |-------------|-------------|
-|[<span data-ttu-id="e7371-109">類別</span><span class="sxs-lookup"><span data-stu-id="e7371-109">Classes</span></span>](../../programming-guide/classes-and-structs/classes.md)|<span data-ttu-id="e7371-110">類別類型的直接基底類別至少必須可以像類別類型本身一樣地存取。</span><span class="sxs-lookup"><span data-stu-id="e7371-110">The direct base class of a class type must be at least as accessible as the class type itself.</span></span>|
-|[<span data-ttu-id="e7371-111">介面</span><span class="sxs-lookup"><span data-stu-id="e7371-111">Interfaces</span></span>](../../programming-guide/interfaces/index.md)|<span data-ttu-id="e7371-112">介面類型的明確基底介面至少必須可以像介面類型本身一樣地存取。</span><span class="sxs-lookup"><span data-stu-id="e7371-112">The explicit base interfaces of an interface type must be at least as accessible as the interface type itself.</span></span>|
-|[<span data-ttu-id="e7371-113">委派</span><span class="sxs-lookup"><span data-stu-id="e7371-113">Delegates</span></span>](../../programming-guide/delegates/index.md)|<span data-ttu-id="e7371-114">委派類型的傳回類型和參數類型至少必須可以像委派類型本身一樣地存取。</span><span class="sxs-lookup"><span data-stu-id="e7371-114">The return type and parameter types of a delegate type must be at least as accessible as the delegate type itself.</span></span>|
-|[<span data-ttu-id="e7371-115">常數</span><span class="sxs-lookup"><span data-stu-id="e7371-115">Constants</span></span>](../../programming-guide/classes-and-structs/constants.md)|<span data-ttu-id="e7371-116">常數的類型至少必須可以像常數本身一樣地存取。</span><span class="sxs-lookup"><span data-stu-id="e7371-116">The type of a constant must be at least as accessible as the constant itself.</span></span>|
-|[<span data-ttu-id="e7371-117">欄位</span><span class="sxs-lookup"><span data-stu-id="e7371-117">Fields</span></span>](../../programming-guide/classes-and-structs/fields.md)|<span data-ttu-id="e7371-118">欄位的類型至少必須可以像欄位本身一樣地存取。</span><span class="sxs-lookup"><span data-stu-id="e7371-118">The type of a field must be at least as accessible as the field itself.</span></span>|
-|[<span data-ttu-id="e7371-119">方法</span><span class="sxs-lookup"><span data-stu-id="e7371-119">Methods</span></span>](../../programming-guide/classes-and-structs/methods.md)|<span data-ttu-id="e7371-120">方法的傳回類型和參數類型至少必須可以像方法本身一樣地存取。</span><span class="sxs-lookup"><span data-stu-id="e7371-120">The return type and parameter types of a method must be at least as accessible as the method itself.</span></span>|
-|[<span data-ttu-id="e7371-121">屬性</span><span class="sxs-lookup"><span data-stu-id="e7371-121">Properties</span></span>](../../programming-guide/classes-and-structs/properties.md)|<span data-ttu-id="e7371-122">屬性的類型至少必須可以像屬性本身一樣地存取。</span><span class="sxs-lookup"><span data-stu-id="e7371-122">The type of a property must be at least as accessible as the property itself.</span></span>|
-|[<span data-ttu-id="e7371-123">事件</span><span class="sxs-lookup"><span data-stu-id="e7371-123">Events</span></span>](../../programming-guide/events/index.md)|<span data-ttu-id="e7371-124">事件的類型至少必須可以像事件本身一樣地存取。</span><span class="sxs-lookup"><span data-stu-id="e7371-124">The type of an event must be at least as accessible as the event itself.</span></span>|
-|[<span data-ttu-id="e7371-125">索引子</span><span class="sxs-lookup"><span data-stu-id="e7371-125">Indexers</span></span>](../../programming-guide/indexers/index.md)|<span data-ttu-id="e7371-126">索引子的類型和參數類型至少必須可以像索引子本身一樣地存取。</span><span class="sxs-lookup"><span data-stu-id="e7371-126">The type and parameter types of an indexer must be at least as accessible as the indexer itself.</span></span>|
-|[<span data-ttu-id="e7371-127">運算子</span><span class="sxs-lookup"><span data-stu-id="e7371-127">Operators</span></span>](../../programming-guide/statements-expressions-operators/operators.md)|<span data-ttu-id="e7371-128">運算子的傳回類型和參數類型至少必須可以像運算子本身一樣地存取。</span><span class="sxs-lookup"><span data-stu-id="e7371-128">The return type and parameter types of an operator must be at least as accessible as the operator itself.</span></span>|
-|[<span data-ttu-id="e7371-129">建構函式</span><span class="sxs-lookup"><span data-stu-id="e7371-129">Constructors</span></span>](../../programming-guide/classes-and-structs/constructors.md)|<span data-ttu-id="e7371-130">建構函式的參數類型至少必須可以像建構函式本身一樣地存取。</span><span class="sxs-lookup"><span data-stu-id="e7371-130">The parameter types of a constructor must be at least as accessible as the constructor itself.</span></span>|
+|[<span data-ttu-id="97581-109">類別</span><span class="sxs-lookup"><span data-stu-id="97581-109">Classes</span></span>](../../programming-guide/classes-and-structs/classes.md)|<span data-ttu-id="97581-110">類別類型的直接基底類別至少必須可以像類別類型本身一樣地存取。</span><span class="sxs-lookup"><span data-stu-id="97581-110">The direct base class of a class type must be at least as accessible as the class type itself.</span></span>|
+|[<span data-ttu-id="97581-111">介面</span><span class="sxs-lookup"><span data-stu-id="97581-111">Interfaces</span></span>](../../programming-guide/interfaces/index.md)|<span data-ttu-id="97581-112">介面類型的明確基底介面至少必須可以像介面類型本身一樣地存取。</span><span class="sxs-lookup"><span data-stu-id="97581-112">The explicit base interfaces of an interface type must be at least as accessible as the interface type itself.</span></span>|
+|[<span data-ttu-id="97581-113">委派</span><span class="sxs-lookup"><span data-stu-id="97581-113">Delegates</span></span>](../../programming-guide/delegates/index.md)|<span data-ttu-id="97581-114">委派類型的傳回類型和參數類型至少必須可以像委派類型本身一樣地存取。</span><span class="sxs-lookup"><span data-stu-id="97581-114">The return type and parameter types of a delegate type must be at least as accessible as the delegate type itself.</span></span>|
+|[<span data-ttu-id="97581-115">常數</span><span class="sxs-lookup"><span data-stu-id="97581-115">Constants</span></span>](../../programming-guide/classes-and-structs/constants.md)|<span data-ttu-id="97581-116">常數的類型至少必須可以像常數本身一樣地存取。</span><span class="sxs-lookup"><span data-stu-id="97581-116">The type of a constant must be at least as accessible as the constant itself.</span></span>|
+|[<span data-ttu-id="97581-117">欄位</span><span class="sxs-lookup"><span data-stu-id="97581-117">Fields</span></span>](../../programming-guide/classes-and-structs/fields.md)|<span data-ttu-id="97581-118">欄位的類型至少必須可以像欄位本身一樣地存取。</span><span class="sxs-lookup"><span data-stu-id="97581-118">The type of a field must be at least as accessible as the field itself.</span></span>|
+|[<span data-ttu-id="97581-119">方法</span><span class="sxs-lookup"><span data-stu-id="97581-119">Methods</span></span>](../../programming-guide/classes-and-structs/methods.md)|<span data-ttu-id="97581-120">方法的傳回類型和參數類型至少必須可以像方法本身一樣地存取。</span><span class="sxs-lookup"><span data-stu-id="97581-120">The return type and parameter types of a method must be at least as accessible as the method itself.</span></span>|
+|[<span data-ttu-id="97581-121">屬性</span><span class="sxs-lookup"><span data-stu-id="97581-121">Properties</span></span>](../../programming-guide/classes-and-structs/properties.md)|<span data-ttu-id="97581-122">屬性的類型至少必須可以像屬性本身一樣地存取。</span><span class="sxs-lookup"><span data-stu-id="97581-122">The type of a property must be at least as accessible as the property itself.</span></span>|
+|[<span data-ttu-id="97581-123">事件</span><span class="sxs-lookup"><span data-stu-id="97581-123">Events</span></span>](../../programming-guide/events/index.md)|<span data-ttu-id="97581-124">事件的類型至少必須可以像事件本身一樣地存取。</span><span class="sxs-lookup"><span data-stu-id="97581-124">The type of an event must be at least as accessible as the event itself.</span></span>|
+|[<span data-ttu-id="97581-125">索引子</span><span class="sxs-lookup"><span data-stu-id="97581-125">Indexers</span></span>](../../programming-guide/indexers/index.md)|<span data-ttu-id="97581-126">索引子的類型和參數類型至少必須可以像索引子本身一樣地存取。</span><span class="sxs-lookup"><span data-stu-id="97581-126">The type and parameter types of an indexer must be at least as accessible as the indexer itself.</span></span>|
+|[<span data-ttu-id="97581-127">運算子</span><span class="sxs-lookup"><span data-stu-id="97581-127">Operators</span></span>](../../programming-guide/statements-expressions-operators/operators.md)|<span data-ttu-id="97581-128">運算子的傳回類型和參數類型至少必須可以像運算子本身一樣地存取。</span><span class="sxs-lookup"><span data-stu-id="97581-128">The return type and parameter types of an operator must be at least as accessible as the operator itself.</span></span>|
+|[<span data-ttu-id="97581-129">建構函式</span><span class="sxs-lookup"><span data-stu-id="97581-129">Constructors</span></span>](../../programming-guide/classes-and-structs/constructors.md)|<span data-ttu-id="97581-130">建構函式的參數類型至少必須可以像建構函式本身一樣地存取。</span><span class="sxs-lookup"><span data-stu-id="97581-130">The parameter types of a constructor must be at least as accessible as the constructor itself.</span></span>|
 
-## <a name="example"></a><span data-ttu-id="e7371-131">範例</span><span class="sxs-lookup"><span data-stu-id="e7371-131">Example</span></span>
+## <a name="example"></a><span data-ttu-id="97581-131">範例</span><span class="sxs-lookup"><span data-stu-id="97581-131">Example</span></span>
 
-<span data-ttu-id="e7371-132">下列範例包含不同類型的錯誤宣告。</span><span class="sxs-lookup"><span data-stu-id="e7371-132">The following example contains erroneous declarations of different types.</span></span> <span data-ttu-id="e7371-133">每個宣告之後的註解都指出預期的編譯器錯誤。</span><span class="sxs-lookup"><span data-stu-id="e7371-133">The comment following each declaration indicates the expected compiler error.</span></span>
+<span data-ttu-id="97581-132">下列範例包含不同類型的錯誤宣告。</span><span class="sxs-lookup"><span data-stu-id="97581-132">The following example contains erroneous declarations of different types.</span></span> <span data-ttu-id="97581-133">每個宣告之後的註解都指出預期的編譯器錯誤。</span><span class="sxs-lookup"><span data-stu-id="97581-133">The comment following each declaration indicates the expected compiler error.</span></span>
 
 ```csharp
 // Restrictions on Using Accessibility Levels
@@ -103,20 +103,20 @@ public class A
 }
 ```
 
-## <a name="c-language-specification"></a><span data-ttu-id="e7371-134">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="e7371-134">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="97581-134">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="97581-134">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="e7371-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e7371-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="97581-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="97581-135">See also</span></span>
 
-- [<span data-ttu-id="e7371-136">C# 參考</span><span class="sxs-lookup"><span data-stu-id="e7371-136">C# Reference</span></span>](../../language-reference/index.md)
-- [<span data-ttu-id="e7371-137">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="e7371-137">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="e7371-138">C# 關鍵字</span><span class="sxs-lookup"><span data-stu-id="e7371-138">C# Keywords</span></span>](../../language-reference/keywords/index.md)
-- [<span data-ttu-id="e7371-139">存取修飾詞</span><span class="sxs-lookup"><span data-stu-id="e7371-139">Access Modifiers</span></span>](../../language-reference/keywords/access-modifiers.md)
-- [<span data-ttu-id="e7371-140">存取範圍定義域</span><span class="sxs-lookup"><span data-stu-id="e7371-140">Accessibility Domain</span></span>](../../language-reference/keywords/accessibility-domain.md)
-- [<span data-ttu-id="e7371-141">存取範圍層級</span><span class="sxs-lookup"><span data-stu-id="e7371-141">Accessibility Levels</span></span>](../../language-reference/keywords/accessibility-levels.md)
-- [<span data-ttu-id="e7371-142">存取修飾詞</span><span class="sxs-lookup"><span data-stu-id="e7371-142">Access Modifiers</span></span>](../../programming-guide/classes-and-structs/access-modifiers.md)
-- [<span data-ttu-id="e7371-143">public</span><span class="sxs-lookup"><span data-stu-id="e7371-143">public</span></span>](../../language-reference/keywords/public.md)
-- [<span data-ttu-id="e7371-144">private</span><span class="sxs-lookup"><span data-stu-id="e7371-144">private</span></span>](../../language-reference/keywords/private.md)
-- [<span data-ttu-id="e7371-145">protected</span><span class="sxs-lookup"><span data-stu-id="e7371-145">protected</span></span>](../../language-reference/keywords/protected.md)
-- [<span data-ttu-id="e7371-146">internal</span><span class="sxs-lookup"><span data-stu-id="e7371-146">internal</span></span>](../../language-reference/keywords/internal.md)
+- [<span data-ttu-id="97581-136">C# 參考</span><span class="sxs-lookup"><span data-stu-id="97581-136">C# Reference</span></span>](../../language-reference/index.md)
+- [<span data-ttu-id="97581-137">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="97581-137">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="97581-138">C# 關鍵字</span><span class="sxs-lookup"><span data-stu-id="97581-138">C# Keywords</span></span>](../../language-reference/keywords/index.md)
+- [<span data-ttu-id="97581-139">存取修飾詞</span><span class="sxs-lookup"><span data-stu-id="97581-139">Access Modifiers</span></span>](../../language-reference/keywords/access-modifiers.md)
+- [<span data-ttu-id="97581-140">存取範圍定義域</span><span class="sxs-lookup"><span data-stu-id="97581-140">Accessibility Domain</span></span>](../../language-reference/keywords/accessibility-domain.md)
+- [<span data-ttu-id="97581-141">存取範圍層級</span><span class="sxs-lookup"><span data-stu-id="97581-141">Accessibility Levels</span></span>](../../language-reference/keywords/accessibility-levels.md)
+- [<span data-ttu-id="97581-142">存取修飾詞</span><span class="sxs-lookup"><span data-stu-id="97581-142">Access Modifiers</span></span>](../../programming-guide/classes-and-structs/access-modifiers.md)
+- [<span data-ttu-id="97581-143">public</span><span class="sxs-lookup"><span data-stu-id="97581-143">public</span></span>](../../language-reference/keywords/public.md)
+- [<span data-ttu-id="97581-144">private</span><span class="sxs-lookup"><span data-stu-id="97581-144">private</span></span>](../../language-reference/keywords/private.md)
+- [<span data-ttu-id="97581-145">protected</span><span class="sxs-lookup"><span data-stu-id="97581-145">protected</span></span>](../../language-reference/keywords/protected.md)
+- [<span data-ttu-id="97581-146">internal</span><span class="sxs-lookup"><span data-stu-id="97581-146">internal</span></span>](../../language-reference/keywords/internal.md)

@@ -2,18 +2,18 @@
 title: 序列化至 XmlReader (叫用 XSLT) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4cc3ee03-ef4c-429b-a408-fedd10b728cd
-ms.openlocfilehash: 0663bf2e2c83524e94c91f436ca0146f2dcd68ff
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: b1f5bc8bd71036636df9da152c4e364ea5ec6b6e
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244019"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44140173"
 ---
-# <a name="serializing-to-an-xmlreader-invoking-xslt-c"></a><span data-ttu-id="6ec26-102">序列化至 XmlReader (叫用 XSLT) (C#)</span><span class="sxs-lookup"><span data-stu-id="6ec26-102">Serializing to an XmlReader (Invoking XSLT) (C#)</span></span>
-<span data-ttu-id="6ec26-103">當您使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的 <xref:System.Xml?displayProperty=nameWithType> 互通性能力時，可以使用 <xref:System.Xml.Linq.XNode.CreateReader%2A> 來建立 <xref:System.Xml.XmlReader>。</span><span class="sxs-lookup"><span data-stu-id="6ec26-103">When you use the <xref:System.Xml?displayProperty=nameWithType> interoperability capabilities of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], you can use <xref:System.Xml.Linq.XNode.CreateReader%2A> to create an <xref:System.Xml.XmlReader>.</span></span> <span data-ttu-id="6ec26-104">從這個 <xref:System.Xml.XmlReader> 讀取的模組會讀取 XML 樹狀結構中的節點並加以處理。</span><span class="sxs-lookup"><span data-stu-id="6ec26-104">The module that reads from this <xref:System.Xml.XmlReader> reads the nodes from the XML tree and processes them accordingly.</span></span>  
+# <a name="serializing-to-an-xmlreader-invoking-xslt-c"></a><span data-ttu-id="2c177-102">序列化至 XmlReader (叫用 XSLT) (C#)</span><span class="sxs-lookup"><span data-stu-id="2c177-102">Serializing to an XmlReader (Invoking XSLT) (C#)</span></span>
+<span data-ttu-id="2c177-103">當您使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的 <xref:System.Xml?displayProperty=nameWithType> 互通性能力時，可以使用 <xref:System.Xml.Linq.XNode.CreateReader%2A> 來建立 <xref:System.Xml.XmlReader>。</span><span class="sxs-lookup"><span data-stu-id="2c177-103">When you use the <xref:System.Xml?displayProperty=nameWithType> interoperability capabilities of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], you can use <xref:System.Xml.Linq.XNode.CreateReader%2A> to create an <xref:System.Xml.XmlReader>.</span></span> <span data-ttu-id="2c177-104">從這個 <xref:System.Xml.XmlReader> 讀取的模組會讀取 XML 樹狀結構中的節點並加以處理。</span><span class="sxs-lookup"><span data-stu-id="2c177-104">The module that reads from this <xref:System.Xml.XmlReader> reads the nodes from the XML tree and processes them accordingly.</span></span>  
   
-## <a name="invoking-an-xslt-transformation"></a><span data-ttu-id="6ec26-105">叫用 XSLT 轉換</span><span class="sxs-lookup"><span data-stu-id="6ec26-105">Invoking an XSLT Transformation</span></span>  
- <span data-ttu-id="6ec26-106">此方法的其中一個可能的使用時機為叫用 XSLT 轉換時。</span><span class="sxs-lookup"><span data-stu-id="6ec26-106">One possible use for this method is when invoking an XSLT transformation.</span></span> <span data-ttu-id="6ec26-107">您可以建立 XML 樹狀結構、從 XML 樹狀結構建立 <xref:System.Xml.XmlReader>、建立新文件，然後建立 <xref:System.Xml.XmlWriter> 以寫入新文件中。</span><span class="sxs-lookup"><span data-stu-id="6ec26-107">You can create an XML tree, create an <xref:System.Xml.XmlReader> from the XML tree, create a new document, and then create an <xref:System.Xml.XmlWriter> to write into the new document.</span></span> <span data-ttu-id="6ec26-108">接著，您可以叫用 XSLT 轉換，以傳入 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter>。</span><span class="sxs-lookup"><span data-stu-id="6ec26-108">Then, you can invoke the XSLT transformation, passing in <xref:System.Xml.XmlReader> and <xref:System.Xml.XmlWriter>.</span></span> <span data-ttu-id="6ec26-109">轉換成功完成後，系統會使用轉換的結果填入新的 XML 樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="6ec26-109">After the transformation successfully completes, the new XML tree is populated with the results of the transformation.</span></span>  
+## <a name="invoking-an-xslt-transformation"></a><span data-ttu-id="2c177-105">叫用 XSLT 轉換</span><span class="sxs-lookup"><span data-stu-id="2c177-105">Invoking an XSLT Transformation</span></span>  
+ <span data-ttu-id="2c177-106">此方法的其中一個可能的使用時機為叫用 XSLT 轉換時。</span><span class="sxs-lookup"><span data-stu-id="2c177-106">One possible use for this method is when invoking an XSLT transformation.</span></span> <span data-ttu-id="2c177-107">您可以建立 XML 樹狀結構、從 XML 樹狀結構建立 <xref:System.Xml.XmlReader>、建立新文件，然後建立 <xref:System.Xml.XmlWriter> 以寫入新文件中。</span><span class="sxs-lookup"><span data-stu-id="2c177-107">You can create an XML tree, create an <xref:System.Xml.XmlReader> from the XML tree, create a new document, and then create an <xref:System.Xml.XmlWriter> to write into the new document.</span></span> <span data-ttu-id="2c177-108">接著，您可以叫用 XSLT 轉換，以傳入 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter>。</span><span class="sxs-lookup"><span data-stu-id="2c177-108">Then, you can invoke the XSLT transformation, passing in <xref:System.Xml.XmlReader> and <xref:System.Xml.XmlWriter>.</span></span> <span data-ttu-id="2c177-109">轉換成功完成後，系統會使用轉換的結果填入新的 XML 樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="2c177-109">After the transformation successfully completes, the new XML tree is populated with the results of the transformation.</span></span>  
   
 ```csharp  
 string xslMarkup = @"<?xml version='1.0'?>  
@@ -50,7 +50,7 @@ using (XmlWriter writer = newTree.CreateWriter()) {
 Console.WriteLine(newTree);  
 ```  
   
- <span data-ttu-id="6ec26-110">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="6ec26-110">This example produces the following output:</span></span>  
+ <span data-ttu-id="2c177-110">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="2c177-110">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -59,5 +59,6 @@ Console.WriteLine(newTree);
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6ec26-111">請參閱</span><span class="sxs-lookup"><span data-stu-id="6ec26-111">See Also</span></span>  
- [<span data-ttu-id="6ec26-112">序列化 XML 樹狀結構 (C#)</span><span class="sxs-lookup"><span data-stu-id="6ec26-112">Serializing XML Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)
+## <a name="see-also"></a><span data-ttu-id="2c177-111">請參閱</span><span class="sxs-lookup"><span data-stu-id="2c177-111">See Also</span></span>
+
+- [<span data-ttu-id="2c177-112">序列化 XML 樹狀結構 (C#)</span><span class="sxs-lookup"><span data-stu-id="2c177-112">Serializing XML Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)

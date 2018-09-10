@@ -8,47 +8,47 @@ helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
 ms.openlocfilehash: 95ecfaaf1397f7a4598faba6528b38170062145a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43463217"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43742022"
 ---
-# <a name="char-c-reference"></a><span data-ttu-id="5763a-102">char (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="5763a-102">char (C# Reference)</span></span>
+# <a name="char-c-reference"></a><span data-ttu-id="4e7e2-102">char (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="4e7e2-102">char (C# Reference)</span></span>
 
-<span data-ttu-id="5763a-103">`char` 關鍵字是用來宣告 .NET Framework 用來代表 Unicode 字元的 <xref:System.Char?displayProperty=nameWithType> 結構執行個體。</span><span class="sxs-lookup"><span data-stu-id="5763a-103">The `char` keyword is used to declare an instance of the <xref:System.Char?displayProperty=nameWithType> structure that the .NET Framework uses to represent a Unicode character.</span></span> <span data-ttu-id="5763a-104">`Char` 物件的值是 16 位元數字 (序數) 值。</span><span class="sxs-lookup"><span data-stu-id="5763a-104">The value of a `Char` object is a 16-bit numeric (ordinal) value.</span></span>
+<span data-ttu-id="4e7e2-103">`char` 關鍵字是用來宣告 .NET Framework 用來代表 Unicode 字元的 <xref:System.Char?displayProperty=nameWithType> 結構執行個體。</span><span class="sxs-lookup"><span data-stu-id="4e7e2-103">The `char` keyword is used to declare an instance of the <xref:System.Char?displayProperty=nameWithType> structure that the .NET Framework uses to represent a Unicode character.</span></span> <span data-ttu-id="4e7e2-104">`Char` 物件的值是 16 位元數字 (序數) 值。</span><span class="sxs-lookup"><span data-stu-id="4e7e2-104">The value of a `Char` object is a 16-bit numeric (ordinal) value.</span></span>
 
- <span data-ttu-id="5763a-105">Unicode 字元是用來代表世界各地的大部分書寫語言。</span><span class="sxs-lookup"><span data-stu-id="5763a-105">Unicode characters are used to represent most of the written languages throughout the world.</span></span>
+ <span data-ttu-id="4e7e2-105">Unicode 字元是用來代表世界各地的大部分書寫語言。</span><span class="sxs-lookup"><span data-stu-id="4e7e2-105">Unicode characters are used to represent most of the written languages throughout the world.</span></span>
 
-|<span data-ttu-id="5763a-106">類型</span><span class="sxs-lookup"><span data-stu-id="5763a-106">Type</span></span>|<span data-ttu-id="5763a-107">範圍</span><span class="sxs-lookup"><span data-stu-id="5763a-107">Range</span></span>|<span data-ttu-id="5763a-108">大小</span><span class="sxs-lookup"><span data-stu-id="5763a-108">Size</span></span>|<span data-ttu-id="5763a-109">.NET 型別</span><span class="sxs-lookup"><span data-stu-id="5763a-109">.NET type</span></span>|
+|<span data-ttu-id="4e7e2-106">類型</span><span class="sxs-lookup"><span data-stu-id="4e7e2-106">Type</span></span>|<span data-ttu-id="4e7e2-107">範圍</span><span class="sxs-lookup"><span data-stu-id="4e7e2-107">Range</span></span>|<span data-ttu-id="4e7e2-108">大小</span><span class="sxs-lookup"><span data-stu-id="4e7e2-108">Size</span></span>|<span data-ttu-id="4e7e2-109">.NET 型別</span><span class="sxs-lookup"><span data-stu-id="4e7e2-109">.NET type</span></span>|
 |----------|-----------|----------|-------------------------|
-|`char`|<span data-ttu-id="5763a-110">U+0000 到 U+FFFF</span><span class="sxs-lookup"><span data-stu-id="5763a-110">U+0000 to U+FFFF</span></span>|<span data-ttu-id="5763a-111">Unicode 16 位元字元</span><span class="sxs-lookup"><span data-stu-id="5763a-111">Unicode 16-bit character</span></span>|<xref:System.Char?displayProperty=nameWithType>|
+|`char`|<span data-ttu-id="4e7e2-110">U+0000 到 U+FFFF</span><span class="sxs-lookup"><span data-stu-id="4e7e2-110">U+0000 to U+FFFF</span></span>|<span data-ttu-id="4e7e2-111">Unicode 16 位元字元</span><span class="sxs-lookup"><span data-stu-id="4e7e2-111">Unicode 16-bit character</span></span>|<xref:System.Char?displayProperty=nameWithType>|
 
-## <a name="literals"></a><span data-ttu-id="5763a-112">常值</span><span class="sxs-lookup"><span data-stu-id="5763a-112">Literals</span></span>
+## <a name="literals"></a><span data-ttu-id="4e7e2-112">常值</span><span class="sxs-lookup"><span data-stu-id="4e7e2-112">Literals</span></span>
 
-<span data-ttu-id="5763a-113">`char` 類型的常數可以撰寫為字元常值、十六進位逸出序列或 Unicode 表示法。</span><span class="sxs-lookup"><span data-stu-id="5763a-113">Constants of the `char` type can be written as character literals, hexadecimal escape sequence, or Unicode representation.</span></span> <span data-ttu-id="5763a-114">您也可以轉型整數字元碼。</span><span class="sxs-lookup"><span data-stu-id="5763a-114">You can also cast the integral character codes.</span></span> <span data-ttu-id="5763a-115">在下列範例中，四個 `char` 變數都會初始化成相同的字元 `X`：</span><span class="sxs-lookup"><span data-stu-id="5763a-115">In the following example four `char` variables are initialized with the same character `X`:</span></span>
+<span data-ttu-id="4e7e2-113">`char` 類型的常數可以撰寫為字元常值、十六進位逸出序列或 Unicode 表示法。</span><span class="sxs-lookup"><span data-stu-id="4e7e2-113">Constants of the `char` type can be written as character literals, hexadecimal escape sequence, or Unicode representation.</span></span> <span data-ttu-id="4e7e2-114">您也可以轉型整數字元碼。</span><span class="sxs-lookup"><span data-stu-id="4e7e2-114">You can also cast the integral character codes.</span></span> <span data-ttu-id="4e7e2-115">在下列範例中，四個 `char` 變數都會初始化成相同的字元 `X`：</span><span class="sxs-lookup"><span data-stu-id="4e7e2-115">In the following example four `char` variables are initialized with the same character `X`:</span></span>
 
 [!code-csharp[csrefKeywordsTypes#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#19)]
 
-## <a name="conversions"></a><span data-ttu-id="5763a-116">轉換</span><span class="sxs-lookup"><span data-stu-id="5763a-116">Conversions</span></span>
+## <a name="conversions"></a><span data-ttu-id="4e7e2-116">轉換</span><span class="sxs-lookup"><span data-stu-id="4e7e2-116">Conversions</span></span>
 
-<span data-ttu-id="5763a-117">`char` 可以隱含地轉換為 [ushort](../../../csharp/language-reference/keywords/ushort.md)、[int](../../../csharp/language-reference/keywords/int.md)、[uint](../../../csharp/language-reference/keywords/uint.md)、[long](../../../csharp/language-reference/keywords/long.md)、[ulong](../../../csharp/language-reference/keywords/ulong.md)、[float](../../../csharp/language-reference/keywords/float.md)、[double](../../../csharp/language-reference/keywords/double.md) 或 [decimal](../../../csharp/language-reference/keywords/decimal.md)。</span><span class="sxs-lookup"><span data-stu-id="5763a-117">A `char` can be implicitly converted to [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md), or [decimal](../../../csharp/language-reference/keywords/decimal.md).</span></span> <span data-ttu-id="5763a-118">不過，沒有從其他類型到 `char` 類型的隱含轉換。</span><span class="sxs-lookup"><span data-stu-id="5763a-118">However, there are no implicit conversions from other types to the `char` type.</span></span>
+<span data-ttu-id="4e7e2-117">`char` 可以隱含地轉換為 [ushort](../../../csharp/language-reference/keywords/ushort.md)、[int](../../../csharp/language-reference/keywords/int.md)、[uint](../../../csharp/language-reference/keywords/uint.md)、[long](../../../csharp/language-reference/keywords/long.md)、[ulong](../../../csharp/language-reference/keywords/ulong.md)、[float](../../../csharp/language-reference/keywords/float.md)、[double](../../../csharp/language-reference/keywords/double.md) 或 [decimal](../../../csharp/language-reference/keywords/decimal.md)。</span><span class="sxs-lookup"><span data-stu-id="4e7e2-117">A `char` can be implicitly converted to [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md), or [decimal](../../../csharp/language-reference/keywords/decimal.md).</span></span> <span data-ttu-id="4e7e2-118">不過，沒有從其他類型到 `char` 類型的隱含轉換。</span><span class="sxs-lookup"><span data-stu-id="4e7e2-118">However, there are no implicit conversions from other types to the `char` type.</span></span>
 
-<span data-ttu-id="5763a-119"><xref:System.Char?displayProperty=nameWithType> 型別提供數種使用 `char` 值的靜態方法。</span><span class="sxs-lookup"><span data-stu-id="5763a-119">The <xref:System.Char?displayProperty=nameWithType> type provides several static methods for working with `char` values.</span></span>
+<span data-ttu-id="4e7e2-119"><xref:System.Char?displayProperty=nameWithType> 型別提供數種使用 `char` 值的靜態方法。</span><span class="sxs-lookup"><span data-stu-id="4e7e2-119">The <xref:System.Char?displayProperty=nameWithType> type provides several static methods for working with `char` values.</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="5763a-120">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="5763a-120">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="4e7e2-120">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="4e7e2-120">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="5763a-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5763a-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4e7e2-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4e7e2-121">See also</span></span>
 
 - <xref:System.Char>  
-- [<span data-ttu-id="5763a-122">C# 參考</span><span class="sxs-lookup"><span data-stu-id="5763a-122">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="5763a-123">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="5763a-123">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="5763a-124">C# 關鍵字</span><span class="sxs-lookup"><span data-stu-id="5763a-124">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-- [<span data-ttu-id="5763a-125">整數型別表</span><span class="sxs-lookup"><span data-stu-id="5763a-125">Integral Types Table</span></span>](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [<span data-ttu-id="5763a-126">內建型別表</span><span class="sxs-lookup"><span data-stu-id="5763a-126">Built-In Types Table</span></span>](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [<span data-ttu-id="5763a-127">隱含數值轉換表</span><span class="sxs-lookup"><span data-stu-id="5763a-127">Implicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-- [<span data-ttu-id="5763a-128">明確數值轉換表</span><span class="sxs-lookup"><span data-stu-id="5763a-128">Explicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
-- [<span data-ttu-id="5763a-129">可為 Null 的型別</span><span class="sxs-lookup"><span data-stu-id="5763a-129">Nullable Types</span></span>](../../../csharp/programming-guide/nullable-types/index.md)  
-- [<span data-ttu-id="5763a-130">字串</span><span class="sxs-lookup"><span data-stu-id="5763a-130">Strings</span></span>](../../../csharp/programming-guide/strings/index.md)
+- [<span data-ttu-id="4e7e2-122">C# 參考</span><span class="sxs-lookup"><span data-stu-id="4e7e2-122">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="4e7e2-123">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="4e7e2-123">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="4e7e2-124">C# 關鍵字</span><span class="sxs-lookup"><span data-stu-id="4e7e2-124">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+- [<span data-ttu-id="4e7e2-125">整數型別表</span><span class="sxs-lookup"><span data-stu-id="4e7e2-125">Integral Types Table</span></span>](../../../csharp/language-reference/keywords/integral-types-table.md)  
+- [<span data-ttu-id="4e7e2-126">內建型別表</span><span class="sxs-lookup"><span data-stu-id="4e7e2-126">Built-In Types Table</span></span>](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [<span data-ttu-id="4e7e2-127">隱含數值轉換表</span><span class="sxs-lookup"><span data-stu-id="4e7e2-127">Implicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- [<span data-ttu-id="4e7e2-128">明確數值轉換表</span><span class="sxs-lookup"><span data-stu-id="4e7e2-128">Explicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- [<span data-ttu-id="4e7e2-129">可為 Null 的型別</span><span class="sxs-lookup"><span data-stu-id="4e7e2-129">Nullable Types</span></span>](../../../csharp/programming-guide/nullable-types/index.md)  
+- [<span data-ttu-id="4e7e2-130">字串</span><span class="sxs-lookup"><span data-stu-id="4e7e2-130">Strings</span></span>](../../../csharp/programming-guide/strings/index.md)
