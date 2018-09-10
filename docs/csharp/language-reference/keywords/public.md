@@ -1,5 +1,5 @@
 ---
-title: public (C# 參考)
+title: public 關鍵字 (C# 參考)
 ms.date: 07/20/2015
 f1_keywords:
 - public
@@ -7,46 +7,49 @@ f1_keywords:
 helpviewer_keywords:
 - public keyword [C#]
 ms.assetid: 0ae45d16-a551-4b74-9845-57208de1328e
-ms.openlocfilehash: 853f9c9ebe36345a897337d4e793d3c88059e068
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 84a3bc49b6eea047d518edc01dab7f2301854b6a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42998723"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484153"
 ---
-# <a name="public-c-reference"></a><span data-ttu-id="ca841-102">public (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="ca841-102">public (C# Reference)</span></span>
-<span data-ttu-id="ca841-103">`public` 關鍵字是類型和類型成員的存取修飾詞。</span><span class="sxs-lookup"><span data-stu-id="ca841-103">The `public` keyword is an access modifier for types and type members.</span></span> <span data-ttu-id="ca841-104">公用存取是最寬鬆的存取層級。</span><span class="sxs-lookup"><span data-stu-id="ca841-104">Public access is the most permissive access level.</span></span> <span data-ttu-id="ca841-105">不會限制存取公用成員，如此範例所示︰</span><span class="sxs-lookup"><span data-stu-id="ca841-105">There are no restrictions on accessing public members, as in this example:</span></span>  
-  
-```csharp  
-class SampleClass  
-{  
-    public int x; // No access restrictions.  
-}  
-```  
-  
- <span data-ttu-id="ca841-106">如需詳細資訊，請參閱[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)和[存取範圍層級](../../../csharp/language-reference/keywords/accessibility-levels.md)。</span><span class="sxs-lookup"><span data-stu-id="ca841-106">See [Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md) and [Accessibility Levels](../../../csharp/language-reference/keywords/accessibility-levels.md) for more information.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="ca841-107">範例</span><span class="sxs-lookup"><span data-stu-id="ca841-107">Example</span></span>  
- <span data-ttu-id="ca841-108">在下列範例中，宣告兩個類別：`PointTest` 和 `MainClass`。</span><span class="sxs-lookup"><span data-stu-id="ca841-108">In the following example, two classes are declared, `PointTest` and `MainClass`.</span></span> <span data-ttu-id="ca841-109">`PointTest`的公用成員 `x` 和 `y` 直接存取自 `MainClass`。</span><span class="sxs-lookup"><span data-stu-id="ca841-109">The public members `x` and `y` of `PointTest` are accessed directly from `MainClass`.</span></span>  
-  
- [!code-csharp[csrefKeywordsModifiers#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/public_1.cs)]  
-  
- <span data-ttu-id="ca841-110">如果您將 `public` 存取層級變更為 [private](../../../csharp/language-reference/keywords/private.md) 或 [protected](../../../csharp/language-reference/keywords/protected.md)，則會收到錯誤訊息：</span><span class="sxs-lookup"><span data-stu-id="ca841-110">If you change the `public` access level to [private](../../../csharp/language-reference/keywords/private.md) or [protected](../../../csharp/language-reference/keywords/protected.md), you will get the error message:</span></span>  
-  
- <span data-ttu-id="ca841-111">'PointTest.y' 的保護層級導致無法對其進行存取。</span><span class="sxs-lookup"><span data-stu-id="ca841-111">'PointTest.y' is inaccessible due to its protection level.</span></span>  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="ca841-112">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="ca841-112">C# Language Specification</span></span>  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a><span data-ttu-id="ca841-113">請參閱</span><span class="sxs-lookup"><span data-stu-id="ca841-113">See Also</span></span>
+# <a name="public-c-reference"></a><span data-ttu-id="830f7-102">public (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="830f7-102">public (C# Reference)</span></span>
 
-- [<span data-ttu-id="ca841-114">C# 參考</span><span class="sxs-lookup"><span data-stu-id="ca841-114">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="ca841-115">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="ca841-115">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="ca841-116">存取修飾詞</span><span class="sxs-lookup"><span data-stu-id="ca841-116">Access Modifiers</span></span>](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
-- [<span data-ttu-id="ca841-117">C# 關鍵字</span><span class="sxs-lookup"><span data-stu-id="ca841-117">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-- [<span data-ttu-id="ca841-118">存取修飾詞</span><span class="sxs-lookup"><span data-stu-id="ca841-118">Access Modifiers</span></span>](../../../csharp/language-reference/keywords/access-modifiers.md)  
-- [<span data-ttu-id="ca841-119">存取範圍層級</span><span class="sxs-lookup"><span data-stu-id="ca841-119">Accessibility Levels</span></span>](../../../csharp/language-reference/keywords/accessibility-levels.md)  
-- [<span data-ttu-id="ca841-120">修飾詞</span><span class="sxs-lookup"><span data-stu-id="ca841-120">Modifiers</span></span>](../../../csharp/language-reference/keywords/modifiers.md)  
-- [<span data-ttu-id="ca841-121">private</span><span class="sxs-lookup"><span data-stu-id="ca841-121">private</span></span>](../../../csharp/language-reference/keywords/private.md)  
-- [<span data-ttu-id="ca841-122">protected</span><span class="sxs-lookup"><span data-stu-id="ca841-122">protected</span></span>](../../../csharp/language-reference/keywords/protected.md)  
-- [<span data-ttu-id="ca841-123">internal</span><span class="sxs-lookup"><span data-stu-id="ca841-123">internal</span></span>](../../../csharp/language-reference/keywords/internal.md)
+<span data-ttu-id="830f7-103">`public` 關鍵字是類型和類型成員的存取修飾詞。</span><span class="sxs-lookup"><span data-stu-id="830f7-103">The `public` keyword is an access modifier for types and type members.</span></span> <span data-ttu-id="830f7-104">公用存取是最寬鬆的存取層級。</span><span class="sxs-lookup"><span data-stu-id="830f7-104">Public access is the most permissive access level.</span></span> <span data-ttu-id="830f7-105">不會限制存取公用成員，如此範例所示︰</span><span class="sxs-lookup"><span data-stu-id="830f7-105">There are no restrictions on accessing public members, as in this example:</span></span>
+
+```csharp
+class SampleClass
+{
+    public int x; // No access restrictions.
+}
+```
+
+<span data-ttu-id="830f7-106">如需詳細資訊，請參閱[存取修飾詞](../../programming-guide/classes-and-structs/access-modifiers.md)和[存取範圍層級](accessibility-levels.md)。</span><span class="sxs-lookup"><span data-stu-id="830f7-106">See [Access Modifiers](../../programming-guide/classes-and-structs/access-modifiers.md) and [Accessibility Levels](accessibility-levels.md) for more information.</span></span>
+
+## <a name="example"></a><span data-ttu-id="830f7-107">範例</span><span class="sxs-lookup"><span data-stu-id="830f7-107">Example</span></span>
+
+<span data-ttu-id="830f7-108">在下列範例中，宣告兩個類別：`PointTest` 和 `MainClass`。</span><span class="sxs-lookup"><span data-stu-id="830f7-108">In the following example, two classes are declared, `PointTest` and `MainClass`.</span></span> <span data-ttu-id="830f7-109">`PointTest`的公用成員 `x` 和 `y` 直接存取自 `MainClass`。</span><span class="sxs-lookup"><span data-stu-id="830f7-109">The public members `x` and `y` of `PointTest` are accessed directly from `MainClass`.</span></span>
+
+[!code-csharp[csrefKeywordsModifiers#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#13)]
+
+<span data-ttu-id="830f7-110">如果您將 `public` 存取層級變更為 [private](private.md) 或 [protected](protected.md)，則會收到錯誤訊息：</span><span class="sxs-lookup"><span data-stu-id="830f7-110">If you change the `public` access level to [private](private.md) or [protected](protected.md), you will get the error message:</span></span>
+
+<span data-ttu-id="830f7-111">'PointTest.y' 的保護層級導致無法對其進行存取。</span><span class="sxs-lookup"><span data-stu-id="830f7-111">'PointTest.y' is inaccessible due to its protection level.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="830f7-112">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="830f7-112">C# language specification</span></span>
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a><span data-ttu-id="830f7-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="830f7-113">See also</span></span>
+
+- [<span data-ttu-id="830f7-114">C# 參考</span><span class="sxs-lookup"><span data-stu-id="830f7-114">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="830f7-115">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="830f7-115">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="830f7-116">存取修飾詞</span><span class="sxs-lookup"><span data-stu-id="830f7-116">Access Modifiers</span></span>](../../programming-guide/classes-and-structs/access-modifiers.md)
+- [<span data-ttu-id="830f7-117">C# 關鍵字</span><span class="sxs-lookup"><span data-stu-id="830f7-117">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="830f7-118">存取修飾詞</span><span class="sxs-lookup"><span data-stu-id="830f7-118">Access Modifiers</span></span>](access-modifiers.md)
+- [<span data-ttu-id="830f7-119">存取範圍層級</span><span class="sxs-lookup"><span data-stu-id="830f7-119">Accessibility Levels</span></span>](accessibility-levels.md)
+- [<span data-ttu-id="830f7-120">修飾詞</span><span class="sxs-lookup"><span data-stu-id="830f7-120">Modifiers</span></span>](modifiers.md)
+- [<span data-ttu-id="830f7-121">private</span><span class="sxs-lookup"><span data-stu-id="830f7-121">private</span></span>](private.md)
+- [<span data-ttu-id="830f7-122">protected</span><span class="sxs-lookup"><span data-stu-id="830f7-122">protected</span></span>](protected.md)
+- [<span data-ttu-id="830f7-123">internal</span><span class="sxs-lookup"><span data-stu-id="830f7-123">internal</span></span>](internal.md)

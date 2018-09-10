@@ -1,6 +1,6 @@
 ---
 title: 執行緒物件和功能
-ms.date: 03/30/2017
+ms.date: 08/16/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - threading [.NET Framework], features
@@ -8,68 +8,39 @@ helpviewer_keywords:
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d689aeb91ad79b776c3b93c1809ec46947ea60b
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 2d56d962279120a03a6e4b89154ac1429ea5479e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874783"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483654"
 ---
-# <a name="threading-objects-and-features"></a><span data-ttu-id="fff70-102">執行緒物件和功能</span><span class="sxs-lookup"><span data-stu-id="fff70-102">Threading Objects and Features</span></span>
-<span data-ttu-id="fff70-103">.NET Framework 提供一些物件，可協助您建立及管理多執行緒應用程式。</span><span class="sxs-lookup"><span data-stu-id="fff70-103">The .NET Framework provides a number of objects that help you create and manage multithreaded applications.</span></span> <span data-ttu-id="fff70-104">Managed 執行緒是以 <xref:System.Threading.Thread> 類別來表示。</span><span class="sxs-lookup"><span data-stu-id="fff70-104">Managed threads are represented by the <xref:System.Threading.Thread> class.</span></span> <span data-ttu-id="fff70-105"><xref:System.Threading.ThreadPool> 類別可讓您輕鬆建立及管理多執行緒的背景工作。</span><span class="sxs-lookup"><span data-stu-id="fff70-105">The <xref:System.Threading.ThreadPool> class provides easy creation and management of multithreaded background tasks.</span></span> <span data-ttu-id="fff70-106"><xref:System.ComponentModel.BackgroundWorker> 類別會針對與使用者介面互動的工作執行相同的作業。</span><span class="sxs-lookup"><span data-stu-id="fff70-106">The <xref:System.ComponentModel.BackgroundWorker> class does the same for tasks that interact with the user interface.</span></span> <span data-ttu-id="fff70-107"><xref:System.Threading.Timer> 類別會定期執行背景工作。</span><span class="sxs-lookup"><span data-stu-id="fff70-107">The <xref:System.Threading.Timer> class executes background tasks at timed intervals.</span></span>  
-  
- <span data-ttu-id="fff70-108">此外，還有一些類別會同步處理執行緒的活動，其中包括在 .NET Framework 2.0 版中引入的 <xref:System.Threading.Semaphore> 和 <xref:System.Threading.EventWaitHandle> 類別。</span><span class="sxs-lookup"><span data-stu-id="fff70-108">In addition, there are a number of classes that synchronize activities of threads, including the <xref:System.Threading.Semaphore> and <xref:System.Threading.EventWaitHandle> classes introduced in the .NET Framework version 2.0.</span></span> <span data-ttu-id="fff70-109">[同步處理原始物件概觀](../../../docs/standard/threading/overview-of-synchronization-primitives.md)中將比較這些類別的功能。</span><span class="sxs-lookup"><span data-stu-id="fff70-109">The features of these classes are compared in [Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md).</span></span>  
-  
-## <a name="in-this-section"></a><span data-ttu-id="fff70-110">本節內容</span><span class="sxs-lookup"><span data-stu-id="fff70-110">In This Section</span></span>  
- [<span data-ttu-id="fff70-111">Managed 執行緒集區</span><span class="sxs-lookup"><span data-stu-id="fff70-111">The Managed Thread Pool</span></span>](../../../docs/standard/threading/the-managed-thread-pool.md)  
- <span data-ttu-id="fff70-112">說明 **ThreadPool** 類別，這個類別可讓您要求執行緒執行工作，而不需要自行進行任何執行緒管理。</span><span class="sxs-lookup"><span data-stu-id="fff70-112">Explains the **ThreadPool** class, which enables you to request a thread to execute a task without having to do any thread management yourself.</span></span>  
-  
- [<span data-ttu-id="fff70-113">計時器</span><span class="sxs-lookup"><span data-stu-id="fff70-113">Timers</span></span>](../../../docs/standard/threading/timers.md)  
- <span data-ttu-id="fff70-114">說明可用於多執行緒環境的計時器。</span><span class="sxs-lookup"><span data-stu-id="fff70-114">Describes timers that can be used in a multithreaded environment.</span></span>  
-  
- [<span data-ttu-id="fff70-115">監視</span><span class="sxs-lookup"><span data-stu-id="fff70-115">Monitors</span></span>](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
- <span data-ttu-id="fff70-116">說明如何使用 **Monitor** 類別來同步存取成員，或建置自己的執行緒管理型別。</span><span class="sxs-lookup"><span data-stu-id="fff70-116">Explains how to use the **Monitor** class to synchronize access to a member or to build your own thread management types.</span></span>  
-  
- [<span data-ttu-id="fff70-117">等候控制代碼</span><span class="sxs-lookup"><span data-stu-id="fff70-117">Wait Handles</span></span>](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
- <span data-ttu-id="fff70-118">描述 <xref:System.Threading.WaitHandle> 類別，這是事件等候控制代碼、Mutex 和信號的抽象基底類別，可用來等候多個同步處理事件。</span><span class="sxs-lookup"><span data-stu-id="fff70-118">Describes the <xref:System.Threading.WaitHandle> class, the abstract base class for event wait handles, mutexes, and semaphores, which enables waiting for multiple synchronization events.</span></span>  
-  
- [<span data-ttu-id="fff70-119">EventWaitHandle、AutoResetEvent、CountdownEvent、ManualResetEvent</span><span class="sxs-lookup"><span data-stu-id="fff70-119">EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent</span></span>](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
- <span data-ttu-id="fff70-120">描述 Managed 事件等候控制代碼，可藉由發出信號和等候信號來同步處理執行緒活動。</span><span class="sxs-lookup"><span data-stu-id="fff70-120">Describes managed event wait handles, which are used to synchronize thread activities by signaling and waiting for signals.</span></span>  
-  
- [<span data-ttu-id="fff70-121">Mutex</span><span class="sxs-lookup"><span data-stu-id="fff70-121">Mutexes</span></span>](../../../docs/standard/threading/mutexes.md)  
- <span data-ttu-id="fff70-122">說明如何使用 <xref:System.Threading.Mutex> 來同步處理對物件的存取，或建置自己的同步處理機制。</span><span class="sxs-lookup"><span data-stu-id="fff70-122">Explains how to use a <xref:System.Threading.Mutex> to synchronize access to an object or to build your own synchronization mechanisms.</span></span>  
-  
- [<span data-ttu-id="fff70-123">Interlocked 作業</span><span class="sxs-lookup"><span data-stu-id="fff70-123">Interlocked Operations</span></span>](../../../docs/standard/threading/interlocked-operations.md)  
- <span data-ttu-id="fff70-124">說明如何使用 <xref:System.Threading.Interlocked> 類別來遞增或遞減值，並在單一不可部分完成的作業中儲存這個值。</span><span class="sxs-lookup"><span data-stu-id="fff70-124">Explains how to use the <xref:System.Threading.Interlocked> class to increment or decrement a value and store the value in a single atomic operation.</span></span>  
-  
- [<span data-ttu-id="fff70-125">Reader-Writer 鎖定</span><span class="sxs-lookup"><span data-stu-id="fff70-125">Reader-Writer Locks</span></span>](../../../docs/standard/threading/reader-writer-locks.md)  
- <span data-ttu-id="fff70-126">定義實作單一寫入器/多個讀取器語意的鎖定。</span><span class="sxs-lookup"><span data-stu-id="fff70-126">Defines a lock that implements single-writer/multiple-reader semantics.</span></span>  
-  
- [<span data-ttu-id="fff70-127">Semaphore 和 SemaphoreSlim</span><span class="sxs-lookup"><span data-stu-id="fff70-127">Semaphore and SemaphoreSlim</span></span>](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)  
- <span data-ttu-id="fff70-128">描述 <xref:System.Threading.Semaphore> 物件，並說明如何使用這些物件來控制對有限資源的存取。</span><span class="sxs-lookup"><span data-stu-id="fff70-128">Describes <xref:System.Threading.Semaphore> objects and explains how to use them to control access to limited resources.</span></span>  
-  
- [<span data-ttu-id="fff70-129">同步處理原始物件概觀</span><span class="sxs-lookup"><span data-stu-id="fff70-129">Overview of Synchronization Primitives</span></span>](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
- <span data-ttu-id="fff70-130">比較提供用以鎖定及同步處理 Managed 執行緒之 .NET Framework 類別的功能。</span><span class="sxs-lookup"><span data-stu-id="fff70-130">Compares the features of the .NET Framework classes provided for locking and synchronizing managed threads.</span></span>  
-  
- [<span data-ttu-id="fff70-131">barrier</span><span class="sxs-lookup"><span data-stu-id="fff70-131">Barrier</span></span>](../../../docs/standard/threading/barrier.md)  
- <span data-ttu-id="fff70-132">描述 <xref:System.Threading.Barrier> 物件，這些物件會實作屏障模式以便協調階段式作業中的執行緒。</span><span class="sxs-lookup"><span data-stu-id="fff70-132">Describes <xref:System.Threading.Barrier> objects that implement the barrier pattern for coordination of threads in phased operations.</span></span>  
-  
- [<span data-ttu-id="fff70-133">SpinLock</span><span class="sxs-lookup"><span data-stu-id="fff70-133">SpinLock</span></span>](../../../docs/standard/threading/spinlock.md)  
- <span data-ttu-id="fff70-134">描述 <xref:System.Threading.SpinLock>，這是適用於特定低階案例之 Monitor 類別的輕量型替代方案。</span><span class="sxs-lookup"><span data-stu-id="fff70-134">Describes <xref:System.Threading.SpinLock>, a lightweight alternative to the Monitor class for certain low-level scenarios.</span></span>  
-  
- [<span data-ttu-id="fff70-135">SpinWait</span><span class="sxs-lookup"><span data-stu-id="fff70-135">SpinWait</span></span>](../../../docs/standard/threading/spinwait.md)  
- <span data-ttu-id="fff70-136">描述 <xref:System.Threading.SpinWait>，這是在起始核心架構等候之前執行忙碌空轉的低階同步處理原始物件。</span><span class="sxs-lookup"><span data-stu-id="fff70-136">Describes <xref:System.Threading.SpinWait>, a low level synchronization primitive that performs busy spinning prior to initiating a kernel-based wait.</span></span>  
-  
-## <a name="reference"></a><span data-ttu-id="fff70-137">參考資料</span><span class="sxs-lookup"><span data-stu-id="fff70-137">Reference</span></span>  
- <xref:System.Threading.Thread>  
- <span data-ttu-id="fff70-138">提供 **Thread** 類別的參考文件，不論這個類別是來自 Unmanaged 程式碼或是在 Managed 應用程式中建立，都會代表 Managed 執行緒。</span><span class="sxs-lookup"><span data-stu-id="fff70-138">Provides reference documentation for the **Thread** class, which represents a managed thread, whether it came from unmanaged code or was created in a managed application.</span></span>  
-  
- <xref:System.ComponentModel.BackgroundWorker>  
- <span data-ttu-id="fff70-139">啟用與使用者介面互動的背景工作，透過使用者介面執行緒上引發的事件來通訊。</span><span class="sxs-lookup"><span data-stu-id="fff70-139">Enables background tasks that interact with the user interface, communicating via events raised on the user-interface thread.</span></span>  
-  
-## <a name="related-sections"></a><span data-ttu-id="fff70-140">相關章節</span><span class="sxs-lookup"><span data-stu-id="fff70-140">Related Sections</span></span>  
- [<span data-ttu-id="fff70-141">非同步檔案 I/O</span><span class="sxs-lookup"><span data-stu-id="fff70-141">Asynchronous File I/O</span></span>](../../../docs/standard/io/asynchronous-file-i-o.md)  
- <span data-ttu-id="fff70-142">描述 I/O 非同步完成通訊埠如何使用執行緒集區，要求只有在輸入/輸出作業完成時才進行處理。</span><span class="sxs-lookup"><span data-stu-id="fff70-142">Describes how I/O asynchronous completion ports use the thread pool to require processing only when an input/output operation completes.</span></span>  
-  
- [<span data-ttu-id="fff70-143">工作平行程式庫 (TPL)</span><span class="sxs-lookup"><span data-stu-id="fff70-143">Task Parallel Library (TPL)</span></span>](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
- <span data-ttu-id="fff70-144">描述在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] (含) 以後版本中進行多執行緒程式設計的建議方法。</span><span class="sxs-lookup"><span data-stu-id="fff70-144">Describes the recommended approach for multithreaded programming in the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] and later.</span></span>
+# <a name="threading-objects-and-features"></a><span data-ttu-id="3eadf-102">執行緒物件和功能</span><span class="sxs-lookup"><span data-stu-id="3eadf-102">Threading objects and features</span></span>
+
+<span data-ttu-id="3eadf-103">除了 <xref:System.Threading.Thread?displayProperty=nameWithType> 類別以外，.NET 還會提供一些類別來協助您開發多執行緒應用程式。</span><span class="sxs-lookup"><span data-stu-id="3eadf-103">Along with the <xref:System.Threading.Thread?displayProperty=nameWithType> class, .NET provides a number of classes that help you develop multithreaded applications.</span></span> <span data-ttu-id="3eadf-104">下列文章概述這些類別：</span><span class="sxs-lookup"><span data-stu-id="3eadf-104">The following articles provide overview of those classes:</span></span>
+
+|<span data-ttu-id="3eadf-105">標題</span><span class="sxs-lookup"><span data-stu-id="3eadf-105">Title</span></span>|<span data-ttu-id="3eadf-106">描述</span><span class="sxs-lookup"><span data-stu-id="3eadf-106">Description</span></span>|  
+|-----------|-----------------|  
+|[<span data-ttu-id="3eadf-107">受控執行緒集區</span><span class="sxs-lookup"><span data-stu-id="3eadf-107">The managed thread pool</span></span>](the-managed-thread-pool.md)|<span data-ttu-id="3eadf-108">描述 <xref:System.Threading.ThreadPool?displayProperty=nameWithType> 類別，這個類別提供 .NET 受控背景工作執行緒集區。</span><span class="sxs-lookup"><span data-stu-id="3eadf-108">Describes the <xref:System.Threading.ThreadPool?displayProperty=nameWithType> class, which provides a pool of worker threads that are managed by .NET.</span></span>|  
+|[<span data-ttu-id="3eadf-109">計時器</span><span class="sxs-lookup"><span data-stu-id="3eadf-109">Timers</span></span>](timers.md)|<span data-ttu-id="3eadf-110">說明可用於多執行緒環境的計時器。</span><span class="sxs-lookup"><span data-stu-id="3eadf-110">Describes timers that can be used in a multithreaded environment.</span></span>|
+|[<span data-ttu-id="3eadf-111">同步處理原始物件概觀</span><span class="sxs-lookup"><span data-stu-id="3eadf-111">Overview of synchronization primitives</span></span>](overview-of-synchronization-primitives.md)|<span data-ttu-id="3eadf-112">描述可用來同步對資料的存取或控制執行緒互動的類別。</span><span class="sxs-lookup"><span data-stu-id="3eadf-112">Describes classes that can be used to synchronize access to data or control thread interaction.</span></span>|
+|[<span data-ttu-id="3eadf-113">EventWaitHandle、AutoResetEvent、CountdownEvent、ManualResetEvent</span><span class="sxs-lookup"><span data-stu-id="3eadf-113">EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent</span></span>](eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)|<span data-ttu-id="3eadf-114">描述 Managed 事件等候控制代碼，可藉由發出信號和等候信號來同步處理執行緒活動。</span><span class="sxs-lookup"><span data-stu-id="3eadf-114">Describes managed event wait handles, which are used to synchronize thread activities by signaling and waiting for signals.</span></span>|
+|[<span data-ttu-id="3eadf-115">Mutex</span><span class="sxs-lookup"><span data-stu-id="3eadf-115">Mutexes</span></span>](mutexes.md)|<span data-ttu-id="3eadf-116">說明如何使用 <xref:System.Threading.Mutex?displayProperty=nameWithType> 同步對物件的存取，或建置自己的同步處理機制。</span><span class="sxs-lookup"><span data-stu-id="3eadf-116">Describes how to use a <xref:System.Threading.Mutex?displayProperty=nameWithType> to synchronize access to an object or to build your own synchronization mechanisms.</span></span>|
+|[<span data-ttu-id="3eadf-117">Interlocked 作業</span><span class="sxs-lookup"><span data-stu-id="3eadf-117">Interlocked operations</span></span>](interlocked-operations.md)|<span data-ttu-id="3eadf-118">描述 <xref:System.Threading.Interlocked?displayProperty=nameWithType> 類別，這個類別為多個執行緒共用的變數提供不可部分完成的作業。</span><span class="sxs-lookup"><span data-stu-id="3eadf-118">Describes the <xref:System.Threading.Interlocked?displayProperty=nameWithType> class, which provides atomic operations for variables that are shared by multiple threads.</span></span>|
+|[<span data-ttu-id="3eadf-119">Reader-Writer 鎖定</span><span class="sxs-lookup"><span data-stu-id="3eadf-119">Reader-Writer Locks</span></span>](reader-writer-locks.md)|<span data-ttu-id="3eadf-120">描述 <xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> 類別，這個類別提供單一寫入器/多個讀取器語意。</span><span class="sxs-lookup"><span data-stu-id="3eadf-120">Describes the <xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> class, which provides single-writer/multiple-reader semantics.</span></span>|
+|[<span data-ttu-id="3eadf-121">Semaphore 和 SemaphoreSlim</span><span class="sxs-lookup"><span data-stu-id="3eadf-121">Semaphore and SemaphoreSlim</span></span>](semaphore-and-semaphoreslim.md)|<span data-ttu-id="3eadf-122">描述 <xref:System.Threading.Semaphore?displayProperty=nameWithType> 類別，並說明如何用以控制對有限資源的存取。</span><span class="sxs-lookup"><span data-stu-id="3eadf-122">Describes the <xref:System.Threading.Semaphore?displayProperty=nameWithType> class and explains how to use it to control access to limited resources.</span></span>|
+|[<span data-ttu-id="3eadf-123">barrier</span><span class="sxs-lookup"><span data-stu-id="3eadf-123">Barrier</span></span>](barrier.md)|<span data-ttu-id="3eadf-124">描述 <xref:System.Threading.Barrier?displayProperty=nameWithType> 類別，這個類別會實作屏障模式以便協調階段式作業中的執行緒。</span><span class="sxs-lookup"><span data-stu-id="3eadf-124">Describes the <xref:System.Threading.Barrier?displayProperty=nameWithType> class that implements the barrier pattern for coordination of threads in phased operations.</span></span>|
+|[<span data-ttu-id="3eadf-125">SpinLock</span><span class="sxs-lookup"><span data-stu-id="3eadf-125">SpinLock</span></span>](spinlock.md)|<span data-ttu-id="3eadf-126">描述 <xref:System.Threading.SpinLock?displayProperty=nameWithType> 類別，這是適用於特定低階案例之 <xref:System.Threading.Monitor?displayProperty=nameWithType> 類別的輕量型替代方案。</span><span class="sxs-lookup"><span data-stu-id="3eadf-126">Describes the <xref:System.Threading.SpinLock?displayProperty=nameWithType> class, which is a lightweight alternative to the <xref:System.Threading.Monitor?displayProperty=nameWithType> class for certain low-level scenarios.</span></span>|
+|[<span data-ttu-id="3eadf-127">SpinWait</span><span class="sxs-lookup"><span data-stu-id="3eadf-127">SpinWait</span></span>](spinwait.md)|<span data-ttu-id="3eadf-128">描述 <xref:System.Threading.SpinWait?displayProperty=nameWithType> 類別，這是在起始核心架構等候之前，執行忙碌空轉的低階同步處理原始物件。</span><span class="sxs-lookup"><span data-stu-id="3eadf-128">Describes the <xref:System.Threading.SpinWait?displayProperty=nameWithType> class, which is a low-level synchronization primitive that performs busy spinning prior to initiating a kernel-based wait.</span></span>|
+
+## <a name="see-also"></a><span data-ttu-id="3eadf-129">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3eadf-129">See also</span></span>
+
+- <xref:System.Threading.Monitor?displayProperty=nameWithType>
+- <xref:System.Threading.WaitHandle?displayProperty=nameWithType>
+- <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>
+- [<span data-ttu-id="3eadf-130">使用執行緒和執行緒處理</span><span class="sxs-lookup"><span data-stu-id="3eadf-130">Using threads and threading</span></span>](using-threads-and-threading.md)
+- [<span data-ttu-id="3eadf-131">非同步檔案 I/O</span><span class="sxs-lookup"><span data-stu-id="3eadf-131">Asynchronous File I/O</span></span>](../io/asynchronous-file-i-o.md)
+- [<span data-ttu-id="3eadf-132">平行程式設計</span><span class="sxs-lookup"><span data-stu-id="3eadf-132">Parallel Programming</span></span>](../parallel-programming/index.md)
+- [<span data-ttu-id="3eadf-133">工作平行程式庫 (TPL)</span><span class="sxs-lookup"><span data-stu-id="3eadf-133">Task Parallel Library (TPL)</span></span>](../parallel-programming/task-parallel-library-tpl.md)
