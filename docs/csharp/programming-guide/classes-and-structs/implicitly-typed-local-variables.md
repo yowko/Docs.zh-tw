@@ -5,12 +5,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 91020886e381d8410358cae9511107e28c51452a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 2e678886162196c3a0fe4762bf766596cdc02225
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43464904"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501399"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>隱含類型區域變數 (C# 程式設計手冊)
 您可以宣告區域變數而不提供明確類型。 `var` 關鍵字會指示編譯器從初始化陳述式右側的運算式推斷變數的類型。 推斷類型可能是內建類型、匿名型別、使用者定義型別，或 .NET Framework 類別庫中定義的類型。 如需如何使用 `var` 初始化陣列的詳細資訊，請參閱[隱含型別陣列](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)。  
@@ -73,15 +73,16 @@ ms.locfileid: "43464904"
   
  無論如何，使用 `var` 都可能會使您的程式碼對其他開發人員而言更難以了解。 基於這個理由，C# 文件通常只有在必要時才會使用 `var`。  
   
-## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [隱含型別陣列](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)  
- [如何：在查詢運算式中使用隱含型別區域變數和陣列](../../../csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)  
- [匿名類型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
- [物件和集合初始設定式](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
- [var](../../../csharp/language-reference/keywords/var.md)  
- [LINQ 查詢運算式](../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [LINQ (Language-Integrated Query)](../../../csharp/linq/index.md)  
- [for](../../../csharp/language-reference/keywords/for.md)  
- [foreach、in](../../../csharp/language-reference/keywords/foreach-in.md)  
- [using 陳述式](../../../csharp/language-reference/keywords/using-statement.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [隱含型別陣列](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)  
+- [如何：在查詢運算式中使用隱含型別區域變數和陣列](../../../csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)  
+- [匿名類型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+- [物件和集合初始設定式](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
+- [var](../../../csharp/language-reference/keywords/var.md)  
+- [LINQ 查詢運算式](../../../csharp/programming-guide/linq-query-expressions/index.md)  
+- [LINQ (Language-Integrated Query)](../../../csharp/linq/index.md)  
+- [for](../../../csharp/language-reference/keywords/for.md)  
+- [foreach、in](../../../csharp/language-reference/keywords/foreach-in.md)  
+- [using 陳述式](../../../csharp/language-reference/keywords/using-statement.md)

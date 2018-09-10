@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: ca21aeb6ae1cf53bc3ff4edbcf575b733a52a1cf
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: 22574df77250479250f1ce1369c4bfb59c456d26
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472486"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525681"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>依字母順序列出 C# 編譯器選項
 
@@ -82,7 +82,7 @@ ms.locfileid: "34472486"
 
 ## <a name="see-also"></a>請參閱
 
- [C# 編譯器選項](index.md)  
- [依分類列出的 C# 編譯器選項](listed-by-category.md)  
- [如何：為 Visual Studio 命令列設定環境變數](how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
- [\<編譯器> 項目](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)
+- [C# 編譯器選項](index.md)  
+- [依分類列出的 C# 編譯器選項](listed-by-category.md)  
+- [如何：為 Visual Studio 命令列設定環境變數](how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
+- [\<編譯器> 項目](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)

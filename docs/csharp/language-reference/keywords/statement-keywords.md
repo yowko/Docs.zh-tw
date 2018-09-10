@@ -5,12 +5,12 @@ helpviewer_keywords:
 - keywords [C#], statements
 - statements [C#]
 ms.assetid: fad0c004-e282-4ec8-a127-bca7fd7a0b6f
-ms.openlocfilehash: 2485a6258913b1dae04c093fa74a8acf1aaa3ca3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c9f253f31a7376bf0429784a031188b91cc070df
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269657"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515823"
 ---
 # <a name="statement-keywords-c-reference"></a>陳述式關鍵字 (C# 參考)
 陳述式是程式指示。 除了下表中所參考主題所述的項目之外，會依序執行陳述式。 下表列出 C# 陳述式關鍵字。 如需未使用任何關鍵字表示之陳述式的詳細資訊，請參閱[陳述式](../../../csharp/programming-guide/statements-expressions-operators/statements.md)。  
@@ -25,7 +25,8 @@ ms.locfileid: "33269657"
 [fixed 陳述式](../../../csharp/language-reference/keywords/fixed-statement.md)|[fixed](../../../csharp/language-reference/keywords/fixed-statement.md)|  
 |[lock 陳述式](../../../csharp/language-reference/keywords/lock-statement.md)|[lock](../../../csharp/language-reference/keywords/lock-statement.md)|  
   
-## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [陳述式](../../../csharp/programming-guide/statements-expressions-operators/statements.md)  
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 參考](../../../csharp/language-reference/index.md)  
+- [陳述式](../../../csharp/programming-guide/statements-expressions-operators/statements.md)  
+- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)

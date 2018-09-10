@@ -2,12 +2,12 @@
 title: 建立自訂屬性 (C#)
 ms.date: 07/20/2015
 ms.assetid: 500e1977-c6de-462d-abce-78a0eb1eda22
-ms.openlocfilehash: c1532d52e1e69c83a04ead7b771cd460f43d56b3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5a846771eb26e3760e3f47458b862356f4da1ae6
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33315876"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503702"
 ---
 # <a name="creating-custom-attributes-c"></a>建立自訂屬性 (C#)
 您可以建立自己的自訂屬性，方法是定義屬性類別，這是直接或間接衍生自 <xref:System.Attribute> 的類別，它能快速且簡單地在中繼資料中識別屬性定義。 假設您想要用撰寫類型的程式設計人員姓名來標記類型。 您可能會定義自訂的 `Author` 屬性類別：  
@@ -66,11 +66,12 @@ class SampleClass
 > [!NOTE]
 >  如果您的屬性類別包含屬性，則該屬性必須是讀寫。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Reflection>  
- [C# 程式設計指南](../../../../csharp/programming-guide/index.md)  
- [撰寫自訂屬性](../../../../standard/attributes/writing-custom-attributes.md)  
- [反映 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
- [屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
- [使用反射存取屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
- [AttributeUsage (C#)](../../../../csharp/programming-guide/concepts/attributes/attributeusage.md)
+## <a name="see-also"></a>請參閱
+
+- <xref:System.Reflection>  
+- [C# 程式設計指南](../../../../csharp/programming-guide/index.md)  
+- [撰寫自訂屬性](../../../../standard/attributes/writing-custom-attributes.md)  
+- [反映 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
+- [屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
+- [使用反射存取屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
+- [AttributeUsage (C#)](../../../../csharp/programming-guide/concepts/attributes/attributeusage.md)

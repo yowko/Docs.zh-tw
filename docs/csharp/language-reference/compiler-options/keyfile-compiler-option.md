@@ -9,11 +9,11 @@ helpviewer_keywords:
 - keyfile compiler option [C#]
 ms.assetid: 0815f9de-ace4-4e98-b4c6-13c55dea40c2
 ms.openlocfilehash: 5e5ef095fbb982b0d37d7f44d4d57f27c20a72c1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43400079"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511895"
 ---
 # <a name="-keyfile-c-compiler-options"></a>-keyfile (C# 編譯器選項)
 指定包含密碼編譯金鑰的檔名。  

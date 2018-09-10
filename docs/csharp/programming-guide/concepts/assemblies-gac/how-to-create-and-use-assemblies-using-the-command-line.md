@@ -2,12 +2,12 @@
 title: 如何：使用命令列建立和使用組件 (C#)
 ms.date: 07/20/2015
 ms.assetid: 408ddce3-89e3-4e12-8353-34a49beeb72b
-ms.openlocfilehash: ef872992f17eaaeacf451fa10ef792c47445df80
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0cb964991cdbcdb3fa528ac96a0e883a37439099
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319640"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514551"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>如何：使用命令列建立和使用組件 (C#)
 組件又稱為動態連結程式庫 (DLL)，會在執行階段連結到您的程式。 為了示範如何建立和使用 DLL，請考慮下列案例：  
@@ -122,7 +122,8 @@ csc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.cs
   
  如需從命令列建立的詳細資訊，請參閱[使用 csc.exe 建置命令列](../../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。  
   
-## <a name="see-also"></a>請參閱  
- [C# 程式設計指南](../../../../csharp/programming-guide/index.md)  
- [組件和全域組件快取 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
- [建立類別以包裝 DLL 函式](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 程式設計指南](../../../../csharp/programming-guide/index.md)  
+- [組件和全域組件快取 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+- [建立類別以包裝 DLL 函式](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

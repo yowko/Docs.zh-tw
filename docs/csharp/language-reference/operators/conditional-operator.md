@@ -10,11 +10,11 @@ helpviewer_keywords:
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
 ms.openlocfilehash: 150149453a67d8e5319461266865cb25be180347
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43421500"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506428"
 ---
 # <a name="-operator-c-reference"></a>?: 運算子 (C# 參考)
 條件運算子 (`?:`) 通稱為三元條件運算式，是根據布林運算式的值傳回兩個值的其中一個。 以下是條件運算子的語法。  

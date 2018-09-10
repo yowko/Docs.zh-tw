@@ -4,11 +4,11 @@ description: 最早的語言版本有哪些內容，而在之後有什麼演變�
 author: erikdietrich
 ms.date: 09/20/2017
 ms.openlocfilehash: 7a7030eb9479ebae553f3bb4d569c9a9f931db9a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43391244"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504409"
 ---
 # <a name="the-history-of-c"></a>C# 的歷史 #
 

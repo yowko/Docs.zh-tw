@@ -6,17 +6,18 @@ metadata:
   audience: Developer
   ms.topic: quickstart
   ms.custom: mvc
+  ms.date: 08/24/2018
   level: Beginner
   nextTutorialHref: branches-and-loops.yml
   nextTutorialTitle: C# 中的分支與迴圈
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: f772109fe1066726f8ced1a4d41375a25ef49425
-  ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+  ms.openlocfilehash: 473d0619ad9a68e9d5aea0cf5fa9daf092f623f5
+  ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/07/2018
-  ms.locfileid: "33807768"
+  ms.lasthandoff: 09/04/2018
+  ms.locfileid: "43507852"
 items:
 - durationInMinutes: 1
   content: >

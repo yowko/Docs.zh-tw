@@ -2,12 +2,12 @@
 title: 分組資料 (C#)
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-ms.openlocfilehash: 1d2aca79fd6ae5df84b34a903ecb5e18ae7ab5a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 42e93bf291b0921d7aafa07265d1193387d46aa6
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327433"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500311"
 ---
 # <a name="grouping-data-c"></a>分組資料 (C#)
 分組指的是將資料放在群組中，好讓每一個群組中的項目共用共同的屬性。  
@@ -59,12 +59,13 @@ foreach (var group in query)
 */  
 ```  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Linq>  
- [標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [group 子句](../../../../csharp/language-reference/keywords/group-clause.md)  
- [如何：建立巢狀群組](../../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md)  
- [如何：依副檔名分組檔案 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
- [如何：將查詢結果分組](../../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md)  
- [如何：在分組作業上執行子查詢](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)  
- [如何：使用群組將檔案分割成許多檔案 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+## <a name="see-also"></a>請參閱
+
+- <xref:System.Linq>  
+- [標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- [group 子句](../../../../csharp/language-reference/keywords/group-clause.md)  
+- [如何：建立巢狀群組](../../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md)  
+- [如何：依副檔名分組檔案 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
+- [如何：將查詢結果分組](../../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md)  
+- [如何：在分組作業上執行子查詢](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)  
+- [如何：使用群組將檔案分割成許多檔案 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

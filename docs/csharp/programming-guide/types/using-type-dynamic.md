@@ -6,11 +6,11 @@ helpviewer_keywords:
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
 ms.openlocfilehash: b1ea9240da66b77723c002c6527135339af9e352
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43419629"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502529"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>使用 dynamic 類型 (C# 程式設計手冊)
 

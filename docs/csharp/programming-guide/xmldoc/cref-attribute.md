@@ -4,11 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: a89c7170de956bae65f7018130ba27e61c076376
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e9e14cf4e7051e52df20e899e9070e5b728321e5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514599"
 ---
 # <a name="cref-attribute-c-programming-guide"></a>cref 屬性 (C# 程式設計手冊)
 `cref` 屬性在 XML 文件標記中表示「程式碼參考」。 它會指定標記的內部文字是程式碼項目，例如類型、方法或屬性。 [Sandcastle](https://github.com/EWSoftware/SHFB) 等文件工具使用 `cref` 屬性自動產生記錄類型或成員的頁面超連結。  
@@ -117,6 +118,7 @@ ms.lasthandoff: 05/04/2018
 </doc>  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [XML 文件註解](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
- [建議使用的文件註解標籤](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+## <a name="see-also"></a>請參閱
+
+- [XML 文件註解](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
+- [建議使用的文件註解標籤](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

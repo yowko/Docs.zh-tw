@@ -2,12 +2,12 @@
 title: 序列化至 Files、TextWriters 和 XmlWriters1
 ms.date: 07/20/2015
 ms.assetid: bd3ea6f7-895b-4ff4-a625-fe2bb55b1886
-ms.openlocfilehash: 903e6f5b6a8cd88c140e6759136301a6305cee2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 011e32054e39ee0f7f70baf9867f7cab6fe34540
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330206"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507001"
 ---
 # <a name="serializing-to-files-textwriters-and-xmlwriters"></a>序列化至 File、TextWriter 和 XmlWriter
 您可以將 XML 樹狀結構序列化至 <xref:System.IO.File>、<xref:System.IO.TextWriter> 或 <xref:System.Xml.XmlWriter>。  
@@ -30,5 +30,6 @@ ms.locfileid: "33330206"
   
  如需範例，請參閱適當的參考主題。  
   
-## <a name="see-also"></a>請參閱  
- [序列化 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)
+## <a name="see-also"></a>請參閱
+
+- [序列化 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)

@@ -2,12 +2,12 @@
 title: XPath 使用者適用的 LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 91774511-1dca-4f06-ac0b-913746f104fe
-ms.openlocfilehash: e55e763db2169b704b0b1fcc72e21d9e339b01f6
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: c5c3d94c218f712a127ad313d3b000174644f9dd
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199117"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516402"
 ---
 # <a name="linq-to-xml-for-xpath-users-c"></a>XPath 使用者適用的 LINQ to XML (C#)
 這組主題顯示多個 XPath 運算式及其 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 對等用法。  
@@ -36,7 +36,8 @@ ms.locfileid: "39199117"
 |[如何：根據位置尋找子項目 (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-child-elements-based-on-position-xpath-linq-to-xml.md)|比較如何使用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]，根據其相對位置尋找項目。<br /><br /> 相關聯的 XPath 運算式為：`"Test[position() >= 2 and position() <= 4]"`|  
 |[如何：尋找正前面的同層級項目 (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md)|比較如何使用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 尋找節點正前面的同層級。<br /><br /> 相關聯的 XPath 運算式為：`"preceding-sibling::*[1]"`|  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Xml.XPath?displayProperty=nameWithType>  
- [查詢 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)  
- [使用 XPath 資料模型處理 XML 資料](../../../../standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
+## <a name="see-also"></a>請參閱
+
+- <xref:System.Xml.XPath?displayProperty=nameWithType>  
+- [查詢 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)  
+- [使用 XPath 資料模型處理 XML 資料](../../../../standard/data/xml/process-xml-data-using-the-xpath-data-model.md)

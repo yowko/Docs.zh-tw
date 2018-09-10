@@ -5,12 +5,12 @@ helpviewer_keywords:
 - generics [C#], type parameters
 - type parameters [C#]
 ms.assetid: a03b0ab2-0606-4b41-b7bf-e64d5bb4d18f
-ms.openlocfilehash: 35029b90fb7b905a87055596cf8dcd6a84ef9d36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5bb19e13a6e34e2e22ebc3f9d46edd85fbe0176e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332464"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513705"
 ---
 # <a name="generic-type-parameters-c-programming-guide"></a>泛型型別參數 (C# 程式設計手冊)
 在泛型型別或方法定義中，當型別參數具現化泛型型別的變數時，它們是用戶端指定之特定類型的預留位置。 泛型類別，例如[泛型簡介](../../../csharp/programming-guide/generics/introduction-to-generics.md)中所列的 `GenericList<T>`，不能以現況使用，因為它其實不是類型，更像是類型的藍圖。 若要使用 `GenericList<T>`，用戶端程式碼必須在角括弧內指定型別引數，宣告並具現化建構的類型。 此特定類別的型別引數可以是由編譯器辨識出的任何類型。 您可以建立任何數目的建構類型執行個體，每一個使用不同的型別引數，如下所示：  
@@ -35,8 +35,9 @@ ms.locfileid: "33332464"
   
 -   **請考慮**在參數名稱中指出放在型別參數上的條件約束。 例如，參數的條件約束為 `ISession` 可能稱為 `TSession`。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Collections.Generic>  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [泛型](../../../csharp/programming-guide/generics/index.md)  
- [C++ 範本和 C# 泛型之間的差異](../../../csharp/programming-guide/generics/differences-between-cpp-templates-and-csharp-generics.md)
+## <a name="see-also"></a>請參閱
+
+- <xref:System.Collections.Generic>  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [泛型](../../../csharp/programming-guide/generics/index.md)  
+- [C++ 範本和 C# 泛型之間的差異](../../../csharp/programming-guide/generics/differences-between-cpp-templates-and-csharp-generics.md)

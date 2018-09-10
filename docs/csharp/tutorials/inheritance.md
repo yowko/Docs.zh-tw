@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 646602c4bab311e6d6078378fe423741a1dd38e1
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 15e2ddd7e103857054973d6c4ed7401d6f91af0d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37875220"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502160"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 和 .NET 中的繼承
 
@@ -296,7 +296,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[類別與物件](../tour-of-csharp/classes-and-objects.md)   
-[繼承 (C# 程式設計指南)](../programming-guide/classes-and-structs/inheritance.md)
+- [類別與物件](../tour-of-csharp/classes-and-objects.md)   
+- [繼承 (C# 程式設計指南)](../programming-guide/classes-and-structs/inheritance.md)

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - data types [C#], type system
 ms.assetid: 16b984df-f417-4e02-b1e6-4589d4a614ea
 ms.openlocfilehash: c5c29f5d9a1a4e25e2d5f8816a0df31fa9a91fb1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463308"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506317"
 ---
 # <a name="types-c-reference"></a>類型 (C# 參考)
 C# 類型系統包含下列類別：  

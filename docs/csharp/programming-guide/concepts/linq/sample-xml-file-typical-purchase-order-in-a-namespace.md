@@ -2,12 +2,12 @@
 title: XML 檔範例：命名空間中的典型採購訂單
 ms.date: 07/20/2015
 ms.assetid: 84dc3339-ea32-4ccc-9af6-ab38ddfecced
-ms.openlocfilehash: 0adee32a3ee4d2347bd2e0a84024fe478346987a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: dd3b19a34aa36f4378e247e394f8dae912f13854
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43404226"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510171"
 ---
 # <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a>範例 XML 檔：命名空間中的典型採購訂單
 下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。 這個檔案是典型的採購訂單。 XML 位於命名空間中。  
@@ -54,5 +54,6 @@ ms.locfileid: "43404226"
 </aw:PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [範例 XML 文件 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a>請參閱
+
+- [範例 XML 文件 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

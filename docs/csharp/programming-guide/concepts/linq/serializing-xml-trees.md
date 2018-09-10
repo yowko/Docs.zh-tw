@@ -2,12 +2,12 @@
 title: 序列化 XML 樹狀結構 (C#)
 ms.date: 07/20/2015
 ms.assetid: b3937e54-4ce9-4236-ac96-14e7972aa594
-ms.openlocfilehash: 8f372a05bd69b801085cba9d9a3b11ae01841a2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f9bcf049eb6cfe129971923657f5d70a833209cc
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338347"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500476"
 ---
 # <a name="serializing-xml-trees-c"></a>序列化 XML 樹狀結構 (C#)
 序列化 XML 樹狀結構表示從 XML 樹狀結構產生 XML。 您可以序列化到檔案、<xref:System.IO.TextWriter> 類別的具體實作，或 <xref:System.Xml.XmlWriter> 的具體實作。  
@@ -23,5 +23,6 @@ ms.locfileid: "33338347"
 |[序列化至 File、TextWriter 和 XmlWriter](../../../../csharp/programming-guide/concepts/linq/serializing-to-files-textwriters-and-xmlwriters.md)|描述如何將文件序列化到 <xref:System.IO.File>、<xref:System.IO.TextWriter> 或 <xref:System.Xml.XmlWriter>。|  
 |[序列化至 XmlReader (叫用 XSLT) (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-to-an-xmlreader-invoking-xslt.md)|描述如何建立可讓其他模組讀取 XML 樹狀結構之內容的 <xref:System.Xml.XmlReader>。|  
   
-## <a name="see-also"></a>請參閱  
- [程式設計手冊 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>請參閱
+
+- [程式設計手冊 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

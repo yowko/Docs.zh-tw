@@ -4,11 +4,11 @@ description: 了解如何使用 C# 中的 LINQ 查詢集合。
 ms.date: 11/30/2016
 ms.assetid: 87a76f8a-0b58-4791-90ea-2fe0a30416c9
 ms.openlocfilehash: 7bc59e7009f9ae8d8f66c24e9519d9100404c9c4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480916"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511380"
 ---
 # <a name="query-a-collection-of-objects"></a>查詢物件的集合
 
