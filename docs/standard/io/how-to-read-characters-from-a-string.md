@@ -15,37 +15,38 @@ helpviewer_keywords:
 ms.assetid: 27ea5e52-6db8-42d8-980a-50bcfc7fd270
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c2e128f1011b6daa5c0e8b62252c8adc3175586c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 13a57f8ea7db91e5357ecfb20c4e907f2706f78d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572771"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44194964"
 ---
-# <a name="how-to-read-characters-from-a-string"></a><span data-ttu-id="af6ee-102">如何：從字串中讀取字元</span><span class="sxs-lookup"><span data-stu-id="af6ee-102">How to: Read Characters from a String</span></span>
-<span data-ttu-id="af6ee-103">下列程式碼範例會示範如何以同步和非同步的方式，從字串讀取字元。</span><span class="sxs-lookup"><span data-stu-id="af6ee-103">The following code examples show how to read characters synchronously and asynchronously from a string.</span></span>  
+# <a name="how-to-read-characters-from-a-string"></a><span data-ttu-id="edfec-102">如何：從字串中讀取字元</span><span class="sxs-lookup"><span data-stu-id="edfec-102">How to: Read Characters from a String</span></span>
+<span data-ttu-id="edfec-103">下列程式碼範例會示範如何以同步和非同步的方式，從字串讀取字元。</span><span class="sxs-lookup"><span data-stu-id="edfec-103">The following code examples show how to read characters synchronously and asynchronously from a string.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="af6ee-104">範例</span><span class="sxs-lookup"><span data-stu-id="af6ee-104">Example</span></span>  
- <span data-ttu-id="af6ee-105">此範例會以同步方式，從字串讀取 13 個字元、將其儲存在陣列中，然後顯示這些字元。</span><span class="sxs-lookup"><span data-stu-id="af6ee-105">This example reads 13 characters synchronously from a string, stores them in an array, and displays those characters.</span></span> <span data-ttu-id="af6ee-106">接著，它會讀取字串中剩餘的字元、從陣列的第六個元素開始儲存這些字元，然後顯示陣列的內容。</span><span class="sxs-lookup"><span data-stu-id="af6ee-106">It then reads the remaining characters in the string, stores them in the array starting at the sixth element, and displays the contents of the array.</span></span>  
+## <a name="example"></a><span data-ttu-id="edfec-104">範例</span><span class="sxs-lookup"><span data-stu-id="edfec-104">Example</span></span>  
+ <span data-ttu-id="edfec-105">此範例會以同步方式，從字串讀取 13 個字元、將其儲存在陣列中，然後顯示這些字元。</span><span class="sxs-lookup"><span data-stu-id="edfec-105">This example reads 13 characters synchronously from a string, stores them in an array, and displays those characters.</span></span> <span data-ttu-id="edfec-106">接著，它會讀取字串中剩餘的字元、從陣列的第六個元素開始儲存這些字元，然後顯示陣列的內容。</span><span class="sxs-lookup"><span data-stu-id="edfec-106">It then reads the remaining characters in the string, stores them in the array starting at the sixth element, and displays the contents of the array.</span></span>  
   
  [!code-cpp[Conceptual.StringReader#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.stringreader/cpp/source.cpp#1)]
  [!code-csharp[Conceptual.StringReader#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.stringreader/cs/source.cs#1)]
  [!code-vb[Conceptual.StringReader#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.stringreader/vb/source.vb#1)]  
   
-## <a name="example"></a><span data-ttu-id="af6ee-107">範例</span><span class="sxs-lookup"><span data-stu-id="af6ee-107">Example</span></span>  
- <span data-ttu-id="af6ee-108">下一個範例會以非同步方式，從 <xref:System.Windows.Controls.TextBox> 控制項讀取所有字元，然後將其儲存在陣列中。</span><span class="sxs-lookup"><span data-stu-id="af6ee-108">The next example reads all the characters asynchronously from a <xref:System.Windows.Controls.TextBox> control, and stores them in an array.</span></span> <span data-ttu-id="af6ee-109">接著，它會以非同步方式，在個別的行上，將每個字母或空格字元後面接著分行符號寫入 <xref:System.Windows.Controls.TextBlock> 控制項。</span><span class="sxs-lookup"><span data-stu-id="af6ee-109">It then asynchronously writes each letter or white space character on a separate line followed by a line break to a <xref:System.Windows.Controls.TextBlock> control.</span></span>  
+## <a name="example"></a><span data-ttu-id="edfec-107">範例</span><span class="sxs-lookup"><span data-stu-id="edfec-107">Example</span></span>  
+ <span data-ttu-id="edfec-108">下一個範例會以非同步方式，從 <xref:System.Windows.Controls.TextBox> 控制項讀取所有字元，然後將其儲存在陣列中。</span><span class="sxs-lookup"><span data-stu-id="edfec-108">The next example reads all the characters asynchronously from a <xref:System.Windows.Controls.TextBox> control, and stores them in an array.</span></span> <span data-ttu-id="edfec-109">接著，它會以非同步方式，在個別的行上，將每個字母或空格字元後面接著分行符號寫入 <xref:System.Windows.Controls.TextBlock> 控制項。</span><span class="sxs-lookup"><span data-stu-id="edfec-109">It then asynchronously writes each letter or white space character on a separate line followed by a line break to a <xref:System.Windows.Controls.TextBlock> control.</span></span>  
   
  [!code-csharp[Conceptual.StringReader#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.stringreader/cs/source2.cs#2)]
  [!code-vb[Conceptual.StringReader#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.stringreader/vb/source2.vb#2)]  
   
-## <a name="see-also"></a><span data-ttu-id="af6ee-110">請參閱</span><span class="sxs-lookup"><span data-stu-id="af6ee-110">See Also</span></span>  
- <xref:System.IO.StringReader>  
- <xref:System.IO.StringReader.Read%2A?displayProperty=nameWithType>  
- [<span data-ttu-id="af6ee-111">非同步檔案 I/O</span><span class="sxs-lookup"><span data-stu-id="af6ee-111">Asynchronous File I/O</span></span>](../../../docs/standard/io/asynchronous-file-i-o.md)  
- [<span data-ttu-id="af6ee-112">NIB：操作說明：建立目錄清單</span><span class="sxs-lookup"><span data-stu-id="af6ee-112">NIB: How to: Create a Directory Listing</span></span>](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)  
- [<span data-ttu-id="af6ee-113">如何：讀取和寫入新建立的資料檔案</span><span class="sxs-lookup"><span data-stu-id="af6ee-113">How to: Read and Write to a Newly Created Data File</span></span>](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
- [<span data-ttu-id="af6ee-114">如何：開啟並附加至記錄檔</span><span class="sxs-lookup"><span data-stu-id="af6ee-114">How to: Open and Append to a Log File</span></span>](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
- [<span data-ttu-id="af6ee-115">如何：從檔案讀取文字</span><span class="sxs-lookup"><span data-stu-id="af6ee-115">How to: Read Text from a File</span></span>](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
- [<span data-ttu-id="af6ee-116">如何：將文字寫入檔案</span><span class="sxs-lookup"><span data-stu-id="af6ee-116">How to: Write Text to a File</span></span>](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
- [<span data-ttu-id="af6ee-117">如何：將字元寫入至字串</span><span class="sxs-lookup"><span data-stu-id="af6ee-117">How to: Write Characters to a String</span></span>](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
- [<span data-ttu-id="af6ee-118">檔案和資料流 I/O</span><span class="sxs-lookup"><span data-stu-id="af6ee-118">File and Stream I/O</span></span>](../../../docs/standard/io/index.md)
+## <a name="see-also"></a><span data-ttu-id="edfec-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="edfec-110">See also</span></span>
+
+- <xref:System.IO.StringReader>  
+- <xref:System.IO.StringReader.Read%2A?displayProperty=nameWithType>  
+- [<span data-ttu-id="edfec-111">非同步檔案 I/O</span><span class="sxs-lookup"><span data-stu-id="edfec-111">Asynchronous File I/O</span></span>](../../../docs/standard/io/asynchronous-file-i-o.md)  
+- [<span data-ttu-id="edfec-112">NIB：操作說明：建立目錄清單</span><span class="sxs-lookup"><span data-stu-id="edfec-112">NIB: How to: Create a Directory Listing</span></span>](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)  
+- [<span data-ttu-id="edfec-113">如何：讀取和寫入新建立的資料檔案</span><span class="sxs-lookup"><span data-stu-id="edfec-113">How to: Read and Write to a Newly Created Data File</span></span>](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
+- [<span data-ttu-id="edfec-114">如何：開啟並附加至記錄檔</span><span class="sxs-lookup"><span data-stu-id="edfec-114">How to: Open and Append to a Log File</span></span>](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
+- [<span data-ttu-id="edfec-115">如何：從檔案讀取文字</span><span class="sxs-lookup"><span data-stu-id="edfec-115">How to: Read Text from a File</span></span>](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
+- [<span data-ttu-id="edfec-116">如何：將文字寫入檔案</span><span class="sxs-lookup"><span data-stu-id="edfec-116">How to: Write Text to a File</span></span>](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
+- [<span data-ttu-id="edfec-117">如何：將字元寫入至字串</span><span class="sxs-lookup"><span data-stu-id="edfec-117">How to: Write Characters to a String</span></span>](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
+- [<span data-ttu-id="edfec-118">檔案和資料流 I/O</span><span class="sxs-lookup"><span data-stu-id="edfec-118">File and Stream I/O</span></span>](../../../docs/standard/io/index.md)

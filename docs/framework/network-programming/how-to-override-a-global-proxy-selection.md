@@ -9,16 +9,16 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 244315b5df4200524685bc5b9fb75a0d7fd9b39e
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42930824"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44185031"
 ---
-# <a name="how-to-override-a-global-proxy-selection"></a><span data-ttu-id="96467-102">如何：覆寫全域 Proxy 的選取範圍</span><span class="sxs-lookup"><span data-stu-id="96467-102">How to: Override a Global Proxy Selection</span></span>
-<span data-ttu-id="96467-103">這個範例會在連接埠 80 上將 **WebRequest** 傳送到 `www.contoso.com`，以使用名為 `alternateproxy` 的 Proxy 伺服器覆寫全域 Proxy 的選取範圍。</span><span class="sxs-lookup"><span data-stu-id="96467-103">This example sends a **WebRequest** to `www.contoso.com` that overrides the global proxy selection with a proxy server named `alternateproxy` on port 80.</span></span>  
+# <a name="how-to-override-a-global-proxy-selection"></a><span data-ttu-id="810c0-102">如何：覆寫全域 Proxy 的選取範圍</span><span class="sxs-lookup"><span data-stu-id="810c0-102">How to: Override a Global Proxy Selection</span></span>
+<span data-ttu-id="810c0-103">這個範例會在連接埠 80 上將 **WebRequest** 傳送到 `www.contoso.com`，以使用名為 `alternateproxy` 的 Proxy 伺服器覆寫全域 Proxy 的選取範圍。</span><span class="sxs-lookup"><span data-stu-id="810c0-103">This example sends a **WebRequest** to `www.contoso.com` that overrides the global proxy selection with a proxy server named `alternateproxy` on port 80.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="96467-104">範例</span><span class="sxs-lookup"><span data-stu-id="96467-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="810c0-104">範例</span><span class="sxs-lookup"><span data-stu-id="810c0-104">Example</span></span>  
   
 ```csharp  
 WebRequest req = WebRequest.Create("http://www.contoso.com/");  
@@ -30,11 +30,11 @@ Dim req As WebRequest = WebRequest.Create("http://www.contoso.com/")
 req.Proxy = New WebProxy("http://alternateproxy:80/")  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="96467-105">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="96467-105">Compiling the Code</span></span>  
- <span data-ttu-id="96467-106">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="96467-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="810c0-105">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="810c0-105">Compiling the Code</span></span>  
+ <span data-ttu-id="810c0-106">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="810c0-106">This example requires:</span></span>  
   
--   <span data-ttu-id="96467-107">**System.Net** 命名空間的[`using`指示詞](~/docs/csharp/language-reference/keywords/using-directive.md)。</span><span class="sxs-lookup"><span data-stu-id="96467-107">A [`using` directive](~/docs/csharp/language-reference/keywords/using-directive.md) for the **System.Net** namespace.</span></span>  
+-   <span data-ttu-id="810c0-107">**System.Net** 命名空間的[`using`指示詞](~/docs/csharp/language-reference/keywords/using-directive.md)。</span><span class="sxs-lookup"><span data-stu-id="810c0-107">A [`using` directive](~/docs/csharp/language-reference/keywords/using-directive.md) for the **System.Net** namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="96467-108">請參閱</span><span class="sxs-lookup"><span data-stu-id="96467-108">See Also</span></span>  
- [<span data-ttu-id="96467-109">使用應用程式通訊協定</span><span class="sxs-lookup"><span data-stu-id="96467-109">Using Application Protocols</span></span>](../../../docs/framework/network-programming/using-application-protocols.md)  
- [<span data-ttu-id="96467-110">透過 Proxy 存取網際網路</span><span class="sxs-lookup"><span data-stu-id="96467-110">Accessing the Internet Through a Proxy</span></span>](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
+## <a name="see-also"></a><span data-ttu-id="810c0-108">請參閱</span><span class="sxs-lookup"><span data-stu-id="810c0-108">See Also</span></span>  
+ [<span data-ttu-id="810c0-109">使用應用程式通訊協定</span><span class="sxs-lookup"><span data-stu-id="810c0-109">Using Application Protocols</span></span>](../../../docs/framework/network-programming/using-application-protocols.md)  
+ [<span data-ttu-id="810c0-110">透過 Proxy 存取網際網路</span><span class="sxs-lookup"><span data-stu-id="810c0-110">Accessing the Internet Through a Proxy</span></span>](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)

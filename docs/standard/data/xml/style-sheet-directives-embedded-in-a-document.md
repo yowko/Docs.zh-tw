@@ -5,16 +5,16 @@ ms.technology: dotnet-standard
 ms.assetid: d79fb295-ebc7-438d-ba1b-05be7d534834
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 08bd33aab6cbeeeb9060f3de3565a05896c6ba7f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 65987c5e29d593758b21259d6367202c882df2de
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43391090"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44201825"
 ---
-# <a name="style-sheet-directives-embedded-in-a-document"></a><span data-ttu-id="e78ea-102">內嵌在文件中的樣式表指示詞</span><span class="sxs-lookup"><span data-stu-id="e78ea-102">Style Sheet Directives Embedded in a Document</span></span>
+# <a name="style-sheet-directives-embedded-in-a-document"></a><span data-ttu-id="40ed6-102">內嵌在文件中的樣式表指示詞</span><span class="sxs-lookup"><span data-stu-id="40ed6-102">Style Sheet Directives Embedded in a Document</span></span>
 
-<span data-ttu-id="e78ea-103">有時候，現有的 XML 會包含 `<?xml:stylesheet?>` 的樣式表指示詞。</span><span class="sxs-lookup"><span data-stu-id="e78ea-103">Occasionally, existing XML contains the style sheet directive of `<?xml:stylesheet?>`.</span></span> <span data-ttu-id="e78ea-104">Microsoft Internet Explorer 將它視為 `<?xml-stylesheet?>` 語法的不同寫法。</span><span class="sxs-lookup"><span data-stu-id="e78ea-104">Microsoft Internet Explorer accepts this as an alternative to the `<?xml-stylesheet?>` syntax.</span></span> <span data-ttu-id="e78ea-105">XML 資料包含 `<?xml:stylesheet?>` 指示詞時，如果嘗試將這個資料載入 XML 文件物件模型 (DOM)，則會擲回例外狀況 (如同下列資料所示)。</span><span class="sxs-lookup"><span data-stu-id="e78ea-105">When the XML data contains an `<?xml:stylesheet?>` directive, as shown in the following data, attempting to load this data into the XML Document Object Model (DOM) throws an exception.</span></span>
+<span data-ttu-id="40ed6-103">有時候，現有的 XML 會包含 `<?xml:stylesheet?>` 的樣式表指示詞。</span><span class="sxs-lookup"><span data-stu-id="40ed6-103">Occasionally, existing XML contains the style sheet directive of `<?xml:stylesheet?>`.</span></span> <span data-ttu-id="40ed6-104">Microsoft Internet Explorer 將它視為 `<?xml-stylesheet?>` 語法的不同寫法。</span><span class="sxs-lookup"><span data-stu-id="40ed6-104">Microsoft Internet Explorer accepts this as an alternative to the `<?xml-stylesheet?>` syntax.</span></span> <span data-ttu-id="40ed6-105">XML 資料包含 `<?xml:stylesheet?>` 指示詞時，如果嘗試將這個資料載入 XML 文件物件模型 (DOM)，則會擲回例外狀況 (如同下列資料所示)。</span><span class="sxs-lookup"><span data-stu-id="40ed6-105">When the XML data contains an `<?xml:stylesheet?>` directive, as shown in the following data, attempting to load this data into the XML Document Object Model (DOM) throws an exception.</span></span>
 
 ```xml
 <?xml version="1.0" ?>
@@ -25,18 +25,18 @@ ms.locfileid: "43391090"
 </root>
 ```
 
-<span data-ttu-id="e78ea-106">因為 DOM 將 `<?xml:stylesheet?>` 視為無效的 **ProcessingInstruction**，所以會發生這種情況。</span><span class="sxs-lookup"><span data-stu-id="e78ea-106">This occurs because the `<?xml:stylesheet?>` is considered an invalid **ProcessingInstruction** to the DOM.</span></span> <span data-ttu-id="e78ea-107">根據 Namespaces in XML 規格，任何 **ProcessingInstruction** 只能是無冒號名稱 (NCName)，相對於限定名稱 (QName)。</span><span class="sxs-lookup"><span data-stu-id="e78ea-107">Any **ProcessingInstruction**, according to the Namespaces in XML specification, can only be no-colon names (NCNames), as opposed to qualified names (QNames).</span></span>
+<span data-ttu-id="40ed6-106">因為 DOM 將 `<?xml:stylesheet?>` 視為無效的 **ProcessingInstruction**，所以會發生這種情況。</span><span class="sxs-lookup"><span data-stu-id="40ed6-106">This occurs because the `<?xml:stylesheet?>` is considered an invalid **ProcessingInstruction** to the DOM.</span></span> <span data-ttu-id="40ed6-107">根據 Namespaces in XML 規格，任何 **ProcessingInstruction** 只能是無冒號名稱 (NCName)，相對於限定名稱 (QName)。</span><span class="sxs-lookup"><span data-stu-id="40ed6-107">Any **ProcessingInstruction**, according to the Namespaces in XML specification, can only be no-colon names (NCNames), as opposed to qualified names (QNames).</span></span>
 
-<span data-ttu-id="e78ea-108">根據 Namespaces in XML 規格的第 6 節，在文件中，讓 **Load** 和 **LoadXml** 方法與規格相符的效果如下：</span><span class="sxs-lookup"><span data-stu-id="e78ea-108">From Section 6 of the Namespaces in XML specification, the effect of having the **Load** and **LoadXml** methods conform to the specification is that in a document:</span></span>
+<span data-ttu-id="40ed6-108">根據 Namespaces in XML 規格的第 6 節，在文件中，讓 **Load** 和 **LoadXml** 方法與規格相符的效果如下：</span><span class="sxs-lookup"><span data-stu-id="40ed6-108">From Section 6 of the Namespaces in XML specification, the effect of having the **Load** and **LoadXml** methods conform to the specification is that in a document:</span></span>
 
-- <span data-ttu-id="e78ea-109">所有的項目型別和屬性名稱都包含零或一個冒號。</span><span class="sxs-lookup"><span data-stu-id="e78ea-109">All element types and attribute names contain either zero or one colon.</span></span>
+- <span data-ttu-id="40ed6-109">所有的項目型別和屬性名稱都包含零或一個冒號。</span><span class="sxs-lookup"><span data-stu-id="40ed6-109">All element types and attribute names contain either zero or one colon.</span></span>
 
-- <span data-ttu-id="e78ea-110">沒有任何實體名稱、ProcessingInstruction 目標或標記法名稱包含冒號。</span><span class="sxs-lookup"><span data-stu-id="e78ea-110">No entity names, ProcessingInstruction targets, or notation names contain any colons.</span></span>
+- <span data-ttu-id="40ed6-110">沒有任何實體名稱、ProcessingInstruction 目標或標記法名稱包含冒號。</span><span class="sxs-lookup"><span data-stu-id="40ed6-110">No entity names, ProcessingInstruction targets, or notation names contain any colons.</span></span>
 
-<span data-ttu-id="e78ea-111">如果 `<?xml:stylesheet?>` 包含冒號，即違反了第二個項目符號中的規則。</span><span class="sxs-lookup"><span data-stu-id="e78ea-111">With the `<?xml:stylesheet?>` containing a colon, you now violate the rule in the second bullet.</span></span>
+<span data-ttu-id="40ed6-111">如果 `<?xml:stylesheet?>` 包含冒號，即違反了第二個項目符號中的規則。</span><span class="sxs-lookup"><span data-stu-id="40ed6-111">With the `<?xml:stylesheet?>` containing a colon, you now violate the rule in the second bullet.</span></span>
 
-<span data-ttu-id="e78ea-112">根據全球資訊網協會 (W3C) [Associating Style Sheets with XML documents Version 1.0 Recommendation](https://www.w3.org/TR/xml-stylesheet/) (建立樣式表與 XML 文件的關聯 1.0 版建議事項)，能建立 XSLT 樣式表與 XML 文件關聯的處理指示為 `<?xml-stylesheet?>`，以破折號取代冒號。</span><span class="sxs-lookup"><span data-stu-id="e78ea-112">According to the World Wide Web Consortium (W3C) [Associating Style Sheets with XML documents Version 1.0 Recommendation](https://www.w3.org/TR/xml-stylesheet/),  the processing instruction to associate an XSLT style sheet with an XML document is `<?xml-stylesheet?>`, with a dash replacing the colon.</span></span>
+<span data-ttu-id="40ed6-112">根據全球資訊網協會 (W3C) [Associating Style Sheets with XML documents Version 1.0 Recommendation](https://www.w3.org/TR/xml-stylesheet/) (建立樣式表與 XML 文件的關聯 1.0 版建議事項)，能建立 XSLT 樣式表與 XML 文件關聯的處理指示為 `<?xml-stylesheet?>`，以破折號取代冒號。</span><span class="sxs-lookup"><span data-stu-id="40ed6-112">According to the World Wide Web Consortium (W3C) [Associating Style Sheets with XML documents Version 1.0 Recommendation](https://www.w3.org/TR/xml-stylesheet/),  the processing instruction to associate an XSLT style sheet with an XML document is `<?xml-stylesheet?>`, with a dash replacing the colon.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="e78ea-113">請參閱</span><span class="sxs-lookup"><span data-stu-id="e78ea-113">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="40ed6-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="40ed6-113">See also</span></span>
 
-[<span data-ttu-id="e78ea-114">XML 文件物件模型 (DOM)</span><span class="sxs-lookup"><span data-stu-id="e78ea-114">XML Document Object Model (DOM)</span></span>](xml-document-object-model-dom.md)  
+- [<span data-ttu-id="40ed6-114">XML 文件物件模型 (DOM)</span><span class="sxs-lookup"><span data-stu-id="40ed6-114">XML Document Object Model (DOM)</span></span>](xml-document-object-model-dom.md)

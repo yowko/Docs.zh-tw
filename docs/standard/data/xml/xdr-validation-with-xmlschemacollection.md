@@ -8,27 +8,27 @@ dev_langs:
 ms.assetid: 00833027-1428-4586-83c1-42f5de3323d1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 72bb3c2badef5262907e2e4fa8b461b576e8867d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: ca806f0f9c7e1ad859affe05d5db8ec0d3b36b03
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43476046"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44078871"
 ---
-# <a name="xdr-validation-with-xmlschemacollection"></a><span data-ttu-id="ee150-102">使用 XmlSchemaCollection 的 XDR 驗證</span><span class="sxs-lookup"><span data-stu-id="ee150-102">XDR Validation with XmlSchemaCollection</span></span>
+# <a name="xdr-validation-with-xmlschemacollection"></a><span data-ttu-id="6b5d9-102">使用 XmlSchemaCollection 的 XDR 驗證</span><span class="sxs-lookup"><span data-stu-id="6b5d9-102">XDR Validation with XmlSchemaCollection</span></span>
 
-<span data-ttu-id="ee150-103">如果您驗證的 XML 資料精簡 (XDR) 結構描述儲存在 **XmlSchemaCollection** 中，它會與結構描述加入集合時指定的命名空間 URI 建立關聯。</span><span class="sxs-lookup"><span data-stu-id="ee150-103">If the XML-Data Reduced (XDR) schema you are validating against is stored in the **XmlSchemaCollection**, it is associated with the namespace URI specified when the schema was added to the collection.</span></span> <span data-ttu-id="ee150-104">**XmlValidatingReader** 會將 XML 文件中的命名空間 URI 對應至集合中與這個 URI 對應的結構描述。</span><span class="sxs-lookup"><span data-stu-id="ee150-104">**XmlValidatingReader** maps the namespace URI in the XML document to the schema that corresponds to that URI in the collection.</span></span>
+<span data-ttu-id="6b5d9-103">如果您驗證的 XML 資料精簡 (XDR) 結構描述儲存在 **XmlSchemaCollection** 中，它會與結構描述加入集合時指定的命名空間 URI 建立關聯。</span><span class="sxs-lookup"><span data-stu-id="6b5d9-103">If the XML-Data Reduced (XDR) schema you are validating against is stored in the **XmlSchemaCollection**, it is associated with the namespace URI specified when the schema was added to the collection.</span></span> <span data-ttu-id="6b5d9-104">**XmlValidatingReader** 會將 XML 文件中的命名空間 URI 對應至集合中與這個 URI 對應的結構描述。</span><span class="sxs-lookup"><span data-stu-id="6b5d9-104">**XmlValidatingReader** maps the namespace URI in the XML document to the schema that corresponds to that URI in the collection.</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="ee150-105"><xref:System.Xml.Schema.XmlSchemaCollection> 類別目前已過時，並已由 <xref:System.Xml.Schema.XmlSchemaSet> 類別取代。</span><span class="sxs-lookup"><span data-stu-id="ee150-105">The <xref:System.Xml.Schema.XmlSchemaCollection> class is now obsolete and has been replaced with the <xref:System.Xml.Schema.XmlSchemaSet> class.</span></span> <span data-ttu-id="ee150-106">如需有關 <xref:System.Xml.Schema.XmlSchemaSet> 類別的詳細資訊，請參閱[用於結構描述編譯的 XmlSchemaSet](xmlschemaset-for-schema-compilation.md)。</span><span class="sxs-lookup"><span data-stu-id="ee150-106">For more information about the <xref:System.Xml.Schema.XmlSchemaSet> class see, [XmlSchemaSet for Schema Compilation](xmlschemaset-for-schema-compilation.md).</span></span>
+> <span data-ttu-id="6b5d9-105"><xref:System.Xml.Schema.XmlSchemaCollection> 類別目前已過時，並已由 <xref:System.Xml.Schema.XmlSchemaSet> 類別取代。</span><span class="sxs-lookup"><span data-stu-id="6b5d9-105">The <xref:System.Xml.Schema.XmlSchemaCollection> class is now obsolete and has been replaced with the <xref:System.Xml.Schema.XmlSchemaSet> class.</span></span> <span data-ttu-id="6b5d9-106">如需有關 <xref:System.Xml.Schema.XmlSchemaSet> 類別的詳細資訊，請參閱[用於結構描述編譯的 XmlSchemaSet](xmlschemaset-for-schema-compilation.md)。</span><span class="sxs-lookup"><span data-stu-id="6b5d9-106">For more information about the <xref:System.Xml.Schema.XmlSchemaSet> class see, [XmlSchemaSet for Schema Compilation](xmlschemaset-for-schema-compilation.md).</span></span>
 
-<span data-ttu-id="ee150-107">例如，若 XML 文件的根項目是 `<bookstore xmlns="urn:newbooks-schema">`，則將結構描述加入 **XmlSchemaCollection** 時，它會參照相同的命名空間，如下所示：</span><span class="sxs-lookup"><span data-stu-id="ee150-107">For example, if the root element of the XML document is `<bookstore xmlns="urn:newbooks-schema">`, when the schema is added to the **XmlSchemaCollection** it references the same namespace, as follows:</span></span>
+<span data-ttu-id="6b5d9-107">例如，若 XML 文件的根項目是 `<bookstore xmlns="urn:newbooks-schema">`，則將結構描述加入 **XmlSchemaCollection** 時，它會參照相同的命名空間，如下所示：</span><span class="sxs-lookup"><span data-stu-id="6b5d9-107">For example, if the root element of the XML document is `<bookstore xmlns="urn:newbooks-schema">`, when the schema is added to the **XmlSchemaCollection** it references the same namespace, as follows:</span></span>
 
 ```
 xsc.Add("urn:newbooks-schema", "newbooks.xdr")
 ```
 
-<span data-ttu-id="ee150-108">下列程式碼範例會建立使用 **XmlTextReader** 的 **XmlValidatingReader**，並且將 XDR 結構描述 HeadCount.xdr 加入 **XmlSchemaCollection** 中。</span><span class="sxs-lookup"><span data-stu-id="ee150-108">The following code example creates an **XmlValidatingReader** that takes an **XmlTextReader** and adds an XDR schema, HeadCount.xdr, to the **XmlSchemaCollection**.</span></span>
+<span data-ttu-id="6b5d9-108">下列程式碼範例會建立使用 **XmlTextReader** 的 **XmlValidatingReader**，並且將 XDR 結構描述 HeadCount.xdr 加入 **XmlSchemaCollection** 中。</span><span class="sxs-lookup"><span data-stu-id="6b5d9-108">The following code example creates an **XmlValidatingReader** that takes an **XmlTextReader** and adds an XDR schema, HeadCount.xdr, to the **XmlSchemaCollection**.</span></span>
 
 ```vb
 Imports System
@@ -135,7 +135,7 @@ namespace ValidationSample
 }
 ```
 
-<span data-ttu-id="ee150-109">以下簡述要驗證的輸入檔 (*HeadCount.xml*) 內容：</span><span class="sxs-lookup"><span data-stu-id="ee150-109">The following outlines the contents of the input file, *HeadCount.xml*, to be validated:</span></span>
+<span data-ttu-id="6b5d9-109">以下簡述要驗證的輸入檔 (*HeadCount.xml*) 內容：</span><span class="sxs-lookup"><span data-stu-id="6b5d9-109">The following outlines the contents of the input file, *HeadCount.xml*, to be validated:</span></span>
 
 ```xml
 <!--Load HeadCount.xdr in SchemaCollection for Validation-->
@@ -145,7 +145,7 @@ namespace ValidationSample
 </HeadCount>
 ```
 
-<span data-ttu-id="ee150-110">以下簡述作為驗證依據的 XDR 結構描述檔案 *HeadCount.xdr* 的內容：</span><span class="sxs-lookup"><span data-stu-id="ee150-110">The following outlines the contents of the XDR schema file, *HeadCount.xdr*, to be validated against:</span></span>
+<span data-ttu-id="6b5d9-110">以下簡述作為驗證依據的 XDR 結構描述檔案 *HeadCount.xdr* 的內容：</span><span class="sxs-lookup"><span data-stu-id="6b5d9-110">The following outlines the contents of the XDR schema file, *HeadCount.xdr*, to be validated against:</span></span>
 
 ```xml
 <Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
@@ -158,7 +158,7 @@ namespace ValidationSample
 </Schema>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="ee150-111">請參閱</span><span class="sxs-lookup"><span data-stu-id="ee150-111">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6b5d9-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6b5d9-111">See also</span></span>
 
-<xref:System.Xml.XmlValidatingReader.ValidationType%2A>  
-[<span data-ttu-id="ee150-112">XmlSchemaCollection 結構描述編譯</span><span class="sxs-lookup"><span data-stu-id="ee150-112">XmlSchemaCollection Schema Compilation</span></span>](xmlschemacollection-schema-compilation.md)  
+- <xref:System.Xml.XmlValidatingReader.ValidationType%2A>
+- [<span data-ttu-id="6b5d9-112">XmlSchemaCollection 結構描述編譯</span><span class="sxs-lookup"><span data-stu-id="6b5d9-112">XmlSchemaCollection Schema Compilation</span></span>](xmlschemacollection-schema-compilation.md)
