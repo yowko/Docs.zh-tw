@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e79c6cf8bfce4fa1ce37f7253e8583a67afe2f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07ad8b278f6a44fce78bccc980acdc0dc93b1a7a
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576177"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44193246"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>在 .NET 中剖析數值字串
 所有數值類型皆有兩個靜態剖析方法：`Parse` 和 `TryParse`，可將數字的字串表示轉換成數值類型。 這些方法可讓您剖析使用[標準數值格式字串](../../../docs/standard/base-types/standard-numeric-format-strings.md)和[自訂數值格式字串](../../../docs/standard/base-types/custom-numeric-format-strings.md)中記錄的格式字串所產生的字串。 根據預設，`Parse` 和 `TryParse` 方法只能將包含十進位數字的字串成功轉換為整數值。 它們可以將包含整數和小數的十進位數字、群組分隔符號，以及小數分隔符號的字串，成功轉換為浮點值。 如果作業失敗，即 `TryParse` 方法傳回 `false`，則 `Parse` 方法會擲回例外狀況。  
@@ -83,7 +83,8 @@ ms.locfileid: "33576177"
  [!code-csharp[Parsing.Numbers#3](../../../samples/snippets/csharp/VS_Snippets_CLR/parsing.numbers/cs/unicode1.cs#3)]
  [!code-vb[Parsing.Numbers#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/parsing.numbers/vb/unicode1.vb#3)]  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Globalization.NumberStyles>  
- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)  
- [格式化類型](../../../docs/standard/base-types/formatting-types.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Globalization.NumberStyles>  
+- [剖析字串](../../../docs/standard/base-types/parsing-strings.md)  
+- [格式化類型](../../../docs/standard/base-types/formatting-types.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 913a5d6ab28d375dbfdd99dec6fd153bc94efee5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3440e0869bfd131f8a57a74af6105716d4b72935
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573896"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43883718"
 ---
 # <a name="latency-modes"></a>延遲模式
 為了回收物件，記憶體回收行程必須停止應用程式中所有正在執行的執行緒。 在某些情況下，例如當應用程式擷取資料或顯示內容時，完整記憶體回收會在關鍵時刻進行，而妨礙效能。 您可以藉由設定 <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> 屬性為 <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> 值的其中一個，來調整記憶體回收行程的干擾程度。  
@@ -54,7 +54,8 @@ ms.locfileid: "33573896"
   
 -   您也可以呼叫 <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType> 方法，在低延遲期間強制層代 2 回收。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.GC?displayProperty=nameWithType>  
- [引發的收集](../../../docs/standard/garbage-collection/induced.md)  
- [記憶體回收](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.GC?displayProperty=nameWithType>  
+- [引發的收集](../../../docs/standard/garbage-collection/induced.md)  
+- [記憶體回收](../../../docs/standard/garbage-collection/index.md)

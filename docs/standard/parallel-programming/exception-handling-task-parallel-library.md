@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16ab0b8967ac394540f201fcc9098024faaccaa7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3deaba0c8589eaa0ba24bc66669f5a76e60467f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591292"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877803"
 ---
 # <a name="exception-handling-task-parallel-library"></a>例外狀況處理 (工作平行程式庫)
 由在工作中執行的使用者程式碼所擲回的未處理例外狀況，會傳播回到呼叫執行緒，本主題稍後所述的特定情況除外。 當您使用其中一個靜態或執行個體 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 或 <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` 方法時會傳播例外狀況，您可以用 `try`/`catch` 陳述式包住呼叫來處理它們。 如果工作是已連結子工作的父代，或如果您在等候多個工作，就可能會擲回多個例外狀況。  
@@ -91,5 +91,6 @@ ms.locfileid: "33591292"
 ## <a name="unobservedtaskexception-event"></a>UnobservedTaskException 事件  
  在某些情況下，例如裝載時不受信任的外掛程式，良性的例外狀況可能很常見，而要手動觀察全部太困難。 在這些情況下，您可以處理 <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException?displayProperty=nameWithType> 事件。 傳遞至處理常式的 <xref:System.Threading.Tasks.UnobservedTaskExceptionEventArgs?displayProperty=nameWithType> 執行個體，可用來防止未觀察到的例外狀況傳播回聯結執行緒。  
   
-## <a name="see-also"></a>請參閱  
- [工作平行程式庫 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+## <a name="see-also"></a>另請參閱
+
+- [工作平行程式庫 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

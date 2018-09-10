@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: a4fb291f-5630-49ba-a49a-5b66c3b71e49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad649e61f4f006103d38a998eece174a07889828
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9031f5df0d0f48dc2844cdfd0654ee4ab876cc22
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569716"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44209533"
 ---
 # <a name="reading-an-xml-document-into-the-dom"></a>將 XML 文件讀取到 DOM
 從不同的格式將 XML 資訊讀取到記憶體。 可從字串、資料流、URL、文字讀取器或衍生自 <xref:System.Xml.XmlReader> 的類別讀取它。  
@@ -70,5 +70,6 @@ public class Sample
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>另請參閱
+
+- [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -5,12 +5,12 @@ ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 88170162e4149580d532129666348d226540aced
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a78507226b87f005798d0c4824a827a72f1d657a
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398127"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "43742788"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>具有延伸保護的整合式 Windows 驗證
 已建立的增強功能會影響 <xref:System.Net> 中的 <xref:System.Net.HttpWebRequest>、<xref:System.Net.HttpListener>、<xref:System.Net.Mail.SmtpClient>、<xref:System.Net.Security.SslStream>、<xref:System.Net.Security.NegotiateStream> 和相關類別以及相關命名空間處理整合式 Windows 驗證的方式。 為加強安全性，擴充保護已新增支援。  
@@ -131,7 +131,7 @@ ms.locfileid: "33398127"
   
 3.  用戶端指定了正確的通道繫結，或允許連接但未指定通道繫結，因為伺服器上使用 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 設定擴充保護原則。要求會傳回應用程式處理。 不會自動執行服務名稱檢查。 應用程式可選擇執行它自己使用 <xref:System.Net.HttpListenerRequest.ServiceName%2A> 屬性的服務名稱驗證，但在這些情況下會重複。  
   
- 如果應用程式進行自己的 SSPI 呼叫，執行以在 HTTP 要求主體內來回傳遞的 Blob 為基礎的驗證，而且想要支援通道繫結，它需要從使用 <xref:System.Net.HttpListener> 的外部安全通道擷取預期的通道繫結，才能將它傳遞給原生的 Win32 [AcceptSecurityContext](http://go.microsoft.com/fwlink/?LinkId=147021) 函式。 若要這樣做，請使用 <xref:System.Net.HttpListenerRequest.TransportContext%2A> 屬性並呼叫 <xref:System.Net.TransportContext.GetChannelBinding%2A> 方法來擷取 CBT。 僅支援端點繫結。 如指定任何其他 <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint>，就會擲回 <xref:System.NotSupportedException>。 如果基礎作業系統支援通道繫結，<xref:System.Net.TransportContext.GetChannelBinding%2A> 方法會將 <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding><xref:System.Runtime.InteropServices.SafeHandle> 包裝的指標傳回給通道繫結，此通道繫結適合傳遞給 [AcceptSecurityContext](http://go.microsoft.com/fwlink/?LinkId=147021) 函式作為傳入 `pInput` 參數之 SecBuffer 結構的 pvBuffer 成員。 <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding.Size%2A> 屬性包含通道繫結的長度，以位元組為單位。 如果基礎作業系統不支援通道繫結，此函式會傳回 `null`。  
+ 如果應用程式進行自己的 SSPI 呼叫，執行以在 HTTP 要求主體內來回傳遞的 Blob 為基礎的驗證，而且想要支援通道繫結，它需要從使用 <xref:System.Net.HttpListener> 的外部安全通道擷取預期的通道繫結，才能將它傳遞給原生的 Win32 [AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) 函式。 若要這樣做，請使用 <xref:System.Net.HttpListenerRequest.TransportContext%2A> 屬性並呼叫 <xref:System.Net.TransportContext.GetChannelBinding%2A> 方法來擷取 CBT。 僅支援端點繫結。 如指定任何其他 <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint>，就會擲回 <xref:System.NotSupportedException>。 如果基礎作業系統支援通道繫結，<xref:System.Net.TransportContext.GetChannelBinding%2A> 方法會將 <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding><xref:System.Runtime.InteropServices.SafeHandle> 包裝的指標傳回給通道繫結，此通道繫結適合傳遞給 [AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) 函式作為傳入 `pInput` 參數之 SecBuffer 結構的 pvBuffer 成員。 <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding.Size%2A> 屬性包含通道繫結的長度，以位元組為單位。 如果基礎作業系統不支援通道繫結，此函式會傳回 `null`。  
   
  另一個可能的案例是，在不使用 Proxy 的情況下，啟用 HTTP:// 前置詞的擴充保護。 在本例中，將 <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A?displayProperty=nameWithType> 設定成將 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> 設成 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 或 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> 的 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>，以及 <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> 設成 <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected>。值 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 會將 <xref:System.Net.HttpListener> 置於部分強化模式中，而 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> 則對應到完全強化模式。  
   

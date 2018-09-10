@@ -7,11 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4c2492de-3876-4873-b5a1-000bb404d770
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6262822e0916e142c7c543d2e2546c8540cb73a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3f52d1067a8aa907c8f1cf8b550eec82d1133b3f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261742"
 ---
 # <a name="how-to-add-bounding-and-blocking-functionality-to-a-collection"></a>如何：將界限和封鎖功能加入至集合
 這個範例示範如何實作類別中的 <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType> 介面，然後使用類別執行個體作為 <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> 的內部儲存機制，以將界限和封鎖功能新增至自訂集合類別。 如需界限和封鎖的詳細資訊，請參閱 [BlockingCollection 概觀](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)。  
@@ -27,5 +28,6 @@ ms.lasthandoff: 05/04/2018
   
  根據預設，<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> 的儲存體是 <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType>。  
   
-## <a name="see-also"></a>請參閱  
- [安全執行緒集合](../../../../docs/standard/collections/thread-safe/index.md)
+## <a name="see-also"></a>另請參閱
+
+- [安全執行緒集合](../../../../docs/standard/collections/thread-safe/index.md)

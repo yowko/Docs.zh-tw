@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3894229ff5561e50d42a36f576a89ee7bf01c067
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: f7721ffaebfefadee332c923d867e68204b5205f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "33592414"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268756"
 ---
 # <a name="the-managed-thread-pool"></a>受控執行緒集區
 
@@ -87,12 +87,12 @@ ms.locfileid: "33592414"
   
 ## <a name="see-also"></a>另請參閱
 
- <xref:System.Threading.ThreadPool?displayProperty=nameWithType>  
- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>  
- <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>  
- [工作平行程式庫 (TPL)](../parallel-programming/task-parallel-library-tpl.md)  
- [操作說明：傳回工作的值](../parallel-programming/how-to-return-a-value-from-a-task.md)  
- [執行緒物件和功能](threading-objects-and-features.md)  
- [執行緒和執行緒處理](threads-and-threading.md)  
- [非同步檔案 I/O](../io/asynchronous-file-i-o.md)  
- [計時器](timers.md)  
+- <xref:System.Threading.ThreadPool?displayProperty=nameWithType>  
+- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>  
+- <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>  
+- [工作平行程式庫 (TPL)](../parallel-programming/task-parallel-library-tpl.md)  
+- [操作說明：傳回工作的值](../parallel-programming/how-to-return-a-value-from-a-task.md)  
+- [執行緒物件和功能](threading-objects-and-features.md)  
+- [執行緒和執行緒處理](threads-and-threading.md)  
+- [非同步檔案 I/O](../io/asynchronous-file-i-o.md)  
+- [計時器](timers.md)  

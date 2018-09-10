@@ -16,12 +16,12 @@ helpviewer_keywords:
 - time strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c093f22f77284d15e56c8f1d4a95afbeb75202d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d10384955e07198a4b5ea7202722bea4b831e02
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576099"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207612"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>在 .NET 中剖析日期和時間字串
 
@@ -87,9 +87,10 @@ ms.locfileid: "33576099"
 
 <xref:System.DateTime.Parse%2A> 和 <xref:System.DateTime.ParseExact%2A> 方法的每個多載也都有 <xref:System.IFormatProvider> 參數，可提供有關設定字串格式的特定文化特性資訊。 此 <xref:System.IFormatProvider> 物件是代表標準文化特性的 <xref:System.Globalization.CultureInfo> 物件，或 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 屬性所傳回的 <xref:System.Globalization.DateTimeFormatInfo> 物件。  <xref:System.DateTime.ParseExact%2A> 也會使用可定義一或多個自訂日期和時間格式的額外字串或字串陣列引數。  
 
-## <a name="see-also"></a>請參閱  
- [剖析字串](parsing-strings.md)  
- [格式化類型](formatting-types.md)  
- [.NET 中的類型轉換](type-conversion.md)  
- [標準日期和時間格式](standard-date-and-time-format-strings.md)  
- [自訂日期和時間格式字串](custom-date-and-time-format-strings.md)
+## <a name="see-also"></a>另請參閱
+
+- [剖析字串](parsing-strings.md)  
+- [格式化類型](formatting-types.md)  
+- [.NET 中的類型轉換](type-conversion.md)  
+- [標準日期和時間格式](standard-date-and-time-format-strings.md)  
+- [自訂日期和時間格式字串](custom-date-and-time-format-strings.md)

@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 分散式資�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 7e539067b20f0e018496b0076582619cb88072e1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 4c514f3a7dc1fb01b2f1ed2dddc9d938c1101809
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480661"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268847"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>分散式資料管理的挑戰和解決方案
 
@@ -79,7 +79,7 @@ ms.locfileid: "43480661"
 
 因此，為了強制執行微服務自主性，並實現較佳的復原功能，您應該盡量少用跨微服務的要求/回應通訊鏈結。 微服務通訊間建議只使用非同步互動，使用非同步訊息型及事件型通訊，或使用獨立於原始 HTTP 要求/回應週期外的 HTTP 輪詢。
 
-本指南稍後的[非同步微服務整合強制執行微服務自主性](#asynchronous-microservice-integration-enforce-microservices-autonomy)和[非同步訊息型通訊](#asynchronous-message-based-communication)等節會詳細說明非同步通訊的使用。
+本指南稍後的[非同步微服務整合強制執行微服務自主性](communication-in-microservice-architecture.md#asynchronous-microservice-integration-enforces-microservices-autonomy)和[非同步訊息型通訊](asynchronous-message-based-communication.md)等節會詳細說明非同步通訊的使用。
 
 ## <a name="additional-resources"></a>其他資源
 

@@ -4,12 +4,12 @@ description: 了解自動記憶體管理如何是 Common Language Runtime 在受
 ms.date: 07/22/2016
 ms.technology: dotnet-standard
 ms.assetid: d095b0b6-2454-4e23-80b4-c9e8a447116c
-ms.openlocfilehash: b9ce8b1fec5c6fc0808b86f06408c3f5d612e492
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8046cb744dccaf512208d517c243640820efce8e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578140"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44194439"
 ---
 # <a name="automatic-memory-management-and-garbage-collection"></a>自動記憶體管理和記憶體回收
 
@@ -45,9 +45,7 @@ ms.locfileid: "33578140"
 
 對於應用程式所建立的大部分物件而言，您都可以依賴記憶體回收行程自動執行必要的記憶體管理工作。 但是，Unmanaged 資源需要明確清除。 最常見的 Unmanaged 資源類型就是包裝作業系統資源 (例如檔案控制代碼、視窗控制代碼或網路連接) 的物件。 雖然記憶體回收行程能夠追蹤封裝 Unmanaged 資源的 Managed 物件存留期，但是它並沒有關於如何清除資源的相關資訊。 當建立封裝 Unmanaged 資源的物件時，建議您提供必要的程式碼，在公用 `Dispose` 方法中清除 Unmanaged 資源。 您可以提供 `Dispose` 方法，讓物件的使用者在用完物件後，明確釋放出它所佔用的記憶體。 當您使用封裝 Unmanaged 資源的物件時，應留意 `Dispose` 的用法，並在必要時加以呼叫。 如需清除 Unmanaged 資源的詳細資訊，以及實作 `Dispose` 的設計模式範例，請參閱 [.NET 中的記憶體回收](index.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[System.GC](xref:System.GC)
-
-[.NET 的記憶體回收](index.md)
-
+- [System.GC](xref:System.GC)
+- [.NET 的記憶體回收](index.md)

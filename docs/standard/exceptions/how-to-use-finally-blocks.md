@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4b9c0137-04af-4468-91d1-b9014df8ddd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dff1083256e24a35b7238ee5e8af6cb5743bc0ea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 213ab53c68a37ac0ba5f337a1d6fc32bfe6f8989
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571517"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44190211"
 ---
 # <a name="how-to-use-finally-blocks"></a>如何使用 finally 區塊
 
@@ -32,5 +32,6 @@ ms.locfileid: "33571517"
 [!code-csharp[CodeTryCatchFinallyExample#3](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeTryCatchFinallyExample/CS/source2.cs#3)]
 [!code-vb[CodeTryCatchFinallyExample#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeTryCatchFinallyExample/VB/source2.vb#3)]  
 
-## <a name="see-also"></a>請參閱  
-[例外狀況](index.md)   
+## <a name="see-also"></a>另請參閱
+
+- [例外狀況](index.md)

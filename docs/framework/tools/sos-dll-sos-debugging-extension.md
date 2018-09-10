@@ -9,11 +9,11 @@ ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0c038b66e4ed62d614a25e717c52fdcc9c5f9a23
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483784"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44208831"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (SOS 偵錯擴充功能)
 SOS 偵錯延伸模組副檔名 (SOS.dll) 提供內部 Common Language Runtime (CLR) 環境的相關資訊，以協助您在 Windows 偵錯工具 (WinDbg.exe) 和 Visual Studio 中偵錯受控程式。 這個工具需要您的專案已啟用非 Managed 偵錯。 SOS.dll 會隨著 .NET Framework 自動安裝。 若要在 Visual Studio 中使用 SOS.dll，請安裝 [Windows 驅動程式套件 (WDK)](https://msdn.microsoft.com/windows/hardware/hh852362)。  

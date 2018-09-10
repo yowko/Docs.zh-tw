@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b2102c4e33f551cf3dc71cf83539cdc494e5379
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69a11e99966467de005ab92d3dcdebaa70bbdbe4
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579791"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44265165"
 ---
 # <a name="garbage-collection-and-performance"></a>記憶體回收和效能
 <a name="top"></a> 本主題描述記憶體回收和記憶體使用量的相關問題。 它解決關於 Managed 堆積的問題，並說明如何將記憶體回收對應用程式的影響降至最低。 每個問題已連結至程序，可讓您用來調查問題。  
@@ -778,5 +778,6 @@ ms.locfileid: "33579791"
   
      如果 `% Time in GC` 值與處理序時間同時升高，則記憶體回收便造成高 CPU 使用量。 否則，請針對應用程式進行程式碼剖析，尋找發生高使用量的地方。  
   
-## <a name="see-also"></a>請參閱  
- [記憶體回收](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>另請參閱
+
+- [記憶體回收](../../../docs/standard/garbage-collection/index.md)

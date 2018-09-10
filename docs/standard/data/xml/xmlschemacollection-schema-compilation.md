@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 76f28770-7126-428f-9ed5-7b5ae8bad5ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d64443f213603b1f5db9c256acc88e998e3f009a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7b6ea782020dde83aa7d59be8ec3058a27075ad
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571481"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44267947"
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>XmlSchemaCollection 結構描述編譯
 **XmlSchemaCollection** 是一種快取 (Cache) 或程式庫，您可在此儲存和驗證 XML 資料精簡 (XDR) 和 XML 結構描述定義語言 (XSD) 結構描述。 **XmlSchemaCollection** 會藉由在記憶體中快取結構描述，而不是從檔案或 URL 存取它們的方式來提升效能。  
@@ -57,6 +57,7 @@ xsc.Add("urn:bookstore-schema", "Books.xsd");
 vr.Schemas.Add(xsc);  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [使用 XmlSchemaCollection 的 XDR 驗證](../../../../docs/standard/data/xml/xdr-validation-with-xmlschemacollection.md)  
- [使用 XmlSchemaCollection 進行 XML 結構描述 (XSD) 驗證](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemacollection.md)
+## <a name="see-also"></a>另請參閱
+
+- [使用 XmlSchemaCollection 的 XDR 驗證](../../../../docs/standard/data/xml/xdr-validation-with-xmlschemacollection.md)  
+- [使用 XmlSchemaCollection 進行 XML 結構描述 (XSD) 驗證](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemacollection.md)

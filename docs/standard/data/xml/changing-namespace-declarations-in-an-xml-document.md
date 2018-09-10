@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: a2758f40-e497-4964-8d8d-1bb68af14dcd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2fa41e8a4e8f5a15d789ddc81c2b94072c6f16b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a6b80a885f43facf4b3d4dd1dcb56d937d4f8de
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568052"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44188796"
 ---
 # <a name="changing-namespace-declarations-in-an-xml-document"></a>變更 XML 文件中的命名空間宣告
 **XmlDocument** 公開命名空間宣告，而且 **xmlns** 屬性是文件物件模型的一部份。 這些是儲存在 **XmlDocument** 中，因此當您儲存文件時，它可以保留那些屬性的位置。 變更這些屬性對已經存在於樹狀結構中之節點的 **Name**、**NamespaceURI** 和 **Prefix** 屬性並沒有影響。 例如，如果載入下列文件，則 `test` 項目會具有 **NamespaceURI** `123.`  
@@ -44,5 +44,6 @@ doc.documentElement.SetAttribute("xmlns","456");
   
  因此，除非儲存並重新載入 **XmlDocument** 物件，否則變更 `xmlns` 屬性並不會產生任何影響。  
   
-## <a name="see-also"></a>請參閱  
- [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>另請參閱
+
+- [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

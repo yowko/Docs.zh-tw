@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: d3922d9a81e350fd9ce95ffaa51dc3534873fb97
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 8f4e60eef443f772de3574d988ce48470f8c2017
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754988"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856175"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (資訊清單產生和編輯工具)
 
@@ -63,7 +63,7 @@ Mage [commands] [commandOptions]
 |**-pu,** **-ProviderURL** `url`||部署資訊清單。|指定 URL，讓 ClickOnce 從該處檢查是否有應用程式更新。|
 |**-pub, -Publisher** `publisherName`||應用程式資訊清單。<br /><br /> 部署資訊清單。|將發行者名稱加入到部署或應用程式資訊清單的描述項目。 使用在應用程式資訊清單上時，也必須使用值 "true" 或 "t" 指定 **-UseManifestForTrust** ，否則此參數會引發錯誤。|
 |**-s, -SupportURL**  `url`||應用程式資訊清單。<br /><br /> 部署資訊清單。|指定出現在 [新增或移除程式] 中的 ClickOnce 應用程式連結。|
-|**-ti, -TimestampUri** `uri`||應用程式資訊清單。<br /><br /> 部署資訊清單。|數位時間戳記服務的 URL。 在資訊清單加上時間戳記之後，若數位憑證在您部署應用程式的下一個版本之前到期，就無須重新簽署資訊清單。 如需詳細資訊，請參閱 [Windows 根憑證程式成員](http://go.microsoft.com/fwlink/?LinkId=159000)。|
+|**-ti, -TimestampUri** `uri`||應用程式資訊清單。<br /><br /> 部署資訊清單。|數位時間戳記服務的 URL。 在資訊清單加上時間戳記之後，若數位憑證在您部署應用程式的下一個版本之前到期，就無須重新簽署資訊清單。 如需詳細資訊，請參閱 [Windows 根憑證程式成員](https://go.microsoft.com/fwlink/?LinkId=159000)。|
 |**-t, -ToFile** `filePath`|-   新增：<br />-   部署：deploy.application<br />-   應用程式：application.exe.manifest<br />-   更新：<br />-   輸入檔。|所有檔案類型。|指定已建立或已修改之檔案的輸出路徑。<br /><br /> 如果使用 **-New** 時未提供 **-ToFile**，就會將輸出寫入目前的工作目錄。 如果使用 **-Update** 時未提供 **-ToFile**，*Mage.exe* 就會將檔案寫回輸入檔。|
 |**-tr, -TrustLevel** `level`|以應用程式 URL 所在區域為基礎。|應用程式資訊清單。|要授與用戶端電腦上應用程式的信任層級。 可用的值包括 "Internet"、"Intranet" 和 "FullTrust"。|
 |**-um, -UseManifestForTrust** `willUseForTrust`|False|應用程式資訊清單。|指定當應用程式在用戶端上執行時，是否會使用應用程式資訊清單的數位簽章進行信任決策。 指定 "true" 或 "t" 表示信任決策會使用應用程式資訊清單。 指定 "false" 或 "f" 則表示會使用部署資訊清單的簽章。|

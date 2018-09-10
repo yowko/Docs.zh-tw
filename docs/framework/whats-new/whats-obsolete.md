@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 01969eff86e5b1e8e4e2bdc4950df9fb5291f5b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6835d159c9c30d09892bad8cc1d20753fe6f21c
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514446"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855331"
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>.NET Framework 類別庫中的過時功能
 .NET Framework 會隨著時間改變。 每個新版本都會加入一些提供新功能的新類型和類型成員。 現有的類型及其成員也會隨著時間改變。 例如，當某些類型所支援的技術由新技術取代時，這些類型的重要性會降低，而且某些方法會由更方便或功能更完整的新方法取代。  
@@ -73,13 +73,13 @@ ms.locfileid: "33514446"
  [過時的成員](../../../docs/framework/whats-new/obsolete-members.md)  
   
 ## <a name="obsolete-lists-for-previous-versions"></a>舊版的過時清單  
- [.NET Framework 4 中過時的類型](http://go.microsoft.com/fwlink/?LinkId=224224)  
+ [.NET Framework 4 中過時的類型](https://go.microsoft.com/fwlink/?LinkId=224224)  
   
- [.NET Framework 4 中過時的成員](http://go.microsoft.com/fwlink/?LinkId=224227)  
+ [.NET Framework 4 中過時的成員](https://go.microsoft.com/fwlink/?LinkId=224227)  
   
- [.NET Framework 3.5 的過時清單](http://go.microsoft.com/fwlink/?LinkId=163710)  
+ [.NET Framework 3.5 的過時清單](https://go.microsoft.com/fwlink/?LinkId=163710)  
   
- [.NET Framework 2.0 的過時清單](http://go.microsoft.com/fwlink/?LinkID=125264)  
+ [.NET Framework 2.0 的過時清單](https://go.microsoft.com/fwlink/?LinkID=125264)  
   
 ## <a name="see-also"></a>請參閱  
  [\<supportedRuntime> 項目](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

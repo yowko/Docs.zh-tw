@@ -17,11 +17,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 158a68d97a52bb5a72985d260a3dd5c6bfd0bd41
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43408483"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084607"
 ---
 # <a name="using-application-protocols"></a>使用應用程式通訊協定
 .NET Framework 支援常用的網際網路應用程式通訊協定。 本節包含有關使用 [HTTP](../../../docs/framework/network-programming/http.md)、"TCP"和 "UDP" 通訊協定的資訊，以及有關使用 [Windows Sockets](../../../docs/framework/network-programming/sockets.md) 介面以實作自訂通訊協定的資訊。  

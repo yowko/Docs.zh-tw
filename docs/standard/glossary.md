@@ -5,12 +5,12 @@ author: tdykstra
 ms.author: tdykstra
 ms.date: 07/08/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 195fbb799432b9d01a5faf301c9f8f2d1edfa1ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 11fad691021ec897348177c67134750e72b4ff7c
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579401"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44188679"
 ---
 # <a name="net-glossary"></a>.NET 字彙表
 
@@ -268,9 +268,8 @@ OS 是執行階段環境的一部分，但不是 .NET 執行階段的一部分�
 
 ## <a name="see-also"></a>另請參閱
 
-[.NET 指南](index.md)  
-[.NET Framework 指南](../framework/index.md)  
-[.NET Core](../core/index.md)  
-[ASP.NET 概觀](/aspnet/index#pivot=aspnet)  
-[ASP.NET Core 概觀](/aspnet/index#pivot=core)  
-
+- [.NET 指南](index.md)  
+- [.NET Framework 指南](../framework/index.md)  
+- [.NET Core](../core/index.md)  
+- [ASP.NET 概觀](/aspnet/index#pivot=aspnet)  
+- [ASP.NET Core 概觀](/aspnet/index#pivot=core)  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82774ffaf03b7eaad6240a0361bede076053de0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 52da538ba9cf348062905b66a87d13db82a214a0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578303"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085258"
 ---
 # <a name="standard-timespan-format-strings"></a>標準 TimeSpan 格式字串
 <a name="Top"></a> 標準 <xref:System.TimeSpan> 格式字串會使用單一格式規範，來定義從格式化作業所產生之 <xref:System.TimeSpan> 值的文字表示。 任何包含一個以上字元 (包含空格) 的格式字串，都會解譯為自訂 <xref:System.TimeSpan> 格式字串。 如需詳細資訊，請參閱[自訂 TimeSpan 格式字串](../../../docs/standard/base-types/custom-timespan-format-strings.md)。  
@@ -130,7 +130,8 @@ ms.locfileid: "33578303"
   
  [回到表格](#Top)  
   
-## <a name="see-also"></a>請參閱  
- [格式化類型](../../../docs/standard/base-types/formatting-types.md)  
- [自訂 TimeSpan 格式字串](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)
+## <a name="see-also"></a>另請參閱
+
+- [格式化類型](../../../docs/standard/base-types/formatting-types.md)  
+- [自訂 TimeSpan 格式字串](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
+- [剖析字串](../../../docs/standard/base-types/parsing-strings.md)

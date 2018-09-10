@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 47162a43c942416c5a2b842663288290c9f43f62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c8d08d6fd6fb783f5cb8c7e714bffa2b655ffb41
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574718"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44214819"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>管理 XML 文件中的命名空間
 XML 命名空間會將 XML 文件中的項目與屬性名稱連結到自訂和預定的 URI。 若要建立這些關聯，請為命名空間 URI 定義前置詞，並使用這些前置詞來限定 XML 資料中的元素與屬性名稱。 命名空間可用來避免元素和屬性名稱發生衝突，並讓相同名稱的元素和屬性以不同方式處理和驗證。  
@@ -79,6 +79,7 @@ XML 命名空間會將 XML 文件中的項目與屬性名稱連結到自訂和�
 |檢查前置詞是否定義於目前範圍中|<xref:System.Xml.XmlNamespaceManager.HasNamespace%2A> 方法|  
 |取得用來查詢前置詞與 URI 的名稱資料表|<xref:System.Xml.XmlNamespaceManager.NameTable%2A> 屬性|  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Xml.XmlNamespaceManager>  
- [XML 文件和資料](../../../../docs/standard/data/xml/index.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Xml.XmlNamespaceManager>  
+- [XML 文件和資料](../../../../docs/standard/data/xml/index.md)

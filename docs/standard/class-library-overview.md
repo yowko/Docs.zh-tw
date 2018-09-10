@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b6730e621a85dc8e656723647f949449241c407
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: acc51287a8c670da63d0ec421aa232864ea91c2b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207452"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44216616"
 ---
 # <a name="net-class-library-overview"></a>.NET 類別庫概觀
 
@@ -110,7 +110,8 @@ ms.locfileid: "36207452"
   
  如需命名空間的詳細資訊，請使用 [.NET API 瀏覽器](https://docs.microsoft.com/dotnet/api)來瀏覽 .NET 類別庫。 API 參考文件提供每個命名空間、其類型及其每個成員的相關文件。  
   
-## <a name="see-also"></a>請參閱  
- [一般類型系統](../../docs/standard/base-types/common-type-system.md)  
- [.NET API 瀏覽器](https://docs.microsoft.com/dotnet/api)  
- [概觀](../../docs/framework/get-started/overview.md)
+## <a name="see-also"></a>另請參閱
+
+- [一般類型系統](../../docs/standard/base-types/common-type-system.md)  
+- [.NET API 瀏覽器](https://docs.microsoft.com/dotnet/api)  
+- [概觀](../../docs/framework/get-started/overview.md)

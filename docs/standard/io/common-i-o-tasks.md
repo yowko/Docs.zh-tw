@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bf0caa0513881d5a1096478d8b29fc708ac3d3ce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f205040e0f044ab04112683c7bdb8edccdfb9f71
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577651"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44210217"
 ---
 # <a name="common-io-tasks"></a>一般 I/O 工作
 <xref:System.IO> 命名空間 (Namespace) 提供了幾個允許可在檔案、目錄和資料流上執行各種動作 (例如讀取和寫入) 的類別。 如需詳細資訊，請參閱[檔案和資料流 I/O](../../../docs/standard/io/index.md)。  
@@ -53,7 +53,8 @@ ms.locfileid: "33577651"
 |尋找目錄的大小|<xref:System.IO.Directory?displayProperty=nameWithType> 類別|  
 |判斷目錄是否存在|<xref:System.IO.Directory.Exists%2A?displayProperty=nameWithType> 方法|  
   
-## <a name="see-also"></a>請參閱  
- [檔案和資料流 I/O](../../../docs/standard/io/index.md)  
- [撰寫資料流](../../../docs/standard/io/composing-streams.md)  
- [非同步檔案 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)
+## <a name="see-also"></a>另請參閱
+
+- [檔案和資料流 I/O](../../../docs/standard/io/index.md)  
+- [撰寫資料流](../../../docs/standard/io/composing-streams.md)  
+- [非同步檔案 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)

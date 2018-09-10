@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cd6e85dca7c4c32361b964573f318b165e8d683
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 9a243c95aff77a5de2b3af15542c0bcc44870333
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385015"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44205967"
 ---
 # <a name="destroying-threads"></a>終結執行緒
 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 方法可用來永久停止受控執行緒。 當您呼叫 <xref:System.Threading.Thread.Abort%2A> 時，通用語言執行平台會在目標執行緒中擲回 <xref:System.Threading.ThreadAbortException>，而目標執行緒可加以攔截。 如需詳細資訊，請參閱<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>。  
@@ -66,7 +66,8 @@ catch (ThreadAbortException ex)
   
  您可以呼叫 <xref:System.Threading.Thread.ResetAbort%2A?displayProperty=nameWithType> 方法來防止系統重新擲回例外狀況。 但是，只有當您自己的程式碼會造成 <xref:System.Threading.ThreadAbortException>，才應採取此作法。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Threading.ThreadAbortException>  
- <xref:System.Threading.Thread>  
- [使用執行緒和執行緒處理](../../../docs/standard/threading/using-threads-and-threading.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Threading.ThreadAbortException>  
+- <xref:System.Threading.Thread>  
+- [使用執行緒和執行緒處理](../../../docs/standard/threading/using-threads-and-threading.md)

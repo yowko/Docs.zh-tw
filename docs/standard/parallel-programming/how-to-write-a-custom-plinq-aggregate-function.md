@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 5a70dd49-ab2a-4798-b551-196ee7042b1a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a7aa2a8e5d9695c08d1c98e05cdd1eaa4d9a5318
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 82e4ed0f93d7c41bc36427159442cc88b0a7867d
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580906"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44038828"
 ---
 # <a name="how-to-write-a-custom-plinq-aggregate-function"></a>如何：撰寫自訂 PLINQ 彙總函式
 此範例示範如何使用 <xref:System.Linq.ParallelEnumerable.Aggregate%2A> 方法，將自訂彙總函式套用至來源序列。  
@@ -33,6 +33,7 @@ ms.locfileid: "33580906"
   
  請注意，當 lambda 運算式主體包含單一運算式時，<xref:System.Func%602?displayProperty=nameWithType> 委派的傳回值即為運算式的值。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Linq.ParallelEnumerable>  
- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Linq.ParallelEnumerable>  
+- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

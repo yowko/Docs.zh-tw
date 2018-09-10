@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b02fd72c705d264394b83b89fc7ec802be7e502a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5f2da2849bdf9ce922a89bf25e1758d868ee5ea8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575358"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198253"
 ---
 # <a name="traversing-xml-schemas"></a>周遊 XML 結構描述
 使用結構描述物件模型 (SOM) API 周遊 XML 結構描述，可以提供對儲存於 SOM 之項目、屬性及型別的存取權。 周遊載入到 SOM 的 XML 結構描述也是使用 SOM API 編輯 XML 結構描述的第一步。  
@@ -67,11 +67,12 @@ ms.locfileid: "33575358"
   
  [建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)主題中的程式碼範例使用 <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=nameWithType> 集合，將屬性 `CustomerId` 加入至 `Customer` 項目。 這是前結構描述編譯屬性。 對應的後結構描述編譯資訊集屬性為 <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=nameWithType> 集合，其保留複雜型別的所有屬性，包括透過型別衍生繼承的那些屬性。  
   
-## <a name="see-also"></a>請參閱  
- [XML 結構描述物件模型概觀](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- [讀取和寫入 XML 結構描述](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
- [建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)  
- [編輯 XML 結構描述](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
- [併入或匯入 XML 結構描述](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [用於結構描述編譯的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [後結構描述編譯資訊集](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+## <a name="see-also"></a>另請參閱
+
+- [XML 結構描述物件模型概觀](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+- [讀取和寫入 XML 結構描述](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+- [建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)  
+- [編輯 XML 結構描述](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+- [併入或匯入 XML 結構描述](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+- [用於結構描述編譯的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- [後結構描述編譯資訊集](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

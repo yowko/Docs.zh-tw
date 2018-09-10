@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9800f1b1ec8fbb0eaf91611895aaf9d45629fae0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 18a784db1ff02f459fbc2265c3ca1a2abfaff9b4
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575820"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879032"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>如何：定義和使用自訂數值格式提供者
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 可讓您有效掌控數值的字串表示。 它支援以下自訂數值格式的功能：  
@@ -91,5 +91,6 @@ ms.locfileid: "33575820"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  在命令列中，使用 csc.exe 或 vbc.exe 來編譯程式碼。 若要在 Visual Studio 中編譯程式碼，請將它放入主控台應用程式專案範本。  
   
-## <a name="see-also"></a>請參閱  
- [執行格式化作業](../../../docs/standard/base-types/performing-formatting-operations.md)
+## <a name="see-also"></a>另請參閱
+
+- [執行格式化作業](../../../docs/standard/base-types/performing-formatting-operations.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f9f0c487d3d04af998fb1c3339d736e9bb043374
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 477791a0d62186b6cb88d0fae3aa9b4e38b3ef35
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567815"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43870106"
 ---
 # <a name="creating-new-strings-in-net"></a>在 .NET 中建立新字串
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 允許使用簡單指派來建立字串，並且還可以多載類別建構函式，以支援使用多個不同參數來建立字串。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 也會在 <xref:System.String?displayProperty=nameWithType> 類別中提供數個方法，藉由組合多個字串、字串陣列或物件來建立新的字串物件。  
@@ -80,6 +80,7 @@ ms.locfileid: "33567815"
  [!code-csharp[Strings.Creating#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#5)]
  [!code-vb[Strings.Creating#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#5)]  
   
-## <a name="see-also"></a>請參閱  
- [基本字串作業](../../../docs/standard/base-types/basic-string-operations.md)  
- [複合格式](../../../docs/standard/base-types/composite-formatting.md)
+## <a name="see-also"></a>另請參閱
+
+- [基本字串作業](../../../docs/standard/base-types/basic-string-operations.md)  
+- [複合格式](../../../docs/standard/base-types/composite-formatting.md)

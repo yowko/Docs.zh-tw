@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15c5455bd604765ebcd78aa418d2f74f4141628d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d3d0e2dbd57d9581d1c8b0ca42d1e9d556d8905
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398270"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44198500"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>.NET Framework 的版本相容性
 回溯相容性表示針對特定平台版本開發的應用程式將會在該平台的較新版本上執行。 .NET Framework 嘗試最大化回溯相容性：針對某一個 .NET Framework 版本撰寫的原始程式碼應該在較新版本的 .NET Framework 上編譯，而且在某一個 .NET Framework 版本上執行之二進位檔的行為應該與較新版本的 .NET Framework 相同。  
@@ -52,9 +52,9 @@ ms.locfileid: "33398270"
 
 - 如果您有 .NET Framework 3.5 應用程式，另請參閱 [.NET Framework 4 移轉問題](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)。
 
-- 如果您有 .NET Framework 2.0 應用程式，另請參閱 [.NET Framework 3.5 SP1 中的變更](http://go.microsoft.com/fwlink/?LinkId=186989)。
+- 如果您有 .NET Framework 2.0 應用程式，另請參閱 [.NET Framework 3.5 SP1 中的變更](https://go.microsoft.com/fwlink/?LinkId=186989)。
 
-- 如果您有 .NET Framework 1.1 應用程式，另請參閱 [.NET Framework 2.0 中的變更](http://go.microsoft.com/fwlink/?LinkID=125263)。  
+- 如果您有 .NET Framework 1.1 應用程式，另請參閱 [.NET Framework 2.0 中的變更](https://go.microsoft.com/fwlink/?LinkID=125263)。  
   
 -   如果您正在重新編譯現有的原始程式碼以便在 .NET Framework 4.5 或其點版本上執行，或者您正從現有的原始程式碼基底開發以 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或其點發行為目標的新版應用程式或元件，請查看[類別庫中的已淘汰功能](../../../docs/framework/whats-new/whats-obsolete.md)中的已淘汰類型和成員，並套用所述的因應措施  (之前編譯的程式碼將會針對已標示為過時的型別和成員繼續執行)。  
   
@@ -69,5 +69,5 @@ ms.locfileid: "33398270"
  [新功能](../../../docs/framework/whats-new/index.md)  
  [類別庫中已淘汰的功能](../../../docs/framework/whats-new/whats-obsolete.md)  
  [應用程式相容性](../../../docs/framework/migration-guide/application-compatibility.md)  
- [Microsoft .NET Framework 支援週期原則](http://go.microsoft.com/fwlink/p/?LinkId=248212)  
+ [Microsoft .NET Framework 支援週期原則](https://go.microsoft.com/fwlink/p/?LinkId=248212)  
  [.NET Framework 4 移轉問題](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)

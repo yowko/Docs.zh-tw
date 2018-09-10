@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa1049528458d558409ac1ace215c7d5b10f520e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 694d2be51d025ab054caf19e4aa2900216ad5b2e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572092"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44183482"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>XslCompiledTransform 類別的輸出選項
 本主題討論可用的 XSLT 輸出選項。 您可以指定樣式表中或 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法上的輸出選項。  
@@ -57,5 +57,6 @@ ms.locfileid: "33572092"
   
 -   寫出空白標記時，請在項目名稱的最後一個字元與反斜線之間寫入一個空格，例如 `<myElement />`。 如此可讓舊版瀏覽器正確顯示所產生的 HTML 頁面。  
   
-## <a name="see-also"></a>請參閱  
- [XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations.md)
+## <a name="see-also"></a>另請參閱
+
+- [XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations.md)

@@ -8,11 +8,11 @@ ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dc3c611cf043538e7f069cc1634bd5be5e70dfab
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43392272"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509258"
 ---
 # <a name="migrating-from-the-net-framework-11"></a>從 .NET Framework 1.1 移轉
 [!INCLUDE[win7](../../../includes/win7-md.md)] 和更新版本的 Windows 作業系統不支援 [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)]。 因此，以 [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] 為目標的應用程式一定要在 [!INCLUDE[win7](../../../includes/win7-md.md)] 或更新版本的作業系統上修改才能執行。 本主題討論在 [!INCLUDE[win7](../../../includes/win7-md.md)] 和更新版本的 Windows 作業系統底下執行以 [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] 為目標的應用程式時所需的步驟。 如需有關 [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)] 和 [!INCLUDE[win8](../../../includes/win8-md.md)] 的詳細資訊，請參閱[在 Windows 8 及更新版本上執行 .NET Framework 1.1 應用程式](../../../docs/framework/install/run-net-framework-1-1-apps.md)。  

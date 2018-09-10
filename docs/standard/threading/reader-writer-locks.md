@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 8c71acf2-2c18-4f4d-8cdb-0728639265fd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f829fc0b399f5cfd10d98f6b7439de757674f11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8be9b4eef30333fbbdc26915635d17157176d6fc
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586369"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208175"
 ---
 # <a name="reader-writer-locks"></a>Reader-Writer 鎖定
 <xref:System.Threading.ReaderWriterLockSlim> 類別可讓多個執行緒同時讀取資源，但是會要求執行緒等候獨佔鎖定，才能寫入至資源。  
@@ -27,8 +27,9 @@ ms.locfileid: "33586369"
 > [!NOTE]
 >  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 擁有 <xref:System.Threading.ReaderWriterLockSlim> 和 <xref:System.Threading.ReaderWriterLock> 這兩個 Reader-Writer 鎖定。 建議針對所有新的開發使用 <xref:System.Threading.ReaderWriterLockSlim>。 <xref:System.Threading.ReaderWriterLockSlim> 類似於 <xref:System.Threading.ReaderWriterLock>，但是它有遞迴以及升級和降級鎖定狀態的簡化規則。 <xref:System.Threading.ReaderWriterLockSlim> 可避免可能發生死結的許多情況。 此外，<xref:System.Threading.ReaderWriterLockSlim> 的效能明顯優於 <xref:System.Threading.ReaderWriterLock>。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Threading.ReaderWriterLockSlim>  
- <xref:System.Threading.ReaderWriterLock>  
- [執行緒處理](../../../docs/standard/threading/index.md)  
- [執行緒物件和功能](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Threading.ReaderWriterLockSlim>  
+- <xref:System.Threading.ReaderWriterLock>  
+- [執行緒處理](../../../docs/standard/threading/index.md)  
+- [執行緒物件和功能](../../../docs/standard/threading/threading-objects-and-features.md)

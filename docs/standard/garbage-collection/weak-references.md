@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03da36090c255f635036a9bd518bdacd99404ed4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 65492beb888da1986f456d3fd000fc02f340f3c4
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575651"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264944"
 ---
 # <a name="weak-references"></a>弱式參考
 在應用程式碼可以存取使用中物件時，記憶體回收行程無法透過應用程式回收該物件。 應用程式即具有物件的強式參考。  
@@ -52,5 +52,6 @@ ms.locfileid: "33575651"
   
  請避免使用弱式參考作為記憶體管理問題的自動解決方案。 相反地，開發有效的快取原則來處理您的應用程式物件。  
   
-## <a name="see-also"></a>請參閱  
- [記憶體回收](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>另請參閱
+
+- [記憶體回收](../../../docs/standard/garbage-collection/index.md)

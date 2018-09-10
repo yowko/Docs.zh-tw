@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 26b071f3-1261-47ef-8690-0717f5cd93c1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4d2d6f2932e1afeb7369c32a43ca48f55fade2e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 51066ab6fb0fa4749befdd0f94790fa45a7ab5cf
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571406"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44191062"
 ---
 # <a name="xml-type-support-implementation-notes"></a>XML 型別支援實作注意事項
 本主題說明一些您想要知道的實作詳細資料。  
@@ -47,5 +47,6 @@ ms.locfileid: "33571406"
 ### <a name="xsanyuri-and-systemuri"></a>xs:anyURI 及 System.Uri  
  當表示相對 URI 的 `xs:anyURI` 執行個體對應至 <xref:System.Uri> 時，<xref:System.Uri> 物件就不具有基底 URI。  
   
-## <a name="see-also"></a>請參閱  
- [System.Xml 類別中的類型支援](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
+## <a name="see-also"></a>另請參閱
+
+- [System.Xml 類別中的類型支援](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)

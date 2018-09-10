@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f11ed467-af2f-4504-8a2e-299a6c36d44e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 292bff13b4651b0e886abc435104edfa930f9de1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a4287879bd95f7bc1e1dc99f74fa0d7cc0fe737f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582765"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44191023"
 ---
 # <a name="how-to-wrap-eap-patterns-in-a-task"></a>如何：將 EAP 模式包裝在工作中
 下列範例將示範如何使用 <xref:System.Threading.Tasks.TaskCompletionSource%601>，將事件式非同步模式 (EAP) 的任意序列公開為單一工作。 此範例也示範如何使用 <xref:System.Threading.CancellationToken> 在 <xref:System.Net.WebClient> 物件上叫用內建的取消方法。  
@@ -24,5 +24,6 @@ ms.locfileid: "33582765"
  [!code-csharp[FromAsync#08](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/fromasync.cs#08)]
  [!code-vb[FromAsync#08](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/module1.vb#08)]  
   
-## <a name="see-also"></a>請參閱  
- [TPL 和傳統 .NET Framework 非同步程式設計](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md)
+## <a name="see-also"></a>另請參閱
+
+- [TPL 和傳統 .NET Framework 非同步程式設計](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md)

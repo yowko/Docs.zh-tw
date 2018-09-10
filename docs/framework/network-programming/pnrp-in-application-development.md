@@ -5,12 +5,12 @@ ms.assetid: 265615d6-4423-4b5d-8626-752e456f4f4e
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: b085604d7d20eb9222507b4820be219ffeae4726
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55716e7baa382bffbb37dc9248ec1cbd15065ac1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395732"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504614"
 ---
 # <a name="pnrp-in-application-development"></a>應用程式開發中的 PNRP
 在 Windows Vista 中，網路應用程式可以透過簡化的 PNRP 應用程式設計介面 (API)，存取名稱發行和解析功能。  
@@ -20,7 +20,7 @@ ms.locfileid: "33395732"
   
  針對 Windows Vista 中高度簡化的 PNRP 名稱解析，PNRP 名稱現在已整合至 getaddrinfo() Windows 通訊端函式。 若要使用 PNRP 將名稱解析為 IPv6 位址，應用程式可以使用 getaddrinfo() 函式解析完整網域名稱 (FQDN) name.prnp.net，其中 name 為要解析的對等名稱。 pnrp.net 網域是 Windows Vista 中專為 PNRP 名稱解析保留的網域。  
   
- 在 PeerToPeer 應用程式之間傳遞的訊息仍然是透過基礎架構進行處理，例如 PeerChannel 和 WCF [大型資料與資料流](http://go.microsoft.com/fwlink/?LinkID=179652)。  
+ 在 PeerToPeer 應用程式之間傳遞的訊息仍然是透過基礎架構進行處理，例如 PeerChannel 和 WCF [大型資料與資料流](https://go.microsoft.com/fwlink/?LinkID=179652)。  
   
 ## <a name="see-also"></a>請參閱  
  <xref:System.Net.PeerToPeer>

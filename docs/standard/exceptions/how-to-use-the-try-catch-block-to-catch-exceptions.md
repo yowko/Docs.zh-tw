@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a3ce6dfd-1f64-471b-8ad8-8cfaf406275d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b169353752f6e6483a056cdc9dd8c3227b9ebeb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 852df5cb3eeea2ee5fa44ddce2f97e9c4f8d8b5a
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571445"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185200"
 ---
 # <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a>如何使用 try/catch 區塊攔截例外狀況
 
@@ -36,5 +36,6 @@ Common Language Runtime 會攔截 catch 區塊未攔截的例外狀況。 根據
 > [!NOTE] 
 > 幾乎任何一行程式碼都可能造成例外狀況，尤其是 Common Language Runtime 本身擲回的例外狀況，例如 <xref:System.OutOfMemoryException>。 大多數應用程式都不需要處理這些例外狀況，但您應該在撰寫供他人使用的程式庫時留意這點可能性。 如需何時在 Try 區塊中設定程式碼的建議，請參閱[例外狀況的最佳做法](best-practices-for-exceptions.md)。
 
-## <a name="see-also"></a>請參閱  
-[例外狀況](index.md)
+## <a name="see-also"></a>另請參閱
+
+- [例外狀況](index.md)

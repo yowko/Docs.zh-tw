@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1be82fd9f26e382f20913551f67e8303cf20e03b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 7834df6c987e94e59357c7c60db2627d107bffc3
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43390609"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864546"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Windows 中的 Managed 和 Unmanaged 執行緒處理
 所有執行緒的管理都會透過 <xref:System.Threading.Thread> 類別進行，包括 Common Language Runtime 建立的執行緒，以及在執行階段外部建立但進入 Managed 環境執行程式碼的執行緒。 執行階段會監視在其處理序中所有曾在 Managed 執行環境中執行程式碼的執行緒， 但不會追蹤其他任何執行緒。 執行緒可透過 COM Interop (因為執行階段會將 Managed 物件當做 COM 物件公開給 Unmanaged 世界)、COM [DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject) 函式和平台叫用來進入 Managed 執行環境。  
@@ -63,9 +63,10 @@ ms.locfileid: "43390609"
 ## <a name="blocking-issues"></a>封鎖問題  
  如果執行緒對作業系統發出 Unmanaged 呼叫，而此呼叫在 Unmanaged 程式碼中封鎖了執行緒，則執行階段將不會針對 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 或 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 取得其控制權。 如果是 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>，執行階段會為 **Abort** 標記執行緒，並在它重新進入受控碼時取得其控制權。 建議您使用 Managed 封鎖，而不要使用 Unmanaged 封鎖。 <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>、<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>、<xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>、<xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>、<xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>、<xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>、<xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> 等對於 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 都會有回應。 此外，如果執行緒位在單一執行緒 Apartment 中，則當執行緒被封鎖時，所有這些 Managed 封鎖作業都會正確提取 Apartment 中的訊息。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>  
- <xref:System.Threading.ThreadState>  
- <xref:System.EnterpriseServices.ServicedComponent>  
- <xref:System.Threading.Thread>  
- <xref:System.Threading.Monitor>
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>  
+- <xref:System.Threading.ThreadState>  
+- <xref:System.EnterpriseServices.ServicedComponent>  
+- <xref:System.Threading.Thread>  
+- <xref:System.Threading.Monitor>

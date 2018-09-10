@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 73bf8638-c4ec-4069-b0bb-a1dc79b92e32
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b8af7b3894c010d5a7a4c712efe2458a6bb2a50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c03ab0e1d493d9669f1e3821393d41d1c1b89867
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571068"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227541"
 ---
 # <a name="how-to-consume-events-in-a-web-forms-application"></a>如何：使用 Web Form 應用程式中的事件
 ASP.NET Web Form 應用程式中的常見使用情況是使用控制項填入網頁，然後根據使用者所按的控制項，執行特定動作。 例如，當使用者在網頁中按一下 <xref:System.Web.UI.WebControls.Button?displayProperty=nameWithType> 控制項時，控制項就會引發事件。 藉由處理事件，您的應用程式可以針對按一下按鈕執行適當的應用程式邏輯。  
@@ -51,5 +51,6 @@ ASP.NET Web Form 應用程式中的常見使用情況是使用控制項填入網
   
 3.  在步驟 2 中定義的事件處理常式方法中加入程式碼，在事件發生時執行所需的任何動作。  
   
-## <a name="see-also"></a>請參閱  
- [事件](../../../docs/standard/events/index.md)
+## <a name="see-also"></a>另請參閱
+
+- [事件](../../../docs/standard/events/index.md)

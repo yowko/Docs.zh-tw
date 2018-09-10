@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5cdc9396-a64b-4615-a1cd-b605db4c5983
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8972a8e9d73adc60e073a5eab9388260c907b68
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0e458f45fea8e2207ced930daebf10e653901fa7
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577135"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264983"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-collections"></a>在集合中執行不區分文化特性的字串作業
 <xref:System.Collections> 命名空間中有某些類別和成員依預設會提供區分文化特性的行為。 <xref:System.Collections.CaseInsensitiveComparer> 和 <xref:System.Collections.CaseInsensitiveHashCodeProvider> 類別的預設建構函式會使用 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 屬性，初始化新的執行個體。 <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> 方法的所有多載預設都會使用 `Thread.CurrentCulture` 屬性，建立 <xref:System.Collections.Hashtable> 類別的新執行個體。 <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> 方法的多載預設會使用 `Thread.CurrentCulture` 來執行區分文化特性的排序。 當字串當作索引鍵使用時，<xref:System.Collections.SortedList> 中的排序和查閱作業可能會受到 `Thread.CurrentCulture` 的影響。 請遵循本節提供的使用建議，以從 `Collections` 命名空間中的這些類別和方法取得不區分文化特性的結果。  
@@ -133,12 +133,13 @@ internal class InvariantComparer : IComparer
 ## <a name="using-the-arraylistsort-method"></a>使用 ArrayList.Sort 方法  
  `ArrayList.Sort` 方法的多載預設會使用 `Thread.CurrentCulture` 屬性來執行區分文化特性的排序。 由於排序次序不同，結果會因文化特性而異。 若要消除區分文化特性的行為，請使用此方法中可接受 `IComparer` 實作的多載。 至於 `comparer` 參數，請指定自訂的非變異值比較子類別，以使用 `CultureInfo.InvariantCulture`。 [使用 SortedList 類別](#cpconperformingculture-insensitivestringoperationsincollectionsanchor1)主題會提供自訂非變異值比較子類別的範例。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Collections.CaseInsensitiveComparer>  
- <xref:System.Collections.CaseInsensitiveHashCodeProvider>  
- <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType>  
- <xref:System.Collections.SortedList>  
- <xref:System.Collections.Hashtable>  
- <xref:System.Collections.IComparer>  
- [執行不區分文化特性的字串作業](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)  
- <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType>
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Collections.CaseInsensitiveComparer>  
+- <xref:System.Collections.CaseInsensitiveHashCodeProvider>  
+- <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType>  
+- <xref:System.Collections.SortedList>  
+- <xref:System.Collections.Hashtable>  
+- <xref:System.Collections.IComparer>  
+- [執行不區分文化特性的字串作業](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)  
+- <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType>

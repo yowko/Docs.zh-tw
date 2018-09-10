@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1728dee4d0d8d90b8a1e2b2a3f92fc256c6267c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4cece1227b5210cf839aff0658267ae480b23b6
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409811"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44197455"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (簽署工具)
 簽署工具是一項命令列工具，會以數位方式簽署檔案、驗證檔案中的簽章以及為檔案加上時間戳記。  
@@ -97,7 +97,7 @@ signtool [command] [options] [file_name | ...]
 |`/u`  *Usage*|指定在簽署憑證時必須存在的增強金鑰使用方法 (Enhanced Key Usage，EKU)。 使用方法的值可以利用 OID 或字串指定。 預設的使用方法為 "Code Signing" (1.3.6.1.5.5.7.3.3)。|  
 |`/uw`|指定「Windows 系統元件驗證」(1.3.6.1.4.1.311.10.3.6) 的使用方式。|  
   
- 如需使用方式範例，請參閱[使用 SignTool 簽署檔案](http://msdn.microsoft.com/library/windows/desktop/aa388170.aspx)。  
+ 如需使用方式範例，請參閱[使用 SignTool 簽署檔案](/windows/desktop/SecCrypto/using-signtool-to-sign-a-file)。  
   
 <a name="TimeStamp"></a>   
 ## <a name="timestamp-command-options"></a>TimeStamp 命令選項  
@@ -111,7 +111,7 @@ signtool [command] [options] [file_name | ...]
 |`/tp` *index*|在 *index* 的簽章加上時間戳記。|  
 |`/tr`  *URL*|指定 RFC 3161 時間戳記伺服器的 URL。 要加上時間戳記的檔案必須先經過簽署。 必須有 `/tr` 或 `/t` 任一選項。|  
   
- 如需使用範例，請參閱[新增時間戳記至先前已簽署的檔案](http://msdn.microsoft.com/library/windows/desktop/aa375542.aspx)。  
+ 如需使用範例，請參閱[新增時間戳記至先前已簽署的檔案](/windows/desktop/SecCrypto/adding-time-stamps-to-previously-signed-files)。  
   
 <a name="Verify"></a>   
 ## <a name="verify-command-options"></a>驗證命令選項  
@@ -128,7 +128,7 @@ signtool [command] [options] [file_name | ...]
 |`/ds`  *Index*|驗證位於指定位置的簽章。|  
 |`/hash` (`SHA1`&#124;`SHA256`)|指定在目錄中搜尋檔案時，要使用的選擇性雜湊演算法。|  
 |`/kp`|指定應以核心模式驅動程式簽署原則執行驗證。|  
-|`/ms`|使用多個驗證語意。 在 [!INCLUDE[win8](../../../includes/win8-md.md)] 及以上版本上，這是 [WinVerifyTrust](http://msdn.microsoft.com/library/windows/desktop/aa388208.aspx) 呼叫的預設行為。|  
+|`/ms`|使用多個驗證語意。 在 [!INCLUDE[win8](../../../includes/win8-md.md)] 及以上版本上，這是 [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) 呼叫的預設行為。|  
 |`/o` *Version*|根據作業系統版本驗證檔案。 *Version* 的格式如下：*PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber*。 *PlatformID* 代表 <xref:System.PlatformID> 列舉成員的基礎值。 **重要事項：** 建議使用 `/o` 參數。 如果未指定 `/o`，SignTool.exe 可能會傳回未預期的結果。 例如，如果您未包含 `/o` 參數，在舊版作業系統上正確驗證的系統目錄，可能無法在較新版作業系統正確驗證。|  
 |`/p7`|驗證 PKCS #7 檔案。 PKCS #7 驗證沒有使用任何現有的原則。 檢查簽章，並建置簽署憑證鏈結。|  
 |`/pa`|指定使用預設 Authenticode 驗證原則。 如果未指定 `/pa` 選項，簽署工具便會使用「Windows 驅動程式驗證原則」(Windows Driver Verification Policy)。 這個選項無法與 `catdb` 選項搭配使用。|  
@@ -137,7 +137,7 @@ signtool [command] [options] [file_name | ...]
 |`/r` *RootSubjectName*|指定簽署憑證必須鏈結之根憑證的主體名稱。 這個值可以是完整根憑證主體名稱的子字串。|  
 |`/tw`|指定如果簽章未加上時間戳記，則應產生警告。|  
   
- 如需使用方式範例，請參閱[使用 SignTool 驗證檔案簽章](http://msdn.microsoft.com/library/windows/desktop/aa388171.aspx)。  
+ 如需使用方式範例，請參閱[使用 SignTool 驗證檔案簽章](/windows/desktop/SecCrypto/using-signtool-to-verify-a-file-signature)。  
   
 ## <a name="return-value"></a>傳回值  
  簽署工具終止時會傳回下列其中一個結束代碼。  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 67e752b9997301fcb3140539255fc32572bfd6e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 257435516b38d0e4389b7feceba68371bcc8f90e
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573616"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262135"
 ---
 # <a name="blockingcollection-overview"></a>BlockingCollection 概觀
 <xref:System.Collections.Concurrent.BlockingCollection%601> 是提供下列功能的安全執行緒集合類別︰  
@@ -80,7 +80,8 @@ BlockingCollection<string> bc = new BlockingCollection<string>(new ConcurrentBag
 ## <a name="using-many-blockingcollections-as-one"></a>將多個 BlockingCollection 當成一個使用  
  如果消費者需要同時從多個集合擷取項目，您可以建立 <xref:System.Collections.Concurrent.BlockingCollection%601> 陣列，並使用將新增至或擷取自陣列中任何集合的靜態方法 (例如 <xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny%2A> 和 <xref:System.Collections.Concurrent.BlockingCollection%601.AddToAny%2A>)。 如果封鎖其中一個集合，則方法會立即嘗試另一個集合，直到找到可執行作業的集合為止。 如需詳細資訊，請參閱[如何：在管線中使用封鎖回收的陣列](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md)。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
- [集合和資料結構](../../../../docs/standard/collections/index.md)  
- [安全執行緒集合](../../../../docs/standard/collections/thread-safe/index.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- [集合和資料結構](../../../../docs/standard/collections/index.md)  
+- [安全執行緒集合](../../../../docs/standard/collections/thread-safe/index.md)

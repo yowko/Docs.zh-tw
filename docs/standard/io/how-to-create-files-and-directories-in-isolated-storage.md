@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2ca4d2a4-809b-4f00-bc08-bf4a64d3a5c3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b7fa96e4f28e92e0890acf6ffc105ca11a97d575
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 08beb44fdb58ab1c1d53f70ac0653348b96fcb18
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575183"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227044"
 ---
 # <a name="how-to-create-files-and-directories-in-isolated-storage"></a>如何：在隔離儲存區中建立檔案和目錄
 取得隔離存放區之後，您可以建立目錄和檔案來儲存資料。 在存放區內，系統會以相對於虛擬檔案系統的根目錄指定檔案和目錄名稱。  
@@ -38,7 +38,8 @@ ms.locfileid: "33575183"
  [!code-csharp[Conceptual.IsolatedStorage#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source.cs#1)]
  [!code-vb[Conceptual.IsolatedStorage#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source.vb#1)]  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>  
- [隔離儲存區](../../../docs/standard/io/isolated-storage.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>  
+- [隔離儲存區](../../../docs/standard/io/isolated-storage.md)

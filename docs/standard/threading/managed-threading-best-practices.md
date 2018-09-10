@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15261291f40b6a41e0d6033fb92e1b23b4042019
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f95fb3ccab7362021a7a195ea199a1370e003dd2
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592466"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44204977"
 ---
 # <a name="managed-threading-best-practices"></a>Managed 執行緒處理的最佳實施方針
 在為多執行緒功能設計程式時需要非常小心。 您可以藉由將要求排入佇列以供執行緒集區的執行緒執行，來降低大部分工作的複雜性。 本主題要解決的是更困難的情況，例如協調多個執行緒的工作，或處理封鎖起來的執行緒。  
@@ -196,6 +196,7 @@ else {
   
 -   避免提供會變更靜態狀態的靜態方法。 在一般的伺服器案例中，所有要求會共用靜態狀態，這表示多個執行緒可以同時執行該程式碼。 這可能會讓執行緒發生錯誤。 請考慮使用某種設計模式，以將資料封裝到不會讓所有要求共用的執行個體。 此外，如果靜態資料會同步處理，會在靜態方法之間改變狀態的呼叫將會導致死結或多餘的同步處理，而對效能造成負面影響。  
   
-## <a name="see-also"></a>請參閱  
- [執行緒處理](../../../docs/standard/threading/index.md)  
- [執行緒和執行緒處理](../../../docs/standard/threading/threads-and-threading.md)
+## <a name="see-also"></a>另請參閱
+
+- [執行緒處理](../../../docs/standard/threading/index.md)  
+- [執行緒和執行緒處理](../../../docs/standard/threading/threads-and-threading.md)

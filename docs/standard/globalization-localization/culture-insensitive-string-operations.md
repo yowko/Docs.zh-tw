@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e6e2bb94-a95d-44e2-b68c-cfdd1db77784
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 212aa3f00967c04631b80305289c46d818106c44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3c1e1b476a1de1f0c348e264c9dc6b42ceb81eff
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574046"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869337"
 ---
 # <a name="culture-insensitive-string-operations"></a>不區分文化特性的字串作業
 如果您建立的應用程式會根據個別文化特性對使用者顯示結果，區分文化特性字串作業將有所助益。 根據預設，區分文化特性的方法會從目前執行緒的 <xref:System.Globalization.CultureInfo.CurrentCulture%2A> 屬性取得要使用的文化特性。  
@@ -32,5 +32,6 @@ ms.locfileid: "33574046"
   
  不論您是否要開發含有處理當地語系化和全球化問題之程式碼的應用程式，您應該知道預設情況下會擷取區分文化特性結果的 .NET Framework 方法。 本主題的目的在說明當您的應用程式想要取得不區分文化特性的結果時，使用這些方法的正確方式。  
   
-## <a name="see-also"></a>請參閱  
- [全球化和當地語系化](../../../docs/standard/globalization-localization/index.md)
+## <a name="see-also"></a>另請參閱
+
+- [全球化和當地語系化](../../../docs/standard/globalization-localization/index.md)

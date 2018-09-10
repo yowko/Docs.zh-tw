@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 822d551c-c69a-4191-82f4-183d82c9179c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8f560e3b080f6355d4e0c433c2a2218fbcbc6d72
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 844b0edb93b93704c4886495c673dc0496f7ba71
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574656"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44192973"
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>執行不區分文化特性的大小寫變更
 <xref:System.String.ToUpper%2A?displayProperty=nameWithType>、<xref:System.String.ToLower%2A?displayProperty=nameWithType>、<xref:System.Char.ToUpper%2A?displayProperty=nameWithType> 和 <xref:System.Char.ToLower%2A?displayProperty=nameWithType> 方法提供不接受任何參數的多載。 根據預設，不含參數的這些多載會根據 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 的值，執行大小寫變更。 這會產生可能會因為文化特性而有所不同的區分大小寫結果。 若要釐清您希望大小寫變更是區分文化特性還是不區分文化特性，就應該使用要求您明確地指定 `culture` 參數的這些方法的多載。 針對區分文化特性的大小寫變更，請為 `culture` 參數指定 `CultureInfo.CurrentCulture`。 至於不區分文化特性的大小寫變更，則為 `culture` 參數指定 `CultureInfo.InvariantCulture`。  
@@ -67,9 +67,10 @@ static object LookupKey(string key)
 ## <a name="using-the-chartoupper-and-chartolower-methods"></a>使用 Char.ToUpper 和 Char.ToLower 方法  
  雖然 `Char.ToUpper` 和 `Char.ToLower` 方法具有與 `String.ToUpper` 和 `String.ToLower` 方法相同的特性，但是受到影響的文化特性只有土耳其文 (土耳其) 和亞塞拜然文 (拉丁，亞塞拜然)。 這些是具有單一字元大小寫差異的唯二文化特性。 如需這個特殊案例對應的詳細資訊，請參閱 <xref:System.String> 類別主題中的＜大小寫＞一節。 為使程式碼更清楚並確保一致性的結果，建議您務必使用這些方法的多載，讓您明確地指定 `culture` 參數。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.String.ToUpper%2A?displayProperty=nameWithType>  
- <xref:System.String.ToLower%2A?displayProperty=nameWithType>  
- <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>  
- <xref:System.Char.ToLower%2A?displayProperty=nameWithType>  
- [執行不區分文化特性的字串作業](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.String.ToUpper%2A?displayProperty=nameWithType>  
+- <xref:System.String.ToLower%2A?displayProperty=nameWithType>  
+- <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>  
+- <xref:System.Char.ToLower%2A?displayProperty=nameWithType>  
+- [執行不區分文化特性的字串作業](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

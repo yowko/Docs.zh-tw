@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 58f32dcb76246bed1030f3d0a45db2541f381877
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 70e13893cf350a193411f1833e2e3b21c9b64182
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43390724"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44269263"
 ---
 # <a name="extending-the-dom"></a>擴充 DOM
 
@@ -253,6 +253,6 @@ DOM 的 .NET Framework 實作也包含一個事件系統，當 XML 文件中的�
 
 如果要在衍生類別中覆寫 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法，則編輯文件而建立新項目時，將不會加入預設屬性。 這只是在編輯時才會發生的問題。 因為 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法負責將預設屬性加入 <xref:System.Xml.XmlDocument>，所以您必須將此功能以程式碼編寫在 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法中。 如果載入含有預設屬性的 <xref:System.Xml.XmlDocument>，則會正確處理它們。 如需有關預設屬性的詳細資訊，請參閱[為 DOM 中的項目建立新屬性](creating-new-attributes-for-elements-in-the-dom.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[XML 文件物件模型 (DOM)](xml-document-object-model-dom.md)  
+- [XML 文件物件模型 (DOM)](xml-document-object-model-dom.md)  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 38a345ca-6963-4436-9608-5c9defef9c64
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15d99ef6ef3ae089216e586fe873043fa03b0d7b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bad5372af1d771dc93a20e61090ef84126f3e1eb
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567285"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44267111"
 ---
 # <a name="asynchronous-programming-using-delegates"></a>使用委派非同步設計程式
 委派可讓您以非同步方式呼叫同步方法。 當您同步呼叫委派時，`Invoke` 方法會在目前的執行緒上直接呼叫目標方法。 如果呼叫 `BeginInvoke` 方法，通用語言執行平台 (CLR) 會將要求排入佇列，並立即返回呼叫端。 在執行緒集區中的執行緒上會非同步呼叫目標方法。 送出要求的原始執行緒不被佔用，可以繼續與目標方法平行執行。 如果已在 `BeginInvoke` 方法呼叫中指定回撥方法，目標方法結束時會呼叫回撥方法。 在回撥方法中，`EndInvoke` 方法會取得傳回值和任何輸入/輸出或僅輸出參數。 如果呼叫 `BeginInvoke` 時未指定回撥方法，則可以從呼叫 `BeginInvoke` 的執行緒呼叫 `EndInvoke`。  
@@ -35,5 +35,6 @@ ms.locfileid: "33567285"
  [事件架構非同步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
  描述使用 .NET Framework 進行非同步程式設計。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Delegate>
+## <a name="see-also"></a>另請參閱
+
+* <xref:System.Delegate>

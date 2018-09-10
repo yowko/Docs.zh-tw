@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1907841694cde82cebada4a9e73b8ce703208611
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b19bc78f44781923df6873ccc9720f4605731976
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576125"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44206058"
 ---
 # <a name="localizability-review"></a>可當地語系化檢閱
 當地語系化能力審查是準備發行到全球之應用程式開發工作的中繼步驟。 這個步驟會確認全球化應用程式是否準備好進行當地語系化，以及識別使用者介面中需要特殊處理的任何程式碼或任何方面。 另外還可協助確保當地語系化過程中，不會在應用程式中造成任何功能上的問題。 當地語系化能力審查提出的所有問題都獲得解決之後，您的應用程式就可以開始進行當地語系化。 如果當地語系化能力檢閱相當徹底，您應該不需要在當地語系化過程期間修改任何原始程式碼。  
@@ -73,8 +73,9 @@ ms.locfileid: "33576125"
   
  如果您已遵循全球化建議開發應用程式、正確地處理區分文化特性的功能，而且找到並解決了測試期間發生的當地語系化問題，就可以繼續進行下一個步驟：[當地語系化](../../../docs/standard/globalization-localization/localization.md)。  
   
-## <a name="see-also"></a>請參閱  
- [全球化和當地語系化](../../../docs/standard/globalization-localization/index.md)  
- [當地語系化](../../../docs/standard/globalization-localization/localization.md)  
- [全球化](../../../docs/standard/globalization-localization/globalization.md)  
- [桌面應用程式中的資源](../../../docs/framework/resources/index.md)
+## <a name="see-also"></a>另請參閱
+
+- [全球化和當地語系化](../../../docs/standard/globalization-localization/index.md)  
+- [當地語系化](../../../docs/standard/globalization-localization/localization.md)  
+- [全球化](../../../docs/standard/globalization-localization/globalization.md)  
+- [桌面應用程式中的資源](../../../docs/framework/resources/index.md)

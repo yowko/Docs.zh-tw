@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a7bf73920d10ff825396e61a3ca4e9efd622d9c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f39b079de1c97d0954ba013ba1c87a8bd606920
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568000"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198994"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>如何：在日期與時間值中顯示毫秒
 預設的日期和時間格式化方法 (例如 <xref:System.DateTime.ToString?displayProperty=nameWithType>) 包括時間值的小時、分鐘和秒，但不包括它的毫秒元件。 本主題說明如何將日期和時間的毫秒部分加入格式化的日期和時間字串。  
@@ -54,6 +54,7 @@ ms.locfileid: "33568000"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  在命令列中，使用 csc.exe 或 vbc.exe 來編譯程式碼。 若要在 Visual Studio 中編譯程式碼，請將它放入主控台應用程式專案範本。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Globalization.DateTimeFormatInfo>  
- [自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Globalization.DateTimeFormatInfo>  
+- [自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)

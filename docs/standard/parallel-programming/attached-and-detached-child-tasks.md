@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53f31402e78a15289bb996c63e1e8e3cd98e6aac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83451af25006e9da396a3e6618cbecee036e9fe2
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590762"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44188263"
 ---
 # <a name="attached-and-detached-child-tasks"></a>附加與中斷連結的子工作
 「子工作」(或「巢狀工作」) 是 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 執行個體，它是在另一項工作 (稱為「父工作」) 的使用者委派中建立。 子工作可以中斷連結或附加。 「中斷連結的子工作」(detached child task) 是獨立於其父代而執行的工作。 「附加的子工作」(attached child task) 是巢狀工作，而且是使用 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 選項所建立，其父代並不明確或預設禁止它附加。 工作可能會建立任意數目的附加和中斷連結的子工作，只受限於系統資源。  
@@ -78,6 +78,7 @@ ms.locfileid: "33590762"
   
  當子工作未及時完成時，您也可能想要防止子工作附加到其父系。 由於父工作會在所有子工作完成後才完成，因此長時間執行的子工作可能造成整個應用程式效能不佳。 如需示範如何藉由防止工作附加至其父工作以改善應用程式效能的範例，請參閱[如何：防止子工作附加到其父系](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md)。  
   
-## <a name="see-also"></a>請參閱  
- [平行程式設計](../../../docs/standard/parallel-programming/index.md)  
- [資料平行處理原則](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
+## <a name="see-also"></a>另請參閱
+
+- [平行程式設計](../../../docs/standard/parallel-programming/index.md)  
+- [資料平行處理原則](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)

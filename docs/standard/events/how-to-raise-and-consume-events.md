@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 42afade7-3a02-4f2e-868b-95845f302f8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: efeed61c5748a0a6ac731cdcfce1a110982b2941
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aa933e0fc589d0dbfec741e9db7fb11222cfdf38
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572719"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44193213"
 ---
 # <a name="how-to-raise-and-consume-events"></a>如何：引發和使用事件
 本主題中的範例將示範如何使用事件。 包括 <xref:System.EventHandler> 委派、<xref:System.EventHandler%601> 委派和自訂委派的範例，用以說明包含和不包含資料的事件。  
@@ -44,5 +44,6 @@ ms.locfileid: "33572719"
  [!code-csharp[EventsOverview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programwithdelegate.cs#7)]
  [!code-vb[EventsOverview#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1withdelegate.vb#7)]  
   
-## <a name="see-also"></a>請參閱  
- [事件](../../../docs/standard/events/index.md)
+## <a name="see-also"></a>另請參閱
+
+- [事件](../../../docs/standard/events/index.md)

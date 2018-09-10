@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f414e5b0463e28427c8c60e2f8b8774ad6973da2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 2933d574b387ec0f444883bbafb41f602bc5dcc0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43464133"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44208805"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>資料平行處理原則 (工作平行程式庫)
 「資料平行處理原則」是指在來源集合或陣列中的元素上，同時 (也就是平行) 執行相同作業的情節。 在資料平行作業中，會將來源集合分割，讓多個執行緒可以同時在不同區段上操作。  
@@ -53,5 +53,6 @@ ms.locfileid: "43464133"
 |[工作平行程式庫 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|提供工作平行程式庫的概觀。|  
 |[平行程式設計](../../../docs/standard/parallel-programming/index.md)|介紹如何以 .NET Framework 進行平行程式設計。|  
   
-## <a name="see-also"></a>請參閱  
- [平行程式設計](../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a>另請參閱
+
+- [平行程式設計](../../../docs/standard/parallel-programming/index.md)

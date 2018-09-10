@@ -9,11 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4380c509a08ebe59f9561a9e6fc596458768917f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef464b0d4c22d04d42f9b6f953abefe7582b4957
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44188536"
 ---
 # <a name="threads-and-threading"></a>執行緒和執行緒處理
 作業系統會使用處理序來分隔它們所執行的各種不同應用程式。 執行緒是作業系統配置處理器時間的基本單位，而在該處理序內可以有多個執行緒執行程式碼。 每個執行緒都保有例外處理常式、排程優先順序，以及系統用來儲存執行緒內容直到執行緒被排定為止的一組結構。 執行緒內容包括執行緒在執行緒主機處理序的位址空間中順暢繼續執行所需的所有資訊，包括執行緒的一組 CPU 暫存器和堆疊。  
@@ -88,8 +89,9 @@ ms.lasthandoff: 05/04/2018
 > [!NOTE]
 >  在 .NET Framework 1.0 和 1.1 版中，通用語言執行平台會以無訊息模式截獲一些例外狀況 (例如在執行緒集區執行緒中)。 這可能會破壞應用程式狀態，最終導致應用程式沒有回應，而可能讓偵錯工作變得相當困難。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Threading.ThreadPool>  
- <xref:System.ComponentModel.BackgroundWorker>  
- [同步處理多執行緒處理的資料](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
- [Managed 執行緒集區](../../../docs/standard/threading/the-managed-thread-pool.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Threading.ThreadPool>  
+- <xref:System.ComponentModel.BackgroundWorker>  
+- [同步處理多執行緒處理的資料](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
+- [Managed 執行緒集區](../../../docs/standard/threading/the-managed-thread-pool.md)

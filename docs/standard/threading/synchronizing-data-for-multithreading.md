@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 998e159cceded6da2e9c3068680c45bc1c9345a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1a7561a09b1b47827b3476b5525863503765064f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591527"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44180133"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>同步處理多執行緒處理的資料
 當多個執行緒可以對單一物件的屬性和方法進行呼叫時，請務必同步處理這些呼叫。 否則某個執行緒可能會中斷另一個執行緒正在執行的作業，而且物件可能會處於無效狀態。 其成員受到保護免於這種中斷的類別，稱為安全執行緒。  
@@ -67,9 +67,10 @@ ms.locfileid: "33591527"
 ## <a name="synchronized-context"></a>同步處理的內容  
  您可以在任何 **ContextBoundObject** 上使用 **SynchronizationAttribute**，以同步所有執行個體方法和欄位。 相同內容網域中所有物件都共用相同的鎖定。 允許多個執行緒存取方法和欄位，但是一次只允許單一執行緒。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>  
- [執行緒和執行緒處理](../../../docs/standard/threading/threads-and-threading.md)  
- [同步處理原始物件概觀](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
- [SyncLock 陳述式](~/docs/visual-basic/language-reference/statements/synclock-statement.md)  
- [lock 陳述式](~/docs/csharp/language-reference/keywords/lock-statement.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>  
+- [執行緒和執行緒處理](../../../docs/standard/threading/threads-and-threading.md)  
+- [同步處理原始物件概觀](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
+- [SyncLock 陳述式](~/docs/visual-basic/language-reference/statements/synclock-statement.md)  
+- [lock 陳述式](~/docs/csharp/language-reference/keywords/lock-statement.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc0c1ebdc4f774858916dcc8ec8db2ba386b7a88
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 53f0f0d82ee751b66168fff68c31d952f480be2e
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948601"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041612"
 ---
 # <a name="regular-expression-language---quick-reference"></a>規則運算式語言 - 快速參考
 <a name="top"></a>規則運算式是規則運算式引擎嘗試在輸入文字中比對的模式。 模式是由一個或多個字元常值、運算子或建構所組成。  如需簡介，請參閱 [.NET 規則運算式](../../../docs/standard/base-types/regular-expressions.md)。  
@@ -93,11 +93,11 @@ ms.locfileid: "36948601"
   
 |判斷提示|描述|模式|符合|  
 |---------------|-----------------|-------------|-------------|  
-|`^`|根據預設，比對必須在字串的開頭開始；在多行模式中，它必須在一行的開頭開始。|`^\d{3}`|"901-333-" 中的<br /><br /> "901"|  
-|`$`|根據預設，比對必須發生在字串的結尾或字串結尾的 `\n` 之前；在多行模式中，它必須發生在一行的結尾之前，或一行結尾的 `\n` 之前。|`-\d{3}$`|"-333-333" 中的<br /><br /> "-333"|  
-|`\A`|比對必須發生在字串開頭。|`\A\d{3}`|"901-333-" 中的<br /><br /> "901"|  
-|`\Z`|比對必須發生在字串結尾，或發生在字串結尾的 `\n` 之前。|`-\d{3}\Z`|"-333-333" 中的<br /><br /> "-333"|  
-|`\z`|比對必須發生在字串結尾。|`-\d{3}\z`|"-333-333" 中的<br /><br /> "-333"|  
+|`^`|根據預設，比對必須在字串的開頭開始；在多行模式中，它必須在一行的開頭開始。|`^\d{3}`|"901-" 中的<br /><br /> "901-333-"|  
+|`$`|根據預設，比對必須發生在字串的結尾或字串結尾的 `\n` 之前；在多行模式中，它必須發生在一行的結尾之前，或一行結尾的 `\n` 之前。|`-\d{3}$`|"-333" 中的<br /><br /> "-333"|  
+|`\A`|比對必須發生在字串開頭。|`\A\d{3}`|"901-" 中的<br /><br /> "901-333-"|  
+|`\Z`|比對必須發生在字串結尾，或發生在字串結尾的 `\n` 之前。|`-\d{3}\Z`|"-333" 中的<br /><br /> "-901-333"|  
+|`\z`|比對必須發生在字串結尾。|`-\d{3}\z`|"-333-333-" 中的<br /><br /> "-901-333"|  
 |`\G`|比對必須發生在先前比對結束的位置。|`\G\(\d\)`|"(1)(3)(5)[7](9\)" 中的 "(1)"、"(3)"、"(5)"|  
 |`\b`|比對必須發生在 `\w` (英數) 和 `\W` (非英數) 字元之間的界限上。|`\b\w+\s\w+\b`|"them theme them them" 中的 "them theme"、"them them"|  
 |`\B`|比對不可以發生在 `\b` 界限上。|`\Bend\w*\b`|"end sends endure lender" 中的 "ends"、"ender"|  
@@ -216,11 +216,12 @@ ms.locfileid: "36948601"
 |`(?#` *註解* `)`|內嵌註解。 註解會在第一個右括號結束。|`\bA(?#Matches words starting with A)\w+\b`|  
 |`#` [至行尾]|X 模式註解。 註解從未逸出的 `#` 開始，並延續到行尾。|`(?x)\bA\w+\b#Matches words starting with A`|  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
- <xref:System.Text.RegularExpressions.Regex>  
- [規則運算式](regular-expressions.md)  
- [規則運算式類別](the-regular-expression-object-model.md)  
- [規則運算式範例](regular-expression-examples.md)  
- [規則運算式 - 快速參考 (以 Word 格式下載)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [規則運算式 - 快速參考 (以 PDF 格式下載)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
+- <xref:System.Text.RegularExpressions.Regex>  
+- [規則運算式](regular-expressions.md)  
+- [規則運算式類別](the-regular-expression-object-model.md)  
+- [規則運算式範例](regular-expression-examples.md)  
+- [規則運算式 - 快速參考 (以 Word 格式下載)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+- [規則運算式 - 快速參考 (以 PDF 格式下載)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

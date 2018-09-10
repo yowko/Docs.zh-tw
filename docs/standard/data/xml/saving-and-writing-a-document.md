@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 389ae0d95f3d612ca9c81ce69b74f8b58534d679
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83aad5d45dda1784069839662486f7dbcc307542
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573590"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879512"
 ---
 # <a name="saving-and-writing-a-document"></a>儲存與寫入文件
 載入及儲存 <xref:System.Xml.XmlDocument> 時，儲存的文件與原始文件在下列方面可能不同：  
@@ -90,5 +90,6 @@ string xml = mydoc.DocumentElement.OuterXml;
   
  相反地，如果您需要子節點的內容，則可使用 <xref:System.Xml.XmlNode.InnerText%2A> 屬性。  
   
-## <a name="see-also"></a>請參閱  
- [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>另請參閱
+
+- [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

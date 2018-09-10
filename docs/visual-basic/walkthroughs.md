@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: 5211e1cc55c4af9735f59e4ddecc11acb24b8ea0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 5cf49f8b97b33e179234bda4eb9ed6ef01d07fca
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43452790"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086760"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Visual Basic 語言逐步解說
 逐步解說提供常見情節的逐步指示，使其成為開始學習產品或特定功能區域的最佳去處。  
@@ -62,7 +62,7 @@ ms.locfileid: "43452790"
  [建立自訂的記錄檔接聽程式](../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
  示範如何建立自訂記錄檔接聽程式，並將它設定為接聽 `My.Application.Log` 物件的輸出。  
   
- [從 Managed 組件內嵌類型](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
+ [從 Managed 組件內嵌類型](../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
  描述如何建立內嵌類型的組件和用戶端程式。  
   
  [驗證密碼確實複雜 (Visual Basic)](../visual-basic/programming-guide/language-features/strings/walkthrough-validating-that-passwords-are-complex.md)  
@@ -77,7 +77,7 @@ ms.locfileid: "43452790"
  [使用 .NET Framework 方法管理檔案](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
  示範如何使用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 方法來判斷檔案的相關資訊、搜尋檔案中的字串，以及寫入檔案。  
   
- [在 Visual Basic 中保存物件](https://msdn.microsoft.com/library/cb0a0917-08d5-4578-ad2b-3764ccf6167f)  
+ [在 Visual Basic 中保存物件](../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  示範如何建立簡單的物件，並將其資料保存至檔案。  
   
  [以使用時產生功能支援測試優先](https://msdn.microsoft.com/library/764c17a4-cd95-4c23-bf63-d92d9c5adfb2)  

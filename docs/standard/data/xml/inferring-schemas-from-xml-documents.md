@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f8640a951acab512cbe2397df831a74700b5ad6c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9a27696b6511103e98d37fb72b33f801d23ad391
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574816"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042175"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>從 XML 文件推斷結構描述
 本主題說明如何使用 <xref:System.Xml.Schema.XmlSchemaInference> 類別，從 XML 文件結構推斷 XML 結構描述定義語言 (XSD) 結構描述。  
@@ -82,9 +82,10 @@ ms.locfileid: "33574816"
 ## <a name="schemas-that-cannot-be-refined"></a>無法進一步調整的結構描述  
  有些 W3C XML 結構描述建構在指定要調整的型別時會擲回例外狀況，則 XML 結構描述定義語言 (XSD) 結構描述 <xref:System.Xml.Schema.XmlSchemaInference> 處理序無法處理這類的結構描述。 最上層建構元不屬於序列的複雜型別即是一例。 在結構描述物件模型 (SOM) 中，它會對應至 <xref:System.Xml.Schema.XmlSchemaComplexType> 屬性不屬於 <xref:System.Xml.Schema.XmlSchemaComplexType.Particle%2A> 之執行個體的 <xref:System.Xml.Schema.XmlSchemaSequence>。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Xml.Schema.XmlSchemaInference>  
- [XML 結構描述物件模型 (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
- [推斷 XML 結構描述](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
- [推斷結構描述節點類型和結構的規則](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)  
- [推斷簡單類型的規則](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Xml.Schema.XmlSchemaInference>  
+- [XML 結構描述物件模型 (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
+- [推斷 XML 結構描述](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
+- [推斷結構描述節點類型和結構的規則](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)  
+- [推斷簡單類型的規則](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)

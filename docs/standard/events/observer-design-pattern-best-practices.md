@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 030b62688ba8985a2659769fe20b6ae527471df5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03b77074323346e1a26fa07dc1ec873152da356b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579388"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44195048"
 ---
 # <a name="observer-design-pattern-best-practices"></a>觀察器設計模式最佳作法
 在 .NET Framework 中，觀察者設計模式會實作為一組介面。 <xref:System.IObservable%601?displayProperty=nameWithType> 介面代表資料提供者，它也負責提供 <xref:System.IDisposable> 實作，讓觀察者可以取消訂閱通知。 <xref:System.IObserver%601?displayProperty=nameWithType> 介面代表觀察者。 本主題說明使用這些介面實作觀察者設計模式時，開發人員應該遵循的最佳作法。  
@@ -53,7 +53,8 @@ ms.locfileid: "33579388"
   
  雖然您可以將觀察者附加到多個提供者，但建議的模式是將 <xref:System.IObserver%601> 執行個體只附加到一個 <xref:System.IObservable%601> 執行個體。  
   
-## <a name="see-also"></a>請參閱  
- [觀察者設計模式](../../../docs/standard/events/observer-design-pattern.md)  
- [操作說明：實作觀察者](../../../docs/standard/events/how-to-implement-an-observer.md)  
- [操作說明：實作提供者](../../../docs/standard/events/how-to-implement-a-provider.md)
+## <a name="see-also"></a>另請參閱
+
+- [觀察者設計模式](../../../docs/standard/events/observer-design-pattern.md)  
+- [操作說明：實作觀察者](../../../docs/standard/events/how-to-implement-an-observer.md)  
+- [操作說明：實作提供者](../../../docs/standard/events/how-to-implement-a-provider.md)

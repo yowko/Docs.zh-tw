@@ -8,11 +8,12 @@ dev_langs:
 ms.assetid: d5c87cbe-4d69-429f-aad5-3103c2ca2770
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e3f41ba7281d67cc2ce848597926f5efebf4d489
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a6597a3a57cd68c4dd17c4fbae882590f373709
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44222684"
 ---
 # <a name="changing-namespace-prefix-properties"></a>變更命名空間前置詞屬性
 **XmlNode** 類別可以讓您變更與指定之節點關聯的命名空間前置詞。 例如，下列程式碼顯示要變更之項目的前置詞。  
@@ -65,5 +66,6 @@ Console.WriteLine(doc.InnerXml);
   
  樹狀結構保留於字串做為 **doc.InnerXml** 的呼叫結果時，會加入 `xmlns:a='123'` 屬性以保留 `test` 項目的命名空間。 它原本是 `'123'`，且仍保留為 `'123'`。  
   
-## <a name="see-also"></a>請參閱  
- [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>另請參閱
+
+- [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

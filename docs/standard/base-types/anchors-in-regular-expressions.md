@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24a579acacf41df24779252e1064e1c271310edc
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 7ae07afa2ad2110591139d395ffd8e8cfa5e2347
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948585"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085182"
 ---
 # <a name="anchors-in-regular-expressions"></a>規則運算式中的錨點
 <a name="top"></a> 錨點或不可部分完成的無寬度判斷提示會指定字串中必須比對的位置。 當您在搜尋運算式中使用錨點時，規則運算式引擎不會在字串中前進或使用字元；它只會尋找指定位置中的相符項目。 例如， `^` 指定必須從行首或字串的開頭開始比對。 因此，僅當行首出現 "http:" 時，規則運算式 `^http:` 才會與其相符。 下表列出 .NET 中此規則運算式所支援的錨點。  
@@ -174,6 +174,7 @@ ms.locfileid: "36948585"
 |`qu`|比對子字串 "qu"。|  
 |`\w+`|比對一個或多個文字字元。|  
   
-## <a name="see-also"></a>請參閱  
- [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- [規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md)
+## <a name="see-also"></a>另請參閱
+
+- [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md)

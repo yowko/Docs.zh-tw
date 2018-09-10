@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 182ec76d-5a01-4d73-996c-0b0d14fcea18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a9adb5d39eb420496030d85dacd95a1cccd6fd2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2166412269a84329d42f58c7e3423229be4327b8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568754"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877738"
 ---
 # <a name="compilation-and-reuse-in-regular-expressions"></a>規則運算式中的編譯和重複使用
 只要了解規則運算式引擎如何編譯運算式，以及了解如何快取規則運算式，您就可以使大量使用規則運算式的應用程式達到最佳效能。 本主題討論編譯及快取。  
@@ -46,5 +46,6 @@ ms.locfileid: "33568754"
   
  由於物件具現化和規則運算式編譯會造成額外負荷，因此建立及快速終結多個 <xref:System.Text.RegularExpressions.Regex> 物件是個非常耗費資源的處理序。 對於使用大量不同規則運算式的應用程式，您可以使用靜態 `Regex` 方法的呼叫，或增加規則運算式快取的大小，以達到最佳效能。  
   
-## <a name="see-also"></a>請參閱  
- [.NET 規則運算式](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>另請參閱
+
+- [.NET 規則運算式](../../../docs/standard/base-types/regular-expressions.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 86b69a08-3bfa-4e5f-b4e1-3b7cb8478215
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4cd7b7542e5cf9352e965717368399dcf4a9ecd2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3de83395df9e8c89a92e85b96ddd15e9f0be6ad5
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575846"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207690"
 ---
 # <a name="how-to-enumerate-directories-and-files"></a>如何：列舉目錄和檔案
 您可以使用能夠傳回可列舉其名稱字串集合的方法來列舉目錄和檔案。 您也可以使用傳回可列舉 <xref:System.IO.DirectoryInfo>、<xref:System.IO.FileInfo> 或 <xref:System.IO.FileSystemInfo> 物件集合的方法。 當您使用目錄和檔案的大型集合時，相較於陣列，可列舉的集合會提供更佳的效能。  
@@ -65,5 +65,6 @@ ms.locfileid: "33575846"
      [!code-csharp[System.IO.DirectoryInfo.EnumerateDirectories#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directoryinfo.enumeratedirectories/cs/program.cs#1)]
      [!code-vb[System.IO.DirectoryInfo.EnumerateDirectories#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumeratedirectories/vb/program.vb#1)]  
   
-## <a name="see-also"></a>請參閱  
- [檔案和資料流 I/O](../../../docs/standard/io/index.md)
+## <a name="see-also"></a>另請參閱
+
+- [檔案和資料流 I/O](../../../docs/standard/io/index.md)

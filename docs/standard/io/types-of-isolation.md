@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8c1d4674c84fad1b7ae6021c4868e7f5a053c5a4
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 49708175f8501c735a77b0f7f965a106b6e086f2
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935622"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44216577"
 ---
 # <a name="types-of-isolation"></a>隔離的類型
 對隔離儲存區的存取永遠限制於建立該隔離儲存區的使用者。 為實作這種類型的隔離，通用語言執行階段會使用作業系統可辨識的相同使用者身分識別概念，這是與開啟儲存區時，與程式碼執行所在處理序相關聯的身分識別。 此身分識別是一個經過驗證的使用者身分識別，但是模擬可能會造成目前使用者的身分識別動態變更。  
@@ -106,6 +106,7 @@ ms.locfileid: "42935622"
  [!code-csharp[Conceptual.IsolatedStorage#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source9.cs#12)]
  [!code-vb[Conceptual.IsolatedStorage#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source9.vb#12)]  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.IO.IsolatedStorage.IsolatedStorageScope>  
- [隔離儲存區](../../../docs/standard/io/isolated-storage.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.IO.IsolatedStorage.IsolatedStorageScope>  
+- [隔離儲存區](../../../docs/standard/io/isolated-storage.md)

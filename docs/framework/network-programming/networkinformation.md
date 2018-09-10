@@ -7,12 +7,12 @@ ms.assetid: 31b44dd3-b903-4a48-8419-40419a3e4038
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 964e76a008e1c18fe9f609f1dd63bce565e95d44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88b39b5ae01ec5b22044dde82ba0f802c1a50ca9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396315"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526748"
 ---
 # <a name="networkinformation"></a>NetworkInformation
 <xref:System.Net.NetworkInformation> 命名空間可讓您收集網路事件、變更、統計資料和屬性的相關資訊。 您也可以使用 <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType> 類別，來判斷是否可連線至遠端主機。  
@@ -28,6 +28,6 @@ ms.locfileid: "33396315"
   
 ## <a name="see-also"></a>請參閱  
  [網路程式設計範例](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Network Information Technology Sample](http://go.microsoft.com/fwlink/?LinkID=179564) (網路資訊技術範例)  
- [NetStat 工具技術範例](http://go.microsoft.com/fwlink/?LinkID=179562)  
- [Ping 用戶端技術範例](http://go.microsoft.com/fwlink/?LinkID=179565)
+ [Network Information Technology Sample](https://go.microsoft.com/fwlink/?LinkID=179564) (網路資訊技術範例)  
+ [NetStat 工具技術範例](https://go.microsoft.com/fwlink/?LinkID=179562)  
+ [Ping 用戶端技術範例](https://go.microsoft.com/fwlink/?LinkID=179565)

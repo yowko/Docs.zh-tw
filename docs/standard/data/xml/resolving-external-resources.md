@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c1c56d69724212b9d1cd6a24204a12460071633f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef31d101769dca00f5cff545c72b3afbd59bc638
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577084"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268402"
 ---
 # <a name="resolving-external-resources"></a>解析外部資源
 **XmlDocument** 類別可以使用 **XmlDocument** 的 **XmlResolver** 屬性尋找沒有內嵌到 XML 資料的資源，例如外部文件類型定義 (DTD)、實體和結構描述。 這些項目可位於網路或本機磁碟上，並且可以由統一資源識別元 (URI) 辨識。 如此可讓 **XmlDocument** 解析文件中出現的 **EntityReference** 節點，並依據外部 DTD 或結構描述驗證文件。  
@@ -52,5 +52,6 @@ ms.locfileid: "33577084"
   
  如需詳細資訊，請參閱 <xref:System.Xml.XmlResolver> 參考頁面的＜備註＞一節。  
   
-## <a name="see-also"></a>請參閱  
- [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>另請參閱
+
+- [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

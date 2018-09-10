@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e52ff26c-c5d3-4fab-9fec-c937fb387963
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebea62f33c5df252dd73a0708f31612cd2998728
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c85731b991399e92297d6109a3000c1e345e02f6
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580935"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087203"
 ---
 # <a name="how-to-specify-the-execution-mode-in-plinq"></a>如何：在 PLINQ 中指定執行模式
 這個範例示範如何強制 PLINQ 略過其預設啟發學習法並以平行方式處理查詢，而不考慮查詢的種類。  
@@ -32,6 +32,7 @@ ms.locfileid: "33580935"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  將此程式碼剪下並貼到 [PLINQ 資料範例](../../../docs/standard/parallel-programming/plinq-data-sample.md)，並從 `Main` 呼叫此方法。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Linq.ParallelEnumerable.AsSequential%2A>  
- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Linq.ParallelEnumerable.AsSequential%2A>  
+- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99b3c36f040b506c23315d40d76642b09c0f362b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63931f4498f4c1f313e7980b91ef712d4a46a837
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591569"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865175"
 ---
 # <a name="exceptions-in-managed-threads"></a>Managed 執行緒中的例外狀況
 從 .NET Framework version 2.0 開始，通用語言執行平台允許執行緒中大多數未處理的例外狀況自然地繼續。 在大多數情況下，這表示未處理的例外狀況導致應用程式終止。  
@@ -78,5 +78,6 @@ ms.locfileid: "33591569"
 ## <a name="host-override"></a>主機覆寫  
  在 .NET Framework 2.0 版中，Unmanaged 主機可以使用裝載 API 中的 [ICLRPolicyManager](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) 介面，覆寫通用語言執行平台的預設未處理例外狀況原則。 [Iclrpolicymanager:: Setunhandledexceptionpolicy](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) 函數用來設定未處理例外狀況的原則。  
   
-## <a name="see-also"></a>請參閱  
- [Managed 執行緒處理的基本概念](../../../docs/standard/threading/managed-threading-basics.md)
+## <a name="see-also"></a>另請參閱
+
+- [Managed 執行緒處理的基本概念](../../../docs/standard/threading/managed-threading-basics.md)

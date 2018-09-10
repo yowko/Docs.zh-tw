@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e209d949-31e8-44ea-8e38-87f9093f3093
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6b854495a32755b2cbbd0421b1a45458fd2b7863
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 65c56a11531f705b7e047e435ec575969d39a616
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572693"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44187672"
 ---
 # <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>如何：讀取和寫入新建立的資料檔案
 <xref:System.IO.BinaryWriter> 和 <xref:System.IO.BinaryReader?displayProperty=nameWithType> 類別用於寫入和讀取資料，而不是字元字串。 下列範例示範如何在稱為 `Test.data` 的新空白檔案資料流中寫入資料和讀取資料。 在目前的目錄中建立資料檔案之後，系統會建立相關聯的 <xref:System.IO.BinaryWriter> 和 <xref:System.IO.BinaryReader> 物件，而且會使用 <xref:System.IO.BinaryWriter> 物件，將 0 到 10 的整數寫入 `Test.data`，讓檔案指標留在檔案的結尾。 將檔案指標設定為原點之後，<xref:System.IO.BinaryReader> 物件會讀出指定的內容。  
@@ -33,16 +33,17 @@ ms.locfileid: "33572693"
 ## <a name="robust-programming"></a>穩固程式設計  
  如果 `Test.data` 已存在於目前的目錄中，則會擲回 <xref:System.IO.IOException> 例外狀況。 當您初始化檔案資料流時使用檔案模式選項 <xref:System.IO.FileMode.Create?displayProperty=nameWithType>，就會一律建立新檔案，而不會擲回例外狀況。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.IO.BinaryReader>  
- <xref:System.IO.BinaryWriter>  
- <xref:System.IO.FileStream>  
- <xref:System.IO.FileStream.Seek%2A?displayProperty=nameWithType>  
- <xref:System.IO.SeekOrigin>  
- [操作說明：列舉目錄和檔案](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
- [如何：開啟並附加至記錄檔](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
- [如何：從檔案讀取文字](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
- [如何：將文字寫入檔案](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
- [如何：從字串中讀取字元](../../../docs/standard/io/how-to-read-characters-from-a-string.md)  
- [如何：將字元寫入至字串](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
- [檔案和資料流 I/O](../../../docs/standard/io/index.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.IO.BinaryReader>  
+- <xref:System.IO.BinaryWriter>  
+- <xref:System.IO.FileStream>  
+- <xref:System.IO.FileStream.Seek%2A?displayProperty=nameWithType>  
+- <xref:System.IO.SeekOrigin>  
+- [操作說明：列舉目錄和檔案](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
+- [如何：開啟並附加至記錄檔](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
+- [如何：從檔案讀取文字](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
+- [如何：將文字寫入檔案](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
+- [如何：從字串中讀取字元](../../../docs/standard/io/how-to-read-characters-from-a-string.md)  
+- [如何：將字元寫入至字串](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
+- [檔案和資料流 I/O](../../../docs/standard/io/index.md)

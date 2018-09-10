@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cf9d1323918d42884f5e2fdf8a5905d13283c74c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a6c151798c807206cc7f4b2fbeb21e75e9142379
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575969"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198474"
 ---
 # <a name="generic-interfaces"></a>泛型介面
 本主題概述提供泛型類型系列中常見功能的泛型介面。  
@@ -42,10 +42,11 @@ ms.locfileid: "33575969"
   
  <xref:System.Collections.Generic.IEnumerable%601> 泛型介面提供泛型列舉程式結構。 泛型列舉程式所實作的 <xref:System.Collections.Generic.IEnumerator%601> 泛型介面會繼承非泛型 <xref:System.Collections.IEnumerator> 介面；<xref:System.Collections.IEnumerator.MoveNext%2A> 和 <xref:System.Collections.IEnumerator.Reset%2A> 成員 (不相依於類型參數 `T`) 只會出現在泛型介面上。 這表示非泛型介面的任何消費者也都可以使用泛型介面。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Collections.Generic?displayProperty=nameWithType>  
- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
- [泛型](../../../docs/standard/generics/index.md)  
- [.NET Framework 中的泛型集合](../../../docs/standard/generics/collections.md)  
- [管理陣列和清單的泛型委派](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
- [共變數和反變數](../../../docs/standard/generics/covariance-and-contravariance.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Collections.Generic?displayProperty=nameWithType>  
+- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
+- [泛型](../../../docs/standard/generics/index.md)  
+- [.NET Framework 中的泛型集合](../../../docs/standard/generics/collections.md)  
+- [管理陣列和清單的泛型委派](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
+- [共變數和反變數](../../../docs/standard/generics/covariance-and-contravariance.md)

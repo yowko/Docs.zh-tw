@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 744ce1f2810eee025f071cafaa71e473b6ed4c50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d9df1aa781bd54468d2273a335b3fda7d701854d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392849"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519404"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>如何：設定免註冊啟用的 .NET Framework 架構 COM 元件
 .NET Framework 型元件的免註冊啟用，只比 COM 元件的免註冊啟用略為複雜。 安裝程式需要兩個資訊清單：  
@@ -37,7 +37,7 @@ ms.locfileid: "33392849"
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-     如需資訊清單元素及其屬性的相關資訊，請參閱[應用程式資訊清單](https://msdn.microsoft.com/library/windows/desktop/aa374191.aspx) \(英文\)。  
+     如需資訊清單元素及其屬性的相關資訊，請參閱[應用程式資訊清單](/windows/desktop/SbsCs/application-manifests) \(英文\)。  
   
 3.  識別資訊清單的擁有者。 在下列範例中，`myComApp` 第 1 版擁有資訊清單檔。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "33392849"
   
 5.  儲存並命名資訊清單檔。 應用程式資訊清單的名稱就是後接 .manifest 副檔名的組件可執行檔名稱。 例如，myComApp.exe 的應用程式資訊清單檔案名稱是 myComApp.exe.manifest。  
   
- 您可以在與 COM 應用程式相同的目錄中安裝應用程式資訊清單。 或者，您可以將它當成資源新增至應用程式的.exe 檔案。 如需詳細資訊，請參閱[關於並存組件](https://msdn.microsoft.com/library/windows/desktop/ff951640.aspx) \(英文\)。  
+ 您可以在與 COM 應用程式相同的目錄中安裝應用程式資訊清單。 或者，您可以將它當成資源新增至應用程式的.exe 檔案。 如需詳細資訊，請參閱[關於並存組件](/windows/desktop/SbsCs/about-side-by-side-assemblies-) \(英文\)。  
   
 #### <a name="to-create-a-component-manifest"></a>建立元件資訊清單  
   

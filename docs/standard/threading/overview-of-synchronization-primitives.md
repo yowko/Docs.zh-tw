@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5098eea86ee910baad57115419e147df02e41ed9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 37abcb6b3a8fdf4ef91d5e946a97db7ca1428ce8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485530"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195704"
 ---
 # <a name="overview-of-synchronization-primitives"></a>同步處理原始物件概觀
 <a name="top"></a>.NET Framework 提供同步處理原始物件的範圍，以便控制執行緒的互動，及避免競爭情形。 這些可以大致分為三個類別：鎖定、信號及連鎖作業。  
@@ -165,15 +165,16 @@ ms.locfileid: "43485530"
   
  如需概念的概觀，請參閱[連鎖作業](../../../docs/standard/threading/interlocked-operations.md)。  
   
-## <a name="see-also"></a>請參閱  
- [同步處理多執行緒處理的資料](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
- [監視](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
- [Mutex](../../../docs/standard/threading/mutexes.md)  
- [Semaphore 和 SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)  
- [EventWaitHandle、AutoResetEvent、CountdownEvent、ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
- [等候控制代碼](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
- [Interlocked 作業](../../../docs/standard/threading/interlocked-operations.md)  
- [Reader-Writer 鎖定](../../../docs/standard/threading/reader-writer-locks.md)  
- [barrier](../../../docs/standard/threading/barrier.md)  
- [SpinWait](../../../docs/standard/threading/spinwait.md)  
- [SpinLock](../../../docs/standard/threading/spinlock.md)
+## <a name="see-also"></a>另請參閱
+
+- [同步處理多執行緒處理的資料](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
+- [監視](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
+- [Mutex](../../../docs/standard/threading/mutexes.md)  
+- [Semaphore 和 SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)  
+- [EventWaitHandle、AutoResetEvent、CountdownEvent、ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
+- [等候控制代碼](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
+- [Interlocked 作業](../../../docs/standard/threading/interlocked-operations.md)  
+- [Reader-Writer 鎖定](../../../docs/standard/threading/reader-writer-locks.md)  
+- [barrier](../../../docs/standard/threading/barrier.md)  
+- [SpinWait](../../../docs/standard/threading/spinwait.md)  
+- [SpinLock](../../../docs/standard/threading/spinlock.md)

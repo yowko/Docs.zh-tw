@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73ec2d2fb73ee95b39a15307d136c35542578c41
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9c4decd01938500fe6330c48caa33b845916aaff
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591712"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863003"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>使用 PLINQ 時可能出現的錯誤
 在許多情況下，相較於循序 LINQ to Objects 查詢，PLINQ 更能提供顯著的效能改良。 不過，平行處理查詢執行的工作所帶來的複雜性可能會造成問題，而在循序程式碼中，這些問題不是不常見，就是完全不會發生。 本主題列出一些您在撰寫 PLINQ 查詢時應該避免的作法。  
@@ -119,5 +119,6 @@ ManualResetEventSlim mre = new ManualResetEventSlim();
   
  特別是，平行迴圈的反覆項目永遠不應該等候該迴圈的另一個反覆項目才能繼續。 如果平行迴圈決定以循序方式排程反覆項目，但順序相反，系統就會發生死結。  
   
-## <a name="see-also"></a>請參閱  
- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>另請參閱
+
+- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c875ad12-a161-43e6-ad1c-3d6927c536a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bffc25cb5c3ae3671fdf6018158b81549c360e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b2d46264113cb4c961f6c4b971b5986bdd9eb6a7
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580428"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44180961"
 ---
 # <a name="how-to-implement-dynamic-partitions"></a>如何：實作動態磁碟分割
 下列範例示範如何實作自訂 <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType>，它會實作動態分割，並可從特定多載 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 和 PLINQ 使用。  
@@ -28,6 +28,7 @@ ms.locfileid: "33580428"
   
  這是區塊分割的範例，其中每個區塊包含一個元素。 藉由一次提供更多元素，可以減少鎖定競爭，理論上可以實現更快的效能。 不過，在某些時候，較大的區塊可能需要額外的負載平衡邏輯，才能在所有工作完成前使所有執行緒保持忙碌。  
   
-## <a name="see-also"></a>請參閱  
- [PLINQ 和 TPL 的自訂 Partitioner](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)  
- [操作說明：為靜態分割實作 Partitioner](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)
+## <a name="see-also"></a>另請參閱
+
+- [PLINQ 和 TPL 的自訂 Partitioner](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)  
+- [操作說明：為靜態分割實作 Partitioner](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)

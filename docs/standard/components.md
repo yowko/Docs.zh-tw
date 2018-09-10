@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2415f0c360118389bc7a3ae3aaf74ca8daf24422
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e131ab48b666f2d22d8bd02e41ed76e415a2597d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574803"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262253"
 ---
 # <a name="net-architectural-components"></a>.NET 架構元件
 
@@ -68,11 +68,11 @@ UWP 是用於建置適用於物聯網 (IoT) 之現代化觸控式 Windows 應用
 ## <a name="net-runtimes"></a>.NET 執行階段
 
 執行階段是受管理程式的執行環境。 OS 是執行階段環境的一部分，但不是 .NET 執行階段的一部分。 以下是 .NET 執行階段的一些範例：
- 
- - 適用於 .NET Framework 的 Common Language Runtime (CLR)
- - 適用於 .NET Core 的 Core Common Language Runtime (CoreCLR)
- - 適用於通用 Windows 平台的 .NET Native 
- - 適用於 Xamarin.iOS、Xamarin.Android、Xamarin.Mac 和 Mono 桌面架構的 Mono 執行階段
+
+- 適用於 .NET Framework 的 Common Language Runtime (CLR)
+- 適用於 .NET Core 的 Core Common Language Runtime (CoreCLR)
+- 適用於通用 Windows 平台的 .NET Native 
+- 適用於 Xamarin.iOS、Xamarin.Android、Xamarin.Mac 和 Mono 桌面架構的 Mono 執行階段
 
 ## <a name="net-tooling-and-common-infrastructure"></a>.NET 工具和通用基礎結構
 
@@ -85,11 +85,11 @@ UWP 是用於建置適用於物聯網 (IoT) 之現代化觸控式 Windows 應用
 - 開放原始碼建置協調流程工具，例如 [CAKE](https://cakebuild.net/) 和 [FAKE](https://fake.build/)
 
 ## <a name="see-also"></a>另請參閱
-[為伺服器應用程式選擇 .NET Core 或 .NET Framework](choosing-core-framework-server.md)   
-[.NET Standard](net-standard.md)  
-[.NET Core 指南](../core/index.md)  
-[.NET Framework 指南](../framework/index.md)  
-[C# 指南](../csharp/index.md)  
-[F# 指南](../fsharp/index.md)  
-[VB.NET 指南](../visual-basic/index.md)  
 
+- [針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇](choosing-core-framework-server.md)   
+- [.NET Standard](net-standard.md)  
+- [.NET Core 指南](../core/index.md)  
+- [.NET Framework 指南](../framework/index.md)  
+- [C# 指南](../csharp/index.md)  
+- [F# 指南](../fsharp/index.md)  
+- [VB.NET 指南](../visual-basic/index.md)  

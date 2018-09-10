@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 微服務架�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: f0e0e63c6ce2e4699cc4f9c0bd0d120549b88cca
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 827d28adda90403d866e7bc13d9eae99fe47c137
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106008"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43804103"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>微服務架構中的通訊
 
@@ -61,7 +61,7 @@ ms.locfileid: "37106008"
 
 最後 (這是建置微服務時大部分問題發生的時候)，如果您初始的微服務需要使用原本由其他微服務擁有的資料時，請避免對該資料提出同步要求。 反之，請使用最終一致性 (通常使用整合事件來進行，如接下來的章節所述)，將該資料 (僅所需的屬性) 複製或散佈到初始服務的資料庫中。
 
-如[識別每個微服務的網域模型界限](#identifying-domain-model-boundaries-for-each-microservice)一節所述，在數個微服務之間複製某些資料的設計是可行的；這麼做可讓您將資料轉譯到特定語言、其他網域或繫結內容。 例如，在 [eShopOnContainers](http://aka.ms/MicroservicesArchitecture) 應用程式中，您有一個名為 identity.api 的微服務，其負責處理大多數的使用者資料 (含有「使用者」名稱的實體)。 不過，當您要儲存訂購微服務中的使用者相關資料時，請將它儲存為不同的實體，並命名為「買方」。 「買方」實體與原始「使用者」實體會共用相同的識別，但訂購網域可能只需要幾個屬性，而不是整個使用者設定檔。
+如[識別每個微服務的網域模型界限](#identifying-domain-model-boundaries-for-each-microservice)一節所述，在數個微服務之間複製某些資料的設計是可行的；這麼做可讓您將資料轉譯到特定語言、其他網域或繫結內容。 例如，在 [eShopOnContainers](https://aka.ms/MicroservicesArchitecture) 應用程式中，您有一個名為 identity.api 的微服務，其負責處理大多數的使用者資料 (含有「使用者」名稱的實體)。 不過，當您要儲存訂購微服務中的使用者相關資料時，請將它儲存為不同的實體，並命名為「買方」。 「買方」實體與原始「使用者」實體會共用相同的識別，但訂購網域可能只需要幾個屬性，而不是整個使用者設定檔。
 
 您可以使用任何通訊協定來進行通訊，並以非同步方式跨微服務散佈資料，來保持最終一致性。 如前所述，您可以使用事件匯流排或訊息代理程式來運用整合事件；甚至還可以改輪詢其他服務來使用 HTTP。 這都沒有關係。 重要的規則是不要讓微服務之間建立同步相依性。
 

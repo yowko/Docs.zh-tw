@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 162ef3849f025cae9196c2f595634f82cfc782df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40b98e01d6c34fb01a1f508f2ea52309f2f7938b
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580740"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266718"
 ---
 # <a name="how-to-handle-exceptions-in-a-plinq-query"></a>如何：處理 PLINQ 查詢中的例外狀況
 此主題中的第一個範例顯示如何處理當執行 PLINQ 查詢時可從它擲回的 <xref:System.AggregateException?displayProperty=nameWithType>。 第二個範例顯示如何將 try-catch 區塊放在委派內，且盡可能地接近將擲回例外狀況的位置。 如此一來，您可以在發生例外狀況時立即攔截它們，並可能繼續執行查詢。 當系統允許例外狀況反昇至聯結的執行緒時，查詢可能就可以在引發例外狀況之後，繼續處理某些項目。  
@@ -48,6 +48,7 @@ ms.locfileid: "33580740"
 ## <a name="robust-programming"></a>穩固程式設計  
  除非您知道如何處理，否則請勿攔截例外狀況，這樣您才不會損毀您的程式狀態。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Linq.ParallelEnumerable>  
- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Linq.ParallelEnumerable>  
+- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

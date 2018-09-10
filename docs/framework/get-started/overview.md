@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c844a81da036c5e96c2c619e3a3aae85f70f8ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 255c7e068cc83b7dcb9489eeeda5ce33be983c81
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397854"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522087"
 ---
 # <a name="overview-of-the-net-framework"></a>.NET Framework 的概觀
 
@@ -87,7 +87,7 @@ Runtime 是為增強效能所設計的。 雖然 Common Language Runtime 提供�
 
 - 使用 Windows Communication Foundation (WCF) 的服務導向應用程式。 請參閱[使用 WCF 以服務為導向的應用程式](../../../docs/framework/wcf/index.md)。
 
-- 使用 Windows Workflow Foundation (WF) 啟用工作流程的應用程式。 請參閱 [.NET Framework 中的建置工作流程](http://msdn.microsoft.com/library/cbf3880f-dc7b-466d-b808-1109b1223f4a)。
+- 使用 Windows Workflow Foundation (WF) 啟用工作流程的應用程式。 請參閱 [.NET Framework 中的建置工作流程](https://msdn.microsoft.com/library/cbf3880f-dc7b-466d-b808-1109b1223f4a)。
 
 Windows Forms 類別是一組完整且可重複使用的類型，可大幅簡化 Windows GUI 的開發。 如果要撰寫 ASP.NET Web Form 應用程式，即可使用 Web Form 類別。
 
@@ -97,5 +97,5 @@ Windows Forms 類別是一組完整且可重複使用的類型，可大幅簡化
 [安裝指南](../../../docs/framework/install/index.md)   
 [開發指南](../../../docs/framework/development-guide.md)   
 [工具](../../../docs/framework/tools/index.md)   
-[.NET Framework 範例](http://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)   
-[.NET Framework 類別庫](http://go.microsoft.com/fwlink/?LinkID=227195)
+[.NET Framework 範例](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)   
+[.NET Framework 類別庫](https://go.microsoft.com/fwlink/?LinkID=227195)

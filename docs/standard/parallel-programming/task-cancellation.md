@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3ecf1ea9-e399-4a6a-a0d6-8475f48dcb28
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b9a9331f62ba9655c20a2e27b3a94dac1903472
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 79350178300dde2896f6b22c68d6062bbb57f700
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582684"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865627"
 ---
 # <a name="task-cancellation"></a>工作取消
 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 類別可使用 .NET Framework 中的取消語彙基元來支援取消作業。 如需詳細資訊，請參閱[受控執行緒中的取消作業](../../../docs/standard/threading/cancellation-in-managed-threads.md)。 在 Task 類別中，取消作業包括使用者委派之間的合作，這是指可取消的作業和要求取消的程式碼。  成功的取消作業包括要求呼叫 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 方法的程式碼，以及適時終止作業的使用者委派。 您可以使用下列選項之一來終止作業：  
@@ -40,6 +40,7 @@ ms.locfileid: "33582684"
   
  不過，在要求取消之後，工作仍有可能會繼續處理某些項目。  
   
-## <a name="see-also"></a>請參閱  
- [Managed 執行緒中的取消作業](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
- [操作說明：取消工作及其子系](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)
+## <a name="see-also"></a>另請參閱
+
+- [Managed 執行緒中的取消作業](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
+- [操作說明：取消工作及其子系](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)

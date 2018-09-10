@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 1e9b55c4-76ad-4f54-8d96-7ce4b4cf1e05
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 92d7a50d2db25f5e4d32734d550ce2d55a02e3c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bc8a1de8ab10eff88757720a35aa9668125cfbfa
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568676"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44177415"
 ---
 # <a name="namespaces-and-dtds-in-the-dom"></a>DOM 中的命名空間和 DTD
 文件類型定義 (DTD) 會使命名空間支援較為複雜。 例如，下列 XML 包含名稱中有冒號的預設屬性。  
@@ -33,5 +33,6 @@ ms.locfileid: "33568676"
   
  Microsoft .NET Framework 中的 XML 可實作第二個選項以達到最大 W3C 相容性。  
   
-## <a name="see-also"></a>請參閱  
- [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>另請參閱
+
+- [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

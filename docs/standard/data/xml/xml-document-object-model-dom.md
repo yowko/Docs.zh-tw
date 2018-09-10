@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 23be7e47dbe54d95eb29ef3b3cb169caeee3eff4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b98aa5b62718a2ff19cb50a09de1a0ddf55ddb91
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579362"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087187"
 ---
 # <a name="xml-document-object-model-dom"></a>XML 文件物件模型 (DOM)
 XML 文件物件模型 (DOM) 類別是記憶體中 XML 文件的表示法。 DOM 讓您以程式設計方式讀取、管理和修改 XML 文件。 **XmlReader** 類別也會讀取 XML，但是，它僅提供無快取、順向、唯讀存取。 這表示 **XmlReader** 沒有功能來編輯屬性的值或項目的內容，也沒有插入和移除節點的功能。 編輯是 DOM 的主要功能。 雖然在檔案或其他物件中時，實際的 XML 資料是以線性的方式儲存，但 XML 資料呈現在記憶體中卻是常見且結構化的方式。 下列是 XML 資料。  
@@ -76,6 +76,7 @@ XML 文件結構
   
  DOM 對於將 XML 資料讀入記憶體以變更它的結構、加入或移除節點，或修改在項目所包含之內容中的節點所儲存的資料時最有用。 但是，在其他案例中，可使用其他比 DOM 更快速的類別。 對於快速、無快取、順向資料流的 XML 存取，請使用 **XmlReader** 與 **XmlWriter**。 如果您需要具游標模型和 **XPath** 的隨機存取，請使用 **XPathNavigator** 類別。  
   
-## <a name="see-also"></a>請參閱  
- [XML 節點的類型](../../../../docs/standard/data/xml/types-of-xml-nodes.md)  
- [將物件階層對應至 XML 資料](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)
+## <a name="see-also"></a>另請參閱
+
+- [XML 節點的類型](../../../../docs/standard/data/xml/types-of-xml-nodes.md)  
+- [將物件階層對應至 XML 資料](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)

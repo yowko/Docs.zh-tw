@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3470ebdd55adc97a60f07228c441cb7c94a53e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 10f947fc44e69368e30614e0b41eaf7c73fb6563
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579154"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084945"
 ---
 # <a name="garbage-collection-notifications"></a>記憶體回收告知
 在某些情況下，通用語言執行平台 (CLR) 所執行的完整記憶體回收 (也就是層代 2 回收) 可能會降低效能。 這是一個問題，特別會發生在處理大量要求的伺服器上；在此情況下，完整記憶體回收可能會導致要求逾時。若要避免在關鍵期間發生完整回收，您可以在接近完整記憶體回收時收到通知，然後採取行動將工作負載重新導向至另一個伺服器執行個體。 您也可以自行引發回收，前提是目前的伺服器執行個體不需要處理要求。  
@@ -122,5 +122,6 @@ ms.locfileid: "33579154"
  [!code-csharp[GCNotification#1](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#1)]
  [!code-vb[GCNotification#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#1)]  
   
-## <a name="see-also"></a>請參閱  
- [記憶體回收](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>另請參閱
+
+- [記憶體回收](../../../docs/standard/garbage-collection/index.md)

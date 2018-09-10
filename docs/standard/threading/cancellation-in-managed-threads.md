@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a764912e46707b6f10e720f95a7d971ec4fc8e15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 088faaf454d3b188cff681fb7c41f3966b2e93fd
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592167"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44228100"
 ---
 # <a name="cancellation-in-managed-threads"></a>Managed 執行緒中的取消作業
 隨著 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 一起啟動， .NET Framework 使用統一的模型來進行非同步或長時間執行的同步作業的合作式取消。 此模型是根據一個被稱為取消權杖的輕量級物件。 叫用一或多個可取消作業的物件，例如藉由建立新的執行緒或工作，會將權杖傳遞至每個作業。 個別作業可以依序將權杖的複本傳遞至其他作業。 之後的某些時候 ，建立權杖的物件可以使用它來要求作業停止活動。 只有要求的物件可以發出取消要求，而且每個接聽程式負責留意要求，並且以適當且即時的方式回應。  
@@ -148,5 +148,6 @@ ms.locfileid: "33592167"
   
  <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 和 <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> 是遵循這些指導方針之類別的範例。 如需詳細資訊，請參閱[工作取消](../../../docs/standard/parallel-programming/task-cancellation.md)和[如何：取消 PLINQ 查詢](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md)。  
   
-## <a name="see-also"></a>請參閱  
- [Managed 執行緒處理的基本概念](../../../docs/standard/threading/managed-threading-basics.md)
+## <a name="see-also"></a>另請參閱
+
+- [Managed 執行緒處理的基本概念](../../../docs/standard/threading/managed-threading-basics.md)

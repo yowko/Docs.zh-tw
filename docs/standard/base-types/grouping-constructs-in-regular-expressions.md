@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0830ec4022ca789d9aac0d1ae2c10ae6f76cc75e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4e6a0b0a6fbad1c01ed26b5090cd18dcce3be057
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579817"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041596"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>規則運算式中的群組建構
 群組建構會描寫規則運算式的子運算式，以及擷取輸入字串的子字串。 您可以使用群組建構來執行下列作業：  
@@ -168,7 +168,7 @@ ms.locfileid: "33579817"
 |-------------|-----------------|  
 |`\D+`|比對一個或更多非十進位數字字元。|  
 |`(?<digit>\d+)`|比對一個或更多十進位數字字元。 指派 `digit` 具名群組的比對。|  
-|\D+|比對一個或更多非十進位數字字元。|  
+|`\D+`|比對一個或更多非十進位數字字元。|  
 |`(?<digit>\d+)?`|比對一或多個十進位數字字元的零次或一次發生。 指派 `digit` 具名群組的比對。|  
   
 <a name="balancing_group_definition"></a>   
@@ -470,6 +470,7 @@ ms.locfileid: "33579817"
   
  第一個擷取群組會比對句子中的每個字。 第二個擷取群組會比對每個字以及接在該字後面的標點符號和空格。 索引為 2 的 <xref:System.Text.RegularExpressions.Group> 物件會提供第二個擷取群組所比對之文字的相關資訊。 您可以從 <xref:System.Text.RegularExpressions.CaptureCollection> 屬性傳回的 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 物件取得擷取群組所擷取的一整組文字。  
   
-## <a name="see-also"></a>請參閱  
- [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- [回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)
+## <a name="see-also"></a>另請參閱
+
+- [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)

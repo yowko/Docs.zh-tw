@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bac8d1496463d1224021270347c9480e7ce391e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d8b8c21af8ca0a21d97e8246ad82c42aaaf4974
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577394"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44190984"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>從 XslTransform 類別移轉
 XSLT 架構已在 [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] 版本中重新設計。 <xref:System.Xml.Xsl.XslTransform> 類別取代了 <xref:System.Xml.Xsl.XslCompiledTransform> 類別。  
@@ -117,6 +117,7 @@ using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {
   
 -   與結構描述相關的 XPath 擴充函式：<xref:System.Xml.Xsl.XslCompiledTransform> 原本就不支援這些函式。 不過，它們可以實作為擴充函式。  
   
-## <a name="see-also"></a>請參閱  
- [XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations.md)  
- [使用 XslCompiledTransform 類別](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)
+## <a name="see-also"></a>另請參閱
+
+- [XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations.md)  
+- [使用 XslCompiledTransform 類別](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)

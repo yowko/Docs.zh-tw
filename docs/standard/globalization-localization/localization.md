@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 49d520d7-92d7-44ee-bb24-8b615db1d41b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7fc995843c1e2f5977acbfe2158457d30ac355ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee7de15130644e63b17a6d067c5cce9088d199a0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573909"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185045"
 ---
 # <a name="localization"></a>當地語系化
 當地語系化是一種程序，可將應用程式資源翻譯為應用程式所支援之每個文化特性的當地語系化版本。 只有在完成[可當地語系化檢閱](../../../docs/standard/globalization-localization/localizability-review.md)步驟，以確認全球化的應用程式已準備好進行當地語系化之後，才能繼續進行當地語系化步驟。  
@@ -32,8 +32,9 @@ ms.locfileid: "33573909"
   
  [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 提供的 Windows Forms 資源編輯器 (Winres.exe) 可讓您針對目標文化特性，快速當地語系化 Windows Forms。 如需有關使用此工具的相關資訊，請參閱 [Winres.exe (Windows Forms 資源編輯器)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)。  
   
-## <a name="see-also"></a>請參閱  
- [全球化和當地語系化](../../../docs/standard/globalization-localization/index.md)  
- [可當地語系化檢閱](../../../docs/standard/globalization-localization/localizability-review.md)  
- [全球化](../../../docs/standard/globalization-localization/globalization.md)  
- [桌面應用程式中的資源](../../../docs/framework/resources/index.md)
+## <a name="see-also"></a>另請參閱
+
+- [全球化和當地語系化](../../../docs/standard/globalization-localization/index.md)  
+- [可當地語系化檢閱](../../../docs/standard/globalization-localization/localizability-review.md)  
+- [全球化](../../../docs/standard/globalization-localization/globalization.md)  
+- [桌面應用程式中的資源](../../../docs/framework/resources/index.md)

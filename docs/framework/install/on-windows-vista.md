@@ -6,11 +6,11 @@ author: rlander
 ms.author: mairaw
 ms.date: 08/03/2017
 ms.openlocfilehash: c54679292fb8bce16ec572e5a2fee12c1b47292a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43393922"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44197098"
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>在 Windows Vista 和 Windows Server 2008 上安裝 .NET Framework
 

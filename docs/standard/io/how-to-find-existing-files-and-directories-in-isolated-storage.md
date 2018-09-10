@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 866be7970c43051dd7e2bf8d45ae779aca130a45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09c112374458b70a464291e898e9a880c8679773
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574874"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44197808"
 ---
 # <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>如何：尋找隔離儲存區中的現有檔案和目錄
 若要搜尋隔離儲存區中的目錄，請使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType> 方法。 此方法會採用表示搜尋模式的字串。 您可以在搜尋模式中使用單一字元 (?) 和多重字元 (*) 萬用字元，但萬用字元必須出現在名稱的最後一個部分。 例如，`directory1/*ect*` 是有效的搜尋字串，但 `*ect*/directory2` 不是。  
@@ -40,6 +40,7 @@ ms.locfileid: "33574874"
  [!code-csharp[Conceptual.IsolatedStorage#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source8.cs#9)]
  [!code-vb[Conceptual.IsolatedStorage#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source8.vb#9)]  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
- [隔離儲存區](../../../docs/standard/io/isolated-storage.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
+- [隔離儲存區](../../../docs/standard/io/isolated-storage.md)

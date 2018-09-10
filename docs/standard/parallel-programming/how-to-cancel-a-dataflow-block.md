@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fbddda0d-da3b-4ec8-a1d6-67ab8573fcd7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2684473f82eb156bf8762c9797503324f318632d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa37909c76da804112464daacea6244f1c321516
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584901"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085195"
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a>如何：取消資料流程區塊
 本文件示範如何在您的應用程式中啟用取消作業。 此範例會使用 Windows Forms 來顯示工作項目在資料流程管線中的作用位置，以及取消作業的效果。  
@@ -96,5 +96,6 @@ ms.locfileid: "33584901"
   
  ![Windows Forms 應用程式](../../../docs/standard/parallel-programming/media/tpldataflow-cancellation.png "TPLDataflow_Cancellation")  
 
-## <a name="see-also"></a>請參閱  
- [資料流程](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a>另請參閱
+
+- [資料流程](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

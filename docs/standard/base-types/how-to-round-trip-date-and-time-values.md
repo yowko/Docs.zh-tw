@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26a1cafc7ed6e497e5aab9cd33654f3aa3d4d98c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55b16d135449cad8ed489a8a3e21db326be0fae0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573175"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44193259"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>如何：反覆存取日期和時間值
 在許多應用程式中，日期和時間值的用途都是要明確地識別單一時間點。 本主題說明如何儲存並還原 <xref:System.DateTime> 值、<xref:System.DateTimeOffset> 值，以及具有時區資訊的日期和時間值，讓還原值能夠識別出與儲存值相同的時間。  
@@ -99,7 +99,8 @@ ms.locfileid: "33573175"
   
 -   每個程式碼範例 (`DateInTimeZone` 類別除外) 都應包含於類別或 Visual Basic 模組中，並從 `Main` 方法進行呼叫。  
   
-## <a name="see-also"></a>請參閱  
- [執行格式化作業](../../../docs/standard/base-types/performing-formatting-operations.md)  
- [在 DateTime、DateTimeOffset、TimeSpan 和 TimeZoneInfo 之間選擇](../../../docs/standard/datetime/choosing-between-datetime.md)  
- [標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+## <a name="see-also"></a>另請參閱
+
+- [執行格式化作業](../../../docs/standard/base-types/performing-formatting-operations.md)  
+- [在 DateTime、DateTimeOffset、TimeSpan 和 TimeZoneInfo 之間選擇](../../../docs/standard/datetime/choosing-between-datetime.md)  
+- [標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)

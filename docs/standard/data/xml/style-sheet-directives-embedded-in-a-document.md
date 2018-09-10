@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d79fb295-ebc7-438d-ba1b-05be7d534834
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 08bd33aab6cbeeeb9060f3de3565a05896c6ba7f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 65987c5e29d593758b21259d6367202c882df2de
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43391090"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44201825"
 ---
 # <a name="style-sheet-directives-embedded-in-a-document"></a>內嵌在文件中的樣式表指示詞
 
@@ -37,6 +37,6 @@ ms.locfileid: "43391090"
 
 根據全球資訊網協會 (W3C) [Associating Style Sheets with XML documents Version 1.0 Recommendation](https://www.w3.org/TR/xml-stylesheet/) (建立樣式表與 XML 文件的關聯 1.0 版建議事項)，能建立 XSLT 樣式表與 XML 文件關聯的處理指示為 `<?xml-stylesheet?>`，以破折號取代冒號。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[XML 文件物件模型 (DOM)](xml-document-object-model-dom.md)  
+- [XML 文件物件模型 (DOM)](xml-document-object-model-dom.md)

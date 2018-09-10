@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 邏輯架構�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: ebbae336761c6fa7954862cd41052e8832bf8e77
-ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
+ms.openlocfilehash: bb5f0daf0bcf824d72bb104914de03532bd3f9f7
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43238412"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44213338"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>邏輯架構與實體架構
 
@@ -17,7 +17,7 @@ ms.locfileid: "43238412"
 
 首先要知道的是，建置微服務並不需要使用任何特定技術。 例如，並非一定要有 Docker 容器，才能建立微服務架構。 這些微服務也可以當做一般處理序來執行。 微服務是邏輯架構。
 
-此外，即使微服務可實際實作為單一服務、處理序或容器 (為了方便作業，這是 [eShopOnContainers](http://aka.ms/MicroservicesArchitecture) 的初始版本中所採取的方法)，每當您建置由數十個或甚至是數百個服務所組成的大型複雜應用程式時，商務微服務與實體服務或容器之間也不一定需要有此同位。
+此外，即使微服務可實際實作為單一服務、處理序或容器 (為了方便作業，這是 [eShopOnContainers](https://aka.ms/MicroservicesArchitecture) 的初始版本中所採取的方法)，每當您建置由數十個或甚至是數百個服務所組成的大型複雜應用程式時，商務微服務與實體服務或容器之間也不一定需要有此同位。
 
 這就是應用程式的邏輯架構與實體架構之間的差異所在。 系統的邏輯架構和邏輯界限不一定會以一對一的方式對應至實體或部署架構。 這有可能發生，但並不常見。
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 80c3a772ae4dfba53982ed28c0bd54f500c50b08
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: ad0649f3cebbd9adf04bdaf0f06d4c5f5797a84f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43466050"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44038740"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>泛型中的共變數和反變數
 <a name="top"></a> 共變數和反變數這兩個詞，是指使用比原本所指定更多 (較明確) 或更少 (較不明確) 衍生類型的能力。 泛型類型參數支援共變數和反變數，可在指派和使用泛型類型時提供更大的彈性。 當您參考類型系統時，共變數、反變數和不可變數的定義如下。 範例中會假設名為 `Base` 的基底類別，以及名為 `Derived`的衍生類別。  
@@ -188,7 +188,8 @@ ms.locfileid: "43466050"
 |<xref:System.Linq.IOrderedQueryable%601>|[是]||  
 |<xref:System.Linq.IQueryable%601>|[是]||  
   
-## <a name="see-also"></a>請參閱  
- [共變數和反變數 (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)  
- [共變數和反變數 (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)    
- [委派中的變異數](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)
+## <a name="see-also"></a>另請參閱
+
+- [共變數和反變數 (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)  
+- [共變數和反變數 (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)    
+- [委派中的變異數](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)

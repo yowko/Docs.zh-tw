@@ -25,12 +25,12 @@ ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: ef674855d1b9d6538e08ea2bb95f1f63e602d61d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aad12f48409216e8833b9cb6bffbd35b84f40091
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396386"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513768"
 ---
 # <a name="introducing-pluggable-protocols"></a>可插式通訊協定簡介
 Microsoft .NET Framework 提供有層次、可擴充和網際網路服務的 Managed 實作，可以迅速而簡易地整合到您的應用程式。 <xref:System.Net> 和 <xref:System.Net.Sockets> 命名空間中的網際網路存取類別，可用來實作 Web 架構和以網際網路為基礎的應用程式。  
@@ -73,4 +73,4 @@ Microsoft .NET Framework 提供有層次、可擴充和網際網路服務的 Man
  [可插式通訊協定程式設計](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
  [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)  
  [網路程式設計範例](../../../docs/framework/network-programming/network-programming-samples.md)  
- [MSDN Code Gallery 上的 .NET 網路範例](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+ [MSDN Code Gallery 上的 .NET 網路範例](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

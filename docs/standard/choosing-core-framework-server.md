@@ -4,12 +4,12 @@ description: 本指南說明您在 .NET 中建置伺服器應用程式時應考�
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 541bcdf69d658fd37271169c028fb64611a35655
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: dbb5bd21d2fa43167a9624be2baec3f591d10920
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934529"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864958"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇
 
@@ -103,8 +103,10 @@ ms.locfileid: "42934529"
 
 ## <a name="see-also"></a>另請參閱
 
- [在 ASP.NET 和 ASP.NET Core 之間進行選擇](/aspnet/core/choose-aspnet-framework) [目標 Framework](frameworks.md) [.NET Core 指南](../core/index.md)  
- [從 .NET Framework 移植到 .NET Core](../core/porting/index.md)  
- [Docker 上的 .NET Framework 指南](../framework/docker/index.md)  
- [.NET 偵錯概觀](components.md)  
- [.NET 微服務：容器化 .NET 應用程式的架構](microservices-architecture/index.md)
+* [在 ASP.NET 和 ASP.NET Core 之間進行選擇](/aspnet/core/choose-aspnet-framework)
+* [目標架構](frameworks.md)
+* [.NET Core 指南](../core/index.md)  
+* [從 .NET Framework 移植到 .NET Core](../core/porting/index.md)  
+* [Docker 上的 .NET Framework 指南](../framework/docker/index.md)  
+* [.NET 偵錯概觀](components.md)  
+* [.NET 微服務：容器化 .NET 應用程式的架構](microservices-architecture/index.md)

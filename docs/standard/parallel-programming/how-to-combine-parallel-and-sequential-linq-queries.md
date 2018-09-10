@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1167cfe6-c8aa-4096-94ba-c66c3a4edf4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c69d4d423bbdf72f2af7dad38812aa508df0067c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9fd67d5f0cb5af33dc2b79f86148557a0dca6ec4
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580246"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44190276"
 ---
 # <a name="how-to-combine-parallel-and-sequential-linq-queries"></a>如何：結合平行和循序 LINQ 查詢
 此範例示範如何使用 <xref:System.Linq.ParallelEnumerable.AsSequential%2A> 方法來指示 PLINQ 循序處理查詢中所有後續的運算子。 雖然循序處理的速度通常比平行處理慢，但有時為了產生正確結果卻是必要的。  
@@ -32,5 +32,6 @@ ms.locfileid: "33580246"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  若要編譯及執行此程式碼，請將它貼入 [PLINQ 資料範例](../../../docs/standard/parallel-programming/plinq-data-sample.md)專案，加入從 `Main` 呼叫方法一行，然後按 F5 鍵。  
   
-## <a name="see-also"></a>請參閱  
- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>另請參閱
+
+- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

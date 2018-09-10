@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4922470633f3dec8e2e2f898bdf544f5aa4deded
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17ec17d3b90dc7248d1497be1f7d31a324ad10b2
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579173"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264907"
 ---
 # <a name="composite-formatting"></a>複合格式
 .NET 複合格式功能會採用物件清單和複合格式字串作為輸入。 複合格式字串是由混合索引替代符號 (Placeholder) 的固定文字所組成 (這些符號稱為對應至清單內物件的格式項目)。 格式作業產生的結果字串是由原始固定文字所組成，這些固定文字混合了清單中代表物件的字串。  
@@ -156,16 +156,17 @@ ms.locfileid: "33579173"
  [!code-csharp[Formatting.Composite#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#6)]
  [!code-vb[Formatting.Composite#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#6)]  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Console.WriteLine%2A>  
- <xref:System.String.Format%2A?displayProperty=nameWithType>  
- [字串內插補點 (C#)](../../csharp/language-reference/tokens/interpolated.md)  
- [字串內插補點 (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
- [格式化類型](../../../docs/standard/base-types/formatting-types.md)  
- [標準數值格式字串](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
- [自訂數值格式字串](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
- [標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
- [自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
- [標準 TimeSpan 格式字串](../../../docs/standard/base-types/standard-timespan-format-strings.md)  
- [自訂 TimeSpan 格式字串](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
- [Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Console.WriteLine%2A>  
+- <xref:System.String.Format%2A?displayProperty=nameWithType>  
+- [字串內插補點 (C#)](../../csharp/language-reference/tokens/interpolated.md)  
+- [字串內插補點 (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
+- [格式化類型](../../../docs/standard/base-types/formatting-types.md)  
+- [標準數值格式字串](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
+- [自訂數值格式字串](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
+- [標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+- [自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+- [標準 TimeSpan 格式字串](../../../docs/standard/base-types/standard-timespan-format-strings.md)  
+- [自訂 TimeSpan 格式字串](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
+- [Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)

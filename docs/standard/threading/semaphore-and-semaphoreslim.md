@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f9c6df23ae1a142d208672a03ffeb74709a0a05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e98862aba937724c799adef597260a06ed495f6
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591308"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44199761"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore 和 SemaphoreSlim
 <xref:System.Threading.Semaphore?displayProperty=nameWithType> 類別代表具名 (系統) 或區域號誌。 它是 Win32 號誌物件周圍的精簡型包裝函式。 Win32 號誌是計算的號誌，可以用來控制資源集區的存取。  
@@ -46,7 +46,8 @@ ms.locfileid: "33591308"
   
  使用存取控制安全性來保護代表具名號誌的 <xref:System.Threading.Semaphore> 物件，最好是使用指定 <xref:System.Security.AccessControl.SemaphoreSecurity?displayProperty=nameWithType> 物件的建構函式。 您也可以使用 <xref:System.Threading.Semaphore.SetAccessControl%2A?displayProperty=nameWithType> 方法套用存取控制安全性，但這會在建立號誌的時間與它受保護的時間之間留下弱點時段。 使用存取控制安全性來保護號誌，有助於防止惡意攻擊，但不能解決意外名稱衝突的問題。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Threading.Semaphore>  
- <xref:System.Threading.SemaphoreSlim>  
- [執行緒物件和功能](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Threading.Semaphore>  
+- <xref:System.Threading.SemaphoreSlim>  
+- [執行緒物件和功能](../../../docs/standard/threading/threading-objects-and-features.md)

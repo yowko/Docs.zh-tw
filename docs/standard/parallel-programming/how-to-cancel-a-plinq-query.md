@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 074371a929d5dd2cf0efb763ec45395a8dfd0432
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e5008ede5054e8e6970bcb6f804fa1888244238f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584274"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44210769"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>如何：取消 PLINQ 查詢
 下列範例說明取消 PLINQ 查詢的兩種方式。 第一個範例示範如何取消大部分由資料周遊所組成的查詢。 第二個範例示範如何取消包含需要大量計算之使用者函式的查詢。  
@@ -50,7 +50,8 @@ ms.locfileid: "33584274"
   
  處置列舉程式時，例如當程式碼在逐一查看結果的 foreach (Visual Basic 中為 For Each) 迴圈中斷時，查詢就會取消，但不會擲回任何例外狀況。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Linq.ParallelEnumerable>  
- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
- [Managed 執行緒中的取消作業](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Linq.ParallelEnumerable>  
+- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+- [Managed 執行緒中的取消作業](../../../docs/standard/threading/cancellation-in-managed-threads.md)

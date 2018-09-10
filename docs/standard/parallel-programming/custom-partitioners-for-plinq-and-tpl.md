@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0868ce76f82ed0575154744d9ab02814a0bd990a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b4e835d01ac0e1249a9a4c71a3a9db25082fec1
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592362"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44267202"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>PLINQ 和 TPL 的自訂 Partitioner
 若要將資料來源上的作業平行化，其中一個必要步驟就是將來源「分割」成多個可供多個執行緒同時存取的區段。 PLINQ 和「工作平行程式庫」(TPL) 提供預設的 Partitioner，可在您撰寫平行查詢或 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 迴圈時在背景中運作。 針對較進階的案例，您可以插入自己的 Partitioner。  
@@ -120,7 +120,8 @@ ms.locfileid: "33592362"
   
 -   所有索引都不可為負值。 如果未遵守此規則，則 PLINQ/TPL 可能會擲回例外狀況。  
   
-## <a name="see-also"></a>請參閱  
- [平行程式設計](../../../docs/standard/parallel-programming/index.md)  
- [操作說明：實作動態磁碟分割](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)  
- [操作說明：為靜態分割實作 Partitioner](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)
+## <a name="see-also"></a>另請參閱
+
+- [平行程式設計](../../../docs/standard/parallel-programming/index.md)  
+- [操作說明：實作動態磁碟分割](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)  
+- [操作說明：為靜態分割實作 Partitioner](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)

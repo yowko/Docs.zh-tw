@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: be98c0ab-7ef8-409f-8a0d-cb6e5b75ff20
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3c979477f0928c9c3d2a393042867c84df33ecf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7831e383a3048523909b79ac5a4706f3c1c48371
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571965"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44178516"
 ---
 # <a name="optimization-for-shared-web-hosting"></a>共用 Web 裝載的最佳化
 如果您是透過裝載數個小型 Web 站台所共用之伺服器的系統管理員，則可以將下列 `gcTrimCommitOnLowMemory` 設定加入 .NET 目錄中 Aspnet.config 檔案的 `runtime` 節點，以最佳化效能與增加站台的容量：  
@@ -44,5 +44,6 @@ ms.locfileid: "33571965"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [記憶體回收](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>另請參閱
+
+- [記憶體回收](../../../docs/standard/garbage-collection/index.md)

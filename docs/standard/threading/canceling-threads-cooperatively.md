@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: d2d6d5fd-e263-4fa0-847b-2fc3e0d82337
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24cacf0323c96f6959442dea94b0540633661bce
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: bd32deb9c8719a12b76aaea8ec91a17471cf18f9
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485595"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259856"
 ---
 # <a name="canceling-threads-cooperatively"></a>以合作方式取消執行緒
 
@@ -26,4 +26,4 @@ ms.locfileid: "43485595"
   
 ## <a name="see-also"></a>另請參閱
 
- [使用執行緒和執行緒處理](using-threads-and-threading.md)  
+- [使用執行緒和執行緒處理](using-threads-and-threading.md)

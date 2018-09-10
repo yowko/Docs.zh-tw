@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: f0548ead-0fed-41ee-b33e-117ba900d3bc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6e91ce2b36462780925dcaef701583a966c5f59b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bcc796f8d895e3daa81a9607bd7c4941b747cf24
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569447"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44208766"
 ---
 # <a name="namespace-support-in-the-dom"></a>DOM 中支援的命名空間
 XML 文件物件模型 (DOM) 具有完全的命名空間感知。 只有命名空間感知 XML 文件受支援。 全球資訊網協會 (W3C) 指定實作層級 1 的 DOM 應用程式可不具備命名空間感知，而 DOM 層級 2 功能則具有命名空間感知。 然而，不論方法是來自層級 1 或層級 2 DOM 建議事項，XML DOM 中所有的功能都具有命名空間感知。  
@@ -25,5 +25,6 @@ XML 文件物件模型 (DOM) 具有完全的命名空間感知。 只有命名�
   
 -   如果找到冒號，則名稱會根據第一個冒號字元的位置分成兩個部分。 前置詞會設為冒號之前找到的字串，而且區域名稱會設為冒號之後找到的字串。 對於沒有採用 NamespaceURI 值的方法，NamespaceURI 不會解析且會維持設定為空字串。 否則，NamespaceURI 會設為傳入方法的字串。 如果沒有指定前置詞，那麼 **Save** 方法以及 **InnerXml** 和 **OuterXml** 屬性會失敗。  
   
-## <a name="see-also"></a>請參閱  
- [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>另請參閱
+
+- [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

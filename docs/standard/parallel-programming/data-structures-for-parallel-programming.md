@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0b18f33c0cbc83f955c32477a21f77b09c7546c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 6453e9983086dcb5b97ec134db9d74160d7a47cf
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43396470"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44180302"
 ---
 # <a name="data-structures-for-parallel-programming"></a>適用於平行程式設計的資料結構
 .NET Framework 4 版導入了數個適用於平行程式設計的新類型，包括一系列並行集合類別、輕量型同步處理原始物件，以及適用於延遲初始設定的類型。 您可以搭配任何多執行緒應用程式程式碼使用這些類型，其中包括工作平行程式庫和 PLINQ。  
@@ -68,7 +68,8 @@ ms.locfileid: "43396470"
 ## <a name="aggregate-exceptions"></a>彙總例外狀況  
  <xref:System.AggregateException?displayProperty=nameWithType> 類型可以用來擷取在個別執行緒上並行擲出的多個例外狀況，並將它們以單一例外狀況的形式傳回聯結執行緒。 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 類型，以及 PLINQ 都會針對此目的廣泛使用 <xref:System.AggregateException>。 如需詳細資訊，請參閱[例外狀況處理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)和[如何：處理 PLINQ 查詢中的例外狀況](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md)。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
- <xref:System.Threading?displayProperty=nameWithType>  
- [平行程式設計](../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- <xref:System.Threading?displayProperty=nameWithType>  
+- [平行程式設計](../../../docs/standard/parallel-programming/index.md)

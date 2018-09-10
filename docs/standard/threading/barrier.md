@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 613a8bc7-6a28-4795-bd6c-1abd9050478f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 864571262d1c9c060235840424542856187341df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 385e370f205851630f809b285a93c2609220efeb
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584294"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44212395"
 ---
 # <a name="barrier-net-framework"></a>屏障 (.NET Framework)
 「屏障」是一種使用者定義的同步處理原始物件，可讓多個執行緒 (也稱為「參與者」) 以並行方式分階段處理演算法。 每個參與者都會執行，直到它到達程式碼中的屏障點為止。 屏障代表一個工作階段的結束。 當參與者到達屏障時，它就會封鎖，直到所有參與者都到達相同的屏障為止。 在所有參與者都到達屏障之後，您就可以選擇性地叫用階段後動作。 當所有其他執行緒仍然處於封鎖狀態時，單一執行緒可以使用這個階段後動作來執行動作。 執行這個動作之後，這些參與者都會解除封鎖。  
@@ -49,6 +49,7 @@ ms.locfileid: "33584294"
   
  如需詳細資訊，請參閱[使用接續工作鏈結工作](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)。  
   
-## <a name="see-also"></a>請參閱  
- [執行緒物件和功能](../../../docs/standard/threading/threading-objects-and-features.md)  
- [操作說明：使用屏障同步處理並行作業](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md)
+## <a name="see-also"></a>另請參閱
+
+- [執行緒物件和功能](../../../docs/standard/threading/threading-objects-and-features.md)  
+- [操作說明：使用屏障同步處理並行作業](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3da8a524af872a724ee6cbe206912572d6338624
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63af71f92af9c2f3a5986dcb73f44d0e53c00f58
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574744"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44079457"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>如何：在非西曆中顯示日期
 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 類型使用西曆作為其預設月曆。 這表示即使該日期和時間是使用其他月曆所建立，呼叫日期和時間值的 `ToString` 方法仍會使用西曆顯示該日期和時間的字串表示。 以下範例將說明這種情況，其中使用兩種不同方式來建立波斯曆的日期和時間值，但在呼叫 <xref:System.DateTime.ToString%2A> 方法時，仍以西曆顯示這些日期和時間值。 此範例反映兩種常用來顯示特殊月曆之日期，但不正確的技術。  
@@ -90,5 +90,6 @@ ms.locfileid: "33574744"
   
  在命令列中，使用 csc.exe 或 vbc.exe 來編譯程式碼。 若要在 Visual Studio 中編譯程式碼，請將它放入主控台應用程式專案範本。  
   
-## <a name="see-also"></a>請參閱  
- [執行格式化作業](../../../docs/standard/base-types/performing-formatting-operations.md)
+## <a name="see-also"></a>另請參閱
+
+- [執行格式化作業](../../../docs/standard/base-types/performing-formatting-operations.md)

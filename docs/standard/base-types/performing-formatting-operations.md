@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 36e7e096-4e6c-4cf2-9ab6-68073026ea0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d789101231a37bb9a2b6b3c7830f6b679fd364d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a1d9f62055b497aa7522d589610c12badb2361d5
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567841"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262410"
 ---
 # <a name="performing-formatting-operations"></a>執行格式化作業
 下列主題提供執行特定格式設定作業的逐步指示。  
@@ -38,5 +38,6 @@ ms.locfileid: "33567841"
   
 -   [操作說明：在非西曆中顯示日期](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)  
   
-## <a name="see-also"></a>請參閱  
- [格式化類型](../../../docs/standard/base-types/formatting-types.md)
+## <a name="see-also"></a>另請參閱
+
+- [格式化類型](../../../docs/standard/base-types/formatting-types.md)

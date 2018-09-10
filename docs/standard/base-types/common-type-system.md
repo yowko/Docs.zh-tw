@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d21a3a315b7dc63a84f7b5d43d55c06eb2d5188
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c8db725e25fe441c875a25cba97eb2090d4c071
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579583"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262603"
 ---
 # <a name="common-type-system"></a>一般類型系統
 一般型別系統定義如何在 Common Language Runtime 中宣告、使用和管理型別，同時也是執行階段支援跨語言整合中很重要的一部分。 一般型別系統可執行下列功能：  
@@ -320,7 +320,8 @@ ms.locfileid: "33579583"
   
 -   衍生型別可覆寫繼承的虛擬方法。 覆寫方法會提供新的方法定義，叫用方法時將根據執行時期的實值型別，而非根據編譯時間得知的變數型別。 只有當虛擬方法未標記為 `final`，而且新的方法至少可像虛擬方法一樣存取時，方法才可覆寫虛擬方法。  
   
-## <a name="see-also"></a>請參閱  
- [.NET API 瀏覽器](/dotnet/api)  
- [通用語言執行平台](../../../docs/standard/clr.md)  
- [.NET 中的類型轉換](../../../docs/standard/base-types/type-conversion.md)
+## <a name="see-also"></a>另請參閱
+
+- [.NET API 瀏覽器](/dotnet/api)  
+- [通用語言執行平台](../../../docs/standard/clr.md)  
+- [.NET 中的類型轉換](../../../docs/standard/base-types/type-conversion.md)

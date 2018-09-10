@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 84a9f142-3244-4c90-ba02-21af9bbaff71
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8b71908d817625ca38f3b53a10fc20e9103ee15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3f58e1c3a9e42f48ecc219a2db1649051f9ca20b
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568078"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43890723"
 ---
 # <a name="padding-strings-in-net"></a>在 .NET 中填補字串
 
@@ -49,5 +49,6 @@ ms.locfileid: "33568078"
  [!code-csharp[Conceptual.String.BasicOps#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/padding.cs#4)]
  [!code-vb[Conceptual.String.BasicOps#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/padding.vb#4)]  
   
-## <a name="see-also"></a>請參閱  
- [基本字串作業](../../../docs/standard/base-types/basic-string-operations.md)
+## <a name="see-also"></a>另請參閱
+
+- [基本字串作業](../../../docs/standard/base-types/basic-string-operations.md)

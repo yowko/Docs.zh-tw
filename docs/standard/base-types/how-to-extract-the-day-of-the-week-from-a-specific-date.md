@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bd4066fe0a2d9f26505976c13ac80e03554e0aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58676b1726496a33496b10bbd3befba82aea4434
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575723"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43872333"
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>如何：從特定日期擷取一星期的哪一日
 .NET Framework 可方便判斷特定日期是一週的第幾天，並可顯示特定日期當地語系化的工作日名稱。 您可以從 <xref:System.DateTime.DayOfWeek%2A> 或 <xref:System.DateTimeOffset.DayOfWeek%2A> 屬性取得指出對應於特定日期是星期幾的列舉值。 相對地，擷取工作日名稱是一種格式化作業，可藉由呼叫格式化方法來執行，例如日期和時間值的 `ToString` 方法或 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法。 本主題示範如何執行下列格式化作業：  
@@ -100,7 +100,8 @@ ms.locfileid: "33575723"
  [!code-csharp[Formatting.HowTo.WeekdayName#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/Howto1.cs#8)]
  [!code-vb[Formatting.HowTo.WeekdayName#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/Howto1.vb#8)]  
   
-## <a name="see-also"></a>請參閱  
- [執行格式化作業](../../../docs/standard/base-types/performing-formatting-operations.md)  
- [標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
- [自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+## <a name="see-also"></a>另請參閱
+
+- [執行格式化作業](../../../docs/standard/base-types/performing-formatting-operations.md)  
+- [標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+- [自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)

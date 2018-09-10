@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: edcc390014cfc70f4da4f72270c7dd53f9b9423b
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 357cc488705ec3dab66543fa4814dbe3e6a22777
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37076248"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227567"
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>如何：撰寫含有分割區域變數的 Parallel.ForEach 迴圈
 下列範例說明如何撰寫使用分割區域變數的 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 方法。 當 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 迴圈執行時，它會將其來源集合分成多個分割。 每個分割會有自己的分割區域變數複本。 分割區域變數與[執行緒區域變數](xref:System.Threading.ThreadLocal%601)類似，不同之處在於多個分割可以在單一執行緒上執行。
@@ -48,7 +48,8 @@ ms.locfileid: "37076248"
  [!code-csharp[TPL_Parallel#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/foreachthreadlocal.cs#04)]
  [!code-vb[TPL_Parallel#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/foreachthreadlocal.vb#04)]  
   
-## <a name="see-also"></a>請參閱  
- [資料平行處理原則](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
- [操作說明：撰寫含有執行緒區域變數的 Parallel.For 迴圈](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)  
- [PLINQ 和 TPL 中的 Lambda 運算式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+## <a name="see-also"></a>另請參閱
+
+- [資料平行處理原則](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
+- [操作說明：撰寫含有執行緒區域變數的 Parallel.For 迴圈](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)  
+- [PLINQ 和 TPL 中的 Lambda 運算式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

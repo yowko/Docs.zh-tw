@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c7f2f022-d08e-4e00-b4eb-ae84844cb1bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6e257ced27812f8383edf9eb9688e9f48cfde02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1794b47db87f636cc2ccdf2eecb9e7ca334ae659
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583743"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266848"
 ---
 # <a name="how-to-listen-for-cancellation-requests-by-polling"></a>如何：透過輪詢接聽取消要求
 下列範例將示範一種方式：使用者程式碼可定期輪詢取消語彙基元，以查看呼叫執行緒是否已要求取消。 這個範例會使用 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 類型，但相同的模式適用於 <xref:System.Threading.ThreadPool?displayProperty=nameWithType> 類型或 <xref:System.Threading.Thread?displayProperty=nameWithType> 類型直接建立的非同步作業。  
@@ -30,5 +30,6 @@ ms.locfileid: "33583743"
   
  如果您正在呼叫 <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A>，當您要進行其他工作來回應取消 (擲回例外狀況除外) 時，只需明確檢查 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 屬性。 在此範例中，您可以看到程式碼會實際存取屬性兩次：一次是明確的存取，另一次則是在 <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> 方法中。 但由於讀取 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 屬性的動作牽涉到每次存取只能有一個暫時性讀取指令，因此，從效能觀點來看，兩次存取並不重要。 最好還是呼叫方法，而非手動擲回 <xref:System.OperationCanceledException>。  
   
-## <a name="see-also"></a>請參閱  
- [Managed 執行緒中的取消作業](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+## <a name="see-also"></a>另請參閱
+
+- [Managed 執行緒中的取消作業](../../../docs/standard/threading/cancellation-in-managed-threads.md)

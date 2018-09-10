@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9945b66f9d9fcdfb075bd48f5f56f30f2fdf7712
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d25bac953ff68422a1dddc54bdb01b4b4f241cbb
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742240"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192102"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>Common Language Runtime 中的類型轉送
 型別轉送可讓您將型別移至另一個組件，而無須重新編譯使用原始組件的應用程式。  
@@ -44,9 +44,9 @@ ms.locfileid: "32742240"
   
 3.  編譯現在包含型別的組件。  
   
-4.  重新編譯型別曾經所在的組件，具有現在包含型別之組件的參考。 例如，如果您正在從命令列編譯 C# 檔案，請使用 [/reference (C# 編譯器選項) ](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md) 選項來指定包含型別的組件。 在 C++ 中，在來源檔案中使用 [#using](http://msdn.microsoft.com/library/870b15e5-f361-40a8-ba1c-c57d75c8809a) 指示詞以指定包含型別的組件。  
+4.  重新編譯型別曾經所在的組件，具有現在包含型別之組件的參考。 例如，如果您正在從命令列編譯 C# 檔案，請使用 [/reference (C# 編譯器選項) ](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md) 選項來指定包含型別的組件。 在 C++ 中，在來源檔案中使用 [#using](https://msdn.microsoft.com/library/870b15e5-f361-40a8-ba1c-c57d75c8809a) 指示詞以指定包含型別的組件。  
   
 ## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>  
  [類型轉送 (C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)  
- [#using 指示詞](http://msdn.microsoft.com/library/870b15e5-f361-40a8-ba1c-c57d75c8809a)
+ [#using 指示詞](https://msdn.microsoft.com/library/870b15e5-f361-40a8-ba1c-c57d75c8809a)

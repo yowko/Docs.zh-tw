@@ -8,18 +8,18 @@ dev_langs:
 ms.assetid: 834049f1-ab41-449e-9f10-4a1d0701bc48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc909b666b90d8c8825e7dbef33e48b6126bd7c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e09828b827b12645ebbf37d62a346c8877bfba05
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572836"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865731"
 ---
 # <a name="inputs-to-the-xslcompiledtransform-class"></a>XslCompiledTransform 類別的輸入
 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法可接受來源文件的三種輸入型別：實作 <xref:System.Xml.XPath.IXPathNavigable> 介面的物件、讀取來源文件的 <xref:System.Xml.XmlReader> 物件，或是字串 URI。  
   
 > [!NOTE]
->  依預設，<xref:System.Xml.Xsl.XslCompiledTransform> 類別會保留泛空白字元。 這符合 W3C XSLT 1.0 版建議事項的 3.4 節 (3.4 節，http://www.w3.org/TR/xslt.html#strip))。  
+>  依預設，<xref:System.Xml.Xsl.XslCompiledTransform> 類別會保留泛空白字元。 這符合 W3C XSLT 1.0 版建議事項的 3.4 節 (3.4 節， http://www.w3.org/TR/xslt.html#strip))。  
   
 ## <a name="ixpathnavigable-interface"></a>IXPathNavigable 介面  
  <xref:System.Xml.XPath.IXPathNavigable> 介面是在 <xref:System.Xml.XmlNode> 及 <xref:System.Xml.XPath.XPathDocument> 類別中實作的。 這些類別代表 XML 資料的記憶體中快取。  
@@ -54,5 +54,6 @@ ms.locfileid: "33572836"
   
  如需詳細資訊，請參閱 [XSLT 處理期間解析外部資源](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)。  
   
-## <a name="see-also"></a>請參閱  
- [XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations.md)
+## <a name="see-also"></a>另請參閱
+
+- [XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations.md)

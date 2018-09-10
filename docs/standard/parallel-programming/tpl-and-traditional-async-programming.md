@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d708068dc0d55a1c7ec725977a4ca6d16b0f43c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8024fe6673b39a611c55eb55742bcfd981300e7e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591751"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44225590"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL 和傳統 .NET Framework 非同步程式設計
 .NET Framework 提供下列兩個標準模式執行 I/O 繫結程序和計算繫結程序的非同步作業：  
@@ -119,5 +119,6 @@ ms.locfileid: "33591751"
 ## <a name="using-the-streamextensions-sample-code"></a>使用 StreamExtensions 範例程式碼  
  [使用 .NET Framework 4 進行平行程式設計的範例](https://code.msdn.microsoft.com/ParExtSamples)中的 Streamextensions.cs 檔案包含數個參考實作，這些參考實作會使用 Task 物件來執行非同步檔案和網路 I/O。  
   
-## <a name="see-also"></a>請參閱  
- [工作平行程式庫 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+## <a name="see-also"></a>另請參閱
+
+- [工作平行程式庫 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

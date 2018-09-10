@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b6799763b4635632728561eef2820b26820aeed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7021a984f844660c45ae3e2d98569432ab64b657
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570393"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264775"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>擷取儲存於屬性中的資訊
 擷取自訂屬性是一個簡單的程序。 首先，對想要擷取的屬性宣告執行個體。 然後，使用 <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> 方法將新屬性初始化為所要擷取之屬性的值。 在將新屬性 (Attribute) 初始化之後，只要使用其屬性 (Poperty) 即可取得值。  
@@ -84,8 +84,9 @@ The attribute was not found.
   
  您可以使用 <xref:System.Type> 類別的成員來取得所傳遞類別中的個別方法和成員。 此範例會先查詢 **Type** 物件以取得類別層級的屬性資訊。 接著，它會使用 <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> 以將所有方法的執行個體置入 <xref:System.Reflection.MemberInfo?displayProperty=nameWithType> 物件的陣列，以擷取方法層級的屬性資訊。 您也可以使用 <xref:System.Type.GetProperties%2A?displayProperty=nameWithType> 方法來檢查屬性層級上的屬性，或使用 <xref:System.Type.GetConstructors%2A?displayProperty=nameWithType> 來檢查建構函式層級上的屬性。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Type?displayProperty=nameWithType>  
- <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>  
- <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>  
- [屬性](../../../docs/standard/attributes/index.md)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Type?displayProperty=nameWithType>  
+- <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>  
+- <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>  
+- [屬性](../../../docs/standard/attributes/index.md)

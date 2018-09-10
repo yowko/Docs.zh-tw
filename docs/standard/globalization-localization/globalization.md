@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9eb57aa0d6645958691c0003b07db6e8bb844fc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b59e0bda45b0b45b49c22d49ec2556fbcfef75d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579570"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44221905"
 ---
 # <a name="globalization"></a>全球化
 全球化涉及設計和開發世界性的應用程式，該類應用程式支援當地語系化的介面和地區資料，可供多種文化特性的使用者使用。 在開始設計階段之前，您應該先決定您的應用程式要支援哪些文化特性。 雖然應用程式將單一文化特性或區域作為預設，您仍可加以設計及撰寫，使其可輕易延伸至其他文化特性或地區的使用者。  
@@ -369,6 +369,7 @@ ms.locfileid: "33579570"
   
 -   使用者可透過使用 [控制台] 中的 [地區和語言] 應用程式，自訂文化特性專屬設定。 將 <xref:System.Globalization.CultureInfo> 物件具現化時，您可透過呼叫 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 建構函式來判斷其是否反映這些使用者自訂。 一般對終端使用者應用程式而言，您應該遵守使用者喜好設定，並以使用者所預期的格式呈現資料。  
   
-## <a name="see-also"></a>請參閱  
- [全球化和當地語系化](../../../docs/standard/globalization-localization/index.md)  
- [使用字串的最佳做法](../../../docs/standard/base-types/best-practices-strings.md)
+## <a name="see-also"></a>另請參閱
+
+- [全球化和當地語系化](../../../docs/standard/globalization-localization/index.md)  
+- [使用字串的最佳做法](../../../docs/standard/base-types/best-practices-strings.md)

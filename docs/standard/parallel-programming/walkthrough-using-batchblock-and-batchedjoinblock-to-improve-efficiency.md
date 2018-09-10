@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bcd12d5c3cfe341b22a5421930a22c272878006b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb3f50459eeafcbb9f4882e56fb08b2001a35fb3
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591842"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042345"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>逐步解說：使用 BatchBlock 和 BatchedJoinBlock 以改善效率
 TPL 資料流程程式庫提供 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> 類別，如此您可以接收來自一或多個來源的資料並緩衝，然後將該已緩衝的資料作為集合散佈。 這個批次機制在您從一或多個來源收集資料時非常實用，而且可接著批次處理多個資料元素。 例如，以使用資料流程將記錄插入資料庫的應用程式為例。 如果多個項目可以同時插入，而不是以循序方式逐一插入，這項作業就會更有效率。 本文件描述如何使用 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 類別來改善這類資料庫插入作業的效率。 文中也描述如何使用 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> 類別，在程式從資料庫進行讀取時擷取結果以及所發生的任何例外狀況。
@@ -118,5 +118,6 @@ TPL 資料流程程式庫提供 <xref:System.Threading.Tasks.Dataflow.BatchBlock
  [!code-csharp[TPLDataflow_BatchDatabase#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#100)]
  [!code-vb[TPLDataflow_BatchDatabase#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#100)]  
   
-## <a name="see-also"></a>請參閱  
- [資料流程](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a>另請參閱
+
+- [資料流程](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

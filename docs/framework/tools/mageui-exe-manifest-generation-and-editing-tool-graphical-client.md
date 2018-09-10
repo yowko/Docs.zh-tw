@@ -6,11 +6,11 @@ helpviewer_keywords:
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
 ms.openlocfilehash: eb93e53e7b77ee2747bce3fb9a45d7061450e65c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43390256"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501657"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (圖形用戶端、資訊清單產生和編輯工具)
 MageUI.exe 與命令列工具 Mage.exe 支援相同的功能，不過前者會採用 Windows 使用者介面 (UI)。 您可以利用此工具建立、編輯和簽章部署與應用程式資訊清單。 使用 MageUI.exe 建立的新資訊清單是以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 為目標。 若要以舊版 .NET Framework 為目標，則應該使用舊版 MageUI.exe。 在資訊清單中加入或移除組件或重新簽署現有資訊清單時，MageUI.exe 並不會更新資訊清單，使其以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 為目標。 如需詳細資訊，請參閱 [Mage.exe (資訊清單產生和編輯工具)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)。  

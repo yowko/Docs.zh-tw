@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 804f92ddd564f057157598c3cf62106d1a7d5318
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 35b8e062c9f207eba19bcee5593425095de2e267
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578193"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041466"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>開發世界性的應用程式的最佳作法
 本章節將說明開發世界性的應用程式的最佳作法。  
@@ -100,6 +100,7 @@ ms.locfileid: "33578193"
   
 5.  請注意，uiCulture 值可設為瀏覽器所接受的語言。  
   
-## <a name="see-also"></a>請參閱  
- [全球化和當地語系化](../../../docs/standard/globalization-localization/index.md)  
- [桌面應用程式中的資源](../../../docs/framework/resources/index.md)
+## <a name="see-also"></a>另請參閱
+
+- [全球化和當地語系化](../../../docs/standard/globalization-localization/index.md)  
+- [桌面應用程式中的資源](../../../docs/framework/resources/index.md)

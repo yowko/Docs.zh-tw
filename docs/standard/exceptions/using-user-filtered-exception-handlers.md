@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: aa80d155-060d-41b4-a636-1ceb424afee8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e72f87bd4a33491df46576629971c60af4630ce3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d1e771a95542153dfad0981d3198e6b4c31cdeb9
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571887"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264255"
 ---
 # <a name="using-user-filtered-exception-handlers"></a>使用使用者篩選的例外狀況處理常式
 目前，Visual Basic 支援使用者篩選的例外狀況。 使用者篩選例外狀況處理常式會依據您定義的例外狀況需求，攔截和處理例外狀況。 這些處理常式會使用 **Catch** 陳述式搭配 **When** 關鍵字。  
@@ -45,5 +45,6 @@ Try
 End Try  
 ```  
 
-## <a name="see-also"></a>請參閱
-[例外狀況](index.md)
+## <a name="see-also"></a>另請參閱
+
+- [例外狀況](index.md)

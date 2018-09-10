@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-ms.openlocfilehash: 9193dc56a0f92daf486d95666ba820cb09d588d0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b800848fc3cefb1f82fb5822007bc670c1684363
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745366"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43788924"
 ---
 # <a name="walkthrough-using-client-application-services"></a>逐步解說：使用用戶端應用程式服務
 本主題說明如何建立使用用戶端應用程式服務驗證使用者，以及擷取使用者角色和設定的 Windows 應用程式。  
@@ -69,7 +69,7 @@ ms.locfileid: "32745366"
  此時，應用程式會設定為從相同的主機存取這三種服務。 在下一節中，您將建立以簡單 Web 服務應用程式呈現的主機，以便您測試用戶端組態。  
   
 ## <a name="creating-the-application-services-host"></a>建立應用程式服務主機  
- 在本節中，您將建立簡單的 Web 服務應用程式，以便從本機 SQL Server Compact 資料庫檔案存取使用者資料。 接下來，您將會使用 [ASP.NET Web Site Administration Tool](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)植入資料庫。 這個簡單的組態可讓您快速地測試用戶端應用程式。 除此之外，您還可以設定 Web 服務主機，以便從完整的 SQL Server 資料庫存取使用者資料，或透過自訂 <xref:System.Web.Security.MembershipProvider> 和 <xref:System.Web.Security.RoleProvider> 類別來存取使用者資料。 如需詳細資訊，請參閱 [Creating and Configuring the Application Services Database for SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)。  
+ 在本節中，您將建立簡單的 Web 服務應用程式，以便從本機 SQL Server Compact 資料庫檔案存取使用者資料。 接下來，您將會使用 [ASP.NET Web Site Administration Tool](https://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)植入資料庫。 這個簡單的組態可讓您快速地測試用戶端應用程式。 除此之外，您還可以設定 Web 服務主機，以便從完整的 SQL Server 資料庫存取使用者資料，或透過自訂 <xref:System.Web.Security.MembershipProvider> 和 <xref:System.Web.Security.RoleProvider> 類別來存取使用者資料。 如需詳細資訊，請參閱 [Creating and Configuring the Application Services Database for SQL Server](https://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)。  
   
  在下列程序中，您將建立並設定 AppServices Web 服務。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "32745366"
      在這個標記中的 `authenticationService`、 `profileService`和 `roleService` 項目會啟用及設定應用程式服務。 基於測試目的， `requireSSL` 項目的 `authenticationService` 屬性會設定為 "false"。 `readAccessProperties` 項目的 `writeAccessProperties` 和 `profileService` 屬性 (Attribute) 表示 `WebSettingsTestText` 屬性 (Property) 是讀取/寫入。  
   
     > [!NOTE]
-    >  在實際執行的程式碼中，一定要透過 Secure Sockets Layer (SSL，使用 HTTPS 通訊協定) 存取驗證服務。 如需如何設定 SSL 的資訊，請參閱 [Configuring Secure Sockets Layer (IIS 6.0 Operations Guide)](http://go.microsoft.com/fwlink/?LinkId=91844)(設定安全通訊端層 (IIS 6.0 操作指南))。  
+    >  在實際執行的程式碼中，一定要透過 Secure Sockets Layer (SSL，使用 HTTPS 通訊協定) 存取驗證服務。 如需如何設定 SSL 的資訊，請參閱 [Configuring Secure Sockets Layer (IIS 6.0 Operations Guide)](https://go.microsoft.com/fwlink/?LinkId=91844)(設定安全通訊端層 (IIS 6.0 操作指南))。  
   
     ```xml  
     <system.web.extensions>  
@@ -538,6 +538,6 @@ ms.locfileid: "32745366"
  [用戶端應用程式服務](../../../docs/framework/common-client-technologies/client-application-services.md)  
  [用戶端應用程式服務概觀](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
  [如何：設定用戶端應用程式服務](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
- [ASP.NET 網站管理工具](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)  
- [建立及設定 SQL Server 的應用程式服務資料庫](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)  
- [逐步解說：使用 ASP.NET 應用程式服務](http://msdn.microsoft.com/library/f3f394f0-20d6-4361-aa8f-4b21bf4933eb)
+ [ASP.NET 網站管理工具](https://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)  
+ [建立及設定 SQL Server 的應用程式服務資料庫](https://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)  
+ [逐步解說：使用 ASP.NET 應用程式服務](https://msdn.microsoft.com/library/f3f394f0-20d6-4361-aa8f-4b21bf4933eb)

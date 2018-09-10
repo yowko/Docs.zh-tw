@@ -14,11 +14,11 @@ helpviewer_keywords:
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
 ms.openlocfilehash: 987f8e25014e8ce6413c998f6eb78d821558ecec
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43400359"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518660"
 ---
 # <a name="developing-client-applications-with-the-net-framework"></a>使用 .NET Framework 開發用戶端應用程式
 

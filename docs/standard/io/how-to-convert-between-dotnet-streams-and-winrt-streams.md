@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b3cfaf4cf22bba445d774c653ff7797d535bcde2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 96067ab6c8e13417158e4ebf7fae0e08cb9fbea4
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398961"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087475"
 ---
 # <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>如何：在 .NET Framework 資料流與 Windows 執行階段資料流之間轉換
 
@@ -77,8 +77,8 @@ Windows 執行階段提供了可支援唯讀、唯寫或讀寫的資料流類型
   [!code-csharp[System.IO.WindowsRuntimeStreamExtensionsEx#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/cs/mainpage.xaml.cs#2)]
   [!code-vb[System.IO.WindowsRuntimeStreamExtensionsEx#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/vb/mainpage.xaml.vb#2)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[快速入門：讀取和寫入檔案 (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
-[適用於 Windows 市集應用程式的 .NET 概觀](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
-[適用於 Windows 市集應用程式的 .NET - 所支援的應用程式開發介面](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)  
+- [快速入門：讀取和寫入檔案 (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
+- [適用於 Windows 市集應用程式的 .NET 概觀](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
+- [適用於 Windows 市集應用程式的 .NET - 所支援的應用程式開發介面](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)  
