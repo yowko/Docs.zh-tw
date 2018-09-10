@@ -5,12 +5,12 @@ helpviewer_keywords:
 - arrays [C#], foreach
 - foreach statement [C#], using with arrays
 ms.assetid: 5f2da2a9-1f56-4de5-94cc-e07f4f7a0244
-ms.openlocfilehash: b858f35167e24390a729769487ce98908a3d349f
-ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
+ms.openlocfilehash: 298ee915bbe11313f3b33ea7dae9353ef956a231
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34549451"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509531"
 ---
 # <a name="using-foreach-with-arrays-c-programming-guide"></a>搭配陣列使用 foreach (C# 程式設計手冊)
 
@@ -26,10 +26,11 @@ ms.locfileid: "34549451"
 
 但是在使用多維陣列時，使用巢狀 [for](../../language-reference/keywords/for.md) 迴圈能夠讓您進一步控制處理陣列元素的順序。
 
-## <a name="see-also"></a>另請參閱  
- <xref:System.Array>  
- [C# 程式設計指南](../index.md)  
- [陣列](index.md)  
- [一維陣列](single-dimensional-arrays.md)  
- [多維陣列](multidimensional-arrays.md)  
- [不規則陣列](jagged-arrays.md)
+## <a name="see-also"></a>請參閱
+
+- <xref:System.Array>  
+- [C# 程式設計指南](../index.md)  
+- [陣列](index.md)  
+- [一維陣列](single-dimensional-arrays.md)  
+- [多維陣列](multidimensional-arrays.md)  
+- [不規則陣列](jagged-arrays.md)

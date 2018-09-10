@@ -2,12 +2,12 @@
 title: 如何：依任何字或欄位排序或篩選文字資料 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c04d42f-4a78-42c8-9ec8-57ef18fe13a9
-ms.openlocfilehash: dc541d7cc8a4fb5978fb2ed9cc43a548e8f8b253
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 46a6c81a2f6e937bbd567dd4ce1b1e448ca073db
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320189"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502614"
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>如何：依任何字或欄位排序或篩選文字資料 (LINQ) (C#)
 下列範例示範如何依行中的任一欄位，來排序多行結構化文字 (例如逗號分隔值)。 此欄位可能會在執行階段以動態方式指定。 假設 scores.csv 中的欄位各代表學生的學號和四個測驗分數。  
@@ -75,7 +75,9 @@ public class SortLines
  此範例也會示範如何從方法傳回查詢變數。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
+
  建立以 .NET Framework 3.5 版或更新版本為目標的專案，該專案包含 System.Core.dll 的參考，以及 System.Linq 和 System.IO 命名空間的 `using` 指示詞。  
   
-## <a name="see-also"></a>請參閱  
- [LINQ 和字串 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a>請參閱
+
+- [LINQ 和字串 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)

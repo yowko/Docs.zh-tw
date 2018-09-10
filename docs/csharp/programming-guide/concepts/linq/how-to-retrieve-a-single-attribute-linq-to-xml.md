@@ -2,12 +2,12 @@
 title: 如何：擷取單一屬性 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 1b6b07b9-933f-47e9-874e-e790cab49dc5
-ms.openlocfilehash: 55da36099af72259a4e72205f142ab855f000c4f
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 7e7da2b63b9b46a23fcdbcbea6a0f499de32cf19
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43252781"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504992"
 ---
 # <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>如何：擷取單一屬性 (LINQ to XML) (C#)
 這個主題會說明如何擷取項目的單一屬性 (如果有屬性名稱)。 這在撰寫您要尋找具有特定屬性之項目的查詢運算式時，相當實用。  
@@ -97,5 +97,6 @@ home
 work  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [LINQ to XML 座標軸 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a>請參閱
+
+- [LINQ to XML 座標軸 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)

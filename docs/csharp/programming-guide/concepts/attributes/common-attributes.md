@@ -2,12 +2,12 @@
 title: 常見屬性 (C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-ms.openlocfilehash: 771460f8547252448be1b74526ec2babb719c3fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b02b750ad4801177cb2ee4e2ef4bf51ecb2f20f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332526"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504391"
 ---
 # <a name="common-attributes-c"></a>常見屬性 (C#)
 本主題描述最常在 C# 程式中使用的屬性。  
@@ -229,10 +229,11 @@ class SampleClass
   
  如需「呼叫端資訊」屬性的詳細資訊，請參閱[呼叫端資訊 (C#)](../../../../csharp/programming-guide/concepts/caller-information.md)。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Reflection>  
- <xref:System.Attribute>  
- [C# 程式設計指南](../../../../csharp/programming-guide/index.md)  
- [屬性](../../../../../docs/standard/attributes/index.md)  
- [反映 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
- [使用反射存取屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+## <a name="see-also"></a>請參閱
+
+- <xref:System.Reflection>  
+- <xref:System.Attribute>  
+- [C# 程式設計指南](../../../../csharp/programming-guide/index.md)  
+- [屬性](../../../../../docs/standard/attributes/index.md)  
+- [反映 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
+- [使用反射存取屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

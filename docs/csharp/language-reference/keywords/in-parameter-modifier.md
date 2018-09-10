@@ -5,11 +5,11 @@ helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
 ms.openlocfilehash: 54abd5192d0d9bb49be0a9feb8e5e4eaeb691a0c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43461718"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512011"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>in 參數修飾詞 (C# 參考)
 

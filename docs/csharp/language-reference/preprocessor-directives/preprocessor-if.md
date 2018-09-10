@@ -7,11 +7,11 @@ helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
 ms.openlocfilehash: c54a1fe0dba5f6d57b03b2ffeb4f1737fadfe039
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43406274"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510228"
 ---
 # <a name="if-c-reference"></a>#if (C# 參考)
 

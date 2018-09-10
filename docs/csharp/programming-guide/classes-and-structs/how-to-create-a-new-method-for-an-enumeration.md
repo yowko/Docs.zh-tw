@@ -6,12 +6,12 @@ helpviewer_keywords:
 - extension methods [C#], for enums
 - enum extensibility [C#]
 ms.assetid: 100106f9-1e54-462c-8ebe-3892fe23b6eb
-ms.openlocfilehash: 8de44cbddf26af45245709d0e28d2d157256ce59
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 3e153dbbe80ed850705ddaea4a9a3d5aba570fe0
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932211"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508943"
 ---
 # <a name="how-to-create-a-new-method-for-an-enumeration-c-programming-guide"></a>如何：建立列舉類型的新方法 (C# 程式設計手冊)
 您可以使用擴充方法來新增專屬於特定列舉類型的功能。  
@@ -26,6 +26,7 @@ ms.locfileid: "42932211"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  若要執行此程式碼，請將它複製並貼到已在 Visual Studio 中建立的 Visual C# 主控台應用程式專案。 根據預設，此專案是以 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 3.5 版為目標，且有 System.Core.dll 的參考，以及 System.Linq 的 `using` 指示詞。 如果專案中遺漏上述一或多個需求，您可以手動新增這些需求。  
   
-## <a name="see-also"></a>請參閱  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [擴充方法](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [擴充方法](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)

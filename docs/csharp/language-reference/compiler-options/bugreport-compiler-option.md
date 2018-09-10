@@ -9,11 +9,11 @@ helpviewer_keywords:
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
 ms.openlocfilehash: 6e4674acd2a5edbbffd2babf130d2078019ab9b7
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43331731"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516999"
 ---
 # <a name="-bugreport-c-compiler-options"></a>-bugreport (C# 編譯器選項)
 指定偵錯資訊應該置於檔案以供稍後分析。  

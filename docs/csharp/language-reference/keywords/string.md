@@ -11,11 +11,11 @@ helpviewer_keywords:
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
 ms.openlocfilehash: 8b70f1c1dcb39dcdde6ba24a1bdcdfc3084cfc97
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42929269"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513096"
 ---
 # <a name="string-c-reference"></a>string (C# 參考)
 `string` 類型代表零或多個 Unicode 字元序列。 `string` 是 <xref:System.String> 在 .NET 中的別名。  

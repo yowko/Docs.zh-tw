@@ -8,11 +8,11 @@ helpviewer_keywords:
 - sealed keyword [C#]
 ms.assetid: 8e4ed5d3-10be-47db-9488-0da2008e6f3f
 ms.openlocfilehash: 674c7e1cd87b95318f739ab22876f4bfe5ae73d8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43386636"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514025"
 ---
 # <a name="sealed-c-reference"></a>sealed (C# 參考)
 套用至類別時，`sealed` 修飾詞可防止其他類別繼承自它。 在下列範例中，`B` 類別繼承自 `A`類別，但類別無法繼承自 `B` 類別。  
