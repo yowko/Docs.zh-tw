@@ -12,22 +12,22 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 75cc2003a88cc7be467b9062c37b6b5d9eb82f53
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195251"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44337872"
 ---
-# <a name="ltprovideroptiongt-element"></a><span data-ttu-id="0bfb3-102">&lt;providerOption&gt;項目</span><span class="sxs-lookup"><span data-stu-id="0bfb3-102">&lt;providerOption&gt; Element</span></span>
-<span data-ttu-id="0bfb3-103">指定的語言提供者的編譯器版本屬性。</span><span class="sxs-lookup"><span data-stu-id="0bfb3-103">Specifies the compiler version attributes for a language provider.</span></span>  
+# <a name="ltprovideroptiongt-element"></a><span data-ttu-id="c2a83-102">&lt;providerOption&gt;項目</span><span class="sxs-lookup"><span data-stu-id="c2a83-102">&lt;providerOption&gt; Element</span></span>
+<span data-ttu-id="c2a83-103">指定的語言提供者的編譯器版本屬性。</span><span class="sxs-lookup"><span data-stu-id="c2a83-103">Specifies the compiler version attributes for a language provider.</span></span>  
   
- <span data-ttu-id="0bfb3-104">\<組態項目 ></span><span class="sxs-lookup"><span data-stu-id="0bfb3-104">\<configuration Element></span></span>  
-<span data-ttu-id="0bfb3-105">\<system.codedom 項目 ></span><span class="sxs-lookup"><span data-stu-id="0bfb3-105">\<system.codedom Element></span></span>  
-<span data-ttu-id="0bfb3-106">\<compilers 項目 ></span><span class="sxs-lookup"><span data-stu-id="0bfb3-106">\<compilers Element></span></span>  
-<span data-ttu-id="0bfb3-107">\<編譯器 > 項目</span><span class="sxs-lookup"><span data-stu-id="0bfb3-107">\<compiler> Element</span></span>  
-<span data-ttu-id="0bfb3-108">\<providerOption > 項目</span><span class="sxs-lookup"><span data-stu-id="0bfb3-108">\<providerOption> Element</span></span>  
+ <span data-ttu-id="c2a83-104">\<組態項目 ></span><span class="sxs-lookup"><span data-stu-id="c2a83-104">\<configuration Element></span></span>  
+<span data-ttu-id="c2a83-105">\<system.codedom 項目 ></span><span class="sxs-lookup"><span data-stu-id="c2a83-105">\<system.codedom Element></span></span>  
+<span data-ttu-id="c2a83-106">\<compilers 項目 ></span><span class="sxs-lookup"><span data-stu-id="c2a83-106">\<compilers Element></span></span>  
+<span data-ttu-id="c2a83-107">\<編譯器 > 項目</span><span class="sxs-lookup"><span data-stu-id="c2a83-107">\<compiler> Element</span></span>  
+<span data-ttu-id="c2a83-108">\<providerOption > 項目</span><span class="sxs-lookup"><span data-stu-id="c2a83-108">\<providerOption> Element</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0bfb3-109">語法</span><span class="sxs-lookup"><span data-stu-id="0bfb3-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c2a83-109">語法</span><span class="sxs-lookup"><span data-stu-id="c2a83-109">Syntax</span></span>  
   
 ```xml  
 <providerOption  
@@ -36,39 +36,39 @@ ms.locfileid: "44195251"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="0bfb3-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="0bfb3-110">Attributes and Elements</span></span>  
- <span data-ttu-id="0bfb3-111">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="0bfb3-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c2a83-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="c2a83-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="c2a83-111">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="c2a83-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="0bfb3-112">屬性</span><span class="sxs-lookup"><span data-stu-id="0bfb3-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="c2a83-112">屬性</span><span class="sxs-lookup"><span data-stu-id="c2a83-112">Attributes</span></span>  
   
-|<span data-ttu-id="0bfb3-113">屬性</span><span class="sxs-lookup"><span data-stu-id="0bfb3-113">Attribute</span></span>|<span data-ttu-id="0bfb3-114">描述</span><span class="sxs-lookup"><span data-stu-id="0bfb3-114">Description</span></span>|  
+|<span data-ttu-id="c2a83-113">屬性</span><span class="sxs-lookup"><span data-stu-id="c2a83-113">Attribute</span></span>|<span data-ttu-id="c2a83-114">描述</span><span class="sxs-lookup"><span data-stu-id="c2a83-114">Description</span></span>|  
 |---------------|-----------------|  
-|`name`|<span data-ttu-id="0bfb3-115">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="0bfb3-115">Required attribute.</span></span><br /><br /> <span data-ttu-id="0bfb3-116">指定名稱的選項;例如，"CompilerVersion。 」</span><span class="sxs-lookup"><span data-stu-id="0bfb3-116">Specifies the name of the option; for example, "CompilerVersion".</span></span>|  
-|`value`|<span data-ttu-id="0bfb3-117">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="0bfb3-117">Required attribute.</span></span><br /><br /> <span data-ttu-id="0bfb3-118">指定的選項; 的值例如，"v3.5。"</span><span class="sxs-lookup"><span data-stu-id="0bfb3-118">Specifies the value for the option; for example, "v3.5".</span></span>|  
+|`name`|<span data-ttu-id="c2a83-115">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="c2a83-115">Required attribute.</span></span><br /><br /> <span data-ttu-id="c2a83-116">指定名稱的選項;例如，"CompilerVersion。 」</span><span class="sxs-lookup"><span data-stu-id="c2a83-116">Specifies the name of the option; for example, "CompilerVersion".</span></span>|  
+|`value`|<span data-ttu-id="c2a83-117">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="c2a83-117">Required attribute.</span></span><br /><br /> <span data-ttu-id="c2a83-118">指定的選項; 的值例如，"v3.5。"</span><span class="sxs-lookup"><span data-stu-id="c2a83-118">Specifies the value for the option; for example, "v3.5".</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="0bfb3-119">子元素</span><span class="sxs-lookup"><span data-stu-id="0bfb3-119">Child Elements</span></span>  
- <span data-ttu-id="0bfb3-120">無。</span><span class="sxs-lookup"><span data-stu-id="0bfb3-120">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="c2a83-119">子元素</span><span class="sxs-lookup"><span data-stu-id="c2a83-119">Child Elements</span></span>  
+ <span data-ttu-id="c2a83-120">無。</span><span class="sxs-lookup"><span data-stu-id="c2a83-120">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="0bfb3-121">父項目</span><span class="sxs-lookup"><span data-stu-id="0bfb3-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="c2a83-121">父項目</span><span class="sxs-lookup"><span data-stu-id="c2a83-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="0bfb3-122">項目</span><span class="sxs-lookup"><span data-stu-id="0bfb3-122">Element</span></span>|<span data-ttu-id="0bfb3-123">描述</span><span class="sxs-lookup"><span data-stu-id="0bfb3-123">Description</span></span>|  
+|<span data-ttu-id="c2a83-122">項目</span><span class="sxs-lookup"><span data-stu-id="c2a83-122">Element</span></span>|<span data-ttu-id="c2a83-123">描述</span><span class="sxs-lookup"><span data-stu-id="c2a83-123">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="0bfb3-124">\<configuration> 項目</span><span class="sxs-lookup"><span data-stu-id="0bfb3-124">\<configuration> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="0bfb3-125">Common Language Runtime 與 .NET Framework 應用程式使用的所有組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="0bfb3-125">The root element in every configuration file that is used by the common language runtime and .NET Framework applications.</span></span>|  
-|[<span data-ttu-id="0bfb3-126">\<system.codedom > 項目</span><span class="sxs-lookup"><span data-stu-id="0bfb3-126">\<system.codedom> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|<span data-ttu-id="0bfb3-127">指定可用語言提供者的編譯器組態設定。</span><span class="sxs-lookup"><span data-stu-id="0bfb3-127">Specifies compiler configuration settings for available language providers.</span></span>|  
-|[<span data-ttu-id="0bfb3-128">\<編譯器 > 項目</span><span class="sxs-lookup"><span data-stu-id="0bfb3-128">\<compilers> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|<span data-ttu-id="0bfb3-129">編譯器組態項目; 容器包含零或多個`<compiler>`項目。</span><span class="sxs-lookup"><span data-stu-id="0bfb3-129">Container for compiler configuration elements; contains zero or more `<compiler>` elements.</span></span>|  
-|[<span data-ttu-id="0bfb3-130">\<編譯器> 項目</span><span class="sxs-lookup"><span data-stu-id="0bfb3-130">\<compiler> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|<span data-ttu-id="0bfb3-131">指定語言提供者的編譯器組態屬性。</span><span class="sxs-lookup"><span data-stu-id="0bfb3-131">Specifies the compiler configuration attributes for a language provider.</span></span>|  
+|[<span data-ttu-id="c2a83-124">\<configuration> 項目</span><span class="sxs-lookup"><span data-stu-id="c2a83-124">\<configuration> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="c2a83-125">Common Language Runtime 與 .NET Framework 應用程式使用的所有組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="c2a83-125">The root element in every configuration file that is used by the common language runtime and .NET Framework applications.</span></span>|  
+|[<span data-ttu-id="c2a83-126">\<system.codedom > 項目</span><span class="sxs-lookup"><span data-stu-id="c2a83-126">\<system.codedom> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|<span data-ttu-id="c2a83-127">指定可用語言提供者的編譯器組態設定。</span><span class="sxs-lookup"><span data-stu-id="c2a83-127">Specifies compiler configuration settings for available language providers.</span></span>|  
+|[<span data-ttu-id="c2a83-128">\<編譯器 > 項目</span><span class="sxs-lookup"><span data-stu-id="c2a83-128">\<compilers> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|<span data-ttu-id="c2a83-129">編譯器組態項目; 容器包含零或多個`<compiler>`項目。</span><span class="sxs-lookup"><span data-stu-id="c2a83-129">Container for compiler configuration elements; contains zero or more `<compiler>` elements.</span></span>|  
+|[<span data-ttu-id="c2a83-130">\<編譯器> 項目</span><span class="sxs-lookup"><span data-stu-id="c2a83-130">\<compiler> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|<span data-ttu-id="c2a83-131">指定語言提供者的編譯器組態屬性。</span><span class="sxs-lookup"><span data-stu-id="c2a83-131">Specifies the compiler configuration attributes for a language provider.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0bfb3-132">備註</span><span class="sxs-lookup"><span data-stu-id="0bfb3-132">Remarks</span></span>  
- <span data-ttu-id="0bfb3-133">在.NET Framework 3.5 版中，程式碼文件物件模型 (CodeDOM) 的程式碼提供者可以使用支援提供者特定選項`<providerOption>`項目。</span><span class="sxs-lookup"><span data-stu-id="0bfb3-133">In the .NET Framework version 3.5, Code Document Object Model (CodeDOM) code providers can support provider-specific options by using the `<providerOption>` element.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c2a83-132">備註</span><span class="sxs-lookup"><span data-stu-id="c2a83-132">Remarks</span></span>  
+ <span data-ttu-id="c2a83-133">在.NET Framework 3.5 版中，程式碼文件物件模型 (CodeDOM) 的程式碼提供者可以使用支援提供者特定選項`<providerOption>`項目。</span><span class="sxs-lookup"><span data-stu-id="c2a83-133">In the .NET Framework version 3.5, Code Document Object Model (CodeDOM) code providers can support provider-specific options by using the `<providerOption>` element.</span></span>  
   
- <span data-ttu-id="0bfb3-134">.NET Framework 3.5 包含更新的.NET Framework 2.0 組件，並提供新的 3.5 版組件包含新的類型。</span><span class="sxs-lookup"><span data-stu-id="0bfb3-134">The .NET Framework 3.5 includes updated .NET Framework 2.0 assemblies and provides new version 3.5 assemblies that contain new types.</span></span> <span data-ttu-id="0bfb3-135">Microsoft C# 和 Visual Basic 程式碼提供者會包含在.NET Framework 2.0 組件，但已更新為支援版本 3.5 編譯器。</span><span class="sxs-lookup"><span data-stu-id="0bfb3-135">The Microsoft C# and Visual Basic code providers are contained in .NET Framework 2.0 assemblies but have been updated to support version 3.5 compilers.</span></span> <span data-ttu-id="0bfb3-136">根據預設，更新的程式碼提供者會產生適用於版本 2.0 編譯器的程式碼。</span><span class="sxs-lookup"><span data-stu-id="0bfb3-136">By default, the updated code providers generate code for version 2.0 compilers.</span></span> <span data-ttu-id="0bfb3-137">您可以使用`<providerOption>`項目，若要變更目標的編譯器版本為 3.5。</span><span class="sxs-lookup"><span data-stu-id="0bfb3-137">You can use the `<providerOption>` element to change the target compiler version to 3.5.</span></span> <span data-ttu-id="0bfb3-138">若要這樣做，請指定"CompilerVersion 」`name`屬性和"v3.5"，如`value`屬性。</span><span class="sxs-lookup"><span data-stu-id="0bfb3-138">To do this, specify "CompilerVersion" for the `name` attribute and "v3.5" for the `value` attribute.</span></span> <span data-ttu-id="0bfb3-139">您必須在之前的版本號碼，以小寫的"v"。</span><span class="sxs-lookup"><span data-stu-id="0bfb3-139">You must precede the version number with a lower-case "v".</span></span>  
+ <span data-ttu-id="c2a83-134">.NET Framework 3.5 包含更新的.NET Framework 2.0 組件，並提供新的 3.5 版組件包含新的類型。</span><span class="sxs-lookup"><span data-stu-id="c2a83-134">The .NET Framework 3.5 includes updated .NET Framework 2.0 assemblies and provides new version 3.5 assemblies that contain new types.</span></span> <span data-ttu-id="c2a83-135">Microsoft C# 和 Visual Basic 程式碼提供者會包含在.NET Framework 2.0 組件，但已更新為支援版本 3.5 編譯器。</span><span class="sxs-lookup"><span data-stu-id="c2a83-135">The Microsoft C# and Visual Basic code providers are contained in .NET Framework 2.0 assemblies but have been updated to support version 3.5 compilers.</span></span> <span data-ttu-id="c2a83-136">根據預設，更新的程式碼提供者會產生適用於版本 2.0 編譯器的程式碼。</span><span class="sxs-lookup"><span data-stu-id="c2a83-136">By default, the updated code providers generate code for version 2.0 compilers.</span></span> <span data-ttu-id="c2a83-137">您可以使用`<providerOption>`項目，若要變更目標的編譯器版本為 3.5。</span><span class="sxs-lookup"><span data-stu-id="c2a83-137">You can use the `<providerOption>` element to change the target compiler version to 3.5.</span></span> <span data-ttu-id="c2a83-138">若要這樣做，請指定"CompilerVersion 」`name`屬性和"v3.5"，如`value`屬性。</span><span class="sxs-lookup"><span data-stu-id="c2a83-138">To do this, specify "CompilerVersion" for the `name` attribute and "v3.5" for the `value` attribute.</span></span> <span data-ttu-id="c2a83-139">您必須在之前的版本號碼，以小寫的"v"。</span><span class="sxs-lookup"><span data-stu-id="c2a83-139">You must precede the version number with a lower-case "v".</span></span>  
   
- <span data-ttu-id="0bfb3-140">您可以藉此版本規格全域新增`<providerOption>`.NET Framework 2.0 Machine.config 或根 Web.config 檔案中的項目。</span><span class="sxs-lookup"><span data-stu-id="0bfb3-140">You can make the version specification global by adding the `<providerOption>` element to the .NET Framework 2.0 Machine.config or root Web.config file.</span></span> <span data-ttu-id="0bfb3-141">如果您更新預設的編譯器版本 3.5 Machine.config 檔案中，您可以將它變更回 2.0 針對每個應用程式使用`<providerOption>`應用程式組態檔中的項目。</span><span class="sxs-lookup"><span data-stu-id="0bfb3-141">If you update the default compiler version to 3.5 in the Machine.config file, you can change it back to 2.0 on a per-application basis by using the `<providerOption>` element in the application configuration file.</span></span>  
+ <span data-ttu-id="c2a83-140">您可以藉此版本規格全域新增`<providerOption>`.NET Framework 2.0 Machine.config 或根 Web.config 檔案中的項目。</span><span class="sxs-lookup"><span data-stu-id="c2a83-140">You can make the version specification global by adding the `<providerOption>` element to the .NET Framework 2.0 Machine.config or root Web.config file.</span></span> <span data-ttu-id="c2a83-141">如果您更新預設的編譯器版本 3.5 Machine.config 檔案中，您可以將它變更回 2.0 針對每個應用程式使用`<providerOption>`應用程式組態檔中的項目。</span><span class="sxs-lookup"><span data-stu-id="c2a83-141">If you update the default compiler version to 3.5 in the Machine.config file, you can change it back to 2.0 on a per-application basis by using the `<providerOption>` element in the application configuration file.</span></span>  
   
- <span data-ttu-id="0bfb3-142">CodeDOM 程式碼提供者實作器可以處理自訂的選項，藉由提供的建構函式`providerOptions`型別的參數<xref:System.Collections.Generic.IDictionary%602>。</span><span class="sxs-lookup"><span data-stu-id="0bfb3-142">CodeDOM code provider implementers can process custom options by providing a constructor that takes a `providerOptions` parameter of type <xref:System.Collections.Generic.IDictionary%602>.</span></span>  
+ <span data-ttu-id="c2a83-142">CodeDOM 程式碼提供者實作器可以處理自訂的選項，藉由提供的建構函式`providerOptions`型別的參數<xref:System.Collections.Generic.IDictionary%602>。</span><span class="sxs-lookup"><span data-stu-id="c2a83-142">CodeDOM code provider implementers can process custom options by providing a constructor that takes a `providerOptions` parameter of type <xref:System.Collections.Generic.IDictionary%602>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0bfb3-143">範例</span><span class="sxs-lookup"><span data-stu-id="0bfb3-143">Example</span></span>  
- <span data-ttu-id="0bfb3-144">下列範例示範如何指定應該用於 3.5 版的 C# 程式碼提供者。</span><span class="sxs-lookup"><span data-stu-id="0bfb3-144">The following example demonstrates how to specify that version 3.5 of the C# code provider should be used.</span></span>  
+## <a name="example"></a><span data-ttu-id="c2a83-143">範例</span><span class="sxs-lookup"><span data-stu-id="c2a83-143">Example</span></span>  
+ <span data-ttu-id="c2a83-144">下列範例示範如何指定應該用於 3.5 版的 C# 程式碼提供者。</span><span class="sxs-lookup"><span data-stu-id="c2a83-144">The following example demonstrates how to specify that version 3.5 of the C# code provider should be used.</span></span>  
   
 ```xml  
 <configuration>  
@@ -92,10 +92,10 @@ ms.locfileid: "44195251"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0bfb3-145">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0bfb3-145">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="c2a83-145">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c2a83-145">See Also</span></span>  
  <xref:System.CodeDom.Compiler.CompilerInfo>  
  <xref:System.CodeDom.Compiler.CodeDomProvider>  
- [<span data-ttu-id="0bfb3-146">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="0bfb3-146">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [<span data-ttu-id="0bfb3-147">\<編譯器 > 項目</span><span class="sxs-lookup"><span data-stu-id="0bfb3-147">\<compilers> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)  
- [<span data-ttu-id="0bfb3-148">指定完整的類型名稱</span><span class="sxs-lookup"><span data-stu-id="0bfb3-148">Specifying Fully Qualified Type Names</span></span>](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)  
- [<span data-ttu-id="0bfb3-149">編譯 （ASP.NET 設定結構描述） 之編譯器的 compiler 項目</span><span class="sxs-lookup"><span data-stu-id="0bfb3-149">compiler Element for compilers for compilation (ASP.NET Settings Schema)</span></span>](https://msdn.microsoft.com/library/f7d6b078-5d42-4134-b3f7-62e1aba1df1e)
+ [<span data-ttu-id="c2a83-146">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="c2a83-146">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="c2a83-147">\<編譯器 > 項目</span><span class="sxs-lookup"><span data-stu-id="c2a83-147">\<compilers> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)  
+ [<span data-ttu-id="c2a83-148">指定完整的類型名稱</span><span class="sxs-lookup"><span data-stu-id="c2a83-148">Specifying Fully Qualified Type Names</span></span>](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)  
+ [<span data-ttu-id="c2a83-149">編譯 （ASP.NET 設定結構描述） 之編譯器的 compiler 項目</span><span class="sxs-lookup"><span data-stu-id="c2a83-149">compiler Element for compilers for compilation (ASP.NET Settings Schema)</span></span>](https://msdn.microsoft.com/library/f7d6b078-5d42-4134-b3f7-62e1aba1df1e)
