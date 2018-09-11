@@ -3,11 +3,11 @@ title: 針對 Func 與 Action 泛型委派使用變異數 (C#)
 ms.date: 07/20/2015
 ms.assetid: 1826774f-2b7a-470f-b110-17cfdd6abdae
 ms.openlocfilehash: 903926bc86b1b96cea25b91314e35ed4771bbcb9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44222223"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44272198"
 ---
 # <a name="using-variance-for-func-and-action-generic-delegates-c"></a>針對 Func 與 Action 泛型委派使用變異數 (C#)
 下列範例示範如何在 `Func` 和 `Action` 泛型委派中使用共變數和反變數，以便在您的程式碼中重複使用方法並提供更多彈性。  
