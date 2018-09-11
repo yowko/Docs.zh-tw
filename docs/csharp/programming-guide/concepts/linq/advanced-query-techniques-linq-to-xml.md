@@ -2,12 +2,12 @@
 title: 進階查詢技術 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 028d978e-215b-4d50-ba70-adce0659386d
-ms.openlocfilehash: b1045308d18afb46c5f3bb0da9d02b07f17db95e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d33677be318275eb9c9cc427129caec6edddb2d9
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326312"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44141187"
 ---
 # <a name="advanced-query-techniques-linq-to-xml-c"></a>進階查詢技術 (LINQ to XML) (C#)
 本節提供更進階的 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢技術範例。  
@@ -26,5 +26,6 @@ ms.locfileid: "33326312"
 |[如何：修改 Office Open XML 文件 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-modify-an-office-open-xml-document.md)|呈現會開啟、修改與儲存 Office Open XML 文件的程式碼。|  
 |[如何：從檔案系統填入 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-an-xml-tree-from-the-file-system.md)|呈現從檔案系統建立 XML 樹狀結構的程式碼。|  
   
-## <a name="see-also"></a>請參閱  
- [查詢 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)
+## <a name="see-also"></a>請參閱
+
+- [查詢 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)

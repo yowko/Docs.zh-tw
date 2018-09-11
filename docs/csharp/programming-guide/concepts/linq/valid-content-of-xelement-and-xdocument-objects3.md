@@ -2,12 +2,12 @@
 title: XElement 和 XDocument 物件的有效內容
 ms.date: 07/20/2015
 ms.assetid: 0d253586-2b97-459f-b1a7-f30f38f3ed9f
-ms.openlocfilehash: 32521941bacdf8d689a81f6136d427307481ddc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: afaeed7ba49891380982ec9c3cade43574ab8c16
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340316"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44214052"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>XElement 和 XDocument 物件的有效內容
 本主題說明可以傳遞給用於將內容加入至項目和文件之建構函式 (Constructor) 和方法的有效引數。  
@@ -88,5 +88,6 @@ ms.locfileid: "33340316"
 |<xref:System.Xml.Linq.XContainer.ReplaceNodes%2A>|以新的內容取代子節點。|  
 |<xref:System.Xml.Linq.XNode.ReplaceWith%2A>|以新內容取代節點。|  
   
-## <a name="see-also"></a>請參閱  
- [建立 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+## <a name="see-also"></a>請參閱
+
+- [建立 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)

@@ -2,12 +2,12 @@
 title: XML 檔範例：位於相同命名空間中的客戶和訂單
 ms.date: 07/20/2015
 ms.assetid: 2da1c474-f658-4dca-a457-c35ef5ba4aff
-ms.openlocfilehash: 53ad3633361772dc4a9be337df7ae2e1b8a60a5a
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 1af227118f5c3c03d1559797d5977f5c71469678
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42929712"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44217031"
 ---
 # <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a>範例 XML 檔：位於相同命名空間中的客戶和訂單
 下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。 這個檔案包含客戶和訂單。 XML 位於命名空間中。  
@@ -430,5 +430,6 @@ ms.locfileid: "42929712"
 </Root>  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [範例 XML 文件 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a>請參閱
+
+- [範例 XML 文件 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

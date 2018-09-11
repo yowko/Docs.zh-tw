@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: d14c196babb03b7f13dde6ab5b46508a30ba26d6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0bd53d97cec4370adc78fc715b1cea5ee5a3fd6f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43394526"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44208792"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>互通性概觀 (C# 程式設計手冊)
 本主題說明可在 C# Managed 程式碼和 Unmanaged 程式碼之間啟用互通性的方法。  
@@ -57,10 +57,11 @@ ms.locfileid: "43394526"
   
  如需詳細資訊，請參閱[將 .NET Framework 元件公開給 COM](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md) 和[範例 COM 類別](../../../csharp/programming-guide/interop/example-com-class.md)。  
   
-## <a name="see-also"></a>請參閱  
- [Improving Interop Performance](https://msdn.microsoft.com/library/ms998551.aspx) (提升 Interop 效能)  
- [COM 和.NET 之間的互通性簡介](https://msdn.microsoft.com/library/office/bb610378.aspx) \(機器翻譯\)  
- [Visual Basic 中的 COM Interop 簡介](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
- [在受控碼和非受控碼之間進行封送處理](../../../../docs/framework/interop/interop-marshaling.md)  
- [與 Unmanaged 程式碼互通](../../../../docs/framework/interop/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>請參閱
+
+- [Improving Interop Performance](https://msdn.microsoft.com/library/ms998551.aspx) (提升 Interop 效能)  
+- [COM 和.NET 之間的互通性簡介](https://msdn.microsoft.com/library/office/bb610378.aspx) \(機器翻譯\)  
+- [Visual Basic 中的 COM Interop 簡介](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
+- [在受控碼和非受控碼之間進行封送處理](../../../../docs/framework/interop/interop-marshaling.md)  
+- [與 Unmanaged 程式碼互通](../../../../docs/framework/interop/index.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)

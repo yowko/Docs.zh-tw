@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: c639c5481e3ee02eaacbe33e5d118a73db3f9051
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 430cf3f1bc5e0b5ebe1a05530059516f36a473a1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336933"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44209455"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# 編碼慣例 (C# 程式設計手冊)
  編碼慣例有下列用途：  
@@ -195,6 +195,7 @@ ms.locfileid: "33336933"
 ## <a name="security"></a>安全性  
  請遵循[安全程式碼撰寫方針](../../../standard/security/secure-coding-guidelines.md)中的指引。  
   
-## <a name="see-also"></a>請參閱  
- [Visual Basic 編碼慣例](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)  
- [安全程式碼撰寫方針](../../../standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>請參閱
+
+- [Visual Basic 編碼慣例](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)  
+- [安全程式碼撰寫方針](../../../standard/security/secure-coding-guidelines.md)

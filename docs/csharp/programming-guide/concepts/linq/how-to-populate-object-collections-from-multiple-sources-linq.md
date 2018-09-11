@@ -2,12 +2,12 @@
 title: 如何：從多個來源填入物件集合 (LINQ) (C#)
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: 5f0c0e92c7448eebc6f395fcdb16cfca840bb2ea
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 377b4a21c78be2b53d2bcd0e88d39d06609c462b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071080"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44216089"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>如何：從多個來源填入物件集合 (LINQ) (C#)
 
@@ -147,8 +147,8 @@ foreach (var student in queryNamesScores2)
 - NET Framework 4.0 或更高版本。
 - NET Core 1.0 或更高版本。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[LINQ 和字串 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
-[物件和集合初始設定式](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
-[匿名類型](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+- [LINQ 和字串 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+- [物件和集合初始設定式](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
+- [匿名類型](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 773add221317a2154ac620acf766607ec22c629d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 81876d1818a6e82764e4aea0ae2b6f9e091f0ba3
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329543"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44208643"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>使用命名空間 (C# 程式設計手冊)
 C# 程式內大量使用命名空間的原因有兩個。 首先，.NET Framework 類別會使用命名空間來組織其多種類別。 其次，宣告您自己的命名空間，有助於在較大型的程式設計專案中控制類別和方法名稱的範圍。  
@@ -87,10 +87,11 @@ C# 程式內大量使用命名空間的原因有兩個。 首先，.NET Framewor
   
  如需 `global` 別名的詳細資訊，請參閱[如何：使用全域命名空間別名](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)主題。  
   
-## <a name="see-also"></a>請參閱  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [命名空間](../../../csharp/programming-guide/namespaces/index.md)  
- [命名空間關鍵字](../../../csharp/language-reference/keywords/namespace-keywords.md)  
- [.運算子](../../../csharp/language-reference/operators/member-access-operator.md)  
- [:: 運算子](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
- [extern](../../../csharp/language-reference/keywords/extern.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [命名空間](../../../csharp/programming-guide/namespaces/index.md)  
+- [命名空間關鍵字](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+- [.運算子](../../../csharp/language-reference/operators/member-access-operator.md)  
+- [:: 運算子](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [extern](../../../csharp/language-reference/keywords/extern.md)

@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
 ms.openlocfilehash: b6170be2dbb3f11906bbaa6e5c3be3e48a976246
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43403430"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44228061"
 ---
 # <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>如何：使用 String.Split 剖析字串 (C# 指南)
 

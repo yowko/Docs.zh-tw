@@ -2,12 +2,12 @@
 title: 使用 XML 宣告序列化 (C#)
 ms.date: 07/20/2015
 ms.assetid: c237fa4a-a042-40fd-886f-17b54c66bb75
-ms.openlocfilehash: 3f331f1226e7e5a905471f4a793f9a415bdd858a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 613280efc8c734c53c4af9252b4b83e2dd942f36
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329783"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44222353"
 ---
 # <a name="serializing-with-an-xml-declaration-c"></a>使用 XML 宣告序列化 (C#)
 這個主題描述如何控制序列化是否產生 XML 宣告。  
@@ -61,5 +61,6 @@ Console.WriteLine(sb.ToString());
 <Root><Child>child content</Child></Root>  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [序列化 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)
+## <a name="see-also"></a>請參閱
+
+- [序列化 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)

@@ -5,14 +5,15 @@ helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-ms.openlocfilehash: c1825e1a731c40a5945060f8085bd612b5d62008
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e4988439000712f4d1bd9b5abe412e7fd5d43eb
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297364"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261665"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>不規則陣列 (C# 程式設計手冊)
+
 不規則陣列是一種陣列，其元素也是陣列。 不規則陣列的項目可以有不同的維度和大小。 不規則陣列有時稱為「陣列的陣列」。 下列範例示範如何宣告、初始化和存取不規則陣列。  
   
  下列是具有三個項目的一維陣列宣告，且每個都是整數的一維陣列：  
@@ -57,14 +58,16 @@ ms.locfileid: "33297364"
   
  會傳回值 3。  
   
-## <a name="example"></a>範例  
+## <a name="example"></a>範例
+
  此範例會建置其項目本身為陣列的陣列。 每個陣列元素都會有不同的大小。  
   
  [!code-csharp[csProgGuideArrays#18](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_10.cs)]  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Array>  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [陣列](../../../csharp/programming-guide/arrays/index.md)  
- [一維陣列](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
- [多維陣列](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)
+## <a name="see-also"></a>請參閱
+
+- <xref:System.Array>  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [陣列](../../../csharp/programming-guide/arrays/index.md)  
+- [一維陣列](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
+- [多維陣列](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)

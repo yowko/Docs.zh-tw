@@ -8,11 +8,11 @@ helpviewer_keywords:
 - void keyword [C#]
 ms.assetid: 0d2d8a95-fe20-4fbd-bf5d-c1e54bce71d4
 ms.openlocfilehash: 223db893dd42181c234d9a07c1a1c00af26f0c30
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397083"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44213922"
 ---
 # <a name="void-c-reference"></a>void (C# 參考)
 當 `void` 作為方法的傳回型別時，其可指定方法不要傳回值。

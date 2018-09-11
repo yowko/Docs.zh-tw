@@ -2,12 +2,12 @@
 title: 功能性轉換的適用性 (C#)
 ms.date: 07/20/2015
 ms.assetid: c78107bd-b006-4574-a3d4-bbf808388ff3
-ms.openlocfilehash: b913c8e43c5e7a9ede6cb693ff6d3c34f3631607
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: baa3866c8c2c148a3080522d7c02e28e9d0fd945
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319146"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227083"
 ---
 # <a name="applicability-of-functional-transformation-c"></a>功能性轉換的適用性 (C#)
 純功能性轉換適用於各種情況。  
@@ -32,7 +32,8 @@ ms.locfileid: "33319146"
   
  再次提醒，C# 支援命令性與功能性方法，因此，最適合您應用程式的設計可能會納入兩者的項目。  
   
-## <a name="see-also"></a>請參閱  
- [純功能性轉換簡介 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
- [XML 功能性轉換 (C#)](../../../../csharp/programming-guide/concepts/linq/functional-transformation-of-xml.md)  
- [重構為純虛擬函式 (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+## <a name="see-also"></a>請參閱
+
+- [純功能性轉換簡介 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
+- [XML 功能性轉換 (C#)](../../../../csharp/programming-guide/concepts/linq/functional-transformation-of-xml.md)  
+- [重構為純虛擬函式 (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

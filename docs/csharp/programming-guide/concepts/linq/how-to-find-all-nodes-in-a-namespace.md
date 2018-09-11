@@ -2,12 +2,12 @@
 title: 如何：在命名空間中尋找所有節點 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-ms.openlocfilehash: b22acdd7c2d64316e802c4dd01876a61141c8979
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0675795da7c190e6d105ac61027c28f161961099
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317774"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261547"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-c"></a>如何：在命名空間中尋找所有節點 (C#)
 您可以在每個項目或屬性的命名空間上篩選，尋找該特定命名空間中的所有節點。  
@@ -95,5 +95,6 @@ Console.WriteLine(newTree);
 </Root>  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [基本查詢 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>請參閱
+
+- [基本查詢 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

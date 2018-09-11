@@ -2,12 +2,12 @@
 title: 從 XML 樹狀結構移除項目、屬性和節點 (C#)
 ms.date: 07/20/2015
 ms.assetid: 07dd06d6-1117-4077-bf98-9120cf51176e
-ms.openlocfilehash: 85c1adc06321abf90fe478abf5375882069f11ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9ce63ce6a4ef75dedc788efca11e8dd2bdb471eb
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339965"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44217486"
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a>從 XML 樹狀結構移除項目、屬性和節點 (C#)
 您可以修改 XML 樹狀以移除項目、屬性以及其他類型的節點。  
@@ -78,5 +78,6 @@ Console.WriteLine(root);
   
  請注意，第一個後代子項目已從 `Child1` 移除。 所有後代子項目都已經從 `Child2` 和 `Child3` 移除。  
   
-## <a name="see-also"></a>請參閱  
- [修改 XML 樹狀結構 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+## <a name="see-also"></a>請參閱
+
+- [修改 XML 樹狀結構 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

@@ -2,12 +2,12 @@
 title: LINQ to XML 座標軸 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3f7d54ff-b608-43a1-9e2d-e70668b72df8
-ms.openlocfilehash: d12d35a6f9b02056946ba201a7bd5a961f64ba36
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 6a27adb1c7e1dcfefda13a355700202ccda3ffab
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43408651"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44200837"
 ---
 # <a name="linq-to-xml-axes-c"></a>LINQ to XML 座標軸 (C#)
 建立 XML 樹狀結構，或將 XML 文件載入到 XML 樹狀結構後，您可以進行查詢以尋找項目和屬性並擷取其值。  
@@ -29,6 +29,7 @@ ms.locfileid: "43408651"
 |[如何：擷取屬性的值 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-attribute-linq-to-xml.md)|示範如何取得屬性的值。|  
 |[如何：擷取項目的表層值 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-the-shallow-value-of-an-element.md)|示範如何擷取項目的表層值。|  
   
-## <a name="see-also"></a>請參閱  
- [擴充方法](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
- [程式設計手冊 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>請參閱
+
+- [擴充方法](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
+- [程式設計手冊 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

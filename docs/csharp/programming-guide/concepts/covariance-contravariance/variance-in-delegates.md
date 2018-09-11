@@ -2,12 +2,12 @@
 title: 委派中的差異 (C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: 8b74c29d8d94a31d30408131009d92e2b2a4281c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3dabac4e532198871cf05d639aa692751ab17ae1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326224"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208670"
 ---
 # <a name="variance-in-delegates-c"></a>委派中的差異 (C#)
 .NET framework 3.5 推出差異支援，在 C# 中比對方法簽章和所有委派的委派型別。 這表示您可以指派給委派的不只是具有相符簽章的方法，也可以是會傳回更多衍生型別 (共變數) 的方法，或接受衍生型別 (反變數) 比委派型別指定少的參數的方法。 這包括泛型和非泛型委派。  
@@ -196,7 +196,8 @@ public static void Test()
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [泛型](~/docs/standard/generics/index.md)  
- [針對 Func 與 Action 泛型委派使用變異數 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)  
- [如何：組合委派 (多點傳送委派)](../../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
+## <a name="see-also"></a>請參閱
+
+- [泛型](~/docs/standard/generics/index.md)  
+- [針對 Func 與 Action 泛型委派使用變異數 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)  
+- [如何：組合委派 (多點傳送委派)](../../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)

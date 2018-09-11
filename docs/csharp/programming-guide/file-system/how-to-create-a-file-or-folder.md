@@ -7,12 +7,12 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: d69885b420d28878072a70dfd2288905cf13de1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34919efe32730fe0db11cb881b8e07629a3094fd
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334830"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207456"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>如何：建立檔案或資料夾 (C# 程式設計手冊)
 您可以程式設計的方式在電腦上建立資料夾、建立子資料夾、在子資料夾中建立檔案，以及將資料寫入檔案。  
@@ -67,7 +67,8 @@ ms.locfileid: "33334830"
   
  若您沒有權限可建立資料夾，則範例會擲回 <xref:System.UnauthorizedAccessException> 類別的執行個體。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.IO?displayProperty=nameWithType>  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [檔案系統和登錄 (C# 程式設計指南)](../../../csharp/programming-guide/file-system/index.md)
+## <a name="see-also"></a>請參閱
+
+- <xref:System.IO?displayProperty=nameWithType>  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [檔案系統和登錄 (C# 程式設計指南)](../../../csharp/programming-guide/file-system/index.md)

@@ -2,12 +2,12 @@
 title: 如何：建立簽署的 Friend 組件 (C#)
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-ms.openlocfilehash: 34243a65f57f41c358439baac82a1ce169233259
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f310055db6899bf315310efc22b67bca2c4500f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340654"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260002"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>如何：建立簽署的 Friend 組件 (C#)
 此範例示範如何搭配具有強式名稱的組件使用 friend 組件。 這兩個組件都必須具有強式名稱。 雖然此範例中的兩個組件使用相同的金鑰，但您可以針對這兩個組件使用不同的金鑰。  
@@ -16,7 +16,7 @@ ms.locfileid: "33340654"
   
 1.  開啟命令提示字元。  
   
-2.  使用下列命令順序和強式名稱工具，產生金鑰檔並顯示其公開金鑰。 如需詳細資訊，請參閱 [Sn.exe (強式名稱工具)](https://msdn.microsoft.com/library/k5b5tt23)。  
+2.  使用下列命令順序和強式名稱工具，產生金鑰檔並顯示其公開金鑰。 如需詳細資訊，請參閱 [Sn.exe (強式名稱工具)](../../../../framework/tools/sn-exe-strong-name-tool.md)。  
   
     1.  為此範例產生強式名稱金鑰，然後將它儲存在 FriendAssemblies.snk 檔案中：  
   
@@ -88,12 +88,13 @@ ms.locfileid: "33340654"
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性和 <xref:System.Security.Permissions.StrongNameIdentityPermission> 類別之間有相似性。 主要差異是 <xref:System.Security.Permissions.StrongNameIdentityPermission> 可以要求安全性權限執行特定的程式碼區段，而 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性則是控制 `internal` 類型和成員的可見性。  
   
-## <a name="see-also"></a>請參閱  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- [組件和全域組件快取 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
- [Friend 組件 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- [如何：建立未簽署的 Friend 組件 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
- [/keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
- [Sn.exe (強式名稱工具)](https://msdn.microsoft.com/library/k5b5tt23)  
- [建立和使用強式名稱的組件](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
- [C# 程式設計指南](../../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>請參閱
+
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
+- [組件和全域組件快取 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+- [Friend 組件 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+- [如何：建立未簽署的 Friend 組件 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
+- [/keyfile](../../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)  
+- [Sn.exe (強式名稱工具)](../../../../framework/tools/sn-exe-strong-name-tool.md)  
+- [建立和使用強式名稱的組件](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
+- [C# 程式設計指南](../../../../csharp/programming-guide/index.md)
