@@ -12,11 +12,11 @@ ms.assetid: 964ba19e-8b94-4b5b-b1e3-5a0b531a0bb1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2127497d294cbfd4e1bb24d033f432378627ff13
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44273225"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44353170"
 ---
 # <a name="member-overloading"></a>成員多載
 成員多載是指的差別只在於參數類型或數目，但具有相同名稱的相同型別上建立兩個或多個成員。 例如，在下列程式碼，`WriteLine`多載方法：  

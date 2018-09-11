@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
 ms.openlocfilehash: edbc67ddf20eee6ebbe9091faa43bc1de91809d2
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44276730"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44360605"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>HOW TO：在 Managed Windows 服務中裝載 WCF 服務
 

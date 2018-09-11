@@ -13,11 +13,11 @@ helpviewer_keywords:
 - FileOpen function
 ms.assetid: 4c145456-5453-4bda-aab5-578dc8bee59a
 ms.openlocfilehash: 05d849afb50a3b1c4eeecc3db26170bacc3517df
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44336377"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44360910"
 ---
 # <a name="mycomputerfilesystem-object"></a>My.Computer.FileSystem 物件
 提供屬性和方法，以處理磁碟機、檔案和目錄。  

@@ -12,11 +12,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 75cc2003a88cc7be467b9062c37b6b5d9eb82f53
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44337872"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44365026"
 ---
 # <a name="ltprovideroptiongt-element"></a>&lt;providerOption&gt;項目
 指定的語言提供者的編譯器版本屬性。  

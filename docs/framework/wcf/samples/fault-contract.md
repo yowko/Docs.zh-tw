@@ -3,11 +3,11 @@ title: 錯誤合約
 ms.date: 03/30/2017
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
 ms.openlocfilehash: 5b3348f31d239d6bf7e64852ba02010115062669
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44270980"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44361298"
 ---
 # <a name="fault-contract"></a>錯誤合約
 錯誤合約範例會示範如何在服務與用戶端之間傳達錯誤資訊。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)，具有一些額外的程式碼新增至服務，以將內部例外狀況轉換為錯誤。 用戶端會嘗試執行除數為零，以便強制在服務上造成錯誤狀況。  

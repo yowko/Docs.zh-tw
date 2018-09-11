@@ -10,11 +10,11 @@ ms.assetid: 66a1b3d8-6f3f-4715-b235-e1ff95e32d8e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1ac7e28c3172f2ed68d402e1d04a1664644c7f25
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44207365"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44361926"
 ---
 # <a name="arrays"></a>陣列
 **✓ DO** 偏好使用透過公用應用程式開發介面中的陣列的集合。 [集合](../../../docs/standard/design-guidelines/guidelines-for-collections.md)節提供有關如何選擇集合和陣列的詳細資料。  

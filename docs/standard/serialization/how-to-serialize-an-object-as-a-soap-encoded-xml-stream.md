@@ -10,11 +10,11 @@ helpviewer_keywords:
 - serialization, SOAP
 ms.assetid: af406e0a-fa3a-46dd-a7ba-c80731eba3a0
 ms.openlocfilehash: cdfa2c8c7a27806873217495ac09f7f20e82b6bc
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44339197"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44367713"
 ---
 # <a name="how-to-serialize-an-object-as-a-soap-encoded-xml-stream"></a>HOW TO：將物件序列化為 SOAP 編碼的 XML 資料流
   

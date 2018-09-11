@@ -17,11 +17,11 @@ helpviewer_keywords:
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
 ms.openlocfilehash: 6b320d21c33fa798ca2fd3ef5a04363d141f99f2
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44272497"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44367887"
 ---
 # <a name="namespaces-in-visual-basic"></a>Visual Basic 中的命名空間
 命名空間可組織組件中定義的物件。 組件可包含多個命名空間，而命名空間也可包含其他命名空間。 在使用類別庫等大型物件群組時，命名空間可避免語意模糊並簡化參考。  

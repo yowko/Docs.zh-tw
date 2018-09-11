@@ -3,11 +3,11 @@ title: 工作流程探索範例
 ms.date: 03/30/2017
 ms.assetid: 82cc43f1-3c8f-4771-ac19-a75ac936e2c3
 ms.openlocfilehash: 1076e7045ca546fed7e6902f69406bfc002c4c26
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198019"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44367778"
 ---
 # <a name="workflow-discovery-sample"></a>工作流程探索範例
 此範例示範如何讓工作流程服務可以探索，以及如何撰寫可搜尋特定服務的自訂程式碼活動。  

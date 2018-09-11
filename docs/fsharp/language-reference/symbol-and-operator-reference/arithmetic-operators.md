@@ -3,11 +3,11 @@ title: 算術運算子 (F#)
 description: '深入了解可在 F # 程式設計語言中的算術運算子。'
 ms.date: 04/04/2018
 ms.openlocfilehash: 008aa84b8736bb3a734ce8bb9713d34c17f1b76e
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44271844"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44361955"
 ---
 # <a name="arithmetic-operators"></a>算術運算子
 

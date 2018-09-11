@@ -3,11 +3,11 @@ title: 集合 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
 ms.openlocfilehash: 60519de1f580bf1cfa4aa067d4a999b20ea8d54d
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44276065"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44353969"
 ---
 # <a name="collections-visual-basic"></a>集合 (Visual Basic)
 在許多應用程式中，您想要建立和管理相關物件的群組。 有兩種方式可以群組物件：建立物件的陣列和建立物件的集合。  

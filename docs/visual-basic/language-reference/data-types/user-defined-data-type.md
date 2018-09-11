@@ -24,11 +24,11 @@ helpviewer_keywords:
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
 ms.openlocfilehash: 1dac93145b6e11a0d149f03b43e1e0b28b770925
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
-ms.translationtype: HT
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 09/10/2018
-ms.locfileid: "44276889"
+ms.locfileid: "44342273"
 ---
 # <a name="user-defined-data-type"></a>使用者定義資料類型
 在您定義的格式保存資料。 `Structure`陳述式定義的格式。  

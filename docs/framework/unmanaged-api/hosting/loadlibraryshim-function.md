@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5fe1ba15f8a9f8ee79582158209049c1e502a61d
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44270825"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44352514"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim 函式
 載入的 DLL 隨附於.NET Framework 可轉散發套件中指定的版本。  

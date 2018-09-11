@@ -8,11 +8,11 @@ ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 59f8ceaf7981aebf3ae64e10d253004780f47e50
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44272874"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44365679"
 ---
 # <a name="net-framework-performance"></a>.NET Framework 效能
 如果您想建立高效能的應用程式，您應該以設計應用程式之其他任何功能的相同方式，來設計及規劃效能。 您可以使用 Microsoft 提供的工具來測量應用程式的效能，並在必要時改進記憶體使用量、程式碼輸送量和回應性。 本主題列出 Microsoft 提供的效能分析工具，並提供涵蓋應用程式開發之特定區域效能的其他主題連結。  

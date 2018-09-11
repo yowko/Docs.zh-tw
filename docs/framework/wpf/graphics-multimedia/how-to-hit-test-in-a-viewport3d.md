@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Viewport3D [WPF]
 ms.assetid: 42bfbd99-c7c6-43f1-940b-90448faa412e
 ms.openlocfilehash: 297fe17b8844f7542255afcfe442fbf9b7a0d59d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192700"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44352946"
 ---
 # <a name="how-to-hit-test-in-a-viewport3d"></a>如何：Viewport3D 中的點擊測試
 此範例示範如何進行點擊測試中的 3D 視覺效果<xref:System.Windows.Controls.Viewport3D>。  

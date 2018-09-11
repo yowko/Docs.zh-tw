@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f589225dde1ba2aabc4ca32542339a771c3287d4
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44269043"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44368571"
 ---
 # <a name="imetadatatablesgetguid-method"></a>IMetaDataTables::GetGuid 方法
 從指定索引處的資料列中取得的 GUID。  

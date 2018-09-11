@@ -10,11 +10,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 5c2f1ae77585576c8ad1c83b37e6ec530dd31598
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
-ms.translationtype: HT
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 09/10/2018
-ms.locfileid: "44271162"
+ms.locfileid: "44342745"
 ---
 # <a name="ui-automation-support-for-the-scrollbar-control-type"></a>ScrollBar 控制項類型的 UI 自動化支援
 > [!NOTE]

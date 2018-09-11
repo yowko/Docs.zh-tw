@@ -15,11 +15,11 @@ helpviewer_keywords:
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
 ms.openlocfilehash: e4d56c5b5deda0bd1df8827020e0b76cc6276c1c
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44273962"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44353771"
 ---
 # <a name="xtype-markup-extension"></a>x:Type 標記延伸
 提供 CLR<xref:System.Type>是指定的 XAML 類型的基礎類型的物件。  

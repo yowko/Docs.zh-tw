@@ -13,11 +13,11 @@ ms.assetid: d67c14d8-c4dd-443f-affb-4ccae677c9b6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c3a0a51fc6055190f9a0189de2e17d98f88036ea
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44249564"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44367362"
 ---
 # <a name="static-class-design"></a>靜態類別設計
 靜態類別會定義為只包含靜態成員的類別 (當然除了繼承自的執行個體成員<xref:System.Object?displayProperty=nameWithType>和可能的私用的建構函式)。 某些語言中提供靜態類別的內建的支援。 在 C# 2.0 和更新版本中，當類別宣告為靜態，它是密封的抽象，而且可以覆寫或宣告任何執行個體成員。  

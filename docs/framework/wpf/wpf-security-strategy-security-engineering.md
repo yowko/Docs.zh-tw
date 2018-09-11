@@ -11,11 +11,11 @@ helpviewer_keywords:
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
 ms.openlocfilehash: fd29696d88eba5c1363464334b63cb2ab0df4a0e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44210154"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44342631"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>WPF 安全性策略 – 安全性工程
 高可信度電腦運算是一項 Microsoft 開發案，用於確保生產安全的程式碼。 高可信度電腦運算開發案的一個重要項目是 [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]。 [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] 是可用來搭配標準工程程序協助安全的程式碼傳遞之工程實務。 [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] 包含 10 個階段，結合正規化、可衡量性與其他結構到最佳做法，包括：  

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 938998a2316af28071e54e909fa60b5edbda0f35
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 147de1cdde79ee29f8f316399ba2e41f93921073
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198929"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44361598"
 ---
 # <a name="working-with-certificates"></a>使用憑證
 在針對 Windows Communication Foundation (WCF) 安全性設計程式時，通常會採用 X.509 數位憑證來驗證用戶端與伺服器、加密，以及數位簽署訊息。 本主題將簡要說明 X.509 數位憑證功能及如何在 WCF 中使用這些憑證，同時針對這些概念的進一步說明以及如何運用 WCF 與憑證來完成一般工作的主題說明提供連結。  
@@ -55,7 +55,7 @@ ms.locfileid: "44198929"
  存放區會受到存取控制清單 (ACL) 的保護，就像電腦上的資料夾一樣。 當您建立由網際網路資訊服務 (IIS) 所裝載的服務時，[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 處理序會透過 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 帳戶來執行。 該帳戶必須能夠存取包含服務所使用之憑證的存放區。 每一個主要存放區都會以預設的存取清單加以保護，但是您可以修改此清單。 如果您建立個別的角色來存取存放區，則必須授予該角色存取權限。 若要了解如何使用 WinHttpCertConfig.exe 工具來修改存取清單，請參閱[如何：建立開發時要使用的暫時憑證](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)。 如需將用戶端憑證搭配 IIS 一起使用的詳細資訊，請參閱[如何在 ASP.NET Web 應用程式中使用用戶端憑證呼叫 Web 服務進行驗證](https://go.microsoft.com/fwlink/?LinkId=88914)。  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>鏈結信任與憑證授權單位  
- 憑證是在階層中建立的，其中每個個別憑證都會連結到核發憑證的 CA。 此連結連至 CA 的憑證。 接著，CA 的憑證會連結至核發 CA 原始憑證的 CA。 在找到根 CA 的憑證之前，會一直重複這個程序。 根 CA 的憑證在本質上會受到信任。  
+ 憑證是在階層中建立的，其中每個個別憑證都會連結到核發憑證的 CA。 此連結連至 CA 的憑證。 CA 的憑證然後發出原始 CA 的憑證的 CA 的連結。 在找到根 CA 的憑證之前，會一直重複這個程序。 根 CA 的憑證在本質上會受到信任。  
   
  數位簽章會藉由依賴此階層 (也稱為「信任鏈結」來驗證實體。 您可以使用 MMC 嵌入式管理單元來檢視任何憑證的鏈結，只要按兩下任何憑證，然後按一下 [憑證路徑] 索引標籤即可。如需匯入憑證授權單位憑證鏈結的詳細資訊，請參閱[如何：指定用來驗證簽章的憑證授權單位憑證鏈結](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md)。  
   

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - My namespace [Visual Basic], extending
 ms.assetid: fd89c54b-0290-4c50-95a3-ff17d4487a21
 ms.openlocfilehash: 4212f58c39f63be6ba20c3b79e5d9c98d0615c5e
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
-ms.translationtype: HT
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 09/10/2018
-ms.locfileid: "44271123"
+ms.locfileid: "44342666"
 ---
 # <a name="package-and-deploy-custom-my-extensions-visual-basic"></a>封裝及部署自訂的 My 延伸模組 (Visual Basic)
 

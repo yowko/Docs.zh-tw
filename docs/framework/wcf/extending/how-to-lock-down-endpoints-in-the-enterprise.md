@@ -3,11 +3,11 @@ title: HOW TO：鎖定企業的端點
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
 ms.openlocfilehash: 032b69c1fae38576b0374b329f1ab6fe90e2b1a0
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44275258"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44353799"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>HOW TO：鎖定企業的端點
 大型企業通常需要在遵循企業安全性原則的環境中開發應用程式。 下列主題討論如何開發與安裝用戶端端點驗證器，可用來驗證所有安裝在電腦上的 Windows Communication Foundation (WCF) 用戶端應用程式。  

@@ -3,11 +3,11 @@ title: 型別提供者疑難排解
 description: '探索可能的解決方案，您最有可能在 F # 中使用型別提供者時，會遇到的問題。'
 ms.date: 05/16/2016
 ms.openlocfilehash: f3b8ffdaf615563305b7b84b45a9ed1e066d0dcc
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44261443"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44365828"
 ---
 # <a name="troubleshooting-type-providers"></a>型別提供者疑難排解
 
