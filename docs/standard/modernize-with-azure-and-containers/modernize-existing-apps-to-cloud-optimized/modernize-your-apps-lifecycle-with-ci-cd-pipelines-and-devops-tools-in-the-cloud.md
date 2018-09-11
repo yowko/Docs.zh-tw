@@ -1,41 +1,41 @@
 ---
-title: 現代化雲端中的 DevOps 工具 CI/CD 管線與您的應用程式生命週期
-description: 現代化現有的.NET 應用程式與 Azure 雲端和 Windows 容器 |現代化雲端中的 DevOps 工具 CI/CD 管線與您的應用程式生命週期
+title: 現代化您的應用程式生命週期 CI/CD 管線與雲端中的 DevOps 工具
+description: 將現有的.NET 應用程式使用 Azure 雲端和 Windows 容器現代化 |現代化您的應用程式生命週期 CI/CD 管線與雲端中的 DevOps 工具
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 63907a1911b4c95f0dbecb2af33964225cf3e7b1
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: c4d3eaa50f6c7645c954ca65bf42c6c1eab3a68d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33957898"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44366839"
 ---
-# <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a><span data-ttu-id="911ed-103">現代化雲端中的 DevOps 工具 CI/CD 管線與您的應用程式生命週期</span><span class="sxs-lookup"><span data-stu-id="911ed-103">Modernize your app's lifecycle with CI/CD pipelines and DevOps tools in the cloud</span></span>
+# <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a><span data-ttu-id="cb968-103">現代化您的應用程式生命週期 CI/CD 管線與雲端中的 DevOps 工具</span><span class="sxs-lookup"><span data-stu-id="cb968-103">Modernize your app's lifecycle with CI/CD pipelines and DevOps tools in the cloud</span></span>
 
-<span data-ttu-id="911ed-104">現今的企業需要 marketplace 處於競爭腳步創新。</span><span class="sxs-lookup"><span data-stu-id="911ed-104">Today’s businesses need to innovate at a rapid pace to be competitive in the marketplace.</span></span> <span data-ttu-id="911ed-105">現代應用程式提供高品質，需要 DevOps 工具和實作的創新此常數週期不可或缺的程序。</span><span class="sxs-lookup"><span data-stu-id="911ed-105">Delivering high-quality, modern applications requires DevOps tools and processes that are critical to implement this constant cycle of innovation.</span></span> <span data-ttu-id="911ed-106">使用適當的 DevOps 工具，開發人員可以簡化連續部署，並更快取得的使用者在未授權者手的創新應用程式。</span><span class="sxs-lookup"><span data-stu-id="911ed-106">With the right DevOps tools, developers can streamline continuous deployment and get innovative applications into the hands of users more quickly.</span></span>
+<span data-ttu-id="cb968-104">現今的企業需要速度很快即可具競爭力的市場中發揮創意。</span><span class="sxs-lookup"><span data-stu-id="cb968-104">Today’s businesses need to innovate at a rapid pace to be competitive in the marketplace.</span></span> <span data-ttu-id="cb968-105">交付高品質、 現代化應用程式需要 DevOps 工具和程序會實作這個持續的循環的創新的關鍵。</span><span class="sxs-lookup"><span data-stu-id="cb968-105">Delivering high-quality, modern applications requires DevOps tools and processes that are critical to implement this constant cycle of innovation.</span></span> <span data-ttu-id="cb968-106">使用適當的 DevOps 工具，開發人員可以簡化持續部署，並更快速創新的應用程式傳遞給的使用者。</span><span class="sxs-lookup"><span data-stu-id="cb968-106">With the right DevOps tools, developers can streamline continuous deployment and get innovative applications into the hands of users more quickly.</span></span>
 
-<span data-ttu-id="911ed-107">雖然全都堅實的連續整合及部署的作法，容器的簡介會引進新的考量，特別是當您正在使用多個容器應用程式。</span><span class="sxs-lookup"><span data-stu-id="911ed-107">Although continuous integration and deployment practices are well established, the introduction of containers introduces new considerations, particularly when you are working with multi-container applications.</span></span>
+<span data-ttu-id="cb968-107">雖然持續整合和部署作法全都堅實的建立，容器的簡介會介紹新的考量，特別是當您正在使用多容器應用程式。</span><span class="sxs-lookup"><span data-stu-id="cb968-107">Although continuous integration and deployment practices are well established, the introduction of containers introduces new considerations, particularly when you are working with multi-container applications.</span></span>
 
-<span data-ttu-id="911ed-108">Visual Studio Team Services 支援連續整合及多容器應用程式部署到各種不同的環境，完成的官方 Team Services 部署工作：</span><span class="sxs-lookup"><span data-stu-id="911ed-108">Visual Studio Team Services supports continuous integration and deployment of multi-container applications to a variety of environments through the official Team Services deployment tasks:</span></span>
+<span data-ttu-id="cb968-108">Azure 的 DevOps 服務支援持續整合和多容器應用程式部署到各種不同的環境，透過的官方 Azure DevOps 服務部署工作：</span><span class="sxs-lookup"><span data-stu-id="cb968-108">Azure DevOps Services supports continuous integration and deployment of multi-container applications to a variety of environments through the official Azure DevOps Services deployment tasks:</span></span>
 
--   <span data-ttu-id="911ed-109">[將部署至獨立 Docker 主機 VM](https://docs.microsoft.com/vsts/build-release/apps/cd/deploy-docker-windowsvm) （Linux 或 Windows Server 2016 或更新版本）</span><span class="sxs-lookup"><span data-stu-id="911ed-109">[Deploy to standalone Docker Host VM](https://docs.microsoft.com/vsts/build-release/apps/cd/deploy-docker-windowsvm) (Linux or Windows Server 2016 or later)</span></span>
+-   <span data-ttu-id="cb968-109">[部署為獨立部署 Docker 主機 VM](https://docs.microsoft.com/azure/devops/build-release/apps/cd/deploy-docker-windowsvm) （Linux 或 Windows Server 2016 或更新版本）</span><span class="sxs-lookup"><span data-stu-id="cb968-109">[Deploy to standalone Docker Host VM](https://docs.microsoft.com/azure/devops/build-release/apps/cd/deploy-docker-windowsvm) (Linux or Windows Server 2016 or later)</span></span>
 
--   [<span data-ttu-id="911ed-110">部署 Service fabric</span><span class="sxs-lookup"><span data-stu-id="911ed-110">Deploy to Service Fabric</span></span>](https://docs.microsoft.com/azure/service-fabric/service-fabric-tutorial-deploy-app-with-cicd-vsts)
+-   [<span data-ttu-id="cb968-110">部署到 Service Fabric</span><span class="sxs-lookup"><span data-stu-id="cb968-110">Deploy to Service Fabric</span></span>](https://docs.microsoft.com/azure/service-fabric/service-fabric-tutorial-deploy-app-with-cicd-vsts)
 
--   [<span data-ttu-id="911ed-111">部署至 Azure 的容器服務 – Kubernetes</span><span class="sxs-lookup"><span data-stu-id="911ed-111">Deploy to Azure Container Service – Kubernetes</span></span>](https://docs.microsoft.com/vsts/build-release/apps/cd/azure/deploy-container-kubernetes)
+-   [<span data-ttu-id="cb968-111">部署至 Azure Container Service-Kubernetes</span><span class="sxs-lookup"><span data-stu-id="cb968-111">Deploy to Azure Container Service – Kubernetes</span></span>](https://docs.microsoft.com/azure/devops/build-release/apps/cd/azure/deploy-container-kubernetes)
 
-<span data-ttu-id="911ed-112">但您也可以部署到[Docker Swarm](https://blogs.msdn.microsoft.com/jcorioland/2016/11/29/full-ci-cd-pipeline-to-deploy-multi-containers-application-on-azure-container-service-docker-swarm-using-visual-studio-team-services/)或 DC/OS 使用 Team Services 指令碼為基礎的工作。</span><span class="sxs-lookup"><span data-stu-id="911ed-112">But you also can deploy to [Docker Swarm](https://blogs.msdn.microsoft.com/jcorioland/2016/11/29/full-ci-cd-pipeline-to-deploy-multi-containers-application-on-azure-container-service-docker-swarm-using-visual-studio-team-services/) or DC/OS by using Team Services script-based tasks.</span></span>
+<span data-ttu-id="cb968-112">但是您也可以部署到[Docker Swarm](https://blogs.msdn.microsoft.com/jcorioland/2016/11/29/full-ci-cd-pipeline-to-deploy-multi-containers-application-on-azure-container-service-docker-swarm-using-visual-studio-team-services/)或 DC/OS 使用 Azure DevOps 服務指令碼為基礎的工作。</span><span class="sxs-lookup"><span data-stu-id="cb968-112">But you also can deploy to [Docker Swarm](https://blogs.msdn.microsoft.com/jcorioland/2016/11/29/full-ci-cd-pipeline-to-deploy-multi-containers-application-on-azure-container-service-docker-swarm-using-visual-studio-team-services/) or DC/OS by using Azure DevOps Services script-based tasks.</span></span>
 
-<span data-ttu-id="911ed-113">若要繼續促進部署靈活度，這些工具會提供絕佳的開發人員若要為測試-至生產部署發生時針對容器的工作負載，透過選擇的開發和 CI/CD 解決方案。</span><span class="sxs-lookup"><span data-stu-id="911ed-113">To continue facilitating deployment agility, these tools provide excellent dev-to-test-to-production deployment experiences for container workloads, with a choice of development and CI/CD solutions.</span></span>
+<span data-ttu-id="cb968-113">若要繼續加速部署靈活度，這些工具會提供絕佳的開發到測試-至-生產部署容器工作負載，使用您選擇的開發和 CI/CD 解決方案體驗。</span><span class="sxs-lookup"><span data-stu-id="cb968-113">To continue facilitating deployment agility, these tools provide excellent dev-to-test-to-production deployment experiences for container workloads, with a choice of development and CI/CD solutions.</span></span>
 
-<span data-ttu-id="911ed-114">圖 4-12 顯示部署至 Kubernetes 叢集 Azure 容器服務中的連續部署管線。</span><span class="sxs-lookup"><span data-stu-id="911ed-114">Figure 4-12 shows a continuous deployment pipeline that deploys to a Kubernetes cluster in Azure Container Service.</span></span>
+<span data-ttu-id="cb968-114">圖 4 到 12 個顯示持續部署管線，以部署至 Azure Container Service 中 Kubernetes 叢集。</span><span class="sxs-lookup"><span data-stu-id="cb968-114">Figure 4-12 shows a continuous deployment pipeline that deploys to a Kubernetes cluster in Azure Container Service.</span></span>
 
-![Visual Studio Team Services 連續部署管線，將部署至 Kubernetes 叢集](./media/image12.png)
+![Azure 的 DevOps 服務持續部署管線，將部署到 Kubernetes 叢集](./media/image12.png)
 
-> <span data-ttu-id="911ed-116">**圖 4-12。**</span><span class="sxs-lookup"><span data-stu-id="911ed-116">**Figure 4-12.**</span></span> <span data-ttu-id="911ed-117">Visual Studio Team Services 連續部署管線，將部署至 Kubernetes 叢集</span><span class="sxs-lookup"><span data-stu-id="911ed-117">Visual Studio Team Services continuous deployment pipeline, deploying to a Kubernetes cluster</span></span>
+> <span data-ttu-id="cb968-116">**圖 4 到 12 個。**</span><span class="sxs-lookup"><span data-stu-id="cb968-116">**Figure 4-12.**</span></span> <span data-ttu-id="cb968-117">Azure 的 DevOps 服務持續部署管線，將部署到 Kubernetes 叢集</span><span class="sxs-lookup"><span data-stu-id="cb968-117">Azure DevOps Services continuous deployment pipeline, deploying to a Kubernetes cluster</span></span>
 
 >[!div class="step-by-step"]
-<span data-ttu-id="911ed-118">[上一頁](modernize-your-apps-with-monitoring-and-telemetry.md)
-[下一頁](migrate-to-hybrid-cloud-scenarios.md)</span><span class="sxs-lookup"><span data-stu-id="911ed-118">[Previous](modernize-your-apps-with-monitoring-and-telemetry.md)
+<span data-ttu-id="cb968-118">[上一頁](modernize-your-apps-with-monitoring-and-telemetry.md)
+[下一頁](migrate-to-hybrid-cloud-scenarios.md)</span><span class="sxs-lookup"><span data-stu-id="cb968-118">[Previous](modernize-your-apps-with-monitoring-and-telemetry.md)
 [Next](migrate-to-hybrid-cloud-scenarios.md)</span></span>
