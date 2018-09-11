@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18426e655f6702844daa822921888194ed7ecb64
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 1fe0ead93d1ff2b7867a52d80cf812e2850ea7b3
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42753832"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44186535"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>如何：確認字串是否為有效的電子郵件格式
 下列範例會使用規則運算式來確認字串是否為有效的電子郵件格式。  
@@ -103,5 +103,6 @@ vbc /t:library RegexUtilities.vb
     vbc Example.vb /r:RegexUtilities.dll  
     ```  
   
-## <a name="see-also"></a>請參閱  
- [.NET Framework 規則運算式](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>另請參閱
+
+- [.NET Framework 規則運算式](../../../docs/standard/base-types/regular-expressions.md)

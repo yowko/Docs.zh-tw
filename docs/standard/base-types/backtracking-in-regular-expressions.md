@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e05da1c2ed68f482cbb1280c5c40583ab54d71bb
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 043b4ab00699062d8c1af5866fbeb3773c8ce9af
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071860"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44039497"
 ---
 # <a name="backtracking-in-regular-expressions"></a>規則運算式中的回溯
 <a name="top"></a> 回溯 (Backtracking) 會在規則運算式模式包含選擇性的 [數量詞](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) 或 [交替建構](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)，且規則運算式引擎返回之前儲存的狀態繼續搜尋相符項目時發生。 回溯是規則運算式的核心能力，可讓運算式功能強大且靈活，並且比對非常複雜的模式。 但同時，這項強大功能需付出相當的代價。 回溯經常是影響規則運算式引擎之效能最重要的一項因素。 幸好開發人員能夠掌控規則運算式引擎的行為，以及其使用回溯的方式。 本主題將說明回溯運作的方式，以及如何進行控制。  
@@ -215,9 +215,10 @@ ms.locfileid: "37071860"
   
  [回到頁首](#top)  
   
-## <a name="see-also"></a>請參閱  
- [.NET 規則運算式](../../../docs/standard/base-types/regular-expressions.md)  
- [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- [數量詞](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  
- [交替建構](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)  
- [群組建構](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
+## <a name="see-also"></a>另請參閱
+
+- [.NET 規則運算式](../../../docs/standard/base-types/regular-expressions.md)  
+- [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [數量詞](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  
+- [交替建構](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)  
+- [群組建構](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)

@@ -2,17 +2,16 @@
 title: 條件約束 (F#)
 description: '深入了解 F # 的條件約束套用至泛型型別參數的泛型型別或函式中指定型別引數的需求。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 0e79cf5b1a25ada49bf30416f85c1d59f8f2fd23
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.openlocfilehash: 9534db4ffd195022366af8c993658bd94f375f53
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525601"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43867825"
 ---
 # <a name="constraints"></a>條件約束
 
 本主題描述條件約束，您可以套用至泛型型別參數的泛型型別或函式中指定型別引數的需求。
-
 
 ## <a name="syntax"></a>語法
 
@@ -21,13 +20,14 @@ type-parameter-list when constraint1 [ and constraint2]
 ```
 
 ## <a name="remarks"></a>備註
+
 有數個不同的條件約束，您可以套用至限制可用於泛型類型的類型。 下表列出並描述這些條件約束。
 
 |條件約束|語法|描述|
 |----------|------|-----------|
 |類型條件約束|*型別參數*:&gt; *類型*|提供的型別必須等於或衍生自指定型別，或者，如果類型是介面，提供的型別必須實作介面。|
 |Null 條件約束|*型別參數*: null|提供的型別必須支援 null 常值。 這包括所有.NET 物件類型但不是 F # 清單、 tuple、 函式、 類別、 記錄或等位型別。|
-|明確成員的條件約束|[（)]*型別參數*[或...或*型別參數*)]: (*成員簽章*)|至少其中一個提供的型別引數必須具有指定的簽章; 的成員不適用於一般用途。 成員必須是明確定義型別或隱含型別延伸模組的一部分，是明確的成員限制式的有效目標。|
+|明確成員的條件約束|[（]*型別參數*[或...或*型別參數*)]: (*成員簽章*)|至少其中一個提供的型別引數必須具有指定的簽章; 的成員不適用於一般用途。 成員必須是明確定義型別或隱含型別延伸模組的一部分，是明確的成員限制式的有效目標。|
 |建構函式條件約束|*型別參數*: (新： 單位-&gt; ')|提供的型別必須具有預設建構函式。|
 |實值類型條件約束|： 結構|提供的型別必須是.NET 實值型別。|
 |參考類型條件約束|： 不結構|提供的型別必須是.NET 參考型別。|
@@ -115,6 +115,6 @@ class end
 ```
 
 ## <a name="see-also"></a>另請參閱
-[泛型](index.md)
 
-[條件約束](constraints.md)
+- [泛型](index.md)
+- [條件約束](constraints.md)
