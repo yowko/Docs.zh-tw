@@ -10,11 +10,11 @@ ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f7f7a779cc10b32d66a184107359b502cf094979
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44222119"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44277662"
 ---
 # <a name="code-contracts"></a>程式碼合約
 程式碼合約可讓您指定程式碼中的前置條件、後置條件和物件非變異值。 前置條件是輸入方法或屬性時，必須符合的需求。 後置條件描述在方法或屬性程式碼結束時的期望。 物件非變異值描述針對處於良好狀態的類別，所預期的狀態。  

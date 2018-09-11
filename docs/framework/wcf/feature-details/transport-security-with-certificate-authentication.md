@@ -7,11 +7,11 @@ ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 2da7a304af613920449e925e3bb43b350f556e6a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44186314"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44338697"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>憑證驗證的傳輸安全性
 本主題討論使用傳輸安全性時，如何使用 X.509 憑證進行伺服器和用戶端驗證。 如需 X.509 憑證的詳細資訊，請參閱 [X.509 公用金鑰憑證](https://msdn.microsoft.com/library/bb540819\(VS.85\).aspx)。 憑證必須由憑證授權單位，通常是憑證的協力廠商簽發者發行。 在 Windows Server 網域中，可以使用 Active Directory 憑證服務對網域中的用戶端電腦發行憑證。 如需詳細資訊，請參閱[Windows 2008 R2 憑證服務](https://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409)。 在此案例中，服務是在使用安全通訊端層 (SSL) 設定的 Internet Information Services (IIS) 之下裝載。 此服務使用 SSL (X.509) 憑證設定，以允許使用者驗證伺服器的身分識別。 用戶端也使用 X.509 憑證設定，以允許服務驗證用戶端的身分識別。 伺服器的憑證必須受到用戶端的信任，而用戶端的憑證則必須受到伺服器的信任。 服務和用戶端如何驗證彼此的身分識別的實際機制，不在本主題的範圍之內。 如需詳細資訊，請參閱[維基百科上的數位簽章](https://go.microsoft.com/fwlink/?LinkId=253157)。  

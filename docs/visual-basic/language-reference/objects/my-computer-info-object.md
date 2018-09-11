@@ -5,11 +5,11 @@ helpviewer_keywords:
 - My.Computer.Info object
 ms.assetid: 2eb2aa5f-303d-426c-918d-989c8b7b08d0
 ms.openlocfilehash: 9eabd2538d43c5a0104032c501da8cbf81b5c74d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44204717"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264424"
 ---
 # <a name="mycomputerinfo-object"></a>My.Computer.Info 物件
 提供屬性，以取得電腦的記憶體、已載入組件、名稱和作業系統的相關資訊。  

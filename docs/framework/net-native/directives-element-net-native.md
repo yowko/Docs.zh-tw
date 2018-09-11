@@ -5,11 +5,11 @@ ms.assetid: 444846f3-48d5-4341-a43e-69f7221389eb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8921d2841f9a7b4228ae3b8735d7047453f71bcb
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44178492"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44267137"
 ---
 # <a name="ltdirectivesgt-element-net-native"></a>&lt;Directives&gt; 項目 (.NET Native)
 針對.NET 原生的每個執行階段指示詞檔案中的根項目。  

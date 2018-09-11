@@ -9,11 +9,11 @@ ms.assetid: f7bd1361-4ab2-4132-972d-a044b8f197e1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d41ba0c1e972eeee07b36ad0d15532f7b551ec2a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44228048"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261997"
 ---
 # <a name="common-design-patterns"></a>通用設計模式
 有許多相關書籍軟體模式、 模式語言和反向模式可解決的模式非常廣泛的主旨。 因此，這一章所提供的指導方針和一組非常有限的.NET Framework Api 的設計中經常使用的模式與相關的討論。  

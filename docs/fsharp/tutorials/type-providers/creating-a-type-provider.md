@@ -3,11 +3,11 @@ title: '教學課程： 建立型別提供者 （F #）'
 description: '了解如何在 F # 3.0 中建立您自己 F # 型別提供者，藉由檢查幾個簡單的型別提供者，來說明基本概念。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 3c998377b2c3a408d536ef416f3799bf7f04b6bd
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44212317"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44275505"
 ---
 # <a name="tutorial-create-a-type-provider"></a>教學課程： 建立型別提供者
 

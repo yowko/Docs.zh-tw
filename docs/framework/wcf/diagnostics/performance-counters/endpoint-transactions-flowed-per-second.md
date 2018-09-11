@@ -3,11 +3,11 @@ title: 端點：每秒流動的異動數
 ms.date: 03/30/2017
 ms.assetid: 0f370ff1-a913-450b-bccb-c279ad165b3d
 ms.openlocfilehash: 79f50b6706facd040ec2d325c676f210d5327bf8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227138"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264353"
 ---
 # <a name="endpoint-transactions-flowed-per-second"></a>端點：每秒流動的異動數
 計數器名稱：每秒流動的異動數。  

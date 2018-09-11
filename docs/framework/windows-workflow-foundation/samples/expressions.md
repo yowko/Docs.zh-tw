@@ -3,11 +3,11 @@ title: Expressions2
 ms.date: 03/30/2017
 ms.assetid: 43a85905-77b5-4893-bb38-1cb9b293d69d
 ms.openlocfilehash: e852b62e6d0b6b4b3ddc19b197902de5325310a1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44214416"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44275089"
 ---
 # <a name="expressions"></a>運算式
 這個範例示範如何在工作流程中使用基本運算式。 其中包含的工作流程會計算某虛構公司兩個員工的基本薪資統計資料。 兩個類別 `Employee` 和 `SalaryStats` 定義於 Employee.cs 和 SalaryStats.cs。 工作流程中使用這些類別，示範如何對複雜類型的變數屬性執行簡單算術和字串運算。  

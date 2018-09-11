@@ -11,11 +11,11 @@ ms.assetid: 0ce93180-1d7b-4f8c-9306-f828b2d66b8f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d1598ac63af38f1ca3e11104bc8e1cd6323d35ed
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44190172"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259963"
 ---
 # <a name="member-design-guidelines"></a>成員設計方針
 方法、 屬性、 事件、 建構函式和欄位會統稱為成員。 成員是最後 framework 功能向終端使用者的一種架構的方法。  

@@ -3,11 +3,11 @@ title: 連接共用
 ms.date: 03/30/2017
 ms.assetid: 955c057f-aea8-4ba8-aa6d-e3dfa18ba8d5
 ms.openlocfilehash: 28a1036f377326b5f1fdfafa1eaffd8a47bc05bc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44209364"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266598"
 ---
 # <a name="connection-pooling"></a>連接共用
 連接至資料來源可能會很耗時。 為了減少開啟連接的成本，ADO.NET 會使用名為的最佳化技術*連接共用*，以便有效減少重複開啟和關閉連接的成本。 連接共用的處理方式不同於 .NET Framework 資料提供者。  

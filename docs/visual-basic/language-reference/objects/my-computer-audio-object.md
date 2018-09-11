@@ -6,11 +6,11 @@ helpviewer_keywords:
 - My.Computer.Audio object
 ms.assetid: ab5bdd04-b0ce-48b2-91c5-6404ceca31d0
 ms.openlocfilehash: 805e2a87e586e96048dd40033e7d80a74dcc94e9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208331"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44270600"
 ---
 # <a name="mycomputeraudio-object"></a>My.Computer.Audio 物件
 提供用於播放音效的方法。  
