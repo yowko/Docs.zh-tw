@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c3273f89d61314db2ae36c572f2ca520f28e63e3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43552870"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43878341"
 ---
 # <a name="imetadatatablesgetnextguid-method"></a>IMetaDataTables::GetNextGuid 方法
 取得目前的資料表資料行中的下一個 GUID 值的索引。  
@@ -41,7 +41,7 @@ HRESULT GetNextGuid (
  [in]GUID 的資料表資料行的索引值。  
   
  `pNext`  
- [out]下一步] 的 GUID 值的索引指標。  
+ [out]下一步 的 GUID 值的索引指標。  
   
 ## <a name="remarks"></a>備註  
  我們不建議使用這個方法，因為它不會傳回一致的結果。 如需詳細資訊 GUID 表格，Common Language Infrastructure (CLI) 文件，尤其是"Partition II:: 中繼資料定義和語意 >。 您可以線上取得這份文件；請參閱 MSDN 上的 [ECMA C# 和通用語言基礎結構標準](https://go.microsoft.com/fwlink/?LinkID=99212)，以及 Ecma International 網站上的[標準 ECMA-335 - 通用語言基礎結構 (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552)。  

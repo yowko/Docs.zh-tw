@@ -6,11 +6,11 @@ helpviewer_keywords:
 - properties [WPF], getting binding objects from
 ms.assetid: 87974c5f-136b-4de7-b07d-9285b62ab123
 ms.openlocfilehash: 7cebaf1077fb66420d77d656db32f444dd932b85
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43557006"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43874068"
 ---
 # <a name="how-to-get-the-binding-object-from-a-bound-target-property"></a>操作說明：從繫結的目標屬性取得繫結物件
 這個範例顯示如何從資料繫結目標屬性取得繫結物件。  
