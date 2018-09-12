@@ -2,12 +2,12 @@
 title: 'Byref （F #）'
 description: '深入了解 byref 和 F # 中的類似 byref 類型用於低層級的程式設計。'
 ms.date: 09/02/2018
-ms.openlocfilehash: 7d4138649ee39a0d342db2828ad4d32fbded978c
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.openlocfilehash: 6131104e4325f77da84368c337f998c6b2b5309b
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44338658"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44699642"
 ---
 # <a name="byrefs"></a>Byref
 
@@ -105,7 +105,7 @@ let f (x: inref<SomeStruct>) = s.SomeField
 
 目的`outref<'T>`是指出只應該從讀取指標。 意外`outref<'T>`讀取基礎的允許值，儘管其名稱。 這是基於相容性。 語意上來說，`outref<'T>`沒什麼兩樣`byref<'T>`。
 
-### <a name="interop-with-c"></a>使用 c# 的 interop #
+### <a name="interop-with-c"></a>使用 C# 的 interop #
 
 C# 支援`in ref`並`out ref`關鍵字，除了`ref`傳回。 下表顯示如何 F # 解譯什麼 C# 會發出：
 
@@ -196,7 +196,7 @@ printfn "%d" sum // 'sum' is of type 'int'
 您可以也可以直接指派給傳回`byref`。 請考慮下列 （高命令式） 的程式：
 
 ```fsharp
-ype C() =
+type C() =
     let mutable nums = [| 1; 3; 7; 15; 31; 63; 127; 255; 511; 1023 |]
 
     override __.ToString() = String.Join(' ', nums)

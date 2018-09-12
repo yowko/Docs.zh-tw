@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
-ms.openlocfilehash: e844a673f1a60d5a151a6ae612d4af7a6712eef4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c22599f50ac071245a1381d267f3f7cb66806174
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508340"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44700045"
 ---
 # <a name="collection-initializers-visual-basic"></a>集合初始設定式 (Visual Basic)
 「集合初始設定式」提供簡短的語法，以讓您建立集合，並填入一組初始值。 當您透過一組已知值來建立集合時，集合初始設定式十分有用，例如，一份功能表選項或類別清單、一組初始數值、一份日期或月份名稱這類靜態字串清單，或用於驗證的這類省市清單的地理位置。  
   
- 如需集合的詳細資訊，請參閱[集合](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)。  
+ 如需集合的詳細資訊，請參閱[集合](../../../../visual-basic/programming-guide/concepts/collections.md)。  
   
  您可以使用後面接著大括弧 (`{}`) 的 `From` 關鍵字，來識別集合初始設定式。 這類似[陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)中所述的陣列常值語法。 下列範例顯示使用集合初始設定式建立集合的各種方式。  
   
@@ -76,14 +76,15 @@ ms.locfileid: "43508340"
 |[如何：建立集合初始設定式所使用的 Add 擴充方法](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|示範如何建立稱為 `Add` 的擴充方法，以用來將集合初始設定式中的值填入集合。|  
 |[如何：建立集合初始設定式所使用的集合](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|示範如何將 `Add` 方法包括在可實作 `IEnumerable` 的集合類別中，以啟用集合初始設定式。|  
   
-## <a name="see-also"></a>另請參閱  
- [集合](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
- [陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [物件初始設定式：具名和匿名類型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
- [New 運算子](../../../../visual-basic/language-reference/operators/new-operator.md)  
- [自動實作的屬性](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
- [如何：在 Visual Basic 中初始化陣列變數](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)  
- [區域類型推斷](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [匿名類型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
- [Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [如何：建立項目清單](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)
+## <a name="see-also"></a>另請參閱
+
+- [集合](../../../../visual-basic/programming-guide/concepts/collections.md)  
+- [陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+- [物件初始設定式：具名和匿名類型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
+- [New 運算子](../../../../visual-basic/language-reference/operators/new-operator.md)  
+- [自動實作的屬性](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
+- [如何：在 Visual Basic 中初始化陣列變數](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)  
+- [區域類型推斷](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+- [匿名類型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
+- [Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+- [如何：建立項目清單](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)

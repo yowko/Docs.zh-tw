@@ -3,11 +3,11 @@ title: 在 ASP.NET 中使用 System.Transactions
 ms.date: 03/30/2017
 ms.assetid: 1982c300-7ea6-4242-95ed-dc28ccfacac9
 ms.openlocfilehash: 7b73ec970776f39a0c056e2a706d4818cda6cd72
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211823"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44511418"
 ---
 # <a name="using-systemtransactions-in-aspnet"></a>在 ASP.NET 中使用 System.Transactions
 本主題說明如何成功運用 <xref:System.Transactions> 應用程式中的 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 。  

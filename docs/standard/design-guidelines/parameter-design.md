@@ -12,11 +12,11 @@ ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ea5311de8cef266af23b259d943568bfa95eaf72
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
-ms.translationtype: MT
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44275544"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44493923"
 ---
 # <a name="parameter-design"></a>參數設計
 本章節會提供廣泛的指導方針，在參數的設計，包括各節來檢查引數的指導方針。 此外，您應該參閱中所述的指導方針[命名的參數](../../../docs/standard/design-guidelines/naming-parameters.md)。  

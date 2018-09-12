@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Canvas control [WPF], attached properties
 ms.assetid: 48f1d25d-3820-4107-a4cc-d6c1e5664a44
 ms.openlocfilehash: 89327b834dfd71c0a7420eb42a598b98cdb5e9d8
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44270665"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44699695"
 ---
 # <a name="how-to-use-the-attached-properties-of-canvas-to-position-child-elements"></a>操作說明：使用 Canvas 的附加屬性置放子元素
 此範例示範如何使用附加的屬性<xref:System.Windows.Controls.Canvas>来放置子項目。  
