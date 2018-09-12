@@ -6,39 +6,39 @@ helpviewer_keywords:
 - programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
 ms.openlocfilehash: 5ffe44545e60bb74563180a6a5c87c78526ab566
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44341826"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44508734"
 ---
-# <a name="programming-in-visual-basic"></a><span data-ttu-id="5b032-102">Visual Basic 中的程式設計</span><span class="sxs-lookup"><span data-stu-id="5b032-102">Programming in Visual Basic</span></span>
-<span data-ttu-id="5b032-103">本節將討論您可能想要在建立 Visual Basic 應用程式時深入了解的程式設計工作。</span><span class="sxs-lookup"><span data-stu-id="5b032-103">This section discusses programming tasks that you may want to learn more about as you create your Visual Basic application.</span></span>  
+# <a name="programming-in-visual-basic"></a><span data-ttu-id="688fa-102">Visual Basic 中的程式設計</span><span class="sxs-lookup"><span data-stu-id="688fa-102">Programming in Visual Basic</span></span>
+<span data-ttu-id="688fa-103">本節將討論您可能想要在建立 Visual Basic 應用程式時深入了解的程式設計工作。</span><span class="sxs-lookup"><span data-stu-id="688fa-103">This section discusses programming tasks that you may want to learn more about as you create your Visual Basic application.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="5b032-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="5b032-104">In this section</span></span>  
- [<span data-ttu-id="5b032-105">存取電腦資源</span><span class="sxs-lookup"><span data-stu-id="5b032-105">Accessing Computer Resources</span></span>](../../../visual-basic/developing-apps/programming/computer-resources/index.md)  
- <span data-ttu-id="5b032-106">包含的文件說明如何使用 `My.Computer` 物件來存取應用程式執行所在的電腦相關資訊，以及如何控制該電腦。</span><span class="sxs-lookup"><span data-stu-id="5b032-106">Contains documentation on how to use the `My.Computer` object to access information about the computer on which an application runs and how to control the computer.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="688fa-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="688fa-104">In this section</span></span>  
+ [<span data-ttu-id="688fa-105">存取電腦資源</span><span class="sxs-lookup"><span data-stu-id="688fa-105">Accessing Computer Resources</span></span>](../../../visual-basic/developing-apps/programming/computer-resources/index.md)  
+ <span data-ttu-id="688fa-106">包含的文件說明如何使用 `My.Computer` 物件來存取應用程式執行所在的電腦相關資訊，以及如何控制該電腦。</span><span class="sxs-lookup"><span data-stu-id="688fa-106">Contains documentation on how to use the `My.Computer` object to access information about the computer on which an application runs and how to control the computer.</span></span>  
   
- [<span data-ttu-id="5b032-107">記錄來自應用程式的資訊</span><span class="sxs-lookup"><span data-stu-id="5b032-107">Logging Information from the Application</span></span>](../../../visual-basic/developing-apps/programming/log-info/index.md)  
- <span data-ttu-id="5b032-108">包含的文件說明如何使用 `My.Application.Log` 和 `My.Log` 物件記錄來自您應用程式的資訊，以及如何擴充應用程式的記錄功能。</span><span class="sxs-lookup"><span data-stu-id="5b032-108">Contains documentation on how to log information from your application using the `My.Application.Log` and `My.Log` objects, and how to extend the application's logging capabilities.</span></span>  
+ [<span data-ttu-id="688fa-107">記錄來自應用程式的資訊</span><span class="sxs-lookup"><span data-stu-id="688fa-107">Logging Information from the Application</span></span>](../../../visual-basic/developing-apps/programming/log-info/index.md)  
+ <span data-ttu-id="688fa-108">包含的文件說明如何使用 `My.Application.Log` 和 `My.Log` 物件記錄來自您應用程式的資訊，以及如何擴充應用程式的記錄功能。</span><span class="sxs-lookup"><span data-stu-id="688fa-108">Contains documentation on how to log information from your application using the `My.Application.Log` and `My.Log` objects, and how to extend the application's logging capabilities.</span></span>  
   
- [<span data-ttu-id="5b032-109">存取使用者資料</span><span class="sxs-lookup"><span data-stu-id="5b032-109">Accessing User Data</span></span>](../../../visual-basic/developing-apps/programming/accessing-user-data.md)  
- <span data-ttu-id="5b032-110">包含您可以使用 `My.User` 物件來完成之工作的相關文件。</span><span class="sxs-lookup"><span data-stu-id="5b032-110">Contains documentation on tasks that you can accomplish using the `My.User` object.</span></span>  
+ [<span data-ttu-id="688fa-109">存取使用者資料</span><span class="sxs-lookup"><span data-stu-id="688fa-109">Accessing User Data</span></span>](../../../visual-basic/developing-apps/programming/accessing-user-data.md)  
+ <span data-ttu-id="688fa-110">包含您可以使用 `My.User` 物件來完成之工作的相關文件。</span><span class="sxs-lookup"><span data-stu-id="688fa-110">Contains documentation on tasks that you can accomplish using the `My.User` object.</span></span>  
   
- [<span data-ttu-id="5b032-111">存取應用程式表單</span><span class="sxs-lookup"><span data-stu-id="5b032-111">Accessing Application Forms</span></span>](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)  
- <span data-ttu-id="5b032-112">包含的文件說明如何使用 `My.Forms` 和 `My.Application` 物件來存取應用程式的表單。</span><span class="sxs-lookup"><span data-stu-id="5b032-112">Contains documentation on accessing an application's forms by using the `My.Forms` and `My.Application` objects.</span></span>  
+ [<span data-ttu-id="688fa-111">存取應用程式表單</span><span class="sxs-lookup"><span data-stu-id="688fa-111">Accessing Application Forms</span></span>](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)  
+ <span data-ttu-id="688fa-112">包含的文件說明如何使用 `My.Forms` 和 `My.Application` 物件來存取應用程式的表單。</span><span class="sxs-lookup"><span data-stu-id="688fa-112">Contains documentation on accessing an application's forms by using the `My.Forms` and `My.Application` objects.</span></span>  
   
- [<span data-ttu-id="5b032-113">存取應用程式 Web 服務</span><span class="sxs-lookup"><span data-stu-id="5b032-113">Accessing Application Web Services</span></span>](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
- <span data-ttu-id="5b032-114">包含的文件說明如何使用 `My.WebServices` 物件來存取應用程式所參考的 Web 服務。</span><span class="sxs-lookup"><span data-stu-id="5b032-114">Contains documentation on how to access the Web services referenced by the application using the `My.WebServices` object.</span></span>  
+ [<span data-ttu-id="688fa-113">存取應用程式 Web 服務</span><span class="sxs-lookup"><span data-stu-id="688fa-113">Accessing Application Web Services</span></span>](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
+ <span data-ttu-id="688fa-114">包含的文件說明如何使用 `My.WebServices` 物件來存取應用程式所參考的 Web 服務。</span><span class="sxs-lookup"><span data-stu-id="688fa-114">Contains documentation on how to access the Web services referenced by the application using the `My.WebServices` object.</span></span>  
   
- [<span data-ttu-id="5b032-115">存取應用程式設定</span><span class="sxs-lookup"><span data-stu-id="5b032-115">Accessing Application Settings</span></span>](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
- <span data-ttu-id="5b032-116">包含的文件說明如何使用 `My.Settings` 物件來存取應用程式的設定。</span><span class="sxs-lookup"><span data-stu-id="5b032-116">Contains documentation on accessing an application's settings using the `My.Settings` object.</span></span>  
+ [<span data-ttu-id="688fa-115">存取應用程式設定</span><span class="sxs-lookup"><span data-stu-id="688fa-115">Accessing Application Settings</span></span>](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
+ <span data-ttu-id="688fa-116">包含的文件說明如何使用 `My.Settings` 物件來存取應用程式的設定。</span><span class="sxs-lookup"><span data-stu-id="688fa-116">Contains documentation on accessing an application's settings using the `My.Settings` object.</span></span>  
   
- [<span data-ttu-id="5b032-117">處理磁碟機、目錄和檔案</span><span class="sxs-lookup"><span data-stu-id="5b032-117">Processing Drives, Directories, and Files</span></span>](../../../visual-basic/developing-apps/programming/drives-directories-files/processing.md)  
- <span data-ttu-id="5b032-118">包含的文件說明如何使用 `My.Computer.FileSystem` 物件來存取檔案系統。</span><span class="sxs-lookup"><span data-stu-id="5b032-118">Contains documentation on how to access the file system using the `My.Computer.FileSystem` object.</span></span>  
+ [<span data-ttu-id="688fa-117">處理磁碟機、目錄和檔案</span><span class="sxs-lookup"><span data-stu-id="688fa-117">Processing Drives, Directories, and Files</span></span>](../../../visual-basic/developing-apps/programming/drives-directories-files/processing.md)  
+ <span data-ttu-id="688fa-118">包含的文件說明如何使用 `My.Computer.FileSystem` 物件來存取檔案系統。</span><span class="sxs-lookup"><span data-stu-id="688fa-118">Contains documentation on how to access the file system using the `My.Computer.FileSystem` object.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5b032-119">請參閱</span><span class="sxs-lookup"><span data-stu-id="5b032-119">See Also</span></span>  
- [<span data-ttu-id="5b032-120">Visual Basic 語言功能</span><span class="sxs-lookup"><span data-stu-id="5b032-120">Visual Basic Language Features</span></span>](../../../visual-basic/programming-guide/language-features/index.md)  
- [<span data-ttu-id="5b032-121">程式設計概念</span><span class="sxs-lookup"><span data-stu-id="5b032-121">Programming Concepts</span></span>](../../../visual-basic/programming-guide/concepts/index.md)  
- [<span data-ttu-id="5b032-122">集合</span><span class="sxs-lookup"><span data-stu-id="5b032-122">Collections</span></span>](../../../visual-basic/programming-guide/concepts/collections.md)  
- [<span data-ttu-id="5b032-123">使用 Visual Basic 開發應用程式</span><span class="sxs-lookup"><span data-stu-id="5b032-123">Developing Applications with Visual Basic</span></span>](../../../visual-basic/developing-apps/index.md)
+## <a name="see-also"></a><span data-ttu-id="688fa-119">請參閱</span><span class="sxs-lookup"><span data-stu-id="688fa-119">See Also</span></span>  
+ [<span data-ttu-id="688fa-120">Visual Basic 語言功能</span><span class="sxs-lookup"><span data-stu-id="688fa-120">Visual Basic Language Features</span></span>](../../../visual-basic/programming-guide/language-features/index.md)  
+ [<span data-ttu-id="688fa-121">程式設計概念</span><span class="sxs-lookup"><span data-stu-id="688fa-121">Programming Concepts</span></span>](../../../visual-basic/programming-guide/concepts/index.md)  
+ [<span data-ttu-id="688fa-122">集合</span><span class="sxs-lookup"><span data-stu-id="688fa-122">Collections</span></span>](../../../visual-basic/programming-guide/concepts/collections.md)  
+ [<span data-ttu-id="688fa-123">使用 Visual Basic 開發應用程式</span><span class="sxs-lookup"><span data-stu-id="688fa-123">Developing Applications with Visual Basic</span></span>](../../../visual-basic/developing-apps/index.md)
