@@ -9,27 +9,27 @@ helpviewer_keywords:
 - rectangles [WPF], animating
 ms.assetid: 572ffb95-790d-4ace-adbf-b2ea8a90e75b
 ms.openlocfilehash: c2edf1bc8505b7bda2cc31ded2d2bf53a96243ac
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44265850"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44493637"
 ---
-# <a name="how-to-animate-a-rectangle"></a><span data-ttu-id="69dfe-102">操作說明：建立矩形動畫</span><span class="sxs-lookup"><span data-stu-id="69dfe-102">How to: Animate a Rectangle</span></span>
-<span data-ttu-id="69dfe-103">這個範例示範如何以動畫顯示矩形的大小和位置變更。</span><span class="sxs-lookup"><span data-stu-id="69dfe-103">This example shows how to animate changes to the size and position of a rectangle.</span></span>  
+# <a name="how-to-animate-a-rectangle"></a><span data-ttu-id="07e64-102">操作說明：建立矩形動畫</span><span class="sxs-lookup"><span data-stu-id="07e64-102">How to: Animate a Rectangle</span></span>
+<span data-ttu-id="07e64-103">這個範例示範如何以動畫顯示矩形的大小和位置變更。</span><span class="sxs-lookup"><span data-stu-id="07e64-103">This example shows how to animate changes to the size and position of a rectangle.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="69dfe-104">範例</span><span class="sxs-lookup"><span data-stu-id="69dfe-104">Example</span></span>  
- <span data-ttu-id="69dfe-105">下列範例使用的執行個體<xref:System.Windows.Media.Animation.RectAnimation>類別以動畫顯示<xref:System.Windows.Media.RectangleGeometry.Rect%2A>屬性<xref:System.Windows.Media.RectangleGeometry>，其中以動畫顯示矩形的位置和大小的變更。</span><span class="sxs-lookup"><span data-stu-id="69dfe-105">The following example uses an instance of the <xref:System.Windows.Media.Animation.RectAnimation> class to animate the <xref:System.Windows.Media.RectangleGeometry.Rect%2A> property of a <xref:System.Windows.Media.RectangleGeometry>, which animates changes to the size and position of the rectangle.</span></span>  
+## <a name="example"></a><span data-ttu-id="07e64-104">範例</span><span class="sxs-lookup"><span data-stu-id="07e64-104">Example</span></span>  
+ <span data-ttu-id="07e64-105">下列範例使用的執行個體<xref:System.Windows.Media.Animation.RectAnimation>類別以動畫顯示<xref:System.Windows.Media.RectangleGeometry.Rect%2A>屬性<xref:System.Windows.Media.RectangleGeometry>，其中以動畫顯示矩形的位置和大小的變更。</span><span class="sxs-lookup"><span data-stu-id="07e64-105">The following example uses an instance of the <xref:System.Windows.Media.Animation.RectAnimation> class to animate the <xref:System.Windows.Media.RectangleGeometry.Rect%2A> property of a <xref:System.Windows.Media.RectangleGeometry>, which animates changes to the size and position of the rectangle.</span></span>  
   
  [!code-csharp[BasicAnimations_snip#RectAnimationWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snip/CSharp/RectAnimationExample.cs#rectanimationwholepage)]
  [!code-vb[BasicAnimations_snip#RectAnimationWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BasicAnimations_snip/VisualBasic/RectAnimationExample.vb#rectanimationwholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="69dfe-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="69dfe-106">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="07e64-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="07e64-106">See Also</span></span>  
  <xref:System.Windows.Media.Animation.RectAnimation>  
  <xref:System.Windows.Media.RectangleGeometry.Rect%2A>  
  <xref:System.Windows.Media.RectangleGeometry>  
- [<span data-ttu-id="69dfe-107">動畫概觀</span><span class="sxs-lookup"><span data-stu-id="69dfe-107">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [<span data-ttu-id="69dfe-108">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="69dfe-108">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [<span data-ttu-id="69dfe-109">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="69dfe-109">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
- [<span data-ttu-id="69dfe-110">動畫和計時</span><span class="sxs-lookup"><span data-stu-id="69dfe-110">Animation and Timing</span></span>](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
- [<span data-ttu-id="69dfe-111">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="69dfe-111">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+ [<span data-ttu-id="07e64-107">動畫概觀</span><span class="sxs-lookup"><span data-stu-id="07e64-107">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="07e64-108">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="07e64-108">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [<span data-ttu-id="07e64-109">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="07e64-109">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
+ [<span data-ttu-id="07e64-110">動畫和計時</span><span class="sxs-lookup"><span data-stu-id="07e64-110">Animation and Timing</span></span>](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
+ [<span data-ttu-id="07e64-111">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="07e64-111">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

@@ -13,36 +13,36 @@ helpviewer_keywords:
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
 ms.openlocfilehash: 8cb6a66f9fc7a67ae99574e783fd889537b9b11a
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44365776"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44699760"
 ---
-# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a><span data-ttu-id="de35b-102">HOW TO：指定 XML 資料流的替代元素名稱</span><span class="sxs-lookup"><span data-stu-id="de35b-102">How to: Specify an Alternate Element Name for an XML Stream</span></span>
-[<span data-ttu-id="de35b-103">程式碼範例</span><span class="sxs-lookup"><span data-stu-id="de35b-103">Code Example</span></span>](#cpconoverridingserializationofclasseswithxmlattributeoverridesclassanchor1)  
+# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a><span data-ttu-id="b8cfa-102">HOW TO：指定 XML 資料流的替代元素名稱</span><span class="sxs-lookup"><span data-stu-id="b8cfa-102">How to: Specify an Alternate Element Name for an XML Stream</span></span>
+[<span data-ttu-id="b8cfa-103">程式碼範例</span><span class="sxs-lookup"><span data-stu-id="b8cfa-103">Code Example</span></span>](#cpconoverridingserializationofclasseswithxmlattributeoverridesclassanchor1)  
   
- <span data-ttu-id="de35b-104">透過 [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)，可使用相同的類別集產生一個以上的 XML 資料流。</span><span class="sxs-lookup"><span data-stu-id="de35b-104">Using the [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx), you can generate more than one XML stream with the same set of classes.</span></span> <span data-ttu-id="de35b-105">當兩個不同的 XML Web 服務要求相同的基本資訊以及些微差異時，您也許會想這麼做。</span><span class="sxs-lookup"><span data-stu-id="de35b-105">You might want to do this because two different XML Web services require the same basic information, with only slight differences.</span></span> <span data-ttu-id="de35b-106">例如，試想有兩家處理書本訂單的 XML Web 服務，而且都需要 ISBN 號碼。</span><span class="sxs-lookup"><span data-stu-id="de35b-106">For example, imagine two XML Web services that process orders for books, and thus both require ISBN numbers.</span></span> <span data-ttu-id="de35b-107">一個服務使用標記 \<ISBN>，另一個則使用標記 \<BookID>。</span><span class="sxs-lookup"><span data-stu-id="de35b-107">One service uses the tag \<ISBN> while the second uses the tag \<BookID>.</span></span> <span data-ttu-id="de35b-108">您有名為 `Book` 的類別，其中包含名為 `ISBN`的欄位。</span><span class="sxs-lookup"><span data-stu-id="de35b-108">You have a class named `Book` that contains a field named `ISBN`.</span></span> <span data-ttu-id="de35b-109">當 `Book` 類別的執行個體序列化時，它會根據預設使用成員名稱 (ISBN) 做為標記項目名稱。</span><span class="sxs-lookup"><span data-stu-id="de35b-109">When an instance of the `Book` class is serialized, it will, by default, use the member name (ISBN) as the tag element name.</span></span> <span data-ttu-id="de35b-110">對於第一個 XML Web 服務，這正如預期。</span><span class="sxs-lookup"><span data-stu-id="de35b-110">For the first XML Web service, this is as expected.</span></span> <span data-ttu-id="de35b-111">不過要想要傳送 XML 資料流至第二個 XML Web 服務，您必須覆寫序列化，讓標記的項目名稱為 `BookID`。</span><span class="sxs-lookup"><span data-stu-id="de35b-111">But to send the XML stream to the second XML Web service, you must override the serialization so that the tag's element name is `BookID`.</span></span>  
+ <span data-ttu-id="b8cfa-104">透過 [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)，可使用相同的類別集產生一個以上的 XML 資料流。</span><span class="sxs-lookup"><span data-stu-id="b8cfa-104">Using the [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx), you can generate more than one XML stream with the same set of classes.</span></span> <span data-ttu-id="b8cfa-105">當兩個不同的 XML Web 服務要求相同的基本資訊以及些微差異時，您也許會想這麼做。</span><span class="sxs-lookup"><span data-stu-id="b8cfa-105">You might want to do this because two different XML Web services require the same basic information, with only slight differences.</span></span> <span data-ttu-id="b8cfa-106">例如，試想有兩家處理書本訂單的 XML Web 服務，而且都需要 ISBN 號碼。</span><span class="sxs-lookup"><span data-stu-id="b8cfa-106">For example, imagine two XML Web services that process orders for books, and thus both require ISBN numbers.</span></span> <span data-ttu-id="b8cfa-107">一個服務使用標記 \<ISBN>，另一個則使用標記 \<BookID>。</span><span class="sxs-lookup"><span data-stu-id="b8cfa-107">One service uses the tag \<ISBN> while the second uses the tag \<BookID>.</span></span> <span data-ttu-id="b8cfa-108">您有名為 `Book` 的類別，其中包含名為 `ISBN`的欄位。</span><span class="sxs-lookup"><span data-stu-id="b8cfa-108">You have a class named `Book` that contains a field named `ISBN`.</span></span> <span data-ttu-id="b8cfa-109">當 `Book` 類別的執行個體序列化時，它會根據預設使用成員名稱 (ISBN) 做為標記項目名稱。</span><span class="sxs-lookup"><span data-stu-id="b8cfa-109">When an instance of the `Book` class is serialized, it will, by default, use the member name (ISBN) as the tag element name.</span></span> <span data-ttu-id="b8cfa-110">對於第一個 XML Web 服務，這正如預期。</span><span class="sxs-lookup"><span data-stu-id="b8cfa-110">For the first XML Web service, this is as expected.</span></span> <span data-ttu-id="b8cfa-111">不過要想要傳送 XML 資料流至第二個 XML Web 服務，您必須覆寫序列化，讓標記的項目名稱為 `BookID`。</span><span class="sxs-lookup"><span data-stu-id="b8cfa-111">But to send the XML stream to the second XML Web service, you must override the serialization so that the tag's element name is `BookID`.</span></span>  
   
-### <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a><span data-ttu-id="de35b-112">以其他項目名稱建立 XML 資料流</span><span class="sxs-lookup"><span data-stu-id="de35b-112">To create an XML stream with an alternate element name</span></span>  
+### <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a><span data-ttu-id="b8cfa-112">以其他項目名稱建立 XML 資料流</span><span class="sxs-lookup"><span data-stu-id="b8cfa-112">To create an XML stream with an alternate element name</span></span>  
   
-1.  <span data-ttu-id="de35b-113">建立 <xref:System.Xml.Serialization.XmlElementAttribute> 類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="de35b-113">Create an instance of the <xref:System.Xml.Serialization.XmlElementAttribute> class.</span></span>  
+1.  <span data-ttu-id="b8cfa-113">建立 <xref:System.Xml.Serialization.XmlElementAttribute> 類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="b8cfa-113">Create an instance of the <xref:System.Xml.Serialization.XmlElementAttribute> class.</span></span>  
   
-2.  <span data-ttu-id="de35b-114">將 <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> 的 <xref:System.Xml.Serialization.XmlElementAttribute> 設為 "BookID"。</span><span class="sxs-lookup"><span data-stu-id="de35b-114">Set the <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> of the <xref:System.Xml.Serialization.XmlElementAttribute> to "BookID".</span></span>  
+2.  <span data-ttu-id="b8cfa-114">將 <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> 的 <xref:System.Xml.Serialization.XmlElementAttribute> 設為 "BookID"。</span><span class="sxs-lookup"><span data-stu-id="b8cfa-114">Set the <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> of the <xref:System.Xml.Serialization.XmlElementAttribute> to "BookID".</span></span>  
   
-3.  <span data-ttu-id="de35b-115">建立 <xref:System.Xml.Serialization.XmlAttributes> 類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="de35b-115">Create an instance of the <xref:System.Xml.Serialization.XmlAttributes> class.</span></span>  
+3.  <span data-ttu-id="b8cfa-115">建立 <xref:System.Xml.Serialization.XmlAttributes> 類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="b8cfa-115">Create an instance of the <xref:System.Xml.Serialization.XmlAttributes> class.</span></span>  
   
-4.  <span data-ttu-id="de35b-116">將 `XmlElementAttribute` 物件加入至透過 <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A> 之 <xref:System.Xml.Serialization.XmlAttributes> 屬性存取的集合。</span><span class="sxs-lookup"><span data-stu-id="de35b-116">Add the `XmlElementAttribute` object to the collection accessed through the <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A> property of <xref:System.Xml.Serialization.XmlAttributes> .</span></span>  
+4.  <span data-ttu-id="b8cfa-116">將 `XmlElementAttribute` 物件加入至透過 <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A> 之 <xref:System.Xml.Serialization.XmlAttributes> 屬性存取的集合。</span><span class="sxs-lookup"><span data-stu-id="b8cfa-116">Add the `XmlElementAttribute` object to the collection accessed through the <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A> property of <xref:System.Xml.Serialization.XmlAttributes> .</span></span>  
   
-5.  <span data-ttu-id="de35b-117">建立 <xref:System.Xml.Serialization.XmlAttributeOverrides> 類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="de35b-117">Create an instance of the <xref:System.Xml.Serialization.XmlAttributeOverrides> class.</span></span>  
+5.  <span data-ttu-id="b8cfa-117">建立 <xref:System.Xml.Serialization.XmlAttributeOverrides> 類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="b8cfa-117">Create an instance of the <xref:System.Xml.Serialization.XmlAttributeOverrides> class.</span></span>  
   
-6.  <span data-ttu-id="de35b-118">將 `XmlAttributes` 加入至 <xref:System.Xml.Serialization.XmlAttributeOverrides>，傳遞要覆寫的物件型別及遭覆寫的成員名稱。</span><span class="sxs-lookup"><span data-stu-id="de35b-118">Add the `XmlAttributes` to the <xref:System.Xml.Serialization.XmlAttributeOverrides>, passing the type of the object to override and the name of the member being overridden.</span></span>  
+6.  <span data-ttu-id="b8cfa-118">將 `XmlAttributes` 加入至 <xref:System.Xml.Serialization.XmlAttributeOverrides>，傳遞要覆寫的物件型別及遭覆寫的成員名稱。</span><span class="sxs-lookup"><span data-stu-id="b8cfa-118">Add the `XmlAttributes` to the <xref:System.Xml.Serialization.XmlAttributeOverrides>, passing the type of the object to override and the name of the member being overridden.</span></span>  
   
-7.  <span data-ttu-id="de35b-119">使用 `XmlSerializer``XmlAttributeOverrides`建立  類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="de35b-119">Create an instance of the `XmlSerializer` class with `XmlAttributeOverrides`.</span></span>  
+7.  <span data-ttu-id="b8cfa-119">使用 `XmlSerializer``XmlAttributeOverrides`建立  類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="b8cfa-119">Create an instance of the `XmlSerializer` class with `XmlAttributeOverrides`.</span></span>  
   
-8.  <span data-ttu-id="de35b-120">建立 `Book` 類別的執行個體，將它序列化或還原序列化。</span><span class="sxs-lookup"><span data-stu-id="de35b-120">Create an instance of the `Book` class, and serialize or deserialize it.</span></span>  
+8.  <span data-ttu-id="b8cfa-120">建立 `Book` 類別的執行個體，將它序列化或還原序列化。</span><span class="sxs-lookup"><span data-stu-id="b8cfa-120">Create an instance of the `Book` class, and serialize or deserialize it.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="de35b-121">範例</span><span class="sxs-lookup"><span data-stu-id="de35b-121">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="b8cfa-121">範例</span><span class="sxs-lookup"><span data-stu-id="b8cfa-121">Example</span></span>  
   
 ```vb  
 Public Class SerializeOverride()  
@@ -84,7 +84,7 @@ public class SerializeOverride()
 }  
 ```  
   
- <span data-ttu-id="de35b-122">XML 資料流可能類似下列所示。</span><span class="sxs-lookup"><span data-stu-id="de35b-122">The XML stream might resemble the following.</span></span>  
+ <span data-ttu-id="b8cfa-122">XML 資料流可能類似下列所示。</span><span class="sxs-lookup"><span data-stu-id="b8cfa-122">The XML stream might resemble the following.</span></span>  
   
 ```xml  
 <Book>  
@@ -92,13 +92,13 @@ public class SerializeOverride()
 </Book>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="de35b-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="de35b-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b8cfa-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b8cfa-123">See also</span></span>
 
 - <xref:System.Xml.Serialization.XmlElementAttribute>  
 - <xref:System.Xml.Serialization.XmlAttributes>  
 - <xref:System.Xml.Serialization.XmlAttributeOverrides>  
-- [<span data-ttu-id="de35b-124">XML 和 SOAP 序列化</span><span class="sxs-lookup"><span data-stu-id="de35b-124">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
-- [<span data-ttu-id="de35b-125">XmlSerializer</span><span class="sxs-lookup"><span data-stu-id="de35b-125">XmlSerializer</span></span>](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)  
-- [<span data-ttu-id="de35b-126">如何：序列化物件</span><span class="sxs-lookup"><span data-stu-id="de35b-126">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
-- [<span data-ttu-id="de35b-127">如何：還原序列化物件</span><span class="sxs-lookup"><span data-stu-id="de35b-127">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
-- [<span data-ttu-id="de35b-128">如何：還原序列化物件</span><span class="sxs-lookup"><span data-stu-id="de35b-128">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [<span data-ttu-id="b8cfa-124">XML 和 SOAP 序列化</span><span class="sxs-lookup"><span data-stu-id="b8cfa-124">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+- [<span data-ttu-id="b8cfa-125">XmlSerializer</span><span class="sxs-lookup"><span data-stu-id="b8cfa-125">XmlSerializer</span></span>](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)  
+- [<span data-ttu-id="b8cfa-126">如何：序列化物件</span><span class="sxs-lookup"><span data-stu-id="b8cfa-126">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+- [<span data-ttu-id="b8cfa-127">如何：還原序列化物件</span><span class="sxs-lookup"><span data-stu-id="b8cfa-127">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
+- [<span data-ttu-id="b8cfa-128">如何：還原序列化物件</span><span class="sxs-lookup"><span data-stu-id="b8cfa-128">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

@@ -3,19 +3,19 @@ title: 只有自訂記錄檔名稱的前八個字元才有意義
 ms.date: 07/20/2015
 ms.assetid: db2a0252-9ddd-4e93-a239-6a690cc09557
 ms.openlocfilehash: c994399a657de3872e70edce0a9168e22f781ce3
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44368512"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44699185"
 ---
-# <a name="only-the-first-eight-characters-of-a-custom-log-name-are-significant"></a><span data-ttu-id="6c7c1-102">只有自訂記錄檔名稱的前八個字元才有意義</span><span class="sxs-lookup"><span data-stu-id="6c7c1-102">Only the first eight characters of a custom log name are significant</span></span>
-<span data-ttu-id="6c7c1-103">檢查事件記錄檔名稱的唯一性時，只會考慮前八個字元。</span><span class="sxs-lookup"><span data-stu-id="6c7c1-103">When checking event log names for uniqueness, only the first eight characters are considered.</span></span> <span data-ttu-id="6c7c1-104">共用前八個字元的事件記錄檔可能會產生衝突。</span><span class="sxs-lookup"><span data-stu-id="6c7c1-104">A conflict may result from event logs that share their first eight characters.</span></span>  
+# <a name="only-the-first-eight-characters-of-a-custom-log-name-are-significant"></a><span data-ttu-id="193ad-102">只有自訂記錄檔名稱的前八個字元才有意義</span><span class="sxs-lookup"><span data-stu-id="193ad-102">Only the first eight characters of a custom log name are significant</span></span>
+<span data-ttu-id="193ad-103">檢查事件記錄檔名稱的唯一性時，只會考慮前八個字元。</span><span class="sxs-lookup"><span data-stu-id="193ad-103">When checking event log names for uniqueness, only the first eight characters are considered.</span></span> <span data-ttu-id="193ad-104">共用前八個字元的事件記錄檔可能會產生衝突。</span><span class="sxs-lookup"><span data-stu-id="193ad-104">A conflict may result from event logs that share their first eight characters.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="6c7c1-105">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="6c7c1-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="193ad-105">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="193ad-105">To correct this error</span></span>  
   
--   <span data-ttu-id="6c7c1-106">提供給事件記錄檔的名稱中其前八個字元為唯一。</span><span class="sxs-lookup"><span data-stu-id="6c7c1-106">Give the event log a name in which the first eight characters are unique.</span></span>  
+-   <span data-ttu-id="193ad-106">提供給事件記錄檔的名稱中其前八個字元為唯一。</span><span class="sxs-lookup"><span data-stu-id="193ad-106">Give the event log a name in which the first eight characters are unique.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6c7c1-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6c7c1-107">See Also</span></span>  
- [<span data-ttu-id="6c7c1-108">如何： 建立和移除自訂事件記錄檔</span><span class="sxs-lookup"><span data-stu-id="6c7c1-108">How to: Create and Remove Custom Event Logs</span></span>](https://msdn.microsoft.com/library/af9b7da0-80c7-46ac-b7f7-897063ddd503)  
- [<span data-ttu-id="6c7c1-109">管理事件記錄檔</span><span class="sxs-lookup"><span data-stu-id="6c7c1-109">Administering Event Logs</span></span>](https://msdn.microsoft.com/library/35f53238-bdd2-417b-acd8-2fd9f7397f18)
+## <a name="see-also"></a><span data-ttu-id="193ad-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="193ad-107">See Also</span></span>  
+ [<span data-ttu-id="193ad-108">如何： 建立和移除自訂事件記錄檔</span><span class="sxs-lookup"><span data-stu-id="193ad-108">How to: Create and Remove Custom Event Logs</span></span>](https://msdn.microsoft.com/library/af9b7da0-80c7-46ac-b7f7-897063ddd503)  
+ [<span data-ttu-id="193ad-109">管理事件記錄檔</span><span class="sxs-lookup"><span data-stu-id="193ad-109">Administering Event Logs</span></span>](https://msdn.microsoft.com/library/35f53238-bdd2-417b-acd8-2fd9f7397f18)
