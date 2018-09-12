@@ -93,7 +93,7 @@ ms.locfileid: "44081271"
  預存程序對資料驅動應用程式有許多好處。 藉由使用預存程序，資料庫作業可以封裝在單一命令中、最佳化為最佳效能，並且可進一步提升安全性。 雖然只要將後接參數引數的預存程序名稱當成 SQL 陳述式傳遞即可呼叫預存程序，但是使用 <xref:System.Data.Common.DbCommand.Parameters%2A> [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 物件的 <xref:System.Data.Common.DbCommand> 集合，可以讓您更明確地定義預存程序參數，以及存取輸出參數和傳回值。  
   
 > [!NOTE]
-> 參數化陳述式能在伺服器上執行，都是透過允許查詢計畫重複使用的 `sp_executesql,` 。 呼叫 `sp_executesql` 的批次無法見到 `sp_executesql`批次中的本機資料指標或變數。 資料庫內容中的變更只會持續到 `sp_executesql` 陳述式結束。 如需詳細資訊，請參閱 < [sp_executesql & Amp;#40;transact-SQL&AMP;#41;](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql)。
+> 參數化陳述式能在伺服器上執行，都是透過允許查詢計畫重複使用的 `sp_executesql,` 。 呼叫 `sp_executesql` 的批次無法見到 `sp_executesql`批次中的本機資料指標或變數。 資料庫內容中的變更只會持續到 `sp_executesql` 陳述式結束。 如需詳細資訊，請參閱 [sp_executesql (transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql)。
   
  將參數與 <xref:System.Data.SqlClient.SqlCommand> 搭配使用以執行 SQL Server 預存程序時，加入 <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> 集合的參數名稱必須與預存程序中的參數標記名稱相符。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server 不支援以問號 (?) 預留位置來傳遞參數至 SQL 陳述式或預存程序。 它會將預存程式中的參數視為具名參數，並搜尋相符的參數標記。 例如， `CustOrderHist` 預存程序是使用名為 `@CustomerID`的參數所定義的。 則當您的程式碼執行預存程序時，也必須使用名為 `@CustomerID`的參數。  
   
