@@ -14,11 +14,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: c6845a85f9d3e07a4ecc9aad1ec11df8cdbc1f7a
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
-ms.translationtype: HT
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 09/12/2018
-ms.locfileid: "44493349"
+ms.locfileid: "44706235"
 ---
 # <a name="subscribe-to-ui-automation-events"></a>訂閱 UI 自動化事件
 > [!NOTE]

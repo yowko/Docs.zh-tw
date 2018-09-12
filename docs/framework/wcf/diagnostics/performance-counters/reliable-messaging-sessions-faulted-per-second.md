@@ -3,11 +3,11 @@ title: 每秒發生錯誤的可信賴傳訊工作階段數
 ms.date: 03/30/2017
 ms.assetid: 8f8ca2eb-1be4-4b6a-aa78-fcd3ee145fe8
 ms.openlocfilehash: c77d6a5f12dcce15dba94e2f63025a219ebcc6fd
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44367310"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44704965"
 ---
 # <a name="reliable-messaging-sessions-faulted-per-second"></a>每秒發生錯誤的可信賴傳訊工作階段數
 計數器名稱：每秒發生錯誤的可信賴傳訊工作階段數。  
