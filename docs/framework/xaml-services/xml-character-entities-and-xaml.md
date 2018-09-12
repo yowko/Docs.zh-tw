@@ -52,7 +52,7 @@ XAML 使用 XML 中針對特殊字元定義的字元實體。 本主題說明一
 |" (雙引號)|\&quot;|必須用於屬性值，但可接受雙引號 (") 做為項目內容。 請注意，屬性值可以使用單引號 (') 或雙引號 ('') 括住；先出現的字元會定義括住的屬性值，而另一種引號則可以接著用來括住值內的常值。|  
 |' (單引號)|\&apos;|必須用於屬性值，但可接受單引號 (') 做為項目內容。 請注意，屬性值可以使用單引號 (') 或雙引號 ('') 括住；先出現的字元會定義括住的屬性值，而另一種引號則可以接著用來括住值內的常值。|  
 |(數字字元對應)|&#*[整數]*; 或 & #x *[十六進位]*;|XAML 支援將數字字元對應至使用中的編碼方式。|  
-|(不分行空格)|&\#160;（假設為 utf-8 編碼）|對於非固定格式文件項目，或是接受文字的項目 (例如 WPF <xref:System.Windows.Controls.TextBox>)，即使 `xml:space="default"`，也不會在標記外部將不分行空格標準化。 (如需詳細資訊，請參閱 <<c0> [ 泛空白字元處理中 XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)。)|  
+|(不分行空格)|&\#160;（假設為 utf-8 編碼）|對於非固定格式文件項目，或是接受文字的項目 (例如 WPF <xref:System.Windows.Controls.TextBox>)，即使 `xml:space="default"`，也不會在標記外部將不分行空格標準化。 (如需詳細資訊，請參閱 [ 泛空白字元處理中 XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)。)|  
   
 <a name="xml_comment_format"></a>   
 ## <a name="xml-comment-format"></a>XML 註解格式  
