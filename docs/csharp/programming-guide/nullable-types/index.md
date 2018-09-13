@@ -8,11 +8,11 @@ helpviewer_keywords:
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
 ms.openlocfilehash: 2af0704abcad00c75a5d40bfe2d0523d07ee6a3f
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 09/12/2018
-ms.locfileid: "44511811"
+ms.locfileid: "44700803"
 ---
 # <a name="nullable-types-c-programming-guide"></a>可為 Null 的型別 (C# 程式設計指南)
 
