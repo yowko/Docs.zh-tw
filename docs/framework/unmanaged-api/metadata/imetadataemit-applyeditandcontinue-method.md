@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: faa9bc412e67e0e49ee969bd8b246a424fe628a0
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44193272"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45589085"
 ---
-# <a name="imetadataemitapplyeditandcontinue-method"></a><span data-ttu-id="35a5c-102">IMetaDataEmit::ApplyEditAndContinue 方法</span><span class="sxs-lookup"><span data-stu-id="35a5c-102">IMetaDataEmit::ApplyEditAndContinue Method</span></span>
-<span data-ttu-id="35a5c-103">使用指定的中繼資料所做的變更會更新目前的組件範圍。</span><span class="sxs-lookup"><span data-stu-id="35a5c-103">Updates the current assembly scope with the changes made in the specified metadata.</span></span>  
+# <a name="imetadataemitapplyeditandcontinue-method"></a><span data-ttu-id="0aa91-102">IMetaDataEmit::ApplyEditAndContinue 方法</span><span class="sxs-lookup"><span data-stu-id="0aa91-102">IMetaDataEmit::ApplyEditAndContinue Method</span></span>
+<span data-ttu-id="0aa91-103">使用指定的中繼資料所做的變更會更新目前的組件範圍。</span><span class="sxs-lookup"><span data-stu-id="0aa91-103">Updates the current assembly scope with the changes made in the specified metadata.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="35a5c-104">語法</span><span class="sxs-lookup"><span data-stu-id="35a5c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0aa91-104">語法</span><span class="sxs-lookup"><span data-stu-id="0aa91-104">Syntax</span></span>  
   
 ```  
 HRESULT ApplyEditAndContinue (   
@@ -35,21 +35,21 @@ HRESULT ApplyEditAndContinue (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="35a5c-105">參數</span><span class="sxs-lookup"><span data-stu-id="35a5c-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="0aa91-105">參數</span><span class="sxs-lookup"><span data-stu-id="0aa91-105">Parameters</span></span>  
  `pImport`  
- <span data-ttu-id="35a5c-106">\[在 \]指標[IUnknown](/cpp/atl/iunknown)表示可攜式執行檔 (PE) 的差異中繼資料物件。</span><span class="sxs-lookup"><span data-stu-id="35a5c-106">\[in\] Pointer to an [IUnknown](/cpp/atl/iunknown) object that represents the delta metadata from the portable executable (PE) file.</span></span>
+ <span data-ttu-id="0aa91-106">\[在 \]指標[IUnknown](/cpp/atl/iunknown)表示可攜式執行檔 (PE) 的差異中繼資料物件。</span><span class="sxs-lookup"><span data-stu-id="0aa91-106">\[in\] Pointer to an [IUnknown](/cpp/atl/iunknown) object that represents the delta metadata from the portable executable (PE) file.</span></span>
   
- <span data-ttu-id="35a5c-107">差異中繼資料是包含變更模組的實際中繼資料的複本所做的中繼資料的區塊。</span><span class="sxs-lookup"><span data-stu-id="35a5c-107">The delta metadata is the block of metadata that includes the changes that were made to the copy of the module's actual metadata.</span></span>  
+ <span data-ttu-id="0aa91-107">差異中繼資料是包含變更模組的實際中繼資料的複本所做的中繼資料的區塊。</span><span class="sxs-lookup"><span data-stu-id="0aa91-107">The delta metadata is the block of metadata that includes the changes that were made to the copy of the module's actual metadata.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="35a5c-108">需求</span><span class="sxs-lookup"><span data-stu-id="35a5c-108">Requirements</span></span>  
- <span data-ttu-id="35a5c-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="35a5c-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0aa91-108">需求</span><span class="sxs-lookup"><span data-stu-id="0aa91-108">Requirements</span></span>  
+ <span data-ttu-id="0aa91-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0aa91-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="35a5c-110">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="35a5c-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="0aa91-110">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="0aa91-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="35a5c-111">**程式庫：** 做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="35a5c-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="0aa91-111">**程式庫：** 做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="0aa91-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="35a5c-112">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="35a5c-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="0aa91-112">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0aa91-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="35a5c-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="35a5c-113">See Also</span></span>  
- [<span data-ttu-id="35a5c-114">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="35a5c-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [<span data-ttu-id="35a5c-115">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="35a5c-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="0aa91-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0aa91-113">See Also</span></span>  
+ [<span data-ttu-id="0aa91-114">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="0aa91-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
+ [<span data-ttu-id="0aa91-115">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="0aa91-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

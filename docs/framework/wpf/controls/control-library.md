@@ -8,73 +8,73 @@ helpviewer_keywords:
 - libraries [WPF], controls
 ms.assetid: c1b33289-c389-4ac2-b153-3cbb0d8324ad
 ms.openlocfilehash: 26f81a2bfeb5ef4e448ddcbc9b8bac521624a629
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45526612"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45592746"
 ---
-# <a name="control-library"></a><span data-ttu-id="6f8ce-102">控制項程式庫</span><span class="sxs-lookup"><span data-stu-id="6f8ce-102">Control Library</span></span>
-<span data-ttu-id="6f8ce-103">Windows Presentation Foundation (WPF) 控制項程式庫包含提供的 Windows Presentation Foundation (WPF)，依字母順序列出之控制項的資訊。</span><span class="sxs-lookup"><span data-stu-id="6f8ce-103">The Windows Presentation Foundation (WPF) control library contains information on the controls provided by Windows Presentation Foundation (WPF), listed alphabetically.</span></span>  
+# <a name="control-library"></a><span data-ttu-id="27def-102">控制項程式庫</span><span class="sxs-lookup"><span data-stu-id="27def-102">Control Library</span></span>
+<span data-ttu-id="27def-103">Windows Presentation Foundation (WPF) 控制項程式庫包含提供的 Windows Presentation Foundation (WPF)，依字母順序列出之控制項的資訊。</span><span class="sxs-lookup"><span data-stu-id="27def-103">The Windows Presentation Foundation (WPF) control library contains information on the controls provided by Windows Presentation Foundation (WPF), listed alphabetically.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="6f8ce-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="6f8ce-104">In This Section</span></span>  
- [<span data-ttu-id="6f8ce-105">Border</span><span class="sxs-lookup"><span data-stu-id="6f8ce-105">Border</span></span>](../../../../docs/framework/wpf/controls/border.md)  
- [<span data-ttu-id="6f8ce-106">BulletDecorator</span><span class="sxs-lookup"><span data-stu-id="6f8ce-106">BulletDecorator</span></span>](../../../../docs/framework/wpf/controls/bulletdecorator.md)  
- [<span data-ttu-id="6f8ce-107">Button</span><span class="sxs-lookup"><span data-stu-id="6f8ce-107">Button</span></span>](../../../../docs/framework/wpf/controls/button.md)  
- [<span data-ttu-id="6f8ce-108">Calendar</span><span class="sxs-lookup"><span data-stu-id="6f8ce-108">Calendar</span></span>](../../../../docs/framework/wpf/controls/calendar.md)  
- [<span data-ttu-id="6f8ce-109">Canvas</span><span class="sxs-lookup"><span data-stu-id="6f8ce-109">Canvas</span></span>](../../../../docs/framework/wpf/controls/canvas.md)  
- [<span data-ttu-id="6f8ce-110">CheckBox</span><span class="sxs-lookup"><span data-stu-id="6f8ce-110">CheckBox</span></span>](../../../../docs/framework/wpf/controls/checkbox.md)  
- [<span data-ttu-id="6f8ce-111">ComboBox</span><span class="sxs-lookup"><span data-stu-id="6f8ce-111">ComboBox</span></span>](../../../../docs/framework/wpf/controls/combobox.md)  
- [<span data-ttu-id="6f8ce-112">ContextMenu</span><span class="sxs-lookup"><span data-stu-id="6f8ce-112">ContextMenu</span></span>](../../../../docs/framework/wpf/controls/contextmenu.md)  
- [<span data-ttu-id="6f8ce-113">DataGrid</span><span class="sxs-lookup"><span data-stu-id="6f8ce-113">DataGrid</span></span>](../../../../docs/framework/wpf/controls/datagrid.md)  
- [<span data-ttu-id="6f8ce-114">DatePicker</span><span class="sxs-lookup"><span data-stu-id="6f8ce-114">DatePicker</span></span>](../../../../docs/framework/wpf/controls/datepicker.md)  
- [<span data-ttu-id="6f8ce-115">DockPanel</span><span class="sxs-lookup"><span data-stu-id="6f8ce-115">DockPanel</span></span>](../../../../docs/framework/wpf/controls/dockpanel.md)  
- [<span data-ttu-id="6f8ce-116">DocumentViewer</span><span class="sxs-lookup"><span data-stu-id="6f8ce-116">DocumentViewer</span></span>](../../../../docs/framework/wpf/controls/documentviewer.md)  
- [<span data-ttu-id="6f8ce-117">Expander</span><span class="sxs-lookup"><span data-stu-id="6f8ce-117">Expander</span></span>](../../../../docs/framework/wpf/controls/expander.md)  
- [<span data-ttu-id="6f8ce-118">FlowDocumentPageViewer</span><span class="sxs-lookup"><span data-stu-id="6f8ce-118">FlowDocumentPageViewer</span></span>](../../../../docs/framework/wpf/controls/flowdocumentpageviewer.md)  
- [<span data-ttu-id="6f8ce-119">FlowDocumentReader</span><span class="sxs-lookup"><span data-stu-id="6f8ce-119">FlowDocumentReader</span></span>](../../../../docs/framework/wpf/controls/flowdocumentreader.md)  
- [<span data-ttu-id="6f8ce-120">FlowDocumentScrollViewer</span><span class="sxs-lookup"><span data-stu-id="6f8ce-120">FlowDocumentScrollViewer</span></span>](../../../../docs/framework/wpf/controls/flowdocumentscrollviewer.md)  
- [<span data-ttu-id="6f8ce-121">Frame</span><span class="sxs-lookup"><span data-stu-id="6f8ce-121">Frame</span></span>](../../../../docs/framework/wpf/controls/frame.md)  
- [<span data-ttu-id="6f8ce-122">格線</span><span class="sxs-lookup"><span data-stu-id="6f8ce-122">Grid</span></span>](../../../../docs/framework/wpf/controls/grid.md)  
- [<span data-ttu-id="6f8ce-123">GridSplitter</span><span class="sxs-lookup"><span data-stu-id="6f8ce-123">GridSplitter</span></span>](../../../../docs/framework/wpf/controls/gridsplitter.md)  
- [<span data-ttu-id="6f8ce-124">GroupBox</span><span class="sxs-lookup"><span data-stu-id="6f8ce-124">GroupBox</span></span>](../../../../docs/framework/wpf/controls/groupbox.md)  
- [<span data-ttu-id="6f8ce-125">影像</span><span class="sxs-lookup"><span data-stu-id="6f8ce-125">Image</span></span>](../../../../docs/framework/wpf/controls/image.md)  
- [<span data-ttu-id="6f8ce-126">Label</span><span class="sxs-lookup"><span data-stu-id="6f8ce-126">Label</span></span>](../../../../docs/framework/wpf/controls/label.md)  
- [<span data-ttu-id="6f8ce-127">ListBox</span><span class="sxs-lookup"><span data-stu-id="6f8ce-127">ListBox</span></span>](../../../../docs/framework/wpf/controls/listbox.md)  
- [<span data-ttu-id="6f8ce-128">ListView</span><span class="sxs-lookup"><span data-stu-id="6f8ce-128">ListView</span></span>](../../../../docs/framework/wpf/controls/listview.md)  
- [<span data-ttu-id="6f8ce-129">Menu</span><span class="sxs-lookup"><span data-stu-id="6f8ce-129">Menu</span></span>](../../../../docs/framework/wpf/controls/menu.md)  
- [<span data-ttu-id="6f8ce-130">Panel</span><span class="sxs-lookup"><span data-stu-id="6f8ce-130">Panel</span></span>](../../../../docs/framework/wpf/controls/panel.md)  
- [<span data-ttu-id="6f8ce-131">PasswordBox</span><span class="sxs-lookup"><span data-stu-id="6f8ce-131">PasswordBox</span></span>](../../../../docs/framework/wpf/controls/passwordbox.md)  
- [<span data-ttu-id="6f8ce-132">Popup</span><span class="sxs-lookup"><span data-stu-id="6f8ce-132">Popup</span></span>](../../../../docs/framework/wpf/controls/popup.md)  
- [<span data-ttu-id="6f8ce-133">ProgressBar</span><span class="sxs-lookup"><span data-stu-id="6f8ce-133">ProgressBar</span></span>](../../../../docs/framework/wpf/controls/progressbar.md)  
- [<span data-ttu-id="6f8ce-134">PrintDialog</span><span class="sxs-lookup"><span data-stu-id="6f8ce-134">PrintDialog</span></span>](../../../../docs/framework/wpf/controls/printdialog.md)  
- [<span data-ttu-id="6f8ce-135">RadioButton</span><span class="sxs-lookup"><span data-stu-id="6f8ce-135">RadioButton</span></span>](../../../../docs/framework/wpf/controls/radiobutton.md)  
- [<span data-ttu-id="6f8ce-136">RepeatButton</span><span class="sxs-lookup"><span data-stu-id="6f8ce-136">RepeatButton</span></span>](../../../../docs/framework/wpf/controls/repeatbutton.md)  
- [<span data-ttu-id="6f8ce-137">Ribbon (WPF)</span><span class="sxs-lookup"><span data-stu-id="6f8ce-137">Ribbon (WPF)</span></span>](https://msdn.microsoft.com/library/d2b5749c-43ec-4e1f-9017-8f1d0bbd5d3f)  
- [<span data-ttu-id="6f8ce-138">RichTextBox</span><span class="sxs-lookup"><span data-stu-id="6f8ce-138">RichTextBox</span></span>](../../../../docs/framework/wpf/controls/richtextbox.md)  
- [<span data-ttu-id="6f8ce-139">ScrollBar</span><span class="sxs-lookup"><span data-stu-id="6f8ce-139">ScrollBar</span></span>](../../../../docs/framework/wpf/controls/scrollbar.md)  
- [<span data-ttu-id="6f8ce-140">ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="6f8ce-140">ScrollViewer</span></span>](../../../../docs/framework/wpf/controls/scrollviewer.md)  
- [<span data-ttu-id="6f8ce-141">Separator</span><span class="sxs-lookup"><span data-stu-id="6f8ce-141">Separator</span></span>](../../../../docs/framework/wpf/controls/separator.md)  
- [<span data-ttu-id="6f8ce-142">Slider</span><span class="sxs-lookup"><span data-stu-id="6f8ce-142">Slider</span></span>](../../../../docs/framework/wpf/controls/slider.md)  
- [<span data-ttu-id="6f8ce-143">StackPanel</span><span class="sxs-lookup"><span data-stu-id="6f8ce-143">StackPanel</span></span>](../../../../docs/framework/wpf/controls/stackpanel.md)  
- [<span data-ttu-id="6f8ce-144">StatusBar</span><span class="sxs-lookup"><span data-stu-id="6f8ce-144">StatusBar</span></span>](../../../../docs/framework/wpf/controls/statusbar.md)  
- [<span data-ttu-id="6f8ce-145">TabControl</span><span class="sxs-lookup"><span data-stu-id="6f8ce-145">TabControl</span></span>](../../../../docs/framework/wpf/controls/tabcontrol.md)  
- [<span data-ttu-id="6f8ce-146">TextBlock</span><span class="sxs-lookup"><span data-stu-id="6f8ce-146">TextBlock</span></span>](../../../../docs/framework/wpf/controls/textblock.md)  
- [<span data-ttu-id="6f8ce-147">TextBox</span><span class="sxs-lookup"><span data-stu-id="6f8ce-147">TextBox</span></span>](../../../../docs/framework/wpf/controls/textbox.md)  
- [<span data-ttu-id="6f8ce-148">ToolBar</span><span class="sxs-lookup"><span data-stu-id="6f8ce-148">ToolBar</span></span>](../../../../docs/framework/wpf/controls/toolbar.md)  
- [<span data-ttu-id="6f8ce-149">ToolTip</span><span class="sxs-lookup"><span data-stu-id="6f8ce-149">ToolTip</span></span>](../../../../docs/framework/wpf/controls/tooltip.md)  
- [<span data-ttu-id="6f8ce-150">TreeView</span><span class="sxs-lookup"><span data-stu-id="6f8ce-150">TreeView</span></span>](../../../../docs/framework/wpf/controls/treeview.md)  
- [<span data-ttu-id="6f8ce-151">WrapPanel</span><span class="sxs-lookup"><span data-stu-id="6f8ce-151">WrapPanel</span></span>](../../../../docs/framework/wpf/controls/wrappanel.md)  
- [<span data-ttu-id="6f8ce-152">Viewbox</span><span class="sxs-lookup"><span data-stu-id="6f8ce-152">Viewbox</span></span>](../../../../docs/framework/wpf/controls/viewbox.md)  
+## <a name="in-this-section"></a><span data-ttu-id="27def-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="27def-104">In This Section</span></span>  
+ [<span data-ttu-id="27def-105">Border</span><span class="sxs-lookup"><span data-stu-id="27def-105">Border</span></span>](../../../../docs/framework/wpf/controls/border.md)  
+ [<span data-ttu-id="27def-106">BulletDecorator</span><span class="sxs-lookup"><span data-stu-id="27def-106">BulletDecorator</span></span>](../../../../docs/framework/wpf/controls/bulletdecorator.md)  
+ [<span data-ttu-id="27def-107">Button</span><span class="sxs-lookup"><span data-stu-id="27def-107">Button</span></span>](../../../../docs/framework/wpf/controls/button.md)  
+ [<span data-ttu-id="27def-108">Calendar</span><span class="sxs-lookup"><span data-stu-id="27def-108">Calendar</span></span>](../../../../docs/framework/wpf/controls/calendar.md)  
+ [<span data-ttu-id="27def-109">Canvas</span><span class="sxs-lookup"><span data-stu-id="27def-109">Canvas</span></span>](../../../../docs/framework/wpf/controls/canvas.md)  
+ [<span data-ttu-id="27def-110">CheckBox</span><span class="sxs-lookup"><span data-stu-id="27def-110">CheckBox</span></span>](../../../../docs/framework/wpf/controls/checkbox.md)  
+ [<span data-ttu-id="27def-111">ComboBox</span><span class="sxs-lookup"><span data-stu-id="27def-111">ComboBox</span></span>](../../../../docs/framework/wpf/controls/combobox.md)  
+ [<span data-ttu-id="27def-112">ContextMenu</span><span class="sxs-lookup"><span data-stu-id="27def-112">ContextMenu</span></span>](../../../../docs/framework/wpf/controls/contextmenu.md)  
+ [<span data-ttu-id="27def-113">DataGrid</span><span class="sxs-lookup"><span data-stu-id="27def-113">DataGrid</span></span>](../../../../docs/framework/wpf/controls/datagrid.md)  
+ [<span data-ttu-id="27def-114">DatePicker</span><span class="sxs-lookup"><span data-stu-id="27def-114">DatePicker</span></span>](../../../../docs/framework/wpf/controls/datepicker.md)  
+ [<span data-ttu-id="27def-115">DockPanel</span><span class="sxs-lookup"><span data-stu-id="27def-115">DockPanel</span></span>](../../../../docs/framework/wpf/controls/dockpanel.md)  
+ [<span data-ttu-id="27def-116">DocumentViewer</span><span class="sxs-lookup"><span data-stu-id="27def-116">DocumentViewer</span></span>](../../../../docs/framework/wpf/controls/documentviewer.md)  
+ [<span data-ttu-id="27def-117">Expander</span><span class="sxs-lookup"><span data-stu-id="27def-117">Expander</span></span>](../../../../docs/framework/wpf/controls/expander.md)  
+ [<span data-ttu-id="27def-118">FlowDocumentPageViewer</span><span class="sxs-lookup"><span data-stu-id="27def-118">FlowDocumentPageViewer</span></span>](../../../../docs/framework/wpf/controls/flowdocumentpageviewer.md)  
+ [<span data-ttu-id="27def-119">FlowDocumentReader</span><span class="sxs-lookup"><span data-stu-id="27def-119">FlowDocumentReader</span></span>](../../../../docs/framework/wpf/controls/flowdocumentreader.md)  
+ [<span data-ttu-id="27def-120">FlowDocumentScrollViewer</span><span class="sxs-lookup"><span data-stu-id="27def-120">FlowDocumentScrollViewer</span></span>](../../../../docs/framework/wpf/controls/flowdocumentscrollviewer.md)  
+ [<span data-ttu-id="27def-121">Frame</span><span class="sxs-lookup"><span data-stu-id="27def-121">Frame</span></span>](../../../../docs/framework/wpf/controls/frame.md)  
+ [<span data-ttu-id="27def-122">格線</span><span class="sxs-lookup"><span data-stu-id="27def-122">Grid</span></span>](../../../../docs/framework/wpf/controls/grid.md)  
+ [<span data-ttu-id="27def-123">GridSplitter</span><span class="sxs-lookup"><span data-stu-id="27def-123">GridSplitter</span></span>](../../../../docs/framework/wpf/controls/gridsplitter.md)  
+ [<span data-ttu-id="27def-124">GroupBox</span><span class="sxs-lookup"><span data-stu-id="27def-124">GroupBox</span></span>](../../../../docs/framework/wpf/controls/groupbox.md)  
+ [<span data-ttu-id="27def-125">影像</span><span class="sxs-lookup"><span data-stu-id="27def-125">Image</span></span>](../../../../docs/framework/wpf/controls/image.md)  
+ [<span data-ttu-id="27def-126">Label</span><span class="sxs-lookup"><span data-stu-id="27def-126">Label</span></span>](../../../../docs/framework/wpf/controls/label.md)  
+ [<span data-ttu-id="27def-127">ListBox</span><span class="sxs-lookup"><span data-stu-id="27def-127">ListBox</span></span>](../../../../docs/framework/wpf/controls/listbox.md)  
+ [<span data-ttu-id="27def-128">ListView</span><span class="sxs-lookup"><span data-stu-id="27def-128">ListView</span></span>](../../../../docs/framework/wpf/controls/listview.md)  
+ [<span data-ttu-id="27def-129">Menu</span><span class="sxs-lookup"><span data-stu-id="27def-129">Menu</span></span>](../../../../docs/framework/wpf/controls/menu.md)  
+ [<span data-ttu-id="27def-130">Panel</span><span class="sxs-lookup"><span data-stu-id="27def-130">Panel</span></span>](../../../../docs/framework/wpf/controls/panel.md)  
+ [<span data-ttu-id="27def-131">PasswordBox</span><span class="sxs-lookup"><span data-stu-id="27def-131">PasswordBox</span></span>](../../../../docs/framework/wpf/controls/passwordbox.md)  
+ [<span data-ttu-id="27def-132">Popup</span><span class="sxs-lookup"><span data-stu-id="27def-132">Popup</span></span>](../../../../docs/framework/wpf/controls/popup.md)  
+ [<span data-ttu-id="27def-133">ProgressBar</span><span class="sxs-lookup"><span data-stu-id="27def-133">ProgressBar</span></span>](../../../../docs/framework/wpf/controls/progressbar.md)  
+ [<span data-ttu-id="27def-134">PrintDialog</span><span class="sxs-lookup"><span data-stu-id="27def-134">PrintDialog</span></span>](../../../../docs/framework/wpf/controls/printdialog.md)  
+ [<span data-ttu-id="27def-135">RadioButton</span><span class="sxs-lookup"><span data-stu-id="27def-135">RadioButton</span></span>](../../../../docs/framework/wpf/controls/radiobutton.md)  
+ [<span data-ttu-id="27def-136">RepeatButton</span><span class="sxs-lookup"><span data-stu-id="27def-136">RepeatButton</span></span>](../../../../docs/framework/wpf/controls/repeatbutton.md)  
+ [<span data-ttu-id="27def-137">Ribbon (WPF)</span><span class="sxs-lookup"><span data-stu-id="27def-137">Ribbon (WPF)</span></span>](https://msdn.microsoft.com/library/d2b5749c-43ec-4e1f-9017-8f1d0bbd5d3f)  
+ [<span data-ttu-id="27def-138">RichTextBox</span><span class="sxs-lookup"><span data-stu-id="27def-138">RichTextBox</span></span>](../../../../docs/framework/wpf/controls/richtextbox.md)  
+ [<span data-ttu-id="27def-139">ScrollBar</span><span class="sxs-lookup"><span data-stu-id="27def-139">ScrollBar</span></span>](../../../../docs/framework/wpf/controls/scrollbar.md)  
+ [<span data-ttu-id="27def-140">ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="27def-140">ScrollViewer</span></span>](../../../../docs/framework/wpf/controls/scrollviewer.md)  
+ [<span data-ttu-id="27def-141">Separator</span><span class="sxs-lookup"><span data-stu-id="27def-141">Separator</span></span>](../../../../docs/framework/wpf/controls/separator.md)  
+ [<span data-ttu-id="27def-142">Slider</span><span class="sxs-lookup"><span data-stu-id="27def-142">Slider</span></span>](../../../../docs/framework/wpf/controls/slider.md)  
+ [<span data-ttu-id="27def-143">StackPanel</span><span class="sxs-lookup"><span data-stu-id="27def-143">StackPanel</span></span>](../../../../docs/framework/wpf/controls/stackpanel.md)  
+ [<span data-ttu-id="27def-144">StatusBar</span><span class="sxs-lookup"><span data-stu-id="27def-144">StatusBar</span></span>](../../../../docs/framework/wpf/controls/statusbar.md)  
+ [<span data-ttu-id="27def-145">TabControl</span><span class="sxs-lookup"><span data-stu-id="27def-145">TabControl</span></span>](../../../../docs/framework/wpf/controls/tabcontrol.md)  
+ [<span data-ttu-id="27def-146">TextBlock</span><span class="sxs-lookup"><span data-stu-id="27def-146">TextBlock</span></span>](../../../../docs/framework/wpf/controls/textblock.md)  
+ [<span data-ttu-id="27def-147">TextBox</span><span class="sxs-lookup"><span data-stu-id="27def-147">TextBox</span></span>](../../../../docs/framework/wpf/controls/textbox.md)  
+ [<span data-ttu-id="27def-148">ToolBar</span><span class="sxs-lookup"><span data-stu-id="27def-148">ToolBar</span></span>](../../../../docs/framework/wpf/controls/toolbar.md)  
+ [<span data-ttu-id="27def-149">ToolTip</span><span class="sxs-lookup"><span data-stu-id="27def-149">ToolTip</span></span>](../../../../docs/framework/wpf/controls/tooltip.md)  
+ [<span data-ttu-id="27def-150">TreeView</span><span class="sxs-lookup"><span data-stu-id="27def-150">TreeView</span></span>](../../../../docs/framework/wpf/controls/treeview.md)  
+ [<span data-ttu-id="27def-151">WrapPanel</span><span class="sxs-lookup"><span data-stu-id="27def-151">WrapPanel</span></span>](../../../../docs/framework/wpf/controls/wrappanel.md)  
+ [<span data-ttu-id="27def-152">Viewbox</span><span class="sxs-lookup"><span data-stu-id="27def-152">Viewbox</span></span>](../../../../docs/framework/wpf/controls/viewbox.md)  
   
-## <a name="reference"></a><span data-ttu-id="6f8ce-153">參考資料</span><span class="sxs-lookup"><span data-stu-id="6f8ce-153">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="27def-153">參考資料</span><span class="sxs-lookup"><span data-stu-id="27def-153">Reference</span></span>  
  <xref:System.Windows.Controls>  
   
  <xref:System.Windows.Controls.Primitives>  
   
-## <a name="related-sections"></a><span data-ttu-id="6f8ce-154">相關章節</span><span class="sxs-lookup"><span data-stu-id="6f8ce-154">Related Sections</span></span>  
- [<span data-ttu-id="6f8ce-155">控制項自訂</span><span class="sxs-lookup"><span data-stu-id="6f8ce-155">Control Customization</span></span>](../../../../docs/framework/wpf/controls/control-customization.md)  
+## <a name="related-sections"></a><span data-ttu-id="27def-154">相關章節</span><span class="sxs-lookup"><span data-stu-id="27def-154">Related Sections</span></span>  
+ [<span data-ttu-id="27def-155">控制項自訂</span><span class="sxs-lookup"><span data-stu-id="27def-155">Control Customization</span></span>](../../../../docs/framework/wpf/controls/control-customization.md)  
   
- [<span data-ttu-id="6f8ce-156">依分類列出控制項</span><span class="sxs-lookup"><span data-stu-id="6f8ce-156">Controls by Category</span></span>](../../../../docs/framework/wpf/controls/controls-by-category.md)  
+ [<span data-ttu-id="27def-156">依分類列出控制項</span><span class="sxs-lookup"><span data-stu-id="27def-156">Controls by Category</span></span>](../../../../docs/framework/wpf/controls/controls-by-category.md)  
   
- [<span data-ttu-id="6f8ce-157">WPF 內容模型</span><span class="sxs-lookup"><span data-stu-id="6f8ce-157">WPF Content Model</span></span>](../../../../docs/framework/wpf/controls/wpf-content-model.md)
+ [<span data-ttu-id="27def-157">WPF 內容模型</span><span class="sxs-lookup"><span data-stu-id="27def-157">WPF Content Model</span></span>](../../../../docs/framework/wpf/controls/wpf-content-model.md)
