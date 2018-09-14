@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8f806a1f1f7840f21e82d77d1b639b9318259e7
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.openlocfilehash: ab01005b6f73cf1dbae5d0e44df4440bf6a1d7e6
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44366120"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45527495"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>逐步解說：我的第一個 WPF 桌面應用程式
 
@@ -42,9 +42,9 @@ ms.locfileid: "44366120"
 
 ## <a name="prerequisites"></a>必要條件
 
-- Visual Studio 2012 或更新版本
+- Visual Studio 2012 或更新版本 （這篇文章根據 Visual Studio 2017）
 
-如需有關如何安裝最新版的 Visual Studio 的詳細資訊，請參閱 <<c0> [ 安裝 Visual Studio](/visualstudio/install/install-visual-studio)。
+   如需有關如何安裝最新版的 Visual Studio 的詳細資訊，請參閱 <<c0> [ 安裝 Visual Studio](/visualstudio/install/install-visual-studio)。
 
 ## <a name="create-the-application-project"></a>建立應用程式專案
 

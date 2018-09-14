@@ -3,11 +3,11 @@ title: CSDL 規格
 ms.date: 03/30/2017
 ms.assetid: 6bb94c37-87da-447a-8dfd-83d1c4b5a2d2
 ms.openlocfilehash: f3acb7933392fcd8a1d952354a2b45e4b588834e
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44710096"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45518918"
 ---
 # <a name="csdl-specification"></a>CSDL 規格
 [Msdn.microsoft.com/data/ef](https://msdn.microsoft.com/data/ef)網站現在是 Entity Framework 內容的主要位置。  

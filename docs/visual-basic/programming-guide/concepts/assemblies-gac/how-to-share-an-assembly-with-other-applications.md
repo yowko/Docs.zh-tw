@@ -3,11 +3,11 @@ title: 如何： 共用組件與其他應用程式 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5388aedc-cb42-4622-8b70-8e701eee057a
 ms.openlocfilehash: 3d29a3558a64c02fc8c59035f2fee5c64c4a776f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44200138"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45515921"
 ---
 # <a name="how-to-share-an-assembly-with-other-applications-visual-basic"></a>如何： 共用組件與其他應用程式 (Visual Basic)
 組件可以是私用或共用的︰根據預設，大多數簡單的程式由於不會供其他應用程式使用，因此只會包含一個私用組件。  

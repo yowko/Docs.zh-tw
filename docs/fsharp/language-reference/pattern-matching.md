@@ -3,11 +3,11 @@ title: 模式比對 (F#)
 description: '了解模式如何在 F # 中用來比較具有邏輯結構的資料、 將資料分解為構成部分，或從資料擷取資訊。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 5ad3d3e1a78246afdfa2948fd0fb84fa04686d30
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44710070"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45518317"
 ---
 # <a name="pattern-matching"></a>模式比對
 

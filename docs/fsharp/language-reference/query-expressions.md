@@ -3,11 +3,11 @@ title: 查詢運算式 (F#)
 description: '深入了解 F # 程式設計語言中的 LINQ 查詢運算式支援。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 6586d991dde550380d04c4d9831bb954eb94a715
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44184332"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45519833"
 ---
 # <a name="query-expressions"></a>查詢運算式
 

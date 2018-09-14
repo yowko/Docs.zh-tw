@@ -2,12 +2,12 @@
 title: 在 Visual Studio 中建立啟用 AJAX 的 WCF 服務和 ASP.NET 用戶端
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: 07a1e903991e09243572f2a99c19edae7f9793b6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 954ee0409f370c3fa28814a70d51334fd75f7b79
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43384282"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45558037"
 ---
 # <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>HOW TO：建立啟用 AJAX 的 WCF 服務和存取該服務的 ASP.NET 用戶端
 
@@ -25,7 +25,7 @@ ms.locfileid: "43384282"
 
 1. 在 **新的 ASP.NET Web 應用程式**對話方塊中，選取**空白**，然後選取**確定**。
 
-   ![Visual Studio 中 ASP.NET web 應用程式類型對話方塊](../media/create-an-ajax-wcf-asp-net-client/new-asp-net-web-app-type.png)
+   ![Visual Studio 中 ASP.NET web 應用程式類型對話方塊](media/create-an-ajax-wcf-asp-net-client/new-asp-net-web-app-type.png)
 
 ## <a name="add-a-web-form"></a>加入 web form
 
@@ -51,7 +51,7 @@ ms.locfileid: "43384282"
 
 1. 在**加入新項目**] 對話方塊中，展開**已安裝** > **Visual C#** > **Web**類別目錄，然後選取 [ **WCF 服務 (ajax)** 範本。
 
-   ![在 Visual Studio 中的 WCF 服務 (ajax) 的項目範本](../media/create-an-ajax-wcf-asp-net-client/add-wcf-service.png)
+   ![在 Visual Studio 中的 WCF 服務 (ajax) 的項目範本](media/create-an-ajax-wcf-asp-net-client/add-wcf-service.png)
 
 1. 將服務命名**CostService** ，然後選取**新增**。
 
