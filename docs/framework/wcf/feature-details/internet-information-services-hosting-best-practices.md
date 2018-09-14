@@ -3,11 +3,11 @@ title: 網際網路資訊服務裝載最佳做法
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
 ms.openlocfilehash: 0ca5e20b846a1b10f5a52748ff06a4af958b2f4c
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44338606"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45588523"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>網際網路資訊服務裝載最佳做法
 本主題概述裝載 Windows Communication Foundation (WCF) 服務的最佳作法。  
