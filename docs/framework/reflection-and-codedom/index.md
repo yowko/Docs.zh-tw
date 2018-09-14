@@ -8,11 +8,11 @@ ms.assetid: f78ec137-df0e-48c9-a7a0-5f6a1055f011
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e90857fcf02dbd0dd888b0658f3ab626bc5b11bd
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "44698286"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45585625"
 ---
 # <a name="dynamic-programming-in-the-net-framework"></a>在 .NET Framework 中進行動態程式設計
 文件中的這一節提供 .NET Framework 中動態程式設計的相關資訊。  

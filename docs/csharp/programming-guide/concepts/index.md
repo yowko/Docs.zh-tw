@@ -3,11 +3,11 @@ title: 程式設計概念 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
 ms.openlocfilehash: f71e05e05e3d027b6190142e8062ea3caf95edb7
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "44710686"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45569147"
 ---
 # <a name="programming-concepts-c"></a>程式設計概念 (C#)
 本節說明 C# 語言的程式設計概念。  

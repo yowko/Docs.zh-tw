@@ -1,16 +1,16 @@
 ---
 title: 開始使用 Visual Basic
-ms.date: 08/10/2017
+ms.date: 09/10/2018
 helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-ms.openlocfilehash: 373f5815e1ca466545da4e2368bdf55e944d28f8
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.openlocfilehash: c17b3e1849664bb1a5d56b60e8f4121fedfcdae3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44367570"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45557769"
 ---
 # <a name="get-started-with-visual-basic"></a>開始使用 Visual Basic
 本文的這一節可協助您開始進行 Visual Basic 應用程式開發。  
@@ -31,12 +31,6 @@ ms.locfileid: "44367570"
   
 [Visual Basic 程式設計人員的其他資源](additional-resources.md)  
 提供網站和新聞群組清單，協助您找到常見問題的解答。  
-
-## <a name="develop-net-core-applications-with-visual-basic"></a>使用 Visual Basic 開發 .NET Core 應用程式
-
-[在 Visual Studio 2017 中使用 .NET Core 建置 Visual Basic Hello World 應用程式](../../core/tutorials/vb-with-visual-studio.md) 
-
-[在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core 建置類別庫](../../core/tutorials/vb-library-with-visual-studio.md) 
 
 ## <a name="see-also"></a>另請參閱
  [取得 Visual Basic](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)  
