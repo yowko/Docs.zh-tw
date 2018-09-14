@@ -10,11 +10,11 @@ ms.assetid: 7d90ea7a-150f-4f97-98a7-f9c26541b9a3
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7f25eaaa17d4c4bd2e9522591bb0fd66445cdb6f
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45516694"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45610059"
 ---
 # <a name="making-an-image-easier-to-debug-in-net"></a>使您更輕鬆地在.NET 中偵錯映像
 

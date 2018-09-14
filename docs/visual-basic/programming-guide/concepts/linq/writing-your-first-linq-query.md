@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
 ms.openlocfilehash: 4c04c00c5392d8ba363346b06c806ec79041c439
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44708526"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45597714"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>撰寫第一個 LINQ 查詢 (Visual Basic)
 「查詢」是指從資料來源中擷取資料的運算式。 查詢會以專用的查詢語言來表示。 經過一段時間，不同的語言所開發的不同類型的資料來源，例如 SQL 用於關聯式資料庫，而 XQuery 用於 XML。 這可讓您所需的應用程式開發人員若要了解新的查詢語言，每種類型的資料來源或支援的資料格式。  
