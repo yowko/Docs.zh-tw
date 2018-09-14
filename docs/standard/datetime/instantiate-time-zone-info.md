@@ -12,11 +12,11 @@ ms.assetid: 8cb620e5-c6a6-4267-a52e-beeb73cd1a34
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8c8ff38325e26dd1bc946f6f12c365b6dea3e228
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44508227"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45613926"
 ---
 # <a name="how-to-instantiate-a-timezoneinfo-object"></a>如何： 將 TimeZoneInfo 物件具現化
 

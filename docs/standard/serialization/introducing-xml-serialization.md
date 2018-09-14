@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: 805a495790266b34ede030b76fbd83e6f172ceaf
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 66412c620b8107312e5d58fef5cf1b5d9ee90107
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44206113"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45615510"
 ---
 # <a name="introducing-xml-serialization"></a>XML 序列化簡介
 
@@ -111,7 +111,7 @@ public class OrderForm
 
 ## <a name="advantages-of-using-xml-serialization"></a>使用 XML 序列化的優點
 
-**XmlSerializer** 類別讓您在將物件序列化為 XML 時，能完整而靈活地控制。 若您建立 XML Web 服務，可套用控制序列化的屬性至類別與成員，以確保 XML 輸出符合特定結構描述。
+**XmlSerializer**類別可讓您完整而靈活地控制當您序列化物件為 XML。 若您建立 XML Web 服務，可套用控制序列化的屬性至類別與成員，以確保 XML 輸出符合特定結構描述。
 
 例如， **XmlSerializer** 可讓您：
 

@@ -4,12 +4,12 @@ description: 了解如何定義和使用 ref 傳回值和 ref 區域變數值
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: a869cd50c5512c9893b6e5056aa58e1f92ee26f4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6250d2b0c3490cce18623d6b06d5e1a352f22c09
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510561"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45616136"
 ---
 # <a name="ref-returns-and-ref-locals"></a>ref 傳回值和 ref 區域變數
 
@@ -58,7 +58,7 @@ ref 傳回值是在已呼叫方法的範圍中，另一個變數的別名。 您
 - 當您讀取其值時，是讀取別名的變數值。
 - 如果您以「傳址」方式傳回它，就是將別名傳回至同一個變數。
 - 如果您以「傳址」方式將它傳遞到另一個方法，就是將參考傳遞至別名的變數。
-- 當您建立 [ref 區域變數](#ref-local)別名時，就是對相同變數建立新的別名。
+- 當您建立 [ref 區域變數](#ref-locals)別名時，就是對相同變數建立新的別名。
 
 
 ## <a name="ref-locals"></a>ref 區域變數
@@ -122,7 +122,7 @@ refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to differe
 
 如果搜尋數目較接近陣列結尾，則這個第二個版本對較長的序列更具效率。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ref 關鍵字](../../language-reference/keywords/ref.md)  
 - [具備實值型別的參考語意](../../../csharp/reference-semantics-with-value-types.md)

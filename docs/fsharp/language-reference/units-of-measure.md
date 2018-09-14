@@ -3,11 +3,11 @@ title: 測量單位 (F#)
 description: '了解如何浮點數和帶正負號的整數值，F # 中可以有關聯的量值，通常用來表示長度、 磁碟區，以及大量的單位。'
 ms.date: 05/16/2016
 ms.openlocfilehash: ad2193e25f3c0cee6e73cd529ab43d1e4b6b549b
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45519519"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45616149"
 ---
 # <a name="units-of-measure"></a>測量單位
 

@@ -3,11 +3,11 @@ title: 委派 (F#)
 description: '了解如何使用 F # 中的委派。'
 ms.date: 05/16/2016
 ms.openlocfilehash: be58997dffe8fcd949bbc2d47d86ffccc157d43e
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45517085"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45615426"
 ---
 # <a name="delegates"></a>委派
 
