@@ -3,11 +3,11 @@ title: 自訂尋找準則
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
 ms.openlocfilehash: 699260fcef7680710f721d213dbf1126ebf7a896
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227242"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "44757207"
 ---
 # <a name="custom-find-criteria"></a>自訂尋找準則
 此範例示範如何使用邏輯建立自訂範圍比對，以及如何實作自訂探索服務。 用戶端使用自訂範圍比對功能來精簡並進一步建立在 WCF 探索之系統提供的尋找功能之上。 此範例包含的案例如下：  

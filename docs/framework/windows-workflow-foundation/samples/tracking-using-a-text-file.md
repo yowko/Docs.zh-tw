@@ -3,11 +3,11 @@ title: 使用文字檔追蹤
 ms.date: 03/30/2017
 ms.assetid: 56a82682-73c2-4b91-a206-4d8bb12c561b
 ms.openlocfilehash: 19b4d544bc1d1c5bc9ebfa51b4ba28eb82c525d0
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44707295"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45513618"
 ---
 # <a name="tracking-using-a-text-file"></a>使用文字檔追蹤
 此範例示範如何建立自訂追蹤參與者來擴充追蹤在 Windows Workflow Foundation (WF)。 追蹤參與者是可接收執行階段所發出之追蹤記錄的 .NET Framework 類別。 您可以建立追蹤參與者，將追蹤事件傳輸至特定狀況所需的任何目的地。 例如，ETW (Windows 事件追蹤) 追蹤參與者是在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中提供的。 這個範例中的追蹤參與者會將 XML 格式的記錄寫入至文字檔。  
