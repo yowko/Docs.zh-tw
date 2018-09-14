@@ -8,11 +8,11 @@ helpviewer_keywords:
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
 ms.openlocfilehash: 26317fad5796989a58a48e4f26549805b279228a
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44705920"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45588538"
 ---
 # <a name="toolstrip-technology-summary"></a>ToolStrip 技術摘要
 本主題提供有關 `ToolStrip` 控制項及支援這些控制項之類別的摘要資訊。  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Atn function
 ms.assetid: 4d2d82e7-6924-42fe-a4a7-b4dd5bebbd0c
 ms.openlocfilehash: da0b612feb5b9a479d50f52cf65e38007ab3b196
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44700189"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45570154"
 ---
 # <a name="math-functions-visual-basic"></a>數學函式 (Visual Basic)
 方法的<xref:System.Math?displayProperty=nameWithType>類別提供三角函數、 對數以及其他一般數學函數。  

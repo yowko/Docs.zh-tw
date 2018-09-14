@@ -3,11 +3,11 @@ title: OFTYPE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 6d259ca7-bbf0-40f8-a154-181d25c0d67e
 ms.openlocfilehash: c90950e11cbfca7a49b505c1654d08be504990e1
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44274205"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45596984"
 ---
 # <a name="oftype-entity-sql"></a>OFTYPE (Entity SQL)
 從屬於特定型別的查詢運算式中傳回物件的集合。  

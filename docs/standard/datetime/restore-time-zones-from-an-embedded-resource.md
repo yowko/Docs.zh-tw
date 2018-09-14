@@ -12,11 +12,11 @@ ms.assetid: 6b7b4de9-da07-47e3-8f4c-823f81798ee7
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 99d38b336b5e655dd1c96682eec90c5fbe8469d6
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262720"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45595395"
 ---
 # <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>如何： 從內嵌資源還原時區
 

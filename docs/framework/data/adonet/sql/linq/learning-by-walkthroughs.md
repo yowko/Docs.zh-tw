@@ -3,11 +3,11 @@ title: 依逐步解說學習
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
 ms.openlocfilehash: 1386d0e8fadddab5cd15818cb616bf331262e654
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44707733"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45591681"
 ---
 # <a name="learning-by-walkthroughs"></a>依逐步解說學習
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文件提供了幾個逐步解說。 本主題會處理某些一般逐步解說問題 (包含疑難排解)，並提供數個入門級逐步解說的連結，供您學習 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]。  

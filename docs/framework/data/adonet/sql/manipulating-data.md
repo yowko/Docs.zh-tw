@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
 ms.openlocfilehash: 4d5de5ed3f557842fb28a3cf92b1923a709195d2
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44366930"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45568418"
 ---
 # <a name="manipulating-data"></a>操作資料
 引進 Multiple Active Result Set (MARS) 之前，開發人員必須使用多重連接或伺服器端游標來解析某些案例。 此外，當在異動中使用多重連接時，繫結連接 (使用**sp_getbindtoken**並**sp_bindsession**) 都是必要項。 下列案例顯示如何以啟用 MARS 的連接取代多重連接。  

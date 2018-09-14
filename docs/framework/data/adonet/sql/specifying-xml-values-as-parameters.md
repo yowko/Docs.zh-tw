@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
 ms.openlocfilehash: 0003e6c5e9499c066f47202a6dd03fc86268d679
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45517979"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45591143"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>將 XML 值指定為參數
 如果查詢需要的參數，其值為 XML 字串，開發人員可以提供使用的執行個體該值**SqlXml**資料型別。 真的有沒什麼訣竅;SQL Server 中的 XML 資料行接受參數值中其他資料型別完全相同的方式。  
