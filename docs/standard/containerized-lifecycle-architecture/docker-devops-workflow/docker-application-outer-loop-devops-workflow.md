@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/10/2018
 ms.openlocfilehash: a03853a508cfb3d5dd5fbfe66e4ef484b685faaa
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45587749"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45653235"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker 應用程式的外部迴圈 DevOps 工作流程中的步驟
 

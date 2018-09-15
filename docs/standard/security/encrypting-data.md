@@ -14,11 +14,11 @@ ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b583df2eb6098fa28dd8999a6796e5053d13cab4
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44272406"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45658732"
 ---
 # <a name="encrypting-data"></a>加密資料
 對稱式加密和非對稱式加密是使用不同的程序執行。 對稱式加密在資料流上執行，因此適用於加密大量資料。 非對稱式加密在少數的位元組上執行，因此只適用於小量的資料。  
