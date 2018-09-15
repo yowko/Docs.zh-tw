@@ -10,11 +10,11 @@ ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3b106005ff07f55e05ae66dba94041cd8b5c24bb
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 09/14/2018
-ms.locfileid: "45583803"
+ms.locfileid: "45625642"
 ---
 # <a name="byte-data-type-visual-basic"></a>Byte 資料類型 (Visual Basic)
 保留範圍從 0 到 255 的不帶正負號的 8 位元 （1 個位元組） 整數。
