@@ -5,11 +5,11 @@ author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
 ms.openlocfilehash: 2623c5d21121b71960d174301c35bdd0d7f8558a
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45508105"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45618515"
 ---
 # <a name="build-net-core-from-source"></a>從原始檔建置 .NET Core
 
