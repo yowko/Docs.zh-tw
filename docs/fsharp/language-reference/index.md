@@ -3,11 +3,11 @@ title: F# 語言參考
 description: '尋找 F # 語言的功能資訊此參考以語言的語彙基元、 概念、 類型、 運算式和編譯器支援建構的主題。'
 ms.date: 05/16/2016
 ms.openlocfilehash: adce37ee393673b7611ad24f385c8b8106f6ce86
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44710938"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45646411"
 ---
 # <a name="f-language-reference"></a>F# 語言參考
 

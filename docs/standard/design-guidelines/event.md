@@ -13,11 +13,11 @@ ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b257da73d33fae54ef464e9dd69906316b87fd88
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44709690"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45638908"
 ---
 # <a name="event-design"></a>事件設計
 事件是最常使用的回呼 （允許呼叫使用者程式碼架構的建構）。 其他回呼機制包括做委派、 虛擬成員，以及以介面為基礎的隨插即用集的成員。資料可用性研究表示大部分的開發人員可以更輕鬆地使用事件，比使用其他回呼機制。 使用 Visual Studio 和許多語言妥善整合事件。  

@@ -3,11 +3,11 @@ title: 列舉 (F#)
 description: '了解如何使用 F # 列舉型別取代常值，讓程式碼，更容易讀取與維護。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 47fb353c2698f8b1474834ebbd1b0eff2c7f76e7
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45533525"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45638372"
 ---
 # <a name="enumerations"></a>列舉
 

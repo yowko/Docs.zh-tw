@@ -3,11 +3,11 @@ title: 組態
 ms.date: 03/30/2017
 ms.assetid: 8637aeaf-ac9e-49b8-93f4-da15dee45277
 ms.openlocfilehash: caa712aa52da01ce44335a361fd6c9f5215316bf
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "44757233"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45649235"
 ---
 # <a name="confirmation"></a>組態
 這個範例示範四個有關 <xref:System.Activities.Statements.CompensableActivity> 和確認用法的一般案例。 範例中會執行四個工作流程以示範確認。 這個範例有宣告式和命令式版本。  
