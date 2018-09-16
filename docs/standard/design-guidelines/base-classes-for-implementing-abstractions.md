@@ -9,11 +9,11 @@ ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9f326ee895251678c7a23ea84a11e83951edf2cc
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45519467"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45677067"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>實作抽象的基底類別
 嚴格來說，類別就變得基底類別衍生自此類別的另一個類別。 不過，為了本章節中，基底類別是設計主要是為了提供常見的抽象概念，或重複使用一些其他類別的預設實作透過繼承的類別。 基底類別通常位於繼承階層架構，在階層的根的抽象概念與數個在底部的自訂實作之間的中間。  

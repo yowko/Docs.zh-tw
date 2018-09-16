@@ -3,11 +3,11 @@ title: 逐步解說： 在 Visual Studio (Visual Basic) 中內嵌來自 Microsof
 ms.date: 07/20/2015
 ms.assetid: 26b44286-5066-4ad4-8e6a-c24902be347c
 ms.openlocfilehash: bc8f7585964bdd60bac5d5a466f6276fab288c78
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44514510"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45668206"
 ---
 # <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a>逐步解說： 在 Visual Studio (Visual Basic) 中內嵌來自 Microsoft Office 組件的類型資訊
 如果您在參考 COM 物件的應用程式中內嵌類型資訊，就不必使用主要 Interop 組件 (PIA)。 此外，內嵌的類型資訊可讓您確保應用程式的版本獨立。 也就是說，您可以撰寫程式來使用 COM 程式庫多個版本的類型，而不需每個版本使用特定的 PIA。 當應用程式使用來自 Microsoft Office 程式庫的物件時，這是十分常見的案例。 當您內嵌類型資訊時，可讓相同組建的程式在個別電腦上使用不同版本的 Microsoft Office，而不需要針對每個版本的 Microsoft Office 重新部署程式或 PIA。  

@@ -12,11 +12,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 85cd0e4910fdef28721cfb4be341b74fcf1f3c1e
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45583686"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45675661"
 ---
 # <a name="ui-automation-text-pattern-how-to-topics"></a>UI 自動化文字模式 HOW-TO 主題
 > [!NOTE]

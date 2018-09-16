@@ -10,11 +10,11 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b4c572e518c84dfb230ff26049369011d8d7aa70
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44214923"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45666865"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>對 Windows Forms 應用程式的雙向支援
 您可以使用 Visual Studio 建立以 Windows 為基礎的應用程式，支援阿拉伯文和希伯來文等雙向 （由右至左） 語言。 這包括標準表單、對話方塊、MDI 表單，以及您可以在這些表單中使用的所有控制項，也就是 <xref:System.Windows.Forms.Control> 命名空間中的所有物件。  

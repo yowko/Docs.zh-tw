@@ -5,11 +5,11 @@ ms.assetid: cf179f48-4ed4-4caa-86a5-ef8eecc231cd
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 25afbb268a0ef7772585a0f3829b56f135758b61
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45507413"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45666349"
 ---
 # <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a>HOW TO：使用相同類型的多個安全性權杖
 -   在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0 中，用戶端訊息只包含任何指定類型的一個權杖。 現在，用戶端訊息可以包含某個類型的多個權杖。 本主題說明如何在用戶端訊息中包含相同類型的多個權杖。  

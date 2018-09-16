@@ -3,11 +3,11 @@ title: 值 (F#)
 description: '了解如何在 F # 中的值為具有特定類型的數量。'
 ms.date: 05/16/2016
 ms.openlocfilehash: f645481ce8395c11ae920aee06cbf07955aeb684
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45515563"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45677821"
 ---
 # <a name="values"></a>值
 

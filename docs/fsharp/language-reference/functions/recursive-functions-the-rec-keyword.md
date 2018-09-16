@@ -3,11 +3,11 @@ title: 遞迴函式：rec 關鍵字 (F#)
 description: "了解如何在 F # 'rec' 關鍵字使用 'let' 關鍵字定義遞迴函式。"
 ms.date: 05/16/2016
 ms.openlocfilehash: 5aab6ed8ab0fc3c0f0bcfc93c3ce6518ec53254f
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45526677"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45675869"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>遞迴函式：rec 關鍵字
 

@@ -3,11 +3,11 @@ title: 清單 (F#)
 description: '深入了解 F # 清單、 排序、 不可變的系列相同類型的元素。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 60e7edb56bdf498e3ba51aff028d8564eb68d0f1
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262655"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45685799"
 ---
 # <a name="lists"></a>清單
 

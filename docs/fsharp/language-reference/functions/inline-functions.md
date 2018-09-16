@@ -3,11 +3,11 @@ title: 內嵌函式 (F#)
 description: '了解如何使用 F # 內嵌函式會直接整合至呼叫端程式碼。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 47fca0fe34630792aeb0908b0cee02a927e2567d
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44368035"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45685669"
 ---
 # <a name="inline-functions"></a>內嵌函式
 

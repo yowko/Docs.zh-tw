@@ -9,11 +9,11 @@ helpviewer_keywords:
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
 ms.openlocfilehash: ec1801a1b695867a7edcd99394feebe1d0f6853a
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44366519"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45666586"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Windows Form 設計工具的設計階段錯誤
 本主題說明當 Windows Forms 設計工具載入失敗時，Microsoft Visual Studio 中所出現的設計階段錯誤清單的意義與用法。 如果出現此錯誤清單，您不應該將它視為是設計工具中的錯誤，而是協助您更正程式碼中的錯誤。  

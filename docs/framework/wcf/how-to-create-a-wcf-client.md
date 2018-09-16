@@ -5,12 +5,12 @@ helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-ms.openlocfilehash: 9e6d75bf8911a3c36e63b3bc108faae823434d1d
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.openlocfilehash: e5655a6fdc06e69d801cb38b7ee7412450f0d34c
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44509995"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45674139"
 ---
 # <a name="how-to-create-a-windows-communication-foundation-client"></a>HOW TO：建立 Windows Communication Foundation 用戶端
 
@@ -36,18 +36,18 @@ ms.locfileid: "44509995"
 
 3.  將 System.ServiceModel 的參考新增至 [gettingstartedclient] 專案中，以滑鼠右鍵按一下**參考**在 [方案總管]，然後選取 [gettingstartedclient] 專案下的資料夾**新增**參考。 在 [新增參考] 對話方塊中，選取對話方塊左側的 [Framework]。 在 [搜尋組件] 文字方塊中輸入 `System.ServiceModel`。 在對話方塊中間區段中選取 [System.ServiceModel]，按一下 [新增] 按鈕，然後按一下 [關閉] 按鈕。 按一下以儲存方案**全部儲存**主功能表下的按鈕。
 
-4.  接下來，您會新增至計算機服務的服務參考。 您必須先啟動 GettingStartedHost 主控台應用程式，才能執行此作業。 一旦主機正在執行，以滑鼠右鍵按一下**參考**中 [gettingstartedclient] 專案下的資料夾**方案總管**，然後選取**新增** >  **服務參考**。 在下列 URL 中的 [位址] 方塊中的型別**加入服務參考** 對話方塊： [ http://localhost:8000/ServiceModelSamples/Service ](http://localhost:8000/ServiceModelSamples/Service) ，按一下 [**移**] 按鈕。 CalculatorService 接著應該顯示在 [服務] 清單中。 按兩下 CalculatorService，它會展開並顯示服務所實作的服務合約。 保留預設命名空間，並按一下**確定** 按鈕。
+4.  接下來，您會新增至計算機服務的服務參考。 您必須先啟動 GettingStartedHost 主控台應用程式，才能執行此作業。 一旦主機正在執行，以滑鼠右鍵按一下**參考**中 [gettingstartedclient] 專案下的資料夾**方案總管**，然後選取**新增** >  **服務參考**。 在下列 URL 中的 [位址] 方塊中的型別**加入服務參考** 對話方塊： [ http://localhost:8000/GettingStartedClient/Service ](http://localhost:8000/GettingStartedClient/Service) ，按一下 [**移**] 按鈕。 CalculatorService 接著應該顯示在 [服務] 清單中。 按兩下 CalculatorService，它會展開並顯示服務所實作的服務合約。 保留預設命名空間，並按一下**確定** 按鈕。
 
      當您使用 Visual Studio 加入服務的參考時，新項目將會在 [方案總管] 中 [GettingStartedClient] 專案底下的 [服務參考] 資料夾下方出現。  如果您使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具將產生的原始程式碼檔和 app.config 檔案。
 
      您也可以使用命令列工具[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)搭配適當的參數，來建立用戶端程式碼。 下列範例會產生服務的程式碼檔案與組態檔。 第一個範例示範如何在 VB 中產生 Proxy，第二個範例示範如何在 C# 中產生 Proxy：
 
     ```
-    svcutil.exe /language:vb /out:generatedProxy.vb /config:app.config http://localhost:8000/ServiceModelSamples/service
+    svcutil.exe /language:vb /out:generatedProxy.vb /config:app.config http://localhost:8000/GettingStartedClient/service
     ```
 
     ```csharp
-    svcutil.exe /language:cs /out:generatedProxy.cs /config:app.config http://localhost:8000/ServiceModelSamples/service
+    svcutil.exe /language:cs /out:generatedProxy.cs /config:app.config http://localhost:8000/GettingStartedClient/service
     ```
 
  現在您已建立用戶端應用程式將用來呼叫計算機服務的 Proxy。 請繼續進行系列中的下一個主題： [How to： 設定用戶端](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)

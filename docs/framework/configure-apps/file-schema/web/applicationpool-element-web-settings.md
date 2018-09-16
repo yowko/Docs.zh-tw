@@ -9,11 +9,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 1a129abca5888120d03c42689ac825d768733a9d
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45515635"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45678016"
 ---
 # <a name="ltapplicationpoolgt-element-web-settings"></a>&lt;applicationPool&gt;項目 （Web 設定）
 指定 asp.net 用於 ASP.NET 應用程式上執行整合模式中時，管理整個處理序行為的組態設定[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更新版本。  

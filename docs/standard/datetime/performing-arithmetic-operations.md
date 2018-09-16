@@ -17,11 +17,11 @@ ms.assetid: 87c7ddf2-f15e-48af-8602-b3642237e6d0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c2a50823b812541786cf1bebfd6b1262ce2e9314
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45569160"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45669012"
 ---
 # <a name="performing-arithmetic-operations-with-dates-and-times"></a>使用日期和時間執行算術運算
 

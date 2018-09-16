@@ -10,11 +10,11 @@ helpviewer_keywords:
 - expressions [Visual Basic], returning control to
 ms.assetid: ac86e7f0-5a67-42c3-9834-0e0381efa3ec
 ms.openlocfilehash: fe200add4e29fe4bbe0fdf335dcd94107b8ff1eb
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45515676"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45679280"
 ---
 # <a name="return-statement-visual-basic"></a>Return 陳述式 (Visual Basic)
 呼叫的程式碼將控制權還給`Function`， `Sub`， `Get`， `Set`，或`Operator`程序。  

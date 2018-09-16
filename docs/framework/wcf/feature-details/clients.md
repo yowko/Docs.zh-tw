@@ -3,11 +3,11 @@ title: 用戶端
 ms.date: 03/30/2017
 ms.assetid: cce50025-0318-4a5e-9ce8-c67feab83b06
 ms.openlocfilehash: 844412b211fe6187e3475fc71b9c3ccca8dd178f
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45560820"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45676463"
 ---
 # <a name="clients"></a>用戶端
 在本節中的主題涵蓋用戶端架構如何存取 Windows Communication Foundation (WCF) 服務，如何設定 WCF 用戶端和 WCF 用戶端的一些安全性考量。  

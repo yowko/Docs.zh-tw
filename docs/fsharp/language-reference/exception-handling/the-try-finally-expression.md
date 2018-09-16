@@ -3,11 +3,11 @@ title: 例外狀況：try...finally 運算式 (F#)
 description: "了解如何在 F # 'try...最後' 運算式可讓您執行清除程式碼，即使程式碼區塊擲回例外狀況。"
 ms.date: 05/16/2016
 ms.openlocfilehash: 546a6b0619de6f51044600dc1ead73c6d5211299
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45515168"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45683118"
 ---
 # <a name="exceptions-the-tryfinally-expression"></a>例外狀況：try...finally 運算式
 

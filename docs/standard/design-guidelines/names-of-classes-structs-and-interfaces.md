@@ -15,11 +15,11 @@ ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0c56f840bc5ebd5070c9b686384751acab3f0203
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45519584"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45678447"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>類別、結構和介面的名稱
 請依照下列命名方針適用於一般類型命名。  

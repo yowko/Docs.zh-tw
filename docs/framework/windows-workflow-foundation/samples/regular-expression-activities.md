@@ -3,11 +3,11 @@ title: 規則運算式活動
 ms.date: 03/30/2017
 ms.assetid: b8f24694-49db-4339-92ec-014e3d4ae63b
 ms.openlocfilehash: 50daa5b6d7baab37f372de4c30c2e0d12b4fa943
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45588263"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45668947"
 ---
 # <a name="regular-expression-activities"></a>規則運算式活動
 這個範例示範如何建立可公開 <xref:System.Text.RegularExpressions> 命名空間規則運算式功能的一組活動。 這些自訂活動可用在工作流程應用程式中。 如需有關規則運算式的詳細資訊，請參閱 <<c0> [ 詳細資訊](https://go.microsoft.com/fwlink/?LinkId=150434)命名空間。  
