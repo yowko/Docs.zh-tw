@@ -13,11 +13,11 @@ helpviewer_keywords:
 - command-line arguments [C#], Main method
 ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
 ms.openlocfilehash: 144d03edf28464717430bd0ae83db637578d8296
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44337391"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45587359"
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() 和命令列引數 (C# 程式設計指南)
 

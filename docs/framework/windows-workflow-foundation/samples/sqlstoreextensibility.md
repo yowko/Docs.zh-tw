@@ -3,11 +3,11 @@ title: SQLStoreExtensibility
 ms.date: 03/30/2017
 ms.assetid: 5da1b5a3-f144-41ba-b9c4-02818b28b15d
 ms.openlocfilehash: f49d05244cf9f65a8e06f39c7e40391aaebd9f77
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45517342"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45624927"
 ---
 # <a name="sqlstoreextensibility"></a>SQLStoreExtensibility
 這個範例示範 SQL 工作流程執行個體存放區中已提升屬性的使用方式和組態。 SQL 工作流程執行個體存放區是以 SQL 為基礎的執行個體存放區實作。 它允許執行個體在 SQL Server 或 SQL Server Express 資料庫中來回儲存及載入其狀態。 存放區擴充性功能可讓使用者定義儲存在執行個體存放區中的屬性。 這些屬性會顯示在提升屬性檢視表中，供使用者查詢屬性。  

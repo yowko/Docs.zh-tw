@@ -4,12 +4,12 @@ description: 了解如何擴充命令列介面 (CLI) 工具。
 author: blackdwarf
 ms.author: mairaw
 ms.date: 04/12/2017
-ms.openlocfilehash: 6cabd3959a29878788916ae26589be408c12e0ca
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: a9cfebbeddbedc329432c805c5956b382a726a77
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244786"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45592058"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>.NET Core CLI 工具擴充性模型
 
@@ -53,7 +53,7 @@ CLI 工具可以透過三種主要方式進行擴充：
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
   <!-- The tools reference -->

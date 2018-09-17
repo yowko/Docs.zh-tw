@@ -8,11 +8,11 @@ helpviewer_keywords:
 - TextBox control [WPF], how-to topics
 ms.assetid: 006aa461-fe37-4cd8-860a-d38d76e8b9f7
 ms.openlocfilehash: 2319ea8522a90705cf65006ffb368801921cda57
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44212044"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45624492"
 ---
 # <a name="textbox-how-to-topics"></a>TextBox HOW TO 主題
 本節提供範例，示範如何完成一般工作，使用<xref:System.Windows.Controls.TextBox>控制項。  
