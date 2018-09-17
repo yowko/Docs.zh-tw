@@ -3,11 +3,11 @@ title: protected internal (C# 參考)
 ms.date: 11/15/2017
 author: sputier
 ms.openlocfilehash: 1a305cb84989f12350e2e7cc28dd18f9d0c7ae5e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44200206"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45613900"
 ---
 # <a name="protected-internal-c-reference"></a>protected internal (C# 參考)
 

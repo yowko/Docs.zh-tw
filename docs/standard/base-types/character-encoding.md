@@ -13,11 +13,11 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cac7e0fca4a009b7f5b6f677abed70cf2519052d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44200468"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45653330"
 ---
 # <a name="character-encoding-in-net"></a>.NET 中的字元編碼
 字元是可以用許多不同的方式來表示的抽象實體。 字元編碼是一套系統，可將所支援之字元集中的每個字元與代表該字元的特定值配對。 例如，摩斯密碼就是一種字元編碼，可將羅馬字母中的每個字元與適合透過電報線路傳輸的點和虛線圖樣配對。 電腦的字元編碼可將所支援之字元集中的每個字元與代表該字元的數值配對。 字元編碼包含兩個不同的元件：  

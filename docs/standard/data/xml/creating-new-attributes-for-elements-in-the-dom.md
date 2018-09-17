@@ -9,11 +9,11 @@ ms.assetid: dd6dc920-b011-418a-b3db-f1580a7d9251
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 870e800220031338557792fa612d4a3101e79f90
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44271932"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45675557"
 ---
 # <a name="creating-new-attributes-for-elements-in-the-dom"></a>為 DOM 中的項目建立新屬性
 建立新屬性不同於建立其他的節點型別，因為屬性不是節點，而是項目節點的屬性且包含於與項目相關的 **XmlAttributeCollection** 中。 有許多方法可以建立屬性並且將它附加於項目：  

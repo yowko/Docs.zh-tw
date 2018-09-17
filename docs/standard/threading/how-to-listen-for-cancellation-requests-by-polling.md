@@ -11,11 +11,11 @@ ms.assetid: c7f2f022-d08e-4e00-b4eb-ae84844cb1bc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1794b47db87f636cc2ccdf2eecb9e7ca334ae659
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44266848"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45624967"
 ---
 # <a name="how-to-listen-for-cancellation-requests-by-polling"></a>如何：透過輪詢接聽取消要求
 下列範例將示範一種方式：使用者程式碼可定期輪詢取消語彙基元，以查看呼叫執行緒是否已要求取消。 這個範例會使用 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 類型，但相同的模式適用於 <xref:System.Threading.ThreadPool?displayProperty=nameWithType> 類型或 <xref:System.Threading.Thread?displayProperty=nameWithType> 類型直接建立的非同步作業。  

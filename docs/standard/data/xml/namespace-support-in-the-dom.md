@@ -6,11 +6,11 @@ ms.assetid: f0548ead-0fed-41ee-b33e-117ba900d3bc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bcc796f8d895e3daa81a9607bd7c4941b747cf24
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44208766"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45596750"
 ---
 # <a name="namespace-support-in-the-dom"></a>DOM 中支援的命名空間
 XML 文件物件模型 (DOM) 具有完全的命名空間感知。 只有命名空間感知 XML 文件受支援。 全球資訊網協會 (W3C) 指定實作層級 1 的 DOM 應用程式可不具備命名空間感知，而 DOM 層級 2 功能則具有命名空間感知。 然而，不論方法是來自層級 1 或層級 2 DOM 建議事項，XML DOM 中所有的功能都具有命名空間感知。  

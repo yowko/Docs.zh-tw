@@ -15,11 +15,11 @@ ms.assetid: d4850de5-fa63-4936-a250-5678d118acba
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e343d48b5e50fdaef3a3667f066894dea03eeb80
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44275307"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45614838"
 ---
 # <a name="automatic-memory-management"></a>Automatic Memory Management
 自動記憶體管理是 Common Language Runtime 在 [Managed 執行](../../docs/standard/managed-execution-process.md)期間所提供的一項服務。 Common Language Runtime 的記憶體回收行程會管理應用程式記憶體的配置和釋放。 這表示開發人員在開發 Managed 應用程式時，不需要撰寫程式碼來執行記憶體管理工作。 自動記憶體管理可排除一些常見的問題，例如，忘記釋放物件而造成記憶體流失 (Memory Leak)，或嘗試存取已經釋放物件的記憶體。 本章節將描述記憶體回收行程如何配置和釋放記憶體。  

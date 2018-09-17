@@ -3,11 +3,11 @@ title: 針對泛型集合使用介面中的變異數 (C#)
 ms.date: 07/20/2015
 ms.assetid: a44f0708-10fa-4c76-82cd-daa6e6b31e8e
 ms.openlocfilehash: 66a1eac33d5f715f52bd83c43bac4452df41aabd
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44196942"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45596537"
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-c"></a>針對泛型集合使用介面中的變異數 (C#)
 Covariant 介面允許其方法傳回與介面中指定的類型相比，其衍生程度較大的類型。 Contravariant 介面允許其方法接受與介面中指定的參數相比，其類型衍生程度較小的參數。  

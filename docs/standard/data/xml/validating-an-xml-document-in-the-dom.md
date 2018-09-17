@@ -10,11 +10,11 @@ ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d0f5ae64eb1017570a56efab59a4bf1a66d5e02b
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264385"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45676346"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>驗證 DOM 中的 XML 文件
 依預設，<xref:System.Xml.XmlDocument> 類別不會根據 XML 結構描述定義語言 (XSD) 結構描述或文件類型定義 (DTD)，驗證文件物件模型 (DOM) 中的 XML；只會驗證 XML 的格式是否正確。  

@@ -6,11 +6,11 @@ ms.assetid: 71d03b78-6898-4ce7-b0fc-1282573f31f7
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 623583f16c23b55c16f648fedcd039ca36f73b1f
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44261953"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45597611"
 ---
 # <a name="types-of-xml-nodes"></a>XML 節點的型別
 當 XML 文件讀入記憶體作為節點的樹狀時，節點建立時即會決定節點型別。 XML 文件物件模型 (DOM) 有許多種節點型別，由全球資訊網協會 (W3C) 決定並列示於＜1.1.1 DOM 架構模型＞(英文) 一節中。 下列表格會列出節點型別、指派給該節點類型的物件，以及每個節點型別的簡要說明。  

@@ -13,11 +13,11 @@ ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8956726915ebe1c0b1c7654e62e2e28620274b4a
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44276116"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45638671"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>規則運算式中的其他建構
 .NET 中的規則運算式包含三個其他語言建構。 其中一個可讓您在規則運算式模式的中間，啟用或停用特定比對選項。 其餘兩個可讓您在規則運算式中包含註解。  

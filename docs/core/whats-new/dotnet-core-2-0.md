@@ -4,12 +4,12 @@ description: 了解 .NET Core 所提供的新功能。
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 02aac2dab2b892927c0c98fae30bb287a6e24ad6
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 4be579f2000c86b3dad412b24589fa8e7024d2f0
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44191049"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45591759"
 ---
 # <a name="whats-new-in-net-core-20"></a>.NET Core 2.0 的新功能
 
@@ -158,8 +158,8 @@ Visual Studio 2017 15.3 版 (以及某些情況下的 Visual Studio for Mac) 能
 
 - [微服務和 Docker 容器](../../standard/microservices-architecture/index.md)
 - [使用 ASP.NET 的 Web 應用程式](../../standard/modern-web-apps-azure-architecture/index.md)
-- [使用 Xamarin 的行動應用程式](/xamarin/xamarin-forms/enterprise-application-patterns/index.md)
-- [使用 Azure 部署至雲端的應用程式](/azure/architecture/reference-architectures/index.md)
+- [使用 Xamarin 的行動應用程式](/xamarin/xamarin-forms/enterprise-application-patterns/index)
+- [使用 Azure 部署至雲端的應用程式](/azure/architecture/reference-architectures/index)
 
 ## <a name="see-also"></a>另請參閱
 

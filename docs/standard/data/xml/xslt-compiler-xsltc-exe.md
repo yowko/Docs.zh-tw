@@ -6,11 +6,11 @@ ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 470dd0eb37d8081d388ef69b204293f568096a5e
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262226"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45615040"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT 編譯器 (xsltc.exe)
 XSLT 編譯器 (xsltc.exe) 會編譯 XSLT 樣式表並產生組件。 然後編譯的樣式表可以直接傳遞到新的 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 方法中。 您無法使用 xsltc.exe 產生簽署的組件。  

@@ -9,11 +9,11 @@ ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 70e13893cf350a193411f1833e2e3b21c9b64182
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44269263"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45591473"
 ---
 # <a name="extending-the-dom"></a>擴充 DOM
 

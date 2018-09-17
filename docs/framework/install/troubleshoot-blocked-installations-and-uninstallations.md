@@ -9,11 +9,11 @@ ms.assetid: c3fdfbc1-ed99-4202-a2b0-8c4f1646385d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8cb33ffbbd735a015b58fe4fd6b9f7f70282cba1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44184437"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45625310"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>針對 .NET Framework 安裝和解除安裝遭封鎖的問題進行疑難排解
 

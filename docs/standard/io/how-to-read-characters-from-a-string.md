@@ -16,11 +16,11 @@ ms.assetid: 27ea5e52-6db8-42d8-980a-50bcfc7fd270
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 13a57f8ea7db91e5357ecfb20c4e907f2706f78d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44194964"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45592915"
 ---
 # <a name="how-to-read-characters-from-a-string"></a>如何：從字串中讀取字元
 下列程式碼範例會示範如何以同步和非同步的方式，從字串讀取字元。  

@@ -11,11 +11,11 @@ ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d25bac953ff68422a1dddc54bdb01b4b4f241cbb
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44275713"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45664523"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>Common Language Runtime 中的類型轉送
 型別轉送可讓您將型別移至另一個組件，而無須重新編譯使用原始組件的應用程式。  

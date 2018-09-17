@@ -11,11 +11,11 @@ ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 65492beb888da1986f456d3fd000fc02f340f3c4
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264944"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45609680"
 ---
 # <a name="weak-references"></a>弱式參考
 在應用程式碼可以存取使用中物件時，記憶體回收行程無法透過應用程式回收該物件。 應用程式即具有物件的強式參考。  

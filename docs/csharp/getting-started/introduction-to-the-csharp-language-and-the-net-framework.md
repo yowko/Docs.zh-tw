@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
 ms.openlocfilehash: 75ef14032ee2211d3b8d355f050ced67b4a04930
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43873363"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45679488"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 語言和 .NET Framework 簡介
 

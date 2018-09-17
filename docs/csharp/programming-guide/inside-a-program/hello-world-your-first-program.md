@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
 ms.openlocfilehash: 90f0ec6b88a2822cb3429948681c76c70f3d3f18
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44213841"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45593041"
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- 您的第一個程式 (C# 程式設計手冊)
 下列程序會建立 C# 版本的傳統 "Hello World!" 程式。 此程式會顯示字串 `Hello World!`  

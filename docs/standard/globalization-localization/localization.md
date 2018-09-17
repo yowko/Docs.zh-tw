@@ -17,11 +17,11 @@ ms.assetid: 49d520d7-92d7-44ee-bb24-8b615db1d41b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ee7de15130644e63b17a6d067c5cce9088d199a0
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44185045"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45591261"
 ---
 # <a name="localization"></a>當地語系化
 當地語系化是一種程序，可將應用程式資源翻譯為應用程式所支援之每個文化特性的當地語系化版本。 只有在完成[可當地語系化檢閱](../../../docs/standard/globalization-localization/localizability-review.md)步驟，以確認全球化的應用程式已準備好進行當地語系化之後，才能繼續進行當地語系化步驟。  

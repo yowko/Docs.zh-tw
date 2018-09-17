@@ -3,11 +3,11 @@ title: 序列化包含 XElement 物件的物件圖形 (C#)
 ms.date: 07/20/2015
 ms.assetid: fcbc3951-3cc4-4d0f-9259-e97549ed68f0
 ms.openlocfilehash: 2e82165421d31ec234de4806b59565fa675217ef
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44186886"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45618444"
 ---
 # <a name="serializing-object-graphs-that-contain-xelement-objects-c"></a>序列化包含 XElement 物件的物件圖形 (C#)
 本主題說明如何序列化包含型別 <xref:System.Xml.Linq.XElement> 之物件參考的物件圖形。 為了簡化這種類型的序列化，<xref:System.Xml.Linq.XElement> 會實作 <xref:System.Xml.Serialization.IXmlSerializable> 介面。  

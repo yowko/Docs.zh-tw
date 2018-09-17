@@ -9,11 +9,11 @@ helpviewer_keywords:
 - operator keyword [C#]
 ms.assetid: 59218cce-e90e-42f6-a6bb-30300981b86a
 ms.openlocfilehash: 1e11d7767b61becc39b1158fae9cb2abe997e4bd
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44207625"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45560158"
 ---
 # <a name="operator-c-reference"></a>operator (C# 參考)
 

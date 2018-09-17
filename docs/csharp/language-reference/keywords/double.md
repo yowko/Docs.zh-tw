@@ -8,11 +8,11 @@ helpviewer_keywords:
 - double data type [C#]
 ms.assetid: 0980e11b-6004-4102-abcf-cfc280fc6991
 ms.openlocfilehash: 4c11065d9354d44c1da8354c6f7b4f52d7b84c10
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44275388"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45594022"
 ---
 # <a name="double-c-reference"></a>double (C# 參考)
 

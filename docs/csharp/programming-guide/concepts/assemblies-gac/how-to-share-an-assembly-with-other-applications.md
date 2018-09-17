@@ -3,11 +3,11 @@ title: 如何：與其他應用程式共用組件 (C#)
 ms.date: 07/20/2015
 ms.assetid: c30e972b-1693-4e05-b115-c31831fdf9f2
 ms.openlocfilehash: a5b20061c759fd914193f24aa123317f13d31dce
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44266465"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45638392"
 ---
 # <a name="how-to-share-an-assembly-with-other-applications-c"></a>如何：與其他應用程式共用組件 (C#)
 組件可以是私用或共用的︰根據預設，大多數簡單的程式由於不會供其他應用程式使用，因此只會包含一個私用組件。  

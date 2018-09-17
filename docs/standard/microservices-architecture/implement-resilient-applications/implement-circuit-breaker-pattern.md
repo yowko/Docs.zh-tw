@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
 ms.openlocfilehash: 8cd3564e5240ec5a8783edb336957549be27ea6a
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44274553"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45647193"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>實作斷路器模式
 

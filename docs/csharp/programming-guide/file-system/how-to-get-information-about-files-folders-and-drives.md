@@ -5,11 +5,11 @@ helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
 ms.openlocfilehash: 8ebacff0f3a1704ec001e3570d0df136f54baf9d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44206454"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45589426"
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>如何：取得有關檔案、資料夾和磁碟機的資訊 (C# 程式設計手冊)
 在 .NET Framework 中，您可以使用下列類別來存取檔案系統資訊：  

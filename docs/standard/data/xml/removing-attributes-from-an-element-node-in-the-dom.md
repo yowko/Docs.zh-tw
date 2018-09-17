@@ -6,11 +6,11 @@ ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 65fd6d2baae29c72241350e4568faf09b9c71f39
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44188135"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45594087"
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>移除 DOM 中項目節點的屬性
 有許多方法可用來移除屬性。 其中一種技術是從屬性集合中移除它們。 若要如此做，請執行下列步驟：  

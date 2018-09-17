@@ -3,11 +3,11 @@ title: 如何：執行運算式樹狀架構 (C#)
 ms.date: 07/20/2015
 ms.assetid: b8c40db5-2464-4bb9-9001-8c2bc7f006c5
 ms.openlocfilehash: 2aad970946e417d623907c9f832e2c6e29eef912
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44192518"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45641595"
 ---
 # <a name="how-to-execute-expression-trees-c"></a>如何：執行運算式樹狀架構 (C#)
 本主題示範如何執行運算式樹狀架構。 執行運算式樹狀架構可能會傳回一個值，或者只是執行某個動作，例如呼叫方法。  

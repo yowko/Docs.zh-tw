@@ -13,11 +13,11 @@ ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 939630726f399184c264f73ee01270f50981e83a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44209104"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45595343"
 ---
 # <a name="registration-free-com-interop"></a>免註冊的 COM Interop
 免註冊的 COM Interop 不需要使用 Windows 登錄來儲存組件資訊，即可啟動元件。 您不是在部署期間在電腦上登錄元件，而是在設計階段建立 Win32 樣式資訊清單檔案，其中包含繫結和啟動的相關資訊。 這些資訊清單檔案 (而不是登錄機碼) 會引導物件的啟動。  

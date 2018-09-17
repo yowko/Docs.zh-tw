@@ -6,11 +6,11 @@ ms.assetid: 86dba977-5cc4-4567-964f-027ffabc47b2
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e30b52b8cdfb4d185687d58c80f4475730031c86
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264268"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45615207"
 ---
 # <a name="reading-entity-declarations-and-entity-references-into-the-dom"></a>將實體宣告和實體參考讀入 DOM
 實體是一種宣告，陳述 XML 中用來代替內容或標記的名稱。 實體有兩個部分。 首先，您必須使用實體宣告，將名稱繫結於取代內容。 實體宣告可透過文件類型定義 (DTD) 或 XML 結構描述中的 `<!ENTITY name "value">` 語法來建立。 第二，實體宣告中定義的名稱隨後會用於 XML。 用於 XML 時，它便稱為實體參考。 例如，下列實體宣告會宣告名稱 `publisher` 的實體，而此實體會與 "Microsoft Press" 的內容產生關聯。  

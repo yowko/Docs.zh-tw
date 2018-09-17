@@ -8,11 +8,11 @@ helpviewer_keywords:
 - equals keyword [C#]
 ms.assetid: e981309a-e4bf-444c-8a2b-5c695e6114b1
 ms.openlocfilehash: 30a8be7e81bae65e565d2a3ed28e225ac3094f13
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44177853"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45641231"
 ---
 # <a name="equals-c-reference"></a>equals (C# 參考)
 

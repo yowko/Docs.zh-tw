@@ -3,11 +3,11 @@ title: 如何：比較兩個資料夾的內容 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
 ms.openlocfilehash: 1517d1f9e451306e40835e6032e2aff2fe3e60ab
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44270613"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45616970"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>如何：比較兩個資料夾的內容 (LINQ) (C#)
 本例示範三種比較兩個檔案清單的方式︰  

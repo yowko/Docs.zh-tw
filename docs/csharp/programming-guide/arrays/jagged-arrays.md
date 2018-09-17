@@ -6,11 +6,11 @@ helpviewer_keywords:
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
 ms.openlocfilehash: 2e4988439000712f4d1bd9b5abe412e7fd5d43eb
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44261665"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45594775"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>不規則陣列 (C# 程式設計手冊)
 

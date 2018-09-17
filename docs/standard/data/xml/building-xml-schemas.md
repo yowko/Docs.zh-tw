@@ -10,11 +10,11 @@ ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 10b2471d13d410826cec3404725117649442297b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197338"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45674698"
 ---
 # <a name="building-xml-schemas"></a>建置 XML 結構描述
 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空間中的類別會對應至全球資訊網協會 (W3C) XML 結構描述建議事項中定義的結構，並可用於建置記憶體中的 XML 結構描述。  

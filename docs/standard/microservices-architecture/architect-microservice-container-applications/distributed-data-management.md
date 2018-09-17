@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 分散式資�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 4c514f3a7dc1fb01b2f1ed2dddc9d938c1101809
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 7574a28fc3e8eb3288a81fa5a7ad26f34f1a3eb9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44268847"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45646216"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>分散式資料管理的挑戰和解決方案
 
@@ -19,7 +19,7 @@ ms.locfileid: "44268847"
 
 首先，您需要將焦點放在應用程式的邏輯網域模型及相關資料。 您必須嘗試識別低結合的孤立資料群，以及同一個應用程式內的不同內容。 每個內容可能具有不同的商業語言 (不同的商務詞彙)。 這些內容都應該分開定義與管理。 這些不同內容中使用的條款和在實體可能看似雷同，但您可能會發現特定內容中的某項商務概念，在另一份內容中用於不同的用途，甚至可能使用不同的名稱。 例如，使用者在身分識別或成員資格內容中稱為使用者，在 CRM 內容中稱為客戶，在訂購內容中稱為買方等等。
 
-您識別多種應用程式內容與每種內容不同網域之間界限的方式，與您識別每項商務微服務界限及其相關網域模型和資料的方式如出一轍。 您一定要嘗試將這些微服務之間的結合程度降至最低。 本指南會在稍後的[識別每項微服務的網域模型界限](#identifying-domain-model-boundaries-for-each-microservice)一節中，詳細說明此識別和網域模型設計。
+您識別多種應用程式內容與每種內容不同網域之間界限的方式，與您識別每項商務微服務界限及其相關網域模型和資料的方式如出一轍。 您一定要嘗試將這些微服務之間的結合程度降至最低。 本指南會在稍後的[識別每項微服務的網域模型界限](identify-microservice-domain-model-boundaries.md)一節中，詳細說明此識別和網域模型設計。
 
 ## <a name="challenge-2-how-to-create-queries-that-retrieve-data-from-several-microservices"></a>挑戰 \#2：如何建立從數項微服務擷取資料的查詢
 
@@ -57,7 +57,7 @@ ms.locfileid: "44268847"
 
 此外，ACID 型或兩階段認可交易都不是只針對微服務原則，大部分的 NoSQL 資料庫 (例如 Azure Cosmos DB、MongoDB 等等) 都不支援兩階段認可交易。 不過，跨服務和資料庫維護資料的一致性十分重要。 這項挑戰也與當某些資料需要備援時，例如目錄微服務和購物籃微服務需要有產品名稱或描述時，如何跨多項微服務傳播變更的問題有關。
 
-這個問題的最佳解決方案，是在透過事件導向通訊架構的微服務和發佈訂閱系統之間使用最終一致性。 本指南稍後的[非同步的事件驅動通訊](#async_event_driven_communication)一節會討論這些主題。
+這個問題的最佳解決方案，是在透過事件導向通訊架構的微服務和發佈訂閱系統之間使用最終一致性。 本指南稍後的[非同步的事件驅動通訊](asynchronous-message-based-communication.md#asynchronous-event-driven-communication)一節會討論這些主題。
 
 ## <a name="challenge-4-how-to-design-communication-across-microservice-boundaries"></a>挑戰 \#4：如何設計跨微服務界限的通訊
 

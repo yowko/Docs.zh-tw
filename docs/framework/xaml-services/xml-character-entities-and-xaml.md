@@ -36,7 +36,7 @@ XAML 使用 XML 中針對特殊字元定義的字元實體。 本主題說明一
   
  主要的差異在於大括號 ({ 和 }) 在 XAML 中具有顯著意義，因為這些字元會通知 XAML 處理器，包含在大括號內的字元序列必須解譯為標記延伸。 如需標記延伸的詳細資訊，請參閱 [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)。  
   
- 不過，您還是可以使用 XAML (而不是 XML) 特有的逸出序列，將大括號顯示為常值字元。 如需詳細資訊，請參閱 < [ {}逸出序列-標記延伸](escape-sequence-markup-extension.md)。  
+ 不過，您還是可以使用 XAML (而不是 XML) 特有的逸出序列，將大括號顯示為常值字元。 如需詳細資訊，請參閱 [{}逸出序列-標記延伸](escape-sequence-markup-extension.md)。  
   
  請注意，反斜線 (\\) 處理做為字串時，不需要逸出序列。  
   

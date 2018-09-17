@@ -4,12 +4,12 @@ description: dotnet run 命令提供方便的選項，以透過原始程式碼�
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 609ac27f21e6801992b9e10c7d465a805492859e
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: f560e6f795f00488818647a4b5c711dcf9d59dcd
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245248"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45687643"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -44,7 +44,7 @@ dotnet run [-h|--help]
 
 `dotnet run` 命令提供方便的選項，以使用一個命令透過原始程式碼來執行應用程式。 可用於在命令列中快速進行反覆開發。 此命令仰賴 [`dotnet build`](dotnet-build.md) 命令來建置程式碼。 建置的任何需求 (例如必須先還原專案) 也同樣適用於 `dotnet run`。
 
-輸出檔會寫入至預設位置，也就是 `bin/<configuration>/<target>`。 例如，如果您有 `netcoreapp1.0` 應用程式並執行 `dotnet run`，輸出將會放置在 `bin/Debug/netcoreapp1.0` 中。 而且會視需要覆寫檔案。 暫存檔案會放置在 `obj` 目錄中。
+輸出檔會寫入至預設位置，也就是 `bin/<configuration>/<target>`。 例如，如果您有 `netcoreapp2.1` 應用程式並執行 `dotnet run`，輸出將會放置在 `bin/Debug/netcoreapp2.1` 中。 而且會視需要覆寫檔案。 暫存檔案會放置在 `obj` 目錄中。
 
 如果專案指定多個架構，執行 `dotnet run` 會導致錯誤，除非使用 `-f|--framework <FRAMEWORK>` 選項來指定架構。
 

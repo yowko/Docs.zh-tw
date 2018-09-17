@@ -3,11 +3,11 @@ title: 如何：尋找根項目 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4fd824e0-4d39-429b-b092-f6a5c046ee6c
 ms.openlocfilehash: a0197a34f2e9d1b42a71d3c8cb1a4281ba495c4f
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44261081"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45610044"
 ---
 # <a name="how-to-find-the-root-element-xpath-linq-to-xml-c"></a>如何：尋找根項目 (XPath-LINQ to XML) (C#)
 本主題顯示如何利用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 取得根項目。  

@@ -8,11 +8,11 @@ ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f205040e0f044ab04112683c7bdb8edccdfb9f71
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44210217"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45641504"
 ---
 # <a name="common-io-tasks"></a>一般 I/O 工作
 <xref:System.IO> 命名空間 (Namespace) 提供了幾個允許可在檔案、目錄和資料流上執行各種動作 (例如讀取和寫入) 的類別。 如需詳細資訊，請參閱[檔案和資料流 I/O](../../../docs/standard/io/index.md)。  

@@ -15,11 +15,11 @@ ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 86642da8647d185d863607819bbb18de9e976e6b
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264151"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45664536"
 ---
 # <a name="type-conversion-tables-in-net"></a>.NET 中的類型轉換表
 將一種類型的值轉換成另一種大小相等或較大類型的值時，就會發生擴展轉換。 將一種類型的值轉換成另一種大小較小類型的值時，就會發生縮小轉換。 本主題中的表格將說明這兩種轉換類型的行為。  

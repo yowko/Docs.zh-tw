@@ -8,11 +8,11 @@ ms.assetid: 63890d5e-6025-4a7c-aaf0-d8bfd54b455f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a55409cd2c3bed2bc09db10622de1cceab934112
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44207326"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45624563"
 ---
 # <a name="managed-thread-states"></a>Managed 執行緒狀態
 屬性 <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> 提供位元遮罩，表示執行緒的目前狀態。 執行緒一律是在 <xref:System.Threading.ThreadState> 列舉至少一個可能的狀態中，而且可能同時在多個狀態中。  

@@ -10,11 +10,11 @@ ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5f2da2849bdf9ce922a89bf25e1758d868ee5ea8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198253"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45616123"
 ---
 # <a name="traversing-xml-schemas"></a>周遊 XML 結構描述
 使用結構描述物件模型 (SOM) API 周遊 XML 結構描述，可以提供對儲存於 SOM 之項目、屬性及型別的存取權。 周遊載入到 SOM 的 XML 結構描述也是使用 SOM API 編輯 XML 結構描述的第一步。  

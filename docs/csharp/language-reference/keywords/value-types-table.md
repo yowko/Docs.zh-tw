@@ -7,11 +7,11 @@ helpviewer_keywords:
 - types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
 ms.openlocfilehash: bc7143b9f006af20b0bb91203d3093410d4ac0bf
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44261998"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45609719"
 ---
 # <a name="value-types-table-c-reference"></a>實值型別表 (C# 參考)
 

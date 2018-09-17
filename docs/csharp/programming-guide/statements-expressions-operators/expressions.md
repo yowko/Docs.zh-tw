@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
 ms.openlocfilehash: 3cf084102186d9e13727c36ed14e2ea72ca324f9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44213802"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45615257"
 ---
 # <a name="expressions-c-programming-guide"></a>運算式 (C# 程式設計手冊)
 「運算式」是一連串的一或多個運算元以及兩或多個運算子，可以評估為單一值、物件、方法或命名空間。 運算式可以包含常值、方法呼叫、運算子和其運算元，或「簡單名稱」。 簡單名稱可以是變數、型別成員、方法參數、命名空間或型別的名稱。  

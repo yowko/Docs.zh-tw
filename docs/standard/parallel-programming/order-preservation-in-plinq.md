@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b98fdcd425ae62aca0149df5136c28edc023bf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1587b2c4d19833c615c5a10a2fe0d6b28e854aca
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591621"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45615020"
 ---
 # <a name="order-preservation-in-plinq"></a>PLINQ 中的順序保留
 在 PLINQ 中，目標是在達到最佳效能的同時維持正確性。 查詢應以最快的速度執行，但仍應產生正確的結果。 在某些情況下，需要保留來源序列的順序以保持正確性；不過，排序可能需要大量計算。 因此，根據預設，PLINQ 不會保留來源序列的順序。 在這方面，PLINQ 類似於 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)]，但是有別於會保留順序的 LINQ to Objects。  
@@ -122,6 +122,7 @@ ms.locfileid: "33591621"
   
  未排序的結果不會主動打散；它們只是未套用任何特殊的排序邏輯。 在某些情況下，未排序的查詢可能會保留來源序列的順序。 對於使用已編制索引之 Select 運算子的查詢，PLINQ 可保證輸出元素將以遞增索引的順序產生，但不保證哪些索引會指派給哪些元素。  
   
-## <a name="see-also"></a>請參閱  
- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
- [平行程式設計](../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a>另請參閱
+
+- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+- [平行程式設計](../../../docs/standard/parallel-programming/index.md)

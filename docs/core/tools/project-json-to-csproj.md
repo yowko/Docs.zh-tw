@@ -4,12 +4,12 @@ description: 查看 project.json 與 csproj 項目的對應。
 author: natemcmaster
 ms.author: mairaw
 ms.date: 03/13/2017
-ms.openlocfilehash: 369075f91c0d5ea6c7eb5d09ac2535c4e60f28f6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0079164470f87df665be6f9de62bc98d3fb51696
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518553"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45647365"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json 與 csproj 屬性的對應
 
@@ -487,7 +487,7 @@ And it's really great!</Description>
 ```
 
 MSBuild 中的 `owners` 項目沒有對應項。
-對於 `summary`，您可以使用 MSBuild `<Description>` 屬性，即使 `summary` 的值不會自動移轉至該屬性亦然，因為該屬性會對應至 [`description`](#-other-common-root-level-options) 項目。
+對於 `summary`，您可以使用 MSBuild `<Description>` 屬性，即使 `summary` 的值不會自動移轉至該屬性亦然，因為該屬性會對應至 [`description`](#other-common-root-level-options) 項目。
 
 ## <a name="scripts"></a>指令碼
 

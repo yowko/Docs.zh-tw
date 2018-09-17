@@ -8,11 +8,11 @@ helpviewer_keywords:
 - types [C#], floating-point types
 ms.assetid: da886cc5-e01e-4f62-b3ec-6428c8f7a102
 ms.openlocfilehash: 804e6529e67785ed5bcdb0db9efaeccb6b3a1a61
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44187107"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45679540"
 ---
 # <a name="floating-point-types-table-c-reference"></a>浮點數型別表 (C# 參考)
 

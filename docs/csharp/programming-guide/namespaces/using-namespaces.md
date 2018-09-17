@@ -8,11 +8,11 @@ helpviewer_keywords:
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
 ms.openlocfilehash: 81876d1818a6e82764e4aea0ae2b6f9e091f0ba3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44208643"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45648495"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>使用命名空間 (C# 程式設計手冊)
 C# 程式內大量使用命名空間的原因有兩個。 首先，.NET Framework 類別會使用命名空間來組織其多種類別。 其次，宣告您自己的命名空間，有助於在較大型的程式設計專案中控制類別和方法名稱的範圍。  

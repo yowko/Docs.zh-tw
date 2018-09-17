@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 23961caa7b307df46b20b3811d0883d4c702a357
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c4d7dee9ebaed20970f715026661c29aae701289
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577159"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45686085"
 ---
 # <a name="script-blocks-using-msxslscript"></a>使用 msxsl:script 的指令碼區塊
 <xref:System.Xml.Xsl.XslCompiledTransform> 類別支援使用 `msxsl:script` 項目的內嵌指令碼。 載入樣式表時，程式碼文件物件模型 (CodeDOM) 會將任何已定義的函式編譯成 Microsoft Intermediate Language (MSIL)，並在執行階段期間執行。 從內嵌指令碼區塊產生的組件不同於為樣式表產生的組件。  
@@ -148,6 +148,7 @@ ms.locfileid: "33577159"
 </circles>  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations.md)  
- [動態原始程式碼的產生和編譯](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)
+## <a name="see-also"></a>另請參閱
+
+- [XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations.md)  
+- [動態原始程式碼的產生和編譯](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
 ms.openlocfilehash: 48654968e5099164874bae8a00767d12c8fe4582
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44271529"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45514439"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>如何：使用 XML 文件功能
 

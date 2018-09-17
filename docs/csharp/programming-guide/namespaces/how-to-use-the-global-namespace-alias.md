@@ -7,11 +7,11 @@ helpviewer_keywords:
 - global namespace [C#]
 ms.assetid: 98a1d89b-3c5a-44f7-8400-c4a3c0ec22a9
 ms.openlocfilehash: c15271abb55cb29a200185e4b512a76a4913d848
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44195172"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "44514614"
 ---
 # <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>如何：使用全域命名空間別名 (C# 程式設計手冊)
 成員可能會被具有相同名稱的另一個實體隱藏時，能夠存取全域[命名空間](../../../csharp/language-reference/keywords/namespace.md)中的成員就很有用。  

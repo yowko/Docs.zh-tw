@@ -6,11 +6,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 4275fa574d7fc30f5416c16aaafd2a9494904128
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44078785"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45648521"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>了解 WebRequest 問題和例外狀況
 <xref:System.Net.WebRequest> 和其衍生的類別 (<xref:System.Net.HttpWebRequest>、<xref:System.Net.FtpWebRequest>和 <xref:System.Net.FileWebRequest>) 會擲回例外狀況，以表示發生異常狀況。 有時候這些問題的解決方式並不明顯。  

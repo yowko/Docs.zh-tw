@@ -6,11 +6,11 @@ helpviewer_keywords:
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
 ms.openlocfilehash: c2f26fd74a596ada21eef578e58c9cd8e0305d6c
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44128546"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45616217"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>一維陣列 (C# 程式設計手冊)
 

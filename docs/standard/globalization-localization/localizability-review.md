@@ -19,11 +19,11 @@ ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b19bc78f44781923df6873ccc9720f4605731976
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44206058"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45678900"
 ---
 # <a name="localizability-review"></a>可當地語系化檢閱
 當地語系化能力審查是準備發行到全球之應用程式開發工作的中繼步驟。 這個步驟會確認全球化應用程式是否準備好進行當地語系化，以及識別使用者介面中需要特殊處理的任何程式碼或任何方面。 另外還可協助確保當地語系化過程中，不會在應用程式中造成任何功能上的問題。 當地語系化能力審查提出的所有問題都獲得解決之後，您的應用程式就可以開始進行當地語系化。 如果當地語系化能力檢閱相當徹底，您應該不需要在當地語系化過程期間修改任何原始程式碼。  

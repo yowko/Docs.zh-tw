@@ -18,11 +18,11 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6c8db725e25fe441c875a25cba97eb2090d4c071
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262603"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45615686"
 ---
 # <a name="common-type-system"></a>一般類型系統
 一般型別系統定義如何在 Common Language Runtime 中宣告、使用和管理型別，同時也是執行階段支援跨語言整合中很重要的一部分。 一般型別系統可執行下列功能：  

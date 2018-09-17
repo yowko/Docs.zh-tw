@@ -6,11 +6,11 @@ ms.assetid: a0b536b6-cdb3-4a44-86c2-3b2ebc7bd4c9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e7fb30104f36a565f4e6742c8f808c48e4ef39ec
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44249548"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45625343"
 ---
 # <a name="xmldatadocument-input-to-xsltransform"></a>XslTransform 的 XmlDataDocument 輸入
 > [!NOTE]

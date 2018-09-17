@@ -14,11 +14,11 @@ ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cdead5a54c6e8dbe6fd61f82fc3985913bd7d381
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44265087"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45674035"
 ---
 # <a name="generic-collections-in-net"></a>.NET 中的泛型集合
 

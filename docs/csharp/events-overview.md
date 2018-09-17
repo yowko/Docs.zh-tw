@@ -3,12 +3,12 @@ title: 事件簡介
 description: 透過此概觀了解 .NET Core 中的事件，以及事件的語言設計目標。
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: 2a2230ea5fba1b0cd5b13319677965e7a776549e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f14954dd2e8aeacf3c5ae70a9e891ad11a6f0d7
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213470"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45618057"
 ---
 # <a name="introduction-to-events"></a>事件簡介
 
@@ -65,7 +65,7 @@ Progress?.Invoke(this, new FileListArgs(file));
 ```csharp
 EventHandler<FileListArgs> onProgress = (sender, eventArgs) => 
     Console.WriteLine(eventArgs.FoundFile);
-lister.Progress += OnProgress;
+lister.Progress += onProgress;
 ```
 
 處理常式方法通常是前置詞 'On' 後面接事件名稱，如上所示。

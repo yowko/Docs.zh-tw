@@ -3,12 +3,12 @@ title: 使用 XML 註解記錄您的程式碼
 description: 了解如何使用 XML 文件註解記錄您的程式碼，並在編譯時期產生 XML 文件檔案。
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 4c94e98478e71449a3f9cc4bf1f21462e17a371b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e211543a6a5cc5f6f29d8c195492b474eb24a38d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517477"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45683053"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>使用 XML 註解記錄您的程式碼
 
@@ -29,7 +29,7 @@ XML 文件註解具特殊性，因為編譯器可以處理它們以在編譯時�
    您也可以指定 XML 檔案的確切絕對或相對路徑和名稱。 下列範例會在與應用程式的偵錯版本相同的目錄中產生 XML 檔案︰
 
    ```xml
-   <DocumentationFile>bin\Debug\netcoreapp1.0\App.xml</DocumentationFile>
+   <DocumentationFile>bin\Debug\netcoreapp2.1\App.xml</DocumentationFile>
    ```
 
 - 如果您正在使用 Visual Studio 開發應用程式，請以滑鼠右鍵按一下專案，然後選取 [屬性]。 在屬性對話方塊中，選取 [建置] 索引標籤，然後檢查 [XML 文件檔案]。 您也可以變更編譯器寫入檔案的位置。

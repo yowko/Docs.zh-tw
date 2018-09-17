@@ -11,11 +11,11 @@ ms.assetid: 38f2f3d8-15e5-4bf4-9c83-2b5b6f22bad1
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 74518f6f56f65668d4c7f073a79c9e7de27d7978
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44178557"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45645751"
 ---
 # <a name="how-to-add-and-take-items-individually-from-a-blockingcollection"></a>如何：從 BlockingCollection 個別加入和擷取項目
 本範例示範如何利用封鎖方式和非封鎖方式，在 <xref:System.Collections.Concurrent.BlockingCollection%601> 中加入和移除項目。 如需 <xref:System.Collections.Concurrent.BlockingCollection%601> 的詳細資訊，請參閱 [BlockingCollection 概觀](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)。  

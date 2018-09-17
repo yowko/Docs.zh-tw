@@ -3,11 +3,11 @@ title: 泛型介面中的差異 (C#)
 ms.date: 07/20/2015
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
 ms.openlocfilehash: 11d0c8665412bb513cb68d58203a454b7c97e052
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44200300"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45677106"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>泛型介面中的差異 (C#)
 .NET Framework 4 針對數個現有泛型介面推出了差異支援。 差異支援可讓實作這些介面的類別以隱含方式轉換。 下列介面現在都是 Variant︰  

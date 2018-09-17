@@ -4,11 +4,11 @@ description: 了解支援運算式樹狀架構的架構類型、建立運算式�
 ms.date: 06/20/2016
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
 ms.openlocfilehash: 687b521c52c1ca380a12e18469b5f66000049d3c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44188393"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45617963"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>支援運算式樹狀架構的架構類型
 

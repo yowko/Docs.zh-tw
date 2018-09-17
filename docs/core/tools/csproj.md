@@ -4,12 +4,12 @@ description: 深入了解現有和 .NET Core csproj 檔案之間的差異
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/22/2017
-ms.openlocfilehash: 1e356d0123328fe703f672c38cb5ee7799cb574c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d868eb689af1d87ea2adb1f0069345cbb8195af7
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218228"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45646372"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>適用於 .NET Core 之 csproj 格式的新增項目
 
@@ -20,13 +20,13 @@ ms.locfileid: "33218228"
 
 ```xml
  <PropertyGroup>
-   <TargetFramework>netcoreapp1.1</TargetFramework>
+   <TargetFramework>netcoreapp2.1</TargetFramework>
  </PropertyGroup>
  ```
  
  ```xml
  <PropertyGroup>
-   <TargetFrameworks>netcoreapp1.1;net462</TargetFrameworks>
+   <TargetFrameworks>netcoreapp2.1;net462</TargetFrameworks>
  </PropertyGroup>
  ```
 
@@ -168,10 +168,10 @@ ms.locfileid: "33218228"
 </PackageTargetFallback >
 ```
 
-下列範例只會為 `netcoreapp1.0` 目標指定後援︰
+下列範例只會為 `netcoreapp2.1` 目標指定後援︰
 
 ```xml
-<PackageTargetFallback Condition="'$(TargetFramework)'=='netcoreapp1.0'">
+<PackageTargetFallback Condition="'$(TargetFramework)'=='netcoreapp2.1'">
     $(PackageTargetFallback);portable-net45+win8+wpa81+wp8
 </PackageTargetFallback >
 ```
@@ -180,7 +180,7 @@ ms.locfileid: "33218228"
 隨著改為使用 MSbuild，我們已經將封裝 NuGet 套件時使用的輸入中繼資料從 *project.json* 移動到 *.csproj* 檔。 此輸入是 MSBuild 屬性，因此必須移至 `<PropertyGroup>` 群組。 使用 `dotnet pack` 命令或屬於 SDK 一部分的 `Pack` MSBuild 目標時，會將下列的屬性清單當成封裝處理序的輸入使用。 
 
 ### <a name="ispackable"></a>IsPackable
-布林值，指定是否可封裝專案。 預設值為 `true`。 
+布林值，指定是否可封裝專案。 預設值是 `true`。 
 
 ### <a name="packageversion"></a>PackageVersion
 指定所產生之套件的版本。 接受所有形式的 NuGet 版本字串。 預設為 `$(Version)` 的值，也就是專案中的屬性 `Version`。 

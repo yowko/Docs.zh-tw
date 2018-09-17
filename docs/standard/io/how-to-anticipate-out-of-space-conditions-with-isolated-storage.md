@@ -25,11 +25,11 @@ ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 16b12a1ab274a63b8d190278d6312d36a61efe16
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44207716"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45649377"
 ---
 # <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>如何：預期隔離儲存區發生空間不足的情況
 使用隔離儲存區的程式碼受到[配額](../../../docs/standard/io/isolated-storage.md#quotas)的限制，此限制可針對隔離儲存區檔案和目錄所在的資料區間，指定其大小上限。 配額由安全性原則所定義且由系統管理員設定。 當您嘗試寫入資料時，如果超過允許的大小上限，則會擲回 <xref:System.IO.IsolatedStorage.IsolatedStorageException> 例外狀況，且作業會失敗。 這有助於防止惡意的拒絕服務攻擊，此功能可能會因為資料存放區已滿而導致應用程式拒絕要求。  

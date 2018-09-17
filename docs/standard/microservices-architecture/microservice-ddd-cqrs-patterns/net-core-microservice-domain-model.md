@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
 ms.openlocfilehash: bb11d87cacf5bb6cbc980c879b0c42fae76f6246
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44272276"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45649571"
 ---
 # <a name="implementing-a-microservice-domain-model-with-net-core"></a>使用 .NET Core 實作微服務領域模型 
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
 ms.openlocfilehash: ea371dc968c8d8bf1569d17531cf7f6faff1d315
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44277124"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45618225"
 ---
 # <a name="-out-c-compiler-options"></a>-out (C# 編譯器選項)
 **-out** 選項指定輸出檔案的名稱。  

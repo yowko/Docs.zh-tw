@@ -16,11 +16,11 @@ ms.assetid: e209d949-31e8-44ea-8e38-87f9093f3093
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 65c56a11531f705b7e047e435ec575969d39a616
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44187672"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45592902"
 ---
 # <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>如何：讀取和寫入新建立的資料檔案
 <xref:System.IO.BinaryWriter> 和 <xref:System.IO.BinaryReader?displayProperty=nameWithType> 類別用於寫入和讀取資料，而不是字元字串。 下列範例示範如何在稱為 `Test.data` 的新空白檔案資料流中寫入資料和讀取資料。 在目前的目錄中建立資料檔案之後，系統會建立相關聯的 <xref:System.IO.BinaryWriter> 和 <xref:System.IO.BinaryReader> 物件，而且會使用 <xref:System.IO.BinaryWriter> 物件，將 0 到 10 的整數寫入 `Test.data`，讓檔案指標留在檔案的結尾。 將檔案指標設定為原點之後，<xref:System.IO.BinaryReader> 物件會讀出指定的內容。  

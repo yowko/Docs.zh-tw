@@ -13,11 +13,11 @@ ms.assetid: cbda7114-c752-4f3e-ada1-b1e8dd262f2b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6478ea94b6c54272a01497ac7b1cb1b197892309
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44269250"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45675700"
 ---
 # <a name="interlocked-operations"></a>Interlocked 作業
 <xref:System.Threading.Interlocked> 類別提供方法來同步處理多個執行緒所共用之變數的存取權。 如果變數位於共用的記憶體中，則不同處理序的執行緒可以使用這個機制。 Interlocked 作業不可部分完成，亦即，整個作業是一個單位，同一個變數上的另一個 Interlocked 作業不可將此 Interlocked 作業中斷。 在使用先佔式多執行緒的作業系統中，這一點很重要，因為執行緒可在從記憶體位址載入值後便加以暫停，而不致於有機會受到修改並儲存。  

@@ -40,11 +40,11 @@ ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: acc51287a8c670da63d0ec421aa232864ea91c2b
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44272575"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45592032"
 ---
 # <a name="net-class-library-overview"></a>.NET 類別庫概觀
 

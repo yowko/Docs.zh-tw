@@ -6,11 +6,11 @@ ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ef31d101769dca00f5cff545c72b3afbd59bc638
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44268402"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45664484"
 ---
 # <a name="resolving-external-resources"></a>解析外部資源
 **XmlDocument** 類別可以使用 **XmlDocument** 的 **XmlResolver** 屬性尋找沒有內嵌到 XML 資料的資源，例如外部文件類型定義 (DTD)、實體和結構描述。 這些項目可位於網路或本機磁碟上，並且可以由統一資源識別元 (URI) 辨識。 如此可讓 **XmlDocument** 解析文件中出現的 **EntityReference** 節點，並依據外部 DTD 或結構描述驗證文件。  

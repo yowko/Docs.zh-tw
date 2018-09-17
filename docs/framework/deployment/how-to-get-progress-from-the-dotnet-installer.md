@@ -10,11 +10,11 @@ ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8c27bdb75ef9950d0b2b32f742b38e141cf4981b
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44268990"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45649584"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>如何：取得 .NET Framework 4.5 安裝程式的進度
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 是可轉散發套件的執行階段。 如果您為這個 .NET Framework 版本開發應用程式，可以在應用程式安裝程式中包含 (鏈結) [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安裝程式做為必要條件。 若要呈現自訂或整合的安裝體驗，您可能要以無訊息模式啟動 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安裝程式並追蹤其進度，同時顯示應用程式的安裝進度。 若要啟用無訊息追蹤，[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安裝程式 (可監控) 會使用記憶體對應 I/O (MMIO) 區段定義通訊協定，以便與您的安裝程式 (監控程式或 Chainer) 進行通訊。 此通訊協定會定義一種方式讓 Chainer 取得進度資訊、取得詳細結果、回應訊息，以及取消 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安裝程式。  

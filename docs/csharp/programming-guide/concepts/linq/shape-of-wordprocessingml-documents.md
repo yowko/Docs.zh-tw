@@ -3,11 +3,11 @@ title: WordprocessingML 文件的組織結構 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3791b5e0-c502-469b-bb75-a7bf6fdd0a94
 ms.openlocfilehash: aeb047f23f60ba6951950a85a6e2ef57fcbd9dda
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44277464"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45597283"
 ---
 # <a name="shape-of-wordprocessingml-documents-c"></a>WordprocessingML 文件的組織結構 (C#)
 這個主題說明 WordprocessingML 文件的 XML 組織結構。  

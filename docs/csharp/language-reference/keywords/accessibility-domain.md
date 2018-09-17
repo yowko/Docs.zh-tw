@@ -5,11 +5,11 @@ helpviewer_keywords:
 - accessibility domain [C#]
 ms.assetid: 8af779c1-275b-44be-a864-9edfbca71bcc
 ms.openlocfilehash: 01854b60fb58d4dcd0a217552f19d6c0cd32ec78
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44261755"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45664432"
 ---
 # <a name="accessibility-domain-c-reference"></a>存取範圍定義域 (C# 參考)
 成員的存取範圍定義域指定可參考成員的程式區段。 如果成員巢狀在另一個類型內，則其存取範圍定義域是由成員的[存取範圍層級](../../../csharp/language-reference/keywords/accessibility-levels.md)和立即包含類型的存取範圍定義域所決定。  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
 ms.openlocfilehash: a2efaae7cd861842f92ba3cdedc5ae77beec9f6f
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44267124"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45641055"
 ---
 # <a name="c-walkthroughs"></a>C# 逐步解說
 逐步解說提供常見情節的逐步指示，使其成為開始學習產品或特定功能區域的最佳去處。  

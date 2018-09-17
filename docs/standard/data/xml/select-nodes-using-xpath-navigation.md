@@ -9,11 +9,11 @@ ms.assetid: 8e4450dc-56b3-472b-b467-32f5694f83ad
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9e02dd304893e4d9354144c5b412dfd145161c6e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44202046"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45596945"
 ---
 # <a name="select-nodes-using-xpath-navigation"></a>使用 XPath 巡覽選取節點
 XML 文件物件模型 (DOM) 包含可讓您在 DOM 中使用 XML 路徑語言 (XPath) 巡覽查詢資訊的方法。 您可以使用 XPath 尋找單一特定節點，或是尋找符合某些準則的所有節點。  

@@ -3,11 +3,11 @@ title: 建立 Game1 類別
 ms.date: 03/30/2017
 ms.assetid: 47932ce3-2ba5-476f-a26b-3ddfd5226f27
 ms.openlocfilehash: 368da9df4dffc7017abb02888bc2eb2641f04b8b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197834"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45652894"
 ---
 # <a name="creating-the-game1-class"></a>建立 Game1 類別
 針對所有 Microsoft XNA 專案，Game1 類別衍生自 [Microsoft.Xna.Framework.Game](https://msdn.microsoft.com/library/microsoft.xna.framework.game.aspx) 類別，其為 XNA 遊戲提供基本的圖形裝置初始化、遊戲邏輯和轉譯程式碼。 Game1 類別相當簡單，因為大部分工作都是在 GamePiece 和 GamePieceCollection 類別中完成。  

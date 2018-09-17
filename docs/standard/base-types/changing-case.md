@@ -16,11 +16,11 @@ ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bd20db7fcc16f7781e093d59514c4be75705080a
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262503"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "44514536"
 ---
 # <a name="changing-case-in-net"></a>在 .NET 中變更大小寫
 如果您要撰寫接受使用者輸入的應用程式，則無法確定使用者輸入資料時會使用大寫或小寫。 通常，您會希望字串的大小寫一致，特別是要在使用者介面中顯示這些字串時。 下表描述三種變更大小寫的方法。 前兩種方法提供接受文化特性的多載。  

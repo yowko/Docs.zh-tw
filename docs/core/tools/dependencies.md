@@ -4,12 +4,12 @@ description: 說明如何利用 .NET Core 工具來管理相依性。
 author: blackdwarf
 ms.author: mairaw
 ms.date: 03/06/2017
-ms.openlocfilehash: c8f40b8571523b98da55b047fea8d2bf03b390a2
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: cbeb9ad17932f6abaf14333a71fab2b4b8fd099c
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244224"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45591117"
 ---
 # <a name="managing-dependencies-with-net-core-sdk-10"></a>使用 .NET Core SDK 1.0 管理相依性
 
@@ -32,7 +32,7 @@ ms.locfileid: "39244224"
 您可以使用下例中條件來新增只能在特定目標中使用的相依性：
 
 ```xml
-<PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp1.0'" />
+<PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp2.1'" />
 ```
 
 上面的內容表示只有當建置是針對該給定目標產生時，相依性才有效。 條件中的 `$(TargetFramework)` 是要在專案中設定的 MSBuild 屬性。 針對最常見的 .NET Core 應用程式，您將不需要執行此動作。 
@@ -57,7 +57,7 @@ ms.locfileid: "39244224"
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.0</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>

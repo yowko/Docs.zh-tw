@@ -5,11 +5,11 @@ helpviewer_keywords:
 - false operator keyword [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
 ms.openlocfilehash: e73113bd37dbb68590267141ad037f78919520bc
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44272133"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45648921"
 ---
 # <a name="false-operator-c-reference"></a>false 運算子 (C# 參考)
 

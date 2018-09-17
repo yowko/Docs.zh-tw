@@ -9,11 +9,11 @@ helpviewer_keywords:
 - types [C#], reference types
 ms.assetid: 801cf030-6e2d-4a0d-9daf-1431b0c31f47
 ms.openlocfilehash: f99415fc9a2b728917cdf829ffb9e25823a824dd
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44210902"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45609550"
 ---
 # <a name="reference-types-c-reference"></a>參考類型 (C# 參考)
 

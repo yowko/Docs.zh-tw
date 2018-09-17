@@ -18,11 +18,11 @@ ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1d13d4e115caa636e5d760b65bc98e195490f911
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44184089"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45616230"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a>在 .NET 中修剪和移除字串中的字元
 如果您將句子剖析成個別文字，最後可能會得到許多文字，但文字任一端有空格 (也稱為空白字元)。 在這種情況下，您可以使用 **System.String** 類別中的其中一個 Trim 方法，從字串中的指定位置移除任意數目的空格或其他字元。 下表描述可用的 Trim 方法。  

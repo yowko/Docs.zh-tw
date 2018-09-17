@@ -5,11 +5,11 @@ helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
 ms.openlocfilehash: ff313df9683dbc76bab684ff484b746ad05e065a
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262033"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45653014"
 ---
 # <a name="access-modifiers-c-reference"></a>存取修飾詞 (C# 參考)
 存取修飾詞是用來指定成員或類型的宣告存取範圍的關鍵字。 本節將介紹四種存取修飾詞：  

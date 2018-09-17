@@ -2,11 +2,11 @@
 title: 逐步解說：使用 C# 保存物件
 ms.date: 04/26/2018
 ms.openlocfilehash: c3cff57f008eb524c2d2bec406431e4c41dca617
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262096"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45625109"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>逐步解說：使用 C# 保存物件 #
 
