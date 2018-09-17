@@ -15,11 +15,11 @@ ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ddf8f52ab98d0188235d8c9f97293adced4bfe90
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45649383"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45698311"
 ---
 # <a name="application-domains"></a>應用程式定義域
 作業系統和執行階段環境通常會在應用程式之間提供某種形式的隔離。 例如，Windows 會使用處理序來隔離應用程式。 這種隔離確保在某一應用程式中執行之程式碼不會對其他不相關應用程式造成負面影響。  

@@ -9,11 +9,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 244315b5df4200524685bc5b9fb75a0d7fd9b39e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45609040"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45698350"
 ---
 # <a name="how-to-override-a-global-proxy-selection"></a>如何：覆寫全域 Proxy 的選取範圍
 這個範例會在連接埠 80 上將 **WebRequest** 傳送到 `www.contoso.com`，以使用名為 `alternateproxy` 的 Proxy 伺服器覆寫全域 Proxy 的選取範圍。  

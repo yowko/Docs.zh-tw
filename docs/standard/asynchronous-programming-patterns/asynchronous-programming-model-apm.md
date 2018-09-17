@@ -14,11 +14,11 @@ ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5cd2fa6219f39a8506d865d85e1ce5f84d22a92f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 09/17/2018
-ms.locfileid: "45658622"
+ms.locfileid: "45698371"
 ---
 # <a name="asynchronous-programming-model-apm"></a>非同步程式設計模型 (APM)
 使用 <xref:System.IAsyncResult> 設計模式的非同步作業會實作為兩種方法，名為 **Begin***OperationName* 和 **End***OperationName*，分別開始和結束非同步作業 *OperationName*。 例如， <xref:System.IO.FileStream> 類別提供 <xref:System.IO.FileStream.BeginRead%2A> 和 <xref:System.IO.FileStream.EndRead%2A> 方法，以非同步方式讀取檔案的位元組。 這些方法實作 <xref:System.IO.FileStream.Read%2A> 方法的非同步版本。  

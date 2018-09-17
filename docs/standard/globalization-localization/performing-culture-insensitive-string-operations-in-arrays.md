@@ -10,11 +10,11 @@ ms.assetid: f12922e1-6234-4165-8896-63f0653ab478
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 22815b5ab993b36bc8bcb91f89f346cb6d812e19
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45641387"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45698243"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-arrays"></a>在陣列中執行不區分文化特性的字串作業
 <xref:System.Array.Sort%2A?displayProperty=nameWithType> 和 <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> 方法的多載預設會使用 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 屬性執行區分文化特性的排序。 這些方法所傳回的區分文化特性的結果可能會因為文化特性排序順序上的差異而有所不同。 若要消除區分文化特性的行為，請使用此方法中可接受 `comparer` 參數的其中一個多載。 `comparer` 參數會指定要在比較陣列中元素時使用的 <xref:System.Collections.IComparer> 實作。 為參數指定一個使用 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 的自訂非變異值比較子類別。 如需自訂非變異值比較子類別的範例，請參閱[在集合中執行不區分文化特性的字串作業](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md)主題中的「使用 SortedList 類別」子主題。  

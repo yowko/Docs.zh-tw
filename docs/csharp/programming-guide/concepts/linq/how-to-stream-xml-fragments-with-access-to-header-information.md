@@ -3,11 +3,11 @@ title: 如何：串流 XML 片段並存取標頭資訊 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7f242770-b0c7-418d-894b-643215e1f8aa
 ms.openlocfilehash: 9c141b21a009f836fbf385c1f4179e288ec6c3b5
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45597383"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45698272"
 ---
 # <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a>如何：串流 XML 片段並存取標頭資訊 (C#)
 有時候您必須讀取任意大的 XML 檔案並撰寫您的應用程式，讓應用程式的記憶體使用量可以預測。 如果您嘗試使用大型 XML 檔案填入 XML 樹狀結構，您的記憶體使用量將與檔案大小成正比，也就是，變成過度。 因此，您應該改用資料流技術。  
