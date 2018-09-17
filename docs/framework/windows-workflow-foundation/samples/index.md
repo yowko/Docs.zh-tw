@@ -3,11 +3,11 @@ title: Windows Workflow (WF) 範例
 ms.date: 03/30/2017
 ms.assetid: e0aef017-4381-4f2f-a904-6e1ed898687e
 ms.openlocfilehash: e9b511606c6278e7d2b2fb1bc3cbd9c38b51b000
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45647758"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45698415"
 ---
 # <a name="windows-workflow-wf-samples"></a>Windows Workflow (WF) 範例
 這些範例會提供有關各個層面的 Windows Workflow Foundation (WF) 的指示。  

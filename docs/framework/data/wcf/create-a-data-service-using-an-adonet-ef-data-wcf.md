@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: 72439596ec6dc6c42024ed38116ba0026922154c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 4bccd1e4655786ae24166cdc32619b420c4a54d3
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45679605"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45743770"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>如何：使用 ADO.NET Entity Framework 資料來源建立資料服務 (WCF 資料服務)
 
@@ -34,7 +34,7 @@ WCF Data Services 會將實體資料公開為資料服務。 此實體的資料�
 
 6. 在 [**連接屬性**] 對話方塊中，輸入您的伺服器名稱、 選取驗證方法、 輸入資料庫名稱，然後按一下**確定**。
 
-     **選擇資料連接**對話方塊會更新與您的資料庫連接設定。
+     **選擇資料連接** 對話方塊中已包含您的資料庫連接設定。
 
 7. 請確認**將實體連接設定儲存在 App.Config 中，為：** 核取方塊。 然後按 [下一步] 。
 

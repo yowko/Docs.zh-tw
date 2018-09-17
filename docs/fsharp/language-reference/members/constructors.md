@@ -3,11 +3,11 @@ title: 建構函式 (F#)
 description: '了解如何定義及使用 F # 中的建構函式，來建立和初始化類別和結構的物件。'
 ms.date: 05/16/2016
 ms.openlocfilehash: ff2463f890034cce0bbaa85d9a5c93e50427cd03
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45658635"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45743913"
 ---
 # <a name="constructors"></a>建構函式
 

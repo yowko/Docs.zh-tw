@@ -14,12 +14,12 @@ helpviewer_keywords:
 - MDI forms [Windows Forms], creating
 - MDI forms [Windows Forms], walkthroughs
 ms.assetid: fbab4221-74af-42d0-bbf4-3c97f7b2e544
-ms.openlocfilehash: a84b51679969f38955dd6a72ffe94ec8ca70b3df
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 6236190340833e3f8810387e51ad53e1cb10d37b
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861778"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45743543"
 ---
 # <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>逐步解說：使用功能表合併和 ToolStrip 控制項建立 MDI 表單
 <xref:System.Windows.Forms?displayProperty=nameWithType> 命名空間支援多重文件介面 (MDI) 應用程式，而 <xref:System.Windows.Forms.MenuStrip> 控制項則支援功能表合併。 MDI 表單也可以由 <xref:System.Windows.Forms.ToolStrip> 控制項建立。  
@@ -133,7 +133,7 @@ ms.locfileid: "43861778"
   
 4.  按一下 **新增**數次。  
   
-     子表單自動列在 W**視窗**功能表項目，因為<xref:System.Windows.Forms.MenuStrip>控制項的<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>屬性指派。  
+     子表單並自動列底下** 視窗**功能表項目，因為<xref:System.Windows.Forms.MenuStrip>控制項的<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>屬性指派。  
   
 ## <a name="adding-toolstrip-support"></a>新增 ToolStrip 支援  
  在此程序中，您會將四個<xref:System.Windows.Forms.ToolStrip>MDI 父表單的控制項。 每個<xref:System.Windows.Forms.ToolStrip>控制項會加入內<xref:System.Windows.Forms.ToolStripPanel>控制項停駐在表單的邊緣。  

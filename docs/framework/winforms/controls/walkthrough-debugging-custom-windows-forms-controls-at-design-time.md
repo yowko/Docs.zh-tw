@@ -16,11 +16,11 @@ helpviewer_keywords:
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
 ms.openlocfilehash: 824c1e47cf50dc13a3a986e48a49158b15dbb935
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677327"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45964830"
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>逐步解說：在設計階段偵錯自訂的 Windows Form 控制項
 當您建立自訂控制項時，通常會發現它需要偵錯它的設計階段行為。 這是特別有用，如果您撰寫自訂的設計工具為您的自訂控制項。 如需詳細資訊，請參閱 <<c0> [ 逐步解說： 建立 Windows Form 控制項，會善用 Visual Studio 設計階段功能](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)。  

@@ -3,11 +3,11 @@ title: CLR 使用者定義類型
 ms.date: 03/30/2017
 ms.assetid: 9f70e0b0-3a0d-4eb1-b914-07a5d0c167c2
 ms.openlocfilehash: 4ea415a348375c52e42ddf26ea09a74e7de5e355
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45673762"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45743199"
 ---
 # <a name="clr-user-defined-types"></a>CLR 使用者定義類型
 Microsoft SQL Server 可支援以 Microsoft .NET Framework Common Language Runtime (CLR) 實作的使用者定義型別 (UDT)。 這項將 CLR 整合進 SQL Server 的機制可讓您擴充資料庫的型別系統。 UDT 可讓使用者擴充 SQL Server 資料型別系統，以及定義複雜的結構化型別。  

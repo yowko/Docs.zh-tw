@@ -3,11 +3,11 @@ title: 在 ADO.NET 中連接至資料來源
 ms.date: 03/30/2017
 ms.assetid: 9abc3f92-1be3-4e1a-b360-762dc689650e
 ms.openlocfilehash: f5788b9b0b19f32d03c917575db7b3f40324c0a2
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: MT
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45528217"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45696155"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a>在 ADO.NET 中連接至資料來源
 在 ADO.NET 中使用**連線**物件來連接到特定的資料來源提供連接字串中的所需的驗證資訊。 **連線**您所使用的物件取決於資料來源的類型。  

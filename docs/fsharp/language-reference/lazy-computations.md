@@ -3,11 +3,11 @@ title: 延遲運算 (F#)
 description: '了解 F # 延遲運算如何改善您的應用程式和程式庫的效能。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 8afe815f26978de96291a52973d54a9dbcc5eaf2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45676515"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45698204"
 ---
 # <a name="lazy-computations"></a>延遲運算
 

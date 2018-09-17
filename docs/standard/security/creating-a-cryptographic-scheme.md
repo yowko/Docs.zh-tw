@@ -9,11 +9,11 @@ ms.assetid: d40c509f-5a5e-46cc-94cb-a951e9ab6843
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2db6d4229ac777801aff792c86fe0e5e9a1b4994
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45653287"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45964380"
 ---
 # <a name="creating-a-cryptographic-scheme"></a>建立密碼編譯配置
 .NET Framework 的密碼編譯元件可以結合以建立不同的配置，來加密和解密資料。  

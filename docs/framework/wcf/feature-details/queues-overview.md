@@ -5,11 +5,11 @@ helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
 ms.openlocfilehash: c181a415c8702c3032077728139b23e86d85d1f0
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45588679"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45746214"
 ---
 # <a name="queues-overview"></a>佇列概觀
 本節將介紹已佇列通訊背後的一般和核心概念。 後續各節討論有關此處所述的佇列概念會列印文件的顯示，請在 Windows Communication Foundation (WCF) 的詳細資料。  
