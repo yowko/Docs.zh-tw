@@ -12,11 +12,11 @@ ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f7721ffaebfefadee332c923d867e68204b5205f
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44268756"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45678330"
 ---
 # <a name="the-managed-thread-pool"></a>受控執行緒集區
 

@@ -5,11 +5,11 @@ ms.date: 07/22/2016
 ms.technology: dotnet-standard
 ms.assetid: d095b0b6-2454-4e23-80b4-c9e8a447116c
 ms.openlocfilehash: 8046cb744dccaf512208d517c243640820efce8e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44194439"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45685760"
 ---
 # <a name="automatic-memory-management-and-garbage-collection"></a>自動記憶體管理和記憶體回收
 

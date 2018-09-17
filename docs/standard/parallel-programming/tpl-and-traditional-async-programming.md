@@ -11,11 +11,11 @@ ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8024fe6673b39a611c55eb55742bcfd981300e7e
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44277141"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45683105"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL 和傳統 .NET Framework 非同步程式設計
 .NET Framework 提供下列兩個標準模式執行 I/O 繫結程序和計算繫結程序的非同步作業：  

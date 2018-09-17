@@ -8,11 +8,11 @@ ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d48f6df1e0e7680d2706c73c33dc817e1feaf1d5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "43871620"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45689323"
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>如何：使用 PLINQ 逐一查看檔案目錄
 此範例示範兩個簡單的方式來平行處理檔案目錄的作業。 第一個查詢使用 <xref:System.IO.Directory.GetFiles%2A> 方法來填入目錄和所有子目錄中的檔案名稱陣列。 這個方法在整個陣列填入之前不會傳回，因此在作業開始時可能會延遲。 不過，在填入陣列之後，PLINQ 可以平行方式非常快速地處理它。  

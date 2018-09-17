@@ -6,11 +6,11 @@ ms.assetid: 64359aee-aab0-4042-9a32-d19789af6ca7
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4231516848cc50212a3a6a03d101907b2f6b3920
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44274160"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45692946"
 ---
 # <a name="namespace-affect-on-entity-reference-expansion-for-new-nodes-containing-elements-and-attributes"></a>命名空間對包含項目和屬性的新節點之實體參考擴充的影響
 因為實體宣告的內容幾乎可包含任何內容，所以內容所包含的項目可能包括 `<!ENTITY aname "<elem>test</elem>">`。  

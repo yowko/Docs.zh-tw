@@ -19,11 +19,11 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: 21a858c1-3c99-4904-86ee-0d17b49804fa
 ms.openlocfilehash: 4176d1a4cec91c5740b03c10d1a6d2cc263dba28
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44266308"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45686280"
 ---
 # <a name="how-to-implement-a-client-of-the-event-based-asynchronous-pattern"></a>如何：實作事件架構非同步模式的用戶端
 下列程式碼範例示範如何使用遵守[事件架構非同步模式概觀](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)的元件。 此範例的表單使用 `PrimeNumberCalculator` 元件，請參閱[如何：實作支援事件架構非同步模式的元件](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)所述。  

@@ -8,11 +8,11 @@ ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b4cece1227b5210cf839aff0658267ae480b23b6
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197455"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45685903"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (簽署工具)
 簽署工具是一項命令列工具，會以數位方式簽署檔案、驗證檔案中的簽章以及為檔案加上時間戳記。  

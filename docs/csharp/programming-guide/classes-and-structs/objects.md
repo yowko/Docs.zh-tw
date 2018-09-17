@@ -6,11 +6,11 @@ helpviewer_keywords:
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
 ms.openlocfilehash: e5e537d239bd69cb7a95ae82edbdb82144c700a1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44188318"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45683081"
 ---
 # <a name="objects-c-programming-guide"></a>物件 (C# 程式設計手冊)
 類別或結構定義就像是指定型別可以做什麼的藍圖。 物件基本上是根據藍圖配置和設定的記憶體區塊。 程式可建立許多同類別的物件。 物件也稱為執行個體，可儲存在具名變數或陣列或集合中。 用戶端程式碼是使用這些變數呼叫方法，並存取物件公用屬性的程式碼。 在 C# 之類的物件導向語言中，一般程式包含多個動態互動的物件。  

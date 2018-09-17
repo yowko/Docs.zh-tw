@@ -3,11 +3,11 @@ title: LINQ 和檔案目錄 (C#)
 ms.date: 07/20/2015
 ms.assetid: b66c55e4-0f72-44e5-b086-519f9962335c
 ms.openlocfilehash: 4bdd21cf4d8558f140b265f195368082964c34c4
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252709"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45679592"
 ---
 # <a name="linq-and-file-directories-c"></a>LINQ 和檔案目錄 (C#)
 許多檔案系統作業基本上就是查詢，因此很適合使用 LINQ 方法。  

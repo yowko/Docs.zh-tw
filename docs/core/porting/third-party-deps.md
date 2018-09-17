@@ -4,12 +4,12 @@ description: 了解如何分析協力廠商相依性，以將您的專案從 .NE
 author: cartermp
 ms.author: mairaw
 ms.date: 02/15/2018
-ms.openlocfilehash: a5affd8f1c493a87b2a4f7cd4096d168d404626a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06d8d36d8369680c54af4d16513b2b871b57079c
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216826"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45679267"
 ---
 # <a name="analyze-your-third-party-dependencies"></a>分析協力廠商相依性
 
@@ -51,6 +51,7 @@ netstandard2.0
 netcoreapp1.0
 netcoreapp1.1
 netcoreapp2.0
+netcoreapp2.1
 portable-net45-win8
 portable-win8-wpa8
 portable-net451-win81
