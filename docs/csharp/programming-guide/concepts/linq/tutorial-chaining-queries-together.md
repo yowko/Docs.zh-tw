@@ -2,27 +2,28 @@
 title: 教學課程：將查詢鏈結在一起 (C#)
 ms.date: 07/20/2015
 ms.assetid: 44f54444-c4c5-4c23-9d19-986b957b8eda
-ms.openlocfilehash: 8411d8577c192e2aa1a43bea47644fe6bdc09e88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cab012a6ae618bd731c26bc1a002c144b84d2169
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323706"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45609628"
 ---
-# <a name="tutorial-chaining-queries-together-c"></a><span data-ttu-id="c938b-102">教學課程：將查詢鏈結在一起 (C#)</span><span class="sxs-lookup"><span data-stu-id="c938b-102">Tutorial: Chaining Queries Together (C#)</span></span>
-<span data-ttu-id="c938b-103">此教學課程說明將查詢鏈結在一起時的處理模型。</span><span class="sxs-lookup"><span data-stu-id="c938b-103">This tutorial illustrates the processing model when you chain queries together.</span></span> <span data-ttu-id="c938b-104">將查詢鏈結在一起是撰寫功能性轉換的重要部分。</span><span class="sxs-lookup"><span data-stu-id="c938b-104">Chaining queries together is a key part of writing functional transformations.</span></span> <span data-ttu-id="c938b-105">確實了解鏈結的查詢如何運作相當重要。</span><span class="sxs-lookup"><span data-stu-id="c938b-105">It is important to understand exactly how chained queries work.</span></span>  
+# <a name="tutorial-chaining-queries-together-c"></a><span data-ttu-id="7eb1a-102">教學課程：將查詢鏈結在一起 (C#)</span><span class="sxs-lookup"><span data-stu-id="7eb1a-102">Tutorial: Chaining Queries Together (C#)</span></span>
+<span data-ttu-id="7eb1a-103">此教學課程說明將查詢鏈結在一起時的處理模型。</span><span class="sxs-lookup"><span data-stu-id="7eb1a-103">This tutorial illustrates the processing model when you chain queries together.</span></span> <span data-ttu-id="7eb1a-104">將查詢鏈結在一起是撰寫功能性轉換的重要部分。</span><span class="sxs-lookup"><span data-stu-id="7eb1a-104">Chaining queries together is a key part of writing functional transformations.</span></span> <span data-ttu-id="7eb1a-105">確實了解鏈結的查詢如何運作相當重要。</span><span class="sxs-lookup"><span data-stu-id="7eb1a-105">It is important to understand exactly how chained queries work.</span></span>  
   
- <span data-ttu-id="c938b-106">處理 Office Open XML 文件的查詢會廣泛使用這個技術。</span><span class="sxs-lookup"><span data-stu-id="c938b-106">The queries that process Office Open XML documents use this technique extensively.</span></span>  
+ <span data-ttu-id="7eb1a-106">處理 Office Open XML 文件的查詢會廣泛使用這個技術。</span><span class="sxs-lookup"><span data-stu-id="7eb1a-106">The queries that process Office Open XML documents use this technique extensively.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c938b-107">本節內容</span><span class="sxs-lookup"><span data-stu-id="c938b-107">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="7eb1a-107">本節內容</span><span class="sxs-lookup"><span data-stu-id="7eb1a-107">In This Section</span></span>  
   
-|<span data-ttu-id="c938b-108">主題</span><span class="sxs-lookup"><span data-stu-id="c938b-108">Topic</span></span>|<span data-ttu-id="c938b-109">描述</span><span class="sxs-lookup"><span data-stu-id="c938b-109">Description</span></span>|  
+|<span data-ttu-id="7eb1a-108">主題</span><span class="sxs-lookup"><span data-stu-id="7eb1a-108">Topic</span></span>|<span data-ttu-id="7eb1a-109">描述</span><span class="sxs-lookup"><span data-stu-id="7eb1a-109">Description</span></span>|  
 |-----------|-----------------|  
-|[<span data-ttu-id="c938b-110">LINQ to XML 中的延後執行和延遲評估 (C#)</span><span class="sxs-lookup"><span data-stu-id="c938b-110">Deferred Execution and Lazy Evaluation in LINQ to XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)|<span data-ttu-id="c938b-111">描述延後執行和延遲評估的概念。</span><span class="sxs-lookup"><span data-stu-id="c938b-111">Describes the concepts of deferred execution and lazy evaluation.</span></span>|  
-|[<span data-ttu-id="c938b-112">延後執行範例 (C#)</span><span class="sxs-lookup"><span data-stu-id="c938b-112">Deferred Execution Example (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/deferred-execution-example.md)|<span data-ttu-id="c938b-113">提供延後執行的範例。</span><span class="sxs-lookup"><span data-stu-id="c938b-113">Provides an example of deferred execution.</span></span>|  
-|[<span data-ttu-id="c938b-114">鏈結查詢範例 (C#)</span><span class="sxs-lookup"><span data-stu-id="c938b-114">Chaining Queries Example (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/chaining-queries-example.md)|<span data-ttu-id="c938b-115">顯示將查詢鏈結在一起時，延後執行如何運作。</span><span class="sxs-lookup"><span data-stu-id="c938b-115">Shows how deferred execution works when chaining queries together.</span></span>|  
-|[<span data-ttu-id="c938b-116">中繼具體化 (C#)</span><span class="sxs-lookup"><span data-stu-id="c938b-116">Intermediate Materialization (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)|<span data-ttu-id="c938b-117">識別並說明中繼具體化的語意 (Semantics)。</span><span class="sxs-lookup"><span data-stu-id="c938b-117">Identifies and illustrates the semantics of intermediate materialization.</span></span>|  
-|[<span data-ttu-id="c938b-118">將標準查詢運算子鏈結在一起 (C#)</span><span class="sxs-lookup"><span data-stu-id="c938b-118">Chaining Standard Query Operators Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/chaining-standard-query-operators-together.md)|<span data-ttu-id="c938b-119">描述標準查詢運算子的延遲語意。</span><span class="sxs-lookup"><span data-stu-id="c938b-119">Describes the lazy semantics of the standard query operators.</span></span>|  
+|[<span data-ttu-id="7eb1a-110">LINQ to XML 中的延後執行和延遲評估 (C#)</span><span class="sxs-lookup"><span data-stu-id="7eb1a-110">Deferred Execution and Lazy Evaluation in LINQ to XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)|<span data-ttu-id="7eb1a-111">描述延後執行和延遲評估的概念。</span><span class="sxs-lookup"><span data-stu-id="7eb1a-111">Describes the concepts of deferred execution and lazy evaluation.</span></span>|  
+|[<span data-ttu-id="7eb1a-112">延後執行範例 (C#)</span><span class="sxs-lookup"><span data-stu-id="7eb1a-112">Deferred Execution Example (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/deferred-execution-example.md)|<span data-ttu-id="7eb1a-113">提供延後執行的範例。</span><span class="sxs-lookup"><span data-stu-id="7eb1a-113">Provides an example of deferred execution.</span></span>|  
+|[<span data-ttu-id="7eb1a-114">鏈結查詢範例 (C#)</span><span class="sxs-lookup"><span data-stu-id="7eb1a-114">Chaining Queries Example (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/chaining-queries-example.md)|<span data-ttu-id="7eb1a-115">顯示將查詢鏈結在一起時，延後執行如何運作。</span><span class="sxs-lookup"><span data-stu-id="7eb1a-115">Shows how deferred execution works when chaining queries together.</span></span>|  
+|[<span data-ttu-id="7eb1a-116">中繼具體化 (C#)</span><span class="sxs-lookup"><span data-stu-id="7eb1a-116">Intermediate Materialization (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)|<span data-ttu-id="7eb1a-117">識別並說明中繼具體化的語意 (Semantics)。</span><span class="sxs-lookup"><span data-stu-id="7eb1a-117">Identifies and illustrates the semantics of intermediate materialization.</span></span>|  
+|[<span data-ttu-id="7eb1a-118">將標準查詢運算子鏈結在一起 (C#)</span><span class="sxs-lookup"><span data-stu-id="7eb1a-118">Chaining Standard Query Operators Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/chaining-standard-query-operators-together.md)|<span data-ttu-id="7eb1a-119">描述標準查詢運算子的延遲語意。</span><span class="sxs-lookup"><span data-stu-id="7eb1a-119">Describes the lazy semantics of the standard query operators.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="c938b-120">請參閱</span><span class="sxs-lookup"><span data-stu-id="c938b-120">See Also</span></span>  
- [<span data-ttu-id="c938b-121">XML 純功能性轉換 (C#)</span><span class="sxs-lookup"><span data-stu-id="c938b-121">Pure Functional Transformations of XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
+## <a name="see-also"></a><span data-ttu-id="7eb1a-120">請參閱</span><span class="sxs-lookup"><span data-stu-id="7eb1a-120">See Also</span></span>
+
+- [<span data-ttu-id="7eb1a-121">XML 純功能性轉換 (C#)</span><span class="sxs-lookup"><span data-stu-id="7eb1a-121">Pure Functional Transformations of XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
