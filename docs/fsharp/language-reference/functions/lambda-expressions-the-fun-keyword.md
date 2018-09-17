@@ -3,25 +3,25 @@ title: Lambda 運算式：fun 關鍵字 (F#)
 description: "了解如何使用 F # '好玩 」 關鍵字來定義 lambda 運算式，這是匿名函式。"
 ms.date: 05/16/2016
 ms.openlocfilehash: a37757f6b7328cd348bbf13f058a6dbc881769cf
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45683084"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45964239"
 ---
-# <a name="lambda-expressions-the-fun-keyword-f"></a><span data-ttu-id="94c87-103">Lambda 運算式：fun 關鍵字 (F#)</span><span class="sxs-lookup"><span data-stu-id="94c87-103">Lambda Expressions: The fun Keyword (F#)</span></span>
+# <a name="lambda-expressions-the-fun-keyword-f"></a><span data-ttu-id="b7e37-103">Lambda 運算式：fun 關鍵字 (F#)</span><span class="sxs-lookup"><span data-stu-id="b7e37-103">Lambda Expressions: The fun Keyword (F#)</span></span>
 
-<span data-ttu-id="94c87-104">`fun`關鍵字用以定義 lambda 運算式，也就是匿名函式。</span><span class="sxs-lookup"><span data-stu-id="94c87-104">The `fun` keyword is used to define a lambda expression, that is, an anonymous function.</span></span>
+<span data-ttu-id="b7e37-104">`fun`關鍵字用以定義 lambda 運算式，也就是匿名函式。</span><span class="sxs-lookup"><span data-stu-id="b7e37-104">The `fun` keyword is used to define a lambda expression, that is, an anonymous function.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="94c87-105">語法</span><span class="sxs-lookup"><span data-stu-id="94c87-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="b7e37-105">語法</span><span class="sxs-lookup"><span data-stu-id="b7e37-105">Syntax</span></span>
 
 ```fsharp
 fun parameter-list -> expression
 ```
 
-## <a name="remarks"></a><span data-ttu-id="94c87-106">備註</span><span class="sxs-lookup"><span data-stu-id="94c87-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="b7e37-106">備註</span><span class="sxs-lookup"><span data-stu-id="b7e37-106">Remarks</span></span>
 
-<span data-ttu-id="94c87-107">*參數清單*通常是由名稱和 （選擇性） 參數的型別所組成。</span><span class="sxs-lookup"><span data-stu-id="94c87-107">The *parameter-list* typically consists of names and, optionally, types of parameters.</span></span> <span data-ttu-id="94c87-108">更廣泛地*參數清單*可以包含任何的 F # 模式。</span><span class="sxs-lookup"><span data-stu-id="94c87-108">More generally, the *parameter-list* can be composed of any F# patterns.</span></span> <span data-ttu-id="94c87-109">可能的模式的完整清單，請參閱 <<c0> [ 模式比對](../pattern-matching.md)。</span><span class="sxs-lookup"><span data-stu-id="94c87-109">For a full list of possible patterns, see [Pattern Matching](../pattern-matching.md).</span></span> <span data-ttu-id="94c87-110">有效的參數清單包含下列的範例。</span><span class="sxs-lookup"><span data-stu-id="94c87-110">Lists of valid parameters include the following examples.</span></span>
+<span data-ttu-id="b7e37-107">*參數清單*通常是由名稱和 （選擇性） 參數的型別所組成。</span><span class="sxs-lookup"><span data-stu-id="b7e37-107">The *parameter-list* typically consists of names and, optionally, types of parameters.</span></span> <span data-ttu-id="b7e37-108">更廣泛地*參數清單*可以包含任何的 F # 模式。</span><span class="sxs-lookup"><span data-stu-id="b7e37-108">More generally, the *parameter-list* can be composed of any F# patterns.</span></span> <span data-ttu-id="b7e37-109">可能的模式的完整清單，請參閱 <<c0> [ 模式比對](../pattern-matching.md)。</span><span class="sxs-lookup"><span data-stu-id="b7e37-109">For a full list of possible patterns, see [Pattern Matching](../pattern-matching.md).</span></span> <span data-ttu-id="b7e37-110">有效的參數清單包含下列的範例。</span><span class="sxs-lookup"><span data-stu-id="b7e37-110">Lists of valid parameters include the following examples.</span></span>
 
 ```fsharp
 // Lambda expressions with parameter lists.
@@ -36,16 +36,16 @@ fun (a, b) -> …
 fun head :: tail -> …
 ```
 
-<span data-ttu-id="94c87-111">*運算式*是函式，其中的最後一個運算式會產生傳回值的主體。</span><span class="sxs-lookup"><span data-stu-id="94c87-111">The *expression* is the body of the function, the last expression of which generates a return value.</span></span> <span data-ttu-id="94c87-112">有效的 lambda 運算式的範例包括：</span><span class="sxs-lookup"><span data-stu-id="94c87-112">Examples of valid lambda expressions include the following:</span></span>
+<span data-ttu-id="b7e37-111">*運算式*是函式，其中的最後一個運算式會產生傳回值的主體。</span><span class="sxs-lookup"><span data-stu-id="b7e37-111">The *expression* is the body of the function, the last expression of which generates a return value.</span></span> <span data-ttu-id="b7e37-112">有效的 lambda 運算式的範例包括：</span><span class="sxs-lookup"><span data-stu-id="b7e37-112">Examples of valid lambda expressions include the following:</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet301.fs)]
 
-## <a name="using-lambda-expressions"></a><span data-ttu-id="94c87-113">使用 Lambda 運算式</span><span class="sxs-lookup"><span data-stu-id="94c87-113">Using Lambda Expressions</span></span>
+## <a name="using-lambda-expressions"></a><span data-ttu-id="b7e37-113">使用 Lambda 運算式</span><span class="sxs-lookup"><span data-stu-id="b7e37-113">Using Lambda Expressions</span></span>
 
-<span data-ttu-id="94c87-114">當您想要在清單或另一個集合上執行作業，而且想要避免額外的工作定義的函式，lambda 運算式是特別有用。</span><span class="sxs-lookup"><span data-stu-id="94c87-114">Lambda expressions are especially useful when you want to perform operations on a list or other collection and want to avoid the extra work of defining a function.</span></span> <span data-ttu-id="94c87-115">許多 F # 程式庫函式會採用做為引數，函式值，可以使用 lambda 運算式，在這些情況下特別方便。</span><span class="sxs-lookup"><span data-stu-id="94c87-115">Many F# library functions take function values as arguments, and it can be especially convenient to use a lambda expression in those cases.</span></span> <span data-ttu-id="94c87-116">下列程式碼將 lambda 運算式套用至項目清單。</span><span class="sxs-lookup"><span data-stu-id="94c87-116">The following code applies a lambda expression to elements of a list.</span></span> <span data-ttu-id="94c87-117">在此情況下，匿名函式會將 1 加入至清單的每個項目。</span><span class="sxs-lookup"><span data-stu-id="94c87-117">In this case, the anonymous function adds 1 to every element of a list.</span></span>
+<span data-ttu-id="b7e37-114">當您想要在清單或另一個集合上執行作業，而且想要避免額外的工作定義的函式，lambda 運算式是特別有用。</span><span class="sxs-lookup"><span data-stu-id="b7e37-114">Lambda expressions are especially useful when you want to perform operations on a list or other collection and want to avoid the extra work of defining a function.</span></span> <span data-ttu-id="b7e37-115">許多 F # 程式庫函式會採用做為引數，函式值，可以使用 lambda 運算式，在這些情況下特別方便。</span><span class="sxs-lookup"><span data-stu-id="b7e37-115">Many F# library functions take function values as arguments, and it can be especially convenient to use a lambda expression in those cases.</span></span> <span data-ttu-id="b7e37-116">下列程式碼將 lambda 運算式套用至項目清單。</span><span class="sxs-lookup"><span data-stu-id="b7e37-116">The following code applies a lambda expression to elements of a list.</span></span> <span data-ttu-id="b7e37-117">在此情況下，匿名函式會將 1 加入至清單的每個項目。</span><span class="sxs-lookup"><span data-stu-id="b7e37-117">In this case, the anonymous function adds 1 to every element of a list.</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet302.fs)]
 
-## <a name="see-also"></a><span data-ttu-id="94c87-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="94c87-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b7e37-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b7e37-118">See also</span></span>
 
-- [<span data-ttu-id="94c87-119">函式</span><span class="sxs-lookup"><span data-stu-id="94c87-119">Functions</span></span>](index.md)
+- [<span data-ttu-id="b7e37-119">函式</span><span class="sxs-lookup"><span data-stu-id="b7e37-119">Functions</span></span>](index.md)

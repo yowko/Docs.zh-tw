@@ -3,46 +3,46 @@ title: 進入點 (F#)
 description: '了解如何設定為 編譯為可執行檔，正式開始執行 F # 程式的進入點。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 298500931d49c891a7a243295333df3a9f5d413e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45675934"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45698372"
 ---
-# <a name="entry-point"></a><span data-ttu-id="abc53-103">進入點</span><span class="sxs-lookup"><span data-stu-id="abc53-103">Entry Point</span></span>
+# <a name="entry-point"></a><span data-ttu-id="83235-103">進入點</span><span class="sxs-lookup"><span data-stu-id="83235-103">Entry Point</span></span>
 
-<span data-ttu-id="abc53-104">本主題說明您使用 F # 程式中設定的進入點方法。</span><span class="sxs-lookup"><span data-stu-id="abc53-104">This topic describes the method that you use to set the entry point to an F# program.</span></span>
+<span data-ttu-id="83235-104">本主題說明您使用 F # 程式中設定的進入點方法。</span><span class="sxs-lookup"><span data-stu-id="83235-104">This topic describes the method that you use to set the entry point to an F# program.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="abc53-105">語法</span><span class="sxs-lookup"><span data-stu-id="abc53-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="83235-105">語法</span><span class="sxs-lookup"><span data-stu-id="83235-105">Syntax</span></span>
 
 ```fsharp
 [<EntryPoint>]
 let-function-binding
 ```
 
-## <a name="remarks"></a><span data-ttu-id="abc53-106">備註</span><span class="sxs-lookup"><span data-stu-id="abc53-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="83235-106">備註</span><span class="sxs-lookup"><span data-stu-id="83235-106">Remarks</span></span>
 
-<span data-ttu-id="abc53-107">在先前的語法*可讓函式繫結*中的函式的定義`let`繫結。</span><span class="sxs-lookup"><span data-stu-id="abc53-107">In the previous syntax, *let-function-binding* is the definition of a function in a `let` binding.</span></span>
+<span data-ttu-id="83235-107">在先前的語法*可讓函式繫結*中的函式的定義`let`繫結。</span><span class="sxs-lookup"><span data-stu-id="83235-107">In the previous syntax, *let-function-binding* is the definition of a function in a `let` binding.</span></span>
 
-<span data-ttu-id="abc53-108">會編譯為可執行檔是正式開始執行的程式進入點。</span><span class="sxs-lookup"><span data-stu-id="abc53-108">The entry point to a program that is compiled as an executable file is where execution formally starts.</span></span> <span data-ttu-id="abc53-109">將套用指定的 F # 應用程式的進入點`EntryPoint`屬性的程式`main`函式。</span><span class="sxs-lookup"><span data-stu-id="abc53-109">You specify the entry point to an F# application by applying the `EntryPoint` attribute to the program's `main` function.</span></span> <span data-ttu-id="abc53-110">此函式 (使用建立`let`繫結) 必須是最後一個編譯檔案中的最後一個函式。</span><span class="sxs-lookup"><span data-stu-id="abc53-110">This function (created by using a `let` binding) must be the last function in the last compiled file.</span></span> <span data-ttu-id="abc53-111">專案中的最後一個檔案或傳遞至命令列的最後一個檔案的最後一個編譯的檔案。</span><span class="sxs-lookup"><span data-stu-id="abc53-111">The last compiled file is the last file in the project or the last file that is passed to the command line.</span></span>
+<span data-ttu-id="83235-108">會編譯為可執行檔是正式開始執行的程式進入點。</span><span class="sxs-lookup"><span data-stu-id="83235-108">The entry point to a program that is compiled as an executable file is where execution formally starts.</span></span> <span data-ttu-id="83235-109">將套用指定的 F # 應用程式的進入點`EntryPoint`屬性的程式`main`函式。</span><span class="sxs-lookup"><span data-stu-id="83235-109">You specify the entry point to an F# application by applying the `EntryPoint` attribute to the program's `main` function.</span></span> <span data-ttu-id="83235-110">此函式 (使用建立`let`繫結) 必須是最後一個編譯檔案中的最後一個函式。</span><span class="sxs-lookup"><span data-stu-id="83235-110">This function (created by using a `let` binding) must be the last function in the last compiled file.</span></span> <span data-ttu-id="83235-111">專案中的最後一個檔案或傳遞至命令列的最後一個檔案的最後一個編譯的檔案。</span><span class="sxs-lookup"><span data-stu-id="83235-111">The last compiled file is the last file in the project or the last file that is passed to the command line.</span></span>
 
-<span data-ttu-id="abc53-112">進入點函式具有類型`string array -> int`。</span><span class="sxs-lookup"><span data-stu-id="abc53-112">The entry point function has type `string array -> int`.</span></span> <span data-ttu-id="abc53-113">在命令列上提供的引數傳遞至`main`函式中的字串陣列。</span><span class="sxs-lookup"><span data-stu-id="abc53-113">The arguments provided on the command line are passed to the `main` function in the array of strings.</span></span> <span data-ttu-id="abc53-114">陣列的第一個項目是第一個引數;可執行檔的名稱不會包含在陣列中，因為它在其他程式設計語言。</span><span class="sxs-lookup"><span data-stu-id="abc53-114">The first element of the array is the first argument; the name of the executable file is not included in the array, as it is in some other languages.</span></span> <span data-ttu-id="abc53-115">傳回值用於程序結束代碼。</span><span class="sxs-lookup"><span data-stu-id="abc53-115">The return value is used as the exit code for the process.</span></span> <span data-ttu-id="abc53-116">零通常表示成功，非零值表示發生錯誤。</span><span class="sxs-lookup"><span data-stu-id="abc53-116">Zero usually indicates success; nonzero values indicate an error.</span></span> <span data-ttu-id="abc53-117">不沒有特定的意義，非零的傳回碼; 的任何慣例傳回碼的意義是特定應用程式。</span><span class="sxs-lookup"><span data-stu-id="abc53-117">There is no convention for the specific meaning of nonzero return codes; the meanings of the return codes are application-specific.</span></span>
+<span data-ttu-id="83235-112">進入點函式具有類型`string array -> int`。</span><span class="sxs-lookup"><span data-stu-id="83235-112">The entry point function has type `string array -> int`.</span></span> <span data-ttu-id="83235-113">在命令列上提供的引數傳遞至`main`函式中的字串陣列。</span><span class="sxs-lookup"><span data-stu-id="83235-113">The arguments provided on the command line are passed to the `main` function in the array of strings.</span></span> <span data-ttu-id="83235-114">陣列的第一個項目是第一個引數;可執行檔的名稱不會包含在陣列中，因為它在其他程式設計語言。</span><span class="sxs-lookup"><span data-stu-id="83235-114">The first element of the array is the first argument; the name of the executable file is not included in the array, as it is in some other languages.</span></span> <span data-ttu-id="83235-115">傳回值用於程序結束代碼。</span><span class="sxs-lookup"><span data-stu-id="83235-115">The return value is used as the exit code for the process.</span></span> <span data-ttu-id="83235-116">零通常表示成功，非零值表示發生錯誤。</span><span class="sxs-lookup"><span data-stu-id="83235-116">Zero usually indicates success; nonzero values indicate an error.</span></span> <span data-ttu-id="83235-117">不沒有特定的意義，非零的傳回碼; 的任何慣例傳回碼的意義是特定應用程式。</span><span class="sxs-lookup"><span data-stu-id="83235-117">There is no convention for the specific meaning of nonzero return codes; the meanings of the return codes are application-specific.</span></span>
 
-<span data-ttu-id="abc53-118">下列範例說明簡單`main`函式。</span><span class="sxs-lookup"><span data-stu-id="abc53-118">The following example illustrates a simple `main` function.</span></span>
+<span data-ttu-id="83235-118">下列範例說明簡單`main`函式。</span><span class="sxs-lookup"><span data-stu-id="83235-118">The following example illustrates a simple `main` function.</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/entry-point/snippet501.fs)]
 
-<span data-ttu-id="abc53-119">使用命令列執行此程式碼時`EntryPoint.exe 1 2 3`，輸出如下所示。</span><span class="sxs-lookup"><span data-stu-id="abc53-119">When this code is executed with the command line `EntryPoint.exe 1 2 3`, the output is as follows.</span></span>
+<span data-ttu-id="83235-119">使用命令列執行此程式碼時`EntryPoint.exe 1 2 3`，輸出如下所示。</span><span class="sxs-lookup"><span data-stu-id="83235-119">When this code is executed with the command line `EntryPoint.exe 1 2 3`, the output is as follows.</span></span>
 
 ```console
 Arguments passed to function : [|"1"; "2"; "3"|]
 ```
 
-## <a name="implicit-entry-point"></a><span data-ttu-id="abc53-120">隱含的進入點</span><span class="sxs-lookup"><span data-stu-id="abc53-120">Implicit Entry Point</span></span>
+## <a name="implicit-entry-point"></a><span data-ttu-id="83235-120">隱含的進入點</span><span class="sxs-lookup"><span data-stu-id="83235-120">Implicit Entry Point</span></span>
 
-<span data-ttu-id="abc53-121">當程式沒有任何**EntryPoint**明確指出 進入點，最後一個檔案中編譯的最上層繫結的屬性做為進入點。</span><span class="sxs-lookup"><span data-stu-id="abc53-121">When a program has no **EntryPoint** attribute that explicitly indicates the entry point, the top level bindings in the last file to be compiled are used as the entry point.</span></span>
+<span data-ttu-id="83235-121">當程式沒有任何**EntryPoint**明確指出 進入點，最後一個檔案中編譯的最上層繫結的屬性做為進入點。</span><span class="sxs-lookup"><span data-stu-id="83235-121">When a program has no **EntryPoint** attribute that explicitly indicates the entry point, the top level bindings in the last file to be compiled are used as the entry point.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="abc53-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="abc53-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="83235-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="83235-122">See also</span></span>
 
-- [<span data-ttu-id="abc53-123">函式</span><span class="sxs-lookup"><span data-stu-id="abc53-123">Functions</span></span>](index.md)
-- [<span data-ttu-id="abc53-124">let 繫結</span><span class="sxs-lookup"><span data-stu-id="abc53-124">let Bindings</span></span>](let-bindings.md)
+- [<span data-ttu-id="83235-123">函式</span><span class="sxs-lookup"><span data-stu-id="83235-123">Functions</span></span>](index.md)
+- [<span data-ttu-id="83235-124">let 繫結</span><span class="sxs-lookup"><span data-stu-id="83235-124">let Bindings</span></span>](let-bindings.md)

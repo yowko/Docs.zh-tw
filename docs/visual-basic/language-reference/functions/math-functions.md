@@ -8,55 +8,55 @@ helpviewer_keywords:
 - Atn function
 ms.assetid: 4d2d82e7-6924-42fe-a4a7-b4dd5bebbd0c
 ms.openlocfilehash: da0b612feb5b9a479d50f52cf65e38007ab3b196
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45675713"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45746519"
 ---
-# <a name="math-functions-visual-basic"></a><span data-ttu-id="bdf46-102">數學函式 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bdf46-102">Math Functions (Visual Basic)</span></span>
-<span data-ttu-id="bdf46-103">方法的<xref:System.Math?displayProperty=nameWithType>類別提供三角函數、 對數以及其他一般數學函數。</span><span class="sxs-lookup"><span data-stu-id="bdf46-103">The methods of the <xref:System.Math?displayProperty=nameWithType> class provide trigonometric, logarithmic, and other common mathematical functions.</span></span>  
+# <a name="math-functions-visual-basic"></a><span data-ttu-id="12a2f-102">數學函式 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="12a2f-102">Math Functions (Visual Basic)</span></span>
+<span data-ttu-id="12a2f-103">方法的<xref:System.Math?displayProperty=nameWithType>類別提供三角函數、 對數以及其他一般數學函數。</span><span class="sxs-lookup"><span data-stu-id="12a2f-103">The methods of the <xref:System.Math?displayProperty=nameWithType> class provide trigonometric, logarithmic, and other common mathematical functions.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="bdf46-104">備註</span><span class="sxs-lookup"><span data-stu-id="bdf46-104">Remarks</span></span>  
- <span data-ttu-id="bdf46-105">下表列出的方法<xref:System.Math?displayProperty=nameWithType>類別。</span><span class="sxs-lookup"><span data-stu-id="bdf46-105">The following table lists methods of the <xref:System.Math?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="bdf46-106">您可以使用這些功能的 Visual Basic 程式。</span><span class="sxs-lookup"><span data-stu-id="bdf46-106">You can use these in a Visual Basic program.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="12a2f-104">備註</span><span class="sxs-lookup"><span data-stu-id="12a2f-104">Remarks</span></span>  
+ <span data-ttu-id="12a2f-105">下表列出的方法<xref:System.Math?displayProperty=nameWithType>類別。</span><span class="sxs-lookup"><span data-stu-id="12a2f-105">The following table lists methods of the <xref:System.Math?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="12a2f-106">您可以使用這些功能的 Visual Basic 程式。</span><span class="sxs-lookup"><span data-stu-id="12a2f-106">You can use these in a Visual Basic program.</span></span>  
   
-|<span data-ttu-id="bdf46-107">.NET 方法</span><span class="sxs-lookup"><span data-stu-id="bdf46-107">.NET method</span></span>|<span data-ttu-id="bdf46-108">描述</span><span class="sxs-lookup"><span data-stu-id="bdf46-108">Description</span></span>|  
+|<span data-ttu-id="12a2f-107">.NET 方法</span><span class="sxs-lookup"><span data-stu-id="12a2f-107">.NET method</span></span>|<span data-ttu-id="12a2f-108">描述</span><span class="sxs-lookup"><span data-stu-id="12a2f-108">Description</span></span>|  
 |---------------------------|-----------------|  
-|<xref:System.Math.Abs%2A>|<span data-ttu-id="bdf46-109">傳回一個數字的絕對值。</span><span class="sxs-lookup"><span data-stu-id="bdf46-109">Returns the absolute value of a number.</span></span>|  
-|<xref:System.Math.Acos%2A>|<span data-ttu-id="bdf46-110">傳回餘弦函數 (Cosine) 是指定數字的角。</span><span class="sxs-lookup"><span data-stu-id="bdf46-110">Returns the angle whose cosine is the specified number.</span></span>|  
-|<xref:System.Math.Asin%2A>|<span data-ttu-id="bdf46-111">傳回正弦函數 (Sine) 是指定數字的角。</span><span class="sxs-lookup"><span data-stu-id="bdf46-111">Returns the angle whose sine is the specified number.</span></span>|  
-|<xref:System.Math.Atan%2A>|<span data-ttu-id="bdf46-112">傳回正切函數 (Tangent) 是指定數字的角。</span><span class="sxs-lookup"><span data-stu-id="bdf46-112">Returns the angle whose tangent is the specified number.</span></span>|  
-|<xref:System.Math.Atan2%2A>|<span data-ttu-id="bdf46-113">傳回正切函數是兩個指定數字之商數的角。</span><span class="sxs-lookup"><span data-stu-id="bdf46-113">Returns the angle whose tangent is the quotient of two specified numbers.</span></span>|  
-|<xref:System.Math.BigMul%2A>|<span data-ttu-id="bdf46-114">傳回兩個 32 位元數字的完整的產品。</span><span class="sxs-lookup"><span data-stu-id="bdf46-114">Returns the full product of two 32-bit numbers.</span></span>|  
-|<xref:System.Math.Ceiling%2A>|<span data-ttu-id="bdf46-115">傳回大於或等於指定的最小整數值`Decimal`或`Double`。</span><span class="sxs-lookup"><span data-stu-id="bdf46-115">Returns the smallest integral value that's greater than or equal to the specified `Decimal` or `Double`.</span></span>|  
-|<xref:System.Math.Cos%2A>|<span data-ttu-id="bdf46-116">傳回指定角的餘弦函數。</span><span class="sxs-lookup"><span data-stu-id="bdf46-116">Returns the cosine of the specified angle.</span></span>|  
-|<xref:System.Math.Cosh%2A>|<span data-ttu-id="bdf46-117">傳回指定角的雙曲線餘弦函數。</span><span class="sxs-lookup"><span data-stu-id="bdf46-117">Returns the hyperbolic cosine of the specified angle.</span></span>|  
-|<xref:System.Math.DivRem%2A>|<span data-ttu-id="bdf46-118">傳回兩個 32 位元或 64 位元帶正負號的整數，商數，並傳回餘數做為輸出參數。</span><span class="sxs-lookup"><span data-stu-id="bdf46-118">Returns the quotient of two 32-bit or 64-bit signed integers, and also returns the remainder in an output parameter.</span></span>|  
-|<xref:System.Math.Exp%2A>|<span data-ttu-id="bdf46-119">傳回指定次方的 e （自然對數的基底）。</span><span class="sxs-lookup"><span data-stu-id="bdf46-119">Returns e (the base of natural logarithms) raised to the specified power.</span></span>|  
-|<xref:System.Math.Floor%2A>|<span data-ttu-id="bdf46-120">傳回小於或等於指定的最大整數`Decimal`或`Double`數目。</span><span class="sxs-lookup"><span data-stu-id="bdf46-120">Returns the largest integer that's less than or equal to the specified `Decimal` or `Double` number.</span></span>|  
-|<xref:System.Math.IEEERemainder%2A>|<span data-ttu-id="bdf46-121">傳回指定數目的所得另一個指定數字相除的餘數。</span><span class="sxs-lookup"><span data-stu-id="bdf46-121">Returns the remainder that results from the division of a specified number by another specified number.</span></span>|  
-|<xref:System.Math.Log%2A>|<span data-ttu-id="bdf46-122">在指定的基底會傳回指定數字的自然 （底數為 e） 對數或指定的數字的對數。</span><span class="sxs-lookup"><span data-stu-id="bdf46-122">Returns the natural (base e) logarithm of a specified number or the logarithm of a specified number in a specified base.</span></span>|  
-|<xref:System.Math.Log10%2A>|<span data-ttu-id="bdf46-123">傳回指定數字的以 10 為底數的對數。</span><span class="sxs-lookup"><span data-stu-id="bdf46-123">Returns the base 10 logarithm of a specified number.</span></span>|  
-|<xref:System.Math.Max%2A>|<span data-ttu-id="bdf46-124">傳回兩個數字的較大。</span><span class="sxs-lookup"><span data-stu-id="bdf46-124">Returns the larger of two numbers.</span></span>|  
-|<xref:System.Math.Min%2A>|<span data-ttu-id="bdf46-125">傳回兩個數字中較小的一個。</span><span class="sxs-lookup"><span data-stu-id="bdf46-125">Returns the smaller of two numbers.</span></span>|  
-|<xref:System.Math.Pow%2A>|<span data-ttu-id="bdf46-126">傳回具有指定乘冪數的指定數字。</span><span class="sxs-lookup"><span data-stu-id="bdf46-126">Returns a specified number raised to the specified power.</span></span>|  
-|<xref:System.Math.Round%2A>|<span data-ttu-id="bdf46-127">傳回`Decimal`或`Double`值四捨五入為最接近的整數值，或指定的小數位數。</span><span class="sxs-lookup"><span data-stu-id="bdf46-127">Returns a `Decimal` or `Double` value rounded to the nearest integral value or to a specified number of fractional digits.</span></span>|  
-|<xref:System.Math.Sign%2A>|<span data-ttu-id="bdf46-128">傳回`Integer`指示數字的正負號的值。</span><span class="sxs-lookup"><span data-stu-id="bdf46-128">Returns an `Integer` value indicating the sign of a number.</span></span>|  
-|<xref:System.Math.Sin%2A>|<span data-ttu-id="bdf46-129">傳回指定角的正弦函數。</span><span class="sxs-lookup"><span data-stu-id="bdf46-129">Returns the sine of the specified angle.</span></span>|  
-|<xref:System.Math.Sinh%2A>|<span data-ttu-id="bdf46-130">傳回指定角的雙曲線正弦函數。</span><span class="sxs-lookup"><span data-stu-id="bdf46-130">Returns the hyperbolic sine of the specified angle.</span></span>|  
-|<xref:System.Math.Sqrt%2A>|<span data-ttu-id="bdf46-131">傳回指定數字的平方根。</span><span class="sxs-lookup"><span data-stu-id="bdf46-131">Returns the square root of a specified number.</span></span>|  
-|<xref:System.Math.Tan%2A>|<span data-ttu-id="bdf46-132">傳回指定角的正切函數。</span><span class="sxs-lookup"><span data-stu-id="bdf46-132">Returns the tangent of the specified angle.</span></span>|  
-|<xref:System.Math.Tanh%2A>|<span data-ttu-id="bdf46-133">傳回指定角的雙曲線正切函數。</span><span class="sxs-lookup"><span data-stu-id="bdf46-133">Returns the hyperbolic tangent of the specified angle.</span></span>|  
-|<xref:System.Math.Truncate%2A>|<span data-ttu-id="bdf46-134">計算指定的整數部分`Decimal`或`Double`數目。</span><span class="sxs-lookup"><span data-stu-id="bdf46-134">Calculates the integral part of a specified `Decimal` or `Double` number.</span></span>|  
+|<xref:System.Math.Abs%2A>|<span data-ttu-id="12a2f-109">傳回一個數字的絕對值。</span><span class="sxs-lookup"><span data-stu-id="12a2f-109">Returns the absolute value of a number.</span></span>|  
+|<xref:System.Math.Acos%2A>|<span data-ttu-id="12a2f-110">傳回餘弦函數 (Cosine) 是指定數字的角。</span><span class="sxs-lookup"><span data-stu-id="12a2f-110">Returns the angle whose cosine is the specified number.</span></span>|  
+|<xref:System.Math.Asin%2A>|<span data-ttu-id="12a2f-111">傳回正弦函數 (Sine) 是指定數字的角。</span><span class="sxs-lookup"><span data-stu-id="12a2f-111">Returns the angle whose sine is the specified number.</span></span>|  
+|<xref:System.Math.Atan%2A>|<span data-ttu-id="12a2f-112">傳回正切函數 (Tangent) 是指定數字的角。</span><span class="sxs-lookup"><span data-stu-id="12a2f-112">Returns the angle whose tangent is the specified number.</span></span>|  
+|<xref:System.Math.Atan2%2A>|<span data-ttu-id="12a2f-113">傳回正切函數是兩個指定數字之商數的角。</span><span class="sxs-lookup"><span data-stu-id="12a2f-113">Returns the angle whose tangent is the quotient of two specified numbers.</span></span>|  
+|<xref:System.Math.BigMul%2A>|<span data-ttu-id="12a2f-114">傳回兩個 32 位元數字的完整的產品。</span><span class="sxs-lookup"><span data-stu-id="12a2f-114">Returns the full product of two 32-bit numbers.</span></span>|  
+|<xref:System.Math.Ceiling%2A>|<span data-ttu-id="12a2f-115">傳回大於或等於指定的最小整數值`Decimal`或`Double`。</span><span class="sxs-lookup"><span data-stu-id="12a2f-115">Returns the smallest integral value that's greater than or equal to the specified `Decimal` or `Double`.</span></span>|  
+|<xref:System.Math.Cos%2A>|<span data-ttu-id="12a2f-116">傳回指定角的餘弦函數。</span><span class="sxs-lookup"><span data-stu-id="12a2f-116">Returns the cosine of the specified angle.</span></span>|  
+|<xref:System.Math.Cosh%2A>|<span data-ttu-id="12a2f-117">傳回指定角的雙曲線餘弦函數。</span><span class="sxs-lookup"><span data-stu-id="12a2f-117">Returns the hyperbolic cosine of the specified angle.</span></span>|  
+|<xref:System.Math.DivRem%2A>|<span data-ttu-id="12a2f-118">傳回兩個 32 位元或 64 位元帶正負號的整數，商數，並傳回餘數做為輸出參數。</span><span class="sxs-lookup"><span data-stu-id="12a2f-118">Returns the quotient of two 32-bit or 64-bit signed integers, and also returns the remainder in an output parameter.</span></span>|  
+|<xref:System.Math.Exp%2A>|<span data-ttu-id="12a2f-119">傳回指定次方的 e （自然對數的基底）。</span><span class="sxs-lookup"><span data-stu-id="12a2f-119">Returns e (the base of natural logarithms) raised to the specified power.</span></span>|  
+|<xref:System.Math.Floor%2A>|<span data-ttu-id="12a2f-120">傳回小於或等於指定的最大整數`Decimal`或`Double`數目。</span><span class="sxs-lookup"><span data-stu-id="12a2f-120">Returns the largest integer that's less than or equal to the specified `Decimal` or `Double` number.</span></span>|  
+|<xref:System.Math.IEEERemainder%2A>|<span data-ttu-id="12a2f-121">傳回指定數目的所得另一個指定數字相除的餘數。</span><span class="sxs-lookup"><span data-stu-id="12a2f-121">Returns the remainder that results from the division of a specified number by another specified number.</span></span>|  
+|<xref:System.Math.Log%2A>|<span data-ttu-id="12a2f-122">在指定的基底會傳回指定數字的自然 （底數為 e） 對數或指定的數字的對數。</span><span class="sxs-lookup"><span data-stu-id="12a2f-122">Returns the natural (base e) logarithm of a specified number or the logarithm of a specified number in a specified base.</span></span>|  
+|<xref:System.Math.Log10%2A>|<span data-ttu-id="12a2f-123">傳回指定數字的以 10 為底數的對數。</span><span class="sxs-lookup"><span data-stu-id="12a2f-123">Returns the base 10 logarithm of a specified number.</span></span>|  
+|<xref:System.Math.Max%2A>|<span data-ttu-id="12a2f-124">傳回兩個數字的較大。</span><span class="sxs-lookup"><span data-stu-id="12a2f-124">Returns the larger of two numbers.</span></span>|  
+|<xref:System.Math.Min%2A>|<span data-ttu-id="12a2f-125">傳回兩個數字中較小的一個。</span><span class="sxs-lookup"><span data-stu-id="12a2f-125">Returns the smaller of two numbers.</span></span>|  
+|<xref:System.Math.Pow%2A>|<span data-ttu-id="12a2f-126">傳回具有指定乘冪數的指定數字。</span><span class="sxs-lookup"><span data-stu-id="12a2f-126">Returns a specified number raised to the specified power.</span></span>|  
+|<xref:System.Math.Round%2A>|<span data-ttu-id="12a2f-127">傳回`Decimal`或`Double`值四捨五入為最接近的整數值，或指定的小數位數。</span><span class="sxs-lookup"><span data-stu-id="12a2f-127">Returns a `Decimal` or `Double` value rounded to the nearest integral value or to a specified number of fractional digits.</span></span>|  
+|<xref:System.Math.Sign%2A>|<span data-ttu-id="12a2f-128">傳回`Integer`指示數字的正負號的值。</span><span class="sxs-lookup"><span data-stu-id="12a2f-128">Returns an `Integer` value indicating the sign of a number.</span></span>|  
+|<xref:System.Math.Sin%2A>|<span data-ttu-id="12a2f-129">傳回指定角的正弦函數。</span><span class="sxs-lookup"><span data-stu-id="12a2f-129">Returns the sine of the specified angle.</span></span>|  
+|<xref:System.Math.Sinh%2A>|<span data-ttu-id="12a2f-130">傳回指定角的雙曲線正弦函數。</span><span class="sxs-lookup"><span data-stu-id="12a2f-130">Returns the hyperbolic sine of the specified angle.</span></span>|  
+|<xref:System.Math.Sqrt%2A>|<span data-ttu-id="12a2f-131">傳回指定數字的平方根。</span><span class="sxs-lookup"><span data-stu-id="12a2f-131">Returns the square root of a specified number.</span></span>|  
+|<xref:System.Math.Tan%2A>|<span data-ttu-id="12a2f-132">傳回指定角的正切函數。</span><span class="sxs-lookup"><span data-stu-id="12a2f-132">Returns the tangent of the specified angle.</span></span>|  
+|<xref:System.Math.Tanh%2A>|<span data-ttu-id="12a2f-133">傳回指定角的雙曲線正切函數。</span><span class="sxs-lookup"><span data-stu-id="12a2f-133">Returns the hyperbolic tangent of the specified angle.</span></span>|  
+|<xref:System.Math.Truncate%2A>|<span data-ttu-id="12a2f-134">計算指定的整數部分`Decimal`或`Double`數目。</span><span class="sxs-lookup"><span data-stu-id="12a2f-134">Calculates the integral part of a specified `Decimal` or `Double` number.</span></span>|  
   
- <span data-ttu-id="bdf46-135">若要使用這些函式，但是不限定，匯入<xref:System.Math?displayProperty=nameWithType>到您的專案加入原始程式檔頂端新增下列程式碼的命名空間：</span><span class="sxs-lookup"><span data-stu-id="bdf46-135">To use these functions without qualification, import the <xref:System.Math?displayProperty=nameWithType> namespace into your project by adding the following code to the top of your source file:</span></span>  
+ <span data-ttu-id="12a2f-135">若要使用這些函式，但是不限定，匯入<xref:System.Math?displayProperty=nameWithType>到您的專案加入原始程式檔頂端新增下列程式碼的命名空間：</span><span class="sxs-lookup"><span data-stu-id="12a2f-135">To use these functions without qualification, import the <xref:System.Math?displayProperty=nameWithType> namespace into your project by adding the following code to the top of your source file:</span></span>  
   
 ```vb
 Imports System.Math  
 ```  
   
-## <a name="example"></a><span data-ttu-id="bdf46-136">範例</span><span class="sxs-lookup"><span data-stu-id="bdf46-136">Example</span></span>  
- <span data-ttu-id="bdf46-137">這個範例會使用<xref:System.Math.Abs%2A>方法的<xref:System.Math>類別來計算數字的絕對值。</span><span class="sxs-lookup"><span data-stu-id="bdf46-137">This example uses the <xref:System.Math.Abs%2A> method of the <xref:System.Math> class to compute the absolute value of a number.</span></span>  
+## <a name="example"></a><span data-ttu-id="12a2f-136">範例</span><span class="sxs-lookup"><span data-stu-id="12a2f-136">Example</span></span>  
+ <span data-ttu-id="12a2f-137">這個範例會使用<xref:System.Math.Abs%2A>方法的<xref:System.Math>類別來計算數字的絕對值。</span><span class="sxs-lookup"><span data-stu-id="12a2f-137">This example uses the <xref:System.Math.Abs%2A> method of the <xref:System.Math> class to compute the absolute value of a number.</span></span>  
   
 ```vb
 ' Returns 50.3.  
@@ -65,8 +65,8 @@ Dim MyNumber1 As Double = Math.Abs(50.3)
 Dim MyNumber2 As Double = Math.Abs(-50.3)  
 ```  
   
-## <a name="example"></a><span data-ttu-id="bdf46-138">範例</span><span class="sxs-lookup"><span data-stu-id="bdf46-138">Example</span></span>  
- <span data-ttu-id="bdf46-139">這個範例會使用<xref:System.Math.Atan%2A>方法的<xref:System.Math>類別來計算 pi 的值。</span><span class="sxs-lookup"><span data-stu-id="bdf46-139">This example uses the <xref:System.Math.Atan%2A> method of the <xref:System.Math> class to calculate the value of pi.</span></span>  
+## <a name="example"></a><span data-ttu-id="12a2f-138">範例</span><span class="sxs-lookup"><span data-stu-id="12a2f-138">Example</span></span>  
+ <span data-ttu-id="12a2f-139">這個範例會使用<xref:System.Math.Atan%2A>方法的<xref:System.Math>類別來計算 pi 的值。</span><span class="sxs-lookup"><span data-stu-id="12a2f-139">This example uses the <xref:System.Math.Atan%2A> method of the <xref:System.Math> class to calculate the value of pi.</span></span>  
   
 ```vb
 Public Function GetPi() As Double  
@@ -75,8 +75,8 @@ Public Function GetPi() As Double
 End Function  
 ```  
   
-## <a name="example"></a><span data-ttu-id="bdf46-140">範例</span><span class="sxs-lookup"><span data-stu-id="bdf46-140">Example</span></span>  
- <span data-ttu-id="bdf46-141">這個範例會使用<xref:System.Math.Cos%2A>方法的<xref:System.Math>類別，以傳回某個角度的餘弦值。</span><span class="sxs-lookup"><span data-stu-id="bdf46-141">This example uses the <xref:System.Math.Cos%2A> method of the <xref:System.Math> class to return the cosine of an angle.</span></span>  
+## <a name="example"></a><span data-ttu-id="12a2f-140">範例</span><span class="sxs-lookup"><span data-stu-id="12a2f-140">Example</span></span>  
+ <span data-ttu-id="12a2f-141">這個範例會使用<xref:System.Math.Cos%2A>方法的<xref:System.Math>類別，以傳回某個角度的餘弦值。</span><span class="sxs-lookup"><span data-stu-id="12a2f-141">This example uses the <xref:System.Math.Cos%2A> method of the <xref:System.Math> class to return the cosine of an angle.</span></span>  
   
 ```vb
 Public Function Sec(ByVal angle As Double) As Double  
@@ -85,8 +85,8 @@ Public Function Sec(ByVal angle As Double) As Double
 End Function  
 ```  
   
-## <a name="example"></a><span data-ttu-id="bdf46-142">範例</span><span class="sxs-lookup"><span data-stu-id="bdf46-142">Example</span></span>  
- <span data-ttu-id="bdf46-143">這個範例會使用<xref:System.Math.Exp%2A>方法的<xref:System.Math>類別，以傳回 e 的乘冪。</span><span class="sxs-lookup"><span data-stu-id="bdf46-143">This example uses the <xref:System.Math.Exp%2A> method of the <xref:System.Math> class to return e raised to a power.</span></span>  
+## <a name="example"></a><span data-ttu-id="12a2f-142">範例</span><span class="sxs-lookup"><span data-stu-id="12a2f-142">Example</span></span>  
+ <span data-ttu-id="12a2f-143">這個範例會使用<xref:System.Math.Exp%2A>方法的<xref:System.Math>類別，以傳回 e 的乘冪。</span><span class="sxs-lookup"><span data-stu-id="12a2f-143">This example uses the <xref:System.Math.Exp%2A> method of the <xref:System.Math> class to return e raised to a power.</span></span>  
   
 ```vb
 Public Function Sinh(ByVal angle As Double) As Double  
@@ -95,8 +95,8 @@ Public Function Sinh(ByVal angle As Double) As Double
 End Function  
 ```  
   
-## <a name="example"></a><span data-ttu-id="bdf46-144">範例</span><span class="sxs-lookup"><span data-stu-id="bdf46-144">Example</span></span>  
- <span data-ttu-id="bdf46-145">這個範例會使用<xref:System.Math.Log%2A>方法的<xref:System.Math>類別，以傳回數字的自然對數。</span><span class="sxs-lookup"><span data-stu-id="bdf46-145">This example uses the <xref:System.Math.Log%2A> method of the <xref:System.Math> class to return the natural logarithm of a number.</span></span>  
+## <a name="example"></a><span data-ttu-id="12a2f-144">範例</span><span class="sxs-lookup"><span data-stu-id="12a2f-144">Example</span></span>  
+ <span data-ttu-id="12a2f-145">這個範例會使用<xref:System.Math.Log%2A>方法的<xref:System.Math>類別，以傳回數字的自然對數。</span><span class="sxs-lookup"><span data-stu-id="12a2f-145">This example uses the <xref:System.Math.Log%2A> method of the <xref:System.Math> class to return the natural logarithm of a number.</span></span>  
   
 ```vb
 Public Function Asinh(ByVal value As Double) As Double  
@@ -105,16 +105,16 @@ Public Function Asinh(ByVal value As Double) As Double
 End Function  
 ```  
   
-## <a name="example"></a><span data-ttu-id="bdf46-146">範例</span><span class="sxs-lookup"><span data-stu-id="bdf46-146">Example</span></span>  
- <span data-ttu-id="bdf46-147">這個範例會使用<xref:System.Math.Round%2A>方法的<xref:System.Math>類別來將數值四捨五入到最接近的整數。</span><span class="sxs-lookup"><span data-stu-id="bdf46-147">This example uses the <xref:System.Math.Round%2A> method of the <xref:System.Math> class to round a number to the nearest integer.</span></span>  
+## <a name="example"></a><span data-ttu-id="12a2f-146">範例</span><span class="sxs-lookup"><span data-stu-id="12a2f-146">Example</span></span>  
+ <span data-ttu-id="12a2f-147">這個範例會使用<xref:System.Math.Round%2A>方法的<xref:System.Math>類別來將數值四捨五入到最接近的整數。</span><span class="sxs-lookup"><span data-stu-id="12a2f-147">This example uses the <xref:System.Math.Round%2A> method of the <xref:System.Math> class to round a number to the nearest integer.</span></span>  
   
 ```vb
 ' Returns 3.  
 Dim MyVar2 As Double = Math.Round(2.8)  
 ```  
   
-## <a name="example"></a><span data-ttu-id="bdf46-148">範例</span><span class="sxs-lookup"><span data-stu-id="bdf46-148">Example</span></span>  
- <span data-ttu-id="bdf46-149">這個範例會使用<xref:System.Math.Sign%2A>方法的<xref:System.Math>類別，以判斷數字的正負號。</span><span class="sxs-lookup"><span data-stu-id="bdf46-149">This example uses the <xref:System.Math.Sign%2A> method of the <xref:System.Math> class to determine the sign of a number.</span></span>  
+## <a name="example"></a><span data-ttu-id="12a2f-148">範例</span><span class="sxs-lookup"><span data-stu-id="12a2f-148">Example</span></span>  
+ <span data-ttu-id="12a2f-149">這個範例會使用<xref:System.Math.Sign%2A>方法的<xref:System.Math>類別，以判斷數字的正負號。</span><span class="sxs-lookup"><span data-stu-id="12a2f-149">This example uses the <xref:System.Math.Sign%2A> method of the <xref:System.Math> class to determine the sign of a number.</span></span>  
   
 ```vb
 ' Returns 1.  
@@ -125,8 +125,8 @@ Dim MySign2 As Integer = Math.Sign(-2.4)
 Dim MySign3 As Integer = Math.Sign(0)  
 ```  
   
-## <a name="example"></a><span data-ttu-id="bdf46-150">範例</span><span class="sxs-lookup"><span data-stu-id="bdf46-150">Example</span></span>  
- <span data-ttu-id="bdf46-151">這個範例會使用<xref:System.Math.Sin%2A>方法的<xref:System.Math>類別，以傳回某個角度的正弦值。</span><span class="sxs-lookup"><span data-stu-id="bdf46-151">This example uses the <xref:System.Math.Sin%2A> method of the <xref:System.Math> class to return the sine of an angle.</span></span>  
+## <a name="example"></a><span data-ttu-id="12a2f-150">範例</span><span class="sxs-lookup"><span data-stu-id="12a2f-150">Example</span></span>  
+ <span data-ttu-id="12a2f-151">這個範例會使用<xref:System.Math.Sin%2A>方法的<xref:System.Math>類別，以傳回某個角度的正弦值。</span><span class="sxs-lookup"><span data-stu-id="12a2f-151">This example uses the <xref:System.Math.Sin%2A> method of the <xref:System.Math> class to return the sine of an angle.</span></span>  
   
 ```vb
 Public Function Csc(ByVal angle As Double) As Double  
@@ -135,8 +135,8 @@ Public Function Csc(ByVal angle As Double) As Double
 End Function  
 ```  
   
-## <a name="example"></a><span data-ttu-id="bdf46-152">範例</span><span class="sxs-lookup"><span data-stu-id="bdf46-152">Example</span></span>  
- <span data-ttu-id="bdf46-153">這個範例會使用<xref:System.Math.Sqrt%2A>方法的<xref:System.Math>類別以計算數字的平方根。</span><span class="sxs-lookup"><span data-stu-id="bdf46-153">This example uses the <xref:System.Math.Sqrt%2A> method of the <xref:System.Math> class to calculate the square root of a number.</span></span>  
+## <a name="example"></a><span data-ttu-id="12a2f-152">範例</span><span class="sxs-lookup"><span data-stu-id="12a2f-152">Example</span></span>  
+ <span data-ttu-id="12a2f-153">這個範例會使用<xref:System.Math.Sqrt%2A>方法的<xref:System.Math>類別以計算數字的平方根。</span><span class="sxs-lookup"><span data-stu-id="12a2f-153">This example uses the <xref:System.Math.Sqrt%2A> method of the <xref:System.Math> class to calculate the square root of a number.</span></span>  
   
 ```vb
 ' Returns 2.  
@@ -149,8 +149,8 @@ Dim MySqr3 As Double = Math.Sqrt(0)
 Dim MySqr4 As Double = Math.Sqrt(-4)  
 ```  
   
-## <a name="example"></a><span data-ttu-id="bdf46-154">範例</span><span class="sxs-lookup"><span data-stu-id="bdf46-154">Example</span></span>  
- <span data-ttu-id="bdf46-155">這個範例會使用<xref:System.Math.Tan%2A>方法的<xref:System.Math>類別，以傳回某個角度的正切。</span><span class="sxs-lookup"><span data-stu-id="bdf46-155">This example uses the <xref:System.Math.Tan%2A> method of the <xref:System.Math> class to return the tangent of an angle.</span></span>  
+## <a name="example"></a><span data-ttu-id="12a2f-154">範例</span><span class="sxs-lookup"><span data-stu-id="12a2f-154">Example</span></span>  
+ <span data-ttu-id="12a2f-155">這個範例會使用<xref:System.Math.Tan%2A>方法的<xref:System.Math>類別，以傳回某個角度的正切。</span><span class="sxs-lookup"><span data-stu-id="12a2f-155">This example uses the <xref:System.Math.Tan%2A> method of the <xref:System.Math> class to return the tangent of an angle.</span></span>  
   
 ```vb
 Public Function Ctan(ByVal angle As Double) As Double  
@@ -159,16 +159,16 @@ Public Function Ctan(ByVal angle As Double) As Double
 End Function  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="bdf46-156">需求</span><span class="sxs-lookup"><span data-stu-id="bdf46-156">Requirements</span></span>  
- <span data-ttu-id="bdf46-157">**類別：** <xref:System.Math></span><span class="sxs-lookup"><span data-stu-id="bdf46-157">**Class:** <xref:System.Math></span></span>  
+## <a name="requirements"></a><span data-ttu-id="12a2f-156">需求</span><span class="sxs-lookup"><span data-stu-id="12a2f-156">Requirements</span></span>  
+ <span data-ttu-id="12a2f-157">**類別：** <xref:System.Math></span><span class="sxs-lookup"><span data-stu-id="12a2f-157">**Class:** <xref:System.Math></span></span>  
   
- <span data-ttu-id="bdf46-158">**命名空間：** <xref:System></span><span class="sxs-lookup"><span data-stu-id="bdf46-158">**Namespace:** <xref:System></span></span>  
+ <span data-ttu-id="12a2f-158">**命名空間：** <xref:System></span><span class="sxs-lookup"><span data-stu-id="12a2f-158">**Namespace:** <xref:System></span></span>  
   
- <span data-ttu-id="bdf46-159">**組件：** mscorlib （在 mscorlib.dll 中)</span><span class="sxs-lookup"><span data-stu-id="bdf46-159">**Assembly:** mscorlib (in mscorlib.dll)</span></span>  
+ <span data-ttu-id="12a2f-159">**組件：** mscorlib （在 mscorlib.dll 中)</span><span class="sxs-lookup"><span data-stu-id="12a2f-159">**Assembly:** mscorlib (in mscorlib.dll)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bdf46-160">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bdf46-160">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="12a2f-160">另請參閱</span><span class="sxs-lookup"><span data-stu-id="12a2f-160">See Also</span></span>  
  <xref:Microsoft.VisualBasic.VBMath.Rnd%2A>  
  <xref:Microsoft.VisualBasic.VBMath.Randomize%2A>  
  <xref:System.Double.NaN>  
- [<span data-ttu-id="bdf46-161">衍生的數學函式</span><span class="sxs-lookup"><span data-stu-id="bdf46-161">Derived Math Functions</span></span>](../../../visual-basic/language-reference/keywords/derived-math-functions.md)  
- [<span data-ttu-id="bdf46-162">算術運算子</span><span class="sxs-lookup"><span data-stu-id="bdf46-162">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+ [<span data-ttu-id="12a2f-161">衍生的數學函式</span><span class="sxs-lookup"><span data-stu-id="12a2f-161">Derived Math Functions</span></span>](../../../visual-basic/language-reference/keywords/derived-math-functions.md)  
+ [<span data-ttu-id="12a2f-162">算術運算子</span><span class="sxs-lookup"><span data-stu-id="12a2f-162">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
