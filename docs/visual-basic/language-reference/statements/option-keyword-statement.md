@@ -7,27 +7,27 @@ helpviewer_keywords:
 - Option keyword [Visual Basic]
 ms.assetid: 6b2f41c4-2403-43b6-8a14-94a3775e5b47
 ms.openlocfilehash: f4996b0c03ee98fef31bc301dc957060afdfdac8
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45963873"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46008664"
 ---
-# <a name="option-ltkeywordgt-statement"></a><span data-ttu-id="83f04-102">選項&lt;關鍵字&gt;陳述式</span><span class="sxs-lookup"><span data-stu-id="83f04-102">Option &lt;keyword&gt; Statement</span></span>
-<span data-ttu-id="83f04-103">引進指定套用至整個原始程式檔的編譯器選項的陳述式。</span><span class="sxs-lookup"><span data-stu-id="83f04-103">Introduces a statement that specifies a compiler option that applies to the entire source file.</span></span>  
+# <a name="option-ltkeywordgt-statement"></a><span data-ttu-id="b1453-102">選項&lt;關鍵字&gt;陳述式</span><span class="sxs-lookup"><span data-stu-id="b1453-102">Option &lt;keyword&gt; Statement</span></span>
+<span data-ttu-id="b1453-103">引進指定套用至整個原始程式檔的編譯器選項的陳述式。</span><span class="sxs-lookup"><span data-stu-id="b1453-103">Introduces a statement that specifies a compiler option that applies to the entire source file.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="83f04-104">備註</span><span class="sxs-lookup"><span data-stu-id="83f04-104">Remarks</span></span>  
- <span data-ttu-id="83f04-105">編譯器選項可以控制是否必須明確地宣告所有變數，縮小類型轉換是否必須明確，否則成文字或二進位的數量是否比較字串。</span><span class="sxs-lookup"><span data-stu-id="83f04-105">The compiler options can control whether all variables must be explicitly declared, whether narrowing type conversions must be explicit, or whether strings should be compared as text or as binary quantities.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b1453-104">備註</span><span class="sxs-lookup"><span data-stu-id="b1453-104">Remarks</span></span>  
+ <span data-ttu-id="b1453-105">編譯器選項可以控制是否必須明確地宣告所有變數，縮小類型轉換是否必須明確，否則成文字或二進位的數量是否比較字串。</span><span class="sxs-lookup"><span data-stu-id="b1453-105">The compiler options can control whether all variables must be explicitly declared, whether narrowing type conversions must be explicit, or whether strings should be compared as text or as binary quantities.</span></span>  
   
- <span data-ttu-id="83f04-106">`Option` 關鍵字可用於以下內容：</span><span class="sxs-lookup"><span data-stu-id="83f04-106">The `Option` keyword can be used in these contexts:</span></span>  
+ <span data-ttu-id="b1453-106">`Option` 關鍵字可用於以下內容：</span><span class="sxs-lookup"><span data-stu-id="b1453-106">The `Option` keyword can be used in these contexts:</span></span>  
   
- [<span data-ttu-id="83f04-107">Option Compare 陳述式</span><span class="sxs-lookup"><span data-stu-id="83f04-107">Option Compare Statement</span></span>](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
+ [<span data-ttu-id="b1453-107">Option Compare 陳述式</span><span class="sxs-lookup"><span data-stu-id="b1453-107">Option Compare Statement</span></span>](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
   
- [<span data-ttu-id="83f04-108">Option Explicit 陳述式</span><span class="sxs-lookup"><span data-stu-id="83f04-108">Option Explicit Statement</span></span>](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
+ [<span data-ttu-id="b1453-108">Option Explicit 陳述式</span><span class="sxs-lookup"><span data-stu-id="b1453-108">Option Explicit Statement</span></span>](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
   
- [<span data-ttu-id="83f04-109">Option Infer 陳述式</span><span class="sxs-lookup"><span data-stu-id="83f04-109">Option Infer Statement</span></span>](../../../visual-basic/language-reference/statements/option-infer-statement.md)  
+ [<span data-ttu-id="b1453-109">Option Infer 陳述式</span><span class="sxs-lookup"><span data-stu-id="b1453-109">Option Infer Statement</span></span>](../../../visual-basic/language-reference/statements/option-infer-statement.md)  
   
- [<span data-ttu-id="83f04-110">Option Strict 陳述式</span><span class="sxs-lookup"><span data-stu-id="83f04-110">Option Strict Statement</span></span>](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [<span data-ttu-id="b1453-110">Option Strict 陳述式</span><span class="sxs-lookup"><span data-stu-id="b1453-110">Option Strict Statement</span></span>](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
-## <a name="see-also"></a><span data-ttu-id="83f04-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="83f04-111">See Also</span></span>  
- [<span data-ttu-id="83f04-112">關鍵字</span><span class="sxs-lookup"><span data-stu-id="83f04-112">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="b1453-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b1453-111">See Also</span></span>  
+ [<span data-ttu-id="b1453-112">關鍵字</span><span class="sxs-lookup"><span data-stu-id="b1453-112">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
