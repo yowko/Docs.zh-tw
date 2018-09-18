@@ -3,11 +3,11 @@ title: 模式比對 (F#)
 description: '了解模式如何在 F # 中用來比較具有邏輯結構的資料、 將資料分解為構成部分，或從資料擷取資訊。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 5ad3d3e1a78246afdfa2948fd0fb84fa04686d30
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45668479"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45991420"
 ---
 # <a name="pattern-matching"></a>模式比對
 
@@ -31,7 +31,7 @@ match expression with
 
 |名稱|描述|範例|
 |----|-----------|-------|
-|常數模式|任何數值、 字元或字串常值、 列舉常數或定義的常值識別項|`1.0`、`"test"`、`30``Color.Red`|
+|常數模式|任何數值、 字元或字串常值、 列舉常數或定義的常值識別項|`1.0`, `"test"`, `30`, `Color.Red`|
 |識別項模式|已區分的聯集、 例外狀況標籤或作用中模式案例的情況下，值|`Some(x)`<br /><br />`Failure(msg)`|
 |變數模式|*identifier*|`a`|
 |`as` 模式|*圖樣*做為*識別碼*|`(a, b) as tuple1`|

@@ -3,11 +3,11 @@ title: 將服務參考加入至可攜式子集專案
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
 ms.openlocfilehash: efe95a326e7c13237c7d2d74888c85bf919ed287
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591304"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46006128"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>將服務參考加入至可攜式子集專案
 可攜式子集專案可讓.NET 組件的程式設計人員維護單一來源樹狀結構，並建置系統，同時仍可支援多個.NET 實作 （桌上型電腦、 Silverlight、 Windows Phone 和 XBOX）。 可攜式子集專案僅參考也就是可以使用任何.NET 實作的.NET framework 組件的.NET 可攜式程式庫。  

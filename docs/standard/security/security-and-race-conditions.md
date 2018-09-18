@@ -14,11 +14,11 @@ ms.assetid: ea3edb80-b2e8-4e85-bfed-311b20cb59b6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 57ceaedc7c38ae70a0db5a7fd584a765a7474aff
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45593162"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45991047"
 ---
 # <a name="security-and-race-conditions"></a>安全性和競爭情形
 值得注意的另一個部分是利用競爭條件安全性漏洞的可能性。 有數種方式，這可能發生。 請依照下列子主題說明一些主要的開發人員必須避免的陷阱。  

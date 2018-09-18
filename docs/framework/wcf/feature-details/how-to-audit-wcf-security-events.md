@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: ad1cf3dd598a2ec76302c48ae36b45fd0310d69d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 35d884c0e772deafdaa2326a47903e90691f8106
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493255"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45969661"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>HOW TO：稽核 Windows Communication Foundation 安全性事件
-Windows Communication Foundation (WCF) 可讓您將安全性事件記錄到 Windows 事件記錄檔，您可以使用 Windows 事件檢視器檢視。 這個主題會說明如何將應用程式設定為會記錄安全性事件。 如需 WCF 稽核的詳細資訊，請參閱[稽核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)。  
+Windows Communication Foundation (WCF) 可讓您將安全性事件記錄到 Windows 事件記錄檔，您可以使用 Windows 事件檢視器檢視。 這個主題會說明如何將應用程式設定為會記錄安全性事件。 如需有關 WCF 稽核的詳細資訊，請參閱[稽核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)。  
   
 ### <a name="to-audit-security-events-in-code"></a>若要在程式碼中稽核安全性事件  
   
@@ -47,7 +47,7 @@ Windows Communication Foundation (WCF) 可讓您將安全性事件記錄到 Wind
   
 ### <a name="to-set-up-auditing-in-configuration"></a>若要使用組態設定稽核  
   
-1.  若要設定中設定稽核，請加入[\<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)元素[\<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) web.config 檔案區段。 然後加入[ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)項目並設定各種屬性，如下列範例所示。  
+1.  若要設定中設定稽核，請新增[\<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)項目[\<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) web.config 檔案區段。 然後新增[ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)項目和設定各種屬性，如下列範例所示。  
   
     ```xml  
     <behaviors>  
@@ -81,13 +81,13 @@ Windows Communication Foundation (WCF) 可讓您將安全性事件記錄到 Wind
  [!code-vb[AuditingSecurityEvents#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#1)]  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
- 如果將 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 屬性設定為 `true`，就會隱藏產生安全性稽核時的失敗 (如果設定為 `false`，就會擲回例外狀況)。 不過，如果您啟用下列 Windows**本機安全性設定**屬性，無法產生稽核事件會導致 Windows 立即關機：  
+ 如果將 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 屬性設定為 `true`，就會隱藏產生安全性稽核時的失敗 (如果設定為 `false`，就會擲回例外狀況)。 不過，如果您啟用下列 Windows**本機安全性設定**屬性，來產生稽核事件失敗會導致 Windows 立即關機：  
   
  **稽核： 當無法記錄安全性稽核系統立即關機**  
   
- 若要設定屬性，請開啟**本機安全性設定** 對話方塊。 在下**安全性設定**，按一下 **本機原則**。 然後按一下 **安全性選項**。  
+ 若要設定此屬性，開啟**本機安全性設定** 對話方塊。 底下**安全性設定**，按一下**本機原則**。 然後按一下**安全性選項**。  
   
- 如果<xref:System.ServiceModel.AuditLogLocation>屬性設定為<xref:System.ServiceModel.AuditLogLocation.Security>和**稽核物件存取**中未設定**本機安全性原則**，不會稽核事件寫入安全性記錄檔。 請注意，這時不會傳回任何失敗，但是稽核項目也不會寫入安全性記錄檔中。  
+ 如果<xref:System.ServiceModel.AuditLogLocation>屬性設定為<xref:System.ServiceModel.AuditLogLocation.Security>並**稽核物件存取**不一定都是**本機安全性原則**，稽核事件將不會寫入安全性記錄檔。 請注意，這時不會傳回任何失敗，但是稽核項目也不會寫入安全性記錄檔中。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>  

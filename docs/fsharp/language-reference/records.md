@@ -3,11 +3,11 @@ title: 資料錄 (F#)
 description: '了解 F # 記錄代表具名的值，並選擇性地使用成員的簡單彙總的方式。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 6103d96b6b80a9e2ed168755958dbe800f7fa862
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45638546"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46009384"
 ---
 # <a name="records"></a>資料錄
 

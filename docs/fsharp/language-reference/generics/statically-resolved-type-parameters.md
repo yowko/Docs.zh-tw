@@ -3,11 +3,11 @@ title: 以統計方式解析的型別參數 (F#)
 description: '了解如何使用 F # 以統計方式解析的型別參數，它會取代在編譯時期而不是在執行階段的實際型別。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 747917fef2746dcbf363ef4b717ace5e47229800
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595132"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45973166"
 ---
 # <a name="statically-resolved-type-parameters"></a>以統計方式解析的型別參數
 

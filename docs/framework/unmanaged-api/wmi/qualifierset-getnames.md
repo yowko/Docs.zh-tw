@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 84059c5e5542e13b1d4fc4efcfc4c7f418db391e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45594947"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46002589"
 ---
 # <a name="qualifiersetgetnames-function"></a>QualifierSet_GetNames 函式
 擷取所有的限定詞或目前的物件或屬性提供的特定限定詞的名稱。 

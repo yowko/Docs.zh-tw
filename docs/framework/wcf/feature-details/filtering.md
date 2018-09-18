@@ -3,11 +3,11 @@ title: 篩選
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
 ms.openlocfilehash: 74915a45ed5ca1d13790f64c7921d1f750fa04d3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45673970"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45972480"
 ---
 # <a name="filtering"></a>篩選
 Windows Communication Foundation (WCF) 的篩選系統可以使用宣告式篩選條件來比對訊息，並做出作業決策。 您可以使用篩選條件檢查訊息的部分，以判斷如何處理訊息。 例如，佇列處理序可以使用 XPath 1.0 查詢檢查已知標頭的優先順序項目，以便決定是否要將訊息移到佇列前頭。  

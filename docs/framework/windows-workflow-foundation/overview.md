@@ -3,11 +3,11 @@ title: Windows Workflow 概觀
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
 ms.openlocfilehash: a516f454abc81ae8f6f1c15c815fe2b671ecd98f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45686150"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45989614"
 ---
 # <a name="windows-workflow-overview"></a>Windows Workflow 概觀
 工作流程是一組基本的單位，稱為*活動*，會儲存為描述真實世界的程序的模型。 工作流程能夠描述執行的順序，以及短期工作和長期工作之間的相依關係。 這個工作會從頭到尾經過整個模型，而活動可能會由人員或系統功能執行。  

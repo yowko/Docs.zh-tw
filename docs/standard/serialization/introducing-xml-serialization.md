@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: 66412c620b8107312e5d58fef5cf1b5d9ee90107
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: e1625d2cdf0be4106a43b9d40aef97ea2b5c4ec4
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615510"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45999458"
 ---
 # <a name="introducing-xml-serialization"></a>XML 序列化簡介
 
@@ -61,7 +61,7 @@ ms.locfileid: "45615510"
 
 - 序列化敏感資料可能會易受攻擊。
 
-  在 **XmlSerializer** 擁有序列化資料之後，可儲存成 XML 檔案或其他資料存放區。 若您的資料存放區可由其他處理序存取，或是在內部網路或網際網路上看得到，那資料就可能遭竊取和惡意使用。 例如，若您建立了可序列化包含信用卡號碼之訂單的應用程式，這種資料就是高度敏感。 若想要防止它的發生，時時保護資料存放區並採取步驟保持它的私密性。
+  在後**XmlSerializer**擁有序列化資料，可以將它儲存為 XML 檔案或其他資料存放區。 若您的資料存放區可由其他處理序存取，或是在內部網路或網際網路上看得到，那資料就可能遭竊取和惡意使用。 例如，若您建立了可序列化包含信用卡號碼之訂單的應用程式，這種資料就是高度敏感。 若想要防止它的發生，時時保護資料存放區並採取步驟保持它的私密性。
 
 ## <a name="serialization-of-a-simple-class"></a>簡單類別序列化
 

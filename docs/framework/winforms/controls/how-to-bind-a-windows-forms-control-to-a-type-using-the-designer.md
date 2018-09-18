@@ -7,11 +7,11 @@ helpviewer_keywords:
 - types [Windows Forms], binding controls to
 ms.assetid: 5ab984b5-c2d0-4638-a572-1c84013e8746
 ms.openlocfilehash: 33df9e050dd8c2b3ace8ff89cbd5939b538fcd95
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45647180"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45969440"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>如何：使用設計工具將 Windows Forms 控制項繫結至型別
 當您在建立與資料互動的控制項時，有時需要將控制項繫結至類型，而非物件。 您在設計階段通常需要將控制項繫結至類型，當時資料可能無法使用，但您仍希望資料繫結的控制項顯示類型公用介面中的資料。 下列程序示範如何建立新<xref:System.Windows.Forms.BindingSource>也就是繫結至型別，以及如何將其中一個類型的屬性，以繫結<xref:System.Windows.Forms.TextBox.Text%2A>屬性<xref:System.Windows.Forms.TextBox>。  
@@ -20,7 +20,7 @@ ms.locfileid: "45647180"
   
 1.  建立 Windows Forms 專案 (**檔案** > **新增** > **專案** > **Visual C#** 或**Visual Basic** > **傳統桌面** > **Windows Forms 應用程式**)。  
   
-2.  在 [**設計**檢視中，將<xref:System.Windows.Forms.BindingSource>元件拖曳至表單。  
+2.  在 **設計**檢視中，將<xref:System.Windows.Forms.BindingSource>元件拖曳至表單。  
   
 3.  在 [**屬性**] 視窗中，按一下箭號<xref:System.Windows.Forms.BindingSource.DataSource%2A>屬性。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "45647180"
   
 3.  按一下箭號旁<xref:System.Windows.Forms.TextBox.Text%2A>屬性。  
   
-4.  在 [ **DataSource UI 類型編輯器**，展開的節點<xref:System.Windows.Forms.BindingSource>之前，所新增，然後選取您想要繫結的繫結類型屬性<xref:System.Windows.Forms.TextBox.Text%2A>屬性<xref:System.Windows.Forms.TextBox>。  
+4.  在  **DataSource UI 類型編輯器**，展開的節點<xref:System.Windows.Forms.BindingSource>之前，所新增，然後選取您想要繫結的繫結類型屬性<xref:System.Windows.Forms.TextBox.Text%2A>屬性<xref:System.Windows.Forms.TextBox>。  
   
 ## <a name="see-also"></a>另請參閱  
  [BindingSource 元件](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
