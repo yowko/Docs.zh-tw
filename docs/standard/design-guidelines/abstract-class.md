@@ -13,32 +13,32 @@ ms.assetid: d3646e6d-5c1f-4922-8fb0-ec5effb30d60
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c5b9dacc4995a126e1ee3f6062dca796194d4882
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45653040"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46288010"
 ---
-# <a name="abstract-class-design"></a><span data-ttu-id="68dc9-102">抽象類別設計</span><span class="sxs-lookup"><span data-stu-id="68dc9-102">Abstract Class Design</span></span>
-<span data-ttu-id="68dc9-103">**X DO NOT** 抽象型別中定義公用或受保護的內部建構函式。</span><span class="sxs-lookup"><span data-stu-id="68dc9-103">**X DO NOT** define public or protected internal constructors in abstract types.</span></span>  
+# <a name="abstract-class-design"></a><span data-ttu-id="857c7-102">抽象類別設計</span><span class="sxs-lookup"><span data-stu-id="857c7-102">Abstract Class Design</span></span>
+<span data-ttu-id="857c7-103">**X DO NOT** 抽象型別中定義公用或受保護的內部建構函式。</span><span class="sxs-lookup"><span data-stu-id="857c7-103">**X DO NOT** define public or protected internal constructors in abstract types.</span></span>  
   
- <span data-ttu-id="68dc9-104">建構函式應該是公用，只有當使用者將需要建立型別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="68dc9-104">Constructors should be public only if users will need to create instances of the type.</span></span> <span data-ttu-id="68dc9-105">因為您無法建立抽象類型的執行個體，具有公用建構函式的抽象類型是不正確設計，且可能造成誤導使用者。</span><span class="sxs-lookup"><span data-stu-id="68dc9-105">Because you cannot create instances of an abstract type, an abstract type with a public constructor is incorrectly designed and misleading to the users.</span></span>  
+ <span data-ttu-id="857c7-104">建構函式應該是公用，只有當使用者將需要建立型別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="857c7-104">Constructors should be public only if users will need to create instances of the type.</span></span> <span data-ttu-id="857c7-105">因為您無法建立抽象類型的執行個體，具有公用建構函式的抽象類型是不正確設計，且可能造成誤導使用者。</span><span class="sxs-lookup"><span data-stu-id="857c7-105">Because you cannot create instances of an abstract type, an abstract type with a public constructor is incorrectly designed and misleading to the users.</span></span>  
   
- <span data-ttu-id="68dc9-106">**✓ DO** 抽象類別中定義受保護或內部的建構函式。</span><span class="sxs-lookup"><span data-stu-id="68dc9-106">**✓ DO** define a protected or an internal constructor in abstract classes.</span></span>  
+ <span data-ttu-id="857c7-106">**✓ DO** 抽象類別中定義受保護或內部的建構函式。</span><span class="sxs-lookup"><span data-stu-id="857c7-106">**✓ DO** define a protected or an internal constructor in abstract classes.</span></span>  
   
- <span data-ttu-id="68dc9-107">受保護的建構函式是更常見的並只允許基底類別，以建立子型別時進行自己的初始化。</span><span class="sxs-lookup"><span data-stu-id="68dc9-107">A protected constructor is more common and simply allows the base class to do its own initialization when subtypes are created.</span></span>  
+ <span data-ttu-id="857c7-107">受保護的建構函式是更常見的並只允許基底類別，以建立子型別時進行自己的初始化。</span><span class="sxs-lookup"><span data-stu-id="857c7-107">A protected constructor is more common and simply allows the base class to do its own initialization when subtypes are created.</span></span>  
   
- <span data-ttu-id="68dc9-108">內部的建構函式可用來限制要定義類別的組件的抽象類別的具象實作。</span><span class="sxs-lookup"><span data-stu-id="68dc9-108">An internal constructor can be used to limit concrete implementations of the abstract class to the assembly defining the class.</span></span>  
+ <span data-ttu-id="857c7-108">內部的建構函式可用來限制要定義類別的組件的抽象類別的具象實作。</span><span class="sxs-lookup"><span data-stu-id="857c7-108">An internal constructor can be used to limit concrete implementations of the abstract class to the assembly defining the class.</span></span>  
   
- <span data-ttu-id="68dc9-109">**✓ DO** 提供至少一個繼承自每個您寄送的抽象類別的具象型別。</span><span class="sxs-lookup"><span data-stu-id="68dc9-109">**✓ DO** provide at least one concrete type that inherits from each abstract class that you ship.</span></span>  
+ <span data-ttu-id="857c7-109">**✓ DO** 提供至少一個繼承自每個您寄送的抽象類別的具象型別。</span><span class="sxs-lookup"><span data-stu-id="857c7-109">**✓ DO** provide at least one concrete type that inherits from each abstract class that you ship.</span></span>  
   
- <span data-ttu-id="68dc9-110">此舉有助於驗證抽象類別的設計。</span><span class="sxs-lookup"><span data-stu-id="68dc9-110">Doing this helps to validate the design of the abstract class.</span></span> <span data-ttu-id="68dc9-111">例如，<xref:System.IO.FileStream?displayProperty=nameWithType>是實作<xref:System.IO.Stream?displayProperty=nameWithType>抽象類別。</span><span class="sxs-lookup"><span data-stu-id="68dc9-111">For example,  <xref:System.IO.FileStream?displayProperty=nameWithType> is an implementation of the <xref:System.IO.Stream?displayProperty=nameWithType> abstract class.</span></span>  
+ <span data-ttu-id="857c7-110">此舉有助於驗證抽象類別的設計。</span><span class="sxs-lookup"><span data-stu-id="857c7-110">Doing this helps to validate the design of the abstract class.</span></span> <span data-ttu-id="857c7-111">例如，<xref:System.IO.FileStream?displayProperty=nameWithType>是實作<xref:System.IO.Stream?displayProperty=nameWithType>抽象類別。</span><span class="sxs-lookup"><span data-stu-id="857c7-111">For example,  <xref:System.IO.FileStream?displayProperty=nameWithType> is an implementation of the <xref:System.IO.Stream?displayProperty=nameWithType> abstract class.</span></span>  
   
- <span data-ttu-id="68dc9-112">*Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*</span><span class="sxs-lookup"><span data-stu-id="68dc9-112">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
+ <span data-ttu-id="857c7-112">*Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*</span><span class="sxs-lookup"><span data-stu-id="857c7-112">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- <span data-ttu-id="68dc9-113">獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。</span><span class="sxs-lookup"><span data-stu-id="68dc9-113">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
+ <span data-ttu-id="857c7-113">獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。</span><span class="sxs-lookup"><span data-stu-id="857c7-113">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="68dc9-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="68dc9-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="857c7-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="857c7-114">See also</span></span>
 
-- [<span data-ttu-id="68dc9-115">類型設計方針</span><span class="sxs-lookup"><span data-stu-id="68dc9-115">Type Design Guidelines</span></span>](../../../docs/standard/design-guidelines/type.md)  
-- [<span data-ttu-id="68dc9-116">Framework 設計方針</span><span class="sxs-lookup"><span data-stu-id="68dc9-116">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)
+- [<span data-ttu-id="857c7-115">類型設計方針</span><span class="sxs-lookup"><span data-stu-id="857c7-115">Type Design Guidelines</span></span>](../../../docs/standard/design-guidelines/type.md)  
+- [<span data-ttu-id="857c7-116">Framework 設計方針</span><span class="sxs-lookup"><span data-stu-id="857c7-116">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)
