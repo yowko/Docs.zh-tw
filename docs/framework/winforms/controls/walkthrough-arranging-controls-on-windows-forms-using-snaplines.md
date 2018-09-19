@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
 ms.openlocfilehash: 170b79f03515ab371f7013c267b28ba85dafd0f5
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45625694"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46324275"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>逐步解說：使用對齊線排列 Windows Form 上的控制項
 對許多應用程式而言，控制項在表單上的精確位置是高優先順序。 Windows Form 設計工具會提供您許多版面配置工具，來完成這項作業。 其中一個最重要的是<xref:System.Windows.Forms.Design.Behavior.SnapLine>功能。  
