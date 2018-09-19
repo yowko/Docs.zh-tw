@@ -5,11 +5,11 @@ helpviewer_keywords:
 - managed HTML DOM
 ms.assetid: a017dd5c-cd7b-47e4-952c-f4f54cb48409
 ms.openlocfilehash: 7800311895d1c0fac43577076226a68712164f60
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45625059"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46320565"
 ---
 # <a name="using-the-managed-html-document-object-model"></a>使用 Managed HTML 文件物件模型
 受管理的 HTML 文件物件模型 (DOM) 提供的包裝函式，根據[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]HTML 類別公開的 Internet Explorer。 使用這些類別來操作中裝載的 HTML 網頁<xref:System.Windows.Forms.WebBrowser>控制項，或建置新的頁面，從一開始。  

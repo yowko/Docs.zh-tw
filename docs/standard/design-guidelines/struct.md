@@ -14,11 +14,11 @@ ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3879dc3f0270a56132b44882a74c50d05914ff89
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000904"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46324616"
 ---
 # <a name="struct-design"></a>結構設計
 一般用途的實值型別最常稱為結構時，它的 C# 關鍵字。 本節提供一般的結構設計指導方針。  

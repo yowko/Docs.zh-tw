@@ -7,11 +7,11 @@ helpviewer_keywords:
 - -codepage compiler option [Visual Basic]
 ms.assetid: be36ec33-6800-4505-838c-4124564f5cc9
 ms.openlocfilehash: fda75383435fdff718d1d50bc8583afc9858e7e2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45746360"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46320928"
 ---
 # <a name="-codepage-visual-basic"></a>-codepage (Visual Basic)
 指定編譯過程中所有原始程式碼檔使用的字碼頁。  

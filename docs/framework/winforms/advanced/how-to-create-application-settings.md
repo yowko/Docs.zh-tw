@@ -9,11 +9,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
 ms.openlocfilehash: 7a84fc85b42f2b78ccafcae3c815847633b9916d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45989757"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46320551"
 ---
 # <a name="how-to-create-application-settings"></a>如何：建立應用程式設定
 您可以使用 Managed 程式碼來建立新的應用程式設定，並將設定繫結至表單或表單控制項的屬性，以便在執行階段自動載入及儲存這些設定。  

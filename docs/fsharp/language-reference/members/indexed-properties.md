@@ -3,11 +3,11 @@ title: 索引屬性 (F#)
 description: '深入了解 F # 編製索引的屬性，可提供已排序資料的類似陣列存取屬性。'
 ms.date: 05/16/2016
 ms.openlocfilehash: e56e4e2ea3f35df4c8ec46012357242cb6ce69f3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45994256"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46321362"
 ---
 # <a name="indexed-properties"></a>索引屬性
 

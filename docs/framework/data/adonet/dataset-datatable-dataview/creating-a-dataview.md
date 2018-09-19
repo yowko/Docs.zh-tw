@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b1cc02d1-23b1-4439-a998-0da1899f3442
 ms.openlocfilehash: b88df66ef2e065d1db8d4033eb1fb0e47ebdd189
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45994000"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46322370"
 ---
 # <a name="creating-a-dataview"></a>建立 DataView
 建立 <xref:System.Data.DataView> 的方法有兩種。 您可以使用**DataView**建構函式，或者您可以建立參考<xref:System.Data.DataTable.DefaultView%2A>屬性<xref:System.Data.DataTable>。 **DataView**建構函式可以是空的或者也可採用任一**DataTable**做為單一引數，或有**DataTable**篩選準則、 排序條件及一個資料列狀態篩選器。 如需有關其他引數可用以搭配**DataView**，請參閱[排序及篩選資料](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)。  

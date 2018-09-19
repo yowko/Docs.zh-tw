@@ -6,11 +6,11 @@ ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6bfc2e6def94d0830df4a4cdf738cdeef106de9f
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46287461"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46323229"
 ---
 # <a name="extension-methods"></a>擴充方法
 擴充方法是允許使用執行個體方法呼叫語法來呼叫靜態方法的語言功能。 這些方法必須接受至少一個參數，表示要對方法的執行個體。  
