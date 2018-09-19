@@ -3,11 +3,11 @@ title: 選項 (F#)
 description: '了解如何使用 F # 選項類型時的實際值可能不存在的具名的值或變數。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 0859cb42e72ef9e67551b884f5cf6130fb099a78
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615753"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46287932"
 ---
 # <a name="options"></a>選項
 
