@@ -3,11 +3,11 @@ title: 系統函式
 ms.date: 03/30/2017
 ms.assetid: b7c71b58-09e6-44ce-a3e5-a0fdb892fb86
 ms.openlocfilehash: 277f2f9c69610b134f3f95787f065f65b01712d2
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46006596"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46472239"
 ---
 # <a name="system-functions"></a>系統函式
 .NET Framework Data Provider for SQL Server (SqlClient) 提供下列系統函式：  

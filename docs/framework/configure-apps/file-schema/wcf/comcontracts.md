@@ -2,18 +2,18 @@
 title: '&lt;comContracts&gt;'
 ms.date: 03/30/2017
 ms.assetid: 42e74148-223d-4888-a8ed-1d928527eb09
-ms.openlocfilehash: b44c09e7e32129ba21834f7fbb8dc4699904e46b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 297a28181de8ce6ed658afad950f25cced9f9cb7
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746406"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490214"
 ---
 # <a name="ltcomcontractsgt"></a>&lt;comContracts&gt;
 `comContracts` 組態區段包含的項目可讓您指定 COM+ 整合服務合約的各種屬性。  
   
 ## <a name="specifying-namespace-and-contract"></a>指定命名空間和合約  
- COM + 整合服務合約會目前限制為 “http://tempuri.org" 命名空間，而合約名稱衍生自支援的 COM 介面。 然而，您可以使用組態檔中的 `comContracts` 區段來指定替代項目。  
+ COM + 整合服務合約是目前僅限於`http://tempuri.org`命名空間，而合約名稱衍生自支援的 COM 介面。 然而，您可以使用組態檔中的 `comContracts` 區段來指定替代項目。  
   
  例如，您可以使用下列組態來指定服務合約的命名空間和合約名稱，以及指定選項來強制工作階段繫結上的使用。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "32746406"
   
  當這個區段是空白時，服務初始化會套用取自支援的 COM 介面 ID 的預設命名空間和合約名稱。  
   
- 此外，您可以使用[ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md)項目來指定 COM + COM + 元件上的介面公開為 Web 服務時公開的方法。 您也可以使用[ \<persistableTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md)來指定用於整合的永久性類型。 最後，您可以使用[ \<userDefinedType >](../../../../../docs/framework/configure-apps/file-schema/wcf/userdefinedtype.md)包含使用者定義型別 (UDT) 包含服務合約中的項目。  
+ 此外，您可以使用[ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md)項目來指定 COM + 方法的 COM + 元件上的介面公開為 Web 服務時公開。 您也可以使用[ \<persistableTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md)來指定整合中使用的永久性型別。 最後，您可以使用[ \<userDefinedType >](../../../../../docs/framework/configure-apps/file-schema/wcf/userdefinedtype.md)包含使用者定義型別 (UDT) 是包含服務合約中的項目。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.ComContractElementCollection>  

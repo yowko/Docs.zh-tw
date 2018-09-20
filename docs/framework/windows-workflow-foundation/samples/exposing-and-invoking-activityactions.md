@@ -2,19 +2,19 @@
 title: 公開及叫用 ActivityActions
 ms.date: 03/30/2017
 ms.assetid: 97ce4797-426e-463d-9cc4-1261afad6df4
-ms.openlocfilehash: f36d88fc54e5150927113ed8825fbccad84129d4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 99207c33d82ec9028da2355cc792c366dc5e0cc6
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520119"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46479750"
 ---
 # <a name="exposing-and-invoking-activityactions"></a>公開及叫用 ActivityActions
 這個範例示範如何開發有 <xref:System.Activities.ActivityAction> 的自訂活動。 此外，也示範如何提供 <xref:System.Activities.ActivityAction> 實作，使用此活動。  
   
- <xref:System.Activities.ActivityAction>可讓活動作者公開 「 洞孔 」 裡使用特定的簽章，活動使用者可以在這裡插入自訂行為。 例如， <!--zz <xref:System.Activities.Statements.ForEach>--> `System.Activities.Statements.ForEach`活動 （其上運作的項目集合），有<xref:System.Activities.ActivityAction>，讓活動使用者插入會在目前反覆項目運作的行為。  
+ <xref:System.Activities.ActivityAction>可讓活動作者公開 「 洞孔 」 裡使用特定的簽章，活動使用者可以在這裡插入自訂行為。 例如，<xref:System.Activities.Statements.ForEach%601> 活動 (在項目集合上操作) 有 <xref:System.Activities.ActivityAction>，可讓活動使用者插入可在目前反覆運算項目上操作的行為。  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
+## <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
 1.  開啟**ActivityAction.sln**範例方案中的[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]。  
   

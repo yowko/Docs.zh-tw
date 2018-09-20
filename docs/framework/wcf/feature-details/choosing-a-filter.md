@@ -2,12 +2,12 @@
 title: 選擇篩選
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: bc3bba9a2b00b35f3e0cff1786ea98cfa881f311
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 377d4f5c221ad37acf954b1dafc8712a388122ff
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43743136"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478496"
 ---
 # <a name="choosing-a-filter"></a>選擇篩選
 設定路由服務時，務必選取正確的訊息篩選條件，並將它們設定為可針對您所接收的訊息進行正確的比對。 如果您選取的篩選條件在比對中過度廣泛，或設定不正確，則無法正確傳送訊息。 如果篩選條件過於嚴格，則部分訊息可能會沒有可用的有效路由。  
@@ -16,7 +16,7 @@ ms.locfileid: "43743136"
  選取由路由服務所使用的篩選條件時，務必了解每個篩選條件的運作方式，以及傳入訊息中有何可用的資訊。 例如，如果所有的訊息都是由相同的端點接收，Address 和 EndpointName 篩選條件的用處便不大，因為所有的訊息都符合這些篩選條件。  
   
 ### <a name="action"></a>動作  
- Action 篩選條件會檢查 <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A> 屬性。 如果訊息中的 Action 標頭內容符合在篩選組態中指定的篩選資料值，則此篩選條件會傳回 `true`。 下列範例會定義`FilterElement`使用動作篩選條件來比對訊息使用 action 標頭，其中包含值 「 http://namespace/contract/operation/"。  
+ Action 篩選條件會檢查 <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A> 屬性。 如果訊息中的 Action 標頭內容符合在篩選組態中指定的篩選資料值，則此篩選條件會傳回 `true`。 下列範例會定義`FilterElement`使用動作篩選條件來比對與包含值的動作標頭的訊息`http://namespace/contract/operation/`。
   
 ```xml  
 <filter name="action1" filterType="Action" filterData="http://namespace/contract/operation/" />  
@@ -47,7 +47,7 @@ EndpointAddressMessageFilter address1 = new EndpointAddressMessageFilter(new End
  當傳入訊息為唯一位址時，應該使用此篩選條件。  
   
 ### <a name="endpointaddressprefix"></a>EndpointAddressPrefix  
- EndpointAddressPrefix 篩選條件與 EndpointAddress 篩選條件類似。 EndpointAddressPrefix 篩選條件會檢查收到訊息的 EndpointAddress。 不過，EndpointAddressPrefix 篩選條件會藉由比對以在篩選組態中指定之值開始的位址，以萬元字元的方式呈現。 下列範例會定義`FilterElement`，其使用 EndpointAddressPrefix 篩選條件比對任何訊息定址到"http://\<主機名稱 > / vdir *"。  
+ EndpointAddressPrefix 篩選條件與 EndpointAddress 篩選條件類似。 EndpointAddressPrefix 篩選條件會檢查收到訊息的 EndpointAddress。 不過，EndpointAddressPrefix 篩選條件會藉由比對以在篩選組態中指定之值開始的位址，以萬元字元的方式呈現。 下列範例會定義`FilterElement`，其使用 EndpointAddressPrefix 篩選條件比對任何訊息定址到`http://<hostname>/vdir*`。  
   
 ```xml  
 <filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/vdir" />  

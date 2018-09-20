@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 4c47013ebc84c6006d65a89e57217ce1c720b45a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: f9ae53aeb988f23611adb4b00354f65918790d3b
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197562"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490162"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel 中繼資料公用程式工具 (Svcutil.exe)
 
@@ -192,7 +192,7 @@ Svcutil.exe 可從應用程式的已編譯組件產生必要的 C# 序列化程�
 |/reference:\<檔案路徑 >|將指定的組件新增至用於解析型別參考的組件集合中。<br /><br /> 簡短形式：`/r`|
 |/excludeType:\<type>|指定要從匯出作業或驗證作業排除的型別其完整名稱或組件限定名稱。<br /><br /> 簡短形式：`/et`|
 |/out:\<檔案 >|指定產生之程式碼的檔案名稱。 將多個組件做為工具的輸入傳遞時，會忽略這個選項。<br /><br /> 預設：衍生自組件名稱。<br /><br /> 簡短形式：`/o`|
-|/UseSerializerForFaults|指定<!--zz <xref:System.Xml.XmlSerializer> -->`xref:System.Xml.XmlSerializer `應用於讀取和寫入錯誤，而非預設<xref:System.Runtime.Serialization.DataContractSerializer>。|
+|/UseSerializerForFaults|指定應使用 <xref:System.Xml.Serialization.XmlSerializer> 來讀取和寫入錯誤，而非使用預設 <xref:System.Runtime.Serialization.DataContractSerializer>。|
 
 ## <a name="examples"></a>範例
 

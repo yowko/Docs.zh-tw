@@ -2,15 +2,16 @@
 title: 使用動作實作伺服器端行為
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: 415797114d1e6d2ff307f0d872361f7d415cad3c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 515553540053ed0c16085fde06e2cc2d2dedda1e
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516257"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46471718"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>使用動作實作伺服器端行為
-OData 動作可實作一種行為，以依據從 OData 服務擷取的資源而動作。  例如，將數位影片視為資源時，您可以對數位影片進行許多動作：簽出、評比/加註或簽入。 這些是管理數位影片之 WCF 資料服務可實作的所有動作範例。 動作描述於 OData 回應中，而這個回應包含可叫用動作的資源。 當使用者要求代表數位影片的資源時，從 WCF 資料服務傳回的回應就會包含可用於該項資源之動作的相關資訊。 動作的可用性可能會取決於資料服務或資源的狀態。 例如，一旦數位影片已簽出之後，就無法由其他使用者簽出。 用戶端只要指定 URL，就可以叫用動作。 例如 http://MyServer/MovieService.svc/Movies(6) 會識別特定的數位影片和 http://MyServer/MovieService.svc/Movies(6)/Checkout 會叫用特定的影片中的動作。 動作可讓您公開服務模型，而不公開資料模型。 繼續處理影片服務範例時，您可能會想要讓使用者評比影片，但不直接以資源的形式公開評比資料。 此時，您可以實作評比動作，讓使用者評比影片，但不直接以資源的形式存取評比資料。  
+
+OData 動作可實作一種行為，以依據從 OData 服務擷取的資源而動作。 例如，將數位影片視為資源時，您可以對數位影片進行許多動作：簽出、評比/加註或簽入。 這些是管理數位影片之 WCF 資料服務可實作的所有動作範例。 動作描述於 OData 回應中，而這個回應包含可叫用動作的資源。 當使用者要求代表數位影片的資源時，從 WCF 資料服務傳回的回應就會包含可用於該項資源之動作的相關資訊。 動作的可用性可能會取決於資料服務或資源的狀態。 例如，一旦數位影片已簽出之後，就無法由其他使用者簽出。 用戶端只要指定 URL，就可以叫用動作。 例如，`http://MyServer/MovieService.svc/Movies(6)`會識別特定的數位影片和`http://MyServer/MovieService.svc/Movies(6)/Checkout`會叫用特定的影片中的動作。 動作可讓您公開服務模型，而不公開資料模型。 繼續處理影片服務範例時，您可能會想要讓使用者評比影片，但不直接以資源的形式公開評比資料。 此時，您可以實作評比動作，讓使用者評比影片，但不直接以資源的形式存取評比資料。
   
 ## <a name="implementing-an-action"></a>實作動作  
  若要實作服務動作，您必須實作<xref:System.IServiceProvider>， [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx)，以及[IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx)介面。 <xref:System.IServiceProvider> 可讓 WCF Data Services 取得您實作[IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx)。 [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx)可讓 WCF Data Services 建立、 尋找、 描述及叫用服務動作。 [IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx)可讓您叫用實作服務動作之行為的程式碼，並取得結果，如果有的話。 請記住，WCF Data Services 是每次呼叫的 WCF 服務，亦即每次呼叫服務時，都會建立新的服務執行個體。  請確定建立服務時，不會進行任何不必要的工作。  
@@ -52,7 +53,7 @@ OData 動作可實作一種行為，以依據從 OData 服務擷取的資源而�
 ## <a name="invoking-a-wcf-data-service-action"></a>叫用 WCF 資料服務動作  
  動作是使用 HTTP POST 要求來叫用的。 URL 會依序指定資源和動作名稱。 參數是透過要求的主體傳遞的。 例如，假設有一項名為 MovieService 的服務，而這項服務公開了名為 Rate 的動作。 您就可以使用下列 URL，針對特定的影片叫用 Rate 動作：  
   
- http://MovieServer/MovieService.svc/Movies(1)/Rate  
+ `http://MovieServer/MovieService.svc/Movies(1)/Rate`
   
  Movies(1) 會指定您想要評比的影片，而 Rate 會指定評比動作。 評比的實際值將位於 HTTP 要求的主體中，如下列範例所示：  
   
@@ -67,15 +68,15 @@ Host: localhost:15238
 ```  
   
 > [!WARNING]
->  上述範例程式碼只能搭配支援 JSON Light 的 WCF Data Services 5.2 和更新版本運作。 如果使用舊版 WCF Data Services，您就必須依照下列方式指定 Json 詳細資訊內容類型：`application/json;odata=verbose`。  
+> 上述範例程式碼只能搭配支援 JSON Light 的 WCF Data Services 5.2 和更新版本運作。 如果使用舊版 WCF Data Services，您就必須依照下列方式指定 Json 詳細資訊內容類型：`application/json;odata=verbose`。  
   
  或者，您也可以使用 WCF Data Services 用戶端來叫用動作，如下列程式碼片段所示。  
   
-```  
+```csharp
 MoviesModel context = new MoviesModel (new Uri("http://MyServer/MoviesService.svc/"));  
-            //...  
-            context.Execute(new Uri("http://MyServer/MoviesService.svc/Movies(1)/Rate"), "POST", new BodyOperationParameter("rating",4) );           
-```  
+//...  
+context.Execute(new Uri("http://MyServer/MoviesService.svc/Movies(1)/Rate"), "POST", new BodyOperationParameter("rating",4) );
+```
   
  在上述程式碼片段中，`MoviesModel` 類別的產生方式是使用 Visual Studio，加入 WCF 資料服務的服務參考。  
   

@@ -3,11 +3,11 @@ title: 屬性 (F#)
 description: '深入了解 F # 屬性，也就是成員代表與物件相關聯的值。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 75d21415b44ccc1c26ef5f478d5f5de20c3412e8
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45619151"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46481776"
 ---
 # <a name="properties"></a>屬性
 

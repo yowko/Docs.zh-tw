@@ -3,11 +3,11 @@ title: 序列化工具
 ms.date: 03/30/2017
 ms.assetid: 593b675f-938c-44ff-807b-0ca9fea30103
 ms.openlocfilehash: af0ed0df0e99245d3dacd31280574c36415d2a1e
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46005576"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46481815"
 ---
 # <a name="serialization-tools"></a>序列化工具
 本章節內容包含序列化工具的詳細資訊。 您可以從命令列執行所有工具。  

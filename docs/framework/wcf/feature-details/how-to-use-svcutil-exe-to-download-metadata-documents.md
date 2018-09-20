@@ -2,12 +2,12 @@
 title: HOW TO：使用 Svcutil.exe 來下載中繼資料文件
 ms.date: 03/30/2017
 ms.assetid: 15524274-3167-4627-b722-d6cedb9fa8c6
-ms.openlocfilehash: 75068608c2b44ab772175aba7af8d8123457fb7c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6643f0a5dba98afcef38870cf24d91e7d69a1440
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510945"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46481854"
 ---
 # <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>HOW TO：使用 Svcutil.exe 來下載中繼資料文件
 您可以使用 Svcutil.exe 從正在執行的服務下載中繼資料，並將該中繼資料儲存至本機檔案。 對於 HTTP 和 HTTPS URL 配置，Svcutil.exe 會嘗試使用 Ws-metadataexchange 擷取中繼資料並[XML Web Service 探索](https://go.microsoft.com/fwlink/?LinkId=94950)。 對於所有其他的 URL 配置，Svcutil.exe 只會使用 WS-MetadataExchange。  
@@ -15,13 +15,13 @@ ms.locfileid: "43510945"
  根據預設，Svcutil.exe 會使用定義於 <xref:System.ServiceModel.Description.MetadataExchangeBindings> 類別的繫結。 若要設定用於 WS-MetadataExchange 的繫結，您必須在 Svcutil.exe 的組態檔 (svcutil.exe.config) 中定義用戶端端點，該端點會使用 `IMetadataExchange` 合約，而且使用名稱就是中繼資料端點位址的統一資源識別元 (URI) 配置。  
   
 > [!CAUTION]
->  當執行 Svcutil.exe 以取得中繼資料服務公開兩個不同的服務合約，每個包含相同名稱的作業時，Svcutil.exe 會顯示錯誤說: 「 無法取得中繼資料從...」比方說，如果您有公開稱為 「 服務合約的服務有一項作業的 ICarService Get (Car c) 和相同的服務會公開為具有 Get (Book b) 作業的 IBookService 的服務合約。 為了解決此問題，請執行下列其中一項：  
->   
->  -   重新命名其中一項作業  
-> -   將 <xref:System.ServiceModel.OperationContractAttribute.Name%2A> 設定為另一個名稱。  
-> -   使用 <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> 屬性，將其中一項作業的命名空間設定為另一個命名空間。  
+> 當執行 Svcutil.exe 以取得中繼資料服務公開兩個不同的服務合約，每個包含相同名稱的作業時，Svcutil.exe 會顯示錯誤說: 「 無法取得中繼資料從...」比方說，如果您有公開 （expose） 呼叫的服務合約的服務`ICarService`具有作業`Get(Car c)`相同的服務會公開稱為 「 服務合約`IBookService`具有作業`Get(Book b)`。 為了解決此問題，請執行下列其中一項：
+>
+> - 重新命名其中一項作業。
+> - 將 <xref:System.ServiceModel.OperationContractAttribute.Name%2A> 設定為另一個名稱。
+> - 使用 <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> 屬性，將其中一項作業的命名空間設定為另一個命名空間。
   
-### <a name="to-download-metadata-using-svcutilexe"></a>使用 Svcutil.exe 來下載中繼資料  
+## <a name="to-download-metadata-using-svcutilexe"></a>使用 Svcutil.exe 來下載中繼資料  
   
 1.  在下列位置找到 Svcutil.exe 工具：  
   

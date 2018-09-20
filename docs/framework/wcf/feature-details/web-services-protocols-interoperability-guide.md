@@ -2,12 +2,12 @@
 title: Web 服務通訊協定互通性手冊
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-ms.openlocfilehash: da5014292a8ebfcea48a7b6e1a0cdfd014b09961
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 37416a80c8b6f2ac086dbface1cda37609698bfc
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43739041"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490370"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Web 服務通訊協定互通性手冊
 Windows Communication Foundation (WCF) 會實作一些 Web 服務通訊協定。 許多這些通訊協定包含實作者應自行決定的一些選項和擴充點。 本主題提供 WCF 實作的 Web 服務通訊協定的清單。 本節中的其他主題則會提供每個受支援通訊協定的實作詳細資訊。  
@@ -74,7 +74,7 @@ Windows Communication Foundation (WCF) 會實作一些 Web 服務通訊協定。
 |WS-Coordination|[Web 服務協調](https://go.microsoft.com/fwlink/?LinkId=95324)|  
 |WS-AtomicTransaction|[Web 服務原子交易](https://go.microsoft.com/fwlink/?LinkId=95323)|  
   
- <xref:System.ServiceModel.Description.MetadataExporter>， <xref:System.ServiceModel.Description.MetadataImporter>， <!--zz <xref:System.ServiceModel.Description.WSDLExporter>, <xref:System.ServiceModel.Description.WSDLImporter>, --> `System.ServiceModel.Description.MetadataImporter`， `System.ServiceModel.Description.WSDLImporter`，和<xref:System.ServiceModel.Description.MetadataResolver>類別會提供下列中繼資料規格中的支援：  
+ <xref:System.ServiceModel.Description.MetadataExporter>、<xref:System.ServiceModel.Description.MetadataImporter>、<xref:System.ServiceModel.Description.WsdlExporter>、<xref:System.ServiceModel.Description.WsdlImporter> 和 <xref:System.ServiceModel.Description.MetadataResolver> 類別支援下列中繼資料規格：  
   
 -   [XML 結構描述第 1 部分： 結構第二版](https://go.microsoft.com/fwlink/?LinkId=3536)  
   

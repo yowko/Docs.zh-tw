@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 163e61eef8a753b5b6470285e5e3ce63789e25a4
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.openlocfilehash: 244df48606f6d971d6b6e246c4f9b73f916cbdcd
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46287737"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46473534"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi 函式
 在指定的電腦上建立從 DCOM 到 WMI 命名空間的連線。  
@@ -48,7 +48,7 @@ HRESULT ConnectServerWmi (
 
 `strNetworkResource` [in]為有效的指標`BSTR`包含正確的 WMI 命名空間的物件路徑。 請參閱[備註](#remarks)節的詳細資訊。
 
-`strUser` [in]有效的指標`BSTR`，其中包含使用者名稱。 A`null`值表示目前的安全性內容。 如果使用者是從不同的網域，目前於`strUser`也可以包含反斜線分隔的網域和使用者名稱。 `strUser` 也可以是在 使用者主體名稱 (UPN) 格式化，為 suhc *userName@domainName*。 請參閱[備註](#remarks)節的詳細資訊。
+`strUser` [in]有效的指標`BSTR`，其中包含使用者名稱。 A`null`值表示目前的安全性內容。 如果使用者是從不同的網域，目前於`strUser`也可以包含反斜線分隔的網域和使用者名稱。 `strUser` 也可以在 使用者主體名稱 (UPN) 格式，例如`userName@domainName`。 請參閱[備註](#remarks)節的詳細資訊。
 
 `strPassword` [in]有效的指標`BSTR`其中包含的密碼。 A`null`指出目前的安全性內容。 空字串 ("") 表示有效的長度為零的密碼。
 

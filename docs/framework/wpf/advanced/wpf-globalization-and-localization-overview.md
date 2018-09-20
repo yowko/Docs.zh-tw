@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 54c5caaf3ade07f342e94ad0359f00c1418eace4
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: d8fef7965e3248d5361d866a441783bf4968460e
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45646450"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478888"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 全球化和當地語系化概觀
 當您限制只有一種語言可以使用您的產品時，就是將潛在客戶群限制為全世界 65 億人口的一小部分。 如果您想要全球對象都可以使用應用程式，則具成本效益的產品當地語系化是更多客戶可以使用的一種最佳且最經濟的方法。  
@@ -54,7 +54,7 @@ ms.locfileid: "45646450"
   
 -   使用當地語系化屬性來控制當地語系化，而不是選擇性地省略<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>項目上的屬性。 請參閱[當地語系化屬性和註解](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md)如需詳細資訊。  
   
--   使用**msbuild /t: updateuid**並 **/t: checkuid**來新增和檢查<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>屬性，在您[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 使用<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>開發與當地語系化之間追蹤變更的屬性。 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 屬性可協助您當地語系化新的開發變更。 如果您手動新增<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>屬性，以[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，任務是通常會十分費時而且較不精確。  
+-   使用`msbuild -t:updateuid`並`-t:checkuid`來新增和檢查<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>屬性，在您[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 使用<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>開發與當地語系化之間追蹤變更的屬性。 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 屬性可協助您當地語系化新的開發變更。 如果您手動新增<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>屬性，以[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，任務是通常會十分費時而且較不精確。  
   
     -   無法編輯或變更<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>開始當地語系化之後的屬性。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "45646450"
   
  <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 為了讓所需的屬性[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]當地語系化[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]才能正常運作。  
   
- 它們由[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]當地語系化[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]追蹤開發與當地語系化之間的變更[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 屬性可讓您合併新版[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]使用的舊版當地語系化[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 您將新增<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>屬性來執行**msbuild /t: updateuid RunDialog.csproj**命令殼層。 這是建議的方法新增的<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>屬性因為手動新增它們通常十分費時而且較不精確。 您可以檢查<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>執行已正確設定屬性**msbuild /t: checkuid RunDialog.csproj**。  
+ 它們由[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]當地語系化[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]追蹤開發與當地語系化之間的變更[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 屬性可讓您合併新版[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]使用的舊版當地語系化[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 您將新增<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>屬性，藉由執行`msbuild -t:updateuid RunDialog.csproj`命令殼層。 這是建議的方法新增的<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>屬性因為手動新增它們通常十分費時而且較不精確。 您可以檢查<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>執行已正確設定屬性`msbuild -t:checkuid RunDialog.csproj`。
   
  [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]建構是使用<xref:System.Windows.Controls.Grid>控制項，也就是利用自動版面配置的有效控制項在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 請注意，對話方塊分成三個資料列和五個資料行。 不是其中一個資料列和資料行定義具有固定的大小;因此，[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]位於每個資料格中的項目可以調整增加和減少的大小在當地語系化期間。  
   

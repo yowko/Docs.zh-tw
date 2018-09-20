@@ -2,12 +2,12 @@
 title: 簡化的組態
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
-ms.openlocfilehash: 4893cb0d01d2a4a11bffd94768155512dce263a9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7df686188099aea45cac81ea94a49b98e5c65f89
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509518"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46485700"
 ---
 # <a name="simplified-configuration"></a>簡化的組態
 設定 Windows Communication Foundation (WCF) 服務可能是複雜的工作。 這項工作不但包含許多不同的選項，而且判斷需要哪些設定往往絕非易事。 雖然組態檔能夠增加的 WCF 服務的彈性，但是也會造成許多不易發現的問題。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 能夠解決這些問題，並且提供可讓使用者降低服務組態大小與複雜度的方式。  
@@ -87,24 +87,27 @@ ms.locfileid: "43509518"
  下列範例的組態檔相當於本主題開頭的組態檔，使用的是簡化的組態模型。  
   
 ```xml  
-<system.serviceModel>  
-    <behaviors>  
-      <serviceBehaviors>  
-        <behavior>  
-          <serviceMetadata httpGetEnabled="True"/>  
-          <serviceDebug includeExceptionDetailInFaults="false"/>  
-        </behavior>  
-      </serviceBehaviors>  
-    </behaviors>    <bindings>  
-       <basicHttpBinding>  
-          <binding maxBufferSize="100"  
-                   maxReceiveBufferSize="100" />  
-       </basicHttpBinding>  
-    </bindings>    <!-- No <service> tag is necessary. Default endpoints will be added to the service -->  
-    <!-- The service behavior with name="" will be picked up by the service -->  
-    <protocolMapping>  
-      <add scheme="http"     binding="basicHttpBinding" / </protocolMapping>  
-  </system.serviceModel>  
+<system.serviceModel>
+    <behaviors>
+      <serviceBehaviors>
+        <behavior>
+          <serviceMetadata httpGetEnabled="true" />
+          <serviceDebug includeExceptionDetailInFaults="false" />
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+    <bindings>
+       <basicHttpBinding>
+          <binding maxBufferSize="100"
+                   maxReceiveBufferSize="100" />
+       </basicHttpBinding>
+    </bindings>
+    <!-- No <service> tag is necessary. Default endpoints will be added to the service -->
+    <!-- The service behavior with name="" will be picked up by the service -->
+    <protocolMapping>
+      <add scheme="http" binding="basicHttpBinding" />
+  </protocolMapping>
+  </system.serviceModel>
 ```  
   
 > [!IMPORTANT]
