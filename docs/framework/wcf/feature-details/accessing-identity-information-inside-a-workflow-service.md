@@ -2,31 +2,31 @@
 title: 在工作流程服務內部存取識別資訊
 ms.date: 03/30/2017
 ms.assetid: 0b832127-b35b-468e-a45f-321381170cbc
-ms.openlocfilehash: a87c21215c37fefd8d9306fd0ccd0c5b2a1dfd11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7951782946f5b8ef989598d01229dcf193d97689
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491971"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46480743"
 ---
-# <a name="accessing-identity-information-inside-a-workflow-service"></a><span data-ttu-id="67f6e-102">在工作流程服務內部存取識別資訊</span><span class="sxs-lookup"><span data-stu-id="67f6e-102">Accessing Identity Information inside a Workflow Service</span></span>
-<span data-ttu-id="67f6e-103">若要在工作流程服務內部存取識別資訊，您必須在自訂執行屬性中實作 <xref:System.ServiceModel.Activities.IReceiveMessageCallback> 介面。</span><span class="sxs-lookup"><span data-stu-id="67f6e-103">To access identity information inside a workflow service, you must implement the <xref:System.ServiceModel.Activities.IReceiveMessageCallback> interface in a custom execution property.</span></span> <span data-ttu-id="67f6e-104">在 <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> 方法中，您可以存取 <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> 來存取識別資訊。</span><span class="sxs-lookup"><span data-stu-id="67f6e-104">In the <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> method you can access the <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> to access identity information.</span></span> <span data-ttu-id="67f6e-105">本主題將逐步引導您實作這個執行屬性，以及將在執行階段呈現此屬性給 <xref:System.ServiceModel.Activities.Receive> 活動的自訂活動。</span><span class="sxs-lookup"><span data-stu-id="67f6e-105">This topic will walk you through implementing this execution property, as well as a custom activity that will surface this property to the <xref:System.ServiceModel.Activities.Receive> activity at runtime.</span></span>  <span data-ttu-id="67f6e-106">自訂活動會實作相同的行為<!--zz <xref:System.ServiceModel.Activities.Sequence>-->`System.ServiceModel.Activities.Sequence`活動，不過在該<xref:System.ServiceModel.Activities.Receive>放置內，<xref:System.ServiceModel.Activities.IReceiveMessageCallback>將呼叫，並將擷取的身分識別資訊。</span><span class="sxs-lookup"><span data-stu-id="67f6e-106">The custom activity will implement the same behavior as a <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` activity, except that when a <xref:System.ServiceModel.Activities.Receive> is placed inside of it, the <xref:System.ServiceModel.Activities.IReceiveMessageCallback> will be called and the identity information will be retrieved.</span></span>  
+# <a name="accessing-identity-information-inside-a-workflow-service"></a><span data-ttu-id="6da34-102">在工作流程服務內部存取識別資訊</span><span class="sxs-lookup"><span data-stu-id="6da34-102">Accessing Identity Information inside a Workflow Service</span></span>
+<span data-ttu-id="6da34-103">若要在工作流程服務內部存取識別資訊，您必須在自訂執行屬性中實作 <xref:System.ServiceModel.Activities.IReceiveMessageCallback> 介面。</span><span class="sxs-lookup"><span data-stu-id="6da34-103">To access identity information inside a workflow service, you must implement the <xref:System.ServiceModel.Activities.IReceiveMessageCallback> interface in a custom execution property.</span></span> <span data-ttu-id="6da34-104">在 <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> 方法中，您可以存取 <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> 來存取識別資訊。</span><span class="sxs-lookup"><span data-stu-id="6da34-104">In the <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> method you can access the <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> to access identity information.</span></span> <span data-ttu-id="6da34-105">本主題將逐步引導您實作這個執行屬性，以及將在執行階段呈現此屬性給 <xref:System.ServiceModel.Activities.Receive> 活動的自訂活動。</span><span class="sxs-lookup"><span data-stu-id="6da34-105">This topic will walk you through implementing this execution property, as well as a custom activity that will surface this property to the <xref:System.ServiceModel.Activities.Receive> activity at runtime.</span></span> <span data-ttu-id="6da34-106">此自訂活動會與 <xref:System.Activities.Statements.Sequence> 活動實作相同的行為，不過在該活動內部放置 <xref:System.ServiceModel.Activities.Receive> 時，系統就會呼叫 <xref:System.ServiceModel.Activities.IReceiveMessageCallback> 而且會擷取識別資訊。</span><span class="sxs-lookup"><span data-stu-id="6da34-106">The custom activity will implement the same behavior as a <xref:System.Activities.Statements.Sequence> activity, except that when a <xref:System.ServiceModel.Activities.Receive> is placed inside of it, the <xref:System.ServiceModel.Activities.IReceiveMessageCallback> will be called and the identity information will be retrieved.</span></span>  
   
-### <a name="implement-ireceivemessagecallback"></a><span data-ttu-id="67f6e-107">實作 IReceiveMessageCallback</span><span class="sxs-lookup"><span data-stu-id="67f6e-107">Implement IReceiveMessageCallback</span></span>  
+## <a name="implement-ireceivemessagecallback"></a><span data-ttu-id="6da34-107">實作 IReceiveMessageCallback</span><span class="sxs-lookup"><span data-stu-id="6da34-107">Implement IReceiveMessageCallback</span></span>  
   
-1.  <span data-ttu-id="67f6e-108">建立空的 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 方案。</span><span class="sxs-lookup"><span data-stu-id="67f6e-108">Create an empty [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] solution.</span></span>  
+1.  <span data-ttu-id="6da34-108">建立空的 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 方案。</span><span class="sxs-lookup"><span data-stu-id="6da34-108">Create an empty [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] solution.</span></span>  
   
-2.  <span data-ttu-id="67f6e-109">將名為 `Service` 的新主控台應用程式加入至此方案。</span><span class="sxs-lookup"><span data-stu-id="67f6e-109">Add a new console application called `Service` to the solution.</span></span>  
+2.  <span data-ttu-id="6da34-109">將名為 `Service` 的新主控台應用程式加入至此方案。</span><span class="sxs-lookup"><span data-stu-id="6da34-109">Add a new console application called `Service` to the solution.</span></span>  
   
-3.  <span data-ttu-id="67f6e-110">加入下列組件的參考：</span><span class="sxs-lookup"><span data-stu-id="67f6e-110">Add references to the following assemblies:</span></span>  
+3.  <span data-ttu-id="6da34-110">加入下列組件的參考：</span><span class="sxs-lookup"><span data-stu-id="6da34-110">Add references to the following assemblies:</span></span>  
   
-    1.  <span data-ttu-id="67f6e-111">System.Runtime.Serialization</span><span class="sxs-lookup"><span data-stu-id="67f6e-111">System.Runtime.Serialization</span></span>  
+    1.  <span data-ttu-id="6da34-111">System.Runtime.Serialization</span><span class="sxs-lookup"><span data-stu-id="6da34-111">System.Runtime.Serialization</span></span>  
   
-    2.  <span data-ttu-id="67f6e-112">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="67f6e-112">System.ServiceModel</span></span>  
+    2.  <span data-ttu-id="6da34-112">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="6da34-112">System.ServiceModel</span></span>  
   
-    3.  <span data-ttu-id="67f6e-113">System.ServiceModel.Activities</span><span class="sxs-lookup"><span data-stu-id="67f6e-113">System.ServiceModel.Activities</span></span>  
+    3.  <span data-ttu-id="6da34-113">System.ServiceModel.Activities</span><span class="sxs-lookup"><span data-stu-id="6da34-113">System.ServiceModel.Activities</span></span>  
   
-4.  <span data-ttu-id="67f6e-114">加入名為 `AccessIdentityCallback` 的新類別並實作 <xref:System.ServiceModel.Activities.IReceiveMessageCallback>，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="67f6e-114">Add a new class called `AccessIdentityCallback` and implement <xref:System.ServiceModel.Activities.IReceiveMessageCallback> as shown in the following example.</span></span>  
+4.  <span data-ttu-id="6da34-114">加入名為 `AccessIdentityCallback` 的新類別並實作 <xref:System.ServiceModel.Activities.IReceiveMessageCallback>，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="6da34-114">Add a new class called `AccessIdentityCallback` and implement <xref:System.ServiceModel.Activities.IReceiveMessageCallback> as shown in the following example.</span></span>  
   
     ```csharp  
     class AccessIdentityCallback : IReceiveMessageCallback  
@@ -48,15 +48,15 @@ ms.locfileid: "33491971"
     }  
     ```  
   
-     <span data-ttu-id="67f6e-115">這段程式碼會使用傳遞至方法的 <xref:System.ServiceModel.OperationContext> 來存取識別資訊。</span><span class="sxs-lookup"><span data-stu-id="67f6e-115">This code uses the <xref:System.ServiceModel.OperationContext> passed into the method to access identity information.</span></span>  
+     <span data-ttu-id="6da34-115">這段程式碼會使用傳遞至方法的 <xref:System.ServiceModel.OperationContext> 來存取識別資訊。</span><span class="sxs-lookup"><span data-stu-id="6da34-115">This code uses the <xref:System.ServiceModel.OperationContext> passed into the method to access identity information.</span></span>  
   
-### <a name="implement-a-native-activity-to-add-the-ireceivemessagecallback-implementation-to-the-nativeactivitycontext"></a><span data-ttu-id="67f6e-116">實作原生活動，將 IReceiveMessageCallback 實作加入至 NativeActivityContext</span><span class="sxs-lookup"><span data-stu-id="67f6e-116">Implement a Native activity to add the IReceiveMessageCallback implementation to the NativeActivityContext</span></span>  
+## <a name="implement-a-native-activity-to-add-the-ireceivemessagecallback-implementation-to-the-nativeactivitycontext"></a><span data-ttu-id="6da34-116">實作原生活動，將 IReceiveMessageCallback 實作加入至 NativeActivityContext</span><span class="sxs-lookup"><span data-stu-id="6da34-116">Implement a Native activity to add the IReceiveMessageCallback implementation to the NativeActivityContext</span></span>  
   
-1.  <span data-ttu-id="67f6e-117">加入衍生自 <xref:System.Activities.NativeActivity> 且名為 `AccessIdentityScope` 的新類別。</span><span class="sxs-lookup"><span data-stu-id="67f6e-117">Add a new class derived from <xref:System.Activities.NativeActivity> called `AccessIdentityScope`.</span></span>  
+1.  <span data-ttu-id="6da34-117">加入衍生自 <xref:System.Activities.NativeActivity> 且名為 `AccessIdentityScope` 的新類別。</span><span class="sxs-lookup"><span data-stu-id="6da34-117">Add a new class derived from <xref:System.Activities.NativeActivity> called `AccessIdentityScope`.</span></span>  
   
-2.  <span data-ttu-id="67f6e-118">加入區域變數來追蹤子活動、變數、目前活動索引和 <xref:System.Activities.CompletionCallback> 回呼。</span><span class="sxs-lookup"><span data-stu-id="67f6e-118">Add local variables to keep track of child activities, variables, current activity index, and a <xref:System.Activities.CompletionCallback> callback.</span></span>  
+2.  <span data-ttu-id="6da34-118">加入區域變數來追蹤子活動、變數、目前活動索引和 <xref:System.Activities.CompletionCallback> 回呼。</span><span class="sxs-lookup"><span data-stu-id="6da34-118">Add local variables to keep track of child activities, variables, current activity index, and a <xref:System.Activities.CompletionCallback> callback.</span></span>  
   
-    ```  
+    ```csharp
     public sealed class AccessIdentityScope : NativeActivity  
     {  
         Collection<Activity> children;  
@@ -66,9 +66,9 @@ ms.locfileid: "33491971"
     }  
     ```  
   
-3.  <span data-ttu-id="67f6e-119">實作建構函式</span><span class="sxs-lookup"><span data-stu-id="67f6e-119">Implement the constructor</span></span>  
+3.  <span data-ttu-id="6da34-119">實作建構函式</span><span class="sxs-lookup"><span data-stu-id="6da34-119">Implement the constructor</span></span>  
   
-    ```  
+    ```csharp
     public AccessIdentityScope() : base()  
     {  
         this.children = new Collection<Activity>();  
@@ -77,9 +77,9 @@ ms.locfileid: "33491971"
     }  
     ```  
   
-4.  <span data-ttu-id="67f6e-120">實作 `Activities` 和 `Variables` 屬性。</span><span class="sxs-lookup"><span data-stu-id="67f6e-120">Implement the `Activities` and `Variables` properties.</span></span>  
+4.  <span data-ttu-id="6da34-120">實作 `Activities` 和 `Variables` 屬性。</span><span class="sxs-lookup"><span data-stu-id="6da34-120">Implement the `Activities` and `Variables` properties.</span></span>  
   
-    ```  
+    ```csharp
     public Collection<Activity> Activities  
     {  
          get { return this.children; }  
@@ -91,9 +91,9 @@ ms.locfileid: "33491971"
     }  
     ```  
   
-5.  <span data-ttu-id="67f6e-121">覆寫 <xref:System.Activities.NativeActivity.CacheMetadata%2A></span><span class="sxs-lookup"><span data-stu-id="67f6e-121">Override <xref:System.Activities.NativeActivity.CacheMetadata%2A></span></span>  
+5.  <span data-ttu-id="6da34-121">覆寫 <xref:System.Activities.NativeActivity.CacheMetadata%2A></span><span class="sxs-lookup"><span data-stu-id="6da34-121">Override <xref:System.Activities.NativeActivity.CacheMetadata%2A></span></span>  
   
-    ```  
+    ```csharp
     protected override void CacheMetadata(NativeActivityMetadata metadata)  
     {  
         //call base.CacheMetadata to add the Activities and Variables to this activity's metadata  
@@ -103,9 +103,9 @@ ms.locfileid: "33491971"
     }  
     ```  
   
-6.  <span data-ttu-id="67f6e-122">覆寫 <xref:System.Activities.NativeActivity.Execute%2A></span><span class="sxs-lookup"><span data-stu-id="67f6e-122">Override <xref:System.Activities.NativeActivity.Execute%2A></span></span>  
+6.  <span data-ttu-id="6da34-122">覆寫 <xref:System.Activities.NativeActivity.Execute%2A></span><span class="sxs-lookup"><span data-stu-id="6da34-122">Override <xref:System.Activities.NativeActivity.Execute%2A></span></span>  
   
-    ```  
+    ```csharp
     protected override void Execute(NativeActivityContext context)  
     {  
        // Add the IReceiveMessageCallback implementation as an Execution property   
@@ -139,13 +139,13 @@ ms.locfileid: "33491971"
     }  
     ```  
   
-### <a name="implement-the-workflow-service"></a><span data-ttu-id="67f6e-123">實作工作流程服務</span><span class="sxs-lookup"><span data-stu-id="67f6e-123">Implement the workflow service</span></span>  
+## <a name="implement-the-workflow-service"></a><span data-ttu-id="6da34-123">實作工作流程服務</span><span class="sxs-lookup"><span data-stu-id="6da34-123">Implement the workflow service</span></span>  
   
-1.  <span data-ttu-id="67f6e-124">開啟現有`Program`類別。</span><span class="sxs-lookup"><span data-stu-id="67f6e-124">Open the existing `Program` class.</span></span>  
+1.  <span data-ttu-id="6da34-124">開啟現有`Program`類別。</span><span class="sxs-lookup"><span data-stu-id="6da34-124">Open the existing `Program` class.</span></span>  
   
-2.  <span data-ttu-id="67f6e-125">定義下列常數：</span><span class="sxs-lookup"><span data-stu-id="67f6e-125">Define the following constants:</span></span>  
+2.  <span data-ttu-id="6da34-125">定義下列常數：</span><span class="sxs-lookup"><span data-stu-id="6da34-125">Define the following constants:</span></span>  
   
-    ```  
+    ```csharp
     class Program  
     {  
        const string addr = "http://localhost:8080/Service";  
@@ -153,9 +153,9 @@ ms.locfileid: "33491971"
     }  
     ```  
   
-3.  <span data-ttu-id="67f6e-126">加入名為 `GetWorkflowService` 的靜態方法，以便建立工作流程服務。</span><span class="sxs-lookup"><span data-stu-id="67f6e-126">Add a static method called `GetWorkflowService` that creates the workflow service.</span></span>  
+3.  <span data-ttu-id="6da34-126">加入名為 `GetWorkflowService` 的靜態方法，以便建立工作流程服務。</span><span class="sxs-lookup"><span data-stu-id="6da34-126">Add a static method called `GetWorkflowService` that creates the workflow service.</span></span>  
   
-    ```  
+    ```csharp
     static Activity GetServiceWorkflow()  
     {  
        Variable<string> echoString = new Variable<string>();  
@@ -192,9 +192,9 @@ ms.locfileid: "33491971"
      }  
     ```  
   
-4.  <span data-ttu-id="67f6e-127">在現有的 `Main` 方法中，裝載工作流程服務。</span><span class="sxs-lookup"><span data-stu-id="67f6e-127">In the existing `Main` method, host the workflow service.</span></span>  
+4.  <span data-ttu-id="6da34-127">在現有的 `Main` 方法中，裝載工作流程服務。</span><span class="sxs-lookup"><span data-stu-id="6da34-127">In the existing `Main` method, host the workflow service.</span></span>  
   
-    ```  
+    ```csharp
     static void Main(string[] args)  
     {  
        string addr = "http://localhost:8080/Service";  
@@ -213,21 +213,21 @@ ms.locfileid: "33491971"
     }  
     ```  
   
-### <a name="implement-a-workflow-client"></a><span data-ttu-id="67f6e-128">實作工作流程用戶端</span><span class="sxs-lookup"><span data-stu-id="67f6e-128">Implement a workflow client</span></span>  
+## <a name="implement-a-workflow-client"></a><span data-ttu-id="6da34-128">實作工作流程用戶端</span><span class="sxs-lookup"><span data-stu-id="6da34-128">Implement a workflow client</span></span>  
   
-1.  <span data-ttu-id="67f6e-129">建立名為 `Client` 的新主控台應用程式專案。</span><span class="sxs-lookup"><span data-stu-id="67f6e-129">Create a new console application project called `Client`.</span></span>  
+1.  <span data-ttu-id="6da34-129">建立名為 `Client` 的新主控台應用程式專案。</span><span class="sxs-lookup"><span data-stu-id="6da34-129">Create a new console application project called `Client`.</span></span>  
   
-2.  <span data-ttu-id="67f6e-130">加入下列組件的參考：</span><span class="sxs-lookup"><span data-stu-id="67f6e-130">Add references to the following assemblies:</span></span>  
+2.  <span data-ttu-id="6da34-130">加入下列組件的參考：</span><span class="sxs-lookup"><span data-stu-id="6da34-130">Add references to the following assemblies:</span></span>  
   
-    1.  <span data-ttu-id="67f6e-131">System.Activities</span><span class="sxs-lookup"><span data-stu-id="67f6e-131">System.Activities</span></span>  
+    1.  <span data-ttu-id="6da34-131">System.Activities</span><span class="sxs-lookup"><span data-stu-id="6da34-131">System.Activities</span></span>  
   
-    2.  <span data-ttu-id="67f6e-132">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="67f6e-132">System.ServiceModel</span></span>  
+    2.  <span data-ttu-id="6da34-132">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="6da34-132">System.ServiceModel</span></span>  
   
-    3.  <span data-ttu-id="67f6e-133">System.ServiceModel.Activities</span><span class="sxs-lookup"><span data-stu-id="67f6e-133">System.ServiceModel.Activities</span></span>  
+    3.  <span data-ttu-id="6da34-133">System.ServiceModel.Activities</span><span class="sxs-lookup"><span data-stu-id="6da34-133">System.ServiceModel.Activities</span></span>  
   
-3.  <span data-ttu-id="67f6e-134">開啟產生的 Program.cs 檔案並加入名為 `GetClientWorkflow` 的靜態方法，以便建立用戶端工作流程。</span><span class="sxs-lookup"><span data-stu-id="67f6e-134">Open the generated Program.cs file and add a static method called `GetClientWorkflow` to create the client workflow.</span></span>  
+3.  <span data-ttu-id="6da34-134">開啟產生的 Program.cs 檔案並加入名為 `GetClientWorkflow` 的靜態方法，以便建立用戶端工作流程。</span><span class="sxs-lookup"><span data-stu-id="6da34-134">Open the generated Program.cs file and add a static method called `GetClientWorkflow` to create the client workflow.</span></span>  
   
-    ```  
+    ```csharp
     static Activity GetClientWorkflow()  
     {  
        Variable<string> echoString = new Variable<string>();  
@@ -245,7 +245,7 @@ ms.locfileid: "33491971"
           OperationName = "Echo",  
           Content = new SendParametersContent()  
           {  
-             Parameters = { { "echoString", new InArgument<string>("Hello, World") } }   
+             Parameters = { { "echoString", new InArgument<string>("Hello, World") } }
           }  
        };  
   
@@ -253,12 +253,12 @@ ms.locfileid: "33491971"
        {  
           Variables = { echoString },  
           Activities =  
-          {                      
+          {
              new CorrelationScope  
              {  
                 Body = new Sequence  
                 {  
-                   Activities =   
+                   Activities =
                    {  
                       echoRequest,  
                       new ReceiveReply  
@@ -271,17 +271,17 @@ ms.locfileid: "33491971"
                       }  
                    }  
                 }  
-             },                      
-             new WriteLine { Text = new InArgument<string>( (e) => "Received Text: " + echoString.Get(e) ) },                      
+             },
+             new WriteLine { Text = new InArgument<string>( (e) => "Received Text: " + echoString.Get(e) ) },
              }  
           };  
        }  
     }  
     ```  
   
-4.  <span data-ttu-id="67f6e-135">將下列裝載程式碼加入至 `Main()` 方法。</span><span class="sxs-lookup"><span data-stu-id="67f6e-135">Add the following hosting code to the `Main()` method.</span></span>  
+4.  <span data-ttu-id="6da34-135">將下列裝載程式碼加入至 `Main()` 方法。</span><span class="sxs-lookup"><span data-stu-id="6da34-135">Add the following hosting code to the `Main()` method.</span></span>  
   
-    ```  
+    ```csharp
     static void Main(string[] args)  
     {  
        Activity workflow = GetClientWorkflow();  
@@ -292,10 +292,10 @@ ms.locfileid: "33491971"
     }  
     ```  
   
-## <a name="example"></a><span data-ttu-id="67f6e-136">範例</span><span class="sxs-lookup"><span data-stu-id="67f6e-136">Example</span></span>  
- <span data-ttu-id="67f6e-137">下面是本主題中使用之原始程式碼的完整清單。</span><span class="sxs-lookup"><span data-stu-id="67f6e-137">Here is a complete listing of the source code used in this topic.</span></span>  
+## <a name="example"></a><span data-ttu-id="6da34-136">範例</span><span class="sxs-lookup"><span data-stu-id="6da34-136">Example</span></span>
+ <span data-ttu-id="6da34-137">下面是本主題中使用之原始程式碼的完整清單。</span><span class="sxs-lookup"><span data-stu-id="6da34-137">Here is a complete listing of the source code used in this topic.</span></span>  
   
-```  
+```csharp
 // AccessIdentityCallback.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -333,9 +333,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-```  
+```
   
-```  
+```csharp
 // AccessIdentityScope.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -381,9 +381,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         {  
             //call base.CacheMetadata to add the Activities and Variables to this activity's metadata  
             base.CacheMetadata(metadata);  
-            //add the private implementation variable: currentIndex   
+            //add the private implementation variable: currentIndex
             metadata.AddImplementationVariable(this.currentIndex);  
-        }                     
+        }
   
         protected override void Execute(  
             NativeActivityContext context)  
@@ -418,9 +418,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-```  
+```
   
-```  
+```csharp
 // Service.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -493,10 +493,10 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-```  
+```
   
-```  
-// client.cs   
+```csharp
+// client.cs
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
 //----------------------------------------------------------------  
@@ -546,12 +546,12 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
             {  
                 Variables = { echoString },  
                 Activities =  
-                {                      
+                {
                     new CorrelationScope  
                     {  
                         Body = new Sequence  
                         {  
-                            Activities =   
+                            Activities =
                             {  
                                 echoRequest,  
                                 new ReceiveReply  
@@ -564,8 +564,8 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
                                 }  
                             }  
                         }  
-                    },                      
-                    new WriteLine { Text = new InArgument<string>( (e) => "Received Text: " + echoString.Get(e) ) },                      
+                    },
+                    new WriteLine { Text = new InArgument<string>( (e) => "Received Text: " + echoString.Get(e) ) },
                 }  
             };  
         }  
@@ -573,7 +573,7 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="67f6e-138">另請參閱</span><span class="sxs-lookup"><span data-stu-id="67f6e-138">See Also</span></span>  
- [<span data-ttu-id="67f6e-139">工作流程服務</span><span class="sxs-lookup"><span data-stu-id="67f6e-139">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [<span data-ttu-id="67f6e-140">存取 OperationContext</span><span class="sxs-lookup"><span data-stu-id="67f6e-140">Accessing OperationContext</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/accessing-operationcontext.md)  
- [<span data-ttu-id="67f6e-141">使用命令式程式碼撰寫工作流程、活動與運算式</span><span class="sxs-lookup"><span data-stu-id="67f6e-141">Authoring Workflows, Activities, and Expressions Using Imperative Code</span></span>](../../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)
+## <a name="see-also"></a><span data-ttu-id="6da34-138">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6da34-138">See Also</span></span>  
+ [<span data-ttu-id="6da34-139">工作流程服務</span><span class="sxs-lookup"><span data-stu-id="6da34-139">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [<span data-ttu-id="6da34-140">存取 OperationContext</span><span class="sxs-lookup"><span data-stu-id="6da34-140">Accessing OperationContext</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/accessing-operationcontext.md)  
+ [<span data-ttu-id="6da34-141">使用命令式程式碼撰寫工作流程、活動與運算式</span><span class="sxs-lookup"><span data-stu-id="6da34-141">Authoring Workflows, Activities, and Expressions Using Imperative Code</span></span>](../../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)

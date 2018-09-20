@@ -9,16 +9,16 @@ helpviewer_keywords:
 - custom controls [Windows Forms], events using code
 ms.assetid: d89f1096-8061-42e2-a855-a1f053f1940a
 ms.openlocfilehash: 60ae01ca63f895bfb1c7aabbe3337596cd13933d
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46320236"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46489649"
 ---
-# <a name="defining-an-event-in-windows-forms-controls"></a><span data-ttu-id="398a7-102">定義 Windows Form 控制項中的事件</span><span class="sxs-lookup"><span data-stu-id="398a7-102">Defining an Event in Windows Forms Controls</span></span>
-<span data-ttu-id="398a7-103">如需如何定義自訂事件的詳細資訊，請參閱 <<c0> [ 事件](../../../../docs/standard/events/index.md)。</span><span class="sxs-lookup"><span data-stu-id="398a7-103">For details about defining custom events, see [Events](../../../../docs/standard/events/index.md).</span></span> <span data-ttu-id="398a7-104">若定義的事件沒有任何相關聯的資料，請為事件資料使用基底類型 <xref:System.EventArgs>，並以 <xref:System.EventHandler> 做為事件委派。</span><span class="sxs-lookup"><span data-stu-id="398a7-104">If you define an event that does not have any associated data, use the base type for event data, <xref:System.EventArgs>, and use <xref:System.EventHandler> as the event delegate.</span></span> <span data-ttu-id="398a7-105">就是定義事件成員及受保護的所有`On` *EventName*引發事件的方法。</span><span class="sxs-lookup"><span data-stu-id="398a7-105">All that remains to do is to define an event member and a protected `On`*EventName* method that raises the event.</span></span>  
+# <a name="defining-an-event-in-windows-forms-controls"></a><span data-ttu-id="320c4-102">定義 Windows Form 控制項中的事件</span><span class="sxs-lookup"><span data-stu-id="320c4-102">Defining an Event in Windows Forms Controls</span></span>
+<span data-ttu-id="320c4-103">如需如何定義自訂事件的詳細資訊，請參閱 <<c0> [ 事件](../../../../docs/standard/events/index.md)。</span><span class="sxs-lookup"><span data-stu-id="320c4-103">For details about defining custom events, see [Events](../../../../docs/standard/events/index.md).</span></span> <span data-ttu-id="320c4-104">若定義的事件沒有任何相關聯的資料，請為事件資料使用基底類型 <xref:System.EventArgs>，並以 <xref:System.EventHandler> 做為事件委派。</span><span class="sxs-lookup"><span data-stu-id="320c4-104">If you define an event that does not have any associated data, use the base type for event data, <xref:System.EventArgs>, and use <xref:System.EventHandler> as the event delegate.</span></span> <span data-ttu-id="320c4-105">就是定義事件成員及受保護的所有`On` *EventName*引發事件的方法。</span><span class="sxs-lookup"><span data-stu-id="320c4-105">All that remains to do is to define an event member and a protected `On`*EventName* method that raises the event.</span></span>  
   
- <span data-ttu-id="398a7-106">下列程式碼片段示範 `FlashTrackBar` 自訂控制項如何定義自訂事件 `ValueChanged`。</span><span class="sxs-lookup"><span data-stu-id="398a7-106">The following code fragment shows how the `FlashTrackBar` custom control defines a custom event, `ValueChanged`.</span></span> <span data-ttu-id="398a7-107">完整程式碼`FlashTrackBar`範例，請參閱[如何： 建立 Windows Form 控制項可顯示進度](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)。</span><span class="sxs-lookup"><span data-stu-id="398a7-107">For the complete code for the `FlashTrackBar` sample, see the [How to: Create a Windows Forms Control That Shows Progress](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).</span></span>  
+ <span data-ttu-id="320c4-106">下列程式碼片段示範 `FlashTrackBar` 自訂控制項如何定義自訂事件 `ValueChanged`。</span><span class="sxs-lookup"><span data-stu-id="320c4-106">The following code fragment shows how the `FlashTrackBar` custom control defines a custom event, `ValueChanged`.</span></span> <span data-ttu-id="320c4-107">完整程式碼`FlashTrackBar`範例，請參閱[如何： 建立 Windows Form 控制項可顯示進度](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)。</span><span class="sxs-lookup"><span data-stu-id="320c4-107">For the complete code for the `FlashTrackBar` sample, see the [How to: Create a Windows Forms Control That Shows Progress](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).</span></span>  
   
 ```vb  
 Option Explicit  
@@ -76,7 +76,7 @@ public class FlashTrackBar : Control {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="398a7-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="398a7-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="320c4-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="320c4-108">See also</span></span>
 
-- [<span data-ttu-id="398a7-109">Windows Forms 控制項中的事件</span><span class="sxs-lookup"><span data-stu-id="398a7-109">Events in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)
-- [<span data-ttu-id="398a7-110">事件</span><span class="sxs-lookup"><span data-stu-id="398a7-110">Events</span></span>](../../../../docs/standard/events/index.md)
+- [<span data-ttu-id="320c4-109">Windows Forms 控制項中的事件</span><span class="sxs-lookup"><span data-stu-id="320c4-109">Events in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)
+- [<span data-ttu-id="320c4-110">事件</span><span class="sxs-lookup"><span data-stu-id="320c4-110">Events</span></span>](../../../../docs/standard/events/index.md)

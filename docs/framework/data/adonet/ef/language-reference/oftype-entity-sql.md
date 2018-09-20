@@ -3,66 +3,66 @@ title: OFTYPE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 6d259ca7-bbf0-40f8-a154-181d25c0d67e
 ms.openlocfilehash: c90950e11cbfca7a49b505c1654d08be504990e1
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002030"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46481461"
 ---
-# <a name="oftype-entity-sql"></a><span data-ttu-id="8c5ed-102">OFTYPE (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="8c5ed-102">OFTYPE (Entity SQL)</span></span>
-<span data-ttu-id="8c5ed-103">從屬於特定型別的查詢運算式中傳回物件的集合。</span><span class="sxs-lookup"><span data-stu-id="8c5ed-103">Returns a collection of objects from a query expression that is of a specific type.</span></span>  
+# <a name="oftype-entity-sql"></a><span data-ttu-id="7c83b-102">OFTYPE (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="7c83b-102">OFTYPE (Entity SQL)</span></span>
+<span data-ttu-id="7c83b-103">從屬於特定型別的查詢運算式中傳回物件的集合。</span><span class="sxs-lookup"><span data-stu-id="7c83b-103">Returns a collection of objects from a query expression that is of a specific type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8c5ed-104">語法</span><span class="sxs-lookup"><span data-stu-id="8c5ed-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7c83b-104">語法</span><span class="sxs-lookup"><span data-stu-id="7c83b-104">Syntax</span></span>  
   
 ```  
 OFTYPE ( expression, [ONLY] test_type )  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="8c5ed-105">引數</span><span class="sxs-lookup"><span data-stu-id="8c5ed-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="7c83b-105">引數</span><span class="sxs-lookup"><span data-stu-id="7c83b-105">Arguments</span></span>  
  `expression`  
- <span data-ttu-id="8c5ed-106">傳回物件集合的任何有效查詢運算式。</span><span class="sxs-lookup"><span data-stu-id="8c5ed-106">Any valid query expression that returns a collection of objects.</span></span>  
+ <span data-ttu-id="7c83b-106">傳回物件集合的任何有效查詢運算式。</span><span class="sxs-lookup"><span data-stu-id="7c83b-106">Any valid query expression that returns a collection of objects.</span></span>  
   
  `test_type`  
- <span data-ttu-id="8c5ed-107">據以測試 `expression` 所傳回之每個物件的型別。</span><span class="sxs-lookup"><span data-stu-id="8c5ed-107">The type to test each object returned by `expression` against.</span></span> <span data-ttu-id="8c5ed-108">此型別必須以命名空間 (Namespace) 限定。</span><span class="sxs-lookup"><span data-stu-id="8c5ed-108">The type must be qualified by a namespace.</span></span>  
+ <span data-ttu-id="7c83b-107">據以測試 `expression` 所傳回之每個物件的型別。</span><span class="sxs-lookup"><span data-stu-id="7c83b-107">The type to test each object returned by `expression` against.</span></span> <span data-ttu-id="7c83b-108">此型別必須以命名空間 (Namespace) 限定。</span><span class="sxs-lookup"><span data-stu-id="7c83b-108">The type must be qualified by a namespace.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="8c5ed-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="8c5ed-109">Return Value</span></span>  
- <span data-ttu-id="8c5ed-110">屬於 `test_type`型別的物件集合，或是 `test_type`之基底型別 (Base Type) 或衍生型別 (Derived Type) 的物件集合。</span><span class="sxs-lookup"><span data-stu-id="8c5ed-110">A collection of objects that are of type `test_type`, or a base type or derived type of `test_type`.</span></span> <span data-ttu-id="8c5ed-111">如果指定了 ONLY，就只會傳回 `test_type` 的執行個體 (Instance) 或空白集合。</span><span class="sxs-lookup"><span data-stu-id="8c5ed-111">If ONLY is specified, only instances of the `test_type` or an empty collection will be returned.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7c83b-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="7c83b-109">Return Value</span></span>  
+ <span data-ttu-id="7c83b-110">屬於 `test_type`型別的物件集合，或是 `test_type`之基底型別 (Base Type) 或衍生型別 (Derived Type) 的物件集合。</span><span class="sxs-lookup"><span data-stu-id="7c83b-110">A collection of objects that are of type `test_type`, or a base type or derived type of `test_type`.</span></span> <span data-ttu-id="7c83b-111">如果指定了 ONLY，就只會傳回 `test_type` 的執行個體 (Instance) 或空白集合。</span><span class="sxs-lookup"><span data-stu-id="7c83b-111">If ONLY is specified, only instances of the `test_type` or an empty collection will be returned.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="8c5ed-112">備註</span><span class="sxs-lookup"><span data-stu-id="8c5ed-112">Remarks</span></span>  
- <span data-ttu-id="8c5ed-113">`OFTYPE` 運算式會指定針對集合的每個項目執行型別測試所發出的型別運算式。</span><span class="sxs-lookup"><span data-stu-id="8c5ed-113">An `OFTYPE` expression specifies a type expression that is issued to perform a type test against each element of a collection.</span></span>  <span data-ttu-id="8c5ed-114">`OFTYPE` 運算式會產生指定之型別的新集合，其中僅包含相當於該型別或其子型別的項目。</span><span class="sxs-lookup"><span data-stu-id="8c5ed-114">The `OFTYPE` expression produces a new collection of the specified type containing only those elements that were either equivalent to that type or a sub-type of it.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7c83b-112">備註</span><span class="sxs-lookup"><span data-stu-id="7c83b-112">Remarks</span></span>  
+ <span data-ttu-id="7c83b-113">`OFTYPE` 運算式會指定針對集合的每個項目執行型別測試所發出的型別運算式。</span><span class="sxs-lookup"><span data-stu-id="7c83b-113">An `OFTYPE` expression specifies a type expression that is issued to perform a type test against each element of a collection.</span></span>  <span data-ttu-id="7c83b-114">`OFTYPE` 運算式會產生指定之型別的新集合，其中僅包含相當於該型別或其子型別的項目。</span><span class="sxs-lookup"><span data-stu-id="7c83b-114">The `OFTYPE` expression produces a new collection of the specified type containing only those elements that were either equivalent to that type or a sub-type of it.</span></span>  
   
- <span data-ttu-id="8c5ed-115">`OFTYPE` 運算式是下列查詢運算式的縮寫：</span><span class="sxs-lookup"><span data-stu-id="8c5ed-115">An `OFTYPE` expression is an abbreviation of the following query expression:</span></span>  
+ <span data-ttu-id="7c83b-115">`OFTYPE` 運算式是下列查詢運算式的縮寫：</span><span class="sxs-lookup"><span data-stu-id="7c83b-115">An `OFTYPE` expression is an abbreviation of the following query expression:</span></span>  
   
 ```  
 select value treat(t as T) from ts as t where t is of (T)  
 ```  
   
- <span data-ttu-id="8c5ed-116">假設 Manager 是 Employee 的子型別，下列運算式就會從員工集合中產生只有主管的集合：</span><span class="sxs-lookup"><span data-stu-id="8c5ed-116">Given that a Manager is a subtype of Employee, the following expression produces a collection of only managers from a collection of employees:</span></span>  
+ <span data-ttu-id="7c83b-116">假設 Manager 是 Employee 的子型別，下列運算式就會從員工集合中產生只有主管的集合：</span><span class="sxs-lookup"><span data-stu-id="7c83b-116">Given that a Manager is a subtype of Employee, the following expression produces a collection of only managers from a collection of employees:</span></span>  
   
 ```  
 OfType(employees, NamespaceName.Manager)  
 ```  
   
- <span data-ttu-id="8c5ed-117">您也可以使用型別篩選來向上轉型集合：</span><span class="sxs-lookup"><span data-stu-id="8c5ed-117">It is also possible to up cast a collection using the type filter:</span></span>  
+ <span data-ttu-id="7c83b-117">您也可以使用型別篩選來向上轉型集合：</span><span class="sxs-lookup"><span data-stu-id="7c83b-117">It is also possible to up cast a collection using the type filter:</span></span>  
   
 ```  
 OfType(executives, NamespaceName.Manager)  
 ```  
   
- <span data-ttu-id="8c5ed-118">因為所有經理都是主管，所以產生的集合仍然會包含所有原始經理，但是此集合現在的型別會成為主管的集合。</span><span class="sxs-lookup"><span data-stu-id="8c5ed-118">Since all executives are managers, the resulting collection still contains all the original executives, though the collection is now typed as a collection of managers.</span></span>  
+ <span data-ttu-id="7c83b-118">因為所有經理都是主管，所以產生的集合仍然會包含所有原始經理，但是此集合現在的型別會成為主管的集合。</span><span class="sxs-lookup"><span data-stu-id="7c83b-118">Since all executives are managers, the resulting collection still contains all the original executives, though the collection is now typed as a collection of managers.</span></span>  
   
- <span data-ttu-id="8c5ed-119">下表所示為 `OFTYPE` 運算子在某些模式上的行為。</span><span class="sxs-lookup"><span data-stu-id="8c5ed-119">The following table shows the behavior of the `OFTYPE` operator over some patterns.</span></span> <span data-ttu-id="8c5ed-120">所有例外狀況 (Exception) 都是在叫用 (Invoke) 提供者之前從用戶端擲回：</span><span class="sxs-lookup"><span data-stu-id="8c5ed-120">All exceptions are thrown from the client side before the provider is invoked:</span></span>  
+ <span data-ttu-id="7c83b-119">下表所示為 `OFTYPE` 運算子在某些模式上的行為。</span><span class="sxs-lookup"><span data-stu-id="7c83b-119">The following table shows the behavior of the `OFTYPE` operator over some patterns.</span></span> <span data-ttu-id="7c83b-120">所有例外狀況 (Exception) 都是在叫用 (Invoke) 提供者之前從用戶端擲回：</span><span class="sxs-lookup"><span data-stu-id="7c83b-120">All exceptions are thrown from the client side before the provider is invoked:</span></span>  
   
-|<span data-ttu-id="8c5ed-121">模式</span><span class="sxs-lookup"><span data-stu-id="8c5ed-121">Pattern</span></span>|<span data-ttu-id="8c5ed-122">行為</span><span class="sxs-lookup"><span data-stu-id="8c5ed-122">Behavior</span></span>|  
+|<span data-ttu-id="7c83b-121">模式</span><span class="sxs-lookup"><span data-stu-id="7c83b-121">Pattern</span></span>|<span data-ttu-id="7c83b-122">行為</span><span class="sxs-lookup"><span data-stu-id="7c83b-122">Behavior</span></span>|  
 |-------------|--------------|  
-|<span data-ttu-id="8c5ed-123">OFTYPE(Collection(EntityType), EntityType)</span><span class="sxs-lookup"><span data-stu-id="8c5ed-123">OFTYPE(Collection(EntityType), EntityType)</span></span>|<span data-ttu-id="8c5ed-124">Collection(EntityType)</span><span class="sxs-lookup"><span data-stu-id="8c5ed-124">Collection(EntityType)</span></span>|  
-|<span data-ttu-id="8c5ed-125">OFTYPE(Collection(ComplexType), ComplexType)</span><span class="sxs-lookup"><span data-stu-id="8c5ed-125">OFTYPE(Collection(ComplexType), ComplexType)</span></span>|<span data-ttu-id="8c5ed-126">擲回</span><span class="sxs-lookup"><span data-stu-id="8c5ed-126">Throws</span></span>|  
-|<span data-ttu-id="8c5ed-127">OFTYPE(Collection(RowType), RowType)</span><span class="sxs-lookup"><span data-stu-id="8c5ed-127">OFTYPE(Collection(RowType), RowType)</span></span>|<span data-ttu-id="8c5ed-128">擲回</span><span class="sxs-lookup"><span data-stu-id="8c5ed-128">Throws</span></span>|  
+|<span data-ttu-id="7c83b-123">OFTYPE(Collection(EntityType), EntityType)</span><span class="sxs-lookup"><span data-stu-id="7c83b-123">OFTYPE(Collection(EntityType), EntityType)</span></span>|<span data-ttu-id="7c83b-124">Collection(EntityType)</span><span class="sxs-lookup"><span data-stu-id="7c83b-124">Collection(EntityType)</span></span>|  
+|<span data-ttu-id="7c83b-125">OFTYPE(Collection(ComplexType), ComplexType)</span><span class="sxs-lookup"><span data-stu-id="7c83b-125">OFTYPE(Collection(ComplexType), ComplexType)</span></span>|<span data-ttu-id="7c83b-126">擲回</span><span class="sxs-lookup"><span data-stu-id="7c83b-126">Throws</span></span>|  
+|<span data-ttu-id="7c83b-127">OFTYPE(Collection(RowType), RowType)</span><span class="sxs-lookup"><span data-stu-id="7c83b-127">OFTYPE(Collection(RowType), RowType)</span></span>|<span data-ttu-id="7c83b-128">擲回</span><span class="sxs-lookup"><span data-stu-id="7c83b-128">Throws</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="8c5ed-129">範例</span><span class="sxs-lookup"><span data-stu-id="8c5ed-129">Example</span></span>  
- <span data-ttu-id="8c5ed-130">下列 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查詢使用 OFTYPE 運算子，從 Course 物件集合傳回 OnsiteCourse 物件集合。</span><span class="sxs-lookup"><span data-stu-id="8c5ed-130">The following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query uses the OFTYPE operator to return a collection of OnsiteCourse objects from a collection of Course objects.</span></span> <span data-ttu-id="8c5ed-131">此查詢根據[School 模型](https://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac)。</span><span class="sxs-lookup"><span data-stu-id="8c5ed-131">The query is based on the [School Model](https://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac).</span></span>  
+## <a name="example"></a><span data-ttu-id="7c83b-129">範例</span><span class="sxs-lookup"><span data-stu-id="7c83b-129">Example</span></span>  
+ <span data-ttu-id="7c83b-130">下列 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查詢使用 OFTYPE 運算子，從 Course 物件集合傳回 OnsiteCourse 物件集合。</span><span class="sxs-lookup"><span data-stu-id="7c83b-130">The following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query uses the OFTYPE operator to return a collection of OnsiteCourse objects from a collection of Course objects.</span></span> <span data-ttu-id="7c83b-131">此查詢根據[School 模型](https://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac)。</span><span class="sxs-lookup"><span data-stu-id="7c83b-131">The query is based on the [School Model](https://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac).</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#OFTYPE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#oftype)]  
   
-## <a name="see-also"></a><span data-ttu-id="8c5ed-132">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8c5ed-132">See Also</span></span>  
- [<span data-ttu-id="8c5ed-133">Entity SQL 參考</span><span class="sxs-lookup"><span data-stu-id="8c5ed-133">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="7c83b-132">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7c83b-132">See Also</span></span>  
+ [<span data-ttu-id="7c83b-133">Entity SQL 參考</span><span class="sxs-lookup"><span data-stu-id="7c83b-133">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
