@@ -3,11 +3,11 @@ title: 符號和運算子參考 (F#)
 description: '深入了解符號和運算子，可在 F # 程式設計語言。'
 ms.date: 04/04/2018
 ms.openlocfilehash: 0e36f6cfc75b7d2e79bcf7acb89d260fd4e9b1ad
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45674191"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46473482"
 ---
 # <a name="symbol-and-operator-reference"></a>符號和運算子參考
 
@@ -125,7 +125,7 @@ ms.locfileid: "45674191"
 |<code>&#124;</code> （管線）|左|
 |`;`|右|
 |`let`|Nonassociative|
-|`function`、`fun`、`match``try`|Nonassociative|
+|`function`, `fun`, `match`, `try`|Nonassociative|
 |`if`|Nonassociative|
 |`->`|右|
 |`:=`|右|
