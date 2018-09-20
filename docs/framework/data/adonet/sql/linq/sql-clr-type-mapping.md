@@ -2,12 +2,12 @@
 title: SQL-CLR 類型對應
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: ac00d78fff65f5d44a52f92509db3aa493952949
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d5c0072d8561efa1211de191a1f2b6f3a1e55b7b
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862101"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478691"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR 類型對應
 在 LINQ to SQL 中，關聯式資料庫的資料模型會對應至以您選擇之程式語言表示的物件模型 (Object Model)。 執行應用程式時，LINQ to SQL 會將物件模型中的 Language Integrated Query (LINQ) 轉譯成 SQL，並將這些查詢傳送至資料庫進行執行。 當資料庫傳回結果時，LINQ to SQL 會將結果轉譯回您可以在自己的程式語言中處理的物件。  
@@ -122,7 +122,7 @@ ms.locfileid: "43862101"
  雖然還有許多其他數字對應可供您選擇，但是在資料庫之間來回轉譯時，某些對應可能會造成溢位或資料遺失的例外狀況。 如需詳細資訊，請參閱 <<c0> [ 型別對應的執行階段行為對照表](#BehaviorMatrix)。  
   
 ### <a name="decimal-and-money-types"></a>Decimal 和 Money 型別  
- SQL Server 的預設有效位數`DECIMAL`型別 （18 十進位數字的小數點左側和右側） 是遠小於 CLR 的有效位數<!--zz <xref:System.Decima?displayProperty=nameWithType>l -->`Decimal`它搭配使用預設的型別。 當您將資料儲存至資料庫時，這可能會導致精確度遺失。 不過，如果 SQL Server `DECIMAL` 型別設定為大於 29 個位數的精確度，可能會發生完全相反的情況。 當 SQL Server `DECIMAL` 型別已經設定為大於 CLR <xref:System.Decimal?displayProperty=nameWithType> 的精確度時，如果從資料庫中擷取資料，就可能會發生精確度遺失。  
+ SQL Server 的預設有效位數`DECIMAL`型別 （18 十進位數字的小數點左側和右側） 是遠小於 CLR 的有效位數<xref:System.Decimal?displayProperty=nameWithType>它搭配使用預設的型別。 當您將資料儲存至資料庫時，這可能會導致精確度遺失。 不過，如果 SQL Server `DECIMAL` 型別設定為大於 29 個位數的精確度，可能會發生完全相反的情況。 當 SQL Server `DECIMAL` 型別已經設定為大於 CLR <xref:System.Decimal?displayProperty=nameWithType> 的精確度時，如果從資料庫中擷取資料，就可能會發生精確度遺失。  
   
  SQL Server `MONEY` 和 `SMALLMONEY` 型別 (預設也會與 CLR <xref:System.Decimal?displayProperty=nameWithType> 型別搭配使用) 具有更小的精確度，而且將資料儲存至資料庫時，可能會造成溢位或資料遺失的例外狀況。  
   
