@@ -4,7 +4,7 @@ ms.date: 03/30/2017
 ms.assetid: cefc9cfc-2882-4eb9-8c94-7a6da957f2b2
 ms.openlocfilehash: a0566e01d5786c955562ef97d6d083d886278293
 ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 09/20/2018
 ms.locfileid: "46489142"
