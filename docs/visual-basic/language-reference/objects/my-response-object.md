@@ -8,25 +8,25 @@ helpviewer_keywords:
 - My.Response object
 ms.assetid: 626359bc-3165-40b4-bfaf-2c610e26eb5b
 ms.openlocfilehash: d5f49529a2593093a234babc22f64b591ea3cc61
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45989745"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46526541"
 ---
-# <a name="myresponse-object"></a><span data-ttu-id="a22aa-102">My.Response 物件</span><span class="sxs-lookup"><span data-stu-id="a22aa-102">My.Response Object</span></span>
-<span data-ttu-id="a22aa-103">取得<xref:System.Web.HttpResponse>相關聯的物件<xref:System.Web.UI.Page>。</span><span class="sxs-lookup"><span data-stu-id="a22aa-103">Gets the <xref:System.Web.HttpResponse> object associated with the <xref:System.Web.UI.Page>.</span></span> <span data-ttu-id="a22aa-104">此物件可讓您將 HTTP 回應資料傳送給用戶端，並包含該回應的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="a22aa-104">This object allows you to send HTTP response data to a client and contains information about that response.</span></span>  
+# <a name="myresponse-object"></a><span data-ttu-id="1816b-102">My.Response 物件</span><span class="sxs-lookup"><span data-stu-id="1816b-102">My.Response Object</span></span>
+<span data-ttu-id="1816b-103">取得<xref:System.Web.HttpResponse>相關聯的物件<xref:System.Web.UI.Page>。</span><span class="sxs-lookup"><span data-stu-id="1816b-103">Gets the <xref:System.Web.HttpResponse> object associated with the <xref:System.Web.UI.Page>.</span></span> <span data-ttu-id="1816b-104">此物件可讓您將 HTTP 回應資料傳送給用戶端，並包含該回應的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="1816b-104">This object allows you to send HTTP response data to a client and contains information about that response.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a22aa-105">備註</span><span class="sxs-lookup"><span data-stu-id="a22aa-105">Remarks</span></span>  
- <span data-ttu-id="a22aa-106">`My.Response`物件包含目前<xref:System.Web.HttpResponse>與頁面關聯的物件。</span><span class="sxs-lookup"><span data-stu-id="a22aa-106">The `My.Response` object contains the current <xref:System.Web.HttpResponse> object associated with the page.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1816b-105">備註</span><span class="sxs-lookup"><span data-stu-id="1816b-105">Remarks</span></span>  
+ <span data-ttu-id="1816b-106">`My.Response`物件包含目前<xref:System.Web.HttpResponse>與頁面關聯的物件。</span><span class="sxs-lookup"><span data-stu-id="1816b-106">The `My.Response` object contains the current <xref:System.Web.HttpResponse> object associated with the page.</span></span>  
   
- <span data-ttu-id="a22aa-107">`My.Response`僅適用於物件[!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]應用程式。</span><span class="sxs-lookup"><span data-stu-id="a22aa-107">The `My.Response` object is only available for [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] applications.</span></span>  
+ <span data-ttu-id="1816b-107">`My.Response`僅適用於物件[!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]應用程式。</span><span class="sxs-lookup"><span data-stu-id="1816b-107">The `My.Response` object is only available for [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] applications.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a22aa-108">範例</span><span class="sxs-lookup"><span data-stu-id="a22aa-108">Example</span></span>  
- <span data-ttu-id="a22aa-109">下列範例會取得從標頭集合`My.Request`物件，並使用`My.Response`物件寫入至 ASP.NET 網頁。</span><span class="sxs-lookup"><span data-stu-id="a22aa-109">The following example gets the header collection from the `My.Request` object and uses the `My.Response` object to write it to the ASP.NET page.</span></span>  
+## <a name="example"></a><span data-ttu-id="1816b-108">範例</span><span class="sxs-lookup"><span data-stu-id="1816b-108">Example</span></span>  
+ <span data-ttu-id="1816b-109">下列範例會取得從標頭集合`My.Request`物件，並使用`My.Response`物件寫入至 ASP.NET 網頁。</span><span class="sxs-lookup"><span data-stu-id="1816b-109">The following example gets the header collection from the `My.Request` object and uses the `My.Response` object to write it to the ASP.NET page.</span></span>  
   
  [!code-vb[VbVbalrMyWeb#1](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-response-object_1.aspx)]  
   
-## <a name="see-also"></a><span data-ttu-id="a22aa-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a22aa-110">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="1816b-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1816b-110">See Also</span></span>  
  <xref:System.Web.HttpResponse>  
- [<span data-ttu-id="a22aa-111">My.Request 物件</span><span class="sxs-lookup"><span data-stu-id="a22aa-111">My.Request Object</span></span>](../../../visual-basic/language-reference/objects/my-request-object.md)
+ [<span data-ttu-id="1816b-111">My.Request 物件</span><span class="sxs-lookup"><span data-stu-id="1816b-111">My.Request Object</span></span>](../../../visual-basic/language-reference/objects/my-request-object.md)

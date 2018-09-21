@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 33aab5ee23a1f0d30d1f9f3079856ca30d46d2ec
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46481487"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46519194"
 ---
-# <a name="iclrstrongnamegethashfromfile-method"></a><span data-ttu-id="e9a16-102">ICLRStrongName::GetHashFromFile 方法</span><span class="sxs-lookup"><span data-stu-id="e9a16-102">ICLRStrongName::GetHashFromFile Method</span></span>
-<span data-ttu-id="e9a16-103">產生指定檔案內容的雜湊。</span><span class="sxs-lookup"><span data-stu-id="e9a16-103">Generates a hash over the contents of the specified file.</span></span>  
+# <a name="iclrstrongnamegethashfromfile-method"></a><span data-ttu-id="8b7bc-102">ICLRStrongName::GetHashFromFile 方法</span><span class="sxs-lookup"><span data-stu-id="8b7bc-102">ICLRStrongName::GetHashFromFile Method</span></span>
+<span data-ttu-id="8b7bc-103">產生指定檔案內容的雜湊。</span><span class="sxs-lookup"><span data-stu-id="8b7bc-103">Generates a hash over the contents of the specified file.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e9a16-104">語法</span><span class="sxs-lookup"><span data-stu-id="e9a16-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8b7bc-104">語法</span><span class="sxs-lookup"><span data-stu-id="8b7bc-104">Syntax</span></span>  
   
 ```  
 HRESULT GetHashFromFile (  
@@ -39,37 +39,37 @@ HRESULT GetHashFromFile (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e9a16-105">參數</span><span class="sxs-lookup"><span data-stu-id="e9a16-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="8b7bc-105">參數</span><span class="sxs-lookup"><span data-stu-id="8b7bc-105">Parameters</span></span>  
  `szFilePath`  
- <span data-ttu-id="e9a16-106">[in]要雜湊之檔案的名稱。</span><span class="sxs-lookup"><span data-stu-id="e9a16-106">[in] The name of the file to hash.</span></span>  
+ <span data-ttu-id="8b7bc-106">[in]要雜湊之檔案的名稱。</span><span class="sxs-lookup"><span data-stu-id="8b7bc-106">[in] The name of the file to hash.</span></span>  
   
  `piHashAlg`  
- <span data-ttu-id="e9a16-107">[in、 out]要產生的雜湊時所使用的演算法。</span><span class="sxs-lookup"><span data-stu-id="e9a16-107">[in, out] The algorithm to use when generating the hash.</span></span> <span data-ttu-id="e9a16-108">有效的演算法為 Win32 CryptoAPI 所定義。</span><span class="sxs-lookup"><span data-stu-id="e9a16-108">Valid algorithms are those defined by the Win32 CryptoAPI.</span></span> <span data-ttu-id="e9a16-109">如果`piHashAlg`設為 0，CALG_SHA-1 會使用預設演算法。</span><span class="sxs-lookup"><span data-stu-id="e9a16-109">If `piHashAlg` is set to 0, the default algorithm CALG_SHA-1 is used.</span></span>  
+ <span data-ttu-id="8b7bc-107">[in、 out]要產生的雜湊時所使用的演算法。</span><span class="sxs-lookup"><span data-stu-id="8b7bc-107">[in, out] The algorithm to use when generating the hash.</span></span> <span data-ttu-id="8b7bc-108">有效的演算法為 Win32 CryptoAPI 所定義。</span><span class="sxs-lookup"><span data-stu-id="8b7bc-108">Valid algorithms are those defined by the Win32 CryptoAPI.</span></span> <span data-ttu-id="8b7bc-109">如果`piHashAlg`設為 0，CALG_SHA-1 會使用預設演算法。</span><span class="sxs-lookup"><span data-stu-id="8b7bc-109">If `piHashAlg` is set to 0, the default algorithm CALG_SHA-1 is used.</span></span>  
   
  `pbHash`  
- <span data-ttu-id="e9a16-110">[out]位元組陣列，包含產生的雜湊。</span><span class="sxs-lookup"><span data-stu-id="e9a16-110">[out] A byte array containing the generated hash.</span></span>  
+ <span data-ttu-id="8b7bc-110">[out]位元組陣列，包含產生的雜湊。</span><span class="sxs-lookup"><span data-stu-id="8b7bc-110">[out] A byte array containing the generated hash.</span></span>  
   
  `cchHash`  
- <span data-ttu-id="e9a16-111">[in]緩衝區的大小上限，`pbHash`指向。</span><span class="sxs-lookup"><span data-stu-id="e9a16-111">[in] The maximum size of the buffer that `pbHash` points to.</span></span>  
+ <span data-ttu-id="8b7bc-111">[in]緩衝區的大小上限，`pbHash`指向。</span><span class="sxs-lookup"><span data-stu-id="8b7bc-111">[in] The maximum size of the buffer that `pbHash` points to.</span></span>  
   
  `pchHash`  
- <span data-ttu-id="e9a16-112">[out]大小，以位元組為單位傳回`pbHash`。</span><span class="sxs-lookup"><span data-stu-id="e9a16-112">[out] The size, in bytes, of the returned `pbHash`.</span></span>  
+ <span data-ttu-id="8b7bc-112">[out]大小，以位元組為單位傳回`pbHash`。</span><span class="sxs-lookup"><span data-stu-id="8b7bc-112">[out] The size, in bytes, of the returned `pbHash`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e9a16-113">傳回值</span><span class="sxs-lookup"><span data-stu-id="e9a16-113">Return Value</span></span>  
- <span data-ttu-id="e9a16-114">`S_OK` 如果這個方法順利完成否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)清單)。</span><span class="sxs-lookup"><span data-stu-id="e9a16-114">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8b7bc-113">傳回值</span><span class="sxs-lookup"><span data-stu-id="8b7bc-113">Return Value</span></span>  
+ <span data-ttu-id="8b7bc-114">`S_OK` 如果這個方法順利完成否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)清單)。</span><span class="sxs-lookup"><span data-stu-id="8b7bc-114">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e9a16-115">備註</span><span class="sxs-lookup"><span data-stu-id="e9a16-115">Remarks</span></span>  
- <span data-ttu-id="e9a16-116">這個方法是相同[iclrstrongname:: Gethashfromfilew](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)方法，不同之處在於的檔案名稱規格是 ANSI，而非 Unicode。</span><span class="sxs-lookup"><span data-stu-id="e9a16-116">This method is the same as the [ICLRStrongName::GetHashFromFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md) method, except that the file name specification is ANSI instead of Unicode.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8b7bc-115">備註</span><span class="sxs-lookup"><span data-stu-id="8b7bc-115">Remarks</span></span>  
+ <span data-ttu-id="8b7bc-116">這個方法是相同[iclrstrongname:: Gethashfromfilew](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)方法，不同之處在於的檔案名稱規格是 ANSI，而非 Unicode。</span><span class="sxs-lookup"><span data-stu-id="8b7bc-116">This method is the same as the [ICLRStrongName::GetHashFromFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md) method, except that the file name specification is ANSI instead of Unicode.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e9a16-117">需求</span><span class="sxs-lookup"><span data-stu-id="e9a16-117">Requirements</span></span>  
- <span data-ttu-id="e9a16-118">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e9a16-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8b7bc-117">需求</span><span class="sxs-lookup"><span data-stu-id="8b7bc-117">Requirements</span></span>  
+ <span data-ttu-id="8b7bc-118">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8b7bc-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e9a16-119">**標頭：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="e9a16-119">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="8b7bc-119">**標頭：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="8b7bc-119">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="e9a16-120">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="e9a16-120">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="8b7bc-120">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="8b7bc-120">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="e9a16-121">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e9a16-121">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="8b7bc-121">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8b7bc-121">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e9a16-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e9a16-122">See Also</span></span>  
- [<span data-ttu-id="e9a16-123">GetHashFromFileW 方法</span><span class="sxs-lookup"><span data-stu-id="e9a16-123">GetHashFromFileW Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)  
- [<span data-ttu-id="e9a16-124">ICLRStrongName 介面</span><span class="sxs-lookup"><span data-stu-id="e9a16-124">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="8b7bc-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8b7bc-122">See Also</span></span>  
+ [<span data-ttu-id="8b7bc-123">GetHashFromFileW 方法</span><span class="sxs-lookup"><span data-stu-id="8b7bc-123">GetHashFromFileW Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)  
+ [<span data-ttu-id="8b7bc-124">ICLRStrongName 介面</span><span class="sxs-lookup"><span data-stu-id="8b7bc-124">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

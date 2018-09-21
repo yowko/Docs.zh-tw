@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 58bad617eb91b7e529ff3d95edd06a5c73feee64
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46472031"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46537156"
 ---
-# <a name="icordebugmodule3-interface"></a><span data-ttu-id="9e764-102">ICorDebugModule3 介面</span><span class="sxs-lookup"><span data-stu-id="9e764-102">ICorDebugModule3 Interface</span></span>
-<span data-ttu-id="9e764-103">建立動態模組的符號讀取器。</span><span class="sxs-lookup"><span data-stu-id="9e764-103">Creates a symbol reader for a dynamic module.</span></span>  
+# <a name="icordebugmodule3-interface"></a><span data-ttu-id="8f72a-102">ICorDebugModule3 介面</span><span class="sxs-lookup"><span data-stu-id="8f72a-102">ICorDebugModule3 Interface</span></span>
+<span data-ttu-id="8f72a-103">建立動態模組的符號讀取器。</span><span class="sxs-lookup"><span data-stu-id="8f72a-103">Creates a symbol reader for a dynamic module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9e764-104">語法</span><span class="sxs-lookup"><span data-stu-id="9e764-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8f72a-104">語法</span><span class="sxs-lookup"><span data-stu-id="8f72a-104">Syntax</span></span>  
   
 ```  
 interface ICorDebugModule3 : IUnknown  
@@ -39,29 +39,29 @@ interface ICorDebugModule3 : IUnknown
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="9e764-105">方法</span><span class="sxs-lookup"><span data-stu-id="9e764-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="8f72a-105">方法</span><span class="sxs-lookup"><span data-stu-id="8f72a-105">Methods</span></span>  
   
-|<span data-ttu-id="9e764-106">方法</span><span class="sxs-lookup"><span data-stu-id="9e764-106">Method</span></span>|<span data-ttu-id="9e764-107">描述</span><span class="sxs-lookup"><span data-stu-id="9e764-107">Description</span></span>|  
+|<span data-ttu-id="8f72a-106">方法</span><span class="sxs-lookup"><span data-stu-id="8f72a-106">Method</span></span>|<span data-ttu-id="8f72a-107">描述</span><span class="sxs-lookup"><span data-stu-id="8f72a-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="9e764-108">ICorDebugModule3::CreateReaderForInMemorySymbols 方法</span><span class="sxs-lookup"><span data-stu-id="9e764-108">ICorDebugModule3::CreateReaderForInMemorySymbols Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule3-createreaderforinmemorysymbols-method.md)|<span data-ttu-id="9e764-109">建立符號讀取器 (通常[ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) 的動態模組。</span><span class="sxs-lookup"><span data-stu-id="9e764-109">Creates a symbol reader (typically [ISymUnmanagedReader Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) for a dynamic module.</span></span>|  
+|[<span data-ttu-id="8f72a-108">ICorDebugModule3::CreateReaderForInMemorySymbols 方法</span><span class="sxs-lookup"><span data-stu-id="8f72a-108">ICorDebugModule3::CreateReaderForInMemorySymbols Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule3-createreaderforinmemorysymbols-method.md)|<span data-ttu-id="8f72a-109">建立符號讀取器 (通常[ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) 的動態模組。</span><span class="sxs-lookup"><span data-stu-id="8f72a-109">Creates a symbol reader (typically [ISymUnmanagedReader Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) for a dynamic module.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="9e764-110">備註</span><span class="sxs-lookup"><span data-stu-id="9e764-110">Remarks</span></span>  
- <span data-ttu-id="9e764-111">這個介面會以邏輯方式擴充的 」 ICorDebugModule"和"ICorDebugModule2"介面。</span><span class="sxs-lookup"><span data-stu-id="9e764-111">This interface logically extends the "ICorDebugModule" and "ICorDebugModule2" interfaces.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8f72a-110">備註</span><span class="sxs-lookup"><span data-stu-id="8f72a-110">Remarks</span></span>  
+ <span data-ttu-id="8f72a-111">這個介面會以邏輯方式擴充的 」 ICorDebugModule"和"ICorDebugModule2"介面。</span><span class="sxs-lookup"><span data-stu-id="8f72a-111">This interface logically extends the "ICorDebugModule" and "ICorDebugModule2" interfaces.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="9e764-112">這個介面不支援跨電腦或跨處理序的遠端呼叫。</span><span class="sxs-lookup"><span data-stu-id="9e764-112">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="8f72a-112">這個介面不支援跨電腦或跨處理序的遠端呼叫。</span><span class="sxs-lookup"><span data-stu-id="8f72a-112">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9e764-113">需求</span><span class="sxs-lookup"><span data-stu-id="9e764-113">Requirements</span></span>  
- <span data-ttu-id="9e764-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9e764-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8f72a-113">需求</span><span class="sxs-lookup"><span data-stu-id="8f72a-113">Requirements</span></span>  
+ <span data-ttu-id="8f72a-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8f72a-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9e764-115">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9e764-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="8f72a-115">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8f72a-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9e764-116">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9e764-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8f72a-116">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8f72a-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9e764-117">**.NET framework 版本：** 4.5，4，3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="9e764-117">**.NET Framework Versions:** 4.5, 4, 3.5 SP1</span></span>
+ <span data-ttu-id="8f72a-117">**.NET framework 版本：** 4.5，4，3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="8f72a-117">**.NET Framework Versions:** 4.5, 4, 3.5 SP1</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="9e764-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9e764-118">See Also</span></span>  
- [<span data-ttu-id="9e764-119">ICorDebugRemoteTarget 介面</span><span class="sxs-lookup"><span data-stu-id="9e764-119">ICorDebugRemoteTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
- [<span data-ttu-id="9e764-120">ICorDebug 介面</span><span class="sxs-lookup"><span data-stu-id="9e764-120">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
+## <a name="see-also"></a><span data-ttu-id="8f72a-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8f72a-118">See Also</span></span>  
+ [<span data-ttu-id="8f72a-119">ICorDebugRemoteTarget 介面</span><span class="sxs-lookup"><span data-stu-id="8f72a-119">ICorDebugRemoteTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
+ [<span data-ttu-id="8f72a-120">ICorDebug 介面</span><span class="sxs-lookup"><span data-stu-id="8f72a-120">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
     
- [<span data-ttu-id="9e764-121">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="9e764-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [<span data-ttu-id="8f72a-121">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="8f72a-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
