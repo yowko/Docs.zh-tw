@@ -2,12 +2,12 @@
 title: WCF Web HTTP 服務說明網頁
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: 75babbeda7d5f0dca18c2de2e3187145164ac9a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0fe4f99fea4d414c95244e535cd75891f921790
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500948"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46529972"
 ---
 # <a name="wcf-web-http-service-help-page"></a>WCF Web HTTP 服務說明網頁
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 會為 WCF WEB HTTP 服務提供自動說明頁面。 此說明頁面會列出每項作業、要求與回應格式和結構描述的說明。 此功能預設為關閉。 當使用者瀏覽至 WCF WEB HTTP 服務並附加在 「 / 說明 」 的 URL，例如後面 http://localhost:8000/Customers/Help ，一樣會顯示下列說明頁面。  
@@ -16,7 +16,7 @@ ms.locfileid: "33500948"
   
  使用者可以按一下說明頁面中列出的任何方法，該作業的詳細資訊頁面便會顯示，提供有關該方法的詳細資訊，包括訊息格式和回應範例。 下圖是方法之說明頁面的範例。  
   
- ![WCF REST 說明頁面詳細說明](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagedetail2.gif "WCFRESTHELPPAGEDETAIL2")  
+ ![WCF REST 說明頁面詳細資料](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagedetail2.gif "WCFRESTHELPPAGEDETAIL2")  
   
 ## <a name="using-the-wcf-web-http-help-page"></a>使用 WCF Web HTTP 說明頁面  
  WCF WEB HTTP 說明頁面會顯示每項作業的簡短描述，您可以使用 <xref:System.ComponentModel.DescriptionAttribute> 來指定任何一項。 此屬性會使用包含作業所套用之簡短描述的字串。 例如，下列程式碼示範如何使用 <xref:System.ComponentModel.DescriptionAttribute>來提供簡短描述。  
@@ -45,12 +45,12 @@ SyndicationFeedFormatter GetTemplate1();
 </services>  
 ```  
   
- 若要啟用 WCF Web HTTP 說明網頁程式碼中的，加入服務端點，並新增<xref:System.ServiceModel.Description.WebHttpBehavior>端點設定<!--zz <xref:System.ServiceModel.Description.WebHttpBehavior.EnableHelp%2A>-->`EnableHelp`至`true`。 下列程式碼示範如何執行這項操作。  
+ 若要在程式碼中啟用 WCF Web HTTP 說明頁面，請加入服務端點，並將 <xref:System.ServiceModel.Description.WebHttpBehavior> 加入至端點設定，再將 <xref:System.ServiceModel.Description.WebHttpBehavior.HelpEnabled%2A> 設定為 `true`。 下列程式碼示範如何執行這項操作。  
   
 ```  
 using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http://localhost:8000/Customers")))  
 {  
-   host.AddServiceEndpoint(typeof(ICustomerCollection), new WebHttpBinding(), "");               
+   host.AddServiceEndpoint(typeof(ICustomerCollection), new WebHttpBinding(), "");
    host.Description.Endpoints[0].Behaviors.Add(new WebHttpBehavior { EnableHelp = true });  
    // ...  
 }  
@@ -240,4 +240,4 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 </xs:schema>  
 ```  
   
- 如需資料合約序列化結構描述的詳細資訊，請參閱[資料合約結構描述參考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。
+ 如需有關資料合約序列化結構描述的詳細資訊，請參閱[Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。

@@ -1,5 +1,5 @@
 ---
-title: '&lt;新增&gt;元素&lt;appSettings&gt;'
+title: '&lt;新增&gt;項目&lt;appSettings&gt;'
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/add
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 35a9fc08033d2b9cd1dae5a1f1f3ddcd361f03eb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bcdac76528e7a8b07b56b6fd1d827c3c8072c371
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753634"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46529576"
 ---
 # <a name="add-element-for-appsettings"></a>\<新增 > 項目\<appSettings >
 
@@ -51,7 +51,7 @@ ms.locfileid: "32753634"
 
 ## <a name="example"></a>範例
 
-下列範例會示範如何新增自訂組態設定的應用程式的名稱：
+下列範例示範如何新增自訂組態設定的應用程式的名稱：
 
 ```xml
 <appSettings>
@@ -59,6 +59,15 @@ ms.locfileid: "32753634"
 </appSettings>
 ```
 
+下列範例會使用`<add>`項目來定義 ASP.NET 應用程式中的兩個的相容性設定：
+
+```xml
+<appSettings>
+  <add key="AppContext.SetSwitch:Switch.System.Globalization.NoAsyncCurrentCulture" value="true" />
+  <add key="AppContext.SetSwitch:Switch.System.Uri.DontEnableStrictRFC3986ReservedCharacterSets" value="true" />
+</appSettings>
+```
+
 ## <a name="see-also"></a>另請參閱
 
-[適用於.NET Framework 組態檔結構描述](~/docs/framework/configure-apps/file-schema/index.md)
+[適用於.NET Framework 的組態檔結構描述](~/docs/framework/configure-apps/file-schema/index.md)

@@ -3,11 +3,11 @@ title: 介面 (F#)
 description: '了解 F # 介面指定一組相關的其他類別所實作的成員的方式。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 6d7f8ee9ea17d2294933f88577c30a96975ae5d4
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46481513"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46532330"
 ---
 # <a name="interfaces"></a>介面
 

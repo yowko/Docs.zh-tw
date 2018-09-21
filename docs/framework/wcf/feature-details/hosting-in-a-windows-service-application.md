@@ -3,11 +3,11 @@ title: 在 Windows 服務應用程式中裝載
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
 ms.openlocfilehash: 2b3935babec0c7cdc3ffca5dd11d693fdfee7a89
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46470930"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46526330"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>在 Windows 服務應用程式中裝載
 Windows 服務 (之前稱為 Windows NT 服務) 所提供的處理序模型特別適合那些必須駐留在長時間執行的可執行檔中，且不會顯示任何使用者介面形式的應用程式使用。 Windows 服務應用程式的處理序存留期是由服務控制管理員 (SCM) 負責管理，可讓您啟動、停止與暫停 Windows 服務應用程式。 您可以設定為啟動電腦，因此合適的裝載環境為 「 永遠開啟 」 應用程式時自動啟動 Windows 服務處理程序。 如需有關 Windows 服務應用程式的詳細資訊，請參閱 < [Windows 服務應用程式](https://go.microsoft.com/fwlink/?LinkId=89450)。  

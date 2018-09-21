@@ -3,11 +3,11 @@ title: 字串標準函式
 ms.date: 03/30/2017
 ms.assetid: 5e2cbebd-5df3-47c7-b0e2-49a17ab22bfb
 ms.openlocfilehash: d4758f8325b99bc4bd91575dd774d2dabde1f925
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46009547"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46532593"
 ---
 # <a name="string-canonical-functions"></a>字串標準函式
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 包含字串標準函式。  

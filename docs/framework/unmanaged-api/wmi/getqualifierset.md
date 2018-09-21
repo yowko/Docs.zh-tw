@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 635dc7605af00f2662a9f9553adefafcd25f9452
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46488853"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46537809"
 ---
 # <a name="getqualifierset-function"></a>GetQualifierSet 函式
 擷取類別執行個體或類別定義的限定詞集合。

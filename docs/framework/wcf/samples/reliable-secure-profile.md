@@ -5,11 +5,11 @@ ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: dfdafbcdc461c80192e310a86d5bff50f0885283
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
-ms.translationtype: MT
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46471167"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46517564"
 ---
 # <a name="reliable-secure-profile"></a>可靠的安全設定檔
 這個範例會示範如何撰寫 WCF 及[可靠的安全設定檔](https://go.microsoft.com/fwlink/?LinkId=178140)(RSP)。 這個範例會示範實作[建立連線](https://go.microsoft.com/fwlink/?LinkId=178141)通道可以使用來撰寫與可靠的傳訊，並選擇性地建立可靠的安全繫結的安全通道根據 RSP 規格。  

@@ -3,11 +3,11 @@ title: 永久性雙工相互關聯
 ms.date: 03/30/2017
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
 ms.openlocfilehash: 82c052ff87eb8b125dfc64e1567dbd00d255894d
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46323778"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46526610"
 ---
 # <a name="durable-duplex-correlation"></a>永久性雙工相互關聯
 永久性雙工相互關聯也稱為回呼相互關聯，在工作流程服務需要傳送回呼至初始呼叫端時相當實用。 與 WCF 雙工不同的是，回呼可以在未來隨時進行，並且不受限於相同通道或通道存留期；唯一的需求是呼叫端擁有主動端點，可接聽回呼訊息。 如此可讓兩項工作流程服務在長時間執行的對話中彼此通訊。 本主題提供永久性雙工相互關聯的概觀。  

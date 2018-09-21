@@ -3,11 +3,11 @@ title: 位元運算子 (F#)
 description: '深入了解 F # 程式設計語言中可用的位元運算子。'
 ms.date: 07/20/2018
 ms.openlocfilehash: ed76fcf5f9c569a2f288cf260e99dc29fd65ef3b
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46323216"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46531319"
 ---
 # <a name="bitwise-operators"></a>位元運算子
 

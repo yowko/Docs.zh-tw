@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
 ms.openlocfilehash: abb679971771f6bff5bd1c84ff744e2fcbb9c45a
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46471940"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46529829"
 ---
 # <a name="using-the-xmlserializer-class"></a>使用 XmlSerializer 類別
 Windows Communication Foundation (WCF) 可以使用兩種不同的序列化技術，以將資料轉換成 XML，在用戶端與服務、 稱為序列化的程序之間傳輸的應用程式中。  

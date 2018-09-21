@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
 ms.openlocfilehash: 0824a43cba1a21cc9ae92b1f807c6a1369fd63ed
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46478508"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46530280"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>設定資料服務 (WCF 資料服務)
 具有[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，您可以建立資料服務公開 （expose）[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要。 這些摘要中的資料可以來自各種不同的資料來源。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 會使用資料提供者公開此資料，做[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要。 這些提供者包含 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 提供者、反映提供者，以及一組自訂資料服務提供者介面。 提供者實作會針對此服務定義資料模型。 如需詳細資訊，請參閱 <<c0> [ 資料服務提供者](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)。  

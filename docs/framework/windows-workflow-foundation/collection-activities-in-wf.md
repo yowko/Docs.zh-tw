@@ -2,15 +2,15 @@
 title: WF 中的集合活動
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-ms.openlocfilehash: 442da07e78ee08b49ad0e023362cace23dcd5b8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b3a02cdd020d303519f605a206d62b42f4fe731
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516723"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46538384"
 ---
 # <a name="collection-activities-in-wf"></a>WF 中的集合活動
-集合活動可用來處理工作流程中的集合物件。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 含有系統提供的活動，可用於加入與移除集合中的物件、測試集合中項目的存在，以及清除集合。 `ExistsInCollection` 和`RemoveFromCollection`有<xref:System.Activities.OutArgument%601>型別的<xref:System.Boolean>，這會表示結果。  
+集合活動可用來處理工作流程中的集合物件。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 含有系統提供的活動，可用於加入與移除集合中的物件、測試集合中項目的存在，以及清除集合。 `ExistsInCollection` 並`RemoveFromCollection`有<xref:System.Activities.OutArgument%601>型別的<xref:System.Boolean>，這會表示結果。  
   
 > [!IMPORTANT]
 >  如果集合活動在設定基礎集合物件之前執行，便會擲回 <xref:System.InvalidOperationException> 與活動錯誤。  
@@ -25,7 +25,7 @@ ms.locfileid: "33516723"
 |<xref:System.Activities.Statements.RemoveFromCollection%601>|移除指定集合中的項目，若順利移除該項目，則傳回 `true`。|  
   
 ## <a name="using-collection-activities"></a>使用集合活動  
- 下列程式碼範例示範如何與宣告為工作流程變數的集合互動。 使用的集合是<!--zz <xref:System.Collections.Generic.List%E2%80%991>-->`System.Collections.Generic.List`的<xref:System.String>物件命名`fruitList`。  
+ 下列程式碼範例示範如何與宣告為工作流程變數的集合互動。 所使用的集合是名為 <xref:System.Collections.Generic.List%601> 之 <xref:System.String> 物件的 `fruitList`。  
   
 ```csharp  
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  
@@ -227,7 +227,7 @@ Activity wf = new Sequence
   
  您也可以使用 <xref:Microsoft.CSharp.Activities.CSharpValue%601> 代替 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> 來建立上述程式碼範例。  
   
-```  
+```csharp
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  
 {  
     Default = new CSharpValue<ICollection<string>>("new List<String> From {\"Apple\", \"Orange\"};"),  

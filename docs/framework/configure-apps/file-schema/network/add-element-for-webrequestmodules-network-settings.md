@@ -14,11 +14,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: f3c3ea63df8d99154c42e40b359180ad1065f6c5
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46481750"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46539287"
 ---
 # <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a>&lt;新增&gt;webRequestModules （網路設定） 的項目
 將自訂的 Web 要求模組新增至應用程式。  

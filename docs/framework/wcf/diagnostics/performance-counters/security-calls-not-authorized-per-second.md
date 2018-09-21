@@ -5,11 +5,11 @@ ms.assetid: 0f189767-8c05-478a-8f0b-9228e5d351e5
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 4d4970c6f6552163114b33a34ae87c6ed56b5e13
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46488587"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46507894"
 ---
 # <a name="security-calls-not-authorized-per-second"></a>每秒未授權的安全性呼叫數
 計數器名稱：每秒未授權的安全性呼叫數。  
