@@ -2,12 +2,12 @@
 title: 在巢狀結構描述項目之間進行隱含關聯對應
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: 3c0b5356479d31a3caad8438618e7cf7dc4e10e8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 73cd8a83021934de3b8e3bf494a4f59dd32e183c
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485569"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493616"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>在巢狀結構描述項目之間進行隱含關聯對應
 XML 結構描述定義語言 (XSD) 結構描述可以是互呈巢狀的複雜型別。 在這樣的情況下，對應處理序會在 <xref:System.Data.DataSet> 內套用預設對應並建立下列各項：  
@@ -16,7 +16,7 @@ XML 結構描述定義語言 (XSD) 結構描述可以是互呈巢狀的複雜型
   
 -   如果沒有唯一的條件約束存在父代上，一個額外主索引鍵資料行每個資料表定義名為*TableName*_Id 所在*TableName*是父資料表的名稱。  
   
--   識別額外的資料行的主索引鍵的父資料表上的主索引鍵條件約束 (藉由設定**IsPrimaryKey**屬性設 **，則為 True**)。 條件約束的名稱為 Constraint*#* 何處*#* 是 1、 2、 3，依此類推。 例如，第一個條件約束的預設名稱是 Constraint1。  
+-   識別額外的資料行的主索引鍵的父資料表上的主索引鍵條件約束 (藉由設定**IsPrimaryKey**屬性設 **，則為 True**)。 此條件約束的名稱為 Constraint\#，其中 \# 為 1、2、3 等。 例如，第一個條件約束的預設名稱是 Constraint1。  
   
 -   子資料表中的外部索引鍵條件約束將另一個資料行識別為外部索引鍵，此外部索引鍵參考至父資料表的主索引鍵。 名為條件約束*ParentTable_ChildTable*何處*ParentTable*是父資料表的名稱並*ChildTable*是子資料表的名稱。  
   

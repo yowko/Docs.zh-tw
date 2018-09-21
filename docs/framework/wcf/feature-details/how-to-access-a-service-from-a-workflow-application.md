@@ -2,12 +2,12 @@
 title: HOW TO：存取來自工作流程應用程式的服務
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: 5bc18b446d4bf818c874839a421793a997ddc543
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 460e5d0f1bbfdebf885176ed9fcc336b76731edd
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595460"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493286"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>HOW TO：存取來自工作流程應用程式的服務
 本主題描述如何從工作流程主控台應用程式呼叫工作流程服務。 它必須先完成[如何： 使用訊息活動建立工作流程服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)主題。 雖然本主題說明如何從工作流程應用程式呼叫工作流程服務，但相同的方法可用來從工作流程應用程式呼叫任何 Windows Communication Foundation (WCF) 服務。
@@ -42,13 +42,13 @@ ms.locfileid: "45595460"
 
      ![回應在工具箱中的活動](../../../../docs/framework/wcf/feature-details/media/echoactivity.JPG "EchoActivity")
 
-7.  將拖放<!--zz <xref:System.ServiceModel.Activities.Sequence>-->`System.ServiceModel.Activities.Sequence`拖曳至設計工具介面上的活動。 其低於**控制流程**工具箱的區段。
+7.  將 <xref:System.Activities.Statements.Sequence> 活動拖放至設計工具介面上。 其低於**控制流程**工具箱的區段。
 
-8.  具有<!--zz <xref:System.ServiceModel.Activities.Sequence>-->`System.ServiceModel.Activities.Sequence`活動中取得焦點時，按一下**變數**連結並新增名為的字串變數`inString`。 提供變數的預設值`"Hello, world"`以及字串變數，名為`outString`如下圖所示。
+8.  具有<xref:System.Activities.Statements.Sequence>活動在成為焦點，按**變數**連結並新增名為的字串變數`inString`。 提供變數的預設值`"Hello, world"`以及字串變數，名為`outString`如下圖所示。
 
      ![加入變數](../../../../docs/framework/wcf/feature-details/media/instringvar.JPG "inStringVar")
 
-9. 將拖放**Echo**活動<!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence`。 在 [屬性] 視窗中將繫結`inMsg`引數`inString`變數並`outMsg`引數`outString`變數，如下圖所示。 這樣做會將 `inString` 變數的值傳遞至作業中，然後取得傳回值並放入 `outString` 變數。
+9. 將拖放**Echo**活動<xref:System.Activities.Statements.Sequence>。 在 [屬性] 視窗中將繫結`inMsg`引數`inString`變數並`outMsg`引數`outString`變數，如下圖所示。 這樣做會將 `inString` 變數的值傳遞至作業中，然後取得傳回值並放入 `outString` 變數。
 
      ![引數繫結至變數](../../../../docs/framework/wcf/feature-details/media/argumentbind.JPG "ArgumentBind")
 

@@ -2,12 +2,12 @@
 title: WCF 簡化功能
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: 010f941850dedd73e9cc203ea2b180dae7d4742c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ded4fc93e5e8f33d98e58ffcb3cb98c2bff2b410
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526349"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493228"
 ---
 # <a name="wcf-simplification-features"></a>WCF 簡化功能
 本主題探討讓撰寫 WCF 應用程式更簡單的新功能。  
@@ -106,7 +106,7 @@ ms.locfileid: "43526349"
 |----------------|-------------------|-----------------|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>|Int32.MaxValue|取得和設定允許的陣列長度上限。 這個配額會限制 XML 讀取器將會傳回之基本陣列的大小上限，包括位元組陣列。 這個配額不會限制 XML 讀取器本身的記憶體消耗，但會限制正在使用讀取器之任何元件中的記憶體消耗。 例如，當 <xref:System.Runtime.Serialization.DataContractSerializer> 使用以 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>保護的讀取器時，它不會還原序列化大於這個配額的位元組陣列。|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A>|Int32.MaxValue|取得和設定允許每個讀取動作傳回的位元組上限。 這個配額會限制讀取項目開始標記和其屬性時，在單一「讀取」作業中讀取的位元組數目。 (在非資料流處理的情況中，項目名稱本身不會納入配額的計數)。 使用太多 XML 屬性可能會耗盡不當比例的處理時間，因為必須檢查屬性名稱的唯一性。 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> 可降低這個威脅。|  
-|<xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A>|128 個節點深|這個配額會限制 XML 項目的最大巢狀結構深度。  <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> 會與 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> 互動：由於讀取器永遠會為目前項目和其所有祖系將資料保存在記憶體中，因此讀取器的最大記憶體消耗與這兩個設定的產品是成比例的。 當還原序列化深度巢狀物件圖形時，會強制還原序列化程式存取整個堆疊並擲回無法復原的 <xref:System.StackOverflowException>。 XML 巢狀結構和物件兩者的巢狀之間存在直接的相互關聯<xref:System.Runtime.Serialization.DataContractSerializer>而<!--zz <xref:System.Runtime.Serialization.XmlSerializer>--> `System.Runtime.Serialization.XmlSerializer`。 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> 是用來降低這個威脅。|  
+|<xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A>|128 個節點深|這個配額會限制 XML 項目的最大巢狀結構深度。  <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> 會與 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> 互動：由於讀取器永遠會為目前項目和其所有祖系將資料保存在記憶體中，因此讀取器的最大記憶體消耗與這兩個設定的產品是成比例的。 當還原序列化深度巢狀物件圖形時，會強制還原序列化程式存取整個堆疊並擲回無法復原的 <xref:System.StackOverflowException>。 在 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Xml.Serialization.XmlSerializer>兩者的 XML 巢狀結構和物件巢狀結構之間有直接的相互關聯。 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> 是用來降低這個威脅。|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxNameTableCharCount%2A>|Int32.MaxValue|這個配額會限制名稱表格中允許的最大字元數目。 名稱表格包含會在處理 XML 文件時遇到的特定字串 (例如命名空間和前置詞)。 當這些字串在記憶體中緩衝時可使用這個配額，以防止在應該進行資料流處理時過度緩衝處理。|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A>|Int32.MaxValue|這個配額會限制 XML 讀取器傳回的字串大小上限。 這個配額不會限制 XML 讀取器本身的記憶體消耗，但會限制正在使用讀取器之元件中的記憶體消耗。 例如，當 <xref:System.Runtime.Serialization.DataContractSerializer> 使用以 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A>保護的讀取器時，它不會還原序列化大於這個配額的字串。|  
   
