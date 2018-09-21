@@ -6,11 +6,11 @@ helpviewer_keywords:
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
 ms.openlocfilehash: da7a6c15c558fc56dbc6a874d4a28c4434f67668
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46473183"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46531892"
 ---
 # <a name="ltincludegt-visual-basic"></a>&lt;包含&gt;(Visual Basic)
 參考描述的類型和成員在原始程式碼中的另一個檔案。  

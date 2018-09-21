@@ -2,12 +2,12 @@
 title: HOW TO：使用篩選
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: 6b1e02563fcc32a0095e2bdb5e25d0853fc05e84
-ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
+ms.openlocfilehash: aee0f2e4fbf3b4e0802803b76aa557f2dec668bb
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2018
-ms.locfileid: "42754579"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46508998"
 ---
 # <a name="how-to-use-filters"></a>HOW TO：使用篩選
 本主題概要說明建立使用多個篩選條件之路由組態所需的基本步驟。 在此範例中，會將訊息路由至計算機服務的兩種實作 (regularCalc 與 roundingCalc)。 兩項實作都支援相同的作業，不過其中一個服務會在傳回之前將所有的計算結果四捨五入至最接近的整數值。 用戶端應用程式必須能夠指出是否要使用四捨五入後的服務版本，如果未指定任何服務偏好設定，則會在兩項服務之間平衡訊息負載。 由這兩項服務公開的作業為：  
@@ -113,7 +113,7 @@ ms.locfileid: "42754579"
      這**MessageFilter**尋找 RoundingCalculator 標頭中包含"rounding"值的訊息。 這個標頭是由用戶端設定的，用於指出應將訊息路由至 roundingCalc 服務。  
   
     > [!NOTE]
-    >  S12 命名空間前置詞定義預設會在命名空間資料表，且代表命名空間"http://www.w3.org/2003/05/soap-envelope」。  
+    > S12 命名空間前置詞定義預設會在命名空間資料表，且代表命名空間`http://www.w3.org/2003/05/soap-envelope`。
   
 2.  您必須同時設定會尋找兩個虛擬端點上接收到之訊息的篩選條件。 第一個虛擬端點是"regular/calculator"端點。 用戶端可以將要求傳送至這個端點，指出應將訊息路由至 regularCalc 服務。 下列組態定義的篩選條件會使用 <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter>，判斷訊息是否透過具有 filterData 中指定之名稱的端點送達。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "42754579"
             filterData="http://localhost/routingservice/router/rounding/"/>  
     ```  
   
-     如果在開頭的位址上收到訊息 "http://localhost/routingservice/router/rounding/" 則此篩選條件會評估為，則為 **true**。 因為此設定所使用的基底位址是"http://localhost/routingservice/router"and"rounding/calculator"roundingEndpoint 的指定的位址，用來與此端點通訊的完整位址是"http://localhost/routingservice/router/rounding/calculator」，其符合此篩選器。  
+     如果在開頭的位址上收到訊息`http://localhost/routingservice/router/rounding/`則此篩選條件會評估為 **，則為 true**。 因為此設定所使用的基底位址`http://localhost/routingservice/router`並指定"rounding/calculator"roundingEndpoint 的位址，用來與此端點通訊的完整位址是`http://localhost/routingservice/router/rounding/calculator`，符合此篩選器。  
   
     > [!NOTE]
     >  PrefixEndpointAddress 篩選條件執行比對時不會評估主機名稱，因為可以使用多種主機名稱 (均為從用戶端應用程式參考主機的有效方式) 參考單一主機。 例如，下列所有名稱皆可參考同一個主機：  
@@ -156,7 +156,7 @@ ms.locfileid: "42754579"
                     filterData="group1"/>  
     ```  
   
-     在執行階段時期，這個篩選條件類型會在所有已定義的此類型篩選執行個體之間交替 (這些執行個體已設定在一個集合的相同群組中)。 這樣可讓由這個自訂篩選條件處理的訊息在針對 RoundRobinFilter1 和 RoundRobinFilter2 傳回 `true` 之間交替。  
+     在執行階段時期，這個篩選條件類型會在所有已定義的此類型篩選執行個體之間交替 (這些執行個體已設定在一個集合的相同群組中)。 這會導致處理這個自訂篩選條件之間傳回的訊息`true`for`RoundRobinFilter1`和`RoundRobinFilter2`。  
   
 ### <a name="define-filter-tables"></a>若要定義篩選資料表  
   
@@ -165,7 +165,7 @@ ms.locfileid: "42754579"
     > [!NOTE]
     >  指定篩選條件優先順序可以讓您控制處理篩選條件的順序，但這麼做可能會對路由服務的效能造成負面影響。 如果可行，請建構使用不需篩選條件優先順序的篩選條件邏輯。  
   
-     下列定義篩選資料表，並加入至具有優先順序為 2 的資料表稍早定義的"XPathFilter"。 此項目也會指定，是否"XPathFilter"符合訊息，訊息會傳送至"roundingCalcEndpoint"  
+     下列定義篩選資料表，並加入至具有優先順序為 2 的資料表稍早定義的"XPathFilter"。 此項目也會指定當`XPathFilter`會比對訊息，訊息會路由傳送至`roundingCalcEndpoint`。  
   
     ```xml  
     <routing>  

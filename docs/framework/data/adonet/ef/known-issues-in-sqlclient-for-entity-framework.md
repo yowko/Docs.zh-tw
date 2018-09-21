@@ -3,11 +3,11 @@ title: 適用於 Entity Framework 的 SqlClient 已知問題
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
 ms.openlocfilehash: c1353444415ddd2305a73d14bacf1bb33a931929
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46477869"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46537575"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>適用於 Entity Framework 的 SqlClient 已知問題
 本節說明與 .NET Framework Data Provider for SQL Server (SqlClient) 相關的已知問題。  

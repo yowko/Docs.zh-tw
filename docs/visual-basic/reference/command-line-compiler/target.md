@@ -9,11 +9,11 @@ ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5e3f691da48db863edd20bc6881785940a5451ef
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
-ms.translationtype: HT
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "46524794"
+ms.locfileid: "46562316"
 ---
 # <a name="-target-visual-basic"></a>-target (Visual Basic)
 指定編譯器輸出的格式。  

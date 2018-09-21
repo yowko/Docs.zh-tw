@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 791e75aa60fd651dde1555339e31664a3523e1eb
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
-ms.translationtype: HT
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "46516622"
+ms.locfileid: "46561548"
 ---
 # <a name="delete-function"></a>刪除函式
 刪除指定的屬性和其限定詞的所有從 CIM 類別定義。
