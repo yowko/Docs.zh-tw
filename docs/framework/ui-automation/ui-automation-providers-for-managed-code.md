@@ -12,11 +12,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 14e00caf666186e2ad25c746334afaff7ae5f664
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46480756"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46696606"
 ---
 # <a name="ui-automation-providers-for-managed-code"></a>使用 Managed 程式碼的 UI 自動化提供者
 > [!NOTE]

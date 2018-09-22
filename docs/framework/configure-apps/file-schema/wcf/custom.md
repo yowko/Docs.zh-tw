@@ -3,11 +3,11 @@ title: '&lt;custom&gt;'
 ms.date: 03/30/2017
 ms.assetid: a6f65a00-bd1a-4d4a-955a-fe009ec02ab8
 ms.openlocfilehash: 7d558be66b8a1e46d9743c5f8bf0bb9a8b4c349e
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46540735"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46586723"
 ---
 # <a name="ltcustomgt"></a>&lt;custom&gt;
 指定自訂對等解析程式服務的設定。  

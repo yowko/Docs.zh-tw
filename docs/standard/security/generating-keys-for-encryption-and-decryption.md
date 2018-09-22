@@ -17,11 +17,11 @@ ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 839a04d8a06e782582705cf0d9ad92d2e2df6af6
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46471641"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46696517"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>產生加密和解密金鑰
 建立和管理金鑰是密碼編譯程序中很重要的一部分。 對稱演算法需要建立金鑰和初始化向量 (IV)。 務必不要對不該解密您資料的任何人透露金鑰。 IV 不需要加密，但是應該針對每個工作階段變更。 非對稱演算法需要建立公開金鑰和私密金鑰。 公開金鑰可以公開給任何人，但私密金鑰必須只有將解密以公開金鑰加密之資料的一方知道。 本節描述如何產生及管理對稱和非對稱演算法的金鑰。  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
 ms.openlocfilehash: fd168bf2e5233d9119872b267aea466a7af07041
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45970275"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46696530"
 ---
 # <a name="how-to-create-a-custom-token"></a>HOW TO：建立自訂權杖
 本主題說明如何使用 <xref:System.IdentityModel.Tokens.SecurityToken> 類別來建立自訂安全性權杖，以及如何將它與自訂安全性權杖提供者和驗證器整合。 如需完整的程式碼範例，請參閱[自訂語彙基元](../../../../docs/framework/wcf/samples/custom-token.md)範例。  

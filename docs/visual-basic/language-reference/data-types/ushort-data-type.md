@@ -19,11 +19,11 @@ ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 038aad2c41f655d0699dab33df276132a70e3ede
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46492716"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46696670"
 ---
 # <a name="ushort-data-type-visual-basic"></a>UShort 資料類型 (Visual Basic)
 

@@ -3,11 +3,11 @@ title: 從工作流程服務存取 OperationContext
 ms.date: 03/30/2017
 ms.assetid: b1dafe55-a20e-4db0-9ac8-90c315883cdd
 ms.openlocfilehash: 15dd817dddbe3272b188f6b74697f8c5839d498b
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46540748"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46697824"
 ---
 # <a name="accessing-operationcontext-from-a-workflow-service"></a>從工作流程服務存取 OperationContext
 若要在工作流程服務內部存取 <xref:System.ServiceModel.OperationContext>，您必須在自訂執行屬性中實作 <xref:System.ServiceModel.Activities.IReceiveMessageCallback> 介面。 請覆寫會收到 <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> 之參考的 <xref:System.ServiceModel.OperationContext> 方法。 本主題將逐步引導您實作這個執行屬性來擷取自訂標頭，以及將在執行階段呈現此屬性給 <xref:System.ServiceModel.Activities.Receive> 的自訂活動。  此自訂活動會與 <xref:System.Activities.Statements.Sequence> 活動實作相同的行為，不過在該活動內部放置 <xref:System.ServiceModel.Activities.Receive> 時，系統就會呼叫 <xref:System.ServiceModel.Activities.IReceiveMessageCallback> 而且會擷取 <xref:System.ServiceModel.OperationContext> 資訊。  此外，本主題也將示範如何透過 <xref:System.ServiceModel.OperationContext> 介面存取用戶端 <xref:System.ServiceModel.Activities.ISendMessageCallback> 來加入傳出標頭。  

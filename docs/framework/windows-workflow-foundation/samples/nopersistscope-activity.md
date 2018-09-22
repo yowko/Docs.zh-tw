@@ -3,11 +3,11 @@ title: NoPersistScope 活動
 ms.date: 03/30/2017
 ms.assetid: 9a0baeb7-a05c-4fac-b905-252758cb71bb
 ms.openlocfilehash: 6543756594b6734aec39bf22c5ab6215605341b1
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46561415"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46698252"
 ---
 # <a name="nopersistscope-activity"></a>NoPersistScope 活動
 這個範例示範如何在工作流程中操作不可序列化和可處置的狀態。 重要的是工作流程不會嘗試保存不可序列化的狀態，同樣重要的是可處置的物件在工作流程中使用之後一定要清除。  

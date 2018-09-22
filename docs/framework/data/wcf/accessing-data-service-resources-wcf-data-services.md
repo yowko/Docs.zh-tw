@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
 ms.openlocfilehash: d4f4de1fa12418bd56f9680e5414bfe7dd0aa128
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46478652"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46586762"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>存取資料服務資源 (WCF 資料服務)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 支援[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]將資料公開為可由 Uri 定址的資源摘要。 會根據實體-關聯性慣例呈現這些資源[Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)。 在此模型中，實體代表資料運算單位 (這些資料在應用程式定義域中為資料型別)，例如客戶、訂單、項目及產品。 使用具像狀態傳輸 (REST) 的語意即可存取及變更實體資料，尤其是標準 HTTP 動作，例如 GET、PUT、POST 和 DELETE。  

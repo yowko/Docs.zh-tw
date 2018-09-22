@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 202026a1-ec79-435e-b507-12a77f5011b2
 ms.openlocfilehash: f00e2171c1adf4ff99a669085131ebc8d38f7006
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46532528"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46696101"
 ---
 # <a name="navigating-datatables"></a>導覽 DataTable
 <xref:System.Data.DataTableReader> 會以一或多個唯讀、順向結果集的形式，取得一或多個 <xref:System.Data.DataTable> 物件的內容。  

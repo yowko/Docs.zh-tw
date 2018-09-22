@@ -3,11 +3,11 @@ title: 探索繫結項目範例
 ms.date: 03/30/2017
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
 ms.openlocfilehash: d906d9a389c50095f2af5d52e3874c3e43199e68
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46324450"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46696205"
 ---
 # <a name="discovery-binding-element-sample"></a>探索繫結項目範例
 此範例示範如何使用探索用戶端繫結項目探索服務。 此功能可讓開發人員將探索用戶端通道加入至其現有的用戶端通道堆疊中，讓程式設計模型變得非常直覺。 開啟相關聯的通道時，就會使用探索解析服務的位址。 這個範例包含下列專案：  

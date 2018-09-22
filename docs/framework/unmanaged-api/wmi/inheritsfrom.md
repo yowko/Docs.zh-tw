@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4784e22d5a3eec031fbee00441958a62d66b52df
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46508851"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46576992"
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom 函式
 判斷目前類別或執行個體衍生自指定的父類別。

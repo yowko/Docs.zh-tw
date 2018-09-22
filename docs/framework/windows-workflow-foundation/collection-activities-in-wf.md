@@ -3,11 +3,11 @@ title: WF 中的集合活動
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
 ms.openlocfilehash: 6b3a02cdd020d303519f605a206d62b42f4fe731
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46538384"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46579169"
 ---
 # <a name="collection-activities-in-wf"></a>WF 中的集合活動
 集合活動可用來處理工作流程中的集合物件。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 含有系統提供的活動，可用於加入與移除集合中的物件、測試集合中項目的存在，以及清除集合。 `ExistsInCollection` 並`RemoveFromCollection`有<xref:System.Activities.OutArgument%601>型別的<xref:System.Boolean>，這會表示結果。  

@@ -3,11 +3,11 @@ title: 相互關聯概觀
 ms.date: 03/30/2017
 ms.assetid: edcc0315-5d26-44d6-a36d-ea554c418e9f
 ms.openlocfilehash: 8ac5d39866b23bc134f009fdb0df6ebf56c6d234
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46007525"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46696478"
 ---
 # <a name="correlation-overview"></a>相互關聯概觀
 相互關聯是一種機制，可將工作流程服務訊息彼此產生關聯性、將工作流程服務訊息與應用程式執行個體狀態 (例如針對初始要求的回覆) 產生關聯性，或者是將特定的訂單 ID 與訂單處理工作流程的保存狀態產生關聯性。 本主題提供相互關聯的概觀。 本節的其他主題則會提供各種相互關聯類型的其他資訊。  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
 ms.openlocfilehash: fbc0a82f82afcc59384246b58437d521d56d708b
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46492395"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46699231"
 ---
 # <a name="overriding-the-onpaint-method"></a>覆寫 OnPaint 方法
 覆寫任何事件中所定義的基本步驟[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]都相同，而且下列清單摘要說明。  
