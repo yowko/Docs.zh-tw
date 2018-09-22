@@ -3,13 +3,13 @@ title: CSDL、SSDL 和 MSL 規格
 ms.date: 03/30/2017
 ms.assetid: bbdc9237-ff4c-4441-9565-31ebc29743e9
 ms.openlocfilehash: 793efb79cba9401b576c9ac7679600f3a4e655c9
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46528681"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46697720"
 ---
-# <a name="csdl-ssdl-and-msl-specifications"></a><span data-ttu-id="40b11-102">CSDL、SSDL 和 MSL 規格</span><span class="sxs-lookup"><span data-stu-id="40b11-102">CSDL, SSDL, and MSL Specifications</span></span>
-<span data-ttu-id="40b11-103">[Msdn.microsoft.com/data/ef](https://msdn.microsoft.com/data/ef)網站現在是 Entity Framework 內容的主要位置。</span><span class="sxs-lookup"><span data-stu-id="40b11-103">The [msdn.microsoft.com/data/ef](https://msdn.microsoft.com/data/ef) site is now the main location for the Entity Framework content.</span></span>  
+# <a name="csdl-ssdl-and-msl-specifications"></a><span data-ttu-id="0db42-102">CSDL、SSDL 和 MSL 規格</span><span class="sxs-lookup"><span data-stu-id="0db42-102">CSDL, SSDL, and MSL Specifications</span></span>
+<span data-ttu-id="0db42-103">[Msdn.microsoft.com/data/ef](https://msdn.microsoft.com/data/ef)網站現在是 Entity Framework 內容的主要位置。</span><span class="sxs-lookup"><span data-stu-id="0db42-103">The [msdn.microsoft.com/data/ef](https://msdn.microsoft.com/data/ef) site is now the main location for the Entity Framework content.</span></span>  
   
- <span data-ttu-id="40b11-104">本主題的內容上現已提供的下列網頁： [EDMX 檔案](https://msdn.microsoft.com/data/jj650889)。</span><span class="sxs-lookup"><span data-stu-id="40b11-104">The content for this topic is now available on the following page: [EDMX file](https://msdn.microsoft.com/data/jj650889).</span></span>
+ <span data-ttu-id="0db42-104">本主題的內容上現已提供的下列網頁： [EDMX 檔案](https://msdn.microsoft.com/data/jj650889)。</span><span class="sxs-lookup"><span data-stu-id="0db42-104">The content for this topic is now available on the following page: [EDMX file](https://msdn.microsoft.com/data/jj650889).</span></span>

@@ -3,28 +3,28 @@ title: 使用 NetHttpBinding
 ms.date: 03/30/2017
 ms.assetid: fe134acf-ceca-49de-84a9-05a37e3841f1
 ms.openlocfilehash: cd4a50798ff709c32db056c6aa7289993431f40e
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46537341"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46696738"
 ---
-# <a name="using-the-nethttpbinding"></a><span data-ttu-id="90c0a-102">使用 NetHttpBinding</span><span class="sxs-lookup"><span data-stu-id="90c0a-102">Using the NetHttpBinding</span></span>
-<span data-ttu-id="90c0a-103"><xref:System.ServiceModel.NetHttpBinding> 是為了使用 HTTP 或 WebSocket 服務而設計的繫結，其預設會使用二進位編碼。</span><span class="sxs-lookup"><span data-stu-id="90c0a-103"><xref:System.ServiceModel.NetHttpBinding> is a binding designed for consuming HTTP or WebSocket services and uses binary encoding by default.</span></span> <span data-ttu-id="90c0a-104"><xref:System.ServiceModel.NetHttpBinding> 將會偵測其所搭配使用的是要求-回覆合約還是雙工合約，並改變行為來配合，也就是針對要求-回覆合約使用 HTTP，並針對雙工合約使用 WebSockets。</span><span class="sxs-lookup"><span data-stu-id="90c0a-104"><xref:System.ServiceModel.NetHttpBinding> will detect whether it is used with a request-reply contract or duplex contract and change its behavior to match - it will use HTTP for request-reply contracts and WebSockets for duplex contracts.</span></span> <span data-ttu-id="90c0a-105">使用 <xref:System.ServiceModel.Channels.WebSocketTransportUsage> 設定即可覆寫這個行為：</span><span class="sxs-lookup"><span data-stu-id="90c0a-105">This behavior can be overridden using the <xref:System.ServiceModel.Channels.WebSocketTransportUsage> setting:</span></span>  
+# <a name="using-the-nethttpbinding"></a><span data-ttu-id="d3b6e-102">使用 NetHttpBinding</span><span class="sxs-lookup"><span data-stu-id="d3b6e-102">Using the NetHttpBinding</span></span>
+<span data-ttu-id="d3b6e-103"><xref:System.ServiceModel.NetHttpBinding> 是為了使用 HTTP 或 WebSocket 服務而設計的繫結，其預設會使用二進位編碼。</span><span class="sxs-lookup"><span data-stu-id="d3b6e-103"><xref:System.ServiceModel.NetHttpBinding> is a binding designed for consuming HTTP or WebSocket services and uses binary encoding by default.</span></span> <span data-ttu-id="d3b6e-104"><xref:System.ServiceModel.NetHttpBinding> 將會偵測其所搭配使用的是要求-回覆合約還是雙工合約，並改變行為來配合，也就是針對要求-回覆合約使用 HTTP，並針對雙工合約使用 WebSockets。</span><span class="sxs-lookup"><span data-stu-id="d3b6e-104"><xref:System.ServiceModel.NetHttpBinding> will detect whether it is used with a request-reply contract or duplex contract and change its behavior to match - it will use HTTP for request-reply contracts and WebSockets for duplex contracts.</span></span> <span data-ttu-id="d3b6e-105">使用 <xref:System.ServiceModel.Channels.WebSocketTransportUsage> 設定即可覆寫這個行為：</span><span class="sxs-lookup"><span data-stu-id="d3b6e-105">This behavior can be overridden using the <xref:System.ServiceModel.Channels.WebSocketTransportUsage> setting:</span></span>  
   
-1. <span data-ttu-id="90c0a-106">`Always` -這會強制使用 WebSockets，甚至用於要求-回覆合約。</span><span class="sxs-lookup"><span data-stu-id="90c0a-106">`Always` - This forces WebSockets to be used even for request-reply contracts.</span></span>  
+1. <span data-ttu-id="d3b6e-106">`Always` -這會強制使用 WebSockets，甚至用於要求-回覆合約。</span><span class="sxs-lookup"><span data-stu-id="d3b6e-106">`Always` - This forces WebSockets to be used even for request-reply contracts.</span></span>  
   
-2. <span data-ttu-id="90c0a-107">`Never` -這可避免使用 WebSockets。</span><span class="sxs-lookup"><span data-stu-id="90c0a-107">`Never` - This prevents WebSockets from being used.</span></span> <span data-ttu-id="90c0a-108">嘗試將這個設定用於雙工合約會導致例外狀況。</span><span class="sxs-lookup"><span data-stu-id="90c0a-108">Attempting to use a duplex contract with this setting will result in an exception.</span></span>  
+2. <span data-ttu-id="d3b6e-107">`Never` -這可避免使用 WebSockets。</span><span class="sxs-lookup"><span data-stu-id="d3b6e-107">`Never` - This prevents WebSockets from being used.</span></span> <span data-ttu-id="d3b6e-108">嘗試將這個設定用於雙工合約會導致例外狀況。</span><span class="sxs-lookup"><span data-stu-id="d3b6e-108">Attempting to use a duplex contract with this setting will result in an exception.</span></span>  
   
-3. <span data-ttu-id="90c0a-109">`WhenDuplex` -這是預設值和行為方式如上所述。</span><span class="sxs-lookup"><span data-stu-id="90c0a-109">`WhenDuplex` - This is the default value and behaves as described above.</span></span>  
+3. <span data-ttu-id="d3b6e-109">`WhenDuplex` -這是預設值和行為方式如上所述。</span><span class="sxs-lookup"><span data-stu-id="d3b6e-109">`WhenDuplex` - This is the default value and behaves as described above.</span></span>  
   
- <span data-ttu-id="90c0a-110"><xref:System.ServiceModel.NetHttpBinding> 在 HTTP 模式和 WebSocket 模式下都會支援可靠工作階段。</span><span class="sxs-lookup"><span data-stu-id="90c0a-110"><xref:System.ServiceModel.NetHttpBinding> supports reliable sessions in both HTTP mode and WebSocket mode.</span></span> <span data-ttu-id="90c0a-111">在 WebSocket 模式中，工作階段是由傳輸提供。</span><span class="sxs-lookup"><span data-stu-id="90c0a-111">In WebSocket mode sessions are provided by the transport.</span></span>  
+ <span data-ttu-id="d3b6e-110"><xref:System.ServiceModel.NetHttpBinding> 在 HTTP 模式和 WebSocket 模式下都會支援可靠工作階段。</span><span class="sxs-lookup"><span data-stu-id="d3b6e-110"><xref:System.ServiceModel.NetHttpBinding> supports reliable sessions in both HTTP mode and WebSocket mode.</span></span> <span data-ttu-id="d3b6e-111">在 WebSocket 模式中，工作階段是由傳輸提供。</span><span class="sxs-lookup"><span data-stu-id="d3b6e-111">In WebSocket mode sessions are provided by the transport.</span></span>  
   
 > [!WARNING]
->  <span data-ttu-id="90c0a-112">當使用 <xref:System.ServiceModel.NetHttpBinding> 且繫結的 TransferMode 設為 TransferMode.Streamed 時，大量資料流可能會造成死結與呼叫逾時。</span><span class="sxs-lookup"><span data-stu-id="90c0a-112">When using the <xref:System.ServiceModel.NetHttpBinding> and the binding’s TransferMode is set to TransferMode.Streamed, large streams may cause a deadlock and the call will timeout.</span></span> <span data-ttu-id="90c0a-113">為了解決此問題，請傳送較小的訊息或使用 TransferMode.Buffered。</span><span class="sxs-lookup"><span data-stu-id="90c0a-113">To work around this issue send smaller messages or use TransferMode.Buffered.</span></span>  
+>  <span data-ttu-id="d3b6e-112">當使用 <xref:System.ServiceModel.NetHttpBinding> 且繫結的 TransferMode 設為 TransferMode.Streamed 時，大量資料流可能會造成死結與呼叫逾時。</span><span class="sxs-lookup"><span data-stu-id="d3b6e-112">When using the <xref:System.ServiceModel.NetHttpBinding> and the binding’s TransferMode is set to TransferMode.Streamed, large streams may cause a deadlock and the call will timeout.</span></span> <span data-ttu-id="d3b6e-113">為了解決此問題，請傳送較小的訊息或使用 TransferMode.Buffered。</span><span class="sxs-lookup"><span data-stu-id="d3b6e-113">To work around this issue send smaller messages or use TransferMode.Buffered.</span></span>  
   
-## <a name="configuring-a-service-to-use-nethttpbinding"></a><span data-ttu-id="90c0a-114">設定服務以使用 NetHttpBinding</span><span class="sxs-lookup"><span data-stu-id="90c0a-114">Configuring a Service to use NetHttpBinding</span></span>  
- <span data-ttu-id="90c0a-115">可以將 <xref:System.ServiceModel.NetHttpBinding> 設定成和任何其他繫結一樣。</span><span class="sxs-lookup"><span data-stu-id="90c0a-115">The <xref:System.ServiceModel.NetHttpBinding> can be configured the same as any other binding.</span></span> <span data-ttu-id="90c0a-116">下列組態檔片段說明如何使用 <xref:System.ServiceModel.NetHttpBinding> 來設定 WCF 服務。</span><span class="sxs-lookup"><span data-stu-id="90c0a-116">The following configuration snippet illustrates how to configure a WCF service with <xref:System.ServiceModel.NetHttpBinding>.</span></span>  
+## <a name="configuring-a-service-to-use-nethttpbinding"></a><span data-ttu-id="d3b6e-114">設定服務以使用 NetHttpBinding</span><span class="sxs-lookup"><span data-stu-id="d3b6e-114">Configuring a Service to use NetHttpBinding</span></span>  
+ <span data-ttu-id="d3b6e-115">可以將 <xref:System.ServiceModel.NetHttpBinding> 設定成和任何其他繫結一樣。</span><span class="sxs-lookup"><span data-stu-id="d3b6e-115">The <xref:System.ServiceModel.NetHttpBinding> can be configured the same as any other binding.</span></span> <span data-ttu-id="d3b6e-116">下列組態檔片段說明如何使用 <xref:System.ServiceModel.NetHttpBinding> 來設定 WCF 服務。</span><span class="sxs-lookup"><span data-stu-id="d3b6e-116">The following configuration snippet illustrates how to configure a WCF service with <xref:System.ServiceModel.NetHttpBinding>.</span></span>  
   
 ```xml  
 <system.serviceModel>  
@@ -49,7 +49,7 @@ ms.locfileid: "46537341"
   </system.serviceModel>  
 ```  
   
- <span data-ttu-id="90c0a-117">下列程式碼片段示範如何在程式碼中加入 <xref:System.ServiceModel.NetHttpBinding>。</span><span class="sxs-lookup"><span data-stu-id="90c0a-117">The following code snippet shows how to add the <xref:System.ServiceModel.NetHttpBinding> in code.</span></span>  
+ <span data-ttu-id="d3b6e-117">下列程式碼片段示範如何在程式碼中加入 <xref:System.ServiceModel.NetHttpBinding>。</span><span class="sxs-lookup"><span data-stu-id="d3b6e-117">The following code snippet shows how to add the <xref:System.ServiceModel.NetHttpBinding> in code.</span></span>  
   
 ```csharp  
 ServiceHost svchost = new ServiceHost(typeof(Service1), baseAddress);  
@@ -58,8 +58,8 @@ ServiceHost svchost = new ServiceHost(typeof(Service1), baseAddress);
         }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="90c0a-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="90c0a-118">See Also</span></span>  
- [<span data-ttu-id="90c0a-119">設定服務的繫結</span><span class="sxs-lookup"><span data-stu-id="90c0a-119">Configuring Bindings for Services</span></span>](../../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
- [<span data-ttu-id="90c0a-120">繫結</span><span class="sxs-lookup"><span data-stu-id="90c0a-120">Bindings</span></span>](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [<span data-ttu-id="90c0a-121">系統提供的繫結</span><span class="sxs-lookup"><span data-stu-id="90c0a-121">System-Provided Bindings</span></span>](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [<span data-ttu-id="90c0a-122">雙工服務</span><span class="sxs-lookup"><span data-stu-id="90c0a-122">Duplex Services</span></span>](../../../../docs/framework/wcf/feature-details/duplex-services.md)
+## <a name="see-also"></a><span data-ttu-id="d3b6e-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d3b6e-118">See Also</span></span>  
+ [<span data-ttu-id="d3b6e-119">設定服務的繫結</span><span class="sxs-lookup"><span data-stu-id="d3b6e-119">Configuring Bindings for Services</span></span>](../../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
+ [<span data-ttu-id="d3b6e-120">繫結</span><span class="sxs-lookup"><span data-stu-id="d3b6e-120">Bindings</span></span>](../../../../docs/framework/wcf/feature-details/bindings.md)  
+ [<span data-ttu-id="d3b6e-121">系統提供的繫結</span><span class="sxs-lookup"><span data-stu-id="d3b6e-121">System-Provided Bindings</span></span>](../../../../docs/framework/wcf/system-provided-bindings.md)  
+ [<span data-ttu-id="d3b6e-122">雙工服務</span><span class="sxs-lookup"><span data-stu-id="d3b6e-122">Duplex Services</span></span>](../../../../docs/framework/wcf/feature-details/duplex-services.md)
