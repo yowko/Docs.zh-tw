@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 78d9e27299c9d7ed7d6cb9b09dd659ba081c5fde
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46485427"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46586816"
 ---
-# <a name="isymunmanagedencupdateupdatesymbolstore2-method"></a><span data-ttu-id="2eb6b-102">ISymUnmanagedENCUpdate::UpdateSymbolStore2 方法</span><span class="sxs-lookup"><span data-stu-id="2eb6b-102">ISymUnmanagedENCUpdate::UpdateSymbolStore2 Method</span></span>
-<span data-ttu-id="2eb6b-103">讓編譯器將省略尚未經過修改的程式資料庫 (PDB)，從資料流的函式，提供行資訊符合需求。</span><span class="sxs-lookup"><span data-stu-id="2eb6b-103">Allows a compiler to omit functions that have not been modified from the program database (PDB) stream, provided the line information meets the requirements.</span></span> <span data-ttu-id="2eb6b-104">使用舊的 PDB 行資訊和函式中的所有行的一個差異，您可以判斷正確的行資訊。</span><span class="sxs-lookup"><span data-stu-id="2eb6b-104">The correct line information can be determined with the old PDB line information and one delta for all lines in the function.</span></span>  
+# <a name="isymunmanagedencupdateupdatesymbolstore2-method"></a><span data-ttu-id="ed3cc-102">ISymUnmanagedENCUpdate::UpdateSymbolStore2 方法</span><span class="sxs-lookup"><span data-stu-id="ed3cc-102">ISymUnmanagedENCUpdate::UpdateSymbolStore2 Method</span></span>
+<span data-ttu-id="ed3cc-103">讓編譯器將省略尚未經過修改的程式資料庫 (PDB)，從資料流的函式，提供行資訊符合需求。</span><span class="sxs-lookup"><span data-stu-id="ed3cc-103">Allows a compiler to omit functions that have not been modified from the program database (PDB) stream, provided the line information meets the requirements.</span></span> <span data-ttu-id="ed3cc-104">使用舊的 PDB 行資訊和函式中的所有行的一個差異，您可以判斷正確的行資訊。</span><span class="sxs-lookup"><span data-stu-id="ed3cc-104">The correct line information can be determined with the old PDB line information and one delta for all lines in the function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2eb6b-105">語法</span><span class="sxs-lookup"><span data-stu-id="2eb6b-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ed3cc-105">語法</span><span class="sxs-lookup"><span data-stu-id="ed3cc-105">Syntax</span></span>  
   
 ```  
 HRESULT UpdateSymbolStore2(  
@@ -36,21 +36,21 @@ HRESULT UpdateSymbolStore2(
     [in]  ULONG         cDeltaLines);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="2eb6b-106">參數</span><span class="sxs-lookup"><span data-stu-id="2eb6b-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="ed3cc-106">參數</span><span class="sxs-lookup"><span data-stu-id="ed3cc-106">Parameters</span></span>  
  `pIStream`  
- <span data-ttu-id="2eb6b-107">[in]指標[IStream](/windows/desktop/api/objidl/nn-objidl-istream)包含行資訊。</span><span class="sxs-lookup"><span data-stu-id="2eb6b-107">[in] A pointer to an [IStream](/windows/desktop/api/objidl/nn-objidl-istream) that contains the line information.</span></span>  
+ <span data-ttu-id="ed3cc-107">[in]指標[IStream](/windows/desktop/api/objidl/nn-objidl-istream)包含行資訊。</span><span class="sxs-lookup"><span data-stu-id="ed3cc-107">[in] A pointer to an [IStream](/windows/desktop/api/objidl/nn-objidl-istream) that contains the line information.</span></span>  
   
  `pDeltaLines`  
- <span data-ttu-id="2eb6b-108">[in]指標[SYMLINEDELTA](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md)包含已變更的資料行的結構。</span><span class="sxs-lookup"><span data-stu-id="2eb6b-108">[in] A pointer to a [SYMLINEDELTA](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md) structure that contains the lines that have changed.</span></span>  
+ <span data-ttu-id="ed3cc-108">[in]指標[SYMLINEDELTA](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md)包含已變更的資料行的結構。</span><span class="sxs-lookup"><span data-stu-id="ed3cc-108">[in] A pointer to a [SYMLINEDELTA](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md) structure that contains the lines that have changed.</span></span>  
   
  `cDeltaLines`  
- <span data-ttu-id="2eb6b-109">[in]A `ULONG` ，代表已變更的行數。</span><span class="sxs-lookup"><span data-stu-id="2eb6b-109">[in] A `ULONG` that represents the number of lines that have changed.</span></span>  
+ <span data-ttu-id="ed3cc-109">[in]A `ULONG` ，代表已變更的行數。</span><span class="sxs-lookup"><span data-stu-id="ed3cc-109">[in] A `ULONG` that represents the number of lines that have changed.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="2eb6b-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="2eb6b-110">Return Value</span></span>  
- <span data-ttu-id="2eb6b-111">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="2eb6b-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ed3cc-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="ed3cc-110">Return Value</span></span>  
+ <span data-ttu-id="ed3cc-111">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="ed3cc-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2eb6b-112">需求</span><span class="sxs-lookup"><span data-stu-id="2eb6b-112">Requirements</span></span>  
- <span data-ttu-id="2eb6b-113">**標頭：** 於 CorSym.idl、 CorSym.h</span><span class="sxs-lookup"><span data-stu-id="2eb6b-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ed3cc-112">需求</span><span class="sxs-lookup"><span data-stu-id="ed3cc-112">Requirements</span></span>  
+ <span data-ttu-id="ed3cc-113">**標頭：** 於 CorSym.idl、 CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ed3cc-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2eb6b-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2eb6b-114">See Also</span></span>  
- [<span data-ttu-id="2eb6b-115">ISymUnmanagedENCUpdate 介面</span><span class="sxs-lookup"><span data-stu-id="2eb6b-115">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ed3cc-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ed3cc-114">See Also</span></span>  
+ [<span data-ttu-id="ed3cc-115">ISymUnmanagedENCUpdate 介面</span><span class="sxs-lookup"><span data-stu-id="ed3cc-115">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
