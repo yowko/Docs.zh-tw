@@ -21,11 +21,11 @@ helpviewer_keywords:
 - numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
 ms.openlocfilehash: 98433c0f1d1008664bb994f3b43fe48a753a432c
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46539690"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46581203"
 ---
 # <a name="single-data-type-visual-basic"></a>字串資料類型 (Visual Basic)
 保存帶正負號的 IEEE 32 位元 （4 個位元組） 單精確度浮點數，值範圍從-3.4028235E + 38 到-1.401298E-45 負值，以及從 1.401298E-45 到 3.4028235E + 38 的正數值。 單精確度數字儲存的是實數的近似值。  

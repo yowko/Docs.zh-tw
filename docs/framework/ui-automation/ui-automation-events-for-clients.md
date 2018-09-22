@@ -9,11 +9,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: f295bbf44d6272879e8ea8e74c435d206b7af913
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615211"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46581151"
 ---
 # <a name="ui-automation-events-for-clients"></a>用戶端的 UI 自動化事件
 > [!NOTE]

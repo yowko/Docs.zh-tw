@@ -12,11 +12,11 @@ ms.assetid: 5e87881c-9c13-4b52-8ad1-e34bb46e8aaa
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c62a469b3e31283e5790c747092a8fe504ef8c2a
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46517840"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46579195"
 ---
 # <a name="security-changes-in-the-net-framework"></a>.NET Framework 中的安全性變更
 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中對於安全性最重要的變更為強式命名。 如需這些變更的說明，請參閱 [Enhanced Strong Naming](../../../docs/framework/app-domains/enhanced-strong-naming.md) 。  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
 ms.openlocfilehash: d4f7ebf784ab02ecdd0203423157da5bef968a87
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45687461"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46579496"
 ---
 # <a name="denial-of-service"></a>阻斷服務
 當系統由於無法處理訊息，或者處理訊息的速度極為緩慢而爆滿時，就會發生阻絕服務。  

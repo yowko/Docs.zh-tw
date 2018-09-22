@@ -6,11 +6,11 @@ helpviewer_keywords:
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
 ms.openlocfilehash: e9b54cd7e59a5a410bfc5c0fb1ba4973c5e482af
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45999399"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46581229"
 ---
 # <a name="printing-how-to-topics"></a>列印 HOW TO 主題
 在本節中的主題將示範如何使用列印和列印系統管理功能隨附[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]以及新[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]列印路徑。  

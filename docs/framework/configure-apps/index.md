@@ -28,11 +28,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 4bd30b26a3e05f97904200cab40234d00924820c
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46529693"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46585117"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>使用組態檔設定應用程式
 .NET Framework 透過組態檔賦予開發人員和系統管理員對於應用程式執行方式的控制和彈性。 組態檔是可以按需要變更的 XML 檔。 系統管員能夠控制應用程式可以存取哪些受保護的資源、應用程式將使用之組件的版本為何，以及遠端應用程式和物件要位於何處。 開發人員則可以將設定值置於組態檔，排除每當設定值變更時重新編譯應用程式的需要。 本章節說明可以設定些什麼以及設定應用程式會很有用處的原因。  

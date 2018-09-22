@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
 ms.openlocfilehash: 2edaf7ba540035fbf2f49ba78b41ab99f8889391
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46492199"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46586790"
 ---
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>How to: Use the XML Schema Definition Tool to Generate Classes and XML Schema Documents
 XML 結構描述定義工具 (Xsd.exe) 讓您產生說明類別的 XML 結構描述或產生由 XML 結構描述定義的類別。 下列程序將說明如何執行這些作業。  

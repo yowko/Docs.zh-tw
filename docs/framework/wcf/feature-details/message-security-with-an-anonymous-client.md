@@ -8,11 +8,11 @@ ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: d3e8269fc05caf70f4329ce8f13a3633a8982c0b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45676229"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46586321"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>匿名用戶端的訊息安全性
 下列案例示範用戶端與受保護的 Windows Communication Foundation (WCF) 訊息安全性的服務。 這樣的設計目的是使用訊息安全性而非傳輸安全性，如此未來可以支援更豐富的宣告型模型。 如需使用各種宣告進行授權的詳細資訊，請參閱 <<c0> [ 管理宣告與授權身分識別模型](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。  

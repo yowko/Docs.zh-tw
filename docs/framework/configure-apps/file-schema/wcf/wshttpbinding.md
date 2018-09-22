@@ -5,11 +5,11 @@ helpviewer_keywords:
 - wsHttpBinding Element
 ms.assetid: 0eee8ced-ad68-427d-b95a-97260e98deed
 ms.openlocfilehash: 480e10b9667712fbd2a3ffa95e1373d72ee1a9df
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46540550"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46585464"
 ---
 # <a name="ltwshttpbindinggt"></a>&lt;wsHttpBinding&gt;
 為非雙工服務合約定義安全、可靠且互通的繫結。 此繫結會實作下列規格：WS-Reliable 訊息用於可靠性以及 WS-Security 用於訊息安全性和驗證。 傳輸是 HTTP，而訊息編碼是 Text/XML 編碼。  

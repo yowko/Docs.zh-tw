@@ -3,11 +3,11 @@ title: 彈性類型 (F#)
 description: '了解如何使用 F # 彈性類型註解，這表示參數、 變數或值具有與指定的型別相容的類型。'
 ms.date: 05/16/2016
 ms.openlocfilehash: b6c97c3cc19f15b2c8db74b2c55660a16b2858f7
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46326505"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46576727"
 ---
 # <a name="flexible-types"></a>彈性類型
 

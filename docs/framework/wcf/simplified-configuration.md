@@ -3,11 +3,11 @@ title: 簡化的組態
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
 ms.openlocfilehash: 7df686188099aea45cac81ea94a49b98e5c65f89
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46508342"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46583872"
 ---
 # <a name="simplified-configuration"></a>簡化的組態
 設定 Windows Communication Foundation (WCF) 服務可能是複雜的工作。 這項工作不但包含許多不同的選項，而且判斷需要哪些設定往往絕非易事。 雖然組態檔能夠增加的 WCF 服務的彈性，但是也會造成許多不易發現的問題。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 能夠解決這些問題，並且提供可讓使用者降低服務組態大小與複雜度的方式。  

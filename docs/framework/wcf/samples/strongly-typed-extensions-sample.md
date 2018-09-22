@@ -3,11 +3,11 @@ title: 強型別延伸範例
 ms.date: 03/30/2017
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
 ms.openlocfilehash: eccb0ce240d01ab8592a44daddcfa7aa3d2023fb
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46006492"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577911"
 ---
 # <a name="strongly-typed-extensions-sample"></a>強型別延伸範例
 基於示範用途，此範例會使用 <xref:System.ServiceModel.Syndication.SyndicationFeed> 類別。 不過在此範例中所示範的模式，可以與所有支援延伸資料的新聞訂閱類別一起使用。  

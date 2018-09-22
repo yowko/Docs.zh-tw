@@ -11,11 +11,11 @@ helpviewer_keywords:
 - TransformGroup [WPF]
 ms.assetid: 98cd1921-12bc-4bf5-8193-529228fb7402
 ms.openlocfilehash: 0700a7ae3f18f745b0d479ace3acbf2d7fbd9722
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46537731"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46586537"
 ---
 # <a name="how-to-apply-multiple-transforms-to-an-object"></a>操作說明：套用多重轉換至物件
 此範例示範如何使用<xref:System.Windows.Media.TransformGroup>兩個或多個群組<xref:System.Windows.Media.Transform>組成為單一複合物件<xref:System.Windows.Media.Transform>。  
