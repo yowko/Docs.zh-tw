@@ -8,11 +8,11 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
 ms.openlocfilehash: 7abdeae4d19ceb6425f85e3cdd28f565a03d7ea4
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46537850"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46703566"
 ---
 # <a name="how-to-author-composite-controls"></a>如何：撰寫複合控制項
 複合控制項的運用方式有許多種。 您可以將它們撰寫成 Windows 桌面應用程式專案的一部分，且只在專案中的表單上使用它們。 或者，您可以在 Windows 控制項程式庫專案中撰寫它們、將專案編譯成組件，然後在其他專案中使用控制項。 您甚至可以繼承它們，並使用視覺繼承來針對特殊用途進行快速自訂。  

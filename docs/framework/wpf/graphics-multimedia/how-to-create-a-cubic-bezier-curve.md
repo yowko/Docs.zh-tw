@@ -8,11 +8,11 @@ helpviewer_keywords:
 - cubic Bezier curves [WPF]
 ms.assetid: 450a3a77-7c57-48b0-a008-0f6051add980
 ms.openlocfilehash: 2dd9dfa7f15ce00261c87f316079c25a7aa52532
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45743186"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46703579"
 ---
 # <a name="how-to-create-a-cubic-bezier-curve"></a>如何：建立三次方貝茲曲線
 此範例示範如何建立三次方貝茲曲線。 若要建立三次方貝茲曲線，使用<xref:System.Windows.Media.PathGeometry>， <xref:System.Windows.Media.PathFigure>，和<xref:System.Windows.Media.BezierSegment>類別。  若要顯示產生的幾何，請使用<xref:System.Windows.Shapes.Path>項目，或使用它來搭配<xref:System.Windows.Media.GeometryDrawing>或<xref:System.Windows.Media.DrawingContext>。 在下列範例中，三次方貝茲曲線會繪製從 （10，100） 到 （300，100）。 曲線具有的控點 （100，0） 和 （200，200）。  

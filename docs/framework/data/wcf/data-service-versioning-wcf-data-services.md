@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
 ms.openlocfilehash: 9a92346267012d3651d04648b357bbf530097e34
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46532356"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46705704"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>資料服務版本控制 (WCF Data Services)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]可讓您建立資料服務，讓用戶端可以存取資料，為使用 Uri 以資料模型為基礎的資源。 OData 也支援服務作業的定義。 初始部署並在其存留期期間潛在進行數次之後，可能會因為各種原因而需要變更這些資料服務 (例如變更商務需要、資訊技術需求) 或處理其他問題。 當您針對現有的資料服務進行變更時，必須考慮是否要定義新的資料服務版本，以及如何妥善地將對於現有用戶端應用程式的影響降至最低。 本主題提供建立新資料服務版本時機和方式的指引。 它也會描述 WCF Data Services 的用戶端和支援的 OData 通訊協定的不同版本的資料服務之間交換的處理方式。

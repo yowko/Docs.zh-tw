@@ -13,11 +13,11 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], examples
 ms.assetid: ee261207-4573-4cb9-a8cb-5185037e0fba
 ms.openlocfilehash: fdbf1e1b419e5ad296376ec1f06fd361077895c4
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46326539"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46702890"
 ---
 # <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>如何：使用 Windows Form BindingSource 繫結至 Web 服務
 如果您想要將 Windows Form 控制項繫結至取自呼叫 XML Web service 的結果，您可以使用 <xref:System.Windows.Forms.BindingSource> 元件。 此程序是類似於繫結 <xref:System.Windows.Forms.BindingSource> 元件到一種類型上。 您必須建立用戶端 Proxy，其中包含方法和 Web 服務所公開的類型。 您可以由 Web 服務 (.asmx) 本身或它的 Web 服務描述語言 (WSDL) 檔案來產生用戶端 Proxy 。 此外，用戶端 Proxy 必須公開欄位，內容為被 Web 服務做為公用屬性的複雜類型。 然後再繫結 <xref:System.Windows.Forms.BindingSource> 到其中一個在 Web 服務 Proxy 中被公開的類型。  

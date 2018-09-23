@@ -2,12 +2,12 @@
 title: HOW TO：服務版本控制
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: a745a35f72722003fc98ecf14d5f39027dc141f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5f79382eb121472ffa32d969cfaeee0e83d3375d
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494891"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46706563"
 ---
 # <a name="how-to-service-versioning"></a>HOW TO：服務版本控制
 本主題概要說明建立路由組態服務時所需的基本步驟，該組態可傳送訊息至相同服務的不同版本。 在此範例中，會將訊息傳送至兩個不同版本的計算器服務，`roundingCalc` (v1) 和 `regularCalc` (v2)。 兩項實作都支援相同的作業，不過較舊的服務 `roundingCalc` 會在傳回之前將所有的計算結果捨入至最接近的整數值。 用戶端應用程式必須能夠表示是否可使用較新的 `regularCalc` 服務。  
@@ -69,7 +69,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </client>  
     ```  
   
-2.  定義用於傳送訊息至目的地端點的篩選條件。  此範例中，XPath 篩選條件用於偵測"CalcVer"自訂標頭來判斷訊息應該路由傳送至哪一個版本的值。 XPath 篩選條件也用於偵測未包含"CalcVer"標頭的訊息。 下列範例定義必要的篩選條件和命名空間資料表。  
+2.  定義用於傳送訊息至目的地端點的篩選條件。  例如，XPath 篩選條件用來偵測"CalcVer"自訂標頭來判斷訊息應該路由傳送至哪一個版本的值。 XPath 篩選條件也可用來偵測並包含"CalcVer"標頭的訊息。 下列範例定義必要的篩選條件和命名空間資料表。  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -94,9 +94,9 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
     > [!NOTE]
-    >  S12 命名空間前置詞為預設會在命名空間資料表，且代表命名空間"http://www.w3.org/2003/05/soap-envelope"。  
+    > S12 命名空間前置詞定義預設會在命名空間資料表，且代表命名空間`http://www.w3.org/2003/05/soap-envelope`。
   
-3.  定義篩選資料表，其使用用戶端端點關聯每個篩選條件。 如果訊息包含"CalcVer"標頭的值為 1，則它會傳送至 regularCalc 服務。 如果標頭包含的值為 2，便會傳送標頭至 roundingCalc 服務。 如果沒有標頭，則訊息會傳送至 regularCalc。  
+3.  定義篩選資料表，其使用用戶端端點關聯每個篩選條件。 如果訊息包含"CalcVer"標頭值是 1，則它會傳送至 regularCalc 服務。 如果標頭包含的值為 2，便會傳送標頭至 roundingCalc 服務。 如果沒有標頭，則訊息會傳送至 regularCalc。  
   
      下列範例定義篩選資料表並加入先前定義的篩選條件。  
   
@@ -117,7 +117,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </filterTables>  
     ```  
   
-4.  若要針對包含在篩選資料表之篩選條件的傳入訊息加以評估，您必須使用路由行為產生篩選資料表與服務端點的關聯。  下列範例示範如何將"filterTable1"與服務端點：  
+4.  若要針對包含在篩選資料表之篩選條件的傳入訊息加以評估，您必須使用路由行為產生篩選資料表與服務端點的關聯。 下列範例示範如何將相關聯`filterTable1`與服務端點：  
   
     ```xml  
     <behaviors>  

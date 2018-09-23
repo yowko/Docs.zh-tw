@@ -7,11 +7,11 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
 ms.openlocfilehash: cfdd17f6f4ee6c4ddb3fa73ab3ec9c5ce46a162f
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
-ms.translationtype: HT
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46525171"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46702994"
 ---
 # <a name="function-expression-visual-basic"></a>函式運算式 (Visual Basic)
 宣告參數與定義的函式的 lambda 運算式的程式碼。  
