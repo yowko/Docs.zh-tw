@@ -4,12 +4,12 @@ description: 了解如何從原始程式碼建置 .NET Core 和 .NET Core CLI。
 author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: 2623c5d21121b71960d174301c35bdd0d7f8558a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: fa9c193ea4088f04745bdadc6040552e18c0858a
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45618515"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577499"
 ---
 # <a name="build-net-core-from-source"></a>從原始檔建置 .NET Core
 
@@ -93,7 +93,7 @@ ms.locfileid: "45618515"
   * Xcode
   * Openssl
 
-若要建置，請從根目錄執行 `build.cmd` (在 Windows 上) 或 `build.sh` (在 Linux 和 macOS 上)。 如果您不想要執行測試，請執行 `build.cmd /t:Compile` 或 `./build.sh /t:Compile`。 若要在 macOS Sierra 中建置 CLI，您必須執行 `export DOTNET_RUNTIME_ID=osx.10.11-x64` 來設定 DOTNET_RUNTIME_ID 環境變數。
+若要建置，請從根目錄執行 `build.cmd` (在 Windows 上) 或 `build.sh` (在 Linux 和 macOS 上)。 如果您不想要執行測試，請執行 `build.cmd -t:Compile` 或 `./build.sh -t:Compile`。 若要在 macOS Sierra 中建置 CLI，您必須執行 `export DOTNET_RUNTIME_ID=osx.10.11-x64` 來設定 DOTNET_RUNTIME_ID 環境變數。
 
 ### <a name="using-your-build"></a>使用您的組建
 
