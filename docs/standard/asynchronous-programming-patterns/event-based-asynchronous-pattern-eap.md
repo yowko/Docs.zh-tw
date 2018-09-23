@@ -10,11 +10,11 @@ ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: be4935d74affa227386aa6c63dad13e7e2f7d3dd
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46532619"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46703696"
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a>事件架構非同步模式 (EAP)
 
