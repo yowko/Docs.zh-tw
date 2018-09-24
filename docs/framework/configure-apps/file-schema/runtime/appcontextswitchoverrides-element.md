@@ -1,7 +1,7 @@
 ---
 title: '&lt;Appcontextswitchoverrides>&gt;項目'
 ms.custom: updateeachrelease
-ms.date: 04/19/2018
+ms.date: 09/19/2018
 helpviewer_keywords:
 - AppContextSwitchOverrides
 - compatibility switches
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d16ce7f2744869c812b9988e91edd153d9cb4fd2
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: c06b63c492d31d1391b53a36ced5b5c7277f5ad6
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "32747521"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47027362"
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;Appcontextswitchoverrides>&gt;項目
 定義一或多個由 <xref:System.AppContext> 類別所使用的參數，以提供新功能的退出機制。  
@@ -125,7 +125,21 @@ ms.locfileid: "32747521"
   
  程式庫開發人員也可以定義自訂的參數，可讓呼叫者選擇不變更其程式庫的更新版本中引進的功能。 如需詳細資訊，請參閱 <xref:System.AppContext> 類別。  
   
-## <a name="example"></a>範例  
+## <a name="switches-in-aspnet-applications"></a>在 ASP.NET 應用程式中的參數
+
+您可以設定 ASP.NET 應用程式使用的相容性設定，加上[\<新增 >](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md)項目[ \<appSettings >](~/docs/framework/configure-apps/file-schema/appsettings/index.md) web.config 檔案區段。 
+
+下列範例會使用`<add>`要加入至兩個設定項目`<appSettings>`web.config 檔案區段：
+
+```xml
+<appSettings>
+  <add key="AppContext.SetSwitch:Switch.System.Globalization.NoAsyncCurrentCulture" value="true" />
+  <add key="AppContext.SetSwitch:Switch.System.Uri.DontEnableStrictRFC3986ReservedCharacterSets" value="true" />
+</appSettings>
+```
+
+## <a name="example"></a>範例
+
  下列範例會使用`AppContextSwitchOverrides`項目來定義單一應用程式相容性參數， `Switch.System.Globalization.NoAsyncCurrentCulture`，這樣可防止文化特性中的非同步方法呼叫的執行緒之間流動。  
   
 ```xml  
