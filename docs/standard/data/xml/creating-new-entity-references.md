@@ -6,11 +6,11 @@ ms.assetid: a42f81b3-0403-4e34-b346-7d2129804e54
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 67fdbcdbff64bcd91c80fbeaec0c41982b68d98f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45646138"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46695377"
 ---
 # <a name="creating-new-entity-references"></a>建立新實體參考
 **CreateEntityReference** 方法建立新 **XmlEntityReference** 節點。 XML 文件物件模型 (DOM) 會查看所要參考的實體名稱是否已進行宣告。 如果是，**XmlEntityReference** 節點的子節點會從實體宣告節點複製。 如果沒有符合的實體宣告，會將空白文字節點當成實體參考節點的唯一子代附加上去。 因為 **XmlEntityReference** 節點的子節點是其他節點的複本，因此這些子節點是唯讀的而且無法修改。  

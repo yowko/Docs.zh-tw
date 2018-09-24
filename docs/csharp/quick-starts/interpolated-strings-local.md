@@ -6,11 +6,11 @@ ms.author: ronpet
 ms.date: 04/14/2018
 ms.custom: mvc
 ms.openlocfilehash: da111790ebbc299df16297650347045b9395a90f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45617259"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46580690"
 ---
 # <a name="string-interpolation"></a>字串插補
 

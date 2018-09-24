@@ -16,11 +16,11 @@ ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e6fe667ca908b2a4ba16e34e8e74dd39ca01f153
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45649051"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46507680"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>規則運算式範例：掃描 HREF
 下列範例將搜尋輸入字串，並顯示所有 href="..." 值和它們在字串中的位置。  

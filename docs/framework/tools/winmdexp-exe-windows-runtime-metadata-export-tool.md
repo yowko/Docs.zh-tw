@@ -8,11 +8,11 @@ ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8a228513bd29e35e8793124846de16f1c8bf4c10
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45625031"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46697941"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows 執行階段中繼資料匯出工具)
 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 中繼資料匯出工具 (Winmdexp.exe) 會將 .NET Framework 模組轉換為包含 [!INCLUDE[wrt](../../../includes/wrt-md.md)]中繼資料的檔案。 雖然 .NET Framework 組件和 [!INCLUDE[wrt](../../../includes/wrt-md.md)]中繼資料檔案使用相同的實體格式，但是中繼資料資料表的內容有些差異，也就是說，.NET Framework 組件不會自動做為 [!INCLUDE[wrt](../../../includes/wrt-md.md)]元件使用。 將 .NET Framework 模組轉換為 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 元件的程序稱為「匯出」。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 和 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 中，產生的 Windows 中繼資料 (.winmd) 檔案同時包含中繼資料和實作。  

@@ -3,11 +3,11 @@ title: 轉換資料型別 (C#)
 ms.date: 07/20/2015
 ms.assetid: 46e5682f-77a1-4302-8f93-a2b53c408808
 ms.openlocfilehash: 54ef612ad4e92058d9af4d96b7b3cde9732b2f9c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45648053"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46580573"
 ---
 # <a name="converting-data-types-c"></a>轉換資料型別 (C#)
 轉換方法會變更輸入物件的類型。  

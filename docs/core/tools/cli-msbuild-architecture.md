@@ -3,12 +3,12 @@ title: .NET Core 命令列工具架構
 description: 深入了解 .NET Core 工具層級，以及最新版本中已變更的內容。
 author: blackdwarf
 ms.date: 03/06/2017
-ms.openlocfilehash: 1d96a0b1e19bf84af0ab645ebd104afc899ae656
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 85987129421e8ee22f7cf7fe1d44e0768d95a214
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245125"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46696325"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>.NET Core 工具中變更的高階概觀
 
@@ -63,7 +63,7 @@ ms.locfileid: "39245125"
     
 此命令會使用「發行」組態，將應用程式發佈至 `pub` 資料夾中。 就內部而言，此命令會轉譯成下列 MSBuild 引動過程︰ 
 
-   `dotnet msbuild /t:Publish /p:OutputPath=pub /p:Configuration=Release`
+   `dotnet msbuild -t:Publish -p:OutputPath=pub -p:Configuration=Release`
 
 此規則值得注意的例外狀況為 `new` 和 `run` 命令，因為它們尚未實作為 MSBuild 目標。
 

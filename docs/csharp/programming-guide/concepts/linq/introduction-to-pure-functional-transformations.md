@@ -3,11 +3,11 @@ title: 純函數式轉換簡介 (C#)
 ms.date: 07/20/2015
 ms.assetid: 8495c9d9-2d02-4aa0-8a10-9e8794b985fe
 ms.openlocfilehash: f04189c5ae6fc8f6c827f983357ab0126b2c086d
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45675622"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46697811"
 ---
 # <a name="introduction-to-pure-functional-transformations-c"></a>純函數式轉換簡介 (C#)
 本節說明功能性轉換，包括基礎的概念與支援的語言建構。 其中包含程式設計的物件導向與功能性轉換方法，包括如何轉換到後者的建議。 雖然在許多程式設計案例中都可以使用功能性轉換，但是此處使用 XML 轉換做為具體範例。  

@@ -11,11 +11,11 @@ ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 40b98e01d6c34fb01a1f508f2ea52309f2f7938b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45668754"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45989517"
 ---
 # <a name="how-to-handle-exceptions-in-a-plinq-query"></a>如何：處理 PLINQ 查詢中的例外狀況
 此主題中的第一個範例顯示如何處理當執行 PLINQ 查詢時可從它擲回的 <xref:System.AggregateException?displayProperty=nameWithType>。 第二個範例顯示如何將 try-catch 區塊放在委派內，且盡可能地接近將擲回例外狀況的位置。 如此一來，您可以在發生例外狀況時立即攔截它們，並可能繼續執行查詢。 當系統允許例外狀況反昇至聯結的執行緒時，查詢可能就可以在引發例外狀況之後，繼續處理某些項目。  

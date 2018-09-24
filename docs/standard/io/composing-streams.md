@@ -16,11 +16,11 @@ ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5e52b827f337892c33ec61b9affa1cc646a759c5
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45676820"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577018"
 ---
 # <a name="composing-streams"></a>撰寫資料流
 備份存放區是一種儲存媒體，例如磁碟或記憶體。 每個不同的備份存放區都會實作自己的資料流，作為 <xref:System.IO.Stream> 類別的實作。 每個資料流類型都會在其指定的備份存放區中讀取和寫入位元組。 連線到備份存放區的資料流稱為基底資料流。 基底資料流的建構函式具有將資料流連線至備份存放區所需的參數。 例如，<xref:System.IO.FileStream> 的建構函式會指定路徑參數，此參數可指定處理程序共用檔案的方式等等。  

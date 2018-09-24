@@ -16,11 +16,11 @@ ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9a22f462bc425a9c9e8f1be700474e7326193674
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45615608"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46001060"
 ---
 # <a name="custom-timespan-format-strings"></a>自訂 TimeSpan 格式字串
 

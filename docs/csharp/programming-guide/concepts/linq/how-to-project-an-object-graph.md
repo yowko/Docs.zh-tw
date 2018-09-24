@@ -3,11 +3,11 @@ title: 如何：投影物件圖形 (C#)
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
 ms.openlocfilehash: f8e15e80a6914a8dcb848d91a13958f7e4175342
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45609485"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46706035"
 ---
 # <a name="how-to-project-an-object-graph-c"></a>如何：投影物件圖形 (C#)
 本主題說明如何從 XML 規劃或填入物件圖形。  

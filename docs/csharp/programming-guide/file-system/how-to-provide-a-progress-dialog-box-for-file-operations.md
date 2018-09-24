@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - progress dialog [C#]
 ms.assetid: 01b71fe7-8178-4dc8-aeb1-12053be7b51c
-ms.openlocfilehash: f80bbc94579c58210769800ad8bf74bc60878af5
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: e93ce06a01046dfaf4465470ba7fdc687effa58d
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260158"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46710799"
 ---
 # <a name="how-to-provide-a-progress-dialog-box-for-file-operations-c-programming-guide"></a>如何：提供檔案作業的進度對話方塊 (C# 程式設計手冊)
 如果您在 <xref:Microsoft.VisualBasic?displayProperty=nameWithType> 命名空間中使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%28System.String%2CSystem.String%2CMicrosoft.VisualBasic.FileIO.UIOption%29> 方法，則可以提供標準對話方塊，以在 Windows 中顯示檔案作業進度。  
@@ -20,9 +20,9 @@ ms.locfileid: "44260158"
   
 1.  在功能表列上，選擇 **[專案]**、**[加入參考]**。  
   
-     **[參考管理員]** 對話方塊隨即顯示。  
+     [參考管理員] 對話方塊隨即顯示。  
   
-2.  在 **[組件]** 區域中，選擇 **[架構]** (如果尚未選擇)。  
+2.  在 [組件] 區域中，選擇 [Framework] (如果尚未選擇)。  
   
 3.  在名稱清單中，選取 **[Microsoft.VisualBasic]** 核取方塊，然後選擇 **[確定]** 按鈕以關閉對話方塊。  
   

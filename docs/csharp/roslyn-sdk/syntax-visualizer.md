@@ -2,13 +2,13 @@
 title: 在 Visual Studio 中使用 Roslyn 語法視覺化檢視瀏覽程式碼
 description: 語法視覺化檢視提供了視覺化工具來瀏覽 .NET 編譯器平台 SDK 為程式碼產生的模型。
 ms.date: 03/07/2018
-ms.custom: mvc
-ms.openlocfilehash: 3029c868ad9b0384cf11e57a00b123acd1177806
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.custom: mvc, vs-dotnet
+ms.openlocfilehash: 97a058eed8c0babebd3a41ec91875bef83ac3527
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43456460"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45750202"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>在 Visual Studio 中使用 Roslyn 語法視覺化檢視瀏覽程式碼
 

@@ -4,12 +4,12 @@ description: 了解如何擴充命令列介面 (CLI) 工具。
 author: blackdwarf
 ms.author: mairaw
 ms.date: 04/12/2017
-ms.openlocfilehash: a9cfebbeddbedc329432c805c5956b382a726a77
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 9f54479704f547ada567619a82b24a47a0b104c4
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45592058"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46326578"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>.NET Core CLI 工具擴充性模型
 
@@ -133,7 +133,7 @@ NuGet 可以[封裝自訂 MSBuild 目標及屬性檔案](/nuget/create-packages/
 
 取用自訂目標的方式是提供 `<PackageReference>`，它必須指向套件以及其在要擴充之專案中的版本。 與其他工具不同，自訂目標套件會被包含到取用自訂目標之專案的相依性閉包 (Closure) 中。
 
-使用自訂目標取決於您的設定方式。 因為它是 MSBuild 目標，所以可以依存在給定的目標上、在另一個目標之後執行，也可以使用 `dotnet msbuild /t:<target-name>` 命令手動叫用。
+使用自訂目標取決於您的設定方式。 因為它是 MSBuild 目標，所以可以依存在給定的目標上、在另一個目標之後執行，也可以使用 `dotnet msbuild -t:<target-name>` 命令手動叫用。
 
 不過，如果您要為使用者提供更好的使用者體驗，則可以結合個別專案工具和自訂目標。 在此案例中，個別專案工具基本上會只接受任何需要的參數，且會將參數轉譯為將執行目標的必要 [`dotnet msbuild`](dotnet-msbuild.md) 引動過程。 您可以在 [`dotnet-packer`](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer) 專案中的 [MVP Summit 2016 Hackathon 範例](https://github.com/dotnet/MVPSummitHackathon2016)儲存機制，查看此類協同作用範例。
 

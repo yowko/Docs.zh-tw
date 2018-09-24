@@ -4,12 +4,12 @@ description: dotnet msbuild 命令提供對 MSBuild 命令列的存取。
 author: mairaw
 ms.author: mairaw
 ms.date: 05/25/2018
-ms.openlocfilehash: 58aac2a5314758b8711c0b014154022168fb671c
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 76165590478b0e76d19d546c87e012da4716b6db
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696841"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46578892"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
@@ -37,12 +37,12 @@ ms.locfileid: "34696841"
 
 使用發行組態來建置專案和其相依性︰
 
-`dotnet msbuild /p:Configuration=Release`
+`dotnet msbuild -p:Configuration=Release`
 
 執行發行目標並針對 `osx.10.11-x64` RID 發行：
 
-`dotnet msbuild /t:Publish /p:RuntimeIdentifiers=osx.10.11-x64`
+`dotnet msbuild -t:Publish -p:RuntimeIdentifiers=osx.10.11-x64`
 
 查看整個專案和 SDK 包含的所有目標：
 
-`dotnet msbuild /pp`
+`dotnet msbuild -pp`
