@@ -8,37 +8,37 @@ helpviewer_keywords:
 - '|= operator (OR assignment) [C#]'
 ms.assetid: 8315b8cf-dd15-402f-92f0-c7db931696ca
 ms.openlocfilehash: fe56005ce94656b5e8a075cddfb91dc0da096cf7
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45653365"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46562079"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="bd550-102">|= 運算子 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="bd550-102">|= Operator (C# Reference)</span></span>
-<span data-ttu-id="bd550-103">OR 指派運算子。</span><span class="sxs-lookup"><span data-stu-id="bd550-103">The OR assignment operator.</span></span>  
+# <a name="-operator-c-reference"></a><span data-ttu-id="fb737-102">|= 運算子 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="fb737-102">|= Operator (C# Reference)</span></span>
+<span data-ttu-id="fb737-103">OR 指派運算子。</span><span class="sxs-lookup"><span data-stu-id="fb737-103">The OR assignment operator.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="bd550-104">備註</span><span class="sxs-lookup"><span data-stu-id="bd550-104">Remarks</span></span>  
- <span data-ttu-id="bd550-105">使用 `|=` 指派運算子的運算式，例如</span><span class="sxs-lookup"><span data-stu-id="bd550-105">An expression using the `|=` assignment operator, such as</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fb737-104">備註</span><span class="sxs-lookup"><span data-stu-id="fb737-104">Remarks</span></span>  
+ <span data-ttu-id="fb737-105">使用 `|=` 指派運算子的運算式，例如</span><span class="sxs-lookup"><span data-stu-id="fb737-105">An expression using the `|=` assignment operator, such as</span></span>  
   
 ```csharp  
 x |= y  
 ```  
   
- <span data-ttu-id="bd550-106">相當於</span><span class="sxs-lookup"><span data-stu-id="bd550-106">is equivalent to</span></span>  
+ <span data-ttu-id="fb737-106">相當於</span><span class="sxs-lookup"><span data-stu-id="fb737-106">is equivalent to</span></span>  
   
 ```csharp  
 x = x | y  
 ```  
   
- <span data-ttu-id="bd550-107">但只會評估 `x` 一次。</span><span class="sxs-lookup"><span data-stu-id="bd550-107">except that `x` is only evaluated once.</span></span> <span data-ttu-id="bd550-108">[&#124; 運算子](../../../csharp/language-reference/operators/or-operator.md) 在整數運算元上執行位元邏輯 OR 運算，在 bool 運算元上執行邏輯 OR。</span><span class="sxs-lookup"><span data-stu-id="bd550-108">The [&#124; operator](../../../csharp/language-reference/operators/or-operator.md) performs a bitwise logical OR operation on integral operands and logical OR on bool operands.</span></span>  
+ <span data-ttu-id="fb737-107">但只會評估 `x` 一次。</span><span class="sxs-lookup"><span data-stu-id="fb737-107">except that `x` is only evaluated once.</span></span> <span data-ttu-id="fb737-108">[&#124; 運算子](../../../csharp/language-reference/operators/or-operator.md) 在整數運算元上執行位元邏輯 OR 運算，在 bool 運算元上執行邏輯 OR。</span><span class="sxs-lookup"><span data-stu-id="fb737-108">The [&#124; operator](../../../csharp/language-reference/operators/or-operator.md) performs a bitwise logical OR operation on integral operands and logical OR on bool operands.</span></span>  
   
- <span data-ttu-id="bd550-109">無法直接多載 `|=` 運算子，但使用者定義型別可以多載 [&#124; 運算子](../../../csharp/language-reference/operators/or-operator.md) (請參閱 [operator](../../../csharp/language-reference/keywords/operator.md))。</span><span class="sxs-lookup"><span data-stu-id="bd550-109">The `|=` operator cannot be overloaded directly, but user-defined types can overload the [&#124; operator](../../../csharp/language-reference/operators/or-operator.md) (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span>  
+ <span data-ttu-id="fb737-109">無法直接多載 `|=` 運算子，但使用者定義型別可以多載 [&#124; 運算子](../../../csharp/language-reference/operators/or-operator.md) (請參閱 [operator](../../../csharp/language-reference/keywords/operator.md))。</span><span class="sxs-lookup"><span data-stu-id="fb737-109">The `|=` operator cannot be overloaded directly, but user-defined types can overload the [&#124; operator](../../../csharp/language-reference/operators/or-operator.md) (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bd550-110">範例</span><span class="sxs-lookup"><span data-stu-id="bd550-110">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="fb737-110">範例</span><span class="sxs-lookup"><span data-stu-id="fb737-110">Example</span></span>  
  [!code-csharp[csRefOperators#10](../../../csharp/language-reference/operators/codesnippet/CSharp/or-assignment-operator_1.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="bd550-111">請參閱</span><span class="sxs-lookup"><span data-stu-id="bd550-111">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fb737-111">請參閱</span><span class="sxs-lookup"><span data-stu-id="fb737-111">See Also</span></span>
 
-- [<span data-ttu-id="bd550-112">C# 參考</span><span class="sxs-lookup"><span data-stu-id="bd550-112">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="bd550-113">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="bd550-113">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="bd550-114">C# 運算子</span><span class="sxs-lookup"><span data-stu-id="bd550-114">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+- [<span data-ttu-id="fb737-112">C# 參考</span><span class="sxs-lookup"><span data-stu-id="fb737-112">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="fb737-113">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="fb737-113">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="fb737-114">C# 運算子</span><span class="sxs-lookup"><span data-stu-id="fb737-114">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)

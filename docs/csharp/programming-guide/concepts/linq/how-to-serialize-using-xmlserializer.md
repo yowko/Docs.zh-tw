@@ -3,17 +3,17 @@ title: 如何：使用 XmlSerializer 進行序列化 (C#)
 ms.date: 07/20/2015
 ms.assetid: 2e0a0bbc-c548-4fe2-8741-be5a9ccd0cbb
 ms.openlocfilehash: 32a23792947639c2c0eb1dc14b640c3786bdfd4c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45625798"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45990397"
 ---
-# <a name="how-to-serialize-using-xmlserializer-c"></a><span data-ttu-id="a5d3a-102">如何：使用 XmlSerializer 進行序列化 (C#)</span><span class="sxs-lookup"><span data-stu-id="a5d3a-102">How to: Serialize Using XmlSerializer (C#)</span></span>
-<span data-ttu-id="a5d3a-103">本主題顯示的範例會使用 <xref:System.Xml.Serialization.XmlSerializer> 序列化與還原序列化。</span><span class="sxs-lookup"><span data-stu-id="a5d3a-103">This topic shows an example that serializes and deserializes using <xref:System.Xml.Serialization.XmlSerializer>.</span></span>  
+# <a name="how-to-serialize-using-xmlserializer-c"></a><span data-ttu-id="3df6c-102">如何：使用 XmlSerializer 進行序列化 (C#)</span><span class="sxs-lookup"><span data-stu-id="3df6c-102">How to: Serialize Using XmlSerializer (C#)</span></span>
+<span data-ttu-id="3df6c-103">本主題顯示的範例會使用 <xref:System.Xml.Serialization.XmlSerializer> 序列化與還原序列化。</span><span class="sxs-lookup"><span data-stu-id="3df6c-103">This topic shows an example that serializes and deserializes using <xref:System.Xml.Serialization.XmlSerializer>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a5d3a-104">範例</span><span class="sxs-lookup"><span data-stu-id="a5d3a-104">Example</span></span>  
- <span data-ttu-id="a5d3a-105">下列範例會建立多個包含 <xref:System.Xml.Linq.XElement> 物件的物件。</span><span class="sxs-lookup"><span data-stu-id="a5d3a-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="a5d3a-106">接著，它會將這些物件序列化為記憶體資料流，然後從記憶體資料流還原序列化。</span><span class="sxs-lookup"><span data-stu-id="a5d3a-106">It then serializes them to a memory stream, and then deserializes them from the memory stream.</span></span>  
+## <a name="example"></a><span data-ttu-id="3df6c-104">範例</span><span class="sxs-lookup"><span data-stu-id="3df6c-104">Example</span></span>  
+ <span data-ttu-id="3df6c-105">下列範例會建立多個包含 <xref:System.Xml.Linq.XElement> 物件的物件。</span><span class="sxs-lookup"><span data-stu-id="3df6c-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="3df6c-106">接著，它會將這些物件序列化為記憶體資料流，然後從記憶體資料流還原序列化。</span><span class="sxs-lookup"><span data-stu-id="3df6c-106">It then serializes them to a memory stream, and then deserializes them from the memory stream.</span></span>  
   
 ```csharp  
 using System;  
@@ -78,7 +78,7 @@ class XLinqTest
 }  
 ```  
   
- <span data-ttu-id="a5d3a-107">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="a5d3a-107">This example produces the following output:</span></span>  
+ <span data-ttu-id="3df6c-107">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="3df6c-107">This example produces the following output:</span></span>  
   
 ```  
 Testing for type: XElementNullContainer  
@@ -89,6 +89,6 @@ Testing for type: XElementContainer
   Deserialized type: XElementContainer  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a5d3a-108">請參閱</span><span class="sxs-lookup"><span data-stu-id="a5d3a-108">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3df6c-108">請參閱</span><span class="sxs-lookup"><span data-stu-id="3df6c-108">See Also</span></span>
 
-- [<span data-ttu-id="a5d3a-109">序列化包含 XElement 物件的物件圖形 (C#)</span><span class="sxs-lookup"><span data-stu-id="a5d3a-109">Serializing Object Graphs that Contain XElement Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+- [<span data-ttu-id="3df6c-109">序列化包含 XElement 物件的物件圖形 (C#)</span><span class="sxs-lookup"><span data-stu-id="3df6c-109">Serializing Object Graphs that Contain XElement Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
