@@ -3,13 +3,12 @@ title: WIF 組態結構描述慣例
 ms.date: 03/30/2017
 ms.assetid: f7864356-f72f-4cae-995c-18e0431f8a58
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 3109b75ccf9cefcad4e112cca02e932ea5489d24
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dc2e8f7070af3ef907e4987964bb5aa83f889186
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410399"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070353"
 ---
 # <a name="wif-configuration-schema-conventions"></a>WIF 組態結構描述慣例
 本主題討論 Windows Identity Foundation (WIF) 組態主題中所使用的慣例，並描述 [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) 和 [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) 區段中所使用的一些常見功能和屬性。  

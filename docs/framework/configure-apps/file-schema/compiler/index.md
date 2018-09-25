@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c020b139-8699-4f0d-9ac9-70d0c5b2a8c8
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: beb38c00c7055d8edfff6f574ec454902e3a9b14
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c64dd85103e818ae603435c1a3f80f76e672ac84
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753686"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47069557"
 ---
 # <a name="compiler-and-language-provider-settings-schema"></a>編譯器和語言提供者設定結構描述
 編譯器和語言提供者設定會指定可用語言提供者的編譯器組態項目。 每個編譯器組態項目會指定程式碼提供者的類型名稱、編譯器參數、支援的語言名稱和副檔名。  
@@ -34,7 +33,7 @@ ms.locfileid: "32753686"
   
  [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<system.codedom>](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|指定可用語言提供者的編譯器組態設定。|  
 |[\<compilers>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|編譯器組態項目的容器；內含零或多個 [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) 項目。|  

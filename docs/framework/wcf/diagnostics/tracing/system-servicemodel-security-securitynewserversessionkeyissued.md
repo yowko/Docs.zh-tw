@@ -3,12 +3,12 @@ title: System.ServiceModel.Security.SecurityNewServerSessionKeyIssued
 ms.date: 03/30/2017
 ms.assetid: 2fccc492-61ea-45a8-8f1b-be65dedc5e46
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 6470d09ec71589e2c3802c6927748d1233af9c5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8d69df947ca97c1dc1e6601cb27c8b777d701eef
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47072900"
 ---
 # <a name="systemservicemodelsecuritysecuritynewserversessionkeyissued"></a>System.ServiceModel.Security.SecurityNewServerSessionKeyIssued
 System.ServiceModel.Security.SecurityNewServerSessionKeyIssued  

@@ -2,12 +2,12 @@
 title: UriTemplate 與 UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-ms.openlocfilehash: 75ef447d8c79bded99bd29292a544c72627f113e
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: 66463248f66457aa61ceea22afd003f7b93717e1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46478586"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47090509"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate 與 UriTemplateTable
 Web 開發人員需要能夠描述其服務所回應的 URI 形式與配置。 Windows Communication Foundation (WCF) 加入兩個新的類別，可讓開發人員充分掌控其 Uri。 <xref:System.UriTemplate> 和<xref:System.UriTemplateTable>WCF 中形成的 URI 為基礎的發送引擎基礎。 這些類別也可用在其本身，可讓開發人員充分運用範本與 URI 對應機制不需實作 WCF 服務。  
@@ -192,7 +192,7 @@ foreach (string key in m1.BoundVariables.AllKeys)
 ```  
   
 > [!NOTE]
->  例如 URI http://localhost:8000///不符合上述的程式碼，不過所列的範本的 URI，例如 http://localhost:8000/沒有。  
+> 例如 URI`http://localhost:8000///`不符合上述的程式碼，不過所列的範本的 URI，例如`http://localhost:8000/`沒有。  
   
  下列程式碼示範以範例建立 URI 比對時，會如何處理預設變數。  
   

@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 73fe0fb13c191843516a2218c708851abc1851b0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a9c5c5529e349eca2ba089ed6fb71da4bd48430a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752698"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084445"
 ---
 # <a name="ltsourcesgt-element"></a>&lt;來源&gt;項目
-指定初始化追蹤訊息的追蹤來源。  
+指定起始追蹤訊息的追蹤來源。  
   
  \<configuration>  
 \<system.diagnostics >  
@@ -40,7 +39,7 @@ ms.locfileid: "32752698"
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -54,10 +53,10 @@ ms.locfileid: "32752698"
 |`system.diagnostics`|指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。|  
   
 ## <a name="remarks"></a>備註  
- 此項目可以用於電腦組態檔 (Machine.config) 和應用程式組態檔。  
+ 這個項目可以用於電腦組態檔 (Machine.config) 和應用程式組態檔。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用`<sources>`要加入追蹤來源項目的`mySource`和設定來源交換器層級具名`sourceSwitch`。 主控台追蹤接聽程式會加入，將追蹤資訊寫入主控台。  
+ 下列範例示範如何使用`<sources>`要加入追蹤來源項目`mySource`]，將來源交換器層級設定為 [ `sourceSwitch`。 主控台追蹤接聽程式會加入，將追蹤資訊寫入主控台。  
   
 ```xml  
 <configuration>  

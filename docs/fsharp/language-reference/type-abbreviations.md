@@ -3,11 +3,11 @@ title: 類型縮寫 (F#)
 description: '深入了解 F # 類型縮寫可以提供更有意義的名稱以使程式碼更容易讀取。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 259cd6c84e22fc7c98e08255d3e0ded5b87af352
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46710744"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47112923"
 ---
 # <a name="type-abbreviations"></a>類型縮寫
 

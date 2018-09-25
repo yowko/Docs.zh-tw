@@ -4,13 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 65098332-ce61-4542-ab8d-e7dc0257d31f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 32c7a9e07b48536584f7ca5588226fb4479bacb5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f0daa689ba09fa39ffe0f38d769112f0f095592a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742519"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070639"
 ---
 # <a name="ltcleargt-element-for-schemesettings-uri-settings"></a>&lt;清除&gt;schemeSettings （Uri 設定） 的項目
 清除所有現有的配置設定。  
@@ -32,7 +31,7 @@ ms.locfileid: "32742519"
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -42,25 +41,25 @@ ms.locfileid: "32742519"
 |[\<schemeSettings> 項目 (URI 設定)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|指定如何針對特定配置剖析 <xref:System.Uri>。|  
   
 ## <a name="remarks"></a>備註  
- 根據預設，<xref:System.Uri?displayProperty=nameWithType>類別取消逸出百分比編碼路徑分隔符號，再執行路徑壓縮。 實作此點，做為安全性機制，攻擊，如下所示：  
+ 根據預設，<xref:System.Uri?displayProperty=nameWithType>類別取消逸出百分比編碼路徑分隔符號，然後再執行路徑壓縮。 這被實作為安全性機制，抵禦攻擊，如下所示：  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- 如果這個 URI 傳遞到模組未處理的百分之編碼字元正確，它可能會導致伺服器正在執行下列命令：  
+ 如果這個 URI 會傳遞到模組不會處理百分比編碼字元正確，可能會造成伺服器正在執行下列命令：  
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- 基於這個理由，<xref:System.Uri?displayProperty=nameWithType>類別第一個取消逸出路徑分隔符號，然後再套用路徑壓縮。 傳遞至上方惡意 URL 的結果<xref:System.Uri?displayProperty=nameWithType>類別建構函式會導致下列 URI:  
+ 基於這個理由，<xref:System.Uri?displayProperty=nameWithType>類別第一個取消逸出路徑分隔符號，然後再套用路徑壓縮。 傳遞至以上惡意 URL 的結果<xref:System.Uri?displayProperty=nameWithType>類別建構函式結果，在下列 URI:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- 此預設行為修改為不取消逸出百分比編碼的路徑分隔符號使用的特定結構描述的 schemeSettings 組態選項。  
+ 此預設行為可以修改為不取消逸出百分比編碼的路徑分隔符號使用 schemeSettings 組態選項的特定結構描述中。  
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="example"></a>範例  
- 下列範例示範使用組態<xref:System.Uri>類別來清除所有配置設定，並將支援的未逸出的 http 配置的百分比編碼路徑分隔符號。  
+ 下列範例顯示所使用的組態<xref:System.Uri>清除所有配置設定，然後將 支援的未逸出的 http 配置的百分比編碼的路徑分隔符號的類別。  
   
 ```xml  
 <configuration>  

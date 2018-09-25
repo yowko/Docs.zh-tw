@@ -1,5 +1,5 @@
 ---
-title: '&lt;清除&gt;元素&lt;接聽程式&gt;如&lt;來源&gt;'
+title: '&lt;清除&gt;項目&lt;接聽程式&gt;如&lt;來源&gt;'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear
@@ -9,22 +9,21 @@ helpviewer_keywords:
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 8c6ef51dae36e94fa4a4fdc5ad8983380e78bde3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3674b5e8f54735010da901c76b77bd617218891e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746848"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47071749"
 ---
-# <a name="ltcleargt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;清除&gt;元素&lt;接聽程式&gt;如&lt;來源&gt;
+# <a name="ltcleargt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;清除&gt;項目&lt;接聽程式&gt;如&lt;來源&gt;
 清除追蹤來源的 `Listeners` 集合。  
   
  \<configuration>  
 \<system.diagnostics >  
 \<來源 >  
 \<來源 >  
-\<接聽項 >  
+\<接聽程式 >  
 \<清除 >  
   
 ## <a name="syntax"></a>語法  
@@ -39,7 +38,7 @@ ms.locfileid: "32746848"
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -50,16 +49,16 @@ ms.locfileid: "32746848"
 |`system.diagnostics`|指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。|  
 |`sources`|包含起始追蹤訊息的追蹤來源。|  
 |`source`|指定起始追蹤訊息的追蹤來源。|  
-|`listeners`|指定接聽程式以收集、 儲存和路由傳送訊息。|  
+|`listeners`|指定用於收集、 儲存及路由傳送訊息的接聽程式。|  
   
 ## <a name="remarks"></a>備註  
- `<clear>`項目會移除所有的接聽程式從`Listeners`集合的追蹤來源，包括<xref:System.Diagnostics.DefaultTraceListener>。 您可以使用`<clear>`之前使用的項目`<add>`確定沒有其他作用中的接聽程式集合中的項目。  
+ `<clear>`項目會移除所有的接聽程式，從`Listeners`集合的追蹤來源，包括<xref:System.Diagnostics.DefaultTraceListener>。 您可以使用`<clear>`項目之前使用`<add>`確有沒有其他作用中接聽程式集合中的項目。  
   
 ## <a name="configuration-file"></a>組態檔  
- 此項目可以用於電腦組態檔 (Machine.config) 和應用程式組態檔。  
+ 這個項目可以用於電腦組態檔 (Machine.config) 和應用程式組態檔。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用`<clear>`之前使用的項目`<add>`項目將接聽項`console`和`textListener`至`Listeners`追蹤來源的集合`TraceSourceApp`。  
+ 下列範例示範如何使用`<clear>`項目之前使用`<add>`加入接聽程式的項目`console`並`textListener`來`Listeners`追蹤來源的集合`TraceSourceApp`。  
   
 ```xml  
 <configuration>  

@@ -3,18 +3,17 @@ title: 延伸保護驗證之範例的讀我檔案
 ms.date: 03/30/2017
 ms.assetid: 80bf2e97-398d-4db5-9040-d96478a2ccab
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: d45271180b7f00ba78d106f2a93d5860375da5f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d298f1f6668078d327cf0fd78110c0cbb7b4474c
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495076"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47110309"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>延伸保護驗證之範例的讀我檔案
-延伸的保護是一項安全性方案來抵禦攔截 (MITM) 攻擊，攻擊者 （"--攔截 」） 攔截用戶端認證並使用它們來存取用戶端想要的伺服器上的安全資源保護。  
+延伸的保護是一項安全性方案以防止攔截 (MITM) 攻擊，攻擊者 （"--攔截 」） 會攔截用戶端的認證和使用它們來存取用戶端想要的伺服器上的安全資源。  
   
- 如需詳細資訊，請參閱[Extended Protection for Authentication 概觀](../../../../docs/framework/wcf/feature-details/extended-protection-for-authentication-overview.md)。  
+ 如需詳細資訊，請參閱 < [Extended Protection for Authentication 概觀](../../../../docs/framework/wcf/feature-details/extended-protection-for-authentication-overview.md)。  
   
 > [!NOTE]
 >  這個範例僅適用於由 IIS 裝載的情況。 Visual Studio 程式開發伺服器不支援 HTTPS，所以並不適用。  
@@ -29,7 +28,7 @@ ms.locfileid: "33495076"
   
 4.  這個範例需由用戶端與伺服器建立安全通道，所以必須有可從 Internet Information Services (IIS) 管理員進行安裝的伺服器憑證。  
   
-    1.  開啟 [IIS 管理員] -> [伺服器憑證] \(位於功能檢視索引標籤)。  
+    1.  開啟 [IIS 管理員] -> [伺服器憑證] (位於功能檢視索引標籤)。  
   
     2.  為了測試這個範例，您可以建立自我簽署憑證  (若不希望 Internet Explorer 出現憑證可能不安全的提示，可將此憑證安裝到 [受信任的根憑證授權單位] 存放區)。  
   
@@ -45,6 +44,6 @@ ms.locfileid: "33495076"
   
 10. 您可以從瀏覽器視窗存取 URL 來測試服務。 若想要從其他電腦存取此 URL，請確定防火牆已開放所有傳入的 HTTP 和 HTTPS 連線。  
   
-11. 開啟用戶端組態檔，並提供完整電腦名稱\<用戶端 >-\<端點 >-位址屬性，取代 << full_machine_name >>。  
+11. 開啟用戶端組態檔，並提供完整電腦名稱\<用戶端 >-\<端點 >-address 屬性，取代 << full_machine_name >>。  
   
 12. 執行該用戶端。 用戶端隨即建立安全通道，在延伸保護的庇護之下與服務通訊。

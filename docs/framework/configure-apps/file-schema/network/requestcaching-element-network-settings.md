@@ -1,5 +1,5 @@
 ---
-title: '&lt;requestCaching&gt;項目 （網路設定）'
+title: '&lt;Requestcaching>&gt;項目 （網路設定）'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#requestCaching
@@ -10,20 +10,19 @@ helpviewer_keywords:
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 9c0c8d80182931f9ac14e687a337b7be55a5a9a5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3e014c7a47a53a424bbaef51c9acb28e59b43078
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743429"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47083185"
 ---
-# <a name="ltrequestcachinggt-element-network-settings"></a>&lt;requestCaching&gt;項目 （網路設定）
+# <a name="ltrequestcachinggt-element-network-settings"></a>&lt;Requestcaching>&gt;項目 （網路設定）
 控制網路要求的快取機制。  
   
  \<configuration>  
 \<system.net>  
-\<requestCaching >  
+\<Requestcaching> >  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,29 +45,29 @@ ms.locfileid: "32743429"
 |屬性|描述|  
 |---------------|-----------------|  
 |`isPrivateCache`|指定是否快取之間提供隔離不同使用者的資訊。 預設值是 `true`。 這個值應該是`false`中介層應用程式。|  
-|`disableAllCaching`|指定，快取所有的 Web 回應已停用，而且不能以程式設計方式覆寫。|  
+|`disableAllCaching`|指定，快取已停用所有的 Web 回應，而且不能以程式設計方式覆寫。|  
 |`defaultPolicyLevel`|<xref:System.Net.Cache.RequestCacheLevel> 列舉中的其中一個值。 預設值是 `BypassCache`。|  
-|`unspecifiedMaximumAge`|指定預設的時間之後的內容標示為已過期。|  
+|`unspecifiedMaximumAge`|指定預設的時間之後，內容會標示為已過期。|  
   
-## <a name="policylevel-attribute"></a>policyLevel 屬性  
+## <a name="policylevel-attribute"></a>Securityclasses 屬性  
   
 |值|描述|  
 |-----------|-----------------|  
-|`Default`|如果資源是新的內容長度正確無誤，，到期、 修改和內容長度屬性會，傳回快取的資源。|  
+|`Default`|如果資源是新的、 內容長度正確無誤，且到期、 修改和內容長度屬性都存在，則會傳回快取的資源。|  
 |`BypassCache`|從伺服器傳回的資源。|  
-|`CacheOnly`|如果內容的長度且相符的項目大小，則傳回快取的資源。|  
-|`CacheIfAvailable`|如果已提供的內容長度，而相符的項目大小;，傳回的快取的資源否則，資源會從伺服器下載，並傳回給呼叫者。|  
-|`Revalidate`|如果快取資源的時間戳記為相同伺服器上資源的時間戳記會傳回快取的資源否則，資源下載自伺服器，並儲存在快取，並傳回給呼叫者。|  
+|`CacheOnly`|如果內容長度，且符合項目大小，則會傳回快取的資源。|  
+|`CacheIfAvailable`|如果內容長度提供，且符合項目大小; 會傳回快取的資源否則，資源從伺服器下載，並傳回給呼叫者。|  
+|`Revalidate`|如果快取的資源的時間戳記是伺服器上之資源的時間戳記相同，會傳回快取的資源否則資源下載自伺服器，並儲存在快取，並傳回給呼叫者。|  
 |`Reload`|從伺服器下載的資源、 將它儲存在快取，並傳回給呼叫端。|  
-|`NoCacheNoStore`|如果快取的資源存在，會將其刪除。 資源從伺服器下載，並傳回給呼叫者。|  
-|`Revalidate`|如果時間戳記是相同的時間戳記伺服器; 上的資源使用資源的快取的副本滿足要求否則，會在伺服器上，向呼叫者，從下載資源，以及儲存在快取中，|  
+|`NoCacheNoStore`|如果快取的資源存在，則會將它刪除。 資源從伺服器下載，並傳回給呼叫者。|  
+|`Revalidate`|如果時間戳記伺服器上之資源的時間戳記相同，使用資源的快取的複本滿足要求否則資源下載自伺服器，向呼叫端，並會儲存在快取中，|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[defaultHttpCachePolicy](../../../../../docs/framework/configure-apps/file-schema/network/defaulthttpcachepolicy-element-network-settings.md)|選擇性項目。<br /><br /> 說明 HTTP 快取是否作用中，並且描述預設的快取原則。|  
-|[\<defaultFtpCachePolicy > 項目 （網路設定）](../../../../../docs/framework/configure-apps/file-schema/network/defaultftpcachepolicy-element-network-settings.md)|選擇性項目。<br /><br /> 描述 FTP 快取是否作用中，並且描述預設的快取原則。|  
+|[defaultHttpCachePolicy](../../../../../docs/framework/configure-apps/file-schema/network/defaulthttpcachepolicy-element-network-settings.md)|選擇性項目。<br /><br /> 描述 HTTP 快取是否作用中，並且描述的預設快取原則。|  
+|[\<defaultFtpCachePolicy > 項目 （網路設定）](../../../../../docs/framework/configure-apps/file-schema/network/defaultftpcachepolicy-element-network-settings.md)|選擇性項目。<br /><br /> 描述 FTP 快取是否作用中，並且描述的預設快取原則。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -77,7 +76,7 @@ ms.locfileid: "32743429"
 |[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|包含會指定 .NET Framework 如何連接至網路的設定。|  
   
 ## <a name="example"></a>範例  
- 下列範例會示範如何停用所有快取。  
+ 下列範例示範如何停用所有快取。  
   
 ```xml  
 <configuration>  

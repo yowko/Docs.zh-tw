@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Option keyword [Visual Basic]
 ms.assetid: 6b2f41c4-2403-43b6-8a14-94a3775e5b47
 ms.openlocfilehash: f4996b0c03ee98fef31bc301dc957060afdfdac8
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46576570"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47074868"
 ---
 # <a name="option-ltkeywordgt-statement"></a>選項&lt;關鍵字&gt;陳述式
 引進指定套用至整個原始程式檔的編譯器選項的陳述式。  

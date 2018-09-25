@@ -11,21 +11,20 @@ helpviewer_keywords:
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 3b614546e8ed23cc1a5e169a33fb5878695037ae
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d7563d3a0ba545bfd8d1b80981fcce607d230873
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745990"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073179"
 ---
 # <a name="ltcodebasegt-element"></a>&lt;程式碼基底&gt;項目
 指定 common language runtime 可以找到組件的位置。  
   
  \<configuration>  
 \<執行階段 >  
-\<assemblyBinding >  
-\<y >  
+\<assemblyBinding>  
+\<dependentAssembly>  
 \<程式碼基底 >  
   
 ## <a name="syntax"></a>語法  
@@ -43,8 +42,8 @@ href="URL of assembly"/>
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`href`|必要屬性。<br /><br /> 指定執行階段可以找到指定的版本的組件的 URL。|  
-|`version`|必要屬性。<br /><br /> 指定程式碼基底套用至組件的版本。 組件版本號碼的格式是*major.minor.build.revision*。|  
+|`href`|必要屬性。<br /><br /> 指定執行階段可以在哪裡找到指定的版本的組件的 URL。|  
+|`version`|必要屬性。<br /><br /> 指定程式碼基底適用於組件的版本。 組件版本號碼的格式*major.minor.build.revision*。|  
   
 ## <a name="version-attribute"></a>版本屬性  
   
@@ -52,7 +51,7 @@ href="URL of assembly"/>
 |-----------|-----------------|  
 |每個部分的版本號碼的有效值為 0 到 65535 之間。|不適用。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -65,14 +64,14 @@ href="URL of assembly"/>
 |`System.web`|指定 ASP.NET 組態區段的根項目。|  
   
 ## <a name="remarks"></a>備註  
- 為了讓執行階段使用**\<程式碼基底 >** 設定在電腦組態檔或發行者原則檔中，檔案也必須重新導向組件版本。 應用程式組態檔可能不需要重新導向組件版本的程式碼基底設定。 決定之後要使用的組件版本，執行階段適用於決定版本的檔案中的程式碼基底設定。 如果指示沒有程式碼基底，執行階段會以一般方式探查組件。  
+ 若要使用執行階段**\<程式碼基底 >** 設定在電腦組態檔或發行者原則檔中，檔案也必須重新導向組件版本。 應用程式組態檔可以有程式碼基底設定，不需要重新導向組件版本。 決定要使用的組件版本之後，執行階段適用於決定版本的檔案中的程式碼基底設定。 如果沒有程式碼基底指示，執行階段會以一般方式探查組件。  
   
- 如果組件具有強式名稱，程式碼基底設定可以位於任何位置近端內部網路或網際網路。 如果組件私用組件，程式碼基底設定必須是相對於應用程式的目錄路徑。  
+ 如果組件具有強式名稱，可以任何地方的程式碼基底設定是近端內部網路或網際網路上。 如果組件私用組件，程式碼基底設定必須是相對於應用程式的目錄路徑。  
   
- 對於沒有強式名稱組件，版本會被忽略，則載入器會使用第一個出現的\<程式碼基底 > 內\<y >。 如果將繫結重新導向至另一個組件的應用程式組態檔中沒有項目，重新導向將會優先，即使組件版本不符合繫結要求。  
+ 針對沒有強式名稱的組件，則會忽略版本和載入器會使用的第一個出現\<程式碼基底 > 內\<dependentAssembly >。 如果應用程式組態檔，將繫結重新導向至另一個組件中沒有項目，重新導向將會優先，即使組件版本不符合繫結要求。  
   
 ## <a name="example"></a>範例  
- 下列範例會示範如何指定執行階段可以找到組件的位置。  
+ 下列範例示範如何指定執行階段可以在哪裡找到組件。  
   
 ```xml  
 <configuration>  

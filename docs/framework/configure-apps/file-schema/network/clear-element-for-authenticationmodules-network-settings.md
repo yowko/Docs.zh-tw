@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: dc522c45-4a80-4831-8955-f7b68a47edfd
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 94e0242ca685e8b0118a55ba44fb0569c13f10f3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ef12a475dde103023d3411fb68efb3bdb4f6d116
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751983"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47076689"
 ---
 # <a name="ltcleargt-element-for-authenticationmodules-network-settings"></a>&lt;清除&gt;authenticationModules （網路設定） 的項目
 清除所有的驗證模組，從應用程式。  
@@ -40,7 +39,7 @@ ms.locfileid: "32751983"
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -56,7 +55,7 @@ ms.locfileid: "32751983"
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="example"></a>範例  
- 下列範例會移除所有設定的驗證模組。  
+ 下列範例會移除所有已設定的驗證模組。  
   
 ```xml  
 <configuration>  

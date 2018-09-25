@@ -3,20 +3,19 @@ title: 訊息安全性繫結
 ms.date: 03/30/2017
 ms.assetid: a4570ce7-864e-461b-85d8-0f7bcc53c2c8
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 50e9b831430eefc202dd3128502a7f916b96aef6
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 22daa3edbda5be44ce67a6b9a93946505f3fcc12
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805037"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070860"
 ---
 # <a name="message-security-binding"></a>訊息安全性繫結
-本節包含示範在 WCF 中的 Windows 服務的訊息安全性繫結的範例。  
+本節包含示範如何在 WCF 中的 Windows 服務中的訊息安全性繫結的範例。  
   
 ## <a name="in-this-section"></a>本節內容  
  [訊息安全性匿名](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
- 這個範例會示範如何實作 Windows Communication Foundation (WCF) 應用程式使用訊息層級安全性用戶端驗證，但這需要伺服器的 X.509 憑證進行伺服器驗證。  
+ 這個範例會示範如何實作 Windows Communication Foundation (WCF) 應用程式所使用的訊息層級安全性沒有用戶端驗證，但需要伺服器的 X.509 憑證進行伺服器驗證。  
   
  [訊息安全性憑證](../../../../docs/framework/wcf/samples/message-security-certificate.md)  
  這個範例會示範如何實作應用程式，該應用程式會對用戶端使用搭配 X.509 v3 憑證驗證的 WS-Security，並要求使用伺服器之 X.509 v3 憑證進行驗證的伺服器。  

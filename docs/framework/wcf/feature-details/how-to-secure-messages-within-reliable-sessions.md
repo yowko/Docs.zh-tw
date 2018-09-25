@@ -3,13 +3,12 @@ title: HOW TO：保護可靠工作階段內的訊息
 ms.date: 03/30/2017
 ms.assetid: aee33e50-936f-4486-9ca8-c1520c19a62d
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 1592c9429e6cd425b86fa2b72bfebe977e18b048
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f3269dc96dee2d534a8dd6677abeb6afae8776bd
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505078"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47115079"
 ---
 # <a name="how-to-secure-messages-within-reliable-sessions"></a>HOW TO：保護可靠工作階段內的訊息
 

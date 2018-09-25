@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 1e9548c6d43824ea5017b73a132eb49444ed6c77
-ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
+ms.openlocfilehash: c1783776b62532a2bd28067ca9bdb6ae4c80c717
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37140186"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070769"
 ---
 # <a name="ltdefaultproxygt-element-network-settings"></a>&lt;defaultProxy&gt;項目 （網路設定）
 設定超文字傳輸協定 (HTTP) 的 Proxy 伺服器。  
@@ -53,7 +52,7 @@ ms.locfileid: "37140186"
 |-----------------|---------------------|  
 |[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|提供一組位址的規則運算式，說明不使用 Proxy。|  
 |[模組](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|將新的 Proxy 模組加入至應用程式。|  
-|[proxy](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|定義 Proxy 伺服器。|  
+|[Proxy](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|定義 Proxy 伺服器。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -64,13 +63,13 @@ ms.locfileid: "37140186"
 ## <a name="remarks"></a>備註  
  如果 defaultProxy 項目是空的，則會使用來自 Internet Explorer 的 Proxy 設定。 這個行為與 .NET Framework 1.1 版的不同。  
   
- 如果擲回例外狀況[模組](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)項目會指定非公用型別、 型別並非衍生自<xref:System.Net.IWebProxy>類別，這個物件的預設建構函式發生例外狀況發生，或發生例外狀況時擷取系統指定的預設 proxy。 例外狀況的 <xref:System.Exception.InnerException%2A> 屬性應該會有此錯誤的根本原因之詳細資訊。  
+ 如果將會擲回例外狀況[模組](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)項目會指定非公用型別、 型別並非衍生自<xref:System.Net.IWebProxy>類別，這個物件的預設建構函式的例外狀況發生，或發生例外狀況時正在擷取系統指定的預設 proxy。 例外狀況的 <xref:System.Exception.InnerException%2A> 屬性應該會有此錯誤的根本原因之詳細資訊。  
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用來自 Internet Explorer proxy 的預設值，指定 proxy 位址，並略過本機存取及 contoso.com 的 proxy。  
+ 下列範例會使用來自 Internet Explorer proxy 的預設值，指定 proxy 位址，並會略過本機存取及 contoso.com 的 proxy。  
   
 ```xml  
 <configuration>  

@@ -9,13 +9,12 @@ helpviewer_keywords:
 ms.assetid: 1f8b5ab3-c193-4d0f-9e67-a0076225a1a5
 author: Xansky
 ms.author: mhopkins
-manager: markl
-ms.openlocfilehash: 178d1d39e0301a4d2fefa17c3ffca77575c7b137
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: defcd0a4ecc52f40e526aaf65ee91f22e3c49002
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43746272"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47112792"
 ---
 # <a name="ui-automation-control-patterns"></a>UI 自動化控制項模式
 > [!NOTE]
@@ -23,7 +22,7 @@ ms.locfileid: "43746272"
   
  本節提供有關如何使用的詳細的資訊[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]控制項模式。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [實作 UI 自動化 Dock 控制項模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-dock-control-pattern.md)  
  [實作 UI 自動化 ExpandCollapse 控制項模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md)  
  [實作 UI 自動化 Grid 控制項模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md)  
