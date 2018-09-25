@@ -14,11 +14,11 @@ ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 263e6394a57ec3e7ef00eb79671d9b8ac47e724f
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46698541"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47071186"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>在 .NET 中處理和擲回例外狀況
 
