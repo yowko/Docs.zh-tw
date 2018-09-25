@@ -1,5 +1,5 @@
 ---
-title: '&lt;篩選&gt;元素&lt;新增&gt;如&lt;接聽程式&gt;如&lt;追蹤&gt;'
+title: '&lt;篩選條件&gt;項目&lt;新增&gt;如&lt;接聽程式&gt;如&lt;追蹤&gt;'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add/filter
@@ -10,21 +10,20 @@ helpviewer_keywords:
 ms.assetid: eb9c18f5-dfa8-47c5-b91b-e4b93e76e1cc
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 095212f73adb906d9d80db747c331c436c1cf846
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: be4f3dcce1a746b287e75e0e6d3ba6eaa1d9b57b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745774"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47156865"
 ---
-# <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-lttracegt"></a>&lt;篩選&gt;元素&lt;新增&gt;如&lt;接聽程式&gt;如&lt;追蹤&gt;
-將篩選加入至接聽程式在`Listeners`追蹤的集合。  
+# <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-lttracegt"></a>&lt;篩選條件&gt;項目&lt;新增&gt;如&lt;接聽程式&gt;如&lt;追蹤&gt;
+將篩選加入至中的接聽項`Listeners`追蹤的集合。  
   
  \<configuration>  
 \<system.diagnostics >  
 \<追蹤 >  
-\<接聽項 >  
+\<接聽程式 >  
 \<add>  
 \<篩選條件 >  
   
@@ -43,10 +42,10 @@ ms.locfileid: "32745774"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`type`|必要屬性。<br /><br /> 指定類型的篩選器，應該繼承自<xref:System.Diagnostics.TraceFilter>類別。 您可以使用的類型，對應於該類型的命名空間限定名稱<xref:System.Type.FullName%2A>屬性，或者您可以使用的完整限定的類型名稱，包括組件資訊，其對應至<xref:System.Type.AssemblyQualifiedName%2A>屬性。 如需完整限定的類型名稱的資訊，請參閱[指定限定的型別名稱](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。|  
+|`type`|必要屬性。<br /><br /> 指定的篩選器，應該繼承自類型<xref:System.Diagnostics.TraceFilter>類別。 您可以使用的命名空間限定名稱的型別，其對應至型別的<xref:System.Type.FullName%2A>屬性，或者您可以使用完整的類型名稱包括組件資訊，其對應至<xref:System.Type.AssemblyQualifiedName%2A>屬性。 如需完整的型別名稱的資訊，請參閱[指定完整的型別名稱](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。|  
 |`initializeData`|選擇性屬性。<br /><br /> 指定的篩選條件類別傳遞至建構函式的字串。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -56,16 +55,16 @@ ms.locfileid: "32745774"
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`system.diagnostics`|指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。|  
 |`trace`|包含用於收集、儲存及路由傳送追蹤訊息的接聽項。|  
-|`listeners`|包含收集、 儲存和路由傳送訊息的接聽程式。 接聽程式將追蹤輸出導向至適當的目標。|  
+|`listeners`|包含用於收集、 儲存及路由傳送訊息的接聽項。 接聽程式將追蹤輸出導向至適當的目標。|  
 |`add`|將接聽項新增至 `Listeners` 集合。|  
   
 ## <a name="remarks"></a>備註  
- `<filter>`元素必須包含在`<add>`中定義的追蹤接聽項，指定接聽程式類型的項目，不只接聽程式名稱[ \<sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)。 如果接聽程式已定義在[ \<sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)，必須定義該接聽項的篩選條件，該元素中。  
+ `<filter>`項目必須包含在`<add>`中的追蹤接聽項，指定接聽程式類型的項目，不只是接聽程式的名稱定義[ \<sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)。 如果接聽程式已定義在[ \<sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)，必須在該項目中定義該接聽項的篩選條件。  
   
- 此項目可以用於電腦組態檔 (Machine.config) 和應用程式組態檔。  
+ 這個項目可以用於電腦組態檔 (Machine.config) 和應用程式組態檔。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用`<filter>`將篩選加入至接聽程式的項目`console`中`Listeners`集合指定的篩選事件層級的追蹤`Error`。  
+ 下列範例示範如何使用`<filter>`項目加入至接聽程式的篩選器`console`中`Listeners`收集追蹤，並指定做為篩選事件層級`Error`。  
   
 ```xml  
 <configuration>  

@@ -8,13 +8,12 @@ helpviewer_keywords:
 ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
 author: Xansky
 ms.author: mhopkins
-manager: markl
-ms.openlocfilehash: 875a9f3a20b7bb5e66ecf3f6b5e3b3cf229e2bf9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 518f49e004b98b3b3898ecc86fcc289821a8408c
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745268"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47071668"
 ---
 # <a name="implementing-the-ui-automation-dock-control-pattern"></a>實作 UI 自動化 Dock 控制項模式
 > [!NOTE]
@@ -43,7 +42,7 @@ Visual Studio 的停駐範例，其中「類別檢視」視窗是 DockPosition.R
 ## <a name="required-members-for-idockprovider"></a>IDockProvider 的必要成員  
  以下是實作 IDockProvider 介面的必要屬性和方法。  
   
-|必要成員|成員類型|備註|  
+|必要成員|成員類型|注意|  
 |----------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|屬性|無|  
 |<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|方法|無|  

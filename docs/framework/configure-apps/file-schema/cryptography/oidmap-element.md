@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: db39d7de3566647b5171b71940c78a9a0ab6f5f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ec2ba884f0f60182dd59bb6a4491e223f43ce1a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350218"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073537"
 ---
 # <a name="ltoidmapgt-element"></a>&lt;oidMap&gt;項目
-包含類別到 ASN.1 物件識別碼 (OID) 對應。  
+包含類別的 ASN.1 物件識別碼 (OID) 對應。  
   
  \<configuration>  
 \<mscorlib >  
@@ -39,11 +38,11 @@ ms.locfileid: "33350218"
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<oidEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|對應 ASN.1 OID 為易記名稱。|  
+|[\<oidEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|將 ASN.1 OID 對應易記的名稱。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -54,7 +53,7 @@ ms.locfileid: "33350218"
 |`mscorlib`|包含`cryptographySettings`項目。|  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 **\<oidMap >** OID ripemd-160 雜湊演算法，該雜湊演算法的實作對應包含的項目。  
+ 下列範例示範如何使用 **\<oidMap >** 項目來包含該雜湊演算法的實作的 RIPEMD-160 雜湊演算法的 OID 的對應。  
   
 ```xml  
 <configuration>  

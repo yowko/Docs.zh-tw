@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: db209bac487ccbb98f7f0aeb272f51169e7a0148
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c5be6ef95693f274e5cb2002e5642d5e58a7661a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746351"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082064"
 ---
 # <a name="ltoidentrygt-element"></a>&lt;oidEntry&gt;項目
 將 ASN.1 物件識別碼 (OID) 對應至易記名稱。  
@@ -40,10 +39,10 @@ ms.locfileid: "32746351"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|**OID**|必要屬性。<br /><br /> 指定對應至您的類別所實作的演算法的 ASN.1 OID。|  
-|**name**|必要屬性。<br /><br /> 指定的值**名稱**屬性[ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md)標記。|  
+|**OID**|必要屬性。<br /><br /> 指定的 ASN.1 OID 對應至您的類別所實作的演算法。|  
+|**name**|必要屬性。<br /><br /> 指定的值**名稱**屬性中[ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md)標記。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -53,13 +52,13 @@ ms.locfileid: "32746351"
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`cryptographySettings`|包含密碼編譯設定。|  
 |`mscorlib`|包含`cryptographySettings`項目。|  
-|`oidMap`|包含類別到 ASN.1 物件識別碼 (OID) 對應。|  
+|`oidMap`|包含類別的 ASN.1 物件識別碼 (OID) 對應。|  
   
 ## <a name="remarks"></a>備註  
- ASN.1 物件識別項識別中某些加密格式的演算法。 將物件識別碼對應至您想要識別演算法的易記名稱。  
+ ASN.1 物件識別碼會識別在部分密碼編譯的格式中的演算法。 將物件識別碼對應至您想要識別演算法的易記名稱。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 **\<oidEntry >** 項目，將 ripemd-160 雜湊演算法的物件識別碼對應至該雜湊演算法的實作。  
+ 下列範例示範如何使用 **\<oidEntry >** 將 RIPEMD-160 雜湊演算法的物件識別項對應至該雜湊演算法的實作的項目。  
   
 ```xml  
 <configuration>  

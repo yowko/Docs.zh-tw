@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: ac1e1f7bc36d8d2b12b99de2794bb0ba31ddbd7a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7cb5e29f3d7fc1faffdba01a5322f1883fca8af0
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518643"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47069695"
 ---
 # <a name="ltrequiredruntimegt-element"></a>&lt;Requiredruntime>&gt;項目
 指定應用程式只支援 Common Language Runtime 1.0 版。 這個項目已被取代，無法再使用。 [ `supportedRuntime` ](supportedruntime-element.md)應該改為使用項目。

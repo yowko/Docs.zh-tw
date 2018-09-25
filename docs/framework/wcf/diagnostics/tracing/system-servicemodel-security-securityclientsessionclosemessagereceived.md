@@ -3,13 +3,12 @@ title: System.ServiceModel.Security.SecurityClientSessionCloseMessageReceived
 ms.date: 03/30/2017
 ms.assetid: 2be97eac-798a-48bc-bba8-a8753a28aeb7
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 119bb0df7aa600061f8e891e8d1c33039be3ae95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 98ebd4041f6995a8ff3bcff6bf48255ae4234f0d
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33481260"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47157008"
 ---
 # <a name="systemservicemodelsecuritysecurityclientsessionclosemessagereceived"></a>System.ServiceModel.Security.SecurityClientSessionCloseMessageReceived
 System.ServiceModel.Security.SecurityClientSessionCloseMessageReceived  

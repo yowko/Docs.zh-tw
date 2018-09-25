@@ -3,11 +3,11 @@ title: 在工作流程服務內部存取識別資訊
 ms.date: 03/30/2017
 ms.assetid: 0b832127-b35b-468e-a45f-321381170cbc
 ms.openlocfilehash: 7951782946f5b8ef989598d01229dcf193d97689
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46585503"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47108364"
 ---
 # <a name="accessing-identity-information-inside-a-workflow-service"></a>在工作流程服務內部存取識別資訊
 若要在工作流程服務內部存取識別資訊，您必須在自訂執行屬性中實作 <xref:System.ServiceModel.Activities.IReceiveMessageCallback> 介面。 在 <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> 方法中，您可以存取 <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> 來存取識別資訊。 本主題將逐步引導您實作這個執行屬性，以及將在執行階段呈現此屬性給 <xref:System.ServiceModel.Activities.Receive> 活動的自訂活動。 此自訂活動會與 <xref:System.Activities.Statements.Sequence> 活動實作相同的行為，不過在該活動內部放置 <xref:System.ServiceModel.Activities.Receive> 時，系統就會呼叫 <xref:System.ServiceModel.Activities.IReceiveMessageCallback> 而且會擷取識別資訊。  

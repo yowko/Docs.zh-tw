@@ -1,22 +1,21 @@
 ---
-title: '&lt;certificateReference&gt;'
+title: '&lt;CertificateReference&gt;'
 ms.date: 03/30/2017
 ms.assetid: 2ac8bc14-e9f1-48fb-b662-f5991558fbe4
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: e0f9a826a4c8d292346d9efee7970a82b88fb612
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e04dc90134aadfb8af7b0800c7144963d267f513
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756835"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075079"
 ---
-# <a name="ltcertificatereferencegt"></a>&lt;certificateReference&gt;
-指定用來尋找和驗證 x.509 憑證存放區中的設定。  
+# <a name="ltcertificatereferencegt"></a>&lt;CertificateReference&gt;
+指定用來尋找和驗證 X.509 憑證的憑證存放區中的設定。  
   
  \<system.identityModel.services >  
-\<federationConfiguration >  
-\<serviceCertificate >  
+\<Federationconfiguration> >  
+\<v >  
 \<certificateReference >  
   
 ## <a name="syntax"></a>語法  
@@ -45,19 +44,19 @@ ms.locfileid: "32756835"
 |屬性|描述|  
 |---------------|-----------------|  
 |storeName|X.509 憑證存放區的名稱。 預設值是"My"。 選擇性。|  
-|storeLocation|A<xref:System.Security.Cryptography.X509Certificates.StoreLocation>值，指定 X.509 憑證存放區的位置。 預設值是 「 本機電腦 」。 選擇性。|  
-|x509FindType|<xref:System.Security.Cryptography.X509Certificates.X509FindType>值，指定所要執行的搜尋類型。 預設值為"FindBySubjectDistinguishedName"。 選擇性。|  
+|storeLocation|A<xref:System.Security.Cryptography.X509Certificates.StoreLocation>值，指定 X.509 憑證存放區位置。 預設值為"LocalMachine"。 選擇性。|  
+|x509FindType|<xref:System.Security.Cryptography.X509Certificates.X509FindType>值，指定所要執行的搜尋的類型。 預設值為"FindBySubjectDistinguishedName 」。 選擇性。|  
 |findValue|要在 X.509 憑證存放區內搜尋的值。 選擇性。|  
-|isChainIncluded|指定是否應該使用憑證鏈結中執行驗證。 預設值為"true";使用憑證鏈結會執行驗證。 選擇性。|  
+|isChainIncluded|指定是否應該執行驗證所使用的憑證鏈結。 預設值為"true";使用憑證鏈結，會執行驗證。 選擇性。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|設定用來加密和解密權杖的憑證。|  
+|[\<v >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|設定用來加密和解密權杖的憑證。|  
   
 ## <a name="remarks"></a>備註  
- `<certificateReference>`項目會指定用來尋找和驗證 x.509 憑證存放區中的設定。 指定為子元素時`<serviceCertficate>`項目，它會指定用來加密和解密權杖的 X.509 憑證的位置和驗證設定。 `<certificateReference>`項目由<xref:System.ServiceModel.Configuration.CertificateReferenceElement>類別。
+ `<certificateReference>`項目會指定用來尋找和驗證 X.509 憑證的憑證存放區中的設定。 指定的子項目為時`<serviceCertficate>`項目，它會指定用來加密和解密權杖的 X.509 憑證的位置和驗證設定。 `<certificateReference>`項目由<xref:System.ServiceModel.Configuration.CertificateReferenceElement>類別。

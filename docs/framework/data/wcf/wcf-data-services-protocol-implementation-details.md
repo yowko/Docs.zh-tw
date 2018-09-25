@@ -3,11 +3,11 @@ title: WCF Data Services 通訊協定實作詳細資訊
 ms.date: 03/30/2017
 ms.assetid: 712d689b-fada-4cbb-bcdb-d65a3ef83b4c
 ms.openlocfilehash: 1d68e278fbac0137d1a5b2dca2daedba2294a7ee
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46711047"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088577"
 ---
 # <a name="wcf-data-services-protocol-implementation-details"></a>WCF Data Services 通訊協定實作詳細資訊
 ## <a name="odata-protocol-implementation-details"></a>OData 通訊協定實作詳細資訊  

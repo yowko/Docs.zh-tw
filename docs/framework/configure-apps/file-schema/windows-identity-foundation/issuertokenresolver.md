@@ -3,21 +3,20 @@ title: '&lt;issuerTokenResolver&gt;'
 ms.date: 03/30/2017
 ms.assetid: f74392f6-3f5b-4880-bd8a-3a9130d31e65
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 646833f277c3ef4675a835ca0af3daf647e01224
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: eefd18c206b7f013c3a423df424c795583c0dde8
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758577"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075241"
 ---
 # <a name="ltissuertokenresolvergt"></a>&lt;issuerTokenResolver&gt;
-註冊由權杖處理常式集合中的處理常式的簽發者權杖解析程式。 簽發者的語彙基元解析程式用來解析內送的語彙基元和訊息簽署權杖。  
+註冊由權杖處理常式集合中的處理常式的簽發者權杖解析程式。 簽發者權杖解析程式用來解析簽署的權杖上傳入的權杖和訊息。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
 \<securityTokenHandlers>  
-\<securityTokenHandlerConfiguration >  
+\<Securitytokenhandlerconfiguration> >  
 \<issuerTokenResolver >  
   
 ## <a name="syntax"></a>語法  
@@ -42,27 +41,27 @@ ms.locfileid: "32758577"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|類型|指定簽發者的語彙基元解析程式類型。 必須是<xref:System.IdentityModel.Tokens.IssuerTokenResolver>類別或衍生自型別<xref:System.IdentityModel.Tokens.IssuerTokenResolver>類別。 必要。|  
+|類型|指定簽發者權杖解析程式類型。 必須是<xref:System.IdentityModel.Tokens.IssuerTokenResolver>類別或衍生自類型<xref:System.IdentityModel.Tokens.IssuerTokenResolver>類別。 必要。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供組態集合的安全性權杖處理常式。|  
+|[\<Securitytokenhandlerconfiguration> >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供組態集合的安全性權杖處理常式。|  
   
 ## <a name="remarks"></a>備註  
- 簽發者的語彙基元解析程式用來解析內送的語彙基元和訊息簽署權杖。 它用來擷取用來檢查簽章的加密編譯內容。 您必須指定`type`屬性。 指定的型別可以是<xref:System.IdentityModel.Tokens.IssuerTokenResolver>或自訂型別衍生自<xref:System.IdentityModel.Tokens.IssuerTokenResolver>類別。  
+ 簽發者權杖解析程式用來解析簽署的權杖上傳入的權杖和訊息。 它用來擷取用來檢查簽章的加密編譯內容。 您必須指定`type`屬性。 指定的型別可以是<xref:System.IdentityModel.Tokens.IssuerTokenResolver>或自訂的型別衍生自<xref:System.IdentityModel.Tokens.IssuerTokenResolver>類別。  
   
- 某些權杖處理常式可讓您在組態中指定簽發者權杖解析程式設定。 在個別的語彙基元處理常式上的設定會覆寫安全性權杖處理常式集合上指定。  
+ 某些權杖處理常式可讓您在組態中指定簽發者權杖解析程式設定。 在個別的權杖處理常式上的設定會覆寫所指定的安全性權杖處理常式集合。  
   
 > [!NOTE]
->  指定`<issuerTokenResolver>`為的子元素的項目[ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)項目已被取代，但仍支援回溯相容性。 設定`<securityTokenHandlerConfiguration>`元素會覆寫上`<identityConfiguration>`項目。  
+>  指定`<issuerTokenResolver>`元素的子元素當做[ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)項目已被取代，但仍支援回溯相容性。 上的設定`<securityTokenHandlerConfiguration>`項目會覆寫上`<identityConfiguration>`項目。  
   
 ## <a name="example"></a>範例  
- 下列 XML 顯示設定簽發者權杖解析程式為基礎的自訂類別衍生自<xref:System.IdentityModel.Tokens.IssuerTokenResolver>。 語彙基元解析程式會維護初始化自自訂組態項目之對象金鑰組的字典 (`<AddAudienceKeyPair>`) 為類別定義。 類別會覆寫<xref:System.IdentityModel.Selectors.SecurityTokenResolver.LoadCustomConfiguration%2A>方法來處理這個項目。 覆寫會顯示在下列範例中。不過，它會呼叫的方法不會顯示為求簡單明瞭。 完整的範例，請參閱`CustomToken`範例。  
+ 下列 XML 顯示組態的簽發者權杖解析程式為基礎的自訂類別衍生自<xref:System.IdentityModel.Tokens.IssuerTokenResolver>。 權杖解析程式會維護對象索引鍵組的字典，初始化從自訂的組態項目 (`<AddAudienceKeyPair>`) 定義的類別。 類別會覆寫<xref:System.IdentityModel.Selectors.SecurityTokenResolver.LoadCustomConfiguration%2A>方法來處理這個項目。 覆寫會顯示在下列範例中，不過，它會呼叫的方法不會顯示為求簡單明瞭。 完整的範例，請參閱`CustomToken`範例。  
   
 ```xml  
 <issuerTokenResolver type="SimpleWebToken.CustomIssuerTokenResolver, SimpleWebToken">  

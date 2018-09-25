@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: d8fef7965e3248d5361d866a441783bf4968460e
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: fcf5b8f872e2f97497ff5387adb755da1832bf8c
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46478888"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47111312"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 全球化和當地語系化概觀
 當您限制只有一種語言可以使用您的產品時，就是將潛在客戶群限制為全世界 65 億人口的一小部分。 如果您想要全球對象都可以使用應用程式，則具成本效益的產品當地語系化是更多客戶可以使用的一種最佳且最經濟的方法。  
@@ -29,7 +29,7 @@ ms.locfileid: "46478888"
   
 -   請避免使用絕對位置和固定的大小來配置內容;相反地，使用相對或自動調整大小。
   
-    -   使用<xref:System.Windows.Window.SizeToContent%2A>，並將寬度和高度設定為`Auto`。  
+    -   使用<xref:System.Windows.Window.SizeToContent%2A>並將寬度和高度設定為`Auto`。  
   
     -   請避免使用<xref:System.Windows.Controls.Canvas>來配置[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]s。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "46478888"
   
 -   啟用<xref:System.Windows.Controls.TextBlock.TextWrapping%2A>上<xref:System.Windows.Controls.TextBlock>以避免裁剪。
   
--   設定**xml: lang**屬性。 這個屬性所描述的文化特性特定的項目和其子項目。 這個屬性的值變更幾項功能的行為[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 例如，它會變更斷字、拼字檢查、數字替代、複雜指令碼形成和字型遞補的行為。 請參閱[WPF 的全球化](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)如需有關設定[xml: lang 處理中 XAML](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)。  
+-   設定 `xml:lang` 屬性。 這個屬性所描述的文化特性特定的項目和其子項目。 這個屬性的值變更幾項功能的行為[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 例如，它會變更斷字、拼字檢查、數字替代、複雜指令碼形成和字型遞補的行為。 請參閱[WPF 的全球化](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)如需有關設定[xml: lang 處理中 XAML](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)。  
   
 -   建立自訂的複合字型，以取得更佳控制用於不同語言的字型。 根據預設，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用 Windows\Fonts 目錄中的 GlobalUserInterface.composite 字型。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "46478888"
   
          如果您決定要包含在主要組件中的原始碼語言，藉由略過`<UICulture>`標記您的專案檔中，設定`UltimateResourceFallback`主要而非附屬組件的位置 (例如`[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.MainAssembly)]`)。  
   
-<a name="workflow_to_localize"></a>   
+<a name="workflow_to_localize" />   
 ## <a name="localize-a-wpf-application"></a>將 WPF 應用程式當地語系化  
  當您將當地語系化[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式中，有數個選項。 例如，在您的應用程式中繫結可當地語系化的資源[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]檔案，將可當地語系化文字儲存在 resx 資料表，或讓當地語系化人員使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]檔案。 本章節描述使用 BAML 形式的 XAML，提供多項優點的當地語系化工作流程：  
   
@@ -92,7 +92,7 @@ ms.locfileid: "46478888"
   
  ![未當地語系化工作流程](../../../../docs/framework/wpf/advanced/media/localizationworkflow2.png "LocalizationWorkflow2")  
   
-<a name="examples_of_localization"></a>   
+<a name="examples_of_localization" />   
 ## <a name="examples-of-wpf-localization"></a>WPF 當地語系化範例  
  本章節包含當地語系化的應用程式，以協助您了解如何建置和當地語系化範例[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "46478888"
   
  請注意，此範例會使用的共用大小功能<xref:System.Windows.Controls.Grid>。 最後三個資料行利用此將它們放在同一個<xref:System.Windows.Controls.DefinitionBase.SharedSizeGroup%2A>。 因為其中一個預期來自屬性名稱，所以這可讓資料行共用相同的大小。 因此當 [瀏覽...] 取得當地語系化為較長的字串"Durchsuchen..."，所有按鈕都成長而不是讓小型的 [確定] 按鈕和大的"Durchsuchen..."按鈕的寬度。  
   
- **Xml:lang**  
+ **Xml:lang**
   
  `Xml:lang="en-US"`  
   
@@ -146,7 +146,9 @@ ms.locfileid: "46478888"
  **建置附屬資源組件**  
   
  *在 .csproj 中：*  
-  
+
+ 編輯`.csproj`檔案，並將下列標記新增至無條件`<PropertyGroup>`:
+ 
  `<UICulture>en-US</UICulture>`  
   
  請注意已新增的`UICulture`值。 當這個屬性設定為有效<xref:System.Globalization.CultureInfo>值，例如 EN-US，建置專案會在其中產生附屬組件與所有可當地語系化的資源。  
@@ -197,7 +199,7 @@ ms.locfileid: "46478888"
   
  **LocBaml.exe /generate RunDialog.resources.dll /trans:RunDialog.resources.dll.CSV /out: . /cul:de-DE**  
   
- 在德文[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]，如果此 resources.dll 放在主要組件旁邊的 DE-DE 資料夾中，此資源會自動載入而非 EN-US 資料夾中。 如果您沒有德文版的[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]若要測試這種情況，請設定文化特性的文化特性[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]您使用 (也就是 EN-US)，並取代原始 resources.dll。  
+ 在德文[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]，如果此 resources.dll 放在主要組件旁邊的 DE-DE 資料夾中，此資源會自動載入而非 EN-US 資料夾中。 如果您沒有德文版的[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]若要測試這種情況，請設定文化特性的文化特性[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]正在使用 (比方說， `en-US`)，並取代原始的資源 DLL。  
   
  **附屬資源載入**  
   
@@ -246,7 +248,7 @@ ms.locfileid: "46478888"
   
  **避免面板和控制項使用固定維度**  
   
- 查看 homepage.xaml，請注意，除了的固定的寬度和高度指定的整個[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]頂端<xref:System.Windows.Controls.DockPanel>，沒有其他固定的維度。 請避免使用固定維度，防止裁剪長度超過來源文字的當地語系化文字。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 面板和控制項將會根據所含的內容來自動調整大小。 大部分控制項也有您可針對更多控制項設定的最小和最大維度 (即 MinWidth= "20")。 具有<xref:System.Windows.Controls.Grid>，您也可以設定相對寬度和高度，使用 ' *' (即寬度 ="0.25\*")，或使用其儲存格大小共用功能。  
+ 查看 homepage.xaml，請注意，除了的固定的寬度和高度指定的整個[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]頂端<xref:System.Windows.Controls.DockPanel>，沒有其他固定的維度。 請避免使用固定維度，防止裁剪長度超過來源文字的當地語系化文字。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 面板和控制項將會根據所含的內容來自動調整大小。 大部分控制項也有更多的控制，您可以設定的最小和最大維度 (例如，MinWidth ="20")。 具有<xref:System.Windows.Controls.Grid>，您也可以設定相對寬度和高度，使用 '\*' (比方說， `Width="0.25*"`) 或使用其儲存格大小共用功能。  
   
  **當地語系化註解**  
   
@@ -275,26 +277,20 @@ ms.locfileid: "46478888"
  [!code-xaml[LocalizationComAtt#LocalizationAttributesOverridden](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributesoverridden)]  
   
  預設當地語系化屬性 (attribute)[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供也可覆寫透過程式碼，因此您可以正確地設定為自訂控制項的正確預設值。 例如:   
-  
- `[Localizability(Readability = Readability.Readable, Modifiability=Modifiability.Unmodifiable, LocalizationCategory.None)]`  
-  
- `public class CorporateLogo: TextBlock`  
-  
- `{`  
-  
- `…`  
-  
- `..`  
-  
- `.`  
-  
- `}`  
-  
+
+```csharp 
+[Localizability(Readability = Readability.Readable, Modifiability=Modifiability.Unmodifiable, LocalizationCategory.None)] 
+public class CorporateLogo : TextBlock
+{
+    // ...
+}
+``` 
+ 
  每個執行個體中設定的屬性[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]的優先順序高於自訂控制項上的程式碼中設定的值。 如需有關屬性和註解的詳細資訊，請參閱 <<c0> [ 當地語系化屬性和註解](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md)。  
   
  **字型遞補和複合字型**  
   
- 如果您指定不支援指定的字碼指標範圍的字型[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]會自動遞補到使用 Windows\Fonts 目錄中的全域使用者 Interface.compositefont 所沒有的其中一個。 複合字型的運作方式就像任何其他字型一樣，而且設定項目的 FontFamily 即可明確地使用 (即 FontFamily= "Global User Interface")。 建立您自己的複合字型並指定要用於特定字碼指標範圍和語言的字型，即可指定自己的字型遞補喜好設定。  
+ 如果您指定不支援指定的字碼指標範圍的字型[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]會自動遞補到使用 Windows\Fonts 目錄中的全域使用者 Interface.compositefont 所沒有的其中一個。 複合字型運作就像任何其他字型，以及可供明確設定項目的`FontFamily`(比方說， `FontFamily="Global User Interface"`)。 建立您自己的複合字型並指定要用於特定字碼指標範圍和語言的字型，即可指定自己的字型遞補喜好設定。  
   
  如需複合字型的詳細資訊，請參閱<xref:System.Windows.Media.FontFamily>。  
   

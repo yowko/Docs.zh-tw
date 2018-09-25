@@ -3,13 +3,12 @@ title: WIF 3.5 和 WIF 4.5 之間的命名空間對應
 ms.date: 03/30/2017
 ms.assetid: a092d98c-444d-4336-a644-63c2e11e96c8
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: a120347d20de5b881ccb60d03da482856d9e68a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3de86e19d440a43f18b3a16ad4af749a476d1dd
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407978"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47157385"
 ---
 # <a name="namespace-mapping-between-wif-35-and-wif-45"></a>WIF 3.5 和 WIF 4.5 之間的命名空間對應
 從 .NET 4.5 開始，Windows Identity Foundation (WIF) 已與 .NET Framework 完全整合。 這項整合已引起名稱變更以及某項 WIF 命名空間和 API 介面合併。 本主題提供某個指引以及 WIF 3.5 命名空間與 WIF 4.5 命名空間之間的一般對應。 它的目的不是要提供詳盡資訊，而是提供可在 WIF 4.5 的何處找到熟悉 WIF 3.5 類別的一些一般資訊。 如需 WIF 3.5 與 WIF 4.5 差異的詳細資訊，請參閱 [Windows Identity Foundation 4.5 的新功能](../../../docs/framework/security/whats-new-in-wif.md)。 如需如何將使用 WIF 3.5 所建置的應用程式移轉至 WIF 4.5 的指引，請參閱[將使用 WIF 3.5 建置的應用程式移轉至 WIF 4.5 的方針](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)。  
