@@ -3,21 +3,20 @@ title: 訊息安全性範例
 ms.date: 03/30/2017
 ms.assetid: 82444166-6288-493a-85d4-85f43f134d19
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 7de6670043e6ff8862d611e987ef7b4191b3ba8d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 46e17cb2d4fecc8a71988ff61287e6cc682654c9
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508673"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47079749"
 ---
-# <a name="message-security-sample"></a><span data-ttu-id="30a76-102">訊息安全性範例</span><span class="sxs-lookup"><span data-stu-id="30a76-102">Message Security Sample</span></span>
-<span data-ttu-id="30a76-103">這個範例會示範如何實作一個使用 `basicHttpBinding` 和訊息安全性的應用程式。</span><span class="sxs-lookup"><span data-stu-id="30a76-103">This sample demonstrates how to implement an application that uses the `basicHttpBinding` and message security.</span></span> <span data-ttu-id="30a76-104">此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)以實作計算機服務。</span><span class="sxs-lookup"><span data-stu-id="30a76-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span>  
+# <a name="message-security-sample"></a><span data-ttu-id="bfaa3-102">訊息安全性範例</span><span class="sxs-lookup"><span data-stu-id="bfaa3-102">Message Security Sample</span></span>
+<span data-ttu-id="bfaa3-103">這個範例會示範如何實作一個使用 `basicHttpBinding` 和訊息安全性的應用程式。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-103">This sample demonstrates how to implement an application that uses the `basicHttpBinding` and message security.</span></span> <span data-ttu-id="bfaa3-104">此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)以實作計算機服務。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="30a76-105">此範例的安裝程序與建置指示位於本主題的結尾。</span><span class="sxs-lookup"><span data-stu-id="30a76-105">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="bfaa3-105">此範例的安裝程序與建置指示位於本主題的結尾。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-105">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="30a76-106">`basicHttpBinding` 的安全性模式可以設定為下列值：`Message`、`Transport`、`TransportWithMessageCredential`、`TransportCredentialOnly` 和 `None`。</span><span class="sxs-lookup"><span data-stu-id="30a76-106">The security mode of `basicHttpBinding` can be set to the following values: `Message`, `Transport`, `TransportWithMessageCredential`, `TransportCredentialOnly` and `None`.</span></span> <span data-ttu-id="30a76-107">在下列範例服務 App.config 檔中，端點定義會指定 `basicHttpBinding`，並參考名為 `Binding1` 的繫結組態，如下列範例組態所示：</span><span class="sxs-lookup"><span data-stu-id="30a76-107">In the following sample service App.config file, the endpoint definition specifies the `basicHttpBinding` and references a binding configuration named `Binding1`, as shown in the following sample configuration:</span></span>  
+ <span data-ttu-id="bfaa3-106">`basicHttpBinding` 的安全性模式可以設定為下列值：`Message`、`Transport`、`TransportWithMessageCredential`、`TransportCredentialOnly` 和 `None`。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-106">The security mode of `basicHttpBinding` can be set to the following values: `Message`, `Transport`, `TransportWithMessageCredential`, `TransportCredentialOnly` and `None`.</span></span> <span data-ttu-id="bfaa3-107">在下列範例服務 App.config 檔中，端點定義會指定 `basicHttpBinding`，並參考名為 `Binding1` 的繫結組態，如下列範例組態所示：</span><span class="sxs-lookup"><span data-stu-id="bfaa3-107">In the following sample service App.config file, the endpoint definition specifies the `basicHttpBinding` and references a binding configuration named `Binding1`, as shown in the following sample configuration:</span></span>  
   
 ```xml  
 <system.serviceModel>  
@@ -35,7 +34,7 @@ ms.locfileid: "43508673"
 </system.serviceModel>  
 ```  
   
- <span data-ttu-id="30a76-108">繫結組態集`mode`的屬性[\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)來`Message`，並設定`clientCredentialType`屬性[\<訊息 >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-basichttpbinding.md)至`Certificate`如下列範例組態所示：</span><span class="sxs-lookup"><span data-stu-id="30a76-108">The binding configuration sets the `mode` attribute of the [\<security>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md) to `Message` and sets the `clientCredentialType` attribute of the [\<message>](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-basichttpbinding.md) to `Certificate` as shown in the following sample configuration:</span></span>  
+ <span data-ttu-id="bfaa3-108">繫結組態集`mode`的屬性[\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)來`Message`，並設定`clientCredentialType`屬性[\<訊息 >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-basichttpbinding.md)至`Certificate`如下列範例組態所示：</span><span class="sxs-lookup"><span data-stu-id="bfaa3-108">The binding configuration sets the `mode` attribute of the [\<security>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md) to `Message` and sets the `clientCredentialType` attribute of the [\<message>](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-basichttpbinding.md) to `Certificate` as shown in the following sample configuration:</span></span>  
   
 ```xml  
 <bindings>  
@@ -53,7 +52,7 @@ ms.locfileid: "43508673"
 </bindings>  
 ```  
   
- <span data-ttu-id="30a76-109">服務對用戶端驗證它自己時所使用的憑證是在組態檔案行為區段中的 `serviceCredentials` 項目下設定。</span><span class="sxs-lookup"><span data-stu-id="30a76-109">The certificate that the service uses to authenticate itself to the client is set in the behaviors section of the configuration file under the `serviceCredentials` element.</span></span> <span data-ttu-id="30a76-110">用戶端用來對服務驗證本身之憑證所套用的驗證模式也是在 `clientCertificate` 項目下的行為區段中設定。</span><span class="sxs-lookup"><span data-stu-id="30a76-110">The validation mode that applies to the certificate that the client uses to authenticate itself to the service is also set in the behaviors section under the `clientCertificate` element.</span></span>  
+ <span data-ttu-id="bfaa3-109">服務對用戶端驗證它自己時所使用的憑證是在組態檔案行為區段中的 `serviceCredentials` 項目下設定。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-109">The certificate that the service uses to authenticate itself to the client is set in the behaviors section of the configuration file under the `serviceCredentials` element.</span></span> <span data-ttu-id="bfaa3-110">用戶端用來對服務驗證本身之憑證所套用的驗證模式也是在 `clientCertificate` 項目下的行為區段中設定。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-110">The validation mode that applies to the certificate that the client uses to authenticate itself to the service is also set in the behaviors section under the `clientCertificate` element.</span></span>  
   
 ```xml  
 <!--For debugging purposes, set the includeExceptionDetailInFaults attribute to true.-->  
@@ -93,15 +92,15 @@ ms.locfileid: "43508673"
 </behaviors>  
 ```  
   
- <span data-ttu-id="30a76-111">相同的繫結和安全性詳細資訊是在用戶端組態檔中設定。</span><span class="sxs-lookup"><span data-stu-id="30a76-111">The same binding and security details are specified in the client configuration file.</span></span>  
+ <span data-ttu-id="bfaa3-111">相同的繫結和安全性詳細資訊是在用戶端組態檔中設定。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-111">The same binding and security details are specified in the client configuration file.</span></span>  
   
- <span data-ttu-id="30a76-112">呼叫者的身分識別會透過下列程式碼顯示在服務主控台視窗中：</span><span class="sxs-lookup"><span data-stu-id="30a76-112">The identity of the caller is displayed in the service console window by using the following code:</span></span>  
+ <span data-ttu-id="bfaa3-112">呼叫者的身分識別會透過下列程式碼顯示在服務主控台視窗中：</span><span class="sxs-lookup"><span data-stu-id="bfaa3-112">The identity of the caller is displayed in the service console window by using the following code:</span></span>  
 
 ```csharp
 Console.WriteLine("Called by {0}", ServiceSecurityContext.Current.PrimaryIdentity.Name);  
 ```
 
- <span data-ttu-id="30a76-113">當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。</span><span class="sxs-lookup"><span data-stu-id="30a76-113">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="30a76-114">在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。</span><span class="sxs-lookup"><span data-stu-id="30a76-114">Press ENTER in the client window to shut down the client.</span></span>  
+ <span data-ttu-id="bfaa3-113">當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-113">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="bfaa3-114">在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-114">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -111,73 +110,73 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-and-build-the-sample"></a><span data-ttu-id="30a76-115">若要設定和建置範例</span><span class="sxs-lookup"><span data-stu-id="30a76-115">To set up and build the sample</span></span>  
+### <a name="to-set-up-and-build-the-sample"></a><span data-ttu-id="bfaa3-115">若要設定和建置範例</span><span class="sxs-lookup"><span data-stu-id="bfaa3-115">To set up and build the sample</span></span>  
   
-1.  <span data-ttu-id="30a76-116">請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="30a76-116">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="bfaa3-116">請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-116">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="30a76-117">若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。</span><span class="sxs-lookup"><span data-stu-id="30a76-117">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2.  <span data-ttu-id="bfaa3-117">若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-117">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-### <a name="to-run-the-sample-on-the-same-machine"></a><span data-ttu-id="30a76-118">若要在同一部機器上執行範例</span><span class="sxs-lookup"><span data-stu-id="30a76-118">To run the sample on the same machine</span></span>  
+### <a name="to-run-the-sample-on-the-same-machine"></a><span data-ttu-id="bfaa3-118">若要在同一部機器上執行範例</span><span class="sxs-lookup"><span data-stu-id="bfaa3-118">To run the sample on the same machine</span></span>  
   
-1.  <span data-ttu-id="30a76-119">從範例安裝資料夾執行 Setup.bat。</span><span class="sxs-lookup"><span data-stu-id="30a76-119">Run Setup.bat from the sample install folder.</span></span> <span data-ttu-id="30a76-120">這會安裝執行範例所需的所有憑證。</span><span class="sxs-lookup"><span data-stu-id="30a76-120">This installs all the certificates required for running the sample.</span></span>  
-  
-    > [!NOTE]
-    >  <span data-ttu-id="30a76-121">Setup.bat 批次檔是設計用來從 Windows SDK 命令提示字元執行。</span><span class="sxs-lookup"><span data-stu-id="30a76-121">The Setup.bat batch file is designed to be run from a Windows SDK Command Prompt.</span></span> <span data-ttu-id="30a76-122">它要求 MSSDK 環境變數指向安裝 SDK 的目錄。</span><span class="sxs-lookup"><span data-stu-id="30a76-122">It requires that the MSSDK environment variable point to the directory where the SDK is installed.</span></span> <span data-ttu-id="30a76-123">這個環境變數是自動在 Windows SDK 命令提示字元中設定。</span><span class="sxs-lookup"><span data-stu-id="30a76-123">This environment variable is automatically set within a Windows SDK Command Prompt.</span></span>  
-  
-2.  <span data-ttu-id="30a76-124">從 \service\bin 執行服務應用程式。</span><span class="sxs-lookup"><span data-stu-id="30a76-124">Run the service application from \service\bin.</span></span>  
-  
-3.  <span data-ttu-id="30a76-125">從 \client\bin 執行用戶端應用程式。</span><span class="sxs-lookup"><span data-stu-id="30a76-125">Run the client application from \client\bin.</span></span> <span data-ttu-id="30a76-126">用戶端活動會顯示在用戶端主控台應用程式上。</span><span class="sxs-lookup"><span data-stu-id="30a76-126">Client activity is displayed on the client console application.</span></span>  
-  
-4.  <span data-ttu-id="30a76-127">如果用戶端和服務能夠進行通訊，請參閱[疑難排解祕訣](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。</span><span class="sxs-lookup"><span data-stu-id="30a76-127">If the client and service are not able to communicate, see [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
-  
-5.  <span data-ttu-id="30a76-128">當您完成範例時，請執行 Cleanup.bat 以移除憑證。</span><span class="sxs-lookup"><span data-stu-id="30a76-128">Remove the certificates by running Cleanup.bat when you have finished with the sample.</span></span> <span data-ttu-id="30a76-129">其他安全性範例使用相同的憑證。</span><span class="sxs-lookup"><span data-stu-id="30a76-129">Other security samples use the same certificates.</span></span>  
-  
-### <a name="to-run-the-sample-across-machines"></a><span data-ttu-id="30a76-130">若要跨機器執行範例</span><span class="sxs-lookup"><span data-stu-id="30a76-130">To run the sample across machines</span></span>  
-  
-1.  <span data-ttu-id="30a76-131">在服務機器上為服務二進位碼檔案建立一個目錄。</span><span class="sxs-lookup"><span data-stu-id="30a76-131">Create a directory on the service machine for the service binaries.</span></span>  
-  
-2.  <span data-ttu-id="30a76-132">將服務程式檔複製到伺服器的服務目錄上。</span><span class="sxs-lookup"><span data-stu-id="30a76-132">Copy the service program files to the service directory on the server.</span></span> <span data-ttu-id="30a76-133">同時，將 Setup.bat、Cleanup.bat 和 ImportClientCert.bat 檔案複製到伺服器。</span><span class="sxs-lookup"><span data-stu-id="30a76-133">Also copy the Setup.bat, Cleanup.bat, and ImportClientCert.bat files to the server.</span></span>  
-  
-3.  <span data-ttu-id="30a76-134">在用戶端機器上為用戶端二進位碼檔案建立一個目錄。</span><span class="sxs-lookup"><span data-stu-id="30a76-134">Create a directory on the client machine for the client binaries.</span></span>  
-  
-4.  <span data-ttu-id="30a76-135">將用戶端程式檔複製到用戶端機器上的用戶端目錄。</span><span class="sxs-lookup"><span data-stu-id="30a76-135">Copy the client program files to the client directory on the client machine.</span></span> <span data-ttu-id="30a76-136">同時，將 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 檔案複製到用戶端。</span><span class="sxs-lookup"><span data-stu-id="30a76-136">Also copy the Setup.bat, Cleanup.bat, and ImportServiceCert.bat files to the client.</span></span>  
-  
-5.  <span data-ttu-id="30a76-137">在伺服器上執行 `setup.bat service`。</span><span class="sxs-lookup"><span data-stu-id="30a76-137">On the server, run `setup.bat service`.</span></span> <span data-ttu-id="30a76-138">執行`setup.bat`與`service`引數會建立具有機器完整網域名稱的服務憑證，並將服務憑證匯出為名為 Service.cer 的檔案。</span><span class="sxs-lookup"><span data-stu-id="30a76-138">Running `setup.bat` with the `service` argument creates a service certificate with the fully-qualified domain name of the machine and exports the service certificate to a file named Service.cer.</span></span>  
-  
-6.  <span data-ttu-id="30a76-139">編輯 Service.exe.config 以反映新的憑證名稱 (在`findValue`屬性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)項目) 做為機器的完整網域名稱相同。</span><span class="sxs-lookup"><span data-stu-id="30a76-139">Edit Service.exe.config to reflect the new certificate name (in the `findValue` attribute in the [\<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) element) which is the same as the fully-qualified domain name of the machine.</span></span> <span data-ttu-id="30a76-140">同時將基底位址的值變更成指定完整機器名稱，而不要指定 localhost`.`。</span><span class="sxs-lookup"><span data-stu-id="30a76-140">Also change the value of the base address to specify a fully-qualified machine name instead of localhost`.`</span></span>  
-  
-7.  <span data-ttu-id="30a76-141">從服務目錄中將 Service.cer 檔案複製至用戶端機器上的用戶端目錄。</span><span class="sxs-lookup"><span data-stu-id="30a76-141">Copy the Service.cer file from the service directory to the client directory on the client machine.</span></span>  
-  
-8.  <span data-ttu-id="30a76-142">在用戶端上執行 `setup.bat client`。</span><span class="sxs-lookup"><span data-stu-id="30a76-142">On the client, run `setup.bat client`.</span></span> <span data-ttu-id="30a76-143">使用 `setup.bat` 引數來執行 `client`，就會建立名稱為 client.com 的用戶端憑證，並且會將用戶端憑證匯出為名為 Client.cer 的檔案。</span><span class="sxs-lookup"><span data-stu-id="30a76-143">Running `setup.bat` with the `client` argument creates a client certificate named client.com and exports the client certificate to a file named Client.cer.</span></span>  
-  
-9. <span data-ttu-id="30a76-144">在用戶端機器上的 Client.exe.config 檔案中，變更端點的位址值以符合服務的新位址。</span><span class="sxs-lookup"><span data-stu-id="30a76-144">In the Client.exe.config file on the client machine, change the address value of the endpoint to match the new address of your service.</span></span> <span data-ttu-id="30a76-145">您可以藉由使用伺服器的完整網域名稱取代 localhost，完成這個動作。</span><span class="sxs-lookup"><span data-stu-id="30a76-145">You do this by replacing localhost with the fully-qualified domain name of the server.</span></span> <span data-ttu-id="30a76-146">也會變更`findValue`的屬性[ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)為新的服務憑證名稱也就是伺服器的完整網域名稱。</span><span class="sxs-lookup"><span data-stu-id="30a76-146">Also change the `findValue` attribute of the [\<defaultCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md) to the new service certificate name which is the fully-qualified domain name of the server.</span></span>  
-  
-10. <span data-ttu-id="30a76-147">從用戶端目錄將 Client.cer 檔案複製到伺服器上的服務目錄中。</span><span class="sxs-lookup"><span data-stu-id="30a76-147">Copy the Client.cer file from the client directory to the service directory on the server.</span></span>  
-  
-11. <span data-ttu-id="30a76-148">在用戶端上執行 ImportServiceCert.bat。</span><span class="sxs-lookup"><span data-stu-id="30a76-148">On the client, run ImportServiceCert.bat.</span></span> <span data-ttu-id="30a76-149">這樣會將服務憑證從 Service.cer 檔案匯入至 CurrentUser - TrustedPeople 存放區中。</span><span class="sxs-lookup"><span data-stu-id="30a76-149">This imports the service certificate from the Service.cer file into the CurrentUser - TrustedPeople store.</span></span>  
-  
-12. <span data-ttu-id="30a76-150">在伺服器上執行 ImportClientCert.bat，這樣會從 Client.cer 檔案中將用戶端憑證匯入至 LocalMachine - TrustedPeople 存放區中。</span><span class="sxs-lookup"><span data-stu-id="30a76-150">On the server, run ImportClientCert.bat, This imports the client certificate from the Client.cer file into the LocalMachine - TrustedPeople store.</span></span>  
-  
-13. <span data-ttu-id="30a76-151">在服務機器上，從命令提示字元執行 Service.exe。</span><span class="sxs-lookup"><span data-stu-id="30a76-151">On the service machine, run Service.exe from a command prompt.</span></span>  
-  
-14. <span data-ttu-id="30a76-152">在用戶端機器上，從命令提示字元視窗啟動 Client.exe。</span><span class="sxs-lookup"><span data-stu-id="30a76-152">On the client machine, launch Client.exe from a command prompt window.</span></span>  
-  
-    1.  <span data-ttu-id="30a76-153">如果用戶端和服務能夠進行通訊，請參閱[疑難排解祕訣](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。</span><span class="sxs-lookup"><span data-stu-id="30a76-153">If the client and service are not able to communicate, see [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
-  
-### <a name="to-clean-up-after-the-sample"></a><span data-ttu-id="30a76-154">若要在使用範例之後進行清除</span><span class="sxs-lookup"><span data-stu-id="30a76-154">To clean up after the sample</span></span>  
-  
--   <span data-ttu-id="30a76-155">當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。</span><span class="sxs-lookup"><span data-stu-id="30a76-155">Run Cleanup.bat in the samples folder once you have finished running the sample.</span></span>  
+1.  <span data-ttu-id="bfaa3-119">從範例安裝資料夾執行 Setup.bat。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-119">Run Setup.bat from the sample install folder.</span></span> <span data-ttu-id="bfaa3-120">這會安裝執行範例所需的所有憑證。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-120">This installs all the certificates required for running the sample.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="30a76-156">跨機器執行此範例時，這個指令碼不會移除用戶端上的服務憑證。</span><span class="sxs-lookup"><span data-stu-id="30a76-156">This script does not remove service certificates on a client when running this sample across machines.</span></span> <span data-ttu-id="30a76-157">如果您已執行跨機器使用憑證的 Windows Communication Foundation (WCF) 範例，請務必清除已安裝在 CurrentUser-TrustedPeople 存放區的服務憑證。</span><span class="sxs-lookup"><span data-stu-id="30a76-157">If you have run Windows Communication Foundation (WCF) samples that use certificates across machines, be sure to clear the service certificates that have been installed in the CurrentUser - TrustedPeople store.</span></span> <span data-ttu-id="30a76-158">若要這麼做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。</span><span class="sxs-lookup"><span data-stu-id="30a76-158">To do this, use the following command: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` For example: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`</span></span>  
+    >  <span data-ttu-id="bfaa3-121">Setup.bat 批次檔是設計用來從 Windows SDK 命令提示字元執行。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-121">The Setup.bat batch file is designed to be run from a Windows SDK Command Prompt.</span></span> <span data-ttu-id="bfaa3-122">它要求 MSSDK 環境變數指向安裝 SDK 的目錄。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-122">It requires that the MSSDK environment variable point to the directory where the SDK is installed.</span></span> <span data-ttu-id="bfaa3-123">這個環境變數是自動在 Windows SDK 命令提示字元中設定。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-123">This environment variable is automatically set within a Windows SDK Command Prompt.</span></span>  
+  
+2.  <span data-ttu-id="bfaa3-124">從 \service\bin 執行服務應用程式。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-124">Run the service application from \service\bin.</span></span>  
+  
+3.  <span data-ttu-id="bfaa3-125">從 \client\bin 執行用戶端應用程式。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-125">Run the client application from \client\bin.</span></span> <span data-ttu-id="bfaa3-126">用戶端活動會顯示在用戶端主控台應用程式上。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-126">Client activity is displayed on the client console application.</span></span>  
+  
+4.  <span data-ttu-id="bfaa3-127">如果用戶端和服務能夠進行通訊，請參閱[疑難排解祕訣](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-127">If the client and service are not able to communicate, see [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
+  
+5.  <span data-ttu-id="bfaa3-128">當您完成範例時，請執行 Cleanup.bat 以移除憑證。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-128">Remove the certificates by running Cleanup.bat when you have finished with the sample.</span></span> <span data-ttu-id="bfaa3-129">其他安全性範例使用相同的憑證。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-129">Other security samples use the same certificates.</span></span>  
+  
+### <a name="to-run-the-sample-across-machines"></a><span data-ttu-id="bfaa3-130">若要跨機器執行範例</span><span class="sxs-lookup"><span data-stu-id="bfaa3-130">To run the sample across machines</span></span>  
+  
+1.  <span data-ttu-id="bfaa3-131">在服務機器上為服務二進位碼檔案建立一個目錄。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-131">Create a directory on the service machine for the service binaries.</span></span>  
+  
+2.  <span data-ttu-id="bfaa3-132">將服務程式檔複製到伺服器的服務目錄上。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-132">Copy the service program files to the service directory on the server.</span></span> <span data-ttu-id="bfaa3-133">同時，將 Setup.bat、Cleanup.bat 和 ImportClientCert.bat 檔案複製到伺服器。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-133">Also copy the Setup.bat, Cleanup.bat, and ImportClientCert.bat files to the server.</span></span>  
+  
+3.  <span data-ttu-id="bfaa3-134">在用戶端機器上為用戶端二進位碼檔案建立一個目錄。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-134">Create a directory on the client machine for the client binaries.</span></span>  
+  
+4.  <span data-ttu-id="bfaa3-135">將用戶端程式檔複製到用戶端機器上的用戶端目錄。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-135">Copy the client program files to the client directory on the client machine.</span></span> <span data-ttu-id="bfaa3-136">同時，將 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 檔案複製到用戶端。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-136">Also copy the Setup.bat, Cleanup.bat, and ImportServiceCert.bat files to the client.</span></span>  
+  
+5.  <span data-ttu-id="bfaa3-137">在伺服器上執行 `setup.bat service`。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-137">On the server, run `setup.bat service`.</span></span> <span data-ttu-id="bfaa3-138">執行`setup.bat`與`service`引數會建立具有機器完整網域名稱的服務憑證，並將服務憑證匯出為名為 Service.cer 的檔案。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-138">Running `setup.bat` with the `service` argument creates a service certificate with the fully-qualified domain name of the machine and exports the service certificate to a file named Service.cer.</span></span>  
+  
+6.  <span data-ttu-id="bfaa3-139">編輯 Service.exe.config 以反映新的憑證名稱 (在`findValue`屬性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)項目) 做為機器的完整網域名稱相同。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-139">Edit Service.exe.config to reflect the new certificate name (in the `findValue` attribute in the [\<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) element) which is the same as the fully-qualified domain name of the machine.</span></span> <span data-ttu-id="bfaa3-140">同時將基底位址的值變更成指定完整機器名稱，而不要指定 localhost`.`。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-140">Also change the value of the base address to specify a fully-qualified machine name instead of localhost`.`</span></span>  
+  
+7.  <span data-ttu-id="bfaa3-141">從服務目錄中將 Service.cer 檔案複製至用戶端機器上的用戶端目錄。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-141">Copy the Service.cer file from the service directory to the client directory on the client machine.</span></span>  
+  
+8.  <span data-ttu-id="bfaa3-142">在用戶端上執行 `setup.bat client`。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-142">On the client, run `setup.bat client`.</span></span> <span data-ttu-id="bfaa3-143">使用 `setup.bat` 引數來執行 `client`，就會建立名稱為 client.com 的用戶端憑證，並且會將用戶端憑證匯出為名為 Client.cer 的檔案。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-143">Running `setup.bat` with the `client` argument creates a client certificate named client.com and exports the client certificate to a file named Client.cer.</span></span>  
+  
+9. <span data-ttu-id="bfaa3-144">在用戶端機器上的 Client.exe.config 檔案中，變更端點的位址值以符合服務的新位址。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-144">In the Client.exe.config file on the client machine, change the address value of the endpoint to match the new address of your service.</span></span> <span data-ttu-id="bfaa3-145">您可以藉由使用伺服器的完整網域名稱取代 localhost，完成這個動作。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-145">You do this by replacing localhost with the fully-qualified domain name of the server.</span></span> <span data-ttu-id="bfaa3-146">也會變更`findValue`的屬性[ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)為新的服務憑證名稱也就是伺服器的完整網域名稱。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-146">Also change the `findValue` attribute of the [\<defaultCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md) to the new service certificate name which is the fully-qualified domain name of the server.</span></span>  
+  
+10. <span data-ttu-id="bfaa3-147">從用戶端目錄將 Client.cer 檔案複製到伺服器上的服務目錄中。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-147">Copy the Client.cer file from the client directory to the service directory on the server.</span></span>  
+  
+11. <span data-ttu-id="bfaa3-148">在用戶端上執行 ImportServiceCert.bat。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-148">On the client, run ImportServiceCert.bat.</span></span> <span data-ttu-id="bfaa3-149">這樣會將服務憑證從 Service.cer 檔案匯入至 CurrentUser - TrustedPeople 存放區中。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-149">This imports the service certificate from the Service.cer file into the CurrentUser - TrustedPeople store.</span></span>  
+  
+12. <span data-ttu-id="bfaa3-150">在伺服器上執行 ImportClientCert.bat，這樣會從 Client.cer 檔案中將用戶端憑證匯入至 LocalMachine - TrustedPeople 存放區中。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-150">On the server, run ImportClientCert.bat, This imports the client certificate from the Client.cer file into the LocalMachine - TrustedPeople store.</span></span>  
+  
+13. <span data-ttu-id="bfaa3-151">在服務機器上，從命令提示字元執行 Service.exe。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-151">On the service machine, run Service.exe from a command prompt.</span></span>  
+  
+14. <span data-ttu-id="bfaa3-152">在用戶端機器上，從命令提示字元視窗啟動 Client.exe。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-152">On the client machine, launch Client.exe from a command prompt window.</span></span>  
+  
+    1.  <span data-ttu-id="bfaa3-153">如果用戶端和服務能夠進行通訊，請參閱[疑難排解祕訣](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-153">If the client and service are not able to communicate, see [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
+  
+### <a name="to-clean-up-after-the-sample"></a><span data-ttu-id="bfaa3-154">若要在使用範例之後進行清除</span><span class="sxs-lookup"><span data-stu-id="bfaa3-154">To clean up after the sample</span></span>  
+  
+-   <span data-ttu-id="bfaa3-155">當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-155">Run Cleanup.bat in the samples folder once you have finished running the sample.</span></span>  
+  
+    > [!NOTE]
+    >  <span data-ttu-id="bfaa3-156">跨機器執行此範例時，這個指令碼不會移除用戶端上的服務憑證。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-156">This script does not remove service certificates on a client when running this sample across machines.</span></span> <span data-ttu-id="bfaa3-157">如果您已執行跨機器使用憑證的 Windows Communication Foundation (WCF) 範例，請務必清除已安裝在 CurrentUser-TrustedPeople 存放區的服務憑證。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-157">If you have run Windows Communication Foundation (WCF) samples that use certificates across machines, be sure to clear the service certificates that have been installed in the CurrentUser - TrustedPeople store.</span></span> <span data-ttu-id="bfaa3-158">若要這麼做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-158">To do this, use the following command: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` For example: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="30a76-159">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="30a76-159">The samples may already be installed on your machine.</span></span> <span data-ttu-id="30a76-160">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="30a76-160">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="bfaa3-159">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-159">The samples may already be installed on your machine.</span></span> <span data-ttu-id="bfaa3-160">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-160">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="30a76-161">如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。</span><span class="sxs-lookup"><span data-stu-id="30a76-161">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="30a76-162">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="30a76-162">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="bfaa3-161">如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-161">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="bfaa3-162">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="bfaa3-162">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Basic\MessageSecurity`  
   
-## <a name="see-also"></a><span data-ttu-id="30a76-163">另請參閱</span><span class="sxs-lookup"><span data-stu-id="30a76-163">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bfaa3-163">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bfaa3-163">See Also</span></span>

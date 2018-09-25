@@ -3,21 +3,21 @@ title: '&lt;claimsAuthenticationManager&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6d30a450-6d13-4671-81a8-77e0204500c5
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 4d4a91e0ed1f437089e26e5902515f73a15d94a8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0ec7e44363f87e54eae97b70352f520fe87540be
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47074949"
 ---
-# <a name="ltclaimsauthenticationmanagergt"></a><span data-ttu-id="c87b3-102">&lt;claimsAuthenticationManager&gt;</span><span class="sxs-lookup"><span data-stu-id="c87b3-102">&lt;claimsAuthenticationManager&gt;</span></span>
-<span data-ttu-id="c87b3-103">註冊的連入宣告的宣告驗證管理員。</span><span class="sxs-lookup"><span data-stu-id="c87b3-103">Registers a claims authentication manager for the incoming claims.</span></span>  
+# <a name="ltclaimsauthenticationmanagergt"></a><span data-ttu-id="417bc-102">&lt;claimsAuthenticationManager&gt;</span><span class="sxs-lookup"><span data-stu-id="417bc-102">&lt;claimsAuthenticationManager&gt;</span></span>
+<span data-ttu-id="417bc-103">註冊的連入宣告的宣告驗證管理員。</span><span class="sxs-lookup"><span data-stu-id="417bc-103">Registers a claims authentication manager for the incoming claims.</span></span>  
   
- <span data-ttu-id="c87b3-104">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="c87b3-104">\<system.identityModel></span></span>  
-<span data-ttu-id="c87b3-105">\<identityConfiguration></span><span class="sxs-lookup"><span data-stu-id="c87b3-105">\<identityConfiguration></span></span>  
-<span data-ttu-id="c87b3-106">\<claimsAuthenticationManager ></span><span class="sxs-lookup"><span data-stu-id="c87b3-106">\<claimsAuthenticationManager></span></span>  
+ <span data-ttu-id="417bc-104">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="417bc-104">\<system.identityModel></span></span>  
+<span data-ttu-id="417bc-105">\<identityConfiguration></span><span class="sxs-lookup"><span data-stu-id="417bc-105">\<identityConfiguration></span></span>  
+<span data-ttu-id="417bc-106">\<claimsAuthenticationManager ></span><span class="sxs-lookup"><span data-stu-id="417bc-106">\<claimsAuthenticationManager></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c87b3-107">語法</span><span class="sxs-lookup"><span data-stu-id="c87b3-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="417bc-107">語法</span><span class="sxs-lookup"><span data-stu-id="417bc-107">Syntax</span></span>  
   
 ```xml  
 <system.identityModel>  
@@ -29,30 +29,30 @@ ms.lasthandoff: 05/03/2018
 </system.identityModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="c87b3-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="c87b3-108">Attributes and Elements</span></span>  
- <span data-ttu-id="c87b3-109">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="c87b3-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="417bc-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="417bc-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="417bc-109">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="417bc-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="c87b3-110">屬性</span><span class="sxs-lookup"><span data-stu-id="c87b3-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="417bc-110">屬性</span><span class="sxs-lookup"><span data-stu-id="417bc-110">Attributes</span></span>  
   
-|<span data-ttu-id="c87b3-111">屬性</span><span class="sxs-lookup"><span data-stu-id="c87b3-111">Attribute</span></span>|<span data-ttu-id="c87b3-112">描述</span><span class="sxs-lookup"><span data-stu-id="c87b3-112">Description</span></span>|  
+|<span data-ttu-id="417bc-111">屬性</span><span class="sxs-lookup"><span data-stu-id="417bc-111">Attribute</span></span>|<span data-ttu-id="417bc-112">描述</span><span class="sxs-lookup"><span data-stu-id="417bc-112">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="c87b3-113">類型</span><span class="sxs-lookup"><span data-stu-id="c87b3-113">type</span></span>|<span data-ttu-id="c87b3-114">指定自訂型別衍生自<xref:System.Security.Claims.ClaimsAuthenticationManager>類別。</span><span class="sxs-lookup"><span data-stu-id="c87b3-114">Specifies a custom type that derives from the <xref:System.Security.Claims.ClaimsAuthenticationManager> class.</span></span> <span data-ttu-id="c87b3-115">如需有關如何指定`type`屬性，請參閱 [自訂型別參考]。</span><span class="sxs-lookup"><span data-stu-id="c87b3-115">For more information about how to specify the `type` attribute, see [Custom Type References].</span></span>|  
+|<span data-ttu-id="417bc-113">類型</span><span class="sxs-lookup"><span data-stu-id="417bc-113">type</span></span>|<span data-ttu-id="417bc-114">指定自訂型別衍生自<xref:System.Security.Claims.ClaimsAuthenticationManager>類別。</span><span class="sxs-lookup"><span data-stu-id="417bc-114">Specifies a custom type that derives from the <xref:System.Security.Claims.ClaimsAuthenticationManager> class.</span></span> <span data-ttu-id="417bc-115">如需有關如何指定`type`屬性，請參閱 [自訂型別參考]。</span><span class="sxs-lookup"><span data-stu-id="417bc-115">For more information about how to specify the `type` attribute, see [Custom Type References].</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="c87b3-116">子項目</span><span class="sxs-lookup"><span data-stu-id="c87b3-116">Child Elements</span></span>  
- <span data-ttu-id="c87b3-117">如果沒有任何`type`屬性，或如果`type`屬性參考<xref:System.Security.Claims.ClaimsAuthenticationManager>類別`<claimsAuthenticationManager>`項目不接受子項目; 不過，類別衍生自<xref:System.Security.Claims.ClaimsAuthenticationManager>可以定義子組態項目。</span><span class="sxs-lookup"><span data-stu-id="c87b3-117">If there is no `type` attribute, or if the `type` attribute references the <xref:System.Security.Claims.ClaimsAuthenticationManager> class, the `<claimsAuthenticationManager>` element does not take child elements; however, classes derived from <xref:System.Security.Claims.ClaimsAuthenticationManager> can define child configuration elements.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="417bc-116">子元素</span><span class="sxs-lookup"><span data-stu-id="417bc-116">Child Elements</span></span>  
+ <span data-ttu-id="417bc-117">如果沒有任何`type`屬性，或如果`type`屬性參考<xref:System.Security.Claims.ClaimsAuthenticationManager>類別`<claimsAuthenticationManager>`項目不會子項目; 不過，類別衍生自<xref:System.Security.Claims.ClaimsAuthenticationManager>可以定義子組態項目。</span><span class="sxs-lookup"><span data-stu-id="417bc-117">If there is no `type` attribute, or if the `type` attribute references the <xref:System.Security.Claims.ClaimsAuthenticationManager> class, the `<claimsAuthenticationManager>` element does not take child elements; however, classes derived from <xref:System.Security.Claims.ClaimsAuthenticationManager> can define child configuration elements.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="c87b3-118">父項目</span><span class="sxs-lookup"><span data-stu-id="c87b3-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="417bc-118">父項目</span><span class="sxs-lookup"><span data-stu-id="417bc-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="c87b3-119">項目</span><span class="sxs-lookup"><span data-stu-id="c87b3-119">Element</span></span>|<span data-ttu-id="c87b3-120">描述</span><span class="sxs-lookup"><span data-stu-id="c87b3-120">Description</span></span>|  
+|<span data-ttu-id="417bc-119">項目</span><span class="sxs-lookup"><span data-stu-id="417bc-119">Element</span></span>|<span data-ttu-id="417bc-120">描述</span><span class="sxs-lookup"><span data-stu-id="417bc-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="c87b3-121">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="c87b3-121">\<identityConfiguration></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|<span data-ttu-id="c87b3-122">指定服務層級身分識別設定。</span><span class="sxs-lookup"><span data-stu-id="c87b3-122">Specifies service-level identity settings.</span></span>|  
+|[<span data-ttu-id="417bc-121">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="417bc-121">\<identityConfiguration></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|<span data-ttu-id="417bc-122">指定服務層級身分識別設定。</span><span class="sxs-lookup"><span data-stu-id="417bc-122">Specifies service-level identity settings.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c87b3-123">備註</span><span class="sxs-lookup"><span data-stu-id="c87b3-123">Remarks</span></span>  
- <span data-ttu-id="c87b3-124">透過所提供的預設行為<xref:System.Security.Claims.ClaimsAuthenticationManager>類別回應連入宣告。</span><span class="sxs-lookup"><span data-stu-id="c87b3-124">The default behavior provided through the <xref:System.Security.Claims.ClaimsAuthenticationManager> class echoes the incoming claims.</span></span> <span data-ttu-id="c87b3-125">如果沒有`type`指定屬性或`type`屬性會指定<xref:System.Security.Claims.ClaimsAuthenticationManager>類別，`<claimsAuthenticationManager>`項目不接受子項目。</span><span class="sxs-lookup"><span data-stu-id="c87b3-125">If no `type` attribute is specified or if the `type` attribute specifies the <xref:System.Security.Claims.ClaimsAuthenticationManager> class, the `<claimsAuthenticationManager>` element does not take child elements.</span></span> <span data-ttu-id="c87b3-126">您可以指定`type`屬性註冊型別衍生自<xref:System.Security.Claims.ClaimsAuthenticationManager>類別來實作自訂行為。</span><span class="sxs-lookup"><span data-stu-id="c87b3-126">You can specify the `type` attribute to register a type derived from the <xref:System.Security.Claims.ClaimsAuthenticationManager> class to implement custom behavior.</span></span> <span data-ttu-id="c87b3-127">在衍生的類別可以支援透過子項目的組態`<claimsAuthenticationManager>`藉由覆寫的項目<xref:System.Security.Claims.ClaimsAuthenticationManager.LoadCustomConfiguration%2A>方法來處理這些項目。</span><span class="sxs-lookup"><span data-stu-id="c87b3-127">Derived classes can support configuration through child elements of the `<claimsAuthenticationManager>` element by overriding the <xref:System.Security.Claims.ClaimsAuthenticationManager.LoadCustomConfiguration%2A> method to handle these elements.</span></span> <span data-ttu-id="c87b3-128">子項目定義的結構描述是由類別的設計工具。</span><span class="sxs-lookup"><span data-stu-id="c87b3-128">The schema defined for the child elements is up to the designer of the class.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="417bc-123">備註</span><span class="sxs-lookup"><span data-stu-id="417bc-123">Remarks</span></span>  
+ <span data-ttu-id="417bc-124">透過所提供的預設行為<xref:System.Security.Claims.ClaimsAuthenticationManager>類別回應連入宣告。</span><span class="sxs-lookup"><span data-stu-id="417bc-124">The default behavior provided through the <xref:System.Security.Claims.ClaimsAuthenticationManager> class echoes the incoming claims.</span></span> <span data-ttu-id="417bc-125">如果沒有`type`指定屬性或如果`type`屬性會指定<xref:System.Security.Claims.ClaimsAuthenticationManager>類別，`<claimsAuthenticationManager>`項目未採用子元素。</span><span class="sxs-lookup"><span data-stu-id="417bc-125">If no `type` attribute is specified or if the `type` attribute specifies the <xref:System.Security.Claims.ClaimsAuthenticationManager> class, the `<claimsAuthenticationManager>` element does not take child elements.</span></span> <span data-ttu-id="417bc-126">您可以指定`type`屬性來註冊型別衍生自<xref:System.Security.Claims.ClaimsAuthenticationManager>類別來實作自訂行為。</span><span class="sxs-lookup"><span data-stu-id="417bc-126">You can specify the `type` attribute to register a type derived from the <xref:System.Security.Claims.ClaimsAuthenticationManager> class to implement custom behavior.</span></span> <span data-ttu-id="417bc-127">在衍生的類別可支援透過子項目的設定`<claimsAuthenticationManager>`藉由覆寫的項目<xref:System.Security.Claims.ClaimsAuthenticationManager.LoadCustomConfiguration%2A>方法來處理這些項目。</span><span class="sxs-lookup"><span data-stu-id="417bc-127">Derived classes can support configuration through child elements of the `<claimsAuthenticationManager>` element by overriding the <xref:System.Security.Claims.ClaimsAuthenticationManager.LoadCustomConfiguration%2A> method to handle these elements.</span></span> <span data-ttu-id="417bc-128">子項目定義的結構描述是由設計工具的類別。</span><span class="sxs-lookup"><span data-stu-id="417bc-128">The schema defined for the child elements is up to the designer of the class.</span></span>  
   
- <span data-ttu-id="c87b3-129">`<claimsAuthenticationManager>`項目集合<xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthenticationManager%2A?displayProperty=nameWithType>屬性。</span><span class="sxs-lookup"><span data-stu-id="c87b3-129">The `<claimsAuthenticationManager>` element sets the <xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthenticationManager%2A?displayProperty=nameWithType> property.</span></span>  
+ <span data-ttu-id="417bc-129">`<claimsAuthenticationManager>`項目集<xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthenticationManager%2A?displayProperty=nameWithType>屬性。</span><span class="sxs-lookup"><span data-stu-id="417bc-129">The `<claimsAuthenticationManager>` element sets the <xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthenticationManager%2A?displayProperty=nameWithType> property.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c87b3-130">範例</span><span class="sxs-lookup"><span data-stu-id="c87b3-130">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="417bc-130">範例</span><span class="sxs-lookup"><span data-stu-id="417bc-130">Example</span></span>  
   
 ```xml  
 <system.identityModel>  
