@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: a22ddbada0162ba38589b244cab9123f33d7cf45
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 332f8eb4fb1a5a02df76c5745522037b029a2407
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742386"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47072785"
 ---
 # <a name="ltremovegt-element-for-authenticationmodules-network-settings"></a>&lt;移除&gt;authenticationModules （網路設定） 的項目
 移除應用程式中的驗證模組。  
@@ -45,7 +44,7 @@ ms.locfileid: "32742386"
 |-------------------|---------------------|  
 |**type**|若要移除的驗證模組的名稱。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -55,7 +54,7 @@ ms.locfileid: "32742386"
 |[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|指定用來驗證網路要求的模組。|  
   
 ## <a name="remarks"></a>備註  
- `remove`項目會移除先前已定義在組態檔中或在組態階層架構中較高層級的驗證模組。  
+ `remove`項目移除先前已定義在組態檔中或在組態階層架構中較高層級的驗證模組。  
   
  值`type`屬性應該是有效的類別名稱。  
   

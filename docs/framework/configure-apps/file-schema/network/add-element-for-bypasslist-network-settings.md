@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: d786d4fd7e6663649408b36fb518db06063ef916
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b6cf22fcaff928e53c33a8eb4987acd5a7f6250e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754515"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47081029"
 ---
 # <a name="ltaddgt-element-for-bypasslist-network-settings"></a>&lt;新增&gt;bypasslist （網路設定） 的項目
-將 proxy 略過清單中的 IP 位址或 DNS 名稱。  
+將 IP 位址或 DNS 名稱加入至 proxy 略過清單中。  
   
  \<configuration>  
 \<system.net>  
@@ -46,7 +45,7 @@ ms.locfileid: "32754515"
 |-------------------|---------------------|  
 |**address**|描述 IP 位址或 DNS 名稱的規則運算式。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -56,19 +55,19 @@ ms.locfileid: "32754515"
 |[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|提供一組規則運算式，其中說明不使用 proxy 的位址。|  
   
 ## <a name="remarks"></a>備註  
- `add`項目會插入規則運算式描述 IP 位址或 DNS 伺服器名稱略過 proxy 伺服器的位址清單。  
+ `add`項目會插入描述 IP 位址或 DNS 伺服器名稱略過 proxy 伺服器的位址清單的規則運算式。  
   
  值`address`屬性應該是規則運算式描述一組 IP 位址或主機名稱。  
   
- 指定此元素的規則運算式時，您應謹慎小心。 規則運算式"[a 到 z] +\\.contoso\\.com"比對任何裝載在 contoso.com 網域，但它也會比對 contoso.com.cpandl.com 網域中的任何主機。 要比對 contoso.com 網域中的主機，使用錨點 （"$"）:"[a 到 z] +\\.contoso\\.com$"。  
+ 指定這個項目的規則運算式時，您應謹慎小心。 規則運算式"[a-z]、[0-9]、[_] +\\.contoso\\.com 」 比對任何裝載在 contoso.com 網域，但它也會比對 contoso.com.cpandl.com 網域中的任何主機。 若要比對 contoso.com 網域中的主機，使用錨點 （"$"）:"[a-z]、[0-9]、[_] +\\.contoso\\.com$"。  
   
- 如需規則運算式的詳細資訊，請參閱。[.NET framework 規則運算式](../../../../../docs/standard/base-types/regular-expressions.md)。  
+ 如需有關規則運算式的詳細資訊，請參閱。[.NET framework 規則運算式](../../../../../docs/standard/base-types/regular-expressions.md)。  
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="example"></a>範例  
- 下列範例會將兩個位址加入至略過清單。 第一個略過 contoso.com 網域; 中的所有伺服器的 proxy第二個會略過的所有伺服器的 IP 位址 192.168 的 proxy。  
+ 下列範例會將略過清單中的兩個位址。 第一個會略過在 contoso.com 網域中的所有伺服器的 proxy第二個會略過的所有伺服器會開始其 IP 位址 192.168 的 proxy。  
   
 ```xml  
 <configuration>  

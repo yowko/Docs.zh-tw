@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 5fba4bfa14642092dbb7c0153bcd92160a62b12b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: f4ab3d4e7ce6686a43e4c5258a56e72203c38ebd
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43451567"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47085797"
 ---
 # <a name="ltproxygt-element-network-settings"></a>&lt;proxy&gt;項目 （網路設定）
 定義 Proxy 伺服器。  

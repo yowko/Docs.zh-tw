@@ -2,12 +2,12 @@
 title: .NET Framework 的序列化範例
 ms.date: 03/30/2017
 ms.assetid: 6a56f66d-c80a-43e9-8e50-fb9b61120222
-ms.openlocfilehash: 67fef0855cbe33a32d4a3838e88a246cdc884dd4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5deae766b2b05fcb14c51666fa9fb988832a9a2d
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581465"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47087300"
 ---
 # <a name="serialization-samples-for-the-net-framework"></a>.NET Framework 的序列化範例
 這個章節示範如何在 .NET Framework 序列化物件。  
@@ -20,10 +20,7 @@ ms.locfileid: "33581465"
  示範.NET 序列化的版本相容功能。  
   
  [Web 服務泛型序列化技術範例](../../../docs/standard/serialization/web-services-generics-serialization-technology-sample.md)  
- 顯示如何在 ASP.NET Web 服務中使用及控制泛型的序列化。  
-  
- [Web 服務 IXmlSerializable 技術範例](../../../docs/standard/serialization/web-services-ixmlserializable-technology-sample.md)  
- 顯示如何在 ASP.NET Web 服務中使用 <xref:System.Xml.Serialization.IXmlSerializable> 控制自訂型別的序列化。  
+ 顯示如何在 ASP.NET Web 服務中使用及控制泛型的序列化。 
   
  [SchemaImporterExtension 技術範例](../../../docs/standard/serialization/schemaimporterextension-technology-sample.md)  
  示範自訂 <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension>。  

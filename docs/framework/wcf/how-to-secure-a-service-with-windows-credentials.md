@@ -8,16 +8,15 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 2fa8d753d5fb168c14ee71cbbf6de62e0e4aff9e
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: bf88073c25351aac0e421d69a947605de3e37759
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806392"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073200"
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>HOW TO：使用 Windows 認證來確保服務安全
-本主題示範如何啟用 Windows Communication Foundation (WCF) 服務位於 Windows 網域，且呼叫相同的網域中的用戶端上的傳輸安全性。 如需有關此案例的詳細資訊，請參閱[Windows 驗證的傳輸安全性](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)。 範例應用程式，請參閱[WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md)範例。  
+本主題說明如何啟用位於 Windows 網域，而且由相同的網域中的用戶端呼叫的 Windows Communication Foundation (WCF) 服務上的傳輸安全性。 如需有關此案例的詳細資訊，請參閱 < [Windows 驗證的傳輸安全性](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)。 範例應用程式，請參閱[WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md)範例。  
   
  這個主題假設您擁有現有的合約介面、已定義了實作 (Implementation)，以及一些附加內容。 您也可以修改現有的服務和用戶端。  
   
@@ -46,7 +45,7 @@ ms.locfileid: "33806392"
      [!code-vb[c_SecureWindowsService#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsservice/vb/secureservice.vb#1)]  
   
 ### <a name="using-the-binding-in-a-service"></a>在服務中使用繫結  
- 這是第二個程序，說明如何在自我裝載的服務中使用繫結。 如需主機服務的詳細資訊，請參閱[裝載服務](../../../docs/framework/wcf/hosting-services.md)。  
+ 這是第二個程序，說明如何在自我裝載的服務中使用繫結。 裝載服務的詳細資訊請參閱 <<c0> [ 裝載的服務](../../../docs/framework/wcf/hosting-services.md)。  
   
 ##### <a name="to-use-a-binding-in-a-service"></a>在服務中使用繫結  
   
@@ -56,7 +55,7 @@ ms.locfileid: "33806392"
   
 3.  建立第二個名稱為 `Type` 的 `serviceType` 變數，並將其類型指派為實作的合約 (`Calculator`)。  
   
-4.  使用服務的基底位址，建立名稱為 <xref:System.Uri> 之 `baseAddress` 類別的執行個體。 基底位址必須具有符合傳輸的配置。 在此情況下，傳輸配置為 HTTP，而位址中則包含特殊統一資源識別元 (URI)"localhost"和連接埠號碼 （8036） 以及基底的端點位址 ("serviceModelSamples /): http://localhost:8036/serviceModelSamples/。  
+4.  使用服務的基底位址，建立名稱為 <xref:System.Uri> 之 `baseAddress` 類別的執行個體。 基底位址必須具有符合傳輸的配置。 在此情況下，傳輸配置為 HTTP，而位址中則包含特殊統一資源識別元 (URI)"localhost"與連接埠號碼 (8036)，以及基底的端點位址 ("serviceModelSamples /): http://localhost:8036/serviceModelSamples/。  
   
 5.  使用 <xref:System.ServiceModel.ServiceHost> 和 `serviceType` 變數，建立 `baseAddress` 類別的執行個體。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "33806392"
      [!code-vb[c_SecureWindowsService#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsservice/vb/secureservice.vb#2)]  
   
 ### <a name="using-the-binding-in-a-client"></a>在用戶端中使用繫結  
- 這項程序會說明如何產生與服務進行通訊的 Proxy。 Proxy 會產生含有[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)使用服務中繼資料來建立 proxy。  
+ 這項程序會說明如何產生與服務進行通訊的 Proxy。 Proxy 就會產生含有[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)建立 proxy 的情況下，這在使用的服務中繼資料。  
   
  此程序還會建立可與服務進行通訊之 <xref:System.ServiceModel.WSHttpBinding> 類別的執行個體，然後呼叫該服務。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "33806392"
   
 ##### <a name="to-use-a-binding-in-a-client-with-code"></a>搭配程式碼在用戶端中使用繫結  
   
-1.  使用 SvcUtil.exe 工具，從服務的中繼資料產生 Proxy 程式碼。 如需詳細資訊，請參閱[How to： 建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 產生的 proxy 程式碼繼承自<xref:System.ServiceModel.ClientBase%601>類別，可確保每個用戶端具有必要的建構函式、 方法和屬性，以與 WCF 服務進行通訊。 在這個範例中，產生的程式碼包含 `CalculatorClient` 類別，這個類別會實作 `ICalculator` 介面，因此就會與服務程式碼相容。  
+1.  使用 SvcUtil.exe 工具，從服務的中繼資料產生 Proxy 程式碼。 如需詳細資訊，請參閱 <<c0> [ 如何： 建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 產生的 proxy 程式碼繼承自<xref:System.ServiceModel.ClientBase%601>類別，可確保每個用戶端具有必要的建構函式、 方法和屬性與 WCF 服務進行通訊。 在這個範例中，產生的程式碼包含 `CalculatorClient` 類別，這個類別會實作 `ICalculator` 介面，因此就會與服務程式碼相容。  
   
 2.  此程序的程式碼會插入至用戶端程式的 `Main` 方法開頭。  
   
@@ -96,13 +95,13 @@ ms.locfileid: "33806392"
 ## <a name="using-the-configuration-file"></a>使用組態檔  
  如果不使用程序程式碼建立繫結，您可以改用下面針對組態檔之繫結區段所顯示的程式碼。  
   
- 如果您還沒有定義的服務，請參閱[設計與實作服務](../../../docs/framework/wcf/designing-and-implementing-services.md)，和[設定 Services](../../../docs/framework/wcf/configuring-services.md)。  
+ 如果您還沒有定義的服務，請參閱[設計與實作服務](../../../docs/framework/wcf/designing-and-implementing-services.md)，並[Configuring](../../../docs/framework/wcf/configuring-services.md)。  
   
- **請注意**服務和用戶端組態檔中使用這個組態程式碼。  
+ **請注意**這個組態程式碼會在服務和用戶端組態檔。  
   
 #### <a name="to-enable-transfer-security-on-a-service-in-a-windows-domain-using-configuration"></a>使用組態在 Windows 網域的服務上啟用傳輸安全性  
   
-1.  新增[ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)元素[\<繫結 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)項目區段的組態檔。  
+1.  新增[ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)項目[\<繫結 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)項目區段的組態檔。  
   
 2.  將 <`binding`> 項目新增至 <`WSHttpBinding`> 項目，並將 `configurationName` 屬性設定為適用於您應用程式的值。  
   
@@ -110,7 +109,7 @@ ms.locfileid: "33806392"
   
 4.  新增 <`message`> 項目，並將 `clientCredentialType` 屬性設定為 Windows。  
   
-5.  在服務的組態檔中，將 `<bindings>` 區段取代為下列程式碼。 如果您還沒有服務組態檔，請參閱[使用繫結來設定服務和用戶端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)。  
+5.  在服務的組態檔中，將 `<bindings>` 區段取代為下列程式碼。 如果您還沒有服務組態檔，請參閱[使用的繫結設定服務及用戶端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)。  
   
     ```xml  
     <bindings>  
@@ -129,9 +128,9 @@ ms.locfileid: "33806392"
   
 ##### <a name="to-use-a-binding-in-a-client-with-configuration"></a>搭配組態在用戶端中使用繫結  
   
-1.  使用 SvcUtil.exe 工具，從服務的中繼資料產生 Proxy 程式碼和組態檔。 如需詳細資訊，請參閱[How to： 建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
+1.  使用 SvcUtil.exe 工具，從服務的中繼資料產生 Proxy 程式碼和組態檔。 如需詳細資訊，請參閱 <<c0> [ 如何： 建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
   
-2.  取代[\<繫結 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)上一節中的組態程式碼產生的組態檔的區段。  
+2.  取代[\<繫結 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)為前一個區段的組態程式碼產生的組態檔區段。  
   
 3.  程序程式碼會插入至用戶端程式的 `Main` 方法開頭。  
   

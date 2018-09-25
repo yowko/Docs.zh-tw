@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4cf36786-b89a-40e2-a0f1-86bb9b783343
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 60a18ae8d89d6be69b2c10c07064f123d3f9c0f8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7ca375935c1dfcdb406257ece1a9dfd18851dddf
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745142"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47113880"
 ---
 # <a name="ltswitchesgt-element"></a>&lt;交換器&gt;項目
 包含追蹤參數及設定追蹤參數的層級。  
@@ -39,7 +38,7 @@ ms.locfileid: "32745142"
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -53,10 +52,10 @@ ms.locfileid: "32745142"
 |`System.diagnostics`|指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。|  
   
 ## <a name="remarks"></a>備註  
- 您可以變更的層級的追蹤參數，以將它放置在組態檔中。 如果已切換<xref:System.Diagnostics.BooleanSwitch>，您可以開啟或關閉。 如果已切換<xref:System.Diagnostics.TraceSwitch>、 您可以指派不同層級，以便指定類型的追蹤或偵錯訊息的應用程式輸出。  
+ 您可以將它放在組態檔中，以變更追蹤參數的層級。 如果參數為<xref:System.Diagnostics.BooleanSwitch>，可以先開啟和關閉。 如果參數為<xref:System.Diagnostics.TraceSwitch>，您可以將不同層級指派，以便指定類型的追蹤或偵錯訊息的應用程式輸出。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用**\<切換 >** 項目來設定`General`追蹤參數<xref:System.Diagnostics.TraceLevel>層級，並且啟用`Data`布林追蹤參數。  
+ 下列範例示範如何使用**\<切換 >** 要設定項目`General`追蹤參數設<xref:System.Diagnostics.TraceLevel>層級，並且啟用`Data`布林追蹤參數。  
   
 ```xml  
 <configuration>  

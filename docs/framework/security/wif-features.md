@@ -3,13 +3,12 @@ title: WIF 功能
 ms.date: 03/30/2017
 ms.assetid: 7e13cae9-7cd1-491f-aa75-0735320a7be6
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: a4c1f4b454b52168935e63e763f331ea04f0dc2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d2896d9afb3dbee0e0cb8348d229d399a2c3437a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398510"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47108425"
 ---
 # <a name="wif-features"></a>WIF 功能
 -   [Visual Studio 2012 的身分識別與存取工具](../../../docs/framework/security/identity-and-access-tool-for-vs.md)  

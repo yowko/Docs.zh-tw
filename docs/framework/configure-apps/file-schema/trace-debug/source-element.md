@@ -9,13 +9,12 @@ helpviewer_keywords:
 - source element
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: b7c2a71b129a0ad7d1c2a72b18b8a69a111f9495
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 818324077322fffb40a192c9197efde6e8ff7591
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752568"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088941"
 ---
 # <a name="ltsourcegt-element"></a>&lt;來源&gt;項目
 指定起始追蹤訊息的追蹤來源。  
@@ -41,15 +40,15 @@ ms.locfileid: "32752568"
 |屬性|描述|  
 |---------------|-----------------|  
 |`name`|選擇性屬性。<br /><br /> 指定追蹤來源的名稱。|  
-|`switchName`|選擇性屬性。<br /><br /> 應用程式中，指定追蹤交換器執行個體的名稱。 如果參數不會識別在`<switches>`項目，此值會指定交換器層級。|  
-|`switchType`|選擇性屬性。<br /><br /> 指定追蹤參數的類型。 如果有的話，類型必須是有效的類別名稱，並不能是空的字串。|  
-|`extraAttribute`|選擇性屬性。<br /><br /> 指定的值所識別的追蹤來源特定屬性<xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A>該追蹤來源的方法。|  
+|`switchName`|選擇性屬性。<br /><br /> 應用程式中，指定追蹤交換器執行個體的名稱。 如果參數不會識別在`<switches>`項目，值會指定此參數的層級。|  
+|`switchType`|選擇性屬性。<br /><br /> 指定追蹤參數的類型。 如果有的話，類型必須是有效的類別名稱，並不能是空字串。|  
+|`extraAttribute`|選擇性屬性。<br /><br /> 指定追蹤來源特定屬性所識別的值<xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A>該追蹤來源的方法。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|包含收集、 儲存和路由傳送訊息的接聽程式。|  
+|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|包含用於收集、 儲存及路由傳送訊息的接聽項。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -60,10 +59,10 @@ ms.locfileid: "32752568"
 |`sources`|包含起始追蹤訊息的追蹤來源。|  
   
 ## <a name="remarks"></a>備註  
- 此項目可以用於電腦組態檔 (Machine.config) 和應用程式組態檔。  
+ 這個項目可以用於電腦組態檔 (Machine.config) 和應用程式組態檔。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用`<source>`要加入追蹤來源項目的`mySource`和設定來源交換器層級具名`sourceSwitch`。 主控台追蹤接聽程式會加入，將追蹤資訊寫入主控台。  
+ 下列範例示範如何使用`<source>`要加入追蹤來源項目`mySource`]，將來源交換器層級設定為 [ `sourceSwitch`。 主控台追蹤接聽程式會加入，將追蹤資訊寫入主控台。  
   
 ```xml  
 <configuration>  

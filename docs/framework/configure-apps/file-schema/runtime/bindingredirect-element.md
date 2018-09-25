@@ -11,21 +11,20 @@ helpviewer_keywords:
 ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 08dc7a55b5b0c580f19d137496b9405fa4e18a5f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 535519c65aba7ce13703bb33a16b09cde84c3f03
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745288"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47085540"
 ---
 # <a name="ltbindingredirectgt-element"></a>&lt;bindingRedirect&gt;項目
 將一個組件版本重新導向至另一個版本。  
   
  \<configuration>  
 \<執行階段 >  
-\<assemblyBinding >  
-\<y >  
+\<assemblyBinding>  
+\<dependentAssembly>  
 \<bindingRedirect >  
   
 ## <a name="syntax"></a>語法  
@@ -43,10 +42,10 @@ newVersion="new assembly version"/>
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`oldVersion`|必要屬性。<br /><br /> 指定原本要求的組件版本。 組件版本號碼的格式是*major.minor.build.revision*。 這個版本號碼每個部分的有效值為 0 至 65535。<br /><br /> 您也可以使用下列格式指定版本範圍：<br /><br /> *n.n.n.n-n.n.n.n*|  
-|`newVersion`|必要屬性。<br /><br /> 指定要使用而不是原始要求的版本格式的組件版本： *n.n.n.n*<br /><br /> 這個值可以指定 `oldVersion` 以前的版本。|  
+|`oldVersion`|必要屬性。<br /><br /> 指定原本要求的組件版本。 組件版本號碼的格式*major.minor.build.revision*。 這個版本號碼每個部分的有效值為 0 至 65535。<br /><br /> 您也可以使用下列格式指定版本範圍：<br /><br /> *n.n.n.n-n.n.n.n*|  
+|`newVersion`|必要屬性。<br /><br /> 指定要使用，而非原本要求的版本格式的組件版本： *n.n.n.n*<br /><br /> 這個值可以指定 `oldVersion` 以前的版本。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -66,7 +65,7 @@ newVersion="new assembly version"/>
   
  您可以在 `bindingRedirect` 項目中包含多個 `dependentAssembly` 項目，藉此重新導向多個組件版本。 您也可以將組件從較新版本重新導向至較舊版本。  
   
- 在應用程式組態檔中進行明確的組件繫結重新導向必須擁有安全性權限。 這適用於 .NET Framework 組件和協力廠商組件的重新導向。 藉由設定授與權<xref:System.Security.Permissions.SecurityPermissionFlag>加上旗標上<xref:System.Security.Permissions.SecurityPermission>。 如需詳細資訊，請參閱[組件繫結重新導向安全性權限](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)。  
+ 在應用程式組態檔中進行明確的組件繫結重新導向必須擁有安全性權限。 這適用於 .NET Framework 組件和協力廠商組件的重新導向。 藉由設定授與權限<xref:System.Security.Permissions.SecurityPermissionFlag>加上旗標上<xref:System.Security.Permissions.SecurityPermission>。 如需詳細資訊，請參閱 <<c0> [ 組件繫結重新導向安全性使用權限](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)。  
   
 ## <a name="example"></a>範例  
  下列範例將示範如何將某一個組件版本重新導向至另一個版本。  

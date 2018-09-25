@@ -1,5 +1,5 @@
 ---
-title: '&lt;assemblyIdentity&gt;元素&lt;執行階段&gt;'
+title: '&lt;assemblyIdentity&gt;項目&lt;執行階段&gt;'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/assemblyIdentity
@@ -11,22 +11,21 @@ helpviewer_keywords:
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 5d985d1620b7dec324c0113bcd5652cede044950
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2b0d7968ce2cf8f326004c9e564cb2e7912c1a0a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744963"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47077339"
 ---
-# <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a>&lt;assemblyIdentity&gt;元素&lt;執行階段&gt;
-包含有關組件的識別資訊。  
+# <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a>&lt;assemblyIdentity&gt;項目&lt;執行階段&gt;
+包含組件的識別資訊。  
   
  \<configuration>  
 \<執行階段 >  
-\<assemblyBinding >  
-\<y >  
-\<assemblyIdentity >  
+\<assemblyBinding>  
+\<dependentAssembly>  
+\<組件識別 >  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,19 +45,19 @@ culture="assembly culture"/>
 |---------------|-----------------|  
 |`name`|必要屬性。<br /><br /> 組件名稱|  
 |`culture`|選擇性屬性。<br /><br /> 字串，指定的語言和國家/地區的組件。|  
-|`publicKeyToken`|選擇性屬性。<br /><br /> 指定組件的強式名稱的十六進位值。|  
-|`processorArchitecture`|選擇性屬性。<br /><br /> 其中一個值"x86"、"amd64"、"msil"或"ia64"，指定包含處理器特定程式碼組件的處理器架構。 值不區分大小寫。 如果屬性被指派任何其他值，將整個`<assemblyIdentity>`項目會被忽略。 請參閱 <xref:System.Reflection.ProcessorArchitecture>。|  
+|`publicKeyToken`|選擇性屬性。<br /><br /> 十六進位值，指定組件的強式名稱。|  
+|`processorArchitecture`|選擇性屬性。<br /><br /> 其中一個值"x86"、"amd64"、"msil"或"ia64"，指定包含處理器特定程式碼組件的處理器架構。 值不區分大小寫。 如果屬性被指派任何其他值，整個`<assemblyIdentity>`項目會被忽略。 請參閱 <xref:System.Reflection.ProcessorArchitecture>。|  
   
 ## <a name="processorarchitecture-attribute"></a>processorArchitecture 屬性  
   
 |值|描述|  
 |-----------|-----------------|  
-|`amd64`|將 64 位元的 AMD 處理器只。|  
-|`ia64`|64 位元 Intel 處理器只。|  
-|`msil`|處理器和每個字組的位元中性|  
-|`x86`|32 位元 Intel 處理器，其中一個原生或 Windows on Windows (WOW) 的 64 位元平台上的環境中。|  
+|`amd64`|64 位元的 AMD 處理器只。|  
+|`ia64`|在 64 位元 Intel 處理器只。|  
+|`msil`|相對於處理器和每個字組的位元的中性|  
+|`x86`|32 位元 Intel 處理器、 原生或 Windows 上的 64 位元平台上的 Windows (WOW) 環境中。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -71,11 +70,11 @@ culture="assembly culture"/>
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 每個 **\<dependentAssembly >** 項目必須有一個 **\<assemblyIdentity >** 子項目。  
+ 每隔 **\<dependentAssembly >** 項目必須有一個**\<組件識別 >** 子項目。  
   
- 如果`processorArchitecture`屬性已存在，`<assemblyIdentity>`項目只適用於具有對應的處理器架構的組件。 如果`processorArchitecture`屬性不存在，`<assemblyIdentity>`項目可以套用至任何處理器架構的組件。  
+ 如果`processorArchitecture`屬性，就`<assemblyIdentity>`項目僅適用於具有對應的處理器架構的組件。 如果`processorArchitecture`屬性不存在，`<assemblyIdentity>`項目可以套用至組件的任何處理器架構。  
   
- 下列範例顯示兩個組件具有相同名稱以兩個不同的兩個處理器架構，以及其版本已受到維護的同步處理不組態檔。當應用程式執行 x86 平台的第一個`<assemblyIdentity>`元素會套用，而其他都會被忽略。 如果在非 x86 或 ia64 平台上，執行應用程式，兩者都會被忽略。  
+ 下列範例顯示兩個組件具有相同名稱的目標兩個不同的兩個處理器架構，和其版本已不受到維護的同步處理組態檔。時，應用程式執行 x86 平台的第一個`<assemblyIdentity>`適用於項目，且另會被忽略。 如果應用程式執行 x86 或 ia64 以外的平台上，兩者都會被忽略。  
   
 ```xml  
 <configuration>  
@@ -102,10 +101,10 @@ culture="assembly culture"/>
 </configuration>  
 ```  
   
- 如果組態檔包含`<assemblyIdentity>`項目不含`processorArchitecture`屬性，而且不包含符合的平台的項目不含的項目`processorArchitecture`屬性使用。  
+ 如果組態檔包含`<assemblyIdentity>`含的項目`processorArchitecture`屬性，而且不包含符合的平台，而不需要的項目之項目`processorArchitecture`屬性使用。  
   
 ## <a name="example"></a>範例  
- 下列範例會示範如何提供組件的相關資訊。  
+ 下列範例示範如何提供組件的相關資訊。  
   
 ```xml  
 <configuration>  

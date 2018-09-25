@@ -1,5 +1,5 @@
 ---
-title: '&lt;清除&gt;元素&lt;接聽程式&gt;如&lt;追蹤&gt;'
+title: '&lt;清除&gt;項目&lt;接聽程式&gt;如&lt;追蹤&gt;'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/clear
@@ -9,21 +9,20 @@ helpviewer_keywords:
 ms.assetid: b44732a8-271f-4a06-ba9e-fe3298d6f192
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 1705ed7cc847d60ecf8b42f4615d77f2cc569e21
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 91b4b4f132138fa6752c1da9b28e7a3ab7fad006
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748655"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082886"
 ---
-# <a name="ltcleargt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;清除&gt;元素&lt;接聽程式&gt;如&lt;追蹤&gt;
+# <a name="ltcleargt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;清除&gt;項目&lt;接聽程式&gt;如&lt;追蹤&gt;
 清除追蹤的 `Listeners` 集合。  
   
  \<configuration>  
 \<system.diagnostics >  
 \<追蹤 >  
-\<接聽項 >  
+\<接聽程式 >  
 \<清除 >  
   
 ## <a name="syntax"></a>語法  
@@ -38,7 +37,7 @@ ms.locfileid: "32748655"
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -48,20 +47,20 @@ ms.locfileid: "32748655"
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`system.diagnostics`|指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。|  
 |`trace`|包含用於收集、儲存及路由傳送追蹤訊息的接聽項。|  
-|`listeners`|包含收集、 儲存和路由傳送訊息的接聽程式。 接聽程式將追蹤輸出導向至適當的目標。|  
+|`listeners`|包含用於收集、 儲存及路由傳送訊息的接聽項。 接聽程式將追蹤輸出導向至適當的目標。|  
   
 ## <a name="remarks"></a>備註  
- `<clear>`項目會移除所有的接聽程式從`Listeners`追蹤的集合。 您可以使用`<clear>`之前使用的項目`<add>`確定沒有其他作用中的接聽程式集合中的項目。  
+ `<clear>`項目會移除所有的接聽程式從`Listeners`追蹤的集合。 您可以使用`<clear>`項目之前使用`<add>`確有沒有其他作用中接聽程式集合中的項目。  
   
- 您可以清除`Listeners`集合以程式設計方式呼叫<xref:System.Diagnostics.TraceListenerCollection.Clear%2A>方法<xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType>屬性 (`System.Diagnostics.Trace.Listeners.Clear()`)。  
+ 您可以清除`Listeners`集合，以程式設計的方式是藉由呼叫<xref:System.Diagnostics.TraceListenerCollection.Clear%2A>方法<xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType>屬性 (`System.Diagnostics.Trace.Listeners.Clear()`)。  
   
- 此項目可以用於電腦組態檔 (Machine.config) 和應用程式組態檔。  
+ 這個項目可以用於電腦組態檔 (Machine.config) 和應用程式組態檔。  
   
 > [!NOTE]
->  `<clear>`項目會移除<xref:System.Diagnostics.DefaultTraceListener>從`Listeners`集合中，變更的行為<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>， <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>， <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>，和<xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType>方法。 呼叫`Assert`或`Fail`方法通常會在顯示的訊息方塊。 不過，訊息不會顯示方塊如果<xref:System.Diagnostics.DefaultTraceListener>不在`Listeners`集合。  
+>  `<clear>`項目會移除<xref:System.Diagnostics.DefaultTraceListener>從`Listeners`集合中，變更的行為<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>， <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>， <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>，和<xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType>方法。 呼叫`Assert`或`Fail`方法通常會產生一個訊息方塊的顯示方式。 不過，訊息方塊不顯示如果<xref:System.Diagnostics.DefaultTraceListener>不是處於`Listeners`集合。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用`<clear>`之前使用的項目`<add>`加入接聽程式的項目`console`至`Listeners`追蹤的集合。  
+ 下列範例示範如何使用`<clear>`項目之前使用`<add>`加入接聽程式的項目`console`到`Listeners`追蹤的集合。  
   
 ```xml  
 <configuration>  

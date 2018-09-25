@@ -10,11 +10,11 @@ ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9fbbe84811e3fa096b9e13c459143311bb75a198
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46579897"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47077833"
 ---
 # <a name="exception-throwing"></a>擲回例外狀況
 擲回例外狀況這一節所述的指導方針需要良好定義的執行失敗的意義。 每當成員不是什麼，就會發生執行失敗設計 （成員名稱有隱含意義）。 例如，如果`OpenFile`方法無法傳回給呼叫端的開啟的檔案控制代碼，它會被視為新的執行失敗。  

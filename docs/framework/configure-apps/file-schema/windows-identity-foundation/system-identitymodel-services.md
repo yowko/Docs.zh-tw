@@ -3,13 +3,12 @@ title: '&lt;system.identityModel.services&gt;'
 ms.date: 03/30/2017
 ms.assetid: fa1624dd-2d74-4ae3-942e-498cee261ac5
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: ca108d7dd0498b0d7c08bb632ab45c7229ff58c5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c7261d20ae2379ad33679cadecdef484f2afdecf
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757043"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075210"
 ---
 # <a name="ltsystemidentitymodelservicesgt"></a>&lt;system.identityModel.services&gt;
 使用 WS-同盟通訊協定進行驗證的組態區段。  
@@ -31,7 +30,7 @@ ms.locfileid: "32757043"
 ### <a name="attributes"></a>屬性  
  無  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -44,12 +43,12 @@ ms.locfileid: "32757043"
  新增`<system.identityModel.services>`SAM 和 WSFAM 提供設定您的應用程式組態檔的區段。  
   
 > [!IMPORTANT]
->  當使用<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>或<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>類別，以提供您的程式碼宣告授權管理員中的宣告型存取控制 (<xref:System.Security.Claims.ClaimsAuthorizationManager>) 和用來製作授權決策的原則透過設定`<identityConfiguration>`參考項目隱含或明確地從`<federationConfiguration>`本節中的項目。 如需詳細資訊，請參閱**備註**下[ \<federationConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)項目。  
+>  使用時<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>或<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>類別，以提供您的程式碼宣告授權管理員中的宣告型存取控制 (<xref:System.Security.Claims.ClaimsAuthorizationManager>) 和用來製作授權決策的原則已透過`<identityConfiguration>`參考項目隱含或明確地從`<federationConfiguration>`在本節中的項目。 如需詳細資訊，請參閱**備註**下方[ \<Federationconfiguration> >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)項目。  
   
- `<system.identityModel.services>`區段由<xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection>類別。 子集合`<federationConfiguration>`設定一節中的項目由<xref:System.IdentityModel.Services.Configuration.FederationConfigurationElementCollection>類別。  
+ `<system.identityModel.services>`一節以<xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection>類別。 子系的集合`<federationConfiguration>`一節中設定的項目由<xref:System.IdentityModel.Services.Configuration.FederationConfigurationElementCollection>類別。  
   
 ## <a name="example"></a>範例  
- 下列 XML 說明如何新增`<system.identityModel.services>`區段的組態檔。 您必須先新增兩個區段宣告`<system.identityModel.services>`區段和`<system.identityModel>`區段。 (當您將加入`<system.identityModel.services>` 區段中，您應該加入宣告`<system.identityModel>`> 一節以確保預設`<identityConfiguration>`如有必要，可以由執行階段建立區段。)在加入區段宣告之後，您可以設定同盟的驗證下`<system.identityModel.services>`項目。  
+ 下列 XML 示範如何加入`<system.identityModel.services>`組態檔的區段。 您必須先新增區段宣告兩個`<system.identityModel.services>`一節和`<system.identityModel>`區段。 (當您將加入`<system.identityModel.services>`區段中，您應該加入宣告`<system.identityModel>`一節，以確定預設`<identityConfiguration>`可以由執行階段建立區段，如有必要。)已新增區段宣告之後，您可以設定下的聯合的驗證設定`<system.identityModel.services>`項目。  
   
 ```xml  
 <configuration>  

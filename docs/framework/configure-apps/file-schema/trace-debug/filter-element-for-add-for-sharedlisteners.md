@@ -1,5 +1,5 @@
 ---
-title: '&lt;篩選&gt;元素&lt;新增&gt;如&lt;sharedListeners&gt;'
+title: '&lt;篩選條件&gt;項目&lt;新增&gt;如&lt;sharedListeners&gt;'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add/filter
@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 3bbba1c805c6b300f7cf7b3d9112cde9df7607a8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5172a2be163e178b9c7115825fa5dba4ff073a96
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745051"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47115135"
 ---
-# <a name="ltfiltergt-element-for-ltaddgt-for-ltsharedlistenersgt"></a>&lt;篩選&gt;元素&lt;新增&gt;如&lt;sharedListeners&gt;
+# <a name="ltfiltergt-element-for-ltaddgt-for-ltsharedlistenersgt"></a>&lt;篩選條件&gt;項目&lt;新增&gt;如&lt;sharedListeners&gt;
 將篩選新增至 `sharedListeners` 集合中的接聽項。  
   
  \<configuration>  
@@ -43,10 +42,10 @@ ms.locfileid: "32745051"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|**type**|必要屬性。<br /><br /> 指定篩選器的類型。 您可以使用類型的完整名稱 (格式為<xref:System.Type.FullName%2A?displayProperty=nameWithType>屬性)，或者您可以使用的完整限定的類型名稱，包括組件資訊 (格式為<xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>屬性)。 如需建立完整限定的類型名稱的資訊，請參閱[指定限定的型別名稱](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。|  
-|**initializeData**|選擇性屬性。<br /><br /> 指定的類別傳遞至建構函式的字串。|  
+|**type**|必要屬性。<br /><br /> 指定的篩選器類型。 您可以使用類型的完整名稱 (格式為<xref:System.Type.FullName%2A?displayProperty=nameWithType>屬性)，或者您可以使用完整的類型名稱包括組件資訊 (格式為<xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>屬性)。 如需建立完整限定的類型名稱的資訊，請參閱[指定完整的型別名稱](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。|  
+|**initializeData**|選擇性屬性。<br /><br /> 指定的類別，建構函式傳遞的字串。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -55,16 +54,16 @@ ms.locfileid: "32745051"
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`system.diagnostics`|指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。|  
-|`sharedListeners`|接聽程式可以參考任何來源或追蹤項目集合。|  
-|`add`|加入至接聽程式**sharedListeners**集合。|  
+|`sharedListeners`|任何來源或追蹤項目可以參考的接聽程式的集合。|  
+|`add`|新增接聽程式，以**sharedListeners**集合。|  
   
 ## <a name="remarks"></a>備註  
- 如果接聽程式已定義在`<add>`元素`<sharedListeners>`項目，應該在定義該接聽項的篩選條件`<filter>`是子系的項目`<add>`項目。  
+ 如果接聽程式已定義在`<add>`項目`<sharedListeners>`項目，應在定義該接聽項的篩選條件`<filter>`子系的項目`<add>`項目。  
   
- 此項目可以用於電腦組態檔 (Machine.config) 和應用程式組態檔。  
+ 這個項目可以用於電腦組態檔 (Machine.config) 和應用程式組態檔。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用`<filter>`將篩選加入追蹤接聽項的項目`console`中`sharedListeners`集合。  
+ 下列範例示範如何使用`<filter>`新增至追蹤接聽項的篩選條件的項目`console`在`sharedListeners`集合。  
   
 ```xml  
 <configuration>  

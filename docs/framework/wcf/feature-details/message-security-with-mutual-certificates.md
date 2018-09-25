@@ -6,13 +6,12 @@ dev_langs:
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: ad5862064966ccae4c313e7fa3d982ec9abbbcd2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7f694b25d992832aabe63d3e7f06dc5d0d9ed86b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522126"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47077515"
 ---
 # <a name="message-security-with-mutual-certificates"></a>相互憑證的訊息安全性
 下列案例示範 Windows Communication Foundation (WCF) 服務和用戶端使用訊息安全性模式保護。 用戶端與服務以憑證加以驗證。  

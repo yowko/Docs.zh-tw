@@ -1,5 +1,5 @@
 ---
-title: '&lt;新增&gt;元素&lt;namedCaches&gt;'
+title: '&lt;新增&gt;項目&lt;namedCaches&gt;'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - add element for <namedCaches>
@@ -7,16 +7,15 @@ helpviewer_keywords:
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: d65dfd9a1560f2657f48b327277b64ab77014b47
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 695ee744bdf2226f0647c4cdf142a2dca4e97a4a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743819"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47085810"
 ---
-# <a name="ltaddgt-element-for-ltnamedcachesgt"></a>&lt;新增&gt;元素&lt;namedCaches&gt;
-新增`namedCache`進入`namedCaches`記憶體快取的集合。  
+# <a name="ltaddgt-element-for-ltnamedcachesgt"></a>&lt;新增&gt;項目&lt;namedCaches&gt;
+新增`namedCache`項目以`namedCaches`記憶體快取的集合。  
   
  \<system.runtime.caching>  
 \<memoryCache>  
@@ -42,12 +41,12 @@ ms.locfileid: "32743819"
   
 |屬性|描述|  
 |-|-|  
-|`CacheMemoryLimitMegabytes`|整數值，指定允許的最大大小 （mb) 的執行個體<xref:System.Runtime.Caching.MemoryCache>可以成長到。 預設值為 0，這表示<xref:System.Runtime.Caching.MemoryCache>預設會使用類別的自動調整啟發學習法。|  
+|`CacheMemoryLimitMegabytes`|整數值，指定允許的大小 （以 mb 為單位） 的最大的執行個體<xref:System.Runtime.Caching.MemoryCache>可以成長到。 預設值為 0，這表示<xref:System.Runtime.Caching.MemoryCache>預設會使用類別的自動調整啟發學習法。|  
 |`Name`|快取的名稱。|  
-|`PhysicalMemoryLimitPercentage`|整數值 0 和 100 之間，指定可供快取的實際安裝的電腦記憶體的最大百分比。 預設值為 0，這表示<xref:System.Runtime.Caching.MemoryCache>預設會使用類別的自動調整啟發學習法。|  
+|`PhysicalMemoryLimitPercentage`|整數值介於 0 到 100 之間，指定可供快取的實際安裝的電腦記憶體的最大百分比。 預設值為 0，這表示<xref:System.Runtime.Caching.MemoryCache>預設會使用類別的自動調整啟發學習法。|  
 |`PollingInterval`|表示時間間隔的值，在此時間之後，快取實作會比較目前的記憶體負載與針對快取執行個體所設定的絕對和百分比型記憶體限制。 這個值是以"Hh: mm:"格式輸入。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  `None`  
   
 ### <a name="parent-elements"></a>父項目  
@@ -57,10 +56,10 @@ ms.locfileid: "32743819"
 |[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|包含集合的組態設定具名<xref:System.Runtime.Caching.MemoryCache>執行個體。|  
   
 ## <a name="remarks"></a>備註  
- `add`項目加入至項目的`namedCaches`記憶體快取的集合。 您可以使用[清除](../../../../../docs/framework/configure-apps/file-schema/runtime/clear-element-for-namedcaches.md)使用之前的項目`add`項目，以確定有沒有其他具名快取，在集合中的。 這個項目可以用於 machine.config 檔案中，並在 Web.config 檔案中。  
+ `add`項目加入至項目的`namedCaches`記憶體快取的集合。 您可以使用[清除](../../../../../docs/framework/configure-apps/file-schema/runtime/clear-element-for-namedcaches.md)項目才能使用`add`項目，以確定有沒有其他具名集合中的快取。 在 machine.config 檔案和 Web.config 檔案中，可以使用這個項目。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何定義預設的設定`namedCache`進入`namedCaches`記憶體快取的集合。  
+ 下列範例示範如何定義設定的預設值`namedCache`項目以`namedCaches`記憶體快取的集合。  
   
 ```xml  
 <configuration>  

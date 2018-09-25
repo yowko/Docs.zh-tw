@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: c6cfd036a98c345da23fc7b3699987c9678e149d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cdc7e8501f7cf3f5cff4c29ca5b2d004ce7cd5c6
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753738"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080321"
 ---
 # <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a>&lt;新增&gt;connectionManagement （網路設定） 的項目
 將 IP 位址或 DNS 名稱加入連線管理清單中。  
@@ -47,7 +46,7 @@ ms.locfileid: "32753738"
 |`address`|描述 IP 位址或 DNS 名稱的字串。|  
 |`maxconnection`|允許連接到伺服器的連線數目上限。 如果未提供，預設值為 2。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -65,7 +64,7 @@ ms.locfileid: "32753738"
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="example"></a>範例  
- 下列範例會設定應用程式使用四個連接至 www.contoso.com 伺服器和所有其他伺服器的兩個連線。  
+ 下列範例會設定應用程式使用四個連接至 www.contoso.com 伺服器和兩個連線到所有其他伺服器。  
   
 ```xml  
 <configuration>  

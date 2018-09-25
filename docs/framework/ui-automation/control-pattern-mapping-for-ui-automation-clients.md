@@ -7,17 +7,16 @@ helpviewer_keywords:
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
 author: Xansky
 ms.author: mhopkins
-manager: markl
-ms.openlocfilehash: 02244043d802029364c7a725940f03ecdd21f573
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 6beeec86ba8bf16be432bc2ae2de20aa08a0d2d9
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864653"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47113117"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>UI 自動化用戶端的控制項模式對應
 > [!NOTE]
->  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱 < [Windows Automation API： 使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱 < [Windows Automation API： 使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主題列出控制項類型及其相關聯的控制項模式。  
   
@@ -43,7 +42,7 @@ ms.locfileid: "43864653"
 |下拉式方塊|展開摺疊|選取、值|Scroll|  
 |資料格|Grid|捲軸、選取、表格|無|  
 |Data Item|Selection Item|展開摺疊、方格項目、捲軸項目、表格、切換、值|無|  
-|文件|Text|捲軸、值|無|  
+|文件|文字|捲軸、值|無|  
 |Edit|無|文字、範圍值、值|無|  
 |群組|無|展開摺疊|無|  
 |頁首|無|Transform|無|  
@@ -67,7 +66,7 @@ ms.locfileid: "43864653"
 |索引標籤|選取|Scroll|無|  
 |索引標籤項目|Selection Item|無|叫用|  
 |資料表|方格、方格項目、表格、表格項目|無|無|  
-|Text|無|方格項目、表格項目、文字|值|  
+|文字|無|方格項目、表格項目、文字|值|  
 |Thumb|Transform|無|無|  
 |標題列|無|無|無|  
 |工具列|無|停駐、展開摺疊、轉換|無|  

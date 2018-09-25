@@ -3,21 +3,20 @@ title: '&lt;issuerNameRegistry&gt;'
 ms.date: 03/30/2017
 ms.assetid: 58b39d12-c953-40c4-88af-d7eb3343ca28
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: b695cc6d66e5b9e45bb6a5fd22d594bc22ea3cba
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: de3ceb5d84d17307c69e9155834a0a584e6920a1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757524"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075771"
 ---
 # <a name="ltissuernameregistrygt"></a>&lt;issuerNameRegistry&gt;
-設定簽發者名稱登錄，由權杖處理常式集合中的處理常式。  
+設定簽發者名稱登錄，可由權杖處理常式集合中的處理常式。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
 \<securityTokenHandlers>  
-\<securityTokenHandlerConfiguration >  
+\<Securitytokenhandlerconfiguration> >  
 \<issuerNameRegistry >  
   
 ## <a name="syntax"></a>語法  
@@ -43,32 +42,32 @@ ms.locfileid: "32757524"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|類型|從衍生的型別<xref:System.IdentityModel.Tokens.IssuerNameRegistry>類別。 如需有關如何指定自訂`type`，請參閱 [自訂型別參考]。|  
+|類型|衍生自類型<xref:System.IdentityModel.Tokens.IssuerNameRegistry>類別。 如需有關如何指定自訂`type`，請參閱 [自訂型別參考]。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<trustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)|當`type`屬性會指定以組態為基礎的簽發者名稱登錄 (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>類別)，則[ \<trustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)必須指定項目。 [ \<TrustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)項目可以採取`<add>`， `<clear>`，或`<remove>`子項目的項目。|  
+|[\<trustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)|當`type`屬性會指定以組態為基礎的簽發者名稱登錄 (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>類別)，則[ \<trustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)必須指定項目。 [ \<TrustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)項目可以採取`<add>`， `<clear>`，或`<remove>`項目與子項目。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供組態集合的安全性權杖處理常式。|  
+|[\<Securitytokenhandlerconfiguration> >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供組態集合的安全性權杖處理常式。|  
   
 ## <a name="remarks"></a>備註  
- 使用簽發者名稱登錄驗證的所有簽發者權杖。 這是衍生自物件<xref:System.IdentityModel.Tokens.IssuerNameRegistry>類別。 簽發者名稱登錄用來產生關聯才能驗證語彙基元對應簽發者所產生的簽章的加密編譯內容的助憶鍵名稱。 簽發者名稱登錄會維護信賴憑證者的合作對象 (RP) 應用程式所信任的簽發者清單。 使用指定的簽發者名稱登錄類型`type`屬性。 `<issuerNameRegistry>`元素可能具有一或多個提供組態的指定類型的子元素。 您提供的邏輯來處理這些子項目覆寫<xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A>方法。  
+ 所有簽發者權杖會使用簽發者名稱登錄進行驗證。 這是衍生自物件<xref:System.IdentityModel.Tokens.IssuerNameRegistry>類別。 簽發者名稱登錄來建立助憶名稱，才能驗證對應簽發者所產生之權杖的簽章的加密編譯內容。 簽發者名稱登錄會維護信賴憑證者 (rp) 應用程式所信任的簽發者清單。 使用指定的簽發者名稱登錄型別`type`屬性。 `<issuerNameRegistry>`元素可能具有一或多個的子元素會提供指定之類型的組態。 提供藉由覆寫會處理這些子元素的邏輯<xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A>方法。  
   
- WIF 提供單一的簽發者名稱登錄型別，根據預設，<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>類別。 這個類別會使用一組組態中指定的受信任簽發者憑證。 它需要的子組態項目，`<trustedIssuers>`下設定受信任簽發者憑證的集合。 受信任的憑證會指定使用 ASN.1 編碼格式的憑證指紋和新增或移除集合中使用`<add>`， `<clear>`，或`<remove>`項目。  
+ WIF 提供單一的簽發者名稱登錄型別，根據預設，<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>類別。 這個類別會使用一組的組態中指定的受信任簽發者憑證。 它需要的子組態項目， `<trustedIssuers>`，在設定受信任簽發者憑證的集合。 受信任的憑證會指定使用 ASN.1 編碼的憑證指紋的格式及新增或移除集合中使用`<add>`， `<clear>`，或`<remove>`項目。  
   
  `<issuerNameRegistry>`項目由<xref:System.IdentityModel.Configuration.IssuerNameRegistryElement>類別。  
   
 > [!NOTE]
->  指定`<issuerNameRegistry>`為的子元素的項目[ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)項目已被取代，但仍支援回溯相容性。 設定`<securityTokenHandlerConfiguration>`元素會覆寫上`<identityConfiguration>`項目。  
+>  指定`<issuerNameRegistry>`元素的子元素當做[ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)項目已被取代，但仍支援回溯相容性。 上的設定`<securityTokenHandlerConfiguration>`項目會覆寫上`<identityConfiguration>`項目。  
   
 ## <a name="example"></a>範例  
- 下列 XML 會示範如何指定基礎設定簽發者名稱登錄。  
+ 下列 XML 程式碼顯示如何指定組態的簽發者名稱登錄。  
   
 ```xml  
 <issuerNameRegistry type="System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">  

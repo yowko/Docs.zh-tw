@@ -1,5 +1,5 @@
 ---
-title: '&lt;移除&gt;元素&lt;namedCaches&gt;'
+title: '&lt;移除&gt;項目&lt;namedCaches&gt;'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - remove element for namedCaches
@@ -7,15 +7,14 @@ helpviewer_keywords:
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 6ffaea24910a6b8f4a120d6b72219bff592fab17
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f885416629ae58949cc688f4e6fbd41e77e872aa
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745210"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47071711"
 ---
-# <a name="ltremovegt-element-for-ltnamedcachesgt"></a>&lt;移除&gt;元素&lt;namedCaches&gt;
+# <a name="ltremovegt-element-for-ltnamedcachesgt"></a>&lt;移除&gt;項目&lt;namedCaches&gt;
 從記憶體快取的 `namedCaches` 集合移除具名快取項目。  
   
  \<system.runtime.caching>  
@@ -51,7 +50,7 @@ ms.locfileid: "32745210"
 |[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|包含集合的組態設定具名<xref:System.Runtime.Caching.MemoryCache>執行個體。|  
   
 ## <a name="remarks"></a>備註  
- `remove`項目會移除`namedCache`從記憶體快取具名快取集合的項目。  
+ `remove`項目移除`namedCache`從記憶體快取的具名快取集合的項目。  
   
 ## <a name="see-also"></a>另請參閱  
  [\<namedCaches > 項目 （快取設定）](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
