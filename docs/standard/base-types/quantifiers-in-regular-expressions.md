@@ -17,11 +17,11 @@ ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a982082611760e4f901c427af25a0a49a4e243a1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677353"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47027917"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>規則運算式中的數量詞
 數量詞指定輸入中要有多少字元、群組或字元類別的執行個體，才能找到相符項目。  下表列出 .NET 支援的數量詞。  
