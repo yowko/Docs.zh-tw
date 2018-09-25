@@ -2,12 +2,12 @@
 title: 路由簡介
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: 3ee7ea8271df47354a0897434bf8f203eaf09a51
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: e540e084305aee51d6820cc9ae43f7791d5c07d6
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33496860"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47058457"
 ---
 # <a name="routing-introduction"></a>路由簡介
 路由服務提供了泛型的可外掛式 SOAP 媒介，此媒介能夠根據訊息內容路由傳送訊息。 透過路由服務，您就可以建立複雜路由邏輯，以便實作服務彙總、服務版本控制、優先權路由和多點傳送路由等案例。 路由服務還提供錯誤處理，可讓您設定備份端點清單，當傳送至主要目的端點期間發生錯誤時，訊息就會傳送至此清單中的端點。  
@@ -29,9 +29,9 @@ ms.locfileid: "33496860"
  這表示，如果您的目的端點使用擁有多種通訊模式 (例如混合單向和雙向作業) 的合約，您就無法建立單一服務端點來接收和路由傳送訊息至所有端點。 您必須判斷哪些端點擁有相容的組織結構，並且定義一個或多個服務端點，以便用來接收將路由傳送至目的端點的訊息。  
   
 > [!NOTE]
->  使用指定多種通訊模式 (例如混合單向和雙向作業) 的合約時，其中一種解決方法，就是在路由服務中使用雙工合約，例如 <xref:System.ServiceModel.Routing.IDuplexSessionRouter>。 不過，這表示繫結必須具備雙工通訊的能力，但這並不適用於所有情況。 在不具備雙工能力的情況下，可能需要將通訊重構為多個端點或修改應用程式。  
+> 使用指定多種通訊模式 (例如混合單向和雙向作業) 的合約時，其中一種解決方法，就是在路由服務中使用雙工合約，例如 <xref:System.ServiceModel.Routing.IDuplexSessionRouter>。 不過，這表示繫結必須具備雙工通訊的能力，但這並不適用於所有情況。 在不具備雙工能力的情況下，可能需要將通訊重構為多個端點或修改應用程式。  
   
- 如需有關路由合約的詳細資訊，請參閱 [路由合約](../../../../docs/framework/wcf/feature-details/routing-contracts.md)。  
+ 如需有關路由合約的詳細資訊，請參閱 [路由合約](routing-contracts.md)。  
   
  定義服務端點之後，您可以使用**RoutingBehavior**關聯特定**RoutingConfiguration**與端點。 使用組態檔設定路由服務時**RoutingBehavior**用來指定篩選資料表，其中包含用來處理此端點上收到的訊息的路由邏輯。 如果您要以程式設計方式設定路由服務可以使用指定的篩選資料表**RoutingConfiguration**。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "33496860"
         <endpoint address=""  
                   binding="wsHttpBinding"  
                   name="reqReplyEndpoint"  
-                  contract="System.ServiceModel.Routing.IRequestReplyRouter" />      
+                  contract="System.ServiceModel.Routing.IRequestReplyRouter" />
       </service>  
     </services>  
     <behaviors>  
@@ -98,16 +98,16 @@ serviceHost.Description.Behaviors.Add(
      new RoutingBehavior(rc));  
 ```  
   
- 這個範例會設定讓路由服務公開 （expose） 單一的端點位址為" http://localhost:8000/routingservice/router 」，用來接收要路由傳送的訊息。 由於訊息會路由傳送至要求-回覆端點，因此服務端點會使用 <xref:System.ServiceModel.Routing.IRequestReplyRouter> 合約。 此設定也會定義單一用戶端端點"http://localhost:8000/servicemodelsample/service 」訊息會路由傳送至。 名為"routingTable1"篩選資料表 （未顯示） 包含用來路由訊息的路由邏輯，並使用是與服務端點相關聯**RoutingBehavior** （適用於組態檔） 或**RoutingConfiguration** （適用於以程式設計方式設定）。  
+ 這個範例會設定讓路由服務公開 （expose） 單一的端點位址為`http://localhost:8000/routingservice/router`，用來接收要路由傳送的訊息。 由於訊息會路由傳送至要求-回覆端點，因此服務端點會使用 <xref:System.ServiceModel.Routing.IRequestReplyRouter> 合約。 此設定也會定義單一用戶端端點`http://localhost:8000/servicemodelsample/service`訊息會路由傳送至。 名為"routingTable1"篩選資料表 （未顯示） 包含用來路由訊息的路由邏輯，並使用是與服務端點相關聯**RoutingBehavior** （適用於組態檔） 或**RoutingConfiguration** （適用於以程式設計方式設定）。  
   
 ### <a name="routing-logic"></a>路由邏輯  
  若要定義用來路由傳送訊息的路由邏輯，您必須判斷傳入訊息內包含的哪些資訊可以單獨處理。 例如，如果要路由傳送的所有目的端點共用相同的 SOAP 動作，則訊息內所包含動作的值就不適合做為指標，且訊息不應該路由傳送至該值所指的特定端點。 如果您必須以唯一的方式將訊息路由傳送至某一個特定端點，則應該對唯一識別路由傳送訊息至其中之目的端點的資料進行篩選。  
   
- 路由服務提供多種**MessageFilter**檢查訊息，例如位址、 動作、 端點名稱或甚至 XPath 查詢中的特定值的實作。 如果這些實作都不符合您的需求，您就可以建立自訂**MessageFilter**實作。 如需訊息篩選條件，並比較使用路由服務所實作的詳細資訊，請參閱[訊息篩選條件](../../../../docs/framework/wcf/feature-details/message-filters.md)並[選擇篩選](../../../../docs/framework/wcf/feature-details/choosing-a-filter.md)。  
+ 路由服務提供多種**MessageFilter**檢查訊息，例如位址、 動作、 端點名稱或甚至 XPath 查詢中的特定值的實作。 如果這些實作都不符合您的需求，您就可以建立自訂**MessageFilter**實作。 如需訊息篩選條件，並比較使用路由服務所實作的詳細資訊，請參閱[訊息篩選條件](message-filters.md)並[選擇篩選](choosing-a-filter.md)。  
   
  多個訊息篩選會組織成篩選資料表，將每個產生關聯**MessageFilter**與目的端點。 此外，篩選資料表還可以選擇性地用來指定備份端點清單，路由服務會在發生傳輸錯誤時，嘗試將訊息路由傳送至這些備份端點。  
   
- 根據預設，篩選資料表內的所有訊息篩選都會同步評估，不過，您可以指定 <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.Priority%2A>，讓訊息篩選依照特定順序進行評估。 具有最高優先權的所有項目會先進行評估，而如果在較高優先權層級中找到相符項目，就不會對較低優先權的訊息篩選進行評估。 如需有關篩選資料表的詳細資訊，請參閱[訊息篩選條件](../../../../docs/framework/wcf/feature-details/message-filters.md)。  
+ 根據預設，篩選資料表內的所有訊息篩選都會同步評估，不過，您可以指定 <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.Priority%2A>，讓訊息篩選依照特定順序進行評估。 具有最高優先權的所有項目會先進行評估，而如果在較高優先權層級中找到相符項目，就不會對較低優先權的訊息篩選進行評估。 如需有關篩選資料表的詳細資訊，請參閱[訊息篩選條件](message-filters.md)。  
   
  下列範例使用 <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>，它會針對所有訊息評估為 `true`。 這**MessageFilter**新增至"routingTable1"篩選資料表，其會將**MessageFilter**與名為"CalculatorService"的用戶端端點。 **RoutingBehavior**然後指定 這個資料表應該用於處理服務端點的路由訊息。  
   
@@ -160,7 +160,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
   
 -   評估訊息時，必須有多個篩選傳回 `true`。  
   
- 如果這些條件都符合，則訊息會路由傳送至所有評估為 `true` 之篩選的所有端點。 下列範例會定義路由組態，如果訊息中的端點位址路由傳送至這兩個端點會導致 http://localhost:8000/routingservice/router/rounding 。  
+ 如果這些條件都符合，則訊息會路由傳送至所有評估為 `true` 之篩選的所有端點。 下列範例會定義路由組態，如果訊息中的端點位址路由傳送至這兩個端點會導致 `http://localhost:8000/routingservice/router/rounding` 。  
   
 ```xml  
 <!--ROUTING SECTION -->  
@@ -357,19 +357,19 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), backupList);
 |模式|工作階段|異動|接收內容|支援的備份清單|備註|  
 |-------------|-------------|-----------------|---------------------|---------------------------|-----------|  
 |單向||||是|嘗試在備份端點上重新傳送訊息。 如果此訊息為多點傳送，則只有在失敗通道上的訊息會移到備份目的地。|  
-|單向||![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")||否|擲回例外狀況，且交易會復原。|  
-|單向|||![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")|[是]|嘗試在備份端點上重新傳送訊息。 成功接收訊息之後，完成所有接收內容。 如果任何端點未成功接收訊息，則不會完成接收內容。<br /><br /> 如果此訊息為多點傳送，則至少有一個端點 (主要或備份) 成功接收訊息才會完成接收內容。 如果任何多點傳送路徑中沒有任何端點成功接收訊息，則不會完成接收內容。|  
-|單向||![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")|![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")|[是]|中止之前的交易、建立新交易，然後重新傳送所有訊息。 發生錯誤的訊息會傳送至備份目的地。<br /><br /> 建立其中所有傳輸都成功的交易之後，完成接收內容並認可交易。|  
-|單向|![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")|||[是]|嘗試在備份端點上重新傳送訊息。 在多點傳送的情況下，只有在發生錯誤之工作階段中的訊息，或是工作階段關閉失敗之工作階段中的訊息，才會重新傳送至備份目的地。|  
-|單向|![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")|![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")||否|擲回例外狀況，且交易會復原。|  
-|單向|![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")||![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")|[是]|嘗試在備份端點上重新傳送訊息。 所有訊息傳送完成且未發生錯誤之後，工作階段會指出沒有其他訊息，且路由服務成功關閉所有傳出工作階段通道，所有接收內容都已完成，以及傳入工作階段通道已關閉。|  
-|單向|![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")|![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")|![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")|[是]|中止目前的交易，並且建立新交易。 重新傳送工作階段中所有之前的訊息。 建立其中所有訊息已成功送出的交易，且工作階段指出沒有其他訊息之後，所有傳出工作階段通道都會關閉、交易的接收內容會全部完成、傳入工作階段通道會關閉，並且會認可交易。<br /><br /> 在多點傳送訊息的情況下，未發生錯誤的訊息會如以往重新傳送至相同的目的地，而發生錯誤的訊息則會傳送至備份目的地。|  
+|單向||![核取記號](media/checkmark.gif "核取記號")||否|擲回例外狀況，且交易會復原。|  
+|單向|||![核取記號](media/checkmark.gif "核取記號")|是|嘗試在備份端點上重新傳送訊息。 成功接收訊息之後，完成所有接收內容。 如果任何端點未成功接收訊息，則不會完成接收內容。<br /><br /> 如果此訊息為多點傳送，則至少有一個端點 (主要或備份) 成功接收訊息才會完成接收內容。 如果任何多點傳送路徑中沒有任何端點成功接收訊息，則不會完成接收內容。|  
+|單向||![核取記號](media/checkmark.gif "核取記號")|![核取記號](media/checkmark.gif "核取記號")|是|中止之前的交易、建立新交易，然後重新傳送所有訊息。 發生錯誤的訊息會傳送至備份目的地。<br /><br /> 建立其中所有傳輸都成功的交易之後，完成接收內容並認可交易。|  
+|單向|![核取記號](media/checkmark.gif "核取記號")|||是|嘗試在備份端點上重新傳送訊息。 在多點傳送的情況下，只有在發生錯誤之工作階段中的訊息，或是工作階段關閉失敗之工作階段中的訊息，才會重新傳送至備份目的地。|  
+|單向|![核取記號](media/checkmark.gif "核取記號")|![核取記號](media/checkmark.gif "核取記號")||否|擲回例外狀況，且交易會復原。|  
+|單向|![核取記號](media/checkmark.gif "核取記號")||![核取記號](media/checkmark.gif "核取記號")|是|嘗試在備份端點上重新傳送訊息。 所有訊息傳送完成且未發生錯誤之後，工作階段會指出沒有其他訊息，且路由服務成功關閉所有傳出工作階段通道，所有接收內容都已完成，以及傳入工作階段通道已關閉。|  
+|單向|![核取記號](media/checkmark.gif "核取記號")|![核取記號](media/checkmark.gif "核取記號")|![核取記號](media/checkmark.gif "核取記號")|是|中止目前的交易，並且建立新交易。 重新傳送工作階段中所有之前的訊息。 建立其中所有訊息已成功送出的交易，且工作階段指出沒有其他訊息之後，所有傳出工作階段通道都會關閉、交易的接收內容會全部完成、傳入工作階段通道會關閉，並且會認可交易。<br /><br /> 在多點傳送訊息的情況下，未發生錯誤的訊息會如以往重新傳送至相同的目的地，而發生錯誤的訊息則會傳送至備份目的地。|  
 |雙向||||是|傳送至備份目的地。  通道傳回回應訊息之後，將回應傳回至原始用戶端。|  
-|雙向|![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")|||[是]|將通道上的所有訊息傳送至備份目的地。  通道傳回回應訊息之後，將回應傳回至原始用戶端。|  
-|雙向||![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")||否|擲回例外狀況，且交易會復原。|  
-|雙向|![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")|![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")||否|擲回例外狀況，且交易會復原。|  
+|雙向|![核取記號](media/checkmark.gif "核取記號")|||是|將通道上的所有訊息傳送至備份目的地。  通道傳回回應訊息之後，將回應傳回至原始用戶端。|  
+|雙向||![核取記號](media/checkmark.gif "核取記號")||否|擲回例外狀況，且交易會復原。|  
+|雙向|![核取記號](media/checkmark.gif "核取記號")|![核取記號](media/checkmark.gif "核取記號")||否|擲回例外狀況，且交易會復原。|  
 |雙工||||否|目前不支援非工作階段雙工通訊。|  
-|雙工|![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")|||[是]|傳送至備份目的地。|  
+|雙工|![核取記號](media/checkmark.gif "核取記號")|||是|傳送至備份目的地。|  
   
 ## <a name="hosting"></a>裝載  
  由於路由服務會當做 WCF 服務實作，因此必須在應用程式內自我裝載或是由 IIS 或 WAS 裝載。 建議您在 IIS、WAS 或 Windows 服務應用程式中裝載路由服務，以便利用這些裝載環境中提供的自動啟動和生命週期管理功能。  
@@ -390,9 +390,9 @@ using (ServiceHost serviceHost =
 ```  
   
 ## <a name="routing-service-and-impersonation"></a>路由服務與模擬  
- WCF 路由服務可以搭配模擬使用以傳送和接收訊息。 平常對模擬的所有 Windows 條件約束在這裡都適用。 當您撰寫您自己的服務時，如果需要設定服務或帳戶使用權限以使用模擬，就必須執行那些同樣的步驟來搭配路由服務使用模擬。 如需詳細資訊，請參閱 <<c0> [ 委派和模擬](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
+ WCF 路由服務可以搭配模擬使用以傳送和接收訊息。 平常對模擬的所有 Windows 條件約束在這裡都適用。 當您撰寫您自己的服務時，如果需要設定服務或帳戶使用權限以使用模擬，就必須執行那些同樣的步驟來搭配路由服務使用模擬。 如需詳細資訊，請參閱 <<c0> [ 委派和模擬](delegation-and-impersonation-with-wcf.md)。  
   
- 搭配路由服務的模擬需要使用 ASP.NET 模擬 (採用 ASP.NET 相容模式時) 或 Windows 認證 (這已設定為允許模擬)。 如需有關 ASP.NET 相容性模式的詳細資訊，請參閱[WCF 服務與 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。  
+ 搭配路由服務的模擬需要使用 ASP.NET 模擬 (採用 ASP.NET 相容模式時) 或 Windows 認證 (這已設定為允許模擬)。 如需有關 ASP.NET 相容性模式的詳細資訊，請參閱[WCF 服務與 ASP.NET](wcf-services-and-aspnet.md)。  
   
 > [!WARNING]
 >  WCF 路由服務不支援基本驗證的模擬。  
@@ -402,6 +402,6 @@ using (ServiceHost serviceHost =
  若要搭配路由服務使用 Windows 認證模擬，您必須同時設定認證與服務。 用戶端認證物件 (<xref:System.ServiceModel.Security.WindowsClientCredential>，可從 <xref:System.ServiceModel.ChannelFactory> 中存取) 定義允許模擬所必須設定的 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 屬性來存取。 最後，您必須在服務上設定 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 行為，才能將 `ImpersonateCallerForAllOperations` 設定為 `true`。 路由服務會使用這個旗標決定是否要建立用戶端，用來轉送已啟用模擬的訊息。  
   
 ## <a name="see-also"></a>另請參閱  
- [訊息篩選](../../../../docs/framework/wcf/feature-details/message-filters.md)  
- [路由合約](../../../../docs/framework/wcf/feature-details/routing-contracts.md)  
- [選擇篩選](../../../../docs/framework/wcf/feature-details/choosing-a-filter.md)
+ [訊息篩選](message-filters.md)  
+ [路由合約](routing-contracts.md)  
+ [選擇篩選](choosing-a-filter.md)
