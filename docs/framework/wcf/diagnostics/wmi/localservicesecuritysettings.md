@@ -1,29 +1,19 @@
 ---
 title: LocalServiceSecuritySettings
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 490aa0e5-5242-4f8d-b505-5ec6287633b4
-caps.latest.revision: "8"
 author: BrucePerlerMS
-ms.author: bruceper
-manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: f4cc5d0676ef397f67bd9d16b2b19c6f3ee2d57e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c79eb11fcc1973a3ef25a78afb8b141443d865c3
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47156944"
 ---
-# <a name="localservicesecuritysettings"></a><span data-ttu-id="193be-102">LocalServiceSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="193be-102">LocalServiceSecuritySettings</span></span>
-<span data-ttu-id="193be-103">LocalServiceSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="193be-103">LocalServiceSecuritySettings</span></span>  
+# <a name="localservicesecuritysettings"></a><span data-ttu-id="ed6dc-102">LocalServiceSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="ed6dc-102">LocalServiceSecuritySettings</span></span>
+<span data-ttu-id="ed6dc-103">LocalServiceSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="ed6dc-103">LocalServiceSecuritySettings</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="193be-104">語法</span><span class="sxs-lookup"><span data-stu-id="193be-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ed6dc-104">語法</span><span class="sxs-lookup"><span data-stu-id="ed6dc-104">Syntax</span></span>  
   
 ```  
 class LocalServiceSecuritySettings  
@@ -45,115 +35,115 @@ class LocalServiceSecuritySettings
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="193be-105">方法</span><span class="sxs-lookup"><span data-stu-id="193be-105">Methods</span></span>  
- <span data-ttu-id="193be-106">LocalServiceSecuritySettings 類別不會定義任何方法。</span><span class="sxs-lookup"><span data-stu-id="193be-106">The LocalServiceSecuritySettings class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="ed6dc-105">方法</span><span class="sxs-lookup"><span data-stu-id="ed6dc-105">Methods</span></span>  
+ <span data-ttu-id="ed6dc-106">LocalServiceSecuritySettings 類別不會定義任何方法。</span><span class="sxs-lookup"><span data-stu-id="ed6dc-106">The LocalServiceSecuritySettings class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="193be-107">屬性</span><span class="sxs-lookup"><span data-stu-id="193be-107">Properties</span></span>  
- <span data-ttu-id="193be-108">LocalServiceSecuritySettings 類別具有下列屬性：</span><span class="sxs-lookup"><span data-stu-id="193be-108">The LocalServiceSecuritySettings class has the following properties:</span></span>  
+## <a name="properties"></a><span data-ttu-id="ed6dc-107">屬性</span><span class="sxs-lookup"><span data-stu-id="ed6dc-107">Properties</span></span>  
+ <span data-ttu-id="ed6dc-108">LocalServiceSecuritySettings 類別具有下列屬性：</span><span class="sxs-lookup"><span data-stu-id="ed6dc-108">The LocalServiceSecuritySettings class has the following properties:</span></span>  
   
-### <a name="detectreplays"></a><span data-ttu-id="193be-109">DetectReplays</span><span class="sxs-lookup"><span data-stu-id="193be-109">DetectReplays</span></span>  
- <span data-ttu-id="193be-110">資料型別：布林值</span><span class="sxs-lookup"><span data-stu-id="193be-110">Data type: boolean</span></span>  
+### <a name="detectreplays"></a><span data-ttu-id="ed6dc-109">DetectReplays</span><span class="sxs-lookup"><span data-stu-id="ed6dc-109">DetectReplays</span></span>  
+ <span data-ttu-id="ed6dc-110">資料型別：布林值</span><span class="sxs-lookup"><span data-stu-id="ed6dc-110">Data type: boolean</span></span>  
   
- <span data-ttu-id="193be-111">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="193be-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="ed6dc-111">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="ed6dc-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="193be-112">布林值，這個值會指定是否會偵測及自動處理對通道所發出的重新執行攻擊。</span><span class="sxs-lookup"><span data-stu-id="193be-112">A Boolean value that specifies whether replay attacks against the channel are detected and dealt with automatically.</span></span>  
+ <span data-ttu-id="ed6dc-112">布林值，這個值會指定是否會偵測及自動處理對通道所發出的重新執行攻擊。</span><span class="sxs-lookup"><span data-stu-id="ed6dc-112">A Boolean value that specifies whether replay attacks against the channel are detected and dealt with automatically.</span></span>  
   
-### <a name="inactivitytimeout"></a><span data-ttu-id="193be-113">InactivityTimeout</span><span class="sxs-lookup"><span data-stu-id="193be-113">InactivityTimeout</span></span>  
- <span data-ttu-id="193be-114">資料型別：日期時間</span><span class="sxs-lookup"><span data-stu-id="193be-114">Data type: datetime</span></span>  
+### <a name="inactivitytimeout"></a><span data-ttu-id="ed6dc-113">InactivityTimeout</span><span class="sxs-lookup"><span data-stu-id="ed6dc-113">InactivityTimeout</span></span>  
+ <span data-ttu-id="ed6dc-114">資料型別：日期時間</span><span class="sxs-lookup"><span data-stu-id="ed6dc-114">Data type: datetime</span></span>  
   
- <span data-ttu-id="193be-115">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="193be-115">Access type: Read-only</span></span>  
+ <span data-ttu-id="ed6dc-115">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="ed6dc-115">Access type: Read-only</span></span>  
   
- <span data-ttu-id="193be-116">服務支援的暫止安全性工作階段數目上限。</span><span class="sxs-lookup"><span data-stu-id="193be-116">The maximum number of pending security sessions that the service supports.</span></span>  
+ <span data-ttu-id="ed6dc-116">服務支援的暫止安全性工作階段數目上限。</span><span class="sxs-lookup"><span data-stu-id="ed6dc-116">The maximum number of pending security sessions that the service supports.</span></span>  
   
-### <a name="issuedcookielifetime"></a><span data-ttu-id="193be-117">IssuedCookieLifetime</span><span class="sxs-lookup"><span data-stu-id="193be-117">IssuedCookieLifetime</span></span>  
- <span data-ttu-id="193be-118">資料型別：日期時間</span><span class="sxs-lookup"><span data-stu-id="193be-118">Data type: datetime</span></span>  
+### <a name="issuedcookielifetime"></a><span data-ttu-id="ed6dc-117">IssuedCookieLifetime</span><span class="sxs-lookup"><span data-stu-id="ed6dc-117">IssuedCookieLifetime</span></span>  
+ <span data-ttu-id="ed6dc-118">資料型別：日期時間</span><span class="sxs-lookup"><span data-stu-id="ed6dc-118">Data type: datetime</span></span>  
   
- <span data-ttu-id="193be-119">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="193be-119">Access type: Read-only</span></span>  
+ <span data-ttu-id="ed6dc-119">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="ed6dc-119">Access type: Read-only</span></span>  
   
- <span data-ttu-id="193be-120">TimeSpan 指定發出給所有新的安全性 Cookie 的存留期。</span><span class="sxs-lookup"><span data-stu-id="193be-120">A TimeSpan that specifies the lifetime issued to all new security cookies.</span></span>  
+ <span data-ttu-id="ed6dc-120">TimeSpan 指定發出給所有新的安全性 Cookie 的存留期。</span><span class="sxs-lookup"><span data-stu-id="ed6dc-120">A TimeSpan that specifies the lifetime issued to all new security cookies.</span></span>  
   
-### <a name="maxcachedcookies"></a><span data-ttu-id="193be-121">MaxCachedCookies</span><span class="sxs-lookup"><span data-stu-id="193be-121">MaxCachedCookies</span></span>  
- <span data-ttu-id="193be-122">資料型別：sint32</span><span class="sxs-lookup"><span data-stu-id="193be-122">Data type: sint32</span></span>  
+### <a name="maxcachedcookies"></a><span data-ttu-id="ed6dc-121">MaxCachedCookies</span><span class="sxs-lookup"><span data-stu-id="ed6dc-121">MaxCachedCookies</span></span>  
+ <span data-ttu-id="ed6dc-122">資料型別：sint32</span><span class="sxs-lookup"><span data-stu-id="ed6dc-122">Data type: sint32</span></span>  
   
- <span data-ttu-id="193be-123">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="193be-123">Access type: Read-only</span></span>  
+ <span data-ttu-id="ed6dc-123">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="ed6dc-123">Access type: Read-only</span></span>  
   
- <span data-ttu-id="193be-124">可以快取的 Cookie 數目上限。</span><span class="sxs-lookup"><span data-stu-id="193be-124">The maximum number of cookies that can be cached.</span></span>  
+ <span data-ttu-id="ed6dc-124">可以快取的 Cookie 數目上限。</span><span class="sxs-lookup"><span data-stu-id="ed6dc-124">The maximum number of cookies that can be cached.</span></span>  
   
-### <a name="maxclockskew"></a><span data-ttu-id="193be-125">MaxClockSkew</span><span class="sxs-lookup"><span data-stu-id="193be-125">MaxClockSkew</span></span>  
- <span data-ttu-id="193be-126">資料型別：日期時間</span><span class="sxs-lookup"><span data-stu-id="193be-126">Data type: datetime</span></span>  
+### <a name="maxclockskew"></a><span data-ttu-id="ed6dc-125">MaxClockSkew</span><span class="sxs-lookup"><span data-stu-id="ed6dc-125">MaxClockSkew</span></span>  
+ <span data-ttu-id="ed6dc-126">資料型別：日期時間</span><span class="sxs-lookup"><span data-stu-id="ed6dc-126">Data type: datetime</span></span>  
   
- <span data-ttu-id="193be-127">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="193be-127">Access type: Read-only</span></span>  
+ <span data-ttu-id="ed6dc-127">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="ed6dc-127">Access type: Read-only</span></span>  
   
- <span data-ttu-id="193be-128">TimeSpan 指定通訊雙方之系統時鐘之間的最大時間差異。</span><span class="sxs-lookup"><span data-stu-id="193be-128">A TimeSpan that specifies the maximum time difference between the system clocks of the two communicating parties.</span></span>  
+ <span data-ttu-id="ed6dc-128">TimeSpan 指定通訊雙方之系統時鐘之間的最大時間差異。</span><span class="sxs-lookup"><span data-stu-id="ed6dc-128">A TimeSpan that specifies the maximum time difference between the system clocks of the two communicating parties.</span></span>  
   
-### <a name="maxpendingsessions"></a><span data-ttu-id="193be-129">MaxPendingSessions</span><span class="sxs-lookup"><span data-stu-id="193be-129">MaxPendingSessions</span></span>  
- <span data-ttu-id="193be-130">資料型別：sint32</span><span class="sxs-lookup"><span data-stu-id="193be-130">Data type: sint32</span></span>  
+### <a name="maxpendingsessions"></a><span data-ttu-id="ed6dc-129">MaxPendingSessions</span><span class="sxs-lookup"><span data-stu-id="ed6dc-129">MaxPendingSessions</span></span>  
+ <span data-ttu-id="ed6dc-130">資料型別：sint32</span><span class="sxs-lookup"><span data-stu-id="ed6dc-130">Data type: sint32</span></span>  
   
- <span data-ttu-id="193be-131">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="193be-131">Access type: Read-only</span></span>  
+ <span data-ttu-id="ed6dc-131">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="ed6dc-131">Access type: Read-only</span></span>  
   
- <span data-ttu-id="193be-132">服務上的最大暫止連線數目。</span><span class="sxs-lookup"><span data-stu-id="193be-132">The maximum number of pending connections on the service.</span></span>  
+ <span data-ttu-id="ed6dc-132">服務上的最大暫止連線數目。</span><span class="sxs-lookup"><span data-stu-id="ed6dc-132">The maximum number of pending connections on the service.</span></span>  
   
-### <a name="maxstatefulnegotiations"></a><span data-ttu-id="193be-133">MaxStatefulNegotiations</span><span class="sxs-lookup"><span data-stu-id="193be-133">MaxStatefulNegotiations</span></span>  
- <span data-ttu-id="193be-134">資料型別：sint32</span><span class="sxs-lookup"><span data-stu-id="193be-134">Data type: sint32</span></span>  
+### <a name="maxstatefulnegotiations"></a><span data-ttu-id="ed6dc-133">MaxStatefulNegotiations</span><span class="sxs-lookup"><span data-stu-id="ed6dc-133">MaxStatefulNegotiations</span></span>  
+ <span data-ttu-id="ed6dc-134">資料型別：sint32</span><span class="sxs-lookup"><span data-stu-id="ed6dc-134">Data type: sint32</span></span>  
   
- <span data-ttu-id="193be-135">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="193be-135">Access type: Read-only</span></span>  
+ <span data-ttu-id="ed6dc-135">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="ed6dc-135">Access type: Read-only</span></span>  
   
- <span data-ttu-id="193be-136">可以同時為作用中的安全性交涉數目。</span><span class="sxs-lookup"><span data-stu-id="193be-136">The number of security negotiations that can be active concurrently.</span></span>  
+ <span data-ttu-id="ed6dc-136">可以同時為作用中的安全性交涉數目。</span><span class="sxs-lookup"><span data-stu-id="ed6dc-136">The number of security negotiations that can be active concurrently.</span></span>  
   
-### <a name="negotiationtimeout"></a><span data-ttu-id="193be-137">NegotiationTimeout</span><span class="sxs-lookup"><span data-stu-id="193be-137">NegotiationTimeout</span></span>  
- <span data-ttu-id="193be-138">資料型別：日期時間</span><span class="sxs-lookup"><span data-stu-id="193be-138">Data type: datetime</span></span>  
+### <a name="negotiationtimeout"></a><span data-ttu-id="ed6dc-137">NegotiationTimeout</span><span class="sxs-lookup"><span data-stu-id="ed6dc-137">NegotiationTimeout</span></span>  
+ <span data-ttu-id="ed6dc-138">資料型別：日期時間</span><span class="sxs-lookup"><span data-stu-id="ed6dc-138">Data type: datetime</span></span>  
   
- <span data-ttu-id="193be-139">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="193be-139">Access type: Read-only</span></span>  
+ <span data-ttu-id="ed6dc-139">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="ed6dc-139">Access type: Read-only</span></span>  
   
- <span data-ttu-id="193be-140">TimeSpan 指定伺服器和用戶端之間安全性交涉階段的最大持續期間。</span><span class="sxs-lookup"><span data-stu-id="193be-140">A TimeSpan that specifies the maximum duration for the security negotiation phase between server and client.</span></span>  
+ <span data-ttu-id="ed6dc-140">TimeSpan 指定伺服器和用戶端之間安全性交涉階段的最大持續期間。</span><span class="sxs-lookup"><span data-stu-id="ed6dc-140">A TimeSpan that specifies the maximum duration for the security negotiation phase between server and client.</span></span>  
   
-### <a name="reconnecttransportonfailure"></a><span data-ttu-id="193be-141">ReconnectTransportOnFailure</span><span class="sxs-lookup"><span data-stu-id="193be-141">ReconnectTransportOnFailure</span></span>  
- <span data-ttu-id="193be-142">資料型別：布林值</span><span class="sxs-lookup"><span data-stu-id="193be-142">Data type: boolean</span></span>  
+### <a name="reconnecttransportonfailure"></a><span data-ttu-id="ed6dc-141">ReconnectTransportOnFailure</span><span class="sxs-lookup"><span data-stu-id="ed6dc-141">ReconnectTransportOnFailure</span></span>  
+ <span data-ttu-id="ed6dc-142">資料型別：布林值</span><span class="sxs-lookup"><span data-stu-id="ed6dc-142">Data type: boolean</span></span>  
   
- <span data-ttu-id="193be-143">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="193be-143">Access type: Read-only</span></span>  
+ <span data-ttu-id="ed6dc-143">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="ed6dc-143">Access type: Read-only</span></span>  
   
- <span data-ttu-id="193be-144">布林值，指定使用 WS-Reliable 訊息的連線是否會在傳輸失敗之後嘗試重新連線。</span><span class="sxs-lookup"><span data-stu-id="193be-144">A Boolean value that specifies whether connections using WS-Reliable messaging attempt to reconnect after transport failures.</span></span>  
+ <span data-ttu-id="ed6dc-144">布林值，指定使用 WS-Reliable 訊息的連線是否會在傳輸失敗之後嘗試重新連線。</span><span class="sxs-lookup"><span data-stu-id="ed6dc-144">A Boolean value that specifies whether connections using WS-Reliable messaging attempt to reconnect after transport failures.</span></span>  
   
-### <a name="replaycachesize"></a><span data-ttu-id="193be-145">ReplayCacheSize</span><span class="sxs-lookup"><span data-stu-id="193be-145">ReplayCacheSize</span></span>  
- <span data-ttu-id="193be-146">資料型別：sint32</span><span class="sxs-lookup"><span data-stu-id="193be-146">Data type: sint32</span></span>  
+### <a name="replaycachesize"></a><span data-ttu-id="ed6dc-145">ReplayCacheSize</span><span class="sxs-lookup"><span data-stu-id="ed6dc-145">ReplayCacheSize</span></span>  
+ <span data-ttu-id="ed6dc-146">資料型別：sint32</span><span class="sxs-lookup"><span data-stu-id="ed6dc-146">Data type: sint32</span></span>  
   
- <span data-ttu-id="193be-147">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="193be-147">Access type: Read-only</span></span>  
+ <span data-ttu-id="ed6dc-147">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="ed6dc-147">Access type: Read-only</span></span>  
   
- <span data-ttu-id="193be-148">用於偵測重新執行的已快取 Nonce 數目。</span><span class="sxs-lookup"><span data-stu-id="193be-148">The number of cached nonces used for replay detection.</span></span>  
+ <span data-ttu-id="ed6dc-148">用於偵測重新執行的已快取 Nonce 數目。</span><span class="sxs-lookup"><span data-stu-id="ed6dc-148">The number of cached nonces used for replay detection.</span></span>  
   
-### <a name="replaywindow"></a><span data-ttu-id="193be-149">ReplayWindow</span><span class="sxs-lookup"><span data-stu-id="193be-149">ReplayWindow</span></span>  
- <span data-ttu-id="193be-150">資料型別：日期時間</span><span class="sxs-lookup"><span data-stu-id="193be-150">Data type: datetime</span></span>  
+### <a name="replaywindow"></a><span data-ttu-id="ed6dc-149">ReplayWindow</span><span class="sxs-lookup"><span data-stu-id="ed6dc-149">ReplayWindow</span></span>  
+ <span data-ttu-id="ed6dc-150">資料型別：日期時間</span><span class="sxs-lookup"><span data-stu-id="ed6dc-150">Data type: datetime</span></span>  
   
- <span data-ttu-id="193be-151">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="193be-151">Access type: Read-only</span></span>  
+ <span data-ttu-id="ed6dc-151">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="ed6dc-151">Access type: Read-only</span></span>  
   
- <span data-ttu-id="193be-152">TimeSpan 指定個別訊息 Nonce 有效的持續期間。</span><span class="sxs-lookup"><span data-stu-id="193be-152">A TimeSpan that specifies the duration in which individual message nonces are valid.</span></span>  
+ <span data-ttu-id="ed6dc-152">TimeSpan 指定個別訊息 Nonce 有效的持續期間。</span><span class="sxs-lookup"><span data-stu-id="ed6dc-152">A TimeSpan that specifies the duration in which individual message nonces are valid.</span></span>  
   
-### <a name="sessionkeyrenewalinterval"></a><span data-ttu-id="193be-153">SessionKeyRenewalInterval</span><span class="sxs-lookup"><span data-stu-id="193be-153">SessionKeyRenewalInterval</span></span>  
- <span data-ttu-id="193be-154">資料型別：日期時間</span><span class="sxs-lookup"><span data-stu-id="193be-154">Data type: datetime</span></span>  
+### <a name="sessionkeyrenewalinterval"></a><span data-ttu-id="ed6dc-153">SessionKeyRenewalInterval</span><span class="sxs-lookup"><span data-stu-id="ed6dc-153">SessionKeyRenewalInterval</span></span>  
+ <span data-ttu-id="ed6dc-154">資料型別：日期時間</span><span class="sxs-lookup"><span data-stu-id="ed6dc-154">Data type: datetime</span></span>  
   
- <span data-ttu-id="193be-155">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="193be-155">Access type: Read-only</span></span>  
+ <span data-ttu-id="ed6dc-155">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="ed6dc-155">Access type: Read-only</span></span>  
   
- <span data-ttu-id="193be-156">指定持續期間的 TimeSpan，啟動器將在這段期間過後更新安全性工作階段的金鑰。</span><span class="sxs-lookup"><span data-stu-id="193be-156">A TimeSpan that specifies the duration after which the initiator renews the key for the security session.</span></span>  
+ <span data-ttu-id="ed6dc-156">指定持續期間的 TimeSpan，啟動器將在這段期間過後更新安全性工作階段的金鑰。</span><span class="sxs-lookup"><span data-stu-id="ed6dc-156">A TimeSpan that specifies the duration after which the initiator renews the key for the security session.</span></span>  
   
-### <a name="sessionkeyrolloverinterval"></a><span data-ttu-id="193be-157">SessionKeyRolloverInterval</span><span class="sxs-lookup"><span data-stu-id="193be-157">SessionKeyRolloverInterval</span></span>  
- <span data-ttu-id="193be-158">資料型別：日期時間</span><span class="sxs-lookup"><span data-stu-id="193be-158">Data type: datetime</span></span>  
+### <a name="sessionkeyrolloverinterval"></a><span data-ttu-id="ed6dc-157">SessionKeyRolloverInterval</span><span class="sxs-lookup"><span data-stu-id="ed6dc-157">SessionKeyRolloverInterval</span></span>  
+ <span data-ttu-id="ed6dc-158">資料型別：日期時間</span><span class="sxs-lookup"><span data-stu-id="ed6dc-158">Data type: datetime</span></span>  
   
- <span data-ttu-id="193be-159">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="193be-159">Access type: Read-only</span></span>  
+ <span data-ttu-id="ed6dc-159">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="ed6dc-159">Access type: Read-only</span></span>  
   
- <span data-ttu-id="193be-160">TimeSpan，指定前一個工作階段金鑰在金鑰更新期間對傳入訊息屬有效的時間間隔。</span><span class="sxs-lookup"><span data-stu-id="193be-160">A TimeSpan that specifies the time interval a previous session key is valid on incoming messages during a key renewal.</span></span>  
+ <span data-ttu-id="ed6dc-160">TimeSpan，指定前一個工作階段金鑰在金鑰更新期間對傳入訊息屬有效的時間間隔。</span><span class="sxs-lookup"><span data-stu-id="ed6dc-160">A TimeSpan that specifies the time interval a previous session key is valid on incoming messages during a key renewal.</span></span>  
   
-### <a name="timestampvalidityduration"></a><span data-ttu-id="193be-161">TimestampValidityDuration</span><span class="sxs-lookup"><span data-stu-id="193be-161">TimestampValidityDuration</span></span>  
- <span data-ttu-id="193be-162">資料型別：日期時間</span><span class="sxs-lookup"><span data-stu-id="193be-162">Data type: datetime</span></span>  
+### <a name="timestampvalidityduration"></a><span data-ttu-id="ed6dc-161">TimestampValidityDuration</span><span class="sxs-lookup"><span data-stu-id="ed6dc-161">TimestampValidityDuration</span></span>  
+ <span data-ttu-id="ed6dc-162">資料型別：日期時間</span><span class="sxs-lookup"><span data-stu-id="ed6dc-162">Data type: datetime</span></span>  
   
- <span data-ttu-id="193be-163">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="193be-163">Access type: Read-only</span></span>  
+ <span data-ttu-id="ed6dc-163">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="ed6dc-163">Access type: Read-only</span></span>  
   
- <span data-ttu-id="193be-164">TimeSpan，指定時間戳記有效的持續期間。</span><span class="sxs-lookup"><span data-stu-id="193be-164">A TimeSpan that specifies the duration in which a time stamp is valid.</span></span>  
+ <span data-ttu-id="ed6dc-164">TimeSpan，指定時間戳記有效的持續期間。</span><span class="sxs-lookup"><span data-stu-id="ed6dc-164">A TimeSpan that specifies the duration in which a time stamp is valid.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="193be-165">需求</span><span class="sxs-lookup"><span data-stu-id="193be-165">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ed6dc-165">需求</span><span class="sxs-lookup"><span data-stu-id="ed6dc-165">Requirements</span></span>  
   
-|<span data-ttu-id="193be-166">MOF</span><span class="sxs-lookup"><span data-stu-id="193be-166">MOF</span></span>|<span data-ttu-id="193be-167">於 Servicemodel.mof 中宣告。</span><span class="sxs-lookup"><span data-stu-id="193be-167">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="ed6dc-166">MOF</span><span class="sxs-lookup"><span data-stu-id="ed6dc-166">MOF</span></span>|<span data-ttu-id="ed6dc-167">於 Servicemodel.mof 中宣告。</span><span class="sxs-lookup"><span data-stu-id="ed6dc-167">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="193be-168">命名空間</span><span class="sxs-lookup"><span data-stu-id="193be-168">Namespace</span></span>|<span data-ttu-id="193be-169">於 root\ServiceModel 中定義</span><span class="sxs-lookup"><span data-stu-id="193be-169">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="ed6dc-168">命名空間</span><span class="sxs-lookup"><span data-stu-id="ed6dc-168">Namespace</span></span>|<span data-ttu-id="ed6dc-169">於 root\ServiceModel 中定義</span><span class="sxs-lookup"><span data-stu-id="ed6dc-169">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="193be-170">請參閱</span><span class="sxs-lookup"><span data-stu-id="193be-170">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="ed6dc-170">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ed6dc-170">See Also</span></span>  
  <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>

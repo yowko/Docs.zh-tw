@@ -9,26 +9,25 @@ helpviewer_keywords:
 ms.assetid: 665b01b5-25f5-47a1-ab11-cffe8ebbf2a7
 author: Xansky
 ms.author: mhopkins
-manager: markl
-ms.openlocfilehash: 95d383f44d84bb22e6fcc9fca159f8f5efa87434
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.openlocfilehash: ebd8feb00f397faab4a231005ef90a55895c6f67
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45526638"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47112318"
 ---
-# <a name="ui-automation-clients-for-managed-code-how-to-topics"></a><span data-ttu-id="b1eb5-102">Managed 程式碼的 UI 自動化用戶端 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="b1eb5-102">UI Automation Clients for Managed Code How-to Topics</span></span>
+# <a name="ui-automation-clients-for-managed-code-how-to-topics"></a><span data-ttu-id="8bbc5-102">Managed 程式碼的 UI 自動化用戶端 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="8bbc5-102">UI Automation Clients for Managed Code How-to Topics</span></span>
 > [!NOTE]
->  <span data-ttu-id="b1eb5-103">這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。</span><span class="sxs-lookup"><span data-stu-id="b1eb5-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="b1eb5-104">如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱 < [Windows Automation API： 使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="b1eb5-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
+>  <span data-ttu-id="8bbc5-103">這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。</span><span class="sxs-lookup"><span data-stu-id="8bbc5-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="8bbc5-104">如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱 < [Windows Automation API： 使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="8bbc5-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- <span data-ttu-id="b1eb5-105">本節提供有關實作功能的詳細的資訊[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]中用戶端應用程式。</span><span class="sxs-lookup"><span data-stu-id="b1eb5-105">This section provides detailed information about implementing features of [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] in a client application.</span></span>  
+ <span data-ttu-id="8bbc5-105">本節提供有關實作功能的詳細的資訊[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]中用戶端應用程式。</span><span class="sxs-lookup"><span data-stu-id="8bbc5-105">This section provides detailed information about implementing features of [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] in a client application.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b1eb5-106">本節內容</span><span class="sxs-lookup"><span data-stu-id="b1eb5-106">In This Section</span></span>  
- [<span data-ttu-id="b1eb5-107">根據屬性條件尋找 UI 自動化項目</span><span class="sxs-lookup"><span data-stu-id="b1eb5-107">Find a UI Automation Element Based on a Property Condition</span></span>](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
- [<span data-ttu-id="b1eb5-108">使用 TreeWalker 導覽 UI 自動化項目</span><span class="sxs-lookup"><span data-stu-id="b1eb5-108">Navigate Among UI Automation Elements with TreeWalker</span></span>](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
- [<span data-ttu-id="b1eb5-109">尋找清單項目的 UI 自動化項目</span><span class="sxs-lookup"><span data-stu-id="b1eb5-109">Find a UI Automation Element for a List Item</span></span>](../../../docs/framework/ui-automation/find-a-ui-automation-element-for-a-list-item.md)  
- [<span data-ttu-id="b1eb5-110">取得 UI 自動化項目屬性</span><span class="sxs-lookup"><span data-stu-id="b1eb5-110">Get UI Automation Element Properties</span></span>](../../../docs/framework/ui-automation/get-ui-automation-element-properties.md)  
- [<span data-ttu-id="b1eb5-111">在 UI 自動化中使用快取</span><span class="sxs-lookup"><span data-stu-id="b1eb5-111">Use Caching in UI Automation</span></span>](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
- [<span data-ttu-id="b1eb5-112">訂閱 UI 自動化事件</span><span class="sxs-lookup"><span data-stu-id="b1eb5-112">Subscribe to UI Automation Events</span></span>](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)  
- [<span data-ttu-id="b1eb5-113">註冊用戶端提供者組件</span><span class="sxs-lookup"><span data-stu-id="b1eb5-113">Register a Client-Side Provider Assembly</span></span>](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)  
- [<span data-ttu-id="b1eb5-114">使用 AutomationID 屬性</span><span class="sxs-lookup"><span data-stu-id="b1eb5-114">Use the AutomationID Property</span></span>](../../../docs/framework/ui-automation/use-the-automationid-property.md)
+## <a name="in-this-section"></a><span data-ttu-id="8bbc5-106">本節內容</span><span class="sxs-lookup"><span data-stu-id="8bbc5-106">In This Section</span></span>  
+ [<span data-ttu-id="8bbc5-107">根據屬性條件尋找 UI 自動化項目</span><span class="sxs-lookup"><span data-stu-id="8bbc5-107">Find a UI Automation Element Based on a Property Condition</span></span>](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
+ [<span data-ttu-id="8bbc5-108">使用 TreeWalker 導覽 UI 自動化項目</span><span class="sxs-lookup"><span data-stu-id="8bbc5-108">Navigate Among UI Automation Elements with TreeWalker</span></span>](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
+ [<span data-ttu-id="8bbc5-109">尋找清單項目的 UI 自動化項目</span><span class="sxs-lookup"><span data-stu-id="8bbc5-109">Find a UI Automation Element for a List Item</span></span>](../../../docs/framework/ui-automation/find-a-ui-automation-element-for-a-list-item.md)  
+ [<span data-ttu-id="8bbc5-110">取得 UI 自動化項目屬性</span><span class="sxs-lookup"><span data-stu-id="8bbc5-110">Get UI Automation Element Properties</span></span>](../../../docs/framework/ui-automation/get-ui-automation-element-properties.md)  
+ [<span data-ttu-id="8bbc5-111">在 UI 自動化中使用快取</span><span class="sxs-lookup"><span data-stu-id="8bbc5-111">Use Caching in UI Automation</span></span>](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
+ [<span data-ttu-id="8bbc5-112">訂閱 UI 自動化事件</span><span class="sxs-lookup"><span data-stu-id="8bbc5-112">Subscribe to UI Automation Events</span></span>](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)  
+ [<span data-ttu-id="8bbc5-113">註冊用戶端提供者組件</span><span class="sxs-lookup"><span data-stu-id="8bbc5-113">Register a Client-Side Provider Assembly</span></span>](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)  
+ [<span data-ttu-id="8bbc5-114">使用 AutomationID 屬性</span><span class="sxs-lookup"><span data-stu-id="8bbc5-114">Use the AutomationID Property</span></span>](../../../docs/framework/ui-automation/use-the-automationid-property.md)
