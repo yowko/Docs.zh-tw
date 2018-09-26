@@ -8,22 +8,21 @@ helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 1e288daeb717fa9fa041d552cac4ec5d0cd28808
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0adbe9d1689e840d940dd22fcfe05f54e2131fa
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495628"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171734"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>HOW TO：使用 SecurityBindingElement 建立自訂繫結
-Windows Communication Foundation (WCF) 包含數種系統提供繫結，您可以設定，但不是會提供完整的彈性設定 WCF 支援的所有安全性選項時。 本主題示範如何直接從個別的繫結元素建立自訂繫結，並強調一些可在建立這類繫結時指定的安全設定。 如需有關如何建立自訂繫結的詳細資訊，請參閱[擴充繫結](../../../../docs/framework/wcf/extending/extending-bindings.md)。  
+Windows Communication Foundation (WCF) 包含數個系統提供繫結，您可以設定，但不是能提供充分的彈性設定 WCF 支援的所有安全性選項時。 本主題示範如何直接從個別的繫結元素建立自訂繫結，並強調一些可在建立這類繫結時指定的安全設定。 如需建立自訂繫結的詳細資訊，請參閱[擴充繫結](../../../../docs/framework/wcf/extending/extending-bindings.md)。  
   
 > [!WARNING]
 >  <xref:System.ServiceModel.Channels.SecurityBindingElement> 不支援 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 通道圖案，當 <xref:System.ServiceModel.TransferMode> 設定為 <xref:System.ServiceModel.TransferMode.Buffered> 時，這是 TCP 傳輸使用的預設通道圖案。 您必須將 <xref:System.ServiceModel.TransferMode> 設定為 <xref:System.ServiceModel.TransferMode.Streamed>，才能在這個情況中使用 <xref:System.ServiceModel.Channels.SecurityBindingElement>。  
   
 ## <a name="creating-a-custom-binding"></a>建立自訂繫結  
- 在 WCF 中的所有繫結所組成*繫結項目*。 每個繫結項目均衍生自 <xref:System.ServiceModel.Channels.BindingElement> 類別。 如果是標準系統提供的繫結，雖然您可以自訂某些屬性設定，但是系統仍會為您先建立並且設定好繫結項目。  
+ 在 WCF 中的所有繫結組成*繫結項目*。 每個繫結項目均衍生自 <xref:System.ServiceModel.Channels.BindingElement> 類別。 如果是標準系統提供的繫結，雖然您可以自訂某些屬性設定，但是系統仍會為您先建立並且設定好繫結項目。  
   
  相反的，若要建立自訂繫結，會建立並且設定繫結項目，並且從自訂項目建立一個<xref:System.ServiceModel.Channels.CustomBinding>。  
   
@@ -77,9 +76,9 @@ Windows Communication Foundation (WCF) 包含數種系統提供繫結，您可�
 |||SSL 或 Windows StreamSecurityBindingElement|SSL 或 Windows StreamSecurityBindingElement|SSL 或 Windows StreamSecurityBindingElement|  
 |||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
   
- 請注意，SecurityBindingElements 有許多可以設定的項目。 如需詳細資訊，請參閱[SecurityBindingElement 驗證模式](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)。  
+ 請注意，SecurityBindingElements 有許多可以設定的項目。 如需詳細資訊，請參閱 < [SecurityBindingElement 驗證模式](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)。  
   
- 如需詳細資訊，請參閱[安全對話與安全工作階段](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 安全對話與安全工作階段](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)。  
   
 ## <a name="procedures"></a>程序  
   

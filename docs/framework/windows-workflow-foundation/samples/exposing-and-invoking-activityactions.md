@@ -3,11 +3,11 @@ title: 公開及叫用 ActivityActions
 ms.date: 03/30/2017
 ms.assetid: 97ce4797-426e-463d-9cc4-1261afad6df4
 ms.openlocfilehash: 99207c33d82ec9028da2355cc792c366dc5e0cc6
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46583052"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47176395"
 ---
 # <a name="exposing-and-invoking-activityactions"></a>公開及叫用 ActivityActions
 這個範例示範如何開發有 <xref:System.Activities.ActivityAction> 的自訂活動。 此外，也示範如何提供 <xref:System.Activities.ActivityAction> 實作，使用此活動。  

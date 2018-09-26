@@ -3,13 +3,12 @@ title: 訊息記錄的安全性考量
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 6da641ec5da20c80f4c1034ded8a3be7d036b5a8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: c03b4fff41b66d2da6e912be613fb4341484518b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44185976"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172033"
 ---
 # <a name="security-concerns-for-message-logging"></a>訊息記錄的安全性考量
 此主題描述如何保護訊息記錄以及記錄訊息時所產生之事件中的敏感性資料，使其不會被公開。  

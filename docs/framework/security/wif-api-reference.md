@@ -3,13 +3,12 @@ title: WIF API 參考
 ms.date: 03/30/2017
 ms.assetid: a027d902-9314-4bfd-b172-4e81847b1d68
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: f5a38420cf5ddb0a76946d5e44e98e1f39118236
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0cd373ae3fd5acb1650f0d8614b34c5d19cf9016
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401683"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171643"
 ---
 # <a name="wif-api-reference"></a>WIF API 參考
 Windows Identity Foundation (WIF) 類別會分成下列組件：`mscorlib` (mscorlib.dll)、`System.IdentityModel` (System.IdentityModel.dll)、`System.IdentityModel.Services` (System.IdentityModel.Services.dll) 和 `System.ServiceModel` (System.ServiceModel.dll)。 本主題提供 WIF 命名空間的連結，以及每個命名空間所包含類別的簡短說明。  

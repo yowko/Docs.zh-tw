@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: fb050a8d73c42094caf83ba00c5dfc2e4d472723
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0640b4c54b6f1429bce4947ec536352f240ca719
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748668"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172728"
 ---
 # <a name="ltruntimegt-element"></a>&lt;執行階段&gt;項目
 提供 common language runtime 用來設定應用程式的資訊。  
@@ -33,12 +32,12 @@ ms.locfileid: "32748668"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明子項目和父項目。  
+ 下列各節會說明項目子系和父項目。  
   
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -49,9 +48,9 @@ ms.locfileid: "32748668"
 |[\<appDomainResourceMonitoring>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)|針對處理序存留期間，指示執行階段收集處理序中所有應用程式網域的統計資料。|  
 |[\<assemblyBinding>](../../../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)|包含有關組件版本重新導向和組件位置的資訊。|  
 |[\<bypassTrustedAppStrongNames>](../../../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)|指定是否應略過信任組件的強式名稱驗證。|  
-|[\<CompatSortNLSVersion>](../../../../../docs/framework/configure-apps/file-schema/runtime/compatsortnlsversion-element.md)|指定執行階段在執行字串比較時，應使用舊版的排序行為。|  
+|[\<CompatSortNLSVersion>](../../../../../docs/framework/configure-apps/file-schema/runtime/compatsortnlsversion-element.md)|指定執行階段在執行字串比較時，應該使用舊版排序行為。|  
 |[\<developmentMode>](../../../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md)|指定執行階段是否要在 DEVPATH 環境變數所指定的目錄中搜尋組件。|  
-|[\<disableCachingBindingFailures>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)|指定是否快取繫結失敗，這是.NET Framework 2.0 版中的預設行為，已停用。|  
+|[\<disableCachingBindingFailures>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)|指定是否快取繫結失敗，也就是.NET Framework 2.0 版中的預設行為，已停用。|  
 |[\<disableCommitThreadStack>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecommitthreadstack-element.md)|指定是否在執行緒啟動時認可完整執行緒堆疊。|  
 |[\<disableFusionUpdatesFromADManager>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablefusionupdatesfromadmanager-element.md)|指定是否停用預設行為 (亦即允許執行階段主機覆寫應用程式網域的組態設定)。|  
 |[\<EnableAmPmParseAdjustment>](../../../../../docs/framework/configure-apps/file-schema/runtime/enableampmparseadjustment-element.md)|針對只包含日期、月份、小時和上午/下午指示項的日期字串，決定日期及時間剖析方法是否使用一組調整過的規則來剖析。|  
@@ -88,9 +87,9 @@ ms.locfileid: "32748668"
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
   
 ## <a name="remarks"></a>備註  
- 中的子項目[\<執行階段 >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)組態檔區段 common language runtime 用來設定應用程式的執行方式。 例如， [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)元素會決定是否記憶體回收行程會使用工作站記憶體回收或伺服器記憶體回收[ \<UseRandomizedStringHashAlgorithm >](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)元素會決定是否通用語言執行平台計算雜湊碼的字串，在每個應用程式或以每個應用程式網域為基礎，而`AppContextSwitchOverrides`元素可讓程式庫的使用者若要選擇加入或退出變更文件庫所提供的功能。  
+ 中的子項目[\<執行階段 >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)組態檔區段的 common language runtime 用來設定應用程式的執行方式。 例如， [ \<Gcserver> >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)項目可讓您判斷記憶體回收行程使用工作站記憶體回收 」 或 「 伺服器記憶體回收[ \<UseRandomizedStringHashAlgorithm >](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)元素會決定 common language runtime 是否計算每個應用程式或以每個應用程式定義域為基準，字串的雜湊程式碼和`AppContextSwitchOverrides`元素可讓程式庫的使用者若要選擇加入或退出變更程式庫所提供的功能。  
   
- 中的項目[\<執行階段 >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) common language runtime 應用程式啟動時自動讀取 > 一節。 您也可以藉由提供其名稱定義的非預設應用程式定義域的組態檔<xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType>屬性; 它會讀取設定自動載入應用程式定義域時。 您應該很少，如果有的話，有需要的設定會直接讀取[\<執行階段 >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) > 一節，在您的應用程式組態檔中。  
+ 中的項目[\<執行階段 >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)區段將會自動讀取 common language runtime 在應用程式啟動。 您也可以藉由提供其名稱來定義的非預設應用程式定義域的組態檔<xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType>屬性，其設定讀取自動載入應用程式定義域的時機。 您應該很少，是否需要直接讀取中的設定[\<執行階段 >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)在您的應用程式組態檔中的區段。  
   
 ## <a name="see-also"></a>另請參閱  
  [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  

@@ -9,13 +9,12 @@ helpviewer_keywords:
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 364d4e6b1009993c11a7f23edcd262de4ad435c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd2c4f32978107a82ce940e0ef984c70f461b2c3
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493874"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172189"
 ---
 # <a name="how-to-create-a-security-token-service"></a>HOW TO：建立安全性權杖服務
 安全性權杖服務實作於 WS-Trust 規格定義的通訊協定。 此通訊協定定義用來核發、更新、取消及驗證安全性權杖的訊息格式以及訊息交換模式。 指定的安全性權杖服務提供一個或一個以上的這些功能。 此主題檢視最常見的狀況：實作權杖核發。  
@@ -100,7 +99,7 @@ ms.locfileid: "33493874"
  [!code-csharp[c_CreateSTS#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#4)]
  [!code-vb[c_CreateSTS#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#4)]  
   
- 如需詳細資訊，請參閱[聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
   
 ## <a name="creating-response-messages"></a>建立回應訊息  
  一旦安全性權杖服務處理發出的要求，並且建構出要核發之權杖以及證明金鑰後，就需要建構回應訊息，至少包括要求的權杖、證明權杖以及核發的權杖參照。 此核發的權杖一般而言是 <xref:System.IdentityModel.Tokens.SamlSecurityToken> 自 <xref:System.IdentityModel.Tokens.SamlAssertion>所建造，如以下範例所示。  
@@ -113,7 +112,7 @@ ms.locfileid: "33493874"
  [!code-csharp[c_CreateSTS#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#6)]
  [!code-vb[c_CreateSTS#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#6)]  
   
- 如需如何建構證明權杖時用戶端與安全性權杖服務都會提供共用金鑰的金鑰內容的詳細資訊，請參閱[聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
+ 如需如何建構證明權杖，當用戶端和安全性權杖服務都提供共用金鑰的金鑰內容的詳細資訊，請參閱[聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
   
  核發的權杖參照以建立 <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause> 類別執行個體而建構。  
   
@@ -123,7 +122,7 @@ ms.locfileid: "33493874"
  然後將這些不同的值序列化成回應訊息傳回用戶端。  
   
 ## <a name="example"></a>範例  
- 如需安全性權杖服務的完整程式碼，請參閱[聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
+ 安全性權杖服務的完整程式碼，請參閱[聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.IdentityModel.Tokens.SigningCredentials>  

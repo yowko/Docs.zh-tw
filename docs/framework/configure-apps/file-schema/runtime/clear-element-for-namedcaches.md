@@ -1,5 +1,5 @@
 ---
-title: '&lt;清除&gt;元素&lt;namedCaches&gt;'
+title: '&lt;清除&gt;項目&lt;namedCaches&gt;'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <clear> element for <namedCaches>
@@ -7,15 +7,14 @@ helpviewer_keywords:
 ms.assetid: ea01a858-65da-4348-800f-5e3df59d4d79
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: cdd6e4a4849a031dc6bcad909509498406fcb129
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 17043cdd4bcabf2e5e14c7b9c31b8c1747d2c866
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745509"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171942"
 ---
-# <a name="ltcleargt-element-for-ltnamedcachesgt"></a>&lt;清除&gt;元素&lt;namedCaches&gt;
+# <a name="ltcleargt-element-for-ltnamedcachesgt"></a>&lt;清除&gt;項目&lt;namedCaches&gt;
 清除所有`namedCache`中的項目`namedCaches`記憶體快取的集合。  
   
  \<system.runtime.caching>  
@@ -51,7 +50,7 @@ ms.locfileid: "32745509"
 |[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|包含集合的組態設定具名<xref:System.Runtime.Caching.MemoryCache>執行個體。|  
   
 ## <a name="remarks"></a>備註  
- `clear`項目清除所有`namedCache`記憶體快取具名快取在集合中的項目。 您可以使用`clear`使用之前的項目`add`元素將加入新的具名快取項目，以便確定有沒有其他具名快取，在集合中的。  
+ `clear`項目清除所有`namedCache`記憶體內部快取的具名快取集合中的項目。 您可以使用`clear`項目才能使用`add`項目將加入新的具名快取項目，才能確定有沒有其他具名集合中的快取。  
   
 ## <a name="see-also"></a>另請參閱  
  [\<namedCaches > 項目 （快取設定）](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

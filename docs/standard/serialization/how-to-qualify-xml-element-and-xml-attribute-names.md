@@ -10,11 +10,11 @@ helpviewer_keywords:
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
 ms.openlocfilehash: 3c477923387e5a28dcc14b44b0f77bb6acb686e5
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46526554"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47176730"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>HOW TO：限定 XML 元素和 XML 屬性名稱
 

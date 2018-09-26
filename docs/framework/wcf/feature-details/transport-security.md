@@ -3,23 +3,22 @@ title: 傳輸安全性
 ms.date: 03/30/2017
 ms.assetid: 86c94153-e48d-4539-b6cf-cd8060582e7f
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: e7f804d34a47c5508839636a6fe5045ebce3972e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a52ac584abe766a7517436e697aff89333c9833
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498211"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171422"
 ---
 # <a name="transport-security"></a>傳輸安全性
 傳輸安全性的 Windows Communication Foundation (WCF) 取決於選取的繫結。 繫結所實作的傳輸將決定實際的安全性機制。 本章節中的主題說明所實作的機制及其選項。  
   
 ## <a name="in-this-section"></a>本節內容  
  [傳輸安全性概觀](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
- 說明 WCF 的傳輸安全性的基本概念。  
+ 說明 WCF 傳輸安全性的基本概念。  
   
  [HTTP 傳輸安全性](../../../../docs/framework/wcf/feature-details/http-transport-security.md)  
- 說明如何 WCF 實作安全通訊端圖層 （SSL 或 HTTPS）。  
+ 說明 WCF 如何實作安全通訊端圖層 （SSL 或 HTTPS）。  
   
  [了解 HTTP 驗證](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)  
  說明 HTTP 驗證配置，例如基本、摘要、NT LAN Manager (NTLM) 以及其他等等。  

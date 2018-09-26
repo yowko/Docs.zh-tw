@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bitmap effects [WPF]
 ms.assetid: 23cb338e-4b59-4b52-b294-96431f9c9568
 ms.openlocfilehash: 97b878621d5aa1860cd955755d9bbc344b95b993
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46537510"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171721"
 ---
 # <a name="bitmap-effects-overview"></a>點陣圖效果概觀
 點陣圖效果可讓設計人員和開發人員来套用至視覺效果呈現 Windows Presentation Foundation (WPF) 內容。 例如，點陣圖效果可讓您輕鬆地套用<xref:System.Windows.Media.Effects.DropShadowBitmapEffect>效果或模糊效果影像或按鈕。  

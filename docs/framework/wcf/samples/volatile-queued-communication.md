@@ -3,11 +3,11 @@ title: 變動性佇列通訊
 ms.date: 03/30/2017
 ms.assetid: 0d012f64-51c7-41d0-8e18-c756f658ee3d
 ms.openlocfilehash: 55c2b695cdc672216ef6a76bef55bc0d427336a0
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46526754"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171812"
 ---
 # <a name="volatile-queued-communication"></a>變動性佇列通訊
 這個範例會示範如何透過訊息佇列 (MSMQ) 傳輸來執行變動性佇列通訊。 這個範例會使用 <xref:System.ServiceModel.NetMsmqBinding>。 這個案例中的服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。  

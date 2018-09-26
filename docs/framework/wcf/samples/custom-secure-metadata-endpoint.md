@@ -3,13 +3,12 @@ title: 自訂安全中繼資料端點
 ms.date: 03/30/2017
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 3ff8c5b08bb50b894511d1f9bdd28ddb2683d13b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: af3c7ca70ea38a1ee07e077440b3936d83a34d56
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777190"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171955"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>自訂安全中繼資料端點
 這個範例會示範如何實作具有使用其中一個非中繼資料交換繫結，安全的中繼資料端點的服務以及如何設定[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)或用戶端從這類中繼端點的中繼資料。 有兩個系統提供的繫結可用來公開中繼資料端點：mexHttpBinding 和 mexHttpsBinding。 mexHttpBinding 可用來以不安全的方式，透過 HTTP 公開中繼資料端點。 mexHttpsBinding 可用來以安全的方式，透過 HTTPS 公開中繼資料端點。 此範例說明如何使用 <xref:System.ServiceModel.WSHttpBinding> 公開安全的中繼資料端點。 當您要變更繫結上的安全性設定時，您會想要這麼做，但是您不想使用 HTTPS。 如果使用 mexHttpsBinding，您的中繼資料端點將是安全的，但是沒有方法可以修改繫結設定。  
