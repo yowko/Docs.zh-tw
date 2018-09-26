@@ -14,11 +14,11 @@ ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: c5186aa94993ba551252db6fef55853b5b554789
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47170817"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200954"
 ---
 # <a name="linkedconfiguration-element"></a>\<linkedConfiguration > 項目
 

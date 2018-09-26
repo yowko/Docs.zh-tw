@@ -3,11 +3,11 @@ title: 使用動作實作伺服器端行為
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
 ms.openlocfilehash: 515553540053ed0c16085fde06e2cc2d2dedda1e
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47171890"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47204475"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>使用動作實作伺服器端行為
 

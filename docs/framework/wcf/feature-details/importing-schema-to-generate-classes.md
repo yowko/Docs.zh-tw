@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
 ms.openlocfilehash: 0d18ee811763a1a3db6905bdbd18540ab5c97c05
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47108510"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47197367"
 ---
 # <a name="importing-schema-to-generate-classes"></a>匯入結構描述以產生類別
 若要從可與 Windows Communication Foundation (WCF) 的結構描述產生類別，使用<xref:System.Runtime.Serialization.XsdDataContractImporter>類別。 這個主題將說明處理程序和變化。  
