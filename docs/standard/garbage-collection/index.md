@@ -21,11 +21,11 @@ ms.assetid: 22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1f61b63f78ea3c6131d4d1ab4e421be25149035b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45645612"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45964120"
 ---
 # <a name="garbage-collection"></a>記憶體回收
 .NET 的記憶體回收行程可管理應用程式的記憶體配置及釋放。 每次當您建立新的物件時，通用語言執行平台會從 Managed 堆積配置物件的記憶體。 只要 Managed 堆積中有可供使用的位址空間，平台就會繼續為新的物件配置空間。 不過，記憶體不是無限的。 因此記憶體回收行程最後就必須執行回收以釋放一些記憶體。 記憶體回收行程的最佳化引擎會根據所做的配置，決定執行回收的最佳時機。 當記憶體回收行程執行回收時，會檢查 Managed 堆積中是否有應用程式不再使用的物件，並執行必要的作業以回收其記憶體。  
