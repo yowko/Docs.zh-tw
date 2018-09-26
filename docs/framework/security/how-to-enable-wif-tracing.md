@@ -3,72 +3,71 @@ title: 如何：啟用 WIF 追蹤
 ms.date: 03/30/2017
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 17650e06cb505dd778a9c0980c2a32fda8099cb4
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f763c279c29bec73d4fc20d59dc86726d84e21bd
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856234"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171695"
 ---
-# <a name="how-to-enable-wif-tracing"></a><span data-ttu-id="011fa-102">如何：啟用 WIF 追蹤</span><span class="sxs-lookup"><span data-stu-id="011fa-102">How To: Enable WIF Tracing</span></span>
-## <a name="applies-to"></a><span data-ttu-id="011fa-103">適用於</span><span class="sxs-lookup"><span data-stu-id="011fa-103">Applies To</span></span>  
+# <a name="how-to-enable-wif-tracing"></a><span data-ttu-id="520e9-102">如何：啟用 WIF 追蹤</span><span class="sxs-lookup"><span data-stu-id="520e9-102">How To: Enable WIF Tracing</span></span>
+## <a name="applies-to"></a><span data-ttu-id="520e9-103">適用於</span><span class="sxs-lookup"><span data-stu-id="520e9-103">Applies To</span></span>  
   
--   <span data-ttu-id="011fa-104">Microsoft® Windows® Identity Foundation (WIF)</span><span class="sxs-lookup"><span data-stu-id="011fa-104">Microsoft® Windows® Identity Foundation (WIF)</span></span>  
+-   <span data-ttu-id="520e9-104">Microsoft® Windows® Identity Foundation (WIF)</span><span class="sxs-lookup"><span data-stu-id="520e9-104">Microsoft® Windows® Identity Foundation (WIF)</span></span>  
   
--   <span data-ttu-id="011fa-105">ASP.NET® Web Forms</span><span class="sxs-lookup"><span data-stu-id="011fa-105">ASP.NET® Web Forms</span></span>  
+-   <span data-ttu-id="520e9-105">ASP.NET® Web Forms</span><span class="sxs-lookup"><span data-stu-id="520e9-105">ASP.NET® Web Forms</span></span>  
   
-## <a name="summary"></a><span data-ttu-id="011fa-106">總結</span><span class="sxs-lookup"><span data-stu-id="011fa-106">Summary</span></span>  
- <span data-ttu-id="011fa-107">這個操作說明提供了在 ASP.NET 應用程式中啟用 WIF 追蹤的詳細逐步程序。</span><span class="sxs-lookup"><span data-stu-id="011fa-107">This How-To provides detailed step-by-step procedures for enabling WIF tracing in an ASP.NET application.</span></span> <span data-ttu-id="011fa-108">還提供了一些指示，說明如何測試應用程式以確認追蹤接聽項和記錄檔正常運作。</span><span class="sxs-lookup"><span data-stu-id="011fa-108">It also provides instructions testing the application to verify that the trace listener and log are working correctly.</span></span> <span data-ttu-id="011fa-109">這篇使用方法文章並沒有提供建立 Security Token Service (STS) 的詳細指示，而是使用識別和存取工具隨附的「開發 STS」。</span><span class="sxs-lookup"><span data-stu-id="011fa-109">This How-To does not have detailed instructions for creating a Security Token Service (STS), and instead uses the Development STS that comes with the Identity and Access tool.</span></span> <span data-ttu-id="011fa-110">「開發 STS」並不會執行實際的驗證，而只是用於測試用途。</span><span class="sxs-lookup"><span data-stu-id="011fa-110">The Development STS does not perform real authentication and is intended for testing purposes only.</span></span> <span data-ttu-id="011fa-111">您必須安裝識別和存取工具才能完成這篇使用方法文章。</span><span class="sxs-lookup"><span data-stu-id="011fa-111">You will need to install the Identity and Access tool to complete this How-To.</span></span> <span data-ttu-id="011fa-112">您可以從下列位置下載：[Identity and Access Tool](https://go.microsoft.com/fwlink/?LinkID=245849) (身分識別與存取工具)</span><span class="sxs-lookup"><span data-stu-id="011fa-112">It can be downloaded from the following location: [Identity and Access Tool](https://go.microsoft.com/fwlink/?LinkID=245849)</span></span>  
+## <a name="summary"></a><span data-ttu-id="520e9-106">總結</span><span class="sxs-lookup"><span data-stu-id="520e9-106">Summary</span></span>  
+ <span data-ttu-id="520e9-107">這個操作說明提供了在 ASP.NET 應用程式中啟用 WIF 追蹤的詳細逐步程序。</span><span class="sxs-lookup"><span data-stu-id="520e9-107">This How-To provides detailed step-by-step procedures for enabling WIF tracing in an ASP.NET application.</span></span> <span data-ttu-id="520e9-108">還提供了一些指示，說明如何測試應用程式以確認追蹤接聽項和記錄檔正常運作。</span><span class="sxs-lookup"><span data-stu-id="520e9-108">It also provides instructions testing the application to verify that the trace listener and log are working correctly.</span></span> <span data-ttu-id="520e9-109">這篇使用方法文章並沒有提供建立 Security Token Service (STS) 的詳細指示，而是使用識別和存取工具隨附的「開發 STS」。</span><span class="sxs-lookup"><span data-stu-id="520e9-109">This How-To does not have detailed instructions for creating a Security Token Service (STS), and instead uses the Development STS that comes with the Identity and Access tool.</span></span> <span data-ttu-id="520e9-110">「開發 STS」並不會執行實際的驗證，而只是用於測試用途。</span><span class="sxs-lookup"><span data-stu-id="520e9-110">The Development STS does not perform real authentication and is intended for testing purposes only.</span></span> <span data-ttu-id="520e9-111">您必須安裝識別和存取工具才能完成這篇使用方法文章。</span><span class="sxs-lookup"><span data-stu-id="520e9-111">You will need to install the Identity and Access tool to complete this How-To.</span></span> <span data-ttu-id="520e9-112">您可以從下列位置下載：[Identity and Access Tool](https://go.microsoft.com/fwlink/?LinkID=245849) (身分識別與存取工具)</span><span class="sxs-lookup"><span data-stu-id="520e9-112">It can be downloaded from the following location: [Identity and Access Tool](https://go.microsoft.com/fwlink/?LinkID=245849)</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="011fa-113">為被動應用程式 (也就是使用 WS-同盟通訊協定的應用程式) 啟用 WIF 追蹤，可能會使應用程式暴露於阻斷服務 (DoS) 攻擊或洩漏資訊給惡意方的風險下。</span><span class="sxs-lookup"><span data-stu-id="011fa-113">Enabling WIF tracing for passive applications, that is, applications that use the WS-Federation protocol, can potentially expose the application to denial of service (DoS) attacks or to information disclosure to a malicious party.</span></span> <span data-ttu-id="011fa-114">這同時包括被動 RP 和被動 STS。</span><span class="sxs-lookup"><span data-stu-id="011fa-114">This includes both passive RPs and passive STSes.</span></span> <span data-ttu-id="011fa-115">基於這個理由，建議您不要在生產環境中為被動 RP 或 STS 啟用 WIF 追蹤。</span><span class="sxs-lookup"><span data-stu-id="011fa-115">For this reason, we recommend that you not enable WIF tracing for passive RPs or STSes in a production environment.</span></span>  
+>  <span data-ttu-id="520e9-113">為被動應用程式 (也就是使用 WS-同盟通訊協定的應用程式) 啟用 WIF 追蹤，可能會使應用程式暴露於阻斷服務 (DoS) 攻擊或洩漏資訊給惡意方的風險下。</span><span class="sxs-lookup"><span data-stu-id="520e9-113">Enabling WIF tracing for passive applications, that is, applications that use the WS-Federation protocol, can potentially expose the application to denial of service (DoS) attacks or to information disclosure to a malicious party.</span></span> <span data-ttu-id="520e9-114">這同時包括被動 RP 和被動 STS。</span><span class="sxs-lookup"><span data-stu-id="520e9-114">This includes both passive RPs and passive STSes.</span></span> <span data-ttu-id="520e9-115">基於這個理由，建議您不要在生產環境中為被動 RP 或 STS 啟用 WIF 追蹤。</span><span class="sxs-lookup"><span data-stu-id="520e9-115">For this reason, we recommend that you not enable WIF tracing for passive RPs or STSes in a production environment.</span></span>  
   
-## <a name="contents"></a><span data-ttu-id="011fa-116">內容</span><span class="sxs-lookup"><span data-stu-id="011fa-116">Contents</span></span>  
+## <a name="contents"></a><span data-ttu-id="520e9-116">內容</span><span class="sxs-lookup"><span data-stu-id="520e9-116">Contents</span></span>  
   
--   <span data-ttu-id="011fa-117">目標</span><span class="sxs-lookup"><span data-stu-id="011fa-117">Objectives</span></span>  
+-   <span data-ttu-id="520e9-117">目標</span><span class="sxs-lookup"><span data-stu-id="520e9-117">Objectives</span></span>  
   
--   <span data-ttu-id="011fa-118">總覽</span><span class="sxs-lookup"><span data-stu-id="011fa-118">Overview</span></span>  
+-   <span data-ttu-id="520e9-118">總覽</span><span class="sxs-lookup"><span data-stu-id="520e9-118">Overview</span></span>  
   
--   <span data-ttu-id="011fa-119">步驟摘要</span><span class="sxs-lookup"><span data-stu-id="011fa-119">Summary of Steps</span></span>  
+-   <span data-ttu-id="520e9-119">步驟摘要</span><span class="sxs-lookup"><span data-stu-id="520e9-119">Summary of Steps</span></span>  
   
--   <span data-ttu-id="011fa-120">步驟 1 – 建立簡單的 ASP.NET Web Form 應用程式並啟用追蹤</span><span class="sxs-lookup"><span data-stu-id="011fa-120">Step 1 – Create a Simple ASP.NET Web Forms Application and Enable Tracing</span></span>  
+-   <span data-ttu-id="520e9-120">步驟 1 – 建立簡單的 ASP.NET Web Form 應用程式並啟用追蹤</span><span class="sxs-lookup"><span data-stu-id="520e9-120">Step 1 – Create a Simple ASP.NET Web Forms Application and Enable Tracing</span></span>  
   
--   <span data-ttu-id="011fa-121">步驟 2 – 測試方案</span><span class="sxs-lookup"><span data-stu-id="011fa-121">Step 2 – Test Your Solution</span></span>  
+-   <span data-ttu-id="520e9-121">步驟 2 – 測試方案</span><span class="sxs-lookup"><span data-stu-id="520e9-121">Step 2 – Test Your Solution</span></span>  
   
-## <a name="objectives"></a><span data-ttu-id="011fa-122">目標</span><span class="sxs-lookup"><span data-stu-id="011fa-122">Objectives</span></span>  
+## <a name="objectives"></a><span data-ttu-id="520e9-122">目標</span><span class="sxs-lookup"><span data-stu-id="520e9-122">Objectives</span></span>  
   
--   <span data-ttu-id="011fa-123">建立從身分識別與存取工具使用 WIF 和開發 STS 的簡單 ASP.NET 應用程式</span><span class="sxs-lookup"><span data-stu-id="011fa-123">Create a simple ASP.NET application that uses WIF and the Development STS from the Identity and Access Tool</span></span>  
+-   <span data-ttu-id="520e9-123">建立從身分識別與存取工具使用 WIF 和開發 STS 的簡單 ASP.NET 應用程式</span><span class="sxs-lookup"><span data-stu-id="520e9-123">Create a simple ASP.NET application that uses WIF and the Development STS from the Identity and Access Tool</span></span>  
   
--   <span data-ttu-id="011fa-124">啟用追蹤，並確認它能夠正常運作</span><span class="sxs-lookup"><span data-stu-id="011fa-124">Enable tracing and verify that it is working</span></span>  
+-   <span data-ttu-id="520e9-124">啟用追蹤，並確認它能夠正常運作</span><span class="sxs-lookup"><span data-stu-id="520e9-124">Enable tracing and verify that it is working</span></span>  
   
-## <a name="overview"></a><span data-ttu-id="011fa-125">總覽</span><span class="sxs-lookup"><span data-stu-id="011fa-125">Overview</span></span>  
- <span data-ttu-id="011fa-126">追蹤可讓您對 WIF 的許多類型問題進行偵錯和疑難排解，包括權杖、Cookie、宣告、通訊協定訊息等等。</span><span class="sxs-lookup"><span data-stu-id="011fa-126">Tracing enables you to debug and troubleshoot many types of issues with WIF, including tokens, cookies, claims, protocol messages, and more.</span></span> <span data-ttu-id="011fa-127">WIF 追蹤類似於 WCF 追蹤；例如，您可以選擇追蹤的詳細資訊來顯示從重大訊息到所有訊息的一切項目。</span><span class="sxs-lookup"><span data-stu-id="011fa-127">WIF tracing is similar to WCF tracing; for example, you can choose the verbosity of traces to display everything from critical messages to all messages.</span></span> <span data-ttu-id="011fa-128">WIF 追蹤是在 **.xml** 檔案或 **.svclog** 檔案中產生，而您可以使用服務追蹤檢視器工具來檢視這些檔案。</span><span class="sxs-lookup"><span data-stu-id="011fa-128">WIF traces can be generated in **.xml** files or in **.svclog** files that are viewable by using the Service Trace Viewer Tool.</span></span> <span data-ttu-id="011fa-129">此工具位於電腦上 Windows SDK 安裝路徑的 **bin** 目錄中，例如：**C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SvcTraceViewer.exe**。</span><span class="sxs-lookup"><span data-stu-id="011fa-129">This tool is located in the **bin** directory of the Windows SDK install path on your computer, for example: **C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SvcTraceViewer.exe**.</span></span>  
+## <a name="overview"></a><span data-ttu-id="520e9-125">總覽</span><span class="sxs-lookup"><span data-stu-id="520e9-125">Overview</span></span>  
+ <span data-ttu-id="520e9-126">追蹤可讓您對 WIF 的許多類型問題進行偵錯和疑難排解，包括權杖、Cookie、宣告、通訊協定訊息等等。</span><span class="sxs-lookup"><span data-stu-id="520e9-126">Tracing enables you to debug and troubleshoot many types of issues with WIF, including tokens, cookies, claims, protocol messages, and more.</span></span> <span data-ttu-id="520e9-127">WIF 追蹤類似於 WCF 追蹤；例如，您可以選擇追蹤的詳細資訊來顯示從重大訊息到所有訊息的一切項目。</span><span class="sxs-lookup"><span data-stu-id="520e9-127">WIF tracing is similar to WCF tracing; for example, you can choose the verbosity of traces to display everything from critical messages to all messages.</span></span> <span data-ttu-id="520e9-128">WIF 追蹤是在 **.xml** 檔案或 **.svclog** 檔案中產生，而您可以使用服務追蹤檢視器工具來檢視這些檔案。</span><span class="sxs-lookup"><span data-stu-id="520e9-128">WIF traces can be generated in **.xml** files or in **.svclog** files that are viewable by using the Service Trace Viewer Tool.</span></span> <span data-ttu-id="520e9-129">此工具位於電腦上 Windows SDK 安裝路徑的 **bin** 目錄中，例如：**C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SvcTraceViewer.exe**。</span><span class="sxs-lookup"><span data-stu-id="520e9-129">This tool is located in the **bin** directory of the Windows SDK install path on your computer, for example: **C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SvcTraceViewer.exe**.</span></span>  
   
-## <a name="summary-of-steps"></a><span data-ttu-id="011fa-130">步驟摘要</span><span class="sxs-lookup"><span data-stu-id="011fa-130">Summary of Steps</span></span>  
+## <a name="summary-of-steps"></a><span data-ttu-id="520e9-130">步驟摘要</span><span class="sxs-lookup"><span data-stu-id="520e9-130">Summary of Steps</span></span>  
   
--   <span data-ttu-id="011fa-131">步驟 1 – 建立簡單的 ASP.NET Web Form 應用程式並啟用追蹤</span><span class="sxs-lookup"><span data-stu-id="011fa-131">Step 1 – Create a Simple ASP.NET Web Forms Application and Enable Tracing</span></span>  
+-   <span data-ttu-id="520e9-131">步驟 1 – 建立簡單的 ASP.NET Web Form 應用程式並啟用追蹤</span><span class="sxs-lookup"><span data-stu-id="520e9-131">Step 1 – Create a Simple ASP.NET Web Forms Application and Enable Tracing</span></span>  
   
--   <span data-ttu-id="011fa-132">步驟 2 – 測試方案</span><span class="sxs-lookup"><span data-stu-id="011fa-132">Step 2 – Test Your Solution</span></span>  
+-   <span data-ttu-id="520e9-132">步驟 2 – 測試方案</span><span class="sxs-lookup"><span data-stu-id="520e9-132">Step 2 – Test Your Solution</span></span>  
   
-## <a name="step-1--create-a-simple-aspnet-web-forms-application-and-enable-tracing"></a><span data-ttu-id="011fa-133">步驟 1 – 建立簡單的 ASP.NET Web Form 應用程式並啟用追蹤</span><span class="sxs-lookup"><span data-stu-id="011fa-133">Step 1 – Create a Simple ASP.NET Web Forms Application and Enable Tracing</span></span>  
- <span data-ttu-id="011fa-134">在此步驟中，您將建立新的 ASP.NET Web Form 應用程式，並修改 *Web.config* 檔案以啟用追蹤。</span><span class="sxs-lookup"><span data-stu-id="011fa-134">In this step, you will create a new ASP.NET Web Forms application and modify the *Web.config* file to enable tracing.</span></span>  
+## <a name="step-1--create-a-simple-aspnet-web-forms-application-and-enable-tracing"></a><span data-ttu-id="520e9-133">步驟 1 – 建立簡單的 ASP.NET Web Form 應用程式並啟用追蹤</span><span class="sxs-lookup"><span data-stu-id="520e9-133">Step 1 – Create a Simple ASP.NET Web Forms Application and Enable Tracing</span></span>  
+ <span data-ttu-id="520e9-134">在此步驟中，您將建立新的 ASP.NET Web Form 應用程式，並修改 *Web.config* 檔案以啟用追蹤。</span><span class="sxs-lookup"><span data-stu-id="520e9-134">In this step, you will create a new ASP.NET Web Forms application and modify the *Web.config* file to enable tracing.</span></span>  
   
-#### <a name="to-create-a-simple-aspnet-application"></a><span data-ttu-id="011fa-135">建立簡單的 ASP.NET 應用程式</span><span class="sxs-lookup"><span data-stu-id="011fa-135">To create a simple ASP.NET application</span></span>  
+#### <a name="to-create-a-simple-aspnet-application"></a><span data-ttu-id="520e9-135">建立簡單的 ASP.NET 應用程式</span><span class="sxs-lookup"><span data-stu-id="520e9-135">To create a simple ASP.NET application</span></span>  
   
-1.  <span data-ttu-id="011fa-136">啟動 Visual Studio，並依序按一下 [檔案]、[新增] 和 [專案]。</span><span class="sxs-lookup"><span data-stu-id="011fa-136">Start Visual Studio and click **File**, **New**, and then **Project**.</span></span>  
+1.  <span data-ttu-id="520e9-136">啟動 Visual Studio，並依序按一下 [檔案]、[新增] 和 [專案]。</span><span class="sxs-lookup"><span data-stu-id="520e9-136">Start Visual Studio and click **File**, **New**, and then **Project**.</span></span>  
   
-2.  <span data-ttu-id="011fa-137">在 [新增專案] 視窗中，按一下 [ASP.NET Web Forms 應用程式]。</span><span class="sxs-lookup"><span data-stu-id="011fa-137">In the **New Project** window, click **ASP.NET Web Forms Application**.</span></span>  
+2.  <span data-ttu-id="520e9-137">在 [新增專案] 視窗中，按一下 [ASP.NET Web Forms 應用程式]。</span><span class="sxs-lookup"><span data-stu-id="520e9-137">In the **New Project** window, click **ASP.NET Web Forms Application**.</span></span>  
   
-3.  <span data-ttu-id="011fa-138">在 [名稱] 中，輸入 `TestApp`，然後按 [確定]。</span><span class="sxs-lookup"><span data-stu-id="011fa-138">In **Name**, enter `TestApp` and press **OK**.</span></span>  
+3.  <span data-ttu-id="520e9-138">在 [名稱] 中，輸入 `TestApp`，然後按 [確定]。</span><span class="sxs-lookup"><span data-stu-id="520e9-138">In **Name**, enter `TestApp` and press **OK**.</span></span>  
   
-4.  <span data-ttu-id="011fa-139">以滑鼠右鍵按一下方案總管底下的 [TestApp] 專案，然後選取 [身分識別與存取]。</span><span class="sxs-lookup"><span data-stu-id="011fa-139">Right-click the **TestApp** project under **Solution Explorer**, then select **Identity and Access**.</span></span>  
+4.  <span data-ttu-id="520e9-139">以滑鼠右鍵按一下方案總管底下的 [TestApp] 專案，然後選取 [身分識別與存取]。</span><span class="sxs-lookup"><span data-stu-id="520e9-139">Right-click the **TestApp** project under **Solution Explorer**, then select **Identity and Access**.</span></span>  
   
-5.  <span data-ttu-id="011fa-140">[身分識別與存取] 視窗隨即出現。</span><span class="sxs-lookup"><span data-stu-id="011fa-140">The **Identity and Access** window appears.</span></span> <span data-ttu-id="011fa-141">在 [提供者] 底下，選取 [Test your application with the Local Development STS] (使用本機開發 STS 測試應用程式}，然後按一下 [套用]。</span><span class="sxs-lookup"><span data-stu-id="011fa-141">Under **Providers**, select **Test your application with the Local Development STS**, then click **Apply**.</span></span>  
+5.  <span data-ttu-id="520e9-140">[身分識別與存取] 視窗隨即出現。</span><span class="sxs-lookup"><span data-stu-id="520e9-140">The **Identity and Access** window appears.</span></span> <span data-ttu-id="520e9-141">在 [提供者] 底下，選取 [Test your application with the Local Development STS] (使用本機開發 STS 測試應用程式}，然後按一下 [套用]。</span><span class="sxs-lookup"><span data-stu-id="520e9-141">Under **Providers**, select **Test your application with the Local Development STS**, then click **Apply**.</span></span>  
   
-6.  <span data-ttu-id="011fa-142">在 **C:** 磁碟機的根目錄中建立名為 **logs** 的新資料夾，如下所示：**C:\logs**</span><span class="sxs-lookup"><span data-stu-id="011fa-142">Create a new folder in named **logs** in the root of the **C:** drive, like shown: **C:\logs**</span></span>  
+6.  <span data-ttu-id="520e9-142">在 **C:** 磁碟機的根目錄中建立名為 **logs** 的新資料夾，如下所示：**C:\logs**</span><span class="sxs-lookup"><span data-stu-id="520e9-142">Create a new folder in named **logs** in the root of the **C:** drive, like shown: **C:\logs**</span></span>  
   
-7.  <span data-ttu-id="011fa-143">將下列 **\<system.diagnostics>** 元素加入 *Web.config* 組態檔中緊接在 **\</configSections>** 結尾元素後面的位置，如下所示：</span><span class="sxs-lookup"><span data-stu-id="011fa-143">Add the following **\<system.diagnostics>** element to the *Web.config* configuration file immediately following the closing **\</configSections>** element, like shown:</span></span>  
+7.  <span data-ttu-id="520e9-143">將下列 **\<system.diagnostics>** 元素加入 *Web.config* 組態檔中緊接在 **\</configSections>** 結尾元素後面的位置，如下所示：</span><span class="sxs-lookup"><span data-stu-id="520e9-143">Add the following **\<system.diagnostics>** element to the *Web.config* configuration file immediately following the closing **\</configSections>** element, like shown:</span></span>  
   
     ```xml  
     <configuration>  
@@ -88,17 +87,17 @@ ms.locfileid: "43856234"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="011fa-144">**initializeData** 屬性中指定的目錄位置必須已存在，才能開始進行記錄。</span><span class="sxs-lookup"><span data-stu-id="011fa-144">The directory location specified in the **initializeData** attribute must exist before logging can begin.</span></span> <span data-ttu-id="011fa-145">如果位置不存在，就不會建立任何記錄檔。</span><span class="sxs-lookup"><span data-stu-id="011fa-145">If the location does not exist, no logs will be created.</span></span>  
+    >  <span data-ttu-id="520e9-144">**initializeData** 屬性中指定的目錄位置必須已存在，才能開始進行記錄。</span><span class="sxs-lookup"><span data-stu-id="520e9-144">The directory location specified in the **initializeData** attribute must exist before logging can begin.</span></span> <span data-ttu-id="520e9-145">如果位置不存在，就不會建立任何記錄檔。</span><span class="sxs-lookup"><span data-stu-id="520e9-145">If the location does not exist, no logs will be created.</span></span>  
   
-     <span data-ttu-id="011fa-146">上述組態設定會為 WIF 啟用 **Verbose** 追蹤，並將產生的記錄檔儲存到 **C:logsWIF.xml** 檔案。</span><span class="sxs-lookup"><span data-stu-id="011fa-146">The configuration settings above will enable **Verbose** tracing for WIF and save the resulting log to the **C:logsWIF.xml** file.</span></span>  
+     <span data-ttu-id="520e9-146">上述組態設定會為 WIF 啟用 **Verbose** 追蹤，並將產生的記錄檔儲存到 **C:logsWIF.xml** 檔案。</span><span class="sxs-lookup"><span data-stu-id="520e9-146">The configuration settings above will enable **Verbose** tracing for WIF and save the resulting log to the **C:logsWIF.xml** file.</span></span>  
   
-## <a name="step-2--test-your-solution"></a><span data-ttu-id="011fa-147">步驟 2 – 測試方案</span><span class="sxs-lookup"><span data-stu-id="011fa-147">Step 2 – Test Your Solution</span></span>  
- <span data-ttu-id="011fa-148">在此步驟中，您將測試啟用 WIF 的 ASP.NET 應用程式以確認記錄檔會被記錄。</span><span class="sxs-lookup"><span data-stu-id="011fa-148">In this step, you will test your WIF-enabled ASP.NET application to verify that logs are being recorded.</span></span>  
+## <a name="step-2--test-your-solution"></a><span data-ttu-id="520e9-147">步驟 2 – 測試方案</span><span class="sxs-lookup"><span data-stu-id="520e9-147">Step 2 – Test Your Solution</span></span>  
+ <span data-ttu-id="520e9-148">在此步驟中，您將測試啟用 WIF 的 ASP.NET 應用程式以確認記錄檔會被記錄。</span><span class="sxs-lookup"><span data-stu-id="520e9-148">In this step, you will test your WIF-enabled ASP.NET application to verify that logs are being recorded.</span></span>  
   
-#### <a name="to-test-your-wif-enabled-aspnet-application-for-successful-tracing"></a><span data-ttu-id="011fa-149">測試啟用 WIF 的 ASP.NET 應用程式以成功追蹤</span><span class="sxs-lookup"><span data-stu-id="011fa-149">To test your WIF-enabled ASP.NET application for successful tracing</span></span>  
+#### <a name="to-test-your-wif-enabled-aspnet-application-for-successful-tracing"></a><span data-ttu-id="520e9-149">測試啟用 WIF 的 ASP.NET 應用程式以成功追蹤</span><span class="sxs-lookup"><span data-stu-id="520e9-149">To test your WIF-enabled ASP.NET application for successful tracing</span></span>  
   
-1.  <span data-ttu-id="011fa-150">按 **F5** 鍵執行方案。</span><span class="sxs-lookup"><span data-stu-id="011fa-150">Run the solution by pressing the **F5** key.</span></span> <span data-ttu-id="011fa-151">您應該會看到預設的 ASP.NET 首頁，並且會以使用者名稱 *Terry* (這是開發 STS 傳回的預設使用者) 自動進行驗證。</span><span class="sxs-lookup"><span data-stu-id="011fa-151">You should be presented with the default ASP.NET Home Page and automatically authenticated with the username *Terry*, which is the default user that is returned by the Development STS.</span></span>  
+1.  <span data-ttu-id="520e9-150">按 **F5** 鍵執行方案。</span><span class="sxs-lookup"><span data-stu-id="520e9-150">Run the solution by pressing the **F5** key.</span></span> <span data-ttu-id="520e9-151">您應該會看到預設的 ASP.NET 首頁，並且會以使用者名稱 *Terry* (這是開發 STS 傳回的預設使用者) 自動進行驗證。</span><span class="sxs-lookup"><span data-stu-id="520e9-151">You should be presented with the default ASP.NET Home Page and automatically authenticated with the username *Terry*, which is the default user that is returned by the Development STS.</span></span>  
   
-2.  <span data-ttu-id="011fa-152">關閉瀏覽器視窗，然後巡覽至 **C:\logs** 資料夾。</span><span class="sxs-lookup"><span data-stu-id="011fa-152">Close the browser window and then navigate to the **C:\logs** folder.</span></span> <span data-ttu-id="011fa-153">使用文字編輯器開啟 **C:\logs\WIF.xml** 檔案。</span><span class="sxs-lookup"><span data-stu-id="011fa-153">Open the **C:\logs\WIF.xml** file using a text editor.</span></span>  
+2.  <span data-ttu-id="520e9-152">關閉瀏覽器視窗，然後巡覽至 **C:\logs** 資料夾。</span><span class="sxs-lookup"><span data-stu-id="520e9-152">Close the browser window and then navigate to the **C:\logs** folder.</span></span> <span data-ttu-id="520e9-153">使用文字編輯器開啟 **C:\logs\WIF.xml** 檔案。</span><span class="sxs-lookup"><span data-stu-id="520e9-153">Open the **C:\logs\WIF.xml** file using a text editor.</span></span>  
   
-3.  <span data-ttu-id="011fa-154">檢查 **WIF.xml** 檔案，並確認其中包含開頭為 **\<E2ETraceEvent>** 的項目。</span><span class="sxs-lookup"><span data-stu-id="011fa-154">Inspect the **WIF.xml** file and verify that it contains entries starting with **\<E2ETraceEvent>**.</span></span> <span data-ttu-id="011fa-155">這些追蹤將包含 **\<TraceRecord>** 元素以及所追蹤之活動的描述，例如**正在驗證 SecurityToken**。</span><span class="sxs-lookup"><span data-stu-id="011fa-155">These traces will contain **\<TraceRecord>** elements with descriptions for the traced activity, such as **Validating SecurityToken**.</span></span>
+3.  <span data-ttu-id="520e9-154">檢查 **WIF.xml** 檔案，並確認其中包含開頭為 **\<E2ETraceEvent>** 的項目。</span><span class="sxs-lookup"><span data-stu-id="520e9-154">Inspect the **WIF.xml** file and verify that it contains entries starting with **\<E2ETraceEvent>**.</span></span> <span data-ttu-id="520e9-155">這些追蹤將包含 **\<TraceRecord>** 元素以及所追蹤之活動的描述，例如**正在驗證 SecurityToken**。</span><span class="sxs-lookup"><span data-stu-id="520e9-155">These traces will contain **\<TraceRecord>** elements with descriptions for the traced activity, such as **Validating SecurityToken**.</span></span>

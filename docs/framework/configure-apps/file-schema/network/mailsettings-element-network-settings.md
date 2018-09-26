@@ -10,22 +10,21 @@ helpviewer_keywords:
 ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: a9afd992a12392ae0ad1c27eea305cb7e367686d
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: f3a706edaeba551139368568a7467e0cdab3524c
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874412"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171604"
 ---
-# <a name="ltmailsettingsgt-element-network-settings"></a><span data-ttu-id="0142a-102">&lt;mailSettings&gt;項目 （網路設定）</span><span class="sxs-lookup"><span data-stu-id="0142a-102">&lt;mailSettings&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="0142a-103">設定郵件傳送選項。</span><span class="sxs-lookup"><span data-stu-id="0142a-103">Configures mail sending options.</span></span>  
+# <a name="ltmailsettingsgt-element-network-settings"></a><span data-ttu-id="2bdb6-102">&lt;mailSettings&gt;項目 （網路設定）</span><span class="sxs-lookup"><span data-stu-id="2bdb6-102">&lt;mailSettings&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="2bdb6-103">設定郵件傳送選項。</span><span class="sxs-lookup"><span data-stu-id="2bdb6-103">Configures mail sending options.</span></span>  
 
-<span data-ttu-id="0142a-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="0142a-104">\<configuration></span></span>  
-<span data-ttu-id="0142a-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="0142a-105">\<system.net></span></span>  
-<span data-ttu-id="0142a-106">\<mailSettings></span><span class="sxs-lookup"><span data-stu-id="0142a-106">\<mailSettings></span></span>  
+<span data-ttu-id="2bdb6-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="2bdb6-104">\<configuration></span></span>  
+<span data-ttu-id="2bdb6-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="2bdb6-105">\<system.net></span></span>  
+<span data-ttu-id="2bdb6-106">\<mailSettings></span><span class="sxs-lookup"><span data-stu-id="2bdb6-106">\<mailSettings></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0142a-107">語法</span><span class="sxs-lookup"><span data-stu-id="0142a-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2bdb6-107">語法</span><span class="sxs-lookup"><span data-stu-id="2bdb6-107">Syntax</span></span>  
   
 ```xml  
 <mailSettings>
@@ -33,26 +32,26 @@ ms.locfileid: "37874412"
 </mailSettings>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="0142a-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="0142a-108">Attributes and Elements</span></span>  
- <span data-ttu-id="0142a-109">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="0142a-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="2bdb6-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="2bdb6-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="2bdb6-109">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="2bdb6-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="0142a-110">屬性</span><span class="sxs-lookup"><span data-stu-id="0142a-110">Attributes</span></span>  
- <span data-ttu-id="0142a-111">無。</span><span class="sxs-lookup"><span data-stu-id="0142a-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="2bdb6-110">屬性</span><span class="sxs-lookup"><span data-stu-id="2bdb6-110">Attributes</span></span>  
+ <span data-ttu-id="2bdb6-111">無。</span><span class="sxs-lookup"><span data-stu-id="2bdb6-111">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="0142a-112">子元素</span><span class="sxs-lookup"><span data-stu-id="0142a-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="2bdb6-112">子元素</span><span class="sxs-lookup"><span data-stu-id="2bdb6-112">Child Elements</span></span>  
   
-|<span data-ttu-id="0142a-113">屬性</span><span class="sxs-lookup"><span data-stu-id="0142a-113">Attribute</span></span>|<span data-ttu-id="0142a-114">描述</span><span class="sxs-lookup"><span data-stu-id="0142a-114">Description</span></span>|  
+|<span data-ttu-id="2bdb6-113">屬性</span><span class="sxs-lookup"><span data-stu-id="2bdb6-113">Attribute</span></span>|<span data-ttu-id="2bdb6-114">描述</span><span class="sxs-lookup"><span data-stu-id="2bdb6-114">Description</span></span>|  
 |---------------|-----------------|  
-|[<span data-ttu-id="0142a-115">\<smtp > 項目 （網路設定）</span><span class="sxs-lookup"><span data-stu-id="0142a-115">\<smtp> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|<span data-ttu-id="0142a-116">設定簡易郵件傳輸通訊協定選項。</span><span class="sxs-lookup"><span data-stu-id="0142a-116">Configures Simple Mail Transport Protocol options.</span></span>|  
+|[<span data-ttu-id="2bdb6-115">\<smtp > 項目 （網路設定）</span><span class="sxs-lookup"><span data-stu-id="2bdb6-115">\<smtp> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|<span data-ttu-id="2bdb6-116">設定簡易郵件傳輸通訊協定選項。</span><span class="sxs-lookup"><span data-stu-id="2bdb6-116">Configures Simple Mail Transport Protocol options.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="0142a-117">父項目</span><span class="sxs-lookup"><span data-stu-id="0142a-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="2bdb6-117">父項目</span><span class="sxs-lookup"><span data-stu-id="2bdb6-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="0142a-118">**目**</span><span class="sxs-lookup"><span data-stu-id="0142a-118">**Element**</span></span>|<span data-ttu-id="0142a-119">**描述**</span><span class="sxs-lookup"><span data-stu-id="0142a-119">**Description**</span></span>|  
+|<span data-ttu-id="2bdb6-118">**目**</span><span class="sxs-lookup"><span data-stu-id="2bdb6-118">**Element**</span></span>|<span data-ttu-id="2bdb6-119">**描述**</span><span class="sxs-lookup"><span data-stu-id="2bdb6-119">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="0142a-120">\<system.Net> 項目 (網路設定)</span><span class="sxs-lookup"><span data-stu-id="0142a-120">\<system.Net> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="0142a-121">包含會指定 .NET Framework 如何連接至網路的設定。</span><span class="sxs-lookup"><span data-stu-id="0142a-121">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
+|[<span data-ttu-id="2bdb6-120">\<system.Net> 項目 (網路設定)</span><span class="sxs-lookup"><span data-stu-id="2bdb6-120">\<system.Net> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="2bdb6-121">包含會指定 .NET Framework 如何連接至網路的設定。</span><span class="sxs-lookup"><span data-stu-id="2bdb6-121">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="0142a-122">範例</span><span class="sxs-lookup"><span data-stu-id="0142a-122">Example</span></span>  
- <span data-ttu-id="0142a-123">下列範例會指定適當的 SMTP 參數，使用預設網路認證傳送電子郵件。</span><span class="sxs-lookup"><span data-stu-id="0142a-123">The following example specifies the appropriate SMTP parameters to send email using the default network credentials.</span></span>  
+## <a name="example"></a><span data-ttu-id="2bdb6-122">範例</span><span class="sxs-lookup"><span data-stu-id="2bdb6-122">Example</span></span>  
+ <span data-ttu-id="2bdb6-123">下列範例會指定適當的 SMTP 參數，使用預設網路認證傳送電子郵件。</span><span class="sxs-lookup"><span data-stu-id="2bdb6-123">The following example specifies the appropriate SMTP parameters to send email using the default network credentials.</span></span>  
   
 ```xml  
 <configuration>  
@@ -70,6 +69,6 @@ ms.locfileid: "37874412"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0142a-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0142a-124">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="2bdb6-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2bdb6-124">See Also</span></span>  
  <xref:System.Net.Mail.SmtpClient>  
- [<span data-ttu-id="0142a-125">網路設定結構描述</span><span class="sxs-lookup"><span data-stu-id="0142a-125">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="2bdb6-125">網路設定結構描述</span><span class="sxs-lookup"><span data-stu-id="2bdb6-125">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
