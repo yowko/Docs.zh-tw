@@ -6,25 +6,25 @@ helpviewer_keywords:
 ms.assetid: 79e4e6f7-0c00-4045-b0f0-e6a7c37c7788
 author: BrucePerlerMS
 ms.openlocfilehash: 4dce8615ba28ddd6054145c282192f75e7817623
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47078988"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198939"
 ---
-# <a name="security-guidance-and-best-practices"></a><span data-ttu-id="d0bbd-102">安全性指引與最佳做法</span><span class="sxs-lookup"><span data-stu-id="d0bbd-102">Security Guidance and Best Practices</span></span>
-<span data-ttu-id="d0bbd-103">在本節中的主題提供指導方針和建立安全的 Windows Communication Foundation (WCF) 應用程式時要考量的項目。</span><span class="sxs-lookup"><span data-stu-id="d0bbd-103">The topics in this section present guidance for and items to consider when creating secure Windows Communication Foundation (WCF) applications.</span></span> <span data-ttu-id="d0bbd-104">如需有關 Windows Server AppFabric 和安全性，請參閱[安全性模型的 Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)</span><span class="sxs-lookup"><span data-stu-id="d0bbd-104">For more information about Windows Server AppFabric and security see, [Security Model for Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)</span></span>  
+# <a name="security-guidance-and-best-practices"></a><span data-ttu-id="db1b4-102">安全性指引與最佳做法</span><span class="sxs-lookup"><span data-stu-id="db1b4-102">Security Guidance and Best Practices</span></span>
+<span data-ttu-id="db1b4-103">在本節中的主題提供指導方針和建立安全的 Windows Communication Foundation (WCF) 應用程式時要考量的項目。</span><span class="sxs-lookup"><span data-stu-id="db1b4-103">The topics in this section present guidance for and items to consider when creating secure Windows Communication Foundation (WCF) applications.</span></span> <span data-ttu-id="db1b4-104">如需有關 Windows Server AppFabric 和安全性，請參閱[安全性模型的 Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)</span><span class="sxs-lookup"><span data-stu-id="db1b4-104">For more information about Windows Server AppFabric and security see, [Security Model for Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d0bbd-105">本節內容</span><span class="sxs-lookup"><span data-stu-id="d0bbd-105">In this Section</span></span>  
- [<span data-ttu-id="d0bbd-106">安全性的最佳做法</span><span class="sxs-lookup"><span data-stu-id="d0bbd-106">Best Practices for Security</span></span>](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)  
- <span data-ttu-id="d0bbd-107">協助您保護應用程式安全的一些建議。</span><span class="sxs-lookup"><span data-stu-id="d0bbd-107">Recommendations to help you secure your applications.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="db1b4-105">本節內容</span><span class="sxs-lookup"><span data-stu-id="db1b4-105">In this Section</span></span>  
+ [<span data-ttu-id="db1b4-106">安全性的最佳做法</span><span class="sxs-lookup"><span data-stu-id="db1b4-106">Best Practices for Security</span></span>](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)  
+ <span data-ttu-id="db1b4-107">協助您保護應用程式安全的一些建議。</span><span class="sxs-lookup"><span data-stu-id="db1b4-107">Recommendations to help you secure your applications.</span></span>  
   
- [<span data-ttu-id="d0bbd-108">安全性考量</span><span class="sxs-lookup"><span data-stu-id="d0bbd-108">Security Considerations</span></span>](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- <span data-ttu-id="d0bbd-109">建立 WCF 應用程式時要考量的項目。</span><span class="sxs-lookup"><span data-stu-id="d0bbd-109">Items to consider when creating a WCF application.</span></span>  
+ [<span data-ttu-id="db1b4-108">安全性考量</span><span class="sxs-lookup"><span data-stu-id="db1b4-108">Security Considerations</span></span>](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
+ <span data-ttu-id="db1b4-109">建立 WCF 應用程式時要考量的項目。</span><span class="sxs-lookup"><span data-stu-id="db1b4-109">Items to consider when creating a WCF application.</span></span>  
   
- [<span data-ttu-id="d0bbd-110">效能考量</span><span class="sxs-lookup"><span data-stu-id="d0bbd-110">Performance Considerations</span></span>](../../../../docs/framework/wcf/feature-details/performance-considerations.md)  
- <span data-ttu-id="d0bbd-111">包含與效能及安全性相關的項目。</span><span class="sxs-lookup"><span data-stu-id="d0bbd-111">Contains entries related to performance and security.</span></span>  
+ [<span data-ttu-id="db1b4-110">效能考量</span><span class="sxs-lookup"><span data-stu-id="db1b4-110">Performance Considerations</span></span>](../../../../docs/framework/wcf/feature-details/performance-considerations.md)  
+ <span data-ttu-id="db1b4-111">包含與效能及安全性相關的項目。</span><span class="sxs-lookup"><span data-stu-id="db1b4-111">Contains entries related to performance and security.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d0bbd-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d0bbd-112">See Also</span></span>  
- [<span data-ttu-id="d0bbd-113">基本 WCF 程式設計</span><span class="sxs-lookup"><span data-stu-id="d0bbd-113">Basic WCF Programming</span></span>](../../../../docs/framework/wcf/basic-wcf-programming.md)  
- [<span data-ttu-id="d0bbd-114">Windows Server App Fabric 的安全性模型</span><span class="sxs-lookup"><span data-stu-id="d0bbd-114">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="db1b4-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="db1b4-112">See Also</span></span>  
+ [<span data-ttu-id="db1b4-113">基本 WCF 程式設計</span><span class="sxs-lookup"><span data-stu-id="db1b4-113">Basic WCF Programming</span></span>](../../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [<span data-ttu-id="db1b4-114">Windows Server App Fabric 的安全性模型</span><span class="sxs-lookup"><span data-stu-id="db1b4-114">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

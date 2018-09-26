@@ -11,21 +11,21 @@ ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 2aaf590975d9fd3f5d78cb64d8d2b1c38c0e8dc7
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47113065"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47202532"
 ---
-# <a name="ltservicepointmanagergt-element-network-settings"></a><span data-ttu-id="9ffd4-102">&lt;servicePointManager&gt;項目 （網路設定）</span><span class="sxs-lookup"><span data-stu-id="9ffd4-102">&lt;servicePointManager&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="9ffd4-103">設定網路資源的連線。</span><span class="sxs-lookup"><span data-stu-id="9ffd4-103">Configures connections to network resources.</span></span>  
+# <a name="ltservicepointmanagergt-element-network-settings"></a><span data-ttu-id="afc7c-102">&lt;servicePointManager&gt;項目 （網路設定）</span><span class="sxs-lookup"><span data-stu-id="afc7c-102">&lt;servicePointManager&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="afc7c-103">設定網路資源的連線。</span><span class="sxs-lookup"><span data-stu-id="afc7c-103">Configures connections to network resources.</span></span>  
   
- <span data-ttu-id="9ffd4-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="9ffd4-104">\<configuration></span></span>  
-<span data-ttu-id="9ffd4-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="9ffd4-105">\<system.net></span></span>  
-<span data-ttu-id="9ffd4-106">\<設定 ></span><span class="sxs-lookup"><span data-stu-id="9ffd4-106">\<settings></span></span>  
-<span data-ttu-id="9ffd4-107">\<servicePointManager ></span><span class="sxs-lookup"><span data-stu-id="9ffd4-107">\<servicePointManager></span></span>  
+ <span data-ttu-id="afc7c-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="afc7c-104">\<configuration></span></span>  
+<span data-ttu-id="afc7c-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="afc7c-105">\<system.net></span></span>  
+<span data-ttu-id="afc7c-106">\<設定 ></span><span class="sxs-lookup"><span data-stu-id="afc7c-106">\<settings></span></span>  
+<span data-ttu-id="afc7c-107">\<servicePointManager ></span><span class="sxs-lookup"><span data-stu-id="afc7c-107">\<servicePointManager></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9ffd4-108">語法</span><span class="sxs-lookup"><span data-stu-id="9ffd4-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="afc7c-108">語法</span><span class="sxs-lookup"><span data-stu-id="afc7c-108">Syntax</span></span>  
   
 ```xml  
 <servicePointManager  
@@ -39,36 +39,36 @@ ms.locfileid: "47113065"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="9ffd4-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="9ffd4-109">Attributes and Elements</span></span>  
- <span data-ttu-id="9ffd4-110">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="9ffd4-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="afc7c-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="afc7c-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="afc7c-110">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="afc7c-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="9ffd4-111">屬性</span><span class="sxs-lookup"><span data-stu-id="9ffd4-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="afc7c-111">屬性</span><span class="sxs-lookup"><span data-stu-id="afc7c-111">Attributes</span></span>  
   
-|<span data-ttu-id="9ffd4-112">**屬性**</span><span class="sxs-lookup"><span data-stu-id="9ffd4-112">**Attribute**</span></span>|<span data-ttu-id="9ffd4-113">**描述**</span><span class="sxs-lookup"><span data-stu-id="9ffd4-113">**Description**</span></span>|  
+|<span data-ttu-id="afc7c-112">**屬性**</span><span class="sxs-lookup"><span data-stu-id="afc7c-112">**Attribute**</span></span>|<span data-ttu-id="afc7c-113">**描述**</span><span class="sxs-lookup"><span data-stu-id="afc7c-113">**Description**</span></span>|  
 |-------------------|---------------------|  
-|`checkCertificateName`|<span data-ttu-id="9ffd4-114">指定系統是否應該驗證憑證的名稱符合伺服器主機名稱，再使用憑證。</span><span class="sxs-lookup"><span data-stu-id="9ffd4-114">Specifies whether the system should verify that the name on the certificate matches the server host name before using the certificate.</span></span> <span data-ttu-id="9ffd4-115">預設值是 `true`。</span><span class="sxs-lookup"><span data-stu-id="9ffd4-115">The default value is `true`.</span></span>|  
-|`checkCertificateRevocationList`|<span data-ttu-id="9ffd4-116">指定系統是否應該檢查是否已使用憑證之前撤銷憑證。</span><span class="sxs-lookup"><span data-stu-id="9ffd4-116">Specifies whether the system should check whether the certificate has been revoked before using the certificate.</span></span> <span data-ttu-id="9ffd4-117">預設值是 `false`。</span><span class="sxs-lookup"><span data-stu-id="9ffd4-117">The default value is `false`.</span></span>|  
-|`dnsRefreshTimeout`|<span data-ttu-id="9ffd4-118">搭配使用 DNS 循環配置資源選項，以毫秒為單位指定時間長度網域名稱服務 (DNS) 解決方案會快取。</span><span class="sxs-lookup"><span data-stu-id="9ffd4-118">Specifies how long Domain Name Service (DNS) resolutions are cached in conjunction with the DNS Round Robin option, in milliseconds.</span></span> <span data-ttu-id="9ffd4-119">預設值為 120,000 毫秒 (兩分鐘)。</span><span class="sxs-lookup"><span data-stu-id="9ffd4-119">The default value is 120,000 milliseconds (two minutes).</span></span>|  
-|`enableDnsRoundRobin`|<span data-ttu-id="9ffd4-120">指定是否 DNS 解析的主機名稱全都換成多個網際網路通訊協定 (IP) 位址傳回所有位址或只有第一個。</span><span class="sxs-lookup"><span data-stu-id="9ffd4-120">Specifies whether DNS resolutions of host names with multiple Internet Protocol (IP) addresses return all the addresses, or just the first one.</span></span> <span data-ttu-id="9ffd4-121">預設值是 `false`。</span><span class="sxs-lookup"><span data-stu-id="9ffd4-121">The default value is `false`.</span></span>|  
-|`encryptionPolicy`|<span data-ttu-id="9ffd4-122">指定套用至 SSL/TLS 工作階段的加密原則<xref:System.Net.ServicePointManager>執行個體。</span><span class="sxs-lookup"><span data-stu-id="9ffd4-122">Specifies the encryption policy applied to an SSL/TLS session on a <xref:System.Net.ServicePointManager> instance.</span></span> <span data-ttu-id="9ffd4-123">可能的值為相等的值<xref:System.Net.Security.EncryptionPolicy>列舉型別。</span><span class="sxs-lookup"><span data-stu-id="9ffd4-123">The possible values are equivalent to the values for the <xref:System.Net.Security.EncryptionPolicy> enumeration.</span></span> <span data-ttu-id="9ffd4-124">善用<xref:System.Security.Authentication.CipherAlgorithmType.Null>時，必須加密原則設為`NoEncryption`。</span><span class="sxs-lookup"><span data-stu-id="9ffd4-124">The use of <xref:System.Security.Authentication.CipherAlgorithmType.Null> is required when the encryption policy is set to `NoEncryption`.</span></span> <span data-ttu-id="9ffd4-125">預設值是 `RequireEncryption`。</span><span class="sxs-lookup"><span data-stu-id="9ffd4-125">The default value is `RequireEncryption`.</span></span>|  
-|`expect100Continue`|<span data-ttu-id="9ffd4-126">指定 POST 方法是否應會收到`100-continue`來自伺服器的回應。</span><span class="sxs-lookup"><span data-stu-id="9ffd4-126">Specifies whether POST methods should expect to receive a `100-continue` response from the server.</span></span> <span data-ttu-id="9ffd4-127">預設值是 `true`。</span><span class="sxs-lookup"><span data-stu-id="9ffd4-127">The default value is `true`.</span></span>|  
-|`useNagleAlgorithm`|<span data-ttu-id="9ffd4-128">指定服務端點管理員所控制的連接是否使用 Nagle 演算法。</span><span class="sxs-lookup"><span data-stu-id="9ffd4-128">Specifies whether connections controlled by the service point manager use the Nagle algorithm.</span></span> <span data-ttu-id="9ffd4-129">預設值是 `true`。</span><span class="sxs-lookup"><span data-stu-id="9ffd4-129">The default value is `true`.</span></span>|  
+|`checkCertificateName`|<span data-ttu-id="afc7c-114">指定系統是否應該驗證憑證的名稱符合伺服器主機名稱，再使用憑證。</span><span class="sxs-lookup"><span data-stu-id="afc7c-114">Specifies whether the system should verify that the name on the certificate matches the server host name before using the certificate.</span></span> <span data-ttu-id="afc7c-115">預設值是 `true`。</span><span class="sxs-lookup"><span data-stu-id="afc7c-115">The default value is `true`.</span></span>|  
+|`checkCertificateRevocationList`|<span data-ttu-id="afc7c-116">指定系統是否應該檢查是否已使用憑證之前撤銷憑證。</span><span class="sxs-lookup"><span data-stu-id="afc7c-116">Specifies whether the system should check whether the certificate has been revoked before using the certificate.</span></span> <span data-ttu-id="afc7c-117">預設值是 `false`。</span><span class="sxs-lookup"><span data-stu-id="afc7c-117">The default value is `false`.</span></span>|  
+|`dnsRefreshTimeout`|<span data-ttu-id="afc7c-118">搭配使用 DNS 循環配置資源選項，以毫秒為單位指定時間長度網域名稱服務 (DNS) 解決方案會快取。</span><span class="sxs-lookup"><span data-stu-id="afc7c-118">Specifies how long Domain Name Service (DNS) resolutions are cached in conjunction with the DNS Round Robin option, in milliseconds.</span></span> <span data-ttu-id="afc7c-119">預設值為 120,000 毫秒 (兩分鐘)。</span><span class="sxs-lookup"><span data-stu-id="afc7c-119">The default value is 120,000 milliseconds (two minutes).</span></span>|  
+|`enableDnsRoundRobin`|<span data-ttu-id="afc7c-120">指定是否 DNS 解析的主機名稱全都換成多個網際網路通訊協定 (IP) 位址傳回所有位址或只有第一個。</span><span class="sxs-lookup"><span data-stu-id="afc7c-120">Specifies whether DNS resolutions of host names with multiple Internet Protocol (IP) addresses return all the addresses, or just the first one.</span></span> <span data-ttu-id="afc7c-121">預設值是 `false`。</span><span class="sxs-lookup"><span data-stu-id="afc7c-121">The default value is `false`.</span></span>|  
+|`encryptionPolicy`|<span data-ttu-id="afc7c-122">指定套用至 SSL/TLS 工作階段的加密原則<xref:System.Net.ServicePointManager>執行個體。</span><span class="sxs-lookup"><span data-stu-id="afc7c-122">Specifies the encryption policy applied to an SSL/TLS session on a <xref:System.Net.ServicePointManager> instance.</span></span> <span data-ttu-id="afc7c-123">可能的值為相等的值<xref:System.Net.Security.EncryptionPolicy>列舉型別。</span><span class="sxs-lookup"><span data-stu-id="afc7c-123">The possible values are equivalent to the values for the <xref:System.Net.Security.EncryptionPolicy> enumeration.</span></span> <span data-ttu-id="afc7c-124">善用<xref:System.Security.Authentication.CipherAlgorithmType.Null>時，必須加密原則設為`NoEncryption`。</span><span class="sxs-lookup"><span data-stu-id="afc7c-124">The use of <xref:System.Security.Authentication.CipherAlgorithmType.Null> is required when the encryption policy is set to `NoEncryption`.</span></span> <span data-ttu-id="afc7c-125">預設值是 `RequireEncryption`。</span><span class="sxs-lookup"><span data-stu-id="afc7c-125">The default value is `RequireEncryption`.</span></span>|  
+|`expect100Continue`|<span data-ttu-id="afc7c-126">指定 POST 方法是否應會收到`100-continue`來自伺服器的回應。</span><span class="sxs-lookup"><span data-stu-id="afc7c-126">Specifies whether POST methods should expect to receive a `100-continue` response from the server.</span></span> <span data-ttu-id="afc7c-127">預設值是 `true`。</span><span class="sxs-lookup"><span data-stu-id="afc7c-127">The default value is `true`.</span></span>|  
+|`useNagleAlgorithm`|<span data-ttu-id="afc7c-128">指定服務端點管理員所控制的連接是否使用 Nagle 演算法。</span><span class="sxs-lookup"><span data-stu-id="afc7c-128">Specifies whether connections controlled by the service point manager use the Nagle algorithm.</span></span> <span data-ttu-id="afc7c-129">預設值是 `true`。</span><span class="sxs-lookup"><span data-stu-id="afc7c-129">The default value is `true`.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="9ffd4-130">子元素</span><span class="sxs-lookup"><span data-stu-id="9ffd4-130">Child Elements</span></span>  
- <span data-ttu-id="9ffd4-131">無。</span><span class="sxs-lookup"><span data-stu-id="9ffd4-131">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="afc7c-130">子元素</span><span class="sxs-lookup"><span data-stu-id="afc7c-130">Child Elements</span></span>  
+ <span data-ttu-id="afc7c-131">無。</span><span class="sxs-lookup"><span data-stu-id="afc7c-131">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="9ffd4-132">父項目</span><span class="sxs-lookup"><span data-stu-id="9ffd4-132">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="afc7c-132">父項目</span><span class="sxs-lookup"><span data-stu-id="afc7c-132">Parent Elements</span></span>  
   
-|<span data-ttu-id="9ffd4-133">**目**</span><span class="sxs-lookup"><span data-stu-id="9ffd4-133">**Element**</span></span>|<span data-ttu-id="9ffd4-134">**描述**</span><span class="sxs-lookup"><span data-stu-id="9ffd4-134">**Description**</span></span>|  
+|<span data-ttu-id="afc7c-133">**目**</span><span class="sxs-lookup"><span data-stu-id="afc7c-133">**Element**</span></span>|<span data-ttu-id="afc7c-134">**描述**</span><span class="sxs-lookup"><span data-stu-id="afc7c-134">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="9ffd4-135">設定</span><span class="sxs-lookup"><span data-stu-id="9ffd4-135">Settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="9ffd4-136">為 <xref:System.Net> 命名空間設定基本的網路選項。</span><span class="sxs-lookup"><span data-stu-id="9ffd4-136">Configures basic network options for the <xref:System.Net> namespace.</span></span>|  
+|[<span data-ttu-id="afc7c-135">設定</span><span class="sxs-lookup"><span data-stu-id="afc7c-135">Settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="afc7c-136">為 <xref:System.Net> 命名空間設定基本的網路選項。</span><span class="sxs-lookup"><span data-stu-id="afc7c-136">Configures basic network options for the <xref:System.Net> namespace.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="9ffd4-137">備註</span><span class="sxs-lookup"><span data-stu-id="9ffd4-137">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="afc7c-137">備註</span><span class="sxs-lookup"><span data-stu-id="afc7c-137">Remarks</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="9ffd4-138">組態檔</span><span class="sxs-lookup"><span data-stu-id="9ffd4-138">Configuration Files</span></span>  
- <span data-ttu-id="9ffd4-139">此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。</span><span class="sxs-lookup"><span data-stu-id="9ffd4-139">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="afc7c-138">組態檔</span><span class="sxs-lookup"><span data-stu-id="afc7c-138">Configuration Files</span></span>  
+ <span data-ttu-id="afc7c-139">此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。</span><span class="sxs-lookup"><span data-stu-id="afc7c-139">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9ffd4-140">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9ffd4-140">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="afc7c-140">另請參閱</span><span class="sxs-lookup"><span data-stu-id="afc7c-140">See Also</span></span>  
  <xref:System.Net.ServicePointManager>  
  <xref:System.Net.Security.EncryptionPolicy>  
- [<span data-ttu-id="9ffd4-141">網路設定結構描述</span><span class="sxs-lookup"><span data-stu-id="9ffd4-141">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="afc7c-141">網路設定結構描述</span><span class="sxs-lookup"><span data-stu-id="afc7c-141">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
