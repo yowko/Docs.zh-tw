@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms Designer [Windows Forms], interoperability with WPF
 - interoperability [WPF]
 ms.assetid: 03c85dce-26ad-44cd-bc1d-8e0cb56de096
-ms.openlocfilehash: 30b84f05898f823227415c410dc7ba5f89d58664
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: be925bdceea3dd01c568d85fe025d6e037066454
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504701"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170466"
 ---
 # <a name="using-wpf-controls"></a>使用 WPF 控制項
 您可以在 Windows form 應用程式中使用 Windows Presentation Foundation (WPF) 控制項。 雖然這些都是兩個不同的檢視技術，它們順暢的互通。  
@@ -24,16 +24,10 @@ ms.locfileid: "43504701"
  示範如何複製 Windows Form 上的 Windows Presentation Foundation 控制項。  
   
  [逐步解說：在設計階段排列 Windows Forms 的 WPF 內容](../../../../docs/framework/winforms/advanced/walkthrough-arranging-wpf-content-on-windows-forms-at-design-time.md)  
- 示範如何使用 Windows Form 的配置功能，例如錨定和對齊線，來排列 Windows Presentation Foundation 控制項。  
-  
- [逐步解說：在設計階段變更已裝載之 WPF 元素的屬性](../../../../docs/framework/winforms/advanced/walkthrough-changing-properties-of-a-hosted-wpf-element-at-design-time.md)  
- 顯示 Windows Form 設計工具之間的工作流程和[!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)]變更 WPF 控制項的屬性。  
+ 示範如何使用 Windows Form 的配置功能，例如錨定和對齊線，來排列 Windows Presentation Foundation 控制項。
   
  [逐步解說：在設計階段建立 Windows Forms 的新 WPF 內容](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)  
- 示範如何建立 Windows Presentation Foundation 控制項，以便在 Windows form 應用程式中。  
-  
- [逐步解說：將 ElementHost 控制項複製並貼至另外的 Windows Forms](../../../../docs/framework/winforms/advanced/copy--paste-an-elementhost-control-into-forms.md)  
- 示範如何在 Windows Presentation Foundation 控制項複製到另一個 Windows 表單。  
+ 示範如何建立 Windows Presentation Foundation 控制項，以便在 Windows form 應用程式中。
   
  [逐步解說：在設計階段指派 Windows Forms 的 WPF 內容](../../../../docs/framework/winforms/advanced/walkthrough-assigning-wpf-content-on-windows-forms-at-design-time.md)  
  顯示如何選取您想要在表單上顯示的 Windows Presentation Foundation 控制項類型。  

@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 71769efa1233fc8a693219dc02ae56ea39c164e7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c5186aa94993ba551252db6fef55853b5b554789
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743793"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170817"
 ---
 # <a name="linkedconfiguration-element"></a>\<linkedConfiguration > 項目
 
 指定要包含的組態檔。
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<assemblyBinding >**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
+&nbsp;&nbsp;[**\<Assemblybinding> >**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
 &nbsp;&nbsp;&nbsp;&nbsp;**\<linkedConfiguration >**
 
 ## <a name="syntax"></a>語法
@@ -39,13 +38,13 @@ ms.locfileid: "32743793"
 
 |           | 描述 |
 | --------- | ----------- |
-| **href**  | 必要屬性。<br><br>包含組態檔的 URL。 唯一支援的格式**href**屬性是`file://`。 支援本機檔案及 UNC 檔案。 |
+| **href**  | 必要屬性。<br><br>包含組態檔的 URL。 唯一支援的格式**href**屬性是`file://`。 支援本機檔案和 UNC 檔案。 |
 
 ## <a name="parent-element"></a>父項目
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<assemblyBinding >** 項目](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | 指定位於組態層級的組件繫結原則。 |
+| [**\<Assemblybinding> >** 項目](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | 指定位於組態層級的組件繫結原則。 |
 
 ## <a name="child-elements"></a>子元素
 
@@ -53,28 +52,28 @@ ms.locfileid: "32743793"
 
 ## <a name="remarks"></a>備註
 
-**\<LinkedConfiguration >** 項目可簡化元件組件的服務。 如果一或多個應用程式使用具有組態檔中的已知位置的組件，可以使用使用組件的應用程式的組態檔 **\<linkedConfiguration >** 包含組件組態檔中，而不是直接包含組態資訊的項目。 當已服務元件組件時，更新通用的組態檔提供使用組件的所有應用程式更新的組態資訊。
+**\<LinkedConfiguration >** 項目可簡化元件組件的服務。 如果一或多個應用程式會使用具有組態檔位於已知位置中的組件，可以使用使用組件的應用程式的組態檔 **\<linkedConfiguration >** 包含組件的組態檔，而不是直接包括組態資訊的項目。 當元件組件受到服務時，更新常見的組態檔提供使用組件的所有應用程式的更新的組態資訊。
 
 > [!NOTE]
-> **\<LinkedConfiguration >** 項目不支援有 Windows-並存資訊清單的應用程式。
+> **\<LinkedConfiguration >** 與 Windows 並排顯示的資訊清單的應用程式不支援項目。
 
-下列規則可管理使用連結的組態檔：
+下列規則管理連結的組態檔的使用：
 
-- 包含的組態檔中的設定只會影響載入器繫結原則，且僅供載入器。 包含的組態檔可以有繫結原則，以外的設定，但是這些設定不會有任何效果。
+- 包含的組態檔中設定只會影響載入器繫結原則，且僅供載入器。 包含的組態檔可能會有非繫結原則，設定，但這些設定不具有任何作用。
 
-- 唯一支援的格式`href`屬性是`file://`。 支援本機檔案及 UNC 檔案。
+- 唯一支援的格式`href`屬性是`file://`。 支援本機檔案和 UNC 檔案。
 
 - 連結的組態，每個組態檔的數目沒有限制。
 
-- 所有連結的組態檔會合併成一個檔案，類似的行為`#include`C/c + + 中的指示詞。
+- 所有連結的組態檔會合併以形成一個檔案，類似的行為`#include`C/c + + 指示詞。
 
-- **\<LinkedConfiguration >** 項目只允許在應用程式組態檔，則會忽略在*Machine.config*。
+- **\<LinkedConfiguration >** 項目只允許在應用程式組態檔，它會忽略*Machine.config*。
 
-- 已偵測到循環參考，並終止。 也就是說，如果 **\<linkedConfiguration >** 的一系列的組態檔項目形成迴圈，會偵測到迴圈，並將其停止。
+- 已偵測到循環參考，並終止。 也就是說，如果 **\<linkedConfiguration >** 的一系列的組態檔項目形成迴圈，是偵測到迴圈，並將其停止。
 
 ## <a name="example"></a>範例
 
-下列範例會示範如何包含從本機硬碟的組態檔：
+下列範例示範如何包含從本機硬碟的組態檔：
 
 ```xml
 <configuration>
@@ -86,5 +85,5 @@ ms.locfileid: "32743793"
 
 ## <a name="see-also"></a>另請參閱
 
-[**\<assemblyBinding >** 項目](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
-[適用於.NET Framework 組態檔結構描述](~/docs/framework/configure-apps/file-schema/index.md)
+[**\<Assemblybinding> >** 項目](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
+[適用於.NET Framework 的組態檔結構描述](~/docs/framework/configure-apps/file-schema/index.md)

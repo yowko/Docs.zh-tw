@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 9297b68a31117aabfa45328954ccb9c7cdac66c5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ca6c8e9334bdfcdf4d79c5a91612ee117445d9cb
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742188"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170635"
 ---
 # <a name="ltcleargt-element-for-bypasslist-network-settings"></a>&lt;清除&gt;bypasslist （網路設定） 的項目
 清除 proxy 略過清單。  
@@ -41,7 +40,7 @@ ms.locfileid: "32742188"
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -57,7 +56,7 @@ ms.locfileid: "32742188"
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="example"></a>範例  
- 下列範例會清除 略過清單，並再將兩個位址加入至略過清單。 第一個略過 contoso.com 網域; 中的所有伺服器的 proxy第二個會略過的所有伺服器的 IP 位址 192.168 的 proxy。  
+ 下列範例會清除略過清單，並接著將略過清單中的兩個位址。 第一個會略過在 contoso.com 網域中的所有伺服器的 proxy第二個會略過的所有伺服器會開始其 IP 位址 192.168 的 proxy。  
   
 ```xml  
 <configuration>  
