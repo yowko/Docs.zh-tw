@@ -8,29 +8,29 @@ ms.assetid: f78ec137-df0e-48c9-a7a0-5f6a1055f011
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e90857fcf02dbd0dd888b0658f3ab626bc5b11bd
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46580417"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47156549"
 ---
-# <a name="dynamic-programming-in-the-net-framework"></a><span data-ttu-id="85e3d-102">在 .NET Framework 中進行動態程式設計</span><span class="sxs-lookup"><span data-stu-id="85e3d-102">Dynamic Programming in the .NET Framework</span></span>
-<span data-ttu-id="85e3d-103">文件中的這一節提供 .NET Framework 中動態程式設計的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="85e3d-103">This section of the documentation provides information about dynamic programming in the .NET Framework.</span></span>  
+# <a name="dynamic-programming-in-the-net-framework"></a><span data-ttu-id="410cb-102">在 .NET Framework 中進行動態程式設計</span><span class="sxs-lookup"><span data-stu-id="410cb-102">Dynamic Programming in the .NET Framework</span></span>
+<span data-ttu-id="410cb-103">文件中的這一節提供 .NET Framework 中動態程式設計的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="410cb-103">This section of the documentation provides information about dynamic programming in the .NET Framework.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="85e3d-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="85e3d-104">In This Section</span></span>  
- [<span data-ttu-id="85e3d-105">反映</span><span class="sxs-lookup"><span data-stu-id="85e3d-105">Reflection</span></span>](../../../docs/framework/reflection-and-codedom/reflection.md)  
- <span data-ttu-id="85e3d-106">描述如何在執行階段使用反映處理物件。</span><span class="sxs-lookup"><span data-stu-id="85e3d-106">Describes how to use reflection to work with objects at run time.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="410cb-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="410cb-104">In This Section</span></span>  
+ [<span data-ttu-id="410cb-105">反映</span><span class="sxs-lookup"><span data-stu-id="410cb-105">Reflection</span></span>](../../../docs/framework/reflection-and-codedom/reflection.md)  
+ <span data-ttu-id="410cb-106">描述如何在執行階段使用反映處理物件。</span><span class="sxs-lookup"><span data-stu-id="410cb-106">Describes how to use reflection to work with objects at run time.</span></span>  
   
- [<span data-ttu-id="85e3d-107">發出動態方法和組件</span><span class="sxs-lookup"><span data-stu-id="85e3d-107">Emitting Dynamic Methods and Assemblies</span></span>](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
- <span data-ttu-id="85e3d-108">描述如何在執行階段使用 Reflection.Emit 建立方法和組件。</span><span class="sxs-lookup"><span data-stu-id="85e3d-108">Describes how to create methods and assemblies at run time by using Reflection.Emit.</span></span>  
+ [<span data-ttu-id="410cb-107">發出動態方法和組件</span><span class="sxs-lookup"><span data-stu-id="410cb-107">Emitting Dynamic Methods and Assemblies</span></span>](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
+ <span data-ttu-id="410cb-108">描述如何在執行階段使用 Reflection.Emit 建立方法和組件。</span><span class="sxs-lookup"><span data-stu-id="410cb-108">Describes how to create methods and assemblies at run time by using Reflection.Emit.</span></span>  
   
- [<span data-ttu-id="85e3d-109">Dynamic Language Runtime 概觀</span><span class="sxs-lookup"><span data-stu-id="85e3d-109">Dynamic Language Runtime Overview</span></span>](../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
- <span data-ttu-id="85e3d-110">描述動態語言執行階段的功能。</span><span class="sxs-lookup"><span data-stu-id="85e3d-110">Describes the features of the dynamic language runtime.</span></span>  
+ [<span data-ttu-id="410cb-109">Dynamic Language Runtime 概觀</span><span class="sxs-lookup"><span data-stu-id="410cb-109">Dynamic Language Runtime Overview</span></span>](../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
+ <span data-ttu-id="410cb-110">描述動態語言執行階段的功能。</span><span class="sxs-lookup"><span data-stu-id="410cb-110">Describes the features of the dynamic language runtime.</span></span>  
   
- [<span data-ttu-id="85e3d-111">動態原始程式碼的產生和編譯</span><span class="sxs-lookup"><span data-stu-id="85e3d-111">Dynamic Source Code Generation and Compilation</span></span>](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)  
- <span data-ttu-id="85e3d-112">描述如何產生和編譯動態原始程式碼。</span><span class="sxs-lookup"><span data-stu-id="85e3d-112">Describes how to generate and compile dynamic source code.</span></span>  
+ [<span data-ttu-id="410cb-111">動態原始程式碼的產生和編譯</span><span class="sxs-lookup"><span data-stu-id="410cb-111">Dynamic Source Code Generation and Compilation</span></span>](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)  
+ <span data-ttu-id="410cb-112">描述如何產生和編譯動態原始程式碼。</span><span class="sxs-lookup"><span data-stu-id="410cb-112">Describes how to generate and compile dynamic source code.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="85e3d-113">相關章節</span><span class="sxs-lookup"><span data-stu-id="85e3d-113">Related Sections</span></span>  
- [<span data-ttu-id="85e3d-114">開發指南</span><span class="sxs-lookup"><span data-stu-id="85e3d-114">Development Guide</span></span>](../../../docs/framework/development-guide.md)  
+## <a name="related-sections"></a><span data-ttu-id="410cb-113">相關章節</span><span class="sxs-lookup"><span data-stu-id="410cb-113">Related Sections</span></span>  
+ [<span data-ttu-id="410cb-114">開發指南</span><span class="sxs-lookup"><span data-stu-id="410cb-114">Development Guide</span></span>](../../../docs/framework/development-guide.md)  
   
- [<span data-ttu-id="85e3d-115">.NET Framework 的進階閱讀</span><span class="sxs-lookup"><span data-stu-id="85e3d-115">Advanced Reading for the .NET Framework</span></span>](https://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)
+ [<span data-ttu-id="410cb-115">.NET Framework 的進階閱讀</span><span class="sxs-lookup"><span data-stu-id="410cb-115">Advanced Reading for the .NET Framework</span></span>](https://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)
