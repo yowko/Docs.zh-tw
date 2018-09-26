@@ -8,16 +8,15 @@ helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: b94c6fd4761a5b0383c21d36a6d717f78a8825de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40fe7b1fa6a61b56d5dfdde75a92834f096a8be4
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496036"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082756"
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>HOW TO：使用傳輸安全性和訊息認證
-傳輸和訊息安全性模式的最佳保護含有傳輸和訊息認證的服務會使用 Windows Communication Foundation (WCF)。 簡單地說，傳輸層安全性可提供完整性與機密性，而訊息層安全性則提供各種在嚴格的傳輸安全性機制中不可能提供的認證。 本主題將說明使用 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.NetTcpBinding> 繫結，以訊息認證來實作傳輸時的基本步驟。 如需有關如何設定安全性模式的詳細資訊，請參閱[How to： 設定安全性模式](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)。  
+保護傳輸和訊息認證的服務會使用最佳的傳輸與訊息安全性模式在 Windows Communication Foundation (WCF)。 簡單地說，傳輸層安全性可提供完整性與機密性，而訊息層安全性則提供各種在嚴格的傳輸安全性機制中不可能提供的認證。 本主題將說明使用 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.NetTcpBinding> 繫結，以訊息認證來實作傳輸時的基本步驟。 如需有關如何設定安全性模式的詳細資訊，請參閱 <<c0> [ 如何： 設定安全性模式](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)。  
   
  當您將安全性模式設為 `TransportWithMessageCredential` 時，傳輸會決定用來提供傳輸層安全性的實際機制。 對 HTTP 來說，此機制為 Secure Sockets Layer (SSL) over HTTP (HTTPS)；對 TCP 來說，此機制是 SSL over TCP 或 Windows 安全性。  
   
@@ -27,11 +26,11 @@ ms.locfileid: "33496036"
   
 ### <a name="to-use-the-wshttpbinding-with-a-certificate-for-transport-security-in-code"></a>若要使用 WSHttpBinding 搭配憑證來獲得傳輸安全性 (透過程式碼)  
   
-1.  請使用 HttpCfg.exe 工具，將 SSL 憑證繫結至電腦的連接埠。 如需詳細資訊，請參閱[How to： 使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
+1.  請使用 HttpCfg.exe 工具，將 SSL 憑證繫結至電腦的連接埠。 如需詳細資訊，請參閱 <<c0> [ 如何： 使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
   
 2.  建立 <xref:System.ServiceModel.WSHttpBinding> 類別的執行個體，並將 <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> 屬性設定為 <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>。  
   
-3.  將 <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> 屬性設定為適當值。 (如需詳細資訊，請參閱[選取認證類型](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)。)下列程式碼會使用 <xref:System.ServiceModel.MessageCredentialType.Certificate> 值。  
+3.  將 <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> 屬性設定為適當值。 (如需詳細資訊，請參閱 <<c0> [ 選取認證類型](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)。)下列程式碼會使用 <xref:System.ServiceModel.MessageCredentialType.Certificate> 值。  
   
 4.  使用適當的基底位址，建立 <xref:System.Uri> 類別的執行個體 請注意，位址必須使用 "HTTPS" 配置，而且必須包含電腦的實際名稱，以及 SSL 憑證所繫結的連接埠號碼。 (另外，您也可以在組態中設定基底位址)。  
   
@@ -86,9 +85,9 @@ ms.locfileid: "33496036"
   
 #### <a name="to-use-the-wshttpbinding"></a>若要使用 WSHttpBinding  
   
-1.  使用繫結至連接埠的 SSL 憑證來設定電腦  (如需詳細資訊，請參閱[How to： 使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md))。 您不需要設定 <`transport`> 與這個組態項目值。  
+1.  使用繫結至連接埠的 SSL 憑證來設定電腦  (如需詳細資訊，請參閱 <<c0> [ 如何： 使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md))。 您不需要設定 <`transport`> 使用此設定項目值。  
   
-2.  指定訊息層級安全性的用戶端認證類型。 下列範例會設定`clientCredentialType`屬性 <`message`> 項目`UserName`。  
+2.  指定訊息層級安全性的用戶端認證類型。 下列範例會設定`clientCredentialType`屬性的 <`message`> 項目`UserName`。  
   
     ```xml  
     <wsHttpBinding>  
@@ -117,13 +116,13 @@ ms.locfileid: "33496036"
     </behaviors>  
     ```  
   
-2.  新增[ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)至繫結區段  
+2.  新增[ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)來繫結區段  
   
 3.  新增繫結項目，然後將 `name` 屬性設定為適當值。  
   
-4.  新增 <`security`> 項目，並設定`mode`屬性`TransportWithMessageCredential`。  
+4.  加入 <`security`> 項目，並將`mode`屬性設定為`TransportWithMessageCredential`。  
   
-5.  新增 <`message>`項目，並設定`clientCredentialType`屬性設為適當值。  
+5.  加入 <`message>`項目，並將`clientCredentialType`屬性設為適當的值。  
   
     ```xml  
     <bindings>  
@@ -139,15 +138,15 @@ ms.locfileid: "33496036"
   
 #### <a name="to-use-the-nettcpbinding-with-windows-for-transport-security"></a>若要使用 NetTcpBinding 搭配 Windows 來獲得傳輸安全性  
   
-1.  新增[ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)繫結區段  
+1.  新增[ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)至繫結區段中，  
   
-2.  新增 <`binding`> 項目並設定`name`屬性設為適當值。  
+2.  加入 <`binding`> 項目並將`name`屬性設為適當的值。  
   
-3.  新增 <`security`> 項目，並設定`mode`屬性`TransportWithMessageCredential`。  
+3.  加入 <`security`> 項目，並將`mode`屬性設定為`TransportWithMessageCredential`。  
   
-4.  新增 <`transport`> 項目並設定`clientCredentialType`屬性`Windows`。  
+4.  加入 <`transport`> 項目並將`clientCredentialType`屬性設定為`Windows`。  
   
-5.  新增 <`message`> 項目並設定`clientCredentialType`屬性設為適當值。 下列程式碼會設定憑證的值。  
+5.  加入 <`message`> 項目並將`clientCredentialType`屬性設為適當的值。 下列程式碼會設定憑證的值。  
   
     ```xml  
     <bindings>  
