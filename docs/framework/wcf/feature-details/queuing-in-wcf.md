@@ -2,35 +2,35 @@
 title: WCF 中的佇列
 ms.date: 03/30/2017
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-ms.openlocfilehash: 7f0a6700dba8eb844cc471704095b29c2a2c7937
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f04055df2c6d4b0a51b36040a5b377bb8738c534
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496480"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47204153"
 ---
 # <a name="queuing-in-wcf"></a>WCF 中的佇列
-本章節描述如何使用佇列的通訊中 Windows Communication Foundation (WCF)。  
+本節說明如何使用 Windows Communication Foundation (WCF) 中的佇列的通訊。  
   
 ## <a name="queues-as-a-wcf-transport-binding"></a>當做 WCF 傳輸繫結排入佇列  
- 在 WCF 中，合約會指定交換的功能。 合約是一種與企業相關或應用程式特定的訊息交換。 繫結中會指定用來交換訊息 (或「如何交換」) 的機制。 在 WCF 中的繫結會封裝訊息交換的詳細資料。 這些繫結會公開組態旋鈕，讓使用者控制繫結所表示之傳輸或通訊協定的各個層面。 WCF 中的佇列會被視為其他傳輸繫結，這是一大優點對於許多佇列應用程式。 目前許多佇列應用程式都是透過其他遠端程序呼叫 (RPC) 型的分散式應用程式來撰寫，導致在遵循上和維護上都有難度。 使用 WCF，撰寫分散式應用程式的樣式是大致相同，以便更容易遵循上和維護。 另外，藉由根據商務邏輯獨立析出交換機制，您可以更輕鬆地設定傳輸或進行變更，而不會影響應用程式特定的程式碼。 下圖會說明使用 MSMQ 做為傳輸之 WCF 服務和用戶端的結構。  
+ 在 WCF 中，合約會指定要交換內容。 合約是一種與企業相關或應用程式特定的訊息交換。 繫結中會指定用來交換訊息 (或「如何交換」) 的機制。 在 WCF 中的繫結會封裝訊息交換的詳細資料。 這些繫結會公開組態旋鈕，讓使用者控制繫結所表示之傳輸或通訊協定的各個層面。 WCF 中的佇列會被視為，如同任何其他傳輸繫結，也就是許多佇列應用程式的一大優點。 目前許多佇列應用程式都是透過其他遠端程序呼叫 (RPC) 型的分散式應用程式來撰寫，導致在遵循上和維護上都有難度。 使用 WCF，撰寫分散式應用程式的樣式是不變，讓您更輕鬆地遵循和維護。 另外，藉由根據商務邏輯獨立析出交換機制，您可以更輕鬆地設定傳輸或進行變更，而不會影響應用程式特定的程式碼。 下圖會說明使用 MSMQ 做為傳輸之 WCF 服務和用戶端的結構。  
   
- ![排入佇列的應用程式圖表](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "分散式佇列圖")  
+ ![已排入佇列應用程式圖表](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "分散式佇列圖")  
   
- 如上圖所示，用戶端和服務只能定義應用程式語意 (Semantics)，也就是合約和實作。 服務會使用偏好的設定來設定佇列繫結， 用戶端使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)來產生 WCF 用戶端服務並將產生描述要用於傳送訊息至服務的繫結的組態檔。 因此，若要傳送佇列的訊息，用戶端會具現化 WCF 用戶端，並叫用作業。 使訊息傳送至傳輸佇列並傳輸至目標佇列。 如此一來，傳送和接收訊息的應用程式就可以避開佇列通訊的所有複雜操作。  
+ 如上圖所示，用戶端和服務只能定義應用程式語意 (Semantics)，也就是合約和實作。 服務會使用偏好的設定來設定佇列繫結， 用戶端會使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)來產生 WCF 用戶端至服務並將產生描述用以將訊息傳送至服務的繫結的組態檔。 因此，為了傳送佇列的訊息，用戶端會具現化 WCF 用戶端，並叫用作業。 使訊息傳送至傳輸佇列並傳輸至目標佇列。 如此一來，傳送和接收訊息的應用程式就可以避開佇列通訊的所有複雜操作。  
   
  在 WCF 中的佇列繫結相關的警告包括：  
   
--   所有服務作業必須為單向，因為預設佇列繫結在 WCF 中不支援使用佇列的雙工通訊。 雙向通訊範例 ([雙向通訊](../../../../docs/framework/wcf/samples/two-way-communication.md)) 說明如何實作使用佇列的雙工通訊中使用兩個單向合約。  
+-   所有服務作業必須為單向，因為預設已排入佇列的 WCF 繫結不支援使用佇列的雙工通訊。 雙向通訊範例 ([雙向通訊](../../../../docs/framework/wcf/samples/two-way-communication.md)) 說明如何實作使用佇列的雙工通訊中使用兩個單向合約。  
   
--   若要產生 WCF 用戶端會使用中繼資料交換都需要額外的 HTTP 端點在服務上，以便可供查詢直接產生 WCF 用戶端，並取得以適當地設定佇列的通訊的繫結資訊。  
+-   若要產生 WCF 用戶端使用中繼資料交換會需要在服務上的其他 HTTP 端點，以便它來產生 WCF 用戶端，並取得以適當地設定佇列的通訊的繫結資訊可以直接查詢。  
   
--   根據佇列繫結，WCF 之外的額外組態需要。 例如，<xref:System.ServiceModel.NetMsmqBinding>隨附在 WCF 的類別會要求您設定的繫結，以及至少要設定訊息佇列 (MSMQ)。  
+-   根據佇列繫結，WCF 之外的額外組態需要。 比方說，<xref:System.ServiceModel.NetMsmqBinding>隨附 WCF 的類別會要求您設定繫結，以及至少要設定訊息佇列 (MSMQ)。  
   
- 下列章節說明的特定佇列繫結隨附於 WCF 中，這會根據 MSMQ。  
+ 下列各節描述的特定佇列繫結隨附於 WCF 中，根據 MSMQ。  
   
 ### <a name="msmq"></a>MSMQ  
- 在 WCF 中的佇列的傳輸會對其佇列通訊使用 MSMQ。  
+ 佇列的傳輸只有在 WCF 對其佇列通訊使用 MSMQ。  
   
  MSMQ 是 Windows 隨附的選用元件，而且會以 NT 服務的身分執行。 MSMQ 會擷取傳輸佇列中要進行傳輸的訊息，以及要傳遞至目標佇列的訊息。 MSMQ 佇列管理員會實作可靠訊息傳輸通訊協定，使訊息不會在傳輸期間遺失。 此通訊協定可以是原生通訊協定，或是 SOAP Reliable Message Protocol (SRMP) 這類 SOAP 架構的通訊協定。  
   
@@ -41,9 +41,9 @@ ms.locfileid: "33496480"
  如需 MSMQ 的詳細資訊，請參閱[安裝訊息佇列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)。  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
- [ \<NetMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) WCF 有提供的兩個 WCF 端點進行通訊使用 MSMQ 的佇列繫結。 因此，繫結會公開特定用於 MSMQ 的屬性。 不過，在 `NetMsmqBinding` 中不會公開所有 MSMQ 功能和屬性。 精簡型 `NetMsmqBinding` 是使用大多數客戶都認為足夠的最佳功能組來設計。  
+ [ \<NetMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)是 WCF 提供兩個的 WCF 端點，以便使用 MSMQ 進行通訊的佇列繫結。 因此，繫結會公開特定用於 MSMQ 的屬性。 不過，在 `NetMsmqBinding` 中不會公開所有 MSMQ 功能和屬性。 精簡型 `NetMsmqBinding` 是使用大多數客戶都認為足夠的最佳功能組來設計。  
   
- `NetMsmqBinding` 闡述了到目前為止以繫結屬性為形式討論的核心佇列概念。 這些屬性接著會向 MSMQ 傳達傳輸及傳送訊息的方式。 下列章節討論屬性分類。 如需詳細資訊，請參閱概念性主題的更完整地描述特定的屬性。  
+ `NetMsmqBinding` 闡述了到目前為止以繫結屬性為形式討論的核心佇列概念。 這些屬性接著會向 MSMQ 傳達傳輸及傳送訊息的方式。 下列章節討論屬性分類。 如需詳細資訊，請參閱更完整地描述特定屬性的概念主題。  
   
 #### <a name="exactlyonce-and-durable-properties"></a>ExactlyOnce 和 Durable 屬性  
  `ExactlyOnce` 和 `Durable` 屬性會影響在佇列之間傳輸訊息的方式：  
@@ -62,21 +62,21 @@ ms.locfileid: "33496480"
   
  許多佇列系統都會提供全系統範圍之寄不出的信件佇列。 MSMQ 會對無法傳遞至非交易式佇列的訊息提供全系統範圍的非交易式寄不出的信件佇列，並對無法傳遞至交易式佇列的訊息提供全系統範圍的交易式寄不出的信件佇列。  
   
- 如果將訊息傳送至不同目標佇列的用戶端共用 MSMQ 服務，則用戶端傳送的所有訊息都會移至同一個寄不出的信件佇列。 您不一定都要這麼做， 為了加強隔離效果，WCF 和中的 MSMQ[!INCLUDE[wv](../../../../includes/wv-md.md)]提供自訂的寄不出的信件佇列 （或應用程式特定之寄不出信件佇列），使用者可以指定要儲存無法傳遞的訊息。 因此，不同的用戶端就不會共用同一個寄不出的信件佇列。  
+ 如果將訊息傳送至不同目標佇列的用戶端共用 MSMQ 服務，則用戶端傳送的所有訊息都會移至同一個寄不出的信件佇列。 您不一定都要這麼做， 為了加強隔離效果，WCF 和中的 MSMQ[!INCLUDE[wv](../../../../includes/wv-md.md)]提供自訂的寄不出信件佇列 （或應用程式特定之寄不出信件佇列），使用者可以指定儲存無法傳遞的訊息。 因此，不同的用戶端就不會共用同一個寄不出的信件佇列。  
   
  繫結中有兩個重要的屬性：  
   
--   `DeadLetterQueue`：這個屬性是一種列舉，指出是否要求寄不出的信件佇列。 列舉中也包含寄不出的信件佇列種類 (如果有要求的話)。 這些值則為 `None`、`System` 和 `Custom`。 如需這些屬性的解譯方式的詳細資訊，請參閱[使用寄不出信件佇列來處理訊息傳輸失敗](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+-   `DeadLetterQueue`：這個屬性是一種列舉，指出是否要求寄不出的信件佇列。 列舉中也包含寄不出的信件佇列種類 (如果有要求的話)。 這些值則為 `None`、`System` 和 `Custom`。 如需有關這些屬性的解釋的詳細資訊，請參閱[使用寄不出信件佇列來處理訊息傳輸失敗](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
   
--   `CustomDeadLetterQueue`：這個屬性是應用程式特定之寄不出的信件佇列的統一資源識別碼 (URI) 位址。 這是必要的如果`DeadLetterQueue`。`Custom` 會選擇。  
+-   `CustomDeadLetterQueue`：這個屬性是應用程式特定之寄不出的信件佇列的統一資源識別碼 (URI) 位址。 這是必要的如果`DeadLetterQueue`。`Custom` 選擇。  
   
 #### <a name="poison-message-handling-properties"></a>有害訊息處理屬性  
- 當服務在交易中從目標佇列中讀取訊息時，可能會因為各種原因而無法處理訊息。 然後服務會將訊息放回佇列，以便再次讀取。 若要處理重複失敗的訊息，可以在繫結中設定一組有害訊息處理屬性。 有害訊息處理屬性有四個：`ReceiveRetryCount`、`MaxRetryCycles`、`RetryCycleDelay` 和 `ReceiveErrorHandling`。 如需有關這些屬性的詳細資訊，請參閱[有害訊息處理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)。  
+ 當服務在交易中從目標佇列中讀取訊息時，可能會因為各種原因而無法處理訊息。 然後服務會將訊息放回佇列，以便再次讀取。 若要處理重複失敗的訊息，可以在繫結中設定一組有害訊息處理屬性。 有害訊息處理屬性有四個：`ReceiveRetryCount`、`MaxRetryCycles`、`RetryCycleDelay` 和 `ReceiveErrorHandling`。 如需有關這些屬性的詳細資訊，請參閱 <<c0> [ 有害訊息處理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)。  
   
 #### <a name="security-properties"></a>安全性屬性  
- MSMQ 會公開本身的安全性模型，例如佇列上或傳送驗證訊息上的存取控制清單 (ACL)。 `NetMsmqBinding` 會將這些安全性屬性當做部分傳輸安全性設定公開。 在傳輸安全性的繫結中有兩個屬性：`MsmqAuthenticationMode` 和 `MsmqProtectionLevel`。 這些屬性中的設定取決於設定 MSMQ 的方式。 如需詳細資訊，請參閱[保護訊息使用傳輸安全性](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)。  
+ MSMQ 會公開本身的安全性模型，例如佇列上或傳送驗證訊息上的存取控制清單 (ACL)。 `NetMsmqBinding` 會將這些安全性屬性當做部分傳輸安全性設定公開。 在傳輸安全性的繫結中有兩個屬性：`MsmqAuthenticationMode` 和 `MsmqProtectionLevel`。 這些屬性中的設定取決於設定 MSMQ 的方式。 如需詳細資訊，請參閱 <<c0> [ 保護訊息使用傳輸安全性](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)。  
   
- 除了傳輸安全性以外，也可以使用訊息安全性來保護實際的 SOAP 訊息本身。 如需詳細資訊，請參閱[保護訊息使用訊息安全性](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)。  
+ 除了傳輸安全性以外，也可以使用訊息安全性來保護實際的 SOAP 訊息本身。 如需詳細資訊，請參閱 <<c0> [ 保護訊息使用訊息安全性](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)。  
   
  `MsmqTransportSecurity` 也會公開 `MsmqEncryptionAlgorithm` 和 `MsmqHashAlgorithm` 這兩個屬性。 進行訊息的佇列對佇列傳輸加密，以及進行簽章雜湊處理時，可選用這些不同演算法的列舉。  
   
@@ -89,10 +89,10 @@ ms.locfileid: "33496480"
   
 -   `QueueTransferProtocol`：用於佇列對佇列訊息傳輸的通訊協定列舉。 MSMQ 會實作原生佇列對佇列傳輸通訊協定，以及稱為 SOAP Reliable Messaging Protocol (SRMP) 的 SOAP 架構通訊協定。 在佇列對佇列傳輸中使用 HTTP 傳輸時，就會使用 SRMP。 在佇列對佇列傳輸中使用 HTTPS 時，則會使用 SRMP。  
   
--   `UseActiveDirectory`：布林值，指出是否必須使用 Active Directory 解析佇列位址。 根據預設，這個屬性為關閉狀態。 如需詳細資訊，請參閱[服務端點與佇列定址](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)。  
+-   `UseActiveDirectory`：布林值，指出是否必須使用 Active Directory 解析佇列位址。 根據預設，這個屬性為關閉狀態。 如需詳細資訊，請參閱 <<c0> [ 服務端點與佇列定址](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)。  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
- `MsmqIntegrationBinding`您想在 C、 c + +、 COM 或 System.Messaging Api 所撰寫的現有 MSMQ 應用程式與通訊的 WCF 端點時使用。  
+ `MsmqIntegrationBinding`您想在 C、 c + +、 COM 或 System.Messaging Api 撰寫的現有 MSMQ 應用程式與通訊的 WCF 端點時使用。  
   
  其繫結屬性與 `NetMsmqBinding` 一樣， 但是會有下列差異：  
   
@@ -119,9 +119,7 @@ ms.locfileid: "33496480"
   
 -   [工作階段和佇列](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
   
--   [雙向通訊](../../../../docs/framework/wcf/samples/two-way-communication.md)  
-  
--   [異動批次處理](../../../../docs/framework/wcf/samples/transacted-batching.md)  
+-   [雙向通訊](../../../../docs/framework/wcf/samples/two-way-communication.md) 
   
 -   [SRMP](../../../../docs/framework/wcf/samples/srmp.md)  
   

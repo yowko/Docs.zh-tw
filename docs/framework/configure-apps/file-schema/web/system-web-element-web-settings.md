@@ -11,11 +11,11 @@ ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 39d305d429490380c76e15bdcdde434f0d75457b
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47083133"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47202685"
 ---
 # <a name="ltsystemwebgt-element-web-settings"></a>&lt;system.web&gt;項目 （Web 設定）
 包含 ASP.NET 裝載層管理整個處理序行為的方式的相關資訊。  

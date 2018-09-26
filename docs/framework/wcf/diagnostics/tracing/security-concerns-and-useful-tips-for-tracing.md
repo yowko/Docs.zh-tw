@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
 author: BrucePerlerMS
 ms.openlocfilehash: 51db352913999d5527ead5273e6488cd09d88670
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47088161"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47207795"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>追蹤的安全性考量及實用秘訣
 此主題描述如何保護敏感資訊以防公開，以及使用 WebHost 時的實用秘訣。  
