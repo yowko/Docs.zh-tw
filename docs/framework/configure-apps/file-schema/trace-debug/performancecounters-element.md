@@ -11,11 +11,11 @@ ms.assetid: a71f605b-c7d9-4501-a5c3-abcbb964a43f
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 69d6deafb6aad88f5d379c7e8d4ac707e4c51815
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47088681"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47209817"
 ---
 # <a name="ltperformancecountersgt-element"></a>&lt;performanceCounters&gt;項目
 指定效能計數器共用之全域記憶體的大小。  

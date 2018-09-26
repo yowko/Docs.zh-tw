@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 926bea29-90c7-4a26-9cf0-fb4aa44f6f70
 author: BrucePerlerMS
 ms.openlocfilehash: 6c1253e6f402da6b818a4438142e122f8b31809c
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47084252"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193157"
 ---
 # <a name="ltwindowsstreamsecuritygt"></a>&lt;windowsstreamsecurity 正在&gt;
 指定自訂繫結的 Windows 資料流安全性設定。  

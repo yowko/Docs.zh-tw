@@ -3,13 +3,12 @@ title: 每秒的安全性驗證和驗證失敗數
 ms.date: 03/30/2017
 ms.assetid: 266c3bd3-2ffc-4471-94b7-3675443be1ac
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 4836a5076401de2f7c3112b298cdadc0e0307962
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 01fb7afd363e85e9c9ac5625175f350c00f66f26
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45641051"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47204488"
 ---
 # <a name="security-validation-and-authentication-failures-per-second"></a>每秒的安全性驗證和驗證失敗數
 計數器名稱：每秒的安全性驗證和驗證失敗。  

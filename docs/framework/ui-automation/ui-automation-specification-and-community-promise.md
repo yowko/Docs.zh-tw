@@ -5,11 +5,11 @@ ms.assetid: b238fd69-2f62-499c-bea0-b91dfb9204f0
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: 24a9923bc60b0379ee51c04a8e55d83bf262aa50
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47171526"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47210067"
 ---
 # <a name="ui-automation-specification-and-community-promise"></a>UI 自動化規格和社群承諾
 使用者介面自動化提供以程式設計方式存取大部分的使用者介面 (UI) 項目在桌面上，讓 UI 的相關資訊提供給使用者，並從標準輸入以外的方式操作 UI 的螢幕助讀程式之類的輔助技術產品.  

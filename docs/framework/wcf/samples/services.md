@@ -2,12 +2,12 @@
 title: Services2
 ms.date: 03/30/2017
 ms.assetid: 462a2218-f8c6-4fb7-95bc-64765459c429
-ms.openlocfilehash: 2b6d8322caa32246d6171af50c7773342ac11de2
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 3987b170f216064073f14afb489bd7afb5228c77
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806093"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47206362"
 ---
 # <a name="services"></a>服務
 本節包含示範 Windows Communication Foundation (WCF) 服務的範例。  
@@ -23,16 +23,13 @@ ms.locfileid: "33806093"
  示範 WCF 服務行為。  
   
  [服務安全性](../../../../docs/framework/wcf/samples/service-security.md)  
- 示範 WCF 服務的安全性。  
+ 示範 WCF 服務安全性。  
   
  [WCF 服務的簡化組態](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)  
- 示範如何實作與設定一般服務與使用 WCF 用戶端。  
+ 示範如何實作與設定一般服務和用戶端使用 WCF。  
   
  [使用標準端點](../../../../docs/framework/wcf/samples/usage-of-standard-endpoints.md)  
- 示範如何在服務組態檔中使用標準端點。  
-  
- [階層式組態模型](../../../../docs/framework/wcf/samples/hierarchical-configuration-model.md)  
- 示範如何針對服務實作組態檔的階層。  
+ 示範如何在服務組態檔中使用標準端點。
   
  [延伸保護原則](../../../../docs/framework/wcf/samples/extended-protection-policy.md)  
  示範延伸保護，這是防止中間人 (MITM) 攻擊的一項安全性方案。  
@@ -56,7 +53,7 @@ ms.locfileid: "33806093"
  示範在單一 `ListenUri` 裝載多個端點的服務。  
   
  [OperationContextScope](../../../../docs/framework/wcf/samples/operationcontextscope.md)  
- 示範如何傳送使用標頭在 WCF 呼叫的額外資訊。  
+ 示範如何傳送上使用標頭的 WCF 呼叫的額外資訊。  
   
  [服務描述](../../../../docs/framework/wcf/samples/service-description.md)  
  示範服務如何在執行階段擷取其服務描述資訊。  

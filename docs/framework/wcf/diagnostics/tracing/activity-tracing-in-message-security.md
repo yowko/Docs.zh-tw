@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 68862534-3b2e-4270-b097-8121b12a2c97
 author: BrucePerlerMS
 ms.openlocfilehash: 830339682f86d3882ff2cfc2d07d14145b987dde
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47157515"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47194096"
 ---
 # <a name="activity-tracing-in-message-security"></a>訊息安全性中的活動追蹤
 此主題將說明安全性處理中的活動追蹤 (將於下列三個階段中發生)。  

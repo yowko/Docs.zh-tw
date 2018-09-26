@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: ab1644d23e4d6d78b62e701902e5ec39e134b38b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b15e569ff6e42298c0a1de02f77ab7c302c70d86
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745116"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193508"
 ---
 # <a name="ltassertgt-element"></a>&lt;判斷提示&gt;項目
 指定呼叫 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> 方法時是否要顯示訊息方塊，此外也會指定寫入訊息之目的地檔案的名稱。  
@@ -38,7 +37,7 @@ ms.locfileid: "32745116"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`assertuienabled`|選擇性屬性。<br /><br /> 指定是否要顯示訊息方塊時**Debug.Assert**方法評估為**false**。|  
+|`assertuienabled`|選擇性屬性。<br /><br /> 指定是否要顯示訊息方塊的時機**Debug.Assert**方法會評估要**false**。|  
 |`logfilename`|選擇性屬性。<br /><br /> 指定要寫入訊息，如果檔案名稱**Debug.Assert**評估為**false**。|  
   
 ## <a name="assertuienabled-attribute"></a>assertuienabled 屬性  
@@ -48,7 +47,7 @@ ms.locfileid: "32745116"
 |`true`|顯示訊息方塊。 這是預設值。|  
 |`false`|不會顯示訊息方塊。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -59,10 +58,10 @@ ms.locfileid: "32745116"
 |`system.diagnostics`|指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。|  
   
 ## <a name="remarks"></a>備註  
- 在這兩個屬性 **\<assert >** 是選擇性的項目。 未指定的檔案寫入的訊息，可以停用訊息方塊，或您可以指定要寫入訊息，讓訊息方塊，啟用的檔案。  
+ 在這兩個屬性**\<判斷提示 >** 是選擇性的項目。 您可以將訊息方塊停用未指定要寫入至訊息的檔案，或者您可以指定要寫入訊息時保留訊息方塊，啟用檔案。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何停用顯示訊息方塊，當您呼叫**Debug.Assert**和寫入訊息至`c:\log.txt`。  
+ 下列範例示範如何停用顯示訊息方塊，當您呼叫**Debug.Assert**寫入到訊息`c:\log.txt`。  
   
 ```xml  
 <configuration>  

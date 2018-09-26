@@ -12,11 +12,11 @@ ms.assetid: c326ad2b-2144-4f64-ae4c-d850c74f95c5
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: 4e8822ce8d33d285475be5ec85d36c5085d46f4b
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47173001"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198230"
 ---
 # <a name="find-a-ui-automation-element-for-a-list-item"></a>尋找清單項目的 UI 自動化項目
 > [!NOTE]

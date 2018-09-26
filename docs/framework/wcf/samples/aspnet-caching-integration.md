@@ -2,15 +2,15 @@
 title: ASP.NET 快取整合
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: 55e6213bf0c4c212ebcf4e68882d16532c0e4229
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 376e188bcabbff1d87e7b45aa281e2a2b92a13b6
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002784"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47197444"
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET 快取整合
-這個範例示範如何使用 ASP.NET 輸出快取搭配 WCF WEB HTTP 程式設計模型。 請參閱[基本資源服務](../../../../docs/framework/wcf/samples/basic-resource-service.md)範例討論服務的實作，深入了解此案例的自我裝載版本。 本主題著重在 ASP.NET 輸出快取整合功能。  
+這個範例示範如何使用 ASP.NET 輸出快取搭配 WCF WEB HTTP 程式設計模型。 本主題著重在 ASP.NET 輸出快取整合功能。  
   
 ## <a name="demonstrates"></a>示範  
  與 ASP.NET 輸出快取整合  
@@ -29,7 +29,7 @@ ms.locfileid: "46002784"
   
  範例服務專案的 Service.cs 檔案中同時`GetCustomer`並`GetCustomers`作業會標示<xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>，它會提供快取設定檔名稱"CacheFor60Seconds"。 在服務專案的 Web.config 檔案中，快取設定檔"CacheFor60Seconds"依據提供 <`caching`> 項目 <`system.web`>。 此快取設定檔，值`duration`屬性是"60"，因此使用此設定檔相關聯的回應快取 ASP.NET 輸出快取中 60 秒。 此外，對於這個快取設定檔中，`varmByParam`屬性設定為"format"包含不同的值是要求`format`查詢字串參數另行快取其回應。 最後，快取設定檔的`varyByHeader`屬性設為"Accept"，因此使用不同的 Accept 標頭值的要求，必須另行快取其回應。  
   
- 用戶端專案中的 Program.cs 會示範如何使用 <xref:System.Net.HttpWebRequest> 編寫這種用戶端。 請注意，這只是存取 WCF 服務的其中一種方式。 它也可使用其他.NET Framework 類別，例如 WCF 通道處理站存取服務和<xref:System.Net.WebClient>。 SDK 中的其他範例 (例如[基本 HTTP 服務](../../../../docs/framework/wcf/samples/basic-http-service.md)範例並[自動格式選取](../../../../docs/framework/wcf/samples/automatic-format-selection.md)範例) 說明如何使用這些類別與 WCF 服務進行通訊。  
+ 用戶端專案中的 Program.cs 會示範如何使用 <xref:System.Net.HttpWebRequest> 編寫這種用戶端。 請注意，這只是存取 WCF 服務的其中一種方式。 它也可使用其他.NET Framework 類別，例如 WCF 通道處理站存取服務和<xref:System.Net.WebClient>。 SDK 中的其他範例 (例如[基本 HTTP 服務](../../../../docs/framework/wcf/samples/basic-http-service.md)範例) 說明如何使用這些類別與 WCF 服務進行通訊。  
   
 ## <a name="to-run-the-sample"></a>若要執行範例  
  此範例包含三個專案：  

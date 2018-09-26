@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 7a3d8515-d756-4afe-a22d-07cbe2217ee3
 author: BrucePerlerMS
 ms.openlocfilehash: af138a4da49a48ed43e1bc8f2c2c81c56892feed
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47082444"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216642"
 ---
 # <a name="ltaudienceurisgt"></a>&lt;audienceUris&gt;
 指定是可接受的識別項的信賴憑證者的合作對象 (RP) 的 Uri 的集合。 除非其中一個允許的對象 Uri 的範圍，將不會接受權杖。  

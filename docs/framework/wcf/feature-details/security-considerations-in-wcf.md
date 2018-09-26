@@ -8,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: 42055ee0-6d0c-443d-9d89-788dfc345d6d
 author: BrucePerlerMS
 ms.openlocfilehash: f26369a567e89fc502f777383c22e74b96fe503c
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47109507"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198033"
 ---
 # <a name="security-considerations-in-wcf"></a>WCF 的安全性考量
 在本節中的主題列出各種安全性相關的項目設計的 Windows Communication Foundation (WCF) 應用程式時需要考量。  

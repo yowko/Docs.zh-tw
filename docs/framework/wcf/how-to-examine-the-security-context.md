@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
 author: BrucePerlerMS
 ms.openlocfilehash: c2cb1f6d06961546a04b4a132bf9861c925ca421
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47113854"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47197990"
 ---
 # <a name="how-to-examine-the-security-context"></a>HOW TO：檢查安全性內容
 當程式設計 Windows Communication Foundation (WCF) 服務，服務安全性內容可讓您判斷有關用戶端認證及宣告用來向服務驗證的詳細資料。 這可藉由使用 <xref:System.ServiceModel.ServiceSecurityContext> 類別的屬性達成。  

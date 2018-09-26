@@ -3,13 +3,12 @@ title: '&lt;add&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4712a888-f154-4395-8887-ef14a88a6497
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: ddbf1b822550876d849f830d80cff9a74311ba9c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4cd86a858223997ed379d2b26518e14f6d3ebb3e
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506770"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47188696"
 ---
 # <a name="ltaddgt"></a>&lt;add&gt;
 將指定的安全性權杖處理常式加入至 權杖處理常式集合。  

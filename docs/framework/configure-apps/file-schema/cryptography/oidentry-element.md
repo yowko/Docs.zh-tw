@@ -11,11 +11,11 @@ ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: c5be6ef95693f274e5cb2002e5642d5e58a7661a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47082064"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47206164"
 ---
 # <a name="ltoidentrygt-element"></a>&lt;oidEntry&gt;項目
 將 ASN.1 物件識別碼 (OID) 對應至易記名稱。  

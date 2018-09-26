@@ -10,20 +10,19 @@ helpviewer_keywords:
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: e4ea16c925114d4ad4054af5f340c764ed6fe4fd
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e03fb02bd351058c1fcdedb8367d03318418a12c
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743143"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47209422"
 ---
 # <a name="ltdefaultftpcachepolicygt-element-network-settings"></a>&lt;defaultFtpCachePolicy&gt;項目 （網路設定）
-描述 FTP 快取是否作用中，並且描述預設的快取原則。  
+描述 FTP 快取是否作用中，並且描述的預設快取原則。  
   
  \<configuration>  
 \<system.net>  
-\<requestCaching >  
+\<Requestcaching> >  
 \<defaultFtpCachePolicy >  
   
 ## <a name="syntax"></a>語法  
@@ -43,27 +42,27 @@ ms.locfileid: "32743143"
 |---------------|-----------------|  
 |`policyLevel`|指定 FTP 快取原則。 預設值是 `Default`。|  
   
-## <a name="policylevel-attribute"></a>policyLevel 屬性  
+## <a name="policylevel-attribute"></a>Securityclasses 屬性  
   
 |值|描述|  
 |-----------|-----------------|  
-|`Default`|如果資源是新的內容長度正確無誤，，到期、 修改和內容長度屬性會，傳回快取的資源。|  
+|`Default`|如果資源是新的、 內容長度正確無誤，且到期、 修改和內容長度屬性都存在，則會傳回快取的資源。|  
 |`BypassCache`|從伺服器傳回的資源。|  
-|`CacheOnly`|如果內容的長度且相符的項目大小，則傳回快取的資源。|  
-|`CacheIfAvailable`|如果已提供的內容長度，而相符的項目大小;，傳回的快取的資源否則，資源會從伺服器下載，並傳回給呼叫者。|  
-|`Revalidate`|如果快取資源的時間戳記為相同伺服器上資源的時間戳記會傳回快取的資源否則，資源是從伺服器下載、 儲存在快取，並傳回給呼叫者。|  
+|`CacheOnly`|如果內容長度，且符合項目大小，則會傳回快取的資源。|  
+|`CacheIfAvailable`|如果內容長度提供，且符合項目大小; 會傳回快取的資源否則，資源從伺服器下載，並傳回給呼叫者。|  
+|`Revalidate`|如果快取的資源的時間戳記是伺服器上之資源的時間戳記相同，會傳回快取的資源否則為資源是從伺服器下載、 儲存在快取，並傳回給呼叫端。|  
 |`Reload`|從伺服器下載的資源、 將它儲存在快取，並傳回給呼叫端。|  
-|`NoCacheNoStore`|如果快取的資源存在，會將其刪除。 資源從伺服器下載，並傳回給呼叫者。|  
-|`Revalidate`|如果時間戳記是相同的時間戳記伺服器; 上的資源使用資源的快取的副本滿足要求否則，資源會從伺服器下載，向呼叫者，並儲存在快取。|  
+|`NoCacheNoStore`|如果快取的資源存在，則會將它刪除。 資源從伺服器下載，並傳回給呼叫者。|  
+|`Revalidate`|如果時間戳記伺服器上之資源的時間戳記相同，使用資源的快取的複本滿足要求否則，資源是從伺服器下載、 呈現給呼叫者，和存放在快取。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|控制網路要求的快取機制。|  
+|[Requestcaching>](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|控制網路要求的快取機制。|  
   
 ## <a name="remarks"></a>備註  
   

@@ -3,11 +3,11 @@ title: Lambda 運算式：fun 關鍵字 (F#)
 description: "了解如何使用 F # '好玩 」 關鍵字來定義 lambda 運算式，這是匿名函式。"
 ms.date: 05/16/2016
 ms.openlocfilehash: a37757f6b7328cd348bbf13f058a6dbc881769cf
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47080169"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47231017"
 ---
 # <a name="lambda-expressions-the-fun-keyword-f"></a>Lambda 運算式：fun 關鍵字 (F#)
 

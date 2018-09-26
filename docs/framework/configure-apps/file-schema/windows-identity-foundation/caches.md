@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 4651091b-3a20-40d8-b293-4408c0710143
 author: BrucePerlerMS
 ms.openlocfilehash: a91a389e53354e4f5b26e1510fc2f025300d65cc
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47084237"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47192676"
 ---
 # <a name="ltcachesgt"></a>&lt;快取&gt;
 註冊用於工作階段權杖和權杖重新執行偵測快取。  

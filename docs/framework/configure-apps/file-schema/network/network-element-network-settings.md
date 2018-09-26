@@ -11,11 +11,11 @@ ms.assetid: 2c2c6ad4-ed11-48ab-b28e-2bc0ba9b42c7
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 96a6c8a3c2d7114004278d3c40daf4d01b6c1d90
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47170018"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47208616"
 ---
 # <a name="ltnetworkgt-element-network-settings"></a>&lt;網路&gt;項目 （網路設定）
 設定外部的 Simple Mail Transport Protocol (SMTP) 伺服器的網路選項。  

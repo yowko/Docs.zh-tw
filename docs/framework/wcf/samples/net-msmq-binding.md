@@ -2,12 +2,12 @@
 title: Net MSMQ 繫結
 ms.date: 03/30/2017
 ms.assetid: fe4bb696-f57c-4cb3-9b7e-9d95fe6b8323
-ms.openlocfilehash: c54e8b661e011eb6b8add39dc7484f39ddc9b7c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee32ea09eed28c1c7cd5df2df2d13fd5f41f4b22
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500876"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200967"
 ---
 # <a name="net-msmq-binding"></a>Net MSMQ 繫結
 本節包含示範使用端點項目之 MSMQ 繫結屬性的範例。  
@@ -29,16 +29,10 @@ ms.locfileid: "33500876"
  示範如何透過訊息佇列 (MSMQ) 傳輸，傳送和接收佇列通訊中的一組相關訊息。  
   
  [雙向通訊](../../../../docs/framework/wcf/samples/two-way-communication.md)  
- 示範如何透過 MSMQ 執行交易雙向佇列通訊。  
-  
- [異動批次處理](../../../../docs/framework/wcf/samples/transacted-batching.md)  
- 示範如何使用訊息佇列 (MSMQ) 批次處理交易讀取作業。  
+ 示範如何透過 MSMQ 執行交易雙向佇列通訊。
   
  [SRMP](../../../../docs/framework/wcf/samples/srmp.md)  
  示範如何使用訊息佇列 (MSMQ) 透過 HTTP 執行交易佇列通訊。  
   
  [訊息佇列上的訊息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
- 示範如何實作應用程式，該應用程式使用適用於用戶端並具有 X.509v3 憑證驗證的 WS-Security，並透過 MSMQ 使用伺服器的 X.509v3 憑證來要求伺服器驗證。  
-  
- [ReceiveContext 產品產生器](../../../../docs/framework/wcf/samples/receivecontext-enabled-wcf-channels.md)  
- 示範啟用 <xref:System.ServiceModel.Channels.ReceiveContext> 之 WCF 通道的用處。
+ 示範如何實作應用程式，該應用程式使用適用於用戶端並具有 X.509v3 憑證驗證的 WS-Security，並透過 MSMQ 使用伺服器的 X.509v3 憑證來要求伺服器驗證。

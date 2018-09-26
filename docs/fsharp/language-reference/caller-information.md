@@ -3,11 +3,11 @@ title: '呼叫端資訊 （F #）'
 description: 描述如何使用呼叫端資訊引數屬性來取得方法的呼叫端資訊。
 ms.date: 04/25/2017
 ms.openlocfilehash: 0f2f4b16804d9156d234cc29d1f72ebe80a5b556
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47110010"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216366"
 ---
 # <a name="caller-information"></a>呼叫端資訊
 

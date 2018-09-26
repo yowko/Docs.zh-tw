@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 67abf017040b9e6bbe9b10e560c8d57c124ae84e
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47108087"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196638"
 ---
 # <a name="putinstancewmi-function"></a>PutInstanceWmi 函式
 建立或更新現有類別的執行個體。 執行個體是寫入到 WMI 存放庫。 

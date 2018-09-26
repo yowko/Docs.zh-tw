@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 28724cc6-020c-4a06-9a1f-d7594f315019
 author: BrucePerlerMS
 ms.openlocfilehash: d66771ec7ed52ace52df6bb3bfafdcf9cce989b5
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070925"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47206083"
 ---
 # <a name="ltsecuritytokenhandlerconfigurationgt"></a>&lt;Securitytokenhandlerconfiguration>&gt;
 提供的權杖處理常式集合的組態。  

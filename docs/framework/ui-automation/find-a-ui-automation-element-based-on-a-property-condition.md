@@ -11,11 +11,11 @@ ms.assetid: 3acaee5a-6ce8-4c3e-81c8-67e59eb74477
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: 708393ced89e56536b92f73f603695f00fb5e76e
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47085849"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47204894"
 ---
 # <a name="find-a-ui-automation-element-based-on-a-property-condition"></a>根據屬性條件尋找 UI 自動化項目
 > [!NOTE]

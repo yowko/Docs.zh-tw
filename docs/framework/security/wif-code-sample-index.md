@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 6711f01a-4743-43ce-95ab-5e2302a363ea
 author: BrucePerlerMS
 ms.openlocfilehash: b4c73bac9ddda83d78a4d9c95e3864d8d4e8ec4e
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070314"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200083"
 ---
 # <a name="wif-code-sample-index"></a>WIF 程式碼範例索引
 Windows Identity Foundation 4.5 的程式碼範例如下：  
