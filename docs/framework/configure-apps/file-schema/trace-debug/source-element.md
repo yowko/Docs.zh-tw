@@ -10,11 +10,11 @@ helpviewer_keywords:
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 818324077322fffb40a192c9197efde6e8ff7591
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47088941"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47231885"
 ---
 # <a name="ltsourcegt-element"></a>&lt;來源&gt;項目
 指定起始追蹤訊息的追蹤來源。  

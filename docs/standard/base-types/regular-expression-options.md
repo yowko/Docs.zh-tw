@@ -15,11 +15,11 @@ ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dbc5909a3d4ea1ba2747fcc694bf1f34e20e7d2b
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47078223"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47235883"
 ---
 # <a name="regular-expression-options"></a>規則運算式選項
 <a name="Top"></a>依預設，輸入字串與規則運算式模式中任何常值字元的比較會區分大小寫，規則運算式模式中的空白字元會解譯成常值空白字元，而規則運算式中的擷取群組會隱含也會明確命名。 您可以藉由指定規則運算式選項來修改這些預設規則運算式行為和幾個其他方面。 這些選項 (列示於下表) 可以內嵌為規則運算式模式的部分，或是提供給 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 類別建構函式或靜態模式比對方法，以做為 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 列舉值。  

@@ -3,13 +3,12 @@ title: 安全性例外狀況
 ms.date: 03/30/2017
 ms.assetid: 76d5e5cd-e4f4-404f-9a5a-ec3522494ad8
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 057d01ba918a41df0bdf2acc30c9bb35777ebc27
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e5795da5765e3dadfb169b1819b7154bd6ce0a9
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474879"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47233239"
 ---
 # <a name="security-exceptions"></a>安全性例外狀況
 本主題會列出所有安全性例外狀況。  

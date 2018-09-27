@@ -11,11 +11,11 @@ ms.assetid: bc177b2f-7528-4ae4-83db-aacfb04b86d0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 51cc5296a7b3f6d75b5e56d6bbc74330fa147848
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070601"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47232613"
 ---
 # <a name="design-guidelines-for-exceptions"></a>例外狀況的設計方針
 例外狀況處理有傳回值為基礎的錯誤報告的許多優點。 良好的架構設計可協助應用程式開發人員實現優勢的例外狀況。 本節討論這些優點的例外狀況，並提供有效地使用這些指導方針。  
