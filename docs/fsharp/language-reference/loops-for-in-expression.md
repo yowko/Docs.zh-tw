@@ -3,11 +3,11 @@ title: 迴圈：for...in 運算式 (F#)
 description: '請參閱如何 F # for...in...在運算式中迴圈建構來逐一查看的可列舉集合中的模式的相符項目。'
 ms.date: 05/16/2016
 ms.openlocfilehash: c4fba1f1dea3993cafa2e37ad0f32d9fb2eed85a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47087180"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47400708"
 ---
 # <a name="loops-forin-expression"></a>迴圈：for...in 運算式
 

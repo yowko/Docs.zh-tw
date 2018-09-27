@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 277ca5f6-e1c4-41b6-a47f-3a67ce5b94ac
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 4014f17cbbb4eb1bd2ec41d1fca5d4187ffa56b5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9927ad0e853577abb19750d54ba9e852a4e7ec51
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745262"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397942"
 ---
 # <a name="trace-and-debug-settings-schema"></a>追蹤和偵錯設定結構描述
 追蹤和偵錯設定會指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。  
   
  下表描述每個追蹤和偵錯設定項目的函式。  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-source.md)|將接聽項新增至追蹤來源的 `Listeners` 集合。|  
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|將接聽項新增至 `Listeners` 集合。|  

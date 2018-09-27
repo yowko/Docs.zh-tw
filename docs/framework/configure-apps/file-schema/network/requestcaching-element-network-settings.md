@@ -11,11 +11,11 @@ ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 3e014c7a47a53a424bbaef51c9acb28e59b43078
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47083185"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47401299"
 ---
 # <a name="ltrequestcachinggt-element-network-settings"></a>&lt;Requestcaching>&gt;項目 （網路設定）
 控制網路要求的快取機制。  

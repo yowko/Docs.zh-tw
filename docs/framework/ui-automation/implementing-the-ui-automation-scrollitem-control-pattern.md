@@ -9,11 +9,11 @@ ms.assetid: 903bab5c-80c1-44d7-bdc2-0a418893b987
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: 4c3dfc6eb42fef0c3464b49f7513425038d9091b
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47072013"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47400669"
 ---
 # <a name="implementing-the-ui-automation-scrollitem-control-pattern"></a>實作 UI 自動化 ScrollItem 控制項模式
 > [!NOTE]

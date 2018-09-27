@@ -8,11 +8,11 @@ ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 695ee744bdf2226f0647c4cdf142a2dca4e97a4a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47085810"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47400435"
 ---
 # <a name="ltaddgt-element-for-ltnamedcachesgt"></a>&lt;新增&gt;項目&lt;namedCaches&gt;
 新增`namedCache`項目以`namedCaches`記憶體快取的集合。  

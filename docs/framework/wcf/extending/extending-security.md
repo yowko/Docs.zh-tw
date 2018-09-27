@@ -6,11 +6,11 @@ helpviewer_keywords:
 ms.assetid: a015a040-9fdf-4147-9ea9-f83b570be1d4
 author: BrucePerlerMS
 ms.openlocfilehash: 3ae41e10a51ba0e4c27bcfbb1eb812e0015e5178
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47077807"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397149"
 ---
 # <a name="extending-security"></a>擴充安全性
 若要容納新的宣告類型和自訂的權杖，您可以擴充的安全性基礎結構的 Windows Communication Foundation (WCF)。 本章節中的主題會示範如何做到這點。  

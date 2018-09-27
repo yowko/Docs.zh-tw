@@ -5,11 +5,11 @@ ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aaf5103dfee366466ff701ce3669bbabb97233ac
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47111707"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47402626"
 ---
 # <a name="lttypegt-element-net-native"></a>&lt;Type&gt; 項目 (.NET Native)
 將執行階段原則套用到特定的類型，例如類別或結構。  

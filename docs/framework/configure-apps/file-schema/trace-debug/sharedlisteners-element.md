@@ -14,11 +14,11 @@ ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: b312ea8180c464fb9f955e7d7079cac930c8bf05
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070132"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397107"
 ---
 # <a name="ltsharedlistenersgt-element"></a>&lt;sharedListeners&gt;項目
 包含任何來源或追蹤項目可參考的接聽項。  根據預設，這些接聽程式沒有收到任何追蹤，則不可能在執行階段擷取這些接聽程式。 識別為共用接聽項可以依名稱加入到來源或追蹤接聽程式。  

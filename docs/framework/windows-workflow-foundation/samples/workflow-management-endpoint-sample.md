@@ -2,17 +2,17 @@
 title: 工作流程管理端點範例
 ms.date: 03/30/2017
 ms.assetid: 3ac6e08f-c43d-4bb7-83c3-e3890a4dac03
-ms.openlocfilehash: 3d99cbef20895381f5e40ee939e1d94a409f1391
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 398ace1c198f0db0268c44083ccc98c5ba2d2c7f
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47078381"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47399121"
 ---
 # <a name="workflow-management-endpoint-sample"></a>工作流程管理端點範例
 這個範例示範如何使用工作流程控制端點，在本機和遠端建立及執行工作流程。 此範例也示範如何裝載控制端點，以及撰寫用戶端來呼叫該控制端點以建立及執行工作流程執行個體。 此工作流程不是服務。  
   
- 在範例的服務端，工作流程裝載於 WorkflowServiceHost，並且加入 WorkflowControlEndpoint，讓用戶端可以執行控制作業 (暫停、啟動等)。 另外也加入使用者定義的 CreationEndpoint，以便建立工作流程。 接著該服務會使用這些端點啟動暫停中狀態的工作流程，然後恢復該工作流程。 用戶端會執行相同的作業，但會來自用戶端程式碼。 如需有關這些介面，請參閱 <<c0> [ 流程控制端點](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)和[How to： 裝載在 IIS 中的非服務工作流程](../../../../docs/framework/wcf/feature-details/how-to-host-a-non-service-workflow-in-iis.md)  
+ 在範例的服務端，工作流程裝載於 WorkflowServiceHost，並且加入 WorkflowControlEndpoint，讓用戶端可以執行控制作業 (暫停、啟動等)。 另外也加入使用者定義的 CreationEndpoint，以便建立工作流程。 接著該服務會使用這些端點啟動暫停中狀態的工作流程，然後恢復該工作流程。 用戶端會執行相同的作業，但會來自用戶端程式碼。 如需有關這些介面，請參閱 <<c0> [ 流程控制端點](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)。  
   
 #### <a name="to-run-the-sample"></a>若要執行範例  
   

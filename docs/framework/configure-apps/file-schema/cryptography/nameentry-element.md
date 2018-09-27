@@ -11,11 +11,11 @@ ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 9f8176ca3ee2340100978aef044140dafdeb179b
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47082366"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47400721"
 ---
 # <a name="ltnameentrygt-element"></a>&lt;nameEntry&gt;項目
 將類別名稱對應至易記的演算法名稱，允許一個類別有許多易記名稱。  

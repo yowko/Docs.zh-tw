@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 098b80ba-9ebd-4078-a1cb-c1151036a207
 author: BrucePerlerMS
 ms.openlocfilehash: e2077135819cb41f2590e3bc1d60ecc376836271
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47173261"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47237013"
 ---
 # <a name="wif-configuration-reference"></a>WIF 組態參考
 您可以在應用程式中將項目新增至組態檔，藉以設定 Windows Identity Foundation (WIF)。 本主題包含 WIF 組態元素之參考主題的連結。  

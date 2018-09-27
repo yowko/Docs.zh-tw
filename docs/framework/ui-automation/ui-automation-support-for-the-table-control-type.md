@@ -9,11 +9,11 @@ ms.assetid: 9050dde5-6469-4c83-abb7-f861c24ff985
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: f8af2acda229fe0e357ec0ee1b4c0f3b850a477a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47090145"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47235504"
 ---
 # <a name="ui-automation-support-for-the-table-control-type"></a>Table 控制項類型的 UI 自動化支援
 > [!NOTE]

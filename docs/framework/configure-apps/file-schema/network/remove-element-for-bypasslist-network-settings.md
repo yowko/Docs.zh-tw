@@ -13,11 +13,11 @@ ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: b6c72d9780088fddcaa59e644ff8069afbb4e43d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47074975"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397094"
 ---
 # <a name="ltremovegt-element-for-bypasslist-network-settings"></a>&lt;移除&gt;bypasslist （網路設定） 的項目
 Proxy 略過清單移除 IP 位址或 DNS 名稱。  
