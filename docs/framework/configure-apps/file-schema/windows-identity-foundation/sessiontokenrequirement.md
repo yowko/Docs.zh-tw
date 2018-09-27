@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 ms.assetid: 496a1735-cbb7-49d5-a6aa-dd5550462073
 author: BrucePerlerMS
 ms.openlocfilehash: 4d5d2348f04ace7596a3a513c5106ea612dc17b7
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070088"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47236883"
 ---
-# <a name="ltsessiontokenrequirementgt"></a><span data-ttu-id="39760-102">&lt;sessionTokenRequirement&gt;</span><span class="sxs-lookup"><span data-stu-id="39760-102">&lt;sessionTokenRequirement&gt;</span></span>
-<span data-ttu-id="39760-103">提供組態<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>類別或衍生的類別。</span><span class="sxs-lookup"><span data-stu-id="39760-103">Provides configuration for the <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> class or derived classes.</span></span>  
+# <a name="ltsessiontokenrequirementgt"></a><span data-ttu-id="77098-102">&lt;sessionTokenRequirement&gt;</span><span class="sxs-lookup"><span data-stu-id="77098-102">&lt;sessionTokenRequirement&gt;</span></span>
+<span data-ttu-id="77098-103">提供組態<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>類別或衍生的類別。</span><span class="sxs-lookup"><span data-stu-id="77098-103">Provides configuration for the <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> class or derived classes.</span></span>  
   
- <span data-ttu-id="39760-104">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="39760-104">\<system.identityModel></span></span>  
-<span data-ttu-id="39760-105">\<identityConfiguration></span><span class="sxs-lookup"><span data-stu-id="39760-105">\<identityConfiguration></span></span>  
-<span data-ttu-id="39760-106">\<securityTokenHandlers></span><span class="sxs-lookup"><span data-stu-id="39760-106">\<securityTokenHandlers></span></span>  
-<span data-ttu-id="39760-107">\<add></span><span class="sxs-lookup"><span data-stu-id="39760-107">\<add></span></span>  
-<span data-ttu-id="39760-108">\<sessionTokenRequirement ></span><span class="sxs-lookup"><span data-stu-id="39760-108">\<sessionTokenRequirement></span></span>  
+ <span data-ttu-id="77098-104">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="77098-104">\<system.identityModel></span></span>  
+<span data-ttu-id="77098-105">\<identityConfiguration></span><span class="sxs-lookup"><span data-stu-id="77098-105">\<identityConfiguration></span></span>  
+<span data-ttu-id="77098-106">\<securityTokenHandlers></span><span class="sxs-lookup"><span data-stu-id="77098-106">\<securityTokenHandlers></span></span>  
+<span data-ttu-id="77098-107">\<add></span><span class="sxs-lookup"><span data-stu-id="77098-107">\<add></span></span>  
+<span data-ttu-id="77098-108">\<sessionTokenRequirement ></span><span class="sxs-lookup"><span data-stu-id="77098-108">\<sessionTokenRequirement></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="39760-109">語法</span><span class="sxs-lookup"><span data-stu-id="39760-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="77098-109">語法</span><span class="sxs-lookup"><span data-stu-id="77098-109">Syntax</span></span>  
   
 ```xml  
 <system.identityModel>  
@@ -34,25 +34,25 @@ ms.locfileid: "47070088"
 </system.identityModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="39760-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="39760-110">Attributes and Elements</span></span>  
- <span data-ttu-id="39760-111">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="39760-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="77098-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="77098-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="77098-111">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="77098-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="39760-112">屬性</span><span class="sxs-lookup"><span data-stu-id="39760-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="77098-112">屬性</span><span class="sxs-lookup"><span data-stu-id="77098-112">Attributes</span></span>  
   
-|<span data-ttu-id="39760-113">屬性</span><span class="sxs-lookup"><span data-stu-id="39760-113">Attribute</span></span>|<span data-ttu-id="39760-114">描述</span><span class="sxs-lookup"><span data-stu-id="39760-114">Description</span></span>|  
+|<span data-ttu-id="77098-113">屬性</span><span class="sxs-lookup"><span data-stu-id="77098-113">Attribute</span></span>|<span data-ttu-id="77098-114">描述</span><span class="sxs-lookup"><span data-stu-id="77098-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="39760-115">存留期</span><span class="sxs-lookup"><span data-stu-id="39760-115">lifetime</span></span>|<span data-ttu-id="39760-116">指定工作階段權杖的存留期。</span><span class="sxs-lookup"><span data-stu-id="39760-116">Specifies the lifetime of session tokens.</span></span>|  
+|<span data-ttu-id="77098-115">存留期</span><span class="sxs-lookup"><span data-stu-id="77098-115">lifetime</span></span>|<span data-ttu-id="77098-116">指定工作階段權杖的存留期。</span><span class="sxs-lookup"><span data-stu-id="77098-116">Specifies the lifetime of session tokens.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="39760-117">子元素</span><span class="sxs-lookup"><span data-stu-id="39760-117">Child Elements</span></span>  
- <span data-ttu-id="39760-118">無</span><span class="sxs-lookup"><span data-stu-id="39760-118">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="77098-117">子元素</span><span class="sxs-lookup"><span data-stu-id="77098-117">Child Elements</span></span>  
+ <span data-ttu-id="77098-118">無</span><span class="sxs-lookup"><span data-stu-id="77098-118">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="39760-119">父項目</span><span class="sxs-lookup"><span data-stu-id="39760-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="77098-119">父項目</span><span class="sxs-lookup"><span data-stu-id="77098-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="39760-120">項目</span><span class="sxs-lookup"><span data-stu-id="39760-120">Element</span></span>|<span data-ttu-id="39760-121">描述</span><span class="sxs-lookup"><span data-stu-id="39760-121">Description</span></span>|  
+|<span data-ttu-id="77098-120">項目</span><span class="sxs-lookup"><span data-stu-id="77098-120">Element</span></span>|<span data-ttu-id="77098-121">描述</span><span class="sxs-lookup"><span data-stu-id="77098-121">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="39760-122">\<add></span><span class="sxs-lookup"><span data-stu-id="39760-122">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|<span data-ttu-id="39760-123">將指定的安全性權杖處理常式加入至 權杖處理常式集合。</span><span class="sxs-lookup"><span data-stu-id="39760-123">Adds the specified security token handler to the token handler collection.</span></span>|  
+|[<span data-ttu-id="77098-122">\<add></span><span class="sxs-lookup"><span data-stu-id="77098-122">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|<span data-ttu-id="77098-123">將指定的安全性權杖處理常式加入至 權杖處理常式集合。</span><span class="sxs-lookup"><span data-stu-id="77098-123">Adds the specified security token handler to the token handler collection.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="39760-124">範例</span><span class="sxs-lookup"><span data-stu-id="39760-124">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="77098-124">範例</span><span class="sxs-lookup"><span data-stu-id="77098-124">Example</span></span>  
   
 ```xml  
 <add type="System.IdentityModel.Tokens.SessionSecurityTokenHandler, System.IdentityModel">           

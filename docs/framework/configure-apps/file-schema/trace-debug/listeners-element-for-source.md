@@ -10,22 +10,22 @@ ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 86b85779f4eff72e8ab910a5ccd32fd369270509
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47085655"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47399004"
 ---
-# <a name="ltlistenersgt-element-for-ltsourcegt"></a><span data-ttu-id="ae130-102">&lt;接聽程式&gt;項目&lt;來源&gt;</span><span class="sxs-lookup"><span data-stu-id="ae130-102">&lt;listeners&gt; Element for &lt;source&gt;</span></span>
-<span data-ttu-id="ae130-103">新增或移除接聽程式中的<xref:System.Diagnostics.TraceSource.Listeners%2A>集合<xref:System.Diagnostics.TraceSource>。</span><span class="sxs-lookup"><span data-stu-id="ae130-103">Adds or removes listeners in the <xref:System.Diagnostics.TraceSource.Listeners%2A> collection for a <xref:System.Diagnostics.TraceSource>.</span></span> <span data-ttu-id="ae130-104">接聽程式會將適當的目標，例如記錄檔、 視窗或文字檔追蹤輸出。</span><span class="sxs-lookup"><span data-stu-id="ae130-104">A listener directs the tracing output to an appropriate target, such as a log, window, or text file.</span></span>  
+# <a name="ltlistenersgt-element-for-ltsourcegt"></a><span data-ttu-id="e4a3c-102">&lt;接聽程式&gt;項目&lt;來源&gt;</span><span class="sxs-lookup"><span data-stu-id="e4a3c-102">&lt;listeners&gt; Element for &lt;source&gt;</span></span>
+<span data-ttu-id="e4a3c-103">新增或移除接聽程式中的<xref:System.Diagnostics.TraceSource.Listeners%2A>集合<xref:System.Diagnostics.TraceSource>。</span><span class="sxs-lookup"><span data-stu-id="e4a3c-103">Adds or removes listeners in the <xref:System.Diagnostics.TraceSource.Listeners%2A> collection for a <xref:System.Diagnostics.TraceSource>.</span></span> <span data-ttu-id="e4a3c-104">接聽程式會將適當的目標，例如記錄檔、 視窗或文字檔追蹤輸出。</span><span class="sxs-lookup"><span data-stu-id="e4a3c-104">A listener directs the tracing output to an appropriate target, such as a log, window, or text file.</span></span>  
   
- <span data-ttu-id="ae130-105">\<configuration></span><span class="sxs-lookup"><span data-stu-id="ae130-105">\<configuration></span></span>  
-<span data-ttu-id="ae130-106">\<system.diagnostics ></span><span class="sxs-lookup"><span data-stu-id="ae130-106">\<system.diagnostics></span></span>  
-<span data-ttu-id="ae130-107">\<來源 ></span><span class="sxs-lookup"><span data-stu-id="ae130-107">\<sources></span></span>  
-<span data-ttu-id="ae130-108">\<來源 ></span><span class="sxs-lookup"><span data-stu-id="ae130-108">\<source></span></span>  
-<span data-ttu-id="ae130-109">\<接聽程式 > 項目</span><span class="sxs-lookup"><span data-stu-id="ae130-109">\<listeners> Element</span></span>  
+ <span data-ttu-id="e4a3c-105">\<configuration></span><span class="sxs-lookup"><span data-stu-id="e4a3c-105">\<configuration></span></span>  
+<span data-ttu-id="e4a3c-106">\<system.diagnostics ></span><span class="sxs-lookup"><span data-stu-id="e4a3c-106">\<system.diagnostics></span></span>  
+<span data-ttu-id="e4a3c-107">\<來源 ></span><span class="sxs-lookup"><span data-stu-id="e4a3c-107">\<sources></span></span>  
+<span data-ttu-id="e4a3c-108">\<來源 ></span><span class="sxs-lookup"><span data-stu-id="e4a3c-108">\<source></span></span>  
+<span data-ttu-id="e4a3c-109">\<接聽程式 > 項目</span><span class="sxs-lookup"><span data-stu-id="e4a3c-109">\<listeners> Element</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ae130-110">語法</span><span class="sxs-lookup"><span data-stu-id="ae130-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e4a3c-110">語法</span><span class="sxs-lookup"><span data-stu-id="e4a3c-110">Syntax</span></span>  
   
 ```xml  
 <listeners>   
@@ -35,36 +35,36 @@ ms.locfileid: "47085655"
 </listeners>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="ae130-111">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="ae130-111">Attributes and Elements</span></span>  
- <span data-ttu-id="ae130-112">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="ae130-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e4a3c-111">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="e4a3c-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="e4a3c-112">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="e4a3c-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="ae130-113">屬性</span><span class="sxs-lookup"><span data-stu-id="ae130-113">Attributes</span></span>  
- <span data-ttu-id="ae130-114">無。</span><span class="sxs-lookup"><span data-stu-id="ae130-114">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="e4a3c-113">屬性</span><span class="sxs-lookup"><span data-stu-id="e4a3c-113">Attributes</span></span>  
+ <span data-ttu-id="e4a3c-114">無。</span><span class="sxs-lookup"><span data-stu-id="e4a3c-114">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="ae130-115">子元素</span><span class="sxs-lookup"><span data-stu-id="ae130-115">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="e4a3c-115">子元素</span><span class="sxs-lookup"><span data-stu-id="e4a3c-115">Child Elements</span></span>  
   
-|<span data-ttu-id="ae130-116">項目</span><span class="sxs-lookup"><span data-stu-id="ae130-116">Element</span></span>|<span data-ttu-id="ae130-117">描述</span><span class="sxs-lookup"><span data-stu-id="ae130-117">Description</span></span>|  
+|<span data-ttu-id="e4a3c-116">項目</span><span class="sxs-lookup"><span data-stu-id="e4a3c-116">Element</span></span>|<span data-ttu-id="e4a3c-117">描述</span><span class="sxs-lookup"><span data-stu-id="e4a3c-117">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="ae130-118">\<add></span><span class="sxs-lookup"><span data-stu-id="ae130-118">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-source.md)|<span data-ttu-id="ae130-119">將接聽項新增至 `Listeners` 集合。</span><span class="sxs-lookup"><span data-stu-id="ae130-119">Adds a listener to the `Listeners` collection.</span></span>|  
-|[<span data-ttu-id="ae130-120">\<remove></span><span class="sxs-lookup"><span data-stu-id="ae130-120">\<remove></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|<span data-ttu-id="ae130-121">移除接聽程式從`Listeners`集合。</span><span class="sxs-lookup"><span data-stu-id="ae130-121">Removes a listener from the `Listeners` collection.</span></span>|  
-|[<span data-ttu-id="ae130-122">\<clear></span><span class="sxs-lookup"><span data-stu-id="ae130-122">\<clear></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)|<span data-ttu-id="ae130-123">清除追蹤來源的 `Listeners` 集合。</span><span class="sxs-lookup"><span data-stu-id="ae130-123">Clears the `Listeners` collection for a trace source.</span></span>|  
+|[<span data-ttu-id="e4a3c-118">\<add></span><span class="sxs-lookup"><span data-stu-id="e4a3c-118">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-source.md)|<span data-ttu-id="e4a3c-119">將接聽項新增至 `Listeners` 集合。</span><span class="sxs-lookup"><span data-stu-id="e4a3c-119">Adds a listener to the `Listeners` collection.</span></span>|  
+|[<span data-ttu-id="e4a3c-120">\<remove></span><span class="sxs-lookup"><span data-stu-id="e4a3c-120">\<remove></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|<span data-ttu-id="e4a3c-121">移除接聽程式從`Listeners`集合。</span><span class="sxs-lookup"><span data-stu-id="e4a3c-121">Removes a listener from the `Listeners` collection.</span></span>|  
+|[<span data-ttu-id="e4a3c-122">\<clear></span><span class="sxs-lookup"><span data-stu-id="e4a3c-122">\<clear></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)|<span data-ttu-id="e4a3c-123">清除追蹤來源的 `Listeners` 集合。</span><span class="sxs-lookup"><span data-stu-id="e4a3c-123">Clears the `Listeners` collection for a trace source.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="ae130-124">父項目</span><span class="sxs-lookup"><span data-stu-id="ae130-124">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="e4a3c-124">父項目</span><span class="sxs-lookup"><span data-stu-id="e4a3c-124">Parent Elements</span></span>  
   
-|<span data-ttu-id="ae130-125">項目</span><span class="sxs-lookup"><span data-stu-id="ae130-125">Element</span></span>|<span data-ttu-id="ae130-126">描述</span><span class="sxs-lookup"><span data-stu-id="ae130-126">Description</span></span>|  
+|<span data-ttu-id="e4a3c-125">項目</span><span class="sxs-lookup"><span data-stu-id="e4a3c-125">Element</span></span>|<span data-ttu-id="e4a3c-126">描述</span><span class="sxs-lookup"><span data-stu-id="e4a3c-126">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="ae130-127">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="ae130-127">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`system.diagnostics`|<span data-ttu-id="ae130-128">指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。</span><span class="sxs-lookup"><span data-stu-id="ae130-128">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
-|`sources`|<span data-ttu-id="ae130-129">包含起始追蹤訊息的追蹤來源。</span><span class="sxs-lookup"><span data-stu-id="ae130-129">Contains trace sources that initiate tracing messages.</span></span>|  
-|`source`|<span data-ttu-id="ae130-130">指定起始追蹤訊息的追蹤來源。</span><span class="sxs-lookup"><span data-stu-id="ae130-130">Specifies a trace source that initiates tracing messages.</span></span>|  
+|`configuration`|<span data-ttu-id="e4a3c-127">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="e4a3c-127">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="e4a3c-128">指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。</span><span class="sxs-lookup"><span data-stu-id="e4a3c-128">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`sources`|<span data-ttu-id="e4a3c-129">包含起始追蹤訊息的追蹤來源。</span><span class="sxs-lookup"><span data-stu-id="e4a3c-129">Contains trace sources that initiate tracing messages.</span></span>|  
+|`source`|<span data-ttu-id="e4a3c-130">指定起始追蹤訊息的追蹤來源。</span><span class="sxs-lookup"><span data-stu-id="e4a3c-130">Specifies a trace source that initiates tracing messages.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ae130-131">備註</span><span class="sxs-lookup"><span data-stu-id="ae130-131">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e4a3c-131">備註</span><span class="sxs-lookup"><span data-stu-id="e4a3c-131">Remarks</span></span>  
   
-## <a name="configuration-file"></a><span data-ttu-id="ae130-132">組態檔</span><span class="sxs-lookup"><span data-stu-id="ae130-132">Configuration File</span></span>  
- <span data-ttu-id="ae130-133">這個項目可以用於電腦組態檔 (Machine.config) 和應用程式組態檔。</span><span class="sxs-lookup"><span data-stu-id="ae130-133">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
+## <a name="configuration-file"></a><span data-ttu-id="e4a3c-132">組態檔</span><span class="sxs-lookup"><span data-stu-id="e4a3c-132">Configuration File</span></span>  
+ <span data-ttu-id="e4a3c-133">這個項目可以用於電腦組態檔 (Machine.config) 和應用程式組態檔。</span><span class="sxs-lookup"><span data-stu-id="e4a3c-133">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ae130-134">範例</span><span class="sxs-lookup"><span data-stu-id="ae130-134">Example</span></span>  
- <span data-ttu-id="ae130-135">下列範例示範如何使用`<listeners>`要加入的主控台追蹤接聽程式項目`mySource`來源，以及移除預設的追蹤接聽程式。</span><span class="sxs-lookup"><span data-stu-id="ae130-135">The following example shows how to use the `<listeners>` element to add a console trace listener to the `mySource` source and to remove the default trace listener.</span></span>  
+## <a name="example"></a><span data-ttu-id="e4a3c-134">範例</span><span class="sxs-lookup"><span data-stu-id="e4a3c-134">Example</span></span>  
+ <span data-ttu-id="e4a3c-135">下列範例示範如何使用`<listeners>`要加入的主控台追蹤接聽程式項目`mySource`來源，以及移除預設的追蹤接聽程式。</span><span class="sxs-lookup"><span data-stu-id="e4a3c-135">The following example shows how to use the `<listeners>` element to add a console trace listener to the `mySource` source and to remove the default trace listener.</span></span>  
   
 ```xml  
 <configuration>  
@@ -89,7 +89,7 @@ ms.locfileid: "47085655"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ae130-136">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ae130-136">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="e4a3c-136">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e4a3c-136">See Also</span></span>  
  <xref:System.Diagnostics.TraceListener>  
- [<span data-ttu-id="ae130-137">追蹤和偵錯設定結構描述</span><span class="sxs-lookup"><span data-stu-id="ae130-137">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [<span data-ttu-id="ae130-138">追蹤接聽項</span><span class="sxs-lookup"><span data-stu-id="ae130-138">Trace Listeners</span></span>](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+ [<span data-ttu-id="e4a3c-137">追蹤和偵錯設定結構描述</span><span class="sxs-lookup"><span data-stu-id="e4a3c-137">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [<span data-ttu-id="e4a3c-138">追蹤接聽項</span><span class="sxs-lookup"><span data-stu-id="e4a3c-138">Trace Listeners</span></span>](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
