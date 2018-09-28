@@ -13,11 +13,11 @@ ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 2b313aa2481b1257715ac4dbc6d452e2120f4726
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070379"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47425912"
 ---
 # <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a>&lt;清除&gt;webRequestModules （網路設定） 的項目
 移除應用程式中的所有已註冊的 Web 要求模組。  
