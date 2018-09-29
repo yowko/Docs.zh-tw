@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 98a3e029-1a9b-4e0c-b5d0-29d3f23f5b15
 author: BrucePerlerMS
 ms.openlocfilehash: 8dab5cfbcf14707699e6672017f5f80db232f01d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47110433"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454930"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a>如何：使用表單型驗證建置宣告感知的 ASP.NET 應用程式
 ## <a name="applies-to"></a>適用於  

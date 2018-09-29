@@ -2,12 +2,12 @@
 title: 基本 HTTP 服務
 ms.date: 03/30/2017
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-ms.openlocfilehash: 914ad5f04d980fd53cd07251461367356f00b4cc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f97fcab1200b9c13860ab8030378b5402b087d7a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516623"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47455719"
 ---
 # <a name="basic-http-service"></a>基本 HTTP 服務
 此範例示範如何實作 HTTP、 RPC 的服務，也就是一般稱為"POX"(Plain Old XML) 服務 – 使用 Windows Communication Foundation (WCF) REST 程式設計模型。 這個範例是由兩個元件所組成： 自我裝載的 WCF HTTP 服務 (Service.cs) 和主控台應用程式 (Program.cs) 建立服務並給它的呼叫。  
@@ -21,7 +21,7 @@ ms.locfileid: "43516623"
   
  App.config 檔案會以預設的 <xref:System.ServiceModel.Description.WebHttpEndpoint> 設定 WCF 服務，且 <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> 屬性設定為 `true`。 如此一來，WCF 基礎結構會建立自動 HTML 說明頁`http://localhost:8000/Customers/help`，提供如何建構服務的 HTTP 要求以及如何取用服務之 HTTP 回應的相關資訊。  
   
- Program.cs 會示範如何使用 WCF 通道處理站，才能呼叫服務以及處理回應。 請注意，這只是存取 WCF 服務的其中一種方式。 您也可以使用其他 .NET Framework 類別 (例如 <xref:System.Net.HttpWebRequest> 和 <xref:System.Net.WebClient>) 來存取服務。 SDK 中的其他範例 (例如[自動格式選取](../../../../docs/framework/wcf/samples/automatic-format-selection.md)範例並[基本資源服務](../../../../docs/framework/wcf/samples/basic-resource-service.md)範例) 示範如何使用這些類別與 WCF 服務進行通訊。  
+ Program.cs 會示範如何使用 WCF 通道處理站，才能呼叫服務以及處理回應。 請注意，這只是存取 WCF 服務的其中一種方式。 您也可以使用其他 .NET Framework 類別 (例如 <xref:System.Net.HttpWebRequest> 和 <xref:System.Net.WebClient>) 來存取服務。
   
  此範例包含同時在主控台應用程式中執行的自我裝載服務和用戶端。 當主控台應用程式執行時，用戶端會對服務發出要求，然後將相關的資訊從回應寫入至主控台視窗。  
   
@@ -41,7 +41,3 @@ ms.locfileid: "43516623"
 >  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicHttpService`  
-  
-## <a name="see-also"></a>另請參閱  
- [自動格式選取](../../../../docs/framework/wcf/samples/automatic-format-selection.md)  
- [基本資源服務](../../../../docs/framework/wcf/samples/basic-resource-service.md)
