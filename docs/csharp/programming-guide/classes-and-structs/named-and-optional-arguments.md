@@ -13,12 +13,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: b0963457e22bf0c3fc92d33c5ed0eb699be27cf7
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: f536499e95611bad6ac1766e117d4a2f1463e53d
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932038"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857978"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>具名和選擇性引數 (C# 程式設計手冊)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 介紹具名和選擇性引數。 「具名引數」可讓您使用參數的名稱而非使用參數清單中的參數位置來關聯引數，指定特定參數的引數。 「選擇性引數」可讓您省略某些參數的引數。 這兩種技巧都可以搭配方法、索引子、建構函式和委派使用。  
@@ -101,7 +101,7 @@ ExampleMethod 的選擇性參數
 ## <a name="com-interfaces"></a>COM 介面  
  具名和選擇性引數以及對動態物件和其他增強功能的支援，大幅改善與 COM API 的互通性，例如 Office Automation API。  
   
- 例如，Microsoft Office Excel [Range Interface](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range(v=office.15).aspx) (範圍介面) 的 [AutoFormat](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.autoformat(v=office.15).aspx) 方法有七個參數，它們都是選擇性參數。 下圖會顯示這些參數。  
+ 例如，Microsoft Office Excel <xref:Microsoft.Office.Interop.Excel.Range> 介面的 <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> 方法有七個參數，都是選擇性參數。 下圖會顯示這些參數。  
   
  ![IntelliSense 對於 AutoFormat 方法的快速諮詢。](../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")  
 AutoFormat 參數  
@@ -128,8 +128,9 @@ AutoFormat 參數
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>請參閱  
- [如何：在 Office 程式設計中使用具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)  
- [使用動態型別](../../../csharp/programming-guide/types/using-type-dynamic.md)  
- [使用建構函式](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
- [使用索引子](../../../csharp/programming-guide/indexers/using-indexers.md)
+## <a name="see-also"></a>請參閱
+
+- [如何：在 Office 程式設計中使用具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)  
+- [使用動態型別](../../../csharp/programming-guide/types/using-type-dynamic.md)  
+- [使用建構函式](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
+- [使用索引子](../../../csharp/programming-guide/indexers/using-indexers.md)

@@ -1,36 +1,55 @@
 ---
 title: '% 運算子 (C# 參考)'
-ms.date: 04/04/2018
+ms.date: 09/04/2018
 f1_keywords:
 - '%_CSharpKeyword'
 helpviewer_keywords:
 - remainder operator [C#]
 - '% operator [C#]'
 ms.assetid: 3b74f4f9-fd9c-45e7-84fa-c8d71a0dfad7
-ms.openlocfilehash: b906feb22aaec97e58da562b615baae01f3e0719
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9cd2f7ad3856feb34667686979c942ecb21887c2
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271064"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266692"
 ---
 # <a name="-operator-c-reference"></a>% 運算子 (C# 參考)
-remainder 運算子 (`%`) 會計算其第一個運算元除以第二個運算元之後的餘數。 所有數值類型都有預先定義的餘數運算子。 
+
+餘數運算子 `%` 會計算其第一個運算元除以第二個運算元之後的餘數。 使用者定義型別可以[多載](../keywords/operator.md) `%` 運算子。 當 `%` 多載時，[餘數指派運算子](remainder-assignment-operator.md) `%=`也會隱含多載。
+
+所有數值類型皆支援餘數運算子。
+
+## <a name="integer-remainder"></a>整數餘數
   
-## <a name="remarks"></a>備註  
- 公式 `a % b` 一律會傳回範圍 `(-b, b)` 中的值、不含上下界值 (它永遠不會傳回 `b` 或 `-b`)，並保留被除數的正負號。 針對整數除法，餘數運算子會滿足規則 `a % b = a - (a / b) * b`。
-  
- 這不能與標準模數混淆，標準模數符合類似的規則，但是使用浮點除法並傳回範圍 `[0, b)` 中的值。 C# 沒有標準模數的運算子。 不過，正值被除數的行為是一樣的。
-  
- 使用者定義型別可以多載 `%` 運算子 (請參閱 [operator](../../../csharp/language-reference/keywords/operator.md))。 二元運算子多載時，對應的指派運算子 (若有) 也會隱含地多載。  
-  
-## <a name="example"></a>範例  
- [!code-csharp[csRefOperators#9](../../../csharp/language-reference/operators/codesnippet/CSharp/remainder-operator_1.cs)]  
-  
-## <a name="comments"></a>註解  
- 請注意與 double 類型建立關聯的四捨五入錯誤。  
-  
-## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [C# 運算子](../../../csharp/language-reference/operators/index.md)
+對整數運算元來說，`a % b` 的結果是 `a - (a / b) * b` 所產生的值。 非零餘數的正負號與第一個運算元的正負號相同，如下列範例所示：
+
+[!code-csharp-interactive[integer remainder](~/samples/snippets/csharp/language-reference/operators/RemainderExamples.cs#1)]
+
+## <a name="floating-point-remainder"></a>浮點數餘數
+
+對於 [float](../keywords/float.md) 和 [double](../keywords/double.md) 運算元，有限 `x` 和 `y`的 `x % y` 結果是 `z` 值，像是
+
+- 若 `z` 不是零，其正負號與 `x` 的正負號相同；
+- `z` 的絕對值是由 `|x| - n * |y|` 產生的值，其中 `n` 為最大可能整數，小於或等於 `|x| / |y|`，而 `|x|`和 `|y|`則分別是 `x` 和 `y` 的絕對值。
+
+如需在非有限運算元情況中 `%` 運算子的行為，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/index)的[餘數運算子](/dotnet/csharp/language-reference/language-specification/expressions#remainder-operator)一節。
+
+> [!NOTE]
+> 這項計算餘數的方法和用於整數運算元的方法類似，但不同於 IEEE 754。 如需符合 IEEE 754 的餘數運算，請使用 <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> 方法。
+
+下列範例示範 `float` 和 `double` 運算元的餘數運算子行為：
+
+[!code-csharp-interactive[float and double remainder](~/samples/snippets/csharp/language-reference/operators/RemainderExamples.cs#2)]
+
+請注意與浮點數類型有關的四捨五入錯誤。
+
+針對 [decimal](../keywords/decimal.md) 運算元，餘數運算子 `%` 等於 <xref:System.Decimal?displayProperty=nameWithType> 類型的[餘數運算子](<xref:System.Decimal.op_Modulus(System.Decimal,System.Decimal)>)。
+
+## <a name="see-also"></a>另請參閱
+
+- [C# 參考](../index.md)
+- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 運算子](index.md)
+- <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType>
+- <xref:System.Math.DivRem%2A?displayProperty=nameWithType>

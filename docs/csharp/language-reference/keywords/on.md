@@ -1,5 +1,5 @@
 ---
-title: on (C# 參考)
+title: on 關鍵字 (C# 參考)
 ms.date: 07/20/2015
 f1_keywords:
 - on_CSharpKeyword
@@ -7,21 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - on keyword [C#]
 ms.assetid: 06abc536-e07c-4e34-88c1-425208bdcb21
-ms.openlocfilehash: bcac5c499d098caf70c0a48a4050802068c0ac1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3d1f09bffa197090df7dfce09ab40b164fceb774
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265229"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44173700"
 ---
 # <a name="on-c-reference"></a>on (C# 參考)
-查詢運算式的 [join 子句](../../../csharp/language-reference/keywords/join-clause.md) 使用 `on` 內容關鍵字來指定聯結條件。  
-  
-## <a name="example"></a>範例  
- 下列範例將示範 `join` 子句中 `on` 的用法。  
-  
- [!code-csharp[csrefKeywordsContextual#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/on_1.cs)]  
-  
-## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)  
- [LINQ 查詢運算式](../../../csharp/programming-guide/linq-query-expressions/index.md)
+
+查詢運算式的 [join 子句](join-clause.md) 使用 `on` 內容關鍵字來指定聯結條件。
+
+## <a name="example"></a>範例
+
+下列範例將示範 `join` 子句中 `on` 的用法。
+
+[!code-csharp[csrefKeywordsContextual#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#12)]
+
+## <a name="see-also"></a>另請參閱
+
+- [C# 參考](../index.md)
+- [Language-Integrated Query (LINQ)](../../linq/index.md)

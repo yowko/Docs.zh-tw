@@ -4,12 +4,12 @@ description: 了解 dotnet 命令 (.NET Core CLI 工具的通用驅動器) 和�
 author: mairaw
 ms.author: mairaw
 ms.date: 06/04/2018
-ms.openlocfilehash: 788dc746705f9328683019ab3ad9836204a1ea63
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: 53e8f8bab1cbaabaa7926aa68197c18843b0b637
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805655"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44079812"
 ---
 # <a name="dotnet-command"></a>dotnet 命令
 
@@ -17,7 +17,7 @@ ms.locfileid: "34805655"
 
 ## <a name="name"></a>名稱
 
-`dotnet` - 用於執行命令列命令的一般驅動器。
+`dotnet` - 管理 .NET 原始程式碼和二進位檔的工具。
 
 ## <a name="synopsis"></a>概要
 
@@ -40,11 +40,9 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 ## <a name="description"></a>描述
 
-`dotnet` 是命令列介面 (CLI) 工具鏈的通用驅動器。 它會自行叫用，提供簡短的使用方式指示。
+`dotnet` 是管理 .NET 原始程式碼和二進位檔的工具。 會公開執行特定工作的命令，例如 [`dotnet build`](dotnet-build.md) 和 [`dotnet run`](dotnet-run.md)。 每個命令會定義自己的引數。 每個命令後方鍵入 `--help` 以存取簡短說明文件。
 
-每個特定功能都是當成命令來實作。 若要使用這個功能，請在 `dotnet` 之後指定命令 (例如 [`dotnet build`](dotnet-build.md))。 這個命令後面的所有引數都是它自己的引數。
-
-`dotnet` 唯一自行作為命令使用的時機是執行[與 Framework 相依的應用程式](../deploying/index.md)。 在 `dotnet` 動詞之後指定應用程式 DLL，以執行應用程式 (例如，`dotnet myapp.dll`)。
+可藉由指定應用程式 DLL (例如 `dotnet myapp.dll`)，使用 `dotnet` 來執行應用程式。 請參閱 [.NET Core 應用程式部署](../deploying/index.md) 來了解部署選項。
 
 ## <a name="options"></a>選項
 
@@ -64,15 +62,15 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `--fx-version <VERSION>`
 
-用來執行應用程式的已安裝 .NET Core 執行階段版本。
+用來執行應用程式的 .NET Core 執行階段版本。
 
 `-h|--help`
 
-印出命令的簡短說明。 如果與 `dotnet` 搭配使用，則也會列印一份可用的命令清單。
+印出指定命令的文件，例如`dotnet build --help`。 `dotnet --help` 會印出可用命令的清單。
 
 `--info`
 
-印出有關 CLI 工具和環境的詳細資訊，例如目前的作業系統、版本的認可 SHA，以及其他資訊。
+會印出關於 .NET Core 安裝和電腦環境的詳細資訊，例如目前作業系統和 .NET Core 版本的認可 SHA。
 
 `--list-runtimes`
 
@@ -84,7 +82,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `--roll-forward-on-no-candidate-fx`
 
- 無任何候選共用架構上的向前復原。
+ 如果設定為 `0`，將停用次要版本向前復原。 如需詳細資訊，請參閱[向前復原](../whats-new/dotnet-core-2-1.md#roll-forward)。
 
 `-v|--verbosity <LEVEL>`
 
@@ -110,19 +108,19 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `--fx-version <VERSION>`
 
-用來執行應用程式的已安裝 .NET Core 執行階段版本。
+用來執行應用程式的 .NET Core 執行階段版本。
 
 `-h|--help`
 
-印出命令的簡短說明。 如果與 `dotnet` 搭配使用，則也會列印一份可用的命令清單。
+印出指定命令的文件，例如`dotnet build --help`。 `dotnet --help` 會印出可用命令的清單。
 
 `--info`
 
-印出有關 CLI 工具和環境的詳細資訊，例如目前的作業系統、版本的認可 SHA，以及其他資訊。
+會印出關於 .NET Core 安裝和電腦環境的詳細資訊，例如目前作業系統和 .NET Core 版本的認可 SHA。
 
 `--roll-forward-on-no-candidate-fx`
 
- 無任何候選共用架構上的向前復原。
+ 如果設定為 `0`，將停用次要版本向前復原。 如需詳細資訊，請參閱[向前復原](../whats-new/dotnet-core-2-1.md#roll-forward)。
 
 `-v|--verbosity <LEVEL>`
 
@@ -144,15 +142,15 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `--fx-version <VERSION>`
 
-用來執行應用程式的已安裝 .NET Core 執行階段版本。
+用來執行應用程式的 .NET Core 執行階段版本。
 
 `-h|--help`
 
-印出命令的簡短說明。 如果與 `dotnet` 搭配使用，則也會列印一份可用的命令清單。
+印出指定命令的文件，例如`dotnet build --help`。 `dotnet --help` 會印出可用命令的清單。
 
 `--info`
 
-印出有關 CLI 工具和環境的詳細資訊，例如目前的作業系統、版本的認可 SHA，以及其他資訊。
+會印出關於 .NET Core 安裝和電腦環境的詳細資訊，例如目前作業系統和 .NET Core 版本的認可 SHA。
 
 `-v|--verbosity <LEVEL>`
 
@@ -259,7 +257,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 ### <a name="additional-tools"></a>其他工具
 
-從 .NET Core SDK 2.1.300 開始，先前僅能透過 `DotnetCliToolReference` 於個別專案上使用的數個工具，現在皆已做為 .NET Core SDK 的一部分提供。 這些工具包括：
+從 .NET Core SDK 2.1.300 開始，先前僅能透過 `DotnetCliToolReference` 於個別專案上使用的數個工具，現在皆已做為 .NET Core SDK 的一部分提供。 這些工具列於下列資料表中：
 
 | 工具                                              | 功能                                                     |
 | ------------------------------------------------- | ------------------------------------------------------------ |
@@ -269,7 +267,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 | [user-secrets](/aspnet/core/security/app-secrets) | 管理開發使用者祕密。                            |
 | [watch](/aspnet/core/tutorials/dotnet-watch)      | 啟動會在檔案變更時執行命令的檔案監看員。 |
 
-如需每個工具的詳細資訊，請執行 `dotnet <tool-name> --help`。
+如需每個工具的詳細資訊，請鍵入 `dotnet <tool-name> --help`。
 
 ## <a name="examples"></a>範例
 
@@ -287,7 +285,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `dotnet build`
 
-執行名稱為 `myapp.dll` 的與 Framework 相依的應用程式：
+執行應用程式 DLL，例如 `myapp.dll`：
 
 `dotnet myapp.dll`
 
@@ -313,7 +311,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX`
 
-停用次要版本向前復原。 如需詳細資訊，請參閱[向前復原](../whats-new/dotnet-core-2-1.md#roll-forward)。
+如果設定為 `0`，將停用次要版本向前復原。 如需詳細資訊，請參閱[向前復原](../whats-new/dotnet-core-2-1.md#roll-forward)。
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 

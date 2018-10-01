@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 76371985e340945793310247ec48d9b0cb747aed
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 025510782551c058c3b80eff3045138476e031b9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457926"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514181"
 ---
 # <a name="operators-c-programming-guide"></a>運算子 (C# 程式設計手冊)
 在 C# 中，「 *運算子* 」(Operator) 是程式的元素，這類元素會套用至運算式或陳述式中的一個或多個「 *運算元* 」(Operand)。 只使用一個運算元的運算子稱為`++`「一元」 `new`(Unary) 運算子，例如遞增運算子 ( *) 或* 。 使用兩個運算元的運算子稱為`+`「二元」`-`(Binary) 運算子，例如算術運算子 (`*`、`/`、 *及* )。 還有一種運算子稱為條件運算子 (`?:`)，它會使用三個運算元而且是 C# 中唯一的三元運算子。  
@@ -123,7 +123,7 @@ ms.locfileid: "34457926"
 |運算式|描述|  
 |----------------|-----------------|  
 |[=](../../../csharp/language-reference/operators/assignment-operator.md)|指派|  
-|x op= y|複合指派。 支援這些運算子：[+=](../../../csharp/language-reference/operators/addition-assignment-operator.md)、[-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md)、[*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md)、[/=](../../../csharp/language-reference/operators/division-assignment-operator.md)、[%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md)、[&=](../../../csharp/language-reference/operators/and-assignment-operator.md)、[&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md)、[!=](../../../csharp/language-reference/operators/not-equal-operator.md)、[<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md)、[>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
+|x op= y|複合指派。 支援這些運算子：[+=](../../../csharp/language-reference/operators/addition-assignment-operator.md)、[-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md)、[*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md)、[/=](../../../csharp/language-reference/operators/division-assignment-operator.md)、[%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md)、[&=](../../../csharp/language-reference/operators/and-assignment-operator.md)、[&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md)、[^=](../../../csharp/language-reference/operators/xor-assignment-operator.md)、[<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md)、[>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
 |(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y|匿名函式 (Lambda 運算式)|  
   
 ## <a name="associativity"></a>順序關聯性  
@@ -163,11 +163,12 @@ a = (b = c);
 |`a = (b + c) * (d - e)`|a, b, c, +, d, e, -, *, =|  
   
 ## <a name="operator-overloading"></a>運算子多載  
- 您可以變更自訂類別和結構的運算子行為。 這個程序稱為「 *運算子多載*」(Operator Overloading)。 如需詳細資訊，請參閱[可多載的運算子](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)。  
+ 您可以變更自訂類別和結構的運算子行為。 這個程序稱為「 *運算子多載*」(Operator Overloading)。 如需詳細資訊，請參閱[多載運算子](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)和 [operator](../../../csharp/language-reference/keywords/operator.md) 關鍵字文章。  
   
 ## <a name="related-sections"></a>相關章節  
  如需詳細資訊，請參閱[運算子關鍵字](../../../csharp/language-reference/keywords/operator-keywords.md)[C# 運算子](../../../csharp/language-reference/operators/index.md)。  
   
-## <a name="see-also"></a>請參閱  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [陳述式、運算式和運算子](../../../csharp/programming-guide/statements-expressions-operators/index.md)
+## <a name="see-also"></a>請參閱
+
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [陳述式、運算式和運算子](../../../csharp/programming-guide/statements-expressions-operators/index.md)

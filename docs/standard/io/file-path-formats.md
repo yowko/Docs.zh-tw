@@ -12,12 +12,12 @@ ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8342f1389718eb41d1138e0bdd166530c1f2a10e
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 0efef54abd1da9631b5a560b49c6587d726e9193
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933601"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861298"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 系統上的檔案路徑格式
 
@@ -117,7 +117,7 @@ DOS 裝置路徑由以下元件組成：
 - 評估相對目錄元件 (`.` 表示目前目錄，`..` 表示父目錄)。
 - 修剪特定字元。
 
-這個正規化會隱含地發生，但您可以明確地呼叫 <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType> 方法來執行，這個方法會包裝對 [GetFullPathName() 函式](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx)的呼叫。 您也可以直接使用 P/Invoke 呼叫 Windows [GetFullPathName() 函式](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx)。 您也可以呼叫 
+這個正規化會隱含地發生，但您可以明確地呼叫 <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType> 方法來執行，這個方法會包裝對 [GetFullPathName() function](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).aspx 的呼叫。 您也可以直接使用 P/Invoke 呼叫 Windows [GetFullPathName() function](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).aspx。 您也可以呼叫 
 
 ### <a name="identifying-the-path"></a>識別路徑
 
@@ -185,7 +185,7 @@ DOS 裝置路徑由以下元件組成：
 
 為何會想要略過正規化？ 有三個主要的原因：
 
-1. 存取通常無法使用，但是合法的路徑。 例如，稱為 `hidden.` 的檔案或目錄便無法以任何其他方式存取。 
+1. 存取通常無法使用，但是合法的路徑。 例如，稱為 `hidden.` 的檔案或目錄便無法以其他方式存取。 
 
 1. 如果已經正規化，藉由略過正規化以改善效能。
 
@@ -233,4 +233,4 @@ Module Example
 End Module
 ```
 
-不過，目錄和檔案名稱比較不區分大小寫。 如果您搜尋名為 "test.txt" 的檔案，.NET 檔案系統 API 在比較時會忽略大小寫。 Test.txt、TEST.TXT、test.TXT 和大寫和小寫字母的任何其他組合都會符合 "test.txt"。
+不過，目錄和檔案名稱比較不區分大小寫。 如果您搜尋名為 "test.txt" 的檔案，.NET 檔案系統 API 在比較時會忽略大小寫。 Test.txt、TEST.TXT、test.TXT 和大寫和小寫字母的其他組合都會符合 "test.txt"。

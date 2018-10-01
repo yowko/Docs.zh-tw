@@ -5,12 +5,12 @@ ms.assetid: 35883fe9-2d09-4d8b-80ca-cf23a941e459
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 169454edd04bfdb55affcc2be12140f42dd2f7ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbd12b3e08b6e21d26e2cb688a591cd4e03574dc
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392444"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44205980"
 ---
 # <a name="changes-to-the-systemuri-namespace-in-version-20"></a>2.0 版之 System.Uri 命名空間的變更
 已對 <xref:System.Uri?displayProperty=nameWithType> 類別進行數項變更。 這些變更已修正不正確的行為、增強可用性和增強式安全性。  
@@ -42,7 +42,7 @@ ms.locfileid: "33392444"
   
 -   針對已知沒有查詢部分的 URI 配置 (file、ftp 和其他項目)，一律會逸出 '?' 字元，而且它不是 <xref:System.Uri.Query%2A> 部分的開頭。  
   
--   針對隱含檔案 URI (形式為 "c:\directory\file@name.txt")，除非要求完整取消逸出，或 <xref:System.Uri.LocalPath%2A> 是 `true`，否則一律會逸出片段字元 ('#')。  
+-   針對隱含檔案 URI (形式為 `c:\directory\file@name.txt`)，除非要求完整取消逸出，或 <xref:System.Uri.LocalPath%2A> 是 `true`，否則一律會逸出片段字元 ('#')。  
   
 -   已移除 UNC 主機名稱支援；已採用用於呈現國際主機名稱的 IDN 規格。  
   
@@ -56,9 +56,9 @@ ms.locfileid: "33392444"
   
 -   <xref:System.Uri.IsLoopback%2A> 現在會產生一致的結果。  
   
--   URI "`file:///path`" 不再轉譯成 "file://path"。  
+-   URI "`file:///path`" 不再轉譯成 `file://path`。  
   
--   "#" 現在會辨識為主機名稱結束字元。 也就是 "http://consoto.com#fragment" 現在會轉換成 "http://contoso.com/#fragment"。  
+-   "#" 現在會辨識為主機名稱結束字元。 也就是 `http://consoto.com#fragment` 現在會轉換成 `http://contoso.com/#fragment`。  
   
 -   已修正合併基底 URI 與片段時的 Bug。  
   

@@ -4,20 +4,20 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: f1c045ffe311dfad851c7cace37966d8d42a22cc
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: c617b2d7b56618867fe92cbe1d9ee04aa4c3ab64
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39220733"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207235"
 ---
 # <a name="c-features-that-support-linq"></a>支援 LINQ 的 C# 功能
 下節將介紹 C# 3.0 中引進的新語言建構。 雖然這些新功能或多或少都會用於 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢，但不限於 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，還可用於任何您認為實用的內容中。  
   
 ## <a name="query-expressions"></a>查詢運算式  
- 查詢運算式使用類似於 SQL 或 XQuery 的宣告式語法來查詢 IEnumerable 集合。 在編譯時期，查詢語法會轉換成對 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供者實作的標準查詢運算子擴充方法進行的方法呼叫。 應用程式使用 `using` 指示詞來指定適當的命名空間，藉此控制範圍內的標準查詢運算子。 下列查詢運算式會擷取字串的陣列，然後根據字串的第一個字元分組字串，再排序這些群組。  
+ 查詢運算式使用類似 SQL 或 XQuery 的宣告式語法來查詢 IEnumerable 集合。 在編譯時期，查詢語法會轉換成對 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供者實作的標準查詢運算子擴充方法進行的方法呼叫。 應用程式使用 `using` 指示詞來指定適當的命名空間，藉此控制範圍內的標準查詢運算子。 下列查詢運算式會擷取字串的陣列，然後根據字串的第一個字元分組字串，再排序這些群組。  
   
-```  
+```csharp  
 var query = from str in stringArray  
             group str by str[0] into stringGroup  
             orderby stringGroup.Key  
@@ -29,7 +29,7 @@ var query = from str in stringArray
 ## <a name="implicitly-typed-variables-var"></a>隱含型別變數 (var)  
  除了在宣告和初始化變數時明確指定類型，您還可以使用 [var](../../../../csharp/language-reference/keywords/var.md) 修飾詞，指示編譯器推斷並指派類型，如下所示：  
   
-```  
+```csharp  
 var number = 5;  
 var name = "Virginia";  
 var query = from str in stringArray  
@@ -37,14 +37,14 @@ var query = from str in stringArray
             select str;  
 ```  
   
- 宣告為 `var` 的變數和明確指定類型的變數一樣具有強型別。 `var` 可用來建立匿名型別，但也可用於任何區域變數。 陣列也可以使用隱含型別進行宣告。  
+ 宣告為 `var` 的變數和明確指定類型的變數一樣具有強型別。 `var` 可用來建立匿名型別，但僅可用於區域變數。 陣列也可以使用隱含型別進行宣告。  
   
  如需詳細資訊，請參閱[隱含類型區域變數](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。  
   
 ## <a name="object-and-collection-initializers"></a>物件和集合初始設定式  
  物件和集合初始設定式可以初始化物件，而不需要明確呼叫物件的建構函式。 初始設定式通常會用於將來源資料投影為新資料類型的查詢運算式中。 假設有個名為 `Customer` 的類別具有公用的 `Name` 和 `Phone` 屬性，則可如下列程式碼所示使用物件初始設定式：  
   
-```  
+```csharp  
 Customer cust = new Customer { Name = "Mike", Phone = "555-1212" };  
 ```  
   
@@ -78,11 +78,12 @@ select new {name = cust.Name, phone = cust.Phone};
 ## <a name="auto-implemented-properties"></a>自動實作的屬性  
  自動實作的屬性讓屬性宣告更簡潔。 當您如下列範例所示宣告屬性時，編譯器會建立私用、匿名的支援欄位，只能透過 getter 和 setter 屬性進行存取。  
   
-```  
+```csharp  
 public string Name {get; set;}  
 ```  
   
  如需詳細資訊，請參閱[自動實作的屬性](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)。  
   
-## <a name="see-also"></a>請參閱  
- [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+## <a name="see-also"></a>請參閱
+
+- [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)

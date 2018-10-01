@@ -8,12 +8,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: e043903647075587d1e7eec21c9a7b04f596dbf6
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 47e066f8eb7402fedabc70cf1e3b4a1bb974ff62
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937045"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504688"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda 運算式 (C# 程式設計手冊)
 
@@ -78,6 +78,7 @@ namespace ConsoleApplication1
 ```csharp
 (int x, string s) => s.Length > x
 ```
+ 輸入參數類型必須全部為明確或全部為隱含；否則，C# 會產生 [CS0748](../../misc/cs0748.md) 編譯器錯誤。
 
  以空括號指定零個輸入參數：  
   
@@ -273,11 +274,12 @@ class Test
 ## <a name="featured-book-chapter"></a>精選書籍章節  
  [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](https://msdn.microsoft.com/library/orm-9780596516109-03.aspx) (C# 3.0 Cookbook 第三版：250 個以上 C# 3.0 程式設計人員適用的方案) 中的 [Delegates, Events, and Lambda Expressions](https://msdn.microsoft.com/library/orm-9780596516109-03-09.aspx) (委派、事件和 Lambda 運算式)  
   
-## <a name="see-also"></a>請參閱  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [LINQ (Language-Integrated Query)](../../../csharp/programming-guide/concepts/linq/index.md)  
- [匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
- [is](../../../csharp/language-reference/keywords/is.md)  
- [運算式樹狀結構](../../../csharp/programming-guide/concepts/expression-trees/index.md)  
- [Visual Studio 2008 C# 範例 (請參閱 LINQ 範例查詢檔案和 XQuery 程式)](http://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)  
- [Recursive lambda expressions (遞迴的 Lambda 運算式)](https://blogs.msdn.microsoft.com/madst/2007/05/11/recursive-lambda-expressions/)
+## <a name="see-also"></a>請參閱
+
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [LINQ (Language-Integrated Query)](../../../csharp/programming-guide/concepts/linq/index.md)  
+- [匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
+- [is](../../../csharp/language-reference/keywords/is.md)  
+- [運算式樹狀結構](../../../csharp/programming-guide/concepts/expression-trees/index.md)  
+- [Visual Studio 2008 C# 範例 (請參閱 LINQ 範例查詢檔案和 XQuery 程式)](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)  
+- [Recursive lambda expressions (遞迴的 Lambda 運算式)](https://blogs.msdn.microsoft.com/madst/2007/05/11/recursive-lambda-expressions/)

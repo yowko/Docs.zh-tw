@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2306d51d88ab2d3b74ed6381a6de0acebf1e62c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 67955e2b9d523cdee02f6de548720fdad261ab4d
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410094"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43748423"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (程式碼存取安全性原則工具)
 程式碼存取安全性 (CAS) 原則工具 (Caspol.exe) 可以讓使用者和系統管理員修改電腦原則層級、使用者原則層級和企業原則層級的安全性原則。  
@@ -68,7 +68,7 @@ caspol [options]
 |**-polchgprompt** {**on** &#124; **off**}<br /><br /> 或<br /><br /> **-pp** {**on** &#124; **off**}|啟用或停用每當使用會造成原則變更的選項來執行 Caspol.exe 時所顯示的提示。|  
 |**-quiet**<br /><br /> 或<br /><br /> **-q**|暫時停用通常會對造成原則變更的選項顯示的提示。 不過，全域變更提示設定不會變更。 僅針對單一命令使用這個選項，如此才不會停用所有 Caspol.exe 命令的提示。|  
 |**-r**[**ecover**]|從備份檔復原原則。 每當原則變更時，Caspol.exe 都會將舊原則儲存到備份檔中。|  
-|**-remfulltrust** *assembly_file*<br /><br /> 或<br /><br /> **-rf**  *assembly_file*|從原則層級的完全信任清單中移除組件。 如果原則不再使用包含自訂權限的權限集合，則應該執行這項作業。 不過，只有在組件未實作任何其他仍在使用的自訂權限時，才可以從完全信任清單中移除實作自訂權限的組件。 當您從清單中移除組件時，也應該移除該組件所依存的任何其他組件。|  
+|**-remfulltrust** *assembly_file*<br /><br /> 或<br /><br /> **-rf**  *assembly_file*|從原則層級的完全信任清單中移除組件。 如果原則不再使用包含自訂權限的權限集合，則應該執行這項作業。 不過，只有在組件未實作其他仍在使用的自訂權限時，才可以從完全信任清單中移除實作自訂權限的組件。 當您從清單中移除組件時，也應該移除該組件所依存的其他組件。|  
 |**-remgroup** {*label &#124;name*}<br /><br /> 或<br /><br /> **-rg** {l*abel &#124; name*}|移除以標籤或名稱指定的程式碼群組。 如果指定的程式碼群組包含子程式碼群組，Caspol.exe 也會移除所有子程式碼群組。|  
 |**-rempset** *pset_name*<br /><br /> 或<br /><br /> **-rp** *pset_name*|從原則中移除指定的權限集合。 *pset_name* 引數會指出要移除的權限集合。 只有在權限集合未與任何程式碼群組相關聯時，Caspol.exe 才會將該權限集合移除。 無法移除預設 (內建) 權限集合。|  
 |**-reset**<br /><br /> 或<br /><br /> **-rs**|將原則回復到其預設狀態並保存 (Persist) 到磁碟中。 每當變更的原則似乎無法修復，而您想要以安裝預設值重新開始時，這樣做會非常有用。 當您想要使用預設原則做為修改特定安全性設定檔的起點時，重設也會很方便。 如需詳細資訊，請參閱[手動編輯安全性組態檔](#cpgrfcodeaccesssecuritypolicyutilitycaspolexeanchor1)。|  
@@ -83,29 +83,29 @@ caspol [options]
   
 |引數|描述|  
 |--------------|-----------------|  
-|**-allcode**|指定所有程式碼。 如需這個成員資格條件的詳細資訊，請參閱 <xref:System.Security.Policy.AllMembershipCondition>。|  
-|**-appdir**|指定應用程式目錄。 如果您將 **–appdir** 指定為成員資格條件，系統會比較程式碼的 URL 辨識項與該程式碼的應用程式目錄辨識項。 如果兩個辨識項的值相同，表示符合這個成員條件。 如需這個成員資格條件的詳細資訊，請參閱 <xref:System.Security.Policy.ApplicationDirectoryMembershipCondition>。|  
+|**-allcode**|指定所有程式碼。 如需這個成員資格條件的詳細資訊，請參閱 <xref:System.Security.Policy.AllMembershipCondition?displayProperty=nameWithType>。|  
+|**-appdir**|指定應用程式目錄。 如果您將 **–appdir** 指定為成員資格條件，系統會比較程式碼的 URL 辨識項與該程式碼的應用程式目錄辨識項。 如果兩個辨識項的值相同，表示符合這個成員條件。 如需這個成員資格條件的詳細資訊，請參閱 <xref:System.Security.Policy.ApplicationDirectoryMembershipCondition?displayProperty=nameWithType>。|  
 |**-custom**  *xmlfile*|加入自訂成員資格條件。 強制 *xmlfile* 引數會指定包含自訂成員資格條件之 XML 序列化的 .xml 檔。|  
-|**-hash** *hashAlg* {**-hex** *hashValue* &#124; **-file** *assembly_file* }|指定具有指定組件雜湊的程式碼。 若要使用雜湊做為程式碼群組成員資格條件，則必須指定雜湊值或組件檔。 如需這個成員資格條件的詳細資訊，請參閱 <xref:System.Security.Policy.HashMembershipCondition>。|  
-|**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex**  *hex_string* }|指定具有所指軟體發行者的程式碼，該發行者的表示方式為憑證檔、檔案上的簽章或 X509 憑證的十六進位表示。 如需這個成員資格條件的詳細資訊，請參閱 <xref:System.Security.Policy.PublisherMembershipCondition>。|  
-|**-site** *website*|指定具有所指來源網站的程式碼。 例如: <br /><br /> **-site** www.proseware.com<br /><br /> 如需這個成員資格條件的詳細資訊，請參閱 <xref:System.Security.Policy.SiteMembershipCondition>。|  
-|**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|可指定具有特定強式名稱的程式碼，該名稱的指定方式為檔案名稱、組件名稱 (字串形式)，以及格式為 *major*.*minor*.*build*.*revision* 的組件版本。 例如: <br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> 如需這個成員資格條件的詳細資訊，請參閱 <xref:System.Security.Policy.StrongNameMembershipCondition>。|  
-|**-url** *URL*|指定來自所指 URL 的程式碼。 這個 URL 必須包括通訊協定，例如 http:// 或 ftp://。 此外，您可以使用萬用字元 (\*) 指定來自特定 URL 的多個組件。 **注意：** 因為 URL 可以使用多個名稱來識別，所以將 URL 作為成員資格條件來確定程式碼識別並不安全。 請盡可能使用強式名稱 (Strong Name) 成員資格條件、發行者成員資格條件或雜湊成員資格條件。 <br /><br /> 如需這個成員資格條件的詳細資訊，請參閱 <xref:System.Security.Policy.UrlMembershipCondition>。|  
+|**-hash** *hashAlg* {**-hex** *hashValue* &#124; **-file** *assembly_file* }|指定具有指定組件雜湊的程式碼。 若要使用雜湊做為程式碼群組成員資格條件，則必須指定雜湊值或組件檔。 如需這個成員資格條件的詳細資訊，請參閱 <xref:System.Security.Policy.HashMembershipCondition?displayProperty=nameWithType>。|  
+|**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex**  *hex_string* }|指定具有所指軟體發行者的程式碼，該發行者的表示方式為憑證檔、檔案上的簽章或 X509 憑證的十六進位表示。 如需這個成員資格條件的詳細資訊，請參閱 <xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType>。|  
+|**-site** *website*|指定具有所指來源網站的程式碼。 例如: <br /><br /> `-site** www.proseware.com`<br /><br /> 如需這個成員資格條件的詳細資訊，請參閱 <xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>。|  
+|**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|可指定具有特定強式名稱的程式碼，該名稱的指定方式為檔案名稱、組件名稱 (字串形式)，以及格式為 *major*.*minor*.*build*.*revision* 的組件版本。 例如: <br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> 如需這個成員資格條件的詳細資訊，請參閱 <xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType>。|  
+|**-url** *URL*|指定來自所指 URL 的程式碼。 這個 URL 必須包括通訊協定，例如 http:// 或 ftp://。 此外，您可以使用萬用字元 (\*) 指定來自特定 URL 的多個組件。 **注意：** 因為 URL 可以使用多個名稱來識別，所以將 URL 作為成員資格條件來確定程式碼識別並不安全。 請盡可能使用強式名稱 (Strong Name) 成員資格條件、發行者成員資格條件或雜湊成員資格條件。 <br /><br /> 如需這個成員資格條件的詳細資訊，請參閱 <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>。|  
 |**-zone** *zonename*|指定具有所指原始區域的程式碼。 *zonename* 引數可以是下列其中一個值：**MyComputer**、**Intranet**、**Trusted**、**Internet** 或 **Untrusted**。 如需這個成員資格條件的詳細資訊，請參閱 <xref:System.Security.Policy.ZoneMembershipCondition> 類別。|  
   
  *flags* 引數是使用下列其中一種方式指定，並且可以搭配 **–addgroup** 和 **–chggroup** 選項使用。  
   
 |引數|描述|  
 |--------------|-----------------|  
-|**-description "** *description* **"**|如果搭配 **–addgroup** 選項使用，可指定要新增的程式碼群組描述。 如果搭配 **–chggroup** 選項使用，可指定要編輯的程式碼群組描述。 *description* 引數必須括在雙引號中。|  
+|**-description** "*description*"|如果搭配 **–addgroup** 選項使用，可指定要新增的程式碼群組描述。 如果搭配 **–chggroup** 選項使用，可指定要編輯的程式碼群組描述。 *description* 引數必須括在雙引號中。|  
 |**-exclusive** {**on**&#124;**off**}|設為 **on** 時，表示當部分程式碼符合程式碼群組的成員資格條件時，只會考慮與您要新增或修改的程式碼群組相關聯的權限集合。 這個選項設為 **off** 時，Caspol.exe 會考慮原則層級中所有相符程式碼群組的權限集合。|  
 |**-levelfinal** {**on**&#124;**off**}|設為 **on** 時，表示不會考慮新增或修改程式碼群組所在層級之下的原則層級。 這個選項通常於電腦原則層級使用。 例如，如果您在電腦層級為程式碼群組設定這個旗標，而某個程式碼符合這個程式碼群組的成員資格條件，Caspol.exe 將不會為這個程式碼計算或套用使用者層級原則。|  
-|**-name "** *name* **"**|如果搭配 **–addgroup** 選項使用，可指定要新增之程式碼群組的指令碼名稱。 如果搭配 **-chggroup** 選項使用，可指定要編輯之程式碼群組的指令碼名稱。 *name* 引數必須括在雙引號中。 *name* 引數不能以數字開頭，而且只能包含 A-Z、0-9 和底線字元。 您可以藉由這個 *name* 來參考程式碼群組，而不是藉由其數值標籤。 *name* 對於編寫指令碼也非常有用。|  
+|**-name** "*name*"|如果搭配 **–addgroup** 選項使用，可指定要新增之程式碼群組的指令碼名稱。 如果搭配 **-chggroup** 選項使用，可指定要編輯之程式碼群組的指令碼名稱。 *name* 引數必須括在雙引號中。 *name* 引數不能以數字開頭，而且只能包含 A-Z、0-9 和底線字元。 您可以藉由這個 *name* 來參考程式碼群組，而不是藉由其數值標籤。 *name* 對於編寫指令碼也非常有用。|  
   
 ## <a name="remarks"></a>備註  
  安全性原則是使用三個原則層級表示：電腦原則、使用者原則和企業原則。 組件收到的權限集合是由這三種原則層級允許的權限集合交集所決定。 每個原則層級是以程式碼群組的階層結構表示。 每個程式碼群組都具有成員資格條件，用以判斷哪一個程式碼是該群組的成員。 具名權限集合也會與每個程式碼群組相關聯。 這個權限集合會指定執行階段允許符合成員資格條件的程式碼具備的權限。 程式碼群組階層架構與相關聯的具名權限集合一起定義並維護每一個層級的安全性原則。 您可以使用 **–user**、**-customuser**、**–machine** 和 **-enterprise** 選項來設定安全性原則的層級。  
   
- 如需安全性原則以及執行階段如何決定要授與程式碼之權限的詳細資訊，請參閱[安全性原則管理](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)。  
+ 如需安全性原則以及執行階段如何決定要授與程式碼之權限的詳細資訊，請參閱[安全性原則管理](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)。  
   
 ## <a name="referencing-code-groups-and-permission-sets"></a>參考程式碼群組和權限集合  
  為了簡化階層架構中程式碼群組的參考，**-list** 選項會以縮排方式顯示程式碼群組清單與其數字標籤 (1、1.1、1.1.1，以此類推)。 其他以程式碼群組為目標的命令列作業也會使用數字標籤參考特定程式碼群組。  
@@ -132,13 +132,13 @@ caspol [options]
   
  假設已將包含自訂權限的權限集合加入至電腦原則。 這個自訂權限是在 `MyPerm.exe` 中實作，而 `MyPerm.exe` 會參考 `MyOther.exe` 中的類別。 這兩個組件都必須加入至完全信任組件清單。 下列命令會將 `MyPerm.exe` 組件加入至電腦原則的完全信任清單。  
   
-```  
+```console  
 caspol -machine -addfulltrust MyPerm.exe  
 ```  
   
  下列命令會將 `MyOther.exe` 組件加入至電腦原則的完全信任清單。  
   
-```  
+```console  
 caspol -machine -addfulltrust MyOther.exe  
 ```  
   
@@ -146,13 +146,13 @@ caspol -machine -addfulltrust MyOther.exe
   
  下列命令會將子程式碼群組加入至電腦原則程式碼群組階層架構的根。 新的程式碼群組是 **Internet** 區域的成員，並且與 **Execution** 權限集合產生關聯。  
   
-```  
+```console  
 caspol -machine -addgroup 1.  -zone Internet Execution  
 ```  
   
  下列命令會新增子節點群組，可提供共用 \\\netserver\netshare 近端內部網路權限。  
   
-```  
+```console  
 caspol -machine -addgroup 1. -url \\netserver\netshare\* LocalIntranet  
 ```  
   
@@ -160,7 +160,7 @@ caspol -machine -addgroup 1. -url \\netserver\netshare\* LocalIntranet
   
  下列命令會將 `Mypset` 權限集合加入至使用者原則。  
   
-```  
+```console  
 caspol -user -addpset Mypset.xml Mypset  
 ```  
   
@@ -168,13 +168,13 @@ caspol -user -addpset Mypset.xml Mypset
   
  下列命令會將標記為 1.2. 之程式碼群組的使用者原則中的權限集合，變更為 **Execution** 權限集合。  
   
-```  
+```console  
 caspol -user -chggroup 1.2. Execution  
 ```  
   
  下列命令會變更標記為 1.2.1. 之程式碼群組的預設原則成員資格條件， 並且變更 **exclusive** 旗標的設定。 系統會將成員資格條件定義為源自 **Internet** 區域的程式碼，而且會開啟 **exclusive** 旗標。  
   
-```  
+```console  
 caspol -chggroup 1.2.1. -zone Internet -exclusive on  
 ```  
   
@@ -182,7 +182,7 @@ caspol -chggroup 1.2.1. -zone Internet -exclusive on
   
  下列命令會將名稱為 `Mypset` 的權限集合變更為 `newpset.xml` 中包含的權限集合。 請注意，目前版本不支援變更程式碼群組階層架構所使用的權限集合。  
   
-```  
+```console  
 caspol -chgpset Mypset newpset.xml  
 ```  
   
@@ -190,7 +190,7 @@ caspol -chgpset Mypset newpset.xml
   
  下列命令會讓使用者原則的根程式碼群組 (標記為 1) 與 **Nothing** 具名權限集合產生關聯。 這樣會使 Caspol.exe 無法執行。  
   
-```  
+```console  
 caspol -force -user -chggroup 1 Nothing  
 ```  
   
@@ -198,7 +198,7 @@ caspol -force -user -chggroup 1 Nothing
   
  下列命令會復原最近儲存的電腦原則。  
   
-```  
+```console  
 caspol -machine -recover  
 ```  
   
@@ -206,7 +206,7 @@ caspol -machine -recover
   
  下列命令會將標記為 1.1 的程式碼群組移除。 如果這個程式碼群組有任何子程式碼群組，則這些群組也會一併刪除。  
   
-```  
+```console  
 caspol -remgroup 1.1.  
 ```  
   
@@ -214,13 +214,13 @@ caspol -remgroup 1.1.
   
  下列命令會將 **Execution** 權限集合從使用者原則中移除。  
   
-```  
+```console  
 caspol -user -rempset Execution  
 ```  
   
  下列命令會將 `Mypset` 從使用者原則層級中移除。  
   
-```  
+```console  
 caspol -rempset MyPset  
 ```  
   
@@ -228,13 +228,13 @@ caspol -rempset MyPset
   
  下列命令會顯示 `myassembly` 所屬之電腦原則的所有程式碼群組。  
   
-```  
+```console  
 caspol -machine -resolvegroup myassembly  
 ```  
   
  下列命令會顯示 `myassembly` 所屬之電腦、企業和指定之自訂使用者原則的所有程式碼群組。  
   
-```  
+```console  
 caspol -customall "c:\config_test\security.config" -resolvegroup myassembly  
 ```  
   
@@ -242,10 +242,10 @@ caspol -customall "c:\config_test\security.config" -resolvegroup myassembly
   
  下列命令會依據電腦和使用者原則層級計算 `testassembly` 的權限。  
   
-```  
+```console  
 caspol -all -resolveperm testassembly  
 ```  
   
 ## <a name="see-also"></a>請參閱  
- [工具](../../../docs/framework/tools/index.md)  
- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+ [工具](index.md)  
+ [命令提示字元](developer-command-prompt-for-vs.md)

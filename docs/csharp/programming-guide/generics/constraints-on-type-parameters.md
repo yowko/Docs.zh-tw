@@ -6,12 +6,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: b5ad639309238912aa27b58c95466b4f37052699
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: df5a509296f3fb9e8e77a273a0636c74a6f86da3
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457354"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208656"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>型別參數的條件約束 (C# 程式設計手冊)
 
@@ -19,7 +19,7 @@ ms.locfileid: "34457354"
 
 |條件約束|描述|
 |----------------|-----------------|
-|`where T : struct`|型別引數必須是實值型別。 您可以指定 <xref:System.Nullable> 以外的任何實值型別。 如需詳細資訊，請參閱[可為 Null 的型別](../nullable-types/using-nullable-types.md)。|
+|`where T : struct`|型別引數必須是實值型別。 您可以指定 <xref:System.Nullable%601> 以外的任何實值型別。 如需可為 Null 型別的詳細資訊，請參閱[可為 Null 的型別](../nullable-types/index.md)。|
 |`where T : class`|型別引數必須是參考型別。 此條件約束也適用於任何類別、介面、委派或陣列型別。|
 |`where T : unmanaged`|型別引數不得是參考型別，也不得包含任何巢狀層級的任何參考型別成員。|
 |`where T : new()`|型別引數必須有公用無參數建構函式。 與其他條件約束搭配使用時，`new()` 條件約束必須是最後一個指定的。|
@@ -69,7 +69,7 @@ ms.locfileid: "34457354"
 
 在上述範例中，`T` 是 `Add` 方法內容中的類型條件約束，以及 `List` 類別內容中的未繫結型別參數。
 
-型別參數也可以在泛型類別定義中用作條件約束。 型別參數必須與任何其他型別參數一起宣告於角括弧內：
+型別參數也可以在泛型類別定義中用作條件約束。 型別參數必須與其他型別參數一起宣告於角括弧內：
 
 [!code-csharp[using the class and struct constraints](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#14)]
 
@@ -109,9 +109,10 @@ ms.locfileid: "34457354"
 
 [!code-csharp[using the unmanaged constraint](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#20)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
- <xref:System.Collections.Generic> [C# 程式設計手冊](../../../csharp/programming-guide/index.md)  
- [泛型簡介](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
- [泛型類別](../../../csharp/programming-guide/generics/generic-classes.md)  
- [new 條件約束](../../../csharp/language-reference/keywords/new-constraint.md)  
+- <xref:System.Collections.Generic>
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [泛型簡介](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- [泛型類別](../../../csharp/programming-guide/generics/generic-classes.md)  
+- [new 條件約束](../../../csharp/language-reference/keywords/new-constraint.md)  

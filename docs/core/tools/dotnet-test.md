@@ -4,12 +4,12 @@ description: dotnet test 命令是用來在指定的專案中執行單元測試�
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 2bee78ca44026f28c51fac3bcf87d976b53e48a7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 7946196b27489870da1c16b15cbf5f078ae89c61
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43390686"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44137196"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -251,6 +251,10 @@ dotnet test [-h|--help]
 執行 `test1` 專案中的測試︰
 
 `dotnet test ~/projects/test1/test1.csproj`
+
+在目前目錄中的專案中執行測試，並以 trx 格式產生測試結果檔案：
+
+`dotnet test --logger:trx`
 
 ## <a name="filter-option-details"></a>篩選選項詳細資料
 

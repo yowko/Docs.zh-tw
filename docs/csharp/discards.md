@@ -4,12 +4,12 @@ description: 說明 C# 的 discard 支援，這是未指派且可捨棄的變數
 author: rpetrusha
 ms.author: ronpet
 ms.date: 07/21/2017
-ms.openlocfilehash: 9688ea596fa3d534c6c48d5874b04bb257d0dbce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d70067194ea9921f8af31fe436d04e2b780e1a73
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219228"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524199"
 ---
 # <a name="discards---c-guide"></a>Discard - C# 指南
 
@@ -54,7 +54,7 @@ ms.locfileid: "33219228"
 
 ## <a name="calls-to-methods-with-out-parameters"></a>以 out 參數進行的方法呼叫
 
-當呼叫 `Deconstruct` 方法解構使用者定義型別 (類別、結構或介面的執行個體) 時，您可以捨棄個別 `out` 引數的值。 但當使用 out 參數呼叫任何方法時，您也可以捨棄 `out` 引數的值。 
+當呼叫 `Deconstruct` 方法解構使用者定義型別 (類別、結構或介面的執行個體) 時，您可以捨棄個別 `out` 引數的值。 但當使用 out 參數呼叫任何方法時，您也可以捨棄 `out` 引數的值。
 
 下列範例會呼叫 [DateTime.TryParse(String, out DateTime)](<xref:System.DateTime.TryParse(System.String,System.DateTime@)>) 方法，以判斷日期的字串表示在目前的文化特性 (culture) 中是否有效。 因為此範例只需要驗證日期字串，而不需要將它剖析以擷取日期，所以該方法的 `out` 引數為 discard。
 
@@ -71,16 +71,17 @@ ms.locfileid: "33219228"
 - 將預定的 dscard 值指派給範圍內的 `_` 變數，而意外修改變數的值。 例如: 
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#1)]
- 
+
 - 違反型別安全的編譯器錯誤。 例如: 
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#2)]
- 
-- 編譯器錯誤 CS0136：「無法在此範圍宣告名為 '_' 的區域變數或參數，因為該名稱已用於封入區域變數範圍，以定義區域變數或參數」。 例如: 
+
+- 編譯器錯誤 CS0136：「無法在此範圍宣告名為 '\_' 的區域變數或參數，因為該名稱已用於封入區域變數範圍，以定義區域變數或參數」。 例如: 
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#3)]
 
 ## <a name="see-also"></a>另請參閱
-[解構元組和其他類型](deconstruct.md)   
-[`is` 關鍵字](language-reference/keywords/is.md)   
-[`switch` 關鍵字](language-reference/keywords/switch.md)   
+
+- [解構 Tuple 和其他型別](deconstruct.md)
+- [`is` 關鍵字](language-reference/keywords/is.md)
+- [`switch` 關鍵字](language-reference/keywords/switch.md)

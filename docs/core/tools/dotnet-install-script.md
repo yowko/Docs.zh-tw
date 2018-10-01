@@ -4,12 +4,12 @@ description: 了解如何使用 dotnet-install 指令碼來安裝 .NET Core CLI 
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/11/2017
-ms.openlocfilehash: acdf49950ebb49751c55ae72b3f623e590489202
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8d1c6ebb30bd45575bb61206799c9c3e5c47ff0c
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214376"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44180039"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 指令碼參考
 
@@ -36,11 +36,11 @@ macOS/Linux：
 * https://dot.net/v1/dotnet-install.sh (bash、UNIX)
 * https://dot.net/v1/dotnet-install.ps1 (Powershell、Windows)
 
-這些指令碼對於自動化案例和非系統管理員安裝非常有幫助。 指令碼有兩種：一種是在 Windows 上使用的 PowerShell 指令碼。 另一個指令碼是可在 Linux/macOS 上運作的 bash 指令碼。 這兩個指令碼有相同的行為。 Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 參數使用 Linux/macOS 系統上的指令碼。 
+這些指令碼對於自動化案例和非系統管理員安裝非常有幫助。 指令碼有兩種：一種是在 Windows 上使用的 PowerShell 指令碼。 另一個指令碼是可在 Linux/macOS 上運作的 bash 指令碼。 這兩個指令碼有相同的行為。 Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 參數使用 Linux/macOS 系統上的指令碼。
 
-安裝指令碼會從 CLI 組建放置區下載 ZIP/tarball 檔案，並且繼續將它安裝在預設位置或 `-InstallDir|--install-dir` 所指定的位置。 根據預設，安裝指令碼會下載並安裝 SDK。 如果您想要只取得共用執行階段，請指定 `--shared-runtime` 引數。 
+安裝指令碼會從 CLI 組建放置區下載 ZIP/tarball 檔案，並且繼續將它安裝在預設位置或 `-InstallDir|--install-dir` 所指定的位置。 根據預設，安裝指令碼會下載並安裝 SDK。 如果您想要只取得共用執行階段，請指定 `--shared-runtime` 引數。
 
-根據預設，指令碼會將安裝位置新增到目前工作階段的 $PATH。 指定 `--no-path` 引數可以覆寫此預設行為。 
+根據預設，指令碼會將安裝位置新增到目前工作階段的 $PATH。 指定 `--no-path` 引數可以覆寫此預設行為。
 
 執行指令碼之前，請安裝所有必要的[相依性 (英文)](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)。
 
@@ -141,7 +141,7 @@ macOS/Linux：
 
 Windows：
 
-`@powershell -NoProfile -ExecutionPolicy unrestricted -Command "&([scriptblock]::Create((Invoke-WebRequest -useb 'https://dot.net/v1/dotnet-install.ps1'))) <additional install-script args>"`
+`@powershell -NoProfile -ExecutionPolicy unrestricted -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; &([scriptblock]::Create((Invoke-WebRequest -useb 'https://dot.net/v1/dotnet-install.ps1'))) <additional install-script args>"`
 
 macOS/Linux：
 
@@ -149,5 +149,5 @@ macOS/Linux：
 
 ## <a name="see-also"></a>另請參閱
 
-[.NET Core 版本](https://github.com/dotnet/core/releases)   
-[.NET Core 執行階段和 SDK 下載封存](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)
+* [.NET Core 版本](https://github.com/dotnet/core/releases)
+* [.NET Core 執行階段和 SDK 下載封存](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)

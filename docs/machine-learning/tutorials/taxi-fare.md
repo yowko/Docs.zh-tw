@@ -3,20 +3,20 @@ title: 使用 ML.NET 來預測紐約計程車車資 (迴歸)
 description: 了解如何在迴歸案例中使用 ML.NET。
 author: aditidugar
 ms.author: johalex
-ms.date: 06/18/2018
+ms.date: 07/02/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e3ff2124a43cf42ce26cf94cfd5384387eef0ed9
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 133b7ad17a98e4eea510f1704555b690b98e9091
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937068"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44252840"
 ---
 # <a name="tutorial-use-mlnet-to-predict-new-york-taxi-fares-regression"></a>教學課程：使用 ML.NET 來預測紐約計程車車資 (迴歸)
 
 > [!NOTE]
-> 本主題參考 ML.NET，此功能目前為公開預覽版，而可能會有變更。 如需詳細資訊，請瀏覽 [ML.NET 簡介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet) \(英文)\。
+> 本主題參考 ML.NET，此功能目前為公開預覽版，而可能會有變更。 如需詳細資訊，請參閱 [ML.NET 簡介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet) \(英文)\。
 
 本教學課程說明如何使用 ML.NET 來建置用於預測紐約市計程車車資的 [迴歸模型](../resources/glossary.md#regression)。
 
@@ -38,21 +38,21 @@ ms.locfileid: "37937068"
 
 ## <a name="understand-the-problem"></a>了解問題
 
-此問題的焦點在於**預測紐約市計程車的車資**。 乍看之下，這可能看似單純取決於行程遠近。 不過，紐約計程車廠商會針對其他因素 (例如額外的乘客，或使用信用卡而非現金付費) 收取不同的金額。
+此問題是關於預測紐約市計程車的車資。 乍看之下，這可能看似單純取決於行程遠近。 不過，紐約計程車廠商會針對其他因素 (例如額外的乘客，或使用信用卡而非現金付費) 收取不同的金額。
 
 ## <a name="select-the-appropriate-machine-learning-task"></a>選取適當的機器學習工作
 
-若要預測計程車車資，您需先選取適當的機器學習工作。 您希望根據資料集內的其他因素來預測實際值 (一個代表價格的雙精度浮點數)。 您需選擇[**迴歸**](../resources/glossary.md#regression)工作。
+您希望根據資料集當中的其他因素來預測價格值，這是一個實際值。 為了這麼做，您選擇[迴歸](../resources/glossary.md#regression)機器學習工作。
 
 ## <a name="create-a-console-application"></a>建立主控台應用程式
 
 1. 開啟 Visual Studio 2017。 從功能表列中選取 [檔案]  >  [新增]  >  [專案]。 在 [新增專案] 對話方塊中，選取 [Visual C#] 節點，然後選取 [.NET Core] 節點。 然後選取 [主控台應用程式 (.NET Core)] 專案範本。 在 [名稱] 文字方塊中，輸入 "TaxiFarePrediction"，然後選取 [確定] 按鈕。
 
-2. 在您的專案中建立一個名為 *Data* 的目錄以儲存資料集檔案：
+1. 在您的專案中建立一個名為 *Data* 的目錄以儲存資料集和模型檔案：
 
     在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選取 [新增] > [新增資料夾]。 輸入 "Data"，然後按 Enter。
 
-3. 安裝「Microsoft.ML NuGet 套件」：
+1. 安裝 **Microsoft.ML** NuGet 套件：
 
     在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選取 [管理 NuGet 套件]。 選擇 "nuget.org" 作為 [套件來源]，選取 [瀏覽] 索引標籤、搜尋 **Microsoft.ML**、從清單中選取該套件，然後選取 [安裝] 按鈕。 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。
 
@@ -60,9 +60,9 @@ ms.locfileid: "37937068"
 
 1. 下載 [taxi-fare-train.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-train.csv) 和 [taxi-fare-test.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-test.csv) 資料集，並將它們儲存至您在上一個步驟所建立的 *Data* 資料夾。 我們可以使用這些資料集將機器學習模型定型，然後評估模型的準確程度。 這些資料集原先來自 [NYC TLC Taxi Trip 資料集](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)。
 
-2. 在 [方案總管] 中，以滑鼠右鍵按一下每個 \*.csv 檔案，然後選取 [屬性]。 在 [進階] 底下，將 [複製到輸出目錄]的值變更為 [永遠]。
+1. 在 [方案總管] 中，以滑鼠右鍵按一下每個 \*.csv 檔案，然後選取 [屬性]。 在 [進階] 底下，將 [複製到輸出目錄] 的值變更為 [有更新時才複製]。
 
-3. 開啟 **taxi-fare-train.csv** 資料集，然後查看第一個資料列中的資料行標頭。 請查看每個資料行。 了解資料，並決定哪些資料行是 **features**，以及哪一個資料行是 **label**。
+1. 開啟 **taxi-fare-train.csv** 資料集，然後查看第一個資料列中的資料行標頭。 請查看每個資料行。 了解資料，並決定哪些資料行是 **features**，以及哪一個資料行是 **label**。
 
 **label** 是您要預測之資料行的識別碼。 所識別的**特徵**會用來預測標籤。
 
@@ -92,7 +92,10 @@ ms.locfileid: "37937068"
 
 `TaxiTrip` 是輸入資料類別，並含有每個資料集資料行的定義。 請使用 [Column](xref:Microsoft.ML.Runtime.Api.ColumnAttribute) 屬性來指定資料集中來源資料行的索引。
 
-`TaxiTripFarePrediction` 類別用來代表預測的結果。 它包含一個套用 `Score` [ColumnName](xref:Microsoft.ML.Runtime.Api.ColumnNameAttribute) 屬性的單一浮點數 (`FareAmount`) 欄位。 **Score** 資料行是 ML.NET 中的特殊資料行。 模型會將預測值輸出至該資料行。
+`TaxiTripFarePrediction` 類別代表預測的結果。 包含一個套用 `Score` [ColumnName](xref:Microsoft.ML.Runtime.Api.ColumnNameAttribute) 屬性的單一浮點數欄位 `FareAmount`。 如果是迴歸工作，則**分數**資料行包含預測的標籤值。
+
+> [!NOTE]
+> 使用 `float` 型別表示輸入和預測資料類別中的浮點值。
 
 ## <a name="define-data-and-model-paths"></a>定義資料和模型路徑
 
@@ -116,7 +119,7 @@ ms.locfileid: "37937068"
 
 [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
 
-在 `Main` 中，以下列程式碼取代 `Console.WriteLine("Hello World!")`：
+在 `Main` 方法中，以下列程式碼取代 `Console.WriteLine("Hello World!")`：
 
 ```csharp
 PredictionModel<TaxiTrip, TaxiTripFarePrediction> model = Train();
@@ -139,7 +142,7 @@ var pipeline = new LearningPipeline();
 
 ## <a name="load-and-transform-data"></a>載入並轉換資料
 
-學習管線執行的第一個步驟是從定型資料集載入資料。 在我們的案例中，定型資料集儲存在具有 `_datapath` 欄位所定義路徑的文字檔中。 這個檔案包含具有資料行名稱的標頭，因此載入資料時應該忽略第一個資料列。 檔案中的資料行是以逗號 (",") 分隔。 將下列程式碼新增至 `Train` 方法：
+要執行的第一個步驟是從訓練資料集載入資料。 在我們的案例中，定型資料集儲存在具有 `_datapath` 欄位所定義路徑的文字檔中。 這個檔案具有包含資料行名稱的標頭，因此載入資料時應該忽略第一個資料列。 檔案中的資料行是以逗號 (",") 分隔。 將下列程式碼新增至 `Train` 方法：
 
 ```csharp
 pipeline.Add(new TextLoader(_datapath).CreateFrom<TaxiTrip>(useHeader: true, separator: ','));
@@ -147,7 +150,7 @@ pipeline.Add(new TextLoader(_datapath).CreateFrom<TaxiTrip>(useHeader: true, sep
 
 在接下來的步驟中，我們透過 `TaxiTrip` 類別中定義的名稱來參考資料行。
 
-在定型和評估模型時，**Label** 資料行中的值被視為要預測的正確值。 因為我們想要預測計程車行程車資，請將 `FareAmount` 資料行複製到 **Label** 資料行。 若要這樣做，請使用 <xref:Microsoft.ML.Transforms.ColumnCopier>，並新增下列程式碼：
+根據預設，在定型和評估模型時，**Label** 資料行中的值會視為要預測的正確值。 因為我們想要預測計程車行程車資，請將 `FareAmount` 資料行複製到 **Label** 資料行。 若要這樣做，請使用 <xref:Microsoft.ML.Transforms.ColumnCopier>，並新增下列程式碼：
 
 ```csharp
 pipeline.Add(new ColumnCopier(("FareAmount", "Label")));
@@ -161,7 +164,7 @@ pipeline.Add(new CategoricalOneHotVectorizer("VendorId",
                                              "PaymentType"));
 ```
 
-資料準備工作的最後一個步驟是使用 <xref:Microsoft.ML.Transforms.ColumnConcatenator> 轉換類別，將所有特徵資料行合併為 **Features** 資料行。 由於學習工具只會處理來自 **Features** 資料行的特徵，因此必須執行這個步驟。 加入下列程式碼：
+資料準備工作的最後一個步驟是使用 <xref:Microsoft.ML.Transforms.ColumnConcatenator> 轉換類別，將所有特徵資料行合併為 **Features** 資料行。 根據預設，學習演算法只會處理來自 **Features** 資料行的特徵。 加入下列程式碼：
 
 ```csharp
 pipeline.Add(new ColumnConcatenator("Features",
@@ -179,7 +182,7 @@ pipeline.Add(new ColumnConcatenator("Features",
 
 ## <a name="choose-a-learning-algorithm"></a>選擇學習演算法
 
-將資料新增至管線並將其轉換成正確的輸入格式之後，您需選取學習演算法 (**學習工具**)。 學習工具會將模型定型。 您為這個問題選擇了**迴歸工作**，因此您將新增 <xref:Microsoft.ML.Trainers.FastTreeRegressor> 學習工具，這是 ML.NET 所提供的其中一個迴歸學習工具。
+將資料新增至管線並將其轉換成正確的輸入格式之後，您需選取學習演算法 (**學習工具**)。 學習工具會將模型定型。 您為這個問題選擇了**迴歸工作**，因此您將使用 <xref:Microsoft.ML.Trainers.FastTreeRegressor> 學習工具，這是 ML.NET 所提供的其中一個迴歸學習工具。
 
 <xref:Microsoft.ML.Trainers.FastTreeRegressor> 學習工具會利用梯度提升。 梯度提升是一種適用於迴歸問題的機器學習技術。 它會以逐步方式建置每個迴歸樹。 它會使用預先定義的損失函式來評估每個步驟中的誤差，然後在下一個步驟中為其進行修正。 結果會產生一個預測模型，這實際上就是較弱預測模型的總體。 如需有關梯度提升的詳細資訊，請參閱[提升的決策樹迴歸](/azure/machine-learning/studio-module-reference/boosted-decision-tree-regression) \(英文\)。
 
@@ -203,7 +206,7 @@ pipeline.Add(new FastTreeRegressor());
 
 ### <a name="save-the-model"></a>儲存模型
 
-在您前進到下一個步驟之前，請先在 `Train` 方法的結尾新增下列程式碼，將模型儲存成 .zip 檔案：
+此時，您已有一個可整合至任何現有或新 .NET 應用程式的模型。 若要將模型儲存至 .zip 檔案，請在 `Train` 方法的結尾新增下列程式碼：
 
 [!code-csharp[SaveModel](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#5 "Save the model asynchronously and return the model")]
 
@@ -227,7 +230,7 @@ pipeline.Add(new FastTreeRegressor());
 
 ## <a name="evaluate-the-model"></a>評估模型
 
-評估係指檢查模型預測標籤值之良好程度的程序。 對模型來說，能夠針對其定型時未使用的資料做出良好的預測是相當重要的。 若要達到此目的，其中一個做法是將資料分割成定型和測試資料集，就像在本教學課程中所做的一樣。 既然您已依據定型資料將模型定型，現在即可查看模型對測試資料的表現。
+評估係指檢查模型預測標籤值之良好程度的程序。 對模型來說，能夠針對其定型時未使用的資料做出良好的預測是相當重要的。 若要達到此目的，其中一個做法是將資料分割成訓練和測試資料集，就像在本教學課程中所做的一樣。 既然您已依據訓練資料來訓練模型，現在即可查看模型對測試資料的表現。
 
 返回 `Main` 方法，然後在 `Train` 方法的呼叫底下，新增下列程式碼：
 
@@ -260,7 +263,7 @@ private static void Evaluate(PredictionModel<TaxiTrip, TaxiTripFarePrediction> m
 
 ## <a name="use-the-model-for-predictions"></a>使用模型來進行預測
 
-接著，建立一個類別來裝載可用來確定模型是否正確運作的測試案例：
+建立類型以容納測試資料執行個體：
 
 1. 在 [方案總管] 中，於專案上按一下滑鼠右鍵，然後選取 [新增] > [新增項目]。
 1. 在 [新增項目] 對話方塊中，選取 [類別]，然後將 [名稱] 欄位變更為 *TestTrips.cs*。 接著，選取 [新增] 按鈕。
@@ -280,7 +283,7 @@ private static void Evaluate(PredictionModel<TaxiTrip, TaxiTripFarePrediction> m
 
 執行程式以查看您測試案例的預測計程車車資。
 
-恭喜您！ 您現在已成功建置可預測計程車車資的機器學習模型、評估了它的準確率，並且也使用它進行了預測。 您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TaxiFarePrediction) 存放庫中找到本教學課程的原始程式碼。
+恭喜您！ 您現在已成功建置可預測計程車車資的機器學習模型、評估了它的準確率，並且也使用它進行了預測。 您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TaxiFarePrediction) GitHub 存放庫中找到本教學課程的原始程式碼。
 
 ## <a name="next-steps"></a>後續步驟
 

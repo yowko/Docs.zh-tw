@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 測試 ASP.NE
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: f7bd75ecdd85e49524ccdf67f3e59aa4be46bdce
-ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
+ms.openlocfilehash: 63576445a44df0c0bdbd22b263754bb3d2919963
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792409"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195617"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>測試 ASP.NET Core 服務和 Web 應用程式
 
@@ -31,9 +31,9 @@ ms.locfileid: "37792409"
 
 當您對控制器動作進行單元測試時，請務必只著重於其行為。 控制器單元測試會避開篩選、路由或模型繫結等作業。 由於測試的焦點只有一個，因此單元測試通常很容易撰寫，而且執行速度很快。 一組編寫完善的單元測試可以經常執行，而不會造成太多額外負荷。
 
-單元測試是根據測試架構而實作，例如 xUnit.net、MSTest、Moq 或使用 NUnit。 針對 eShopOnContainers 範例應用程式，我們使用 XUnit。
+單元測試是根據測試架構而實作，例如 xUnit.net、MSTest、Moq 或使用 NUnit。 針對 eShopOnContainers 範例應用程式，我們使用 xUnit。
 
-當您為 Web API 控制器撰寫單元測試時，您會直接使用 C\# 中的新關鍵字具現化控制器類別，以便盡快執行測試。 下列範例示範在使用 [XUnit](https://xunit.github.io/) 作為測試架構時如何執行這項操作。
+當您為 Web API 控制器撰寫單元測試時，您會直接使用 C\# 中的新關鍵字具現化控制器類別，以便盡快執行測試。 下列範例示範在使用 [xUnit](https://xunit.github.io/) 作為測試架構時如何執行這項操作。
 
 ```csharp
 [Fact]

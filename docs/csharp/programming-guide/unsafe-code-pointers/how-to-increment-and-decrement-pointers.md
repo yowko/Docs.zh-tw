@@ -5,12 +5,12 @@ helpviewer_keywords:
 - pointers [C#], increment and decrement
 - pointer expressions [C#], increment and decrement
 ms.assetid: 1b8b9281-44ee-485a-9045-3db38a4b4b89
-ms.openlocfilehash: e1c3ac12a126450781d0ce78e788f39c740b5279
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 39cefc5dcebf1331a5e0ac0fadb8284e9041eb27
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324281"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44206467"
 ---
 # <a name="how-to-increment-and-decrement-pointers-c-programming-guide"></a>如何：遞增和遞減指標 (C# 程式設計手冊)
 使用遞增和遞減運算子 (`++` 和 `--`)，依指標類型的類型指標的 [sizeof](../../../csharp/language-reference/keywords/sizeof.md) (`pointer-type`) 變更指標位置*。 遞增和遞減運算式的格式如下：  
@@ -37,18 +37,20 @@ p--;
   
  [!code-csharp[csProgGuidePointers#13](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-increment-and-decrement-pointers_2.cs)]  
   
- **Value:0 @ Address:12860272**  
-**Value:1 @ Address:12860276**  
-**Value:2 @ Address:12860280**  
-**Value:3 @ Address:12860284**  
-**Value:4 @ Address:12860288**   
-## <a name="see-also"></a>請參閱  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [指標運算式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
- [C# 運算子](../../../csharp/language-reference/operators/index.md)  
- [指標操作](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)  
- [指標型別](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
- [型別](../../../csharp/language-reference/keywords/types.md)  
- [Unsafe.DangerousAPI](../../../csharp/language-reference/keywords/unsafe.md)  
- [fixed 陳述式](../../../csharp/language-reference/keywords/fixed-statement.md)  
- [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)
+**值：0 @ 位址：12860272**
+**值：1 @ 位址：12860276**
+**值：2 @ 位址：12860280**
+**值：3 @ 位址：12860284**
+**值：4 @ 位址：12860288**
+
+## <a name="see-also"></a>請參閱
+
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+- [指標運算式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
+- [C# 運算子](../../../csharp/language-reference/operators/index.md)  
+- [指標操作](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)  
+- [指標型別](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
+- [型別](../../../csharp/language-reference/keywords/types.md)  
+- [Unsafe.DangerousAPI](../../../csharp/language-reference/keywords/unsafe.md)  
+- [fixed 陳述式](../../../csharp/language-reference/keywords/fixed-statement.md)  
+- [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 76a53d6adcf4c55faa57c25f851e46dd4c2c6c22
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 131cdf62917ab2fc8d564b85c30d13c8971e5809
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43393207"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44213711"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference (C# 編譯器選項)
 **-reference** 選項可讓編譯器將指定檔案的 [public](../../../csharp/language-reference/keywords/public.md) 類型資訊匯入至目前的專案，以讓您透過指定的組件檔案來參考中繼資料。  
@@ -66,11 +66,13 @@ ms.locfileid: "43393207"
 ## <a name="example"></a>範例  
  這個範例會示範如何使用[外部別名](../../../csharp/language-reference/keywords/extern-alias.md)功能。  
   
- 您可以編譯原始程式檔，並從之前已編譯過的 `grid.dll` 和 `grid20.dll` 匯入中繼資料。 這兩個 DLL 包含相同元件的不同版本，因此您需要搭配使用兩個 **-reference** 與別名選項，來編譯原始程式檔。 選項應該看起來像這樣︰  
+ 您可以編譯原始檔，並從先前編譯過的 `grid.dll` 和 `grid20.dll` 匯入中繼資料。 這兩個 DLL 包含相同元件的不同版本，因此您需要搭配使用兩個 **-reference** 與別名選項，來編譯原始程式檔。 選項應該看起來像這樣︰  
+
+```console
+-reference:GridV1=grid.dll -reference:GridV2=grid20.dll  
+```
   
- -reference:GridV1=grid.dll 和 -reference:GridV2=grid20.dll  
-  
- 這會設定 "GridV1" 和 "GridV2" 外部別名，您可透過 extern 陳述式以在程式中使用這些別名：  
+ 這會設定 `GridV1` 和 `GridV2` 外部別名，您可透過 `extern` 陳述式以在程式中使用這些別名：  
   
 ```csharp  
 extern alias GridV1;  
@@ -78,13 +80,13 @@ extern alias GridV2;
 // Using statements go here.  
 ```  
   
- 完成之後，您可以在 GridV1 前面加上控制項名稱，以參照 grid.dll 的方格控制項，如下所示：  
+ 完成之後，您可以在 `GridV1` 前面加上控制項名稱，以參照 `grid.dll` 的方格控制項，如下所示：  
   
 ```csharp  
 GridV1::Grid  
 ```  
   
- 此外，您可以在 GridV2 前面加上控制項名稱，以參照 grid20.dll 的方格控制項，如下所示：  
+ 此外，您可以在 `GridV2` 前面加上控制項名稱，以參照 `grid20.dll` 的方格控制項，如下所示：  
   
 ```csharp  
 GridV2::Grid   

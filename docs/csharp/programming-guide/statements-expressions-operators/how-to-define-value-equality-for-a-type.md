@@ -8,25 +8,25 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: c0105371bd39c3999aafca867a7bb7a59fd367c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 365aa5a71eb3d07a79920f565a66fcac67de0b42
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339601"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042617"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>如何：定義類型的實值相等 (C# 程式設計手冊)
 當您定義類別或結構時，需判斷是否有必要為類型建立實值相等 (或等價) 的自訂定義。 通常，當該類型的物件必須新增至某種集合，或物件的主要目的是為了儲存一組欄位或屬性時，就會實作實值相等。 您可以根據對該類型中所有欄位和屬性的比較來定義實值相等，也可以根據子集來進行定義。 不論使用哪種方法，在類別和結構中，您的實作都必須遵循下列五項等價保證：  
   
-1.  x.`Equals`(x) 會傳回 `true.`這稱為自反屬性。  
+1.  `x.Equals(x)` 會傳回 `true`。 這稱為自反屬性。  
   
-2.  x.`Equals`(y) 會傳回與 y.`Equals`(x) 相同的值。 這稱為對稱屬性。  
+2.  `x.Equals(y)` 會傳回與 `y.Equals(x)` 相同的值。 這稱為對稱屬性。  
   
-3.  如果 (x.`Equals`(y) && y.`Equals`(z)) 傳回 `true`，則 x.`Equals`(z) 會傳回 `true`。 這稱為可轉移屬性。  
+3.  如果 `(x.Equals(y) && y.Equals(z))` 傳回 `true`，則 `x.Equals(z)` 會傳回 `true`。 這稱為可轉移屬性。  
   
-4.  只要 x 和 y 所參考的物件沒有經過修改，後續叫用 x.`Equals`(y) 就會傳回相同的值。  
+4.  只要 x 和 y 所參考的物件沒有經過修改，後續叫用 `x.Equals(y)` 就會傳回相同的值。  
   
-5.  x.`Equals`(null) 會傳回 `false`。 不過，null.Equals(null) 會擲回例外狀況，而不會遵守上述第二項規則。  
+5.  `x.Equals(null)` 會傳回 `false`。 不過，`null.Equals(null)` 會擲回例外狀況，而不會遵守上述第二項規則。  
   
  任何您已定義的結構，皆有繼承自 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 方法的 <xref:System.ValueType?displayProperty=nameWithType> 覆寫的預設實作實值相等。 此實作使用反映來檢查類型中的所有欄位和屬性。 雖然此實作會產生正確的結果，但相較於您針對該類型特別撰寫的自訂實作卻慢得多。  
   
@@ -62,6 +62,7 @@ ms.locfileid: "33339601"
   
  除非結構明確多載 [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) 和 [!=](../../../csharp/language-reference/operators/not-equal-operator.md) 運算子，否則這些運算子無法用於結構。  
   
-## <a name="see-also"></a>請參閱  
- [相等比較](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>請參閱
+
+- [相等比較](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)  
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)

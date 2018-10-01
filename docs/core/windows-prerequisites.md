@@ -4,12 +4,12 @@ description: 了解在 Windows 電腦上開發及執行 .NET Core 應用程式�
 author: mairaw
 ms.author: mairaw
 ms.date: 08/31/2018
-ms.openlocfilehash: bbf54c8d215783656830f0fa035708be82a7c39c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 477d303b50495070ba3a3540188deb274dd9f510
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482606"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44179490"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows 上 .NET Core 的必要條件
 
@@ -30,6 +30,8 @@ ms.locfileid: "43482606"
 * Windows Server 2012 SP1 (完整伺服器或 Server Core)
 * Windows Server 2012 R2 (完整伺服器或 Server Core)
 * Windows Server 2016 或更新版本 (完整伺服器、Server Core 或 Nano Server)
+
+## <a name="net-core-supported-operating-systems"></a>.NET core 支援的作業系統
 
 以下文件有 .NET Core 所支援每個版本作業系統的完整清單：
 
@@ -133,5 +135,5 @@ ms.locfileid: "43482606"
 > * 在 [關於 Microsoft Visual Studio] 對話方塊中，確認版本號碼。
 >   * 若為 .NET Core 2.2 Preview 1 應用程式，需要 Visual Studio 2017 15.9 版 (目前處於預覽版) 或更新版本。
 >   * 若為 .NET Core 2.1 應用程式，需要 Visual Studio 2017 15.7 版或更新版本。
->   * 若為 .NET Core 2.0 應用程式，需要 Visual Studio 2017 版本 15.3 或更新版本。
->   * 若為 .NET Core 1.x 應用程式，需要 Visual Studio 2017 版本 15.0 或更新版本。
+>   * 若為 .NET Core 2.0 應用程式，需要 Visual Studio 2017 版本 15.3 或更高版本。
+>   * 若為 .NET Core 1.x 應用程式，需要 Visual Studio 2017 版本 15.0 或更高版本。

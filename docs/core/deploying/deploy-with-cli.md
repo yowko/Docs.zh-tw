@@ -3,13 +3,16 @@ title: 使用 CLI 工具部署.NET Core 應用程式
 description: 了解使用命令列介面 (CLI) 工具的 .NET Core 應用程式部署
 author: rpetrusha
 ms.author: ronpet
-ms.date: 04/18/2017
-ms.openlocfilehash: dbef9d91aa4e7af8e6e0ed2d8f361238385d4976
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.date: 09/05/2018
+dev_langs:
+- csharp
+- vb
+ms.openlocfilehash: a7e810372d831699eae777186385e45fe65cdf45
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855018"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44272887"
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>使用命令列介面 (CLI) 工具部署 .NET Core 應用程式
 
@@ -34,13 +37,14 @@ ms.locfileid: "43855018"
 
 1. 建立專案。
 
-   從命令列鍵入 [dotnet new console](../tools/dotnet-new.md)，以在該目錄中建立新的 C# 主控台專案。
+   從命令列鍵入 [dotnet new 主控台](../tools/dotnet-new.md)，以建立新的 C# 主控台專案，或鍵入 [dotnet new 主控台 -lang vb](../tools/dotnet-new.md)，以在該目錄中建立新的 Visual Basic 主控台專案。
 
 1. 新增應用程式的原始程式碼。
 
-   在您的編輯器中開啟 *Program.cs* 檔案，並以下列程式碼取代自動產生的程式碼。 它會提示使用者輸入文字，並顯示使用者輸入的個別文字。 它會使用規則運算式 `\w+` 分隔輸入文字中的字詞。
+   在編輯器中開啟 *Program.cs* 或 *Program.vb* 檔案，並用下列程式碼取代自動產生的程式碼。 它會提示使用者輸入文字，並顯示使用者輸入的個別文字。 它會使用規則運算式 `\w+` 分隔輸入文字中的字詞。
 
-   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
+   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
 
 1. 更新專案的相依性和工具。
 
@@ -55,7 +59,7 @@ ms.locfileid: "43855018"
    在您偵錯並測試程式之後，請使用下列命令來建立部署：
 
       ```console
-      dotnet publish -f netcoreapp1.1 -c Release
+      dotnet publish -f netcoreapp2.1 -c Release
       ```
    這會建立應用程式的發行 (而非偵錯) 版本。 產生的檔案會放在名為 *publish* 的目錄中，而該目錄位於您專案之 *bin* 目錄的子目錄中。
 
@@ -101,8 +105,8 @@ ms.locfileid: "43855018"
 
    在您的編輯器中開啟 *Program.cs* 檔案，並以下列程式碼取代自動產生的程式碼。 它會提示使用者輸入文字，並顯示使用者輸入的個別文字。 它會使用規則運算式 `\w+` 分隔輸入文字中的字詞。
 
-   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
-
+   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
+   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
 1. 定義您應用程式目標的平台。
 
    在定義應用程式目標平台之 *csproj* 檔案的 `<PropertyGroup>` 區段中建立 `<RuntimeIdentifiers>` 標記，並指定每個目標平台的執行階段識別碼 (RID)。 請注意，您也必須加上分號來分隔 RID。 如需執行階段識別碼清單，請參閱 [Runtime IDentifier catalog](../rid-catalog.md)。
@@ -121,6 +125,14 @@ ms.locfileid: "43855018"
 
    執行 [dotnet restore](../tools/dotnet-restore.md) ([請參閱注意事項](#dotnet-restore-note)) 命令以還原專案中指定的相依性。
 
+1. 決定您是否想使用全域無差異模式。
+
+   尤其當您的應用程式以 Linux 為目標時，使用全域無差異模式[能減少您部署的總大小](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)。 全域無差異模式適用於非全域應用程式，其能使用格式化慣例、大小寫慣例及字串比較，還有不因文化特性而異的[排列次序](xref:System.Globalization.CultureInfo.InvariantCulture)。
+
+   在您的專案 (而非解決方案) 點擊右鍵，進入 [方案總管]，然後選取 [Edit SCD.csproj] \(編輯 SCD.csproj\) 或 [Edit SCD.vbproj] \(編輯 SCD.vbproj\) 啟用非變異模式。 接著，將下列反白的幾行新增至檔案：
+
+ [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj)]
+
 1. 建立應用程式的偵錯組建。
 
    從命令列中，使用 [dotnet build](../tools/dotnet-build.md) 命令。
@@ -134,7 +146,7 @@ ms.locfileid: "43855018"
       dotnet publish -c Release -r osx.10.11-x64
       ```
 
-   這會建立每個目標平台的應用程式發行 (而非偵錯) 版本。 產生的檔案會放在名為 *publish* 的子目錄中，而該目錄位於您專案之 *.\bin\Release\netcoreapp1.1\<執行階段識別碼>* 子目錄的子目錄中。 請注意，每個子目錄都包含啟動應用程式所需的一組完整檔案 (應用程式檔案和所有的 .NET Core 檔案)。
+   這會建立每個目標平台的應用程式發行 (而非偵錯) 版本。 產生的檔案會放在名為 *publish* 的子目錄中，其位於您專案 *.\bin\Release\netcoreapp2.1\<runtime_identifier>* 子目錄的子目錄。 請注意，每個子目錄都包含啟動應用程式所需的一組完整檔案 (應用程式檔案和所有的 .NET Core 檔案)。
 
 隨著應用程式檔案一起，發佈程序會發出程式資料庫 (.pdb) 檔案，其中包含應用程式的偵錯資訊。 該檔案主要是用於例外狀況偵錯。 您可以選擇不與您的應用程式檔案一起封裝它。 不過，如果您要對應用程式的發行組建進行偵錯，則應該將其儲存。
 
@@ -146,7 +158,7 @@ ms.locfileid: "43855018"
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
 </Project>
@@ -172,7 +184,7 @@ ms.locfileid: "43855018"
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
   <ItemGroup>

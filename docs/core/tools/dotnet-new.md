@@ -3,13 +3,13 @@ title: dotnet new 命令 - .NET Core CLI
 description: dotnet new 命令會根據指定的範本建立新的 .NET Core 專案。
 author: mairaw
 ms.author: mairaw
-ms.date: 06/12/2018
-ms.openlocfilehash: f0ef91361dfbc2c2ba5532fbd607786289e98c69
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.date: 07/31/2018
+ms.openlocfilehash: 2c82dda2d93225edb360316637e22964135cd5e4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207765"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512551"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -22,25 +22,31 @@ ms.locfileid: "36207765"
 ## <a name="synopsis"></a>概要
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
-```
+
+```console
 dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [--nuget-source] [-o|--output]
     [-u|--uninstall] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
 ```
+
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
-```
+
+```console
 dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [-o|--output] [-u|--uninstall] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
 ```
+
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-```
+
+```console
 dotnet new <TEMPLATE> [-lang|--language] [-n|--name] [-o|--output] [-all|--show-all] [-h|--help] [Template options]
 dotnet new <TEMPLATE> [-l|--list]
 dotnet new [-all|--show-all]
 dotnet new [-h|--help]
 ```
+
 ---
 
 ## <a name="description"></a>描述
@@ -284,9 +290,11 @@ dotnet new [-h|--help]
 
 **web**
 
-`--use-launch-settings` - 在產生的範本輸出中包含 *launchSettings.json*。
+`--exclude-launch-settings` - 從產生的範本中排除 *launchSettings.json*。
 
 `--no-restore` - 專案建立期間不執行隱含還原。
+
+`--no-https` - 專案不需要 HTTPS。 此選項僅適用於未使用 `IndividualAuth` 或 `OrganizationalAuth` 時。
 
 **webapi**
 
@@ -311,11 +319,13 @@ dotnet new [-h|--help]
 
 `-r|--org-read-access` - 允許此應用程式對目錄的讀取權限。 僅適用於 `SingleOrg` 或 `MultiOrg` 驗證。
 
-`--use-launch-settings` - 在產生的範本輸出中包含 *launchSettings.json*。
+`--exclude-launch-settings` - 從產生的範本中排除 *launchSettings.json*。
 
 `-uld|--use-local-db` - 指定應該使用 LocalDB，不使用 SQLite。 僅適用於 `Individual` 或 `IndividualB2C` 驗證。
 
 `--no-restore` - 專案建立期間不執行隱含還原。
+
+`--no-https` - 專案不需要 HTTPS。 `app.UseHsts` 和 `app.UseHttpsRedirection` 並未新增至 `Startup.Configure`。 此選項僅適用於未使用 `Individual`、`IndividualB2C`、`SingleOrg` 或 `MultiOrg` 時。
 
 **mvc, razor**
 
@@ -348,13 +358,15 @@ dotnet new [-h|--help]
 
 `-r|--org-read-access` - 允許此應用程式對目錄的讀取權限。 僅適用於 `SingleOrg` 或 `MultiOrg` 驗證。
 
-`--use-launch-settings` - 在產生的範本輸出中包含 *launchSettings.json*。
+`--exclude-launch-settings` - 從產生的範本中排除 *launchSettings.json*。
 
 `--use-browserlink` - 專案中包含 BrowserLink。
 
 `-uld|--use-local-db` - 指定應該使用 LocalDB，不使用 SQLite。 僅適用於 `Individual` 或 `IndividualB2C` 驗證。
 
 `--no-restore` - 專案建立期間不執行隱含還原。
+
+`--no-https` - 專案不需要 HTTPS。 `app.UseHsts` 和 `app.UseHttpsRedirection` 並未新增至 `Startup.Configure`。 此選項僅適用於未使用 `Individual`、`IndividualB2C`、`SingleOrg` 或 `MultiOrg` 時。
 
 **PAGE**
 
@@ -524,7 +536,7 @@ dotnet new [-h|--help]
 
 ## <a name="see-also"></a>另請參閱
 
-[dotnet new 的自訂範本](custom-templates.md)  
-[建立適用於 dotnet new 的自訂範本](~/docs/core/tutorials/create-custom-template.md)  
-[dotnet/dotnet-template-samples GitHub repo](https://github.com/dotnet/dotnet-template-samples) (dotnet/dotnet-template-samples GitHub 存放庫)  
-[dotnet new 的可用範本](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)
+* [dotnet new 的自訂範本](custom-templates.md)  
+* [建立適用於 dotnet new 的自訂範本](~/docs/core/tutorials/create-custom-template.md)  
+* [dotnet/dotnet-template-samples GitHub repo](https://github.com/dotnet/dotnet-template-samples) (dotnet/dotnet-template-samples GitHub 存放庫)  
+* [dotnet new 的可用範本](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)
