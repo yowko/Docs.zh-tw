@@ -7,12 +7,13 @@ ms.date: 09/03/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 62cfef08a8319981891c713c08c34eba5ab54b6f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.custom: vs-dotnet
+ms.openlocfilehash: 7a9410ca99f621ee6d0e8b263354ebc536f71a4a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227736"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47204293"
 ---
 # <a name="deploying-net-core-apps-with-visual-studio"></a>使用 Visual Studio 部署 .NET Core 應用程式
 
@@ -74,7 +75,7 @@ ms.locfileid: "44227736"
 
 1. 確認 `Newtonsoft.Json` 已安裝在您的系統上，如果尚未安裝，請安裝它。 [已安裝] 索引標籤會列出您系統上已安裝的 NuGet 套件。 如果 `Newtonsoft.Json` 未列於該處，請選取 [瀏覽] 索引標籤，然後在 [搜尋] 方塊中輸入 "Newtonsoft.Json"。 選取 `Newtonsoft.Json`，並先在右窗格中選取您的專案，然後選取 [安裝]。
 
-1. 如果 `Newtonsoft.Json` 已安裝在您的系統上，請在 [管理方案的套件] 索引標籤的右窗格中選取您的專案，以將它新增至您的專案中。
+1. 如果 `Newtonsoft.Json` 已安裝在您的系統上，請在 [管理方案的封裝] 索引標籤的右窗格中選取您的專案，以將它新增至您的專案。
 
 請注意，具有協力廠商相依性的 Framework 相依部署，可攜性只與其協力廠商相依性一致。 例如，如果協力廠商程式庫只支援 macOS，則應用程式就無法攜至 Windows 系統。 如果協力廠商相依性本身依賴於原生程式碼，就會發生這種情況。 其中一個絶佳範例是 [Kestrel 伺服器](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel)，它需要對 [libuv](https://github.com/libuv/libuv) 的原生相依性。 當具有這類協力廠商相依性的應用程式建立了 FDD 時，已發行輸出就會包含原生相依性支援的每個[執行階段識別碼 (RID)](../rid-catalog.md) 資料夾 (存在於其 NuGet 套件中)。
 
@@ -93,9 +94,9 @@ ms.locfileid: "44227736"
    [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
    [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
 
-1. 決定您是否想使用全球不區分模式。
+1. 決定您是否想使用全域無差異模式。
 
-   尤其當您的應用程式以 Linux 為目標時，使用[全球不區分模式](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)能減少您部署的總範圍。 全球不區分模式適用於非全球性的應用程式，能使用格式化慣例、大小寫常規及字串比較，還有[不因文化特性而變](xref:System.Globalization.CultureInfo.InvariantCulture)的排列順序。
+   尤其當您的應用程式以 Linux 為目標時，使用全域無差異模式[能減少您部署的總大小](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)。 全域無差異模式適用於非全域應用程式，其能使用格式化慣例、大小寫慣例及字串比較，還有不因文化特性而異的[排列次序](xref:System.Globalization.CultureInfo.InvariantCulture)。
 
    在您的專案 (而非解決方案) 點擊右鍵，進入 [方案總管]，然後選取 [Edit SCD.csproj] \(編輯 SCD.csproj\) 或 [Edit SCD.vbproj] \(編輯 SCD.vbproj\) 啟用非變異模式。 接著，將反白處新增至檔案中：
 

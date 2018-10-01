@@ -7,11 +7,11 @@ helpviewer_keywords:
 - type parameters [C#], constraints
 - unbound type parameter [C#]
 ms.openlocfilehash: df5a509296f3fb9e8e77a273a0636c74a6f86da3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208656"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47232712"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>型別參數的條件約束 (C# 程式設計手冊)
 
@@ -69,7 +69,7 @@ ms.locfileid: "44208656"
 
 在上述範例中，`T` 是 `Add` 方法內容中的類型條件約束，以及 `List` 類別內容中的未繫結型別參數。
 
-型別參數也可以在泛型類別定義中用作條件約束。 型別參數必須與其他型別參數一起宣告於角括弧內：
+型別參數也可以在泛型類別定義中用作條件約束。 型別參數必須與任何其他型別參數一起宣告於角括弧內：
 
 [!code-csharp[using the class and struct constraints](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#14)]
 

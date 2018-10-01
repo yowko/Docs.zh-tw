@@ -2,12 +2,12 @@
 title: 計算運算式 (F#)
 description: '了解如何建立方便的語法，撰寫 F #，可以進行排序和合併使用控制流程建構和繫結中的計算。'
 ms.date: 07/27/2018
-ms.openlocfilehash: ce81af7966a436b3973de277fb2a78ec06f4c471
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 148d1a661fb7630782c6dc48507a66e7bdc1d56b
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45685734"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47459798"
 ---
 # <a name="computation-expressions"></a>計算運算式
 
@@ -88,7 +88,7 @@ let doThingsAsync url =
 ```fsharp
 let doThingsAsync data url =
     async {
-        do! sumbitData data url
+        do! submitData data url
         ...
     }
 ```

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - '% operator [C#]'
 ms.assetid: 3b74f4f9-fd9c-45e7-84fa-c8d71a0dfad7
 ms.openlocfilehash: 9cd2f7ad3856feb34667686979c942ecb21887c2
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44266692"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45645914"
 ---
 # <a name="-operator-c-reference"></a>% 運算子 (C# 參考)
 

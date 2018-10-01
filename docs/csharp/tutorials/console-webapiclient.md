@@ -4,11 +4,11 @@ description: 本教學課程會教導您一些 .NET Core 和 C# 語言中的功�
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
 ms.openlocfilehash: 13466b717d0676c2db5edf4c98a4ead3e673b96c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227255"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397916"
 ---
 # <a name="rest-client"></a>REST 用戶端
 

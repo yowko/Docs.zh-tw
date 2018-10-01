@@ -4,12 +4,12 @@ description: 了解 .NET Core 2.1 所提供的新功能。
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/06/2018
-ms.openlocfilehash: 850df87666c5beb0594f0672d8f558c11653f973
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: aa80e6b7214f91c49803adde49a1e03d1971b3f6
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44209572"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47400063"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 的新功能
 
@@ -66,7 +66,7 @@ ms.locfileid: "44209572"
 
 .NET Core 2.1 支援*通用工具*，亦即從命令列以通用方式提供的自訂工具。 舊版 .NET Core 的擴充性模型，只能透過使用 [`DotnetCliToolReference`](../tools/extensibility.md#consuming-per-project-tools) 來使自訂工具可供每個專案使用。
 
-若要安裝通用工具，您需使用 [dotnet tool install](..\tools\dotnet-tool-install.md) 命令。 例如: 
+若要安裝通用工具，您需使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令。 例如: 
 
 ```console
 dotnet tool install -g dotnetsay

@@ -5,11 +5,11 @@ author: mairaw
 ms.author: mairaw
 ms.date: 06/04/2018
 ms.openlocfilehash: 53e8f8bab1cbaabaa7926aa68197c18843b0b637
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44079812"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45615569"
 ---
 # <a name="dotnet-command"></a>dotnet 命令
 
