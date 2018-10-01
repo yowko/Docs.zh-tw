@@ -5,15 +5,12 @@ author: jralexander
 ms.author: johalex
 ms.date: 05/31/2018
 ms.topic: conceptual
-ms.prod: dotnet-ml
-ms.devlang: dotnet
-manager: wpickett
-ms.openlocfilehash: b7690eb6931f4a491b1a03812fe3f2d8a64cfcd4
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 6b175a8e89479dae81a7e5769e8d10c09a193898
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207720"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47081094"
 ---
 # <a name="machine-learning-glossary"></a>機器學習字彙
 
