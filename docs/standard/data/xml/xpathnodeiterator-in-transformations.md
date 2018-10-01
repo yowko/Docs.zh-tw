@@ -9,16 +9,16 @@ ms.assetid: 2bc6ddc6-674a-4f75-b264-abc35e4e5857
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6f71d409729707f4af93fd7f8d5b82a99404579b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45687593"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47232751"
 ---
-# <a name="xpathnodeiterator-in-transformations"></a><span data-ttu-id="1b151-102">轉換中的 XPathNodeIterator</span><span class="sxs-lookup"><span data-stu-id="1b151-102">XPathNodeIterator in Transformations</span></span>
-<span data-ttu-id="1b151-103"><xref:System.Xml.XPath.XPathNodeIterator> 所提供的方法可讓您重複處理建立為 XML 路徑語言 (XPath) 查詢結果的節點集，或是利用節點集方法轉換成節點集的 Result Tree Fragment。</span><span class="sxs-lookup"><span data-stu-id="1b151-103">The <xref:System.Xml.XPath.XPathNodeIterator> provides methods to iterate over a set of nodes created as the result of an XML Path Language (XPath) query or a result tree fragment converted to a node set by use of the node-set method.</span></span> <span data-ttu-id="1b151-104"><xref:System.Xml.XPath.XPathNodeIterator> 可讓您重複處理該節點集內的節點。</span><span class="sxs-lookup"><span data-stu-id="1b151-104">The <xref:System.Xml.XPath.XPathNodeIterator> enables you to iterate over the nodes within that node set.</span></span> <span data-ttu-id="1b151-105">擷取節點集之後，<xref:System.Xml.XPath.XPathNodeIterator> 類別即會提供唯讀且順向的資料指標給選取的節點集。</span><span class="sxs-lookup"><span data-stu-id="1b151-105">Once a node set is retrieved, the <xref:System.Xml.XPath.XPathNodeIterator> class provides a read-only, forward-only cursor to the selected set of nodes.</span></span> <span data-ttu-id="1b151-106">節點集以文件順序建立，因此呼叫這個方法將移至文件順序中的下一個節點。</span><span class="sxs-lookup"><span data-stu-id="1b151-106">The node set is created in document order, so calling this method moves to the next node in document order.</span></span> <span data-ttu-id="1b151-107"><xref:System.Xml.XPath.XPathNodeIterator> 不會在節點集內建置所有節點的節點樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="1b151-107"><xref:System.Xml.XPath.XPathNodeIterator> does not build a node tree of all the nodes in the set.</span></span> <span data-ttu-id="1b151-108">而是將單一節點視窗提供到資料內，讓您在樹狀結構中移動時，公開它所指到的基礎節點。</span><span class="sxs-lookup"><span data-stu-id="1b151-108">Instead, it provides a single node window into the data, exposing the underlying node it points to as you move around in the tree.</span></span> <span data-ttu-id="1b151-109">因使用 <xref:System.Xml.XPath.XPathNodeIterator> 類別而成為可用的方法與屬性，可讓您取得目前節點的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="1b151-109">The methods and properties available from the <xref:System.Xml.XPath.XPathNodeIterator> class enable you to get information from the current node.</span></span> <span data-ttu-id="1b151-110">如需可用方法和屬性的清單，請參閱 <xref:System.Windows.Forms.ToolBar>。</span><span class="sxs-lookup"><span data-stu-id="1b151-110">For a list of the available methods and properties, see <xref:System.Windows.Forms.ToolBar>.</span></span>  
+# <a name="xpathnodeiterator-in-transformations"></a><span data-ttu-id="4918b-102">轉換中的 XPathNodeIterator</span><span class="sxs-lookup"><span data-stu-id="4918b-102">XPathNodeIterator in Transformations</span></span>
+<span data-ttu-id="4918b-103"><xref:System.Xml.XPath.XPathNodeIterator> 所提供的方法可讓您重複處理建立為 XML 路徑語言 (XPath) 查詢結果的節點集，或是利用節點集方法轉換成節點集的 Result Tree Fragment。</span><span class="sxs-lookup"><span data-stu-id="4918b-103">The <xref:System.Xml.XPath.XPathNodeIterator> provides methods to iterate over a set of nodes created as the result of an XML Path Language (XPath) query or a result tree fragment converted to a node set by use of the node-set method.</span></span> <span data-ttu-id="4918b-104"><xref:System.Xml.XPath.XPathNodeIterator> 可讓您重複處理該節點集內的節點。</span><span class="sxs-lookup"><span data-stu-id="4918b-104">The <xref:System.Xml.XPath.XPathNodeIterator> enables you to iterate over the nodes within that node set.</span></span> <span data-ttu-id="4918b-105">擷取節點集之後，<xref:System.Xml.XPath.XPathNodeIterator> 類別即會提供唯讀且順向的資料指標給選取的節點集。</span><span class="sxs-lookup"><span data-stu-id="4918b-105">Once a node set is retrieved, the <xref:System.Xml.XPath.XPathNodeIterator> class provides a read-only, forward-only cursor to the selected set of nodes.</span></span> <span data-ttu-id="4918b-106">節點集以文件順序建立，因此呼叫這個方法將移至文件順序中的下一個節點。</span><span class="sxs-lookup"><span data-stu-id="4918b-106">The node set is created in document order, so calling this method moves to the next node in document order.</span></span> <span data-ttu-id="4918b-107"><xref:System.Xml.XPath.XPathNodeIterator> 不會在節點集內建置所有節點的節點樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="4918b-107"><xref:System.Xml.XPath.XPathNodeIterator> does not build a node tree of all the nodes in the set.</span></span> <span data-ttu-id="4918b-108">而是將單一節點視窗提供到資料內，讓您在樹狀結構中移動時，公開它所指到的基礎節點。</span><span class="sxs-lookup"><span data-stu-id="4918b-108">Instead, it provides a single node window into the data, exposing the underlying node it points to as you move around in the tree.</span></span> <span data-ttu-id="4918b-109">因使用 <xref:System.Xml.XPath.XPathNodeIterator> 類別而成為可用的方法與屬性，可讓您取得目前節點的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="4918b-109">The methods and properties available from the <xref:System.Xml.XPath.XPathNodeIterator> class enable you to get information from the current node.</span></span> <span data-ttu-id="4918b-110">如需可用方法和屬性的清單，請參閱 <xref:System.Windows.Forms.ToolBar>。</span><span class="sxs-lookup"><span data-stu-id="4918b-110">For a list of the available methods and properties, see <xref:System.Windows.Forms.ToolBar>.</span></span>  
   
- <span data-ttu-id="1b151-111"><xref:System.Xml.XPath.XPathNodeIterator> 會在 XPath 查詢所建立的節點集上移動，且只能順向移動，因此必須使用 <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> 方法來移動。</span><span class="sxs-lookup"><span data-stu-id="1b151-111">Since an <xref:System.Xml.XPath.XPathNodeIterator> moves over a set of nodes created from an XPath query and moves forward only, the way to move is by using the <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> method.</span></span> <span data-ttu-id="1b151-112">這種方法傳回的型別是 `Boolean`，若它移到下一個選取的節點則傳回 `true`，若沒有其他選取的節點則傳回 `false`。</span><span class="sxs-lookup"><span data-stu-id="1b151-112">The return type of this method is `Boolean`, returning `true` if it moves to the next selected node, and `false` if there are no more selected nodes.</span></span> <span data-ttu-id="1b151-113">如果它傳回 `true`，下列清單顯示可用的屬性：</span><span class="sxs-lookup"><span data-stu-id="1b151-113">If it returns `true`, the following list shows the properties available:</span></span>  
+ <span data-ttu-id="4918b-111"><xref:System.Xml.XPath.XPathNodeIterator> 會在 XPath 查詢所建立的節點集上移動，且只能順向移動，因此必須使用 <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> 方法來移動。</span><span class="sxs-lookup"><span data-stu-id="4918b-111">Since an <xref:System.Xml.XPath.XPathNodeIterator> moves over a set of nodes created from an XPath query and moves forward only, the way to move is by using the <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> method.</span></span> <span data-ttu-id="4918b-112">這種方法傳回的型別是 `Boolean`，若它移到下一個選取的節點則傳回 `true`，若沒有其他選取的節點則傳回 `false`。</span><span class="sxs-lookup"><span data-stu-id="4918b-112">The return type of this method is `Boolean`, returning `true` if it moves to the next selected node, and `false` if there are no more selected nodes.</span></span> <span data-ttu-id="4918b-113">如果它傳回 `true`，下列清單顯示可用的屬性：</span><span class="sxs-lookup"><span data-stu-id="4918b-113">If it returns `true`, the following list shows the properties available:</span></span>  
   
 -   <xref:System.Xml.XPath.XPathNodeIterator.Current%2A>  
   
@@ -26,9 +26,9 @@ ms.locfileid: "45687593"
   
 -   <xref:System.Xml.XPath.XPathNodeIterator.Count%2A>  
   
- <span data-ttu-id="1b151-114">當您首次檢視節點集時，必須呼叫 <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A>，對所選節點集之第一個節點的 <xref:System.Xml.XPath.XPathNodeIterator> 進行定位。</span><span class="sxs-lookup"><span data-stu-id="1b151-114">When you are looking at a node set for the first time, a call to <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> must be made to position the <xref:System.Xml.XPath.XPathNodeIterator> on the first node of the selected set.</span></span> <span data-ttu-id="1b151-115">這允許寫入 while 迴圈。</span><span class="sxs-lookup"><span data-stu-id="1b151-115">This allows a while loop to be written.</span></span>  
+ <span data-ttu-id="4918b-114">當您首次檢視節點集時，必須呼叫 <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A>，對所選節點集之第一個節點的 <xref:System.Xml.XPath.XPathNodeIterator> 進行定位。</span><span class="sxs-lookup"><span data-stu-id="4918b-114">When you are looking at a node set for the first time, a call to <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> must be made to position the <xref:System.Xml.XPath.XPathNodeIterator> on the first node of the selected set.</span></span> <span data-ttu-id="4918b-115">這允許寫入 while 迴圈。</span><span class="sxs-lookup"><span data-stu-id="4918b-115">This allows a while loop to be written.</span></span>  
   
- <span data-ttu-id="1b151-116">下列程式碼範例顯示如何在 <xref:System.Xml.XPath.XPathNodeIterator> 中，將 <xref:System.Xml.Xsl.XslTransform> 作為參數，傳遞到 <xref:System.Xml.Xsl.XsltArgumentList>。</span><span class="sxs-lookup"><span data-stu-id="1b151-116">The following code example shows how to pass an <xref:System.Xml.XPath.XPathNodeIterator> to an <xref:System.Xml.Xsl.XslTransform> as a parameter in the <xref:System.Xml.Xsl.XsltArgumentList>.</span></span> <span data-ttu-id="1b151-117">程式碼的輸入為 **books.xml**，樣式表為 **text.xsl**。</span><span class="sxs-lookup"><span data-stu-id="1b151-117">The input to the code is **books.xml**, and the style sheet is **text.xsl**.</span></span> <span data-ttu-id="1b151-118">**test.xml** 檔案為 <xref:System.Xml.XPath.XPathDocument>。</span><span class="sxs-lookup"><span data-stu-id="1b151-118">The file **test.xml** is the <xref:System.Xml.XPath.XPathDocument>.</span></span>  
+ <span data-ttu-id="4918b-116">下列程式碼範例顯示如何在 <xref:System.Xml.XPath.XPathNodeIterator> 中，將 <xref:System.Xml.Xsl.XslTransform> 作為參數，傳遞到 <xref:System.Xml.Xsl.XsltArgumentList>。</span><span class="sxs-lookup"><span data-stu-id="4918b-116">The following code example shows how to pass an <xref:System.Xml.XPath.XPathNodeIterator> to an <xref:System.Xml.Xsl.XslTransform> as a parameter in the <xref:System.Xml.Xsl.XsltArgumentList>.</span></span> <span data-ttu-id="4918b-117">程式碼的輸入為 **books.xml**，樣式表為 **text.xsl**。</span><span class="sxs-lookup"><span data-stu-id="4918b-117">The input to the code is **books.xml**, and the style sheet is **text.xsl**.</span></span> <span data-ttu-id="4918b-118">**test.xml** 檔案為 <xref:System.Xml.XPath.XPathDocument>。</span><span class="sxs-lookup"><span data-stu-id="4918b-118">The file **test.xml** is the <xref:System.Xml.XPath.XPathDocument>.</span></span>  
   
 ```vb  
 Imports System  
@@ -89,7 +89,7 @@ public class sample
 }  
 ```  
   
-## <a name="booksxml"></a><span data-ttu-id="1b151-119">books.xml</span><span class="sxs-lookup"><span data-stu-id="1b151-119">books.xml</span></span>  
+## <a name="booksxml"></a><span data-ttu-id="4918b-119">books.xml</span><span class="sxs-lookup"><span data-stu-id="4918b-119">books.xml</span></span>  
   
 ```xml  
 <?xml version='1.0'?>  
@@ -122,7 +122,7 @@ public class sample
 </bookstore>  
 ```  
   
-## <a name="testxsl"></a><span data-ttu-id="1b151-120">test.xsl</span><span class="sxs-lookup"><span data-stu-id="1b151-120">test.xsl</span></span>  
+## <a name="testxsl"></a><span data-ttu-id="4918b-120">test.xsl</span><span class="sxs-lookup"><span data-stu-id="4918b-120">test.xsl</span></span>  
   
 ```xml  
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -142,13 +142,13 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 </xsl:stylesheet>  
 ```  
   
-## <a name="testxml"></a><span data-ttu-id="1b151-121">test.xml</span><span class="sxs-lookup"><span data-stu-id="1b151-121">test.xml</span></span>  
+## <a name="testxml"></a><span data-ttu-id="4918b-121">test.xml</span><span class="sxs-lookup"><span data-stu-id="4918b-121">test.xml</span></span>  
   
 ```xml  
 <Title attr="Test">this is a test</Title>  
 ```  
   
-## <a name="output-outxml"></a><span data-ttu-id="1b151-122">輸出 (out.xml)</span><span class="sxs-lookup"><span data-stu-id="1b151-122">Output (out.xml)</span></span>  
+## <a name="output-outxml"></a><span data-ttu-id="4918b-122">輸出 (out.xml)</span><span class="sxs-lookup"><span data-stu-id="4918b-122">Output (out.xml)</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -158,6 +158,6 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 </out>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1b151-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1b151-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4918b-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4918b-123">See also</span></span>
 
-- [<span data-ttu-id="1b151-124">XslTransform 類別實作 XSLT 處理器</span><span class="sxs-lookup"><span data-stu-id="1b151-124">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+- [<span data-ttu-id="4918b-124">XslTransform 類別實作 XSLT 處理器</span><span class="sxs-lookup"><span data-stu-id="4918b-124">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
