@@ -5,11 +5,11 @@ author: blackdwarf
 ms.author: mairaw
 ms.date: 03/06/2017
 ms.openlocfilehash: cbeb9ad17932f6abaf14333a71fab2b4b8fd099c
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46577252"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47086070"
 ---
 # <a name="managing-dependencies-with-net-core-sdk-10"></a>使用 .NET Core SDK 1.0 管理相依性
 

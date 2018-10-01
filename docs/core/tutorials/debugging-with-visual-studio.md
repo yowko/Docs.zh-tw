@@ -6,11 +6,11 @@ ms.author: wiwagn
 ms.date: 12/15/2017
 ms.custom: vs-dotnet
 ms.openlocfilehash: 4623f4efa8637bd30f378006a92bfc4965429182
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45696142"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47399225"
 ---
 # <a name="debug-your-hello-world-application-with-visual-studio-2017"></a>使用 Visual Studio 2017 針對您的 Hello World 應用程式進行偵錯
 

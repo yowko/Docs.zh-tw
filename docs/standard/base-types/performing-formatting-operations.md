@@ -13,11 +13,11 @@ ms.assetid: 36e7e096-4e6c-4cf2-9ab6-68073026ea0e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a1d9f62055b497aa7522d589610c12badb2361d5
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46711190"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47425767"
 ---
 # <a name="performing-formatting-operations"></a>執行格式化作業
 下列主題提供執行特定格式設定作業的逐步指示。  

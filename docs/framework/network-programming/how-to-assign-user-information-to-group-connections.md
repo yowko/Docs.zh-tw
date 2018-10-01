@@ -7,13 +7,12 @@ dev_langs:
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 51e000019999056fd707c1fbf4fa1a9b0a8e7bc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 009c23d0015f366ab5f1ee92609f0131465d827b
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395141"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47193094"
 ---
 # <a name="how-to-assign-user-information-to-group-connections"></a>如何：將使用者資訊指派給群組連接
 

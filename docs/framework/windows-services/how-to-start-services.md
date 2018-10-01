@@ -6,13 +6,12 @@ helpviewer_keywords:
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-manager: douge
-ms.openlocfilehash: 3c8382d2e425d11dc8aa8b22e361b3cc5637744f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b3f04deb11a23957198864c444b4872aef45b2e4
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516213"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47176743"
 ---
 # <a name="how-to-start-services"></a>如何：啟動服務
 安裝服務之後，必須加以啟動。 從呼叫服務類別上的 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法開始。 通常，<xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法會定義服務將執行的有用工作。 服務啟動之後，即會保持作用中，直到您以手動方式暫停或停止它為止。  

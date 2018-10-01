@@ -3,11 +3,11 @@ title: 如何：計算 CSV 文字檔案中的資料行值 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
 ms.openlocfilehash: debc6bffd2a5c23e27fe8685c237b33016745be6
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46586684"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200278"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>如何：計算 CSV 文字檔案中的資料行值 (LINQ) (C#)
 本例示範如何在 .csv 檔案的資料行上執行彙總計算，例如總和、平均、最小值和最大值。 此處顯示的範例準則可以套用至其他類型的結構化文字。  

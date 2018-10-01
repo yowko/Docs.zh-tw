@@ -11,11 +11,11 @@ ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e44fd3e6f806eef3805416dafd90a4855e79b3c7
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46525701"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47206407"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>使用 PLINQ 時可能出現的錯誤
 在許多情況下，相較於循序 LINQ to Objects 查詢，PLINQ 更能提供顯著的效能改良。 不過，平行處理查詢執行的工作所帶來的複雜性可能會造成問題，而在循序程式碼中，這些問題不是不常見，就是完全不會發生。 本主題列出一些您在撰寫 PLINQ 查詢時應該避免的作法。  

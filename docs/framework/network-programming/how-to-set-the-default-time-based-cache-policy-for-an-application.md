@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6bfce066-a2e7-4add-a05e-85c12ec9f07f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 021a13b9124cf54712643e33cbf0ca77ec828b27
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e08026f8d1ec8b39f7ef3c2c34efad9e51b8fe9
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396668"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47235698"
 ---
 # <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>如何：為應用程式設定以時間為基礎的預設快取原則
 以時間為基礎的預設快取原則，可讓應用程式擁有與快取資源一起傳送之標頭所定義的快取行為，以及 RFC 2616 的第 13 節與第 14 節中定義的快取行為 (可從 [http://www.ietf.org](http://www.ietf.org/) 取得)。這是適用於大部分應用程式的快取行為。  

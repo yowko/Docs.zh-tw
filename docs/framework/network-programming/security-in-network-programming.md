@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: afb07899-2707-49ab-a57f-e0caf20d0171
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: a684fd1a7ce8cce52e00511b114cb4905ed0a42b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e47828f14ffbaac57a43ddbf53094e220acb082
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393162"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47205089"
 ---
 # <a name="security-in-network-programming"></a>網路程式設計的安全性
 

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 36cf61982bb5a83e6031c35a19ba8ebf0b94aa6d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: afaa4389940bd16ee2685c2ed64fbec4626d96e1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393980"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47193144"
 ---
 # <a name="cache-policy"></a>快取原則
 快取原則所定義的規則用來判斷是否可以使用所要求資源的快取複本來滿足要求。 應用程式指定有效期限的用戶端快取需求，但有效的快取原則是由用戶端快取需求、伺服器內容到期需求和伺服器重新驗證需求所決定。 用戶端快取原則與伺服器需求的互動一律會導致最保守的快取原則，協助確保將最新內容傳回給用戶端應用程式。  

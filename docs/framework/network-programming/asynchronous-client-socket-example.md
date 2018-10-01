@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: d295841173ee2f3bf018a2058b4eac1629c4828f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 562129b7deea4af9b91dfc92f83a538f6f89f06a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390295"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47208298"
 ---
 # <a name="asynchronous-client-socket-example"></a>非同步用戶端通訊端範例
 下列範例程式會建立連線到伺服器的用戶端。 伺服器已內建非同步通訊端，因此在伺服器傳回回應時，不會暫停執行用戶端應用程式。 應用程式會將字串傳送到伺服器，然後在主控台上顯示伺服器所傳回的字串。  

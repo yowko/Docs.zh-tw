@@ -7,13 +7,12 @@ dev_langs:
 ms.assetid: f8848c7e-f5c5-4d42-b86d-9951ff8f4146
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 20773d2224f9c04f3b0f9d0906c9e6fc215c5619
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f008cf82b80e29f8fe741034a0e820b5eae5b0ba
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389609"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193737"
 ---
 # <a name="how-to-access-http-specific-properties"></a>如何：存取 HTTP 特定屬性
 這個範例示範如何關閉 HTTP **保持運作**行為，以及如何從 Web 伺服器取得通訊協定版本號碼。  

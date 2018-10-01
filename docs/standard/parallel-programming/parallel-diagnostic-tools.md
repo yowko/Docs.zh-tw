@@ -8,11 +8,11 @@ ms.assetid: 38f7302a-ddf6-4179-ba19-f49e00395b9f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4649f33fe07e7780630fbd11170bb54046617c14
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46586494"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47236026"
 ---
 # <a name="parallel-diagnostic-tools"></a>平行診斷工具
 Visual Studio 可廣泛支援多執行緒應用程式的偵錯與分析。  

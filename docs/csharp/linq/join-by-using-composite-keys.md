@@ -4,11 +4,11 @@ description: 了解如何使用 LINQ 中的複合索引鍵執行聯結。
 ms.date: 12/1/2016
 ms.assetid: da70b54d-3213-45eb-8437-fbe75cbcf935
 ms.openlocfilehash: ae37d03f996f0b0cc184a86663f16d62e6c29c69
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46711060"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080100"
 ---
 # <a name="join-by-using-composite-keys"></a>使用複合索引鍵執行聯結
 

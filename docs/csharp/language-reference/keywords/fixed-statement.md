@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - fixed keyword [C#]
 ms.openlocfilehash: 021fc3bd63922394bd70495bd4335b068fc51cdd
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46579468"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47237146"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed 陳述式 (C# 參考)
 

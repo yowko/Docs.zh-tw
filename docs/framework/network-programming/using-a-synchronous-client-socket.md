@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 945d00c6-7202-466c-9df9-140b84156d43
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: c9101957c6c4b9961ca5985bda8b8f82d69b45d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: edc65f46b69ef3b72092c0182529b9127cc25911
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397698"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47199693"
 ---
 # <a name="using-a-synchronous-client-socket"></a>使用同步用戶端通訊端
 在網路作業完成時，同步用戶端通訊端會暫止應用程式。 同步通訊端不適用於大量使用網路以進行作業的應用程式，但它們可以啟用其他應用程式的網路服務簡單存取。  

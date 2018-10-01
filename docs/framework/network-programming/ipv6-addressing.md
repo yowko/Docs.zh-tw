@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 532928118df9784198eada6f6a2f1e7a1b808ee9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8c992a96f2fa8d55d1fe16c03922cc8dbb39451c
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47194005"
 ---
 # <a name="ipv6-addressing"></a>IPv6 定址
 網際網路通訊協定第 6 版 (IPv6) 的位址長度為 128 個位元長。 使用這類大型位址空間的其中一個原因是，將可用的位址細分到路由網域的階層，反映網際網路的拓撲。 另一個原因是，將連線裝置之網路網路介面卡 (或介面) 的位址對應至網路。 IPv6 特有的固有功能，是在其最低層級解析位址，即網路介面層級，且也擁有自動組態功能。  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d5c3477a-e798-454c-a890-738ba14c5707
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: bc325a551afd0190ea71b46cc53a275de635bda3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8aabd71a841af2b01c644d52806f213ca9c92ec2
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397630"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47209355"
 ---
 # <a name="using-udp-services"></a>使用 UDP 服務
 <xref:System.Net.Sockets.UdpClient> 類別使用 UDP 與網路服務通訊。 <xref:System.Net.Sockets.UdpClient> 類別屬性和方法使用 UDP 取出建立 <xref:System.Net.Sockets.Socket> 來要求和接收資料的詳細資料。  

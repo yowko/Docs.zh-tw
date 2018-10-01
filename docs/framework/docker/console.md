@@ -5,11 +5,11 @@ author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
 ms.openlocfilehash: f5a38ac63db969a58e920ea79bf4bf10bcfcf64f
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46581255"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193326"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>在 Windows 容器中執行主控台應用程式
 

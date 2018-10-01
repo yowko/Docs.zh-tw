@@ -4,13 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 4d26b6df5d26a96bb8fa41dd3a8151fcb4a08b75
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 97096d6fa41cd25a92c23cd47008b33fb6037190
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43773653"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195403"
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Windows 市集應用程式的網路隔離
 <xref:System.Net>、<xref:System.Net.Http> 和 <xref:System.Net.Http.Headers> 命名空間中的類別可以用來開發 Windows 市集應用程式或傳統型應用程式。 在 Windows 市集應用程式中使用時，這些命名空間中的類別受到網路隔離的影響，而網路隔離是 [!INCLUDE[win8](../../../includes/win8-md.md)] 所使用應用程式安全性模型的一部分。 必須在 Windows 市集應用程式的應用程式資訊清單中啟用適當的網路功能，讓系統允許網路存取。  

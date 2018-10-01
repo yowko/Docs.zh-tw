@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d51ad8cb-03ae-4a51-bfcd-cfcf6b98afa9
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 4353f029d2e82460ab413bc8ccc248577a505504
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2aa7d54ae88a6dacf61488515a8ba3f13c54405e
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394929"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200889"
 ---
 # <a name="web-and-socket-permissions"></a>Web 和通訊端權限
 使用 <xref:System.Net> 命名空間之應用程式的網際網路安全性是透過 <xref:System.Net.WebPermission> 和 <xref:System.Net.SocketPermission> 類別提供。 **WebPermission** 類別可控制應用程式向 URI 要求資料，或提供 URI 給網際網路的權限。 **SocketPermission** 類別則可控制應用程式根據通訊端的主機、連接埠編號和傳輸通訊協定，使用 <xref:System.Net.Sockets.Socket> 在本機連接埠上接受資料，或使用另一個位址上的傳輸通訊協定連絡遠端裝置的權限。  

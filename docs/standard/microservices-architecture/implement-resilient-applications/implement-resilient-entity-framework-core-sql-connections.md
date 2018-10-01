@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/08/2018
 ms.openlocfilehash: 59db9cdb894f76f54e77732be47dc6140a594121
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46561509"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47231410"
 ---
 # <a name="implement-resilient-entity-framework-core-sql-connections"></a>實作具復原功能的 Entity Framework Core SQL 連接
 

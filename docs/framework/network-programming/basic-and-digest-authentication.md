@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 8cce2742-8d52-4643-9dd2-64ddf38aa878
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: fc061065caa4dad878a2a9b45e98ecb0d419d18b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 66b20c299252ff1f218a8131758e2cf03640aac6
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398218"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47199532"
 ---
 # <a name="basic-and-digest-authentication"></a>基本和摘要式驗證
 基本和摘要式驗證的 <xref:System.Net> 實作符合 RFC2617 - HTTP 驗證：基本和摘要式驗證 (可在全球資訊網協會的網站 www.w3.org 上取得)。  

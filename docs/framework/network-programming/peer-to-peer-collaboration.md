@@ -4,13 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: a933c81105399a9411fcb749a06e47bf769cf532
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c81300d160e2ec175f61f286047fa92015345942
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397815"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198144"
 ---
 # <a name="peer-to-peer-collaboration"></a>對等共同作業
 對等網路使用功能相當強大的電腦 (個人電腦)，而這些電腦存在於網際網路邊緣，並且不只是用於進行用戶端運算工作。 現代個人電腦 (PC) 具有極快速的處理器、大量記憶體和大型硬碟，但在執行電子郵件和網頁瀏覽這類常見運算工作時並未完全利用到它們。 現代電腦可以輕鬆地作為許多類型之應用程式的用戶端和伺服器 (對等)。  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - copy constructor [C#]
 ms.assetid: fba899b5-fc41-428e-a745-3ebdbf37990a
 ms.openlocfilehash: d6ecfc3659dcf533db0f4e7b67fdffd620a584fd
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46705273"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47232699"
 ---
 # <a name="how-to-write-a-copy-constructor-c-programming-guide"></a>如何：撰寫複製建構函式 (C# 程式設計手冊)
 C# 未提供物件的複製建構函式，但您可以自行撰寫一個。  

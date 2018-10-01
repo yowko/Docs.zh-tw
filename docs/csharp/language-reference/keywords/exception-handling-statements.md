@@ -5,11 +5,11 @@ helpviewer_keywords:
 - keywords [C#], exception handling
 ms.assetid: 6d0323a3-3164-411c-9b84-a3606bd0e13c
 ms.openlocfilehash: 1d48981e0d36053fce1249b27cd15551ed59dc91
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46576940"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47208219"
 ---
 # <a name="exception-handling-statements-c-reference"></a>例外狀況處理陳述式 (C# 參考)
 C# 提供內建支援以處理稱為例外狀況的異常情況，它們可能發生在程式執行期間。 超出一般控制流程的程式碼會處理這些例外狀況。  

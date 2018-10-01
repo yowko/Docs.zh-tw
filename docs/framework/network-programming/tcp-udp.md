@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 30630f397d491a6a5f251ddac14a4db90e53b999
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b3e39b952b37f70513b3a84ce6b6059b85e01c28
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394601"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47421582"
 ---
 # <a name="tcp-udp"></a>TCP-UDP
 應用程式可以使用「傳輸控制通訊協定 (TCP)」和「使用者資料包通訊協定 (UDP)」服務，搭配 <xref:System.Net.Sockets.TcpClient>、<xref:System.Net.Sockets.TcpListener> 和 <xref:System.Net.Sockets.UdpClient> 類別。 這些通訊協定類別建立在 <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> 類別之上，並負責傳送資料的細節。  

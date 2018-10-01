@@ -8,13 +8,12 @@ helpviewer_keywords:
 ms.assetid: fc258a40-f370-434f-ae09-4a8cb11ddaeb
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: c2b27f3516169ee7b90eaa27fbf22ec02fb638fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e0b3ed66977dd6587789e3d88f532b699653c6f
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391673"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195572"
 ---
 # <a name="cache-management-for-network-applications"></a>網路應用程式的快取管理
 本主題和其相關子主題描述如何使用 <xref:System.Net.WebClient>、<xref:System.Net.WebRequest>、<xref:System.Net.HttpWebRequest> 和 <xref:System.Net.FtpWebRequest> 類別所取得資源的快取。  

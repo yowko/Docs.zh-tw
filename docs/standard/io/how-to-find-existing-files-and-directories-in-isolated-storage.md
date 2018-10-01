@@ -20,11 +20,11 @@ ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 09c112374458b70a464291e898e9a880c8679773
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46585980"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47398952"
 ---
 # <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>如何：尋找隔離儲存區中的現有檔案和目錄
 若要搜尋隔離儲存區中的目錄，請使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType> 方法。 此方法會採用表示搜尋模式的字串。 您可以在搜尋模式中使用單一字元 (?) 和多重字元 (*) 萬用字元，但萬用字元必須出現在名稱的最後一個部分。 例如，`directory1/*ect*` 是有效的搜尋字串，但 `*ect*/directory2` 不是。  

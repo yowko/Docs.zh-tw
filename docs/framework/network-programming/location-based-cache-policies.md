@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e41d7f1a-0a6a-4dee-97d1-c6a8b6a07fc2
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: b4109cef8d527d397903854e05a2204a3e551938
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0344bbfc02a66a6f2ec9dace126bfae6811860be
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394503"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47209497"
 ---
 # <a name="location-based-cache-policies"></a>以位置為基礎的快取原則
 以位置為基礎的快取原則，會根據所要求資源可以使用的位置，定義有效快取項目的有效期限。 如果使用它不違反伺服器指定的重新驗證需求，快取的資源即為有效。 使用 <xref:System.Net.Cache.RequestCachePolicy> 或 <xref:System.Net.Cache.HttpRequestCachePolicy> 類別建構函式可以程式設計方式建立以位置為基礎的快取原則。 以位置為基礎的原則類型，是使用 <xref:System.Net.Cache.RequestCacheLevel> 或 <xref:System.Net.Cache.HttpRequestCacheLevel> 列舉值傳遞至建構函式。 如需建立以位置為基礎之快取原則的程式碼範例，請參閱[如何：為應用程式設定以位置為基礎的快取原則](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md)。 下列各節說明超文字傳輸通訊協定 (http 和 https) 資源的每種以位置為基礎的快取原則。  

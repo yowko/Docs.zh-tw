@@ -13,11 +13,11 @@ ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 669936d15cfe1ea125ed36ffdfcfd093b6aacbe1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45687630"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47424424"
 ---
 # <a name="how-to-compress-and-extract-files"></a>操作說明：壓縮與解壓縮檔案
 

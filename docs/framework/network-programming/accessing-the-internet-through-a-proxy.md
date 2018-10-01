@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 9671dae85a5057f9077437ea16275ddcfcb3a75e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32799b14c88ee098e15e0ffa1dfa5aaa585cdc73
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394975"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47421270"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>透過 Proxy 存取網際網路
 如果您的網站使用 Proxy 來提供網際網路存取，則您必須設定 Proxy 執行個體，使您的應用程式能夠與 Web Proxy 進行通訊。  

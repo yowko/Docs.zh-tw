@@ -13,11 +13,11 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
 ms.openlocfilehash: e50f455ab83b0b057f8ce3c32f874e6856632d70
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46581047"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47401468"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>實作事件架構非同步模式的最佳作法
 事件架構非同步模式提供有效率的方式，讓您運用熟悉的事件和委派語意，公開類別中的非同步行為。 若要實作事件架構非同步模式，您需要遵循一些特定的行為需求。 下列各節說明在實作遵循事件架構非同步模式的類別時，所應考量的需求和方針。  

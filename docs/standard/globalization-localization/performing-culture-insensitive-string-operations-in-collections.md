@@ -18,11 +18,11 @@ ms.assetid: 5cdc9396-a64b-4615-a1cd-b605db4c5983
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0e458f45fea8e2207ced930daebf10e653901fa7
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46584275"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47208655"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-collections"></a>在集合中執行不區分文化特性的字串作業
 <xref:System.Collections> 命名空間中有某些類別和成員依預設會提供區分文化特性的行為。 <xref:System.Collections.CaseInsensitiveComparer> 和 <xref:System.Collections.CaseInsensitiveHashCodeProvider> 類別的預設建構函式會使用 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 屬性，初始化新的執行個體。 <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> 方法的所有多載預設都會使用 `Thread.CurrentCulture` 屬性，建立 <xref:System.Collections.Hashtable> 類別的新執行個體。 <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> 方法的多載預設會使用 `Thread.CurrentCulture` 來執行區分文化特性的排序。 當字串當作索引鍵使用時，<xref:System.Collections.SortedList> 中的排序和查閱作業可能會受到 `Thread.CurrentCulture` 的影響。 請遵循本節提供的使用建議，以從 `Collections` 命名空間中的這些類別和方法取得不區分文化特性的結果。  

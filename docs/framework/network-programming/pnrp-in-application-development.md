@@ -4,13 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 265615d6-4423-4b5d-8626-752e456f4f4e
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 55716e7baa382bffbb37dc9248ec1cbd15065ac1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0f86b2569b9d4864586a0a7daea0ae5d3b901fd4
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504614"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47205261"
 ---
 # <a name="pnrp-in-application-development"></a>應用程式開發中的 PNRP
 在 Windows Vista 中，網路應用程式可以透過簡化的 PNRP 應用程式設計介面 (API)，存取名稱發行和解析功能。  

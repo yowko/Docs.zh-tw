@@ -3,11 +3,11 @@ title: 程式設計手冊 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4b1ffd10-ab81-4a0d-a0ca-e9876478d924
 ms.openlocfilehash: acb8271ad9ea338d31516c35bae46593a5fd2f78
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46585212"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47199043"
 ---
 # <a name="programming-guide-linq-to-xml-c"></a>程式設計手冊 (LINQ to XML) (C#)
 本節提供使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 進行程式設計的概念性和使用說明資訊。  

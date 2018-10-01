@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: c98731b4-b542-46a2-9947-1cea63c186b2
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: c3e2662eb444c70d2376a05e44ac84f472f27384
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ff5f131cfd9fac48e653b98e05d5e46dcfb0bec
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47399017"
 ---
 # <a name="ipv6-routing"></a>IPv6 路由
 IPv6 的優點是彈性的路由機制。 因為 IPv4 網路識別碼過去和現在的配置方式，大型的路由表需要由位於網際網路骨幹的路由器維護。 這些路由器必須知道所有路由，才能轉送在網際網路上可能導向至任何節點的封包。 因為其能彙總位址，IPv6 可讓您彈性定址，並大幅降低路由表大小。 在這個新的定址架構中，中繼路由器必須只持續追蹤其網路的本機部分，才能正確地轉寄訊息。  

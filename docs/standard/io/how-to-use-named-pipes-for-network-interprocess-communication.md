@@ -18,11 +18,11 @@ ms.assetid: 4e4d7e64-9f1b-4026-98f7-20488ac7b42b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5cc481c7370a21c56daf9ce2949247e65fa33bda
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46699140"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454995"
 ---
 # <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>如何：使用具名管道進行網路處理序間通訊
 具名管道可在管道伺服器及一個或多個管道用戶端之間提供處理序間通訊。 它們比在本機電腦上處理流程間通訊的匿名管道提供更多的功能。 具名管道支援在網路及多個伺服器執行個體上進行全雙工通訊、訊息架構通訊及用戶端模擬。用戶端模擬可讓連接處理序在遠端伺服器上使用本身的權限集合。  

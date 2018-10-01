@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 600ea82965c332c8620db689abb50965f15f0067
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2ec87d45a4e7140aa2c1d901492952cd25634025
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396944"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47192211"
 ---
 # <a name="how-to-create-a-socket"></a>如何：建立通訊端
 在您使用通訊端與遠端裝置進行通訊之前，必須先使用通訊協定和網路位址資訊初始化通訊端。 <xref:System.Net.Sockets.Socket> 類別的建構函式所擁有的參數，可指定通訊端用來建立連線的位址家族、通訊端類型和通訊協定類型。  

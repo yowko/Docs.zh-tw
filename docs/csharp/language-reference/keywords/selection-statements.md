@@ -5,11 +5,11 @@ helpviewer_keywords:
 - statements [C#], selection
 ms.assetid: cf21cfa2-34fb-48b0-9cbc-8bb4537a9a05
 ms.openlocfilehash: da3132a82e2cb0b3aaa55fbe82898414ebd31c12
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46538910"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47204371"
 ---
 # <a name="selection-statements-c-reference"></a>選擇陳述式 (C# 參考)
 選擇陳述式可依據特定條件是否為 `true`，將程式控制傳送給特定的流程。  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: ba30129389d048f35916536ba119d4e4e06e0b3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1157fd8772546a1e34343bcf05ac40ca8ad592a5
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397542"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47194018"
 ---
 # <a name="using-streams-on-the-network"></a>在網路上使用資料流
 網路資源在 .NET Framework 中是以資料流的形式呈現。 因為對資料流沒有任何特殊待遇，.NET Framework 提供下列功能：  

@@ -6,11 +6,11 @@ ms.author: wiwagn
 ms.date: 10/05/2017
 ms.custom: vs-dotnet
 ms.openlocfilehash: e44ae69c9cd8f0767e369791737cef9b4c33f963
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46706339"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47399790"
 ---
 # <a name="publish-your-hello-world-application-with-visual-studio-2017"></a>使用 Visual Studio 2017 發行您的 Hello World 應用程式
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - '!= operator [C#]'
 ms.assetid: eeff7a4e-ad6f-462d-9f8d-49e9b91c6c97
 ms.openlocfilehash: e974ffb1b25944e24fca23864dc7e932ec1876d5
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46710731"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47455470"
 ---
 # <a name="-operator-c-reference"></a>!= 運算子 (C# 參考)
 不等比較運算子 (`!=`) 會在其運算元相等時傳回 false，否則傳回 true。 所有類型 (包括字串和物件) 已預先定義不等比較運算子。 使用者定義型別可以多載 `!=` 運算子。  

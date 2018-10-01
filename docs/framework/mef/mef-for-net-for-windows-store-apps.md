@@ -5,11 +5,11 @@ ms.assetid: 7667770e-d163-4ad6-a303-085cf73db2f2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9cb7807fbfc1fbaf039fd7aef04331210dfa7cfa
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46583426"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47089931"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>適用於 Windows 市集應用程式的 .NET 的 MEF
 <xref:System.Composition?displayProperty=nameWithType> 及其子命名空間包含適用於使用 Managed Extensibility Framework (MEF) 開發可擴充 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式的類型。 這些命名空間為 [!INCLUDE[win8](../../../includes/win8-md.md)] 作業系統 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] 子集的一部分。  

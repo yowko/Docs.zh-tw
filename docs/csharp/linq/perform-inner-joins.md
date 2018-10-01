@@ -4,11 +4,11 @@ description: 了解如何使用 C# 中的 LINQ 執行內部聯結。
 ms.date: 12/1/2016
 ms.assetid: 45bceed6-f549-4114-a9b1-b44feb497742
 ms.openlocfilehash: 2f6aad30dc8278ce1bb88bacc19b27deaa0288c7
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46705610"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47112779"
 ---
 # <a name="perform-inner-joins"></a>執行內部聯結
 

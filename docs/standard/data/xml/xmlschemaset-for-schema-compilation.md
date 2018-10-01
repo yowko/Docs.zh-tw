@@ -9,11 +9,11 @@ ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c24fe637514ba773cecc7824de276b1707a4e90c
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46517723"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47400734"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>用於結構描述編譯的 XmlSchemaSet
 說明 <xref:System.Xml.Schema.XmlSchemaSet>，它是一種可儲存及驗證 XML 結構描述定義語言 (XSD) 結構描述的快取。  

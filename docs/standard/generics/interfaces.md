@@ -11,11 +11,11 @@ ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a6c151798c807206cc7f4b2fbeb21e75e9142379
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46695920"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47234675"
 ---
 # <a name="generic-interfaces"></a>泛型介面
 本主題概述提供泛型類型系列中常見功能的泛型介面。  

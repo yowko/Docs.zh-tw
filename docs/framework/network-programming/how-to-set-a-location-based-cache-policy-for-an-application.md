@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 50312578e9900f65fb2378de5201888fa5d77a8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61eb598ff2ca228e76b2a3633fe4d2bf37f2a476
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395228"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47209804"
 ---
 # <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>如何：為應用程式設定以位置為基礎的快取原則
 以位置為基礎的快取原則，可讓應用程式明確地定義根據所要求資源位置的快取行為。 本主題將示範如何以程式設計方式設定快取原則。 如需使用組態檔為應用程式設定原則的詳細資訊，請參閱 [\<requestCaching> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)。  

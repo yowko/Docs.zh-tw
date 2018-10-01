@@ -13,11 +13,11 @@ ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5d28da0c788d40222ccd689807d6e51f66b4ce78
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46567814"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47216706"
 ---
 # <a name="applying-attributes"></a>套用屬性
 使用下列流程將屬性套用至程式碼的元素。  

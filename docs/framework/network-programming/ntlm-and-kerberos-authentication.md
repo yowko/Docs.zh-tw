@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9ef65560-f596-4469-bcce-f4d5407b55cd
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: d1f621af2b365d229b7b5e62069471af98be267a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e7638b9558363b77b03208d86d98330b922b414c
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394383"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195463"
 ---
 # <a name="ntlm-and-kerberos-authentication"></a>NTLM 與 Kerberos 驗證
 預設 NTLM 驗證和 Kerberos 驗證使用與呼叫端應用程式建立關聯的 Microsoft Windows NT 使用者認證，以嘗試向伺服器進行驗證。 使用非預設 NTLM 驗證時，應用程式會將驗證類型設為 NTLM，並使用 <xref:System.Net.NetworkCredential> 物件將使用者名稱、密碼和網域傳遞給主機，如下列範例所示。  

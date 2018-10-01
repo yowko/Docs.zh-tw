@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: fe9f9216c00448391967b82c84207f95eaccdb53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7d517ef2683b8468410880d2bb50f79b382367bf
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396132"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47170148"
 ---
 # <a name="programming-pluggable-protocols"></a>可插式通訊協定程式設計
 抽象 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 類別提供可插式通訊協定的基底。 透過從 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 衍生通訊協定特定類別，應用程式可以要求來自網際網路資源的資料，並讀取回應，而不需要指定所要使用的通訊協定。  

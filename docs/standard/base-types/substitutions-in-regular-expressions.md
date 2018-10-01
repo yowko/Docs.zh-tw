@@ -16,11 +16,11 @@ ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 20050bee696f9d47324f1b095b0b3c1120f78255
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696725"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47087326"
 ---
 # <a name="substitutions-in-regular-expressions"></a>在規則運算式中執行替代
 <a name="Top"></a> 替代是指只有在取代模式內才能辨識的語言項目。 這些項目使用規則運算式模式定義要取代輸入字串中相符文字的全部或部分文字。 取代模式可以包含一個或多個替代，以及常值字元。 取代模式會提供給具有 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 參數的 `replacement` 方法多載，以及提供給 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法。 這些方法會將符合的模式取代為 `replacement` 參數所定義的模式。  

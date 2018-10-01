@@ -16,11 +16,11 @@ ms.assetid: e7773c77-c646-4a01-8a96-a003d59fc4c9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: db23b424d4357ad94b8b0de66ca71726b765321e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45641075"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47234805"
 ---
 # <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>如何：使用匿名管道進行本機處理序間通訊
 匿名管道會在本機電腦上提供處理序間通訊。 它們提供的功能比具名管道少，但其負荷也比較小。 您可以使用匿名管道，讓本機電腦上的處理序間通訊更容易。 您無法透過網路，使用匿名管道進行通訊。  
