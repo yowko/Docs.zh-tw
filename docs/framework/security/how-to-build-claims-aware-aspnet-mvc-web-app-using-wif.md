@@ -4,73 +4,73 @@ ms.date: 03/30/2017
 ms.assetid: 0efb76bc-9f7b-4afe-be1c-2a57c917010b
 author: BrucePerlerMS
 ms.openlocfilehash: 4a003acbf4e182a0493368b586a3add229d8b526
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47863022"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48035996"
 ---
-# <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a><span data-ttu-id="1f435-102">如何：使用 WIF 建置宣告感知 ASP.NET MVC Web 應用程式</span><span class="sxs-lookup"><span data-stu-id="1f435-102">How To: Build Claims-Aware ASP.NET MVC Web Application Using WIF</span></span>
-## <a name="applies-to"></a><span data-ttu-id="1f435-103">適用於</span><span class="sxs-lookup"><span data-stu-id="1f435-103">Applies To</span></span>  
+# <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a><span data-ttu-id="6bb19-102">如何：使用 WIF 建置宣告感知 ASP.NET MVC Web 應用程式</span><span class="sxs-lookup"><span data-stu-id="6bb19-102">How To: Build Claims-Aware ASP.NET MVC Web Application Using WIF</span></span>
+## <a name="applies-to"></a><span data-ttu-id="6bb19-103">適用於</span><span class="sxs-lookup"><span data-stu-id="6bb19-103">Applies To</span></span>  
   
--   <span data-ttu-id="1f435-104">Microsoft® Windows® Identity Foundation (WIF)</span><span class="sxs-lookup"><span data-stu-id="1f435-104">Microsoft® Windows® Identity Foundation (WIF)</span></span>  
+-   <span data-ttu-id="6bb19-104">Microsoft® Windows® Identity Foundation (WIF)</span><span class="sxs-lookup"><span data-stu-id="6bb19-104">Microsoft® Windows® Identity Foundation (WIF)</span></span>  
   
--   <span data-ttu-id="1f435-105">ASP.NET® MVC</span><span class="sxs-lookup"><span data-stu-id="1f435-105">ASP.NET® MVC</span></span>  
+-   <span data-ttu-id="6bb19-105">ASP.NET® MVC</span><span class="sxs-lookup"><span data-stu-id="6bb19-105">ASP.NET® MVC</span></span>  
   
-## <a name="summary"></a><span data-ttu-id="1f435-106">總結</span><span class="sxs-lookup"><span data-stu-id="1f435-106">Summary</span></span>  
- <span data-ttu-id="1f435-107">此操作說明提供詳細逐步程序，以建立簡單宣告感知 ASP.NET MVC 應用程式。</span><span class="sxs-lookup"><span data-stu-id="1f435-107">This How-To provides detailed step-by-step procedures for creating simple claims-aware ASP.NET MVC web application.</span></span> <span data-ttu-id="1f435-108">還提供了一些指示，說明如何測試簡單宣告感知 ASP.NET MVC Web 應用程式成功實作宣告型驗證。</span><span class="sxs-lookup"><span data-stu-id="1f435-108">It also provides instructions how to test the simple claims-aware ASP.NET MVC web application for successful implementation of claims-based authentication.</span></span> <span data-ttu-id="1f435-109">此操作說明沒有提供建立安全性權杖服務 (STS) 的詳細指示，並假設您已設定 STS。</span><span class="sxs-lookup"><span data-stu-id="1f435-109">This How-To does not have detailed instructions for creating a Security Token Service (STS), and assumes you have already configured an STS.</span></span>  
+## <a name="summary"></a><span data-ttu-id="6bb19-106">總結</span><span class="sxs-lookup"><span data-stu-id="6bb19-106">Summary</span></span>  
+ <span data-ttu-id="6bb19-107">此操作說明提供詳細逐步程序，以建立簡單宣告感知 ASP.NET MVC 應用程式。</span><span class="sxs-lookup"><span data-stu-id="6bb19-107">This How-To provides detailed step-by-step procedures for creating simple claims-aware ASP.NET MVC web application.</span></span> <span data-ttu-id="6bb19-108">還提供了一些指示，說明如何測試簡單宣告感知 ASP.NET MVC Web 應用程式成功實作宣告型驗證。</span><span class="sxs-lookup"><span data-stu-id="6bb19-108">It also provides instructions how to test the simple claims-aware ASP.NET MVC web application for successful implementation of claims-based authentication.</span></span> <span data-ttu-id="6bb19-109">此操作說明沒有提供建立安全性權杖服務 (STS) 的詳細指示，並假設您已設定 STS。</span><span class="sxs-lookup"><span data-stu-id="6bb19-109">This How-To does not have detailed instructions for creating a Security Token Service (STS), and assumes you have already configured an STS.</span></span>  
   
-## <a name="contents"></a><span data-ttu-id="1f435-110">內容</span><span class="sxs-lookup"><span data-stu-id="1f435-110">Contents</span></span>  
+## <a name="contents"></a><span data-ttu-id="6bb19-110">內容</span><span class="sxs-lookup"><span data-stu-id="6bb19-110">Contents</span></span>  
   
--   <span data-ttu-id="1f435-111">目標</span><span class="sxs-lookup"><span data-stu-id="1f435-111">Objectives</span></span>  
+-   <span data-ttu-id="6bb19-111">目標</span><span class="sxs-lookup"><span data-stu-id="6bb19-111">Objectives</span></span>  
   
--   <span data-ttu-id="1f435-112">步驟摘要</span><span class="sxs-lookup"><span data-stu-id="1f435-112">Summary of Steps</span></span>  
+-   <span data-ttu-id="6bb19-112">步驟摘要</span><span class="sxs-lookup"><span data-stu-id="6bb19-112">Summary of Steps</span></span>  
   
--   <span data-ttu-id="1f435-113">步驟 1 – 建立簡單的 ASP.NET MVC 應用程式</span><span class="sxs-lookup"><span data-stu-id="1f435-113">Step 1 – Create Simple ASP.NET MVC Application</span></span>  
+-   <span data-ttu-id="6bb19-113">步驟 1 – 建立簡單的 ASP.NET MVC 應用程式</span><span class="sxs-lookup"><span data-stu-id="6bb19-113">Step 1 – Create Simple ASP.NET MVC Application</span></span>  
   
--   <span data-ttu-id="1f435-114">步驟 2 – 設定宣告型驗證的 ASP.NET MVC 應用程式</span><span class="sxs-lookup"><span data-stu-id="1f435-114">Step 2 – Configure ASP.NET MVC Application for Claims-Based Authentication</span></span>  
+-   <span data-ttu-id="6bb19-114">步驟 2 – 設定宣告型驗證的 ASP.NET MVC 應用程式</span><span class="sxs-lookup"><span data-stu-id="6bb19-114">Step 2 – Configure ASP.NET MVC Application for Claims-Based Authentication</span></span>  
   
--   <span data-ttu-id="1f435-115">步驟 3 – 測試方案</span><span class="sxs-lookup"><span data-stu-id="1f435-115">Step 3 – Test Your Solution</span></span>  
+-   <span data-ttu-id="6bb19-115">步驟 3 – 測試方案</span><span class="sxs-lookup"><span data-stu-id="6bb19-115">Step 3 – Test Your Solution</span></span>  
   
--   <span data-ttu-id="1f435-116">相關項目</span><span class="sxs-lookup"><span data-stu-id="1f435-116">Related Items</span></span>  
+-   <span data-ttu-id="6bb19-116">相關項目</span><span class="sxs-lookup"><span data-stu-id="6bb19-116">Related Items</span></span>  
   
-## <a name="objectives"></a><span data-ttu-id="1f435-117">目標</span><span class="sxs-lookup"><span data-stu-id="1f435-117">Objectives</span></span>  
+## <a name="objectives"></a><span data-ttu-id="6bb19-117">目標</span><span class="sxs-lookup"><span data-stu-id="6bb19-117">Objectives</span></span>  
   
--   <span data-ttu-id="1f435-118">設定宣告型驗證的 ASP.NET MVC Web 應用程式</span><span class="sxs-lookup"><span data-stu-id="1f435-118">Configure ASP.NET MVC web application for claims-based authentication</span></span>  
+-   <span data-ttu-id="6bb19-118">設定宣告型驗證的 ASP.NET MVC Web 應用程式</span><span class="sxs-lookup"><span data-stu-id="6bb19-118">Configure ASP.NET MVC web application for claims-based authentication</span></span>  
   
--   <span data-ttu-id="1f435-119">測試成功宣告感知 ASP.NET MVC Web 應用程式</span><span class="sxs-lookup"><span data-stu-id="1f435-119">Test successful claims-aware ASP.NET MVC web application</span></span>  
+-   <span data-ttu-id="6bb19-119">測試成功宣告感知 ASP.NET MVC Web 應用程式</span><span class="sxs-lookup"><span data-stu-id="6bb19-119">Test successful claims-aware ASP.NET MVC web application</span></span>  
   
-## <a name="summary-of-steps"></a><span data-ttu-id="1f435-120">步驟摘要</span><span class="sxs-lookup"><span data-stu-id="1f435-120">Summary of Steps</span></span>  
+## <a name="summary-of-steps"></a><span data-ttu-id="6bb19-120">步驟摘要</span><span class="sxs-lookup"><span data-stu-id="6bb19-120">Summary of Steps</span></span>  
   
--   <span data-ttu-id="1f435-121">步驟 1 – 建立簡單的 ASP.NET MVC 應用程式</span><span class="sxs-lookup"><span data-stu-id="1f435-121">Step 1 – Create Simple ASP.NET MVC Application</span></span>  
+-   <span data-ttu-id="6bb19-121">步驟 1 – 建立簡單的 ASP.NET MVC 應用程式</span><span class="sxs-lookup"><span data-stu-id="6bb19-121">Step 1 – Create Simple ASP.NET MVC Application</span></span>  
   
--   <span data-ttu-id="1f435-122">步驟 2 – 設定宣告型驗證的 ASP.NET MVC 應用程式</span><span class="sxs-lookup"><span data-stu-id="1f435-122">Step 2 – Configure ASP.NET MVC Application for Claims-Based Authentication</span></span>  
+-   <span data-ttu-id="6bb19-122">步驟 2 – 設定宣告型驗證的 ASP.NET MVC 應用程式</span><span class="sxs-lookup"><span data-stu-id="6bb19-122">Step 2 – Configure ASP.NET MVC Application for Claims-Based Authentication</span></span>  
   
--   <span data-ttu-id="1f435-123">步驟 3 – 測試方案</span><span class="sxs-lookup"><span data-stu-id="1f435-123">Step 3 – Test Your Solution</span></span>  
+-   <span data-ttu-id="6bb19-123">步驟 3 – 測試方案</span><span class="sxs-lookup"><span data-stu-id="6bb19-123">Step 3 – Test Your Solution</span></span>  
   
-## <a name="step-1--create-simple-aspnet-mvc-application"></a><span data-ttu-id="1f435-124">步驟 1 – 建立簡單的 ASP.NET MVC 應用程式</span><span class="sxs-lookup"><span data-stu-id="1f435-124">Step 1 – Create Simple ASP.NET MVC Application</span></span>  
- <span data-ttu-id="1f435-125">在此步驟中，您將建立新的 ASP.NET MVC 應用程式。</span><span class="sxs-lookup"><span data-stu-id="1f435-125">In this step, you will create a new ASP.NET MVC application.</span></span>  
+## <a name="step-1--create-simple-aspnet-mvc-application"></a><span data-ttu-id="6bb19-124">步驟 1 – 建立簡單的 ASP.NET MVC 應用程式</span><span class="sxs-lookup"><span data-stu-id="6bb19-124">Step 1 – Create Simple ASP.NET MVC Application</span></span>  
+ <span data-ttu-id="6bb19-125">在此步驟中，您將建立新的 ASP.NET MVC 應用程式。</span><span class="sxs-lookup"><span data-stu-id="6bb19-125">In this step, you will create a new ASP.NET MVC application.</span></span>  
   
-#### <a name="to-create-simple-aspnet-mvc-application"></a><span data-ttu-id="1f435-126">建立簡單的 ASP.NET MVC 應用程式</span><span class="sxs-lookup"><span data-stu-id="1f435-126">To create simple ASP.NET MVC application</span></span>  
+#### <a name="to-create-simple-aspnet-mvc-application"></a><span data-ttu-id="6bb19-126">建立簡單的 ASP.NET MVC 應用程式</span><span class="sxs-lookup"><span data-stu-id="6bb19-126">To create simple ASP.NET MVC application</span></span>  
   
-1.  <span data-ttu-id="1f435-127">啟動 Visual Studio，並依序按一下 [檔案]、[新增] 和 [專案]。</span><span class="sxs-lookup"><span data-stu-id="1f435-127">Start Visual Studio and click **File**, **New**, and then **Project**.</span></span>  
+1.  <span data-ttu-id="6bb19-127">啟動 Visual Studio，並依序按一下 [檔案]、[新增] 和 [專案]。</span><span class="sxs-lookup"><span data-stu-id="6bb19-127">Start Visual Studio and click **File**, **New**, and then **Project**.</span></span>  
   
-2.  <span data-ttu-id="1f435-128">在 [新增專案] 視窗中，按一下 [ASP.NET MVC 3 Web 應用程式]。</span><span class="sxs-lookup"><span data-stu-id="1f435-128">In the **New Project** window, click **ASP.NET MVC 3 Web Application**.</span></span>  
+2.  <span data-ttu-id="6bb19-128">在 [新增專案] 視窗中，按一下 [ASP.NET MVC 3 Web 應用程式]。</span><span class="sxs-lookup"><span data-stu-id="6bb19-128">In the **New Project** window, click **ASP.NET MVC 3 Web Application**.</span></span>  
   
-3.  <span data-ttu-id="1f435-129">在 [名稱] 中，輸入 `TestApp`，然後按 [確定]。</span><span class="sxs-lookup"><span data-stu-id="1f435-129">In **Name**, enter `TestApp` and press **OK**.</span></span>  
+3.  <span data-ttu-id="6bb19-129">在 [名稱] 中，輸入 `TestApp`，然後按 [確定]。</span><span class="sxs-lookup"><span data-stu-id="6bb19-129">In **Name**, enter `TestApp` and press **OK**.</span></span>  
   
-4.  <span data-ttu-id="1f435-130">在 [新增 ASP.NET MVC 3 專案] 對話方塊中，從可用的範本中選取 [網際網路應用程式]，確定 [檢視引擎] 設定為 [Razor]，然後按一下 [確定]。</span><span class="sxs-lookup"><span data-stu-id="1f435-130">In the **New ASP.NET MVC 3 Project** dialog, select **Internet Application** from the available templates, ensure **View Engine** is set to **Razor**, and then click **OK**.</span></span>  
+4.  <span data-ttu-id="6bb19-130">在 [新增 ASP.NET MVC 3 專案] 對話方塊中，從可用的範本中選取 [網際網路應用程式]，確定 [檢視引擎] 設定為 [Razor]，然後按一下 [確定]。</span><span class="sxs-lookup"><span data-stu-id="6bb19-130">In the **New ASP.NET MVC 3 Project** dialog, select **Internet Application** from the available templates, ensure **View Engine** is set to **Razor**, and then click **OK**.</span></span>  
   
-5.  <span data-ttu-id="1f435-131">當新的專案開啟時，以滑鼠右鍵按一下方案總管中的 **TestApp** 專案，然後選取 [屬性] 選項。</span><span class="sxs-lookup"><span data-stu-id="1f435-131">When the new project opens, right-click the **TestApp** project in **Solution Explorer** and select the **Properties** option.</span></span>  
+5.  <span data-ttu-id="6bb19-131">當新的專案開啟時，以滑鼠右鍵按一下方案總管中的 **TestApp** 專案，然後選取 [屬性] 選項。</span><span class="sxs-lookup"><span data-stu-id="6bb19-131">When the new project opens, right-click the **TestApp** project in **Solution Explorer** and select the **Properties** option.</span></span>  
   
-6.  <span data-ttu-id="1f435-132">在專案的屬性頁面上，按一下左側的 [Web] 索引標籤，並確定已選取 [使用本機 IIS Web 伺服器] 選項。</span><span class="sxs-lookup"><span data-stu-id="1f435-132">On the project’s properties page, click on the **Web** tab on the left and ensure that the **Use Local IIS Web Server** option is selected.</span></span>  
+6.  <span data-ttu-id="6bb19-132">在專案的屬性頁面上，按一下左側的 [Web] 索引標籤，並確定已選取 [使用本機 IIS Web 伺服器] 選項。</span><span class="sxs-lookup"><span data-stu-id="6bb19-132">On the project’s properties page, click on the **Web** tab on the left and ensure that the **Use Local IIS Web Server** option is selected.</span></span>  
   
-## <a name="step-2--configure-aspnet-mvc-application-for-claims-based-authentication"></a><span data-ttu-id="1f435-133">步驟 2 – 設定宣告型驗證的 ASP.NET MVC 應用程式</span><span class="sxs-lookup"><span data-stu-id="1f435-133">Step 2 – Configure ASP.NET MVC Application for Claims-Based Authentication</span></span>  
- <span data-ttu-id="1f435-134">在此步驟中，您將組態項目新增至 ASP.NET MVC Web 應用程式的 *Web.config* 組態檔，使其成為宣告感知。</span><span class="sxs-lookup"><span data-stu-id="1f435-134">In this step you will add configuration entries to the *Web.config* configuration file of your ASP.NET MVC web application to make it claims-aware.</span></span>  
+## <a name="step-2--configure-aspnet-mvc-application-for-claims-based-authentication"></a><span data-ttu-id="6bb19-133">步驟 2 – 設定宣告型驗證的 ASP.NET MVC 應用程式</span><span class="sxs-lookup"><span data-stu-id="6bb19-133">Step 2 – Configure ASP.NET MVC Application for Claims-Based Authentication</span></span>  
+ <span data-ttu-id="6bb19-134">在此步驟中，您將組態項目新增至 ASP.NET MVC Web 應用程式的 *Web.config* 組態檔，使其成為宣告感知。</span><span class="sxs-lookup"><span data-stu-id="6bb19-134">In this step you will add configuration entries to the *Web.config* configuration file of your ASP.NET MVC web application to make it claims-aware.</span></span>  
   
-#### <a name="to-configure-aspnet-mvc-application-for-claims-based-authentication"></a><span data-ttu-id="1f435-135">設定宣告型驗證的 ASP.NET MVC 應用程式</span><span class="sxs-lookup"><span data-stu-id="1f435-135">To configure ASP.NET MVC application for claims-based authentication</span></span>  
+#### <a name="to-configure-aspnet-mvc-application-for-claims-based-authentication"></a><span data-ttu-id="6bb19-135">設定宣告型驗證的 ASP.NET MVC 應用程式</span><span class="sxs-lookup"><span data-stu-id="6bb19-135">To configure ASP.NET MVC application for claims-based authentication</span></span>  
   
-1.  <span data-ttu-id="1f435-136">將下列組態區段定義新增至 *Web.config* 組態檔。</span><span class="sxs-lookup"><span data-stu-id="1f435-136">Add the following configuration section definitions to the *Web.config* configuration file.</span></span> <span data-ttu-id="1f435-137">它們會定義 Windows Identity Foundation 所需的組態區段。</span><span class="sxs-lookup"><span data-stu-id="1f435-137">These define configuration sections required by Windows Identity Foundation.</span></span> <span data-ttu-id="1f435-138">緊接在 **\<configuration>** 開啟項目之後新增定義：</span><span class="sxs-lookup"><span data-stu-id="1f435-138">Add the definitions immediately after the **\<configuration>** opening element:</span></span>  
+1.  <span data-ttu-id="6bb19-136">將下列組態區段定義新增至 *Web.config* 組態檔。</span><span class="sxs-lookup"><span data-stu-id="6bb19-136">Add the following configuration section definitions to the *Web.config* configuration file.</span></span> <span data-ttu-id="6bb19-137">它們會定義 Windows Identity Foundation 所需的組態區段。</span><span class="sxs-lookup"><span data-stu-id="6bb19-137">These define configuration sections required by Windows Identity Foundation.</span></span> <span data-ttu-id="6bb19-138">緊接在 **\<configuration>** 開啟項目之後新增定義：</span><span class="sxs-lookup"><span data-stu-id="6bb19-138">Add the definitions immediately after the **\<configuration>** opening element:</span></span>  
   
     ```xml  
     <configSections>  
@@ -79,7 +79,7 @@ ms.locfileid: "47863022"
     </configSections>  
     ```  
   
-2.  <span data-ttu-id="1f435-139">新增 **\<location>** 項目，以允許存取應用程式的同盟中繼資料：</span><span class="sxs-lookup"><span data-stu-id="1f435-139">Add a **\<location>** element that enables access to the application’s federation metadata:</span></span>  
+2.  <span data-ttu-id="6bb19-139">新增 **\<location>** 項目，以允許存取應用程式的同盟中繼資料：</span><span class="sxs-lookup"><span data-stu-id="6bb19-139">Add a **\<location>** element that enables access to the application’s federation metadata:</span></span>  
   
     ```xml  
     <location path="FederationMetadata">  
@@ -91,7 +91,7 @@ ms.locfileid: "47863022"
     </location>  
     ```  
   
-3.  <span data-ttu-id="1f435-140">在 **\<system.web>** 項目內新增下列組態項目，以拒絕使用者、停用原始驗證，以及啟用 WIF 來管理驗證。</span><span class="sxs-lookup"><span data-stu-id="1f435-140">Add the following configuration entries within the **\<system.web>** elements to deny users, disable native authentication, and enable WIF to manage authentication.</span></span>  
+3.  <span data-ttu-id="6bb19-140">在 **\<system.web>** 項目內新增下列組態項目，以拒絕使用者、停用原始驗證，以及啟用 WIF 來管理驗證。</span><span class="sxs-lookup"><span data-stu-id="6bb19-140">Add the following configuration entries within the **\<system.web>** elements to deny users, disable native authentication, and enable WIF to manage authentication.</span></span>  
   
     ```xml  
     <authorization>  
@@ -100,7 +100,7 @@ ms.locfileid: "47863022"
     <authentication mode="None" />  
     ```  
   
-4.  <span data-ttu-id="1f435-141">新增下列 Windows Identity Foundation 相關組態項目，並確認 ASP.NET 應用程式的 URL 和連接埠編號符合 **\<audienceUris>** 項目、**\<wsFederation>** 項目的 **realm** 屬性和 **\<wsFederation>** 項目的 **reply** 屬性。</span><span class="sxs-lookup"><span data-stu-id="1f435-141">Add the following Windows Identity Foundation related configuration entries and ensure that your ASP.NET application’s URL and port number match the values in the **\<audienceUris>** entry, **realm** attribute of the **\<wsFederation>** element, and the **reply** attribute of the **\<wsFederation>** element.</span></span> <span data-ttu-id="1f435-142">也請確認 **issuer** 值符合安全性權杖服務 (STS) 的 URL。</span><span class="sxs-lookup"><span data-stu-id="1f435-142">Also ensure that the **issuer** value fits your Security Token Service (STS) URL.</span></span>  
+4.  <span data-ttu-id="6bb19-141">新增下列 Windows Identity Foundation 相關組態項目，並確認 ASP.NET 應用程式的 URL 和連接埠編號符合 **\<audienceUris>** 項目、**\<wsFederation>** 項目的 **realm** 屬性和 **\<wsFederation>** 項目的 **reply** 屬性。</span><span class="sxs-lookup"><span data-stu-id="6bb19-141">Add the following Windows Identity Foundation related configuration entries and ensure that your ASP.NET application’s URL and port number match the values in the **\<audienceUris>** entry, **realm** attribute of the **\<wsFederation>** element, and the **reply** attribute of the **\<wsFederation>** element.</span></span> <span data-ttu-id="6bb19-142">也請確認 **issuer** 值符合安全性權杖服務 (STS) 的 URL。</span><span class="sxs-lookup"><span data-stu-id="6bb19-142">Also ensure that the **issuer** value fits your Security Token Service (STS) URL.</span></span>  
   
     ```xml  
     <system.identityModel>  
@@ -124,16 +124,16 @@ ms.locfileid: "47863022"
     </system.identityModel.services>  
     ```  
   
-5.  <span data-ttu-id="1f435-143">新增 <xref:System.IdentityModel> 組件的參考。</span><span class="sxs-lookup"><span data-stu-id="1f435-143">Add reference to the <xref:System.IdentityModel> assembly.</span></span>  
+5.  <span data-ttu-id="6bb19-143">新增 <xref:System.IdentityModel> 組件的參考。</span><span class="sxs-lookup"><span data-stu-id="6bb19-143">Add reference to the <xref:System.IdentityModel> assembly.</span></span>  
   
-6.  <span data-ttu-id="1f435-144">編譯方案，以確定含有錯誤。</span><span class="sxs-lookup"><span data-stu-id="1f435-144">Compile the solution to make sure there are errors.</span></span>  
+6.  <span data-ttu-id="6bb19-144">編譯方案，以確定含有錯誤。</span><span class="sxs-lookup"><span data-stu-id="6bb19-144">Compile the solution to make sure there are errors.</span></span>  
   
-## <a name="step-3--test-your-solution"></a><span data-ttu-id="1f435-145">步驟 3 – 測試方案</span><span class="sxs-lookup"><span data-stu-id="1f435-145">Step 3 – Test Your Solution</span></span>  
- <span data-ttu-id="1f435-146">在此步驟中，您將測試針對宣告型驗證設定的 ASP.NET MVC Web 應用程式。</span><span class="sxs-lookup"><span data-stu-id="1f435-146">In this step you will test your ASP.NET MVC web application configured for claims-based authentication.</span></span> <span data-ttu-id="1f435-147">為了執行基本測試，您將新增簡單的程式碼以顯示安全性權杖服務 (STS) 所發行之權杖中的宣告。</span><span class="sxs-lookup"><span data-stu-id="1f435-147">To perform basic test you will add simple code that displays claims in the token issued by the Security Token Service (STS).</span></span>  
+## <a name="step-3--test-your-solution"></a><span data-ttu-id="6bb19-145">步驟 3 – 測試方案</span><span class="sxs-lookup"><span data-stu-id="6bb19-145">Step 3 – Test Your Solution</span></span>  
+ <span data-ttu-id="6bb19-146">在此步驟中，您將測試針對宣告型驗證設定的 ASP.NET MVC Web 應用程式。</span><span class="sxs-lookup"><span data-stu-id="6bb19-146">In this step you will test your ASP.NET MVC web application configured for claims-based authentication.</span></span> <span data-ttu-id="6bb19-147">為了執行基本測試，您將新增簡單的程式碼以顯示安全性權杖服務 (STS) 所發行之權杖中的宣告。</span><span class="sxs-lookup"><span data-stu-id="6bb19-147">To perform basic test you will add simple code that displays claims in the token issued by the Security Token Service (STS).</span></span>  
   
-#### <a name="to-test-your-aspnet-mvc-application-for-claims-based-authentication"></a><span data-ttu-id="1f435-148">測試宣告型驗證的 ASP.NET MVC 應用程式</span><span class="sxs-lookup"><span data-stu-id="1f435-148">To test your ASP.NET MVC application for claims-based authentication</span></span>  
+#### <a name="to-test-your-aspnet-mvc-application-for-claims-based-authentication"></a><span data-ttu-id="6bb19-148">測試宣告型驗證的 ASP.NET MVC 應用程式</span><span class="sxs-lookup"><span data-stu-id="6bb19-148">To test your ASP.NET MVC application for claims-based authentication</span></span>  
   
-1.  <span data-ttu-id="1f435-149">在方案總管 中，展開 [控制器] 資料夾，然後在編輯器中開啟 *HomeController.cs* 檔案。</span><span class="sxs-lookup"><span data-stu-id="1f435-149">In the **Solution Explorer**, expand the **Controllers** folder and open *HomeController.cs* file in the editor.</span></span> <span data-ttu-id="1f435-150">將下列程式碼新增至 **Index** 方法：</span><span class="sxs-lookup"><span data-stu-id="1f435-150">Add the following code to the **Index** method:</span></span>  
+1.  <span data-ttu-id="6bb19-149">在方案總管 中，展開 [控制器] 資料夾，然後在編輯器中開啟 *HomeController.cs* 檔案。</span><span class="sxs-lookup"><span data-stu-id="6bb19-149">In the **Solution Explorer**, expand the **Controllers** folder and open *HomeController.cs* file in the editor.</span></span> <span data-ttu-id="6bb19-150">將下列程式碼新增至 **Index** 方法：</span><span class="sxs-lookup"><span data-stu-id="6bb19-150">Add the following code to the **Index** method:</span></span>  
   
     ```csharp  
     public ActionResult Index()  
@@ -144,7 +144,7 @@ ms.locfileid: "47863022"
     }  
     ```  
   
-2.  <span data-ttu-id="1f435-151">在方案總管中，依序展開 [檢視] 和 [首頁] 資料夾，然後在編輯器中開啟 *Index.cshtml*檔案。</span><span class="sxs-lookup"><span data-stu-id="1f435-151">In the **Solution Explorer** expand **Views** and then **Home** folders and open *Index.cshtml* file in the editor.</span></span> <span data-ttu-id="1f435-152">刪除其內容，並新增下列標記：</span><span class="sxs-lookup"><span data-stu-id="1f435-152">Delete its contents and add the following markup:</span></span>  
+2.  <span data-ttu-id="6bb19-151">在方案總管中，依序展開 [檢視] 和 [首頁] 資料夾，然後在編輯器中開啟 *Index.cshtml*檔案。</span><span class="sxs-lookup"><span data-stu-id="6bb19-151">In the **Solution Explorer** expand **Views** and then **Home** folders and open *Index.cshtml* file in the editor.</span></span> <span data-ttu-id="6bb19-152">刪除其內容，並新增下列標記：</span><span class="sxs-lookup"><span data-stu-id="6bb19-152">Delete its contents and add the following markup:</span></span>  
   
     ```html  
     @{  
@@ -212,10 +212,10 @@ ms.locfileid: "47863022"
     </table>  
     ```  
   
-3.  <span data-ttu-id="1f435-153">按 **F5** 鍵執行方案。</span><span class="sxs-lookup"><span data-stu-id="1f435-153">Run the solution by pressing the **F5** key.</span></span>  
+3.  <span data-ttu-id="6bb19-153">按 **F5** 鍵執行方案。</span><span class="sxs-lookup"><span data-stu-id="6bb19-153">Run the solution by pressing the **F5** key.</span></span>  
   
-4.  <span data-ttu-id="1f435-154">您應該會看到頁面，其中顯示安全性權杖服務所發出之權杖中的宣告。</span><span class="sxs-lookup"><span data-stu-id="1f435-154">You should be presented with the page that displays the claims in the token that was issued to you by Security Token Service.</span></span>  
+4.  <span data-ttu-id="6bb19-154">您應該會看到頁面，其中顯示安全性權杖服務所發出之權杖中的宣告。</span><span class="sxs-lookup"><span data-stu-id="6bb19-154">You should be presented with the page that displays the claims in the token that was issued to you by Security Token Service.</span></span>  
   
-## <a name="related-items"></a><span data-ttu-id="1f435-155">相關項目</span><span class="sxs-lookup"><span data-stu-id="1f435-155">Related Items</span></span>  
+## <a name="related-items"></a><span data-ttu-id="6bb19-155">相關項目</span><span class="sxs-lookup"><span data-stu-id="6bb19-155">Related Items</span></span>  
   
--   [<span data-ttu-id="1f435-156">操作說明：使用 WIF 建置宣告感知 ASP.NET Web Form 應用程式</span><span class="sxs-lookup"><span data-stu-id="1f435-156">How To: Build Claims-Aware ASP.NET Web Forms Application Using WIF</span></span>](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
+-   [<span data-ttu-id="6bb19-156">操作說明：使用 WIF 建置宣告感知 ASP.NET Web Form 應用程式</span><span class="sxs-lookup"><span data-stu-id="6bb19-156">How To: Build Claims-Aware ASP.NET Web Forms Application Using WIF</span></span>](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)

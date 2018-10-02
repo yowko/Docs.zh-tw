@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.assetid: c469d71f-6c77-4a24-97aa-53efa126ceef
 author: BrucePerlerMS
 ms.openlocfilehash: df4494de6b76943849db2bedef8f43ad894b6bd1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399407"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48031860"
 ---
-# <a name="ltclaimtyperequiredgt"></a><span data-ttu-id="fe778-102">&lt;claimTypeRequired&gt;</span><span class="sxs-lookup"><span data-stu-id="fe778-102">&lt;claimTypeRequired&gt;</span></span>
-<span data-ttu-id="fe778-103">指定必要的連入安全性權杖的宣告集。</span><span class="sxs-lookup"><span data-stu-id="fe778-103">Specifies the set of required claims for incoming security tokens.</span></span>  
+# <a name="ltclaimtyperequiredgt"></a><span data-ttu-id="24f9d-102">&lt;claimTypeRequired&gt;</span><span class="sxs-lookup"><span data-stu-id="24f9d-102">&lt;claimTypeRequired&gt;</span></span>
+<span data-ttu-id="24f9d-103">指定必要的連入安全性權杖的宣告集。</span><span class="sxs-lookup"><span data-stu-id="24f9d-103">Specifies the set of required claims for incoming security tokens.</span></span>  
   
- <span data-ttu-id="fe778-104">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="fe778-104">\<system.identityModel></span></span>  
-<span data-ttu-id="fe778-105">\<identityConfiguration></span><span class="sxs-lookup"><span data-stu-id="fe778-105">\<identityConfiguration></span></span>  
-<span data-ttu-id="fe778-106">\<claimTypeRequired ></span><span class="sxs-lookup"><span data-stu-id="fe778-106">\<claimTypeRequired></span></span>  
+ <span data-ttu-id="24f9d-104">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="24f9d-104">\<system.identityModel></span></span>  
+<span data-ttu-id="24f9d-105">\<identityConfiguration></span><span class="sxs-lookup"><span data-stu-id="24f9d-105">\<identityConfiguration></span></span>  
+<span data-ttu-id="24f9d-106">\<claimTypeRequired ></span><span class="sxs-lookup"><span data-stu-id="24f9d-106">\<claimTypeRequired></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fe778-107">語法</span><span class="sxs-lookup"><span data-stu-id="fe778-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="24f9d-107">語法</span><span class="sxs-lookup"><span data-stu-id="24f9d-107">Syntax</span></span>  
   
 ```xml  
 <system.identityModel>  
@@ -28,20 +28,20 @@ ms.locfileid: "47399407"
 </system.identityModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="fe778-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="fe778-108">Attributes and Elements</span></span>  
- <span data-ttu-id="fe778-109">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="fe778-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="24f9d-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="24f9d-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="24f9d-109">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="24f9d-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="fe778-110">屬性</span><span class="sxs-lookup"><span data-stu-id="fe778-110">Attributes</span></span>  
- <span data-ttu-id="fe778-111">無</span><span class="sxs-lookup"><span data-stu-id="fe778-111">None</span></span>  
+### <a name="attributes"></a><span data-ttu-id="24f9d-110">屬性</span><span class="sxs-lookup"><span data-stu-id="24f9d-110">Attributes</span></span>  
+ <span data-ttu-id="24f9d-111">無</span><span class="sxs-lookup"><span data-stu-id="24f9d-111">None</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="fe778-112">子元素</span><span class="sxs-lookup"><span data-stu-id="fe778-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="24f9d-112">子元素</span><span class="sxs-lookup"><span data-stu-id="24f9d-112">Child Elements</span></span>  
   
-|<span data-ttu-id="fe778-113">項目</span><span class="sxs-lookup"><span data-stu-id="fe778-113">Element</span></span>|<span data-ttu-id="fe778-114">描述</span><span class="sxs-lookup"><span data-stu-id="fe778-114">Description</span></span>|  
+|<span data-ttu-id="24f9d-113">項目</span><span class="sxs-lookup"><span data-stu-id="24f9d-113">Element</span></span>|<span data-ttu-id="24f9d-114">描述</span><span class="sxs-lookup"><span data-stu-id="24f9d-114">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="fe778-115">\<claimType ></span><span class="sxs-lookup"><span data-stu-id="fe778-115">\<claimType></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtype.md)|<span data-ttu-id="fe778-116">指定連入安全性權杖的單一選用或必要宣告。</span><span class="sxs-lookup"><span data-stu-id="fe778-116">Specifies a single optional or required claim for incoming security tokens.</span></span>|  
+|[<span data-ttu-id="24f9d-115">\<claimType ></span><span class="sxs-lookup"><span data-stu-id="24f9d-115">\<claimType></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtype.md)|<span data-ttu-id="24f9d-116">指定連入安全性權杖的單一選用或必要宣告。</span><span class="sxs-lookup"><span data-stu-id="24f9d-116">Specifies a single optional or required claim for incoming security tokens.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="fe778-117">父項目</span><span class="sxs-lookup"><span data-stu-id="fe778-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="24f9d-117">父項目</span><span class="sxs-lookup"><span data-stu-id="24f9d-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="fe778-118">項目</span><span class="sxs-lookup"><span data-stu-id="fe778-118">Element</span></span>|<span data-ttu-id="fe778-119">描述</span><span class="sxs-lookup"><span data-stu-id="fe778-119">Description</span></span>|  
+|<span data-ttu-id="24f9d-118">項目</span><span class="sxs-lookup"><span data-stu-id="24f9d-118">Element</span></span>|<span data-ttu-id="24f9d-119">描述</span><span class="sxs-lookup"><span data-stu-id="24f9d-119">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="fe778-120">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="fe778-120">\<identityConfiguration></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|<span data-ttu-id="fe778-121">指定服務層級身分識別設定。</span><span class="sxs-lookup"><span data-stu-id="fe778-121">Specifies service-level identity settings.</span></span>|
+|[<span data-ttu-id="24f9d-120">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="24f9d-120">\<identityConfiguration></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|<span data-ttu-id="24f9d-121">指定服務層級身分識別設定。</span><span class="sxs-lookup"><span data-stu-id="24f9d-121">Specifies service-level identity settings.</span></span>|

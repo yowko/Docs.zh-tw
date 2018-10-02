@@ -11,54 +11,54 @@ ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: bc0b75db5b3f35087df70c9155a1ba3b39ceae4d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47205979"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48028416"
 ---
-# <a name="ltconnectionmanagementgt-element-network-settings"></a><span data-ttu-id="88148-102">&lt;connectionManagement&gt;項目 （網路設定）</span><span class="sxs-lookup"><span data-stu-id="88148-102">&lt;connectionManagement&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="88148-103">指定連接至網路主機的連線數目上限。</span><span class="sxs-lookup"><span data-stu-id="88148-103">Specifies the maximum number of connections to a network host.</span></span>  
+# <a name="ltconnectionmanagementgt-element-network-settings"></a><span data-ttu-id="f484e-102">&lt;connectionManagement&gt;項目 （網路設定）</span><span class="sxs-lookup"><span data-stu-id="f484e-102">&lt;connectionManagement&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="f484e-103">指定連接至網路主機的連線數目上限。</span><span class="sxs-lookup"><span data-stu-id="f484e-103">Specifies the maximum number of connections to a network host.</span></span>  
   
- <span data-ttu-id="88148-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="88148-104">\<configuration></span></span>  
-<span data-ttu-id="88148-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="88148-105">\<system.net></span></span>  
-<span data-ttu-id="88148-106">\<connectionManagement ></span><span class="sxs-lookup"><span data-stu-id="88148-106">\<connectionManagement></span></span>  
+ <span data-ttu-id="f484e-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="f484e-104">\<configuration></span></span>  
+<span data-ttu-id="f484e-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="f484e-105">\<system.net></span></span>  
+<span data-ttu-id="f484e-106">\<connectionManagement ></span><span class="sxs-lookup"><span data-stu-id="f484e-106">\<connectionManagement></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="88148-107">語法</span><span class="sxs-lookup"><span data-stu-id="88148-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f484e-107">語法</span><span class="sxs-lookup"><span data-stu-id="f484e-107">Syntax</span></span>  
   
 ```xml  
 <connectionManagement>   
 </connectionManagement>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="88148-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="88148-108">Attributes and Elements</span></span>  
- <span data-ttu-id="88148-109">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="88148-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f484e-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="f484e-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="f484e-109">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="f484e-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="88148-110">屬性</span><span class="sxs-lookup"><span data-stu-id="88148-110">Attributes</span></span>  
- <span data-ttu-id="88148-111">無。</span><span class="sxs-lookup"><span data-stu-id="88148-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="f484e-110">屬性</span><span class="sxs-lookup"><span data-stu-id="f484e-110">Attributes</span></span>  
+ <span data-ttu-id="f484e-111">無。</span><span class="sxs-lookup"><span data-stu-id="f484e-111">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="88148-112">子元素</span><span class="sxs-lookup"><span data-stu-id="88148-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="f484e-112">子元素</span><span class="sxs-lookup"><span data-stu-id="f484e-112">Child Elements</span></span>  
   
-|<span data-ttu-id="88148-113">**目**</span><span class="sxs-lookup"><span data-stu-id="88148-113">**Element**</span></span>|<span data-ttu-id="88148-114">**描述**</span><span class="sxs-lookup"><span data-stu-id="88148-114">**Description**</span></span>|  
+|<span data-ttu-id="f484e-113">**目**</span><span class="sxs-lookup"><span data-stu-id="f484e-113">**Element**</span></span>|<span data-ttu-id="f484e-114">**描述**</span><span class="sxs-lookup"><span data-stu-id="f484e-114">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="88148-115">add</span><span class="sxs-lookup"><span data-stu-id="88148-115">add</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-connectionmanagement-network-settings.md)|<span data-ttu-id="88148-116">將 IP 位址或 DNS 名稱加入連線管理清單中。</span><span class="sxs-lookup"><span data-stu-id="88148-116">Adds an IP address or DNS name to the connection management list.</span></span>|  
-|[<span data-ttu-id="88148-117">clear</span><span class="sxs-lookup"><span data-stu-id="88148-117">clear</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-connectionmanagement-network-settings.md)|<span data-ttu-id="88148-118">清除連接管理清單中。</span><span class="sxs-lookup"><span data-stu-id="88148-118">Clears the connection management list.</span></span>|  
-|[<span data-ttu-id="88148-119">remove</span><span class="sxs-lookup"><span data-stu-id="88148-119">remove</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-connectionmanagement-network-settings.md)|<span data-ttu-id="88148-120">從連線管理清單中，移除 IP 位址或 DNS 名稱。</span><span class="sxs-lookup"><span data-stu-id="88148-120">Removes an IP address or DNS name from the connection management list.</span></span>|  
+|[<span data-ttu-id="f484e-115">add</span><span class="sxs-lookup"><span data-stu-id="f484e-115">add</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-connectionmanagement-network-settings.md)|<span data-ttu-id="f484e-116">將 IP 位址或 DNS 名稱加入連線管理清單中。</span><span class="sxs-lookup"><span data-stu-id="f484e-116">Adds an IP address or DNS name to the connection management list.</span></span>|  
+|[<span data-ttu-id="f484e-117">clear</span><span class="sxs-lookup"><span data-stu-id="f484e-117">clear</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-connectionmanagement-network-settings.md)|<span data-ttu-id="f484e-118">清除連接管理清單中。</span><span class="sxs-lookup"><span data-stu-id="f484e-118">Clears the connection management list.</span></span>|  
+|[<span data-ttu-id="f484e-119">remove</span><span class="sxs-lookup"><span data-stu-id="f484e-119">remove</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-connectionmanagement-network-settings.md)|<span data-ttu-id="f484e-120">從連線管理清單中，移除 IP 位址或 DNS 名稱。</span><span class="sxs-lookup"><span data-stu-id="f484e-120">Removes an IP address or DNS name from the connection management list.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="88148-121">父項目</span><span class="sxs-lookup"><span data-stu-id="88148-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="f484e-121">父項目</span><span class="sxs-lookup"><span data-stu-id="f484e-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="88148-122">**目**</span><span class="sxs-lookup"><span data-stu-id="88148-122">**Element**</span></span>|<span data-ttu-id="88148-123">**描述**</span><span class="sxs-lookup"><span data-stu-id="88148-123">**Description**</span></span>|  
+|<span data-ttu-id="f484e-122">**目**</span><span class="sxs-lookup"><span data-stu-id="f484e-122">**Element**</span></span>|<span data-ttu-id="f484e-123">**描述**</span><span class="sxs-lookup"><span data-stu-id="f484e-123">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="88148-124">system.net</span><span class="sxs-lookup"><span data-stu-id="88148-124">system.net</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="88148-125">包含會指定 .NET Framework 如何連接至網路的設定。</span><span class="sxs-lookup"><span data-stu-id="88148-125">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
+|[<span data-ttu-id="f484e-124">system.net</span><span class="sxs-lookup"><span data-stu-id="f484e-124">system.net</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="f484e-125">包含會指定 .NET Framework 如何連接至網路的設定。</span><span class="sxs-lookup"><span data-stu-id="f484e-125">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="88148-126">備註</span><span class="sxs-lookup"><span data-stu-id="88148-126">Remarks</span></span>  
- <span data-ttu-id="88148-127">`connectionManagement`項目至伺服器或伺服器群組中定義的連線數目上限。</span><span class="sxs-lookup"><span data-stu-id="88148-127">The `connectionManagement` element defines the maximum number of connections to a server or group of servers.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f484e-126">備註</span><span class="sxs-lookup"><span data-stu-id="f484e-126">Remarks</span></span>  
+ <span data-ttu-id="f484e-127">`connectionManagement`項目至伺服器或伺服器群組中定義的連線數目上限。</span><span class="sxs-lookup"><span data-stu-id="f484e-127">The `connectionManagement` element defines the maximum number of connections to a server or group of servers.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="88148-128">組態檔</span><span class="sxs-lookup"><span data-stu-id="88148-128">Configuration Files</span></span>  
- <span data-ttu-id="88148-129">此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。</span><span class="sxs-lookup"><span data-stu-id="88148-129">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="f484e-128">組態檔</span><span class="sxs-lookup"><span data-stu-id="f484e-128">Configuration Files</span></span>  
+ <span data-ttu-id="f484e-129">此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。</span><span class="sxs-lookup"><span data-stu-id="f484e-129">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="88148-130">範例</span><span class="sxs-lookup"><span data-stu-id="88148-130">Example</span></span>  
- <span data-ttu-id="88148-131">下列範例會設定應用程式使用四個連接至 www.contoso.com 伺服器和兩個連線到所有其他伺服器。</span><span class="sxs-lookup"><span data-stu-id="88148-131">The following example configures an application to use four connections to the server www.contoso.com and two connections to all other servers.</span></span>  
+## <a name="example"></a><span data-ttu-id="f484e-130">範例</span><span class="sxs-lookup"><span data-stu-id="f484e-130">Example</span></span>  
+ <span data-ttu-id="f484e-131">下列範例會設定應用程式使用四個連接至 www.contoso.com 伺服器和兩個連線到所有其他伺服器。</span><span class="sxs-lookup"><span data-stu-id="f484e-131">The following example configures an application to use four connections to the server www.contoso.com and two connections to all other servers.</span></span>  
   
 ```xml  
 <configuration>  
@@ -71,7 +71,7 @@ ms.locfileid: "47205979"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="88148-132">另請參閱</span><span class="sxs-lookup"><span data-stu-id="88148-132">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="f484e-132">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f484e-132">See Also</span></span>  
  <xref:System.Net.ServicePoint>  
  <xref:System.Net.ServicePointManager>  
- [<span data-ttu-id="88148-133">網路設定結構描述</span><span class="sxs-lookup"><span data-stu-id="88148-133">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="f484e-133">網路設定結構描述</span><span class="sxs-lookup"><span data-stu-id="f484e-133">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
