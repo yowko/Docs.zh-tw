@@ -2,12 +2,12 @@
 title: 工作流程服務主機內部
 ms.date: 03/30/2017
 ms.assetid: af44596f-bf6a-4149-9f04-08d8e8f45250
-ms.openlocfilehash: 55458dce498ac2630b7c69b743e0c0df1d5c4e92
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd03508397b77f4446a5b708c69333336d97193c
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33505501"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48036035"
 ---
 # <a name="workflow-service-host-internals"></a>工作流程服務主機內部
 <xref:System.ServiceModel.WorkflowServiceHost> 會提供工作流程服務的主機。 它會負責接聽傳入訊息並將訊息路由傳送至適當的工作流程服務執行個體、控制閒置工作流程的卸載和保存作業，以及其他作業。 本主題描述 WorkflowServiceHost 如何處理傳入訊息。  
@@ -17,7 +17,7 @@ ms.locfileid: "33505501"
   
  ![WorkflowServiceHost 概觀](../../../../docs/framework/wcf/feature-details/media/wfshhighlevel.gif "WFSHHighLevel")  
   
- 這張圖表顯示 <xref:System.ServiceModel.WorkflowServiceHost> 會從 .xamlx 檔案載入工作流程服務定義，並且從組態檔載入組態資訊。 它也會從追蹤設定檔載入追蹤組態。 <xref:System.ServiceModel.WorkflowServiceHost> 會公開工作流程控制端點，可讓您將控制作業傳送至工作流程執行個體。  如需詳細資訊，請參閱[流程控制端點](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)和[工作流程管理端點範例](../../../../docs/framework/windows-workflow-foundation/samples/workflow-management-endpoint-sample.md)。  
+ 這張圖表顯示 <xref:System.ServiceModel.WorkflowServiceHost> 會從 .xamlx 檔案載入工作流程服務定義，並且從組態檔載入組態資訊。 它也會從追蹤設定檔載入追蹤組態。 <xref:System.ServiceModel.WorkflowServiceHost> 會公開工作流程控制端點，可讓您將控制作業傳送至工作流程執行個體。  如需詳細資訊，請參閱[流程控制端點範例](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)。  
   
  <xref:System.ServiceModel.WorkflowServiceHost> 也會公開應用程式端點，以便接聽傳入的應用程式訊息。 當傳入訊息送達時，它就會傳送至適當的工作流程服務執行個體 (如果目前已載入的話)。 必要時，它也會建立新的工作流程執行個體。 或者，如果現有的執行個體已經保存，就會從持續性存放區載入此執行個體。  
   
@@ -26,7 +26,7 @@ ms.locfileid: "33505501"
   
  ![工作流程服務主機訊息流程](../../../../docs/framework/wcf/feature-details/media/wfshmessageflow.gif "WFSHMessageFlow")  
   
- 這張圖表顯示三個不同的端點：應用程式端點、工作流程控制端點和工作流程裝載端點。 應用程式端點會接收要傳送至特定工作流程執行個體的訊息。 工作流程控制端點會接聽控制作業。 工作流程裝載端點會接聽讓 <xref:System.ServiceModel.WorkflowServiceHost> 載入並執行非服務工作流程的訊息。 如圖表所示，所有訊息都會透過 WCF 執行階段處理。  工作流程執行個體節流是使用 <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A> 屬性來達成。 這個屬性會限制並行工作流程服務執行個體的數目。 超過此節流時，系統就會將新工作流程服務執行個體的任何其他要求或啟動已保存之工作流程執行個體的要求排入佇列。 已佇列的要求會按照 FIFO 順序來處理，不論它們是新執行個體或執行中之已保存執行個體的要求都一樣。 系統會載入主機原則資訊，以便判斷如何處理未處理的例外狀況，以及如何卸載並保存閒置的工作流程服務。 如需有關這些主題，請參閱[How to： 設定工作流程未處理例外狀況行為以 WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)和[How to： 以 WorkflowServiceHost 設定 「 閒置行為](../../../../docs/framework/wcf/feature-details/how-to-configure-idle-behavior-with-workflowservicehost.md)。 工作流程執行個體是根據主機原則來保存，並在必要時重新載入。 如需工作流程持續性詳細資訊，請參閱： [How to： 以 WorkflowServiceHost 設定的持續性](../../../../docs/framework/wcf/feature-details/how-to-configure-persistence-with-workflowservicehost.md)，[建立長時間執行工作流程服務](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)，和[工作流程持續性](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md).  
+ 這張圖表顯示三個不同的端點：應用程式端點、工作流程控制端點和工作流程裝載端點。 應用程式端點會接收要傳送至特定工作流程執行個體的訊息。 工作流程控制端點會接聽控制作業。 工作流程裝載端點會接聽讓 <xref:System.ServiceModel.WorkflowServiceHost> 載入並執行非服務工作流程的訊息。 如圖表所示，所有訊息都會透過 WCF 執行階段處理。  工作流程執行個體節流是使用 <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A> 屬性來達成。 這個屬性會限制並行工作流程服務執行個體的數目。 超過此節流時，系統就會將新工作流程服務執行個體的任何其他要求或啟動已保存之工作流程執行個體的要求排入佇列。 已佇列的要求會按照 FIFO 順序來處理，不論它們是新執行個體或執行中之已保存執行個體的要求都一樣。 系統會載入主機原則資訊，以便判斷如何處理未處理的例外狀況，以及如何卸載並保存閒置的工作流程服務。 如需這些主題的詳細資訊，請參閱[如何： 設定工作流程未處理例外狀況的行為使用 WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)並[如何： 以 WorkflowServiceHost 設定 「 閒置行為](../../../../docs/framework/wcf/feature-details/how-to-configure-idle-behavior-with-workflowservicehost.md)。 工作流程執行個體是根據主機原則來保存，並在必要時重新載入。 如需工作流程持續性的詳細資訊，請參閱：[如何： 以 WorkflowServiceHost 設定的持續性](../../../../docs/framework/wcf/feature-details/how-to-configure-persistence-with-workflowservicehost.md)，[建立長時間執行的工作流程服務](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)，和[工作流程持續性](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md).  
   
  下圖顯示所呼叫的 WorkflowServiceHost.Open 項目。  
   
@@ -42,18 +42,18 @@ ms.locfileid: "33505501"
   
  下圖顯示當 <xref:System.ServiceModel.WorkflowServiceHost> 接收要傳送至 CanCreateInstance 設定為 false 之 Receive 活動的訊息時，它所進行的作業。  
   
- ![WorkflowServiceHost 收到訊息](../../../../docs/framework/wcf/feature-details/media/wfshreceivemessage.gif "WFSHReceiveMessage")  
+ ![WorkflowServiceHost 接收訊息](../../../../docs/framework/wcf/feature-details/media/wfshreceivemessage.gif "WFSHReceiveMessage")  
   
  當訊息送達時，就會由 WCF 通道堆疊處理。 然後，系統會檢查節流並執行相互關聯查詢。 此訊息要傳送至現有的執行個體 (因為 CanCreateInstance 為 false)，所以系統會從持續性存放區載入執行個體、繼續使用書籤，然後工作流程便執行。  
   
 > [!WARNING]
->  如果 SQL Server 設定為只在 NamedPipe 通訊協定上接聽，工作流程服務主機將無法開啟。  
+> 如果 SQL Server 設定為只在 NamedPipe 通訊協定上接聽，工作流程服務主機將無法開啟。  
   
-## <a name="see-also"></a>另請參閱  
- [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [裝載工作流程服務](../../../../docs/framework/wcf/feature-details/hosting-workflow-services.md)  
- [工作流程控制端點](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)  
- [工作流程管理端點範例](../../../../docs/framework/windows-workflow-foundation/samples/workflow-management-endpoint-sample.md)  
- [如何：使用 WorkflowServiceHost 設定工作流程未處理例外狀況行為](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)  
- [建立長期執行的工作流程服務](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)  
- [工作流程持續性](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)
+## <a name="see-also"></a>另請參閱
+
+- [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+- [裝載工作流程服務](../../../../docs/framework/wcf/feature-details/hosting-workflow-services.md)  
+- [工作流程控制端點](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)  
+- [如何：使用 WorkflowServiceHost 設定工作流程未處理例外狀況行為](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)  
+- [建立長期執行的工作流程服務](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)  
+- [工作流程持續性](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)

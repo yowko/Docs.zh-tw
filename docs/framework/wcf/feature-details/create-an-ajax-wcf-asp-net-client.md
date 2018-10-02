@@ -3,11 +3,11 @@ title: 在 Visual Studio 中建立啟用 AJAX 的 WCF 服務和 ASP.NET 用戶�
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
 ms.openlocfilehash: 954ee0409f370c3fa28814a70d51334fd75f7b79
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47454311"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48024606"
 ---
 # <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>HOW TO：建立啟用 AJAX 的 WCF 服務和存取該服務的 ASP.NET 用戶端
 

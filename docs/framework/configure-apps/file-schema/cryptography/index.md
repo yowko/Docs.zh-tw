@@ -13,11 +13,11 @@ ms.assetid: 1f55050a-b2a3-4868-a3c0-da20826150f3
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 71d2edac1dd9a84c9d3c92049d2494c7c5bd54b0
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216340"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48028211"
 ---
 # <a name="cryptography-settings-schema"></a>密碼編譯設定結構描述
 密碼編譯設定結構描述包含指定如何將易記的演算法名稱對應至實作密碼編譯演算法之類別的項目。  

@@ -13,11 +13,11 @@ ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 332f8eb4fb1a5a02df76c5745522037b029a2407
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47072785"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48028533"
 ---
 # <a name="ltremovegt-element-for-authenticationmodules-network-settings"></a>&lt;移除&gt;authenticationModules （網路設定） 的項目
 移除應用程式中的驗證模組。  

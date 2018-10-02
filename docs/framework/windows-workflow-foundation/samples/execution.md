@@ -2,25 +2,17 @@
 title: 執行
 ms.date: 03/30/2017
 ms.assetid: a9dcedcc-9f4c-45c2-8222-6bcbf48f3534
-ms.openlocfilehash: de3f6929be89b5e2d869275020bd3ac0ade8b1b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5773391bf9cfe8e28724e5a79f901a8e78a62ceb
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33513769"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48031810"
 ---
 # <a name="execution"></a>執行
-本節包含示範執行工作流程中 Windows Workflow Foundation (WF) 範例。  
+本節包含示範執行工作流程中 Windows Workflow Foundation (WF) 的範例。  
   
-## <a name="in-this-section"></a>本節內容  
- [工作流程管理端點範例](../../../../docs/framework/windows-workflow-foundation/samples/workflow-management-endpoint-sample.md)  
- 示範如何使用工作流程控制端點，在本機和遠端建立及執行工作流程。  
-  
- [使用 WorkflowInvoker 類別](../../../../docs/framework/windows-workflow-foundation/samples/using-the-workflowinvoker-class.md)  
- 示範如何使用 <xref:System.Activities.WorkflowInvoker> 類別如同方法一般叫用活動。  
-  
- [WorkflowApplication ReadLine 主機](../../../../docs/framework/windows-workflow-foundation/samples/workflowapplication-readline-host.md)  
- 示範如何建立泛型 ReadLine 主機。  
+## <a name="in-this-section"></a>本節內容
   
  [建立與執行工作流程執行個體](../../../../docs/framework/windows-workflow-foundation/samples/creating-and-running-a-workflow-instance.md)  
  示範如何執行工作流程執行個體。 範例中會示範如何以同步和非同步方式執行。  

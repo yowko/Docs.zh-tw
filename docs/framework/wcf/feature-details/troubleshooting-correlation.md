@@ -2,12 +2,12 @@
 title: 疑難排解相互關聯
 ms.date: 03/30/2017
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
-ms.openlocfilehash: 56b17d0a865d1a6c1afaa2844878c82b755afdc7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fecfaf7374823bb19a4ad3d7f6cb2dbbdf139703
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397148"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027919"
 ---
 # <a name="troubleshooting-correlation"></a>疑難排解相互關聯
 相互關聯用於讓工作流程服務訊息彼此之間產生關聯，以及讓工作流程服務訊息和正確的工作流程執行個體產生關聯，但是，如果設定錯誤，將不會收到訊息，而且應用程式將不會正確運作。 本主題提供數個疑難排解相互關聯問題方法的概觀，同時也列出使用相互關聯時可能發生的部分常見問題。
@@ -76,7 +76,7 @@ class CustomFactory : WorkflowServiceHostFactory
 host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
 ```
 
- 追蹤參與者 (例如 ConsoleTrackingParticipant) 對於擁有主控台視窗的自我裝載工作流程服務相當實用。 對於 Web 主控服務，追蹤參與者，可將追蹤資訊記錄到長期存放區應該使用，例如內建<xref:System.Activities.Tracking.EtwTrackingParticipant>，或將資訊記錄至檔案，這類自訂追蹤參與者`TextWriterTrackingParticpant`從[使用文字檔追蹤](../../../../docs/framework/windows-workflow-foundation/samples/tracking-using-a-text-file.md)範例。
+ 追蹤參與者 (例如 ConsoleTrackingParticipant) 對於擁有主控台視窗的自我裝載工作流程服務相當實用。 對於 Web 主控服務，追蹤參與者，可將追蹤資訊記錄到長期存放區應該使用，例如內建<xref:System.Activities.Tracking.EtwTrackingParticipant>，或將資訊記錄到檔案的自訂追蹤參與者。
 
  如需有關追蹤及設定 Web 裝載的工作流程服務的追蹤的詳細資訊，請參閱[工作流程追蹤](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)，[流程設定追蹤](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)，和[追蹤&#91;WF 範例&#93;](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md)範例。
 
@@ -214,7 +214,7 @@ sm:body()/xg0:AddItemMessage/xg0:CartId
 sm:header()/tempuri:CartId
 ```
 
- 您可以透過檢查訊息的本文來確認這點。
+您可以透過檢查訊息的本文來確認這點。
 
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
@@ -230,7 +230,7 @@ sm:header()/tempuri:CartId
 </s:Envelope>
 ```
 
- 下列範例會顯示針對使用先前訊息合約來接收資料之 <xref:System.ServiceModel.Activities.Receive> 作業所設定的 `AddItem` 活動。 此 XPath 查詢的設定正確無誤。
+下列範例會顯示針對使用先前訊息合約來接收資料之 <xref:System.ServiceModel.Activities.Receive> 作業所設定的 `AddItem` 活動。 此 XPath 查詢的設定正確無誤。
 
 ```xaml
 <Receive CorrelatesWith="[CCHandle] OperationName="AddItem" ServiceContractName="p:IService">
@@ -247,5 +247,3 @@ sm:header()/tempuri:CartId
   </ReceiveMessageContent>
 </Receive>
 ```
-
-如需有關以內容為基礎的相互關聯的詳細資訊，請參閱[相互關聯計算機](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md)範例。

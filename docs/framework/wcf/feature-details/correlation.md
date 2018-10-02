@@ -2,12 +2,12 @@
 title: 相互關聯
 ms.date: 03/30/2017
 ms.assetid: 60151f6c-19b7-47af-9cdc-76c2ac95f301
-ms.openlocfilehash: e72f462a9b8777fbeadb306c7fea8354f64ffe8c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6d02b95bcf735d42cca2b51167e21a6a091add1c
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216574"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48025171"
 ---
 # <a name="correlation"></a>相互關聯
 當工作流程服務應用程式與其他服務通訊時，將其中的訊息分派至正確的工作流程執行個體是相當重要的。 相互關聯可提供此操作的機制。 本節中的主題提供相互關聯的概要以及說明如何在不同的工作流程服務案例中加以使用。  
@@ -26,9 +26,8 @@ ms.locfileid: "47216574"
  提供疑難排解相互關聯的方法。  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Activities.CorrelationHandle>  
- <xref:System.ServiceModel.Activities.Send>  
- <xref:System.ServiceModel.Activities.Receive>  
- <xref:System.ServiceModel.CorrelationQuery>  
- [以內容為基礎的相互關聯](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)  
- [相互關聯計算機](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md)
+
+- <xref:System.ServiceModel.Activities.CorrelationHandle>  
+- <xref:System.ServiceModel.Activities.Send>  
+- <xref:System.ServiceModel.Activities.Receive>  
+- <xref:System.ServiceModel.CorrelationQuery>  

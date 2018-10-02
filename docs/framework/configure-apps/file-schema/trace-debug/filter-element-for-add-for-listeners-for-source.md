@@ -12,11 +12,11 @@ ms.assetid: 15808b80-4579-4c25-b385-178cfdf154ba
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 19b28c3391a10cc522f17c5353c9ec0726b0a2f8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47233175"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48033424"
 ---
 # <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-ltsourcegt"></a>&lt;篩選條件&gt;項目&lt;新增&gt;如&lt;接聽程式&gt;如&lt;來源&gt;
 將篩選新增至追蹤來源之 `Listeners` 集合中的接聽項。  

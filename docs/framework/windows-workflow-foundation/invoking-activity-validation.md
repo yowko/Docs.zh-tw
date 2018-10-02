@@ -2,12 +2,12 @@
 title: 叫用活動驗證
 ms.date: 03/30/2017
 ms.assetid: 22bef766-c505-4fd4-ac0f-7b363b238969
-ms.openlocfilehash: 7e8be762e6c5c67687864727dcd4ca1cde9a8e42
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61491e906bfc58bbd19cf43a5980b2781493411b
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520171"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48035132"
 ---
 # <a name="invoking-activity-validation"></a>叫用活動驗證
 活動驗證提供的方法可在活動執行前識別及報告任何活動之組態中的錯誤。 在工作流程設計工具中修改工作流程時，若工作流程設計工具中顯示任何驗證錯誤或警告，就會進行驗證。 叫用工作流程時，也會在執行階段進行驗證，而且如果發生任何驗證錯誤，預設驗證邏輯會擲回 <xref:System.Activities.InvalidWorkflowException>。 Windows Workflow Foundation (WF) 提供<xref:System.Activities.Validation.ActivityValidationServices>可以由工作流程應用程式和工具開發人員用來明確驗證活動的類別。 本主題描述如何使用 <xref:System.Activities.Validation.ActivityValidationServices> 執行活動驗證。  
@@ -152,12 +152,13 @@ catch (Exception ex)
 ```  
   
 > [!NOTE]
->  在此範例中，根活動會宣告為 `Add`，而非上一個範例中的 `Activity`。 這樣可讓 `WorkflowInvoker.Invoke` 方法傳回單一整數，代表 `Add` 活動的結果 (而非 `out` 引數的字典)。 變數 `wf` 也可能已宣告為 `Activity<int>`。  
+> 在此範例中，根活動會宣告為 `Add`，而非上一個範例中的 `Activity`。 這樣可讓 `WorkflowInvoker.Invoke` 方法傳回單一整數，代表 `Add` 活動的結果 (而非 `out` 引數的字典)。 變數 `wf` 也可能已宣告為 `Activity<int>`。  
   
  驗證根引數時，主機應用程式必須負責確保叫用工作流程時，會傳遞所有必要的引數。  
   
-### <a name="invoking-imperative-code-based-validation"></a>叫用命令式的程式碼式驗證  
- 命令式的程式碼驗證提供一個簡單的方式，可讓活動提供與其本身相關的驗證，而且適用於衍生自 <xref:System.Activities.CodeActivity>、<xref:System.Activities.AsyncCodeActivity> 和 <xref:System.Activities.NativeActivity> 的活動。 活動中會加入用來判斷任何驗證錯誤或警告的驗證程式碼。 在活動叫用驗證時，這些警告或錯誤包含在呼叫 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 所傳回的集合中。 在下列範例中，取自[基本驗證](../../../docs/framework/windows-workflow-foundation/samples/basic-validation.md)範例中，`CreateProduct`活動定義。 如果 `Cost` 大於 `Price`，就會將驗證錯誤加入至<xref:System.Activities.CodeActivity.CacheMetadata%2A> 覆寫中的中繼資料。  
+### <a name="invoking-imperative-code-based-validation"></a>叫用命令式的程式碼式驗證
+
+命令式的程式碼驗證提供一個簡單的方式，可讓活動提供與其本身相關的驗證，而且適用於衍生自 <xref:System.Activities.CodeActivity>、<xref:System.Activities.AsyncCodeActivity> 和 <xref:System.Activities.NativeActivity> 的活動。 活動中會加入用來判斷任何驗證錯誤或警告的驗證程式碼。 在活動叫用驗證時，這些警告或錯誤包含在呼叫 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 所傳回的集合中。 在下列範例中，會定義 `CreateProduct` 活動。 如果 `Cost` 大於 `Price`，就會將驗證錯誤加入至<xref:System.Activities.CodeActivity.CacheMetadata%2A> 覆寫中的中繼資料。  
   
 ```csharp  
 public sealed class CreateProduct : CodeActivity  
@@ -233,7 +234,7 @@ else
 >  自訂活動作者可以在活動的 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 覆寫中提供驗證邏輯。 從 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 擲回的任何例外狀況都不會被視為驗證錯誤。 這些例外狀況會從 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 的呼叫中逸出，而且必須由呼叫端處理。  
   
 ## <a name="using-validationsettings"></a>使用 ValidationSettings  
- 根據預設，當 <xref:System.Activities.Validation.ActivityValidationServices> 叫用驗證時，會評估活動樹狀結構中的所有活動。 <xref:System.Activities.Validation.ValidationSettings> 允許透過設定驗證的三個屬性，以數種不同的方式自訂驗證。 <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A> 指定驗證程式是否應逐一查核整個活動樹狀結構，或者只需將驗證邏輯套用於所提供的活動。 此值的預設值為 `false`。 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 會指定從型別至條件約束清單的其他條件約束對應。 為取得要驗證之活動樹狀結構中每個活動的基底型別，會查詢 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>。 如果找到相符的條件約束清單，會為該活動評估清單中的所有條件約束。 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> 指定驗證程式是否應評估所有條件約束，或者只需評估 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 中指定的條件約束。 預設值是 `false`。 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>和 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> 適合讓工作流程主機作者用來新增額外的工作流程驗證，例如 FxCop 等工具的原則條件約束。 如需條件約束的詳細資訊，請參閱[宣告式條件約束](../../../docs/framework/windows-workflow-foundation/declarative-constraints.md)。  
+ 根據預設，當 <xref:System.Activities.Validation.ActivityValidationServices> 叫用驗證時，會評估活動樹狀結構中的所有活動。 <xref:System.Activities.Validation.ValidationSettings> 允許透過設定驗證的三個屬性，以數種不同的方式自訂驗證。 <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A> 指定驗證程式是否應逐一查核整個活動樹狀結構，或者只需將驗證邏輯套用於所提供的活動。 此值的預設值為 `false`。 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 會指定從型別至條件約束清單的其他條件約束對應。 為取得要驗證之活動樹狀結構中每個活動的基底型別，會查詢 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>。 如果找到相符的條件約束清單，會為該活動評估清單中的所有條件約束。 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> 指定驗證程式是否應評估所有條件約束，或者只需評估 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 中指定的條件約束。 預設值是 `false`。 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>和 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> 適合讓工作流程主機作者用來新增額外的工作流程驗證，例如 FxCop 等工具的原則條件約束。 如需有關條件約束的詳細資訊，請參閱[宣告式條件約束](../../../docs/framework/windows-workflow-foundation/declarative-constraints.md)。  
   
  若要使用 <xref:System.Activities.Validation.ValidationSettings>，請設定所需的屬性，然後在對 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 的呼叫中傳遞它。 在此範例中，會驗證包含 <xref:System.Activities.Statements.Sequence> 的活動 (該活動具有 `Add` 活動)。 `Add` 活動具有兩個必要引數。  
   
@@ -303,4 +304,4 @@ else
   
  這個程式碼會顯示下列輸出：  
   
- **沒有警告或錯誤**即使`Add`活動具有必要引數未繫結中，驗證會成功，因為會評估根活動。 若只驗證活動樹狀中的特定項目，例如要在設計工具中驗證單一活動的屬性變更，這種類型的驗證相當有用。 請注意，若叫用此工作流程，會評估工作流程中設定的完整驗證，而且可能會擲回 <xref:System.Activities.InvalidWorkflowException>。 <xref:System.Activities.Validation.ActivityValidationServices> 和 <xref:System.Activities.Validation.ValidationSettings> 只會設定主機明確叫用的驗證，不會設定叫用工作流程時所發生的驗證。
+ **沒有警告或錯誤**即使`Add`活動具有必要引數未繫結，驗證會成功，因為在評估根活動。 若只驗證活動樹狀中的特定項目，例如要在設計工具中驗證單一活動的屬性變更，這種類型的驗證相當有用。 請注意，若叫用此工作流程，會評估工作流程中設定的完整驗證，而且可能會擲回 <xref:System.Activities.InvalidWorkflowException>。 <xref:System.Activities.Validation.ActivityValidationServices> 和 <xref:System.Activities.Validation.ValidationSettings> 只會設定主機明確叫用的驗證，不會設定叫用工作流程時所發生的驗證。

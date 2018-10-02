@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 05d73638-30a9-43b4-8c86-f27f57b6eef1
 author: BrucePerlerMS
 ms.openlocfilehash: 6f005fade22df9476f5411e9a55334320300169c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399657"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48029229"
 ---
 # <a name="security-in-wcf"></a>WCF 的安全性
 本章節包含與 Windows Communication Foundation (WCF) 安全性相關的範例。  

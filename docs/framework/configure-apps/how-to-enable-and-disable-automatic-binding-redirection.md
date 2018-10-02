@@ -8,11 +8,11 @@ ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 9b9c9cbdb89ccf67942dcccee37ea410c6fa39a5
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208668"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48036191"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>如何：啟用和停用自動繫結重新導向
 

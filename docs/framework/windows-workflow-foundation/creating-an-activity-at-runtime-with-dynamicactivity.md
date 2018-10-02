@@ -2,12 +2,12 @@
 title: 使用 DynamicActivity 在執行階段建立活動
 ms.date: 03/30/2017
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
-ms.openlocfilehash: 0450a56059083f355f3fd71d95c83bf8dd1cf0e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 880dbc6263b64c877d3211347541766d91534c85
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515170"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027360"
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>使用 DynamicActivity 在執行階段建立活動
 <xref:System.Activities.DynamicActivity> 是含公用建構函式的具體密封類別。 <xref:System.Activities.DynamicActivity> 可在執行階段中使用活動 DOM 來組合活動功能。  
@@ -23,7 +23,7 @@ ms.locfileid: "33515170"
   
 1.  開啟 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]。  
   
-2.  選取**檔案**，**新**，**專案**。 選取**Workflow 4.0**下**Visual C#** 中**專案類型**視窗，並選取**v2010**節點。 選取**循序工作流程主控台應用程式**中**範本**視窗。 將新專案命名為 DynamicActivitySample。  
+2.  選取 **檔案**，**新**，**專案**。 選取  **Workflow 4.0**下方**Visual C#** 中**專案類型**視窗中，然後選取**v2010**節點。 選取 **循序工作流程主控台應用程式**中**範本**視窗。 將新專案命名為 DynamicActivitySample。  
   
 3.  以滑鼠右鍵按一下 HelloActivity 專案中的 Workflow1.xaml，然後選取**刪除**。  
   
@@ -66,17 +66,17 @@ ms.locfileid: "33515170"
                 Console.ReadLine();  
     ```  
   
-6.  執行應用程式。 主控台視窗中，以文字"Hello World ！" 會顯示。  
+6.  執行應用程式。 含有文字"Hello World ！"的主控台視窗 會顯示。  
   
 #### <a name="to-create-an-activity-at-runtime-using-xaml"></a>若要使用 XAML 在執行階段建立活動  
   
 1.  開啟 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]。  
   
-2.  選取**檔案**，**新**，**專案**。 選取**Workflow 4.0**下**Visual C#** 中**專案類型**視窗，並選取**v2010**節點。 選取**工作流程主控台應用程式**中**範本**視窗。 將新專案命名為 DynamicActivitySample。  
+2.  選取 **檔案**，**新**，**專案**。 選取  **Workflow 4.0**下方**Visual C#** 中**專案類型**視窗中，然後選取**v2010**節點。 選取 **工作流程主控台應用程式**中**範本**視窗。 將新專案命名為 DynamicActivitySample。  
   
-3.  開啟 HelloActivity 專案中的 Workflow1.xaml。 按一下**引數**在設計工具底部的選項。 建立新的 `In` 引數，其名稱為 `TextToWrite`、型別為 `String`。  
+3.  開啟 HelloActivity 專案中的 Workflow1.xaml。 按一下 **引數**底部的設計工具的選項。 建立新的 `In` 引數，其名稱為 `TextToWrite`、型別為 `String`。  
   
-4.  拖曳**WriteLine**活動從**基本型別**區段的 [工具箱] 拖曳至設計工具介面上。 將值指派`TextToWrite`至**文字**活動的屬性。  
+4.  拖曳**WriteLine**活動，從**基本型別**拖曳至設計工具介面上的工具箱 的區段。 將值指派`TextToWrite`要**文字**活動的屬性。  
   
 5.  開啟 Program.cs。 將下列指示詞加入至檔案的頂端。  
   
@@ -92,10 +92,10 @@ ms.locfileid: "33515170"
     Console.ReadLine();  
     ```  
   
-7.  執行應用程式。 主控台視窗中，以文字"Hello World ！" 隨即出現。  
+7.  執行應用程式。 含有文字"Hello World ！"的主控台視窗 隨即出現。  
   
-8.  以滑鼠右鍵按一下中的 workflow1.xaml**方案總管 中**選取**檢視程式碼**。 請注意，活動類別是以 `x:Class` 建立的，而屬性則是以 `x:Property` 建立的。  
+8.  以滑鼠右鍵按一下中的 workflow1.xaml**方案總管**，然後選取**檢視程式碼**。 請注意，活動類別是以 `x:Class` 建立的，而屬性則是以 `x:Property` 建立的。  
   
-## <a name="see-also"></a>另請參閱  
- [使用命令式程式碼撰寫工作流程、活動與運算式](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)  
- [DynamicActivity 建立](../../../docs/framework/windows-workflow-foundation/samples/dynamicactivity-creation.md)
+## <a name="see-also"></a>另請參閱
+
+- [使用命令式程式碼撰寫工作流程、活動與運算式](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)

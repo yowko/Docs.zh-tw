@@ -2,12 +2,12 @@
 title: .NET Framework 4.5 中的外顯化原則活動
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 4d107188bbcb46006ba6a6eab491ccb97aa4a83d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1c2f66caeb9932422681ba7176346a5e5e084c11
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503403"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48046628"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5 中的外顯化原則活動
 
@@ -56,7 +56,7 @@ ExternalizedPolicy4 設計工具讓您不需要撰寫程式碼，即可設定活
 
 ## <a name="policy4-and-externalpolicy4"></a>Policy4 和 ExternalPolicy4
 
-[.NET Framework 4.5 中的原則活動](../../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md)活動可讓您建立及執行 WF 4.5 工作流程中的.NET Framework 3.5 RuleSet。 <xref:System.Workflow.Activities.Rules.RuleSet> 已序列化，內嵌於 Policy4 活動 XAML 定義中。 ExternalizedPolicy4 範例示範如何使用現有的外部 <xref:System.Workflow.Activities.Rules.RuleSet> (包含在 .rules 檔案中)。
+[原則] 活動可讓您建立及執行 WF 4.5 工作流程中的.NET Framework 3.5 RuleSet。 <xref:System.Workflow.Activities.Rules.RuleSet> 已序列化，內嵌於 Policy4 活動 XAML 定義中。 ExternalizedPolicy4 範例示範如何使用現有的外部 <xref:System.Workflow.Activities.Rules.RuleSet> (包含在 .rules 檔案中)。
 
 ## <a name="use-this-sample"></a>使用此範例
 

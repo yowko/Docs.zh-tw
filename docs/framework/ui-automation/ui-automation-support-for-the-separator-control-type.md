@@ -9,11 +9,11 @@ ms.assetid: 89f42247-c699-4afa-91e1-2baaf0d86c9d
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: cab684ba9ceea392b245f04a9613832e1e262eab
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204569"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48025580"
 ---
 # <a name="ui-automation-support-for-the-separator-control-type"></a>Separator 控制項類型的 UI 自動化支援
 > [!NOTE]

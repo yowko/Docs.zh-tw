@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: c2c549e5-ac19-40c5-b686-8f67f52b6dbf
 author: BrucePerlerMS
 ms.openlocfilehash: df40a87e2fe58b93a963d53fc79f88bbc7bdb805
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47421199"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48026944"
 ---
 # <a name="cryptographic-agility-in-wcf-security"></a>WCF 安全性中的加密彈性
 此範例示範如何在提供的密碼編譯的敏捷式實作 Windows Communication Foundation (WCF) 用戶端和服務中的標準/自訂演算法中指定。 此範例是由下列專案所組成：  

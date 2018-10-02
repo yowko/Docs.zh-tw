@@ -2,14 +2,14 @@
 title: 設計工具重新裝載
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-ms.openlocfilehash: 1901df62ccdeec3f75ce0d8cd85484f46fac4541
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f8dbe89ec605f3e957b5178eafd2e034e8159dc3
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45652920"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48028910"
 ---
-# <a name="designer-rehosting"></a>設計工具重新裝載
+# <a name="designer-rehosting"></a>重新裝載的設計工具
 設計工具重新裝載是在自訂應用程式中裝載工作流程設計畫布的一般案例。 大多數人熟悉的裝載應用程式是 Visual Studio，但在一些情況下，在應用程式中顯示工作流程設計工具可能很有用：  
   
 -   監視應用程式 (讓使用者視覺化處理序，以及有關處理序的執行階段資料，例如目前作用中狀態、彙總執行時間資料，或有關工作流程執行個體的其他資訊)。  

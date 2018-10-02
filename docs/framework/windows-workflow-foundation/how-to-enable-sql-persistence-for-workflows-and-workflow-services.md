@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: 55869c3c8a957de98962378cc1a93e7058e24e38
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d79c8fc364d13c00049523f7788ada258af6ec98
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524866"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48028333"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>HOW TO：啟用工作流程與工作流程服務的 SQL 持續性
 
@@ -72,7 +72,7 @@ Windows Server App Fabric 會簡化設定持續性的程序。 如需詳細資�
    ```
 
 > [!NOTE]
-> 請參閱[保存工作流程應用程式](../../../docs/framework/windows-workflow-foundation/samples/persisting-a-workflow-application.md)範例，以[持續性](../../../docs/framework/windows-workflow-foundation/samples/persistence.md)啟用持續性工作流程使用的範例，如<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>，和[How to： 建立及執行長時間執行工作流程](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)的步驟[入門教學課程](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)的逐步指示。  
+> 請參閱[如何： 建立和執行 a Long Running Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)的步驟[入門教學課程](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)的逐步指示。  
 
 ## <a name="enabling-persistence-for-self-hosted-workflow-services-that-use-the-workflowservicehost"></a>啟用使用 WorkflowServiceHost 之自我裝載工作流程服務的持續性
 
@@ -82,7 +82,7 @@ Windows Server App Fabric 會簡化設定持續性的程序。 如需詳細資�
 
 以下程序包含使用 <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> 類別以啟用自我裝載工作流程服務之持續性的步驟。  
 
-##### <a name="to-enable-persistence-using-sqlworkflowinstancestorebehavior"></a>若要啟用使用 SqlWorkflowInstanceStoreBehavior 的持續性
+#### <a name="to-enable-persistence-using-sqlworkflowinstancestorebehavior"></a>若要啟用使用 SqlWorkflowInstanceStoreBehavior 的持續性
 
 1.  加入 System.ServiceModel.dll 的參考。  
   
@@ -116,9 +116,6 @@ Windows Server App Fabric 會簡化設定持續性的程序。 如需詳細資�
     ```csharp
     host.Open();
     ```
-
-> [!IMPORTANT]
-> 請參閱[內建的組態](../../../docs/framework/windows-workflow-foundation/samples/built-in-configuration.md)範例，以[持續性](../../../docs/framework/windows-workflow-foundation/samples/persistence.md)如需啟用工作流程服務使用的持續性的範例`SqlWorkflowInstanceStoreBehavior`類別。  
 
 ### <a name="using-the-durableinstancingoptions-property"></a>使用 DurableInstancingOptions 屬性
 

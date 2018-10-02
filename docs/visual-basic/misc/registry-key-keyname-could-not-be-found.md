@@ -3,11 +3,11 @@ title: 登錄機碼&#39; &lt;keyname&gt; &#39;找不到
 ms.date: 07/20/2015
 ms.assetid: ca4eb74f-8303-48fc-9ea8-d792fa4c810b
 ms.openlocfilehash: 874371dd2d4dc9f7d4b1374ae08359e4ea6afc87
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
-ms.translationtype: HT
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47861744"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48025536"
 ---
 # <a name="registry-key-39ltkeynamegt39-could-not-be-found"></a>登錄機碼&#39; &lt;keyname&gt; &#39;找不到
 找不到登錄機碼。  

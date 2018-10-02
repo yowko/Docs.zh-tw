@@ -3,11 +3,11 @@ title: .NET Framework 的序列化範例
 ms.date: 03/30/2017
 ms.assetid: 6a56f66d-c80a-43e9-8e50-fb9b61120222
 ms.openlocfilehash: 5deae766b2b05fcb14c51666fa9fb988832a9a2d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47215817"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48035288"
 ---
 # <a name="serialization-samples-for-the-net-framework"></a>.NET Framework 的序列化範例
 這個章節示範如何在 .NET Framework 序列化物件。  

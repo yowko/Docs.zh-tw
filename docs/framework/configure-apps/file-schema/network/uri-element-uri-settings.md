@@ -5,11 +5,11 @@ ms.assetid: c22bab8b-477c-4ae4-8498-65ad409e0847
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: a58c27500c0258415c12a5fd8e552b3ee43f50e8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47235841"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48033203"
 ---
 # <a name="lturigt-element-uri-settings"></a>&lt;Uri&gt;項目 （Uri 設定）
 包含指定.NET Framework 如何處理使用統一資源識別元 (Uri) 表示的 web 位址的設定。  

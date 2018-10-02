@@ -2,26 +2,26 @@
 title: 使用訊息認證的 WS 傳輸
 ms.date: 03/30/2017
 ms.assetid: 0d092f3a-b309-439b-920b-66d8f46a0e3c
-ms.openlocfilehash: 708869f2350f01e75b949f4817fcf8aac35ea018
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 44f37e3576b508e679d45a3cbafacfb5a68a7838
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33810144"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48030177"
 ---
 # <a name="ws-transport-with-message-credential"></a>使用訊息認證的 WS 傳輸
 這個範例會示範結合訊息中傳遞的用戶端認證來使用 SSL 傳輸安全性。 這個範例會使用 `wsHttpBinding` 繫結。  
   
- 根據預設，`wsHttpBinding` 繫結會提供 HTTP 通訊。 當針對傳輸安全性設定時，此繫結會支援 HTTPS 通訊。 HTTPS 會保護在網路上傳輸之訊息的機密性與完整性。 但是，可以用來驗證服務之用戶端的驗證機制集合會受限於 HTTPS 傳輸所支援的機制。 Windows Communication Foundation (WCF) 提供`TransportWithMessageCredential`為了克服這項限制的安全性模式。 如果是設定這種安全性模式，傳輸安全性就會用來提供所傳輸訊息的機密性與完整性，以及用來執行服務驗證。 不過，用戶端驗證是由訊息中直接將用戶端認證的方式執行。 這可讓您使用任何支援的傳輸安全性模式的效能優勢，同時用戶端驗證的訊息安全性模式的認證類型。  
+ 根據預設，`wsHttpBinding` 繫結會提供 HTTP 通訊。 當針對傳輸安全性設定時，此繫結會支援 HTTPS 通訊。 HTTPS 會保護在網路上傳輸之訊息的機密性與完整性。 但是，可以用來驗證服務之用戶端的驗證機制集合會受限於 HTTPS 傳輸所支援的機制。 Windows Communication Foundation (WCF) 提供`TransportWithMessageCredential`設計來克服這項限制的安全性模式。 如果是設定這種安全性模式，傳輸安全性就會用來提供所傳輸訊息的機密性與完整性，以及用來執行服務驗證。 不過，用戶端驗證是由用戶端認證直接置於訊息的方式執行。 這可讓您使用任何認證類型來支援訊息安全性模式，用戶端驗證，同時保有傳輸安全性模式的效能優勢。  
   
  在這個範例中，`UserName` 認證類型會用來驗證服務的用戶端。  
   
- 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，用來實作計算機服務。 `wsHttpBinding` 繫結會指定並設定在用戶端和服務的應用程式組態檔中。  
+ 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)以實作計算機服務。 `wsHttpBinding` 繫結會指定並設定在用戶端和服務的應用程式組態檔中。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
   
- 此範例中的程式碼是幾乎完全相同的[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)服務。 服務合約則另外提供一項作業 - `GetCallerIdentity`。 這個作業會將呼叫者身分識別名稱傳回呼叫者。  
+ 在此範例中的程式碼是幾乎完全相同的[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)服務。 服務合約則另外提供一項作業 - `GetCallerIdentity`。 這個作業會將呼叫者身分識別名稱傳回呼叫者。  
 
 ```csharp
 public string GetCallerIdentity()  
@@ -61,7 +61,7 @@ public string GetCallerIdentity()
   
  指定的位址會使用 https:// 配置。 繫結組態會將安全性模式設定為 `TransportWithMessageCredential`。 相同的安全性模式必須指定在服務的 Web.config 檔中。  
   
- 當您嘗試存取 https 時，因為此範例中使用的憑證是使用 Makecert.exe 所建立的測試憑證，會顯示安全性警示： 位址，例如 https://localhost/servicemodelsamples/service.svc ，從您的瀏覽器。 若要允許 WCF 用戶端使用測試憑證中的位置，具有以便隱藏安全性警示用戶端新增某些其他程式碼。 使用實際執行憑證時，不需要這個程式碼及伴隨的類別。  
+ 當您嘗試存取 https 時，因為此範例中使用的憑證是使用 Makecert.exe 所建立的測試憑證，會顯示安全性警示： 位址，例如`https://localhost/servicemodelsamples/service.svc `，從您的瀏覽器。 若要允許 WCF 用戶端，才能使用測試憑證中的位置，已新增一些額外的程式碼用戶端以隱藏安全性警示。 使用實際執行憑證時，不需要這個程式碼及伴隨的類別。  
 
 ```csharp
 // WARNING: This code is only needed for test certificates such as those created by makecert. It is   
@@ -89,12 +89,12 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  請確定您已執行[網際網路資訊服務 (IIS) 伺服器憑證安裝指示](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)。  
+2.  請確定您已執行[Internet Information Services (IIS) 伺服器憑證安裝指示](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)。  
   
 3.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-4.  若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+4.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 ## <a name="see-also"></a>另請參閱

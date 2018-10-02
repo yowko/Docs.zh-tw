@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 7b50602f-d7b5-42e9-8e92-1f0413df0d8b
 author: BrucePerlerMS
 ms.openlocfilehash: 09c261afb2c64a46fc1f4619c4ec6b2e87b3fbbf
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47401023"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027321"
 ---
 # <a name="secure-sessions"></a>安全工作階段
 功能的 Windows Communication Foundation (WCF) 是確保傳送的順序接收訊息的可靠工作階段。 本節中的主題將就建立可靠工作階段時要考量的安全性影響提供說明。 如需可靠工作階段的詳細資訊，請參閱[使用工作階段的](../../../../docs/framework/wcf/using-sessions.md)。  

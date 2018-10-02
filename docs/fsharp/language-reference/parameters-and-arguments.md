@@ -3,11 +3,11 @@ title: 參數和引數 (F#)
 description: '深入了解 F # 語言支援對定義參數，以及將引數傳遞至函式、 方法和屬性。'
 ms.date: 05/16/2016
 ms.openlocfilehash: a1e2a70ca560bbb09d2cd10f47485cbe5c5e029d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47401312"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48037296"
 ---
 # <a name="parameters-and-arguments"></a>參數和引數
 

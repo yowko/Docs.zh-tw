@@ -2,12 +2,12 @@
 title: 在具有 Interop 活動的 .NET Framework 4 中使用 .NET Framework 3.0 WF 活動
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
-ms.openlocfilehash: b2dac91ffa0f4bf5e1c1afea1fc6f6629c345857
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 386f71f21a4164f6f0ffc0ed19aab68abbe5a0b5
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467501"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48029254"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>在具有 Interop 活動的 .NET Framework 4 中使用 .NET Framework 3.0 WF 活動
 <xref:System.Activities.Statements.Interop> 活動是 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4.5) 活動，它會將 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] (WF 3.5) 活動包裝在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流程中。 WF 3 活動可以是單一分葉活動，也可以是完整的活動樹狀結構。 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 活動的執行 (包括取消及例外狀況處理) 與保存會發生於執行中的 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流程執行個體的內容中。  
@@ -52,7 +52,4 @@ ms.locfileid: "43467501"
   
 3.  會將 <xref:System.Activities.Statements.Interop> 活動內的活動 WF 3 追蹤記錄當成 <xref:System.Activities.Tracking.InteropTrackingRecord> 物件提供給 WF 4.5 追蹤參與者。 <xref:System.Activities.Tracking.InteropTrackingRecord> 是 <xref:System.Activities.Tracking.CustomTrackingRecord> 的衍生物。  
   
-4.  WF 3 自訂活動可以使用互通環境內的工作流程佇列存取資料，方式就和在 WF3 工作流程執行階段中完全相同。 不需要變更任何自訂活動程式碼。 在主機上，資料會透過繼續 <xref:System.Activities.Bookmark> 而加入 WF3 工作流程佇列。 書籤的名稱是 <xref:System.IComparable> 工作流程佇列名稱的字串形式。  
-  
-## <a name="see-also"></a>另請參閱  
- [在 .NET Framework 4.5 工作流程中使用 .NET Framework 3.0 或 .NET Framework 3.5 活動](../../../docs/framework/windows-workflow-foundation/samples/using-a-net-3-0-or-net-3-5-activity-in-a-net-4-5-workflow.md)
+4.  WF 3 自訂活動可以使用互通環境內的工作流程佇列存取資料，方式就和在 WF3 工作流程執行階段中完全相同。 不需要變更任何自訂活動程式碼。 在主機上，資料會透過繼續 <xref:System.Activities.Bookmark> 而加入 WF3 工作流程佇列。 書籤的名稱是 <xref:System.IComparable> 工作流程佇列名稱的字串形式。

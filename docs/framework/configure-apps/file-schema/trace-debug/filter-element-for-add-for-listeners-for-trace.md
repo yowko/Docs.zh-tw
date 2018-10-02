@@ -11,11 +11,11 @@ ms.assetid: eb9c18f5-dfa8-47c5-b91b-e4b93e76e1cc
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: be4f3dcce1a746b287e75e0e6d3ba6eaa1d9b57b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47233024"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48032552"
 ---
 # <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-lttracegt"></a>&lt;篩選條件&gt;項目&lt;新增&gt;如&lt;接聽程式&gt;如&lt;追蹤&gt;
 將篩選加入至中的接聽項`Listeners`追蹤的集合。  

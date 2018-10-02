@@ -5,11 +5,11 @@ ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 446447f0d279755dbc06e0e3a25d50ad86ad555b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47402574"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48028250"
 ---
 # <a name="ltiriparsinggt-element-uri-settings"></a>&lt;Iriparsing>&gt;項目 （Uri 設定）
 指定是否要將國際資源識別項 (IRI) 剖析套用至 <xref:System.Uri>，以及是否應該套用 IRI 剖析規則。  

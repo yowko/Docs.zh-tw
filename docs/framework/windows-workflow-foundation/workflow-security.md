@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-ms.openlocfilehash: ebce4daf433647179a0bce5751f66cdfab7a4d80
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 726e41e8cde028fb86004ff06e2ad0663a042287
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195715"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48030268"
 ---
 # <a name="workflow-security"></a>工作流程安全性
 Windows Workflow Foundation (WF) 與數個不同的技術，例如 Microsoft SQL Server 和 Windows Communication Foundation (WCF) 整合。 如果與這些技術互動的方式不適當，可能會造成工作流程上的安全性問題。
@@ -40,7 +40,7 @@ Windows Workflow Foundation (WF) 與數個不同的技術，例如 Microsoft SQL
 
 -   工作流程中所用的 Windows Communication Foundation (WCF) 端點應該受到保護。 如需詳細資訊，請參閱 < [WCF 安全性概觀](https://go.microsoft.com/fwlink/?LinkID=164975)。
 
--   可使用 <xref:System.ServiceModel.ServiceAuthorizationManager> 實作主機層級授權。 請參閱[How To： 為服務建立自訂授權管理員](https://go.microsoft.com/fwlink/?LinkId=192228)如需詳細資訊。 這也會示範在下列範例：[保護工作流程服務](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md)。
+-   可使用 <xref:System.ServiceModel.ServiceAuthorizationManager> 實作主機層級授權。 請參閱[How To： 為服務建立自訂授權管理員](https://go.microsoft.com/fwlink/?LinkId=192228)如需詳細資訊。
 
 -   傳入訊息的 ServiceSecurityContext 也可在工作流程內取得，方法是存取 OperationContext。
 

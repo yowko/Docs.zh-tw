@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 86161897-c20f-4ad8-9d7f-050c247251bf
 author: BrucePerlerMS
 ms.openlocfilehash: 65b8aa6fa4422579ce0d1c5e33d3418ea051612a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47236776"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027763"
 ---
 # <a name="ltcertificatevalidatorgt"></a>&lt;certificateValidator&gt;
 指定自訂憑證驗證類型。 只有，會使用這個型別`certificateValidationMode`的屬性[ \<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)元素設定為"Custom"。  

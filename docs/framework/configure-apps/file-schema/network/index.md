@@ -15,11 +15,11 @@ ms.assetid: f1de5a0f-76c5-4833-819f-5222b8146340
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 5783e63d81c8951afb6b1646b595fc619d51549c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193576"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48028761"
 ---
 # <a name="network-settings-schema"></a>網路設定結構描述
 網路設定會指定 .NET Framework 如何連接至網際網路。 下表描述 [\<system.Net> 項目 (網路設定)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) 下每個子組態項目的功能。  
