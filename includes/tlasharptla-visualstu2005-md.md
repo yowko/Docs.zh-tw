@@ -1,1 +1,0 @@
-<span data-ttu-id="ec9eb-101">Microsoft Visual Studio 2005</span><span class="sxs-lookup"><span data-stu-id="ec9eb-101">Microsoft Visual Studio 2005</span></span>
