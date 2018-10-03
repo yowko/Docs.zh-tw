@@ -16,16 +16,16 @@ ms.locfileid: "47207953"
 ---
 # <a name="ref-c-reference"></a>ref (C# 參考)
 
-`ref` 關鍵字指出以傳址方式傳遞的值。 它用於三個不同的內容：
+`ref` 關鍵字指出以傳參考方式傳遞的值。 它用於三個不同的內容：
 
-- 在方法簽章和方法呼叫中，以傳址方式將引數傳遞給方法。 如需詳細資訊，請參閱[以傳址方式傳遞引數](#passing-an-argument-by-reference)。
-- 在方法簽章中，以傳址方式將值傳回給呼叫者。 如需詳細資訊，請參閱[參考傳回值](#reference-return-values)。
+- 在方法簽章和方法呼叫中，以傳參考方式將引數傳遞給方法。 如需詳細資訊，請參閱[以傳參考方式傳遞引數](#passing-an-argument-by-reference)。
+- 在方法簽章中，以傳參考方式將值傳回給呼叫者。 如需詳細資訊，請參閱[參考傳回值](#reference-return-values)。
 - 在成員主體中，指出參考傳回值儲存在本機作為呼叫者想要修改的參考，或是一般而言，以參考存取另一個值的區域變數。 如需詳細資訊，請參閱 [ref 區域變數](#ref-locals)。
 - 在 `struct` 宣告中來宣告 `ref struct` 或 `ref readonly struct`。 如需詳細資訊，請參閱[具備實值型別的參考語意](../../reference-semantics-with-value-types.md)。
 
-## <a name="passing-an-argument-by-reference"></a>以傳址方式傳遞引數
+## <a name="passing-an-argument-by-reference"></a>以傳參考方式傳遞引數
 
-用於方法的參數清單時，`ref` 關鍵字指出以傳址方式傳遞引數，而不是以傳值方式。 以傳址方式傳遞的效果是已呼叫方法中引數的任何變更都會反映在呼叫方法中。 例如，如果呼叫者傳遞區域變數運算式或陣列元素存取運算式，而且已呼叫方法取代 ref 參數所參考的物件，則在傳回方法時，呼叫者的區域變數或陣列元素現在會參考新的物件。
+用於方法的參數清單時，`ref` 關鍵字指出以傳參考方式傳遞引數，而不是以傳值方式。 以傳參考方式傳遞的效果是已呼叫方法中引數的任何變更都會反映在呼叫方法中。 例如，如果呼叫者傳遞區域變數運算式或陣列元素存取運算式，而且已呼叫方法取代 ref 參數所參考的物件，則在傳回方法時，呼叫者的區域變數或陣列元素現在會參考新的物件。
 
 > [!NOTE]
 > 請勿將參考傳遞的概念與參考類型的概念相混淆。 兩個概念並不相同。 方法參數可以由 `ref` 修改，而不論其是否為實值類型或參考類型。 當實值類型由參考傳遞時，沒有 boxing。  
@@ -61,9 +61,9 @@ class CS0663_Example
 - 使用 [async](async.md) 修飾詞定義的 async 方法。  
 - 迭代器方法，其包括 [yield return](yield.md) 或 `yield break` 陳述式。  
 
-## <a name="passing-an-argument-by-reference-an-example"></a>以傳址方式傳遞引數：範例
+## <a name="passing-an-argument-by-reference-an-example"></a>以傳參考方式傳遞引數：範例
 
-先前的範例會以傳址方式傳遞實值型別。 您也可以使用 `ref` 關鍵字，以傳址方式傳遞參考型別。 以傳址方式傳遞參考型別，可讓已呼叫方法取代參考參數在呼叫者中所參考的物件。 物件的儲存位置會以參考參數值的方式，傳遞至方法。 如果您變更參數儲存位置中的值 (指向新的物件)，則也會變更呼叫端所參考的儲存位置。 下列範例會以 `ref` 參數，傳遞參考類型的執行個體。
+先前的範例會以傳參考方式傳遞實值型別。 您也可以使用 `ref` 關鍵字，以傳參考方式傳遞參考型別。 以傳參考方式傳遞參考型別，可讓已呼叫方法取代參考參數在呼叫者中所參考的物件。 物件的儲存位置會以參考參數值的方式，傳遞至方法。 如果您變更參數儲存位置中的值 (指向新的物件)，則也會變更呼叫端所參考的儲存位置。 下列範例會以 `ref` 參數，傳遞參考類型的執行個體。
   
 [!code-csharp[csrefKeywordsMethodParams#6](~/samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#3)]
 
@@ -71,11 +71,11 @@ class CS0663_Example
   
 ## <a name="reference-return-values"></a>參考傳回值
 
-參考傳回值 (或 ref 傳回值) 是方法以傳址方式傳回給呼叫者的值。 也就是說，呼叫者可以修改方法所傳回的值，而且該變更會反映在包含方法的物件狀態中。
+參考傳回值 (或 ref 傳回值) 是方法以傳參考方式傳回給呼叫者的值。 也就是說，呼叫者可以修改方法所傳回的值，而且該變更會反映在包含方法的物件狀態中。
 
 參考傳回值是使用 `ref` 關鍵字所定義：
 
-- 在方法簽章中。 例如，下列方法簽章指出 `GetCurrentPrice` 方法以傳址方式傳回 <xref:System.Decimal> 值。
+- 在方法簽章中。 例如，下列方法簽章指出 `GetCurrentPrice` 方法以傳參考方式傳回 <xref:System.Decimal> 值。
 
 ```csharp
 public ref decimal GetCurrentPrice()
@@ -93,9 +93,9 @@ return ref DecimalArray[0];
 
 ## <a name="ref-locals"></a>ref 區域變數
 
-ref 區域變數用來參考使用 `return ref` 所傳回的值。 ref 區域變數無法初始化至非 ref 傳回值。 換句話說，初始化的右側必須是參考。 任何對 ref 區域變數值進行的修改，都會反映在其方法以傳址方式傳回值之物件的狀態。
+ref 區域變數用來參考使用 `return ref` 所傳回的值。 ref 區域變數無法初始化至非 ref 傳回值。 換句話說，初始化的右側必須是參考。 任何對 ref 區域變數值進行的修改，都會反映在其方法以傳參考方式傳回值之物件的狀態。
 
-定義 ref 區域變數的方式是在變數宣告前面使用 `ref` 關鍵字，並且緊接在以傳址方式傳回值的方法呼叫前面。
+定義 ref 區域變數的方式是在變數宣告前面使用 `ref` 關鍵字，並且緊接在以傳參考方式傳回值的方法呼叫前面。
 
 例如，下列陳述式定義名為 `GetEstimatedValue` 之方法所傳回的 ref 區域變數值：
 
@@ -113,7 +113,7 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
 
 ## <a name="a-ref-returns-and-ref-locals-example"></a>ref 傳回值和 ref 區域變數範例
 
-下面範例會定義具有 `Title` 和 `Author` 這兩個 <xref:System.String> 欄位的 `Book` 類別。 它也會定義 `BookCollection` 類別，以包含 `Book` 物件的私用陣列。 以傳址方式傳回個別書籍物件，方法是呼叫其 `GetBookByTitle` 方法。
+下面範例會定義具有 `Title` 和 `Author` 這兩個 <xref:System.String> 欄位的 `Book` 類別。 它也會定義 `BookCollection` 類別，以包含 `Book` 物件的私用陣列。 以傳參考方式傳回個別書籍物件，方法是呼叫其 `GetBookByTitle` 方法。
 
 [!code-csharp[csrefKeywordsMethodParams#6](~/samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#4)]
 

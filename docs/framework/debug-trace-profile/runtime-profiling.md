@@ -46,7 +46,7 @@ ms.locfileid: "33393051"
   
      在 [所選取物件的例項]  清單方塊中，按一下要監視該應用程式之效能計數器的應用程式名稱。  
   
-     若要區別多個執行階段版本，或釐清多個同名的應用程式，您也必須修改登錄機碼。 如需詳細資訊，請參閱 [Performance Counters and In-Process Side-By-Side Applications](../../../docs/framework/debug-trace-profile/performance-counters-and-in-process-side-by-side-applications.md)。  
+     若要區別多個執行階段版本，或釐清多個同名的應用程式，您也必須修改登錄機碼。 如需詳細資訊，請參閱 [效能計數器與同處理序並存應用程式](../../../docs/framework/debug-trace-profile/performance-counters-and-in-process-side-by-side-applications.md)。  
   
 > [!NOTE]
 >  如果在執行 [效能] 主控台時安裝新的效能計數器，請停止並重新啟動 [效能] 主控台，以顯示新的計數器。  
