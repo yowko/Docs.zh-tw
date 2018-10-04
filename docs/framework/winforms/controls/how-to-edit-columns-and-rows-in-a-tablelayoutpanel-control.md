@@ -19,9 +19,9 @@ ms.locfileid: "43500780"
 您可以使用的集合編輯器<xref:System.Windows.Forms.TableLayoutPanel>控制項，呼叫**資料行和資料列樣式**對話方塊中，若要編輯的資料列和資料行的控制項。  
   
 > [!NOTE]
->  如果您想要跨越多個資料列或資料行的控制項，將`RowSpan`和`ColumnSpan`控制項上的屬性。 如需詳細資訊，請參閱 [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)。  
+>  如果您想要跨越多個資料列或資料行的控制項，將`RowSpan`和`ColumnSpan`控制項上的屬性。 如需詳細資訊，請參閱 [逐步解說：使用 TableLayoutPanel 排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
 >   
->  如果您想要對齊控制項在資料格，或如果您想要延展的資料格內的控制項，使用控制項的<xref:System.Windows.Forms.Control.Anchor%2A>屬性。 如需詳細資訊，請參閱 [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)。  
+>  如果您想要對齊控制項在資料格，或如果您想要延展的資料格內的控制項，使用控制項的<xref:System.Windows.Forms.Control.Anchor%2A>屬性。 如需詳細資訊，請參閱 [逐步解說：使用 TableLayoutPanel 排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
 >   
 >  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
