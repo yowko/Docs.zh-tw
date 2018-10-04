@@ -2,12 +2,12 @@
 title: 必要引數與多載群組
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-ms.openlocfilehash: 794a0a531fbd26d9e4242d40be5147ab41547192
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d25702e573acd9a0815c232cdf6935d6e9651631
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517556"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48244863"
 ---
 # <a name="required-arguments-and-overload-groups"></a>必要引數與多載群組
 您可以設定活動，讓繫結活動所需的某些引數有效，以便用於執行。 `RequiredArgument` 屬性用於指出活動的特定引數是必要的，而 `OverloadGroup` 屬性則用於群組必要引數的分類。 透過使用屬性，活動作者可以提供簡單或複雜的活動驗證組態。  
@@ -63,10 +63,11 @@ public sealed class Add : CodeActivity<int>
   
  **未提供必要的活動引數 'Operand1' 的值。**  
 > [!NOTE]
->  如需檢查和處理驗證錯誤和警告的相關詳細資訊，請參閱[叫用活動驗證](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md)。  
+> 如需檢查和處理驗證錯誤和警告的相關詳細資訊，請參閱 <<c0> [ 叫用活動驗證](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md)。  
   
-## <a name="using-overload-groups"></a>使用多載群組  
- 多載群組提供方法，指出活動中哪些引數組合是有效的。 引數會使用 <xref:System.Activities.OverloadGroupAttribute> 群組在一起。 每個群組會擁有一個由 <xref:System.Activities.OverloadGroupAttribute> 所指定的名稱。唯有繫結多載群組中的一組引數時，活動才有效。 在下列範例中，取自[OverloadGroups](../../../docs/framework/windows-workflow-foundation/samples/overloadgroups.md)範例中，`CreateLocation`類別定義。  
+## <a name="using-overload-groups"></a>使用多載群組
+
+多載群組提供方法，指出活動中哪些引數組合是有效的。 引數會使用 <xref:System.Activities.OverloadGroupAttribute> 群組在一起。 每個群組會給予所指定的名稱<xref:System.Activities.OverloadGroupAttribute>。 只有一組多載群組中的引數繫結時，活動才有效。 在下列範例中，會定義 `CreateLocation` 類別。  
   
 ```csharp  
 class CreateLocation: Activity  
@@ -105,7 +106,7 @@ class CreateLocation: Activity
   
  這個活動的目的是要指定美國的地點。 若要完成這項作業，活動的使用者可以使用三個引數群組的其中之一來指定地點。 為指定有效的引數組合，會定義三個多載群組。 `G1` 包含 `Latitude` 和 `Longitude` 引數。 `G2` 包含 `Street`、`City` 和 `State`。 `G3` 包含 `Street` 和 `Zip`。 `Name` 也是必要引數，但不是多載群組的一部分。 若要使這個活動有效，`Name` 必須與來自同一個多載群組的所有引數繫結在一起。  
   
- 在下列範例中，取自[資料庫存取活動](../../../docs/framework/windows-workflow-foundation/samples/database-access-activities.md)範例有兩個多載群組：`ConnectionString`和`ConfigFileSectionName`。 若要讓此活動有效，必須繫結 `ProviderName` 和 `ConnectionString` 引數，或是繫結 `ConfigName` 引數，但不能同時使用這兩種方式。  
+ 下列範例中，在取自[資料庫存取活動](../../../docs/framework/windows-workflow-foundation/samples/database-access-activities.md)範例中，有兩個多載群組：`ConnectionString`和`ConfigFileSectionName`。 若要讓此活動有效，必須繫結 `ProviderName` 和 `ConnectionString` 引數，或是繫結 `ConfigName` 引數，但不能同時使用這兩種方式。  
   
 ```  
 Public class DbUpdate: AsyncCodeActivity  
