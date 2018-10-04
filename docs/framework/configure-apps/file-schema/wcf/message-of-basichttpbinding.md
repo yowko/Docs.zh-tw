@@ -2,12 +2,12 @@
 title: '&lt;basicHttpBinding&gt; 的 &lt;message&gt;'
 ms.date: 03/30/2017
 ms.assetid: 51cdd329-6461-471a-8747-56c2299b61e5
-ms.openlocfilehash: 9b46f69e88f441823b32b5f25330ca9a1cb62dcb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 08307d1120904fc703e7b76616aacce7e153929a
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522892"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782073"
 ---
 # <a name="ltmessagegt-of-ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt; 的 &lt;message&gt;
 定義訊息層級安全性的設定[ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)。  
@@ -133,5 +133,5 @@ ms.locfileid: "43522892"
  [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結來設定 Windows Communication Foundation 服務和用戶端](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [\<繫結 >](../../../../../docs/framework/misc/binding.md)

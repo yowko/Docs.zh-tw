@@ -3,12 +3,12 @@ title: '&lt;webHttpBinding&gt; 的 &lt;security&gt;'
 ms.date: 03/30/2017
 ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
 author: BrucePerlerMS
-ms.openlocfilehash: 28cff66cfd50229eacbb7c7c4b1d65678efb40ea
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 04a44535b1f293c9961b617eaa12b1c0a478a0f5
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47236198"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48781709"
 ---
 # <a name="ltsecuritygt-of-ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt; 的 &lt;security&gt;
 指定設定之端點的安全性需求[ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。  
@@ -76,6 +76,6 @@ ms.locfileid: "47236198"
  [選取認證類型](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結來設定 Windows Communication Foundation 服務和用戶端](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [\<繫結 >](../../../../../docs/framework/misc/binding.md)  
  [WCF Web HTTP 程式設計模型](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

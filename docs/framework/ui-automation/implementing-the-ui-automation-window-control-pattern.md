@@ -9,11 +9,11 @@ ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: f2f7f6c1c03a96af0c114033aee2063e0c991401
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032110"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48781839"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>實作 UI 自動化 Window 控制項模式
 > [!NOTE]

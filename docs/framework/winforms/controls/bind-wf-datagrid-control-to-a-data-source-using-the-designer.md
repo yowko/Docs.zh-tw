@@ -12,14 +12,15 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - bound controls [Windows Forms]
 ms.assetid: 4e96e3d0-b1cc-4de1-8774-bc9970ec4554
-ms.openlocfilehash: 409d94e46cae3e4daf7df930097f0a3d46360633
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c528e95b37abb230e761ce93e5f5c7bcb27d30d3
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500582"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780293"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source-using-the-designer"></a>如何：使用設計工具將 Windows Form DataGrid 控制項繫結至資料來源
+
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
   
@@ -29,7 +30,7 @@ ms.locfileid: "43500582"
   
  您也可以繫結方格以程式設計的方式，在執行階段。 當您想要設定資料來源，根據您在執行階段取得的資訊時，這非常有用。 例如，應用程式可能會讓使用者指定要檢視之資料表的名稱。 它也是必要的資料來源不在執行階段存在的情況。 這包括資料來源，例如陣列、 集合、 不具類型的資料集，以及資料讀取器。  
   
- 下列程序需要**Windows 應用程式**表單，其中包含專案<xref:System.Windows.Forms.DataGrid>控制項。 如需這類專案的設定資訊，請參閱[如何： 建立 Windows 應用程式專案](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)並[如何： 將控制項加入 Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。 在  [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]，則<xref:System.Windows.Forms.DataGrid>控制項不在**工具箱**預設。 如需將它加入資訊，請參閱[如何： 加入項目至工具箱](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0)。 此外在[!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]，您可以使用**Zdroje dat**設計階段資料繫結的視窗。 如需詳細資訊，請參閱[控制項繫結至 Visual Studio 中的資料](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)。  
+ 下列程序需要**Windows 應用程式**表單，其中包含專案<xref:System.Windows.Forms.DataGrid>控制項。 如需這類專案的設定資訊，請參閱[如何： 建立 Windows 應用程式專案](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)並[如何： 將控制項加入 Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。 在 Visual Studio 2005 裡<xref:System.Windows.Forms.DataGrid>控制項不是處於**工具箱**預設。 如需將它加入資訊，請參閱[如何： 加入項目至工具箱](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0)。 此外在 Visual Studio 2005 中，您可以使用**Zdroje dat**設計階段資料繫結的視窗。 如需詳細資訊，請參閱[控制項繫結至 Visual Studio 中的資料](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)。  
   
 > [!NOTE]
 >  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
 ms.openlocfilehash: 1eddf3ad52bab6ef4665d7c3691353fa9c54574c
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
-ms.translationtype: HT
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48263989"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48793678"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>逐步解說：在 WPF 應用程式中快取應用程式資料
 快取可讓您將資料儲存在記憶體中，以進行快速存取。 一次存取資料時，應用程式可以從快取，而要擷取原始的來源取得資料。 這可以改善效能和延展性。 此外，暫時無法使用資料來源時，快取可讓資料可用。

@@ -8,11 +8,11 @@ ms.assetid: 0ab8d42c-5b8b-481b-b788-2caecc2f0191
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: 7d8df325d18c3657d4955fa534d29bb7fdbc595c
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
-ms.translationtype: HT
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 10/04/2018
-ms.locfileid: "48265935"
+ms.locfileid: "48793516"
 ---
 # <a name="ui-automation-threading-issues"></a>UI 自動化執行緒問題
 > [!NOTE]

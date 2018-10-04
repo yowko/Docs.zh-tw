@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 5f723345-7270-49e2-b638-b3a34bd40517
 author: BrucePerlerMS
 ms.openlocfilehash: 41829bee3df3e47c0ccd712ecc9a314e5971aba0
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032643"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48793363"
 ---
 # <a name="windows-identity-foundation-45-overview"></a>Windows Identity Foundation 4.5 概觀
 Windows Identity Foundation 4.5 是一組 .NET Framework 類別，可在應用程式中用來實作宣告型識別。 透過它，您可以更容易享受到宣告感知應用程式和服務的優點。 只要是使用 .NET Framework 4.5 (含) 以上版本的所有 Web 應用程式或 Web 服務，WIF 4.5 都適用。 WIF 只是 Microsoft 同盟識別身分軟體系列的一部分，可以根據開放標準達成業界共同的願景。 同盟識別身分由下列三個元件組成：[Active Directory® Federation Services](https://go.microsoft.com/fwlink/?LinkID=247516) (AD FS) 2.0、[Microsoft Azure Access Control Services](https://go.microsoft.com/fwlink/?LinkID=247517) (ACS) 和 WIF。 這三個元件同時也形成了 Microsoft 新的宣告型雲端識別和存取平台的核心。  

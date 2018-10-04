@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 496a1735-cbb7-49d5-a6aa-dd5550462073
 author: BrucePerlerMS
 ms.openlocfilehash: 4d5d2348f04ace7596a3a513c5106ea612dc17b7
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48037166"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48792925"
 ---
 # <a name="ltsessiontokenrequirementgt"></a>&lt;sessionTokenRequirement&gt;
 提供組態<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>類別或衍生的類別。  

@@ -4,11 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - routing [WCF], message filters
 ms.assetid: cb33ba49-8b1f-4099-8acb-240404a46d9a
-ms.openlocfilehash: e129924de53fb0dba61798cc492729c8af69ed94
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc4656a76894eb3a844bc9f2187847fd9eff0ffe
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780449"
 ---
 # <a name="message-filters"></a>訊息篩選條件
 為了實作內容架構路由，路由服務會使用 <xref:System.ServiceModel.Dispatcher.MessageFilter> 實作，該實作會檢查訊息的特定區段，例如位址、端點名稱或特定 XPath 陳述式。 如果 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 提供的訊息篩選都不符合您的需要，您可以建立透過建立新的基底 <xref:System.ServiceModel.Dispatcher.MessageFilter> 類別實作來建立自訂篩選。  
@@ -25,9 +26,9 @@ ms.lasthandoff: 05/04/2018
 |篩選條件類型|描述|篩選資料意義|範例篩選|  
 |------------------|-----------------|-------------------------|--------------------|  
 |動作|使用 <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> 類別比對包含特定動作的訊息。|要進行篩選的動作。|\<filter name="action1" filterType="Action" filterData="http://namespace/contract/operation" />|  
-|EndpointAddress|使用<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>類別，與<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true`比對包含特定位址訊息。|要篩選的位址 (在 [收件者] 標頭中)。|\<filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b"  />|  
-|EndpointAddressPrefix|使用<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>類別，與<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true`比對包含特定位址前置詞的訊息。|要使用最長的前置詞比對篩選的位址。|\<filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/" />|  
-|及|使用固定在傳回之前評估兩項條件的 <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> 類別。|不會使用 filterData;改為 filter1 和 filter2 具有的名稱，對應訊息篩選條件 （同樣在資料表中），它應該**AND**ed 放在一起。|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
+|EndpointAddress|會使用<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>類別，具有<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true`比對包含特定位址訊息。|要篩選的位址 (在 [收件者] 標頭中)。|\<filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b"  />|  
+|EndpointAddressPrefix|會使用<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>類別，具有<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true`比對包含特定位址前置詞的訊息。|要使用最長的前置詞比對篩選的位址。|\<filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/" />|  
+|及|使用固定在傳回之前評估兩項條件的 <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> 類別。|不會使用;改為 filterdata,filter1 和 filter2 同名的對應訊息篩選 （也是在資料表中），這應該是**AND**ed 放在一起。|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
 |自訂|使用者定義類型，該類型會延伸 <xref:System.ServiceModel.Dispatcher.MessageFilter> 類別並且擁有取用字串的建構函式。|customType 屬性是要建立之類別的完整類型名稱；filterData 則是建立篩選時，要傳遞至建構函式的字串。|\<filter name="custom1" filterType="Custom" customType="CustomAssembly.CustomMsgFilter, CustomAssembly" filterData="Custom Data" />|  
 |EndpointName|使用 <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> 類別，根據訊息到達的服務端點名稱比對訊息。|服務端點的名稱，例如:"serviceEndpoint1"。  這應該是在路由服務上公開的其中一個端點。|\<filter name="stock1" filterType="Endpoint" filterData="SvcEndpoint" />|  
 |MatchAll|使用 <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> 類別。 此篩選會比對所有抵達的訊息。|不會使用 filterData。 此篩選將固定比對所有訊息。|\<filter name="matchAll1" filterType="MatchAll" />|  
@@ -62,15 +63,15 @@ ms.lasthandoff: 05/04/2018
   
 |前置詞|命名空間|  
 |------------|---------------|  
-|s11|http://schemas.xmlsoap.org/soap/envelope|  
-|s12|http://www.w3.org/2003/05/soap-envelope|  
-|wsaAugust2004|http://schemas.xmlsoap.org/ws/2004/08/addressing|  
-|wsa10|http://www.w3.org/2005/08/addressing|  
-|/sm|http://schemas.microsoft.com/serviceModel/2004/05/xpathfunctions|  
-|tempuri|http://tempuri.org|  
-|ser|http://schemas.microsoft.com/2003/10/Serialization|  
+|s11|`http://schemas.xmlsoap.org/soap/envelope`|  
+|s12|`http://www.w3.org/2003/05/soap-envelope`|  
+|wsaAugust2004|`http://schemas.xmlsoap.org/ws/2004/08/addressing`|  
+|wsa10|`http://www.w3.org/2005/08/addressing`|  
+|/sm|`http://schemas.microsoft.com/serviceModel/2004/05/xpathfunctions`|  
+|tempuri|`http://tempuri.org`|  
+|ser|`http://schemas.microsoft.com/2003/10/Serialization`|  
   
- 如果您事先知道將會在 XPath 查詢中使用特定命名空間，可以將它與唯一的命名空間前置詞一起加入至命名空間資料表，並且在任何 XPath 查詢中使用該前置詞，而不要使用完整的命名空間。 下列範例會定義命名空間前置詞"custom"的"http://my.custom.namespace」，然後用在 filterData 包含的 XPath 查詢中。  
+ 如果您事先知道將會在 XPath 查詢中使用特定命名空間，可以將它與唯一的命名空間前置詞一起加入至命名空間資料表，並且在任何 XPath 查詢中使用該前置詞，而不要使用完整的命名空間。 下列範例會定義命名空間前置詞為"custom" `"http://my.custom.namespace"`，其接著會在 filterData 包含 XPath 查詢中使用。  
   
 ```xml  
 <namespaceTable>  
@@ -132,7 +133,7 @@ ms.lasthandoff: 05/04/2018
 >  如果可行，請使用互斥的篩選，而不要指定優先權，因為優先權評估可能導致效能降低。  
   
 ### <a name="backup-lists"></a>備份清單  
- 篩選資料表中的每一個篩選可以選擇性地指定備份清單，也就是具名的端點集合 (<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>)。 此集合包含依順序排列的端點清單，訊息將在傳送至 <xref:System.ServiceModel.CommunicationException> 中指定的主要端點期間發生 <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.EndpointName%2A> 時，傳輸至這些端點。 下列範例定義名為"backupServiceEndpoints"，其中包含兩個端點的備份清單。  
+ 篩選資料表中的每一個篩選可以選擇性地指定備份清單，也就是具名的端點集合 (<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>)。 此集合包含依順序排列的端點清單，訊息將在傳送至 <xref:System.ServiceModel.CommunicationException> 中指定的主要端點期間發生 <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.EndpointName%2A> 時，傳輸至這些端點。 下列範例會定義名為"backupServiceEndpoints"，其中包含兩個端點的備份清單。  
   
 ```xml  
 <filterTables>  
@@ -148,4 +149,4 @@ ms.lasthandoff: 05/04/2018
 </backupLists>  
 ```  
   
- 在上述範例中，如果傳送至主要端點"Destination"失敗，路由服務將嘗試傳送至每個端點中所列的順序，第一個傳送至 backupServiceQueue，如果接著傳送至 alternateServiceQueue傳送至 backupServiceQueue 失敗。 如果所有備份端點都失敗，則會傳回錯誤。
+ 在上述範例中，如果傳送至主要端點"Destination"失敗，路由服務會嘗試傳送至每個端點中所列的順序，第一個傳送至 backupServiceQueue，如果，接著傳送至 alternateServiceQueue傳送至 backupServiceQueue 失敗。 如果所有備份端點都失敗，則會傳回錯誤。

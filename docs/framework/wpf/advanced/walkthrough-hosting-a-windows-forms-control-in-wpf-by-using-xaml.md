@@ -5,11 +5,11 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 ms.assetid: 1aef42cb-4cfb-44b4-9a7a-c02632d3d9c7
 ms.openlocfilehash: eafed4db9b40d3cd6b83087d0ea4999b0854c417
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
-ms.translationtype: HT
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266412"
+ms.locfileid: "48793665"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml"></a>逐步解說：使用 XAML 在 WPF 中裝載 Windows Form 控制項
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供具有豐富功能集的許多控制項。 不過，您有時可以使用[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制上您[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]頁面。 比方說，您可能已長期開發現有[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項，或您可能會有[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項，提供獨特的功能。  

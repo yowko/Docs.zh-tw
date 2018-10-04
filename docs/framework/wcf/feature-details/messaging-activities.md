@@ -2,12 +2,12 @@
 title: 傳訊活動
 ms.date: 03/30/2017
 ms.assetid: 8498f215-1823-4aba-a6e1-391407f8c273
-ms.openlocfilehash: 5ccace3ebea42957e1cc66602579d85cd8634435
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3391f7442ef4922a847a58b6316eb177cbcfbd5e
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502709"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780462"
 ---
 # <a name="messaging-activities"></a>傳訊活動
 訊息傳遞活動允許工作流程傳送和接收 WCF 訊息。 藉由將訊息傳遞活動加入至工作流程，您就可以製作任何複雜訊息交換模式 (MEP) 的模型。
@@ -95,10 +95,10 @@ Request = rcv
 ```
 
 ## <a name="add-service-reference"></a>加入服務參考
- 從工作流程應用程式呼叫工作流程服務時，[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 會產生自訂訊息傳遞活動，這些活動會封裝要求/回覆 MEP 中常用的 <xref:System.ServiceModel.Activities.Send> 和 <xref:System.ServiceModel.Activities.ReceiveReply> 活動。 若要使用這項功能，以滑鼠右鍵按一下 Visual Studio 中的用戶端專案，然後選取**新增** > **服務參考**。 在位址方塊中輸入服務的基底位址，然後按一下 [移至]。 可用的服務會顯示在**Services:**  方塊中。 展開服務節點，即可顯示支援的合約。 選取您想要呼叫的合約，以及可用作業的清單會顯示在**作業** 方塊中。 您可以接著指定產生的活動的命名空間，然後按一下**確定**。 接著您會看見一個對話方塊，說明作業已成功完成，而且在您重建專案之後，產生的自訂活動會位於工具方塊內。 服務合約中會針對每一項作業定義一個活動。 重建專案之後，您可以拖放自訂活動至工作流程，並且在 [屬性] 視窗中設定任何必要的屬性。
+ Visual Studio 2012 時從工作流程應用程式呼叫工作流程服務，會產生自訂傳訊活動，可封裝一般<xref:System.ServiceModel.Activities.Send>和<xref:System.ServiceModel.Activities.ReceiveReply>要求/回覆 MEP 中所使用的活動。 若要使用這項功能，以滑鼠右鍵按一下 Visual Studio 中的用戶端專案，然後選取**新增** > **服務參考**。 在位址方塊中輸入服務的基底位址，然後按一下 [移至]。 可用的服務會顯示在**Services:**  方塊中。 展開服務節點，即可顯示支援的合約。 選取您想要呼叫的合約，以及可用作業的清單會顯示在**作業** 方塊中。 您可以接著指定產生的活動的命名空間，然後按一下**確定**。 接著您會看見一個對話方塊，說明作業已成功完成，而且在您重建專案之後，產生的自訂活動會位於工具方塊內。 服務合約中會針對每一項作業定義一個活動。 重建專案之後，您可以拖放自訂活動至工作流程，並且在 [屬性] 視窗中設定任何必要的屬性。
 
 <!--## Messaging Activity Templates
- To make setting up a request/response MEP on the client and service easier, [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] provides two messaging activity templates. <xref:System.ServiceModel.Activities.Design.ReceiveAndSendReply> is used on the service and <xref:System.ServiceModel.Activities.Design.SendAndReceiveReply> is used on the client. In both cases the templates add the appropriate messaging activities to your workflow. On the service, the <xref:System.ServiceModel.Activities.Design.ReceiveAndSendReply> adds a <xref:System.ServiceModel.Activities.Receive> activity followed by a <xref:System.ServiceModel.Activities.SendReply> activity. The <xref:System.ServiceModel.Activities.SendReply.Request> property is automatically set to the <xref:System.ServiceModel.Activities.Receive> activity. On the client, the <xref:System.ServiceModel.Activities.Design.SendAndReceiveReply> adds a <xref:System.ServiceModel.Activities.Send> activity followed by a <xref:System.ServiceModel.Activities.ReceiveReply>. The <xref:System.ServiceModel.Activities.ReceiveReply.Request%2A> property is automatically set to the <xref:System.ServiceModel.Activities.Send> activity. To use these templates, just drag and drop the appropriate template onto your workflow.
+ To make setting up a request/response MEP on the client and service easier, Visual Studio 2012 provides two messaging activity templates. <xref:System.ServiceModel.Activities.Design.ReceiveAndSendReply> is used on the service and <xref:System.ServiceModel.Activities.Design.SendAndReceiveReply> is used on the client. In both cases the templates add the appropriate messaging activities to your workflow. On the service, the <xref:System.ServiceModel.Activities.Design.ReceiveAndSendReply> adds a <xref:System.ServiceModel.Activities.Receive> activity followed by a <xref:System.ServiceModel.Activities.SendReply> activity. The <xref:System.ServiceModel.Activities.SendReply.Request> property is automatically set to the <xref:System.ServiceModel.Activities.Receive> activity. On the client, the <xref:System.ServiceModel.Activities.Design.SendAndReceiveReply> adds a <xref:System.ServiceModel.Activities.Send> activity followed by a <xref:System.ServiceModel.Activities.ReceiveReply>. The <xref:System.ServiceModel.Activities.ReceiveReply.Request%2A> property is automatically set to the <xref:System.ServiceModel.Activities.Send> activity. To use these templates, just drag and drop the appropriate template onto your workflow.
 -->
 ## <a name="messaging-activities-and-transactions"></a>訊息傳遞活動和異動
  呼叫工作流程服務時，您可能想要讓交易流向服務作業。 若要執行這項操作，請將 <xref:System.ServiceModel.Activities.Receive> 活動放置到 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活動內。 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活動包含 `Receive` 活動和主體。 流向服務的交易會在執行 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 主體的整個過程中維持環境。 當主體執行完成時，異動即完成。 如需工作流程和交易的詳細資訊，請參閱[工作流程交易](../../../../docs/framework/windows-workflow-foundation/workflow-transactions.md)。

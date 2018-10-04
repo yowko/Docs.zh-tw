@@ -6,20 +6,21 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 4a6d1b34-b696-476b-bf8a-57c6230aa9e1
-ms.openlocfilehash: 745e866363dc7547ee540b9cac7e1e9fd3cc79ee
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b2e8f962ed7fb9d205a9061bdc1b32c3a2f8b0bd
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504929"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780007"
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>如何：使用設計工具在 Windows Form DataGrid 控制項中加入表格和資料行
+
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
   
  您可以在 Windows Form 中顯示資料<xref:System.Windows.Forms.DataGrid>中資料表和資料行，藉由建立控制項<xref:System.Windows.Forms.DataGridTableStyle>物件，並將它們加入至<xref:System.Windows.Forms.GridTableStylesCollection>物件，這透過存取<xref:System.Windows.Forms.DataGrid>控制項的<xref:System.Windows.Forms.DataGrid.TableStyles%2A>屬性。 每個資料表樣式會顯示任何資料表中指定的內容<xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>屬性<xref:System.Windows.Forms.DataGridTableStyle>。 根據預設，沒有指定的資料行樣式的資料表樣式會顯示資料的資料表內的所有資料行。 您可以限制哪些資料行從資料表顯示加上<xref:System.Windows.Forms.DataGridColumnStyle>物件至<xref:System.Windows.Forms.GridColumnStylesCollection>，這透過存取<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>每個屬性<xref:System.Windows.Forms.DataGridTableStyle>。  
   
- 下列程序需要**Windows 應用程式**專案，其表單包含<xref:System.Windows.Forms.DataGrid>控制項。 如需有關如何設定這類專案的資訊，請參閱[如何： 建立 Windows 應用程式專案](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)並[如何： 將控制項加入 Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。 根據預設，在[!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]，則<xref:System.Windows.Forms.DataGrid>控制項不是處於**工具箱**。 如需將它加入資訊，請參閱[如何： 加入項目至工具箱](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0)。  
+ 下列程序需要**Windows 應用程式**專案，其表單包含<xref:System.Windows.Forms.DataGrid>控制項。 如需有關如何設定這類專案的資訊，請參閱[如何： 建立 Windows 應用程式專案](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)並[如何： 將控制項加入 Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。 根據預設，在 Visual Studio 2005<xref:System.Windows.Forms.DataGrid>控制項不是處於**工具箱**。 如需將它加入資訊，請參閱[如何： 加入項目至工具箱](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0)。  
   
 > [!NOTE]
 >  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  

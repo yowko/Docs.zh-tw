@@ -9,11 +9,11 @@ ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: 53773c51aef6b9530ed0b2cfaf0ef08cdb340ec2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47205434"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782060"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>用戶端 UI 自動化提供者實作
 > [!NOTE]

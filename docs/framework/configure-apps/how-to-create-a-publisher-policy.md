@@ -10,11 +10,11 @@ ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: e7cac3c7e6c588a82e9dfff169ba7b7aa72c35f8
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028010"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48793288"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>如何：建立發行者原則
 組件的廠商可以應用程式應該使用較新版的組件，包含與升級後的組件的發行者原則檔的狀態。 發行者原則檔會指定組件重新導向和程式碼基底設定，並使用應用程式組態檔相同的格式。 發行者原則檔會編譯成組件，並放置於全域組件快取。  

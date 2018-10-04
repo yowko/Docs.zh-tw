@@ -2,12 +2,12 @@
 title: 疑難排解安裝程式問題
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 0270bd8c1006b39805e3486c4fef0cb379089ea8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 13828bee07dd455cd2b94d20d4afa7ea416ce186
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43805126"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780124"
 ---
 # <a name="troubleshooting-setup-issues"></a>疑難排解安裝程式問題
 本主題描述如何疑難排解 Windows Communication Foundation (WCF) 設定問題。  
@@ -67,7 +67,7 @@ ms.locfileid: "43805126"
  若要解決這個問題，請使用[WorkFlow 服務登錄工具 (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)使用`/c`切換到正確的電腦上設定 IIS 指令碼對應。 [WorkFlow 服務登錄工具 (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)位於 %windir%\Microsoft.NET\framework\v3.5\ 或 %windir%\Microsoft.NET\framework64\v3.5\  
   
 ## <a name="could-not-load-type-systemservicemodelactivationhttpmodule-from-assembly-systemservicemodel-version-3000-cultureneutral-publickeytokenb77a5c561934e089"></a>無法從組件 ‘System.ServiceModel, Version 3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089’ 載入類型 ‘System.ServiceModel.Activation.HttpModule’  
- 如果發生此錯誤[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]安裝，然後啟用 WCF HTTP 啟用。 若要解決這個問題，請從 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)] 命令提示字元內部執行下列命令列：  
+ 如果發生此錯誤[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]安裝，然後啟用 WCF HTTP 啟用。 若要解決此問題適用於 Visual Studio 中執行下列命令列從內部開發人員命令提示字元：  
   
 ```Output  
 aspnet_regiis.exe -i -enable  

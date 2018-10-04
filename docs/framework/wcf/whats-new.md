@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: 008bfb0042d31c7fbd1e853ba3ead4c1247dfa7c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1fe3ea53be6305553e789f8644e378d95bfac71b
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204449"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48793515"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Windows Communication Foundation 4.5 的新功能
 
@@ -67,9 +67,9 @@ ms.locfileid: "47204449"
 |--------------|--------|-----------------|------------------------------|
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 秒|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * 處理器的數量|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|
-|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * 用於傳輸的處理器數量<br /><br /> 4\*用於 SMSvcHost.exe 的處理器數量|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> [設定 Net.TCP Port Sharing Service](https://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|
+|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * 用於傳輸的處理器數量<br /><br /> 4\*用於 SMSvcHost.exe 的處理器數量|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> [設定 Net.TCP Port Sharing Service](../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * 處理器的數量|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|
-|receiveTimeout|SMSvcHost.exe|30 秒|[設定 Net.TCP 連接埠共用服務](https://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|
+|receiveTimeout|SMSvcHost.exe|30 秒|[設定 Net.TCP 連接埠共用服務](../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 
 ## <a name="xml-editor-tooltips"></a>XML 編輯器工具提示
  為了協助新的和現有的 WCF 服務開發人員設定其服務，現在每個屬於服務組態檔之一部分的組態項目及其屬性，Visual Studio XML 編輯器都有提供工具提示。

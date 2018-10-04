@@ -10,12 +10,12 @@ helpviewer_keywords:
 - touch-sensitive applications [WPF], creating
 - creating a touchscreen application [WPF]
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
-ms.openlocfilehash: ee2eddf0ad0818658920aff19919c4b5fef807b9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 935999fd5ada93bedebb38462f9faa93b8ec923f
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511404"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48781475"
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a>逐步解說：建立您的第一個觸控應用程式
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 讓應用程式回應觸控。 比方說，您可以使用其中一個互動應用程式或更多根手指觸控感應裝置，例如本逐步解說中建立的應用程式，可讓使用者移動觸控螢幕上調整大小，或使用觸控旋轉單一物件。  
@@ -23,9 +23,7 @@ ms.locfileid: "43511404"
 ## <a name="prerequisites"></a>必要條件  
  您需要下列元件才能完成此逐步解說：  
   
--   [!INCLUDE[vs_dev10_ext](../../../../includes/vs-dev10-ext-md.md)].  
-  
--   Windows 7。  
+-   Visual Studio。  
   
 -   接受輸入，例如觸控螢幕，可支援 Windows Touch 的觸控裝置。  
   
@@ -50,40 +48,41 @@ ms.locfileid: "43511404"
      <xref:System.Windows.UIElement.ManipulationStarting>就會發生事件時[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]偵測到該觸控輸入開始操作的物件。 程式碼會指定操作位置應該是相對於<xref:System.Windows.Window>藉由設定<xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A>屬性。  
   
      [!code-csharp[BasicManipulation#ManipulationStarting](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationstarting)]
-     [!code-vb[BasicManipulation#ManipulationStarting](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationstarting)]  
-  
-5.  在 `MainWindow`類別中，新增下列<xref:System.Windows.Input.ManipulationDelta>事件處理常式。  
-  
-     <xref:System.Windows.Input.ManipulationDelta>觸控輸入變更位置，並可於操作期間發生多次時，就會發生事件。 手指引發之後，也會發生此事件。 例如，如果使用者的螢幕上拖曳手指<xref:System.Windows.Input.ManipulationDelta>手指移事件會發生一次。 當使用者引發從畫面中，手指<xref:System.Windows.Input.ManipulationDelta>事件持續發生，模擬慣性。  
-  
-     程式碼會套用<xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A>要<xref:System.Windows.UIElement.RenderTransform%2A>的<xref:System.Windows.Shapes.Rectangle>移動它，當使用者移動觸控輸入。 它也會檢查是否<xref:System.Windows.Shapes.Rectangle>超出範圍<xref:System.Windows.Window>在慣性期間的事件發生時。 因此，應用程式呼叫如果<xref:System.Windows.Input.ManipulationDeltaEventArgs.Complete%2A?displayProperty=nameWithType>方法以結束操作。  
-  
+     [!code-vb[BasicManipulation#ManipulationStarting](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationstarting)]
+
+5.  在 `MainWindow`類別中，新增下列<xref:System.Windows.Input.ManipulationDelta>事件處理常式。
+
+     <xref:System.Windows.Input.ManipulationDelta>觸控輸入變更位置，並可於操作期間發生多次時，就會發生事件。 手指引發之後，也會發生此事件。 例如，如果使用者的螢幕上拖曳手指<xref:System.Windows.Input.ManipulationDelta>手指移事件會發生一次。 當使用者引發從畫面中，手指<xref:System.Windows.Input.ManipulationDelta>事件持續發生，模擬慣性。
+
+     程式碼會套用<xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A>要<xref:System.Windows.UIElement.RenderTransform%2A>的<xref:System.Windows.Shapes.Rectangle>移動它，當使用者移動觸控輸入。 它也會檢查是否<xref:System.Windows.Shapes.Rectangle>超出範圍<xref:System.Windows.Window>在慣性期間的事件發生時。 因此，應用程式呼叫如果<xref:System.Windows.Input.ManipulationDeltaEventArgs.Complete%2A?displayProperty=nameWithType>方法以結束操作。
+
      [!code-csharp[BasicManipulation#ManipulationDelta](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationdelta)]
-     [!code-vb[BasicManipulation#ManipulationDelta](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationdelta)]  
-  
-6.  在 `MainWindow`類別中，新增下列<xref:System.Windows.UIElement.ManipulationInertiaStarting>事件處理常式。  
-  
-     <xref:System.Windows.UIElement.ManipulationInertiaStarting>事件發生於使用者引發從畫面的所有根手指。 程式碼設定的初始速度和移動、 擴充和旋轉該矩形的減速。  
-  
+     [!code-vb[BasicManipulation#ManipulationDelta](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationdelta)]
+
+6.  在 `MainWindow`類別中，新增下列<xref:System.Windows.UIElement.ManipulationInertiaStarting>事件處理常式。
+
+     <xref:System.Windows.UIElement.ManipulationInertiaStarting>事件發生於使用者引發從畫面的所有根手指。 程式碼設定的初始速度和移動、 擴充和旋轉該矩形的減速。
+
      [!code-csharp[BasicManipulation#ManipulationInertiaStarting](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationinertiastarting)]
-     [!code-vb[BasicManipulation#ManipulationInertiaStarting](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationinertiastarting)]  
-  
-7.  建置並執行專案。  
-  
-     您應該會看到視窗中顯示為紅色方形。  
-  
-## <a name="testing-the-application"></a>測試應用程式  
- 若要測試應用程式，請嘗試下列操作。 請注意，您可以多個下列其中之一在相同的時間。  
-  
--   若要移動<xref:System.Windows.Shapes.Rectangle>，將手指放<xref:System.Windows.Shapes.Rectangle>並將手指移動螢幕上。  
-  
--   若要調整大小<xref:System.Windows.Shapes.Rectangle>，將兩隻手指放在<xref:System.Windows.Shapes.Rectangle>，然後將手指，更接近手指或分開彼此。  
-  
--   若要旋轉<xref:System.Windows.Shapes.Rectangle>，將兩隻手指放在<xref:System.Windows.Shapes.Rectangle>並旋轉手指。  
-  
- 若要使慣性，快速將引發手指已離開螢幕當您執行先前的操作。 <xref:System.Windows.Shapes.Rectangle>會繼續移動、 調整大小或旋轉幾秒鐘的時間之前就會停止。  
-  
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.UIElement.ManipulationStarting?displayProperty=nameWithType>  
- <xref:System.Windows.UIElement.ManipulationDelta?displayProperty=nameWithType>  
- <xref:System.Windows.UIElement.ManipulationInertiaStarting?displayProperty=nameWithType>
+     [!code-vb[BasicManipulation#ManipulationInertiaStarting](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationinertiastarting)]
+
+7.  建置並執行專案。
+
+     您應該會看到視窗中顯示為紅色方形。
+
+## <a name="testing-the-application"></a>測試應用程式
+ 若要測試應用程式，請嘗試下列操作。 請注意，您可以多個下列其中之一在相同的時間。
+
+-   若要移動<xref:System.Windows.Shapes.Rectangle>，將手指放<xref:System.Windows.Shapes.Rectangle>並將手指移動螢幕上。
+
+-   若要調整大小<xref:System.Windows.Shapes.Rectangle>，將兩隻手指放在<xref:System.Windows.Shapes.Rectangle>，然後將手指，更接近手指或分開彼此。
+
+-   若要旋轉<xref:System.Windows.Shapes.Rectangle>，將兩隻手指放在<xref:System.Windows.Shapes.Rectangle>並旋轉手指。
+
+ 若要使慣性，快速將引發手指已離開螢幕當您執行先前的操作。 <xref:System.Windows.Shapes.Rectangle>會繼續移動、 調整大小或旋轉幾秒鐘的時間之前就會停止。
+
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Windows.UIElement.ManipulationStarting?displayProperty=nameWithType>
+- <xref:System.Windows.UIElement.ManipulationDelta?displayProperty=nameWithType>
+- <xref:System.Windows.UIElement.ManipulationInertiaStarting?displayProperty=nameWithType>

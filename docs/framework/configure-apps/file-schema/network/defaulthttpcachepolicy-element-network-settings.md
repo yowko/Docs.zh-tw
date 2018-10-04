@@ -11,11 +11,11 @@ ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 1e1b27cb8c0df4450c1a08151af19913b65fc2b3
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028101"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782138"
 ---
 # <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a>&lt;defaultHttpCachePolicy&gt;項目 （網路設定）
 描述 HTTP 快取是否作用中，並且描述的預設快取原則。  

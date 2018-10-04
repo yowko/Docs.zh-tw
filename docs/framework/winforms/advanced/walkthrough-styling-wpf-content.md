@@ -6,31 +6,31 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: ad98c2da32084122dab529b8cf3a8fe7ef506b99
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: bd056bb9d5ad429e35e0b2625dee99ae5f18b527
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43489899"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780137"
 ---
 # <a name="walkthrough-styling-wpf-content"></a>逐步解說：設定 WPF 內容的樣式
-本逐步解說示範如何將樣式套用至 Windows Form 上裝載的 Windows Presentation Foundation (WPF) 控制項。  
-  
- 在這個逐步解說中，您將執行下列工作：  
-  
--   建立專案。  
-  
--   建立 WPF 控制項類型。  
-  
--   將樣式套用至 WPF 控制項。  
-  
+本逐步解說示範如何將樣式套用至 Windows Form 上裝載的 Windows Presentation Foundation (WPF) 控制項。
+
+ 在這個逐步解說中，您將執行下列工作：
+
+-   建立專案。
+
+-   建立 WPF 控制項類型。
+
+-   將樣式套用至 WPF 控制項。
+
 > [!NOTE]
 >  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 ## <a name="prerequisites"></a>必要條件  
  您需要下列元件才能完成此逐步解說：  
   
--   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)].  
+-   Visual Studio 2012。  
   
 ## <a name="creating-the-project"></a>建立專案  
  第一個步驟是建立 Windows Form 專案。  

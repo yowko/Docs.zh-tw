@@ -2,42 +2,42 @@
 title: 公司購買程序
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: a5e0d6191967c592d5a32baa7eee3f1659a27e50
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 1817b7af00abd9240eb427f61ed9f0255d51c60d
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43802907"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48781657"
 ---
 # <a name="corporate-purchase-process"></a>公司購買程序
-這個範例示範如何建立一個具有自動最佳提案選取、非常基本的提案徵求書 (RFP) 架構採購程序。 它結合 <xref:System.Activities.Statements.Parallel>、<xref:System.Activities.Statements.ParallelForEach%601> 和 <xref:System.Activities.Statements.ForEach%601>，以及自訂活動，建立代表此程序的工作流程。  
-  
- 這個範例包含 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 用戶端應用程式，可讓您以不同的參與者身分 (做為原始要求者或特定供應商) 與程序互動。  
-  
-## <a name="requirements"></a>需求  
-  
--   [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
-  
--   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
-  
-## <a name="demonstrates"></a>示範  
-  
--   自訂活動。  
-  
--   活動撰寫。  
-  
--   書籤。  
-  
--   持續性。  
-  
--   結構描述化的持續性。  
-  
--   追蹤。  
-  
--   追查。  
-  
--   在不同的用戶端 ([!INCLUDE[wf1](../../../../includes/wf1-md.md)] Web 應用程式和 WinForms 應用程式) 中裝載 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]。  
-  
+這個範例示範如何建立一個具有自動最佳提案選取、非常基本的提案徵求書 (RFP) 架構採購程序。 它結合 <xref:System.Activities.Statements.Parallel>、<xref:System.Activities.Statements.ParallelForEach%601> 和 <xref:System.Activities.Statements.ForEach%601>，以及自訂活動，建立代表此程序的工作流程。
+
+ 這個範例包含 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 用戶端應用程式，可讓您以不同的參與者身分 (做為原始要求者或特定供應商) 與程序互動。
+
+## <a name="requirements"></a>需求
+
+-   Visual Studio 2012。
+
+-   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
+
+## <a name="demonstrates"></a>示範
+
+-   自訂活動。
+
+-   活動撰寫。
+
+-   書籤。
+
+-   持續性。
+
+-   結構描述化的持續性。
+
+-   追蹤。
+
+-   追查。
+
+-   在不同的用戶端 ([!INCLUDE[wf1](../../../../includes/wf1-md.md)] Web 應用程式和 WinForms 應用程式) 中裝載 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]。
+
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
@@ -143,7 +143,7 @@ ms.locfileid: "43802907"
   
 #### <a name="to-use-this-sample"></a>若要使用這個範例  
   
-1.  使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 開啟 PurchaseProcess.sln 方案檔。  
+1.  使用 Visual Studio 2010 開啟 PurchaseProcess.sln 方案檔。  
   
 2.  若要執行 Web 用戶端專案，請開啟**方案總管**上按一下滑鼠右鍵**Web 用戶端**專案。 選取 **設定為啟始專案**。  
   

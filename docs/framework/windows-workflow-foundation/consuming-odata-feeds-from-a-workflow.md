@@ -2,12 +2,12 @@
 title: 從流程中使用 OData 摘要
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-ms.openlocfilehash: a7e2a0658294681b154b11f48563ebc562c47210
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 8d08a58cecead105f6e1f580ea40175cac93e417
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44221619"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780098"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>從流程中使用 OData 摘要
 
@@ -23,7 +23,7 @@ WCF 資料服務包含用戶端程式庫，可讓您更輕鬆地從 [!INCLUDE[dn
 
 ### <a name="adding-a-service-reference-to-the-wcf-data-service"></a>加入 WCF 資料服務的服務參考
 
-若要產生 Northwind 用戶端程式庫，您可以使用 **中的 [** 加入服務參考 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] ] 對話方塊，加入 Northwind OData 服務的參考。
+若要產生 Northwind 用戶端程式庫，您可以使用**加入服務參考**將參考加入至 Northwind OData 服務的 Visual Studio 2012 中的對話方塊。
 
 ![加入服務參考](../../../docs/framework/windows-workflow-foundation/media/addservicereferencetonorthwindodataservice.gif "AddServiceReferencetoNorthwindODataService")
 
@@ -114,7 +114,7 @@ OData 會將資料公開為可由 URI 定址的資源。 當您使用用戶端�
 
 ```console
 Raw data returned:
-<?xml version="1.0" encoding="utf-8" standalone="yes"?> 
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <ContactName xmlns="http://schemas.microsoft.com/ado/2007/08/dataservices">Maria Anders</ContactName>
 ```
 

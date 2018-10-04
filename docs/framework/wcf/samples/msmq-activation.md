@@ -2,12 +2,12 @@
 title: MSMQ 啟用
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: a03f5783e732c4a0f3f13cf6abd7ec4803c07c8f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a179fca70a97b4fd9c7b21bdf548afdda59dda91
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779308"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780150"
 ---
 # <a name="msmq-activation"></a>MSMQ 啟用
 這個範例示範如何在 Windows Process Activation Service (WAS) 中裝載可從訊息佇列讀取的應用程式。 這個範例會使用`netMsmqBinding`且根據[雙向通訊](../../../../docs/framework/wcf/samples/two-way-communication.md)範例。 本例中的服務是 Web 裝載的應用程式，而用戶端則會自我裝載並輸出至主控台，以便觀察所送出採購單的狀態。  
@@ -20,7 +20,7 @@ ms.locfileid: "43779308"
 >   
 >  \<InstallDrive>:\WF_WCF_Samples  
 >   
->  如果此目錄不存在，請移至 Windows Communication Foundation (WCF) 的超連結"https://go.microsoft.com/fwlink/?LinkId=150780"\t"_blank"和 Windows Workflow Foundation (WF) 範例[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]以下載所有 WCF 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至 Windows Communication Foundation (WCF) 的超連結"https://go.microsoft.com/fwlink/?LinkId=150780"\t"\_空白"和 Windows Workflow Foundation (WF) 範例[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]若要下載所有 WCF 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
   
@@ -76,7 +76,8 @@ public class OrderProcessorService : IOrderProcessor
             client.OrderStatus(po.PONumber, po.Status);  
             scope.Complete();  
         }  
-    }  
+    }
+}
 ```  
   
  您可以使用組態檔來指定要使用的用戶端繫結。  
@@ -173,7 +174,7 @@ public class OrderStatusService : IOrderStatus
   
  訂單狀態佇列會建立在 `Main` 方法中。 用戶端組態會包含訂單狀態服務組態來裝載訂單狀態服務，如下列範例組態所示。  
   
-```csharp  
+```xml  
 <appSettings>  
     <!-- use appSetting to configure MSMQ queue name -->  
     <add key="targetQueueName" value=".\private$\ServiceModelSamples/service.svc" />  
@@ -269,7 +270,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
         > [!NOTE]
         >  這個命令是單行文字。  
   
-         此命令會啟用 /servicemodelsamples 應用程式使用存取 http://localhost/servicemodelsamples和 net.msmq: //localhost/servicemodelsamples。  
+         此命令會啟用 /servicemodelsamples 應用程式使用來存取`http://localhost/servicemodelsamples`和`net.msmq://localhost/servicemodelsamples`。
   
 7.  如果您之前未曾這麼做，請確定 MSMQ 啟動服務已啟用。 從**開始**功能表上，按一下**執行**，然後輸入`Services.msc`。 搜尋的服務清單**Net.Msmq 接聽程式配接器**。 以滑鼠右鍵按一下並選取**屬性**。 設定**啟動類型**要**自動**，按一下 **套用**，按一下 **啟動** 按鈕。 這個步驟只需要在第一次使用 Net.Msmq 接聽程式配接器服務之前執行一次。  
   

@@ -3,11 +3,11 @@ title: 疑難排解相互關聯
 ms.date: 03/30/2017
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
 ms.openlocfilehash: fecfaf7374823bb19a4ad3d7f6cb2dbbdf139703
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027919"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48793730"
 ---
 # <a name="troubleshooting-correlation"></a>疑難排解相互關聯
 相互關聯用於讓工作流程服務訊息彼此之間產生關聯，以及讓工作流程服務訊息和正確的工作流程執行個體產生關聯，但是，如果設定錯誤，將不會收到訊息，而且應用程式將不會正確運作。 本主題提供數個疑難排解相互關聯問題方法的概觀，同時也列出使用相互關聯時可能發生的部分常見問題。

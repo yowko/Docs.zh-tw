@@ -2,19 +2,19 @@
 title: HOW TO：部署 COM+ 整合應用程式
 ms.date: 03/30/2017
 ms.assetid: 2e5a0510-db3c-4988-a09c-696285836650
-ms.openlocfilehash: 872d0f0c84c1ac0ea96a87ed24a386bb9bedcf85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e338641b801113c5cd6ff4ec380f60f9ef900fc2
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490135"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48793067"
 ---
 # <a name="how-to-deploy-a-com-integration-application"></a>HOW TO：部署 COM+ 整合應用程式
 撰寫好 COM+ 整合應用程式後，您可能會想要將它部署在其他機器上。 此主題描述如何將 COM+ 整合應用程式從一部機器移到另一部機器。  
   
 ### <a name="moving-a-com-hosted-integration-app"></a>移動 COM+ 主控的整合應用程式  
   
-1.  請確定兩部機器上已安裝 WCF。  
+1.  請確定兩台電腦上已安裝 WCF。  
   
 2.  從機器 A 匯出應用程式。  
   
@@ -24,11 +24,11 @@ ms.locfileid: "33490135"
   
 5.  從機器 A 的應用程式根目錄，將 Application.config 和 Application.manifest 檔案複製到機器 B 的應用程式根目錄。  
   
-6.  在機器 B 的 Application.config 檔案中編輯服務端點位址，以識別適當的機器。 例如，變更http://machineA/MyService至http://machineB/MyService。  
+6.  在機器 B 的 Application.config 檔案中編輯服務端點位址，以識別適當的機器。 例如，將 `http://machineA/MyService` 變更為 `http://machineB/MyService`。  
   
 ### <a name="moving-a-web-hosted-integration-application"></a>移動 Web 主控的整合應用程式  
   
-1.  請確定兩部機器上已安裝 WCF。  
+1.  請確定兩台電腦上已安裝 WCF。  
   
 2.  從機器 A 匯出應用程式。  
   

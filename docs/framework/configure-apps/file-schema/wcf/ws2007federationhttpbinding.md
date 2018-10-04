@@ -2,12 +2,12 @@
 title: '&lt;ws2007FederationHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9af4ec79-cdef-457e-9dca-09d5eb821594
-ms.openlocfilehash: 968d60bc8078b8eeff1f9f72d70123aeb596911a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fa1bfb971da4833125e47a1dbcca69997216bfc4
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506534"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48781040"
 ---
 # <a name="ltws2007federationhttpbindinggt"></a>&lt;ws2007FederationHttpBinding&gt;
 安全且互通的繫結衍生自[ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)且支援聯合的安全性。  
@@ -131,5 +131,5 @@ ms.locfileid: "43506534"
  [\<wsFederationHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)  
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結來設定 Windows Communication Foundation 服務和用戶端](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [\<繫結 >](../../../../../docs/framework/misc/binding.md)
