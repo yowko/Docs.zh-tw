@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6400bc71-a858-4ac2-8d5a-caa72d3b5482
-ms.openlocfilehash: 2715e319772e4e0ae4cb38f3dbd1dd5133a2eef3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: d66da04715f96dd37b8f36599d81924ec2f8d5cc
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864585"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48778688"
 ---
 # <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>HOW TO：將 Windows Communication Foundation 服務設為使用連接埠共用
 使用 net.tcp:// 的連接埠共用您的 Windows Communication Foundation (WCF) 應用程式的最簡單方式是公開服務，使用<xref:System.ServiceModel.NetTcpBinding>。  
@@ -61,5 +61,5 @@ ms.locfileid: "43864585"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Net.TCP 連接埠共用](https://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded)  
+ [Net.TCP 連接埠共用](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
  [如何：啟用 Net.TCP 連接埠共用服務](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)

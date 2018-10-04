@@ -2,12 +2,12 @@
 title: WCF 簡化功能
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: ded4fc93e5e8f33d98e58ffcb3cb98c2bff2b410
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2a2b1bc90729f2c8c3303c5d8ce6befc4dff3980
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196490"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580832"
 ---
 # <a name="wcf-simplification-features"></a>WCF 簡化功能
 本主題探討讓撰寫 WCF 應用程式更簡單的新功能。  
@@ -92,9 +92,9 @@ ms.locfileid: "47196490"
 |--------------|--------|-----------------|----------------------|  
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 秒|這個屬性決定 TCP 連接可以花費多少時間來使用 .Net Framing 通訊協定自行驗證。 用戶端必須先傳送一些初始資料，讓伺服器有足夠的資訊來執行驗證。 逾時會故意設定為小於 ReceiveTimeout (10 分鐘)，使未經驗證的惡意用戶端無法長時間保持與伺服器的連接。 預設值為 30 秒。 如需詳細資訊 <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|  
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * 處理器數量|此為通訊端層級的屬性，用來說明要排入佇列之「擱置接受」要求的數目。 如果接聽待辦項目佇列已滿，將會拒絕新的通訊端要求。 如需詳細資訊 <xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|  
-|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * 用於傳輸的處理器數量<br /><br /> 4\*用於 SMSvcHost.exe 的處理器數量|這個屬性會限制伺服器可以在接聽程式上等待的通道數量。 MaxPendingAccepts 太低時，會有一小段時間間隔讓所有等待中的通道開始提供連接服務，但不會有任何新的通道開始接聽。 在這段時間間隔內出現的連接都會失敗，因為伺服器上沒有任何要等待的連接。 這個屬性可以藉由將 <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A> 屬性設為較大數目的方式進行設定。 如需詳細資訊，請參閱 <<c0> <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> 和[設定 Net.TCP Port Sharing Service](https://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
+|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * 用於傳輸的處理器數量<br /><br /> 4\*用於 SMSvcHost.exe 的處理器數量|這個屬性會限制伺服器可以在接聽程式上等待的通道數量。 MaxPendingAccepts 太低時，會有一小段時間間隔讓所有等待中的通道開始提供連接服務，但不會有任何新的通道開始接聽。 在這段時間間隔內出現的連接都會失敗，因為伺服器上沒有任何要等待的連接。 這個屬性可以藉由將 <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A> 屬性設為較大數目的方式進行設定。 如需詳細資訊，請參閱 <<c0> <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> 和[設定 Net.TCP Port Sharing Service](../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)|  
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * 處理器的數量|這個屬性控制傳輸已接受但未經 ServiceModel 發送器擷取的連接數量。 若要設定這個值，請使用繫結上的 `MaxConnections` 或繫結項目上的 `maxOutboundConnectionsPerEndpoint`。 如需詳細資訊 <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|  
-|receiveTimeout|SMSvcHost.exe|30 秒|這個屬性會指定讀取 TCP 框架資料以及從基礎連線執行連線分派的逾時。 這個屬性的用途是設定 SMSvcHost.exe 服務持續投入讀取傳入連接之前序編碼資料的時間上限。 如需詳細資訊，請參閱 <<c0> [ 設定 Net.TCP Port Sharing Service](https://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)。|  
+|receiveTimeout|SMSvcHost.exe|30 秒|這個屬性會指定讀取 TCP 框架資料以及從基礎連線執行連線分派的逾時。 這個屬性的用途是設定 SMSvcHost.exe 服務持續投入讀取傳入連接之前序編碼資料的時間上限。 如需詳細資訊，請參閱 <<c0> [ 設定 Net.TCP Port Sharing Service](../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)。|  
   
 > [!NOTE]
 >  只有在包含 .NET Framework 4.5 的電腦上部署 WCF 服務時，才會使用這些新的預設值。 如果您在包含 .NET Framework 4.0 的電腦上部署相同服務，就會使用 .NET Framework 4.0 的預設值。 在這些情況下，建議您明確地設定這些設定。  

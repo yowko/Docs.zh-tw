@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 5bcd29531858f9cf014042db7ee447cecfdd89b1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7a6de60ec7621792b4f19857a2743f64cbdc686c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525740"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48777405"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>如何：使用繼承選取器對話方塊繼承表單
 繼承表單或其他物件的最簡單方式是使用 [繼承選取器] 對話方塊。 您可以藉助它來利用在其他方案中已建立的程式碼或使用者介面 (UI)。  
@@ -27,7 +27,7 @@ ms.locfileid: "43525740"
   
      [新增項目] 對話方塊隨即開啟。  
   
-2.  選取 [繼承的表單] 範本，並在 [名稱] 方塊中命名。 按一下 [新增] 按鈕繼續。  
+2.  搜尋**繼承的表單**範本從 searchbox，或是按一下**Windows Forms**分類中，選取它，並將它在命名**名稱** 方塊中。 按一下 [新增] 按鈕繼續。  
   
      [繼承選取器] 對話方塊隨即開啟。 如果目前的專案已包含表單，它們會顯示在 [繼承選取器] 對話方塊。  
   

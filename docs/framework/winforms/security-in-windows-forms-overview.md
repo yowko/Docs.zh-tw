@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 54fc56e5e7d6ee5cd0e7bc55bd22c7d4127eb4d3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 36d38756f7df88ec04aca781525f0f6b0a48b768
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45747120"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580926"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows Form 中的安全性概觀
 在 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 發行之前，在使用者電腦上執行的所有程式碼，對資源的存取權限都和電腦的使用者相同。 例如，如果使用者可以存取檔案系統，程式碼就可以存取檔案系統，如果使用者可以存取某個資料庫，程式碼就可以存取該資料庫。 就使用者明確安裝在本機電腦上的可執行檔中的程式碼而言，也許這些權限是可接受的，但是就來自網際網路或近端內部網路的潛在惡意程式碼而言，可能就無法接受了。 不應該讓這個程式碼在沒有權限的情況下，存取使用者的電腦資源。  
@@ -49,7 +49,7 @@ ms.locfileid: "45747120"
   
  當您要求選擇性權限時，您必須處理當應用程式執行的動作需要未被授與的權限時，所產生的安全性例外狀況。 適當處理 <xref:System.Security.SecurityException> 可確保您的應用程式能夠繼續運作。 您的應用程式可以使用例外狀況來判斷是否應該為使用者停用某功能。 例如，如果未授與必要的檔案權限，應用程式可以停用 [儲存] 功能表選項。  
   
- 有時候，很難知道您是否已確立所有適當的權限。 比方說，表面上看起來無害的方法呼叫，可能會在其執行期間的某個時間點存取檔案系統。 如果您未以所有的必要權限來部署應用程式，在桌面上偵錯時，測試可能沒問題，但部署時可能會失敗。 這兩個[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK 和[!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]包含用來計算應用程式所需的權限： MT.exe 命令列工具的 Visual Studio 中，「 計算權限 」 功能分別。  
+ 有時候，很難知道您是否已確立所有適當的權限。 比方說，表面上看起來無害的方法呼叫，可能會在其執行期間的某個時間點存取檔案系統。 如果您未以所有的必要權限來部署應用程式，在桌面上偵錯時，測試可能沒問題，但部署時可能會失敗。 這兩個[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK 和 Visual Studio 2005 包含用來計算應用程式所需的權限： MT.exe 命令列工具的 Visual Studio 中，「 計算權限 」 功能分別。  
   
  下列主題說明其他 Windows Form 安全性功能。  
   

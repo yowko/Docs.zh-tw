@@ -3,11 +3,11 @@ title: 命令式的程式碼式驗證
 ms.date: 03/30/2017
 ms.assetid: ae12537c-455e-42b1-82f4-cea4c46c023e
 ms.openlocfilehash: ac77132e3469bdffa6f88f8c6d617c6faa1c9323
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47862416"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48779669"
 ---
 # <a name="imperative-code-based-validation"></a>命令式的程式碼式驗證
 

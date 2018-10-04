@@ -2,12 +2,12 @@
 title: 工作流程執行屬性
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: 2681152ba89baa2f65d5402a8c8c9d872cadb65b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b72782b4b9fef127e61bb22b7800740af1d8d2b
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518640"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582066"
 ---
 # <a name="workflow-execution-properties"></a>工作流程執行屬性
 CLR 會透過執行緒區域儲存區 (TLS) 維護每個執行緒的執行內容。 這個執行內容會管理眾所周知的執行緒屬性，例如執行緒識別、環境交易和目前的權限集，以及使用者定義的執行緒屬性，例如具名位置。  
@@ -18,9 +18,6 @@ CLR 會透過執行緒區域儲存區 (TLS) 維護每個執行緒的執行內容
   
 ## <a name="creating-and-using-workflow-execution-properties"></a>建立與使用工作流程執行屬性  
  工作流程執行屬性通常會實作 <xref:System.Activities.IExecutionProperty> 介面，但是著重於傳訊功能的屬性可能會實作 <xref:System.ServiceModel.Activities.ISendMessageCallback> 和 <xref:System.ServiceModel.Activities.IReceiveMessageCallback>。 若要建立工作流程執行屬性，請建立實作 <xref:System.Activities.IExecutionProperty> 介面的類別，並實作成員 <xref:System.Activities.IExecutionProperty.SetupWorkflowThread%2A> 和 <xref:System.Activities.IExecutionProperty.CleanupWorkflowThread%2A>。 這些成員可讓執行屬性在包含該屬性之活動 (包括任何子活動) 工作的每次 Pulse 期間，正確的設定與終止執行緒區域儲存區。 在本範例中，會建立設定 `ConsoleColorProperty` 的 `Console.ForegroundColor`。  
-  
-> [!NOTE]
->  本主題的下列範例程式碼根據[執行屬性](../../../docs/framework/windows-workflow-foundation/samples/execution-properties.md)範例。  
   
 ```csharp  
 class ConsoleColorProperty : IExecutionProperty  

@@ -2,15 +2,15 @@
 title: Reliable Messaging Protocol 1.0 版
 ms.date: 03/30/2017
 ms.assetid: a5509a5c-de24-4bc2-9a48-19138055dcce
-ms.openlocfilehash: f45a0d5e50e9ab8a07a203d2c40ad36ef298a40d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cff07ae23e83a68c4cafa1ca122d84db98163d0d
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497048"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48583947"
 ---
 # <a name="reliable-messaging-protocol-version-10"></a>Reliable Messaging Protocol 1.0 版
-本主題涵蓋 Windows Communication Foundation (WCF) 實作細節 Ws-reliable messaging February 2005 （1.0 版） 通訊協定所需使用 HTTP 傳輸的互通性。 WCF 遵循 Ws-reliable 訊息規格的條件約束及說明本主題中的說明。 請注意，[!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 中開始實作 WS-ReliableMessaging 1.0 版通訊協定。  
+本主題涵蓋 Windows Communication Foundation (WCF) 實作細節 Ws-reliable messaging February 2005 （1.0 版） 通訊協定所需的互通性，使用 HTTP 傳輸。 WCF 會遵循本主題所說明的相關限制與說明 Ws-reliable 訊息規格。 請注意，[!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 中開始實作 WS-ReliableMessaging 1.0 版通訊協定。  
   
  Ws-reliable Messaging February 2005 通訊協定的實作中的 WCF <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>。  
   
@@ -33,11 +33,11 @@ ms.locfileid: "33497048"
 ## <a name="messaging"></a>訊息  
   
 ### <a name="sequence-establishment-messages"></a>序列建立訊息  
- WCF 實作`CreateSequence`和`CreateSequenceResponse`訊息以建立可靠的訊息順序。 以下是適用的條件約束：  
+ WCF 實作`CreateSequence`和`CreateSequenceResponse`訊息以建立可靠的訊息序列。 以下是適用的條件約束：  
   
--   B1101: WCF 啟動器不會產生中選用的 Expires 項目`CreateSequence`訊息或情況時`CreateSequence`訊息包含`Offer`元素中，選擇性`Expires`中的項目`Offer`項目。  
+-   B1101: WCF 啟動器不會產生選用的 Expires 項目，在`CreateSequence`訊息或情況時`CreateSequence`訊息包含`Offer`項目、 選擇性`Expires`中的項目`Offer`項目。  
   
--   B1102： 存取時`CreateSequence`訊息，WCF`Responder`傳送和接收兩者`Expires`如果存在，但不會使用其值的項目。  
+-   B1102： 存取時`CreateSequence`訊息，WCF`Responder`傳送和接收兩者`Expires`如果它們存在，但不會使用其值的項目。  
   
  WS-Reliable 訊息會使用 `Offer` 機制來建立兩個反向關聯序列以形成工作階段。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "33497048"
   
 -   R1106：`AcksTo` 訊息中的 `ReplyTo` 和 `CreateSequence` 端點參照應該具有相同的參照參數集合。  
   
-     WCF 不會強制執行，但假設的之 [reference parameters]`AcksTo`和`ReplyTo`上`CreateSequence`都是一樣，並使用 [參考參數] 從`ReplyTo`認可並與序列訊息的端點參考。  
+     WCF 不會強制執行，但假設的之 [reference parameters]`AcksTo`並`ReplyTo`上`CreateSequence`相同，並使用 [參考 parameters] 從`ReplyTo`認可並與序列訊息的端點參考。  
   
 -   R1107：當兩個反向序列都是透過 `Offer` 機制建立時，流經反向序列的 `SequenceAcknowledgement` 和應用程式訊息必須傳送至 `ReplyTo` 的 `CreateSequence` 端點參考。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "33497048"
   
 -   R1109：當兩個反向序列都是透過 `Offer` 機制建立時，從啟動器傳送的訊息以及透過回應程式對訊息的認可，必須傳送至相同的端點參考。  
   
-     WCF 使用 Ws-reliable 訊息建立啟動器和回應程式之間的可靠工作階段。 WCF 的 Ws-reliable 訊息實作會提供可靠的工作階段的單向、 要求-回覆與全雙工訊息模式。 Ws-reliable 訊息`Offer`上的機制`CreateSequence` / `CreateSequenceResponse`可讓您建立兩個相互關聯的反向序列，並提供工作階段通訊協定，可適用於所有訊息端點。 WCF 有提供安全性保證，這類工作階段包含的工作階段完整性的端對端保護，因為它可以實際地確保能用於同一個合作對象的訊息抵達相同的目的地。 這麼做也可以針對應用程式訊息進行 Piggy-Backing 的序列認可作業。 因此，R1104、 R1105 和 R1108 的條件約束套用至 WCF。  
+     WCF 會使用 Ws-reliable 訊息建立啟動器和回應程式之間的可靠工作階段。 WCF 的 Ws-reliable 訊息實作會提供可靠的工作階段的單向、 要求-回覆與全雙工訊息模式。 Ws-reliable 訊息`Offer`上的機制`CreateSequence` / `CreateSequenceResponse`可讓您建立兩個相互關聯的反向序列，並提供工作階段通訊協定，可適用於所有訊息端點。 WCF 會提供包含的工作階段完整性的端對端保護這類的工作階段的安全性保證，因此它會實際地確保相同的合作對象的訊息會抵達相同的目的地。 這麼做也可以針對應用程式訊息進行 Piggy-Backing 的序列認可作業。 因此，R1104、 R1105 和 R1108 的條件約束套用至 WCF。  
   
  `CreateSequence` 訊息的範例。  
   
@@ -133,11 +133,11 @@ ms.locfileid: "33497048"
 ### <a name="sequence"></a>序列  
  下列清單列出適用於序列的條件約束：  
   
--   B1201:WCF 會產生並存取序號大於`xs:long`的最大包含值，9223372036854775807。  
+-   B1201:WCF 會產生，並存取序號不高於`xs:long`的最大包含值，9223372036854775807。  
   
--   B1202:WCF 一律會產生空白主體最後一個訊息，並將動作 URI 的http://schemas.xmlsoap.org/ws/2005/02/rm/LastMessage。  
+-   B1202:WCF 一律會產生主體空白的最後一個訊息，並將動作 URI 的`http://schemas.xmlsoap.org/ws/2005/02/rm/LastMessage`。  
   
--   B1203: WCF 接收和傳送的訊息序列標頭包含`LastMessage`只要動作 URI 不是項目http://schemas.xmlsoap.org/ws/2005/02/rm/LastMessage。  
+-   B1203: WCF 接收，並將序列標頭，其中包含與訊息傳遞`LastMessage`項目只要動作 URI 不是`http://schemas.xmlsoap.org/ws/2005/02/rm/LastMessage`。  
   
  序列標頭的範例。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "33497048"
 ```  
   
 ### <a name="ackrequested-header"></a>AckRequested 標頭  
- WCF 使用`AckRequested`標頭做為 keep-alive 機制。 WCF 不會產生選擇性`MessageNumber`項目。 收到的訊息`AckRequested`包含的標頭`MessageNumber`元素，WCF 會忽略`MessageNumber`元素的值，如下列範例所示。  
+ WCF 會使用`AckRequested`標頭做為 keep-alive 機制。 WCF 不會產生選擇性`MessageNumber`項目。 收到的訊息`AckRequested`包含的標頭`MessageNumber`元素，WCF 會忽略`MessageNumber`元素的值，如下列範例所示。  
   
 ```xml  
 <wsrm:AckRequested>  
@@ -165,11 +165,11 @@ ms.locfileid: "33497048"
 ```  
   
 ### <a name="sequenceacknowledgement-header"></a>SequenceAcknowledgement 標頭  
- WCF Ws-reliable 訊息所提供的序列認可使用 piggy-back 機制。  
+ WCF 所提供的 Ws-reliable 訊息的序列認可使用 piggy-back 機制。  
   
 -   R1401：當兩個反向序列透過 `Offer` 機制建立時，`SequenceAcknowledgement` 標頭可以包含在任何傳送至目的收件者的應用程式訊息中。  
   
--   B1402： 當 WCF 必須先產生認可之前收到任何序列訊息時 (例如，若要滿足`AckRequested`訊息)，WCF 會產生`SequenceAcknowledgement`標頭包含範圍 0-0，如下列範例所示。  
+-   B1402： 當 WCF 必須先產生認可之前收到任何序列訊息時 (例如，若要滿足`AckRequested`訊息)，WCF 會產生`SequenceAcknowledgement`包含範圍 0-0，如下列範例所示的標頭。  
   
     ```xml  
     <wsrm:SequenceAcknowledgement>  
@@ -183,13 +183,13 @@ ms.locfileid: "33497048"
 -   B1403: WCF 不會產生`SequenceAcknowledgement`包含的標頭`Nack`項目，但支援`Nack`項目。  
   
 ### <a name="ws-reliablemessaging-faults"></a>WS-ReliableMessaging 錯誤  
- 以下是適用於 Ws-reliable 訊息錯誤的 WCF 實作的條件約束的清單：  
+ 以下是適用於 Ws-reliable 訊息錯誤 WCF 實作的條件約束的清單：  
   
 -   B1501: WCF 不會產生`MessageNumberRollover`錯誤。  
   
--   B1502:WCF 端點可能會產生`CreateSequenceRefused`規格中所述的錯誤。  
+-   B1502:WCF 端點可能會產生`CreateSequenceRefused`錯誤，如規格所述。  
   
--   B1503:When 服務端點到達其連線限制，且無法處理新的連接時，WCF 會產生額外`CreateSequenceRefused`錯誤子代碼`netrm:ConnectionLimitReached`，如下列範例所示。  
+-   B1503:When 服務端點到達其連線限制，而且無法處理新的連線時，WCF 會產生額外`CreateSequenceRefused`錯誤子代碼， `netrm:ConnectionLimitReached`，如下列範例所示。  
   
     ```xml  
     <s:Envelope>  
@@ -226,9 +226,9 @@ ms.locfileid: "33497048"
     ```  
   
 ### <a name="ws-addressing-faults"></a>WS-Addressing 錯誤  
- 由於 Ws-reliable 訊息會使用 Ws-addressing，WCF Ws-reliable 訊息實作可能會產生 Ws-addressing 錯誤。 本章節涵蓋了 Ws-reliable 訊息層明確產生 WCF Ws-addressing 錯誤：  
+ 由於 Ws-reliable 訊息會使用 Ws-addressing，WCF Ws-reliable 訊息實作可能會產生 Ws-addressing 錯誤。 本節涵蓋了 Ws-reliable 訊息層明確產生 WCF Ws-addressing 錯誤：  
   
--   B1601:WCF 會產生錯誤訊息定址標頭需要下列其中一項成立：  
+-   當下列其中一項條件成立時，B1601:WCF 就會產生錯誤訊息定址標頭需要：  
   
     -   訊息缺少 `Sequence` 標頭和 `Action` 標頭。  
   
@@ -236,45 +236,45 @@ ms.locfileid: "33497048"
   
     -   `CreateSequence` 訊息缺少 `ReplyTo` 標頭。  
   
--   B1602:WCF 會產生錯誤動作不支援時遺失訊息`Sequence`標頭，且`Action`不是可辨識的 Ws-reliable 訊息規格中的標頭。  
+-   B1602:WCF 產生時遺失訊息不支援動作的錯誤`Sequence`標頭，且`Action`不是可辨識的 Ws-reliable 訊息規格中的標頭。  
   
--   B1603:WCF 會產生錯誤端點無法使用，表示端點不會處理順序根據檢查`CreateSequence`訊息之定址標頭。  
+-   B1603:WCF 產生端點無法使用，表示端點不會處理順序根據檢查錯誤`CreateSequence`訊息之定址標頭。  
   
 ## <a name="protocol-composition"></a>通訊協定組合  
   
 ### <a name="composition-with-ws-addressing"></a>與 WS-Addressing 組合  
- WCF 支援兩個版本的 Ws-addressing: Ws-addressing 2004/08 [WS-ADDR] 和 W3C Ws-addressing 1.0 建議 [WS-位址-核心] 和 [WS-位址-SOAP]。  
+ WCF 支援兩個版本的 Ws-addressing: Ws-addressing 2004/08 [WS-ADDR] 和 W3C Ws-addressing 1.0 建議 [WS-ADDR-核心] 和 [WS-ADDR-SOAP]。  
   
  儘管 WS-Reliable 訊息規格只提到 WS-Addressing 2004/08，它並未限制要使用的 WS-Addressing 版本。 以下是適用於 WCF 的條件約束的清單：  
   
--   R2101： 兩個 Ws-addressing 2004/08 和 Ws-addressing 1.0 可與 WS 可靠傳訊。  
+-   R2101： 這兩個 Ws-addressing 2004/08 和 Ws-addressing 1.0 可搭配 Ws-reliable 訊息。  
   
--   R2102:A 單一版本的 Ws-addressing 必須在整個指定的 Ws-reliable 訊息序列或一組使用相互關聯的反向序列`wsrm:Offer`機制。  
+-   在整個特定的 Ws-reliable 訊息序列或是一對使用相互關聯的反向序列，就必須使用 ws-addressing 的 R2102:A 單一版本`wsrm:Offer`機制。  
   
 ### <a name="composition-with-soap"></a>與 SOAP 組合  
  WCF 支援 SOAP 1.1 和 SOAP 1.2 搭配 Ws-reliable 訊息一起使用。  
   
 ### <a name="composition-with-ws-security-and-ws-secureconversation"></a>與 WS-Security 和 WS-SecureConversation 組合  
- WCF 會提供透過安全傳輸 (HTTPS)、 與 Ws-security 組合且組合與 Ws-secure Conversation 保護 Ws-reliable 訊息序列。 以下是適用於 WCF 的條件約束的清單：  
+ WCF 會提供保護 Ws-reliable 訊息序列 (sequence)，透過安全傳輸 (HTTPS)、 與 Ws-security 組合且組合與 Ws-secure Conversation。 以下是適用於 WCF 的條件約束的清單：  
   
--   R2301： 若要保護的個別訊息完整性除了 Ws-reliable 訊息序列的完整性與機密性，WCF 所要求，必須使用 Ws-secure Conversation。  
+-   R2301： 若要保護的個別訊息完整性除了 Ws-reliable 訊息序列的完整性與機密性，WCF 要求，必須使用 Ws-secure Conversation。  
   
--   R2302:AWS-必須建立安全對話工作階段中之前建立 Ws-reliable 訊息序列。  
+-   R2302:AWS-在建立 Ws-reliable 訊息序列之前，必須建立安全對話工作階段。  
   
 -   R2303：如果 WS-Reliable 訊息序列的存留期超過 WS-Secure Conversation 工作階段的存留期，則使用 WS-Secure Conversation 建立的 `SecurityContextToken` 必須透過對應的 WS-Secure Conversation 更新繫結來加以更新。  
   
--   B2304:WS-可信賴傳訊序列或一組相互關聯的反向順序永遠會繫結至單一的 Ws-secureconversation 工作階段。  
+-   B2304:WS-可靠的訊息序列或是一對相互關聯的反向序列一律繫結至單一 Ws-secureconversation 工作階段。  
   
      WCF 來源會產生`wsse:SecurityTokenReference`的項目擴充性區段中的項目`CreateSequence`訊息。  
   
--   將工作與 Ws-secure Conversation，R2305:When`CreateSequence`訊息必須包含`wsse:SecurityTokenReference`項目。  
+-   與 Ws-secure Conversation，R2305:When`CreateSequence`訊息必須包含`wsse:SecurityTokenReference`項目。  
   
 ## <a name="ws-reliable-messaging-ws-policy-assertion"></a>WS-Reliable 訊息 WS-Policy 判斷提示  
- WCF 使用 Ws-reliable 訊息 Ws-policy 判斷提示`wsrm:RMAssertion`來描述端點功能。 以下是適用於 WCF 的條件約束的清單：  
+ WCF 會使用 Ws-reliable 訊息 Ws-policy 判斷提示`wsrm:RMAssertion`來描述端點的功能。 以下是適用於 WCF 的條件約束的清單：  
   
--   B3001: WCF 附加`wsrm:RMAssertion`Ws-policy 判斷提示來`wsdl:binding`項目。 WCF 同時支援附加至`wsdl:binding`和`wsdl:port`項目。  
+-   B3001: WCF 會附加`wsrm:RMAssertion`Ws-policy 判斷提示至`wsdl:binding`項目。 WCF 支援這兩個附件`wsdl:binding`和`wsdl:port`項目。  
   
--   B3002: WCF 支援 WS 可靠訊息判斷提示的下列選擇性屬性，並針對它們提供控制的 WCF`ReliableMessagingBindingElement`:  
+-   B3002: WCF 支援下列選用的 Ws-reliable 訊息判斷提示屬性，並提供 WCF 控制它們`ReliableMessagingBindingElement`:  
   
     -   `wsrm:InactivityTimeout`  
   
@@ -290,13 +290,13 @@ ms.locfileid: "33497048"
     ```  
   
 ## <a name="flow-control-ws-reliable-messaging-extension"></a>WS-Reliable 訊息延伸的流量控制  
- WCF 會使用 Ws-reliable 訊息擴充性提供選擇性額外更加嚴格控制序列訊息流量。  
+ WCF 會使用 Ws-reliable 訊息擴充性，提供選擇性的額外更緊密地控制序列訊息流量。  
   
- 藉由設定已啟用流量控制`ReliableSessionBindingElement`的`FlowControlEnabled``bool`屬性`true`。 以下是適用於 WCF 的條件約束的清單：  
+ 藉由設定已啟用流量控制`ReliableSessionBindingElement`的`FlowControlEnabled``bool`屬性設`true`。 以下是適用於 WCF 的條件約束的清單：  
   
--   B4001： 啟用可信賴傳訊流量控制時，WCF 會產生`netrm:BufferRemaining`中的項目擴充性項目`SequenceAcknowledgement`標頭。  
+-   B4001： 啟用信賴傳訊流量控制時，WCF 會產生`netrm:BufferRemaining`中的項目擴充性項目`SequenceAcknowledgement`標頭。  
   
--   B4002： 啟用可信賴傳訊流量控制時，WCF 不要求`netrm:BufferRemaining`項目存在於`SequenceAcknowledgement`標頭，如下列範例所示。  
+-   B4002： 啟用信賴傳訊流量控制時，WCF 不需要`netrm:BufferRemaining`項目會出現在`SequenceAcknowledgement`標頭，如下列範例所示。  
   
     ```xml  
     <wsrm:SequenceAcknowledgement>  
@@ -310,14 +310,14 @@ ms.locfileid: "33497048"
     </wsrm:SequenceAcknowledgement>  
     ```  
   
--   B4003: WCF 使用`netrm:BufferRemaining`表示多少新訊息的可信賴傳訊目的地可以緩衝。  
+-   B4003: WCF 使用`netrm:BufferRemaining`指出多少新訊息的可靠的傳訊目的地可以緩衝。  
   
--   B4004: WCF 可靠訊息服務會先調節的可信賴傳訊目的地應用程式都能快速地接收訊息時，傳輸的訊息數目。 可信賴傳訊目的地會緩衝處理訊息，並讓項目值降為 0。  
+-   B4004: WCF 可靠傳訊服務節流處理的可信賴傳訊目的地應用程式無法快速接收訊息時，傳輸的訊息數目。 可信賴傳訊目的地會緩衝處理訊息，並讓項目值降為 0。  
   
--   B4005: WCF 會產生`netrm:BufferRemaining`整數值介於 0 到 4096 （含)，並讀取介於 0 的整數值和`xs:int`的`maxInclusive`值 214748364 （含)。  
+-   B4005: WCF 產生`netrm:BufferRemaining`整數值介於 0 到 4096 （含)，並讀取介於 0 的整數值與`xs:int`的`maxInclusive`值 214748364 （含)。  
   
 ## <a name="message-exchange-patterns"></a>訊息交換模式  
- 當不同訊息交換模式使用 Ws-reliable 訊息時，本節會說明 WCF 的行為。 在每個訊息交換模式中，會考慮下列兩種部署案例：  
+ 不同的訊息交換模式使用 Ws-reliable 訊息時，本節會說明 WCF 的行為。 在每個訊息交換模式中，會考慮下列兩種部署案例：  
   
 -   不可定址的啟動器：啟動器位於防火牆後方，回應程式只能透過 HTTP 回應將訊息傳送至啟動器。  
   
@@ -326,13 +326,13 @@ ms.locfileid: "33497048"
 ### <a name="one-way-non-addressable-initiator"></a>單向、不可定址啟動器  
   
 #### <a name="binding"></a>繫結  
- WCF 提供透過一個 HTTP 通道上使用一個序列的單向訊息交換模式。 WCF 會使用 HTTP 要求來傳送所有訊息從 RMS 至 RMD，並在 HTTP 回應來都傳送所有訊息從 rmd 傳送至 RMS。  
+ WCF 會提供一個 HTTP 通道上使用一個序列的單向訊息交換模式。 WCF 會使用 HTTP 要求來傳送所有訊息從 RMS 至 RMD，並在 HTTP 回應來都傳送所有訊息從 rmd 傳送至 RMS。  
   
 #### <a name="createsequence-exchange"></a>CreateSequence 交換  
- WCF 啟動器會產生`CreateSequence`不含提議的訊息。 WCF 回應程式會確保`CreateSequence`建立序列之前不含提議。 WCF 回應回覆`CreateSequence`具有要求`CreateSequenceResponse`訊息。  
+ WCF 啟動器會產生`CreateSequence`不含提議的訊息。 WCF 回應程式會確保`CreateSequence`建立序列之前不含提議。 WCF 回應回覆`CreateSequence`要求與`CreateSequenceResponse`訊息。  
   
 #### <a name="sequenceacknowledgement"></a>SequenceAcknowledgement  
- WCF 啟動器會處理回覆訊息的認可所有除了`CreateSequence`訊息與錯誤訊息。 WCF 回應程式一律產生獨立認可中以同時回應序列和`AckRequested`訊息。  
+ WCF 啟動器處理以外的所有訊息的認可回覆`CreateSequence`訊息與錯誤訊息。 WCF 回應程式一律產生獨立認可，以回應這兩個序列和`AckRequested`訊息。  
   
 #### <a name="terminatesequence-message"></a>TerminateSequence 訊息  
  WCF 會將`TerminateSequence`視為單向作業，代表 HTTP 回應具有空白主體與 HTTP 202 狀態碼。  
@@ -340,68 +340,68 @@ ms.locfileid: "33497048"
 ### <a name="one-way-addressable-initiator"></a>單向、可定址啟動器  
   
 #### <a name="binding"></a>繫結  
- WCF，提供單向訊息交換模式使用一個序列的方式透過一個傳入與一個傳出 Http 通道。 WCF 會使用 HTTP 要求來傳送所有訊息。 所有的 HTTP 回應都有空本文和 HTTP 202 狀態碼。  
+ WCF 會提供使用一個序列，透過在一個傳入與一個傳出 Http 通道的單向訊息交換模式。 WCF 會使用 HTTP 要求來傳送所有訊息。 所有的 HTTP 回應都有空本文和 HTTP 202 狀態碼。  
   
 #### <a name="createsequence-exchange"></a>CreateSequence 交換  
- WCF 啟動器會產生`CreateSequence`不含提議的訊息。 WCF 回應程式會確保`CreateSequence`建立序列之前不含提議。 WCF 回應程式會透過`CreateSequenceResponse`HTTP 要求訊息定址與`ReplyTo`端點參考。  
+ WCF 啟動器會產生`CreateSequence`不含提議的訊息。 WCF 回應程式會確保`CreateSequence`建立序列之前不含提議。 WCF 回應傳輸`CreateSequenceResponse`HTTP 要求訊息而獲得解決`ReplyTo`端點參考。  
   
 ### <a name="duplex-addressable-initiator"></a>雙工、可定址啟動器  
   
 #### <a name="binding"></a>繫結  
- WCF 提供完全非同步的雙向訊息交換模式，透過一個傳入與一個傳出 HTTP 通道上使用兩個序列。 WCF 會使用 HTTP 要求來傳送所有訊息。 所有的 HTTP 回應都有空本文和 HTTP 202 狀態碼。  
+ WCF 提供完全非同步的雙向訊息交換模式使用一個傳入與一個傳出 HTTP 通道上的兩個序列。 WCF 會使用 HTTP 要求來傳送所有訊息。 所有的 HTTP 回應都有空本文和 HTTP 202 狀態碼。  
   
 #### <a name="createsequence-exchange"></a>CreateSequence 交換  
- WCF 啟動器會產生`CreateSequence`提議的訊息。 WCF 回應程式會確保`CreateSequence`已建立序列之前的提供項目。 WCF 傳送`CreateSequenceResponse`的 HTTP 要求傳送到`CreateSequence`的`ReplyTo`端點參考。  
+ WCF 啟動器會產生`CreateSequence`供應項目訊息。 WCF 回應程式會確保`CreateSequence`供應項目中建立序列之前。 WCF 傳送`CreateSequenceResponse`HTTP 要求傳送給`CreateSequence`的`ReplyTo`端點參考。  
   
 #### <a name="sequence-lifetime"></a>序列存留期  
  WCF 會將兩個序列視為一個全雙工工作階段。  
   
  在產生可挑剔某個序列的錯誤，WCF 會預期遠端端點將同時挑剔兩個序列。 在讀取可挑剔某個序列的錯誤，WCF 會挑剔兩個序列。  
   
- WCF 可以關閉其傳出序列並繼續處理其傳入序列的訊息。 相反地，WCF 可以處理傳入序列的關閉作業並繼續傳送其傳出序列的訊息。  
+ WCF 可以關閉其傳出序列並繼續處理其傳入序列的訊息。 相反地，WCF 可以處理傳入序列的關閉，並繼續傳送其傳出序列的訊息。  
   
 ### <a name="request-reply-non-addressable-initiator"></a>要求-回覆、不可定址啟動器  
   
 #### <a name="binding"></a>繫結  
- WCF 提供單向和要求-回覆訊息交換模式使用兩個序列超過一個 HTTP 通道。 WCF 會使用 HTTP 要求來傳送要求序列訊息，並使用以傳輸回覆序列訊息的 HTTP 回應。  
+ WCF 提供單向和要求-回覆訊息交換模式使用兩個序列透過在一個 HTTP 通道。 WCF 會使用 HTTP 要求來傳送要求序列訊息，並透過 HTTP 回應來傳送回覆序列的訊息。  
   
 #### <a name="createsequence-exchange"></a>CreateSequence 交換  
- WCF 啟動器會產生`CreateSequence`提議的訊息。 WCF 回應程式會確保`CreateSequence`已建立序列之前的提供項目。 WCF 回應回覆`CreateSequence`具有要求`CreateSequenceResponse`訊息。  
+ WCF 啟動器會產生`CreateSequence`供應項目訊息。 WCF 回應程式會確保`CreateSequence`供應項目中建立序列之前。 WCF 回應回覆`CreateSequence`要求與`CreateSequenceResponse`訊息。  
   
 #### <a name="one-way-message"></a>單向訊息  
  若要成功完成單向訊息交換通訊協定，WCF 啟動器會傳送要求序列訊息的 HTTP 要求並接收獨立`SequenceAcknowledgement`HTTP 回應的訊息。 `SequenceAcknowledgement` 必須認可傳送的訊息。  
   
- WCF 回應來回覆的認可、 錯誤或是內含空本文與 HTTP 202 狀態碼的回應要求。  
+ WCF 回應來回覆要求，並認可、 錯誤或是內含空本文與 HTTP 202 狀態碼的回應。  
   
 #### <a name="two-way-messages"></a>雙向訊息  
- 若要成功完成雙向訊息交換通訊協定，WCF 啟動者傳送要求序列訊息的 HTTP 要求和接收 HTTP 回應上的回覆序列訊息。 回應中必須包含認可傳輸之要求序列訊息的 `SequenceAcknowledgement`。  
+ 若要成功完成雙向訊息交換通訊協定，WCF 啟動者傳送要求序列訊息的 HTTP 要求和接收 HTTP 回應的回覆序列訊息。 回應中必須包含認可傳輸之要求序列訊息的 `SequenceAcknowledgement`。  
   
- WCF 回應來回覆要求的應用程式回覆、 錯誤或是內含空本文與 HTTP 202 狀態碼的回應。  
+ WCF 回應來回覆要求應用程式回覆、 錯誤或是內含空本文與 HTTP 202 狀態碼的回應。  
   
  由於單向訊息與應用程式回覆時機的緣故，要求序列訊息的序號與回應訊息的序號彼此並未互相關聯。  
   
 #### <a name="retrying-replies"></a>重試回覆  
- WCF 仰賴 HTTP 要求-回覆相互關聯來執行雙向訊息交換通訊協定相互關聯。 因為這個緣故，WCF 啟動器不會停止重試要求序列訊息，但會在認可要求序列訊息時的 HTTP 回應執行認可、 使用者訊息，或是錯誤時，而不是。 WCF 回應重試回覆相互關聯之要求的 HTTP 要求階段上的回覆。  
+ WCF 需仰賴雙向訊息交換通訊協定相互關聯的 HTTP 要求-回覆相互關聯。 因為這個緣故，WCF 啟動器不會停止重試要求序列訊息，當在認可要求序列訊息，但在 HTTP 回應內含認可、 使用者訊息，或是錯誤時，而不是。 WCF 回應重試回覆相互關聯之要求的 HTTP 要求階段上的回覆。  
   
 #### <a name="lastmessage-exchange"></a>LastMessage 交換  
- WCF 啟動器會產生，並將傳送 HTTP 要求階段上的空白主體最後一個訊息。 WCF 需要回應，但會忽略實際的回應訊息。 WCF 回應回覆要求序列的空白主體最後一則訊息，回覆序列的空白主體的最後一個訊息。  
+ WCF 啟動器會產生，並傳送 HTTP 要求階段上的空白主體最後一個訊息。 WCF 需要回應，但會忽略實際的回應訊息。 WCF 回應程式會回覆要求序列的主體空白的最後一則訊息回覆序列的主體空白的最後一個訊息。  
   
- 如果 WCF 回應者接收到最後一個訊息，其中的動作 URI 不http://schemas.xmlsoap.org/ws/2005/02/rm/LastMessage，WCF 則會以最後一則訊息回覆。 在雙向訊息交換通訊協定的情況中，最後一則訊息包含應用程式訊息；在單向訊息交換通訊協定的情況中，最後一則訊息包含空白主體。  
+ 如果 WCF 回應者收到的最後一則訊息中的動作 URI 不是`http://schemas.xmlsoap.org/ws/2005/02/rm/LastMessage`，WCF 則會以最後一則訊息回覆。 在雙向訊息交換通訊協定的情況中，最後一則訊息包含應用程式訊息；在單向訊息交換通訊協定的情況中，最後一則訊息包含空白主體。  
   
- WCF 回應不需要通知回覆序列的空白主體的最後一個訊息。  
+ WCF 回應程式不需要回覆序列的主體空白的最後一則訊息的通知。  
   
 #### <a name="terminatesequence-exchange"></a>TerminateSequence 交換  
- 當所有要求都收到有效回覆時，WCF 啟動器會產生，並傳送要求序列`TerminateSequence`HTTP 要求階段上的訊息。 WCF 需要回應，但會忽略實際的回應訊息。 WCF 回應回覆要求序列的`TerminateSequence`回覆序列訊息`TerminateSequence`訊息。  
+ 一旦所有要求都收到有效回覆，WCF 啟動器會產生，並傳送要求序列的`TerminateSequence`HTTP 要求階段上的訊息。 WCF 需要回應，但會忽略實際的回應訊息。 回覆要求序列的 WCF 回應`TerminateSequence`透過回覆序列訊息`TerminateSequence`訊息。  
   
  在正常的關機序列中，兩個 `TerminateSequence` 訊息會同時包含完整範圍的 `SequenceAcknowledgement`。  
   
 ### <a name="requestreply-addressable-initiator"></a>要求/回覆、可定址啟動器  
   
 #### <a name="binding"></a>繫結  
- WCF 提供使用兩個序列透過一個傳入與一個傳出 HTTP 通道要求-回覆訊息交換模式。 WCF 會使用 HTTP 要求來傳送所有訊息。 所有的 HTTP 回應都有空本文和 HTTP 202 狀態碼。  
+ WCF 會提供使用兩個序列，透過在一個傳入與一個傳出 HTTP 通道要求-回覆訊息交換模式。 WCF 會使用 HTTP 要求來傳送所有訊息。 所有的 HTTP 回應都有空本文和 HTTP 202 狀態碼。  
   
 #### <a name="createsequence-exchange"></a>CreateSequence 交換  
- WCF 啟動器會產生`CreateSequence`提議的訊息。 WCF 回應程式會確保`CreateSequence`已建立序列之前的提供項目。 WCF 傳送`CreateSequenceResponse`的 HTTP 要求傳送到`CreateSequence`的`ReplyTo`端點參考。  
+ WCF 啟動器會產生`CreateSequence`供應項目訊息。 WCF 回應程式會確保`CreateSequence`供應項目中建立序列之前。 WCF 傳送`CreateSequenceResponse`HTTP 要求傳送給`CreateSequence`的`ReplyTo`端點參考。  
   
 #### <a name="requestreply-correlation"></a>要求/回覆相互關聯  
- WCF 啟動者可確保所有應用程式要求訊息都帶有`MessageId`和`ReplyTo`端點參考。 適用於 WCF 啟動器`CreateSequence`訊息的`ReplyTo`上每個應用程式要求訊息的端點參考。 WCF 回應程式會要求傳入的要求訊息都帶有`MessageId`和`ReplyTo`。 WCF 回應程式會確保兩者的端點參照 URI`CreateSequence`與所有應用程式要求訊息完全相同。
+ WCF 啟動者可確保所有的應用程式要求訊息都帶有`MessageId`和`ReplyTo`端點參考。 適用於 WCF 啟動器`CreateSequence`訊息的`ReplyTo`上每個應用程式要求訊息的端點參考。 WCF 回應程式會要求傳入的要求訊息都帶有`MessageId`和`ReplyTo`。 WCF 回應程式會確保兩個端點參照 URI `CreateSequence` ，而且所有的應用程式要求訊息完全相同。

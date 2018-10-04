@@ -2,12 +2,12 @@
 title: 移轉指引
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-ms.openlocfilehash: 93d523c51c45f9b6f6235a7645fa126fcb09b6e5
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 73488354a807d8bf7d90c97b95f1021d884efd27
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027386"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48777954"
 ---
 # <a name="migration-guidance"></a>移轉指引
 在  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]，Microsoft 即將發行的第二個主要版本的 Windows Workflow Foundation (WF)。 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 是在 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 中發佈 (其中包含 System.Workflow.* 命名空間中的型別；現在則是指 WF3)，並在 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 中增強。 WF3 也是屬於[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]，但它有與新的工作流程技術 (System.Activities。 中的型別\*命名空間; 以 WF4)。 在考量何時採用 WF4 時，重要的是要先了解到：您必須控制時機。  
@@ -16,7 +16,7 @@ ms.locfileid: "48027386"
   
 -   WF3 應用程式在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 上執行而不必修改，並繼續受到完整支援。  
   
--   可建立新的 WF3 應用程式，且可在 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 中編輯您現有的應用程式，這些應用程式也受到完整支援。  
+-   您可以建立新的 WF3 應用程式和您現有的應用程式可編輯 Visual Studio 2012 中，而且完全支援。  
   
  因此，決定是否来採用.NET Framework 4 低耦合移至 WF4 （system.activities.*） 從 WF3 (System.Workflow。\*)。 這個主題會提供 WF 移轉指引的連結，此連結中提供使用 WF3 與 WF4 的相關資訊。  
   

@@ -3,11 +3,11 @@ title: 執行
 ms.date: 03/30/2017
 ms.assetid: a9dcedcc-9f4c-45c2-8222-6bcbf48f3534
 ms.openlocfilehash: 5773391bf9cfe8e28724e5a79f901a8e78a62ceb
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48031810"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48583700"
 ---
 # <a name="execution"></a>執行
 本節包含示範執行工作流程中 Windows Workflow Foundation (WF) 的範例。  

@@ -2,133 +2,133 @@
 title: Windows Communication Foundation 至訊息佇列
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-ms.openlocfilehash: ea0723d178b37b1ff2581981f8f49a6953c913cc
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f6a686e658f4cc0097f86dfb19def2d0ba91b8ab
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45597788"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582459"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation 至訊息佇列
-這個範例會示範 Windows Communication Foundation (WCF) 應用程式如何傳送訊息至訊息佇列 (MSMQ) 應用程式。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。 服務與用戶端不需要在相同時間執行。  
-  
- 服務會接收佇列訊息，然後處理訂單。 服務會建立交易式佇列，然後設定已接收訊息的訊息處理常式，如下列範例程式碼所示。  
+這個範例會示範 Windows Communication Foundation (WCF) 應用程式如何傳送訊息至訊息佇列 (MSMQ) 應用程式。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。 服務與用戶端不需要在相同時間執行。
+
+ 服務會接收佇列訊息，然後處理訂單。 服務會建立交易式佇列，然後設定已接收訊息的訊息處理常式，如下列範例程式碼所示。
 
 ```csharp
-static void Main(string[] args)  
-{  
-    if (!MessageQueue.Exists(  
-              ConfigurationManager.AppSettings["queueName"]))  
-       MessageQueue.Create(  
-           ConfigurationManager.AppSettings["queueName"], true);  
-        //Connect to the queue  
-        MessageQueue Queue = new   
-    MessageQueue(ConfigurationManager.AppSettings["queueName"]);  
-    Queue.ReceiveCompleted +=   
-                 new ReceiveCompletedEventHandler(ProcessOrder);  
-    Queue.BeginReceive();  
-    Console.WriteLine("Order Service is running");  
-    Console.ReadLine();  
-}  
+static void Main(string[] args)
+{
+    if (!MessageQueue.Exists(
+              ConfigurationManager.AppSettings["queueName"]))
+       MessageQueue.Create(
+           ConfigurationManager.AppSettings["queueName"], true);
+        //Connect to the queue
+        MessageQueue Queue = new
+    MessageQueue(ConfigurationManager.AppSettings["queueName"]);
+    Queue.ReceiveCompleted +=
+                 new ReceiveCompletedEventHandler(ProcessOrder);
+    Queue.BeginReceive();
+    Console.WriteLine("Order Service is running");
+    Console.ReadLine();
+}
 ```
 
- 當訊息是由佇列接收時，就會叫用訊息處理常式 `ProcessOrder`。  
+ 當訊息是由佇列接收時，就會叫用訊息處理常式 `ProcessOrder`。
 
 ```csharp
-public static void ProcessOrder(Object source,  
-    ReceiveCompletedEventArgs asyncResult)  
-{  
-    try  
-    {  
-        // Connect to the queue.  
-        MessageQueue Queue = (MessageQueue)source;  
-        // End the asynchronous receive operation.  
-        System.Messaging.Message msg =   
-                     Queue.EndReceive(asyncResult.AsyncResult);  
-        msg.Formatter = new System.Messaging.XmlMessageFormatter(  
-                                new Type[] { typeof(PurchaseOrder) });  
-        PurchaseOrder po = (PurchaseOrder) msg.Body;  
-        Random statusIndexer = new Random();  
-        po.Status = PurchaseOrder.OrderStates[statusIndexer.Next(3)];  
-        Console.WriteLine("Processing {0} ", po);  
-        Queue.BeginReceive();  
-    }  
-    catch (System.Exception ex)  
-    {  
-        Console.WriteLine(ex.Message);  
-    }  
-  
-}  
+public static void ProcessOrder(Object source,
+    ReceiveCompletedEventArgs asyncResult)
+{
+    try
+    {
+        // Connect to the queue.
+        MessageQueue Queue = (MessageQueue)source;
+        // End the asynchronous receive operation.
+        System.Messaging.Message msg =
+                     Queue.EndReceive(asyncResult.AsyncResult);
+        msg.Formatter = new System.Messaging.XmlMessageFormatter(
+                                new Type[] { typeof(PurchaseOrder) });
+        PurchaseOrder po = (PurchaseOrder) msg.Body;
+        Random statusIndexer = new Random();
+        po.Status = PurchaseOrder.OrderStates[statusIndexer.Next(3)];
+        Console.WriteLine("Processing {0} ", po);
+        Queue.BeginReceive();
+    }
+    catch (System.Exception ex)
+    {
+        Console.WriteLine(ex.Message);
+    }
+
+}
 ```
 
- 服務會從 MSMQ 訊息本文擷取 `ProcessOrder`，然後處理訂單。  
-  
- MSMQ 佇列名稱是指定在組態檔的 appSettings 區段中，如下面的範例組態所示。  
-  
-```xml  
-<appSettings>  
-    <add key="orderQueueName" value=".\private$\Orders" />  
-</appSettings>  
-```  
-  
+ 服務會從 MSMQ 訊息本文擷取 `ProcessOrder`，然後處理訂單。
+
+ MSMQ 佇列名稱是指定在組態檔的 appSettings 區段中，如下面的範例組態所示。
+
+```xml
+<appSettings>
+    <add key="orderQueueName" value=".\private$\Orders" />
+</appSettings>
+```
+
 > [!NOTE]
->  佇列名稱會使用點 (.) 來代表本機電腦，並在其路徑中使用反斜線分隔符號。  
-  
- 用戶端會建立採購單，然後在異動範圍內提交採購單，如下列範例程式碼所示。  
+>  佇列名稱會使用點 (.) 來代表本機電腦，並在其路徑中使用反斜線分隔符號。
+
+ 用戶端會建立採購單，然後在異動範圍內提交採購單，如下列範例程式碼所示。
 
 ```csharp
-// Create the purchase order  
-PurchaseOrder po = new PurchaseOrder();  
-// Fill in the details  
-...  
-  
-OrderProcessorClient client = new OrderProcessorClient("OrderResponseEndpoint");  
-  
-MsmqMessage<PurchaseOrder> ordermsg = new MsmqMessage<PurchaseOrder>(po);  
-using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Required))  
-{  
-    client.SubmitPurchaseOrder(ordermsg);  
-    scope.Complete();  
-}  
-Console.WriteLine("Order has been submitted:{0}", po);  
-  
-//Closing the client gracefully closes the connection and cleans up resources  
-client.Close();  
+// Create the purchase order
+PurchaseOrder po = new PurchaseOrder();
+// Fill in the details
+...
+
+OrderProcessorClient client = new OrderProcessorClient("OrderResponseEndpoint");
+
+MsmqMessage<PurchaseOrder> ordermsg = new MsmqMessage<PurchaseOrder>(po);
+using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Required))
+{
+    client.SubmitPurchaseOrder(ordermsg);
+    scope.Complete();
+}
+Console.WriteLine("Order has been submitted:{0}", po);
+
+//Closing the client gracefully closes the connection and cleans up resources
+client.Close();
 ```
 
- 用戶端會依序使用自訂用戶端，將 MSMQ 訊息傳送至佇列。 接收和處理訊息的應用程式是 MSMQ 應用程式並是 WCF 應用程式，因為沒有隱含的服務合約之間兩個應用程式。 因此，我們無法在這個案例中使用 Svcutil.exe 工具來建立 Proxy。  
-  
- 自訂用戶端基本上是相同的所有 WCF 應用程式使用`MsmqIntegration`繫結傳送訊息。 與其他用戶端不同的是，它並不包含服務作業的範圍， 而只是一項送出訊息的作業。  
+ 用戶端會依序使用自訂用戶端，將 MSMQ 訊息傳送至佇列。 接收和處理訊息的應用程式是 MSMQ 應用程式並是 WCF 應用程式，因為沒有隱含的服務合約之間兩個應用程式。 因此，我們無法在這個案例中使用 Svcutil.exe 工具來建立 Proxy。
+
+ 自訂用戶端基本上是相同的所有 WCF 應用程式使用`MsmqIntegration`繫結傳送訊息。 與其他用戶端不同的是，它並不包含服務作業的範圍， 而只是一項送出訊息的作業。
 
 ```csharp
-[System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]  
-public interface IOrderProcessor  
-{  
-    [OperationContract(IsOneWay = true, Action = "*")]  
-    void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg);  
-}  
-  
-public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrderProcessor>, IOrderProcessor  
-{  
-    public OrderProcessorClient(){}  
-  
-    public OrderProcessorClient(string configurationName)  
-        : base(configurationName)  
-    { }  
-  
-    public OrderProcessorClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress address)  
-        : base(binding, address)  
-    { }  
-  
-    public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)  
-    {  
-        base.Channel.SubmitPurchaseOrder(msg);  
-    }  
-}  
+[System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]
+public interface IOrderProcessor
+{
+    [OperationContract(IsOneWay = true, Action = "*")]
+    void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg);
+}
+
+public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrderProcessor>, IOrderProcessor
+{
+    public OrderProcessorClient(){}
+
+    public OrderProcessorClient(string configurationName)
+        : base(configurationName)
+    { }
+
+    public OrderProcessorClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress address)
+        : base(binding, address)
+    { }
+
+    public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)
+    {
+        base.Channel.SubmitPurchaseOrder(msg);
+    }
+}
 ```
 
- 當您執行範例時，用戶端與服務活動都會顯示在服務與用戶端主控台視窗中。 您可以查看來自用戶端的服務接收訊息。 在每個主控台視窗中按下 ENTER 鍵，即可關閉服務與用戶端。 請注意，因為佇列正在使用中，所以用戶端與服務不需要同時啟動與執行。 例如，您可以執行用戶端，關閉用戶端，然後再啟動服務，服務還是會收到訊息。  
-  
+ 當您執行範例時，用戶端與服務活動都會顯示在服務與用戶端主控台視窗中。 您可以查看來自用戶端的服務接收訊息。 在每個主控台視窗中按下 ENTER 鍵，即可關閉服務與用戶端。 請注意，因為佇列正在使用中，所以用戶端與服務不需要同時啟動與執行。 例如，您可以執行用戶端，關閉用戶端，然後再啟動服務，服務還是會收到訊息。
+
 > [!NOTE]
 >  這個範例需要安裝訊息佇列。 請參閱中的安裝指示[訊息佇列](https://go.microsoft.com/fwlink/?LinkId=94968)。  
   
@@ -138,7 +138,7 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
   
 2.  如果服務優先執行，它就會檢查以確定佇列存在。 如果佇列不存在，服務將建立一個佇列。 您可以先執行服務來建立佇列，也可以透過 MSMQ 佇列管理員建立佇列。 請依照下列步驟，在 Windows 2008 中建立佇列。  
   
-    1.  在 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 中開啟伺服器管理員。  
+    1.  開啟 Visual Studio 2012 中的 伺服器管理員。  
   
     2.  依序展開**功能** 索引標籤。  
   
