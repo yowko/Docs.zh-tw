@@ -2,12 +2,12 @@
 title: 移轉考量 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: d6643986190b376e188b19851b044bcf05ff7f02
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cf705caa84742d654465a2dba005f2d8f32abcca
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511018"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48778019"
 ---
 # <a name="migration-considerations-entity-framework"></a>移轉考量 (Entity Framework)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework 可以為現有應用程式提供幾項優勢， 其中一項最重要的優勢，就是使用概念模型將應用程式所使用的資料結構從資料來源中的結構描述分隔。 這樣能方便您以後對儲存體模型或資料來源本身進行變更，而不必對應用程式進行補償變更。 針對使用的優點的詳細資訊[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，請參閱 < [Entity Framework 概觀](../../../../../docs/framework/data/adonet/ef/overview.md)並[Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md)。  
@@ -29,11 +29,11 @@ ms.locfileid: "43511018"
  移轉現有應用程式至 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 的途徑取決於應用程式的類型以及現有資料存取策略。 不過，在將現有應用程式移轉至 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 時，一律必須執行下列工作：  
   
 > [!NOTE]
->  使用以 [!INCLUDE[vsOrcas](../../../../../includes/vsorcas-md.md)] 開頭的實體資料模型工具時，便會自動執行上述所有工作。 如需詳細資訊，請參閱 <<c0> [ 如何： 使用 Entity Data Model 精靈](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d)。  
+>  當您使用 Entity Data Model 工具，從 Visual Studio 2008 開始，所有這些工作會自動執行。 如需詳細資訊，請參閱 <<c0> [ 如何： 使用 Entity Data Model 精靈](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d)。  
   
 1.  升級應用程式。  
   
-     使用舊版的 Visual Studio 所建立的專案和[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]必須升級以使用[!INCLUDE[vsOrcas](../../../../../includes/vsorcas-md.md)]SP1 和[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]開頭為 3.5 版 SP1。  
+     使用舊版的 Visual Studio 所建立的專案和[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]必須升級為使用 Visual Studio 2008 SP1 和[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]開頭為 3.5 版 SP1。  
   
 2.  定義模型與對應  
   

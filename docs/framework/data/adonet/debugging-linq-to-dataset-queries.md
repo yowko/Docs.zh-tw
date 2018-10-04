@@ -2,15 +2,16 @@
 title: 偵錯 LINQ to DataSet 查詢
 ms.date: 03/30/2017
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
-ms.openlocfilehash: fd10e6c715529ba937ba09732a254d311158b0f1
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: c1014db4cad54420b917585becd2a2031638c1d9
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086000"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266256"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>偵錯 LINQ to DataSet 查詢
-[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 支援針對 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 程式碼進行偵錯。 不過，有一些偵錯之間的差異[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]程式碼和非-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] managed 程式碼。 大部分的偵錯功能搭配[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]陳述式，包括逐步執行、 設定中斷點，以及檢視偵錯工具視窗所示的結果。 但是，延後查詢執行中的有一些副作用，您應該考慮在偵錯時[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]程式碼，並有一些限制，若要使用 [編輯後繼續]。 本主題討論特有的偵錯觀點[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]相較於非[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]managed 程式碼。  
+
+Visual Studio 支援的偵錯[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]程式碼。 不過，有一些偵錯之間的差異[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]程式碼和非-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] managed 程式碼。 大部分的偵錯功能搭配[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]陳述式，包括逐步執行、 設定中斷點，以及檢視偵錯工具視窗所示的結果。 但是，延後查詢執行中的有一些副作用，您應該考慮在偵錯時[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]程式碼，並有一些限制，若要使用 [編輯後繼續]。 本主題討論特有的偵錯觀點[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]相較於非[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]managed 程式碼。  
   
 ## <a name="viewing-results"></a>檢視結果  
  您可以檢視的結果[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]使用 DataTips、 監看式 視窗中和 [快速監看式] 對話方塊中的陳述式。 藉由使用來源視窗，您可以在來源視窗中暫停查詢的指標，而且 DataTip 將會出現。 您可以複製 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 變數，並將其貼入監看式視窗或快速監看式對話方塊中。 在 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 中建立或宣告查詢時，不會評估該查詢，只有在執行查詢時，才會進行評估。 這就叫做*延後執行*。 因此，查詢變數在接受評估前沒有值。 如需詳細資訊，請參閱 < [LINQ to DataSet 中的查詢](../../../../docs/framework/data/adonet/queries-in-linq-to-dataset.md)。  

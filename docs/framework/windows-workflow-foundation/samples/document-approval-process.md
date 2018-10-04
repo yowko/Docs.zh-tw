@@ -2,16 +2,16 @@
 title: 文件核准程序
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: 874ee560407c3054b4f270a35e5100eaf9e174b8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 34b63acaacde274210343a1135f3ed39a2df885e
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508926"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582706"
 ---
 # <a name="document-approval-process"></a>文件核准程序
-這個範例會示範一起使用的許多 Windows Workflow Foundation (WF) 和 Windows Communication Foundation (WCF) 的功能。 結合這些功能來實作文件核准程序案例。 用戶端應用程式會提交文件以供核准，以及核准文件。 核准管理員應用程式是用來促進用戶端之間的通訊，以及強制執行核准程序的規則。 核准程序是可執行數個核准類型的工作流程。 活動是用來取得單一核准、仲裁核准 (核准者集合的百分比)，以及在序列中包含仲裁和單一核准的複雜核准程序。  
-  
+這個範例會示範一起使用的許多 Windows Workflow Foundation (WF) 和 Windows Communication Foundation (WCF) 的功能。 結合這些功能來實作文件核准程序案例。 用戶端應用程式會提交文件以供核准，以及核准文件。 核准管理員應用程式是用來促進用戶端之間的通訊，以及強制執行核准程序的規則。 核准程序是可執行數個核准類型的工作流程。 活動是用來取得單一核准、仲裁核准 (核准者集合的百分比)，以及在序列中包含仲裁和單一核准的複雜核准程序。
+
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
@@ -80,11 +80,11 @@ ms.locfileid: "43508926"
   
 ##### <a name="to-set-up-the-database"></a>若要設定資料庫  
   
-1.  以系統管理員權限開啟 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 命令提示字元視窗，然後瀏覽至此 DocumentApprovalProcess 資料夾，並執行 Setup.cmd。  
+1.  從系統管理員權限開啟的 Visual Studio 2010 命令提示字元，瀏覽至此 DocumentApprovalProcess 資料夾，並執行 Setup.cmd。  
   
 ##### <a name="to-set-up-the-application"></a>若要設定應用程式  
   
-1.  使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 開啟 DocumentApprovalProcess.sln 方案檔案。  
+1.  使用 Visual Studio 2010 開啟 DocumentApprovalProcess.sln 方案檔案。  
   
 2.  若要建置此方案，請按 CTRL+SHIFT+B。  
   
@@ -146,4 +146,4 @@ ms.locfileid: "43508926"
   
 ##### <a name="to-clean-up"></a>若要清除  
   
-1.  從 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 命令提示字元，巡覽至 DocumentApprovalProcess 資料夾，並執行 Cleanup.cmd。
+1.  在 Visual Studio 2010 命令提示字元中，巡覽至 DocumentApprovalProcess 資料夾，並執行 Cleanup.cmd。

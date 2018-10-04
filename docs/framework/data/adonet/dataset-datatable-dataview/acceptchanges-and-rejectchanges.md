@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e2d1a6fe-31f9-4b83-9728-06c406a3394e
 ms.openlocfilehash: 30b2c303b1823430c480f0706500f8f7e7053c4c
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47111941"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780612"
 ---
 # <a name="acceptchanges-and-rejectchanges"></a>AcceptChanges 和 RejectChanges
 在驗證中的資料變更的正確性之後<xref:System.Data.DataTable>，您可以接受變更<xref:System.Data.DataRow.AcceptChanges%2A>方法<xref:System.Data.DataRow>， <xref:System.Data.DataTable>，或<xref:System.Data.DataSet>，它會將設定**目前**資料列值必須是**原始**值，並將設定**RowState**屬性設**Unchanged**。 接受或拒絕變更會清除任何**RowError**資訊，並且**HasErrors**屬性設**false**。 接受或拒絕變更也會影響資料來源中的資料更新。 如需詳細資訊，請參閱 <<c0> [ 使用 Dataadapter 更新資料來源](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)。  

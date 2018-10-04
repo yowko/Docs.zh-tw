@@ -5,11 +5,11 @@ helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
 ms.openlocfilehash: 726e41e8cde028fb86004ff06e2ad0663a042287
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030268"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580072"
 ---
 # <a name="workflow-security"></a>工作流程安全性
 Windows Workflow Foundation (WF) 與數個不同的技術，例如 Microsoft SQL Server 和 Windows Communication Foundation (WCF) 整合。 如果與這些技術互動的方式不適當，可能會造成工作流程上的安全性問題。

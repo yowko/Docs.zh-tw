@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
 ms.openlocfilehash: a1718429360d79c4628e9948eb1b052c3ac01964
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208042"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266126"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>對資料集執行 XPath 查詢
 同步處理之間的關聯性<xref:System.Data.DataSet>並<xref:System.Xml.XmlDataDocument>可讓您使用 XML 服務，例如 XML 路徑語言 (XPath) 查詢中，存取**XmlDataDocument** ，而且可以執行特定功能比存取更方便**資料集**直接。 比方說，而不是使用**選取 **方法<xref:System.Data.DataTable>巡覽至其他資料表中的關聯性**資料集**，您可以針對執行 XPath 查詢**XmlDataDocument** ，會與同步處理**資料集**，以取得 XML 項目清單的形式<xref:System.Xml.XmlNodeList>。 中的節點**XmlNodeList**轉換為<xref:System.Xml.XmlElement>節點，然後傳遞至**GetRowFromElement**方法**XmlDataDocument**，以傳回比對<xref:System.Data.DataRow>處於同步處理資料表的資料列參考**資料集**。  

@@ -9,35 +9,35 @@ helpviewer_keywords:
 - Windows Forms, anchoring and docking WPF content
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
-ms.openlocfilehash: 1466591a06e9e7ca61f94683e037566f8d0cb31a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 062b9b943d187ccd4105f3772688c563f540d696
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509771"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266665"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>逐步解說：在設計階段排列 Windows Form 的 WPF 內容
-本逐步解說示範如何使用 Windows Form 的配置功能 (例如錨定和對齊線)，來排列 Windows Presentation Foundation (WPF) 控制項。  
-  
- 在這個逐步解說中，您將執行下列工作：  
-  
--   建立專案。  
-  
--   建立 WPF 控制項。  
-  
--   將 WPF 控制項裝載到配置面板中。  
-  
--   使用對齊線來對齊 WPF 控制項。  
-  
--   錨定和停駐 WPF 控制項。  
-  
+本逐步解說示範如何使用 Windows Form 的配置功能 (例如錨定和對齊線)，來排列 Windows Presentation Foundation (WPF) 控制項。
+
+ 在這個逐步解說中，您將執行下列工作：
+
+-   建立專案。
+
+-   建立 WPF 控制項。
+
+-   將 WPF 控制項裝載到配置面板中。
+
+-   使用對齊線來對齊 WPF 控制項。
+
+-   錨定和停駐 WPF 控制項。
+
 > [!NOTE]
 >  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 ## <a name="prerequisites"></a>必要條件  
  您需要下列元件才能完成此逐步解說：  
   
--   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)].  
+-   Visual Studio 2012。  
   
 ## <a name="creating-the-project"></a>建立專案  
  第一個步驟是建立 Windows Form 專案。  

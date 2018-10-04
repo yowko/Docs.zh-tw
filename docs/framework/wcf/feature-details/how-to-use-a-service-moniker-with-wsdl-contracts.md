@@ -2,12 +2,12 @@
 title: HOW TO：使用服務 Moniker 搭配 WSDL 合約
 ms.date: 03/30/2017
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
-ms.openlocfilehash: 838e7affcf47742c8f372879fcb33946d53ba43f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc8e5d80ec0b1df699ebe9112f364dd69ca3faf6
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491039"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266520"
 ---
 # <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>HOW TO：使用服務 Moniker 搭配 WSDL 合約
 在某些情況中，您可能會想要有完全獨立的 COM Interop 用戶端。 您要呼叫的服務可能不會公開 MEX 端點，而且系統可能也不會註冊 COM Interop 的 WCF 用戶端 DLL。 在這些情況中，您可以建立 WSDL 檔案，使其描述服務並傳遞至 WCF 服務 Moniker 中。 本主題說明如何使用 WCF WSDL Moniker 來呼叫使用者入門 WCF 範例。  
@@ -16,7 +16,7 @@ ms.locfileid: "33491039"
   
 1.  開啟和建置 GettingStarted 範例方案。  
   
-2.  開啟 Internet Explorer 並瀏覽至 http://localhost/ServiceModelSamples/Service.svc 以確定服務正在運作。  
+2.  開啟 Internet Explorer 並瀏覽至 `http://localhost/ServiceModelSamples/Service.svc` 以確定服務正在運作。  
   
 3.  在 Service.cs 檔案中新增 CalculatorService 類別的下列屬性：  
   
@@ -26,7 +26,7 @@ ms.locfileid: "33491039"
   
   
   
-5.  建立讓應用程式讀取的 WSDL 檔案。 步驟 3 和 4 中已新增的命名空間，因為您可以使用 IE 來查詢服務的整個 WSDL 描述瀏覽至 http://localhost/ServiceModelSamples/Service.svc?wsdl 。 然後，您可以從 Internet Explorer 將檔案另存為 serviceWSDL.xml。 如果您在步驟 3 和 4 中沒有指定命名空間，藉由查詢上述 URL 而傳回的 WSDL 文件將不會是完整的 WSDL。 傳回的 WSDL 文件將包含數個匯入其他 WSDL 文件的匯入陳述式。 您必須瀏覽每個匯入陳述式並建置完整的 WSDL 文件，結合從服務傳回的 WSDL 和匯入 WSDL。  
+5.  建立讓應用程式讀取的 WSDL 檔案。 步驟 3 和 4 中已新增的命名空間，因為您可以使用 IE 來查詢服務的整個 WSDL 描述瀏覽至 `http://localhost/ServiceModelSamples/Service.svc?wsdl` 。 然後，您可以從 Internet Explorer 將檔案另存為 serviceWSDL.xml。 如果您在步驟 3 和 4 中沒有指定命名空間，藉由查詢上述 URL 而傳回的 WSDL 文件將不會是完整的 WSDL。 傳回的 WSDL 文件將包含數個匯入其他 WSDL 文件的匯入陳述式。 您必須瀏覽每個匯入陳述式並建置完整的 WSDL 文件，結合從服務傳回的 WSDL 和匯入 WSDL。  
   
 6.  開啟 Visual Basic 6.0，並建立新的標準 .exe 檔案。 將按鈕加入至表單中，然後按兩下這個按鈕，將下列程式碼加入至 Click 處理常式：  
   

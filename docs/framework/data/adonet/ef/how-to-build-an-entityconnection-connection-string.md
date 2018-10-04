@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5bd1a748-3df7-4d0a-a607-14f25e3175e9
 ms.openlocfilehash: a35a0bf54d7850e4b10e59c259e4ee512bc93aad
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47398676"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48261202"
 ---
 # <a name="how-to-build-an-entityconnection-connection-string"></a>如何：建置 EntityCollection 連接字串
 本主題提供的範例將示範如何建立 <xref:System.Data.EntityClient.EntityConnection>。  

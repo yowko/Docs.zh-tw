@@ -6,15 +6,14 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: f202d922b441d86838dd41992104ceecfc9bbabf
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0aaa72741a1bb75862a1e3a4c5569ea53919a7f3
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197626"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48781579"
 ---
 # <a name="what-is-windows-communication-foundation"></a>何謂 Windows Communication Foundation
-
 Windows Communication Foundation (WCF) 是用於建置服務導向應用程式的架構。 使用 WCF，您可以將資料傳送非同步訊息形式從一個服務端點之間。 服務端點可能是由 IIS 裝載之持續上線服務的一部分，或為應用程式中裝載的服務。 端點則大致是某項服務的用戶端，會向該服務端點要求資料。 訊息可為簡單的單一字元或以 XML 傳送的字組，乃至如二進位資料的資料流這般複雜的形式都沒問題。 其中幾個範例案例包括：
 
 -   處理商務交易的安全服務。

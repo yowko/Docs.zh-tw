@@ -2,12 +2,12 @@
 title: '&lt;net.tcp&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
-ms.openlocfilehash: ae6837bf6dc8167e165a3adcd1fca8abc3dcd396
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c67aeca183eb476460fa0be2c6dcd9c6077165d8
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500807"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48579339"
 ---
 # <a name="ltnettcpgt"></a>&lt;net.tcp&gt;
 指定 NET.TCP Port Sharing Service 的組態設定，此服務允許多個處理序共用相同的 TCP 連接埠。  
@@ -71,9 +71,9 @@ ms.locfileid: "43500807"
 |[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|包含 SMSvcHost.exe 接聽程式處理序的組態設定。|  
   
 ## <a name="remarks"></a>備註  
- 如需有關連接埠共用的詳細資訊，請參閱[Net.TCP 連接埠共用](https://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded)。 若要了解如何設定連接埠共用服務，請參閱[設定 Net.TCP Port Sharing Service](https://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)。  
+ 如需有關連接埠共用的詳細資訊，請參閱[Net.TCP 連接埠共用](../../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)。 若要了解如何設定連接埠共用服務，請參閱[設定 Net.TCP Port Sharing Service](../../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Activation.Configuration.NetTcpSection>  
- [Net.TCP 連接埠共用](https://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded)  
- [設定 Net.TCP 連接埠共用服務](https://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)
+ [Net.TCP 連接埠共用](../../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
+ [設定 Net.TCP 連接埠共用服務](../../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)

@@ -2,16 +2,16 @@
 title: 基本範例
 ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-ms.openlocfilehash: 8c99b4955dcc00015d54391dcb509b312190ddab
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 29edc8acb0293210e66e31660e3215220440fbae
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508705"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580312"
 ---
 # <a name="basic-sample"></a>基本範例
-這個範例示範如何建立可探索的服務，以及如何搜尋和呼叫可探索的服務。 這個範例包含二個專案：服務和用戶端。  
-  
+這個範例示範如何建立可探索的服務，以及如何搜尋和呼叫可探索的服務。 這個範例包含二個專案：服務和用戶端。
+
 > [!NOTE]
 >  這個範例會在程式碼中實作探索。  如需在組態中實作探索的範例，請參閱 <<c0> [ 組態](../../../../docs/framework/wcf/samples/configuration-sample.md)。  
   
@@ -84,7 +84,7 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
   
 1.  這個範例使用 HTTP 端點，若要執行這個範例，則必須加入正確的 URL ACL。 如需詳細資訊，請參閱 <<c0> [ 設定 HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)。 以更高的權限執行下列命令應該就能加入適當的 ACL。 如果命令未正確執行，您可能要將 Domain 和 Username 替換成下列引數。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2.  使用 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]，開啟 Basic.sln 並建置範例。  
+2.  使用 Visual Studio 2012，開啟 Basic.sln 並建置範例。  
   
 3.  執行 service.exe 應用程式。  
   

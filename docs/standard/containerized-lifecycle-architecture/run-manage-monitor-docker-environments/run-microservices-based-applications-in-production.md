@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.openlocfilehash: 18e6cb1fb5f496b66c89cb8e009a67894b8a76ad
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48046392"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580283"
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>在生產環境中執行撰寫和以微服務為基礎的應用程式
 

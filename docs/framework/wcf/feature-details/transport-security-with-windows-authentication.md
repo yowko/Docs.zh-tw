@@ -7,11 +7,11 @@ dev_langs:
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
 author: BrucePerlerMS
 ms.openlocfilehash: babafe369ee9f5c9261e3b5c8bc749d3d1d39ec4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47236445"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48778512"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Windows 驗證的傳輸安全性
 下列案例示範 Windows Communication Foundation (WCF) 用戶端和服務由 Windows 安全性保護。 如需程式設計的詳細資訊，請參閱[如何： 使用 Windows 認證的服務安全](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)。  

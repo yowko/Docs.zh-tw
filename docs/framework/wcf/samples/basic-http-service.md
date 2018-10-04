@@ -2,12 +2,12 @@
 title: 基本 HTTP 服務
 ms.date: 03/30/2017
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-ms.openlocfilehash: f97fcab1200b9c13860ab8030378b5402b087d7a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 2e4aee93341404df5f06b096a9a7bf18a3c94f56
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028241"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48262379"
 ---
 # <a name="basic-http-service"></a>基本 HTTP 服務
 此範例示範如何實作 HTTP、 RPC 的服務，也就是一般稱為"POX"(Plain Old XML) 服務 – 使用 Windows Communication Foundation (WCF) REST 程式設計模型。 這個範例是由兩個元件所組成： 自我裝載的 WCF HTTP 服務 (Service.cs) 和主控台應用程式 (Program.cs) 建立服務並給它的呼叫。  
@@ -27,7 +27,7 @@ ms.locfileid: "48028241"
   
 #### <a name="to-use-this-sample"></a>若要使用這個範例  
   
-1.  開啟基本 Http 服務範例的方案。 啟動 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 時，您必須以系統管理員身分執行，才能讓範例成功執行。 執行這項操作，以滑鼠右鍵按一下[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]圖示，然後選取**系統管理員身分執行**從內容功能表。  
+1.  開啟基本 Http 服務範例的方案。 當啟動 Visual Studio 2012，您必須執行為此範例的系統管理員，才能順利執行。 執行這項操作，以滑鼠右鍵按一下 [Visual Studio 2012] 圖示，然後選取**系統管理員身分執行**從內容功能表。  
   
 2.  按下 CTRL+SHIFT+B 建置方案，然後按下 Ctrl+F5，在不偵錯的情況下執行主控台應用程式。 主控台視窗隨即出現，並提供執行中服務的 URI，以及執行中服務之 HTML 說明頁的 URI。 您可以隨時在瀏覽器中輸入說明頁的 URI 來檢視 HTML 說明頁。 當範例執行時，用戶端會寫入目前活動的狀態。  
   

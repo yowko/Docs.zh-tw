@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: 93cc0cf34d2bba23ff0938c8c13d7343d665192d
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: a809dbc34d08fc864f6cfe8263489ab52ce41e35
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649213"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580734"
 ---
 # <a name="adonet-code-examples"></a>ADO.NET 程式碼範例
 本主題的程式碼清單示範如何使用下列 ADO.NET 技術來擷取資料庫中的資料：
@@ -66,7 +66,7 @@ ms.locfileid: "45649213"
 下列程式碼清單將示範如何透過查詢 Entity Data Model (EDM) 中的實體，擷取資料來源中的資料。 這些範例會使用[Northwind 模型](https://msdn.microsoft.com/74521f8c-e974-48cb-8858-c08deff52638)。 如需詳細資訊，請參閱 < [Entity Framework 概觀](../../../../docs/framework/data/adonet/ef/overview.md)。
 
 ### <a name="linq-to-entities"></a>LINQ to Entities
-這則範例中的程式碼會使用 LINQ 查詢來傳回資料當做 Categories 物件，而這些物件會投影成僅包含 CategoryID 和 CategoryName 屬性的匿名型別。 如需詳細資訊，請參閱 < [LINQ to Entities 概觀](https://msdn.microsoft.com/86d87a27-c17a-45ac-b28d-72c8500333c6)。
+這則範例中的程式碼會使用 LINQ 查詢來傳回資料當做 Categories 物件，而這些物件會投影成僅包含 CategoryID 和 CategoryName 屬性的匿名型別。 如需詳細資訊，請參閱 < [LINQ to Entities 概觀](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。
 
 ```csharp
 using System;

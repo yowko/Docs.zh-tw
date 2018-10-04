@@ -2,12 +2,12 @@
 title: 使用活動委派
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
-ms.openlocfilehash: bb23f6a79b6f2390952f9aadc1cf08099acb289b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 7ed4032f8f8070648f8a2f0fcfb386101740f1ad
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43489925"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580869"
 ---
 # <a name="using-activity-delegates"></a>使用活動委派
 活動委派可讓活動作者使用特定的簽章以公開回呼，活動使用者可以此為依據來提供活動處理常式。 活動委派有兩種型別可用：<xref:System.Activities.ActivityAction%601>，用來定義沒有傳回值的活動委派，以及 <xref:System.Activities.ActivityFunc%601>，用來定義有傳回值的活動委派。  
@@ -54,7 +54,4 @@ ms.locfileid: "43489925"
   
  若要與 `TextGenerator` 活動共同使用 `WriteFillerText` 活動，請將它指定為 <xref:System.Activities.ActivityDelegate.Handler%2A>。  
   
- [!code-csharp[CFX_ActivityExample#5](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#5)]  
-  
-## <a name="see-also"></a>另請參閱  
- [公開和叫用 ActivityActions](../../../docs/framework/windows-workflow-foundation/samples/exposing-and-invoking-activityactions.md)
+ [!code-csharp[CFX_ActivityExample#5](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#5)]
