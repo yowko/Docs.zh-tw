@@ -2,26 +2,26 @@
 title: 重新裝載工作流程設計工具
 ms.date: 03/30/2017
 ms.assetid: bec1fc28-f902-4edb-86c5-436cec802c2b
-ms.openlocfilehash: e4e061c078626a90641f84b5ea0875f63bb42f9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f5964b5c150dbe2a4132d072672a621315270fd5
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33513302"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48579929"
 ---
-# <a name="rehosting-the-workflow-designer"></a><span data-ttu-id="0970c-102">重新裝載工作流程設計工具</span><span class="sxs-lookup"><span data-stu-id="0970c-102">Rehosting the Workflow Designer</span></span>
-<span data-ttu-id="0970c-103">[!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 可因建立、修改與監控工作流程等目的，在 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 之外的環境重新裝載。</span><span class="sxs-lookup"><span data-stu-id="0970c-103">The [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] can be rehosted in environments outside of [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] for the purposes of creating, modifying, and monitoring workflows.</span></span>  
-  
- <span data-ttu-id="0970c-104"><xref:System.Activities.Presentation.WorkflowDesigner> 型別是畫布、屬性方格與其他項目的包裝函式，並公開基本程式設計模型以處理大部分的設計工具重新裝載實例。</span><span class="sxs-lookup"><span data-stu-id="0970c-104">The <xref:System.Activities.Presentation.WorkflowDesigner> type is a wrapper of the canvas, property grid, and other elements, and exposes a basic programming model to handle the majority of designer rehosting scenarios.</span></span> <span data-ttu-id="0970c-105">裝載<xref:System.Activities.Presentation.WorkflowDesigner>內 Windows Presentation Foundation (WPF) 應用程式是針對一般重新裝載案例[!INCLUDE[wfd2](../../../includes/wfd2-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="0970c-105">Hosting the <xref:System.Activities.Presentation.WorkflowDesigner> inside a Windows Presentation Foundation (WPF) application is a common rehosting scenario for [!INCLUDE[wfd2](../../../includes/wfd2-md.md)].</span></span>  
-  
-## <a name="in-this-section"></a><span data-ttu-id="0970c-106">本節內容</span><span class="sxs-lookup"><span data-stu-id="0970c-106">In This Section</span></span>  
- [<span data-ttu-id="0970c-107">工作 1：建立新的 Windows Presentation Foundation 應用程式</span><span class="sxs-lookup"><span data-stu-id="0970c-107">Task 1: Create a New Windows Presentation Foundation Application</span></span>](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)  
-  
- [<span data-ttu-id="0970c-108">工作 2：裝載工作流程設計工具</span><span class="sxs-lookup"><span data-stu-id="0970c-108">Task 2: Host the Workflow Designer</span></span>](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)  
-  
- [<span data-ttu-id="0970c-109">工作 3：建立工具箱與 PropertyGrid 窗格</span><span class="sxs-lookup"><span data-stu-id="0970c-109">Task 3: Create the Toolbox and PropertyGrid Panes</span></span>](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)  
-  
- [<span data-ttu-id="0970c-110">重新裝載之工作流程設計工具中新 Workflow Foundation 4.5 功能的支援</span><span class="sxs-lookup"><span data-stu-id="0970c-110">Support for New Workflow Foundation 4.5 Features in the Rehosted Workflow Designer</span></span>](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md)  
-  
-## <a name="see-also"></a><span data-ttu-id="0970c-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0970c-111">See Also</span></span>  
- [<span data-ttu-id="0970c-112">自訂工作流程設計體驗</span><span class="sxs-lookup"><span data-stu-id="0970c-112">Customizing the Workflow Design Experience</span></span>](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)
+# <a name="rehosting-the-workflow-designer"></a><span data-ttu-id="e88da-102">重新裝載工作流程設計工具</span><span class="sxs-lookup"><span data-stu-id="e88da-102">Rehosting the Workflow Designer</span></span>
+<span data-ttu-id="e88da-103">[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]可以基於建立、 修改和監視工作流程的重新裝載在 Visual Studio 2012 外部的環境中。</span><span class="sxs-lookup"><span data-stu-id="e88da-103">The [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] can be rehosted in environments outside of Visual Studio 2012 for the purposes of creating, modifying, and monitoring workflows.</span></span>
+
+ <span data-ttu-id="e88da-104"><xref:System.Activities.Presentation.WorkflowDesigner> 型別是畫布、屬性方格與其他項目的包裝函式，並公開基本程式設計模型以處理大部分的設計工具重新裝載實例。</span><span class="sxs-lookup"><span data-stu-id="e88da-104">The <xref:System.Activities.Presentation.WorkflowDesigner> type is a wrapper of the canvas, property grid, and other elements, and exposes a basic programming model to handle the majority of designer rehosting scenarios.</span></span> <span data-ttu-id="e88da-105">裝載<xref:System.Activities.Presentation.WorkflowDesigner>內 Windows Presentation Foundation (WPF) 應用程式是針對一般重新裝載案例[!INCLUDE[wfd2](../../../includes/wfd2-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="e88da-105">Hosting the <xref:System.Activities.Presentation.WorkflowDesigner> inside a Windows Presentation Foundation (WPF) application is a common rehosting scenario for [!INCLUDE[wfd2](../../../includes/wfd2-md.md)].</span></span>
+
+## <a name="in-this-section"></a><span data-ttu-id="e88da-106">本節內容</span><span class="sxs-lookup"><span data-stu-id="e88da-106">In This Section</span></span>
+ [<span data-ttu-id="e88da-107">工作 1：建立新的 Windows Presentation Foundation 應用程式</span><span class="sxs-lookup"><span data-stu-id="e88da-107">Task 1: Create a New Windows Presentation Foundation Application</span></span>](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)
+
+ [<span data-ttu-id="e88da-108">工作 2：裝載工作流程設計工具</span><span class="sxs-lookup"><span data-stu-id="e88da-108">Task 2: Host the Workflow Designer</span></span>](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)
+
+ [<span data-ttu-id="e88da-109">工作 3：建立工具箱與 PropertyGrid 窗格</span><span class="sxs-lookup"><span data-stu-id="e88da-109">Task 3: Create the Toolbox and PropertyGrid Panes</span></span>](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)
+
+ [<span data-ttu-id="e88da-110">重新裝載之工作流程設計工具中新 Workflow Foundation 4.5 功能的支援</span><span class="sxs-lookup"><span data-stu-id="e88da-110">Support for New Workflow Foundation 4.5 Features in the Rehosted Workflow Designer</span></span>](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md)
+
+## <a name="see-also"></a><span data-ttu-id="e88da-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e88da-111">See Also</span></span>
+ [<span data-ttu-id="e88da-112">自訂工作流程設計體驗</span><span class="sxs-lookup"><span data-stu-id="e88da-112">Customizing the Workflow Design Experience</span></span>](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)

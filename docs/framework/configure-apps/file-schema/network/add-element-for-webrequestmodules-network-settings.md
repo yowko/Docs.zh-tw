@@ -13,21 +13,21 @@ ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 64df186be7d9e503ac22e177bca8da31e165f240
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032591"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266294"
 ---
-# <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a><span data-ttu-id="07449-102">&lt;新增&gt;webRequestModules （網路設定） 的項目</span><span class="sxs-lookup"><span data-stu-id="07449-102">&lt;add&gt; Element for webRequestModules (Network Settings)</span></span>
-<span data-ttu-id="07449-103">將自訂的 Web 要求模組新增至應用程式。</span><span class="sxs-lookup"><span data-stu-id="07449-103">Adds a custom Web request module to the application.</span></span>  
+# <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a><span data-ttu-id="da77c-102">&lt;新增&gt;webRequestModules （網路設定） 的項目</span><span class="sxs-lookup"><span data-stu-id="da77c-102">&lt;add&gt; Element for webRequestModules (Network Settings)</span></span>
+<span data-ttu-id="da77c-103">將自訂的 Web 要求模組新增至應用程式。</span><span class="sxs-lookup"><span data-stu-id="da77c-103">Adds a custom Web request module to the application.</span></span>  
   
- <span data-ttu-id="07449-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="07449-104">\<configuration></span></span>  
-<span data-ttu-id="07449-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="07449-105">\<system.net></span></span>  
-<span data-ttu-id="07449-106">\<webRequestModules></span><span class="sxs-lookup"><span data-stu-id="07449-106">\<webRequestModules></span></span>  
-<span data-ttu-id="07449-107">\<add></span><span class="sxs-lookup"><span data-stu-id="07449-107">\<add></span></span>  
+ <span data-ttu-id="da77c-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="da77c-104">\<configuration></span></span>  
+<span data-ttu-id="da77c-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="da77c-105">\<system.net></span></span>  
+<span data-ttu-id="da77c-106">\<webRequestModules></span><span class="sxs-lookup"><span data-stu-id="da77c-106">\<webRequestModules></span></span>  
+<span data-ttu-id="da77c-107">\<add></span><span class="sxs-lookup"><span data-stu-id="da77c-107">\<add></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="07449-108">語法</span><span class="sxs-lookup"><span data-stu-id="07449-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="da77c-108">語法</span><span class="sxs-lookup"><span data-stu-id="da77c-108">Syntax</span></span>  
   
 ```xml  
 <add   
@@ -36,39 +36,39 @@ ms.locfileid: "48032591"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="07449-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="07449-109">Attributes and Elements</span></span>  
- <span data-ttu-id="07449-110">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="07449-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="da77c-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="da77c-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="da77c-110">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="da77c-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="07449-111">屬性</span><span class="sxs-lookup"><span data-stu-id="07449-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="da77c-111">屬性</span><span class="sxs-lookup"><span data-stu-id="da77c-111">Attributes</span></span>  
   
-|<span data-ttu-id="07449-112">**屬性**</span><span class="sxs-lookup"><span data-stu-id="07449-112">**Attribute**</span></span>|<span data-ttu-id="07449-113">**描述**</span><span class="sxs-lookup"><span data-stu-id="07449-113">**Description**</span></span>|  
+|<span data-ttu-id="da77c-112">**屬性**</span><span class="sxs-lookup"><span data-stu-id="da77c-112">**Attribute**</span></span>|<span data-ttu-id="da77c-113">**描述**</span><span class="sxs-lookup"><span data-stu-id="da77c-113">**Description**</span></span>|  
 |-------------------|---------------------|  
-|`prefix`|<span data-ttu-id="07449-114">此 Web 要求模組所處理的要求 URI 前置詞。</span><span class="sxs-lookup"><span data-stu-id="07449-114">The URI prefix for requests handled by this Web request module.</span></span>|  
-|`type`|<span data-ttu-id="07449-115">完整的類型名稱 (由<xref:System.Type.FullName%2A>屬性) 和組件名稱 (由<xref:System.Reflection.Assembly.FullName%2A>屬性)，以實作此 Web 要求模組逗號分隔。</span><span class="sxs-lookup"><span data-stu-id="07449-115">The fully qualified type name (indicated by the <xref:System.Type.FullName%2A> property) and the assembly name (indicated by the <xref:System.Reflection.Assembly.FullName%2A> property), separated by a comma, that implements this Web request module.</span></span>|  
+|`prefix`|<span data-ttu-id="da77c-114">此 Web 要求模組所處理的要求 URI 前置詞。</span><span class="sxs-lookup"><span data-stu-id="da77c-114">The URI prefix for requests handled by this Web request module.</span></span>|  
+|`type`|<span data-ttu-id="da77c-115">完整的類型名稱 (由<xref:System.Type.FullName%2A>屬性) 和組件名稱 (由<xref:System.Reflection.Assembly.FullName%2A>屬性)，以實作此 Web 要求模組逗號分隔。</span><span class="sxs-lookup"><span data-stu-id="da77c-115">The fully qualified type name (indicated by the <xref:System.Type.FullName%2A> property) and the assembly name (indicated by the <xref:System.Reflection.Assembly.FullName%2A> property), separated by a comma, that implements this Web request module.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="07449-116">子元素</span><span class="sxs-lookup"><span data-stu-id="07449-116">Child Elements</span></span>  
- <span data-ttu-id="07449-117">無。</span><span class="sxs-lookup"><span data-stu-id="07449-117">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="da77c-116">子元素</span><span class="sxs-lookup"><span data-stu-id="da77c-116">Child Elements</span></span>  
+ <span data-ttu-id="da77c-117">無。</span><span class="sxs-lookup"><span data-stu-id="da77c-117">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="07449-118">父項目</span><span class="sxs-lookup"><span data-stu-id="07449-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="da77c-118">父項目</span><span class="sxs-lookup"><span data-stu-id="da77c-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="07449-119">**目**</span><span class="sxs-lookup"><span data-stu-id="07449-119">**Element**</span></span>|<span data-ttu-id="07449-120">**描述**</span><span class="sxs-lookup"><span data-stu-id="07449-120">**Description**</span></span>|  
+|<span data-ttu-id="da77c-119">**目**</span><span class="sxs-lookup"><span data-stu-id="da77c-119">**Element**</span></span>|<span data-ttu-id="da77c-120">**描述**</span><span class="sxs-lookup"><span data-stu-id="da77c-120">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="07449-121">webRequestModules</span><span class="sxs-lookup"><span data-stu-id="07449-121">webRequestModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|<span data-ttu-id="07449-122">指定要求資訊從網路主機使用的模組。</span><span class="sxs-lookup"><span data-stu-id="07449-122">Specifies modules to use to request information from network hosts.</span></span>|  
+|[<span data-ttu-id="da77c-121">webRequestModules</span><span class="sxs-lookup"><span data-stu-id="da77c-121">webRequestModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|<span data-ttu-id="da77c-122">指定要求資訊從網路主機使用的模組。</span><span class="sxs-lookup"><span data-stu-id="da77c-122">Specifies modules to use to request information from network hosts.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="07449-123">備註</span><span class="sxs-lookup"><span data-stu-id="07449-123">Remarks</span></span>  
- <span data-ttu-id="07449-124">`prefix`屬性定義會使用指定的 Web 要求模組的 URI 前置詞。</span><span class="sxs-lookup"><span data-stu-id="07449-124">The `prefix` attribute defines the URI prefix that uses the specified Web request module.</span></span> <span data-ttu-id="07449-125">Web 要求模組來處理特定的通訊協定，例如 HTTP 或 FTP，通常註冊，但可以向處理要求，以特定伺服器或伺服器上的路徑。</span><span class="sxs-lookup"><span data-stu-id="07449-125">Web request modules are typically registered to handle a specific protocol, such as HTTP or FTP, but can be registered to handle a request to a specific server or path on a server.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="da77c-123">備註</span><span class="sxs-lookup"><span data-stu-id="da77c-123">Remarks</span></span>  
+ <span data-ttu-id="da77c-124">`prefix`屬性定義會使用指定的 Web 要求模組的 URI 前置詞。</span><span class="sxs-lookup"><span data-stu-id="da77c-124">The `prefix` attribute defines the URI prefix that uses the specified Web request module.</span></span> <span data-ttu-id="da77c-125">Web 要求模組來處理特定的通訊協定，例如 HTTP 或 FTP，通常註冊，但可以向處理要求，以特定伺服器或伺服器上的路徑。</span><span class="sxs-lookup"><span data-stu-id="da77c-125">Web request modules are typically registered to handle a specific protocol, such as HTTP or FTP, but can be registered to handle a request to a specific server or path on a server.</span></span>  
   
- <span data-ttu-id="07449-126">當符合 URI 的前置詞會傳遞至建立 Web 要求模組<xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="07449-126">The Web request module is created when a URI matching prefix is passed to the <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> method.</span></span>  
+ <span data-ttu-id="da77c-126">當符合 URI 的前置詞會傳遞至建立 Web 要求模組<xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="da77c-126">The Web request module is created when a URI matching prefix is passed to the <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> method.</span></span>  
   
- <span data-ttu-id="07449-127">值`prefix`屬性應為有效的 URI 的前置字元。</span><span class="sxs-lookup"><span data-stu-id="07449-127">The value for the `prefix` attribute should be the leading characters of a valid URI.</span></span> <span data-ttu-id="07449-128">例如，`http` 或 `http://www.contoso.com`。</span><span class="sxs-lookup"><span data-stu-id="07449-128">For example, `http` or `http://www.contoso.com`.</span></span>
+ <span data-ttu-id="da77c-127">值`prefix`屬性應為有效的 URI 的前置字元。</span><span class="sxs-lookup"><span data-stu-id="da77c-127">The value for the `prefix` attribute should be the leading characters of a valid URI.</span></span> <span data-ttu-id="da77c-128">例如，`http` 或 `http://www.contoso.com`。</span><span class="sxs-lookup"><span data-stu-id="da77c-128">For example, `http` or `http://www.contoso.com`.</span></span>
   
- <span data-ttu-id="07449-129">值`type`屬性應為有效的型別名稱和對應的組件名稱，以逗號分隔。</span><span class="sxs-lookup"><span data-stu-id="07449-129">The value for the `type` attribute should be a valid type name and corresponding assembly name, separated by a comma.</span></span>
+ <span data-ttu-id="da77c-129">值`type`屬性應為有效的型別名稱和對應的組件名稱，以逗號分隔。</span><span class="sxs-lookup"><span data-stu-id="da77c-129">The value for the `type` attribute should be a valid type name and corresponding assembly name, separated by a comma.</span></span>
   
-## <a name="configuration-files"></a><span data-ttu-id="07449-130">組態檔</span><span class="sxs-lookup"><span data-stu-id="07449-130">Configuration Files</span></span>  
- <span data-ttu-id="07449-131">此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。</span><span class="sxs-lookup"><span data-stu-id="07449-131">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="da77c-130">組態檔</span><span class="sxs-lookup"><span data-stu-id="da77c-130">Configuration Files</span></span>  
+ <span data-ttu-id="da77c-131">此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。</span><span class="sxs-lookup"><span data-stu-id="da77c-131">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="07449-132">範例</span><span class="sxs-lookup"><span data-stu-id="07449-132">Example</span></span>  
- <span data-ttu-id="07449-133">下列範例會註冊自訂的 Web 要求模組的 HTTP。</span><span class="sxs-lookup"><span data-stu-id="07449-133">The following example registers a custom Web request module for HTTP.</span></span> <span data-ttu-id="07449-134">您應該取得版本和 PublicKeyToken 的值取代為正確的值，指定模組。</span><span class="sxs-lookup"><span data-stu-id="07449-134">You should replace the values for Version and PublicKeyToken with the correct values for the specified module.</span></span>  
+## <a name="example"></a><span data-ttu-id="da77c-132">範例</span><span class="sxs-lookup"><span data-stu-id="da77c-132">Example</span></span>  
+ <span data-ttu-id="da77c-133">下列範例會註冊自訂的 Web 要求模組的 HTTP。</span><span class="sxs-lookup"><span data-stu-id="da77c-133">The following example registers a custom Web request module for HTTP.</span></span> <span data-ttu-id="da77c-134">您應該取得版本和 PublicKeyToken 的值取代為正確的值，指定模組。</span><span class="sxs-lookup"><span data-stu-id="da77c-134">You should replace the values for Version and PublicKeyToken with the correct values for the specified module.</span></span>  
   
 ```xml  
 <configuration>  
@@ -83,6 +83,6 @@ ms.locfileid: "48032591"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="07449-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="07449-135">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="da77c-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="da77c-135">See Also</span></span>  
  <xref:System.Net.WebRequest>  
- [<span data-ttu-id="07449-136">網路設定結構描述</span><span class="sxs-lookup"><span data-stu-id="07449-136">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="da77c-136">網路設定結構描述</span><span class="sxs-lookup"><span data-stu-id="da77c-136">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
