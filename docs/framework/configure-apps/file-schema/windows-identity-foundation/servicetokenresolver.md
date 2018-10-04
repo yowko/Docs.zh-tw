@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 ms.assetid: 6e9001e1-e064-4f47-84b2-46225c177746
 author: BrucePerlerMS
 ms.openlocfilehash: d4b64e2c88e153834b7cf5a83bd6258b6dfd471f
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48031927"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780780"
 ---
-# <a name="ltservicetokenresolvergt"></a><span data-ttu-id="dcbbc-102">&lt;serviceTokenResolver&gt;</span><span class="sxs-lookup"><span data-stu-id="dcbbc-102">&lt;serviceTokenResolver&gt;</span></span>
-<span data-ttu-id="dcbbc-103">註冊的服務權杖解析程式由權杖處理常式集合中的處理常式。</span><span class="sxs-lookup"><span data-stu-id="dcbbc-103">Registers the service token resolver that is used by handlers in the token handler collection.</span></span> <span data-ttu-id="dcbbc-104">服務權杖解析程式用來解析上傳入的權杖和訊息的加密語彙基元。</span><span class="sxs-lookup"><span data-stu-id="dcbbc-104">The service token resolver is used to resolve the encryption token on incoming tokens and messages.</span></span>  
+# <a name="ltservicetokenresolvergt"></a><span data-ttu-id="40393-102">&lt;serviceTokenResolver&gt;</span><span class="sxs-lookup"><span data-stu-id="40393-102">&lt;serviceTokenResolver&gt;</span></span>
+<span data-ttu-id="40393-103">註冊的服務權杖解析程式由權杖處理常式集合中的處理常式。</span><span class="sxs-lookup"><span data-stu-id="40393-103">Registers the service token resolver that is used by handlers in the token handler collection.</span></span> <span data-ttu-id="40393-104">服務權杖解析程式用來解析上傳入的權杖和訊息的加密語彙基元。</span><span class="sxs-lookup"><span data-stu-id="40393-104">The service token resolver is used to resolve the encryption token on incoming tokens and messages.</span></span>  
   
- <span data-ttu-id="dcbbc-105">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="dcbbc-105">\<system.identityModel></span></span>  
-<span data-ttu-id="dcbbc-106">\<identityConfiguration></span><span class="sxs-lookup"><span data-stu-id="dcbbc-106">\<identityConfiguration></span></span>  
-<span data-ttu-id="dcbbc-107">\<securityTokenHandlers></span><span class="sxs-lookup"><span data-stu-id="dcbbc-107">\<securityTokenHandlers></span></span>  
-<span data-ttu-id="dcbbc-108">\<Securitytokenhandlerconfiguration> ></span><span class="sxs-lookup"><span data-stu-id="dcbbc-108">\<securityTokenHandlerConfiguration></span></span>  
-<span data-ttu-id="dcbbc-109">\<serviceTokenResolver ></span><span class="sxs-lookup"><span data-stu-id="dcbbc-109">\<serviceTokenResolver></span></span>  
+ <span data-ttu-id="40393-105">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="40393-105">\<system.identityModel></span></span>  
+<span data-ttu-id="40393-106">\<identityConfiguration></span><span class="sxs-lookup"><span data-stu-id="40393-106">\<identityConfiguration></span></span>  
+<span data-ttu-id="40393-107">\<securityTokenHandlers></span><span class="sxs-lookup"><span data-stu-id="40393-107">\<securityTokenHandlers></span></span>  
+<span data-ttu-id="40393-108">\<Securitytokenhandlerconfiguration> ></span><span class="sxs-lookup"><span data-stu-id="40393-108">\<securityTokenHandlerConfiguration></span></span>  
+<span data-ttu-id="40393-109">\<serviceTokenResolver ></span><span class="sxs-lookup"><span data-stu-id="40393-109">\<serviceTokenResolver></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dcbbc-110">語法</span><span class="sxs-lookup"><span data-stu-id="dcbbc-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="40393-110">語法</span><span class="sxs-lookup"><span data-stu-id="40393-110">Syntax</span></span>  
   
 ```xml  
 <system.identityModel>  
@@ -34,33 +34,33 @@ ms.locfileid: "48031927"
 </system.identityModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="dcbbc-111">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="dcbbc-111">Attributes and Elements</span></span>  
- <span data-ttu-id="dcbbc-112">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="dcbbc-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="40393-111">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="40393-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="40393-112">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="40393-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="dcbbc-113">屬性</span><span class="sxs-lookup"><span data-stu-id="dcbbc-113">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="40393-113">屬性</span><span class="sxs-lookup"><span data-stu-id="40393-113">Attributes</span></span>  
   
-|<span data-ttu-id="dcbbc-114">屬性</span><span class="sxs-lookup"><span data-stu-id="dcbbc-114">Attribute</span></span>|<span data-ttu-id="dcbbc-115">描述</span><span class="sxs-lookup"><span data-stu-id="dcbbc-115">Description</span></span>|  
+|<span data-ttu-id="40393-114">屬性</span><span class="sxs-lookup"><span data-stu-id="40393-114">Attribute</span></span>|<span data-ttu-id="40393-115">描述</span><span class="sxs-lookup"><span data-stu-id="40393-115">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="dcbbc-116">類型</span><span class="sxs-lookup"><span data-stu-id="dcbbc-116">type</span></span>|<span data-ttu-id="dcbbc-117">指定服務權杖解析程式的類型。</span><span class="sxs-lookup"><span data-stu-id="dcbbc-117">Specifies the type of the service token resolver.</span></span> <span data-ttu-id="dcbbc-118">任一<xref:System.IdentityModel.Selectors.SecurityTokenResolver>類型或衍生自類型<xref:System.IdentityModel.Selectors.SecurityTokenResolver>類別。</span><span class="sxs-lookup"><span data-stu-id="dcbbc-118">Either the <xref:System.IdentityModel.Selectors.SecurityTokenResolver> type or a type that derives from the <xref:System.IdentityModel.Selectors.SecurityTokenResolver> class.</span></span> <span data-ttu-id="dcbbc-119">如需有關如何指定`type`屬性，請參閱 [自訂型別參考]。</span><span class="sxs-lookup"><span data-stu-id="dcbbc-119">For more information about how to specify the `type` attribute, see [Custom Type References].</span></span> <span data-ttu-id="dcbbc-120">必要。</span><span class="sxs-lookup"><span data-stu-id="dcbbc-120">Required.</span></span>|  
+|<span data-ttu-id="40393-116">類型</span><span class="sxs-lookup"><span data-stu-id="40393-116">type</span></span>|<span data-ttu-id="40393-117">指定服務權杖解析程式的類型。</span><span class="sxs-lookup"><span data-stu-id="40393-117">Specifies the type of the service token resolver.</span></span> <span data-ttu-id="40393-118">任一<xref:System.IdentityModel.Selectors.SecurityTokenResolver>類型或衍生自類型<xref:System.IdentityModel.Selectors.SecurityTokenResolver>類別。</span><span class="sxs-lookup"><span data-stu-id="40393-118">Either the <xref:System.IdentityModel.Selectors.SecurityTokenResolver> type or a type that derives from the <xref:System.IdentityModel.Selectors.SecurityTokenResolver> class.</span></span> <span data-ttu-id="40393-119">如需有關如何指定`type`屬性，請參閱 [自訂型別參考]。</span><span class="sxs-lookup"><span data-stu-id="40393-119">For more information about how to specify the `type` attribute, see [Custom Type References].</span></span> <span data-ttu-id="40393-120">必要。</span><span class="sxs-lookup"><span data-stu-id="40393-120">Required.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="dcbbc-121">子元素</span><span class="sxs-lookup"><span data-stu-id="dcbbc-121">Child Elements</span></span>  
- <span data-ttu-id="dcbbc-122">無</span><span class="sxs-lookup"><span data-stu-id="dcbbc-122">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="40393-121">子元素</span><span class="sxs-lookup"><span data-stu-id="40393-121">Child Elements</span></span>  
+ <span data-ttu-id="40393-122">無</span><span class="sxs-lookup"><span data-stu-id="40393-122">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="dcbbc-123">父項目</span><span class="sxs-lookup"><span data-stu-id="dcbbc-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="40393-123">父項目</span><span class="sxs-lookup"><span data-stu-id="40393-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="dcbbc-124">項目</span><span class="sxs-lookup"><span data-stu-id="dcbbc-124">Element</span></span>|<span data-ttu-id="dcbbc-125">描述</span><span class="sxs-lookup"><span data-stu-id="dcbbc-125">Description</span></span>|  
+|<span data-ttu-id="40393-124">項目</span><span class="sxs-lookup"><span data-stu-id="40393-124">Element</span></span>|<span data-ttu-id="40393-125">描述</span><span class="sxs-lookup"><span data-stu-id="40393-125">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="dcbbc-126">\<Securitytokenhandlerconfiguration> ></span><span class="sxs-lookup"><span data-stu-id="dcbbc-126">\<securityTokenHandlerConfiguration></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|<span data-ttu-id="dcbbc-127">提供組態集合的安全性權杖處理常式。</span><span class="sxs-lookup"><span data-stu-id="dcbbc-127">Provides configuration for a collection of security token handlers.</span></span>|  
+|[<span data-ttu-id="40393-126">\<Securitytokenhandlerconfiguration> ></span><span class="sxs-lookup"><span data-stu-id="40393-126">\<securityTokenHandlerConfiguration></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|<span data-ttu-id="40393-127">提供組態集合的安全性權杖處理常式。</span><span class="sxs-lookup"><span data-stu-id="40393-127">Provides configuration for a collection of security token handlers.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="dcbbc-128">備註</span><span class="sxs-lookup"><span data-stu-id="dcbbc-128">Remarks</span></span>  
- <span data-ttu-id="dcbbc-129">若要解決上傳入的權杖和訊息的加密語彙基元可用服務權杖解析程式。</span><span class="sxs-lookup"><span data-stu-id="dcbbc-129">The service token resolver can be used to resolve the encryption token on incoming tokens and messages.</span></span> <span data-ttu-id="dcbbc-130">它用來擷取應該用來解密傳入權杖的金鑰。</span><span class="sxs-lookup"><span data-stu-id="dcbbc-130">It is used to retrieve the key that should be used to decrypt incoming tokens.</span></span> <span data-ttu-id="dcbbc-131">您必須指定`type`屬性。</span><span class="sxs-lookup"><span data-stu-id="dcbbc-131">You must specify the `type` attribute.</span></span> <span data-ttu-id="dcbbc-132">指定的型別可以是<xref:System.IdentityModel.Selectors.SecurityTokenResolver>或自訂的型別衍生自<xref:System.IdentityModel.Selectors.SecurityTokenResolver>類別。</span><span class="sxs-lookup"><span data-stu-id="dcbbc-132">The type specified can be either <xref:System.IdentityModel.Selectors.SecurityTokenResolver> or a custom type that derives from the <xref:System.IdentityModel.Selectors.SecurityTokenResolver> class.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="40393-128">備註</span><span class="sxs-lookup"><span data-stu-id="40393-128">Remarks</span></span>  
+ <span data-ttu-id="40393-129">若要解決上傳入的權杖和訊息的加密語彙基元可用服務權杖解析程式。</span><span class="sxs-lookup"><span data-stu-id="40393-129">The service token resolver can be used to resolve the encryption token on incoming tokens and messages.</span></span> <span data-ttu-id="40393-130">它用來擷取應該用來解密傳入權杖的金鑰。</span><span class="sxs-lookup"><span data-stu-id="40393-130">It is used to retrieve the key that should be used to decrypt incoming tokens.</span></span> <span data-ttu-id="40393-131">您必須指定`type`屬性。</span><span class="sxs-lookup"><span data-stu-id="40393-131">You must specify the `type` attribute.</span></span> <span data-ttu-id="40393-132">指定的型別可以是<xref:System.IdentityModel.Selectors.SecurityTokenResolver>或自訂的型別衍生自<xref:System.IdentityModel.Selectors.SecurityTokenResolver>類別。</span><span class="sxs-lookup"><span data-stu-id="40393-132">The type specified can be either <xref:System.IdentityModel.Selectors.SecurityTokenResolver> or a custom type that derives from the <xref:System.IdentityModel.Selectors.SecurityTokenResolver> class.</span></span>  
   
- <span data-ttu-id="dcbbc-133">某些權杖處理常式可讓您在組態中指定服務權杖解析程式設定。</span><span class="sxs-lookup"><span data-stu-id="dcbbc-133">Some token handlers allow you to specify service token resolver settings in configuration.</span></span> <span data-ttu-id="dcbbc-134">在個別的權杖處理常式上的設定會覆寫所指定的安全性權杖處理常式集合。</span><span class="sxs-lookup"><span data-stu-id="dcbbc-134">Settings on individual token handlers override those specified on the security token handler collection.</span></span>  
+ <span data-ttu-id="40393-133">某些權杖處理常式可讓您在組態中指定服務權杖解析程式設定。</span><span class="sxs-lookup"><span data-stu-id="40393-133">Some token handlers allow you to specify service token resolver settings in configuration.</span></span> <span data-ttu-id="40393-134">在個別的權杖處理常式上的設定會覆寫所指定的安全性權杖處理常式集合。</span><span class="sxs-lookup"><span data-stu-id="40393-134">Settings on individual token handlers override those specified on the security token handler collection.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="dcbbc-135">指定`<serviceTokenResolver>`元素的子元素當做[ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)項目已被取代，但仍支援回溯相容性。</span><span class="sxs-lookup"><span data-stu-id="dcbbc-135">Specifying the `<serviceTokenResolver>` element as a child element of the [\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) element has been deprecated, but is still supported for backward compatibility.</span></span> <span data-ttu-id="dcbbc-136">上的設定`<securityTokenHandlerConfiguration>`項目會覆寫上`<identityConfiguration>`項目。</span><span class="sxs-lookup"><span data-stu-id="dcbbc-136">Settings on the `<securityTokenHandlerConfiguration>` element override those on the `<identityConfiguration>` element.</span></span>  
+>  <span data-ttu-id="40393-135">指定`<serviceTokenResolver>`元素的子元素當做[ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)項目已被取代，但仍支援回溯相容性。</span><span class="sxs-lookup"><span data-stu-id="40393-135">Specifying the `<serviceTokenResolver>` element as a child element of the [\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) element has been deprecated, but is still supported for backward compatibility.</span></span> <span data-ttu-id="40393-136">上的設定`<securityTokenHandlerConfiguration>`項目會覆寫上`<identityConfiguration>`項目。</span><span class="sxs-lookup"><span data-stu-id="40393-136">Settings on the `<securityTokenHandlerConfiguration>` element override those on the `<identityConfiguration>` element.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="dcbbc-137">範例</span><span class="sxs-lookup"><span data-stu-id="dcbbc-137">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="40393-137">範例</span><span class="sxs-lookup"><span data-stu-id="40393-137">Example</span></span>  
   
 ```xml  
 <serviceTokenResolver type="MyNamespace.CustomTokenResolver, MyAssembly" />  
