@@ -3,24 +3,24 @@ title: 自訂活動設計工具
 ms.date: 03/30/2017
 ms.assetid: dcf14dca-ce6d-4278-96ba-062f0a679075
 ms.openlocfilehash: c27ad19121f4faa0a3fca7b13b197a88a95c6d15
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48781254"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847369"
 ---
-# <a name="custom-activity-designers"></a><span data-ttu-id="9a045-102">自訂活動設計工具</span><span class="sxs-lookup"><span data-stu-id="9a045-102">Custom Activity Designers</span></span>
-<span data-ttu-id="9a045-103">本章節包含了活動範例，這些範例會使用自訂設計工具以顯示在工作流程設計工具中。</span><span class="sxs-lookup"><span data-stu-id="9a045-103">This section contains activity samples that use custom designers for display in the workflow designer.</span></span>  
+# <a name="custom-activity-designers"></a><span data-ttu-id="2c3ba-102">自訂活動設計工具</span><span class="sxs-lookup"><span data-stu-id="2c3ba-102">Custom Activity Designers</span></span>
+<span data-ttu-id="2c3ba-103">本章節包含了活動範例，這些範例會使用自訂設計工具以顯示在工作流程設計工具中。</span><span class="sxs-lookup"><span data-stu-id="2c3ba-103">This section contains activity samples that use custom designers for display in the workflow designer.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9a045-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="9a045-104">In This Section</span></span>  
- [<span data-ttu-id="9a045-105">自訂複合設計工具 - 工作流程項目展示器</span><span class="sxs-lookup"><span data-stu-id="9a045-105">Custom Composite Designers - Workflow Item Presenter</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-item-presenter.md)  
- <span data-ttu-id="9a045-106">這個範例示範如何建立活動設計工具會呈現這類 「 卸除區。 」</span><span class="sxs-lookup"><span data-stu-id="9a045-106">This sample shows how to build an activity designer that surfaces such a "drop zone."</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="2c3ba-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="2c3ba-104">In This Section</span></span>  
+ [<span data-ttu-id="2c3ba-105">自訂複合設計工具 - 工作流程項目展示器</span><span class="sxs-lookup"><span data-stu-id="2c3ba-105">Custom Composite Designers - Workflow Item Presenter</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-item-presenter.md)  
+ <span data-ttu-id="2c3ba-106">這個範例示範如何建立活動設計工具會呈現這類 「 卸除區。 」</span><span class="sxs-lookup"><span data-stu-id="2c3ba-106">This sample shows how to build an activity designer that surfaces such a "drop zone."</span></span>  
   
- [<span data-ttu-id="9a045-107">自訂複合設計工具 - 工作流程項目展示器</span><span class="sxs-lookup"><span data-stu-id="9a045-107">Custom Composite Designers - Workflow Items Presenter</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-items-presenter.md)  
- <span data-ttu-id="9a045-108">這個範例示範如何建置會呈現這類可編輯集合的活動設計工具。</span><span class="sxs-lookup"><span data-stu-id="9a045-108">This sample shows how to build an activity designer that surfaces such an editable collection.</span></span>  
+ [<span data-ttu-id="2c3ba-107">自訂複合設計工具 - 工作流程項目展示器</span><span class="sxs-lookup"><span data-stu-id="2c3ba-107">Custom Composite Designers - Workflow Items Presenter</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-items-presenter.md)  
+ <span data-ttu-id="2c3ba-108">這個範例示範如何建置會呈現這類可編輯集合的活動設計工具。</span><span class="sxs-lookup"><span data-stu-id="2c3ba-108">This sample shows how to build an activity designer that surfaces such an editable collection.</span></span>  
   
- [<span data-ttu-id="9a045-109">在自訂活動設計工具中使用 ExpressionTextBox</span><span class="sxs-lookup"><span data-stu-id="9a045-109">Using the ExpressionTextBox in a Custom Activity Designer</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)  
- <span data-ttu-id="9a045-110">這個範例示範如何在自訂活動設計工具內使用 <xref:System.Activities.Presentation.View.ExpressionTextBox>。</span><span class="sxs-lookup"><span data-stu-id="9a045-110">This sample shows how to use the <xref:System.Activities.Presentation.View.ExpressionTextBox> in a custom activity designer.</span></span>  
+ [<span data-ttu-id="2c3ba-109">在自訂活動設計工具中使用 ExpressionTextBox</span><span class="sxs-lookup"><span data-stu-id="2c3ba-109">Using the ExpressionTextBox in a Custom Activity Designer</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)  
+ <span data-ttu-id="2c3ba-110">這個範例示範如何在自訂活動設計工具內使用 <xref:System.Activities.Presentation.View.ExpressionTextBox>。</span><span class="sxs-lookup"><span data-stu-id="2c3ba-110">This sample shows how to use the <xref:System.Activities.Presentation.View.ExpressionTextBox> in a custom activity designer.</span></span>  
   
- [<span data-ttu-id="9a045-111">使用編輯範圍</span><span class="sxs-lookup"><span data-stu-id="9a045-111">Using Editing Scope</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/using-editing-scope.md)  
- <span data-ttu-id="9a045-112">這個範例示範如何批次處理一組變更，以便在單一不可部分完成的單位中復原這些變更。</span><span class="sxs-lookup"><span data-stu-id="9a045-112">This sample demonstrates how to batch a set of changes so that they can be undone in a single atomic unit.</span></span> <span data-ttu-id="9a045-113">根據預設，活動設計工具作者所執行的動作會自動整合至復原/取消復原系統。</span><span class="sxs-lookup"><span data-stu-id="9a045-113">By default, the actions taken by an activity designer author are automatically integrated into the Undo/Redo system.</span></span>
+ [<span data-ttu-id="2c3ba-111">使用編輯範圍</span><span class="sxs-lookup"><span data-stu-id="2c3ba-111">Using Editing Scope</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/using-editing-scope.md)  
+ <span data-ttu-id="2c3ba-112">這個範例示範如何批次處理一組變更，以便在單一不可部分完成的單位中復原這些變更。</span><span class="sxs-lookup"><span data-stu-id="2c3ba-112">This sample demonstrates how to batch a set of changes so that they can be undone in a single atomic unit.</span></span> <span data-ttu-id="2c3ba-113">根據預設，活動設計工具作者所執行的動作會自動整合至復原/取消復原系統。</span><span class="sxs-lookup"><span data-stu-id="2c3ba-113">By default, the actions taken by an activity designer author are automatically integrated into the Undo/Redo system.</span></span>
