@@ -2,12 +2,12 @@
 title: '安裝 F #'
 description: '了解如何安裝 F # 根據您的環境。'
 ms.date: 08/28/2018
-ms.openlocfilehash: 6c10b958e35bf7925965d076a48839b0ce19d2c0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 909e1c07ff7f6d52db77a987639d1c749146fdca
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515893"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48844003"
 ---
 # <a name="install-f"></a>安裝 F # #
 
@@ -17,13 +17,13 @@ ms.locfileid: "43515893"
 
 如果您正在下載[Visual Studio](https://visualstudio.microsoft.com/)第一次，它會先安裝 Visual Studio 安裝程式。 安裝適當的 SKU 的 Visual Studio 安裝程式。 如果您已經安裝，請按一下**修改**。
 
-接下來，您會看到一份工作負載。 選取  **ASP.NET 和 web 開發**，這會安裝 F # 支援，.NET Core 支援 F # 支援適用於 ASP.NET Core 專案。
+接下來，您會看到一份工作負載。 選取  **ASP.NET 和 web 開發**安裝 F # 支援和 ASP.NET Core 專案的.NET Core 支援。
 
 接下來，按一下**修改**右手邊角。  這會安裝您所選取的所有項目。 您接著可以開啟使用 F # 語言支援 Visual Studio 2017，依序按一下**啟動**。
 
 ## <a name="install-f-with-visual-studio-for-mac"></a>安裝 F # 與 Visual Studio for Mac
 
-F # 預設會安裝在[Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/)，無論何種設定您選擇。
+F # 預設會安裝在[Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/)，無論哪種設定您選擇。
 
 安裝完成後，選擇 [啟動 Visual Studio]。 您也可以啟動它透過搜尋工具在 macOS 上。
 

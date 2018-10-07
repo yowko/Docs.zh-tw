@@ -2,12 +2,12 @@
 title: 執行 Windows Communication Foundation 範例
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: d6fc93af217bfc282ce7030973be32baf7d864cd
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 3e49a88fa5369cc2ad2251e48f3eca74fa7c4445
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45618688"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836895"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>執行 Windows Communication Foundation 範例
 可以在單一電腦或跨電腦組態中執行的 Windows Communication Foundation (WCF) 範例。 這些範例可依提供現狀直接執行於單一機器上。 在跨機器組態中，就需要修改範例的組態檔設定。 下列程序會說明如何在相同機器與跨機器組態中執行此範例。 請注意，透過網際網路資訊服務 (IIS) 裝載與自我裝載範例中的服務步驟會有所變化。 大部分的範例都是以 IIS 進行裝載；請參閱範例讀我資訊以決定其裝載方式。  
@@ -19,7 +19,7 @@ ms.locfileid: "45618688"
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>若要在同一部機器上執行範例  
   
-1.  如果服務由 IIS 裝載，請確定您可以使用瀏覽器中輸入下列位址的服務： http://localhost/servicemodelsamples/service.svc。 確認頁面應該會顯示在回應中。 如果未顯示 [確認] 頁面，請參閱[疑難排解祕訣](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+1.  如果服務由 IIS 裝載，請確定您可以使用瀏覽器中輸入下列位址的服務： `http://localhost/servicemodelsamples/service.svc`。 確認頁面應該會顯示在回應中。 如果未顯示 [確認] 頁面，請參閱[疑難排解祕訣](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 2.  如果服務是自我裝載，請從語言特定資料夾中的 \service\bin 執行 Service.exe。 服務活動會顯示在服務主控台視窗上。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "45618688"
   
 2.  如果服務是以 IIS 裝載：  
   
-    1.  啟用服務使用瀏覽器輸入位址 http://localhost/servicemodelsamples/service.svc。  
+    1.  啟用服務使用瀏覽器輸入位址`http://localhost/servicemodelsamples/service.svc`。  
   
     2.  在方案中，選擇**偵錯** 功能表並**附加至處理序**功能表項目。  
   

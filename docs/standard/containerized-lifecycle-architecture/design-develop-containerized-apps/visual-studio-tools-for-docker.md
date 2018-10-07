@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/12/2018
 ms.custom: vs-dotnet
-ms.openlocfilehash: 7daac744238feb38358e4cc0ab185e90257aa98d
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: faae4b3e3ef96d1d8dd73b7ac313b0a5deffec34
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027451"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838230"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>使用 Visual Studio Tools for Docker (Windows 上的 Visual Studio)
 
@@ -65,6 +65,23 @@ ms.locfileid: "48027451"
 圖 4-29： 在 Visual Studio 2017 中的 [方案總管] 中的 Docker 檔案
 
 如果*docker compose.yml*已經存在，Visual Studio 只會將必要的組態程式碼的行加入至它。
+
+## <a name="configure-docker-tools"></a>設定 Docker 工具
+
+從主功能表中，選擇**工具** > **選項**，然後展開**容器工具** > **設定**。 容器的 [工具] 設定會出現。
+
+![](./media/visual-studio-docker-tools-options.png)
+
+圖 4-30: Docker 工具選項
+
+下表可協助您決定如何設定這些選項。
+
+| 名稱 | 預設設定 | 描述 |
+| -----|:---------------:| ----------- |
+| 自動在專案載入提取所需的 Docker 映像 | 開啟 | 為了提高效能，載入專案時，Visual Studio 會啟動 Docker 提取作業在背景中，因此當您準備好要執行您的程式碼，將映像已下載，或是正在下載。 如果您只會載入專案，並瀏覽程式碼，您可以避免下載容器映像，您不需要將此關閉。 |
+| 自動在背景中啟動容器 | 開啟 | 再次為了提高效能，Visual Studio 會建立一個容器與磁碟區掛接供當您建置並執行您的容器。 如果您想要控制您的容器建立時，請關閉這個功能。 |
+| 自動終止容器解決方案關閉 | 開啟 | 如果您想要繼續執行之後關閉解決方案，或關閉 Visual Studio 方案的容器，請開啟此功能。 |
+| 不要提示信任 localhost SSL 憑證 | Off | Visual Studio 會提示輸入新專案的 SSL 憑證已受信任之舊版的專案時，即使繼續。 您可以設定此核取方塊，以避免收到提示，當您開啟其他專案。 |
 
 **更多資訊：** 如需詳細的服務實作和使用 Visual Studio Tools for Docker，請閱讀下列文章：
 

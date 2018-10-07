@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 34173812f4f6fac940632e23e6641e458250a4ee
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 7cd25b980afa067ac78fc081c0a7a8e65a23258b
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028166"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838256"
 ---
 # <a name="ltwebrequestmodulesgt-element-network-settings"></a>&lt;webRequestModules&gt;項目 （網路設定）
 指定要求資訊從網路主機使用的模組。  
@@ -54,7 +54,7 @@ ms.locfileid: "48028166"
 ## <a name="remarks"></a>備註  
  `webRequestModules` 項目會註冊 <xref:System.Net.WebRequest> 類別的子系，以處理對網路主機的資訊要求。 Web 要求模組必須實作<xref:System.Net.IWebRequestCreate>介面。  
   
- .NET Framework 包含 Web 要求模組的 Uri，開頭為 http://、 https:// 和 file://。 您可以覆寫預設模組只能在組態檔中註冊自訂模組。  
+ .NET Framework 包含 Web 要求模組的 Uri，開頭`http://`， `https://`，和`file://`。 您可以覆寫預設模組只能在組態檔中註冊自訂模組。  
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  

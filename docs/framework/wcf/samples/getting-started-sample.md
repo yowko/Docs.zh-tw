@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: dda11511904d452a3a5101417f8ab8a33c00204f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 74c3b825bbd51a082f20e8e2009e1ca5f0b35100
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857091"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837147"
 ---
 # <a name="getting-started-sample"></a>使用者入門範例
 使用者入門範例會示範如何實作一般服務與一般用戶端使用 Windows Communication Foundation (WCF)。 這個範例是所有其他基本技術範例的基礎。  
@@ -141,9 +141,9 @@ public class CalculatorService : ICalculator
   
  服務會公開位在 IIS 或 WAS 主機提供之基底位址上的端點。 繫結會設定為標準 <xref:System.ServiceModel.WSHttpBinding>，此繫結會提供用於定址和安全性的 HTTP 通訊與標準 Web 服務通訊協定。 此合約是服務實作的 `ICalculator`。  
   
- 在設定，可以存取的服務在 http://localhost/servicemodelsamples/service.svc 在同一部電腦上的用戶端。 為了讓遠端電腦上的用戶端存取服務，這時必須指定完整網域名稱，而不要指定 localhost。  
+ 在設定，可以存取的服務在 `http://localhost/servicemodelsamples/service.svc` 在同一部電腦上的用戶端。 為了讓遠端電腦上的用戶端存取服務，這時必須指定完整網域名稱，而不要指定 localhost。  
   
- 根據預設，此架構不會公開任何中繼資料。 因此，服務會開啟<xref:System.ServiceModel.Description.ServiceMetadataBehavior>並公開在中繼資料交換 (MEX) 端點 http://localhost/servicemodelsamples/service.svc/mex 。 下列組態會示範這個作業。  
+ 根據預設，此架構不會公開任何中繼資料。 因此，服務會開啟<xref:System.ServiceModel.Description.ServiceMetadataBehavior>並公開在中繼資料交換 (MEX) 端點 `http://localhost/servicemodelsamples/service.svc/mex` 。 下列組態會示範這個作業。  
   
 ```xaml  
 <system.serviceModel>  

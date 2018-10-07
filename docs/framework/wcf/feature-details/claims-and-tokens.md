@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - claims [WCF], and tokens
 ms.assetid: eff167f3-33f8-483d-a950-aa3e9f97a189
-ms.openlocfilehash: 087deeef91367210db936f2976a3846d0279dcba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f640372504658c8f7935d3d219cd373f19ebf31f
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491851"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837530"
 ---
 # <a name="claims-and-tokens"></a>宣告與權杖
 本主題說明 Windows Communication Foundation (WCF) 從它所支援的預設權杖所建立的各種宣告類型。  
   
  您可以使用 <xref:System.IdentityModel.Claims.ClaimSet> 和 <xref:System.IdentityModel.Claims.Claim> 類別來檢查用戶端認證的宣告。 `ClaimSet` 包含 `Claim` 物件的集合。 每個 `Claim` 都具有下列重要的成員：  
   
--   <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> 屬性會傳回指定所要建立之宣告類型的統一資源識別元 (URI)。 例如，宣告類型可以是憑證的指紋，在此情況下，URI 是 http:schemas.microsoft.com/ws/20005/05/identity/claims/thumprint。  
+-   <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> 屬性會傳回指定所要建立之宣告類型的統一資源識別元 (URI)。 例如，宣告類型可能的情況下，URI 的憑證指紋`http://schemas.microsoft.com/ws/20005/05/identity/claims/thumprint`。  
   
 -   <xref:System.IdentityModel.Claims.Claim.Right%2A> 屬性會傳回指定宣告權限的 URI。 預先定義的權限可以在 <xref:System.IdentityModel.Claims.Rights> 類別中找到 (<xref:System.IdentityModel.Claims.Rights.Identity%2A>、<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>)。  
   
@@ -50,19 +50,19 @@ ms.locfileid: "33491851"
   
     -   具有 Thumbprint 之 `Claim` 的 `ClaimType`、PossessProperty 的 `Right`，以及 `Resource`，表示包含憑證指紋的位元組陣列。  
   
-    -   各種類型的其他 PossessProperty 宣告，包括 X500DistinguishedName、Dns、Name、Upn 和 Rsa，表示憑證的各種屬性。 Rsa 宣告的資源是與憑證相關聯的公開金鑰。**注意**其中用戶端認證類型是憑證，服務會對應至 Windows 帳戶，兩個`ClaimSet`物件所產生。 第一個包含與 Windows 帳戶相關的所有宣告，第二個則包含與憑證相關的所有宣告。  
+    -   各種類型的其他 PossessProperty 宣告，包括 X500DistinguishedName、Dns、Name、Upn 和 Rsa，表示憑證的各種屬性。 Rsa 宣告的資源是與憑證相關聯的公開金鑰。**附註**用戶端認證類型所在的憑證，服務對應至 Windows 帳戶，兩個`ClaimSet`物件所產生。 第一個包含與 Windows 帳戶相關的所有宣告，第二個則包含與憑證相關的所有宣告。  
   
 ## <a name="user-namepassword"></a>使用者名稱/密碼  
- 當用戶端認證是未對應至 Windows 帳戶的使用者名稱/密碼 (或對等用法) 時，產生的 `ClaimSet` 會由 <xref:System.IdentityModel.Claims.ClaimSet.System%2A> 類別的靜態 `ClaimSet` 屬性發出。 `ClaimSet`包含`Identity`宣告型別的<xref:System.IdentityModel.Claims.ClaimTypes.Name%2A>資源是使用者名稱用戶端提供。 對應的宣告具有 `Right` 的`PossessProperty`。  
+ 當用戶端認證是未對應至 Windows 帳戶的使用者名稱/密碼 (或對等用法) 時，產生的 `ClaimSet` 會由 <xref:System.IdentityModel.Claims.ClaimSet.System%2A> 類別的靜態 `ClaimSet` 屬性發出。 `ClaimSet`包含`Identity`宣告的型別<xref:System.IdentityModel.Claims.ClaimTypes.Name%2A>的資源是使用者名稱用戶端提供。 對應的宣告具有 `Right` 的`PossessProperty`。  
   
 ## <a name="rsa-keys"></a>RSA 金鑰  
- 在使用未與憑證相關聯的 RSA 金鑰時，所產生的`ClaimSet`自我發行，並且包含`Identity`宣告型別的<xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A>資源是 RSA 金鑰。 對應的宣告具有 `Right` 的`PossessProperty`。  
+ 使用未與憑證相關聯的 RSA 金鑰時，產生`ClaimSet`自我發行，並且包含`Identity`宣告的型別<xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A>資源是 RSA 金鑰。 對應的宣告具有 `Right` 的`PossessProperty`。  
   
 ## <a name="saml"></a>SAML  
  當用戶端使用安全性判斷提示標記語言 (SAML) 權杖進行驗證時，產生的 `ClaimSet` 會由簽署 SAML 權杖的實體發出，通常是所發出 SAML 權杖之安全性權杖服務 (STS) 的憑證。 `ClaimSet` 包含 SAML 權杖中的各種宣告。 如果 SAML 權杖包含具有非 `SamlSubject` 名稱的 `null`，則會建立具有 `Identity` 型別的 <xref:System.IdentityModel.Claims.ClaimTypes.NameIdentifier%2A> 宣告和 <xref:System.IdentityModel.Tokens.SamlNameIdentifierClaimResource> 的資源型別。  
   
 ## <a name="identity-claims-and-servicesecuritycontextisanonymous"></a>身分識別宣告和 ServiceSecurityContext.IsAnonymous  
- 如果沒有任何`ClaimSet`物件所產生的用戶端認證包含具有宣告`Right`的`Identity,`則<xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A>屬性會傳回`true`。 如果出現一或多個這類的宣告，則 `IsAnonymous` 屬性會傳回 `false`。  
+ 如果沒有任何`ClaimSet`從用戶端認證產生的物件包含具有宣告`Right`的`Identity,`則<xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A>屬性會傳回`true`。 如果出現一或多個這類的宣告，則 `IsAnonymous` 屬性會傳回 `false`。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.IdentityModel.Claims.ClaimSet>  

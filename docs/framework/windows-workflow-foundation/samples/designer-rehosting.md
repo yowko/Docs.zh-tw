@@ -2,12 +2,12 @@
 title: 設計工具重新裝載
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-ms.openlocfilehash: f8dbe89ec605f3e957b5178eafd2e034e8159dc3
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 885590604532fba76fc9ab3f6bcc69e077868403
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028910"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837349"
 ---
 # <a name="designer-rehosting"></a>重新裝載的設計工具
 設計工具重新裝載是在自訂應用程式中裝載工作流程設計畫布的一般案例。 大多數人熟悉的裝載應用程式是 Visual Studio，但在一些情況下，在應用程式中顯示工作流程設計工具可能很有用：  
@@ -114,7 +114,7 @@ protected override void OnInitialized(EventArgs e)
   
 #### <a name="using-the-sample"></a>使用範例  
   
-1.  在 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 中開啟 DesignerRehosting.sln 方案。  
+1.  在 Visual Studio 2010 中開啟 DesignerRehosting.sln 方案。  
   
 2.  按 F5 編譯和執行應用程式。  
   

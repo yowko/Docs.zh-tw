@@ -2,19 +2,19 @@
 title: HOW TO：使用 Windows Server App Fabric 裝載工作流程服務
 ms.date: 03/30/2017
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
-ms.openlocfilehash: d71052edaccd34bab7354c93431a260f41647f2b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2c1e4e8763ad9bd65099173c75d272965ac8caa8
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500026"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840617"
 ---
 # <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>HOW TO：使用 Windows Server App Fabric 裝載工作流程服務
 在 AppFabric 中裝載工作流程服務與在 IIS/WAS 底下裝載很相似。 唯一的差異在於 AppFabric 針對部署、監視和管理工作流程服務所提供的工具。 本主題會使用工作流程服務中建立[建立長時間執行的工作流程服務](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)。 該主題將逐步引導您建立工作流程服務。 本主題會說明如何使用 AppFabric 來裝載工作流程服務。 如需有關 Windows Server App Fabric 的詳細資訊，請參閱 < [Windows Server App Fabric 文件](https://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409)。 完成下列步驟之前，請先確定您已安裝 Windows Server AppFabric。  若要執行這會開啟 Internet Information services (inetmgr.exe)，按一下 在您的伺服器名稱**連線**檢視，按一下 網站，然後按一下**Default Web Site**。 在右手邊的畫面應該會看到一個小節稱為**App Fabric**。 如果您沒有看見此區段 (位於右側窗格的頂端)，表示您沒有安裝 App Fabric。 如需安裝 Windows Server App Fabric 的詳細資訊，請參閱[安裝 Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=193136)。  
   
 ### <a name="creating-a-simple-workflow-service"></a>建立簡單的工作流程服務  
   
-1.  開啟[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]並載入您在中建立的 OrderProcessing 方案[建立長時間執行的工作流程服務](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)主題。  
+1.  開啟 Visual Studio 2012，並載入您在中建立的 OrderProcessing 方案[建立長時間執行的工作流程服務](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)主題。  
   
 2.  以滑鼠右鍵按一下**OrderService**專案，然後選取**屬性**，然後選取**Web**  索引標籤。  
   

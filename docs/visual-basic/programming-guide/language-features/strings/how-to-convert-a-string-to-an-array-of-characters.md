@@ -8,23 +8,23 @@ helpviewer_keywords:
 - strings [Visual Basic], converting to arrays
 - string conversion [Visual Basic], arrays
 ms.assetid: 1b54b686-ab29-413b-adce-6bd5422376eb
-ms.openlocfilehash: c109143601e304b1ec15a60c71d65fe6bd15aae8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc12b70cddcb93a72b4421a8ddd93542ef84f55b
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648615"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48845186"
 ---
 # <a name="how-to-convert-a-string-to-an-array-of-characters-in-visual-basic"></a>如何：在 Visual Basic 中將字串轉換為字元陣列
-有時候很有用的字元，在您的字串與您在字串內，例如當您在剖析字串的字元位置的資料。 此範例示範如何取得陣列的字元字串中藉由呼叫的字串<xref:System.String.ToCharArray%2A>方法。  
+有時候最好擁有您的字串與您的字串，例如當您在剖析字串內的這些字元的位置中的字元資料。 此範例示範如何呼叫字串的字串中取得的字元陣列<xref:System.String.ToCharArray%2A>方法。  
   
 ## <a name="example"></a>範例  
- 這個範例示範如何分割字串成`Char`陣列，以及如何分割字串成`String`Unicode 文字字元的陣列。 此差異的原因是 Unicode 文字字元所組成兩個或多個`Char`字元 (例如 surrogate 字組或結合字元序列)。 如需詳細資訊，請參閱<xref:System.Globalization.TextElementEnumerator>和 「 Unicode 標準 「 http://www.unicode.org。  
+ 此範例示範如何分割成字串`Char`陣列，以及如何分割成字串`String`Unicode 文字字元的陣列。 這項區別的原因是 Unicode 文字字元所組成兩個或多個`Char`字元 (例如，surrogate 字組或組合字元順序)。 如需詳細資訊，請參閱 <<c0> <xref:System.Globalization.TextElementEnumerator> 並[Unicode 標準](https://www.unicode.org/standard/standard.html)。  
   
  [!code-vb[VbVbalrStrings#75](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-a-string-to-an-array-of-characters_1.vb)]  
   
 ## <a name="example"></a>範例  
- 更難以將字串分隔為 Unicode 文字字元，但這是需要字串的視覺表示方式的相關資訊。 這個範例會使用<xref:System.Globalization.StringInfo.SubstringByTextElements%2A>方法來取得 Unicode 文字字元字串所組成的相關資訊。  
+ 它很難將字串分割成其 Unicode 文字字元，但這是需要字串的視覺表示方式的相關資訊。 這個範例會使用<xref:System.Globalization.StringInfo.SubstringByTextElements%2A>方法，以取得字串所組成的 Unicode 文字字元的相關資訊。  
   
  [!code-vb[VbVbalrStrings#76](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-a-string-to-an-array-of-characters_2.vb)]  
   

@@ -2,12 +2,12 @@
 title: 網際網路資訊服務裝載最佳做法
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: 0ca5e20b846a1b10f5a52748ff06a4af958b2f4c
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 2cb193cd2f504b5010ede6887e814e0c4d0a1a3c
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47073589"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840741"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>網際網路資訊服務裝載最佳做法
 本主題概述裝載 Windows Communication Foundation (WCF) 服務的最佳作法。  
@@ -33,7 +33,7 @@ ms.locfileid: "47073589"
  中介層案例同時會因為使用 `svcutil /a` 選項所產生的非同步 API 而產生一些效能。 `/a`選項會使[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)產生`BeginXXX/EndXXX`每個服務作業中，會允許遠端服務上的長期執行呼叫的方法背景執行緒。  
   
 ## <a name="wcf-in-multi-homed-or-multi-named-scenarios"></a>多重主目錄系統或多重具名案例中的 WCF  
- 您可以部署 WCF 服務內的 IIS Web 伺服陣列，其中的一組電腦共用通用外部名稱 (例如 http://www.contoso.com) 但會個別定址依不同的主機名稱 (比方說， http://www.contoso.com 可能會將流量導向至兩個不同的電腦名為 http://machine1.internal.contoso.com 和 http://machine2.internal.contoso.com)。 此部署案例中透過 WCF，完全支援，但需要特殊組態的裝載服務的中繼資料 （Web 服務描述語言） 中顯示正確的 （外部） 主機名稱的 WCF 服務的 IIS 網站。  
+ 您可以部署 WCF 服務內的 IIS Web 伺服陣列，其中的一組電腦共用通用外部名稱 (例如`http://www.contoso.com`)，但會個別定址依不同的主機名稱 (比方說，`http://www.contoso.com`可能會將流量導向至兩個不同的電腦名為`http://machine1.internal.contoso.com`和`http://machine2.internal.contoso.com`)。 此部署案例中透過 WCF，完全支援，但需要特殊組態的裝載服務的中繼資料 （Web 服務描述語言） 中顯示正確的 （外部） 主機名稱的 WCF 服務的 IIS 網站。  
   
  若要確保正確的主機名稱會出現在產生 WCF 服務中繼資料，請設定裝載 WCF 服務來使用明確的主機名稱的 IIS 網站的預設身分識別。 例如，駐留在 www.contoso.com 伺服器陣列的電腦應該使用的 IIS 網站繫結 *:80:www.contoso.com 適用於 HTTP 和\*: 443:www.contoso.com https。  
   

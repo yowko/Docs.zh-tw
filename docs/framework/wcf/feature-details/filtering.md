@@ -2,12 +2,12 @@
 title: 篩選
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-ms.openlocfilehash: 74915a45ed5ca1d13790f64c7921d1f750fa04d3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 49813ac0f493d628a941b3060be93ef19bb1e802
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208103"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836063"
 ---
 # <a name="filtering"></a>篩選
 Windows Communication Foundation (WCF) 的篩選系統可以使用宣告式篩選條件來比對訊息，並做出作業決策。 您可以使用篩選條件檢查訊息的部分，以判斷如何處理訊息。 例如，佇列處理序可以使用 XPath 1.0 查詢檢查已知標頭的優先順序項目，以便決定是否要將訊息移到佇列前頭。  
@@ -42,7 +42,7 @@ Windows Communication Foundation (WCF) 的篩選系統可以使用宣告式篩�
   
 ### <a name="prefix-endpoint-address-filters"></a>前置詞端點位址篩選條件  
   
-1.  <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> 的作用就像 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> 篩選條件，只除了符合項目可以在訊息 URI 的前置詞上之外。 例如，將指定位址的篩選 http://www.adatum.com比對訊息定址到 http://www.adatum.com/userA。  
+1.  <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> 的作用就像 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> 篩選條件，只除了符合項目可以在訊息 URI 的前置詞上之外。 例如，將指定位址的篩選`http://www.adatum.com`比對訊息定址到`http://www.adatum.com/userA`。  
   
 ### <a name="xpath-message-filters"></a>XPath 訊息篩選條件  
  <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> 會使用 XPath 運算式來判斷 XML 文件是否包含特定項目、屬性、文字或其他 XML 語法結構。 篩選條件經過最佳化，用於 XPath 的精簡子集時能夠發揮極佳的效率。 XML 路徑語言所述[W3C XML 路徑語言 1.0 規格](https://go.microsoft.com/fwlink/?LinkId=94779)。  

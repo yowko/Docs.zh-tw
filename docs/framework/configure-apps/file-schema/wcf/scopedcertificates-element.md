@@ -2,12 +2,12 @@
 title: '&lt;scopedCertificates&gt; 項目'
 ms.date: 03/30/2017
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
-ms.openlocfilehash: d95e608fa9b94086dac72341eb599f258dae6097
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5b9bf4d25e23c8bdc4e3d01c2dfa61d059166117
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748860"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838270"
 ---
 # <a name="ltscopedcertificatesgt-element"></a>&lt;scopedCertificates&gt; 項目
 表示特定服務 (範圍服務) 為驗證所提供之 X.509 憑證的集合。 這個集合通常用來指定聯合案例中安全性權杖服務的服務憑證。  
@@ -17,8 +17,8 @@ ms.locfileid: "32748860"
 endpointBehaviors 區段  
 \<行為 >  
 \<clientCredentials>  
-\<serviceCertificate >  
-\<但是在 scopedCertificates > 項目  
+\<v >  
+\<scopedCertificates > 項目  
 \<新增 > 項目\<scopedCertificates >  
   
 ## <a name="syntax"></a>語法  
@@ -39,7 +39,7 @@ endpointBehaviors 區段
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -49,17 +49,17 @@ endpointBehaviors 區段
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)|指定對用戶端驗證服務時所使用的憑證。|  
+|[\<v >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)|指定對用戶端驗證服務時所使用的憑證。|  
   
 ## <a name="remarks"></a>備註  
  這個集合可讓用戶端根據與其進行通訊之服務的 URL 設定要使用的服務憑證。 在用戶端可以與多重服務 (終端服務以及中繼安全性權杖服務) 進行通訊的已核發權杖情況中，這個屬性特別有用。 對於使用以憑證為基礎之訊息安全性的繫結，這個憑證會用來加密傳送給服務的訊息，而且預期會被服務用來簽署對用戶端的回覆。  
   
  如果繫結需要服務的憑證，但是在 ScopedCertificates 中找不到服務 URL 的專屬憑證，則會使用預設的憑證。  
   
- 如需詳細資訊，請參閱 「 範圍的憑證 」 一節[How to： 建立聯合用戶端](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)。  
+ 如需詳細資訊，請參閱的 < 範圍憑證 > 一節[如何： 建立同盟用戶端](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例會指定網域名稱與端點通訊時要使用用戶端的服務憑證 http://www.contoso.com 透過 HTTP 通訊協定。  
+ 下列範例會指定網域名稱與端點通訊時要使用用戶端的服務憑證 `http://www.contoso.com` 透過 HTTP 通訊協定。  
   
 ```xml  
 <serviceCertificate>  

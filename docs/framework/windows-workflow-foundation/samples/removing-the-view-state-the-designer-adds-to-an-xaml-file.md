@@ -3,11 +3,11 @@ title: 移除檢視狀態，設計工具會新增至 XAML 檔案
 ms.date: 03/30/2017
 ms.assetid: a801ce22-8699-483c-a392-7bb3834aae4f
 ms.openlocfilehash: 0d4dccb16796893df58f709e011657457cc71670
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48781683"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48835716"
 ---
 # <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>移除檢視狀態，設計工具會新增至 XAML 檔案
 此範例示範如何建立衍生自 <xref:System.Windows.Markup.XamlWriter> 的類別，以及從 XAML 檔案移除檢視狀態。 [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] 會將資訊寫入到 XAML 文件中，也就是檢視狀態。 檢視狀態是指設計階段必要的資訊，例如執行階段不需要的版面配置定位。 [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] 會在編輯時將這項資訊插入到 XAML 文件中。 [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] 會將檢視狀態寫入到含 `mc:Ignorable` 屬性的 XAML 檔案中，所以當執行階段載入 XAML 檔案時並不會載入這項資訊。 這個範例示範如何在處理 XAML 節點時建立可移除檢視狀態資訊的類別。

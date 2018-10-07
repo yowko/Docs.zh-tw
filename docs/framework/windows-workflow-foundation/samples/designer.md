@@ -3,11 +3,11 @@ title: Designer
 ms.date: 03/30/2017
 ms.assetid: bf28aae3-ddfb-4a86-b55d-1957f08c4e10
 ms.openlocfilehash: 7fa97d5e9d9f83a134e91b0d50f923d72d36f12b
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48777035"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840702"
 ---
 # <a name="designer"></a>Designer
 本節包含示範 [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] 用法的範例。  
