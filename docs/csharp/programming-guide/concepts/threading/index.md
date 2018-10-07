@@ -2,12 +2,12 @@
 title: 執行緒 (C#)
 ms.date: 07/20/2015
 ms.assetid: 236d157d-37c0-4ee8-89fc-721e6c596325
-ms.openlocfilehash: ca5b2b2d38e72d3511a570c22a153e792a27a04a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c90816a14bfbcd2ddd469c1240e94d99bfbbb5e5
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507785"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48844874"
 ---
 # <a name="threading-c"></a>執行緒 (C#)
 C# 程式可以透過執行緒執行並行處理，讓您可以一次執行多項作業。 例如，您可以使用執行緒監視使用者的輸入、執行背景工作，以及處理同時的輸入資料流。  
@@ -37,5 +37,4 @@ C# 程式可以透過執行緒執行並行處理，讓您可以一次執行多�
   
 |標題|描述|  
 |-----------|-----------------|  
-|[執行緒同步處理 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)|說明如何控制執行緒的互動。|  
 |[執行緒處理](../../../../../docs/standard/threading/index.md)|說明如何在.NET Framework 中實作執行緒。|
