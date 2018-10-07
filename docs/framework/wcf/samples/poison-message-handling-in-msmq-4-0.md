@@ -3,11 +3,11 @@ title: MSMQ 4.0 中的有害訊息處理
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
 ms.openlocfilehash: 4555a6d322cbf9ca43aca0f93bc6eafe021fa569
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266519"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846216"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>MSMQ 4.0 中的有害訊息處理
 這個範例會示範如何在服務中執行有害訊息處理。 此樣本根據[交易 MSMQ 繫結](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)範例。 這個範例會使用 `netMsmqBinding`。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 9c2a8d89fc62f8e3e0ce17f13604a6ba05df1a6f
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 717e38b15767b744816c0a57c97827a1a35c95b3
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083877"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847811"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 隱私權資訊
 Microsoft 一向致力於保護終端使用者的隱私權。 當您建置的應用程式使用 Windows Communication Foundation (WCF) 3.0 版，您的應用程式可能會影響到使用者的隱私權。 例如，應用程式可能會明確收集使用者的連絡資訊，或者透過網際網路向您的網站要求資訊或傳送資訊至網站。 如果您在應用程式中內嵌 Microsoft 技術，則該技術可能帶有會影響隱私權的行為。 WCF 不會傳送任何資訊給 Microsoft 從您的應用程式除非您本人或使用者選擇要傳送給我們。  
@@ -316,45 +316,45 @@ Microsoft 一向致力於保護終端使用者的隱私權。 當您建置的應
   
  也會移除下列每個動作的資訊：  
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Renew  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Renew`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Renew  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Renew`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Cancel  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Cancel`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Cancel  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Cancel`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Validate  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Validate`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Validate  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Validate`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Amend  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Amend`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Amend  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Amend`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Renew  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Renew`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Renew  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Renew`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Cancel  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Cancel`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Cancel  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Cancel`
   
- http://schemas.xmlsoap.org/ws/2004/04/security/trust/RST/SCT  
+- `http://schemas.xmlsoap.org/ws/2004/04/security/trust/RST/SCT`
   
- http://schemas.xmlsoap.org/ws/2004/04/security/trust/RSTR/SCT  
+- `http://schemas.xmlsoap.org/ws/2004/04/security/trust/RSTR/SCT`
   
- http://schemas.xmlsoap.org/ws/2004/04/security/trust/RST/SCT-Amend  
+- `http://schemas.xmlsoap.org/ws/2004/04/security/trust/RST/SCT-Amend`
   
- http://schemas.xmlsoap.org/ws/2004/04/security/trust/RSTR/SCT-Amend  
+- `http://schemas.xmlsoap.org/ws/2004/04/security/trust/RSTR/SCT-Amend`
   
 #### <a name="no-information-is-removed-from-application-specific-headers-and-body-data"></a>不會從應用程式特定標頭和本文資料中移除資訊  
  WCF 不會追蹤應用程式特定標頭 （例如，查詢字串） 或本文資料 （例如信用卡號碼） 中的個人資訊。  

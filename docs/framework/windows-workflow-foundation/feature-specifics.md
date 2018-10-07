@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 功能內容
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: b18c6dd76762f4495ac475cd3dfa4e1995733b59
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 6929150f786f0d6b4a5887eb5c0758ebcfdd411c
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44205071"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846002"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation 功能內容
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 在 Windows Workflow Foundation 中加入一些功能。 本文件將描述一些新功能，並且詳細說明適合使用這些功能的案例。  
@@ -17,19 +17,11 @@ ms.locfileid: "44205071"
   
 ### <a name="getting-started-with-messaging-activities"></a>傳訊活動使用者入門  
   
--   在 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 中，建立 WCF 工作流程服務應用程式專案。 一組 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 將置於畫布上。  
+-   在 Visual Studio 2012 中，建立 WCF 工作流程服務應用程式專案。 一組 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 將置於畫布上。  
   
--   以滑鼠右鍵按一下專案，然後選取**加入服務參考**。  指向現有的 web 服務 WSDL，然後按一下 **確定**。  建置您的專案，以顯示產生的活動 (使用實作<xref:System.ServiceModel.Activities.Send>和<xref:System.ServiceModel.Activities.ReceiveReply>) 在工具箱中。  
+-   以滑鼠右鍵按一下專案，然後選取**加入服務參考**。  指向現有的 web 服務 WSDL，然後按一下 **確定**。  建置您的專案，以顯示產生的活動 (使用實作<xref:System.ServiceModel.Activities.Send>和<xref:System.ServiceModel.Activities.ReceiveReply>) 在工具箱中。
   
--   您可以在下列章節中找到這些活動的範例：  
-  
-    -   Basic:[服務](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
-    -   案例：[服務](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
--   [概念文件](https://go.microsoft.com/fwlink/?LinkId=204801)  
-  
--   [傳訊活動設計工具的文件](https://go.microsoft.com/fwlink/?LinkId=204802)  
+-   [工作流程服務 」 文件](../wcf/feature-details/workflow-services.md)
   
 ### <a name="messaging-activities-example-scenario"></a>傳訊活動範例案例  
  A`BestPriceFinder`服務會呼叫多個航空公司服務，以便尋找最佳票證的特定路由。  實作此案例會要求您使用訊息活動來接收價格要求、 從後端服務擷取價格回覆價格要求，以最佳價格。  它也需要您使用其他的全新活動來建立計算最佳價格的商務邏輯。  
@@ -47,15 +39,11 @@ ms.locfileid: "44205071"
   
 -   您可以在下列章節中找到 <xref:System.ServiceModel.WorkflowServiceHost> 的範例：  
   
-    -   [執行](../../../docs/framework/windows-workflow-foundation/samples/execution.md)  
+    -   [執行](samples/execution.md)
   
-    -   Basic:[服務](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
+    -   應用程式：[暫止執行個體管理](samples/suspended-instance-management.md)  
   
-    -   案例：[服務](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
-    -   應用程式：[暫止執行個體管理](../../../docs/framework/windows-workflow-foundation/samples/suspended-instance-management.md)  
-  
--   [WorkflowServiceHost 概念文件](https://go.microsoft.com/fwlink/?LinkId=204807)  
+-   [裝載工作流程服務概觀](../wcf/feature-details/hosting-workflow-services-overview.md)  
   
 ### <a name="workflowservicehost-scenario"></a>WorkflowServiceHost 案例  
  BestPriceFinder 服務會呼叫多個航空公司服務，以便尋找最佳票證的特定路由。  實作此案例需要您裝載中的工作流程<xref:System.ServiceModel.WorkflowServiceHost>。  它也會使用訊息活動來接收價格要求、 從後端服務擷取價格回覆價格要求，以最佳價格。  
@@ -79,15 +67,9 @@ ms.locfileid: "44205071"
   
 -   將資料片段對應至服務執行個體的範例就是內容架構的相互關聯，它會將資料片段 (例如訂單 ID) 對應至特定工作流程執行個體。  
   
-    -   在任何傳訊活動上，按一下 `CorrelationInitializers` 屬性，然後使用您在上述步驟中建立的 <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> 變數來加入 <xref:System.ServiceModel.Activities.CorrelationHandle>。 在下拉式功能表中，按兩下所需的訊息屬性 (例如 OrderID)。 接著，將 `CorrelatesWith` 屬性設定為上述使用的 <xref:System.ServiceModel.Activities.CorrelationHandle> 變數。  
+    -   在任何傳訊活動上，按一下 `CorrelationInitializers` 屬性，然後使用您在上述步驟中建立的 <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> 變數來加入 <xref:System.ServiceModel.Activities.CorrelationHandle>。 在下拉式功能表中，按兩下所需的訊息屬性 (例如 OrderID)。 接著，將 `CorrelatesWith` 屬性設定為上述使用的 <xref:System.ServiceModel.Activities.CorrelationHandle> 變數。 
   
--   範例：  
-  
-    -   Basic:[服務](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
-    -   案例：[服務](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
-    -   [相互關聯概念文件](https://go.microsoft.com/fwlink/?LinkId=204939)  
+-   [相互關聯概念文件](../wcf/feature-details/correlation.md)  
   
 ### <a name="correlation-scenario"></a>相互關聯案例  
  訂單處理工作流程用來處理新訂單建立和更新程序中的現有訂單。  實作此案例需要您裝載中的工作流程<xref:System.ServiceModel.WorkflowServiceHost>和使用傳訊活動。  它也需要為基礎的相互關聯`orderId`以確保系統會對更新正確的工作流程。  
@@ -155,7 +137,7 @@ ms.locfileid: "44205071"
   
 ### <a name="getting-started"></a>快速入門  
   
--   在 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 中，建立工作流程主控台應用程式。 在工作流程設計工具中加入流程圖。  
+-   在 Visual Studio 2012 中，建立工作流程主控台應用程式。 在工作流程設計工具中加入流程圖。  
   
 -   流程圖功能會使用下列類別：  
   
@@ -171,9 +153,7 @@ ms.locfileid: "44205071"
   
 -   範例：  
   
-    -   [使用 TryCatch 錯誤處理流程圖活動](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
-  
-    -   [使用 FlowChart 及 Pick 組合的 StateMachine 案例](../../../docs/framework/windows-workflow-foundation/samples/statemachine-scenario-using-a-combination-of-flowchart-and-pick.md)  
+    -   [使用 TryCatch 錯誤處理流程圖活動](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md) 
   
     -   [招聘程序](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)  
   
@@ -201,7 +181,7 @@ ms.locfileid: "44205071"
   
 ### <a name="getting-started"></a>快速入門  
   
--   在 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 中，建立工作流程主控台應用程式。 在工作流程設計工具中加入程序性活動。  
+-   在 Visual Studio 2012 中，建立工作流程主控台應用程式。 在工作流程設計工具中加入程序性活動。  
   
 -   範例：  
   
@@ -226,11 +206,7 @@ ms.locfileid: "44205071"
   
 ### <a name="getting-started"></a>快速入門  
   
--   在 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 中，建立工作流程主控台應用程式。 在工作流程設計工具中加入 <xref:System.Activities.Statements.InvokeMethod> 活動，並且針對此活動設定靜態和執行個體方法。  
-  
--   範例：  
-  
-    -   [InvokeMethod](../../../docs/framework/windows-workflow-foundation/samples/invokemethod.md)  
+-   在 Visual Studio 2012 中，建立工作流程主控台應用程式。 在工作流程設計工具中加入 <xref:System.Activities.Statements.InvokeMethod> 活動，並且針對此活動設定靜態和執行個體方法。  
   
 -   設計工具的文件： [InvokeMethod 活動設計工具](/visualstudio/workflow-designer/invokemethod-activity-designer)  
   
@@ -245,13 +221,9 @@ ms.locfileid: "44205071"
   
 ### <a name="getting-started"></a>快速入門  
   
--   在 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 中，建立工作流程主控台應用程式。 在工作流程設計工具中加入 <xref:System.Activities.Statements.TryCatch> 活動。  
+-   在 Visual Studio 2012 中，建立工作流程主控台應用程式。 在工作流程設計工具中加入 <xref:System.Activities.Statements.TryCatch> 活動。  
   
--   範例：  
-  
-    1.  [使用 TryCatch 錯誤處理流程圖活動](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
-  
-    2.  [使用程序性活動](../../../docs/framework/windows-workflow-foundation/samples/using-procedural-activities.md)  
+-   範例：[錯誤處理流程圖活動使用 TryCatch](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
   
 -   設計工具的文件： [Error Handling 活動設計工具](/visualstudio/workflow-designer/error-handling-activity-designers)  
   
@@ -263,7 +235,7 @@ ms.locfileid: "44205071"
   
 ### <a name="getting-started"></a>快速入門  
   
--   在 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 中，建立工作流程主控台應用程式。 在工作流程設計工具中加入 <xref:System.Activities.Statements.Pick> 活動。  
+-   在 Visual Studio 2012 中，建立工作流程主控台應用程式。 在工作流程設計工具中加入 <xref:System.Activities.Statements.Pick> 活動。  
   
 -   範例：[使用 Pick 活動](../../../docs/framework/windows-workflow-foundation/samples/using-the-pick-activity.md)  
   
@@ -337,7 +309,7 @@ ms.locfileid: "44205071"
   
 ### <a name="getting-started"></a>快速入門  
   
-1.  在 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)] 中，建立 WCF 工作流程服務應用程式專案。 一組 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 將置於畫布上，以便開始。  
+1.  在 Visual Studio 2010 中，建立 WCF 工作流程服務應用程式專案。 一組 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 將置於畫布上，以便開始。  
   
 2.  開啟 web.config 並加入不含設定檔的 ETW 追蹤行為。  
   
@@ -358,7 +330,7 @@ ms.locfileid: "44205071"
   
 ### <a name="getting-started"></a>快速入門  
   
-1.  在 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 中，建立包含隱含或明確 <xref:System.Activities.Statements.Persist> 活動的工作流程。 將 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 行為加入至工作流程服務主機。 您可以在程式碼或應用程式組態檔中進行這項作業。  
+1.  在 Visual Studio 2012 中，建立包含隱含或明確的工作流程<xref:System.Activities.Statements.Persist>活動。 將 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 行為加入至工作流程服務主機。 您可以在程式碼或應用程式組態檔中進行這項作業。  
   
 2.  範例：[持續性](../../../docs/framework/windows-workflow-foundation/samples/persistence.md)  
   

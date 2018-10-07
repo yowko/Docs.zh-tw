@@ -6,20 +6,20 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: cc81e7ad45c308f5ecf476641dfd65fe47b36098
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 59b3aa87056cc2d32512c8b9ea68c0a6d5935814
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855711"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847399"
 ---
 # <a name="endpoint-addresses"></a>端點位址
 每個端點都有與其相關聯的位址，以便用來找出並識別端點。 這個位址主要包含一個可指定端點位置的統一資源識別元 (URI)。 在由 Windows Communication Foundation (WCF) 程式設計模型中表示端點位址<xref:System.ServiceModel.EndpointAddress>類別，其中包含選擇性<xref:System.ServiceModel.EndpointAddress.Identity%2A>屬性可讓其他端點之端點的驗證，交換訊息，以及一組選擇性的<xref:System.ServiceModel.EndpointAddress.Headers%2A>屬性，定義取用服務時所需任何其他 SOAP 標頭。 選擇性標頭會提供額外與更詳細的定址資訊，以便識別端點或與服務端點互動。 端點位址會在網路上表示為 WS-Addressing 端點參考 (EPR)。  
   
 ## <a name="uri-structure-of-an-address"></a>位址的 URI 結構  
- 大部分傳輸的位址 URI 具有四個部分。 例如，URI 的四個部分 http://www.fabrikam.com:322/mathservice.svc/secureEndpoint可以分項列出，如下所示：  
+ 大部分傳輸的位址 URI 具有四個部分。 例如，URI 的四個部分`http://www.fabrikam.com:322/mathservice.svc/secureEndpoint`可以分項列出，如下所示：  
   
--   配置：http:  
+-   配置： `http:`
   
 -   電腦： `www.fabrikam.com`  
   
@@ -56,9 +56,9 @@ ms.locfileid: "43855711"
   
  例如，網站可能包含下列基底位址：  
   
--   http://payroll.myorg.com/Service.svc  
+- `http://payroll.myorg.com/Service.svc`
   
--   http://shipping.myorg.com/Service.svc  
+- `http://shipping.myorg.com/Service.svc`
   
  有了 [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]，您就可以透過組態檔在 AppDomain 層級指定前置詞篩選條件。 即可達到這個[ \<baseAddressPrefixFilters >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)元素，其中包含的前置詞清單。 IIS 提供的傳入基底位址會依據選擇性的前置詞清單經過篩選。 根據預設，如果沒有指定前置詞，則所有位址都會通過。 如果指定前置詞，則只會產生相符的基底位址讓該配置通過。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "43855711"
 </system.serviceModel>  
 ```  
   
- 在上述範例中，//payroll.myorg.com: 8000 和 http://shipping.myorg.com:8000會的唯一基底位址，對於其各自的結構描述，都會通過。  
+ 在上述範例中，`net.tcp://payroll.myorg.com:8000`和`http://shipping.myorg.com:8000`會的唯一基底位址，對於其各自的結構描述，都會通過。  
   
  `baseAddressPrefixFilter` 不支援萬用字元。  
   

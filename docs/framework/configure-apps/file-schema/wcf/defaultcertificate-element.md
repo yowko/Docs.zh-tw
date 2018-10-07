@@ -2,12 +2,12 @@
 title: '&lt;defaultCertificate&gt; 項目'
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-ms.openlocfilehash: a4af1c6ec452b24634fa50162fa71f069e2451f5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9b99ee36fdb924ea12f3023984a3aa4b590937e8
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751008"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847850"
 ---
 # <a name="ltdefaultcertificategt-element"></a>&lt;defaultCertificate&gt; 項目
 指定服務或 STS 不透過交涉通訊協定提供憑證時要使用的 X.509 憑證。  
@@ -17,7 +17,7 @@ ms.locfileid: "32751008"
 endpointBehaviors 區段  
 \<行為 >  
 \<clientCredentials>  
-\<serviceCertificate >  
+\<v >  
 \<defaultCertificate >  
   
 ## <a name="syntax"></a>語法  
@@ -65,20 +65,20 @@ x509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
 |-----------|-----------------|  
 |列舉|值包括：AddressBook、AuthRoot、CertificateAuthority、Disallowed、My、Root、TrustedPeople 和 TrustedPublisher。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|指定對用戶端驗證服務時所使用的憑證。|  
+|[\<v >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|指定對用戶端驗證服務時所使用的憑證。|  
   
 ## <a name="remarks"></a>備註  
  對於使用以憑證為基礎之訊息安全性的繫結，這個組態項目指定的憑證會用來加密傳送給服務的訊息，而且預期會由服務用來簽署對用戶端的回覆。 它會儲存當服務未指定憑證時所要使用的單一憑證。  
   
 ## <a name="example"></a>範例  
- 下列範例會指定要用於的端點 URI 開頭憑證 http://www.contoso.com 和要針對所有其他不執行憑證交涉的端點使用的憑證。  
+ 下列範例會指定要用於的端點 URI 開頭憑證 `http://www.contoso.com` 和要針對所有其他不執行憑證交涉的端點使用的憑證。  
   
 ```xml  
 <serviceCertificate>  
@@ -101,6 +101,6 @@ x509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
  <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>  
  <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.DefaultCertificate%2A>  
  [使用憑證](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [\<驗證 >](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)  
+ [\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)  
  [保護用戶端安全](../../../../../docs/framework/wcf/securing-clients.md)  
  [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

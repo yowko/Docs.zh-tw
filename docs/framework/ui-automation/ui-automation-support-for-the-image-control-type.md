@@ -9,11 +9,11 @@ ms.assetid: 4e0eeefb-e09b-46d2-b83b-0a7e35543ab8
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: 8e2d1e6774c6a8c00478bdb89bf541bb47a8a8a5
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204017"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847288"
 ---
 # <a name="ui-automation-support-for-the-image-control-type"></a>Image 控制項類型的 UI 自動化支援
 > [!NOTE]

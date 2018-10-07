@@ -2,12 +2,12 @@
 title: WCF Web HTTP 服務的快取支援
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: 25b564235b5d2b3b26b5d657f3e5f0bd5d594125
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ef7a03a9e4c6e188e3c7a000fc4a6050e678556d
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45972984"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847632"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>WCF Web HTTP 服務的快取支援
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 可讓您使用宣告式快取機制已可在 ASP.NET 中您的 WCF Web HTTP 服務。 這可讓您快取來自 WCF Web HTTP 服務作業的回應。 當使用者傳送 HTTP GET 至您設為快取的服務時，ASP.NET 會傳回快取的回應，且不會呼叫服務方法。 當快取逾期後，下次使用者傳送 HTTP GET 時，會呼叫您的服務方法且再次快取回應。 如需有關 ASP.NET 快取的詳細資訊，請參閱[ASP.NET 快取概觀](https://go.microsoft.com/fwlink/?LinkId=152534)  
@@ -58,7 +58,7 @@ public class Service
 </system.web>  
 ```  
   
- 此組態項目與 ASP.NET 應用程式所使用的項目相同。 如需有關 ASP.NET 快取設定檔的詳細資訊，請參閱<xref:System.Web.Configuration.OutputCacheProfile>。 若是 Web HTTP 服務，快取設定檔中最重要的屬性是：`cacheDuration` 和 `varyByParam`。 這兩個屬性都是必要項。 `cacheDuration` 可設定應快取回應的時間 (以秒為單位)。 `varyByParam` 可讓您指定用來快取回應的查詢字串參數。 使用不同查詢字串參數值所執行的所有請求會分別快取。 例如，建立初始要求之後 http://MyServer/MyHttpService/MyOperation?param=10具有相同 URI 所做的所有後續要求會傳回快取的回應 （只要尚未經過快取持續時間）。 請求相似但對參數查詢字串參數有不同值的回應會分別快取。 如果您不想要此分別快取行為，請將 `varyByParam` 設為 "none"。  
+ 此組態項目與 ASP.NET 應用程式所使用的項目相同。 如需有關 ASP.NET 快取設定檔的詳細資訊，請參閱<xref:System.Web.Configuration.OutputCacheProfile>。 若是 Web HTTP 服務，快取設定檔中最重要的屬性是：`cacheDuration` 和 `varyByParam`。 這兩個屬性都是必要項。 `cacheDuration` 可設定應快取回應的時間 (以秒為單位)。 `varyByParam` 可讓您指定用來快取回應的查詢字串參數。 使用不同查詢字串參數值所執行的所有請求會分別快取。 例如，建立初始要求之後`http://MyServer/MyHttpService/MyOperation?param=10`，具有相同 URI 所做的所有後續要求會傳回快取的回應 （只要尚未經過快取持續時間）。 請求相似但對參數查詢字串參數有不同值的回應會分別快取。 如果您不想要此分別快取行為，請將 `varyByParam` 設為 "none"。  
   
 ## <a name="sql-cache-dependency"></a>SQL 快取相依性  
  Web HTTP 服務回應也可使用 SQL 快取相依性來加以快取。 如果您的 WCF Web HTTP 服務依賴儲存在 SQL 資料庫中的資料，您可能需要快取服務的回應，並在 SQL 資料庫資料表中的資料變更時，使快取的回應失效。 此行為會完全在 Web.config 檔案中設定完成。 您必須先定義中的連接字串 <`connectionStrings`> 項目。  
