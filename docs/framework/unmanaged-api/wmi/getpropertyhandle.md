@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 94171b0708c97eb7510e916e451ed03645d706f3
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48029259"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837431"
 ---
-# <a name="getpropertyhandle-function"></a><span data-ttu-id="4e64a-103">GetPropertyHandle 函式</span><span class="sxs-lookup"><span data-stu-id="4e64a-103">GetPropertyHandle function</span></span>
-<span data-ttu-id="4e64a-104">傳回識別屬性的唯一控制代碼。</span><span class="sxs-lookup"><span data-stu-id="4e64a-104">Returns a unique handle that identifies a property.</span></span>
+# <a name="getpropertyhandle-function"></a><span data-ttu-id="53d14-103">GetPropertyHandle 函式</span><span class="sxs-lookup"><span data-stu-id="53d14-103">GetPropertyHandle function</span></span>
+<span data-ttu-id="53d14-104">傳回識別屬性的唯一控制代碼。</span><span class="sxs-lookup"><span data-stu-id="53d14-104">Returns a unique handle that identifies a property.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
-## <a name="syntax"></a><span data-ttu-id="4e64a-105">語法</span><span class="sxs-lookup"><span data-stu-id="4e64a-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="53d14-105">語法</span><span class="sxs-lookup"><span data-stu-id="53d14-105">Syntax</span></span>  
   
 ```  
 HRESULT GetPropertyHandle (
@@ -40,48 +40,48 @@ HRESULT GetPropertyHandle (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="4e64a-106">參數</span><span class="sxs-lookup"><span data-stu-id="4e64a-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="53d14-106">參數</span><span class="sxs-lookup"><span data-stu-id="53d14-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="4e64a-107">[in]未使用此參數。</span><span class="sxs-lookup"><span data-stu-id="4e64a-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="53d14-107">[in]未使用此參數。</span><span class="sxs-lookup"><span data-stu-id="53d14-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="4e64a-108">[in]指標[IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess)執行個體。</span><span class="sxs-lookup"><span data-stu-id="4e64a-108">[in] A pointer to an [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) instance.</span></span>
+<span data-ttu-id="53d14-108">[in]指標[IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess)執行個體。</span><span class="sxs-lookup"><span data-stu-id="53d14-108">[in] A pointer to an [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) instance.</span></span>
 
 `wszPropertyName`  
-<span data-ttu-id="4e64a-109">[in]包含屬性名稱的 UTF16 編碼 characaters null 結尾字串。</span><span class="sxs-lookup"><span data-stu-id="4e64a-109">[in] A null-terminated string of UTF16-encoded characaters that contains the property name.</span></span>   
+<span data-ttu-id="53d14-109">[in]包含屬性名稱的 UTF16 編碼 characaters null 結尾字串。</span><span class="sxs-lookup"><span data-stu-id="53d14-109">[in] A null-terminated string of UTF16-encoded characaters that contains the property name.</span></span>   
 
 `pType`  
-<span data-ttu-id="4e64a-110">[out]指標[ `CIMTYPE` ](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx)列舉的成員，表示屬性的 CIM 型別。</span><span class="sxs-lookup"><span data-stu-id="4e64a-110">[out] A pointer to a [`CIMTYPE`](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) enumeration member that represents the CIM type of the property.</span></span>
+<span data-ttu-id="53d14-110">[out]指標[ `CIMTYPE` ](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx)列舉的成員，表示屬性的 CIM 型別。</span><span class="sxs-lookup"><span data-stu-id="53d14-110">[out] A pointer to a [`CIMTYPE`](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) enumeration member that represents the CIM type of the property.</span></span>
 
 `pHandle`   
-<span data-ttu-id="4e64a-111">[out]包含屬性控制代碼的整數指標。</span><span class="sxs-lookup"><span data-stu-id="4e64a-111">[out] A pointer to an integer that contains the property handle.</span></span>
+<span data-ttu-id="53d14-111">[out]包含屬性控制代碼的整數指標。</span><span class="sxs-lookup"><span data-stu-id="53d14-111">[out] A pointer to an integer that contains the property handle.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="4e64a-112">傳回值</span><span class="sxs-lookup"><span data-stu-id="4e64a-112">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="53d14-112">傳回值</span><span class="sxs-lookup"><span data-stu-id="53d14-112">Return value</span></span>
 
-<span data-ttu-id="4e64a-113">此函式所傳回的下列值中定義*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼：</span><span class="sxs-lookup"><span data-stu-id="4e64a-113">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="53d14-113">此函式所傳回的下列值中定義*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼：</span><span class="sxs-lookup"><span data-stu-id="53d14-113">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="4e64a-114">常數</span><span class="sxs-lookup"><span data-stu-id="4e64a-114">Constant</span></span>  |<span data-ttu-id="4e64a-115">值</span><span class="sxs-lookup"><span data-stu-id="4e64a-115">Value</span></span>  |<span data-ttu-id="4e64a-116">描述</span><span class="sxs-lookup"><span data-stu-id="4e64a-116">Description</span></span>  |
+|<span data-ttu-id="53d14-114">常數</span><span class="sxs-lookup"><span data-stu-id="53d14-114">Constant</span></span>  |<span data-ttu-id="53d14-115">值</span><span class="sxs-lookup"><span data-stu-id="53d14-115">Value</span></span>  |<span data-ttu-id="53d14-116">描述</span><span class="sxs-lookup"><span data-stu-id="53d14-116">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_NOT_FOUND` | <span data-ttu-id="4e64a-117">而會收到 0x80041002</span><span class="sxs-lookup"><span data-stu-id="4e64a-117">0x80041002</span></span> | <span data-ttu-id="4e64a-118">找不到指定的屬性名稱。</span><span class="sxs-lookup"><span data-stu-id="4e64a-118">The specified property name was not found.</span></span> |
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="4e64a-119">0x80041008</span><span class="sxs-lookup"><span data-stu-id="4e64a-119">0x80041008</span></span> | <span data-ttu-id="4e64a-120">參數不是有效的。</span><span class="sxs-lookup"><span data-stu-id="4e64a-120">A parameter is not valid.</span></span> |
-|`WBEM_E_NOT_SUPPORTED` | <span data-ttu-id="4e64a-121">0x8004100c</span><span class="sxs-lookup"><span data-stu-id="4e64a-121">0x8004100c</span></span> | <span data-ttu-id="4e64a-122">要求的屬性屬於型別是`CIM_OBJECT`或`CIM_ARRAY`。</span><span class="sxs-lookup"><span data-stu-id="4e64a-122">The requested property is of type are `CIM_OBJECT` or `CIM_ARRAY`.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="4e64a-123">0</span><span class="sxs-lookup"><span data-stu-id="4e64a-123">0</span></span> | <span data-ttu-id="4e64a-124">函式呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="4e64a-124">The function call was successful.</span></span>  |
+|`WBEM_E_NOT_FOUND` | <span data-ttu-id="53d14-117">而會收到 0x80041002</span><span class="sxs-lookup"><span data-stu-id="53d14-117">0x80041002</span></span> | <span data-ttu-id="53d14-118">找不到指定的屬性名稱。</span><span class="sxs-lookup"><span data-stu-id="53d14-118">The specified property name was not found.</span></span> |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="53d14-119">0x80041008</span><span class="sxs-lookup"><span data-stu-id="53d14-119">0x80041008</span></span> | <span data-ttu-id="53d14-120">參數不是有效的。</span><span class="sxs-lookup"><span data-stu-id="53d14-120">A parameter is not valid.</span></span> |
+|`WBEM_E_NOT_SUPPORTED` | <span data-ttu-id="53d14-121">0x8004100c</span><span class="sxs-lookup"><span data-stu-id="53d14-121">0x8004100c</span></span> | <span data-ttu-id="53d14-122">要求的屬性屬於型別是`CIM_OBJECT`或`CIM_ARRAY`。</span><span class="sxs-lookup"><span data-stu-id="53d14-122">The requested property is of type are `CIM_OBJECT` or `CIM_ARRAY`.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="53d14-123">0</span><span class="sxs-lookup"><span data-stu-id="53d14-123">0</span></span> | <span data-ttu-id="53d14-124">函式呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="53d14-124">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="4e64a-125">備註</span><span class="sxs-lookup"><span data-stu-id="4e64a-125">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="53d14-125">備註</span><span class="sxs-lookup"><span data-stu-id="53d14-125">Remarks</span></span>
 
-<span data-ttu-id="4e64a-126">此函式會包裝在呼叫[IWbemClassObject::GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle)方法。</span><span class="sxs-lookup"><span data-stu-id="4e64a-126">This function wraps a call to the [IWbemClassObject::GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle) method.</span></span>
+<span data-ttu-id="53d14-126">此函式會包裝在呼叫[IWbemClassObject::GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle)方法。</span><span class="sxs-lookup"><span data-stu-id="53d14-126">This function wraps a call to the [IWbemClassObject::GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle) method.</span></span>
 
-<span data-ttu-id="4e64a-127">您可以使用此控制代碼識別屬性使用時[IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess)方法來讀取或寫入屬性值。</span><span class="sxs-lookup"><span data-stu-id="4e64a-127">You can use this handle to identify properties when using  [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) methods to read or write property values.</span></span>
+<span data-ttu-id="53d14-127">您可以使用此控制代碼識別屬性使用時[IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess)方法來讀取或寫入屬性值。</span><span class="sxs-lookup"><span data-stu-id="53d14-127">You can use this handle to identify properties when using  [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) methods to read or write property values.</span></span>
 
-<span data-ttu-id="4e64a-128">控制代碼可以擷取所有資料類型的屬性以外`CIM_OBJECT`和`CIM_ARRAY`。</span><span class="sxs-lookup"><span data-stu-id="4e64a-128">Handles can be retrieved for properties of all data types other than `CIM_OBJECT` and `CIM_ARRAY`.</span></span> <span data-ttu-id="4e64a-129">傳回類別所有執行個體之間的控制代碼的工作。</span><span class="sxs-lookup"><span data-stu-id="4e64a-129">Returned handles work across all instances of a class.</span></span>
+<span data-ttu-id="53d14-128">控制代碼可以擷取所有資料類型的屬性以外`CIM_OBJECT`和`CIM_ARRAY`。</span><span class="sxs-lookup"><span data-stu-id="53d14-128">Handles can be retrieved for properties of all data types other than `CIM_OBJECT` and `CIM_ARRAY`.</span></span> <span data-ttu-id="53d14-129">傳回類別所有執行個體之間的控制代碼的工作。</span><span class="sxs-lookup"><span data-stu-id="53d14-129">Returned handles work across all instances of a class.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="4e64a-130">需求</span><span class="sxs-lookup"><span data-stu-id="4e64a-130">Requirements</span></span>  
-<span data-ttu-id="4e64a-131">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4e64a-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="53d14-130">需求</span><span class="sxs-lookup"><span data-stu-id="53d14-130">Requirements</span></span>  
+<span data-ttu-id="53d14-131">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="53d14-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4e64a-132">**標頭：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="4e64a-132">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="53d14-132">**標頭：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="53d14-132">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="4e64a-133">**.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="4e64a-133">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="53d14-133">**.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="53d14-133">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4e64a-134">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4e64a-134">See also</span></span>  
-[<span data-ttu-id="4e64a-135">WMI 和效能計數器 （Unmanaged API 參考）</span><span class="sxs-lookup"><span data-stu-id="4e64a-135">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="53d14-134">另請參閱</span><span class="sxs-lookup"><span data-stu-id="53d14-134">See also</span></span>  
+[<span data-ttu-id="53d14-135">WMI 和效能計數器 （Unmanaged API 參考）</span><span class="sxs-lookup"><span data-stu-id="53d14-135">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
