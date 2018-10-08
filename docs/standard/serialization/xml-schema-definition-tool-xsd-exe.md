@@ -2,12 +2,12 @@
 title: XML Schema Definition Tool (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: a3a16e92dab6994de6bfa99c248ff0b13658e22d
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 23dea344b123b377224aad5816137aa246b8f596
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615439"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850859"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 XML 結構描述定義工具 (Xsd.exe) 可以從 XDR、XML 和 XSD 檔案或從執行階段組件的類別中，產生 XML 結構描述或 Common Language Runtime 類別。  
@@ -86,7 +86,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
  類別轉換成 XSD  
  從型別或執行階段組件檔中的型別中產生 XML 結構描述。 產生的結構描述會定義 `System.Xml.Serialization.XmlSerializer` 所使用的 XML 格式。  
   
- Xsd.exe 只允許您操作遵循 XML 結構描述定義 (XSD) 語言的 XML 結構描述，而這個 XSD 語言是由全球資訊網協會 (W3C) 所提出的。 如需有關 XML 結構描述定義提議或 XML 標準的詳細資訊，請參閱 http://w3.org。  
+ Xsd.exe 只允許您操作遵循 XML 結構描述定義 (XSD) 語言的 XML 結構描述，而這個 XSD 語言是由全球資訊網協會 (W3C) 所提出的。 如需有關 XML 結構描述定義提議或 XML 標準的詳細資訊，請參閱<https://w3.org>。  
   
 ## <a name="setting-options-with-an-xml-file"></a>設定 XML 檔案的選項  
  使用 `/parameters` 參數時，您可以指定會設定各種選項的單一 XML 檔案。 您可以設定的選項會視使用 XSD.exe 工具的方式而定。 這些選擇包括產生結構描述、產生程式碼檔或產生內含 `DataSet` 功能的程式碼檔。 例如，您可以在產生結構描述時 (但不是在產生程式碼檔案時)，將 `<assembly\>` 項目設為可執行檔 (.exe) 或型別程式庫 (.dll) 檔案的名稱。 下列 XML 會顯示如何使用 `<generateSchemas\>` 項目搭配指定的可執行檔：  

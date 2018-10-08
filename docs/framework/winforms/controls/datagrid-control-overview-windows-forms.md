@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 9f939175a77ff080b37491a36c15edbb8af15933
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a4a8f33b45fa8433013cfa34fbc55f0db90737c4
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43462460"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850683"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid 控制項概觀 (Windows Form)
 > [!NOTE]
@@ -90,7 +90,7 @@ ms.locfileid: "43462460"
 |多個相關的資料表。|格線可以顯示用來選取資料表的樹狀檢視，或者您可以指定格線顯示父資料表。 父資料表中的記錄可讓使用者巡覽至相關的子資料列。|  
   
 > [!NOTE]
->  資料集中的資料表會使用 <xref:System.Data.DataRelation> 來建立關聯。  另請參閱[HYPERLINK"http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)」 中的資料集的關聯性](https://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\))或[集中的關聯性](https://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\))。  
+> 資料集中的資料表會使用 <xref:System.Data.DataRelation> 來建立關聯。 另請參閱[建立資料集之間的關聯性](/visualstudio/data-tools/relationships-in-datasets)。
   
  當 <xref:System.Windows.Forms.DataGrid> 控制項顯示資料表，且 <xref:System.Windows.Forms.DataGrid.AllowSorting%2A> 屬性設為 `true` 時，按一下資料行標頭，即可重新排序資料。 使用者也可以加入資料列以及編輯儲存格。  
   

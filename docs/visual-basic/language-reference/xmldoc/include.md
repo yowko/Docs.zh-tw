@@ -5,12 +5,12 @@ helpviewer_keywords:
 - include XML tag
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
-ms.openlocfilehash: da7a6c15c558fc56dbc6a874d4a28c4434f67668
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 0f143f8c023102f44b41e3898f29d18be0083128
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48778701"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48849479"
 ---
 # <a name="ltincludegt-visual-basic"></a>&lt;包含&gt;(Visual Basic)
 參考描述的類型和成員在原始程式碼中的另一個檔案。  
@@ -37,7 +37,7 @@ ms.locfileid: "48778701"
 ## <a name="remarks"></a>備註  
  使用`<include>`標記來參考另一個檔案中描述的類型的註解和在原始程式碼中的成員。 這是將文件註解直接放在原始程式碼檔中的替代方案。  
   
- `<include>`標記使用 W3C XML 路徑語言 (XPath) 1.0 版建議事項。 自訂方法的詳細資訊您`<include>`使用位於 http://www.w3.org/TR/xpath 。  
+ `<include>`標記使用 W3C XML 路徑語言 (XPath) 1.0 版建議事項。 如需有關如何自訂您`<include>`使用，請參閱<https://www.w3.org/TR/xpath>。  
   
 ## <a name="example"></a>範例  
  這個範例會使用`<include>`從名為的檔案匯入成員文件註解的標記`commentFile.xml`。  
