@@ -34,11 +34,11 @@ ms.locfileid: "43855018"
 
 1. 建立專案。
 
-   從命令列鍵入 [dotnet new console](../tools/dotnet-new.md)，以在該目錄中建立新的 C# 主控台專案；或輸入 [dotnet new console -lang vb](../tools/dotnet-new.md)，已在該目錄建立新的 Visual Basic 主控台專案。
+   從命令列鍵入 [dotnet new console](../tools/dotnet-new.md)，以在該目錄中建立新的 C# 主控台專案。
 
 1. 新增應用程式的原始程式碼。
 
-   在您的編輯器中開啟 *Program.cs* 或 *Program.vb* 檔案，並以下列程式碼取代自動產生的程式碼。 它會提示使用者輸入文字，並顯示使用者輸入的個別文字。 它會使用規則運算式 `\w+` 分隔輸入文字中的字詞。
+   在您的編輯器中開啟 *Program.cs* 檔案，並以下列程式碼取代自動產生的程式碼。 它會提示使用者輸入文字，並顯示使用者輸入的個別文字。 它會使用規則運算式 `\w+` 分隔輸入文字中的字詞。
 
    [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
@@ -59,7 +59,7 @@ ms.locfileid: "43855018"
       ```
    這會建立應用程式的發行 (而非偵錯) 版本。 產生的檔案會放在名為 *publish* 的目錄中，而該目錄位於您專案之 *bin* 目錄的子目錄中。
 
-   隨著應用程式檔案一起，發佈程序會發出程式資料庫 (.pdb) 檔案，其中包含應用程式的偵錯資訊。 該檔案主要是用於例外狀況偵錯。 您可以選擇不與您的應用程式檔案一起將它發散。 不過，如果您要對應用程式的發行組建進行偵錯，則應該將其保存。
+   隨著應用程式檔案一起，發佈程序會發出程式資料庫 (.pdb) 檔案，其中包含應用程式的偵錯資訊。 該檔案主要是用於例外狀況偵錯。 您可以選擇不與您的應用程式檔案一起散發它。 不過，如果您要對應用程式的發行組建進行偵錯，則應該將其儲存。
 
    您可以使用任何您想要的方式，部署整組應用程式檔案。 例如，您可以使用簡單的 `copy` 命令將它們封裝在 ZIP 檔案中，或與您選擇的任何安裝套件一起部署。
 
@@ -105,7 +105,7 @@ ms.locfileid: "43855018"
 
 1. 定義您應用程式目標的平台。
 
-   在定義應用程式目標平台之 *csproj* 檔案的 `<PropertyGroup>` 區段中建立 `<RuntimeIdentifiers>` 標記，並指定每個目標平台的執行階段識別碼 (RID)。 請注意，您也必須加上分號來分隔 RID。 如需執行階段識別碼清單，請參閱 [.NET Core RID 類別目錄](../rid-catalog.md)。
+   在定義應用程式目標平台之 *csproj* 檔案的 `<PropertyGroup>` 區段中建立 `<RuntimeIdentifiers>` 標記，並指定每個目標平台的執行階段識別碼 (RID)。 請注意，您也必須加上分號來分隔 RID。 如需執行階段識別碼清單，請參閱 [Runtime IDentifier catalog](../rid-catalog.md)。
 
    例如，下列 `<PropertyGroup>` 區段指出應用程式在 64 位元 Windows 10 作業系統和 64 位元 OS X 版本 10.11 作業系統上執行。
 
@@ -120,14 +120,6 @@ ms.locfileid: "43855018"
 1. 更新專案的相依性和工具。
 
    執行 [dotnet restore](../tools/dotnet-restore.md) ([請參閱注意事項](#dotnet-restore-note)) 命令以還原專案中指定的相依性。
-
-1. 決定您是否想要使用全球化不區分模式。
-
-   如果您的應用程式是為 Linux 所編譯，您可以透過[全球化不區分模式](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)將您自封性部屬的應用程式大小縮小。全球化不區分模式對於不能全局識別以及可使用[與文化性不相關](xref:System.Globalization.CultureInfo.InvariantCulture)的格式、大小寫區分、字串比較以及大小排列的應用程式相當有用。
-
-   若要啟用不區分模式，於**方案總管**中在您的專案(而非方案)上按下右鍵，並選擇**編輯 SCD.csproj**或**編輯SCD.vbproj**。並將下列反白顯示的字串加入至檔案中：
-  
-   [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj)]
 
 1. 建立應用程式的偵錯組建。
 
