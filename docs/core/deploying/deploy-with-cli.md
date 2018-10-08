@@ -1,4 +1,4 @@
----
+﻿---
 title: 使用 CLI 工具部署.NET Core 應用程式
 description: 了解使用命令列介面 (CLI) 工具的 .NET Core 應用程式部署
 author: rpetrusha
