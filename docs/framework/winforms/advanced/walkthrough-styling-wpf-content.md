@@ -7,11 +7,11 @@ helpviewer_keywords:
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
 ms.openlocfilehash: bd056bb9d5ad429e35e0b2625dee99ae5f18b527
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48780137"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48845550"
 ---
 # <a name="walkthrough-styling-wpf-content"></a>逐步解說：設定 WPF 內容的樣式
 本逐步解說示範如何將樣式套用至 Windows Form 上裝載的 Windows Presentation Foundation (WPF) 控制項。

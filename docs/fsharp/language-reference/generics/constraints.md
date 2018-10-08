@@ -3,11 +3,11 @@ title: 條件約束 (F#)
 description: '深入了解 F # 的條件約束套用至泛型型別參數的泛型型別或函式中指定型別引數的需求。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 9534db4ffd195022366af8c993658bd94f375f53
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48034833"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48579866"
 ---
 # <a name="constraints"></a>條件約束
 
