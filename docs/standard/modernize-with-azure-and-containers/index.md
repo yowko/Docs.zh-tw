@@ -4,12 +4,12 @@ description: 了解如何隨即轉移和現代化現有應用程式到 Azure 雲
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 4/28/2018
-ms.openlocfilehash: 07e1a1e2ef145dce1b292d9425f33fcd99ffd1ae
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b22ddd8a63d183571f9ca3a63fb7ae84ebb88510
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45747000"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873491"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>將現有.NET 應用程式與 Azure 雲端和 Windows 容器現代化 （第 2 版）
 
@@ -25,7 +25,7 @@ Copyright © 2018 by Microsoft Corporation
 
 著作權所有，並保留一切權利。 本書內容的任何部分在未經過發行者書面許可下，不得以任何形式或透過任何方式進行重製。
 
-這本書是透過 microsoft 的多個管道以電子書 （電子書） 的形式免費提供例如 http://dot.net/architecture。
+這本書是透過 microsoft 的多個管道以電子書 （電子書） 的形式免費提供例如<http://dot.net/architecture>。
 
 若您對本書有相關問題，請傳送電子郵件到 [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)
 
@@ -33,7 +33,7 @@ Copyright © 2018 by Microsoft Corporation
 
 此處所描述的一些範例僅供說明，純屬虛構。 任何實際關聯或連結純屬巧合。
 
-Microsoft 與列於 http://www.microsoft.com「商標」網頁的商標是 Microsoft 集團的商標。 所有其他商標皆屬於其各自擁有者的財產。
+Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Microsoft 集團的商標。 所有其他商標皆屬於其各自擁有者的財產。
 
 作者: 
 > **Cesar de la Torre**, Sr.，Microsoft Corp. .NET 產品小組 PM

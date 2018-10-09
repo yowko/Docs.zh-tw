@@ -13,11 +13,11 @@ ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 4a9bcc6cd5d2bbf30f463da0a51e1bccbcd5a3f1
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028747"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873056"
 ---
 # <a name="ltaddgt-element-for-authenticationmodules-network-settings"></a>&lt;新增&gt;authenticationModules （網路設定） 的項目
 將應用程式中的驗證模組。  

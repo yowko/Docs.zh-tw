@@ -2,12 +2,12 @@
 title: NamedPipe 啟用
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: 97221bfd00fb6b50b63eab11ed82356b002a38de
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5f277d2c72822d8828355d3d728864bedb6dc4f4
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504268"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873358"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe 啟用
 此範例示範裝載服務，該服務使用 Windows Process Activation Service (WAS) 啟用透過名稱管道通訊的服務。 此樣本根據[快速入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，而且需要[!INCLUDE[wv](../../../../includes/wv-md.md)]執行。  
@@ -196,7 +196,7 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         >  這個命令是單行文字。  
   
-         此命令會啟用 /servicemodelsamples 應用程式使用兩者來存取 http://localhost/servicemodelsamples和 net.tcp: //localhost/servicemodelsamples。  
+         此命令會啟用 /servicemodelsamples 應用程式使用兩者來存取`http://localhost/servicemodelsamples`和`net.tcp://localhost/servicemodelsamples`。  
   
 4.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   

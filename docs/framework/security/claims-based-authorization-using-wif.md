@@ -3,12 +3,12 @@ title: 使用 WIF 進行宣告式授權
 ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
-ms.openlocfilehash: c13ea5c9f2f62c9c01139741d06de35dd2ff4be1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 65254b31570ebf65d10c4d8c1f0fa776a6e2bae1
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47236052"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48872916"
 ---
 # <a name="claims-based-authorization-using-wif"></a>使用 WIF 進行宣告式授權
 在信賴憑證者應用程式中，授權會判斷哪些是已驗證的識別可以存取的資源，以及可以針對這些資源執行哪些作業。 不適當或弱式授權會導致資訊洩露以及資料遭竄改。 本主題概述可使用 Windows Identity Foundation (WIF) 和 Security Token Service (STS) (例如 Microsoft Azure Access Control Service (ACS)) 為宣告感知 ASP.NET Web 應用程式和服務實作授權的方式。  
@@ -36,7 +36,7 @@ ms.locfileid: "47236052"
 ### <a name="expressing-roles-as-claims"></a>將角色表示為宣告  
  呼叫 **IsInRole()** 方法可以檢查目前的使用者是否具有該角色。 在宣告感知應用程式中，角色是依角色宣告類型表示，而該類型可以從權杖中取得。 角色宣告類型是使用下列 URI 來表示：  
   
- http://schemas.microsoft.com/ws/2008/06/identity/claims/role  
+ `http://schemas.microsoft.com/ws/2008/06/identity/claims/role`
   
  下列幾種方式都可以利用角色宣告類型來增加權杖內容：  
   

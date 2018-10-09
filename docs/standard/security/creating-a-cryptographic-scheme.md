@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d40c509f-5a5e-46cc-94cb-a951e9ab6843
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2db6d4229ac777801aff792c86fe0e5e9a1b4994
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 51d07fadcf359c2b44f22ca9868d0f12e24b80c5
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964380"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873111"
 ---
 # <a name="creating-a-cryptographic-scheme"></a>建立密碼編譯配置
 .NET Framework 的密碼編譯元件可以結合以建立不同的配置，來加密和解密資料。  
@@ -30,7 +30,7 @@ ms.locfileid: "45964380"
   
 5.  接著各方使用對稱加密開始交談。  
   
- 建立密碼編譯配置不是簡單的工作。 如需有關使用密碼編譯的詳細資訊，請參閱 Platform SDK 文件中的密碼編譯 > 主題 http://msdn.microsoft.com/library。  
+ 建立密碼編譯配置不是簡單的工作。
   
 ## <a name="see-also"></a>另請參閱
 
