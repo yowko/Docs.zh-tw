@@ -2,17 +2,17 @@
 title: WCF 的 &lt;add&gt;
 ms.date: 03/30/2017
 ms.assetid: c196f6d7-77f6-4266-973c-305b2b4dd8a2
-ms.openlocfilehash: 31c2274b4e9f40f503e9cd2e673572f61ef66083
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8b1bd0ef77cb1ecad4ada8db66c6c7da3b6ba997
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748184"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087189"
 ---
 # <a name="ltaddgt-of-wcf"></a>WCF 的 &lt;add&gt;
 設定追蹤參與者，這些參與者會接聽執行階段直接發出的追蹤記錄並處理記錄，無論記錄的設定為何。 這包括寫入至特定的輸出 (例如檔案、主控台、ETW)、處理/彙總記錄，或任何其他可能需要的組合。  
   
- 如需工作流程追蹤和追蹤參與者的詳細資訊，請參閱[工作流程追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)和[追蹤參與者](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)。  
+ 如需工作流程追蹤及追蹤參與者的詳細資訊，請參閱[工作流程追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)並[追蹤參與者](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)。  
   
  \<system.serviceModel>  
 \<追蹤 >  
@@ -22,7 +22,13 @@ ms.locfileid: "32748184"
 ## <a name="syntax"></a>語法  
   
 ```xml
-   <tracking>    <participants>       <add name="String"            profileName="String"           type="String" />    </participants> </tracking>
+<tracking>
+  <participants>
+    <add name="String"           
+         profileName="String"
+         type="String" />
+  </participants>
+</tracking>  
 ```
 
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -30,13 +36,13 @@ ms.locfileid: "32748184"
   
 ### <a name="attributes"></a>屬性  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |name|指定追蹤參與者名稱的字串。|  
 |profileName|指定追蹤設定檔名稱的字串，該設定檔定義了追蹤參與者已訂閱的追蹤記錄。|  
 |類型|指定追蹤參與者型別的字串。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  

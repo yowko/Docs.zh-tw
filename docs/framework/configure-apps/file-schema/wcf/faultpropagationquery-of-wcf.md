@@ -2,17 +2,17 @@
 title: WCF 的 &lt;faultPropagationQuery&gt;
 ms.date: 03/30/2017
 ms.assetid: fabafbc8-3e45-4feb-8321-0725e9f4079c
-ms.openlocfilehash: fe3dd90a5c6b26537ab461b4bf4993df5be625a8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: df7119363e94a070bb898c984c12cf82755c3407
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747355"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087696"
 ---
 # <a name="ltfaultpropagationquerygt-of-wcf"></a>WCF 的 &lt;faultPropagationQuery&gt;
 表示用來追蹤活動中發生之錯誤處理的查詢。  每當 FaultHandler 處理錯誤時，都會發生這個事件。 您應該使用這種查詢來追蹤活動中發生的錯誤處理。 追蹤參與者必須要具備查詢，才能訂閱錯誤傳播記錄。  
   
- 如需追蹤設定檔查詢的詳細資訊，請參閱[追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)。  
+ 如需有關追蹤設定檔查詢的詳細資訊，請參閱 <<c0> [ 追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)。  
   
  \<system.serviceModel>  
 \<追蹤 >  
@@ -24,7 +24,16 @@ ms.locfileid: "32747355"
 ## <a name="syntax"></a>語法  
   
 ```xml
-<tracking>   <trackingProfile name="Name">       <workflow>          <faultPropagationQueries>             <faultPropagationQuery activityName="String"                 faultHandlerActivityName="String"/>          </faultPropagationQueries>       </workflow>   </trackingProfile></tracking>  
+<tracking>
+  <trackingProfile name="Name">
+    <workflow>
+      <faultPropagationQueries>
+        <faultPropagationQuery activityName="String"
+                               faultHandlerActivityName="String"/>
+      </faultPropagationQueries>
+    </workflow>
+  </trackingProfile>
+</tracking>  
 ```
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -37,7 +46,7 @@ ms.locfileid: "32747355"
 |activityName|字串，可指定傳用錯誤之錯誤處理常式活動的名稱。 預設為 *，表示會針對所有活動傳回錯誤傳用記錄。|  
 |faultHandlerActivityName|字串，可指定本身是錯誤來源的活動名稱。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  

@@ -2,12 +2,12 @@
 title: 'F # 編碼慣例'
 description: '撰寫 F # 程式碼時，了解一般的指導方針和慣例。'
 ms.date: 05/14/2018
-ms.openlocfilehash: b9afd1fbfbd9d8e04d9bfaa07615de045b7e05fe
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 21119b6d69e00f359104bfb6eab7681bdbfb8d78
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47237396"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087384"
 ---
 # <a name="f-coding-conventions"></a>F # 編碼慣例
 
@@ -420,7 +420,7 @@ let ``Test withdrawal transaction with 0.0 for balance``() =
 
 F # 提供多個選項[存取控制](../language-reference/access-control.md)、 繼承自.NET 執行階段中可用。 這些不是只用於類型-您也可以使用它們的函式。
 
-* 偏好非`public`類型和成員，直到您需要它們來公開取用。 這樣也可以降低至哪些取用者幾
+* 偏好非`public`類型和成員，直到您需要它們來公開取用。 這樣也可以降低至哪些取用者幾。
 * 致力於讓您將所有的協助程式功能`private`。
 * 請考慮使用`[<AutoOpen>]`helper 函式，如果它們變成許多私用模組上。
 

@@ -9,29 +9,29 @@ helpviewer_keywords:
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
 author: BrucePerlerMS
-ms.openlocfilehash: dd2c4f32978107a82ce940e0ef984c70f461b2c3
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 6dbf0e2be0a75fccd84a82fe2b3c8ab41762de83
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48046730"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087722"
 ---
 # <a name="how-to-create-a-security-token-service"></a>HOW TO：建立安全性權杖服務
 安全性權杖服務實作於 WS-Trust 規格定義的通訊協定。 此通訊協定定義用來核發、更新、取消及驗證安全性權杖的訊息格式以及訊息交換模式。 指定的安全性權杖服務提供一個或一個以上的這些功能。 此主題檢視最常見的狀況：實作權杖核發。  
   
 ## <a name="issuing-tokens"></a>核發權杖  
- WS-Trust 根據 `RequestSecurityToken` XML Schema 定義語言 (XSD) 結構描述項目以及執行權杖核發的 `RequestSecurityTokenResponse` XSD 結構描述項目，定義訊息的格式。 除此之外，它還定義關聯的動作統一資源識別源 (URI)。 URI 相關聯的動作`RequestSecurityToken`訊息是 http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue 。 URI 相關聯的動作`RequestSecurityTokenResponse`訊息是 http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue 。  
+ WS-Trust 根據 `RequestSecurityToken` XML Schema 定義語言 (XSD) 結構描述項目以及執行權杖核發的 `RequestSecurityTokenResponse` XSD 結構描述項目，定義訊息的格式。 除此之外，它還定義關聯的動作統一資源識別源 (URI)。 URI 相關聯的動作`RequestSecurityToken`訊息是 `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue` 。 URI 相關聯的動作`RequestSecurityTokenResponse`訊息是 `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue` 。  
   
 ### <a name="request-message-structure"></a>要求訊息結構  
  發出要求訊息結構通常包括下列項目：  
   
--   要求輸入 URI 值為 http://schemas.xmlsoap.org/ws/2005/02/trust/Issue 。  
+-   要求輸入的 URI 值為`http://schemas.xmlsoap.org/ws/2005/02/trust/Issue`。
   
--   語彙基元型別 URI。 此 URI 的值是安全性判斷提示標記語言 (SAML) 1.1 權杖 http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1 。  
+-   語彙基元型別 URI。 此 URI 的值是安全性判斷提示標記語言 (SAML) 1.1 權杖 `http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1` 。  
   
 -   此金鑰大小值表示關聯於核發之權杖的金鑰位元數。  
   
--   金鑰型別 URI。 對稱金鑰，這個 URI 的值是 http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey 。  
+-   金鑰型別 URI。 對稱金鑰，這個 URI 的值是 `http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey` 。  
   
  此外，也許存在一些其他項目：  
   

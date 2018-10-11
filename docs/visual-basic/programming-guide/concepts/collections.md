@@ -3,11 +3,11 @@ title: 集合 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
 ms.openlocfilehash: 60519de1f580bf1cfa4aa067d4a999b20ea8d54d
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847460"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087371"
 ---
 # <a name="collections-visual-basic"></a>集合 (Visual Basic)
 在許多應用程式中，您想要建立和管理相關物件的群組。 有兩種方式可以群組物件：建立物件的陣列和建立物件的集合。  
@@ -182,7 +182,7 @@ End Class
   
 -   <xref:System.Collections> 類別  
   
--   Visual Basic`Collection`類別  
+-   Visual Basic `Collection` 類別  
   
 <a name="BKMK_Generic"></a>
 ### <a name="systemcollectionsgeneric-classes"></a>System.Collections.Generic 類別  
@@ -224,17 +224,17 @@ End Class
 |<xref:System.Collections.Queue>|表示物件的先進先出 (FIFO) 集合。|  
 |<xref:System.Collections.Stack>|表示物件的後進先出 (LIFO) 集合。|  
   
- <xref:System.Collections.Specialized> 命名空間會提供特製化類型和強型別集合類別，例如只有字串的集合，以及連結串列和 Hybrid 字典。  
+ <xref:System.Collections.Specialized> 命名空間會提供特製化類型和強類型集合類別，例如只有字串的集合，以及連結串列和 Hybrid 字典。  
 
 <a name="BKMK_VisualBasic"></a> 
 ###  <a name="visual-basic-collection-class"></a>Visual Basic Collection 類別  
- 您可以使用 Visual Basic<xref:Microsoft.VisualBasic.Collection>類別來存取集合項目使用數值索引或`String`索引鍵。 不論是否指定索引鍵，您都可以在集合物件中加入項目。 如果加入不具索引鍵的項目，則必須使用它的數值索引加以存取。  
+ 使用數值索引或 `String` 索引鍵，您就可以使用 Visual Basic <xref:Microsoft.VisualBasic.Collection> 類別來存取集合項目。 不論是否指定索引鍵，您都可以在集合物件中加入項目。 如果加入不具索引鍵的項目，則必須使用它的數值索引加以存取。  
   
- Visual Basic`Collection`類別會以型別來儲存其所有的項目`Object`，因此您可以將任何資料類型的項目。 無法確定加入的資料類型皆適當無誤。  
+ Visual Basic `Collection` 類別會將其所有項目儲存為類型 `Object`，因此可以加入屬於任何資料類型的項目。 無法確定加入的資料類型皆適當無誤。  
   
- 當您使用 Visual Basic`Collection`類別，在集合中的第一個項目具有索引為 1。 這與 .NET Framework 集合類別不同，後者的起始索引為 0。  
+ 當您使用 Visual Basic `Collection` 類別時，集合中第一個項目的索引為 1。 這與 .NET Framework 集合類別不同，後者的起始索引為 0。  
   
- 可能的話，您應該使用中的泛型集合<xref:System.Collections.Generic?displayProperty=nameWithType>命名空間或<xref:System.Collections.Concurrent>命名空間，而不是 Visual Basic`Collection`類別。  
+ 可能的話，請盡量使用 <xref:System.Collections.Generic?displayProperty=nameWithType> 或 <xref:System.Collections.Concurrent> 命名空間中的泛型集合，而非 Visual Basic `Collection` 類別。  
   
  如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.Collection>。  
   

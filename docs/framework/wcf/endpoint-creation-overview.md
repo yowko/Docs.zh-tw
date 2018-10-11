@@ -8,11 +8,11 @@ helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
 ms.openlocfilehash: b72c3959b2a42c6a5abc8ef31975d5bdb9ce220e
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48781605"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086839"
 ---
 # <a name="endpoint-creation-overview"></a>端點建立概觀
 使用 Windows Communication Foundation (WCF) 服務的所有通訊都都會透過*端點*的服務。 端點可讓用戶端存取 WCF 服務提供的功能。 本章節說明端點的結構，並且摘要說明如何透過組態與程式碼來定義端點。  

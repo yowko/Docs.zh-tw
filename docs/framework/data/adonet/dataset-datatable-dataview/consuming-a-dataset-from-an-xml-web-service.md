@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: ab96e8f3395a78c88184872a2c78b71fb2bf7b9e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7e43d423109ea39a725a4bfa8b9d2b22a25cfb5c
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522107"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087332"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>從 XML Web Service 使用資料集
 <xref:System.Data.DataSet> 採用中斷連接設計為架構，而部分原因是為了使網際網路的資料傳輸更方便。 **資料集**，它可以指定為輸入或輸出自 XML Web service，而不需要任何額外的程式碼所需資料流的內容是 「 序列化 」 **DataSet**從 XML Web service用戶端和上一步。 **資料集**是隱含地轉換成使用 DiffGram 格式的 XML 資料流傳送透過網路，然後重新建構 XML 資料流，做為從**DataSet**在接收端。 您可以採用這種簡單靈活的方式，以 XML Web Service 來傳輸和傳回關聯式資料。 如需有關 DiffGram 格式的詳細資訊，請參閱[DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)。  
@@ -163,7 +163,7 @@ ms.locfileid: "43522107"
   
      XML Web Service 的用戶端需要 SOAP Proxy，才能使用公開方法。 您可以命令 Visual Studio 產生這個 Proxy。 藉由從 Visual Studio 中設定現有 Web 服務的 Web 參考，會透明地執行這個步驟所說明的所有行為。 如果要自行建立 Proxy 類別，請繼續這些說明。 然而在大多數情況下，使用 Visual Studio 來建立用戶端應用程式的 Proxy 類別已足以因應。  
   
-     Proxy 可使用 Web 服務描述語言工具建立。 例如，如果 XML Web service 會在 URL 中公開 http://myserver/data/DataSetSample.asmx，發出如下所示的命令來建立 Visual Basic.NET proxy 的命名空間**WebData.DSSample**並將它儲存在 sample.vb 檔案中。  
+     Proxy 可使用 Web 服務描述語言工具建立。 例如，如果 XML Web service 會在 URL 中公開`http://myserver/data/DataSetSample.asmx`，發出如下所示的命令來建立 Visual Basic.NET proxy 的命名空間**WebData.DSSample**並將它儲存在 sample.vb 檔案中。  
   
     ```console
     wsdl /l:VB -out:sample.vb http://myserver/data/DataSetSample.asmx /n:WebData.DSSample  

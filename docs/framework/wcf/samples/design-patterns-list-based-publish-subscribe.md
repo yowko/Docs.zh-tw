@@ -3,11 +3,11 @@ title: 設計模式：以清單為基礎的發行訂閱
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
 ms.openlocfilehash: caec9a9aa6de267cb5407ad4a7166701740f9a63
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850123"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086566"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>設計模式：以清單為基礎的發行訂閱
 這個範例說明實作 Windows Communication Foundation (WCF) 程式的清單架構發行訂閱模式。  

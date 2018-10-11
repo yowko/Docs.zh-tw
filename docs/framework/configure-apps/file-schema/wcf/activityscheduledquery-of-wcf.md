@@ -2,17 +2,17 @@
 title: WCF 的 &lt;activityScheduledQuery&gt;
 ms.date: 03/30/2017
 ms.assetid: 25f6eee1-3d98-4c39-b517-c0813f03f106
-ms.openlocfilehash: 4efd6ba13e8a54d3338c25b077477d4abdbe9ab5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9a53d72316dad0178f24e05656a4fb4531b88aec
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746234"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087761"
 ---
 # <a name="ltactivityscheduledquerygt-of-wcf"></a>WCF 的 &lt;activityScheduledQuery&gt;
 代表查詢的集合，可用來追蹤已排程且由父活動執行的活動。 追蹤參與者必須要具備查詢，才能訂閱活動排程記錄。  
   
- 如需追蹤設定檔查詢的詳細資訊，請參閱[追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+ 如需有關追蹤設定檔查詢的詳細資訊，請參閱[追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
  \<system.serviceModel>  
 \<追蹤 >  
@@ -24,7 +24,16 @@ ms.locfileid: "32746234"
 ## <a name="syntax"></a>語法  
   
 ```xml
-<tracking>     <trackingProfile name="Name">       <workflow>          <activityScheduledQueries>             <activityScheduledQuery activityName="String"                 childActivityName="String"/>          </activityScheduledQueries>       </workflow>     </trackingProfile></tracking>  
+<tracking>
+  <trackingProfile name="Name">
+    <workflow>
+      <activityScheduledQueries>
+        <activityScheduledQuery activityName="String"   
+                                childActivityName="String"/>
+      </activityScheduledQueries>
+    </workflow>
+  </trackingProfile>
+</tracking> 
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -37,7 +46,7 @@ ms.locfileid: "32746234"
 |activityName|字串，可指定要求取消的活動名稱。|  
 |childActivityName|字串，可指定要求取消的子活動名稱。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  

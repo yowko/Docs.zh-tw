@@ -2,16 +2,17 @@
 title: WCF 的 &lt;bookmarkResumptionQuery&gt;
 ms.date: 03/30/2017
 ms.assetid: 755a34f0-87c9-4a1e-ae4d-0fb8a6fbdc0e
-ms.openlocfilehash: 083b42efdd2b10dad870b6590fc20331a090f8aa
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 07215347da19a05d5915296668d990853fdae646
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087787"
 ---
 # <a name="ltbookmarkresumptionquerygt-of-wcf"></a>WCF 的 &lt;bookmarkResumptionQuery&gt;
 代表用來追蹤工作流程執行個體中之書籤繼續的查詢。 追蹤參與者必須要具備查詢，才能訂閱書籤繼續記錄。  
   
- 如需追蹤設定檔查詢的詳細資訊，請參閱[追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+ 如需有關追蹤設定檔查詢的詳細資訊，請參閱[追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
  \<system.serviceModel>  
 \<追蹤 >  
@@ -23,7 +24,15 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>語法  
   
 ```xml
-<tracking>   <trackingProfile name="Name">       <workflow>          <bookmarkResumptionQueries>             <bookmarkResumptionQuery name="String" />          </bookmarkResumptionQueries>       </workflow>   </trackingProfile></tracking>  
+<tracking>
+  <trackingProfile name="Name">
+    <workflow>
+      <bookmarkResumptionQueries>
+        <bookmarkResumptionQuery name="String" />
+      </bookmarkResumptionQueries>
+    </workflow>
+  </trackingProfile>
+</tracking>  
 ```
 
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -35,7 +44,7 @@ ms.lasthandoff: 05/03/2018
 |---------------|-----------------|  
 |name|字串，可指定要訂閱的書籤記錄的名稱。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  

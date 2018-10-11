@@ -2,29 +2,41 @@
 title: WCF 的 &lt;workflowInstanceQuery&gt;
 ms.date: 03/30/2017
 ms.assetid: 35c73f9d-474e-42eb-874d-ddc04b1987f3
-ms.openlocfilehash: c3b68dda42fd7a9356366a0887feb359d0232b32
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bb4b3e37bd8e8e4f47fd7a0cd6d493d985c2536e
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767553"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087631"
 ---
 # <a name="ltworkflowinstancequerygt-of-wcf"></a>WCF 的 &lt;workflowInstanceQuery&gt;
 表示追蹤工作流程執行個體生命週期變更的查詢，例如已開始或已完成的事件。  
   
- 如需追蹤設定檔查詢的詳細資訊，請參閱[追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+ 如需有關追蹤設定檔查詢的詳細資訊，請參閱[追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
  \<system.serviceModel>  
 \<追蹤 >  
 \<trackingProfile>  
 \<工作流程 >  
 \<workflowInstanceQueries>  
-\<w >  
+\<workflowInstanceQuery >  
   
 ## <a name="syntax"></a>語法  
   
 ```xml
-<tracking>   <trackingProfile name="Name">       <workflow>          <workflowInstanceQueries>             <workflowInstanceQuery>                <states>                   <state name="Name"/>                </states>            </workflowInstanceQuery>         </workflowInstanceQueries>       </workflow>   </trackingProfile></tracking>  
+<tracking>
+  <trackingProfile name="Name">
+    <workflow>
+      <workflowInstanceQueries>
+        <workflowInstanceQuery>
+          <states>
+            <state name="Name"/>
+          </states>
+        </workflowInstanceQuery>
+      </workflowInstanceQueries>
+    </workflow>
+  </trackingProfile>
+</tracking>  
 ```
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -33,7 +45,7 @@ ms.locfileid: "32767553"
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  

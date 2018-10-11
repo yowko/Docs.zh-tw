@@ -2,12 +2,12 @@
 title: WCF 服務及 Windows 的事件追蹤
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: 26ce5fcb07b06a52f69ad8655adea563c177b055
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6684f6415fa6ee82a59fc9b54911b5c65d6dadb2
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266867"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086579"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>WCF 服務及 Windows 的事件追蹤
 此範例示範如何使用 Windows Communication Foundation (WCF) 中的分析追蹤功能發出的事件追蹤的 Windows (ETW) 事件。 分析追蹤是在 WCF 堆疊中的 WCF 服務，在生產環境中疑難排解的關鍵點發出的事件。
@@ -34,7 +34,7 @@ ms.locfileid: "48266867"
 
 5.  在 WCF 測試用戶端，將服務新增所選取**檔案**，然後**加入服務**。
 
-     在輸入方塊中加入端點位址。 預設為 http://localhost:1378/Calculator.svc。
+     在輸入方塊中加入端點位址。 預設為 `http://localhost:1378/Calculator.svc`。
 
 6.  開啟 [事件檢視器] 應用程式。
 

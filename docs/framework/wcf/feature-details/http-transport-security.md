@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
 author: BrucePerlerMS
 ms.openlocfilehash: c21769eed2f3040bf336860b5a9cd6cd450d5525
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035197"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087280"
 ---
 # <a name="http-transport-security"></a>HTTP 傳輸安全性
 使用 HTTP 來傳輸時，會由安全通訊端層 (SSL) 實作提供安全性。 在網際網路上會廣泛使用 SSL 以對用戶端驗證服務，進而對通道提供機密性 (加密)。 本主題會說明 SSL 的運作方式，以及如何實作 Windows Communication Foundation (WCF) 中。  
