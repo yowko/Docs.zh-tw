@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, events
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-ms.openlocfilehash: 03c2ffc37bc6c2e820b8e28599f415cde1be9be5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4031ff08bee945f019974ad590e9b3df6d9c263c
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521953"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086228"
 ---
 # <a name="events-c-programming-guide"></a>事件 (C# 程式設計手冊)
 事件可讓 [類別](../../../csharp/language-reference/keywords/class.md) 或物件在某些相關的事情發生時，告知其他類別或物件。 傳送 (或 *「引發」*(raise)) 事件的類別稱為 *「發行者」* (publisher)，而接收 (或 *「處理」*(handle)) 事件的類別則稱為 *「訂閱者」*(subscriber)。  
@@ -43,8 +43,6 @@ ms.locfileid: "43521953"
 -   [如何：在衍生類別中引發基底類別事件](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)  
   
 -   [如何：實作介面事件](../../../csharp/programming-guide/events/how-to-implement-interface-events.md)  
-  
--   [執行緒同步處理](../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)  
   
 -   [如何：使用字典儲存事件執行個體](../../../csharp/programming-guide/events/how-to-use-a-dictionary-to-store-event-instances.md)  
   
