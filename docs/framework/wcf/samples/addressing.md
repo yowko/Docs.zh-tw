@@ -2,12 +2,12 @@
 title: 定址
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 6f2ab732fd5758358c7347087694cab8d56703bf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0e18039db51a1060661b435640c356fd0610a68a
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468361"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123198"
 ---
 # <a name="addressing"></a>定址
 此定址範例會示範端點位址的各方面與功能。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 在此範例中的服務會自動裝載。 服務和用戶端都是主控台應用程式。 服務會定義使用相對與絕對端點位址組合的多個端點。  
@@ -40,7 +40,7 @@ ms.locfileid: "43468361"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- 在此範例中，相對位址是空白的 ("")，因此端點位址會與基底位址相同。 實際的端點位址是 http://localhost:8000/servicemodelsamples/service。  
+ 在此範例中，相對位址是空白的 ("")，因此端點位址會與基底位址相同。 實際的端點位址是`http://localhost:8000/servicemodelsamples/service`。
   
  第二個端點定義也是指定相對位址，如下列範例組態所示。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "43468361"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- 此相對位址 "test" 會附加在基底位址。 實際的端點位址是 http://localhost:8000/servicemodelsamples/service/test。  
+ 此相對位址 "test" 會附加在基底位址。 實際的端點位址是`http://localhost:8000/servicemodelsamples/service/test`。
   
  第三個端點定義是指定絕對位址，如下列範例組態所示。  
   
@@ -63,9 +63,9 @@ ms.locfileid: "43468361"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- 位址中不需要基底位址。 實際的端點位址是 http://localhost:8001/hello/servicemodelsamples。  
+ 位址中不需要基底位址。 實際的端點位址是`http://localhost:8001/hello/servicemodelsamples`。
   
- 第四個端點位址是指定絕對位址以及不同的傳輸 (TCP)。 位址中不需要基底位址。 實際的端點位址是 net.tcp://localhost:9000/servicemodelsamples/service。  
+ 第四個端點位址是指定絕對位址以及不同的傳輸 (TCP)。 位址中不需要基底位址。 實際的端點位址是`net.tcp://localhost:9000/servicemodelsamples/service`。
   
 ```xml  
 <!-- The absolute address specified, different transport: -->  

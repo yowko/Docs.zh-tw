@@ -2,12 +2,12 @@
 title: 基本 AJAX 服務
 ms.date: 03/30/2017
 ms.assetid: d66d0c91-0109-45a0-a901-f3e4667c2465
-ms.openlocfilehash: d8da6469101511b6b5a9ce19a11f1e5e3fe9d83e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2218c8e062f8fe0b799213831099a112a2df732b
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524879"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121008"
 ---
 # <a name="basic-ajax-service"></a>基本 AJAX 服務
 此範例示範如何使用 Windows Communication Foundation (WCF) 來建立基本 ASP.NET Asynchronous JavaScript 與 XML (AJAX) 服務 （您可以使用 Web 瀏覽器用戶端的 JavaScript 程式碼存取的服務）。 此服務會使用 <xref:System.ServiceModel.Web.WebGetAttribute> 屬性來確保服務回應 HTTP GET 要求，並且設定為以 JavaScript Object Notation (JSON) 資料格式做為回應的格式。  
@@ -29,7 +29,7 @@ public interface ICalculator
 }
 ```
 
- 此範例 .svc 檔案會使用 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>，以便將 <xref:System.ServiceModel.Description.WebScriptEndpoint> 標準端點加入至服務。 此端點是在與 .svc 檔相對的空白位址上設定。 這表示服務的位址是 http://localhost/ServiceModelSamples/service.svc，使用作業名稱以外的任何其他後置字元。  
+ 此範例 .svc 檔案會使用 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>，以便將 <xref:System.ServiceModel.Description.WebScriptEndpoint> 標準端點加入至服務。 此端點是在與 .svc 檔相對的空白位址上設定。 這表示服務的位址是`http://localhost/ServiceModelSamples/service.svc`，使用作業名稱以外的任何其他後置字元。  
 
 ```svc
 <%@ServiceHost language="C#" Debug="true" Service="Microsoft.Samples.SimpleAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" %>
@@ -48,7 +48,7 @@ public interface ICalculator
 </system.serviceModel>  
 ```  
   
- <xref:System.ServiceModel.Description.WebScriptEndpoint> 會將服務的預設資料格式設定為 JSON 而不是 XML。 若要叫用服務，請巡覽至 http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200之後完成註冊的集合，並建置本主題稍後所示的步驟。 這個測試功能會在使用 HTTP GET 要求時啟用。  
+ <xref:System.ServiceModel.Description.WebScriptEndpoint> 會將服務的預設資料格式設定為 JSON 而不是 XML。 若要叫用服務，請巡覽至`http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200`之後完成註冊的集合，並建置本主題稍後所示的步驟。 這個測試功能會在使用 HTTP GET 要求時啟用。  
   
  用戶端網頁 SimpleAjaxClientPage.aspx 包含 ASP.NET 程式碼，此程式碼會在使用者每次按下網頁上其中一個作業按鈕時叫用此服務。 `ScriptManager` 控制項會用來設定可透過 JavaScript 存取之服務的 Proxy。  
 

@@ -4,18 +4,18 @@ description: Microsoft 平台和工具的容器化 Docker 應用程式生命週�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 78db191bdec4c25c11728d819d89eaaaff4bd7da
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 9b048beb0eb913fc6587dcc639a16df8153c550b
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46586033"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123224"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker 應用程式中的狀態和資料
 
 基本類型的容器是不變性。 相較於 VM，容器不會經常為會消失。 VM 可能會以不同的形式從終止程序、 多載的 CPU 或完整或失敗的磁碟失敗。 但是，我們預期可用的 VM，並 RAID 磁碟機是以確保磁碟機失敗維護資料的老生常談。
 
-不過，容器會認為的處理序的執行個體。 處理程序不會維護持久狀態。 即使容器可以寫入其本機存放區，假設該執行個體將會解決無限期會等於假設單一複本的記憶體會持久。 您應該假設容器，例如處理序會重複，刪除，或管理由容器協調器，可能會移動。
+不過，容器會認為的處理序的執行個體。 處理程序不會維護持久狀態。 即使容器可以寫入其本機存放區，假設執行個體將會無限期地被周圍會相當於假設單一複本的記憶體會持久。 您應該假設容器，例如處理序會重複，刪除，或管理由容器協調器，可能會移動。
 
 Docker 使用的功能，稱為*重疊檔案系統*實作寫入時複製程序，會儲存任何容器，相較於原始的映像所依據的根檔案系統以更新的資訊。 如果之後從系統刪除容器時，會遺失這些變更。 容器，因此，不會預設不具有永續性儲存體。 雖然可以儲存容器的狀態，但設計系統，以解決這個問題是與容器架構的原則衝突。
 

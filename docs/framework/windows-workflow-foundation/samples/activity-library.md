@@ -3,11 +3,11 @@ title: 活動程式庫
 ms.date: 03/30/2017
 ms.assetid: 5323e9d4-71d6-47eb-bfa6-31feac62044d
 ms.openlocfilehash: 7e8777d0068e6cca9c9324a6fd2668e6ff9e9da7
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48844016"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123120"
 ---
 # <a name="activity-library"></a>活動程式庫
 本節包含示範進階自訂活動中 Windows Workflow Foundation (WF) 範例。  

@@ -4,12 +4,12 @@ description: 了解如何偵測及降低計時弱點與 Cipher Block Chaining (C
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: 6d16b6849bfd4744f1828cda38a537f842243c1d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 4f1d6df3c0368fa0273d871ff32564c159e62a2c
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840516"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123640"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>使用 CBC 模式的對稱式解密使用邊框間距的計時弱點
 
@@ -65,7 +65,7 @@ Oracle 指的是 「 告訴 」 讓它們執行的動作是否為正確的攻擊
 
 稱為 「 填補 oracle 攻擊 」 存在超過 10 年已知的弱點類別。 這些弱點會允許攻擊者使用來解密資料加密的對稱區塊的演算法，例如 AES 和 3DES，超過 4096 個嘗試每個資料區塊。 進行這些弱點可驗證的邊框距離結尾的資料最常使用的區塊編碼器的事實使用。 它找不到攻擊者可以修改加密文字，並了解是否遭到竄改而造成錯誤的結尾填補格式，是否攻擊者可以解密資料。
 
-一開始，會傳回不同的錯誤代碼是否有效，例如 ASP.NET 的弱點可能會填補為基礎的服務以實際的攻擊[MS10 070](https://technet.microsoft.com/library/security/ms10-070.aspx)。 不過，Microsoft 現在認為它是實際進行類似的攻擊使用只在處理有效和無效的邊框距離之間的時間差異。
+一開始，會傳回不同的錯誤代碼是否有效，例如 ASP.NET 的弱點可能會填補為基礎的服務以實際的攻擊[MS10 070](/security-updates/SecurityBulletins/2010/ms10-070)。 不過，Microsoft 現在認為它是實際進行類似的攻擊使用只在處理有效和無效的邊框距離之間的時間差異。
 
 而不發出任何資訊，提供的加密配置採用簽章和簽章驗證會使用固定的執行階段指定長度的資料 （不論內容中） 執行的可以驗證資料完整性攻擊者透過[側邊通道](https://en.wikipedia.org/wiki/Side-channel_attack)。 因為完整性檢查會拒絕遭竄改的任何訊息，以降低填補 oracle 威脅。
 

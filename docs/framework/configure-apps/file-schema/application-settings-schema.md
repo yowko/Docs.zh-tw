@@ -10,11 +10,11 @@ ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: f11be59941759687806591feb1edcce28b2119e6
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48844226"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123334"
 ---
 # <a name="application-settings-schema"></a>應用程式設定結構描述
 
@@ -46,7 +46,7 @@ ms.locfileid: "48844226"
 | 屬性        | 描述 |
 | ---------------- | ----------- |
 | **name**         | 必要。 設定的唯一識別碼。 透過 Visual Studio 所建立的設定會儲存名稱`ProjectName.Properties.Settings`。 |
-| **serializedAs** | 必要。 要用來序列化成文字值的格式。 有效值為：<br><br>- `string`。 值序列化為字串，使用<xref:System.ComponentModel.TypeConverter>。<br>- `xml`。 值會使用 XML 序列化進行序列化。<br>- `binary`。 值會序列化為文字編碼的二進位檔使用二進位序列化。<br />- `custom`。 設定提供者的這項設定的固有知識和序列化和還原序列化它。 |
+| **serializedAs** | 必要。 要用來序列化成文字值的格式。 有效值為：<br><br>- `string`. 值序列化為字串，使用<xref:System.ComponentModel.TypeConverter>。<br>- `xml`. 值會使用 XML 序列化進行序列化。<br>- `binary`. 值會序列化為文字編碼的二進位檔使用二進位序列化。<br />- `custom`. 設定提供者的這項設定的固有知識和序列化和還原序列化它。 |
 
 ## <a name="value-element"></a>\<值 > 項目
 

@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 4 效能
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: c7dc098eee5f17e18f76c0b54a097a22f5d844b1
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 78e9ac1cc350fe8c04222b2698569412961d3b52
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873689"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123809"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 效能
 Dustin Metzgar
@@ -287,7 +287,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  即使是擁有多層深度和大量活動的複雜工作流程，其效能與本文前段所示的其他輸送量數字一致。  WF4 的輸送量增加的速度較快，而且必須在對數刻度上進行比較。
 
 ### <a name="memory"></a>記憶體
- Windows Workflow Foundation 的記憶體負荷是從兩個重要的方面加以測量：工作流程複雜度和工作流程定義的數目。  記憶體測量作業是在 Windows 7 64 位元工作站上進行。  有許多方法來取得工作集大小，包括監視效能計數器、 輪詢 Environment.WorkingSet，或使用像是 vmmap 這類可從工具[VMMap](https://technet.microsoft.com/sysinternals/dd535533.aspx)。 您可以結合各種方式來取得和驗證每項測試的結果。
+ Windows Workflow Foundation 的記憶體負荷是從兩個重要的方面加以測量：工作流程複雜度和工作流程定義的數目。  記憶體測量作業是在 Windows 7 64 位元工作站上進行。  有許多方法來取得工作集大小，包括監視效能計數器、 輪詢 Environment.WorkingSet，或使用像是 vmmap 這類可從工具[VMMap](/sysinternals/downloads/vmmap)。 您可以結合各種方式來取得和驗證每項測試的結果。
 
 ### <a name="workflow-complexity-test"></a>工作流程複雜度測試
  工作流程複雜度測試會依據工作流程的複雜度測量工作集的差異。  除了上節中使用的複雜工作流程之外，還加入了新的變化以涵蓋兩個基本案例：單一活動工作流程，以及包含 1000 個活動的序列。  在這些測試中，工作流程會在單一序列迴圈中初始化並且完整執行 (為時一分鐘)。  每一個經變化的測試都會執行三次，而記錄的資料會是這三個回合的平均值。

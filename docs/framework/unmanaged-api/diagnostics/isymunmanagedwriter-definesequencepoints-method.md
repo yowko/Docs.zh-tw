@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1dc87b201638bab974c59722a69300977b14cf08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5825f0425947f109ed834879684357fef7b70959
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426932"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123770"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints 方法
-在目前的方法內定義一組序列點。 每個起始行和起始資料行定義方法內的陳述式的開始。 每個結束行和結束資料行定義方法內的陳述式的結尾。 陣列的位移遞增順序排序。 永遠從開頭的方法，以位元組為單位測量位移。  
+在目前的方法內定義一組序列點。 每個起始行和起始資料行定義中方法的陳述式開頭。 每個結束行和結束資料行定義方法內的陳述式的結尾。 要以位移的遞增順序排序的陣列。 位移一律是從方法，以位元組為單位的開頭進行測量。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,28 +42,28 @@ HRESULT DefineSequencePoints(
   
 #### <a name="parameters"></a>參數  
  `document`  
- [in]文件物件為其定義序列點。  
+ [in]文件物件，其定義序列點。  
   
  `spCount`  
- [in]A `ULONG32` ，表示每個的大小`offsets`， `lines`， `columns`， `endLines`，和`endColumns`緩衝區。  
+ [in]A`ULONG32`表示的每個大小`offsets`， `lines`， `columns`， `endLines`，和`endColumns`緩衝區。  
   
  `offsets`  
- [in]從方法開頭算起的序列點的位移。  
+ [in]從方法開頭進行測量之序列點的位移。  
   
  `lines`  
- [in]序列點起始行號。  
+ [in]序列點的起始行號。  
   
  `columns`  
  [in]序列點的起始欄號。  
   
  `endLines`  
- [in]序列點結束行號。 這是選擇性參數。  
+ [in]序列點結束的行號。 這是選擇性參數。  
   
  `endColumns`  
  [in]序列點結束欄號。 這是選擇性參數。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。  
+ 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** 於 CorSym.idl、 CorSym.h  

@@ -3,13 +3,13 @@ title: 現代化現有.NET 應用程式與 Azure 的雲端和 Windows 容器 （
 description: 了解如何隨即轉移和現代化現有應用程式到 Azure 雲端及與本電子書的容器。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 4/28/2018
-ms.openlocfilehash: b22ddd8a63d183571f9ca3a63fb7ae84ebb88510
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.date: 04/28/2018
+ms.openlocfilehash: f4ca3789ec4b3d84960f2ecd4494a899339a787b
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873491"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121437"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>將現有.NET 應用程式與 Azure 雲端和 Windows 容器現代化 （第 2 版）
 

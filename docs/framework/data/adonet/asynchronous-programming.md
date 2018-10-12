@@ -1,13 +1,13 @@
 ---
 title: 非同步程式設計
-ms.date: 03/30/2017
+ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 0c5c3f52f6afa0e1fa48d33167feabeb8d5b76f5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0c16fecc9e79f36c122c13909be0eeba848b7c20
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504971"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123653"
 ---
 # <a name="asynchronous-programming"></a>非同步程式設計
 
@@ -23,15 +23,16 @@ ms.locfileid: "43504971"
 3.  <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A?displayProperty=nameWithType>  
   
  [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中的 SqlClient 仍保留此功能。  
-  
- 從 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 開始，這些方法不再需要連接字串中的 `Asynchronous Processing=true`。  
+
+> [!TIP]
+> 從開始[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]，所以不再需要這些舊版方法`Asynchronous Processing=true`連接字串中。  
   
 ## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a>在 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中新增的非同步程式設計功能  
  新的非同步程式設計功能提供了一些簡單的技巧，可以使程式碼非同步。  
   
  如需 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中引進的非同步程式設計功能詳細資訊，請參閱：  
   
-- [在 C# 中的非同步程式設計](../../../csharp/async.md)
+- [C# 中的非同步程式設計](../../../csharp/async.md)
 
 - [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)
 
@@ -87,6 +88,9 @@ ms.locfileid: "43504971"
 -   <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>  
   
  其他非同步成員已新增以支援[SqlClient 串流支援](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)。  
+
+> [!TIP]
+> 新的非同步方法不需要`Asynchronous Processing=true`連接字串中。  
   
 ### <a name="synchronous-to-asynchronous-connection-open"></a>開啟同步與非同步的連接  
  您可以升級現有的應用程式以使用新的非同步功能。 例如，假設應用程式具有同步連接演算法，並且會在每次連接至資料庫時封鎖 UI 執行緒，則一旦連接後，該應用程式就會呼叫預存程序，提示其他使用者方才有使用者登入。  

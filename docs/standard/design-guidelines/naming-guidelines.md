@@ -14,11 +14,11 @@ ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 70888e068782add5ebe5ae1c7da3bdee842faea8
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48793210"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120904"
 ---
 # <a name="naming-guidelines"></a>命名方針
 遵循一組一致的開發架構的命名慣例，可以是主要的投稿內容架構的可用性。 它可讓廣泛分隔的專案上的許多開發人員所使用的架構。 超過表單的一致性，必須容易了解架構元素的名稱，並必須傳達每個項目的函式。  

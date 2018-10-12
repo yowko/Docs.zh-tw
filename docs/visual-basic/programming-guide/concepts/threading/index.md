@@ -3,11 +3,11 @@ title: 執行緒處理 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 704bb04b-ff23-471d-ab12-3cec1c2bca59
 ms.openlocfilehash: 366c88db5d229120b1e626f275b4eeb8ecd42dba
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48844991"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123094"
 ---
 # <a name="threading-visual-basic"></a>執行緒處理 (Visual Basic)
 Visual Basic 程式可以透過執行緒執行並行處理，讓您可以一次執行多項作業。 例如，您可以使用執行緒監視使用者的輸入、執行背景工作，以及處理同時的輸入資料流。  
