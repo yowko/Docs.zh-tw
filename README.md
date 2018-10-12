@@ -1,16 +1,16 @@
-# .NET Docs
+# <a name="net-docs"></a>.NET Docs
 
-This repo contains work-in-progress documentation for .NET. To contribute, see the [Contributing Guide](CONTRIBUTING.md) and the [issues list](https://github.com/dotnet/docs/issues). 
+此存放庫包含 .NET 的概念文件。 [.NET 文件網站](https://docs.microsoft.com/dotnet)使用了多個存放庫作為建置基礎，但不包括：
 
-We welcome contributions to help us improve and complete the .NET docs. Feel free to copy/paste documentation from [.NET Framework docs](https://msdn.microsoft.com/library/w0x726c2.aspx) as a starting point for .NET docs. We anticipate that [Xamarin](http://developer.xamarin.com/api/root/classlib/), [Mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) and [Unity](http://docs.unity3d.com/Manual/index.html) will also use this documentation.
+- [程式碼範例及程式碼片段](https://github.com/dotnet/samples)
+- [API 參考](https://github.com/dotnet/dotnet-api-docs)
+- [.NET Compiler Platform SDK 參考](https://github.com/dotnet/roslyn-api-docs)
 
-This project has adopted the code of conduct defined by the Contributor Covenant
-to clarify expected behavior in our community.
-For more information, see the [.NET Foundation Code of Conduct](https://dotnetfoundation.org/code-of-conduct).
+這三個存放庫的問題及工作會在此處追蹤。 這些資源的使用者眾多。 我們會盡可能地即時回應各項問題。 請參閱我們的[問題原則](issues-policy.md)主題，了解更多有關於我們如何分類及解決問題的程序。
 
-Samples Build Status
-===
+歡迎您參與協助我們改進及完成 .NET 文件。若要參與，請參閱 [.NET 社群參與者專案](https://github.com/dotnet/docs/projects/35)進行了解。 [參與指南](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md)包含所用程序的指示。 除此之外，您也可以查看[問題清單](https://github.com/dotnet/docs/issues)，從中尋找您關注的工作。
 
-| Framework | Ubuntu 16.04 (x64) | Windows Server 2012 R2 (x64)  |
-| ------------- |------------| -----|
-| .NET Core     | [![Build Status](http://seoul.westus.cloudapp.azure.com/buildStatus/icon?job=dotnetcore-samples-ubuntu1604-x64)](http://seoul.westus.cloudapp.azure.com/job/dotnetcore-samples-ubuntu1604-x64/) | [![Build Status](http://seoul.westus.cloudapp.azure.com/buildStatus/icon?job=dotnetcore-samples-windows2012-x64)](http://seoul.westus.cloudapp.azure.com/job/dotnetcore-samples-windows2012-x64/) |
+我們期望 [Xamarin](https://docs.microsoft.com/xamarin)、[Mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) 及 [Unity](http://docs.unity3d.com/Manual/index.html) 也能使用此文件。
+
+此專案採納了 Contributor Covenant 定義的行為守則來規範社群中的行為。
+如需詳細資訊，請參閱 [.NET Foundation Code of Conduct](https://dotnetfoundation.org/code-of-conduct) (.NET Foundation 行為守則)。
