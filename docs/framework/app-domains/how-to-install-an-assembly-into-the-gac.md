@@ -1,85 +1,61 @@
 ---
-title: 如何：將組件安裝到全域組件快取
-ms.date: 03/30/2017
+title: 將組件安裝到 GAC
+ms.date: 09/20/2018
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
 - Gacutil.exe
 - strong-named assemblies, global assembly cache
 - global assembly cache, installing assemblies
 - Global Assembly Cache tool
+- windows installer, global assembly cache
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c3bd568cf504125bc99801815d08764417b42cd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: d365ac77fe6cd7fc4fca36705729ec12b06d6830
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43468994"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46584577"
 ---
-# <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a><span data-ttu-id="d14a6-102">如何：將組件安裝到全域組件快取</span><span class="sxs-lookup"><span data-stu-id="d14a6-102">How to: Install an Assembly into the Global Assembly Cache</span></span>
-<span data-ttu-id="d14a6-103">有兩種方式可以將強式名稱組件安裝到全域組件快取 (GAC) 中：</span><span class="sxs-lookup"><span data-stu-id="d14a6-103">There are two ways to install a strong-named assembly into the global assembly cache (GAC):</span></span>  
-  
+# <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a><span data-ttu-id="ef927-102">操作說明：將組件安裝到全域組件快取</span><span class="sxs-lookup"><span data-stu-id="ef927-102">How to: Install an assembly into the global assembly cache</span></span>
+
+<span data-ttu-id="ef927-103">有兩種方式可以將強式名稱組件安裝到全域組件快取 (GAC) 中。</span><span class="sxs-lookup"><span data-stu-id="ef927-103">There are two ways to install a strong-named assembly into the global assembly cache (GAC).</span></span>
+
 > [!IMPORTANT]
->  <span data-ttu-id="d14a6-104">只有強式名稱組件才能安裝至 GAC。</span><span class="sxs-lookup"><span data-stu-id="d14a6-104">Only strong-named assemblies can be installed into the GAC.</span></span> <span data-ttu-id="d14a6-105">如需如何建立強式名稱組件的資訊，請參閱[如何：使用強式名稱簽署組件](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)。</span><span class="sxs-lookup"><span data-stu-id="d14a6-105">For information about how to create a strong-named assembly, see [How to: Sign an Assembly with a Strong Name](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).</span></span>  
-  
--   <span data-ttu-id="d14a6-106">使用 [Windows Installer](/windows/desktop/Msi/windows-installer-portal)。</span><span class="sxs-lookup"><span data-stu-id="d14a6-106">Using [Windows Installer](/windows/desktop/Msi/windows-installer-portal).</span></span>  
-  
-     <span data-ttu-id="d14a6-107">在 Visual Studio 2012 和 Visual Studio 2013 中可以透過建立 InstallShield Limited Edition 專案的方式達到這個目的。</span><span class="sxs-lookup"><span data-stu-id="d14a6-107">You do this in Visual Studio 2012 and Visual Studio 2013 by creating an InstallShield Limited Edition Project.</span></span>  
-  
-     <span data-ttu-id="d14a6-108">建議您使用這個新增組件到全域組件快取，這是最常用的方法。</span><span class="sxs-lookup"><span data-stu-id="d14a6-108">This is the recommended and most common way to add assemblies to the global assembly cache.</span></span> <span data-ttu-id="d14a6-109">安裝程式會提供全域組件快取的組件參考計數，以及其他功能。</span><span class="sxs-lookup"><span data-stu-id="d14a6-109">The installer provides reference counting of assemblies in the global assembly cache, plus other benefits.</span></span>  
-  
--   <span data-ttu-id="d14a6-110">使用[全域組件快取工具 (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)。</span><span class="sxs-lookup"><span data-stu-id="d14a6-110">Using the [Global Assembly Cache tool (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md).</span></span>  
-  
-     <span data-ttu-id="d14a6-111">您可以使用 Gacutil.exe 將強式名稱的組件新增到全域組件快取，和檢視全域組件快取的內容。</span><span class="sxs-lookup"><span data-stu-id="d14a6-111">You can use Gacutil.exe to add strong-named assemblies to the global assembly cache and to view the contents of the global assembly cache.</span></span>  
-  
-    > [!NOTE]
-    >  <span data-ttu-id="d14a6-112">Gacutil.exe 僅適合開發用途，不應用來安裝產品組件到全域組件快取中。</span><span class="sxs-lookup"><span data-stu-id="d14a6-112">Gacutil.exe is only for development purposes and should not be used to install production assemblies into the global assembly cache.</span></span>  
-  
+> <span data-ttu-id="ef927-104">只有強式名稱組件才能安裝至 GAC。</span><span class="sxs-lookup"><span data-stu-id="ef927-104">Only strong-named assemblies can be installed into the GAC.</span></span> <span data-ttu-id="ef927-105">如需如何建立強式名稱組件的資訊，請參閱[如何：使用強式名稱簽署組件](how-to-sign-an-assembly-with-a-strong-name.md)。</span><span class="sxs-lookup"><span data-stu-id="ef927-105">For information about how to create a strong-named assembly, see [How to: Sign an Assembly with a Strong Name](how-to-sign-an-assembly-with-a-strong-name.md).</span></span>
+
+## <a name="windows-installer"></a><span data-ttu-id="ef927-106">Windows Installer</span><span class="sxs-lookup"><span data-stu-id="ef927-106">Windows Installer</span></span>
+
+<span data-ttu-id="ef927-107">[Windows Installer](/windows/desktop/Msi/installation-of-assemblies-to-the-global-assembly-cache)，Windows 安裝引擎，這是將組件新增至全域組件快取的建議方式。</span><span class="sxs-lookup"><span data-stu-id="ef927-107">[Windows Installer](/windows/desktop/Msi/installation-of-assemblies-to-the-global-assembly-cache), the Windows installation engine, is the recommended way to add assemblies to the global assembly cache.</span></span> <span data-ttu-id="ef927-108">Windows Installer 會提供全域組件快取的組件參考計數，以及其他功能。</span><span class="sxs-lookup"><span data-stu-id="ef927-108">Windows Installer provides reference counting of assemblies in the global assembly cache and other benefits.</span></span> <span data-ttu-id="ef927-109">您可以使用[適用於 Visual Studio 2017 的 WiX Toolset 擴充功能](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension)，來建立 Windows Installer 的安裝程式套件。</span><span class="sxs-lookup"><span data-stu-id="ef927-109">You can use the [WiX Toolset extension for Visual Studio 2017](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension) to create an installer package for Windows Installer.</span></span>
+
+## <a name="global-assembly-cache-tool"></a><span data-ttu-id="ef927-110">全域組件快取工具</span><span class="sxs-lookup"><span data-stu-id="ef927-110">Global assembly cache tool</span></span>
+
+<span data-ttu-id="ef927-111">您可以使用[全域組件快取工具 (gacutil.exe)](../tools/gacutil-exe-gac-tool.md) 將強式名稱的組件新增到全域組件快取，和檢視全域組件快取的內容。</span><span class="sxs-lookup"><span data-stu-id="ef927-111">You can use the [Global assembly cache tool (gacutil.exe)](../tools/gacutil-exe-gac-tool.md) to add strong-named assemblies to the global assembly cache and to view the contents of the global assembly cache.</span></span>
+
+   > [!NOTE]
+   > <span data-ttu-id="ef927-112">Gacutil.exe 僅適合開發用途，不應用來安裝產品組件到全域組件快取中。</span><span class="sxs-lookup"><span data-stu-id="ef927-112">Gacutil.exe is only for development purposes and should not be used to install production assemblies into the global assembly cache.</span></span>
+
+<span data-ttu-id="ef927-113">gacutil 的語法如下：</span><span class="sxs-lookup"><span data-stu-id="ef927-113">The syntax for gacutil is as follows:</span></span>
+
+```shell
+gacutil -i <assembly name>
+```
+
+<span data-ttu-id="ef927-114">在這個命令中，「組件名稱」是安裝在全域組件快取的組件名稱。</span><span class="sxs-lookup"><span data-stu-id="ef927-114">In this command, *assembly name* is the name of the assembly to install in the global assembly cache.</span></span>
+
+<span data-ttu-id="ef927-115">下列範例安裝檔名為 `hello.dll` 的組件到全域組件快取中。</span><span class="sxs-lookup"><span data-stu-id="ef927-115">The following example installs an assembly with the file name `hello.dll` into the global assembly cache.</span></span>
+
+```shell
+gacutil -i hello.dll
+```
+
 > [!NOTE]
->  <span data-ttu-id="d14a6-113">在舊版 .NET Framework 中，可利用 Shfusion.dll Windows Shell Extension 將組件拖曳到 [檔案總管] 中，藉此安裝組件。</span><span class="sxs-lookup"><span data-stu-id="d14a6-113">In earlier versions of the .NET Framework, the Shfusion.dll Windows shell extension enabled you to install assemblies by dragging them in File Explorer.</span></span> <span data-ttu-id="d14a6-114">從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]開始，Shfusion.dll 已過時。</span><span class="sxs-lookup"><span data-stu-id="d14a6-114">Beginning with the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], Shfusion.dll is obsolete.</span></span>  
-  
-### <a name="to-use-the-global-assembly-cache-tool-gacutilexe"></a><span data-ttu-id="d14a6-115">若要使用全域組件快取工具 (Gacutil.exe)</span><span class="sxs-lookup"><span data-stu-id="d14a6-115">To use the Global Assembly Cache tool (Gacutil.exe)</span></span>  
-  
-1.  <span data-ttu-id="d14a6-116">在命令提示字元中輸入下列命令：</span><span class="sxs-lookup"><span data-stu-id="d14a6-116">At the command prompt, type the following command:</span></span>  
-  
-     <span data-ttu-id="d14a6-117">**gacutil -i** \<組件名稱></span><span class="sxs-lookup"><span data-stu-id="d14a6-117">**gacutil -i** \<*assembly name*></span></span>  
-  
-     <span data-ttu-id="d14a6-118">在這個命令中，「組件名稱」是安裝在全域組件快取的組件名稱。</span><span class="sxs-lookup"><span data-stu-id="d14a6-118">In this command, *assembly name* is the name of the assembly to install in the global assembly cache.</span></span>  
-  
- <span data-ttu-id="d14a6-119">下列範例安裝檔名為 `hello.dll` 的組件到全域組件快取中。</span><span class="sxs-lookup"><span data-stu-id="d14a6-119">The following example installs an assembly with the file name `hello.dll` into the global assembly cache.</span></span>  
-  
-```  
-gacutil -i hello.dll  
-```  
-  
- <span data-ttu-id="d14a6-120">如需詳細資訊，請參閱[全域組件快取工具 (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)。</span><span class="sxs-lookup"><span data-stu-id="d14a6-120">For more information, see [Global Assembly Cache tool (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md).</span></span>  
-  
-### <a name="to-use-an-installshield-limited-edition-project"></a><span data-ttu-id="d14a6-121">若要使用 InstallShield Limited Edition 專案</span><span class="sxs-lookup"><span data-stu-id="d14a6-121">To use an InstallShield Limited Edition Project</span></span>  
-  
-1.  <span data-ttu-id="d14a6-122">開啟方案的捷徑功能表，然後依序選擇 [新增] 和 [新專案]，以將安裝和部署套件新增至方案。</span><span class="sxs-lookup"><span data-stu-id="d14a6-122">Add a setup and deployment package to your solution by opening the shortcut menu for your solution, and then choosing **Add**, **New Project**.</span></span>  
-  
-2.  <span data-ttu-id="d14a6-123">在 [新增專案] 對話方塊中，於 [已安裝] 資料夾中選擇 [其他專案類型]、[安裝和部署]、[InstallShield Limited Edition]，然後為您的專案命名。</span><span class="sxs-lookup"><span data-stu-id="d14a6-123">In the **Add New Project** dialog box, in the **Installed** folder, choose **Other Project Types**,  **Setup and Deployment**, **InstallShield Limited Edition**, and give your project a name.</span></span> <span data-ttu-id="d14a6-124">(出現提示時，下載、安裝並啟動 InstallShield。)</span><span class="sxs-lookup"><span data-stu-id="d14a6-124">(If prompted, download, install, and activate InstallShield.)</span></span>  
-  
-3.  <span data-ttu-id="d14a6-125">使用方案總管中的 [專案助理]，或是選擇方案總管中編號步驟的子步驟，執行安裝和部署專案的一般組態。設定您的安裝程式，就像未將組件新增至 GAC 一樣。</span><span class="sxs-lookup"><span data-stu-id="d14a6-125">Perform the general configuration of your setup and deployment project either by using the Project Assistant in **Solution Explorer**, or by choosing the substeps of the numbered steps in the **Solution Explorer**.Configure your setup as you would if you were not adding assemblies to the GAC.</span></span>  
-  
-4.  <span data-ttu-id="d14a6-126">若要開始將組件新增至 GAC 的程序，請選擇位於方案總管的 [指定應用程式資料] 步驟下的 [檔案]。</span><span class="sxs-lookup"><span data-stu-id="d14a6-126">To begin the process of adding an assembly to the GAC, choose **Files**, which is under the **Specify Application Data** step in **Solution Explorer**.</span></span>  
-  
-5.  <span data-ttu-id="d14a6-127">在 [目的電腦的資料夾] 窗格中，開啟 [目的電腦] 的捷徑功能表，然後選擇 [顯示預先定義的資料夾]和 [[GlobalAssemblyCache]]。</span><span class="sxs-lookup"><span data-stu-id="d14a6-127">In the **Destination computer's folders** pane, open the shortcut menu for **Destination Computer**, and then choose **Show Predefined Folder**, **[GlobalAssemblyCache]**.</span></span>  
-  
-6.  <span data-ttu-id="d14a6-128">對於方案中包含您要在全域組件快取中安裝之組件的每個專案：</span><span class="sxs-lookup"><span data-stu-id="d14a6-128">For each project in the solution that contains an assembly that you want to install in the global assembly cache:</span></span>  
-  
-    1.  <span data-ttu-id="d14a6-129">在 [來源電腦的資料夾] 窗格中，選擇專案。</span><span class="sxs-lookup"><span data-stu-id="d14a6-129">In the **Source computer's folders** pane, choose the project.</span></span>  
-  
-    2.  <span data-ttu-id="d14a6-130">在 [目的電腦的資料夾] 窗格中，選擇 [[GlobalAssemblyCache]]。</span><span class="sxs-lookup"><span data-stu-id="d14a6-130">In the **Destination computer's folders** pane, choose **[GlobalAssemblyCache]**.</span></span>  
-  
-    3.  <span data-ttu-id="d14a6-131">在 [來源電腦的檔案] 窗格中，選擇 [主要輸出來自 *<project_name>*]。</span><span class="sxs-lookup"><span data-stu-id="d14a6-131">In the **Source computer's files** pane, choose **Primary output from** *<project_name>*.</span></span>  
-  
-    4.  <span data-ttu-id="d14a6-132">將步驟 c 中的檔案拖曳至 [目的電腦的檔案] 窗格中 (或使用檔案的捷徑功能表上的 [複製] 和 [貼上] 命令)。</span><span class="sxs-lookup"><span data-stu-id="d14a6-132">Drag the file in step c to the **Destination computer's files** pane (or use the **Copy** and **Paste** commands from the file's shortcut menu).</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="d14a6-133">請參閱</span><span class="sxs-lookup"><span data-stu-id="d14a6-133">See Also</span></span>  
- [<span data-ttu-id="d14a6-134">使用組件和全域組件快取</span><span class="sxs-lookup"><span data-stu-id="d14a6-134">Working with Assemblies and the Global Assembly Cache</span></span>](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
- [<span data-ttu-id="d14a6-135">操作說明：從全域組件快取移除組件</span><span class="sxs-lookup"><span data-stu-id="d14a6-135">How to: Remove an Assembly from the Global Assembly Cache</span></span>](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
- [<span data-ttu-id="d14a6-136">Gacutil.exe (全域組件快取工具)</span><span class="sxs-lookup"><span data-stu-id="d14a6-136">Gacutil.exe (Global Assembly Cache Tool)</span></span>](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
- [<span data-ttu-id="d14a6-137">如何：使用強式名稱簽署組件</span><span class="sxs-lookup"><span data-stu-id="d14a6-137">How to: Sign an Assembly with a Strong Name</span></span>](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
- [<span data-ttu-id="d14a6-138">Windows Installer 部署</span><span class="sxs-lookup"><span data-stu-id="d14a6-138">Windows Installer Deployment</span></span>](https://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0)
+> <span data-ttu-id="ef927-116">在舊版 .NET Framework 中，可利用 Shfusion.dll Windows Shell Extension 將組件拖曳到 [檔案總管] 中，藉此安裝組件。</span><span class="sxs-lookup"><span data-stu-id="ef927-116">In earlier versions of the .NET Framework, the Shfusion.dll Windows shell extension enabled you to install assemblies by dragging them in **File Explorer**.</span></span> <span data-ttu-id="ef927-117">從 .NET Framework 4 開始，Shfusion.dll 已淘汰。</span><span class="sxs-lookup"><span data-stu-id="ef927-117">Beginning with the .NET Framework 4, Shfusion.dll is obsolete.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="ef927-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ef927-118">See also</span></span>
+
+- [<span data-ttu-id="ef927-119">使用組件和全域組件快取</span><span class="sxs-lookup"><span data-stu-id="ef927-119">Working with Assemblies and the Global Assembly Cache</span></span>](working-with-assemblies-and-the-gac.md)
+- [<span data-ttu-id="ef927-120">操作說明：從全域組件快取移除組件</span><span class="sxs-lookup"><span data-stu-id="ef927-120">How to: Remove an Assembly from the Global Assembly Cache</span></span>](how-to-remove-an-assembly-from-the-gac.md)
+- [<span data-ttu-id="ef927-121">Gacutil.exe (全域組件快取工具)</span><span class="sxs-lookup"><span data-stu-id="ef927-121">Gacutil.exe (Global Assembly Cache Tool)</span></span>](../tools/gacutil-exe-gac-tool.md)
+- [<span data-ttu-id="ef927-122">如何：使用強式名稱簽署組件</span><span class="sxs-lookup"><span data-stu-id="ef927-122">How to: Sign an Assembly with a Strong Name</span></span>](how-to-sign-an-assembly-with-a-strong-name.md)
