@@ -2,61 +2,68 @@
 title: WCF 的 &lt;activityScheduledQuery&gt;
 ms.date: 03/30/2017
 ms.assetid: 25f6eee1-3d98-4c39-b517-c0813f03f106
-ms.openlocfilehash: 9a53d72316dad0178f24e05656a4fb4531b88aec
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: a3c4c8b338921c9d949edd83deb4d6073eb26b55
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087761"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123367"
 ---
-# <a name="ltactivityscheduledquerygt-of-wcf"></a><span data-ttu-id="d0712-102">WCF 的 &lt;activityScheduledQuery&gt;</span><span class="sxs-lookup"><span data-stu-id="d0712-102">&lt;activityScheduledQuery&gt; of WCF</span></span>
-<span data-ttu-id="d0712-103">代表查詢的集合，可用來追蹤已排程且由父活動執行的活動。</span><span class="sxs-lookup"><span data-stu-id="d0712-103">Represents a collection of queries that are used to track an activity scheduled for execution by a parent activity.</span></span> <span data-ttu-id="d0712-104">追蹤參與者必須要具備查詢，才能訂閱活動排程記錄。</span><span class="sxs-lookup"><span data-stu-id="d0712-104">The query is necessary for a tracking participant to subscribe to activity scheduled records.</span></span>  
+# <a name="ltactivityscheduledquerygt-of-wcf"></a><span data-ttu-id="7fcdb-102">WCF 的 &lt;activityScheduledQuery&gt;</span><span class="sxs-lookup"><span data-stu-id="7fcdb-102">&lt;activityScheduledQuery&gt; of WCF</span></span>
+
+<span data-ttu-id="7fcdb-103">代表查詢的集合，可用來追蹤已排程且由父活動執行的活動。</span><span class="sxs-lookup"><span data-stu-id="7fcdb-103">Represents a collection of queries that are used to track an activity scheduled for execution by a parent activity.</span></span> <span data-ttu-id="7fcdb-104">追蹤參與者必須要具備查詢，才能訂閱活動排程記錄。</span><span class="sxs-lookup"><span data-stu-id="7fcdb-104">The query is necessary for a tracking participant to subscribe to activity scheduled records.</span></span>  
   
- <span data-ttu-id="d0712-105">如需有關追蹤設定檔查詢的詳細資訊，請參閱[追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span><span class="sxs-lookup"><span data-stu-id="d0712-105">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span></span>  
+<span data-ttu-id="7fcdb-105">如需有關追蹤設定檔查詢的詳細資訊，請參閱[追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span><span class="sxs-lookup"><span data-stu-id="7fcdb-105">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span></span>  
   
- <span data-ttu-id="d0712-106">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="d0712-106">\<system.serviceModel></span></span>  
-<span data-ttu-id="d0712-107">\<追蹤 ></span><span class="sxs-lookup"><span data-stu-id="d0712-107">\<tracking></span></span>  
-<span data-ttu-id="d0712-108">\<trackingProfile></span><span class="sxs-lookup"><span data-stu-id="d0712-108">\<trackingProfile></span></span>  
-<span data-ttu-id="d0712-109">\<工作流程 ></span><span class="sxs-lookup"><span data-stu-id="d0712-109">\<workflow></span></span>  
-<span data-ttu-id="d0712-110">\<activityScheduledQueries ></span><span class="sxs-lookup"><span data-stu-id="d0712-110">\<activityScheduledQueries></span></span>  
-<span data-ttu-id="d0712-111">\<activityScheduledQuery ></span><span class="sxs-lookup"><span data-stu-id="d0712-111">\<activityScheduledQuery></span></span>  
+<span data-ttu-id="7fcdb-106">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="7fcdb-106">\<system.serviceModel></span></span>  
+<span data-ttu-id="7fcdb-107">\<追蹤 ></span><span class="sxs-lookup"><span data-stu-id="7fcdb-107">\<tracking></span></span>  
+<span data-ttu-id="7fcdb-108">\<設定檔 ></span><span class="sxs-lookup"><span data-stu-id="7fcdb-108">\<profiles></span></span>  
+<span data-ttu-id="7fcdb-109">\<trackingProfile></span><span class="sxs-lookup"><span data-stu-id="7fcdb-109">\<trackingProfile></span></span>  
+<span data-ttu-id="7fcdb-110">\<工作流程 ></span><span class="sxs-lookup"><span data-stu-id="7fcdb-110">\<workflow></span></span>  
+<span data-ttu-id="7fcdb-111">\<activityScheduledQueries ></span><span class="sxs-lookup"><span data-stu-id="7fcdb-111">\<activityScheduledQueries></span></span>  
+<span data-ttu-id="7fcdb-112">\<activityScheduledQuery ></span><span class="sxs-lookup"><span data-stu-id="7fcdb-112">\<activityScheduledQuery></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d0712-112">語法</span><span class="sxs-lookup"><span data-stu-id="d0712-112">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7fcdb-113">語法</span><span class="sxs-lookup"><span data-stu-id="7fcdb-113">Syntax</span></span>  
   
 ```xml
 <tracking>
-  <trackingProfile name="Name">
-    <workflow>
-      <activityScheduledQueries>
-        <activityScheduledQuery activityName="String"   
-                                childActivityName="String"/>
-      </activityScheduledQueries>
-    </workflow>
-  </trackingProfile>
+  <profiles>
+    <trackingProfile name="Name">
+      <workflow>
+        <activityScheduledQueries>
+          <activityScheduledQuery activityName="String"   
+                                  childActivityName="String"/>
+        </activityScheduledQueries>
+      </workflow>
+    </trackingProfile>
+  </profiles>
 </tracking> 
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="d0712-113">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="d0712-113">Attributes and Elements</span></span>  
- <span data-ttu-id="d0712-114">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="d0712-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="7fcdb-114">屬性和元素</span><span class="sxs-lookup"><span data-stu-id="7fcdb-114">Attributes and elements</span></span>  
+
+<span data-ttu-id="7fcdb-115">下列章節說明屬性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="7fcdb-115">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="d0712-115">屬性</span><span class="sxs-lookup"><span data-stu-id="d0712-115">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="7fcdb-116">屬性</span><span class="sxs-lookup"><span data-stu-id="7fcdb-116">Attributes</span></span>  
   
-|<span data-ttu-id="d0712-116">屬性</span><span class="sxs-lookup"><span data-stu-id="d0712-116">Attribute</span></span>|<span data-ttu-id="d0712-117">描述</span><span class="sxs-lookup"><span data-stu-id="d0712-117">Description</span></span>|  
+|<span data-ttu-id="7fcdb-117">屬性</span><span class="sxs-lookup"><span data-stu-id="7fcdb-117">Attribute</span></span>|<span data-ttu-id="7fcdb-118">描述</span><span class="sxs-lookup"><span data-stu-id="7fcdb-118">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="d0712-118">activityName</span><span class="sxs-lookup"><span data-stu-id="d0712-118">activityName</span></span>|<span data-ttu-id="d0712-119">字串，可指定要求取消的活動名稱。</span><span class="sxs-lookup"><span data-stu-id="d0712-119">A string that specifies the name of the activity that is requesting the cancellation.</span></span>|  
-|<span data-ttu-id="d0712-120">childActivityName</span><span class="sxs-lookup"><span data-stu-id="d0712-120">childActivityName</span></span>|<span data-ttu-id="d0712-121">字串，可指定要求取消的子活動名稱。</span><span class="sxs-lookup"><span data-stu-id="d0712-121">A string that specifies the name of the child activity for which cancellation was requested.</span></span>|  
+|`activityName`|<span data-ttu-id="7fcdb-119">字串，可指定要求取消的活動名稱。</span><span class="sxs-lookup"><span data-stu-id="7fcdb-119">A string that specifies the name of the activity that is requesting the cancellation.</span></span>|  
+|`childActivityName`|<span data-ttu-id="7fcdb-120">字串，可指定要求取消的子活動名稱。</span><span class="sxs-lookup"><span data-stu-id="7fcdb-120">A string that specifies the name of the child activity for which cancellation was requested.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="d0712-122">子元素</span><span class="sxs-lookup"><span data-stu-id="d0712-122">Child Elements</span></span>  
- <span data-ttu-id="d0712-123">無。</span><span class="sxs-lookup"><span data-stu-id="d0712-123">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="7fcdb-121">子元素</span><span class="sxs-lookup"><span data-stu-id="7fcdb-121">Child elements</span></span>
+
+<span data-ttu-id="7fcdb-122">無。</span><span class="sxs-lookup"><span data-stu-id="7fcdb-122">None.</span></span>
   
-### <a name="parent-elements"></a><span data-ttu-id="d0712-124">父項目</span><span class="sxs-lookup"><span data-stu-id="d0712-124">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="7fcdb-123">父元素</span><span class="sxs-lookup"><span data-stu-id="7fcdb-123">Parent elements</span></span>  
   
-|<span data-ttu-id="d0712-125">項目</span><span class="sxs-lookup"><span data-stu-id="d0712-125">Element</span></span>|<span data-ttu-id="d0712-126">描述</span><span class="sxs-lookup"><span data-stu-id="d0712-126">Description</span></span>|  
+|<span data-ttu-id="7fcdb-124">元素</span><span class="sxs-lookup"><span data-stu-id="7fcdb-124">Element</span></span>|<span data-ttu-id="7fcdb-125">描述</span><span class="sxs-lookup"><span data-stu-id="7fcdb-125">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="d0712-127">\<activityScheduledQuery ></span><span class="sxs-lookup"><span data-stu-id="d0712-127">\<activityScheduledQuery></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activityscheduledquery.md)|<span data-ttu-id="d0712-128">查詢，可用來追蹤已排程且由父活動執行的活動。</span><span class="sxs-lookup"><span data-stu-id="d0712-128">A query that is used to track an activity scheduled for execution by a parent activity.</span></span>|  
+|[<span data-ttu-id="7fcdb-126">\<activityScheduledQueries></span><span class="sxs-lookup"><span data-stu-id="7fcdb-126">\<activityScheduledQueries></span></span>](activityscheduledqueries-of-wcf.md)|<span data-ttu-id="7fcdb-127">查詢集合，可用來追蹤由父活動排程執行的活動。</span><span class="sxs-lookup"><span data-stu-id="7fcdb-127">A collection of queries that are used to track an activity scheduled for execution by a parent activity.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="d0712-129">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d0712-129">See Also</span></span>  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElement>     
- <xref:System.Activities.Tracking.ActivityScheduledQuery>     
- [<span data-ttu-id="d0712-130">工作流程追蹤及追蹤</span><span class="sxs-lookup"><span data-stu-id="d0712-130">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [<span data-ttu-id="d0712-131">追蹤設定檔</span><span class="sxs-lookup"><span data-stu-id="d0712-131">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a><span data-ttu-id="7fcdb-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7fcdb-128">See also</span></span>
+
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElement>
+- <xref:System.Activities.Tracking.ActivityScheduledQuery>
+- [<span data-ttu-id="7fcdb-129">工作流程追蹤及追蹤</span><span class="sxs-lookup"><span data-stu-id="7fcdb-129">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [<span data-ttu-id="7fcdb-130">追蹤設定檔</span><span class="sxs-lookup"><span data-stu-id="7fcdb-130">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
