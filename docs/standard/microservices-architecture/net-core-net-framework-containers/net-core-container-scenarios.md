@@ -3,13 +3,13 @@ title: 選擇在 Docker 容器使用 .NET Core 的時機
 description: 適用於容器化 .NET 應用程式的.NET 微服務架構 | 選擇在 Docker 容器使用 .NET Core 的時機
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/18/2017
-ms.openlocfilehash: 761a9579cc301b7ca4b949a2a83af20ab8bb0f20
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/11/2018
+ms.openlocfilehash: fa5efd3c2478965ef01efc39b57918ec2d35962a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104648"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47207952"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>選擇在 Docker 容器使用 .NET Core 的時機
 
@@ -25,11 +25,13 @@ ms.locfileid: "37104648"
 
 .NET Core 也支援 macOS 作為開發平台。 不過，當您在 Docker 主機部署容器時，就目前來說，該主機必須以 Linux 或 Windows 為基礎。 例如在開發環境中，您可以使用在 Mac 上執行的 Linux VM。
 
-[Visual Studio](https://visualstudio.microsoft.com/) 提供適用於 Windows 的整合式開發環境 (IDE)，並支援 Docker 開發。 
+[Visual Studio](https://www.visualstudio.com/vs/) 提供適用於 Windows 的整合式開發環境 (IDE)，並支援 Docker 開發。
 
-[Visual Studio for Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/) 是一款 IDE，為 Xamarin Studio 的演進版，在 macOS 中執行並從 2017 年中開始支援 Docker。
+[Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/) 是在 macOS 上執行的 IDE (即 Xamarin Studio 的演進)，並支援 Docker 型應用程式開發。 針對在 Mac 電腦上工作同時想要使用功能強大之 IDE 的開發人員，這應該是偏好選項。
 
-您也可以在 macOS、Linux 和 Windows 上使用 [Visual Studio Code](https://code.visualstudio.com/) (VS Code)。 VS Code 支援 .NET Core，包括 IntelliSense 和偵錯。 因為 VS Code 是輕量型的編輯器，您可以在 Mac 上搭配 Docker CLI 和 [.NET Core 命令列介面 (CLI) 工具](../../../core/tools/index.md)加以使用，來開發容器化應用程式。 您還可以透過大多數協力廠商編輯器如 Sublime Text、Emacs、vi 及開放原始碼 Omnisharp 專案 (提供 .NET 語言的 IntelliSense 支援)，來將目標設定為 .NET Core。 除了 IDE 和編輯器，您也可以在所有支援的平台使用 .NET Core CLI。
+您也可以在 macOS、Linux 和 Windows 上使用 [Visual Studio Code](https://code.visualstudio.com/) (VS Code)。 VS Code 支援 .NET Core，包括 IntelliSense 和偵錯。 因為 VS Code 是輕量型的編輯器，您可以在 Mac 上搭配 Docker CLI 和 [.NET Core 命令列介面 (CLI)](https://docs.microsoft.com/dotnet/core/tools/?tabs=netcore2x) 加以使用，來開發容器化應用程式。 您還可以透過大多數協力廠商編輯器如 Sublime、Emacs、vi 及開放原始碼 Omnisharp 專案 (提供 IntelliSense 支援)，來將目標設定為 .NET Core。
+
+除了 IDE 和編輯器，您也可以在所有支援的平台使用 [.NET Core CLI](https://docs.microsoft.com/dotnet/core/tools/?tabs=netcore2x) 工具。
 
 ## <a name="using-containers-for-new-green-field-projects"></a>在新 (「綠地區」) 專案使用容器
 
@@ -41,7 +43,7 @@ ms.locfileid: "37104648"
 
 相較之下，如果您使用以容器基礎的微服務導向系統，.NET Core 會是最佳選項，因為 .NET Core 是輕量的。 此外，其相關的容器映像 (無論是 Linux 映像或 Windows Nano 映像) 都很精簡、小型，使容器負荷低、可快速啟動。
 
-微服務意味儘可能愈小愈好：在啟動時負荷極低、佔用空間小、限定環境小、只需要一小部分心力，而且能夠快速啟動和停止。 基於這些需求，您會需要使用小型且可快速具現化的容器映像，如 .NET Core 容器映像。
+微服務意味著儘可能愈小愈好：在啟動時負荷極低、佔用空間小、限定環境小、只需要投注一小部分心力 (檢查 DDD，[網域驅動設計](https://en.wikipedia.org/wiki/Domain-driven_design))，而且能夠快速啟動和停止。 基於這些需求，您會需要使用小型且可快速具現化的容器映像，如 .NET Core 容器映像。
 
 微服務架構也可讓您跨越服務界限混用技術。 如此一來，就能夠讓新的微服務逐步移轉到 .NET Core，與其他微服務或透過 Node.js、Python、Java、GoLang 或其他技術開發的服務結合使用。
 

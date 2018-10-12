@@ -4,12 +4,12 @@ description: 了解在 Windows 電腦上開發及執行 .NET Core 應用程式�
 author: mairaw
 ms.author: mairaw
 ms.date: 08/31/2018
-ms.openlocfilehash: 477d303b50495070ba3a3540188deb274dd9f510
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 63c0de2b413f38458dba89506f4070760b3f53f8
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44179490"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45747464"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows 上 .NET Core 的必要條件
 
@@ -61,7 +61,7 @@ ms.locfileid: "44179490"
 
 ## <a name="prerequisites-with-visual-studio-2017"></a>使用 Visual Studio 2017 的必要條件
 
-您可以使用任何編輯器來開發使用 .NET Core SDK 的 .NET Core 應用程式。 [Visual Studio 2017](#visual-studio-2017) 為 Windows 上的 .NET Core 應用程式提供整合式開發環境。
+您可以使用任何編輯器來開發使用 .NET Core SDK 的 .NET Core 應用程式。 Visual Studio 2017 可為 Windows 上的 .NET Core 應用程式提供整合式開發環境。
 
 您可以在[版本資訊](/visualstudio/releasenotes/vs2017-relnotes)中，進一步了解 Visual Studio 2017 的變更。
 

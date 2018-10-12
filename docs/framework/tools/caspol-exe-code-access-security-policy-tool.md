@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 67955e2b9d523cdee02f6de548720fdad261ab4d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c12444e435fa844095827411ba0e068303163bf4
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43748423"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47201136"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (程式碼存取安全性原則工具)
 程式碼存取安全性 (CAS) 原則工具 (Caspol.exe) 可以讓使用者和系統管理員修改電腦原則層級、使用者原則層級和企業原則層級的安全性原則。  
@@ -68,7 +68,7 @@ caspol [options]
 |**-polchgprompt** {**on** &#124; **off**}<br /><br /> 或<br /><br /> **-pp** {**on** &#124; **off**}|啟用或停用每當使用會造成原則變更的選項來執行 Caspol.exe 時所顯示的提示。|  
 |**-quiet**<br /><br /> 或<br /><br /> **-q**|暫時停用通常會對造成原則變更的選項顯示的提示。 不過，全域變更提示設定不會變更。 僅針對單一命令使用這個選項，如此才不會停用所有 Caspol.exe 命令的提示。|  
 |**-r**[**ecover**]|從備份檔復原原則。 每當原則變更時，Caspol.exe 都會將舊原則儲存到備份檔中。|  
-|**-remfulltrust** *assembly_file*<br /><br /> 或<br /><br /> **-rf**  *assembly_file*|從原則層級的完全信任清單中移除組件。 如果原則不再使用包含自訂權限的權限集合，則應該執行這項作業。 不過，只有在組件未實作其他仍在使用的自訂權限時，才可以從完全信任清單中移除實作自訂權限的組件。 當您從清單中移除組件時，也應該移除該組件所依存的其他組件。|  
+|**-remfulltrust** *assembly_file*<br /><br /> 或<br /><br /> **-rf**  *assembly_file*|從原則層級的完全信任清單中移除組件。 如果原則不再使用包含自訂權限的權限集合，則應該執行這項作業。 不過，只有在組件未實作任何其他仍在使用的自訂權限時，才可以從完全信任清單中移除實作自訂權限的組件。 當您從清單中移除組件時，也應該移除該組件所依存的任何其他組件。|  
 |**-remgroup** {*label &#124;name*}<br /><br /> 或<br /><br /> **-rg** {l*abel &#124; name*}|移除以標籤或名稱指定的程式碼群組。 如果指定的程式碼群組包含子程式碼群組，Caspol.exe 也會移除所有子程式碼群組。|  
 |**-rempset** *pset_name*<br /><br /> 或<br /><br /> **-rp** *pset_name*|從原則中移除指定的權限集合。 *pset_name* 引數會指出要移除的權限集合。 只有在權限集合未與任何程式碼群組相關聯時，Caspol.exe 才會將該權限集合移除。 無法移除預設 (內建) 權限集合。|  
 |**-reset**<br /><br /> 或<br /><br /> **-rs**|將原則回復到其預設狀態並保存 (Persist) 到磁碟中。 每當變更的原則似乎無法修復，而您想要以安裝預設值重新開始時，這樣做會非常有用。 當您想要使用預設原則做為修改特定安全性設定檔的起點時，重設也會很方便。 如需詳細資訊，請參閱[手動編輯安全性組態檔](#cpgrfcodeaccesssecuritypolicyutilitycaspolexeanchor1)。|  

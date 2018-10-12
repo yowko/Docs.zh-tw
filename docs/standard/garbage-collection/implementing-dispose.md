@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 176ae3589443937331259ee4716570c66053de3c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 36526da1fc678e933a75e19bac9c8e1d0a40909c
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44186184"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45743384"
 ---
 # <a name="implementing-a-dispose-method"></a>實作 Dispose 方法
 
@@ -107,7 +107,7 @@ ms.locfileid: "44186184"
 
 從實作 <xref:System.IDisposable> 介面的類別衍生的類別不應該實作 <xref:System.IDisposable>，因為 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 的基底類別實作會由其衍生類別繼承。 因此，若要實作衍生類別的處置模式，請改為提供下列項目：  
   
-* 覆寫基底類別方法及實際釋放衍生類別之資源的 `protected Dispose(Boolean)` 方法。 這個方法也應該呼叫基底類別的 `Dispose(Boolean)` 方法，並且將 *disposing* 引數的 `true` 值傳遞給它。  
+* 覆寫基底類別方法及實際釋放衍生類別之資源的 `protected Dispose(Boolean)` 方法。 此方法也應呼叫基底類別的 `Dispose(Boolean)` 方法，並傳遞其處置狀態作為引數。  
   
 * 衍生自包裝您的 Unmanaged 資源之 <xref:System.Runtime.InteropServices.SafeHandle> 的類別 (建議使用)，或式 <xref:System.Object.Finalize%2A?displayProperty=nameWithType> 方法的覆寫。 <xref:System.Runtime.InteropServices.SafeHandle> 類別會提供完成項，讓您不必自行撰寫程式碼。 如果您提供完成項，則它應該呼叫 `Dispose(Boolean)` 多載且 *disposing* 引數為 `false`。  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b9cf18c4893b618d16ef24bab83a19154e19a9c
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 83f3abb2c77461b74e388dcb421fac6c19a43655
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106524"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47205051"
 ---
 # <a name="custom-numeric-format-strings"></a>自訂數值格式字串
 
@@ -47,13 +47,13 @@ ms.locfileid: "37106524"
 |"‰"|千分之一符號預留位置|將數字乘以 1000，並在結果字串中插入當地語系化的千分比符號。<br /><br /> 詳細資訊： ["‰" 自訂規範](#SpecifierPerMille)。|0.03697 ("#0.00‰", en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36,97‰|  
 |"E0"<br /><br /> "E+0"<br /><br /> "E-0"<br /><br /> "E0"<br /><br /> "E+0"<br /><br /> "E-0"|指數標記法|如果後面至少接著一個 0 (零)，則使用指數標記法來格式化結果。 大小寫 "E" 或 "e" 表示結果字串中指數符號的大小寫。 接在 "E" 或 "e" 字元後面的零個數決定指數中的最少位數。 加號 (+) 表示指數前面一律加上正負號字元。 減號 (-) 表示只在負指數前面才加上正負號字元。<br /><br /> 詳細資訊： ["E" 和 "e" 自訂規範](#SpecifierExponent)。|987654 ("#0.0e0") -> 98.8e4<br /><br /> 1503.92311 ("0.0##e+00") -> 1.504e+03<br /><br /> 1.8901385E-16 ("0.0e+00") -> 1.9e-16|  
 |"\\"|逸出字元|將下一個字元解譯為常值，而不是自訂格式規範。<br /><br /> 詳細資訊：["\\" 逸出字元](#SpecifierEscape)。|987654 ("\\###00\\#") -> #987654#|  
-|'*字串*'<br /><br /> "*字串*"|常值字串分隔符號|表示應該將所括住的字元原封不動地複製到結果字串。<br/><br/>詳細資訊︰[字元常值](#character-literals)。|68 ("# ' degrees'") -> 68  degrees<br /><br /> 68 ("# ' degrees'") -> 68  degrees|  
+|'*字串*'<br /><br /> "*字串*"|常值字串分隔符號|表示應該將所括住的字元原封不動地複製到結果字串。<br/><br/>詳細資訊︰[字元常值](#character-literals)。|68 ("# 'degrees'") -> 68 degrees<br /><br /> 68 ("# ' degrees'") -> 68  degrees|  
 |;|區段分隔符號|以個別格式字串來定義正數、負數和零值的區段。<br /><br /> 詳細資訊： [";" 區段分隔符號](#SectionSeparator)。|12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#);-\0-") -> -0-<br /><br /> -12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)<br /><br /> 12.345 ("#0.0#;(#0.0#)") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#)") -> 0.0<br /><br /> -12.345 ("#0.0#;(#0.0#)") -> (12.35)|  
 |其他|所有其他字元|字元會原封不動地複製到結果字串。<br/><br/>詳細資訊︰[字元常值](#character-literals)。|68 ("# °") -> 68 °|  
   
  下列各節提供每個自訂數值格式規範的詳細資訊。  
 
-[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-culture-note.md)] 
+[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-partial-note.md)] 
   
 <a name="Specifier0"></a>   
 ## <a name="the-0-custom-specifier"></a>"0" 自訂規範  
@@ -64,7 +64,7 @@ ms.locfileid: "37106524"
  下列範例顯示使用包含零預留位置的自訂格式字串來格式化的幾個值。  
   
  [!code-cpp[Formatting.Numeric.Custom#1](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#1)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#1](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#1)]
+ [!code-csharp[Formatting.Numeric.Custom#1](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#1)]
  [!code-vb[Formatting.Numeric.Custom#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#1)]  
   
  [回到表格](#table)  
@@ -80,7 +80,7 @@ ms.locfileid: "37106524"
  下列範例顯示使用包含數字預留位置的自訂格式字串來格式化的幾個值。  
   
  [!code-cpp[Formatting.Numeric.Custom#2](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#2)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#2)]
+ [!code-csharp[Formatting.Numeric.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#2)]
  [!code-vb[Formatting.Numeric.Custom#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#2)]  
   
  若要傳回結果字串，以空格取代不存在的數字或前置零，請使用 [複合格式功能](../../../docs/standard/base-types/composite-formatting.md) 並指定欄位寬度，如下列範例所示。  
@@ -100,7 +100,7 @@ ms.locfileid: "37106524"
  下列範例使用 "." 格式規範來定義幾個結果字串中小數點的位置。  
   
  [!code-cpp[Formatting.Numeric.Custom#3](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#3)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#3)]
+ [!code-csharp[Formatting.Numeric.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#3)]
  [!code-vb[Formatting.Numeric.Custom#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#3)]  
   
  [回到表格](#table)  
@@ -120,13 +120,13 @@ ms.locfileid: "37106524"
  下列範例示範使用逗號做為群組分隔符號。  
   
  [!code-cpp[Formatting.Numeric.Custom#4](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#4)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#4)]
+ [!code-csharp[Formatting.Numeric.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#4)]
  [!code-vb[Formatting.Numeric.Custom#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#4)]  
   
  下列範例示範使用逗點做為數值縮放的規範。  
   
  [!code-cpp[Formatting.Numeric.Custom#5](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#5)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#5)]
+ [!code-csharp[Formatting.Numeric.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#5)]
  [!code-vb[Formatting.Numeric.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#5)]  
   
  [回到表格](#table)  
@@ -138,7 +138,7 @@ ms.locfileid: "37106524"
  下列範例會定義幾個包含 "%" 自訂規範的自訂格式字串。  
   
  [!code-cpp[Formatting.Numeric.Custom#6](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#6)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#6](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#6)]
+ [!code-csharp[Formatting.Numeric.Custom#6](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#6)]
  [!code-vb[Formatting.Numeric.Custom#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#6)]  
   
  [回到表格](#table)  
@@ -150,7 +150,7 @@ ms.locfileid: "37106524"
  下列範例會定義包含 "‰" 自訂規範的自訂格式字串。  
   
  [!code-cpp[Formatting.Numeric.Custom#9](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#9)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#9](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#9)]
+ [!code-csharp[Formatting.Numeric.Custom#9](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#9)]
  [!code-vb[Formatting.Numeric.Custom#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#9)]  
   
  [回到表格](#table)  
@@ -162,7 +162,7 @@ ms.locfileid: "37106524"
  下列範例使用科學記號規範來格式化幾個數值。  
   
  [!code-cpp[Formatting.Numeric.Custom#7](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#7)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#7)]
+ [!code-csharp[Formatting.Numeric.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#7)]
  [!code-vb[Formatting.Numeric.Custom#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#7)]  
   
  [回到表格](#table)  
@@ -235,8 +235,8 @@ ms.locfileid: "37106524"
 
 下列範例會使用這兩種方法，在自訂數值格式字串中包含保留的字元。  
   
-     [!code-csharp-interactive[including reserved characters](~/samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/literal1.cs#1)]
-     [!code-vb[including reserved characters](~/samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/literal1.vb#1)]  
+ [!code-csharp-interactive[including reserved characters](~/samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/literal1.cs#1)]
+ [!code-vb[including reserved characters](~/samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/literal1.vb#1)]  
     
 <a name="NotesCustomFormatting"></a>   
 ## <a name="notes"></a>注意  
@@ -264,9 +264,10 @@ ms.locfileid: "37106524"
   
  [回到表格](#table)  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>  
- [格式化類型](../../../docs/standard/base-types/formatting-types.md)  
- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
- [操作說明：以前置字元為零來填補數字](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
- [範例：.NET Framework 4 格式化公用程式](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>  
+- [格式化類型](../../../docs/standard/base-types/formatting-types.md)  
+- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
+- [操作說明：以前置字元為零來填補數字](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
+- [範例：.NET Framework 4 格式化公用程式](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

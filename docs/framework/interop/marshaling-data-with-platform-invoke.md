@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0501bb2b67c6bbe23c46dc350aedea7d7be09ba1
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: ae8fbb47986e5baaecb919ce79ae384a8427737a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911727"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47231121"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>使用平台叫用封送處理資料
 若要呼叫從 Unmanaged 程式庫匯出的函式，.NET Framework 應用程式需要代表此 Unmanaged 函式之 Managed 程式碼中的函式原型。 若要建立使平台叫用正確地封送處理資料的原型，您必須執行下列動作：  
@@ -46,10 +46,10 @@ ms.locfileid: "42911727"
 |**ULONG**|**unsigned long**|<xref:System.UInt32?displayProperty=nameWithType>|32 位元|  
 |**CHAR**|**char**|<xref:System.Char?displayProperty=nameWithType>|使用 ANSI 裝飾。|  
 |**WCHAR**|**wchar_t**|<xref:System.Char?displayProperty=nameWithType>|使用 Unicode 裝飾。|  
-|**LPSTR**|**char \***|<xref:System.String?displayProperty=nameWithType> 或 <xref:System.Text.StringBuilder?displayProperty=nameWithType>|使用 ANSI 裝飾。|  
-|**LPCSTR**|**Const char\***|<xref:System.String?displayProperty=nameWithType> 或 <xref:System.Text.StringBuilder?displayProperty=nameWithType>|使用 ANSI 裝飾。|  
-|**LPWSTR**|**wchar_t \***|<xref:System.String?displayProperty=nameWithType> 或 <xref:System.Text.StringBuilder?displayProperty=nameWithType>|使用 Unicode 裝飾。|  
-|**LPCWSTR**|**Const wchar_t \***|<xref:System.String?displayProperty=nameWithType> 或 <xref:System.Text.StringBuilder?displayProperty=nameWithType>|使用 Unicode 裝飾。|  
+|**LPSTR**|**char &ast;**|<xref:System.String?displayProperty=nameWithType> 或 <xref:System.Text.StringBuilder?displayProperty=nameWithType>|使用 ANSI 裝飾。|  
+|**LPCSTR**|**Const char &ast;**|<xref:System.String?displayProperty=nameWithType> 或 <xref:System.Text.StringBuilder?displayProperty=nameWithType>|使用 ANSI 裝飾。|  
+|**LPWSTR**|**wchar_t &ast;**|<xref:System.String?displayProperty=nameWithType> 或 <xref:System.Text.StringBuilder?displayProperty=nameWithType>|使用 Unicode 裝飾。|  
+|**LPCWSTR**|**Const wchar_t &ast;**|<xref:System.String?displayProperty=nameWithType> 或 <xref:System.Text.StringBuilder?displayProperty=nameWithType>|使用 Unicode 裝飾。|  
 |**FLOAT**|**Float**|<xref:System.Single?displayProperty=nameWithType>|32 位元|  
 |**DOUBLE**|**Double**|<xref:System.Double?displayProperty=nameWithType>|64 位元|  
   

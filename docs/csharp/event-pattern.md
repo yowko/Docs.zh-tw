@@ -3,12 +3,12 @@ title: 標準的 .NET 事件模式
 description: 了解 .NET 事件模式、如何建立標準事件來源，以及如何訂閱和處理程式碼中的標準事件。
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 9bd9f71726647966dd1e4426b260484decb048c6
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 0b10c440f4d05533032aa94819ec879f6a1ca2a4
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827244"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47399946"
 ---
 # <a name="standard-net-event-patterns"></a>標準的 .NET 事件模式
 
@@ -49,7 +49,7 @@ void OnEventRaised(object sender, EventArgs args);
 
 [!code-csharp[FileSearxcher](../../samples/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
 
-## <a name="definining-and-raising-field-like-events"></a>定義及引發的欄位型事件
+## <a name="defining-and-raising-field-like-events"></a>定義及引發的欄位型事件
 
 將事件新增至類別的最簡單方式，是將該事件宣告為公用欄位，如上例所示︰
 

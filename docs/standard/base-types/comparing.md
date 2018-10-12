@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1fa907be4571e0a5f95ab798210bedb154e9170
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: d8f126aa5b69c99beae740de261ac3da3c5d2544
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264671"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45698558"
 ---
 # <a name="comparing-strings-in-net"></a>在 .NET 中比較字串
 .NET 會提供數種方法來比較字串值。 下表列出並描述數值比較的方法。  
@@ -154,4 +154,5 @@ ms.locfileid: "44264671"
 
 - [基本字串作業](../../../docs/standard/base-types/basic-string-operations.md)  
 - [執行不區分文化特性的字串作業](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
-- [Sorting Weight Tables](https://www.microsoft.com/en-us/download/details.aspx?id=10921) (排序加權資料表)
+- [排序權數資料表 (適用於 Windows 上的 .NET)](https://www.microsoft.com/en-us/download/details.aspx?id=10921)
+- [預設 Unicode 定序元素資料表 (適用於 Linux 和 macOS 上的 .NET Core)](https://www.unicode.org/Public/UCA/latest/allkeys.txt)

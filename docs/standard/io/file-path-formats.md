@@ -9,15 +9,12 @@ helpviewer_keywords:
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0efef54abd1da9631b5a560b49c6587d726e9193
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5821d15e71492bd54fa6b5d891f2ff38a2902a06
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861298"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47424385"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 系統上的檔案路徑格式
 
@@ -185,7 +182,7 @@ DOS 裝置路徑由以下元件組成：
 
 為何會想要略過正規化？ 有三個主要的原因：
 
-1. 存取通常無法使用，但是合法的路徑。 例如，稱為 `hidden.` 的檔案或目錄便無法以其他方式存取。 
+1. 存取通常無法使用，但是合法的路徑。 例如，稱為 `hidden.` 的檔案或目錄便無法以任何其他方式存取。 
 
 1. 如果已經正規化，藉由略過正規化以改善效能。
 
@@ -233,4 +230,4 @@ Module Example
 End Module
 ```
 
-不過，目錄和檔案名稱比較不區分大小寫。 如果您搜尋名為 "test.txt" 的檔案，.NET 檔案系統 API 在比較時會忽略大小寫。 Test.txt、TEST.TXT、test.TXT 和大寫和小寫字母的其他組合都會符合 "test.txt"。
+不過，目錄和檔案名稱比較不區分大小寫。 如果您搜尋名為 "test.txt" 的檔案，.NET 檔案系統 API 在比較時會忽略大小寫。 Test.txt、TEST.TXT、test.TXT 和大寫和小寫字母的任何其他組合都會符合 "test.txt"。

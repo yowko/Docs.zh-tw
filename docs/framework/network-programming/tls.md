@@ -13,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 author: blowdart
-ms.openlocfilehash: a45d57af1069bba9e3afe8c2e6e6d463115a4e39
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 96d37934b5e852b69c692bb1606d2998dac6f63a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43798908"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47424476"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework 的傳輸層安全性 (TLS) 最佳做法
 
@@ -179,7 +179,10 @@ WCF 架構會自動選擇可用的最高版本通訊協定 (最高版本為 TLS 
 
 ## <a name="configuring-security-via-the-windows-registry"></a>透過 Windows 登錄來設定安全性
 
-如果您無法設定其中一個 `AppContext` 參數 (或是兩個都無法設定)，則可以透過本節中描述的 Windows 登錄機碼來控制應用程式所使用的安全性通訊協定。 如果您的應用程式是以 .NET Framework 4.6 版之前的版本為目標，或是無法編輯設定檔，便可能無法使用其中一個 `AppContext` 參數，或是兩個都無法使用。 若您想要透過登錄來設定安全性，請不要在程式碼中指定安全性通訊協定，因為這麼做將會覆寫這些登錄。
+> [!WARNING]
+> 設定登錄機碼會影響系統上的所有應用程式。 只有當您具有機器的完整控制權，並且可以控制登錄上的變更時，才使用此選項。
+
+如果您無法設定其中一個 `AppContext` 參數 (或是兩個都無法設定)，則可以透過本節中描述的 Windows 登錄機碼來控制應用程式所使用的安全性通訊協定。 如果您的應用程式是在 .NET Framework 4.5.2 版或更早版本上執行，或是無法編輯組態檔，便可能無法使用其中一個 `AppContext` 參數，或是兩個都無法使用。 若您想要透過登錄來設定安全性，請不要在程式碼中指定安全性通訊協定，因為這麼做將會覆寫這些登錄設定。
 
 登錄機碼的名稱與相對應的 `AppContext` 參數類似，但名稱前方不會有 `DontEnable`。 例如，`AppContext` 參數 `DontEnableSchUseStrongCrypto` 就是稱為 [SchUseStrongCrypto](#schusestrongcrypto) 的登錄機碼。
 

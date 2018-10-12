@@ -2,12 +2,12 @@
 title: C# 7.3 的新功能
 description: C# 7.3 新功能的概觀
 ms.date: 05/16/2018
-ms.openlocfilehash: 921374773d57d3fa6f8dd614f2691d345cf6eab7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 570da53059242c0242609ddcba5cb23f1728aa9f
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511607"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47235227"
 ---
 # <a name="whats-new-in-c-73"></a>C# 7.3 的新功能
 
@@ -36,7 +36,7 @@ C# 7.3 版有兩個主要的佈景主題。 其中一個佈景主題提供了使
 
 這篇文章的其餘部分提供詳細資料和連結，讓您深入了解每個增強功能。
 
-## <a name="enabling-more-performant-safe-code"></a>啟用更多高效能的安全的程式碼
+## <a name="enabling-more-efficient-safe-code"></a>啟用更有效率的安全的程式碼
 
 您應該能夠安全地撰寫與不安全的程式碼一樣高效能的 C# 程式碼。 安全的程式碼可避免一些錯誤類別，例如緩衝區溢位、偏離的指標和其他記憶體存取錯誤。 這些新功能擴充了可驗證安全的程式碼的功能。 儘可能使用安全的建構來撰寫更多的程式碼。 這些功能都讓這變得更容易。
 
@@ -127,6 +127,8 @@ Span<int> arr = stackalloc [] {1, 2, 3};
 您也可以使用新的 `unmanaged` 限制式指定型別參數必須是**非受控型別**。 **非受控型別**是非參考型別的型別，而且未包含任何巢狀層級的參考型別。
 
 如需詳細資訊，請參閱有關 [`where` 泛型限制式](../language-reference/keywords/where-generic-type-constraint.md)和[型別參數的限制式](../programming-guide/generics/constraints-on-type-parameters.md)的文章。
+
+將這些條件約束新增至現有型別是[不相容變更](version-update-considerations.md#incompatible-changes)。 封閉式泛型型別可能不再符合這些新的條件約束。
 
 ## <a name="make-existing-features-better"></a>讓現有的功能變得更好
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a0ffef95c8f9a187d5dac6902462d9747023384d
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 6bd0187f831db7fd68272e14c022efb45c8260f2
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45685708"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48025593"
 ---
 # <a name="file-and-stream-io"></a>檔案和資料流 I/O
 檔案和資料流 I/O (輸入/輸出) 是指對儲存媒體來回傳輸資料。 在 .NET Framework 中，`System.IO` 命名空間包含能夠以同步和非同步方式在資料流和檔案上進行讀取和寫入的類型。 這些命名空間還包含對檔案進行壓縮和解壓縮的類型，以及透過管道和序列埠進行通訊的類型。  
@@ -41,6 +41,8 @@ ms.locfileid: "45685708"
   
 -   <xref:System.IO.Path> - 提供以跨平台方式處理目錄字串的方法和屬性。  
   
+ 您應該在呼叫檔案系統方法時，一律提供強固的例外狀況處理。 如需詳細資訊，請參閱[處理 I/O 錯誤](handling-io-errors.md)。
+ 
  除了使用這些類別之外，Visual Basic 使用者還可以使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> 類別針對檔案 I/O 提供的方法。  
   
  請參閱[如何：複製目錄](../../../docs/standard/io/how-to-copy-directories.md)、[如何：建立目錄清單](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)，以及[如何：列舉目錄和檔案](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)。  

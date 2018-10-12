@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cdb11b283cc008e7f4bb060d1c2cb18706c824b7
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 86376919d7456167c58ada4145d213b39e050e33
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084714"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46702773"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
 <xref:System.Threading.EventWaitHandle> 類別可讓執行緒藉由發出訊號及等候訊號來互相進行通訊。 事件等候控制代碼 (也簡單稱為事件) 是可接收訊號來釋出一或多個等候執行緒的等候控制代碼。 收到訊號之後，可以手動或自動重設事件等候控制代碼。 <xref:System.Threading.EventWaitHandle> 類別可以代表本機事件等候控制代碼 (本機事件) 或具名的系統事件等候控制代碼 (所有處理序都可看見的具名事件或系統事件)。  
   
 > [!NOTE]
->  事件等候控制代碼的事件意義與該字在 .NET Framework 中通常所代表的意義不同。 其中並不涉及任何委派或事件處理常式。 「事件」一字是用來描述它們，因為傳統上將它們稱為作業系統事件，並且因為向等候控制代碼發出訊號的動作會向等候執行緒指出某個事件已發生。  
+>  事件等候控制代碼不是 .NET [事件](../events/index.md)。 其中並不涉及任何委派或事件處理常式。 「事件」一字是用來描述它們，因為傳統上將它們稱為作業系統事件，並且因為向等候控制代碼發出訊號的動作會向等候執行緒指出某個事件已發生。  
   
  本機和具名事件等候控制代碼都會使用系統同步處理作業物件，<xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> 包裝函式會保護這些物件以確保資源被釋出。 當您已使用完物件時，可以使用 <xref:System.Threading.WaitHandle.Dispose%2A> 方法來立即釋出資源。  
   

@@ -4,12 +4,12 @@ description: 了解移植程序，並探索可協助將 .NET Framework 移植到
 author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: bf4f50ca915f21cdda6b99ae6bdf9e837eca3ae7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d273b3abe46de59aa55b5b9a531d3c572a065124
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33210078"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48835388"
 ---
 # <a name="porting-to-net-core-from-net-framework"></a>從 .NET Framework 移轉到 .NET Core
 
@@ -27,7 +27,7 @@ ms.locfileid: "33210078"
 
    這可確保當 .NET Core 無法支援特定 API 時，您可以使用 .NET Framework 特定目標的 API 替代方案。
    
-3. 使用 [API 可攜性分析工具](https://github.com/Microsoft/dotnet-apiport/) 分析組件，並且根據結果開發移轉計劃。
+3. 使用 [.NET 可攜性分析工具](../../standard/analyzers/portability-analyzer.md)來分析組件，並且根據結果開發移轉計劃。
 
    API 可攜性分析工具會分析已編譯的組件並產生報告，顯示高階的可攜性摘要，以及您使用但 .NET Core 不提供的每個 API 分析。  您可以使用此報告與程式碼基底分析，開發移轉程式碼的計劃。
    

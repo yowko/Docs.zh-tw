@@ -3,12 +3,12 @@ title: C# 6 的新功能 - C# 指南
 description: 了解 C# 第 6 版的新功能
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: 5ba5d8f4cc5c7cecdda030594273324d14d1582a
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: f6f953eacc935d38cc7d45173109c96c52a5e2f3
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34565874"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47208181"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 的新功能
 
@@ -45,7 +45,7 @@ C# 6.0 版包含許多功能，能提升開發人員的產能。 本版的功能
 
 本主題的其餘部分提供這些功能每一項的詳細資料。
 
-## <a name="auto-property-enhancements"></a>Auto 屬性增強功能 
+## <a name="auto-property-enhancements"></a>Auto 屬性增強功能
 
 自動實作屬性 (通常稱為 Auto 屬性) 的語法讓建立具有簡單 get 和 set 存取子的屬性變得相當容易︰
 
@@ -88,6 +88,8 @@ public class Student
 
 這項功能可真正達到建立不可變類型的語言支援，並使用更精簡且方便的 Auto 屬性語法。
 
+如果新增這個語法不會移除可存取的方法，那麼這就是[二進位相容變更](version-update-considerations.md#binary-compatible-changes)。
+
 ### <a name="auto-property-initializers"></a>Auto 屬性初始設定式
 
 「Auto 屬性初始設定式」可以讓您宣告 Auto 屬性的初始值作為屬性宣告的一部分。  在舊版中，這些屬性必須有 setter，且您必須使用該 setter 來初始化支援欄位所使用的資料存放區。 請針對學生考慮此類別，其中包含學生的姓名和成績清單︰
@@ -115,6 +117,9 @@ C# 6 可讓您在 Auto 屬性宣告中指派 Auto 屬性所使用的儲存體初
 您也可以在唯讀屬性中使用運算式主體的成員︰
 
 [!code-csharp[FullNameExpressionMember](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
+
+將現有成員變更為運算式主體成員是[二進位相容變更](version-update-considerations.md#binary-compatible-changes)。
+
 
 ## <a name="using-static"></a>使用靜態
 
@@ -398,4 +403,3 @@ C# 6 編譯器可正確判斷 `Task.Run(Func<Task>())` 是較好的選擇。
 根據預設，每次編譯會針對每次編譯產生唯一的輸出。 編譯器會新增時間戳記，以及從亂數產生的 GUID。 如果您想要比較位元組對位元組的輸出，以確保組建的一致性，您可以使用此選項。
 
 如需詳細資訊，請參閱 [-deterministic 編譯器選項](../language-reference/compiler-options/deterministic-compiler-option.md)文章。
-

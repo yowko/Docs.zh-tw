@@ -1,20 +1,20 @@
 ---
 title: 如何：識別可為 Null 的型別 (C# 程式設計手冊)
 description: 了解如何判斷某個類型或執行個體是否屬於可為 Null 的型別
-ms.date: 08/06/2018
+ms.date: 09/24/2018
 helpviewer_keywords:
 - nullable types [C#], identifying
 ms.assetid: d4b67ee2-66e8-40c1-ae9d-545d32c71387
-ms.openlocfilehash: c65f80974154d81b5ddf239b617eeeda68434e09
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f9957568d3c68f60cc9286718be9f5a496f876e6
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45624940"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47400539"
 ---
 # <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>如何：識別可為 Null 的型別 (C# 程式設計手冊)
 
-下列範例示範如何判斷 <xref:System.Type?displayProperty=nameWithType> 執行個體是否代表可為 Null 的型別：
+下列範例示範如何判斷 <xref:System.Type?displayProperty=nameWithType> 執行個體是否代表封閉式泛型可為 Null 的型別，也就是，<xref:System.Nullable%601?displayProperty=nameWithType> 型別具有指定的型別參數 `T`：
 
 [!code-csharp-interactive[whether Type is nullable](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#1)]
 
@@ -32,7 +32,7 @@ ms.locfileid: "45624940"
 
 [!code-csharp-interactive[whether an instance is of a nullable type](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#4)]
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [可為 Null 的型別](index.md)  
 - [使用可為 Null 的型別](using-nullable-types.md)  

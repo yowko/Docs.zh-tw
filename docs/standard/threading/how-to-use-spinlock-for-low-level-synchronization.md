@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 SpinLock 進行低階同步處理
+title: 操作說明：使用 SpinLock 進行低階同步處理
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,18 +10,16 @@ helpviewer_keywords:
 ms.assetid: a9ed3e4e-4f29-4207-b730-ed0a51ecbc19
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 216480e893f6dbebbb204cbf2bfebae8dc139ec4
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: ff604b94ecef1ffec5fe9845df7c5ba35f5857d7
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45593852"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46000264"
 ---
-# <a name="how-to-use-spinlock-for-low-level-synchronization"></a>如何：使用 SpinLock 進行低階同步處理
-下列範例示範如何使用 <xref:System.Threading.SpinLock>。  
-  
-## <a name="example"></a>範例  
- 在此範例中，重要的區段會執行最少量的工作，因此適合作為 <xref:System.Threading.SpinLock> 的候選項。 相較於標準鎖定，少量增加工作可提升 <xref:System.Threading.SpinLock> 的效能。 不過，在增加到達某一程度後，SpinLock 的成本就會變成高於標準鎖定。 您可以使用程式碼剖析工具中的並行分析功能，來查看哪一種鎖定型別可在您的程式中提供較佳的效能。 如需詳細資訊，請參閱[並行視覺化檢視](/visualstudio/profiling/concurrency-visualizer)。  
+# <a name="how-to-use-spinlock-for-low-level-synchronization"></a>操作說明：使用 SpinLock 進行低階同步處理
+
+下列範例示範如何使用 <xref:System.Threading.SpinLock>。 在此範例中，重要的區段會執行最少量的工作，因此適合作為 <xref:System.Threading.SpinLock> 的候選項。 相較於標準鎖定，少量增加工作可提升 <xref:System.Threading.SpinLock> 的效能。 不過，在增加到達某一程度後，SpinLock 的成本就會變成高於標準鎖定。 您可以使用程式碼剖析工具中的並行分析功能，來查看哪一種鎖定型別可在您的程式中提供較佳的效能。 如需詳細資訊，請參閱[並行視覺化檢視](/visualstudio/profiling/concurrency-visualizer)。  
   
  [!code-csharp[CDS_SpinLock#02](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_spinlock/cs/spinlockdemo.cs#02)]
  [!code-vb[CDS_SpinLock#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_spinlock/vb/spinlock_vb.vb#02)]  
@@ -30,8 +28,10 @@ ms.locfileid: "45593852"
   
  這個範例會使用 <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> 類別，此類別需要使用者同步處理以進行多執行緒存取。 在以 .NET Framework 第 4 版為目標的應用程式中，另一個選項是使用 <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType>，不需任何使用者鎖定。  
   
- 請注意 `false` (在 Visual Basic 中為 `False`) 在<xref:System.Threading.SpinLock.Exit%2A> 呼叫中的用法。 這可提供最佳效能。 在 IA64 架構上指定 `true` (`True`) 以使用記憶體範圍，記憶體範圍可排清寫入緩衝區以確保鎖定現已可供其他執行緒來結束。  
+ 請注意 `false` (在 Visual Basic 中為 `False`) 在<xref:System.Threading.SpinLock.Exit%2A?displayProperty=nameWithType> 呼叫中的用法。 這可提供最佳效能。 在 IA64 架構上指定 `true` (在 Visual Basic 中為 `True`) 以使用記憶體範圍，如此可排清寫入緩衝區，以確保鎖定現已可供其他執行緒結束。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [執行緒物件和功能](../../../docs/standard/threading/threading-objects-and-features.md)
+- [執行緒物件和功能](threading-objects-and-features.md)
+- [lock 陳述式 (C#)](../../csharp/language-reference/keywords/lock-statement.md)
+- [SyncLock 陳述式 (Visual Basic)](../../visual-basic/language-reference/statements/synclock-statement.md)

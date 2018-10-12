@@ -3,12 +3,12 @@ title: C# 7.0 的新功能 - C# 指南
 description: 取得 C# 語言未來版本 7 的新功能概觀。
 ms.date: 12/21/2016
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: a78b30411d734d6dadc52b7dbd402763d4eb7f5e
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 734fdf962ef481a3b434e9ce17e535eadd52f420
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956405"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47237380"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 的新功能
 
@@ -159,7 +159,7 @@ C# 為類別和結構提供豐富的語法，可用來解釋您的設計目的�
 [!code-csharp[Tuple-discard](../../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
 如需詳細資訊，請參閱[捨棄](../discards.md)。
- 
+
 ## <a name="pattern-matching"></a>模式比對
 
 「模式比對」是一項功能，可讓您對物件類型以外的屬性實作方法分派。 您可能已經熟悉根據物件類型的方法分派。 在物件導向程式設計中，虛擬和覆寫方法可提供語言語法，以實作根據物件類型的方法分派。 基底和衍生類別能提供不同的實作。 模式比對運算式會擴充這個概念，讓您可以輕鬆地為不是透過繼承階層架構而關聯的類型和資料項目實作類似的分派模式。 
@@ -277,7 +277,9 @@ C# 語言有三個其他的規則可保護您免於濫用 `ref` 區域變數和�
 * `ref` 區域變數及傳回值無法配合非同步方法使用。
     - 當非同步方法傳回時，編譯器無法確定參考的變數是否已設定為其最終的值。
 
-新增 ref 區域變數和 ref 傳回能啟用更有效率的演算法，因為可以避免複製值，或是多次執行取值作業。 
+新增 ref 區域變數和 ref 傳回能啟用更有效率的演算法，因為可以避免複製值，或是多次執行取值作業。
+
+將 `ref` 新增至傳回值是[來源相容變更](version-update-considerations.md#source-compatible-changes)。 現有程式碼會編譯，但是 ref 傳回值是在指派時複製。 呼叫端必須將傳回值的儲存體更新為 `ref` 區域變數，將傳回項目儲存為參考。
 
 ## <a name="local-functions"></a>區域函式
 
@@ -327,6 +329,8 @@ C# 6 引進了成員函式的[運算式主體成員](csharp-6.md#expression-bodi
 
 這些運算式主體成員的新位置代表 C# 語言的重要里程碑︰這些功能是由參與開放原始碼 [Roslyn](https://github.com/dotnet/Roslyn) 專案的社群成員所實作。
 
+將方法變更為運算式主體成員是[二進位相容](version-update-considerations.md#binary-compatible-changes)變更。
+
 ## <a name="throw-expressions"></a>throw 運算式
 
 在 C# 中，`throw` 一直都是陳述式。 因為 `throw` 是陳述式，而不是運算式，所以有您無法在其中使用它的 C# 建構。 這些包含條件運算式、Null 聯合運算式和一些 Lambda 運算式。 新增運算式主體成員會新增 `throw` 運算式適用的更多位置。 為了讓您可以撰寫任何這些建構，C# 7.0 引進了「throw 運算式」。
@@ -362,8 +366,10 @@ C# 6 引進了成員函式的[運算式主體成員](csharp-6.md#expression-bodi
 簡單的最佳化就是使用 `ValueTask` 取代過去使用 `Task` 之處。 不過，如果您想要以手動方式執行額外的最佳化，可以快取來自非同步工作的結果，並在後續的呼叫中重複使用結果。 `ValueTask` 結構有一個具有 `Task` 參數的建構函式，讓您可以從任何現有非同步方法的傳回值來建構 `ValueTask`︰
 
 [!code-csharp[AsyncOptimizedValueTask](../../../samples/snippets/csharp/new-in-7/AsyncWork.cs#31_AsyncOptimizedValueTask "Return async result or cached value")]
- 
+
 如同所有的效能建議，您應該先評定這兩個版本，再進行大規模的程式碼變更。
+
+當傳回值是 `await` 陳述式的目標時，將 API 從 <xref:System.Threading.Tasks.Task%601> 變更為 <xref:System.Threading.Tasks.ValueTask%601> 是[來源相容變更](version-update-considerations.md#source-compatible-changes)。 一般情況下，變更為 `ValueTask` 則不是。
 
 ## <a name="numeric-literal-syntax-improvements"></a>數值常值的語法增強功能
 

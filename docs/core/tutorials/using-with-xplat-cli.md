@@ -3,14 +3,14 @@ title: 從使用 CLI 開始使用 .NET Core
 description: 本逐步教學課程說明如何使用 .NET Core 命令列介面 (CLI) 在 Windows、Linux 或 macOS 上開始使用 .NET Core。
 author: cartermp
 ms.author: mairaw
-ms.date: 03/08/2017
+ms.date: 09/10/2018
 ms.technology: dotnet-cli
-ms.openlocfilehash: 5ec7168ebc2ee4fc428d1ab520e986842f111ca7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: b31a0324c0d762e9898c681cc6581b3860d41f89
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44200313"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47203757"
 ---
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>使用命令列在 Windows/Linux/macOS 上開始使用 .NET Core
 
@@ -20,7 +20,7 @@ ms.locfileid: "44200313"
 
 ## <a name="prerequisites"></a>必要條件
 
-- [.NET Core SDK 1.0](https://www.microsoft.com/net/download/core)。
+- [.NET Core SDK 2.1](https://www.microsoft.com/net/download/core)。
 - 您選擇的文字編輯器或程式碼編輯器。
 
 ## <a name="hello-console-app"></a>嗨，主控台應用程式！
@@ -31,7 +31,6 @@ ms.locfileid: "44200313"
 
 ```console
 $ dotnet new console
-$ dotnet restore
 $ dotnet run
 ```
 
@@ -60,13 +59,12 @@ $ dotnet run
 
    [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-2. `$ dotnet restore`
+   `dotnet new` 會隱含地呼叫 [`dotnet restore`](../tools/dotnet-restore.md)。 `dotnet restore` 呼叫 [NuGet](https://www.nuget.org/) (.NET 套件管理員)，以還原相依性的樹狀結構。 NuGet 會分析 Hello.csproj 檔案、下載檔案中所述的相依性 (或從您電腦上的快取抓取)，並寫入 obj/project.assets.json 檔案，該檔案是編譯及執行範例的必要項目。 
+   
+   > [!IMPORTANT]
+   > 如果您使用 .NET Core 1.x 版本的 SDK，則必須在呼叫 `dotnet new` 之後自行呼叫 `dotnet restore`。
 
-   [`dotnet restore`](../tools/dotnet-restore.md) 呼叫 [NuGet](https://www.nuget.org/) (.NET 套件管理員)，以還原相依性的樹狀結構。 NuGet 會分析 *Hello.csproj* 檔案、下載檔案中所述的相依性 (或從您電腦上的快取抓取)，並寫入 *obj/project.assets.json* 檔案。  必須要有 *project.assets.json* 檔案才能夠編譯並執行。
-
-   *project.assets.json* 檔案是一組持續性且完整的 NuGet 相依性圖形，也包含了描述應用程式的其他資訊。  其他工具，例如 [`dotnet build`](../tools/dotnet-build.md) 和 [`dotnet run`](../tools/dotnet-run.md)，會讀取這個檔案，以便它們能用正確的 NuGet 相依性集合與繫結解析，處理原始程式碼。
-
-3. `$ dotnet run`
+2. `$ dotnet run`
 
    [`dotnet run`](../tools/dotnet-run.md) 呼叫 [`dotnet build`](../tools/dotnet-build.md) 以確保建置目標已經建置好，然後呼叫 `dotnet <assembly.dll>` 執行目標應用程式。
 
@@ -75,10 +73,9 @@ $ dotnet run
     Hello World!
     ```
 
-    或者，您也可以執行 [`dotnet build`](../tools/dotnet-build.md) 來編譯程式碼，而不執行建置主控台應用程式。 這會產生編譯成 DLL 檔案的應用程式，您可以在 Windows 上使用 `dotnet bin\Debug\netcoreapp1.0\Hello.dll` (在非 Windows 系統上則使用 `/`) 來執行此應用程式。 您也可以指定應用程式的引數，您將於稍後看到該主題。
-
+    或者，您也可以執行 [`dotnet build`](../tools/dotnet-build.md) 來編譯程式碼，而不執行建置主控台應用程式。 這會產生編譯成 DLL 檔案的應用程式，您可以在 Windows 上使用 `dotnet bin\Debug\netcoreapp2.1\Hello.dll` (在非 Windows 系統上則使用 `/`) 來執行此應用程式。 您也可以指定應用程式的引數，您將於稍後看到該主題。
     ```console
-    $ dotnet bin\Debug\netcoreapp1.0\Hello.dll
+    $ dotnet bin\Debug\netcoreapp2.1\Hello.dll
     Hello World!
     ```
 

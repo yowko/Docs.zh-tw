@@ -3,12 +3,12 @@ title: 主控台應用程式
 description: 本教學課程會教導您一些 .NET Core 和 C# 語言中的功能。
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: bae03c9ae02f2888b1b70617ca712ef7927e9dce
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: da3f8f913d452b5c3c9dcda6079067c879a678dd
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961413"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46937588"
 ---
 # <a name="console-application"></a>主控台應用程式
 
@@ -20,7 +20,7 @@ ms.locfileid: "37961413"
 - .NET 中檔案 I/O API 的基本概念
 - .NET 中以工作為基礎的非同步程式設計的基本概念
 
-您將建置一個應用程式，此應用程式會讀取文字檔，並將該文字檔的內容回應至主控台。 對主控台之輸出的步調會符合可大聲朗讀它的步調。 您可以按 ‘<’ 或 ‘>’ 鍵來將該步調調快或調慢。
+您將建置一個應用程式，此應用程式會讀取文字檔，並將該文字檔的內容回應至主控台。 對主控台之輸出的步調會符合可大聲朗讀它的步調。 您可以按 ‘<’ (小於) 或 ‘>’ (大於) 鍵來將該步調調快或調慢。
 
 本教學課程中有許多功能。 讓我們來逐一建置它們。
 
@@ -190,7 +190,7 @@ ShowTeleprompter().Wait();
 > [!NOTE]
 > 如果您使用 C# 7.1 或更新版本，則可以使用 [`async` `Main` 方法](../whats-new/csharp-7-1.md#async-main)建立主控台應用程式。
 
-接著，您必須撰寫第二個非同步方法，以從主控台進行讀取並監視 ‘<’ 和 ‘>’ 鍵。 以下是您針對該工作新增的方法：
+接著，您必須撰寫第二個非同步方法，以從主控台進行讀取並監視 ‘<’ (小於) 和 ‘>’ (大於) 鍵。 以下是您針對該工作新增的方法：
 
 ```csharp
 private static async Task GetInput()
@@ -214,7 +214,7 @@ private static async Task GetInput()
 }
 ```
 
-這會建立 lambda 運算式來代表 <xref:System.Action> 委派，此委派會從主控台讀取機碼，並修改代表使用者按 ‘<’ 或 ‘>’ 鍵時之延遲的區域變數。 此方法會使用 <xref:System.Console.ReadKey> 來封鎖並等候使用者按下按鍵。
+這會建立 lambda 運算式來代表 <xref:System.Action> 委派，此委派會從主控台讀取機碼，並修改使用者按 ‘<’ (小於) 或 ‘>’ (大於) 鍵時，代表延遲的區域變數。 此方法會使用 <xref:System.Console.ReadKey> 來封鎖並等候使用者按下按鍵。
 
 若要完成此功能，您必須建立一個會傳回方法的新 `async Task`，該方法既會啟動這兩項工作 (`GetInput` 和 `ShowTeleprompter`)，也會管理這兩項工作之間的共用資料。
 
@@ -277,10 +277,10 @@ private static async Task RunTeleprompter()
 private static async Task ShowTeleprompter(TelePrompterConfig config)
 {
     var words = ReadFrom("sampleQuotes.txt");
-    foreach (var line in words)
+    foreach (var word in words)
     {
-        Console.Write(line);
-        if (!string.IsNullOrWhiteSpace(line))
+        Console.Write(word);
+        if (!string.IsNullOrWhiteSpace(word))
         {
             await Task.Delay(config.DelayInMilliseconds);
         }

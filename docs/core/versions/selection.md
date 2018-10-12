@@ -4,12 +4,12 @@ description: 了解 .NET Core 如何尋找及選擇適合您程式的執行階�
 author: billwagner
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: 21697aa773abfbd88288d47323402a48c51d69ae
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 28a76cc17346c40517a21e8dc902bd6c2a84597f
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44204860"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47233194"
 ---
 # <a name="net-core-version-selection"></a>.NET Core 版本選取
 
@@ -31,7 +31,12 @@ ms.locfileid: "44204860"
 
 ## <a name="the-sdk-uses-the-latest-installed-version"></a>SDK 使用最新安裝的版本
 
-SDK 命令包含 `dotnet new` 或 `dotnet run`。 `dotnet` CLI 必須為任何命令選擇 SDK 版本。 根據預設，.NET Core CLI 使用電腦上最新安裝的 SDK。 安裝 .NET Core SDK v2.1.301 時，即使您使用的專案以 .NET Core Runtime 2.0 為目標，您也會使用此版本。 您將會使用最新的預覽版本和發行版本。 您可以利用最新的 SDK 功能和增強功能，同時以舊版 .NET Core 執行階段為目標。 您可以在不同專案上以多個 .NET Core 執行階段版本為目標，並針對所有專案使用相同的 SDK 工具。
+SDK 命令包含 `dotnet new` 和 `dotnet run`。 `dotnet` CLI 必須為每個 dotnet 命令選擇 SDK 版本。 根據預設，.NET Core CLI 使用電腦上最新安裝的 SDK，即使：
+
+* 專案目標為較舊版本。
+* 最新版本是預覽版本。
+
+應用程式可以利用最新的 SDK 功能和增強功能，同時以舊版 .NET Core 執行階段為目標。 您可以在不同專案上以多個 .NET Core 執行階段版本為目標，並針對所有專案使用相同的 SDK 工具。
 
 在罕見的情況下，您可能需要使用舊版的 SDK。 您可以在 [*global.json* 檔案](../tools/global-json.md)中指定該版本。 「使用最新版」原則表示您只會使用 *global.json* 指定比最新安裝版本更早的 .NET Core SDK 版本。
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 9b108a1613e01016c541d088612303c6aaa13629
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: a06a5144e91901417906f071efd8e19c10cf2cba
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961462"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170648"
 ---
 # <a name="strings-c-programming-guide"></a>字串 (C# 程式設計手冊)
 字串是 <xref:System.String> 類型的物件，其值為文字。 就內部而言，文字會儲存為 <xref:System.Char> 物件的循序唯讀集合。 C# 字串的結尾沒有終止的 Null 字元，因此 C# 字串可以包含任何數目的內嵌 Null 字元 ('\0')。 字串的 <xref:System.String.Length%2A> 屬性代表它包含的 `Char` 物件數目，而非 Unicode 字元的數目。 若要存取字串中的個別 Unicode 字碼指標，請使用 <xref:System.Globalization.StringInfo> 物件。  
@@ -64,7 +64,7 @@ ms.locfileid: "37961462"
 |\U|Surrogate 字組的 Unicode 逸出序列。|\Unnnnnnnn|  
 |\u|Unicode 逸出序列|\u0041 = "A"|  
 |\v|垂直 Tab|0x000B|  
-|\x|類似 "\u" (除了變數長度之外) 的 Unicode 逸出序列。|\x0041 = "A"|  
+|\x|類似 "\u" (除了變數長度之外) 的 Unicode 逸出序列。|\x0041 或 \x41 = "A"|  
   
 > [!NOTE]
 >  在編譯時期，逐字字串會轉換為具有所有相同逸出序列的一般字串。 因此，如果您在偵錯工具監看式視窗中檢視逐字字串，您會看到由編譯器新增的逸出字元，而非來自於您原始程式碼的逐字版本。 例如，逐字字串 @"C:\files.txt" 會在監看式視窗中顯示為 "C:\\\files.txt"。  

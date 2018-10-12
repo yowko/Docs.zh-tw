@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 8f4e60eef443f772de3574d988ce48470f8c2017
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3eb1c665067d08a86fd4128381139c6829ebfd89
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856175"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46009769"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (資訊清單產生和編輯工具)
 
@@ -30,7 +30,7 @@ Mage [commands] [commandOptions]
 
 ### <a name="parameters"></a>參數
 
-下表顯示 *Mage.exe* 所支援的命令。 如需這些命令所支援選項的詳細資訊，請參閱 [新的和更新的命令選項](#NewUpdate) 和 [Sign 命令選項](#Sign)。
+下表顯示 *Mage.exe* 所支援的命令。 如需這些命令所支援選項的詳細資訊，請參閱[新增和更新命令選項](#new-and-update-command-options)和 [Sign 命令選項](#sign-command-options)。
 
 |命令|描述|
 |-------------|-----------------|
@@ -40,8 +40,7 @@ Mage [commands] [commandOptions]
 |**-s, -Sign** `[signOptions]`|使用金鑰組或 X509 憑證簽署檔案。 簽章會以 XML 項目的形式插入檔案內。<br /><br /> 簽署指定 **-TimestampUri** 值的資訊清單時，您必須連線到網際網路。|
 |**-h, -?, -Help** *[verbose]*|描述所有可用命令及其選項。 指定 `verbose` 可取得詳細的說明。|
 
-<a name="NewUpdate"></a>
-## <a name="new-and-update-command-options"></a>新的和更新的命令選項
+## <a name="new-and-update-command-options"></a>新增和更新命令選項
 
 下表顯示 `-New` 和 `-Update` 命令支援的選項：
 
@@ -70,9 +69,9 @@ Mage [commands] [commandOptions]
 |**-v, -Version** `versionNumber`|1.0.0.0|應用程式資訊清單。<br /><br /> 部署資訊清單。|部署的版本。 引數必須是格式為 "*N.N.N.N*" 的有效版本字串，其中 "*N*" 是不帶正負號的 32 位元整數。|
 |**-wpf, -WPFBrowserApp**  `isWPFApp`|False|應用程式資訊清單。<br /><br /> 部署資訊清單。|只有在應用程式是裝載在 Internet Explorer 內的 Windows Presentation Foundation (WPF) 應用程式，且不是獨立的可執行檔時，才使用這個旗標。 有效值為 "true" (或 "t") 和 "false" (或 "f")。<br /><br /> 若為應用程式資訊清單，會在應用程式資訊清單的 `hostInBrowser` 項目底下插入 `entryPoint` 屬性。<br /><br /> 若為部署資訊清單，會將 `install` 項目上的 `deployment` 屬性設為 false，並將部署資訊清單儲存成副檔名為 .xbap 的檔案。 這個引數與 **-Install** 引數一起指定時會產生錯誤，因為瀏覽器裝載的應用程式不能是已安裝的離線應用程式。|
 
-<a name="Sign"></a>
 ## <a name="sign-command-options"></a>Sign 命令選項
- 下表顯示 `-Sign` 命令支援的選項，這些選項可以套用至所有類型的檔案。
+
+下表顯示 `-Sign` 命令支援的選項，這些選項可以套用至所有類型的檔案。
 
 |選項|描述|
 |-------------|-----------------|
@@ -105,7 +104,11 @@ mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
 
  應用程式資訊清單同時也支援自訂信任的區段。 這可以協助應用程式遵守「要求最少使用權限」的安全性原則，因為您可以將資訊清單設定成只要求執行應用程式所需的特定使用權限。 *Mage.exe* 不直接支援新增自訂信任區段。 您可以使用文字編輯器、XML 剖析器或圖形工具 *MageUI.exe* 來新增一個區段。 如需如何使用 *MageUI.exe* 新增自訂信任區段的詳細資訊，請參閱 [MageUI.exe (圖形用戶端、資訊清單產生和編輯工具)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)。
 
- 以 *Mage.exe* 第 4 版建立的新資訊清單會以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 為目標，而該程式隨附於 Visual Studio 2010。 若要以舊版的 .NET Framework 為目標，您必須使用舊版的 *Mage.exe*。 當從現有的資訊清單新增或移除組件或重新簽署現有的資訊清單時，*Mage.exe* 並不會以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 為目標更新資訊清單。 下表顯示這些功能和限制。
+Visual Studio 2017 包含 *Mage.exe* 的 4.6.1 版。 使用此版本的 *Mage.exe* 建立的資訊清單以 .NET Framework 4 為目標。 若要以舊版的 .NET Framework 為目標，請使用舊版的 *Mage.exe*。
+
+當從現有的資訊清單新增或移除組件或重新簽署現有的資訊清單時，*Mage.exe* 並不會以 .NET Framework 4 為目標更新資訊清單。
+
+下表顯示這些功能和限制：
 
 |資訊清單版本|運算|Mage v2.0|Mage v4.0|
 |----------------------|---------------|---------------|---------------|
@@ -131,7 +134,9 @@ mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
 ||加入組件|不支援|確定|
 ||移除組件|不支援|確定|
 
- Mage.exe 會建立以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]為目標的新資訊清單。 以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 為目標的 ClickOnce 應用程式可以在 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 及 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]完整版本上執行。 如果您的應用程式以 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 的完整版本為目標，而且無法在 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]上執行，請使用文字編輯器移除用戶端 `<framework>` 項目，並且重新簽署資訊清單。 下列是以 `<framework>` 為目標的 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]項目範例。
+ Mage.exe 會建立以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]為目標的新資訊清單。 以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 為目標的 ClickOnce 應用程式可以在 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 和完整版的 .NET Framework 4 上執行。 如果您的應用程式以完整版的 .NET Framework 4 為目標，而且無法在 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 上執行，請使用文字編輯器移除用戶端 `<framework>` 元素，並且重新簽署資訊清單。
+
+下列是以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 為目標的範例 `<framework>` 元素：
 
 ```xml
 <framework targetVersion="4.0" profile="client" supportedRuntime="4.0.20506" />
@@ -195,7 +200,7 @@ mage -Update HelloWorld.deploy -AppCodeBase http://anotherserver/HelloWorld/1.1.
 mage -Sign deploy.application -CertFile cert.pfx -Password <passwd>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)
 - [逐步解說：手動部署 ClickOnce 應用程式](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)

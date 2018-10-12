@@ -4,12 +4,12 @@ description: 了解套件、中繼套件和架構的術語。
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: f10965a8f5f2848f2b942b92577adf3185d8bd3c
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: e68c63d26133ac76b718bb3696d16c81bd943dc2
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472798"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45597664"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>套件、中繼套件和架構
 
@@ -56,7 +56,7 @@ ms.locfileid: "34472798"
 
 中繼套件一種 NuGet 套件慣例，其用來描述可合理搭配的一組套件。 中繼套件可將套件設為具有相依性，以代表這組套件。 中繼套件也可以選擇性地指定架構，以為這組套件建立架構。 
 
-根據預設，舊版的 .NET Core 工具 (project.json 和 csproj 工具) 已指定架構和中繼套件。 不過目前，目標架構會隱含參考中繼套件，因此每個中繼套件都會繫結至目標架構。 例如，`netstandard1.6` 架構會參考 NetStandard.Library 1.6.0 版的中繼套件。 同樣地，`netcoreapp1.1` 架構會參考 Microsoft.NETCore.App 1.1.0 版的中繼套件。 如需詳細資訊，請參閱 [Implicit metapackage package reference in the .NET Core SDK](https://github.com/dotnet/core/blob/master/release-notes/1.0/sdk/1.0-rc3-implicit-package-refs.md) (.NET Core SDK 中的隱含中繼套件參考)。
+根據預設，舊版的 .NET Core 工具 (project.json 和 csproj 工具) 已指定架構和中繼套件。 不過目前，目標架構會隱含參考中繼套件，因此每個中繼套件都會繫結至目標架構。 例如，`netstandard1.6` 架構會參考 NetStandard.Library 1.6.0 版的中繼套件。 同樣地，`netcoreapp2.1` 架構會參考 Microsoft.NETCore.App 2.1.0 版的中繼套件。 如需詳細資訊，請參閱 [Implicit metapackage package reference in the .NET Core SDK](https://github.com/dotnet/core/blob/master/release-notes/1.0/sdk/1.0-rc3-implicit-package-refs.md) (.NET Core SDK 中的隱含中繼套件參考)。
 
 設定架構目標並隱含參考中繼套件，表示您實際上是以單一動作來新增每個相依套件的參考。 這會讓這些套件中的所有程式庫都可供 IntelliSense (或類似體驗) 使用，以及用於發行您的應用程式。  
 

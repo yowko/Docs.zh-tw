@@ -10,11 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3dad3e33968b72d199b412c65f04a4079020f78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6a879cce8eb429e2daeaa5db963b3d95d1e944da
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171370"
 ---
 # <a name="task-based-asynchronous-programming"></a>以工作為基礎的非同步程式設計
 工作平行程式庫 (TPL) 是以「工作」(Task) 的概念為基礎，工作表示非同步作業。 在某些方面，工作類似執行緒或 <xref:System.Threading.ThreadPool> 工作項目，但是抽象等級較高。 「工作平行處理原則」(Task Parallelism) 是指同時執行一個或多個獨立工作。 工作主要提供兩項優點：  
@@ -58,10 +59,10 @@ ms.lasthandoff: 05/04/2018
  [!code-csharp[TPL_TaskIntro#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/run1.cs#2)]
  [!code-vb[TPL_TaskIntro#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/run1.vb#2)]  
   
- 您也可以使用 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 方法直接以一道作業建立並啟動工作。 如果建立和排程不需要分開，且您需要其他工作建立選項或使用特定排程器，或是如果需要透過其 <xref:System.Threading.Tasks.Task.AsyncState%2A> 屬性將其他狀態傳遞至工作 (如下面範例所示)，請使用這個方法。  
+ 您也可以使用 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 方法直接以一道作業建立並啟動工作。 如果建立和排程不需要分開，且您需要其他工作建立選項或使用特定排程器，或是如果需要透過其 <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType> 屬性將其他狀態傳遞至您可以擷取的工作 (如下面範例所示)，請使用這個方法。  
   
- [!code-csharp[TPL_TaskIntro#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/startnew1.cs#3)]
- [!code-vb[TPL_TaskIntro#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/startnew1.vb#3)]  
+ [!code-csharp[TPL_TaskIntro#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/asyncstate.cs#23)]
+ [!code-vb[TPL_TaskIntro#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/asyncstate.vb#23)]  
   
  <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 都會公開靜態 <xref:System.Threading.Tasks.Task.Factory%2A> 屬性，這個屬性會傳回 <xref:System.Threading.Tasks.TaskFactory> 的預設執行個體，讓您以 `Task.Factory.StartNew()` 的形式呼叫這個方法。 另外，在下面範例中，每個工作都屬於 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 類型，因此它們都各自具有包含計算結果的公用 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 屬性。 這些工作會以非同步方式執行，且可能以任何順序完成。 如果在計算完成之前就存取 <xref:System.Threading.Tasks.Task%601.Result%2A> 屬性，則這個屬性會封鎖呼叫端執行緒，直到有值為止。  
   
@@ -266,6 +267,7 @@ ms.lasthandoff: 05/04/2018
 |[資料平行處理原則](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|說明如何使用 <xref:System.Threading.Tasks.Parallel.For%2A> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 建立資料的平行迴圈。|  
 |[平行程式設計](../../../docs/standard/parallel-programming/index.md)|.NET Framework 平行程式設計的最上層節點。|  
   
-## <a name="see-also"></a>請參閱  
- [平行程式設計](../../../docs/standard/parallel-programming/index.md)  
- [使用 .NET Framework 進行平行程式設計的範例](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
+## <a name="see-also"></a>另請參閱
+
+- [平行程式設計](../../../docs/standard/parallel-programming/index.md)  
+- [使用 .NET Framework 進行平行程式設計的範例](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

@@ -1,24 +1,28 @@
 ---
 title: .NET 的平行程式設計
-ms.date: 03/30/2017
+ms.date: 09/12/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - parallel programming
 ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 372ffd7e17f60b8045cd5f89d52456c5f9655de1
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3d1cd0b797373da4cab59484e3e6302927d821ed
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43802299"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47112716"
 ---
 # <a name="parallel-programming-in-net"></a>.NET 的平行程式設計
 
-許多個人電腦和工作站都具有多個 CPU 核心，以便能夠同時執行多個執行緒。 不久的將來，電腦應該會具有更多的核心。 若要利用現今和未來的硬體優勢，您可以將您的程式碼平行化，以便將工作分散到多個處理器。 在過去，平行化作業需要在低階操作執行緒和鎖定。 Visual Studio 2010 與 .NET Framework 4 提供了新的執行階段、新的類別庫類型和新的診斷工具，以加強支援平行程式設計。 這些功能簡化了平行開發作業，讓您能夠利用簡單常見的語法，撰寫效率高、精細且具彈性的平行程式碼，而不需要直接使用執行緒或執行緒集區。 下圖提供 .NET Framework 4 中平行程式設計架構的高階概觀。
+許多個人電腦和工作站都具有多個 CPU 核心，以便能夠同時執行多個執行緒。 若要利用硬體優勢，您可以將您的程式碼平行化，以便將工作分散到多個處理器。
 
- ![.NET 平行程式設計架構](./media/tpl-architecture.png "TPL_Architecture")
+在過去，平行化作業需要在低階操作執行緒和鎖定。 Visual Studio 與 .NET Framework 提供了執行階段、類別庫類型和診斷工具，以加強支援平行程式設計。 從 .NET Framework 4 引進的這些功能簡化了平行開發。 您能夠利用簡單常見的語法，撰寫效率高、精細且具彈性的平行程式碼，而不需要直接使用執行緒或執行緒集區。
+
+下圖提供 .NET Framework 中平行程式設計架構的高階概觀：
+
+![.NET 平行程式設計架構](./media/tpl-architecture.png)
 
 ## <a name="related-topics"></a>相關主題
 

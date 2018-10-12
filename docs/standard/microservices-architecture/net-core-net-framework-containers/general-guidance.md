@@ -3,13 +3,13 @@ title: 一般指引
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 一般指引
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/18/2017
-ms.openlocfilehash: bd654c23cf8a8d0986575642ef25d6864251a4e4
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/11/2018
+ms.openlocfilehash: e77065614423cd2e7fdb51258a8c7650280d0400
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104075"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46537822"
 ---
 # <a name="general-guidance"></a>一般指引
 
@@ -27,7 +27,7 @@ ms.locfileid: "37104075"
 
 使用 .NET Core 的另一個優點便是您可以在相同的電腦上針對應用程式執行並存的 .NET 版本。 這項優點對不使用容器的伺服器或 VM 來說更為重要，因為容器會隔離應用程式需要的 .NET 版本。 (只要他們與基礎 OS 相容。)
 
-您應該在下列情況下針對您的容器化 Docker 伺服器應用程式使用 .NET Framework，並搭配 Windows 容器：
+在下列情況下，您應為容器化 Docker 伺服器應用程式使用 .NET Framework：
 
 -   您的應用程式目前使用的是 .NET Framework，並且對 Windows 具有強烈的相依性。
 
@@ -35,15 +35,15 @@ ms.locfileid: "37104075"
 
 -   您需要使用的協力廠商 .NET 程式庫或 NuGet 套件不適用 .NET Core。
 
-在 Docker 上使用 .NET Framework 可藉由將部署問題降至最低來改善您的部署體驗。 這項[*「隨即轉移」案例*](https://aka.ms/liftandshiftwithcontainersebook)對容器化原本使用傳統式 .NET Framework (例如 ASP.NET WebForm、MVC Web 應用程式或 WCF (Windows Communication Foundation) 服務) 開發的舊版應用程式來說非常重要。
+在 Docker 上使用 .NET Framework 可藉由將部署問題降至最低來改善您的部署體驗。 這項[「隨即轉移」案例](https://aka.ms/liftandshiftwithcontainersebook)對容器化原本使用傳統 .NET Framework (例如 ASP.NET WebForm、MVC Web 應用程式或 WCF (Windows Communication Foundation) 服務) 開發的舊版應用程式來說非常重要。
 
 ### <a name="additional-resources"></a>其他資源
 
--   **e-book: Modernize existing .NET Framework applications with Azure and Windows Containers (電子書：使用 Azure 和 Windows 容器現代化現有的 .NET Framework 應用程式)**
-    [*https://aka.ms/liftandshiftwithcontainersebook*](https://aka.ms/liftandshiftwithcontainersebook)
+-   **電子書：使用 Azure 和 Windows 容器現代化現有的 .NET Framework 應用程式**  
+    https://aka.ms/liftandshiftwithcontainersebook
 
--   **Sample apps: Modernization of legacy ASP.NET web apps by using Windows Containers (應用程式範例：使用 Windows 容器現代化舊版 ASP.NET Web 應用程式)**
-    [*https://aka.ms/eshopmodernizing*](https://aka.ms/eshopmodernizing)
+-   **應用程式範例：使用 Windows 容器現代化舊版 ASP.NET Web 應用程式**  
+    https://aka.ms/eshopmodernizing
 
 
 >[!div class="step-by-step"]

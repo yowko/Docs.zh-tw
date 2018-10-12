@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e3a7024489078a21a8665bf8e875e3f7393680f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 351bf675d33a060019cbf22437d7945537a21707
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503027"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47236134"
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 移轉問題
 
@@ -32,11 +32,9 @@ ms.locfileid: "43503027"
 
 * [XML](#xml)
 
-如需本主題中問題的較高階概觀，請參閱 [.NET Framework 4 移轉手冊](https://msdn.microsoft.com/library/ff657133(v=vs.100).aspx)。
+如需本主題中問題的較高階概觀，請參閱 [.NET Framework 4 移轉手冊](/previous-versions/dotnet/netframework-4.0/ff657133(v=vs.100))。
 
-針對 Beta 2 之後的移轉問題，請參閱 [Migration Issues for .NET Framework 4 Applications: Beta 2 to RTM](https://go.microsoft.com/fwlink/?LinkId=191505) (.NET Framework 4 應用程式的移轉問題：Beta 2 到 RTM)。
-
-如需新功能的資訊，請參閱 [.NET Framework 4 的新功能](https://msdn.microsoft.com/library/ms171868(v=vs.100).aspx)。
+如需新功能的資訊，請參閱 [.NET Framework 4 的新功能](/previous-versions/dotnet/netframework-4.0/ms171868(v=vs.100))。
 
 ## <a name="aspnet-and-web"></a>ASP.NET 和 Web
 
@@ -46,10 +44,10 @@ ms.locfileid: "43503027"
 | ------- | ------------------------ | ------------------- |
 | **瀏覽器定義檔** | 瀏覽器定義檔已更新成包含新增和已更新瀏覽器及裝置的資訊。 已移除 Netscape Navigator 這類較舊的瀏覽器和裝置，並已新增 Google Chrome 和 Apple iPhone 這類較新的瀏覽器和裝置。<br><br>如果您的應用程式包含繼承自其中一個已移除瀏覽器定義的自訂瀏覽器定義，則您會看到錯誤。<br><br><xref:System.Web.HttpBrowserCapabilities> 物件 (由頁面的 `Request.Browse` 屬性所公開) 是透過瀏覽器定義檔所驅動。 因此，ASP.NET 4 中存取此物件的屬性所傳回的資訊，可能會與舊版 ASP.NET 中所傳回的資訊不同。 | 如果您的應用程式依賴舊的瀏覽器定義檔，則可以從下列資料夾中複製它們：<br><br>*Windows\\Microsoft.NET\\Framework\\v2.0.50727\\CONFIG\\Browsers*<br><br>將檔案複製至 ASP.NET 4 的對應 \\CONFIG\\Browsers 資料夾。 在您複製檔案之後，請執行 [Aspnet_regbrowsers.exe](https://msdn.microsoft.com/library/ms229858.aspx) 命令列工具。 如需詳細資訊，請參閱 [http://www.asp.net/mobile](https://go.microsoft.com/fwlink/?LinkId=182900) 網站。 |
 | **在混合 ASP.NET 版本下執行的子應用程式** | 因為發生組態或編譯錯誤，所以可能無法啟動設定為執行舊版 ASP.NET 之應用程式子系的 ASP.NET 4 應用程式。 發生的特定錯誤取決於應用程式是在 IIS 6.0 還是 IIS 7 或 IIS 7.5 下執行。 | 您可以變更受影響應用程式的組態檔，讓組態系統正確地辨識 ASP.NET 4 應用程式。 如需您必須進行之變更的資訊，請參閱 ASP.NET 網站之 [ASP.NET 4 Breaking Changes](https://go.microsoft.com/fwlink/?LinkId=182908) (ASP.NET 4 最新變更) 文件中的＜ASP.NET 4 Child Applications Fail to Start When Under ASP.NET 2.0 or ASP.NET 3.5 Applications＞(在 ASP.NET 2.0 或 ASP.NET 3.5 應用程式下時，無法啟動 ASP.NET 4 子應用程式) 一節。 |
-| **ClientID 變更** | ASP.NET 4 中的新 `clientIDMode` 設定可讓您指定 ASP.NET 如何產生 HTML 項目的 `id` 屬性。 在舊版 ASP.NET 中，預設行為相當於 `clientIDMode` 的 `AutoID` 設定。 預設設定現在為 `Predictable`。 如需詳細資訊，請參閱 [ASP.NET 網頁伺服器控制項識別](https://msdn.microsoft.com/library/1d04y8ss(v=vs.100).aspx)。 | 如果您使用 Visual Studio 2010 從 ASP.NET 2.0 或 ASP.NET 3.5 升級應用程式，則工具會自動將設定新增至 Web.config 檔案，以保留舊版 .NET Framework 的行為。 不過，如果您將 IIS 中的應用程式集區變更成以.NET Framework 4 為目標來升級應用程式，則 ASP.NET 預設會使用新模式。 若要停用新的用戶端識別碼模式，請在 Web.config 檔案中新增下列設定：<br><br>`<pages clientIDMode="AutoID" />` |
+| **ClientID 變更** | ASP.NET 4 中的新 `clientIDMode` 設定可讓您指定 ASP.NET 如何產生 HTML 項目的 `id` 屬性。 在舊版 ASP.NET 中，預設行為相當於 `clientIDMode` 的 `AutoID` 設定。 預設設定現在為 `Predictable`。 如需詳細資訊，請參閱 [ASP.NET 網頁伺服器控制項識別](https://msdn.microsoft.com/library/1d04y8ss(v=vs.100).aspx)。 | 如果您使用 Visual Studio 從 ASP.NET 2.0 或 ASP.NET 3.5 升級應用程式，則工具會自動將設定新增至 Web.config 檔案，以保留舊版 .NET Framework 的行為。 不過，如果您將 IIS 中的應用程式集區變更成以.NET Framework 4 為目標來升級應用程式，則 ASP.NET 預設會使用新模式。 若要停用新的用戶端識別碼模式，請在 Web.config 檔案中新增下列設定：<br><br>`<pages clientIDMode="AutoID" />` |
 | **程式碼存取安全性 (CAS)** | 已在 ASP.NET 3.5 中新增的 ASP.NET 2.0 NET 功能使用 .NET Framework 1.1 和 .NET Framework 2.0 程式碼存取安全性 (CAS) 模型。 不過，已大幅全面檢查 ASP.NET 4 中 CAS 的實作。 因此，如果部分信任 ASP.NET 應用程式依賴在全域組件快取中執行的受信任程式碼，則可能會因各種安全性例外狀況而失敗。 依賴對電腦 CAS 原則進行大量修改的部分信任應用程式可能也會失敗，並擲回安全性例外狀況。 | 在 `trust` 組態項目中使用新 `legacyCasModel` 屬性，即可將部分信任 ASP.NET 4 應用程式還原為 ASP.NET 1.1 和 2.0 的行為，如下列範例所示：<br><br>`<trust level= "Medium" legacyCasModel="true" />`<br><br>重要事項： 還原為舊版 CAS 模型可能代表安全性降低。<br><br>如需新 ASP.NET 4 程式碼存取安全性模型的詳細資訊，請參閱 [ASP.NET 4 應用程式中的程式碼存取安全性](https://msdn.microsoft.com/library/dd984947.aspx)。 |
-| **組態檔** | .NET Framework 和 ASP.NET 4 的根組態檔 (machine.config 檔案和根 Web.config 檔案) 已更新成包含 ASP.NET 3.5 之應用程式 Web.config 檔案中的大部分未定案組態資訊。 因為受管理 IIS 7 和 IIS 7.5 組態系統的複雜度，所以在 ASP.NET 4 以及 IIS 7 和 IIS 7.5 下執行 ASP.NET 3.5 應用程式可能會導致 ASP.NET 錯誤或 IIS 錯誤。 | 使用 Visual Studio 2010 中的專案升級工具，以將 ASP.NET 3.5 應用程式升級至 ASP.NET 4。 Visual Studio 2010 會自動修改 ASP.NET 3.5 應用程式的 Web.config 檔案，以包含 ASP.NET 4 的適當設定。<br><br>不過，您可以使用 .NET Framework 4 來執行 ASP.NET 3.5 應用程式，而不需要重新編譯。 在該情況下，您可能必須先手動修改應用程式的 Web.config 檔案，才能在 .NET Framework 4 和 IIS 7 或 IIS 7.5 下執行應用程式。 您必須進行的特定變更取決於正在使用的軟體組合，包含 Service Pack (SP) 版本。 如需受這項變更影響的可能軟體組合以及如何解決特定組合的問題的資訊，請參閱 ASP.NET 網站之 [ASP.NET 4 Breaking Changes](https://go.microsoft.com/fwlink/?LinkId=182908) (ASP.NET 4 最新變更) 文件中的＜Configuration Errors Related to New ASP.NET 4 Root Configuration＞(與新 ASP.NET 4 根組態相關的組態錯誤) 一節。 |
-| **控制項轉譯** | 在舊版 ASP.NET 中，某些控制項已發出您無法停用的標記。 根據預設，ASP.NET 4 中不再產生這種類型的標記。 轉譯變更會影響下列控制項：<br><br>* `Image` 和 `ImageButton` 控制項不再轉譯 `border="0"` 屬性。<br>* `BaseValidator` 類別以及從中衍生的驗證控制項預設不再轉譯紅色文字。<br>* `HtmlForm` 控制項不會轉譯 `name` 屬性。<br>* `Table` 控制項不再轉譯 `border="0"` 屬性。<br><br>如果未針對使用者輸入設計的控制項 (例如，`Label` 控制項) 的 `Enabled` 屬性設定為 `false` (或者，如果它們從容器控制項繼承此設定)，則它們不再轉譯 `disabled="disabled"` 屬性。 | 如果您使用 Visual Studio 2010 從 ASP.NET 2.0 或 ASP.NET 3.5 升級應用程式，則工具會自動將設定新增至 Web.config 檔案，以保留舊版轉譯。 不過，如果您將 IIS 中的應用程式集區變更成以.NET Framework 4 為目標來升級應用程式，則 ASP.NET 預設會使用新轉譯模式。 若要停用新的轉譯模式，請在 Web.config 檔案中新增下列設定：<br><br>`<pages controlRenderingCompatibilityVersion="3.5" />` |
+| **組態檔** | .NET Framework 和 ASP.NET 4 的根組態檔 (machine.config 檔案和根 Web.config 檔案) 已更新成包含 ASP.NET 3.5 之應用程式 Web.config 檔案中的大部分未定案組態資訊。 因為受管理 IIS 7 和 IIS 7.5 組態系統的複雜度，所以在 ASP.NET 4 以及 IIS 7 和 IIS 7.5 下執行 ASP.NET 3.5 應用程式可能會導致 ASP.NET 錯誤或 IIS 錯誤。 | 使用 Visual Studio 中的專案升級工具，以將 ASP.NET 3.5 應用程式升級至 ASP.NET 4。 Visual Studio 2010 會自動修改 ASP.NET 3.5 應用程式的 Web.config 檔案，以包含 ASP.NET 4 的適當設定。<br><br>不過，您可以使用 .NET Framework 4 來執行 ASP.NET 3.5 應用程式，而不需要重新編譯。 在該情況下，您可能必須先手動修改應用程式的 Web.config 檔案，才能在 .NET Framework 4 和 IIS 7 或 IIS 7.5 下執行應用程式。 您必須進行的特定變更取決於正在使用的軟體組合，包含 Service Pack (SP) 版本。 如需受這項變更影響的可能軟體組合以及如何解決特定組合的問題的資訊，請參閱 ASP.NET 網站之 [ASP.NET 4 Breaking Changes](https://go.microsoft.com/fwlink/?LinkId=182908) (ASP.NET 4 最新變更) 文件中的＜Configuration Errors Related to New ASP.NET 4 Root Configuration＞(與新 ASP.NET 4 根組態相關的組態錯誤) 一節。 |
+| **控制項轉譯** | 在舊版 ASP.NET 中，某些控制項已發出您無法停用的標記。 根據預設，ASP.NET 4 中不再產生這種類型的標記。 轉譯變更會影響下列控制項：<br><br>* `Image` 和 `ImageButton` 控制項不再轉譯 `border="0"` 屬性。<br>* `BaseValidator` 類別以及從中衍生的驗證控制項預設不再轉譯紅色文字。<br>* `HtmlForm` 控制項不會轉譯 `name` 屬性。<br>* `Table` 控制項不再轉譯 `border="0"` 屬性。<br><br>如果未針對使用者輸入設計的控制項 (例如，`Label` 控制項) 的 `Enabled` 屬性設定為 `false` (或者，如果它們從容器控制項繼承此設定)，則它們不再轉譯 `disabled="disabled"` 屬性。 | 如果您使用 Visual Studio 從 ASP.NET 2.0 或 ASP.NET 3.5 升級應用程式，則工具會自動將設定新增至 Web.config 檔案，以保留舊版轉譯。 不過，如果您將 IIS 中的應用程式集區變更成以.NET Framework 4 為目標來升級應用程式，則 ASP.NET 預設會使用新轉譯模式。 若要停用新的轉譯模式，請在 Web.config 檔案中新增下列設定：<br><br>`<pages controlRenderingCompatibilityVersion="3.5" />` |
 | **預設文件中的事件處理常式** | 已要求具有與其對應之預設文件的無副檔名 URL 時，ASP.NET 4 會將 HTML `form` 項目的 `action` 屬性值轉譯為空字串。 在舊版 ASP.NET 中，`http://contoso.com` 要求會導致 Default.aspx 要求。 在該文件中，會轉譯開啟 `form` 標記，如下列範例所示：<br><br>`<form action="Default.aspx" />`<br><br>在 ASP.NET 4 中，`http://contoso.com` 要求也會導致 Default.aspx 要求，但 ASP.NET 現在會轉譯 HTML 開啟 `form` 標記，如下列範例所示：<br><br>`<form action="" />`<br><br>`action` 屬性是空字串時，IIS `DefaultDocumentModule` 物件會建立 Default.aspx 的子要求。 在大部分的情況下，應用程式碼可以辨識此子要求，Default.aspx 頁面則會正常執行。 不過，Managed 程式碼與 IIS 7 或 IIS 7.5 整合模式之間的可能互動可能會在子要求期間讓受管理 .aspx 頁面適當地停止運作。 如果發生下列狀況，預設 .aspx 文件的子要求將會導致錯誤或未預期的行為：<br><br>* 在 `form` 項目的 `action` 屬性設定為 "" 的情況下，會將 .aspx 頁面傳送至瀏覽器。<br>* 表單會回傳至 ASP.NET。<br>* 受管理 HTTP 模組會讀取實體主體的某個部分，例如 `Request.Form` 或 `Request.Params`。 這會將 POST 要求的實體主體讀入受管理記憶體中。 因此，任何以 IIS 7 或 IIS 7.5 整合模式執行的機器碼模組都無法再使用實體主體。<br>* IIS `DefaultDocumentModule` 物件最後會執行並建立對 Default.aspx 文件的子要求。 不過，因為 Managed 程式碼的某個部分已經讀取實體主體，所以沒有實體主體可用來傳送至子要求。<br>* 針對子要求執行 HTTP 管線時，會在處理常式執行階段期間執行 .aspx 檔案的處理常式。<br><br>因為沒有實體主體，所以沒有表單變數和檢視狀態。 因此，沒有可用的 .aspx 頁面處理常式資訊，可用來判斷應該引發的事件 (如果有的話)。 因此，未執行受影響 .aspx 頁面的回傳事件處理常式。 | 如需這項變更所引發問題之解決方式的資訊，請參閱 ASP.NET 網站之 [ASP.NET 4 Breaking Changes](https://go.microsoft.com/fwlink/?LinkId=182908) (ASP.NET 4 最新變更) 文件中的＜Event Handlers Might Not Be Not Raised in a Default Document in IIS 7 or IIS 7.5 Integrated Mode＞(在預設文件中可能未以 IIS 7 或 IIS 7.5 整合模式引發事件處理常式)。 |
 | **雜湊演算法** | ASP.NET 使用加密和雜湊演算法來協助保護資料，例如表單驗證 Cookie 和檢視狀態。 ASP.NET 4 預設會將 <xref:System.Security.Cryptography.HMACSHA256> 演算法用於對 Cookie 和檢視狀態的雜湊作業。 舊版 ASP.NET 使用較舊的 <xref:System.Security.Cryptography.HMACSHA1> 演算法。 | 如果您執行混合使用 ASP.NET 2.0 和 ASP.NET 4 的應用程式，其中，表單驗證 Cookie 這類資料必須跨 .NET Framework 版本作用，請在 Web.config 檔案中新增下列設定，以設定 ASP.NET 4 Web 應用程式使用較舊的 <xref:System.Security.Cryptography.HMACSHA1> 演算法：<br><br>`<machineKey validation="SHA1" />` |
 | **在 Internet Explorer 中裝載控制項** | 您無法再於 Internet Explorer 中裝載 Windows Form 控制項，因為在 Web 上裝載控制項有更好的方案。 因此，IEHost.dll 和 IEExec.exe 組件已經從 .NET Framework 中予以移除。 | 您可以使用下列技術，在 Web 應用程式進行自訂控制項開發：<br><br>* 您可以建立 Silverlight 應用程式，並將它設定成在瀏覽器外部執行。 如需詳細資訊，請參閱 [Out-of-Browser Support](https://msdn.microsoft.com/library/dd550721(v=vs.100).aspx) (瀏覽器外用支援)。<br>* 您可以建置 XAML 瀏覽器應用程式 (XBAP) 來利用 WPF 功能 (用戶端電腦上需要 .NET Framework)。 如需詳細資訊，請參閱 [WPF XAML 瀏覽器應用程式概觀](/dotnet/framework/wpf/app-development/wpf-xaml-browser-applications-overview)。 |
@@ -63,9 +61,9 @@ ms.locfileid: "43503027"
 | **Passport 類型** | 基於 Passport 中的變更，ASP.NET 2.0 內建的 Passport 支援過時且不再支援 (現在為 Live ID SDK)。 因此，現在會使用 `ObsoleteAttribute` 屬性標示 <xref:System.Web.Security> 中與 Passport 有關的類型。 | 變更在 <xref:System.Web.Security> 命名空間中使用 Passport 類型的任何程式碼 (例如，<xref:System.Web.Security.PassportIdentity>) 使用 [SDK](https://go.microsoft.com/fwlink/?LinkId=106346)。 |
 | **FilePath 屬性中的 PathInfo 資訊** | ASP.NET 4 不再將 `PathInfo` 值包含在 <xref:System.Web.HttpRequest.FilePath>、<xref:System.Web.HttpRequest.AppRelativeCurrentExecutionFilePath> 和 <xref:System.Web.HttpRequest.CurrentExecutionFilePath> 這類屬性的傳回值中。 相反地，<xref:System.Web.HttpRequest.PathInfo> 中提供 `PathInfo` 資訊。 例如，假設有下列 URL 片段：<br><br>`/testapp/Action.mvc/SomeAction`<br><br>在舊版 ASP.NET 中，<xref:System.Web.HttpRequest> 屬性具有下列值：<br><br>* <xref:System.Web.HttpRequest.FilePath>: `/testapp/Action.mvc/SomeAction`<br>* <xref:System.Web.HttpRequest.PathInfo>：(空白)<br><br>在 ASP.NET 4 中，<xref:System.Web.HttpRequest> 屬性改為具有下列值：<br><br>* <xref:System.Web.HttpRequest.FilePath>: `/testapp/Action.mvc`<br>* <xref:System.Web.HttpRequest.PathInfo>: `SomeAction` | 檢查您的程式碼，找出依賴 <xref:System.Web.HttpRequest> 類別之屬性來傳回路徑資訊的位置；請變更程式碼以反映路徑資訊傳回方式的變更。 |
 | **要求驗證** | 為了改善要求驗證，會在要求生命週期稍早叫用 ASP.NET 要求驗證。 因此，會針對不適用於 .aspx 檔案的要求執行要求驗證，例如 Web 服務和自訂處理常式。 自訂 HTTP 模組在要求處理管線中執行時，要求驗證也會使用中。<br><br>基於這項變更，.aspx 檔案以外之資源的要求可能會擲回要求驗證錯誤。 要求管線中所執行的自訂程式碼 (例如，自訂 HTTP 模組) 也可能會擲回要求驗證錯誤。 | 如果必要，您可以使用 Web 組態檔中的下列設定，還原為只有觸發要求驗證之 .aspx 頁面的舊行為：<br><br>`<httpRuntime requestValidationMode="2.0" />`<br><br>警告：如果您還原為舊版行為，請確定現有處理常式、模組和其他自訂程式碼中的所有程式碼都會檢查可能為 XSS 攻擊向量的可能不安全 HTTP 輸入。 |
-| **路由傳送** | 如果您在 Visual Studio 2010 中建立檔案系統網站，而且網站位於資料夾名稱中包含點 (.) 的資料夾，則無法可靠地進行 URL 路由傳送。 從某些虛擬路徑傳回 HTTP 404 錯誤。 發生原因是 Visual Studio 2010 使用根虛擬目錄的不正確路徑來啟動 Visual Studio 程式開發伺服器 (Cassini)。 | * 在檔案式網站的 [屬性] 頁面中，將 [虛擬路徑] 屬性變更為 "/"。<br><br>-或-<br><br>* 建立 Web 應用程式專案，而不是網站專案。 Web 應用程式專案沒有這個問題，而且 URL 路由傳送會運作，即使專案資料夾的名稱中有一個點也是一樣。<br><br>-或-<br><br>* 建立裝載於 IIS 中的 HTTP 網站。 在虛擬路徑和專案檔資料夾中，裝載 IIS 的網站可以有點。 |
+| **路由傳送** | 如果您在 Visual Studio 2010 中建立檔案系統網站，而且網站位於資料夾名稱中包含點 (.) 的資料夾，則無法可靠地進行 URL 路由傳送。 從某些虛擬路徑傳回 HTTP 404 錯誤。 發生原因是 Visual Studio 2010 使用根虛擬目錄的不正確路徑來啟動 Visual Studio 程式開發伺服器。 | * 在檔案式網站的 [屬性] 頁面中，將 [虛擬路徑] 屬性變更為 "/"。<br><br>-或-<br><br>* 建立 Web 應用程式專案，而不是網站專案。 Web 應用程式專案沒有這個問題，而且 URL 路由傳送會運作，即使專案資料夾的名稱中有一個點也是一樣。<br><br>-或-<br><br>* 建立裝載於 IIS 中的 HTTP 網站。 在虛擬路徑和專案檔資料夾中，裝載 IIS 的網站可以有點。 |
 | **SharePoint 網站** | 如果您嘗試執行的 ASP.NET 4 網站部署為 SharePoint 網站的子系，而其包含名為 `WSS_Minimal` 的自訂部分信任層級，則會看到下列錯誤：<br><br>`Could not find permission set named 'ASP.Net'.` | 目前，沒有 SharePoint 版本與 ASP.NET 相容。 因此，您不應該嘗試將 ASP.NET 4 網站執行為 SharePoint 網站子系。 |
-| **XHTML 1.1 標準** | 若要啟用新網站的 XHTML 1.1 合規性，.NET Framework 4 中的 ASP.NET 控制項會產生符合 XHTML 1.1 標準的 HTML。 在 `<system.Web>` 項目的 Web.config 檔案中使用下列選項，以啟用這項轉譯：<br><br>`<pages controlRenderingCompatibilityVersion="4.0"/>`<br><br>此選項預設為 4.0。 基於相容性，從 Visual Studio 2008 升級至 Visual Studio 的 Web 專案會啟用 3.5 設定。 | 無。 |
+| **XHTML 1.1 標準** | 若要啟用新網站的 XHTML 1.1 合規性，.NET Framework 4 中的 ASP.NET 控制項會產生符合 XHTML 1.1 標準的 HTML。 在 `<system.Web>` 項目的 Web.config 檔案中使用下列選項，以啟用這項轉譯：<br><br>`<pages controlRenderingCompatibilityVersion="4.0"/>`<br><br>此選項預設為 4.0。 基於相容性，從 Visual Studio 2008 升級的 Web 專案會啟用 3.5 設定。 | 無。 |
 
 ## <a name="core"></a>核心
 
@@ -133,7 +131,7 @@ ms.locfileid: "43503027"
 | ------- | ------------------------ | ------------------- |
 | **緩衝區長度** (Unmanaged API) | 為了節省記憶體，[ICorProfilerInfo2::GetStringLayout](../unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) 方法之 `pBufferLengthOffset` 參數的功能已變更成符合 `pStringLengthOffset` 參數。 這兩個參數現在會指向字串長度的位移位置。 已從字串類別呈現移除緩衝區長度。 | 移除緩衝區長度的任何相依性。 |
 | **JIT 偵錯** | 若要簡化 Just-In-Time (JIT) 偵錯的註冊，.NET Framework 偵錯工具現在只會使用 AeDebug 登錄機碼，以控制機器碼的 JIT 偵錯行為。 這項變更會導致下列各項：<br><br>* 您無法再針對 Managed 和機器碼註冊兩個不同的偵錯工具。<br>* 您可以不再針對非互動式處理序自動啟動偵錯工具，但可以提示使用者進行互動式處理序。<br>* 在無法啟動偵錯工具時，或沒有應該啟動的註冊偵錯工具時，不再通知您。<br>* 不再支援取決於應用程式互動性的自動啟動原則。 | 依需要調整偵錯作業。 |
-| **平台叫用** | 為了改善與 Unmanaged 程式碼之互通性的效能，平台叫用中的不正確呼叫慣例現在會讓應用程式失敗。 在舊版本中，封送處理層會解析堆疊中的這些錯誤。 | 對 Microsoft Visual Studio 2010 中的應用程式進行偵錯將會警告您發生這些錯誤，因此您可以更正它們。<br><br>如果您有無法更新的二進位檔，則可以將 [\<NetFx40_PInvokeStackResilience>](../configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element.md) 項目包含在您應用程式的組態檔中，以解決舊版堆疊中的呼叫錯誤。 不過，這可能會影響應用程式的效能。 |
+| **平台叫用** | 為了改善與 Unmanaged 程式碼之互通性的效能，平台叫用中的不正確呼叫慣例現在會讓應用程式失敗。 在舊版本中，封送處理層會解析堆疊中的這些錯誤。 | 對 Microsoft Visual Studio 中的應用程式進行偵錯將會警告您發生這些錯誤，因此您可以更正它們。<br><br>如果您有無法更新的二進位檔，則可以將 [\<NetFx40_PInvokeStackResilience>](../configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element.md) 項目包含在您應用程式的組態檔中，以解決舊版堆疊中的呼叫錯誤。 不過，這可能會影響應用程式的效能。 |
 | **已移除介面** (Unmanaged API) | 為了避免開發人員混淆，已移除下列介面，因為它們未提供任何有用的執行階段案例，而且 CLR 未提供或接受任何實作：<br><br>* **INativeImageINativeImageDependency**<br>* **INativeImageInstallInfo**<br>* **INativeImageEvaluate**<br>* **INativeImageConverter**<br>* **ICorModule**<br>* **IMetaDataConverter** | 無。 |
 
 ## <a name="data"></a>資料
@@ -244,7 +242,7 @@ ms.locfileid: "43503027"
 
 | 功能 | 3.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
-| **點陣圖效果** | 為了改善效能，<xref:System.Windows.Media.Effects.BitmapEffect> 類別以及繼承自 <xref:System.Windows.Media.Effects.BitmapEffect> 類別的類別雖然仍然存在，但已予以停用。 如果下列條件成立，則會使用硬體加速轉譯管線來轉譯效果：<br><br>* 應用程式使用半徑屬性集小於 100 DIU 的 <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> 或 <xref:System.Windows.Media.Effects.BlurBitmapEffect>。<br>* 執行應用程式之電腦上的視訊卡支援像素著色器 2.0。<br><br>如果不符合這些條件，則 <xref:System.Windows.Media.Effects.BitmapEffect> 物件不會有任何作用。<br><br>此外，Visual Studio 2010 在遇到 <xref:System.Windows.Media.Effects.BitmapEffect> 物件或子類別時將會產生編譯器警告。<br><br><xref:System.Windows.Media.DrawingContext.PushEffect%2A> 方法已標示為過時。 | 停止使用舊版 <xref:System.Windows.Media.Effects.BitmapEffect> 和衍生類別，而是改成使用衍生自 <xref:System.Windows.Media.Effects.Effect> 的新類別：<xref:System.Windows.Media.Effects.BlurEffect>、<xref:System.Windows.Media.Effects.DropShadowEffect> 和 <xref:System.Windows.Media.Effects.ShaderEffect>。<br><br>您也可以繼承自 <xref:System.Windows.Media.Effects.ShaderEffect> 類別，來建立自己的效果。 |
+| **點陣圖效果** | 為了改善效能，<xref:System.Windows.Media.Effects.BitmapEffect> 類別以及繼承自 <xref:System.Windows.Media.Effects.BitmapEffect> 類別的類別雖然仍然存在，但已予以停用。 如果下列條件成立，則會使用硬體加速轉譯管線來轉譯效果：<br><br>* 應用程式使用半徑屬性集小於 100 DIU 的 <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> 或 <xref:System.Windows.Media.Effects.BlurBitmapEffect>。<br>* 執行應用程式之電腦上的視訊卡支援像素著色器 2.0。<br><br>如果不符合這些條件，則 <xref:System.Windows.Media.Effects.BitmapEffect> 物件不會有任何作用。<br><br>此外，Visual Studio 在遇到 <xref:System.Windows.Media.Effects.BitmapEffect> 物件或子類別時將會產生編譯器警告。<br><br><xref:System.Windows.Media.DrawingContext.PushEffect%2A> 方法已標示為過時。 | 停止使用舊版 <xref:System.Windows.Media.Effects.BitmapEffect> 和衍生類別，而是改成使用衍生自 <xref:System.Windows.Media.Effects.Effect> 的新類別：<xref:System.Windows.Media.Effects.BlurEffect>、<xref:System.Windows.Media.Effects.DropShadowEffect> 和 <xref:System.Windows.Media.Effects.ShaderEffect>。<br><br>您也可以繼承自 <xref:System.Windows.Media.Effects.ShaderEffect> 類別，來建立自己的效果。 |
 | **點陣圖框架** | 複製的 <xref:System.Windows.Media.Imaging.BitmapFrame> 物件現在會收到 <xref:System.Windows.Media.Imaging.BitmapSource.DownloadProgress>、<xref:System.Windows.Media.Imaging.BitmapSource.DownloadCompleted> 和 <xref:System.Windows.Media.Imaging.BitmapSource.DownloadFailed> 事件。 這可讓從 Web 下載並透過 <xref:System.Windows.Style> 套用至 <xref:System.Windows.Controls.Image> 控制項的映像正常運作。<br><br>只有在下列所有陳述式都成立時，您才會看到行為變更：<br><br>* 您訂閱 <xref:System.Windows.Media.Imaging.BitmapSource.DownloadProgress>、<xref:System.Windows.Media.Imaging.BitmapSource.DownloadCompleted> 或 <xref:System.Windows.Media.Imaging.BitmapSource.DownloadFailed> 事件。<br>* <xref:System.Windows.Media.Imaging.BitmapFrame> 的來源是來自 Web。<br>* 在下載仍在進行時複製 <xref:System.Windows.Media.Imaging.BitmapFrame>。 | 只有在寄件者是原始 <xref:System.Windows.Media.Imaging.BitmapFrame> 時，才會檢查事件處理常式中的寄件者，並採取動作。 |
 | **將影像解碼** | 為了防止在未解碼映像時處理 <xref:System.IO.IOException>，<xref:System.Windows.Media.Imaging.BitmapSource> 類別會在未解碼映像時引發 <xref:System.Windows.Media.Imaging.BitmapSource.DecodeFailed> 事件。 | 移除 <xref:System.IO.IOException> 的任何例外狀況處理，並使用 <xref:System.Windows.Media.Imaging.BitmapSource.DecodeFailed> 事件，以檢查解碼失敗。 |
 
@@ -321,16 +319,15 @@ ms.locfileid: "43503027"
 
 ### <a name="reference"></a>參考資料
 
-[.NET Framework 4 中的新型別和成員](https://msdn.microsoft.com/library/ff641764(v=vs.100).aspx)
+- [.NET Framework 4 中的新型別和成員](https://msdn.microsoft.com/library/ff641764(v=vs.100).aspx)
 
 ### <a name="concepts"></a>概念
 
-[.NET Framework 4 移轉手冊](https://msdn.microsoft.com/library/ff657133(v=vs.100).aspx)   
-[.NET Framework 4 的新功能](https://msdn.microsoft.com/library/ms171868(v=vs.100).aspx)   
-[.NET Framework 的版本相容性](../../../docs/framework/migration-guide/version-compatibility.md)   
-[將 Office 方案移轉至 .NET Framework 4](https://msdn.microsoft.com/library/ee207231.aspx)
+- [.NET Framework 4 移轉手冊](https://msdn.microsoft.com/library/ff657133(v=vs.100).aspx)
+- [.NET Framework 4 的新功能](https://msdn.microsoft.com/library/ms171868(v=vs.100).aspx)
+- [.NET Framework 的版本相容性](../../../docs/framework/migration-guide/version-compatibility.md)
+- [將 Office 方案移轉至 .NET Framework 4](https://msdn.microsoft.com/library/ee207231.aspx)
 
 ### <a name="other-resources"></a>其他資源
 
-[.NET Framework 的過時功能](https://msdn.microsoft.com/library/ee461502(v=vs.110).aspx)   
-[Migration Issues for .NET Framework 4 Applications: Beta 2 to RTM](https://go.microsoft.com/fwlink/?LinkId=191505) (.NET Framework 4 應用程式的移轉問題：Beta 2 到 RTM)
+- [.NET Framework 類別庫中的過時功能](../whats-new/whats-obsolete.md)

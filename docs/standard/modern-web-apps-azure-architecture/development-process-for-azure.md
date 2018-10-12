@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | Az
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: bde771051af034e7da72e9648fb3b0f37a95fa01
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: a614cfe3d3437426893d8748165b2ef4d6389765
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404385"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47231241"
 ---
 # <a name="development-process-for-azure"></a>Azure 開發程序
 
@@ -44,15 +44,15 @@ ms.locfileid: "37404385"
 
 應用程式開發生命週期從每位開發人員的電腦開始，開發人員使用其偏好的語言撰寫應用程式的程式碼，並在本機進行測試。 開發人員可以選擇偏好的原始檔控制系統，並且可使用組建伺服器或根據內建的 Azure 功能，設定持續整合 (CI) 及/或持續傳遞/部署 (CD)。
 
-若要使用 CI/CD 開始開發 ASP.NET Core 應用程式，您可以使用 Visual Studio Team Services 或您組織自有的 Team Foundation Server (TFS)。
+若要使用 CI/CD 開始開發 ASP.NET Core 應用程式，您可以使用 Azure DevOps Services 或您組織自有的 Team Foundation Server (TFS)。
 
 ### <a name="initial-setup"></a>初始設定
 
 若要建立應用程式的發行管線，您需要讓應用程式程式碼進入原始檔控制。 設定本機存放庫並在 Team 專案中將它連接至遠端存放庫。 請遵循下列指示：
 
-- [使用 Git 和 Visual Studio 共用程式碼](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs)或
+- [使用 Git 和 Visual Studio 共用程式碼](https://docs.microsoft.com/azure/devops/git/share-your-code-in-git-vs)或
 
-- [使用 TFVC 和 Visual Studio 共用程式碼](https://docs.microsoft.com/vsts/tfvc/share-your-code-in-tfvc-vs)
+- [使用 TFVC 和 Visual Studio 共用程式碼](https://docs.microsoft.com/azure/devops/tfvc/share-your-code-in-tfvc-vs)
 
 建立 Azure App Service，您將在其中部署應用程式。 前往 Azure 入口網站上的 [應用程式服務] 刀鋒視窗，建立 Web 應用程式。 按一下 [+新增]、選取 Web 應用程式範本、按一下 [建立]，然後提供名稱和其他詳細資料。 Web 應用程式將可從 {name}.azurewebsites.net 存取。
 
@@ -62,13 +62,13 @@ ms.locfileid: "37404385"
 
 每當新的程式碼認可到專案的原始檔控制存放庫時，CI 的建置程序將會執行自動化建置。 這可提供您程式碼建置 (以及在理想的情況下，通過自動化測試) 且可能部署的立即回應。 這個 CI 組建將會產生 Web 部署套件成品，並發佈它以供您的 CD 程序取用。
 
-[定義 CI 組建流程](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core#ci)
+[定義 CI 組建流程](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core#ci)
 
 請務必啟用持續整合，以便每當您小組中有人認可新的程式碼時，系統便將建置排入佇列中。 測試組建，並確認它產生 Web 部署套件作為其中一個成品。
 
 建置成功時，您的 CD 程序會將 CI 組建的結果部署至 Azure Web 應用程式。 若要設定這種情況，您需要建立及設定「發行」，這會部署到您的 Azure App Service。
 
-[定義 CD 發行程序](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core#cd)
+[定義 CD 發行程序](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core#cd)
 
 CI/CD 管線設定之後，您就可以直接更新 Web 應用程式，並認可到原始檔控制中以便部署。
 
@@ -86,7 +86,7 @@ CI/CD 管線設定之後，您就可以直接更新 Web 應用程式，並認可
 
 #### <a name="step-2-application-code-repository"></a>步驟 2： 應用程式程式碼存放庫
 
-當您準備好要與小組共用程式碼時，您應該從您的本機來源存放庫推送變更至小組的共用原始程式碼存放庫。 如果您已在自訂的分支中工作，這個步驟通常牽涉到將您的程式碼合併到共用的分支 (可能是透過[提取要求](https://docs.microsoft.com/vsts/git/pull-requests)的方式)。
+當您準備好要與小組共用程式碼時，您應該從您的本機來源存放庫推送變更至小組的共用原始程式碼存放庫。 如果您已在自訂的分支中工作，這個步驟通常牽涉到將您的程式碼合併到共用的分支 (可能是透過[提取要求](https://docs.microsoft.com/azure/devops/git/pull-requests)的方式)。
 
 #### <a name="step-3-build-server-continuous-integration-build-test-package"></a>步驟 3： 組建伺服器：持續整合。 建置、測試、封裝
 
@@ -107,7 +107,7 @@ Web 應用程式在執行時，您可以監視應用程式的健康狀態，並�
 ## <a name="references"></a>參考
 
 **建置並部署 ASP.NET Core 應用程式至 Azure**  
-<https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core>
+<https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core>
 
 >[!div class="step-by-step"]
 [上一頁](test-asp-net-core-mvc-apps.md)

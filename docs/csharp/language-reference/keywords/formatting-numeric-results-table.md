@@ -1,38 +1,60 @@
 ---
 title: 格式化數值結果表 (C# 參考)
-ms.date: 07/20/2015
+description: 深入了解 C# 標準數值格式字串
+ms.date: 09/20/2018
 helpviewer_keywords:
 - formatting [C#]
 - numeric formatting [C#]
 - String.Format method
-- Console.Write method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: 8d034955d5d5d31788eafc0c21246451d7fd1f35
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6f1cb5b49139cf9661e678cfc0ecc884a2749622
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508195"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47203887"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>格式化數值結果表 (C# 參考)
-您可以使用 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法、透過會呼叫 `String.Format` 的 <xref:System.Console.Write%2A?displayProperty=nameWithType> 或 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 方法，或使用[字串內插補點](../tokens/interpolated.md)來格式化數值結果。 使用格式字串來指定格式。 下表包含支援的標準格式字串。 格式字串的格式如下︰`Axx`，其中 `A` 是格式規範，而 `xx` 是有效位數規範。 格式規範控制套用到數值之格式的類型，而有效位數規範控制格式化輸出的有效位數或小數位數。 有效位數規範的值範圍是從 0 到 99。  
-  
- 如需標準和自訂格式字串的詳細資訊，請參閱[格式化類型](../../../standard/base-types/formatting-types.md)。
-  
-|格式規範|描述|範例|輸出|  
-|----------------------|-----------------|--------------|------------|  
-|C 或 c|貨幣|Console.Write("{0:C}", 2.5);<br /><br /> Console.Write("{0:C}", -2.5);|$2.50<br /><br /> ($2.50)|  
-|D 或 d|Decimal|Console.Write("{0:D5}", 25);|00025|  
-|E 或 e|科學記號|Console.Write("{0:E}", 250000);|2.500000E+005|  
-|F 或 f|固定點|Console.Write("{0:F2}", 25);<br /><br /> Console.Write("{0:F0}", 25);|25.00<br /><br /> 25|  
-|G 或 g|一般|Console.Write("{0:G}", 2.5);|2.5|  
-|N 或 n|number|Console.Write("{0:N}", 2500000);|2,500,000.00|  
-|X 或 x|十六進位|Console.Write("{0:X}", 250);<br /><br /> Console.Write("{0:X}", 0xffff);|FA<br /><br /> FFFF|  
-  
-## <a name="see-also"></a>請參閱
 
-- [C# 參考](../../../csharp/language-reference/index.md)  
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [標準數值格式字串](../../../standard/base-types/standard-numeric-format-strings.md)  
-- [型別的參考表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
-- [string](../../../csharp/language-reference/keywords/string.md)
+下表顯示用來格式化數值結果的支援格式規範。 最後一個資料行中的格式化結果會對應至 "en-US" <xref:System.Globalization.CultureInfo>。
+
+|格式規範|描述|範例|結果|  
+|----------------------|-----------------|--------------|------------|  
+|C 或 c|貨幣|`string s = $"{2.5:C}";`<br /><br /> `string s = $"{-2.5:C}";`|$2.50<br /><br /> ($2.50)|  
+|D 或 d|Decimal|`string s = $"{25:D5}";`|00025|  
+|E 或 e|指數|`string s = $"{250000:E2}";`|2.50E+005|  
+|F 或 f|固定點|`string s = $"{2.5:F2}";`<br /><br /> `string s = $"{2.5:F0}";`|2.50<br /><br /> 3|  
+|G 或 g|一般|`string s = $"{2.5:G}";`|2.5|  
+|N 或 n|數值|`string s = $"{2500000:N}";`|2,500,000.00|  
+|P 或 p|百分比|`string s = $"{0.25:P}";`|25.00%|  
+|R 或 r|來回|`string s = $"{2.5:R}";`|2.5|  
+|X 或 x|十六進位|`string s = $"{250:X}";`<br /><br /> `string s = $"{0xffff:X}";`|FA<br /><br /> FFFF|  
+
+## <a name="remarks"></a>備註
+
+您可以使用格式規範來建立格式字串。 格式字串的格式如下：`Axx`，其中
+
+- `A` 是格式規範，可控制套用到數值的格式化類型。
+- `xx` 是有效位數規範，會影響格式化輸出中的位數。 有效位數規範的值範圍是從 0 到 99。
+
+僅整數類型可支援十進位 ("D" 或 "d") 和十六進位 ("X" 或 "x") 格式規範。 僅 <xref:System.Single>、<xref:System.Double> 和 <xref:System.Numerics.BigInteger> 類型支援來回行程 ("R" 或 "r") 格式規範。
+
+標準數值格式字串受到下列各項支援：
+
+- 所有數值類型之 `ToString` 方法的一些多載。 例如，您可以將數值格式字串提供給 <xref:System.Int32.ToString%28System.String%29?displayProperty=nameWithType> 和 <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 方法。
+
+- .NET [複合格式化功能](../../../standard/base-types/composite-formatting.md)，可受到 <xref:System.String.Format%2A?displayProperty=nameWithType> 之類的方法支援。
+
+- [插入字串](../tokens/interpolated.md)。
+
+如需詳細資訊，請參閱[標準數值格式字串](../../../standard/base-types/standard-numeric-format-strings.md)。
+
+## <a name="see-also"></a>另請參閱
+
+- [C# 參考](../index.md)
+- [C# 程式設計指南](../../programming-guide/index.md)
+- [型別的參考表](reference-tables-for-types.md)
+- [格式化類型](../../../standard/base-types/formatting-types.md)
+- [複合格式](../../../standard/base-types/composite-formatting.md)
+- [字串內插補點](../tokens/interpolated.md)
+- [string](string.md)

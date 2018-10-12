@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 使用 docker
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
-ms.openlocfilehash: 0c4eda54fbb1f48095d52fa798ea839eb509a636
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: d1c4166129716ccbbc86855e38d631f493b82290
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754725"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46937601"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>使用 docker-compose.yml 定義多容器應用程式 
 
@@ -126,7 +126,7 @@ catalog.api container-microservice 聚焦於單一容器，因此具有簡單易
 
 -   SQL Server 名稱是 sql.data，而這個相同名稱用於執行適用於 Linux 之 SQL Server 執行個體的容器。 這樣十分方便；可使用此名稱解析 (Docker 主機內部) 將會解析網路位址，因此您不需要知道從其他容器存取之容器的內部 IP。
 
-因為連接字串是透過環境變數所定義，所以您可以透過不同的機制並在不同的時間來設定該變數。 例如，在最終主機中部署至生產環境時，您可以設定不同的連接字串，或是從 VSTS 或偏好 DevOps 系統中的 CI/CD 管道進行。
+因為連接字串是透過環境變數所定義，所以您可以透過不同的機制並在不同的時間來設定該變數。 例如，在最終主機中部署至生產環境時，您可以設定不同的連接字串，或是從 Azure DevOps Services 或偏好 DevOps 系統中的 CI/CD 管道進行。
 
 -   它會公開連接埠 80，以對 Docker 主機內的 catalog.api 服務進行內部存取。 該主機目前是 Linux VM，因為它是根據適用於 Linux 的 Docker 映像，但您可以改為設定在 Windows 映像上執行容器。
 
@@ -180,7 +180,7 @@ docker-compose down
 
 您可以使用單一 docker-compose.yml 檔案，如先前各節中所顯示的簡化範例所示。 不過，不建議用於大部分應用程式。
 
-Compose 預設會讀取兩個檔案、docker-compose.yml 和選擇性 docker-compose.override.yml 檔案。 如圖 8-11 所示，當您要使用 Visual Studio 並啟用 Docker 支援時，Visual Studio 也會建立其他 docker-compose.ci.build.yml 檔案，以供您從 CI/CD 管道 (例如在 VSTS 中) 使用。
+Compose 預設會讀取兩個檔案、docker-compose.yml 和選擇性 docker-compose.override.yml 檔案。 如圖 8-11 所示，當您要使用 Visual Studio 並啟用 Docker 支援時，Visual Studio 也會建立其他 docker-compose.ci.build.yml 檔案，以供您從 CI/CD 管道 (例如在 Azure DevOps Services 中) 使用。
 
 ![](./media/image12.png)
 

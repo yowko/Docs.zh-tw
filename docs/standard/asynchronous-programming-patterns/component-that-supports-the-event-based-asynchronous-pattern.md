@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 09746f01115a4b6bf3ca54cdc72c6ad936fbaaae
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 3fd01e19bc8aad8af709aee2fdaa020d8192d530
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042435"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003811"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>如何：實作支援事件架構非同步模式的元件
 如果您正在撰寫的類別含有一些可能造成明顯延遲的作業，請考慮實作[事件架構非同步模式概觀](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)，來為它提供非同步功能。  
@@ -58,7 +58,7 @@ ms.locfileid: "44042435"
 -   建立一個名為 `PrimeNumberCalculator` 且會從 <xref:System.ComponentModel.Component> 繼承的類別。  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>定義公用非同步事件和委派  
- 您的元件會使用事件與用戶端進行通訊。 *MethodName***Completed** 事件會對用戶端發出已完成非同步工作的警示，而 *MethodName***ProgressChanged** 事件則是會通知用戶端非同步工作的進度。  
+ 您的元件會使用事件與用戶端進行通訊。 _MethodName_**Completed** 事件會對用戶端發出已完成非同步工作的警示，而 _MethodName_**ProgressChanged** 事件則是會通知用戶端非同步工作的進度。  
   
 #### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>為元件的用戶端定義非同步事件：  
   

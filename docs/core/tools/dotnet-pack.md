@@ -4,12 +4,12 @@ description: dotnet pack 命令會建立 .NET Core 專案的 NuGet 套件。
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 8c2569ec7598b21fe9b673176143d0e54b9eb065
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 434f1c97af24d1417cd79edd52b63814fd4c6512
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44204847"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47231162"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -43,7 +43,7 @@ dotnet pack [-h|--help]
 
 `dotnet pack` 預設會先建置專案。 如果您想要避免這種行為，請傳遞 `--no-build` 選項。 這個選項通常適用於您知道先前剛建立程式碼的持續整合 (CI) 組建案例。
 
-您可以提供 MSBuild 屬性給 `dotnet pack` 命令來壓縮程序。 如需詳細資訊，請參閱 [NuGet 中繼資料屬性](csproj.md#nuget-metadata-properties)和 [MSBuild 命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)。 [範例](#examples)一節示範針對數個不同案例使用 MSBuild /p 參數的方法。
+您可以提供 MSBuild 屬性給 `dotnet pack` 命令來壓縮程序。 如需詳細資訊，請參閱 [NuGet 中繼資料屬性](csproj.md#nuget-metadata-properties)和 [MSBuild 命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)。 [範例](#examples)一節示範針對數個不同案例使用 MSBuild -p 參數的方法。
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
@@ -109,6 +109,14 @@ dotnet pack [-h|--help]
 
 設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
 
+> [!NOTE]
+> Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新增至您的 .csproj 檔案：
+> ```xml
+> <PropertyGroup>
+>    <IsPackable>true</IsPackable>
+> </PropertyGroup>
+> ```
+
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `-c|--configuration {Debug|Release}`
@@ -173,11 +181,11 @@ dotnet pack [-h|--help]
 
 使用 `PackageVersion` MSBuild 屬性將封裝版本設定為 `2.1.0`：
 
-`dotnet pack /p:PackageVersion=2.1.0`
+`dotnet pack -p:PackageVersion=2.1.0`
 
 將專案針對特定[目標 Framework](../../standard/frameworks.md) 進行封裝：
 
-`dotnet pack /p:TargetFrameworks=net45`
+`dotnet pack -p:TargetFrameworks=net45`
 
 封裝專案，並使用特定的執行階段 (Windows 10) 進行還原作業 (.NET Core SDK 2.0 及更新版本)：
 

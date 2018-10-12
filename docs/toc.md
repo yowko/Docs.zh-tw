@@ -241,6 +241,7 @@
 ### [C# 6](csharp/whats-new/csharp-6.md)
 ### [C# 版本歷程記錄](csharp/whats-new/csharp-version-history.md)
 ### [語言和架構之間的關係](csharp/whats-new/relationships-between-language-and-library.md)
+### [版本和更新考量](csharp/whats-new/version-update-considerations.md)
 <!-- End What's New -->
 ## C# 概念
 ### [C# 型別系統](csharp/programming-guide/types/index.md)

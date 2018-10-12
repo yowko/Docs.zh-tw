@@ -14,6 +14,7 @@
 ### [撰寫資料流](composing-streams.md)
 ### [操作說明：在 .NET Framework 資料流與 Windows 執行階段資料流之間轉換](how-to-convert-between-dotnet-streams-and-winrt-streams.md)
 ## [非同步檔案 I/O](asynchronous-file-i-o.md)
+## [處理 I/O 錯誤](handling-io-errors.md)
 ## [隔離儲存區](isolated-storage.md)
 ### [隔離的類型](types-of-isolation.md)
 ### [操作說明：取得隔離儲存區的存放區](how-to-obtain-stores-for-isolated-storage.md)

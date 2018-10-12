@@ -1,6 +1,6 @@
 ---
 title: 在 .NET 中使用字串的最佳做法
-ms.date: 08/22/2018
+ms.date: 09/13/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14945cc6812e4bcb14085656337c7df1abc0a5bf
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 6114553c6bcdac8521c80c10f470d4c38b15e738
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43000147"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080334"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>在 .NET 中使用字串的最佳做法
 <a name="top"></a> .NET 可廣泛支援當地語系化和全球化應用程式的開發作業，使您在執行一般作業 (例如排序和顯示字串) 時，可輕鬆套用目前的文化特性或文化特性特定的慣例。 但是，排序或比較字串並不一定是區分文化特性的作業。 例如，應用程式內部使用的字串，通常應該跨所有文化特性皆進行相同處理。 若將與文化特性無關的字串資料 (例如 XML 標記、HTML 標記、使用者名稱、檔案路徑和系統物件的名稱) 進行區分文化特性的解譯時，應用程式程式碼可能會出現細微的 Bug、效能不佳，甚至在某些情況下，會產生安全性問題。  
@@ -123,10 +123,12 @@ ms.locfileid: "43000147"
  字串比較是許多字串相關作業的核心，尤其是排序和測試是否相等這類作業。 字串依固定順序排序：在已排序的字串清單中，如果 "my" 在 "string" 之前出現，則 "my" 比較起來一定小於或等於 "string"。 此外，比較也隱含定義相等性。 比較作業會針對它認為相等的字串傳回零。 明言之，就是沒有任一字串比另一個字串更小。 最有意義的字串作業包含下列一或兩個程序：和其他字串進行比較，並執行定義完善的排序作業。  
 
 > [!NOTE]
-> 您可以下載 [Sorting Weight Tables](https://www.microsoft.com/en-us/download/details.aspx?id=10921) (排序權數表)，該文字檔集合包含在 Windows 作業系統排序及比較作業中使用的字元權數資訊。
+> 您可以下載[排序權數資料表](https://www.microsoft.com/en-us/download/details.aspx?id=10921)，該文字檔集合包含在 Windows 作業系統排序及比較作業中使用的字元權數資訊，以及下載[預設 Unicode 定序元素資料表](https://www.unicode.org/Public/UCA/latest/allkeys.txt) (適用於 Linux 和 macOS 的最新版本排序權數資料表)。 Linux 和 macOS 上的特定版本排序權數資料表，取決於在系統上安裝的 [International Components for Unicode](http://site.icu-project.org/) 程式庫。 如需其實作的 ICU 版本及 Unicode 版本詳細資訊，請參閱[下載 ICU](http://site.icu-project.org/download)。
 
  不過，評估兩個字串是否相等或決定排序順序不會產生單一的正確結果，而要取決於用來比較字串的準則而定。 特別是，如果字串比較是序數或根據目前文化特性或不因文化特性而異的大小寫與排序慣例 (根據英文語言的無從驗證地區設定文化特性)，則可能會產生不同的結果。  
-  
+
+此外，使用不同版本 .NET 或使用不同作業系統或作業系統版本上 .NET 所做的字串比較，可能會傳回不同的結果。 如需詳細資訊，請參閱[字串及 Unicode 標準](xref:System.String#Unicode)。 
+
 <a name="current_culture"></a>   
 ### <a name="string-comparisons-that-use-the-current-culture"></a>使用目前文化特性的字串比較  
  比較字串時，其中一個準則需使用目前文化特性的慣例。 如果比較是以目前文化特性為依據，就會使用執行緒的目前文化特性或地區設定。 如果使用者未設定文化特性，則會預設為控制台 [地區選項]  視窗中的設定。 當資料是語言相關資料，以及資料會反映區分文化特性的使用者互動時，請一律使用以目前文化特性為根據的比較。  
@@ -370,5 +372,6 @@ ms.locfileid: "43000147"
 18.02.1905 15:12  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [操作字串](../../../docs/standard/base-types/manipulating-strings.md)
+## <a name="see-also"></a>另請參閱
+
+- [操作字串](../../../docs/standard/base-types/manipulating-strings.md)

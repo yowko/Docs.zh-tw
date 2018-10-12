@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 579ef891-1f83-4c63-9ebd-2f40406b5b91
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 748b4170e9e4c0df048c542d06bcb64a56ccf677
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 77269cd9cdb922c1f9576afa93d6599ec7a834e4
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44199943"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46562118"
 ---
 # <a name="performing-culture-insensitive-string-operations"></a>執行不區分文化特性的字串作業
 執行區分文化特性字串作業的大部分 .NET Framework 方法預設會提供方法多載，讓您藉由傳遞 <xref:System.Globalization.CultureInfo> 參數，明確地指定要使用的文化特性。 這些多載可讓您消除大小寫對應和排序規則中的文化特性變化，保證您可以得到不區分文化特性的結果。  
@@ -44,4 +44,5 @@ ms.locfileid: "44199943"
 
 ## <a name="see-also"></a>另請參閱
 
-- [Sorting Weight Tables](https://www.microsoft.com/en-us/download/details.aspx?id=10921) (排序加權資料表)
+- [排序權數資料表 (適用於 Windows 系統上的 .NET)](https://www.microsoft.com/en-us/download/details.aspx?id=10921)
+- [預設 Unicode 定序元素資料表 (適用於 Linux 和 macOS 上的 .NET Core)](https://www.unicode.org/Public/UCA/latest/allkeys.txt)

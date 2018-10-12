@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 974e0c3ab29da582e7b22c909650a61d179ec3f7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8e4103f8e71858ec74c348ee1f675828e6468eb2
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523935"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170583"
 ---
 # <a name="is-c-reference"></a>is (C# 參考) #
 
@@ -128,6 +128,16 @@ ms.locfileid: "43523935"
 下列範例結合類型和常數模式來測試物件是否為 `Dice` 執行個體；如果是，則判斷擲出的骰子值是否為 6。
 
 [!code-csharp[is#7](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern7.cs#7)]
+
+檢查是否可以使用常數模式來執行 `null`。 `is` 陳述式支援 `null` 關鍵字。 它的語法為：
+
+```csharp 
+   expr is null
+```
+
+下列範例示範 `null` 檢查的比較：
+
+[!code-csharp[is#11](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern11.cs#11)]
  
 ### <a name="var" /> var 模式 </a>
 
