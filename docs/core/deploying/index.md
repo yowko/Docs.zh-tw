@@ -4,12 +4,12 @@ description: 部署 .NET Core 應用程式。
 author: rpetrusha
 ms.author: ronpet
 ms.date: 09/03/2018
-ms.openlocfilehash: 2ef63ebd737739b2c8e671d982c3844135689ab4
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 390af06e81788c3f64f255e5c85efdaa167274f4
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44277154"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836624"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core 應用程式部署
 
@@ -61,7 +61,7 @@ FDD 和 SCD 使用不同的主機可執行檔，因此您可以使用自己的�
 
 - 您的部署套件的大小相當大，因為您必須包含 .NET Core 以及應用程式及其協力廠商相依性。
 
-  從 .NET Core 2.0 開始，您就可以使用 .NET Core [*全球化不變模式*](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)來減少 Linux 系統上的部署大小大約 28 MB。 一般而言，Linux 上的 .NET Core 依賴 [ICU 程式庫](https://github.com/dotnet/docs/issues/http%22//icu-project.org)來提供全球化支援。 在不變模式中，程式庫不會包括在您的部署中，而且所有文化特性的行為都如[不變的文化特性](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)一樣。
+  從 .NET Core 2.0 開始，您就可以使用 .NET Core [*全球化不變模式*](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)來減少 Linux 系統上的部署大小大約 28 MB。 一般而言，Linux 上的 .NET Core 依賴 [ICU 程式庫](https://github.com/dotnet/docs/issues/http%22//icu-project.org)來提供全球化支援。 在不區分模式中，您的部署不包含程式庫，而且所有文化特性的行為[不因文化特性而異](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)。
 
 - 將多個自封式 .NET Core 應用程式部署到系統，會消耗大量的磁碟空間，因為每個應用程式都會重複 .NET Core 檔案。
 

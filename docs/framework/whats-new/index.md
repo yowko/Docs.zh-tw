@@ -10,25 +10,26 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d55b571ad313fae75e1f9a96d7a6b681416d8dbd
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 6ab205ad12b60651443e0fc409e890ea93168ebd
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44185898"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848071"
 ---
-# <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新功能
-<a name="introduction"></a> 此文章摘要說明下列 .NET Framework 版本的重要新功能和改進：  
- 
-[.NET Framework 4.7.2](#v472)   
-[.NET Framework 4.7.1](#v471)    
-[.NET Framework 4.7](#v47)   
-[.NET Framework 4.6.2](#v462)   
-[.NET Framework 4.6.1](#v461)   
-[.NET 2015 和 .NET Framework 4.6](#v46)   
-[.NET Framework 4.5.2](#v452)   
-[.NET Framework 4.5.1](#v451)   
-[.NET Framework 4.5](#v45)   
+# .NET Framework 的新功能<a name="introduction"></a>
+
+本文摘要說明下列 .NET Framework 版本中重要的新功能和增強功能：
+
+- [.NET Framework 4.7.2](#v472)
+- [.NET Framework 4.7.1](#v471)
+- [.NET Framework 4.7](#v47)
+- [.NET Framework 4.6.2](#v462)
+- [.NET Framework 4.6.1](#v461)
+- [.NET 2015 and .NET Framework 4.6](#v46)
+- [.NET Framework 4.5.2](#v452)
+- [.NET Framework 4.5.1](#v451)
+- [.NET Framework 4.5](#v45)
 
 此文章並不會提供每一個新功能的完整資料，且內容可能會隨時變更。 如需 .NET Framework 的一般資訊，請參閱[使用者入門](../../../docs/framework/get-started/index.md)。 若要了解支援的平台，請參閱[系統需求](~/docs/framework/get-started/system-requirements.md)。 如需下載連結和安裝指示，請參閱[安裝指南](../../../docs/framework/install/guide-for-developers.md)。
 
@@ -42,7 +43,7 @@ ms.locfileid: "44185898"
 .NET Framework 4.7.2 建置於舊版 .NET Framework 4.x 的基礎上，方法是新增許多新的修正和多項新功能，同時保有產品的高穩定性。
 
 ### <a name="downloading-and-installing-the-net-framework-472"></a>下載並安裝 .NET Framework 4.7.2
- 
+
 您可以從下列位置下載 .NET Framework 4.7.2：
 
 - [.NET Framework 4.7.2 Web 安裝程式](https://go.microsoft.com/fwlink/?LinkId=863262)
@@ -51,20 +52,20 @@ ms.locfileid: "44185898"
 
 .NET Framework 4.7.2 可以安裝在 Windows 10、Windows 8.1、Windows 7 SP1，以及自 Windows Server 2008 R2 SP1 起的相對應伺服器平台上。 您可以使用 Web 安裝程式或離線安裝程式來安裝 .NET Framework 4.7.2。 針對大部分的使用者，我們建議使用 Web 安裝程式。
 
-透過安裝 [.NET Framework 4.7.2 開發人員套件](https://go.microsoft.com/fwlink/?LinkId=874338)，即能以 Visual Studio 2012 或更新版本中的 .NET Framework 4.7.2 為目標。 
+透過安裝 [.NET Framework 4.7.2 開發人員套件](https://go.microsoft.com/fwlink/?LinkId=874338)，即能以 Visual Studio 2012 或更新版本中的 .NET Framework 4.7.2 為目標。
 
 ### <a name="whats-new-in-the-net-framework-472"></a>.NET Framework 4.7.2 的新功能
 
 .NET Framework 4.7.2 包含下列領域的新功能：
 
-- [核心](#core472)
+- [核心](#core-472)
 - [ASP.NET](#asp-net472)
 - [網路功能](#net472)
 - [SQL](#sql472)
 - [WPF](#wpf472)
-- [ClickOnce](#ClickOnce472)
+- [ClickOnce](#clickonce)
 
-.NET Framework 4.7.2 中的持續重點是改善協助工具，以允許應用程式為輔助技術使用者提供適當的體驗。 如需 .NET Framework 4.7.2 中協助工具改善的資訊；請參閱 [.NET Framework 協助工具的新功能](whats-new-in-accessibility.md)。 
+.NET Framework 4.7.2 中的持續重點是改善協助工具，以允許應用程式為輔助技術使用者提供適當的體驗。 如需 .NET Framework 4.7.2 中協助工具改善的資訊；請參閱 [.NET Framework 協助工具的新功能](whats-new-in-accessibility.md)。
 
 <a name="core-472" />
 
@@ -83,7 +84,7 @@ using (RSA rsa = RSA.Create())
    rsa.ImportParameters(rsaParameters);
    // Other code to execute using the RSA instance.
 }
-``` 
+```
 
 ```vb
 ' Before .NET Framework 4.7.2
@@ -91,7 +92,7 @@ Using rsa = RSA.Create()
    rsa.ImportParameters(rsaParameters)
    ' Other code to execute using the rsa instance.
 End Using
-``` 
+```
 取代為如下的程式碼：
 ```csharp
 // Starting with .NET Framework 4.7.2
@@ -99,13 +100,13 @@ using (RSA rsa = RSA.Create(rsaParameters))
 {
    // Other code to execute using the rsa instance.
 }
-``` 
+```
 ```vb
 ' Starting with .NET Framework 4.7.2
 Using rsa = RSA.Create(rsaParameters)
    ' Other code to execute using the rsa instance.
 End Using
-``` 
+```
 
 <xref:System.Security.Cryptography.DSA.Create(System.Int32)?displayProperty=nameWithType> 和 <xref:System.Security.Cryptography.RSA.Create(System.Int32)?displayProperty=nameWithType> 方法可讓您產生具有特定金鑰大小的新 <xref:System.Security.Cryptography.DSA> 或 <xref:System.Security.Cryptography.RSA> 金鑰。 例如: 
 
@@ -114,19 +115,19 @@ using (DSA dsa = DSA.Create(2048))
 {
    // Other code to execute using the dsa instance.
 }
-``` 
+```
 ```vb
 Using dsa = DSA.Create(2048)
    ' Other code to execute using the dsa instance.
 End Using
-``` 
+```
 
 **Rfc2898DeriveBytes 建構函式接受雜湊演算法名稱**
 
 <xref:System.Security.Cryptography.Rfc2898DeriveBytes> 類別有三個新的建構函式，這些建構函式使用 <xref:System.Security.Cryptography.HashAlgorithmName> 參數以識別衍生金鑰時所要使用的 HMAC 演算法。 開發人員不應使用 SHA-1，而應使用 SHA-256 之類的 SHA-2 式 HMAC，如下列範例所示：
 
 ```csharp
-private static byte[] DeriveKey(string password, out int iterations, out byte[] salt, 
+private static byte[] DeriveKey(string password, out int iterations, out byte[] salt,
                                 out HashAlgorithmName algorithm)
 {
    iterations = 100000;
@@ -135,16 +136,16 @@ private static byte[] DeriveKey(string password, out int iterations, out byte[] 
    const int SaltSize = 32;
    const int DerivedValueSize = 32;
 
-   using (Rfc2898DeriveBytes pbkdf2 = new Rfc2898DeriveBytes(password, SaltSize, 
+   using (Rfc2898DeriveBytes pbkdf2 = new Rfc2898DeriveBytes(password, SaltSize,
                                                              iterations, algorithm))
    {
       salt = pbkdf2.Salt;
       return pbkdf2.GetBytes(DerivedValueSize);
    }
-} 
+}
 ```
 ```vb
-Private Shared Function DeriveKey(password As String, ByRef iterations As Integer, 
+Private Shared Function DeriveKey(password As String, ByRef iterations As Integer,
                                   ByRef salt AS Byte(), ByRef algorithm As HashAlgorithmName) As Byte()
    iterations = 100000
    algorithm = HashAlgorithmName.SHA256
@@ -156,7 +157,7 @@ Private Shared Function DeriveKey(password As String, ByRef iterations As Intege
       salt = pbkdf2.Salt
       Return pbkdf2.GetBytes(DerivedValueSize)
    End Using
-End Function 
+End Function
 ```
 
 **支援暫時金鑰**
@@ -192,12 +193,12 @@ Dim cStream = New CryptoStream(stream, transform, mode, leaveOpen:=true)
 
 **DeflateStream 中的解壓縮變更**
 
-從 .NET Framework 4.7.2 開始，<xref:System.IO.Compression.DeflateStream> 類別中的解壓縮作業實作已變更為預設使用原生 Windows API。 一般而言，這會導致顯著的效能改善。 
+從 .NET Framework 4.7.2 開始，<xref:System.IO.Compression.DeflateStream> 類別中的解壓縮作業實作已變更為預設使用原生 Windows API。 一般而言，這會導致顯著的效能改善。
 
 以 .NET Framework 4.7.2 為目標的應用程式，預設會啟用使用 Windows API 進行解壓縮的支援。 如果應用程式是以舊版 .NET Framework 為目標，但卻在 .NET Framework 4.7.2 下執行，則可在應用程式組態檔中新增下列 [AppContext 參數](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)，以選擇加入此行為：
 
 ```xml
-<AppContextSwitchOverrides value="Switch.System.IO.Compression.DoNotUseNativeZipLibraryForDecompression=false" /> 
+<AppContextSwitchOverrides value="Switch.System.IO.Compression.DoNotUseNativeZipLibraryForDecompression=false" />
 ```
 
 **其他集合 API**
@@ -205,14 +206,19 @@ Dim cStream = New CryptoStream(stream, transform, mode, leaveOpen:=true)
 .NET Framework 4.7.2 將一些新的 API 新增至 <xref:System.Collections.Generic.SortedSet%601> 和 <xref:System.Collections.Generic.HashSet%601> 類型。 它們包括：
 
 - `TryGetValue` 方法，可將其他集合類型使用的 try 模式擴充為下列兩種類型。 這兩個方法為：
-   - [`public bool HashSet<T>.TryGetValue(T equalValue, out T actualValue);](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
-   - [`public bool SortedSet<T>.TryGetValue(T equalValue, out T actualValue);](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
+
+   - [public bool HashSet<T>.TryGetValue(T equalValue, out T actualValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
+   - [public bool SortedSet<T>.TryGetValue(T equalValue, out T actualValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
+
 - `Enumerable.To*` 擴充方法，可將集合轉換為 <xref:System.Collections.Generic.HashSet%601>：
-   - [public static HashSet<TSource> ToHashSet<TSource>(this IEnumerable<TSource> source);](xref:System.Linq.Enumerable.ToHashSet%2A)
-   - [public static HashSet<TSource> ToHashSet<TSource>(this IEnumerable<TSource> source, IEqualityComparer<TSource> comparer);](xref:System.Linq.Enumerable.ToHashSet%2A)
+
+   - [public static HashSet<TSource> ToHashSet<TSource>(此 IEnumerable<TSource> 來源)](xref:System.Linq.Enumerable.ToHashSet%2A)
+   - [public static HashSet<TSource> ToHashSet<TSource>(此 IEnumerable<TSource> 來源, IEqualityComparer<TSource> 比較子)](xref:System.Linq.Enumerable.ToHashSet%2A)
+
 - 可讓您設定集合容量的新 <xref:System.Collections.Generic.HashSet%601> 建構函式，當您事先知道 <xref:System.Collections.Generic.HashSet%601> 的大小時，便能產生效能優勢：
+
    - [public HashSet(int capacity)](xref:System.Collections.Generic.HashSet%601.%23ctor(System.Int32))
-   - [public HashSet(int capacity, IEqualityComparer<T> comparer)](xref:System.Collections.Generic.HashSet%601.%23ctor(System.Int32,System.Collections.Generic.IEqualityComparer%7B%600%7D))  
+   - [public HashSet(int capacity, IEqualityComparer<T> comparer)](xref:System.Collections.Generic.HashSet%601.%23ctor(System.Int32,System.Collections.Generic.IEqualityComparer%7B%600%7D))
 
 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 類別包今 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> 和 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> 方法的新多載，可從字典擷取值或在找不到值時新增它，以及將值新增至字典或在值已存在時進行更新。
 
@@ -234,18 +240,18 @@ Public GetOrAdd(Of TArg)(key As TKey, valueFactory As Func(Of TKey, TArg, TValue
 
 **支援 Web Forms 中的相依性插入**
 
-[相依性插入 (DI)](/aspnet/core/fundamentals/dependency-injection#what-is-dependency-injection) 可分離物件和其相依性，讓物件的程式碼不再需要只因相依性變更而變更。 開發以 .NET Framework 4.7.2 為目標的 ASP.NET 應用程式時，您可以：
+[相依性插入 (DI)](/aspnet/core/fundamentals/dependency-injection#overview-of-dependency-injection) 可分離物件和其相依性，讓物件的程式碼不再需要只因相依性變更而變更。 開發以 .NET Framework 4.7.2 為目標的 ASP.NET 應用程式時，您可以：
 
 - 在 ASP.NET Web 應用程式專案的[處理常式和模組](https://msdn.microsoft.com/en-us/library/bb398986.aspx)、[網頁執行個體](xref:System.Web.UI.Page)和[使用者控制項](https://msdn.microsoft.com/en-us/library/y6wb1a0e.aspx)中使用 Setter 型、介面型和建構函式型插入。
 
 - 在 ASP.NET 網站專案的[處理常式和模組](https://msdn.microsoft.com/en-us/library/bb398986.aspx)、[網頁執行個體](xref:System.Web.UI.Page)和[使用者控制項](https://msdn.microsoft.com/en-us/library/y6wb1a0e.aspx)中使用 Setter 型和介面型插入。
 
-- 在不同的相依性插入架構中插入。 
+- 在不同的相依性插入架構中插入。
 
 **支援相同網站 Cookie**
 
 [SameSite](https://tools.ietf.org/html/draft-west-first-party-cookies-07) 可防止瀏覽器將 Cookie 與跨站台要求一起傳送。 .NET Framework 4.7.2 會新增其值是 <xref:System.Web.SameSiteMode?displayProperty=nameWithType> 列舉成員的 <xref:System.Web.HttpCookie.SameSite?displayProperty=nameWithType> 屬性。 如果其值為 <xref:System.Web.SameSiteMode.Strict?displayProperty=nameWithType> 或 <xref:System.Web.SameSiteMode.Lax?displayProperty=nameWithType>，ASP.NET 會將 `SameSite` 屬性新增至 set-cookie 標頭。 SameSite 支援適用於 <xref:System.Web.HttpCookie> 物件，以及適用於 <xref:System.Web.Security.FormsAuthentication> 和 <xref:System.Web.SessionState> Cookie。
- 
+
 您可以為 <xref:System.Web.HttpCookie> 物件設定 SameSite，如下所示：
 
 ```csharp
@@ -305,7 +311,7 @@ NET Framework 4.7.2 會新增飛地式 Always Encrypted 的支援。 Always Encr
 
 - <xref:System.Data.SqlClient.SqlConnectionStringBuilder.EnclaveAttestationUrl?displayProperty=nameWithType>，其可指定飛地式 Always Encrypted 的 URL。
 
-- <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider>，這是所有飛地提供者衍生來源的抽象類別。 
+- <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider>，這是所有飛地提供者衍生來源的抽象類別。
 
 - <xref:System.Data.SqlClient.SqlEnclaveSession>，其可封裝指定的飛地工作階段的狀態。
 
@@ -343,7 +349,6 @@ NET Framework 4.7.2 會新增飛地式 Always Encrypted 的支援。 Always Encr
 
 從 .NET Framework 4.7.2 開始，診斷小幫手可以找出從指定來源 URI 建立的 <xref:System.Windows.Xps.Packaging.IXpsFixedPageReader.ResourceDictionaries>。 (這項功能僅供診斷小幫手使用，而不是供生產環境應用程式使用)。診斷小幫手 (例如 Visual Studio 的「編輯後繼續」功能) 可讓其使用者編輯 ResourceDictionary，以便將變更套用到執行中的應用程式。 達到這個目標的其中一個步驟，就是尋找執行中應用程式已從所編輯之字典建立的所有 ResourceDictionary。 例如，應用程式可以宣告其內容是從指定來源 URI 複製而來的 ResourceDictionary：
 
-
 ```xml
 <ResourceDictionary Source="MyRD.xaml">
 ```
@@ -361,7 +366,7 @@ Dim dictionaries As IEnumerable(Of ResourceDictionary) = ResourceDictionaryDiagn
 
 **尋找 ResourceDictionary 擁有者**
 
-從 .NET Framework 4.7.2 開始，診斷小幫手可以找出指定的 <xref:Windows.UI.Xaml.ResourceDictionary> 的擁有者。 (這項功能僅供診斷小幫手使用，而不是供生產環境應用程式使用)。每當變更 <xref:Windows.UI.Xaml.ResourceDictionary> 時，WPF 即會自動尋找所有可能受此變更影響的 [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) 參考。 
+從 .NET Framework 4.7.2 開始，診斷小幫手可以找出指定的 <xref:Windows.UI.Xaml.ResourceDictionary> 的擁有者。 (這項功能僅供診斷小幫手使用，而不是供生產環境應用程式使用)。每當變更 <xref:Windows.UI.Xaml.ResourceDictionary> 時，WPF 即會自動尋找所有可能受此變更影響的 [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) 參考。
 
 診斷小幫手 (例如 Visual Studio 的「編輯後繼續」功能) 可能想要擴充此功能以處理 [StaticResource](../wpf/advanced/staticresource-markup-extension.md) 參考。 此程序的第一個步驟是尋找字典的擁有者；也就是尋找其 `Resources` 屬性參考字典 (直接或間接透過 <xref:System.Windows.ResourceDictionary.MergedDictionaries?displayProperty=nameWithType> 屬性) 的所有物件。 在 <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics?displayProperty=nameWithType> 類別上實作的三個新靜態方法 (每個具有 `Resources` 屬性的基底類型各有一個) 支援此步驟：
 
@@ -375,13 +380,14 @@ Dim dictionaries As IEnumerable(Of ResourceDictionary) = ResourceDictionaryDiagn
 
 **尋找 StaticResource 參考**
 
-診斷小幫手現在可以在每次解析 [StaticResource](../wpf/advanced/staticresource-markup-extension.md) 參照時收到通知。 (此功能僅供診斷小幫手使用，而不是供生產環境應用程式使用)。診斷小幫手 (例如 Visual Studio 的「編輯後繼續」功能) 可能想要其在 <xref:Windows.UI.Xaml.ResourceDictionary> 中的值變更時，更新資源的所有使用項目。 WPF 會自動為 [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) 參考執行此作業，但不會針對 [StaticResource](../wpf/advanced/staticresource-markup-extension.md) 參考刻意這麼做。 從 .NET Framework 4.7.2 開始，診斷小幫手可以使用這些通知，來找出靜態資源的這些使用項目。 
+診斷小幫手現在可以在每次解析 [StaticResource](../wpf/advanced/staticresource-markup-extension.md) 參照時收到通知。 (此功能僅供診斷小幫手使用，而不是供生產環境應用程式使用)。診斷小幫手 (例如 Visual Studio 的「編輯後繼續」功能) 可能想要其在 <xref:Windows.UI.Xaml.ResourceDictionary> 中的值變更時，更新資源的所有使用項目。 WPF 會自動為 [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) 參考執行此作業，但不會針對 [StaticResource](../wpf/advanced/staticresource-markup-extension.md) 參考刻意這麼做。 從 .NET Framework 4.7.2 開始，診斷小幫手可以使用這些通知，來找出靜態資源的這些使用項目。
 
 通知是透過新的 <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.StaticResourceResolved?displayProperty=nameWithType> 事件進行實作：
 
 ```csharp
 public static event EventHandler<StaticResourceResolvedEventArgs> StaticResourceResolved;
 ```
+
 ```vb
 Public Shared Event StaticResourceResolved As EventHandler(Of StaticResourceResolvedEventArgs)
 ```
@@ -403,8 +409,6 @@ public class StaticResourceResolvedEventArgs : EventArgs
 
 除非已啟用 <xref:System.Windows.Diagnostics.VisualDiagnostics> 且設定了 [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A) 環境變數，否則不會引發事件 (並會忽略其 `add` 存取子)。
 
-<a name="clickonce472" />
-
 #### <a name="clickonce"></a>ClickOnce
 
 適用於 Windows Forms、Windows Presentation Foundation (WPF) 和 Visual Studio Tools for Office (VSTO) 的 HDPI 感知應用程式都可以使用 ClickOnce 進行部署。 如果在應用程式資訊清單中找到下列項目，將會在 .NET Framework 4.7.2 下成功完成部署：
@@ -422,13 +426,13 @@ public class StaticResourceResolvedEventArgs : EventArgs
 ## <a name="whats-new-in-the-net-framework-471"></a>.NET Framework 4.7.1 的新功能
 
 .NET Framework 4.7.1 包含下列領域的新功能：
- 
+
 - [核心](#core471)
 - [Common Language Runtime (CLR)](#clr)
 - [網路功能](#net471)
-- [ASP.NET](#asp-net471) 
+- [ASP.NET](#asp-net471)
 
-此外，.NET Framework 4.7.1 中的主要焦點是改善協助工具，以允許應用程式為輔助技術使用者提供適當的體驗。 如需 .NET Framework 4.7.1 中協助工具改善的資訊；請參閱 [.NET Framework 協助工具的新功能](whats-new-in-accessibility.md)。 
+此外，.NET Framework 4.7.1 中的主要焦點是改善協助工具，以允許應用程式為輔助技術使用者提供適當的體驗。 如需 .NET Framework 4.7.1 中協助工具改善的資訊；請參閱 [.NET Framework 協助工具的新功能](whats-new-in-accessibility.md)。
 
 <a name="core471" />
 
@@ -442,7 +446,7 @@ public class StaticResourceResolvedEventArgs : EventArgs
 
 組態產生器可讓開發人員在執行階段動態插入和建置應用程式的組態設定。 自訂組態產生器可以用來修改組態區段中的現有資料，或從頭開始全新建置組態區段。 如果沒有組態產生器，則 .config 檔案是靜態的，而且在啟動應用程式之前的某個時間定義其設定。
 
-若要建立自訂組態產生器，您可以從抽象 <xref:System.Configuration.ConfigurationBuilder> 類別衍生產生器，並覆寫其 <xref:System.Configuration.ConfigurationBuilder.ProcessConfigurationSection%2A?displayProperty=nameWithType> 和 <xref:System.Configuration.ConfigurationBuilder.ProcessRawXml%2A?displayProperty=nameWithType>。 您也可以在 .config 檔案中定義產生器。 如需詳細資訊，請參閱 [.NET Framework 4.7.1 ASP.NET 和組態功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/13/net-framework-4-7-1-asp-net-and-configuration-features)部落格文章中的＜組態產生器＞一節。 
+若要建立自訂組態產生器，您可以從抽象 <xref:System.Configuration.ConfigurationBuilder> 類別衍生產生器，並覆寫其 <xref:System.Configuration.ConfigurationBuilder.ProcessConfigurationSection%2A?displayProperty=nameWithType> 和 <xref:System.Configuration.ConfigurationBuilder.ProcessRawXml%2A?displayProperty=nameWithType>。 您也可以在 .config 檔案中定義產生器。 如需詳細資訊，請參閱 [.NET Framework 4.7.1 ASP.NET 和組態功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/13/net-framework-4-7-1-asp-net-and-configuration-features)部落格文章中的＜組態產生器＞一節。
 
 **執行階段功能偵測**
 
@@ -462,7 +466,7 @@ public class StaticResourceResolvedEventArgs : EventArgs
 
 **記憶體回收效能改善**
 
-.NET Framework 4.7.1 中的記憶體回收 (GC) 變更可改善整體效能，特別是大型物件堆積 (LOH) 配置。 在 .NET Framework 4.7.1 中，會將不同的鎖定用於小型物件堆積 (SOH) 和 LOH 配置，這允許在背景 GC (BGC) 清除 SOH 時進行 LOH 配置。 因此，進行大量 LOH 配置的應用程式應該會看到配置鎖定爭用降低並改善效能。 如需詳細資訊，請參閱 [.NET Framework 4.7.1 執行階段和編譯器功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features/)部落格文章中的＜執行階段 -- GC 效能改善＞。 
+.NET Framework 4.7.1 中的記憶體回收 (GC) 變更可改善整體效能，特別是大型物件堆積 (LOH) 配置。 在 .NET Framework 4.7.1 中，會將不同的鎖定用於小型物件堆積 (SOH) 和 LOH 配置，這允許在背景 GC (BGC) 清除 SOH 時進行 LOH 配置。 因此，進行大量 LOH 配置的應用程式應該會看到配置鎖定爭用降低並改善效能。 如需詳細資訊，請參閱 [.NET Framework 4.7.1 執行階段和編譯器功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features/)部落格文章中的＜執行階段 -- GC 效能改善＞。
 
 <a name="net471"/>
 
@@ -478,11 +482,11 @@ public class StaticResourceResolvedEventArgs : EventArgs
 
 **ASP.NET 應用程式中的執行步驟**
 
-ASP.NET 會在包含 23 個事件的預先定義管線中處理要求。 ASP.NET 會將每個事件處理常式執行為執行步驟。 在 .NET Framework 4.7 之前的 ASP.NET 版本中，ASP.NET 因切換原生與受控執行緒而無法讓執行內容流動。 相反地，ASP.NET 選擇性地只會讓 <xref:System.Web.HttpContext> 流動。 從 .NET Framework 4.7.1 開始，<xref:System.Web.HttpApplication.OnExecuteRequestStep(System.Action{System.Web.HttpContextBase,System.Action})?displayProperty=nameWithType> 方法也允許模組還原環境資料。 此功能的目標是關注於追蹤、分析、診斷或異動的程式庫，例如關心應用程式的執行流程。 如需詳細資訊，請參閱 [.NET Framework 4.7.1 ASP.NET 和組態功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/13/net-framework-4-7-1-asp-net-and-configuration-features)部落格文章中的＜ASP.NET 執行步驟功能＞一節。 
+ASP.NET 會在包含 23 個事件的預先定義管線中處理要求。 ASP.NET 會將每個事件處理常式執行為執行步驟。 在 .NET Framework 4.7 之前的 ASP.NET 版本中，ASP.NET 因切換原生與受控執行緒而無法讓執行內容流動。 相反地，ASP.NET 選擇性地只會讓 <xref:System.Web.HttpContext> 流動。 從 .NET Framework 4.7.1 開始，<xref:System.Web.HttpApplication.OnExecuteRequestStep(System.Action{System.Web.HttpContextBase,System.Action})?displayProperty=nameWithType> 方法也允許模組還原環境資料。 此功能的目標是關注於追蹤、分析、診斷或異動的程式庫，例如關心應用程式的執行流程。 如需詳細資訊，請參閱 [.NET Framework 4.7.1 ASP.NET 和組態功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/13/net-framework-4-7-1-asp-net-and-configuration-features)部落格文章中的＜ASP.NET 執行步驟功能＞一節。
 
 **ASP.NET HttpCookie 剖析**
 
-.NET Framework 4.7.1 包含的新方法 <xref:System.Web.HttpCookie.TryParse%2A?displayProperty=nameWithType> 提供標準化方式，以從字串建立 <xref:System.Web.HttpCookie> 物件，並精確地指派 Cookie 值 (例如到期日和路徑)。 如需詳細資訊，請參閱 [.NET Framework 4.7.1 ASP.NET 和組態功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/13/net-framework-4-7-1-asp-net-and-configuration-features)部落格文章中的＜ASP.NET HttpCookie 剖析＞一節。 
+.NET Framework 4.7.1 包含的新方法 <xref:System.Web.HttpCookie.TryParse%2A?displayProperty=nameWithType> 提供標準化方式，以從字串建立 <xref:System.Web.HttpCookie> 物件，並精確地指派 Cookie 值 (例如到期日和路徑)。 如需詳細資訊，請參閱 [.NET Framework 4.7.1 ASP.NET 和組態功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/13/net-framework-4-7-1-asp-net-and-configuration-features)部落格文章中的＜ASP.NET HttpCookie 剖析＞一節。
 
 **ASP.NET 表單驗證認證的 SHA-2 雜湊選項**
 
@@ -554,7 +558,7 @@ ASP.NET 會在包含 23 個事件的預先定義管線中處理要求。 ASP.NET
 從 .NET Framework 4.7 開始，ASP.NET 加入一組新的 API 讓開發人員取代預設的 ASP.NET 實作以快取記憶體內部物件和監視記憶體。 如果 ASP.NET 實作不適用，開發人員現在可以取代下列三個元件當中的任何一個元件︰
 
 - **物件快取存放區**。 開發人員可以使用新的 **ICacheStoreProvider** 介面，透過新的快取提供者組態區段，為 ASP.NET 應用程式插入新的物件快取實作。
- 
+
 - **記憶體監視**。 ASP.NET 中的預設記憶體監視器會在應用程式執行到接近針對處理序所設定的私用位元組上限時，或在電腦可用的總實體 RAM 不足時，通知應用程式。 接近這些限制時，就會引發通知。 對於某些應用程式，通知在太接近設定的限制時才引發，將無法提供有用的反應。 開發人員現在可以使用 <xref:System.Web.Hosting.ApplicationMonitors.MemoryMonitor%2A?displayProperty=nameWithType> 屬性來撰寫自己的記憶體監視器，以取代預設的監視器。
 
 - **記憶體限制反應**。 ASP.NET 預設會在快達到私用位元組處理限制時，嘗試修剪物件快取並定期呼叫 <xref:System.GC.Collect%2A?displayProperty=nameWithType>。 就某些應用程式而言，呼叫 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 的頻率或所修剪的快取量會沒有效率。 開發人員現在可以向應用程式的記憶體監視器訂閱 **IObserver** 實作來取代或補充預設行為。
@@ -571,7 +575,7 @@ Windows Communication Foundation (WCF) 加入下列功能和變更：
 
 ```xml
 <runtime>
-   <AppContextSwitchOverrides value="Switch.System.ServiceModel.DisableUsingServicePointManagerSecurityProtocols=false;Switch.System.Net.DontEnableSchUseStrongCrypto=false" /> 
+   <AppContextSwitchOverrides value="Switch.System.ServiceModel.DisableUsingServicePointManagerSecurityProtocols=false;Switch.System.Net.DontEnableSchUseStrongCrypto=false" />
 </runtime>
 ```
 
@@ -608,7 +612,7 @@ WCF 包含許多可消除競爭情形的程式碼變更，因此可改善效能�
 
 **新的 WPF 列印 API 實作**
 
-WPF 在 <xref:System.Printing.PrintQueue?displayProperty=nameWithType> 類別中的列印 API 會呼叫 Windows [列印文件套件 API](https://msdn.microsoft.com/library/windows/desktop/hh448418(v=vs.85).aspx)，而不是已被取代的 [XPS 列印 API](https://msdn.microsoft.com/library/windows/desktop/ff686814(v=vs.85).aspx)。 如需這項變更對應用程式相容性的影響，請參閱 [.NET Framework 4.7 中的重定目標變更](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md)。 
+WPF 在 <xref:System.Printing.PrintQueue?displayProperty=nameWithType> 類別中的列印 API 會呼叫 Windows [列印文件套件 API](https://msdn.microsoft.com/library/windows/desktop/hh448418(v=vs.85).aspx)，而不是已被取代的 [XPS 列印 API](https://msdn.microsoft.com/library/windows/desktop/ff686814(v=vs.85).aspx)。 如需這項變更對應用程式相容性的影響，請參閱 [.NET Framework 4.7 中的重定目標變更](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md)。
 
 <a name="v462" />
 
@@ -630,7 +634,7 @@ WPF 在 <xref:System.Printing.PrintQueue?displayProperty=nameWithType> 類別中
 
 - [Windows Workflow Foundation (WF)](#WF462)
 
-- [ClickOnce](#ClickOnce)
+- [ClickOnce](#clickonce-1)
 
 - [將 Windows Forms 和 WPF 應用程式轉換成 UWP 應用程式](#UWPConvert)
 
@@ -639,12 +643,14 @@ WPF 在 <xref:System.Printing.PrintQueue?displayProperty=nameWithType> 類別中
 如需 .NET Framework 4.6.2 中加入的新 API 清單，請參閱 GitHub 上的 [.NET Framework 4.6.2 API 變更](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md)。 如需 .NET Framework 4..6.2 中的功能改進以及錯誤 (Bug) 修正清單，請參閱 GitHub 上的 [.NET Framework 4.6.2 變更清單 (英文)](https://go.microsoft.com/fwlink/?LinkId=708778)。  如需詳細資訊，請參閱 .NET 部落格中的[宣告 .NET Framework 4.6.2](https://blogs.msdn.microsoft.com/dotnet/2016/08/02/announcing-net-framework-4-6-2/)。
 
 <a name="ASPNET462" />
+
 ### <a name="aspnet"></a>ASP.NET
- 在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中，ASP.NET 會包含下列增強功能︰
 
- **改進對資料註解驗證程式的當地語系化錯誤訊息的支援**
+在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中，ASP.NET 會包含下列增強功能︰
 
- 資料註解驗證程式可讓您藉由將一或多個屬性加入類別內容來執行驗證。 屬性的 <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> 項目定義了驗證失敗時的錯誤訊息文字。 從 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 開始，ASP.NET 可讓您輕鬆地將錯誤訊息當地語系化。 錯誤訊息將會當地語系化，如果︰
+**改進對資料註解驗證程式的當地語系化錯誤訊息的支援**
+
+資料註解驗證程式可讓您藉由將一或多個屬性加入類別內容來執行驗證。 屬性的 <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> 項目定義了驗證失敗時的錯誤訊息文字。 從 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 開始，ASP.NET 可讓您輕鬆地將錯誤訊息當地語系化。 錯誤訊息將會當地語系化，如果︰
 
 1.  <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> 提供在驗證屬性中。
 
@@ -654,7 +660,7 @@ WPF 在 <xref:System.Printing.PrintQueue?displayProperty=nameWithType> 類別中
 
 4.  資源的索引鍵名稱是指派給 <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> 屬性的字串，其值是當地語系化的錯誤訊息。
 
- 例如，下列資料註解屬性可針對無效評等，定義預設文化特性的錯誤訊息。
+例如，下列資料註解屬性可針對無效評等，定義預設文化特性的錯誤訊息。
 
 ```csharp
 public class RatingInfo
@@ -673,7 +679,7 @@ Public Class RatingInfo
 End Class
 ```
 
- 然後，您可以建立 DataAnnotation.Localization.fr.resx 資源檔，其索引鍵為錯誤訊息字串，而其值為當地語系化的錯誤訊息。 檔案必須位於 `App.LocalResources` 資料夾中。 例如，下列是索引鍵和其法文 (fr) 當地語系化錯誤訊息的值︰
+然後，您可以建立 DataAnnotation.Localization.fr.resx 資源檔，其索引鍵為錯誤訊息字串，而其值為當地語系化的錯誤訊息。 檔案必須位於 `App.LocalResources` 資料夾中。 例如，下列是索引鍵和其法文 (fr) 當地語系化錯誤訊息的值︰
 
 | 名稱                                 | 值                                     |
 | ------------------------------------ | ----------------------------------------- |
@@ -747,7 +753,7 @@ public static byte[] SignDataDsaSha384(byte[] data, X509Certificate2 cert)
 }
 ```
 
-```vb 
+```vb
 Public Shared Function SignDataDsaSha384(data As Byte(), cert As X509Certificate2) As Byte()
     Using DSA As DSA = cert.GetDSAPrivateKey()
         Return DSA.SignData(data, HashAlgorithmName.SHA384)
@@ -755,7 +761,7 @@ Public Shared Function SignDataDsaSha384(data As Byte(), cert As X509Certificate
 End Function
 ```
 
- 然後您可以呼叫 <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPublicKey%2A?displayProperty=nameWithType> 擴充方法來確認簽署的資料，如下列範例所示。
+然後您可以呼叫 <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPublicKey%2A?displayProperty=nameWithType> 擴充方法來確認簽署的資料，如下列範例所示。
 
 ```csharp
 public static bool VerifyDataDsaSha384(byte[] data, byte[] signature, X509Certificate2 cert)
@@ -814,7 +820,7 @@ public static byte[] EncryptDataWithPersistedKey(byte[] data, byte[] iv)
 }
 ```
 
-```vb 
+```vb
 Public Shared Function EncryptDataWithPersistedKey(data As Byte(), iv As Byte()) As Byte()
     Using Aes As Aes = New AesCng("AesDemoKey", CngProvider.MicrosoftSoftwareKeyStorageProvider)
         Aes.IV = iv
@@ -859,9 +865,11 @@ End Function
 
  連線到 Azure SQL 資料庫時，這個行為並不理想，因為連線嘗試可能會因暫時性錯誤而失敗，但暫時性錯誤通常很快就可復原。 為了進一步最佳化連線重試體驗，在 Azure SQL 資料庫連線失敗時，已移除連線集區封鎖期間行為。
 
- 新增 `PoolBlockingPeriod` 關鍵字可讓您選取最適合您應用程式的封鎖期間。 這些值包括：
+ 新增 `PoolBlockingPeriod` 關鍵字可讓您選取最適合您應用程式的封鎖期間。 這些價值包括：
 
- `Auto`：對於連線到 Azure SQL Database 的應用程式，已停用連線集區封鎖期間，而對於連線到任何其他 SQL Server 執行個體的應用程式，已啟用連線集區封鎖期間。 這是預設值。 如果伺服器端點名稱結尾是下列任一項，則會被視為 Azure SQL 資料庫︰
+`Auto`
+
+對於連線到 Azure SQL 資料庫的應用程式，已停用連線集區封鎖期間，而對於連線到任何其他 SQL Server 執行個體的應用程式，已啟用連線集區封鎖期間。 這是預設值。 如果伺服器端點名稱結尾是下列任一項，則會被視為 Azure SQL 資料庫︰
 
 - .database.windows.net
 
@@ -871,9 +879,13 @@ End Function
 
 - .database.cloudapi.de
 
- `AlwaysBlock` 一律啟用連線集區封鎖期間。
+`AlwaysBlock`
 
- `NeverBlock` 一律停用連線集區封鎖期間。
+一律啟用連線集區封鎖期間。
+
+`NeverBlock`
+
+一律停用連線集區封鎖期間。
 
  **Always Encrypted 的增強功能**
 
@@ -933,7 +945,7 @@ AppContext.SetSwitch(disableCngCertificates, False)
  例如，用戶端嘗試連接到接聽 `net.pipe://localhost/Service1` 的服務，但該電腦上以系統管理員權限執行的不同服務正在接聽 `net.pipe://localhost`。 當此應用程式設定是設為 `false` 時，用戶端會嘗試連線到錯誤的服務。 將應用程式設定設為 `true` 後，用戶端一律都會連接至最符合的服務。
 
 > [!NOTE]
->  使用 <xref:System.ServiceModel.NetNamedPipeBinding> 的用戶端會根據服務的基底位址 (如果存在的話) 來尋找服務，而不是根據完整的端點位址。 為了確保此設定一律適用，服務應該使用唯一的基底位址。
+> 使用 <xref:System.ServiceModel.NetNamedPipeBinding> 的用戶端會根據服務的基底位址 (如果存在的話) 來尋找服務，而不是根據完整的端點位址。 為了確保此設定一律適用，服務應該使用唯一的基底位址。
 
  若要啟用此變更，請先將下列應用程式設定加入用戶端應用程式的 App.config 或 Web.config 檔案︰
 
@@ -974,9 +986,9 @@ AppContext.SetSwitch(disableCngCertificates, False)
 
 ```xaml
 <GroupDescriptions>
-     <PropertyGroupDescription 
-         PropertyName="Age" 
-         CustomSort= 
+     <PropertyGroupDescription
+         PropertyName="Age"
+         CustomSort=
               "{x:Static PropertyGroupDescription.CompareNamesAscending}"/>
      </PropertyGroupDescription>
 </GroupDescriptions>
@@ -1035,10 +1047,10 @@ AppContext.SetSwitch(disableCngCertificates, False)
 
 - 流程圖活動設計工具或其他工作流程活動設計工具可能會在預設位置顯示所有物件，而不是根據附加的屬性值。
 
-<a name="ClickOnce" />
 
 ### <a name="clickonce"></a>ClickOnce
- ClickOnce 已更新為除了已經支援的 TLS 1.0 通訊協定之外，還支援 TLS 1.1 和 TLS 1.2。 ClickOnce 會自動偵測需要哪個通訊協定。若要啟用 TLS 1.1 和 1.2 支援，並不需要在 ClickOnce 應用程式中執行額外的步驟。
+
+ClickOnce 已更新為除了已經支援的 TLS 1.0 通訊協定之外，還支援 TLS 1.1 和 TLS 1.2。 ClickOnce 會自動偵測需要哪個通訊協定。若要啟用 TLS 1.1 和 1.2 支援，並不需要在 ClickOnce 應用程式中執行額外的步驟。
 
 <a name="UWPConvert" />
 
@@ -1059,7 +1071,8 @@ AppContext.SetSwitch(disableCngCertificates, False)
 <a name="v461" />
 
 ## <a name="whats-new-in-the-net-framework-461"></a>.NET Framework 4.6.1 的新功能
- [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 包含下列領域的新功能：
+
+[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 包含下列領域的新功能：
 
 - [加密](#Crypto)
 
@@ -1073,7 +1086,7 @@ AppContext.SetSwitch(disableCngCertificates, False)
 
 - [NGen](#NGEN461)
 
- 如需 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 的詳細資訊，請參閱下列主題：
+如需 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 的詳細資訊，請參閱下列主題：
 
 - [.NET Framework 4.6.1 變更清單](https://go.microsoft.com/fwlink/?LinkId=622964)
 
@@ -1110,7 +1123,7 @@ AppContext.SetSwitch(disableCngCertificates, False)
  客戶必須在應用程式伺服器或用戶端電腦上安裝 HSM 廠商提供的 CSP 提供者或 CNG 金鑰存放區提供者，才能存取受到儲存在 HSM 之資料行主要金鑰保護的 Always Encrypted 資料。
 
  **改善 AlwaysOn 的 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> 連線行為**
- 
+
 SqlClient 現在會自動提供更快的 AlwaysOn 可用性群組 (AG) 連線。 它會明確偵測應用程式是否連線到不同子網路上的 AlwaysOn 可用性群組 (AG)，並快速找到目前使用中的伺服器和提供伺服器連線。 在此版本之前，應用程式必須設定連接字串包含 `"MultisubnetFailover=true"`，以表示它要連線到 AlwaysOn 可用性群組。 如果不在 `true` 設定連接關鍵字，應用程式可能會在連接到 AlwaysOn 可用性群組時發生逾時狀況。 使用此版本，應用程式就「不再」需要將 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> 設定為 `true`。 如需 AlwaysOn 可用性群組的 SqlClient 支援詳細資訊，請參閱[高可用性、嚴重損壞修復的 SqlClient 支援](../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)。
 
 <a name="WPF461" />
@@ -1151,7 +1164,7 @@ SqlClient 現在會自動提供更快的 AlwaysOn 可用性群組 (AG) 連線。
 - 系統將這些檔案視為唯讀，而且不會加以修改。
 
 > [!NOTE]
->  WPF 拼字檢查 API 不直接支援這些新的檔案格式，而應用程式中向 WPF 提供的自訂字典應該繼續使用 .lex 檔案。
+> WPF 拼字檢查 API 不直接支援這些新的檔案格式，而應用程式中向 WPF 提供的自訂字典應該繼續使用 .lex 檔案。
 
 **範例**
 
@@ -1181,11 +1194,16 @@ SqlClient 現在會自動提供更快的 AlwaysOn 可用性群組 (AG) 連線。
 <a name="Profile461" />
 
 ### <a name="profiling"></a>程式碼剖析
- Unmanaged 程式碼剖析 API 已增強下列項目：
 
- 為存取 [ICorProfilerInfo7](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md) 介面中的 PDB 提供更好的支援：在 ASP.Net 5 中，由 Roslyn 在記憶體內編譯組件變得更加普遍。 對於製作程式碼剖析工具的開發人員，這表示過去在磁碟上序列化的 PDB 可能不再存在。 程式碼分析工具通常會使用 PDB 對應回工作原始程式行的程式碼，例如程式碼涵蓋範圍或逐行效能分析。 [ICorProfilerInfo7](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md) 介面現在包含兩種新方法：[ICorProfilerInfo7::GetInMemorySymbolsLength](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-getinmemorysymbolslength-method.md) 和 [ICorProfilerInfo7::ReadInMemorySymbols](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-readinmemorysymbols.md)，讓這些分析工具能夠存取記憶體中的 PDB 資料。分析工具使用新的 API，即可取得記憶體內的 PDB 內容作為位元組陣列，然後予以處理或序列化至磁碟。
+非受控分析 API 增強了下列功能：
 
- 具有 ICorProfiler 介面的更佳檢測方式：使用 `ICorProfiler` API 的 ReJit 功能進行動態檢測的程式碼分析工具，現在可以修改某些中繼資料。 這類工具過去可以隨時檢測 IL，但只能在模組載入時修改中繼資料。 因為 IL 參考中繼資料，這會限制能夠執行的檢測種類。 我們已新增 [ICorProfilerInfo7::ApplyMetaData](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-applymetadata-method.md) 方法，以支援在載入模組之後進行中繼資料子集的編輯；尤其還新增 `AssemblyRef`、`TypeRef`、`TypeSpec`、`MemberRef`、`MemberSpec` 和 `UserString` 記錄，藉此解除上述部分限制。 此變更讓更大範圍的即時檢測變成可能。
+- 存取 [ICorProfilerInfo7](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md) 介面的 PDB 支援變得更好。
+
+   在 ASP.NET Core 中，由 Roslyn 在記憶體中編譯組繹碼變得更為常見。 對於製作程式碼剖析工具的開發人員，這表示過去在磁碟上序列化的 PDB 可能不再存在。 程式碼分析工具通常會使用 PDB 對應回工作原始程式行的程式碼，例如程式碼涵蓋範圍或逐行效能分析。 [ICorProfilerInfo7](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md) 介面現在包含兩種新方法：[ICorProfilerInfo7::GetInMemorySymbolsLength](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-getinmemorysymbolslength-method.md) 和 [ICorProfilerInfo7::ReadInMemorySymbols](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-readinmemorysymbols.md)，讓這些分析工具能夠存取記憶體中的 PDB 資料。分析工具使用新的 API，即可取得記憶體內的 PDB 內容作為位元組陣列，然後予以處理或序列化至磁碟。
+
+- ICorProfiler 介面的檢測設備變得更好。
+
+   使用 `ICorProfiler` API 的 ReJit 功能進行動態檢測的程式碼分析工具，現在可以修改某些中繼資料。 這類工具過去可以隨時檢測 IL，但只能在模組載入時修改中繼資料。 因為 IL 參考中繼資料，這會限制能夠執行的檢測種類。 我們已新增 [ICorProfilerInfo7::ApplyMetaData](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-applymetadata-method.md) 方法，以支援在載入模組之後進行中繼資料子集的編輯；尤其還新增 `AssemblyRef`、`TypeRef`、`TypeSpec`、`MemberRef`、`MemberSpec` 和 `UserString` 記錄，藉此解除上述部分限制。 此變更讓更大範圍的即時檢測變成可能。
 
 <a name="NGEN461" />
 
@@ -1199,13 +1217,13 @@ SqlClient 現在會自動提供更快的 AlwaysOn 可用性群組 (AG) 連線。
 ## <a name="whats-new-in-net-2015"></a>.NET 2015 的新功能
  .NET 2015 導入了 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 和 .NET Core。 其中一些新功能適用於兩者，另一些功能則專屬於 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 或 [!INCLUDE[net_core](../../../includes/net-core-md.md)]。
 
-- **ASP.NET 5**
+- **ASP.NET Core**
 
-     .NET 2015 包含 ASP.NET 5，是用於建置現代雲端式應用程式的精實 .NET 實作 。 ASP.NET 5 已模組化，因此您可以在應用程式中僅包含需要的功能。 這個平台可裝載於 IIS 上或自行裝載於自訂處理序中，而且您可以在同一部伺服器上執行具有不同 .NET Framework 版本的應用程式。 其中所包含的新環境組態系統是專為雲端部署所設計。
+     .NET 2015 包含 ASP.NET Core。這是一套精簡的 .NET 實作，可用於建置現代化雲端式應用程式。 ASP.NET Core 已經過模組化，所以您只能依據您的應用程式需要加入這些功能。 這個平台可裝載於 IIS 上或自行裝載於自訂處理序中，而且您可以在同一部伺服器上執行具有不同 .NET Framework 版本的應用程式。 其中所包含的新環境組態系統是專為雲端部署所設計。
 
-     MVC、Web API 和網頁已整合成單一架構，稱為 MVC 6。 您可以透過 Visual Studio 2015 中的新工具來建置 ASP.NET 5 應用程式。 您現有的應用程式可在新的 .NET Framework 上運作；不過若要建置使用 MVC 6 或 SignalR 3 的應用程式，您必須使用 Visual Studio 2015 中的專案系統。
+     MVC、Web API 和網頁已整合成單一架構，稱為 MVC 6。 您可以使用 Visual Studio 2015 或更新版本中的工具建置 ASP.NET Core 應用程式。 您的現有應用程式將可在新的 .NET Framework 上運作；但若要建置使用 MVC 6 或 SignalR 3 的應用程式，必須使用 Visual Studio 2015 或更新版本中的專案系統。
 
-     如需相關資訊，請參閱 [ASP.NET 5](https://go.microsoft.com/fwlink/?LinkId=518238)。
+     如需相關資訊，請參閱 [ASP.NET Core](http://go.microsoft.com/fwlink/?LinkId=518238)。
 
 - **ASP.NET 更新**
 
@@ -1213,7 +1231,7 @@ SqlClient 現在會自動提供更快的 AlwaysOn 可用性群組 (AG) 連線。
 
          ASP.NET 現在提供一個以工作為基礎的簡單 API 來進行非同步回應清除，亦即 <xref:System.Web.HttpResponse.FlushAsync%2A?displayProperty=nameWithType>，其可使用您語言的 `async/await` 支援來非同步清除回應。
 
-    - `Model binding supports task-returning methods`
+    - **模型繫結支援 task-returning 方法**
 
          [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的 ASP.NET 中已加入模型繫結功能，可保障 Web Form 頁面和使用者控制項中以 CRUD 為基礎之資料作業方式的可延伸性並以程式碼為重心。 模型繫結系統現在支援由 <xref:System.Threading.Tasks.Task>傳回的模型繫結方法。 這項功能可讓 Web Form 開發人員在使用包括 Entity Framework 的較新版 ORM 時，透過簡單的資料繫結系統獲得非同步延展性的優勢。
 
@@ -1236,7 +1254,7 @@ SqlClient 現在會自動提供更快的 AlwaysOn 可用性群組 (AG) 連線。
          為了提供一個在 ASP.NET 應用程式中使用 [PUSH_PROMISE](http://http2.github.io/http2-spec/#PUSH_PROMISE) 功能的方式，已將含有 <xref:System.Web.HttpResponse.PushPromise%28System.String%29> 和 <xref:System.Web.HttpResponse.PushPromise%28System.String%2CSystem.String%2CSystem.Collections.Specialized.NameValueCollection%29> 這兩個多載的新方法新增到 <xref:System.Web.HttpResponse> 類別。
 
         > [!NOTE]
-        >  雖然 ASP.NET 5 支援 HTTP/2，但尚未加入 PUSH PROMISE 功能的支援。
+        > ASP.NET Core 支援 HTTP/2，但尚未新增 PUSH PROMISE 功能的支援。
 
          瀏覽器和網頁伺服器 (Windows 上的 IIS) 會執行所有工作。 您不需要為使用者進行任何繁重工作。
 
@@ -1343,16 +1361,16 @@ SqlClient 現在會自動提供更快的 AlwaysOn 可用性群組 (AG) 連線。
          程式庫必須檢查取用者是否已宣告參數的值，然後適當地處理它。
 
         ```csharp
-        if (!AppContext.TryGetSwitch("Switch.AmazingLib.ThrowOnException", out shouldThrow)) 
+        if (!AppContext.TryGetSwitch("Switch.AmazingLib.ThrowOnException", out shouldThrow))
         {
-           // This is the case where the switch value was not set by the application. 
-           // The library can choose to get the value of shouldThrow by other means. 
-           // If no overrides nor default values are specified, the value should be 'false'. 
+           // This is the case where the switch value was not set by the application.
+           // The library can choose to get the value of shouldThrow by other means.
+           // If no overrides nor default values are specified, the value should be 'false'.
            // A false value implies the latest behavior.
         }
 
            // The library can use the value of shouldThrow to throw exceptions or not.
-           if (shouldThrow) 
+           if (shouldThrow)
            {
               // old code
            }
@@ -1474,7 +1492,7 @@ SqlClient 現在會自動提供更快的 AlwaysOn 可用性群組 (AG) 連線。
      預設值為 60 秒。 如果 `value` 設定為 0，系統會立即拒絕不按照順序的要求，並顯示如下的錯誤文字：
 
     ```
-    Operation 'Request3|{http://tempuri.org/}IService' on service instance with identifier '2b0667b6-09c8-4093-9d02-f6c67d534292' cannot be performed at this time. Please ensure that the operations are performed in the correct order and that the binding in use provides ordered delivery guarantees. 
+    Operation 'Request3|{http://tempuri.org/}IService' on service instance with identifier '2b0667b6-09c8-4093-9d02-f6c67d534292' cannot be performed at this time. Please ensure that the operations are performed in the correct order and that the binding in use provides ordered delivery guarantees.
     ```
 
      如果收到不按照順序的作業訊息，但沒有非通訊協定書籤時，也會收到相同的訊息。
@@ -1486,7 +1504,7 @@ SqlClient 現在會自動提供更快的 AlwaysOn 可用性群組 (AG) 連線。
      現在，若交易導致衍生自 <xref:System.Transactions.TransactionException> 的例外狀況擲回時，您可以針對該交易包含分散式的交易識別碼。 您可以在 app.config 檔的`appSettings` 區段中加入下列索引鍵，以完成這項作業：
 
     ```xml
-    <add key="Transactions:IncludeDistributedTransactionIdInExceptionMessage" value="true"/> 
+    <add key="Transactions:IncludeDistributedTransactionIdInExceptionMessage" value="true"/>
     ```
 
      預設值是 `false`。
@@ -1531,7 +1549,7 @@ SqlClient 現在會自動提供更快的 AlwaysOn 可用性群組 (AG) 連線。
 
      以 [!INCLUDE[net_core](../../../includes/net-core-md.md)] 為目標並以 C# 或 Visual Basic 撰寫的 Windows 10 應用程式，現在可以利用將應用程式編譯成機器碼的新技術，而不是使用 IL。 所產生之應用程式的特色是啟動和執行都更快。 如需詳細資訊，請參閱[使用 .NET Native 編譯應用程式](../../../docs/framework/net-native/index.md)。 如需 .NET Native 概觀，請參閱 [.NET Native 和編譯](../../../docs/framework/net-native/net-native-and-compilation.md)，其中探討 .NET Native 與 JIT 編譯和 NGEN 之間的差異，以及對您的程式碼所代表的意義。
 
-     當您使用 Visual Studio 2015 編譯您的應用程式時，它們預設會編譯成機器碼。 如需詳細資訊，請參閱 [.NET Native 使用者入門](../../../docs/framework/net-native/getting-started-with-net-native.md)。
+     根據預設，當您使用 Visual Studio 2015 或更新版本編繹應用程式時，應用程式會編譯成機器碼。 如需詳細資訊，請參閱 [.NET Native 使用者入門](../../../docs/framework/net-native/getting-started-with-net-native.md)。
 
      為了支援對 .NET Native 應用程式進行偵錯，Unmanaged 偵錯 API 已新增許多介面和列舉。 如需詳細資訊，請參閱[偵錯 (Unmanaged API 參考)](../../../docs/framework/unmanaged-api/debugging/index.md) 主題。
 
@@ -1553,11 +1571,12 @@ SqlClient 現在會自動提供更快的 AlwaysOn 可用性群組 (AG) 連線。
 
 - **調整 Windows Forms 控制項的大小。** 此功能已擴充。 您現在可以使用系統 DPI 設定來調整下列其他控制項的元件大小 (例如下拉式方塊中的下拉式箭頭)：
 
-     <xref:System.Windows.Forms.ComboBox> <xref:System.Windows.Forms.ToolStripComboBox> 
-     <xref:System.Windows.Forms.ToolStripMenuItem> 
-     <xref:System.Windows.Forms.Cursor> 
-     <xref:System.Windows.Forms.DataGridView> 
-     <xref:System.Windows.Forms.DataGridViewComboBoxColumn>
+    - <xref:System.Windows.Forms.ComboBox>
+    - <xref:System.Windows.Forms.ToolStripComboBox>
+    - <xref:System.Windows.Forms.ToolStripMenuItem>
+    - <xref:System.Windows.Forms.Cursor>
+    - <xref:System.Windows.Forms.DataGridView>
+    - <xref:System.Windows.Forms.DataGridViewComboBoxColumn>
 
      這是一項選擇性功能。 若要啟用此功能，請將應用程式組態檔 (app.config) 中的 `EnableWindowsFormsHighDpiAutoResizing` 項目設定為 `true`：
 
@@ -1577,13 +1596,23 @@ SqlClient 現在會自動提供更快的 AlwaysOn 可用性群組 (AG) 連線。
 
 - **程式碼剖析改進。** 下列新的 Unmanaged 程式碼分析 API 提供更強大的程式碼分析功能：
 
-     [COR_PRF_ASSEMBLY_REFERENCE_INFO 結構](../../../docs/framework/unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md) [COR_PRF_HIGH_MONITOR 列舉](../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md) [GetAssemblyReferences 方法](../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md) [GetEventMask2 方法](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md) [SetEventMask2 方法](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) [AddAssemblyReference 方法](../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-addassemblyreference-method.md)
+    - [COR_PRF_ASSEMBLY_REFERENCE_INFO 結構](../../../docs/framework/unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)
+    - [COR_PRF_HIGH_MONITOR 列舉](../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)
+    - [GetAssemblyReferences 方法](../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md)
+    - [GetEventMask2 方法](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md)
+    - [SetEventMask2 方法](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)
+    - [AddAssemblyReference 方法](../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-addassemblyreference-method.md)
 
      之前的 `ICorProfiler` 實作支援相依組件的消極式載入。 新程式碼分析 API 要求可立即載入分析工具插入的相依組件，而不是在完全初始化應用程式之後才載入。 此變更不會影響現有 `ICorProfiler` API 的使用者。
 
 - **偵錯改進。** 下列新的 Unmanaged 偵錯 API 提供與分析工具更佳的整合。 您現在可以存取分析工具插入的中繼資料，並存取偵錯傾印時編譯器 ReJIT 要求所產生的區域變數和程式碼。
 
-     [SetWriteableMetadataUpdateMode 方法](../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md) [EnumerateLocalVariablesEx 方法](../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md) [GetLocalVariableEx 方法](../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md) [GetCodeEx 方法](../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md) [GetActiveReJitRequestILCode 方法](../../../docs/framework/unmanaged-api/debugging/icordebugfunction3-getactiverejitrequestilcode-method.md) [GetInstrumentedILMap 方法](../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md)
+    - [SetWriteableMetadataUpdateMode 方法](../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md)
+    - [EnumerateLocalVariablesEx 方法](../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md)
+    - [GetLocalVariableEx 方法](../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md)
+    - [GetCodeEx 方法](../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md)
+    - [GetActiveReJitRequestILCode 方法](../../../docs/framework/unmanaged-api/debugging/icordebugfunction3-getactiverejitrequestilcode-method.md)
+    - [GetInstrumentedILMap 方法](../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md)
 
 - **事件追蹤變更。** .NET Framework 4.5.2 可對更大的表面區域進行 Windows 事件追蹤 (ETW) 的跨處理序活動追蹤。 此功能可讓進階電源管理 (APM) 廠商提供輕量型工具，以精確追蹤跨執行緒之個別要求和活動的成本。  僅當 ETW 控制器啟用這些事件時，才會引發事件；因此，這些變更不會影響之前撰寫的 ETW 程式碼或停用 ETW 時所執行的程式碼。
 
@@ -1626,7 +1655,7 @@ SqlClient 現在會自動提供更快的 AlwaysOn 可用性群組 (AG) 連線。
 
  .NET Framework 4.5.1 的核心新功能和增強功能包括：
 
-- 組件的自動繫結重新導向。 從 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] 開始，當您編譯鎖定 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 的應用程式時，如果您的應用程式或其元件參考相同組件的多個版本，就可能會將繫結重新導向加入至應用程式組態檔。 您也可以對鎖定舊版 .NET Framework 的專案啟用這項功能。 如需詳細資訊，請參閱[操作說明：啟用和停用自動繫結重新導向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)。
+- 組件的自動繫結重新導向。 自 Visual Studio 2013 起，當您編譯可以在 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 上運作的應用程式時，若您的應用程式或其元件參考了相同組件的多個版本，可能會將繫結重新導向新增到應用程式的組態檔中。 您也可以對鎖定舊版 .NET Framework 的專案啟用這項功能。 如需詳細資訊，請參閱[操作說明：啟用和停用自動繫結重新導向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)。
 
 - 可收集診斷資訊，協助開發人員改進伺服器和雲端應用程式效能的功能。 如需詳細資訊，請參閱 <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A> 類別中的 <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A> 和 <xref:System.Diagnostics.Tracing.EventSource> 方法。
 
@@ -1638,8 +1667,9 @@ SqlClient 現在會自動提供更快的 AlwaysOn 可用性群組 (AG) 連線。
 
 - 調整 Windows Forms 控制項的大小。 您可以透過在應用程式的應用程式組態檔中選擇加入一個項目，使用系統 DPI 設定來調整控制項的元件大小 (例如屬性方格中出現的圖示)。 目前支援此功能的 Windows Forms 控制項如下：
 
-     <xref:System.Windows.Forms.PropertyGrid> <xref:System.Windows.Forms.TreeView> 
-     <xref:System.Windows.Forms.DataGridView> 的某些部分 (請參閱 [4.5.2 的新功能](#v452)以了解其他支援的控制項)
+    - <xref:System.Windows.Forms.PropertyGrid>
+    - <xref:System.Windows.Forms.TreeView>
+    - <xref:System.Windows.Forms.DataGridView> 的某些部分 (請參閱 [4.5.2 的新功能](#v452)以了解其他支援的控制項)
 
      若要啟用此功能，請將新的 \<appSettings> 元素加入組態檔 (app.config) 中，並將 `EnableWindowsFormsHighDpiAutoResizing` 元素設定為 `true`：
 
@@ -1649,19 +1679,19 @@ SqlClient 現在會自動提供更快的 AlwaysOn 可用性群組 (AG) 連線。
     </appSettings>
     ```
 
- 在 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] 中對您的 .NET Framework 應用程式進行偵錯時的改進功能包括：
+ 在 Visual Studio 2013 中對您的 .NET Framework 應用程式進行偵錯時的改進功能包括：
 
-- 在 Visual Studio Debugger 中傳回值。 當您在 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)]中對 Managed 應用程式進行偵錯時，[自動變數] 視窗會顯示方法的傳回類型和值。 這項資訊適用於桌面、Windows 市集和 Windows Phone 應用程式。 如需詳細資訊，請參閱 MSDN Library 中的[檢查方法呼叫的傳回值](https://msdn.microsoft.com/library/e3245b37-8e2e-4200-ba84-133726e95f1f\(v=vs.120\).aspx)。
+- 在 Visual Studio Debugger 中傳回值。 當您在 Visual Studio 2013 中對 Managed 應用程式進行偵錯時，[自動變數] 視窗會顯示方法的傳回類型和值。 此資訊適用於傳統型、Windows 市集和 Windows Phone 應用程式。 如需詳細資訊，請參閱 MSDN Library 中的[檢查方法呼叫的傳回值](https://msdn.microsoft.com/library/e3245b37-8e2e-4200-ba84-133726e95f1f\(v=vs.120\).aspx)。
 
-- 64 位元應用程式的 [編輯後繼續] 功能。 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] 對桌面、Windows 市集和 Windows Phone 的 64 位元 Managed 應用程式支援 [編輯後繼續] 功能。 對 32 位元和 64 位元應用程式的現有限制仍然有效 (請參閱[支援的程式碼變更 (C#)](/visualstudio/debugger/supported-code-changes-csharp) 文章的最後一節)。
+- 64 位元應用程式的「編輯後繼續」功能。 Visual Studio 2013 對傳統型、Windows 市集和 Windows Phone 的 64 位元 Managed 應用程式支援「編輯後繼續」功能。 對 32 位元和 64 位元應用程式的現有限制仍然有效 (請參閱[支援的程式碼變更 (C#)](/visualstudio/debugger/supported-code-changes-csharp) 文章的最後一節)。
 
-- 非同步感知偵錯。 為了在 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] 中更為容易對非同步應用程式進行偵錯，呼叫堆疊會隱藏編譯器提供的基礎結構程式碼來支援非同步程式設計，以及提供邏輯父框架中的鍊結，讓您可以更清楚地了解邏輯程式執行的方式。 [工作] 視窗會取代 [平行工作] 視窗，並顯示與特定中斷點相關的工作，同時也會顯示應用程式中目前為作用中或已排程的任何其他工作。 您可以在 [.NET Framework 4.5.1 公告 (英文)](https://blogs.msdn.microsoft.com/dotnet/2013/06/26/announcing-the-net-framework-4-5-1-preview/)的＜Async-aware debugging＞ (非同步感知偵錯) 一節中，閱讀此功能的相關資訊。
+- 非同步感知偵錯。 為了在 Visual Studio 2013 中更容易對非同步應用程式進行偵錯，呼叫堆疊會隱藏編譯器提供的基礎結構程式碼來支援非同步程式設計，以及提供邏輯父框架中的鏈結，讓您可以更清楚地了解邏輯程式執行的方式。 [工作] 視窗會取代 [平行工作] 視窗，並顯示與特定中斷點相關的工作，同時也會顯示應用程式中目前為作用中或已排程的任何其他工作。 您可以在 [.NET Framework 4.5.1 公告 (英文)](https://blogs.msdn.microsoft.com/dotnet/2013/06/26/announcing-the-net-framework-4-5-1-preview/)的＜Async-aware debugging＞ (非同步感知偵錯) 一節中，閱讀此功能的相關資訊。
 
-- 對 Windows 執行階段元件提供更佳的例外狀況支援。 在 [!INCLUDE[win81](../../../includes/win81-md.md)] 中，Windows 市集應用程式所引發的例外狀況會保留造成例外狀況之錯誤的資訊，甚至跨語言界限。 您可以在 [.NET Framework 4.5.1 公告](https://blogs.msdn.microsoft.com/dotnet/2013/06/26/announcing-the-net-framework-4-5-1-preview/)的＜Windows 市集應用程式開發＞一節中，閱讀這項功能的相關資訊。 
+- 對 Windows 執行階段元件提供更佳的例外狀況支援。 在 [!INCLUDE[win81](../../../includes/win81-md.md)] 中，Windows 市集應用程式所引發的例外狀況會保留造成例外狀況之錯誤的資訊，甚至跨語言界限。 您可以在 [.NET Framework 4.5.1 公告](https://blogs.msdn.microsoft.com/dotnet/2013/06/26/announcing-the-net-framework-4-5-1-preview/)的＜Windows 市集應用程式開發＞一節中，閱讀這項功能的相關資訊。
 
- 從 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] 開始，您可以使用 [Managed 特性指引最佳化工具 (Mpgo.exe)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md)，針對 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式和桌面應用程式進行最佳化。
+ 自 Visual Studio 2013 開始，您可以使用[由受控設定檔導引的最佳化工具 (Mpgo.exe)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md) 來最佳化[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式與傳統型應用程式。
 
- 如需 ASP.NET 4.5.1 的新功能，請參閱 ASP.NET 網站上的 [ASP.NET 4.5.1 和 Visual Studio 2013](https://go.microsoft.com/fwlink/?LinkID=309094)。
+ 若要了解 ASP.NET 4.5.1 的新功能，請參閱[適用於 Visual Studio 2013 的 ASP.NET 及 Web 工具版本資訊](/aspnet/visual-studio/overview/2013/release-notes)。
 
  [回到頁首](#introduction)
 
@@ -1722,7 +1752,7 @@ SqlClient 現在會自動提供更快的 AlwaysOn 可用性群組 (AG) 連線。
 ### <a name="tools"></a>工具
  在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，資源檔產生器 (Resgen.exe) 可讓您從 .NET Framework 組件內嵌的 .resources 檔建立 .resw 檔，以供 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式使用。 如需詳細資訊，請參閱 [Resgen.exe (資源檔產生器)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)。
 
- Managed 特性指引最佳化 (Mpgo.exe) 可讓您藉由最佳化原生映像組件，改善應用程式啟動時間、記憶體使用量 (工作集大小) 和輸送量。 命令列工具會產生原生映像應用程式組件的設定檔資料。 請參閱 [Mpgo.exe (Managed 特性指引最佳化工具)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md)。 從 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] 開始，您可以使用 Mpgo.exe 最佳化 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式及桌面應用程式。
+ Managed 特性指引最佳化 (Mpgo.exe) 可讓您藉由最佳化原生映像組件，改善應用程式啟動時間、記憶體使用量 (工作集大小) 和輸送量。 命令列工具會產生原生映像應用程式組件的設定檔資料。 請參閱 [Mpgo.exe (Managed 特性指引最佳化工具)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md)。 自 Visual Studio 2013 起，您可以使用 Mpgo.exe 來最佳化 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式與傳統型應用程式。
 
 <a name="parallel" />
 
@@ -1732,20 +1762,20 @@ SqlClient 現在會自動提供更快的 AlwaysOn 可用性群組 (AG) 連線。
 <a name="web" />
 
 ### <a name="web"></a>Web
- ASP.NET 4.5 和 4.5.1 加入了 Web Forms、WebSocket 支援、非同步處理常式、效能增強功能及許多其他功能的模型繫結。 如需詳細資訊，請參閱下列資源：
 
-- MSDN Library 中的 [ASP.NET 4.5 和 Visual Studio 2012](https://msdn.microsoft.com/library/ac9bb7f6-f094-4af7-bad0-acf49a5dbc55)。
+ASP.NET 4.5 和 4.5.1 加入了 Web Forms、WebSocket 支援、非同步處理常式、效能增強功能及許多其他功能的模型繫結。 如需詳細資訊，請參閱下列資源：
 
-- ASP.NET 網站上的 [ASP.NET 4.5.1 和 Visual Studio 2013](https://go.microsoft.com/fwlink/?LinkID=309094)。
+- [ASP.NET 4.5 與 Visual Studio 2012](https://msdn.microsoft.com/library/hh420390(v=vs.110).aspx)
 
-<a name="networking" />
+- [適用於 Visual Studio 2013 的 ASP.NET 和 Web 工具版本資訊](/aspnet/visual-studio/overview/2013/release-notes)
 
-### <a name="networking"></a>網路
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 為 HTTP 應用程式提供了新的程式設計介面。 如需詳細資訊，請參閱新的 <xref:System.Net.Http?displayProperty=nameWithType> 和 <xref:System.Net.Http.Headers?displayProperty=nameWithType> 命名空間。
+### <a name="networking-a-namenetworking-"></a>網路功能<a name="networking" />
 
- 另外還包括對新的程式設計介面的支援，可使用現有的 <xref:System.Net.HttpListener> 和相關類別接受 WebSocket 連接並進行互動。 如需詳細資訊，請參閱新的 <xref:System.Net.WebSockets> 命名空間和 <xref:System.Net.HttpListener> 類別。
+[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 為 HTTP 應用程式提供了新的程式設計介面。 如需詳細資訊，請參閱新的 <xref:System.Net.Http?displayProperty=nameWithType> 和 <xref:System.Net.Http.Headers?displayProperty=nameWithType> 命名空間。
 
- 此外，[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 還包括下列網路改進功能：
+另外還包括對新的程式設計介面的支援，可使用現有的 <xref:System.Net.HttpListener> 和相關類別接受 WebSocket 連接並進行互動。 如需詳細資訊，請參閱新的 <xref:System.Net.WebSockets> 命名空間和 <xref:System.Net.HttpListener> 類別。
+
+此外，[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 還包括下列網路改進功能：
 
 - 符合 RFC 標準的 URI 支援。 如需詳細資訊，請參閱 <xref:System.Uri> 和相關類別。
 
@@ -1875,16 +1905,19 @@ SqlClient 現在會自動提供更快的 AlwaysOn 可用性群組 (AG) 連線。
  如需詳細資訊，請參閱 [Windows Workflow Foundation 的新功能](https://go.microsoft.com/fwlink/?LinkId=228176)。
 
 <a name="tailored" />
+
 ### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
- [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式是專為特定尺寸所設計，並且會利用 Windows 作業系統的強大功能。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或 4.5.1 的子集可於使用 C# 或 Visual Basic 建置適用於 Windows 的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式時提供。 這個子集稱為 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]，在 Windows 開發人員中心的[概觀](https://go.microsoft.com/fwlink/?LinkId=228491)中有相關說明。
 
-<a name="portable" />
-### <a name="portable-class-libraries"></a>可攜式類別庫
- 在 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] (含) 以後版本中的可攜式類別庫專案可讓您撰寫及建置可在多個 .NET Framework 平台上執行的 Managed 組件。 使用可攜式類別庫專案時，可選擇做為目標的平台 (例如 Windows Phone 和 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)])。 專案中可用的類型和成員會自動限制為這些平台上的通用類型和成員。 如需詳細資訊，請參閱[可攜式類別庫](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)。
+[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式是專為特定尺寸所設計，並且會利用 Windows 作業系統的強大功能。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或 4.5.1 的子集可於使用 C# 或 Visual Basic 建置適用於 Windows 的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式時提供。 這個子集稱為 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]，在 Windows 開發人員中心的[概觀](https://go.microsoft.com/fwlink/?LinkId=228491)中有相關說明。
 
-## <a name="see-also"></a>請參閱
- [.NET Framework 和不定期發行](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)   
- [.NET Framework 協助工具的新功能](whats-new-in-accessibility.md)   
- [Visual Studio 2017 中的新功能](/visualstudio/ide/whats-new-in-visual-studio)   
- [ASP.NET](/aspnet)   
- [Visual C++ 中的新增功能](/cpp/what-s-new-for-visual-cpp-in-visual-studio) 
+### <a name="portable-class-libraries-a-nameportable-"></a>可攜式類別庫<a name="portable" />
+
+在 Visual Studio 2012 (含) 以後版本中的可攜式類別庫專案可讓您撰寫及建置可在多個 .NET Framework 平台上執行的 Managed 組件。 使用可攜式類別庫專案時，可選擇做為目標的平台 (例如 Windows Phone 和 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)])。 專案中可用的類型和成員會自動限制為這些平台上的通用類型和成員。 如需詳細資訊，請參閱[可攜式類別庫](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)。
+
+## <a name="see-also"></a>另請參閱
+
+- [.NET Framework 和不定期發行](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)
+- [.NET Framework 協助工具的新功能](whats-new-in-accessibility.md)
+- [Visual Studio 2017 的新功能](/visualstudio/ide/whats-new-in-visual-studio)
+- [ASP.NET](/aspnet)
+- [Visual C++ 中的新增功能](/cpp/what-s-new-for-visual-cpp-in-visual-studio)

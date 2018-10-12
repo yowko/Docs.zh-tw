@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5e5aea783640a2aa2c9f4fa7754b9a3a435d1f13
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 104a0018896eb95255cf4054f9402ce5160b95f7
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579063"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584139"
 ---
 # <a name="generics-in-net"></a>.NET 的泛型
 
@@ -115,7 +115,7 @@ ms.locfileid: "33579063"
   
 -   泛型委派讓類型安全回呼不需要建立多個委派類別。 例如， <xref:System.Predicate%601> 泛型委派可讓您建立一種方法，為特定類型實作您自己的搜尋條件，以及讓您搭配 <xref:System.Array> 類型的方法 (例如 <xref:System.Array.Find%2A>、 <xref:System.Array.FindLast%2A>和 <xref:System.Array.FindAll%2A>) 使用方法。  
   
--   泛型簡化了動態產生的程式碼。 當您搭配動態產生的程式碼使用泛型時，不需要產生類型。 這會增加您使用輕量動態方法而非產生整個組件的時機。 如需詳細資訊，請參閱＜如何：定義和執行動態方法及 DynamicMethod＞。  
+-   泛型簡化了動態產生的程式碼。 當您搭配動態產生的程式碼使用泛型時，不需要產生類型。 這會增加您使用輕量動態方法而非產生整個組件的時機。 如需詳細資訊，請參閱[如何：定義與執行動態方法](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)及<xref:System.Reflection.Emit.DynamicMethod>。  
   
  下列是泛型的一些限制：  
   
