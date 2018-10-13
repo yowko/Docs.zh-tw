@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f7f7a779cc10b32d66a184107359b502cf094979
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 569be83b902e7634a0c22e78c3f3c3a23985076c
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649208"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308548"
 ---
 # <a name="code-contracts"></a>程式碼合約
 程式碼合約可讓您指定程式碼中的前置條件、後置條件和物件非變異值。 前置條件是輸入方法或屬性時，必須符合的需求。 後置條件描述在方法或屬性程式碼結束時的期望。 物件非變異值描述針對處於良好狀態的類別，所預期的狀態。  
@@ -90,7 +90,7 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
   
 -   後置條件中的 prestate 值是指位於方法或屬性開頭之運算式的值。 它會使用 `Contract.OldValue<T>(e)` 運算式，其中 `T` 是 `e` 的類型。 只要編譯器能夠推斷其類型，您就可以省略泛型類型引數。 (例如，C# 編譯器一律會推斷類型，因為它會採用引數。)關於 `e` 中會發生什麼事，以及可能會出現舊運算式的內容，有幾項限制。 舊運算式不能包含另一個舊運算式。 最重要的是，舊的運算式必須參考存在於方法前置條件狀態中的值。 換句話說，只要方法的前置條件是 `true`，它就必須是可供評估的運算式。 以下是該規則的一些執行個體。  
   
-    -   該值必須存在於方法的前置條件狀態中。 若要參考物件上的欄位，前置條件必須保證該物件一律為非 null。  
+    -   該值必須存在於方法的前置條件狀態中。 若要參考的物件上的欄位，前置條件必須保證該物件一律為非 null。  
   
     -   您不能在舊運算式中參考方法的傳回值：  
   

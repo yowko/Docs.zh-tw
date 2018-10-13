@@ -3,11 +3,11 @@ title: 無組態的 AJAX 服務
 ms.date: 03/30/2017
 ms.assetid: e6db7acd-5679-45d4-b98a-8449c6873838
 ms.openlocfilehash: 60b61a26574764f0f2ea4ca834c5ba92b49a043d
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845043"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308397"
 ---
 # <a name="ajax-service-without-configuration"></a>無組態的 AJAX 服務
 這個範例會示範如何使用 Windows Communication Foundation (WCF) 建立基本 ASP.NET Asynchronous JavaScript 與 XML (AJAX) 服務 （您可以使用 Web 瀏覽器用戶端的 JavaScript 程式碼存取的服務） 不使用任何組態設定。 此服務會在 .svc 檔中使用特殊語法以自動啟用 AJAX 端點。  

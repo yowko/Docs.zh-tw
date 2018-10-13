@@ -3,11 +3,11 @@ title: 命令式的程式碼式驗證
 ms.date: 03/30/2017
 ms.assetid: ae12537c-455e-42b1-82f4-cea4c46c023e
 ms.openlocfilehash: ac77132e3469bdffa6f88f8c6d617c6faa1c9323
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48779669"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308288"
 ---
 # <a name="imperative-code-based-validation"></a>命令式的程式碼式驗證
 
@@ -18,7 +18,7 @@ ms.locfileid: "48779669"
 由衍生自 <xref:System.Activities.CodeActivity>、<xref:System.Activities.AsyncCodeActivity> 和 <xref:System.Activities.NativeActivity> 的活動可支援程式碼驗證。 驗證碼可以放在 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 覆寫中，而且可以將驗證錯誤或警告加入至中繼資料引數。 在下列範例中，如果 `Cost` 大於 `Price`，就會將驗證錯誤加入至中繼資料。  
   
 > [!NOTE]
-> 請注意，`Cost`和 `Price` 不是活動的引數，而是在設計階段設定的屬性。 這就是為什麼可以在 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 覆寫中驗證其值的原因。 在設計階段不能驗證流經引數的資料值，因為在執行階段之前，資料不會流過，但是可以驗證活動引數，以確保已使用 `RequiredArgument` 屬性和多載群組來繫結這些引數。 此程式碼範例會查看 `RequiredArgument` 引數的 `Description` 屬性，如果未繫結，則會產生驗證錯誤。 必要的引數所述[所需的引數與多載群組](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md)。  
+> 請注意，`Cost`和 `Price` 不是活動的引數，而是在設計階段設定的屬性。 這就是為什麼可以在 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 覆寫中驗證其值的原因。 在設計階段不能驗證流經引數的資料值，因為在執行階段之前，資料不會流過，但是可以驗證活動引數，以確保已使用 `RequiredArgument` 屬性和多載群組來繫結這些引數。 此程式碼範例會查看 `RequiredArgument` 引數的 `Description` 屬性，如果未繫結程序，則會產生驗證錯誤。 必要的引數所述[所需的引數與多載群組](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md)。  
   
 ```csharp  
 public sealed class CreateProduct : CodeActivity  

@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Keys.Alt enumeration member
 - modifier keys
 ms.assetid: 1e184048-0ae3-4067-a200-d4ba31dbc2cb
-ms.openlocfilehash: f73dea640bc2059353b2a250188b901f360ea750
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: bfdef668a5c766f00680c0150103a8c5267fdf68
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44202033"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49314880"
 ---
 # <a name="how-to-determine-which-modifier-key-was-pressed"></a>如何：判斷所按的輔助按鍵為何
-當您建立可接受使用者的按鍵輸入時，您也可以監視輔助按鍵，例如 SHIFT、 ALT 和 CTRL 鍵。 輔助按鍵按下時搭配其他索引鍵，或按下滑鼠，就可以適當地回應您的應用程式。 例如，如果按下以字母 S 時，這只會出現在畫面上，"s"，但如果按下按鍵 CTRL + S，可能會儲存目前的文件。 如果您處理<xref:System.Windows.Forms.Control.KeyDown>事件，<xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A>屬性<xref:System.Windows.Forms.KeyEventArgs>收到事件處理常式會指定哪一個輔助按鍵按下按鍵。 或者，<xref:System.Windows.Forms.KeyEventArgs.KeyData%2A>屬性<xref:System.Windows.Forms.KeyEventArgs>指定按鍵以及與位元 OR 運算結合任何輔助按鍵的字元。 不過，如果您處理<xref:System.Windows.Forms.Control.KeyPress>事件或滑鼠事件，事件處理常式不會收到這項資訊。 在此情況下，您必須使用<xref:System.Windows.Forms.Control.ModifierKeys%2A>屬性<xref:System.Windows.Forms.Control>類別。 在任一情況下，您必須執行適當的位元 AND<xref:System.Windows.Forms.Keys>值和您要測試的值。 <xref:System.Windows.Forms.Keys>列舉型別提供具有正確的值和每個修飾詞索引鍵，因此是很重要，您執行位元的變化。 比方說，SHIFT 鍵表示<xref:System.Windows.Forms.Keys.Shift>， <xref:System.Windows.Forms.Keys.ShiftKey>，<xref:System.Windows.Forms.Keys.RShiftKey>並<xref:System.Windows.Forms.Keys.LShiftKey>正確的值來測試 SHIFT 輔助按鍵是<xref:System.Windows.Forms.Keys.Shift>。 同樣地，若要測試 CTLR 和 ALT 修飾詞為您應該使用<xref:System.Windows.Forms.Keys.Control>和<xref:System.Windows.Forms.Keys.Alt>值，分別。  
+當您建立可接受使用者的按鍵輸入時，您也可以監視輔助按鍵，例如 SHIFT、 ALT 和 CTRL 鍵。 輔助按鍵按下時搭配其他索引鍵，或按下滑鼠，就可以適當地回應您的應用程式。 例如，如果按下以字母 S 時，這只會出現在畫面上，"s"，但如果按下按鍵 CTRL + S，可能會儲存目前的文件。 如果您處理<xref:System.Windows.Forms.Control.KeyDown>事件，<xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A>屬性<xref:System.Windows.Forms.KeyEventArgs>收到事件處理常式會指定哪一個輔助按鍵按下按鍵。 或者，<xref:System.Windows.Forms.KeyEventArgs.KeyData%2A>屬性<xref:System.Windows.Forms.KeyEventArgs>指定按鍵以及與位元 OR 運算結合任何輔助按鍵的字元。 不過，如果您處理<xref:System.Windows.Forms.Control.KeyPress>事件或滑鼠事件，事件處理常式不會收到這項資訊。 在此情況下，您必須使用<xref:System.Windows.Forms.Control.ModifierKeys%2A>屬性<xref:System.Windows.Forms.Control>類別。 在任一情況下，您必須執行適當的位元 AND<xref:System.Windows.Forms.Keys>值和您要測試的值。 <xref:System.Windows.Forms.Keys>列舉型別提供具有正確的值和每個修飾詞索引鍵，因此是很重要，您執行位元的變化。 比方說，SHIFT 鍵表示<xref:System.Windows.Forms.Keys.Shift>， <xref:System.Windows.Forms.Keys.ShiftKey>，<xref:System.Windows.Forms.Keys.RShiftKey>並<xref:System.Windows.Forms.Keys.LShiftKey>正確的值來測試 SHIFT 輔助按鍵是<xref:System.Windows.Forms.Keys.Shift>。 同樣地，若要測試 CTRL 和 ALT 修飾詞為您應該使用<xref:System.Windows.Forms.Keys.Control>和<xref:System.Windows.Forms.Keys.Alt>值，分別。  
   
 > [!NOTE]
 >  Visual Basic 程式設計人員也可以存取金鑰的資訊透過<xref:Microsoft.VisualBasic.Devices.Computer.Keyboard%2A>屬性  
