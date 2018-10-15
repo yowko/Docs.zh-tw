@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 9542332085d0b0319c55db63fd98c9dd8eb3f576
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 7802a64716f8bde278fe3f8ed8214f6ac01eadbc
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839464"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316515"
 ---
 # <a name="ltcleargt-element-for-connectionmanagement-network-settings"></a>&lt;清除&gt;connectionManagement （網路設定） 的項目
 清除連接管理清單中。  
@@ -55,7 +55,7 @@ ms.locfileid: "48839464"
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="example"></a>範例  
- 下列範例會清除連線管理清單中，並再加入新的連接管理項目 www.contoso.com 伺服器和所有其他網路主機。  
+ 下例清除連線管理清單，然後加入 新伺服器的連接管理項目`www.contoso.com`與所有其他網路主機。  
   
 ```xml  
 <configuration>  

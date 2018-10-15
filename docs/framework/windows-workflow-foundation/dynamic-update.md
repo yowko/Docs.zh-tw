@@ -2,12 +2,12 @@
 title: 動態更新
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: dea930de2103a24aa48b1d0a31a3cbf5fc0ae26c
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 9b26bde8e524275d2eef34afc3f6442e2ebeea6f
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44076715"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49323119"
 ---
 # <a name="dynamic-update"></a>動態更新
 動態更新提供的機制可讓工作流程應用程式開發人員更新持續性工作流程執行個體的工作流程定義。 這可以是實作錯誤修復、新要求，或是適應突如其來的變化。 本主題提供 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引進的動態更新功能概觀。  
@@ -24,7 +24,7 @@ ms.locfileid: "44076715"
 4.  [將更新對應套用至所需的持續性工作流程執行個體](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Apply)  
   
 > [!NOTE]
->  請注意，步驟 1 到 3 涵蓋更新對應的建立程序，不需套用更新也可執行。 工作流程開發人員常會離線建立更新對應，之後再由管理員套用更新。  
+>  請注意，步驟 1 到 3 涵蓋更新對應的建立程序，不需套用更新也可執行。 常見的案例，工作流程開發人員會建立更新對應離線時，，然後以系統管理員將會套用在稍後更新。  
   
  本主題提供動態更新流程概觀，說明如何將新活動加入到已編譯 XAML 工作流程內持續性的執行個體中。  
   

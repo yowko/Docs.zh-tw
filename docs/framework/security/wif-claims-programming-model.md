@@ -3,12 +3,12 @@ title: WIF 宣告程式設計模型
 ms.date: 03/30/2017
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
 author: BrucePerlerMS
-ms.openlocfilehash: 95df026684f536a64ffe15f65264c470dff164da
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 91b719967cd4ab9fd412e5c0799bb5e1921a4801
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197554"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316502"
 ---
 # <a name="wif-claims-programming-model"></a>WIF 宣告程式設計模型
 ASP.NET 和 Windows Communication Foundation (WCF) 的開發人員通常會使用身分識別和 IPrincipal 介面來處理使用者的身分識別資訊。 在 .NET 4.5 中，Windows Identity Foundation (WIF) 已經過整合，使得目前任何主體一律都存在宣告，如下圖所示：
@@ -23,7 +23,7 @@ ASP.NET 和 Windows Communication Foundation (WCF) 的開發人員通常會使�
 
 - <xref:System.Security.Claims.Claim.Value%2A> 包含宣告的值，並以字串表示。 例如，電子郵件地址可以表示為"someone@contoso.com」。
 
-- <xref:System.Security.Claims.Claim.ValueType%2A> 代表宣告值的類型，通常是 URI。 例如，字串類型會以 `http://www.w3.org/2001/XMLSchema#string` 表示。 實值型別必須是根據 XML 結構描述的 QName。 值的格式必須是 `namespace#format`，才能啟用 WIF 來輸出有效的 QName 值。 如果命名空間不是妥善定義的命名空間，所產生的 XML 可能無法驗證結構描述，因為該命名空間沒有已發佈的 XSD 檔案。 預設的實值型別是 `http://www.w3.org/2001/XMLSchema#string`。 請參閱[ http://www.w3.org/2001/XMLSchema ](https://go.microsoft.com/fwlink/?LinkId=209155)的已知值類型，您可以使用安全。
+- <xref:System.Security.Claims.Claim.ValueType%2A> 代表宣告值的類型，通常是 URI。 例如，字串類型會以 `http://www.w3.org/2001/XMLSchema#string` 表示。 實值型別必須是根據 XML 結構描述的 QName。 值的格式必須是 `namespace#format`，才能啟用 WIF 來輸出有效的 QName 值。 如果命名空間不是妥善定義的命名空間，所產生的 XML 可能無法驗證結構描述，因為該命名空間沒有已發佈的 XSD 檔案。 預設的實值型別是 `http://www.w3.org/2001/XMLSchema#string`。 如需您可以安全使用的已知的實值型別資訊，請參閱[W3C XML 結構描述](https://www.w3.org/2001/XMLSchema)頁面。
 
 - <xref:System.Security.Claims.Claim.Issuer%2A> 是發出宣告的安全性權杖服務 (STS) 的識別碼。 這可用 STS 的 URL 或代表 STS 的名稱來表示，例如 `https://sts1.contoso.com/sts`。
 

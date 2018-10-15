@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
 ms.openlocfilehash: 721ab72ab1f67d2dc42574ed0147fa7686e02fd1
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48780306"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316463"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>HOW TO：裝載工作流程並存的多個版本
 `WorkflowIdentity` 提供一種方法，讓工作流程應用程式開發人員能夠將名稱和版本與工作流程定義產生關聯性，並為這項資訊與持續性工作流程執行個體建立關聯性。 此身分識別資訊可由工作流程應用程式開發人員使用以啟用案例 (例如並存執行多個版本的工作流程定義)，以及提供動態更新等其他功能的基礎。 教學課程中的此步驟示範如何使用 `WorkflowIdentity` 同時裝載工作流程的多個版本。
@@ -549,7 +549,7 @@ ms.locfileid: "48780306"
     }
     ```
 
-###  <a name="BKMK_BuildAndRun"></a> 若要建置並執行應用程式
+###  <a name="BKMK_BuildAndRun"></a> 若要建置及執行應用程式
 
 1.  按下 CTRL+SHIFT+B 建置應用程式，然後按下 CTRL+F5 啟動。
 

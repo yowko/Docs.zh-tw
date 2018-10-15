@@ -2,12 +2,12 @@
 title: '&lt;httpTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8b30c065-b32a-4fa3-8eb4-5537a9c6b897
-ms.openlocfilehash: cbd375652a2051c22e12e12e7650077e56ed2d7d
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: ddce1053a7494a84d0266c7ad14f6b1937365fa5
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086410"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316424"
 ---
 # <a name="lthttptransportgt"></a>&lt;httpTransport&gt;
 指定 HTTP 傳輸，以傳輸自訂繫結的 SOAP 訊息。  
@@ -47,7 +47,7 @@ IntegratedWindowsAuthentication: Specifies Windows authentication"
 |allowCookies|布林值，指定用戶端是否接受 Cookie 並在未來要求時傳播 Cookie。 預設為 `false`。<br /><br /> 當您與使用 Cookie 的 ASMX Web 服務互動時，可以使用這個屬性。 如此一來，從伺服器傳回的 Cookie 就一定會自動複製到該服務未來所有的用戶端要求。|  
 |authenticationScheme|指定通訊協定，用於驗證由 HTTP 接聽程式處理的用戶端要求。 有效值包括以下的值：<br /><br /> 摘要： 指定摘要式驗證。<br />-Negotiate： 與用戶端決定驗證配置進行交涉。 如果用戶端和伺服器都支援 Kerberos，就使用它，否則使用 NTLM。<br />-Ntlm： 指定 NTLM 驗證。<br />-Basic： 指定基本驗證。<br />匿名： 指定匿名驗證。<br /><br /> 預設值為 Anonymous。 此屬性的型別為 <xref:System.Net.AuthenticationSchemes>。 這個屬性只可以設定一次。|  
 |bypassProxyOnLocal|布林值，指出本機位址是否略過 Proxy 伺服器。 預設為 `false`。<br /><br /> 本機位址是位於本機 LAN 或內部網路上的位址。<br /><br /> Windows Communication Foundation (WCF) 一律忽略 proxy，如果服務位址開頭 `http://localhost` 。<br /><br /> 如果您希望用戶端在與相同電腦上的服務進行交談時通過 Proxy，應使用主機名稱而非 localhost。|  
-|hostnameComparisonMode|指定用於剖析 URI 的 HTTP 主機名稱比較模式。 有效值為：<br /><br /> -StrongWildcard: （"+"） 符合指定的配置、 連接埠和相對 URI 的內容中所有可能的主機名稱。<br />-完全： 無萬用字元。<br />-WeakWildcard: ("*") 比對所有可能的主機名稱中指定的配置、 連接埠和相對 UIR 都未明確符合或透過強式萬用字元機制的內容。<br /><br /> 預設為 StrongWildcard。 此屬性的型別為 `System.ServiceModel.HostnameComparisonMode`。|  
+|hostnameComparisonMode|指定用於剖析 URI 的 HTTP 主機名稱比較模式。 有效值為：<br /><br /> -StrongWildcard: （"+"） 符合指定的配置、 連接埠和相對 URI 的內容中所有可能的主機名稱。<br />-完全： 無萬用字元。<br />-WeakWildcard: ("\*") 比對所有可能的主機名稱中指定的配置、 連接埠和相對 UIR 都未明確符合或透過強式萬用字元機制的內容。<br /><br /> 預設為 StrongWildcard。 此屬性的型別為 `System.ServiceModel.HostnameComparisonMode`。|  
 |keepAliveEnabled|布林值，指定是否要與網際網路資源建立持續連線。|  
 |maxBufferSize|正整數，指定緩衝區的大小上限。 預設為 524288。|  
 |proxyAddress|指定 HTTP Proxy 位址的 URI。 如果 `useSystemWebProxy` 為 `true`，則這項設定必須為 `null`。 預設為 `null`。|  

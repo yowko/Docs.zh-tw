@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: bc0b75db5b3f35087df70c9155a1ba3b39ceae4d
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 1736dd8fcb308bceee5f100149919ff9ec45510d
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028416"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316320"
 ---
 # <a name="ltconnectionmanagementgt-element-network-settings"></a>&lt;connectionManagement&gt;項目 （網路設定）
 指定連接至網路主機的連線數目上限。  
@@ -58,7 +58,7 @@ ms.locfileid: "48028416"
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="example"></a>範例  
- 下列範例會設定應用程式使用四個連接至 www.contoso.com 伺服器和兩個連線到所有其他伺服器。  
+ 下列範例會設定應用程式使用伺服器的四個通往`www.contoso.com`和所有其他伺服器的兩個連線。  
   
 ```xml  
 <configuration>  
