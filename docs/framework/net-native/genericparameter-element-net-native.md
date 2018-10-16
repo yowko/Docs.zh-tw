@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9c0bf4aff9d7cc657b3005f0a19b09f3df10957c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd0d9851f62381a16f628607c326c6690492628b
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393090"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347847"
 ---
 # <a name="ltgenericparametergt-element-net-native"></a>&lt;GenericParameter&gt; 項目 (.NET Native)
 將原則套用到泛型類型或方法的參數類型。  
@@ -61,7 +61,7 @@ ms.locfileid: "33393090"
 |-----------|-----------------|  
 |*policy_setting*|要套用到此原則類型的設定。 可能的值為 `All`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -74,7 +74,7 @@ ms.locfileid: "33393090"
 ## <a name="remarks"></a>備註  
  `<GenericParameter>` 項目是 [\<Method>](../../../docs/framework/net-native/method-element-net-native.md) 或 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 項目的子項，可用來將原則套用至特定泛型型別參數 (在泛型型別或方法簽章中，以其名稱來指定)。  
   
- `<GenericParameter>` 元素與序列化程式搭配使用時最有用。 下列範例使用 `<GenericParameter>` 項目，將原則套用至 NewtonSoft JSON 序列化程式之 [JsonConvert.DeserializeObject\<T>(String)](http://james.newtonking.com/json/help/index.html?topic=html/T_Newtonsoft_Json_JsonConvert.htm) 方法多載呼叫中的類型 `T`。  
+ `<GenericParameter>` 元素與序列化程式搭配使用時最有用。 下列範例使用 `<GenericParameter>` 項目，將原則套用至 NewtonSoft JSON 序列化程式之 [JsonConvert.DeserializeObject\<T>(String)](https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_JsonConvert_DeserializeObject__1.htm) 方法多載呼叫中的類型 `T`。  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

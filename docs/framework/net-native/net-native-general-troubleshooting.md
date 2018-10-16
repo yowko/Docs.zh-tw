@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ee8c5e17-35ea-48a1-8767-83298caac1e8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b53150c90e473e7c4ed32991c43ff0b8ca5b75b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45a053d2aefa8a295e0e8d52818472647e4ef834
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396281"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347580"
 ---
 # <a name="net-native-general-troubleshooting"></a>.NET Native 一般疑難排解
 本主題說明如何對使用 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 開發應用程式時可能遇到的問題進行疑難排解。  
@@ -36,9 +36,9 @@ ms.locfileid: "33396281"
   
      **解決方式：** 擲回例外狀況的原因是 .NET Native 未提供可透過反映提供的中繼資料或實作程式碼 (如需詳細資訊，請參閱 [.NET Native 和編譯](../../../docs/framework/net-native/net-native-and-compilation.md))。若要排除例外狀況，您必須在[執行階段指示詞 (rd.xml) 檔案](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)中新增一個項目，如此一來，.NET Native 工具鏈便可以在執行階段提供中繼資料或實作程式碼。 您可以使用兩個疑難排解工具，這些工具會產生要加入執行階段指示詞檔案的必要項目：  
   
-    -   針對類型的 [MissingMetadataException 疑難排解工具](http://dotnet.github.io/native/troubleshooter/type.html) 。  
+    -   針對類型的 [MissingMetadataException 疑難排解工具](https://dotnet.github.io/native/troubleshooter/type.html) 。  
   
-    -   針對方法的 [MissingMetadataException 疑難排解工具](http://dotnet.github.io/native/troubleshooter/method.html) 。  
+    -   針對方法的 [MissingMetadataException 疑難排解工具](https://dotnet.github.io/native/troubleshooter/method.html) 。  
   
      如需詳細資訊，請參閱[反映和 .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)。  
   

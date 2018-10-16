@@ -2,12 +2,12 @@
 title: 利用 COM 用戶端使用 WCF Moniker
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: f052504648d381d6fb19fb6db0ebb1dd1086ed3c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1deeb125b94bcbab52db522b7304b972c05a28ed
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515715"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49348779"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>利用 COM 用戶端使用 WCF Moniker
 此範例示範如何使用 Windows Communication Foundation (WCF) 服務 moniker 將 Web 服務整合至 COM 架構開發環境，例如 Microsoft Office Visual Basic for Applications (Office VBA) 或 Visual Basic 6.0。 這個範例由 Windows Script Host 用戶端 (.vbs)、支援的用戶端程式庫 (.dll) 和網際網路資訊服務 (IIS) 裝載的服務程式庫 (.dll) 所組成。 服務為計算機服務，而 COM 用戶端會呼叫服務上的數學作業：加法、減法、乘法和除法。 您可以在訊息方塊視窗中看到用戶端活動。  
@@ -26,7 +26,7 @@ ms.locfileid: "43515715"
   
  此服務會實作 `ICalculator` 合約，其定義如下列程式碼範例所示。  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
 {  
@@ -52,19 +52,19 @@ public interface ICalculator
 ## <a name="typed-contract"></a>型別合約  
  若要搭配使用 Moniker 和型別合約，必須使用 COM 適當地註冊服務合約的屬性化型別。 首先，必須使用所產生的用戶端[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 請從用戶端目錄中的命令提示字元執行下列命令，以產生具有型別的 Proxy。  
   
-```  
+```console  
 svcutil.exe /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost/servicemodelsamples/service.svc /out:generatedClient.cs  
 ```  
   
  這個類別必須包含在專案中，並且專案應該設定為在進行編譯時，產生 COM 可見的簽署組件。 下列屬性應該包含在 AssemblyInfo.cs 檔中。  
   
-```  
+```csharp
 [assembly: ComVisible(true)]  
 ```  
   
  建置專案之後，請使用 `regasm` 註冊 COM 可見的型別，如下列範例所示。  
   
-```  
+```console  
 regasm.exe /tlb:CalcProxy.tlb client.dll  
 ```  
   
@@ -79,7 +79,7 @@ gacutil.exe /i client.dll
   
  ComCalcClient.vbs 用戶端應用程式會使用 `GetObject` 函式以建構服務的 Proxy，進而使用服務 Moniker 語法來指定服務的位址、繫結和合約。  
   
-```  
+```vbscript
 Set typedServiceMoniker = GetObject(  
 "service4:address=http://localhost/ServiceModelSamples/service.svc, binding=wsHttpBinding,   
 contractType={9213C6D2-5A6F-3D26-839B-3BA9B82228D3}")  
@@ -95,7 +95,7 @@ contractType={9213C6D2-5A6F-3D26-839B-3BA9B82228D3}")
   
  使用服務 Moniker 建構 Proxy 執行個體完畢之後，用戶端應用程式就可以針對 Proxy 呼叫方法，使服務 Moniker 基礎結構呼叫對應的服務作業。  
   
-```  
+```vbscript  
 ' Call the service operations using the moniker object  
 WScript.Echo "Typed service moniker: 100 + 15.99 = " & typedServiceMoniker.Add(100, 15.99)  
 ```  
@@ -107,7 +107,7 @@ WScript.Echo "Typed service moniker: 100 + 15.99 = " & typedServiceMoniker.Add(1
   
  ComCalcClient.vbs 用戶端應用程式會使用 `FileSystemObject` 來存取在本機儲存的 WSDL 檔，然後再次使用 `GetObject` 函式來建構服務的 Proxy。  
   
-```  
+```vbscript  
 ' Open the WSDL contract file and read it all into the wsdlContract string  
 Const ForReading = 1  
 Set objFSO = CreateObject("Scripting.FileSystemObject")  
@@ -140,7 +140,7 @@ Set wsdlServiceMoniker = GetObject(wsdlMonikerString)
   
  使用服務 Moniker 建構 Proxy 執行個體完畢之後，用戶端應用程式就可以針對 Proxy 呼叫方法，使服務 Moniker 基礎結構呼叫對應的服務作業。  
   
-```  
+```vbscript  
 ' Call the service operations using the moniker object  
 WScript.Echo "WSDL service moniker: 145 - 76.54 = " & wsdlServiceMoniker.Subtract(145, 76.54)  
 ```  
@@ -152,7 +152,7 @@ WScript.Echo "WSDL service moniker: 145 - 76.54 = " & wsdlServiceMoniker.Subtrac
   
  ComCalcClient.vbs 用戶端應用程式會再次使用 `GetObject` 函式來建構服務的 Proxy。  
   
-```  
+```vbscript  
 ' Create a string for the service moniker specifying the address to retrieve the service metadata from  
 mexMonikerString = "service4:mexAddress='http://localhost/servicemodelsamples/service.svc/mex'"  
 mexMonikerString = mexMonikerString + ", address='http://localhost/ServiceModelSamples/service.svc'"  
@@ -175,7 +175,7 @@ Set mexServiceMoniker = GetObject(mexMonikerString)
   
  使用服務 Moniker 建構 Proxy 執行個體完畢之後，用戶端應用程式就可以針對 Proxy 呼叫方法，使服務 Moniker 基礎結構呼叫對應的服務作業。  
   
-```  
+```vbscript  
 ' Call the service operations using the moniker object  
 WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9, 81.25)  
 ```  
@@ -205,7 +205,7 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 2.  在語言特定資料夾下的 \client 中，執行 ComCalcClient.vbs。 用戶端活動會顯示在訊息方塊視窗中。  
   
-3.  如果用戶端和服務能夠進行通訊，請參閱[疑難排解祕訣](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+3.  如果用戶端和服務無法通訊，請參閱 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 #### <a name="to-run-the-sample-across-computers"></a>若要跨電腦執行範例  
   

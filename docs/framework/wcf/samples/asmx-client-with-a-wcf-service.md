@@ -2,12 +2,12 @@
 title: 含 WCF 服務的 ASMX 用戶端
 ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-ms.openlocfilehash: 3465954cc937e1611634c8cd13a9264173e71817
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8b8ebebbcb2c95555605ebd1d8e164b8babb7e3e
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507195"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347834"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>含 WCF 服務的 ASMX 用戶端
 此範例示範如何建立使用 Windows Communication Foundation (WCF) 服務，並從非 WCF 用戶端，例如 ASMX 用戶端存取服務。  
@@ -19,7 +19,7 @@ ms.locfileid: "43507195"
   
  此服務會實作 `ICalculator` 合約，如下列程式碼中所定義。  
   
-```  
+```csharp  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"), XmlSerializerFormat]  
 public interface ICalculator  
 {  
@@ -83,7 +83,7 @@ wsdl /n:Microsoft.ServiceModel.Samples /o:generatedClient.cs /urlkey:CalculatorS
   
  用戶端實作會建構要開始與服務進行通訊之具型別 Proxy 的執行個體。  
   
-```  
+```csharp
 // Create a client to the CalculatorService.  
 using (CalculatorService client = new CalculatorService())  
 {  
@@ -120,7 +120,7 @@ Console.ReadLine();
   
  當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。  
   
-```  
+```console 
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

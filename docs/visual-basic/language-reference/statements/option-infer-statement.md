@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: f5c824df43997282d50c9c2a458fb1d854cc160a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d6a05abec36f97094adaac7572f6015b10874442
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862215"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347886"
 ---
 # <a name="option-infer-statement"></a>Option Infer 陳述式
 可讓您在宣告變數時使用區域類型推斷。  
@@ -50,7 +50,7 @@ Option Infer 開啟時的 IntelliSense
 Option Infer 關閉時的 IntelliSense  
   
 > [!NOTE]
->  當變數被宣告為 `Object` 時，執行階段類型可以在程式執行時變更。 Visual Basic 執行呼叫的作業*boxing*並*unboxing*之間進行轉換`Object`和實值類型，可讓執行速度變慢。 如需 boxing 和 unboxing 的詳細資訊，請參閱[Visual Basic 語言規格](../../../visual-basic/reference/language-specification/index.md)。
+>  當變數被宣告為 `Object` 時，執行階段類型可以在程式執行時變更。 Visual Basic 執行呼叫的作業*boxing*並*unboxing*之間進行轉換`Object`和實值類型，可讓執行速度變慢。 如需 boxing 和 unboxing 的詳細資訊，請參閱[Visual Basic 語言規格](~/_vblang/spec/conversions.md#value-type-conversions)。
   
  類型推斷會套用在程序層級，不會套用在類別、結構、模組或介面中的程序之外。  
   

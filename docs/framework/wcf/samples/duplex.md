@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Duplex Service Contract
 ms.assetid: bc5de6b6-1a63-42a3-919a-67d21bae24e0
-ms.openlocfilehash: 54b941541ae0da4900608e61f08f4ed99c9ea472
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 45a5584a082c4b274614b8fd55be8be4b87945b3
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45969976"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347782"
 ---
 # <a name="duplex"></a>雙工
 雙工範例示範如何定義和實作雙工合約。 用戶端建立與服務的工作階段，並提供服務所需的通道以供服務將訊息傳回用戶端，這個程序即是所謂的雙工通訊。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 雙工合約被定義為一對介面，其中的主要介面從用戶端到服務，回呼介面從服務到用戶端。 在此範例中，`ICalculatorDuplex` 介面允許用戶端執行數學運算，透過工作階段執行結果。 服務傳回 `ICalculatorDuplexCallback` 介面上的結果。 雙工合約需要一個工作階段，因為必須建立內容，將用戶端與服務之間傳送的訊息關聯在一起。  
@@ -19,7 +19,7 @@ ms.locfileid: "45969976"
   
  在這個範例中，用戶端是主控台應用程式 (.exe)，而服務則是由網際網路資訊服務 (IIS) 所裝載。 雙工合約的定義如下：  
   
-```  
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples", SessionMode=SessionMode.Required,  
                  CallbackContract=typeof(ICalculatorDuplexCallback))]  
 public interface ICalculatorDuplex  
@@ -47,7 +47,7 @@ public interface ICalculatorDuplexCallback
   
  `CalculatorService` 類別會實作主要的 `ICalculatorDuplex` 介面。 服務會使用 <xref:System.ServiceModel.InstanceContextMode.PerSession> 執行個體模式維持各工作階段的結果。 而名為 `Callback` 的私用屬性用於存取用戶端的回呼通道。 服務會使用回呼，以透過回呼介面將訊息傳回用戶端。  
   
-```  
+```csharp
 [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]  
 public class CalculatorService : ICalculatorDuplex  
 {  
@@ -71,7 +71,9 @@ public class CalculatorService : ICalculatorDuplex
         equation += " + " + n.ToString();  
         Callback.Result(result);  
     }  
-    ...  
+    
+    //...  
+    
     ICalculatorDuplexCallback Callback  
     {  
         get  
@@ -84,7 +86,7 @@ public class CalculatorService : ICalculatorDuplex
   
  用戶端必須提供實作雙工合約回呼介面的類別，用於接收來自服務的訊息。 在範例中，定義 `CallbackHandler` 類別以實作 `ICalculatorDuplexCallback` 介面。  
   
-```  
+```csharp 
 public class CallbackHandler : ICalculatorDuplexCallback  
 {  
    public void Result(double result)  
@@ -101,7 +103,7 @@ public class CallbackHandler : ICalculatorDuplexCallback
   
  針對雙工合約所產生的 Proxy，會要求在建構時提供 <xref:System.ServiceModel.InstanceContext>。 這個 <xref:System.ServiceModel.InstanceContext> 會用來做為站台，讓物件實作回呼介面並處理服務傳回的訊息。 <xref:System.ServiceModel.InstanceContext> 是以 `CallbackHandler` 類別的執行個體所建構。 這個物件會處理回呼介面上，從服務傳回至用戶端的訊息。  
   
-```  
+```csharp
 // Construct InstanceContext to handle messages on callback interface.  
 InstanceContext instanceContext = new InstanceContext(new CallbackHandler());  
   
@@ -172,14 +174,14 @@ client.Close();
   
     ```xml  
     <client>  
-    <endpoint name = ""  
-    address="http://service_machine_name/servicemodelsamples/service.svc"  
-    ... />  
+        <endpoint name = ""  
+        address="http://service_machine_name/servicemodelsamples/service.svc"  
+        ... />  
     </client>  
     ...  
     <wsDualHttpBinding>  
-    <binding name="DuplexBinding" clientBaseAddress="http://client_machine_name:8000/myClient/">  
-    </binding>  
+        <binding name="DuplexBinding" clientBaseAddress="http://client_machine_name:8000/myClient/">  
+        </binding>  
     </wsDualHttpBinding>  
     ```  
   

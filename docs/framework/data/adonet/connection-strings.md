@@ -1,31 +1,32 @@
 ---
 title: ADO.NET 中的連接字串
-ms.date: 03/30/2017
+ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 1e6e2b6870195c99279639e1f4576a30b7126d4d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4dab2656ae8f39976b21f949c9548a3f718dfafc
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583682"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347938"
 ---
 # <a name="connection-strings-in-adonet"></a>ADO.NET 中的連接字串
-.NET Framework 2.0 導入了使用連接字串的新功能，包括在連接字串產生器 (Builder) 類別 (Class) 中引入新的關鍵字，這麼做可在執行階段建立有效的連接字串。  
-  
-連接字串 (Connection String) 包含可當做參數從資料提供者 (Data Provider) 傳遞至資料來源的初始化資訊。 此語法會因資料提供者而不同，而且連接字串會在嘗試開啟連接期間進行剖析。 語法錯誤會產生執行階段例外狀況 (Exception)，但其他錯誤只會發生在資料來源接收連接資訊之後。 經過驗證後，資料來源便可套用在連接字串中指定的選項並開啟連接。
-  
-連接字串的格式是分號分隔的索引鍵/值參數組清單：
+
+連接字串 (Connection String) 包含可當做參數從資料提供者 (Data Provider) 傳遞至資料來源的初始化資訊。 此資料提供者接收的連接字串的值為<xref:System.Data.Common.DbConnection.ConnectionString?displayProperty=nameWithType>屬性。 提供者剖析連接字串，並可確保語法正確，且所支援的關鍵字。 則<xref:System.Data.Common.DbConnection.Open?displayProperty=nameWithType>方法會將已剖析的連接參數傳遞至資料來源。 資料來源會執行進一步的驗證，以及建立連線。
+
+## <a name="connection-string-syntax"></a>連接字串語法
+
+連接字串是以分號分隔清單的索引鍵/值參數組：
   
     keyword1=value; keyword2=value;
   
-關鍵字不區分大小寫。 值，不過，可能會區分大小寫，根據資料來源。 關鍵字和值可能會包含[空白字元](https://en.wikipedia.org/wiki/Whitespace_character#Unicode)，但忽略關鍵字中並不具引號的開頭和尾端空白字元的值。
+關鍵字不區分大小寫。 值，不過，可能會區分大小寫，根據資料來源。 關鍵字和值可能會包含[空白字元](https://en.wikipedia.org/wiki/Whitespace_character#Unicode)。 忽略關鍵字開頭和尾端空白且不具引號的值。
 
-如果值包含分號[Unicode 控制字元](https://en.wikipedia.org/wiki/Unicode_control_characters)、 開頭或結尾的空白字元，它必須以單引號或雙引號括住，例如：
+如果值包含分號[Unicode 控制字元](https://en.wikipedia.org/wiki/Unicode_control_characters)，或是開頭或結尾的空白字元，它必須以單引號或雙引號括起來。 例如: 
 
     Keyword=" whitespace  ";
     Keyword='special;character';
 
-封入字元可能不會發生在其所包圍的值。 因此，只有在雙引號，反之亦然，可以用包含單引號的值：
+封入字元可能不會發生在其所包圍的值。 因此，只有在雙引號括住，反之亦然，可以用包含單引號的值：
 
     Keyword='double"quotation;mark';
     Keyword="single'quotation;mark";
@@ -37,10 +38,12 @@ ms.locfileid: "48583682"
 
 直到下一步 以分號或字串的結尾會讀取每個值，因為第二個範例中的值是`a=b=c`，最後的分號則是選擇性。
 
-有效的連接字串語法隨提供者而異，且是從早期的 API (如 ODBC) 經過多年不斷發展而來的。 .NET Framework Data Provider for SQL Server (SqlClient) 納入了許多舊式語法項目，而且對一般連接字串語法通常都可接受。 連接字串語法項目經常會有同等效力的同義資料表 (Synonym)，但某些語法和拼字錯誤可能會導致問題。 例如，"`Integrated Security=true`" 有效，"`IntegratedSecurity=true`" 則會導致錯誤。 此外，在執行階段自未經驗證的使用者輸入所建構的連接字串可能會導致字串插入式攻擊，進而危及資料來源的安全性。
-  
-為了解決這些問題，ADO.NET 2.0 針對每個 .NET Framework 資料提供者導入新的連接字串產生器。 關鍵字會以屬性的方式公開 (Expose)，如此就可在將連接字串提交至資料來源之前先驗證字串語法。
-  
+所有連接字串會都共用相同的基本語法，上面所述。 提供者而定，不過，可辨識的關鍵字集合，以及發展多年來從早期的 Api 中這類*ODBC*。 *.NET Framework*資料提供者*SQL Server* (`SqlClient`) 支援許多的關鍵字，從較舊的 Api，但通常較具彈性且接受許多常見的連接字串的同義字關鍵字。
+
+輸入錯誤，可能會導致錯誤。 例如，`Integrated Security=true`有效，但`IntegratedSecurity=true`會造成錯誤。
+
+從未經驗證的使用者輸入的執行階段以手動方式建構的連接字串受到字串插入式攻擊，並危及安全性，在資料來源。 為了解決這些問題中， *ADO.NET* 2.0 導入了[連接字串產生器](../../../../docs/framework/data/adonet/connection-string-builders.md)每個 *.NET Framework*資料提供者。 這些連接字串產生器參數為強型別屬性，公開 （expose），並使它能夠傳送到資料來源之前，驗證連接字串。
+
 ## <a name="in-this-section"></a>本節內容  
  [連接字串產生器](../../../../docs/framework/data/adonet/connection-string-builders.md)  
  示範如何使用 `ConnectionStringBuilder` 類別在執行階段建構有效的連接字串。

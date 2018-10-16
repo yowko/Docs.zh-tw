@@ -2,12 +2,12 @@
 title: 物件參考
 ms.date: 03/30/2017
 ms.assetid: 7a93d260-91c3-4448-8f7a-a66fb562fc23
-ms.openlocfilehash: 1aa8b1c9d135186dba9e4da75f0c7cb9297d8e5c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 00caccaeed8cebeec2e053d418ae6a5bf9a12138
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000238"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347740"
 ---
 # <a name="object-references"></a>物件參考
 這個範例會示範如何以傳址 (By Reference) 方式，在伺服器和用戶端之間傳遞物件。 範例會使用模擬*社交網路*。 社交網路由包含 friend 清單的 `Person` 類別 (Class) 組成，每個 friend 都是一個 `Person` 類別的執行個體 (Instance)，擁有各自的 friend 清單。 這樣可以建立物件圖形。 此服務會公開 (Expose) 這些社交網站上的作業。  
@@ -20,7 +20,7 @@ ms.locfileid: "46000238"
 ## <a name="service"></a>服務  
  `Person` 類別已套用 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性 (Attribute)，而且 <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> 欄位設定為 `true` 以便將其宣告為參考型別 (Reference Type)。 所有屬性 (Property) 都已經套用 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性 (Attribute)。  
   
-```  
+```csharp
 [DataContract(IsReference=true)]  
 public class Person  
 {  
@@ -53,7 +53,7 @@ public class Person
   
  `GetPeopleInNetwork` 作業會採用 `Person` 型別的參數並傳回網路中的所有人員，也就是 `friends` 清單中的所有人員、friend 的 friend 等等，但不包含重複項目。  
   
-```  
+```csharp
 public List<Person> GetPeopleInNetwork(Person p)  
 {  
     List<Person> people = new List<Person>();  
@@ -65,7 +65,7 @@ public List<Person> GetPeopleInNetwork(Person p)
   
  `GetMutualFriends` 作業則採用 `Person` 型別的參數，並傳回清單中所有在其 `friends` 清單中亦包含這個人員的 friend。  
   
-```  
+```csharp
 public List<Person> GetMutualFriends(Person p)  
 {  
     List<Person> mutual = new List<Person>();  
@@ -80,7 +80,7 @@ public List<Person> GetMutualFriends(Person p)
   
  `GetCommonFriends` 作業會採用型別為 `Person` 的清單。 此清單應該會有兩個 `Person` 物件。 此作業會傳回 `Person` 物件的清單，這些物件都位於輸入清單中兩個 `friends` 物件的 `Person` 清單內。  
   
-```  
+```csharp
 public List<Person> GetCommonFriends(List<Person> people)  
 {  
     List<Person> common = new List<Person>();  

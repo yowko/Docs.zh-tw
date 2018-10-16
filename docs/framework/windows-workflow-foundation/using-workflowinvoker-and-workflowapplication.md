@@ -2,15 +2,15 @@
 title: 使用 WorkflowInvoker 與 WorkflowApplication
 ms.date: 03/30/2017
 ms.assetid: cd0e583c-a3f9-4fa2-b247-c7b3368c48a7
-ms.openlocfilehash: 6cbfca14eddeb82fc2d88b70703cae0fe59d63ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc315013ce50539eb4b72d26848a99164bb6b2d0
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519622"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347977"
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>使用 WorkflowInvoker 與 WorkflowApplication
-Windows Workflow Foundation (WF) 提供幾個方法來裝載工作流程。 <xref:System.Activities.WorkflowInvoker> 提供一種簡單方法來叫用工作流程，如同方法呼叫一般，但只能用於不使用持續性的工作流程。 <xref:System.Activities.WorkflowApplication> 提供更豐富的模型，可執行包含生命週期事件通知、執行控制、書籤繼續以及持續性的工作流程。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 支援傳訊活動，主要搭配工作流程服務使用。 本主題會向您介紹如何使用 <xref:System.Activities.WorkflowInvoker> 和 <xref:System.Activities.WorkflowApplication> 進行工作流程裝載。 如需有關裝載工作流程與<xref:System.ServiceModel.Activities.WorkflowServiceHost>，請參閱[工作流程服務](../../../docs/framework/wcf/feature-details/workflow-services.md)和[裝載工作流程服務概觀](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)。  
+Windows Workflow Foundation (WF) 提供幾個方法來裝載工作流程。 <xref:System.Activities.WorkflowInvoker> 提供一種簡單方法來叫用工作流程，如同方法呼叫一般，但只能用於不使用持續性的工作流程。 <xref:System.Activities.WorkflowApplication> 提供更豐富的模型，可執行包含生命週期事件通知、執行控制、書籤繼續以及持續性的工作流程。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 支援傳訊活動，主要搭配工作流程服務使用。 本主題會向您介紹如何使用 <xref:System.Activities.WorkflowInvoker> 和 <xref:System.Activities.WorkflowApplication> 進行工作流程裝載。 如需有關裝載的工作流程<xref:System.ServiceModel.Activities.WorkflowServiceHost>，請參閱 <<c2> [ 工作流程服務](../../../docs/framework/wcf/feature-details/workflow-services.md)並[裝載工作流程服務概觀](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)。  
   
 ## <a name="using-workflowinvoker"></a>使用 WorkflowInvoker  
  <xref:System.Activities.WorkflowInvoker>如同方法叫用般，提供執行工作流程的模型。 若要使用 <xref:System.Activities.WorkflowInvoker> 叫用工作流程，請呼叫 <xref:System.Activities.WorkflowInvoker.Invoke%2A> 方法，並傳入要叫用之工作流程的工作流程定義。 在此範例中，會使用 <xref:System.Activities.Statements.WriteLine> 叫用 <xref:System.Activities.WorkflowInvoker> 活動。  
@@ -60,7 +60,7 @@ Windows Workflow Foundation (WF) 提供幾個方法來裝載工作流程。 <xre
  [!code-csharp[CFX_WorkflowApplicationExample#30](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#30)]  
   
 ### <a name="retrieving-output-arguments-of-a-workflow"></a>擷取工作流程的輸出引數  
- 當工作流程完成時，可存取 <xref:System.Activities.WorkflowApplication.Completed%2A> 字典來擷取 <xref:System.Activities.WorkflowApplicationCompletedEventArgs.Outputs%2A?displayProperty=nameWithType> 處理常式中的任何輸出引數。 下列範例會使用 <xref:System.Activities.WorkflowApplication> 來裝載工作流程。 系統會使用由單一 <xref:System.Activities.WorkflowApplication> 活動組成的工作流程定義來建構 `DiceRoll` 執行個體。 `DiceRoll` 活動具有兩個輸出引數，這些引數代表擲骰作業的結果。 工作流程完成時，便會在 <xref:System.Activities.WorkflowApplication.Completed%2A> 處理常式中擷取輸出。  
+ 當工作流程完成時，可存取 <xref:System.Activities.WorkflowApplication.Completed%2A> 字典來擷取 <xref:System.Activities.WorkflowApplicationCompletedEventArgs.Outputs%2A?displayProperty=nameWithType> 處理常式中的任何輸出引數。 下列範例會使用 <xref:System.Activities.WorkflowApplication> 來裝載工作流程。 A<xref:System.Activities.WorkflowApplication>建構執行個體是使用工作流程定義，其中包含單一`DiceRoll`活動。 `DiceRoll` 活動具有兩個輸出引數，這些引數代表擲骰作業的結果。 工作流程完成時，便會在 <xref:System.Activities.WorkflowApplication.Completed%2A> 處理常式中擷取輸出。  
   
  [!code-csharp[CFX_WorkflowApplicationExample#130](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#130)]  
   
@@ -84,14 +84,14 @@ Windows Workflow Foundation (WF) 提供幾個方法來裝載工作流程。 <xre
   
  下列程式碼範例與上一個範例很相似，例外之處是先列舉作用中的書籤，然後再繼續書籤。 系統會啟動工作流程，而且一旦建立 <xref:System.Activities.Bookmark> 並且工作流程處於閒置狀態之後，就會呼叫 <xref:System.Activities.WorkflowApplication.GetBookmarks%2A>。 當工作流程完成時，主控台就會顯示下列輸出。  
   
- **您的名稱為何？**  
-**BookmarkName: UserName-OwnerDisplayName: ReadLine**   
+ **您的姓名為何？**  
+**BookmarkName： 使用者名稱-OwnerDisplayName: ReadLine**   
 **Steve**   
 **Hello Steve**
 
 [!code-csharp[CFX_WorkflowApplicationExample#14](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#14)]  
   
- 下列程式碼範例會檢查傳遞給 <xref:System.Activities.WorkflowApplicationIdleEventArgs> 執行個體之 <xref:System.Activities.WorkflowApplication.Idle%2A> 處理常式的 <xref:System.Activities.WorkflowApplication>。 在此範例中，處於閒置狀態的工作流程具有一個名為 <xref:System.Activities.Bookmark> 且由名為 `EnterGuess` 之活動所擁有的 `ReadInt`。 這個程式碼範例基礎[如何： 執行工作流程](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)，這是屬於[入門教學課程](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)。 如果該步驟中的 <xref:System.Activities.WorkflowApplication.Idle%2A> 處理常式修改為包含此範例中的程式碼，就會顯示下列輸出。  
+ 下列程式碼範例會檢查傳遞給 <xref:System.Activities.WorkflowApplicationIdleEventArgs> 執行個體之 <xref:System.Activities.WorkflowApplication.Idle%2A> 處理常式的 <xref:System.Activities.WorkflowApplication>。 在此範例中，處於閒置狀態的工作流程具有一個名為 <xref:System.Activities.Bookmark> 且由名為 `EnterGuess` 之活動所擁有的 `ReadInt`。 此程式碼範例根據關閉最[如何： 執行工作流程](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)，這屬於[入門教學課程](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)。 如果該步驟中的 <xref:System.Activities.WorkflowApplication.Idle%2A> 處理常式修改為包含此範例中的程式碼，就會顯示下列輸出。  
   
  **BookmarkName: EnterGuess-OwnerDisplayName: ReadInt**
  

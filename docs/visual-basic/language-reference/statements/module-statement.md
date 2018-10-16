@@ -14,11 +14,11 @@ helpviewer_keywords:
 - declarations [Visual Basic], modules
 ms.assetid: a1243afc-14a5-45df-95d5-51118aeac362
 ms.openlocfilehash: 5628224a08fe5f12cf2a81b179c4998001174354
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845069"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49349013"
 ---
 # <a name="module-statement"></a>Module 陳述式
 宣告模組的名稱，並引進變數、 屬性、 事件和組成模組的程序的定義。  
@@ -42,10 +42,10 @@ End Module
   
 -   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
- 請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+ 請參閱 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
  `name`  
- 必要。 此模組的名稱。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
+ 必要。 此模組的名稱。 請參閱 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
   
  `statements`  
  選擇性。 定義的變數、 屬性、 事件、 程序和巢狀型別，此模組的陳述式。  
@@ -91,7 +91,7 @@ End Module
   
      每個模組成員的範圍是整個模組。 請注意，所有成員都進行*類型提升*，因而導致其升級為包含模組的命名空間的範圍。 如需詳細資訊，請參閱 <<c0> [ 型別提升](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)。  
   
--   **限定性條件。** 您可以在專案中，有多個模組，您可以宣告具有相同名稱在兩個或多個模組中的成員。 不過，您必須限定這類成員的適當的模組名稱的任何參考，如果參考是從該模組外。 如需詳細資訊，請參閱 < [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
+-   **限定性條件。** 您可以在專案中，有多個模組，您可以宣告具有相同名稱在兩個或多個模組中的成員。 不過，您必須限定這類成員的適當的模組名稱的任何參考，如果參考是從該模組外。 如需詳細資訊，請參閱 [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
   
 ## <a name="example"></a>範例  
  [!code-vb[VbVbalrStatements#69](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/module-statement_1.vb)]  

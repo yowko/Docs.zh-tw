@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: cdc7e8501f7cf3f5cff4c29ca5b2d004ce7cd5c6
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 9f9b1b13c0a45d7a2e34a04b44f13be12947993f
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086176"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49349026"
 ---
 # <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a>&lt;新增&gt;connectionManagement （網路設定） 的項目
 將 IP 位址或 DNS 名稱加入連線管理清單中。  
@@ -64,7 +64,7 @@ ms.locfileid: "49086176"
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="example"></a>範例  
- 下列範例會設定應用程式使用四個連接至 www.contoso.com 伺服器和兩個連線到所有其他伺服器。  
+ 下列範例會設定應用程式使用伺服器的四個通往`www.contoso.com`和所有其他伺服器的兩個連線。  
   
 ```xml  
 <configuration>  

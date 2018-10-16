@@ -2,12 +2,12 @@
 title: 錯誤合約
 ms.date: 03/30/2017
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
-ms.openlocfilehash: 5b3348f31d239d6bf7e64852ba02010115062669
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 37b977feffd7ce46d2f4bc7b8a4e5dc89d21b137
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003928"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347766"
 ---
 # <a name="fault-contract"></a>錯誤合約
 錯誤合約範例會示範如何在服務與用戶端之間傳達錯誤資訊。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)，具有一些額外的程式碼新增至服務，以將內部例外狀況轉換為錯誤。 用戶端會嘗試執行除數為零，以便強制在服務上造成錯誤狀況。  
@@ -17,7 +17,7 @@ ms.locfileid: "46003928"
   
  計算機合約已修改成包含 <xref:System.ServiceModel.FaultContractAttribute>，如下列範例程式碼所示。  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
 {  
@@ -35,7 +35,7 @@ public interface ICalculator
   
  <xref:System.ServiceModel.FaultContractAttribute> 屬性表示 `Divide` 作業會傳回 `MathFault` 類型的錯誤。 錯誤可能是能夠序列化的任何類型。 在此範例中，`MathFault` 是資料合約，如下列所示：  
   
-```  
+```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public class MathFault  
 {      
@@ -60,7 +60,7 @@ public class MathFault
   
  當發生除數為零的例外狀況時，`Divide` 方法會擲回 <xref:System.ServiceModel.FaultException%601> 例外狀況，如下列範例程式碼所示。 這個例外狀況會造成傳送至用戶端的錯誤。  
   
-```  
+```csharp
 public int Divide(int n1, int n2)  
 {  
     try  
@@ -79,7 +79,7 @@ public int Divide(int n1, int n2)
   
  此用戶端程式碼會藉由要求除數為零強制發生錯誤。 當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。 這個除數為零狀況將被報告為錯誤。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。  
   
-```  
+```console  
 Add(15,3) = 18  
 Subtract(145,76) = 69  
 Multiply(9,81) = 729  
@@ -90,7 +90,7 @@ Press <ENTER> to terminate client.
   
  用戶端會藉由攔截適當的 `FaultException<MathFault>` 例外狀況來執行這項動作：  
   
-```  
+```csharp
 catch (FaultException<MathFault> e)  
 {  
     Console.WriteLine("FaultException<MathFault>: Math fault while doing " + e.Detail.operation + ". Problem: " + e.Detail.problemType);  

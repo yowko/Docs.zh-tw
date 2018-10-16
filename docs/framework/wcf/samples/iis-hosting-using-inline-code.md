@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Web hosted service
 - IIS Hosting Using Inline Code Sample [Windows Communication Foundation]
 ms.assetid: 56fe3687-a34b-4661-8e30-b33770f413fa
-ms.openlocfilehash: 30e50d39b0edb34bcda1bec6d1848a09eabd34fa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ebaf524997ae4ed50b28aec53507f843f028bc31
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524933"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49348973"
 ---
 # <a name="iis-hosting-using-inline-code"></a>使用內嵌程式碼的 IIS 裝載
 這個範例會示範如何實作由網際網路資訊服務 (IIS) 裝載的服務，此時服務程式碼內嵌在 .svc 檔中並且視需要進行編譯。 服務程式碼也可以直接實作在位於應用程式之 \App_Code 目錄的原始程式碼檔中，或是編譯成部署在 \bin 中的組件。 這個範例不會示範這些技術。  
@@ -29,7 +29,7 @@ ms.locfileid: "43524933"
   
  此範例會示範將合約實作成定義要求-回覆通訊模式的一般服務。 該服務會裝載於 IIS，而且其服務程式碼會完整包含在 Service.svc 檔中。 該服務是由主機啟動，並且會根據傳送至服務之第一個訊息的需要進行編譯。 因此不需要先行編譯。 此服務會實作 `ICalculator` 合約，如下列程式碼中所定義：  
   
-```  
+```csharp
 // Define a service contract.  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
     public interface ICalculator  
@@ -47,9 +47,10 @@ ms.locfileid: "43524933"
   
  服務實作會計算並傳回適當結果。  
   
-```  
+```svc
 <%@ServiceHost language=c# Debug="true" Service="Microsoft.ServiceModel.Samples.CalculatorService" %>   
-…  
+```
+```csharp
 // Service class that implements the service contract.  
 public class CalculatorService : ICalculator  
 {  
@@ -74,7 +75,7 @@ public class CalculatorService : ICalculator
   
  當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  
