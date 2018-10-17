@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94171b0708c97eb7510e916e451ed03645d706f3
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 2383003012ce1f6adffe0ad78ab614323840496f
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837431"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371000"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle 函式
 傳回識別屬性的唯一控制代碼。
@@ -52,7 +52,7 @@ HRESULT GetPropertyHandle (
 [in]包含屬性名稱的 UTF16 編碼 characaters null 結尾字串。   
 
 `pType`  
-[out]指標[ `CIMTYPE` ](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx)列舉的成員，表示屬性的 CIM 型別。
+[out]指標[ `CIMTYPE` ](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration)列舉的成員，表示屬性的 CIM 型別。
 
 `pHandle`   
 [out]包含屬性控制代碼的整數指標。

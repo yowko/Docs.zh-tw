@@ -3,19 +3,19 @@ title: SslStreamSecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: 18130d50-8996-4257-9c60-bc457f8654d8
 author: BrucePerlerMS
-ms.openlocfilehash: 35cbd44cd1cf488b9309eef677516733c6379b96
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 73855197d0fb518d49d6273d0587ddcf1f28885c
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198432"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371119"
 ---
 # <a name="sslstreamsecuritybindingelement"></a>SslStreamSecurityBindingElement
 SslStreamSecurityBindingElement  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```csharp
 class SslStreamSecurityBindingElement : BindingElement  
 {  
   boolean RequireClientCertificate;  

@@ -2,19 +2,19 @@
 title: TransactionFlowAttribute
 ms.date: 03/30/2017
 ms.assetid: 0a9c8674-29f7-4f14-aa1f-dc2644ca57e4
-ms.openlocfilehash: 462790688c1be6e1134a892e9197d25eec089fb6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e1eef2c1400fa7eabd64939ca131407f94ef48e6
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487798"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371611"
 ---
 # <a name="transactionflowattribute"></a>TransactionFlowAttribute
 TransactionFlowAttribute  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```csharp
 class TransactionFlowAttribute : Behavior  
 {  
   string TransactionFlowOption;  

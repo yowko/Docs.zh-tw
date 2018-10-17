@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: cf1782eaf54701f0cf93576325b3d46e8bc4d3f1
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: d4b4c776db542b6326fcceb8f2fd057d9caabf94
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261507"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372422"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>開發和部署 WCF 資料服務
 
@@ -80,9 +80,9 @@ ms.locfileid: "48261507"
 
 -   透過讓您檢查要求和回應訊息的內容對資料服務進行偵錯時，HTTP 檢查程式可能會很有幫助。 可以顯示原始封包的任何網路封包分析器可用於檢查資料服務的 HTTP 要求及其回應。
 
--   對資料服務進行偵錯時，可能比正常作業期間更想要從資料服務取得有關錯誤的詳細資訊。 您可以從資料服務取得其他錯誤資訊，方法是，將 <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> 中的 <xref:System.Data.Services.DataServiceConfiguration> 屬性 (Property) 設為 `true` ，然後在資料服務類別上，將 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 屬性 (Attribute) 的 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 屬性 (Property) 設為 `true`。 如需詳細資訊，請參閱文章[偵錯 WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=201868)。 您也可以啟用追蹤，在 WCF 中，檢視在 HTTP 訊息層引發的例外狀況。 如需詳細資訊，請參閱 [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。
+-   偵錯時的資料服務，您可能想要從資料服務取得錯誤的詳細資訊，在一般作業期間。 您可以從資料服務取得其他錯誤資訊，方法是，將 <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> 中的 <xref:System.Data.Services.DataServiceConfiguration> 屬性 (Property) 設為 `true` ，然後在資料服務類別上，將 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 屬性 (Attribute) 的 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 屬性 (Property) 設為 `true`。 如需詳細資訊，請參閱文章[偵錯 WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=201868)。 您也可以啟用追蹤，在 WCF 中，檢視在 HTTP 訊息層引發的例外狀況。 如需詳細資訊，請參閱 [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。
 
--   資料服務通常會開發為[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]應用程式專案，但您也可以建立資料服務當做[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Visual Studio 中的網站專案。 如需兩種專案類型之間的差異資訊，請參閱[NIB︰ Web 應用程式專案與 Visual Studio 中的網站專案](https://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5)。
+-   資料服務通常會開發為[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]應用程式專案，但您也可以建立資料服務當做[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Visual Studio 中的網站專案。 如需兩種專案類型之間差異的相關資訊，請參閱 [NIB︰Web 應用程式專案與 Visual Studio 中的網站專案](https://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5)。
 
 -   當您使用，會在建立資料服務時**加入新項目**對話方塊中，在 Visual Studio 中，資料服務由[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]在 IIS 中。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 和 IIS 是資料服務的預設主機，因此支援其他裝載選項。 如需詳細資訊，請參閱 <<c0> [ 裝載資料服務](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)。
 

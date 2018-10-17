@@ -2,19 +2,19 @@
 title: TransactedBatchingBehavior
 ms.date: 03/30/2017
 ms.assetid: 2d03e6ae-f06c-4ada-b279-e01838b2ecdc
-ms.openlocfilehash: 49e2cc9f56b08088dafd2e13e0f623a9550bb924
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d64671ea8bdbfe6ede4cfe43ca517b32ea84f839
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486638"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372014"
 ---
 # <a name="transactedbatchingbehavior"></a>TransactedBatchingBehavior
 TransactedBatchingBehavior  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```csharp
 class TransactedBatchingBehavior : Behavior  
 {  
   sint32 MaxBatchSize;  

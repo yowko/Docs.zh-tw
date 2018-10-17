@@ -2,12 +2,12 @@
 title: 訊息流程概觀
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
-ms.openlocfilehash: 73ad66389d8458c0508c7a8cae28f54ca38ed574
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 54ffd8ec2349b2dd54ca61615b2fb1b997d02932
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841978"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372781"
 ---
 # <a name="message-flow-overview"></a>訊息流程概觀
 在包含互連服務的分散式系統中，您必須判斷服務之間的因果關係。 請務必了解屬於要求流程一部分的各種元件，以便支援重要案例，例如健康監視、疑難排解和根本原因分析。 為了讓各種服務之間的追蹤相互關聯，我們透過下列功能，在 .NET Framework 4 中加入了支援：
@@ -52,13 +52,13 @@ ms.locfileid: "48841978"
 
 8.  在用戶端的 Program.cs 中，加入下列 Using 陳述式。
 
-    ```
+    ```csharp
     using System.Diagnostics;
     ```
 
 9. 在用戶端專案 program.cs 檔案的 Main 方法中，設定要在事件記錄檔中傳播的追蹤 GUID。
 
-    ```
+    ```csharp
     Guid guid = Guid.NewGuid();
     Trace.CorrelationManager.ActivityId = guid;
     ```

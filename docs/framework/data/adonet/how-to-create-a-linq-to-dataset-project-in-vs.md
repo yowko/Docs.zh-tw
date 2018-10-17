@@ -2,12 +2,12 @@
 title: 建立 LINQ to DataSet 專案在 Visual Studio
 ms.date: 08/15/2018
 ms.assetid: 49ba6cb0-cdd2-4571-aeaa-25bf0f40e9b3
-ms.openlocfilehash: 12544c6b5153a5f6300072d1646f2c119fb255a1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 22763d3b9581d09d7bdda0c09480f8d36bb8e2ec
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515742"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372429"
 ---
 # <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>如何： 建立 LINQ to DataSet 專案在 Visual Studio
 
@@ -22,7 +22,7 @@ LINQ to DataSet 需要兩個額外參考*System.Data.dll*並*System.Data.DataSet
 
 ## <a name="to-enable-linq-to-dataset-functionality"></a>若要啟用 LINQ to DataSet 功能
 
-遵循下列步驟以啟用 LINQ to DataSet 功能，在現有的專案。
+請遵循下列步驟來啟用 LINQ to DataSet 功能，在現有的專案。
 
 1. 將參考加入至**System.Core**， **System.Data**，並**System.Data.DataSetExtensions**。
 

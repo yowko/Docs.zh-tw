@@ -2,12 +2,12 @@
 title: WCF 服務及 Windows 的事件追蹤
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: 6684f6415fa6ee82a59fc9b54911b5c65d6dadb2
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 100f9c0ce71eedaa4061fc894521597074b21b00
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086579"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372464"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>WCF 服務及 Windows 的事件追蹤
 此範例示範如何使用 Windows Communication Foundation (WCF) 中的分析追蹤功能發出的事件追蹤的 Windows (ETW) 事件。 分析追蹤是在 WCF 堆疊中的 WCF 服務，在生產環境中疑難排解的關鍵點發出的事件。
@@ -26,11 +26,11 @@ ms.locfileid: "49086579"
 
      在網頁瀏覽器中，按一下**Calculator.svc**。 服務的 WSDL 文件 URI 應該會出現在瀏覽器中。 請複製該 URI。
 
-     根據預設，服務會開始接聽要求連接埠 1378年 (http://localhost:1378/Calculator.svc)。
+     根據預設，服務會開始接聽要求連接埠 1378年`http://localhost:1378/Calculator.svc`。
 
 4.  執行 WCF 測試用戶端 (WcfTestClient.exe)。
 
-     WCF 測試用戶端 (WcfTestClient.exe) 位於\<Visual Studio 2012 安裝目錄 > \Common7\IDE\ WcfTestClient.exe （預設 Visual Studio 2012 的安裝目錄為 C:\Program Files\Microsoft Visual Studio 10.0）。
+     WCF 測試用戶端 (WcfTestClient.exe) 位於`\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`。  預設 Visual Studio 2012 的安裝目錄是`C:\Program Files\Microsoft Visual Studio 10.0`。
 
 5.  在 WCF 測試用戶端，將服務新增所選取**檔案**，然後**加入服務**。
 

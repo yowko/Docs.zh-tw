@@ -2,12 +2,12 @@
 title: 錯誤處理
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: 64b1af4b557d7792c7285866edc9aed08a0ef667
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 548d93e63440e256ddb54c3ca792a49817c9b059
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486150"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372204"
 ---
 # <a name="error-handling"></a>錯誤處理
 ## <a name="error-handling-in-windows-communication-foundation"></a>Windows Communication Foundation 的錯誤處理  
@@ -30,7 +30,7 @@ ms.locfileid: "43486150"
 ### <a name="dealing-with-unexpected-exceptions-using-an-ierrorhandler"></a>使用 IErrorHandler 處理未預期的例外狀況。  
  若要處理未預期的例外狀況，建議的採取是動作的 「 攔截 」 IErrorHandler。 在 WCF 執行階段層級 （「 服務模型 」 層），而不是在通道層的錯誤處理常式只會攔截例外狀況。 在通道層級攔截 IErrorHandler 的唯一方式是建立自訂通道，在大部分的情況下不建議使用。  
   
- 「 非預期例外狀況 」 通常不是無法復原的例外狀況或處理的例外狀況;是，相反地，未預期的使用者例外狀況。 無法復原的例外狀況 （例如記憶體不足例外狀況） – 通常由[服務模型例外狀況處理常式](https://msdn.microsoft.com/library/system.servicemodel.dispatcher.exceptionhandler.aspx)自動處理 – 無法通常會處理依正常程序，並處理這類例外狀況的唯一理由在所有可能做其他記錄或傳回標準例外狀況至用戶端。 處理中的例外狀況發生於訊息的處理過程中 - 例如序列化、編碼器或格式器層級 - 通常無法在 IErrorHandler 處理，因為對錯誤處理常式而言，這些例外狀況發生的時間通常太早或太晚，使其無法介入。 同樣地，也無法在 IErrorHandler 處理傳輸例外狀況。  
+ 「 非預期例外狀況 」 通常不是無法復原的例外狀況或處理的例外狀況;是，相反地，未預期的使用者例外狀況。 無法復原的例外狀況 （例如記憶體不足例外狀況） – 通常由[服務模型例外狀況處理常式](xref:System.ServiceModel.Dispatcher.ExceptionHandler)自動處理 – 無法通常會處理依正常程序，並處理這類例外狀況的唯一理由在所有可能做其他記錄或傳回標準例外狀況至用戶端。 處理中的例外狀況發生於訊息的處理過程中 - 例如序列化、編碼器或格式器層級 - 通常無法在 IErrorHandler 處理，因為對錯誤處理常式而言，這些例外狀況發生的時間通常太早或太晚，使其無法介入。 同樣地，也無法在 IErrorHandler 處理傳輸例外狀況。  
   
  當例外狀況擲回時，您可使用 IErrorHandler 明確控制應用程式的行為。 您可以：  
   

@@ -2,12 +2,12 @@
 title: 檢視訊息記錄
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
-ms.openlocfilehash: 025d4020002a56deb9d5b8a2fe628f50cabad4d3
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 5d007efc9667ee5380b69349d6a960554ab0d4fe
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42912084"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374829"
 ---
 # <a name="viewing-message-logs"></a>檢視訊息記錄
 此主題描述如何檢視訊息記錄。  
@@ -33,7 +33,7 @@ ms.locfileid: "42912084"
   
 -   如果您必須檢視中的所有三個記錄檔[Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)在此同時，您可以修改轉送服務來建立新<xref:System.ServiceModel.Channels.Message>執行個體。 這個執行個體應該是傳入訊息本文的複本，加上所有的標頭 (除了 `ActivityId` 和 `Action` 標頭以外)。 下列範例程式碼示範如何進行這項操作：  
   
-```  
+```csharp
 Message outgoingMessage = Message.CreateMessage(incomingMessage.Version, incomingMessage.Headers.Action, incomingMessage.GetReaderAtBodyContents());  
   
 for (int i = 0; i < incomingMessage.Headers.Count; i++)  

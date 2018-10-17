@@ -3,19 +3,19 @@ title: SymmetricSecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: b2e182b6-c041-4d80-a926-6058068d9f79
 author: BrucePerlerMS
-ms.openlocfilehash: 180b64f6f37e5c765585e52b292319816618be28
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e633ae19cd17930fb140a93ffd0910c7ed8efea4
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198848"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374419"
 ---
 # <a name="symmetricsecuritybindingelement"></a>SymmetricSecurityBindingElement
 SymmetricSecurityBindingElement  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```csharp
 class SymmetricSecurityBindingElement : SecurityBindingElement  
 {  
   string MessageProtectionOrder;  

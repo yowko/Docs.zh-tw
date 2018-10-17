@@ -4,12 +4,12 @@ description: 將現有.NET 應用程式與 Azure 雲端和 Windows 容器現代�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 41fbeb3abc201ef03cf0c237a069e7687c98dd18
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1c23acc16698446bc07c0047b68186e21c2ceb2d
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45594007"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372847"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>逐步解說和技術開始入門的概觀
 
@@ -203,7 +203,7 @@ Azure 目前提供的 VM **Windows Server 2016 with Containers**。 您可以試
 
 ### <a name="overview"></a>總覽
 
-[Azure Container Instances (ACI)](https://docs.microsoft.com/en-us/azure/container-instances/)最快的方式，讓您可以在其中部署容器的單一執行個體的容器開發/測試/預備環境。
+[Azure Container Instances (ACI)](https://docs.microsoft.com/azure/container-instances/)最快的方式，讓您可以在其中部署容器的單一執行個體的容器開發/測試/預備環境。
 
 ### <a name="goals"></a>目標
 

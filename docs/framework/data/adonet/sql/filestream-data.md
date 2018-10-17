@@ -2,12 +2,12 @@
 title: FILESTREAM 資料
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: eef03d171d288cb2bc62c3aaa477a95a5ce718c3
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 843aa890ba80ab2816af0726170eacb77f419d50
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47176795"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374192"
 ---
 # <a name="filestream-data"></a>FILESTREAM 資料
 FILESTREAM 儲存體屬性適用於儲存在 varbinary(max) 資料行中的二進位 (BLOB) 資料。 在引進 FILESTREAM 之前，儲存二進位資料需要特殊處理。 文字文件、影像和視訊等非結構化資料通常會儲存在資料庫外部，因而難以管理。  
@@ -167,17 +167,15 @@ namespace FileStreamTest
 }
 ```  
   
- 如需其他範例，請參閱[如何儲存和擷取至檔案資料流資料行的二進位資料](http://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str)。  
+ 如需其他範例，請參閱[如何儲存和擷取至檔案資料流資料行的二進位資料](https://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str)。  
   
 ## <a name="resources-in-sql-server-books-online"></a>SQL Server 線上叢書中的資源  
  FILESTREAM 的完整文件位於 SQL Server 線上叢書 》 中的下列各節。  
   
 |主題|描述|  
 |-----------|-----------------|  
-|[設計和實作 FILESTREAM 儲存體](http://msdn2.microsoft.com/library/bb895234\(SQL.105\).aspx)|提供 FILESTREAM 文件和相關主題的連結。|  
-|[FILESTREAM 概觀](http://msdn2.microsoft.com/library/bb933993\(SQL.105\).aspx)|描述使用 FILESTREAM 儲存體的時機，以及它如何整合 SQL Server Database Engine 與 NTFS 檔案系統。|  
-|[開始使用 FILESTREAM 儲存體](https://msdn.microsoft.com/library/bb933995\(SQL.105\).aspx)|描述如何在 SQL Server 執行個體 (Instance) 上啟用 FILESTREAM、如何建立資料庫和資料表來儲存 FILESTREAM 資料，以及如何管理包含 FILESTREAM 資料的資料列。|  
-|[在 用戶端應用程式中使用 FILESTREAM 儲存體](https://msdn.microsoft.com/library/bb933877\(SQL.105\).aspx)|描述可用於處理 FILESTREAM 資料的 Win32 API 函式。|  
+|[FILESTREAM (SQL Server)](/sql/relational-databases/blob/filestream-sql-server)|描述使用 FILESTREAM 儲存體的時機，以及它如何整合 SQL Server Database Engine 與 NTFS 檔案系統。|  
+|[建立 FILESTREAM 資料的用戶端應用程式](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|描述可用於處理 FILESTREAM 資料的 Win32 API 函式。|  
 |[FILESTREAM 和其他 SQL Server 功能](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|針對使用 FILESTREAM 資料搭配其他 SQL Server 功能提供相關的考量、指導方針和限制。|  
   
 ## <a name="see-also"></a>另請參閱  
@@ -185,4 +183,4 @@ namespace FileStreamTest
  [在 ADO.NET 中擷取和修改資料](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [程式碼存取安全性和 ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)  
  [SQL Server 二進位和大量數值資料](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 概觀](../../../../../docs/framework/data/adonet/ado-net-overview.md)

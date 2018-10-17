@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Formatter
 ms.assetid: e0a2fe89-3534-48c8-aa3c-819862224571
-ms.openlocfilehash: ef1b01ff59fc32546dca8ed9c95f3a981ed408e3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 0086bdd41b9f87c14b3a9d0653a8f8982235b1ad
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45743861"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371512"
 ---
 # <a name="datacontractserializer-sample"></a>DataContractSerializer 範例
 DataContractSerializer 範例會示範執行資料合約類別之一般序列化與還原序列化服務的 <xref:System.Runtime.Serialization.DataContractSerializer>。 此範例會建立`Record`物件、 將其序列化為記憶體資料流，並還原序列化到另一個記憶體資料流`Record`物件，以示範使用<xref:System.Runtime.Serialization.DataContractSerializer>。 此範例會接著會序列化使用二進位寫入器的 `Record` 物件，以便示範該寫入器會如何影響序列化。  
@@ -19,7 +19,7 @@ DataContractSerializer 範例會示範執行資料合約類別之一般序列化
   
  下列範例程式碼示範 `Record` 的資料合約。  
   
-```  
+```csharp  
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 internal class Record  
 {  
@@ -74,14 +74,14 @@ internal class Record
   
  此段範例程式碼會建立名為 `Record` 的 `record1` 物件，並接著顯示該物件。  
   
-```  
+```csharp
 Record record1 = new Record(1, 2, "+", 3);  
 Console.WriteLine("Original record: {0}", record1.ToString());  
 ```  
   
  此範例會接著使用 <xref:System.Runtime.Serialization.DataContractSerializer>，將 `record1` 序列化為記憶體資料流。  
   
-```  
+```csharp  
 MemoryStream stream1 = new MemoryStream();  
   
 //Serialize the Record object to a memory stream using DataContractSerializer.  
@@ -91,7 +91,7 @@ serializer.WriteObject(stream1, record1);
   
  接下來，此範例會使用 <xref:System.Runtime.Serialization.DataContractSerializer>，將記憶體資料流還原序列化為新 `Record` 物件，並顯示該物件。  
   
-```  
+```csharp  
 stream1.Position = 0;  
   
 //Deserialize the Record object back into a new record object.  
@@ -102,7 +102,7 @@ Console.WriteLine("Deserialized record: {0}", record2.ToString());
   
  根據預設，`DataContractSerializer` 會將物件編碼為使用 XML 文字表示法的資料流。 但是，您可以傳遞不同的寫入器來決定 XML 編碼的方式。 此範例會透過呼叫 <xref:System.Xml.XmlDictionaryWriter.CreateBinaryWriter%2A> 來建立二進位寫入器。 接著此範例會在呼叫 <xref:System.Runtime.Serialization.DataContractSerializer.WriteObjectContent%2A> 時，將寫入器與記錄物件傳遞至序列化程式。 最後，此範例會清除寫入器，並報告關於資料流長度的資訊。  
   
-```  
+```csharp  
 MemoryStream stream2 = new MemoryStream();  
   
 XmlDictionaryWriter binaryDictionaryWriter = XmlDictionaryWriter.CreateBinaryWriter(stream2);  
@@ -116,7 +116,7 @@ Console.WriteLine("Binary Stream is {0} bytes long", stream2.Length);
   
  當執行範例時，原始記錄與已還原序列化的記錄會顯示出來，之後會顯示文字編碼與二進位編碼長度之間的比較結果。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。  
   
-```  
+```console  
 Original record: Record: 1 + 2 = 3  
 Deserialized record: Record: 1 + 2 = 3  
 Text Stream is 233 bytes long  

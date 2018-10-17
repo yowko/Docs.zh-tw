@@ -2,19 +2,19 @@
 title: TraceListener
 ms.date: 03/30/2017
 ms.assetid: c2c0b595-a384-4eb3-b94d-1b3be7cc7a5c
-ms.openlocfilehash: be8c003b1980bdf80218bd226d25f51a2ebcea43
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1bd15aafc85e5553a4b4acef6901beb9a0f1745e
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485065"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49370896"
 ---
 # <a name="tracelistener"></a>TraceListener
 TraceListener。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```csharp
 class TraceListener  
 {  
   string Name;  

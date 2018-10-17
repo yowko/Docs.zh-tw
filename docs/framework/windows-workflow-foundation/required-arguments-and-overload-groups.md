@@ -2,12 +2,12 @@
 title: 必要引數與多載群組
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-ms.openlocfilehash: d25702e573acd9a0815c232cdf6935d6e9651631
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: d7cfe00d93f1eede77bcda5881c63843722c9a17
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842069"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374258"
 ---
 # <a name="required-arguments-and-overload-groups"></a>必要引數與多載群組
 您可以設定活動，讓繫結活動所需的某些引數有效，以便用於執行。 `RequiredArgument` 屬性用於指出活動的特定引數是必要的，而 `OverloadGroup` 屬性則用於群組必要引數的分類。 透過使用屬性，活動作者可以提供簡單或複雜的活動驗證組態。  
@@ -63,7 +63,7 @@ public sealed class Add : CodeActivity<int>
   
  **未提供必要的活動引數 'Operand1' 的值。**  
 > [!NOTE]
-> 如需檢查和處理驗證錯誤和警告的相關詳細資訊，請參閱 <<c0> [ 叫用活動驗證](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md)。  
+> 如需檢查和處理驗證錯誤和警告的詳細資訊，請參閱 <<c0> [ 叫用活動驗證](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md)。  
   
 ## <a name="using-overload-groups"></a>使用多載群組
 

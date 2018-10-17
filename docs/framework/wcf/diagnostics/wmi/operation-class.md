@@ -2,19 +2,19 @@
 title: Operation 類別
 ms.date: 03/30/2017
 ms.assetid: b19d1496-ef06-4d0c-b2ae-e728ec00cca0
-ms.openlocfilehash: d9256915afe9fdb8e4c91d186131fe41a7094c56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16de8b25594896349ea546d3def52dd256fe5c70
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487564"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371585"
 ---
 # <a name="operation-class"></a>Operation 類別
 運算  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```csharp
 class Operation  
 {  
   string Action;  
@@ -50,7 +50,7 @@ class Operation
   
  存取類型：唯讀  
   
- 表示使用以非同步方式實作作業`Begin`[左右角括號] 和`End`服務合約中的 [開啟/關閉角度 brackets] 方法組。  
+ 表示以非同步方式實作作業`Begin`[開啟/關閉角括號] 和`End`採用服務合約中的 [開啟/關閉角度 brackets] 方法組。  
   
 ### <a name="behaviors"></a>「行為」  
  資料型別：行為陣列  

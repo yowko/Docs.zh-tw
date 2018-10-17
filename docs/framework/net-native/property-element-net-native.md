@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47ed75d377814a740edece2b6a69e44acbd8ef0c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 1b4541bc5a878739c17179576739fbe33384445d
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004347"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372051"
 ---
 # <a name="ltpropertygt-element-net-native"></a>&lt;Property&gt; 項目 (.NET Native)
 將執行階段反映原則套用至屬性。  
@@ -75,7 +75,7 @@ ms.locfileid: "46004347"
   
  檔案會針對 `All` 類別，將 `Activate` 值套用至 `Book` 原則，如此可允許透過反映來存取類別建構函式。 `Browse` 類別的 `Book` 原則繼承自其父命名空間。 其設定為 `Required Public`，讓中繼資料在執行階段可供使用。  
   
- 以下是範例的原始程式碼。 `outputBlock` 變數代表 [TextBlock](https://msdn.microsoft.com/library/windows.ui.xaml.controls.textblock.aspx) 控制項。  
+ 以下是範例的原始程式碼。 `outputBlock`變數代表<xref:Windows.UI.Xaml.Controls.TextBlock>控制項。  
   
  [!code-csharp[ProjectN_Reflection#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/property1.cs#6)]  
   

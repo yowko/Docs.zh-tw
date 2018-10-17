@@ -2,19 +2,19 @@
 title: ConnectionOrientedTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: c1308313-f0e2-49e6-977d-6b4ce9ad35d1
-ms.openlocfilehash: 3b1055e6e2329fd213ae973ad32cdf8014d30a04
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49f030c05f02280d483ac2a836cbe75716b7b5cc
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487444"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49370950"
 ---
 # <a name="connectionorientedtransportbindingelement"></a>ConnectionOrientedTransportBindingElement
 ConnectionOrientedTransportBindingElement  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```csharp
 class ConnectionOrientedTransportBindingElement : TransportBindingElement  
 {  
   datetime ChannelInitializationTimeout;  

@@ -2,12 +2,12 @@
 title: HOW TO：在可靠的工作階段內交換訊息
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 6b204749ce86b79bf46b2d5c96be1b00dca9500d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 53e5661bf140540cd0fc7a9fcb739b67488b8491
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44037372"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374514"
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>HOW TO：在可靠的工作階段內交換訊息
 
@@ -23,7 +23,7 @@ ms.locfileid: "44037372"
 
    [!code-csharp[c_HowTo_UseReliableSession#1121](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/service.cs#1121)]
 
-1. 在服務類別中實作服務合約。 請注意，位址或繫結資訊不指定的服務實作內。 您不需要撰寫程式碼來擷取組態檔中的位址或繫結資訊的資訊。
+1. 在服務類別中實作服務合約。 請注意，位址或繫結資訊不指定的服務實作內。 您不需要撰寫程式碼來擷取組態檔中的位址或繫結資訊。
 
    [!code-csharp[c_HowTo_UseReliableSession#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/service.cs#1122)]
 
@@ -51,7 +51,7 @@ ms.locfileid: "44037372"
 
    [!code-csharp[C_HowTo_UseReliableSession#1221](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/client.cs#1221)]
 
-1. 產生的用戶端應用程式也包含 `ClientCalculator` 的實作。 請注意，位址和繫結資訊不內部指定的服務實作。 您不需要撰寫程式碼來擷取組態檔中的位址或繫結資訊的資訊。
+1. 產生的用戶端應用程式也包含 `ClientCalculator` 的實作。 請注意，位址和繫結資訊不內部指定的服務實作。 您不需要撰寫程式碼來擷取組態檔中的位址或繫結資訊。
 
    [!code-csharp[C_HowTo_UseReliableSession#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/client.cs#1222)]
 

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1149a3c3589cec0e952088a772ca036028c58ff5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b905c8bb89e4b163952b9640b53fc3992ba5ca10
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521350"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49373880"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>ICorDebugMetaDataLocator::GetMetaData 方法
 要求偵錯工具傳回完整路徑到模組，其需要中繼資料以完成偵錯工具的要求。  
@@ -46,7 +46,7 @@ HRESULT GetMetaData(
  [in] 以 null 結束的字串，表示檔案的完整路徑。 如果沒有提供的完整路徑的名稱和副檔名的檔案 (*檔名*。*延伸模組*)。  
   
  `dwImageTimeStamp`  
- [in] 從映像的 PE 檔標頭的時間戳記。 這個參數可能可以用於符號伺服器 ([SymSrv](https://msdn.microsoft.com/library/cc266470.aspx)) 查閱。  
+ [in] 從映像的 PE 檔標頭的時間戳記。 這個參數可能可以用於符號伺服器 ([SymSrv](/windows/desktop/debug/using-symsrv)) 查閱。  
   
  `dwImageSize`  
  [in] 從 PE 檔標頭的映像大小。 此參數可能會用於 SymSrv 查閱。  

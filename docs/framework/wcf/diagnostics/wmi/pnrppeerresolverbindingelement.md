@@ -2,22 +2,22 @@
 title: PnrpPeerResolverBindingElement
 ms.date: 03/30/2017
 ms.assetid: 050f24bf-dc23-4181-ad1e-a4cce1dc89fb
-ms.openlocfilehash: b873a41df2f211720c2e5746e381023d01f53461
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc43d894282b858208bccaaa02c65ecc9c10d552
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33484404"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374088"
 ---
 # <a name="pnrppeerresolverbindingelement"></a>PnrpPeerResolverBindingElement
 PnrpPeerResolverBindingElement  
   
-## <a name="syntax"></a>語法  
- `class PnrpPeerResolverBindingElement : PeerResolverBindingElement`  
-  
- `{`  
-  
- `};`  
+## <a name="syntax"></a>語法 
+```csharp 
+class PnrpPeerResolverBindingElement : PeerResolverBindingElement
+{ 
+};
+```  
   
 ## <a name="methods"></a>方法  
  PnrpPeerResolverBindingElement 類別繼承自 PeerResolverBindingElement，但沒有定義額外的方法與屬性。  

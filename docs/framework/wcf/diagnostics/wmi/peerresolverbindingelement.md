@@ -2,19 +2,19 @@
 title: PeerResolverBindingElement
 ms.date: 03/30/2017
 ms.assetid: 36882183-13a3-443f-8aae-62a7825d5633
-ms.openlocfilehash: 29157677c3c633dfe2b45f4ca4d665bdfa86da61
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 39945e77dd5650a587b2b5ea6ccabe5185e2c79a
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33484825"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49373713"
 ---
 # <a name="peerresolverbindingelement"></a>PeerResolverBindingElement
 PeerResolverBindingElement  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```csharp
 class PeerResolverBindingElement : BindingElement  
 {  
   string ReferralPolicy;  

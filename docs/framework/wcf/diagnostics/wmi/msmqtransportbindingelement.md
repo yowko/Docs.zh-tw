@@ -2,19 +2,19 @@
 title: MsmqTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 1c89f073-9ed3-4025-a8c5-13535a0f526b
-ms.openlocfilehash: 643ab0f30c771f79df8ef7dd885013d5186fba59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 33cd9c427ed5ad04eaf9e9889f60f091f335d1e7
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485904"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374005"
 ---
 # <a name="msmqtransportbindingelement"></a>MsmqTransportBindingElement
 MsmqTransportBindingElement  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```csharp
 class MsmqTransportBindingElement : MsmqBindingElementBase  
 {  
   sint32 MaxPoolSize;  

@@ -2,19 +2,19 @@
 title: TextMessageEncodingBindingElement
 ms.date: 03/30/2017
 ms.assetid: 885e2d7a-3436-4093-bc5f-0a404c62acdc
-ms.openlocfilehash: f9b94e946413967cc14282e85743a23327683b89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2371c38aebe2bd8d6da93d702801556fad986ef9
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486012"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372205"
 ---
 # <a name="textmessageencodingbindingelement"></a>TextMessageEncodingBindingElement
 TextMessageEncodingBindingElement  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```csharp
 class TextMessageEncodingBindingElement : MessageEncodingBindingElement  
 {  
   string Encoding;  

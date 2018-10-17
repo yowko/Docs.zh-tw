@@ -2,12 +2,12 @@
 title: 相互關聯概觀
 ms.date: 03/30/2017
 ms.assetid: edcc0315-5d26-44d6-a36d-ea554c418e9f
-ms.openlocfilehash: 1f9e4db4002e53af5cdf91ab9d563764495b30d3
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: d831452c384e5aede6ede37af7de6e86b6772342
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261244"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372638"
 ---
 # <a name="correlation-overview"></a>相互關聯概觀
 相互關聯是一種機制，可將工作流程服務訊息彼此產生關聯性、將工作流程服務訊息與應用程式執行個體狀態 (例如針對初始要求的回覆) 產生關聯性，或者是將特定的訂單 ID 與訂單處理工作流程的保存狀態產生關聯性。 本主題提供相互關聯的概觀。 本節的其他主題則會提供各種相互關聯類型的其他資訊。  
@@ -21,7 +21,7 @@ ms.locfileid: "48261244"
 
 以通訊協定為主的相互關聯會使用傳輸機制將訊息彼此產生關聯性，以及將訊息與適當的執行個體產生關聯性。 某些由系統提供的通訊協定相互關聯會包含要求-回覆相互關聯，以及以內容為主的相互關聯。 要求-回覆相互關聯用於將單獨一組的傳訊活動相互關聯，以形成雙向作業，例如 <xref:System.ServiceModel.Activities.Send> 搭配 <xref:System.ServiceModel.Activities.ReceiveReply>，或是 <xref:System.ServiceModel.Activities.Receive> 搭配 <xref:System.ServiceModel.Activities.SendReply>。 Visual Studio 工作流程設計工具也會提供一組活動範本，快速地實作此模式。 以內容為主的相互關聯以中所述的內容交換機制為基礎[.NET 內容交換通訊協定規格](https://go.microsoft.com/fwlink/?LinkID=166059)。 若要使用以內容為主的相互關聯，必須在端點上使用以內容為主的繫結，例如 <xref:System.ServiceModel.BasicHttpContextBinding>、<xref:System.ServiceModel.WSHttpContextBinding> 或 <xref:System.ServiceModel.NetTcpContextBinding>。  
   
-如需有關通訊協定相互關聯的詳細資訊，請參閱[永久性雙工](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md)並[要求-回覆](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)。 如需使用 Visual Studio 工作流程設計工具活動範本的詳細資訊，請參閱 <<c0> [ 訊息活動](../../../../docs/framework/wcf/feature-details/messaging-activities.md)。 範例程式碼，請參閱[NetContextExchangeCorrelation](https://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf)範例。  
+如需有關通訊協定相互關聯的詳細資訊，請參閱[永久性雙工](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md)並[要求-回覆](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)。 如需使用 Visual Studio 工作流程設計工具活動範本的詳細資訊，請參閱 <<c0> [ 訊息活動](../../../../docs/framework/wcf/feature-details/messaging-activities.md)。 範例程式碼，請參閱[NetContextExchangeCorrelation](/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29)範例。  
   
 ## <a name="content-based-correlation"></a>以內容為基礎的相互關聯
 
@@ -29,4 +29,4 @@ ms.locfileid: "48261244"
   
 ## <a name="see-also"></a>另請參閱  
 
-- [NetContextExchangeCorrelation](https://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf)
+- [NetContextExchangeCorrelation](/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29)

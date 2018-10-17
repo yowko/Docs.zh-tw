@@ -2,12 +2,12 @@
 title: 使用 HTTP POST 的 AJAX 服務
 ms.date: 03/30/2017
 ms.assetid: 1ac80f20-ac1c-4ed1-9850-7e49569ff44e
-ms.openlocfilehash: c102d9d403cefb1bf3d4ab75859a81172895c2e0
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: df199b40a4a9ebb9a36cea7234b484273348cd9e
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041105"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372044"
 ---
 # <a name="ajax-service-using-http-post"></a>使用 HTTP POST 的 AJAX 服務
 這個範例會示範如何使用 Windows Communication Foundation (WCF) 建立[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Asynchronous JavaScript and XML (AJAX) 服務會使用 HTTP POST。 AJAX 是可從 Web 瀏覽器用戶端使用基本 JavaScript 程式碼存取的一種服務。 這個範例是根據[基本 AJAX 服務](../../../../docs/framework/wcf/samples/basic-ajax-service.md)範例; 兩個範例唯一的差別是使用 HTTP POST，而不是 HTTP GET。  
@@ -33,7 +33,7 @@ public interface ICalculator
 
  您可以在服務上使用 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> 來建立 AJAX 端點，如基本 AJAX 服務範例所示。  
   
- 不同於 GET 要求，您無法從瀏覽器叫用 POST 服務。 比方說，瀏覽至 http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200 產生錯誤，因為 POST 服務預期`n1`和`n2`參數來傳送訊息主體中 — 以 JSON 格式 — 而不是 URL。  
+ 不同於 GET 要求，您無法從瀏覽器叫用 POST 服務。 例如，瀏覽至`http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200`產生錯誤，因為 POST 服務預期`n1`和`n2`傳送訊息主體採用 JSON 格式，而不是在 URL 中的參數。  
   
  用戶端網頁 PostAjaxClientPage.aspx 包含 ASP.NET 程式碼，此程式碼會在使用者每次按下網頁上其中一個作業按鈕時叫用此服務。 服務會依照相同的方式回應[基本 AJAX 服務](../../../../docs/framework/wcf/samples/basic-ajax-service.md)範例中，使用 GET 要求。  
   
@@ -52,6 +52,4 @@ public interface ICalculator
   
 2.  中所述，建置方案 PostAjaxService.sln[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-3.  瀏覽至 http://localhost/ServiceModelSamples/PostAjaxClientPage.aspx（不要在瀏覽器從專案目錄開啟 PostAjaxClientPage.aspx）。  
-  
-## <a name="see-also"></a>另請參閱
+3.  瀏覽至`http://localhost/ServiceModelSamples/PostAjaxClientPage.aspx`（不要在瀏覽器從專案目錄開啟 PostAjaxClientPage.aspx）。
