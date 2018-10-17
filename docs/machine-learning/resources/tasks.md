@@ -13,13 +13,13 @@ ms.locfileid: "36207717"
 ---
 # <a name="machine-learning-tasks"></a>機器學習工作
 
-建置機器學習模型時，您必須先定義希望利用資料來達成的目標。 之後，就可以挑選適合您情況的機器學習工作。 以下清單描述可供您選擇的各種不同機器學習工作，以及一些常見的使用案例。 
+建置機器學習模型時，您必須先定義出希望利用資料來達成的目標。 之後，就可以挑選適合您情況的機器學習工作。 以下清單描述可供您選擇的各種不同機器學習工作，以及一些常見的使用案例。 
 
 > [!NOTE]
-> ML.NET 目前為預覽版。 目前並非所有機器學習工作都受到支援。 若要提交特定工作的要求，請在 [dotnet/machinelearning 存放庫](https://github.com/dotnet/machinelearning/issues)中開啟一個問題。
+> ML.NET 目前為預覽版。 目前並非所有機器學習工作都有支援。 若要提交特定工作的要求，請在 [dotnet/machinelearning 存放庫](https://github.com/dotnet/machinelearning/issues)中建立一個問題。
 
 > [!NOTE]
-> 目前，ML.NET 不支援含有影像的機器學習工作。 在未來的版本中將會新增支援。 
+> 目前，ML.NET 不支援含有影像的機器學習工作。 在未來的版本中將會支援。 
 
 ## <a name="binary-classification"></a>二元分類
 
