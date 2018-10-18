@@ -2,19 +2,19 @@
 title: MsmqIntegrationBindingElement
 ms.date: 03/30/2017
 ms.assetid: eaaa7651-e6e5-4fae-9dad-c1867d38b586
-ms.openlocfilehash: 9018791a6c136f3ad47d84f87c02f6c8ab668e4e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff8cc5797c25680d257c8d142425538c75dbf044
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487259"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374730"
 ---
 # <a name="msmqintegrationbindingelement"></a>MsmqIntegrationBindingElement
 MsmqIntegrationBindingElement  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```csharp  
 class MsmqIntegrationBindingElement : MsmqBindingElementBase  
 {  
   string SerializationFormat;  

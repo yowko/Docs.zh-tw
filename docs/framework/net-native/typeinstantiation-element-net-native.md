@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9fefa302a269e08300f0393434b66ca8738a27b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5277b056c11de4c3e32d33c72bafc8f64ee17d05
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777778"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374546"
 ---
 # <a name="lttypeinstantiationgt-element-net-native"></a>&lt;TypeInstantiation&gt; 項目 (.NET Native)
 將執行階段反映原則套用至建構的泛型類型。  
@@ -32,7 +32,7 @@ ms.locfileid: "43777778"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -40,9 +40,9 @@ ms.locfileid: "43777778"
 |---------------|--------------------|-----------------|  
 |`Name`|一般|必要屬性。 指定類型名稱。|  
 |`Arguments`|一般|必要屬性。 指定泛型類型引數。 如果有多個引數存在，會以逗號分隔。|  
-|`Activate`|反映|選擇性屬性。 控制建構函式的執行階段存取，以便啟動執行個體。|  
-|`Browse`|反映|選擇性屬性。 控制程式項目相關資訊的查詢，但不會啟用任何執行階段存取。|  
-|`Dynamic`|反映|選擇性屬性。 控制對所有類型成員 (包括建構函式、方法、欄位、屬性和事件) 的執行階段存取，以啟用動態程式設計。|  
+|`Activate`|反射|選擇性屬性。 控制建構函式的執行階段存取，以便啟動執行個體。|  
+|`Browse`|反射|選擇性屬性。 控制程式項目相關資訊的查詢，但不會啟用任何執行階段存取。|  
+|`Dynamic`|反射|選擇性屬性。 控制對所有類型成員 (包括建構函式、方法、欄位、屬性和事件) 的執行階段存取，以啟用動態程式設計。|  
 |`Serialize`|序列化|選擇性屬性。 控制建構函式、欄位和屬性的執行階段存取，以便 Newtonsoft JSON 序列化程式等程式庫可對類型執行個體進行序列化和還原序列化。|  
 |`DataContractSerializer`|序列化|選擇性屬性。 控制使用 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 類別的序列化原則。|  
 |`DataContractJsonSerializer`|序列化|選擇性屬性。 控制使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType> 類別的 JSON 序列化原則。|  
@@ -61,7 +61,7 @@ ms.locfileid: "43777778"
   
 |值|描述|  
 |-----------|-----------------|  
-|*type_argument*|指定泛型類型引數。 如果有多個引數存在，會以逗號分隔。 每個引數都必須包含完整的類型名稱。|  
+|*type_argument*|指定泛型型別引數。 如果有多個引數存在，會以逗號分隔。 每個引數都必須包含完整的類型名稱。|  
   
 ## <a name="all-other-attributes"></a>所有其他屬性  
   
@@ -69,7 +69,7 @@ ms.locfileid: "43777778"
 |-----------|-----------------|  
 |*policy_setting*|要為建構的泛型類型套用至此原則類型的設定。 可能的值為 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -86,12 +86,12 @@ ms.locfileid: "43777778"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|做為整個應用程式的類型和類型成員的容器，這些類型和類型成員的中繼資料可在執行階段用於反映。|  
+|[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|做為容器，以包含整個應用程式的類型，以及中繼資料可在執行階段用於反映的類型成員。|  
 |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|將反映原則套用至指定組件中的所有類型。|  
 |[\<程式庫>](../../../docs/framework/net-native/library-element-net-native.md)|定義包含類型和類型成員的組件，該類型和類型成員的中繼資料會在執行階段用於反映。|  
 |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|將反映原則套用至命名空間中的所有類型。|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
-|`<TypeInstantiation>`|將反映原則套用至建構的泛型類型及其所有成員。|  
+|`<TypeInstantiation>`|將反映原則套用至已建構的泛型類型及其所有成員。|  
   
 ## <a name="remarks"></a>備註  
  反映、序列化和 interop 屬性都是選用性。 不過，必須至少有一個屬性存在。  
@@ -99,7 +99,7 @@ ms.locfileid: "43777778"
  如果 `<TypeInstantiation>` 元素是 [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)、[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md) 或 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 元素的子元素，則會覆寫父元素所定義的原則設定。 如果 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 元素定義相對應的泛型型別定義，則 `<TypeInstantiation>` 元素只會針對指定建構泛型型別的具現化，覆寫執行階段反映原則。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用反映，從建構的 <xref:System.Collections.Generic.Dictionary%602> 物件擷取泛型類型定義。 它也會使用反映來顯示代表建構泛型類型和泛型類型定義的 <xref:System.Type> 物件。 變數 `b` 在範例中是 [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) 控制項。  
+ 下列範例會使用反映，從建構的 <xref:System.Collections.Generic.Dictionary%602> 物件擷取泛型類型定義。 它也會使用反映來顯示代表建構泛型類型和泛型類型定義的 <xref:System.Type> 物件。 變數`b`在此範例中是<xref:Windows.UI.Xaml.Controls.TextBlock>控制項。  
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], routing
 - Windows communication Foundation [WCF], routing
 ms.assetid: bd56516c-420d-4c4e-97f9-f72d28d149a9
-ms.openlocfilehash: 065bbb5e20ddf1b26e98934d94c764e83969cc8a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 50b6cb78f5fb20344d5f682d268b6e646c17fb9e
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518900"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49370821"
 ---
 # <a name="routing"></a>路由
 本節中的主題涵蓋路由服務。 路由服務是可設定的泛型 SOAP 媒介，可讓您設定以內容為基礎的路由、設定通訊協定橋接、處理通訊錯誤，以及在執行階段動態更新路由邏輯。  
@@ -20,7 +20,7 @@ ms.locfileid: "43518900"
  [路由服務](../../../../docs/framework/wcf/feature-details/routing-service.md)  
  提供路由服務的功能概觀。  
   
- [路由服務](https://msdn.microsoft.com/library/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
+ [路由服務](../../../../docs/framework/wcf/feature-details/routing-service.md)  
  說明路由服務的各項功能。  
   
  [路由簡介](../../../../docs/framework/wcf/feature-details/routing-introduction.md)  

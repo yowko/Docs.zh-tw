@@ -43,7 +43,7 @@ ms.locfileid: "43521433"
 ## <a name="example-2"></a>範例 2  
   
 ### <a name="description"></a>描述  
- 此範例示範結構特有的功能。 它在建立 CoOrds 物件時並未使用 `new` 運算子。 如果您以 `struct` 一字取代 `class`一字，將不會編譯程式。  
+ 此範例示範結構特有的功能。 它在建立 CoOrds 物件時並未使用 `new` 運算子。 如果您以 `class` 一字取代 `struct` 一字，將不會編譯程式。  
   
 ### <a name="code"></a>程式碼  
  [!code-csharp[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_1.cs)]  

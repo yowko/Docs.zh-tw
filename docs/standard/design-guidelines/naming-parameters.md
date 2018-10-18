@@ -18,7 +18,7 @@ ms.locfileid: "44086468"
 # <a name="naming-parameters"></a>命名參數
 除了可讀性的明顯原因，請務必遵循的指導方針的參數名稱，因為參數會顯示在文件，並在設計工具中，視覺化設計工具提供 Intellisense 和瀏覽功能的類別時。  
   
- **✓ DO** camelCasing 用於參數名稱。  
+ **✓ DO** 將 camelCasing 用於參數名稱。  
   
  **✓ DO** 使用描述性的參數名稱。  
   
