@@ -93,7 +93,7 @@ ms.locfileid: "43864958"
 
 * 工作流程相關的服務︰Windows Workflow Foundation (WF)、工作流程服務 (WCF + 單一服務中的 WF) 和 WCF Data Services (先前稱為 "ADO.NET Data Services") 僅適用於 .NET Framework。  目前並未規劃將 WF/WCF+WF/WCF Data Services 帶入 .NET Core。
 
-* 語言支援：.NET Core 目前支援 Visual Basic 和 F #，但不是所有專案類型都提供支援。 如需支援的專案範本清單，請參閱 [dotnet new 的範本選項](../core/tools/dotnet-new.md#arguments)。
+* 語言支援：.NET Core 目前支援 Visual Basic 和 F#，但不是所有專案類型都提供支援。 如需支援的專案範本清單，請參閱 [dotnet new 的範本選項](../core/tools/dotnet-new.md#arguments)。
 
 除了官方藍圖，還有其他要移植到 .NET Core 的架構。 如需完整清單，請參閱標記為 [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core) 的 CoreFX 問題。 這份清單並不代表 Microsoft 承諾要將這些元件帶入 .NET Core， 而是代表社群想要這樣做的期望。 如果您很重視標記為 `port-to-core` 的任何元件，請參與 GitHub 上的討論。 如果您認為缺少了什麼，請在 [CoreFX 存放庫](https://github.com/dotnet/corefx/issues/new)中提問新的問題。
 
