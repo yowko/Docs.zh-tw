@@ -9,22 +9,22 @@ helpviewer_keywords:
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: bcdac76528e7a8b07b56b6fd1d827c3c8072c371
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
-ms.translationtype: MT
+ms.openlocfilehash: e74f0956dd5acebccee87fd6ad8c09b299badffd
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086314"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50036381"
 ---
-# <a name="add-element-for-appsettings"></a><span data-ttu-id="2d8ea-102">\<新增 > 項目\<appSettings ></span><span class="sxs-lookup"><span data-stu-id="2d8ea-102">\<add> element for \<appSettings></span></span>
+# <a name="add-element-for-appsettings"></a><span data-ttu-id="f6be4-102">\<新增 > 項目\<appSettings ></span><span class="sxs-lookup"><span data-stu-id="f6be4-102">\<add> element for \<appSettings></span></span>
 
-<span data-ttu-id="2d8ea-103">新增自訂應用程式設定。</span><span class="sxs-lookup"><span data-stu-id="2d8ea-103">Adds a custom application setting.</span></span>
+<span data-ttu-id="f6be4-103">新增自訂應用程式設定。</span><span class="sxs-lookup"><span data-stu-id="f6be4-103">Adds a custom application setting.</span></span>
 
-<span data-ttu-id="2d8ea-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="2d8ea-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
-<span data-ttu-id="2d8ea-105">&nbsp;&nbsp;[**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="2d8ea-105">&nbsp;&nbsp;[**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) </span></span>  
-<span data-ttu-id="2d8ea-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<新增 >**</span><span class="sxs-lookup"><span data-stu-id="2d8ea-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**</span></span>
+<span data-ttu-id="f6be4-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="f6be4-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
+<span data-ttu-id="f6be4-105">&nbsp;&nbsp;[**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="f6be4-105">&nbsp;&nbsp;[**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) </span></span>  
+<span data-ttu-id="f6be4-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<新增 >**</span><span class="sxs-lookup"><span data-stu-id="f6be4-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="2d8ea-107">語法</span><span class="sxs-lookup"><span data-stu-id="2d8ea-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="f6be4-107">語法</span><span class="sxs-lookup"><span data-stu-id="f6be4-107">Syntax</span></span>
 
 ```xml
 <appSettings>
@@ -32,26 +32,26 @@ ms.locfileid: "49086314"
 </appSettings>
 ```
 
-## <a name="attributes"></a><span data-ttu-id="2d8ea-108">屬性</span><span class="sxs-lookup"><span data-stu-id="2d8ea-108">Attributes</span></span>
+## <a name="attributes"></a><span data-ttu-id="f6be4-108">屬性</span><span class="sxs-lookup"><span data-stu-id="f6be4-108">Attributes</span></span>
 
-|           | <span data-ttu-id="2d8ea-109">描述</span><span class="sxs-lookup"><span data-stu-id="2d8ea-109">Description</span></span> |
+|           | <span data-ttu-id="f6be4-109">描述</span><span class="sxs-lookup"><span data-stu-id="f6be4-109">Description</span></span> |
 | --------- | ----------- |
-| <span data-ttu-id="2d8ea-110">**key**</span><span class="sxs-lookup"><span data-stu-id="2d8ea-110">**key**</span></span>   | <span data-ttu-id="2d8ea-111">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="2d8ea-111">Required attribute.</span></span><br><br><span data-ttu-id="2d8ea-112">指定要新增之索引鍵的名稱。</span><span class="sxs-lookup"><span data-stu-id="2d8ea-112">Specifies the name of the key to add.</span></span> |
-| <span data-ttu-id="2d8ea-113">**值**</span><span class="sxs-lookup"><span data-stu-id="2d8ea-113">**value**</span></span> | <span data-ttu-id="2d8ea-114">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="2d8ea-114">Required attribute.</span></span><br><br><span data-ttu-id="2d8ea-115">指定要新增之索引鍵的值。</span><span class="sxs-lookup"><span data-stu-id="2d8ea-115">Specifies the value of the key to add.</span></span> |
+| <span data-ttu-id="f6be4-110">**key**</span><span class="sxs-lookup"><span data-stu-id="f6be4-110">**key**</span></span>   | <span data-ttu-id="f6be4-111">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="f6be4-111">Required attribute.</span></span><br><br><span data-ttu-id="f6be4-112">指定要新增之索引鍵的名稱。</span><span class="sxs-lookup"><span data-stu-id="f6be4-112">Specifies the name of the key to add.</span></span> |
+| <span data-ttu-id="f6be4-113">**值**</span><span class="sxs-lookup"><span data-stu-id="f6be4-113">**value**</span></span> | <span data-ttu-id="f6be4-114">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="f6be4-114">Required attribute.</span></span><br><br><span data-ttu-id="f6be4-115">指定要新增之索引鍵的值。</span><span class="sxs-lookup"><span data-stu-id="f6be4-115">Specifies the value of the key to add.</span></span> |
 
-## <a name="parent-element"></a><span data-ttu-id="2d8ea-116">父項目</span><span class="sxs-lookup"><span data-stu-id="2d8ea-116">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="f6be4-116">父項目</span><span class="sxs-lookup"><span data-stu-id="f6be4-116">Parent element</span></span>
 
-|     | <span data-ttu-id="2d8ea-117">描述</span><span class="sxs-lookup"><span data-stu-id="2d8ea-117">Description</span></span> |
+|     | <span data-ttu-id="f6be4-117">描述</span><span class="sxs-lookup"><span data-stu-id="f6be4-117">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="2d8ea-118">**\<appSettings>**</span><span class="sxs-lookup"><span data-stu-id="2d8ea-118">**\<appSettings>**</span></span>](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | <span data-ttu-id="2d8ea-119">包含自訂應用程式設定，例如檔案路徑、XML Web 服務 URL，或應用程式的任何其他自訂組態資訊。</span><span class="sxs-lookup"><span data-stu-id="2d8ea-119">Contains custom application settings, such as file paths, XML Web service URLs, or any other custom configuration information for an application.</span></span> |
+| [<span data-ttu-id="f6be4-118">**\<appSettings>**</span><span class="sxs-lookup"><span data-stu-id="f6be4-118">**\<appSettings>**</span></span>](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | <span data-ttu-id="f6be4-119">包含自訂應用程式設定，例如檔案路徑、XML Web 服務 URL，或應用程式的任何其他自訂組態資訊。</span><span class="sxs-lookup"><span data-stu-id="f6be4-119">Contains custom application settings, such as file paths, XML Web service URLs, or any other custom configuration information for an application.</span></span> |
 
-## <a name="child-elements"></a><span data-ttu-id="2d8ea-120">子元素</span><span class="sxs-lookup"><span data-stu-id="2d8ea-120">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="f6be4-120">子元素</span><span class="sxs-lookup"><span data-stu-id="f6be4-120">Child elements</span></span>
 
-<span data-ttu-id="2d8ea-121">無</span><span class="sxs-lookup"><span data-stu-id="2d8ea-121">None</span></span>
+<span data-ttu-id="f6be4-121">無</span><span class="sxs-lookup"><span data-stu-id="f6be4-121">None</span></span>
 
-## <a name="example"></a><span data-ttu-id="2d8ea-122">範例</span><span class="sxs-lookup"><span data-stu-id="2d8ea-122">Example</span></span>
+## <a name="example"></a><span data-ttu-id="f6be4-122">範例</span><span class="sxs-lookup"><span data-stu-id="f6be4-122">Example</span></span>
 
-<span data-ttu-id="2d8ea-123">下列範例示範如何新增自訂組態設定的應用程式的名稱：</span><span class="sxs-lookup"><span data-stu-id="2d8ea-123">The following example shows how to add a custom configuration setting for the application's name:</span></span>
+<span data-ttu-id="f6be4-123">下列範例示範如何新增自訂組態設定的應用程式的名稱：</span><span class="sxs-lookup"><span data-stu-id="f6be4-123">The following example shows how to add a custom configuration setting for the application's name:</span></span>
 
 ```xml
 <appSettings>
@@ -59,7 +59,7 @@ ms.locfileid: "49086314"
 </appSettings>
 ```
 
-<span data-ttu-id="2d8ea-124">下列範例會使用`<add>`項目來定義 ASP.NET 應用程式中的兩個的相容性設定：</span><span class="sxs-lookup"><span data-stu-id="2d8ea-124">The following example uses the `<add>` element to define two compatibility settings in an ASP.NET application:</span></span>
+<span data-ttu-id="f6be4-124">下列範例會使用`<add>`項目來定義 ASP.NET 應用程式中的兩個的相容性設定：</span><span class="sxs-lookup"><span data-stu-id="f6be4-124">The following example uses the `<add>` element to define two compatibility settings in an ASP.NET application:</span></span>
 
 ```xml
 <appSettings>
@@ -68,6 +68,6 @@ ms.locfileid: "49086314"
 </appSettings>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="2d8ea-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2d8ea-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f6be4-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f6be4-125">See also</span></span>
 
-[<span data-ttu-id="2d8ea-126">適用於.NET Framework 的組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="2d8ea-126">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="f6be4-126">適用於.NET Framework 的組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="f6be4-126">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
