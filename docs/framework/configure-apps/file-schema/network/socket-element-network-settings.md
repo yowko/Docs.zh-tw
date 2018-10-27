@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <socket> element
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
-ms.openlocfilehash: 0e36b7c72631406293e76b185c9836ed9ffec328
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.openlocfilehash: ff06fd6518e67020b4d67d4e081307b8e54bae85
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50044875"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194692"
 ---
 # <a name="ltsocketgt-element-network-settings"></a>&lt;通訊端&gt;項目 （網路設定）
 指定通訊端作業是否使用完成通訊埠。  
@@ -104,9 +104,9 @@ ms.locfileid: "50044875"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Net?displayProperty=nameWithType>  
- <xref:System.Net.Configuration.SocketElement?displayProperty=nameWithType>  
- <xref:System.Net.Sockets?displayProperty=nameWithType>  
- <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>  
- <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel?displayProperty=nameWithType>  
- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net?displayProperty=nameWithType>  
+- <xref:System.Net.Configuration.SocketElement?displayProperty=nameWithType>  
+- <xref:System.Net.Sockets?displayProperty=nameWithType>  
+- <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>  
+- <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel?displayProperty=nameWithType>  
+- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

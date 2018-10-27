@@ -3,11 +3,11 @@ title: WMI 提供者
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
 ms.openlocfilehash: 4541c411d6bd1f13a03a0b6750e6683a7c2b3f3f
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50039725"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194900"
 ---
 # <a name="wmi-provider"></a>WMI 提供者
 此範例示範如何從在執行階段的 Windows Communication Foundation (WCF) 服務收集資料，使用 WCF 內建的 Windows Management Instrumentation (WMI) 提供者。 此外，這個範例還會示範如何將使用者定義的 WMI 物件新增至服務。 此範例會啟動的 WMI 提供者[快速入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，並示範如何收集資料，從`ICalculator`服務在執行階段。  

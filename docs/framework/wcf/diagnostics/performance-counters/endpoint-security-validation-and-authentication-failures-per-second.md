@@ -3,11 +3,11 @@ title: 端點：每秒的安全性驗證和驗證失敗數
 ms.date: 03/30/2017
 ms.assetid: 89a70b90-d7e4-4b03-9b84-4dc88ce3d605
 ms.openlocfilehash: 43886f79585fb9a63eeb51360cc869365c100a1d
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 10/27/2018
-ms.locfileid: "50033986"
+ms.locfileid: "50191637"
 ---
 # <a name="endpoint-security-validation-and-authentication-failures-per-second"></a>端點：每秒的安全性驗證和驗證失敗數
 計數器名稱：每秒的安全性驗證和驗證失敗數  

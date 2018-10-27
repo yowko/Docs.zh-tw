@@ -2,13 +2,12 @@
 title: 發行之權杖的訊息安全性
 ms.date: 03/30/2017
 ms.assetid: 731fc871-54d0-4689-90fd-1c9415c45621
-author: BrucePerlerMS
-ms.openlocfilehash: b859387196de42406903b690d375e4ecb7370e2c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1751c177e5e438499fc4eaec662ddc3922687a17
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193339"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194588"
 ---
 # <a name="message-security-with-issued-tokens"></a>發行之權杖的訊息安全性
 已發行權杖的用戶端可讓聯合的安全性案例中 Windows Communication Foundation (WCF)。  

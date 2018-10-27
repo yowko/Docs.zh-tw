@@ -15,11 +15,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8b934e5ee69c2e6ebd5cf4da7de2790669c68986
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 10/27/2018
-ms.locfileid: "50046081"
+ms.locfileid: "50191806"
 ---
 # <a name="datamemberlisteditor-class"></a>DataMemberListEditor 類別
 

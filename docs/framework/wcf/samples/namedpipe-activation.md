@@ -3,11 +3,11 @@ title: NamedPipe 啟用
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
 ms.openlocfilehash: 05dea4e4faa91e4df9fdde8bdafc29473e49214e
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 10/27/2018
-ms.locfileid: "50170493"
+ms.locfileid: "50195472"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe 啟用
 此範例示範裝載服務，該服務使用 Windows Process Activation Service (WAS) 啟用透過名稱管道通訊的服務。 此樣本根據[快速入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，而且需要[!INCLUDE[wv](../../../../includes/wv-md.md)]執行。  

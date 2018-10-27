@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WS Security
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
 ms.openlocfilehash: 8b31ebc846992f51484ae058ce05d9aa12590372
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50040567"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195186"
 ---
 # <a name="message-security-anonymous"></a>訊息安全性匿名
 訊息安全性匿名範例示範如何實作 Windows Communication Foundation (WCF) 應用程式所使用的訊息層級安全性沒有用戶端驗證，但需要使用伺服器的 X.509 伺服器驗證憑證。 用戶端與伺服器之間的所有應用程式訊息都會經過簽署及加密。 此樣本根據[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)範例。 這個範例是由用戶端主控台程式 (.exe) 和網際網路資訊服務 (IIS) 所裝載的服務程式庫 (.dll) 所組成。 服務會實作定義要求-回覆通訊模式的合約。

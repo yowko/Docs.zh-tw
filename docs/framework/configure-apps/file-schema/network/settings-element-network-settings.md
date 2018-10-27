@@ -8,14 +8,12 @@ helpviewer_keywords:
 - settings element
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 9d6189c736e1f2843a986c3a96f8547e9a231db0
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 87a944eca6ea4158f15c9911c6b13fd4d3c0921d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033229"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191949"
 ---
 # <a name="ltsettingsgt-element-network-settings"></a>&lt;設定&gt;項目 （網路設定）
 為 <xref:System.Net?displayProperty=nameWithType> 命名空間設定基本的網路選項。  
@@ -68,5 +66,5 @@ ms.locfileid: "48033229"
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Net?displayProperty=nameWithType>  
- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net?displayProperty=nameWithType>  
+- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

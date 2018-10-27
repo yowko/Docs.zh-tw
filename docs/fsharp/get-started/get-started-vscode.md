@@ -2,12 +2,12 @@
 title: '開始使用 Visual Studio Code 中的 F #'
 description: '了解如何使用 F # 與 Visual Studio Code 和 ionide 使用者外掛程式套件。'
 ms.date: 05/28/2018
-ms.openlocfilehash: 1afe985a4fe73d18b1e47b071b119c15a4672022
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: e962be2796cf0d6eb90d459730659e492f864716
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874347"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192664"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>開始使用 Visual Studio Code 中的 F #
 
@@ -19,7 +19,7 @@ ms.locfileid: "37874347"
 
 若要建立新的 F # 專案，開啟 Visual Studio Code （您可以為它命名您喜歡） 的新資料夾中。
 
-接下來，開啟 命令面板 (**檢視 > 命令面板**) 並輸入下列命令：
+接下來，開啟 命令選擇區 (**檢視 > 命令選擇區**) 並輸入下列命令：
 
 ```
 > F# new project

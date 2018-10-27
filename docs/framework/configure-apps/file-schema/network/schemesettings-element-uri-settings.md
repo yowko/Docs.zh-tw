@@ -2,14 +2,12 @@
 title: '&lt;schemeSettings&gt;項目 （Uri 設定）'
 ms.date: 03/30/2017
 ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 76ca5acc22eca07d372a2964cf3a6df4ea3b58d5
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 7c75e9a6d29637e1701fe0b9e05adf0ccc3596b9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025304"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192547"
 ---
 # <a name="ltschemesettingsgt-element-uri-settings"></a>&lt;schemeSettings&gt;項目 （Uri 設定）
 指定如何針對特定配置剖析 <xref:System.Uri>。  
@@ -86,10 +84,10 @@ ms.locfileid: "48025304"
 |可以是空白||  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>  
- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>  
- <xref:System.Uri?displayProperty=nameWithType>  
- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
+- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
+- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
+- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>  
+- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>  
+- <xref:System.Uri?displayProperty=nameWithType>  
+- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

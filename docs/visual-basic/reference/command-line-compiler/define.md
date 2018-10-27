@@ -10,11 +10,11 @@ helpviewer_keywords:
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
 ms.openlocfilehash: 4cab6bc968275bc12af4365fd3da5e3b5ff417f2
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 10/27/2018
-ms.locfileid: "50044810"
+ms.locfileid: "50195173"
 ---
 # <a name="-define-visual-basic"></a>-定義 (Visual Basic)
 定義條件式編譯器常數。  

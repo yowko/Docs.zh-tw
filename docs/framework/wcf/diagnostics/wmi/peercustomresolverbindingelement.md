@@ -3,11 +3,11 @@ title: PeerCustomResolverBindingElement
 ms.date: 03/30/2017
 ms.assetid: 9ccc2770-a20e-4dff-9970-f56ad8aec2b5
 ms.openlocfilehash: 62e52a1ebec8a55b51d3c918971c420fe45fdaa1
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50037859"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194368"
 ---
 # <a name="peercustomresolverbindingelement"></a>PeerCustomResolverBindingElement
 PeerCustomResolverBindingElement  

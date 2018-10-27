@@ -2,12 +2,12 @@
 title: '&lt;Uri&gt;項目 （Uri 設定）'
 ms.date: 03/30/2017
 ms.assetid: c22bab8b-477c-4ae4-8498-65ad409e0847
-ms.openlocfilehash: 3663fdc995be216351a1ce49ae86e5067d64144f
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.openlocfilehash: 2ca5592bd0a66ded25c7da8f0b42367af990aa7a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50035862"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192183"
 ---
 # <a name="lturigt-element-uri-settings"></a>&lt;Uri&gt;項目 （Uri 設定）
 包含指定.NET Framework 如何處理使用統一資源識別元 (Uri) 表示的 web 位址的設定。  
@@ -68,4 +68,4 @@ ms.locfileid: "50035862"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
