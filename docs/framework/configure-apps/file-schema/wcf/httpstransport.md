@@ -2,12 +2,12 @@
 title: '&lt;httpsTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: f6ed4bc0-7e38-4348-9259-30bf61eb9435
-ms.openlocfilehash: 972fc94234d5eeabcdb428bc5f0cff81e69cec9b
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: b31965d5c61969f673dfa5627e40567ea0a189a7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850305"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181575"
 ---
 # <a name="lthttpstransportgt"></a>&lt;httpsTransport&gt;
 指定 HTTP 傳輸，以傳輸自訂繫結的 SOAP 訊息。  
@@ -49,7 +49,7 @@ ms.locfileid: "48850305"
 |allowCookies|布林值，指定用戶端是否接受 Cookie 並在未來要求時傳播 Cookie。 預設為 `false`。<br /><br /> 當您與使用 Cookie 的 ASMX Web 服務互動時，可以使用這個屬性。 如此一來，從伺服器傳回的 Cookie 就一定會自動複製到該服務未來所有的用戶端要求。|  
 |authenticationScheme|指定通訊協定，用於驗證由 HTTP 接聽程式處理的用戶端要求。 有效值包括以下的值：<br /><br /> 摘要： 指定摘要式驗證。<br />-Negotiate： 與用戶端決定驗證配置進行交涉。 如果用戶端和伺服器都支援 Kerberos，就使用它，否則使用 NTLM。<br />-Ntlm： 指定 NTLM 驗證。<br />-Basic： 指定基本驗證。<br />匿名： 指定匿名驗證。<br /><br /> 預設值為 Anonymous。 此屬性的型別為 <xref:System.Net.AuthenticationSchemes>。 這個屬性只可以設定一次。|  
 |bypassProxyOnLocal|布林值，指出本機位址是否略過 Proxy 伺服器。 預設為 `false`。<br /><br /> 本機位址是位於本機 LAN 或內部網路上的位址。<br /><br /> Windows Communication Foundation (WCF) 一律忽略 proxy，如果服務位址開頭 `http://localhost` 。<br /><br /> 如果您希望用戶端在與相同電腦上的服務進行交談時通過 Proxy，應使用主機名稱而非 localhost。|  
-|hostnameComparisonMode|指定用於剖析 URI 的 HTTP 主機名稱比較模式。 有效值為：<br /><br /> -StrongWildcard: （"+"） 符合指定的配置、 連接埠和相對 URI 的內容中所有可能的主機名稱。<br />-完全： 無萬用字元。<br />-WeakWildcard: ("*") 比對所有可能的主機名稱中指定的配置、 連接埠和相對 UIR 都未明確符合或透過強式萬用字元機制的內容。<br /><br /> 預設為 StrongWildcard。 此屬性的型別為 `System.ServiceModel.HostnameComparison`。|  
+|hostnameComparisonMode|指定用於剖析 URI 的 HTTP 主機名稱比較模式。 有效值為：<br /><br /> -StrongWildcard: （"+"） 符合指定的配置、 連接埠和相對 URI 的內容中所有可能的主機名稱。<br />-完全： 無萬用字元。<br />-WeakWildcard: ("\*") 比對所有可能的主機名稱中指定的配置、 連接埠和相對 UIR 都未明確符合或透過強式萬用字元機制的內容。<br /><br /> 預設為 StrongWildcard。 此屬性的型別為 `System.ServiceModel.HostnameComparison`。|  
 |manualAddressing|布林值，讓使用者能夠控制訊息定址。 這個屬性通常用於路由器案例，其中應用程式會決定要將訊息傳送到其中一個目的端。<br /><br /> 設定為 `true` 時，通道會假設訊息已經定址，並且不會加入任何其他的資訊。 接著使用者可個別定址每一個訊息。<br /><br /> 設定為 `false` 時，預設的 Windows Communication Foundation (WCF) 定址機制會自動為所有訊息建立位址。<br /><br /> 預設為 `false`。|  
 |maxBufferPoolSize|正整數，指定緩衝集區的大小上限。 預設值為 524288。<br /><br /> WCF 有許多組件會使用緩衝區。 每次使用這些組件時建立並終結緩衝區是高度耗費資源的作業，回收緩衝區的記憶體也是如此。 有了緩衝集區，您就可以從集區取出緩衝區來使用，用完後再還給集區， 因此可以避免建立及終結緩衝區的負荷。|  
 |maxBufferSize|正整數，指定緩衝區的大小上限。 預設為 524288。|  

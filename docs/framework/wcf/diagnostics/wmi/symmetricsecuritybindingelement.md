@@ -2,13 +2,12 @@
 title: SymmetricSecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: b2e182b6-c041-4d80-a926-6058068d9f79
-author: BrucePerlerMS
-ms.openlocfilehash: e633ae19cd17930fb140a93ffd0910c7ed8efea4
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 618899c80d1b22aaabc3c13fe1079137eaf10a93
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374419"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182498"
 ---
 # <a name="symmetricsecuritybindingelement"></a>SymmetricSecurityBindingElement
 SymmetricSecurityBindingElement  

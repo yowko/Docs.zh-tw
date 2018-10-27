@@ -2,12 +2,12 @@
 title: 從 .NET 遠端處理移轉到 WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: e260ecaf422b5654364143b1fc529112b5ea0656
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 91cbfa33c6645fbc0a8d9b513e3a59799114a710
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857384"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50039591"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>從 .NET 遠端處理移轉到 WCF
 此文章說明如何將使用 .NET 遠端處理的應用程式移轉為使用 Windows Communication Foundation (WCF)。 此文章會先比較這這些產品的類似概念，再說明如何在 WCF 中完成幾個常見的遠端處理案例。  
@@ -292,7 +292,7 @@ catch (FaultException<CustomerServiceFault> fault)
   
 ### <a name="why-migrate-from-remoting-to-wcf"></a>為什麼要從遠端處理移轉至 WCF？  
   
--   **.NET 遠端處理是舊版產品。** 中所述[.NET 遠端處理](https://msdn.microsoft.com/library/vstudio/72x4h507\(v=vs.100\).aspx)，它會被視為舊版產品，並不建議用於新的開發。 建議針對新的和現有的應用程式使用 WCF 或 ASP.NET Web 應用程式開發介面。  
+-   **.NET 遠端處理是舊版產品。** 中所述[.NET 遠端處理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507%28v=vs.100%29)，它會被視為舊版產品，並不建議用於新的開發。 建議針對新的和現有的應用程式使用 WCF 或 ASP.NET Web 應用程式開發介面。  
   
 -   **WCF 會使用跨平台標準。** WCF 的設計將跨平台互通性納入考量，並支援許多業界標準 (SOAP、WS-Security、WS-Trust 等)。 WCF 服務可以與在非 Windows 作業系統上執行的用戶端互通。 遠端處理的設計主要是針對在 Windows 作業系統上使用 .NET Framework 執行伺服器和用戶端應用程式的環境。  
   

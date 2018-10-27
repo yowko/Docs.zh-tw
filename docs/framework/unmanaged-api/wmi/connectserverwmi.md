@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 244df48606f6d971d6b6e246c4f9b73f916cbdcd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fa4b789641034b6563b15c52e96cbfdfa13d989a
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193805"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50049278"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi 函式
 在指定的電腦上建立從 DCOM 到 WMI 命名空間的連線。  
@@ -94,7 +94,7 @@ HRESULT ConnectServerWmi (
   
 ## <a name="remarks"></a>備註
 
-此函式會包裝在呼叫[IWbemLocator::ConnectServer](https://msdn.microsoft.com/libraryaa391769%28v=vs.85%29.aspx)方法。
+此函式會包裝在呼叫[IWbemLocator::ConnectServer](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemlocator-connectserver)方法。
 
  在預設命名空間中，本機存取`strNetworkResource`可以是簡單的物件路徑:"root\default"或"\\.\root\default"。 存取遠端電腦上的預設命名空間使用 COM 或 Microsoft 相容的網路功能，包含電腦名稱:"\\myserver\root\default"。 電腦名稱也可以是 DNS 名稱或 IP 位址。 `ConnectServerWmi`函式也可以執行 IPv6 的電腦連線使用 IPv6 位址。
 

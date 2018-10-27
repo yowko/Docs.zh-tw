@@ -3,12 +3,12 @@ title: 在 Azure 上使用 F#
 description: '若要使用 Azure 服務搭配 F # 指南'
 author: sylvanc
 ms.date: 09/22/2016
-ms.openlocfilehash: b0efa919e846086e2dee131fb5791abc409b5bcb
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 96dec342379b06e997107cc5d6cc05e9fc737452
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033541"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50033954"
 ---
 # <a name="using-f-on-azure"></a>在 Azure 上使用 F#
 
@@ -23,7 +23,7 @@ F# 是一種優秀的雲端程式設計語言，經常用來撰寫 Web 應用程
 
 Azure 支援各種不同的虛擬機器 (VM) 組態，請參閱 [Linux 和 Azure 虛擬機器](https://azure.microsoft.com/services/virtual-machines/)。
 
-若要在虛擬機器上安裝 F# 以執行、編譯及/或處理指令碼，請參閱 [Using F# on Linux](http://fsharp.org/use/linux) (在 Linux 上使用 F#) 和 [Using F# on Windows](http://fsharp.org/use/windows) (在 Windows 上使用 F#)。
+若要在虛擬機器上安裝 F# 以執行、編譯及/或處理指令碼，請參閱 [Using F# on Linux](https://fsharp.org/use/linux) (在 Linux 上使用 F#) 和 [Using F# on Windows](https://fsharp.org/use/windows) (在 Windows 上使用 F#)。
 
 
 ## <a name="using-azure-functions-with-f"></a>使用 F # 搭配使用 Azure Functions #

@@ -9,14 +9,12 @@ helpviewer_keywords:
 - -? compiler option [Visual Basic]
 - '? compiler option [Visual Basic]'
 ms.assetid: eb984aa5-ac98-4d0b-a0d2-24238d7bc8dc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 822b1925d2b8a672229dcda8e5b725aa5fd9de86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff13be6f2ec2e66bd3ff5f7c4b2c3e1a24e699db
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651449"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182121"
 ---
 # <a name="-help---visual-basic"></a>-help、-? (Visual Basic)
 顯示編譯器選項。  
@@ -30,10 +28,10 @@ ms.locfileid: "33651449"
 ```  
   
 ## <a name="remarks"></a>備註  
- 如果您在編譯中包含這個選項，會建立任何輸出檔案，並不會進行編譯。  
+ 如果您在編譯中納入這個選項，會建立任何輸出檔案，並不會進行編譯。  
   
 > [!NOTE]
->  `-help`選項不是從 Visual Studio 開發環境中使用; 其只有在從命令列編譯時。  
+>  `-help`選項不是從 Visual Studio 開發環境中使用; 只有在從命令列編譯時均可使用。  
   
 ## <a name="example"></a>範例  
  下列程式碼會顯示從命令列說明。  

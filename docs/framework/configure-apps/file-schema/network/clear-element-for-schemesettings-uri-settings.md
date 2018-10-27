@@ -2,14 +2,12 @@
 title: '&lt;清除&gt;schemeSettings （Uri 設定） 的項目'
 ms.date: 03/30/2017
 ms.assetid: 65098332-ce61-4542-ab8d-e7dc0257d31f
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f0daa689ba09fa39ffe0f38d769112f0f095592a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: b7dba6335f12b546fa4309ba9eb26d6007ec1bac
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028036"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50043292"
 ---
 # <a name="ltcleargt-element-for-schemesettings-uri-settings"></a>&lt;清除&gt;schemeSettings （Uri 設定） 的項目
 清除所有現有的配置設定。  

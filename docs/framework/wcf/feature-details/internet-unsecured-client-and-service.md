@@ -5,13 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-author: BrucePerlerMS
-ms.openlocfilehash: b7f382f364538ecf0d425dab1571ac865ebf48c3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 7f4a5fada6c2c17563796ae634ee742285551160
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195741"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181481"
 ---
 # <a name="internet-unsecured-client-and-service"></a>沒有安全保障的網際網路用戶端與服務
 下圖顯示的公用、 不安全 Windows Communication Foundation (WCF) 用戶端和服務的範例。  

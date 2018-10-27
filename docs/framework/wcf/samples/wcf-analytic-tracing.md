@@ -2,12 +2,12 @@
 title: WCF 分析追蹤
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 9464f2a4c9bc52134e439c98b06ae50c828a14f6
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: a5e4b82bd28cae18f393a4143325623634d4bbaf
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850253"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181653"
 ---
 # <a name="wcf-analytic-tracing"></a>WCF 分析追蹤
 這個範例會示範如何將您自己的追蹤事件加入至 Windows Communication Foundation (WCF) 寫入至 ETW 的分析追蹤的資料流[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。 分析追蹤的用意在於輕鬆取得服務的可視性，而不必付出高效能的代價。 此範例示範如何使用<xref:System.Diagnostics.Eventing?displayProperty=nameWithType>Api 來與 WCF 服務整合的寫入事件。  
@@ -53,7 +53,7 @@ ms.locfileid: "48850253"
   
 4.  執行 WCF 測試用戶端 (WcfTestClient.exe)。  
   
-     WCF 測試用戶端 (WcfTestClient.exe) 位於\<Visual Studio 2012 安裝目錄 > \Common7\IDE\ WcfTestClient.exe （預設 Visual Studio 2012 的安裝目錄為 C:\Program Files\Microsoft Visual Studio 10.0）。  
+     WCF 測試用戶端 (WcfTestClient.exe) 位於`\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`。 預設 Visual Studio 2012 的安裝目錄是`C:\Program Files\Microsoft Visual Studio 10.0`。  
   
 5.  在 WCF 測試用戶端，將服務新增所選取**檔案**，然後**加入服務**。  
   

@@ -13,24 +13,24 @@ helpviewer_keywords:
 - images [Windows Forms], adding to ImageList component
 - images [Windows Forms], displaying with controls
 ms.assetid: c5eacc56-f769-4e2e-bfb7-f756620913db
-ms.openlocfilehash: e5c563c4f46924a95936bc5a51862230f2cbdb99
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 28dce033064517a427750ef99b1cd4f8bccaaf09
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527634"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182966"
 ---
 # <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>如何：使用 Windows Form ImageList 元件加入或移除影像
-Windows Form<xref:System.Windows.Forms.ImageList>元件通常填入映像相關聯的控制項之前。 不過，新增和移除後將影像清單與控制項產生關聯的映像。  
+Windows Form<xref:System.Windows.Forms.ImageList>元件通常是填入映像之前與控制項相關聯。 不過，您可以新增並移除與控制項產生關聯的影像清單後的映像。  
   
 > [!NOTE]
 >  當您移除映像時，請確認<xref:System.Windows.Forms.ButtonBase.ImageIndex%2A>任何的屬性相關聯的控制項是否仍然有效。  
   
-### <a name="to-add-images-programmatically"></a>若要以程式設計方式加入影像  
+### <a name="to-add-images-programmatically"></a>以程式設計方式將映像  
   
 -   使用<xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A>影像清單的方法<xref:System.Windows.Forms.ImageList.Images%2A>屬性。  
   
-     在下列程式碼範例中，設定路徑的映像的位置是**我的文件**資料夾。 使用這個位置是因為您可以假設，大部分執行 Windows 作業系統的電腦將會包含此資料夾。 選擇此位置也可讓具有最少的系統存取層級更多安全地執行應用程式的使用者。 下列程式碼範例需要您擁有的表單具有<xref:System.Windows.Forms.ImageList>已經加入的控制項。  
+     在下列程式碼範例中，將路徑設為映像的位置**我的文件**資料夾。 因為您可以假設大部分執行 Windows 作業系統的電腦將會包含此資料夾，會使用此位置。 選擇此位置也可讓具有最少的系統存取層級更多安全地執行應用程式的使用者。 下列程式碼範例，您需要表單<xref:System.Windows.Forms.ImageList>已經加入的控制項。  
   
     ```vb  
     Public Sub LoadImage()  
@@ -76,9 +76,9 @@ Windows Form<xref:System.Windows.Forms.ImageList>元件通常填入映像相關�
   
 ### <a name="to-add-images-with-a-key-value"></a>若要加入具有索引鍵值的影像。  
   
--   使用其中一種<xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A>影像清單的方法<xref:System.Windows.Forms.ImageList.Images%2A>會採用索引鍵的值的屬性。  
+-   使用其中一種<xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A>影像清單的方法<xref:System.Windows.Forms.ImageList.Images%2A>接受的索引鍵值的屬性。  
   
-     在下列程式碼範例中，設定路徑的映像的位置是**我的文件**資料夾。 使用這個位置是因為您可以假設，大部分執行 Windows 作業系統的電腦將會包含此資料夾。 選擇此位置也可讓具有最少的系統存取層級更多安全地執行應用程式的使用者。 下列程式碼範例需要您擁有的表單具有<xref:System.Windows.Forms.ImageList>已經加入的控制項。  
+     在下列程式碼範例中，將路徑設為映像的位置**我的文件**資料夾。 因為您可以假設大部分執行 Windows 作業系統的電腦將會包含此資料夾，會使用此位置。 選擇此位置也可讓具有最少的系統存取層級更多安全地執行應用程式的使用者。 下列程式碼範例，您需要表單<xref:System.Windows.Forms.ImageList>已經加入的控制項。  
   
     ```vb  
     Public Sub LoadImage()  
@@ -105,15 +105,13 @@ public void addImage()
 }  
 ```  
   
-1.  
-  
 ### <a name="to-remove-all-images-programmatically"></a>若要以程式設計方式移除所有映像  
   
--   使用<xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A>方法移除單一映像  
+-   使用<xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A>方法以移除單一映像  
   
      -  
   
-     使用<xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A>方法，以清除影像清單中的所有映像。  
+     使用<xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A>方法，以清除所有的映像清單中的影像。  
   
     ```vb  
     ' Removes the first image in the image list  
@@ -131,7 +129,7 @@ imageList1.Images.Clear();
   
 ### <a name="to-remove-images-by-key"></a>若要移除依索引鍵的影像  
   
--   使用<xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A>方法依其索引鍵中移除單一映像。  
+-   使用<xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A>依其索引鍵中移除單一映像的方法。  
   
     ```vb  
     ' Removes the image named "myPhoto" from the list.  
@@ -144,6 +142,6 @@ imageList1.Images.RemoveByKey("myPhoto");
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ImageList 元件](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)  
- [ImageList 元件概觀](../../../../docs/framework/winforms/controls/imagelist-component-overview-windows-forms.md)  
- [影像、點陣圖和中繼檔](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+- [ImageList 元件](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)
+- [ImageList 元件概觀](../../../../docs/framework/winforms/controls/imagelist-component-overview-windows-forms.md)
+- [影像、點陣圖和中繼檔](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)

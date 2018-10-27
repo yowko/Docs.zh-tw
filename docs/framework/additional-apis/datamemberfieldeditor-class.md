@@ -14,16 +14,16 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ca28c0c440ea67716244670e2b636a3099987e1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5146b0756d1aace14a294436a38b8d0e3e689c76
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741876"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452949"
 ---
 # <a name="datamemberfieldeditor-class"></a>DataMemberFieldEditor 類別
 
-提供使用者介面來編輯資料繫結物件的屬性，藉由列出的所有屬性`DataSource`来選取的值來源物件。  
+提供使用者介面以編輯資料繫結物件的屬性，藉由列出的所有屬性`DataSource`到選取的值來源的物件。  
   
 ## <a name="syntax"></a>語法
   
@@ -32,18 +32,18 @@ internal class DataMemberFieldEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> `DataMemberFieldEditor`類別是內部，不會直接在您的程式碼中使用它們。
+> `DataMemberFieldEditor`類別是內部，而不是直接在您的程式碼中使用它們。
 > 
-> Microsoft 不支援在實際執行應用程式在任何情況下使用這個類別。
+> Microsoft 不支援在生產環境應用程式中任何情況下使用這個類別。
 
 ## <a name="requirements"></a>需求
 
-**命名空間：** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
+**命名空間︰** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
   
 **組件：** System.Design （在 System.Design.dll)  
   
-**.NET framework 版本：** 自 2.0 起可用。  
+**.NET framework 版本：** 自 2.0 可用。  
   
 ## <a name="see-also"></a>另請參閱
 
-<xref:System.Windows.Forms.Design?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Design?displayProperty=nameWithType>

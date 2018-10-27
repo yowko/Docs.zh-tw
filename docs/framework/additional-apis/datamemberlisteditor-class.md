@@ -14,16 +14,16 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ade78154e9911dfe8c837c8667eaca7d3a366431
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: MT
+ms.openlocfilehash: 8b934e5ee69c2e6ebd5cf4da7de2790669c68986
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742045"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50046081"
 ---
 # <a name="datamemberlisteditor-class"></a>DataMemberListEditor 類別
 
-提供下拉式清單使用者介面編輯資料繫結物件的屬性 (具有非 null 的物件`DataSource`屬性) 藉由列出的所有屬性`DataSource`来選取的值來源物件。  
+提供下拉式清單使用者介面以編輯資料繫結物件的屬性 (具有非 null 的物件`DataSource`屬性) 所列出的所有屬性`DataSource`到選取的值來源的物件。  
   
 ## <a name="syntax"></a>語法
   
@@ -32,18 +32,18 @@ internal class DataMemberListEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> `DataMemberListEditor`類別是內部，不會直接在您的程式碼中使用它們。
+> `DataMemberListEditor`類別是內部，而不是直接在您的程式碼中使用它們。
 > 
-> Microsoft 不支援在實際執行應用程式在任何情況下使用這個類別。
+> Microsoft 不支援在生產環境應用程式中任何情況下使用這個類別。
   
 ## <a name="requirements"></a>需求
 
-**命名空間：** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
+**命名空間︰** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
   
 **組件：** System.Design （在 System.Design.dll)  
   
-**.NET framework 版本：** 自 2.0 起可用。  
+**.NET framework 版本：** 自 2.0 可用。  
   
 ## <a name="see-also"></a>另請參閱
 
-<xref:System.Windows.Forms.Design?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Design?displayProperty=nameWithType>

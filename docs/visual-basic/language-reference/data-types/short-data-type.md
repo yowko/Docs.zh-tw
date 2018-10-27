@@ -1,8 +1,6 @@
 ---
 title: Short 資料類型 (Visual Basic)
 ms.date: 01/31/2018
-author: rpetrusha
-ms.author: ronpet
 f1_keywords:
 - vb.Short
 helpviewer_keywords:
@@ -18,12 +16,12 @@ helpviewer_keywords:
 - Short data type
 - literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
-ms.openlocfilehash: eb218a9b72208b13700ebd18dbf588066839203d
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
-ms.translationtype: MT
+ms.openlocfilehash: c8085c0911cfe83a3ca56c03cfda5689b9338680
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47231082"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50037343"
 ---
 # <a name="short-data-type-visual-basic"></a>Short 資料類型 (Visual Basic)
 保存帶正負號的 16 位元 （2 個位元組） 整數，範圍從-32,768 到 32,767。  

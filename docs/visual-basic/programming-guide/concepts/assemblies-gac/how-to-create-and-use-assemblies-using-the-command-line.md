@@ -2,14 +2,12 @@
 title: 如何： 建立和使用組件使用命令列 (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c02f694da4e03b666fa88ea6db8ddb2db4c9637d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 3b9d3c45168020f22f7e263fdf59454e3789dd9e
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643285"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50036927"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>如何： 建立和使用組件使用命令列 (Visual Basic)
 組件又稱為動態連結程式庫 (DLL)，會在執行階段連結到您的程式。 為了示範如何建立和使用 DLL，請考慮下列案例：  
@@ -107,7 +105,7 @@ UtilityMethods.MultiplyClass.Multiply(num1, num2)
 vbc -target:library -out:MathLibrary.DLL Add.vb Mult.vb  
 ```  
   
- [-目標 (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md)編譯器選項會告訴編譯器輸出的 DLL，而不是 EXE 檔案。 [-Out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md)編譯器選項後面加上檔案名稱用來指定 DLL 的檔案名稱。 否則，編譯器會使用第一個檔案 (`Add.vb`) 作為 DLL 的名稱。  
+ [-目標 (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md)編譯器選項會指示編譯器輸出 DLL，而不是 EXE 檔案。 [-(Visual basic)](../../../../visual-basic/reference/command-line-compiler/out.md)編譯器選項，後面接著檔案名稱用來指定 DLL 檔案名稱。 否則，編譯器會使用第一個檔案 (`Add.vb`) 作為 DLL 的名稱。  
   
  若要建立可執行檔 `TestCode.exe`，請使用下列命令列：  
   
@@ -115,9 +113,9 @@ vbc -target:library -out:MathLibrary.DLL Add.vb Mult.vb
 vbc -out:TestCode.exe -reference:MathLibrary.DLL TestCode.vb  
 ```  
   
- **-Out**編譯器選項會指示編譯器輸出的 EXE 檔案，並指定輸出檔的名稱 (`TestCode.exe`)。 這個編譯器選項是選擇性的。 [-參考 (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md)編譯器選項會指定此程式所使用的 DLL 檔案。  
+ **-Out**編譯器選項會指示編譯器輸出 EXE 檔案，並指定輸出檔案的名稱 (`TestCode.exe`)。 這個編譯器選項是選擇性的。 [-參考 (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md)編譯器選項會指定此程式所使用的 DLL 檔案。  
   
- 如需從命令列建置的詳細資訊，請參閱和[從命令列建置](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)。  
+ 如需有關從命令列建置的詳細資訊，請參閱並[從命令列建置](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [程式設計概念](../../../../visual-basic/programming-guide/concepts/index.md)  

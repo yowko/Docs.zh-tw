@@ -3,11 +3,11 @@ title: WCF 的 &lt;cancelRequestedQueries&gt;
 ms.date: 03/30/2017
 ms.assetid: a7cc7125-9ea3-4d3f-99c0-878cdeb1258a
 ms.openlocfilehash: 40fbcafd641e93be6ba21635f4f6e6428be62c12
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
-ms.translationtype: MT
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49373318"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50032697"
 ---
 # <a name="ltcancelrequestedqueriesgt-of-wcf"></a>WCF 的 &lt;cancelRequestedQueries&gt;
 代表查詢的集合，這個集合可用來追蹤由父活動取消子活動的要求。 追蹤參與者必須要具備這個查詢，才能訂閱取消要求記錄物件。  

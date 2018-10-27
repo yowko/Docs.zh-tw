@@ -3,11 +3,11 @@ title: 自訂編碼器
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
 ms.openlocfilehash: cd8b9172278ce5bcca2965872d697b03698bd850
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372690"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50034340"
 ---
 # <a name="custom-encoders"></a>自訂編碼器
 本主題討論如何建立自訂編碼器。  

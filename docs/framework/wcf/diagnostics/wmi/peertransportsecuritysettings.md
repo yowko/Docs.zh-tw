@@ -2,20 +2,19 @@
 title: PeerTransportSecuritySettings
 ms.date: 03/30/2017
 ms.assetid: 1df08cbb-68c5-4d36-9f88-a776a8117de8
-author: BrucePerlerMS
-ms.openlocfilehash: b49aea0ee78b68f199d1ac9e9a1050960342bcb2
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
-ms.translationtype: MT
+ms.openlocfilehash: 7eee0af450b38507a24e1267fd409741d37f027a
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836267"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50037116"
 ---
 # <a name="peertransportsecuritysettings"></a>PeerTransportSecuritySettings
 PeerTransportSecuritySettings  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```csharp
 class PeerTransportSecuritySettings  
 {  
   string CredentialType;  

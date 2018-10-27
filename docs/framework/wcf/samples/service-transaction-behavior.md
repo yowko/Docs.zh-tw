@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: 69f65ca833dc9a0f719541733be9e6066db37f6e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: bfdf0c9ddb8654bf7a6736bcccb0d9350e9a12a6
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858105"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50042489"
 ---
 # <a name="service-transaction-behavior"></a>服務異動行為
 這個範例會示範如何使用用戶端協調的異動，以及設定 ServiceBehaviorAttribute 和 OperationBehaviorAttribute，以控制服務異動行為。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)，實作計算機服務，但經過擴充，來維護資料庫資料表和具狀態執行總數計算機作業中所執行作業的伺服器記錄檔。 對伺服器記錄資料表的持續性寫入會依用戶端協調的交易結果而定，如果用戶端交易沒有完成，Web 服務交易就會確保資料庫的更新並未經過認可。  
@@ -19,7 +19,7 @@ ms.locfileid: "43858105"
   
  服務的合約會定義所有作業都需要異動與要求一起流動：  
   
-```  
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples",  
                     SessionMode = SessionMode.Required)]  
 public interface ICalculator  
@@ -51,7 +51,7 @@ public interface ICalculator
   
  初始化服務和交易的連線之後，用戶端會存取該交易範圍內的數個服務作業，然後完成交易並關閉連線：  
   
-```  
+```csharp
 // Create a client  
 CalculatorClient client = new CalculatorClient();  
   
@@ -100,7 +100,7 @@ client.Close();
   
     -   `ReleaseServiceInstanceOnTransactionComplete` 屬性會指定是否要在交易完成時回收服務執行個體。 設定為 `false` 時，服務會維護多個作業要求中的相同服務執行個體。 這是維護執行總數的必要項。 如果設定為 `true`，就會在每次完成動作之後產生新執行個體。  
   
-    -   `TransactionAutoCompleteOnSessionClose` 屬性會指定是否要在工作階段關閉時完成未完成的交易。 藉由將它設定為`false`，個別的作業所需設定`OperationBehaviorAttribute``TransactionAutoComplete`屬性設`true`或是明確要求呼叫`SetTransactionComplete`方法來完成異動。 這個範例會示範這兩種方法。  
+    -   `TransactionAutoCompleteOnSessionClose` 屬性會指定是否要在工作階段關閉時完成未完成的異動。 藉由將它設定為`false`，個別的作業所需設定`OperationBehaviorAttribute``TransactionAutoComplete`屬性設`true`或是明確要求呼叫`SetTransactionComplete`方法來完成異動。 這個範例會示範這兩種方法。  
   
 -   在 `ServiceContractAttribute` 上：  
   
@@ -108,13 +108,13 @@ client.Close();
   
 -   在 `OperationBehaviorAttribute` 上：  
   
-    -   `TransactionScopeRequired` 屬性會指定是否應該在交易範圍內執行作業的動作。 在這個範例的所有作業中，這都設定為 `true`，而且因為用戶端會將它的交易流動至所有作業，所以，此動作會在該用戶端交易的範圍內進行。  
+    -   `TransactionScopeRequired` 屬性會指定是否應該在交易範圍內執行作業的動作。 在這個範例的所有作業中，這都設定為 `true`，而且因為用戶端會將它的異動流動至所有作業，所以，此動作會在該用戶端異動的範圍內進行。  
   
     -   `TransactionAutoComplete` 屬性會指定是否自動完成方法執行所在的交易 (如果沒有發生未處理的例外狀況)。 如先前所述，Add 和 Subtract 作業的這個屬性設定為 `true`，但 Multiply 和 Divide 作業則是設定為 `false`。 Add 和 Subtract 作業會自動完成它們的動作，Divide 則會透過明確呼叫 `SetTransactionComplete` 方法來完成動作，Multiply 不會完成動作，而是需要稍後呼叫 (例如呼叫 Divide) 來完成動作。  
   
  屬性化服務實作如下所示：  
   
-```  
+```csharp
 [ServiceBehavior(  
     TransactionIsolationLevel = System.Transactions.IsolationLevel.Serializable,  
     TransactionTimeout = "00:00:30",  
@@ -168,7 +168,7 @@ public class CalculatorService : ICalculator
   
  當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。  
   
-```  
+```console  
 Starting transaction  
 Performing calculations...  
   Adding 100, running total=100  
@@ -182,7 +182,7 @@ Press <ENTER> to terminate client.
   
  服務作業要求的記錄會顯示在服務的主控台視窗中。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。  
   
-```  
+```console  
 Press <ENTER> to terminate service.  
 Creating new service instance...  
   Writing row 1 to database: Adding 100 to 0  
@@ -193,7 +193,7 @@ Creating new service instance...
   
  請注意，除了持續計算執行總數以外，服務還會報告執行個體的建立動作 (這個範例建立一個執行個體)，並將作業要求記錄至資料庫。 由於所有要求都會流動用戶端的異動，若發生任何失敗而無法完成該異動，就會導致回復所有資料庫作業。 下列方式可以示範此情形：  
   
--   註解 `tx.Complete`() 的用戶端呼叫並重新執行 - 這會使用戶端離開交易範圍，而不會完成它的交易。  
+-   註解 `tx.Complete`() 的用戶端呼叫並重新執行 - 這會使用戶端離開異動範圍，而不會完成它的異動。  
   
 -   註解 Divide 服務作業的呼叫 - 這會導致 Multiply 作業初始化的動作無法完成，最後用戶端的異動也因此而無法完成。  
   

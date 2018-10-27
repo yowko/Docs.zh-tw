@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 721ab72ab1f67d2dc42574ed0147fa7686e02fd1
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 04586f22076b6e2cf4175c7d9d985820ef7885c6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316463"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181614"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>HOW TO：裝載工作流程並存的多個版本
 `WorkflowIdentity` 提供一種方法，讓工作流程應用程式開發人員能夠將名稱和版本與工作流程定義產生關聯性，並為這項資訊與持續性工作流程執行個體建立關聯性。 此身分識別資訊可由工作流程應用程式開發人員使用以啟用案例 (例如並存執行多個版本的工作流程定義)，以及提供動態更新等其他功能的基礎。 教學課程中的此步驟示範如何使用 `WorkflowIdentity` 同時裝載工作流程的多個版本。
@@ -555,14 +555,15 @@ ms.locfileid: "49316463"
 
 2.  按一下 啟動新的工作流程**新遊戲**。 工作流程的版本會顯示在狀態視窗下，反映從相關聯的 `WorkflowIdentity` 更新的版本。 記下 `InstanceId`，當工作流程完成時，您就可以檢視該工作流程的追蹤檔案，然後輸入猜測直到遊戲完成為止。 請注意，狀態視窗中所顯示的使用者猜測資訊，會以 `WriteLine` 活動的更新為根據。
 
- **請輸入介於 1 到 10 之間的數字**
-**5 過長。**
-**請輸入介於 1 到 10 之間的數字**
-**3 過長。**
-**請輸入介於 1 到 10 之間的數字**
-**1 是過低。**
-**請輸入介於 1 到 10 之間的數字**
-**恭喜，您已經猜到數字 4。**
+ **請輸入介於 1 到 10 之間的數字**  
+**5 是太高。**  
+**請輸入介於 1 到 10 之間的數字**  
+**3 是太高。**  
+**請輸入介於 1 到 10 之間的數字**  
+**1 是過低。**  
+**請輸入介於 1 到 10 之間的數字**  
+**恭喜，您猜數字到 4。**  
+
     > [!NOTE]
     >  即會顯示從 `WriteLine` 活動更新的文字，但不會顯示本主題中最後加入的 `WriteLine` 活動的輸出。 這是因為狀態視窗是由 `PersistableIdle` 處理常式更新的。 由於工作流程已完成且不會在最後一個活動之後閒置，因此不會呼叫 `PersistableIdle` 處理常式。 但是，`Completed` 處理常式會在狀態視窗顯示類似的訊息。 如果需要，可以將程式碼加入到 `Completed` 處理常式，從 `StringWriter` 擷取文字並將其顯示在狀態視窗中。
 

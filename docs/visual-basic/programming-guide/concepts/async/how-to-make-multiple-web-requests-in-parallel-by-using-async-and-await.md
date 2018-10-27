@@ -1,16 +1,16 @@
 ---
-title: 如何： 同時發出多個 Web 要求使用 Async 和 Await (Visual Basic)
+title: 如何： 平行進行多個 Web 要求，使用 Async 和 Await (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-ms.openlocfilehash: 4d4ccda6657dd4d889e8495fa000715c1f7a5ba6
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
-ms.translationtype: MT
+ms.openlocfilehash: 44531ef643df6402ad318957c0a2bdc058c5bcb0
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728439"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50049252"
 ---
-# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>如何： 同時發出多個 Web 要求使用 Async 和 Await (Visual Basic)
-在非同步方法中，工作會在建立後啟動。 [Await](../../../../visual-basic/language-reference/operators/await-operator.md)運算子會套用至其中程序無法繼續直到完成工作的方法中的點工作。 通常，工作會在建立後等候完成，如下列範例所示。  
+# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>如何： 平行進行多個 Web 要求，使用 Async 和 Await (Visual Basic)
+在非同步方法中，工作會在建立後啟動。 [Await](../../../../visual-basic/language-reference/operators/await-operator.md)運算子會套用到在方法中無法繼續處理直到工作完成的工作。 通常，工作會在建立後等候完成，如下列範例所示。  
   
 ```vb  
 Dim result = Await someWebAccessMethodAsync(url)  
@@ -44,17 +44,17 @@ Dim result = Await myTask
   
 ### <a name="to-set-up-the-project"></a>若要設定專案  
   
-1.  若要設定 WPF 應用程式，請完成下列步驟。 您可以找到這些步驟的詳細的指示[逐步解說： 存取使用 Async 和 Await (Visual Basic) 的 Web](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
+1.  若要設定 WPF 應用程式，請完成下列步驟。 您可以找到詳細的指示中的這些步驟[逐步解說： 存取 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
   
     -   建立 WPF 應用程式，其中包含一個文字方塊和一個按鈕。 將按鈕命名為 `startButton`，並將文字方塊命名為 `resultsTextBox`。  
   
     -   加入 <xref:System.Net.Http> 的參考。  
   
-    -   在 MainWindow.xaml.vb 檔案中，加入`Imports`陳述式`System.Net.Http`。  
+    -   在 MainWindow.xaml.vb 檔案中，新增`Imports`陳述式`System.Net.Http`。  
   
 ### <a name="to-add-the-code"></a>新增程式碼  
   
-1.  在 [設計] 視窗 MainWindow.xaml 中，按兩下按鈕以建立`startButton_Click`MainWindow.xaml.vb 中的事件處理常式。  
+1.  在設計視窗 MainWindow.xaml 中，連按兩下按鈕，以建立`startButton_Click`MainWindow.xaml.vb 中的事件處理常式。  
   
 2.  下列程式碼中，複製並貼到主體`startButton_Click`MainWindow.xaml.vb 中。  
   
@@ -72,7 +72,7 @@ Dim result = Await myTask
   
     -   `DisplayResults` 會顯示每個 URL 的位元組陣列中的位元組數目。 當每個工作完成下載時，即會顯示此畫面。  
   
-     將下列方法，複製並貼上後`startButton_Click`MainWindow.xaml.vb 中的事件處理常式。  
+     將下列方法，複製並貼上它們之後`startButton_Click`MainWindow.xaml.vb 中的事件處理常式。  
   
     ```vb  
     Private Async Function ProcessURLAsync(url As String, client As HttpClient) As Task(Of Integer)  
@@ -88,8 +88,8 @@ Dim result = Await myTask
         ' is designed to be used with a monospaced font, such as  
         ' Lucida Console or Global Monospace.  
         Dim bytes = content.Length  
-        ' Strip off the "http://".  
-        Dim displayURL = url.Replace("http://", "")  
+        ' Strip off the "https://".  
+        Dim displayURL = url.Replace("https://", "")  
         resultsTextBox.Text &= String.Format(vbCrLf & "{0,-58} {1,8}", displayURL, bytes)  
     End Sub  
     ```  
@@ -117,11 +117,11 @@ Dim result = Await myTask
         ' Create and start the tasks. As each task finishes, DisplayResults   
         ' displays its length.  
         Dim download1 As Task(Of Integer) =  
-            ProcessURLAsync("http://msdn.microsoft.com", client)  
+            ProcessURLAsync("https://msdn.microsoft.com", client)  
         Dim download2 As Task(Of Integer) =  
-            ProcessURLAsync("http://msdn.microsoft.com/library/hh156528(VS.110).aspx", client)  
+            ProcessURLAsync("https://msdn.microsoft.com/library/hh156528(VS.110).aspx", client)  
         Dim download3 As Task(Of Integer) =  
-            ProcessURLAsync("http://msdn.microsoft.com/library/67w7t67f.aspx", client)  
+            ProcessURLAsync("https://msdn.microsoft.com/library/67w7t67f.aspx", client)  
   
         ' Await each task.  
         Dim length1 As Integer = Await download1  
@@ -165,11 +165,11 @@ Class MainWindow
         ' Create and start the tasks. As each task finishes, DisplayResults   
         ' displays its length.  
         Dim download1 As Task(Of Integer) =  
-            ProcessURLAsync("http://msdn.microsoft.com", client)  
+            ProcessURLAsync("https://msdn.microsoft.com", client)  
         Dim download2 As Task(Of Integer) =  
-            ProcessURLAsync("http://msdn.microsoft.com/library/hh156528(VS.110).aspx", client)  
+            ProcessURLAsync("https://msdn.microsoft.com/library/hh156528(VS.110).aspx", client)  
         Dim download3 As Task(Of Integer) =  
-            ProcessURLAsync("http://msdn.microsoft.com/library/67w7t67f.aspx", client)  
+            ProcessURLAsync("https://msdn.microsoft.com/library/67w7t67f.aspx", client)  
   
         ' Await each task.  
         Dim length1 As Integer = Await download1  
@@ -196,8 +196,8 @@ Class MainWindow
         ' is designed to be used with a monospaced font, such as  
         ' Lucida Console or Global Monospace.  
         Dim bytes = content.Length  
-        ' Strip off the "http://".  
-        Dim displayURL = url.Replace("http://", "")  
+        ' Strip off the "https://".  
+        Dim displayURL = url.Replace("https://", "")  
         resultsTextBox.Text &= String.Format(vbCrLf & "{0,-58} {1,8}", displayURL, bytes)  
     End Sub  
 End Class  

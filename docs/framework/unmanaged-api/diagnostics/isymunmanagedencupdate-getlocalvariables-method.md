@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 82e657e91e586d7fe409646ea4fb8946c026e84c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a53493d666cb16fcc9b407ca3a46072afa306b97
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424335"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182472"
 ---
 # <a name="isymunmanagedencupdategetlocalvariables-method"></a>ISymUnmanagedENCUpdate::GetLocalVariables 方法
-取得區域變數。  
+取得本機變數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,21 +38,21 @@ HRESULT GetLocalVariables(
     [out] ULONG        *pceltFetched);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `mdMethodToken`  
  [in]方法的中繼資料語彙基元。  
   
  `cLocals`  
- [in]A`ULONG`指出的大小`rgLocals`參數。  
+ [in]A`ULONG`表示的大小`rgLocals`參數。  
   
  `rgLocals`  
- [out]傳回的陣列的<!--zz<xref:ISymUnmanagedVariable>-->`ISymUnmanagedVariable`執行個體。  
+ [out]傳回的陣列[ISymUnmanagedVariable](isymunmanagedvariable-interface.md)執行個體。  
   
  `pceltFetched`  
- [out]指標`ULONG`大小`rgLocals`包含區域變數所需要的緩衝區。  
+ [out]指標`ULONG`接收大小的`rgLocals`包含區域變數所需要的緩衝區。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。  
+ 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** 於 CorSym.idl、 CorSym.h  

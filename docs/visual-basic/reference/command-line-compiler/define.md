@@ -9,14 +9,12 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4de37c58543aed9ed13be8b0d2bcec9830ca9082
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 4cab6bc968275bc12af4365fd3da5e3b5ff417f2
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656096"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50044810"
 ---
 # <a name="-define-visual-basic"></a>-定義 (Visual Basic)
 定義條件式編譯器常數。  
@@ -34,10 +32,10 @@ ms.locfileid: "33656096"
 |詞彙|定義|  
 |---|---|  
 |`symbol`|必要項。 要定義的符號。|  
-|`value`|選擇項。 要指派 `symbol` 的值。 如果`value`是一個字串，必須以反斜線/引號序列括住 (\\") 而不是引號。 如果未指定值，則會認為是 True。|  
+|`value`|選擇項。 要指派 `symbol` 的值。 如果`value`是一個字串，它必須以反斜線/引號的順序括住 (\\」) 而不是引號。 如果未指定值，則會認為是 True。|  
   
 ## <a name="remarks"></a>備註  
- `-define`選項的效果類似於使用`#Const`原始程式檔，除了與定義的常數的前置處理器指示詞`-define`是公用的將套用至專案中的所有檔案。  
+ `-define`選項的效果類似於使用`#Const`原始程式檔，除了定義的常數的前置處理器指示詞`-define`公開並套用至專案中的所有檔案。  
   
  您可以使用此選項建立的符號，搭配 `#If`...`Then`...`#Else` 指示詞，有條件地編譯原始程式檔。  
   
@@ -47,7 +45,7 @@ ms.locfileid: "33656096"
   
 |在 Visual Studio 整合式開發環境中設定 / 定義|  
 |---|  
-|1.在 **方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。 <br />2.按一下 [編譯] 索引標籤。<br />3.按一下 [ **進階**]。<br />4.修改中的值**自訂常數**方塊。|  
+|1.在 **方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。 <br />2.按一下 [編譯] 索引標籤。<br />3.按一下 [ **進階**]。<br />4.修改中的值**自訂常數** 方塊中。|  
   
 ## <a name="example"></a>範例  
  下列程式碼會定義然後使用兩個條件式編譯器常數。  

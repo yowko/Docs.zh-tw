@@ -2,13 +2,12 @@
 title: PeerSecuritySettings
 ms.date: 03/30/2017
 ms.assetid: 24ae0d35-f3a3-419b-afd6-686e22aae27b
-author: BrucePerlerMS
-ms.openlocfilehash: 18caaf2750fa3a263c09176e975204258330752c
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
-ms.translationtype: MT
+ms.openlocfilehash: 92aca4c790607de91314aacf6414d0dfacea9a9f
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49371624"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50045726"
 ---
 # <a name="peersecuritysettings"></a>PeerSecuritySettings
 PeerSecuritySettings  

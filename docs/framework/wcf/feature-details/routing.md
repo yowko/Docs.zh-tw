@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows communication Foundation [WCF], routing
 ms.assetid: bd56516c-420d-4c4e-97f9-f72d28d149a9
 ms.openlocfilehash: 50b6cb78f5fb20344d5f682d268b6e646c17fb9e
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49370821"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50048602"
 ---
 # <a name="routing"></a>路由
 本節中的主題涵蓋路由服務。 路由服務是可設定的泛型 SOAP 媒介，可讓您設定以內容為基礎的路由、設定通訊協定橋接、處理通訊錯誤，以及在執行階段動態更新路由邏輯。  

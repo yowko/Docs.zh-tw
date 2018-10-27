@@ -8,14 +8,12 @@ helpviewer_keywords:
 - <socket> element
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: fb057ab75c31edd7bbdaf5d5115cda2802d3b057
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: MT
+ms.openlocfilehash: 0e36b7c72631406293e76b185c9836ed9ffec328
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028254"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50044875"
 ---
 # <a name="ltsocketgt-element-network-settings"></a>&lt;通訊端&gt;項目 （網路設定）
 指定通訊端作業是否使用完成通訊埠。  

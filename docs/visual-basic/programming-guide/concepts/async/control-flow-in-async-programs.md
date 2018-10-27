@@ -2,12 +2,12 @@
 title: 非同步程式 (Visual Basic) 中的控制流程
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
-ms.openlocfilehash: a6783373f4b556694fd79401546665b09f55919d
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
-ms.translationtype: MT
+ms.openlocfilehash: 368422338f6452bf5dbe968d4798bc0d5e937c92
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728501"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50041579"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>非同步程式 (Visual Basic) 中的控制流程
 您可以使用 `Async` 和 `Await` 關鍵字更輕鬆地撰寫和維護非同步程式。 不過，如果您不了解程式的運作方式，則結果可能會讓您大吃一驚。 本主題透過簡單非同步程式來追蹤控制流程，以顯示控制何時從某個方法移至另一個方法以及每次傳輸的資訊。  
@@ -15,7 +15,7 @@ ms.locfileid: "34728501"
 > [!NOTE]
 >  `Async` 和 `Await` 關鍵字是在 Visual Studio 2012 中引入。  
   
- 一般情況下，您將方法標記包含與非同步程式碼[非同步](../../../../visual-basic/language-reference/modifiers/async.md)修飾詞。 以 async 修飾詞標記的方法，在您可以使用[Await (Visual Basic)](../../../../visual-basic/language-reference/operators/await-operator.md)運算子以指定位置的方法會暫停等候被呼叫的非同步程序，才能完成。 如需詳細資訊，請參閱[使用 Async 和 Await (Visual Basic) 進行非同步程式設計](../../../../visual-basic/programming-guide/concepts/async/index.md)。  
+ 一般情況下，您將標記包含非同步程式碼的方法[非同步](../../../../visual-basic/language-reference/modifiers/async.md)修飾詞。 在以非同步修飾詞標記方法中，您可以使用[Await (Visual Basic)](../../../../visual-basic/language-reference/operators/await-operator.md)運算子來指定方法暫停以等候被呼叫的非同步處理序完成的位置。 如需詳細資訊，請參閱 <<c0> [ 使用 Async 和 Await (Visual Basic) 的非同步程式設計](../../../../visual-basic/programming-guide/concepts/async/index.md)。  
   
  下列範例會使用非同步方法，將所指定網站的內容下載為字串，以及顯示字串的長度。 這個範例包含下列兩個方法。  
   
@@ -49,7 +49,7 @@ Class MainWindow
         ' TWO  
         Dim client As HttpClient = New HttpClient()   
         Dim getStringTask As Task(Of String) =   
-            client.GetStringAsync("http://msdn.microsoft.com")  
+            client.GetStringAsync("https://msdn.microsoft.com")  
   
         ' THREE  
         Dim urlContents As String = Await getStringTask  
@@ -95,7 +95,7 @@ Length of the downloaded string: 33946.
  您可以從 MSDN 下載本主題所使用的程式碼，也可以自行建置。  
   
 > [!NOTE]
->  若要執行此範例，您必須擁有 Visual Studio 2012 或較新和.NET Framework 4.5 或更新版本安裝在電腦上。  
+>  若要執行範例時，您必須擁有 Visual Studio 2012 或更新版本以及.NET Framework 4.5 或更新版本安裝在電腦上。  
   
 ### <a name="download-the-program"></a>下載程式  
  您可以從 [Async Sample: Control Flow in Async Programs](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0) (非同步範例：非同步程式中的控制流程) 下載本主題的應用程式。 下列步驟會開啟和執行程式。  
@@ -117,7 +117,7 @@ Length of the downloaded string: 33946.
   
      [ **新增專案** ] 對話方塊隨即開啟。  
   
-3.  在**已安裝的範本**] 窗格中，選擇**Visual Basic**，然後選擇 [ **WPF 應用程式**從專案類型清單。  
+3.  在**已安裝的範本**窗格中，選擇**Visual Basic**，然後選擇**WPF 應用程式**從專案類型清單。  
   
 4.  輸入 `AsyncTracer` 作為專案的名稱，然後選擇 [確定] 按鈕。  
   
@@ -147,9 +147,9 @@ Length of the downloaded string: 33946.
   
 7.  加入 <xref:System.Net.Http> 的參考。  
   
-8.  在**方案總管] 中**MainWindow.xaml.vb，開啟捷徑功能表，然後選擇 [**檢視程式碼**。  
+8.  在 **方案總管**，開啟 MainWindow.xaml.vb，捷徑功能表，然後選擇**檢視程式碼**。  
   
-9. 在 MainWindow.xaml.vb，請將程式碼取代下列程式碼。  
+9. 在 MainWindow.xaml.vb，取代下列程式碼中的程式碼。  
   
     ```vb  
     ' Add an Imports statement and a reference for System.Net.Http.  
@@ -190,7 +190,7 @@ Length of the downloaded string: 33946.
             ResultsTextBox.Text &= vbCrLf & "           Calling HttpClient.GetStringAsync." & vbCrLf  
   
             ' GetStringAsync returns a Task(Of String).   
-            Dim getStringTask As Task(Of String) = client.GetStringAsync("http://msdn.microsoft.com")  
+            Dim getStringTask As Task(Of String) = client.GetStringAsync("https://msdn.microsoft.com")  
   
             ResultsTextBox.Text &= vbCrLf & "THREE: Back in AccessTheWebAsync." & vbCrLf &  
                 "           Task getStringTask is started."  
@@ -253,7 +253,7 @@ Length of the downloaded string: 33946.
   
  ![步驟一和二](../../../../csharp/programming-guide/concepts/async/media/asynctrace-onetwo.png "AsyncTrace-ONETWO")  
   
- `AccessTheWebAsync` 和 `client.GetStringAsync` 傳回的類型都是 <xref:System.Threading.Tasks.Task%601>。 針對 `AccessTheWebAsync`，TResult 是整數。 針對 `GetStringAsync`，TResult 是字串。 如需非同步方法的傳回類型的詳細資訊，請參閱[非同步傳回型別 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)。  
+ `AccessTheWebAsync` 和 `client.GetStringAsync` 傳回的類型都是 <xref:System.Threading.Tasks.Task%601>。 針對 `AccessTheWebAsync`，TResult 是整數。 針對 `GetStringAsync`，TResult 是字串。 如需非同步方法傳回類型的詳細資訊，請參閱[非同步傳回型別 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)。  
   
  控制權返回呼叫端時，工作傳回非同步方法會傳回工作執行個體。 在被呼叫的方法中發現 `Await` 運算子時，或被呼叫的方法結束時，控制權會從非同步方法返回其呼叫端。 標上 "THREE" 到 "SIX" 的顯示行會追蹤處理程序的這個部分。  
   
@@ -263,7 +263,7 @@ Length of the downloaded string: 33946.
  `client.GetStringAsync` 方法會傳回指派給 `AccessTheWebAsync` 中 `getStringTask` 變數的字串工作。 範例程式中的下行示範 `client.GetStringAsync` 呼叫和指派。  
   
 ```vb  
-Dim getStringTask As Task(Of String) = client.GetStringAsync("http://msdn.microsoft.com")  
+Dim getStringTask As Task(Of String) = client.GetStringAsync("https://msdn.microsoft.com")  
 ```  
   
  您可以透過 `client.GetStringAsync` 將工作視為承諾，最後產生實際字串。 同時，如果 `AccessTheWebAsync` 的工作未依存於來自 `client.GetStringAsync` 的承諾字串，則該工作可以在 `client.GetStringAsync` 等候時繼續進行。 在此範例中，下列數行的輸出 (標上 "THREE”) 代表執行獨立工作的機會。  
@@ -280,14 +280,14 @@ THREE: Back in AccessTheWebAsync.
 Dim urlContents As String = Await getStringTask  
 ```  
   
- 下圖顯示從控制流程`client.GetStringAsync`到指派至`getStringTask`和從建立`getStringTask`Await 運算子的應用程式。  
+ 下圖顯示從控制流程`client.GetStringAsync`到指派給`getStringTask`並從建立`getStringTask`Await 運算子的應用程式。  
   
  ![步驟三](../../../../csharp/programming-guide/concepts/async/media/asynctrace-three.png "AsyncTrace-Three")  
   
  除非傳回 `client.GetStringAsync`，否則 await 運算式會暫止 `AccessTheWebAsync`。 同時，控制項會返回 `AccessTheWebAsync` 的呼叫端 `startButton_Click`。  
   
 > [!NOTE]
->  一般而言，您會立即等候非同步方法呼叫。 例如，下列指派可以取代可建立後等候 `getStringTask` 的先前程式碼：`Dim urlContents As String = Await client.GetStringAsync("http://msdn.microsoft.com")`  
+>  一般而言，您會立即等候非同步方法呼叫。 例如，下列指派可以取代可建立後等候 `getStringTask` 的先前程式碼：`Dim urlContents As String = Await client.GetStringAsync("https://msdn.microsoft.com")`  
 >   
 >  在本主題中，稍後會套用 await 運算子，以容納透過程式標記控制流程的輸出行。  
   

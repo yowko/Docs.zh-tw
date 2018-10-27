@@ -1,31 +1,39 @@
 ---
-title: 如何：建立複雜格線
+title: 如何建立複雜格線
+description: 如何建立如下所示的每月的行事曆的版面配置使用方格控制項範例。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - calendar [WPF], creating
 - monthly calendar [WPF], creating
 - Grid control [WPF], creating [WPF], complex grid
 ms.assetid: 4ce3040a-a156-4364-9596-98ca1eca5550
-ms.openlocfilehash: 49bf9781d56b93fd4529f3c9b62deb171e69155f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e2356113457e8c9a6737132e9779e49c05a23d77
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553591"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50041852"
 ---
-# <a name="how-to-create-a-complex-grid"></a>如何：建立複雜格線
-這個範例示範如何使用<xref:System.Windows.Controls.Grid>來建立每月的行事曆看起來的版面配置。  
-  
-## <a name="example"></a>範例  
- 下列範例定義了八個資料列和八個資料行使用<xref:System.Windows.Controls.RowDefinition>和<xref:System.Windows.Controls.ColumnDefinition>類別。 它會使用<xref:System.Windows.Controls.Grid.ColumnSpan%2A?displayProperty=nameWithType>和<xref:System.Windows.Controls.Grid.RowSpan%2A?displayProperty=nameWithType>附加屬性，並搭配<xref:System.Windows.Shapes.Rectangle>項目，則填滿的各種資料行和資料列的背景。 此設計可，因為每個儲存格中只能存在一個以上的項目<xref:System.Windows.Controls.Grid>，主要差異<xref:System.Windows.Controls.Grid>和<xref:System.Windows.Documents.Table>。  
-  
- 此範例會使用垂直漸層來<xref:System.Windows.Shapes.Shape.Fill%2A>的資料行和資料列，以改進的視覺呈現和行事曆的可讀性。 樣式<xref:System.Windows.Controls.TextBlock>項目代表的日期和星期幾。 <xref:System.Windows.Controls.TextBlock> 項目絕對定位在它們的儲存格使用<xref:System.Windows.FrameworkElement.Margin%2A>屬性和樣式的應用程式中所定義的對齊屬性。  
-  
- [!code-xaml[GridComplex#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridComplex/CS/default.xaml#1)]  
-  
-## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Controls.Grid>  
- <xref:System.Windows.Documents.TableCell>  
- [使用純色和漸層繪製的概觀](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [資料表概觀](../../../../docs/framework/wpf/advanced/table-overview.md)
+# <a name="how-to-create-a-complex-grid"></a>如何建立複雜格線
+
+此範例示範如何使用<xref:System.Windows.Controls.Grid>建立如下所示的每月的行事曆的版面配置控制項。
+
+## <a name="example"></a>範例
+
+下列範例定義了八個資料列和八個資料行使用<xref:System.Windows.Controls.RowDefinition>和<xref:System.Windows.Controls.ColumnDefinition>類別。 它會使用<xref:System.Windows.Controls.Grid.ColumnSpan%2A?displayProperty=nameWithType>並<xref:System.Windows.Controls.Grid.RowSpan%2A?displayProperty=nameWithType>附加屬性，並搭配<xref:System.Windows.Shapes.Rectangle>項目，填滿各種不同的資料行和資料列的背景。 此設計可，因為多個項目可以存在於每個儲存格中<xref:System.Windows.Controls.Grid>，主要差異<xref:System.Windows.Controls.Grid>和<xref:System.Windows.Documents.Table>。
+
+此範例會使用垂直的漸層來<xref:System.Windows.Shapes.Shape.Fill%2A>的資料行和資料列來改善的視覺呈現方式和行事曆的可讀性。 樣式<xref:System.Windows.Controls.TextBlock>項目代表的日期和星期幾。 <xref:System.Windows.Controls.TextBlock> 項目絕對定位在其儲存格使用<xref:System.Windows.FrameworkElement.Margin%2A>屬性和樣式的應用程式中所定義的對齊屬性。
+
+[!code-xaml[GridComplex#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridComplex/CS/default.xaml#1)]
+
+下圖顯示產生的控制項，可自訂的行事曆：
+
+![產生的控制項的螢幕擷取畫面](./media/how-to-create-a-complex-grid/wpf-manual-calendar.png)
+
+## <a name="see-also"></a>另請參閱
+
+- <xref:System.Windows.Controls.Grid?displayProperty=nameWithType>
+- <xref:System.Windows.Documents.TableCell?displayProperty=nameWithType>
+- [使用純色和漸層繪製的概觀](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [面板概觀](panels-overview.md)
+- [資料表概觀](../advanced/table-overview.md)

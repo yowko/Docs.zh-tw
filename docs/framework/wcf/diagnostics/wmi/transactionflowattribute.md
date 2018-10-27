@@ -3,11 +3,11 @@ title: TransactionFlowAttribute
 ms.date: 03/30/2017
 ms.assetid: 0a9c8674-29f7-4f14-aa1f-dc2644ca57e4
 ms.openlocfilehash: e1eef2c1400fa7eabd64939ca131407f94ef48e6
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
-ms.translationtype: MT
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49371611"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50170324"
 ---
 # <a name="transactionflowattribute"></a>TransactionFlowAttribute
 TransactionFlowAttribute  

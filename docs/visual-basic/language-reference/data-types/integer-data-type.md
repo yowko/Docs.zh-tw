@@ -21,14 +21,12 @@ helpviewer_keywords:
 - I literal type character [Visual Basic]
 - Integer data type
 ms.assetid: a8f233b4-4be3-455c-861b-05af2fbb6c60
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dc780cc845bfa6ef52fc9973ef3617d621167af1
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
-ms.translationtype: MT
+ms.openlocfilehash: 989ce803849aa2dff9fc5c38a38bb356c937a945
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "44177519"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50045440"
 ---
 # <a name="integer-data-type-visual-basic"></a>Integer 資料類型 (Visual Basic)
 保存帶正負號的 32 位元 (4 位元組) 整數，值的範圍從 -2,147,483,648 到 2,147,483,647。  

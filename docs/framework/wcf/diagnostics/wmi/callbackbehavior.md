@@ -2,19 +2,19 @@
 title: CallbackBehavior
 ms.date: 03/30/2017
 ms.assetid: 42acd302-2b62-4849-a2d1-a03084343ecd
-ms.openlocfilehash: 2755ac4f365536366b41e743110ce494063a5ecc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 38a38a71db2927d187ccdd93e5e364b0d4955373
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486933"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452608"
 ---
 # <a name="callbackbehavior"></a>CallbackBehavior
 CallbackBehavior  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```csharp
 class CallbackBehavior : Behavior  
 {  
   boolean AutomaticSessionShutdown;  

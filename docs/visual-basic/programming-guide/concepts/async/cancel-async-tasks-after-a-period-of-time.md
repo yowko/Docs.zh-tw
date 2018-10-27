@@ -2,20 +2,20 @@
 title: 一段時間 (Visual Basic) 後取消非同步工作
 ms.date: 07/20/2015
 ms.assetid: a48045a3-6a99-42af-b824-af340f0b9a5d
-ms.openlocfilehash: f91fffd9bfcd66833ca3233251914868bf3b84de
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
-ms.translationtype: MT
+ms.openlocfilehash: b1c56cb6d894dbcd9e70f06d7e5cd44b559b8cd4
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728689"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50033684"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-visual-basic"></a>一段時間 (Visual Basic) 後取消非同步工作
 如果不想等候作業完成，則可以使用 <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> 方法，在一段時間之後取消非同步作業。 這個方法排定取消未在 `CancelAfter` 運算式所指定之2期間內完成的任何相關工作。  
   
- 這個範例會將開發中的程式碼加入[取消一項非同步工作或清單的工作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)下載的網站清單，並顯示每個內容的長度。  
+ 此範例會將開發中的程式碼加入[取消一項非同步工作或工作清單 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)下載網站的清單，並顯示每個內容的長度。  
   
 > [!NOTE]
->  若要執行範例，您必須有 Visual Studio 2012 或更新版本和.NET Framework 4.5 或更新版本安裝在電腦上。  
+>  若要執行範例，您必須擁有 Visual Studio 2012 或更新版本和.NET Framework 4.5 或更新版本安裝在電腦上。  
   
 ## <a name="downloading-the-example"></a>下載範例  
  您可以從 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載完整 Windows Presentation Foundation (WPF) 專案，然後遵循下列步驟。  
@@ -24,7 +24,7 @@ ms.locfileid: "34728689"
   
 2.  在功能表列上，依序選擇 [檔案] 、[開啟舊檔] 及 [專案/方案] 。  
   
-3.  在**開啟專案**對話方塊中，開啟保存您解壓縮範例程式碼的資料夾，然後再開啟進行 AsyncFineTuningVB 的 方案 (.sln) 檔案。  
+3.  在 [**開啟專案**] 對話方塊中，開啟您解壓縮之範例程式碼的資料夾，然後再開啟 AsyncFineTuningVB 的方案 (.sln) 檔案。  
   
 4.  在方案總管中，開啟 **CancelAfterTime** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。  
   
@@ -34,10 +34,10 @@ ms.locfileid: "34728689"
   
 6.  執行程式數次，確認輸出可能會顯示所有網站、沒有網站或某些網站的輸出。  
   
- 如果您不想要下載的專案，您可以檢閱本主題結尾處 MainWindow.xaml.vb 檔案。  
+ 如果您不想要下載的專案，您可以檢閱本主題結尾的 MainWindow.xaml.vb 檔案。  
   
 ## <a name="building-the-example"></a>建置範例  
- 本主題中的範例將加入專案中開發時，[取消一項非同步工作或清單的工作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)取消的工作清單。 雖然未明確地使用 [取消] 按鈕，但是此範例會使用相同的 UI。  
+ 本主題中的範例將加入專案中所開發[取消一項非同步工作或工作清單 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)取消工作清單。 雖然未明確地使用 [取消] 按鈕，但是此範例會使用相同的 UI。  
   
  若要自行逐步建置範例，請遵循＜下載範例＞一節中的指示，但選擇 [CancelAListOfTasks] 作為 [啟始專案]。 將本主題中的變更新增至該專案。  
   
@@ -165,13 +165,13 @@ Class MainWindow
   
         Dim urls = New List(Of String) From  
             {  
-                "http://msdn.microsoft.com",  
-                "http://msdn.microsoft.com/library/hh290138.aspx",  
-                "http://msdn.microsoft.com/library/hh290140.aspx",  
-                "http://msdn.microsoft.com/library/dd470362.aspx",  
-                "http://msdn.microsoft.com/library/aa578028.aspx",  
-                "http://msdn.microsoft.com/library/ms404677.aspx",  
-                "http://msdn.microsoft.com/library/ff730837.aspx"  
+                "https://msdn.microsoft.com",  
+                "https://msdn.microsoft.com/library/hh290138.aspx",  
+                "https://msdn.microsoft.com/library/hh290140.aspx",  
+                "https://msdn.microsoft.com/library/dd470362.aspx",  
+                "https://msdn.microsoft.com/library/aa578028.aspx",  
+                "https://msdn.microsoft.com/library/ms404677.aspx",  
+                "https://msdn.microsoft.com/library/ff730837.aspx"  
             }  
         Return urls  
     End Function  

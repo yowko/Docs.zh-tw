@@ -2,13 +2,12 @@
 title: 安全性擴充
 ms.date: 03/30/2017
 ms.assetid: 2afe044d-df4a-49a4-9865-38700474c3dd
-author: BrucePerlerMS
-ms.openlocfilehash: 09872b5422d9d66dd4f54753815067954be6c0bb
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
-ms.translationtype: MT
+ms.openlocfilehash: afb11d240c25e6b9dbfd5b5c0a63759af8c534f5
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086488"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50041672"
 ---
 # <a name="security-extensibility"></a>安全性擴充
 本節包含示範自訂的安全性在 Windows Communication Foundation (WCF) 的範例。  

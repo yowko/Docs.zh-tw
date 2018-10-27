@@ -8,14 +8,12 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 61110413f43e95060aa2cfecb4acdb3ebaae14df
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: MT
+ms.openlocfilehash: f095883ef32e57937c61a025b67f0cad2c8b096b
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027581"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50044850"
 ---
 # <a name="ltsmtpgt-element-network-settings"></a>&lt;smtp&gt;項目 （網路設定）
 設定的傳遞格式、 傳遞方法，以及從來傳送電子郵件地址。  

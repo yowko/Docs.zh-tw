@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: b153baaa-130c-4169-860b-e580591de91e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cf3a3b984936cb4eb947d650cc8c63db5a9a8ea5
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a4eb01f0c23161f283c81ae928e327e0c6506c7c
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582144"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453040"
 ---
 # <a name="developing-for-multiple-platforms-with-the-net-framework"></a>使用 .NET Framework 進行多平台開發
 您可以使用 .NET Framework 和 Visual Studio，針對 Microsoft 和非 Microsoft 平台來開發應用程式。  
@@ -28,4 +28,4 @@ ms.locfileid: "48582144"
 |針對非 Windows 8.1 和 Windows Phone 8.1 的平台共用原始程式碼|**加入做為連結**功能。<br /><br /> -這種方法適合是通用於這兩個應用程式，但可攜性，因為某些原因的應用程式邏輯。 您可以將此功能用於 C# 或 Visual Basic 程式碼。<br />     例如，Windows Phone 8 和 Windows 8 共用 Windows 執行階段 API，但可攜式類別庫不支援那些平台的 Windows 執行階段。 您可以使用 `Add as link`，在 Windows Phone 8 應用程式與目標為 Windows 8 的 Windows 市集應用程式之間，共用一般 Windows 執行階段程式碼。<br /><br /> 如需詳細資訊，請參閱：<br /><br /> -   [加入做為連結與共用程式碼](https://msdn.microsoft.com/library/windowsphone/develop/jj714082\(v=vs.105\).aspx)（MSDN 文章）<br />-   [如何： 將現有的項目加入至專案](https://msdn.microsoft.com/library/vstudio/9f4t9t92\(v=vs.100\).aspx)（MSDN 文章）|  
 |使用 .NET Framework 或從 .NET Framework 程式碼呼叫 Windows 執行階段 API，以撰寫 Windows 市集應用程式|**Windows 執行階段 Api**從您的.NET Framework C# 或 Visual Basic 程式碼，並使用.NET Framework 建立 Windows 市集應用程式。 請注意這兩個平台之間的 API 差異。 不過，有類別可以幫助您處理這些差異。<br /><br /> 如需詳細資訊，請參閱：<br /><br /> -   [Windows 市集應用程式和 Windows 執行階段的.NET framework 支援](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md) <br />-   [傳遞 URI 給 Windows 執行階段](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md) <br />-   <!--zz <xref:System.IO.WindowsRuntimeStreamExtensions>--> [`System.IO.WindowsRuntimeStreamExtensions`](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions(v=vs.110).aspx) （MSDN API 參考頁面）<br />-   <!--zz <xref:System.WindowsRuntimeSystemExtensions>--> [`System.WindowsRuntimeSystemExtensions`](https://msdn.microsoft.com/library/system.windowsruntimesystemextensions(v=vs.110).aspx) （MSDN API 參考頁面）|  
 |針對非 Microsoft 平台建立 .NET Framework 應用程式|**可攜式類別庫參考組件**在.NET Framework 和 Visual Studio 延伸模組或協力廠商工具，例如 Xamarin。<br /><br /> 如需詳細資訊，請參閱：<br /><br /> -   [可攜式類別程式庫現在可在所有平台上。](https://blogs.msdn.com/b/dotnet/archive/2013/10/14/portable-class-library-pcl-now-available-on-all-platforms.aspx) (部落格文章)<br />-   [Xamarin 文件](/xamarin)|  
-|使用 JavaScript 和 HTML 進行跨平台開發|**通用應用程式範本**在 Visual Studio 2013 中，更新 2，以針對 Windows 8.1 和 Windows Phone 8.1 開發 Windows 執行階段 Api。 目前，您無法使用 JavaScript 和 HTML 搭配 .NET Framework API 來開發跨平台應用程式。<br /><br /> 如需詳細資訊，請參閱：<br /><br /> -   [JavaScript 專案範本](https://msdn.microsoft.com/library/windows/apps/hh758331.aspx)<br />-   [使用 Windows Phone 的 JavaScript 將 Windows 執行階段應用程式移植](https://msdn.microsoft.com/library/windows/apps/dn636144.aspx)|
+|使用 JavaScript 和 HTML 進行跨平台開發|**通用應用程式範本**在 Visual Studio 2013 中，更新 2，以針對 Windows 8.1 和 Windows Phone 8.1 開發 Windows 執行階段 Api。 目前，您無法使用 JavaScript 和 HTML 搭配 .NET Framework API 來開發跨平台應用程式。<br /><br /> 如需詳細資訊，請參閱：<br /><br /> -   [JavaScript 專案範本](https://docs.microsoft.com/previous-versions/windows/apps/hh758331%28v=win.10%29)<br />-   [使用 Windows Phone 的 JavaScript 將 Windows 執行階段應用程式移植](https://docs.microsoft.com/previous-versions/windows/apps/dn636144%28v=win.10%29)|

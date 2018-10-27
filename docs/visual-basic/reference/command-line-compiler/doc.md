@@ -6,14 +6,12 @@ helpviewer_keywords:
 - -doc compiler option [Visual Basic]
 - /doc compiler option [Visual Basic]
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4c77d063d64354bf4693ce82509f36be9d2e5b0c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: MT
+ms.openlocfilehash: d786a77a0f787515ce1ab2ca61cbc1251aa14563
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003889"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50038626"
 ---
 # <a name="-doc"></a>-doc
 將文件註解處理成 XML 檔案。  

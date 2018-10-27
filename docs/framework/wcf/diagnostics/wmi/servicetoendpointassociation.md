@@ -3,11 +3,11 @@ title: ServiceToEndpointAssociation
 ms.date: 03/30/2017
 ms.assetid: 03c3cd15-e1b2-4dc2-bdc2-59fdccdae110
 ms.openlocfilehash: 3d23a3ee10c47e04ea7bdba202ea5063c0d84fac
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372170"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452705"
 ---
 # <a name="servicetoendpointassociation"></a>ServiceToEndpointAssociation
 將服務對應至端點。  

@@ -2,22 +2,22 @@
 title: 發出使用者程式碼追蹤
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: 18b424139f4c1656193f80cf76c704af2b2887e3
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 0664c11d8020ee5e712ce6d4843c85a1f30b11a3
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807117"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50049161"
 ---
 # <a name="emitting-user-code-traces"></a>發出使用者程式碼追蹤
 除了啟用追蹤來收集檢測資料產生 Windows Communication Foundation (WCF) 組態中的，您也可以發出使用者程式碼中以程式設計方式追蹤。 如此一來，您就可以主動建立供日後深入診斷之用的檢測資料。 本主題將討論如何完成這項工作。  
   
- 此外，[擴充追蹤](../../../../../docs/framework/wcf/samples/extending-tracing.md)範例包含下列各節中所示範的程式碼。  
+ 颾魤 ㄛ[擴充追蹤](../../../../../docs/framework/wcf/samples/extending-tracing.md)範例包含下列各節所示的程式碼。  
   
 ## <a name="creating-a-trace-source"></a>建立追蹤來源  
  您可以使用下列程式碼來建立使用者追蹤來源。  
   
-```  
+```csharp
 TraceSource ts = new TraceSource("myUserTraceSource");  
 ```  
   
@@ -32,7 +32,7 @@ TraceSource ts = new TraceSource("myUserTraceSource");
   
  下列程式碼會示範如何執行此項作業。  
   
-```  
+```csharp
 Guid oldID = Trace.CorrelationManager.ActivityId;  
 Guid traceID = Guid.NewGuid();  
 ts.TraceTransfer(0, "transfer", traceID);  
@@ -43,7 +43,7 @@ ts.TraceEvent(TraceEventType.Start, 0, "Add request");
 ## <a name="emitting-traces-within-a-user-activity"></a>在使用者活動內發出追蹤  
  下列程式碼會在使用者活動內發出追蹤。  
   
-```  
+```csharp
 double value1 = 100.00D;  
 double value2 = 15.99D;  
 ts.TraceInformation("Client sends message to Add " + value1 + ", " + value2);  
@@ -56,7 +56,7 @@ ts.TraceInformation("Client receives Add response '" + result + "'");
   
  下列程式碼會示範如何執行此項作業。  
   
-```  
+```csharp
 ts.TraceTransfer(0, "transfer", oldID);  
 ts.TraceEvent(TraceEventType.Stop, 0, "Add request");  
 Trace.CorrelationManager.ActivityId = oldID;  
@@ -66,11 +66,11 @@ Trace.CorrelationManager.ActivityId = oldID;
  如果同時在用戶端和服務的組態檔中，將其 `propagateActivity` 追蹤來源的 `true` 屬性設定為 `System.ServiceModel`，則會在用戶端定義的同一個活動中進行「加法」要求的服務處理。 如果服務定義了本身的活動和傳輸，服務追蹤就不會出現在用戶端傳播的活動中， 而會出現在和用戶端傳播的識別碼所代表之活動相互關聯的活動中 (此相互關聯是由傳輸追蹤建立)。  
   
 > [!NOTE]
->  如果`propagateActivity`屬性設為`true`WCF 用戶端和服務上，設定環境活動中的服務作業範圍內。  
+>  如果`propagateActivity`屬性設為`true`WCF 用戶端與服務上，設定環境活動中的服務作業範圍。  
   
- 您可以使用下列程式碼檢查活動是否已由 WCF 設定範圍中。  
+ 您可以使用下列程式碼來檢查活動是否已由 WCF 所設定範圍中。  
   
-```  
+```csharp
 // Check if an activity was set in scope by WCF, if it was   
 // propagated from the client. If not, ( ambient activity is   
 // equal to Guid.Empty), create a new one.  
@@ -96,18 +96,18 @@ ts.TraceEvent(TraceEventType.Stop, 0, "Add Activity");
 ## <a name="tracing-exceptions-thrown-in-code"></a>追蹤程式碼中擲回的例外狀況  
  當您在程式碼中擲回例外狀況時，您也可以使用下列程式碼來追蹤警告層級 (含) 以上的例外狀況。  
   
-```  
+```csharp
 ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessage");  
 ```  
   
 ## <a name="viewing-user-traces-in-the-service-trace-viewer-tool"></a>在服務追蹤檢視器工具中檢視使用者追蹤  
- 此章節包含的執行所產生的追蹤螢幕擷取畫面[擴充追蹤](../../../../../docs/framework/wcf/samples/extending-tracing.md)取樣，請使用檢視時[服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。  
+ 本節包含執行所產生的追蹤的螢幕擷取畫面[擴充追蹤](../../../../../docs/framework/wcf/samples/extending-tracing.md)取樣，請使用檢視時[Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。  
   
  在下列圖表中，左面板上選取先前建立的 「 加法要求 」 活動。 它和構成應用程式用戶端程式的另外三個「數學運算」活動 (除法、減法、乘法) 列在一起。 使用者程式碼為每項作業各定義了一個新活動，以便隔離不同要求中可能發生的錯誤。  
   
- 示範如何使用中傳輸的[擴充追蹤](../../../../../docs/framework/wcf/samples/extending-tracing.md)範例中，封裝將四個作業要求的計算機活動也會建立。 每個要求都有往返於「計算機」活動和要求活動之間的傳輸 (本圖的右上方面板中會反白顯示追蹤)。  
+ 示範如何使用傳輸中的[擴充追蹤](../../../../../docs/framework/wcf/samples/extending-tracing.md)範例中，也建立封裝四個作業要求的計算機 」 活動。 每個要求都有往返於「計算機」活動和要求活動之間的傳輸 (本圖的右上方面板中會反白顯示追蹤)。  
   
- 當您選取左面板上的活動時，這個活動所包含的追蹤會顯示在右上方面板中。 如果`propagateActivity`是`true`要求路徑中每個端點，在要求活動中的追蹤會從所有參與要求的處理序。 在這個範例中，您可以在面板的第 4 欄中看見來自用戶端和服務兩方的追蹤。  
+ 當您選取左面板上的活動時，這個活動所包含的追蹤會顯示在右上方面板中。 如果`propagateActivity`是`true`中每個端點的要求路徑，則要求活動中的追蹤會從所有參與要求的處理序。 在這個範例中，您可以在面板的第 4 欄中看見來自用戶端和服務兩方的追蹤。  
   
  這個活動會顯示下列處理順序：  
   
@@ -126,17 +126,17 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
  ![追蹤檢視器： 發出使用者&#45;程式碼追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
 依據建立時間 (左面板) 以及依據巢狀活動 (右上方面板) 列示的活動清單  
   
- 如果服務程式碼擲回連帶導致用戶端擲回的例外狀況 (例如，用戶端未獲得其要求的回應時)，服務和用戶端的警告或錯誤訊息都會因為直接的相互關聯而在同一個活動中產生。 在下列圖表中，服務擲回例外狀況的"The service refuses 處理此要求的使用者程式碼。 」 用戶端也會擲回的例外狀況，表示 「 伺服器無法處理要求，因為發生內部錯誤 」。  
+ 如果服務程式碼擲回連帶導致用戶端擲回的例外狀況 (例如，用戶端未獲得其要求的回應時)，服務和用戶端的警告或錯誤訊息都會因為直接的相互關聯而在同一個活動中產生。 在下圖中，服務會擲回例外狀況，指出 「 服務拒絕處理此要求在使用者程式碼 」。 用戶端也會擲回的例外狀況，指出 「 伺服器無法處理要求，因為發生內部錯誤 」。  
   
- ![使用追蹤檢視器產生使用者&#45;程式碼追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace2.gif "e2eTrace2")  
+ ![使用追蹤檢視器來發出使用者&#45;程式碼追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace2.gif "e2eTrace2")  
 如果指定的要求活動識別碼已傳播，則該要求的跨端點錯誤會出現在同一個活動中。  
   
  按兩下左面板上的「乘法」活動時，會顯示下圖，其中包含每個相關處理序的「乘法」活動追蹤。 我們可以看到警告先發生在服務 (擲回例外狀況)，接著會因為無法處理要求而在用戶端產生警告和錯誤。 因此，我們可以看出端點間發生錯誤的因果關係，從而得知錯誤的根本原因。  
   
- ![使用追蹤檢視器產生使用者&#45;程式碼追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
+ ![使用追蹤檢視器來發出使用者&#45;程式碼追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
 錯誤相互關聯的圖形檢視  
   
- 為了取得前述的追蹤，我們將使用者追蹤來源設定為 `ActivityTracing`，而將 `propagateActivity=true` 追蹤來源設定為 `System.ServiceModel`。 我們並未將 `ActivityTracing` 設定給 `System.ServiceModel` 追蹤來源，來讓使用者程式碼使用使用者程式碼活動傳播  （當 ServiceModel 活動追蹤為開啟狀態的用戶端中定義的活動識別碼不會傳播到服務使用者程式碼;傳輸，不過，相互關聯的用戶端和服務使用者程式碼活動的中繼 WCF 活動。）  
+ 為了取得前述的追蹤，我們將使用者追蹤來源設定為 `ActivityTracing`，而將 `propagateActivity=true` 追蹤來源設定為 `System.ServiceModel`。 我們並未將 `ActivityTracing` 設定給 `System.ServiceModel` 追蹤來源，來讓使用者程式碼使用使用者程式碼活動傳播  （當 ServiceModel 活動追蹤開啟時，用戶端中所定義的活動識別碼不會傳播到服務使用者程式碼;傳輸，不過，相互關聯的用戶端和服務使用者程式碼活動的中繼的 WCF 活動。）  
   
  定義活動和傳播活動識別碼可讓我們在端點之間執行直接錯誤相互關聯。 如此一來，就可以更迅速地找到錯誤的根本原因。  
   

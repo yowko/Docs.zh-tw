@@ -5,11 +5,11 @@ ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0a89474ddfe3bcde1c44271818b7e3c730469f48
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372381"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50036004"
 ---
 # <a name="net-native-and-compilation"></a>.NET 原生和編譯
 以 .NET Framework 為目標的 Windows 8.1 應用程式及 Windows 桌面應用程式，會以特定的程式設計語言撰寫，並會編譯成中繼語言 (IL)。 在執行階段，Just-In-Time (JIT) 編譯器在第一次執行方法之前，才會負責編譯 IL 為本機電腦的原生程式碼。 相較之下，.NET 原生工具鏈會在編譯時期轉換原始碼為原生程式碼。 本主題比較 .NET 原生與其他適用於 .NET Framework 應用程式的編譯技術，並提供 .NET 原生如何產生原生程式碼的實用概觀，可協助您了解為什麼在以 .NET 原生編譯的程式碼中發生的例外狀況不會發生在 JIT 編譯程式碼中。  

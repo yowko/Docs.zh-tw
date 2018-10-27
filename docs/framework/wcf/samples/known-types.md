@@ -2,12 +2,12 @@
 title: 已知型別
 ms.date: 03/30/2017
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
-ms.openlocfilehash: ec1dfa426c19b5471acb1c359f5068854fa8aa71
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 76e0dadd372df4bc2755db0c3ff7cce5cc31ba20
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192492"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454404"
 ---
 # <a name="known-types"></a>已知型別
 這個範例會示範如何在資料合約中指定有關衍生型別的資訊。 資料合約可以讓您在服務間來回傳遞結構化資料。 在物件導向程式設計中，繼承自另一個型別的型別可以用來取代原始型別。 在服務導向程式設計中，會使用結構描述而不是型別進行通訊，因此不會保留型別之間的關係。 <xref:System.Runtime.Serialization.KnownTypeAttribute> 屬性可以讓關於衍生型別的資訊包含到資料合約中。 如果不使用這個機制，這時將無法傳送或接收衍生型別，因為預期是使用基底型別 (Base Type)。  
@@ -17,7 +17,7 @@ ms.locfileid: "44192492"
   
  此服務的服務合約會使用複數，如下列範例程式碼所示。  
   
-```  
+```csharp
 // Define a service contract.  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
@@ -35,7 +35,7 @@ public interface ICalculator
   
  <xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 會套用至 `ComplexNumber` 類別，以便指示可在用戶端與服務之間傳遞的類別欄位。 衍生的 `ComplexNumberWithMagnitude` 類別可以用來取代 `ComplexNumber`。 <xref:System.Runtime.Serialization.KnownTypeAttribute> 型別的 `ComplexNumber` 屬性會指示這項資訊。  
   
-```  
+```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 [KnownType(typeof(ComplexNumberWithMagnitude))]  
 public class ComplexNumber  
@@ -55,7 +55,7 @@ public class ComplexNumber
   
  `ComplexNumberWithMagnitude` 型別衍生自 `ComplexNumber`，但是其新增額外的資料成員，`Magnitude`。  
   
-```  
+```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public class ComplexNumberWithMagnitude : ComplexNumber  
 {  
@@ -73,7 +73,7 @@ public class ComplexNumberWithMagnitude : ComplexNumber
   
  為了示範已知型別功能，以便實作服務的方式，它會傳回`ComplexNumberWithMagnitude`僅適用於加法和減法。 (雖然合約會指定 `ComplexNumber`，但是因為 `KnownTypeAttribute` 屬性的關係，所以仍會允許這項行為)。 乘法與除法仍然會傳回基底`ComplexNumber`型別。  
   
-```  
+```csharp
 public class DataContractCalculatorService : IDataContractCalculator  
 {  
     public ComplexNumber Add(ComplexNumber n1, ComplexNumber n2)  
@@ -116,14 +116,14 @@ public class DataContractCalculatorService : IDataContractCalculator
   
  在用戶端，服務合約與資料合約定義在來源檔 generatedclient.cs 中，會產生[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)從服務中繼資料。 因為服務資料合約中是指定 <xref:System.Runtime.Serialization.KnownTypeAttribute> 屬性，所以用戶端在使用服務時便能夠同時接收 `ComplexNumber` 和 `ComplexNumberWithMagnitude` 類別。 用戶端會偵測其是否收到 `ComplexNumberWithMagnitude`，然後產生適當的輸出：  
   
-```  
+```csharp
 // Create a client  
 DataContractCalculatorClient client =   
     new DataContractCalculatorClient();  
   
 // Call the Add service operation.  
-ComplexNumber value1 = new ComplexNumber(); value1.real = 1; value1.imaginary = 2;  
-ComplexNumber value2 = new ComplexNumber(); value2.real = 3; value2.imaginary = 4;  
+ComplexNumber value1 = new ComplexNumber() { real = 1, imaginary = 2 };  
+ComplexNumber value2 = new ComplexNumber() { real = 3, imaginary = 4 };  
 ComplexNumber result = client.Add(value1, value2);  
 Console.WriteLine("Add({0} + {1}i, {2} + {3}i) = {4} + {5}i",  
     value1.real, value1.imaginary, value2.real, value2.imaginary,  
@@ -141,7 +141,7 @@ else
   
  當您執行範例時，作業的要求和回應會顯示在用戶端主控台視窗中。 請注意，此服務的實作方式會使得加法與減法列印值範圍，但是乘法與除法則不會列印。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。  
   
-```  
+```console  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
 Magnitude: 7.21110255092798  
 Subtract(1 + 2i, 3 + 4i) = -2 + -2i  

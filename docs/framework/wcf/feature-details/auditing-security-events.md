@@ -4,13 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-author: BrucePerlerMS
-ms.openlocfilehash: d03a68315b6c16eeabd8aca872197d5bec73e7f3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 70bd756c9de2cf6ffb43479b0b28a6d51340f905
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47236289"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50048251"
 ---
 # <a name="auditing-security-events"></a>稽核安全性事件
 建立使用 Windows Communication Foundation (WCF) 的應用程式可以使用稽核功能記錄安全性事件 （成功、 失敗或兩者）。 事件會寫入至 Windows 系統事件記錄檔，並且可以使用 [事件檢視器] 加以檢查。  

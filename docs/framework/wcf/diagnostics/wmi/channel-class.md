@@ -2,19 +2,19 @@
 title: Channel 類別
 ms.date: 03/30/2017
 ms.assetid: d9fae2ca-209c-4341-a0f5-6b79d1a67776
-ms.openlocfilehash: 4b7c66560c0c136a258c527d8a681d491eb50aae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 108d5f8e3cd092863dbd48e2bb9d180798b091a4
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485775"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50047367"
 ---
 # <a name="channel-class"></a>Channel 類別
 通道  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```csharp
 class Channel  
 {  
   string LocalAddress;  

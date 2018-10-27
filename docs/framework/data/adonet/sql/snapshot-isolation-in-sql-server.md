@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 52c5dba1a21b0e8d8e5af1dc159941e5f4b4aa5f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d2683ead92eb4e76494e3e23bff1c688578a316d
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45970068"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50034295"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>SQL Server 中的快照隔離
 快照隔離可強化 OLTP 應用程式的並行功能。  
@@ -24,7 +24,7 @@ ms.locfileid: "45970068"
   
  必須先設定 ALLOW_SNAPSHOT_ISOLATION ON 資料庫選項以啟用快照集隔離，才能在異動中使用快照集隔離。 這樣會啟動在暫存資料庫中儲存資料列版本的機制 (**tempdb**)。 必須在搭配使用快照集隔離與 Transact-SQL ALTER DATABASE 陳述式的每個資料庫中啟用快照集隔離。 在這一方面，快照集隔離不同於無需設定的傳統隔離等級 READ COMMITTED、REPEATABLE READ、SERIALIZABLE 及 READ UNCOMMITTED。 下列陳述式會啟動快照集隔離，並以 SNAPSHOT 取代預設的 READ COMMITTED 行為：  
   
-```  
+```sql  
 ALTER DATABASE MyDatabase  
 SET ALLOW_SNAPSHOT_ISOLATION ON  
   
@@ -47,9 +47,9 @@ SET READ_COMMITTED_SNAPSHOT ON
   
 -   REPEATABLE READ 隔離等級比 READ COMMITTED 嚴格。 它包含 READ COMMITTED，並額外指定任何其他交易都不可修改或刪除目前交易已讀取的資料，直到目前交易認可資料為止。 此時的並行存取較 READ COMMITTED 封閉，因為在交易期間會保持對讀取資料的共用鎖定，而不是在每個陳述式結束時釋放鎖定。  
   
--   SERIALIZABLE 是最嚴格的隔離等級，因為它會鎖定整個範圍的索引鍵，並保持鎖定直到交易完成。 它包含 REPEATABLE READ，並增加了在交易完成之前，其他交易不可在該交易已讀取的範圍內插入新資料列的限制。  
+-   SERIALIZABLE 是最嚴格的隔離等級，因為它會鎖定整個範圍的索引鍵，並保持鎖定直到交易完成。 它包含 REPEATABLE READ，並增加了在異動完成之前，其他異動不可在該異動已讀取的範圍內插入新資料列的限制。  
   
- 如需詳細資訊，請參閱《SQL Server 線上叢書》的＜隔離等級＞。  
+ 如需詳細資訊，請參閱[交易鎖定與資料列版本設定指南](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)。  
   
 ### <a name="snapshot-isolation-level-extensions"></a>快照隔離等級擴充  
  SQL Server 在引進 SNAPSHOT 隔離等級的同時，還引進了 SQL-92 隔離等級的擴充及 READ COMMITTED 的其他實作。 READ_COMMITTED_SNAPSHOT 隔離等級可透明化取代所有交易的 READ COMMITTED。  
@@ -132,7 +132,7 @@ SqlTransaction sqlTran =
 ### <a name="using-lock-hints-with-snapshot-isolation"></a>搭配使用鎖定提示與快照集隔離  
  在前一範例中，第一筆交易選取了資料，而第二筆交易在第一筆交易尚未完成時就更新該資料，因而在第一筆交易嘗試更新同一資料列時發生更新衝突。 藉由在交易開始時提供鎖定提示，可減少長期執行之快照集交易發生更新衝突的機率。 下列 SELECT 陳述式使用 UPDLOCK 提示來鎖定已選取的資料列：  
   
-```  
+```sql  
 SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)   
   WHERE PriKey BETWEEN 1 AND 3  
 ```  
@@ -143,4 +143,5 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)      
+ [交易鎖定與資料列版本設定指南](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)

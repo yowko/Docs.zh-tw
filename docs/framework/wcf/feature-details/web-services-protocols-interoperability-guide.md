@@ -2,12 +2,12 @@
 title: Web 服務通訊協定互通性手冊
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-ms.openlocfilehash: 37416a80c8b6f2ac086dbface1cda37609698bfc
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 9aeceff9dc2b714016d2f7c379e538d885489bb9
+ms.sourcegitcommit: 4621e67f69e7a9503ea93313ff60d69683207889
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842151"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49995395"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Web 服務通訊協定互通性手冊
 Windows Communication Foundation (WCF) 會實作一些 Web 服務通訊協定。 許多這些通訊協定包含實作者應自行決定的一些選項和擴充點。 本主題提供 WCF 實作的 Web 服務通訊協定的清單。 本節中的其他主題則會提供每個受支援通訊協定的實作詳細資訊。  
@@ -36,7 +36,7 @@ Windows Communication Foundation (WCF) 會實作一些 Web 服務通訊協定。
 |W3C Web 服務定址 1.0 - 核心|[Web 服務定址 1.0-核心](https://go.microsoft.com/fwlink/?LinkId=96688)|  
 |W3C Web 服務定址 1.0 - SOAP 繫結|[Web 服務定址 1.0-SOAP 繫結](https://go.microsoft.com/fwlink/?LinkId=96689)|  
 |W3C Web 服務定址 1.0 - WSDL 繫結*|[Web 服務定址 1.0-WSDL 繫結](https://go.microsoft.com/fwlink/?LinkId=96690)|  
-|W3C Web 服務定址 1.0 中繼資料|[Web 服務定址 1.0-中繼資料](http://www.w3.org/TR/ws-addr-metadata/)|  
+|W3C Web 服務定址 1.0 中繼資料|[Web 服務定址 1.0-中繼資料](https://www.w3.org/TR/ws-addr-metadata/)|  
 |WSDL SOAP1.1 繫結|[Web 服務描述語言 (WSDL) 1.1](https://go.microsoft.com/fwlink/?LinkId=96160)|  
 |WSDL SOAP1.2 繫結|[SOAP 1.2 的 WSDL 1.1 繫結延伸模組](https://go.microsoft.com/fwlink/?LinkId=96691)|  
   

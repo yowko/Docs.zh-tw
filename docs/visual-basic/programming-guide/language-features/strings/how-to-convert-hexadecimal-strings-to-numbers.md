@@ -8,23 +8,21 @@ helpviewer_keywords:
 - decimals [Visual Basic], hexadecimals
 - string conversion [Visual Basic], hexadecimal to numbers
 ms.assetid: 76675807-eadb-4c08-bd50-e6c6ff4b8ced
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: af0e6c1e30c116709ed98240de7bf3471fa842d4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 65184bbb742ad549a8398d55dc7bdeed05a9d973
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648638"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50048550"
 ---
 # <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>如何：將十六進位字串轉換為數字 (Visual Basic)
-這個範例會將十六進位字串轉換成整數使用<xref:System.Convert.ToInt32%2A?displayProperty=nameWithType>方法。  
+此範例會將十六進位字串轉換成整數使用<xref:System.Convert.ToInt32%2A?displayProperty=nameWithType>方法。  
   
-## <a name="to-convert-a-hexadecimal-string-to-a-number"></a>若要將十六進位字串轉換為數字  
+## <a name="to-convert-a-hexadecimal-string-to-a-number"></a>若要為十六進位字串轉換為數字  
   
--   使用<xref:System.Convert.ToInt32(System.String,System.Int32)>方法，將轉換的數字表示為整數的基底為 16。  
+-   使用<xref:System.Convert.ToInt32(System.String,System.Int32)>方法，以轉換數字表示成整數的基底為 16。  
   
-     第一個引數<xref:System.Convert.ToInt32(System.String,System.Int32)>方法是要轉換的字串。 第二個引數描述哪些; 表示的數字的基底十六進位為基底 16。  
+     第一個引數<xref:System.Convert.ToInt32(System.String,System.Int32)>方法是要轉換的字串。 第二個引數描述中，表示的數字基底十六進位為基底 16。  
   
      [!code-vb[HexConversion](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-hexadecimal-strings-to-numbers_1.vb)]  
 

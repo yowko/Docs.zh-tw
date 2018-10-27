@@ -3,11 +3,11 @@ title: HOW TO：建立自訂活動範本
 ms.date: 03/30/2017
 ms.assetid: 6760a5cc-6eb8-465f-b4fa-f89b39539429
 ms.openlocfilehash: 87acf0d084154c9c3e5cbc97da4af9821709f0a5
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372105"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50044836"
 ---
 # <a name="how-to-create-a-custom-activity-template"></a>HOW TO：建立自訂活動範本
 

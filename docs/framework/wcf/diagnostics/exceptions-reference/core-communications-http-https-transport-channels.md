@@ -3,11 +3,11 @@ title: 核心通訊： HTTP HTTPS 傳輸通道
 ms.date: 03/30/2017
 ms.assetid: 6c0a23c9-a663-461c-bdab-58b4d3e23642
 ms.openlocfilehash: 4c4a2537ae615943ffac299a8c8cd00c67094360
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374374"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50045401"
 ---
 # <a name="core-communications-httphttps-transport-channels"></a>核心通訊：HTTP/HTTPS 傳輸通道
 本主題列出 Windows Communication Foundation (WCF) 傳輸 HTTP/HTTPS 通道所產生的所有例外狀況。  

@@ -1,13 +1,13 @@
 ---
 title: F# Interactive (fsi.exe) 參考
-description: '了解如何 F # Interactive (fsi.exe) 用來以互動方式在主控台執行 F # 程式碼或執行 F # 指令碼。'
+description: 了解如何F#Interactive (fsi.exe) 用來執行F#程式碼以互動方式在主控台上或執行F#指令碼。
 ms.date: 05/16/2016
-ms.openlocfilehash: b16ebcfe361ef50c7c7ba8510f01f6704e62ce3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 459a2a4ba49ba0f55455797617781d010efecc0b
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564874"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50170714"
 ---
 # <a name="interactive-programming-with-f"></a>F# 互動式程式設計 #
 
@@ -19,7 +19,15 @@ API 參考連結將帶您前往 MSDN。  docs.microsoft.com API 參考不完整�
 
 F# Interactive (fsi.exe) 在主控台中，以互動方式用於執行 F# 程式碼，或執行 F# 指令碼。 換句話說，F# Interactive 會執行 F# 語言的 REPL (讀取、評估、列印迴圈)。
 
-若要從主控台執行 F# Interactive，請執行 fsi.exe。  您可以獲悉 fsi.exe 在"c:\Program 檔案 (x86) \Microsoft SDKs\F#\<版本 > \Framework\<版本 >\"。 如需可用命令列選項的資訊，請參閱 [F# Interactive 選項](../../language-reference/fsharp-interactive-options.md)。
+若要從主控台執行 F# Interactive，請執行 fsi.exe。  您會找到 fsi.exe 中：
+
+```console
+C:\Program Files (x86)\Microsoft Visual Studio\2017\<sku>\Common7\IDE\CommonExtensions\Microsoft\FSharp
+```
+
+何處`sku`可能`Community`， `Professional`，或`Enterprise`。
+
+如需可用命令列選項的資訊，請參閱 [F# Interactive 選項](../../language-reference/fsharp-interactive-options.md)。
 
 若要透過 Visual Studio 執行 F# Interactive，您可以按一下標示為 **F# Interactive** 的合適工具列按鈕，或使用按鍵 **Ctrl+Alt+F**。 如此會開啟互動式視窗，也就是執行 F# Interactive 工作階段的工具視窗。 您也可以選取要在互動式視窗中執行的部分程式碼，然後點擊按鍵組合 **ALT+ENTER**。 F# Interactive 會隨即在標示為 **F# Interactive** 的工具視窗中啟動。 當您使用這個按鍵組合時，請確定編輯器視窗具有焦點。
 
@@ -91,5 +99,5 @@ test
 
 |標題|描述|
 |-----|-----------|
-|[F# Interactive 選項](../../language-reference/fsharp-interactive-options.md)|描述命令列語法和選項 F # Interactive fsi.exe。|
+|[F# Interactive 選項](../../language-reference/fsharp-interactive-options.md)|描述命令列語法和選項F#Interactive fsi.exe。|
 |[F# Interactive 程式庫參考](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-interactive-library-reference)|說明在 F# Interactive 中執行程式碼時，所提供的程式庫功能。|

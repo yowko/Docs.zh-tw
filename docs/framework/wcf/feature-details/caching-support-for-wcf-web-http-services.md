@@ -3,11 +3,11 @@ title: WCF Web HTTP 服務的快取支援
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
 ms.openlocfilehash: ef7a03a9e4c6e188e3c7a000fc4a6050e678556d
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847632"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453290"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>WCF Web HTTP 服務的快取支援
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 可讓您使用宣告式快取機制已可在 ASP.NET 中您的 WCF Web HTTP 服務。 這可讓您快取來自 WCF Web HTTP 服務作業的回應。 當使用者傳送 HTTP GET 至您設為快取的服務時，ASP.NET 會傳回快取的回應，且不會呼叫服務方法。 當快取逾期後，下次使用者傳送 HTTP GET 時，會呼叫您的服務方法且再次快取回應。 如需有關 ASP.NET 快取的詳細資訊，請參閱[ASP.NET 快取概觀](https://go.microsoft.com/fwlink/?LinkId=152534)  

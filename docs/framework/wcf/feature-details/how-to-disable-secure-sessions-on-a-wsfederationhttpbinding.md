@@ -8,13 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 675fa143-6a4e-4be3-8afc-673334ab55ec
-author: BrucePerlerMS
-ms.openlocfilehash: e81469f5ac55b1c698dc99af0782dbdedab33339
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: ce02e562f3c6e92b6dfadbb065730e9f1644b82a
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836481"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50042502"
 ---
 # <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a>HOW TO：在 WSFederationHttpBinding 上停用安全工作階段
 某些服務可能會要求聯合認證，但卻不支援安全工作階段。 在此情況下，您必須停用安全工作階段功能。 不同於 <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>，則<xref:System.ServiceModel.WSFederationHttpBinding>類別不提供停用安全工作階段的方法與服務通訊時。 反之，您必須建立自訂繫結，以便使用啟動安裝程式繫結來取代安全工作階段。  

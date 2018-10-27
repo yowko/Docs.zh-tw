@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 147de1cdde79ee29f8f316399ba2e41f93921073
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4302ee961fcd396c7e6a6ddb0d9bbe1bdb714cfc
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201110"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453459"
 ---
 # <a name="working-with-certificates"></a>使用憑證
 在針對 Windows Communication Foundation (WCF) 安全性設計程式時，通常會採用 X.509 數位憑證來驗證用戶端與伺服器、加密，以及數位簽署訊息。 本主題將簡要說明 X.509 數位憑證功能及如何在 WCF 中使用這些憑證，同時針對這些概念的進一步說明以及如何運用 WCF 與憑證來完成一般工作的主題說明提供連結。  
@@ -42,7 +42,7 @@ ms.locfileid: "47201110"
   
 -   **個人**。 此存放區可用來存放與電腦使用者相關聯的憑證。 一般來說，此存放區是用來存放 [受信任的根憑證授權單位] 存放區中所找到的其中一個憑證授權單位所發行的憑證。 另外，此處找到的憑證可能是自動發行並由某個應用程式所信任。  
   
- 如需憑證存放區的詳細資訊，請參閱[憑證存放區](https://go.microsoft.com/fwlink/?LinkId=88912)。  
+ 如需憑證存放區的詳細資訊，請參閱[憑證存放區](/windows/desktop/secauthn/certificate-stores)。  
   
 ### <a name="selecting-a-store"></a>選取存放區  
  選取存放憑證的位置時，必須考量服務或用戶端執行的方式與時機， 並套用下列一般規則：  

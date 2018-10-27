@@ -2,12 +2,12 @@
 title: 路由服務的 Hello World
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: 52b5c3b167cbbfb032d8e6104a118c5c9384938e
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 25d0ce0663b60410912be94780fe8e89f6bf0d39
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845771"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182538"
 ---
 # <a name="hello-world-with-the-routing-service"></a>路由服務的 Hello World
 這個範例會示範 Windows Communication Foundation (WCF) 路由服務。 路由服務是一種 WCF 元件，可讓您更輕鬆地在您的應用程式中加入內容為基礎的路由器。 此範例會調整標準 WCF 計算機範例，以便使用路由服務進行通訊。 在此範例中，計算機用戶端設定為傳送訊息到路由器所公開的端點。 路由服務會設定為接受傳送給它的所有訊息，並將其轉送到對應於計算機服務的端點。 因此，傳送自用戶端的訊息會由路由器接收，然後再重新路由至實際的計算機服務。 來自計算機服務的訊息會傳送回路由器，接著再將其傳遞回計算機用戶端。
@@ -29,6 +29,7 @@ ms.locfileid: "48845771"
 
      您應該會看到下列輸出：
 
+    ```console
      Add(100,15.99) = 115.99
 
      Subtract(145,76.54) = 68.46
@@ -36,6 +37,7 @@ ms.locfileid: "48845771"
      Multiply(9,81.25) = 731.25
 
      Divide(22,7) = 3.14285714285714
+    ```
 
 ## <a name="configurable-via-code-or-appconfig"></a>可透過程式碼或 App.Config 設定
  此範例預設為使用 App.config 檔案定義路由器的行為。 您也可以將 App.config 檔案的名稱變更為其他任何名稱，讓其無法辨識，而且可以取消註解對 ConfigureRouterViaCode() 的方法呼叫。 任一種方法都會在路由器中導致相同的行為。

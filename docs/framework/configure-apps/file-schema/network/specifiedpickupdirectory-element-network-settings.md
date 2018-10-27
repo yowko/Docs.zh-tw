@@ -8,14 +8,12 @@ helpviewer_keywords:
 - specifiedPickupDirectory element
 - <specifiedPickupDirectory> element
 ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: b62dc1a9118f7d4f1f693ade36626deaecd23999
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
-ms.translationtype: MT
+ms.openlocfilehash: eec7c5b41fabcb5ee4566f8b96f67322c1d6c47b
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47863646"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50170753"
 ---
 # <a name="ltspecifiedpickupdirectorygt-element-network-settings"></a>&lt;specifiedPickupDirectory&gt;項目 （網路設定）
 設定 Simple Mail Transport Protocol (SMTP) 伺服器的本機目錄。  

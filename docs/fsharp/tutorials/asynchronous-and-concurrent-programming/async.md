@@ -1,26 +1,26 @@
 ---
-title: 'F # 中的非同步程式設計'
-description: '了解如何完成 F # 非同步程式設計的語言層級的程式設計模型是易於使用和自然語言，透過。'
+title: 非同步程式設計F#
+description: 了解如何F#非同步程式設計透過語言層級的程式設計模型，而且容易使用自然語言來完成。
 ms.date: 06/20/2016
-ms.openlocfilehash: 93ecd05efc493489435214dcd7ae78fffcccec1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: de07f1252df56e3dfec5ea7a34a283b1c9508523
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566869"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50034414"
 ---
-# <a name="async-programming-in-f"></a>F # 中的非同步程式設計 #
+# <a name="async-programming-in-f"></a>非同步程式設計F# #
 
 > [!NOTE]
-> 本文章中發現某些不準確。  它正在重寫。  請參閱[問題 #666](https://github.com/dotnet/docs/issues/666)若要了解所做的變更。
+> 已在這篇文章探索一些不準確。  它是正在重寫。  請參閱[問題 #666](https://github.com/dotnet/docs/issues/666)若要了解所做的變更。
 
-非同步程式設計 F # 中，即可完成設計為易於使用和自然語言的語言層級程式設計模型。
+非同步程式設計中F#即可完成設計為易於使用且自然語言的語言層級程式設計模型。
 
-F # 中的非同步程式設計的核心是`Async<'T>`，可以觸發要在背景中執行的工作的表示法其中`'T`透過特殊傳回的型別`return`關鍵字或`unit`如果非同步工作流程沒有。傳回的結果。
+非同步程式設計中的核心F#是`Async<'T>`，可觸發在背景中執行的工作的表示法所在`'T`會傳回透過特殊的型別`return`關鍵字或`unit`如果非同步工作流程具有可傳回的結果。
 
-若要了解的重要概念是非同步運算式的類型是`Async<'T>`，也就是只_規格_的工作來完成非同步的內容中。 不會執行直到明確地以其中一個開始的函式的開頭 (例如`Async.RunSynchronously`)。 雖然這是不同的方式來思考執行工作時，它最終會被實際上相當簡單。
+若要了解的重要概念是非同步運算式的型別`Async<'T>`，也就是只_規格_要在非同步處理內容中完成的工作。 它不會執行直到明確地與其中一個開始的函式開始 (例如`Async.RunSynchronously`)。 雖然這是不同的方式來思考執行工作時，它最後是實際上相當簡單。
 
-例如，假設您想要從 dotnetfoundation.org 下載 HTML，而不會封鎖主執行緒。 您可以完成它，就像這樣：
+例如，假設您想要從 dotnetfoundation.org 下載 HTML，而不會封鎖主執行緒。 您可以完成此作業就像這樣：
 
 ```fsharp
 open System
@@ -41,23 +41,23 @@ let html = "https://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchron
 printfn "%s" html
 ```
 
-就是這麼容易！ 除了使用`async`， `let!`，和`return`，這是一般只要 F # 程式碼。
+就是這麼容易！ 除了使用`async`， `let!`，並`return`，這是正常的只是F#程式碼。
 
-有幾個語法建構是值得注意：
+有幾個語法建構是值得一提：
 
-*   `let!` 將繫結運算式結果的非同步 （它是在其他內容）。
-*   `use!` 運作方式就像`let!`，但超出範圍時便會處置它繫結的資源。
-*   `do!` 將會等候非同步工作流程，後者則不會傳回任何項目。
-*   `return` 只從非同步運算式會傳回結果。
-*   `return!` 執行另一個非同步工作流程並傳回它的傳回值的結果。
+*   `let!` 繫結非同步運算式 （它是在另一個內容） 的結果。
+*   `use!` 運作方式就像`let!`，但它超出範圍時，處置其繫結的資源。
+*   `do!` 將等候的非同步工作流程不會傳回任何項目。
+*   `return` 從非同步運算式，只會傳回結果。
+*   `return!` 執行另一個非同步工作流程，並因此會傳回其傳回的值。
 
-此外，一般`let`， `use`，和`do`關鍵字可以用旁邊的非同步版本，就如同一般函式中。
+此外，正常`let`， `use`，和`do`可以與非同步版本一起使用的關鍵字，就如同一般函式中。
 
-## <a name="how-to-start-async-code-in-f"></a>如何啟動 F # 中的非同步程式碼 #
+## <a name="how-to-start-async-code-in-f"></a>如何在啟動非同步程式碼F# #
 
-如先前所述，非同步程式碼會為要進行明確的啟動所需的其他內容中的工作規格。 以下是兩個主要的方式可完成這項作業：
+如先前所述，非同步程式碼會是工作的要在需要明確地啟動另一個內容中完成規格。 以下是為了達成此目的的兩種主要方式：
 
-1.  `Async.RunSynchronously` 將啟動另一個執行緒上非同步工作流程，並等候其結果。
+1.  `Async.RunSynchronously` 將另一個執行緒上啟動非同步工作流程，並等待其結果。
 
 ```fsharp
 open System
@@ -78,7 +78,7 @@ let fetchHtmlAsync url =
  printfn "%s" html
  ```
 
-2.  `Async.Start` 開始非同步工作流程，另一個執行緒上，將**不**等候其結果。
+2.  `Async.Start` 將會啟動非同步工作流程，另一個執行緒，並將**不**等待其結果。
 
 ```fsharp
 open System
@@ -99,17 +99,17 @@ Async.Start(workflow)
 printfn "%s" "uploadDataAsync is running in the background..."
  ```
 
-還有其他方式啟動非同步工作流程提供給其他特定的情況。 它們詳述[非同步參考中](https://msdn.microsoft.com/library/ee370232.aspx)。
+有其他方式來啟動非同步工作流程適用於較特定案例。 這些方式詳述[非同步參考中](https://msdn.microsoft.com/library/ee370232.aspx)。
 
 ### <a name="a-note-on-threads"></a>在執行緒上附註
 
-上述 「 在另一個執行緒"片語，但請務必了解**這不表示非同步工作流程的外觀的多執行緒**。 工作流程實際"跳 」 之間需它們靠借貸小的一段時間才能執行有用的工作的執行緒。 當非同步工作流程會有效地 「 正在等候 」 （例如，等待網路呼叫，以傳回內容） 時，它所需靠借貸時的任何執行緒被釋出最有用的工作移執行上其他項目。 這可讓非同步工作流程，以利用的系統盡可能有效率地執行，並使其更大量的 I/O 案例特別強大。
+片語 「 在另一個執行緒 」 前面所述，但務必要知道**這不表示非同步工作流程是一個外觀進行多執行緒處理**。 工作流程實際上 」 就會跳 「 之間採用它們的少量的時間才能執行有用工作的執行緒。 非同步工作流程會有效地 「 等待 」 （例如，等候網路呼叫傳回的項目），它採用在任何執行緒是會釋出到移執行其他有用的工作。 這可讓非同步工作流程，利用它們盡可能的情況下，有效地執行的系統，並使其可針對大量 I/O 的情況下特別強大。
 
-## <a name="how-to-add-parallelism-to-async-code"></a>如何將平行處理原則新增至非同步程式碼
+## <a name="how-to-add-parallelism-to-async-code"></a>如何將非同步程式碼中的平行處理原則
 
-有時候您可能需要執行多個非同步作業以平行方式，收集其結果，並以某種方式解譯。 `Async.Parallel` 可讓您執行這項操作，而不需要使用工作平行程式庫，這會牽涉到要強制轉型需要`Task<'T>`和`Async<'T>`型別。
+有時您可能需要執行多個非同步作業以平行方式，收集其結果，並以某種方式解譯這些。 `Async.Parallel` 可讓您執行這項操作，而不需要使用工作平行程式庫，其中會包含您需要強制轉型`Task<'T>`和`Async<'T>`型別。
 
-下列範例會使用`Async.Parallel`若要下載 HTML 從四個熱門的網站，以平行方式，等候這些工作完成，然後再列印已下載的 HTML。
+下列範例會使用`Async.Parallel`到從四種熱門的網站，以平行方式下載 HTML，等候這些工作完成，並再列印已下載的 HTML。
 
 ```fsharp
 open System
@@ -144,55 +144,56 @@ for html in htmlList do
 
 ## <a name="important-info-and-advice"></a>重要資訊和建議
 
-*   將"Async"附加至您要使用的任何函式的結尾
+*   將"Async"附加至您將使用的任何函式的結尾
 
- 雖然這是只使用命名慣例，但它並簡化之類的應用程式開發介面可搜尋性。 特別是如果有同步和非同步版本的相同的常式，最好明確陳述這是非同步的名稱。
+ 雖然這只是命名慣例，它會簡化 API 搜尋功能等項目。 特別是如果有相同的例行工作的同步和非同步版本，最好明確陳述這是非同步，透過名稱。
 
 *   聆聽編譯器 ！
 
- F # 編譯器非常嚴格，讓您幾乎不可能做到麻煩類似"async"的程式碼同步執行。 如果您遇到警告時，這是程式碼將不會執行自己設想將會使用正負號。 如果您可以讓編譯器滿意，如預期般，將最有可能會執行您的程式碼。
+ F#編譯器是非常嚴格，因此幾乎不可能進行像是麻煩以同步方式執行"async"程式碼。 如果您遇到警告時，這是登，程式碼不會認為它將如何執行。 如果您可以讓編譯器滿意，您的程式碼將很有可能會執行，如預期般運作。
 
-## <a name="for-the-cvb-programmer-looking-into-f"></a>針對 C# /VB 程式設計人員想要 F # #
+## <a name="for-the-cvb-programmer-looking-into-f"></a>針對C#/VB 程式設計人員想要F# #
 
-本節假設您熟悉 C# 中的非同步模型 / VB 如果不是，[以 C# 撰寫的非同步](../../../csharp/async.md)是起始點。
+本節假設您已熟悉使用中的非同步模型C#/VB. 如果您不是[中的非同步程式設計C#](../../../csharp/async.md)是起始點。
 
-沒有 C# /VB 非同步模型與 F # 非同步模型之間的基本差異。
+沒有基本差別在於C#/VB 非同步模型和F#非同步模型。
 
-當您呼叫的函式會傳回`Task`或`Task<'T>`，該作業已開始執行。 傳回的控制代碼表示已經在執行非同步作業。 相反地，當您呼叫 async 函式在 F #`Async<'a>`傳回代表工作都將**產生**在某個時間點。 了解此模型是功能強大，因為它允許 F # 中的非同步作業的鏈結在一起更方便地有條件地執行，而且會使用更精細的資料粒度的控制項來啟動。
+當您呼叫的函式會傳回`Task`或`Task<'T>`，該作業已開始執行。 傳回的控制代碼表示已在執行非同步作業。 相反地，當您呼叫的非同步函式F#，則`Async<'a>`傳回代表工作將會**產生**在某個時間點。 了解此模型是功能強大，因為它可讓您在非同步作業F#鏈結在一起更方便地有條件地執行，並開始時具有更細微的資料粒度的控制。
 
-有幾個其他相似性與值得注意的差異。
+有幾個其他的相似性與差異值得一提。
 
 ### <a name="similarities"></a>相似之處
 
-*   `let!``use!`，和`do!`類似於`await`內呼叫非同步作業時`async{ }`區塊。
+*   `let!``use!`，並`do!`類似`await`內呼叫的非同步作業時`async{ }`區塊。
 
- 三個關鍵字只可用於`async { }`區塊，類似`await`只內叫用`async`方法。 簡單地說，`let!`適用於當您想要擷取並使用結果，`use!`相同，但是為之後使用時，應該清除其資源的項目和`do!`適用於當您想要等候的非同步工作流程完成不傳回值再進行。
+ 三個關鍵字只可用於`async { }`區塊中，類似`await`才會叫用內部`async`方法。 簡單地說，`let!`是的當您想要擷取並使用結果，`use!`相同，但是為項目使用之後，應該取得清除其資源和`do!`是當您想要等候的非同步工作流程，且沒有傳回值，以完成再繼續。
 
-*   F # 類似的方式支援資料平行處理原則。
+*   F#類似的方式支援資料平行處理原則。
 
- 其運作方式非常不同，雖然`Async.Parallel`對應至`Task.WhenAll`它們全部完成時，由一組非同步工作的結果的案例。
+ 其運作方式非常不同的是，雖然`Async.Parallel`對應至`Task.WhenAll`想的一組非同步作業的結果，在全部完成時的案例。
 
 ### <a name="differences"></a>差異
 
 *   巢狀`let!`不允許，不同於巢狀結構 `await`
 
- 不同於`await`，這可以巢狀無限期地`let!`無法和其結果，然後再將它在另一個繫結必須`let!`， `do!`，或`use!`。
+ 不同於`await`，這可以巢狀無限期`let!`無法和其結果，然後再將它在另一個繫結必須`let!`， `do!`，或`use!`。
 
-*   取消支援是在 F # 與 C# 中更簡單 / VB
+*   取消支援會在F#比C#/VB.
 
- 在 C# /VB 支援取消的工作中途島，透過其執行需要檢查`IsCancellationRequested`屬性或呼叫`ThrowIfCancellationRequested()`上`CancellationToken`傳遞至非同步方法的物件。
+ 支援在執行工作中途取消C#/VB 需要檢查`IsCancellationRequested`屬性或呼叫`ThrowIfCancellationRequested()`上`CancellationToken`傳遞至非同步方法的物件。
 
-相反地，F # 非同步工作流程會較自然可取消。 取消是簡單的三個步驟程序。
+相反地，F#非同步工作流程是較自然地取消。 取消是簡單的三步驟程序。
 
 1.  建立新的 `CancellationTokenSource`。
-2.  請將它傳遞到起始的函式。
-3.  呼叫`Cancel`對這個語彙基元。
+2.  請將它傳遞到起始函式。
+3.  呼叫`Cancel`語彙基元。
 
 範例：
 
 ```fsharp
 open System
 open System.Net
+open System.Threading
 
 let uploadDataAsync url data = 
     async {
@@ -204,7 +205,7 @@ let uploadDataAsync url data =
 let workflow = uploadDataAsync "https://url-to-upload-to.com" "hello, world!"
 
 let token = new CancellationTokenSource()
-Async.Start (workflow, token)
+Async.Start (workflow, token.Token)
 
 // Immediately cancel uploadDataAsync after it's been started.
 token.Cancel()
@@ -212,8 +213,8 @@ token.Cancel()
 
 就是這麼容易！
 
-## <a name="further-resources"></a>進一步的資源：
+## <a name="further-resources"></a>其他資源︰
 
 *   [MSDN 上的非同步工作流程](https://msdn.microsoft.com/library/dd233250.aspx)
-*   [F # 的非同步順序](https://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
-*   [F # 資料 HTTP 公用程式](https://fsharp.github.io/FSharp.Data/library/Http.html)
+*   [非同步順序F#](https://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
+*   [F#HTTP 資料公用程式](https://fsharp.github.io/FSharp.Data/library/Http.html)

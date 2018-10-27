@@ -3,11 +3,11 @@ title: ReliableSessionBindingElement
 ms.date: 03/30/2017
 ms.assetid: effda125-b8d3-4de6-8c0e-f59f5ea8f6eb
 ms.openlocfilehash: 2e2e36486c3788cd714ffd0ed545fbb14f831476
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49373663"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50038889"
 ---
 # <a name="reliablesessionbindingelement"></a>ReliableSessionBindingElement
 ReliableSessionBindingElement  

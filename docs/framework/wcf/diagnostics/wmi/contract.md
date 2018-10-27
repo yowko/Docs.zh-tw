@@ -3,11 +3,11 @@ title: Contract1
 ms.date: 03/30/2017
 ms.assetid: aa00f6b3-7e1f-4213-841a-206463fca20b
 ms.openlocfilehash: 12e9cbf5232ebbad33ccc4fdca33233997d27357
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
-ms.translationtype: MT
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49371559"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50044940"
 ---
 # <a name="contract"></a>合約
 合約  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-ms.openlocfilehash: 1eadb5008575a1a53d685db14d68e42d0dce1360
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9572f3e2c0cddf75daf343f250b16e94bc2b0dbf
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197522"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181666"
 ---
 # <a name="how-to-create-a-windows-communication-foundation-client"></a>HOW TO：建立 Windows Communication Foundation 用戶端
 
@@ -38,7 +38,7 @@ ms.locfileid: "47197522"
 
    2. 一旦主機正在執行，以滑鼠右鍵按一下**參考**中 [gettingstartedclient] 專案下的資料夾**方案總管**，然後選取**新增** >  **服務參考**。
 
-   3. 在的 [位址] 方塊中輸入下列 URL**加入服務參考**對話方塊： [http://localhost:8000/GettingStartedClient/Service](http://localhost:8000/GettingStartedClient/Service)
+   3. 在的 [位址] 方塊中輸入下列 URL**加入服務參考**對話方塊： [http://localhost:8000/GettingStarted/CalculatorService](http://localhost:8000/GettingStarted/CalculatorService)
 
    4. 選擇**移**。
 
@@ -49,11 +49,11 @@ ms.locfileid: "47197522"
     您也可以使用命令列工具[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)搭配適當的參數，來建立用戶端程式碼。 下列範例會產生服務的程式碼檔案與組態檔。 第一個範例示範如何在 VB 中，產生 proxy 和第二個示範如何在 C# 中產生的 proxy:
 
     ```shell
-    svcutil.exe /language:vb /out:generatedProxy.vb /config:app.config http://localhost:8000/GettingStartedClient/service
+    svcutil.exe /language:vb /out:generatedProxy.vb /config:app.config http://localhost:8000/GettingStarted/CalculatorService
     ```
 
     ```shell
-    svcutil.exe /language:cs /out:generatedProxy.cs /config:app.config http://localhost:8000/GettingStartedClient/service
+    svcutil.exe /language:cs /out:generatedProxy.cs /config:app.config http://localhost:8000/GettingStarted/CalculatorService
     ```
 
 ## <a name="next-steps"></a>後續步驟

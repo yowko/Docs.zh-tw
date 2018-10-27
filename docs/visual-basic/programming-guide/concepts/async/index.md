@@ -2,12 +2,12 @@
 title: 使用 Async 和 Await 進行非同步程式設計 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
-ms.openlocfilehash: 0c4ee6d7bd6d0b160d5f2ed0ab0021601b3aced2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f31482844b6808ef57eaa3f1aade1711a9b73227
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45991599"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183759"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>使用 Async 和 Await 進行非同步程式設計 (Visual Basic)
 您可以使用非同步程式設計，避免發生效能瓶頸並增強應用程式的整體回應性。 不過，撰寫非同步應用程式的傳統技術可能很複雜，因而難以撰寫、偵錯和維護。  
@@ -23,7 +23,7 @@ ms.locfileid: "45991599"
   
 |應用程式區域|包含非同步方法的支援 API|  
 |----------------------|------------------------------------------------|  
-|Web 存取|<xref:System.Net.Http.HttpClient>, <xref:Windows.Web.Syndication.SyndicationClient>|  
+|Web 存取|<xref:System.Net.Http.HttpClient>、 <xref:Windows.Web.Syndication.SyndicationClient>|  
 |處理檔案|<xref:Windows.Storage.StorageFile>, <xref:System.IO.StreamWriter>, <xref:System.IO.StreamReader>, <xref:System.Xml.XmlReader>|  
 |處理影像|<xref:Windows.Media.Capture.MediaCapture>, <xref:Windows.Graphics.Imaging.BitmapEncoder>, <xref:Windows.Graphics.Imaging.BitmapDecoder>|  
 |WCF 程式設計|[同步和非同步作業](../../../../framework/wcf/synchronous-and-asynchronous-operations.md)|  
@@ -55,7 +55,7 @@ Async Function AccessTheWebAsync() As Task(Of Integer)
   
     ' GetStringAsync returns a Task(Of String). That means that when you await the  
     ' task you'll get a string (urlContents).  
-    Dim getStringTask As Task(Of String) = client.GetStringAsync("http://msdn.microsoft.com")  
+    Dim getStringTask As Task(Of String) = client.GetStringAsync("https://msdn.microsoft.com")  
   
     ' You can do work here that doesn't rely on the string from GetStringAsync.  
     DoIndependentWork()  
@@ -284,7 +284,7 @@ Class MainWindow
   
         ' GetStringAsync returns a Task(Of String). That means that when you await the  
         ' task you'll get a string (urlContents).  
-        Dim getStringTask As Task(Of String) = client.GetStringAsync("http://msdn.microsoft.com")  
+        Dim getStringTask As Task(Of String) = client.GetStringAsync("https://msdn.microsoft.com")  
   
         ' You can do work here that doesn't rely on the string from GetStringAsync.  
         DoIndependentWork()  

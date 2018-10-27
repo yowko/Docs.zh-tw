@@ -2,13 +2,12 @@
 title: System.ServiceModel.Security.SecuritySessionCloseResponseSent
 ms.date: 03/30/2017
 ms.assetid: 501defc3-d110-46ea-86d7-3563c35830f0
-author: BrucePerlerMS
-ms.openlocfilehash: 8e58a17272a6c5c809d2016b5cb4ca8c786eb52b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: MT
+ms.openlocfilehash: a04b024e8e84873696cbe417ca60de198ac46f6c
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197886"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50040718"
 ---
 # <a name="systemservicemodelsecuritysecuritysessioncloseresponsesent"></a>System.ServiceModel.Security.SecuritySessionCloseResponseSent
 System.ServiceModel.Security.SecuritySessionCloseResponseSent  

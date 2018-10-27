@@ -1,14 +1,12 @@
 ---
 title: 字串插值 (Visual Basic)
 ms.date: 10/31/2017
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 313e74d5ce252884f1df2479ef1db8b4b24b5cce
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 68194d4251f7057a070535531e0d4c1ad9154530
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44040927"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50038457"
 ---
 # <a name="interpolated-strings-visual-basic-reference"></a>字串插值 （Visual Basic 參考）
 

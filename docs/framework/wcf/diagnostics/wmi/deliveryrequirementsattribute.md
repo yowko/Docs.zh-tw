@@ -2,19 +2,19 @@
 title: DeliveryRequirementsAttribute
 ms.date: 03/30/2017
 ms.assetid: 40c5435c-a325-4cf8-9dd0-d6e24b4a56a3
-ms.openlocfilehash: d294ba4f14472012b9e311ee53742633b5173f54
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7bfc03299fffc8070a7d8a4b3885706ea861bdf6
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485776"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50042892"
 ---
 # <a name="deliveryrequirementsattribute"></a>DeliveryRequirementsAttribute
 DeliveryRequirementsAttribute  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```csharp
 class DeliveryRequirementsAttribute : Behavior  
 {  
   string QueuedDeliveryRequirements;  

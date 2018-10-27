@@ -6,14 +6,12 @@ helpviewer_keywords:
 - -out compiler option [Visual Basic]
 - out compiler option [Visual Basic]
 ms.assetid: 9f148c15-0909-4cb8-a2db-777f8a8b45ae
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 234071d043b2649e2438ed20fe044fb89cdb9bf8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b619505f6e87efd1c3b18e1bed2862d3467984a7
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655885"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50041085"
 ---
 # <a name="-out-visual-basic"></a>-out (Visual Basic)
 指定輸出檔案的名稱。  
@@ -31,16 +29,16 @@ ms.locfileid: "33655885"
 |`filename`|必要。 編譯器會建立輸出檔的名稱。 如果檔案名稱包含空格，將名稱括在引號 ("")。|  
   
 ## <a name="remarks"></a>備註  
- 指定的完整名稱和要建立檔案的副檔名。 如果不這麼做，.exe 檔會從原始程式檔包含其名稱`Sub Main`程序和.dll 檔案會從第一個原始程式檔取得其名稱。  
+ 指定的完整名稱和要建立之檔案的副檔名。 如果您不這樣做的.exe 檔案會從原始程式碼檔案包含其名稱`Sub Main`程序和.dll 檔案會從第一個原始程式檔取得其名稱。  
   
- 如果您指定檔案名稱沒有.exe 或.dll 副檔名，編譯器會自動延伸模組會為您加入，根據指定的值`-target`編譯器選項。  
+ 如果您指定不含.exe 或.dll 副檔名的檔案名稱，編譯器會自動延伸模組會為您加入，根據指定的值`-target`編譯器選項。  
   
-|若要設定的逾時 Visual Studio 整合式的開發環境中|  
+|若要設定-登出 Visual Studio 整合式的開發環境|  
 |---|  
-|1.在 **方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。 <br />2.按一下 [應用程式]  索引標籤。<br />3.修改中的值**組件名稱**方塊。|  
+|1.在 **方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。 <br />2.按一下 [應用程式]  索引標籤。<br />3.修改中的值**組件名稱** 方塊中。|  
   
 ## <a name="example"></a>範例  
- 下列程式碼編譯`T2.vb`並建立輸出檔`T2.exe`。  
+ 下列程式碼會編譯`T2.vb`，並建立輸出檔`T2.exe`。  
   
 ```console
 vbc t2.vb -out:t3.exe  
@@ -48,5 +46,5 @@ vbc t2.vb -out:t3.exe
   
 ## <a name="see-also"></a>另請參閱  
  [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-目標 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
+ [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
  [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

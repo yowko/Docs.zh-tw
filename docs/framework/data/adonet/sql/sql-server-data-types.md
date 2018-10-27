@@ -2,17 +2,17 @@
 title: SQL Server 資料類型和 ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.openlocfilehash: 878bbe41f259f1e50cd0a41669c7a352e78bc0f1
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: e519dc82fac7b8755155dcf40696030f2a1d266c
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47108056"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452987"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server 資料類型和 ADO.NET
 SQL Server 和 .NET Framework 是以不同的型別系統為基礎，而且可能會導致資料遺失。 為了保留資料完整性，.NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) 針對使用 SQL Server 資料提供了具型別的存取子方法。 您可以使用 <xref:System.Data.SqlDbType> 類別 (Class) 中的列舉型別 (Enumeration) 來指定 <xref:System.Data.SqlClient.SqlParameter> 資料型別。  
   
- 如需詳細資訊的資料表，描述的資料類型 SQL Server 與.NET Framework 資料型別之間的對應中，請參閱[SQL Server 資料類型對應](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)。  
+ 如需詳細資訊和描述 SQL Server 和.NET Framework 資料型別之間的資料類型對應的資料表，請參閱[SQL Server 資料類型對應](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)。  
   
  SQL Server 2008 導入了一些設計成符合商務需求的新資料型別，以便使用日期和時間、結構化、半結構化和非結構化資料。 這些資料型別列於《SQL Server 2008 線上叢書》中。  
   

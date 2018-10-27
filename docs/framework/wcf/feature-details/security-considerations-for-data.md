@@ -5,13 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-author: BrucePerlerMS
-ms.openlocfilehash: bf3276353473f07f58740a5819226994123efdcd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: MT
+ms.openlocfilehash: 6471a8a8e257ea3bb6f26a8041694ef25151ad1a
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201149"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50037291"
 ---
 # <a name="security-considerations-for-data"></a>資料的安全性考量
 處理資料時 Windows Communication Foundation (WCF) 中，您必須考慮一些威脅類別。 下表列出與資料處理有關的最重要威脅類別。 WCF 會提供可減輕這些威脅的工具。  
@@ -206,7 +205,7 @@ ms.locfileid: "47201149"
   
 -   套用至型別的<xref:System.Runtime.Serialization.KnownTypeAttribute> 屬性。  
   
--   指定傳回型別清單之方法的`KnownTypeAttribute` 屬性。  
+-   指定傳回型別清單之方法的 `KnownTypeAttribute` 屬性。  
   
 -   `ServiceKnownTypeAttribute` 屬性。  
   

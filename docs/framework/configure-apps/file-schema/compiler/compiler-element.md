@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7a151659-b803-4c27-b5ce-1c4aa0d5a823
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: a26fc0bda341e85ca54f3dee4addd14e4164209c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: MT
+ms.openlocfilehash: e8c5021b00de503783adb3f1b1dc11964639afbf
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193953"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50048264"
 ---
 # <a name="ltcompilergt-element"></a>&lt;編譯器&gt;項目
 
@@ -105,5 +105,5 @@ ms.locfileid: "47193953"
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
 - [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [\<編譯器 > 項目](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)
-- [指定完整的型別名稱]-(.../../../../../ docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md）
+- [指定完整的類型名稱](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)
 - [編譯 （ASP.NET 設定結構描述） 之編譯器的 compiler 項目](https://msdn.microsoft.com/library/f7d6b078-5d42-4134-b3f7-62e1aba1df1e(v=vs.100))

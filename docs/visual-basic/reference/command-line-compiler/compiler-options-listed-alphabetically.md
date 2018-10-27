@@ -4,14 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9f24759d68f007caf5f79096c6d4cebb7c050851
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 98a9295f1a2158e28a699aa6dfb1403542e523b4
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46532477"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50043591"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>依字母順序排列的 Visual Basic 編譯器選項
 Visual Basic 命令列編譯器提供從 Visual Studio 整合式的開發環境 (IDE) 編譯程式的替代方法。 以下是 Visual Basic 命令列編譯器選項，依字母順序排序的清單。  

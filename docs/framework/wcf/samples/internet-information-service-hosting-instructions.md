@@ -3,11 +3,11 @@ title: Internet Information Service 裝載指示
 ms.date: 03/30/2017
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
 ms.openlocfilehash: 303fe47df987901b09cee8cc4292f12bcda2b74d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: MT
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204031"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50040000"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Internet Information Service 裝載指示
 若要執行由網際網路資訊服務 (IIS) 裝載的範例，您必須確定 IIS 已正確安裝並正在執行中。  

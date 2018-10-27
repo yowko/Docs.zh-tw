@@ -3,11 +3,11 @@ title: 與 POX 應用程式的互通性
 ms.date: 03/30/2017
 ms.assetid: 449276b8-4633-46f0-85c9-81f01d127636
 ms.openlocfilehash: b7fdb4e16bce52025515ced065d0f48cffb7fa3f
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
-ms.translationtype: MT
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372160"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50036017"
 ---
 # <a name="interoperability-with-pox-applications"></a>與 POX 應用程式的互通性
 

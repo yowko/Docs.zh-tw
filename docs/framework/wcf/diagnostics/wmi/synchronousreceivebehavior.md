@@ -2,19 +2,19 @@
 title: SynchronousReceiveBehavior
 ms.date: 03/30/2017
 ms.assetid: b31a26a9-ae96-4df0-8406-e07d6f59087c
-ms.openlocfilehash: b4281b3b028eef23252396f69f54f706966f3567
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: ae44acb4431c9728b2a458febfe0e212366cace4
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485589"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50045754"
 ---
 # <a name="synchronousreceivebehavior"></a>SynchronousReceiveBehavior
 SynchronousReceiveBehavior  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```csharp
 class SynchronousReceiveBehavior : Behavior  
 {  
 };  

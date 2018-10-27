@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Data Contract
 ms.assetid: b124e9e0-cb73-4ae0-b9c3-e6cdf5eced98
-ms.openlocfilehash: a170423a5ae132c70710e22b5d61f57c46fdfc28
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c2f16f74638341cfe6c6d0f3b25967082fc99c97
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523760"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180162"
 ---
 # <a name="basic-data-contract"></a>基本資料合約
 這個範例會示範如何實作資料合約。 資料合約可以讓您在服務間來回傳遞結構化資料。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)但會使用複數，而不是基本數字型別。  
@@ -21,7 +21,7 @@ ms.locfileid: "43523760"
   
  這個服務的服務合約會使用複數，如下列範例程式碼所示。  
   
-```  
+```csharp
 // Define a service contract.  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
@@ -39,7 +39,7 @@ public interface ICalculator
   
  <xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性已套用至 `ComplexNumber` 類別的定義，以便指出類別的哪些欄位可以經由網路在用戶端與服務之間傳遞，如下列範例程式碼所示。  
   
-```  
+```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public class ComplexNumber  
 {  
@@ -58,7 +58,7 @@ public class ComplexNumber
   
  服務實作會計算並傳回適當的結果，即接受並傳回 `ComplexNumber` 型別的數字。  
   
-```  
+```csharp
 // This is the service class that implements the service contract.  
 public class CalculatorService : ICalculator  
 {  
@@ -97,16 +97,20 @@ public class CalculatorService : ICalculator
   
  用戶端實作也會使用複數。 服務合約與資料合約會定義在來源檔 generatedclient.cs 中，會產生[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)從服務中繼資料。  
   
-```  
+```csharp
 // Create a client.  
 DataContractCalculatorClient client = new DataContractCalculatorClient();  
 // Call the Add service operation.  
-ComplexNumber value1 = new ComplexNumber();   
-value1.Real = 1;   
-value1.Imaginary = 2;  
-ComplexNumber value2 = new ComplexNumber();   
-value2.Real = 3;  
-value2.Imaginary = 4;  
+ComplexNumber value1 = new ComplexNumber() 
+                    {
+                        Real = 1,   
+                        Imaginary = 2  
+                    };  
+ComplexNumber value2 = new ComplexNumber() 
+                    {
+                        Real = 3,  
+                        Imaginary = 4  
+                    };   
 ComplexNumber result = proxy.Add(value1, value2);  
 Console.WriteLine("Add({0} + {1}i, {2} + {3}i) = {4} + {5}i",  
       value1.Real, value1.Imaginary, value2.Real, value2.Imaginary,   
@@ -117,7 +121,7 @@ Console.WriteLine("Add({0} + {1}i, {2} + {3}i) = {4} + {5}i",
   
  當您執行範例時，作業的要求和回應會顯示在用戶端主控台視窗中。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。  
   
-```  
+```console  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
 Subtract(1 + 2i, 3 + 4i) = -2 + -2i  
 Multiply(2 + 3i, 4 + 7i) = -13 + 26i  

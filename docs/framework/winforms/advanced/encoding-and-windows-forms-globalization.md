@@ -19,18 +19,18 @@ helpviewer_keywords:
 - localization [Windows Forms], character sets
 - globalization [Windows Forms], character sets
 ms.assetid: 22e8965d-a712-42b3-8167-3ee346bd70f9
-ms.openlocfilehash: 9257a6b725839d8f433988ab76c4ce9ae349d950
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 1b1ac50bde87b22c3ce9ff7524edbf8750976788
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208554"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183109"
 ---
 # <a name="encoding-and-windows-forms-globalization"></a>編碼方式和 Windows Form 全球化
-Windows Forms 應用程式完全支援 Unicode，這表示不論是何種平台、程式或語言，每個字元都會以唯一號碼來表示。 如需有關 Unicode 的詳細資訊，請參閱[Unicode 協會網站](http://www.unicode.org)。  
+Windows Forms 應用程式完全支援 Unicode，這表示不論是何種平台、程式或語言，每個字元都會以唯一號碼來表示。 如需有關 Unicode 的詳細資訊，請參閱 < [Unicode 協會網站](https://www.unicode.org)。  
   
 ## <a name="benefits-of-unicode"></a>Unicode 的優點  
- 支援 Unicode 之表單的優點包括能夠使用僅限 Unicode 的字集，例如印度文。 此外，您可以在單一表單上使用多種語言。 在 Unicode 中，所有字元的長度都是兩個位元組，因此不需要特別表示雙位元組字元。 您也可以撰寫一組可在所有平台上運作的字碼。 這是從舊版的 Visual Basic 中，您必須撰寫不同的平台，例如 Windows NT 的不同程式碼變更和[!INCLUDE[win98](../../../../includes/win98-md.md)]。  
+ 支援 Unicode 之表單的優點包括能夠使用僅限 Unicode 的字集，例如印度文。 此外，您可以在單一表單上使用多種語言。 在 Unicode 中，所有字元的長度都是兩個位元組，因此不需要特別表示雙位元組字元。 您也可以撰寫一組可在所有平台上運作的字碼。 這是從舊版的 Visual Basic 中，您必須在其中寫入不同的平台，例如 Windows NT 不同的程式碼的變更和[!INCLUDE[win98](../../../../includes/win98-md.md)]。  
   
  不過，在 [!INCLUDE[win98](../../../../includes/win98-md.md)] 和 Windows Millennium Edition 中，有些控制項並不支援 Unicode。 這些控制項全部都是繼承自通用控制項，並會使用 Windows 字碼頁將資料處理成 [!INCLUDE[vcpransi](../../../../includes/vcpransi-md.md)]。 這些控制項包括：<xref:System.Windows.Forms.TabControl>、<xref:System.Windows.Forms.ListView>、<xref:System.Windows.Forms.TreeView>、<xref:System.Windows.Forms.DateTimePicker>、<xref:System.Windows.Forms.MonthCalendar>、<xref:System.Windows.Forms.TrackBar>、<xref:System.Windows.Forms.ProgressBar>、<xref:System.Windows.Forms.ImageList>、<xref:System.Windows.Forms.ToolBar> 和 <xref:System.Windows.Forms.StatusBar>。 因此在前述平台上，您無法在這些控制項中顯示 Unicode 資料。 例如，您無法在英文版的 [!INCLUDE[win98](../../../../includes/win98-md.md)] 作業系統上顯示日文字元。  
   
@@ -38,4 +38,4 @@ Windows Forms 應用程式完全支援 Unicode，這表示不論是何種平台�
   
 ## <a name="see-also"></a>另請參閱
 
-[全球化 Windows Form 應用程式](globalizing-windows-forms.md)
+[全球化 Windows Forms 應用程式](globalizing-windows-forms.md)

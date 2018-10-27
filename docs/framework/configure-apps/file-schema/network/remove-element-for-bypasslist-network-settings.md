@@ -10,14 +10,12 @@ helpviewer_keywords:
 - bypasslist, remove element
 - remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: b6c72d9780088fddcaa59e644ff8069afbb4e43d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: MT
+ms.openlocfilehash: 80d8fc48141c0d23b93445bdfec02b95ba4a589f
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397094"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50032526"
 ---
 # <a name="ltremovegt-element-for-bypasslist-network-settings"></a>&lt;移除&gt;bypasslist （網路設定） 的項目
 Proxy 略過清單移除 IP 位址或 DNS 名稱。  

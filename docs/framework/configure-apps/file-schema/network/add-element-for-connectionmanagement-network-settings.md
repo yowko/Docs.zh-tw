@@ -10,14 +10,12 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 9f9b1b13c0a45d7a2e34a04b44f13be12947993f
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: fe1110968511273fa7d33fb255df62a3bd187a15
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349026"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50046657"
 ---
 # <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a>&lt;新增&gt;connectionManagement （網路設定） 的項目
 將 IP 位址或 DNS 名稱加入連線管理清單中。  

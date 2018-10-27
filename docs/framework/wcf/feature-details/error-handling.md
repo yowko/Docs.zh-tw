@@ -3,11 +3,11 @@ title: 錯誤處理
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
 ms.openlocfilehash: 548d93e63440e256ddb54c3ca792a49817c9b059
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372204"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452845"
 ---
 # <a name="error-handling"></a>錯誤處理
 ## <a name="error-handling-in-windows-communication-foundation"></a>Windows Communication Foundation 的錯誤處理  

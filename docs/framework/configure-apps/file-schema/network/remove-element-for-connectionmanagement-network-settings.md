@@ -10,14 +10,12 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: d249cc412a1638e62b57b4976adc23fdf8f36e80
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 03cac1523c0fce268c2df8d04134c0d5e88830e2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024580"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181549"
 ---
 # <a name="ltremovegt-element-for-connectionmanagement-network-settings"></a>&lt;移除&gt;connectionManagement （網路設定） 的項目
 從連線管理清單中，移除 IP 位址或 DNS 名稱。  
@@ -62,7 +60,7 @@ ms.locfileid: "48024580"
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="example"></a>範例  
- 下列範例會移除伺服器 www.adventure-works.com 任何連線管理清單項目，並設定應用程式使用四個連接至 www.contoso.com 伺服器和兩個連線到所有其他伺服器。  
+ 下列範例會移除伺服器的任何連線管理清單項目`www.adventure-works.com`，然後設定 應用程式使用伺服器的四個通往`www.contoso.com`和所有其他伺服器的兩個連線。  
   
 ```xml  
 <configuration>  
@@ -77,6 +75,6 @@ ms.locfileid: "48024580"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Net.ServicePoint>  
- <xref:System.Net.ServicePointManager>  
- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.ServicePoint>  
+- <xref:System.Net.ServicePointManager>  
+- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

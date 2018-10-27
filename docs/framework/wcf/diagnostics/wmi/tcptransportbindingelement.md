@@ -2,19 +2,19 @@
 title: TcpTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 33bbc1e5-44e4-4ee3-b7b5-801dc78956e4
-ms.openlocfilehash: e64f689923d95546c8cecdf47c247faf79242ebf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 04326484bbf1f07c66ad8fb401642880f9ba8c6e
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485773"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50033710"
 ---
 # <a name="tcptransportbindingelement"></a>TcpTransportBindingElement
 TcpTransportBindingElement  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```csharp
 class TcpTransportBindingElement : ConnectionOrientedTransportBindingElement  
 {  
   TcpConnectionPoolSettings ConnectionPoolSettings;  

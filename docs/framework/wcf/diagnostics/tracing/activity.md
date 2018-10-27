@@ -3,11 +3,11 @@ title: 活動
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
 ms.openlocfilehash: 00115d51cff40be726ccf94c3cac09242c0bdab8
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372365"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453342"
 ---
 # <a name="activity"></a>活動
 本主題說明 Windows Communication Foundation (WCF) 追蹤模型中的活動追蹤。 活動指的是協助使用者縮小失敗範圍的處理單位。 發生在同一個活動中的錯誤都是直接相關的。 例如，因為訊息解密失敗而導致作業失敗。 作業與訊息解密失敗的追蹤會同時出現在同一個活動中，顯示解密錯誤與要求錯誤之間直接的相互關聯性。  

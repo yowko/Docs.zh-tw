@@ -4,16 +4,15 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-author: BrucePerlerMS
-ms.openlocfilehash: 42de15daef7b18e7422bae836128356f37c1f03d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 15ead0a99782fcb329767395a316d9287337173a
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837020"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50170831"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>憑證驗證的傳輸安全性
-本主題討論使用傳輸安全性時，如何使用 X.509 憑證進行伺服器和用戶端驗證。 如需 X.509 憑證的詳細資訊，請參閱 [X.509 公用金鑰憑證](https://msdn.microsoft.com/library/bb540819\(VS.85\).aspx)。 憑證必須由憑證授權單位，通常是憑證的協力廠商簽發者發行。 在 Windows Server 網域中，可以使用 Active Directory 憑證服務對網域中的用戶端電腦發行憑證。 如需詳細資訊，請參閱[Windows 2008 R2 憑證服務](https://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409)。 在此案例中，服務是在使用安全通訊端層 (SSL) 設定的 Internet Information Services (IIS) 之下裝載。 此服務使用 SSL (X.509) 憑證設定，以允許使用者驗證伺服器的身分識別。 用戶端也使用 X.509 憑證設定，以允許服務驗證用戶端的身分識別。 伺服器的憑證必須受到用戶端的信任，而用戶端的憑證則必須受到伺服器的信任。 服務和用戶端如何驗證彼此的身分識別的實際機制，不在本主題的範圍之內。 如需詳細資訊，請參閱[維基百科上的數位簽章](https://go.microsoft.com/fwlink/?LinkId=253157)。  
+本主題討論使用傳輸安全性時，如何使用 X.509 憑證進行伺服器和用戶端驗證。 如需 X.509 憑證的詳細資訊，請參閱 [X.509 公用金鑰憑證](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates)。 憑證必須由憑證授權單位，通常是憑證的協力廠商簽發者發行。 在 Windows Server 網域中，可以使用 Active Directory 憑證服務對網域中的用戶端電腦發行憑證。 如需詳細資訊，請參閱[Windows 2008 R2 憑證服務](https://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409)。 在此案例中，服務是在使用安全通訊端層 (SSL) 設定的 Internet Information Services (IIS) 之下裝載。 此服務使用 SSL (X.509) 憑證設定，以允許使用者驗證伺服器的身分識別。 用戶端也使用 X.509 憑證設定，以允許服務驗證用戶端的身分識別。 伺服器的憑證必須受到用戶端的信任，而用戶端的憑證則必須受到伺服器的信任。 服務和用戶端如何驗證彼此的身分識別的實際機制，不在本主題的範圍之內。 如需詳細資訊，請參閱[維基百科上的數位簽章](https://go.microsoft.com/fwlink/?LinkId=253157)。  
   
  此案例會實作要求/回覆訊息模式，如下列圖表所示。  
   

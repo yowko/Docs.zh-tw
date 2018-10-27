@@ -2,12 +2,12 @@
 title: 編譯器指示詞 (F#)
 description: '深入了解 F # 語言前置處理器指示詞、 條件式編譯指示詞、 line 指示詞和編譯器指示詞。'
 ms.date: 05/16/2016
-ms.openlocfilehash: eeb33cd3b1d6a228555724a307bf2e2407c6b4c3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5ac375ac5acd0609a6556f9e0481d169df827c98
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042450"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181364"
 ---
 # <a name="compiler-directives"></a>編譯器指示詞
 
@@ -33,7 +33,7 @@ ms.locfileid: "44042450"
 
 ## <a name="conditional-compilation-directives"></a>條件式編譯指示詞
 
-已停用由其中一個這些指示詞的程式碼會呈現暗灰色 Visual StudioCode 編輯器中。
+已停用由其中一個這些指示詞的程式碼會呈現暗灰色在 Visual Studio 程式碼編輯器中。
 
 >[!NOTE]
 條件式編譯指示詞的行為與其在其他語言的行為不同。 例如，您無法使用包含符號的布林運算式，且 `true` 和 `false` 沒有特殊意義。 在 `if` 指示詞中使用的符號必須透過命令列定義，或在專案設定中定義；沒有任何 `define` 前置處理器指示詞。

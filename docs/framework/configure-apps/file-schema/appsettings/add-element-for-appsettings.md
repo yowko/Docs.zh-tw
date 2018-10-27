@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: bcdac76528e7a8b07b56b6fd1d827c3c8072c371
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
-ms.translationtype: MT
+ms.openlocfilehash: e74f0956dd5acebccee87fd6ad8c09b299badffd
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086314"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50036381"
 ---
 # <a name="add-element-for-appsettings"></a>\<新增 > 項目\<appSettings >
 
@@ -70,4 +70,4 @@ ms.locfileid: "49086314"
 
 ## <a name="see-also"></a>另請參閱
 
-[適用於.NET Framework 的組態檔結構描述](~/docs/framework/configure-apps/file-schema/index.md)
+- [適用於.NET Framework 的組態檔結構描述](~/docs/framework/configure-apps/file-schema/index.md)

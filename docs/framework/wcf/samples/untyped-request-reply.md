@@ -2,12 +2,12 @@
 title: 不具類型的要求-回覆
 ms.date: 03/30/2017
 ms.assetid: 0bf0f9d9-7caf-4d3d-8c9e-2d468cca16a5
-ms.openlocfilehash: 55692282aa06b8e988f44806394bdfcbb6e2f3ec
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.openlocfilehash: b6e93ad0782fcacbc4ce20c0e9bb407abdf2366f
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528589"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50047627"
 ---
 # <a name="untyped-requestreply"></a>不具型別的要求/回覆
 這個範例會示範如何定義使用 Message 類別的作業合約。  
@@ -17,14 +17,14 @@ ms.locfileid: "43528589"
   
  此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 此服務合約會定義將訊息類型當做引數接受並傳回訊息的作業。 此作業會收集所有必要資料來計算訊息本文的總和，然後將該總和當做傳回訊息中的本文加以傳送。  
   
-```  
+```csharp
 [OperationContract(Action = CalculatorService.RequestAction, ReplyAction = CalculatorService.ReplyAction)]  
 Message ComputeSum(Message request);  
 ```  
   
  在進行此服務時，該作業會擷取輸入訊息中所傳遞之整數的陣列，然後計算出總和。 為了傳送回應訊息，此範例會建立包含適當的訊息版本和動作的新訊息，並將計算得到的總和當做本文加入至該訊息。 下列範例程式碼示範這項功能。  
   
-```  
+```csharp
 public Message ComputeSum(Message request)  
 {  
     //The body of the message contains a list of numbers which will be   
@@ -45,7 +45,7 @@ public Message ComputeSum(Message request)
   
  用戶端會使用產生的程式碼[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)建立遠端服務的 proxy。 為了傳送要求訊息，用戶端必須具備依基礎通道而定的訊息版本。 如此一來，它會建立範圍限定在其所建立之 Proxy 通道的新 <xref:System.ServiceModel.OperationContextScope>，而此新範圍會依據其 <xref:System.ServiceModel.OperationContext> 屬性中所填入之正確訊息版本來建立 `OutgoingMessageHeaders.MessageVersion`。 用戶端會將輸入陣列當做本文傳遞到要求訊息，然後叫用 Proxy 上的 `ComputeSum`。 接著，用戶端會藉由存取回覆訊息的 `GetBody<T>` 方法，擷取其所傳遞的輸入總和。 下列範例程式碼示範這項功能。  
   
-```  
+```csharp
 using (new OperationContextScope(client.InnerChannel))  
 {  
     // Call the Sum service operation.  
@@ -63,7 +63,7 @@ using (new OperationContextScope(client.InnerChannel))
   
  這個範例是 Web 主控的範例，所以只需要執行用戶端可執行檔。 下列是用戶端的輸出範例。  
   
-```  
+```console  
 Prompt>Client.exe  
 Sum of numbers passed (1,2,3,4,5) = 15  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
 ms.openlocfilehash: 4718c0a6e332d644a7f54c79246df95f841058d0
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845383"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50046886"
 ---
 # <a name="delegate-statement"></a>Delegate 陳述式
 用來宣告委派。 委派是參考型別參考`Shared`方法的型別或物件的執行個體方法。 任何具有相符的參數和傳回型別程序可用來建立這個委派類別的執行個體。 此程序可以接著會叫用透過委派執行個體。  
@@ -69,7 +69,7 @@ ms.locfileid: "48845383"
  [Of](../../../visual-basic/language-reference/statements/of-clause.md)  
  [委派](../../../visual-basic/programming-guide/language-features/delegates/index.md)  
  [如何：使用泛型類別](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [Visual Basic 中的泛型型別](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
+ [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
  [共變數和反變數](../../programming-guide/concepts/covariance-contravariance/index.md)  
  [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
  [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

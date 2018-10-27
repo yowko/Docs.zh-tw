@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 932788f2-b87d-44cf-82f9-04492a8b2722
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 047cd7a2b8a6d315c6cadb9b535b84f744fd2d09
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f981d667f3cbf35ab010ac5bd26a9ecd5c2aae11
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504881"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50135429"
 ---
 # <a name="pipeline-development"></a>管線開發
 增益集管線是主應用程式和其增益集必須使用與彼此進行通訊的管線區段的路徑。  
@@ -89,5 +89,5 @@ ms.locfileid: "43504881"
      描述如何透過使用案例的管線傳遞資料集合。  
   
 ## <a name="see-also"></a>另請參閱  
- [增益集管線案例](https://msdn.microsoft.com/library/feb70e0b-8734-494c-aeaf-b567f014043e)  
- [增益集和擴充性](../../../docs/framework/add-ins/index.md)
+- [增益集管線案例](https://msdn.microsoft.com/library/feb70e0b-8734-494c-aeaf-b567f014043e)  
+- [增益集和擴充性](../../../docs/framework/add-ins/index.md)

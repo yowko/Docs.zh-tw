@@ -2,13 +2,12 @@
 title: PII 安全性鎖定
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-author: BrucePerlerMS
-ms.openlocfilehash: df8dd9617ad7b12b298b82d2fa8909c2680f599a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: MT
+ms.openlocfilehash: 48b62ed5c27463b863ff585520a4b42fc4c83f88
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397630"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50037083"
 ---
 # <a name="pii-security-lockdown"></a>PII 安全性鎖定
 這個範例示範如何控制的 Windows Communication Foundation (WCF) 服務的數個安全性相關功能：  

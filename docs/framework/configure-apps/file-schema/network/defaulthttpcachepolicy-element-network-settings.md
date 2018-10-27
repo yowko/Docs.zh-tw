@@ -8,14 +8,12 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 1e1b27cb8c0df4450c1a08151af19913b65fc2b3
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
-ms.translationtype: MT
+ms.openlocfilehash: def7f8a4a7961f403a108c116bae590d69e70d17
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782138"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50037872"
 ---
 # <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a>&lt;defaultHttpCachePolicy&gt;項目 （網路設定）
 描述 HTTP 快取是否作用中，並且描述的預設快取原則。  

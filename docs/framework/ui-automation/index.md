@@ -9,11 +9,11 @@ ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: a99d42b4d61f3270b50e0c4698683cf89458ec9c
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372261"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180189"
 ---
 # <a name="accessibility"></a>協助工具選項
 > [!NOTE]

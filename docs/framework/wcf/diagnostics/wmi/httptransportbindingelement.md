@@ -2,19 +2,19 @@
 title: HttpTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 088a7bce-6bb2-4839-ad74-f68d4b1aa0f9
-ms.openlocfilehash: 1975fd2e04a5c9cdb68bc838802abafbd781b7e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34ad4b8534d082d7f5248d42d70ca5bd0647a5dc
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487016"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454313"
 ---
 # <a name="httptransportbindingelement"></a>HttpTransportBindingElement
 HttpTransportBindingElement  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```csharp
 class HttpTransportBindingElement : TransportBindingElement  
 {  
   boolean AllowCookies;  

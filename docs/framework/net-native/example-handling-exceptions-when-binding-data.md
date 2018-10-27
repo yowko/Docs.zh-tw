@@ -5,11 +5,11 @@ ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a861da011898c3648c66b6a0ea0f97cdb26ff288
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374023"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452745"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>範例：處理繫結資料時所發生的例外狀況
 > [!NOTE]

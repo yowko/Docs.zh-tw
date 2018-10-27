@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
-ms.openlocfilehash: 2e01d3de6ee7b415c7b3f18a20e840b8ec4ab9b6
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: MT
+ms.openlocfilehash: 3de4bb4546d3ee20e961ecf5a9d130e8e6c713a8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698441"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50037148"
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>HOW TO：使用 WCF 用戶端來存取 WSE 3.0 服務
 Windows Communication Foundation (WCF) 用戶端連線層級相容 Web Services Enhancements (WSE) 3.0 與 Microsoft.NET 服務的 WCF 用戶端會設定為使用 August 2004 版本的 Ws-addressing 規格時。 不過，WSE 3.0 服務不支援中繼資料交換 (MEX) 通訊協定，因此當您使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)若要建立的 WCF 用戶端類別，安全性設定不會套用至所產生WCF 用戶端。 因此，您必須在其中指定安全性設定 WSE 3.0 服務要求之後會產生 WCF 用戶端。  
@@ -27,7 +27,7 @@ Windows Communication Foundation (WCF) 用戶端連線層級相容 Web Services 
   
 2.  建立類別，表示可與 WSE 3.0 Web 服務通訊的繫結。  
   
-     下列類別是屬於[與 WSE 交互操作](https://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41)範例：  
+     下列類別是屬於[與 WSE 交互操作](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)範例：  
   
     1.  建立從 <xref:System.ServiceModel.Channels.Binding> 類別衍生的類別。  
   
@@ -64,4 +64,4 @@ Windows Communication Foundation (WCF) 用戶端連線層級相容 Web Services 
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Channels.Binding>  
- [與 WSE 交互操作](https://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41)
+ [與 WSE 交互操作](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)

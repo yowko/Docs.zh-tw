@@ -3,11 +3,11 @@ title: WCF 的 &lt;bookmarkResumptionQueries&gt;
 ms.date: 03/30/2017
 ms.assetid: ed086712-1dc7-4932-a592-d1116a0155f3
 ms.openlocfilehash: d2b3365f3793c114003bbd9b9da664448bbac243
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374440"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50135098"
 ---
 # <a name="ltbookmarkresumptionqueriesgt-of-wcf"></a>WCF 的 &lt;bookmarkResumptionQueries&gt;
 

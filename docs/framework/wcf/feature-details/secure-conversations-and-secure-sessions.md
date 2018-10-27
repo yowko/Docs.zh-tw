@@ -2,13 +2,12 @@
 title: 安全對話與安全工作階段
 ms.date: 03/30/2017
 ms.assetid: 48cb104a-532d-40ae-aa57-769dae103fda
-author: BrucePerlerMS
-ms.openlocfilehash: 077f21f11fae9e91abe281778351954c80d9603b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d3fd1b82aa05e39e2555ea31955009ea0be881bd
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199797"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182043"
 ---
 # <a name="secure-conversations-and-secure-sessions"></a>安全對話與安全工作階段
 Windows Communication Foundation (WCF) 的功能是能夠建立安全工作階段之間彼此驗證並同意加密與數位簽章的程序的兩個端點。 例如，服務端點可能需要用戶端端點來傳送用於驗證的 X.509 憑證為基礎的安全性權杖。 一驗證用戶端後，服務端點即將安全性內容權杖 (SCT) 傳回用戶端，該用戶端用於保護工作階段內所有後續訊息的安全性。 由於 SCT 有對稱金鑰，因此建立此安全工作階段使得在兩個端點之間交換訊息組更有效率。 非對稱金鑰是 X.509 憑證的基礎，當它產生數位簽章或加密資料集時，需要遠比對稱金鑰多的運算功能。  

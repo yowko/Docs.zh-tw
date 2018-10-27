@@ -2,12 +2,12 @@
 title: SendMail 自訂活動
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: f51914ae01ea680ae09be8080cce1aa866bd6ec7
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 4cd2ed8c80bd5ab4c4e784f4c5c86a58ecceda2f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845251"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181286"
 ---
 # <a name="sendmail-custom-activity"></a>SendMail 自訂活動
 此範例示範如何建立衍生自 <xref:System.Activities.AsyncCodeActivity> 的自訂活動，以便使用 SMTP 傳送郵件供工作流程應用程式使用。 自訂活動使用的功能<xref:System.Net.Mail.SmtpClient>以非同步方式傳送電子郵件並傳送具有驗證的郵件。 也會提供一些終端使用者功能，例如測試模式、語彙基元替換、檔案範本和測試置放路徑。  
@@ -84,7 +84,7 @@ new SendMail
 ```  
   
 ### <a name="sending-mails-in-testing-mode"></a>在測試模式下傳送郵件  
- 此程式碼片段示範如何設定兩個測試的屬性： 藉由設定`TestMailTo`所有的訊息將傳送至john.doe@contoso.con（而不考慮的值、 副本、 密件副本）。 設定 TestDropPath 之後，所有外送的電子郵件也會記錄在提供的路徑上。 這些屬性可以獨立設定 (屬性之間並沒有相關性)。  
+ 此程式碼片段示範如何設定兩個測試的屬性： 藉由設定`TestMailTo`所有的訊息將傳送至`john.doe@contoso.con`（而不考慮的值、 副本、 密件副本）。 設定 TestDropPath 之後，所有外送的電子郵件也會記錄在提供的路徑上。 這些屬性可以獨立設定 (屬性之間並沒有相關性)。  
   
 ```  
 new SendMail  

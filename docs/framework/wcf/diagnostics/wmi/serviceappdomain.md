@@ -2,19 +2,19 @@
 title: ServiceAppDomain
 ms.date: 03/30/2017
 ms.assetid: f28e5186-a66d-46c1-abe9-b50e07f8cb4f
-ms.openlocfilehash: aef0a0da9d107b92d9d3017968d5554205a6fd71
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 05be495dbfe87e7dd14b0cfbb38b30c6f8278e6d
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485664"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "49479520"
 ---
 # <a name="serviceappdomain"></a>ServiceAppDomain
 將服務對應至應用程式定義域。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```csharp
 class ServiceAppDomain  
 {  
   Service ref;  

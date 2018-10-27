@@ -7,12 +7,12 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: 89f8a4675b3edc23913549bc24f0d9ae16917519
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 3eea3d6c8a28ace0cc79cbfeb7eb3a7a52c9b8ab
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873436"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047523"
 ---
 # <a name="white-space-processing-in-xaml"></a>在 XAML 中處理泛空白字元
 XAML 的語言規則狀態必須處理該顯著泛空白字元[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]處理器實作中。 本主題說明這些 XAML 語言規則， 它還會列出所定義的額外空白字元處理[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]XAML 處理器和序列化的 XAML 寫入器的實作。  
@@ -59,7 +59,7 @@ XAML 的語言規則狀態必須處理該顯著泛空白字元[!INCLUDE[TLA2#tla
   
 <a name="east_asian_characters"></a>   
 ## <a name="east-asian-characters"></a>東亞字元  
- 「東亞字元」是以 [!INCLUDE[TLA2#tla_unicode](../../../includes/tla2sharptla-unicode-md.md)] 字元集所定義，範圍從 U+20000 到 U+2FFFD，以及從 U+30000 到 U+3FFFD。 這個子集有時也稱為「CJK 表意字元」。 如需詳細資訊，請參閱 [http://www.unicode.org](http://www.unicode.org/)。  
+ 「東亞字元」是以 [!INCLUDE[TLA2#tla_unicode](../../../includes/tla2sharptla-unicode-md.md)] 字元集所定義，範圍從 U+20000 到 U+2FFFD，以及從 U+30000 到 U+3FFFD。 這個子集有時也稱為「CJK 表意字元」。 如需詳細資訊，請參閱<https://www.unicode.org>。  
   
 <a name="whitespace_and_text_content_models"></a>   
 ## <a name="white-space-and-text-content-models"></a>泛空白字元和文字內容模型  

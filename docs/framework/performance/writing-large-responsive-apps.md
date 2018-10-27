@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4c90e914273de9f9121a979accdb4798b31e05cb
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: MT
+ms.openlocfilehash: 947e443fc1561e86cf9c5fe7c19d4290cc364bd5
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041651"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50170376"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>撰寫大型、可回應的 .NET Framework 應用程式
 本文針對大型 .NET Framework 應用程式或處理大量資料 (例如檔案或資料庫) 的應用程式，提供可提升其效能的提示。 這些提示來自於以 Managed 程式碼重寫 C# 和 Visual Basic 編譯器，本文包含數個 C# 編譯器的實際範例。  
@@ -23,8 +23,7 @@ ms.locfileid: "44041651"
   
  當您的使用者與您的應用程式互動時，他們期望應用程式會有回應。  因此，請不要封鎖輸入或命令處理等動作。  說明應該迅速快顯，或在使用者繼續輸入時放棄顯示。  您的應用程式應該避免冗長的運算使得應用程式緩慢，而導致封鎖 UI 執行緒。  
   
- 如需有關 Roslyn 編譯器的詳細資訊，請瀏覽[dotnet/roslyn](https://github.com/dotnet/roslyn) GitHub 上的存放庫。
- <!-- TODO: replace with link to Roslyn conceptual docs once that's published -->
+ 如需 Roslyn 編譯器的詳細資訊，請參閱[.NET 編譯器平台 SDK](../../csharp/roslyn-sdk/index.md)。
   
 ## <a name="just-the-facts"></a>認清事實  
  調整效能和建立回應能力佳的 .NET Framework 應用程式時，請考慮下列幾點事實。  
@@ -40,7 +39,7 @@ ms.locfileid: "44041651"
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>事實 3：使用良好工具的成果大不相同  
  良好工具可讓您快速鑽研最大的效能問題 (CPU、記憶體或磁碟)，並協助您找出導致這些瓶頸的程式碼。  Microsoft 提供各種效能工具，例如 [Visual Studio 程式碼剖析工具](/visualstudio/profiling/beginners-guide-to-performance-profiling)、[Windows Phone 分析工具](https://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f)和 [PerfView](https://www.microsoft.com/download/details.aspx?id=28567)。  
   
- PerfView 是非常強大的免費工具，可協助您專注於深入的問題，例如磁碟 I/O、GC 事件和記憶體。  您可以擷取與效能相關的 [Windows 事件追蹤](../../../docs/framework/wcf/samples/etw-tracing.md) (ETW) 事件，並輕鬆檢視每種應用程式、處理序、堆疊和執行緒的資訊。  PerfView 顯示您的應用程式配置的記憶體數量和類型，以及哪些函式或呼叫堆疊佔用了多少記憶體配置。 如需詳細資訊，請參閱工具隨附的豐富說明主題、示範和影片 (例如 Channel 9 上的 [PerfView Tutorial](http://channel9.msdn.com/Series/PerfView-Tutorial) (PerfView 教學課程)。  
+ PerfView 是非常強大的免費工具，可協助您專注於深入的問題，例如磁碟 I/O、GC 事件和記憶體。  您可以擷取與效能相關的 [Windows 事件追蹤](../../../docs/framework/wcf/samples/etw-tracing.md) (ETW) 事件，並輕鬆檢視每種應用程式、處理序、堆疊和執行緒的資訊。  PerfView 顯示您的應用程式配置的記憶體數量和類型，以及哪些函式或呼叫堆疊佔用了多少記憶體配置。 如需詳細資訊，請參閱工具隨附的豐富說明主題、示範和影片 (例如 Channel 9 上的 [PerfView Tutorial](https://channel9.msdn.com/Series/PerfView-Tutorial) (PerfView 教學課程)。  
   
 ### <a name="fact-4-its-all-about-allocations"></a>事實 4：重點在於配置  
  您可能會認為建置回應能力佳的 .NET Framework 應用程式的重點在於演算法，例如使用快速排序取代反昇排序，但實際上卻不然。  配置記憶體才是建置回應能力佳的應用程式的最大要素，特別是當您的應用程式很龐大或處理大量資料時。  
@@ -461,13 +460,14 @@ class Compilation { /*...*/
   
 -   重點在於配置 - 這是編譯器平台小組花費最多時間提升新編譯器效能的地方。  
   
-## <a name="see-also"></a>另請參閱  
- [本主題的簡報影片](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
- [效能分析的初級開發人員指南](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
- [效能](../../../docs/framework/performance/index.md)  
- [.NET 效能祕訣](https://msdn.microsoft.com/library/ms973839.aspx)  
- [Windows Phone Performance Analysis tool 工具](https://msdn.microsoft.com/magazine/hh781024.aspx)  
- [尋找與 Visual Studio Profiler 的應用程式瓶頸](https://msdn.microsoft.com/magazine/cc337887.aspx)  
- [Channel 9 PerfView 教學課程](http://channel9.msdn.com/Series/PerfView-Tutorial)  
- [高階效能祕訣](https://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
- [在 GitHub 上的 dotnet/roslyn 存放庫](https://github.com/dotnet/roslyn)
+## <a name="see-also"></a>另請參閱
+
+- [本主題的簡報影片](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
+- [效能分析的初級開發人員指南](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
+- [效能](../../../docs/framework/performance/index.md)  
+- [.NET 效能祕訣](https://msdn.microsoft.com/library/ms973839.aspx)  
+- [Windows Phone Performance Analysis tool 工具](https://msdn.microsoft.com/magazine/hh781024.aspx)  
+- [尋找與 Visual Studio Profiler 的應用程式瓶頸](https://msdn.microsoft.com/magazine/cc337887.aspx)  
+- [Channel 9 PerfView 教學課程](https://channel9.msdn.com/Series/PerfView-Tutorial)  
+- [.NET 編譯器平台 SDK](../../csharp/roslyn-sdk/index.md)
+- [在 GitHub 上的 dotnet/roslyn 存放庫](https://github.com/dotnet/roslyn)

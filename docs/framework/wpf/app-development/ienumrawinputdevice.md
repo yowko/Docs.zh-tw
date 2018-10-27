@@ -5,11 +5,11 @@ helpviewer_keywords:
 - IEnumRAWINPUTDEVICE interface [WPF]
 ms.assetid: 88c8b389-a48b-46b9-b895-8ed7b1e26fea
 ms.openlocfilehash: e0e5a112b7444872dd74cb70bb044ae233334d2a
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49373979"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181195"
 ---
 # <a name="ienumrawinputdevice"></a>IEnumRAWINPUTDEVICE
 此介面列舉未經處理的輸入裝置，並且只供 PresentationHost.exe 使用。  
