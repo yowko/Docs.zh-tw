@@ -6,11 +6,11 @@ ms.author: wiwagn
 ms.date: 09/28/2016
 ms.assetid: a27b2ae4-154e-4b2b-b221-0c4c05185274
 ms.openlocfilehash: 4cb7ef9346a452c56d056bda63c8428a6502991f
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50037937"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50184855"
 ---
 # <a name="deploying-net-framework-applications-with-docker"></a>使用 Docker 部署 .NET Framework 應用程式
 
