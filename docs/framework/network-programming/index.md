@@ -7,14 +7,12 @@ helpviewer_keywords:
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: b949c9fd50ee4d09d7237bc14898a1b55689f2f4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 1d35951aef3692d82bdfa648df48eb8c1bca88ff
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582621"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50045122"
 ---
 # <a name="network-programming-in-the-net-framework"></a>以 .NET Framework 進行網路程式設計
 Microsoft .NET Framework 提供有層次、可擴充和網際網路服務的 Managed 實作，可以迅速而簡易地整合到您的應用程式。 您的網路應用程式可以建置在可外掛式通訊協定上，以便自動利用新的網際網路通訊協定，或者也可以使用 Windows Socket 介面的 Managed 實作，以便搭配使用通訊端層級上的網路。  
@@ -43,7 +41,7 @@ Microsoft .NET Framework 提供有層次、可擴充和網際網路服務的 Man
  說明如何使用網路追蹤以取得有關方法叫用及 Managed 應用程式所產生的網路流量的資訊。  
   
  [網路應用程式的快取管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- 說明如何針對使用 <xref:System.Net.WebClient?displayProperty=nameWithType>、<xref:System.Net.WebRequest?displayProperty=nameWithType> 和 <xref:System.Net.HttpWebRequest?displayProperty=nameWithType> 類別的應用程式來使用快取。  
+ 說明如何針對使用 <xref:System.Net.WebClient?displayProperty=nameWithType>、 <xref:System.Net.WebRequest?displayProperty=nameWithType>和 <xref:System.Net.HttpWebRequest?displayProperty=nameWithType> 類別的應用程式來使用快取。  
   
  [網路程式設計的安全性](../../../docs/framework/network-programming/security-in-network-programming.md)  
  描述如何使用標準網際網路安全性和驗證技術。  
@@ -73,13 +71,13 @@ Microsoft .NET Framework 提供有層次、可擴充和網際網路服務的 Man
  說明在版本 3.5 中所新增的支援，以支援建置在 PNRP 上的對等協同作業。 這些新功能是由 <xref:System.Net.PeerToPeer.Collaboration?displayProperty=nameWithType> 命名空間所支援。  
   
  [3.5 SP1 版中 HttpWebRequest 之 NTLM 驗證的變更](../../../docs/framework/network-programming/changes-to-ntlm-authentication-for-httpwebrequest-in-version-3-5-sp1.md)  
- 說明在版本 3.5 SP1 中所做的安全性變更，這些變更會影響 <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>、<xref:System.Net.HttpListener?displayProperty=nameWithType>、<xref:System.Net.Security.NegotiateStream?displayProperty=nameWithType> 以及 System.Net 命名空間中的相關類別處理整合式 Windows 驗證的方式。  
+ 說明在版本 3.5 SP1 中所做的安全性變更，這些變更會影響 <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>、 <xref:System.Net.HttpListener?displayProperty=nameWithType>、 <xref:System.Net.Security.NegotiateStream?displayProperty=nameWithType>以及 System.Net 命名空間中的相關類別處理整合式 Windows 驗證的方式。  
   
  [具有延伸保護的整合式 Windows 驗證](../../../docs/framework/network-programming/integrated-windows-authentication-with-extended-protection.md)  
- 說明延伸保護的增強功能，這些增強功能會影響 <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>、<xref:System.Net.HttpListener?displayProperty=nameWithType>、<xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>、<xref:System.Net.Security.SslStream?displayProperty=nameWithType>、<xref:System.Net.Security.NegotiateStream?displayProperty=nameWithType> 以及 <xref:System.Net?displayProperty=nameWithType> 和相關命名空間中的相關類別處理整合式 Windows 驗證的方式。  
+ 說明延伸保護的增強功能，這些增強功能會影響 <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>、 <xref:System.Net.HttpListener?displayProperty=nameWithType>、 <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>、 <xref:System.Net.Security.SslStream?displayProperty=nameWithType>、 <xref:System.Net.Security.NegotiateStream?displayProperty=nameWithType>以及 <xref:System.Net?displayProperty=nameWithType> 和相關命名空間中的相關類別處理整合式 Windows 驗證的方式。  
   
  [使用 IPv6 和 Teredo 的 NAT 周遊](../../../docs/framework/network-programming/nat-traversal-using-ipv6-and-teredo.md)  
- 說明 <xref:System.Net?displayProperty=nameWithType>、<xref:System.Net.NetworkInformation?displayProperty=nameWithType> 和 <xref:System.Net.Sockets?displayProperty=nameWithType> 命名空間所新增的增強功能，以支援使用 IPv6 和 Teredo 進行 NAT 周遊。  
+ 說明 <xref:System.Net?displayProperty=nameWithType>、 <xref:System.Net.NetworkInformation?displayProperty=nameWithType>和 <xref:System.Net.Sockets?displayProperty=nameWithType> 命名空間所新增的增強功能，以支援使用 IPv6 和 Teredo 進行 NAT 周遊。  
   
  [Windows 市集應用程式的網路隔離](../../../docs/framework/network-programming/network-isolation-for-windows-store-apps.md)  
  說明當 <xref:System.Net>、 <xref:System.Net.Http>和 <xref:System.Net.Http.Headers> 命名空間中的類別用於 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式時，網路隔離的影響。  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: fba595cca4d96fc9cd0f0966f45d1668181b2ec9
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: 1365b3e0dbc2ae095698b66f2b527301fe474a00
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321401"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454430"
 ---
 # <a name="interfaces-c-programming-guide"></a>介面 (C# 程式設計手冊)
 
@@ -36,7 +36,7 @@ ms.locfileid: "46321401"
   
 當類別或結構實作介面時，類別或結構必須提供介面定義之所有成員的實作。 介面本身不提供功能讓類別或結構可以如同繼承基底類別功能一般繼承。 不過，如果基底類別實作介面，則衍生自基底類別的任何類別都會繼承該實作。  
   
-下列範例示範 IEquatable<T\> 介面的實作。 實作類別 `Car` 必須提供 <xref:System.IEquatable%601.Equals%2A> 方法的實作。  
+下列範例會示範 <xref:System.IEquatable%601> 介面的實作。 實作類別 `Car` 必須提供 <xref:System.IEquatable%601.Equals%2A> 方法的實作。  
   
 [!code-csharp[csProgGuideInheritance#48](../classes-and-structs/codesnippet/CSharp/interfaces_2.cs)]  
   

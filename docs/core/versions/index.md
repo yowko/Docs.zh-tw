@@ -4,12 +4,12 @@ description: 了解 .NET Core 的版本控制運作方式。
 author: bleroy
 ms.author: mairaw
 ms.date: 07/26/2018
-ms.openlocfilehash: 0ce64aa266f8e1de2c2cefd366bcbfa3f5cfc8f0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9f77709abf59d5346bf5e3c6f512cfabbf9e50de
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518598"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047432"
 ---
 # <a name="net-core-versioning"></a>.NET Core 版本控制
 
@@ -43,7 +43,7 @@ SDK 版本號碼的第三個位置同時傳達次要與修補號碼。 次要版
 
 ## <a name="semantic-versioning"></a>語意版本控制
 
-.NET Core *執行階段* 大致上遵循[語意式版本控制 (SemVer)](http://semver.org/)並採用 `MAJOR.MINOR.PATCH` 版本控制，使用版本號碼的不同部分來描述變更的程度和類型。
+.NET Core *執行階段* 大致上遵循[語意式版本控制 (SemVer)](https://semver.org/)並採用 `MAJOR.MINOR.PATCH` 版本控制，使用版本號碼的不同部分來描述變更的程度和類型。
 
 ```
 MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]

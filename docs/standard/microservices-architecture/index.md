@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 微服務是�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 38f638b76a38c470daf51cb7be8566feb4b6362f
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7113a229726368a65f4372b14c28da1165c22eee
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121359"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047694"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET 微服務：容器化 .NET 應用程式的架構
 
@@ -27,9 +27,9 @@ ms.locfileid: "49121359"
 
 * 複製/派生 [GitHub 上的 eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) 參考應用程式
  
-* 觀賞 [Channel 9 上的介紹影片](http://aka.ms/microservices-video)
+* 觀賞 [Channel 9 上的介紹影片](https://aka.ms/microservices-video)
 
-* 立即了解[微服務架構](http://aka.ms/MicroservicesArchitecture)
+* 立即了解[微服務架構](https://aka.ms/MicroservicesArchitecture)
 
 ## <a name="introduction"></a>簡介
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 05c8ad4436cbbe5659c66f16692119fac6593b7f
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 4452ad2445f81659d04bca3d64885148895aeb88
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372027"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50046745"
 ---
 # <a name="file-and-stream-io"></a>檔案和資料流 I/O
 檔案和資料流 I/O (輸入/輸出) 是指對儲存媒體來回傳輸資料。 在 .NET Framework 中，`System.IO` 命名空間包含能夠以同步和非同步方式在資料流和檔案上進行讀取和寫入的類型。 這些命名空間還包含對檔案進行壓縮和解壓縮的類型，以及透過管道和序列埠進行通訊的類型。  
@@ -122,7 +122,7 @@ ms.locfileid: "49372027"
 ## <a name="isolated-storage"></a>隔離儲存區  
  隔離儲存區 (Isolated Storage) 為資料儲存機制，藉著定義標準化方式，將程式碼與儲存的資料產生關聯，以提供隔離和安全。 儲存區提供依使用者、組件和 (選擇性) 網域隔離的虛擬檔案系統。 隔離儲存區在應用程式未具備存取使用者檔案的權限時特別實用。 您可以藉由電腦的安全性原則所控制的方式儲存應用程式的設定或檔案。  
   
- 隔離儲存區 (Isolated Storage) 不適用於 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式，請改為使用 <xref:Windows.Storage?displayProperty=nameWithType> 命名空間中的應用程式資料類別。 如需詳細資訊，請參閱[應用程式資料](/previous-versions/windows/apps/hh464917%28v=win.10%29)。  
+ 隔離儲存區 (Isolated Storage) 不適用於 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式，請改為使用 <xref:Windows.Storage?displayProperty=nameWithType> 命名空間中的應用程式資料類別。 如需詳細資訊，請參閱[應用程式資料](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29)。  
   
  以下是實作隔離儲存區時經常使用的類別：  
   

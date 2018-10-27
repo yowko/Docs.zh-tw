@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99da0b0367270c4cea470a23ea97f0165a712a9b
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 6d241f0f0c10be4a73c7ac55930e5dd24ef0b1e2
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349065"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453131"
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework 使用者入門
 
@@ -89,7 +89,7 @@ ms.locfileid: "49349065"
 
 ## <a name="see-also"></a>另請參閱
 
-[.NET Framework 指南](../../../docs/framework/index.md)   
-[新增功能](../../../docs/framework/whats-new/index.md)   
-[.NET API 瀏覽器](/dotnet/api/)   
-[開發指南](../../../docs/framework/development-guide.md)
+- [.NET Framework 指南](../../../docs/framework/index.md)   
+- [新功能](../../../docs/framework/whats-new/index.md)   
+- [.NET API 瀏覽器](/dotnet/api/)   
+- [開發指南](../../../docs/framework/development-guide.md)
