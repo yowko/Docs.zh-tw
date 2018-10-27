@@ -3,11 +3,11 @@ title: 安全存取資料
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
 ms.openlocfilehash: e5bb96a091dcd64f12d086d864643d00c34d8f17
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372456"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185936"
 ---
 # <a name="secure-data-access"></a>安全存取資料
 若要撰寫安全的 ADO.NET 程式碼，您必須了解基礎資料存放區或資料庫中可用的安全性機制。 您也需要考量您的應用程式所可能包含的其他功能或元件的安全性隱含。  

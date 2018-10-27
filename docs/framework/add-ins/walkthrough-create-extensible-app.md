@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 694a33c5-a040-450d-aed5-ac49fc88ce61
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d2aaeaffaf3abbe1e8efcdb57d40e6ae60f89b5
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 63780583d035d6fab6b3a79424857b82a910ef09
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591944"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183889"
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>逐步解說：建立可延伸應用程式
 本逐步解說描述如何建立增益集執行簡單的計算機功能的管線。 它不會示範真實世界的案例;相反地，它會示範管線和如何增益集可以提供服務主機的基本的功能。  
@@ -61,7 +61,7 @@ ms.locfileid: "45591944"
   
 1.  在 Visual Studio 中建立新的專案，名為`Calc1Contract`。 它的基礎**類別庫**範本。  
   
-2.  將方案命名為`CalculatorV1`。  
+2.  將方案命名為 `CalculatorV1`。  
   
 ## <a name="creating-the-pipeline-directory-structure"></a>建立管線目錄結構  
  增益集模型要求管線區段組件放在指定的目錄結構。 如需有關管線結構的詳細資訊，請參閱[管線開發需求](https://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)。  
@@ -195,7 +195,7 @@ ms.locfileid: "45591944"
   
  在此管線中，增益集提供服務主機和類型的流程從增益集主應用程式。 由於沒有型別從主機到增益集，您不必包含檢視至合約配接器。  
   
- 若要實作存留期管理，請使用<xref:System.AddIn.Pipeline.ContractHandle>將存留期語彙基元新增至合約的物件。 為了讓工作的存留期管理，您必須保持此控制代碼的參考。 套用權杖之後，任何其他的程式設計需要不，因為增益集系統可處置物件時不會再使用，讓它們可供記憶體回收。 如需詳細資訊，請參閱 <<c0> [ 存留期管理](https://msdn.microsoft.com/library/57a9c87e-394c-4fef-89f2-aa4223a2aeb5)。  
+ 若要實作存留期管理，請使用<xref:System.AddIn.Pipeline.ContractHandle>將存留期語彙基元新增至合約的物件。 為了讓工作的存留期管理，您必須保持此控制代碼的參考。 套用權杖之後，任何其他的程式設計需要不，因為增益集系統可處置物件時不會再使用，讓它們可供記憶體回收。 如需詳細資訊，請參閱 [生命週期管理](https://msdn.microsoft.com/library/57a9c87e-394c-4fef-89f2-aa4223a2aeb5)。  
   
 #### <a name="to-create-the-host-side-adapter"></a>若要建立主應用程式端配接器  
   
@@ -355,8 +355,8 @@ ms.locfileid: "45591944"
 4.  型別**結束**然後按**Enter**鍵以關閉應用程式。  
   
 ## <a name="see-also"></a>另請參閱  
- [逐步解說： 啟用主應用程式變更的回溯相容性](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
- [主機和增益集之間的逐步解說： 將集合](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
- [管線開發需求](https://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
- [合約、 檢視和配接器](https://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)  
- [管線開發](../../../docs/framework/add-ins/pipeline-development.md)
+- [逐步解說： 啟用主應用程式變更的回溯相容性](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+-  [主機和增益集之間的逐步解說： 將集合](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
+-  [管線開發需求](https://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
+-  [合約、 檢視和配接器](https://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)  
+-  [管線開發](../../../docs/framework/add-ins/pipeline-development.md)

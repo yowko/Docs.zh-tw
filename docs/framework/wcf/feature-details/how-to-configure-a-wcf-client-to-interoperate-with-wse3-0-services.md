@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3dadd7f1-d207-4ea5-a73b-3e8aa44407f8
-ms.openlocfilehash: cf50cc9a095f091db6ec7a627536cf1c23a11e70
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 5cbe982049d1df6e2c714ca0b63de0db7577452e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122802"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187305"
 ---
 # <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>HOW TO：將 WCF 用戶端設為與 WSE3.0 服務交互操作
 當 WCF 用戶端會設定為使用 August 2004 版本的 Ws-addressing 規格，Windows Communication Foundation (WCF) 用戶端會將與 Web Services Enhancements 3.0 for Microsoft.NET (WSE) 服務的連線層級相容性。  
@@ -25,7 +25,7 @@ ms.locfileid: "49122802"
   
 2.  建立類別，表示可與 WSE 3.0 Web 服務通訊的繫結。  
   
-     下列類別是屬於[與 WSE 交互操作](https://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41)範例。  
+     下列類別是屬於[與 WSE 交互操作](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)範例。  
   
     1.  建立從 <xref:System.ServiceModel.Channels.Binding> 類別衍生的類別。  
   
@@ -63,5 +63,5 @@ ms.locfileid: "49122802"
 [!code-vb[c_WCFClientToWSEService#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/client.vb#0)]  
   
 ## <a name="see-also"></a>另請參閱  
-* <xref:System.ServiceModel.Channels.Binding>  
-* [與 WSE 交互操作](https://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41)
+ <xref:System.ServiceModel.Channels.Binding>  
+ [與 WSE 交互操作](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)

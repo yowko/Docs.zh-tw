@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Message Contract
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
-ms.openlocfilehash: 23ab534ef31773efc69b6a68e73ec30bde4f6e61
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9f5a7eff25fb202ba84f0bd49893748b507326fd
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502655"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188166"
 ---
 # <a name="default-message-contract"></a>預設訊息合約
 預設訊息合約範例會示範一個服務，在這個服務中可以對服務作業來回傳遞自訂的使用者定義訊息。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)會實作計算機介面做為具類型的服務。 而不是加法、 減法、 乘法和除法中使用的個別服務作業[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)，此範例會傳遞包含運算元和運算子，並傳回的自訂訊息算術計算的結果。  
@@ -21,7 +21,7 @@ ms.locfileid: "43502655"
   
  在服務中，會定義單一服務作業，而這個作業會接受並傳回型別為 `MyMessage` 的自訂訊息。 雖然這個範例中的要求和回應訊息型別相同，但在必要時一定是不同的訊息合約。  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
 {  
@@ -31,9 +31,9 @@ public interface ICalculator
 }  
 ```  
   
- 自訂訊息 `MyMessage` 是定義在以 <xref:System.ServiceModel.MessageContractAttribute>、<xref:System.ServiceModel.MessageHeaderAttribute> 和 <xref:System.ServiceModel.MessageBodyMemberAttribute> 屬性註解的類別中。 這個範例中只使用了第三個建構函式。 使用訊息合約可讓您完全控制 SOAP 訊息。 在這個範例中，會使用 <xref:System.ServiceModel.MessageHeaderAttribute> 屬性，將 `Operation` 放在 SOAP 標頭中。 因為運算元 `N1`、`N2` 和 `Result` 都套用了 <xref:System.ServiceModel.MessageBodyMemberAttribute> 屬性，所以會出現在 SOAP 本文中。  
+ 自訂訊息 `MyMessage` 是定義在以 <xref:System.ServiceModel.MessageContractAttribute>、<xref:System.ServiceModel.MessageHeaderAttribute> 和 <xref:System.ServiceModel.MessageBodyMemberAttribute> 屬性標註的類別中。 這個範例中只使用了第三個建構函式。 使用訊息合約可讓您完全控制 SOAP 訊息。 在這個範例中，會使用 <xref:System.ServiceModel.MessageHeaderAttribute> 屬性，將 `Operation` 放在 SOAP 標頭中。 因為運算元 `N1`、`N2` 和 `Result` 都套用了 <xref:System.ServiceModel.MessageBodyMemberAttribute> 屬性，所以會出現在 SOAP 本文中。  
   
-```  
+```csharp
 [MessageContract]  
 public class MyMessage  
 {  
@@ -99,7 +99,7 @@ public class MyMessage
   
  實作類別包含 `Calculate` 服務作業的程式碼。 `CalculateService` 類別會從要求訊息中取得運算元和運算子，然後建立包含所要求之計算結果的回應訊息，如下列範例程式碼所示。  
   
-```  
+```csharp
 // Service class which implements the service contract.  
 public class CalculatorService : ICalculator  
 {  
@@ -133,29 +133,31 @@ public class CalculatorService : ICalculator
   
  用戶端產生的用戶端程式碼經由[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具。 必要時，這個工具會自動在產生的用戶端程式碼中建立訊息合約類型。 您也可以指定 `/messageContract` 命令選項來強制產生訊息合約。  
   
-```  
+```console  
 svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" /o:client\generatedClient.cs http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
  下列範例程式碼示範使用 `MyMessage` 訊息的用戶端。  
   
-```  
+```csharp
 // Create a client with given client endpoint configuration  
 CalculatorClient client = new CalculatorClient();  
   
 // Perform addition using a typed message.  
   
-MyMessage request = new MyMessage();  
-request.N1 = 100D;  
-request.N2 = 15.99D;  
-request.Operation = "+";  
+MyMessage request = new MyMessage() 
+                    {  
+                        N1 = 100D,  
+                        N2 = 15.99D,  
+                        Operation = "+"  
+                    };
 MyMessage response = ((ICalculator)client).Calculate(request);  
 Console.WriteLine("Add({0},{1}) = {2}", request.N1, request.N2, response.Result);  
 ```  
   
  當您執行範例時，計算過程會顯示在用戶端主控台視窗中。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

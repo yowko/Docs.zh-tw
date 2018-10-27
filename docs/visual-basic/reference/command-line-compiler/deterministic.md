@@ -5,14 +5,12 @@ helpviewer_keywords:
 - deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ffb1d27f614afc3b07f9d663831fc2071535236f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dde79ca9ce6e77102c05fce7c507784457af4a4b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653204"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187932"
 ---
 # <a name="-deterministic"></a>-deterministic
 

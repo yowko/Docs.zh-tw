@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 154f38880225fb420f9944f336ff885bd116e2c3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9bf2568c8c18f8f6d18c445e802cc72df18fb8c4
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743767"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191139"
 ---
 # <a name="app-settings-schema"></a>應用程式設定結構描述
 
@@ -26,7 +26,7 @@ ms.locfileid: "32743767"
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<clear>**](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md)   
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<remove>**](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md)
 
-| 項目 | 描述 |
+| 元素 | 描述 |
 | ------- | ----------- |
 | [**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | 包含 **\<add>**、**\<clear>** 和 **\<remove>** 標記以控制應用程式設定。 具有選擇性 **file** 屬性。 |
 | [**\<add>**](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md) | 定義設定。 **\<appSettings>** 的子系。 需要 **key** 和 **value** 屬性。 |
@@ -72,5 +72,5 @@ ms.locfileid: "32743767"
 
 ## <a name="see-also"></a>另請參閱
 
-[應用程式設定概觀](~/docs/framework/winforms/advanced/application-settings-overview.md)   
-[應用程式設定架構](~/docs/framework/winforms/advanced/application-settings-architecture.md)
+- [應用程式設定概觀](~/docs/framework/winforms/advanced/application-settings-overview.md)   
+- [應用程式設定架構](~/docs/framework/winforms/advanced/application-settings-architecture.md)

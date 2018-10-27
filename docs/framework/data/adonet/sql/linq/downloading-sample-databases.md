@@ -1,26 +1,18 @@
 ---
 title: 取得範例資料庫的 ADO.NET 程式碼範例
 description: 下載範例資料庫中的 ADO.NET 文件，以及 SQL Server 和管理工具的程式碼範例使用
-ms.date: 10/12/2018
+ms.date: 10/18/2018
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-ms.openlocfilehash: 75ae1895d683b669f51b33130fc2f47010e39814
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 9779300288135cb9332a028d547ce55a07e89471
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347496"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188387"
 ---
 # <a name="get-the-sample-databases-for-adonet-code-samples"></a>取得範例資料庫的 ADO.NET 程式碼範例
 
 許多範例和逐步解說中的[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文件使用範例資料庫和 SQL Server Express。 您可以從 Microsoft 下載這些免費的產品。
-
-## <a name="get-the-adventureworks-sample-database"></a>取得 AdventureWorks 範例資料庫
-
-從下列 GitHub 儲存機制下載 AdventureWorks 範例資料庫：
-
-[AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
-
-下載其中一個資料庫備份之後 (\*.bak) 檔案，使用 SQL Server Management Studio (SSMS) 將備份還原到 SQL Server 的執行個體。 請參閱[取得 SQL Server Management Studio](#get_ssms)。
 
 ## <a name="get-the-northwind-sample-database"></a>取得 Northwind 範例資料庫
 
@@ -30,11 +22,15 @@ ms.locfileid: "49347496"
 
 下載檔案之後，連按兩下該檔案以解壓縮資料庫與指令碼。 根據預設，檔案會安裝在資料夾`<drive>:\SQL Server 2000 Sample Databases`。
 
-您可以使用 Northwind 資料庫之前，您必須執行下列事項之一：
+您可以使用 Northwind 資料庫之前，您必須使用 重新建立資料庫的 SQL Server 執行個體上[SQL Server Management Studio](#get_ssms)或類似工具來執行`instnwnd.sql`安裝資料夾中的指令碼檔案。
 
-- 重新建立資料庫的 SQL Server 執行個體上執行`instnwnd.sql`安裝資料夾中的指令碼檔案。
+## <a name="get-the-adventureworks-sample-database"></a>取得 AdventureWorks 範例資料庫
 
-- 附加`northwnd.mdf`與其對應的檔案`*.ldf`的 SQL Server 執行個體的記錄檔。
+從下列 GitHub 儲存機制下載 AdventureWorks 範例資料庫：
+
+[AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
+
+下載其中一個資料庫備份之後 (\*.bak) 檔案，使用 SQL Server Management Studio (SSMS) 將備份還原到 SQL Server 的執行個體。 請參閱[取得 SQL Server Management Studio](#get_ssms)。
 
 ## <a name="get_sql"></a> 取得 SQL Server Express
 
@@ -42,7 +38,7 @@ SQL Server Express 是免費的入門級的 SQL Server 版本，您可以重新�
   
 [SQL Server Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express)
 
-如果您使用[Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)，SQL Server Express LocalDB 納入 Community edition，以及專業和更高版本。  
+如果您使用[Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)，SQL Server Express LocalDB 納入免費的 Community edition，以及專業和更高版本。  
 
 ## <a name="get_ssms"></a> 取得 SQL Server Management Studio
 如果您想要檢視或修改的資料庫，您已下載，您可以使用 SQL Server Management Studio (SSMS)。 下載 SSMS，從下列頁面：

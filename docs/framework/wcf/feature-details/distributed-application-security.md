@@ -5,13 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-author: BrucePerlerMS
-ms.openlocfilehash: dfefa94db2bd286cb92a7fe09e5c4addb52ba8c8
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 1a601c03c8644f3f4b543864a774a35820c7d6bd
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47090538"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50189624"
 ---
 # <a name="distributed-application-security"></a>分散式應用程式安全性
 Windows Communication Foundation (WCF) 安全性分為三個主要的功能區域： 傳輸安全性、 存取控制和稽核。 傳輸安全性提供完整性、機密性與驗證。 傳輸安全性是由下列其中一項提供：傳輸安全性、訊息安全性或 `TransportWithMessageCredential`。  

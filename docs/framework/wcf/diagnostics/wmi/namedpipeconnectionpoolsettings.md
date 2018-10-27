@@ -2,19 +2,19 @@
 title: NamedPipeConnectionPoolSettings
 ms.date: 03/30/2017
 ms.assetid: 079bccb8-54b5-4436-a43d-5567763f72ce
-ms.openlocfilehash: 3548a1f19672a98ad0fc81eec15d5be29e5170bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 77d8403947d341ea2efcef98bbf166f94f75f31f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486274"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188725"
 ---
 # <a name="namedpipeconnectionpoolsettings"></a>NamedPipeConnectionPoolSettings
 NamedPipeConnectionPoolSettings  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```csharp
 class NamedPipeConnectionPoolSettings  
 {  
   string GroupName;  

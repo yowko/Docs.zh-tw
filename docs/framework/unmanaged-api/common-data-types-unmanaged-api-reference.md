@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c359c9b14452e82b7fd2425409b373ead430d3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 561a6a5a8e778ab59a0d0f1f7f5327104ead2c79
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407075"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185530"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>常見資料類型 (Unmanaged API 參考)
 本主題針對 C/C++ `typedef` 陳述式所定義的 .NET Framework，列出 Unmanaged API 所使用的簡單資料類型。 這些資料類型通常是 C/C++ 基本資料類型的別名。 一般而言，這些資料類型的值為不透明；因此，會由特定函式或方法傳回這些值，如此一來就能在未經修改的情況下將這些值傳遞至其他函式或方法。  
@@ -33,8 +33,8 @@ ms.locfileid: "33407075"
 |ObjectID|`typedef UINT_PTR ObjectID;`|corprof.h|物件的識別項。|  
 |ProcessID|`typedef UINT_PTR ProcessID;`|corprof.h|Managed 處理序的識別項。|  
 |ReJITID|`typedef UINT_PTR ReJITID;`|corprof.h|JIT 編譯的函式識別項。|  
-|TASKID|`typedef UINT64 TASKID;`|cordebug.h、mscoree.h|識別碼[ICLRTask](../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)執行個體。|  
+|TASKID|`typedef UINT64 TASKID;`|cordebug.h、mscoree.h|識別項[ICLRTask](../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)執行個體。|  
 |ThreadID|`typedef UINT_PTR ThreadID;`|corprof.h|Managed 執行緒的識別項。|  
   
 ## <a name="see-also"></a>另請參閱  
- [Unmanaged API 參考](../../../docs/framework/unmanaged-api/index.md)
+- [Unmanaged API 參考](../../../docs/framework/unmanaged-api/index.md)

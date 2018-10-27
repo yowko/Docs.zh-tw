@@ -2,19 +2,19 @@
 title: TcpConnectionPoolSettings
 ms.date: 03/30/2017
 ms.assetid: 19acfba3-c057-4dbc-bac7-8674d7844d83
-ms.openlocfilehash: 4a30ad3ddfef5d39942345b0e0d5274eeff8e596
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f9e1c043579f632f16a7cf36bf34c2467a743e47
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485917"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50189559"
 ---
 # <a name="tcpconnectionpoolsettings"></a>TcpConnectionPoolSettings
 TcpConnectionPoolSettings  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```csharp
 class TcpConnectionPoolSettings  
 {  
   string GroupName;  

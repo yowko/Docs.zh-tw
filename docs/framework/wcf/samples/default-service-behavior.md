@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, defaults
 - Default Service Behavior Sample [Windows Communication Foundation]
 ms.assetid: 442d4f71-c64e-4c62-816a-a66c38e7d3ec
-ms.openlocfilehash: 8583c74f85d9638313db1779610c0f6dac9cfbe5
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2c49c28d99bb3d300fd4589a088b2f086bdfd45d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857754"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50184474"
 ---
 # <a name="default-service-behavior"></a>預設服務行為
 這個範例會示範如何設定服務行為設定。 此樣本根據[快速入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，它會實作`ICalculator`服務合約。 這個範例會使用 <xref:System.ServiceModel.ServiceBehaviorAttribute> 和 <xref:System.ServiceModel.OperationBehaviorAttribute> 屬性明確地定義服務行為與作業行為。 您可以在組態檔中設定行為，也可以在程式碼中以命令方式設定 (如這個範例所示)。  
@@ -22,7 +22,7 @@ ms.locfileid: "43857754"
   
  此服務類別會使用 <xref:System.ServiceModel.ServiceBehaviorAttribute> 和 <xref:System.ServiceModel.OperationBehaviorAttribute> 指定行為，如下列程式碼範例所示。 所有指定的值都是預設值。  
   
-```  
+```csharp
 [ServiceBehavior(  
     AutomaticSessionShutdown=true,  
     ConcurrencyMode=ConcurrencyMode.Single,  
@@ -52,7 +52,7 @@ public class CalculatorService : ICalculator
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.AutomaticSessionShutdown%2A>|在用戶端要求時自動關閉工作階段。|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>|指定每個服務執行個體的並行模式。|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>|指定執行個體內容模式。|  
-|<xref:System.ServiceModel.ServiceBehaviorAttribute.UseSynchronizationContext%2A>|判定是否要使用所提供的同步化內容，如果有設定的話。 當您想要控制是否要在 Windows Form 應用程式中使用 `WindowsFormsSynchronizationContext` 時，便可使用這項功能。|  
+|<xref:System.ServiceModel.ServiceBehaviorAttribute.UseSynchronizationContext%2A>|判定是否要使用所提供的同步化內容，如果有設定的話。 當您想要控制是否要在 Windows Forms 應用程式中使用 `WindowsFormsSynchronizationContext` 時，便可使用這項功能。|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A>|判定一般未處理的執行例外狀況是否要轉換為 `Fault<string>`，並且當作錯誤訊息傳送。|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A>|指定異動的隔離等級。|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.ValidateMustUnderstand%2A>|判斷未預期的訊息標頭是否會造成錯誤狀況。|  
@@ -68,7 +68,7 @@ public class CalculatorService : ICalculator
   
  當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。 呼叫之間發生延遲是因為在服務作業中呼叫 `System.Threading.Thread.Sleep()`。 其他行為範例會更詳細說明這些行為。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

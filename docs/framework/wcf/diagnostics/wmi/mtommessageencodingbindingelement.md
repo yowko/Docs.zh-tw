@@ -3,11 +3,11 @@ title: MtomMessageEncodingBindingElement
 ms.date: 03/30/2017
 ms.assetid: 4a9c6c3d-e561-4b2d-a693-7e84bdd3534a
 ms.openlocfilehash: 49a640a666131491366646d6d486d25a515e35bf
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49373428"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185702"
 ---
 # <a name="mtommessageencodingbindingelement"></a>MtomMessageEncodingBindingElement
 MtomMessageEncodingBindingElement  

@@ -10,14 +10,12 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: d0da0fd2edae4687ea80b4a23cc82a25ead9cb7b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2f787206c503c047a34383e12c5676296e39c1fe
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208577"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190745"
 ---
 # <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;移除&gt;webRequestModules （網路設定） 的項目
 移除應用程式自訂的 Web 要求模組。  
@@ -56,13 +54,14 @@ ms.locfileid: "47208577"
 ## <a name="remarks"></a>備註  
  `remove`項目會移除已註冊的 Web 要求模組指定的 URI 前置詞。  
   
- 值`prefix`屬性應為有效的 URI，例如，「 http 」 的前置字元或 「`http://www.contoso.com` "。  
+ 值`prefix`屬性應為有效的 URI-前置字元，例如"`http`"，或 「`http://www.contoso.com`"。  
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="example"></a>範例  
- 下列範例會移除現有的 Web 要求模組的 HTTP，並接著會註冊新的自訂 Web 要求模組針對至 www.contoso.com 的 HTTP 要求。  
+
+下列範例會移除現有的 Web 要求模組的 HTTP，然後註冊新的自訂 Web 要求模組的 HTTP 要求`www.contoso.com`。
   
 ```xml  
 <configuration>  
@@ -79,5 +78,5 @@ ms.locfileid: "47208577"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Net.WebRequest>  
- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.WebRequest>  
+- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

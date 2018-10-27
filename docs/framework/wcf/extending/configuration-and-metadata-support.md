@@ -2,12 +2,12 @@
 title: 組態與中繼資料支援
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
-ms.openlocfilehash: d316e373177d86b7ba2b715f29fe3dace9082e8b
-ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
+ms.openlocfilehash: 65c826c909496a9efeb99801142eb49e4f92d3bc
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37140147"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183486"
 ---
 # <a name="configuration-and-metadata-support"></a>組態與中繼資料支援
 這個主題描述如何啟用繫結和繫結項目的組態與中繼資料支援。  
@@ -23,15 +23,15 @@ ms.locfileid: "37140147"
   
 -   識別要插入並設定繫結或繫結項目的 WSDL 和原則判斷提示。  
   
- 如需建立使用者定義的繫結和繫結項目資訊，請參閱[Creating User-Defined 繫結](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)和[建立 BindingElement](../../../../docs/framework/wcf/extending/creating-a-bindingelement.md)分別。  
+ 如需建立使用者定義的繫結和繫結項目資訊，請參閱[Creating User-Defined 繫結](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)並[建立 BindingElement](../../../../docs/framework/wcf/extending/creating-a-bindingelement.md)分別。  
   
 ## <a name="adding-configuration-support"></a>新增組態支援  
  若要啟用通道的組態檔支援，您必須實作兩個組態區段，其中一個是 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType>，它會啟用繫結項目的組態支援；而另一個是 <xref:System.ServiceModel.Configuration.StandardBindingElement?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602?displayProperty=nameWithType>，它會啟用繫結的組態支援。  
   
- 若要這樣做更簡單的方法是使用[ConfigurationCodeGenerator](../../../../docs/framework/wcf/samples/configurationcodegenerator.md)範例工具，以產生您的繫結和繫結項目組態程式碼。  
+ 若要這樣做更簡單的方法是使用[ConfigurationCodeGenerator](../../../../docs/framework/wcf/samples/configurationcodegenerator.md)範例工具，以產生繫結和繫結項目組態程式碼。  
   
 ### <a name="extending-bindingelementextensionelement"></a>延伸 BindingElementExtensionElement  
- 下列程式碼範例取自[傳輸： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例。 `UdpTransportElement` 是 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>，它會將 `UdpTransportBindingElement` 公開至組態系統。 範例會使用一些基本的覆寫，定義組態區段名稱、繫結項目的型別，以及如何建立繫結項目。 然後使用者可以在組態檔中登錄延伸區段，如同下列所示。  
+ 下列範例程式碼取自[傳輸： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例。 `UdpTransportElement` 是 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>，它會將 `UdpTransportBindingElement` 公開至組態系統。 範例會使用一些基本的覆寫，定義組態區段名稱、繫結項目的型別，以及如何建立繫結項目。 然後使用者可以在組態檔中登錄延伸區段，如同下列所示。  
   
 ```xml  
 <configuration>  
@@ -62,9 +62,9 @@ ms.locfileid: "37140147"
 ```  
   
 ### <a name="adding-configuration-for-a-binding"></a>新增繫結組態  
- 區段 `SampleProfileUdpBindingCollectionElement` 是 <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602>，它會將 `SampleProfileUdpBinding` 公開至組態系統。 大量實作會委派至衍生自 `SampleProfileUdpBindingConfigurationElement` 的 <xref:System.ServiceModel.Configuration.StandardBindingElement>。 `SampleProfileUdpBindingConfigurationElement`某些屬性會對應至屬性上`SampleProfileUdpBinding`，並從對應的函式`ConfigurationElement`繫結。 最後，在 `OnApplyConfiguration` 中會覆寫 `SampleProfileUdpBinding` 方法，如同下列範例程式碼所示。  
+ 區段 `SampleProfileUdpBindingCollectionElement` 是 <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602>，它會將 `SampleProfileUdpBinding` 公開至組態系統。 大量實作會委派至衍生自 `SampleProfileUdpBindingConfigurationElement` 的 <xref:System.ServiceModel.Configuration.StandardBindingElement>。 `SampleProfileUdpBindingConfigurationElement`的屬性會對應至屬性上`SampleProfileUdpBinding`，並從對應的函式`ConfigurationElement`繫結。 最後，在 `OnApplyConfiguration` 中會覆寫 `SampleProfileUdpBinding` 方法，如同下列範例程式碼所示。  
   
-```  
+```csharp 
 protected override void OnApplyConfiguration(string configurationName)  
 {  
             if (binding == null)  
@@ -119,15 +119,15 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="adding-metadata-support-for-a-binding-element"></a>新增繫結項目的中繼資料支援  
- 若要將通道整合至中繼資料系統，通道必須同時支援匯入與匯出原則。 這允許工具，例如[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)來產生用戶端的繫結項目。  
+ 若要將通道整合至中繼資料系統，通道必須同時支援匯入與匯出原則。 這可讓工具這類[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)產生用戶端的繫結項目。  
   
 ### <a name="adding-wsdl-support"></a>新增 WSDL 支援  
- 繫結中的傳輸繫結項目是負責匯出與匯入中繼資料中的定址資訊。 當使用 SOAP 繫結時，傳輸繫結項目也應該匯出中繼資料中的正確傳輸 URI。 下列程式碼範例取自[傳輸： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例。  
+ 繫結中的傳輸繫結項目是負責匯出與匯入中繼資料中的定址資訊。 當使用 SOAP 繫結時，傳輸繫結項目也應該匯出中繼資料中的正確傳輸 URI。 下列範例程式碼取自[傳輸： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例。  
   
 #### <a name="wsdl-export"></a>WSDL 匯出  
  若要匯出定址資訊，`UdpTransportBindingElement`實作<xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType>介面。 <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A?displayProperty=nameWithType> 方法會新增正確的定址資訊至 WSDL 連接埠。  
   
-```  
+```csharp  
 if (context.WsdlPort != null)  
 {  
     AddAddressToWsdlPort(context.WsdlPort, context.Endpoint.Address, encodingBindingElement.MessageVersion.Addressing);  
@@ -136,7 +136,7 @@ if (context.WsdlPort != null)
   
  當端點使用 SOAP 繫結時，`UdpTransportBindingElement` 方法的 <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A> 實作也會匯出傳輸 URI：  
   
-```  
+```csharp  
 WsdlNS.SoapBinding soapBinding = GetSoapBinding(context, exporter);  
 if (soapBinding != null)  
 {  
@@ -169,7 +169,7 @@ if (soapBinding != null)
   
  `UdpBindingElementImporter` 型別會實作 <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> 介面。 `ImportEndpoint` 方法會從 WSDL 連接埠匯入位址：  
   
-```  
+```csharp  
 BindingElementCollection bindingElements = context.Endpoint.Binding.CreateBindingElements();  
 TransportBindingElement transportBindingElement = bindingElements.Find<TransportBindingElement>();  
 if (transportBindingElement is UdpTransportBindingElement)  
@@ -179,14 +179,14 @@ if (transportBindingElement is UdpTransportBindingElement)
 ```  
   
 ### <a name="adding-policy-support"></a>新增原則支援  
- 自訂繫結項目可以匯出服務端點之 WSDL 繫結的原則判斷提示，以表示該繫結項目的功能。 下列程式碼範例取自[傳輸： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例。  
+ 自訂繫結項目可以匯出服務端點之 WSDL 繫結的原則判斷提示，以表示該繫結項目的功能。 下列範例程式碼取自[傳輸： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例。  
   
 #### <a name="policy-export"></a>原則匯出  
- `UdpTransportBindingElement`型別會實作<xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType>加入支援匯出原則。 因此，<xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> 會針對包含它的任何繫結，在產生原則時包含 `UdpTransportBindingElement`。  
+ `UdpTransportBindingElement`型別會實作<xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType>來增加對匯出原則支援。 因此，<xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> 會針對包含它的任何繫結，在產生原則時包含 `UdpTransportBindingElement`。  
   
  在 <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A?displayProperty=nameWithType> 中，新增 UDP 的判斷提示和其他判斷提示 (如果通道使用多點傳送模式)。 這是因為多點傳送模式會影響通訊堆疊的建構方式，所以必須同時對兩端進行協調。  
   
-```  
+```csharp  
 ICollection<XmlElement> bindingAssertions = context.GetBindingAssertions();  
 XmlDocument xmlDocument = new XmlDocument();  
 bindingAssertions.Add(xmlDocument.CreateElement(  
@@ -200,7 +200,7 @@ UdpPolicyStrings.Prefix, UdpPolicyStrings.MulticastAssertion,     UdpPolicyStrin
   
  因為自訂傳輸繫結項目會負責處理定址，所以 <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> 上的 `UdpTransportBindingElement` 實作也必須處理適當之 WS-Addressing 原則判斷提示的匯出，以表示所使用的 WS-Addressing 版本。  
   
-```  
+```csharp  
 AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressing);  
 ```  
   
@@ -230,9 +230,9 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
 ### <a name="adding-a-custom-standard-binding-importer"></a>新增自訂標準繫結匯入工具  
  根據預設，Svcutil.exe 和 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> 型別會識別與匯入系統提供的繫結。 否則，會將繫結當做 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> 執行個體匯入。 為了讓 Svcutil.exe 和 <xref:System.ServiceModel.Description.WsdlImporter> 能夠匯入 `SampleProfileUdpBinding`，`UdpBindingElementImporter` 也會當做自訂標準繫結匯入工具。  
   
- 實作自訂標準繫結匯入工具`ImportEndpoint`方法<xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType>介面，以檢查<xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>匯入從中繼資料，以查看是否有已產生該特定標準繫結的執行個體。  
+ 自訂標準繫結匯入工具會實作`ImportEndpoint`方法<xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType>介面，以檢查<xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>匯入從中繼資料，以查看是否有已產生該特定標準繫結的執行個體。  
   
-```  
+```csharp  
 if (context.Endpoint.Binding is CustomBinding)  
 {  
     Binding binding;  

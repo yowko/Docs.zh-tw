@@ -8,17 +8,17 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: 25c0b34bd33bee626df14c8dbedce0b82e895b58
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a42f9b2101266857e56dee6836f4c3b27b3c6f96
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857335"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188321"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>如何：以程式設計方式列印 XPS 檔
 您可以使用一個多載<xref:System.Printing.PrintQueue.AddJob%2A>方法來列印[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]不需開啟的檔案<xref:System.Windows.Controls.PrintDialog>或基本上，任何[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]完全。  
   
- 您也可以列印[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]檔案所使用的許多<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>並<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>方法<xref:System.Windows.Xps.XpsDocumentWriter>。 如需詳細資訊，請參閱[列印 XPS 文件](https://msdn.microsoft.com/library/849555c8-0c4e-48c0-86bc-a5494c69b36c(v=vs.90))。  
+ 您也可以列印[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]檔案所使用的許多<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>並<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>方法<xref:System.Windows.Xps.XpsDocumentWriter>。 如需詳細資訊，請參閱[列印 XPS 文件](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90))。  
   
  另一種列印[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]是使用<xref:System.Windows.Controls.PrintDialog.PrintDocument%2A>或是<xref:System.Windows.Controls.PrintDialog.PrintVisual%2A>方法<xref:System.Windows.Controls.PrintDialog>控制項。 請參閱[叫用列印對話方塊](how-to-invoke-a-print-dialog.md)。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "43857335"
   
  此偽裝可讓您傳遞`true`做為最後的參數<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>而不會造成例外狀況，但由於 *\<Pseudoxpsprinter> >* 並非真正的 XPSDrv 印表機，只是記憶體回收會列印。  
   
- **附註**為了簡單起見，上述範例中使用的目前狀態\*.xps 副檔名的檔案來測試[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]。 不過，[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 檔案不一定要有此副檔名。 [isXPS.exe (isXPS 一致性工具)](https://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3(v=vs.100)) 是一種測試檔案之 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 有效性的方法。  
+ **附註**為了簡單起見，上述範例中使用的目前狀態\*.xps 副檔名的檔案來測試[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]。 不過，[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 檔案不一定要有此副檔名。 [isXPS.exe (isXPS 一致性工具)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100)) 是一種測試檔案之 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 有效性的方法。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Printing.PrintQueue>  
@@ -64,8 +64,8 @@ ms.locfileid: "43857335"
  <xref:System.Threading.ApartmentState>  
  <xref:System.STAThreadAttribute>  
  [XPS](https://www.microsoft.com/xps)  
- [列印 XPS 文件](https://msdn.microsoft.com/library/849555c8-0c4e-48c0-86bc-a5494c69b36c(v=vs.90))  
- [Managed 和 Unmanaged 執行緒處理](https://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5(v=vs.100))  
- [isXPS.exe (isXPS 一致性工具)](https://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3(v=vs.100))  
+ [列印 XPS 文件](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90))  
+ [Managed 和 Unmanaged 執行緒處理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))  
+ [isXPS.exe (isXPS 一致性工具)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))  
  [WPF 中的文件](documents-in-wpf.md)  
  [列印概觀](printing-overview.md)

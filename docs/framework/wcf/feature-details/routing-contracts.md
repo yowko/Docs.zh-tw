@@ -2,12 +2,12 @@
 title: 路由合約
 ms.date: 03/30/2017
 ms.assetid: 9ceea7ae-ea19-4cf9-ba4f-d071e236546d
-ms.openlocfilehash: 73d303c95a636f5e90f256272726c08c581d6fdf
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 17bdd4556533b33b635f80b9aec3f16d0f256843
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48581884"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191005"
 ---
 # <a name="routing-contracts"></a>路由合約
 路由合約會定義路由服務可以處理的訊息模式。  每一個合約都是無型別合約，可讓服務在不知道訊息結構描述或動作的情況下接收訊息。 如此可讓路由服務以一般方式路由傳送訊息，而不需要額外設定所路由傳送之基礎訊息的細節。  
@@ -27,5 +27,5 @@ ms.locfileid: "48581884"
 |<xref:System.ServiceModel.Routing.IDuplexSessionRouter>|SessionMode=SessionMode.Required<br /><br /> CallbackContract=typeof(ISimplexSession)<br /><br /> AsyncPattern = true<br /><br /> IsOneWay = true<br /><br /> TransactionFlow(TransactionFlowOption.Allowed)|IDuplexSessionChannel -> IDuplexSessionChannel|  
   
 ## <a name="see-also"></a>另請參閱  
- [路由服務](https://msdn.microsoft.com/library/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
+ [路由服務](../../../../docs/framework/wcf/feature-details/routing-service.md)  
  [路由簡介](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

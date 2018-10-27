@@ -1,17 +1,15 @@
 ---
-title: 如何： 建立已簽署的 Friend 組件 (Visual Basic)
+title: 如何： 建立簽署的 Friend 組件 (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6b31a359167307a58d8393e9c29e7dab1575cfdc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6a9dcc65e7e496a436d81ad2d311a4174f111104
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643662"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188431"
 ---
-# <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>如何： 建立已簽署的 Friend 組件 (Visual Basic)
+# <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>如何： 建立簽署的 Friend 組件 (Visual Basic)
 此範例示範如何搭配具有強式名稱的組件使用 friend 組件。 這兩個組件都必須具有強式名稱。 雖然此範例中的兩個組件使用相同的金鑰，但您可以針對這兩個組件使用不同的金鑰。  
   
 ### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a>建立簽署的組件和 friend 組件  
@@ -32,7 +30,7 @@ ms.locfileid: "33643662"
   
          `sn -tp FriendAssemblies.publickey`  
   
-3.  建立名為 Visual Basic 檔案`friend_signed_A`，其中包含下列程式碼。 程式碼會使用 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性宣告 friend_signed_B 為 Friend 組件。  
+3.  建立名為 Visual Basic 檔案`friend_signed_A`包含下列程式碼。 程式碼會使用 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性宣告 friend_signed_B 為 Friend 組件。  
   
      強式名稱工具會在每次執行時產生新的公開金鑰。 因此，您必須將下列程式碼中的公開金鑰取代為剛產生的公開金鑰，如下列範例所示。  
   
@@ -57,7 +55,7 @@ ms.locfileid: "33643662"
     Vbc -target:library -keyfile:FriendAssemblies.snk friend_signed_A.vb  
     ```  
   
-5.  建立名為 Visual Basic 檔案`friend_signed_B`並包含下列程式碼。 因為 friend_signed_A 會將 friend_signed_B 指定為 friend 組件，所以 friend_signed_B 中的程式碼可以存取 friend_signed_A 中的 `Friend` 類型和成員。 該檔案包含下列程式碼。  
+5.  建立 Visual Basic 檔案，稱為`friend_signed_B`並包含下列程式碼。 因為 friend_signed_A 會將 friend_signed_B 指定為 friend 組件，所以 friend_signed_B 中的程式碼可以存取 friend_signed_A 中的 `Friend` 類型和成員。 該檔案包含下列程式碼。  
   
     ```vb  
     ' friend_signed_B.vb  
@@ -77,11 +75,11 @@ ms.locfileid: "33643662"
     vbc -keyfile:FriendAssemblies.snk -r:friend_signed_A.dll friend_signed_B.vb  
     ```  
   
-     編譯器所產生之組件的名稱必須符合傳遞至 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性的 Friend 組件名稱。 您可以使用，以明確地設定組件`-out`編譯器選項。 如需詳細資訊，請參閱[-out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md)。  
+     編譯器所產生之組件的名稱必須符合傳遞至 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性的 Friend 組件名稱。 您可以使用，以明確地設定組件`-out`編譯器選項。 如需詳細資訊，請參閱 < [-(Visual basic)](../../../../visual-basic/reference/command-line-compiler/out.md)。  
   
 7.  執行 friend_signed_B.exe 檔案。  
   
-     程式會顯示 「 Class1.Test"的字串。  
+     此程式會顯示字串"Class1.Test"。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性和 <xref:System.Security.Permissions.StrongNameIdentityPermission> 類別之間有相似性。 主要差異是 <xref:System.Security.Permissions.StrongNameIdentityPermission> 可以要求安全性權限執行特定的程式碼區段，而 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性則是控制 `Friend` 類型和成員的可見性。  

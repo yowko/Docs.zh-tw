@@ -2,12 +2,12 @@
 title: 從 WCF 服務呼叫 REST 樣式服務
 ms.date: 03/30/2017
 ms.assetid: 77df81d8-7f53-4daf-8d2d-bf7996e94d5a
-ms.openlocfilehash: 8f520b1f77b9ca41b9fd2b8d51c1b935ab1e0a87
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: be9f15d35ec00ba91a06abf5a0a413b59452270b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488507"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50184233"
 ---
 # <a name="calling-a-rest-style-service-from-a-wcf-service"></a>從 WCF 服務呼叫 REST 樣式服務
 由規則 (以 SOAP 為基礎) WCF 服務呼叫 REST 樣式服務時，服務方法的作業內容 (包含傳入要求的相關資訊) 會覆寫應該由輸出要求使用的內容。 這會導致 HTTP GET 要求變更為 HTTP POST 要求。 若要強制 WCF 服務使用正確的內容來呼叫 REST 樣式服務，請建立新的 <xref:System.ServiceModel.OperationContextScope>，並從作業內容範圍內呼叫 REST 樣式服務。 本主題將說明如何建立簡單的範例來示範這個技巧。  
@@ -80,7 +80,7 @@ public class NormalService : INormalInterface
 ```  
   
 ## <a name="create-the-client-proxy-for-the-rest-style-service"></a>為 REST 樣式服務建立用戶端 Proxy  
- 使用<!--zz<xref:System.ServiceModel.ClientBase%60>-->`System.ServiceModel.ClientBase`實作用戶端 proxy。 針對所呼叫的每個方法，會建立一個新的 <xref:System.ServiceModel.OperationContextScope>，並用來呼叫作業。  
+ 使用<xref:System.ServiceModel.ClientBase%601>實作用戶端 proxy。 針對所呼叫的每個方法，會建立一個新的 <xref:System.ServiceModel.OperationContextScope>，並用來呼叫作業。  
   
 ```csharp
 public class MyRestClient : ClientBase<IRestInterface>, IRestInterface

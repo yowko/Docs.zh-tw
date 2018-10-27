@@ -3,12 +3,12 @@ title: F# 指南
 description: '本指南提供的各種學習教材，F #，函式的程式設計語言在.NET 上執行的概觀。'
 author: cartermp
 ms.date: 08/03/2018
-ms.openlocfilehash: d3e10b6eb99f35b8eddeaa1f0ae257dd17d5cc41
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 5cd5bd95373c8a52a8d2b2348a51970560e8b272
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480674"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188361"
 ---
 # <a name="f-guide"></a>F# 指南
 
@@ -56,7 +56,7 @@ F # 指南提供許多學習 F # 語言的資源。
 
 [F # 程式碼片段網站](http://www.fssnip.net)包含大量的一份程式碼片段示範如何執行幾乎任何在 F # 中，範圍從徹底初學者到非常進階的程式碼片段。
 
-[F # 軟體基礎 Slack](http://fsharp.org/guides/slack/)是很好的初級開發人員和專家，為高度作用中，並有一些全球最佳 F # 程式設計人員可用的交談。 此外，我們強烈建議您加入。
+[F # 軟體基礎 Slack](https://fsharp.org/guides/slack/)是很好的初級開發人員和專家，為高度作用中，並有一些全球最佳 F # 程式設計人員可用的交談。 此外，我們強烈建議您加入。
 
 ## <a name="the-f-software-foundation"></a>F# Software Foundation (F# 軟體基金會)
 
@@ -64,4 +64,4 @@ F # 指南提供許多學習 F # 語言的資源。
 
 F# Software Foundation 的使命是促進、保護和推展 F# 程式設計語言，並支援和促進 F# 程式設計人員國際社群的多元發展。
 
-若要進一步了解並參與，請參閱 [fsharp.org](http://fsharp.org)。免費加入，而且 foundation 中的 F # 開發人員的網路是您不想錯過 ！
+若要進一步了解並參與，請參閱 [fsharp.org](https://fsharp.org)。免費加入，而且 foundation 中的 F # 開發人員的網路是您不想錯過 ！

@@ -2,12 +2,12 @@
 title: 安全性 Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 18a7496d39cd08e8b340e23c57fcd10dae5ed281
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: db7b45fef28b0b28e7da550c24d510da73c02aa9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861854"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183525"
 ---
 # <a name="security-overview"></a>安全性概觀
 保護應用程式是持續進行的工作。 開發人員無法絕對保證應用程式可避開所有攻擊，因為您無法預測未來的新科技會帶來哪些類型的攻擊。 反之，也不能因為至目前為止，沒有人察覺 (或公佈) 系統上的安全性漏洞，就表示安全性漏洞確實存在或確實不存在。 您需要在專案的設計階段就進行安全性的規劃，也必須規劃該如何在應用程式的存留期維護安全性。  
@@ -67,7 +67,7 @@ ms.locfileid: "43861854"
 |資源|描述|  
 |--------------|-----------------|  
 |[程式碼存取安全性和 ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|從 ADO.NET 應用程式的角度，描述在程式碼存取安全性、以角色為基礎的安全性與部分信任環境之間的互動。|  
-|[程式碼存取安全性](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)|包含說明 .NET Framework 中的 CAS 的其他主題連結。|  
+|[程式碼存取安全性](../../../../docs/framework/misc/code-access-security.md)|包含說明 .NET Framework 中的 CAS 的其他主題連結。|  
   
 ## <a name="database-security"></a>資料庫安全性  
  最小權限的原則也適用於資料來源。 資料庫安全性的一些一般方針包括：  

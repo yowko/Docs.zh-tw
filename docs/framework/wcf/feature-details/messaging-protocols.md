@@ -2,12 +2,12 @@
 title: 訊息通訊協定
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-ms.openlocfilehash: 7d94b917f3d8d2fd7faed28b9320edc240724e0b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 4678980520266879b41bea6e10f075a2df116457
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46703007"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183850"
 ---
 # <a name="messaging-protocols"></a>訊息通訊協定
 
@@ -47,7 +47,7 @@ Windows Communication Foundation (WCF) 通道堆疊利用編碼和傳輸通道�
 
 在本主題中使用的下列 XML 命名空間和相關聯的前置詞：
 
-|前置詞 |命名空間統一資源識別元 (URI) |[---|---| | s11 |`http://schemas.xmlsoap.org/soap/envelope`| | s12 |`http://www.w3.org/2003/05/soap-envelope`| | wsa |`http://www.w3.org/2004/08/addressing`| | wsam |`http://www.w3.org/2007/05/addressing/metadata`| | wsap |`http://schemas.xmlsoap.org/ws/2004/09/policy/addressing`| | wsa10 |`http://www.w3.org/2005/08/addressing`| | wsaw10 |`http://www.w3.org/2006/05/addressing/wsdl`| | xop |`http://www.w3.org/2004/08/xop/include`| | xmime |`http://www.w3.org/2004/06/xmlmime`<br /><br /> `http://www.w3.org/2005/05/xmlmime`| | dp |`http://schemas.microsoft.com/net/2006/06/duplex`|
+|前置詞 |命名空間統一資源識別元 (URI) |[---|---| | s11 |`http://schemas.xmlsoap.org/soap/envelope` | | s12 |`http://www.w3.org/2003/05/soap-envelope` | | wsa |`http://www.w3.org/2004/08/addressing` | | wsam |`http://www.w3.org/2007/05/addressing/metadata` | | wsap |`http://schemas.xmlsoap.org/ws/2004/09/policy/addressing` | | wsa10 |`http://www.w3.org/2005/08/addressing` | | wsaw10 |`http://www.w3.org/2006/05/addressing/wsdl` | | xop |`http://www.w3.org/2004/08/xop/include` | | xmime |`http://www.w3.org/2004/06/xmlmime`<br /><br /> `http://www.w3.org/2005/05/xmlmime` | |dp |`http://schemas.microsoft.com/net/2006/06/duplex` |
 
 ## <a name="soap-11-and-soap-12"></a>SOAP 1.1 和 SOAP 1.2
 
@@ -190,20 +190,20 @@ B3221： 當設定為使用 Ws-addressing 2004/08，WCF 端點不會區分處理
 ### <a name="web-services-addressing-faults"></a>Web 服務定址錯誤
 R3411: WCF 會產生下列由 Ws-addressing 2004/08 定義的錯誤。
 
-|程式碼|原因|
+| 程式碼 | 原因 |
 |----------|-----------|
-|`wsa:DestinationUnreachable`|訊息到達時如帶有 `ReplyTo`，其回覆位址與為此通道所建立的不同。|
-|`wsa:ActionNotSupported`|與端點關聯的基礎結構通道或發送器，不會辨識 `Action` 標頭內指定的動作。|
+| `wsa:DestinationUnreachable` | 訊息到達時如帶有 `ReplyTo`，其回覆位址與為此通道所建立的不同。 |
+| `wsa:ActionNotSupported` | 與端點關聯的基礎結構通道或發送器，不會辨識 `Action` 標頭內指定的動作。 |
 
 R3412: WCF 會產生下列由 Ws-addressing 1.0 定義的錯誤。
 
-|程式碼|原因|
+| 程式碼 | 原因 |
 |----------|-----------|
-|`wsa10:InvalidAddressingHeader`|重複`wsa:To`， `wsa:ReplyTo`，`wsa:From`或`wsa:MessageID`。 重複`wsa:RelatesTo`具有相同`RelationshipType`。|
-|`wsa10:MessageAddressingHeaderRequired`|所需的定址標頭遺失。|
-|`wsa10:DestinationUnreachable`|以 `ReplyTo` 到達的訊息，其回覆位址與為此通道所建立的不同。 而且沒有端點可在 To 標頭內指定的位址上進行接聽。|
-|`wsa10:ActionNotSupported`|在 `Action` 標頭內指定的動作，不會由基礎結構通道或與端點關聯的發送器進行辨識。|
-|`wsa10:EndpointUnavailable`|RM 通道會將此錯誤送回，指出端點將不會根據 `CreateSequence` 訊息之定址標頭檢查的順序進行處理。|
+| `wsa10:InvalidAddressingHeader` | 重複`wsa:To`， `wsa:ReplyTo`，`wsa:From`或`wsa:MessageID`。 重複`wsa:RelatesTo`具有相同`RelationshipType`。 |
+| `wsa10:MessageAddressingHeaderRequired` | 所需的定址標頭遺失。 |
+| `wsa10:DestinationUnreachable` | 以 `ReplyTo` 到達的訊息，其回覆位址與為此通道所建立的不同。 而且沒有端點可在 To 標頭內指定的位址上進行接聽。 |
+| `wsa10:ActionNotSupported` | 在 `Action` 標頭內指定的動作，不會由基礎結構通道或與端點關聯的發送器進行辨識。 |
+| `wsa10:EndpointUnavailable` | RM 通道會將此錯誤送回，指出端點將不會根據 `CreateSequence` 訊息之定址標頭檢查的順序進行處理。 |
 
 之前表格中的程式碼對應至 SOAP 1.1 內的 `FaultCode` 和 SOAP 1.2 內的 `SubCode` (使用 Code=Sender)。
 

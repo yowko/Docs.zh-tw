@@ -2,12 +2,12 @@
 title: '教學課程： 建立型別提供者 （F #）'
 description: '了解如何在 F # 3.0 中建立您自己 F # 型別提供者，藉由檢查幾個簡單的型別提供者，來說明基本概念。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 3c998377b2c3a408d536ef416f3799bf7f04b6bd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c9dedbeed3ee081a6b1e1ffffe843fc962d2c60b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397955"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183915"
 ---
 # <a name="tutorial-create-a-type-provider"></a>教學課程： 建立型別提供者
 
@@ -353,7 +353,7 @@ t.AddMembersDelayed(fun () ->
           p.AddXmlDocDelayed(fun () -> 
               sprintf "This is StaticProperty%d on NestedType" i)
 
-          yield p ]
+          yield p ]
 
     staticPropsInNestedType)
 
@@ -748,7 +748,7 @@ do ()
 
 - 標頭名稱都是無單位或 「 名稱 （單位） 」 的格式，並不包含逗號。
 
-- 單位是為所有 Systeme International (SI) 單位[Microsoft.FSharp.Data.UnitSystems.SI.UnitNames 模組 （F #）](https://msdn.microsoft.com/library/3cb43485-11f5-4aa7-a779-558f19d4013b)模組定義。
+- 單位是為所有系統 International (SI) 單位[Microsoft.FSharp.Data.UnitSystems.SI.UnitNames 模組 (F#)](https://msdn.microsoft.com/library/3cb43485-11f5-4aa7-a779-558f19d4013b)模組定義。
 
 - 單位是所有簡單 （例如，計量） 而不是複合 （比方說，計量表/秒）。
 
@@ -1110,9 +1110,9 @@ F # 中的型別提供者機制具有下列限制：
 
 ## <a name="development-tips"></a>開發秘訣
 
-您可能會發現下列秘訣有助於在開發程序。
+您可能會發現下列秘訣有助於在開發程序：
 
-### <a name="run-two-instances-of-visual-studio"></a>執行 Visual studio 的兩個執行個體
+### <a name="run-two-instances-of-visual-studio"></a>執行兩個 Visual Studio 執行個體
 
 您可以開發一個執行個體中的型別提供者，並在其他測試提供者，因為測試的 IDE 會防止型別提供者正在重建的.dll 檔案採用鎖定。 因此，您必須先關閉 Visual Studio 的第二個執行個體，而第一個執行個體中，內建提供者，然後您就必須重新開啟第二個執行個體建立提供者後。
 

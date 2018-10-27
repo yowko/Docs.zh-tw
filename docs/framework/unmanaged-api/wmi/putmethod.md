@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7cdf34ff6ae506ba209300685da3752820b250a2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 98ef688c1136a81a5b57c3fdfee73c53024186e7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516746"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191033"
 ---
 # <a name="putmethod-function"></a>PutMethod 函式
 建立方法。
@@ -53,7 +53,7 @@ HRESULT PutMethod (
 [in]若要建立方法的名稱。 
 
 `lFlags`  
-[in]保留。 這個參數必須是 0。
+[in] 保留。 這個參數必須是 0。
 
 `pSignatureIn`  
 [in]指標，一份[__Parameters 系統類別](/windows/desktop/WmiSdk/--parameters)包含`in`方法的參數。 如果會忽略這個參數設定為`null`。  
@@ -80,11 +80,11 @@ HRESULT PutMethod (
 
 此函式會包裝在呼叫[IWbemClassObject::PutMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-putmethod)方法。
 
-這個方法呼叫時才支援`ptr`為 CIM 類別定義。 方法操作不是可從[IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396)指向 CIM 執行個體的指標。
+這個方法呼叫時才支援`ptr`為 CIM 類別定義。 方法操作不是可從[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)指向 CIM 執行個體的指標。
 
 使用者無法建立方法，名稱開頭或結尾加上底線。 這被保留給系統的類別和屬性。
 
-對於方法而言`in`並`out`參數會被稱為中的屬性[IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396)物件。
+對於方法而言`in`並`out`參數會被稱為中的屬性[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)物件。
 
 `[in/out]`參數可以將相同的屬性新增至所指的這兩個物件定義`pInSignature`和`pOutSignature`參數。 在此情況下，屬性會共用相同**識別碼**辨識符號值。
 

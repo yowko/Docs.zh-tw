@@ -2,13 +2,12 @@
 title: 安全性通訊協定 1.0 版
 ms.date: 03/30/2017
 ms.assetid: ee3402d2-1076-410b-a3cb-fae0372bd7af
-author: BrucePerlerMS
-ms.openlocfilehash: 59d82fc3238f12b33f3111c88854b9d6348a5e27
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 684ab50b6dab4b97577acf7673ed14c53e5af13e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086787"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183941"
 ---
 # <a name="security-protocols-version-10"></a>安全性通訊協定 1.0 版
 Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有現有的企業訊息安全性需求。 本節描述 Windows Communication Foundation (WCF) 1.0 版詳細資料 (在中實作<xref:System.ServiceModel.Channels.SecurityBindingElement>) 下列 Web 服務安全性通訊協定。  

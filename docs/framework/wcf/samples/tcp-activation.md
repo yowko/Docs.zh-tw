@@ -2,12 +2,12 @@
 title: TCP 啟用
 ms.date: 03/30/2017
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-ms.openlocfilehash: 0a65e5ca20a11f50133efc90e6da923280a30f46
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 1939f611067d65d70849748604e0589a8928b09d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846548"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191164"
 ---
 # <a name="tcp-activation"></a>TCP 啟用
 這個範例會示範裝載使用 Windows Process Activation Service (WAS) 的服務，以便啟用透過 net.tcp 通訊協定進行通訊的服務。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
@@ -28,7 +28,7 @@ ms.locfileid: "48846548"
   
  服務會實作定義要求-回覆通訊模式的合約。 合約是由 `ICalculator` 介面所定義，這個介面會公開數學運算 (加、減、乘、除)，如下列範例程式碼中所示：  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
 {  
@@ -45,7 +45,7 @@ public interface ICalculator
   
  服務實作會計算並傳回適當結果：  
   
-```  
+```csharp
 // Service class that implements the service contract.  
 public class CalculatorService : ICalculator  
 {  
@@ -129,7 +129,7 @@ public class CalculatorService : ICalculator
   
  當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  
@@ -160,7 +160,7 @@ Press <ENTER> to terminate client.
   
     1.  若要支援 net.tcp 啟動，預設的網站必須先繫結至 net.tcp 連接埠。 使用 Internet Information Services 7.0 (IIS) 管理工具組所安裝的 Appcmd.exe，便可做到這點。 從系統管理員層級的命令提示字元執行下列命令：  
   
-        ```  
+        ```console  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']  
         ```  
   
@@ -169,7 +169,7 @@ Press <ENTER> to terminate client.
   
     2.  雖然網站中的所有應用程式共用常見的 net.tcp 繫結，但每個應用程式都可以個別啟用 net.tcp 支援。 若要為 /servicemodelsamples 應用程式啟用 net.tcp，請從系統管理員層級命令提示字元中執行下列命令：  
   
-        ```  
+        ```console  
         %windir%\system32\inetsrv\appcmd.exe set app   
         "Default Web Site/servicemodelsamples" /enabledProtocols:http,net.tcp  
         ```  
@@ -187,7 +187,7 @@ Press <ENTER> to terminate client.
   
     1.  從啟用的通訊協定清單中移除 net.tcp，方法是從系統管理員層級命令提示字元中執行下列命令：  
   
-        ```  
+        ```console  
         %windir%\system32\inetsrv\appcmd.exe set app   
         "Default Web Site/servicemodelsamples" /enabledProtocols:http  
         ```  
@@ -197,7 +197,7 @@ Press <ENTER> to terminate client.
   
     2.  移除 net.tcp 網站繫結，方法是從系統管理員層級命令提示字元中執行下列命令：  
   
-        ```  
+        ```console  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   
         --bindings.[protocol='net.tcp',bindingInformation='808:*']  
         ```  

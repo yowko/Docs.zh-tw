@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net Profile Named Pipe
 ms.assetid: e78e845f-c325-46e2-927d-81616f97f7d5
-ms.openlocfilehash: d69d647b4fe4c38a0b2b355ae72cedfee6894f4b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d43d22c1e8c0b05e06582d63d3998c64940a3f7a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195559"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185401"
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
 此範例示範 `netNamedPipeBinding` 繫結，這會在相同電腦上提供跨處理序通訊。 具名通道不會跨電腦作業。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)計算機服務。  
@@ -68,7 +68,7 @@ ms.locfileid: "47195559"
   
  當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

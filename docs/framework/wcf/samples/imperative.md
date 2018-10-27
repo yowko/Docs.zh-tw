@@ -3,11 +3,11 @@ title: 命令式
 ms.date: 03/30/2017
 ms.assetid: 4f7ce807-c0e4-407a-92a6-22abafb40b51
 ms.openlocfilehash: 7547e3ed3d573cccce068aec239710e76d29bf38
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49370935"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50189533"
 ---
 # <a name="imperative"></a>命令式
 這個範例會示範如何定義 <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> 服務使用的程式碼，而不定義`wsHttpBinding`繫結組態中。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)以實作計算機服務。  

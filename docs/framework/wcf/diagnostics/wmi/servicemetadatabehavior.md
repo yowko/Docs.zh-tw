@@ -3,11 +3,11 @@ title: ServiceMetadataBehavior
 ms.date: 03/30/2017
 ms.assetid: 0f194476-72f1-467e-bdce-674306316e64
 ms.openlocfilehash: 19a04b6432f1ecc38a3b906b7e677175863134db
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374816"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188829"
 ---
 # <a name="servicemetadatabehavior"></a>ServiceMetadataBehavior
 ServiceMetadataBehavior  

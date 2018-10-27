@@ -8,14 +8,12 @@ helpviewer_keywords:
 - servicePointManager element
 - <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 2aaf590975d9fd3f5d78cb64d8d2b1c38c0e8dc7
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: fed2b39d92557f25c4f7427bccf28af616d1c0a3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033502"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187272"
 ---
 # <a name="ltservicepointmanagergt-element-network-settings"></a>&lt;servicePointManager&gt;項目 （網路設定）
 設定網路資源的連線。  
@@ -69,6 +67,6 @@ ms.locfileid: "48033502"
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Net.ServicePointManager>  
- <xref:System.Net.Security.EncryptionPolicy>  
- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.ServicePointManager>  
+- <xref:System.Net.Security.EncryptionPolicy>  
+- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - configuration [WCF], interoperable services
 ms.assetid: 91b70a21-8f5c-4679-808c-2ed5fa6b2013
-ms.openlocfilehash: 80c61f11f82a13fe5aedb9d21ae2555f86fd4aff
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: f32308a17e2934b6884140307074f97e6b51f5f9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49371208"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190537"
 ---
 # <a name="creating-ws-i-basic-profile-11-interoperable-services"></a>建立 WS-I Basic Profile 1.1 互通服務
 若要設定要與互通的 WCF 服務端點[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]Web 服務用戶端：  
@@ -29,7 +29,7 @@ ms.locfileid: "49371208"
   
 -   <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> 值所控制的訊息安全性，提供符合 WS-I Basic Security Profile 1.0 的 WS-Security 支援。 將此屬性保留為預設值，也就是 <xref:System.ServiceModel.SecurityMode.Transport?displayProperty=nameWithType> 不使用 WS-Security。  
   
- 若要將 WCF 服務的中繼資料提供給[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]，使用 Web 服務用戶端產生工具： [Web 服務描述語言工具 (Wsdl.exe)](/previous-versions/dotnet/netframework-4.0/7h3ystb6%28v=vs.100%29)， [Web 服務探索工具 (Disco.exe)](/previous-versions/dotnet/netframework-4.0/cy2a3ybs%28v=vs.100%29)，而`Add Web Reference`功能在 Visual Studio 中，您必須啟用發行中繼資料。 如需詳細資訊，請參閱 <<c0> [ 發行中繼資料端點](../../../docs/framework/wcf/publishing-metadata-endpoints.md)。  
+ 若要將 WCF 服務的中繼資料提供給[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]，使用 Web 服務用戶端產生工具： [Web 服務描述語言工具 (Wsdl.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6%28v=vs.100%29)， [Web 服務探索工具 (Disco.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cy2a3ybs%28v=vs.100%29)，而`Add Web Reference`功能在 Visual Studio 中，您必須啟用發行中繼資料。 如需詳細資訊，請參閱 <<c0> [ 發行中繼資料端點](../../../docs/framework/wcf/publishing-metadata-endpoints.md)。  
   
 ## <a name="example"></a>範例  
   

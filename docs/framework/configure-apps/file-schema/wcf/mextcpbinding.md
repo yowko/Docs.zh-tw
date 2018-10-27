@@ -2,12 +2,12 @@
 title: '&lt;mexTcpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 01baba8d-d784-4255-9ea2-7afff1482bf0
-ms.openlocfilehash: 8c2b149f983c0674b51c2242600a451ff71fc9b5
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: dbe9e6c3b7a515ee4b5bb147f973423df0f175ea
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855942"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187695"
 ---
 # <a name="ltmextcpbindinggt"></a>&lt;mexTcpBinding&gt;
 指定用於 TCP 上 WS-MetadataExchange (WS-MEX) 訊息交換之繫結的設定。  
@@ -60,5 +60,5 @@ ms.locfileid: "43855942"
  [中繼資料](../../../../../docs/framework/wcf/feature-details/metadata.md)  
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結來設定 Windows Communication Foundation 服務和用戶端](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [\<繫結 >](../../../../../docs/framework/misc/binding.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c020b139-8699-4f0d-9ac9-70d0c5b2a8c8
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: c64dd85103e818ae603435c1a3f80f76e672ac84
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8992c9e47e2b62e90191a67fc7353e138502ebf1
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196768"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185663"
 ---
 # <a name="compiler-and-language-provider-settings-schema"></a>編譯器和語言提供者設定結構描述
 編譯器和語言提供者設定會指定可用語言提供者的編譯器組態項目。 每個編譯器組態項目會指定程式碼提供者的類型名稱、編譯器參數、支援的語言名稱和副檔名。  
@@ -59,7 +59,7 @@ ms.locfileid: "47196768"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.CodeDom.Compiler.CompilerInfo>  
- <xref:System.CodeDom.Compiler.CodeDomProvider>  
- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<編譯器> 項目](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)
+- <xref:System.CodeDom.Compiler.CompilerInfo>  
+- <xref:System.CodeDom.Compiler.CodeDomProvider>  
+- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [\<編譯器> 項目](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)

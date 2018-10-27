@@ -6,17 +6,15 @@ helpviewer_keywords:
 - -verbose compiler option [Visual Basic]
 - /verbose compiler option [Visual Basic]
 ms.assetid: d1aec0c1-0261-421d-9adc-5b13756100be
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a5f257fce67d8e348b69404411c12ded785cfd68
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e70496b552ced8e07cbe3cde34cda377d94da9f4
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652125"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188413"
 ---
 # <a name="-verbose"></a>-verbose
-讓編譯器以產生詳細的狀態和錯誤訊息。  
+可讓編譯器產生詳細的狀態和錯誤訊息。  
   
 ## <a name="syntax"></a>語法  
   
@@ -26,16 +24,16 @@ ms.locfileid: "33652125"
   
 ## <a name="arguments"></a>引數  
  `+` &#124; `-`  
- 選擇性。 指定`-verbose`等同於指定`-verbose+`，因而導致編譯器發出詳細訊息。 這個選項的預設值是`-verbose-`。  
+ 選擇性。 指定`-verbose`等同於指定`-verbose+`，因而導致編譯器發出詳細訊息。 此選項的預設值是`-verbose-`。  
   
 ## <a name="remarks"></a>備註  
- `-verbose`選項顯示編譯器所發出的錯誤總數的相關資訊，會報告正在載入哪些組件的模組，並顯示目前正在進行編譯的檔案。  
+ `-verbose`選項會顯示編譯器所發出的錯誤總數的相關資訊、 報表組件正在載入的模組，並顯示目前正在進行編譯的檔案。  
   
 > [!NOTE]
->  `-verbose`選項不是從 Visual Studio 開發環境中使用; 其只有在從命令列編譯時。  
+>  `-verbose`選項不是從 Visual Studio 開發環境中使用; 只有在從命令列編譯時均可使用。  
   
 ## <a name="example"></a>範例  
- 下列程式碼編譯`In.vb`和指示編譯器將會顯示詳細的狀態資訊。  
+ 下列程式碼編譯`In.vb`和指示編譯器將會顯示詳細資訊的狀態資訊。  
   
 ```console  
 vbc -verbose in.vb  

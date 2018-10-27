@@ -4,13 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
-author: BrucePerlerMS
-ms.openlocfilehash: 081518fb1b3eb1f66c772cd401c19c0eb523d32a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d4afeb8d406990256d0cffa74c440ffc75bfc462
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200824"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183460"
 ---
 # <a name="common-security-scenarios"></a>常見的安全性案例
 本章節中的主題列出一些可能的用戶端和服務安全性組態。 組態會視一些因素而改變。 例如，服務或用戶端是否在內部網路，或安全性是由 Windows 或傳輸 (例如 HTTPS) 所提供。  

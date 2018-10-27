@@ -1,15 +1,15 @@
 ---
-title: 啟動多項非同步工作並加以處理完成 (Visual Basic)
+title: 啟動多項非同步工作並處理完成 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 57ffb748-af40-4794-bedd-bdb7fea062de
-ms.openlocfilehash: 8f20688e981165c8b2328556e979ad5d5126d5ba
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: 5213162c24660a54de39c119c5ab67a601a77566
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753366"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191216"
 ---
-# <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>啟動多項非同步工作並加以處理完成 (Visual Basic)
+# <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>啟動多項非同步工作並處理完成 (Visual Basic)
 使用 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>，即可同時啟動多個工作，並在完成時逐一進行處理，而不是依啟動順序進行處理。  
   
  下列範例使用查詢來建立工作集合。 每項工作都會下載所指定網站的內容。 在 while 迴圈的的每個反覆運算中，等候的 `WhenAny` 呼叫會先傳回完成其下載的工作集合中的工作。 該工作會從集合中予以移除，並進行處理。 迴圈會重複進行，直到集合未包含其他工作為止。  
@@ -24,7 +24,7 @@ ms.locfileid: "34753366"
   
 2.  在功能表列上，依序選擇 [檔案] 、[開啟舊檔] 及 [專案/方案] 。  
   
-3.  在**開啟專案**對話方塊中，開啟保存您解壓縮範例程式碼的資料夾，然後再開啟進行 AsyncFineTuningVB 的 方案 (.sln) 檔案。  
+3.  在 [**開啟專案**] 對話方塊中，開啟您解壓縮之範例程式碼的資料夾，然後再開啟 AsyncFineTuningVB 的方案 (.sln) 檔案。  
   
 4.  在方案總管中，開啟 **ProcessTasksAsTheyFinish** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。  
   
@@ -34,10 +34,10 @@ ms.locfileid: "34753366"
   
 6.  執行專案數次，確認所下載的長度不一定會以相同的順序出現。  
   
- 如果您不想要下載的專案，您可以檢閱本主題結尾處 MainWindow.xaml.vb 檔案。  
+ 如果您不想要下載的專案，您可以檢閱本主題結尾的 MainWindow.xaml.vb 檔案。  
   
 ## <a name="building-the-example"></a>建置範例  
- 這個範例會將開發中的程式碼加入[後一個完整 (Visual Basic) 取消剩餘的非同步工作](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)，並使用相同的 UI。  
+ 此範例會將開發中的程式碼加入[一個是完成 (Visual Basic) 之後取消剩餘的非同步工作](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)並使用相同的 UI。  
   
  若要自行逐步建置範例，請遵循＜下載範例＞一節中的指示，但選擇 [CancelAfterOneTask] 作為 [啟始專案]。 將本主題中的變更新增至該專案中的 `AccessTheWebAsync` 方法。 變更會標上星號。  
   
@@ -48,7 +48,7 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
     From url In urlList Select ProcessURLAsync(url, client, ct)  
 ```  
   
- 在 MainWindow.xaml.vb 檔案中的專案，進行下列變更`AccessTheWebAsync`方法。  
+ 在專案的 MainWindow.xaml.vb 檔案中，進行下列變更`AccessTheWebAsync`方法。  
   
 -   套用 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> 來執行查詢，而非 <xref:System.Linq.Enumerable.ToArray%2A>。  
   
@@ -180,13 +180,13 @@ Class MainWindow
   
         Dim urls = New List(Of String) From  
             {  
-                "http://msdn.microsoft.com",  
-                "http://msdn.microsoft.com/library/hh290138.aspx",  
-                "http://msdn.microsoft.com/library/hh290140.aspx",  
-                "http://msdn.microsoft.com/library/dd470362.aspx",  
-                "http://msdn.microsoft.com/library/aa578028.aspx",  
-                "http://msdn.microsoft.com/library/ms404677.aspx",  
-                "http://msdn.microsoft.com/library/ff730837.aspx"  
+                "https://msdn.microsoft.com",  
+                "https://msdn.microsoft.com/library/hh290138.aspx",  
+                "https://msdn.microsoft.com/library/hh290140.aspx",  
+                "https://msdn.microsoft.com/library/dd470362.aspx",  
+                "https://msdn.microsoft.com/library/aa578028.aspx",  
+                "https://msdn.microsoft.com/library/ms404677.aspx",  
+                "https://msdn.microsoft.com/library/ff730837.aspx"  
             }  
         Return urls  
     End Function  

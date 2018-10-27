@@ -2,17 +2,17 @@
 title: 取消一項非同步工作或一份工作 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: 2823514bc462f198a43316b40eb05bc1ffed0e72
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 0024cb1bf4ac7c27d64edcd695b4782dfbcd16af
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728663"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183213"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>取消一項非同步工作或一份工作 (Visual Basic)
 如果您不想要等候非同步應用程式完成，則可以設定可用來取消非同步應用程式的按鈕。 遵循本主題中的範例，即可將取消按鈕新增至下載某個網站內容或網站清單的應用程式。  
   
- 範例會使用 UI，[微調非同步應用程式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)描述。  
+ 範例會使用 UI 所[微調非同步應用程式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)描述。  
   
 > [!NOTE]
 >  若要執行範例，您必須在電腦上安裝 Visual Studio 2012 或更新版本以及 .NET Framework 4.5 或更新版本。  
@@ -27,7 +27,7 @@ ms.locfileid: "34728663"
   
 2.  在功能表列上，依序選擇 [檔案] 、[開啟舊檔] 及 [專案/方案] 。  
   
-3.  在**開啟專案**對話方塊中，開啟保存您解壓縮範例程式碼的資料夾，然後再開啟進行 AsyncFineTuningVB 的 方案 (.sln) 檔案。  
+3.  在 [**開啟專案**] 對話方塊中，開啟您解壓縮之範例程式碼的資料夾，然後再開啟 AsyncFineTuningVB 的方案 (.sln) 檔案。  
   
 4.  在方案總管中，開啟 **CancelATask** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。  
   
@@ -35,14 +35,14 @@ ms.locfileid: "34728663"
   
      選擇 CTRL+F5 鍵以執行專案，而不進行偵錯。  
   
- 如果您不想要下載的專案，您可以檢閱本主題結尾處的 MainWindow.xaml.vb 檔案。  
+ 如果您不想要下載的專案，您可以檢閱本主題結尾的 MainWindow.xaml.vb 檔案。  
   
 ### <a name="building-the-example"></a>建置範例  
  下列變更會將 [取消] 按鈕新增至下載網站的應用程式。 如果您不想要下載或建置範例，則可以檢閱本主題結尾處的＜完整範例＞一節中的最終產品。 星號會標記程式碼中的變更。  
   
  若要自行逐步建置範例，請遵循＜下載範例＞一節中的指示，但選擇 [StarterCode] 作為 [啟始專案]，而非 [CancelATask]。  
   
- MainWindow.xaml.vb 檔案中的該專案，然後新增下列變更。  
+ 然後將下列變更新增至該專案的 MainWindow.xaml.vb 檔案。  
   
 1.  宣告 `CancellationTokenSource` 變數 `cts`，這是在存取它之所有方法的範圍內。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "34728663"
   
         ' GetAsync returns a Task(Of HttpResponseMessage).   
         ' ***The ct argument carries the message if the Cancel button is chosen.  
-        Dim response As HttpResponseMessage = Await client.GetAsync("http://msdn.microsoft.com/library/dd470362.aspx", ct)  
+        Dim response As HttpResponseMessage = Await client.GetAsync("https://msdn.microsoft.com/library/dd470362.aspx", ct)  
   
         ' Retrieve the website contents from the HttpResponseMessage.  
         Dim urlContents As Byte() = Await response.Content.ReadAsByteArrayAsync()  
@@ -145,7 +145,7 @@ ms.locfileid: "34728663"
   
 2.  在功能表列上，依序選擇 [檔案] 、[開啟舊檔] 及 [專案/方案] 。  
   
-3.  在**開啟專案**對話方塊中，開啟保存您解壓縮範例程式碼的資料夾，然後再開啟進行 AsyncFineTuningVB 的 方案 (.sln) 檔案。  
+3.  在 [**開啟專案**] 對話方塊中，開啟您解壓縮之範例程式碼的資料夾，然後再開啟 AsyncFineTuningVB 的方案 (.sln) 檔案。  
   
 4.  在方案總管中，開啟 **CancelAListOfTasks** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "34728663"
   
      選擇 CTRL+F5 鍵以執行專案，而不進行偵錯。  
   
- 如果您不想要下載的專案，您可以檢閱本主題結尾處的 MainWindow.xaml.vb 檔案。  
+ 如果您不想要下載的專案，您可以檢閱本主題結尾的 MainWindow.xaml.vb 檔案。  
   
 ### <a name="building-the-example"></a>建置範例  
  若要自行逐步擴充範例，請遵循＜下載範例＞一節中的指示，但選擇 [CancelATask] 作為 [啟始專案]。 將下列變更新增至該專案。 星號會標記程式中的變更。  
@@ -166,13 +166,13 @@ ms.locfileid: "34728663"
   
         Dim urls = New List(Of String) From  
             {  
-                "http://msdn.microsoft.com",  
-                "http://msdn.microsoft.com/library/hh290138.aspx",  
-                "http://msdn.microsoft.com/library/hh290140.aspx",  
-                "http://msdn.microsoft.com/library/dd470362.aspx",  
-                "http://msdn.microsoft.com/library/aa578028.aspx",  
-                "http://msdn.microsoft.com/library/ms404677.aspx",  
-                "http://msdn.microsoft.com/library/ff730837.aspx"  
+                "https://msdn.microsoft.com",  
+                "https://msdn.microsoft.com/library/hh290138.aspx",  
+                "https://msdn.microsoft.com/library/hh290140.aspx",  
+                "https://msdn.microsoft.com/library/dd470362.aspx",  
+                "https://msdn.microsoft.com/library/aa578028.aspx",  
+                "https://msdn.microsoft.com/library/ms404677.aspx",  
+                "https://msdn.microsoft.com/library/ff730837.aspx"  
             }  
         Return urls  
     End Function  
@@ -253,7 +253,7 @@ ms.locfileid: "34728663"
  您可以從 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載專案。  
   
 ### <a name="cancel-a-task-example"></a>取消工作範例  
- 下列程式碼是完整的 MainWindow.xaml.vb 檔案，例如取消單一工作。  
+ 下列程式碼是取消單一工作之範例的完整 MainWindow.xaml.vb 檔案。  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -313,7 +313,7 @@ Class MainWindow
   
         ' GetAsync returns a Task(Of HttpResponseMessage).   
         ' ***The ct argument carries the message if the Cancel button is chosen.  
-        Dim response As HttpResponseMessage = Await client.GetAsync("http://msdn.microsoft.com/library/dd470362.aspx", ct)  
+        Dim response As HttpResponseMessage = Await client.GetAsync("https://msdn.microsoft.com/library/dd470362.aspx", ct)  
   
         ' Retrieve the website contents from the HttpResponseMessage.  
         Dim urlContents As Byte() = Await response.Content.ReadAsByteArrayAsync()  
@@ -337,7 +337,7 @@ End Class
 ```  
   
 ### <a name="cancel-a-list-of-tasks-example"></a>取消工作清單範例  
- 下列程式碼是完整的 MainWindow.xaml.vb 檔案，如需取消的工作清單的範例。  
+ 下列程式碼是取消工作清單之範例的完整 MainWindow.xaml.vb 檔案。  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -412,13 +412,13 @@ Class MainWindow
   
         Dim urls = New List(Of String) From  
             {  
-                "http://msdn.microsoft.com",  
-                "http://msdn.microsoft.com/library/hh290138.aspx",  
-                "http://msdn.microsoft.com/library/hh290140.aspx",  
-                "http://msdn.microsoft.com/library/dd470362.aspx",  
-                "http://msdn.microsoft.com/library/aa578028.aspx",  
-                "http://msdn.microsoft.com/library/ms404677.aspx",  
-                "http://msdn.microsoft.com/library/ff730837.aspx"  
+                "https://msdn.microsoft.com",  
+                "https://msdn.microsoft.com/library/hh290138.aspx",  
+                "https://msdn.microsoft.com/library/hh290140.aspx",  
+                "https://msdn.microsoft.com/library/dd470362.aspx",  
+                "https://msdn.microsoft.com/library/aa578028.aspx",  
+                "https://msdn.microsoft.com/library/ms404677.aspx",  
+                "https://msdn.microsoft.com/library/ff730837.aspx"  
             }  
         Return urls  
     End Function  

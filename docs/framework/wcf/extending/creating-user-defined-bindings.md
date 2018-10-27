@@ -5,11 +5,11 @@ helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
 ms.openlocfilehash: 7be7c156ec20a15cf8d1a12d8d1f429b6c2c33a9
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372210"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50186053"
 ---
 # <a name="creating-user-defined-bindings"></a>建立使用者定義繫結
 您有幾種方式可以建立系統不提供的繫結：  

@@ -5,13 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
-author: BrucePerlerMS
-ms.openlocfilehash: 4a6ad2746bea9dfea1999e272796d44f0341e64d
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: cebec5fe213536fd5af1928355c6f692f0d50fd2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086605"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187188"
 ---
 # <a name="transport-security-with-basic-authentication"></a>基本驗證的傳輸安全性
 下圖顯示 Windows Communication Foundation (WCF) 服務和用戶端。 伺服器需要可用於 Secure Sockets Layer (SSL) 的有效 X.509 憑證，而用戶端必須信任伺服器的憑證。 此外，Web 服務已經有可以使用的 SSL 實作。 如需啟用基本驗證在網際網路資訊服務 (IIS)，請參閱[ https://go.microsoft.com/fwlink/?LinkId=83822 ](https://go.microsoft.com/fwlink/?LinkId=83822)。  

@@ -1,5 +1,5 @@
 ---
-title: '&lt;appSettings&gt;元素&lt;組態&gt;'
+title: '&lt;appSettings&gt;項目&lt;組態&gt;'
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: d17400536b911ce0be4d2bf105b0b4d99d0916df
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0ba57f51d3b1e78239677317933507ff009db035
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742961"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190927"
 ---
 # <a name="appsettings-element-for-configuration"></a>\<appSettings > 項目\<設定 >
 
@@ -35,13 +35,13 @@ ms.locfileid: "32742961"
 
 |           | 描述 |
 | --------- | ----------- |
-| **file**  | 選擇性屬性。<br><br>指定包含自訂的應用程式組態設定的外部檔案的相對路徑。 指定的檔案包含相同類型的設定中指定的**\<新增 >**， **\<移除 >**，和**\<清除 >** 項目，並使用相同的索引鍵/值組格式與這些項目。<br><br>指定的路徑是相對於主要設定檔。 Windows Form 應用程式中，這是 [二進位] 資料夾 (例如 */bin/debug*)，不是應用程式組態檔的位置。 為 Web Form 應用程式，則路徑是相對於應用程式根目錄，其中*web.config*檔所在。<br><br>請注意，是否指定的檔案找不到執行階段會忽略此屬性。 |
+| **file**  | 選擇性屬性。<br><br>指定包含自訂的應用程式組態設定的外部檔案的相對路徑。 指定的檔案包含相同類型的設定中指定**\<新增 >**， **\<移除 >**，以及**\<清除 >** 項目，並使用相同的索引鍵/值配對的格式設定為這些項目。<br><br>指定的路徑是相對於主要設定檔。 Windows Forms 應用程式，這是 [二進位] 資料夾 (例如 */bin/debug*)，不是應用程式組態檔的位置。 為 Web Form 應用程式，則路徑是相對於應用程式根目錄，其中*web.config*檔案所在的。<br><br>請注意，是否指定的檔案找不到執行階段會忽略此屬性。 |
 
 ## <a name="parent-element"></a>父項目
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<設定 >** 項目](~/docs/framework/configure-apps/file-schema/configuration-element.md) | 通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。 |
+| [**\<組態 >** 項目](~/docs/framework/configure-apps/file-schema/configuration-element.md) | 通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。 |
 
 ## <a name="child-elements"></a>子元素
 
@@ -53,11 +53,11 @@ ms.locfileid: "32742961"
 
 ## <a name="remarks"></a>備註
 
-**\<AppSettings >** 元素會儲存自訂應用程式組態資訊，例如資料庫連接字串、 檔案路徑、 XML Web 服務 Url 或任何其他自訂組態資訊應用程式。 中指定的索引鍵/值組 **\<appSettings >** 項目在程式碼中使用存取<xref:System.Configuration.ConfigurationSettings>類別。
+**\<AppSettings >** 項目會儲存自訂的應用程式組態資訊，例如資料庫連接字串、 檔案路徑、 XML Web 服務 Url 或任何其他自訂組態資訊應用程式。 中指定的索引鍵/值組 **\<appSettings >** 項目中的程式碼使用存取<xref:System.Configuration.ConfigurationSettings>類別。
 
-您可以使用**檔案**屬性 **\<appSettings >** 元素*Web.config*和應用程式組態檔。 這個屬性會指定組態檔中提供額外的設定，或在指定的設定會覆寫 **\<appSettings >** 項目。 **檔案**屬性可以用於原始檔控制小組開發案例中，例如當使用者想要覆寫應用程式組態檔中指定的專案設定。
+您可以使用**檔案**屬性中 **\<appSettings >** 項目*Web.config*和應用程式組態檔。 這個屬性會指定組態檔中提供額外的設定或覆寫中指定的設定 **\<appSettings >** 項目。 **檔案**屬性可以用於原始檔控制小組開發案例中，例如當使用者想要覆寫應用程式組態檔中指定的專案設定。
 
-所指定的組態檔**檔案**屬性必須具有根節點 **\<appSettings >** 而**\<組態 >**.
+所指定的組態檔**檔案**屬性必須具有根節點 **\<appSettings >** 而非**\<組態 >**.
 
 ## <a name="example"></a>範例
 
@@ -82,8 +82,8 @@ ms.locfileid: "32742961"
 
 ## <a name="configuration-file"></a>組態檔
 
-此項目可以用於應用程式組態檔中，電腦組態檔 (*Machine.config*)，和*Web.config*不在應用程式目錄層級的檔案。
+這個項目可用的應用程式組態檔中，電腦組態檔 (*Machine.config*)，以及*Web.config*不在應用程式的目錄層級的檔案。
 
 ## <a name="see-also"></a>另請參閱
 
-[適用於.NET Framework 組態檔結構描述](~/docs/framework/configure-apps/file-schema/index.md)
+- [適用於.NET Framework 的組態檔結構描述](~/docs/framework/configure-apps/file-schema/index.md)

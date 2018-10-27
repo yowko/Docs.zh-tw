@@ -4,13 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: c63cfc87-6b20-4949-93b3-bcd4b732b0a2
-author: BrucePerlerMS
-ms.openlocfilehash: 904916424c3ab199afd09a804c47b57a82e14158
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: c8be13743de6110658588aa983fd5da0397c5cb0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030797"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183421"
 ---
 # <a name="message-security-user-name"></a>訊息安全性使用者名稱
 這個範例會示範如何實作應用程式，該應用程式會對用戶端使用搭配使用者名稱驗證的 WS-Security，並要求使用伺服器之 X.509v3 憑證進行驗證的伺服器驗證。 用戶端與伺服器之間的所有應用程式訊息都會經過簽署及加密。 根據預設，用戶端提供的使用者名稱與密碼會用來登入有效的 Windows 帳戶。 此樣本根據[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)。 這個範例是由用戶端主控台程式 (Client.exe) 和網際網路資訊服務 (IIS) 所裝載的服務程式庫 (Service.dll) 所組成。 服務會實作定義要求-回覆通訊模式的合約。  
@@ -205,11 +204,11 @@ Press <ENTER> to terminate client.
     > [!NOTE]
     >  Setup.bat 批次檔是設計用來從 Visual Studio 命令提示字元執行。 它要求 path 環境變數指向安裝 SDK 的目錄。 這個環境變數是自動在 Visual Studio 命令提示字元中設定。  
   
-3.  驗證的存取權的服務使用瀏覽器輸入位址 http://localhost/servicemodelsamples/service.svc 。  
+3.  驗證的存取權的服務使用瀏覽器輸入位址 `http://localhost/servicemodelsamples/service.svc` 。
   
 4.  從 \client\bin 啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-5.  如果用戶端和服務能夠進行通訊，請參閱[疑難排解祕訣](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+5.  如果用戶端和服務無法通訊，請參閱 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 ### <a name="to-run-the-sample-across-computers"></a>若要跨電腦執行範例  
   
@@ -231,7 +230,7 @@ Press <ENTER> to terminate client.
   
 9. 在用戶端上，於使用系統管理員權限開啟的 Visual Studio 命令提示字元中，執行 ImportServiceCert.bat。 這樣會將服務憑證從 Service.cer 檔案匯入至 CurrentUser - TrustedPeople 存放區中。  
   
-10. 在用戶端電腦上，從命令提示字元啟動 Client.exe。 如果用戶端和服務能夠進行通訊，請參閱[疑難排解祕訣](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+10. 在用戶端電腦上，從命令提示字元啟動 Client.exe。 如果用戶端和服務無法通訊，請參閱 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 ### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   

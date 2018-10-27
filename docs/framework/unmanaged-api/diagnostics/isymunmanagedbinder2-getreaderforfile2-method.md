@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cea8a322fab6ef76873e668c622ac63e3a3f2862
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e133333d735ca53d194bbb535710bc62bde6bb0e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428221"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188452"
 ---
 # <a name="isymunmanagedbinder2getreaderforfile2-method"></a>ISymUnmanagedBinder2::GetReaderForFile2 方法
-提供中繼資料介面和檔案名稱，傳回的正確 <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> 會讀取偵錯符號的模組相關聯的介面。  
+提供中繼資料介面和檔案名稱，傳回的正確[ISymUnmanagedReader](isymunmanagedreader-interface.md)會讀取偵錯符號的模組相關聯的介面。  
   
- 這個方法提供程式資料庫 (PDB) 檔比更廣泛的搜尋[isymunmanagedbinder:: Getreaderforfile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)方法。  
+ 這個方法會提供更廣泛的搜尋的程式資料庫 (PDB) 檔，比[isymunmanagedbinder:: Getreaderforfile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,30 +40,30 @@ HRESULT GetReaderForFile2(
     [out,retval] ISymUnmanagedReader  **pRetVal);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `importer`  
  [in]中繼資料匯入介面指標。  
   
  `fileName`  
- [in]指向的檔案名稱。  
+ [in]檔案名稱指標。  
   
  `searchPath`  
- [in]加入搜尋路徑中的指標。  
+ [in]加入搜尋路徑的指標。  
   
  `searchPolicy`  
- [in]值為[CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)列舉，指定要進行搜尋的符號讀取器時使用的原則。  
+ [in]值為[CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)列舉，指定要在進行搜尋的符號讀取器時使用的原則。  
   
  `pRetVal`  
- [out]設定的指標所傳回 <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> 介面。  
+ [out]設定指標所傳回[ISymUnmanagedReader](isymunmanagedreader-interface.md)介面。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。  
+ 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** 於 CorSym.idl、 CorSym.h  
   
 ## <a name="remarks"></a>備註  
- 這個版本的方法可以搜尋 PDB 檔案的旁邊，模組以外的區域。 搜尋原則可以控制結合[CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)。 例如，`AllowReferencePathAccess | AllowSymbolServerAccess`尋找 PDB 旁的可執行檔和符號伺服器上，但不會查詢登錄或可執行檔中使用的路徑。 如果`searchPath`提供參數，則一律會搜尋這些目錄。  
+ 這個版本的方法可以搜尋模組旁邊以外的區域中的 PDB 檔案。 搜尋原則可以控制結合[CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)。 比方說，`AllowReferencePathAccess | AllowSymbolServerAccess`尋找 PDB 旁的可執行檔和符號伺服器，但不會查詢登錄或使用中的可執行檔的路徑。 如果`searchPath`提供參數，則一律會搜尋這些目錄。  
   
 ## <a name="see-also"></a>另請參閱  
  [ISymUnmanagedBinder2 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)  

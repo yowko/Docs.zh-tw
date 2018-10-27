@@ -2,13 +2,12 @@
 title: SecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: ef93b6e6-3524-48a8-94d3-c8837f1872f9
-author: BrucePerlerMS
-ms.openlocfilehash: bd6d22635c4403e0526270a4ee50cf809c88989b
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 601e3fafd9aa876186b7f78dfdcb87a2336ddfcd
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49371064"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185767"
 ---
 # <a name="securitybindingelement"></a>SecurityBindingElement
 SecurityBindingElement  

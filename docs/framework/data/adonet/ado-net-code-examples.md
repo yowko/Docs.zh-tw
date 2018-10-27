@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
 ms.openlocfilehash: a809dbc34d08fc864f6cfe8263489ab52ce41e35
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845563"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183798"
 ---
 # <a name="adonet-code-examples"></a>ADO.NET 程式碼範例
 本主題的程式碼清單示範如何使用下列 ADO.NET 技術來擷取資料庫中的資料：

@@ -2,18 +2,18 @@
 title: 使用訊息層級程式設計序列化 Json
 ms.date: 03/30/2017
 ms.assetid: 5f940ba2-57ee-4c49-a779-957c5e7e71fa
-ms.openlocfilehash: 9c5ad29e2ddbdde3ae560c4ff2af224bc3a71ad9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2652b13cc350049cf96716eb754101001d08c64c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855697"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50186982"
 ---
 # <a name="serializing-in-json-with-message-level-programming"></a>使用訊息層級程式設計序列化 Json
 WCF 支援 JSON 格式的序列化資料。 本主題描述如何使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 來指示 WCF 序列化您的型別。  
   
 ## <a name="typed-message-programming"></a>具型別的訊息程式設計  
- 將 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 或 <xref:System.ServiceModel.Web.WebGetAttribute> 套用至服務作業時會使用 <xref:System.ServiceModel.Web.WebInvokeAttribute>。 這兩個屬性可讓您指定 `RequestFormat` 和 `ResponseFormat`。 若要為要求和回應使用 JSON，請將這兩個屬性設定為 `WebMessageFormat.Json`。  若要使用 JSON，您必須使用會自動設定 <xref:System.ServiceModel.WebHttpBinding> 的 <xref:System.ServiceModel.Description.WebHttpBehavior>。 如需有關 WCF 序列化的詳細資訊，請參閱：[序列化和還原序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)， [Windows Communication Foundation 序列化](https://msdn.microsoft.com/magazine/cc163569.aspx)。 如需 JSON 和 WCF 的詳細資訊，請參閱[RESTfull 服務與 WCF 的簡介](https://msdn.microsoft.com/magazine/dd315413.aspx)，[在.NET 3.5 建立啟用 JSON 的 WCF 服務](http://www.pluralsight-training.net/community/blogs/fritz/archive/2008/01/31/50121.aspx)，和[概觀中的 REST WCF](https://msdn.microsoft.com/netframework/dd547388).  
+ 將 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 或 <xref:System.ServiceModel.Web.WebGetAttribute> 套用至服務作業時會使用 <xref:System.ServiceModel.Web.WebInvokeAttribute>。 這兩個屬性可讓您指定 `RequestFormat` 和 `ResponseFormat`。 若要為要求和回應使用 JSON，請將這兩個屬性設定為 `WebMessageFormat.Json`。  若要使用 JSON，您必須使用會自動設定 <xref:System.ServiceModel.WebHttpBinding> 的 <xref:System.ServiceModel.Description.WebHttpBehavior>。 如需有關 WCF 序列化的詳細資訊，請參閱：[序列化和還原序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)， [Windows Communication Foundation 序列化](https://msdn.microsoft.com/magazine/cc163569.aspx)。 如需 JSON 和 WCF 的詳細資訊，請參閱[RESTfull 服務與 WCF 的簡介](https://msdn.microsoft.com/magazine/dd315413.aspx)，[在.NET 3.5 建立啟用 JSON 的 WCF 服務](https://www.pluralsight-training.net/community/blogs/fritz/archive/2008/01/31/50121.aspx)，和[概觀中的 REST WCF](https://msdn.microsoft.com/netframework/dd547388).  
   
 > [!IMPORTANT]
 >  使用 JSON 需要使用 <xref:System.ServiceModel.WebHttpBinding> 和 <xref:System.ServiceModel.Description.WebHttpBehavior>，但這兩者不支援 SOAP 通訊。 與通訊的服務<xref:System.ServiceModel.WebHttpBinding>並支援公開服務中繼資料，因此您不能使用 Visual Studio 的 [加入服務參考] 功能或 svcutil 命令列工具來產生用戶端 proxy。 如需詳細資訊，您可以透過程式設計方式呼叫的方式使用服務<xref:System.ServiceModel.WebHttpBinding>，請參閱 <<c2> [ 取用 REST 服務與 WCF 如何](https://blogs.msdn.com/b/pedram/archive/2008/04/21/how-to-consume-rest-services-with-wcf.aspx)。  

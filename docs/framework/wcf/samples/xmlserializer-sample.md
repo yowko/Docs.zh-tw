@@ -2,12 +2,12 @@
 title: XMLSerializer 範例
 ms.date: 03/30/2017
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
-ms.openlocfilehash: 7b43af08758de1d33bcc6ab8f477885c7ecc0825
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 46f3d10305a244d23be19c87566edacfaf7bff46
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503086"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188400"
 ---
 # <a name="xmlserializer-sample"></a>XMLSerializer 範例
 這個範例會示範如何序列化和還原序列化與 <xref:System.Xml.Serialization.XmlSerializer> 相容的型別。 預設的 Windows Communication Foundation (WCF) 格式器是<xref:System.Runtime.Serialization.DataContractSerializer>類別。 當無法使用 <xref:System.Xml.Serialization.XmlSerializer> 類別時，<xref:System.Runtime.Serialization.DataContractSerializer> 類別可以用來序列化與還原序列化型別。 這時通常需要精確控制 XML，例如，當資料片段必須是 XML 屬性而且不是 XML 項目的情況下。 此外，<xref:System.Xml.Serialization.XmlSerializer>通常會自動選取時建立的非 WCF 服務用戶端。  
@@ -108,7 +108,7 @@ Console.WriteLine("Add({0} + {1}i, {2} + {3}i) = {4} + {5}i",
   
  當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。  
   
-```  
+```console  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
 Subtract(1 + 2i, 3 + 4i) = -2 + -2i  
 Multiply(2 + 3i, 4 + 7i) = -13 + 26i  

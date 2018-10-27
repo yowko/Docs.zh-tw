@@ -2,12 +2,12 @@
 title: 資料流
 ms.date: 03/30/2017
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
-ms.openlocfilehash: 54601b92efcb621d36432d870514fe9a9dc0b46e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ed77d8231df8a2272e398f5b1a126c6ed8cab354
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861110"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191177"
 ---
 # <a name="stream"></a>資料流
 這個資料流範例將示範資料流傳輸模式通訊的使用。 服務會公開數個傳送和接收資料流的作業。 這個範例會自我裝載。 用戶端和服務都是主控台程式。  
@@ -20,7 +20,7 @@ ms.locfileid: "43861110"
 ## <a name="streaming-and-service-contracts"></a>資料流和服務合約  
  設計服務合約時，資料流是一項需要考慮的重點。 如果作業會接收或傳回大量的資料，您應該考慮透過資料流處理這筆資料，以避免因為要緩衝輸入或輸出訊息而佔用太多記憶體。 若要以資料流方式處理資料，存放該資料的參數必須是訊息中的唯一參數。 例如，如果輸入訊息是要處理成資料流的訊息，這項處理作業就必須剛好只有一個輸入參數。 同樣地，如果要將輸出訊息處理成資料流，這項作業也必須剛好只有一個輸出參數或傳回值。 不論是何種情況，參數或傳回值型別都必須是 `Stream`、`Message` 或 `IXmlSerializable`。 下列是這個資料流範例中使用的服務合約。  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IStreamingSample  
 {  
@@ -68,7 +68,7 @@ public interface IStreamingSample
   
  `GetReversedStream` 會建立並傳回 `ReverseStream` 的新執行個體。 實際的處理會在系統從這個 `ReverseStream` 物件讀取時進行。 `ReverseStream.Read` 的實作會從基礎檔案讀取位元組區塊，然後將其反向，再傳回此反向的位元組。 這並不會反向整個檔案內容；一次只反向一個位元組區塊。 下列是示範如何在對資料流讀取或寫入內容時執行資料流處理的範例。  
   
-```  
+```csharp
 class ReverseStream : Stream  
 {  
   
@@ -117,7 +117,7 @@ class ReverseStream : Stream
   
  服務輸出：  
   
-```  
+```console  
 The streaming service is ready.  
 Press <ENTER> to terminate service.  
   
@@ -131,7 +131,7 @@ File D:\...\uploadedfile saved
   
  用戶端輸出：  
   
-```  
+```console  
 Press <ENTER> when service is ready  
 ------ Using HTTP ------   
 Calling GetStream()  

@@ -3,11 +3,11 @@ title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
 ms.openlocfilehash: d17ded99e08fa4fb99fd87e220045c2869a35805
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372404"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188231"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
 此範例示範如何使用 <xref:System.Runtime.Serialization.DataContractResolver> 類別來自訂序列化和還原序列化程序。 此範例示範如何在序列化和還原序列化期間動態加入已知的型別。  

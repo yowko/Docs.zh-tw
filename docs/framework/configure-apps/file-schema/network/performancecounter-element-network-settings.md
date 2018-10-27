@@ -8,14 +8,12 @@ helpviewer_keywords:
 - performanceCounter element
 - <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 259d8e0297025d496b3a10c3ef3ec2b3c96cffaa
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 445b57747bbcb04df0d6bc6b3e90743b8c9600f4
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48849785"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187072"
 ---
 # <a name="ltperformancecountergt-element-network-settings"></a>&lt;performanceCounter&gt;項目 （網路設定）
 啟用或停用網路的效能計數器。  
@@ -76,7 +74,7 @@ ms.locfileid: "48849785"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>  
- <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>  
- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)  
- [網路效能計數器](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)
+- <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>  
+- <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>  
+- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)  
+- [網路效能計數器](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)

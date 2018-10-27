@@ -2,13 +2,12 @@
 title: 中繼資料的安全性考量
 ms.date: 03/30/2017
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
-author: BrucePerlerMS
-ms.openlocfilehash: 1469e5b48fbbdcbb289e4ca3147145688e1669f4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4afa040744b1b1a8a25addb954d5785436899434
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193914"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187591"
 ---
 # <a name="security-considerations-with-metadata"></a>中繼資料的安全性考量
 當 Windows Communication Foundation (WCF) 中使用的中繼資料功能，請考慮發行、 擷取和使用服務中繼資料的安全性含意。  

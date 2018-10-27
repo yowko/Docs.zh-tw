@@ -2,13 +2,12 @@
 title: '&lt;netNamedPipeBinding&gt; 的 &lt;security&gt;'
 ms.date: 03/30/2017
 ms.assetid: bb3cb022-637e-49fd-92e8-6766038affa7
-author: BrucePerlerMS
-ms.openlocfilehash: e1c93fc344ea4c7dd3b801c876d59c9a799baf44
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 4a80a8337a5b98ff30de60afbe4438e0d91b946b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48835813"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185676"
 ---
 # <a name="ltsecuritygt-of-ltnetnamedpipebindinggt"></a>&lt;netNamedPipeBinding&gt; 的 &lt;security&gt;
 定義繫結的安全性設定。  

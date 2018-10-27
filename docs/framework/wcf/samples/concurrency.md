@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, concurency sample
 - Concurrency Sample [Windows Communication Foundation]
 ms.assetid: f8dbdfb3-6858-4f95-abe3-3a1db7878926
-ms.openlocfilehash: 892def5d9788dfdf86d312aa04cf89e891323971
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f8925157714621f8b97893bc25e41685778416f5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528423"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50186001"
 ---
 # <a name="concurrency"></a>並行
 並行範例會示範搭配 <xref:System.ServiceModel.ServiceBehaviorAttribute> 列舉使用 <xref:System.ServiceModel.ConcurrencyMode>，以控制服務的執行個體要循序處理或並行處理訊息。 此樣本根據[快速入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，它會實作`ICalculator`服務合約。 這個範例會定義繼承自 `ICalculatorConcurrency` 的新合約 `ICalculator`，並提供兩個額外作業來檢查服務的並行狀態。 藉由改變並行設定，您可以在執行用戶端時觀察行為上的改變。  
@@ -32,7 +32,7 @@ ms.locfileid: "43528423"
   
  此服務類別會指定具有 `[ServiceBehavior(ConcurrencyMode=<setting>)]` 屬性的並行行為，如下列程式碼範例所示。 藉由變更要標記為註解的程式碼行，您便可以體驗 `Single` 和 `Multiple` 並行模式。 請記得在變更並行模式後重建服務。  
   
-```  
+```csharp
 // Single allows a single message to be processed sequentially by each service instance.  
 //[ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Single, InstanceContextMode = InstanceContextMode.Single)]  
   

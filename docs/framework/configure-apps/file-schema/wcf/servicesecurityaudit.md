@@ -2,13 +2,12 @@
 title: '&lt;serviceSecurityAudit&gt;'
 ms.date: 03/30/2017
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
-author: BrucePerlerMS
-ms.openlocfilehash: 3cdadedd3c9fda3874409ecad9a0f63ac34f2497
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4a3ac74ad369864f01fc6925657d4ab4c140495e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196173"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183722"
 ---
 # <a name="ltservicesecurityauditgt"></a>&lt;serviceSecurityAudit&gt;
 指定在服務作業期間啟用安全性事件稽核的設定。  
