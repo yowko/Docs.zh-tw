@@ -10,52 +10,52 @@ helpviewer_keywords:
 ms.assetid: c59c9494-149b-4ce6-b38d-371f896ae85c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: ad1611701dca48244f3b2a93ecc3ea86363081ed
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3909b9cd012ef47f5a191dbc1e7978a5852e62fe
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47230790"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50184162"
 ---
-# <a name="ltcryptonamemappinggt-element"></a><span data-ttu-id="1daa4-102">&lt;cryptoNameMapping&gt;項目</span><span class="sxs-lookup"><span data-stu-id="1daa4-102">&lt;cryptoNameMapping&gt; Element</span></span>
-<span data-ttu-id="1daa4-103">包含易記名稱的類別對應。</span><span class="sxs-lookup"><span data-stu-id="1daa4-103">Contains mappings of classes to friendly names.</span></span>  
+# <a name="ltcryptonamemappinggt-element"></a><span data-ttu-id="92cef-102">&lt;cryptoNameMapping&gt;項目</span><span class="sxs-lookup"><span data-stu-id="92cef-102">&lt;cryptoNameMapping&gt; Element</span></span>
+<span data-ttu-id="92cef-103">包含易記名稱的類別對應。</span><span class="sxs-lookup"><span data-stu-id="92cef-103">Contains mappings of classes to friendly names.</span></span>  
   
- <span data-ttu-id="1daa4-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="1daa4-104">\<configuration></span></span>  
-<span data-ttu-id="1daa4-105">\<mscorlib ></span><span class="sxs-lookup"><span data-stu-id="1daa4-105">\<mscorlib></span></span>  
-<span data-ttu-id="1daa4-106">\<cryptographySettings ></span><span class="sxs-lookup"><span data-stu-id="1daa4-106">\<cryptographySettings></span></span>  
-<span data-ttu-id="1daa4-107">\<cryptoNameMapping ></span><span class="sxs-lookup"><span data-stu-id="1daa4-107">\<cryptoNameMapping></span></span>  
+ <span data-ttu-id="92cef-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="92cef-104">\<configuration></span></span>  
+<span data-ttu-id="92cef-105">\<mscorlib ></span><span class="sxs-lookup"><span data-stu-id="92cef-105">\<mscorlib></span></span>  
+<span data-ttu-id="92cef-106">\<cryptographySettings ></span><span class="sxs-lookup"><span data-stu-id="92cef-106">\<cryptographySettings></span></span>  
+<span data-ttu-id="92cef-107">\<cryptoNameMapping ></span><span class="sxs-lookup"><span data-stu-id="92cef-107">\<cryptoNameMapping></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1daa4-108">語法</span><span class="sxs-lookup"><span data-stu-id="1daa4-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="92cef-108">語法</span><span class="sxs-lookup"><span data-stu-id="92cef-108">Syntax</span></span>  
   
 ```xml  
       <cryptoNameMapping>   
 </cryptoNameMapping>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="1daa4-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="1daa4-109">Attributes and Elements</span></span>  
- <span data-ttu-id="1daa4-110">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="1daa4-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="92cef-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="92cef-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="92cef-110">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="92cef-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="1daa4-111">屬性</span><span class="sxs-lookup"><span data-stu-id="1daa4-111">Attributes</span></span>  
- <span data-ttu-id="1daa4-112">無。</span><span class="sxs-lookup"><span data-stu-id="1daa4-112">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="92cef-111">屬性</span><span class="sxs-lookup"><span data-stu-id="92cef-111">Attributes</span></span>  
+ <span data-ttu-id="92cef-112">無。</span><span class="sxs-lookup"><span data-stu-id="92cef-112">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="1daa4-113">子元素</span><span class="sxs-lookup"><span data-stu-id="1daa4-113">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="92cef-113">子元素</span><span class="sxs-lookup"><span data-stu-id="92cef-113">Child Elements</span></span>  
   
-|<span data-ttu-id="1daa4-114">項目</span><span class="sxs-lookup"><span data-stu-id="1daa4-114">Element</span></span>|<span data-ttu-id="1daa4-115">描述</span><span class="sxs-lookup"><span data-stu-id="1daa4-115">Description</span></span>|  
+|<span data-ttu-id="92cef-114">項目</span><span class="sxs-lookup"><span data-stu-id="92cef-114">Element</span></span>|<span data-ttu-id="92cef-115">描述</span><span class="sxs-lookup"><span data-stu-id="92cef-115">Description</span></span>|  
 |-------------|-----------------|  
-|`cryptoClasses`|<span data-ttu-id="1daa4-116">包含密碼編譯類別清單，其具有 **\<nameEntry>** 項目中易記名稱的對應。</span><span class="sxs-lookup"><span data-stu-id="1daa4-116">Contains a list of cryptography classes that have a mapping to a friendly name in the **\<nameEntry>** element.</span></span>|  
-|`nameEntry`|<span data-ttu-id="1daa4-117">將類別名稱對應至易記的演算法名稱，允許一個類別有許多易記名稱。</span><span class="sxs-lookup"><span data-stu-id="1daa4-117">Maps a class name to a friendly algorithm name, which allows one class to have many friendly names.</span></span>|  
+|`cryptoClasses`|<span data-ttu-id="92cef-116">包含密碼編譯類別清單，其具有 **\<nameEntry>** 項目中易記名稱的對應。</span><span class="sxs-lookup"><span data-stu-id="92cef-116">Contains a list of cryptography classes that have a mapping to a friendly name in the **\<nameEntry>** element.</span></span>|  
+|`nameEntry`|<span data-ttu-id="92cef-117">將類別名稱對應至易記的演算法名稱，允許一個類別有許多易記名稱。</span><span class="sxs-lookup"><span data-stu-id="92cef-117">Maps a class name to a friendly algorithm name, which allows one class to have many friendly names.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="1daa4-118">父項目</span><span class="sxs-lookup"><span data-stu-id="1daa4-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="92cef-118">父項目</span><span class="sxs-lookup"><span data-stu-id="92cef-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="1daa4-119">項目</span><span class="sxs-lookup"><span data-stu-id="1daa4-119">Element</span></span>|<span data-ttu-id="1daa4-120">描述</span><span class="sxs-lookup"><span data-stu-id="1daa4-120">Description</span></span>|  
+|<span data-ttu-id="92cef-119">項目</span><span class="sxs-lookup"><span data-stu-id="92cef-119">Element</span></span>|<span data-ttu-id="92cef-120">描述</span><span class="sxs-lookup"><span data-stu-id="92cef-120">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="1daa4-121">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="1daa4-121">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`cryptographySettings`|<span data-ttu-id="1daa4-122">包含密碼編譯設定。</span><span class="sxs-lookup"><span data-stu-id="1daa4-122">Contains cryptography settings.</span></span>|  
-|`cryptoNameMapping`|<span data-ttu-id="1daa4-123">包含易記名稱的類別對應。</span><span class="sxs-lookup"><span data-stu-id="1daa4-123">Contains mappings of classes to friendly names.</span></span>|  
-|`mscorlib`|<span data-ttu-id="1daa4-124">包含\<cryptographySettings > 項目。</span><span class="sxs-lookup"><span data-stu-id="1daa4-124">Contains the \<cryptographySettings> element.</span></span>|  
+|`configuration`|<span data-ttu-id="92cef-121">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="92cef-121">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`cryptographySettings`|<span data-ttu-id="92cef-122">包含密碼編譯設定。</span><span class="sxs-lookup"><span data-stu-id="92cef-122">Contains cryptography settings.</span></span>|  
+|`cryptoNameMapping`|<span data-ttu-id="92cef-123">包含易記名稱的類別對應。</span><span class="sxs-lookup"><span data-stu-id="92cef-123">Contains mappings of classes to friendly names.</span></span>|  
+|`mscorlib`|<span data-ttu-id="92cef-124">包含\<cryptographySettings > 項目。</span><span class="sxs-lookup"><span data-stu-id="92cef-124">Contains the \<cryptographySettings> element.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="1daa4-125">範例</span><span class="sxs-lookup"><span data-stu-id="1daa4-125">Example</span></span>  
- <span data-ttu-id="1daa4-126">下列範例示範如何使用 **\<cryptoNameMapping >** 項目參考加密編譯類別及設定執行階段。</span><span class="sxs-lookup"><span data-stu-id="1daa4-126">The following example shows how to use the **\<cryptoNameMapping>** element to reference a cryptography class and to configure the runtime.</span></span> <span data-ttu-id="1daa4-127">然後，您可以將字串"RSA"傳遞至<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法和用法<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>方法來傳回`MyCryptoRSAClass`物件。</span><span class="sxs-lookup"><span data-stu-id="1daa4-127">You can then pass the string "RSA" to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> method and use the <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> method to return a `MyCryptoRSAClass` object.</span></span>  
+## <a name="example"></a><span data-ttu-id="92cef-125">範例</span><span class="sxs-lookup"><span data-stu-id="92cef-125">Example</span></span>  
+ <span data-ttu-id="92cef-126">下列範例示範如何使用 **\<cryptoNameMapping >** 項目參考加密編譯類別及設定執行階段。</span><span class="sxs-lookup"><span data-stu-id="92cef-126">The following example shows how to use the **\<cryptoNameMapping>** element to reference a cryptography class and to configure the runtime.</span></span> <span data-ttu-id="92cef-127">然後，您可以將字串"RSA"傳遞至<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法和用法<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>方法來傳回`MyCryptoRSAClass`物件。</span><span class="sxs-lookup"><span data-stu-id="92cef-127">You can then pass the string "RSA" to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> method and use the <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> method to return a `MyCryptoRSAClass` object.</span></span>  
   
 ```xml  
 <configuration>  
@@ -76,8 +76,8 @@ ms.locfileid: "47230790"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1daa4-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1daa4-128">See Also</span></span>  
- [<span data-ttu-id="1daa4-129">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="1daa4-129">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [<span data-ttu-id="1daa4-130">密碼編譯設定結構描述</span><span class="sxs-lookup"><span data-stu-id="1daa4-130">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
- [<span data-ttu-id="1daa4-131">密碼編譯服務</span><span class="sxs-lookup"><span data-stu-id="1daa4-131">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)  
- [<span data-ttu-id="1daa4-132">設定密碼編譯類別</span><span class="sxs-lookup"><span data-stu-id="1daa4-132">Configuring Cryptography Classes</span></span>](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+## <a name="see-also"></a><span data-ttu-id="92cef-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="92cef-128">See Also</span></span>  
+- [<span data-ttu-id="92cef-129">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="92cef-129">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [<span data-ttu-id="92cef-130">密碼編譯設定結構描述</span><span class="sxs-lookup"><span data-stu-id="92cef-130">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+- [<span data-ttu-id="92cef-131">The signature is valid</span><span class="sxs-lookup"><span data-stu-id="92cef-131">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)  
+- [<span data-ttu-id="92cef-132">設定密碼編譯類別</span><span class="sxs-lookup"><span data-stu-id="92cef-132">Configuring Cryptography Classes</span></span>](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

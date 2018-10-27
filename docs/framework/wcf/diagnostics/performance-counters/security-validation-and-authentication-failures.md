@@ -2,30 +2,29 @@
 title: 安全性驗證和驗證失敗數
 ms.date: 03/30/2017
 ms.assetid: 0d4e3666-dfc6-421c-baf8-9479c22f7050
-author: BrucePerlerMS
-ms.openlocfilehash: d13e94800d71c6f567c6aab61974e42b1a3f1706
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 32a7d41f93dd99f1950a073e1cac1b62177ff6c3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198185"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185871"
 ---
-# <a name="security-validation-and-authentication-failures"></a><span data-ttu-id="06d99-102">安全性驗證和驗證失敗數</span><span class="sxs-lookup"><span data-stu-id="06d99-102">Security Validation and Authentication Failures</span></span>
-<span data-ttu-id="06d99-103">計數器名稱：安全性驗證和驗證失敗數</span><span class="sxs-lookup"><span data-stu-id="06d99-103">Counter name: Security Validation and Authentication Failures</span></span>  
+# <a name="security-validation-and-authentication-failures"></a><span data-ttu-id="7328d-102">安全性驗證和驗證失敗數</span><span class="sxs-lookup"><span data-stu-id="7328d-102">Security Validation and Authentication Failures</span></span>
+<span data-ttu-id="7328d-103">計數器名稱：安全性驗證和驗證失敗數</span><span class="sxs-lookup"><span data-stu-id="7328d-103">Counter name: Security Validation and Authentication Failures</span></span>  
   
-## <a name="description"></a><span data-ttu-id="06d99-104">描述</span><span class="sxs-lookup"><span data-stu-id="06d99-104">Description</span></span>  
- <span data-ttu-id="06d99-105">每當因為「未授權的安全性呼叫數」計數器所未涵蓋的安全性問題而拒絕訊息時，這個計數器就會遞增。</span><span class="sxs-lookup"><span data-stu-id="06d99-105">This counter is incremented whenever a message is rejected due to a security problem not covered by the "Security Calls Not Authorized" counter.</span></span> <span data-ttu-id="06d99-106">這類問題包括：</span><span class="sxs-lookup"><span data-stu-id="06d99-106">Such problems include:</span></span>  
+## <a name="description"></a><span data-ttu-id="7328d-104">描述</span><span class="sxs-lookup"><span data-stu-id="7328d-104">Description</span></span>  
+ <span data-ttu-id="7328d-105">每當因為「未授權的安全性呼叫數」計數器所未涵蓋的安全性問題而拒絕訊息時，這個計數器就會遞增。</span><span class="sxs-lookup"><span data-stu-id="7328d-105">This counter is incremented whenever a message is rejected due to a security problem not covered by the "Security Calls Not Authorized" counter.</span></span> <span data-ttu-id="7328d-106">這類問題包括：</span><span class="sxs-lookup"><span data-stu-id="7328d-106">Such problems include:</span></span>  
   
--   <span data-ttu-id="06d99-107">無法從訊息中讀取用戶端權杖。</span><span class="sxs-lookup"><span data-stu-id="06d99-107">Client token cannot be read from the message.</span></span>  
+-   <span data-ttu-id="7328d-107">無法從訊息中讀取用戶端權杖。</span><span class="sxs-lookup"><span data-stu-id="7328d-107">Client token cannot be read from the message.</span></span>  
   
--   <span data-ttu-id="06d99-108">用戶端權杖已經驗證失敗 (例如密碼錯誤)。</span><span class="sxs-lookup"><span data-stu-id="06d99-108">Client token has failed authentication (for example, bad password).</span></span>  
+-   <span data-ttu-id="7328d-108">用戶端權杖已經驗證失敗 (例如密碼錯誤)。</span><span class="sxs-lookup"><span data-stu-id="7328d-108">Client token has failed authentication (for example, bad password).</span></span>  
   
--   <span data-ttu-id="06d99-109">簽章驗證已經失敗 (例如訊息遭到竄改)。</span><span class="sxs-lookup"><span data-stu-id="06d99-109">Signature verification has failed (for example, the message has been tampered).</span></span>  
+-   <span data-ttu-id="7328d-109">簽章驗證已經失敗 (例如訊息遭到竄改)。</span><span class="sxs-lookup"><span data-stu-id="7328d-109">Signature verification has failed (for example, the message has been tampered).</span></span>  
   
--   <span data-ttu-id="06d99-110">此訊息與之前的訊息重複，這可能會在重新執行攻擊時發生。</span><span class="sxs-lookup"><span data-stu-id="06d99-110">The message is a duplicate from a previous one, which can happen during a replay attack.</span></span>  
+-   <span data-ttu-id="7328d-110">此訊息與之前的訊息重複，這可能會在重新執行攻擊時發生。</span><span class="sxs-lookup"><span data-stu-id="7328d-110">The message is a duplicate from a previous one, which can happen during a replay attack.</span></span>  
   
--   <span data-ttu-id="06d99-111">發生解密失敗。</span><span class="sxs-lookup"><span data-stu-id="06d99-111">A decryption failure has occurred.</span></span>  
+-   <span data-ttu-id="7328d-111">發生解密失敗。</span><span class="sxs-lookup"><span data-stu-id="7328d-111">A decryption failure has occurred.</span></span>  
   
--   <span data-ttu-id="06d99-112">訊息中遺失某些必要的項目 (例如遺失時間戳記或加密的資料區塊)。</span><span class="sxs-lookup"><span data-stu-id="06d99-112">Some required elements (for example, missing timestamp or encrypted data block) are missing from the message.</span></span>  
+-   <span data-ttu-id="7328d-112">訊息中遺失某些必要的項目 (例如遺失時間戳記或加密的資料區塊)。</span><span class="sxs-lookup"><span data-stu-id="7328d-112">Some required elements (for example, missing timestamp or encrypted data block) are missing from the message.</span></span>  
   
--   <span data-ttu-id="06d99-113">在 TLSNEGO/SPNEGO 交換期間發生錯誤。</span><span class="sxs-lookup"><span data-stu-id="06d99-113">Errors have occurred during TLSNEGO/SPNEGO handshake.</span></span>
+-   <span data-ttu-id="7328d-113">在 TLSNEGO/SPNEGO 交換期間發生錯誤。</span><span class="sxs-lookup"><span data-stu-id="7328d-113">Errors have occurred during TLSNEGO/SPNEGO handshake.</span></span>

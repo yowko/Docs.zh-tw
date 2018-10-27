@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cea8a322fab6ef76873e668c622ac63e3a3f2862
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e133333d735ca53d194bbb535710bc62bde6bb0e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428221"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188452"
 ---
-# <a name="isymunmanagedbinder2getreaderforfile2-method"></a><span data-ttu-id="d56dd-102">ISymUnmanagedBinder2::GetReaderForFile2 方法</span><span class="sxs-lookup"><span data-stu-id="d56dd-102">ISymUnmanagedBinder2::GetReaderForFile2 Method</span></span>
-<span data-ttu-id="d56dd-103">提供中繼資料介面和檔案名稱，傳回的正確 <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> 會讀取偵錯符號的模組相關聯的介面。</span><span class="sxs-lookup"><span data-stu-id="d56dd-103">Given a metadata interface and a file name, returns the correct <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> interface that will read the debugging symbols associated with the module.</span></span>  
+# <a name="isymunmanagedbinder2getreaderforfile2-method"></a><span data-ttu-id="9f24c-102">ISymUnmanagedBinder2::GetReaderForFile2 方法</span><span class="sxs-lookup"><span data-stu-id="9f24c-102">ISymUnmanagedBinder2::GetReaderForFile2 Method</span></span>
+<span data-ttu-id="9f24c-103">提供中繼資料介面和檔案名稱，傳回的正確[ISymUnmanagedReader](isymunmanagedreader-interface.md)會讀取偵錯符號的模組相關聯的介面。</span><span class="sxs-lookup"><span data-stu-id="9f24c-103">Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface that will read the debugging symbols associated with the module.</span></span>  
   
- <span data-ttu-id="d56dd-104">這個方法提供程式資料庫 (PDB) 檔比更廣泛的搜尋[isymunmanagedbinder:: Getreaderforfile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="d56dd-104">This method provides a more extensive search for the program database (PDB) file than the [ISymUnmanagedBinder::GetReaderForFile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md) method.</span></span>  
+ <span data-ttu-id="9f24c-104">這個方法會提供更廣泛的搜尋的程式資料庫 (PDB) 檔，比[isymunmanagedbinder:: Getreaderforfile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="9f24c-104">This method provides a more extensive search for the program database (PDB) file than the [ISymUnmanagedBinder::GetReaderForFile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d56dd-105">語法</span><span class="sxs-lookup"><span data-stu-id="d56dd-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9f24c-105">語法</span><span class="sxs-lookup"><span data-stu-id="9f24c-105">Syntax</span></span>  
   
 ```  
 HRESULT GetReaderForFile2(  
@@ -40,31 +40,31 @@ HRESULT GetReaderForFile2(
     [out,retval] ISymUnmanagedReader  **pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d56dd-106">參數</span><span class="sxs-lookup"><span data-stu-id="d56dd-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9f24c-106">參數</span><span class="sxs-lookup"><span data-stu-id="9f24c-106">Parameters</span></span>  
  `importer`  
- <span data-ttu-id="d56dd-107">[in]中繼資料匯入介面指標。</span><span class="sxs-lookup"><span data-stu-id="d56dd-107">[in] A pointer to the metadata import interface.</span></span>  
+ <span data-ttu-id="9f24c-107">[in]中繼資料匯入介面指標。</span><span class="sxs-lookup"><span data-stu-id="9f24c-107">[in] A pointer to the metadata import interface.</span></span>  
   
  `fileName`  
- <span data-ttu-id="d56dd-108">[in]指向的檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="d56dd-108">[in] A pointer to the file name.</span></span>  
+ <span data-ttu-id="9f24c-108">[in]檔案名稱指標。</span><span class="sxs-lookup"><span data-stu-id="9f24c-108">[in] A pointer to the file name.</span></span>  
   
  `searchPath`  
- <span data-ttu-id="d56dd-109">[in]加入搜尋路徑中的指標。</span><span class="sxs-lookup"><span data-stu-id="d56dd-109">[in] A pointer to the search path.</span></span>  
+ <span data-ttu-id="9f24c-109">[in]加入搜尋路徑的指標。</span><span class="sxs-lookup"><span data-stu-id="9f24c-109">[in] A pointer to the search path.</span></span>  
   
  `searchPolicy`  
- <span data-ttu-id="d56dd-110">[in]值為[CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)列舉，指定要進行搜尋的符號讀取器時使用的原則。</span><span class="sxs-lookup"><span data-stu-id="d56dd-110">[in] A value of the [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) enumeration that specifies the policy to be used when doing a search for a symbol reader.</span></span>  
+ <span data-ttu-id="9f24c-110">[in]值為[CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)列舉，指定要在進行搜尋的符號讀取器時使用的原則。</span><span class="sxs-lookup"><span data-stu-id="9f24c-110">[in] A value of the [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) enumeration that specifies the policy to be used when doing a search for a symbol reader.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="d56dd-111">[out]設定的指標所傳回 <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> 介面。</span><span class="sxs-lookup"><span data-stu-id="d56dd-111">[out] A pointer that is set to the returned <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> interface.</span></span>  
+ <span data-ttu-id="9f24c-111">[out]設定指標所傳回[ISymUnmanagedReader](isymunmanagedreader-interface.md)介面。</span><span class="sxs-lookup"><span data-stu-id="9f24c-111">[out] A pointer that is set to the returned [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d56dd-112">傳回值</span><span class="sxs-lookup"><span data-stu-id="d56dd-112">Return Value</span></span>  
- <span data-ttu-id="d56dd-113">如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="d56dd-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9f24c-112">傳回值</span><span class="sxs-lookup"><span data-stu-id="9f24c-112">Return Value</span></span>  
+ <span data-ttu-id="9f24c-113">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="9f24c-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d56dd-114">需求</span><span class="sxs-lookup"><span data-stu-id="d56dd-114">Requirements</span></span>  
- <span data-ttu-id="d56dd-115">**標頭：** 於 CorSym.idl、 CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d56dd-115">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9f24c-114">需求</span><span class="sxs-lookup"><span data-stu-id="9f24c-114">Requirements</span></span>  
+ <span data-ttu-id="9f24c-115">**標頭：** 於 CorSym.idl、 CorSym.h</span><span class="sxs-lookup"><span data-stu-id="9f24c-115">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d56dd-116">備註</span><span class="sxs-lookup"><span data-stu-id="d56dd-116">Remarks</span></span>  
- <span data-ttu-id="d56dd-117">這個版本的方法可以搜尋 PDB 檔案的旁邊，模組以外的區域。</span><span class="sxs-lookup"><span data-stu-id="d56dd-117">This version of the method can search for the PDB file in areas other than right next to the module.</span></span> <span data-ttu-id="d56dd-118">搜尋原則可以控制結合[CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)。</span><span class="sxs-lookup"><span data-stu-id="d56dd-118">The search policy can be controlled by combining [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md).</span></span> <span data-ttu-id="d56dd-119">例如，`AllowReferencePathAccess | AllowSymbolServerAccess`尋找 PDB 旁的可執行檔和符號伺服器上，但不會查詢登錄或可執行檔中使用的路徑。</span><span class="sxs-lookup"><span data-stu-id="d56dd-119">For example, `AllowReferencePathAccess | AllowSymbolServerAccess` looks for the PDB next to the executable file and on a symbol server, but does not query the registry or use the path in the executable file.</span></span> <span data-ttu-id="d56dd-120">如果`searchPath`提供參數，則一律會搜尋這些目錄。</span><span class="sxs-lookup"><span data-stu-id="d56dd-120">If the `searchPath` parameter is provided, those directories will always be searched.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9f24c-116">備註</span><span class="sxs-lookup"><span data-stu-id="9f24c-116">Remarks</span></span>  
+ <span data-ttu-id="9f24c-117">這個版本的方法可以搜尋模組旁邊以外的區域中的 PDB 檔案。</span><span class="sxs-lookup"><span data-stu-id="9f24c-117">This version of the method can search for the PDB file in areas other than right next to the module.</span></span> <span data-ttu-id="9f24c-118">搜尋原則可以控制結合[CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)。</span><span class="sxs-lookup"><span data-stu-id="9f24c-118">The search policy can be controlled by combining [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md).</span></span> <span data-ttu-id="9f24c-119">比方說，`AllowReferencePathAccess | AllowSymbolServerAccess`尋找 PDB 旁的可執行檔和符號伺服器，但不會查詢登錄或使用中的可執行檔的路徑。</span><span class="sxs-lookup"><span data-stu-id="9f24c-119">For example, `AllowReferencePathAccess | AllowSymbolServerAccess` looks for the PDB next to the executable file and on a symbol server, but does not query the registry or use the path in the executable file.</span></span> <span data-ttu-id="9f24c-120">如果`searchPath`提供參數，則一律會搜尋這些目錄。</span><span class="sxs-lookup"><span data-stu-id="9f24c-120">If the `searchPath` parameter is provided, those directories will always be searched.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d56dd-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d56dd-121">See Also</span></span>  
- [<span data-ttu-id="d56dd-122">ISymUnmanagedBinder2 介面</span><span class="sxs-lookup"><span data-stu-id="d56dd-122">ISymUnmanagedBinder2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)  
- [<span data-ttu-id="d56dd-123">GetReaderForFile 方法</span><span class="sxs-lookup"><span data-stu-id="d56dd-123">GetReaderForFile Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)
+## <a name="see-also"></a><span data-ttu-id="9f24c-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9f24c-121">See Also</span></span>  
+ [<span data-ttu-id="9f24c-122">ISymUnmanagedBinder2 介面</span><span class="sxs-lookup"><span data-stu-id="9f24c-122">ISymUnmanagedBinder2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)  
+ [<span data-ttu-id="9f24c-123">GetReaderForFile 方法</span><span class="sxs-lookup"><span data-stu-id="9f24c-123">GetReaderForFile Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)

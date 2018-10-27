@@ -8,24 +8,22 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f4ab3d4e7ce6686a43e4c5258a56e72203c38ebd
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 3a6d5b080c74fbd3f6ebca9882c1667951cfcb91
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033385"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183669"
 ---
-# <a name="ltproxygt-element-network-settings"></a><span data-ttu-id="d2612-102">&lt;proxy&gt;項目 （網路設定）</span><span class="sxs-lookup"><span data-stu-id="d2612-102">&lt;proxy&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="d2612-103">定義 Proxy 伺服器。</span><span class="sxs-lookup"><span data-stu-id="d2612-103">Defines a proxy server.</span></span>  
+# <a name="ltproxygt-element-network-settings"></a><span data-ttu-id="c3ef4-102">&lt;proxy&gt;項目 （網路設定）</span><span class="sxs-lookup"><span data-stu-id="c3ef4-102">&lt;proxy&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="c3ef4-103">定義 Proxy 伺服器。</span><span class="sxs-lookup"><span data-stu-id="c3ef4-103">Defines a proxy server.</span></span>  
   
- <span data-ttu-id="d2612-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="d2612-104">\<configuration></span></span>  
-<span data-ttu-id="d2612-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="d2612-105">\<system.net></span></span>  
-<span data-ttu-id="d2612-106">\<defaultProxy ></span><span class="sxs-lookup"><span data-stu-id="d2612-106">\<defaultProxy></span></span>  
-<span data-ttu-id="d2612-107">\<proxy ></span><span class="sxs-lookup"><span data-stu-id="d2612-107">\<proxy></span></span>  
+ <span data-ttu-id="c3ef4-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="c3ef4-104">\<configuration></span></span>  
+<span data-ttu-id="c3ef4-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="c3ef4-105">\<system.net></span></span>  
+<span data-ttu-id="c3ef4-106">\<defaultProxy ></span><span class="sxs-lookup"><span data-stu-id="c3ef4-106">\<defaultProxy></span></span>  
+<span data-ttu-id="c3ef4-107">\<proxy ></span><span class="sxs-lookup"><span data-stu-id="c3ef4-107">\<proxy></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d2612-108">語法</span><span class="sxs-lookup"><span data-stu-id="d2612-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c3ef4-108">語法</span><span class="sxs-lookup"><span data-stu-id="c3ef4-108">Syntax</span></span>  
   
 ```xml  
 <proxy
@@ -37,46 +35,46 @@ ms.locfileid: "48033385"
 />
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="d2612-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="d2612-109">Attributes and Elements</span></span>  
- <span data-ttu-id="d2612-110">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="d2612-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c3ef4-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="c3ef4-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="c3ef4-110">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="c3ef4-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="d2612-111">屬性</span><span class="sxs-lookup"><span data-stu-id="d2612-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="c3ef4-111">屬性</span><span class="sxs-lookup"><span data-stu-id="c3ef4-111">Attributes</span></span>  
   
-|<span data-ttu-id="d2612-112">**屬性**</span><span class="sxs-lookup"><span data-stu-id="d2612-112">**Attribute**</span></span>|<span data-ttu-id="d2612-113">**描述**</span><span class="sxs-lookup"><span data-stu-id="d2612-113">**Description**</span></span>|  
+|<span data-ttu-id="c3ef4-112">**屬性**</span><span class="sxs-lookup"><span data-stu-id="c3ef4-112">**Attribute**</span></span>|<span data-ttu-id="c3ef4-113">**描述**</span><span class="sxs-lookup"><span data-stu-id="c3ef4-113">**Description**</span></span>|  
 |-------------------|---------------------|  
-|`autoDetect`|<span data-ttu-id="d2612-114">指定是否自動偵測 proxy。</span><span class="sxs-lookup"><span data-stu-id="d2612-114">Specifies whether the proxy is automatically detected.</span></span> <span data-ttu-id="d2612-115">預設值是 `unspecified`。</span><span class="sxs-lookup"><span data-stu-id="d2612-115">The default value is `unspecified`.</span></span>|  
-|`bypassonlocal`|<span data-ttu-id="d2612-116">指定是否略過本機資源的 proxy。</span><span class="sxs-lookup"><span data-stu-id="d2612-116">Specifies whether the proxy is bypassed for local resources.</span></span> <span data-ttu-id="d2612-117">本機資源包含在本機伺服器 (`http://localhost`， `http://loopback`，或`http://127.0.0.1`) 和不含點的 URI (`http://webserver`)。</span><span class="sxs-lookup"><span data-stu-id="d2612-117">Local resources include the local server (`http://localhost`, `http://loopback`, or `http://127.0.0.1`) and a URI without a period (`http://webserver`).</span></span> <span data-ttu-id="d2612-118">預設值是 `unspecified`。</span><span class="sxs-lookup"><span data-stu-id="d2612-118">The default value is `unspecified`.</span></span>|  
-|`proxyaddress`|<span data-ttu-id="d2612-119">指定 proxy 使用的 URI。</span><span class="sxs-lookup"><span data-stu-id="d2612-119">Specifies the proxy URI to use.</span></span>|  
-|`scriptLocation`|<span data-ttu-id="d2612-120">指定的組態指令碼的位置。</span><span class="sxs-lookup"><span data-stu-id="d2612-120">Specifies the location of the configuration script.</span></span> <span data-ttu-id="d2612-121">請勿使用`bypassonlocal`具有此屬性的屬性。</span><span class="sxs-lookup"><span data-stu-id="d2612-121">Do not use the `bypassonlocal` attribute with this attribute.</span></span> |  
-|`usesystemdefault`|<span data-ttu-id="d2612-122">指定是否要使用 Internet Explorer proxy 設定。</span><span class="sxs-lookup"><span data-stu-id="d2612-122">Specifies whether to use Internet Explorer proxy settings.</span></span> <span data-ttu-id="d2612-123">如果設定為`true`，後續的屬性會覆寫 Internet Explorer proxy 設定。</span><span class="sxs-lookup"><span data-stu-id="d2612-123">If set to `true`, subsequent attributes will override Internet Explorer proxy settings.</span></span> <span data-ttu-id="d2612-124">預設值是 `unspecified`。</span><span class="sxs-lookup"><span data-stu-id="d2612-124">The default value is `unspecified`.</span></span>|  
+|`autoDetect`|<span data-ttu-id="c3ef4-114">指定是否自動偵測 proxy。</span><span class="sxs-lookup"><span data-stu-id="c3ef4-114">Specifies whether the proxy is automatically detected.</span></span> <span data-ttu-id="c3ef4-115">預設值是 `unspecified`。</span><span class="sxs-lookup"><span data-stu-id="c3ef4-115">The default value is `unspecified`.</span></span>|  
+|`bypassonlocal`|<span data-ttu-id="c3ef4-116">指定是否略過本機資源的 proxy。</span><span class="sxs-lookup"><span data-stu-id="c3ef4-116">Specifies whether the proxy is bypassed for local resources.</span></span> <span data-ttu-id="c3ef4-117">本機資源包含在本機伺服器 (`http://localhost`， `http://loopback`，或`http://127.0.0.1`) 和不含點的 URI (`http://webserver`)。</span><span class="sxs-lookup"><span data-stu-id="c3ef4-117">Local resources include the local server (`http://localhost`, `http://loopback`, or `http://127.0.0.1`) and a URI without a period (`http://webserver`).</span></span> <span data-ttu-id="c3ef4-118">預設值是 `unspecified`。</span><span class="sxs-lookup"><span data-stu-id="c3ef4-118">The default value is `unspecified`.</span></span>|  
+|`proxyaddress`|<span data-ttu-id="c3ef4-119">指定 proxy 使用的 URI。</span><span class="sxs-lookup"><span data-stu-id="c3ef4-119">Specifies the proxy URI to use.</span></span>|  
+|`scriptLocation`|<span data-ttu-id="c3ef4-120">指定的組態指令碼的位置。</span><span class="sxs-lookup"><span data-stu-id="c3ef4-120">Specifies the location of the configuration script.</span></span> <span data-ttu-id="c3ef4-121">請勿使用`bypassonlocal`具有此屬性的屬性。</span><span class="sxs-lookup"><span data-stu-id="c3ef4-121">Do not use the `bypassonlocal` attribute with this attribute.</span></span> |  
+|`usesystemdefault`|<span data-ttu-id="c3ef4-122">指定是否要使用 Internet Explorer proxy 設定。</span><span class="sxs-lookup"><span data-stu-id="c3ef4-122">Specifies whether to use Internet Explorer proxy settings.</span></span> <span data-ttu-id="c3ef4-123">如果設定為`true`，後續的屬性會覆寫 Internet Explorer proxy 設定。</span><span class="sxs-lookup"><span data-stu-id="c3ef4-123">If set to `true`, subsequent attributes will override Internet Explorer proxy settings.</span></span> <span data-ttu-id="c3ef4-124">預設值是 `unspecified`。</span><span class="sxs-lookup"><span data-stu-id="c3ef4-124">The default value is `unspecified`.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="d2612-125">子元素</span><span class="sxs-lookup"><span data-stu-id="d2612-125">Child Elements</span></span>  
- <span data-ttu-id="d2612-126">無。</span><span class="sxs-lookup"><span data-stu-id="d2612-126">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="c3ef4-125">子元素</span><span class="sxs-lookup"><span data-stu-id="c3ef4-125">Child Elements</span></span>  
+ <span data-ttu-id="c3ef4-126">無。</span><span class="sxs-lookup"><span data-stu-id="c3ef4-126">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="d2612-127">父項目</span><span class="sxs-lookup"><span data-stu-id="d2612-127">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="c3ef4-127">父項目</span><span class="sxs-lookup"><span data-stu-id="c3ef4-127">Parent Elements</span></span>  
   
-|<span data-ttu-id="d2612-128">**目**</span><span class="sxs-lookup"><span data-stu-id="d2612-128">**Element**</span></span>|<span data-ttu-id="d2612-129">**描述**</span><span class="sxs-lookup"><span data-stu-id="d2612-129">**Description**</span></span>|  
+|<span data-ttu-id="c3ef4-128">**目**</span><span class="sxs-lookup"><span data-stu-id="c3ef4-128">**Element**</span></span>|<span data-ttu-id="c3ef4-129">**描述**</span><span class="sxs-lookup"><span data-stu-id="c3ef4-129">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="d2612-130">defaultProxy</span><span class="sxs-lookup"><span data-stu-id="d2612-130">defaultProxy</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|<span data-ttu-id="d2612-131">設定超文字傳輸協定 (HTTP) 的 Proxy 伺服器。</span><span class="sxs-lookup"><span data-stu-id="d2612-131">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>|  
+|[<span data-ttu-id="c3ef4-130">defaultProxy</span><span class="sxs-lookup"><span data-stu-id="c3ef4-130">defaultProxy</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|<span data-ttu-id="c3ef4-131">設定超文字傳輸協定 (HTTP) 的 Proxy 伺服器。</span><span class="sxs-lookup"><span data-stu-id="c3ef4-131">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>|  
   
-## <a name="text-value"></a><span data-ttu-id="d2612-132">文字值</span><span class="sxs-lookup"><span data-stu-id="d2612-132">Text Value</span></span>  
+## <a name="text-value"></a><span data-ttu-id="c3ef4-132">文字值</span><span class="sxs-lookup"><span data-stu-id="c3ef4-132">Text Value</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d2612-133">備註</span><span class="sxs-lookup"><span data-stu-id="d2612-133">Remarks</span></span>  
- <span data-ttu-id="d2612-134">`proxy`項目會定義應用程式 proxy 伺服器。</span><span class="sxs-lookup"><span data-stu-id="d2612-134">The `proxy` element defines a proxy server for an application.</span></span> <span data-ttu-id="d2612-135">如果組態檔中沒有這個項目，.NET Framework 會在 Internet Explorer 中使用的 proxy 設定。</span><span class="sxs-lookup"><span data-stu-id="d2612-135">If this element is missing from the configuration file, then the .NET Framework will use the proxy settings in Internet Explorer.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c3ef4-133">備註</span><span class="sxs-lookup"><span data-stu-id="c3ef4-133">Remarks</span></span>  
+ <span data-ttu-id="c3ef4-134">`proxy`項目會定義應用程式 proxy 伺服器。</span><span class="sxs-lookup"><span data-stu-id="c3ef4-134">The `proxy` element defines a proxy server for an application.</span></span> <span data-ttu-id="c3ef4-135">如果組態檔中沒有這個項目，.NET Framework 會在 Internet Explorer 中使用的 proxy 設定。</span><span class="sxs-lookup"><span data-stu-id="c3ef4-135">If this element is missing from the configuration file, then the .NET Framework will use the proxy settings in Internet Explorer.</span></span>  
   
- <span data-ttu-id="d2612-136">值`proxyaddress`屬性應該是語式正確的 Uniform Resource Indicator (URI)。</span><span class="sxs-lookup"><span data-stu-id="d2612-136">The value for the `proxyaddress` attribute should be a well-formed Uniform Resource Indicator (URI).</span></span>  
+ <span data-ttu-id="c3ef4-136">值`proxyaddress`屬性應該是語式正確的 Uniform Resource Indicator (URI)。</span><span class="sxs-lookup"><span data-stu-id="c3ef4-136">The value for the `proxyaddress` attribute should be a well-formed Uniform Resource Indicator (URI).</span></span>  
   
- <span data-ttu-id="d2612-137">`scriptLocation`屬性會自動偵測 proxy 設定指令碼的參考。</span><span class="sxs-lookup"><span data-stu-id="d2612-137">The `scriptLocation` attribute refers to the automatic detection of proxy configuration scripts.</span></span> <span data-ttu-id="d2612-138"><xref:System.Net.WebProxy>類別會嘗試找出組態指令碼 (通常是具名 Wpad.dat) 時，當**使用自動設定指令碼**Internet Explorer 中選取選項。</span><span class="sxs-lookup"><span data-stu-id="d2612-138">The <xref:System.Net.WebProxy> class will attempt to locate a configuration script (usually named Wpad.dat) when the **Use automatic configuration script** option is selected in Internet Explorer.</span></span> <span data-ttu-id="d2612-139">如果`bypassonlocal`設定為任何值，`scriptLocation`會被忽略。</span><span class="sxs-lookup"><span data-stu-id="d2612-139">If `bypassonlocal` is set to any value, `scriptLocation` is ignored.</span></span>
+ <span data-ttu-id="c3ef4-137">`scriptLocation`屬性會自動偵測 proxy 設定指令碼的參考。</span><span class="sxs-lookup"><span data-stu-id="c3ef4-137">The `scriptLocation` attribute refers to the automatic detection of proxy configuration scripts.</span></span> <span data-ttu-id="c3ef4-138"><xref:System.Net.WebProxy>類別會嘗試找出組態指令碼 (通常是具名 Wpad.dat) 時，當**使用自動設定指令碼**Internet Explorer 中選取選項。</span><span class="sxs-lookup"><span data-stu-id="c3ef4-138">The <xref:System.Net.WebProxy> class will attempt to locate a configuration script (usually named Wpad.dat) when the **Use automatic configuration script** option is selected in Internet Explorer.</span></span> <span data-ttu-id="c3ef4-139">如果`bypassonlocal`設定為任何值，`scriptLocation`會被忽略。</span><span class="sxs-lookup"><span data-stu-id="c3ef4-139">If `bypassonlocal` is set to any value, `scriptLocation` is ignored.</span></span>
   
- <span data-ttu-id="d2612-140">使用`usesystemdefault`要移轉至 2.0 版的.NET Framework 1.1 版應用程式的屬性。</span><span class="sxs-lookup"><span data-stu-id="d2612-140">Use the `usesystemdefault` attribute for .NET Framework version 1.1 applications that are migrating to version 2.0.</span></span>  
+ <span data-ttu-id="c3ef4-140">使用`usesystemdefault`要移轉至 2.0 版的.NET Framework 1.1 版應用程式的屬性。</span><span class="sxs-lookup"><span data-stu-id="c3ef4-140">Use the `usesystemdefault` attribute for .NET Framework version 1.1 applications that are migrating to version 2.0.</span></span>  
   
- <span data-ttu-id="d2612-141">如果將會擲回例外狀況`proxyaddress`屬性會指定無效的預設 proxy。</span><span class="sxs-lookup"><span data-stu-id="d2612-141">An exception is thrown if the `proxyaddress` attribute specifies an invalid default proxy.</span></span> <span data-ttu-id="d2612-142">例外狀況的 <xref:System.Exception.InnerException%2A> 屬性應該會有此錯誤的根本原因之詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="d2612-142">The <xref:System.Exception.InnerException%2A> property on the exception should have more information about the root cause of the error.</span></span>  
+ <span data-ttu-id="c3ef4-141">如果將會擲回例外狀況`proxyaddress`屬性會指定無效的預設 proxy。</span><span class="sxs-lookup"><span data-stu-id="c3ef4-141">An exception is thrown if the `proxyaddress` attribute specifies an invalid default proxy.</span></span> <span data-ttu-id="c3ef4-142">例外狀況的 <xref:System.Exception.InnerException%2A> 屬性應該會有此錯誤的根本原因之詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="c3ef4-142">The <xref:System.Exception.InnerException%2A> property on the exception should have more information about the root cause of the error.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="d2612-143">組態檔</span><span class="sxs-lookup"><span data-stu-id="d2612-143">Configuration Files</span></span>  
- <span data-ttu-id="d2612-144">此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。</span><span class="sxs-lookup"><span data-stu-id="d2612-144">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="c3ef4-143">組態檔</span><span class="sxs-lookup"><span data-stu-id="c3ef4-143">Configuration Files</span></span>  
+ <span data-ttu-id="c3ef4-144">此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。</span><span class="sxs-lookup"><span data-stu-id="c3ef4-144">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d2612-145">範例</span><span class="sxs-lookup"><span data-stu-id="d2612-145">Example</span></span>  
- <span data-ttu-id="d2612-146">下列範例會使用來自 Internet Explorer proxy 的預設值，指定 proxy 位址，並會略過本機存取的 proxy。</span><span class="sxs-lookup"><span data-stu-id="d2612-146">The following example uses the defaults from the Internet Explorer proxy, specifies the proxy address, and bypasses the proxy for local access.</span></span>  
+## <a name="example"></a><span data-ttu-id="c3ef4-145">範例</span><span class="sxs-lookup"><span data-stu-id="c3ef4-145">Example</span></span>  
+ <span data-ttu-id="c3ef4-146">下列範例會使用來自 Internet Explorer proxy 的預設值，指定 proxy 位址，並會略過本機存取的 proxy。</span><span class="sxs-lookup"><span data-stu-id="c3ef4-146">The following example uses the defaults from the Internet Explorer proxy, specifies the proxy address, and bypasses the proxy for local access.</span></span>  
   
 ```xml  
 <configuration>  
@@ -92,6 +90,6 @@ ms.locfileid: "48033385"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d2612-147">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d2612-147">See Also</span></span>  
- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
- [<span data-ttu-id="d2612-148">網路設定結構描述</span><span class="sxs-lookup"><span data-stu-id="d2612-148">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="c3ef4-147">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c3ef4-147">See Also</span></span>  
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+- [<span data-ttu-id="c3ef4-148">網路設定結構描述</span><span class="sxs-lookup"><span data-stu-id="c3ef4-148">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
