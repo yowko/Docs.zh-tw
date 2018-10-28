@@ -3,11 +3,11 @@ title: 訊息安全性繫結
 ms.date: 03/30/2017
 ms.assetid: a4570ce7-864e-461b-85d8-0f7bcc53c2c8
 ms.openlocfilehash: 5c8f1cd9135f48d06beb19317910a1c13bac78ff
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 10/27/2018
-ms.locfileid: "50047718"
+ms.locfileid: "50194432"
 ---
 # <a name="message-security-binding"></a>訊息安全性繫結
 本節包含示範如何在 WCF 中的 Windows 服務中的訊息安全性繫結的範例。  

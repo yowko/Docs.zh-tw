@@ -6,13 +6,12 @@ helpviewer_keywords:
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-author: BrucePerlerMS
-ms.openlocfilehash: a97f1b96d6cf4d166239ba8e0a14f6e3af2bf48b
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 39b8a44629af42e358d550e0dd7eb6a8895de0ed
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47071055"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195225"
 ---
 # <a name="securing-services"></a>保護服務的安全
 Windows Communication Foundation (WCF) 服務的安全性包含兩個主要需求： 傳輸安全性和授權。 (第三個需求中所述之安全性事件的稽核[稽核](../../../docs/framework/wcf/feature-details/auditing-security-events.md)。)簡言之，傳輸安全性包含驗證 (驗證服務和用戶端兩者的身分識別)、機密性 (訊息加密) 和完整性 (用來偵測竄改的數位簽章)。 授權會控制存取資源，例如，只允許有權限的使用者讀取檔案。 使用 WCF 的功能，即可輕鬆實作的兩個主要需求。  

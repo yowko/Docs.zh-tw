@@ -8,11 +8,11 @@ helpviewer_keywords:
 - debug compiler option [Visual Basic]
 ms.assetid: c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2
 ms.openlocfilehash: 92ff9c5ea7352506c1949a77b4fb6291d63758d7
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50040327"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193795"
 ---
 # <a name="-debug-visual-basic"></a>-偵錯 (Visual Basic)
 可讓編譯器產生偵錯資訊，並將它放入輸出檔案。  

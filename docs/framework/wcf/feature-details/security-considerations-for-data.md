@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
 ms.openlocfilehash: 6471a8a8e257ea3bb6f26a8041694ef25151ad1a
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 10/27/2018
-ms.locfileid: "50037291"
+ms.locfileid: "50195940"
 ---
 # <a name="security-considerations-for-data"></a>資料的安全性考量
 處理資料時 Windows Communication Foundation (WCF) 中，您必須考慮一些威脅類別。 下表列出與資料處理有關的最重要威脅類別。 WCF 會提供可減輕這些威脅的工具。  

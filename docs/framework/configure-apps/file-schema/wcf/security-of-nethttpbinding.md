@@ -2,17 +2,17 @@
 title: '&lt;netHttpBinding 的 &gt;security&lt;'
 ms.date: 03/30/2017
 ms.assetid: dc41f6f7-cabc-4a64-9fa0-ceabf861b348
-ms.openlocfilehash: 912f53a9e0a5d1d145c308dd6f427df05b27c077
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 1c8a96759625da858d1491b7af59bf32e7e42a9e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838529"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193847"
 ---
 # <a name="ltsecuritygt-of-ltnethttpbinding"></a>&lt;netHttpBinding 的 &gt;security&lt;
 定義的安全性功能[ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)。  
   
- \<system.ServiceModel>  
+\<system.ServiceModel>  
 \<繫結 >  
 \<netHttpBinding>  
 \<繫結 >  
@@ -39,7 +39,7 @@ ms.locfileid: "48838529"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|模式|選擇項。 指定使用的安全性類型。 預設為 `None`。 此屬性為類型<!--zz <xref:System.ServiceModel.NetHttpSecurityMode> --> `System.ServiceModel.NetHttpSecurityMode`。|
+|模式|選擇項。 指定使用的安全性類型。 預設為 `None`。 此屬性的型別為 <xref:System.ServiceModel.BasicHttpSecurityMode>。|
   
 ## <a name="mode-attribute"></a>mode 屬性  
   

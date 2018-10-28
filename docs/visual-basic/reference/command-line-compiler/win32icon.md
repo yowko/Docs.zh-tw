@@ -6,14 +6,12 @@ helpviewer_keywords:
 - -win32icon compiler option [Visual Basic]
 - /win32icon compiler option [Visual Basic]
 ms.assetid: aecaab01-9353-46c5-941c-6edabd4eff92
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 045e621f0104c4c958d77d2443c1524b33410b7a
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: afc35578f362f4a72a40fdb3d87406a8795cb59d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39221019"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194861"
 ---
 # <a name="-win32icon"></a>-win32icon
 將.ico 檔插入輸出檔。 這個.ico 檔表示中的輸出檔**檔案總管**。  
