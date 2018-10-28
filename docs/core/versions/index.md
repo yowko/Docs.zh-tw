@@ -5,11 +5,11 @@ author: bleroy
 ms.author: mairaw
 ms.date: 07/26/2018
 ms.openlocfilehash: 9f77709abf59d5346bf5e3c6f512cfabbf9e50de
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50047432"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188465"
 ---
 # <a name="net-core-versioning"></a>.NET Core 版本控制
 

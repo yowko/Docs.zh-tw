@@ -11,11 +11,11 @@ ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce84cf888145c85361d82e9b4c1d2c8c2db4fd5b
-ms.sourcegitcommit: 4621e67f69e7a9503ea93313ff60d69683207889
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49995036"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194757"
 ---
 # <a name="net-framework-guide"></a>.NET Framework 指南
 
