@@ -3,11 +3,11 @@ title: 設定 Use 與 Style 屬性
 ms.date: 03/30/2017
 ms.assetid: c09a0600-116f-41cf-900a-1b7e4ea4e300
 ms.openlocfilehash: 6728ab0a02c4fc171019564fa2a55bc3a5afd394
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50039409"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195901"
 ---
 # <a name="setting-the-use-and-style-properties"></a>設定 Use 與 Style 屬性
 這個範例會示範如何在 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 和 <xref:System.ServiceModel.DataContractFormatAttribute> 上使用 Use 和 Style 屬性。 這些屬性會影響訊息的格式化方式。 根據預設，會以設為 <xref:System.ServiceModel.OperationFormatStyle.Document> 的樣式來格式化訊息本文。 這些設定可以指定於服務合約層級或作業合約層級。  
