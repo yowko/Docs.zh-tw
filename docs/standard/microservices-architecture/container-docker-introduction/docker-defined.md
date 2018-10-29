@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 什麼是 Doc
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: b79e687d75f133b64e6e7dcb8dc78cce98e8b175
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 63f3714fce317d915b65075922b323f2aa5061f0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47233190"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50185923"
 ---
 # <a name="what-is-docker"></a>什麼是 Docker？
 
@@ -25,7 +25,7 @@ Docker 映像容器可以原生方式在 Linux 及 Windows 上執行。 不過�
 
 為了在開發環境中裝載容器並且提供其他開發人員工具，Docker 提供適用於 Windows 或 macOS 的 [Docker Community Edition (CE)](https://www.docker.com/community-edition)。 這些產品都會安裝必要的 VM (Docker 主機) 以裝載容器。 Docker 也提供 [Docker Enterprise Edition (EE)](https://www.docker.com/enterprise-edition)，這是專為企業開發所設計的，由在生產環境中建置、交付及執行大型商務關鍵性應用程式的 IT 小組來使用。
 
-若要執行 [Windows 容器](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview)，有兩種執行階段：
+若要執行 [Windows 容器](/virtualization/windowscontainers/about/)，有兩種執行階段：
 
 - Windows Server 容器透過程序和命名空間隔離技術，提供應用程式隔離。 與 Windows Server 容器共用核心的對象為容器主機以及在此主機上執行的所有容器。
 
@@ -60,9 +60,9 @@ Docker 映像容器可以原生方式在 Linux 及 Windows 上執行。 不過�
 
 讓我們暫時回到 1950 年。 當時沒有任何文書處理器，而且到處都在使用影印機 (差不多所有人都在用)。
 
-假設您負責根據需求來快速郵寄大批信件，包括使用信紙和信封，將信件實際投遞到每個客戶的地址 (當時並沒有電子郵件)。
+假設您負責根據需求來快速發送大批信件，並使用信紙和信封，將信件實際投遞到每個客戶的地址 (當時並沒有電子郵件)。
 
-慢慢地，您了解到這些信件是大量段落的組合，只是根據信件目的從中挑選和編排需要的段落，因此您設計一個系統，可以快速地郵寄信件來提高效率。
+慢慢地，您了解到這些信件的內容是大量段落的組合，只是根據信件目的從中挑選和編排需要的段落，因此您設計一個系統，可以快速地發送信件來提高效率。
 
 系統很簡單：
 

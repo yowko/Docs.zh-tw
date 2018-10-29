@@ -10,11 +10,11 @@ helpviewer_keywords:
 - /nologo compiler option [C#]
 ms.assetid: 426afb36-a8fb-469d-9c45-a35d9512557c
 ms.openlocfilehash: a8f4582e9c8d5a54d924ff5b456ef8ffd8cc56f3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47400945"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48025288"
 ---
 # <a name="-nologo-c-compiler-options"></a>-nologo (C# 編譯器選項)
 **-nologo** 選項會隱藏編譯器啟動時的登入橫幅，以及編譯期間的資訊訊息。  

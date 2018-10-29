@@ -2,14 +2,12 @@
 title: IPv6 自動設定
 ms.date: 03/30/2017
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 30765a1658d00f1a966112c5a63dabee499060e8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 31aaebaefa0d2682ee20ae93496aff42ae1633d8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200928"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199132"
 ---
 # <a name="ipv6-auto-configuration"></a>IPv6 自動設定
 IPv6 的一個重要目標是支援節點隨插即用。 亦即，節點應該可能插入 IPv6 網路，並且可以自動設定，不需要人為介入。  

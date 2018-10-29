@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7cbef005c913d818dba23d85404fe0382fe79f4a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6fe3847d9ee4530a776f43c67ac17085a9cd9d7b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741941"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50190901"
 ---
 # <a name="strong-named-assemblies"></a>強式名稱的組件
 強式命名組件會為組件建立唯一識別，並可防止發生組件衝突。  
@@ -43,7 +43,7 @@ ms.locfileid: "32741941"
  如果您是開放原始碼開發人員並需要強式名稱組件的識別優點，請考慮將與組件相關聯的私密金鑰簽入原始檔控制系統中。  
   
 ## <a name="see-also"></a>請參閱  
- [全域組件快取](../../../docs/framework/app-domains/gac.md)  
- [如何：使用強式名稱簽署組件](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
- [Sn.exe (強式名稱工具)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
- [建立和使用強式名稱的組件](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [全域組件快取](../../../docs/framework/app-domains/gac.md)  
+- [如何：使用強式名稱簽署組件](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
+- [Sn.exe (強式名稱工具)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
+- [建立和使用強式名稱的組件](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

@@ -11,14 +11,12 @@ helpviewer_keywords:
 - logs, trace
 - destination for tracing output
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f7720016a94d78e8a49e8566ad7b5096e9b31722
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b289aa2a60deb10ebda0ca8efc3e172caf2df8a6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47193482"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202064"
 ---
 # <a name="enabling-network-tracing"></a>啟用網路追蹤
 針對方法叫用及 Managed 應用程式所產生的網路流量，網路追蹤能提供對這些相關資訊的存取。 您必須完成下列工作，才能在您的應用程式中啟用網路追蹤：  
@@ -50,4 +48,4 @@ ms.locfileid: "47193482"
 ## <a name="see-also"></a>請參閱  
  [解譯網路追蹤](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
  [以 .NET Framework 進行網路追蹤](../../../docs/framework/network-programming/network-tracing.md)  
- [檢測和追蹤的簡介](https://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
+ [追蹤和檢測應用程式](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

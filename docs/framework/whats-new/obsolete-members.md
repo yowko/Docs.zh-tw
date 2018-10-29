@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a36e08c9b54dd6b47b11b36fd20993bff8c805e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 8a0679dafda7935034d3a3ab0f4c43656ab5668b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45678583"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185244"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>.NET Framework 中過時的成員
 本文中的表格列出 .NET Framework 4.5 和更新版本中依組件分組的已淘汰類型成員。 請使用下列連結，查看每個組件中過時的成員和建議的替代做法清單。 本主題不會列出過時的類型成員。 如需過時的型別清單，請參閱[已淘汰類型](../../../docs/framework/whats-new/obsolete-types.md)。  
@@ -485,8 +485,8 @@ ms.locfileid: "45678583"
 |<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CodeDomProvider.CreateCompiler%2A>|呼叫端不應該使用 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType> 介面，而是改為直接在 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 類別上使用方法。 繼承自 <xref:System.CodeDom.Compiler.CodeDomProvider> 的類型仍必須實作這個介面，而且應該排除這個警告，或是同時淘汰這個方法。|  
 |<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator%2A>|呼叫端不應該使用 <xref:System.CodeDom.Compiler.ICodeGenerator?displayProperty=nameWithType> 介面，而是改為直接在 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 類別上使用方法。 繼承自 <xref:System.CodeDom.Compiler.CodeDomProvider> 的類型仍必須實作這個介面，而且應該排除這個警告，或是同時淘汰這個方法。|  
 |<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CodeDomProvider.CreateParser%2A>|呼叫端不應該使用 <xref:System.CodeDom.Compiler.ICodeParser?displayProperty=nameWithType> 介面，而是改為直接在 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 類別上使用方法。 繼承自 <xref:System.CodeDom.Compiler.CodeDomProvider> 的類型仍必須實作這個介面，而且應該排除這個警告，或是同時淘汰這個方法。|  
-|<xref:System.CodeDom.Compiler.CompilerParameters?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CompilerParameters.Evidence%2A>|CAS 原則已經過時，將在未來的 .NET Framework 版本中移除。 如需詳細資訊，請參閱 [.NET Framework 4 中的安全性變更](http://go2.microsoft.com/fwlink/?LinkId=131738)。|  
-|<xref:System.CodeDom.Compiler.CompilerResults?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CompilerResults.Evidence%2A>|CAS 原則已經過時，將在未來的 .NET Framework 版本中移除。 如需詳細資訊，請參閱 [.NET Framework 4 中的安全性變更](http://go2.microsoft.com/fwlink/?LinkId=131738)。|  
+|<xref:System.CodeDom.Compiler.CompilerParameters?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CompilerParameters.Evidence%2A>|CAS 原則已經過時，將在未來的 .NET Framework 版本中移除。 如需詳細資訊，請參閱 [.NET Framework 4 中的安全性變更](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee191568%28v=vs.100%29)。|  
+|<xref:System.CodeDom.Compiler.CompilerResults?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CompilerResults.Evidence%2A>|CAS 原則已經過時，將在未來的 .NET Framework 版本中移除。 如需詳細資訊，請參閱 [.NET Framework 4 中的安全性變更](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee191568%28v=vs.100%29)。|  
 |<xref:System.Collections.Specialized.NameObjectCollectionBase?displayProperty=nameWithType>|<xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor%28System.Collections.IHashCodeProvider%2CSystem.Collections.IComparer%29>|請改用 <xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor%28System.Collections.IEqualityComparer%29>。|  
 |<xref:System.Collections.Specialized.NameObjectCollectionBase?displayProperty=nameWithType>|<xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor%28System.Int32%2CSystem.Collections.IHashCodeProvider%2CSystem.Collections.IComparer%29>|請改用 <xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor%28System.Int32%2CSystem.Collections.IEqualityComparer%29>。|  
 |<xref:System.Collections.Specialized.NameValueCollection?displayProperty=nameWithType>|<xref:System.Collections.Specialized.NameValueCollection.%23ctor%28System.Collections.IHashCodeProvider%2CSystem.Collections.IComparer%29>|請改用 <xref:System.Collections.Specialized.NameValueCollection.%23ctor%28System.Collections.IEqualityComparer%29>。|  

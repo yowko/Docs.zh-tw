@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b78d917b95e06a14b74c812bf92107476ad17212
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 89724e9a322f2f28dbe5d18ae697acbdd0a32d8e
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390360"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50041618"
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>如何：偵錯 CLR 啟用問題
 如果以正確的通用語言執行平台 (CLR) 版本執行應用程式時發生問題，您可以檢視並偵錯 CLR 啟用記錄。 當您的應用程式載入不符預期的 CLR 版本，或完全不載入 CLR 時，這些記錄檔對判斷啟動問題的根本原因非常有幫助。 [NET Framework 初始化錯誤：管理使用者經驗](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) 會討論應用程式找不到任何 CLR 時的經驗。  
@@ -117,5 +117,5 @@ ms.locfileid: "33390360"
     ```  
   
 ## <a name="see-also"></a>請參閱  
- [部署](../../../docs/framework/deployment/index.md)  
- [操作說明：設定應用程式以支援 .NET Framework 4 或 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [部署](../../../docs/framework/deployment/index.md)  
+- [操作說明：設定應用程式以支援 .NET Framework 4 或 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

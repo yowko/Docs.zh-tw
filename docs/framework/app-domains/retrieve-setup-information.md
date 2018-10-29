@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5cdb12ae-1e37-4a62-8ec7-93d6dcc6e8d9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6fab54080a529a9b5a93c06a4f249a9c14ecd7af
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0d9341b90f876306ff2e964141c2c729d1cf0e5f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743884"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193821"
 ---
 # <a name="retrieving-setup-information-from-an-application-domain"></a>從應用程式定義域擷取安裝資訊
 每個應用程式定義域的執行個體都包含這兩個屬性及 <xref:System.AppDomainSetup> 資訊。 您可以從使用 <xref:System.AppDomain?displayProperty=nameWithType> 類別的應用程式定義域擷取安裝資訊。 這個類別提供數個成員，它們會擷取應用程式定義域的組態資訊。  
@@ -37,5 +37,5 @@ ms.locfileid: "32743884"
  [!code-vb[AppDomain_Setup#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AppDomain_Setup/VB/source3.vb#3)]  
   
 ## <a name="see-also"></a>請參閱  
- [使用應用程式定義域設計程式](application-domains.md#programming-with-application-domains)  
- [使用應用程式定義域](../../../docs/framework/app-domains/use.md)
+- [使用應用程式定義域設計程式](application-domains.md#programming-with-application-domains)  
+- [使用應用程式定義域](../../../docs/framework/app-domains/use.md)

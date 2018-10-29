@@ -3,17 +3,17 @@ title: 從 .NET Framework 移轉到 .NET Core
 description: 了解移植程序，並探索可協助將 .NET Framework 移植到 .NET Core 的工具。
 author: cartermp
 ms.author: mairaw
-ms.date: 06/20/2016
-ms.openlocfilehash: d273b3abe46de59aa55b5b9a531d3c572a065124
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.date: 10/23/2018
+ms.openlocfilehash: 0c0ec3d8ab09e34e8dae24623903ca571f2cca6c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48835388"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50192768"
 ---
 # <a name="porting-to-net-core-from-net-framework"></a>從 .NET Framework 移轉到 .NET Core
 
-如果已在 .NET Framework 上執行程式碼，您可能也想要在 .NET Core 1.0 執行程式碼。  本文章涵蓋移轉程序的概觀，以及移轉到 .NET Core 時可能覺得有用的工具清單。
+如果已在 .NET Framework 上執行程式碼，您可能也想要在 .NET Core 執行程式碼。  本文章涵蓋移轉程序的概觀，以及移轉到 .NET Core 時可能覺得有用的工具清單。
 
 ## <a name="overview-of-the-porting-process"></a>移轉程序概觀
 
@@ -23,7 +23,7 @@ ms.locfileid: "48835388"
 
    這涉及了解程式協力廠商相依性是什麼、依賴它們的方式、查看它們是否也在 .NET Core 上執行的方式，以及不在 .NET Core 上執行時可以採取的步驟。
    
-2. 將所有想要移轉到目標 .NET Framework 4.6.2 的專案重定為目標。
+2. 將所有想要移轉到目標最新版本之 .NET Framework 的專案重定為目標。
 
    這可確保當 .NET Core 無法支援特定 API 時，您可以使用 .NET Framework 特定目標的 API 替代方案。
    
@@ -33,7 +33,7 @@ ms.locfileid: "48835388"
    
 4. 移轉測試程式碼。
 
-   因為移轉到 .NET Core 對程式碼基底是巨變，所以強烈建議您移轉測試，以便在移轉程式碼時執行測試。  MSTest、xUnit 和 NUnit 都支援目前的 .NET Core 1.0。
+   因為移轉到 .NET Core 對程式碼基底是巨變，所以強烈建議您移轉測試，以便在移轉程式碼時執行測試。  MSTest、xUnit 與 NUnit 都支援目前的 .NET Core。
    
 6. 執行移轉計劃！
 

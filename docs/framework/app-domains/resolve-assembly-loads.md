@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b1f814b8492120002013a8752caf96ba34785d6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bdd610ade931bedc9ee387b65b18efd1909ef58b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745613"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202207"
 ---
 # <a name="resolving-assembly-loads"></a>解析組件載入
 .NET Framework 提供需要更能控制組件載入之應用程式的 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件。 藉由處理這個事件，您的應用程式可以將組件從一般探查路徑外部載入到載入內容、選取要載入的數個組件版本、發出動態組件，並傳回它，以此類推。 本主題提供處理 <xref:System.AppDomain.AssemblyResolve> 事件的指引。  
@@ -81,5 +81,5 @@ ms.locfileid: "32745613"
  [!code-vb[AssemblyResolveRecursive#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/assemblyresolverecursive/vb/example.vb#1)]  
   
 ## <a name="see-also"></a>請參閱  
- [組件載入的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
- [使用應用程式定義域](../../../docs/framework/app-domains/use.md)
+- [組件載入的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+- [使用應用程式定義域](../../../docs/framework/app-domains/use.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: d5b3d13e-689f-4584-8ba6-44f5167a8590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a7b138aec8a64683ca4b42cbbc8bd3584c06cc90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: c1fa27a713890f2988a2fcd7983630080dc21d05
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397045"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50170337"
 ---
 # <a name="missingruntimeartifactexception-class-net-native"></a>MissingRuntimeArtifactException 類別 (.NET Native)
 **僅限 Windows 10 之 Windows 應用程式的 .NET[!INCLUDE[net_native](../../../includes/net-native-md.md)]**  
@@ -63,20 +63,20 @@ ms.locfileid: "33397045"
   
 ## <a name="events"></a>事件  
   
-|事件|描述|  
+|Event - 事件|描述|  
 |-----------|-----------------|  
 |`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|當例外狀況序列化，以建立包含例外狀況相關序列化資料的例外狀況狀態物件時，就會發生此事件。 (繼承自 <xref:System.Exception?displayProperty=nameWithType>。)|  
   
 ## <a name="usage-details"></a>用法詳細資料  
  當嘗試具現化類型或叫用類型成員時，雖然存在該類型或成員的中繼資料，但已移除其實作，在此情況下會擲回 `MissingRuntimeArtifactException` 例外狀況。  
   
- 應用程式在執行階段是否有可動態執行方法的中繼資料和實作程式碼可用，是由執行階段指示詞 (XML 組態) 檔案 *.rd.xml 所定義。 若要防止應用程式擲回這個例外狀況，您必須修改 \*.rd.xml，以確保在執行階段存在類型或類型成員所需的中繼資料。 如需 \*.rd.xml 檔案格式的資訊，請參閱[執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。  
+ 中繼資料和動態執行方法的實作程式碼是否可使用的應用程式在執行階段由執行階段指示詞 （XML 組態） 檔案的方式來定義\*。 rd.xml。 若要防止應用程式擲回這個例外狀況，您必須修改 \*.rd.xml，以確保在執行階段存在類型或類型成員所需的中繼資料。 如需 \*.rd.xml 檔案格式的資訊，請參閱[執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。  
   
 > [!IMPORTANT]
->  因為這個例外狀況指出應用程式所需的實作程式碼在執行階段無法使用，所以您不應該在 `try`/`catch` 區塊中處理這個例外狀況。 相反地，您應該診斷例外狀況的原因，然後透過執行階段指示詞檔案來去除這個例外狀況。 一般而言，您可以為執行階段指示詞檔案 (*.rd.xml 檔) 中的程式項目，指定適當的 `Activate` 或 `Dynamic` 原則，來去除這個例外狀況。 若要取得可加入執行階段指示詞檔案以消除例外狀況的項目，您可以使用下列兩個疑難排解工具之一：  
+>  因為這個例外狀況指出應用程式所需的實作程式碼在執行階段無法使用，所以您不應該在 `try`/`catch` 區塊中處理這個例外狀況。 相反地，您應該診斷例外狀況的原因，然後透過執行階段指示詞檔案來去除這個例外狀況。 一般而言，指定適當來去除這個例外狀況`Activate`或是`Dynamic`程式項目執行階段指示詞檔案中的原則 (\*.rd.xml 檔)。 若要取得可加入執行階段指示詞檔案以消除例外狀況的項目，您可以使用下列兩個疑難排解工具之一：  
 >   
->  -   針對類型的 [MissingMetadataException 疑難排解工具](http://dotnet.github.io/native/troubleshooter/type.html) 。  
-> -   針對方法的 [MissingMetadataException 疑難排解工具](http://dotnet.github.io/native/troubleshooter/method.html) 。  
+> - 針對類型的 [MissingMetadataException 疑難排解工具](https://dotnet.github.io/native/troubleshooter/type.html) 。  
+> - 針對方法的 [MissingMetadataException 疑難排解工具](https://dotnet.github.io/native/troubleshooter/method.html) 。  
   
  `MissingRuntimeArtifactException` 類別沒有包含唯一成員；其所有成員都是繼承自其基底類別 <xref:System.MemberAccessException>。  
   

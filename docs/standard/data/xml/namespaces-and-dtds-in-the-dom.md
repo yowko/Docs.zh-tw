@@ -6,11 +6,11 @@ ms.assetid: 1e9b55c4-76ad-4f54-8d96-7ce4b4cf1e05
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bc8a1de8ab10eff88757720a35aa9668125cfbfa
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47203091"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582157"
 ---
 # <a name="namespaces-and-dtds-in-the-dom"></a>DOM 中的命名空間和 DTD
 文件類型定義 (DTD) 會使命名空間支援較為複雜。 例如，下列 XML 包含名稱中有冒號的預設屬性。  

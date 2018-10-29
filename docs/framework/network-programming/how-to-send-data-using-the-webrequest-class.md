@@ -8,14 +8,12 @@ helpviewer_keywords:
 - WebRequest class, sending data to a host
 - Sending data to a host, using WebRequest class
 ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f62775a41f70e4dd96c749acd99bf8b850d96407
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1f10c5e0c6c266b7b31d658ec561bd8d6d85697b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47193027"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192651"
 ---
 # <a name="how-to-send-data-using-the-webrequest-class"></a>如何：使用 WebRequest 類別傳送資料
 下列程序描述用來將資料傳送到伺服器的步驟。 本程序通常用於在網頁上張貼資料。  

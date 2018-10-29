@@ -3,12 +3,12 @@ title: 處理 LINQ
 description: 本教學課程會教導您如何使用 LINQ 產生序列、撰寫用於 LINQ 查詢的方法，並區分立即和延遲評估。
 ms.date: 03/28/2017
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: e5f9baab13cddfb9e294de1e1a6ce967ccbe0813
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: dc5f6cc4fd38b32f54a576a3947187cbed4e70e8
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172421"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086748"
 ---
 # <a name="working-with-linq"></a>處理 LINQ
 
@@ -87,6 +87,14 @@ static IEnumerable<string> Ranks()
 ```
 
 這兩個方法都利用 `yield return` 語法，來在執行時產生序列。 編譯器會建置能實作 `IEnumerable<T>`，並會在要求它們時產生字串序列的物件。
+
+若要讓此檔案進行編譯，您將必須把下列兩行新增到檔案開頭：
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
+```
 
 現在，請執行您目前所建置的範例。 它會顯示牌堆中全部 52 張紙牌。 您會發現以偵錯工具執行此範例，對於觀察 `Suits()` 和 `Values()` 方法的執行方式非常有用。 您可以清楚地看見每個序列中的每個字串都只會在需要時產生。
 

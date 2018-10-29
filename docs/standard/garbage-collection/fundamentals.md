@@ -13,11 +13,11 @@ ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 741ddd0171244daceb4d5e283c0172e71b82f3d2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47216977"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582745"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>記憶體回收的基本概念
 <a name="top"></a> 在 Common Language Runtime (CLR) 中，記憶體回收行程會當做自動記憶體管理員。 它提供了下列優點：  
@@ -98,7 +98,7 @@ ms.locfileid: "47216977"
   
  每個 Managed 處理序都有一個 Managed 堆積。 處理序中的所有執行緒都會對相同堆積上的物件配置記憶體。  
   
- 為節省記憶體，記憶體回收行程會呼叫 Win32 [VirtualAlloc](https://msdn.microsoft.com/library/aa366887.aspx) 函式，並且針對受控應用程式一次保留一個記憶體區段。 記憶體回收行程也會視需要保留區段，並且透過呼叫 Win32 [VirtualFree](https://msdn.microsoft.com/library/aa366892.aspx) 函式，將區段釋放回作業系統 (在清除任何物件的區段之後)。  
+ 為節省記憶體，記憶體回收行程會呼叫 Win32 [VirtualAlloc](https://msdn.microsoft.com/library/aa366887.aspx) 函式，並且針對 Managed 應用程式一次保留一個記憶體區段。 記憶體回收行程也會視需要保留區段，並且透過呼叫 Win32 [VirtualFree](https://msdn.microsoft.com/library/aa366892.aspx) 函式，將區段釋放回作業系統 (在清除任何物件的區段之後)。  
   
 > [!IMPORTANT]
 >  記憶體回收行程所配置的區段大小是依實作而定，有可能在任何時間，包括在定期更新時做變更。 您的應用程式永遠都不應該對相關或根據特定區段的大小做出假設，也不應嘗試設定區段配置的可用記憶體數量。  
@@ -168,7 +168,7 @@ ms.locfileid: "47216977"
   
      因為層代 2 回收可能會佔據多個區段，所以提升至層代 2 的物件可能會移至較舊區段。 層代 1 和層代 2 的未回收物件都可能會移至不同的區段，因為它們都會被提升至層代 2。  
   
-     正常情況下，大型物件堆積不會壓縮，因為複製大型物件會帶來效能損失。 不過，從 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 開始，您可以視需要使用 <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> 屬性壓縮大型物件堆積。  
+     正常情況下，大型物件堆積不會壓縮，因為複製大型物件會帶來效能損失。 不過，從 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]開始，您可以視需要使用 <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> 屬性壓縮大型物件堆積。  
   
  記憶體回收行程會使用下列資訊來判斷物件是否使用中：  
   

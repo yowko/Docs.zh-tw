@@ -14,14 +14,12 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: f3fc7533-6956-42c6-bbc3-73e5a221027d
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: b744690cf2af1c2935a381c3edc2198840704425
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f709c2e0780b89e072c43e9acaf722e6851d4cbe
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197900"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199951"
 ---
 # <a name="socket-code-examples"></a>通訊端程式碼範例
 下列程式碼範例示範如何使用 <xref:System.Net.Sockets.Socket> 類別作為用戶端連接到遠端網路服務，以及作為伺服器接聽來自遠端用戶端的連線。  

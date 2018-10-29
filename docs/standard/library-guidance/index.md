@@ -3,13 +3,13 @@ title: 開放原始碼程式庫指導
 description: 協助開發人員建立高品質 .NET 程式庫的最佳做法建議。
 author: jamesnk
 ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: 50fb745f7eb65abcaca76cebaf9991c48f559e59
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.date: 10/17/2018
+ms.openlocfilehash: ca95cb5ba1ebf27464397b7850ac02aabded1a5b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374888"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188621"
 ---
 # <a name="open-source-library-guidance"></a>開放原始碼程式庫指導
 
@@ -18,7 +18,7 @@ ms.locfileid: "49374888"
 高品質開放原始碼 .NET 程式庫的各個層面：
 
 > [!div class="checklist"]
-> * **包山包海** - 優質的 .NET 程式庫致力於支援多種平台與應用程式。
+> * **包山包海** - 致力於支援多種平台、程式設計語言與應用程式的優質 .NET 程式庫。
 > * **穩定可靠** - 優質的 .NET 程式庫可在 .NET 生態環境中共存，能在使用多種程式庫建置而成的應用程式中執行。
 > * **具備演進能力** - .NET 程式庫應該要隨著時間改善與演進，同時支援現有的使用者。
 > * **可供偵錯** - .NET 程式庫應使用最新工具來為使用者打造良好的偵錯體驗。
@@ -27,23 +27,23 @@ ms.locfileid: "49374888"
 > [!div class="nextstepaction"]
 > [開始使用](./get-started.md)
 
-## <a name="recommendations"></a>建議
+## <a name="types-of-recommendations"></a>建議類型
 
-每篇文章都會有一份 .NET 程式庫的建議清單，內含**優先**、**考慮**、**避免**和**禁止**的建議。 各項建議的措辭便指出了是否應遵循的程度。
+每篇文章都呈現四種類型的建議：**優先**、**考慮**、**避免**與**禁止**。 建議類型指出應遵循的程度。
 
-**優先**建議是在多數情況下應一律遵循的建議：
+您應該一律遵循**優先**類型的建議。 例如：
 
 **✔️ 優先**使用 NuGet 套件散發您的程式庫。
 
-至於**考慮**建議則通常應該遵循，但也會有不符合規則的例外，而您不必因為沒有遵循指導而感到自責：
+另一方面，**考慮**建議則通常應該遵循，但也會有不符合規則的例外，而您不必因為沒有遵循指導而感到自責：
 
 **✔️ 考慮**使用 [SemVer 2.0.0](https://semver.org/) 來設定 NuGet 套件的版本。
 
-**避免**建議是通常不建議採行的建議，但有時違反規則尚屬合理情況：
+**避免**建議指的是通常不建議採行的建議，但有時違反規則尚屬合理情況：
 
 **❌ 避免**要求明確版本的 NuGet 套件參考。
 
-最後，**禁止**表示在多數情況下都不應採取的動作：
+最後，**禁止**類型的建議表示在多數情況下都不應採取的動作：
 
 **❌ 禁止**發行程式庫的強式名稱和非強式名稱版本。 例如，`Contoso.Api` 和 `Contoso.Api.StrongNamed`。
 

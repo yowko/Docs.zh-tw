@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | API 閘道模
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/07/2018
-ms.openlocfilehash: 1aaddc96ee509815da9fc4e6519e1fb454f74b13
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 00763a806c18b45b366068f865f4ecb4c5cd743b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198679"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50183603"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API 閘道模式與直接用戶端對微服務通訊
 
@@ -84,13 +84,13 @@ API 閘道模式有時也稱為「前端的後端 [(BFF)](https://samnewman.io/p
 
 因此，應該根據商務界限和用戶端應用程式來隔離 API 閘道，而不是作為所有內部微服務的彙總工具。
 
-當 API 閘道階層分成多個 API 閘道時，如果您的應用程式有多個用戶端應用程式，這樣可當作識別多個 API 閘道類型的樞紐，您就可以擁有適用於每個用戶端應用程式需求的不同外觀。 此案例是名為「適用於前端的後端」([BFF](http://samnewman.io/patterns/architectural/bff/)) 的模式，藉由實作底層會呼叫多個內部微服務的特定配接器程式碼，其中每個 API 閘道都可以提供針對每個用戶端應用程式類型量身訂做的不同 API (甚至可能以用戶端外形規格為基礎)，如以下影像所示：
+當 API 閘道階層分成多個 API 閘道時，如果您的應用程式有多個用戶端應用程式，這樣可當作識別多個 API 閘道類型的樞紐，您就可以擁有適用於每個用戶端應用程式需求的不同外觀。 此案例是名為「適用於前端的後端」([BFF](https://samnewman.io/patterns/architectural/bff/)) 的模式，藉由實作底層會呼叫多個內部微服務的特定配接器程式碼，其中每個 API 閘道都可以提供針對每個用戶端應用程式類型量身訂做的不同 API (甚至可能以用戶端外形規格為基礎)，如以下影像所示：
 
 ![顯示多個自訂 API 閘道的圖表](./media/image13.1.png)
 
 **圖 4-13.1**. 使用多個自訂 API 閘道
 
-上圖顯示具有多個更細微 API 閘道的簡化架構。 在此案例中，針對每個 API 閘道識別的界限只以「適用於前端的後端」([BFF](http://samnewman.io/patterns/architectural/bff/)) 模式為基礎，因此也只以每個用戶端應用程式所需的 API 為基礎。 但在更大型的應用程式中，您應該也進一步建立以商務界限為基礎的 API 閘道，作為第二設計樞紐。
+上圖顯示具有多個更細微 API 閘道的簡化架構。 在此案例中，針對每個 API 閘道識別的界限只以「適用於前端的後端」([BFF](https://samnewman.io/patterns/architectural/bff/)) 模式為基礎，因此也只以每個用戶端應用程式所需的 API 為基礎。 但在更大型的應用程式中，您應該也進一步建立以商務界限為基礎的 API 閘道，作為第二設計樞紐。
 
 ## <a name="main-features-in-the-api-gateway-pattern"></a>API 閘道模式中的主要功能
 
@@ -168,7 +168,7 @@ API 閘道產品的作用通常像是連入通訊的反向 Proxy，您也可以�
 
 - **API 閘道模式** [*https://docs.microsoft.com/azure/architecture/microservices/gateway*](https://docs.microsoft.com/azure/architecture/microservices/gateway)
 
-- **彙總和撰寫模式** [*http://microservices.io/patterns/data/api-composition.html*](http://microservices.io/patterns/data/api-composition.html) \(英文\)
+- **彙總和撰寫模式** [*https://microservices.io/patterns/data/api-composition.html*](https://microservices.io/patterns/data/api-composition.html) \(英文\)
 
 - **Azure API 管理**[*https://azure.microsoft.com/services/api-management/*](https://azure.microsoft.com/services/api-management/)
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3f8ed5cce3e0c9e22679f54b13c84ea422f2100d
-ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
+ms.openlocfilehash: 54ca80e83511d6120669df634ae34ca0bf486bf3
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2018
-ms.locfileid: "35251060"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453446"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>執行階段如何找出組件
 若要成功部署 .NET Framework 應用程式，您必須了解 Common Language Runtime 如何找出並繫結至構成應用程式的組件。 根據預設，執行階段會嘗試與用來建置應用程式的組件正確版本繫結。 組態檔設定可覆寫這個預設行為。  
@@ -215,7 +215,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
 -   參考的組件名稱：myAssembly  
   
--   應用程式根目錄：http://www.code.microsoft.com  
+-   應用程式根目錄：`http://www.code.microsoft.com`  
   
 -   組態檔中的 [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 項目指定：bin  
   
@@ -223,13 +223,13 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
  執行階段會探查下列 URL：  
   
- http://www.code.microsoft.com/de/myAssembly.dll  
+ `http://www.code.microsoft.com/de/myAssembly.dll`
   
- http://www.code.microsoft.com/de/myAssembly/myAssembly.dll  
+ `http://www.code.microsoft.com/de/myAssembly/myAssembly.dll`
   
- http://www.code.microsoft.com/bin/de/myAssembly.dll  
+ `http://www.code.microsoft.com/bin/de/myAssembly.dll`
   
- http://www.code.microsoft.com/bin/de/myAssembly/myAssembly.dll  
+ `http://www.code.microsoft.com/bin/de/myAssembly/myAssembly.dll`
   
 ##### <a name="multiple-assemblies-with-the-same-name"></a>具有相同名稱的多個組件  
  下列範例示範如何設定具有相同名稱的多個組件。  
@@ -245,8 +245,8 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 #### <a name="other-locations-probed"></a>探查的其他位置  
  組件位置也可以使用目前的繫結內容來決定。 當使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 方法時，以及在 COM Interop 案例中，最常發生這個情況。 如果組件使用 <xref:System.Reflection.Assembly.LoadFrom%2A> 方法來參考另一個組件，呼叫組件的位置會被視為有關在哪裡可以找到參考組件的提示。 如果找到相符項目，就會載入該組件。 如果沒有找到相符項目，執行階段會繼續進行其搜尋語意，然後查詢 Windows Installer，以提供組件。 如果沒有提供符合繫結要求的組件，則會擲回例外狀況。 如果有參考類型，此例外狀況是 Managed 程式碼中的 <xref:System.TypeLoadException> ，如果找不到要載入的組件，則為 <xref:System.IO.FileNotFoundException> 。  
   
- 比方說，如果 Assembly1 參考 Assembly2，而且 Assembly1 是從 http://www.code.microsoft.com/utils 下載，則該位置會被視為有關在哪裡可以找到 Assembly2.dll 的提示。 執行階段接著會探查 http://www.code.microsoft.com/utils/Assembly2.dll 和 http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll 中的組件。 如果在這兩個位置都找不到 Assembly2，執行階段就會查詢 Windows Installer。  
+ 比方說，如果 Assembly1 參考 Assembly2，而且 Assembly1 是從 `http://www.code.microsoft.com/utils` 下載，則該位置會被視為有關在哪裡可以找到 Assembly2.dll 的提示。 執行階段接著會探查 `http://www.code.microsoft.com/utils/Assembly2.dll` 和 `http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll` 中的組件。 如果在這兩個位置都找不到 Assembly2，執行階段就會查詢 Windows Installer。  
   
 ## <a name="see-also"></a>請參閱  
- [組件載入的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
- [部署](../../../docs/framework/deployment/index.md)
+- [組件載入的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+- [部署](../../../docs/framework/deployment/index.md)

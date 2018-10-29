@@ -7,13 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-author: BrucePerlerMS
-ms.openlocfilehash: 40fe7b1fa6a61b56d5dfdde75a92834f096a8be4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f678c4713bff342cb3e788a85d7e58fc6e47820c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200408"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187604"
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>HOW TO：使用傳輸安全性和訊息認證
 保護傳輸和訊息認證的服務會使用最佳的傳輸與訊息安全性模式在 Windows Communication Foundation (WCF)。 簡單地說，傳輸層安全性可提供完整性與機密性，而訊息層安全性則提供各種在嚴格的傳輸安全性機制中不可能提供的認證。 本主題將說明使用 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.NetTcpBinding> 繫結，以訊息認證來實作傳輸時的基本步驟。 如需有關如何設定安全性模式的詳細資訊，請參閱 <<c0> [ 如何： 設定安全性模式](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)。  
@@ -138,7 +137,7 @@ ms.locfileid: "47200408"
   
 #### <a name="to-use-the-nettcpbinding-with-windows-for-transport-security"></a>若要使用 NetTcpBinding 搭配 Windows 來獲得傳輸安全性  
   
-1.  新增[ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)至繫結區段中，  
+1.  新增[ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)至繫結] 區段中，  
   
 2.  加入 <`binding`> 項目並將`name`屬性設為適當的值。  
   

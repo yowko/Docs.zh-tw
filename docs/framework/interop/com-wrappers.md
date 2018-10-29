@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e56c485b-6b67-4345-8e66-fd21835a6092
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 57483f099bb71a1ab685cedf148d4343c12983dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d86743f59c12cf59376ad542c2cd58f6e8c4ad65
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390519"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187240"
 ---
 # <a name="com-wrappers"></a>COM 包裝函式
 COM 與 .NET Framework 物件模型在數個重要方面不同：  
@@ -35,7 +35,7 @@ COM 包裝函式概觀
  在大部分情況下，執行階段所產生的標準 RCW 或 CCW 提供呼叫的足夠封送處理，而這些呼叫跨越 COM 與 .NET Framework 之間的界限。 使用自訂屬性，您可以選擇性地調整執行階段呈現 Managed 和 Unmanaged 程式碼的方式。  
   
 ## <a name="see-also"></a>請參閱  
- [進階 COM 互通性](https://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb(v=vs.100))  
+ [進階 COM 互通性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))  
  [執行階段可呼叫包裝函式](runtime-callable-wrapper.md)  
  [COM 可呼叫包裝函式](com-callable-wrapper.md)  
  [自訂標準包裝函式](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100))  

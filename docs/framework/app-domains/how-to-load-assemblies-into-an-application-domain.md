@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd6f14f89d143edd03f8b5d028ec84315b2f2e97
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5e91441f593b7533026d5980f8cf39fb5a3d5b71
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47203286"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193067"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>如何：將組件載入應用程式定義域
 有數種方式可以將組件載入應用程式定義域。 建議的方法是使用 <xref:System.Reflection.Assembly?displayProperty=nameWithType> 類別的 `static` (在 Visual Basic 中為 `Shared`) <xref:System.Reflection.Assembly.Load%2A> 方法。 其他可以載入組件的方式包括：  
@@ -47,9 +47,9 @@ ms.locfileid: "47203286"
  [!code-vb[System.AppDomain.Load#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.load/vb/source2.vb#2)]  
   
 ## <a name="see-also"></a>請參閱  
- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>  
- [使用應用程式定義域設計程式](application-domains.md#programming-with-application-domains)  
- [反映](../../../docs/framework/reflection-and-codedom/reflection.md)  
- [使用應用程式定義域](../../../docs/framework/app-domains/use.md)  
- [操作說明：將組件載入僅限反映的內容](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)  
- [應用程式定義域和組件](https://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)
+- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>  
+- [使用應用程式定義域設計程式](application-domains.md#programming-with-application-domains)  
+- [反映](../../../docs/framework/reflection-and-codedom/reflection.md)  
+- [使用應用程式定義域](../../../docs/framework/app-domains/use.md)  
+- [操作說明：將組件載入僅限反映的內容](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)  
+- [應用程式定義域和組件](https://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)

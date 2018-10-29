@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 4b390ea0ffc6551d57a99a54985632135964fb7a
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 11d24bec46cfb190fe1a7c2a7b9ac78ac4d5e799
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374803"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200858"
 ---
 # <a name="configuring-services-using-configuration-files"></a>使用組態檔設定服務
 使用組態檔中設定 Windows Communication Foundation (WCF) 服務可讓您彈性提供端點，並設計階段部署而不是在服務行為資料。 本主題概要說明可用的主要技巧。  
@@ -186,9 +186,9 @@ ms.locfileid: "49374803"
 ## <a name="behavior-merge"></a>行為合併  
  當您想要以一致的方式使用一組通用行為時，行為合併功能可讓您輕鬆地管理行為。 這項功能可讓您以不同的組態階層層級指定行為，並且讓服務從多個組態階層層級繼承行為。 為了說明這項功能的運作方式，假設您在 IIS 中設有下列虛擬目錄配置：  
   
- ~\Web.config~\Service.svc~\Child\Web.config~\Child\Service.svc  
+ `~\Web.config~\Service.svc~\Child\Web.config~\Child\Service.svc`
   
- 而且，您的 ~\Web.config 檔案具有下列內容：  
+ 和您`~\Web.config`檔案具有下列內容：  
   
 ```xml  
 <configuration>  

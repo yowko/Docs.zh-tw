@@ -1,4 +1,4 @@
-﻿---
+---
 title: 使用 CLI 工具部署.NET Core 應用程式
 description: 了解使用命令列介面 (CLI) 工具的 .NET Core 應用程式部署
 author: rpetrusha
@@ -7,12 +7,12 @@ ms.date: 09/05/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: a7e810372d831699eae777186385e45fe65cdf45
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6c0eb82b6be5d65c70287dd601bb97868af1c943
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47208246"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454443"
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>使用命令列介面 (CLI) 工具部署 .NET Core 應用程式
 
@@ -63,7 +63,7 @@ ms.locfileid: "47208246"
       ```
    這會建立應用程式的發行 (而非偵錯) 版本。 產生的檔案會放在名為 *publish* 的目錄中，而該目錄位於您專案之 *bin* 目錄的子目錄中。
 
-   隨著應用程式檔案一起，發佈程序會發出程式資料庫 (.pdb) 檔案，其中包含應用程式的偵錯資訊。 該檔案主要是用於例外狀況偵錯。 您可以選擇不與您的應用程式檔案一起將它發散。 不過，如果您要對應用程式的發行組建進行偵錯，則應該將其保存。
+   隨著應用程式檔案一起，發佈程序會發出程式資料庫 (.pdb) 檔案，其中包含應用程式的偵錯資訊。 該檔案主要是用於例外狀況偵錯。 您可以選擇不與您的應用程式檔案一起散發它。 不過，如果您要對應用程式的發行組建進行偵錯，則應該將其保存。
 
    您可以使用任何您想要的方式，部署整組應用程式檔案。 例如，您可以使用簡單的 `copy` 命令將它們封裝在 ZIP 檔案中，或與您選擇的任何安裝套件一起部署。
 
@@ -71,13 +71,13 @@ ms.locfileid: "47208246"
 
    安裝之後，使用者可以使用 `dotnet` 命令並提供應用程式的檔名 (例如，`dotnet fdd.dll`)，來執行您的應用程式。
 
-   除了應用程式二進位檔之外，安裝程式也應該配套共用的 Framework 安裝程式，或勾選為必要條件當成應用程式安裝的一部分。  共用的 Framework 安裝需要系統管理員/根目錄存取權。
+   除了應用程式二進位檔之外，安裝程式也應該配套共用的 Framework 安裝程式，或勾選為必要條件當成應用程式安裝的一部分。  共用的 Framwork 安裝需要系統管理員/根目錄存取權。
 
 ## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>有協力廠商相依性的 Framework 相依部署
 
 部署具有一或多個協力廠商相依性的 Framework 相依部署時，需要這些相依性都可供專案使用。 在執行 `dotnet restore` ([請參閱注意事項](#dotnet-restore-note)) 命令之前，需要執行兩個額外步驟：
 
-1. 將任何協力廠商程式庫參考新增至您 *csproj* 檔案的 `<ItemGroup>` 區段。 下列 `<ItemGroup>` 區段會包含對 [Json.NET](http://www.newtonsoft.com/json) 的相依性作為協力廠商程式庫：
+1. 將任何協力廠商程式庫參考新增至您 *csproj* 檔案的 `<ItemGroup>` 區段。 下列 `<ItemGroup>` 區段會包含對 [Json.NET](https://www.newtonsoft.com/json) 的相依性作為協力廠商程式庫：
 
       ```xml
       <ItemGroup>
@@ -148,7 +148,7 @@ ms.locfileid: "47208246"
 
    這會建立每個目標平台的應用程式發行 (而非偵錯) 版本。 產生的檔案會放在名為 *publish* 的子目錄中，其位於您專案 *.\bin\Release\netcoreapp2.1\<runtime_identifier>* 子目錄的子目錄。 請注意，每個子目錄都包含啟動應用程式所需的一組完整檔案 (應用程式檔案和所有的 .NET Core 檔案)。
 
-隨著應用程式檔案一起，發佈程序會發出程式資料庫 (.pdb) 檔案，其中包含應用程式的偵錯資訊。 該檔案主要是用於例外狀況偵錯。 您可以選擇不與您的應用程式檔案一起封裝它。 不過，如果您要對應用程式的發行組建進行偵錯，則應該將其保存。
+隨著應用程式檔案一起，發佈程序會發出程式資料庫 (.pdb) 檔案，其中包含應用程式的偵錯資訊。 該檔案主要是用於例外狀況偵錯。 您可以選擇不與您的應用程式檔案一起封裝它。 不過，如果您要對應用程式的發行組建進行偵錯，則應該將其儲存。
 
 請使用任何您想要的方式，部署已發行的檔案。 例如，您可以使用簡單的 `copy` 命令將它們封裝在 ZIP 檔案中，或與您選擇的任何安裝套件一起部署。
 

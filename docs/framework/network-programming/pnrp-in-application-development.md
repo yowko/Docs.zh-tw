@@ -2,14 +2,12 @@
 title: 應用程式開發中的 PNRP
 ms.date: 03/30/2017
 ms.assetid: 265615d6-4423-4b5d-8626-752e456f4f4e
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 0f86b2569b9d4864586a0a7daea0ae5d3b901fd4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b19138c43185f4d31bef4fe67af48f89dc03eba4
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47205261"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50180429"
 ---
 # <a name="pnrp-in-application-development"></a>應用程式開發中的 PNRP
 在 Windows Vista 中，網路應用程式可以透過簡化的 PNRP 應用程式設計介面 (API)，存取名稱發行和解析功能。  

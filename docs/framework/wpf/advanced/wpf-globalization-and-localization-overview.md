@@ -5,24 +5,27 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: fcf5b8f872e2f97497ff5387adb755da1832bf8c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e9a9e9295425efaadff4ac1f0b796b2c9a889543
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424463"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200949"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 全球化和當地語系化概觀
+
 當您限制只有一種語言可以使用您的產品時，就是將潛在客戶群限制為全世界 65 億人口的一小部分。 如果您想要全球對象都可以使用應用程式，則具成本效益的產品當地語系化是更多客戶可以使用的一種最佳且最經濟的方法。  
   
  本概觀介紹全球化和當地語系化[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。 全球化是在多個位置執行之應用程式的設計和開發。 例如，全球化支援不同文化特性中使用者的當地語系化使用者介面和地區資料。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供全球化的設計功能，包括自動版面配置、 附屬組件，以及當地語系化的屬性和註解。
   
- 當地語系化會將應用程式資源翻譯為應用程式所支援之特定文化特性的當地語系化版本。 在進行當地語系化時[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，您在使用中的 Api<xref:System.Windows.Markup.Localizer>命名空間。 這些 Api 可增強[LocBaml 工具範例](https://go.microsoft.com/fwlink/?LinkID=160016)命令列工具。 如需有關如何建置和使用 LocBaml 的資訊，請參閱 <<c0> [ 將應用程式當地語系化](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)。    
+ 當地語系化會將應用程式資源翻譯為應用程式所支援之特定文化特性的當地語系化版本。 在進行當地語系化時[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，您在使用中的 Api<xref:System.Windows.Markup.Localizer>命名空間。 這些 Api 可增強[LocBaml 工具範例](https://go.microsoft.com/fwlink/?LinkID=160016)命令列工具。 如需有關如何建置和使用 LocBaml 的資訊，請參閱 <<c0> [ 將應用程式當地語系化](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)。
   
-## <a name="best-practices-for-globalization-and-localization-in-wpf"></a>WPF 中的全球化和當地語系化最佳做法  
+## <a name="best-practices-for-globalization-and-localization-in-wpf"></a>WPF 中的全球化和當地語系化最佳做法
+
  您可以獲得最佳的內建的全球化和當地語系化功能[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]依照 UI 設計和當地語系化相關祕訣，本節提供。  
   
-### <a name="best-practices-for-wpf-ui-design"></a>WPF UI 設計最佳做法  
+### <a name="best-practices-for-wpf-ui-design"></a>WPF UI 設計最佳做法
+
  當您設計[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]– 基礎[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，請考慮實作這些最佳作法：  
   
 -   寫入您[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; 請避免建立[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]在程式碼中。 當您建立您[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，透過內建當地語系化 Api 公開。  
@@ -47,7 +50,8 @@ ms.locfileid: "47424463"
   
 -   當您建立裝載外部瀏覽器的獨立巡覽應用程式時，設定<xref:System.Windows.Application.StartupUri%2A>若要將初始應用程式<xref:System.Windows.Navigation.NavigationWindow>而不是頁面 (例如`<Application StartupUri="NavigationWindow.xaml">`)。 此設計可讓您變更<xref:System.Windows.FlowDirection>視窗和巡覽列。 如需詳細資訊和範例，請參閱 <<c0> [ 全球化首頁範例](https://go.microsoft.com/fwlink/?LinkID=159990)。  
   
-### <a name="best-practices-for-wpf-localization"></a>WPF 當地語系化最佳做法  
+### <a name="best-practices-for-wpf-localization"></a>WPF 當地語系化最佳做法
+
  當您將當地語系化[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]– 基礎的應用程式，請考慮實作這些最佳作法：  
   
 -   使用當地語系化註解為當地語系化工具提供額外的內容。  
@@ -64,25 +68,27 @@ ms.locfileid: "47424463"
   
          如果您決定要包含在主要組件中的原始碼語言，藉由略過`<UICulture>`標記您的專案檔中，設定`UltimateResourceFallback`主要而非附屬組件的位置 (例如`[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.MainAssembly)]`)。  
   
-<a name="workflow_to_localize" />   
-## <a name="localize-a-wpf-application"></a>將 WPF 應用程式當地語系化  
- 當您將當地語系化[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式中，有數個選項。 例如，在您的應用程式中繫結可當地語系化的資源[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]檔案，將可當地語系化文字儲存在 resx 資料表，或讓當地語系化人員使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]檔案。 本章節描述使用 BAML 形式的 XAML，提供多項優點的當地語系化工作流程：  
+## <a name="localize-a-wpf-application"></a>將 WPF 應用程式當地語系化
+
+當您將當地語系化[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式中，有數個選項。 例如，在您的應用程式中繫結可當地語系化的資源[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]檔案，將可當地語系化文字儲存在 resx 資料表，或讓當地語系化人員使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]檔案。 本章節描述使用 BAML 形式的 XAML，提供多項優點的當地語系化工作流程：  
   
--   建置之後，即可進行當地語系化。  
+-   在建置後，您可以將當地語系化。  
   
 -   您可以使用當地語系化從 BAML 形式之 XAML 的舊版本更新為 BAML 形式之 XAML 的新版本，以在開發的同時進行當地語系化。  
   
 -   您可以驗證原始來源項目和語意在編譯時期因為 BAML 形式之 XAML 的編譯的形式[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。  
   
 ### <a name="localization-build-process"></a>當地語系化建置程序  
- 當您開發[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式中，當地語系化建置程序如下所示：  
+
+當您開發[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式中，當地語系化建置程序如下所示：  
   
 -   開發人員建立和全球化[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。 在專案檔中，開發人員設定`<UICulture>en-US</UICulture>`，讓應用程式編譯時，會產生語言中性主要組件。 此組件具有包含所有可當地語系化資源的附屬 .resources.dll 檔案。 （選擇性） 您可以讓原始碼語言中的主要組件因為我們的當地語系化[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]支援從主要組件進行擷取。  
   
 -   當檔案編譯為組建，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]轉換為 BAML 形式的 XAML。 文化特性中性`MyDialog.exe`和文化特性相依 （英文）`MyDialog.resources.dll`檔案都會發行給英語系的客戶。  
   
-### <a name="localization-workflow"></a>當地語系化工作流程  
- 當地語系化程序開始後未當地語系化`MyDialog.resources.dll`檔案建立。 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元素和屬性，在您的原始[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]從中使用 BAML 形式的 XAML 為索引鍵 / 值組[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]下<xref:System.Windows.Markup.Localizer>。 當地語系化人員會使用鍵值組來當地語系化應用程式。 當地語系化完成之後，即可從新值產生新的 .resource.dll。  
+### <a name="localization-workflow"></a>當地語系化工作流程
+
+當地語系化程序開始後未當地語系化`MyDialog.resources.dll`檔案建立。 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元素和屬性，在您的原始[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]從中使用 BAML 形式的 XAML 為索引鍵 / 值組[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]下<xref:System.Windows.Markup.Localizer>。 當地語系化人員會使用鍵值組來當地語系化應用程式。 當地語系化完成之後，即可從新值產生新的 .resource.dll。
   
  索引鍵 / 值組的索引鍵`x:Uid`值放在原始開發人員的[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 這些`x:Uid`值可讓[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]追蹤和合併當地語系化期間開發人員與當地語系化人員之間發生的變更。 例如，如果開發人員變更[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]當地語系化人員開始當地語系化之後，您就可以合併開發變更與已完成的當地語系化工作，使翻譯工作最少會遺失。  
   
@@ -92,11 +98,12 @@ ms.locfileid: "47424463"
   
  ![未當地語系化工作流程](../../../../docs/framework/wpf/advanced/media/localizationworkflow2.png "LocalizationWorkflow2")  
   
-<a name="examples_of_localization" />   
-## <a name="examples-of-wpf-localization"></a>WPF 當地語系化範例  
+## <a name="examples-of-wpf-localization"></a>WPF 當地語系化範例
+
  本章節包含當地語系化的應用程式，以協助您了解如何建置和當地語系化範例[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。  
   
-#### <a name="run-dialog-box-example"></a>執行對話方塊範例  
+#### <a name="run-dialog-box-example"></a>執行對話方塊範例
+
  下圖顯示的輸出**執行**對話方塊範例。  
   
  **英文：**  

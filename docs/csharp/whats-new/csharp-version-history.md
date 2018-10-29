@@ -3,12 +3,12 @@ title: C# 的歷史 - C# 指南
 description: 最早的語言版本有哪些內容，而在之後有什麼演變？
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 7a7030eb9479ebae553f3bb4d569c9a9f931db9a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5e8ecdd971a043dc47c50b10c974d86f836818dc
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504409"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316255"
 ---
 # <a name="the-history-of-c"></a>C# 的歷史 #
 
@@ -145,10 +145,10 @@ C# 5.0 版是該語言的一個聚焦版本。 幾乎該版本的所有心血都
 
 最新的主要版本是 C# 7.0 版。 此版本擁有 C# 6.0 中的某些進化和酷炫的東西，但是沒有編譯器作為服務。 下列為部分新功能：
 
-- [Out 變數](http://www.c-sharpcorner.com/article/out-variables-in-c-sharp-7-0/)
+- [Out 變數](https://www.c-sharpcorner.com/article/out-variables-in-c-sharp-7-0/)
 - [Tuple 和解構](https://www.thomaslevesque.com/2016/08/23/tuple-deconstruction-in-c-7/)
 - [模式比對](./csharp-7.md#pattern-matching)
-- [區域函式](http://www.infoworld.com/article/3182416/application-development/c-7-in-depth-exploring-local-functions.html)
+- [區域函式](https://www.infoworld.com/article/3182416/application-development/c-7-in-depth-exploring-local-functions.html)
 - [展開的運算式主體成員](./csharp-7.md#more-expression-bodied-members)
 - [Ref 區域變數和傳回](./csharp-7.md#ref-locals-and-returns)
 

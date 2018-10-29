@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f7630b9a233db009b6095abc8d833870c1f33d8
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 215fb807aa27b8a544351d26fd0c9500c76b6ead
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46581930"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202981"
 ---
 # <a name="recoverable-xslt-errors"></a>可復原的 XSLT 錯誤
 ＜W3C XSL 轉換 (XSLT) 1.0 版建議事項＞中所包含的領域，可告訴實作提供者該採取哪些決策來處理哪種狀況。 這些領域視為 Discretionary 行為。 例如，在 7.3 節＜建立處理指示＞中，XSLT 1.0 版建議事項指出如果具現化 `xsl:processing-instruction` 的內容會建立非文字節點的節點，就會產生錯誤。 針對某些問題，XSLT 1.0 版建議事項中會指出在處理器決定從錯誤復原時要採取的決策。 針對 7.3 節中的問題，W3C 指出只要忽略節點及其內容，實作即可從這項錯誤中復原。  
@@ -22,7 +22,7 @@ ms.locfileid: "46581930"
   
 -   「錯誤」表示引發此情況的例外狀況。  
   
--   您可以在 [W3C XSL 轉換 (XSLT) 1.0 版建議事項](http://www.w3.org/TR/xslt) (英文) 和 [W3C XSL 轉換 (XSLT) 1.0 版規格錯誤](https://www.w3.org/1999/11/REC-xslt-19991116-errata/) (英文) 中找到章節參考資料。  
+-   您可以在 [W3C XSL 轉換 (XSLT) 1.0 版建議事項](https://www.w3.org/TR/xslt) (英文) 和 [W3C XSL 轉換 (XSLT) 1.0 版規格錯誤](https://www.w3.org/1999/11/REC-xslt-19991116-errata/) (英文) 中找到章節參考資料。  
   
 |XSLT 條件|區段|XslCompiledTransform 行為|  
 |--------------------|-------------|-----------------------------------|  

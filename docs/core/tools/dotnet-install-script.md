@@ -4,12 +4,12 @@ description: 了解如何使用 dotnet-install 指令碼來安裝 .NET Core CLI 
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/11/2017
-ms.openlocfilehash: 8d1c6ebb30bd45575bb61206799c9c3e5c47ff0c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ea14424297dcf1dab8711197bee1d3b3e19879c1
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004006"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837072"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 指令碼參考
 
@@ -33,8 +33,8 @@ macOS/Linux：
 
 建議您使用 [.NET Core 主網站](https://dot.net) \(英文\) 所提供的穩定版本。 指令碼的直接路徑如下：
 
-* https://dot.net/v1/dotnet-install.sh (bash、UNIX)
-* https://dot.net/v1/dotnet-install.ps1 (Powershell、Windows)
+* <https://dot.net/v1/dotnet-install.sh> (bash、UNIX)
+* <https://dot.net/v1/dotnet-install.ps1> (Powershell、Windows)
 
 這些指令碼對於自動化案例和非系統管理員安裝非常有幫助。 指令碼有兩種：一種是在 Windows 上使用的 PowerShell 指令碼。 另一個指令碼是可在 Linux/macOS 上運作的 bash 指令碼。 這兩個指令碼有相同的行為。 Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 參數使用 Linux/macOS 系統上的指令碼。
 
@@ -65,7 +65,7 @@ macOS/Linux：
 
 - `latest` - 通道上的最新組建 (搭配 `-Channel` 選項來使用)
 - `coherent` - 通道上的最新一致性組建，使用最新的穩定套件組合 (搭配分支名稱 `-Channel` 選項來使用)
-- 代表特定組建版本的 X.Y.Z 格式三段式版本；取代 `-Channel` 選項。 例如：`2.0.0-preview2-006120`
+- 代表特定組建版本的 X.Y.Z 格式三段式版本；取代 `-Channel` 選項。 例如： `2.0.0-preview2-006120`
 
 如果省略，`-Version` 預設會設為 `latest`。
 

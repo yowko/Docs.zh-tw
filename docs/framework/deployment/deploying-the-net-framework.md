@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa204b9ac604cd4e0f2c1ae75e872f6bb5cdaf22
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac17993a4980e96cbd05fc2523567138e7b56262
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391403"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196437"
 ---
 # <a name="deploying-the-net-framework"></a>部署 .NET Framework
 本節 .NET Framework 文件為想要與應用程式一起安裝 .NET Framework 的開發人員，和想要在網路上部署 .NET Framework 系統管理員提供資訊。 它也討論與部署相關的啟用及重新啟動問題，以及如何監視 .NET Framework 安裝進度。  
@@ -37,4 +37,4 @@ ms.locfileid: "33391403"
  說明如何檢視並偵錯 CLR 啟用記錄，解決讓您的應用程式搭配正確的 CLR 版本執行時時可能發生的問題。  
   
 ## <a name="see-also"></a>請參閱  
- [開發指南](../../../docs/framework/development-guide.md)
+- [開發指南](../../../docs/framework/development-guide.md)

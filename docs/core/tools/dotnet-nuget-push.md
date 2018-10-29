@@ -4,12 +4,12 @@ description: dotnet nuget push 命令會將套件推送至伺服器並發行。
 author: karann-msft
 ms.author: mairaw
 ms.date: 09/04/2018
-ms.openlocfilehash: 23d27cef29008955850f9ed9f4a8baed9e7ad982
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: b9c0fad886cd1234325c58bf61b1a010bce421d9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45609998"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50200018"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -179,9 +179,9 @@ dotnet nuget push [-h|--help]
 
 `dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a`
 
-將 *foo.nupkg* 推送至自訂推送來源 `http://customsource`，指定 API 金鑰：
+將 *foo.nupkg* 推送至自訂推送來源 `https://customsource`，指定 API 金鑰：
 
-`dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s http://customsource/`
+`dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/`
 
 將 *foo.nupkg* 推送至預設推送來源：
 

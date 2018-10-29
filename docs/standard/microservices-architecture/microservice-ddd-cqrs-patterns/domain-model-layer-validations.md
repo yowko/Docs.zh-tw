@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 設計領域�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: c071d269977ccecea9a7d4d79da78d7967bb1618
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 6ff325bb062da2ebff815fc847d2247707a0bf7f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105731"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188049"
 ---
 # <a name="designing-validations-in-the-domain-model-layer"></a>設計領域模型層中的驗證
 
@@ -17,7 +17,7 @@ ms.locfileid: "37105731"
 
 領域實體應該一律是有效的實體。 一律應該為 true 的物件會有特定數目的非變異值。 例如，訂單項目物件一律必須要有必須是正整數的數量，以及發行項名稱和價格。 因此，非變異值強制執行負責領域實體 (特別是彙總根)，而且存在的實體物件應該有效。 非變異值規則只會表示為合約，而且會在違反時引發例外狀況或通知。
 
-背後原因是物件處於絕對不應該處於的狀態而發生許多 Bug。 下列是 Greg Young 在[線上討論](http://jeffreypalermo.com/blog/the-fallacy-of-the-always-valid-entity/)中的合理解釋：
+背後原因是物件處於絕對不應該處於的狀態而發生許多 Bug。 下列是 Greg Young 在[線上討論](https://jeffreypalermo.com/blog/the-fallacy-of-the-always-valid-entity/)中的合理解釋：
 
 建議我們現在具有採用 UserProfile 的 SendUserCreationEmailService ... 如何合理化 Name 不是 Null 的該服務？ 要再次確認嗎？ 或者，更可能 ... 您不需要檢查並且「獲得最佳結果」- 您希望有人先進行驗證，再將它傳送給您。 當然，使用 TDD，我們應該撰寫的其中一個第一個測試就是將應該會引發錯誤的 Null 名稱傳送給客戶。 但是，當我們開始不斷地撰寫這些類型的測試時了解：「等一下，如果我們永遠不允許名稱變成 Null，就不會有所有這些測試」。
 

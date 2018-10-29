@@ -2,12 +2,12 @@
 title: 建立 GamePiece 類別
 ms.date: 03/30/2017
 ms.assetid: 37a27a86-ac1c-47be-b477-cb4b819459d3
-ms.openlocfilehash: eb73918cc03e2621d39a98158d40a839dbc69d80
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f9f08437cda685d2ec1d2d0c8d54d370d9d38341
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857897"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195875"
 ---
 # <a name="creating-the-gamepiece-class"></a>建立 GamePiece 類別
 **GamePiece** 類別包含下列作業需要的所有功能：載入 Microsoft XNA 遊戲片段映像、追蹤與遊戲片段相關的滑鼠狀態、捕捉滑鼠、提供操作和慣性處理，以及提供當遊戲片段達到檢視區限制時的彈回功能。  
@@ -25,7 +25,7 @@ ms.locfileid: "43857897"
 ## <a name="class-constructor"></a>類別建構函式  
  **GamePiece** 類別的建構函式可接受下列參數：  
   
--   [SpriteBatch](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.aspx) 類型。 傳遞到這裡的參考會指派給私用成員 `spriteBatch`，並且在遊戲片段呈現其本身時，用來存取 [SpriteBatch.Draw](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.draw.aspx) 方法。 此外，還會使用 [GraphicsDevice](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.graphicsdevice.aspx) 屬性來建立與遊戲片段建立關聯的 [Texture](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.texture.aspx) 物件，以及取得檢視區大小，以偵測遊戲片段何時遇到視窗界限，讓片段可以彈開。  
+-   [SpriteBatch](https://docs.microsoft.com/previous-versions/windows/xna/bb199034%28v%3dxnagamestudio.41%29) 類型。 傳遞到這裡的參考會指派給私用成員 `spriteBatch`，並且在遊戲片段呈現其本身時，用來存取 [SpriteBatch.Draw](https://docs.microsoft.com/previous-versions/windows/xna/bb196426%28v%3dxnagamestudio.41%29) 方法。 此外，還會使用 [GraphicsDevice](https://docs.microsoft.com/previous-versions/windows/xna/bb197338%28v%3dxnagamestudio.41%29) 屬性來建立與遊戲片段建立關聯的 [Texture](https://docs.microsoft.com/previous-versions/windows/xna/bb199375%28v%3xnagamestudio.41%29) 物件，以及取得檢視區大小，以偵測遊戲片段何時遇到視窗界限，讓片段可以彈開。  
   
 -   字串，指定要用於遊戲片段的映像檔案名稱。  
   
@@ -78,11 +78,11 @@ ms.locfileid: "43857897"
   
  [!code-csharp[ManipulationXNA#_GamePiece_OnInertiaCompleted](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_oninertiacompleted)]  
   
- 截至目前為止，沒有任何存在的邏輯真正導致慣性外推發生。 這會在 **ProcessInertia** 方法中完成。 這個方法是從遊戲更新迴圈 ([Game.Update](https://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) 方法) 重複呼叫，以檢查 *processInertia* 旗標是否設為 `true`；如果是，則會呼叫 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Process%2A> 方法。 呼叫這個方法會導致外推發生，並引發 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> 事件。  
+ 截至目前為止，沒有任何存在的邏輯真正導致慣性外推發生。 這會在 **ProcessInertia** 方法中完成。 這個方法是從遊戲更新迴圈 ([Game.Update](https://docs.microsoft.com/previous-versions/windows/xna/bb199616%28v%3dxnagamestudio.41%29) 方法) 重複呼叫，以檢查 *processInertia* 旗標是否設為 `true`；如果是，則會呼叫 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Process%2A> 方法。 呼叫這個方法會導致外推發生，並引發 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> 事件。  
   
  [!code-csharp[ManipulationXNA#_GamePiece_ProcessInertia](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_processinertia)]  
   
- 在呼叫其中一個 Draw 方法多載之前，不會實際呈現遊戲片段。 這個方法的第一個多載是從遊戲繪圖迴圈 ([Game.Draw](https://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx) 方法) 重複呼叫。 這會呈現具有目前位置、旋轉和縮放比例的遊戲片段。  
+ 在呼叫其中一個 Draw 方法多載之前，不會實際呈現遊戲片段。 這個方法的第一個多載是從遊戲繪圖迴圈 ([Game.Draw](https://docs.microsoft.com/previous-versions/windows/xna/bb196422%28v%3dxnagamestudio.41%29) 方法) 重複呼叫。 這會呈現具有目前位置、旋轉和縮放比例的遊戲片段。  
   
  [!code-csharp[ManipulationXNA#_GamePiece_Draw](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_draw)]  
   

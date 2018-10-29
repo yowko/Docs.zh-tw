@@ -10,11 +10,11 @@ ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1a7561a09b1b47827b3476b5525863503765064f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47232816"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48842654"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>同步處理多執行緒處理的資料
 當多個執行緒可以對單一物件的屬性和方法進行呼叫時，請務必同步處理這些呼叫。 否則某個執行緒可能會中斷另一個執行緒正在執行的作業，而且物件可能會處於無效狀態。 其成員受到保護免於這種中斷的類別，稱為安全執行緒。  

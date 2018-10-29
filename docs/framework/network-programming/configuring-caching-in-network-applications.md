@@ -4,14 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - cache [.NET Framework], configuring
 ms.assetid: 3f694a1c-de5d-47cf-a6eb-cfc369fb8a9f
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: a7fe54911755863adc6a9b2bd91eff5cad9f9d4e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 12814a7b44f925960ddf00c3a52b2d8c78257de7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193040"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50049525"
 ---
 # <a name="configuring-caching-in-network-applications"></a>設定網路應用程式的快取功能
 若要設定快取，您必須指定應用程式或 <xref:System.Net.WebRequest> 層級的快取原則。 下列主題所提供的程式碼範例示範如何設定應用程式和要求來使用快取。  

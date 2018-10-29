@@ -2,14 +2,12 @@
 title: 對等網路案例
 ms.date: 03/30/2017
 ms.assetid: d23b1a64-2e08-4014-882a-c1dd766bdcc2
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 3f15e555f64479d18c5fb5d18522a3dbe33e3521
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 46e0be29d367db0d36b87c063779d55d1338b39e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47193560"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199938"
 ---
 # <a name="peer-to-peer-networking-scenarios"></a>對等網路案例
 對等網路可啟用或增強下列案例：  

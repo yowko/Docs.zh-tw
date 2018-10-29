@@ -3,12 +3,12 @@ title: 在 Docker 中裝載的微服務 - C#
 description: 了解如何建立在 Docker 容器中執行的 ASP.NET Core 服務
 ms.date: 06/08/2017
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: 1f4b38243beb1210b1374bd701fac66b2fa72cc5
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: b1f7159a222ab4d68715844e9997ca922676bc80
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106346"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454482"
 ---
 # <a name="microservices-hosted-in-docker"></a>在 Docker 中裝載的微服務
 
@@ -41,7 +41,7 @@ Docker 安裝的其他工作均適用於 ASP.NET Core 應用程式。
 您可以在 Windows、Linux、macOS 或是 Docker 容器中執行此應用程式。
 您將必須安裝慣用的程式碼編輯器。 以下說明使用 [Visual Studio Code (英文)](https://code.visualstudio.com/)，這是開放原始碼的跨平台編輯器。 不過，您可以使用您熟悉的任何工具。
 
-您也需要安裝 Docker 引擎。 如需適用於您平台的指示，請參閱 [Docker 安裝頁面 (英文)](http://www.docker.com/products/docker)。
+您也需要安裝 Docker 引擎。 如需適用於您平台的指示，請參閱 [Docker 安裝頁面 (英文)](https://docs.docker.com/install/overview/)。
 Docker 可以安裝在許多 Linux 發行版本、macOS 或 Windows。 上述的參考頁面包含每個可用安裝的相關章節。
 
 ## <a name="create-the-application"></a>建立應用程式

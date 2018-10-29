@@ -4,14 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP
 ms.assetid: 5b89d3fb-3c9a-49e2-af1f-c34c020c68ac
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 0d5b7fccdac9dba3fd44d12241dd60cbaefa1b7a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 902225085ccaceb9d90d0c25d9369ef65ae2730b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47192936"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193106"
 ---
 # <a name="httplistener"></a>HttpListener
 <xref:System.Net.HttpListener> 類別提供以程式設計方式控制的 HTTP 通訊協定接聽程式。 此接聽程式可在 <xref:System.Net.HttpListener> 物件的存留期內作用，並且在您的應用程式中執行。  

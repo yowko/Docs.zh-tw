@@ -12,14 +12,12 @@ helpviewer_keywords:
 - Internet, proxy instances
 - Network Resources
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 32799b14c88ee098e15e0ffa1dfa5aaa585cdc73
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1c6ca568cae45a54e781c30bf5774015ae09c98a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47421270"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201882"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>透過 Proxy 存取網際網路
 如果您的網站使用 Proxy 來提供網際網路存取，則您必須設定 Proxy 執行個體，使您的應用程式能夠與 Web Proxy 進行通訊。  

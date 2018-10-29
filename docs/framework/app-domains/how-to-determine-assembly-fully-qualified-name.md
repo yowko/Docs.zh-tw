@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 663e7456337a2d9c413b15236e7ba1de33fbfa9b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bb5978859ba25e1595ac3da7a2d7dad8cc2cad85
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743182"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50041098"
 ---
 # <a name="how-to-determine-an-assembly39s-fully-qualified-name"></a>如何：決定組件的完整名稱
 若要在全域組件快取中找到組件的完整名稱，請使用全域組件快取工具 ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md))。 請參閱[如何：檢視全域組件快取的內容](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)。  
@@ -43,9 +43,9 @@ ms.locfileid: "32743182"
  [!code-vb[Assembly.Fullname#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Assembly.FullName/VB/example2.vb#2)]  
   
 ## <a name="see-also"></a>請參閱  
- [組件名稱](../../../docs/framework/app-domains/assembly-names.md)  
- [建立組件](../../../docs/framework/app-domains/create-assemblies.md)  
- [建立和使用強式名稱的組件](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
- [全域組件快取](../../../docs/framework/app-domains/gac.md)  
- [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [組件名稱](../../../docs/framework/app-domains/assembly-names.md)  
+- [建立組件](../../../docs/framework/app-domains/create-assemblies.md)  
+- [建立和使用強式名稱的組件](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
+- [全域組件快取](../../../docs/framework/app-domains/gac.md)  
+- [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+- [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)

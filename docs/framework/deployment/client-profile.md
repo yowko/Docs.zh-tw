@@ -11,24 +11,24 @@ helpviewer_keywords:
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e0fbf40c6af63cfabe7b35e2bdf3e0998761b801
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5a104b6c755eb0b97f11e577fb3eeb182e465fe4
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505118"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200819"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
 .NET Client Profile 是 .NET Framework 的子集，隨 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] (含) 以前版本提供，並已針對用戶端應用程式最佳化。 .NET Framework 是 Windows、Windows Phone 和 Microsoft Azure 的開發平台，並提供 Managed 應用程式執行環境和 .NET Framework 類別庫。 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] (含) 以前版本提供了兩種部署選項：完整 .NET Framework 和 Client Profile。 Client Profile 提供比完整 .NET Framework 更快速的部署方式，產生的應用程式安裝套件也更小。  
   
  從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 開始，Client Profile 已經停止提供，並且將只提供完整的可轉散發套件。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 提供的最佳化像是較小的下載量和較快的部署速度，已滿足了對個別部署套件的需求。 單一可轉散發套件可以使安裝程序順暢執行，並且簡化應用程式的部署選項。  
   
- 不過，如果您是以 .NET Framework 4 或 3.5 為目標，而且想要進一步了解 Client Profile 以及使用時機，請參閱 .NET Framework 4 文件中的 [.NET Framework Client Profile](https://msdn.microsoft.com/library/cc656912\(v=vs.100\).aspx)。  
+ 不過，如果您是以 .NET Framework 4 或 3.5 為目標，而且想要進一步了解 Client Profile 以及使用時機，請參閱 .NET Framework 4 文件中的 [.NET Framework Client Profile](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29)。  
   
  當您安裝 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 時，.NET Framework 4 Client Profile 會更新為 .NET Framework 的完整版。 如需安裝 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的資訊，請參閱[安裝適用於開發人員的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。  
   
 ## <a name="see-also"></a>請參閱  
- [.NET Framework Client Profile (.NET Framework 4)](https://msdn.microsoft.com/library/cc656912\(v=vs.100\).aspx)  
- [Visual Studio 多目標概觀](https://msdn.microsoft.com/library/b1702c33-0672-4ebc-b779-2b324d6ea880)  
- [進行 .NET Framework 目標錯誤的疑難排解](https://msdn.microsoft.com/library/830e3e45-9a93-4279-a249-75b84599aefb)  
- [如何：以 .NET Framework 版本為目標](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)
+- [.NET Framework Client Profile (.NET Framework 4)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29)  
+- [Visual Studio 多目標概觀](/visualstudio/ide/visual-studio-multi-targeting-overview)  
+- [進行 .NET Framework 目標錯誤的疑難排解](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)  
+- [如何：以 .NET Framework 版本為目標](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)

@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 實作斷路�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 8cd3564e5240ec5a8783edb336957549be27ea6a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b961ebd186953e614658915c7246e1c83c40e7e9
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47203459"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453147"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>實作斷路器模式
 
@@ -56,7 +56,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 }
 ```
 
-在上述程式碼範例中，斷路器原則設定為在重試 Http 要求時，若連續五次失敗，則會中斷或開啟網路。 發生此情況時，網路會中斷 30 秒：在這段期間，斷路器會立即使呼叫失敗，而不是實際發出。  原則會自動將[相關的例外狀況和 HTTP 狀態碼](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults)解釋為錯誤。  
+在上述程式碼範例中，斷路器原則設定為在重試 Http 要求時，若連續五次失敗，則會中斷或開啟網路。 發生此情況時，網路會中斷 30 秒：在這段期間，斷路器會立即使呼叫失敗，而不是實際發出。  原則會自動將[相關的例外狀況和 HTTP 狀態碼](https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults)解釋為錯誤。  
 
 如果您部署在與執行 HTTP 呼叫的用戶端應用程式或服務不同之環境中的特定資源發生問題，也應該使用斷路器將要求重新導向至後援基礎結構。 這樣一來，如果資料中心的中斷只會影響您的後端微服務，但不會影響您的用戶端應用程式，用戶端應用程式就可以重新導向至後援服務。 Polly 正在規劃新的原則來自動化此[容錯移轉原則](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy)案例。 
 
@@ -96,7 +96,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 
 `http://localhost:5103/failing?enable` 
 
-您可以接著使用 URI http://localhost:5103/failing 來檢查狀態，如圖 10-4 所示。
+您可以接著使用 URI `http://localhost:5103/failing` 來檢查狀態，如圖 10-4 所示。
 
 ![](./media/image4.png)
 

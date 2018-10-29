@@ -3,11 +3,11 @@ title: 如何：在命名空間中尋找所有節點 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
 ms.openlocfilehash: 0675795da7c190e6d105ac61027c28f161961099
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47230952"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48033112"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-c"></a>如何：在命名空間中尋找所有節點 (C#)
 您可以在每個項目或屬性的命名空間上篩選，尋找該特定命名空間中的所有節點。  

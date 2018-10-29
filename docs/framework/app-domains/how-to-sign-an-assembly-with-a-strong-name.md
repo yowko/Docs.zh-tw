@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45f8ad3bd9226ffd821fc792cdd4d0a6dac1a414
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5d46694d772aed7e92f95cc26da86985d4f8b0ff
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744625"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191060"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>如何：使用強式名稱簽署組件
 以下是幾種以強式名稱簽署組件的方式：  
@@ -98,9 +98,9 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
     ```  
   
 ## <a name="see-also"></a>請參閱  
- [建立和使用強式名稱的組件](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
- [如何：建立公開/私密金鑰組](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
- [Al.exe (組件連結器)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
- [延遲簽署組件](../../../docs/framework/app-domains/delay-sign-assembly.md)  
- [管理組件和資訊清單簽署](/visualstudio/ide/managing-assembly-and-manifest-signing)  
- [專案設計工具、簽署頁面](https://msdn.microsoft.com/library/0k50fs3b)
+- [建立和使用強式名稱的組件](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
+- [如何：建立公開/私密金鑰組](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
+- [Al.exe (組件連結器)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
+- [延遲簽署組件](../../../docs/framework/app-domains/delay-sign-assembly.md)  
+- [管理組件和資訊清單簽署](/visualstudio/ide/managing-assembly-and-manifest-signing)  
+- [專案設計工具、簽署頁面](/visualstudio/ide/reference/signing-page-project-designer)

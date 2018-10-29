@@ -5,14 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 009c23d0015f366ab5f1ee92609f0131465d827b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6d0be3ccfc0a0b4b032283b7ed34908f79774bb6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47193094"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50049538"
 ---
 # <a name="how-to-assign-user-information-to-group-connections"></a>如何：將使用者資訊指派給群組連接
 

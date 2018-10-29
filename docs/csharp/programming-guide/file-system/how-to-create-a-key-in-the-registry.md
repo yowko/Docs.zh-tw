@@ -6,12 +6,12 @@ helpviewer_keywords:
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-ms.openlocfilehash: 383d47413078359d7491bf5f7f61dc5e70d842a7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a3a6af8eb493ce17ac73769decd1f60b903ae165
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526734"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49337606"
 ---
 # <a name="how-to-create-a-key-in-the-registry-visual-c"></a>如何：在登錄中建立機碼 (Visual C#)
 本範例會將 "Name" 和 "Isabella" 的值組新增至目前使用者之登錄的 "Names" 索引鍵下。  
@@ -60,4 +60,4 @@ key.Close();
 - <xref:System.IO?displayProperty=nameWithType>  
 - [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
 - [檔案系統和登錄 (C# 程式設計指南)](../../../csharp/programming-guide/file-system/index.md)  
-- [使用 C# 從登錄進行讀取、寫入和刪除](http://www.codeproject.com/Articles/3389/Read-write-and-delete-from-registry-with-C)
+- [使用 C# 從登錄進行讀取、寫入和刪除](https://www.codeproject.com/Articles/3389/Read-write-and-delete-from-registry-with-C)

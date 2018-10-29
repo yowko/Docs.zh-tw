@@ -2,14 +2,12 @@
 title: 啟用和停用 IPv6
 ms.date: 03/30/2017
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f63d62c7605d32dfbe97193f8aed53f0fc547cff
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9dbbbbb522628de81be3d3d1382867de99c570d0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195602"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50183083"
 ---
 # <a name="enabling-and-disabling-ipv6"></a>啟用和停用 IPv6
 若要使用 IPv6 通訊協定，請確定您執行的作業系統版本支援 IPv6，並確認已正確設定作業系統和網路類別。  

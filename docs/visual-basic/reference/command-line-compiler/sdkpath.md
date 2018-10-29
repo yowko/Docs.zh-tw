@@ -10,11 +10,11 @@ helpviewer_keywords:
 - sdkpath compiler option [Visual Basic]
 ms.assetid: fec8a3f1-b791-4a37-8af7-344859f8212d
 ms.openlocfilehash: bf665082f079901ec45122ce7797090b7519fafe
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50046795"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200845"
 ---
 # <a name="-sdkpath"></a>-sdkpath
 指定 mscorlib.dll 和 Microsoft.VisualBasic.dll 的位置。  

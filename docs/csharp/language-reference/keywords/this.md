@@ -9,11 +9,11 @@ helpviewer_keywords:
 - this keyword [C#]
 ms.assetid: d4f827fe-4710-410b-89b8-867dad44b8a3
 ms.openlocfilehash: df1bf6a3e6d24b231bf5e3c7a960f49084c4e53a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47209382"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48026564"
 ---
 # <a name="this-c-reference"></a>this (C# 參考)
 `this` 關鍵字指的是類別的目前執行個體，也用作擴充方法第一個參數的修飾詞。  

@@ -2,12 +2,12 @@
 title: 操作和慣性概觀
 ms.date: 03/30/2017
 ms.assetid: dd31b89b-eab6-45a1-8d0b-11e0eb84b234
-ms.openlocfilehash: 41c22dc305f8ef653705436544ab2342e55ed02a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6396c174b341b5ae937fa931488ee1bd3a5fcbd5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521235"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187815"
 ---
 # <a name="manipulations-and-inertia-overview"></a>操作和慣性概觀
 「操作」可讓使用者使用「操作工具」來移動、旋轉和調整使用者介面 (UI) 項目大小。 操作工具代表滑鼠或 (在觸控式的情況下) 手寫筆或手指。  
@@ -25,7 +25,7 @@ ms.locfileid: "43521235"
   
  受兩個操作工具所管理的影像  
   
- 操作處理可提供監視操作工具子集的架構，並會解譯它們，如同一起動作，而非獨立地動作。 您可以同時建立數個操作處理器物件，可在應用程式中操作每個 UI 項目。 會通知操作處理器要觀察哪個輸入裝置，並透過 [.NET 事件](https://msdn.microsoft.com/library/17sde2xt.aspx)報告操作。  
+ 操作處理可提供監視操作工具子集的架構，並會解譯它們，如同一起動作，而非獨立地動作。 您可以同時建立數個操作處理器物件，可在應用程式中操作每個 UI 項目。 會通知操作處理器要觀察哪個輸入裝置，並透過 [.NET 事件](../../../docs/standard/events/index.md)報告操作。  
   
  操作處理器沒有受管理之特定項目的資訊。 應用程式會各自將變更套用至特定應用程式項目。 例如，應用程式將轉換套用至影像或重新繪製，在新的位置以新的大小或方向顯示。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "43521235"
  加入、移動或移除 UI 項目的操作工具時，應用程式會呼叫 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A> 方法來更新 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D> 物件。 操作第一次開始時，會引發 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started> 事件。  
   
 > [!NOTE]
->  在以框架為基礎的更新環境中使用時，操作處理會更有效率。 當在 Microsoft XNA 應用程式中使用操作處理時，這不成問題，因為 XNA Framework 會使用 [Game.Update](https://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) 方法來提供以框架為基礎的更新。 在另一個環境中 (例如 WinForms)，您可能會需要提供您自己以框架為基礎的邏輯，以收集操作，並定期以批次方式傳送到 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A>。  
+> 在以框架為基礎的更新環境中使用時，操作處理會更有效率。 當在 Microsoft XNA 應用程式中使用操作處理時，這不成問題，因為 XNA Framework 會使用 [Game.Update](https://docs.microsoft.com/previous-versions/windows/xna/bb199616%28v%3dxnagamestudio.41%29) 方法來提供以框架為基礎的更新。 在另一個環境中 (例如 WinForms)，您可能會需要提供您自己以框架為基礎的邏輯，以收集操作，並定期以批次方式傳送到 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A>。  
   
  當操作工具或其位置的數目變更時，會引發 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> 事件。 傳遞至 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> 事件處理常式的 <xref:System.Windows.Input.Manipulations.Manipulation2DDeltaEventArgs> 物件屬性會指定最後一個事件發生後原點、縮放、旋轉和轉譯的變更。 當操作工具移動時，以及當新增或移除操作工具時，就會變更操作的原點。 轉譯值指定此操作包含多少 X 或 Y 移動。  
   

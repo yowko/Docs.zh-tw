@@ -13,11 +13,11 @@ ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d84bc5ac2256139626311ff7c848170c28ffbd5b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47454337"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836507"
 ---
 # <a name="selecting-a-collection-class"></a>選取集合類別
 請務必謹慎選擇您的集合類別。 使用錯誤的類型可能會限制您使用集合。 一般而言，除非您特別以 .NET Framework 1.1 版為目標，否則請避免使用 <xref:System.Collections> 命名空間中的類型。 由於泛型和並行版本的集合類型較安全，並且提供其他增強功能，因此會優先使用這些版本。  

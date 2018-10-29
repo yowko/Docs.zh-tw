@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <httpWebRequest> element
 - httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
-ms.openlocfilehash: 586b3e7219c72b6cd00653d6d0be3a74f6359709
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 0d3feb168acbd623270a2038bf06a3c97126bd05
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50048979"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205148"
 ---
 # <a name="lthttpwebrequestgt-element-network-settings"></a>&lt;httpWebRequest&gt;項目 （網路設定）
 自訂 Web 要求參數。  
@@ -77,5 +77,5 @@ ms.locfileid: "50048979"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>  
- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>  
+- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

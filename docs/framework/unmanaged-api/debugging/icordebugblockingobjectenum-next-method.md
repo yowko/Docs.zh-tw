@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4336978825fbf7844b3ceaf179954f28660f08c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 04b28dec0f016d44692665fb0ce95a7e496f103c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409403"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200518"
 ---
 # <a name="icordebugblockingobjectenumnext-method"></a>ICorDebugBlockingObjectEnum::Next 方法
-取得指定的數目[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)列舉型別，從目前位置開始的物件。  
+取得指定的數目[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)從列舉型別，從目前位置開始的物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,7 +38,7 @@ HRESULT Next([in] ULONG  celt,
   
 #### <a name="parameters"></a>參數  
  `celt`  
- [in]要擷取的物件數目。  
+ [in]若要擷取的物件數目。  
   
  `values`  
  [out]陣列的指標[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)物件。  
@@ -55,23 +55,21 @@ HRESULT Next([in] ULONG  celt,
 |S_FALSE|`pceltFetched` 不等於 `celt`。|  
   
 ## <a name="remarks"></a>備註  
- 此方法的功能，例如一般的 COM 列舉值。  
+ 這個方法會如同一般的 COM 列舉值。  
   
- 至少必須為輸入的陣列值的大小`celt`。 陣列將會填入 [下一步]`celt`值列舉中，或使用的所有其餘的值，如果少於`celt`保留。 此方法傳回時，`pceltFetched`將會填入已擷取的值數目。 如果`values`包含無效的指標或指向小於緩衝區`celt`，或如果`pceltFetched`是無效的指標，結果會是未定義。  
+ 至少必須為輸入的陣列值的大小`celt`。 陣列會填滿可能的下一步`celt`值的列舉型別中或使用所有剩餘的值，如果少於`celt`保留。 當這個方法傳回時，`pceltFetched`將會填入已擷取的值數目。 如果`values`包含無效的指標或指向小於緩衝區`celt`，或如果`pceltFetched`是無效的指標，結果為未定義。  
   
 > [!NOTE]
->  雖然[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)結構不需要釋出、 釋放需要在其內部的"ICorDebugValue"介面。  
-  
--  
+>  雖然[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)結構不需要釋出，在其內部的"ICorDebugValue 」 介面需要釋出。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorDebug.idl、 CorDebug.h  
+ **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [ICorDebugDataTarget 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)  

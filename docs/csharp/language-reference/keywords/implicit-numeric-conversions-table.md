@@ -7,12 +7,12 @@ helpviewer_keywords:
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-ms.openlocfilehash: e46816fc8f3a6ff71dcba3561098d3cfce1e1054
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: c3c0153a0ae3e07839822c8bb978b1a09277bd53
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44213260"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188699"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>隱含數值轉換表 (C# 參考)
 
@@ -48,7 +48,7 @@ ms.locfileid: "44213260"
   byte b = 300;   // CS0031: Constant value '300' cannot be converted to a 'byte'
   ```
 
-如需隱含轉換的詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的[隱含轉換](/dotnet/csharp/language-reference/language-specification/conversions#implicit-conversions)一節。
+如需隱含轉換的詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的[隱含轉換](~/_csharplang/spec/conversions.md#implicit-conversions)一節。
   
 ## <a name="see-also"></a>另請參閱
 

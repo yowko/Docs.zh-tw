@@ -8,12 +8,12 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: 157bd07f3332883f010ef26ba920dae88276051b
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 8b2516b4e5b418e560d5763d8e551d2ab7646da3
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084673"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584347"
 ---
 # <a name="group-clause-c-reference"></a>group 子句 (C# 參考)
 
@@ -53,7 +53,7 @@ ms.locfileid: "44084673"
 
 ### <a name="grouping-by-numeric-range"></a>依數字範圍群組
 
-下一個範例使用運算式來建立代表百分位數範圍的數字群組索引鍵。 請注意會使用 [let](let-clause.md) 作為儲存方法呼叫結果的方便位置，因此不需要在 `group` 子句中呼叫方法兩次。 也請注意在 `group` 子句中，為了避免「除以零」例外狀況，程式碼會檢查以確定學生沒有平均值零。 如需如何在查詢運算式中安全地使用方法的詳細資訊，請參閱[如何：處理查詢運算式中的例外狀況](../../programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md)。
+下一個範例使用運算式來建立代表百分位數範圍的數字群組索引鍵。 請注意會使用 [let](let-clause.md) 作為儲存方法呼叫結果的方便位置，因此不需要在 `group` 子句中呼叫方法兩次。 如需如何在查詢運算式中安全地使用方法的詳細資訊，請參閱[如何：處理查詢運算式中的例外狀況](../../programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md)。
 
 [!code-csharp[cscsrefQueryKeywords#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#15)]
 

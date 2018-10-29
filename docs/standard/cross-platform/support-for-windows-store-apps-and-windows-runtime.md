@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 18bd35495d1cb7cfffe39efa8f7313b75c7f5378
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 0476fe7ed731dbb2c6b86cff3255673ecee6f98d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261559"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198454"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>適用於 Windows 市集應用程式和 Windows 執行階段的 .NET Framework 支援
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 支援多個 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 的軟體開發案例。 這些案例可分成三個類別︰
@@ -25,7 +25,7 @@ ms.locfileid: "48261559"
 
 -   開發類別庫，在使用 .NET Framework 建立的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式中使用。
 
--   開發於 .WinMD 檔案封裝的 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 元件，可供任何支援 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 的程式設計語言使用。 例如，請參閱[Creating Windows Runtime Components in C# 和 Visual Basic](https://msdn.microsoft.com/library/windows/apps/br230301(v=VS.110).aspx)。
+-   開發於 .WinMD 檔案封裝的 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 元件，可供任何支援 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 的程式設計語言使用。 例如，請參閱[Creating Windows Runtime Components in C# 和 Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)。
 
  本主題概述 .NET Framework 為所有三個類別提供的支援，並說明 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 元件的案例。 第一章節包含 .NET Framework 和 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 之間關聯性的基本資訊，並說明您可能會在 [說明] 系統及 IDE 中遇到的異狀。 [一節的第二個](#WindowsRuntimeComponents)討論案例開發[!INCLUDE[wrt](../../../includes/wrt-md.md)]元件。
 
@@ -84,7 +84,7 @@ ms.locfileid: "48261559"
 
  介面在 Managed 程式碼中的顯示方式，會影響到實作這些介面之型别的顯示方式。 例如　`PropertySet` 類別會實作 `IMap<K, V>`，而這在 Managed 程式碼中會顯示為 `IDictionary<TKey, TValue>`。 `PropertySet` 會以實作了 `IDictionary<TKey, TValue>` (而不是 `IMap<K, V>`) 的形態出現，因此在 Managed 程式碼中，其看似具有 `Add` 方法 (此方法的行為類似於 .NET Framework 字典上的 `Add` 方法。 它看起來並沒有 `Insert` 方法。
 
- 如需有關建立使用.NET Framework[!INCLUDE[wrt](../../../includes/wrt-md.md)]元件，以及逐步解說，示範如何搭配使用這類元件與 JavaScript，請參閱[Creating Windows Runtime Components in C# 和 Visual Basic](https://msdn.microsoft.com/library/windows/apps/br230301%28v=VS.110%29.aspx)。
+ 如需有關建立使用.NET Framework[!INCLUDE[wrt](../../../includes/wrt-md.md)]元件，以及逐步解說，示範如何搭配使用這類元件與 JavaScript，請參閱[Creating Windows Runtime Components in C# 和 Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)。
 
 ### <a name="primitive-types"></a>基本類型
  為了在 Managed 程式碼中自然地使用 [!INCLUDE[wrt](../../../includes/wrt-md.md)]，您的程式碼中會顯示 NET Framework 基本類型而不是 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 基本類型。 在 .NET Framework 中，基本型别 (如 `Int32` 結構) 具有許多有用的屬性和方法，例如 `Int32.TryParse` 方法。 相對地，[!INCLUDE[wrt](../../../includes/wrt-md.md)] 中的基本類型和結構就只有欄位而已。 在 Managed 程式碼中使用基本項目時，將會顯示成 .NET Framework 類型，而您可以如常使用這些 .NET Framework 類型的屬性和方法。 下列清單提供摘要︰
@@ -149,6 +149,6 @@ ms.locfileid: "48261559"
 |[適用於 Windows 市集應用程式的 .NET 概觀](https://msdn.microsoft.com/library/windows/apps/br230302(v=VS.110).aspx)|描述您可以用來建立 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式和 [!INCLUDE[wrt](../../../includes/wrt-md.md)]元件的 .NET Framework 類型和成員。 (在 Windows 開發人員中心中。)|
 |[使用 C# 或 Visual Basic 的 Windows 市集應用程式的藍圖](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))|提供重要資源，協助您使用 C# 或 Visual Basic 開始開發 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式，包括許多快速入門主題、指導方針和最佳做法。 (在 Windows 開發人員中心中。)|
 |[如何主題 (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10))|提供重要資源，協助您使用 C# 或 Visual Basic 開始開發 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式，包括許多快速入門主題、指導方針和最佳做法。 (在 Windows 開發人員中心中。)|
-|[在 C++ 和 Visual Basic 中建立 Windows 執行階段元件](https://msdn.microsoft.com/library/windows/apps/br230301%28v=VS.110%29.aspx)|描述如何使用 .NET Framework 建立 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 元件、說明如何將其作為使用 JavaScript 為 Windows 建置的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式一部分，並說明如何使用 Visual Studio 為該組合偵錯。 (在 Windows 開發人員中心中。)|
+|[在 C++ 和 Visual Basic 中建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)|描述如何使用 .NET Framework 建立 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 元件、說明如何將其作為使用 JavaScript 為 Windows 建置的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式一部分，並說明如何使用 Visual Studio 為該組合偵錯。 (在 Windows 開發人員中心中。)|
 |[Windows 執行階段參考](/uwp/api/)|[!INCLUDE[wrt](../../../includes/wrt-md.md)] 的參考文件。 (在 Windows 開發人員中心中。)|
 |[將 URI 傳遞給 Windows 執行階段](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)|描述當您從 Managed 程式碼將 URI 傳遞至 [!INCLUDE[wrt](../../../includes/wrt-md.md)]時可能發生的問題，以及如何加以避免。|

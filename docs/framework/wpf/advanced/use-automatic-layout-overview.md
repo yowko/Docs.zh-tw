@@ -5,28 +5,28 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: a43b3c0e008025171e3b1fdeba3bc514d01e28c8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d6ed0da9be32a4a4de4111acfb2d347b7bd5096d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856033"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201552"
 ---
 # <a name="use-automatic-layout-overview"></a>使用自動配置概觀
-本主題將介紹如何撰寫的開發人員的指導方針[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]含有可當地語系化的應用程式[!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]。 在過去，當地語系化的[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]是耗時的程序。 每一種語言，[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]改寫的所需的像素的像素調整。 使用正確的設計和正確的編碼標準，今日[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]可以建構，讓當地語系化人員擁有較少的調整大小和重新調整位置作業執行。 撰寫應用程式都可以更輕鬆地調整大小和重新置放方法稱為自動版面配置，並可藉由使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式的設計。  
-  
+本主題將介紹如何撰寫的開發人員的指導方針[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]含有可當地語系化的應用程式[!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]。 在過去，當地語系化的 UI 會是耗時的程序。 針對調整 UI，是每一種語言所需的像素的像素調整。 使用正確的設計和正確的編碼標準，今日[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]可以建構，讓當地語系化人員擁有較少的調整大小和重新調整位置作業執行。 撰寫應用程式都可以更輕鬆地調整大小和重新置放方法稱為自動版面配置，並可藉由使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式的設計。  
+
 <a name="advantages_of_autolayout"></a>   
 ## <a name="advantages-of-using-automatic-layout"></a>使用自動版面配置的優點  
  因為[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的呈現系統，是功能強大且靈活，提供可以進行調整以符合不同的語言需求的應用程式中的配置元素的能力。 下列清單提出一些自動版面配置的優點。  
-  
--   [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 能以任何語言適當地顯示。  
-  
+
+-   UI 會顯示能以任何語言。  
+
 -   減少在翻譯文字之後重新調整控制項位置和大小的需求。  
   
 -   減少重新調整視窗大小的需求。  
-  
--   [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 版面配置會以任何語言適當地轉譯。  
-  
+
+-   以任何語言，UI 配置正確轉譯。  
+
 -   可將當地語系化降低為只比字串翻譯多一點點的程度。  
   
 <a name="autolayout_controls"></a>   
@@ -46,20 +46,52 @@ ms.locfileid: "43856033"
   
 <a name="autolayout_coding"></a>   
 ## <a name="automatic-layout-and-coding-standards"></a>自動版面配置和編碼標準  
- 使用自動版面配置方法需要一組的編碼和設計標準與規則，以產生可完全當地語系化[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 下列指導方針將有助於自動版面配置編碼。  
-  
-| 編碼標準 | 描述 |
-| ---------------------- | ----------------- |
-| 請勿使用絕對位置。 | <ul><li>請勿使用<xref:System.Windows.Controls.Canvas>因為其元素進行絕對定位。</li><li>使用<xref:System.Windows.Controls.DockPanel>， <xref:System.Windows.Controls.StackPanel>，和<xref:System.Windows.Controls.Grid>來定位控制項。</li><li>如需各種面板類型的說明，請參閱[面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)。</li></ul> |
-| 請勿為視窗設定固定大小。 | -使用<xref:System.Windows.Window.SizeToContent%2A>。<br />例如: <br /><br /> [!code-xaml[LocalizationGrid#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)] |
-| 新增 <xref:System.Windows.FrameworkElement.FlowDirection%2A>。 | <ul><li>新增<xref:System.Windows.FrameworkElement.FlowDirection%2A>至您的應用程式的根項目。</li><li>WPF 提供便利的方式，來支援水平、 雙向和垂直版面配置。 在展示架構<xref:System.Windows.FrameworkElement.FlowDirection%2A>屬性可用來定義版面配置。 書寫方向模式如下：<br /><br /> <ul><li><xref:System.Windows.FlowDirection.LeftToRight> (LrTb)-拉丁文、 東亞等的水平配置。</li><li><xref:System.Windows.FlowDirection.RightToLeft> (RlTb)，如阿拉伯文、 希伯來文等雙向。</li></ul></li></ul> |
-| 使用複合字型，而不是實體字型。 | <ul><li>透過複合字型，<xref:System.Windows.Controls.Control.FontFamily%2A>屬性不需要當地語系化。</li><li>開發人員可以使用下列其中一個字型，或自行建立。<br /><br /> <ul><li>Global User Interface</li><li>全域新細明體</li><li>全域有襯線字型</li></ul></li></ul> |
-| 加入 xml:lang。 | <ul><li>新增`xml:lang`屬性中的根項目您[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，例如`xml:lang="en-US"`英文版的應用程式。</li><li>因為複合字型使用`xml:lang`來判斷要使用的字型，請設定這個屬性，以支援多國語言案例。</li></ul> |
-  
+ 使用自動版面配置方法需要一組編碼和設計標準與規則，以產生完全當地語系化的 UI。 下列指導方針將有助於自動版面配置編碼。  
+
+**請勿使用絕對位置**
+
+- 請勿使用<xref:System.Windows.Controls.Canvas>因為其元素進行絕對定位。
+
+- 使用<xref:System.Windows.Controls.DockPanel>， <xref:System.Windows.Controls.StackPanel>，和<xref:System.Windows.Controls.Grid>來定位控制項。
+
+如需各種面板類型的說明，請參閱[面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)。
+
+**未設定視窗的固定的大小**
+
+- 使用 <xref:System.Windows.Window.SizeToContent%2A?displayProperty=nameWithType>。 例如: 
+
+   [!code-xaml[LocalizationGrid#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]
+
+**新增 <xref:System.Windows.FrameworkElement.FlowDirection%2A>**
+
+- 新增<xref:System.Windows.FrameworkElement.FlowDirection%2A>至您的應用程式的根項目。
+
+   WPF 提供便利的方式，來支援水平、 雙向和垂直版面配置。 在展示架構<xref:System.Windows.FrameworkElement.FlowDirection%2A>屬性可用來定義版面配置。 書寫方向模式如下：
+   
+     - <xref:System.Windows.FlowDirection.LeftToRight?displayProperty=nameWithType> (LrTb)-拉丁文、 東亞等的水平配置。
+     
+     - <xref:System.Windows.FlowDirection.RightToLeft?displayProperty=nameWithType> (RlTb)，如阿拉伯文、 希伯來文等雙向。
+
+**使用複合字型，而不是實體字型**
+
+- 透過複合字型，<xref:System.Windows.Controls.Control.FontFamily%2A>屬性不需要當地語系化。
+
+- 開發人員可以使用下列其中一個字型，或自行建立。
+
+   - Global User Interface
+   - 全域新細明體
+   - 全域有襯線字型
+
+**新增 xml: lang**
+
+- 新增`xml:lang`屬性，是在根元素的 UI，例如`xml:lang="en-US"`英文版的應用程式。
+
+- 因為複合字型使用`xml:lang`來判斷要使用的字型，請設定這個屬性，以支援多國語言案例。
+
 <a name="autolay_grids"></a>   
 ## <a name="automatic-layout-and-grids"></a>自動版面配置和方格  
- <xref:System.Windows.Controls.Grid>項目，可用於自動版面配置，因為它可讓開發人員定位項目。 A<xref:System.Windows.Controls.Grid>控制項可以分散在其子元素之間，使用資料行和資料列的排列方式的可用空間。 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元素可以跨越多個資料格，您也可以將方格內部含有方格。 方格非常有用，因為它們可讓您建立並放置複雜[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 下列範例示範如何使用方格來定位部分按鈕和文字。 請注意，儲存格的寬度與高度設為<xref:System.Windows.GridUnitType.Auto>; 因此，包含與映像按鈕的資料格會調整，以符合影像大小。  
-  
+ <xref:System.Windows.Controls.Grid>項目，可用於自動版面配置，因為它可讓開發人員定位項目。 A<xref:System.Windows.Controls.Grid>控制項可以分散在其子元素之間，使用資料行和資料列的排列方式的可用空間。 UI 項目可以跨越多個資料格，您也可以將方格內部含有方格。 方格非常有用，因為它們可讓您建立並放置複雜的 UI。 下列範例示範如何使用方格來定位部分按鈕和文字。 請注意，儲存格的寬度與高度設為<xref:System.Windows.GridUnitType.Auto>; 因此，包含與映像按鈕的資料格會調整，以符合影像大小。  
+
  [!code-xaml[LocalizationGrid#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]  
   
  下圖顯示由先前程式碼所產生的方格。  

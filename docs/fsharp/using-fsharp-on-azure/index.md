@@ -3,12 +3,12 @@ title: 在 Azure 上使用 F#
 description: '若要使用 Azure 服務搭配 F # 指南'
 author: sylvanc
 ms.date: 09/22/2016
-ms.openlocfilehash: 96dec342379b06e997107cc5d6cc05e9fc737452
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 1fbb85a07fc057c1b89a4c4a1ad356066cebf2b8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50033954"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201500"
 ---
 # <a name="using-f-on-azure"></a>在 Azure 上使用 F#
 
@@ -40,7 +40,7 @@ Azure Functions 支援 F# 作為第一級語言，可以在有效率、易於反
 
 ## <a name="using-azure-storage-with-f"></a>使用 Azure 儲存體搭配 F # #
 
-Azure 儲存體是新式應用程式的儲存體服務基礎層，這些應用程式依賴持久性、可用性和延展性來符合客戶的需求。 透過使用下列文章中所描述的技巧，F# 程式可以直接與 Azure 儲存體服務互動。
+Azure 儲存體是新式應用程式的儲存體服務基礎層，這些應用程式依賴持久性、可用性和延展性來符合客戶的需求。 F#程式可直接與 Azure 儲存體服務，使用下列文章中所述的技巧互動。
 
 * [開始使用 F# 來使用 Azure Blob 儲存體](blob-storage.md)
 * [開始使用 F# 來使用 Azure 檔案儲存體](file-storage.md)

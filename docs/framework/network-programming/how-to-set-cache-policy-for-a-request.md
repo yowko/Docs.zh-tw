@@ -7,17 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 03ddcbacf7de3753ca74c398e585447b2d769cd6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f2e3e7ccc16dc24cf79574f8607245b66ea53cb1
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47210623"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190654"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>如何：設定要求的快取原則
-下列範例示範如何設定要求的快取原則。 範例的輸入是如 http://www.contoso.com/ 之類的 URI。  
+下列範例示範如何設定要求的快取原則。 範例的輸入是如 `http://www.contoso.com/` 之類的 URI。  
   
 ## <a name="example"></a>範例  
  下列程式碼範例會建立一個快取原則，允許所要求的資源在快取中的時間尚未超過一天時，從快取使用該資源。 此範例會顯示一個訊息，指出是否已從快取使用資源 (例如，`"The response was retrieved from the cache : False."`)，然後顯示該資源。 用戶端與伺服器之間的任何快取都可以滿足要求。  

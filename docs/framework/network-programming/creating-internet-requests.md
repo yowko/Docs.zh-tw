@@ -10,14 +10,12 @@ helpviewer_keywords:
 - Internet, requesting data
 - data requests, creating requests
 ms.assetid: faab683e-3f1e-4eee-b5e9-59f7245033d5
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 201bc5e92aeedcbfe2f710681cf3bbc773a11424
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ff346c5b4241f7ac037088adbe068bab2232d12f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193378"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190680"
 ---
 # <a name="creating-internet-requests"></a>建立網際網路要求
 應用程式會透過 <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> 方法來建立 <xref:System.Net.WebRequest> 執行個體。 這是建立衍生自 **WebRequest** 之類別的靜態方法 (視傳遞給它的 URI 配置而定)。  

@@ -5,20 +5,19 @@ ms.technology: dotnet-standard
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9cff30147da82896fb3a757ba2fed16d794ec3c9
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a88d5bf99e2d9bb6465413cb5419058014d113a1
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004045"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48839018"
 ---
 # <a name="mapping-xml-data-types-to-clr-types"></a>將 XML 資料型別對應至 CLR 型別
-下表說明 XML 資料型別及 Common Language Runtime (CLR) 型別之間的預設對應。  
-  
-## <a name="the-following-table-describes-the-default-mappings-of-an-xml-data-type-to-a-clr-type"></a>下表說明 XML 資料型別至 CLR 型別的預設對應。  
+
+下表說明 XML 資料型別及 Common Language Runtime (CLR) 型別之間的預設對應。
   
 > [!NOTE]
->  `xs` 和 `xdt` 前置詞分別對應至 http://www.w3.org/2001/XMLSchema 和 http://www.w3.org/2003/05/xpath-datatypes 命名空間 URI。  
+> `xs` 和 `xdt` 前置詞分別對應至 <https://www.w3.org/2001/XMLSchema> 和 <https://www.w3.org/2003/05/xpath-datatypes> 命名空間 URI。
   
 |XML 型別|CLR 型別|  
 |--------------|--------------|  

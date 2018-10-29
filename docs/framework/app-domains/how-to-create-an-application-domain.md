@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: ba1fa43e-49f5-47d9-bd7f-3024af16f4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c579c97e273e7d3e149e04f7aa7670313663b617
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 95e5bdbeda4f6faff33467233e28d9dd6bc01d1c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751766"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50186929"
 ---
 # <a name="how-to-create-an-application-domain"></a>如何：建立應用程式定義域
 Common Language Runtime Host 會在有需要時自動建立應用程式定義域。 不過，您可以建立自己的應用程式定義域，將它們載入您想要自行管理的組件中。 您也可以建立要從中執行程式碼的應用程式定義域。  
@@ -30,5 +30,5 @@ Common Language Runtime Host 會在有需要時自動建立應用程式定義域
  [!code-vb[ADCreateDomain#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADCreateDomain/VB/source2.vb#2)]  
   
 ## <a name="see-also"></a>請參閱  
- [使用應用程式定義域設計程式](application-domains.md#programming-with-application-domains)  
- [使用應用程式定義域](../../../docs/framework/app-domains/use.md)
+- [使用應用程式定義域設計程式](application-domains.md#programming-with-application-domains)  
+- [使用應用程式定義域](../../../docs/framework/app-domains/use.md)

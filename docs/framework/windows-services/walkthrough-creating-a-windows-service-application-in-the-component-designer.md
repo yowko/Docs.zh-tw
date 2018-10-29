@@ -9,13 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-manager: douge
-ms.openlocfilehash: 27acdac5d34b96dd04fec1bb763edec9077ff928
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 79447ede354de104607117f657182023a2e57127
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46493603"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123666"
 ---
 # <a name="walkthrough-create-a-windows-service-app"></a>逐步解說：建立 Windows 服務應用程式
 
@@ -87,7 +86,7 @@ ms.locfileid: "46493603"
 [!code-csharp[VbRadconService#3](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#3)]
 [!code-vb[VbRadconService#3](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#3)]
 
-服務應用程式設計為長時間執行，因此它通常會輪詢或監視系統中的一些項目。 監視工作是在 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法中設定的。 但是， <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 實際上並不進行監視的工作。 服務的作業開始後， <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法就必須傳回作業系統。 它不能永遠迴圈或阻斷。 若要設定簡單的輪詢機制，您可以如下述使用 <xref:System.Timers.Timer?displayProperty=nameWithType> 元件：在 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法中，在元件上設定參數，然後再將 <xref:System.Timers.Timer.Enabled%2A> 屬性設定為 `true`。 計時器會定期引發程式碼中的事件，這時候您的服務就可執行本身的監視工作。 您可以使用下列程式碼來執行這項操作：
+服務應用程式設計為長時間執行，因此它通常會輪詢或監視系統中的一些項目。 監視工作是在 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法中設定的。 但是， <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 實際上並不進行監視的工作。 服務的作業開始後， <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法就必須傳回作業系統。 它不能永遠迴圈或阻斷。 若要設定簡單的輪詢機制，您可以如下述使用 <xref:System.Timers.Timer?displayProperty=nameWithType> 元件：在 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法中，在元件上設定參數，然後再將 <xref:System.Timers.Timer.Enabled%2A> 屬性設定為 `true`. 計時器會定期引發程式碼中的事件，這時候您的服務就可執行本身的監視工作。 您可以使用下列程式碼來執行這項操作：
 
 ```csharp
 // Set up a timer that triggers every minute.

@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 使用 NoSQL 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: a5fce347193921305c264df34be99063920af715
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: bb119d62691a714a0c7dbc99079dfc1a1fac3aae
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45747104"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188556"
 ---
 # <a name="using-nosql-databases-as-a-persistence-infrastructure"></a>使用 NoSQL 資料庫作為持續性基礎結構
 
@@ -54,7 +54,7 @@ ms.locfileid: "45747104"
 
 ## <a name="introduction-to-azure-cosmos-db-and-the-native-cosmos-db-api"></a>Azure Cosmos DB 和原生 Cosmos DB API 簡介
 
-[Azure Cosmos DB](https://docs.microsoft.com/en-us/azure/cosmos-db/introduction) 是 Microsoft 的關鍵任務應用程式的全域分散式資料庫服務。 Azure Cosmos DB 提供[現成全域散發](https://docs.microsoft.com/en-us/azure/cosmos-db/distribute-data-globally)、全球[彈性調整輸送量和儲存體](https://docs.microsoft.com/en-us/azure/cosmos-db/partition-data)、第 99 個百分位數的單一位數毫秒延遲、[五個定義良好的一致性層級](https://docs.microsoft.com/en-us/azure/cosmos-db/consistency-levels)，以及保證高可用性，全部都是透過[領先業界的 SLA](https://azure.microsoft.com/support/legal/sla/cosmos-db/) 所支援。 Azure Cosmos DB [自動編製資料索引](http://www.vldb.org/pvldb/vol8/p1668-shukla.pdf)，而不需要處理結構描述和索引管理。 它是多模型，並支援文件、鍵值、圖表和單欄式資料模型。
+[Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction) 是 Microsoft 的關鍵任務應用程式的全域分散式資料庫服務。 Azure Cosmos DB 提供[現成全域散發](https://docs.microsoft.com/azure/cosmos-db/distribute-data-globally)、全球[彈性調整輸送量和儲存體](https://docs.microsoft.com/azure/cosmos-db/partition-data)、第 99 個百分位數的單一位數毫秒延遲、[五個定義良好的一致性層級](https://docs.microsoft.com/azure/cosmos-db/consistency-levels)，以及保證高可用性，全部都是透過[領先業界的 SLA](https://azure.microsoft.com/support/legal/sla/cosmos-db/) 所支援。 Azure Cosmos DB [自動編製資料索引](https://www.vldb.org/pvldb/vol8/p1668-shukla.pdf)，而不需要處理結構描述和索引管理。 它是多模型，並支援文件、鍵值、圖表和單欄式資料模型。
 
 ![](./media/image19.1.png) 圖 9-19. Azure Cosmos DB 全域散發
 
@@ -123,7 +123,7 @@ await client.CreateDocumentAsync(collectionUri, newOrder);
 
 您可以透過容器中所執行的 .NET 程式碼來存取 Azure Cosmos DB 資料庫，例如來自任何其他 .NET 應用程式。 例如，實作 eShopOnContainers 中的 Locations.API 和 Marketing.API 微服務，讓它們可以利用 Azure Cosmos DB 資料庫。
 
-不過，從 Docker 開發環境觀點，Azure Cosmos DB 有一些限制。 甚至有可以在本機開發電腦 (例如 PC) 中執行的內部部署 [Azure Cosmos DB 模擬器](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator) 時，到 2017 年晚期，它只支援 Windows，而非 Linux。 
+不過，從 Docker 開發環境觀點，Azure Cosmos DB 有一些限制。 甚至有可以在本機開發電腦 (例如 PC) 中執行的內部部署 [Azure Cosmos DB 模擬器](https://docs.microsoft.com/azure/cosmos-db/local-emulator) 時，到 2017 年晚期，它只支援 Windows，而非 Linux。 
 
 也可能在 Docker 上執行此模擬器，但只在 Windows 容器上，而非 Linux 容器上。 如果您的應用程式部署為 Linux 容器，則這是開發環境的初始障礙，因為您目前無法在 Docker for Windows 上同時部署 Linux 和 Windows 容器。 所有要部署的容器都必須適用於 Linux 或 Windows。  
 
@@ -137,7 +137,7 @@ Cosmos DB 資料庫支援 MongoDB API for .NET 以及原生 MongoDB 有線通訊
 
 這是含 Linux 容器之 Docker 環境中概念證明的極方便使用方法，因為 [MongoDB Docker 映像](https://hub.docker.com/r/_/mongo/)是支援 Docker Linux 容器和 Docker Windows 容器的多架構映像。
 
-如圖 9-21 所示，透過使用 MongoDB API，eShopOnContainers 支援 MongoDB Linux 和 Windows 容器進行本機開發環境，但您接著只要[變更 MongoDB 連接字串以指向 Azure Cosmos DB](https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account)，就可以移至可擴充 PaaS 雲端解決方案作為 Azure Cosmos DB。 
+如圖 9-21 所示，透過使用 MongoDB API，eShopOnContainers 支援 MongoDB Linux 和 Windows 容器進行本機開發環境，但您接著只要[變更 MongoDB 連接字串以指向 Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account)，就可以移至可擴充 PaaS 雲端解決方案作為 Azure Cosmos DB。 
 
 ![](./media/image20-bis.png) 圖 9-21. 將 MongoDB 容器用於開發環境或將 Azure Cosmos DB 用於生產環境的 eShopOnContainers
 
@@ -147,7 +147,7 @@ Cosmos DB 資料庫支援 MongoDB API for .NET 以及原生 MongoDB 有線通訊
 
 使用 MongoDB API 的清楚優點在於您的解決方案可以透過資料庫引擎 (MongoDB 或 Azure Cosmos DB) 執行，因此，移轉至不同環境應該相當簡單。 不過，有時值得使用原生 API (即原生 Cosmos DB API) 來充分利用特定資料庫引擎的功能。
 
-如需進一步比較只在雲端中使用 MongoDB 與 Cosmos DB，請參閱[在此頁面中使用 Azure Cosmos DB 的優點](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction)。 
+如需進一步比較只在雲端中使用 MongoDB 與 Cosmos DB，請參閱[在此頁面中使用 Azure Cosmos DB 的優點](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)。 
 
 
 ### <a name="analyze-your-approach-for-production-applications-mongodb-api-vs-cosmos-db-api"></a>分析生產應用程式的方法：MongoDB API 與Cosmos DB API
@@ -295,29 +295,29 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=<YourDockerHostIP>
 #ESHOP_AZURE_SERVICE_BUS=<YourAzureServiceBusInfo>
 ```
 
-您應該取消註解 ESHOP_AZURE_COSMOSDB 行，並使用取自 Azure 入口網站的 Azure Cosmos DB 連接字串進行更新，如[將 MongoDB 應用程式連接到 Azure Cosmos DB](https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account)中所說明。
+您應該取消註解 ESHOP_AZURE_COSMOSDB 行，並使用取自 Azure 入口網站的 Azure Cosmos DB 連接字串進行更新，如[將 MongoDB 應用程式連接到 Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account)中所說明。
 
 如果 `ESHOP_AZURE_COSMOSDB` 全域變數是空的，表示在 `.env` 檔案中將它取消註解，則容器會使用預設 MongoDB 連接字串，而此連接字串指向部署於名為 `nosql.data` 之 eShopOnContainers 的本機 MongoDB 容器，如下列 .yml 程式碼所示。 
 
 #### <a name="additional-resources"></a>其他資源
 
 -   **將 NoSQL 資料庫的文件資料模組化**
-    [*https://docs.microsoft.com/en-us/azure/cosmos-db/modeling-data*](https://docs.microsoft.com/en-us/azure/cosmos-db/modeling-data)
+    [*https://docs.microsoft.com/azure/cosmos-db/modeling-data*](https://docs.microsoft.com/azure/cosmos-db/modeling-data)
 
 -   **Vaughn Vernon：The Ideal Domain-Driven Design Aggregate Store?**
     [*https://vaughnvernon.co/?p=942*](https://vaughnvernon.co/?p=942) (理想的領域驅動設計彙總存放區？)
 
 -   **Azure Cosmos DB 簡介：適用於 MongoDB 的 API** 
-    [*https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction*](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction)
+    [*https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction*](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)
 
 -   **Azure Cosmos DB：透過 .NET 與 Azure 入口網站建置 MongoDB API Web 應用程式** 
-    [*https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet *](https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet )
+    [*https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet *](https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet )
 
 -   **將 Azure Cosmos DB 模擬器用於本機開發及測試** 
-    [*https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator*](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator)
+    [*https://docs.microsoft.com/azure/cosmos-db/local-emulator*](https://docs.microsoft.com/azure/cosmos-db/local-emulator)
 
 -   **將 MongoDB 應用程式連線至 Azure Cosmos DB** 
-    [*https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account*](https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account)
+    [*https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account*](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account)
 
 -   **Cosmos DB 模擬器 Docker 映像 (Windows 容器)** 
     [*https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/*](https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/)
@@ -326,7 +326,7 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=<YourDockerHostIP>
     [*https://hub.docker.com/r/_/mongo/*](https://hub.docker.com/r/_/mongo/)
 
 -   **搭配 Azure Cosmos DB 使用 MongoChef (Studio 3T)：適用於 MongoDB 帳戶的 API** 
-    [*https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-mongochef*](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-mongochef)
+    [*https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef*](https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef)
 
 
 >[!div class="step-by-step"]

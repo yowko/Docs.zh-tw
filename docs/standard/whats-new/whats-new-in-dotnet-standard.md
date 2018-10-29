@@ -6,12 +6,12 @@ ms.date: 04/12/2018
 ms.technology: dotnet-standard
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c99f59478b61bd382d6bf9529d2921407cc70bc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 19353bd068e3b04bc3d852c1e22db9c97ebef628
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253152"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48583161"
 ---
 # <a name="whats-new-in-the-net-standard"></a>.NET Standard 的新功能
 
@@ -55,7 +55,7 @@ ms.locfileid: "44253152"
 
 ### <a name="support-for-net-framework-libraries"></a>針對 .NET Framework 程式庫的支援
 
-絕大多數的程式庫都是以 .NET Framework 為目標而不是 .NET Standard。 不過，那些程式庫中的大部分呼叫都是呼叫 .NET Standard 2.0 中包含的 API。 從 .NET Standard 2.0 開始，您可以使用[相容性填充碼](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-20/README.md#assembly-unification) \(英文\) 從 .NET Standard 程式庫存取 .NET Framework。 此相容性層級對開發人員是透明的，您不需要執行任何動作就能利用.NET Framework 程式庫。
+絕大多數的程式庫都是以 .NET Framework 為目標而不是 .NET Standard。 不過，那些程式庫中的大部分呼叫都是呼叫 .NET Standard 2.0 中包含的 API。 從 .NET Standard 2.0 開始，您可以使用[相容性填充碼](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-2.0/README.md#assembly-unification) \(英文\) 從 .NET Standard 程式庫存取 .NET Framework。 此相容性層級對開發人員是透明的，您不需要執行任何動作就能利用.NET Framework 程式庫。
 
 唯一的要求是由 .NET Framework Class Library 呼叫的 API 必須包含在 .NET Standard 2.0 中。
 

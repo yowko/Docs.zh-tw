@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a4cb3f126a51d6bf7027edb88b8fec74c6785d2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9ad1cbd9da3a6b55dbb23eaf97c10e6090077fd8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47231553"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198480"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (憑證管理員工具)
 憑證管理員工具 (Certmgr.exe) 可以管理憑證、憑證信任清單 (CTL) 和憑證撤銷清單 (CRL)。  
@@ -54,7 +54,7 @@ ms.locfileid: "47231553"
 |選項|描述|  
 |------------|-----------------|  
 |**/add**|將憑證、CTL 和 CRL 加入憑證存放區。|  
-|**/all**|與 **/add** 一起使用時會加入所有項目。 與 **/del** 一起使用時會刪除所有項目。未與 **/add** 或 **/del** 選項一起使用時，會顯示所有項目。 **/all** 選項無法與 **/put** 一起使用。|  
+|**/all**|與 **/add** 一起使用時會加入所有項目。 與 **/del** 一起使用時會刪除所有項目。未與 /add 或 **/del** 選項一起使用時，會顯示所有項目。 **/all** 選項無法與 **/put** 一起使用。|  
 |**/c**|與 **/add** 一起使用時會加入憑證。 與 **/del** 一起使用時會刪除憑證。與 **/put** 一起使用時會儲存憑證。 未與 **/add**、**/del** 或 **/put** 選項一起使用時，會顯示憑證。|  
 |**/CRL**|與 **/add** 一起使用時會加入 CRL。 與 **/del** 一起使用時會刪除 CRL。與 **/put** 一起使用時會儲存 CRL。 未與 **/add**、**/del** 或 **/put** 選項一起使用時，會顯示 CRL。|  
 |**/CTL**|與 **/add** 一起使用時會加入 CTL。 與 **/del** 一起使用時會刪除 CTL。與 **/put** 一起使用時會儲存 CTL。 未與 **/add**、**/del** 或 **/put** 選項一起使用時，會顯示 CTL。|  
@@ -139,5 +139,5 @@ certmgr /put /c /s my newFile
   
 ## <a name="see-also"></a>請參閱  
  [工具](../../../docs/framework/tools/index.md)  
- [Makecert.exe (憑證建立工具)](https://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)  
+ [Makecert.exe (憑證建立工具)](/windows/desktop/SecCrypto/makecert)  
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

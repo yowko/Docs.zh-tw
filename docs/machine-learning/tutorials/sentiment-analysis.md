@@ -4,12 +4,12 @@ description: 探索如何在二元分類案例中使用 ML.NET，以了解如何
 ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 7d2935fafe9dbad28205c8a896d97d80474a686f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fd0a1ad246c6d50db35e3d0f0332a82b256902c1
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47436137"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453160"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>教學課程：在情感分析二元分類案例中使用 ML.NET
 
@@ -175,11 +175,11 @@ public static async Task<PredictionModel<SentimentData, SentimentPrediction>> Tr
 
 ## <a name="ingest-the-data"></a>內嵌資料
 
-把將包含資料載入、資料處理/特徵化及模型的新 <xref:Microsoft.ML.LearningPipeline> 執行個體初始化。 將下列程式碼新增為 `Train` 方法的第一行：
+把將包含資料載入、資料處理/特徵化及模型的新 <xref:Microsoft.ML.Legacy.LearningPipeline> 執行個體初始化。 將下列程式碼新增為 `Train` 方法的第一行：
 
 [!code-csharp[LearningPipeline](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#5 "Create a learning pipeline")]
 
-<xref:Microsoft.ML.Data.TextLoader> 物件是管線的第一個部分，並且會載入定型檔案資料。
+<xref:Microsoft.ML.Legacy.Data.TextLoader> 物件是管線的第一個部分，並且會載入定型檔案資料。
 
 [!code-csharp[TextLoader](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#6 "Add a text loader to the pipeline")]
 
@@ -187,13 +187,13 @@ public static async Task<PredictionModel<SentimentData, SentimentPrediction>> Tr
 
 資料前處理和清除是相當重要的工作，發生在有效地使用資料集來進行機器學習之前。 原始資料通常雜訊多且不可靠，而可能遺漏值。 使用資料時，如果未進行這些模型化工作，可能會產生誤導的結果。 ML.NET 的轉換管線可讓您撰寫一組自訂的轉換，可在定型或測試之前先套用到您的資料。 轉換的主要目的是將資料特徵化。 轉換管線的優點在於，在定義轉換管理之後，儲存管線即可將它套用至測試資料。
 
-請套用 <xref:Microsoft.ML.Transforms.TextFeaturizer>，以將 `SentimentText` 資料行轉換成機器學習演算法所使用、名為 `Features` 的[數值向量](../resources/glossary.md#numerical-feature-vector)。 這就是前處理/特徵化步驟。 使用 ML.NET 中可用的額外元件可讓您的模型產生更佳的結果。 將 `TextFeaturizer` 新增至管線來作為下一行程式碼：
+請套用 <xref:Microsoft.ML.Legacy.Transforms.TextFeaturizer>，以將 `SentimentText` 資料行轉換成機器學習演算法所使用、名為 `Features` 的[數值向量](../resources/glossary.md#numerical-feature-vector)。 這就是前處理/特徵化步驟。 使用 ML.NET 中可用的額外元件可讓您的模型產生更佳的結果。 將 `TextFeaturizer` 新增至管線來作為下一行程式碼：
 
 [!code-csharp[TextFeaturizer](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#7 "Add a TextFeaturizer to the pipeline")]
 
 ## <a name="choose-a-learning-algorithm"></a>選擇學習演算法
 
-<xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier> 是您將在此管線中使用的決策樹學習工具。 與特徵化步驟類似，試驗 ML.NET 中可用的各種不同學習工具並變更其參數會導致不同的結果。 針對微調，您可以設定[超參數](../resources/glossary.md#hyperparameter)，例如 <xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier.NumTrees>、<xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier.NumLeaves> 及 <xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier.MinDocumentsInLeafs>。 這些超參數是在任何因素影響模型之前設定的，並且為模型專屬。 它們可用來微調決策樹以影響效能，因此較大的值會對效能產生負面影響。
+<xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier> 是您將在此管線中使用的決策樹學習工具。 與特徵化步驟類似，試驗 ML.NET 中可用的各種不同學習工具並變更其參數會導致不同的結果。 針對微調，您可以設定[超參數](../resources/glossary.md#hyperparameter)，例如 <xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier.NumTrees>、<xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier.NumLeaves> 及 <xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier.MinDocumentsInLeafs>。 這些超參數是在任何因素影響模型之前設定的，並且為模型專屬。 它們可用來微調決策樹以影響效能，因此較大的值會對效能產生負面影響。
 
 將下列程式碼加入 `Train` 方法：
 
@@ -201,7 +201,7 @@ public static async Task<PredictionModel<SentimentData, SentimentPrediction>> Tr
 
 ## <a name="train-the-model"></a>將模型定型
 
-您會根據已載入和轉換的資料集將模型 <xref:Microsoft.ML.PredictionModel%602>定型。 `pipeline.Train<SentimentData, SentimentPrediction>()` 會將管線定型 (載入資料、將特徵化工具和學習工具定型)。 實驗會等到定型之後才會執行。
+您會根據已載入和轉換的資料集將模型 <xref:Microsoft.ML.Legacy.PredictionModel%602>定型。 `pipeline.Train<SentimentData, SentimentPrediction>()` 會將管線定型 (載入資料、將特徵化工具和學習工具定型)。 實驗會等到定型之後才會執行。
 
 將下列程式碼加入 `Train` 方法：
 
@@ -239,15 +239,15 @@ public static void Evaluate(PredictionModel<SentimentData, SentimentPrediction> 
 
 [!code-csharp[CallEvaluate](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#12 "Call the Evaluate method")]
 
-<xref:Microsoft.ML.Data.TextLoader> 類別會載入具有相同結構描述的新測試資料集。 您可以使用此資料集來評估模型，以作為品質檢查。 將下列程式碼加入 `Evaluate` 方法：
+<xref:Microsoft.ML.Legacy.Data.TextLoader> 類別會載入具有相同結構描述的新測試資料集。 您可以使用此資料集來評估模型，以作為品質檢查。 將下列程式碼加入 `Evaluate` 方法：
 
 [!code-csharp[LoadText](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#13 "Load the test dataset")]
 
-<xref:Microsoft.ML.Models.BinaryClassificationEvaluator> 物件會使用指定的資料集來計算 `PredictionModel` 的品質計量。 若要查看這些計量，請使用下列程式碼，將評估工具新增為 `Evaluate` 方法中的下一行：
+<xref:Microsoft.ML.Legacy.Models.BinaryClassificationEvaluator> 物件會使用指定的資料集來計算 `PredictionModel` 的品質計量。 若要查看這些計量，請使用下列程式碼，將評估工具新增為 `Evaluate` 方法中的下一行：
 
 [!code-csharp[BinaryEvaluator](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#14 "Create the binary evaluator")]
 
-<xref:Microsoft.ML.Models.BinaryClassificationMetrics> 包含二元分類評估工具所計算的整體計量。 若要顯示這些計量以判斷模型的品質，您必須先取得計量。 加入下列程式碼：
+<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics> 包含二元分類評估工具所計算的整體計量。 若要顯示這些計量以判斷模型的品質，您必須先取得計量。 加入下列程式碼：
 
 [!code-csharp[CreateMetrics](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#15 "Evaluate the model and create metrics")]
 
@@ -283,7 +283,7 @@ public static void Predict(PredictionModel<SentimentData, SentimentPrediction> m
 
 [!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#18 "Create test data for predictions")]
 
-既然您已有模型，現在即可利用 <xref:Microsoft.ML.PredictionModel.Predict%2A?displayProperty=nameWithType> 方法，使用該模型來預測評論資料的正面或負面情感。 若要取得預測，請在新資料上使用 `Predict`。 請注意，輸入資料是一個字串，且模型包含特徵化。 在定型和預測期間，您的管線會同步。 您無須特別為預測撰寫前處理/特徵化程式碼，同一個 API 會同時負責批次和單次預測。
+既然您已有模型，現在即可利用 <xref:Microsoft.ML.Legacy.PredictionModel.Predict%2A?displayProperty=nameWithType> 方法，使用該模型來預測評論資料的正面或負面情感。 若要取得預測，請在新資料上使用 `Predict`。 請注意，輸入資料是一個字串，且模型包含特徵化。 在定型和預測期間，您的管線會同步。 您無須特別為預測撰寫前處理/特徵化程式碼，同一個 API 會同時負責批次和單次預測。
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#19 "Create predictions of sentiments")]
 

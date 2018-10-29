@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: 0e959fcb-50f2-413b-948d-7167d279bc11
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 1ca4e0f0e0d88004d6c2059af4c774c916efd5ac
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 1ae62cca72831b0319243acd9c5bf7a2b86138c3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035067"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205265"
 ---
 # <a name="ui-automation-support-for-the-list-control-type"></a>List 控制項類型的 UI 自動化支援
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱 < [Windows Automation API： 使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主題提供清單控制項類型的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支援相關資訊。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，控制項類型是一組控制項條件，控制項必須符合條件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 屬性。 這些條件包括 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性值和控制項模式的特定方針。  
   
@@ -36,21 +36,19 @@ ms.locfileid: "48035067"
   
  針對實作清單控制項類型的控制項 (例如清單控制項)，其控制項檢視包含：  
   
--   在清單控制項內零個以上的項目 (可以是 List Item 或 Data Item 控制項類型的項目)  
+- （項目可以為基礎的清單項目或 Data Item 控制項類型） 的清單控制項內零或多個項目。
   
--   清單控制項中零個以上的群組控制項  
+- 零或多個群組內的控制項清單控制項。
   
--   0、1 或 2 個捲軸控制項  
+- 零個、 一個或兩個捲軸控制項。
   
--  
+針對實作清單控制項類型的控制項 (例如清單控制項)，其內容檢視包含：  
   
- 針對實作清單控制項類型的控制項 (例如清單控制項)，其內容檢視包含：  
+- （項目可以為基礎的清單項目或 Data Item 控制項類型） 的清單控制項內零或多個項目。
   
--   在清單控制項內零個以上的項目 (可以是清單項目或資料項目控制項類型的項目)  
-  
--   清單控制項中零個以上的群組  
-  
- 除了集中成群組的項目，清單控制項所包含的項目不能有階層式關聯性。 如果項目在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構中有子系，那麼清單容器就應為樹狀結構控制項類型。  
+- 清單控制項內零或多個群組。
+
+除了集中成群組的項目，清單控制項所包含的項目不能有階層式關聯性。 如果項目在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構中有子系，那麼清單容器就應為樹狀結構控制項類型。  
   
  清單控制項中可選取的項目，將從清單控制項之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構中的子系取得。 清單控制項內的所有項目都必須屬於相同的選取群組。 清單中可選取的項目，應該公開為 ListItem (而非 DataItem) 控制項類型。  
   

@@ -3,16 +3,16 @@ title: C# 的新功能 - C# 指南
 description: C# 語言的進化方式
 ms.date: 11/13/2017
 ms.assetid: 77deec51-a14d-46d4-9bb3-faf449477149
-ms.openlocfilehash: 399550178a12ff520dff033f0f1dc4a7cdfb9591
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: b079c21ee90a797b038b96ae68123a538464c382
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314668"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047250"
 ---
 # <a name="whats-new-in-c"></a>C# 的新功能 #
 
-此頁面提供 C# 語言每個主要版本的新功能藍圖。 下列連結提供每個版本中新增主要功能的詳細資訊。
+此頁面提供 C# 語言每個主要版本的新功能藍圖。 連結的文章提供每個版本中新增主要功能的詳細資訊。 您將可以找到已發行之新功能 (不論是在一般發行版本中或公開預覽版中) 的相關資訊。 您可以在ˋ GitHub 上的 [dotnet/roslyn 存放庫repository](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md) 存放庫中找到詳細語言功能狀態 (包括針對未來版本考慮加入的功能)。
 
 > [!IMPORTANT]
 > C# 語言中的部分功能仰賴「標準程式庫」中的型別和方法。 例外狀況處理便是其中一個例子。 每個 `throw` 陳述式或運算式都會受到檢查，以確保擲回衍生自 <xref:System.Exception> 的物件。 每個 `catch` 也一樣會受到檢查，以確保攔截到衍生自 <xref:System.Exception> 的型別。 每個版本都可能會加入新的需求。 若要在較舊的環境中使用最新的語言功能，可能需要安裝特定的程式庫。 每個特定版本的頁面中會記載這些相依性。 若要知道此相依性的背景，可深入了解[語言和程式庫之間的關係](relationships-between-language-and-library.md)。 

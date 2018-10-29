@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 1365b3e0dbc2ae095698b66f2b527301fe474a00
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: ce4580f9fab80cc85a281786d5de262d8de7a679
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454430"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181510"
 ---
 # <a name="interfaces-c-programming-guide"></a>介面 (C# 程式設計手冊)
 
@@ -42,7 +42,7 @@ ms.locfileid: "49454430"
   
 類別的屬性與索引子可以針對介面中定義的屬性或索引子定義額外的存取子。 例如，介面可能會宣告具有 [get](../../language-reference/keywords/get.md) 存取子的屬性。 實作介面的類別可以宣告具有 `get` 和 [set](../../language-reference/keywords/set.md) 存取子的相同屬性。 不過，如果屬性或索引子使用明確的實作，則存取子必須相符。 如需明確實作的詳細資訊，請參閱[明確介面實作](explicit-interface-implementation.md)和[介面屬性](../classes-and-structs/interface-properties.md)。  
 
-介面可以實作其他介面。 類別可能透過基底類別包含介面多次，繼承或透過其他介面實作的介面。 不過，類別只能提供介面實作一次，而且只有在類別將介面宣告為類別 (`class ClassName : InterfaceName`) 定義的一部分時。 如果因為您繼承實作介面的基底類別而繼承介面，則基底類別會提供介面成員的實作。 不過，衍生的類別可以實作介面成員，而不使用繼承的實作。  
+介面可以繼承自其他介面。 類別可能透過基底類別包含介面多次，繼承或透過其他介面繼承的介面。 不過，類別只能提供介面實作一次，而且只有在類別將介面宣告為類別 (`class ClassName : InterfaceName`) 定義的一部分時。 如果因為您繼承實作介面的基底類別而繼承介面，則基底類別會提供介面成員的實作。 不過，衍生的類別可以實作任何虛擬介面成員，而不使用繼承的實作。  
   
 基底類別也可以使用虛擬成員來實作介面成員。 在此情況下，衍生的類別可以藉由覆寫虛擬成員來變更介面行為。 如需虛擬成員的詳細資訊，請參閱[多型](../classes-and-structs/polymorphism.md)。  
   

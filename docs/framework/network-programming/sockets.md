@@ -15,14 +15,12 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 10d22735-bd37-42c1-a2be-c1932f979a7d
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: ce7ded81ad23c2df55afa9360435e8391fea7a63
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 3a8e141d79a7f261cd969dc78a656a89ffc8bc30
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47176821"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196527"
 ---
 # <a name="sockets"></a>通訊端
 <xref:System.Net.Sockets> 命名空間包含 Windows Sockets 介面的 Managed 實作。 <xref:System.Net> 命名空間中的所有其他網路存取類別都建立在此通訊端實作之上。  

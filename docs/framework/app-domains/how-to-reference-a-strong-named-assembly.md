@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: abc53381bf6cc8458b83edf5586b76fe7ed5f303
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 18844a9e8eff574d061b044bf88bc7857ce8033e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199883"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182979"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>如何：參考強式名稱簽署組件
 參考強式名稱組件中類型或資源的程序通常十分簡單。 您可以在編譯時間 (早期繫結) 或執行階段進行參考。  
@@ -71,4 +71,4 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
  **sn -tp \<** *公開金鑰檔* **>**  
   
 ## <a name="see-also"></a>請參閱  
- [建立和使用強式名稱的組件](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [建立和使用強式名稱的組件](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

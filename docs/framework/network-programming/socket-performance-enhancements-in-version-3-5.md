@@ -2,14 +2,12 @@
 title: 3.5 版中的通訊端效能增強功能
 ms.date: 03/30/2017
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: ddf098d0da7411515592c5bfa5bbac2153d7f0eb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 588edc35f1b0fb39beb9be9a71573a1727ffeab8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197114"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193444"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>3.5 版中的通訊端效能增強功能
 <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> 類別已經在版本 3.5 中增強，以供使用非同步網路 I/O 的應用程式使用，以達到最高的效能。 一系列新類別已新增在 <xref:System.Net.Sockets.Socket> 類別的一組增強功能當中，提供另一種非同步模式，可供專業化的高效能通訊端應用程式使用。 這些增強功能專為需要高效能的網路伺服器應用程式而設計。 應用程式可以獨佔方式，使用增強的非同步模式，或是只在其應用程式的目標熱區使用 (例如接收大量資料時)。  

@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 針對 Docker
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: 9e1ff03421f1a5d23878c74f13423cec9625c4c5
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 128801fbe49a3f7618b1cedc814b7663d57df624
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45609961"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195329"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>針對 Docker 容器選擇 .NET Framework 的時機
 
@@ -23,9 +23,9 @@ ms.locfileid: "45609961"
 
 ## <a name="using-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>使用不適用於 .NET Core 的協力廠商 .NET 程式庫或 NuGet 套件
 
-協力廠商程式庫會快速採行 [.NET Standard](https://docs.microsoft.com/dotnet/articles/standard/library)，以跨所有 .NET 類別 (包含 .NET Core) 共用程式碼。 使用 .NET Standard 程式庫 2.0 和更新版本，跨不同架構的 API 介面相容性已明顯變好，而且在 .NET Core 2.x 中，應用程式也可以直接參考現有 .NET Framework 程式庫 (請參閱[相容性修正](https://github.com/dotnet/standard/blob/master/docs/netstandard-20/README.md#net-framework-461-supporting-net-standard-20))。
+協力廠商程式庫會快速採行 [.NET Standard](../../net-standard.md)，以跨所有 .NET 類別 (包含 .NET Core) 共用程式碼。 使用 .NET Standard 程式庫 2.0 和更新版本，跨不同架構的 API 介面相容性已明顯變好，而且在 .NET Core 2.x 中，應用程式也可以直接參考現有 .NET Framework 程式庫 (請參閱[相容性修正](https://github.com/dotnet/standard/blob/master/docs/netstandard-20/README.md#net-framework-461-supporting-net-standard-20))。
 
-此外，在 2017 年 11 月已發行 [Windows 相容性套件](https://docs.microsoft.com/dotnet/core/porting/windows-compat-pack)以擴充在 Windows 上的 .NET Standard 2.0 適用的 API 介面。 透過此套件，只需要些許修改甚至不需修改，大部分的現有程式碼即可重新編譯為 .NET Standard 2.x，以在 Windows 上執行。
+此外，在 2017 年 11 月已發行 [Windows 相容性套件](../../../core/porting/windows-compat-pack.md)以擴充在 Windows 上的 .NET Standard 2.0 適用的 API 介面。 透過此套件，只需要些許修改甚至不需修改，大部分的現有程式碼即可重新編譯為 .NET Standard 2.x，以在 Windows 上執行。
 
 不過，即使自 .NET Standard 2.0 和 .NET Core 2.1 開始有該例外進展，仍然可能有特定 NuGet 套件需要執行 Windows 而且可能不支援 .NET Core 的情況。 如果這些套件對您的應用程式十分重要，則需要在 Windows 容器上使用 .NET Framework。
 
@@ -37,7 +37,7 @@ ms.locfileid: "45609961"
 
 -   ASP.NET Web Form。 只有在 .NET Framework 上才能使用這項技術。 目前並未規劃將 ASP.NET Web Form 帶入 .NET Core。
 
--   WCF 服務。 即使有 [WCF-Client 程式庫](https://github.com/dotnet/wcf)可從 .NET Core 使用 WCF 服務，但截至 2017 年中，WCF 伺服器實作還是只能在 .NET Framework 上進行。 此案例有可能在未來的 .NET Core 版本中納入，此外也有某些 API 可望在 [Windows 相容性套件](https://docs.microsoft.com/dotnet/core/porting/windows-compat-pack)中納入。
+-   WCF 服務。 即使有 [WCF-Client 程式庫](https://github.com/dotnet/wcf)可從 .NET Core 使用 WCF 服務，但截至 2017 年中，WCF 伺服器實作還是只能在 .NET Framework 上進行。 此案例有可能在未來的 .NET Core 版本中納入，此外也有某些 API 可望在 [Windows 相容性套件](../../../core/porting/windows-compat-pack.md)中納入。
 
 -   工作流程相關服務。 Windows Workflow Foundation (WF)、工作流程服務 (WCF + 單一服務中的 WF) 和 WCF Data Services (先前稱為 ADO.NET Data Services) 僅適用於 .NET Framework。 目前未計劃將它們帶到 .NET Core。
 
@@ -54,16 +54,16 @@ ms.locfileid: "45609961"
 ### <a name="additional-resources"></a>其他資源
 
 -   **.NET Core 指南**  
-    [https://docs.microsoft.com/dotnet/articles/core/index](https://docs.microsoft.com/dotnet/articles/core/index)
+    [https://docs.microsoft.com/dotnet/core/index](../../../core/index.md)
 
 -   **從 .NET Framework 移植到 .NET Core**  
-    [https://docs.microsoft.com/dotnet/articles/core/porting/index](https://docs.microsoft.com/dotnet/articles/core/porting/index)
+    [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
 
 -   **Docker 上的 .NET Framework 指南**  
-    [https://docs.microsoft.com/dotnet/articles/framework/docker/](https://docs.microsoft.com/dotnet/articles/framework/docker/)
+    [https://docs.microsoft.com/dotnet/framework/docker/](../../../framework/docker/index.md)
 
 -   **.NET 偵錯概觀**  
-    [*https://docs.microsoft.com/dotnet/standard/components*](../../components.md)
+    [https://docs.microsoft.com/dotnet/standard/components](../../components.md)
 
 
 

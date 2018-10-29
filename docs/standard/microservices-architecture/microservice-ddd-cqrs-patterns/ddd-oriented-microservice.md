@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 設計 DDD �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/06/2017
-ms.openlocfilehash: 7793a3ffded788698fcbc4ba28edefde44268989
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 4d6810e03414e8462dd90c4da686476da0b66032
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105767"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183499"
 ---
 # <a name="designing-a-ddd-oriented-microservice"></a>設計 DDD 導向微服務
 
@@ -57,7 +57,7 @@ Eric Evans 的優良書籍 [Domain Driven Design (領域驅動設計)](https://d
 
 領域模型層是表達商務的地方。 當您在 .NET 中實作微服務領域模型層時，該層會編碼為帶有擷取資料與行為 (帶有邏輯的方法) 之領域實體的類別庫。
 
-遵循 [Persistence Ignorance (永續性無知)](http://deviq.com/persistence-ignorance/) 與 [Infrastructure Ignorance (基礎結構無知)](https://ayende.com/blog/3137/infrastructure-ignorance) 準則，此層必須完全忽略資料永續性詳細資料。 這些永續性工作應由基礎結構層執行。 因此，此層不應直接相依於基礎結構。這表示讓您的領域模型實體類別為 [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) 是非常重要的一項規則。
+遵循 [Persistence Ignorance (永續性無知)](https://deviq.com/persistence-ignorance/) 與 [Infrastructure Ignorance (基礎結構無知)](https://ayende.com/blog/3137/infrastructure-ignorance) 準則，此層必須完全忽略資料永續性詳細資料。 這些永續性工作應由基礎結構層執行。 因此，此層不應直接相依於基礎結構。這表示讓您的領域模型實體類別為 [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) 是非常重要的一項規則。
 
 領域實體不應直接相依 (例如衍生自基底類別) 於任何資料存取基礎結構架構，例如 Entity Framework 或 NHibernate。 在理想情況下，您的領域實體不應衍生自或實作在任何基礎結構架構中定義的任何類型。
 
@@ -83,7 +83,7 @@ Eric Evans 的優良書籍 [Domain Driven Design (領域驅動設計)](https://d
 
 基礎結構層是一開始保有在領域實體 (記憶體中) 中的資料永續保存在資料庫或其他永續性存放區的方式。 其中一個範例便是使用 Entity Framework Core 程式碼來實作使用 DBContext 來將資料永續存放在關聯式資料庫中的存放庫模式類別。
 
-根據先前提到的[永續性無知](http://deviq.com/persistence-ignorance/)與[基礎結構無知](https://ayende.com/blog/3137/infrastructure-ignorance)準則，基礎結構層不可「污染」領域模型層。 您必須透過使其對架構不具有硬式相依性，來讓領域模型實體類別保持無從得知您用來永續保存資料的基礎結構 (EF 或其他任何架構)。 您的領域模型層類別庫應僅具有您的領域程式碼，即只有實作您軟體核心的 [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)，並且完全與基礎技術分開。
+根據先前提到的[永續性無知](https://deviq.com/persistence-ignorance/)與[基礎結構無知](https://ayende.com/blog/3137/infrastructure-ignorance)準則，基礎結構層不可「污染」領域模型層。 您必須透過使其對架構不具有硬式相依性，來讓領域模型實體類別保持無從得知您用來永續保存資料的基礎結構 (EF 或其他任何架構)。 您的領域模型層類別庫應僅具有您的領域程式碼，即只有實作您軟體核心的 [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)，並且完全與基礎技術分開。
 
 因此，您的層或類別庫及專案最後應相依於您的領域模型層 (程式庫)，並且不是反之亦然，如圖 9-7 所示。
 
@@ -96,7 +96,7 @@ Eric Evans 的優良書籍 [Domain Driven Design (領域驅動設計)](https://d
 #### <a name="additional-resources"></a>其他資源
 
 -   **DevIQ。持續性無知準則**
-    [*http://deviq.com/persistence-ignorance/*](http://deviq.com/persistence-ignorance/)
+    [*https://deviq.com/persistence-ignorance/*](https://deviq.com/persistence-ignorance/)
 
 -   **Oren Eini。基礎結構無知**
     [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance)

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ++ operator [C#]
 ms.assetid: e9dec353-070b-44fb-98ed-eb8fdf753feb
 ms.openlocfilehash: a52f614ce1bbfb8e9d9be686b277c1e69f6f9d35
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47202247"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48030466"
 ---
 # <a name="-operator-c-reference"></a>++ 運算子 (C# 參考)
 遞增運算子 (`++`) 的運算元遞增量為 1。 遞增運算子可以出現在其運算元的前後： `++variable` 和 `variable++`。  

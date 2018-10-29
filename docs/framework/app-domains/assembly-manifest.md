@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0f5d8e2e465e9dfa64a57c5ec7b99001f768492
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a0b68eaefcd2901f9cf05d491459b18f94a2614a
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753647"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49415064"
 ---
 # <a name="assembly-manifest"></a>組件資訊清單
 每個組件 (不論是靜態或是動態) 都含有描述組件中項目彼此如何關聯的資料集合。 組件資訊清單就包含這個組件的中繼資料。 組件資訊清單含有指定組件的版本需求和安全性識別所需的所有中繼資料，以及定義組件範圍和解析資源與類別參考所需的所有中繼資料。 組件資訊清單可以存放在具有 Microsoft Intermediate Language (MSIL) 程式碼的可移植執行檔 (PE) (.exe 或 .dll) 中，或者存放在只包含組件資訊清單的獨立 PE 檔中。  
@@ -55,7 +55,7 @@ ms.locfileid: "32753647"
  您可以在程式碼中使用組件屬性在組件資訊清單中加入或變更某些資訊。 您可以變更版本資訊和資訊屬性，包括商標、著作權、產品、公司和資訊版本。 如需完整的組件屬性清單，請參閱[設定組件屬性](../../../docs/framework/app-domains/set-assembly-attributes.md)。  
   
 ## <a name="see-also"></a>請參閱  
- [組件內容](../../../docs/framework/app-domains/assembly-contents.md)  
- [組件版本控制](../../../docs/framework/app-domains/assembly-versioning.md)  
- [建立附屬組件](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)  
- [強式名稱的組件](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [組件內容](../../../docs/framework/app-domains/assembly-contents.md)  
+- [組件版本控制](../../../docs/framework/app-domains/assembly-versioning.md)  
+- [建立附屬組件](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)  
+- [強式名稱的組件](../../../docs/framework/app-domains/strong-named-assemblies.md)

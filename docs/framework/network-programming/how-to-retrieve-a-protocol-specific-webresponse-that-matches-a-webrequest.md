@@ -5,14 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d8c90785-f16b-42a5-8439-ed2f731b2ba8
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 2a72e57156903c9d436a49aaf6da596868af4003
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f1da226fb62c55f37183404765430c094f1cd63f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47454865"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188270"
 ---
 # <a name="how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest"></a>如何：擷取符合 WebRequest 的通訊協定特定 WebResponse
 這個範例示範如何擷取符合 WebRequest 的通訊協定特定 WebResponse。  

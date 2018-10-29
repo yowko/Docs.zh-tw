@@ -10,14 +10,12 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 9f4f1756d42e8931a5265017088021b5f4022044
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 859593c6c53d9f6dc89047efae1c682a6a9873a7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47237224"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181260"
 ---
 # <a name="deriving-from-webrequest"></a>衍生自 WebRequest
 <xref:System.Net.WebRequest> 類別是抽象的基底類別，提供基本的方法和屬性以建立特定通訊協定要求，其符合 .NET Framework 插入式通訊協定模型的處理常式。 使用 **WebRequest** 類別的應用程式可以使用任何支援的通訊協定要求資料，不需要指定使用的通訊協定。  

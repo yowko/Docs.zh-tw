@@ -5,14 +5,15 @@ helpviewer_keywords:
 - asynchronous calls [Visual Basic]
 - Web services [Visual Basic], accessing
 ms.assetid: ff8046f4-f1f2-4d8b-90b7-95e3f7415418
-ms.openlocfilehash: 8968eaa8edd8dee177906a6c801f2f46c2a740d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf109780f26ce2fa4d5dbaa63832e765970b5cb4
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48842686"
 ---
 # <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>如何：非同步呼叫 Web 服務 (Visual Basic)
-這個範例會將處理常式連接到 Web 服務的非同步處理常式事件，讓它能擷取非同步方法呼叫的結果。 此範例使用 DemoTemperatureService Web 服務，網址為 http://www.xmethods.net。  
+這個範例會將處理常式連接到 Web 服務的非同步處理常式事件，讓它能擷取非同步方法呼叫的結果。 此範例使用 DemoTemperatureService Web 服務，網址為 `http://www.xmethods.net`。  
   
  當您在 Visual Studio 整合式開發環境 (IDE) 中的專案參考 Web 服務時，會將它新增至 `My.WebServices` 物件，且 IDE 會產生用戶端 Proxy 類別來存取指定的 Web 服務  
   
@@ -23,7 +24,7 @@ ms.lasthandoff: 05/04/2018
   
 ### <a name="to-call-a-web-service-asynchronously"></a>非同步地呼叫 Web 服務  
   
-1.  參考 DemoTemperatureService Web 服務，網址為 http://www.xmethods.net。 位址是  
+1.  參考 DemoTemperatureService Web 服務，網址為 `http://www.xmethods.net`。 位址是  
   
     ```  
     http://www.xmethods.net/sd/2001/DemoTemperatureService.wsdl  

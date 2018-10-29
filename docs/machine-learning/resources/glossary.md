@@ -1,16 +1,14 @@
 ---
 title: 機器學習字彙
 description: 機器學習字詞的字彙。
-author: jralexander
-ms.author: johalex
 ms.date: 05/31/2018
 ms.topic: conceptual
-ms.openlocfilehash: 6b175a8e89479dae81a7e5769e8d10c09a193898
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 22fcd4d2bdf53efd046cd594af42afe50a853f61
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47081094"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453199"
 ---
 # <a name="machine-learning-glossary"></a>機器學習字彙
 
@@ -20,13 +18,13 @@ ms.locfileid: "47081094"
 
 在[分類](#classification)中，準確率係指正確分類的項目數，除以測試集內的項目總數後，所得出的值。 範圍為 0 (最不準確) 到 1 (最準確)。 準確率是您模型效能的其中一個評估計量。 請將它與[精確率](#precision)、[召回率](#recall)及 [F 分數](#f-score)一起考量。
 
-相關的 ML.NET API：<xref:Microsoft.ML.Models.BinaryClassificationMetrics.Accuracy?displayProperty=nameWithType>。
+相關的 ML.NET API：<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.Accuracy?displayProperty=nameWithType>。
 
 ## <a name="area-under-the-curve-auc"></a>曲線下的面積 (AUC)
 
 在[二元分類](#binary-classification)中，作為曲線下面積值的評估計量，此面積會繪製出真陽性率 (Y 軸上) 與偽陽性率 (X 軸上) 的對比。 範圍為 0.5 (最差) 到 1 (最佳)。 這也稱為 ROC 曲線 (亦即 Receiver Operating Characteristic Curve (接收者操作特徵曲線)) 下的面積。 如需詳細資訊，請參閱維基百科上的[接收者操作特徵](https://en.wikipedia.org/wiki/Receiver_operating_characteristic) \(英文\) 一文。
 
-相關的 ML.NET API：<xref:Microsoft.ML.Models.BinaryClassificationMetrics.Auc?displayProperty=nameWithType>。
+相關的 ML.NET API：<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.Auc?displayProperty=nameWithType>。
 
 ## <a name="binary-classification"></a>二元分類
 
@@ -40,7 +38,7 @@ ms.locfileid: "47081094"
 
 在[迴歸](#regression)中，指出資料與模型相符程度的評估計量。 範圍為 0 到 1。 值為 0 時，表示資料為隨機資料，或與模型不相符。 值為 1 時，表示模型與資料完全相符。 這通常稱為r<sup>2</sup>R<sup>2</sup> 或 R 平方。
 
-相關的 ML.NET API：<xref:Microsoft.ML.Models.RegressionMetrics.RSquared?displayProperty=nameWithType>。
+相關的 ML.NET API：<xref:Microsoft.ML.Legacy.Models.RegressionMetrics.RSquared?displayProperty=nameWithType>。
 
 ## <a name="feature"></a>功能
 
@@ -54,7 +52,7 @@ ms.locfileid: "47081094"
 
 在[分類](#classification)中，用來平衡[精準率](#precision)和[召回率](#recall)的評估計量。
 
-相關的 ML.NET API：<xref:Microsoft.ML.Models.BinaryClassificationMetrics.F1Score?displayProperty=nameWithType>。
+相關的 ML.NET API：<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.F1Score?displayProperty=nameWithType>。
 
 ## <a name="hyperparameter"></a>超參數
 
@@ -68,13 +66,13 @@ ms.locfileid: "47081094"
 
 在[分類](#classification)中，描述分類器準確率特性的評估計量。 對數損失越小，分類器的準確率就越高。
 
-相關的 ML.NET API：<xref:Microsoft.ML.Models.BinaryClassificationMetrics.LogLoss?displayProperty=nameWithType>。
+相關的 ML.NET API：<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.LogLoss?displayProperty=nameWithType>。
 
 ## <a name="mean-absolute-error-mae"></a>平均絕對誤差 (MAE)
 
 在[迴歸](#regression)中，作為所有模型誤差平均值的評估計量，其中模型誤差係指所預測[標籤](#label)值與正確標籤值之間的差距。
 
-相關的 ML.NET API：<xref:Microsoft.ML.Models.RegressionMetrics.L1?displayProperty=nameWithType>。
+相關的 ML.NET API：<xref:Microsoft.ML.Legacy.Models.RegressionMetrics.L1?displayProperty=nameWithType>。
 
 ## <a name="model"></a>型號
 
@@ -100,13 +98,13 @@ ms.locfileid: "47081094"
 
 在[分類](#classification)中，類別的精確率係指正確預測為屬於該類別的項目數，除以預測為屬於該類別的項目總數後，所得出的值。
 
-相關的 ML.NET API：<xref:Microsoft.ML.Models.BinaryClassificationMetrics.NegativePrecision?displayProperty=nameWithType>、<xref:Microsoft.ML.Models.BinaryClassificationMetrics.PositivePrecision?displayProperty=nameWithType>。
+相關的 ML.NET API：<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.NegativePrecision?displayProperty=nameWithType>、<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.PositivePrecision?displayProperty=nameWithType>。
 
 ## <a name="recall"></a>召回率
 
 在[分類](#classification)中，類別的召回率係指正確預測為屬於該類別的項目數，除以實際屬於該類別的項目總數後，所得出的值。
 
-相關的 ML.NET API：<xref:Microsoft.ML.Models.BinaryClassificationMetrics.NegativeRecall?displayProperty=nameWithType>、<xref:Microsoft.ML.Models.BinaryClassificationMetrics.PositiveRecall?displayProperty=nameWithType>。
+相關的 ML.NET API：<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.NegativeRecall?displayProperty=nameWithType>、<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.PositiveRecall?displayProperty=nameWithType>。
 
 ## <a name="regression"></a>迴歸
 
@@ -124,7 +122,7 @@ ms.locfileid: "47081094"
 
 在[迴歸](#regression)中，此評估計量是誤差平方值之平均值的平方根。
 
-相關的 ML.NET API：<xref:Microsoft.ML.Models.RegressionMetrics.Rms?displayProperty=nameWithType>。
+相關的 ML.NET API：<xref:Microsoft.ML.Legacy.Models.RegressionMetrics.Rms?displayProperty=nameWithType>。
 
 ## <a name="supervised-machine-learning"></a>監督式機器學習
 

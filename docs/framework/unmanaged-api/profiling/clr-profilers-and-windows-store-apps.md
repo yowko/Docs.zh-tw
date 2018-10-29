@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27e1433415bdc6303555ab9ae04a20e097248535
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: e4dedc6b527706fc9f22add903feb30ad2884eab
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46937614"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188816"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR 分析工具和 Windows 市集應用程式
 
@@ -100,7 +100,7 @@ Profiler UI 可能會造成您 Profiler DLL 載入至應用程式的處理序空
 
 - 請確定您 Profiler 的 DLL 帶正負號。
 
-- 告訴您的使用者，他們必須使用您的工具之前在其 Windows 8 電腦上安裝開發人員授權。 這可自動從 Visual Studio 或以手動方式從命令提示字元。 如需詳細資訊，請參閱 <<c0> [ 取得開發人員授權](https://msdn.microsoft.com/library/windows/apps/Hh974578.aspx)。
+- 告訴您的使用者，他們必須使用您的工具之前在其 Windows 8 電腦上安裝開發人員授權。 這可自動從 Visual Studio 或以手動方式從命令提示字元。 如需詳細資訊，請參閱 <<c0> [ 取得開發人員授權](https://docs.microsoft.com/previous-versions/windows/apps/hh974578(v=win.10))。
 
 **檔案系統權限**
 
@@ -124,7 +124,7 @@ NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateIns
 
 首先，您會想詢問您程式碼剖析工具的使用者若要啟動哪一個 Windows 市集應用程式。 傳統型應用程式，或許您會顯示檔案瀏覽對話方塊中，，而且使用者會尋找並選取 .exe 檔案。 Windows 市集應用程式各不相同，但使用 瀏覽對話方塊沒有任何意義。 相反地，最好是對使用者顯示安裝該使用者即可從選取的 Windows 市集應用程式的清單。
 
-您可以使用[PackageManager 類別](https://msdn.microsoft.com/library/windows/apps/windows.management.deployment.packagemanager.aspx)來產生這份清單。 `PackageManager` 是適用於桌面應用程式，Windows 執行階段類別，而且事實上*只*用於桌面應用程式。
+您可以使用<xref:Windows.Management.Deployment.PackageManager>類別來產生這份清單。 `PackageManager` 是適用於桌面應用程式，Windows 執行階段類別，而且事實上*只*用於桌面應用程式。
 
 下列程式碼範例從撰寫為傳統型應用程式在 C# yses 假設 Profiler UI`PackageManager`來產生 Windows 應用程式清單：
 
@@ -137,7 +137,7 @@ IEnumerable<Package> packages = packageManager.FindPackagesForUser(currentUserSI
 
 **指定自訂的環境區塊**
 
-新的 COM 介面， [IPackageDebugSettings](https://msdn.microsoft.com/library/hh438393\(v=vs.85\).aspx)，可讓您自訂的 Windows 市集應用程式，以便於某些形式的診斷的執行行為。 其中一個方法中， [EnableDebugging](https://msdn.microsoft.com/library/hh438395\(v=vs.85\).aspx)，可讓您傳遞給 Windows 市集應用程式的環境區塊，當它啟動時，以及其他有用的效果，例如停用自動程序暫止。 環境區塊是很重要，因為這是您要指定環境變數 (`COR_PROFILER`， `COR_ENABLE_PROFILING`，和`COR_PROFILER_PATH)`) 載入 Profiler DLL 使用 CLR。
+新的 COM 介面， [IPackageDebugSettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings)，可讓您自訂的 Windows 市集應用程式，以便於某些形式的診斷的執行行為。 其中一個方法中， [EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging)，可讓您傳遞給 Windows 市集應用程式的環境區塊，當它啟動時，以及其他有用的效果，例如停用自動程序暫止。 環境區塊是很重要，因為這是您要指定環境變數 (`COR_PROFILER`， `COR_ENABLE_PROFILING`，和`COR_PROFILER_PATH)`) 載入 Profiler DLL 使用 CLR。
 
 請考慮下列程式碼片段：
 
@@ -180,7 +180,7 @@ pkgDebugSettings.EnableDebugging(packgeFullName, debuggerCommandLine,
 
 **啟動 Windows 市集應用程式**
 
-若要啟動的 Windows 市集應用程式目前最後到達。 如果您已經已經嘗試自行執行，您可能已經注意[CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa)是不在您建立 Windows 市集應用程式處理序方法。 相反地，您必須使用[IApplicationActivationManager::ActivateApplication](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationactivationmanager-activateapplication)方法。 若要這樣做，您必須取得您要啟動的 Windows 市集應用程式的應用程式使用者模型識別碼。 這表示您必須執行一些探查的資訊清單。
+若要啟動的 Windows 市集應用程式目前最後到達。 如果您已經嘗試自行執行，您可能已經注意[CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa)是不在您建立 Windows 市集應用程式處理序方法。 相反地，您必須使用[IApplicationActivationManager::ActivateApplication](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationactivationmanager-activateapplication)方法。 若要這樣做，您必須取得您要啟動的 Windows 市集應用程式的應用程式使用者模型識別碼。 這表示您必須執行一些探查的資訊清單。
 
 逐一查看您的套件時 (請參閱中的 「 選擇 Windows 市集應用程式來設定檔 」[啟動負載](#startup-load)稍早一節)，您會想要擷取目前的封裝資訊清單中包含的應用程式集：
 
@@ -221,7 +221,7 @@ appActivationMgr.ActivateApplication(appUserModelId, appArgs, ACTIVATEOPTIONS.AO
 
 **務必要記得呼叫 DisableDebugging**
 
-當您呼叫[IPackageDebugSettings::EnableDebugging](https://msdn.microsoft.com/library/hh438395\(v=VS.85\).aspx)，您所做的承諾，您會自行善後藉由呼叫[IPackageDebugSettings::DisableDebugging](https://msdn.microsoft.com/library/hh438394\(v=vs.85\).aspx)方法，因此請務必執行可透過程式碼剖析工作階段時。
+當您呼叫[IPackageDebugSettings::EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging)，您所做的承諾，您會自行善後藉由呼叫[IPackageDebugSettings::DisableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-disabledebugging)方法，因此請務必執行可透過程式碼剖析工作階段時。
 
 ### <a name="attach-load"></a>將連接負載
 
@@ -229,7 +229,7 @@ appActivationMgr.ActivateApplication(appUserModelId, appArgs, ACTIVATEOPTIONS.AO
 
 **EnableDebugging**
 
-如同啟動載入、 呼叫[IPackageDebugSettings::EnableDebugging](https://msdn.microsoft.com/library/hh438395\(v=VS.85\).aspx)方法。 您不需要它來傳遞環境區塊，但您需要其中一個其他功能： 停用自動程序暫止。 否則，當您 Profiler UI 會呼叫[AttachProfiler](iclrprofiling-attachprofiler-method.md)，目標 Windows 市集應用程式可能會暫止。 事實上，這可能是如果使用者現在互動 Profiler UI，並為 Windows 市集應用程式不會啟動任何使用者的畫面。 如果 Windows 市集應用程式暫停的情況下，它將無法回應任何表示 CLR 傳送給它來附加您 Profiler 的 DLL。
+如同啟動載入、 呼叫[IPackageDebugSettings::EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging)方法。 您不需要它來傳遞環境區塊，但您需要其中一個其他功能： 停用自動程序暫止。 否則，當您 Profiler UI 會呼叫[AttachProfiler](iclrprofiling-attachprofiler-method.md)，目標 Windows 市集應用程式可能會暫止。 事實上，這可能是如果使用者現在互動 Profiler UI，並為 Windows 市集應用程式不會啟動任何使用者的畫面。 如果 Windows 市集應用程式暫停的情況下，它將無法回應任何表示 CLR 傳送給它來附加您 Profiler 的 DLL。
 
 因此，您會想要這麼做：
 
@@ -243,7 +243,7 @@ pkgDebugSettings.EnableDebugging(packgeFullName, null /* debuggerCommandLine */,
 
 **DisableDebugging**
 
-一如往常，別忘了呼叫[IPackageDebugSettings::DisableDebugging](https://msdn.microsoft.com/library/hh438394\(v=vs.85\).aspx)完成您的程式碼剖析工作階段。
+一如往常，別忘了呼叫[IPackageDebugSettings::DisableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-disabledebugging)完成您的程式碼剖析工作階段。
 
 ## <a name="running-inside-the-windows-store-app"></a>在 Windows 市集應用程式中執行
 
@@ -273,7 +273,7 @@ pkgDebugSettings.EnableDebugging(packgeFullName, null /* debuggerCommandLine */,
 
 ### <a name="reduced-permissions"></a>降低權限
 
-它已超出本主題列出 Windows 市集應用程式權限不同於傳統型應用程式的所有方法的範圍。 但，當然每次您 Profiler 的 DLL （載入 Windows 市集應用程式相較於傳統型應用程式） 時嘗試存取的任何資源的行為會有所差異。 檔案系統是最常見的範例。 有一些會放在指定的 Windows 市集應用程式是否可存取的磁碟上 (請參閱[檔案存取和權限 (Windows 執行階段應用程式](https://msdn.microsoft.com/library/windows/apps/hh967755.aspx))，而且您 Profiler 的 DLL 會在相同的限制下。 徹底測試您的程式碼。
+它已超出本主題列出 Windows 市集應用程式權限不同於傳統型應用程式的所有方法的範圍。 但，當然每次您 Profiler 的 DLL （載入 Windows 市集應用程式相較於傳統型應用程式） 時嘗試存取的任何資源的行為會有所差異。 檔案系統是最常見的範例。 有一些會放在指定的 Windows 市集應用程式是否可存取的磁碟上 (請參閱[檔案存取和權限 (Windows 執行階段應用程式](https://docs.microsoft.com/previous-versions/windows/apps/hh967755(v=win.10)))，而且您 Profiler 的 DLL 會在相同的限制下。 徹底測試您的程式碼。
 
 ### <a name="inter-process-communication"></a>處理序間通訊
 
@@ -298,7 +298,7 @@ ApplicationData appData =
 tempDir = appData.TemporaryFolder.Path;
 ```
 
-同時，Profiler DLL 基本上相同，但它可以更輕鬆地[ApplicationData](https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.aspx)類別[ApplicationData.Current](https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.current.aspx)屬性。
+同時，Profiler DLL 基本上相同，但它可以更輕鬆地<xref:Windows.Storage.ApplicationData>使用的類別[ApplicationData.Current](xref:Windows.Storage.ApplicationData.Current%2A)屬性。
 
 **透過事件進行通訊**
 
@@ -412,8 +412,8 @@ Managed 的堆積的記憶體回收行程不完全不同的 Windows 市集應用
 
 **Windows 市集應用程式**
 
-- [檔案存取權和權限 （Windows 執行階段應用程式](https://msdn.microsoft.com/library/windows/apps/hh967755.aspx)
+- [檔案存取權和權限 （Windows 執行階段應用程式](https://docs.microsoft.com/previous-versions/windows/apps/hh967755%28v=win.10%29)
 
-- [取得開發人員授權](https://msdn.microsoft.com/library/windows/apps/Hh974578.aspx)
+- [取得開發人員授權](https://docs.microsoft.com/previous-versions/windows/apps/hh974578%28v=win.10%29)
 
-- [IPackageDebugSettings 介面](https://msdn.microsoft.com/library/hh438393\(v=vs.85\).aspx)
+- [IPackageDebugSettings 介面](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings)

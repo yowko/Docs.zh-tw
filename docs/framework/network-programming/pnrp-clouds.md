@@ -2,14 +2,12 @@
 title: PNRP 雲端
 ms.date: 03/30/2017
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 07e2d445196e5bec454ea8115ea48dd03ebe7d8b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 22401459a183d8d21e37211d942b24dbc76a6f94
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47192715"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195355"
 ---
 # <a name="pnrp-clouds"></a>PNRP 雲端
 PNRP「雲端」代表一組節點，可以透過網路彼此進行通訊。 「雲端」這個詞相當於「對等網格」和「點對點圖形」。  

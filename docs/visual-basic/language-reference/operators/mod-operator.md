@@ -13,11 +13,11 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
 ms.openlocfilehash: a04a294d5505180a41edeba4643d25667a301c1d
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50170805"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201607"
 ---
 # <a name="mod-operator-visual-basic"></a>Mod 運算子 (Visual Basic)
 兩個數目相除，然後只傳回餘數。  

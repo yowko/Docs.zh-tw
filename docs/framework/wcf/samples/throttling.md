@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Throttling Sample [Windows Communication Foundation]
 ms.assetid: 40bb3582-8ae9-4410-96f0-6c515bfaf47c
 ms.openlocfilehash: 1337b5d1c4c18700f0722bbb6912e934b2170b01
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374036"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202051"
 ---
 # <a name="throttling"></a>節流
 節流範例會示範節流控制項的用法。 節流控制會限制同時呼叫、並行執行個體或工作階段的數目，以防止過度消耗資源。 節流行為會指定於服務組態檔設定中。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)以實作計算機服務。  
