@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fa4b789641034b6563b15c52e96cbfdfa13d989a
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50049278"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197378"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi 函式
 在指定的電腦上建立從 DCOM 到 WMI 命名空間的連線。  
