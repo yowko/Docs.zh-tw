@@ -3,17 +3,17 @@ title: 如何：在命名空間中尋找所有節點 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
 ms.openlocfilehash: 0675795da7c190e6d105ac61027c28f161961099
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47230952"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48033112"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-c"></a><span data-ttu-id="38da6-102">如何：在命名空間中尋找所有節點 (C#)</span><span class="sxs-lookup"><span data-stu-id="38da6-102">How to: Find All Nodes in a Namespace (C#)</span></span>
-<span data-ttu-id="38da6-103">您可以在每個項目或屬性的命名空間上篩選，尋找該特定命名空間中的所有節點。</span><span class="sxs-lookup"><span data-stu-id="38da6-103">You can filter on the namespace of each element or attribute to find all nodes in that particular namespace.</span></span>  
+# <a name="how-to-find-all-nodes-in-a-namespace-c"></a><span data-ttu-id="ab0cc-102">如何：在命名空間中尋找所有節點 (C#)</span><span class="sxs-lookup"><span data-stu-id="ab0cc-102">How to: Find All Nodes in a Namespace (C#)</span></span>
+<span data-ttu-id="ab0cc-103">您可以在每個項目或屬性的命名空間上篩選，尋找該特定命名空間中的所有節點。</span><span class="sxs-lookup"><span data-stu-id="ab0cc-103">You can filter on the namespace of each element or attribute to find all nodes in that particular namespace.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="38da6-104">範例</span><span class="sxs-lookup"><span data-stu-id="38da6-104">Example</span></span>  
- <span data-ttu-id="38da6-105">下列範例會使用兩個命名空間建立 XML 樹狀。</span><span class="sxs-lookup"><span data-stu-id="38da6-105">The following example creates an XML tree with two namespaces.</span></span> <span data-ttu-id="38da6-106">接著，它會逐一查看樹狀結構，並在這些其中一個命名空間中，列印所有項目和屬性的名稱。</span><span class="sxs-lookup"><span data-stu-id="38da6-106">It then iterates through the tree and prints the names of all the elements and attributes in one of those namespaces.</span></span>  
+## <a name="example"></a><span data-ttu-id="ab0cc-104">範例</span><span class="sxs-lookup"><span data-stu-id="ab0cc-104">Example</span></span>  
+ <span data-ttu-id="ab0cc-105">下列範例會使用兩個命名空間建立 XML 樹狀。</span><span class="sxs-lookup"><span data-stu-id="ab0cc-105">The following example creates an XML tree with two namespaces.</span></span> <span data-ttu-id="ab0cc-106">接著，它會逐一查看樹狀結構，並在這些其中一個命名空間中，列印所有項目和屬性的名稱。</span><span class="sxs-lookup"><span data-stu-id="ab0cc-106">It then iterates through the tree and prints the names of all the elements and attributes in one of those namespaces.</span></span>  
   
 ```csharp  
 string markup = @"<aw:Root xmlns:aw='http://www.adventure-works.com' xmlns:fc='www.fourthcoffee.com'>  
@@ -35,7 +35,7 @@ foreach (XElement el in awElements)
     Console.WriteLine(el.Name.ToString());  
 ```  
   
- <span data-ttu-id="38da6-107">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="38da6-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="ab0cc-107">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="ab0cc-107">This code produces the following output:</span></span>  
   
 ```  
 Nodes in the http://www.adventure-works.com namespace  
@@ -43,10 +43,10 @@ Nodes in the http://www.adventure-works.com namespace
 {http://www.adventure-works.com}GrandChild2  
 ```  
   
-## <a name="example"></a><span data-ttu-id="38da6-108">範例</span><span class="sxs-lookup"><span data-stu-id="38da6-108">Example</span></span>  
- <span data-ttu-id="38da6-109">下列查詢所存取的 XML 檔案包含兩種不同命名空間中的採購訂單。</span><span class="sxs-lookup"><span data-stu-id="38da6-109">The XML file accessed by the following query contains purchase orders in two different namespaces.</span></span> <span data-ttu-id="38da6-110">此查詢只會使用其中一個命名空間中的項目建立新的樹狀。</span><span class="sxs-lookup"><span data-stu-id="38da6-110">The query creates a new tree with just the elements in one of the namespaces.</span></span>  
+## <a name="example"></a><span data-ttu-id="ab0cc-108">範例</span><span class="sxs-lookup"><span data-stu-id="ab0cc-108">Example</span></span>  
+ <span data-ttu-id="ab0cc-109">下列查詢所存取的 XML 檔案包含兩種不同命名空間中的採購訂單。</span><span class="sxs-lookup"><span data-stu-id="ab0cc-109">The XML file accessed by the following query contains purchase orders in two different namespaces.</span></span> <span data-ttu-id="ab0cc-110">此查詢只會使用其中一個命名空間中的項目建立新的樹狀。</span><span class="sxs-lookup"><span data-stu-id="ab0cc-110">The query creates a new tree with just the elements in one of the namespaces.</span></span>  
   
- <span data-ttu-id="38da6-111">此範例使用下列 XML 文件︰[範例 XML 檔：合併的採購訂單](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md)。</span><span class="sxs-lookup"><span data-stu-id="38da6-111">This example uses the following XML document: [Sample XML File: Consolidated Purchase Orders](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).</span></span>  
+ <span data-ttu-id="ab0cc-111">此範例使用下列 XML 文件︰[範例 XML 檔：合併的採購訂單](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md)。</span><span class="sxs-lookup"><span data-stu-id="ab0cc-111">This example uses the following XML document: [Sample XML File: Consolidated Purchase Orders](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).</span></span>  
   
 ```csharp  
 XDocument cpo = XDocument.Load("ConsolidatedPurchaseOrders.xml");  
@@ -59,7 +59,7 @@ XElement newTree = new XElement("Root",
 Console.WriteLine(newTree);  
 ```  
   
- <span data-ttu-id="38da6-112">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="38da6-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="ab0cc-112">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="ab0cc-112">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -95,6 +95,6 @@ Console.WriteLine(newTree);
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="38da6-113">請參閱</span><span class="sxs-lookup"><span data-stu-id="38da6-113">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ab0cc-113">請參閱</span><span class="sxs-lookup"><span data-stu-id="ab0cc-113">See Also</span></span>
 
-- [<span data-ttu-id="38da6-114">基本查詢 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="38da6-114">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [<span data-ttu-id="ab0cc-114">基本查詢 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="ab0cc-114">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

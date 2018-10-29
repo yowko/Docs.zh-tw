@@ -7,23 +7,23 @@ helpviewer_keywords:
 - types [C#], conversion keywords
 ms.assetid: 8683ff14-5289-4efe-b4f5-1e6a075918ab
 ms.openlocfilehash: 34175f1bda169a9def9e3146214a6d5cd4d258e7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47230926"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027026"
 ---
-# <a name="conversion-keywords-c-reference"></a><span data-ttu-id="8ebe7-102">轉換關鍵字 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="8ebe7-102">Conversion Keywords (C# Reference)</span></span>
-<span data-ttu-id="8ebe7-103">本節描述用於類型轉換的關鍵字：</span><span class="sxs-lookup"><span data-stu-id="8ebe7-103">This section describes keywords used in type conversions:</span></span>  
+# <a name="conversion-keywords-c-reference"></a><span data-ttu-id="eab43-102">轉換關鍵字 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="eab43-102">Conversion Keywords (C# Reference)</span></span>
+<span data-ttu-id="eab43-103">本節描述用於類型轉換的關鍵字：</span><span class="sxs-lookup"><span data-stu-id="eab43-103">This section describes keywords used in type conversions:</span></span>  
   
--   [<span data-ttu-id="8ebe7-104">explicit</span><span class="sxs-lookup"><span data-stu-id="8ebe7-104">explicit</span></span>](../../../csharp/language-reference/keywords/explicit.md)  
+-   [<span data-ttu-id="eab43-104">explicit</span><span class="sxs-lookup"><span data-stu-id="eab43-104">explicit</span></span>](../../../csharp/language-reference/keywords/explicit.md)  
   
--   [<span data-ttu-id="8ebe7-105">implicit</span><span class="sxs-lookup"><span data-stu-id="8ebe7-105">implicit</span></span>](../../../csharp/language-reference/keywords/implicit.md)  
+-   [<span data-ttu-id="eab43-105">implicit</span><span class="sxs-lookup"><span data-stu-id="eab43-105">implicit</span></span>](../../../csharp/language-reference/keywords/implicit.md)  
   
--   [<span data-ttu-id="8ebe7-106">operator</span><span class="sxs-lookup"><span data-stu-id="8ebe7-106">operator</span></span>](../../../csharp/language-reference/keywords/operator.md)  
+-   [<span data-ttu-id="eab43-106">operator</span><span class="sxs-lookup"><span data-stu-id="eab43-106">operator</span></span>](../../../csharp/language-reference/keywords/operator.md)  
   
-## <a name="see-also"></a><span data-ttu-id="8ebe7-107">請參閱</span><span class="sxs-lookup"><span data-stu-id="8ebe7-107">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="eab43-107">請參閱</span><span class="sxs-lookup"><span data-stu-id="eab43-107">See Also</span></span>  
 
-- [<span data-ttu-id="8ebe7-108">C# 參考</span><span class="sxs-lookup"><span data-stu-id="8ebe7-108">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="8ebe7-109">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="8ebe7-109">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="8ebe7-110">C# 關鍵字</span><span class="sxs-lookup"><span data-stu-id="8ebe7-110">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
+- [<span data-ttu-id="eab43-108">C# 參考</span><span class="sxs-lookup"><span data-stu-id="eab43-108">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="eab43-109">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="eab43-109">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="eab43-110">C# 關鍵字</span><span class="sxs-lookup"><span data-stu-id="eab43-110">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)

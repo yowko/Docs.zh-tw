@@ -10,27 +10,27 @@ helpviewer_keywords:
 - /nologo compiler option [C#]
 ms.assetid: 426afb36-a8fb-469d-9c45-a35d9512557c
 ms.openlocfilehash: a8f4582e9c8d5a54d924ff5b456ef8ffd8cc56f3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47400945"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48025288"
 ---
-# <a name="-nologo-c-compiler-options"></a><span data-ttu-id="cb43c-102">-nologo (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="cb43c-102">-nologo (C# Compiler Options)</span></span>
-<span data-ttu-id="cb43c-103">**-nologo** 選項會隱藏編譯器啟動時的登入橫幅，以及編譯期間的資訊訊息。</span><span class="sxs-lookup"><span data-stu-id="cb43c-103">The **-nologo** option suppresses display of the sign-on banner when the compiler starts up and display of informational messages during compiling.</span></span>  
+# <a name="-nologo-c-compiler-options"></a><span data-ttu-id="933ae-102">-nologo (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="933ae-102">-nologo (C# Compiler Options)</span></span>
+<span data-ttu-id="933ae-103">**-nologo** 選項會隱藏編譯器啟動時的登入橫幅，以及編譯期間的資訊訊息。</span><span class="sxs-lookup"><span data-stu-id="933ae-103">The **-nologo** option suppresses display of the sign-on banner when the compiler starts up and display of informational messages during compiling.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cb43c-104">語法</span><span class="sxs-lookup"><span data-stu-id="cb43c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="933ae-104">語法</span><span class="sxs-lookup"><span data-stu-id="933ae-104">Syntax</span></span>  
   
 ```console  
 -nologo  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="cb43c-105">備註</span><span class="sxs-lookup"><span data-stu-id="cb43c-105">Remarks</span></span>  
- <span data-ttu-id="cb43c-106">這個選項不適用於開發環境；只有在從命令列編譯時才可用。</span><span class="sxs-lookup"><span data-stu-id="cb43c-106">This option is not available from within the development environment; it is only available when compiling from the command line.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="933ae-105">備註</span><span class="sxs-lookup"><span data-stu-id="933ae-105">Remarks</span></span>  
+ <span data-ttu-id="933ae-106">這個選項不適用於開發環境；只有在從命令列編譯時才可用。</span><span class="sxs-lookup"><span data-stu-id="933ae-106">This option is not available from within the development environment; it is only available when compiling from the command line.</span></span>  
   
- <span data-ttu-id="cb43c-107">Visual Studio 不提供這個編譯器選項，您亦無法以程式設計方式變更。</span><span class="sxs-lookup"><span data-stu-id="cb43c-107">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
+ <span data-ttu-id="933ae-107">Visual Studio 不提供這個編譯器選項，您亦無法以程式設計方式變更。</span><span class="sxs-lookup"><span data-stu-id="933ae-107">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cb43c-108">請參閱</span><span class="sxs-lookup"><span data-stu-id="cb43c-108">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="933ae-108">請參閱</span><span class="sxs-lookup"><span data-stu-id="933ae-108">See Also</span></span>  
 
-- [<span data-ttu-id="cb43c-109">C# 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="cb43c-109">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
-- [<span data-ttu-id="cb43c-110">管理專案和方案屬性</span><span class="sxs-lookup"><span data-stu-id="cb43c-110">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+- [<span data-ttu-id="933ae-109">C# 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="933ae-109">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+- [<span data-ttu-id="933ae-110">管理專案和方案屬性</span><span class="sxs-lookup"><span data-stu-id="933ae-110">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

@@ -9,25 +9,25 @@ helpviewer_keywords:
 - binary operator (|) [C#]
 ms.assetid: 82d6bb78-54c8-40bf-b679-531180ddaf70
 ms.openlocfilehash: 999df9db0819a5f33e21a29b892de0a8854dd5d8
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46706144"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48028161"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="07ffd-102">| 運算子 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="07ffd-102">| Operator (C# Reference)</span></span>
-<span data-ttu-id="07ffd-103">整數型別和 `bool` 會預先定義二元 `|` 運算子。</span><span class="sxs-lookup"><span data-stu-id="07ffd-103">Binary `|` operators are predefined for the integral types and `bool`.</span></span> <span data-ttu-id="07ffd-104">對於整數型別，`|` 會計算其運算元的位元 OR。</span><span class="sxs-lookup"><span data-stu-id="07ffd-104">For integral types, `|` computes the bitwise OR of its operands.</span></span> <span data-ttu-id="07ffd-105">對於 `bool` 運算元，`|` 會計算其運算元的邏輯 OR；亦即，如果且唯有當其兩個運算元都是 `false` 時，結果會是 `false`。</span><span class="sxs-lookup"><span data-stu-id="07ffd-105">For `bool` operands, `|` computes the logical OR of its operands; that is, the result is `false` if and only if both its operands are `false`.</span></span>  
+# <a name="-operator-c-reference"></a><span data-ttu-id="8aa4d-102">| 運算子 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="8aa4d-102">| Operator (C# Reference)</span></span>
+<span data-ttu-id="8aa4d-103">整數型別和 `bool` 會預先定義二元 `|` 運算子。</span><span class="sxs-lookup"><span data-stu-id="8aa4d-103">Binary `|` operators are predefined for the integral types and `bool`.</span></span> <span data-ttu-id="8aa4d-104">對於整數型別，`|` 會計算其運算元的位元 OR。</span><span class="sxs-lookup"><span data-stu-id="8aa4d-104">For integral types, `|` computes the bitwise OR of its operands.</span></span> <span data-ttu-id="8aa4d-105">對於 `bool` 運算元，`|` 會計算其運算元的邏輯 OR；亦即，如果且唯有當其兩個運算元都是 `false` 時，結果會是 `false`。</span><span class="sxs-lookup"><span data-stu-id="8aa4d-105">For `bool` operands, `|` computes the logical OR of its operands; that is, the result is `false` if and only if both its operands are `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="07ffd-106">備註</span><span class="sxs-lookup"><span data-stu-id="07ffd-106">Remarks</span></span>  
- <span data-ttu-id="07ffd-107">不同於[條件式 OR 運算子](conditional-or-operator.md) `||`，二元 `|` 運算子會評估兩個運算元，不論第一個運算元的值為何。</span><span class="sxs-lookup"><span data-stu-id="07ffd-107">The binary `|` operator evaluates both operands regardless of the first one's value, in contrast to the [conditional-OR operator](conditional-or-operator.md) `||`.</span></span>
+## <a name="remarks"></a><span data-ttu-id="8aa4d-106">備註</span><span class="sxs-lookup"><span data-stu-id="8aa4d-106">Remarks</span></span>  
+ <span data-ttu-id="8aa4d-107">不同於[條件式 OR 運算子](conditional-or-operator.md) `||`，二元 `|` 運算子會評估兩個運算元，不論第一個運算元的值為何。</span><span class="sxs-lookup"><span data-stu-id="8aa4d-107">The binary `|` operator evaluates both operands regardless of the first one's value, in contrast to the [conditional-OR operator](conditional-or-operator.md) `||`.</span></span>
  
- <span data-ttu-id="07ffd-108">使用者定義型別可以多載 `|` 運算子 (請參閱 [operator](../../../csharp/language-reference/keywords/operator.md))。</span><span class="sxs-lookup"><span data-stu-id="07ffd-108">User-defined types can overload the `|` operator (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span>  
+ <span data-ttu-id="8aa4d-108">使用者定義型別可以多載 `|` 運算子 (請參閱 [operator](../../../csharp/language-reference/keywords/operator.md))。</span><span class="sxs-lookup"><span data-stu-id="8aa4d-108">User-defined types can overload the `|` operator (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="07ffd-109">範例</span><span class="sxs-lookup"><span data-stu-id="07ffd-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="8aa4d-109">範例</span><span class="sxs-lookup"><span data-stu-id="8aa4d-109">Example</span></span>  
  [!code-csharp[csRefOperators#31](../../../csharp/language-reference/operators/codesnippet/CSharp/or-operator_1.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="07ffd-110">請參閱</span><span class="sxs-lookup"><span data-stu-id="07ffd-110">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8aa4d-110">請參閱</span><span class="sxs-lookup"><span data-stu-id="8aa4d-110">See Also</span></span>
 
-- [<span data-ttu-id="07ffd-111">C# 參考</span><span class="sxs-lookup"><span data-stu-id="07ffd-111">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="07ffd-112">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="07ffd-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="07ffd-113">C# 運算子</span><span class="sxs-lookup"><span data-stu-id="07ffd-113">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+- [<span data-ttu-id="8aa4d-111">C# 參考</span><span class="sxs-lookup"><span data-stu-id="8aa4d-111">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="8aa4d-112">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="8aa4d-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="8aa4d-113">C# 運算子</span><span class="sxs-lookup"><span data-stu-id="8aa4d-113">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
