@@ -2,12 +2,12 @@
 title: WCF Web HTTP 服務的快取支援
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: ef7a03a9e4c6e188e3c7a000fc4a6050e678556d
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 6c601b19a0b3b9b3eddbd686c316ce7e2cdf7778
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453290"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196800"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>WCF Web HTTP 服務的快取支援
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 可讓您使用宣告式快取機制已可在 ASP.NET 中您的 WCF Web HTTP 服務。 這可讓您快取來自 WCF Web HTTP 服務作業的回應。 當使用者傳送 HTTP GET 至您設為快取的服務時，ASP.NET 會傳回快取的回應，且不會呼叫服務方法。 當快取逾期後，下次使用者傳送 HTTP GET 時，會呼叫您的服務方法且再次快取回應。 如需有關 ASP.NET 快取的詳細資訊，請參閱[ASP.NET 快取概觀](https://go.microsoft.com/fwlink/?LinkId=152534)  
@@ -15,7 +15,7 @@ ms.locfileid: "49453290"
 ## <a name="basic-web-http-service-caching"></a>基本 Web HTTP 服務快取  
  若要啟用 WEB HTTP 服務快取，您必須先將 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 套用至服務來啟用 ASP.NET 相容性，該服務將 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A> 設定為 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> 或 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>。  
   
- [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] 會引入名為 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> 的新屬性，可讓您指定快取設定檔名稱。 此屬性便會套用至服務作業。 下列範例套用 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 至服務來啟用 ASP.NET 相容性並設定 `GetCustomer` 快取作業。 <!--zz<xref:System.ServiceModel.Activation.AspNetCacheProfileAttribute>--> `System.ServiceModel.Activation.AspNetCacheProfileAttribute`屬性會指定包含要使用的快取設定的快取設定檔。  
+ [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] 會引入名為 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> 的新屬性，可讓您指定快取設定檔名稱。 此屬性便會套用至服務作業。 下列範例套用 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 至服務來啟用 ASP.NET 相容性並設定 `GetCustomer` 快取作業。 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> 屬性會指定包含要使用之快取設定的快取設定檔。  
   
 ```csharp
 [ServiceContract] 

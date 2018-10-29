@@ -1,5 +1,5 @@
 ---
-title: '&lt;移除&gt;元素&lt;appSettings&gt;'
+title: '&lt;移除&gt;項目&lt;appSettings&gt;'
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/remove
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 21fedf064596979dbfb4190d9956da616295af3c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e9b79a8319b320289f43adac5a82ef22fa5e32b0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752113"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199691"
 ---
 # <a name="remove-element-for-appsettings"></a>\<移除 > 項目\<appSettings >
 
@@ -36,7 +36,7 @@ ms.locfileid: "32752113"
 
 |         | 描述 |
 | ------- | ----------- |
-| **key** | 必要屬性。<br><br>指定要移除之索引鍵的名稱。 |
+| **key** | 必要屬性。<br><br>指定要移除的索引鍵名稱。 |
 
 ### <a name="parent-element"></a>父項目
 
@@ -60,4 +60,4 @@ ms.locfileid: "32752113"
 
 ## <a name="see-also"></a>另請參閱
 
-[適用於.NET Framework 組態檔結構描述](~/docs/framework/configure-apps/file-schema/index.md)
+- [適用於.NET Framework 的組態檔結構描述](~/docs/framework/configure-apps/file-schema/index.md)

@@ -2,19 +2,19 @@
 title: ChannelPoolSettings
 ms.date: 03/30/2017
 ms.assetid: d3f475bd-f780-4bbe-b291-339387322964
-ms.openlocfilehash: 48b41d2f3f45cd9c590f87151253450962b994de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d763be92243768bce9fdaefcd3e3575effac464b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485293"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200479"
 ---
 # <a name="channelpoolsettings"></a>ChannelPoolSettings
 ChannelPoolSettings  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```csharp
 class ChannelPoolSettings  
 {  
   datetime IdleTimeout;  

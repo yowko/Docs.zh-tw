@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4f896dcd78061284416468968ba5a9a5fbbda2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: df6a35dcaebc681aa5463a014d3283c81efea617
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428536"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199860"
 ---
 # <a name="isymunmanagedbindergetreaderforfile-method"></a>ISymUnmanagedBinder::GetReaderForFile 方法
-提供中繼資料介面和檔案名稱，傳回的正確 <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> 會讀取偵錯符號的模組相關聯的結構。  
+提供中繼資料介面和檔案名稱，傳回的正確[ISymUnmanagedReader](isymunmanagedreader-interface.md)會讀取偵錯符號的模組相關聯的介面。  
   
- 這個方法會開啟程式資料庫 (PDB) 檔，才可執行檔的檔案旁邊。 這項變更已經成為基於安全性考量。 如果您需要對 PDB 檔案更廣泛的搜尋，請使用[isymunmanagedbinder2:: Getreaderforfile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)方法。  
+ 這個方法會開啟程式資料庫 (PDB) 檔案，才可執行檔的檔案旁邊。 這項變更已基於安全性考量。 如果您需要更廣泛的搜尋，對 PDB 檔案時，使用[ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,21 +39,21 @@ HRESULT GetReaderForFile(
     [out, retval] ISymUnmanagedReader  **pRetVal);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `importer`  
  [in]中繼資料匯入介面指標。  
   
  `fileName`  
- [in]指向的檔案名稱。  
+ [in]檔案名稱指標。  
   
  `searchPath`  
- [in]加入搜尋路徑中的指標。  
+ [in]加入搜尋路徑的指標。  
   
  `pRetVal`  
- [out]設定的指標所傳回 <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> 介面。  
+ [out]設定指標所傳回[ISymUnmanagedReader](isymunmanagedreader-interface.md)介面。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。  
+ 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** 於 CorSym.idl、 CorSym.h  

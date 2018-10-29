@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95ef445d41672c5c2895bd7115afb6a73a57e8f9
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 90af7d01d78cf74cbb304e3b987d5fe58e23f76e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086133"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196696"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue 函式
 將一個原始效能資料值轉換為指定的格式，或轉換為兩個原始效能資料值 (若格式轉換是以時間為基礎)。   
@@ -65,11 +65,11 @@ int FormatFromRawValue (
 `pTimeBase`  
 [in]如果所需的格式轉換的時間基底指標。 如果時間基底資訊不是所需的格式轉換，則會忽略此參數的值。
 
-`pRawValue1` [in]指標[ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx)結構，表示原始效能值。
+`pRawValue1` [in]指標[ `PDH_RAW_COUNTER` ](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter)結構，表示原始效能值。
 
-`pRawValue2` [in]指標[ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx)結構，表示第二個的未經處理的效能值。 如果第二個的未經處理的效能值不是必要的這個參數應該是`null`。
+`pRawValue2` [in]指標[ `PDH_RAW_COUNTER` ](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter)結構，表示第二個的未經處理的效能值。 如果第二個的未經處理的效能值不是必要的這個參數應該是`null`。
 
-`pFmtValue` [out]指標[ `PDH_FMT_COUNTERVALUE` ](https://msdn.microsoft.com/library/windows/desktop/aa373050(v=vs.85).aspx)接收格式化的效能值的結構。
+`pFmtValue` [out]指標[ `PDH_FMT_COUNTERVALUE` ](/windows/desktop/api/pdh/ns-pdh-_pdh_fmt_countervalue)接收格式化的效能值的結構。
 
 ## <a name="return-value"></a>傳回值
 
@@ -83,7 +83,7 @@ int FormatFromRawValue (
   
 ## <a name="remarks"></a>備註
 
-此函式會包裝在呼叫[FormatFromRawValue](https://msdn.microsoft.com/library/ms231047(v=vs.85).aspx)函式。
+此函式會包裝在呼叫[FormatFromRawValue](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms231047%28v=vs.85%29)函式。
 
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

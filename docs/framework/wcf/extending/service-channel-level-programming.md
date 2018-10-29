@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-ms.openlocfilehash: 4d1ee0671a45b12e70f8f43ed2ea83b0a22d6c98
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: e00b5ae2c72a4d4dcd2140e9c280d5bfda3531c2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805856"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197193"
 ---
 # <a name="service-channel-level-programming"></a>服務通道層級的程式設計
-本主題說明如何撰寫 Windows Communication Foundation (WCF) 服務應用程式，而不使用<xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>和其相關聯的物件模型。  
+本主題描述如何撰寫 Windows Communication Foundation (WCF) 服務應用程式，而不需使用<xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>及其相關聯的物件模型。  
   
 ## <a name="receiving-messages"></a>接收訊息  
  以下為準備接收和處理訊息時所需的步驟：  
@@ -29,12 +29,12 @@ ms.locfileid: "33805856"
 5.  關閉所有通道物件。  
   
 #### <a name="creating-a-binding"></a>建立繫結。  
- 接聽與接收訊息的第一步，就是建立繫結。 WCF 隨附數個內建或系統提供繫結，可供直接具現化其中。 此外，您也可以產生 CustomBinding 類別來建立自己的自訂繫結 (清單 1 中的程式碼也會執行相同作業)。  
+ 接聽與接收訊息的第一步，就是建立繫結。 WCF 隨附數個內建或系統提供繫結，可供直接具現化其中一個。 此外，您也可以產生 CustomBinding 類別來建立自己的自訂繫結 (清單 1 中的程式碼也會執行相同作業)。  
   
  下列的程式碼範例會建立 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> 的執行個體，並將 <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> 新增至其項目集合 (用來建置通道堆疊的繫結項目集合)。 在此範例中，由於項目集合只具有 <xref:System.ServiceModel.Channels.HttpTransportBindingElement>，因此結果通道堆疊也只有 HTTP 傳輸通道。  
   
 #### <a name="building-a-channellistener"></a>建置 ChannelListener  
- 建立繫結之後, 我們呼叫<!--zz<xref:System.ServiceModel.Channels.Binding.BuildChannelListener%601%2A?displayProperty=nameWithType>-->`System.ServiceModel.Channels.Binding.BuildChannelListener`來建置通道接聽程式，其中型別參數是要建立的通道。 在此範例中，我們會使用 <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType>，因為我們想要以要求/回覆訊息交換模式來接聽傳入訊息。  
+ 在建立繫結後，我們可以呼叫 <xref:System.ServiceModel.Channels.Binding.BuildChannelListener%2A?displayProperty=nameWithType> 來建置通道接聽程式，其中的型別參數就是要建立的通道類型。 在此範例中，我們會使用 <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType>，因為我們想要以要求/回覆訊息交換模式來接聽傳入訊息。  
   
  <xref:System.ServiceModel.Channels.IReplyChannel> 會被用來接收要求訊息與傳回回覆訊息。 呼叫 <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> 會傳回 <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>，以便用來接收要求訊息並傳回回覆訊息。  
   
