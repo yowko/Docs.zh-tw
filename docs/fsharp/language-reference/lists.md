@@ -2,12 +2,12 @@
 title: 清單 (F#)
 description: '深入了解 F # 清單、 排序、 不可變的系列相同類型的元素。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 60e7edb56bdf498e3ba51aff028d8564eb68d0f1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b48bf04f5ec490b49e63462affc0d4eadebe10ef
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47210158"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201620"
 ---
 # <a name="lists"></a>清單
 
@@ -48,7 +48,7 @@ ms.locfileid: "47210158"
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1305.fs)]
 
-您可以使用 `@` 運算子串流具有相容類型的 list，如下列程式碼所示。 當 `list1` 為 `[2; 3; 4]` 及 `list2` 為 `[100; 2; 3; 4 ]` 時，此程式碼會將 `list3` 建立為 `[2; 3; 4; 100; 2; 3; 4]`。
+您可以使用 `@` 運算子串流具有相容類型的 list，如下列程式碼所示。 當 `list1` 為 `[2; 3; 4]` 及 `list2` 為 `[100; 2; 3; 4]` 時，此程式碼會將 `list3` 建立為 `[2; 3; 4; 100; 2; 3; 4]`。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1306.fs)]
 

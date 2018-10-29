@@ -8,12 +8,12 @@ helpviewer_keywords:
 - defaultProxy element
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
-ms.openlocfilehash: 0d32e5d03b7c78f616f7d68c0fe0edc9a69dd42e
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 54185c7cca734ced166fbe0a52b96214321d4469
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50037187"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200498"
 ---
 # <a name="ltdefaultproxygt-element-network-settings"></a>&lt;defaultProxy&gt;項目 （網路設定）
 設定超文字傳輸協定 (HTTP) 的 Proxy 伺服器。  
@@ -87,5 +87,5 @@ ms.locfileid: "50037187"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
