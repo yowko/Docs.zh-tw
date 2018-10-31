@@ -21,11 +21,11 @@ ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1fe0ead93d1ff2b7867a52d80cf812e2850ea7b3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47210119"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836293"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>如何：確認字串是否為有效的電子郵件格式
 下列範例會使用規則運算式來確認字串是否為有效的電子郵件格式。  
@@ -33,7 +33,7 @@ ms.locfileid: "47210119"
 ## <a name="example"></a>範例  
  此範例會定義 `IsValidEmail` 方法，如果字串包含有效的電子郵件地址，則這個方法會傳回 `true` ，否則會傳回 `false` ，但不會採取其他任何動作。  
   
- 為了驗證電子郵件地址是否有效，`IsValidEmail` 方法會以 <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.MatchEvaluator%29?displayProperty=nameWithType> 規則運算式模式呼叫 `(@)(.+)$` 方法，從電子郵件地址分離出網域名稱。 第三個參數是 <xref:System.Text.RegularExpressions.MatchEvaluator> 委派，用於表示處理並取代相符文字的方法。 規則運算式模式解譯如下。  
+ 為了驗證電子郵件地址是否有效， `IsValidEmail` 方法會以 <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.MatchEvaluator%29?displayProperty=nameWithType> 規則運算式模式呼叫 `(@)(.+)$` 方法，從電子郵件地址分離出網域名稱。 第三個參數是 <xref:System.Text.RegularExpressions.MatchEvaluator> 委派，用於表示處理並取代相符文字的方法。 規則運算式模式解譯如下。  
   
 |模式|描述|  
 |-------------|-----------------|  
