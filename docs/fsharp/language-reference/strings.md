@@ -3,10 +3,10 @@ title: 字串 (F#)
 description: "了解 F # 'string' 類型以一連串的 Unicode 字元所表示的不可變的文字。"
 ms.date: 05/16/2016
 ms.openlocfilehash: 21971602093bc84b0df47d4ae46a14fb936c28bb
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43799339"
 ---
 # <a name="strings"></a>字串

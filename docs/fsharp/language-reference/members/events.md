@@ -3,10 +3,10 @@ title: 事件 (F#)
 description: '了解如何 F # 事件可讓您在函式呼叫相關聯使用者的動作，也就是很重要的 GUI 程式設計。'
 ms.date: 05/16/2016
 ms.openlocfilehash: ce547bc9ec7b5e0ef9a7492c0889bb690e3040c2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43871929"
 ---
 # <a name="events"></a>事件

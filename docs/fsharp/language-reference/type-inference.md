@@ -3,10 +3,10 @@ title: 類型推斷 (F#)
 description: '了解 F # 編譯器如何推斷值、 變數、 參數和傳回值的類型。'
 ms.date: 05/16/2016
 ms.openlocfilehash: fd826ac48fb9a70aa6f4ff746599c11b7e21a02e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43865692"
 ---
 # <a name="type-inference"></a>類型推斷

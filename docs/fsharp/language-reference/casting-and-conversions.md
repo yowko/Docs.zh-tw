@@ -3,10 +3,10 @@ title: 轉型和轉換 (F#)
 description: '了解如何 F # 程式設計語言提供轉換運算子的各種不同的基本型別之間的算術轉換。'
 ms.date: 05/16/2016
 ms.openlocfilehash: aca1a2523130ee485a7e7c9a6a45a410904cb246
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "45677925"
 ---
 # <a name="casting-and-conversions-f"></a>轉型和轉換 (F#)

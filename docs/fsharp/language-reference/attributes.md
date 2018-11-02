@@ -3,10 +3,10 @@ title: 屬性 (F#)
 description: '了解 F # 屬性如何啟用要套用至程式設計建構的中繼資料。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 3e7f1d0ff383e1070b3db72e633f80ea37150548
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "49121747"
 ---
 # <a name="attributes"></a>屬性

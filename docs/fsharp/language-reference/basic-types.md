@@ -3,10 +3,10 @@ title: '基本類型 （F #）'
 description: '探索基本 F # 語言中使用的基本類型。'
 ms.date: 07/09/2018
 ms.openlocfilehash: 8f948d066323527b09b1d3f9f4167b95b1c875cf
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "48026931"
 ---
 # <a name="basic-types"></a>基本類型
@@ -31,8 +31,8 @@ ms.locfileid: "48026931"
 |`decimal`|<xref:System.Decimal>|浮點資料型別具有至少 28 位有效位數。|
 |`unit`|不適用|表示沒有實際的值。 類型具有一個型式的值，表示`()`。 單位值， `()`，通常做為預留位置，其中需要值時，但沒有真正的值使用，或有意義。|
 |`void`|<xref:System.Void>|表示沒有類型或值。|
-|`float32`, `single`|<xref:System.Single>|32 位元浮點數類型。|
-|`float`, `double`|<xref:System.Double>|64 位元浮點數類型。|
+|`float32`、 `single`|<xref:System.Single>|32 位元浮點數類型。|
+|`float`、 `double`|<xref:System.Double>|64 位元浮點數類型。|
 
 >[!NOTE]
 您也可以使用 64 位元整數類型執行計算整數太大[bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa)型別。 `bigint` 不是基本的類型;它是縮寫`System.Numerics.BigInteger`。

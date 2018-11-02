@@ -3,10 +3,10 @@ title: F# 集合類型
 description: '了解 F # 集合類型，以及它們之間的差異從.NET Framework 中的集合型別。'
 ms.date: 05/16/2016
 ms.openlocfilehash: a3cfc3f06582c31a79dce43b583eca39f69ddf1e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43864757"
 ---
 # <a name="f-collection-types"></a>F# 集合類型
@@ -31,7 +31,7 @@ ms.locfileid: "43864757"
 
 本節將比較適用於 F # 集合類型的函式。 指定的函式計算的複雜度，其中 N 是第一個集合的大小，而 M 是第二個集合的大小，如果有的話。 虛線 （-） 表示，此函式無法在集合上使用。 因為延遲評估順序，例如 Seq.distinct 函式可能會 o （1） 因為它會立即傳回，但是仍會影響效能的列舉時的順序。
 
-|功能|陣列|清單|序列|對應|設定|描述|
+|功能|陣列|清單|序列|地圖|設定|描述|
 |--------|-----|----|--------|---|---|-----------|
 |append|O(M)|O （N)|O （N)|-|-|傳回新的集合，其中包含後面接著第二個集合的項目，第一個集合的項目。|
 |加入|-|-|-|O (log N)|O (log N)|傳回加入之項目的新集合。|

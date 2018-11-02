@@ -2,12 +2,12 @@
 title: 參數和引數 (F#)
 description: '深入了解 F # 語言支援對定義參數，以及將引數傳遞至函式、 方法和屬性。'
 ms.date: 05/16/2016
-ms.openlocfilehash: a1e2a70ca560bbb09d2cd10f47485cbe5c5e029d
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 6ccef89fe411096ed66f481dd4ae2d91259fe1c4
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123354"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50744453"
 ---
 # <a name="parameters-and-arguments"></a>參數和引數
 
@@ -111,6 +111,8 @@ let angle (Polar(_, theta)) = theta
 
 您可以使用參數名稱前面的問號，以指定方法的選擇性參數。 選擇性參數會被解譯為 F # 選項類型，因此您可以按照一般方式，查詢選項類型，藉由查詢`match`運算式具有`Some`和`None`。 只有在成員，使用所建立的函式上不允許選擇性參數`let`繫結。
 
+您可以現有選擇性將值傳遞至方法的參數名稱，例如`?arg=None`或是`?arg=Some(3)`或`?arg=arg`。 建置方法，會將傳遞至另一種方法的選擇性引數時，這非常有用。
+
 您也可以使用函式`defaultArg`，可設定預設值是選擇性的引數。 `defaultArg`函數接受選擇性的參數做為第一個引數和預設值為第二個。
 
 下列範例說明如何使用選擇性參數。
@@ -123,7 +125,29 @@ let angle (Polar(_, theta)) = theta
 Baud Rate: 9600 Duplex: Full Parity: false
 Baud Rate: 4800 Duplex: Half Parity: false
 Baud Rate: 300 Duplex: Half Parity: true
+Baud Rate: 9600 Duplex: Full Parity: false
+Baud Rate: 9600 Duplex: Full Parity: false
+Baud Rate: 4800 Duplex: Half Parity: false
 ```
+
+目的C#，您可以使用屬性的 Visual Basic interop`[<Optional; DefaultParameterValue<(...)>]`在F#，如此一來，呼叫端將會看到引數為選擇性。 這相當於定義引數為選擇性的C#示`MyMethod(int i = 3)`。
+
+```fsharp
+open System
+open System.Runtime.InteropServices
+type C = 
+    static member Foo([<Optional; DefaultParameterValue("Hello world")>] message) =
+        printfn "%s" message
+```
+
+提供做為引數的值`DefaultParameterValue`必須符合的型別參數，也就是下列不允許的：
+
+```fsharp
+type C =
+    static member Wrong([<Optional; DefaultParameterValue("string")>] i:int) = ()
+```
+
+在此情況下，編譯器會產生警告，並會完全忽略這兩個屬性。 請注意，預設值`null`必須是型別-註解，否則，編譯器會推斷類型不正確，也就是`[<Optional; DefaultParameterValue(null:obj)>] o:obj`。
 
 ## <a name="passing-by-reference"></a>傳址方式傳遞
 

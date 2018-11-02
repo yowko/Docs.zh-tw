@@ -2,12 +2,12 @@
 title: F# 的教學課程
 description: 檢查一些 F# 程式設計語言，在此教學課程利用程式碼範例的主要功能。
 ms.date: 02/28/2018
-ms.openlocfilehash: d129e2312ae3da64f04b3bbb0bbd0b4d77aad36e
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 7a512b5fead8de69f025e791b6086c60dbfc1b24
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924517"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50235709"
 ---
 # <a name="tour-of-f"></a>F# 的教學課程 #
 
@@ -193,6 +193,6 @@ Tuple 是適用於從函式傳回多個值，以及使用特定彙總的值做�
 
 既然您已了解的一些主要功能的語言，您應該準備好開始撰寫第一個 F# 程式 ！  請參閱[開始使用](tutorials/getting-started/index.md)以了解如何設定開發環境，並撰寫一些程式碼。
 
-深入了下的一步可以是任何您喜歡，但我們建議您[函式做為第一級值](introduction-to-functional-programming/functions-as-first-class-values.md)<!--[Introduction to Functional Programming in F#](introduction-to-functional-programming/index.md)-->熟悉核心功能性程式設計概念。  這些會在建置強固的程式，在 F# 不可或缺。
+深入了下的一步可以是任何您喜歡，但我們建議您[中的功能性程式設計簡介F#](introduction-to-functional-programming/index.md)熟悉核心功能性程式設計概念。  這些會在建置強固的程式，在 F# 不可或缺。
 
 此外，請參閱[F# 語言參考](language-reference/index.md)在 F# 中看到完整的概念性內容。

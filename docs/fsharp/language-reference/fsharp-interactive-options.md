@@ -1,12 +1,12 @@
 ---
 title: F# Interactive 選項
-description: '了解命令列選項支援 F # Interactive fsi.exe。'
+description: 深入了解所支援的命令列選項F#Interactive fsi.exe。
 ms.date: 05/16/2016
 ms.openlocfilehash: a461dd0eeff2de3d15e557ba37138fbd62ca43ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "33565801"
 ---
 # <a name="f-interactive-options"></a>F# Interactive 選項
@@ -14,54 +14,54 @@ ms.locfileid: "33565801"
 > [!NOTE]
 本文目前僅描述 Windows 的體驗。  將會加以重新撰寫。
 
-本主題描述支援 F # Interactive 命令列選項`fsi.exe`。 F # Interactive 接受許多相同的命令列選項為 F # 編譯器，但也可接受一些其他選項。
+本主題說明所支援的命令列選項F#Interactive， `fsi.exe`。 F#Interactive 接受許多與相同的命令列選項F#編譯器，但也接受某些其他選項。
 
-## <a name="using-f-interactive-for-scripting"></a>使用 F # Interactive 來編寫指令碼
-F # Interactive， `fsi.exe`、 以互動方式，來啟動或從命令列執行指令碼啟動。 命令列語法
+## <a name="using-f-interactive-for-scripting"></a>使用F#互動式指令碼處理
+F#互動式、 `fsi.exe`、 可以互動方式啟動或從命令列執行指令碼就可以啟動。 命令列語法
 
 ```
 > fsi.exe [options] [ script-file [arguments] ]
 ```
 
-F # 指令碼檔案的副檔名是`.fsx`。
+該檔案的副檔名F#指令碼檔案是`.fsx`。
 
-## <a name="table-of-f-interactive-options"></a>F # Interactive 選項的資料表
-下表摘要說明支援 F # Interactive 選項。 在命令列上或透過 Visual Studio IDE，您可以設定這些選項。 若要在 Visual Studio IDE 中設定這些選項，開啟**工具**功能表上，選取**選項...**，然後展開**F # 工具**節點，然後選取**F # Interactive**。
+## <a name="table-of-f-interactive-options"></a>資料表的F#Interactive 選項
+下表摘要說明所支援的選項F#互動。 在命令列上或透過 Visual Studio IDE，您可以設定這些選項。 若要在 Visual Studio IDE 中設定這些選項，開啟**工具**功能表上，選取**選項...**，然後展開**F#工具**節點，然後選取**F#互動式**。
 
-清單項目清單會出現在 F # Interactive 選項引數，其中以分號分隔 (`;`)。
+清單中出現的位置F#互動式選項引數，清單項目會以分號 (`;`)。
 
 |選項|描述|
 |------|-----------|
-|**--**|用來指示 F # Interactive 命令列引數其餘引數視為 F # 程式或指令碼，您可以存取程式碼中使用清單**fsi.commandlineargs 存取**。|
+|**--**|用來指示F#Interactive 將剩下的引數視為命令列引數F#程式或指令碼，您可以在程式碼中使用清單**fsi.CommandLineArgs**。|
 |**--checked**[**+**&#124;**-**]|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
 |**--codepage:&lt;int&gt;**|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
 |**--consolecolors**[**+**&#124;**-**]|輸出警告和錯誤訊息中的色彩。|
 |**--crossoptimize**[**+**&#124;**-**]|啟用或停用跨模組最佳化。|
-|**--debug**[**+**&#124;**-**]<br /><br />**-偵錯：**[**完整**&#124;**pdbonly**&#124;**可攜式**&#124;**內嵌**]<br /><br />**-g**[**+**&#124;**-**]<br /><br />**-g:**[**完整**&#124;**pdbonly**&#124;**可攜式**&#124;**內嵌**]|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
+|**--debug**[**+**&#124;**-**]<br /><br />**-偵錯：**[**完整**&#124;**pdbonly**&#124;**可攜式**&#124;**內嵌**]<br /><br />**-g**[**+**&#124;**-**]<br /><br />**-g**[**完整**&#124;**pdbonly**&#124;**可攜式**&#124;**內嵌**]|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
 |**--define:&lt;string&gt;**|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
 |**--deterministic**[**+**&#124;**-**]|產生的具決定性的組件 （包括模組版本 GUID 與時間戳記）。|
-|**--exec**|指示 F # interactive 結束之後載入檔案或執行命令列上指定的指令碼檔案。|
+|**--exec**|指示F#interactive 在載入檔案或執行命令列上指定的指令檔之後結束。|
 |**--fullpaths**|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
-|**--gui**[**+**&#124;**-**]|啟用或停用 Windows Form 事件迴圈。 會啟用預設值。|
+|**--gui**[**+**&#124;**-**]|啟用或停用 Windows Forms 事件迴圈。 會啟用預設值。|
 |**--help**<br /><br />**-?**|用來顯示命令列語法和每個選項的簡短描述。|
 |**-lib:&lt;資料夾清單&gt;**<br /><br />**-I:&lt;資料夾清單&gt;**|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
-|**-載入：&lt;檔名&gt;**|編譯指定的來源處的程式碼啟動，並將已編譯的 F # 建構載入到工作階段。 如果包含指令碼的指示詞，例如目標來源 **#use**或 **#load**，則您必須使用 **-使用**或 **#use**而不是 **-載入**或 **#load**。|
+|**-載入：&lt;檔名&gt;**|編譯指定的原始碼在啟動並載入已編譯F#建構的工作階段。 如果包含指令碼指示詞，例如目標來源 **#use**或 **#load**，則您必須使用 **-使用**或是 **#use**而不是 **-載入**或是 **#load**。|
 |**--mlcompatibility**|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
 |**--noframework**|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)|
 |**--nologo**|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
 |**-nowarn:&lt;警告清單&gt;**|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
 |**--optimize**[**+**&#124;**-**]|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
-|**--preferreduilang:&lt;lang&gt;**| 指定慣用的輸出語言文化特性名稱 （例如 ES-ES、 JA-JP）。 |
-|**--quiet**|隱藏 F # Interactive 的輸出到**stdout**資料流。|
-|**--quotations-debug**|指定的額外偵錯資訊應該發出對衍生自 F # 引號常值，而且反映定義的運算式。 偵錯資訊已加入至 F # 運算式樹狀結構節點的自訂屬性。 請參閱[程式碼引號](code-quotations.md)和[Expr.CustomAttributes](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3)。|
+|**--preferreduilang:&lt;lang&gt;**| 指定慣用的輸出語言的文化特性名稱 （例如 ES-ES、 JA-JP）。 |
+|**--quiet**|隱藏F#的輸出傳送至互動式**stdout**資料流。|
+|**--quotations-debug**|指定的額外的偵錯資訊應該發出衍生自運算式的F#引號常值及反映的定義。 偵錯資訊加入自訂屬性的F#運算式樹狀節點。 請參閱[程式碼引號](code-quotations.md)並[Expr.CustomAttributes](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3)。|
 |**--readline**[**+**&#124;**-**]|啟用或停用在互動模式中的 tab 鍵自動完成。|
 |**-參考：&lt;檔名&gt;**<br /><br />**-:&lt;檔名&gt;**|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
-|**--shadowcopyreferences**[**+**&#124;**-**]|可避免參考遭 F # 互動式處理序。|
+|**--shadowcopyreferences**[**+**&#124;**-**]|防止遭到鎖定藉由參考F#互動式處理序。|
 |**--simpleresolution**|解決使用目錄為基礎的規則，而不是 MSBuild 解析的組件參考。|
-|**--tailcalls**[**+**&#124;**-**]|啟用或停用造成可重複使用之結尾遞迴函式的堆疊框架結尾 IL 指令的使用。 這個選項預設為啟用。|
-|**-targetprofile:&lt;字串&gt;**|指定這個組件的目標 framework 設定檔。 有效值是 mscorlib、 netcore 或 netstandard。  預設值是 mscorlib。|
-|**-使用：&lt;檔名&gt;**|會告知使用指定的檔案，在啟動做為初始輸入的直譯器。|
-|**--utf8output**|Fsc.exe 編譯器選項相同。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
+|**--tailcalls**[**+**&#124;**-**]|啟用或停用的結尾的 IL 指令，這會導致尾端遞迴函式重複使用的堆疊框架。 這個選項預設為啟用。|
+|**-targetprofile:&lt;字串&gt;**|指定這個組件的目標 framework 設定檔。 有效值為 mscorlib、 netcore 或 netstandard。  預設為 mscorlib。|
+|**-使用：&lt;檔名&gt;**|告訴解譯器將啟動指定的檔案做為初始輸入。|
+|**--utf8output**|和 fsc.exe 編譯器選項相同。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
 |**-警告：&lt;警告層級&gt;**|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
 |**--warnaserror**[**+**&#124;**-**]|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
 |**--warnaserror**[**+**&#124;**-**]:**&lt;int-list&gt;**|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
@@ -70,4 +70,4 @@ F # 指令碼檔案的副檔名是`.fsx`。
 
 |標題|描述|
 |-----|-----------|
-|[編譯器選項](compiler-options.md)|描述對於 F # 編譯器，可用的命令列選項**fsc.exe**。|
+|[編譯器選項](compiler-options.md)|描述可用的命令列選項F#編譯器**fsc.exe**。|

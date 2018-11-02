@@ -3,10 +3,10 @@ title: 以統計方式解析的型別參數 (F#)
 description: '了解如何使用 F # 以統計方式解析的型別參數，它會取代在編譯時期而不是在執行階段的實際型別。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 747917fef2746dcbf363ef4b717ace5e47229800
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "48032773"
 ---
 # <a name="statically-resolved-type-parameters"></a>以統計方式解析的型別參數
@@ -29,7 +29,7 @@ A*以統計方式解析的型別參數*是型別參數，在編譯時期而不�
 
 |功能|泛型|以統計方式解析|
 |-------|-------|-------------------|
-|語法|`'T`, `'U`|`^T`, `^U`|
+|語法|`'T`、 `'U`|`^T`、 `^U`|
 |解決時間|執行階段|編譯時間|
 |成員的條件約束|無法搭配成員條件約束。|可以搭配成員條件約束。|
 |程式碼產生|使用標準泛型型別參數的型別 （或方法） 會導致單一泛型類型或方法的產生。|產生的型別和方法的多個具現化，其中的每個型別。|

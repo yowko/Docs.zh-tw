@@ -3,10 +3,10 @@ title: 編譯器指示詞 (F#)
 description: '深入了解 F # 語言前置處理器指示詞、 條件式編譯指示詞、 line 指示詞和編譯器指示詞。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 5ac375ac5acd0609a6556f9e0481d169df827c98
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "50181364"
 ---
 # <a name="compiler-directives"></a>編譯器指示詞

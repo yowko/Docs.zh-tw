@@ -4,10 +4,10 @@ description: 使用 Azure Blob 儲存體在雲端中儲存非結構化的資料�
 author: sylvanc
 ms.date: 09/20/2016
 ms.openlocfilehash: ea9dc334ec9c2bcd4a80cc501d4b6634da5f64e4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "44037278"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>開始使用 F # 的 Azure Blob 儲存體 #

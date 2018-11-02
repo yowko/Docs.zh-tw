@@ -3,10 +3,10 @@ title: '比對運算式 （F #）'
 description: '了解如何將 F # 比對運算式提供分支運算式的比較，使用一組模式為基礎的控制項。'
 ms.date: 04/19/2018
 ms.openlocfilehash: e4cb82f20fe82bff562736557c2346562c557f59
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "44221840"
 ---
 # <a name="match-expressions"></a>比對運算式

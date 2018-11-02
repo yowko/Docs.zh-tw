@@ -3,10 +3,10 @@ title: '使用命令列工具開始使用 F #'
 description: '了解如何在 F # 在任何作業系統 （Windows、 macOs 或 Linux） 上使用.NET Core CLI 建置簡單的多專案方案'
 ms.date: 03/26/2018
 ms.openlocfilehash: 8a82970f33c8bbe1b8cdd8fb6499b59b16d3cbf3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "45673905"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>開始使用 F # 和.NET Core CLI

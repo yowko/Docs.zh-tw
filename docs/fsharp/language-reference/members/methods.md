@@ -3,10 +3,10 @@ title: 方法 (F#)
 description: '了解如何執行的 F # 方法用來公開 （expose） 和實作的功能和行為的物件與型別的型別相關聯的函式。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 02d5a7d22d1ce79a06e15462637c373b33623f61
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "44253204"
 ---
 # <a name="methods"></a>方法

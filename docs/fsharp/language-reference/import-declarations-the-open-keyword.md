@@ -3,10 +3,10 @@ title: 匯入宣告：open 關鍵字 (F#)
 description: '了解 F # 匯入宣告，以及如何指定模組或命名空間不需使用完整限定的名稱，您可以參考其項目。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 8cae4b4f5418689bfb0933b7db4ec23a313d5ed8
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "46586619"
 ---
 # <a name="import-declarations-the-open-keyword"></a>匯入宣告：`open`關鍵字

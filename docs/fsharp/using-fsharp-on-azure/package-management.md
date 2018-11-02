@@ -1,22 +1,22 @@
 ---
-title: '使用 F # 使用 Azure 封裝管理'
-description: '使用 Paket 或 Nuget 來管理 F # Azure 相依性'
+title: 使用封裝管理與F#適用於 Azure
+description: 使用 Paket 或 Nuget 來管理F#Azure 相依性
 author: sylvanc
 ms.date: 09/20/2016
 ms.openlocfilehash: fd9c4a15ab0741d44d6d5cf909b7219d310affb0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "33566963"
 ---
 # <a name="package-management-for-f-azure-dependencies"></a>F# Azure 相依性的套件管理
 
-當您使用封裝管理員時，取得 Azure 開發的封裝很容易。 有兩種選項[Paket](https://fsprojects.github.io/Paket/)和[NuGet](https://www.nuget.org/)。
+取得適用於 Azure 的開發套件，很容易使用的套件管理員。 兩個選項都[Paket](https://fsprojects.github.io/Paket/)並[NuGet](https://www.nuget.org/)。
 
 ## <a name="using-paket"></a>使用 Paket
 
-如果您使用[Paket](https://fsprojects.github.io/Paket/)為相依性管理員中，您可以使用`paket.exe`工具來加入 Azure 相依性。 例如: 
+如果您使用[Paket](https://fsprojects.github.io/Paket/)為您的相依性管理員，您可以使用`paket.exe`加入 Azure 的相依性的工具。 例如: 
 
     > paket add nuget WindowsAzure.Storage
 
@@ -24,61 +24,61 @@ ms.locfileid: "33566963"
 
     > mono paket.exe add nuget WindowsAzure.Storage
 
-這會新增`WindowsAzure.Storage`至目前目錄中專案的封裝相依性的設定，修改`paket.dependencies`檔案，並下載套件。 如果您先前設定的相依性，或使用專案所在的相依性已設定由另一個開發人員，您可以解決並安裝相依項目在本機像這樣：
+這會新增`WindowsAzure.Storage`到目前的目錄中專案的套件相依性，修改`paket.dependencies`檔案，並下載套件。 如果您先前已設定相依性，或正在使用專案所在的相依性已設定的另一個開發人員，您可以解決，並安裝相依項目，在本機像這樣：
 
     > paket install
 
-或者，若為單聲道開發：
+或者，若為 Mono 的開發：
 
     > mono paket.exe install
 
-您可以更新所有套件相依性的最新版本，就像這樣：
+您可以更新所有套件相依性的最新的版本，就像這樣：
 
     > paket update
 
-或者，若為單聲道開發：
+或者，若為 Mono 的開發：
 
     > mono paket.exe update
 
 ## <a name="using-nuget"></a>使用 Nuget
 
-如果您使用[NuGet](https://www.nuget.org/)為相依性管理員中，您可以使用`nuget.exe`工具來加入 Azure 相依性。 例如: 
+如果您使用[NuGet](https://www.nuget.org/)為您的相依性管理員，您可以使用`nuget.exe`加入 Azure 的相依性的工具。 例如: 
 
     > nuget install WindowsAzure.Storage -ExcludeVersion
 
-或者，若為單聲道開發：
+或者，若為 Mono 的開發：
 
     > mono nuget.exe install WindowsAzure.Storage -ExcludeVersion
 
-這會新增`WindowsAzure.Storage`至目前的目錄和下載封裝中的專案的封裝相依性的設定。 如果您先前設定的相依性，或使用專案所在的相依性已設定由另一個開發人員，您可以解決並安裝相依項目在本機像這樣：
+這會新增`WindowsAzure.Storage`到目前的目錄，並下載封裝中的專案的套件相依性。 如果您先前已設定相依性，或正在使用專案所在的相依性已設定的另一個開發人員，您可以解決，並安裝相依項目，在本機像這樣：
 
     > nuget restore 
 
-或者，若為單聲道開發：
+或者，若為 Mono 的開發：
 
     > mono nuget.exe restore
 
-您可以更新所有套件相依性的最新版本，就像這樣：
+您可以更新所有套件相依性的最新的版本，就像這樣：
 
     > nuget update
 
-或者，若為單聲道開發：
+或者，若為 Mono 的開發：
 
     > mono nuget.exe update
 
 ## <a name="referencing-assemblies"></a>參考組件
 
-若要在 F # 指令碼中使用您的封裝，您需要參考組件中使用的封裝包含`#r`指示詞。 例如: 
+若要使用您的套件，在您F#指令碼中，您必須參考包含在封裝中使用的組件`#r`指示詞。 例如: 
 
     > #r "packages/WindowsAzure.Storage/lib/net40/Microsoft.WindowsAzure.Storage.dll"
 
-如您所見，您必須指定 DLL 和完整的 DLL 名稱可能不完全與封裝名稱相同的相對路徑。 路徑必須包含的 framework 版本，可能是封裝的版本號碼。 若要尋找所有已安裝的組件，您可以使用類似下面的 Windows 命令列上：
+如您所見，您必須指定 DLL 和可能不會完全封裝名稱相同的完整 DLL 名稱的相對路徑。 路徑必須包含的 framework 版本和可能的套件版本號碼。 若要尋找所有已安裝的組件，您可以在 Windows 命令列上使用起來像這樣：
 
     > cd packages/WindowsAzure.Storage
     > dir /s/b *.dll
 
-或 Unix 殼層，如下：
+或者，在 Unix 殼層中，項目如下所示：
 
     > find packages/WindowsAzure.Storage -name "*.dll"
 
-這可讓您的路徑已安裝的組件。 從該處，您可以選取 framework 版本的正確路徑。
+這可讓您的路徑已安裝的組件。 從該處，您可以選取正確的路徑的 framework 版本。

@@ -3,10 +3,10 @@ title: 已區分的聯集 (F#)
 description: '了解如何使用 F # 差別聯集。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 06d6c154790f659c0c7ff73290357ab50a134362
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43788119"
 ---
 # <a name="discriminated-unions"></a>已區分的聯集

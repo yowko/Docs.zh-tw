@@ -1,12 +1,12 @@
 ---
 title: 例外狀況處理 (F#)
-description: '了解 F # 中處理的例外狀況的基本概念，並尋找例外狀況處理運算式和函數的連結。'
+description: 了解例外狀況處理中的基本概念F#並尋找例外狀況處理運算式和函式的連結。
 ms.date: 05/16/2016
 ms.openlocfilehash: fc89feb0d21bc823cb105e435413f8309cd6174c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "33564322"
 ---
 # <a name="exception-handling"></a>例外狀況處理

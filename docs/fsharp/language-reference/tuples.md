@@ -3,10 +3,10 @@ title: Tuple (F#)
 description: '深入了解 F # tuple 的群組不具名但有已排序，可能是不同類型的值。'
 ms.date: 05/16/2016
 ms.openlocfilehash: e7628e4c4b538c2fe52fca25d2597b10fec28d1c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43749219"
 ---
 # <a name="tuples"></a>Tuple
@@ -118,7 +118,7 @@ let struct (newX, newY) = Example.AddOneToXAndY(struct (1, 2))
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/interop.fsx#L5-L12)]
 
-您必須在模式比對一的 tuple，並建構的組成組件與其他。  例如：
+您必須在模式比對一的 tuple，並建構的組成組件與其他。  例如: 
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/interop.fsx#L18-L22)]
 

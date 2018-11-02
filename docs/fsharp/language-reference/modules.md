@@ -3,10 +3,10 @@ title: 模組 (F#)
 description: '了解如何 F # 模組是 F # 程式碼，例如值、 類型和函式值，在 F # 程式中的群組。'
 ms.date: 04/24/2017
 ms.openlocfilehash: fb0aa1d508d1141933b4fbdf10633f67ed078dc7
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "45528522"
 ---
 # <a name="modules"></a>模組

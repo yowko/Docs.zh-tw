@@ -3,10 +3,10 @@ title: F# 語言參考
 description: '尋找 F # 語言的功能資訊此參考以語言的語彙基元、 概念、 類型、 運算式和編譯器支援建構的主題。'
 ms.date: 05/16/2016
 ms.openlocfilehash: adce37ee393673b7611ad24f385c8b8106f6ce86
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "45646411"
 ---
 # <a name="f-language-reference"></a>F# 語言參考
@@ -63,7 +63,7 @@ ms.locfileid: "45646411"
 |[單位類型](unit-type.md)|描述 `unit` 類型，這個類型表示缺少特定值；`unit` 類型只有單一值，作為沒有或不需要其他值時的預留位置。|
 |[字串](strings.md)|描述 F# 中的字串。 `string` 類型以一連串的 Unicode 字元表示不可變文字。 `string` 是 `System.String` 在 .NET Framework 中的別名。|
 |[元組](tuples.md)|描述元組，這是不具名但有序之值 (可能是不同的類型) 的群組。|
-|[F# 集合類型](fsharp-collection-types.md)|F # 函式集合類型的概觀，包括陣列、清單、序列 (seq)、對應和集的類型。|
+|[F# 集合類型](fsharp-collection-types.md)|F# 函式集合類型的概觀，包括陣列、清單、序列 (seq)、對應和集的類型。|
 |[清單](lists.md)|描述清單。 F# 的清單是一連串有序且不可變的項目，而所有項目的類型都相同。|
 |[選項](options.md)|描述選項類型。 F# 中的選項於不一定有值時使用。 選項有基礎類型，而且可能擁有該類型的值或沒有值。|
 |[序列](sequences.md)|描述序列。 序列是一連串的邏輯項目，而所有項目的類型都相同。 個別序列項目只在需要時才會計算，因此表示法可能會比常值項目計數還小。|
@@ -107,7 +107,7 @@ ms.locfileid: "45646411"
 
 |主題|描述|
 |-----|-----------|
-|[編譯器選項](compiler-options.md)|描述 F # 編譯器的命令列選項。|
+|[編譯器選項](compiler-options.md)|描述 F# 編譯器的命令列選項。|
 |[編譯器指示詞](compiler-directives.md)|描述處理器指示詞和編譯器指示詞。|
 |[原始碼程式行、檔案與路徑識別項](source-line-file-path-identifiers.md)|描述識別項 `__LINE__`、`__SOURCE_DIRECTORY__` 和 `__SOURCE_FILE__`，這些內建值可讓您存取原始程式碼中的行號、目錄和檔案名稱。|
 

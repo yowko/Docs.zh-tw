@@ -3,10 +3,10 @@ title: 類別中的 let 繫結 (F#)
 description: "了解如何在類別定義中使用 'let' 的繫結來定義私用欄位和 F # 類別的私用函式。"
 ms.date: 05/16/2016
 ms.openlocfilehash: 237eb98a57571a21c9187abf31f05160374cf4fc
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "48033216"
 ---
 # <a name="let-bindings-in-classes"></a>類別中的 let 繫結
