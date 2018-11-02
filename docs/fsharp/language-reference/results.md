@@ -3,17 +3,17 @@ title: '結果 （F #）'
 description: "了解如何使用 F # '造成' 型別，可協助您撰寫錯誤容錯的程式碼。"
 ms.date: 04/24/2017
 ms.openlocfilehash: a7ce2e1f6b8c6a32d99a2feaf9547c4b67b152b8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "44213036"
 ---
-# <a name="results"></a><span data-ttu-id="e845c-103">結果</span><span class="sxs-lookup"><span data-stu-id="e845c-103">Results</span></span>
+# <a name="results"></a><span data-ttu-id="0b97b-103">結果</span><span class="sxs-lookup"><span data-stu-id="0b97b-103">Results</span></span>
 
-<span data-ttu-id="e845c-104">從 F # 4.1 開始，沒有`Result<'T,'TFailure>`類型可用來撰寫可以組成-容錯的程式碼。</span><span class="sxs-lookup"><span data-stu-id="e845c-104">Starting with F# 4.1, there is a `Result<'T,'TFailure>` type which you can use for writing error-tolerant code which can be composed.</span></span>
+<span data-ttu-id="0b97b-104">從 F # 4.1 開始，沒有`Result<'T,'TFailure>`類型可用來撰寫可以組成-容錯的程式碼。</span><span class="sxs-lookup"><span data-stu-id="0b97b-104">Starting with F# 4.1, there is a `Result<'T,'TFailure>` type which you can use for writing error-tolerant code which can be composed.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="e845c-105">語法</span><span class="sxs-lookup"><span data-stu-id="e845c-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="0b97b-105">語法</span><span class="sxs-lookup"><span data-stu-id="0b97b-105">Syntax</span></span>
 
 ```fsharp
 // The definition of Result in FSharp.Core
@@ -25,11 +25,11 @@ type Result<'T,'TError> =
     | Error of ErrorValue:'TError
 ```
 
-## <a name="remarks"></a><span data-ttu-id="e845c-106">備註</span><span class="sxs-lookup"><span data-stu-id="e845c-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="0b97b-106">備註</span><span class="sxs-lookup"><span data-stu-id="0b97b-106">Remarks</span></span>
 
-<span data-ttu-id="e845c-107">請注意，結果型別是[結構差別聯集](discriminated-unions.md#struct-discriminated-unions)，這是另一個 F # 4.1 中所引進的功能。</span><span class="sxs-lookup"><span data-stu-id="e845c-107">Note that the result type is a [struct discriminated union](discriminated-unions.md#struct-discriminated-unions), which is another feature introduced in F# 4.1.</span></span>  <span data-ttu-id="e845c-108">結構相等語意適用於此處。</span><span class="sxs-lookup"><span data-stu-id="e845c-108">Structural equality semantics apply here.</span></span>
+<span data-ttu-id="0b97b-107">請注意，結果型別是[結構差別聯集](discriminated-unions.md#struct-discriminated-unions)，這是另一個 F # 4.1 中所引進的功能。</span><span class="sxs-lookup"><span data-stu-id="0b97b-107">Note that the result type is a [struct discriminated union](discriminated-unions.md#struct-discriminated-unions), which is another feature introduced in F# 4.1.</span></span>  <span data-ttu-id="0b97b-108">結構相等語意適用於此處。</span><span class="sxs-lookup"><span data-stu-id="0b97b-108">Structural equality semantics apply here.</span></span>
 
-<span data-ttu-id="e845c-109">`Result`型別通常用於單邊錯誤處理，這通常稱為[鐵路導向程式設計](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html)F # 社群中。</span><span class="sxs-lookup"><span data-stu-id="e845c-109">The `Result` type is typically used in monadic error-handling, which is often referred to as [Railway-oriented Programming](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) within the F# community.</span></span>  <span data-ttu-id="e845c-110">下列的簡單範例會示範這種方法。</span><span class="sxs-lookup"><span data-stu-id="e845c-110">The following trivial example demonstrates this approach.</span></span>
+<span data-ttu-id="0b97b-109">`Result`型別通常用於單邊錯誤處理，這通常稱為[鐵路導向程式設計](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html)F # 社群中。</span><span class="sxs-lookup"><span data-stu-id="0b97b-109">The `Result` type is typically used in monadic error-handling, which is often referred to as [Railway-oriented Programming](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) within the F# community.</span></span>  <span data-ttu-id="0b97b-110">下列的簡單範例會示範這種方法。</span><span class="sxs-lookup"><span data-stu-id="0b97b-110">The following trivial example demonstrates this approach.</span></span>
 
 ```fsharp
 // Define a simple type which has fields that can be validated
@@ -80,9 +80,9 @@ let test() =
 test()
 ```
 
-<span data-ttu-id="e845c-111">如您所見，它是很容易就能鏈結各種驗證函式，如果您強制它們全部傳回`Result`。</span><span class="sxs-lookup"><span data-stu-id="e845c-111">As you can see, it's quite easy to chain together various validation functions if you force them all to return a `Result`.</span></span>  <span data-ttu-id="e845c-112">這樣，您會分解成小片段，也就是當您需要的組合這類功能。</span><span class="sxs-lookup"><span data-stu-id="e845c-112">This lets you break up functionality like this into small pieces which are as composable as you need them to be.</span></span>  <span data-ttu-id="e845c-113">這也具有附加價值*強制*善用[模式比對](pattern-matching.md)結尾的一輪的驗證，進而強制執行較高的程式正確性。</span><span class="sxs-lookup"><span data-stu-id="e845c-113">This also has the added value of *enforcing* the use of [pattern matching](pattern-matching.md) at the end of a round of validation, which in turns enforces a higher degree of program correctness.</span></span>
+<span data-ttu-id="0b97b-111">如您所見，它是很容易就能鏈結各種驗證函式，如果您強制它們全部傳回`Result`。</span><span class="sxs-lookup"><span data-stu-id="0b97b-111">As you can see, it's quite easy to chain together various validation functions if you force them all to return a `Result`.</span></span>  <span data-ttu-id="0b97b-112">這樣，您會分解成小片段，也就是當您需要的組合這類功能。</span><span class="sxs-lookup"><span data-stu-id="0b97b-112">This lets you break up functionality like this into small pieces which are as composable as you need them to be.</span></span>  <span data-ttu-id="0b97b-113">這也具有附加價值*強制*善用[模式比對](pattern-matching.md)結尾的一輪的驗證，進而強制執行較高的程式正確性。</span><span class="sxs-lookup"><span data-stu-id="0b97b-113">This also has the added value of *enforcing* the use of [pattern matching](pattern-matching.md) at the end of a round of validation, which in turns enforces a higher degree of program correctness.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="e845c-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e845c-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0b97b-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0b97b-114">See also</span></span>
 
-- [<span data-ttu-id="e845c-115">差別聯集</span><span class="sxs-lookup"><span data-stu-id="e845c-115">Discriminated Unions</span></span>](discriminated-unions.md)
-- [<span data-ttu-id="e845c-116">模式比對</span><span class="sxs-lookup"><span data-stu-id="e845c-116">Pattern Matching</span></span>](pattern-matching.md)
+- [<span data-ttu-id="0b97b-115">差別聯集</span><span class="sxs-lookup"><span data-stu-id="0b97b-115">Discriminated Unions</span></span>](discriminated-unions.md)
+- [<span data-ttu-id="0b97b-116">模式比對</span><span class="sxs-lookup"><span data-stu-id="0b97b-116">Pattern Matching</span></span>](pattern-matching.md)

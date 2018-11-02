@@ -3,24 +3,24 @@ title: '值的選項 （F #）'
 description: '深入了解 F # 值選項類型，也就是結構類型版本的選項。'
 ms.date: 06/16/2018
 ms.openlocfilehash: 978bd1713c16f7c050ccb097cb134973d10ef6f5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "50185832"
 ---
-# <a name="value-options"></a><span data-ttu-id="a9900-103">值的選項</span><span class="sxs-lookup"><span data-stu-id="a9900-103">Value Options</span></span>
+# <a name="value-options"></a><span data-ttu-id="922f4-103">值的選項</span><span class="sxs-lookup"><span data-stu-id="922f4-103">Value Options</span></span>
 
-<span data-ttu-id="a9900-104">在下列兩種情況下保存時，會使用 F # 中的值選項類型：</span><span class="sxs-lookup"><span data-stu-id="a9900-104">The Value Option type in F# is used when the following two circumstances hold:</span></span>
+<span data-ttu-id="922f4-104">在下列兩種情況下保存時，會使用 F # 中的值選項類型：</span><span class="sxs-lookup"><span data-stu-id="922f4-104">The Value Option type in F# is used when the following two circumstances hold:</span></span>
 
-1. <span data-ttu-id="a9900-105">案例是適用於[F # 選項](options.md)。</span><span class="sxs-lookup"><span data-stu-id="a9900-105">A scenario is appropriate for an [F# Option](options.md).</span></span>
-2. <span data-ttu-id="a9900-106">使用結構可提供效能優勢，在您的案例。</span><span class="sxs-lookup"><span data-stu-id="a9900-106">Using a struct provides a performance benefit in your scenario.</span></span>
+1. <span data-ttu-id="922f4-105">案例是適用於[F # 選項](options.md)。</span><span class="sxs-lookup"><span data-stu-id="922f4-105">A scenario is appropriate for an [F# Option](options.md).</span></span>
+2. <span data-ttu-id="922f4-106">使用結構可提供效能優勢，在您的案例。</span><span class="sxs-lookup"><span data-stu-id="922f4-106">Using a struct provides a performance benefit in your scenario.</span></span>
 
-<span data-ttu-id="a9900-107">並非所有效能敏感的狀況下會 「 都解決 」 使用結構。</span><span class="sxs-lookup"><span data-stu-id="a9900-107">Not all performance-sensitive scenarios are "solved" by using structs.</span></span> <span data-ttu-id="a9900-108">您必須考慮複製時使用它們，而不參考類型的額外成本。</span><span class="sxs-lookup"><span data-stu-id="a9900-108">You must consider the additional cost of copying when using them instead of reference types.</span></span> <span data-ttu-id="a9900-109">不過，大型的 F # 程式通常具現化許多選擇性類型流經忙碌的路徑，因為結構有時可以產生更好的整體效能程式存留期。</span><span class="sxs-lookup"><span data-stu-id="a9900-109">However, large F# programs commonly instantiate many optional types that flow through hot paths, because structs can sometimes yield better overall performance over the lifetime of a program.</span></span>
+<span data-ttu-id="922f4-107">並非所有效能敏感的狀況下會 「 都解決 」 使用結構。</span><span class="sxs-lookup"><span data-stu-id="922f4-107">Not all performance-sensitive scenarios are "solved" by using structs.</span></span> <span data-ttu-id="922f4-108">您必須考慮複製時使用它們，而不參考類型的額外成本。</span><span class="sxs-lookup"><span data-stu-id="922f4-108">You must consider the additional cost of copying when using them instead of reference types.</span></span> <span data-ttu-id="922f4-109">不過，大型的 F # 程式通常具現化許多選擇性類型流經忙碌的路徑，因為結構有時可以產生更好的整體效能程式存留期。</span><span class="sxs-lookup"><span data-stu-id="922f4-109">However, large F# programs commonly instantiate many optional types that flow through hot paths, because structs can sometimes yield better overall performance over the lifetime of a program.</span></span>
 
-## <a name="definition"></a><span data-ttu-id="a9900-110">定義</span><span class="sxs-lookup"><span data-stu-id="a9900-110">Definition</span></span>
+## <a name="definition"></a><span data-ttu-id="922f4-110">定義</span><span class="sxs-lookup"><span data-stu-id="922f4-110">Definition</span></span>
 
-<span data-ttu-id="a9900-111">值選項指[結構差別聯集](discriminated-unions.md#struct-discriminated-unions)類似參考選項類型。</span><span class="sxs-lookup"><span data-stu-id="a9900-111">Value Option is defined as a [struct discriminated union](discriminated-unions.md#struct-discriminated-unions) that is similar to the reference option type.</span></span> <span data-ttu-id="a9900-112">如此一來您可以想像它的定義：</span><span class="sxs-lookup"><span data-stu-id="a9900-112">Its definition can be thought of this way:</span></span>
+<span data-ttu-id="922f4-111">值選項指[結構差別聯集](discriminated-unions.md#struct-discriminated-unions)類似參考選項類型。</span><span class="sxs-lookup"><span data-stu-id="922f4-111">Value Option is defined as a [struct discriminated union](discriminated-unions.md#struct-discriminated-unions) that is similar to the reference option type.</span></span> <span data-ttu-id="922f4-112">如此一來您可以想像它的定義：</span><span class="sxs-lookup"><span data-stu-id="922f4-112">Its definition can be thought of this way:</span></span>
 
 ```fsharp
 [<StructuralEquality; StructuralComparison>]
@@ -30,11 +30,11 @@ type ValueOption<'T> =
     | ValueSome of 'T
 ```
 
-<span data-ttu-id="a9900-113">結構化相等和比較符合值 選項。</span><span class="sxs-lookup"><span data-stu-id="a9900-113">Value Option conforms to structural equality and comparison.</span></span> <span data-ttu-id="a9900-114">主要差異在於編譯的名稱、 型別名稱和大小寫名稱所有指出它是實值型別。</span><span class="sxs-lookup"><span data-stu-id="a9900-114">The main difference is that the compiled name, type name, and case names all indicate that it is a value type.</span></span>
+<span data-ttu-id="922f4-113">結構化相等和比較符合值 選項。</span><span class="sxs-lookup"><span data-stu-id="922f4-113">Value Option conforms to structural equality and comparison.</span></span> <span data-ttu-id="922f4-114">主要差異在於編譯的名稱、 型別名稱和大小寫名稱所有指出它是實值型別。</span><span class="sxs-lookup"><span data-stu-id="922f4-114">The main difference is that the compiled name, type name, and case names all indicate that it is a value type.</span></span>
 
-## <a name="using-value-options"></a><span data-ttu-id="a9900-115">使用值的選項</span><span class="sxs-lookup"><span data-stu-id="a9900-115">Using Value Options</span></span>
+## <a name="using-value-options"></a><span data-ttu-id="922f4-115">使用值的選項</span><span class="sxs-lookup"><span data-stu-id="922f4-115">Using Value Options</span></span>
 
-<span data-ttu-id="a9900-116">就像使用值選項[選項](options.md)。</span><span class="sxs-lookup"><span data-stu-id="a9900-116">Value Options are used just like [Options](options.md).</span></span> <span data-ttu-id="a9900-117">`ValueSome` 用來表示值已存在，及`ValueNone`值不存在時，會使用：</span><span class="sxs-lookup"><span data-stu-id="a9900-117">`ValueSome` is used to indicate that a value is present, and `ValueNone` is used when a value is not present:</span></span>
+<span data-ttu-id="922f4-116">就像使用值選項[選項](options.md)。</span><span class="sxs-lookup"><span data-stu-id="922f4-116">Value Options are used just like [Options](options.md).</span></span> <span data-ttu-id="922f4-117">`ValueSome` 用來表示值已存在，及`ValueNone`值不存在時，會使用：</span><span class="sxs-lookup"><span data-stu-id="922f4-117">`ValueSome` is used to indicate that a value is present, and `ValueNone` is used when a value is not present:</span></span>
 
 ```fsharp
 let tryParseDateTime (s: string) =
@@ -55,24 +55,24 @@ match (result1, result2) with
 | ValueNone, ValueNone -> printfn "None of them are dates!"
 ```
 
-<span data-ttu-id="a9900-118">如同[選項](options.md)，傳回的函式的命名慣例`ValueOption`會加上前置詞與`try`。</span><span class="sxs-lookup"><span data-stu-id="a9900-118">As with [Options](options.md), the naming convention for a function that returns `ValueOption` is to prefix it with `try`.</span></span>
+<span data-ttu-id="922f4-118">如同[選項](options.md)，傳回的函式的命名慣例`ValueOption`會加上前置詞與`try`。</span><span class="sxs-lookup"><span data-stu-id="922f4-118">As with [Options](options.md), the naming convention for a function that returns `ValueOption` is to prefix it with `try`.</span></span>
 
-## <a name="value-option-properties-and-methods"></a><span data-ttu-id="a9900-119">值選項屬性和方法</span><span class="sxs-lookup"><span data-stu-id="a9900-119">Value Option properties and methods</span></span>
+## <a name="value-option-properties-and-methods"></a><span data-ttu-id="922f4-119">值選項屬性和方法</span><span class="sxs-lookup"><span data-stu-id="922f4-119">Value Option properties and methods</span></span>
 
-<span data-ttu-id="a9900-120">此時沒有一個屬性的值選項： `Value`。</span><span class="sxs-lookup"><span data-stu-id="a9900-120">There is one property for Value Options at this time: `Value`.</span></span> <span data-ttu-id="a9900-121"><xref:System.InvalidOperationException>沒有值是否存在叫用這個屬性時引發。</span><span class="sxs-lookup"><span data-stu-id="a9900-121">An <xref:System.InvalidOperationException> is raised if no value is present when this property is invoked.</span></span>
+<span data-ttu-id="922f4-120">此時沒有一個屬性的值選項： `Value`。</span><span class="sxs-lookup"><span data-stu-id="922f4-120">There is one property for Value Options at this time: `Value`.</span></span> <span data-ttu-id="922f4-121"><xref:System.InvalidOperationException>沒有值是否存在叫用這個屬性時引發。</span><span class="sxs-lookup"><span data-stu-id="922f4-121">An <xref:System.InvalidOperationException> is raised if no value is present when this property is invoked.</span></span>
 
-## <a name="value-option-functions"></a><span data-ttu-id="a9900-122">值選項函式</span><span class="sxs-lookup"><span data-stu-id="a9900-122">Value Option functions</span></span>
+## <a name="value-option-functions"></a><span data-ttu-id="922f4-122">值選項函式</span><span class="sxs-lookup"><span data-stu-id="922f4-122">Value Option functions</span></span>
 
-<span data-ttu-id="a9900-123">目前沒有一個模組繫結函式的值選項`defaultValueArg`:</span><span class="sxs-lookup"><span data-stu-id="a9900-123">There is currently one module-bound function for Value Options, `defaultValueArg`:</span></span>
+<span data-ttu-id="922f4-123">目前沒有一個模組繫結函式的值選項`defaultValueArg`:</span><span class="sxs-lookup"><span data-stu-id="922f4-123">There is currently one module-bound function for Value Options, `defaultValueArg`:</span></span>
 
 ```fsharp
 val defaultValueArg : arg:'T voption -> defaultValue:'T -> 'T 
 ```
 
-<span data-ttu-id="a9900-124">如同`defaultArg`函式，`defaultValueArg`傳回指定的 [值] 選項的基礎值，如果存在的話，否則會傳回指定的預設值。</span><span class="sxs-lookup"><span data-stu-id="a9900-124">As with the `defaultArg` function, `defaultValueArg` returns the underlying value of the given Value Option if it exists; otherwise, it returns the specified default value.</span></span>
+<span data-ttu-id="922f4-124">如同`defaultArg`函式，`defaultValueArg`傳回指定的 [值] 選項的基礎值，如果存在的話，否則會傳回指定的預設值。</span><span class="sxs-lookup"><span data-stu-id="922f4-124">As with the `defaultArg` function, `defaultValueArg` returns the underlying value of the given Value Option if it exists; otherwise, it returns the specified default value.</span></span>
 
-<span data-ttu-id="a9900-125">在此階段中，沒有其他模組繫結函數的值選項。</span><span class="sxs-lookup"><span data-stu-id="a9900-125">At this time, there are no other module-bound functions for Value Options.</span></span>
+<span data-ttu-id="922f4-125">在此階段中，沒有其他模組繫結函數的值選項。</span><span class="sxs-lookup"><span data-stu-id="922f4-125">At this time, there are no other module-bound functions for Value Options.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="a9900-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a9900-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="922f4-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="922f4-126">See also</span></span>
 
-- [<span data-ttu-id="a9900-127">選項</span><span class="sxs-lookup"><span data-stu-id="a9900-127">Options</span></span>](options.md)
+- [<span data-ttu-id="922f4-127">選項</span><span class="sxs-lookup"><span data-stu-id="922f4-127">Options</span></span>](options.md)
