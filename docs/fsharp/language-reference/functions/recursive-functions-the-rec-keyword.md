@@ -1,6 +1,6 @@
 ---
 title: 遞迴函式：rec 關鍵字 (F#)
-description: 了解如何在 F# 'rec' 關鍵字使用 'let' 關鍵字定義遞迴函式。
+description: "了解如何在 F # 'rec' 關鍵字使用 'let' 關鍵字定義遞迴函式。"
 ms.date: 05/16/2016
 ms.openlocfilehash: 5aab6ed8ab0fc3c0f0bcfc93c3ce6518ec53254f
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -30,7 +30,7 @@ function2-body
 
 ## <a name="remarks"></a>備註
 
-遞迴函式，呼叫本身的函式會明確地識別在 F# 語言中。 如此所定義的識別項可以在函式的範圍內。
+遞迴函式，呼叫本身的函式會明確地識別在 F # 語言中。 如此所定義的識別項可以在函式的範圍內。
 
 下列程式碼說明遞迴函式來計算*n*<sup>th</sup> Fibonacci 數字。
 

@@ -1,6 +1,6 @@
 ---
-title: 使用命令列工具開始使用 F#
-description: 了解如何在 F# 在任何作業系統 （Windows、 macOs 或 Linux） 上使用.NET Core CLI 建置簡單的多專案方案
+title: '使用命令列工具開始使用 F #'
+description: '了解如何在 F # 在任何作業系統 （Windows、 macOs 或 Linux） 上使用.NET Core CLI 建置簡單的多專案方案'
 ms.date: 03/26/2018
 ms.openlocfilehash: 8a82970f33c8bbe1b8cdd8fb6499b59b16d3cbf3
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -9,15 +9,15 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "45673905"
 ---
-# <a name="get-started-with-f-with-the-net-core-cli"></a>開始使用 F# 和.NET Core CLI
+# <a name="get-started-with-f-with-the-net-core-cli"></a>開始使用 F # 和.NET Core CLI
 
-本文涵蓋如何您可以開始使用 F# 在任何作業系統上 （Windows、 macOS 或 Linux） 使用.NET Core CLI。 它會經歷建置主控台應用程式會呼叫類別庫的多專案方案。
+本文涵蓋如何您可以開始使用 F # 在任何作業系統上 （Windows、 macOS 或 Linux） 使用.NET Core CLI。 它會經歷建置主控台應用程式會呼叫類別庫的多專案方案。
 
 ## <a name="prerequisites"></a>必要條件
 
 若要開始，您必須安裝最新[.NET Core SDK](https://www.microsoft.com/net/download/)。
 
-本文假設您知道如何使用命令列，並以慣用的文字編輯器。 如果您尚未使用的話[Visual Studio Code](get-started-vscode.md)是以 F# 的文字編輯器的絕佳選項。
+本文假設您知道如何使用命令列，並以慣用的文字編輯器。 如果您尚未使用的話[Visual Studio Code](get-started-vscode.md)是以 F # 的文字編輯器的絕佳選項。
 
 ## <a name="build-a-simple-multi-project-solution"></a>建置簡單的多專案解決方案
 
@@ -151,4 +151,4 @@ I used to be World but now I'm ""World"" thanks to JSON.NET!
 
 ## <a name="next-steps"></a>後續步驟
 
-接下來，請參閱[的 F# 教學課程](../tour.md)若要深入了解不同的 F# 功能。
+接下來，請參閱[的 F # 教學課程](../tour.md)若要深入了解不同的 F # 功能。

@@ -1,6 +1,6 @@
 ---
 title: 明確欄位：val 關鍵字 (F#)
-description: 深入了解 F# 'val' 關鍵字，用來宣告類別或結構類型中儲存的值，而不會初始化類型的位置。
+description: "深入了解 F # 'val' 關鍵字，用來宣告類別或結構類型中儲存的值，而不會初始化類型的位置。"
 ms.date: 05/16/2016
 ms.openlocfilehash: 9cd06f7e90192be79490dd0ff67f118cce4339c3
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

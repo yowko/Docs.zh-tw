@@ -1,6 +1,6 @@
 ---
-title: 基本類型 （F#）
-description: 探索基本 F# 語言中使用的基本類型。
+title: '基本類型 （F #）'
+description: '探索基本 F # 語言中使用的基本類型。'
 ms.date: 07/09/2018
 ms.openlocfilehash: 8f948d066323527b09b1d3f9f4167b95b1c875cf
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "48026931"
 ---
 # <a name="basic-types"></a>基本類型
 
-本主題列出 F# 語言中所定義的基本型別。 這些類型是最基本 F#，形成幾乎每個 F# 程式的基礎。 也就是.NET 基本類型的超集。
+本主題列出 F # 語言中所定義的基本型別。 這些類型是最基本 F #，形成幾乎每個 F # 程式的基礎。 也就是.NET 基本類型的超集。
 
 |類型|.NET 型別|描述|
 |----|---------|-----------|

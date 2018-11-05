@@ -1,6 +1,6 @@
 ---
 title: 例外狀況：invalidArg 函式 (F#)
-description: 了解如何 F# 'invalidArg' 函式會產生引數例外狀況。
+description: "了解如何 F # 'invalidArg' 函式會產生引數例外狀況。"
 ms.date: 05/16/2016
 ms.openlocfilehash: 8bf65fae9392a88205e3cdec8b7d7a3ff42f8416
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

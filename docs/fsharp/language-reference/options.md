@@ -1,6 +1,6 @@
 ---
 title: 選項 (F#)
-description: 了解如何使用 F# 選項類型時的實際值可能不存在的具名的值或變數。
+description: '了解如何使用 F # 選項類型時的實際值可能不存在的具名的值或變數。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 0859cb42e72ef9e67551b884f5cf6130fb099a78
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "46479516"
 ---
 # <a name="options"></a>選項
 
-實際的值可能不存在的具名的值或變數時，會使用 F# 中的選項類型。 選項有基礎類型，並可保存的值，該型別，或可能不會有值。
+實際的值可能不存在的具名的值或變數時，會使用 F # 中的選項類型。 選項有基礎類型，並可保存的值，該型別，或可能不會有值。
 
 ## <a name="remarks"></a>備註
 
@@ -33,7 +33,7 @@ ms.locfileid: "46479516"
 
 在先前的程式碼清單會遞迴地搜尋。 此函式`tryFindMatch`採用述詞函式`pred`傳回布林值，以及要搜尋的清單。 如果找到符合述詞的項目，則遞迴結束和函式傳回的值當做運算式中的選項`Some(head)`。 遞迴結束時，會比對空的清單。 值，此時`head`沒有找到，和`None`會傳回。
 
-許多 F# 程式庫函式值，可能會或可能不存在傳回集合中搜尋`option`型別。 依照慣例，這些函式則是以開頭`try`前置詞，例如[ `Seq.tryFindIndex` ](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a)。
+許多 F # 程式庫函式值，可能會或可能不存在傳回集合中搜尋`option`型別。 依照慣例，這些函式則是以開頭`try`前置詞，例如[ `Seq.tryFindIndex` ](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a)。
 
 值可能不存在，例如，如果可能的話，當您嘗試建構值時，會擲回例外狀況時，選項可以也很有用。 下列程式碼範例會說明這點。
 

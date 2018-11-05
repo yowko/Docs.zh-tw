@@ -1,6 +1,6 @@
 ---
-title: 教學課程： 建立型別提供者 （F#）
-description: 了解如何在 F# 3.0 中建立您自己 F# 型別提供者，藉由檢查幾個簡單的型別提供者，來說明基本概念。
+title: '教學課程： 建立型別提供者 （F #）'
+description: '了解如何在 F # 3.0 中建立您自己 F # 型別提供者，藉由檢查幾個簡單的型別提供者，來說明基本概念。'
 ms.date: 05/16/2016
 ms.openlocfilehash: c9dedbeed3ee081a6b1e1ffffe843fc962d2c60b
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,15 +11,15 @@ ms.locfileid: "50183915"
 ---
 # <a name="tutorial-create-a-type-provider"></a>教學課程： 建立型別提供者
 
-F# 中的型別提供者機制是其支援資訊豐富程式設計的重要部分。 本教學課程說明如何建立您自己的型別提供者，方法是逐步說明的基本概念的幾個簡單的型別提供者的開發。 如需有關 F# 中的型別提供者機制的詳細資訊，請參閱[型別提供者](index.md)。
+F # 中的型別提供者機制是其支援資訊豐富程式設計的重要部分。 本教學課程說明如何建立您自己的型別提供者，方法是逐步說明的基本概念的幾個簡單的型別提供者的開發。 如需有關 F # 中的型別提供者機制的詳細資訊，請參閱[型別提供者](index.md)。
 
-F# 生態系統包含一組常用的網際網路和企業資料服務的型別提供者。 例如: 
+F # 生態系統包含一組常用的網際網路和企業資料服務的型別提供者。 例如: 
 
 - [FSharp.Data](https://fsharp.github.io/FSharp.Data/)包含型別提供者，如 JSON、 XML、 CSV 和 HTML 文件格式。
 
-- [根據 SQLProvider](https://fsprojects.github.io/SQLProvider/)提供強型別存取 SQL 資料庫，透過對應物件和 F# LINQ 對這些資料來源的查詢。
+- [根據 SQLProvider](https://fsprojects.github.io/SQLProvider/)提供強型別存取 SQL 資料庫，透過對應物件和 F # LINQ 對這些資料來源的查詢。
 
-- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/)編譯時期的型別提供者的一組簽入內嵌的 F# 中的 T-SQL。
+- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/)編譯時期的型別提供者的一組簽入內嵌的 F # 中的 T-SQL。
 
 - [FSharp.Data.TypeProviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/)是較舊型別提供者只能搭配.NET Framework 程式設計中存取 SQL、 Entity Framework、 OData 及 WSDL 資料服務使用的集合。
 
@@ -27,7 +27,7 @@ F# 生態系統包含一組常用的網際網路和企業資料服務的型別�
 
 ## <a name="before-you-start"></a>在開始之前
 
-型別提供者機制主要設計使插入穩定的資料和服務的資訊空間 F# 程式設計經驗。
+型別提供者機制主要設計使插入穩定的資料和服務的資訊空間 F # 程式設計經驗。
 
 這項機制的目的不是讓您插入結構描述變更的相關程式邏輯的方式在程式執行期間的資訊空間。 此外，機制不被專為內部語言中繼程式設計，即使該網域包含一些有效的用法。 只有在必要時，您應該使用這項機制，其中的型別提供者開發會產生非常高的值。
 
@@ -35,7 +35,7 @@ F# 生態系統包含一組常用的網際網路和企業資料服務的型別�
 
 在開始之前，您可能會詢問下列問題：
 
-- 您有結構描述資訊來源？ 如果是這樣，什麼是 F# 和.NET 型別系統的對應？
+- 您有結構描述資訊來源？ 如果是這樣，什麼是 F # 和.NET 型別系統的對應？
 
 - 可以您使用現有的 （動態型別） API 做為起點實作？
 
@@ -53,7 +53,7 @@ F# 生態系統包含一組常用的網際網路和企業資料服務的型別�
 
 ## <a name="a-simple-type-provider"></a>簡單的型別提供者
 
-這個範例是中的範例類似 sampleproviders\providers`examples`目錄[F# 型別提供者 SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/)。 提供者會使用 「 類型空間 」，其中包含 100 清除的型別，為下列程式碼示範使用 F# 簽章語法並省略詳細資料，如以外的所有`Type1`。 如需清除類型的詳細資訊，請參閱 <<c0> [ 詳細資料的相關清除提供類型](#details-about-erased-provided-types)本主題稍後的。
+這個範例是中的範例類似 sampleproviders\providers`examples`目錄[F # 型別提供者 SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/)。 提供者會使用 「 類型空間 」，其中包含 100 清除的型別，為下列程式碼示範使用 F # 簽章語法並省略詳細資料，如以外的所有`Type1`。 如需清除類型的詳細資訊，請參閱 <<c0> [ 詳細資料的相關清除提供類型](#details-about-erased-provided-types)本主題稍後的。
 
 ```fsharp
 namespace Samples.HelloWorldTypeProvider
@@ -128,7 +128,7 @@ type SampleTypeProvider(config: TypeProviderConfig) as this =
 do()
 ```
 
-若要使用此提供者，開啟 Visual Studio 的個別執行個體，建立 F# 指令碼，，然後新增您的指令碼提供者的參考使用 #r 下列程式碼所示：
+若要使用此提供者，開啟 Visual Studio 的個別執行個體，建立 F # 指令碼，，然後新增您的指令碼提供者的參考使用 #r 下列程式碼所示：
 
 ```fsharp
 #r @".\bin\Debug\Samples.HelloWorldTypeProvider.dll"
@@ -148,7 +148,7 @@ let data1 = Samples.HelloWorldTypeProvider.Type1.NestedType.StaticProperty35
 
 然後尋找下方類型`Samples.HelloWorldTypeProvider`型別提供者產生的命名空間。
 
-重新編譯提供者之前，請確定您已關閉所有執行個體的 Visual Studio 和 F# Interactive 所使用的提供者 DLL。 因為輸出 DLL 將會遭到鎖定，否則會發生建置錯誤。
+重新編譯提供者之前，請確定您已關閉所有執行個體的 Visual Studio 和 F # Interactive 所使用的提供者 DLL。 因為輸出 DLL 將會遭到鎖定，否則會發生建置錯誤。
 
 若要使用 print 陳述式，偵錯此提供者，請公開 （expose） 的提供者的問題的指令碼並接著使用下列程式碼：
 
@@ -175,7 +175,7 @@ devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 type SampleTypeProvider(config: TypeProviderConfig) as this =
 ```
 
-這種類型必須是公用，而且必須加以標示[TypeProvider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947)屬性，讓個別的 F# 專案參考組件包含型別時，編譯器會辨識型別提供者。 *Config*參數為選擇性，而且，如果有的話，包含 F# 編譯器會建立型別提供者執行個體的內容相關的組態資訊。
+這種類型必須是公用，而且必須加以標示[TypeProvider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947)屬性，讓個別的 F # 專案參考組件包含型別時，編譯器會辨識型別提供者。 *Config*參數為選擇性，而且，如果有的話，包含 F # 編譯器會建立型別提供者執行個體的內容相關的組態資訊。
 
 接下來，您會實作[ITypeProvider](https://msdn.microsoft.com/library/2c2b0571-843d-4a7d-95d4-0a7510ed5e2f)介面。 在此案例中，您會使用`TypeProviderForNamespaces`從輸入`ProvidedTypes`API 的基底類型。 此協助程式類型可以立即提供有限的集合，提供命名空間，其中每一個直接包含有限數量的其修正中，立即提供型別。 在此情況下，提供者*提早*產生型別，即使它們不需要或使用。
 
@@ -255,7 +255,7 @@ let staticProp = ProvidedProperty(propertyName = "StaticProperty",
                                   getterCode = (fun args -> <@@ "Hello!" @@>))
 ```
 
-取得這個屬性一律會評估為字串"Hello ！"。 `GetterCode`屬性會使用 F# 引號，表示主編譯器產生的取得此屬性的程式碼。 如需有關引號的詳細資訊，請參閱 <<c0> [ 程式碼引號 （F#）](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155)。
+取得這個屬性一律會評估為字串"Hello ！"。 `GetterCode`屬性會使用 F # 引號，表示主編譯器產生的取得此屬性的程式碼。 如需有關引號的詳細資訊，請參閱 <<c0> [ 程式碼引號 （F #）](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155)。
 
 將 XML 文件加入至屬性。
 
@@ -276,7 +276,7 @@ let ctor = ProvidedConstructor(parameters = [ ],
                                invokeCode = (fun args -> <@@ "The object data" :> obj @@>))
 ```
 
-`InvokeCode`的建構函式會傳回 F# 引號，代表呼叫建構函式時，主編譯器產生的程式碼。 例如，您可以使用下列建構函式：
+`InvokeCode`的建構函式會傳回 F # 引號，代表呼叫建構函式時，主編譯器產生的程式碼。 例如，您可以使用下列建構函式：
 
 ```fsharp
 new Type10()
@@ -300,7 +300,7 @@ ProvidedConstructor(parameters = [ ProvidedParameter("data",typeof<string>) ],
                     invokeCode = (fun args -> <@@ (%%(args.[0]) : string) :> obj @@>))
 ```
 
-`InvokeCode`的建構函式一次傳回的 F# 引號，表示主編譯器產生的方法呼叫的程式碼。 例如，您可以使用下列建構函式：
+`InvokeCode`的建構函式一次傳回的 F # 引號，表示主編譯器產生的方法呼叫的程式碼。 例如，您可以使用下列建構函式：
 
 ```fsharp
 new Type10("ten")
@@ -318,7 +318,7 @@ instanceProp.AddXmlDocDelayed(fun () -> "This is an instance property")
 t.AddMember instanceProp
 ```
 
-取得這個屬性會傳回字串，表示物件的長度。 `GetterCode`屬性會傳回指定主機編譯器會產生要取得其屬性的程式碼 F# 引號。 像是`InvokeCode`，則`GetterCode`函式會傳回引號。 主機編譯器會呼叫此函式的引數清單。 在此情況下，引數包含只是單一運算式，表示執行個體的呼叫 getter，您可以存取使用`args.[0]`。實作`GetterCode`然後將結果的引號在清除輸入到 splices `obj`，並轉型來滿足編譯器的機制，來檢查此物件是字串類型。 下一個部分`makeOneProvidedType`提供一個參數的執行個體方法。
+取得這個屬性會傳回字串，表示物件的長度。 `GetterCode`屬性會傳回指定主機編譯器會產生要取得其屬性的程式碼 F # 引號。 像是`InvokeCode`，則`GetterCode`函式會傳回引號。 主機編譯器會呼叫此函式的引數清單。 在此情況下，引數包含只是單一運算式，表示執行個體的呼叫 getter，您可以存取使用`args.[0]`。實作`GetterCode`然後將結果的引號在清除輸入到 splices `obj`，並轉型來滿足編譯器的機制，來檢查此物件是字串類型。 下一個部分`makeOneProvidedType`提供一個參數的執行個體方法。
 
 ```fsharp
 let instanceMeth = 
@@ -370,7 +370,7 @@ t.AddMembersDelayed(fun () ->
 
 - 當您在撰寫且因此大型互連，不產生真正的.NET 類型的資訊空間技術上可行的資訊空間的提供者。
 
-在此範例中，提供的每一個型別會清除輸入`obj`，所有使用的類型會都顯示為型別及`obj`中編譯的程式碼。 事實上，在這些範例中的基礎物件是字串，但類型會顯示為`System.Object`在.NET 中編譯的程式碼。 所有使用的類型清除，您可以使用明確的 boxing 處理，unboxing，並將轉換可以破壞清除類型。 在此情況下，使用物件時，可能會造成無效轉換例外狀況。 提供者執行階段可以定義自己的私用表示型別，以協助防範 false 表示法。 您無法在 F# 本身中定義它們的類型。 提供的類型可能會被刪除。 您必須了解後果，這兩個實際會加以語意，使用 清除您的型別提供者或提供的提供者的類型清除類型。 它們的類型都有沒有真正的.NET 型別。 因此，您無法準確的反映類型，而且您可能會破壞它們的型別，如果您使用執行階段轉換和其他技術，依賴確切執行階段型別語意。 清除類型的 subversion 經常會導致在執行階段的類型轉換例外狀況。
+在此範例中，提供的每一個型別會清除輸入`obj`，所有使用的類型會都顯示為型別及`obj`中編譯的程式碼。 事實上，在這些範例中的基礎物件是字串，但類型會顯示為`System.Object`在.NET 中編譯的程式碼。 所有使用的類型清除，您可以使用明確的 boxing 處理，unboxing，並將轉換可以破壞清除類型。 在此情況下，使用物件時，可能會造成無效轉換例外狀況。 提供者執行階段可以定義自己的私用表示型別，以協助防範 false 表示法。 您無法在 F # 本身中定義它們的類型。 提供的類型可能會被刪除。 您必須了解後果，這兩個實際會加以語意，使用 清除您的型別提供者或提供的提供者的類型清除類型。 它們的類型都有沒有真正的.NET 型別。 因此，您無法準確的反映類型，而且您可能會破壞它們的型別，如果您使用執行階段轉換和其他技術，依賴確切執行階段型別語意。 清除類型的 subversion 經常會導致在執行階段的類型轉換例外狀況。
 
 ### <a name="choosing-representations-for-erased-provided-types"></a>選擇表示法，如清除所提供的類型
 
@@ -388,7 +388,7 @@ t.AddMembersDelayed(fun () ->
 
 - 一組可能的物件，為它們提供型別會呼叫其表示法。 在本文中範例中，所有清除所提供的表示型別`Type1..Type100`永遠是字串的物件。
 
-所有提供的型別表示法必須與提供的類型清除相容。 （否則 F# 編譯器將會發生錯誤的型別提供者中，使用或無法驗證不是有效的.NET 程式碼將會產生。 如果型別提供者傳回的程式碼提供了無效的表示方式，則該型別提供者無效。
+所有提供的型別表示法必須與提供的類型清除相容。 （否則 F # 編譯器將會發生錯誤的型別提供者中，使用或無法驗證不是有效的.NET 程式碼將會產生。 如果型別提供者傳回的程式碼提供了無效的表示方式，則該型別提供者無效。
 
 您可以使用下列其中一個方法，這兩者都是很常見的其中一種選擇提供物件的表示法：
 
@@ -469,7 +469,7 @@ let r = reg.Match("425-123-2345").Groups.["AreaCode"].Value //r equals "425"
 
 - 提供的屬性，會產生每個具名的群組，並存取屬性的相符項目上的索引子會產生`Groups`集合。
 
-下列的程式碼來實作這類提供者，邏輯的核心，而且這個範例省略了提供的型別所有成員的加入。 如需每個新增的成員，請參閱本主題稍後的適當區段。 完整的程式碼，下載範例[F# 3.0 範例套件](https://fsharp3sample.codeplex.com)Codeplex 網站上。
+下列的程式碼來實作這類提供者，邏輯的核心，而且這個範例省略了提供的型別所有成員的加入。 如需每個新增的成員，請參閱本主題稍後的適當區段。 完整的程式碼，下載範例[F # 3.0 範例套件](https://fsharp3sample.codeplex.com)Codeplex 網站上。
 
 ```fsharp
 namespace Samples.FSharp.RegexTypeProvider
@@ -1052,7 +1052,7 @@ ProvidedTypes API 會提供協助程式，提供量值註釋。 例如，若要�
 
 ### <a name="invalidation"></a>失效
 
-提供者可以引發失效的訊號，來通知的結構描述的假設可能已變更的 F# 語言服務。 失效時，如果提供者裝載在 Visual Studio 中，會重做 typecheck。 F# Interactive 中或 F# 編譯器 (fsc.exe) 所裝載的提供者時，將會忽略此訊號。
+提供者可以引發失效的訊號，來通知的結構描述的假設可能已變更的 F # 語言服務。 失效時，如果提供者裝載在 Visual Studio 中，會重做 typecheck。 F # Interactive 中或 F # 編譯器 (fsc.exe) 所裝載的提供者時，將會忽略此訊號。
 
 ### <a name="caching-schema-information"></a>快取的結構描述資訊
 
@@ -1060,7 +1060,7 @@ ProvidedTypes API 會提供協助程式，提供量值註釋。 例如，若要�
 
 ### <a name="backing-assembly"></a>備份組件
 
-當您編譯`.dll`或`.exe`檔案，支援.dll 檔案產生的型別以靜態方式連結到產生的組件。 從備份組件，到最終組件複製的中繼語言 (IL) 型別定義和任何受管理的資源會建立此連結。 當您使用 F# Interactive 時，支援.dll 檔案不會複製，並會改為直接載入至 F# 互動式程序。
+當您編譯`.dll`或`.exe`檔案，支援.dll 檔案產生的型別以靜態方式連結到產生的組件。 從備份組件，到最終組件複製的中繼語言 (IL) 型別定義和任何受管理的資源會建立此連結。 當您使用 F # Interactive 時，支援.dll 檔案不會複製，並會改為直接載入至 F # 互動式程序。
 
 ### <a name="exceptions-and-diagnostics-from-type-providers"></a>例外狀況和診斷從型別提供者
 
@@ -1070,11 +1070,11 @@ ProvidedTypes API 會提供協助程式，提供量值註釋。 例如，若要�
 
 - 型別提供者無法回報警告。
 
-- 當型別提供者裝載中的 F# 編譯器、 F# 開發環境，或 F# Interactive 時，會攔截所有例外狀況，該提供者。 訊息屬性一律會是錯誤的文字，並沒有堆疊追蹤會出現。 如果您將會擲回例外狀況，您可以擲回下列的範例： `System.NotSupportedException`， `System.IO.IOException`， `System.Exception`。
+- 當型別提供者裝載中的 F # 編譯器、 F # 開發環境，或 F # Interactive 時，會攔截所有例外狀況，該提供者。 訊息屬性一律會是錯誤的文字，並沒有堆疊追蹤會出現。 如果您將會擲回例外狀況，您可以擲回下列的範例： `System.NotSupportedException`， `System.IO.IOException`， `System.Exception`。
 
 #### <a name="providing-generated-types"></a>提供產生的型別
 
-到目前為止，本文件說明如何提供它們的類型。 您也可以使用 F# 中的型別提供者機制，提供產生的型別，這會新增為真正的.NET 型別定義，到使用者的程式。 您必須參考產生提供使用型別定義的類型。
+到目前為止，本文件說明如何提供它們的類型。 您也可以使用 F # 中的型別提供者機制，提供產生的型別，這會新增為真正的.NET 型別定義，到使用者的程式。 您必須參考產生提供使用型別定義的類型。
 
 ```fsharp
 open Microsoft.FSharp.TypeProviders 
@@ -1082,7 +1082,7 @@ open Microsoft.FSharp.TypeProviders
 type Service = ODataService<"http://services.odata.org/Northwind/Northwind.svc/">
 ```
 
-是 F# 3.0 版本的一部分 ProvidedTypes 0.2 協助程式程式碼只能進行有限的支援，提供產生的型別。 下列陳述式必須是產生的型別定義，則為 true:
+是 F # 3.0 版本的一部分 ProvidedTypes 0.2 協助程式程式碼只能進行有限的支援，提供產生的型別。 下列陳述式必須是產生的型別定義，則為 true:
 
 - `isErased` 必須設定為`false`。
 
@@ -1102,9 +1102,9 @@ type Service = ODataService<"http://services.odata.org/Northwind/Northwind.svc/"
 
 ### <a name="limitations-of-the-type-provider-mechanism"></a>型別提供者機制的限制
 
-F# 中的型別提供者機制具有下列限制：
+F # 中的型別提供者機制具有下列限制：
 
-- 提供泛型類型，或提供泛型方法，不支援 F# 中的型別提供者的基礎結構。
+- 提供泛型類型，或提供泛型方法，不支援 F # 中的型別提供者的基礎結構。
 
 - 機制不支援巢狀的類型的靜態參數。
 
@@ -1120,9 +1120,9 @@ F# 中的型別提供者機制具有下列限制：
 
 您可以使用下列工具，以叫用型別提供者：
 
-- fsc.exe （F# 命令列編譯器）
+- fsc.exe （F # 命令列編譯器）
 
-- fsi.exe （F# Interactive 編譯器）
+- fsi.exe （F # Interactive 編譯器）
 
 - devenv.exe (Visual Studio)
 

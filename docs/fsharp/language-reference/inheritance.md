@@ -1,6 +1,6 @@
 ---
 title: 繼承 (F#)
-description: 了解如何指定 F# 繼承關聯性使用 'inherit' 關鍵字。
+description: "了解如何指定 F # 繼承關聯性使用 'inherit' 關鍵字。"
 ms.date: 05/16/2016
 ms.openlocfilehash: e4d79244fb9bada5db0c5c4c7179d4bfe6e21f3d
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -34,7 +34,7 @@ type MyDerived(...) =
 
 ## <a name="virtual-methods-and-overrides"></a>虛擬方法和覆寫
 
-虛擬方法 （和屬性） 運作方式稍有不同 F# 中相較於其他.NET 語言。 若要宣告新的虛擬成員，您使用`abstract`關鍵字。 要這麼做，不論您是否提供該方法的預設實作。 因此基底類別中的虛擬方法的完整定義會遵循下列模式：
+虛擬方法 （和屬性） 運作方式稍有不同 F # 中相較於其他.NET 語言。 若要宣告新的虛擬成員，您使用`abstract`關鍵字。 要這麼做，不論您是否提供該方法的預設實作。 因此基底類別中的虛擬方法的完整定義會遵循下列模式：
 
 ```fsharp
 abstract member [method-name] : [type]

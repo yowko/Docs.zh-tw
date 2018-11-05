@@ -1,6 +1,6 @@
 ---
 title: 算術運算子 (F#)
-description: 深入了解可在 F# 程式設計語言中的算術運算子。
+description: '深入了解可在 F # 程式設計語言中的算術運算子。'
 ms.date: 04/04/2018
 ms.openlocfilehash: 008aa84b8736bb3a734ce8bb9713d34c17f1b76e
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "45597421"
 ---
 # <a name="arithmetic-operators"></a>算術運算子
 
-本主題描述可在 F# 語言中的算術運算子。
+本主題描述可在 F # 語言中的算術運算子。
 
 ## <a name="summary-of-binary-arithmetic-operators"></a>二進位的算術運算子的摘要
 
@@ -53,13 +53,13 @@ ms.locfileid: "45597421"
 
 ## <a name="overloaded-and-generic-operators"></a>多載，並使用一般運算子
 
-中所定義的所有本主題中討論的運算子**Microsoft.FSharp.Core.Operators**命名空間。 某些運算子使用以統計方式解析的型別參數所定義。 這表示該運算子適用於每種特定類型的個別定義。 所有一元和二元算術以及位元運算子都是此類別中。 比較運算子是泛型，因此使用任何型別，而不只是基本的算術類型。 已區分聯集和記錄類型有自己的 F# 編譯器所產生的自訂實作。 類別型別使用方法<xref:System.Object.Equals%2A>。
+中所定義的所有本主題中討論的運算子**Microsoft.FSharp.Core.Operators**命名空間。 某些運算子使用以統計方式解析的型別參數所定義。 這表示該運算子適用於每種特定類型的個別定義。 所有一元和二元算術以及位元運算子都是此類別中。 比較運算子是泛型，因此使用任何型別，而不只是基本的算術類型。 已區分聯集和記錄類型有自己的 F # 編譯器所產生的自訂實作。 類別型別使用方法<xref:System.Object.Equals%2A>。
 
 泛型的運算子都可自訂的。 若要自訂比較函式，會覆寫<xref:System.Object.Equals%2A>提供您自己自訂的相等比較，並接著實作<xref:System.IComparable>。 <xref:System.IComparable?displayProperty=nameWithType>介面具有單一方法<xref:System.IComparable.CompareTo%2A>方法。
 
 ## <a name="operators-and-type-inference"></a>運算子和型別推斷
 
-在運算式中運算子的使用限制在該運算子的型別推斷。 此外，使用運算子可防止自動一般化，因為使用運算子表示算術類型。 如果沒有使用任何其他資訊，F# 編譯器會推斷`int`當做算術運算式的類型。 您可以指定另一種類型，以覆寫此行為。 因此引數類型和傳回型別`function1`下列程式碼會推斷為`int`，但為類型`function2`推斷為`float`。
+在運算式中運算子的使用限制在該運算子的型別推斷。 此外，使用運算子可防止自動一般化，因為使用運算子表示算術類型。 如果沒有使用任何其他資訊，F # 編譯器會推斷`int`當做算術運算式的類型。 您可以指定另一種類型，以覆寫此行為。 因此引數類型和傳回型別`function1`下列程式碼會推斷為`int`，但為類型`function2`推斷為`float`。
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3501.fs)]
 

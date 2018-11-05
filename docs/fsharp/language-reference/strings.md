@@ -1,6 +1,6 @@
 ---
 title: 字串 (F#)
-description: 了解 F# 'string' 類型以一連串的 Unicode 字元所表示的不可變的文字。
+description: "了解 F # 'string' 類型以一連串的 Unicode 字元所表示的不可變的文字。"
 ms.date: 05/16/2016
 ms.openlocfilehash: 21971602093bc84b0df47d4ae46a14fb936c28bb
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -18,7 +18,7 @@ ms.locfileid: "43799339"
 
 ## <a name="remarks"></a>備註
 
-字串常值是以引號 （"） 字元分隔。 反斜線字元 ( \\ ) 來編碼某些特殊字元。 反斜線和放在一起的下一個字元稱為*逸出序列*。 逸出序列支援 F# 常值會顯示下表中的字串。
+字串常值是以引號 （"） 字元分隔。 反斜線字元 ( \\ ) 來編碼某些特殊字元。 反斜線和放在一起的下一個字元稱為*逸出序列*。 逸出序列支援 F # 常值會顯示下表中的字串。
 
 |字元|逸出序列|
 |---------|---------------|
@@ -78,7 +78,7 @@ def
 
 ## <a name="string-class"></a>字串類別
 
-因為字串型別，在 F# 實際上是以.NET Framework`System.String`類型，所有`System.String`成員都可以使用。 這包括`+`運算子，用來串連字串，就`Length`屬性，而`Chars`屬性，會傳回字串的 Unicode 字元陣列。 如需字串的詳細資訊，請參閱`System.String`。
+因為字串型別，在 F # 實際上是以.NET Framework`System.String`類型，所有`System.String`成員都可以使用。 這包括`+`運算子，用來串連字串，就`Length`屬性，而`Chars`屬性，會傳回字串的 Unicode 字元陣列。 如需字串的詳細資訊，請參閱`System.String`。
 
 藉由使用`Chars`屬性`System.String`，您可以存取個別字元在字串中的指定的索引，如下列程式碼所示。
 

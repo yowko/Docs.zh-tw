@@ -1,6 +1,6 @@
 ---
 title: 陣列 (F#)
-description: 了解如何建立及使用 F# 程式設計語言中的陣列。
+description: '了解如何建立及使用 F # 程式設計語言中的陣列。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 27b73efc900ac2efc813fe66f81baa2e9ae1e843
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -57,7 +57,7 @@ API 參考連結將帶您前往 MSDN。  docs.microsoft.com API 參考不完整�
 
 ## <a name="array-types-and-modules"></a>陣列類型和模組
 
-所有的 F# 陣列的型別是.NET Framework 型別<xref:System.Array?displayProperty=nameWithType>。 因此，F# 陣列支援中可用的所有功能<xref:System.Array?displayProperty=nameWithType>。
+所有的 F # 陣列的型別是.NET Framework 型別<xref:System.Array?displayProperty=nameWithType>。 因此，F # 陣列支援中可用的所有功能<xref:System.Array?displayProperty=nameWithType>。
 
 程式庫模組[ `Microsoft.FSharp.Collections.Array` ](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)支援一維陣列的作業。 模組`Array2D`， `Array3D`，和`Array4D`包含分別支援陣列的兩個三維和四維，作業的函式。 您可以建立陣列的陣序大於四個使用<xref:System.Array?displayProperty=nameWithType>。
 
@@ -218,7 +218,7 @@ matrix.[*, 1..3]
 matrix.[1..3, 1..3]
 ```
 
-自 F# 3.1 之後，您可以將多維陣列分解的相同或較低維度的子陣列。 例如，您也可以指定單一資料列或資料行，以取得向量從矩陣。
+自 F # 3.1 之後，您可以將多維陣列分解的相同或較低維度的子陣列。 例如，您也可以指定單一資料列或資料行，以取得向量從矩陣。
 
 ```fsharp
 // Get row 3 from a matrix as a vector:
@@ -228,7 +228,7 @@ matrix.[3, *]
 matrix.[*, 3]
 ```
 
-您可以使用此切割語法以型別會實作項目存取運算子，以及多載`GetSlice`方法。 例如，下列程式碼會建立包裝 F# 2D 陣列，實作提供支援，陣列編製索引，項目屬性，並實作三個版本的 Matrix 類型`GetSlice`。 如果您可以使用此程式碼做為範本，為矩陣類型，您可以使用本章節描述的所有切割作業。
+您可以使用此切割語法以型別會實作項目存取運算子，以及多載`GetSlice`方法。 例如，下列程式碼會建立包裝 F # 2D 陣列，實作提供支援，陣列編製索引，項目屬性，並實作三個版本的 Matrix 類型`GetSlice`。 如果您可以使用此程式碼做為範本，為矩陣類型，您可以使用本章節描述的所有切割作業。
 
 ```fsharp
 type Matrix<'T>(N: int, M: int) =
@@ -418,4 +418,4 @@ Found an element 4096 with square root 64 and cube root 16.
 ## <a name="see-also"></a>另請參閱
 
 - [F# 語言參考](index.md)
-- [F# 中;型別](fsharp-types.md)
+- [F # 中;型別](fsharp-types.md)
