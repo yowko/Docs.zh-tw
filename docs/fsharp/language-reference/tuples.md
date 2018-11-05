@@ -1,6 +1,6 @@
 ---
 title: Tuple (F#)
-description: '深入了解 F # tuple 的群組不具名但有已排序，可能是不同類型的值。'
+description: 深入了解 F# tuple 的群組不具名但有已排序，可能是不同類型的值。
 ms.date: 05/16/2016
 ms.openlocfilehash: e7628e4c4b538c2fe52fca25d2597b10fec28d1c
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -22,7 +22,7 @@ struct(element, ... ,element )
 
 ## <a name="remarks"></a>備註
 
-每個*項目*在先前的語法可以是任何有效 F # 運算式。
+每個*項目*在先前的語法可以是任何有效 F# 運算式。
 
 ## <a name="examples"></a>範例
 
@@ -88,7 +88,7 @@ int * float * string
 
 ## <a name="interoperation-with-c-tuples"></a>使用 C# Tuple 的互通性
 
-C# 7.0 引進 tuple 的語言。  Tuple 在 C# 中為結構，並相當於在 F # 中的結構元組。  如果您需要使用 C# 交互操作，您必須使用結構元組。
+C# 7.0 引進 tuple 的語言。  Tuple 在 C# 中為結構，並相當於在 F# 中的結構元組。  如果您需要使用 C# 交互操作，您必須使用結構元組。
 
 這很簡單。  例如，假設您必須將 tuple 傳遞至 C# 類別，然後取用它的結果，這也是 tuple:
 
@@ -103,7 +103,7 @@ namespace CSharpTupleInterop
 }
 ```
 
-在 F # 程式碼，您可以再做為參數傳遞的結構元組，並使用結構 tuple 形式的結果。
+在 F# 程式碼，您可以再做為參數傳遞的結構元組，並使用結構 tuple 形式的結果。
 
 ```fsharp
 open TupleInterop
@@ -126,7 +126,7 @@ let struct (newX, newY) = Example.AddOneToXAndY(struct (1, 2))
 
 本章節將說明 tuple 的形式時編譯。  此處提供的資訊不需要讀取，除非您的目標.NET Framework 3.5 或更低。
 
-Tuple 會編譯成其中一種數個泛型類型，所有具名物件`System.Tuple`的多載上的引數數目或類型參數的數目。 當您從另一種語言，例如 C# 或 Visual Basic 中，檢視時，或當您使用一種工具，並不知道 F # 建構，元組類型會出現在這種形式。 `Tuple` .NET Framework 4 中導入類型。 如果您的目標是舊版的.NET Framework，編譯器會使用新版[System.Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3)從 F # 核心程式庫 2.0 版。 此文件庫中的類型僅用於在 2.0、 3.0 和 3.5 版本的.NET framework 為目標的應用程式。 類型轉送用來確保.NET Framework 2.0 和.NET Framework 4 F # 元件之間的二進位相容性。
+Tuple 會編譯成其中一種數個泛型類型，所有具名物件`System.Tuple`的多載上的引數數目或類型參數的數目。 當您從另一種語言，例如 C# 或 Visual Basic 中，檢視時，或當您使用一種工具，並不知道 F# 建構，元組類型會出現在這種形式。 `Tuple` .NET Framework 4 中導入類型。 如果您的目標是舊版的.NET Framework，編譯器會使用新版[System.Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3)從 F# 核心程式庫 2.0 版。 此文件庫中的類型僅用於在 2.0、 3.0 和 3.5 版本的.NET framework 為目標的應用程式。 類型轉送用來確保.NET Framework 2.0 和.NET Framework 4 F# 元件之間的二進位相容性。
 
 ### <a name="compiled-form-of-struct-tuples"></a>已編譯的結構元組的形式
 

@@ -21,14 +21,12 @@ helpviewer_keywords:
 - network resources, configuring Internet applications
 - Internet, default proxy
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: d2f3f015689510237142572f230b53ba7bd393ca
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bdc63064d3f0d809c196e77a890ba697f9d4deea
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47237042"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197232"
 ---
 # <a name="configuring-internet-applications"></a>設定網際網路應用程式
 [\<system.Net> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) 組態項目包含應用程式的網路組態資訊。 使用 [\<system.Net> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) 項目，您可以設定 Proxy 伺服器、設定連線管理參數，以及在應用程式中包含自訂驗證和要求模組。  
@@ -37,7 +35,7 @@ ms.locfileid: "47237042"
   
  請務必注意，Microsoft Internet Explorer 設定是與組態設定一起使用，但優先使用後者。  
   
- 下列範例會將預設 Proxy 伺服器位址設定為 http://proxyserver、指出不應該將 Proxy 用作本機位址，以及指定對 contoso.com 網域所在伺服器的所有要求都應該略過 Proxy。  
+ 下列範例會將預設 Proxy 伺服器位址設定為 `http://proxyserver`、指出不應該將 Proxy 用作本機位址，以及指定對 contoso.com 網域所在伺服器的所有要求都應該略過 Proxy。  
   
 ```xml  
 <configuration>  
@@ -56,7 +54,7 @@ ms.locfileid: "47237042"
 </configuration>  
 ```  
   
- 使用 [\<connectionManagement> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md) 項目，以設定可對特定伺服器或所有其他伺服器進行的持續連線數目。 下列範例會設定應用程式使用兩個與 www.contoso.com 伺服器的持續連線、四個 IP 位址為 192.168.1.2 之伺服器的持續連線，以及一個與所有其他伺服器的持續連線。  
+ 使用 [\<connectionManagement> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md) 項目，以設定可對特定伺服器或所有其他伺服器進行的持續連線數目。 下列範例會設定應用程式使用兩個與 `www.contoso.com` 伺服器的持續連線、四個 IP 位址為 192.168.1.2 之伺服器的持續連線，以及一個與所有其他伺服器的持續連線。  
   
 ```xml  
 <configuration>  
@@ -99,7 +97,7 @@ ms.locfileid: "47237042"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)  
  [網路設定結構描述](../../../docs/framework/configure-apps/file-schema/network/index.md)  
  [\<system.Net> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)

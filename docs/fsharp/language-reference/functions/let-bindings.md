@@ -1,6 +1,6 @@
 ---
 title: let 繫結 (F#)
-description: "了解如何使用 F # 'let' 繫結，其關聯的值或函式的識別項。"
+description: 了解如何使用 F# 'let' 繫結，其關聯的值或函式的識別項。
 ms.date: 05/16/2016
 ms.openlocfilehash: 1a35b5a39f2768a18665b5c7fe768af0e7714577
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -110,7 +110,7 @@ let function3 x =
     function1 x
 ```
 
-某些模組具有屬性[RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15)，這表示它們所公開的函式必須以模組名稱加以限定。 比方說，F # 清單模組具有此屬性。
+某些模組具有屬性[RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15)，這表示它們所公開的函式必須以模組名稱加以限定。 比方說，F# 清單模組具有此屬性。
 
 如需有關模組和存取控制的詳細資訊，請參閱 <<c0> [ 模組](../modules.md)並[存取控制](../access-control.md)。
 

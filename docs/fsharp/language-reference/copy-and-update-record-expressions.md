@@ -1,5 +1,5 @@
 ---
-title: '複製和更新記錄運算式 （F #）'
+title: 複製和更新記錄運算式 （F#）
 description: 了解如何撰寫 '複製和更新記錄運算式'，複製現有的記錄，更新指定的欄位，並傳回更新的記錄。
 author: ChrSteinert
 ms.date: 06/04/2016

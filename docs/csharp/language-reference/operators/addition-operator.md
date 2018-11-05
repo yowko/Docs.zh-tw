@@ -1,6 +1,6 @@
 ---
 title: + 運算子 (C# 參考)
-ms.date: 07/20/2015
+ms.date: 10/22/2018
 f1_keywords:
 - +_CSharpKeyword
 helpviewer_keywords:
@@ -8,34 +8,57 @@ helpviewer_keywords:
 - concatenation operator [C#]
 - addition operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: b49694bc8937c58bd295f0f8e57c378802d0dfb9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ae2774d96bc50afa271fffdea445e640e68c3647
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47232380"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192293"
 ---
 # <a name="-operator-c-reference"></a>+ 運算子 (C# 參考)
-`+` 運算子可以作為一元或二元運算子。  
-  
-## <a name="remarks"></a>備註  
- 會預先定義所有數字類型的一元 `+` 運算子。 對數字類型執行一元 `+` 運算的結果就是運算元的值。  
-  
- 會預先定義數字和字串類型的二元 `+` 運算子。 針對數字類型，+ 會計算其兩個運算元的總和。 一或兩個運算元的類型為 string 時，+ 會串連以字串呈現的運算元。  
-  
- 委派類型也會提供可執行委派串連的二元 `+` 運算子。  
-  
- 使用者定義型別可以多載一元 `+` 和二元 `+` 運算子。 整數類資料類型上的作業通常允許用於列舉類型。 如需詳細資訊，請參閱 [operator (C# 參考)](../../../csharp/language-reference/keywords/operator.md)。  
-  
-## <a name="example"></a>範例  
- [!code-csharp[csRefOperators#28](../../../csharp/language-reference/operators/codesnippet/CSharp/addition-operator_1.cs)]  
-  
-## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>請參閱
 
-- [C# 參考](../../../csharp/language-reference/index.md)  
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [C# 運算子](../../../csharp/language-reference/operators/index.md)  
-- [operator (C# 參考)](../../../csharp/language-reference/keywords/operator.md)
+`+` 運算子支援兩種形式：一元加號運算子或二元加法運算子。
+
+使用者定義的型別可以[多載](../keywords/operator.md)一元與二元 `+` 運算子。 多載二元 `+` 運算子時，[加法指派運算子](addition-assignment-operator.md) `+=` 也會隱含地多載。
+
+## <a name="unary-plus-operator"></a>一元加號運算子
+
+一元 `+` 運算子會傳回其運算元的值。 所有數值型別都支援。
+
+## <a name="numeric-addition"></a>數值加法
+
+針對數值型別，`+` 運算子會計算其運算元的和：
+
+[!code-csharp-interactive[numeric addition](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddNumerics)]
+
+## <a name="string-concatenation"></a>字串串連
+
+當其中一或兩個運算元的型別為 [string](../keywords/string.md) 時，`+` 運算子會串連其運算元的字串表示：
+
+[!code-csharp-interactive[string concatenation](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddStrings)]
+
+從 C# 6 開始，[字串插補](../tokens/interpolated.md)提供更便利的方式進行字串格式設定：
+
+[!code-csharp-interactive[string interpolation](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#UseStringInterpolation)]
+
+## <a name="delegate-combination"></a>委派組合
+
+針對 [delegate](../keywords/delegate.md) 型別，`+` 運算子會傳回新的委派執行個體，(當叫用時) 它會叫用第一個運算元，然後再叫用第二個運算元。 如果其中任一個運算元為 `null`，則 `+` 運算子會傳回另一個運算元的值 (也有可能是 `null`)。 下列範例顯示委派如何與 `+` 運算子結合：
+
+[!code-csharp-interactive[delegate combination](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddDelegates)]
+
+如需委派型別的詳細資訊，請參閱[委派](../../programming-guide/delegates/index.md)。
+
+## <a name="c-language-specification"></a>C# 語言規格
+
+如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的[一元加號運算子](~/_csharplang/spec/expressions.md#unary-plus-operator)與[加法運算子](~/_csharplang/spec/expressions.md#addition-operator)小節。
+
+## <a name="see-also"></a>另請參閱
+
+- [C# 參考](../index.md)
+- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 運算子](index.md)
+- [字串內插補點](../tokens/interpolated.md)
+- [如何：串連多個字串](../../how-to/concatenate-multiple-strings.md)
+- [委派](../../programming-guide/delegates/index.md)
+- [Checked 與 Unchecked](../keywords/checked-and-unchecked.md)

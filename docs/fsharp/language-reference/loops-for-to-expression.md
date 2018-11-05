@@ -1,6 +1,6 @@
 ---
 title: 迴圈：for...to 運算式 (F#)
-description: '請參閱如何 F # for...in...運算式用來在迴圈中逐一查看某個範圍的迴圈變數的值。'
+description: 請參閱如何 F# for...in...運算式用來在迴圈中逐一查看某個範圍的迴圈變數的值。
 ms.date: 05/16/2016
 ms.openlocfilehash: 8160fd30c4f3afe8bb6b58f468802ef1c0ef32ee
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

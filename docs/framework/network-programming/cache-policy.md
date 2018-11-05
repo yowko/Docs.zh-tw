@@ -10,19 +10,17 @@ helpviewer_keywords:
 - content cache policies
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: afaa4389940bd16ee2685c2ed64fbec4626d96e1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bd115621db369a28a51e7c5de8dd4095eca80901
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47193144"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50199431"
 ---
 # <a name="cache-policy"></a>快取原則
 快取原則所定義的規則用來判斷是否可以使用所要求資源的快取複本來滿足要求。 應用程式指定有效期限的用戶端快取需求，但有效的快取原則是由用戶端快取需求、伺服器內容到期需求和伺服器重新驗證需求所決定。 用戶端快取原則與伺服器需求的互動一律會導致最保守的快取原則，協助確保將最新內容傳回給用戶端應用程式。  
   
- 快取原則是以位置為基礎或以時間為基礎。 以位置為基礎的快取原則會根據所要求資源可以使用的位置，定義快取項目的有效期限。 以時間為基礎的快取原則會使用擷取資源的時間、與資源一起傳回的標頭，以及目前時間，定義快取項目的有效期限。 大部分的應用程式可以使用以時間為基礎的預設快取原則，以實作可從 [http://www.ietf.org](http://www.ietf.org/) 取得之 RFC 2616 中所指定的快取原則。  
+ 快取原則是以位置為基礎或以時間為基礎。 以位置為基礎的快取原則會根據所要求資源可以使用的位置，定義快取項目的有效期限。 以時間為基礎的快取原則會使用擷取資源的時間、與資源一起傳回的標頭，以及目前時間，定義快取項目的有效期限。 大部分的應用程式可以使用以時間為基礎的預設快取原則，以實作可從[網際網路工程任務推動小組 (IETF)](https://www.ietf.org/) 網站取得之 RFC 2616 中所指定的快取原則。  
   
  下表中所述的類別是用來指定快取原則。  
   
@@ -40,7 +38,7 @@ ms.locfileid: "47193144"
   
  如需示範如何建立和使用快取原則的程式碼範例，請參閱[設定網路應用程式的快取功能](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [網路應用程式的快取管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
  [以位置為基礎的快取原則](../../../docs/framework/network-programming/location-based-cache-policies.md)  
  [以時間為基礎的快取原則](../../../docs/framework/network-programming/time-based-cache-policies.md)  

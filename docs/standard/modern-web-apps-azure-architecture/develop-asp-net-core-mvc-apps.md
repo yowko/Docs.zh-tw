@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 2fd3eb1e123959130884b96ee9d2e59b83c41b0a
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: de6b2e6650d173d325b2a717f5ee47506c307de7
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404641"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308587"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>開發 ASP.NET Core MVC 應用程式
 
@@ -64,7 +64,7 @@ public class ProductsController : Controller
 
 如果您使用模型驗證，請務必檢查模型是否有效，再執行任何狀態改變命令，以確保您的應用程式不會遭到無效資料損毀。 您可以使用[篩選條件](/aspnet/core/mvc/controllers/filters)，避免需要在每個動作中新增程式碼來執行此作業。 ASP.NET Core MVC 篩選條件可讓您攔截要求群組，以便可根據目標套用一般原則和跨領域關注。 您可以將篩選條件套用至個別動作、整個控制器，或針對應用程式全域套用。
 
-對於 Web API，ASP.NET Core MVC 支援[「內容交涉」](/aspnet/core/mvc/models/formatting)，可讓要求指定回應的格式化方式。 根據要求中提供的標頭，傳回資料的動作會將回應格式化為 XML、JSON 或其他支援的格式。 這項功能可讓具有不同資料格式需求的多個用戶端使用相同的 API。
+對於 Web API，ASP.NET Core MVC 支援[「內容交涉」](/aspnet/core/mvc/models/formatting)，可讓要求指定回應的格式化方式。 根據要求中提供的標頭，傳回資料的動作會將回應格式化為 XML、JSON 或其他支援的格式。 此功能可讓具有不同資料格式需求的多個用戶端使用相同的 API。
 
 > ### <a name="references--mapping-requests-to-responses"></a>參考資料 - 將要求對應至回應
 >
@@ -79,7 +79,7 @@ public class ProductsController : Controller
 
 ## <a name="working-with-dependencies"></a>使用相依性
 
-ASP.NET Core 已內建支援，並在內部使用稱為[相依性插入](/aspnet/core/fundamentals/dependency-injection)的技術。 相依性插入是在應用程式的不同組件之間啟用鬆散結合的一項技術。 建議您啟用鬆散結合，因為它可讓您更輕鬆地隔離應用程式組件，以便進行測試或取代。 此外，變更應用程式的某個組件，也較不可能會對應用程式的其他地方造成非預期的影響。 相依性插入是以相依性反轉準則為基礎，而且通常是實現開啟/關閉準則的關鍵。 當您評估應用程式搭配其相依性的運作情況時，請注意[靜態黏貼](https://deviq.com/static-cling/)程式碼異味，並記住「[New 就是黏附](https://ardalis.com/new-is-glue)」此一箴言。
+ASP.NET Core 已內建支援，並在內部使用稱為[相依性插入](/aspnet/core/fundamentals/dependency-injection)的技術。 相依性插入是在應用程式的不同組件之間啟用鬆散結合的一個技術。 建議您啟用鬆散結合，因為它可讓您更輕鬆地隔離應用程式組件，以便進行測試或取代。 此外，變更應用程式的某個組件，也較不可能會對應用程式的其他地方造成非預期的影響。 相依性插入是以相依性反轉準則為基礎，而且通常是實現開啟/關閉準則的關鍵。 當您評估應用程式搭配其相依性的運作情況時，請注意[靜態黏貼](https://deviq.com/static-cling/)程式碼異味，並記住「[New 就是黏附](https://ardalis.com/new-is-glue)」此一箴言。
 
 靜態黏貼發生於您的類別呼叫靜態方法或存取靜態屬性時，並對基礎結構具有副作用或相依性。 例如，如果您有一個方法呼叫靜態方法，而該方法接著寫入資料庫，則您的方法會與資料庫緊密結合。 任何中斷資料庫呼叫的項目都會中斷您的方法。 測試這類方法眾所周知很困難，因為這類測試需要商用模擬程式庫來模擬靜態呼叫，或只能透過適當的測試資料庫進行測試。 未相依於基礎結構的靜態呼叫 (特別是完全無狀態的呼叫) 可安心呼叫，不會影響結合或可測試性 (將程式碼結合到靜態呼叫本身除外)。
 

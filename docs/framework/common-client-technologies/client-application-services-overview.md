@@ -5,15 +5,15 @@ helpviewer_keywords:
 - client application services, classes
 - client application services, about client application services
 ms.assetid: f0a2da13-e282-4fd7-88a1-f9102c9aeab1
-ms.openlocfilehash: 55d96039f430bece3cda6136d63dbf287e8fc744
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fda9c47f6c446369e0cd774a61375a06825e772f
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515378"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836969"
 ---
 # <a name="client-application-services-overview"></a>用戶端應用程式服務概觀
-用戶端應用程式服務簡化了從 Windows Forms 和 Windows Presentation Foundation (WPF) 應用程式對 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 登入、角色和設定檔服務的存取。 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 應用程式服務隨附於 [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] 和 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] 的 Microsoft ASP.NET 2.0 AJAX Extensions 中。 這些服務可讓多個 Web 和 Windows 應用程式從單一伺服器共用使用者資訊與使用者管理功能。  
+用戶端應用程式服務簡化了從 Windows Forms 和 Windows Presentation Foundation (WPF) 應用程式對 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 登入、角色和設定檔服務的存取。 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 應用程式服務隨附於 Visual Studio 2008 和 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] 的 Microsoft ASP.NET 2.0 AJAX 擴充功能中。 這些服務可讓多個 Web 和 Windows 應用程式從單一伺服器共用使用者資訊與使用者管理功能。  
   
  用戶端應用程式服務包含可以插入 Web 服務擴充性模型的用戶端服務提供者，讓 Windows 應用程式能夠提供下列功能：  
   
@@ -60,7 +60,7 @@ ms.locfileid: "43515378"
 > [!NOTE]
 >  所有的用戶端應用程式服務 API 均為同步。 用戶端應用程式服務不直接支援非同步行為。  
   
- 用戶端應用程式服務提供者實作或擴充標準 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 型別，但不實作這些型別所定義的每個成員和功能。 例如，您無法使用用戶端應用程式服務提供者，實作用以建立新使用者和管理角色成員資格的使用者管理應用程式。 若要實作這項功能，您必須已在使用 Web 應用程式和伺服器端程式碼。 若要判斷哪些成員尚未實作，請參閱參考文件。您可以從這份資料表中的連結來存取這份參考文件。  
+ 用戶端應用程式服務提供者實作或擴充標準 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 型別，但不實作這些型別所定義的每個成員和功能。 例如，您無法使用用戶端應用程式服務提供者，實作用以建立新使用者和管理角色成員資格的使用者管理應用程式。 若要實作此功能，您必須已在使用 Web 應用程式和伺服器端程式碼。 若要判斷哪些成員尚未實作，請參閱參考文件。您可以從這份資料表中的連結來存取這份參考文件。  
   
 |類別|描述|  
 |-----------|-----------------|  
@@ -76,7 +76,7 @@ ms.locfileid: "43515378"
 |<xref:System.Web.ClientServices.Providers.SettingsSavedEventArgs>|此類別會提供用於 <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved?displayProperty=nameWithType> 事件處理常式的 <xref:System.Web.ClientServices.Providers.SettingsSavedEventArgs.FailedSettingsList%2A> 屬性。|  
 |<xref:System.Web.ClientServices.Providers.UserValidatedEventArgs>|此類別會提供用於 <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.UserValidated> 事件處理常式的 <xref:System.Web.ClientServices.Providers.UserValidatedEventArgs.UserName%2A> 屬性。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [用戶端應用程式服務](../../../docs/framework/common-client-technologies/client-application-services.md)  
  [如何：設定用戶端應用程式服務](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
  [操作說明：使用用戶端應用程式服務實作使用者登入](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 916db7ec9bee0c85db1f2fcf4db7a9f8a61f9be3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3072be4e870b64edcea32bb7159db8c64c50d840
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744079"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50183096"
 ---
 # <a name="how-to-build-a-multifile-assembly"></a>如何：建置多檔案組件
 本文說明如何建立多檔案組件，並提供說明程序中每個步驟的程式碼。  
@@ -96,8 +96,8 @@ ms.locfileid: "32744079"
   
      您可以使用 [MSIL 反組譯工具 (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 來檢查組件的內容，或判斷檔案為組件或模組。  
   
-## <a name="see-also"></a>請參閱  
- [建立組件](../../../docs/framework/app-domains/create-assemblies.md)  
- [操作說明：檢視組件內容](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
- [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [多檔案組件](../../../docs/framework/app-domains/multifile-assemblies.md)
+## <a name="see-also"></a>另請參閱  
+- [建立組件](../../../docs/framework/app-domains/create-assemblies.md)  
+- [操作說明：檢視組件內容](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
+- [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+- [多檔案組件](../../../docs/framework/app-domains/multifile-assemblies.md)

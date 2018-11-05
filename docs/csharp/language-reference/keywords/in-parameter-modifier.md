@@ -4,16 +4,16 @@ ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: 54abd5192d0d9bb49be0a9feb8e5e4eaeb691a0c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 199d2d54a1937b9982131b8cc7f1c777f656d7a9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512011"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199405"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>in 參數修飾詞 (C# 參考)
 
-`in` 關鍵字會導致引數由參考傳遞。 它就像 [ref](ref.md) 或 [out](out-parameter-modifier.md) 關鍵字，不同的是 `in` 引數不能被呼叫的方法修改。 鑑於 `ref` 引數可能會被修改，`out` 引數必須由呼叫者修改，且這些修改在呼叫的內容中是可觀察的。
+`in` 關鍵字會導致引數由參考傳遞。 它就像 [ref](ref.md) 或 [out](out-parameter-modifier.md) 關鍵字，不同的是 `in` 引數不能被呼叫的方法修改。 鑑於 `ref` 引數可能會被修改，`out` 引數必須由呼叫方法修改，且那些修改在呼叫的內容中是可觀察的。
 
 [!code-csharp-interactive[cs-in-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/InParameterModifier.cs#1)]  
 
@@ -118,10 +118,10 @@ Method(in i); // passed by readonly reference, explicitly using `in`
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)  
 - [C# 程式設計指南](../../programming-guide/index.md)  
 - [C# 關鍵字](index.md)  
 - [方法參數](method-parameters.md)  
-- [具備實值型別的參考語意](../../reference-semantics-with-value-types.md)  
+- [撰寫安全、有效率的程式碼](../../write-safe-efficient-code.md)  

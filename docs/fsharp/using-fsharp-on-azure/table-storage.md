@@ -1,5 +1,5 @@
 ---
-title: '開始使用 Azure 資料表儲存體使用 F #'
+title: 開始使用 Azure 資料表儲存體使用 F#
 description: 使用 Azure 資料表儲存體或 Azure Cosmos DB 在雲端中儲存結構化的資料。
 author: sylvanc
 ms.date: 03/26/2018
@@ -10,7 +10,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "43519531"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>開始使用 Azure 資料表儲存體和 Azure Cosmos DB 資料表 API 使用 F # # 
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>開始使用 Azure 資料表儲存體和 Azure Cosmos DB 資料表 API 使用 F# # 
 
 Azure 資料表儲存體是一項服務，將結構化的 NoSQL 資料儲存在雲端中。 資料表儲存體是具有無結構描述設計的索引鍵/屬性存放區。 資料表儲存體沒有結構描述，因為很容易就能隨著應用程式發展需求改寫資料。 快速且符合成本效益的所有類型的應用程式資料的存取。 資料表儲存體通常是大幅降低成本比傳統 SQL 類似的磁碟區的資料。
 
@@ -30,16 +30,16 @@ Azure Cosmos DB 會提供資料表 API 應用程式，會寫入 Azure 表格儲�
 
 ## <a name="about-this-tutorial"></a>關於本教學課程
 
-本教學課程會示範如何撰寫 F # 程式碼來執行一些常見的工作，使用 Azure 資料表儲存體或 Azure Cosmos DB 資料表 API，包括建立和刪除資料表並插入、 更新、 刪除和查詢資料表資料。
+本教學課程會示範如何撰寫 F# 程式碼來執行一些常見的工作，使用 Azure 資料表儲存體或 Azure Cosmos DB 資料表 API，包括建立和刪除資料表並插入、 更新、 刪除和查詢資料表資料。
 
 ## <a name="prerequisites"></a>必要條件
 
 若要使用本指南，您必須先[建立 Azure 儲存體帳戶](/azure/storage/storage-create-storage-account)或是[Azure Cosmos DB 帳戶](https://azure.microsoft.com/try/cosmosdb/)。
 
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>建立 F # 指令碼，並開始 F # Interactive
+## <a name="create-an-f-script-and-start-f-interactive"></a>建立 F# 指令碼，並開始 F# Interactive
 
-這篇文章中的範例可以用於 F # 應用程式或 F # 指令碼。 若要建立 F # 指令碼，建立的檔案`.fsx`擴充功能，例如`tables.fsx`，F # 開發環境中。
+這篇文章中的範例可以用於 F# 應用程式或 F# 指令碼。 若要建立 F# 指令碼，建立的檔案`.fsx`擴充功能，例如`tables.fsx`，F# 開發環境中。
 
 接下來，使用[套件管理員](package-management.md)這類[Paket](https://fsprojects.github.io/Paket/)或是[NuGet](https://www.nuget.org/)安裝`WindowsAzure.Storage`封裝和參考`WindowsAzure.Storage.dll`使用指令碼中`#r`指示詞。 請勿重新`Microsoft.WindowsAzure.ConfigurationManager`才能取得 Microsoft.Azure 命名空間。
 

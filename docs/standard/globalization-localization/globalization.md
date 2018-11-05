@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b59e0bda45b0b45b49c22d49ec2556fbcfef75d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2f3bf29b9b4d216483ea0c81cc787c80fc8b9e6f
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44221905"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453355"
 ---
 # <a name="globalization"></a>全球化
 全球化涉及設計和開發世界性的應用程式，該類應用程式支援當地語系化的介面和地區資料，可供多種文化特性的使用者使用。 在開始設計階段之前，您應該先決定您的應用程式要支援哪些文化特性。 雖然應用程式將單一文化特性或區域作為預設，您仍可加以設計及撰寫，使其可輕易延伸至其他文化特性或地區的使用者。  
@@ -71,7 +71,7 @@ ms.locfileid: "44221905"
   
  包括 Windows 作業系統在內的許多應用程式和作業系統，也可以使用字碼頁代表字元集。 字碼頁通常包含 0x00 到 0x7F 的標準 ASCII 值，並將其他字元對應到其餘從 0x80 到 0xFF 的值。 0x80 到 0xFF 值的解譯取決於特定字碼頁。 因此，您應該盡可能避免在全球化應用程式中使用字碼頁。  
   
- 下列範例說明在系統上的預設字碼頁與儲存資料的字碼頁不同的情況下，解譯字碼頁資料所可能造成的危險性。 (為了模擬這項案例，此範例明確地指定不同的字碼頁。)首先，此範例會定義由希臘文字母大寫字元所組成的陣列。 它使用字碼頁 737 (也稱為 MS-DOS 希臘文) 將它們編碼成位元組陣列，並將其儲存至檔案。 如果擷取檔案，並使用字碼頁 737 將位元組陣列解碼，則會還原原始的字元。 然而，如果擷取檔案但使用字碼頁 1252 (也稱作 Windows-1252，代表拉丁字母的字元) 將位元組陣列解碼，則會遺失原始的字元。  
+ 下列範例說明在系統上的預設字碼頁與儲存資料的字碼頁不同的情況下，解譯字碼頁資料所可能造成的危險性。 (為了模擬此案例，此範例明確地指定不同的字碼頁。)首先，此範例會定義由希臘文字母大寫字元所組成的陣列。 它使用字碼頁 737 (也稱為 MS-DOS 希臘文) 將它們編碼成位元組陣列，並將其儲存至檔案。 如果擷取檔案，並使用字碼頁 737 將位元組陣列解碼，則會還原原始的字元。 然而，如果擷取檔案但使用字碼頁 1252 (也稱作 Windows-1252，代表拉丁字母的字元) 將位元組陣列解碼，則會遺失原始的字元。  
   
  [!code-csharp[Conceptual.Globalization#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/codepages1.cs#1)]
  [!code-vb[Conceptual.Globalization#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/codepages1.vb#1)]  
@@ -114,7 +114,7 @@ ms.locfileid: "44221905"
   
  若要有條件地存取某些資源，通常會執行相等比較。 例如，您可能會執行相等比較，以驗證密碼或確認檔案存在。 這類非語言比較應該一律是序數，而不區分文化特性。 一般而言，您應該使用 <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> 值 (適用於密碼等字串)，或 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 值 (適用於檔案名稱或 URI 等字串) 來呼叫執行個體 <xref:System.String.Equals%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 方法或靜態 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 方法。  
   
- 相等比較有時會涉及搜尋或子字串比較，而不是呼叫 <xref:System.String.Equals%2A?displayProperty=nameWithType> 方法。 在某些情況下，您可以使用子字串搜尋來判斷該子字串是否等於另一個字串。 如果這項比較的目的非關語言，仍應為序數而非區分文化特性的搜尋。  
+ 相等比較有時會涉及搜尋或子字串比較，而不是呼叫 <xref:System.String.Equals%2A?displayProperty=nameWithType> 方法。 在某些情況下，您可以使用子字串搜尋來判斷該子字串是否等於另一個字串。 如果這個比較的目的非關語言，仍應為序數而非區分文化特性的搜尋。  
   
  下列範例說明非語言資料的區分文化特性搜尋所帶來的危險。 `AccessesFileSystem` 方法設計用來禁止開頭為"FILE" 之子字串的 URI 存取檔案系統。 若要這樣做，它會使用字串 "FILE" 對 URI 開頭執行區分文化特性而不區分大小寫的比較。 因為存取檔案系統的 URI 可以使用 "FILE:" 或 "file:" 作為開頭，因此隱含假設該 "i" (U+0069) 一律為 "I" (U+0049) 的小寫對應項。 不過，在土耳其文和亞塞拜然文中，大寫版本的 "i" 為 "İ" (U+0130)。 有鑑於此差異，區分文化特性的比較可在應該禁止存取檔案系統時，允許予以使用。  
   
@@ -197,7 +197,7 @@ ms.locfileid: "44221905"
   
 -   使用不區分文化特性的格式化慣例儲存字串。  
   
- 下列範例將示範最後一項方法。 它使用靜態 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 屬性所傳回的不區分文化特性的格式化慣例。  
+ 下列範例將示範最後一個方法。 它使用靜態 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 屬性所傳回的不區分文化特性的格式化慣例。  
   
  [!code-csharp[Conceptual.Globalization#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates3.cs#4)]
  [!code-vb[Conceptual.Globalization#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates3.vb#4)]  
@@ -231,7 +231,7 @@ ms.locfileid: "44221905"
 3/30/2013 6:00:00 PM Local  
 ```  
   
- 若要精確地反映代表單一時間點的時間和日期值，無論資料還原序列化所在系統的時區為何，您可以執行下列其中一項︰  
+ 若要精確地反映代表單一時間點的時間和日期值，無論資料還原序列化所在系統的時區為何，您可以執行下列其中一個動作︰  
   
 -   使用 "o" (來回) 標準格式字串將值作為字串儲存。 然後在目標系統上將其還原序列化。  
   
@@ -332,7 +332,7 @@ ms.locfileid: "44221905"
   
 -   將數字序列化為二進位檔，而不是字串格式。  
   
- 下列範例將示範最後一項方法。 其將 <xref:System.Double> 值的陣列序列化，然後還原序列化，並使用英文 (美國) 和法文 (法國) 文化特性的格式化慣例加以顯示。  
+ 下列範例將示範最後一個方法。 其將 <xref:System.Double> 值的陣列序列化，然後還原序列化，並使用英文 (美國) 和法文 (法國) 文化特性的格式化慣例加以顯示。  
   
  [!code-csharp[Conceptual.Globalization#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/numbers3.cs#7)]
  [!code-vb[Conceptual.Globalization#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/numbers3.vb#7)]  

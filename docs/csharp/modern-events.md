@@ -3,12 +3,12 @@ title: 更新的 .NET Core 事件模式
 description: 了解 .NET Core 事件模式如何啟用回溯相容性的彈性，以及如何使用非同步訂閱者來實作安全事件處理。
 ms.date: 06/20/2016
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: 8f28c3ea9d8cf3e8fc68953c79def5744eb5abe4
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 3cab80a0f4fcd3343fdeff265135f1503c036514
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827176"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188478"
 ---
 # <a name="the-updated-net-core-event-pattern"></a>更新的 .NET Core 事件模式
 
@@ -18,10 +18,10 @@ ms.locfileid: "34827176"
 
 這為您增加彈性，且與舊版相容。 讓我們開始使用彈性。 System.EventArgs 類別導入了方法 `MemberwiseClone()`，它會建立物件的淺層複本。
 該方法必須使用反映，才能針對 `EventArgs` 的任何衍生類別實作其功能。 在特定的衍生類別中很容易建立該功能。 它會有效表示衍生自 System.EventArgs 的是條件約束，會限制您的設計，但不提供任何額外的好處。
-事實上，您可以變更 `FileFoundArgs` 和 `SearchDirectoryArgs` 的定義，讓它們不衍生自 `EventArgs`。
+事實上，您可以變更 `FileFoundArgs` 與 `SearchDirectoryArgs` 的定義，讓它們不衍生自 `EventArgs`。
 程式運作完全相同。
 
-如果您再進行一項變更，還可以將 `SearchDirectoryArgs` 變更為結構：
+如果您再進行一次變更，還可以將 `SearchDirectoryArgs` 變更為結構：
 
 [!code-csharp[SearchDir](../../samples/csharp/events/Program.cs#DeclareSearchEvent "Define search directory event")]
 
@@ -29,7 +29,7 @@ ms.locfileid: "34827176"
 
 您不應該將 `FileFoundArgs` 從 class (參考型別) 變更為 struct (實值型別)。 這是因為處理取消的通訊協定需要以傳址方式傳遞事件引數。 如果進行了相同的變更，則檔案搜尋類別永遠不會觀察到任何事件訂閱者所做的任何變更。 新的結構複本會用於每個訂閱者，且該複本和檔案搜尋物件看到的複本不同。
 
-接下來，我們要考慮如何讓這項變更與舊版相容。
+接下來，我們要考慮如何讓此變更與舊版相容。
 移除條件約束不會影響任何現有的程式碼。 任何現有的事件引數型別仍衍生自 `System.EventArgs`。
 回溯相容性是它們繼續衍生自 `System.EventArgs` 的一個主要原因。 任何現有的事件訂閱者都會是遵循傳統模式事件的訂閱者。
 

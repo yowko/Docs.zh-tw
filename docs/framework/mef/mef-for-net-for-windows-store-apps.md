@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: 7667770e-d163-4ad6-a303-085cf73db2f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9cb7807fbfc1fbaf039fd7aef04331210dfa7cfa
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 39b7228de775f4dc92e932731ad9967315437e6e
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47089931"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121112"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>適用於 Windows 市集應用程式的 .NET 的 MEF
 <xref:System.Composition?displayProperty=nameWithType> 及其子命名空間包含適用於使用 Managed Extensibility Framework (MEF) 開發可擴充 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式的類型。 這些命名空間為 [!INCLUDE[win8](../../../includes/win8-md.md)] 作業系統 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] 子集的一部分。  
   
- 這些命名空間不是隨 .NET Framework 所散發核心類別庫的一部分。 若要安裝這些命名空間，請在 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] 中開啟專案，從 [專案] 功能表中選擇 [管理 NuGet 套件]，然後在線上搜尋 Microsoft.Composition 套件。  
+ 這些命名空間不是隨 .NET Framework 所散發核心類別庫的一部分。 若要安裝這些命名空間，請在 Visual Studio 中開啟專案，從 [專案] 功能表中選擇 [管理 NuGet 套件]，然後在線上搜尋 Microsoft.Composition 套件。  
   
 -   <xref:System.Composition?displayProperty=nameWithType> 提供的類別會構成 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式的核心 MEF。  
   
@@ -26,7 +26,7 @@ ms.locfileid: "47089931"
   
  如需 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] 及其所包含命名空間與類型清單的詳細資訊，請參閱 Windows 開發人員中心的[適用於 Windows 市集應用程式的 .NET 概觀](https://go.microsoft.com/fwlink/p/?LinkID=238312)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [適用於 Windows 市集應用程式的 .NET 概觀](https://go.microsoft.com/fwlink/p/?LinkID=238312)  
  [適用於 Windows 市集應用程式的 .NET - 所支援的應用程式開發介面](https://go.microsoft.com/fwlink/p/?LinkID=247912)  
  [Managed Extensibility Framework (MEF)](../../../docs/framework/mef/index.md)

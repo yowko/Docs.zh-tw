@@ -1,27 +1,28 @@
 ---
 title: ref 關鍵字 (C# 參考)
-ms.date: 03/06/2018
+ms.date: 10/24/2018
 f1_keywords:
 - ref_CSharpKeyword
 - ref
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: e0b82de125246e95d8dce2a7afc20119a8a1fe4f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9165a388122eeda5ca0499c6d75c2266780a6004
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47207953"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195966"
 ---
 # <a name="ref-c-reference"></a>ref (C# 參考)
 
 `ref` 關鍵字指出以傳參考方式傳遞的值。 它用於三個不同的內容：
 
-- 在方法簽章和方法呼叫中，以傳參考方式將引數傳遞給方法。 如需詳細資訊，請參閱[以傳參考方式傳遞引數](#passing-an-argument-by-reference)。
+- 在方法簽章和方法呼叫中，以傳參考方式將引數傳遞給方法。 如需詳細資訊，請參閱[以傳址方式傳遞引數](#passing-an-argument-by-reference)。
 - 在方法簽章中，以傳參考方式將值傳回給呼叫者。 如需詳細資訊，請參閱[參考傳回值](#reference-return-values)。
 - 在成員主體中，指出參考傳回值儲存在本機作為呼叫者想要修改的參考，或是一般而言，以參考存取另一個值的區域變數。 如需詳細資訊，請參閱 [ref 區域變數](#ref-locals)。
-- 在 `struct` 宣告中來宣告 `ref struct` 或 `ref readonly struct`。 如需詳細資訊，請參閱[具備實值型別的參考語意](../../reference-semantics-with-value-types.md)。
+- 在 `struct` 宣告中來宣告 `ref struct` 或 `ref readonly struct`。 如需詳細資訊，請參閱 [ref struct 型別](#ref-struct-types)。
+
 
 ## <a name="passing-an-argument-by-reference"></a>以傳參考方式傳遞引數
 
@@ -89,6 +90,8 @@ return ref DecimalArray[0];
 
 為了讓呼叫者修改物件的狀態，參考傳回值必須儲存至明確定義為 [ref 區域變數](#ref-locals)的變數。
 
+所呼叫的方法也可能將傳回值宣告為 `ref readonly`，以透過傳址方式將值傳回，並且強制使呼叫程式碼無法修改傳回值。 呼叫的方法可以將值儲存在區域 [ref readonly](#ref-readonly-locals) 變數，以避免複製傳回值。
+
 如需範例，請參閱 [ref 傳回值和 ref 區域變數範例](#a-ref-returns-and-ref-locals-example)。
 
 ## <a name="ref-locals"></a>ref 區域變數
@@ -111,6 +114,10 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
 
 請注意，在這兩個範例中，`ref` 關鍵字必須用在兩個位置，否則編譯器會產生錯誤 CS8172「無法使用值將傳址變數初始化」。
 
+## <a name="ref-readonly-locals"></a>ref readonly 區域變數
+
+ref readonly 區域變數是用來參考傳回值 (由特徵標記中有 `ref readonly` 且使用 `return ref` 的方法或屬性傳回)。 `ref readonly` 區域變數結合了 `ref` 區域變數的屬性和 `readonly` 變數：它是受指派之儲存體的別名，且無法修改。 
+
 ## <a name="a-ref-returns-and-ref-locals-example"></a>ref 傳回值和 ref 區域變數範例
 
 下面範例會定義具有 `Title` 和 `Author` 這兩個 <xref:System.String> 欄位的 `Book` 類別。 它也會定義 `BookCollection` 類別，以包含 `Book` 物件的私用陣列。 以傳參考方式傳回個別書籍物件，方法是呼叫其 `GetBookByTitle` 方法。
@@ -121,13 +128,30 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
 
 [!code-csharp[csrefKeywordsMethodParams#6](~/samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#5)]
 
+## <a name="ref-struct-types"></a>ref struct 型別
+
+將 `ref` 修飾詞新增到 `struct` 陳述式會將該類型的執行個體定義成必須堆疊配置。 換句話說，這些類型的執行個體絶對不會在堆積上建立為另一個類別的成員。 此功能的主要動機是 <xref:System.Span%601> 及相關的結構。
+
+希望將類型 `ref struct` 保留為配置有堆疊的變數之目標，會讓編譯器強制對所有 `ref struct` 類型進行數項規則。
+
+- 您無法分隔 `ref struct`。 您不可為類型是 `object`、`dynamic` 或任何介面類型的變數，指派 `ref struct` 類型。
+- `ref struct` 型別無法實作介面。
+- 您不可將 `ref struct` 宣告為類別或一般結構的成員。
+- 您不可在非同步方法中宣告類型為 `ref struct` 的區域變數。 但可以在傳回 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601> 或 `Task` 之類型別的同步方法中，宣告這些區域變數。
+- 您不可在迭代器中宣告 `ref struct` 區域變數。
+- 您不可在 Lambda 運算式或區域函式中擷取 `ref struct` 變數。
+
+這些限制可確保您不會意外使用 `ref struct` 而將它升階成受控堆積。
+
+您可以結合修飾詞來將結構宣告為 `readonly ref`。 `readonly ref struct` 結合了 `ref struct` 與 `readonly struct` 宣告的優點與限制。
+
 ## <a name="c-language-specification"></a>C# 語言規格
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [具備實值型別的參考語意](../../reference-semantics-with-value-types.md)  
+- [撰寫安全、有效率的程式碼](../../write-safe-efficient-code.md)  
 - [傳遞參數](../../programming-guide/classes-and-structs/passing-parameters.md)  
 - [方法參數](method-parameters.md)  
 - [C# 參考](../index.md)  

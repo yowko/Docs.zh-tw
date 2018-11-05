@@ -1,46 +1,46 @@
 ---
-title: 減少與 project.json 的封裝相依性
+title: 減少與 project.json 的套件相依性
 description: 撰寫以 project.json 為基礎的程式庫時，請降低套件相依性。
 author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: ae314800f789cee363728def8347b5e6990acb0b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 6da7404415e8d485533fc1c9a619cb0706a26aca
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44193601"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50040877"
 ---
-# <a name="reducing-package-dependencies-with-projectjson"></a>減少與 project.json 的封裝相依性
+# <a name="reducing-package-dependencies-with-projectjson"></a>減少與 project.json 的套件相依性
 
-本文涵蓋撰寫 `project.json` 程式庫時，您需要了解的降低封裝相依性的內容。 在本文的最後，您會了解如何撰寫程式庫，令它只使用需要的相依性。 
+本文涵蓋撰寫 `project.json` 程式庫時，您需要了解的降低套件相依性的內容。 在本文的最後，您會了解如何撰寫程式庫，令它只使用需要的相依性。 
 
 ## <a name="why-its-important"></a>為何重要
 
-.NET Core 是由 NuGet 封裝組成的產品。  必要的封裝是 [.NETStandard.Library 中繼封裝](https://www.nuget.org/packages/NETStandard.Library) \(英文\)，由 NuGet 封裝組成的其他封裝。  它提供的一組封裝，保證都能在多個 .NET 實作上運作，例如 .NET Framework、.NET Core 和 Xamarin/Mono。
+.NET Core 是由 NuGet 套件組成的產品。  必要的套件是 [.NETStandard.Library 中繼套件](https://www.nuget.org/packages/NETStandard.Library) \(英文\)，由 NuGet 套件組成的其他套件。  它提供的一組套件，保證都能在多個 .NET 實作上運作，例如 .NET Framework、.NET Core 和 Xamarin/Mono。
 
-不過，您的程式庫有極大的可能不會使用其包含的每個單一封裝。  在撰寫程式庫並透過 NuGet 散發時，最佳的作法是將相依性「修剪」至實際使用的封裝。  這會減少 NuGet 封裝的整體使用量。
+不過，您的程式庫有極大的可能不會使用其包含的每個單一套件。  在撰寫程式庫並透過 NuGet 散發時，最佳的作法是將相依性「修剪」至實際使用的套件。  這會減少 NuGet 套件的整體使用量。
 
 ## <a name="how-to-do-it"></a>作法
 
-目前沒有任何修剪封裝參考的正式 `dotnet` 命令。  您必須改以手動作業。  一般程序如下所示︰
+目前沒有任何修剪套件參考的正式 `dotnet` 命令。  您必須改以手動作業。  一般程序如下所示︰
 
 1. 參考您 `project.json` 的 `dependencies` 區段的 `NETStandard.Library` 版本 `1.6.0`。
 2. 從命令列使用 `dotnet restore` ([請參閱附註](#dotnet-restore-note)) 還原套件。
 3. 檢查 `project.lock.json` 檔案，找出 `NETSTandard.Library` 區段。  它在靠近檔案開頭處。
-4. 複製 `dependencies` 下列出的所有封裝。
-5. 移除 `.NETStandard.Library` 參考，並以複製的封裝取而代之。
-6. 移除您不需要的封裝參考。
+4. 複製 `dependencies` 下列出的所有套件。
+5. 移除 `.NETStandard.Library` 參考，並以複製的套件取而代之。
+6. 移除您不需要的套件參考。
 
 
-您可以下列方法之一，找出不需要的封裝︰
+您可以下列方法之一，找出不需要的套件︰
 
-1. 試驗與錯誤。  這牽涉到移除封裝、還原、查看程式庫是否仍在編譯，以及重複此程序。
-2. 使用諸如 [ILSpy](http://ilspy.net) 或 [.NET 反射程式](http://www.red-gate.com/products/dotnet-development/reflector)等工具預覽參考，查看程式碼實際使用的參考。  接著移除與所用類型不對應的封裝。
+1. 試驗與錯誤。  這牽涉到移除套件、還原、查看程式庫是否仍在編譯，以及重複此程序。
+2. 使用諸如 [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) 或 [.NET 反射程式](https://www.red-gate.com/products/dotnet-development/reflector)等工具預覽參考，查看程式碼實際使用的參考。  接著移除與所用類型不對應的套件。
 
 ## <a name="example"></a>範例 
 
-假設您撰寫的程式庫提供了泛型集合類型的額外功能。  這類程式庫需要依賴如 `System.Collections` 的封裝，但可能完全不依賴如 `System.Net.Http` 的封裝。  如此，將封裝相依性修剪至此程式庫所需就很好！
+假設您撰寫的程式庫提供了泛型集合類型的額外功能。  這類程式庫需要依賴如 `System.Collections` 的套件，但可能完全不依賴如 `System.Net.Http` 的套件。  如此，將套件相依性修剪至此程式庫所需就很好！
 
 若要修剪此程式庫，您可以從 `project.json` 檔案開始，將參考加入 `NETStandard.Library` 版本 `1.6.0`。
 
@@ -91,7 +91,7 @@ ms.locfileid: "44193601"
 }
 ```
 
-接下來，將封裝參考複製到程式庫 `project.json` 檔案的 `dependencies` 區段，取代 `NETStandard.Library` 參考︰
+接下來，將套件參考複製到程式庫 `project.json` 檔案的 `dependencies` 區段，取代 `NETStandard.Library` 參考︰
 
 ```json
 {
@@ -127,9 +127,9 @@ ms.locfileid: "44193601"
 }
 ```
 
-這是很大數量的封裝，其中有許多對擴充集合類型完全沒必要。  您可以手動移除封裝，或使用 [ILSpy](http://ilspy.net) 或 [.NET 反射程式](http://www.red-gate.com/products/dotnet-development/reflector)等工具識別程式碼實際使用的封裝。
+套件數目非常多，其中有許多對擴充集合類型完全沒必要。  您可以手動移除套件，或使用 [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) 或 [.NET 反射程式](https://www.red-gate.com/products/dotnet-development/reflector/)等工具識別程式碼實際使用的套件。
 
-修剪過的封裝可能看起來像這樣︰
+修剪過的套件可能看起來像這樣︰
 
 ```json
 {
@@ -151,7 +151,7 @@ ms.locfileid: "44193601"
 }
 ```
 
-現在，它的使用量比之前依賴 `NETStandard.Library` 中繼封裝時小。
+現在，它的使用量比之前依賴 `NETStandard.Library` 中繼套件時小。
 
 <a name="dotnet-restore-note"></a>
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

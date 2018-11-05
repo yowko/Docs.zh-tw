@@ -2,14 +2,12 @@
 title: Windows 市集應用程式的網路隔離
 ms.date: 03/30/2017
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 97096d6fa41cd25a92c23cd47008b33fb6037190
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 537d94201b3e0ae92707c858f10032848a690004
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195403"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182667"
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Windows 市集應用程式的網路隔離
 <xref:System.Net>、<xref:System.Net.Http> 和 <xref:System.Net.Http.Headers> 命名空間中的類別可以用來開發 Windows 市集應用程式或傳統型應用程式。 在 Windows 市集應用程式中使用時，這些命名空間中的類別受到網路隔離的影響，而網路隔離是 [!INCLUDE[win8](../../../includes/win8-md.md)] 所使用應用程式安全性模型的一部分。 必須在 Windows 市集應用程式的應用程式資訊清單中啟用適當的網路功能，讓系統允許網路存取。  
@@ -27,7 +25,7 @@ ms.locfileid: "47195403"
   
  如需如何設定用於針對網路隔離進行疑難排解之網路功能和隔離工具的詳細資訊，請參閱 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 開發人員文件中的[如何設定網路隔離功能](https://go.microsoft.com/fwlink/?LinkID=228265)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [連線至 Web 服務](https://go.microsoft.com/fwlink/?LinkID=245696)  
  [網路隔離的方針和檢查清單](https://go.microsoft.com/fwlink/?LinkID=228265)  
  [快速入門：使用 HttpClient 進行連線](https://go.microsoft.com/fwlink/?LinkId=245697)  

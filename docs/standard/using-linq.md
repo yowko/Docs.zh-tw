@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: 4e6e361666b6b6ae36b7d4bf02af55a379c8e16e
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 8ce7f39d78006765a49bbd4e3d46c611761a4bd1
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087026"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181731"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (Language Integrated Query)
 
@@ -49,7 +49,7 @@ foreach (var pet in pets)
 }
 ```
 
-程式碼背後的目的不是用來建立新的 `Dictionary<int, Pet>` 並透過迴圈將其加入程式碼中，而是將現有的清單轉換為字典！ LINQ 會保留這項目的，而命令式程式碼不會。
+程式碼背後的目的不是用來建立新的 `Dictionary<int, Pet>` 並透過迴圈將其加入程式碼中，而是將現有的清單轉換為字典！ LINQ 會保留此目的，而命令式程式碼不會。
 
 對等的 LINQ 運算式︰
 
@@ -201,7 +201,7 @@ var results = DirectionsProcessor.GetDirections(start, end)
               .ThenBy(direction => direction.EstimatedTime);
 ```
 
-*   最後是一項更進階的範例︰判斷兩個相同類型執行個體的屬性值是否相等 (從 [此 StackOverflow 文章](http://stackoverflow.com/a/844855)中借用並經過修改)：
+*   最後是一個更進階的範例︰判斷兩個相同類型執行個體的屬性值是否相等 (從 [此 StackOverflow 文章](https://stackoverflow.com/a/844855)中借用並經過修改)：
 
 ```csharp
 public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params string[] ignore) where T : class
@@ -224,7 +224,7 @@ public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params st
 
 ## <a name="plinq"></a>PLINQ
 
-PLINQ 或 Parallel LINQ，都是 LINQ 運算式的平行執行引擎。 換句話說，普通的 LINQ 運算式可以在任意數目的執行緒之間進行完整的平行處理。 這是透過在執行運算式之前呼叫 `AsParallel()` 所完成的。
+PLINQ 或 Parallel LINQ，都是 LINQ 運算式的平行執行引擎。 換句話說，標準 LINQ 運算式可以在任意數目的執行緒上進行完整的平行處理。 這是透過在執行運算式之前呼叫 `AsParallel()` 所完成的。
 
 請考慮下列事項：
 

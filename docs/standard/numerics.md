@@ -1,6 +1,6 @@
 ---
-title: .NET Framework 中的數值
-ms.date: 03/30/2017
+title: .NET 中的數值
+ms.date: 10/18/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - SIMD
@@ -13,22 +13,22 @@ helpviewer_keywords:
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d253e7a32d5f302b095a86ddb5c296d5fa8fa11
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 7f180e459764d6e8e4484072218f01c8bab8a3b5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44209478"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50191144"
 ---
-# <a name="numerics-in-the-net-framework"></a>.NET Framework 中的數值
-.NET Framework 除了沒有理論上限或下限的整數型別 <xref:System.Numerics.BigInteger>、代表複數的型別 <xref:System.Numerics.Complex>，以及 <xref:System.Numerics> 命名空間中一組支援 SIMD 的向量型別之外，也支援標準數值整數和浮點數基本型別。  
+# <a name="numerics-in-net"></a>.NET 中的數值
+
+.NET 除了提供一系列數值整數和浮點基本類型之外，也提供沒有理論上限或下限的整數類型 <xref:System.Numerics.BigInteger?displayProperty=nameWithType>、代表複數的 <xref:System.Numerics.Complex?displayProperty=nameWithType> 類型，以及 <xref:System.Numerics> 命名空間中一組支援 SIMD 的類型。
   
- 此外，啟用 SIMD 的向量型別程式庫 System.Numerics.Vectors 會以 NuGet 套件形式發行。  
+## <a name="integer-types"></a>整數類型
+
+.NET 同時支援帶正負號和不帶正負號的 8、16、32 及 64 位元整數類型，其已列於下表之中：
   
-## <a name="integral-types"></a>整數類資料型別  
- .NET Framework 支援帶正負號和不帶正負號的整數，長度介於 1 到 8 個位元組。 下表列出整數類資料類型和其大小，並指出它們是否帶正負號或不帶正負號，並記錄其範圍。 所有整數都是實值類型。  
-  
-|類型|帶正負號/不帶正負號|大小 (位元組)|最小值|最大值|  
+|類型|帶正負號/不帶正負號|大小 (以位元組為單位)|最小值|最大值|  
 |----------|----------------------|--------------------|-------------------|-------------------|  
 |<xref:System.Byte?displayProperty=nameWithType>|不帶正負號|1|0|255|  
 |<xref:System.Int16?displayProperty=nameWithType>|簽署人|2|-32,768|32,767|  
@@ -39,44 +39,63 @@ ms.locfileid: "44209478"
 |<xref:System.UInt32?displayProperty=nameWithType>|不帶正負號|4|0|4,294,967,295|  
 |<xref:System.UInt64?displayProperty=nameWithType>|不帶正負號|8|0|18,446,744,073,709,551,615|  
   
- 每個整數類資料類型支援一組標準的算術、比較、等號比較、明確轉換和隱含轉換的運算子。 每個整數也包含方法，用以執行相等比較和相對比較、轉換數字的字串表示法為整數以及轉換整數為字串表示法。 除了由標準的運算子所處理的以外，其他數學運算，例如四捨五入和識別兩個整數值的大小，在 <xref:System.Math> 類別中都有提供。 藉由使用 <xref:System.BitConverter> 類別，您也可在整數值中使用個別位元。  
+每個整數類型皆支援一組標準算術運算子。 <xref:System.Math?displayProperty=nameWithType> 類別能提供適用於更廣泛數學函式的方法。
+
+藉由使用 <xref:System.BitConverter?displayProperty=nameWithType> 類別，您也可在整數值中使用個別位元。  
+
+> [!NOTE]  
+> 不帶正負號的整數類型並不符合 CLS 規範。 如需詳細資訊，請參閱 [Language Independence and Language-Independent Components](language-independence-and-language-independent-components.md)。
+
+## <a name="biginteger"></a>BigInteger
+
+<xref:System.Numerics.BigInteger?displayProperty=nameWithType> 結構是不可變的類型，表示任意大的整數，其值在理論上沒有上限或下限。 <xref:System.Numerics.BigInteger> 類型的方法與其他整數類資料類型的方法極為相似。
   
- 請注意不帶正負號的整數類資料類型並不符合 CLS 標準。 如需詳細資訊，請參閱[語言獨立性以及與語言無關的元件](../../docs/standard/language-independence-and-language-independent-components.md)。  
+## <a name="floating-point-types"></a>浮點類型
+
+.NET 包含三個基本浮點類型，如下表所列：
   
-## <a name="floating-point-types"></a>浮點類型  
- .NET Framework 包含三個基本浮點類型，如下表所列。  
+|類型|大小 (以位元組為單位)|大概範圍|精確度|  
+|----------|--------|---------------------|--------------------|  
+|<xref:System.Single?displayProperty=nameWithType>|4|±1.5 x 10<sup>−45</sup> 到 ±3.4 x 10<sup>38</sup>|~6-9 位數|  
+|<xref:System.Double?displayProperty=nameWithType>|8|±5.0 × 10<sup>−324</sup> 至 ±1.7 × 10<sup>308</sup>|~15-17 位數|  
+|<xref:System.Decimal?displayProperty=nameWithType>|16|±1.0 x 10<sup>-28</sup> 到 ±7.9228 x 10<sup>28</sup>|28-29 位數|  
   
-|類型|大小 (以位元組為單位)|最低|最大值|  
-|----------|-----------------------|-------------|-------------|  
-|<xref:System.Double?displayProperty=nameWithType>|8|-1.79769313486232e308|1.79769313486232e308|  
-|<xref:System.Single?displayProperty=nameWithType>|4|-3.402823e38|3.402823e38|  
-|<xref:System.Decimal?displayProperty=nameWithType>|16|-79,228,162,514,264,337,593,543,950,335|79,228,162,514,264,337,593,543,950,335|  
+<xref:System.Single> 和 <xref:System.Double> 類型皆支援代表非數字和無限大的特殊值。 例如，<xref:System.Double> 類型能提供下列值：<xref:System.Double.NaN?displayProperty=nameWithType>、<xref:System.Double.NegativeInfinity?displayProperty=nameWithType> 及 <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>。 您會使用 <xref:System.Double.IsNaN%2A?displayProperty=nameWithType>、<xref:System.Double.IsInfinity%2A?displayProperty=nameWithType>、<xref:System.Double.IsPositiveInfinity%2A?displayProperty=nameWithType> 及 <xref:System.Double.IsNegativeInfinity%2A?displayProperty=nameWithType> 方法來測試這些特殊值。
+
+每個浮點類型皆支援一組標準算術運算子。 <xref:System.Math?displayProperty=nameWithType> 類別能提供適用於更廣泛數學函式的方法。 .NET Core 2.0 和更新版本會包含 <xref:System.MathF?displayProperty=nameWithType> 類別，其能提供可以接受 <xref:System.Single> 類型之引數的方法。
+
+藉由使用 <xref:System.BitConverter?displayProperty=nameWithType> 類別，您也可使用 <xref:System.Double> 和 <xref:System.Single> 中的個別位元。 <xref:System.Decimal?displayProperty=nameWithType> 結構有它自己的方法，為 <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> 和 <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=nameWithType>，用於使用十進位值的個別位元，而且還有一組自己的方法，用於執行一些額外的數學運算。
   
- 每個浮點類型支援一組標準的算術、比較、等號比較、明確轉換和隱含轉換的運算子。 這每一個都包含方法，用以執行相等比較和相對比較、轉換浮點數的字串表示法以及轉換浮點數為字串表示法。 某些額外的數學、代數和三角函數運算都由 <xref:System.Math> 類別提供。 藉由使用 <xref:System.BitConverter> 類別，您也可使用 <xref:System.Double> 和 <xref:System.Single> 中的個別位元。 <xref:System.Decimal?displayProperty=nameWithType> 結構有它自己的方法，為 <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> 和 <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=nameWithType>，用於使用十進位值的個別位元，而且還有一組自己的方法，用於執行一些額外的數學運算。  
+<xref:System.Double> 和 <xref:System.Single> 類型主要供本質上並不精確的值使用 (例如兩個行星之間的距離)，並且供不需較高有效位數和較小進位誤差的應用程式使用。 在需要較高精確度並將進位誤差降到最低的情況下，您應該使用 <xref:System.Decimal?displayProperty=nameWithType> 類型。
+
+> [!NOTE]
+> <xref:System.Decimal> 類型並不會消除進位的需求。 它會將因進位而產生的錯誤降到最低。
   
- <xref:System.Double> 和 <xref:System.Single> 類型主要供本質上並不精確的值使用 (例如太陽系中兩顆星之間的距離)，並且供不需較高有效位數和較小進位誤差的應用程式使用。 在需要較高精確度且不想要進位誤差的情況下，您應該使用 <xref:System.Decimal?displayProperty=nameWithType> 類型。  
+## <a name="complex"></a>Complex
+
+<xref:System.Numerics.Complex?displayProperty=nameWithType> 結構代表複數，也就是具有實部和虛部的數字。 它支援一組標準的算術、比較、等號比較、明確及隱含轉換的運算子，以及數學、代數和三角函數方法。  
   
-## <a name="biginteger"></a>BigInteger  
- <xref:System.Numerics.BigInteger?displayProperty=nameWithType> 是不可變的類型，表示任意大的整數，其值在理論上沒有上限或下限。 <xref:System.Numerics.BigInteger> 類型的方法與其他整數類資料類型的方法極為相似。  
+## <a name="simd-enabled-types"></a>啟用 SIMD 的類型
+
+<xref:System.Numerics> 命名空間包含一組 .NET 啟用 SIMD 的類型。 SIMD (單指令多資料) 作業可在硬體層級進行平行處理。 這能提升向量化運算 (常見於數學、科學及圖形應用程式中) 的輸送量。
   
-## <a name="complex"></a>Complex  
- <xref:System.Numerics.Complex> 類型代表複數，也就是具有實部和虛部的數字。 它支援一組標準的算術、比較、等號比較、明確轉換和隱含轉換的運算子，以及數學、代數和三角函數方法。  
+.NET 啟用 SIMD 的類型包含下列項目：
+
+- <xref:System.Numerics.Vector2>、<xref:System.Numerics.Vector3> 及 <xref:System.Numerics.Vector4> 類型，其代表具有 2、3 及 4 <xref:System.Single> 值的向量。
+
+- 兩種矩陣型別：代表 3x2 矩陣的 <xref:System.Numerics.Matrix3x2>，以及代表 4x4 矩陣的 <xref:System.Numerics.Matrix4x4>。
+
+- <xref:System.Numerics.Plane> 類型，其代表立體空間中的平面。
+
+- <xref:System.Numerics.Quaternion> 類型，其代表用來編碼 3D 實體旋轉的向量。
+
+- <xref:System.Numerics.Vector%601> 類型，其代表指定數值類型的向量，並能提供一組受益於 SIMD 支援的廣泛運算子。 <xref:System.Numerics.Vector%601> 執行個體的計數是固定的，但其值 <xref:System.Numerics.Vector%601.Count%2A?displayProperty=nameWithType> 會相依於執行程式碼之電腦的 CPU。
+  > [!NOTE]
+  > <xref:System.Numerics.Vector%601> 類型沒有包含至 .NET Framework 中。 您必須安裝 [System.Numerics.Vectors](https://www.nuget.org/packages/System.Numerics.Vectors) \(英文\) NuGet 套件以存取這個類型。
   
-## <a name="simd-enabled-vector-types"></a>啟用 SIMD 的向量類型  
- <xref:System.Numerics> 命名空間包含一組適用於 .NET Framework 之支援 SIMD 的向量型別。 SIMD (Single Instruction Multiple Data 作業) 允許在硬體層級平行處理某些作業，因此會大幅提升對向量執行計算的數學、科學和圖形應用程式效能。  
-  
- 以下是 .NET Framework 之啟用 SIMD 的向量類型。  此外，System.Numerics.Vectors 還包含 Plane 類型和 Quaternion 類型。  
-  
--   <xref:System.Numerics.Vector2>、<xref:System.Numerics.Vector3> 及 <xref:System.Numerics.Vector4> 型別，這些是 <xref:System.Single> 類型的 2 維、3 維及 4 維向量。  
-  
--   兩種矩陣型別：代表 3x2 矩陣的 <xref:System.Numerics.Matrix3x2> 和代表 4x4 矩陣的 <xref:System.Numerics.Matrix4x4>。  
-  
--   <xref:System.Numerics.Plane> 和 <xref:System.Numerics.Quaternion> 型別。  
-  
- 啟用 SimD 的向量類型會在 IL 中實作，使其能在未啟用 SimD 的硬體和 JIT 編譯器上使用。 若要利用 SIMD 指令，您必須使用 .NET Framework 4.6 隨附適用於 Managed 程式碼的新 64 位元 JIT 編譯器，來編譯 64 位元應用程式；當以 x64 處理器為目標時，它會加入 SIMD 支援。  
-  
- SIMD 也可做為 [NuGet 套件](https://www.nuget.org/packages/System.Numerics.Vectors)下載。  NuGet 套件也包含泛型 <xref:System.Numerics.Vector%601> 結構，此結構可讓您建立任何基本數值型別的向量。 (基本數值類型包含 <xref:System> 命名空間中 <xref:System.Decimal> 以外的所有數值類型)。此外，<xref:System.Numerics.Vector%601> 結構還提供可供您在使用向量時呼叫的便利方法程式庫。  
-  
+啟用 SIMD 的類型的實作方式，使它們可以搭配未啟用 SIMD 的硬體或 JIT 編譯器使用。 若要運用 SIMD 指令，您的 64 位元應用程式必須由使用 RyuJIT 編譯器的執行階段執行，此編譯器已包含在 .NET Core 和 .NET Framework 4.6 及更新版本中。 它會在以 64 位元處理器為目標時加入 SIMD 支援。
+
 ## <a name="see-also"></a>另請參閱
 
-- [應用程式基本概念](../../docs/standard/application-essentials.md)
+- [應用程式基本概念](application-essentials.md)
+- [Standard Numeric Format Strings](base-types/standard-numeric-format-strings.md)

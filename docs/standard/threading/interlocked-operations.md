@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cbda7114-c752-4f3e-ada1-b1e8dd262f2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 069a95656e7ceaf454c01c47d61ff391bcbed2fe
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 6f96286da84e41e79fb0b6253d6f20eea89da21a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46538881"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201346"
 ---
 # <a name="interlocked-operations"></a>Interlocked 作業
 
@@ -37,7 +37,7 @@ ms.locfileid: "46538881"
   
  在新型處理器上，<xref:System.Threading.Interlocked> 類別的方法通常可透過單一指令來實作。 因此，這些方法能提供極高效能的同步處理作業，並可用來建置更高層級的同步處理機制，例如微調鎖定。  
   
- 如需使用 <xref:System.Threading.Monitor> 和 <xref:System.Threading.Interlocked> 類別組合的範例，請參閱[監視](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db) \(英文\)。  
+ 如需使用 <xref:System.Threading.Monitor> 與 <xref:System.Threading.Interlocked> 類別組合的範例，請參閱 <xref:System.Threading.Monitor>。  
   
 ## <a name="compareexchange-example"></a>CompareExchange 範例
 

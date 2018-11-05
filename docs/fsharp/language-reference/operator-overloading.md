@@ -1,6 +1,6 @@
 ---
 title: 運算子多載 (F#)
-description: '了解如何多載算術的運算子，在類別或記錄類型，然後在 F # 中的全域層級。'
+description: 了解如何多載算術的運算子，在類別或記錄類型，然後在 F# 中的全域層級。
 ms.date: 05/16/2016
 ms.openlocfilehash: 6232ebf215289e6a22b9d77fbd5fa67b82460486
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -47,11 +47,11 @@ static member (~-) (v : Vector)
 
 只有運算子`?`並`?<-`可能會開始`?`。
 
-顯示所有的運算子優先順序 F # 中的資料表可以位於[符號和運算子參考](symbol-and-operator-reference/index.md)。
+顯示所有的運算子優先順序 F# 中的資料表可以位於[符號和運算子參考](symbol-and-operator-reference/index.md)。
 
 ## <a name="overloaded-operator-names"></a>多載的運算子名稱
 
-當 F # 編譯器編譯的運算子的運算式時，它會產生具有編譯器產生的名稱，該運算子的方法。 這是出現在方法中的 Microsoft intermediate language (MSIL)，也在反映和 IntelliSense 的名稱。 您通常不需要在 F # 程式碼中使用這些名稱。
+當 F# 編譯器編譯的運算子的運算式時，它會產生具有編譯器產生的名稱，該運算子的方法。 這是出現在方法中的 Microsoft intermediate language (MSIL)，也在反映和 IntelliSense 的名稱。 您通常不需要在 F# 程式碼中使用這些名稱。
 
 下表顯示標準的運算子和其對應產生的名稱。
 
@@ -151,7 +151,7 @@ static member (~-) (v : Vector)
 
 上述程式碼的輸出是`12`。
 
-您可以重新定義一般的算術運算子，以這種方式，因為 F # 的範圍規則可讓您指定的新定義的運算子的優先順序高於內建運算子。
+您可以重新定義一般的算術運算子，以這種方式，因為 F# 的範圍規則可讓您指定的新定義的運算子的優先順序高於內建運算子。
 
 關鍵字`inline`通常會搭配全域運算子，而這通常是最適合整合至呼叫端程式碼的小型函式。 讓運算子函式內嵌也可讓它們使用來產生以統計方式解析的一般程式碼以統計方式解析的型別參數。 如需詳細資訊，請參閱 <<c0> [ 內嵌函式](functions/inline-functions.md)並[以靜態方式解析的類型參數](generics/statically-resolved-type-parameters.md)。
 

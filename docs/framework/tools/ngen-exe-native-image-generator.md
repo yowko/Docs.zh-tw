@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3875b4f44a2c2aad5cc5021d55e22e99bb00a91e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 463e31ff286b0022ac55f4f9f8e2a4478cceadc9
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43739824"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49400472"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (原生映像產生器)
 原生映像產生器 (Ngen.exe) 是一種可以增進 Managed 應用程式效能的工具。 Ngen.exe 會建立原生映像，也就是包含已編譯之處理器特定機器碼的檔案，然後將原生映像安裝到本機電腦上的原生映像快取中。 執行階段就可以從快取中使用原生映像，而不是使用 Just-In-Time (JIT) 編譯器來編譯原始組件。  
@@ -123,7 +123,7 @@ ngen /? | /help
 |`/nologo`|隱藏 Microsoft 程式啟始資訊的顯示。|  
 |`/silent`|隱藏成功訊息的顯示。|  
 |`/verbose`|顯示用來偵錯的詳細資訊。 **注意：** 由於作業系統限制的關係，這個選項在 Windows 98 和 Windows Millennium Edition 上不會顯示那麼多詳細資訊。|  
-|`/help`, `/?`|顯示目前版本的命令語法和選項。|  
+|`/help`、 `/?`|顯示目前版本的命令語法和選項。|  
   
 ## <a name="remarks"></a>備註  
  若要執行 Ngen.exe，您必須具有系統管理員權限。  
@@ -335,7 +335,7 @@ using namespace System::Runtime::CompilerServices;
   
 -   安全性因素。  
   
- Ngen.exe 會在產生原生映像時記錄這項資訊。 當您執行組件時，執行階段會尋找由符合電腦目前執行環境之選項和設定所產生的原生映像。 如果找不到符合的原生映像，執行階段就會還原成組件的 JIT 編譯。 下列對電腦設定和環境的變更會使原生映像變成無效：  
+ Ngen.exe 會在產生原生映像時記錄此資訊。 當您執行組件時，執行階段會尋找由符合電腦目前執行環境之選項和設定所產生的原生映像。 如果找不到符合的原生映像，執行階段就會還原成組件的 JIT 編譯。 下列對電腦設定和環境的變更會使原生映像變成無效：  
   
 -   .NET Framework 的版本。  
   
@@ -584,7 +584,7 @@ ngen executeQueuedItems
 ### <a name="service-interaction-with-clients"></a>服務與用戶端互動  
  在 .NET Framework 2.0 版中，與原生映像服務的唯一互動，是透過命令列工具 Ngen.exe。 在安裝指令碼中使用命令列工具，將原生映像服務的動作加入佇列中，並與服務互動。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [工具](../../../docs/framework/tools/index.md)  
  [Managed 執行程序](../../../docs/standard/managed-execution-process.md)  
  [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  

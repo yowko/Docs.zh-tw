@@ -2,18 +2,18 @@
 title: 尋找 Word 文件中的文字 (C#)
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
-ms.openlocfilehash: 56a99dd548eb149f6fa85370cef6a114103ce91e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3213855716ebcfc581f213a34417e579c133e385
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47235594"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200493"
 ---
 # <a name="finding-text-in-word-documents-c"></a>尋找 Word 文件中的文字 (C#)
 本主題會延伸先前的查詢以進行實用的操作：在文件中尋找出現的所有字串。  
   
 ## <a name="example"></a>範例  
- 此範例會處理 WordprocessingML 文件，以便在文件中尋找所有出現的特定文字片段。 如果要這樣做，我們會使用尋找字串 "Hello" 的查詢。 此範例在這個教學課程中，會在先前的範例上建置。 新的查詢會在以下程式碼的註解中叫出。  
+ 此範例會處理 WordprocessingML 文件，以便在文件中尋找所有出現的特定文字片段。 為這樣做，我們會使用尋找字串 "Hello" 的查詢。 此範例在這個教學課程中，會在先前的範例上建置。 新的查詢會在以下程式碼的註解中叫出。  
   
  如需建立此範例之來源文件的指示，請參閱[建立來源 Office Open XML 文件 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
   
@@ -327,7 +327,7 @@ StyleName:Code ><
   
 -   [Office Open XML WordprocessingML 文件的詳細資料 (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [教學課程：管理 WordprocessingML 文件中的內容 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
 - [使用純虛擬函式進行重構 (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  

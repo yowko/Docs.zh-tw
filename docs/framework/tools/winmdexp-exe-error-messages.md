@@ -159,20 +159,20 @@ helpviewer_keywords:
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f051af9284ddbf583e5454f7bdc106a061489d3c
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 95d971003a28ec411b3734009bcb978c630cb811
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44075449"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873783"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe 錯誤訊息
-當您在 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] 中使用 [[!INCLUDE[wrt](../../../includes/wrt-md.md)] 元件] 範本時，建置流程會呼叫 [Winmdexp.exe (Windows 執行階段中繼資料匯出工具)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)，因此 Winmdexp.exe 錯誤訊息就會出現在 [錯誤清單] 中。 Winmdexp.exe 會在使用 `/target:winmdobj` 選項編譯的模組上執行。 由於它需要編譯的模組做為輸入，因此除非編譯成功，否則其錯誤訊息不會出現。  
+當您在 Visual Studio 2012 中使用 [[!INCLUDE[wrt](../../../includes/wrt-md.md)] 元件] 範本時，建置流程會呼叫 [Winmdexp.exe (Windows 執行階段中繼資料匯出工具)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)，因此 Winmdexp.exe 錯誤訊息就會出現在 [錯誤清單] 中。 Winmdexp.exe 會在使用 `/target:winmdobj` 選項編譯的模組上執行。 由於它需要編譯的模組做為輸入，因此除非編譯成功，否則其錯誤訊息不會出現。  
   
  錯誤訊息的設計是包含解決回報之錯誤狀況所需的一切資訊。不過，有些問題需要的資訊更多，而訊息中無法全部包含。 您可以在 Windows 開發人員中心的[診斷 Windows 執行階段元件錯誤條件](https://go.microsoft.com/fwlink/p/?LinkId=251127)中找到其他資訊。  
   
  如果該文件中沒有討論到您遇到的錯誤，而您認為訊息中包含的資訊不足，無法解決這個問題，請使用該文件中的意見反應連結並納入錯誤訊息。 或者，您也可以在 [Microsoft Connect 網站](https://go.microsoft.com/fwlink/p/?LinkId=251130)上提報 Bug。 您也可以在 [Microsoft 論壇](https://go.microsoft.com/fwlink/p/?LinkId=251129)上尋找詳細資訊。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Winmdexp.exe (Windows 執行階段中繼資料匯出工具)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)  
  [診斷 Windows 執行階段元件錯誤條件](https://go.microsoft.com/fwlink/p/?LinkId=251127)

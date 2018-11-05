@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 在微服務�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 6ce9e40334e80e8bd17ce2f3d2569a1e3c39d09e
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 981a20ca80f0652a9c3597d36b960d6b44d97912
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003746"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195823"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>在微服務中使用 IHostedService 和 BackgroundService 類別實作背景工作
 
@@ -104,7 +104,7 @@ namespace Microsoft.Extensions.Hosting
 
 該類別提供設定背景工作所需的主要工作。 請注意，此類別會在 .NET Core 2.1 程式庫中，因此您不需要撰寫它。
 
-不過，進行這項撰寫時，尚未發行 .NET Core 2.1。 因此，在目前使用 .NET Core 2.0 的 eShopOnContainers 中，我們只會暫時從 .NET Core 2.1 開放原始碼存放庫納入該類別 (不需要開放原始碼授權以外的任何專屬授權)，因為它與 .NET Core 2.0 中的目前 IHostedService 介面相容。 發行 .NET Core 2.1 時，您只需要指向正確的 NuGet 套件。
+不過，進行此撰寫時，尚未發行 .NET Core 2.1。 因此，在目前使用 .NET Core 2.0 的 eShopOnContainers 中，我們只會暫時從 .NET Core 2.1 開放原始碼存放庫納入該類別 (不需要開放原始碼授權以外的任何專屬授權)，因為它與 .NET Core 2.0 中的目前 IHostedService 介面相容。 發行 .NET Core 2.1 時，您只需要指向正確的 NuGet 套件。
 
 下個程式碼是 .NET Core 2.1 中所實作的抽象 BackgroundService 基底類別。
 
@@ -236,7 +236,7 @@ WebHost.CreateDefaultBuilder(args)
 
 ### <a name="deployment-considerations-and-takeaways"></a>部署考量和心得
 
-請務必注意 ASP.NET Core `WebHost` 或 .NET Core `Host` 的部署方式可能會影響最後的解決方案。 例如，如果您在 IIS 上部署 `WebHost` 或一般 Azure App Service，則可能會因應用程式集區回收而關閉主機。 但是，如果您要將主機當成容器部署至 Kubernetes 或 Service Fabric 這類協調器，則可以控制保證的主機即時執行個體數目。 此外，您可以考慮在雲端中使用其他方法，特別是針對這些案例 (例如 Azure Functions)。 
+請務必注意 ASP.NET Core `WebHost` 或 .NET Core `Host` 的部署方式可能會影響最後的解決方案。 例如，如果您在 IIS 上部署 `WebHost` 或一般 Azure App Service，則可能會因應用程式集區回收而關閉主機。 但是，如果您要將主機當成容器部署至 Kubernetes 或 Service Fabric 這類協調器，則可以控制保證的主機即時執行個體數目。 此外，您可以考慮在雲端中使用其他方法，特別是針對這些案例 (例如 Azure Functions)。 最後，如果您需要服務持續持行，並準備部署到 Windows Server 上，您可以使用 Windows 服務。
 
 但即使針對部署至應用程式集區的 `WebHost`，有些重新擴展或排清應用程式記憶體中快取的情況可能仍然會發生。
 

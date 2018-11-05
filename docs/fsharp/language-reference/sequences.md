@@ -1,6 +1,6 @@
 ---
 title: 序列 (F#)
-description: '了解如何使用 F # 時序，當您使用較大，已排序集合的資料，但不一定會預期要使用的所有項目。'
+description: 了解如何使用 F# 時序，當您使用較大，已排序集合的資料，但不一定會預期要使用的所有項目。
 ms.date: 05/16/2016
 ms.openlocfilehash: cfe8d1e350a8ac46b7700c12aa84d250f8b35855
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -22,7 +22,7 @@ A*序列運算式*是評估為一連串的運算式。 循序項運算式可以�
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1502.fs)]
 
-循序項運算式會組成 F # 運算式會產生序列的值。 他們可以使用`yield`關鍵字來產生值，成為順序的一部分。
+循序項運算式會組成 F# 運算式會產生序列的值。 他們可以使用`yield`關鍵字來產生值，成為順序的一部分。
 
 以下是範例。
 
@@ -62,7 +62,7 @@ A*序列運算式*是評估為一連串的運算式。 循序項運算式可以�
 
 序列支援許多功能都與相同[列出](lists.md)。 序列也支援等分組，並且使用索引鍵產生函式來計算作業。 序列也會支援不同的函式來擷取子序列。
 
-許多資料類型，例如清單、 陣列、 集合和對應是以隱含方式序列，因為它們是可列舉集合。 序列，當成引數適用於任何一般 F # 資料類型，除了可實作任何.NET Framework 資料型別的函式`System.Collections.Generic.IEnumerable<'T>`。 與此相反接受清單做為引數只能接受清單的函式。 型別`seq<'T>`是類型縮寫`IEnumerable<'T>`。 這表示，任何型別實作泛型`System.Collections.Generic.IEnumerable<'T>`，其中包括陣列、 清單、 設定和中 F # 和也大部分.NET Framework 集合類型，對應相容`seq`輸入，然後就可以使用預期的順序。
+許多資料類型，例如清單、 陣列、 集合和對應是以隱含方式序列，因為它們是可列舉集合。 序列，當成引數適用於任何一般 F# 資料類型，除了可實作任何.NET Framework 資料型別的函式`System.Collections.Generic.IEnumerable<'T>`。 與此相反接受清單做為引數只能接受清單的函式。 型別`seq<'T>`是類型縮寫`IEnumerable<'T>`。 這表示，任何型別實作泛型`System.Collections.Generic.IEnumerable<'T>`，其中包括陣列、 清單、 設定和中 F# 和也大部分.NET Framework 集合類型，對應相容`seq`輸入，然後就可以使用預期的順序。
 
 ## <a name="module-functions"></a>模組函式
 

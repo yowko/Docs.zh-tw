@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 07/02/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 46db9dc7ff425c483f1a9f61da5e806e598b16d5
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: bb41fd317507c14b46aea94e1ce576e390932a65
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937163"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453186"
 ---
 # <a name="tutorial-use-mlnet-to-cluster-iris-flowers-clustering"></a>教學課程：使用 ML.NET 群集鳶尾花 (群集)
 
@@ -138,19 +138,19 @@ private static PredictionModel<IrisData, ClusterPrediction> Train()
 
 [!code-csharp[Add step to load data](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#6)]
 
-下一個步驟是使用 <xref:Microsoft.ML.Transforms.ColumnConcatenator> 轉換類別，將所有特徵資料行合併為 **Features** 資料行。 根據預設，學習演算法只會處理來自 **Features** 資料行的特徵。 加入下列程式碼：
+下一個步驟是使用 <xref:Microsoft.ML.Legacy.Transforms.ColumnConcatenator> 轉換類別，將所有特徵資料行合併為 **Features** 資料行。 根據預設，學習演算法只會處理來自 **Features** 資料行的特徵。 加入下列程式碼：
 
 [!code-csharp[Add step to concatenate columns](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#7)]
 
 ## <a name="choose-a-learning-algorithm"></a>選擇學習演算法
 
-將資料新增至管線並將其轉換成正確的輸入格式之後，您需選取學習演算法 (**學習工具**)。 學習工具會將模型定型。 ML.NET 提供一個可實作 [k-means 演算法](https://en.wikipedia.org/wiki/K-means_clustering)的 <xref:Microsoft.ML.Trainers.KMeansPlusPlusClusterer> 學習工具，該演算法已改進選擇初始群集矩心的方法。
+將資料新增至管線並將其轉換成正確的輸入格式之後，您需選取學習演算法 (**學習工具**)。 學習工具會將模型定型。 ML.NET 提供一個可實作 [k-means 演算法](https://en.wikipedia.org/wiki/K-means_clustering)的 <xref:Microsoft.ML.Legacy.Trainers.KMeansPlusPlusClusterer> 學習工具，該演算法已改進選擇初始群集矩心的方法。
 
 將下列程式碼新增至 `Train` 方法中、上一個步驟中新增的資料處理程式碼之後：
 
 [!code-csharp[Add a learner step](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#8)]
 
-使用 <xref:Microsoft.ML.Trainers.KMeansPlusPlusClusterer.K?displayProperty=nameWithType> 屬性以指定群集數目。 上述程式碼會指定資料集分成三個群集。
+使用 <xref:Microsoft.ML.Legacy.Trainers.KMeansPlusPlusClusterer.K?displayProperty=nameWithType> 屬性以指定群集數目。 上述程式碼會指定資料集分成三個群集。
 
 ## <a name="train-the-model"></a>將模型定型
 

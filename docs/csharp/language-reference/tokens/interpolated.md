@@ -12,16 +12,16 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 2009b3620bc4874520221a4ea847222feafca01b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2758a724b7e1e410fd1e1ba262db451b7f994164
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44251728"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196985"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - 字串內插補點 (C# 參考)
 
-`$` 特殊字元會將字串常值識別為「字串內插補點」。 插入字串是可能包含「插入運算式」的字串常值。 將插入字串解析為結果字串時，會將具有插入運算式的項目取代為運算式結果的字串表示。 C# 6 和更新版本的語言中有提供這項功能。
+`$` 特殊字元會將字串常值識別為「字串內插補點」。 插入字串是可能包含「插入運算式」的字串常值。 將插入字串解析為結果字串時，會將具有插入運算式的項目取代為運算式結果的字串表示。 C# 6 和更新版本的語言中有提供此功能。
 
 字串插補在建立格式化字串時，是比[字串複合格式化](../../../standard/base-types/composite-formatting.md)功能更容易理解且方便的語法。 下列範例會使用這兩項功能，產生相同的輸出：
 
@@ -37,7 +37,7 @@ ms.locfileid: "44251728"
 {<interpolatedExpression>[,<alignment>][:<formatString>]}
 ```
 
-在方括號中的元素是選擇性的元素。 下表說明每個元素：
+在方括弧中的元素是選擇性的元素。 下表說明每個元素：
 
 |元素|描述|
 |-------------|-----------------|
@@ -68,7 +68,7 @@ ms.locfileid: "44251728"
 
 有三個來自插入字串的隱含轉換：
 
-1. 將字串內插補點轉換成字串內插補點解析結果的 <xref:System.String> 執行個體，且插值運算式項目取代為其結果的格式正確字串表示。 這項轉換會使用目前文化特性。
+1. 將字串內插補點轉換成字串內插補點解析結果的 <xref:System.String> 執行個體，且插值運算式項目取代為其結果的格式正確字串表示。 此轉換會使用目前文化特性。
 
 1. 將插入字串轉換成 <xref:System.FormattableString> 執行個體，以代表複合格式字串，並將運算式結果格式化。 那可讓您從單一 <xref:System.FormattableString> 執行個體建立多個具有特定文化特性內容的結果字串。 若要執行此工作，請呼叫下列的其中一個方法：
 
@@ -86,7 +86,7 @@ ms.locfileid: "44251728"
 
 ## <a name="additional-resources"></a>其他資源
 
-如果您是字串插補的新手，請參閱 [C# 中的字串插值](../../quick-starts/interpolated-strings.yml)快速入門。 如需其他範例，請參閱 [C# 中的字串插值](../../tutorials/string-interpolation.md)教學課程。
+如果您是字串插補的新手，請參閱 [C# 中的字串插補](../../tutorials/intro-to-csharp/interpolated-strings.yml)互動式教學課程。 或者您也可以在本機電腦上嘗試 [C# 中的字串插補](../../tutorials/string-interpolation.md)教學課程。
 
 ## <a name="see-also"></a>另請參閱
 

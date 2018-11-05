@@ -4,12 +4,12 @@ description: 了解如何使用 Ocelot 實作 API 閘道，並了解如何在以
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: dbb3fdb27175a86291d3a942ff168a5aae787c0c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 26b3c3510aa06fb1c7aa4c3a44f23c8e526fe60c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522196"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200022"
 ---
 # <a name="implementing-api-gateways-with-ocelot"></a>使用 Ocelot 實作 API 閘道
 
@@ -271,7 +271,7 @@ DownstreamHostAndPorts 是包含您想要轉送要求的任何下游服務之主
 
 UpstreamPathTemplate 是 URL，可供 Ocelot 用來識別針對用戶端中的指定要求使用哪個 DownstreamPathTemplate。 最後，使用 UpstreamHttpMethod，讓 Ocelot 可以區別傳送至相同 URL 的不同要求 (GET、POST、PUT)。
 
-此時，您可能會有使用一或[多個合併 configuration.json 檔案](http://ocelot.readthedocs.io/en/latest/features/configuration.html#merging-configuration-files)的單一 Ocelot API 閘道 (ASP.NET Core WebHost)，您也可以[在 Consul KV 存放區中儲存設定](http://ocelot.readthedocs.io/en/latest/features/configuration.html#store-configuration-in-consul)。 
+此時，您可能會有使用一或[多個合併 configuration.json 檔案](https://ocelot.readthedocs.io/en/latest/features/configuration.html#merging-configuration-files)的單一 Ocelot API 閘道 (ASP.NET Core WebHost)，您也可以[在 Consul KV 存放區中儲存設定](https://ocelot.readthedocs.io/en/latest/features/configuration.html#store-configuration-in-consul)。
 
 但如架構及設計一節所介紹，如果您真的想要有自發微服務，最好將單一整合型 API 閘道分割成多個 API 閘道及/或 BFF (前端的後端)。 針對該目的，讓我們來看如何使用 Docker 容器實作該方法。
 
@@ -346,9 +346,9 @@ webshoppingapigw:
 webmarketingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api              
+    - IdentityUrl=http://identity.api
   ports:
-    - "5203:80"   
+    - "5203:80"
   volumes:
     - ./src/ApiGateways/Web.Bff.Marketing/apigw:/app/configuration
 ```
@@ -363,25 +363,25 @@ webmarketingapigw:
 
 現在，如果您執行使用 API 閘道的 eShopOnContainers (開啟 eShopOnContainers-ServicesAndWebApps.sln 方案時或如果執行 “docker-compose up”，預設會隨附於 VS)，就會執行下列範例路由。 
 
-例如，瀏覽 webshoppingapigw API 閘道所提供的上游 URL http://localhost:5202/api/v1/c/catalog/items/2/ 時，您會從 Docker 主機的內部下游 URL http://catalog.api/api/v1/2 取得結果，如下列瀏覽器所示。
+例如，瀏覽 webshoppingapigw API 閘道所提供的上游 URL `http://localhost:5202/api/v1/c/catalog/items/2/` 時，您會從 Docker 主機的內部下游 URL `http://catalog.api/api/v1/2` 取得結果，如下列瀏覽器所示。
 
 ![](./media/image35.png)
 
-**圖 8-34.** 透過 API 閘道提供的 URL 存取微服務 
+**圖 8-34.** 透過 API 閘道提供的 URL 存取微服務
 
-基於測試或偵錯原因，如果您想要直接存取目錄 Docker 容器 (僅限開發環境) 而不透過 API 閘道傳遞，由於 'catalog.api' 是 Docker 主機內部的 DNS 解析 (由 docker-compose 服務名稱處理的服務探索)，因此直接存取容器的唯一方式是透過 docker-compose.override.yml 中發佈的外部連接埠，這只會提供給開發測試，例如下列瀏覽器中的 http://localhost:5101/api/v1/Catalog/items/1。
+基於測試或偵錯原因，如果您想要直接存取目錄 Docker 容器 (僅限開發環境) 而不透過 API 閘道傳遞，由於 'catalog.api' 是 Docker 主機內部的 DNS 解析 (由 docker-compose 服務名稱處理的服務探索)，因此直接存取容器的唯一方式是透過 docker-compose.override.yml 中發佈的外部連接埠，這只會提供給開發測試，例如下列瀏覽器中的 `http://localhost:5101/api/v1/Catalog/items/1`。
 
 ![](./media/image36.png)
 
 **圖 8-35.** 直接存取微服務以進行測試 
 
-但應用程式設定成可透過 API 閘道存取所有微服務，而不是透過直接連接埠「捷徑」。 
+但應用程式設定成可透過 API 閘道存取所有微服務，而不是透過直接連接埠「捷徑」。
 
 ### <a name="the-gateway-aggregation-pattern-in-eshoponcontainers"></a>eShopOnContainers 中的閘道彙總模式
 
-如前所介紹，實作要求彙總的一個彈性方法，就是透過程式碼使用自訂服務。 您也可以使用 Ocelot 中的 Request Aggregation (要求彙總) 功能來實作要求彙總，但其彈性可能不符合您的需求。 因此，為了在 eShopOnContainers 中實作彙總所選取的方式，是針對每個彙總工具使用明確的 ASP.NET Core Web API 服務。 
+如前所介紹，實作要求彙總的一個彈性方法，就是透過程式碼使用自訂服務。 您也可以使用 Ocelot 中的 Request Aggregation (要求彙總) 功能來實作要求彙總，但其彈性可能不符合您的需求。 因此，為了在 eShopOnContainers 中實作彙總所選取的方式，是針對每個彙總工具使用明確的 ASP.NET Core Web API 服務。
 
-根據該方法，考量到上述簡化全域架構圖中未顯示的彙總工具服務，API 閘道組合圖實際上會涵蓋更大範圍。 
+根據該方法，考量到上述簡化全域架構圖中未顯示的彙總工具服務，API 閘道組合圖實際上會涵蓋更大範圍。
 
 在下圖中，您也可以查看彙總工具服務如何搭配其相關 API 閘道使用。
 
@@ -389,13 +389,13 @@ webmarketingapigw:
 
 **圖 8-36.** 使用彙總工具服務的 eShopOnContainers 架構
 
-下圖進一步放大之後，您會注意到針對「購物」業務領域，在 API 閘道領域下使用這些彙總工具服務時，用戶端應用程式如何透過減少與微服務的頻繁交談獲得改善。 
+下圖進一步放大之後，您會注意到針對「購物」業務領域，在 API 閘道領域下使用這些彙總工具服務時，用戶端應用程式如何透過減少與微服務的頻繁交談獲得改善。
 
  ![](./media/image38.png)
 
 **圖 8-37.** 放大檢視彙總工具服務
 
-您可能會注意到當圖中顯示從 API　閘道傳入可能要求時，會變得相當複雜。 雖然您可以看到藍色箭號如何簡化，但從用戶端應用程式觀點來看，當使用彙總工具模式時，若能減少通訊中的頻繁交談和延遲，最終特別會大幅改善遠端應用程式 (行動和 SPA 應用程式) 的使用者體驗。 
+您可能會注意到當圖中顯示從 API　閘道傳入可能要求時，會變得相當複雜。 雖然您可以看到藍色箭號如何簡化，但從用戶端應用程式觀點來看，當使用彙總工具模式時，若能減少通訊中的頻繁交談和延遲，最終特別會大幅改善遠端應用程式 (行動和 SPA 應用程式) 的使用者體驗。
 
 若是「行銷」業務領域和微服務，這是非常簡單的使用案例，因此不需要使用彙總工具，但如有需要也可以使用。
 
@@ -417,7 +417,7 @@ webmarketingapigw:
 
 由於 eShopOnContainers 應用程式已將 API 閘道分割成多個 BFF (前端的後端) 和業務領域 API 閘道，因此另一個選擇是為跨領域考量建立其他 API 閘道。 該選擇相當適合具有多個跨領域考量微服務的更複雜微服務型架構。 由於 eShopOnContainers 中只有一個跨領域考量，因此為了簡單起見，決定只在 API 閘道領域外部處理安全性服務。
 
-在任何情況下，如果在 API 閘道層級保護應用程式，當嘗試使用任何受保護的微服務時，會先瀏覽 Ocelot API 閘道的驗證模組。 這會重新導向 HTTP 要求瀏覽識別或驗證微服務以取得存取權杖，讓您可以使用存取權杖來瀏覽受保護的服務。
+在任何情況下，如果在 API 閘道層級保護應用程式，當嘗試使用任何受保護的微服務時，會先瀏覽 Ocelot API 閘道的驗證模組。 這會重新導向 HTTP 要求以瀏覽身分識別或驗證微服務以取得存取權杖，讓您可以使用存取權杖來瀏覽受保護的服務。
 
 您在 API 閘道層級使用驗證保護任何服務的方式，就是在 configuration.json 中設定其相關設定的 AuthenticationProviderKey。
 
@@ -466,9 +466,12 @@ namespace OcelotApiGw
                     x.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
                     {
                         ValidAudiences = new[] { "orders", "basket", "locations", "marketing", "mobileshoppingagg", "webshoppingagg" }
-                    };                   
+                    };
                 });
             //...
+        }
+    }
+}
 ```
 
 然後，您也需要在任何要存取的資源 (例如微服務) 上透過 [Authorize] 屬性設定授權，例如在下列購物籃微服務控制器中。
@@ -479,7 +482,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.Controllers
     [Route("api/v1/[controller]")]
     [Authorize]
     public class BasketController : Controller
-    {   
+    {
       //...
     }
 }
@@ -506,9 +509,9 @@ services.AddAuthentication(options =>
 });
 ```
 
-在下一個步驟中，如果您嘗試存取任何受保護的微服務，例如其重設路徑 URL 依據 API 閘道 (例如 http://localhost:5202/api/v1/b/basket/1) 的購物籃微服務，除非您提供有效的權杖，否則您會收到 401 未經授權。 相反地，如果重設路徑 URL 經過驗證，Ocelot 會叫用與其 (內部微服務 URL) 相關聯的任何下游配置。
+在下一個步驟中，如果您嘗試存取任何受保護的微服務，例如其重設路徑 URL 依據 API 閘道 (例如 `http://localhost:5202/api/v1/b/basket/1`) 的購物籃微服務，除非您提供有效的權杖，否則您會收到 401 未經授權。 相反地，如果重設路徑 URL 經過驗證，Ocelot 會叫用與其 (內部微服務 URL) 相關聯的任何下游配置。
 
-**在 Ocelot 重設路徑層授權。**  Ocelot 支援在驗證後評估宣告式授權。 您可以透過將下列程式碼新增至重設路徑設定，在路由層級設定授權。 
+**在 Ocelot 重設路徑層授權。**  Ocelot 支援在驗證後評估宣告式授權。 您可以透過將下列程式碼新增至重設路徑設定，在路由層級設定授權。
 
 ```
 "RouteClaimsRequirement": {
@@ -516,13 +519,13 @@ services.AddAuthentication(options =>
 }
 ```
 
-在該範例中，當呼叫授權中介軟體時，Ocelot 會查明使用者在權杖中是否有宣告類型 'UserType'，以及該宣告的值是否為 'employee'。 如果不是，則不會授權使用者，而且回應會是 403 禁止。 
+在該範例中，當呼叫授權中介軟體時，Ocelot 會查明使用者在權杖中是否有宣告類型 'UserType'，以及該宣告的值是否為 'employee'。 如果不是，則不會授權使用者，而且回應會是 403 禁止。
 
 ## <a name="using-kubernetes-ingress-plus-ocelot-api-gateways"></a>使用 Kubernetes 輸入加上 Ocelot API 閘道
 
-使用 Kubernetes (例如 Azure Kubernetes Service 叢集) 時，您通常會透過以 *Nginx* 為基礎的 [Kuberentes 輸入層](https://kubernetes.io/docs/concepts/services-networking/ingress/)來整合所有 HTTP 要求。 
+使用 Kubernetes (例如 Azure Kubernetes Service 叢集) 時，您通常會透過以 *Nginx* 為基礎的 [Kuberentes 輸入層](https://kubernetes.io/docs/concepts/services-networking/ingress/) \(英文\) 來整合所有 HTTP 要求。 
 
-在 Kuberentes 中，如果您未使用任何輸入方法，則您的服務和 Pod 只能透過叢集網路路由 IP。 
+在 Kubernetes 中，如果您未使用任何輸入方法，則您的服務和 Pod 只能透過叢集網路路由 IP。 
 
 但如果您使用輸入方法，您就會在網際網路與服務 (包括 API 閘道) 之間有一個中介層作為反向 Proxy。
 
@@ -530,19 +533,19 @@ services.AddAuthentication(options =>
 
 在 eShopOnContainers 中，當您在本機開發並只使用您的開發電腦作為 Docker 主機時，您不會使用任何輸入，而只會使用多個 API 閘道。 
 
-不過，當目標為以 Kuberentes 為基礎的「生產」環境時，eShopOnCOntainers 會在 API 閘道前端使用輸入。 如此一來，用戶端仍會呼叫相同的基底 URL，但要求會路由至多個 API 閘道或 BFF。 
+不過，當目標為以 Kubernetes 為基礎的「生產」環境時，eShopOnContainers 會在 API 閘道前端使用輸入。 如此一來，用戶端仍會呼叫相同的基底 URL，但要求會路由至多個 API 閘道或 BFF。 
 
-請注意，API 閘道是只會呈現服務，而不會呈現通常不在其範圍內之 Web 應用程式的前端 (或 Facade)。 此外，API 閘道可能會隱藏特定內部微服務。 
+請注意，API 閘道是只會呈現服務，而不會呈現通常不在其範圍內之 Web 應用程式的前端 (或 Facade)。 此外，API 閘道可能會隱藏特定內部微服務。
 
 不過，輸入只會重新導向 HTTP，而不會嘗試隱藏任何微服務或 Web 應用程式。
 
-在 Web 應用程式前端的 Kuberentes 中有一個輸入 Nginx 層加上數個 Ocelot API 閘道/BFF 是理想的架構，如下圖所示。
+在 Web 應用程式前端的 Kubernetes 中有一個輸入 Nginx 層加上數個 Ocelot API 閘道/BFF 是理想的架構，如下圖所示。
 
  ![](./media/image41.png)
 
 **圖 8-40.** 部署至 Kubernetes 時之 eShopOnContainers 中的輸入層
 
-當您將 eShopOnContainers 部署到 Kuberentes 時，它只會透過「輸入」公開一些服務或端點，基本上包括 URL 上的下列後置詞清單：
+當您將 eShopOnContainers 部署到 Kubernetes 時，它只會透過「輸入」公開一些服務或端點，基本上包括 URL 上的下列後置詞清單：
 
 -   `/` 代表用戶端 SPA Web 應用程式
 -   `/webmvc` 代表用戶端 MVC Web 應用程式
@@ -552,32 +555,28 @@ services.AddAuthentication(options =>
 -   `/mobileshoppingapigw` 代表行動 BFF 和購物商務程序
 -   `/mobilemarketingapigw` 代表行動 BFF 和行銷商務程序
 
-部署到 Kubernetes 時，每個 Ocelot API 閘道會針對執行 API 閘道的每個 _Pod_ 使用不同的 “configuration.json” 檔案。 您可以透過掛接 (原本使用 deploy.ps1 指令碼) 根據名為 ‘ocelot’ 的 Kuberentes _config map_ 所建立的磁碟區，來提供這些 “configuration.json” 檔案。 每個容器會將其相關的設定檔掛接到名為 `/app/configuration` 的容器資料夾中。
+部署到 Kubernetes 時，每個 Ocelot API 閘道會針對執行 API 閘道的每個 _Pod_ 使用不同的 “configuration.json” 檔案。 您可以透過掛接 (原本使用 deploy.ps1 指令碼) 根據名為 ‘ocelot’ 之 Kubernetes _config map_ 所建立的磁碟區，來提供那些 “configuration.json” 檔案。 每個容器會將其相關的設定檔掛接到名為 `/app/configuration` 的容器資料夾中。
 
 在 eShopOnContainers 的原始程式碼檔中，原始 “configuration.json” 檔案位於 `k8s/ocelot/` 資料夾中。 每一個 BFF/API 閘道各有一個檔案。
-
 
 ## <a name="additional-cross-cutting-features-in-an-ocelot-api-gateway"></a>Ocelot API 閘道中的其他跨領域功能
 
 使用 Ocelot API 閘道時，還有其他重要的功能可供探索及使用，下列連結將進行說明。
 
 -   **在整合 Ocelot 與 Consul 或 Eureka 的用戶端進行服務探索** 
-    [*http://ocelot.readthedocs.io/en/latest/features/servicediscovery.html*](http://ocelot.readthedocs.io/en/latest/features/servicediscovery.html)
+    [*https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html*](https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html)
 
 -   **API 閘道層的快取** 
-    [*http://ocelot.readthedocs.io/en/latest/features/caching.html*](http://ocelot.readthedocs.io/en/latest/features/caching.html)
+    [*https://ocelot.readthedocs.io/en/latest/features/caching.html*](https://ocelot.readthedocs.io/en/latest/features/caching.html)
 
 -   **API 閘道層的記錄** 
-    [*http://ocelot.readthedocs.io/en/latest/features/logging.html*](http://ocelot.readthedocs.io/en/latest/features/logging.html)
+    [*https://ocelot.readthedocs.io/en/latest/features/logging.html*](https://ocelot.readthedocs.io/en/latest/features/logging.html)
 
 -   **API 閘道層的服務品質 (重試和斷路器)** 
-    [*http://ocelot.readthedocs.io/en/latest/features/qualityofservice.html*](http://ocelot.readthedocs.io/en/latest/features/qualityofservice.html)
+    [*https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html*](https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html)
 
 -   **速率限制** 
-    [*http://ocelot.readthedocs.io/en/latest/features/ratelimiting.html*](http://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )
-
-
-
+    [*https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html*](https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )
 
 >[!div class="step-by-step"]
 [上一頁] (background-tasks-with-ihostedservice.md) [下一頁] (../microservice-ddd-cqrs-patterns/index.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 10f1d62c5aa29f2074106ab102775b9a0283d646
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 021a4291f550eca517cbdc9769c2a9f0aca99d1e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510958"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199873"
 ---
 # <a name="async-c-reference"></a>async (C# 參考)
 使用 `async` 修飾詞可將方法、[Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)或[匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)指定為非同步。 如果您在方法或運算式上使用這個修飾詞，則它是指「非同步方法」。 下例定義名為 `ExampleMethodAsync` 的非同步方法： 
@@ -82,7 +82,7 @@ string contents = await httpClient.GetStringAsync(requestUrl);
 
 如需詳細資訊和範例，請參閱[非同步方法的傳回型別](../../../csharp/programming-guide/concepts/async/async-return-types.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>  
 - [await](../../../csharp/language-reference/keywords/await.md)  

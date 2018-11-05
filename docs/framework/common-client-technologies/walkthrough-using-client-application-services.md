@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-ms.openlocfilehash: b800848fc3cefb1f82fb5822007bc670c1684363
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d09ad4b1f518ac6f4c42dffd4b3ca17249b95700
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43788924"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194315"
 ---
 # <a name="walkthrough-using-client-application-services"></a>逐步解說：使用用戶端應用程式服務
 本主題說明如何建立使用用戶端應用程式服務驗證使用者，以及擷取使用者角色和設定的 Windows 應用程式。  
@@ -35,12 +35,11 @@ ms.locfileid: "43788924"
 -   啟用離線模式。 您會提供核取方塊，讓使用者指定其連接狀態。 然後使用這個值指定用戶端應用程式服務提供者，是否使用本機快取資料而不是存取其 Web 服務。 最後當應用程式返回線上模式時，再重新驗證目前的使用者。  
   
 ## <a name="prerequisites"></a>必要條件  
- 您需要下列元件才能完成這個逐步解說：  
-  
--   [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)].  
+
+若要完成這個逐步解說，您必須具有 Visual Studio。
   
 ## <a name="creating-the-client-application"></a>建立用戶端應用程式  
- 首先您必須建立 Windows Form 專案。 本逐步解說使用 Windows Form，因為很多人已熟悉這項功能，而且其程序類似 Windows Presentation Foundation (WPF) 專案。  
+ 首先您必須建立 Windows Form 專案。 本逐步解說使用 Windows Form，因為很多人已熟悉此功能，而且其程序類似 Windows Presentation Foundation (WPF) 專案。  
   
 #### <a name="to-create-a-client-application-and-enable-client-application-services"></a>建立用戶端應用程式並啟用用戶端應用程式服務  
   
@@ -94,7 +93,7 @@ ms.locfileid: "43788924"
   
 6.  在 [Web]  索引標籤上，確定已選取 [使用 Visual Studio 程式開發伺服器]  。  
   
-7.  選取 [指定通訊埠] ，再將值指定為 `55555`，然後將 [虛擬路徑]  設定為 `/AppServices`。  
+7.  選取 [指定通訊埠]，再將值指定為 `55555`，然後將 [虛擬路徑] 設定為 `/AppServices`。  
   
 8.  儲存所有檔案。  
   
@@ -262,7 +261,7 @@ ms.locfileid: "43788924"
  您現在可以按 F5 鍵執行應用程式，由於提供了正確的使用者名稱和密碼，您將會看到表單。  
   
 > [!NOTE]
->  如果您無法執行應用程式，請嘗試停止 ASP.NET 程式開發伺服器。 當伺服器重新啟動時，請確認通訊埠設定為 55555。  
+>  如果您無法執行應用程式，請嘗試停止 ASP.NET 程式開發伺服器。 當伺服器重新啟動時，請確認連接埠設定為 55555。  
   
  若要改為查看錯誤訊息，請變更 <xref:System.Web.Security.Membership.ValidateUser%2A> 參數。 例如，以不正確的密碼 (像是 `"manager!"` ) 取代第二個 `"MANAGER"`參數。  
   
@@ -292,7 +291,7 @@ ms.locfileid: "43788924"
   
 4.  將下列方法加入 `Form1_Load` 方法之後。  
   
-     這個方法會將空字串傳遞給 `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=nameWithType> 方法，而出現 [登入] 對話方塊。 如果驗證服務無法使用， <xref:System.Web.Security.Membership.ValidateUser%2A> 方法會擲回 <xref:System.Net.WebException>。 在這種情況下， `ValidateUsingCredentialsProvider` 方法會顯示警告訊息，並詢問使用者是否要在離線模式中再試一次。 此功能需要 **將密碼雜湊儲存在本機，以便能使用離線登入功能** ，如 [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)所述。 新專案預設會啟用這項功能。  
+     這個方法會將空字串傳遞給 `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=nameWithType> 方法，而出現 [登入] 對話方塊。 如果驗證服務無法使用， <xref:System.Web.Security.Membership.ValidateUser%2A> 方法會擲回 <xref:System.Net.WebException>。 在這種情況下， `ValidateUsingCredentialsProvider` 方法會顯示警告訊息，並詢問使用者是否要在離線模式中再試一次。 此功能需要 **將密碼雜湊儲存在本機，以便能使用離線登入功能** ，如 [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)所述。 新專案預設會啟用此功能。  
   
      如果使用者未經過驗證， `ValidateUsingCredentialsProvider` 方法會顯示錯誤訊息並結束應用程式。 最後，這個方法會傳回驗證嘗試的結果。  
   
@@ -384,7 +383,7 @@ ms.locfileid: "43788924"
      如果使用者的角色為 "manager"， `DisplayButtonForManagerRole` 方法會將 <xref:System.Windows.Forms.Control.Visible%2A> 的 `managerOnlyButton` 屬性設定為 `true`。 如果擲回 <xref:System.Net.WebException> 表示角色服務無法使用，這個方法也會顯示錯誤訊息。  
   
     > [!NOTE]
-    >  如果使用者登入已過期， <xref:System.Web.ClientServices.ClientRolePrincipal.IsInRole%2A> 方法一律會傳回 `false` 。 如果應用程式在驗證後很短的時間內呼叫一次 <xref:System.Security.Principal.IPrincipal.IsInRole%2A> 方法 (如本逐步解說的範例程式碼所示)，則不會發生這種情況。 如果應用程式必須在其他時間點擷取使用者角色，您可能會想要加入程式碼，以重新驗證登入已過期的使用者。 如果所有有效的使用者都獲派角色，您可以呼叫 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A?displayProperty=nameWithType> 方法以判斷登入是否過期。 如果沒有角色傳回，則表示登入已過期。 如需這項功能的範例，請參閱 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A> 方法。 只有在應用程式組態中已選取 [要求使用者在伺服器 Cookie 過期時必須再次登入]  時，才需要這項功能。 如需詳細資訊，請參閱[如何：設定用戶端應用程式服務](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。  
+    >  如果使用者登入已過期， <xref:System.Web.ClientServices.ClientRolePrincipal.IsInRole%2A> 方法一律會傳回 `false` 。 如果應用程式在驗證後很短的時間內呼叫一次 <xref:System.Security.Principal.IPrincipal.IsInRole%2A> 方法 (如本逐步解說的範例程式碼所示)，則不會發生這種情況。 如果應用程式必須在其他時間點擷取使用者角色，您可能會想要加入程式碼，以重新驗證登入已過期的使用者。 如果所有有效的使用者都獲派角色，您可以呼叫 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A?displayProperty=nameWithType> 方法以判斷登入是否過期。 如果沒有角色傳回，則表示登入已過期。 如需此功能的範例，請參閱 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A> 方法。 只有在應用程式組態中已選取 [要求使用者在伺服器 Cookie 過期時必須再次登入]  時，才需要此功能。 如需詳細資訊，請參閱[如何：設定用戶端應用程式服務](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。  
   
      [!code-csharp[ClientApplicationServices#030](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#030)]
      [!code-vb[ClientApplicationServices#030](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#030)]  
@@ -534,7 +533,7 @@ ms.locfileid: "43788924"
   
  為了加強應用程式的安全性，請務必在部署前徹底測試應用程式和伺服器。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [用戶端應用程式服務](../../../docs/framework/common-client-technologies/client-application-services.md)  
  [用戶端應用程式服務概觀](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
  [如何：設定用戶端應用程式服務](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  

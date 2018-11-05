@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f56ccbf549ce8f1750ba0bf9cf4a945007694258
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f646927d4ddf88ae117f6cacafc2e42df4e3abee
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502362"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195680"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework 系統管理員部署手冊
 這篇逐步解說文章將描述系統管理員如何使用 Microsoft System Center Configuration Manager，在整個網路上部署 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其系統相依性。 本文章假設所有目標用戶端電腦都符合 .NET Framework 的最低需求。 如需安裝 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的軟體和硬體需求清單，請參閱[系統需求](../../../docs/framework/get-started/system-requirements.md)。  
@@ -37,16 +37,16 @@ ms.locfileid: "43502362"
 ## <a name="the-deployment-process"></a>部署程序  
  一旦您備妥提供支援的基礎結構之後，便可以用 System Center 2012 Configuration Manager 將 .NET Framework 可轉散發套件部署到網路上的電腦。 建置基礎結構包括建立和定義五個主要部分：集合、軟體套件和程式、發佈點以及部署。  
   
--   **集合**：集合是指例如使用者、使用者群組或電腦等 Configuration Manager 資源的群組，也就是 .NET Framework 部署的目標。 如需詳細資訊，請參閱 Configuration Manager 文件庫中的 [Configuration Manager 中的集合](https://technet.microsoft.com/library/gg682169.aspx)。  
+-   **集合**：集合是指例如使用者、使用者群組或電腦等 Configuration Manager 資源的群組，也就是 .NET Framework 部署的目標。 如需詳細資訊，請參閱 Configuration Manager 文件庫中的 [System Center Configuration Manager 的集合簡介](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections)。  
   
--   **套件和程式**：通常代表要安裝到用戶端電腦上的軟體應用程式，不過也可能包含個別檔案、更新，甚至個別命令。 如需詳細資訊，請參閱 Configuration Manager 文件庫中的 [Configuration Manager 中的套件和程式](https://technet.microsoft.com/library/gg699369.aspx)。  
+-   **套件和程式**：通常代表要安裝到用戶端電腦上的軟體應用程式，不過也可能包含個別檔案、更新，甚至個別命令。 如需詳細資訊，請參閱 Configuration Manager 文件庫中的 [System Center Configuration Manager 中的套件與程式](https://docs.microsoft.com/sccm/apps/deploy-use/packages-and-programs)。  
   
--   **發佈點**：是指 Configuration Manager 網站系統角色，負責存放軟體在用戶端電腦上執行所需的檔案。 當 Configuration Manager 用戶端接收並處理軟體部署時，就會連絡發佈點，以便下載軟體相關內容並啟動安裝程序。 如需詳細資訊，請參閱 Configuration Manager 文件庫中的[介紹 Configuration Manager 中的內容管理](https://technet.microsoft.com/library/gg682083.aspx)。  
+-   **發佈點**：是指 Configuration Manager 網站系統角色，負責存放軟體在用戶端電腦上執行所需的檔案。 當 Configuration Manager 用戶端接收並處理軟體部署時，就會連絡發佈點，以便下載軟體相關內容並啟動安裝程序。 如需詳細資訊，請參閱 Configuration Manager 文件庫中的 [Configuration Manager 中的內容管理基本概念](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)。  
   
--   **部署**：負責指示所指定目標集合的適當成員安裝軟體套件。 如需詳細資訊，請參閱 Configuration Manager 文件庫中的[如何在 Configuration Manager 中部署應用程式](https://technet.microsoft.com/library/gg682082.aspx)。  
+-   **部署**：負責指示所指定目標集合的適當成員安裝軟體套件。 
   
 > [!IMPORTANT]
->  本主題中的程序包含建立和部署套件與程式的一般設定，不過可能無法涵蓋所有可能的設定。 如需其他 Configuration Manager 部署選項，請參閱 [Configuration Manager 文件庫](https://technet.microsoft.com/library/gg682041.aspx)。  
+>  本主題中的程序包含建立和部署套件與程式的一般設定，不過可能無法涵蓋所有可能的設定。 如需其他 Configuration Manager 部署選項，請參閱 [Configuration Manager 文件庫](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682041%28v=technet.10%29)。  
   
 <a name="deploying_in_a_test_environment"></a>   
 ## <a name="deploying-the-net-framework"></a>部署 .NET Framework  
@@ -62,7 +62,7 @@ ms.locfileid: "43502362"
   
 <a name="creating_a_collection"></a>   
 ### <a name="create-a-collection"></a>建立集合  
- 在這個步驟中，您將選取部署套件和程式的目標電腦，並將它們組成裝置集合。 若要在 Configuration Manager 中建立集合，您可以使用直接成員資格規則 (也就是手動指定集合成員) 或查詢規則 (也就是 Configuration Manager 根據您指定的準則決定集合成員)。 如需包括查詢和直接規則的成員資格規則詳細資訊，請參閱 Configuration Manager 文件庫中的[介紹 Configuration Manager 中的集合](https://technet.microsoft.com/library/gg682177.aspx)。  
+ 在這個步驟中，您將選取部署套件和程式的目標電腦，並將它們組成裝置集合。 若要在 Configuration Manager 中建立集合，您可以使用直接成員資格規則 (也就是手動指定集合成員) 或查詢規則 (也就是 Configuration Manager 根據您指定的準則決定集合成員)。 如需包括查詢和直接規則的成員資格規則詳細資訊，請參閱 Configuration Manager 文件庫中的 [System Center Configuration Manager 的集合簡介](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections)。  
   
  若要建立集合：  
   
@@ -84,13 +84,11 @@ ms.locfileid: "43502362"
   
 9. 在 [建立裝置集合精靈] 的 [成員資格規則] 頁面上，選擇 [下一步]，然後完成精靈。  
   
- 如需有關集合的詳細資訊，請參閱 Configuration Manager 文件庫中的 [Configuration Manager 中的集合](https://technet.microsoft.com/library/bb693730.aspx)。  
-  
 <a name="creating_a_package"></a>   
 ### <a name="create-a-package-and-program-for-the-net-framework-redistributable-package"></a>建立 .NET Framework 可轉散發套件的套件和程式  
- 下列步驟會手動建立 .NET Framework 可轉散發套件的封裝。 套件包含指定的 .NET Framework 安裝參數，以及要從中將套件散發至目標電腦的來源位置。  
+ 下列步驟會手動建立 .NET Framework 可轉散發套件的套件。 套件包含指定的 .NET Framework 安裝參數，以及要從中將套件散發至目標電腦的來源位置。  
   
- 若要建立封裝：  
+ 若要建立套件：  
   
 1.  在 Configuration Manager 主控台中，選擇 [軟體程式庫]。  
   
@@ -128,7 +126,7 @@ ms.locfileid: "43502362"
 |------------|-----------------|  
 |**/q**|設定無訊息模式。 不需要使用者輸入，也不會顯示輸出。|  
 |**/norestart**|避免安裝程式自動重新開機。 如果您使用這個選項，Configuration Manager 就必須處理電腦重新啟動。|  
-|**/chainingpackage** *PackageName*|指定執行鏈結之封裝的名稱。 已註冊 [Microsoft 客戶經驗改進計劃](https://go.microsoft.com/fwlink/p/?LinkId=248244)的人將會收到這項資訊與其他安裝工作階段資訊的報告。 如果套件名稱包含空格，分隔符號請使用雙引號，例如：**/chainingpackage "Chaining Product"**。|  
+|**/chainingpackage** *PackageName*|指定執行鏈結之套件的名稱。 已註冊 [Microsoft 客戶經驗改進計劃](https://go.microsoft.com/fwlink/p/?LinkId=248244)的人將會收到此資訊與其他安裝工作階段資訊的報告。 如果套件名稱包含空格，分隔符號請使用雙引號，例如：**/chainingpackage "Chaining Product"**。|  
   
  這些步驟會建立名為 .NET Framework 4.5 的套件。 程式會部署 .NET Framework 4.5 的無訊息安裝。 在無訊息安裝中，使用者不會與安裝程序互動，而鏈結應用程式必須擷取傳回碼並處理重新開機，請參閱[取得安裝套件的進度資訊](https://go.microsoft.com/fwlink/?LinkId=179606)。  
  
@@ -154,7 +152,7 @@ ms.locfileid: "43502362"
   
 8.  完成精靈。  
   
- 現在套件中將會包含進行 .NET Framework 4.5 無訊息部署所需的全部資訊。 在您部署套件和程式之前，請先確認它已安裝在發佈點上，請參閱 Configuration Manager 文件庫中[在 Configuration Manager 中進行內容管理的操作和維護](https://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent)的＜監視內容＞一節。  
+ 現在套件中將會包含進行 .NET Framework 4.5 無訊息部署所需的全部資訊。 在您部署套件和程式之前，請先確認它已安裝在發佈點上。請參閱 Configuration Manager 文件庫中[監視您已使用 System Center Configuration Manager 發佈的內容](https://docs.microsoft.com/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed)的＜監視內容＞一節。  
   
 <a name="deploying_package"></a>   
 ### <a name="deploy-the-package"></a>部署套件  
@@ -193,27 +191,27 @@ ms.locfileid: "43502362"
   
  **Active Directory、DNS、DHCP：**  
   
--   [適用於 Windows Server 2008 的 Active Directory 網域服務](https://technet.microsoft.com/library/dd378891.aspx)  
+-   [Active Directory 網域服務](/windows/desktop/ad/active-directory-domain-services)  
   
--   [DNS 伺服器](https://technet.microsoft.com/library/cc732997.aspx)  
+-   [網域名稱系統 (DNS)](/windows-server/networking/dns/dns-top)  
   
--   [DHCP 伺服器](https://technet.microsoft.com/library/cc896553.aspx)  
+-   [動態主機設定通訊協定 (DHCP)](/windows-server/networking/technologies/dhcp/dhcp-top)  
   
  **SQL Server 2008：**  
   
--   [安裝 SQL Server 2008 (SQL Server 影片)](https://technet.microsoft.com/library/dd299415.aspx)  
+-   [安裝 SQL Server 2008 (SQL Server 影片)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/dd299415%28v=sql.100%29)  
   
 -   [適用於資料庫管理員的 SQL Server 2008 安全性概觀](https://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx)  
   
  **System Center 2012 Configuration Manager (管理點、發佈點)：**  
   
--   [System Center 2012 Configuration Manager 的網站管理](https://technet.microsoft.com/library/gg681983.aspx)  
+-   [System Center 2012 Configuration Manager 的網站管理](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg681983%28v=technet.10%29)  
   
 -   [Configuration Manager 單一網站規劃與部署](https://technet.microsoft.com/library/bb680961.aspx)  
   
  **適用於 Windows 電腦的 System Center 2012 Configuration Manager 用戶端：**  
   
--   [部署 System Center 2012 Configuration Manager 的用戶端](https://technet.microsoft.com/library/gg699391.aspx)  
+-   [部署 System Center 2012 Configuration Manager 的用戶端](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg699391%28v=technet.10%29)  
   
 <a name="troubleshooting"></a>   
 ## <a name="troubleshooting"></a>疑難排解  
@@ -248,18 +246,18 @@ ms.locfileid: "43502362"
 <a name="additional_error_codes"></a>   
 ### <a name="download-error-codes"></a>下載錯誤碼  
   
--   [背景智慧型傳送服務 (BITS) 錯誤碼](https://msdn.microsoft.com/library/aa362823.aspx)  
+-   [背景智慧型傳送服務 (BITS) 錯誤碼](/windows/desktop/Bits/bits-return-values)  
   
--   [URL Moniker 錯誤碼](https://msdn.microsoft.com/library/ms775145.aspx)  
+-   [URL Moniker 錯誤碼](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775145%28v=vs.85%29)  
   
 -   [WinHttp 錯誤碼](/windows/desktop/WinHttp/error-messages)  
   
  其他錯誤碼：  
   
--   [Windows 安裝程式錯誤碼](https://msdn.microsoft.com/library/aa368542.aspx)  
+-   [Windows 安裝程式錯誤碼](/windows/desktop/msi/error-codes)  
   
--   [Windows Update 代理程式結果碼](https://technet.microsoft.com/library/cc720442.aspx)  
+-   [Windows Update 代理程式結果碼](/security-updates/WindowsUpdateServices/18127055)  
   
-## <a name="see-also"></a>請參閱  
- [開發人員部署手冊](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
- [系統需求](../../../docs/framework/get-started/system-requirements.md)
+## <a name="see-also"></a>另請參閱  
+- [開發人員部署手冊](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+- [系統需求](../../../docs/framework/get-started/system-requirements.md)

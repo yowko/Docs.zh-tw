@@ -1,6 +1,6 @@
 ---
 title: 資源管理：use 關鍵字 (F#)
-description: "了解 F # 關鍵字 'use' 和 'using' 函式，可以控制的初始設定和版本的資源。"
+description: 了解 F# 關鍵字 'use' 和 'using' 函式，可以控制的初始設定和版本的資源。
 ms.date: 05/16/2016
 ms.openlocfilehash: ffa1cb515139a3705920d9d9f79be1a69602f7d8
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -19,7 +19,7 @@ ms.locfileid: "45616058"
 
 ## <a name="managing-resources"></a>管理資源
 
-若要有效率地和負起責任管理應用程式中的資源，您必須釋放資源，立即與可預測的方式。 .NET Framework 可協助您執行此作業藉由提供`System.IDisposable`介面。 型別可實作`System.IDisposable`具有`System.IDisposable.Dispose`方法，這個方法會正確地釋放資源。 撰寫得當的應用程式保證`System.IDisposable.Dispose`時不再需要保留有限的資源的任何物件會立即呼叫。 幸運的是，大部分的.NET 語言提供支援更加容易，而 F # 也不例外。 有兩個實用的語言建構可支援的處置模式：`use`繫結和`using`函式。
+若要有效率地和負起責任管理應用程式中的資源，您必須釋放資源，立即與可預測的方式。 .NET Framework 可協助您執行此作業藉由提供`System.IDisposable`介面。 型別可實作`System.IDisposable`具有`System.IDisposable.Dispose`方法，這個方法會正確地釋放資源。 撰寫得當的應用程式保證`System.IDisposable.Dispose`時不再需要保留有限的資源的任何物件會立即呼叫。 幸運的是，大部分的.NET 語言提供支援更加容易，而 F# 也不例外。 有兩個實用的語言建構可支援的處置模式：`use`繫結和`using`函式。
 
 ## <a name="use-binding"></a>使用繫結
 

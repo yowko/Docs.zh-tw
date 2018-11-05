@@ -12,26 +12,26 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 08b63d67b6175d18bee1317cc8908d876fbb4039
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b23c43ebdb8d4277344949a18b1bc999b27d60e9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47193704"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188608"
 ---
 # <a name="switch-c-reference"></a>switch (C# 參考)
 
 `switch` 是一個選取範圍陳述式，可根據使用「比對運算式」的模式比對，從候選項清單中選擇要執行的單一「參數區段」。
 
-[!code-csharp[switch#1](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]
+[!code-csharp[switch#1](~/samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]
 
 如果針對三個或多個條件測試單一運算式，則通常會使用 `switch` 陳述式來替代 [if-else](if-else.md) 建構。 例如，下列 `switch` 陳述式判斷 `Color` 類型的變數是否有三個值之一︰
 
-[!code-csharp[switch#3](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3.cs#1)]
+[!code-csharp[switch#3](~/samples/snippets/csharp/language-reference/keywords/switch/switch3.cs#1)]
 
 它等同於下列使用 `if`-`else` 建構的範例。
 
-[!code-csharp[switch#3a](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3a.cs#1)]
+[!code-csharp[switch#3a](~/samples/snippets/csharp/language-reference/keywords/switch/switch3a.cs#1)]
 
 ## <a name="the-match-expression"></a>比對運算式
 
@@ -74,11 +74,11 @@ switch (caseSwitch)
 }
 ```
 
-使用 [break](break.md)、[goto](goto.md) 或 [return](return.md) 陳述式明確地結束參數區段，通常會符合這項需求。 不過，下列程式碼也是有效，因為它可確保程式控制權無法切換到 `default` 參數區段。
+使用 [break](break.md)、[goto](goto.md) 或 [return](return.md) 陳述式明確地結束參數區段，通常會符合此需求。 不過，下列程式碼也是有效，因為它可確保程式控制權無法切換到 `default` 參數區段。
 
 [!code-csharp[switch#4](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]
 
-在 case 標籤符合比對運算式的參數區段中，陳述式清單是從第一個陳述式開始執行，然後繼續進行整份陳述式清單，通常會進行直到跳躍陳述式為止，例如到達 `break`、`goto case`、`goto label`、`return` 或 `throw`。 到達該點時，控制項會在 `switch` 陳述式之外傳輸，或傳輸至另一個 case 標籤。 如果使用 `goto` 陳述式，就必須將控制權轉移到常數標籤。 這項限制是必要的，因為嘗試將控制項傳送至非常數標籤，會將控制項傳送至程式碼中非預期的位置或建立無止盡的迴圈，出現非預期的副作用。
+在 case 標籤符合比對運算式的參數區段中，陳述式清單是從第一個陳述式開始執行，然後繼續進行整份陳述式清單，通常會進行直到跳躍陳述式為止，例如到達 `break`、`goto case`、`goto label`、`return` 或 `throw`。 到達該點時，控制項會在 `switch` 陳述式之外傳輸，或傳輸至另一個 case 標籤。 如果使用 `goto` 陳述式，就必須將控制權轉移到常數標籤。 此限制是必要的，因為嘗試將控制項傳送至非常數標籤，會將控制項傳送至程式碼中非預期的位置或建立無止盡的迴圈，出現非預期的副作用。
 
 ## <a name="case-labels"></a>case 標籤
 
@@ -98,7 +98,7 @@ switch (caseSwitch)
 
 - 變更參數區段的順序。
 
-- 在 `case` 標籤中使用 </a name="when">when 子句</a>。
+- 在 `case` 標籤中使用 [when 子句](#when)。
 
 ## <a name="the-default-case"></a>`default` case
 
@@ -151,7 +151,7 @@ switch (caseSwitch)
 
 其中，如果比對成功，則 *type* 是 *expr* 的結果要轉換的目標類型名稱，而 *varname* 是 *expr* 的結果所轉換的目標物件。
 
-如果符合下列任一項，則 `case` 運算式為`true`：
+如果符合下列任一個，則 `case` 運算式為`true`：
 
 - *expr* 是其類型與 *type* 相同的執行個體。
 
@@ -171,11 +171,11 @@ case null:
 
 下列範例使用類型模式提供各種集合類型的資訊。
 
-[!code-csharp[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]
+[!code-csharp[type-pattern#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]
 
 如果沒有模式比對，此程式碼可能會撰寫如下。 使用類型模式比對時，不需要測試轉換的結果是否為 `null` 或執行重複轉換，因此會產生更精簡且容易閱讀的程式碼。
 
-[!code-csharp[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
+[!code-csharp[type-pattern2#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
 ## <a name="a-namewhen--the-case-statement-and-the-when-clause"></a><a name="when" /> `case` 陳述式和 `when` 子句
 
@@ -183,13 +183,13 @@ case null:
 
 下面範例定義基底 `Shape` 類別、衍生自 `Shape` 的 `Rectangle` 類別，以及衍生自 `Rectangle` 的 `Square` 類別。 它會使用 `when` 子句，確保 `ShowShapeInfo` 將已指派相等長度和寬度的 `Rectangle` 物件視為 `Square`，即使尚未具現化為 `Square` 物件也是一樣。 此方法不會嘗試顯示為 `null` 的物件或區域為零之組織結構的相關資訊。
 
-[!code-csharp[switch#8](../../../../samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]
+[!code-csharp[when-clause#1](~/samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]
 
 請注意，不會執行範例中嘗試測試 `Shape` 物件是否為 `null` 的 `when` 子句。 要測試是否為 `null` 的正確類型模式是 `case null:`。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)中的 [switch 陳述式](/dotnet/csharp/language-reference/language-specification/statements#the-switch-statement)。 語言規格是 C# 語法及用法的限定來源。
+如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)中的 [switch 陳述式](~/_csharplang/spec/statements.md#the-switch-statement)。 語言規格是 C# 語法及用法的限定來源。
 
 ## <a name="see-also"></a>另請參閱
 

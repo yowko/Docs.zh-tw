@@ -2,23 +2,33 @@
 title: 使用 dotnet test 與 NUnit 為 .NET Core 中的 Visual Basic 進行單元測試
 description: 使用 NUnit 逐步建置 Visual Basic 解決方案範例的互動式體驗，了解 .NET Core 中的單元測試概念。
 author: rprouse
-ms.date: 12/01/2017
+ms.date: 10/04/2018
 dev_langs:
 - vb
-ms.openlocfilehash: 552b60dd3937abc413c1b4410213948f3b509526
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bed43ac6b6f918b1ee45715101f9142c1add777f
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217772"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836902"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>使用 dotnet test 與 NUnit 為 Visual Basic .NET Core 程式庫進行單元測試
 
 本教學課程會引導您逐步進行建置範例方案的互動式體驗，以了解單元測試概念。 如果您想要使用預先建置的方案進行教學課程，請在開始之前[檢視或下載範例程式碼](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-vb-nunit/)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
+## <a name="prerequisites"></a>必要條件 
+- [.NET Core SDK 2.1 (2.1.400 版)](https://www.microsoft.com/net/download) 或更新版本。 
+- 您選擇的文字編輯器或程式碼編輯器。
+
 ## <a name="creating-the-source-project"></a>建立來源專案
 
-開啟 Shell 視窗。 建立名稱為 *unit-testing-vb-nunit* 的目錄來放置方案。 在這個新目錄中，執行 [`dotnet new sln`](../tools/dotnet-new.md) 以建立新方案。 此練習可讓您更輕鬆地管理類別庫與單元測試專案。 在方案目錄中，建立 *PrimeService* 目錄。 到目前為止，您有下列目錄與檔案結構：
+開啟 Shell 視窗。 建立名稱為 *unit-testing-vb-nunit* 的目錄來放置方案。 在此新目錄中，執行下列命令以針對類別庫與測試專案建立新方案檔：
+
+```console
+dotnet new sln
+```
+
+接著，建立 *PrimeService* 目錄。 下列大綱顯示到目前為止的檔案結構：
 
 ```
 /unit-testing-vb-nunit
@@ -26,7 +36,13 @@ ms.locfileid: "33217772"
     /PrimeService
 ```
 
-將 *PrimeService* 設為目前的目錄，然後執行 [`dotnet new classlib -lang VB`](../tools/dotnet-new.md) 以建立來源專案。 將 *Class1.VB* 重新命名為 *PrimeService.VB*。 為了使用測試導向開發 (TDD)，您會建立 `PrimeService` 類別的失敗實作：
+將 *PrimeService* 設為目前的目錄，然後執行下列命令以建立來源專案：
+
+```console
+dotnet new classlib -lang VB
+```
+
+將 *Class1.VB* 重新命名為 *PrimeService.VB*。 為了使用測試導向開發 (TDD)，您會建立 `PrimeService` 類別的失敗實作：
 
 ```vb
 Imports System
@@ -40,15 +56,11 @@ Namespace Prime.Services
 End Namespace
 ```
 
-將目錄變更回 *unit-testing-vb-using-stest* 目錄。 執行 [`dotnet sln add .\PrimeService\PrimeService.vbproj`](../tools/dotnet-sln.md) 以將類別庫專案加入方案中。
+將目錄變更回 *unit-testing-vb-using-stest* 目錄。 執行下列命令，將類別庫專案新增至方案：
 
-## <a name="install-the-nunit-project-template"></a>安裝 NUnit 專案範本
-
-必須安裝 NUnit 專案範本，才可建立測試專案。 這項作業在您想要建立新的 NUnit 專案之每部開發人員電腦上，只需執行一次即可。 執行 [`dotnet new -i NUnit3.DotNetNew.Template`](../tools/dotnet-new.md) 以安裝 NUnit 範本。
-
- ```
- dotnet new -i NUnit3.DotNetNew.Template
- ```
+```console
+dotnet sln add .\PrimeService\PrimeService.vbproj
+```
 
 ## <a name="creating-the-test-project"></a>建立測試專案
 
@@ -63,19 +75,19 @@ End Namespace
     /PrimeService.Tests
 ```
 
-將 *PrimeService.Tests* 目錄設為目前的目錄，然後使用 [`dotnet new nunit -lang VB`](../tools/dotnet-new.md) 建立新的專案。 此命令會建立將 NUnit 用作為測試程式庫的測試專案。 產生的範本會在 *PrimeServiceTests.vbproj* 中設定測試執行器：
+將 *PrimeService.Tests* 目錄設為目前的目錄，然後使用下列命令建立新的專案：
 
-```xml
-<ItemGroup>
-  <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
-  <PackageReference Include="NUnit" Version="3.9.0" />
-  <PackageReference Include="NUnit3TestAdapter" Version="3.9.0" />
-</ItemGroup>
+```console
+dotnet new nunit -lang VB
 ```
+
+[dotnet new](../tools/dotnet-new.md) 命令會建立將 NUnit 用作測試程式庫的測試專案。 產生的範本會在 *PrimeServiceTests.vbproj* 檔案中設定測試執行器：
+
+[!code-xml[Packages](~/samples/core/getting-started/unit-testing-vb-nunit/PrimeService.Tests/PrimeService.Tests.vbproj#Packages)]
 
 測試專案需要其他套件來建立和執行單元測試。 上一個步驟中的 `dotnet new` 新增了 NUnit 與 NUnit 測試配接器。 現在，將 `PrimeService` 類別庫新增為專案的另一個相依性。 使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 命令：
 
-```
+```console
 dotnet add reference ../PrimeService/PrimeService.vbproj
 ```
 
@@ -91,14 +103,18 @@ dotnet add reference ../PrimeService/PrimeService.vbproj
         PrimeService.vbproj
     /PrimeService.Tests
         Test Source Files
-        PrimeServiceTests.vbproj
+        PrimeService.Tests.vbproj
 ```
 
-執行 *unit-testing-vb-nunit* 目錄中的 [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj`](../tools/dotnet-sln.md)。
+在 *unit-testing-vb-nunit* 目錄中執行下列命令：
+
+```console
+dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj
+```
 
 ## <a name="creating-the-first-test"></a>建立第一個測試
 
-TDD 方法需要寫入一個失敗的測試，使其通過，然後重複該程序。 將 *UnitTest1.vb* 從 *PrimeService.Tests* 目錄移除，並建立名為 *PrimeService_IsPrimeShould.VB* 的新 Visual Basic 檔案。 加入下列程式碼：
+TDD 方法需要寫入一個失敗的測試，使其通過，然後重複該程序。 在 *PrimeService.Tests* 目錄中，將 *UnitTest1.vb* 檔案重新命名為 *PrimeService_IsPrimeShould.VB*，並將其整個內容取代為下列程式碼：
 
 ```vb
 Imports NUnit.Framework
@@ -142,7 +158,7 @@ End Function
 
 [!code-vb[Sample_TestCode](../../../samples/core/getting-started/unit-testing-vb-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.vb?name=Sample_TestCode)]
 
-執行 `dotnet test`，然後會有兩個測試失敗。 若要使所有測試通過，請變更方法開頭的 `if` 子句：
+執行 `dotnet test`，然後會有兩個測試失敗。 若要讓所有測試都能通過，請變更 *PrimeServices.cs* 檔案中 `Main` 方法開頭處的 `if` 子句：
 
 ```vb
 if candidate < 2

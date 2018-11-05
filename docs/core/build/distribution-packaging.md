@@ -4,16 +4,16 @@ description: 了解如何封裝、命名以及建立 .NET Core 版本以進行�
 author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: 084de6bbb3ce280beb0846431aeceacbb57d9a32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df1ba6a93106cd6b3ceafa93b7c548287878c3fe
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217398"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840484"
 ---
 # <a name="net-core-distribution-packaging"></a>.NET Core 發佈封裝
 
-隨著 .NET Core 可在越來越多的平台上使用，了解如何封裝、命名和建立 .NET Core 版本是有用的。 如此一來，套件維護人員可以協助確保一致的體驗，無論使用者選擇在何處執行 .NET。
+隨著 .NET Core 可在越來越多的平台上使用，了解如何封裝、命名及建立 .NET Core 版本是有用的。 如此一來，套件維護人員可以協助確保一致的體驗，無論使用者選擇在何處執行 .NET。
 
 ## <a name="disk-layout"></a>磁碟配置
 
@@ -120,4 +120,4 @@ SDK 版本會使用相同的 `[major].[minor]`，並且具有合併 SDK 功能�
 
 ## <a name="building-packages"></a>建置套件
 
-https://github.com/dotnet/source-build 存放庫中的指示說明如何建置 .NET Core SDK 和其所有元件的來源 tarball。 source-build 存放庫的輸出會比對本文第一節中所述的配置。
+[dotnet/source-build](https://github.com/dotnet/source-build) \(英文\) 存放庫提供有關如何建置 .NET Core SDK 與其所有元件之來源 tarball 的指示。 source-build 存放庫的輸出會比對本文第一節中所述的配置。

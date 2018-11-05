@@ -1,0 +1,107 @@
+### YamlMime:Tutorial
+title: Hello World - C# 互動式 C# 教學課程簡介
+metadata:
+  title: Hello World - C# 互動式 C# 教學課程簡介
+  description: 在本教學課程中，您將使用瀏覽器以互動方式學習 C#。 您將會撰寫 C# 程式碼，並直接在瀏覽器中查看程式碼編譯和執行的結果。
+  audience: Developer
+  level: Beginner
+  ms.date: 08/24/2018
+  nextTutorialHref: numbers-in-csharp.yml
+  nextTutorialTitle: C# 中的數字
+  displayType: two-column
+  interactive: csharp
+  ms.custom: mvc
+  ms.openlocfilehash: d9992c65b2f5f0f73af9f3234ac389b1c8647337
+  ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+  ms.translationtype: HT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 10/28/2018
+  ms.locfileid: "50200153"
+items:
+- durationInMinutes: 1
+  content: >
+    本教學課程會以互動方式讓您使用瀏覽器撰寫 C#，並查看編譯及執行程式碼的結果，藉此了解 C#。 它包含開頭為 "Hello World" 程式的一系列課程。 這些課程會教導您 C# 語言的基本概念。
+- title: 執行您的第一個 C# 程式
+  durationInMinutes: 2
+  content: "在互動式視窗中執行下列程式碼。 若要這樣做，請在互動式視窗中輸入下列程式碼區塊，並按一下 [執行] 按鈕：\n\n```csharp\nConsole.WriteLine(\"Hello World!\");\n```\n\n恭喜您！ 您已執行您的第一個 C# 程式。 這是一個會列印 \"Hello World!\" 訊息的簡單程式。 它會使用 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 方法來列印該訊息。 `Console` 是代表主控台視窗的型別。 `WriteLine` 是 `Console` 型別的方法，會將文字行列印至文字主控台。\n\n讓我們繼續探索。 本課程的其餘部分會探索使用 `string` 型別，它代表 C# 中的文字。 就像 `Console` 型別，`string` 型別也具有方法。 `string` 方法可以處理文字。 \n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
+- title: 宣告和使用變數
+  durationInMinutes: 3
+  content: "您的第一個程式會在螢幕上列印 `string` \"Hello World!\" 。 \n\n> [!TIP]\n> 在您探索 C# (或任何程式設計語言) 時，可能會在撰寫程式碼時犯錯。 **編譯器**會找出那些錯誤並回報給您。 當輸出包含錯誤訊息時，請仔細查看範例程式碼以及互動式視窗中的程式碼，看看有哪些可以修正。\n> 該練習將有助於您了解 C# 程式碼的結構。 \n\n您的第一個程式僅能列印一則訊息。 您可以使用**變數**來撰寫更有用的程式。 **變數**是一種符號，可以使用不同的值來執行相同的程式碼。 讓我們來試試看吧！ 使用下列程式碼取代您在互動式視窗中所撰寫的程式碼：\n\n```csharp\nstring aFriend = \"Bill\";\nConsole.WriteLine(aFriend);\n```\n\n第一行會宣告一個變數 `aFriend`，並為其指派一個值 \"Bill\"。 第二行會列印出名稱。\n\n您可以將不同的值指派給任何您宣告的變數。 您可以將名稱變更為您的任何一位朋友。 在互動式視窗中，在您已新增的程式碼之後加入這兩行：\n\n```csharp\naFriend = \"Maira\";\nConsole.WriteLine(aFriend);\n```\n\n請注意，同一行程式碼會根據儲存在 `aFriend` 變數中的值，列印兩個不同的訊息。\n\n您可能也注意到，最後兩個訊息中遺漏 \"Hello\" 這個字。 讓我們來修正。  將列印訊息的程式碼行修改為下列內容：\n\n```csharp\nConsole.WriteLine(\"Hello \" + aFriend);\n```\n\n再次按一下 [執行] 來查看結果。\n\n您已使用 `+` 從**變數**和**常數**字串建置字串。 有更好的方法。\n您可以在 `{` 與 `}` 字元之間放置變數，告訴 C# 以變數的值來取代該文字。\n\n這就叫做[字串插補](../../language-reference/tokens/interpolated.md)。\n\n如果在字串的左引號前新增 `$`，即可接著將以大括號括住的變數 (如 `aFriend`) 包含在字串內。 試試看：\n\n\n```csharp\nConsole.WriteLine($\"Hello {aFriend}\");\n```\n\n再次按一下 [執行] 來查看結果。 訊息應該是 \"Hello Maira\"，而非 \"Hello {aFriend}\"。\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
+- title: 處理字串
+  durationInMinutes: 5
+  content: >
+    您上次的編輯是字串處理功能的初探。 讓我們來探索更多內容。
+
+
+    大括號之間的變數並不限於一個。 試試這個：
+
+
+    ```csharp
+
+    string firstFriend = "Maria";
+
+    string secondFriend = "Sage";
+
+    Console.WriteLine($"My friends are {firstFriend} and {secondFriend}");
+
+    ```
+
+
+    當您探索更多字串，您會發現字串不只是字母的集合。 您可以使用 `Length` 來找到字串的長度。 `Length` 是字串的**屬性**，會傳回該字串的字元數。 在互動式視窗底端加入下列程式碼：
+
+
+    ```csharp
+
+    Console.WriteLine($"The name {firstFriend} has {firstFriend.Length} letters.");
+
+    Console.WriteLine($"The name {secondFriend} has {secondFriend.Length} letters.");
+
+    ```
+
+
+    > [!TIP]
+
+    > 這是您自行探索的好時機。 您已學到 `Console.WriteLine()` 將文字寫至螢幕。 您已學到如何宣告變數，以及將字串串連在一起。 在互動式視窗中實驗。 視窗具有稱為 **IntelliSense** 的功能，這個功能會提供可執行的動作建議給您。 在 `firstFriend` 中的 `d` 後面輸入 `.`。 您會看到您可以使用的屬性和方法建議清單。
+
+
+    > [!NOTE]
+
+    > 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。
+- title: 使用字串完成更多工作
+  durationInMinutes: 5
+  content: "您一直在使用 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> **方法**來列印訊息。 **方法**是實作某些動作的程式碼區塊。 它具有名稱，以便於您可以存取。 \n\n假設您的字串有您不想要顯示的開頭或尾端空格。 您想要**修剪**字串的空格。\n<xref:System.String.Trim%2A> 方法以及相關的 <xref:System.String.TrimStart%2A> 和 <xref:System.String.TrimEnd%2A> 方法會執行此工作。 您只要使用這些方法就可以移除前置和尾端空格。 試試下列程式碼：\n\n```csharp\nstring greeting = \"      Hello World!       \";\nConsole.WriteLine($\"[{greeting}]\");\n\nstring trimmedGreeting = greeting.TrimStart();\nConsole.WriteLine($\"[{trimmedGreeting}]\");\n\ntrimmedGreeting = greeting.TrimEnd();\nConsole.WriteLine($\"[{trimmedGreeting}]\");\n\ntrimmedGreeting = greeting.Trim();\nConsole.WriteLine($\"[{trimmedGreeting}]\");\n```\n\n此範例強調了處理字串的幾個重要概念。 操作字串的方法會傳回新字串物件，而不是就地修改。 您可以看到，每次呼叫 `Trim` 方法時都會傳回新字串，但不會變更原始訊息。\n\n還有其他方法可以用來處理字串。 例如，您以前在編輯器或文字處理器中應該用過搜尋和取代命令。 <xref:System.String.Replace%2A> 方法會在字串中執行類似的操作。 它會搜尋子字串，並以不同的文字來取代。 <xref:System.String.Replace%2A> 方法會接受兩個**參數**。 參數就是括號之間的字串。 第一個字串是要搜尋的文字。 第二個字串是用來取代的文字。 試試看吧。 新增下列程式碼。 輸入該程式碼，當您開始在 `sayHello` 變數後面輸入 `.Re` 時會看到提示：\n\n```csharp\nstring sayHello = \"Hello World!\";\nConsole.WriteLine(sayHello);\nsayHello = sayHello.Replace(\"Hello\", \"Greetings\");\nConsole.WriteLine(sayHello);\n```\n\n另外兩個有用的方法可以使字串全部大寫或全部小寫。 試試下列程式碼。 輸入該程式碼，當您開始輸入 `To` 時會看到 **IntelliSense** 如何提供提示：\n\n```csharp\nConsole.WriteLine(sayHello.ToUpper());\nConsole.WriteLine(sayHello.ToLower());\n```\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
+- title: 搜尋字串
+  durationInMinutes: 10
+  content: "搜尋和取代作業的另一部分就是在字串中尋找文字。 您可以使用 <xref:System.String.Contains%2A> 方法進行搜尋。 它會告訴您字串是否包含某個子字串。 請嘗試下列程式碼來探索 <xref:System.String.Contains%2A>：\n\n```csharp\nstring songLyrics = \"You say goodbye, and I say hello\";\nConsole.WriteLine(songLyrics.Contains(\"goodbye\"));\nConsole.WriteLine(songLyrics.Contains(\"greetings\"));\n```\n\n<xref:System.String.Contains%2A> 方法會傳回一個**布林**值，告訴您是否已找到您要搜尋的字串。 **布林值**會儲存 `true` 或 `false` 值。 您將在稍後的課程中深入了解**布林值**。\n\n***挑戰***\n\n還有兩個類似的 <xref:System.String.StartsWith%2A> 和 <xref:System.String.EndsWith%2A> 方法，也可以搜尋字串中的子字串。 這兩個方法會在字串的開頭或結尾尋找子字串。 嘗試修改先前的範例，以使用 <xref:System.String.StartsWith%2A> 和 <xref:System.String.EndsWith%2A>，而不是 <xref:System.String.Contains%2A>。 在字串的開頭搜尋 \"You\" 或 \"goodbye\"。 在字串的結尾搜尋 \"You\" 或 \"goodbye\"。\n\n> [!Note]\n> 當您測試字串結尾的文字時，請注意標點符號。 如果字串是以句號結尾，則檢查的字串也必須以句號結尾。\n\n如果開頭為 \"You\" 且結尾為 \"hello\"，則應該會取得 `true`，如果開頭或結尾為 \"goodbye\"，則為 false。 \n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
+- title: 完成挑戰
+  durationInMinutes: 3
+  content: >
+    您是否有得到與下列程式碼類似的內容？
+
+
+    ```csharp
+
+    string songLyrics = "You say goodbye, and I say hello";
+
+    Console.WriteLine(songLyrics.StartsWith("You"));
+
+    Console.WriteLine(songLyrics.StartsWith("goodbye"));
+
+
+    Console.WriteLine(songLyrics.EndsWith("hello"));
+
+    Console.WriteLine(songLyrics.EndsWith("goodbye"));
+
+    ```
+
+
+    > [!NOTE]
+
+    > 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。
+- content: >-
+    您已經完成 "Hello C#" 的 C# 教學課程簡介。
+
+
+    有關處理 `string` 型別，您可以在 [C# 程式設計手冊](../../programming-guide/index.md)的[字串](../../programming-guide/strings/index.md)主題中深入了解。
+
+    [使用字串的做法提示](../../how-to/index.md#working-with-strings)。

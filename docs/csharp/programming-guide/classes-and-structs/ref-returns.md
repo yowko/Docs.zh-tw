@@ -4,12 +4,12 @@ description: 了解如何定義和使用 ref 傳回值和 ref 區域變數值
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: 6250d2b0c3490cce18623d6b06d5e1a352f22c09
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: ca518b124bc95a5bc3a2910d9c3d9e5338e1b464
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45616136"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193756"
 ---
 # <a name="ref-returns-and-ref-locals"></a>ref 傳回值和 ref 區域變數
 
@@ -110,11 +110,11 @@ refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to differe
 
 [!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/NumberStore.cs#1)]
 
-下列範例會呼叫 `NumberStore.FindNumber` 方法來擷取大於或等於 16 的第一個值。 呼叫者接著會將方法所傳回的值加倍。 範例輸出顯示 `NumberStore` 執行個體之陣列項目值中所反映的變更。
+下列範例會呼叫 `NumberStore.FindNumber` 方法來擷取大於或等於 16 的第一個值。 呼叫者接著會將方法所傳回的值加倍。 範例輸出顯示 `NumberStore` 執行個體之陣列元素值中所反映的變更。
 
 [!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/NumberStore.cs#2)]
 
-如果不支援參考傳回值，則是透過傳回陣列項目和其值的索引來執行這類作業。 呼叫者接著可以使用這個索引，來修改不同方法呼叫中的值。 不過，呼叫者也可以修改要存取的索引，也可能修改其他陣列值。  
+如果不支援參考傳回值，則是透過傳回陣列元素和其值的索引來執行這類作業。 呼叫者接著可以使用這個索引，來修改不同方法呼叫中的值。 不過，呼叫者也可以修改要存取的索引，也可能修改其他陣列值。  
 
 下列範例示範在 C# 7.3 之後如何重寫 `FindNumber` 方法以使用 ref 本機重新指派：
 
@@ -125,4 +125,4 @@ refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to differe
 ## <a name="see-also"></a>另請參閱
 
 - [ref 關鍵字](../../language-reference/keywords/ref.md)  
-- [具備實值型別的參考語意](../../../csharp/reference-semantics-with-value-types.md)
+- [撰寫安全、有效率的程式碼](../../../csharp/write-safe-efficient-code.md)

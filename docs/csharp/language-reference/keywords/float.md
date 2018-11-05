@@ -8,12 +8,12 @@ helpviewer_keywords:
 - float keyword [C#]
 - floating-point numbers [C#], float keyword
 ms.assetid: 1e77db7b-dedb-48b7-8dd1-b055e96a9258
-ms.openlocfilehash: 98f89ba3d79f7679b69ce10fd875b3caf69c5257
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: da697aa6f1f429418a69d9f58a13f46a3da9ac74
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47157700"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187175"
 ---
 # <a name="float-c-reference"></a>float (C# 參考)
 
@@ -21,7 +21,7 @@ ms.locfileid: "47157700"
 
 |類型|大概範圍|精確度|.NET 型別|  
 |----------|-----------------------|---------------|-------------------------|  
-|`float`|±1.5 x 10<sup>−45</sup> 到 ±3.4 x 10<sup>38</sup>|7 位數|<xref:System.Single?displayProperty=nameWithType>|  
+|`float`|±1.5 x 10<sup>−45</sup> 到 ±3.4 x 10<sup>38</sup>|~6-9 位數|<xref:System.Single?displayProperty=nameWithType>|  
 
 ## <a name="literals"></a>常值
 
@@ -51,7 +51,7 @@ float x = 3.5F;
 
 - 非零值的有限集合
 
-如需這些值的詳細資訊，請參閱 [IEEE](http://www.ieee.org) 網站上的 IEEE Standard for Binary Floating-Point Arithmetic。
+如需這些值的詳細資訊，請參閱 [IEEE](https://www.ieee.org) 網站上的 IEEE Standard for Binary Floating-Point Arithmetic。
 
 ## <a name="example"></a>範例
 

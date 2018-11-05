@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c12444e435fa844095827411ba0e068303163bf4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cfb1e29229393b44c193c4e88005ebc350dbcc6f
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201136"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086852"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (程式碼存取安全性原則工具)
 程式碼存取安全性 (CAS) 原則工具 (Caspol.exe) 可以讓使用者和系統管理員修改電腦原則層級、使用者原則層級和企業原則層級的安全性原則。  
@@ -68,7 +68,7 @@ caspol [options]
 |**-polchgprompt** {**on** &#124; **off**}<br /><br /> 或<br /><br /> **-pp** {**on** &#124; **off**}|啟用或停用每當使用會造成原則變更的選項來執行 Caspol.exe 時所顯示的提示。|  
 |**-quiet**<br /><br /> 或<br /><br /> **-q**|暫時停用通常會對造成原則變更的選項顯示的提示。 不過，全域變更提示設定不會變更。 僅針對單一命令使用這個選項，如此才不會停用所有 Caspol.exe 命令的提示。|  
 |**-r**[**ecover**]|從備份檔復原原則。 每當原則變更時，Caspol.exe 都會將舊原則儲存到備份檔中。|  
-|**-remfulltrust** *assembly_file*<br /><br /> 或<br /><br /> **-rf**  *assembly_file*|從原則層級的完全信任清單中移除組件。 如果原則不再使用包含自訂權限的權限集合，則應該執行這項作業。 不過，只有在組件未實作任何其他仍在使用的自訂權限時，才可以從完全信任清單中移除實作自訂權限的組件。 當您從清單中移除組件時，也應該移除該組件所依存的任何其他組件。|  
+|**-remfulltrust** *assembly_file*<br /><br /> 或<br /><br /> **-rf**  *assembly_file*|從原則層級的完全信任清單中移除組件。 如果原則不再使用包含自訂權限的權限集合，則應該執行此作業。 不過，只有在組件未實作任何其他仍在使用的自訂權限時，才可以從完全信任清單中移除實作自訂權限的組件。 當您從清單中移除組件時，也應該移除該組件所依存的任何其他組件。|  
 |**-remgroup** {*label &#124;name*}<br /><br /> 或<br /><br /> **-rg** {l*abel &#124; name*}|移除以標籤或名稱指定的程式碼群組。 如果指定的程式碼群組包含子程式碼群組，Caspol.exe 也會移除所有子程式碼群組。|  
 |**-rempset** *pset_name*<br /><br /> 或<br /><br /> **-rp** *pset_name*|從原則中移除指定的權限集合。 *pset_name* 引數會指出要移除的權限集合。 只有在權限集合未與任何程式碼群組相關聯時，Caspol.exe 才會將該權限集合移除。 無法移除預設 (內建) 權限集合。|  
 |**-reset**<br /><br /> 或<br /><br /> **-rs**|將原則回復到其預設狀態並保存 (Persist) 到磁碟中。 每當變更的原則似乎無法修復，而您想要以安裝預設值重新開始時，這樣做會非常有用。 當您想要使用預設原則做為修改特定安全性設定檔的起點時，重設也會很方便。 如需詳細資訊，請參閱[手動編輯安全性組態檔](#cpgrfcodeaccesssecuritypolicyutilitycaspolexeanchor1)。|  
@@ -90,7 +90,7 @@ caspol [options]
 |**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex**  *hex_string* }|指定具有所指軟體發行者的程式碼，該發行者的表示方式為憑證檔、檔案上的簽章或 X509 憑證的十六進位表示。 如需這個成員資格條件的詳細資訊，請參閱 <xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType>。|  
 |**-site** *website*|指定具有所指來源網站的程式碼。 例如: <br /><br /> `-site** www.proseware.com`<br /><br /> 如需這個成員資格條件的詳細資訊，請參閱 <xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>。|  
 |**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|可指定具有特定強式名稱的程式碼，該名稱的指定方式為檔案名稱、組件名稱 (字串形式)，以及格式為 *major*.*minor*.*build*.*revision* 的組件版本。 例如: <br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> 如需這個成員資格條件的詳細資訊，請參閱 <xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType>。|  
-|**-url** *URL*|指定來自所指 URL 的程式碼。 這個 URL 必須包括通訊協定，例如 http:// 或 ftp://。 此外，您可以使用萬用字元 (\*) 指定來自特定 URL 的多個組件。 **注意：** 因為 URL 可以使用多個名稱來識別，所以將 URL 作為成員資格條件來確定程式碼識別並不安全。 請盡可能使用強式名稱 (Strong Name) 成員資格條件、發行者成員資格條件或雜湊成員資格條件。 <br /><br /> 如需這個成員資格條件的詳細資訊，請參閱 <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>。|  
+|**-url** *URL*|指定來自所指 URL 的程式碼。 這個 URL 必須包括通訊協定，例如 `http://` 或 `ftp://`。 此外，您可以使用萬用字元 (\*) 指定來自特定 URL 的多個組件。 **注意：** 因為 URL 可以使用多個名稱來識別，所以將 URL 作為成員資格條件來確定程式碼識別並不安全。 請盡可能使用強式名稱 (Strong Name) 成員資格條件、發行者成員資格條件或雜湊成員資格條件。 <br /><br /> 如需這個成員資格條件的詳細資訊，請參閱 <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>。|  
 |**-zone** *zonename*|指定具有所指原始區域的程式碼。 *zonename* 引數可以是下列其中一個值：**MyComputer**、**Intranet**、**Trusted**、**Internet** 或 **Untrusted**。 如需這個成員資格條件的詳細資訊，請參閱 <xref:System.Security.Policy.ZoneMembershipCondition> 類別。|  
   
  *flags* 引數是使用下列其中一種方式指定，並且可以搭配 **–addgroup** 和 **–chggroup** 選項使用。  
@@ -119,7 +119,7 @@ caspol [options]
   
  當未具備管理權限的使用者執行 Caspol.exe 時，除非指定 **–machine** 選項，否則所有選項都會參考使用者層級原則。 當系統管理員執行 Caspol.exe 時，除非指定 **–user** 選項，否則所有選項都會參考電腦原則。  
   
- Caspol.exe 必須具有與 **Everything** 權限集合對等的權限才能運作。 此工具有保護機制，可防止原則遭到修改，而造成 Caspol.exe 無法獲得執行所需的權限。 如果您嘗試進行這類變更，Caspol.exe 會通知您要求的原則變更將中斷工具，並且拒絕原則變更。 您可以使用 **–force** 選項，針對特定命令關閉這項保護機制。  
+ Caspol.exe 必須具有與 **Everything** 權限集合對等的權限才能運作。 此工具有保護機制，可防止原則遭到修改，而造成 Caspol.exe 無法獲得執行所需的權限。 如果您嘗試進行這類變更，Caspol.exe 會通知您要求的原則變更將中斷工具，並且拒絕原則變更。 您可以使用 **–force** 選項，針對特定命令關閉此保護機制。  
   
 <a name="cpgrfcodeaccesssecuritypolicyutilitycaspolexeanchor1"></a>   
 ## <a name="manually-editing-the-security-configuration-files"></a>手動編輯安全性設定檔  
@@ -246,6 +246,6 @@ caspol -customall "c:\config_test\security.config" -resolvegroup myassembly
 caspol -all -resolveperm testassembly  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [工具](index.md)  
  [命令提示字元](developer-command-prompt-for-vs.md)

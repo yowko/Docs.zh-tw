@@ -7,16 +7,18 @@ helpviewer_keywords:
 - remainder operator [C#]
 - '% operator [C#]'
 ms.assetid: 3b74f4f9-fd9c-45e7-84fa-c8d71a0dfad7
-ms.openlocfilehash: 9cd2f7ad3856feb34667686979c942ecb21887c2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: cd6d49b69d40f3b45aae060d46b58632dc8448f8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45645914"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50041254"
 ---
 # <a name="-operator-c-reference"></a>% 運算子 (C# 參考)
 
-餘數運算子 `%` 會計算其第一個運算元除以第二個運算元之後的餘數。 使用者定義型別可以[多載](../keywords/operator.md) `%` 運算子。 當 `%` 多載時，[餘數指派運算子](remainder-assignment-operator.md) `%=`也會隱含多載。
+餘數運算子 `%` 會計算其第一個運算元除以第二個運算元之後的餘數。
+
+使用者定義型別可以[多載](../keywords/operator.md) `%` 運算子。 當 `%` 多載時，[餘數指派運算子](remainder-assignment-operator.md) `%=`也會隱含多載。
 
 所有數值類型皆支援餘數運算子。
 
@@ -33,10 +35,10 @@ ms.locfileid: "45645914"
 - 若 `z` 不是零，其正負號與 `x` 的正負號相同；
 - `z` 的絕對值是由 `|x| - n * |y|` 產生的值，其中 `n` 為最大可能整數，小於或等於 `|x| / |y|`，而 `|x|`和 `|y|`則分別是 `x` 和 `y` 的絕對值。
 
-如需在非有限運算元情況中 `%` 運算子的行為，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/index)的[餘數運算子](/dotnet/csharp/language-reference/language-specification/expressions#remainder-operator)一節。
+如需在非有限運算元情況中 `%` 運算子的行為，請參閱 [C# 語言規格](../language-specification/index.md)的[餘數運算子](~/_csharplang/spec/expressions.md#remainder-operator)小節。
 
 > [!NOTE]
-> 這項計算餘數的方法和用於整數運算元的方法類似，但不同於 IEEE 754。 如需符合 IEEE 754 的餘數運算，請使用 <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> 方法。
+> 此計算餘數的方法和用於整數運算元的方法類似，但不同於 IEEE 754。 如需符合 IEEE 754 的餘數運算，請使用 <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> 方法。
 
 下列範例示範 `float` 和 `double` 運算元的餘數運算子行為：
 

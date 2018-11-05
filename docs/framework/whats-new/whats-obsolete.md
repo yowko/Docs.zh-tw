@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6835d159c9c30d09892bad8cc1d20753fe6f21c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 58ef462fdccc31a7694721b3ab9c3bec52d66abe
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855331"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50183473"
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>.NET Framework 類別庫中的過時功能
 .NET Framework 會隨著時間改變。 每個新版本都會加入一些提供新功能的新類型和類型成員。 現有的類型及其成員也會隨著時間改變。 例如，當某些類型所支援的技術由新技術取代時，這些類型的重要性會降低，而且某些方法會由更方便或功能更完整的新方法取代。  
@@ -32,7 +32,7 @@ ms.locfileid: "43855331"
  即使編譯產生錯誤而非警告訊息，<xref:System.ObsoleteAttribute> 並不會影響執行階段行為。 也就是說，使用該類型或成員而且已成功編譯的應用程式一定會順利執行。 只有嘗試重新編譯使用該類型或成員之應用程式的作業會失敗。  
   
 ## <a name="how-to-handle-obsolete-types-and-members"></a>如何處理過時的類型和成員  
- 當您升級和重新編譯現有的程式碼時，使用在應用程式中產生編譯器警告的過時類型或成員是完全可接受的作法。 不過，您應該檢閱編譯器警告訊息，以便判斷是否應該變更應用程式程式碼。 如果訊息沒有指向適當的替代方案，您就應該進行下列其中一項步驟：  
+ 當您升級和重新編譯現有的程式碼時，使用在應用程式中產生編譯器警告的過時類型或成員是完全可接受的作法。 不過，您應該檢閱編譯器警告訊息，以便判斷是否應該變更應用程式程式碼。 如果訊息沒有指向適當的替代方案，您就應該進行下列其中一個步驟：  
   
 -   變更程式碼，不使用類型或成員 (如果可能的話)。  
   
@@ -81,5 +81,5 @@ ms.locfileid: "43855331"
   
  [.NET Framework 2.0 的過時清單](https://go.microsoft.com/fwlink/?LinkID=125264)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [\<supportedRuntime> 項目](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

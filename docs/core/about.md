@@ -4,12 +4,12 @@ description: 了解 .NET Core。
 author: richlander
 ms.author: mairaw
 ms.date: 08/01/2018
-ms.openlocfilehash: d9943246b683c8fd892e7bc5fd09a10b72e31a5f
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: fc4b76df8b71865b14caf27c7e21906cccc88d07
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "48252216"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197648"
 ---
 # <a name="about-net-core"></a>關於 .NET Core
 
@@ -25,28 +25,23 @@ ms.locfileid: "48252216"
 
 ## <a name="languages"></a>語言
 
-C#、Visual Basic 及 F# 語言可用於撰寫 .NET Core 應用程式和程式庫。 這些語言已經或者能夠整合至您最慣用的文字編輯器與 IDE，包括 [Visual Studio](https://visualstudio.microsoft.com/vs/)、[Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)、Sublime Text 和 Vim。 這項整合有部分由 [OmniSharp](http://www.omnisharp.net/) 及 [Ionide](http://ionide.io) 專案的優秀人士提供。
+C#、Visual Basic 及 F# 語言可用於撰寫 .NET Core 應用程式和程式庫。 這些語言已經或者能夠整合至您最慣用的文字編輯器與 IDE，包括 [Visual Studio](https://visualstudio.microsoft.com/vs/)、[Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)、Sublime Text 和 Vim。 此整合有部分由 [OmniSharp](https://www.omnisharp.net/) 及 [Ionide](http://ionide.io) 專案的優秀人士提供。
 
 ## <a name="apis"></a>API
 
 .NET Core 公開許多案例的 API，以下是其中幾個：
 
-- 基本類型，例如 [bool][bool] 及 [int][int]。
+- 基本類型，例如 [bool](../csharp/language-reference/keywords/bool.md) 與 [int](../csharp/language-reference/keywords/int.md)。
 - 集合，例如 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 及 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>。
 - 公用程式類型，例如 <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 及 <xref:System.IO.FileStream?displayProperty=nameWithType>。
-- 資料類型，例如 <xref:System.Data.DataSet?displayProperty=nameWithType> 及 [DbSet][dbset]。
-- 高效能類型，例如 <xref:System.Numerics.Vector?displayProperty=nameWithType> 及 [Pipelines][pipelines]。
+- 資料類型，例如 <xref:System.Data.DataSet?displayProperty=nameWithType> 與 [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/) \(英文\)。
+- 高效能類型，例如 <xref:System.Numerics.Vector?displayProperty=nameWithType> 與 [Pipelines](https://blogs.msdn.microsoft.com/dotnet/2018/07/09/system-io-pipelines-high-performance-io-in-net/)\(英文\)。
 
-藉由實作 [.NET Standard](../standard/net-standard.md) 規格，.NET Core 可提供與 NET Framework 及 Mono API 的相容性。
-
-[bool]: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool
-[int]: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int
-[pipelines]: https://blogs.msdn.microsoft.com/dotnet/2018/07/09/system-io-pipelines-high-performance-io-in-net/
-[dbset]: https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/
+透過實作 [.NET Standard](../standard/net-standard.md) 規格，.NET Core 可提供與 NET Framework 及 Mono API 的相容性。
 
 ## <a name="frameworks"></a>架構
 
-已在 .NET Core 上建置多項架構：
+已在 .NET Core 上建置多個架構：
 
 - [ASP.NET Core](/aspnet/core/)
 - [Windows 10 通用 Windows 平台 (UWP)](https://developer.microsoft.com/windows)
@@ -111,7 +106,7 @@ Windows 與 Unix 實作大小相近。 因為 CoreFX 實作一些 Windows 專屬
 
 ### <a name="comparison-with-mono"></a>與 Mono 的比較
 
-[Mono](http://www.mono-project.com/) 是原始的跨平台和[開放原始碼](https://github.com/mono/mono) .NET 實作，首次發送為 2004 年。 它可以視為 .NET Framework 的社群複製體。 Mono 專案小組依賴 Microsoft 為提供相容實作而發行的開放 [.NET Standard](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (特別是 ECMA 335)。
+[Mono](https://www.mono-project.com/) 是原始的跨平台和[開放原始碼](https://github.com/mono/mono) .NET 實作，首次發送為 2004 年。 它可以視為 .NET Framework 的社群複製體。 Mono 專案小組依賴 Microsoft 為提供相容實作而發行的開放 [.NET Standard](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (特別是 ECMA 335)。
 
 .NET Core 和 Mono 的主要差異︰
 

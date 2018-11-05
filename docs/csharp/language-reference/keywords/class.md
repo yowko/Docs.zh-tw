@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 52ca30fe29025e637005b95ebc14fce8f320e8f4
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 3f30fb473b486efc8381faa9076b98763935b0ae
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084750"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086060"
 ---
 # <a name="class-c-reference"></a>類別 (C# 參考)
 
@@ -39,7 +39,7 @@ class TestClass
 
 直接在命名空間內宣告的類別 (未巢狀在其他類別內) 可以是 [public](../../../csharp/language-reference/keywords/public.md) 或 [internal](../../../csharp/language-reference/keywords/internal.md)。 類別預設為 `internal`。
 
-類別成員 (包括巢狀類別) 可以是 [public](../../../csharp/language-reference/keywords/public.md)、`protected internal`、[protected](../../../csharp/language-reference/keywords/protected.md)、[internal](../../../csharp/language-reference/keywords/internal.md)、[private](../../../csharp/language-reference/keywords/private.md) 或 `private protected`。 成員預設為 [private](../../../csharp/language-reference/keywords/private.md)。
+類別成員 (包含巢狀類別) 可以是 [public](public.md)、[protected internal](protected-internal.md)、[protected](protected.md)、[internal](internal.md)、[private](private.md) 或 [private protected](private-protected.md)。 成員預設是 `private`。
 
 如需詳細資訊，請參閱[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。
 

@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 協調微服�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: aab939af29849ceeef76d6f61b3d4f59d701094c
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 25175e2a4409d53be412ae72be5af1c07c3ec68d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105458"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199655"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>協調微服務和多容器應用程式的高延展性和可用性
 
@@ -39,7 +39,7 @@ ms.locfileid: "37105458"
 
 Kubernetes
 
-![https://pbs.twimg.com/media/Bt\_pEfqCAAAiVyz.png](./media/image24.png)
+![Kubernetes 標誌](./media/image24.png)
 
 > Kubernetes 是開放原始碼產品，可提供叢集基礎結構、容器排程到容器協調等功能。 它可讓您跨主機叢集自動化部署、規模調整及應用程式容器的作業。
 >
@@ -49,7 +49,7 @@ Kubernetes
 
 Docker Swarm
 
-![http://rancher.com/wp-content/themes/rancher-2016/assets/images/swarm.png?v=2016-07-10-am](./media/image25.png)
+![Docker Swarm 標誌](./media/image25.png)
 
 > Docker Swarm 可讓您為 Docker 容器進行叢集與排程作業。 使用 Swarm 時，您可以將 Docker 主機集區轉換成單一的虛擬 Docker 主機。 用戶端可以向 Swarm 提出 API 要求 (與向主機提出要求的方式相同)，也就是說 Swarm 可以輕鬆地讓應用程式順應多部主機來調整規模。
 >
@@ -59,7 +59,7 @@ Docker Swarm
 
 Mesosphere DC/OS
 
-![https://mesosphere.com/wp-content/uploads/2016/04/logo-horizontal-styled.png](./media/image26.png)
+![Mesosphere DC/OS 標誌](./media/image26.png)
 
 > Mesosphere Enterprise DC/OS (以 Apache Mesos 為基礎) 是一種適用於生產環境的平台，可執行容器和分散式應用程式。
 >
@@ -69,11 +69,11 @@ Mesosphere DC/OS
 
 Azure Service Fabric
 
-![https://azure.microsoft.com/svghandler/service-fabric?width=600&height=315](./media/image27.png)
+![Azure Service Fabric 標誌](./media/image27.png)
 
-> [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) 是一種 Microsoft 微服務平台，可用來建置應用程式。 它是一種服務的[協調器](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction)，並可建立電腦叢集。 Service Fabric 可以將服務部署為容器或一般處理序。 它甚至可以將處理序中的服務與相同應用程式和叢集內容器中的服務混合。
+> [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) 是一種 Microsoft 微服務平台，可用來建置應用程式。 它是一種服務的 [協調器](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) ，並可建立電腦叢集。 Service Fabric 可以將服務部署為容器或一般處理序。 它甚至可以將處理序中的服務與相同應用程式和叢集內容器中的服務混合。
 >
-> Service Fabric 也提供其他選用的規範 [Service Fabric 程式設計模型](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework)，例如[具狀態的服務](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction)和 [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction)。
+> Service Fabric 也提供其他選用的規範  [Service Fabric 程式設計模型 ](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework)，例如[具狀態服務](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction)與 [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction)。
 >
 > 比起 Linux，Service Fabric 在 Windows 中相對成熟 (但仍在持續演進中)。 
 > 自 2017 年起，Service Fabric 即可支援 Linux 和 Windows 容器。

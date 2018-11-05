@@ -3,12 +3,12 @@ title: C# 6 的新功能 - C# 指南
 description: 了解 C# 第 6 版的新功能
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: f6f953eacc935d38cc7d45173109c96c52a5e2f3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ad3515e1fc7d70e1377f007276c369d2884780f0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47208181"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194029"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 的新功能
 
@@ -22,13 +22,13 @@ C# 6.0 版包含許多功能，能提升開發人員的產能。 本版的功能
     - 您可以使用 Lambda 運算式撰寫單行方法。
 * [使用靜態](#using-static)：
     - 您可以將單一類別的所有方法都匯入目前的命名空間。
-* [Null - 條件運算子](#null-conditional-operators)：
-    - 您可以精確且安全地存取物件的成員，同時仍然以 null 條件運算子檢查 null。
-* [字串插值](#string-interpolation)：
+* [Null 條件運算子](#null-conditional-operators)：
+    - 您可以精確且安全地存取物件的成員，同時仍然以 Null 條件運算子檢查 Null。
+* [字串插補](#string-interpolation)：
     - 您可以使用內嵌運算式而非位置引數來撰寫字串格式化運算式。
 * [例外狀況篩選條件](#exception-filters)：
     - 您可以根據例外狀況的屬性或其他程式狀態攔截運算式。 
-* [nameof 運算式](#nameof-expressions)：
+* [`nameof` 運算式](#the-nameof-expression)：
     - 您可以讓編譯器產生符號的字串表示。
 * [Catch 和 Finally 區塊中的 Await](#await-in-catch-and-finally-blocks)：
     - 您可以在先前不允許 `await` 運算式的位置中使用它們。
@@ -43,7 +43,7 @@ C# 6.0 版包含許多功能，能提升開發人員的產能。 本版的功能
 
 這些功能的整體影響是您可撰寫更簡潔且更具可讀性的程式碼，。 語法包含許多常見做法的較少繁瑣細節。 繁瑣細節較少時比較容易看出設計目的。 充分了解這些功能，您將更具生產力、撰寫更具可讀性的程式碼，並且更專注於您的核心功能，而不是語言的建構。
 
-本主題的其餘部分提供這些功能每一項的詳細資料。
+本主題的其餘部分提供這些功能每一個的詳細資料。
 
 ## <a name="auto-property-enhancements"></a>Auto 屬性增強功能
 
@@ -86,7 +86,7 @@ public class Student
 }
 ```
 
-這項功能可真正達到建立不可變類型的語言支援，並使用更精簡且方便的 Auto 屬性語法。
+此功能可真正達到建立不可變類型的語言支援，並使用更精簡且方便的 Auto 屬性語法。
 
 如果新增這個語法不會移除可存取的方法，那麼這就是[二進位相容變更](version-update-considerations.md#binary-compatible-changes)。
 
@@ -130,7 +130,7 @@ C# 6 可讓您在 Auto 屬性宣告中指派 Auto 屬性所使用的儲存體初
 
 [!code-csharp[UsingStaticMath](../../../samples/snippets/csharp/new-in-6/newcode.cs#UsingStaticMath)]
 
-現在，您可以使用 <xref:System.Math> 類別中的任何靜態方法，而不需限定 <xref:System.Math> 類別。 <xref:System.Math> 類別是這項功能很棒的使用案例，因為它不包含任何執行個體方法。 您也可以使用 `using static` 為同時具有靜態和執行個體方法的類別匯入類別的靜態方法。 其中一個最有用的範例是 <xref:System.String>
+現在，您可以使用 <xref:System.Math> 類別中的任何靜態方法，而不需限定 <xref:System.Math> 類別。 <xref:System.Math> 類別是此功能很棒的使用案例，因為它不包含任何執行個體方法。 您也可以使用 `using static` 為同時具有靜態和執行個體方法的類別匯入類別的靜態方法。 其中一個最有用的範例是 <xref:System.String>
 
 [!code-csharp[UsingStatic](../../../samples/snippets/csharp/new-in-6/newcode.cs#UsingStatic)]
 
@@ -153,10 +153,10 @@ C# 6 可讓您在 Auto 屬性宣告中指派 Auto 屬性所使用的儲存體初
 
 [!code-csharp[UsingStaticLinqMethod](../../../samples/snippets/csharp/new-in-6/newcode.cs#UsingStaticLinkMethod)]
 
-這項決策是因為擴充方法通常使用擴充方法引動運算式來呼叫。 在少數情況下，它們是使用靜態方法呼叫語法來呼叫時，用於解決模稜兩可。
+此決策是因為擴充方法通常使用擴充方法引動運算式來呼叫。 在少數情況下，它們是使用靜態方法呼叫語法來呼叫時，用於解決模稜兩可。
 要求在引動過程中使用類別名稱，似乎是明智的做法。
 
-`static using` 有最後一項功能。 `static using` 指示詞也會匯入任何巢狀型別。 那讓您能參照任何巢狀型別而無限定性條件。
+`static using` 有最後一個功能。 `static using` 指示詞也會匯入任何巢狀型別。 那讓您能參照任何巢狀型別而無限定性條件。
 
 ## <a name="null-conditional-operators"></a>Null 條件運算子
 
@@ -209,36 +209,36 @@ this.SomethingHappened?.Invoke(this, eventArgs);
 
 確保左邊只評估一次也可讓您對 `?.` 的左邊使用任何運算式，包括方法呼叫。即使有副作用，它們只會評估一次，因此副作用只會發生一次。 您可以在我們的內容看到關於[事件](../events-overview.md#language-support-for-events)的範例。
 
-## <a name="string-interpolation"></a>字串插值
+## <a name="string-interpolation"></a>字串插補
 
-C# 6 包含新的語法，其可從格式字串和可評估的運算式撰寫字串，以產生其他字串值。
+C# 6 包含新的語法，可從字串和可評估的內嵌運算式撰寫字串，以產生其他字串值。
 
-傳統上，您需要在像是 `string.Format` 的方法中使用位置參數：
+傳統上，您需要在像是 <xref:System.String.Format%2A?displayProperty=nameWithType> 的方法中使用位置參數：
 
 [!code-csharp[stringFormat](../../../samples/snippets/csharp/new-in-6/oldcode.cs#stringFormat)]
 
-使用 C# 6，新的[字串內插補點](../language-reference/tokens/interpolated.md)功能可讓您將運算式內嵌在格式字串中。 只要在字串開頭加上 `$`：
+使用 C# 6，新的[字串插補](../language-reference/tokens/interpolated.md)功能可讓您將運算式內嵌在字串中。 只要在字串開頭加上 `$`：
 
 [!code-csharp[stringInterpolation](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
 
-這個最初範例將屬性運算式用於替代的運算式。 您可以展開此語法，即能使用任何運算式。 比方說，您可能在內插補點的過程中計算某學生的平均成積點︰
+這個範例將屬性運算式用於替代的運算式。 您可以展開此語法，即能使用任何運算式。 例如，您可能在內插補點的過程中計算某學生的平均成積點︰
 
 [!code-csharp[stringInterpolationExpression](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationExpression)]
 
-執行上述範例時，您會發現，`Grades.Average()` 的輸出小數位數可能會超出您想要的位數。 字串內插補點語法支援使用稍早格式化方法時可用的所有格式字串。 您在大括弧內新增了格式字串。 在運算式之後新增 `:` 以格式化︰
+執行上述範例時，您會發現，`Grades.Average()` 的輸出小數位數可能會超出您想要的位數。 字串內插補點語法支援使用稍早格式化方法時可用的所有格式字串。 您在大括弧內指定了格式字串。 在運算式之後新增 `:` 以格式化︰
 
 [!code-csharp[stringInterpolationFormat](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationFormat)]
 
 前一行程式碼會將 `Grades.Average()` 的值格式化為具有兩個小數位數的浮點數。
 
-`:` 一律會解譯為格式化運算式與格式字串之間的分隔符號。 當您的運算式以另一種方式使用 `:` 時，例如條件運算子，這會導致問題︰
+`:` 一律會解譯為格式化運算式與格式字串之間的分隔符號。 當您的運算式以另一種方式使用 `:` 時 (例如[條件運算子](../language-reference/operators/conditional-operator.md)) 這會導致問題︰
 
 ```csharp
 public string GetGradePointPercentages() =>
     $"Name: {LastName}, {FirstName}. G.P.A: {Grades.Any() ? Grades.Average() : double.NaN:F2}";
 ```
 
-在上述範例中，`:` 剖析為格式字串的開頭，而不是條件運算子的一部分。 在發生這種情況的所有情況下，您可以將運算式圍上括弧，強制編譯器將運算式解譯如您的預期︰
+在上述範例中，`:` 剖析為格式字串的開頭，而不是條件運算子的一部分。 在發生這種情況的所有情況下，您可以為運算式加上括弧，強制編譯器以您預期的方式解譯運算式︰
 
 [!code-csharp[stringInterpolationConditional](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationConditional)]
 
@@ -249,19 +249,21 @@ public string GetGradePointPercentages() =>
 您可以從此範例看到，您甚至可以將字串內插補點運算式巢狀放入另一個字串內插補點運算式內。 這個範例很有可能比您想要用在實際執行程式碼的更複雜。
 但是，它能夠描述功能的廣度。 任何 C# 運算式都可以放在插入字串的大括號之間。
 
+若要開始使用字串插補，請參閱 [C# 中的字串插補](../tutorials/intro-to-csharp/interpolated-strings.yml)互動式教學課程。
+
 ### <a name="string-interpolation-and-specific-cultures"></a>字串內插補點和特定文化特性
 
-所有在上一節中顯示的範例將會使用程式碼執行所在電腦上的目前文化特性和語言來格式化字串。 通常，您可能需要格式化使用特定文化特性產生的字串。
-若要那麼做，請使用物件依可隱含轉換至 <xref:System.FormattableString> 之字串內插補點所產生的事實。
+在上一節中顯示的所有範例都會使用程式碼執行所在電腦上的目前文化特性來設定字串格式。 通常，您可能需要格式化使用特定文化特性產生的字串。
+若要那麼做，請使用物件依可隱含轉換至 <xref:System.FormattableString?displayProperty=nameWithType> 之字串內插補點所產生的事實。
 
-<xref:System.FormattableString> 執行個體包含格式字串，以及在將其轉換為字串之前，評估運算式的結果。 您可以使用 <xref:System.FormattableString> 的公用方法指定格式化字串時的文化特性。 例如，下列範例會使用德國文化特性產生字串。 (其會使用 ',' 字元作為十進位分隔符號，並使用 '. ' 字元作為千位分隔符號。)
+<xref:System.FormattableString> 執行個體包含複合格式字串，以及在將其轉換為字串之前，評估運算式的結果。 使用 <xref:System.FormattableString.ToString(System.IFormatProvider)> 方法以指定設定字串格式時的文化特性。 例如，下列範例會使用德國文化特性產生字串。 (其會使用 ',' 字元作為十進位分隔符號，並使用 '. ' 字元作為千位分隔符號。)
 
 ```csharp
 FormattableString str = $"Average grade is {s.Grades.Average()}";
 var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 ```
 
-如需詳細資訊，請參閱[字串內插補點](../language-reference/tokens/interpolated.md)主題。
+如需詳細資訊，請參閱[字串插補](../language-reference/tokens/interpolated.md)文章與 [C# 中的字串插補](../tutorials/string-interpolation.md)教學課程。
 
 ## <a name="exception-filters"></a>例外狀況篩選條件
 
@@ -302,16 +304,16 @@ C# 6 的另一個新功能是「例外狀況篩選條件」。 例外狀況篩�
 
 [!code-csharp[HandleNotChanged](../../../samples/snippets/csharp/new-in-6/NetworkClient.cs#HandleNotChanged)]
 
-另一種建議的模式有助於避免 catch 子句在附加偵錯工具時，處理例外狀況。 這項技術可讓您執行應用程式及偵錯工具，並在擲回例外狀況時停止執行。
+另一種建議的模式有助於避免 catch 子句在附加偵錯工具時，處理例外狀況。 此技術可讓您執行應用程式及偵錯工具，並在擲回例外狀況時停止執行。
 
 在您的程式碼中，新增例外狀況篩選條件，使得只有在未附加偵錯工具時，才會執行任何復原程式碼︰
 
 [!code-csharp[LogExceptionDebugger](../../../samples/snippets/csharp/new-in-6/program.cs#LogExceptionDebugger)]
 
-在程式碼中新增這項之後，您可以設定偵錯工具以在所有未處理的例外狀況處中斷。 在偵錯工具中執行程式，偵錯工具會在 `PerformFailingOperation()` 擲回 `RecoverableException` 時便中斷。
+在程式碼中新增此項目之後，您可以設定偵錯工具以在所有未處理的例外狀況處中斷。 在偵錯工具中執行程式，偵錯工具會在 `PerformFailingOperation()` 擲回 `RecoverableException` 時便中斷。
 偵錯工具會中斷您的程式，因為 catch 子句不會執行，因為例外狀況篩選條件傳回 false。
 
-## <a name="nameof-expressions"></a>`nameof` 運算式
+## <a name="the-nameof-expression"></a>`nameof` 運算式
 
 `nameof` 運算式評估為符號的名稱。 每當您需要變數、屬性或成員欄位的名稱時，這是讓工具能運作的好方法。
 
@@ -323,7 +325,7 @@ C# 6 的另一個新功能是「例外狀況篩選條件」。 例外狀況篩�
 
 [!code-csharp[nameofNotify](../../../samples/snippets/csharp/new-in-6/viewmodel.cs#nameofNotify)]
 
-使用 `nameof` 運算子相較於常數字串而言的優點，是工具可以了解符號。 如果您使用重整工具來重新命名符號，它會在 `nameof` 運算式中將它重新命名。 常數字串沒有這項優點。 您可以在喜好的編輯器中自行嘗試︰重新命名變數，任何 `nameof` 運算式將會一併更新。
+使用 `nameof` 運算子相較於常數字串而言的優點，是工具可以了解符號。 如果您使用重整工具來重新命名符號，它會在 `nameof` 運算式中將它重新命名。 常數字串沒有該優點。 您可以在喜好的編輯器中自行嘗試︰重新命名變數，任何 `nameof` 運算式將會一併更新。
 
 `nameof` 運算式會產生其引數的非限定名稱 (上述範例中的 `LastName`)，即使您使用引數的完整格式名稱︰
 
@@ -357,15 +359,15 @@ C# 5 對於您可以放置 `await` 運算式的位置有數個限制。
 
 [!code-csharp[DictionaryInitializer](../../../samples/snippets/csharp/new-in-6/initializers.cs#DictionaryInitializer)]
 
-這項功能表示可以使用類似於已可供數個版本的序列容器使用的語法，將關聯容器初始化。
+此功能表示可以使用類似於已可供數個版本的序列容器使用的語法，將關聯容器初始化。
 
 ## <a name="extension-add-methods-in-collection-initializers"></a>集合初始設定式中的擴充 `Add` 方法
 
-能夠輕鬆進行集合初始設定的另一個功能，是可以針對 `Add` 方法使用「擴充方法」。 新增這項功能是為了與 Visual Basic 相當。 
+能夠輕鬆進行集合初始設定的另一個功能，是可以針對 `Add` 方法使用「擴充方法」。 新增此功能是為了與 Visual Basic 相當。 
 
 當您的自訂集合類別具有不同名稱的方法，可以在語意上新增項目時，此功能最實用。
 
-比方說，請考慮如下的學生集合︰
+例如，請考慮如下的學生集合︰
 
 [!code-csharp[Enrollment](../../../samples/snippets/csharp/new-in-6/enrollment.cs#Enrollment)]
 
@@ -378,11 +380,11 @@ C# 5 對於您可以放置 `await` 運算式的位置有數個限制。
 
 [!code-csharp[ExtensionAdd](../../../samples/snippets/csharp/new-in-6/classList.cs#ExtensionAdd)]
 
-您使用這項功能做的事，是藉由建立擴充方法，將任何新增項目到集合的方法對應至名為 `Add` 的方法。
+您使用此功能做的事，是藉由建立擴充方法，將任何新增項目到集合的方法對應至名為 `Add` 的方法。
 
 ## <a name="improved-overload-resolution"></a>改進的多載解析
 
-您可能不會發現最後這項功能。 在有些建構中，舊版 C# 編譯器可能會發現一些涉及 Lambda 運算式的方法呼叫為模稜兩可。 請參考下列方法：
+您可能不會發現最後這個功能。 在有些建構中，舊版 C# 編譯器可能會發現一些涉及 Lambda 運算式的方法呼叫為模稜兩可。 請參考下列方法：
 
 [!code-csharp[AsyncMethod](../../../samples/snippets/csharp/new-in-6/overloads.cs#AsyncMethod)]
 

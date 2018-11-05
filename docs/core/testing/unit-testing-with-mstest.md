@@ -4,12 +4,12 @@ description: 透過逐步使用 dotnet test 和 MSTest 建置範例方案的互�
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.openlocfilehash: efeb12eb43539b0a85168b1162e0f8b94ad67e90
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 1c2b0bdd4bf76a17217db0c98b8f951f7d58f2ea
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44213828"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183772"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>使用 MSTest 與 .NET Core 為 C# 進行單元測試
 
@@ -88,7 +88,7 @@ dotnet add reference ../PrimeService/PrimeService.csproj
         PrimeServiceTests.csproj
 ```
 
-執行 *unit-testing-using-dotnet-test* 目錄中的 [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md)。 
+執行 *unit-testing-using-mstest* 目錄中的 [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md)。 
 
 ## <a name="creating-the-first-test"></a>建立第一個測試
 

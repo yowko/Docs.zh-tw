@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a9789669f6d896bfbaf4ccf5cbd0eccdd710980
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4fe4c4f89056ae57c3516149a41a5a3bea4fcd2
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399713"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48848008"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (組件連結器)
 
 組件連結器 (Assembly Linker) 會從一個或多個模組或資源檔中產生一個包含組件資訊清單的檔案。 模組是不包含組件資訊清單的中繼語言 (IL) 檔案。
 
 > [!NOTE]
-> 從 [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] 開始，C# 和 Visual Basic 編譯器都會自動將 Win32 資訊清單嵌入組件中。 如需詳細資訊，請參閱 [/win32manifest (C# 編譯器選項)](~/docs/csharp/language-reference/compiler-options/win32manifest-compiler-option.md)。
+> 從 Visual Studio 2008 開始，C# 和 Visual Basic 編譯器都會自動將 Win32 資訊清單嵌入組件中。 如需詳細資訊，請參閱 [/win32manifest (C# 編譯器選項)](~/docs/csharp/language-reference/compiler-options/win32manifest-compiler-option.md)。
 
 此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [開發人員命令提示字元] \(或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。
 
@@ -174,9 +174,9 @@ al t2.netmodule /target:exe /out:t2a.exe /main:MyClass.Main
 ```
 
 ## <a name="see-also"></a>另請參閱
- 
-[工具](../../../docs/framework/tools/index.md)  
-[*Sn.exe* (強式名稱工具)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
-[*Gacutil.exe* (全域組件快取工具)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
-[使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)  
-[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+
+- [工具](../../../docs/framework/tools/index.md)
+- [*Sn.exe* (強式名稱工具)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
+- [*Gacutil.exe* (全域組件快取工具)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+- [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

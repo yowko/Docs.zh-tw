@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc8082175047271c92f9a9a17a49534ffc9546a9
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 9c637d9842c05f47bfcaa0431dd2f9f1ee29cc09
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677145"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50181234"
 ---
 # <a name="how-to-write-text-to-a-file"></a>如何：將文字寫入檔案
 本主題示範可針對 .NET Framework 應用程式或 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式，將文字寫入至檔案的幾種不同方式。 通常會使用下列類別和方法，將文字寫入至檔案：  
@@ -27,7 +27,7 @@ ms.locfileid: "45677145"
   
 -   <xref:System.IO.File> - 可搭配 .NET Framework 應用程式使用。 所提供的靜態方法可將文字寫入至檔案 (例如 <xref:System.IO.File.WriteAllLines%2A> 和 <xref:System.IO.File.WriteAllText%2A>)，或將文字附加至檔案 (<xref:System.IO.File.AppendAllLines%2A>、 <xref:System.IO.File.AppendAllText%2A> 或 <xref:System.IO.File.AppendText%2A>)。  
   
--   [FileIO](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.aspx) - 可搭配 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式使用。 所包含的非同步方法可將文字寫入至檔案 ([WriteLinesAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.writelinesasync.aspx) 或 [WriteTextAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.writetextasync.aspx))，或將文字附加至檔案 ([AppendLinesAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.appendlinesasync.aspx) 或 [AppendTextAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.appendtextasync.aspx))。  
+-   <xref:Windows.Storage.FileIO> - 可搭配 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式使用。 它包含非同步方法，可將文字寫入至檔案 (例如 <xref:Windows.Storage.FileIO.WriteLinesAsync%2A> 或 <xref:Windows.Storage.FileIO.WriteTextAsync%2A>)，或將文字附加至檔案 (<xref:Windows.Storage.FileIO.AppendLinesAsync%2A> 或 <xref:Windows.Storage.FileIO.AppendTextAsync%2A>)。  
 
 - <xref:System.IO.Path> - 要用於含有檔案或目錄路徑資訊的字串。 它包含 <xref:System.IO.Path.Combine%2A> 方法，可允許使用字串的串連來建置檔案或目錄路徑。
 
@@ -59,7 +59,7 @@ ms.locfileid: "45677145"
  [!code-vb[Conceptual.BasicIO.TextFiles#WriteFile](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#writefile)]  
   
 ## <a name="example"></a>範例  
- 下面範例示範如何以非同步方式，將使用者輸入寫入至 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式中的文字檔。 基於安全考量，從 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式開啟檔案時，通常會需要使用 [FileOpenPicker](https://msdn.microsoft.com/library/windows/apps/windows.storage.pickers.fileopenpicker.aspx) 控制項。 在這個範例中， `FileOpenPicker` 已篩選為顯示文字檔。  
+ 下面範例示範如何以非同步方式，將使用者輸入寫入至 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式中的文字檔。 基於安全考量，從 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式開啟檔案時，通常會需要使用 <xref:Windows.Storage.Pickers.FileOpenPicker> 控制項。 在這個範例中， `FileOpenPicker` 已篩選為顯示文字檔。  
   
 ```xaml  
 <Page  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c8a619021f8e398c5c3dfc974b9130ecacb44d4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4f4f73ec60283e1ddf0fee0beaa76bdb68124698
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410029"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122770"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (資源檔產生器)
 資源檔產生器 (Resgen.exe) 可以將文字檔 (.txt 或 .restext) 及 XML 架構資源格式檔 (.resx)，轉換成通用語言執行平台二進位檔 (.resources)，這種檔案可以嵌入至執行階段二進位可執行檔或附屬組件  (請參閱[建立資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md))。  
@@ -77,7 +77,7 @@ resgen filename.extension [outputDirectory]
 |`useSourcePath`|具體指明輸入檔的目前目錄是用來解析相對檔案路徑。|  
 |`/compile`|可讓您指定在單一大量作業中，將多個 .resx 或文字檔轉換成多個 .resources 檔案。 如果您不指定這個選項，則只能指定一個輸入檔引數。 輸出檔案的名稱為 <檔案名稱>.resources。<br /><br /> 這個選項無法與 `/str:` 選項搭配使用。<br /><br /> 如需這個選項的詳細資訊，請參閱本主題稍後的[編譯或轉換多個檔案](#Multiple)。|  
 |`/r:` `assembly`|從指定的組件參考中繼資料。 在轉換 .resx 檔時，以及讓 Resgen.exe 序列化或還原序列化物件資源時使用。 它類似 C# 和 Visual Basic 編譯器的 `/reference:` 或 `/r:` 選項。|  
-|`filename.extension`|指定要轉換的輸入檔名稱。 如果您使用的是這個資料表前的命令列語法中的第一個、較長者，`extension` 必須是下列其中一項：<br /><br /> .txt 或 .restext<br /> 要轉換成 .resources 或 .resx 檔的文字檔。 文字檔只能包含字串資源。 如需檔案格式的詳細資訊，請參閱[建立資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)的＜文字檔中的資源＞一節。<br /><br /> .resx<br /> 要轉換成 .resources 或文字檔 (.txt 或 .restext) 的 XML 架構資源檔。<br /><br /> .resources<br /> 要轉換成 .resx 或文字檔 (.txt 或 .restext) 的二進位資源檔。<br /><br /> 如果您使用的是這個資料表前的命令列語法中的第二個、較短者，`extension` 必須為下列其中一項：<br /><br /> .exe 或 .dll。<br /> 字串資源要擷取至 .resw 檔以利開發 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式的 .NET Framework 組件 (可執行檔或程式庫)。|  
+|`filename.extension`|指定要轉換的輸入檔名稱。 如果您使用的是這個資料表前的命令列語法中的第一個、較長者，`extension` 必須是下列其中一個項目：<br /><br /> .txt 或 .restext<br /> 要轉換成 .resources 或 .resx 檔的文字檔。 文字檔只能包含字串資源。 如需檔案格式的詳細資訊，請參閱[建立資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)的＜文字檔中的資源＞一節。<br /><br /> .resx<br /> 要轉換成 .resources 或文字檔 (.txt 或 .restext) 的 XML 架構資源檔。<br /><br /> .resources<br /> 要轉換成 .resx 或文字檔 (.txt 或 .restext) 的二進位資源檔。<br /><br /> 如果您使用的是這個資料表前的命令列語法中的第二個、較短者，`extension` 必須為下列其中一個項目：<br /><br /> .exe 或 .dll。<br /> 字串資源要擷取至 .resw 檔以利開發 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式的 .NET Framework 組件 (可執行檔或程式庫)。|  
 |`outputFilename.extension`|指定要建立之資源檔的名稱和類型。<br /><br /> 從 .txt、.restext 或 .resx 檔案轉換至 .resource 檔時，這是選擇性的引數。 如果沒有指定 `outputFilename`，Resgen.exe 會將 .resources 副檔名附加至輸入 `filename` 中，並且將檔案寫入包含 `filename,extension` 的目錄中。<br /><br /> 從 .resources 檔轉換時，`outputFilename.extension` 是強制的引數。 在將 .resources 檔轉換成 XML 架構資源檔時指定檔案名稱及 .resx 副檔名。 將 .resources 檔案轉換成文字檔時，指定檔案名稱及 .txt 或 .restext 副檔名。 當 .resources 檔只包含字串值時，您應將 .resources 檔轉換成 .txt 檔。|  
 |`outputDirectory`|[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式中，指定其字串資源將被寫入且包含在 `filename.extension` 中的 .resw 檔案之目錄。 `outputDirectory` 必須已經存在。|  
 |`/str:` `language[,namespace[,classname[,filename]]]`|以 `language` 選項所指定的程式設計語言建立強類型資源類別檔案。 `language` 可包含下列其中一種常值：<br /><br /> -   C#：`c#`、`cs` 或 `csharp`。<br />-   Visual Basic：`vb` 或 `visualbasic`。<br />-   VBScript：`vbs` 或 `vbscript`。<br />-   C++：`c++`、`mc` 或 `cpp`。<br />-   JavaScript：`js`、`jscript` 或 `javascript`。<br /><br /> 您可以使用 `namespace` 選項指定專案的預設命名空間，使用 `classname` 選項指定所產生類別的名稱，以及使用 `filename` 選項指定類別檔的名稱。<br /><br /> `/str:` 選項只允許一個輸入檔，因此無法搭配 `/compile` 選項使用。<br /><br /> 如果有指定 `namespace` 但未指定 `classname`，此時類別名稱便會衍生自該輸出檔名稱 (例如，以底線替代句號)。 這樣一來，強類型資源可能無法正確運作。 若要避免此問題，請同時指定類別名稱和輸出檔名稱。<br /><br /> 如需這個選項的詳細資訊，請參閱本主題稍後的[產生強型別資源類別](#Strong)。|  
@@ -217,7 +217,7 @@ resgen /compile StringResources.txt TableResources.resx ImageResources.resx
   
 <a name="Exporting"></a>   
 ### <a name="exporting-resources-to-a-resw-file"></a>將資源匯出至 .resw 檔案  
- 如果您正在開發 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式，您可能會想使用桌面上現有的應用程式資源。 然而，這兩種應用程式支援不同的檔案格式。 在桌面應用程式中，文字檔 (.txt 或 .restext) 或 .resx 檔案的資源會編譯為二進位 .resources 檔案。 在 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式中，.resw 檔案會編譯為二進位制封裝資源索引 (PRI) 檔案。 您可以從可執行檔或附屬組件擷取資源，並將它們寫入在開發 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式時使用的一個或多個 .resw 檔案，以使用 Resgen.exe 來縮小差距。  
+ 如果您正在開發 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式，您可能會想使用桌面上現有的應用程式資源。 然而，這兩種應用程式支援不同的檔案格式。 在桌面應用程式中，文字檔 (.txt 或 .restext) 或 .resx 檔案的資源會編譯為二進位 .resources 檔案。 在 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式中，.resw 檔案會編譯為二進位套件資源索引 (PRI) 檔案。 您可以從可執行檔或附屬組件擷取資源，並將它們寫入在開發 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式時使用的一個或多個 .resw 檔案，以使用 Resgen.exe 來縮小差距。  
   
 > [!IMPORTANT]
 >  Visual Studio 會自動處理並將所有轉換所需之可攜式程式庫中的合併資源加入至 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式中。 直接使用 Resgen.exe 來將組件中的資源轉換為 .resw 檔案格式僅適用於對開發在 Visual Studio 以外的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式有興趣的開發人員。  
@@ -329,7 +329,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
 resgen StringResources.txt /str:vb,,StringResources   
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [工具](../../../docs/framework/tools/index.md)  
  [桌面應用程式中的資源](../../../docs/framework/resources/index.md)  
  [建立資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -pathmap compiler option [C#]
 - pathmap compiler option [C#]
 - /pathmap compiler option [C#]
-ms.openlocfilehash: 277ab8e094f28fd5e3cbba4de12e742bb9614730
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: abcc67a16e257a15599431a8fefe7753e6d52549
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47425780"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190316"
 ---
 # <a name="-pathmap-c-compiler-options"></a>-pathmap (C# 編譯器選項)
 

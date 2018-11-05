@@ -5,12 +5,12 @@ ms.author: ronpet
 author: rpetrusha
 ms.date: 11/22/2016
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
-ms.openlocfilehash: 2469e8a0fbf8181a720201637ab5ac5ef02055d4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 74ad1c5ddae69864b85099535e8b83a4504275a7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523521"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183123"
 ---
 # <a name="lambda-expressions"></a>Lambda 運算式 #
 
@@ -120,7 +120,7 @@ Lambda 運算式使用 [Lambda 宣告運算子](language-reference/operators/lam
 
 ## <a name="type-inference-in-lambda-expressions"></a>Lambda 運算式中的型別推斷 ##
 
-撰寫 Lambda 時，您通常不需要指定輸入參數的類型，這是因為編譯器可以根據 Lambda 主體、參數類型，以及 C# 語言規格中所述的其他因素來推斷類型。 對於大多數的標準查詢運算子而言，第一項輸入是來源序列中項目的類型。 如果您要查詢 `IEnumerable<Customer>`，則輸入變數就會推斷為 `Customer` 物件，這表示您可以存取其方法和屬性：
+撰寫 Lambda 時，您通常不需要指定輸入參數的類型，這是因為編譯器可以根據 Lambda 主體、參數類型，以及 C# 語言規格中所述的其他因素來推斷類型。 對於大多數的標準查詢運算子而言，第一個輸入是來源序列中項目的類型。 如果您要查詢 `IEnumerable<Customer>`，則輸入變數就會推斷為 `Customer` 物件，這表示您可以存取其方法和屬性：
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/infer1.cs#1)]
 

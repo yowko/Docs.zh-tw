@@ -1,6 +1,6 @@
 ---
-title: 'F # 編碼慣例'
-description: '撰寫 F # 程式碼時，了解一般的指導方針和慣例。'
+title: F# 編碼慣例
+description: 撰寫 F# 程式碼時，了解一般的指導方針和慣例。
 ms.date: 05/14/2018
 ms.openlocfilehash: 21119b6d69e00f359104bfb6eab7681bdbfb8d78
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -9,13 +9,13 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "49087384"
 ---
-# <a name="f-coding-conventions"></a>F # 編碼慣例
+# <a name="f-coding-conventions"></a>F# 編碼慣例
 
-下列慣例會使用大型的 F # 的體驗編寫程式碼基底。 [良好的 F # 程式碼的五個原則](index.md#five-principles-of-good-f-code)是每個建議的基礎。 它們與相關[F # 元件的設計指導方針](component-design-guidelines.md)，但是也適用於任何 F # 程式碼，不只是元件，例如程式庫。
+下列慣例會使用大型的 F# 的體驗編寫程式碼基底。 [良好的 F# 程式碼的五個原則](index.md#five-principles-of-good-f-code)是每個建議的基礎。 它們與相關[F# 元件的設計指導方針](component-design-guidelines.md)，但是也適用於任何 F# 程式碼，不只是元件，例如程式庫。
 
 ## <a name="organizing-code"></a>組織程式碼
 
-F # 功能來組織程式碼的兩種主要方式： 模組與命名空間。 這些類似，但有下列差異：
+F# 功能來組織程式碼的兩種主要方式： 模組與命名空間。 這些類似，但有下列差異：
 
 * 命名空間會編譯為.NET 命名空間。 模組會編譯為靜態類別。
 * 命名空間永遠是最上層。 模組可以是最上層和其他模組內的巢狀。
@@ -36,7 +36,7 @@ type MyClass() =
     ...
 ```
 
-使用最上層模組可能不會出現不同只從 F # 中，呼叫時，但 C# 取用者，呼叫端可能會感到驚訝需要限定`MyClass`與`MyCode`模組。
+使用最上層模組可能不會出現不同只從 F# 中，呼叫時，但 C# 取用者，呼叫端可能會感到驚訝需要限定`MyClass`與`MyCode`模組。
 
 ```fsharp
 // Bad!
@@ -48,7 +48,7 @@ type MyClass() =
 
 ### <a name="carefully-apply-autoopen"></a>請仔細套用 `[<AutoOpen>]`
 
-`[<AutoOpen>]`建構可以干擾的呼叫端，為範圍和項目來自何處的答案是"magic"。 這通常不是一件好事。 此規則的例外狀況是 F # 核心程式庫本身 （雖然這項事實也是有點備受爭議的）。
+`[<AutoOpen>]`建構可以干擾的呼叫端，為範圍和項目來自何處的答案是"magic"。 這通常不是一件好事。 此規則的例外狀況是 F# 核心程式庫本身 （雖然這項事實也是有點備受爭議的）。
 
 不過，它是為了方便起見，如果您希望組織分別從該公用 API 的公用 API 中的協助程式功能。
 
@@ -90,13 +90,13 @@ let parsed = StringTokenization.parse s // Must qualify to use 'parse'
 
 ### <a name="sort-open-statements-topologically"></a>排序`open`陳述式拓撲
 
-在 F # 中，宣告的順序很重要，包括具有`open`陳述式。 這是不同於 C# 中，其中的效果`using`和`using static`無關的檔案中的這些陳述式的順序。
+在 F# 中，宣告的順序很重要，包括具有`open`陳述式。 這是不同於 C# 中，其中的效果`using`和`using static`無關的檔案中的這些陳述式的順序。
 
-在 F # 中，開啟進入範圍內的項目可以遮蔽其他已經存在。 這表示重新排列`open`陳述式無法變更程式碼的意義。 如此一來，任何任意排序之所有`open`陳述式 （例如，文數字順序） 通常不建議，以免產生您所預期的不同行為。
+在 F# 中，開啟進入範圍內的項目可以遮蔽其他已經存在。 這表示重新排列`open`陳述式無法變更程式碼的意義。 如此一來，任何任意排序之所有`open`陳述式 （例如，文數字順序） 通常不建議，以免產生您所預期的不同行為。
 
 相反地，我們建議您加以排序[拓撲](https://en.wikipedia.org/wiki/Topological_sorting); 也就是訂單您`open`陳述式中的順序_層_定義您的系統。 英數字元的排序不同的拓撲圖層內也列入考量。
 
-例如，以下是 F # 編譯器服務公用 API 檔案的拓撲排序：
+例如，以下是 F# 編譯器服務公用 API 檔案的拓撲排序：
 
 ```fsharp
 namespace Microsoft.FSharp.Compiler.SourceCodeServices
@@ -190,7 +190,7 @@ type MyParametricApi(dep1, dep2, dep3) =
 
 ### <a name="represent-error-cases-and-illegal-state-in-types-intrinsic-to-your-domain"></a>代表錯誤案例和您的網域內建函式的型別中不合法的狀態
 
-具有[差別聯集](../language-reference/discriminated-unions.md)，F # 可讓您能夠代表您的型別系統中的錯誤的程式狀態。 例如: 
+具有[差別聯集](../language-reference/discriminated-unions.md)，F# 可讓您能夠代表您的型別系統中的錯誤的程式狀態。 例如: 
 
 ```fsharp
 type MoneyWithdrawalResult =
@@ -219,11 +219,11 @@ let handleWithdrawal amount =
 
 ### <a name="use-exceptions-when-errors-cannot-be-represented-with-types"></a>使用例外狀況，當類型不可以有錯誤
 
-問題領域中，就可以表示並非所有的錯誤。 這類錯誤會*卓越*性質，因此能夠提高，並在 F # 中攔截例外狀況。
+問題領域中，就可以表示並非所有的錯誤。 這類錯誤會*卓越*性質，因此能夠提高，並在 F# 中攔截例外狀況。
 
-首先，建議您先閱讀[例外狀況的設計方針](../../standard/design-guidelines/exceptions.md)。 這些也是適用於 F #。
+首先，建議您先閱讀[例外狀況的設計方針](../../standard/design-guidelines/exceptions.md)。 這些也是適用於 F#。
 
-基於引發例外狀況的 F # 中可用的主要建構應該考慮以下列順序的喜好設定：
+基於引發例外狀況的 F# 中可用的主要建構應該考慮以下列順序的喜好設定：
 
 | 功能 | 語法 | 用途 |
 |----------|--------|---------|
@@ -240,7 +240,7 @@ let handleWithdrawal amount =
 
 ### <a name="using-exception-handling-syntax"></a>使用例外狀況處理語法
 
-F # 支援例外狀況模式，透過`try...with`語法：
+F# 支援例外狀況模式，透過`try...with`語法：
 
 ```fsharp
 try
@@ -317,15 +317,15 @@ let tryReadAllTextIfPresent (path : string) =
 
 而不是做為全部擷取，此函式會立即正確處理的情況時找不到檔案，並將該意義指派給傳回。 不捨棄任何內容的資訊，或強制呼叫者處理可能不在該點在程式碼相關的案例時，此傳回值可以對應到此錯誤的情況下。
 
-類型，例如`Result<'Success, 'Error>`適用於基本作業不巢狀的方式，而 F # 選擇性型別非常適合做為項目無法傳回時，代表*東西*或*nothing*. 它們不能取代例外狀況，不過，和不應嘗試將例外狀況。 相反地，它們應套用明智地址的例外狀況和錯誤管理原則的特定層面目標的方式。
+類型，例如`Result<'Success, 'Error>`適用於基本作業不巢狀的方式，而 F# 選擇性型別非常適合做為項目無法傳回時，代表*東西*或*nothing*. 它們不能取代例外狀況，不過，和不應嘗試將例外狀況。 相反地，它們應套用明智地址的例外狀況和錯誤管理原則的特定層面目標的方式。
 
 ## <a name="partial-application-and-point-free-programming"></a>部分應用程式和無點的程式設計
 
-F # 支援部分的應用程式，因此，程式的各種方式無端點的樣式。 這可以是有幫助模組內的項目，實作的程式碼重複使用，但它通常不是要公開可公開 （expose） 的項目。 一般情況下，無點的程式設計不本身，作為，而且可以加入重大的認知障礙不沉浸在樣式中的人員。
+F# 支援部分的應用程式，因此，程式的各種方式無端點的樣式。 這可以是有幫助模組內的項目，實作的程式碼重複使用，但它通常不是要公開可公開 （expose） 的項目。 一般情況下，無點的程式設計不本身，作為，而且可以加入重大的認知障礙不沉浸在樣式中的人員。
 
 ### <a name="do-not-use-partial-application-and-currying-in-public-apis"></a>請勿使用部分的應用程式及對公用 Api 中
 
-有一些例外狀況，使用公用 Api 中的部分應用程式會造成混淆的取用者。 通常`let`-F # 程式碼中的繫結的值是**值**，而非**函式值**。 混合在一起，值和函式值可能會導致儲存少數幾行程式碼，但是也會處理一堆認知的額外負荷，尤其是這類結合運算子`>>`撰寫函式。
+有一些例外狀況，使用公用 Api 中的部分應用程式會造成混淆的取用者。 通常`let`-F# 程式碼中的繫結的值是**值**，而非**函式值**。 混合在一起，值和函式值可能會導致儲存少數幾行程式碼，但是也會處理一堆認知的額外負荷，尤其是這類結合運算子`>>`撰寫函式。
 
 ### <a name="consider-the-tooling-implications-for-point-free-programming"></a>考慮工具產生的影響無點的程式設計
 
@@ -418,7 +418,7 @@ let ``Test withdrawal transaction with 0.0 for balance``() =
 
 ## <a name="access-control"></a>存取控制
 
-F # 提供多個選項[存取控制](../language-reference/access-control.md)、 繼承自.NET 執行階段中可用。 這些不是只用於類型-您也可以使用它們的函式。
+F# 提供多個選項[存取控制](../language-reference/access-control.md)、 繼承自.NET 執行階段中可用。 這些不是只用於類型-您也可以使用它們的函式。
 
 * 偏好非`public`類型和成員，直到您需要它們來公開取用。 這樣也可以降低至哪些取用者幾。
 * 致力於讓您將所有的協助程式功能`private`。
@@ -426,7 +426,7 @@ F # 提供多個選項[存取控制](../language-reference/access-control.md)、
 
 ## <a name="type-inference-and-generics"></a>型別推斷和泛型
 
-型別推斷可讓您輸入的未定案很多。 在 F # 編譯器自動產生可協助您撰寫更一般的程式碼幾乎不必額外費心與您的組件上。 不過，這些功能不普遍良好。
+型別推斷可讓您輸入的未定案很多。 在 F# 編譯器自動產生可協助您撰寫更一般的程式碼幾乎不必額外費心與您的組件上。 不過，這些功能不普遍良好。
 
 * 請考慮使用明確的類型，在公用 Api 標記引數名稱，並不依賴類型推斷此。
 
@@ -440,17 +440,17 @@ F # 提供多個選項[存取控制](../language-reference/access-control.md)、
 
     這是一般的方法做事在.NET 中，所以建議您使用 PascalCase 而不是為 snake_case 加上或 camelCase。
 
-最後，自動一般化並不一定對象是剛接觸 F # 或大型的程式碼基底的人是一大福音。 在中使用的一般元件沒有額外的認知。 此外，如果自動一般化的函式不適用於採用不同輸入類型 (let 單獨如果它們要這麼做)，則沒有任何實質就是在該時間點的泛用的好處。 請務必考慮您要撰寫的程式碼會實際從泛型中獲益。
+最後，自動一般化並不一定對象是剛接觸 F# 或大型的程式碼基底的人是一大福音。 在中使用的一般元件沒有額外的認知。 此外，如果自動一般化的函式不適用於採用不同輸入類型 (let 單獨如果它們要這麼做)，則沒有任何實質就是在該時間點的泛用的好處。 請務必考慮您要撰寫的程式碼會實際從泛型中獲益。
 
 ## <a name="performance"></a>效能
 
-F # 值是根據預設，可讓您避免某些 bug （特別是那些包含並行和平行處理原則） 的類別不可變的。 不過，在某些情況下，為了達到最佳的 （或甚至是合理的） 的執行時間或記憶體配置的高效率工作的範圍可能最適合實作使用狀態的就地變化。 這可自由選擇是否搭配 F # 中`mutable`關鍵字。
+F# 值是根據預設，可讓您避免某些 bug （特別是那些包含並行和平行處理原則） 的類別不可變的。 不過，在某些情況下，為了達到最佳的 （或甚至是合理的） 的執行時間或記憶體配置的高效率工作的範圍可能最適合實作使用狀態的就地變化。 這可自由選擇是否搭配 F# 中`mutable`關鍵字。
 
-不過，使用`mutable`F # 中可能會覺得相悖功能的單純性。 這是正常的如果您調整至單純性的期望[參考透明度](https://en.wikipedia.org/wiki/Referential_transparency)。 參考透明度-不純正性-撰寫 F # 函式時的最終目的。 這可讓您在效能關鍵的程式碼的變化型實作覆寫功能的介面。
+不過，使用`mutable`F# 中可能會覺得相悖功能的單純性。 這是正常的如果您調整至單純性的期望[參考透明度](https://en.wikipedia.org/wiki/Referential_transparency)。 參考透明度-不純正性-撰寫 F# 函式時的最終目的。 這可讓您在效能關鍵的程式碼的變化型實作覆寫功能的介面。
 
 ### <a name="wrap-mutable-code-in-immutable-interfaces"></a>將可變動的程式碼包裝在不可變的介面
 
-為目標的參考透明度，請務必撰寫程式碼不會公開可變動的 underbelly 效能關鍵的函式。 例如，下列程式碼會實作`Array.contains`F # 核心程式庫中的函式：
+為目標的參考透明度，請務必撰寫程式碼不會公開可變動的 underbelly 效能關鍵的函式。 例如，下列程式碼會實作`Array.contains`F# 核心程式庫中的函式：
 
 ```fsharp
 [<CompiledName("Contains")>]
@@ -546,7 +546,7 @@ Lambda 運算式的中間的變動的單一點，除了所有其他程式碼，�
 
 ## <a name="object-programming"></a>物件的程式設計
 
-F # 提供物件和物件導向 (OO) 概念的完整支援。 雖然許多 OO 概念是功能強大且實用，但並非全部都適合使用。 下列清單提供高層級的 OO 功能的類別上的指導方針。
+F# 提供物件和物件導向 (OO) 概念的完整支援。 雖然許多 OO 概念是功能強大且實用，但並非全部都適合使用。 下列清單提供高層級的 OO 功能的類別上的指導方針。
 
 **請考慮在許多情況下使用這些功能：**
 
@@ -578,7 +578,7 @@ F # 提供物件和物件導向 (OO) 概念的完整支援。 雖然許多 OO �
 
 ### <a name="prefer-composition-over-inheritance"></a>偏好撰寫比繼承
 
-[撰寫比繼承](https://en.wikipedia.org/wiki/Composition_over_inheritance)是長久以來的慣用句，良好的 F # 程式碼可以符合。 基本原則是，您不應該公開 （expose） 的基底類別並強制繼承自該基底類別，以取得功能的呼叫端。
+[撰寫比繼承](https://en.wikipedia.org/wiki/Composition_over_inheritance)是長久以來的慣用句，良好的 F# 程式碼可以符合。 基本原則是，您不應該公開 （expose） 的基底類別並強制繼承自該基底類別，以取得功能的呼叫端。
 
 ### <a name="use-object-expressions-to-implement-interfaces-if-you-dont-need-a-class"></a>使用物件運算式實作介面，如果您不需要類別
 

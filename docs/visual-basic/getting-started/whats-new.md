@@ -1,6 +1,6 @@
 ---
 title: Visual Basic 的新功能
-ms.date: 02/15/2018
+ms.date: 10/04/2018
 f1_keywords:
 - VB.StartPage.WhatsNew
 helpviewer_keywords:
@@ -8,18 +8,16 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ae29553b6a431c3f20f0e5e34614842946532a9b
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 5c7786bd0dc8789d156959dcf94ac6bf8f4fb906
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925607"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194055"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic 的新功能
 
-本主題列出每個 Visual Basic 版本的主要功能名稱，並詳細說明該語言最新版本的新功能和增強功能。
+此主題列出每個 Visual Basic 版本的主要功能名稱，並詳細說明該語言最新版本的新功能與增強功能。
   
 ## <a name="current-version"></a>目前版本
 
@@ -70,6 +68,10 @@ Visual Basic / Visual Studio .NET 2002
 StudentInfo.Display("Mary", age:=19, #9/21/1998#)
 ```
 
+[`Private Protected` 成員存取修飾詞](../language-reference/modifiers/private-protected.md)
+
+這個新的關鍵字組合能定義可由其包含類別中的所有成員，以及由衍生自該包含類別的類型 (但僅限於也能在包含組件中找到它們的情況下) 進行存取的成員。 由於結構無法被繼承，因此 `Private Protected` 只能套用至類別的成員。
+
 **前置十六進位/二進位/八進位分隔符號**
 
 Visual Basic 2017 新增了將底線字元 (`_`) 當作數字分隔符號的支援。 從 Visual Basic 15.5 開始，您可以使用底線字元作為前置字元與十六進位、二進位或八進位數字之間的前置分隔符號。 下列範例使用前置數字分隔符號，將 3,271,948,384 定義為十六進位數字：
@@ -101,7 +103,7 @@ Visual Basic 命令列編譯器現在支援 [**-refout**](../reference/command-l
 
 [**Tuple**](../programming-guide/language-features/data-types/tuples.md)
 
-Tuple 是輕量的資料結構，最常用於從單一方法呼叫傳回多個值。 通常要從方法傳回多個值，您必須執行下列其中一項︰
+Tuple 是輕量的資料結構，最常用於從單一方法呼叫傳回多個值。 通常要從方法傳回多個值，您必須執行下列其中一個項目︰
 
 - 定義自訂類型 (`Class` 或 `Structure`)。 這是重量級解決方案。
 
@@ -148,12 +150,12 @@ Tuple 的 Visual Basic 支援可讓您快速定義 Tuple、選擇性地將語意
 ## <a name="visual-basic-14"></a>Visual Basic 14
 
 [Nameof](../../csharp/language-reference/keywords/nameof.md)  
- 您可以取得用於錯誤訊息之類型或成員的未限定字串名稱，而不需要對字串進行硬式編碼。  這可讓您的程式碼在重構時保持正確。  這項功能也可用來連接模型檢視控制器 MVC 連結，以及引發屬性已變更事件。  
+ 您可以取得用於錯誤訊息之類型或成員的未限定字串名稱，而不需要對字串進行硬式編碼。  這可讓您的程式碼在重構時保持正確。  此功能也可用來連接模型檢視控制器 MVC 連結，以及引發屬性已變更事件。  
   
 [字串內插補點](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
  您可以使用字串插值運算式來建構字串。  字串插值運算式類似包含運算式的範本字串。  對於引數而言，字串插值比[複合格式](../../standard/base-types/composite-format.md)更容易了解。  
   
-[Null 條件式成員存取和索引](../../csharp/language-reference/operators/null-conditional-operators.md)  
+[Null 條件式成員存取和索引](../language-reference/operators/null-conditional-operators.md)  
 您可以在執行成員存取 (`?.`) 或對 (`?[]`) 作業編製索引之前，透過非常精簡的語法來測試是否為 Null。  這些運算子可協助您撰寫較少的程式碼來處理 Null 檢查，特別是遞減至資料結構。  如果左運算元或物件參考為 Null，則作業會傳回 Null。  
   
 [多行字串常值](../../visual-basic/programming-guide/language-features/strings/string-basics.md)  

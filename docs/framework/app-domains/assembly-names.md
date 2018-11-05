@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e1ab9609fe6b2c1e232f188db8306fc05828285
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6447593ba81e4512afaf2b5798fcec00b755e63c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744131"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50184772"
 ---
 # <a name="assembly-names"></a>組件名稱
 組件的名稱儲存在中繼資料內，而且對組件範圍具有重大影響，並供應用程式使用。 強式名稱組件的完整名稱包括組件的名稱、文化特性、公開金鑰和版本號碼。 這通常稱為顯示名稱，以及可以使用 <xref:System.Reflection.Assembly.FullName%2A> 屬性取得載入的組件。  
   
- 執行階段會使用這項資訊來尋找組件，並區別它與其他同名的組件。 例如，稱為 `myTypes` 的強式名稱組件的完整名稱可能如下：  
+ 執行階段會使用此資訊來尋找組件，並區別它與其他同名的組件。 例如，稱為 `myTypes` 的強式名稱組件的完整名稱可能如下：  
   
 ```  
 myTypes, Version=1.0.1234.0, Culture=en-US, PublicKeyToken=b77a5c561934e089c, ProcessorArchitecture=msil  
@@ -57,10 +57,10 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 > [!NOTE]
 >  如果您將強式名稱組件放入全域組件快取中，組件的檔案名稱必須符合組件名稱 (不包括副檔名，例如 .exe 或 .dll)。 例如，如果組件的檔案名稱是 myAssembly.dll，則組件名稱必須是 myAssembly。 只有在根應用程式目錄中部署的私用組件才能具有與檔案名稱不同的組件名稱。  
   
-## <a name="see-also"></a>請參閱  
- [操作說明：決定組件的完整名稱](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
- [建立組件](../../../docs/framework/app-domains/create-assemblies.md)  
- [強式名稱的組件](../../../docs/framework/app-domains/strong-named-assemblies.md)  
- [全域組件快取](../../../docs/framework/app-domains/gac.md)  
- [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)
+## <a name="see-also"></a>另請參閱  
+- [操作說明：決定組件的完整名稱](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
+- [建立組件](../../../docs/framework/app-domains/create-assemblies.md)  
+- [強式名稱的組件](../../../docs/framework/app-domains/strong-named-assemblies.md)  
+- [全域組件快取](../../../docs/framework/app-domains/gac.md)  
+- [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+- [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)

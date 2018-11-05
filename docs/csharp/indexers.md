@@ -3,12 +3,12 @@ title: 索引子
 description: 了解 C# 索引子，以及其如何實作索引的屬性，而索引的屬性就是使用一或多個引數所參考的屬性。
 ms.date: 06/20/2016
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 012213a4cdf8b70ec919639a082d5700228dde6b
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: a13163cb6bd835dfdd16c83c905c134eb8a86e7d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207491"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197596"
 ---
 # <a name="indexers"></a>索引子
 
@@ -16,14 +16,14 @@ ms.locfileid: "36207491"
 
 ## <a name="indexer-syntax"></a>索引子語法
 
-您可以透過變數名稱和方括號來存取索引子。 您會將索引子引數放在方括號內：
+您可以透過變數名稱與方括弧來存取索引子。 您會將索引子引數放在方括弧內：
 
 ```csharp
 var item = someObject["key"];
 someObject["AnotherKey"] = item;
 ```
 
-若要宣告索引子，請使用 `this` 關鍵字作為屬性名稱，然後宣告方括號內的引數。 此宣告會比對上一個段落中所示的使用方式：
+若要宣告索引子，請使用 `this` 關鍵字作為屬性名稱，然後宣告方括弧內的引數。 此宣告會比對上一個段落中所示的使用方式：
 
 ```csharp
 public int this[string key]
@@ -33,10 +33,10 @@ public int this[string key]
 }
 ```
 
-在第一個範例中，您可以看到屬性語法和索引子語法之間的關聯性。 這點相似性會出現在索引子的大部分語法規則中。 索引子可以有任何有效的存取修飾詞 (public、protected internal、protected、internal、private 或 private protected)。 它們可能是密封、虛擬或抽象的。 如同屬性，您可以為索引子中 get 和 set 存取子，指定不同的存取修飾詞。
+在第一個範例中，您可以看到屬性語法和索引子語法之間的關聯性。 這點相似性會出現在索引子的大部分語法規則中。 索引子可以有任何有效的存取修飾詞 (public、protected internal、protected、internal、private 或 private protected)。 它們可能是密封、虛擬或抽象的。 如同屬性，您可以為索引子中 get 與 set 存取子，指定不同的存取修飾詞。
 您也可以指定唯讀索引子 (藉由省略 set 存取子) 或唯寫索引子 (藉由省略 get 存取子)。
 
-您可以將使用屬性時所學到的幾乎所有知識應用到索引子。 這項規則的唯一例外是「自動實作屬性」。 編譯器不一定可為索引子產生正確的儲存體。
+您可以將使用屬性時所學到的幾乎所有知識應用到索引子。 此規則的唯一例外是「自動實作屬性」。 編譯器不一定可為索引子產生正確的儲存體。
 
 索引子和屬性的不同之處，在於具有可參考一組項目中某個項目的引數。 您可以在一個類型上定義多個索引子，但前提是每個索引子的引數清單必須是唯一的。 讓我們探索幾個不同的案例，在這些案例中，您可以在類別定義中使用一或多個索引子。 
 

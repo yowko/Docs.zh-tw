@@ -1,6 +1,6 @@
 ---
 title: 參照儲存格 (F#)
-description: '了解 F # 參考儲存格的儲存體位置，可讓您以參考語意建立可變值的方式。'
+description: 了解 F# 參考儲存格的儲存體位置，可讓您以參考語意建立可變值的方式。
 ms.date: 05/16/2016
 ms.openlocfilehash: e2e1a91c62fd76e4992bc5ae11bb672766850718
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -74,7 +74,7 @@ let ref x = { contents = x }
 
 `contents` 欄位是針對與其他 ML 版本相容而提供，而且會在編譯期間產生警告。 若要停用這個警告，請使用 `--mlcompatibility` 編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。
 
-C# 程式設計人員應該要知道`ref`C# 中不是一樣`ref`F # 中。 F # 中對等的建構[byref](byrefs.md)，這是不同的概念，從參考儲存格。
+C# 程式設計人員應該要知道`ref`C# 中不是一樣`ref`F# 中。 F# 中對等的建構[byref](byrefs.md)，這是不同的概念，從參考儲存格。
 
 值將會標示`mutable`可能會自動升級為`'a ref`如果擷取的 closure; 請參閱[值](values/index.md)。
 

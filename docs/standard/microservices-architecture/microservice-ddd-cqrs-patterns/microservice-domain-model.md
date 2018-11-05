@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 設計微服�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
-ms.openlocfilehash: e672685666c846ea63bcd9cdb713af58f5e6fb1b
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 9a54679fc28bb2adf803a38fe5e43f67048a4cfd
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106248"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50048472"
 ---
 # <a name="designing-a-microservice-domain-model"></a>設計微服務領域模型
 
@@ -58,7 +58,7 @@ Anemic 領域模型只是程序樣式設計。 Anemic 實體物件不是真正�
 #### <a name="additional-resources"></a>其他資源
 
 -   **DevIQ。Domain Entity (網域實體)**
-    [*http://deviq.com/entity/*](http://deviq.com/entity/)
+    [*https://deviq.com/entity/*](https://deviq.com/entity/)
 
 -   **Martin Fowler：The Domain Model (網域模型)**
     [*https://martinfowler.com/eaaCatalog/domainModel.html*](https://martinfowler.com/eaaCatalog/domainModel.html)
@@ -85,7 +85,7 @@ Eric Evans 提到，「許多物件沒有概念性身分識別。 這些物件�
     [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
 -   **Value Object (值物件)**
-    [*http://deviq.com/value-object/*](http://deviq.com/value-object/)
+    [*https://deviq.com/value-object/*](https://deviq.com/value-object/)
 
 -   **Value Objects in Test-Driven Development (測試導向開發中的值物件)**
     [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
@@ -137,10 +137,10 @@ public class Order : Entity, IAggregateRoot
     [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
 
 -   **Vaughn Vernon：Effective Aggregate Design - Part II: Making Aggregates Work Together (有效彙總設計 - 第二部分：使彙總共同作業)**
-    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf> *
+    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf)
 
--   **Vaughn Vernon：Effective Aggregate Design - Part III: Gaining Insight Through Discovery (有效彙總設計 - 第三部分：透過探索取得深入解析)**
-    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf> *
+-   **Vaughn Vernon:Effective Aggregate Design - Part III: Gaining Insight Through Discovery (有效彙總設計 - 第三部分：透過探索取得見解)**
+    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf)
 
 -   **Sergey Grybniak：DDD Tactical Design Patterns (DDD 戰術設計模式)**
     [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
@@ -149,8 +149,7 @@ public class Order : Entity, IAggregateRoot
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
 
 -   **DevIQ。The Aggregate pattern (彙總模式)**
-    [*http://deviq.com/aggregate-pattern/*](http://deviq.com/aggregate-pattern/)
-
+    [*https://deviq.com/aggregate-pattern/*](https://deviq.com/aggregate-pattern/)
 
 >[!div class="step-by-step"]
 [上一頁](ddd-oriented-microservice.md)

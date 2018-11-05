@@ -1,7 +1,7 @@
 ---
 title: .NET Framework 的傳輸層安全性 (TLS) 最佳做法
 description: 描述搭配 .NET Framework 使用傳輸層安全性 (TLS) 的最佳做法
-ms.date: 03/15/2018
+ms.date: 10/22/2018
 helpviewer_keywords:
 - sending data, Internet security
 - protocols, Internet security
@@ -12,17 +12,16 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-author: blowdart
-ms.openlocfilehash: 96d37934b5e852b69c692bb1606d2998dac6f63a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9cb7dbdfb1ad221e00823d8d55e7fd3c52cabe8b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424476"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194133"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework 的傳輸層安全性 (TLS) 最佳做法
 
-傳輸層安全性 (TLS) 通訊協定為一項業界標準，其設計目的是用來協助保護透過網際網路所通訊之資訊的隱私權。 [TLS 1.2](https://tools.ietf.org/html/rfc5246) \(英文\) 為最新發行的標準，並能提供優於先前版本的安全性。 TLS 1.2 於未來將會由 [TLS 1.3](https://tools.ietf.org/html/draft-ietf-tls-tls13-22) \(英文\) 取代。 本文提供保護使用 TLS 通訊協定之 .NET Framework 應用程式的建議。
+傳輸層安全性 (TLS) 通訊協定為一個業界標準，其設計目的是用來協助保護透過網際網路所通訊之資訊的隱私權。 [TLS 1.2](https://tools.ietf.org/html/rfc5246) \(英文\) 是可提供優於先前版本之安全性的標準。 TLS 1.2 最終將被最新發行的標準 [TLS 1.3](https://tools.ietf.org/html/rfc8446) 取代，後者速度更快，安全性更高。 本文提供保護使用 TLS 通訊協定之 .NET Framework 應用程式的建議。
 
 為了確保能維持 .NET Framework 應用程式的安全性，TLS 版本**不應**為硬式編碼。 .NET Framework 應用程式應使用作業系統 (OS) 所支援的 TLS 版本。
 
@@ -278,7 +277,7 @@ Windows Registry Editor Version 5.00
 | Windows Server 2008 | 支援 TLS 1.2 和 TLS 1.1 需要更新。 請參閱[在 Windows Server 2008 SP2 中加入 TLS 1.1 和 TLS 1.2 支援的更新](https://support.microsoft.com/help/4019276/update-to-add-support-for-tls-1-1-and-tls-1-2-in-windows-server-2008-s)。 |
 | Windows Vista | 不支援。 |
 
-如需每個 Windows 版本上所預設啟用 TLS/SSL 通訊協定的相關資訊，請參閱 [TLS/SSL (Schannel SSP) 中的通訊協定](https://msdn.microsoft.com/library/windows/desktop/mt808159) \(英文\)。
+如需每個 Windows 版本上所預設啟用 TLS/SSL 通訊協定的相關資訊，請參閱 [TLS/SSL (Schannel SSP) 中的通訊協定](/windows/desktop/SecAuthN/protocols-in-tls-ssl--schannel-ssp-) \(英文\)。
 
 **使用 .NET Framework 3.5 支援 TLS 1.2 的要求**
 
@@ -305,6 +304,6 @@ Windows Registry Editor Version 5.00
 
 ### <a name="azure-guest-os-registry-settings"></a>Azure 客體作業系統登錄設定
 
-[Azure 雲端服務](https://azure.microsoft.com/services/cloud-services/)的 Azure 客體作業系統映像已將 `SchUseStrongCrypto` 登錄機碼值設定為 1。 如需詳細資訊，請參閱 [SchUseStrongCrypto](#schusestrongcrypto)。
+[Azure 雲端服務](https://azure.microsoft.com/services/cloud-services/)的 Azure 客體作業系統系列 5 映像已將 `SchUseStrongCrypto` 登錄機碼值設定為 1。 如需詳細資訊，請參閱 [SchUseStrongCrypto](#schusestrongcrypto)。
 
 將 [SystemDefaultTlsVersions](#systemdefaulttlsversions) 登錄機碼設定為 1。 請參閱[透過 Windows 登錄來設定安全性](#configuring-security-via-the-windows-registry)。

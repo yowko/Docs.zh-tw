@@ -1,15 +1,18 @@
 ---
 title: .NET Core 2.1 的新功能
 description: 了解 .NET Core 2.1 所提供的新功能。
+dev_langs:
+- csharp
+- vb
 author: rpetrusha
 ms.author: ronpet
-ms.date: 06/06/2018
-ms.openlocfilehash: aa80e6b7214f91c49803adde49a1e03d1971b3f6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.date: 10/10/2018
+ms.openlocfilehash: bf14e21ec4d390d8ab753bfa45533442ff4f6e68
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47400063"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120943"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 的新功能
 
@@ -119,7 +122,7 @@ dotnet tool install -g dotnetsay
 
 獨立發佈會仰賴 NuGet.org 上的執行階段版本。您的電腦上不需要有服務執行階段。
 
-使用 .NET Core 2.0 SDK 時，獨立應用程式會搭配 .NET Core 2.0.0 執行階段一起發佈，除非有透過 `RuntimeFrameworkVersion` 屬性指定其他版本。 藉由這項新行為，您將不再需要設定此屬性來為獨立應用程式選取較新的執行階段版本。 從現在起，最簡單的方法將會是一律搭配 .NET Core 2.1 SDK (2.1.300 版) 發佈。
+使用 .NET Core 2.0 SDK 時，獨立應用程式會搭配 .NET Core 2.0.0 執行階段一起發佈，除非有透過 `RuntimeFrameworkVersion` 屬性指定其他版本。 透過這個新行為，您將不再需要設定此屬性來為獨立應用程式選取較新的執行階段版本。 從現在起，最簡單的方法將會是一律搭配 .NET Core 2.1 SDK (2.1.300 版) 發佈。
 
 如需詳細資訊，請參閱[獨立式部署執行階段向前復原](../deploying/runtime-patch-selection.md)。
 ## <a name="windows-compatibility-pack"></a>Windows 相容性套件
@@ -130,7 +133,7 @@ dotnet tool install -g dotnetsay
 
 .NET Core 併入新的 JIT 編譯器技術，稱為「階層式編譯」(也稱為「調適型最佳化」)，可大幅地提升效能。 階層式編譯是可選擇加入的設定。
 
-由 JIT 編譯器所執行的其中一項重要工作，是將程式碼的執行最佳化。 不過，針對很少使用的程式碼路徑，編譯器將程式碼最佳化的時間，可能會比執行階段執行未最佳化程式碼的時間還要久。 階層式編譯會在 JIT 編譯中引入兩個階段：
+由 JIT 編譯器所執行的其中一個重要工作，是將程式碼的執行最佳化。 不過，針對很少使用的程式碼路徑，編譯器將程式碼最佳化的時間，可能會比執行階段執行未最佳化程式碼的時間還要久。 階層式編譯會在 JIT 編譯中引入兩個階段：
 
 - **第一層**：盡快產生程式碼。
 
@@ -166,9 +169,11 @@ dotnet tool install -g dotnetsay
 
 沒有這些類型的話，當您傳遞項目作為陣列的一部份或記憶體緩衝區的某個區段時，必須先複製該資料的某些部分，然後才能將它傳遞給方法。 這些類型能提供該資料的虛擬檢視，以免除額外配置記憶體和複製作業的需求。
 
-下列範例使用 <xref:System.Span%601> 執行個體來提供陣列中 10 個元素的虛擬檢視。
+下列範例使用 <xref:System.Span%601> 和 <xref:System.Memory%601> 執行個體來提供陣列中 10 個元素的虛擬檢視。
 
 [!CODE-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
+
+[!CODE-vb[Memory\<T>](~/samples/core/whats-new/whats-new-in-21/vb/program.vb)]
 
 ### <a name="brotli-compression"></a>Brotli 壓縮
 

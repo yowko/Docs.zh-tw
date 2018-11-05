@@ -4,12 +4,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 8ac0d70458d7c3762ae9dc5fc90058f0caafc4ab
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: ea63bedd207a9904a5f6aa656ed19469394290fa
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44184924"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205203"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() 傳回值 (C# 程式設計手冊)
 
@@ -25,7 +25,7 @@ ms.locfileid: "44184924"
 
 ## <a name="example"></a>範例
 
-此範例使用 [.NET Core](../../../core/index.md) 命令列工具。 如果您不熟悉 .NET Core 命令列工具，您可以在[開始使用主題](../../../core/tutorials/using-with-xplat-cli.md)中了解這些工具。
+此範例使用 [.NET Core](../../../core/index.md) 命令列工具。 如果您不熟悉 .NET Core 命令列工具，您可以在此[開始使用主題](../../../core/tutorials/using-with-xplat-cli.md)中了解這些工具。
 
 修改 *program.cs* 中的 `Main` 方法，如下所示：
 
@@ -35,7 +35,7 @@ ms.locfileid: "44184924"
 
 您可以使用 [dotnet CLI](../../../core/tools/dotnet.md) `dotnet build` 命令來建置應用程式。
 
-接下來，建立 PowerShell 指令碼以執行此應用程式，並顯示結果。 將下列程式碼貼入文字檔，將它儲存為 `test.ps1`，並放到包含專案的資料夾中。 在 PowerShell 命令提示字元中鍵入 `test.ps1`，以執行 PowerShell 指令碼。
+接下來，建立 PowerShell 指令碼以執行此應用程式，並顯示結果。 將下列程式碼貼入文字檔，將它儲存為 `test.ps1`，並放到包含專案的資料夾中。 在 PowerShell 命令提示字元中輸入 `test.ps1`，以執行 PowerShell 指令碼。
 
 由於程式碼會傳回零，因為批次檔會報告成功。 不過，如果您將 MainReturnValTest.cs 變更為傳回非零值，並重新編譯程式，則 PowerShell 指令碼的後續執行會報告失敗。
 
@@ -92,7 +92,7 @@ private static async Task<int> AsyncConsoleWork()
 > [!NOTE]
 >如果這些範例在 `Main` 方法上使用 `async` 修飾詞，編譯器會產生相同的程式碼。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 參考](../index.md)
 - [Main() 和命令列引數](index.md)

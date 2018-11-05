@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: c566e2c83a6c40acfd85c1822d28cbaa097e4449
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: be93b91ceaecdcf00029be57f07b9237a60c07b9
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501466"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48261537"
 ---
 # <a name="yield-c-reference"></a>yield (C# 參考)
-在陳述式中使用 `yield` 關鍵字時，您會表示關鍵字所在的方法、運算子或 `get` 存取子是迭代器。 如果使用 `yield` 定義迭代器，當您為自訂集合類型實作 <xref:System.Collections.Generic.IEnumerator%601> 和 <xref:System.Collections.IEnumerable> 模式時，就不需要明確的額外類別 (保存列舉之狀態的類別，請參閱 <xref:System.Collections.IEnumerator> 中的範例)。  
+在陳述式中使用 `yield` [內容關鍵字](../../../csharp/language-reference/keywords/index.md#contextual-keywords)時，您會指出關鍵字所在的方法、運算子或 `get` 存取子是迭代器。 如果使用 `yield` 定義迭代器，當您為自訂集合類型實作 <xref:System.Collections.Generic.IEnumerator%601> 和 <xref:System.Collections.IEnumerable> 模式時，就不需要明確的額外類別 (保存列舉之狀態的類別，請參閱 <xref:System.Collections.IEnumerator> 中的範例)。  
   
  下列範例將示範兩種形式的 `yield` 陳述式。  
   
@@ -87,7 +87,7 @@ foreach (string element in elements)
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../../../csharp/language-reference/index.md)  
 - [C# 程式設計指南](../../../csharp/programming-guide/index.md)  

@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 建立簡單�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: b443f1b066d3c8ef0e798206510616aace32b377
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: bba0b93ee7e68ae0320460c6a45ab252ac34c326
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45617139"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873490"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>建立簡單資料驅動 CRUD 微服務
 
@@ -171,7 +171,7 @@ _context.SaveChanges();
 
 在 ASP.NET Core 中，您可以直接使用相依性插入 (DI)。 您不需要設定協力廠商的控制反轉 (IoC) 容器，雖然您可以將您偏好的 IoC 容器插入 ASP.NET Core 基礎結構 (若您想要的話)。 在此案例下，這表示您可以透過控制器的建構函式直接插入必要的 EF DbContext 或其他存放庫。 在上述 `CatalogController` 類別的範例中，我們透過 `CatalogController()` 建構函式插入了 `CatalogContext` 類型的物件及其他物件。
 
-在 Web API 專案中要設定的一項重要組態便是將 DbContext 類別註冊到服務的 IoC 容器。 您通常會藉由在 `Startup` 類別中的 `ConfigureServices()` 方法內呼叫 `services.AddDbContext<DbContext>()` 來執行此動作，如下列範例所示：
+在 Web API 專案中要設定的一個重要組態便是將 DbContext 類別註冊到服務的 IoC 容器。 您通常會藉由在 `Startup` 類別中的 `ConfigureServices()` 方法內呼叫 `services.AddDbContext<DbContext>()` 來執行此動作，如下列範例所示：
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -393,7 +393,7 @@ public class Startup
   http://<your-root-url>/swagger/
 ```
 
-您先前曾看過 Swashbuckle 為 URL 產生的 UI，像是 http://&lt;your-root-url&gt;/swagger/ui。 在圖 8-9 中，您也可以看到如何測試任何 API 方法。
+您先前曾看過 Swashbuckle 為 URL 產生的 UI，像是 `http://<your-root-url>/swagger/ui`。 在圖 8-9 中，您也可以看到如何測試任何 API 方法。
 
 ![](./media/image10.png)
 

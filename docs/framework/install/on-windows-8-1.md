@@ -5,12 +5,12 @@ description: 了解如何在 Windows 8.1 上安裝 .NET Framework
 author: rlander
 ms.author: mairaw
 ms.date: 10/22/2017
-ms.openlocfilehash: a44471e16729468983b76febea7704bf2a0518ff
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b5bf27f0a709e43968fa5f1fdf9b8a17c5dd4ec2
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526978"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452376"
 ---
 # <a name="install-the-net-framework-on-windows-81-and-windows-server-2012-r2"></a>在 Windows 8.1 和 Windows Server 2012 R2 上安裝 .NET Framework
 
@@ -18,7 +18,7 @@ ms.locfileid: "43526978"
 
 ![無法啟動這個應用程式](./media/this-application-could-not-be-started.png)
 
-這些指令將協助您安裝所需的 .NET Framework 版本。 [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) 是最新版本。 其支援 Windows 8.1 和 Windows Server 2012 R2，並且包含於 [Windows 10 2018 4 月更新](https://www.microsoft.com/software-download/windows10)。
+這些指令將協助您安裝所需的 .NET Framework 版本。 [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) 是最新版本。 其支援 Windows 8.1 和 Windows Server 2012 R2，並且隨附於 [Windows 10 2018 年 10 月更新](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update)和 [Windows 10 2018 年 4 月更新](https://www.microsoft.com/software-download/windows10)。
 
 ## <a name="net-framework-472"></a>.NET Framework 4.7.2
 

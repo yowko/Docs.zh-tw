@@ -16,14 +16,12 @@ helpviewer_keywords:
 - sockets, client sockets
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: ee10681c8beddac06d5c4eae453f4070b2bf1b4e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ec789bcc5b675f3cde468f9464531a225e8c33db
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195546"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198963"
 ---
 # <a name="using-client-sockets"></a>使用用戶端通訊端
 在透過 <xref:System.Net.Sockets.Socket> 起始交談之前，您必須先建立應用程式和遠端裝置之間的資料管道。 雖然有其他的網路位址系列和通訊協定存在，但此範例會示範如何建立遠端服務的 TCP/IP 連線。  
@@ -42,7 +40,7 @@ IPHostEntry ipHostInfo = Dns.Resolve("host.contoso.com");
 IPAddress ipAddress = ipHostInfo.AddressList[0];  
 ```  
   
- Internet Assigned Numbers Authority (Iana) 定義了通用服務的連接埠編號 (如需詳細資訊，請參閱 www.iana.org/assignments/port-numbers)。 其他服務的已登錄連接埠編號範圍可以是 1,024 到 65,535。 下列程式碼會合併 host.contoso.com 的 IP 位址與連接埠編號，以建立連線的遠端端點。  
+ Internet Assigned Numbers Authority (Iana) 定義了通用服務的連接埠編號 (如需詳細資訊，請參閱[服務名稱與傳輸通訊協定連接埠號碼登錄](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml) \(英文\))。 其他服務的登錄連接埠號碼範圍可以是 1,024 到 65,535。 下列程式碼會合併 host.contoso.com 的 IP 位址與連接埠編號，以建立連線的遠端端點。  
   
 ```vb  
 Dim ipe As New IPEndPoint(ipAddress, 11000)  
@@ -79,7 +77,7 @@ try {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用同步用戶端通訊端](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
  [使用非同步用戶端通訊端](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
  [如何：建立通訊端](../../../docs/framework/network-programming/how-to-create-a-socket.md)  

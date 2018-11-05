@@ -4,12 +4,12 @@ description: dotnet-sln 命令提供方便在方案檔中新增、移除及列�
 author: mairaw
 ms.author: mairaw
 ms.date: 06/13/2018
-ms.openlocfilehash: 65ae402ef5519863886c8cf833598f5314b4bdad
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 2651e8e14ad43f41354b8165179f95f65e732f4c
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207772"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121216"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -88,10 +88,13 @@ dotnet new sln
 
 `dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj`
 
-使用 Glob 模式將多個 C# 專案新增至方案：
+使用萬用字元模式將多個 C# 專案新增至方案：
 
 `dotnet sln todo.sln add **/*.csproj`
 
-使用 Glob 模式從方案中移除多個 C# 專案：
+使用萬用字元模式從方案中移除多個 C# 專案：
 
 `dotnet sln todo.sln remove **/*.csproj`
+
+> [!NOTE]
+> 萬用字元不是 CLI 功能，而是命令殼層的功能。 若要成功擴充檔案，您必須使用支援萬用字元的殼層。 如需萬用字元的詳細資訊，請參閱[維基百科](https://en.wikipedia.org/wiki/Glob_(programming)) \(英文\)。

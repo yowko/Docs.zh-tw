@@ -1,6 +1,6 @@
 ---
-title: '結果 （F #）'
-description: "了解如何使用 F # '造成' 型別，可協助您撰寫錯誤容錯的程式碼。"
+title: 結果 （F#）
+description: 了解如何使用 F# '造成' 型別，可協助您撰寫錯誤容錯的程式碼。
 ms.date: 04/24/2017
 ms.openlocfilehash: a7ce2e1f6b8c6a32d99a2feaf9547c4b67b152b8
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "44213036"
 ---
 # <a name="results"></a>結果
 
-從 F # 4.1 開始，沒有`Result<'T,'TFailure>`類型可用來撰寫可以組成-容錯的程式碼。
+從 F# 4.1 開始，沒有`Result<'T,'TFailure>`類型可用來撰寫可以組成-容錯的程式碼。
 
 ## <a name="syntax"></a>語法
 
@@ -27,9 +27,9 @@ type Result<'T,'TError> =
 
 ## <a name="remarks"></a>備註
 
-請注意，結果型別是[結構差別聯集](discriminated-unions.md#struct-discriminated-unions)，這是另一個 F # 4.1 中所引進的功能。  結構相等語意適用於此處。
+請注意，結果型別是[結構差別聯集](discriminated-unions.md#struct-discriminated-unions)，這是另一個 F# 4.1 中所引進的功能。  結構相等語意適用於此處。
 
-`Result`型別通常用於單邊錯誤處理，這通常稱為[鐵路導向程式設計](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html)F # 社群中。  下列的簡單範例會示範這種方法。
+`Result`型別通常用於單邊錯誤處理，這通常稱為[鐵路導向程式設計](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html)F# 社群中。  下列的簡單範例會示範這種方法。
 
 ```fsharp
 // Define a simple type which has fields that can be validated

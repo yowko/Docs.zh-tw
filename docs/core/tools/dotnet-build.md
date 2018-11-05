@@ -4,12 +4,12 @@ description: dotnet build 命令會建置專案和其所有相依性。
 author: mairaw
 ms.author: mairaw
 ms.date: 05/25/2018
-ms.openlocfilehash: da33647e583af8441218f64fb8ac76d5de3cee38
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: c9d1478e3d3e298b01e707242cc7ad5cd924a9b3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46580105"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200546"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -23,14 +23,16 @@ ms.locfileid: "46580105"
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 ```
-dotnet build [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--no-dependencies] [--no-incremental]
+dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--no-dependencies] [--no-incremental]
     [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
+
 dotnet build [-h|--help]
 ```
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 ```
-dotnet build [<PROJECT>] [-c|--configuration] [-f|--framework] [--no-dependencies] [--no-incremental] [-o|--output]
+dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--no-dependencies] [--no-incremental] [-o|--output]
     [-r|--runtime] [-v|--verbosity] [--version-suffix]
+
 dotnet build [-h|--help]
 ```
 ---
@@ -61,9 +63,9 @@ dotnet build [-h|--help]
 
 ## <a name="arguments"></a>引數
 
-`PROJECT`
+`PROJECT | SOLUTION`
 
-要建置的專案檔。 如果未指定專案檔，MSBuild 會搜尋目前工作目錄中副檔名結尾為 *proj* 的檔案，並使用該檔案。
+要建置的專案或方案檔。 如果未指定專案或方案檔，MSBuild 會搜尋目前工作目錄中副檔名結尾為 *proj* 或 *sln* 的檔案，並使用該檔案。
 
 ## <a name="options"></a>選項
 

@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c26f4602623e1eb8979ef08c5d14404cc84e031
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b0185d79d8663d552378248f0e021a7fee8f0522
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502211"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50189715"
 ---
 # <a name="formatting-types-in-net"></a>在 .NET 中將類型格式化
 <a name="Introduction"></a> 格式化是將類別、結構或列舉值的執行個體轉換成字串表示的過程，通常是為了將結果字串展示予使用者，或是為了將字串藉還原序列化方式還原成原始的資料類型。 這種轉換可能面臨幾項挑戰：  
@@ -120,7 +120,7 @@ ms.locfileid: "43502211"
  [!code-vb[Conceptual.Formatting.Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/default1.vb#1)]  
   
 > [!WARNING]
->  從 [!INCLUDE[win81](../../../includes/win81-md.md)] 開始，[!INCLUDE[wrt](../../../includes/wrt-md.md)] 會包含具有單一方法 [IStringable.ToString](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx) 的 [IStringable](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) 介面，該介面會提供預設的格式化支援。 不過，不建議 Managed 類型實作 `IStringable` 介面。 如需詳細資訊，請參閱 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 參考頁面上的＜`IStringable`和 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 介面＞一節。  
+>  從 [!INCLUDE[win81](../../../includes/win81-md.md)] 開始，[!INCLUDE[wrt](../../../includes/wrt-md.md)] 會包含具有單一方法 [IStringable.ToString](xref:Windows.Foundation.IStringable.ToString%2A) 的 <xref:Windows.Foundation.IStringable> 介面，該介面會提供預設的格式化支援。 不過，不建議 Managed 類型實作 `IStringable` 介面。 如需詳細資訊，請參閱 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 參考頁面上的＜`IStringable`和 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 介面＞一節。  
   
  因為除介面以外的所有其他類型都會衍生自 <xref:System.Object>，所以您的自訂類別或結構會自動被賦予此功能。 不過，預設的 `ToString` 方法提供的功能有限：它雖然可以識別類型，但無法提供類型執行個體的任何資訊。 若要提供物件的字串表示來表達該物件的相關資訊，您必須覆寫 `ToString` 方法。  
   
@@ -214,7 +214,7 @@ ms.locfileid: "43502211"
   
  如需標準日期和時間格式字串的詳細資訊，請參閱[標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)。  
   
- 對於應用程式定義的物件，您也可以使用標準格式字串來定義由該物件的 `ToString(String)` 方法所產生的字串表示。 您可以定義您的物件所支援的特定標準格式規範，並且決定這項規範是否區分大小寫。 您對 `ToString(String)` 方法的實作應該要能支援：  
+ 對於應用程式定義的物件，您也可以使用標準格式字串來定義由該物件的 `ToString(String)` 方法所產生的字串表示。 您可以定義您的物件所支援的特定標準格式規範，並且決定此規範是否區分大小寫。 您對 `ToString(String)` 方法的實作應該要能支援：  
   
 -   "G" 格式規範，表示物件的慣用或通用格式。 您物件的 `ToString` 方法的無參數多載應該要呼叫這個方法的 `ToString(String)` 多載，並且將 "G" 標準格式字串傳遞給這個方法。  
   
@@ -267,7 +267,7 @@ ms.locfileid: "43502211"
   
 <a name="FormatProviders"></a>   
 ## <a name="culture-sensitive-formatting-with-format-providers-and-the-iformatprovider-interface"></a>以格式提供者和 IFormatProvider 介面進行符合文化特性的格式化  
- 雖然格式規範可讓您自訂物件的格式，但如果要為物件產生有意義的字串表示，您通常還需要其他格式設定資訊。 例如，如果要使用 "C" 標準格式字串或自訂格式字串 (例如 "$ #,#.00") 將數字格式化為貨幣值，您至少還需要有正確的貨幣符號、群組分隔符號和小數分隔符號的相關資訊。 在 .NET 中，這項額外的格式資訊是透過 <xref:System.IFormatProvider> 介面取得，而這個介面會當做傳遞至數字類型以及日期和時間類型的 `ToString` 方法之一個或多個多載的參數來提供。 <xref:System.IFormatProvider> 實作會在 .NET 中用來支援文化特性特定的格式。 下列範例將示範以代表不同文化特性的三個 <xref:System.IFormatProvider> 物件進行格式化時，物件的字串表示會有什麼樣的變化。  
+ 雖然格式規範可讓您自訂物件的格式，但如果要為物件產生有意義的字串表示，您通常還需要其他格式設定資訊。 例如，如果要使用 "C" 標準格式字串或自訂格式字串 (例如 "$ #,#.00") 將數字格式化為貨幣值，您至少還需要有正確的貨幣符號、群組分隔符號和小數分隔符號的相關資訊。 在 .NET 中，這個額外的格式資訊是透過 <xref:System.IFormatProvider> 介面取得，而這個介面會當做傳遞至數字類型以及日期和時間類型的 `ToString` 方法之一個或多個多載的參數來提供。 <xref:System.IFormatProvider> 實作會在 .NET 中用來支援文化特性特定的格式。 下列範例將示範以代表不同文化特性的三個 <xref:System.IFormatProvider> 物件進行格式化時，物件的字串表示會有什麼樣的變化。  
   
  [!code-csharp[Conceptual.Formatting.Overview#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/iformatprovider1.cs#11)]
  [!code-vb[Conceptual.Formatting.Overview#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/iformatprovider1.vb#11)]  
@@ -286,7 +286,7 @@ ms.locfileid: "43502211"
 |<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>|<xref:System.ICustomFormatter?displayProperty=nameWithType>|  
   
 > [!NOTE]
->  數字類型及日期和時間類型的 `ToString` 方法都含有多載，而其中只有某些多載會包含 <xref:System.IFormatProvider> 參數。 如果方法沒有 <xref:System.IFormatProvider> 類型的參數，則會改以傳遞 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 屬性所傳回的物件。 例如，呼叫預設的 <xref:System.Int32.ToString?displayProperty=nameWithType> 方法最終會產生如下的方法呼叫：`Int32.ToString("G", System.Globalization.CultureInfo.CurrentCulture)`。  
+>  數字類型及日期和時間類型的 `ToString` 方法都含有多載，而其中只有某些多載會包含 <xref:System.IFormatProvider> 參數。 如果方法沒有 <xref:System.IFormatProvider> 類型的參數，則會改以傳遞 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 屬性所傳回的物件。 例如，呼叫預設的 <xref:System.Int32.ToString?displayProperty=nameWithType> 方法最終會產生如下的方法呼叫： `Int32.ToString("G", System.Globalization.CultureInfo.CurrentCulture)`。  
   
  .NET 提供三個實作 <xref:System.IFormatProvider> 的類別：  
   
@@ -307,7 +307,7 @@ ms.locfileid: "43502211"
  [!code-csharp[Conceptual.Formatting.Overview#19](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific3.cs#19)]
  [!code-vb[Conceptual.Formatting.Overview#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific3.vb#19)]  
   
- 您也可以呼叫具有 `ToString` 參數的 `provider` 多載並且將下列任一項傳遞給它，藉此格式化特定文化特性的數值：  
+ 您也可以呼叫具有 `ToString` 參數的 `provider` 多載並且將下列任一個項目傳遞給它，藉此格式化特定文化特性的數值：  
   
 -   <xref:System.Globalization.CultureInfo> 物件，表示要使用其格式設定慣例的文化特性。 它的 <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> 方法會傳回 <xref:System.Globalization.CultureInfo.NumberFormat%2A?displayProperty=nameWithType> 屬性的值，也就是為數值提供文化特性特有格式資訊的 <xref:System.Globalization.NumberFormatInfo> 物件。  
   
@@ -320,12 +320,12 @@ ms.locfileid: "43502211"
   
 <a name="dateCulture"></a>   
 ### <a name="culture-sensitive-formatting-of-date-and-time-values"></a>符合文化特性的日期和時間值格式  
- 根據預設，日期和時間值的格式區分文化特性。 如果當您呼叫格式化方法時未指定文化特性，則會使用目前執行緒文化特性的格式設定慣例。 下列範例將說明這種情形，其中目前執行緒文化特性會變更四次，然後呼叫 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 方法。 在各案例中，結果字串都會反映目前文化特性的格式設定慣例。 這是因為 <xref:System.DateTime.ToString?displayProperty=nameWithType>、<xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType>、<xref:System.DateTimeOffset.ToString?displayProperty=nameWithType> 和 <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> 方法會包裝 <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 和 <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 方法的呼叫。  
+ 根據預設，日期和時間值的格式區分文化特性。 如果當您呼叫格式化方法時未指定文化特性，則會使用目前執行緒文化特性的格式設定慣例。 下列範例將說明這種情形，其中目前執行緒文化特性會變更四次，然後呼叫 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 方法。 在各案例中，結果字串都會反映目前文化特性的格式設定慣例。 這是因為 <xref:System.DateTime.ToString?displayProperty=nameWithType>、 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType>、 <xref:System.DateTimeOffset.ToString?displayProperty=nameWithType>和 <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> 方法會包裝 <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 和 <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 方法的呼叫。  
   
  [!code-csharp[Conceptual.Formatting.Overview#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific1.cs#17)]
  [!code-vb[Conceptual.Formatting.Overview#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific1.vb#17)]  
   
- 您也可以呼叫具有 <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> 參數的 <xref:System.DateTimeOffset.ToString%2A?displayProperty=nameWithType> 或 `provider` 多載並且將下列任一項傳遞給它，藉此格式化特定文化特性的日期和時間值：  
+ 您也可以呼叫具有 <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> 參數的 <xref:System.DateTimeOffset.ToString%2A?displayProperty=nameWithType> 或 `provider` 多載並且將下列任何一個項目傳遞給它，藉此格式化特定文化特性的日期和時間值：  
   
 -   <xref:System.Globalization.CultureInfo> 物件，表示要使用其格式設定慣例的文化特性。 它的 <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> 方法會傳回 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 屬性的值，也就是為日期和時間值提供文化特性特有格式資訊的 <xref:System.Globalization.DateTimeFormatInfo> 物件。  
   
@@ -344,7 +344,7 @@ ms.locfileid: "43502211"
   
 -   支援透過 <xref:System.Convert> 類別來轉換字串。 呼叫 <xref:System.Convert.ToString%28System.Object%29?displayProperty=nameWithType> 和 <xref:System.Convert.ToString%28System.Object%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 方法時，會自動呼叫您的 <xref:System.IFormattable> 實作。  
   
--   支援複合格式。 如果使用包含格式字串的格式項目來格式化您的自訂類型，則 Common Language Runtime 會自動呼叫您的 <xref:System.IFormattable> 實作並將格式字串傳遞給這個實作。 如需透過 <xref:System.String.Format%2A?displayProperty=nameWithType> 或 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 等方法執行複合格式的詳細資訊，請參閱[複合格式](#CompositeFormatting)一節。  
+-   支援複合格式。 如果使用包含格式字串的格式項目來格式化您的自訂類型，則 Common Language Runtime 會自動呼叫您的 <xref:System.IFormattable> 實作並將格式字串傳遞給這個實作。 如需透過 <xref:System.String.Format%2A?displayProperty=nameWithType> 或 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>等方法執行複合格式的詳細資訊，請參閱 [複合格式](#CompositeFormatting) 一節。  
   
  下列範例定義一個實作 `Temperature` 介面的 <xref:System.IFormattable> 類別。 這個類別支援 "C" 或 "G" 格式規範來顯示攝氏溫度、支援 "F" 格式規範來顯示華氏溫度，也支援 "K" 格式規範來顯示絕對溫度。  
   
@@ -382,16 +382,16 @@ ms.locfileid: "43502211"
   
 <a name="Custom"></a>   
 ## <a name="custom-formatting-with-icustomformatter"></a>使用 ICustomFormatter 的自訂格式  
- <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder.AppendFormat%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 這兩個複合格式方法包含支援自訂格式的格式提供者參數。 呼叫這兩種格式化方法的任一種時，會將表示 <xref:System.Type> 介面的 <xref:System.ICustomFormatter> 物件傳遞至格式提供者的 <xref:System.IFormatProvider.GetFormat%2A> 方法。 然後， <xref:System.IFormatProvider.GetFormat%2A> 方法負責傳回 <xref:System.ICustomFormatter> 實作，這個實作提供自訂格式。  
+ <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder.AppendFormat%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>這兩個複合格式方法包含支援自訂格式的格式提供者參數。 呼叫這兩種格式化方法的任一種時，會將表示 <xref:System.Type> 介面的 <xref:System.ICustomFormatter> 物件傳遞至格式提供者的 <xref:System.IFormatProvider.GetFormat%2A> 方法。 然後， <xref:System.IFormatProvider.GetFormat%2A> 方法負責傳回 <xref:System.ICustomFormatter> 實作，這個實作提供自訂格式。  
   
- <xref:System.ICustomFormatter> 介面具有單一方法 <xref:System.ICustomFormatter.Format%28System.String%2CSystem.Object%2CSystem.IFormatProvider%29>，複合格式化方法會自動針對複合格式字串中的每個格式項目，各呼叫一次這個方法。 <xref:System.ICustomFormatter.Format%28System.String%2CSystem.Object%2CSystem.IFormatProvider%29> 方法具有三個參數：格式字串 (表示格式項目中的 `formatString` 引數)、要格式化的物件，以及提供格式化服務的 <xref:System.IFormatProvider> 物件。 實作 <xref:System.ICustomFormatter> 的物件通常也會實作 <xref:System.IFormatProvider>，所以這最後一個參數是對自訂格式化類別的參考。 方法會傳回要格式化之物件的自訂格式化字串表示。 如果方法無法格式化物件，則應該傳回 null 參考 (在 Visual Basic 中為`Nothing` )。  
+ <xref:System.ICustomFormatter> 介面具有單一方法 <xref:System.ICustomFormatter.Format%28System.String%2CSystem.Object%2CSystem.IFormatProvider%29>，複合格式化方法會自動針對複合格式字串中的每個格式項目，各呼叫一次這個方法。 <xref:System.ICustomFormatter.Format%28System.String%2CSystem.Object%2CSystem.IFormatProvider%29> 方法具有三個參數：格式字串 (表示格式項目中的 `formatString` 引數)、要格式化的物件，以及提供格式化服務的 <xref:System.IFormatProvider> 物件。 實作 <xref:System.ICustomFormatter> 的物件通常也會實作 <xref:System.IFormatProvider>，所以這最後一個參數是對自訂格式化類別的參考。 方法會傳回要格式化之物件的自訂格式化字串表示。 如果方法無法格式化物件，則應該傳回 null 參考 (在 Visual Basic 中為 `Nothing`)。  
   
  下列範例提供一個名為 <xref:System.ICustomFormatter> 的 `ByteByByteFormatter` 實作，這個實作會將整數值顯示為一連串由兩位數十六進位值再加上一個空格所組成的數列。  
   
  [!code-csharp[Conceptual.Formatting.Overview#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/icustomformatter1.cs#15)]
  [!code-vb[Conceptual.Formatting.Overview#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/icustomformatter1.vb#15)]  
   
- 下列範例會使用 `ByteByByteFormatter` 類別來格式化整數值。 請注意，<xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> 方法在第二個 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法呼叫中不只呼叫一次，且會在第三個方法呼叫中使用預設的 <xref:System.Globalization.NumberFormatInfo> 提供者，因為 .`ByteByByteFormatter.Format` 方法無法辨認 "N0" 格式字串而傳回 null 參考 (在 Visual Basic 中為`Nothing` ) 的格式規範。  
+ 下列範例會使用 `ByteByByteFormatter` 類別來格式化整數值。 請注意，在範例中不會明確呼叫 <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> 方法在第二個 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法呼叫中被呼叫不只一次，且第三個方法呼叫中使用預設 <xref:System.Globalization.NumberFormatInfo> 提供者，因為`ByteByByteFormatter.Format` 方法無法辨認 "N0" 格式字串而傳回 null 參考 (在 Visual Basic 中為`Nothing` ) 的格式規範。  
   
  [!code-csharp[Conceptual.Formatting.Overview#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/icustomformatter1.cs#16)]
  [!code-vb[Conceptual.Formatting.Overview#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/icustomformatter1.vb#16)]  

@@ -3,12 +3,12 @@ title: 主控台應用程式
 description: 本教學課程會教導您一些 .NET Core 和 C# 語言中的功能。
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: da3f8f913d452b5c3c9dcda6079067c879a678dd
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 9255ad9b1fefc828e767fb8e6ccc62b2eaf23fd6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46937588"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183616"
 ---
 # <a name="console-application"></a>主控台應用程式
 
@@ -155,7 +155,7 @@ if (lineLength > 70)
 
 ## <a name="async-tasks"></a>非同步工作
 
-在這最後一個步驟中，您將新增程式碼以在一個工作中以非同步方式寫入輸出，同時也執行另一個工作以讀取來自使用者的輸入 (如果他們想要加速或減緩文字顯示)。 這包括幾個步驟，而最後，您將會擁有您所需的一切更新。
+在這最後一個步驟中，您將新增程式碼以在一個工作中以非同步方式寫入輸出，同時也執行另一個工作以讀取來自使用者的輸入 (如果他們想要加速或減緩文字顯示，或完全停止文字顯示)。 這包括幾個步驟，而最後，您將會擁有您所需的一切更新。
 第一個步驟是建立傳回方法的非同步 <xref:System.Threading.Tasks.Task>，該方法代表您到目前為止已建立來讀取和顯示檔案的程式碼。
 
 請將下列方法新增到您的 `Program` 類別 (這是取自您 `Main` 方法的主體)：
@@ -190,7 +190,7 @@ ShowTeleprompter().Wait();
 > [!NOTE]
 > 如果您使用 C# 7.1 或更新版本，則可以使用 [`async` `Main` 方法](../whats-new/csharp-7-1.md#async-main)建立主控台應用程式。
 
-接著，您必須撰寫第二個非同步方法，以從主控台進行讀取並監視 ‘<’ (小於) 和 ‘>’ (大於) 鍵。 以下是您針對該工作新增的方法：
+接著，您必須撰寫第二個非同步方法，以從主控台讀取並監視 ‘<’ (小於)、‘>’ (大於) 和 ‘X’ 或 ‘x’ 鍵。 以下是您針對該工作新增的方法：
 
 ```csharp
 private static async Task GetInput()
@@ -208,13 +208,18 @@ private static async Task GetInput()
             {
                 delay += 10;
             }
+            else if (key.KeyChar == 'X' || key.KeyChar == 'x')
+            {
+                break;
+            }
         } while (true);
     };
     await Task.Run(work);
 }
 ```
 
-這會建立 lambda 運算式來代表 <xref:System.Action> 委派，此委派會從主控台讀取機碼，並修改使用者按 ‘<’ (小於) 或 ‘>’ (大於) 鍵時，代表延遲的區域變數。 此方法會使用 <xref:System.Console.ReadKey> 來封鎖並等候使用者按下按鍵。
+這會建立 lambda 運算式來代表 <xref:System.Action> 委派，此委派會從主控台讀取機碼，並修改使用者按 ‘<’ (小於) 或 ‘>’ (大於) 鍵時，代表延遲的區域變數。 當使用者按下 ‘X’ 或 ‘x’ 鍵時，委派方法即完成，可讓使用者隨時停止文字顯示。
+此方法會使用 <xref:System.Console.ReadKey> 來封鎖並等候使用者按下按鍵。
 
 若要完成此功能，您必須建立一個會傳回方法的新 `async Task`，該方法既會啟動這兩項工作 (`GetInput` 和 `ShowTeleprompter`)，也會管理這兩項工作之間的共用資料。
 
@@ -313,6 +318,6 @@ RunTeleprompter().Wait();
 ## <a name="conclusion"></a>結論
 
 本教學課程示範一些與在主控台應用程式中工作有關的 C# 語言和 .NET Core 程式庫相關功能。
-您可以利用這項知識作為基礎，進一步探索這裡介紹的語言和類別。 您已經了解檔案和主控台 I/O 的基本概念、以工作為基礎的非同步程式設計的封鎖和非封鎖用法、C# 語言和 C# 程式組織方式的教學課程，以及「.NET Core 命令列介面」與工具。
+您可以利用此知識作為基礎，進一步探索這裡介紹的語言和類別。 您已經了解檔案和主控台 I/O 的基本概念、以工作為基礎的非同步程式設計的封鎖和非封鎖用法、C# 語言和 C# 程式組織方式的教學課程，以及「.NET Core 命令列介面」與工具。
 
 如需檔案 I/O 的詳細資訊，請參閱[檔案和資料流 I/O](../../standard/io/index.md) 主題。 如需本教學課程中所使用非同步程式設計模型的詳細資訊，請參閱[以工作為基礎的非同步程式設計](../..//standard/parallel-programming/task-based-asynchronous-programming.md)主題和[非同步程式設計](../async.md)主題。

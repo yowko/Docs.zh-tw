@@ -16,21 +16,19 @@ helpviewer_keywords:
 - protocols, TCP
 - Internet, TCP
 ms.assetid: d2811830-3bcb-495c-b82d-cda9cf919aad
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: e6ab51da72a7cecac02a2bbd5664dee164239401
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 11b0082630fb41823173a87160344d2dfff5482e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195457"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193392"
 ---
 # <a name="using-tcp-services"></a>使用 TCP 服務
 <xref:System.Net.Sockets.TcpClient> 類別會使用 TCP 向網際網路資源要求資料。 **TcpClient** 的屬性和方法取出的詳細資料，可用來建立 <xref:System.Net.Sockets.Socket> 以使用 TCP 要求和接收資料。 因為遠端裝置的連線是以資料流表示，所以可以使用 .NET Framework 資料流處理技術來讀取和寫入資料。  
   
  TCP 通訊協定會建立與遠端端點的連線，然後使用該連接來傳送和接收資料封包。 TCP 負責確保將資料封包傳送到端點，並在送達時以正確的順序組合。  
   
- 若要建立 TCP 傳線，您必須知道裝載所需服務之網路裝置的位址，以及服務用來通訊的 TCP 連接埠。 Internet Assigned Numbers Authority (Iana) 定義了通用服務的連接埠編號 (請參閱 www.iana.org/assignments/port-numbers)。 不在 Iana 清單上之服務的連接埠編號範圍可以是 1,024 到 65,535。  
+ 若要建立 TCP 傳線，您必須知道裝載所需服務之網路裝置的位址，以及服務用來通訊的 TCP 連接埠。 Internet Assigned Numbers Authority (Iana) 定義了通用服務的連接埠編號。(請參閱[服務名稱與傳輸通訊協定連接埠號碼登錄](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml) \(英文\))。 不在 Iana 清單上之服務的連接埠編號範圍可以是 1,024 到 65,535。  
   
  下列範例示範如何設定 **TcpClient**，以在 TCP 連接埠 13 上連線到時間伺服器。  
   
@@ -196,5 +194,5 @@ public class TcpTimeServer {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  

@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e48a263334ebb93a5d281032336aeb4073d8467c
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 675b6821588f8d0dd9495346a13665a32986f060
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "34827335"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48841160"
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>建置 .NET Core 應用程式的 Docker 映像
 
@@ -130,17 +130,17 @@ Docker 用戶端可以安裝於：
 
 * Linux 散發
 
-   * [CentOS](https://www.docker.com/docker-centos-distribution)
+   * [CentOS](https://docs.docker.com/install/linux/docker-ce/centos/)
 
-   * [Debian](https://www.docker.com/docker-debian)
+   * [Debian](https://docs.docker.com/install/linux/docker-ce/debian/)
 
-   * [Fedora](https://www.docker.com/docker-fedora)
+   * [Fedora](https://docs.docker.com/install/linux/docker-ce/fedora/)
 
-   * [Ubuntu](https://www.docker.com/docker-ubuntu)
+   * [Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
-* [macOS](https://docs.docker.com/docker-for-mac/)
+* [macOS](https://docs.docker.com/docker-for-mac/install/)
 
-* [Windows](https://docs.docker.com/docker-for-windows/).
+* [Windows](https://docs.docker.com/docker-for-windows/install/).
 
 #### <a name="installing-git-for-sample-repository"></a>安裝適用於範例存放庫的 Git
 
@@ -205,12 +205,12 @@ docker run -it --rm --name aspnetcore_sample aspnetapp
 ```
 
 > [!IMPORTANT]
-> 使用 Windows 容器時，您必須在瀏覽器中直接巡覽至**容器 IP 位址** (相對於 http://localhost) )。 您可以使用下列步驟來取得容器的 IP 位址：
+> 使用 Windows 容器時，您必須在瀏覽器中直接瀏覽到**容器 IP 位址** (相對於 `http://localhost`)。 您可以使用下列步驟來取得容器的 IP 位址：
 
 * 開啟另一個命令提示字元。
 * 執行 `docker ps` 以查看您的執行中容器。 其中應該會有 "aspnetcore_sample" 容器。
 * 執行 `docker exec aspnetcore_sample ipconfig`。
-* 複製容器 IP 位址，並將其貼入瀏覽器 (例如，172.29.245.43)。
+* 複製容器 IP 位址，並將它貼入瀏覽器 (例如，172.29.245.43)。
 
 > [!NOTE]
 > Docker exec 支援使用名稱或雜湊來識別容器。 在我們的範例中，使用名稱 (aspnetcore_sample)。

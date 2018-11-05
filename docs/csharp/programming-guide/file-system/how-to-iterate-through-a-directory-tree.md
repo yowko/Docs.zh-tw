@@ -5,12 +5,12 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 1aac40793fabe152e18a1bf1b634058e85b31481
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a6725463b042d51e20e5b293d7177903d2d35956
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515757"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123627"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>如何：逐一查看目錄樹狀 (C# 程式設計手冊)
 「逐一查看樹狀目錄」一詞，代表存取指定根資料夾下每個巢狀子目錄中任意深度的每個檔案。 您不需要開啟每個檔案。 您可以只擷取的檔案名稱或子目錄當成 `string`，或者可以擷取格式為 <xref:System.IO.FileInfo?displayProperty=nameWithType> 或 <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> 物件的其他資訊。  
@@ -43,7 +43,7 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  [!code-csharp[csFilesandFolders#1](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_1.cs)]  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何在不使用遞迴的情況下，逐一查看樹狀目錄中的所有檔案和資料夾。 這項技術使用泛型 <xref:System.Collections.Generic.Stack%601> 集合類型，也就是後進先出 (LIFO) 堆疊。  
+ 下列範例示範如何在不使用遞迴的情況下，逐一查看樹狀目錄中的所有檔案和資料夾。 此技術使用泛型 <xref:System.Collections.Generic.Stack%601> 集合類型，也就是後進先出 (LIFO) 堆疊。  
   
  這裡所處理的特定例外狀況，以及對每個檔案或資料夾所執行的特定動作，僅供示範之用。 您應該修改此程式碼，以符合特定需求。 如需詳細資訊，請參閱程式碼中的註解。  
   
@@ -54,9 +54,9 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  如果您必須儲存樹狀目錄的內容，不論是儲存在記憶體或磁碟中，最好的做法就是只儲存每個檔案的 <xref:System.IO.FileSystemInfo.FullName%2A> 屬性 (類型為 `string`)。 然後，您可以視需要使用此字串建立新的 <xref:System.IO.FileInfo> 或 <xref:System.IO.DirectoryInfo> 物件，或是開啟任何需要其他處理的檔案。  
   
 ## <a name="robust-programming"></a>穩固程式設計  
- 設計穩固的檔案逐一查看程式碼時，必須考慮檔案系統的許多複雜情況。 如需 Windows 檔案系統的詳細資訊，請參閱 [NTFS Technical Reference](https://technet.microsoft.com/library/81cc8a8a-bd32-4786-a849-03245d68d8e4) (NTFS 技術參考)。  
+ 設計穩固的檔案逐一查看程式碼時，必須考慮檔案系統的許多複雜情況。 如需 Windows 檔案系統的詳細資訊，請參閱 [NTFS 概觀](/windows-server/storage/file-server/ntfs-overview)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO>  
 - [LINQ 和檔案目錄](../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  

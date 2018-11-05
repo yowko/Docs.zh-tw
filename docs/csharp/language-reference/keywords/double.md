@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - double data type [C#]
 ms.assetid: 0980e11b-6004-4102-abcf-cfc280fc6991
-ms.openlocfilehash: 4c11065d9354d44c1da8354c6f7b4f52d7b84c10
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3354f22f5d1c1f1807388542c4ada5e67a9d5a14
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47207318"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50192703"
 ---
 # <a name="double-c-reference"></a>double (C# 參考)
 
@@ -20,7 +20,7 @@ ms.locfileid: "47207318"
 
 |類型|大概範圍|精確度|.NET 型別|
 |----------|-----------------------|---------------|-------------------------|
-|`double`|±5.0 × 10<sup>−324</sup> 至 ±1.7 × 10<sup>308</sup>|15-16 位數|<xref:System.Double?displayProperty=nameWithType>|
+|`double`|±5.0 × 10<sup>−324</sup> 至 ±1.7 × 10<sup>308</sup>|~15-17 位數|<xref:System.Double?displayProperty=nameWithType>|
 
 ## <a name="literals"></a>常值
 
@@ -60,7 +60,7 @@ double x = 3D;
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../../../csharp/language-reference/index.md)  
 - [C# 程式設計指南](../../../csharp/programming-guide/index.md)  

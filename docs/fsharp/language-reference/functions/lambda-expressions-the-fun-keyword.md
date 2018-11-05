@@ -1,6 +1,6 @@
 ---
 title: Lambda 運算式：fun 關鍵字 (F#)
-description: "了解如何使用 F # '好玩 」 關鍵字來定義 lambda 運算式，這是匿名函式。"
+description: 了解如何使用 F# '好玩 」 關鍵字來定義 lambda 運算式，這是匿名函式。
 ms.date: 05/16/2016
 ms.openlocfilehash: a37757f6b7328cd348bbf13f058a6dbc881769cf
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -21,7 +21,7 @@ fun parameter-list -> expression
 
 ## <a name="remarks"></a>備註
 
-*參數清單*通常是由名稱和 （選擇性） 參數的型別所組成。 更廣泛地*參數清單*可以包含任何的 F # 模式。 可能的模式的完整清單，請參閱 <<c0> [ 模式比對](../pattern-matching.md)。 有效的參數清單包含下列的範例。
+*參數清單*通常是由名稱和 （選擇性） 參數的型別所組成。 更廣泛地*參數清單*可以包含任何的 F# 模式。 可能的模式的完整清單，請參閱 <<c0> [ 模式比對](../pattern-matching.md)。 有效的參數清單包含下列的範例。
 
 ```fsharp
 // Lambda expressions with parameter lists.
@@ -42,7 +42,7 @@ fun head :: tail -> …
 
 ## <a name="using-lambda-expressions"></a>使用 Lambda 運算式
 
-當您想要在清單或另一個集合上執行作業，而且想要避免額外的工作定義的函式，lambda 運算式是特別有用。 許多 F # 程式庫函式會採用做為引數，函式值，可以使用 lambda 運算式，在這些情況下特別方便。 下列程式碼將 lambda 運算式套用至項目清單。 在此情況下，匿名函式會將 1 加入至清單的每個項目。
+當您想要在清單或另一個集合上執行作業，而且想要避免額外的工作定義的函式，lambda 運算式是特別有用。 許多 F# 程式庫函式會採用做為引數，函式值，可以使用 lambda 運算式，在這些情況下特別方便。 下列程式碼將 lambda 運算式套用至項目清單。 在此情況下，匿名函式會將 1 加入至清單的每個項目。
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet302.fs)]
 

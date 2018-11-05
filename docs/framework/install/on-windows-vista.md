@@ -5,12 +5,12 @@ ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
 ms.date: 08/03/2017
-ms.openlocfilehash: c54679292fb8bce16ec572e5a2fee12c1b47292a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e848b079d2c665052d8a5b5cfcd8fe379333b4b9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44197098"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192378"
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>在 Windows Vista 和 Windows Server 2008 上安裝 .NET Framework
 
@@ -18,7 +18,7 @@ ms.locfileid: "44197098"
 
 ![無法啟動這個應用程式](./media/this-application-could-not-be-started.png)
 
-這些指令將協助您安裝所需的 .NET Framework 版本。 [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) 是最新版本。 Windows Vista 和 Windows Server 2008 則不予支援。 其隨附於 [Windows 10 2018 4 月更新](https://www.microsoft.com/software-download/windows10)。
+這些指令將協助您安裝所需的 .NET Framework 版本。 [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) 是最新版本。 Windows Vista 和 Windows Server 2008 則不予支援。 它隨附於 [Windows 10 2018 年 10 月更新](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update)和 [Windows 10 2018 年 4 月更新](https://www.microsoft.com/software-download/windows10)中。
 
 ## <a name="net-framework-46"></a>.NET Framework 4.6
 

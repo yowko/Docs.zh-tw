@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dbc5909a3d4ea1ba2747fcc694bf1f34e20e7d2b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 612550dd2e3cda4e3549bfc14c9ada712c6653bf
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47235883"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197557"
 ---
 # <a name="regular-expression-options"></a>規則運算式選項
 <a name="Top"></a>依預設，輸入字串與規則運算式模式中任何常值字元的比較會區分大小寫，規則運算式模式中的空白字元會解譯成常值空白字元，而規則運算式中的擷取群組會隱含也會明確命名。 您可以藉由指定規則運算式選項來修改這些預設規則運算式行為和幾個其他方面。 這些選項 (列示於下表) 可以內嵌為規則運算式模式的部分，或是提供給 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 類別建構函式或靜態模式比對方法，以做為 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 列舉值。  
@@ -239,7 +239,7 @@ ms.locfileid: "47235883"
   
 <a name="Compiled"></a>   
 ## <a name="compiled-regular-expressions"></a>編譯的規則運算式  
- 預設會解譯 .NET 中的規則運算式。 將 <xref:System.Text.RegularExpressions.Regex> 物件具現化，或是呼叫靜態 <xref:System.Text.RegularExpressions.Regex> 方法時，會將規則運算式模式剖析成一組自訂 opcode，而解譯器會使用這些 opcode 來執行規則運算式。 這需要有所取捨：要將初始化規則運算式引擎的成本降到最低，就會犧牲執行時期效能。  
+ 預設會解譯 .NET 中的規則運算式。 將 <xref:System.Text.RegularExpressions.Regex> 物件具現化，或是呼叫靜態 <xref:System.Text.RegularExpressions.Regex> 方法時，會將規則運算式模式剖析成一組自訂作業碼，而解譯器會使用這些作業碼來執行規則運算式。 這需要有所取捨：要將初始化規則運算式引擎的成本降到最低，就會犧牲執行時期效能。  
   
  您可以使用 <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> 選項，以編譯的規則運算式來取代解譯的規則運算式。 在這個情況下，將模式傳遞至規則運算式時，會將該模式剖析成一組自訂作業碼，然後再轉換成 Microsoft 中繼語言 (MSIL)，可直接傳遞至通用語言執行平台。 編譯的規則運算式可充分提升執行時期效能，但會犧牲初始化時間。  
   

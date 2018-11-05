@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: a64559ac1127f5ec296cf3892dd521c3ad8ac2be
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: de11a306937626a7dbbb184e509a9f89e63dbae5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086146"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187802"
 ---
 # <a name="enum-c-reference"></a>enum (C# 參考)
 
@@ -42,7 +42,7 @@ enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 
 列舉的核准類型有 [byte](byte.md)、[sbyte](sbyte.md)、[short](short.md)、[ushort](ushort.md)、[int](int.md)、[uint](uint.md)、[long](long.md) 或 [ulong](ulong.md)。
 
-類型為 `Day` 的變數可以指派為基礎的類型範圍中的任何值；該值不限於具名常數。
+型別為列舉的變數可以指派為底層類型範圍中的任何值；該值不限於具名常數。
 
 `enum E` 的預設值是 `(E)0`運算式所產生的值。
 

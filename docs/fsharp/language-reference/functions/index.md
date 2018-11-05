@@ -1,6 +1,6 @@
 ---
 title: 函式 (F#)
-description: '深入了解以 F # 和 F # 如何支援常見的函式程式設計建構函式。'
+description: 深入了解以 F# 和 F# 如何支援常見的函式程式設計建構函式。
 ms.date: 05/16/2016
 ms.openlocfilehash: 717eba7e69398048d229173e07ccc376797171bb
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

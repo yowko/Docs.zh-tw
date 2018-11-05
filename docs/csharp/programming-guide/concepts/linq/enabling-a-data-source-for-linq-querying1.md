@@ -2,12 +2,12 @@
 title: 啟用資料來源以進行 LINQ 查詢1
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-ms.openlocfilehash: 204d2d6104a065f1d1cf9e731dc01f400218f91b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 1aa3a22028b0b3d7c705076a3e16379e09323271
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253178"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122693"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>啟用資料來源以進行 LINQ 查詢
 您可以使用各種方式來擴充 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，以啟用要在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 模式下進行查詢的任何資料來源。 資料來源可能是資料結構、Web 服務、檔案系統或資料庫等等。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 模式可以讓用戶端輕鬆查詢已啟用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢的資料來源，因為查詢的語法和模式並未改變。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 可以擴充至這些資料來源的方式包括：  
@@ -28,7 +28,7 @@ ms.locfileid: "44253178"
  您可以使用兩種方式來啟用記憶體中資料的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢功能。 如果資料屬於實作 <xref:System.Collections.Generic.IEnumerable%601> 的類型，您可以使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects 來查詢該資料。 如果透過實作 <xref:System.Collections.Generic.IEnumerable%601> 介面來啟用類型列舉並不合理，您可以在該類型中定義 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 標準查詢運算子方法，或是建立可擴充類型的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 標準查詢運算子方法。 標準查詢運算子的自訂實作 (Implementation) 應該會使用延後執行 (Deferred Execution) 來傳回結果。  
   
 ### <a name="remote-data"></a>遠端資料  
- 啟用遠端資料來源之 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢的最佳選擇是實作 <xref:System.Linq.IQueryable%601> 介面。 不過，這與擴充資料來源之提供者 (例如 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]) 不同。 [!INCLUDE[vs_orcas_long](~/includes/vs-orcas-long-md.md)] 中並無任何提供者模型可用來將現有的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 技術 (例如 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]) 擴充至其他資料來源類型。  
+ 啟用遠端資料來源之 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢的最佳選擇是實作 <xref:System.Linq.IQueryable%601> 介面。 不過，這與擴充資料來源之提供者 (例如 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]) 不同。 Visual Studio 2008 中並無任何提供者模型可用來將現有的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 技術 (例如 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]) 延伸到其他資料來源類型。
   
 ## <a name="iqueryable-linq-providers"></a>IQueryable LINQ 提供者  
  實作 <xref:System.Linq.IQueryable%601> 的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供者在複雜度上有很大的差異。 本節將討論不同層次的複雜度。  
@@ -39,7 +39,7 @@ ms.locfileid: "44253178"
   
  複雜的 `IQueryable` 提供者 (例如 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 提供者) 可能會將完整的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢解譯成表示查詢語言，例如 SQL。 複雜的提供者比複雜度較低的提供者更為廣泛，因為它可以在查詢中處理更多種類的問題。 它也具有開放類型系統，因此必須包含廣泛的基礎結構，以對應使用者定義的類型。 開發複雜的提供者需要花費相當大量的心力。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Linq.IQueryable%601>  
 - <xref:System.Collections.Generic.IEnumerable%601>  

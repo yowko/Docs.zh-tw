@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: edc34eaa7704d788ff4b63328a2b6c0622d17e13
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8d78549d2822ad6c660fae39d458a98f23eca390
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502918"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199886"
 ---
 # <a name="install-the-net-framework-for-developers"></a>安裝適用於開發人員的 .NET Framework
 
@@ -37,7 +37,7 @@ ms.locfileid: "43502918"
 
 |.NET Framework 版本|開發人員安裝|可轉散發安裝|平台支援|
 |----------------------------|----------------------------|----------------------------------|----------------------|
-|**4.7.2**|[.NET Framework 4.7.2 開發人員套件](https://go.microsoft.com/fwlink/?LinkId=874338)|[下載中心 4.7.2 Web 安裝程式](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[下載中心 4.7.2 離線安裝程式](https://go.microsoft.com/fwlink/?LinkId=863265)|包含在： <br/>Windows 10 2018 4 月更新<br /><br /> 您可以安裝於：<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Windows 10 年度更新<br /> Windows 8.1 (含) 以前版本<br /> Windows Server，1709 版 (含) 以前版本<br /> (如需完整清單，請參閱[系統需求](~/docs/framework/get-started/system-requirements.md))||
+|**4.7.2**|[.NET Framework 4.7.2 開發人員套件](https://go.microsoft.com/fwlink/?LinkId=874338)|[下載中心 4.7.2 Web 安裝程式](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[下載中心 4.7.2 離線安裝程式](https://go.microsoft.com/fwlink/?LinkId=863265)|包含在： <br/>Windows 10 2018 年 10 月更新<br/>Windows 10 2018 4 月更新<br /><br /> 您可以安裝於：<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Windows 10 年度更新<br /> Windows 8.1 (含) 以前版本<br /> Windows Server，1709 版 (含) 以前版本<br /> (如需完整清單，請參閱[系統需求](~/docs/framework/get-started/system-requirements.md))||
 |**4.7.1**|[.NET Framework 4.7.1 開發人員套件](https://go.microsoft.com/fwlink/?LinkId=852105)|[4.7.1 Web 安裝程式的下載頁面](https://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [4.7.1 離線安裝程式的下載頁面](https://go.microsoft.com/fwlink/?LinkId=852107)|包含在： <br/>Windows 10 Fall Creators Update<br/>Windows Server，版本 1709<br /><br /> 您可以安裝於：<br/> Windows 10 Creators Update <br /> Windows 10 年度更新<br /> Windows 8.1 (含) 以前版本<br /> Windows Server 2016 (含) 以前版本<br /> (如需完整清單，請參閱[系統需求](~/docs/framework/get-started/system-requirements.md))||
 |**4.7**|[.NET Framework 4.7 開發人員套件](https://go.microsoft.com/fwlink/?LinkId=825319)|[4.7 Web 安裝程式的下載頁面](https://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [4.7 離線安裝程式的下載頁面](https://go.microsoft.com/fwlink/?LinkId=825303)|包含在： <br/>Windows 10 Creators Update<br /><br /> 您可以安裝於：<br /> Windows 10 年度更新<br /> Windows 8.1 (含) 以前版本<br /> Windows Server 2016 (含) 以前版本<br /> (如需完整清單，請參閱[系統需求](~/docs/framework/get-started/system-requirements.md))||
 |**4.6.2**|[.NET Framework 4.6.2 開發人員套件](https://go.microsoft.com/fwlink/?LinkId=780617)|[4.6.2 Web 安裝程式的下載頁面](https://go.microsoft.com/fwlink/?LinkId=780597)<br /><br /> [4.6.2 離線安裝程式的下載頁面](https://go.microsoft.com/fwlink/?LinkId=780601)|包含在： <br /> Windows 10 年度更新<br /><br /> 您可以安裝於：<br /> Windows 10 11 月更新 <br/> Windows 10 <br /> Windows 8.1 (含) 以前版本<br /> Windows Server 2012 R2 (含) 以前版本<br /> (如需完整清單，請參閱[系統需求](~/docs/framework/get-started/system-requirements.md))|
@@ -67,7 +67,7 @@ ms.locfileid: "43502918"
 
 「目標套件」可讓您的應用程式在 Visual Studio 和其他開發環境中開發時，以特定版本的 .NET Framework 為目標。 「開發人員套件」包含特定版本的 .NET Framework 和其隨附的 SDK，以及對應的目標套件。
 
-.NET Framework 4.5.1 或 4.5.2 的開發人員套件、.NET Framework 4.6 的目標套件以及 .NET Framework 4.6.1、4.6.2、4.7、4.7.1 或 4.7.2 的開發人員套件，提供特定 .NET Framework 版本的參考組件、語言套件以及 IntelliSense 檔案，供用於 Visual Studio 這類的整合式開發環境。  若是使用 Visual Studio，開發人員套件或目標套件也會將已安裝的 .NET Framework 版本加入您在建立新專案時所選擇的目標。  選擇下列其中一項：
+.NET Framework 4.5.1 或 4.5.2 的開發人員套件、.NET Framework 4.6 的目標套件以及 .NET Framework 4.6.1、4.6.2、4.7、4.7.1 或 4.7.2 的開發人員套件，提供特定 .NET Framework 版本的參考組件、語言套件以及 IntelliSense 檔案，供用於 Visual Studio 這類的整合式開發環境。  若是使用 Visual Studio，開發人員套件或目標套件也會將已安裝的 .NET Framework 版本加入您在建立新專案時所選擇的目標。  選擇下列其中一個項目：
 
 - [Microsoft .NET Framework 4.7.2 開發人員套件](https://go.microsoft.com/fwlink/?LinkId=874338)
 
@@ -154,7 +154,7 @@ Web 和離線安裝程式都是針對 x86 和 x64 為主的電腦所設計 (請�
 
 - 您必須具有系統管理認證，才可安裝 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、其小數點版本、.NET Framework 4.6 和其小數點版本以及 .NET Framework 4.7 和其小數點版本。
 
-- .NET Framework 4.5 可轉散發套件已於 2012 年 10 月 9 日更新，更正了與數位憑證時間戳記錯誤相關的問題，這個問題會造成 Microsoft 所產生和簽署之檔案中的數位簽章提前過期。 如果您先前安裝了日期為 2012 年 8 月 16 日的 .NET Framework 4.5 可轉散發套件，我們建議您使用 [Microsoft 下載中心](https://go.microsoft.com/fwlink/p/?LinkId=245484)最新的可轉散發套件進行更新。 如需這個問題的詳細資訊，請參閱 [Microsoft 資訊安全諮詢 2749655](https://technet.microsoft.com/security/advisory/2749655) 和[知識庫文章 2770445](https://support.microsoft.com/kb/2770445)。
+- .NET Framework 4.5 可轉散發套件已於 2012 年 10 月 9 日更新，更正了與數位憑證時間戳記錯誤相關的問題，這個問題會造成 Microsoft 所產生和簽署之檔案中的數位簽章提前過期。 如果您先前安裝了日期為 2012 年 8 月 16 日的 .NET Framework 4.5 可轉散發套件，我們建議您使用 [Microsoft 下載中心](https://go.microsoft.com/fwlink/p/?LinkId=245484)最新的可轉散發套件進行更新。 如需這個問題的詳細資訊，請參閱 [Microsoft 資訊安全諮詢 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655) 和[知識庫文章 2770445](https://support.microsoft.com/kb/2770445)。
 
 ## <a name="to-install-language-packs"></a>若要安裝語言套件
 

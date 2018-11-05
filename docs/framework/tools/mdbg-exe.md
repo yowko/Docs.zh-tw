@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: be32659a270cd7c6b7e3551594934926eabf0d31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2861d2364d2c29d15b25911524ef28aa78130913
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399765"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202916"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (.NET Framework 命令列偵錯工具)
 .NET Framework 命令列偵錯工具可以協助工具廠商和應用程式開發人員尋找並修復以 .NET Framework 通用語言執行平台為目標之程式的 Bug。 這個工具使用執行階段偵錯 API 來提供偵錯服務。 目前您只能使用 MDbg.exe 偵錯 Managed 程式碼；不支援偵錯 Unmanaged 程式碼。  
   
- 此工具會透過 NuGet 提供。 如需安裝資訊，請參閱 [MDbg 0.1.0](http://www.nuget.org/packages/MDbg/0.1.0)。 若要執行此工具，請使用 Package Manager Console。 如需如何使用 [套件管理員主控台] 的詳細資訊，請參閱 [Using the Package Manager Console](http://docs.nuget.org/docs/start-here/Using-the-Package-Manager-Console) (使用套件管理員主控台)。  
+此工具會透過 NuGet 提供。 如需安裝資訊，請參閱 [MDbg 0.1.0](https://www.nuget.org/packages/MDbg/0.1.0)。 若要執行此工具，請使用 Package Manager Console。 如需如何使用套件管理員主控台的相關詳細資訊，請參閱[套件管理員主控台](/nuget/tools/package-manager-console)一文。
   
- 在 Package Manager 命令提示字元中，輸入下列命令：  
+在 Package Manager 命令提示字元中，輸入下列命令：  
   
 ## <a name="syntax"></a>語法  
   
@@ -88,7 +88,7 @@ MDbg [ProgramName[arguments]] [options]
 ## <a name="remarks"></a>備註  
  使用編譯器專用旗標編譯要偵錯的應用程式，會讓編譯器產生偵錯符號。 如需這些旗標的詳細資訊，請參閱編譯器的文件。 您可以偵錯最佳化的應用程式，但是有些偵錯資訊將會遺失。 例如，許多區域變數將不可見，而原始程式行也會不準確。  
   
- 編譯應用程式之後，請在命令提示字元鍵入 **mdbg** 來啟動偵錯工作階段，如下列範例所示。  
+ 編譯應用程式之後，請在命令提示字元輸入 **mdbg** 來啟動偵錯工作階段，如下列範例所示。  
   
 ```  
 C:\Program Files\Microsoft Visual Studio 8\VC>mdbg  
@@ -106,6 +106,6 @@ mdbg>
   
 ## <a name="examples"></a>範例  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [工具](../../../docs/framework/tools/index.md)  
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

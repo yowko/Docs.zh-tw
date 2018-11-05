@@ -4,12 +4,12 @@ description: 本指南說明您在 .NET 中建置伺服器應用程式時應考�
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: dbb5bd21d2fa43167a9624be2baec3f591d10920
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 01e7222ccd4a764f75481e58d4ac305daadfe1a8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864958"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202233"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇
 
@@ -87,7 +87,7 @@ ms.locfileid: "43864958"
 
 * ASP.NET Web Forms 應用程式：ASP.NET Web Forms 只能在 .NET Framework 中使用。 ASP.NET Core 無法用於 ASP.NET Web Forms。 目前並未規劃將 ASP.NET Web Forms 帶入 .NET Core。
 
-* ASP.NET Web Pages 應用程式：ASP.NET Web Pages 未隨附於 ASP.NET Core 中。 ASP.NET Core [Razor 頁面](/aspnet/core/mvc/razor-pages/)與 Web Pages 有許多相似處。
+* ASP.NET Web Pages 應用程式：ASP.NET Web Pages 未隨附於 ASP.NET Core 中。 
 
 * WCF 服務實作。 即使已有 [WCF 用戶端程式庫](https://github.com/dotnet/wcf) 可從 .NET Core 取用 WCF 服務，但 WCF 伺服器實作目前只能在 .NET Framework 中使用。 此案例不是 .NET Core 目前計劃的一部分，但未來會納入考慮。
 
@@ -104,6 +104,7 @@ ms.locfileid: "43864958"
 ## <a name="see-also"></a>另請參閱
 
 * [在 ASP.NET 和 ASP.NET Core 之間進行選擇](/aspnet/core/choose-aspnet-framework)
+* [將目標指向 .NET Framework 的 ASP.NET Core](/aspnet/core#aspnet-core-targeting-net-framework)
 * [目標架構](frameworks.md)
 * [.NET Core 指南](../core/index.md)  
 * [從 .NET Framework 移植到 .NET Core](../core/porting/index.md)  

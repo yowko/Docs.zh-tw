@@ -5,12 +5,12 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: b7c7b8d16463cd66eb8a0a5e383dd3763af323d8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f456bbe771608258307673337693c1e8a5c45f39
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857189"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454365"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>在 Windows 10 和 Windows Server 2016 上安裝 .NET Framework
 
@@ -23,6 +23,8 @@ ms.locfileid: "43857189"
 ## <a name="net-framework-472"></a>.NET Framework 4.7.2
 
 .NET Framework 4.7.2 隨附於下列項目中：
+
+* [Windows 10 2018 年 10 月更新](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
 
 * [Windows 10 2018 4 月更新](https://www.microsoft.com/software-download/windows10)
 

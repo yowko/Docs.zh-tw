@@ -4,12 +4,12 @@ description: HttpClientFactory 是意向明確的處理站，自 .NET Core 2.1 �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 6fd30a9358ca9c07b2a6e2ec591e4c5d7db54ccb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f2be3daf1b04613fa8afc1d17cbcbca2d338e062
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513209"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347925"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>使用 HttpClientFactory 實作復原 HTTP 要求
 
@@ -21,7 +21,7 @@ ms.locfileid: "43513209"
 
 第一個問題是，這個類別是可處置項目，將它與 `using` 陳述式搭配使用不是最好的選擇，因為即使您處置 `HttpClient` 物件，底層通訊端也不會立即釋出，而且可能會導致所謂「通訊端耗盡」的嚴重問題。 如需有關此問題的詳細資訊，請參閱[您使用 HttpClient 的方法錯誤而導致軟體不穩定](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/) \(英文\) 部落格文章。
 
-因此，您應該將 `HttpClient` 具現化一次，然後在整個應用程式生命週期中重複使用。 為每個要求具現化 `HttpClient` 類別將會在負載過重時耗盡可用的通訊端數目。 該問題會導致 `SocketException` 錯誤。 解決該問題的可能方法為建立 `HttpClient` 物件做為單一物件或靜態物件，如 [Microsoft 關於 HttpClient 用法的文章](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/console-webapiclient)中所述。 
+因此，您應該將 `HttpClient` 具現化一次，然後在整個應用程式生命週期中重複使用。 為每個要求具現化 `HttpClient` 類別將會在負載過重時耗盡可用的通訊端數目。 該問題會導致 `SocketException` 錯誤。 解決該問題的可能方法為建立 `HttpClient` 物件做為單一物件或靜態物件，如 [Microsoft 關於 HttpClient 用法的文章](https://docs.microsoft.com/dotnet/csharp/tutorials/console-webapiclient)中所述。 
 
 但是將 `HttpClient` 做為單一物件或靜態物件時會出現第二個問題。 在此案例中，單一或靜態 `HttpClient` 不會理會 DNS 變更，如 [.NET Core GitHub 存放庫提及的問題](https://github.com/dotnet/corefx/issues/11224)中所述。 
 
@@ -71,7 +71,7 @@ services.AddHttpClient<IOrderingService, OrderingService>();
 
 ### <a name="httpclient-lifetimes"></a>HttpClient 存留期
 
-每次您從 IHttpClientFactory 取得 `HttpClient` 物件時，就會傳回一個新的 `HttpClient` 執行個體。 每個具名或具型別用戶端都會有一個 HttpMessageHandler**。 `HttpClientFactory` 會將處理站建立的 HttpMessageHandler 執行個體集合到集區以減少資源耗用量。 建立新的 `HttpClient` 執行個體時，如果集區中的 HttpMessageHandler 執行個體存留期尚未過期，則可重複使用它。
+每次您從 IHttpClientFactory 取得 `HttpClient` 物件時，就會傳回一個新的 `HttpClient` 執行個體。 每個具名或具型別用戶端都會有一個 HttpMessageHandler**。 `IHttpClientFactory` 會將處理站建立的 HttpMessageHandler 執行個體集合到集區以減少資源耗用量。 建立新的 `HttpClient` 執行個體時，如果集區中的 HttpMessageHandler 執行個體存留期尚未過期，則可重複使用它。
 
 處理常式的集合是需要的做法，因為每個處理常式通常會管理自己的基礎 HTTP 連線；建立比所需數目更多的處理常式可能會導致連線延遲。 有些處理常式也會保持連線無限期地開啟，這可能導致處理常式無法對 DNS 變更回應。
 
@@ -155,7 +155,7 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 ## <a name="additional-resources"></a>其他資源
 
 -   **使用 .NET Core 2.1 中的 HttpClientFactory **
-    [*https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1*](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
+    [*https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1*](https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
 
 
 -   **HttpClientFactory GitHub 存放庫**

@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 7209789eb36dc717823625c0ae67357ee332086b
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 069bfacd1ae08b5c84d6e304b2f12f18e1eecb22
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404654"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49122847"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>使用 ASP.NET Core 應用程式中的資料
 
@@ -91,7 +91,7 @@ var brandItems = await _context.CatalogBrands
 
 請務必在上述範例中新增 ToListAsync 呼叫，以立即執行查詢。 否則，陳述式會指派 IQueryable<SelectListItem> 給 brandItem，直到系統列舉它時才執行。 從方法傳回 IQueryable 結果時，也有其優缺點。 它可讓您進一步修改 EF Core 建構的查詢，但如果您將作業新增至 EF Core 不能轉譯的查詢時，也可能會出現只在執行階段發生的錯誤。 一般來說，比較安全的做法是將任何篩選條件傳遞給執行資料存取的方法，並傳回記憶體內部的集合 (例如，List<T>) 作為結果。
 
-EF Core 會追蹤其從持續性儲存區擷取的實體變更。 若要儲存追蹤實體的變更，您只需要在 DbContext 上呼叫 SaveChanges 方法，並確定它是用來擷取實體的相同 DbContext 執行個體。 您可以直接在適當的 DbSet 屬性中新增和移除實體，並再次使用 SaveChanges 呼叫，以執行資料庫命令。 下列範例示範如何新增、更新和移除持續性儲存區的實體。
+EF Core 會追蹤其從持續性儲存區擷取的實體變更。 若要儲存追蹤實體的變更，您只需要在 DbContext 上呼叫 SaveChanges 方法，並確定它是用來擷取實體的相同 DbContext 執行個體。 新增和移除實體是直接在適當的 DbSet 屬性上完成，並再次地使用 SaveChanges 呼叫來執行資料庫命令。 下列範例示範如何新增、更新和移除持續性儲存區的實體。
 
 ```csharp
 // create
@@ -133,7 +133,7 @@ var brandsWithItems = await _context.CatalogBrands
 
 ### <a name="resilient-connections"></a>具復原功能的連接
 
-有時您可能會無法使用 SQL 資料庫等外部資源。 在暫時無法使用的情況下，應用程式可以使用重試邏輯，以避免引發例外狀況。 這項技術通常稱為「連線復原能力」。 您可以重試某項作業，並以指數方式增加等候時間，直到已達重試計數上限為止，藉此實作[使用指數輪詢重試](https://docs.microsoft.com/azure/architecture/patterns/retry)技術。 這項技術是為了因應雲端資源可能會在短時間內斷斷續續無法使用，而導致某些要求失敗的問題。
+有時您可能會無法使用 SQL 資料庫等外部資源。 在暫時無法使用的情況下，應用程式可以使用重試邏輯，以避免引發例外狀況。 此技術通常稱為「連線復原能力」。 您可以重試某作業，並以指數方式增加等候時間，直到已達重試計數上限為止，藉此實作[使用指數輪詢重試](https://docs.microsoft.com/azure/architecture/patterns/retry)技術。 此技術是為了因應雲端資源可能會在短時間內斷斷續續無法使用，而導致某些要求失敗的問題。
 
 在 Azure SQL DB 中，Entity Framework Core 已提供內部資料庫恢復連接功能和重試邏輯。 如果您想要使用具復原功能的 EF Core 連線，則必須為每個 DbContext 連線啟用 Entity Framework 執行策略。
 
@@ -209,7 +209,7 @@ await strategy.ExecuteAsync(async () =>
 
 雖然 EF Core 是管理持續性的絕佳選擇，甚至能封裝應用程式開發人員提供的資料庫詳細資料，但它並不是唯一的選擇。 另一個熱門的開放原始碼替代方法是 [Dapper](https://github.com/StackExchange/Dapper)，也就是所謂的微型 ORM。 微型 ORM 是一種功能較簡單的輕量型工具，可將物件對應至資料結構。 舉 Dapper 為例，其設計目標著重在效能，而非完整封裝用來擷取和更新資料的基礎查詢。 因為 Dapper 不需要開發人員完全抽離 SQL，所以是比較單純的「試用版」，可讓開發人員撰寫想用於指定資料存取作業的確切查詢。
 
-EF Core 與 Dapper 的主要差異是前者提供下列兩個重要的功能，但這也會對效能產生額外負荷。 第一個是它會將 LINQ 運算式轉譯為 SQL。 雖然系統會快取這些轉譯，第一次執行時仍會產生額外負荷。 第二個是追蹤實體的變更 (以便產生有效的 UPDATE 陳述式)。 您可以使用 AsNotTracking 延伸模組，將特定查詢的這項行為關閉。 EF Core 也會產生非常有效率的 SQL 查詢，而且在任何情況下，效能都是完全可以接受的等級；但如果您需要妥善控制要執行的精確查詢，您也可以使用 EF Core 傳入自訂的 SQL (或執行預存程序)。 在這種情況下，Dapper 就略勝於 EF Core。 Julie Lerman 在 2016 年 5 月的 [Dapper, Entity Framework, and Hybrid Apps](https://msdn.microsoft.com/magazine/mt703432.aspx) (Dapper、Entity Framework 和混合式應用程式) MSDN 文章中提供了一些效能資料。 如需各種不同資料存取方法的其他效能基準測試資料，請參閱 [Dapper 網站](https://github.com/StackExchange/Dapper)。
+EF Core 與 Dapper 的主要差異是前者提供下列兩個重要的功能，但這也會對效能產生額外負荷。 第一個是它會將 LINQ 運算式轉譯為 SQL。 雖然系統會快取這些轉譯，第一次執行時仍會產生額外負荷。 第二個是追蹤實體的變更 (以便產生有效的 UPDATE 陳述式)。 您可以使用 AsNotTracking 延伸模組，將特定查詢的此行為關閉。 EF Core 也會產生非常有效率的 SQL 查詢，而且在任何情況下，效能都是完全可以接受的等級；但如果您需要妥善控制要執行的精確查詢，您也可以使用 EF Core 傳入自訂的 SQL (或執行預存程序)。 在這種情況下，Dapper 就略勝於 EF Core。 Julie Lerman 在 2016 年 5 月的 [Dapper, Entity Framework, and Hybrid Apps](https://msdn.microsoft.com/magazine/mt703432.aspx) (Dapper、Entity Framework 和混合式應用程式) MSDN 文章中提供了一些效能資料。 如需各種不同資料存取方法的其他效能基準測試資料，請參閱 [Dapper 網站](https://github.com/StackExchange/Dapper)。
 
 若要查看 Dapper 和 EF Core 的語法差異，請參考下列用來擷取項目清單之相同方法的兩個版本：
 
@@ -229,7 +229,7 @@ public async Task<IEnumerable<CatalogType>> GetCatalogTypesWithDapper()
 }
 ```
 
-如果您需要使用 Dapper 建立更複雜的物件圖形，則必須自行撰寫相關的查詢 (反之，在 EF Core 中是要新增 Include)。 上述作業是透過各種語法來支援，包括「多重對應」這項功能，可讓您將個別資料列對應到多個對應物件。 例如，假設 Post 類別具有 User 類型的 Owner 屬性 ，下列 SQL 就會傳回所有必要的資料：
+如果您需要使用 Dapper 建立更複雜的物件圖形，則必須自行撰寫相關的查詢 (反之，在 EF Core 中是要新增 Include)。 上述作業是透過各種語法來支援，包括「多重對應」這個功能，可讓您將個別資料列對應到多個對應物件。 例如，假設 Post 類別具有 User 類型的 Owner 屬性 ，下列 SQL 就會傳回所有必要的資料：
 
 ```sql
 select * from #Posts p
@@ -259,14 +259,13 @@ var data = connection.Query<Post, User, Post>(sql,
 
 ## <a name="sql-or-nosql"></a>SQL 或 NoSQL
 
-傳統上來看，SQL Server 這類關聯式資料庫主導了永續性資料儲存的市場，但它們並不是唯一可用的解決方案。 
-  [MongoDB](https://www.mongodb.com/what-is-mongodb) 這類 NoSQL 資料庫提供儲存物件的不同方式。 這個選項不會將物件對應至資料表和資料列，而是序列化整個物件圖形，並且將結果儲存。 初步來講，這個方法的優點是簡潔和效能。 比起將物件分解成許多關聯性資料表，並更新自上次從資料庫擷取物件之後可能已變更的資料列，使用索引鍵儲存單一序列化的物件，當然更加簡單。 同樣地，相較於從關聯式資料庫完整撰寫相同物件所需的複雜聯結或多個資料庫查詢，從以索引鍵為基礎的存放區中擷取和還原序列化單一物件通常更為快速、簡單。 NoSQL 資料庫不具鎖定、異動或固定結構描述的特質，也非常適合跨多部機器調整規模，同時支援大型資料集。
+傳統上來看，SQL Server 這類關聯式資料庫主導了永續性資料儲存的市場，但它們並不是唯一可用的解決方案。 [MongoDB](https://www.mongodb.com/what-is-mongodb) 這類 NoSQL 資料庫提供儲存物件的不同方式。 這個選項不會將物件對應至資料表和資料列，而是序列化整個物件圖形，並且將結果儲存。 初步來講，這個方法的優點是簡潔和效能。 比起將物件分解成許多關聯性資料表，並更新自上次從資料庫擷取物件之後可能已變更的資料列，使用索引鍵儲存單一序列化的物件，當然更加簡單。 同樣地，相較於從關聯式資料庫完整撰寫相同物件所需的複雜聯結或多個資料庫查詢，從以索引鍵為基礎的存放區中擷取和還原序列化單一物件通常更為快速、簡單。 NoSQL 資料庫不具鎖定、異動或固定結構描述的特質，也非常適合跨多部機器調整規模，同時支援大型資料集。
 
 另一方面來看，NoSQL 資料庫 (如字面通稱) 也有其缺點。 關聯式資料庫使用正規化功能，強制執行一致性並避免出現重複的資料。 這可減少資料庫的大小總計，並確保對共用資料所做的更新可在整個資料庫中立即生效。 在關聯式資料庫中，假設「地址」資料表參考了「國家/地區」資料表中的識別碼，如果國家/地區的名稱已變更，地址記錄就會隨之更新，您不需要另行更新地址記錄。 不過，在 NoSQL 資料庫中，「地址」和其相關聯的「國家/地區」可能會序列化為許多預存物件的一部分。 更新國家/地區名稱時，也必須更新所有相關物件，而不是單一資料列。 關聯式資料庫也可以強制執行規則 (例如外部索引鍵)，以確保關聯的完整性。 NoSQL 資料庫通常不會對其資料提供這類條件約束。
 
 NoSQL 資料庫還有一個必須處理的複雜問題是版本設定。 當物件的屬性變更時，您可能無法從過去已儲存的版本將它還原序列化。 因此，所有含序列化版本 (舊版) 物件的現有物件，都必須更新以符合新的結構描述。 而在關聯式資料庫中，當結構描述變更時，有時需要更新指令碼或對應更新，因此兩者已不只是概念上的差異。 不過，使用 NoSQL 方法時，您必須修改的項目數通常非常多，因為重複的資料比較多。
 
-您可以在 NoSQL 資料庫中儲存物件的多個版本，而固定結構描述的關聯式資料庫通常不支援這項功能。 不過，在這種情況下，應用程式的程式碼必須找出存在的舊版本物件，這增加了其額外的複雜性。
+您可以在 NoSQL 資料庫中儲存物件的多個版本，而固定結構描述的關聯式資料庫通常不支援此功能。 不過，在這種情況下，應用程式的程式碼必須找出存在的舊版本物件，這增加了其額外的複雜性。
 
 NoSQL 資料庫通常不會強制執行 [ACID](https://en.wikipedia.org/wiki/ACID)，因此在效能和延展性方面比關聯式資料庫更有優勢。 因此針對不適用於正規化資料表結構儲存區的極大型資料集以及物件，就非常適合使用這種資料庫。 單一應用程式也可以同時利用關聯式和 NoSQL 資料庫，只要依據最適合的情況來選擇即可。
 
@@ -282,7 +281,7 @@ DocumentDB 查詢語言是一種簡單但功能強大的介面，適用於查詢
 
 **參考資料 – DocumentDB**
 
-- DocumentDB 簡介
+- DocumentDB 簡介  
   <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
 
 ## <a name="other-persistence-options"></a>其他持續性選項
@@ -299,7 +298,7 @@ DocumentDB 查詢語言是一種簡單但功能強大的介面，適用於查詢
 
 **參考資料 – Azure 儲存體**
 
-- Azure 儲存體簡介
+- Azure 儲存體簡介  
   <https://docs.microsoft.com/azure/storage/storage-introduction>
 
 ## <a name="caching"></a>快取

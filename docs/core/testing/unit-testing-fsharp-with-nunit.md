@@ -2,25 +2,34 @@
 title: 使用 dotnet test 與 NUnit 為 .NET Core 中的 F# 程式庫進行單元測試
 description: 使用 dotnet test 與 NUnit 逐步建置解決方案範例的互動式體驗，了解 .NET Core 中 F# 的單元測試概念。
 author: rprouse
-ms.date: 12/01/2017
+ms.date: 10/04/2018
 dev_langs:
 - fsharp
-ms.openlocfilehash: c5653463ce43ab8660753aa03ef79ba10f339fac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adadfc0358814f4600255aac7076f9ba6fbb4feb
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215744"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308401"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>使用 dotnet test 與 NUnit 為 .NET Core 中的 F# 程式庫進行單元測試
 
 本教學課程會引導您逐步進行建置範例方案的互動式體驗，以了解單元測試概念。 如果您想要使用預先建置的方案進行教學課程，請在開始之前[檢視或下載範例程式碼](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp-nunit/)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
+## <a name="prerequisites"></a>必要條件 
+- [.NET Core SDK 2.1 (2.1.400 版)](https://www.microsoft.com/net/download) 或更新版本。 
+- 您選擇的文字編輯器或程式碼編輯器。
+
 ## <a name="creating-the-source-project"></a>建立來源專案
 
 開啟 Shell 視窗。 建立名為 *unit-testing-with-fsharp* 的目錄來放置方案。
-在這個新目錄中，執行 [`dotnet new sln`](../tools/dotnet-new.md) 以建立新方案。 這樣可讓您更輕鬆地管理類別庫與單元測試專案。
-在方案目錄中，建立 *MathService* 目錄。 到目前為止，目錄與檔案結構如下所示：
+在此新目錄中，執行下列命令以針對類別庫與測試專案建立新方案檔：
+
+```console
+dotnet new sln
+```
+
+接下來，建立 *MathService* 目錄。 下列大綱顯示到目前為止的目錄與檔案結構：
 
 ```
 /unit-testing-with-fsharp
@@ -28,22 +37,24 @@ ms.locfileid: "33215744"
     /MathService
 ```
 
-將 *MathService* 設定為目前的目錄，然後執行 [`dotnet new classlib -lang F#`](../tools/dotnet-new.md) 以建立來源專案。  為了使用測試導向開發 (TDD)，您將必須建立 math 服務的失敗實作：
+將 *MathService* 設為目前的目錄，然後執行下列命令以建立來源專案：
+
+```console
+dotnet new classlib -lang F#
+```
+
+為了使用測試驅動開發 (TDD)，您將必須建立 math 服務的失敗實作：
 
 ```fsharp
 module MyMath =
     let squaresOfOdds xs = raise (System.NotImplementedException("You haven't written a test yet!"))
 ```
 
-將目錄變更回 *unit-testing-with-fsharp* 目錄。 執行 [`dotnet sln add .\MathService\MathService.fsproj`](../tools/dotnet-sln.md) 以將類別庫專案加入方案中。
+將目錄變更回 *unit-testing-with-fsharp* 目錄。 執行下列命令，將類別庫專案新增至方案：
 
-## <a name="install-the-nunit-project-template"></a>安裝 NUnit 專案範本
-
-必須安裝 NUnit 專案範本，才可建立測試專案。 這項作業在您想要建立新的 NUnit 專案之每部開發人員電腦上，只需執行一次即可。 執行 [`dotnet new -i NUnit3.DotNetNew.Template`](../tools/dotnet-new.md) 以安裝 NUnit 範本。
-
- ```
- dotnet new -i NUnit3.DotNetNew.Template
- ```
+```console
+dotnet sln add .\MathService\MathService.fsproj
+```
 
 ## <a name="creating-the-test-project"></a>建立測試專案
 
@@ -58,7 +69,13 @@ module MyMath =
     /MathService.Tests
 ```
 
-將 *MathService.Tests* 目錄設定為目前的目錄，然後使用 [`dotnet new nunit -lang F#`](../tools/dotnet-new.md) 建立新專案。 如此會建立將 NUnit 用作為測試架構的測試專案。 產生的範本會在 *MathServiceTests.fsproj* 中設定測試執行器：
+將 *MathService.Tests* 目錄設為目前的目錄，然後使用下列命令建立新的專案：
+
+```console
+dotnet new nunit -lang F#
+```
+
+這樣會建立將 NUnit 用作為測試架構的測試專案。 產生的範本會在 *MathServiceTests.fsproj* 中設定測試執行器：
 
 ```xml
 <ItemGroup>
@@ -70,7 +87,7 @@ module MyMath =
 
 測試專案需要其他套件來建立和執行單元測試。 上一個步驟中的 `dotnet new` 新增了 NUnit 與 NUnit 測試配接器。 現在，將 `MathService` 類別庫新增為專案的另一個相依性。 使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 命令：
 
-```
+```console
 dotnet add reference ../MathService/MathService.fsproj
 ```
 
@@ -86,14 +103,18 @@ dotnet add reference ../MathService/MathService.fsproj
         MathService.fsproj
     /MathService.Tests
         Test Source Files
-        MathServiceTests.fsproj
+        MathService.Tests.fsproj
 ```
 
-執行 *unit-testing-with-fsharp* 目錄中的 [`dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`](../tools/dotnet-sln.md)。
+在 *unit-testing-with-fsharp* 目錄中執行下列命令：
+
+```console
+dotnet sln add .\MathService.Tests\MathService.Tests.fsproj
+```
 
 ## <a name="creating-the-first-test"></a>建立第一個測試
 
-TDD 方法需要寫入一個失敗的測試，使其通過，然後重複該程序。 開啟 *Tests.fs* 並加入下列程式碼：
+TDD 方法需要寫入一個失敗的測試，使其通過，然後重複該程序。 開啟 *UnitTest1.fs* 並新增下列程式碼：
 
 ```fsharp
 namespace MathService.Tests
@@ -129,14 +150,14 @@ member this.TestEvenSequence() =
 
 請注意，`expected` 序列已被轉換為清單。 NUnit 架構依賴數個標準 .NET 類型。 該相依性表示您的公用介面與預期結果支援 <xref:System.Collections.ICollection>，而非 <xref:System.Collections.IEnumerable>。
 
-當您執行該測試時，您會看到您的測試失敗。 您尚未建立實作。 在可運作的 `Mathservice` 類別中撰寫最簡單的程式碼以進行此測試：
+當您執行該測試時，您會看到您的測試失敗。 您尚未建立實作。 透過在可運作之 MathService 專案的 *Library.fs* 類別中撰寫最簡單的程式碼，來使此測試通過：
 
 ```csharp
 let squaresOfOdds xs =
     Seq.empty<int>
 ```
 
-在 *unit-testing-with-fsharp* 目錄中，重新執行 `dotnet test`。 `dotnet test` 命令會依序執行 `MathService` 專案和 `MathService.Tests` 專案的建置。 建置這兩個專案之後，它將會執行此單一測試。 測試通過。
+在 *unit-testing-with-fsharp* 目錄中，重新執行 `dotnet test`。 `dotnet test` 命令會依序執行 `MathService` 專案和 `MathService.Tests` 專案的建置。 建置這兩個專案之後，它會執行您的測試。 現在通過兩個測試了。
 
 ## <a name="completing-the-requirements"></a>完成需求
 

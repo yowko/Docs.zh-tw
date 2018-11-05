@@ -5,12 +5,12 @@ author: tdykstra
 ms.author: tdykstra
 ms.date: 07/08/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 11fad691021ec897348177c67134750e72b4ff7c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4ffcf56ba171192048a736b58ddcfa591fd3af58
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698480"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840267"
 ---
 # <a name="net-glossary"></a>.NET 字彙表
 
@@ -46,13 +46,13 @@ ms.locfileid: "45698480"
 
 Common Language Runtime。
 
-確切意義取決於內容，但這通常是指 .NET Framework 的執行階段。 CLR 會處理記憶體配置和管理。 CLR 也是虛擬機器，它不只會執行應用程式，也會使用 JIT 編譯器即時產生和編譯程式碼。 目前的 Microsoft CLR 實作僅限 Windows。
+確切意義取決於內容，但這通常是指 .NET Framework 的執行階段。 CLR 會處理記憶體配置和管理。 CLR 也是虛擬機器，它不只會執行應用程式，也會使用 [JIT](#jit) 編譯器即時產生和編譯程式碼。 目前的 Microsoft CLR 實作僅限 Windows。
 
 ## <a name="coreclr"></a>CoreCLR
 
 .NET Core Common Language Runtime。
 
-此 CLR 是從與 CLR 相同的程式碼基底所建置。 一開始，CoreCLR 是 Silverlight 的執行階段，其設計目的是為了在多個平台上執行，特別是 Windows 和 OS X。CoreCLR 現在是 .NET Core 的一部分，代表 CLR 的簡化版本。 它仍然是跨平台執行階段，現在支援許多 Linux 發行版本。 CoreCLR 也是具有 JIT 和程式碼執行功能的虛擬機器。
+此 CLR 是從與 CLR 相同的程式碼基底所建置。 一開始，CoreCLR 是 Silverlight 的執行階段，其設計目的是為了在多個平台上執行，特別是 Windows 和 OS X。CoreCLR 現在是 .NET Core 的一部分，代表 CLR 的簡化版本。 它仍然是[跨平台](#cross-platform)執行階段，現在支援許多 Linux 發行版本。 CoreCLR 也是具有 JIT 和程式碼執行功能的虛擬機器。
 
 ## <a name="corefx"></a>CoreFX
 
@@ -67,6 +67,10 @@ Common Language Runtime。
 相較於 CLR/CoreCLR，CoreRT 不是虛擬機器，這表示它不會包含即時產生和執行程式碼的功能，因為它不包含 [JIT](#jit)。 不過，它包含 [GC](#gc)，以及執行階段類型識別 (RTTI) 和反映功能。 不過，其型別系統已設計成不需要反映的中繼資料。 這讓 [AOT](#aot) 工具鏈能夠抽離不必要的中繼資料，更重要的是，它能夠識別應用程式未使用的程式碼。 CoreRT 正在開發中。
 
 請參閱 [Intro to .NET Native and CoreRT](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md) (.NET Native 和 CoreRT 簡介)
+
+## <a name="cross-platform"></a>跨平台
+
+能夠開發和執行可在多個不同的作業系統 (例如 Linux、Windows 和 iOS) 上使用的應用程式，而無需特別針對每個作業系統重新撰寫。 這樣可讓程式碼在不同平台的應用程式之間重複使用並維持一致性。
 
 ## <a name="ecosystem"></a>生態系統
 
@@ -136,7 +140,7 @@ Just-in-Time 編譯器。
 
 ## <a name="mono"></a>Mono
 
-Mono 是需要小型執行階段時主要使用的 .NET 實作。 它是支援 Android、Mac、iOS、tvOS 和 watchOS 版 Xamarin 應用程式的執行階段，而且主要著重在資源使用量較少的應用程式。
+Mono 是開放原始碼、[跨平台](#cross-platform)的 .NET 實作，主要用於需要小型執行階段時。 它是支援 Android、Mac、iOS、tvOS 和 watchOS 版 Xamarin 應用程式的執行階段，而且主要著重在資源使用量較少的應用程式。
 
 它支援目前發行的所有 .NET Standard 版本。
 
@@ -198,7 +202,7 @@ UWP 是 .NET Native 第一個支援的應用程式架構。 現在，我們支�
 
 原生 (映像) 產生。
 
-您可以將這項技術視為永續性 JIT 編譯器。 它通常會在執行程式碼的電腦上編譯程式碼，但編譯通常會發生在安裝期間。
+您可以將此技術視為永續性 JIT 編譯器。 它通常會在執行程式碼的電腦上編譯程式碼，但編譯通常會發生在安裝期間。
 
 ## <a name="package"></a>套件
 
@@ -240,7 +244,7 @@ OS 是執行階段環境的一部分，但不是 .NET 執行階段的一部分�
 
 可搭配使用以建置及執行應用程式的一組程式設計技術。
 
-「.NET 堆疊」是指 .NET Standard 和所有 .NET 實作。 「一個 .NET 堆疊」一詞可能是指 .NET 的一項實作。 
+「.NET 堆疊」是指 .NET Standard 和所有 .NET 實作。 「一個 .NET 堆疊」一詞可能是指 .NET 的一個實作。 
 
 ## <a name="target-framework"></a>Target Framework - 目標 Framework
 

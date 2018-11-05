@@ -3,16 +3,16 @@ title: C# 版本控制 - C# 手冊
 description: 了解 C# 和 .NET 的版本控制運作方式
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 949b7414116169cada62b48392f37809f26d7ff9
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: af81e5a8ad3165ce99a823f8b263cc798d5b6d2c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46585929"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183226"
 ---
 # <a name="versioning-in-c"></a>C# 中的版本控制 #
 
-在本教學課程中，您會了解版本控制在 .NET 中的意義。 您也會了解進行文件庫版本控制以及升級到新版文件庫時要考量的因素。
+在本教學課程中，您會了解版本控制在 .NET 中的意義。 您也會了解進行程式庫版本控制以及升級成新版程式庫時要考量的因素。
 
 ## <a name="authoring-libraries"></a>撰寫程式庫
 
@@ -20,7 +20,7 @@ ms.locfileid: "46585929"
 
 ### <a name="semantic-versioning"></a>語意版本控制
 
-[語意版本控制](http://semver.org/) (簡稱為 SemVer) 是文件庫各版本套用的命名慣例，表示特定的重大事件。
+[語意版本控制](https://semver.org/) (簡稱為 SemVer) 是文件庫各版本套用的命名慣例，表示特定的重大事件。
 理想情況是，您提供給文件庫的版本資訊應該能幫助開發人員判斷其與使用同一文件庫舊版本的專案是否相容。
 
 SemVer 最基本的方法是 3 元件格式 `MAJOR.MINOR.PATCH`，其中：
@@ -38,7 +38,7 @@ SemVer 最基本的方法是 3 元件格式 `MAJOR.MINOR.PATCH`，其中：
 
 以下是嘗試維持與舊版文件庫的相容性時要考慮的一些事項︰
 
-* 虛擬方法︰當您在新版本中將虛擬方法變成非虛擬，表示必須更新覆寫該方法的專案。 這是一項極重大的變更，強烈建議您不要這麼做。
+* 虛擬方法︰當您在新版本中將虛擬方法變成非虛擬，表示必須更新覆寫該方法的專案。 這是一個極重大的變更，強烈建議您不要這麼做。
 * 方法簽章︰更新方法行為時也會要求您變更其簽章，您應該改建立多載，讓呼叫該方法的程式碼仍然可以運作。
 您可以一直使用舊的方法簽章呼叫新方法簽章，讓實作保持一致。
 * [Obsolete 屬性](programming-guide/concepts/attributes/common-attributes.md#Obsolete)︰您可以在程式碼中使用這個屬性，指定未來版本中要取代及可能移除的類別或類別成員。

@@ -2,18 +2,18 @@
 title: 呼叫端資訊 (C#)
 ms.date: 07/20/2015
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
-ms.openlocfilehash: 27f2e7624369061ff3089357c455ae51237e6dfa
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 4a0e4d6ecad1863832a33ba91485d0c12675cd57
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46586448"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50185270"
 ---
 # <a name="caller-information-c"></a>呼叫端資訊 (C#)
 
-使用 Caller Info 屬性，您就可以取得有關方法之呼叫端的資訊。 您可以取得原始程式碼的檔案路徑、原始程式碼中的行號，以及呼叫端的成員名稱。 這項資訊有助於追蹤、偵錯及建立診斷工具。
+使用 Caller Info 屬性，您就可以取得有關方法之呼叫端的資訊。 您可以取得原始程式碼的檔案路徑、原始程式碼中的行號，以及呼叫端的成員名稱。 此資訊有助於追蹤、偵錯及建立診斷工具。
 
-若要取得這項資訊，可使用套用至選擇性參數的屬性，每個屬性都有預設值。 下表列出 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 命名空間中定義的 Caller Info 屬性：
+若要取得此資訊，可使用套用至選擇性參數的屬性，每個屬性都有預設值。 下表列出 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 命名空間中定義的 Caller Info 屬性：
 
 |屬性|描述|類型|
 |---|---|---|
@@ -61,7 +61,7 @@ Caller Info 屬性不會讓參數成為選擇性， 而是會影響省略引數�
 
 ### <a name="member-names"></a>成員名稱
 
-您可以使用 `CallerMemberName` 屬性避免指定成員名稱做為所呼叫方法的 `String` 引數。 利用這個技巧就可以避免發生 [重新命名重構] 未變更 `String` 值這個問題。 這項優點對於下列工作特別有用：
+您可以使用 `CallerMemberName` 屬性避免指定成員名稱做為所呼叫方法的 `String` 引數。 利用這個技巧就可以避免發生 [重新命名重構] 未變更 `String` 值這個問題。 這個優點對於下列工作特別有用：
 
 - 使用追蹤和診斷常式。
 
@@ -76,7 +76,7 @@ Caller Info 屬性不會讓參數成為選擇性， 而是會影響省略引數�
 |靜態建構函式|字串 ".cctor"|
 |解構函式|字串 "Finalize"|
 |使用者定義的運算子或轉換|產生的成員名稱，例如 "op_Addition"。|
-|屬性建構函式|套用屬性的成員名稱。 如果屬性為成員內的任何項目 (例如參數、傳回值或泛型類型參數)，這個結果會是與該項目相關聯的成員名稱。|
+|屬性建構函式|套用屬性 (attribute) 的方法或屬性 (property) 名稱。 如果屬性為成員內的任何元素 (例如參數、傳回值或泛型類型參數)，這個結果會是與該元素相關聯的成員名稱。|
 |無包含的成員 (例如，組件層級或套用至類型的屬性)。|選擇性參數的預設值。|
 
 ## <a name="see-also"></a>另請參閱

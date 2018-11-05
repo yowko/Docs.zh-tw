@@ -5,12 +5,12 @@ ms.date: 03/20/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 3c841a1152613ec877bb6172dc8d053bf060b33b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 36529414d5b51e9e4ade7447ff6e5e908e5153ab
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515276"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188569"
 ---
 # <a name="how-to-compare-strings-in-c"></a>如何：在 C\# 比較字串
 
@@ -21,7 +21,7 @@ ms.locfileid: "43515276"
 - 您可以選擇序數或語言比較。
 - 您可以選擇大小寫是否重要。
 - 您可以選擇文化特性特定的比較。
-- 語言比較會相依於文化特性和平台。
+- 語言比較視文化特性與平台而異。
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
@@ -82,7 +82,7 @@ ms.locfileid: "43515276"
 <co-op> is less than <cop> using ordinal comparison
 ```
 
-語言比較相依於目前的文化特性以及 OS。 當您使用字串比較時必須考量此點。
+語言比較視目前的文化特性與 OS 而異。 當您使用字串比較時必須考量此點。
 
 ## <a name="linguistic-sorting-and-searching-strings-in-arrays"></a>陣列中的語言排序和字串搜尋
 

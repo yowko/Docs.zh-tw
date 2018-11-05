@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 07/19/2018
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 91dbbefd247b5e175da7dc3560b6323cbec1972b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: bdaaa22f20f21e823459914a900997050a6624a6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595552"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50186066"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -50,6 +50,8 @@ ms.locfileid: "45595552"
 1. 以次舊的 .NET Standard 版本為目標並建置您的專案。
 2. 如果您的專案建置成功，便重複步驟 1。 否則，請將目標重新設定為次新版本，這會是您應該使用的版本。
 
+不過，以較低的 .NET Standard 版本作為目標會產生數個支援相依性。 如果您的專案是以 .NET Standard 1.x 為目標，我們建議*同時*以 .NET Standard 2.0 作為目標。 這能為使用您的程式庫並執行與 .NET Standard 2.0 相容之架構的使用者簡化相依性關係圖，也能減少他們所需下載的套件數目。
+
 ### <a name="net-standard-versioning-rules"></a>.NET Standard 版本控制規則
 
 有兩個主要的版本控制規則：
@@ -77,7 +79,7 @@ ms.locfileid: "45595552"
 - [Markdown 中的 API 清單](https://github.com/dotnet/standard/tree/master/docs/versions)
 - 以 [NuGet 套件](../core/packages.md)散發並由 [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/) 中繼套件參考的參考組件。
 
-### <a name="package-representation"></a>封裝表示
+### <a name="package-representation"></a>套件表示
 
 .NET Standard 參考組件的主要散發工具是 [NuGet 套件](../core/packages.md)。 傳遞實作的方法有許多種，各自適合每種 .NET 實作。
 

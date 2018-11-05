@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 12/15/2017
 ms.custom: vs-dotnet
-ms.openlocfilehash: 4623f4efa8637bd30f378006a92bfc4965429182
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 53e4549f4790bc0756cd0ad0b903b3dc25d2f66a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47399225"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200120"
 ---
 # <a name="debug-your-hello-world-application-with-visual-studio-2017"></a>使用 Visual Studio 2017 針對您的 Hello World 應用程式進行偵錯
 
@@ -228,4 +228,4 @@ Visual Studio 也可讓您逐行執行程式並監視其執行情況。 通常�
 
 當您按 F5 或從 [組建] 功能表中選擇 [組置方案] 時，Visual Studio 就會編譯您主控台應用程式的發行版本。 您可以測試該版本，就像您對應用程式的偵錯版本所做的一樣。
 
-完成應用程式偵錯之後，下一個步驟就是發行可部署的應用程式版本。 如需如何執行這項操作的資訊，請參閱[使用 Visual Studio 2017 發佈 Hello World 應用程式](./publishing-with-visual-studio.md)。
+完成應用程式偵錯之後，下一個步驟就是發行可部署的應用程式版本。 如需如何執行此操作的資訊，請參閱[使用 Visual Studio 2017 發佈 Hello World 應用程式](./publishing-with-visual-studio.md)。

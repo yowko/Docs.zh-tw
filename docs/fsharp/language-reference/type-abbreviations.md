@@ -1,6 +1,6 @@
 ---
 title: 類型縮寫 (F#)
-description: '深入了解 F # 類型縮寫可以提供更有意義的名稱以使程式碼更容易讀取。'
+description: 深入了解 F# 類型縮寫可以提供更有意義的名稱以使程式碼更容易讀取。
 ms.date: 05/16/2016
 ms.openlocfilehash: 259cd6c84e22fc7c98e08255d3e0ded5b87af352
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -33,7 +33,7 @@ type [accessibility-modifier] type-abbreviation = type-name
 
 在先前的程式碼`Transform`是類型縮寫表示接受任何類型的單一引數的函式並傳回該相同型別的單一值。
 
-在.NET Framework MSIL 程式碼中，不會保留類型縮寫。 因此，當您使用 F # 組件從另一種.NET Framework 語言，您必須使用類型縮寫的基礎類型名稱。
+在.NET Framework MSIL 程式碼中，不會保留類型縮寫。 因此，當您使用 F# 組件從另一種.NET Framework 語言，您必須使用類型縮寫的基礎類型名稱。
 
 類型縮寫也可用的量值單位上。 如需詳細資訊，請參閱 <<c0> [ 量值單位](units-of-measure.md)。
 

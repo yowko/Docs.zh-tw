@@ -3,12 +3,12 @@ title: 開始使用語法轉換 (Roslyn API)
 description: 周遊、查詢和查核語法樹狀結構的簡介。
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: acba7ac590154ad8458d0d9a8abac55a12e96265
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3f8d152a2e17bc9e480bd0a76488c563720a63b1
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47400786"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122562"
 ---
 # <a name="get-started-with-syntax-transformation"></a>開始使用語法轉換
 
@@ -30,7 +30,7 @@ ms.locfileid: "47400786"
 
 第一個語法轉換將會示範 Factory 方法。 您會使用 `using System.Collections.Generic;` 陳述式取代 `using System.Collections;` 陳述式。 此範例示範如何使用 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> Factory 方法建立 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode?displayProperty=nameWithType> 物件。 針對每種**節點**、**權杖**或 **Trivia**，會有一個建立該型別執行個體的 Factory 方法。 您會透過由下往上撰寫節點的方式來建立語法樹狀結構。 然後，使用您建立的新樹狀結構來取代現有節點，以轉換現有的程式。
 
-啟動 Visual Studio，然後建立新的 C# **獨立程式碼分析工具**專案。 在 Visual Studio 中，選擇 [檔案] > [新增] > [專案] 來顯示 [新增專案] 對話方塊。 在 [Visual C#] > [擴充性] 下，選擇 [獨立程式碼分析工具]。 此快速入門有兩個範例專案，因此請將方案命名為 **SyntaxTransformationQuickStart**，並將專案命名為 **ConstructionCS**。 按一下 [確定 **Deploying Office Solutions**]。
+啟動 Visual Studio，然後建立新的 C# **獨立程式碼分析工具**專案。 在 Visual Studio 中，選擇 [檔案] > [新增] > [專案] 來顯示 [新增專案] 對話方塊。 在 [Visual C#] > [擴充性] 下，選擇 [獨立程式碼分析工具]。 此快速入門有兩個範例專案，因此請將方案命名為 **SyntaxTransformationQuickStart**，並將專案命名為 **ConstructionCS**。 按一下 [確定]。
 
 此專案使用 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> 類別方法來建構代表 `System.Collections.Generic` 命名空間的 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType>。
 

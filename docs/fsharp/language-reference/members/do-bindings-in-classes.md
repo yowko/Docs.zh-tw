@@ -1,6 +1,6 @@
 ---
 title: 類別中的 do 繫結 (F#)
-description: "了解如何使用 F # 'do' 在類別定義中，這會執行動作，或第一次使用的型別時，物件建構的繫結。"
+description: 了解如何使用 F# 'do' 在類別定義中，這會執行動作，或第一次使用的型別時，物件建構的繫結。
 ms.date: 05/16/2016
 ms.openlocfilehash: e54a5bde52bf6973cc338c929ba99e6fd5b53127
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

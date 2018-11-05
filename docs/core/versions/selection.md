@@ -4,12 +4,12 @@ description: 了解 .NET Core 如何尋找及選擇適合您程式的執行階�
 author: billwagner
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: 28a76cc17346c40517a21e8dc902bd6c2a84597f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5f6ec628a93dd349b003dfc9b89f84ff7a93a05a
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47233194"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48841536"
 ---
 # <a name="net-core-version-selection"></a>.NET Core 版本選取
 
@@ -31,12 +31,12 @@ ms.locfileid: "47233194"
 
 ## <a name="the-sdk-uses-the-latest-installed-version"></a>SDK 使用最新安裝的版本
 
-SDK 命令包含 `dotnet new` 和 `dotnet run`。 `dotnet` CLI 必須為每個 dotnet 命令選擇 SDK 版本。 根據預設，.NET Core CLI 使用電腦上最新安裝的 SDK，即使：
+SDK 命令包含 `dotnet new` 和 `dotnet run`。 .NET Core CLI 針對每個 `dotnet` 命令都必須選擇 SDK 版本。 根據預設，它會使用電腦上最新安裝的 SDK，即使：
 
-* 專案目標為較舊版本。
-* 最新版本是預覽版本。
+* 專案是以 .NET Core 執行階段的舊版為目標。
+* .NET Core SDK 的最新版本是預覽版。
 
-應用程式可以利用最新的 SDK 功能和增強功能，同時以舊版 .NET Core 執行階段為目標。 您可以在不同專案上以多個 .NET Core 執行階段版本為目標，並針對所有專案使用相同的 SDK 工具。
+您可以利用最新的 SDK 功能和增強功能，同時以舊版 .NET Core 執行階段為目標。 您可以在不同專案上以多個 .NET Core 執行階段版本為目標，並針對所有專案使用相同的 SDK 工具。
 
 在罕見的情況下，您可能需要使用舊版的 SDK。 您可以在 [*global.json* 檔案](../tools/global-json.md)中指定該版本。 「使用最新版」原則表示您只會使用 *global.json* 指定比最新安裝版本更早的 .NET Core SDK 版本。
 
@@ -104,7 +104,7 @@ SDK 命令包含 `dotnet new` 和 `dotnet run`。 `dotnet` CLI 必須為每個 d
 
 您可以將應用程式發佈為[**獨立散發**](../deploying/index.md#self-contained-deployments-scd)。 此方法會將 .NET Core 執行階段和程式庫與您的應用程式配套。 獨立部署不會相依於執行階段環境。 執行階段版本選取發生於發佈時，而不是執行時。
 
-發佈過程會選取指定執行階段系列的最新修補程式版本。 例如，如果 .NET Core 2.0.4 是 .NET Core 2.0 執行階段系列中的最新修補程式版本，`dotnet publish` 會選取此版本。 目標 Framework (包括最新安裝的安全性修補程式) 會封裝於應用程式。
+發佈過程會選取指定執行階段系列的最新修補程式版本。 例如，如果 .NET Core 2.0.4 是 .NET Core 2.0 執行階段系列中的最新修補程式版本，`dotnet publish` 會選取此版本。 目標 Framework (包括最新安裝的安全性修補程式) 會隨著應用程式封裝。
 
 如果不符合針對應用程式指定的最低版本，就會發生錯誤。 `dotnet publish` 會繫結至最新的執行階段修補程式版本 (指定的主要.次要版本系列內)。 `dotnet publish` 不支援 `dotnet run` 的向前復原語意。 如需修補程式和獨立部署的詳細資訊，請參閱部署 .NET Core 應用程式中有關[執行階段修補程式選取](../deploying/runtime-patch-selection.md)的文章。
 

@@ -4,12 +4,12 @@ description: 深入了解現有和 .NET Core csproj 檔案之間的差異
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/22/2017
-ms.openlocfilehash: 1fd264da2863fbeb88900be0f6fe000acac08a09
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3de168b8cebeb435a45861138aea26580663c135
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47216912"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50203952"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>適用於 .NET Core 之 csproj 格式的新增項目
 
@@ -65,14 +65,14 @@ ms.locfileid: "47216912"
 ```
 將此屬性設定為 `false` 會覆寫隱含包含項目，而且其行為會還原成必須在專案中指定預設 Glob 的舊版 SDK。 
 
-這項變更不會修改其他包含項目的主要機制。 不過，如果您想要指定某些檔案由應用程式發行，您仍然可以使用 *csproj* 中已知的機制來執行這項作業 (例如 `<Content>` 項目)。
+此變更不會修改其他包含項目的主要機制。 不過，如果您想要指定某些檔案由應用程式發行，您仍然可以使用 *csproj* 中已知的機制來執行此作業 (例如 `<Content>` 項目)。
 
 `<EnableDefaultCompileItems>` 只會停用 `Compile` GLOB，而不會影響隱含 `None` GLOB 這類其他 GLOB，後者也會套用至 \*.cs 項目。 因此，方案總管會繼續將 \*.cs 項目顯示為包含為 `None` 項目之專案的一部分。 透過類似的方式，您可以使用 `<EnableDefaultNoneItems>` 停用隱含 `None` GLOB。
 
 若要停用**所有隱含 GLOB**，您可以將 `<EnableDefaultItems>` 屬性設定為 `false`，如下列範例所示：
 ```xml
 <PropertyGroup>
-    <EnableDefaultItems>false</EnableDefaultItems>
+    <EnableDefaultItems>false</EnableDefaultItems>
 </PropertyGroup>
 ```
 
@@ -92,10 +92,11 @@ ms.locfileid: "47216912"
 ## <a name="additions"></a>新增項目
 
 ### <a name="sdk-attribute"></a>Sdk 屬性 
-*.csproj* 檔案的 `<Project>` 項目有一個新屬性，稱為 `Sdk`。 `Sdk` 會指定專案將使用的 SDK。 如[分層文件](cli-msbuild-architecture.md)所述，SDK 是可建置 .NET Core 程式碼的一組 MSBuild [工作](/visualstudio/msbuild/msbuild-tasks)和[目標](/visualstudio/msbuild/msbuild-targets)。 我們提供內含 .NET Core 工具的兩個主要 SDK：
+*.csproj* 檔案的 `<Project>` 項目有一個新屬性，稱為 `Sdk`。 `Sdk` 會指定專案將使用的 SDK。 如[分層文件](cli-msbuild-architecture.md)所述，SDK 是可建置 .NET Core 程式碼的一組 MSBuild [工作](/visualstudio/msbuild/msbuild-tasks)和[目標](/visualstudio/msbuild/msbuild-targets)。 我們隨 .NET Core 工具提供三個主要 SDK：
 
 1. 識別碼為 `Microsoft.NET.Sdk` 的 .NET Core SDK
 2. 識別碼為 `Microsoft.NET.Sdk.Web` 的 .NET Core Web SDK
+3. 識別碼為 `Microsoft.NET.Sdk.Razor` 的 .NET Core Razor 類別庫 SDK
 
 您必須在 `<Project>` 項目中將 `Sdk` 屬性設定為上述其中一個識別碼，才能使用 .NET Core 工具並建置您的程式碼。 
 
@@ -110,11 +111,11 @@ ms.locfileid: "47216912"
 `Version` 指定要還原的套件版本。 該屬性採用 [NuGet 版本控制](/nuget/create-packages/dependency-versions#version-ranges)配置的規則。 預設行為是確切的版本相符。 例如，指定 `Version="1.2.3"` 相當於 NuGet 標記法 `[1.2.3]`，表示確切的套件版本 1.2.3。
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets、ExcludeAssets 和 PrivateAssets
-`IncludeAssets` 屬性指定應取用由 `<PackageReference>` 所指定屬於套件的何種資產。 
+`IncludeAssets` 屬性指定應取用哪些資產 (屬於由 `<PackageReference>` 所指定的套件)。 
 
-`ExcludeAssets` 屬性指定不應取用屬於由 `<PackageReference>` 所指定套件的何種資產。
+`ExcludeAssets` 屬性指定不應取用哪些資產 (屬於由 `<PackageReference>` 所指定的套件)。
 
-`PrivateAssets` 屬性指定應取用屬於由 `<PackageReference>` 所指定套件的何種資產，但是它們不應該傳遞至下一個專案。 
+`PrivateAssets` 屬性指定應取用哪些資產 (屬於由 `<PackageReference>` 所指定但未流向下一個專案的套件)。 
 
 > [!NOTE]
 > `PrivateAssets` 相當於 *project.json*/*xproj* `SuppressParent` 項目。
@@ -177,7 +178,7 @@ ms.locfileid: "47216912"
 ```
 
 ## <a name="nuget-metadata-properties"></a>NuGet 中繼資料屬性
-隨著改為使用 MSbuild，我們已經將封裝 NuGet 套件時使用的輸入中繼資料從 *project.json* 移動到 *.csproj* 檔。 此輸入是 MSBuild 屬性，因此必須移至 `<PropertyGroup>` 群組。 使用 `dotnet pack` 命令或屬於 SDK 一部分的 `Pack` MSBuild 目標時，會將下列的屬性清單當成封裝處理序的輸入使用。 
+隨著改為使用 MSbuild，我們已經將套件 NuGet 套件時使用的輸入中繼資料從 *project.json* 移動到 *.csproj* 檔。 此輸入是 MSBuild 屬性，因此必須移至 `<PropertyGroup>` 群組。 使用 `dotnet pack` 命令或屬於 SDK 一部分的 `Pack` MSBuild 目標時，會將下列的屬性清單當成封裝處理序的輸入使用。 
 
 ### <a name="ispackable"></a>IsPackable
 布林值，指定是否可封裝專案。 預設值是 `true`。 

@@ -5,12 +5,12 @@ author: bleroy
 ms.author: mairaw
 ms.date: 11/16/2016
 ms.custom: vs-dotnet
-ms.openlocfilehash: 15537ea8c68b5c873bbf26ab0519a19de0b13230
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b3e466511fcae447f5bb54b83f13b25bc90c6539
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45969557"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185075"
 ---
 # <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017"></a>使用 Visual Studio 2017 在 Windows 上建置完整的 .NET Core 解決方案
 
@@ -24,7 +24,7 @@ Visual Studio 2017 提供功能完整的開發環境來開發 .NET Core 應用�
 
 ### <a name="writing-the-library"></a>撰寫程式庫
 
-1. 在 Visual Studio 中，依序選擇 [檔案]、[新增]、[專案]。 在 [新增專案] 對話方塊中，展開 [Visual C#] 節點，然後依序選擇 [.NET Standard] 節點和 [類別庫 (.NET Standard)]。 
+1. 在 Visual Studio 中，依序選擇 [檔案]、[新增]、[專案]。 在 [新增專案] 對話方塊中，展開 [Visual C#] 節點，然後依序選擇 [.NET Standard] 節點和 [類別庫 (.NET Standard)]。 這樣會建立 .NET Standard 程式庫，它會以 .NET Core 和支援 [.NET Standard](../../standard/net-standard.md) 2.0 版的任何其他 .NET 實作為目標。
 
 2. 將專案命名為 "Library"、方案命名為 "Golden"。 維持核取 [為方案建立目錄]。 按一下 [確定 **Deploying Office Solutions**]。
 

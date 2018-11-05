@@ -1,12 +1,12 @@
 ---
 title: 逐步解說：使用 C# 保存物件
 ms.date: 04/26/2018
-ms.openlocfilehash: c3cff57f008eb524c2d2bec406431e4c41dca617
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 85c447ae43086cc789338e77555b7400a523662a
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47231488"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086073"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>逐步解說：使用 C# 保存物件 #
 
@@ -28,6 +28,8 @@ ms.locfileid: "47231488"
 
 > [!TIP]
 > 需要安裝程式碼編輯器嗎？ 試用 [Visual Studio](https://visualstudio.com/downloads)！
+
+* 範例需要 C# 7.3。 請參閱[選取 C# 語言版本](../../../language-reference/configure-language-version.md) 
 
 您可以在 [.NET 範例 GitHub 存放庫](https://github.com/dotnet/samples/tree/master/csharp/serialization) (英文) 線上檢查範例程式程。
 
@@ -97,7 +99,7 @@ New customer value: Henry Clay
 
 您現在可以再次建置並執行應用程式。 第一次執行時，請注意利率會從 7.5 開始，然後變更為 7.1。 關閉應用程式，然後再重新執行。 現在，應用程式會列印訊息，表示它已讀取儲存的檔案，而利率即使在變更它的程式碼之前也是 7.1。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [序列化 (C#)](index.md)  
 - [C# 程式設計指南](../..//index.md)  

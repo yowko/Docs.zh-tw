@@ -1,6 +1,6 @@
 ---
-title: '什麼是 F #'
-description: '了解什麼 F # 程式設計語言和 F # 程式設計的如下。 了解豐富的資料類型、 函式，以及它們如何相互配合。'
+title: 什麼是 F#
+description: 了解什麼 F# 程式設計語言和 F# 程式設計的如下。 了解豐富的資料類型、 函式，以及它們如何相互配合。
 ms.date: 08/03/2018
 ms.openlocfilehash: 193747f380c61a387ed79ecca6abbcd90ee74376
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -9,11 +9,11 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "43863292"
 ---
-# <a name="what-is-f"></a>什麼是 F # #
+# <a name="what-is-f"></a>什麼是 F# #
 
-F # 是功能性程式設計語言，可讓您更輕鬆地撰寫正確且可維護的程式碼。
+F# 是功能性程式設計語言，可讓您更輕鬆地撰寫正確且可維護的程式碼。
 
-F # 程式設計主要牽涉到定義類型和函式型別推斷和自動一般化。 這可讓您專注在問題領域，以及管理其資料，而不是程式設計的詳細資料。
+F# 程式設計主要牽涉到定義類型和函式型別推斷和自動一般化。 這可讓您專注在問題領域，以及管理其資料，而不是程式設計的詳細資料。
 
 ```fsharp
 open System // Gets access to functionality in System namespace.
@@ -35,7 +35,7 @@ let main args =
     0
 ```
 
-F # 提供許多功能，包括：
+F# 提供許多功能，包括：
 
 * 輕量型語法
 * 不可變的預設值
@@ -45,7 +45,7 @@ F # 提供許多功能，包括：
 * 模式比對
 * 非同步程式設計
 
-一組完整的功能都記載於[F # 語言參考](language-reference/index.md)。
+一組完整的功能都記載於[F# 語言參考](language-reference/index.md)。
 
 ## <a name="rich-data-types"></a>豐富的資料類型
 
@@ -72,11 +72,11 @@ type WithdrawalResult =
     | UndisclosedFailure
 ```
 
-F # 記錄和差別聯的集為非 null、 不可變的和根據預設，使其非常容易使用的比較。
+F# 記錄和差別聯的集為非 null、 不可變的和根據預設，使其非常容易使用的比較。
 
 ## <a name="enforced-correctness-with-functions-and-pattern-matching"></a>強制使用函式和模式比對的正確性
 
-F # 函式會宣告簡單且功能強大，在實務上。 結合[模式比對](language-reference/pattern-matching.md)，它們可讓您定義其正確性，編譯器會強制執行的行為。
+F# 函式會宣告簡單且功能強大，在實務上。 結合[模式比對](language-reference/pattern-matching.md)，它們可讓您定義其正確性，編譯器會強制執行的行為。
 
 ```fsharp
 // Returns a WithdrawalResult
@@ -93,11 +93,11 @@ let handleWithdrawal amount =
     | UndisclosedFailure -> printfn "Failed: unknown :("
 ```
 
-F # 函式也是第一級，表示它們可以做為參數傳遞，從其他函式傳回的。
+F# 函式也是第一級，表示它們可以做為參數傳遞，從其他函式傳回的。
 
 ## <a name="functions-to-define-operations-on-objects"></a>若要在物件上定義作業的函式
 
-F # 提供物件，相當有用的資料類型，當您需要的資料與功能的 blend 的完整支援。 F # 函式用來操作物件。
+F# 提供物件，相當有用的資料類型，當您需要的資料與功能的 blend 的完整支援。 F# 函式用來操作物件。
 
 ```fsharp
 type Set<[<EqualityConditionOn>] ‘T when ‘T: comparison>(elements: seq<'T>) =
@@ -119,8 +119,8 @@ module Set =
     let add value (set: Set<'T>) = set.Add(value)
 ```
 
-而不是撰寫是物件導向，F # 中的程式碼，您將經常撰寫程式碼視為物件做為另一個資料類型的函式來操作。 這類功能[泛型介面](language-reference/interfaces.md)，[物件運算式](language-reference/object-expressions.md)，以及審慎善用[成員](language-reference/members/index.md)在較大的 F # 程式中很常見。
+而不是撰寫是物件導向，F# 中的程式碼，您將經常撰寫程式碼視為物件做為另一個資料類型的函式來操作。 這類功能[泛型介面](language-reference/interfaces.md)，[物件運算式](language-reference/object-expressions.md)，以及審慎善用[成員](language-reference/members/index.md)在較大的 F# 程式中很常見。
 
 ## <a name="next-steps"></a>後續步驟
 
-若要深入了解將較大的 F # 功能，請參閱[F # 導覽](tour.md)。
+若要深入了解將較大的 F# 功能，請參閱[F# 導覽](tour.md)。

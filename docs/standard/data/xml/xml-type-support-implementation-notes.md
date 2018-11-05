@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 26b071f3-1261-47ef-8690-0717f5cd93c1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 51066ab6fb0fa4749befdd0f94790fa45a7ab5cf
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 73f786c8f1080d0046889958e8b3bd3165870569
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44191062"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187448"
 ---
 # <a name="xml-type-support-implementation-notes"></a>XML 型別支援實作注意事項
 本主題說明一些您想要知道的實作詳細資料。  
@@ -27,14 +27,14 @@ ms.locfileid: "44191062"
  下列說明 CLR 型別與 XML 資料型別之間可能發生的某些不符狀況及其處理方式。  
   
 > [!NOTE]
->  `xs` 前置詞對應至 http://www.w3.org/2001/XMLSchema 和命名空間 URI。  
+> `xs` 前置詞對應至 <https://www.w3.org/2001/XMLSchema> 和命名空間 URI。
   
 ### <a name="systemtimespan-and-xsduration"></a>System.TimeSpan 及 xs:duration  
  `xs:duration` 型別為部分排序，因為有某些期間值雖不同但意義相當。 這表示對於 `xs:duration` 型別，值 1 個月 (P1M) 小於 32 天 (P32D)，大於 27 天 (P27D)，但等於 28、29 或 30 天。  
   
  <xref:System.TimeSpan> 類別不支援這種部分排序。 而是會挑選特定的天數來表示 1 年及 1 個月；分別為 365 天及 30 天。  
   
- 如需 `xs:duration` 類型的詳細資訊，請參閱＜W3C XML Schema Part 2: Datatypes Recommendation＞(W3C XML 結構描述第二部：資料類型建議事項)，網址為 http://www.w3.org/TR/xmlschema-2/。  
+ 如需 `xs:duration` 類型的詳細資訊，請參閱 W3C [XML 結構描述第 2 部：資料類型建議事項](https://www.w3.org/TR/xmlschema-2/) \(英文\)。
   
 ### <a name="xstime-gregorian-date-types-and-systemdatetime"></a>xs:time (公曆日期型別) 及 System.DateTime  
  當 `xs:time` 值對應至 <xref:System.DateTime> 物件時，會使用 <xref:System.DateTime.MinValue> 欄位將 <xref:System.DateTime> 物件的日期屬性 (如 <xref:System.DateTime.Year%2A>、<xref:System.DateTime.Month%2A> 及 <xref:System.DateTime.Day%2A>) 初始化為最小的 <xref:System.DateTime> 可能值。  

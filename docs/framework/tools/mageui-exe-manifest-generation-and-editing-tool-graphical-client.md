@@ -5,22 +5,23 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: eb93e53e7b77ee2747bce3fb9a45d7061450e65c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9037e03398aa29d496f1a689e0e57bdb60fea5b9
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501657"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584378"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (圖形用戶端、資訊清單產生和編輯工具)
-MageUI.exe 與命令列工具 Mage.exe 支援相同的功能，不過前者會採用 Windows 使用者介面 (UI)。 您可以利用此工具建立、編輯和簽章部署與應用程式資訊清單。 使用 MageUI.exe 建立的新資訊清單是以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 為目標。 若要以舊版 .NET Framework 為目標，則應該使用舊版 MageUI.exe。 在資訊清單中加入或移除組件或重新簽署現有資訊清單時，MageUI.exe 並不會更新資訊清單，使其以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 為目標。 如需詳細資訊，請參閱 [Mage.exe (資訊清單產生和編輯工具)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)。  
-  
- 此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [開發人員命令提示字元] \(或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
-  
- [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] 安裝程式有兩個版本的 Mage.exe 和 MageUI.exe 做為隨附元件。 若要查看版本資訊，請執行 MageUI.exe，並依序選取 [ **說明**] 和 [ **關於**]。 本文件說明 4.0.x.x 版本的 Mage.exe 和 MageUI.exe。  
-  
+
+MageUI.exe 與命令列工具 Mage.exe 支援相同的功能，不過前者會採用 Windows 使用者介面 (UI)。 您可以利用此工具建立、編輯和簽章部署與應用程式資訊清單。 使用 MageUI.exe 建立的新資訊清單是以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 為目標。 若要以舊版 .NET Framework 為目標，則應該使用舊版 MageUI.exe。 在資訊清單中加入或移除組件或重新簽署現有資訊清單時，MageUI.exe 並不會更新資訊清單，使其以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 為目標。 如需詳細資訊，請參閱 [Mage.exe (資訊清單產生和編輯工具)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)。
+
+ 此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [開發人員命令提示字元] \(或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。
+
+ Visual Studio 有兩個版本的 Mage.exe 和 MageUI.exe 作為隨附元件。 若要查看版本資訊，請執行 MageUI.exe，並依序選取 [ **說明**] 和 [ **關於**]。 本文件說明 4.0.x.x 版本的 Mage.exe 和 MageUI.exe。
+
 > [!NOTE]
->  如果 MageUI.exe 要儲存的應用程式資訊清單已使用 MageUI.exe 透過憑證簽署，則不支援 [compatibleFrameworks](/visualstudio/deployment/compatibleframeworks-element-clickonce-deployment) 項目。 您必須改用 [Mage.exe](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)。  
+> 如果 MageUI.exe 要儲存的應用程式資訊清單已使用 MageUI.exe 透過憑證簽署，則不支援 [compatibleFrameworks](/visualstudio/deployment/compatibleframeworks-element-clickonce-deployment) 項目。 您必須改用 [Mage.exe](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
  下表列出可用的功能表和工具列項目。  
@@ -189,7 +190,7 @@ MageUI.exe 與命令列工具 Mage.exe 支援相同的功能，不過前者會�
 |----------------|-----------------|  
 |**選取資訊清單**|可讓您選擇應用程式資訊清單。 當您選擇應用程式資訊清單時，將填入此頁面上的所有其他欄位。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)  
  [逐步解說：手動部署 ClickOnce 應用程式](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
  [Mage.exe (資訊清單產生和編輯工具)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)

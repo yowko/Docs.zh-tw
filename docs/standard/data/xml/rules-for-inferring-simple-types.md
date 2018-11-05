@@ -5,17 +5,17 @@ ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd5426de388ba2c7a22d66ce01d56a3139e36e38
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 2477b55f38167cc3497979d073f74d441a06f96d
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45615309"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123575"
 ---
 # <a name="rules-for-inferring-simple-types"></a>推斷簡單型別的規則
 說明 <xref:System.Xml.Schema.XmlSchemaInference> 類別如何推斷屬性和項目的資料型別。  
   
- <xref:System.Xml.Schema.XmlSchemaInference> 類別會將屬性和項目的資料型別推斷為簡單型別。 本節將說明可能的推斷型別、多種不同的值如何調節為單一型別，以及如何處理結構描述定義的 `xsi` 屬性。  
+ <xref:System.Xml.Schema.XmlSchemaInference> 類別會將屬性和項目的資料型別推斷為簡單型別。 本節將說明可能的推斷型別、多種不同的值如何協調為單一型別，以及如何處理結構描述定義的 `xsi` 屬性。  
   
 ## <a name="inferred-types"></a>推斷的型別  
  <xref:System.Xml.Schema.XmlSchemaInference> 類別會將項目和屬性值推斷為簡單型別，並在產生的結構描述內包含型別屬性。 所有推斷的型別皆為簡單型別。 基底型別或 Facet 都不會納入結果結構描述中。  
@@ -65,8 +65,9 @@ ms.locfileid: "45615309"
   
  當發現第一個 `attr2` 值時，會根據 `attr2` 的值將 `unsignedByte` 的型別推斷為 `0`。 當發現第二個 `attr2` 時，此型別會根據目前推斷型別 `string` 和目前的 `unsignedByte` 值提升為 `true`，因為在提升推斷型別時，<xref:System.Xml.Schema.XmlSchemaInference> 類別會考量之前的值。 然而，若不是像上述範例一樣在兩個不同的 XML 文件中發現兩個 `attr2`，而是在相同的 XML 文件中發現時，`attr2` 將會被推斷為 `boolean`。  
   
-### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>http://www.w3.org/2001/XMLSchema-instance 命名空間的被忽略屬性  
- 下列結構描述定義的屬性會在結構描述推斷期間遭到忽略。  
+### <a name="ignored-attributes-from-the-httpswwww3org2001xmlschema-instance-namespace"></a><https://www.w3.org/2001/XMLSchema-instance> \(英文\) 命名空間的被忽略屬性
+
+下列結構描述定義的屬性會在結構描述推斷期間遭到忽略。  
   
 |屬性|描述|  
 |---------------|-----------------|  

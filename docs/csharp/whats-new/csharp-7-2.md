@@ -2,12 +2,12 @@
 title: C# 7.2 的新功能
 description: C# 7.2 新功能的概觀。
 ms.date: 08/16/2017
-ms.openlocfilehash: 87fd67b37a31a02960334a2b2a325724e0cc2c73
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 93b0a5281db841abdb8de0865dfe4b13be6d9ee2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47400799"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181169"
 ---
 # <a name="whats-new-in-c-72"></a>C# 7.2 的新功能
 
@@ -20,7 +20,7 @@ C# 7.2 使用了[語言版本選取項目](../language-reference/configure-langu
 
 此版本的新款語言功能包括：
 
-* [具備實值型別的參考語意](#reference-semantics-with-value-types)
+* [撰寫安全、有效率之程式碼的技巧](#safe-efficient-code-enhancements)
   - 此為語法改進功能組合，其可讓使用參考語意進行實質型別作業變得可能。
 * [無後置具名引數](#non-trailing-named-arguments)
   - 具名引數之後可以接著位置引數。
@@ -29,7 +29,7 @@ C# 7.2 使用了[語言版本選取項目](../language-reference/configure-langu
 * [`private protected` 存取修飾詞](#private-protected-access-modifier)
   - 您可利用 `private protected` 存取修飾詞，存取相同組件中的衍生類別。
 
-## <a name="reference-semantics-with-value-types"></a>具備實值型別的參考語意
+## <a name="safe-efficient-code-enhancements"></a>安全、有效率的程式碼增強功能
 
 您可利用 7.2 版新加入的語言功能，於使用參考語意時運用實值型別。 這些功能之設計目的是加強加效能，方法是將複製實質型別最小化，而不產生與使用參考型別相關的記憶體配置。 功能包括：
 
@@ -38,7 +38,7 @@ C# 7.2 使用了[語言版本選取項目](../language-reference/configure-langu
  - `readonly struct` 宣告，可指示結構會固定，且應以 `in` 參數傳遞至其成員方法。 將 `readonly` 修飾詞新增至現有 struct 宣告是[二進位相容變更](version-update-considerations.md#binary-compatible-changes)。
  - `ref struct` 宣告，可指示結構類型會直接存取受控記憶體，且一律會配置堆疊。 將 `ref` 修飾詞新增至現有 `struct` 宣告是[不相容的變更](version-update-considerations.md#incompatible-changes)。 `ref struct` 不能是類別的成員，或用於可能會在堆積上配置的其他位置。
 
-您可以在[使用具備參考語意的實值型別](../reference-semantics-with-value-types.md)中閱讀到這些變更的詳細內容。
+您可以在[撰寫安全、有效率的程式碼](../write-safe-efficient-code.md)深入了解這些變更。
 
 ## <a name="non-trailing-named-arguments"></a>無後置具名引數
 

@@ -3,12 +3,12 @@ title: 使用 XML 註解記錄您的程式碼
 description: 了解如何使用 XML 文件註解記錄您的程式碼，並在編譯時期產生 XML 文件檔案。
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: e211543a6a5cc5f6f29d8c195492b474eb24a38d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 09e6b4aa75aababcebba96693d6e73b29a30fc6a
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397055"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453264"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>使用 XML 註解記錄您的程式碼
 
@@ -18,7 +18,7 @@ XML 文件註解具特殊性，因為編譯器可以處理它們以在編譯時�
 
 編譯器會忽略 XML 文件註解 (例如所有其他註解)。
 
-您可以執行下列其中一項動作，以在編譯時期產生 XML 檔案︰
+您可以執行下列其中一個動作，以在編譯時期產生 XML 檔案︰
 
 - 如果您正在從命令列使用 .NET Core 開發應用程式，則可以將 [DocumentationFile 項目](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties)新增至 .csproj 專案檔的 `<PropertyGroup>` 區段。 下列範例會在根檔案名稱與組件相同的專案目錄中產生 XML 檔案：
 
@@ -51,7 +51,7 @@ XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 �
 範例程式庫支援 `int` 和 `double` 資料型別上的四個主要算術運算 `add`、`subtract`、`multiply` 和 `divide`。
 
 現在，您想要可以針對使用您的程式庫但無法存取原始程式碼的協力廠商開發人員，從您的程式碼建立 API 參考文件。
-如前所述，XML 文件標記可以用來達成這項作業。現在已引進 C# 編譯器所支援的標準 XML 標記。
+如先前所述，XML 文件標籤可以用來達到此目的。 現在將向您介紹 C# 編譯器支援的標準 XML 標籤。
 
 ### <a name="ltsummarygt"></a>&lt;summary&gt;
 
