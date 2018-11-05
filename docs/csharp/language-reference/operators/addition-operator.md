@@ -1,6 +1,6 @@
 ---
 title: + 運算子 (C# 參考)
-ms.date: 07/20/2015
+ms.date: 10/22/2018
 f1_keywords:
 - +_CSharpKeyword
 helpviewer_keywords:
@@ -8,34 +8,57 @@ helpviewer_keywords:
 - concatenation operator [C#]
 - addition operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: b49694bc8937c58bd295f0f8e57c378802d0dfb9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ae2774d96bc50afa271fffdea445e640e68c3647
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47232380"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192293"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="0be6e-102">+ 運算子 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="0be6e-102">+ Operator (C# Reference)</span></span>
-<span data-ttu-id="0be6e-103">`+` 運算子可以作為一元或二元運算子。</span><span class="sxs-lookup"><span data-stu-id="0be6e-103">The `+` operator can function as either a unary or a binary operator.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="0be6e-104">備註</span><span class="sxs-lookup"><span data-stu-id="0be6e-104">Remarks</span></span>  
- <span data-ttu-id="0be6e-105">會預先定義所有數字類型的一元 `+` 運算子。</span><span class="sxs-lookup"><span data-stu-id="0be6e-105">Unary `+` operators are predefined for all numeric types.</span></span> <span data-ttu-id="0be6e-106">對數字類型執行一元 `+` 運算的結果就是運算元的值。</span><span class="sxs-lookup"><span data-stu-id="0be6e-106">The result of a unary `+` operation on a numeric type is just the value of the operand.</span></span>  
-  
- <span data-ttu-id="0be6e-107">會預先定義數字和字串類型的二元 `+` 運算子。</span><span class="sxs-lookup"><span data-stu-id="0be6e-107">Binary `+` operators are predefined for numeric and string types.</span></span> <span data-ttu-id="0be6e-108">針對數字類型，+ 會計算其兩個運算元的總和。</span><span class="sxs-lookup"><span data-stu-id="0be6e-108">For numeric types, + computes the sum of its two operands.</span></span> <span data-ttu-id="0be6e-109">一或兩個運算元的類型為 string 時，+ 會串連以字串呈現的運算元。</span><span class="sxs-lookup"><span data-stu-id="0be6e-109">When one or both operands are of type string, + concatenates the string representations of the operands.</span></span>  
-  
- <span data-ttu-id="0be6e-110">委派類型也會提供可執行委派串連的二元 `+` 運算子。</span><span class="sxs-lookup"><span data-stu-id="0be6e-110">Delegate types also provide a binary `+` operator, which performs delegate concatenation.</span></span>  
-  
- <span data-ttu-id="0be6e-111">使用者定義型別可以多載一元 `+` 和二元 `+` 運算子。</span><span class="sxs-lookup"><span data-stu-id="0be6e-111">User-defined types can overload the unary `+` and binary `+` operators.</span></span> <span data-ttu-id="0be6e-112">整數類資料類型上的作業通常允許用於列舉類型。</span><span class="sxs-lookup"><span data-stu-id="0be6e-112">Operations on integral types are generally allowed on enumeration.</span></span> <span data-ttu-id="0be6e-113">如需詳細資訊，請參閱 [operator (C# 參考)](../../../csharp/language-reference/keywords/operator.md)。</span><span class="sxs-lookup"><span data-stu-id="0be6e-113">For more information, see [operator (C# Reference)](../../../csharp/language-reference/keywords/operator.md).</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="0be6e-114">範例</span><span class="sxs-lookup"><span data-stu-id="0be6e-114">Example</span></span>  
- [!code-csharp[csRefOperators#28](../../../csharp/language-reference/operators/codesnippet/CSharp/addition-operator_1.cs)]  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="0be6e-115">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="0be6e-115">C# Language Specification</span></span>  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a><span data-ttu-id="0be6e-116">請參閱</span><span class="sxs-lookup"><span data-stu-id="0be6e-116">See Also</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="ed963-102">+ 運算子 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="ed963-102">+ Operator (C# Reference)</span></span>
 
-- [<span data-ttu-id="0be6e-117">C# 參考</span><span class="sxs-lookup"><span data-stu-id="0be6e-117">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="0be6e-118">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="0be6e-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="0be6e-119">C# 運算子</span><span class="sxs-lookup"><span data-stu-id="0be6e-119">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)  
-- [<span data-ttu-id="0be6e-120">operator (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="0be6e-120">operator (C# Reference)</span></span>](../../../csharp/language-reference/keywords/operator.md)
+<span data-ttu-id="ed963-103">`+` 運算子支援兩種形式：一元加號運算子或二元加法運算子。</span><span class="sxs-lookup"><span data-stu-id="ed963-103">The `+` operator is supported in two forms: a unary plus operator or a binary addition operator.</span></span>
+
+<span data-ttu-id="ed963-104">使用者定義的型別可以[多載](../keywords/operator.md)一元與二元 `+` 運算子。</span><span class="sxs-lookup"><span data-stu-id="ed963-104">User-defined types can [overload](../keywords/operator.md) the unary and binary `+` operators.</span></span> <span data-ttu-id="ed963-105">多載二元 `+` 運算子時，[加法指派運算子](addition-assignment-operator.md) `+=` 也會隱含地多載。</span><span class="sxs-lookup"><span data-stu-id="ed963-105">When a binary `+` operator is overloaded, the [addition assignment operator](addition-assignment-operator.md) `+=` is also implicitly overloaded.</span></span>
+
+## <a name="unary-plus-operator"></a><span data-ttu-id="ed963-106">一元加號運算子</span><span class="sxs-lookup"><span data-stu-id="ed963-106">Unary plus operator</span></span>
+
+<span data-ttu-id="ed963-107">一元 `+` 運算子會傳回其運算元的值。</span><span class="sxs-lookup"><span data-stu-id="ed963-107">The unary `+` operator returns the value of its operand.</span></span> <span data-ttu-id="ed963-108">所有數值型別都支援。</span><span class="sxs-lookup"><span data-stu-id="ed963-108">It's supported by all numeric types.</span></span>
+
+## <a name="numeric-addition"></a><span data-ttu-id="ed963-109">數值加法</span><span class="sxs-lookup"><span data-stu-id="ed963-109">Numeric addition</span></span>
+
+<span data-ttu-id="ed963-110">針對數值型別，`+` 運算子會計算其運算元的和：</span><span class="sxs-lookup"><span data-stu-id="ed963-110">For numeric types, the `+` operator computes the sum of its operands:</span></span>
+
+[!code-csharp-interactive[numeric addition](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddNumerics)]
+
+## <a name="string-concatenation"></a><span data-ttu-id="ed963-111">字串串連</span><span class="sxs-lookup"><span data-stu-id="ed963-111">String concatenation</span></span>
+
+<span data-ttu-id="ed963-112">當其中一或兩個運算元的型別為 [string](../keywords/string.md) 時，`+` 運算子會串連其運算元的字串表示：</span><span class="sxs-lookup"><span data-stu-id="ed963-112">When one or both operands are of type [string](../keywords/string.md), the `+` operator concatenates the string representations of its operands:</span></span>
+
+[!code-csharp-interactive[string concatenation](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddStrings)]
+
+<span data-ttu-id="ed963-113">從 C# 6 開始，[字串插補](../tokens/interpolated.md)提供更便利的方式進行字串格式設定：</span><span class="sxs-lookup"><span data-stu-id="ed963-113">Starting with C# 6, [string interpolation](../tokens/interpolated.md) provides a more convenient way to format strings:</span></span>
+
+[!code-csharp-interactive[string interpolation](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#UseStringInterpolation)]
+
+## <a name="delegate-combination"></a><span data-ttu-id="ed963-114">委派組合</span><span class="sxs-lookup"><span data-stu-id="ed963-114">Delegate combination</span></span>
+
+<span data-ttu-id="ed963-115">針對 [delegate](../keywords/delegate.md) 型別，`+` 運算子會傳回新的委派執行個體，(當叫用時) 它會叫用第一個運算元，然後再叫用第二個運算元。</span><span class="sxs-lookup"><span data-stu-id="ed963-115">For [delegate](../keywords/delegate.md) types, the `+` operator returns a new delegate instance that, when invoked, invokes the first operand and then invokes the second operand.</span></span> <span data-ttu-id="ed963-116">如果其中任一個運算元為 `null`，則 `+` 運算子會傳回另一個運算元的值 (也有可能是 `null`)。</span><span class="sxs-lookup"><span data-stu-id="ed963-116">If any of the operands is `null`, the `+` operator returns the value of another operand (which also might be `null`).</span></span> <span data-ttu-id="ed963-117">下列範例顯示委派如何與 `+` 運算子結合：</span><span class="sxs-lookup"><span data-stu-id="ed963-117">The following example shows how delegates can be combined with the `+` operator:</span></span>
+
+[!code-csharp-interactive[delegate combination](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddDelegates)]
+
+<span data-ttu-id="ed963-118">如需委派型別的詳細資訊，請參閱[委派](../../programming-guide/delegates/index.md)。</span><span class="sxs-lookup"><span data-stu-id="ed963-118">For more information about delegate types, see [Delegates](../../programming-guide/delegates/index.md).</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="ed963-119">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="ed963-119">C# language specification</span></span>
+
+<span data-ttu-id="ed963-120">如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的[一元加號運算子](~/_csharplang/spec/expressions.md#unary-plus-operator)與[加法運算子](~/_csharplang/spec/expressions.md#addition-operator)小節。</span><span class="sxs-lookup"><span data-stu-id="ed963-120">For more information, see the [Unary plus operator](~/_csharplang/spec/expressions.md#unary-plus-operator) and [Addition operator](~/_csharplang/spec/expressions.md#addition-operator) sections of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="ed963-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ed963-121">See also</span></span>
+
+- [<span data-ttu-id="ed963-122">C# 參考</span><span class="sxs-lookup"><span data-stu-id="ed963-122">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="ed963-123">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="ed963-123">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="ed963-124">C# 運算子</span><span class="sxs-lookup"><span data-stu-id="ed963-124">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="ed963-125">字串內插補點</span><span class="sxs-lookup"><span data-stu-id="ed963-125">String interpolation</span></span>](../tokens/interpolated.md)
+- [<span data-ttu-id="ed963-126">如何：串連多個字串</span><span class="sxs-lookup"><span data-stu-id="ed963-126">How to: Concatenate Multiple Strings</span></span>](../../how-to/concatenate-multiple-strings.md)
+- [<span data-ttu-id="ed963-127">委派</span><span class="sxs-lookup"><span data-stu-id="ed963-127">Delegates</span></span>](../../programming-guide/delegates/index.md)
+- [<span data-ttu-id="ed963-128">Checked 與 Unchecked</span><span class="sxs-lookup"><span data-stu-id="ed963-128">Checked and unchecked</span></span>](../keywords/checked-and-unchecked.md)

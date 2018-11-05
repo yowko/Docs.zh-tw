@@ -1,56 +1,58 @@
 ---
 title: volatile (C# 參考)
-ms.date: 07/20/2015
+ms.date: 10/24/2018
 f1_keywords:
 - volatile_CSharpKeyword
 - volatile
 helpviewer_keywords:
 - volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
-ms.openlocfilehash: be7e081b18702710c00b5b86a9bc152800f0cf3d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9950bb0e32787306dc34e2c006099332c06bda2b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526215"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199964"
 ---
-# <a name="volatile-c-reference"></a><span data-ttu-id="8504d-102">volatile (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="8504d-102">volatile (C# Reference)</span></span>
-<span data-ttu-id="8504d-103">`volatile` 關鍵字指出某個欄位可能是由同時執行的多個執行緒所修改。</span><span class="sxs-lookup"><span data-stu-id="8504d-103">The `volatile` keyword indicates that a field might be modified by multiple threads that are executing at the same time.</span></span> <span data-ttu-id="8504d-104">宣告 `volatile` 的欄位並不適用編譯器最佳化，因為編譯器最佳化是假設由單一執行緒進行存取。</span><span class="sxs-lookup"><span data-stu-id="8504d-104">Fields that are declared `volatile` are not subject to compiler optimizations that assume access by a single thread.</span></span> <span data-ttu-id="8504d-105">這些限制可確保所有的執行緒將會觀察任何其他執行緒執行的 volatile 寫入會按照其執行的順序進行。</span><span class="sxs-lookup"><span data-stu-id="8504d-105">These restrictions ensure that all threads will observe volatile writes performed by any other thread in the order in which they were performed.</span></span> <span data-ttu-id="8504d-106">不保證 volatile 寫入的單一總排序如所有執行緒的執行中所示。</span><span class="sxs-lookup"><span data-stu-id="8504d-106">There is no guarantee of a single total ordering of volatile writes as seen from all threads of execution.</span></span>  
-  
- <span data-ttu-id="8504d-107">針對多個執行緒存取的欄位，通常會使用 `volatile` 修飾詞，而不必使用 [lock](../../../csharp/language-reference/keywords/lock-statement.md) 陳述式來序列化存取。</span><span class="sxs-lookup"><span data-stu-id="8504d-107">The `volatile` modifier is usually used for a field that is accessed by multiple threads without using the [lock](../../../csharp/language-reference/keywords/lock-statement.md) statement to serialize access.</span></span>  
-  
- <span data-ttu-id="8504d-108">`volatile` 關鍵字可以套用至下列類型的欄位：</span><span class="sxs-lookup"><span data-stu-id="8504d-108">The `volatile` keyword can be applied to fields of these types:</span></span>  
-  
--   <span data-ttu-id="8504d-109">參考型別。</span><span class="sxs-lookup"><span data-stu-id="8504d-109">Reference types.</span></span>  
-  
--   <span data-ttu-id="8504d-110">指標類型 (在不安全的內容中)。</span><span class="sxs-lookup"><span data-stu-id="8504d-110">Pointer types (in an unsafe context).</span></span> <span data-ttu-id="8504d-111">請注意，雖然指標本身可為 volatile，但它所指向的物件不得為 volatile。</span><span class="sxs-lookup"><span data-stu-id="8504d-111">Note that although the pointer itself can be volatile, the object that it points to cannot.</span></span> <span data-ttu-id="8504d-112">換句話說，您無法將指標宣告為 volatile。</span><span class="sxs-lookup"><span data-stu-id="8504d-112">In other words, you cannot declare a "pointer to volatile."</span></span>  
-  
--   <span data-ttu-id="8504d-113">byte、byte、short、ushort、int、uint、char、float 和 bool 等類型。</span><span class="sxs-lookup"><span data-stu-id="8504d-113">Types such as sbyte, byte, short, ushort, int, uint, char, float, and bool.</span></span>  
-  
--   <span data-ttu-id="8504d-114">具有 byte、sbyte、short、ushort、int 或 uint 基底類型之一的列舉類型。</span><span class="sxs-lookup"><span data-stu-id="8504d-114">An enum type with one of the following base types: byte, sbyte, short, ushort, int, or uint.</span></span>  
-  
--   <span data-ttu-id="8504d-115">已知為參考型別的泛型型別參數。</span><span class="sxs-lookup"><span data-stu-id="8504d-115">Generic type parameters known to be reference types.</span></span>  
-  
--   <span data-ttu-id="8504d-116"><xref:System.IntPtr> 和 <xref:System.UIntPtr>。</span><span class="sxs-lookup"><span data-stu-id="8504d-116"><xref:System.IntPtr> and <xref:System.UIntPtr>.</span></span>  
-  
- <span data-ttu-id="8504d-117">volatile 關鍵字只能套用至類別或結構的欄位。</span><span class="sxs-lookup"><span data-stu-id="8504d-117">The volatile keyword can only be applied to fields of a class or struct.</span></span> <span data-ttu-id="8504d-118">區域變數不可以宣告為 `volatile`。</span><span class="sxs-lookup"><span data-stu-id="8504d-118">Local variables cannot be declared `volatile`.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="8504d-119">範例</span><span class="sxs-lookup"><span data-stu-id="8504d-119">Example</span></span>  
- <span data-ttu-id="8504d-120">下列範例示範如何將公用欄位變數宣告為 `volatile`。</span><span class="sxs-lookup"><span data-stu-id="8504d-120">The following example shows how to declare a public field variable as `volatile`.</span></span>  
-  
- [!code-csharp[csrefKeywordsModifiers#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_1.cs)]  
-  
-## <a name="example"></a><span data-ttu-id="8504d-121">範例</span><span class="sxs-lookup"><span data-stu-id="8504d-121">Example</span></span>  
- <span data-ttu-id="8504d-122">下列範例示範如何建立和使用輔助或背景工作執行緒，以運用主執行緒的輔助或背景工作執行緒來執行平行處理。</span><span class="sxs-lookup"><span data-stu-id="8504d-122">The following example demonstrates how an auxiliary or worker thread can be created and used to perform processing in parallel with that of the primary thread.</span></span> <span data-ttu-id="8504d-123">如需多執行緒的背景資訊，請參閱 [Managed 執行緒處理](../../../standard/threading/index.md)和[執行緒處理 (C#)](../../programming-guide/concepts/threading/index.md)。</span><span class="sxs-lookup"><span data-stu-id="8504d-123">For background information about multithreading, see [Managed Threading](../../../standard/threading/index.md) and [Threading (C#)](../../programming-guide/concepts/threading/index.md).</span></span>  
-  
- [!code-csharp[csProgGuideThreading#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_2.cs)]  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="8504d-124">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="8504d-124">C# Language Specification</span></span>  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a><span data-ttu-id="8504d-125">請參閱</span><span class="sxs-lookup"><span data-stu-id="8504d-125">See Also</span></span>
+# <a name="volatile-c-reference"></a><span data-ttu-id="630a1-102">volatile (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="630a1-102">volatile (C# Reference)</span></span>
 
-- [<span data-ttu-id="8504d-126">C# 參考</span><span class="sxs-lookup"><span data-stu-id="8504d-126">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="8504d-127">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="8504d-127">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="8504d-128">C# 關鍵字</span><span class="sxs-lookup"><span data-stu-id="8504d-128">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-- [<span data-ttu-id="8504d-129">修飾詞</span><span class="sxs-lookup"><span data-stu-id="8504d-129">Modifiers</span></span>](../../../csharp/language-reference/keywords/modifiers.md)
+<span data-ttu-id="630a1-103">`volatile` 關鍵字指出某個欄位可能是由同時執行的多個執行緒所修改。</span><span class="sxs-lookup"><span data-stu-id="630a1-103">The `volatile` keyword indicates that a field might be modified by multiple threads that are executing at the same time.</span></span> <span data-ttu-id="630a1-104">編譯器、執行階段系統，甚至硬體都有可能基於效能因素，而重新排列對記憶體位置的讀取和寫入。</span><span class="sxs-lookup"><span data-stu-id="630a1-104">The compiler, the runtime system, and even hardware may rearrange reads and writes to memory locations for performance reasons.</span></span> <span data-ttu-id="630a1-105">宣告為 `volatile` 的欄位不受限於這些最佳化考量。</span><span class="sxs-lookup"><span data-stu-id="630a1-105">Fields that are declared `volatile` are not subject to these optimizations.</span></span> <span data-ttu-id="630a1-106">加入 `volatile` 修飾詞可確保所有的執行緒都會依執行寫入的順序，觀察任何其他執行緒所執行的暫時性寫入。</span><span class="sxs-lookup"><span data-stu-id="630a1-106">Adding the `volatile` modifier ensures that all threads will observe volatile writes performed by any other thread in the order in which they were performed.</span></span> <span data-ttu-id="630a1-107">不保證 volatile 寫入的單一總排序如所有執行緒的執行中所示。</span><span class="sxs-lookup"><span data-stu-id="630a1-107">There is no guarantee of a single total ordering of volatile writes as seen from all threads of execution.</span></span>
+  
+<span data-ttu-id="630a1-108">`volatile` 關鍵字可以套用至下列類型的欄位：</span><span class="sxs-lookup"><span data-stu-id="630a1-108">The `volatile` keyword can be applied to fields of these types:</span></span>  
+  
+- <span data-ttu-id="630a1-109">參考型別。</span><span class="sxs-lookup"><span data-stu-id="630a1-109">Reference types.</span></span>  
+- <span data-ttu-id="630a1-110">指標類型 (在不安全的內容中)。</span><span class="sxs-lookup"><span data-stu-id="630a1-110">Pointer types (in an unsafe context).</span></span> <span data-ttu-id="630a1-111">請注意，雖然指標本身可為 volatile，但它所指向的物件不得為 volatile。</span><span class="sxs-lookup"><span data-stu-id="630a1-111">Note that although the pointer itself can be volatile, the object that it points to cannot.</span></span> <span data-ttu-id="630a1-112">換句話說，您無法將指標宣告為 volatile。</span><span class="sxs-lookup"><span data-stu-id="630a1-112">In other words, you cannot declare a "pointer to volatile."</span></span>  
+- <span data-ttu-id="630a1-113">簡單型別，例如 `sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`char`、`float` 與 `bool`。</span><span class="sxs-lookup"><span data-stu-id="630a1-113">Simple types such as `sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `char`, `float`, and `bool`.</span></span>  
+- <span data-ttu-id="630a1-114">使用下列其中一個基底類型的 `enum` 型別：`byte`、`sbyte`、`short`、`ushort`、`int` 或 `uint`。</span><span class="sxs-lookup"><span data-stu-id="630a1-114">An `enum` type with one of the following base types: `byte`, `sbyte`, `short`, `ushort`, `int`, or `uint`.</span></span>  
+- <span data-ttu-id="630a1-115">已知為參考型別的泛型型別參數。</span><span class="sxs-lookup"><span data-stu-id="630a1-115">Generic type parameters known to be reference types.</span></span>
+- <span data-ttu-id="630a1-116"><xref:System.IntPtr> 和 <xref:System.UIntPtr>。</span><span class="sxs-lookup"><span data-stu-id="630a1-116"><xref:System.IntPtr> and <xref:System.UIntPtr>.</span></span>  
+
+<span data-ttu-id="630a1-117">其他型別，包括 `double` 與 `long`，不能標示為 `volatile`，因為對這些型別之欄位的讀取和寫入不保證是不可部分完成。</span><span class="sxs-lookup"><span data-stu-id="630a1-117">Other types, including `double` and `long`, cannot be marked `volatile` because reads and writes to fields of those types cannot be guaranteed to be atomic.</span></span> <span data-ttu-id="630a1-118">若要保護對這些型別之欄位的多執行緒存取，請使用 <xref:System.Threading.Interlocked> 類別成員，或使用 [`lock` ](lock-statement.md) 陳述式來保護存取。</span><span class="sxs-lookup"><span data-stu-id="630a1-118">To protect multi-threaded access to those types of fields, use the <xref:System.Threading.Interlocked> class members or protect access using the [`lock`](lock-statement.md) statement.</span></span>
+
+<span data-ttu-id="630a1-119">volatile 關鍵字只能套用至 `class` 或 `struct` 的欄位。</span><span class="sxs-lookup"><span data-stu-id="630a1-119">The volatile keyword can only be applied to fields of a `class` or `struct`.</span></span> <span data-ttu-id="630a1-120">區域變數不可以宣告為 `volatile`。</span><span class="sxs-lookup"><span data-stu-id="630a1-120">Local variables cannot be declared `volatile`.</span></span>
+  
+## <a name="example"></a><span data-ttu-id="630a1-121">範例</span><span class="sxs-lookup"><span data-stu-id="630a1-121">Example</span></span>
+
+<span data-ttu-id="630a1-122">下列範例示範如何將公用欄位變數宣告為 `volatile`。</span><span class="sxs-lookup"><span data-stu-id="630a1-122">The following example shows how to declare a public field variable as `volatile`.</span></span>  
+  
+[!code-csharp[declareVolatile](~/samples/snippets/csharp/language-reference/keywords/volatile/Program.cs#Declaration)]
+
+<span data-ttu-id="630a1-123">下列範例示範如何建立和使用輔助或背景工作執行緒，以運用主執行緒的輔助或背景工作執行緒來執行平行處理。</span><span class="sxs-lookup"><span data-stu-id="630a1-123">The following example demonstrates how an auxiliary or worker thread can be created and used to perform processing in parallel with that of the primary thread.</span></span> <span data-ttu-id="630a1-124">如需多執行緒的背景資訊，請參閱 [Managed 執行緒處理](../../../standard/threading/index.md)和[執行緒處理 (C#)](../../programming-guide/concepts/threading/index.md)。</span><span class="sxs-lookup"><span data-stu-id="630a1-124">For background information about multithreading, see [Managed Threading](../../../standard/threading/index.md) and [Threading (C#)](../../programming-guide/concepts/threading/index.md).</span></span>  
+  
+[!code-csharp[declareVolatile](~/samples/snippets/csharp/language-reference/keywords/volatile/Program.cs#Volatile)]
+
+<span data-ttu-id="630a1-125">將 `volatile` 修飾詞新增到 `_shouldStop` 的宣告之後，您將會一律取得相同的結果 (類似上述程式碼顯示的摘要)。</span><span class="sxs-lookup"><span data-stu-id="630a1-125">With the `volatile` modifier added to the declaration of `_shouldStop` in place, you'll always get the same results (similar to the excerpt shown in the preceding code).</span></span> <span data-ttu-id="630a1-126">不過，如果 `_shouldStop` 成員上沒有修飾詞，則行為是無法預測的。</span><span class="sxs-lookup"><span data-stu-id="630a1-126">However, without that modifier on the `_shouldStop` member, the behavior is unpredictable.</span></span> <span data-ttu-id="630a1-127">`DoWork` 方法可能會將成員存取最佳化，導致讀取過時的資料。</span><span class="sxs-lookup"><span data-stu-id="630a1-127">The `DoWork` method may optimize the member access, resulting in reading stale data.</span></span> <span data-ttu-id="630a1-128">由於多執行緒程式設計的特性，過時讀取的數目是無法預測的。</span><span class="sxs-lookup"><span data-stu-id="630a1-128">Because of the nature of multi-threaded programming, the number of stale reads is unpredictable.</span></span> <span data-ttu-id="630a1-129">程式不同次的執行會產生不同的結果。</span><span class="sxs-lookup"><span data-stu-id="630a1-129">Different runs of the program will produce somewhat different results.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="630a1-130">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="630a1-130">C# Language Specification</span></span>
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+  
+## <a name="see-also"></a><span data-ttu-id="630a1-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="630a1-131">See Also</span></span>
+
+- [<span data-ttu-id="630a1-132">C# 語言規格：volatile 關鍵字</span><span class="sxs-lookup"><span data-stu-id="630a1-132">C# language specification: volatile keyword</span></span>](../../../../_csharplang/spec/classes.md#volatile-fields)
+- [<span data-ttu-id="630a1-133">C# 參考</span><span class="sxs-lookup"><span data-stu-id="630a1-133">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="630a1-134">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="630a1-134">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="630a1-135">C# 關鍵字</span><span class="sxs-lookup"><span data-stu-id="630a1-135">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="630a1-136">修飾詞</span><span class="sxs-lookup"><span data-stu-id="630a1-136">Modifiers</span></span>](modifiers.md)
+- [<span data-ttu-id="630a1-137">lock 陳述式</span><span class="sxs-lookup"><span data-stu-id="630a1-137">lock statement</span></span>](lock-statement.md)
+- <span data-ttu-id="630a1-138"><xref:System.Threading.Interlocked> 類別</span><span class="sxs-lookup"><span data-stu-id="630a1-138"><xref:System.Threading.Interlocked> class</span></span>
