@@ -1,77 +1,77 @@
 ---
-title: 跨平台為目標
-description: 建立跨平台.NET 程式庫的最佳做法建議。
+title: 跨平台目標設定
+description: 建立跨平台 .NET 程式庫的最佳做法建議。
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
 ms.openlocfilehash: 72fa891d5b1054af485a98d89b4efb11d6b0018b
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
-ms.translationtype: MT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374884"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202812"
 ---
-# <a name="cross-platform-targeting"></a>跨平台為目標
+# <a name="cross-platform-targeting"></a>跨平台目標設定
 
-新式的.NET 支援多個作業系統和裝置。 務必.NET 開放原始碼程式庫，才支援多個開發人員盡可能的情況下，不論它們要建置的 ASP.NET 網站裝載於 Azure 或在 Unity 中的進行.NET 遊戲。
+新式 .NET 支援多種作業系統與裝置。 .NET 開放原始碼程式庫要儘可能支援許多開發人員，無論是建置裝載於 Azure 的 ASP.NET 網站，還是 Unity 中的 .NET 遊戲，這一點非常重要。
 
 ## <a name="net-standard"></a>.NET Standard
 
-.NET standard 是跨平台支援加入.NET 程式庫的最佳方式。 [.NET standard](../net-standard.md)是可在所有.NET 實作的.NET Api 的規格。 目標.NET Standard，可讓您產生限制為使用中指定版本的.NET Standard，這表示它是使用會實作.NET Standard 版本的所有平台 Api 的程式庫。
+.NET Standard 是為 .NET 程式庫新增跨平台支援的最佳方式。 [.NET Standard](../net-standard.md) 是在所有 .NET 實作都可以使用的 .NET API 規格。 將目標設為 .NET Standard，您可以產生限制為使用給定 .NET Standard 版本中之 API 的程式庫，這表示它可以被實作該 .NET 版本的所有平台使用。
 
-![.NET standard](./media/cross-platform-targeting/platforms-netstandard.png ".NET Standard")
+![.NET Standard](./media/cross-platform-targeting/platforms-netstandard.png ".NET Standard")
 
-目標.NET Standard，並成功地編譯您的專案，並不保證程式庫會在所有平台上順利執行：
+將目標設為 .NET Standard 並成功地編譯您的專案，並不保證程式庫將可在所有平台上順利執行：
 
-1. 其他平台上，將會失敗的平台專屬的 Api。 例如，<xref:Microsoft.Win32.Registry?displayProperty=nameWithType>會在 Windows 上成功，則擲回<xref:System.PlatformNotSupportedException>使用任何其他作業系統上時。
-2. Api 的行為。 例如，反映 Api 時，有不同的效能特性應用程式在 iOS 或 UWP 上使用預先 just-in-time 編譯。
+1. 平台特定 API 將會在其他平台上失敗。 例如，<xref:Microsoft.Win32.Registry?displayProperty=nameWithType> 會在 Windows 上成功，並在任何其他 OS 上使用時擲回 <xref:System.PlatformNotSupportedException>。
+2. API 的行為會不一樣。 例如，當應用程式在 iOS 或 UWP 上使用預先編譯時，反映 API 具有不同的效能特性。
 
 > [!TIP]
-> .NET 小組[提供一個 Roslyn 分析器](../analyzers/api-analyzer.md)可協助您找出可能的問題。
+> .NET 小組[提供了一個 Roslyn 分析器](../analyzers/api-analyzer.md)，可協助您找出可能的問題。
 
-**請勿 ✔️**開頭包括`netstandard2.0`目標。
+**✔️ 請務必**開始包括 `netstandard2.0` 目標。
 
-> 一般用途的文件庫應該不需要外部.NET Standard 2.0 的 Api。 .NET standard 2.0 支援所有新型平台，而且是建議用來支援多個目標平台。
+> 大部分的一般用途程式庫應該不需要 .NET Standard 2.0 以外的 API。 所有新式平台都支援 .NET Standard 2.0，而且是以一個目標支援多個平台的建議方法。
 
-**請避免 ❌**包括`netstandard1.x`目標。
+**避免**包含 `netstandard1.x` 目標。
 
-> .NET standard 1.x 分散會建立大型的套件相依性圖形，並導致下載的封裝時建置的開發人員的 NuGet 套件的細微設定。 新式的.NET 平台，包括.NET Framework 4.6.1、 UWP 和 Xamarin，所有支援.NET Standard 2.0。 您只應該以目標為.NET Standard 1.x，如果您特別需要較舊的平台為目標。
+> .NET standard 1.x 是以一組精細的 NuGet 套件形式發佈，它建立了一個大型的套件相依性圖形，並導致開發人員在建置時下載了大量的套件。 新式 .NET 平台，包括 .NET Framework 4.6.1、UWP 與 Xamarin，全都支援 .NET Standard 2.0。 如果您特別需要以較舊的平台為目標，則應僅將目標設為 .NET Standard 1.x。
 
-**請勿 ✔️**包括`netstandard2.0`如果您需要為目標`netstandard1.x`目標。
+**✔️ 請務必**包含 `netstandard2.0` 目標 (如果您需要 `netstandard1.x` 目標)。
 
-> 將所有的平台支援.NET Standard 2.0`netstandard2.0`為目標，並受益於具有較小的套件圖形，而較舊的平台仍會運作，並改為使用`netstandard1.x`目標。
+> 所有支援 .NET Standard 2.0 的平台都將使用 `netstandard2.0` 目標，並從較小的套件圖形中受益，而較舊的平台仍會運作，並改為使用 `netstandard1.x` 目標。
 
-**不這麼做 ❌**包含.NET Standard 的目標，如果程式庫依賴平台專屬的應用程式模型。
+**請勿** 包含 .NET Standard 目標 (如果程式庫依賴平台特定應用程式模型)。
 
-> 例如，UWP 控制項工具組程式庫才可以使用 UWP 應用程式模型而定。 應用程式模型特定的 Api 不是在.NET Standard 中，您可以使用的狀態。
+> 例如，UWP 控制項工具組程式庫相依於只有 UWP 上可用的應用程式模型。 .NET Standard 中將不提供應用程式模型特定 API。
 
 ## <a name="multi-targeting"></a>多目標
 
-有時候您需要存取特定架構的 Api，從您的程式庫。 呼叫架構特定 Api 的最佳方式使用多目標，建置您的專案提供了許多[目標的.NET frameworks](../frameworks.md)而不是其中一個。
+有時您需要從您的程式庫中存取架構特定 API。 呼叫架構特定 API 的最佳方法是使用多目標，它為許多 [.NET 目標 Framework](../frameworks.md) 建置專案，而不是僅為一個。
 
-若要防護您的取用者不必建立個別的架構，您應該盡量有.NET Standard 的輸出，再加上一個或多個架構特定輸出。 使用多目標會將所有組件封裝內單一 NuGet 套件中。 取用者可以參考相同的套件，NuGet 會挑選適當的實作。 後援文件庫會使用所有位置，其中您的 NuGet 套件提供的架構特定實作的案例除外，就會作為您的.NET Standard 程式庫。 多目標可讓您在程式碼中使用條件式編譯，並呼叫特定架構的 Api。
+為了保護您的取用者不必為個別架構建置，您應該努力獲得 .NET Standard 輸出，加上一或多個架構特定輸出。 使用多目標時，所有組件都會封裝在單一 NuGet 套件中。 接著，取用者可以參考相同的套件，NuGet 將挑選適當的實作。 您的 .NET Standard 程式庫會作為在任何地方使用的後援程式庫，但您的 NuGet 套件提供架構特定實作的案例除外。 多目標可讓您在程式碼中使用條件式編譯，並呼叫架構特定 API。
 
-![具有多個組件的 NuGet 封裝](./media/cross-platform-targeting/nuget-package-multiple-assemblies.png "具有多個組件的 NuGet 封裝")
+![包含多個組件的 NuGet 套件](./media/cross-platform-targeting/nuget-package-multiple-assemblies.png "包含多個組件的 NuGet 套件")
 
-**請考慮 ✔️**目標除了.NET Standard 的.NET 實作。
+**✔️ 考慮**將 .NET 實作設為目標 (除了 .NET Standard 之外)。
 
-> 目標為.NET 實作，可讓您呼叫外部.NET Standard 平台專屬 Api。
+> 將 .NET 實作設為目標可讓您呼叫 .NET Standard 之外的平台特定 API。
 >
-> 當您執行此動作不捨棄.NET Standard 的支援。 相反地，從實作擲回，並提供功能的 Api。 如此一來，您的程式庫可用於任何地方，並支援執行階段啟動的功能。
+> 執行此動作時，請不要捨棄 .NET Standard 的支援。 相反地，從實作擲回並提供功能API。 這樣，您的程式庫便能任何地方使用，並支援執行階段啟動功能。
 
-**請避免 ❌**使用多目標的.NET Standard 與您的程式碼是否適用於所有目標。
+**避免**搭配 .NET Standard 使用多目標 (如果您的程式碼適用於所有目標)。
 
-> NuGet 會自動使用.NET Standard 的組件。 目標為個別的.NET 實作會增加`*.nupkg`大小沒有任何好處。
+> NuGet 將自動使用 .NET Standard 組件。 將單一 .NET 實作設為目標會增加 `*.nupkg` 大小，沒有任何好處。
 
-**請考慮 ✔️**新增的目標`net461`當您提供`netstandard2.0`目標。 
+**✔️ 考慮**針對 `net461` 新增目標 (當您提供 `netstandard2.0` 目標時)。 
 
-> 使用.NET Standard 2.0，從.NET Framework 有一些.NET Framework 4.7.2 中已解決的問題。 您可以改善仍在使用.NET Framework 4.6.1-藉由提供他們建置適用於.NET Framework 4.6.1 的二進位檔 4.7.1 的開發人員的體驗。
+> 使用 .NET Framework 中的 .NET Standard 2.0，會有一些在 .NET Framework 4.7.2 中已經解決的問題。 您可以透過為仍在 .NET Framework 4.6.1 - 4.7.1 上的開發人員提供針對 .NET Framework 4.6.1 建置的二進位檔，以改善其體驗。
 
-**請勿 ✔️**散發您的程式庫使用 NuGet 套件。
+**✔️ 請務必**使用 NuGet 套件散發您的程式庫。
 
-> NuGet 會選取最佳的目標，開發人員，並避免它們需要挑選適當的實作。
+> NuGet 將為開發人員選取最佳目標，並讓他們不需要挑選適當的實作。
 
-**請勿 ✔️**使用專案檔的`TargetFrameworks`多目標時的屬性。
+**✔️ 請務必**使用專案檔的 `TargetFrameworks` 屬性 (當使用多目標時)。
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -82,17 +82,17 @@ ms.locfileid: "49374884"
 </Project>
 ```
 
-**請考慮 ✔️**使用[MSBuild.Sdk.Extras](https://github.com/onovotny/MSBuildSdkExtras)時多目標的 UWP 和 Xamarin，它可大幅簡化您的專案檔。
+**✔️ 考慮**使用 [MSBuild.Sdk.Extras](https://github.com/onovotny/MSBuildSdkExtras) (當針對 UWP 與 Xamarin 進行多目標時) 因為它可以大幅簡化您的專案檔。
 
 ## <a name="older-targets"></a>較舊的目標
 
-.NET 支援的.NET framework 是長時間不支援，以及不再常用的平台的目標版本。 雖然沒有在進行您的程式庫工作上需要解決遺失的 Api 越好，許多的目標可以新增重大額外負荷的值。 我們相信特定架構已不再值得目標，考量其觸達和限制。
+.NET 支援長期不支援的 .NET Framework 的目標版本，以及不再常用的平台。 雖然使您的程式庫在儘可能多的目標上運作是有價值的，但是必須針對 API 遺漏問題找出因應措施會增加重大額外負荷。 考慮到其範圍與限制，我們認為特定架構已不再值得設為目標。
 
-**不這麼做 ❌**包含可攜式類別庫 (PCL) 目標。 例如，`portable-net45+win8+wpa81+wp8`。
+**請勿**包含可攜式類別庫 (PCL) 目標。 例如，`portable-net45+win8+wpa81+wp8`。
 
-> .NET standard 是現代化的方式，以支援跨平台.NET 程式庫，並取代 Pcl。
+> .NET Standard 是支援跨平台 .NET 程式庫並取代 PCL 的新式方法。
 
-**不這麼做 ❌**包含不受支援的.NET 平台的目標。 例如，`SL4`、`WP`。
+**請勿**包含不再支援之 .NET 平台的目標。 例如，`SL4`、`WP`。
 
 >[!div class="step-by-step"]
 [上一頁](./get-started.md)
