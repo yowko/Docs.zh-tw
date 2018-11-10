@@ -1,6 +1,6 @@
 ---
-title: 'Byref （F #）'
-description: '深入了解 byref 和 F # 中的類似 byref 類型用於低層級的程式設計。'
+title: Byref （F#）
+description: 深入了解 byref 和 F# 中的類似 byref 類型用於低層級的程式設計。
 ms.date: 09/02/2018
 ms.openlocfilehash: 6131104e4325f77da84368c337f998c6b2b5309b
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "48836877"
 ---
 # <a name="byrefs"></a>Byref
 
-F # 提供處理低階程式設計的空間中的兩個主要功能領域：
+F# 提供處理低階程式設計的空間中的兩個主要功能領域：
 
 * `byref` / `inref` / `outref`類型，也就是 managed 的指標。 它們有使用量限制，因此無法編譯程式時，會在執行階段無效。
 * A `byref`-與結構，也就是一樣[結構](structures.md)有類似的語意和相同的編譯時間限制`byref<'T>`。 其中一個範例是<xref:System.Span%601>。
@@ -97,7 +97,7 @@ let f (x: inref<SomeStruct>) = s.SomeField
 * 沒有任何隱含的其他執行緒或別名並沒有寫入權限`x`。
 * 沒有任何隱含的`SomeStruct`不可變之故`x`正在`inref`。
 
-不過，F # 的實值型別，**都**不可變`this`指標被推斷為`inref`。
+不過，F# 的實值型別，**都**不可變`this`指標被推斷為`inref`。
 
 所有這些規則同時表示的持有人`inref`指標可能不會修改所指向的記憶體的即時內容。
 
@@ -107,18 +107,18 @@ let f (x: inref<SomeStruct>) = s.SomeField
 
 ### <a name="interop-with-c"></a>使用 C# 的 interop #
 
-C# 支援`in ref`並`out ref`關鍵字，除了`ref`傳回。 下表顯示如何 F # 解譯什麼 C# 會發出：
+C# 支援`in ref`並`out ref`關鍵字，除了`ref`傳回。 下表顯示如何 F# 解譯什麼 C# 會發出：
 
-|C# 建構|F # 推斷|
+|C# 建構|F# 推斷|
 |------------|---------|
 |`ref` 傳回值|`outref<'T>`|
 |`ref readonly` 傳回值|`inref<'T>`|
 |`in ref` 參數|`inref<'T>`|
 |`out ref` 參數|`outref<'T>`|
 
-下表顯示哪些 F # 發出：
+下表顯示哪些 F# 發出：
 
-|F # 建構|發出的建構|
+|F# 建構|發出的建構|
 |------------|-----------------|
 |`inref<'T>` 引數|`[In]` 引數上的屬性|
 |`inref<'T>` 傳回|`modreq` 值的屬性|
@@ -127,7 +127,7 @@ C# 支援`in ref`並`out ref`關鍵字，除了`ref`傳回。 下表顯示如何
 
 ### <a name="type-inference-and-overloading-rules"></a>型別推斷 」 和 「 多載規則
 
-`inref<'T>`類型由在下列情況下，F # 編譯器推斷：
+`inref<'T>`類型由在下列情況下，F# 編譯器推斷：
 
 1. .NET 參數或傳回型別具有`IsReadOnly`屬性。
 2. `this`上沒有任何可變動的欄位的結構類型的指標。
@@ -165,20 +165,20 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 `IsByRefLike` 並不表示`Struct`。 兩者都必須要有型別。
 
-「`byref`-例如"F # 中的結構是堆疊繫結值型別。 永遠不會在 managed 堆積上配置。 A `byref`-就像結構適用於高效能的程式設計，因為它會強制執行設定的強式存留期和非擷取相關的檢查。 規則包括：
+「`byref`-例如"F# 中的結構是堆疊繫結值型別。 永遠不會在 managed 堆積上配置。 A `byref`-就像結構適用於高效能的程式設計，因為它會強制執行設定的強式存留期和非擷取相關的檢查。 規則包括：
 
 * 它們可用來當做函式參數、 方法參數、 區域變數、 方法會傳回。
 * 它們不能是靜態或執行個體的類別或一般結構的成員。
 * 它們無法擷取任何關閉的建構 (`async`方法或 lambda 運算式)。
 * 它們不能當做泛型參數。
 
-最後一點很重要的 F # 管線樣式程式設計中，為`|>`會參數化為其輸入的類型的泛型函式。 這項限制可能會放寬為`|>`未來，因為它是以內嵌方式，其主體中毫無任何非內嵌的泛型函式的呼叫。
+最後一點很重要的 F# 管線樣式程式設計中，為`|>`會參數化為其輸入的類型的泛型函式。 這項限制可能會放寬為`|>`未來，因為它是以內嵌方式，其主體中毫無任何非內嵌的泛型函式的呼叫。
 
 雖然很希望這些規則會限制使用方式，如此一來滿足承諾的高效能運算以安全的方式。
 
 ## <a name="byref-returns"></a>Byref 傳回
 
-Byref 傳回從 F # 函式或成員可以產生及取用。 使用時`byref`-傳回方法，這個值是隱含已取值。 例如: 
+Byref 傳回從 F# 函式或成員可以產生及取用。 使用時`byref`-傳回方法，這個值是隱含已取值。 例如: 
 
 ```fsharp
 let safeSum(bytes: Span<byte>) =

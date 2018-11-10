@@ -1,6 +1,6 @@
 ---
 title: 編譯器指示詞 (F#)
-description: '深入了解 F # 語言前置處理器指示詞、 條件式編譯指示詞、 line 指示詞和編譯器指示詞。'
+description: 深入了解 F# 語言前置處理器指示詞、 條件式編譯指示詞、 line 指示詞和編譯器指示詞。
 ms.date: 05/16/2016
 ms.openlocfilehash: 5ac375ac5acd0609a6556f9e0481d169df827c98
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -65,7 +65,7 @@ F# 中沒有 `#define` 前置處理器指示詞。 您必須使用編譯器選�
 |指示詞|描述|
 |---------|-----------|
 |`#light` ["on"&#124;"off"]|啟用或停用輕量型語法，與其他 ML 版本相容。 根據預設，會啟用輕量型語法。 一律會啟用詳細語法。 因此，您可以使用輕量型語法和詳細語法。 指示詞 `#light` 本身就相當於 `#light "on"`。 如果您指定 `#light "off"`，您必須針對所有語言建構使用詳細語法。 會假設您使用輕量型語法，在文件中顯示 F# 語法。 如需詳細資訊，請參閱 <<c0> [ 冗長的語法](verbose-syntax.md)。|
-解譯器 (fsi.exe) 指示詞，請參閱[使用 F # 互動式程式設計](../tutorials/fsharp-interactive/index.md)。
+解譯器 (fsi.exe) 指示詞，請參閱[使用 F# 互動式程式設計](../tutorials/fsharp-interactive/index.md)。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,6 +1,6 @@
 ---
-title: 'F # 程式碼格式設定指導方針'
-description: '了解 F # 程式碼格式化的指導方針。'
+title: F# 程式碼格式設定指導方針
+description: 了解 F# 程式碼格式化的指導方針。
 ms.date: 05/14/2018
 ms.openlocfilehash: 0d7d2d1771710db55bf990f3a06079b2aec48fd7
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -9,19 +9,19 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "43858001"
 ---
-# <a name="f-code-formatting-guidelines"></a>F # 程式碼格式設定指導方針
+# <a name="f-code-formatting-guidelines"></a>F# 程式碼格式設定指導方針
 
-這篇文章提供如何格式化您的程式碼，使 F # 程式碼的指導方針：
+這篇文章提供如何格式化您的程式碼，使 F# 程式碼的指導方針：
 
 * 通常視為更易於閱讀
 * 會根據套用在 Visual Studio 中的工具和其他的編輯器格式設定慣例
 * 類似於線上的其他程式碼
 
-這些指導方針根據[F # 格式設定慣例的完整指南](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md)依[Anh phan （英文)](https://github.com/dungpa)。
+這些指導方針根據[F# 格式設定慣例的完整指南](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md)依[Anh phan （英文)](https://github.com/dungpa)。
 
 ## <a name="general-rules-for-indentation"></a>縮排的一般規則
 
-F # 會使用預設的顯著泛空白字元。 下列指導方針的用意在於提供指引來選擇要掌握這造成一些挑戰。
+F# 會使用預設的顯著泛空白字元。 下列指導方針的用意在於提供指引來選擇要掌握這造成一些挑戰。
 
 ### <a name="using-spaces"></a>使用空間
 
@@ -62,7 +62,7 @@ let f x = x + 1 // Increment by one.
 
 ### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>使用 camelCase 類別繫結、 繫結運算式和模式繫結的值和函式
 
-是很常見，並接受的 F # 使用樣式 camelCase 的所有名稱繫結做為本機變數，或在模式比對和函式定義中。
+是很常見，並接受的 F# 使用樣式 camelCase 的所有名稱繫結做為本機變數，或在模式比對和函式定義中。
 
 ```fsharp
 // OK
@@ -165,13 +165,13 @@ type SchoolPerson =
 
 ### <a name="avoid-underscores-in-names"></a>避免在名稱中的底線
 
-在過去，某些 F # 程式庫名稱中使用底線。 不過，這是不會再被廣泛接受，這是因為它與.NET 命名慣例衝突。 話雖如此，某些 F # 程式設計人員使用底線大量、 部分基於歷史原因，並容錯] 和 [方面很重要。 不過，請注意樣式通常會不喜歡的人可以選擇要使用它。
+在過去，某些 F# 程式庫名稱中使用底線。 不過，這是不會再被廣泛接受，這是因為它與.NET 命名慣例衝突。 話雖如此，某些 F# 程式設計人員使用底線大量、 部分基於歷史原因，並容錯] 和 [方面很重要。 不過，請注意樣式通常會不喜歡的人可以選擇要使用它。
 
 某些例外狀況包含間的互通性與原生元件，其中底線很常見。
 
-### <a name="use-standard-f-operators"></a>使用標準的 F # 運算子
+### <a name="use-standard-f-operators"></a>使用標準的 F# 運算子
 
-下列運算子 F # 標準程式庫中已定義，而且應該使用而不是定義對等項目。 因為它會使程式碼，更容易理解且慣用語，建議使用這些運算子。 具有背景的 OCaml 或其他功能的程式設計語言的開發人員可能習慣將不同的習慣用語。 下列清單摘要說明建議的 F # 運算子。
+下列運算子 F# 標準程式庫中已定義，而且應該使用而不是定義對等項目。 因為它會使程式碼，更容易理解且慣用語，建議使用這些運算子。 具有背景的 OCaml 或其他功能的程式設計語言的開發人員可能習慣將不同的習慣用語。 下列清單摘要說明建議的 F# 運算子。
 
 ```fsharp
 x |> f // Forward pipeline
@@ -193,11 +193,11 @@ x ^^^ y // Bitwise xor, also for working with “flags” enumeration
 
 ### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>使用泛型的前置詞的語法 (`Foo<T>`) 而非後置語法 (`T Foo`)
 
-F # 會繼承這兩個後置 ML 的樣式命名泛型型別 (例如`int list`) 以及.NET 樣式的前置詞 (例如`list<int>`)。 偏好的.NET 樣式，除了特定的四種類型：
+F# 會繼承這兩個後置 ML 的樣式命名泛型型別 (例如`int list`) 以及.NET 樣式的前置詞 (例如`list<int>`)。 偏好的.NET 樣式，除了特定的四種類型：
 
-1. F # 清單中，使用後置格式：`int list`而非`list<int>`。
-2. 使用 F # 選項，請使用後置格式：`int option`而非`option<int>`。
-3. F # 陣列，使用的語法名稱`int[]`而非`int array`或`array<int>`。
+1. F# 清單中，使用後置格式：`int list`而非`list<int>`。
+2. 使用 F# 選項，請使用後置格式：`int option`而非`option<int>`。
+3. F# 陣列，使用的語法名稱`int[]`而非`int array`或`array<int>`。
 4. 參考儲存格，使用`int ref`而非`ref<int>`或`Ref<int>`。
 
 對於所有其他類型，使用前置詞的表單。
@@ -591,7 +591,7 @@ let comparer =
 
 ### <a name="formatting-white-space-in-expressions"></a>設定格式化的運算式中的泛空白字元
 
-避免多餘的空白字元在 F # 運算式。
+避免多餘的空白字元在 F# 運算式。
 
 ```fsharp
 // OK

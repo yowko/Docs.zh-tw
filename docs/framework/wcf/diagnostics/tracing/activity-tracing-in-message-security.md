@@ -3,11 +3,11 @@ title: 訊息安全性中的活動追蹤
 ms.date: 03/30/2017
 ms.assetid: 68862534-3b2e-4270-b097-8121b12a2c97
 ms.openlocfilehash: c3bd36598fd903dc016959149e563174624d084b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181325"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50982837"
 ---
 # <a name="activity-tracing-in-message-security"></a>訊息安全性中的活動追蹤
 此主題將說明安全性處理中的活動追蹤 (將於下列三個階段中發生)。  

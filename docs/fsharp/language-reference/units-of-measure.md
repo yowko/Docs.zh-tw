@@ -1,6 +1,6 @@
 ---
 title: 測量單位 (F#)
-description: '了解如何浮點數和帶正負號的整數值，F # 中可以有關聯的量值，通常用來表示長度、 磁碟區，以及大量的單位。'
+description: 了解如何浮點數和帶正負號的整數值，F# 中可以有關聯的量值，通常用來表示長度、 磁碟區，以及大量的單位。
 ms.date: 05/16/2016
 ms.openlocfilehash: ad2193e25f3c0cee6e73cd529ab43d1e4b6b549b
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "45972513"
 ---
 # <a name="units-of-measure"></a>測量單位
 
-在 F # 浮點和帶正負號的整數值可以具有相關聯的度量單位，通常用來表示長度，磁碟區，大量，依此類推。 藉由使用單位數量，您可以讓編譯器無法驗證算術的關聯性具有正確的單位，這有助於防止程式設計錯誤。
+在 F# 浮點和帶正負號的整數值可以具有相關聯的度量單位，通常用來表示長度，磁碟區，大量，依此類推。 藉由使用單位數量，您可以讓編譯器無法驗證算術的關聯性具有正確的單位，這有助於防止程式設計錯誤。
 
 ## <a name="syntax"></a>語法
 
@@ -113,7 +113,7 @@ That temperature in degrees Celsius is    32.22.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6906.fs)]
 
-## <a name="units-of-measure-in-the-f-core-library"></a>F # 核心程式庫中的測量單位
+## <a name="units-of-measure-in-the-f-core-library"></a>F# 核心程式庫中的測量單位
 
 單位程式庫都有`FSharp.Data.UnitSystems.SI`命名空間。 它包含這兩個符號格式的 SI 單位 (類似`m`個計量器) 中`UnitSymbols`子命名空間和其完整名稱 (例如`meter`個計量器) 中`UnitNames`子命名空間。
 

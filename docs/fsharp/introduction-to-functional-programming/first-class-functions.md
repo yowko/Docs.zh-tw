@@ -27,7 +27,7 @@ ms.locfileid: "50744629"
 
 ## <a name="give-the-value-a-name"></a>指定值的名稱
 
-如果函式為第一級的值，您必須能夠加以命名，就如同您可以命名整數、 字串和其他內建類型。 這被指在功能性程式設計文獻中做為繫結至值的識別項。 F # 會使用[`let`繫結](../language-reference/functions/let-bindings.md)繫結到值的名稱： `let <identifier> = <value>`。 下列程式碼顯示兩個範例。
+如果函式為第一級的值，您必須能夠加以命名，就如同您可以命名整數、 字串和其他內建類型。 這被指在功能性程式設計文獻中做為繫結至值的識別項。 F# 會使用[`let`繫結](../language-reference/functions/let-bindings.md)繫結到值的名稱： `let <identifier> = <value>`。 下列程式碼顯示兩個範例。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet20.fs)]
 
@@ -35,7 +35,7 @@ ms.locfileid: "50744629"
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet21.fs)]
 
-F # 提供下列更簡潔的語法，來達到相同的結果，少打一些字。
+F# 提供下列更簡潔的語法，來達到相同的結果，少打一些字。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet22.fs)]
 
@@ -57,7 +57,7 @@ F # 提供下列更簡潔的語法，來達到相同的結果，少打一些字�
 
 ## <a name="pass-the-value-as-an-argument"></a>將值傳遞做為引數
 
-如果某個值有一種語言中的第一等狀態，您可以做為引數傳遞至函式。 比方說，常會傳遞做為引數的整數和字串。 下列程式碼顯示整數和 F # 中的引數傳遞的字串。
+如果某個值有一種語言中的第一等狀態，您可以做為引數傳遞至函式。 比方說，常會傳遞做為引數的整數和字串。 下列程式碼顯示整數和 F# 中的引數傳遞的字串。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet26.fs)]
 
@@ -69,7 +69,7 @@ F # 提供下列更簡潔的語法，來達到相同的結果，少打一些字�
 
 能夠將函式做為引數傳送至另一個函式是功能性程式設計語言的詳細資訊，例如對應或篩選作業中的通用抽象概念的基礎。 對應作業，比方說，是較高順序函式可擷取共用的逐步執行清單，執行某個動作，每個項目，然後傳回結果的清單的函式的計算。 您可能想要遞增的整數，清單中的每個項目或正方形每個項目，或變更為大寫的字串清單中的每個項目。 計算出錯部分是遞迴程序的逐步說明的清單，並建置一份要傳回的結果。 對應函式中擷取該部分。 您只需要撰寫特定的應用程式是您想要個別套用至每個清單項目函式 （新增、 number、 變更大小寫）。 函式會傳送做為引數以對應的函式，就如同`squareIt`傳送至`applyIt`在上述範例中。
 
-F # 提供對應方法的大部分集合型別，包括[列出](../language-reference/lists.md)，[陣列](../language-reference/arrays.md)，並[序列](../language-reference/sequences.md)。 下列範例會使用清單。 語法是`List.map <the function> <the list>`。
+F# 提供對應方法的大部分集合型別，包括[列出](../language-reference/lists.md)，[陣列](../language-reference/arrays.md)，並[序列](../language-reference/sequences.md)。 下列範例會使用清單。 語法是`List.map <the function> <the list>`。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet28.fs)]
 
@@ -99,7 +99,7 @@ F # 提供對應方法的大部分集合型別，包括[列出](../language-refe
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet33.fs)]
 
-下列範例使用在 F # 第一級函式的狀態，宣告函式， `compose`，傳回兩個函式引數的組合。
+下列範例使用在 F# 第一級函式的狀態，宣告函式， `compose`，傳回兩個函式引數的組合。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet34.fs)]
 
@@ -111,7 +111,7 @@ F # 提供對應方法的大部分集合型別，包括[列出](../language-refe
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet35.fs)]
 
 >[!NOTE]
-F # 提供兩個運算子`<<`和`>>`，撰寫函式。 例如，`let squareAndDouble2 = doubleIt << squareIt`相當於`let squareAndDouble = compose doubleIt squareIt`在上述範例中。
+F# 提供兩個運算子`<<`和`>>`，撰寫函式。 例如，`let squareAndDouble2 = doubleIt << squareIt`相當於`let squareAndDouble = compose doubleIt squareIt`在上述範例中。
 
 傳回做為值的函式呼叫的函式的下列範例會建立簡單的猜測遊戲。 若要建立的遊戲，呼叫`makeGame`值與想要其他人猜出傳入`target`。 函式的傳回值`makeGame`是採用一個引數 （猜測），並報告猜測是否正確的函式。
 
@@ -123,7 +123,7 @@ F # 提供兩個運算子`<<`和`>>`，撰寫函式。 例如，`let squareAndDo
 
 ## <a name="curried-functions"></a>局部調用函式
 
-許多在上一節中的範例藉由運用隱含可以更精確撰寫*調用*F # 函式宣告中。 調用是轉換成一系列的內嵌函式，其中每一個具有單一參數的多個參數的函式的程序。 在 F # 中，有多個參數的函式原本就是局部調用。 比方說，`compose`上一節可以撰寫下列簡潔樣式，使用三個參數中所示。
+許多在上一節中的範例藉由運用隱含可以更精確撰寫*調用*F# 函式宣告中。 調用是轉換成一系列的內嵌函式，其中每一個具有單一參數的多個參數的函式的程序。 在 F# 中，有多個參數的函式原本就是局部調用。 比方說，`compose`上一節可以撰寫下列簡潔樣式，使用三個參數中所示。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet38.fs)]
 
@@ -160,9 +160,9 @@ F # 提供兩個運算子`<<`和`>>`，撰寫函式。 例如，`let squareAndDo
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet44.fs)]
 
-## <a name="functions-are-first-class-values-in-f"></a>函式是 f # 第一級值\#
+## <a name="functions-are-first-class-values-in-f"></a>函式是 F# 第一級值\#
 
-在先前章節中的範例將示範 F # 函式滿足的準則中 F # 第一級值：
+在先前章節中的範例將示範 F# 函式滿足的準則中 F# 第一級值：
 
 - 您可以將識別項繫結至函式定義。
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet21.fs)]
@@ -176,7 +176,7 @@ F # 提供兩個運算子`<<`和`>>`，撰寫函式。 例如，`let squareAndDo
 - 您可以傳回函式的函式呼叫的值。
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet32.fs)]
 
-如需 F # 的詳細資訊，請參閱[F # 語言參考](../language-reference/index.md)。
+如需 F# 的詳細資訊，請參閱[F# 語言參考](../language-reference/index.md)。
 
 ## <a name="example"></a>範例
 

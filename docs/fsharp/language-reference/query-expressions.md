@@ -1,6 +1,6 @@
 ---
 title: 查詢運算式 (F#)
-description: '深入了解 F # 程式設計語言中的 LINQ 查詢運算式支援。'
+description: 深入了解 F# 程式設計語言中的 LINQ 查詢運算式支援。
 ms.date: 05/16/2016
 ms.openlocfilehash: 6586d991dde550380d04c4d9831bb954eb94a715
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -14,7 +14,7 @@ ms.locfileid: "48033489"
 > [!NOTE]
 本文中的 API 參考連結將帶您前往 MSDN。  docs.microsoft.com API 參考不完整。
 
-查詢運算式可讓您查詢資料來源，並將資料放在想要的格式。 查詢運算式提供 F # 中的 LINQ 支援。
+查詢運算式可讓您查詢資料來源，並將資料放在想要的格式。 查詢運算式提供 F# 中的 LINQ 支援。
 
 ## <a name="syntax"></a>語法
 
@@ -24,7 +24,7 @@ query { expression }
 
 ## <a name="remarks"></a>備註
 
-查詢運算式是一種類似於循序項運算式的計算運算式。 就像您可以指定一系列提供序列運算式中的程式碼，您可以指定一組資料提供查詢運算式中的程式碼。 在序列運算式中，`yield`關鍵字都會識別以產生順序的一部分傳回的資料。 在查詢運算式中，`select`關鍵字執行相同的功能。 除了`select`關鍵字，F # 也支援一些很類似於 SQL SELECT 陳述式的組件的查詢運算子。 以下是簡單的查詢運算式，以及連接到 Northwind OData 來源的程式碼的範例。
+查詢運算式是一種類似於循序項運算式的計算運算式。 就像您可以指定一系列提供序列運算式中的程式碼，您可以指定一組資料提供查詢運算式中的程式碼。 在序列運算式中，`yield`關鍵字都會識別以產生順序的一部分傳回的資料。 在查詢運算式中，`select`關鍵字執行相同的功能。 除了`select`關鍵字，F# 也支援一些很類似於 SQL SELECT 陳述式的組件的查詢運算子。 以下是簡單的查詢運算式，以及連接到 Northwind OData 來源的程式碼的範例。
 
 ```fsharp
 // Use the OData type provider to create types that can be used to access the Northwind database.
@@ -56,7 +56,7 @@ query1
 
 查詢運算式中允許可轉譯為 SQL 的運算式。 比方說，不允許函數呼叫運算式中使用時`where`查詢運算子。
 
-表 1 顯示可用的查詢運算子。 此外，請參閱 Table2，SQL 查詢和對等 F # 查詢運算式在本主題稍後會比較。 有些查詢運算子不支援某些型別提供者。 特別的是，它支援限制在 OData 中的查詢運算子中的 OData 型別提供者會受到限制。 如需詳細資訊，請參閱 < [odataservice 型別提供者 （F #）](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e)。
+表 1 顯示可用的查詢運算子。 此外，請參閱 Table2，SQL 查詢和對等 F# 查詢運算式在本主題稍後會比較。 有些查詢運算子不支援某些型別提供者。 特別的是，它支援限制在 OData 中的查詢運算子中的 OData 型別提供者會受到限制。 如需詳細資訊，請參閱 < [odataservice 型別提供者 （F#）](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e)。
 
 此表格假設資料庫，以下列形式：
 
@@ -499,7 +499,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </table>
 
 ## <a name="comparison-of-transact-sql-and-f-query-expressions"></a>Transact-SQL 和 F# 查詢運算式的比較
-下表顯示 F # 中的一些常見的 Transact SQL 查詢和其對等項目。 此資料表中的程式碼也會假設與先前的資料表和相同的初始程式碼設定型別提供者相同的資料庫。
+下表顯示 F# 中的一些常見的 Transact SQL 查詢和其對等項目。 此資料表中的程式碼也會假設與先前的資料表和相同的初始程式碼設定型別提供者相同的資料庫。
 
 
 ### <a name="table-2-transact-sql-and-f-query-expressions"></a>表 2。 Transact-SQL 和 F# 查詢運算式
@@ -508,7 +508,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 <table style="width:100%">
   <tr>
     <th>Transact-SQL （不區分大小寫）</th>
-    <th>F # 查詢運算式 （區分大小寫）</th>
+    <th>F# 查詢運算式 （區分大小寫）</th>
   </tr>
 <tr><td>
 從資料表選取所有的欄位。</br>
@@ -1864,7 +1864,7 @@ query {
 |> Seq.iter (fun (studentName, courseName) -> printfn "%s %s" studentName courseName)
 ```
 
-和 F # Interactive 中執行此程式碼時，以下是完整的輸出。
+和 F# Interactive 中執行此程式碼時，以下是完整的輸出。
 
 ```
 --> Referenced 'C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\3.0\Runtime\v4.0\Type Providers\FSharp.Data.TypeProviders.dll'

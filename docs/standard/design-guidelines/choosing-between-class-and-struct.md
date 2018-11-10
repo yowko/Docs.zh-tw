@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06661cb2c34d1da9085fa2129cb0c3307b99097e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 7590d5628f4951a8c7c2199f0e954007ed9fa962
+ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865549"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50757422"
 ---
 # <a name="choosing-between-class-and-struct"></a>在類別和結構之間選擇
 每個 framework 設計工具所面臨的基本設計決策之一是設計為型別，做為類別 （參考型別） 或結構 （實值型別）。 深入了解的參考型別和實值類型的行為差異是非常重要的做此選擇。  
@@ -28,7 +28,7 @@ ms.locfileid: "43865549"
   
  接下來，參考類型的陣列配置外行，這表示的陣列項目是只在堆積上的參考類型的執行個體的參考。 值型別陣列的配置是內嵌，這表示陣列項目實值型別的實際的執行個體。 因此，值型別陣列的配置和解除會比參考型別陣列的配置和解除成本更低。 此外，在大多數情況下值型別陣列顯現出更好的參考位置。  
   
- 下一項差異被與記憶體使用量。 取得 boxed 實值型別，當轉換成參考型別或其中一個所實作的介面。 他們會收到 unboxed 時轉換回實值型別。 因為方塊是在堆積上配置，而且會回收，太多 boxing 和 unboxing 的物件可以有堆積、 記憶體回收行程，以及最終的應用程式效能的負面影響。  相反地，當參考型別會轉換，就會不發生任何這類 boxing。  
+ 下一項差異被與記憶體使用量。 取得 boxed 實值型別，當轉換成參考型別或其中一個所實作的介面。 他們會收到 unboxed 時轉換回實值型別。 因為方塊是在堆積上配置，而且會回收，太多 boxing 和 unboxing 的物件可以有堆積、 記憶體回收行程，以及最終的應用程式效能的負面影響。  相反地，當參考型別會轉換，就會不發生任何這類 boxing。 (如需詳細資訊，請參閱 < [Boxing 和 Unboxing](../../csharp/programming-guide/types/boxing-and-unboxing.md))。
   
  接下來，參考型別指派會複製參考，而值的型別指派會複製整個值。 因此，大型的參考類型的指派成本較低的大型值型別指派比。  
   

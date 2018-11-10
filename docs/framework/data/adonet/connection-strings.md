@@ -2,12 +2,12 @@
 title: ADO.NET 中的連接字串
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 4dab2656ae8f39976b21f949c9548a3f718dfafc
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 078fdab257115296f9ff00330265cb14ff8674c8
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347938"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50409453"
 ---
 # <a name="connection-strings-in-adonet"></a>ADO.NET 中的連接字串
 
@@ -19,9 +19,9 @@ ms.locfileid: "49347938"
   
     keyword1=value; keyword2=value;
   
-關鍵字不區分大小寫。 值，不過，可能會區分大小寫，根據資料來源。 關鍵字和值可能會包含[空白字元](https://en.wikipedia.org/wiki/Whitespace_character#Unicode)。 忽略關鍵字開頭和尾端空白且不具引號的值。
+關鍵字不區分大小寫。 值，不過，可能會區分大小寫，根據資料來源。 關鍵字和值可能會包含[空白字元](https://en.wikipedia.org/wiki/Whitespace_character#Unicode)。 前置和尾端空白字元是忽略關鍵字中並不具引號的值。
 
-如果值包含分號[Unicode 控制字元](https://en.wikipedia.org/wiki/Unicode_control_characters)，或是開頭或結尾的空白字元，它必須以單引號或雙引號括起來。 例如: 
+如果值包含分號[Unicode 控制字元](https://en.wikipedia.org/wiki/Unicode_control_characters)，或前置或尾端空格，它必須以單引號或雙引號括起來。 例如: 
 
     Keyword=" whitespace  ";
     Keyword='special;character';
