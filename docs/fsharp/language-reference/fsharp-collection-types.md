@@ -1,6 +1,6 @@
 ---
 title: F# 集合類型
-description: '了解 F # 集合類型，以及它們之間的差異從.NET Framework 中的集合型別。'
+description: 了解 F# 集合類型，以及它們之間的差異從.NET Framework 中的集合型別。
 ms.date: 05/16/2016
 ms.openlocfilehash: a3cfc3f06582c31a79dce43b583eca39f69ddf1e
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,13 +11,13 @@ ms.locfileid: "43864757"
 ---
 # <a name="f-collection-types"></a>F# 集合類型
 
-藉由檢閱本主題，您可以決定之 F # 集合類型最適合特定的需求。 這些集合類型與不同的集合型別，在.NET Framework 中，例如中`System.Collections.Generic`命名空間，因為 F # 集合類型從功能性程式設計的觀點而言，而不是物件導向的觀點設計。 更具體來說，只有陣列集合具有可變動的項目。 因此，當您修改集合，您會建立已修改的集合，而非修改原始集合的執行個體。
+藉由檢閱本主題，您可以決定之 F# 集合類型最適合特定的需求。 這些集合類型與不同的集合型別，在.NET Framework 中，例如中`System.Collections.Generic`命名空間，因為 F# 集合類型從功能性程式設計的觀點而言，而不是物件導向的觀點設計。 更具體來說，只有陣列集合具有可變動的項目。 因此，當您修改集合，您會建立已修改的集合，而非修改原始集合的執行個體。
 
 集合型別上也有不同的物件會儲存的資料結構類型。 例如雜湊表，連結的清單，以及陣列的資料結構有不同的效能特性和一組不同的可用作業。
 
 ## <a name="f-collection-types"></a>F# 集合類型
 
-下表顯示 F # 集合類型。
+下表顯示 F# 集合類型。
 
 |類型|描述|相關連結|
 |----|-----------|-------------|
@@ -25,11 +25,11 @@ ms.locfileid: "43864757"
 |[陣列](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)|固定大小、 以零為起始、 可變的連續資料的項目都是相同類型的集合。|[陣列](arrays.md)<br /><br />[Array 模組](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)<br /><br />[Array2D 模組](https://msdn.microsoft.com/library/ae1a9746-7817-4430-bcdb-a79c2411bbd3)<br /><br />[Array3D 模組](https://msdn.microsoft.com/library/c8355e2d-add8-48a4-8aa6-1c57ae74c560)|
 |[seq](https://msdn.microsoft.com/library/2f0c87c6-8a0d-4d33-92a6-10d1d037ce75)|一連串的邏輯都是一種類型的項目。 當您使用較大，已排序集合的資料，但不一定要使用的所有項目時，順序會特別有用。 個別序列項目會計算只做為必要項，因此順序可以執行優於清單，如果未使用的所有項目。 序列由`seq<'T>`類型，這是別名的`IEnumerable<T>`。 因此，任何.NET Framework 型別可實作`System.Collections.Generic.IEnumerable<'T>`可用來當做一系列。|[序列](sequences.md)<br /><br />[Seq 模組](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)|
 |[對應](https://msdn.microsoft.com/library/975316ea-55e3-4987-9994-90897ad45664)|項目不可變的字典。 項目會依索引鍵存取。|[對應模組](https://msdn.microsoft.com/library/bfe61ead-f16c-416f-af98-56dbcbe23e4f)|
-|[Set](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|不可變的集為基礎的二進位樹狀目錄，其中的比較是 F # 結構化比較函式，這可能會使用實作`System.IComparable`索引鍵值的介面。|[設定模組](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
+|[Set](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|不可變的集為基礎的二進位樹狀目錄，其中的比較是 F# 結構化比較函式，這可能會使用實作`System.IComparable`索引鍵值的介面。|[設定模組](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
 
 ### <a name="table-of-functions"></a>函數的資料表
 
-本節將比較適用於 F # 集合類型的函式。 指定的函式計算的複雜度，其中 N 是第一個集合的大小，而 M 是第二個集合的大小，如果有的話。 虛線 （-） 表示，此函式無法在集合上使用。 因為延遲評估順序，例如 Seq.distinct 函式可能會 o （1） 因為它會立即傳回，但是仍會影響效能的列舉時的順序。
+本節將比較適用於 F# 集合類型的函式。 指定的函式計算的複雜度，其中 N 是第一個集合的大小，而 M 是第二個集合的大小，如果有的話。 虛線 （-） 表示，此函式無法在集合上使用。 因為延遲評估順序，例如 Seq.distinct 函式可能會 o （1） 因為它會立即傳回，但是仍會影響效能的列舉時的順序。
 
 |功能|陣列|清單|序列|地圖|設定|描述|
 |--------|-----|----|--------|---|---|-----------|

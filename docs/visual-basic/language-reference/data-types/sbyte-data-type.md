@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-ms.openlocfilehash: 1b10379e626c8e53b2e1e6eddaa964f13f9e4b62
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c353aa8c5ac1d1912bc303f8f741ff0911cdf021
+ms.sourcegitcommit: 4bca8f7e172fd019ef437a4803bf5895c6bc4781
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196917"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "50980816"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte 資料類型 (Visual Basic)
 
@@ -58,7 +58,7 @@ Dim number As SByte = &H_F9
 
 - 停用整數範圍檢查，藉由使用編譯`/removeintchecks`編譯器參數。
 
-- 使用[型別字元](../../programming-guide\language-features\data-types/type-characters.md)明確地定義您想要指派給常值`SByte`。 下列範例會指派為負的常值`Short`值`SByte`。 請注意，對於負數的數字，高序位位元的數值常值的高序位文字必須設定。 在我們的範例中，這位元的常值 15`Short`值。
+- 使用[型別字元](../../programming-guide/language-features/data-types/type-characters.md)明確地定義您想要指派給常值`SByte`。 下列範例會指派為負的常值`Short`值`SByte`。 請注意，對於負數的數字，高序位位元的數值常值的高序位文字必須設定。 在我們的範例中，這位元的常值 15`Short`值。
 
    [!code-vb[SByteTypeChars](../../../../samples/snippets/visualbasic/language-reference/data-types/sbyte-assignment.vb#1)]
 

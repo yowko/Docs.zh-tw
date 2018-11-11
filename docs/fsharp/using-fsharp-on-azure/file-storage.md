@@ -1,5 +1,5 @@
 ---
-title: '開始使用 F # 的 Azure 檔案儲存體'
+title: 開始使用 F# 的 Azure 檔案儲存體
 description: 使用 Azure 檔案儲存體，在雲端中儲存檔案資料和從 Azure 虛擬機器 (VM) 掛接雲端檔案共用，或從內部部署應用程式執行 Windows。
 author: sylvanc
 ms.date: 09/20/2016
@@ -10,7 +10,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "33569339"
 ---
-# <a name="get-started-with-azure-file-storage-using-f"></a>開始使用 F # 的 Azure 檔案儲存體 #
+# <a name="get-started-with-azure-file-storage-using-f"></a>開始使用 F# 的 Azure 檔案儲存體 #
 
 Azure 檔案儲存體是一項服務，提供在雲端中使用標準的檔案共用[伺服器訊息區塊 (SMB) 通訊協定](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx)。 支援 SMB 2.1 和 SMB 3.0。 使用 Azure 檔案儲存體，您可以移轉舊版應用程式需要在 azure 檔案共用，快速且沒有成本高昂的重寫。 在 Azure 虛擬機器或雲端服務，或從內部部署用戶端執行的應用程式可以掛接雲端中的檔案共用，就像桌面應用程式掛接一般 SMB 共用。 任意數目的應用程式元件，然後掛接及同時存取檔案儲存體共用。
 
@@ -21,9 +21,9 @@ Azure 檔案儲存體是一項服務，提供在雲端中使用標準的檔案�
 若要使用本指南，您必須先[建立 Azure 儲存體帳戶](/azure/storage/storage-create-storage-account)。
 儲存體存取金鑰也需要此帳戶。
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>建立 F # 指令碼，並開始 F # Interactive
+## <a name="create-an-f-script-and-start-f-interactive"></a>建立 F# 指令碼，並開始 F# Interactive
 
-這篇文章中的範例可以用於 F # 應用程式或 F # 指令碼。 若要建立 F # 指令碼，建立的檔案`.fsx`擴充功能，例如`files.fsx`，F # 開發環境中。
+這篇文章中的範例可以用於 F# 應用程式或 F# 指令碼。 若要建立 F# 指令碼，建立的檔案`.fsx`擴充功能，例如`files.fsx`，F# 開發環境中。
 
 接下來，使用[套件管理員](package-management.md)這類[Paket](https://fsprojects.github.io/Paket/)或是[NuGet](https://www.nuget.org/)安裝`WindowsAzure.Storage`封裝和參考`WindowsAzure.Storage.dll`使用指令碼中`#r`指示詞。
 

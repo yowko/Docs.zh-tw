@@ -21,12 +21,12 @@ helpviewer_keywords:
 - I literal type character [Visual Basic]
 - Integer data type
 ms.assetid: a8f233b4-4be3-455c-861b-05af2fbb6c60
-ms.openlocfilehash: 989ce803849aa2dff9fc5c38a38bb356c937a945
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8c349104ed566e9a663afe01da3838f0167dc74e
+ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193860"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50982759"
 ---
 # <a name="integer-data-type-visual-basic"></a>Integer 資料類型 (Visual Basic)
 保存帶正負號的 32 位元 (4 位元組) 整數，值的範圍從 -2,147,483,648 到 2,147,483,647。  
@@ -59,7 +59,7 @@ Dim number As Integer = &H_C305_F860
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-也可以包含數值常值`I`[型別字元](../../programming-guide\language-features\data-types/type-characters.md)表示`Integer`資料型別，如下列範例所示。
+也可以包含數值常值`I`[型別字元](../../programming-guide/language-features/data-types/type-characters.md)表示`Integer`資料型別，如下列範例所示。
 
 ```vb
 Dim number = &H_035826I

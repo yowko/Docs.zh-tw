@@ -1,6 +1,6 @@
 ---
 title: 模組 (F#)
-description: '了解如何 F # 模組是 F # 程式碼，例如值、 類型和函式值，在 F # 程式中的群組。'
+description: 了解如何 F# 模組是 F# 程式碼，例如值、 類型和函式值，在 F# 程式中的群組。
 ms.date: 04/24/2017
 ms.openlocfilehash: fb0aa1d508d1141933b4fbdf10633f67ed078dc7
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "45528522"
 ---
 # <a name="modules"></a>模組
 
-在 F # 語言的內容*模組*是 F # 程式碼，例如值、 類型和函式值，在 F # 程式中的群組。 程式碼分組成不同模組有助於將相關程式碼整理到同一處，以及避免程式中發生名稱衝突。
+在 F# 語言的內容*模組*是 F# 程式碼，例如值、 類型和函式值，在 F# 程式中的群組。 程式碼分組成不同模組有助於將相關程式碼整理到同一處，以及避免程式中發生名稱衝突。
 
 ## <a name="syntax"></a>語法
 
@@ -26,7 +26,7 @@ module [accessibility-modifier] module-name =
 
 ## <a name="remarks"></a>備註
 
-F # 模組是 F # 程式碼建構，例如類型、 值、 函式值，以及程式碼中的群組`do`繫結。 它會實作為具有只有靜態成員的 common language runtime (CLR) 類別。 有兩種類型的模組宣告、 根據是否包含在模組中的整份檔案： 最上層模組宣告和本機模組宣告。 最上層模組宣告包含在模組中的整個檔案。 最上層模組宣告只可以顯示為檔案中的第一個宣告。
+F# 模組是 F# 程式碼建構，例如類型、 值、 函式值，以及程式碼中的群組`do`繫結。 它會實作為具有只有靜態成員的 common language runtime (CLR) 類別。 有兩種類型的模組宣告、 根據是否包含在模組中的整份檔案： 最上層模組宣告和本機模組宣告。 最上層模組宣告包含在模組中的整個檔案。 最上層模組宣告只可以顯示為檔案中的第一個宣告。
 
 在最上層模組的選擇性宣告的語法*限定命名空間*是巢狀命名空間名稱的順序，顯示包含的模組。 先前宣告沒有限定的命名空間。
 
@@ -44,7 +44,7 @@ F # 模組是 F # 程式碼建構，例如類型、 值、 函式值，以及程
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6603.fs)]
 
-如果您有多個檔案在專案中，或在單一編譯中，或如果您要建置程式庫，您必須包含命名空間宣告或在檔案頂端的模組宣告。 F # 編譯器只會以隱含方式判斷模組名稱在 專案 或 編譯的命令列只能有一個檔案，而且您要建立應用程式時。
+如果您有多個檔案在專案中，或在單一編譯中，或如果您要建置程式庫，您必須包含命名空間宣告或在檔案頂端的模組宣告。 F# 編譯器只會以隱含方式判斷模組名稱在 專案 或 編譯的命令列只能有一個檔案，而且您要建立應用程式時。
 
 *存取範圍修飾詞*可以是下列其中之一： `public`， `private`， `internal`。 如需詳細資訊，請參閱[存取控制](access-control.md)。 預設值是公用。
 
@@ -88,7 +88,7 @@ F # 模組是 F # 程式碼建構，例如類型、 值、 函式值，以及程
 
 ## <a name="recursive-modules"></a>遞迴模組
 
-F # 4.1 引進了模組可讓所有內含的程式碼是相互遞迴的概念。  這透過完成`module rec`。  使用`module rec`可以減輕不能夠撰寫相互參考的程式碼類型和模組之間的一些難題。  這個範例如下：
+F# 4.1 引進了模組可讓所有內含的程式碼是相互遞迴的概念。  這透過完成`module rec`。  使用`module rec`可以減輕不能夠撰寫相互參考的程式碼類型和模組之間的一些難題。  這個範例如下：
 
 ```fsharp
 module rec RecursiveModule =
@@ -128,12 +128,12 @@ module rec RecursiveModule =
             | Down -> b |> peelSides
 ```
 
-請注意，例外狀況`DontSqueezeTheBananaException`和類別`Banana`都會指向彼此。  此外，模組`BananaHelpers`和類別`Banana`也彼此參考。  這不是來表示 F # 中，如果您移除可能`rec`關鍵字，從`RecursiveModule`模組。
+請注意，例外狀況`DontSqueezeTheBananaException`和類別`Banana`都會指向彼此。  此外，模組`BananaHelpers`和類別`Banana`也彼此參考。  這不是來表示 F# 中，如果您移除可能`rec`關鍵字，從`RecursiveModule`模組。
 
-這項功能，也可以在[命名空間](namespaces.md)F # 4.1。
+這項功能，也可以在[命名空間](namespaces.md)F# 4.1。
 
 ## <a name="see-also"></a>另請參閱
 
 - [F# 語言參考](index.md)  
 - [命名空間](namespaces.md)  
-- [F # RFC FS-1009-允許透過檔案內的較大範圍的相互參考的類型和模組](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)  
+- [F# RFC FS-1009-允許透過檔案內的較大範圍的相互參考的類型和模組](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)  

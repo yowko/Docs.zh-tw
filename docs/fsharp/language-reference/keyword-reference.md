@@ -1,6 +1,6 @@
 ---
 title: 關鍵字參考 (F#)
-description: '尋找所有的 F # 語言關鍵字的相關資訊的連結。'
+description: 尋找所有的 F# 語言關鍵字的相關資訊的連結。
 ms.date: 05/16/2016
 ms.openlocfilehash: 0016f68b2872183a2b4dd865ce229b6a76250b78
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,11 +11,11 @@ ms.locfileid: "43856020"
 ---
 # <a name="keyword-reference"></a>關鍵字參考
 
-本主題包含所有 F # 語言關鍵字的相關資訊的連結。
+本主題包含所有 F# 語言關鍵字的相關資訊的連結。
 
-## <a name="f-keyword-table"></a>F # 關鍵字資料表
+## <a name="f-keyword-table"></a>F# 關鍵字資料表
 
-下表顯示所有 F # 關鍵字依字母順序，以及簡短說明和包含的詳細資訊的相關主題的連結。
+下表顯示所有 F# 關鍵字依字母順序，以及簡短說明和包含的詳細資訊的相關主題的連結。
 
 |關鍵字|連結|描述|
 |-------|----|-----------|
@@ -90,7 +90,7 @@ ms.locfileid: "43856020"
 |`yield`|[序列](sequences.md)|序列運算式中使用，以產生一連串的值。|
 |`yield!`|[計算運算式](computation-expressions.md)<br /><br />[非同步工作流程](asynchronous-workflows.md)|用於計算運算式，以將指定的計算運算式的結果附加至包含的計算運算式結果的集合。|
 
-下列語彙基元會保留在 F # 中，因為它們是 OCaml 語言的關鍵字：
+下列語彙基元會保留在 F# 中，因為它們是 OCaml 語言的關鍵字：
 
 * `asr`
 * `land`
@@ -103,7 +103,7 @@ ms.locfileid: "43856020"
 
 如果您使用`--mlcompatibility`做為識別項編譯器選項時，上述的關鍵字是可供使用。
 
-下列語彙基元會保留以供未來擴充 F # 語言的關鍵字：
+下列語彙基元會保留以供未來擴充 F# 語言的關鍵字：
 
 * `atomic`
 * `break`

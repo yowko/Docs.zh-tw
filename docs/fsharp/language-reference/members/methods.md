@@ -1,6 +1,6 @@
 ---
 title: 方法 (F#)
-description: '了解如何執行的 F # 方法用來公開 （expose） 和實作的功能和行為的物件與型別的型別相關聯的函式。'
+description: 了解如何執行的 F# 方法用來公開 （expose） 和實作的功能和行為的物件與型別的型別相關聯的函式。
 ms.date: 05/16/2016
 ms.openlocfilehash: 02d5a7d22d1ce79a06e15462637c373b33623f61
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -59,7 +59,7 @@ override self-identifier.method-name parameter-list [ : return-type ] =
 
 ## <a name="instance-methods"></a>執行個體方法
 
-執行個體方法會以宣告`member`關鍵字和*自我識別項*，後面接著句號 （.） 的方法名稱和參數。 在此情況下，如`let`繫結*參數清單*可以是一種模式。 一般而言，您括住括弧括住 tuple 的形式，也就是方式方法的參數會出現的方法 F # 建立其他的.NET Framework 語言時。 不過，局部調用的形式 （以空格分隔的參數） 也很常見，而且也支援其他模式。
+執行個體方法會以宣告`member`關鍵字和*自我識別項*，後面接著句號 （.） 的方法名稱和參數。 在此情況下，如`let`繫結*參數清單*可以是一種模式。 一般而言，您括住括弧括住 tuple 的形式，也就是方式方法的參數會出現的方法 F# 建立其他的.NET Framework 語言時。 不過，局部調用的形式 （以空格分隔的參數） 也很常見，而且也支援其他模式。
 
 下列範例說明如何定義和使用非抽象的執行個體方法。
 
@@ -97,11 +97,11 @@ override self-identifier.method-name parameter-list [ : return-type ] =
 
 ## <a name="overloaded-methods"></a>多載的方法
 
-多載的方法是指定的型別中具有相同名稱但有不同的引數的方法。 在 F # 中，而不是多載的方法通常用於選擇性引數。 不過，多載的方法允許在語言中，前提是引數是 tuple 形式，不局部調用形式。
+多載的方法是指定的型別中具有相同名稱但有不同的引數的方法。 在 F# 中，而不是多載的方法通常用於選擇性引數。 不過，多載的方法允許在語言中，前提是引數是 tuple 形式，不局部調用形式。
 
 ## <a name="optional-arguments"></a>選擇性引數
 
-從 F # 4.1 開始，您也可以使用預設參數值的選擇性引數方法中。  這是為了協助使用 C# 程式碼的互通性。  下列範例示範的語法：
+從 F# 4.1 開始，您也可以使用預設參數值的選擇性引數方法中。  這是為了協助使用 C# 程式碼的互通性。  下列範例示範的語法：
 
 ```fsharp
 // A class with a method M, which takes in an optional integer argument.

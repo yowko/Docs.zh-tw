@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: a0ec7b1a91dc701093131b8807b25e66d291a746
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6cacf3cc613ffb23c6656d5d5718064a91b777a6
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188313"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50744219"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>例外狀況和例外處理 (C# 程式設計手冊)
 C# 語言的例外狀況處理功能可協助您處理在程式執行時發生的任何未預期或例外狀況。 例外狀況處理會使用 `try`、`catch` 和 `finally` 關鍵字來嘗試可能失敗的動作，以便在您決定這樣做很合理時處理失敗，之後再清除資源。 例外狀況可以由 Common Language Runtime (CLR)、.NET Framework 或任何協力廠商程式庫，或者應用程式程式碼來產生。 例外狀況是使用 `throw` 關鍵字所建立。  
@@ -61,7 +61,8 @@ C# 語言的例外狀況處理功能可協助您處理在程式執行時發生�
 -   [如何：使用 finally 執行清除程式碼](../../../csharp/programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md)  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+如需詳細資訊，請參閱 [C# 語言規格](../../language-reference/language-specification/index.md)中的[例外狀況](~/_csharplang/spec/exceptions.md)。 語言規格是 C# 語法及用法的限定來源。
   
 ## <a name="see-also"></a>請參閱
 

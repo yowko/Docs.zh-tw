@@ -1,6 +1,6 @@
 ---
 title: 可為 Null 的運算子 (F#)
-description: '深入了解可為 null 的運算子可在 F # 程式設計語言中使用。'
+description: 深入了解可為 null 的運算子可在 F# 程式設計語言中使用。
 ms.date: 05/16/2016
 ms.openlocfilehash: 42df74a56831fb0a5d6df34db4321f5b228993c2
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -15,7 +15,7 @@ ms.locfileid: "44086279"
 
 ## <a name="table-of-nullable-operators"></a>資料表的可為 Null 的運算子
 
-下表列出可為 null 的 F # 語言支援的運算子。
+下表列出可為 null 的 F# 語言支援的運算子。
 
 |在左邊的 可為 null|在右邊的 可為 null|雙方可為 null|
 |---|---|---|
@@ -55,7 +55,7 @@ printfn "%f" (float nullableFloat)
 
 查詢運算子可為 null 的資料欄位，例如`sumByNullable`，也存在於查詢運算式中使用。 不可為 null 類型的查詢運算子不是可為 null 的型別與型別相容性，因此當您使用可為 null 的資料值時，您必須使用適當的查詢運算子可為 null 版本。 如需詳細資訊，請參閱 <<c0> [ 查詢運算式](../query-expressions.md)。
 
-下列範例會顯示在 F # 查詢運算式中使用可為 null 的運算子。 第一個查詢會示範如何撰寫查詢而不是可為 null 的運算子;第二個查詢會示範使用可為 null 的運算子的對等查詢。 完整的內容，包括如何將資料庫設定為使用此範例程式碼，請參閱[逐步解說： 存取 SQL 資料庫所使用的型別提供者](../../tutorials/type-providers/accessing-a-sql-database.md)。
+下列範例會顯示在 F# 查詢運算式中使用可為 null 的運算子。 第一個查詢會示範如何撰寫查詢而不是可為 null 的運算子;第二個查詢會示範使用可為 null 的運算子的對等查詢。 完整的內容，包括如何將資料庫設定為使用此範例程式碼，請參閱[逐步解說： 存取 SQL 資料庫所使用的型別提供者](../../tutorials/type-providers/accessing-a-sql-database.md)。
 
 ```fsharp
 open System

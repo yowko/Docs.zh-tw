@@ -1,6 +1,6 @@
 ---
 title: 內嵌函式 (F#)
-description: '了解如何使用 F # 內嵌函式會直接整合至呼叫端程式碼。'
+description: 了解如何使用 F# 內嵌函式會直接整合至呼叫端程式碼。
 ms.date: 05/16/2016
 ms.openlocfilehash: 47fca0fe34630792aeb0908b0cee02a927e2567d
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

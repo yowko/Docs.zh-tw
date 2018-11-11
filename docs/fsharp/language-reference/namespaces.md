@@ -1,6 +1,6 @@
 ---
 title: 命名空間 (F#)
-description: '了解 F # 命名空間如何讓您將組織成相關功能的程式碼，方法是讓您將名稱附加到的程式項目群組。'
+description: 了解 F# 命名空間如何讓您將組織成相關功能的程式碼，方法是讓您將名稱附加到的程式項目群組。
 ms.date: 04/24/2017
 ms.openlocfilehash: 769a1241f76ac32d3a6a80bd637078493119bb3c
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -74,7 +74,7 @@ Module2 5 6
 
 ## <a name="recursive-namespaces"></a>遞迴命名空間
 
-F # 4.1 導入了可讓要相互遞迴所有內含的程式碼的命名空間的概念。  這透過完成`namespace rec`。  使用`namespace rec`可以減輕不能夠撰寫相互參考的程式碼類型和模組之間的一些難題。  這個範例如下：
+F# 4.1 導入了可讓要相互遞迴所有內含的程式碼的命名空間的概念。  這透過完成`namespace rec`。  使用`namespace rec`可以減輕不能夠撰寫相互參考的程式碼類型和模組之間的一些難題。  這個範例如下：
 
 ```fsharp
 namespace rec MutualReferences
@@ -115,12 +115,12 @@ module BananaHelpers =
         | Down -> b |> peelSides
 ```
 
-請注意，例外狀況`DontSqueezeTheBananaException`和類別`Banana`都會指向彼此。  此外，模組`BananaHelpers`和類別`Banana`也彼此參考。  這不是來表示 F # 中，如果您移除可能`rec`關鍵字，從`MutualReferences`命名空間。
+請注意，例外狀況`DontSqueezeTheBananaException`和類別`Banana`都會指向彼此。  此外，模組`BananaHelpers`和類別`Banana`也彼此參考。  這不是來表示 F# 中，如果您移除可能`rec`關鍵字，從`MutualReferences`命名空間。
 
-這項功能也是適用於最上層[模組](modules.md)中 F # 4.1 或更高版本。
+這項功能也是適用於最上層[模組](modules.md)中 F# 4.1 或更高版本。
 
 ## <a name="see-also"></a>另請參閱
 
 - [F# 語言參考](index.md)
 - [模組](modules.md)
-- [F # RFC FS-1009-允許透過檔案內的較大範圍的相互參考的類型和模組](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)
+- [F# RFC FS-1009-允許透過檔案內的較大範圍的相互參考的類型和模組](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)

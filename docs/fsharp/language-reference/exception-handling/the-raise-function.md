@@ -1,6 +1,6 @@
 ---
 title: 例外狀況：raise 函式 (F#)
-description: "了解 F # 'raise' 函式用來指示已發生錯誤或例外狀況。"
+description: 了解 F# 'raise' 函式用來指示已發生錯誤或例外狀況。
 ms.date: 05/16/2016
 ms.openlocfilehash: 537d274659d29404380bfdd56310ac267372bb98
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
