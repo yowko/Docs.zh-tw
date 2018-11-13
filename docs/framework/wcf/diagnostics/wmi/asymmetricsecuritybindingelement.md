@@ -3,16 +3,16 @@ title: AsymmetricSecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: 7bd3b6be-8f77-4927-93ae-6fa371893cca
 ms.openlocfilehash: 076313548828f1fbce9c68b48c0fa7db9cca095f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185114"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50982786"
 ---
-# <a name="asymmetricsecuritybindingelement"></a><span data-ttu-id="b2369-102">AsymmetricSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="b2369-102">AsymmetricSecurityBindingElement</span></span>
-<span data-ttu-id="b2369-103">AsymmetricSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="b2369-103">AsymmetricSecurityBindingElement</span></span>  
+# <a name="asymmetricsecuritybindingelement"></a><span data-ttu-id="8ede9-102">AsymmetricSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="8ede9-102">AsymmetricSecurityBindingElement</span></span>
+<span data-ttu-id="8ede9-103">AsymmetricSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="8ede9-103">AsymmetricSecurityBindingElement</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b2369-104">語法</span><span class="sxs-lookup"><span data-stu-id="b2369-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8ede9-104">語法</span><span class="sxs-lookup"><span data-stu-id="8ede9-104">Syntax</span></span>  
   
 ```csharp
 class AsymmetricSecurityBindingElement : SecurityBindingElement  
@@ -22,31 +22,31 @@ class AsymmetricSecurityBindingElement : SecurityBindingElement
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="b2369-105">方法</span><span class="sxs-lookup"><span data-stu-id="b2369-105">Methods</span></span>  
- <span data-ttu-id="b2369-106">AsymmetricSecurityBindingElement 類別不會定義任何方法。</span><span class="sxs-lookup"><span data-stu-id="b2369-106">The AsymmetricSecurityBindingElement class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="8ede9-105">方法</span><span class="sxs-lookup"><span data-stu-id="8ede9-105">Methods</span></span>  
+ <span data-ttu-id="8ede9-106">AsymmetricSecurityBindingElement 類別不會定義任何方法。</span><span class="sxs-lookup"><span data-stu-id="8ede9-106">The AsymmetricSecurityBindingElement class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="b2369-107">屬性</span><span class="sxs-lookup"><span data-stu-id="b2369-107">Properties</span></span>  
- <span data-ttu-id="b2369-108">AsymmetricSecurityBindingElement 類別具有下列屬性：</span><span class="sxs-lookup"><span data-stu-id="b2369-108">The AsymmetricSecurityBindingElement class has the following properties:</span></span>  
+## <a name="properties"></a><span data-ttu-id="8ede9-107">屬性</span><span class="sxs-lookup"><span data-stu-id="8ede9-107">Properties</span></span>  
+ <span data-ttu-id="8ede9-108">AsymmetricSecurityBindingElement 類別具有下列屬性：</span><span class="sxs-lookup"><span data-stu-id="8ede9-108">The AsymmetricSecurityBindingElement class has the following properties:</span></span>  
   
-### <a name="messageprotectionorder"></a><span data-ttu-id="b2369-109">MessageProtectionOrder</span><span class="sxs-lookup"><span data-stu-id="b2369-109">MessageProtectionOrder</span></span>  
- <span data-ttu-id="b2369-110">資料型別：字串</span><span class="sxs-lookup"><span data-stu-id="b2369-110">Data type: string</span></span>  
+### <a name="messageprotectionorder"></a><span data-ttu-id="8ede9-109">MessageProtectionOrder</span><span class="sxs-lookup"><span data-stu-id="8ede9-109">MessageProtectionOrder</span></span>  
+ <span data-ttu-id="8ede9-110">資料型別：字串</span><span class="sxs-lookup"><span data-stu-id="8ede9-110">Data type: string</span></span>  
   
- <span data-ttu-id="b2369-111">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="b2369-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="8ede9-111">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="8ede9-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="b2369-112">這個繫結的訊息加密和簽章順序。</span><span class="sxs-lookup"><span data-stu-id="b2369-112">The order of message encryption and signing for this binding.</span></span>  
+ <span data-ttu-id="8ede9-112">這個繫結的訊息加密和簽章順序。</span><span class="sxs-lookup"><span data-stu-id="8ede9-112">The order of message encryption and signing for this binding.</span></span>  
   
-### <a name="requiresignatureconfirmation"></a><span data-ttu-id="b2369-113">RequireSignatureConfirmation</span><span class="sxs-lookup"><span data-stu-id="b2369-113">RequireSignatureConfirmation</span></span>  
- <span data-ttu-id="b2369-114">資料型別：布林值</span><span class="sxs-lookup"><span data-stu-id="b2369-114">Data type: boolean</span></span>  
+### <a name="requiresignatureconfirmation"></a><span data-ttu-id="8ede9-113">RequireSignatureConfirmation</span><span class="sxs-lookup"><span data-stu-id="8ede9-113">RequireSignatureConfirmation</span></span>  
+ <span data-ttu-id="8ede9-114">資料型別：布林值</span><span class="sxs-lookup"><span data-stu-id="8ede9-114">Data type: boolean</span></span>  
   
- <span data-ttu-id="b2369-115">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="b2369-115">Access type: Read-only</span></span>  
+ <span data-ttu-id="8ede9-115">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="8ede9-115">Access type: Read-only</span></span>  
   
- <span data-ttu-id="b2369-116">繫結是否需要簽章確認。</span><span class="sxs-lookup"><span data-stu-id="b2369-116">Whether the binding requires signature confirmation.</span></span>  
+ <span data-ttu-id="8ede9-116">繫結是否需要簽章確認。</span><span class="sxs-lookup"><span data-stu-id="8ede9-116">Whether the binding requires signature confirmation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b2369-117">需求</span><span class="sxs-lookup"><span data-stu-id="b2369-117">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8ede9-117">需求</span><span class="sxs-lookup"><span data-stu-id="8ede9-117">Requirements</span></span>  
   
-|<span data-ttu-id="b2369-118">MOF</span><span class="sxs-lookup"><span data-stu-id="b2369-118">MOF</span></span>|<span data-ttu-id="b2369-119">於 Servicemodel.mof 中宣告。</span><span class="sxs-lookup"><span data-stu-id="b2369-119">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="8ede9-118">MOF</span><span class="sxs-lookup"><span data-stu-id="8ede9-118">MOF</span></span>|<span data-ttu-id="8ede9-119">於 Servicemodel.mof 中宣告。</span><span class="sxs-lookup"><span data-stu-id="8ede9-119">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="b2369-120">命名空間</span><span class="sxs-lookup"><span data-stu-id="b2369-120">Namespace</span></span>|<span data-ttu-id="b2369-121">於 root\ServiceModel 中定義</span><span class="sxs-lookup"><span data-stu-id="b2369-121">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="8ede9-120">命名空間</span><span class="sxs-lookup"><span data-stu-id="8ede9-120">Namespace</span></span>|<span data-ttu-id="8ede9-121">於 root\ServiceModel 中定義</span><span class="sxs-lookup"><span data-stu-id="8ede9-121">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="b2369-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b2369-122">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="8ede9-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8ede9-122">See Also</span></span>  
  <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>

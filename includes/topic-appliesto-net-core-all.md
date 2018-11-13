@@ -1,1 +1,1 @@
-<span data-ttu-id="a0ead-101">**本主題適用於：✓** .NET Core SDK 1.x **✓** .NET Core SDK 2.0</span><span class="sxs-lookup"><span data-stu-id="a0ead-101">**This topic applies to: ✓** .NET Core SDK 1.x **✓** .NET Core SDK 2.0</span></span>
+<span data-ttu-id="2b732-101">**此主題適用於：✓** .NET Core SDK 1.x **✓** .NET Core SDK 2.0</span><span class="sxs-lookup"><span data-stu-id="2b732-101">**This topic applies to: ✓** .NET Core SDK 1.x **✓** .NET Core SDK 2.x</span></span>

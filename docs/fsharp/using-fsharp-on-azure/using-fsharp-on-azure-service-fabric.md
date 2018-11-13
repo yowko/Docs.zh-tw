@@ -7,7 +7,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "25726415"
 ---
-# <a name="using-f-on-azure-service-fabric"></a><span data-ttu-id="4af31-101">在 Azure Service Fabric 上使用 F#</span><span class="sxs-lookup"><span data-stu-id="4af31-101">Using F# on Azure Service Fabric</span></span>
+# <a name="using-f-on-azure-service-fabric"></a><span data-ttu-id="6fb3c-101">在 Azure Service Fabric 上使用 F#</span><span class="sxs-lookup"><span data-stu-id="6fb3c-101">Using F# on Azure Service Fabric</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="4af31-102">尚在進行中。</span><span class="sxs-lookup"><span data-stu-id="4af31-102">This is still in progress.</span></span>
+> <span data-ttu-id="6fb3c-102">尚在進行中。</span><span class="sxs-lookup"><span data-stu-id="6fb3c-102">This is still in progress.</span></span>
