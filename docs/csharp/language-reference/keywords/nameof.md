@@ -5,12 +5,12 @@ f1_keywords:
 - nameof_CSharpKeyword
 - nameof
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
-ms.openlocfilehash: 726abfd903f37826a247e6e98c0d11f230447550
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 01c87f8d63264aa342b04b8d3fcfc7e6f38db44b
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035249"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50744345"
 ---
 # <a name="nameof-c-reference"></a>nameof (C# 參考)
 
@@ -131,8 +131,9 @@ class C {
  您無法取得簽章資訊，例如 "`Method1 (str, str)`"。  若要執行這項操作，其中一個方法是使用運算式 `Expression e = () => A.B.Method1("s1", "s2")`，然後從產生的運算式樹狀架構中提取 MemberInfo。  
   
 ## <a name="language-specifications"></a>語言規格  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
+
+如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)中的 [Nameof 運算式](~/_csharplang/spec/expressions.md#nameof-expressions)。 語言規格是 C# 語法及用法的限定來源。
+ 
 ## <a name="see-also"></a>請參閱
 
 - [C# 參考](../../../csharp/language-reference/index.md)  

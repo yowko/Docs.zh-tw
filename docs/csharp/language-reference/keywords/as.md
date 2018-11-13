@@ -8,11 +8,11 @@ helpviewer_keywords:
 - type conversion [C#], as keyword
 - as keyword [C#]
 ms.assetid: a9be126b-cbf4-4990-a70d-d0e1983cad0e
-ms.openlocfilehash: ce3163f7d957df96a5c0304adc0b3083d8e20104
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: d6c9d44ff22881e6e5e7a542e1df41bbf77b23d8
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "49122708"
 ---
 # <a name="as-c-reference"></a>as (C# 參考)
@@ -42,9 +42,10 @@ expression is type ? (type)expression : (type)null
 [!code-csharp[csrefKeywordsOperator#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#2)]
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>另請參閱  
+
+如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的 [as 運算子](~/_csharplang/spec/expressions.md#the-as-operator)。 語言規格是 C# 語法及用法的限定來源。
+ 
+## <a name="see-also"></a>請參閱  
 - [C# 參考](../../../csharp/language-reference/index.md)  
 - [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
 - [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  

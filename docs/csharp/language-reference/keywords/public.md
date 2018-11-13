@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - public keyword [C#]
 ms.assetid: 0ae45d16-a551-4b74-9845-57208de1328e
-ms.openlocfilehash: 84a3bc49b6eea047d518edc01dab7f2301854b6a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b2e09bdb16d6128d69a3eb33cf2cffd4cba60376
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "43518182"
 ---
 # <a name="public-c-reference"></a>public (C# 參考)
@@ -37,9 +37,9 @@ class SampleClass
 
 'PointTest.y' 的保護層級導致無法對其進行存取。
 
-## <a name="c-language-specification"></a>C# 語言規格
+## <a name="c-language-specification"></a>C# 語言規格  
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的[已宣告存取範圍](~/_csharplang/spec/basic-concepts.md#declared-accessibility)。 語言規格是 C# 語法及用法的限定來源。
 
 ## <a name="see-also"></a>另請參閱
 

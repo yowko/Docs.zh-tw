@@ -6,11 +6,11 @@ helpviewer_keywords:
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
 ms.openlocfilehash: 134a219acd02caa2b16c5a6e8716c3245579ecca
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50049551"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743998"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>固定大小緩衝區 (C# 程式設計手冊)
 
@@ -22,13 +22,13 @@ private fixed char name[30];
 
 ## <a name="remarks"></a>備註
 
-在安全的程式碼中，包含陣列的 C# 結構不包含陣列元素。 相反地，該結構會包含元素的參考。 您可以將固定大小的陣列嵌入用於[不安全](../../language-reference/keywords/unsafe.md)程式碼區塊的 [struct](../../language-reference/keywords/struct.md)。
+在安全的程式碼中，包含陣列的 C# 結構不包含陣列項目。 相反地，該結構會包含元素的參考。 您可以將固定大小的陣列嵌入用於[不安全](../../language-reference/keywords/unsafe.md)程式碼區塊的 [struct](../../language-reference/keywords/struct.md)。
 
 下列 `struct` 的大小為 8 個位元組。 `pathName` 陣列是參考：
 
 [!code-csharp[Struct with embedded array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#6)]
 
-`struct` 可以在不安全的程式碼中包含內嵌陣列。 在下列範例中，`fixedBuffer` 陣列具有固定大小。 您可以使用 `fixed` 陳述式來建立第一個元素的指標。 透過這個指標即可存取陣列的元素。 `fixed` 陳述式會將 `fixedBuffer` 執行個體欄位釘選到記憶體中的特定位置。
+`struct` 可以在不安全的程式碼中包含內嵌陣列。 在下列範例中，`fixedBuffer` 陣列具有固定大小。 您可以使用 `fixed` 陳述式來建立第一個項目的指標。 透過這個指標即可存取陣列的項目。 `fixed` 陳述式會將 `fixedBuffer` 執行個體欄位釘選到記憶體中的特定位置。
 
 [!code-csharp[Struct with embedded inline array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#7)]
 
@@ -48,7 +48,7 @@ private fixed char name[30];
 - 陣列的宣告應包含計數，例如 `char id[8]`。 您不能使用 `char id[]`。
 - 不安全的緩衝區只能是不安全內容中結構的執行個體欄位。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)  
 - [Unsafe 程式碼和指標](index.md)  

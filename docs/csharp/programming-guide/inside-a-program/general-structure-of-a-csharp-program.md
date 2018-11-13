@@ -4,11 +4,11 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, program structure
 ms.assetid: 5ae964a5-0ef0-40fe-88fb-6d1793371d0d
-ms.openlocfilehash: d3920fff26eccdd509c72143ff8553fb0c501bbc
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 3e2718d932506f261ea32e7289a3191bca7c22e8
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "45698152"
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>C# 程式的一般結構 (C# 程式設計手冊)
@@ -30,11 +30,12 @@ C# 程式可以包含一或多個檔案。 每個檔案可以包含零個或多�
 -   [委派](../../../csharp/programming-guide/delegates/index.md)  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+如需詳細資訊，請參閱 [C# 語言規格](../../language-reference/language-specification/index.md)中的[基本概念](~/_csharplang/spec/basic-concepts.md)。 語言規格是 C# 語法及用法的限定來源。
   
 ## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
 - [C# 程式內部](../../../csharp/programming-guide/inside-a-program/index.md)  
 - [C# 參考](../../../csharp/language-reference/index.md)  
-- [\<paveover>C# 範例應用程式](https://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)
+- [C# 應用程式範例](https://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)

@@ -1,6 +1,6 @@
 ---
 title: '|| 運算子 (C# 參考)'
-ms.date: 07/20/2015
+ms.date: 11/06/2018
 f1_keywords:
 - '||_CSharpKeyword'
 helpviewer_keywords:
@@ -8,40 +8,34 @@ helpviewer_keywords:
 - conditional-OR operator (||) [C#]
 - '|| operator [C#]'
 ms.assetid: 7d442d8e-400d-421f-b4d2-034bf82bcbdc
-ms.openlocfilehash: 58e5fd72a3748e7af0894093fc461c4efb543608
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: a391078372e4ec0a3882bed4515733adedffb547
+ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "42925536"
 ---
 # <a name="-operator-c-reference"></a>|| 運算子 (C# 參考)
-條件式 OR 運算子 (`||`) 會執行其 `bool` 運算元的邏輯 OR。 如果第一個運算元評估值為 `true`，就不會評估第二個運算元。 如果第一個運算元評估值為 `false`，第二個運算子會判斷整個 OR 運算式是評估為`true` 或 `false`。  
-  
-## <a name="remarks"></a>備註  
- 作業  
-  
-```csharp  
-x || y  
-```  
-  
- 對應至作業  
-  
-```csharp  
-x | y  
-```  
-  
- 差異在於，如果 `x` 是 `true`，則不會評估 `y`，因為不論 `y` 的值為何，OR 運算都是 `true`。 這個概念稱為「最少運算」求值。  
-  
- 無法多載條件式 OR 運算子，但規則邏輯運算子與 [true](../../../csharp/language-reference/keywords/true.md) 和 [false](../../../csharp/language-reference/keywords/false.md) 運算子的多載具有某些限制，也會視為條件式邏輯運算子的多載。  
-  
-## <a name="example"></a>範例  
- 在下列範例中，使用 `||` 的運算式只會評估第一個運算元。 使用 `|` 的運算式則評估這兩個運算元。 在第二個範例中，如果評估這兩個運算元，就會發生執行階段例外狀況。  
-  
- [!code-csharp[csRefOperators#52](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-or-operator_1.cs)]  
-  
-## <a name="see-also"></a>請參閱
 
-- [C# 參考](../../../csharp/language-reference/index.md)  
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [C# 運算子](../../../csharp/language-reference/operators/index.md)
+條件式邏輯 OR 運算子 `||`，也稱為「捷徑運算」邏輯 OR 運算子，會計算其 [bool](../keywords/bool.md) 運算元的邏輯 OR。 若 `x` 或 `y` 其中一項的值為 `true`，`x || y` 的結果會是 `true`。 否則，結果為 `false`。 若第一個運算元的值為 `true`，就不會求第二個運算元的值，而運算結果會是 `true`。 下列範例示範了該行為：
+
+[!code-csharp-interactive[conditional logical OR](~/samples/snippets/csharp/language-reference/operators/ConditionalLogicalOperatorsExamples.cs#Or)]
+
+[邏輯 OR 運算子](or-operator.md) `|` 也會計算其 `bool` 運算元的邏輯 OR，但一律會求兩個運算元的值。
+
+## <a name="operator-overloadability"></a>運算子是否可多載
+
+使用者定義型別無法多載條件式邏輯 OR 運算子。 不過，若使用者定義型別以某種方式多載[邏輯 OR](or-operator.md)、[true](../keywords/true-operator.md) 和 [false](../keywords/false-operator.md) 運算子，就可以為該類型運算元求 `||` 運算的值。 如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的[使用者定義條件式邏輯運算子](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators)一節。
+
+## <a name="c-language-specification"></a>C# 語言規格
+
+如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的[條件式邏輯運算子](~/_csharplang/spec/expressions.md#conditional-logical-operators)一節。
+
+## <a name="see-also"></a>另請參閱
+
+- [C# 參考](../index.md)
+- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 運算子](index.md)
+- [&& 運算子](conditional-and-operator.md)
+- [! 運算子](logical-negation-operator.md)
+- [| 運算子](or-operator.md)

@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: ff483c9b555fdf394d11626536c28e7e07516d05
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: ae141b3d60a9968ee3fe59474e32a174bdb77e3b
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404628"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50757448"
 ---
 # <a name="common-web-application-architectures"></a>一般 Web 應用程式架構
 
@@ -97,7 +97,7 @@ ms.locfileid: "37404628"
 
 ## <a name="clean-architecture"></a>Clean Architecture
 
-遵循相依性反轉準則以及領域驅動設計 (DDD) 準則的應用程式通常會達到類似的架構。 這個架構多年來有了許多名稱。 最早的其中一個名稱是 Hexagonal Architecture，後來則是 Ports-and-Adapters。 最近，它被引用為 [Onion Architecture](http://jeffreypalermo.com/blog/the-onion-architecture-part-1/) 或 [Clean Architecture](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html)。 本電子書使用第二個名稱 Clean Architecture 作為此架構的名稱。
+遵循相依性反轉準則以及領域驅動設計 (DDD) 準則的應用程式通常會達到類似的架構。 這個架構多年來有了許多名稱。 最早的其中一個名稱是 Hexagonal Architecture，後來則是 Ports-and-Adapters。 最近，它被引用為 [Onion Architecture](https://jeffreypalermo.com/blog/the-onion-architecture-part-1/) 或 [Clean Architecture](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html)。 本電子書使用第二個名稱 Clean Architecture 作為此架構的名稱。
 
 > [!NOTE]
 > Clean Architecture 一詞可以套用至使用 DDD 原則建置的應用程式，以及不是使用 DDD 原則建置的應用程式。 在前者的案例，這種組合可能會稱為 Clean DDD Architecture。
@@ -307,7 +307,7 @@ ENTRYPOINT ["dotnet", "Microsoft.eShopWeb.RazorPages.dll"]
 > - **Clean Architecture**  
 >   <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
 > - **Onion Architecture**  
->   <http://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
+>   <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
 > - **存放庫模式**  
 >   <https://deviq.com/repository-pattern/>
 > - **Clean Architecture 解決方案範例**  

@@ -7,22 +7,22 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f646927d4ddf88ae117f6cacafc2e42df4e3abee
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 844e9e53c752be0c993255fc356ade1723109b39
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195680"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50744583"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework 系統管理員部署手冊
-這篇逐步解說文章將描述系統管理員如何使用 Microsoft System Center Configuration Manager，在整個網路上部署 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其系統相依性。 本文章假設所有目標用戶端電腦都符合 .NET Framework 的最低需求。 如需安裝 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的軟體和硬體需求清單，請參閱[系統需求](../../../docs/framework/get-started/system-requirements.md)。  
+這篇逐步解說文章將描述系統管理員如何使用 Microsoft System Center Configuration Manager，在整個網路上部署 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其系統相依性。 此文章假設所有目標用戶端電腦都符合 .NET Framework 的最低需求。 如需安裝 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的軟體與硬體需求清單，請參閱[系統需求](../../../docs/framework/get-started/system-requirements.md)。  
   
 > [!NOTE]
 >  本文中提到的軟體包括 (但不限於) [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、System Center Configuration Manager 和 Active Directory，這些軟體皆受授權條款和條件之限制。 這些指示假定軟體之適當使用人均已檢視並接受該等授權條款和條件。 這些指示不可撤回任何該等授權合約之規定條件。  
 >   
 >  如需 .NET Framework 支援的資訊，請參閱 Microsoft 技術支援網站上的 [Microsoft .NET Framework 支援週期原則](https://go.microsoft.com/fwlink/?LinkId=196607)。  
   
- 此主題包括下列章節：  
+ 此主題包括以下各節：  
   
  [部署程序](#the_deployment_process)  
  [部署 .NET Framework](#deploying_in_a_test_environment)  
@@ -86,9 +86,9 @@ ms.locfileid: "50195680"
   
 <a name="creating_a_package"></a>   
 ### <a name="create-a-package-and-program-for-the-net-framework-redistributable-package"></a>建立 .NET Framework 可轉散發套件的套件和程式  
- 下列步驟會手動建立 .NET Framework 可轉散發套件的套件。 套件包含指定的 .NET Framework 安裝參數，以及要從中將套件散發至目標電腦的來源位置。  
+ 下列步驟會手動建立 .NET Framework 可轉散發套件的封裝。 套件包含指定的 .NET Framework 安裝參數，以及要從中將套件散發至目標電腦的來源位置。  
   
- 若要建立套件：  
+ 若要建立封裝：  
   
 1.  在 Configuration Manager 主控台中，選擇 [軟體程式庫]。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "50195680"
 |------------|-----------------|  
 |**/q**|設定無訊息模式。 不需要使用者輸入，也不會顯示輸出。|  
 |**/norestart**|避免安裝程式自動重新開機。 如果您使用這個選項，Configuration Manager 就必須處理電腦重新啟動。|  
-|**/chainingpackage** *PackageName*|指定執行鏈結之套件的名稱。 已註冊 [Microsoft 客戶經驗改進計劃](https://go.microsoft.com/fwlink/p/?LinkId=248244)的人將會收到此資訊與其他安裝工作階段資訊的報告。 如果套件名稱包含空格，分隔符號請使用雙引號，例如：**/chainingpackage "Chaining Product"**。|  
+|**/chainingpackage** *PackageName*|指定執行鏈結之封裝的名稱。 已註冊 [Microsoft 客戶經驗改進計劃](https://go.microsoft.com/fwlink/p/?LinkId=248244)的人將會收到這項資訊與其他安裝工作階段資訊的報告。 如果套件名稱包含空格，分隔符號請使用雙引號，例如：**/chainingpackage "Chaining Product"**。|  
   
  這些步驟會建立名為 .NET Framework 4.5 的套件。 程式會部署 .NET Framework 4.5 的無訊息安裝。 在無訊息安裝中，使用者不會與安裝程序互動，而鏈結應用程式必須擷取傳回碼並處理重新開機，請參閱[取得安裝套件的進度資訊](https://go.microsoft.com/fwlink/?LinkId=179606)。  
  
@@ -176,8 +176,8 @@ ms.locfileid: "50195680"
   
 9. 在精靈的 [使用者經驗] 頁面上，使用預設值並選擇 [下一步]。  
   
-    > [!WARNING]
-    >  您的實際執行環境可能有一些原則，而且這些原則需要不同的部署排程選項。 如需這些選項的詳細資訊，請參閱 TechNet Library 中的[通告名稱屬性：排程索引標籤](https://technet.microsoft.com/library/bb694016.aspx)。  
+> [!WARNING]
+> 您的實際執行環境可能有一些原則，而且這些原則需要不同的部署排程選項。 如需這些選項的詳細資訊，請參閱[公告名稱屬性：排程索引標籤](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694016%28v=technet.10%29) \(英文\)。
   
 10. 在精靈的 [發佈點] 頁面上，使用預設值並選擇 [下一步]。  
   
@@ -207,7 +207,7 @@ ms.locfileid: "50195680"
   
 -   [System Center 2012 Configuration Manager 的網站管理](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg681983%28v=technet.10%29)  
   
--   [Configuration Manager 單一網站規劃與部署](https://technet.microsoft.com/library/bb680961.aspx)  
+-   [Configuration Manager 單一網站規劃與部署](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb680961%28v=technet.10%29)  
   
  **適用於 Windows 電腦的 System Center 2012 Configuration Manager 用戶端：**  
   
@@ -258,6 +258,6 @@ ms.locfileid: "50195680"
   
 -   [Windows Update 代理程式結果碼](/security-updates/WindowsUpdateServices/18127055)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 - [開發人員部署手冊](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
 - [系統需求](../../../docs/framework/get-started/system-requirements.md)

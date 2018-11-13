@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - typeof keyword [C#]
 ms.assetid: 0c08d880-515e-46bb-8cd2-48b8dd62c08d
-ms.openlocfilehash: 2493e78fd0782eebee17afd979e1c429339d0a3f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: aff7462f0df938a8e96cca33155489bee4891da0
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529204"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50744440"
 ---
 # <a name="typeof-c-reference"></a>typeof (C# 參考)
 用來取得類型的 `System.Type` 物件。 `typeof` 運算式有下列形式：  
@@ -44,8 +44,9 @@ System.Type type = i.GetType();
  [!code-csharp[csrefKeywordsOperator#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/typeof_2.cs)]  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
+
+如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的 [typeof 運算子](~/_csharplang/spec/expressions.md#the-typeof-operator)。 語言規格是 C# 語法及用法的限定來源。
+ 
 ## <a name="see-also"></a>請參閱
 
 - <xref:System.Type?displayProperty=nameWithType>  

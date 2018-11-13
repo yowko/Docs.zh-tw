@@ -1,44 +1,53 @@
 ---
 title: '&amp;= 運算子 (C# 參考)'
-ms.date: 07/20/2015
+ms.date: 10/29/2018
 f1_keywords:
 - '&=_CSharpKeyword'
 helpviewer_keywords:
 - AND assignment operator (&=) [C#]
 - '&= operator [C#]'
 ms.assetid: e8d58f3f-72dd-4b5a-b995-452fcce7e6bb
-ms.openlocfilehash: f3a6fe20ca89a90b5a64118d73fb39e9a364d1e9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8ce27c999cf21a9059ba23ee3c86b8fa024c7341
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506397"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50980605"
 ---
 # <a name="amp-operator-c-reference"></a>&amp;= 運算子 (C# 參考)
-AND 指派運算子。  
-  
-## <a name="remarks"></a>備註  
- 使用 `&=` 指派運算子的運算式，例如  
-  
-```csharp  
-x &= y  
-```  
-  
- 相當於  
-  
-```csharp  
-x = x & y  
-```  
-  
- 但只會評估 `x` 一次。 [& 運算子](../../../csharp/language-reference/operators/and-operator.md)在整數運算元上執行位元邏輯 AND 運算，在 `bool` 運算元上執行邏輯 AND。  
-  
- 無法直接多載 `&=` 運算子，但使用者定義型別可以多載二進位 [& 運算子](../../../csharp/language-reference/operators/and-operator.md) (請參閱 [operator](../../../csharp/language-reference/keywords/operator.md))。  
-  
-## <a name="example"></a>範例  
- [!code-csharp[csRefOperators#34](../../../csharp/language-reference/operators/codesnippet/CSharp/and-assignment-operator_1.cs)]  
-  
-## <a name="see-also"></a>請參閱
 
-- [C# 參考](../../../csharp/language-reference/index.md)  
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [C# 運算子](../../../csharp/language-reference/operators/index.md)
+AND 指派運算子。
+
+使用 `&=` 運算子的運算式，例如
+
+```csharp
+x &= y
+```
+
+相當於
+
+```csharp
+x = x & y
+```
+
+但只會評估 `x` 一次。
+
+若為整數運算元，[`&` 運算子](and-operator.md)會計算其運算元的位元邏輯 AND；若為 [bool](../keywords/bool.md) 運算元，則會計算其運算元的邏輯 AND。
+
+下列範例示範 `&=` 運算子的用法：
+
+[!code-csharp-interactive[AND assignment example](~/samples/snippets/csharp/language-reference/operators/AndOperatorExamples.cs#AndAssignmentExample)]
+
+## <a name="operator-overloadability"></a>運算子是否可多載
+
+若使用者定義型別[多載](../keywords/operator.md) [`&` 運算子](and-operator.md)，AND 指派運算子 `&=` 會隱含地多載。 使用者定義型別無法明確地多載 AND 指派運算子。
+
+## <a name="c-language-specification"></a>C# 語言規格
+
+如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的[複合指派](~/_csharplang/spec/expressions.md#compound-assignment)章節。
+
+## <a name="see-also"></a>另請參閱
+
+- [C# 參考](../index.md)
+- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 運算子](index.md)

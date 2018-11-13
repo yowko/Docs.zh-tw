@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 741ddd0171244daceb4d5e283c0172e71b82f3d2
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a7fa240ea42fe1bee4011a228595e48eb163e1a9
+ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582745"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50982863"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>記憶體回收的基本概念
 <a name="top"></a> 在 Common Language Runtime (CLR) 中，記憶體回收行程會當做自動記憶體管理員。 它提供了下列優點：  
@@ -172,7 +172,7 @@ ms.locfileid: "48582745"
   
  記憶體回收行程會使用下列資訊來判斷物件是否使用中：  
   
--   **堆疊根目錄**。 Just-in-Time (JIT) 編譯器和堆疊查核器所提供的堆疊變數。  
+-   **堆疊根目錄**。 Just-in-Time (JIT) 編譯器和堆疊查核器所提供的堆疊變數。 請注意，JIT 最佳化可以延長或縮短程式碼區域，其中堆疊變數會向記憶體回收行程回報。
   
 -   **記憶體回收控制代碼**。 會指向 Managed 物件，而且可由使用者程式碼或 Common Language Runtime 配置的控制代碼。  
   

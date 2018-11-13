@@ -9,12 +9,12 @@ helpviewer_keywords:
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5821d15e71492bd54fa6b5d891f2ff38a2902a06
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 05146467f321a3c83f3637e2eecc4c7c42dc4ba0
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424385"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51214190"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 系統上的檔案路徑格式
 
@@ -202,7 +202,7 @@ DOS 裝置路徑由以下元件組成：
 對於 Windows 檔案系統的特色，非 Windows 使用者和開發人員感到困惑的一點就是路徑和目錄名稱不區分大小寫。 也就是說，目錄和檔案名稱會反映它們建立時所使用的字串大小寫。 例如，方法呼叫
 
 ```csharp
-Directory.Create(TeStDiReCtOrY);
+Directory.Create("TeStDiReCtOrY");
 ```
 會建立名為 TeStDiReCtOrY 的目錄。 如果您重新命名目錄或檔案，以變更其大小寫，目錄或檔案名稱會反映將它重新命名時所使用字串的大小寫。 例如，下列程式碼將一個名為 test.txt 的檔案重新命名為 Test.txt：
 

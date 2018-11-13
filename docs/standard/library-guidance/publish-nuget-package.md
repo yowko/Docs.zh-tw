@@ -1,46 +1,46 @@
 ---
 title: 發行 NuGet 套件
-description: 發佈至 NuGet 的.NET 程式庫的最佳做法建議。
+description: 發行 .NET 程式庫到 NuGet 的最佳做法建議。
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 0602712311411ef3d59825bec8c5e550bc8d8265
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
-ms.translationtype: MT
+ms.openlocfilehash: e0244d2a9d09382c289c74a45969bca0a1311445
+ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49369799"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50757305"
 ---
 # <a name="publishing-a-nuget-package"></a>發行 NuGet 套件
 
-NuGet 套件發行，且從套件存放庫取用。 雖然 NuGet.org 最廣泛是已知且使用的儲存機制，有許多地方，若要發佈 NuGet 套件：
+NuGet 套件發行之後可從套件存放庫取用。 雖然 NuGet.org 是最廣為人知且最常被使用的存放庫，還有許多其他可以發佈 NuGet 套件的地方：
 
-* **[NuGet.org](https://www.nuget.org/)** 是 NuGet 套件的主要線上存放庫。 公開提供給所有人在 NuGet.org 上的所有封裝都。 根據預設，Visual Studio NuGet.org 與套件來源，並且適用於許多開發人員 NuGet.org 是唯一的套件存放庫會與它們進行互動。 NuGet.org 是穩定的封裝和發行前版本封裝上想要的社群的意見反應所發行的最佳位置。
+* **[NuGet.org](https://www.nuget.org/)** 是 NuGet 套件的主要線上存放庫。 NuGet.org 上的所有套件都可供大眾使用。 根據預設，Visual Studio 使用 NuGet.org 做為套件來源，而且對許多開發人員而言，NuGet.org 是他們與其互動的唯一套件存放庫。 NuGet.org 是發行穩定套件與您想要從社群取得意見反應之發行前版本套件的最佳位置。
 
-* **[MyGet](https://myget.org/)** 存放庫服務支援[開放原始碼專案的可用的自訂套件摘要](https://www.myget.org/opensource)。 MyGet 公開自訂摘要是一個理想位置來發佈您的 CI 服務所建立的發行前版本套件。 MyGet 也私用摘要會盡一切商業上的提供。
+* **[MyGet](https://myget.org/)** 是一個存放庫服務，它支援為開放原始碼專案自訂套件摘要。 MyGet 公用自訂摘要是發行由您的 CI 服務建立之發行前版本套件的理想位置。 MyGet 也提供商業用私人摘要。
 
-* A **[本機摘要](/nuget/hosting-packages/local-feeds)** 可讓您將像是套件存放庫的資料夾，並使`*.nupkg`nuget 的可存取資料夾中的檔案。 本機摘要可用於測試前將其發佈至 NuGet.org 的 NuGet 套件。
+* **[本機摘要](/nuget/hosting-packages/local-feeds)** 可讓您將資料夾視為套件存放庫，並讓該資料夾中的 `*.nupkg` 檔案可由 NuGet 存取。 在將 NuGet 套件發行到 NuGet.org 之前進行測試時，本機摘要很實用。
 
 > [!NOTE]
-> NuGet.org[不允許刪除封裝](/nuget/policies/deleting-packages)一旦上傳。 封裝可以是未列出，以便公開在 UI 中看不到但`*.nupkg`仍可以下載 [還原]。 此外，nuget.org 不允許重複的套件版本。 若要更正的錯誤，您必須取消列出不正確的套件的 NuGet 封裝，遞增版本號碼，並發行新版本的封裝。
+> 一旦套件上傳，NuGet.org 便[不允許刪除套件](/nuget/policies/deleting-packages)。 您可以將套件取消列出，這樣它在 UI 中就不會被大眾看見，但還原時仍能下載 `*.nupkg`。 此外，nuget.org 也不允許重複的套件版本。 若要修正發生錯誤的 NuGet 套件，您必須取消列出不正確的套件、累加版本號碼，然後發行新版本的套件。
 
-**✔️ 嗎**[發行穩定的封裝和發行前版本封裝](/nuget/create-packages/publish-a-package)想社群的意見反應到 NuGet.org。
+**✔️ 請務必**[發行穩定套件與您想要從社群取得意見反應之發行前版本套件](/nuget/create-packages/publish-a-package) 到 NuGet.org。
 
-**請考慮 ✔️**發行前版本套件發行至 MyGet 摘要，從持續整合組建。
+**✔️ 考慮**從持續整合組建將發行前版本套件發行到 MyGet 摘要。
 
-**請考慮 ✔️**使用本機摘要或 MyGet 開發環境中測試的封裝。 檢查封裝的運作方式，然後將它發行到 NuGet.org。
+**✔️ 考慮**使用本機摘要或 MyGet 在您的開發環境測試套件。 檢查套件是否正常運作並將它發行到 NuGet.org。
 
 ## <a name="nugetorg-security"></a>NuGet.org 安全性
 
-很重要的不良執行者無法存取您的 NuGet 帳戶，並上傳您的程式庫的惡意版本。 發佈封裝時，NuGet.org 會提供雙因素驗證和電子郵件通知。 登入 NuGet.org 之後啟用這些功能，在**帳戶設定**頁面。
+請務必透過適當機制保護您的 NuGet 帳戶，避免惡意使用者上傳您程式庫的惡意版本。 NuGet.org 提供套件發行時的雙因素驗證與電子郵件通知。 登入 NuGet.org 之後在 [帳戶設定] 頁面上啟用這些功能。
 
 ![替代文字](./media/publish-nuget-package/nuget-2fa.png "NuGet 帳戶安全性")
 
-**請勿 ✔️**使用 Microsoft 帳戶登入 NuGet。
+**✔️ 請務必**使用 Microsoft 帳戶來登入 NuGet。
 
-**請勿 ✔️**啟用雙因素驗證，以存取 NuGet。
+**✔️ 請務必** 針對存取 NuGet 啟用雙因素驗證。
 
-**請勿 ✔️**發佈封裝時，啟用電子郵件通知。
+**✔️ 請務必**啟用套件發行時的電子郵件通知。
 
 >[!div class="step-by-step"]
 [上一頁](./sourcelink.md)
