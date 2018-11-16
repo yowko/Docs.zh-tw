@@ -31,8 +31,7 @@ ms.locfileid: "33549460"
   
  拖放作業期間所執行的特定動作是針對應用程式的動作，而且這些動作通常會取決於內容。  例如，將選取的檔案從一個資料夾拖曳到同一個存放裝置上的另一個資料夾預設會移動檔案，而將檔案從 [!INCLUDE[TLA#tla_unc](../../../../includes/tlasharptla-unc-md.md)] 共用拖曳到本機資料夾複本預設會複製檔案。  
   
- 
-          [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所提供的拖放功能是為了提高彈性和可自訂性所設計，以便支援各種拖放案例。  拖放功能支援在單一應用程式中，或在不同的應用程式之間操作物件； 拖曳-和-正在卸除之間[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]亦完全支援應用程式和其他 Windows 應用程式。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所提供的拖放功能是為了提高彈性和可自訂性所設計，以便支援各種拖放案例。  拖放功能支援在單一應用程式中，或在不同的應用程式之間操作物件； 拖曳-和-正在卸除之間[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]亦完全支援應用程式和其他 Windows 應用程式。  
   
  在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，任何 <xref:System.Windows.UIElement> 或 <xref:System.Windows.ContentElement> 都可以參與拖放。 拖放作業所需的事件和方法會在 <xref:System.Windows.DragDrop> 類別中定義。 <xref:System.Windows.UIElement> 和 <xref:System.Windows.ContentElement> 類別包含 <xref:System.Windows.DragDrop> 附加事件的別名，因此當繼承 <xref:System.Windows.UIElement> 或 <xref:System.Windows.ContentElement> 做為基底項目時，便會在類別成員清單中顯示這些事件。 附加至這些事件的事件處理常式會附加至基礎 <xref:System.Windows.DragDrop> 附加事件，並接收相同的事件資料執行個體。 如需詳細資訊，請參閱 <xref:System.Windows.UIElement.Drop?displayProperty=nameWithType> 事件。  
   
@@ -156,8 +155,7 @@ ms.locfileid: "33549460"
   
  所有可序列化的物件都可以 `data` 參數傳遞。 如果資料尚未包裝在 <xref:System.Windows.DataObject>  中，則會自動包裝在新的 <xref:System.Windows.DataObject> 中。 若要傳遞多個資料項目，您必須自行建立 <xref:System.Windows.DataObject>，並傳遞給 <xref:System.Windows.DragDrop.DoDragDrop%2A> 方法。 如需詳細資訊，請參閱[資料和資料物件](../../../../docs/framework/wpf/advanced/data-and-data-objects.md)。  
   
- 
-          `allowedEffects` 參數可用來指定拖曳來源允許置放目標對所傳送的資料執行的動作。 拖曳來源的常見值包括 <xref:System.Windows.DragDropEffects.Copy>、<xref:System.Windows.DragDropEffects.Move> 和  <xref:System.Windows.DragDropEffects.All>。  
+ `allowedEffects` 參數可用來指定拖曳來源允許置放目標對所傳送的資料執行的動作。 拖曳來源的常見值包括 <xref:System.Windows.DragDropEffects.Copy>、<xref:System.Windows.DragDropEffects.Move> 和  <xref:System.Windows.DragDropEffects.All>。  
   
 > [!NOTE]
 >  您也可以使用置放目標，來指定預期要回應置放資料的效果。 例如，如果置放目標無法辨識要置放的資料類型，可透過將其允許的效果設定為 <xref:System.Windows.DragDropEffects.None> 來拒絕資料。 通常會在 <xref:System.Windows.DragDrop.DragOver> 事件處理常式中執行這項作業。  
