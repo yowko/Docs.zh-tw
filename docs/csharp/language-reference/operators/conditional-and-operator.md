@@ -36,5 +36,5 @@ ms.locfileid: "43529231"
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 運算子](index.md)
 - [|| 運算子](conditional-or-operator.md)
-- [! 運算子](logical-negation-operator.md)
+- [\! 運算子](logical-negation-operator.md)
 - [& 運算子](and-operator.md)
