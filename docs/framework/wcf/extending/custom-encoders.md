@@ -2,11 +2,11 @@
 title: 自訂編碼器
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: cd8b9172278ce5bcca2965872d697b03698bd850
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 036cbff9046df2d1179c5cc0921dd8d89757558b
+ms.sourcegitcommit: 8145ad08288bf141d68e3256cb1f7a3ad842ca33
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
+ms.lasthandoff: 11/22/2018
 ms.locfileid: "50034340"
 ---
 # <a name="custom-encoders"></a>自訂編碼器
@@ -60,7 +60,7 @@ ms.locfileid: "50034340"
  除了處理動態字典索引鍵之外，還會以獨特的方式來接收緩衝的工作階段訊息。 二進位編碼器並非在文件上建立讀取器，然後加以處理，而是使用內部的 `MessagePatterns` 類別來拆解二進位資料流。 其概念是，大部分的訊息有一組特定的顯示在以特定順序時由 WCF 所產生的標頭。 模式系統會根據其需求分解訊息。 如果分解成功，這個系統就會將 <xref:System.ServiceModel.Channels.MessageHeaders> 物件初始化，而不剖析 XML。 如果失敗，則退而求其次，使用標準的方法。  
   
 ### <a name="mtom-encoding"></a>MTOM 編碼方式  
- <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`> 類別具有其他組態屬性稱為 <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`.MaxBufferSize%2a>。 這個屬性可以設定允許繫結項目在讀取訊息過程中緩衝資料數量的上限。 可能需要將 XML 資訊集 (Infoset) 或其他 MIME 部分加以緩衝，才能將所有 MIME 部分重組成單一訊息。  
+ <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> 類別具有另一個名為 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.MaxBufferSize%2A> 的組態屬性。 這個屬性可以設定允許繫結項目在讀取訊息過程中緩衝資料數量的上限。 可能需要將 XML 資訊集 (Infoset) 或其他 MIME 部分加以緩衝，才能將所有 MIME 部分重組成單一訊息。  
   
  為能搭配 HTTP 而正常運作，內部 MTOM 訊息編碼器類別提供了一些適用於 `GetContentType` (同樣是內部的) 和 `WriteMessage` (公用的且可覆寫) 的內部 API。 編碼器必須進行更多的通訊，才能確保 HTTP 標頭中的值與 MIME 標頭中的值一致。  
   
