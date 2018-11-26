@@ -1,20 +1,20 @@
 ---
 title: 非同步工作流程 (F#)
-description: 了解支援 F# 程式設計語言，以非同步方式執行計算中執行而不會封鎖執行其他工作。
+description: 了解支援F#程式設計以非同步方式執行計算，而不會封鎖執行其他工作執行的語言。
 ms.date: 05/16/2016
-ms.openlocfilehash: 2a6d5f8b61d63a722744f8f71a037e8bc460c64f
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 720996106d2b90392eacc75eb99147691ee83334
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43861558"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297071"
 ---
 # <a name="asynchronous-workflows"></a>非同步工作流程
 
 > [!NOTE]
-API 參考連結將帶您前往 MSDN。  docs.microsoft.com API 參考不完整。
+> API 參考連結將帶您前往 MSDN。  docs.microsoft.com API 參考不完整。
 
-本主題描述支援 F# 中的，執行計算以非同步的方式，亦即，而不會封鎖執行其他工作。 例如，非同步計算可用來撰寫為應用程式會執行其他工作能繼續回應使用者的 Ui 的應用程式。
+本主題說明中的支援F#以非同步方式執行計算，也就是，而不會封鎖執行其他工作。 例如，非同步計算可用來撰寫為應用程式會執行其他工作能繼續回應使用者的 Ui 的應用程式。
 
 ## <a name="syntax"></a>語法
 
@@ -41,17 +41,17 @@ let (result1 : Async<byte[]>) = stream.AsyncRead(bufferSize)
 let! (result2 : byte[])  = stream.AsyncRead(bufferSize)
 ```
 
-除了`let!`，您可以使用`use!`執行非同步繫結。 之間的差異`let!`並`use!`之間的差異與相同`let`和`use`。 針對`use!`，物件已處置的在目前的範圍。 請注意，在目前版本的 F# 語言，`use!`不允許的值，初始化為 null，即使`use`沒有。
+除了`let!`，您可以使用`use!`執行非同步繫結。 之間的差異`let!`並`use!`之間的差異與相同`let`和`use`。 針對`use!`，物件已處置的在目前的範圍。 請注意，在目前版本的F#語言`use!`不允許的值，初始化為 null，即使`use`沒有。
 
 ## <a name="asynchronous-primitives"></a>非同步基本項目
 
-執行單一的非同步工作，並傳回結果的方法會呼叫*非同步基本項目*，和這些專為搭配`let!`。 中的 F# 核心程式庫定義數個非同步基本項目。 針對 Web 應用程式的兩個這類方法會在模組中定義[ `Microsoft.FSharp.Control.WebExtensions` ](https://msdn.microsoft.com/library/95ef17bc-ee3f-44ba-8a11-c90fcf4cf003): [ `WebRequest.AsyncGetResponse` ](https://msdn.microsoft.com/library/09a60c31-e6e2-4b5c-ad23-92a86e50060c)並[ `WebClient.AsyncDownloadString` ](https://msdn.microsoft.com/library/8a85a9b7-f712-4cac-a0ce-0a797f8ea32a)。 這兩個基本項目從網頁上，假設有一個 URL 下載資料。 `AsyncGetResponse` 會產生`System.Net.WebResponse`物件，和`AsyncDownloadString`會產生字串，表示網頁的 HTML。
+執行單一的非同步工作，並傳回結果的方法會呼叫*非同步基本項目*，和這些專為搭配`let!`。 數個非同步基本項目中定義F#核心程式庫。 針對 Web 應用程式的兩個這類方法會在模組中定義[ `Microsoft.FSharp.Control.WebExtensions` ](https://msdn.microsoft.com/library/95ef17bc-ee3f-44ba-8a11-c90fcf4cf003): [ `WebRequest.AsyncGetResponse` ](https://msdn.microsoft.com/library/09a60c31-e6e2-4b5c-ad23-92a86e50060c)並[ `WebClient.AsyncDownloadString` ](https://msdn.microsoft.com/library/8a85a9b7-f712-4cac-a0ce-0a797f8ea32a)。 這兩個基本項目從網頁上，假設有一個 URL 下載資料。 `AsyncGetResponse` 會產生`System.Net.WebResponse`物件，和`AsyncDownloadString`會產生字串，表示網頁的 HTML。
 
 中包含多個非同步 I/O 作業的基本[ `Microsoft.FSharp.Control.CommonExtensions` ](https://msdn.microsoft.com/library/2edb67cb-6814-4a30-849f-b6dbdd042396)模組。 這些擴充方法`System.IO.Stream`類別[ `Stream.AsyncRead` ](https://msdn.microsoft.com/library/85698aaa-bdda-47e6-abed-3730f59fda5e)並[ `Stream.AsyncWrite` ](https://msdn.microsoft.com/library/1b0a2751-e42a-47e1-bd27-020224adc618)。
 
 您也可以撰寫您自己的非同步基本項目定義函式的非同步區塊括住完整主體。
 
-若要使用 F# 非同步程式設計模型與其他非同步模型在.NET Framework 設計的非同步方法，您會建立可傳回的 F# 函式`Async`物件。 F# 程式庫有方便執行的函式。
+若要使用.NET Framework 中的非同步方法設計與其他非同步模型的F#非同步程式設計模型，您會建立函式會傳回F#`Async`物件。 F#程式庫有方便執行的函式。
 
 使用非同步工作流程的其中一個範例是為了;還有其他方法的文件集中[Async 類別](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7)。
 

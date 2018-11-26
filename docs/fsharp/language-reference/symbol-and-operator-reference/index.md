@@ -1,18 +1,18 @@
 ---
 title: 符號和運算子參考 (F#)
-description: 深入了解符號和運算子，可在 F# 程式設計語言。
+description: 深入了解符號和運算子，可在F#程式設計語言。
 ms.date: 04/04/2018
-ms.openlocfilehash: 0e36f6cfc75b7d2e79bcf7acb89d260fd4e9b1ad
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: f6f99f8fa563b71c935122c6f8597599c59b5c7f
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "47216822"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297301"
 ---
 # <a name="symbol-and-operator-reference"></a>符號和運算子參考
 
 > [!NOTE]
-本文中的 API 參考連結將帶您前往 MSDN。  docs.microsoft.com API 參考不完整。
+> 本文中的 API 參考連結將帶您前往 MSDN。  docs.microsoft.com API 參考不完整。
 
 本主題包含 F# 語言中使用的符號與運算子資料表。
 

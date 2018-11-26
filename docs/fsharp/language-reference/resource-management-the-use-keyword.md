@@ -1,13 +1,13 @@
 ---
 title: 資源管理：use 關鍵字 (F#)
-description: 了解 F# 關鍵字 'use' 和 'using' 函式，可以控制的初始設定和版本的資源。
+description: 深入了解F#關鍵字 'use' 和 'using' 函式，可以控制的初始設定和版本的資源。
 ms.date: 05/16/2016
-ms.openlocfilehash: ffa1cb515139a3705920d9d9f79be1a69602f7d8
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 300fb4113019f676625f75541d117458eab3f6ab
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45616058"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296876"
 ---
 # <a name="resource-management-the-use-keyword"></a>資源管理：use 關鍵字
 
@@ -19,7 +19,7 @@ ms.locfileid: "45616058"
 
 ## <a name="managing-resources"></a>管理資源
 
-若要有效率地和負起責任管理應用程式中的資源，您必須釋放資源，立即與可預測的方式。 .NET Framework 可協助您執行此作業藉由提供`System.IDisposable`介面。 型別可實作`System.IDisposable`具有`System.IDisposable.Dispose`方法，這個方法會正確地釋放資源。 撰寫得當的應用程式保證`System.IDisposable.Dispose`時不再需要保留有限的資源的任何物件會立即呼叫。 幸運的是，大部分的.NET 語言提供支援更加容易，而 F# 也不例外。 有兩個實用的語言建構可支援的處置模式：`use`繫結和`using`函式。
+若要有效率地和負起責任管理應用程式中的資源，您必須釋放資源，立即與可預測的方式。 .NET Framework 可協助您執行此作業藉由提供`System.IDisposable`介面。 型別可實作`System.IDisposable`具有`System.IDisposable.Dispose`方法，這個方法會正確地釋放資源。 撰寫得當的應用程式保證`System.IDisposable.Dispose`時不再需要保留有限的資源的任何物件會立即呼叫。 幸運的是，大部分的.NET 語言都會提供支援，以讓您事半功倍，和F#也不例外。 有兩個實用的語言建構可支援的處置模式：`use`繫結和`using`函式。
 
 ## <a name="use-binding"></a>使用繫結
 
@@ -33,8 +33,8 @@ ms.locfileid: "45616058"
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6301.fs)]
 
->[!NOTE]
-您可以使用`use`在計算運算式中，在此情況下的自訂的版本`use`運算式的使用方式。 如需詳細資訊，請參閱 <<c0> [ 序列](sequences.md)，[非同步工作流程](asynchronous-workflows.md)，並[計算運算式](computation-expressions.md)。
+> [!NOTE]
+> 您可以使用`use`在計算運算式中，在此情況下的自訂的版本`use`運算式的使用方式。 如需詳細資訊，請參閱 <<c0> [ 序列](sequences.md)，[非同步工作流程](asynchronous-workflows.md)，並[計算運算式](computation-expressions.md)。
 
 ## <a name="using-function"></a>使用函式
 

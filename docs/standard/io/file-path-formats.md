@@ -2,19 +2,18 @@
 title: Windows 系統上的檔案路徑格式
 ms.date: 06/28/2018
 ms.technology: dotnet-standard
-ms.topic: article
 helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 05146467f321a3c83f3637e2eecc4c7c42dc4ba0
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 1b79ff1991f1d9b803b0c35b4ae9565f70de0b56
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51214190"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296824"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 系統上的檔案路徑格式
 
@@ -90,8 +89,8 @@ DOS 裝置路徑由以下元件組成：
 
    對於呼叫的 UNC 有一個特定連結，不用多說，就是 `UNC`。 例如: 
 
-      `\\.\UNC\Server\Share\Test\Foo.txt`
-      `\\?\UNC\Server\Share\Test\Foo.txt`
+  `\\.\UNC\Server\Share\Test\Foo.txt`  
+  `\\?\UNC\Server\Share\Test\Foo.txt`
 
     針對裝置 UNC，「伺服器/共用」部分會形成磁碟區。 例如，在 `\\?\server1\e:\utilities\\filecomparer\`，「伺服器/共用」部分是 server1\utilities。 這一點在呼叫具有相對目錄區段的方法 (例如 <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType>) 時很重要；無法瀏覽過磁碟區。 
 
@@ -114,7 +113,7 @@ DOS 裝置路徑由以下元件組成：
 - 評估相對目錄元件 (`.` 表示目前目錄，`..` 表示父目錄)。
 - 修剪特定字元。
 
-這個正規化會隱含地發生，但您可以明確地呼叫 <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType> 方法來執行，這個方法會包裝對 [GetFullPathName() function](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).aspx 的呼叫。 您也可以直接使用 P/Invoke 呼叫 Windows [GetFullPathName() function](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).aspx。 您也可以呼叫 
+這個正規化會隱含地發生，但您可以明確地呼叫 <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType> 方法來執行，這個方法會包裝對 [GetFullPathName() 函式](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)的呼叫。 您也可以直接使用 P/Invoke 呼叫 Windows [GetFullPathName() 函式](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)。
 
 ### <a name="identifying-the-path"></a>識別路徑
 

@@ -4,15 +4,15 @@ description: 了解如何使用 C# 中的 LINQ 在執行階段動態指定述詞
 ms.date: 12/1/2016
 ms.assetid: 90238470-0767-497c-916c-52d0d16845e0
 ms.openlocfilehash: ece5940edd615f30acab06a429de300e27811a66
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50038483"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296070"
 ---
 # <a name="dynamically-specify-predicate-filters-at-runtime"></a>在執行階段動態指定述詞篩選
 
-在某些情況下，您要到執行階段才知道在 `where` 子句中必須套用多少述詞至來源元素。 動態指定多個述詞篩選的其中一個方式是使用 <xref:System.Linq.Enumerable.Contains%2A> 方法，如下列範例所示。 此範例以兩種方式建構。 首先，篩選程式中所提供的值來執行專案。 然後使用執行階段提供的輸入再次執行專案。
+在某些情況下，您要到執行階段才知道在 `where` 子句中必須套用多少述詞至來源項目。 動態指定多個述詞篩選的其中一個方式是使用 <xref:System.Linq.Enumerable.Contains%2A> 方法，如下列範例所示。 此範例以兩種方式建構。 首先，篩選程式中所提供的值來執行專案。 然後使用執行階段提供的輸入再次執行專案。
 
 ## <a name="to-filter-by-using-the-contains-method"></a>使用 Contains 方法篩選
 
@@ -58,13 +58,13 @@ ms.locfileid: "50038483"
 
 ## <a name="to-filter-by-using-a-switch-statement"></a>使用 switch 陳述式來篩選
 
-1. 您可以使用 `switch` 陳述式，在預先定義的替代查詢中選取。 在下列範例中，`studentQuery` 會根據執行階段指定的年級或年份，使用不同的 `where` 子句。
+1. 您可以使用 `switch` 陳述式，在預先定義的替代查詢中選取。 在下例中，`studentQuery` 會根據執行階段指定的年級或年份，使用不同的 `where` 子句。
 
 2. 將下列方法複製並貼入 `DynamicPredicates` 類別中。
 
      [!code-csharp[csProgGuideLINQ#27](~/samples/snippets/csharp/concepts/linq//how-to-dynamically-specify-predicate-filters-at-runtime_2.cs)]
 
-3. 在 `Main` 方法中，使用下列呼叫取代 `QueryByID` 的呼叫，將 `args` 陣列的第一個元素傳送為其引數︰`QueryByYear(args[0])`。
+3. 在 `Main` 方法中，使用下列呼叫取代 `QueryByID` 的呼叫，將 `args` 陣列的第一個項目傳送為其引數︰`QueryByYear(args[0])`。
 
 4. 以 1 到 4 之間整數值的命令列引數執行專案。
 

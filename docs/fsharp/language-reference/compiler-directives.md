@@ -1,13 +1,13 @@
 ---
 title: 編譯器指示詞 (F#)
-description: 深入了解 F# 語言前置處理器指示詞、 條件式編譯指示詞、 line 指示詞和編譯器指示詞。
+description: 深入了解F#語言前置處理器指示詞、 條件式編譯指示詞、 line 指示詞和編譯器指示詞。
 ms.date: 05/16/2016
-ms.openlocfilehash: 5ac375ac5acd0609a6556f9e0481d169df827c98
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: bb23096e03584f2a50cfe069075ba94a35c4753c
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50181364"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296490"
 ---
 # <a name="compiler-directives"></a>編譯器指示詞
 
@@ -35,8 +35,8 @@ ms.locfileid: "50181364"
 
 已停用由其中一個這些指示詞的程式碼會呈現暗灰色在 Visual Studio 程式碼編輯器中。
 
->[!NOTE]
-條件式編譯指示詞的行為與其在其他語言的行為不同。 例如，您無法使用包含符號的布林運算式，且 `true` 和 `false` 沒有特殊意義。 在 `if` 指示詞中使用的符號必須透過命令列定義，或在專案設定中定義；沒有任何 `define` 前置處理器指示詞。
+> [!NOTE]
+> 條件式編譯指示詞的行為與其在其他語言的行為不同。 例如，您無法使用包含符號的布林運算式，且 `true` 和 `false` 沒有特殊意義。 在 `if` 指示詞中使用的符號必須透過命令列定義，或在專案設定中定義；沒有任何 `define` 前置處理器指示詞。
 
 下列程式碼說明如何使用 `#if`、`#else` 和 `#endif` 指示詞。 在此範例中，程式碼包含兩個版本的 `function1` 定義。 當`VERSION1`使用來定義[-define 編譯器選項](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04)，之間的程式碼`#if`指示詞和`#else`指示詞會啟用。 否則會啟動 `#else` 與 `#endif` 之間的程式碼。
 
@@ -65,7 +65,7 @@ F# 中沒有 `#define` 前置處理器指示詞。 您必須使用編譯器選�
 |指示詞|描述|
 |---------|-----------|
 |`#light` ["on"&#124;"off"]|啟用或停用輕量型語法，與其他 ML 版本相容。 根據預設，會啟用輕量型語法。 一律會啟用詳細語法。 因此，您可以使用輕量型語法和詳細語法。 指示詞 `#light` 本身就相當於 `#light "on"`。 如果您指定 `#light "off"`，您必須針對所有語言建構使用詳細語法。 會假設您使用輕量型語法，在文件中顯示 F# 語法。 如需詳細資訊，請參閱 <<c0> [ 冗長的語法](verbose-syntax.md)。|
-解譯器 (fsi.exe) 指示詞，請參閱[使用 F# 互動式程式設計](../tutorials/fsharp-interactive/index.md)。
+解譯器 (fsi.exe) 指示詞，請參閱[互動的程式設計，使用F# ](../tutorials/fsharp-interactive/index.md)。
 
 ## <a name="see-also"></a>另請參閱
 

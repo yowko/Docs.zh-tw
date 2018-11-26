@@ -1,18 +1,18 @@
 ---
 title: 清單 (F#)
-description: 深入了解 F# 清單、 排序、 不可變的系列相同類型的元素。
+description: 深入了解F#清單、 排序、 不可變的系列相同類型的元素。
 ms.date: 05/16/2016
-ms.openlocfilehash: b48bf04f5ec490b49e63462affc0d4eadebe10ef
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: f7b9054226a1dd004ac78673a059bd1c35e325a5
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50201620"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297500"
 ---
 # <a name="lists"></a>清單
 
 > [!NOTE]
-本文中的 API 參考連結將帶您前往 MSDN。  docs.microsoft.com API 參考不完整。
+> 本文中的 API 參考連結將帶您前往 MSDN。  docs.microsoft.com API 參考不完整。
 
 在 F# 中，list 是包含一系列經過排序且類型相同的固定元素。 若要執行基本作業清單，使用中的函式[List 模組](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)。
 
@@ -56,7 +56,7 @@ ms.locfileid: "50201620"
 
 由於 F# 中的 list 為固定，因此任何修改作業都會產生新的 list，而不會修改現有的 list。
 
-在 F# 中實作為單向連結串列，這表示作業的存取清單的開頭是 o （1），而且元素存取為 O (*n*)。
+列出在F#會實作為單向連結串列，亦即存取只有清單的標頭的作業都是 o （1），，和元素存取為 O (*n*)。
 
 ## <a name="properties"></a>屬性
 
