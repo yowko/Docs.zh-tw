@@ -2,12 +2,12 @@
 title: 最佳做法：媒介
 ms.date: 03/30/2017
 ms.assetid: 2d41b337-8132-4ac2-bea2-6e9ae2f00f8d
-ms.openlocfilehash: d69baae9b4f5851f60d8d1336c40e0d18db8e77d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8b0e0e635c0e790b342115b988905ba29a6b8ad1
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458415"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296400"
 ---
 # <a name="best-practices-intermediaries"></a>最佳做法：媒介
 當呼叫媒介時必須務必注意地正確處理錯誤，以確認媒介的服務端通道有正常關閉。  
@@ -25,7 +25,7 @@ catch (Exception e)
     {  
         throw new ApplicationException(e.Message);  
     }  
-    Else  
+    else  
     {  
         throw;  
     }  

@@ -2,17 +2,17 @@
 title: 查詢資料集 (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: bb68d2e4-623d-4d60-85e3-965254f6fee7
-ms.openlocfilehash: 5ecf85a73cd38fc1fa575bd591618e5273b390e0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ddd92b1a95889b44eba2ec582308bf08358eeea7
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510138"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297136"
 ---
 # <a name="querying-datasets-linq-to-dataset"></a>查詢資料集 (LINQ to DataSet)
 當 <xref:System.Data.DataSet> 物件已經填入 (Populate) 資料之後，您就可以開始查詢它。 使用 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 來編寫查詢與針對其他啟用 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 的資料來源使用 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 很相似。 記住，不過，當您使用[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]透過查詢<xref:System.Data.DataSet>物件，您要查詢的列舉<xref:System.Data.DataRow>物件，而不是自訂類型的列舉型別。 這表示，您可以使用任何的成員清單<xref:System.Data.DataRow>類別中您[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]查詢。 這可讓您建立內容豐富且複雜的查詢。  
   
- 與其他實作的一樣[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]，您可以建立[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]兩種不同形式的查詢： 查詢運算式語法和以方法為基礎的查詢語法。 如需有關這兩種形式的詳細資訊，請參閱 < [Getting Started with LINQ](https://msdn.microsoft.com/library/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9)。 您可以使用查詢運算式語法或以方法為基礎的查詢語法，針對 <xref:System.Data.DataSet> 中的單一資料表、針對 <xref:System.Data.DataSet> 中的多個資料表，或針對具型別 <xref:System.Data.DataSet> 中的資料表執行查詢。  
+ 與其他實作的一樣[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]，您可以建立[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]兩種不同形式的查詢： 查詢運算式語法和以方法為基礎的查詢語法。 您可以使用查詢運算式語法或以方法為基礎的查詢語法，針對 <xref:System.Data.DataSet> 中的單一資料表、針對 <xref:System.Data.DataSet> 中的多個資料表，或針對具型別 <xref:System.Data.DataSet> 中的資料表執行查詢。  
   
 ## <a name="in-this-section"></a>本節內容  
  [單一資料表查詢](../../../../docs/framework/data/adonet/single-table-queries-linq-to-dataset.md)  

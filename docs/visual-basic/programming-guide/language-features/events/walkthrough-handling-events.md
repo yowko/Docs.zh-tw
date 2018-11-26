@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 35680c7476f48ca11ac4ddeda208c46c6b36c724
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fe797885a9063a19efc3f35da9cdf62d7f271693
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44191987"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297162"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>逐步解說：處理事件 (Visual Basic)
 這是示範如何使用事件的兩個主題的第二個。 第一個主題中，[逐步解說： 宣告和引發事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)，示範如何宣告及引發事件。 本節會使用表單和類別，從該逐步解說示範如何處理它們發生的事件。  
@@ -95,7 +95,7 @@ ms.locfileid: "44191987"
 3.  按一下 **取消**按鈕以停止工作。 請注意的外觀**取消**按鈕不會變更，請立即按一下它。 `Click`事件不會發生之前`My.Application.DoEvents`陳述式可讓事件處理。  
   
     > [!NOTE]
-    >  `My.Application.DoEvents`方法不會處理事件中完全相同的方式像表單一樣。 例如，在此逐步解說中，您必須按一下**取消**按鈕兩次。 若要允許表單以直接處理事件，您可以使用多執行緒處理。 如需詳細資訊，請參閱 <<c0> [ 執行緒](../../../../visual-basic/programming-guide/concepts/threading/index.md)。
+    >  `My.Application.DoEvents`方法不會處理事件中完全相同的方式像表單一樣。 例如，在此逐步解說中，您必須按一下**取消**按鈕兩次。 若要允許表單以直接處理事件，您可以使用多執行緒處理。 如需詳細資訊，請參閱 < [Managed 執行緒處理](../../../../standard/threading/index.md)。
   
  您可能會發現使用 f11 鍵執行程式，並逐步執行程式碼行一次會更有意義。 您可以清楚地看到如何執行進入`LongTask`，，然後簡短重新進入`Form1`每次`PercentDone`就會引發事件。  
   

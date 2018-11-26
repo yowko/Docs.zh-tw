@@ -6,12 +6,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 3b290b67ca97065dfc408c09850cf0b5720d65ae
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 2d3466476c33a3e5faa8be96d63f1d11442c5d70
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847573"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296733"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>停用 Visual Studio 中的 DPI 感知
 
@@ -51,10 +51,10 @@ Visual Studio 執行時做為 DPI 感知的處理序，設計工具的版面配�
 
 您可以藉由修改登錄，以將 Visual Studio 標記為 DPI 感知。 開啟**登錄編輯程式** ，並新增一個項目**您可以 NT\CurrentVersion\AppCompatFlags\Layers**子機碼：
 
-**項目**: %programfiles (x86) %\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+**項目**: C:\Program 檔案 (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
 
    > [!NOTE]
-   > 如果您使用 Visual Studio 2017 Professional 或 Enterprise edition，將**社群**使用**Professional**或是**Enterprise**項目中。
+   > 如果您使用 Visual Studio 2017 Professional 或 Enterprise edition，將**社群**使用**Professional**或是**Enterprise**項目中。 也取代為所需的磁碟機代號。
 
 **型別**: REG_SZ
 

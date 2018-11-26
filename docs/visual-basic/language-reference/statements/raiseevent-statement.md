@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: ef4dce290a7a7f6340b15aa4083cd40518e37d0d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ba4c05b3ef69d180f43ac3b90aa8fd6dee9c80fb
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507388"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296863"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent 陳述式
 觸發程序在類別、 表單或文件中的模組層級宣告的事件。  
@@ -73,7 +73,7 @@ RaiseEvent eventname[( argumentlist )]
  按 F5 以執行上述範例中，並按一下 [] 按鈕**啟動**。 第一個文字方塊會開始倒數計時。 在經過完整時間 (10 秒) 之後，第一個文字方塊會顯示 [完成]。  
   
 > [!NOTE]
->  `My.Application.DoEvents`方法不會處理事件中完全相同的方式像表單一樣。 若要允許表單以直接處理事件，您可以使用多執行緒處理。 如需詳細資訊，請參閱 <<c0> [ 執行緒](../../programming-guide/concepts/threading/index.md)。  
+>  `My.Application.DoEvents`方法不會處理事件中完全相同的方式像表單一樣。 若要允許表單以直接處理事件，您可以使用多執行緒處理。 如需詳細資訊，請參閱 < [Managed 執行緒處理](../../../standard/threading/index.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [事件](../../../visual-basic/programming-guide/language-features/events/index.md)  
