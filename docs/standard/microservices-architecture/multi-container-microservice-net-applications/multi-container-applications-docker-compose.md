@@ -1,28 +1,28 @@
 ---
 title: 使用 docker-compose.yml 定義多容器應用程式
-description: 容器化 .NET 應用程式的 .NET 微服務架構 | 使用 docker-compose.yml 定義多容器應用程式
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 如何使用 docker-compose.yml 指定多容器應用程式的微服務組合。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/30/2017
-ms.openlocfilehash: d1c4166129716ccbbc86855e38d631f493b82290
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.date: 10/02/2018
+ms.openlocfilehash: 9ce8d64dbd481d30c6687b8747b2091733ea76db
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46937601"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297175"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>使用 docker-compose.yml 定義多容器應用程式 
 
-在本指南中，[docker-compose.yml](https://docs.docker.com/compose/compose-file/) 檔案是在下列這節中介紹：[步驟 4.建置多容器 Docker 應用程式時，在 docker-compose.yml 中定義您的服務](#step4_define_svcs_in_docker_compose_yml)。 不過，有一些其他方法可以使用值得深入探索的 docker-compose 檔案。
+在本指南中，[docker-compose.yml](https://docs.docker.com/compose/compose-file/) 檔案是在下列這節中介紹：[步驟 4.建置多容器 Docker 應用程式時，在 docker-compose.yml 中定義您的服務](../docker-application-development-process/docker-app-development-workflow.md#step-4-define-your-services-in-docker-composeyml-when-building-a-multi-container-docker-application)。 不過，有一些其他方法可以使用值得深入探索的 docker-compose 檔案。
 
 例如，您可以明確地描述要如何在 docker-compose.yml 檔案中部署多容器應用程式。 您也可以選擇性地描述要如何建置自訂 Docker 映像  (也可以使用 Docker CLI 來建置自訂 Docker 映像)。
 
-基本上，您會定義您想要部署的每個容器，以及每個容器部署的特定特性。 具有多容器部署描述檔案之後，即可使用單一動作部署 [docker-compose up](https://docs.docker.com/compose/overview/) CLI 命令所協調的整個解決方案，或可從 Visual Studio 透明地進行部署。 否則，您必須使用 Docker CLI，從命令列使用 docker run 命令，透過多個步驟逐一部署容器。 因此，docker-compose.yml 中所定義的每個服務都只能指定一個映像或組建。 其他金鑰是選擇性的，而且類似其 docker run 命令列對應項目。
+基本上，您會定義您想要部署的每個容器，以及每個容器部署的特定特性。 具有多容器部署描述檔案之後，即可使用單一動作部署 [docker-compose up](https://docs.docker.com/compose/overview/) CLI 命令所協調的整個解決方案，或可從 Visual Studio 透明地進行部署。 否則，您必須使用 Docker CLI，從命令列使用 `docker run` 命令，透過多個步驟逐一部署容器。 因此，docker-compose.yml 中所定義的每個服務都只能指定一個映像或組建。 其他金鑰是選擇性的，而且類似其 `docker run` 命令列對應項目。
 
 下列 YAML 程式碼是 eShopOnContainers 範例之可能全域但單一 docker-compose.yml 檔案的定義。 這不是 eShopOnContainers 中的實際 docker-compose 檔案。 相反地，它是單一檔案中的簡化和合併版本，但這不是使用 docker-compose 檔案的最佳方式，我們將會在稍後進行說明。
 
 ```yml
-version: '2'
+version: '3.4'
 
 services:
   webmvc:
@@ -84,19 +84,16 @@ services:
     image: redis
 ```
 
-此檔案中的根金鑰就是服務。 在該金鑰下，您定義想要在執行 docker-compose up 命令或是使用此 docker-compose.yml 檔案從 Visual Studio 部署時所部署和執行的服務。 在此情況下，docker-compose.yml 檔案已定義多個服務，如下列清單所述。
+此檔案中的根金鑰就是服務。 在該金鑰下，您定義想要在執行 `docker-compose up` 命令或是使用此 docker-compose.yml 檔案從 Visual Studio 部署時所部署和執行的服務。 在此情況下，docker-compose.yml 檔案已定義多個服務，如下表所述。
 
--   webmvc 容器，包括使用伺服器端 C\# 之微服務的 ASP.NET Core MVC 應用程式
-
--   catalog.api 容器，包括 Catalog ASP.NET Core Web API 微服務
-
--   ordering.api 容器，包括 Ordering ASP.NET Core Web API 微服務
-
--   執行 SQL Server for Linux 的 sql.data 容器，保留微服務資料庫
-
--   具有 Basket ASP.NET Core Web API 微服務的 basket.api 容器
-
--   執行 REDIS 快取服務的 basket.data 容器，其將購物籃資料庫作為 REDIS 快取
+| 服務名稱 | 描述 |
+|--------------|-------------|
+| webmvc       | 容器，包括使用伺服器端 C\# 之微服務的 ASP.NET Core MVC 應用程式|
+| catalog.api  | 容器，包括 Catalog ASP.NET Core Web API 微服務 |
+| ordering.api | 容器，包括 Ordering ASP.NET Core Web API 微服務 |
+| sql.data     | 執行 SQL Server for Linux 的容器，保留微服務資料庫 |
+| basket.api   | 容器，具有 Basket ASP.NET Core Web API 微服務 |
+| basket.data  | 執行 REDIS 快取服務的容器，其將 basket 資料庫作為 REDIS 快取 |
 
 ### <a name="a-simple-web-service-api-container"></a>簡單 Web 服務 API 容器
 
@@ -140,7 +137,7 @@ catalog.api container-microservice 聚焦於單一容器，因此具有簡單易
 
 ### <a name="using-docker-compose-files-to-target-multiple-environments"></a>使用 docker-compose 檔案以多個環境為目標
 
-docker-compose.yml 檔案是定義檔，而且可以供了解該格式的多個基礎結構使用。 最簡單的工具是 docker-compose 命令，但協調器這類其他工具 (例如，Docker Swarm) 也了解該檔案。
+docker-compose.yml 檔案是定義檔，而且可以供了解該格式的多個基礎結構使用。 最簡單的工具是 docker-compose 命令。
 
 因此，使用 docker-compose 命令，即可將目標設為下列主要案例。
 
@@ -159,16 +156,16 @@ docker-compose.yml 檔案不只是 Docker 引擎所解譯的組態檔，也是�
 使用 Docker Compose，您可以從命令提示字元或指令碼，使用幾個命令非常輕鬆地建立和終結該隔離環境，例如下列命令：
 
 ```
-docker-compose up -d
+docker-compose -f docker-compose.yml -f docker-compose-test.override.yml up -d
 ./run_unit_tests
-docker-compose down
+docker-compose -f docker-compose.yml -f docker-compose.test.override.yml down
 ```
 
 #### <a name="production-deployments"></a>生產部署
 
-您也可以使用 Compose 部署至遠端 Docker 引擎。 典型案例是部署至單一 Docker 主機執行個體 (例如，使用 [Docker 電腦](https://docs.docker.com/machine/overview/)所佈建的生產 VM 或伺服器)。 但它也可以是整個 [Docker Swarm](https://docs.docker.com/swarm/overview/) 叢集，因為叢集也與 docker-compose.yml 檔案相容。
+您也可以使用 Compose 部署至遠端 Docker 引擎。 典型案例是部署至單一 Docker 主機執行個體 (例如，使用 [Docker 電腦](https://docs.docker.com/machine/overview/)所佈建的生產 VM 或伺服器)。
 
-如果您使用任何其他協調器 (Azure Service Fabric、Mesos DC/OS、Kubernetes 等等)，則可能需要新增 docker-compose.yml 中的設定和中繼資料組態設定，但為其他協調器所需的格式。
+如果您使用任何其他協調器 (Azure Service Fabric Kubernetes 等)，則可能需要新增 docker-compose.yml 中的設定和中繼資料組態設定，但為其他協調器所需的格式。
 
 在任何情況下，雖然生產工作流程可能會隨著您使用的協調器而不同，但是 docker-compose 是開發、測試和生產工作流程的便利工具和中繼資料格式。
 
@@ -180,13 +177,13 @@ docker-compose down
 
 您可以使用單一 docker-compose.yml 檔案，如先前各節中所顯示的簡化範例所示。 不過，不建議用於大部分應用程式。
 
-Compose 預設會讀取兩個檔案、docker-compose.yml 和選擇性 docker-compose.override.yml 檔案。 如圖 8-11 所示，當您要使用 Visual Studio 並啟用 Docker 支援時，Visual Studio 也會建立其他 docker-compose.ci.build.yml 檔案，以供您從 CI/CD 管道 (例如在 Azure DevOps Services 中) 使用。
+Compose 預設會讀取兩個檔案、docker-compose.yml 和選擇性 docker-compose.override.yml 檔案。 如圖 6-11 中所示，當您在使用 Visual Studio 並啟用 Docker 支援時，Visual Studio 也會另外建立 docker-compose.vs.debug.g.yml 檔案以供偵錯應用程式，您可以在主要解決方案資料夾中的資料夾 obj\\Docker\\查看此檔案。
 
-![](./media/image12.png)
+![docker-compose 專案檔結構：.dockerignore > 用於忽略檔案；docker-compose.yml > 用於結合微服務；docker-compose.override.yml > 用於設定微服務環境。](./media/image12.png)
 
-**圖 8-11**. Visual Studio 2017 中的 docker-compose 檔案
+**圖 6-11**。 Visual Studio 2017 中的 docker-compose 檔案
 
-您可以使用任何編輯器 (如 Visual Studio Code 或 Sublime) 來編輯 docker-compose 檔案，並使用 docker-compose up 命令來執行應用程式。
+您可以使用任何編輯器 (如 Visual Studio Code 或 Sublime) 來編輯 docker-compose 檔案，並使用 docker-compose-up 命令來執行應用程式。
 
 依照慣例，docker compose.yml 檔案會包含基底組態和其他靜態設定。 這表示根據您設為目標的部署環境，服務組態不應該變更。
 
@@ -194,23 +191,23 @@ docker-compose.override.yml 檔案，如其名所示，包含可覆寫基底組�
 
 #### <a name="targeting-multiple-environments"></a>以多個環境為目標
 
-典型使用案例是定義多個 Compose 檔案，讓您可以將目標設為多個環境，例如生產環境、暫存環境、CI 或開發。 若要支援這些差異，您可以將 Compose 組態分割成多個檔案，如圖 8-12 所示。
+典型使用案例是定義多個 Compose 檔案，讓您可以將目標設為多個環境，例如生產環境、暫存環境、CI 或開發。 若要支援這些差異，您可以將 Compose 組態分割成多個檔案，如圖 6-12 所示。
 
-![](./media/image13.png)
+![您可以合併多個 docker-compose*.fml 檔案來處理不同環境。](./media/image13.png)
 
-**圖 8-12**. 覆寫基底 docker-compose.yml 檔案中值的多個 docker-compose 檔案
+**圖 6-12**。 覆寫基底 docker-compose.yml 檔案中值的多個 docker-compose 檔案
 
-您可以開始使用基底 docker-compose.yml 檔案。 此基底檔案必須包含不會根據環境而變更的基底或靜態組態設定。 例如，eShopOnContainers 具有下列與基底檔案相同的 docker-compose.yml 檔案。
+您可以開始使用基底 docker-compose.yml 檔案。 此基底檔案必須包含不會根據環境而變更的基底或靜態組態設定。 例如，eShopOnContainers 具有下列與基底檔案相同的 docker-compose.yml (簡化為具有較少服務) 檔案。
 
 ```yml
 #docker-compose.yml (Base)
-version: '3'
+version: '3.4'
 services:
   basket.api:
     image: eshop/basket.api:${TAG:-latest}
     build:
-      context: ./src/Services/Basket/Basket.API
-      dockerfile: Dockerfile    
+      context: .
+      dockerfile: src/Services/Basket/Basket.API/Dockerfile    
     depends_on:
       - basket.data
       - identity.api
@@ -219,8 +216,8 @@ services:
   catalog.api:
     image: eshop/catalog.api:${TAG:-latest}
     build:
-      context: ./src/Services/Catalog/Catalog.API
-      dockerfile: Dockerfile    
+      context: .
+      dockerfile: src/Services/Catalog/Catalog.API/Dockerfile    
     depends_on:
       - sql.data
       - rabbitmq
@@ -228,8 +225,8 @@ services:
   marketing.api:
     image: eshop/marketing.api:${TAG:-latest}
     build:
-      context: ./src/Services/Marketing/Marketing.API
-      dockerfile: Dockerfile    
+      context: .
+      dockerfile: src/Services/Marketing/Marketing.API/Dockerfile    
     depends_on:
       - sql.data
       - nosql.data
@@ -239,8 +236,8 @@ services:
   webmvc:
     image: eshop/webmvc:${TAG:-latest}
     build:
-      context: ./src/Web/WebMVC
-      dockerfile: Dockerfile    
+      context: .
+      dockerfile: src/Web/WebMVC/Dockerfile    
     depends_on:
       - catalog.api
       - ordering.api
@@ -280,7 +277,7 @@ services:
 
 ```yml
 #docker-compose.override.yml (Extended config for DEVELOPMENT env.)
-version: '3'
+version: '3.4'
 
 services: 
 # Simplified number of services here: 
@@ -308,7 +305,7 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
       - ConnectionString=${ESHOP_AZURE_CATALOG_DB:-Server=sql.data;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word}
-      - PicBaseUrl=${ESHOP_AZURE_STORAGE_CATALOG_URL:-http://localhost:5101/api/v1/catalog/items/[0]/pic/}   
+      - PicBaseUrl=${ESHOP_AZURE_STORAGE_CATALOG_URL:-http://localhost:5202/api/v1/catalog/items/[0]/pic/}   
       - EventBusConnection=${ESHOP_AZURE_SERVICE_BUS:-rabbitmq}
       - EventBusUserName=${ESHOP_SERVICE_BUS_USERNAME}
       - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}         
@@ -350,18 +347,16 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
-      - CatalogUrl=http://catalog.api
-      - OrderingUrl=http://ordering.api
-      - BasketUrl=http://basket.api
-      - LocationsUrl=http://locations.api
+      - PurchaseUrl=http://webshoppingapigw
       - IdentityUrl=http://10.0.75.1:5105
-      - MarketingUrl=http://marketing.api                                                    
+      - MarketingUrl=http://webmarketingapigw
       - CatalogUrlHC=http://catalog.api/hc
       - OrderingUrlHC=http://ordering.api/hc
-      - IdentityUrlHC=http://identity.api/hc     
+      - IdentityUrlHC=http://identity.api/hc
       - BasketUrlHC=http://basket.api/hc
       - MarketingUrlHC=http://marketing.api/hc
       - PaymentUrlHC=http://payment.api/hc
+      - SignalrHubUrl=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5202
       - UseCustomizationData=True
       - ApplicationInsights__InstrumentationKey=${INSTRUMENTATION_KEY}
       - OrchestratorType=${ORCHESTRATOR_TYPE}
@@ -370,9 +365,8 @@ services:
       - "5100:80"
   sql.data:
     environment:
-      - MSSQL_SA_PASSWORD=Pass@word
+      - SA_PASSWORD=Pass@word
       - ACCEPT_EULA=Y
-      - MSSQL_PID=Developer
     ports:
       - "5433:1433"
   nosql.data:
@@ -390,7 +384,7 @@ services:
 
 在此範例中，開發覆寫組態會向主機公開一些連接埠、使用重新導向 URL 來定義環境變數，並指定用於開發環境的連接字串。 這些設定全部都只適用於開發環境。
 
-當您執行 `docker-compose up` (或從 Visual Studio 啟動它) 時，此命令會自動讀取覆寫，就像它要合併兩個檔案一樣。
+當您執行 `docker-compose up` (或從 Visual Studio 啟動它) 時，此命令會自動讀取覆寫，就像它要合併兩個檔案一樣。
 
 假設您想要將另一個 Compose 檔案用於生產環境，但具有不同的組態值、連接埠或連接字串。 您可以建立另一個覆寫檔案，例如名為 `docker-compose.prod.yml` 且具有不同設定和環境變數的檔案。  該檔案可能儲存在不同的 Git 存放庫中，或是由不同的小組進行管理和保護。
 
@@ -404,7 +398,7 @@ docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 
 #### <a name="using-environment-variables-in-docker-compose-files"></a>在 docker-compose 檔案中使用環境變數
 
-這十分方便 (尤其是在生產環境中)，可以從環境變數取得組態資訊，如先前範例所示。 您使用語法 \${MY\_VAR} 來參考 docker-compose 檔案中的環境變數。 docker-compose.prod.yml 檔案中的下行示範如何參考環境變數的值。
+這十分方便 (尤其是在生產環境中)，可以從環境變數取得組態資訊，如先前範例所示。 您可以使用語法 ${MY\_VAR} 來參考 docker-compose 檔案中的環境變數。 docker-compose.prod.yml 檔案中的下行示範如何參考環境變數的值。
 
 ```yml
 IdentityUrl=http://${ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP}:5105
@@ -422,16 +416,16 @@ ESHOP_EXTERNAL_DNS_NAME_OR_IP=localhost
 ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=10.121.122.92
 ```
 
-Docker-compose 預期 .env 檔案中每行的格式都是 &lt;變數&gt;=&lt;值&gt;。
+Docker-compose 預期 .env 檔案中每行的格式都是 \<變數\>=\<值\>。
 
 請注意，在執行階段環境中所設定的值會一律會覆寫 .env 檔案內所定義的值。 使用類似的方式，透過命令列命令引數所傳遞的值也會覆寫 .env 檔案中所設定的預設值。
 
 #### <a name="additional-resources"></a>其他資源
 
--   **Docker Compose 概觀**
+-   **Docker Compose 的概觀** <br/>
     [*https://docs.docker.com/compose/overview/*](https://docs.docker.com/compose/overview/)
 
--   **多個 Compose 檔案**
+-   **多個 Compose 檔案** <br/>
     [*https://docs.docker.com/compose/extends/\#multiple-compose-files*](https://docs.docker.com/compose/extends/#multiple-compose-files)
 
 ### <a name="building-optimized-aspnet-core-docker-images"></a>建置最佳化 ASP.NET Core Docker 映像
@@ -440,112 +434,41 @@ Docker-compose 預期 .env 檔案中每行的格式都是 &lt;變數&gt;=&lt;值
 
 ```
 FROM microsoft/dotnet
-
 WORKDIR /app
-
 ENV ASPNETCORE_URLS http://+:80
-
 EXPOSE 80
-
 COPY . .
-
 RUN dotnet restore
-
 ENTRYPOINT ["dotnet", "run"]
 ```
 
 這類 Dockerfile 將會運作。 不過，您可以持續最佳化映像，特別是生產映像。
 
-在容器和微服務模型中，您將會不斷地啟動容器。 因為容器是可處置的，所以容器的一般使用方式不會重新啟動睡眠中容器。 協調器 (例如 Docker Swarm、Kubernetes、DCOS 或 Azure Service Fabric) 只會建立映像的新執行個體。 這表示您需要在建置應用程式時對其先行編譯來進行最佳化，讓具現化程序更為快速。 容器在啟動時，應該就已準備好執行。 您不應該在執行階段從 dotnet CLI 使用 dotnet restore 和 dotnet build 命令進行還原並編譯，如許多 .NET Core 和 Docker 部落格文章中所見。
+在容器和微服務模型中，您將會不斷地啟動容器。 因為容器是可處置的，所以容器的一般使用方式不會重新啟動睡眠中容器。 協調器 (例如 Kubernetes 和 Azure Service Fabric) 只會建立映像的新執行個體。 這表示您需要在建置應用程式時對其先行編譯來進行最佳化，讓具現化程序更為快速。 容器在啟動時，應該就已準備好執行。 您不應該在執行階段從 dotnet CLI 使用 `dotnet restore` 和 `dotnet build` 命令進行還原和編譯，如許多 .NET Core 和 Docker 部落格文章中所見。
 
-.NET 小組已執行重要工作，讓 .NET Core 和 ASP.NET Core 成為容器最佳化架構。 .NET Core 不只是具有小型記憶體耗用量的輕量型架構；小組已將焦點放在啟動效能以及產生某些最佳化 Docker 映像 (例如 [Docker Hub](https://hub.docker.com/r/microsoft/aspnetcore/) 上提供的 [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) 映像)，與一般 [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) 或 [microsoft/nanoserver](https://github.com/dotnet/dotnet-docker/blob/master/1.0/nanoserver/runtime/Dockerfile) 映像相較之下。 [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) 映像會將 aspnetcore\_urls 自動設為連接埠 80，並且預先 ngend 快取組件；這兩個選項會導致更快速地啟動。
+.NET 小組已執行重要工作，讓 .NET Core 和 ASP.NET Core 成為容器最佳化架構。 .NET Core 不僅已是磁碟使用量低的輕量型架構，從 2.1 版起，小組還將重點放在針對三大情境將 Docker 映像最佳化，以便於 <span class="underline">microsoft/dotnet</span>的 Docker Hub 登錄中加以發佈：
+
+1.  **開發**：最優先事項是能夠快速進行整合與偵錯，而大小則次之。
+
+2.  **建置**：最優先事項是編譯應用程式，以及包含二進位檔和其他相依性來將二進位檔最佳化。
+
+3.  **生產**：因為重點在於能夠快速地部署和啟動容器，所以這些映像只限於二進位檔與執行應用程式所需的內容。
+
+為達到這項目標，.NET 小組目前在 [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) (Docker Hub) 提供三種基本變體：
+
+1.  **sdk**：適用於開發與建置環節。
+2.  **runtime**：適用於生產環節和
+3.  **runtime-deps**：適用於[獨立式應用程式](https://docs.microsoft.com/dotnet/core/deploying/index#self-contained-deployments-scd)的生產環節。
+
+執行階段映像也會將 aspnetcore\_urls 自動設為連接埠 80，並且預先 ngend 快取組件讓啟動更快速。
 
 #### <a name="additional-resources"></a>其他資源
 
--   **Building Optimized Docker Images with ASP.NET Core (使用 ASP.NET Core 建置最佳化 Docker 映像)**
+-   **Building Optimized Docker Images with ASP.NET Core** (使用 ASP.NET Core 建置最佳化 Docker 映像) <br/>
     [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
 
-### <a name="building-the-application-from-a-build-ci-container"></a>從 build (CI) 容器建置應用程式
-
-Docker 的另一個優點是您可以從預先設定的容器來建置應用程式，如圖 8-13 所示，因此您不需要建立組建電腦或 VM 來建置應用程式。 您可以在開發電腦上執行該組建容器，以使用或測試該組建容器。 但更有趣的是，您可以從 CI (持續整合) 管道使用相同的組建容器。
-
-![](./media/image14.png)
-
-**圖 8-13**. 編譯 .NET 二進位檔的 Docker build-container 
-
-在此情況下，我們提供 [microsoft/aspnetcore-build](https://hub.docker.com/r/microsoft/aspnetcore-build/) 映像，以用來編譯和建置 ASP.NET Core 應用程式。 輸出會放在根據可最佳化執行階段映像之 [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) 映像的映像中，如前所述。
-
-aspnetcore-build 映像包含編譯 ASP.NET Core 應用程式所需的所有項目，包含 .NET Core、ASP.NET SDK、npm、Bower、Gulp 等等。
-
-在建置階段，我們需要這些相依性。 但我們不想要在執行階段讓應用程式具有這些項目，因為它會讓映像不必要地變大。 在 eShopOnContainers 應用程式中，只要執行下列 docker-compose 命令，即可從容器中建置應用程式。
-
-```
-  docker-compose -f docker-compose.ci.build.yml up
-```
-
-圖 8-14 顯示在命令列執行的這個命令。
-
-![](./media/image15.png)
-
-**圖 8-14** 從容器中建置 .NET 應用程式
-
-如您所見，正在執行的容器是 ci-build\_1 容器。 這是根據 aspnetcore-build 映像，因此它可以在該容器內編譯和建置整個應用程式，而不是從您的電腦。 這是它在 Linux 中建置和編譯 .NET Core 專案的實際原因，因為該容器將在預設 Docker Linux 主機上執行。
-
-該映像的 [docker-compose.ci.build.yml](https://github.com/dotnet/eShopOnContainers/blob/master/docker-compose.ci.build.yml) 檔案 (eShopOnContainers 的一部分) 包含下列程式碼。 您可以看到它使用 [microsoft/aspnetcore-build](https://hub.docker.com/r/microsoft/aspnetcore-build/) 映像來啟動組建容器。
-
-```yml
-version: '3'
-
-services:
-
-  ci-build:
-
-    image: microsoft/aspnetcore-build:2.0
-
-    volumes:
-      - .:/src
-
-    working_dir: /src
-
-    command: /bin/bash -c "pushd ./src/Web/WebSPA && npm rebuild node-sass && popd && dotnet restore ./eShopOnContainers-ServicesAndWebApps.sln && dotnet publish ./eShopOnContainers-ServicesAndWebApps.sln -c Release -o ./obj/Docker/publish"
-
-```
-
-* 從 **.NET Core 2.0** 開始，執行 `dotnet publish` 命令時，會自動執行 `dotnet restore` 命令。
-
-建置容器在啟動並執行之後，會對解決方案中的所有專案執行 .NET SDK dotnet restore 和 dotnet publish 命令，以編譯 .NET 位元。 在此情況下，因為 eShopOnContainers 也有根據用戶端程式碼之 TypeScript 和 Angular 的 SPA，所以也需要檢查 JavaScript 與 npm 的相依性，但該動作與 .NET 位元無關。
-
-dotnet publish 命令會在每個專案的資料夾內建置已編譯的輸出，並將其發行至 ../obj/Docker/publish 資料夾，如圖 8-15 所示。
-
-![](./media/image16.png)
-
-**圖 8-15**. dotnet publish 命令所產生的二進位檔
-
-#### <a name="creating-the-docker-images-from-the-cli"></a>從 CLI 建立 Docker 映像
-
-將應用程式輸出發行至相關資料夾 (在每個專案內) 之後，下一步是實際建置 Docker 映像。 若要這樣做，您可以使用 docker-compose build 和 docker-compose up 命令，如圖 8-16 所示。
-
-![](./media/image17.png)
-
-**圖 8-16** 建置 Docker 映像並執行容器
-
-在圖 8-17 中，您可以看到 docker-compose build 命令執行方式。
-
-![](./media/image18.png)
-
-**圖 8-17**. 使用 docker-compose build 命令建置 Docker 映像
-
-docker-compose build 與 docker-compose up 命令之間的差異在於 docker-compose up 會同時建置並啟動映像。
-
-當您使用 Visual Studio 時，所有這些步驟都是在幕後執行。 Visual Studio 會編譯 .NET 應用程式、建立 Docker 映像，並將容器部署至 Docker 主機。 Visual Studio 提供額外功能，例如，直接從 Visual Studio 偵錯在 Docker 中執行之容器的能力。
-
-這裡的整體心得是您可以使用 CI/CD 管道建置應用程式的相同方式來建置應用程式：從容器，而不是從本機電腦。 建立映像之後，您只需要使用 docker-compose up 命令來執行 Docker 映像。
-
-#### <a name="additional-resources"></a>其他資源
-
--   **Building bits from a container: Setting the eShopOnContainers solution up in a Windows CLI environment (dotnet CLI, Docker CLI and VS Code) (從容器建置位元：在 Windows CLI 環境 (dotnet CLI、Docker CLI 和 VS Code) 中設定 eShopOnContainers 解決方案)**
-    [*https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code)*](https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code))
-
+-   **建置 .NET Core 應用程式的 Docker 映像** <br/>
+    [*https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images*](https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images)
 
 >[!div class="step-by-step"]
 [上一頁](data-driven-crud-microservice.md)

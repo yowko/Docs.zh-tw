@@ -3,12 +3,12 @@ title: 標準的 .NET 事件模式
 description: 了解 .NET 事件模式、如何建立標準事件來源，以及如何訂閱和處理程式碼中的標準事件。
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 0b10c440f4d05533032aa94819ec879f6a1ca2a4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 16a091dabe34a064ab3ee65a6d9f3e0ab36f1db4
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266763"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297032"
 ---
 # <a name="standard-net-event-patterns"></a>標準的 .NET 事件模式
 
@@ -117,7 +117,7 @@ EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
 
 ## <a name="adding-another-event-declaration"></a>新增另一個事件宣告
 
-我們要再新增一項功能，示範事件的其他語言慣例。 新增 `Search()` 方法的多載，此方法會周遊所有子目錄搜尋檔案。
+我們要再新增一項功能，示範事件的其他語言慣例。 新增 `Search` 方法的多載，此方法會周遊所有子目錄搜尋檔案。
 
 這在有許多子目錄的目錄中可能會是冗長的作業。 新增在每個新目錄搜尋開始時要引發的事件。 這可讓訂閱者追蹤進度，將使用者更新為要處理的使用者。 您到目前為止建立的所有範例都是公用的。 讓我們把這個變成內部事件。 這表示您也可以將用於引數的類型變成內部。
 
@@ -133,7 +133,7 @@ EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
 
 就很多方面而言，此處所撰寫的程式碼，可以對應到編譯器針對先前欄位事件定義所產生的程式碼。 您建立事件所用的語法和用於[屬性](properties.md)的語法極其相似。 請注意，處理常式有不同的名稱︰`add` 和 `remove`。 分別表示訂閱事件，或取消訂閱事件。 請注意，您也必須宣告私用支援欄位來儲存事件變數。 它會初始化為 Null。
 
-接下來，我們要新增 Search() 方法的多載，此方法會周遊子目錄並引發這兩個事件。 達成這個目的最簡單方式，是使用預設引數來指定您想要搜尋所有目錄︰
+接下來，我們要新增 `Search` 方法的多載，此方法會周遊子目錄並引發這兩個事件。 達成這個目的最簡單方式，是使用預設引數來指定您想要搜尋所有目錄︰
 
 [!code-csharp[SearchImplementation](../../samples/csharp/events/Program.cs#FinalImplementation "Implementation to search directories")]
 

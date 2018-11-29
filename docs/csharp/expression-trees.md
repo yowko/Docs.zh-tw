@@ -1,5 +1,5 @@
 ---
-title: Expression Trees
+title: 運算式樹狀架構
 description: 了解 .NET Core 中的運算式樹狀架構，以及如何使用它們來表示您可以檢查、修改和執行的程式碼結構。
 ms.date: 06/20/2016
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
@@ -10,7 +10,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/28/2018
 ms.locfileid: "50190732"
 ---
-# <a name="expression-trees"></a>Expression Trees
+# <a name="expression-trees"></a>運算式樹狀架構
 
 如果您使用過 LINQ，您會有豐富的程式庫使用經驗，其中 `Func` 類型是 API 集合的一部分 (如果您不熟悉 LINQ，則可能需要閱讀 [LINQ 教學課程](linq/index.md)及有關 [Lambda 運算式](lambda-expressions.md)的教學課程，再開始進行本主題)。「運算式樹狀架構」提供與函式引數更豐富的互動。
 

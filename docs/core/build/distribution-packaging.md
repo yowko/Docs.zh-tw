@@ -4,16 +4,16 @@ description: 了解如何封裝、命名以及建立 .NET Core 版本以進行�
 author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: df1ba6a93106cd6b3ceafa93b7c548287878c3fe
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 41e8729d3058c2e3e1ea1cab9a8f28b3062bb93c
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840484"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297214"
 ---
 # <a name="net-core-distribution-packaging"></a>.NET Core 發佈封裝
 
-隨著 .NET Core 可在越來越多的平台上使用，了解如何封裝、命名及建立 .NET Core 版本是有用的。 如此一來，套件維護人員可以協助確保一致的體驗，無論使用者選擇在何處執行 .NET。
+隨著 .NET Core 可在越來越多的平台上使用，了解如何封裝、命名和建立 .NET Core 版本是有用的。 如此一來，套件維護人員可以協助確保一致的體驗，無論使用者選擇在何處執行 .NET。
 
 ## <a name="disk-layout"></a>磁碟配置
 
@@ -46,7 +46,7 @@ ms.locfileid: "48840484"
 
 - (1) **dotnet** 主機 (也稱為"muxer") 有兩個不同的角色：啟用執行階段以啟動應用程式，以及啟用 SDK 將命令分派給它。 主機是原生可執行檔 (`dotnet.exe`)。
 
-有單一主機時，大部分的其他元件都會位在已建立版本的目錄 (2,3,5,6) 中。 這些表示系統上可以有多個版本，因為它們是並排安裝。
+有單一主機時，大部分的其他元件都會位在已建立版本的目錄 (2,3,5,6) 中。 這表示因為版本是並存安裝的，所以可以存在同一個系統上。
 
 - (2) **host/fxr/\<fxr 版本>** 包含主機所使用的架構解析邏輯。 主機會使用已安裝的最新 hostfxr。 hostfxr 負責在執行 .NET Core 應用程式時選取適當的執行階段。 例如，針對 .NET Core 2.0.0 所建置的應用程式將會使用可用的 2.0.5 執行階段。 同樣地，hostfxr 會在開發期間選取適當的 SDK。
 

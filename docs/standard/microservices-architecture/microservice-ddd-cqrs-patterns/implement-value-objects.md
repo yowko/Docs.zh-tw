@@ -1,37 +1,37 @@
 ---
 title: 實作值物件
-description: 容器化 .NET 應用程式的 .NET 微服務架構 | 實作值物件
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 深入了解使用新 Entity Framework 功能實作值物件的詳細資料與選項。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/12/2017
-ms.openlocfilehash: 4ba2e48e742e580a1c96743fa89e413c488b8dc7
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/08/2018
+ms.openlocfilehash: 057e2e65f975c1de8f332b77c8a23d07329381e6
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106719"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297474"
 ---
-# <a name="implementing-value-objects"></a>實作值物件
+# <a name="implement-value-objects"></a>實作值物件
 
 如前面各節中討論的實體和彙總，身分識別是實體的基礎。 不過，系統中有許多物件和資料項目不需要身分識別和身分識別追蹤，例如值物件。
 
 值物件可以參考其他實體。 例如，在產生描述如何從某點到另一點的路由的應用程式中，該路由就是值物件。 它會是特定路由的點快照集，但此建議的路由不會有身分識別，雖然它在內部參考縣 (市)、街道等實體。
 
-圖 9-13 顯示訂單彙總內的 Address 值物件。
+圖 7-13 顯示 Order 彙總內的 Address 值物件。
 
-![](./media/image14.png)
+![Order 彙總內的 Address 值物件。](./media/image14.png)
 
-**圖 9-13**。 訂單彙總內的 Address 值物件
+**圖 7-13**。 訂單彙總內的 Address 值物件
 
-如圖 9-13 所示，實體通常是由多個屬性組成。 例如，`Order` 實體可以模型化成具身分識別的實體，並且在內部由一組屬性組成，例如 OrderId、OrderDate、OrderItems 等等。但地址，僅由國家/地區、街道、縣 (市) 等等組成的複雜值，且在此網域中沒有任何身分識別，必須模型化並視為值物件。
+如圖 7-13 所示，實體通常是由多個屬性組成。 例如，`Order` 實體可以模型化成具身分識別的實體，並且在內部由一組屬性組成，例如 OrderId、OrderDate、OrderItems 等等。但地址 (僅由國家/地區、街道、縣市等等組成的複雜值，且在此網域中沒有任何身分識別) 必須模型化並視為值物件。
 
 ## <a name="important-characteristics-of-value-objects"></a>值物件的重要特性
 
 值物件有兩個主要特性：
 
--   它們沒有任何身分識別。
+- 它們沒有任何身分識別。
 
--   它們具有不變性。
+- 它們具有不變性。
 
 第一個特性已討論過。 不變性是重要需求。 物件一旦建立，值物件的值必須不可變。 因此，在建構物件時，您必須提供必要的值，但在物件存留期間絕不能讓它們變更。
 
@@ -102,11 +102,11 @@ public abstract class ValueObject
 ```csharp
 public class Address : ValueObject
 {
-    public String Street { get; }
-    public String City { get; }
-    public String State { get; }
-    public String Country { get; }
-    public String ZipCode { get; }
+    public String Street { get; private set; }
+    public String City { get; private set; }
+    public String State { get; private set; }
+    public String Country { get; private set; }
+    public String ZipCode { get; private set; }
 
     private Address() { }
 
@@ -131,13 +131,19 @@ public class Address : ValueObject
 }
 ```
 
+您可以看到此 Address 的值物件實作沒有身分識別，因此在 Address 類別，甚至是 ValueObject 類別也沒有識別碼欄位。
+
+類別中不能沒有識別碼欄位供 Entity Framework 使用，直到 EF Core 2.0 出現，才讓沒有識別碼的值物件實作過程變得順利許多。 這正是下一節的說明。 
+
+有人認為值物件 (固定) 應為唯讀 (亦即 get-only 屬性)，而實際上正是如此。 然而，值物件通常會經過序列化及還原序列化以通過訊息佇列，而且會是唯讀的，讓還原序列化程式停止指派值，因而能停留在剛好夠用的唯讀私人集合狀態。
+
 ## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20"></a>如何在使用 EF Core 2.0 的資料庫中保存值物件
 
 您只看到如何在您的網域模型中定義值物件。 但您如何透過通常以身分識別鎖定實體的 Entity Framework (EF) Core，在資料庫中真正保存它？
 
 ### <a name="background-and-older-approaches-using-ef-core-11"></a>使用 EF Core 1.1 的背景和較舊的方法
 
-做為背景，使用 EF Core 1.0 和 1.1 的限制，是您無法像傳統 .NET Framework 中 EF 6.x 所定義的那樣使用[複雜類型](xref:System.ComponentModel.DataAnnotations.Schema.ComplexTypeAttribute)。 因此，如果使用 EF Core 1.0 或 1.1，您需要使用識別碼欄位將您的值物件儲存為 EF 實體。 然後，它會看起來更像是沒有任何身分識別的值物件，您可以隱藏它的識別碼，以便您明白表示值物件的識別碼在網域模型中不重要。 您可以將識別碼當成 [shadow property](https://docs.microsoft.com/ef/core/modeling/shadow-properties ) (shadow 屬性) 使用，隱藏該識別碼。 因為已在 EF 基礎結構層級設定模型中隱藏識別碼的組態，所以對您的網域模型而言，它幾乎是不存在的。
+追根究柢，使用 EF Core 1.0 和 1.1 時有一項限制，就是您無法使用在傳統 .NET Framework 中 EF 6.x 定義的[複雜類型](xref:System.ComponentModel.DataAnnotations.Schema.ComplexTypeAttribute)。 因此，如果使用 EF Core 1.0 或 1.1，您需要使用識別碼欄位將您的值物件儲存為 EF 實體。 然後，它會看起來更像是沒有任何身分識別的值物件，您可以隱藏它的識別碼，以便您明白表示值物件的識別碼在網域模型中不重要。 您可以將識別碼當成 [shadow property](https://docs.microsoft.com/ef/core/modeling/shadow-properties ) (shadow 屬性) 使用，隱藏該識別碼。 因為已在 EF 基礎結構層級設定模型中隱藏識別碼的組態，所以對您的網域模型而言，它幾乎是不存在的。
 
 在 eShopOnContainers 的初始版本中 (.NET Core 1.1)，已在基礎結構專案中使用 Fluent API，以下列方式在 DbContext 層級實作 EF Core 基礎結構所需要的隱藏識別碼。 因此，從網域模型的觀點而言，識別碼已隱藏，但仍會出現在基礎結構中。
 
@@ -164,18 +170,17 @@ EF Core 2.0 有更好的新方法保存值物件。
 
 EF Core 從 2.0 版開始新增擁有的實體類型功能。
 
-擁有的實體類型可讓您在自己的任何實體內，對應那些在網域模型中未明確定義自己身分識別且用為屬性的類型，例如值物件。 擁有的實體類型會與另一個實體類型共用相同的 CLR 類型。 包含定義導覽的實體是擁有者實體。 查詢擁有者時，預設包含擁有的類型。
+自有實體類型可讓您在自己的所有實體內，對應那些自己身分識別未在網域模型中明確定義並用作屬性的類型，例如值物件。 自有實體類型與其他實體類型共用相同的 CLR 類型 (亦即其僅為一般類別)。 包含定義導覽的實體是擁有者實體。 查詢擁有者時，預設包含擁有的類型。
 
-如果只看網域模型，擁有的類型看似沒有任何身分識別。
-不過，擁有的類型其實有身分識別，但擁有者導覽屬性是此身分識別的一部分。
+如果只看網域模型，擁有的類型看似沒有任何身分識別。 不過，擁有的類型其實有身分識別，但擁有者導覽屬性是此身分識別的一部分。
 
-專屬類型的執行個體身分識別不是只有它們自己。 它包含三個元件：
+自有類型的執行個體身分識別不完全屬於它們自己。 它包含三個元件：
 
 - 擁有者的身分識別
 
 - 指向它們的導覽屬性
 
-- 如果是擁有的類型集合則為獨立元件 (EF Core 2.0 尚不支援)。
+- 如果是自有類型的集合，則為獨立元件 (EF Core 2.0 尚不支援，即將於 2.2 推出)。
 
 例如，在 eShopOnContainers 的訂購網域模型中，屬於訂單實體的一部分，Address 值物件在擁有者實體內實作為擁有的實體類型，也就是訂單實體。 Address 是網域模型中未定義任何身分識別屬性的類型。 它用做訂單類型的屬性，指定特定訂單的送貨地址。
 
@@ -266,64 +271,64 @@ public class Address
 
 ### <a name="additional-details-on-owned-entity-types"></a>有關擁有的實體類型的其他詳細資料
 
-•   當您使用 OwnsOne fluent API 將導覽屬性設定為特定類型時，會定義擁有的類型。
+- 當您使用 OwnsOne fluent API 將導覽屬性設定為特定類型時，會定義自有類型。
 
-•   在我們的中繼資料模型中，擁有的類型的定義下列項目的合成物：擁有者類型、導覽屬性，以及擁有類型的 CLR 類別。
+- 在我們的中繼資料模型中，自有類型的定義由下列項目組成：擁有者類型、導覽屬性，以及自有類型的 CLR 類型。
 
-•   在我們的堆疊中，擁有的類別執行個體的身分識別 (金鑰) 是下列項目的合成物：擁有者類型的身分識別以及擁有類型的定義。
+- 在我們的堆疊中，自有類型執行個體的身分識別 (金鑰) 是由擁有者類型的身分識別及自有類型的定義所組成。
 
 #### <a name="owned-entities-capabilities"></a>擁有的實體的功能：
 
-•   擁有的類型可以參考其他實體，可以是擁有的 (巢狀的擁有類型) 或非擁有的 (其他實體的規則參考導覽屬性)。
+- 自有類型可以參考其他實體，可以是自有 (巢狀自有類型) 或非自有 (對其他實體的一般參考導覽屬性)。
 
-•   您可以透過個別的導覽屬性，將相同的 CLR 類型對應為同一個擁有者實體中的擁有類型。
+- 您可以透過個別的導覽屬性，將相同的 CLR 類型對應為同一個擁有者實體中的不同自有類型。
 
-•   資料表分割按慣例設定，但您可以選擇退出，方法是使用 ToTable 將擁有的類型對應到不同的資料表。
+- 資料表分割會按慣例設定，但您可以選擇不這麼做，而使用 ToTable 將自有類型對應至不同的資料表。
 
-•   對擁有的類型自動執行積極式載入，也就是不需要對查詢呼叫 Include()。
+- 積極式載入會自動在自有類型上執行，亦即不需要對查詢呼叫 Include()。
+
+- 到 EF Core 2.1 為止，可使用屬性 \[Owned\] 來設定
 
 #### <a name="owned-entities-limitations"></a>擁有的實體的限制：
 
-•   您無法建立擁有類型的 DbSet<T> (依設計)。
+- 您無法建立自有類型的 DbSet\<T\> (特意設計)。
 
-•   您無法對擁有的類型呼叫 ModelBuilder.Entity<T>() (依目前的設計)。
+- 您無法在自有類型上呼叫 ModelBuilder.Entity\<T\>() (目前特意設計)。
 
-•   尚無任何擁有類型的集合 (但 EF Core 2.0 後的版本會支援)。
+- 尚無任何自有類型的集合 (到 EF Core 2.1 為止，但 2.2 後的版本會予以支援)。
 
-•   不支援透過屬性設定它們。
+- 不支援選擇性 (亦即可為 null) 的自有類型，其在相同的資料表中與擁有者對應 (亦即使用資料表分割)。 這是因為對應會分別為各個屬性執行，而我們沒有整體 null 複雜值的個別防衛單位。
 
-•   不支援選擇性 (也就是可為 null) 的擁有類型，它們使用相同資料表中的擁有者對應 (即使用資料表分割)。 這是因為我們的 null 沒有個別的 Sentinel。
-
-•   不支援擁有類型的繼承對應，但您應該能夠對應兩種同一繼承階層的分葉類型，將它們當做不同的擁有類型。 EF Core 不會推論出它們屬於同一階層的事實。
+- 不支援自有類型的繼承對應，但您應該能夠將兩種同一繼承階層的分葉類型當成不同的自有類型對應。 EF Core 不會推論出它們屬於同一階層的事實。
 
 #### <a name="main-differences-with-ef6s-complex-types"></a>EF6 複雜類型的主要差異
 
-•   資料表分割為選擇性，也就是它們可以選擇性地對應到不同的資料表，但仍然為擁有的類型。
+- 資料表分割為選擇性，亦即其可以選擇性地對應至不同的資料表，但仍為自有類型。
 
-•   它們可以參考其他實體 (也就是它們可以做為與其他非擁有類型關聯性中的相依端)。
-
+- 它們可以參考其他實體 (也就是可在其他非自有類型的關聯性中當作相依端)。
 
 ## <a name="additional-resources"></a>其他資源
 
--   **Martin Fowler：ValueObject 模式**
-    [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
+- **Martin Fowler：ValueObject 模式** \
+  [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
--   **Eric Evans：Domain-Driven Design: Tackling Complexity in the Heart of Software.** (書籍；包括值物件的探討) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+- **Eric Evans：Domain-Driven Design: Tackling Complexity in the Heart of Software.** (書籍；包含值物件的探討) \
+  [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
--   **Vaughn Vernon：Implementing Domain-Driven Design.** (書籍；包括值物件的探討) [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)
+- **Vaughn Vernon：Implementing Domain-Driven Design.** (書籍；包含值物件的探討) \
+  [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)
 
--   **陰影屬性**
-    [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
+- **陰影屬性** \
+  [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
 
--   **複雜類型和/或值物件**。 探討 EF Core GitHub 存放庫 (問題索引標籤) [*https://github.com/aspnet/EntityFramework/issues/246*](https://github.com/aspnet/EntityFramework/issues/246)
+- **複雜類型和/或值物件**。 EF Core GitHub 存放庫 ([問題] 索引標籤) 的探討 \
+  [*https://github.com/aspnet/EntityFramework/issues/246*](https://github.com/aspnet/EntityFramework/issues/246)
 
--   **ValueObject.cs.** eShopOnContainers 中的基底值物件類別。
-    [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs)
+- **ValueObject.cs.** eShopOnContainers 中的基底值物件類別。**  \
+  [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs)
 
--   **網址類別。** eShopOnContainers 中的範列值物件類別。
-    [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs)
-
-
+- **網址類別。** eShopOnContainers 中的範列值物件類別。 \
+  [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs)
 
 >[!div class="step-by-step"]
 [上一頁](seedwork-domain-model-base-classes-interfaces.md)
