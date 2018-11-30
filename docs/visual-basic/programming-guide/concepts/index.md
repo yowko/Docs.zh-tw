@@ -2,12 +2,12 @@
 title: 程式設計概念 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cc9cac84-61f6-476e-b8c7-9bae7749bd90
-ms.openlocfilehash: 85e23fcca0607e9f42daa94334c983462f6cf881
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fbdf2d6de7abf1d8d80ca3e88621fa569248996c
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643347"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672052"
 ---
 # <a name="programming-concepts-visual-basic"></a>程式設計概念 (Visual Basic)
 本節說明 Visual Basic 語言的程式設計概念。  
@@ -28,7 +28,6 @@ ms.locfileid: "33643347"
 |[物件導向程式設計 (Visual Basic)](../../../visual-basic/programming-guide/concepts/object-oriented-programming.md)|說明一般的物件導向概念，包括封裝、繼承和多型。|  
 |[反映 (Visual Basic)](../../../visual-basic/programming-guide/concepts/reflection.md)|說明如何使用反映來動態建立型別的執行個體、將型別繫結至現有的物件，或從現有的物件取得型別，並叫用其方法或存取其欄位及屬性。|
 |[序列化 (Visual Basic)](../../../visual-basic/programming-guide/concepts/serialization/index.md)|說明二進位、XML 及 SOAP 序列化的重要概念。|  
-|[執行緒 (Visual Basic)](../../../visual-basic/programming-guide/concepts/threading/index.md)|提供 .NET 執行緒模式的概觀，並示範如何撰寫能同時執行多個工作的程式碼，以提升應用程式的效能和回應性。|  
   
 ## <a name="related-sections"></a>相關章節  
   

@@ -3,11 +3,11 @@ title: 編譯器指示詞 (F#)
 description: 深入了解F#語言前置處理器指示詞、 條件式編譯指示詞、 line 指示詞和編譯器指示詞。
 ms.date: 05/16/2016
 ms.openlocfilehash: bb23096e03584f2a50cfe069075ba94a35c4753c
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296490"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672091"
 ---
 # <a name="compiler-directives"></a>編譯器指示詞
 

@@ -2,12 +2,12 @@
 title: 在 SQL Server 中授與資料列層級權限
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: 4a4b45e13a16b357be28a1383648e98890567ea9
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 0ec68f013d08e3939d48a820b9fd52ce27a4f12d
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43873701"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52671962"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>在 SQL Server 中授與資料列層級權限
 在某些案例中，相較於單純地授與、撤銷或拒絕權限，您需要以更細微的層級來控制資料存取。 例如，醫院資料庫應用程式可能需要限制個別醫生只能存取與其病患相關的資訊。 類似的需求存在許多環境中，包括財務、法律、政府和軍事應用程式中。 為了協助解決這些案例，SQL Server 2016 提供 [資料列層級安全性](https://msdn.microsoft.com/library/dn765131.aspx) 功能，以一個安全性原則來簡化並集中管理資料列層級存取邏輯。 針對舊版 SQL Server，您可以使用檢視來制定資料列層級篩選，以達到類似的功能。  
@@ -21,7 +21,7 @@ ms.locfileid: "43873701"
   
 -   啟用資料列層級篩選：  
   
-    -   如果您使用 SQL Server 2016 或更新版本，或是[Azure SQL Database](https://docs.microsoft.com/azure/sql-database/)，建立安全性原則，將 限制的資料列的資料表上的述詞傳回給那些符合目前的資料庫使用者 （使用 CURRENT_USER內建函式） 或目前的登入名稱 （使用 suser_sname （） 內建函式）：  
+    -   如果您使用 SQL Server 2016 (含) 以上版本或 [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/)，請建立一個安全性原則將述詞加入資料表中，以限制傳回的資料列必須符合目前的資料庫使用者 (使用 CURRENT_USER() 內建函式) 或目前的登入名稱 (使用 SUSER_SNAME() 內建函式)：  
   
         ```tsql  
         CREATE SCHEMA Security  
@@ -58,13 +58,6 @@ ms.locfileid: "43873701"
 -   針對 `public` 角色拒絕資料表和檢視 (如果適用) 的所有權限。 使用者將無法從其他資料庫角色中繼承權限，因為篩選述詞是以使用者或登入名稱 (而非角色) 為基礎。  
   
 -   將預存程序的 EXECUTE 授與資料庫角色。 使用者只能透過提供的預存程序來存取資料。  
-  
-## <a name="external-resources"></a>外部資源  
- 如需詳細資訊，請參閱下列資源。  
-  
-|||  
-|-|-|  
-|[在分類資料庫使用 SQL Server 2005 中實作資料列和資料格層級安全性](https://go.microsoft.com/fwlink/?LinkId=98227)SQL Server TechCenter 網站上。|說明如何使用列和資料格層級安全性來符合分類資料庫的安全性需求。|  
   
 ## <a name="see-also"></a>另請參閱  
  [資料列層級安全性](https://msdn.microsoft.com/library/dn765131.aspx)  

@@ -1,13 +1,13 @@
 ---
 title: 判斷提示 (F#)
-description: 了解如何使用 '判斷提示' 運算式做為偵錯功能在 F# 程式設計語言中測試運算式。
+description: 了解如何使用 '判斷提示' 運算式做為偵錯功能的測試中的運算式F#程式設計語言。
 ms.date: 05/16/2016
-ms.openlocfilehash: 85b1e839bfd19bada48b7f1821d15ddd8fa77754
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: fbaf038f08cfc74e6cb262c110322dc586813c0c
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48842472"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52671899"
 ---
 # <a name="assertions"></a>判斷提示
 
@@ -27,10 +27,10 @@ assert condition
 
 判斷提示檢查偵錯模式，在編譯時，才會啟用也就是說，如果常數`DEBUG`定義。 在專案系統中，根據預設，`DEBUG`常數定義在偵錯組態，但不是在發行組態。
 
-無法使用 F# 例外狀況處理攔截判斷提示失敗錯誤。
+無法攔截判斷提示失敗錯誤，使用F#例外狀況處理。
 
->[!NOTE]
-`assert`函式會解析成<xref:System.Diagnostics.Debug.Assert*?displayProperty=nameWithType>。
+> [!NOTE]
+> `assert`函式會解析成<xref:System.Diagnostics.Debug.Assert*?displayProperty=nameWithType>。
 
 ## <a name="example"></a>範例
 

@@ -1,13 +1,13 @@
 ---
 title: 已區分的聯集 (F#)
-description: 了解如何使用 F# 差別聯集。
+description: 了解如何使用F#差別聯集。
 ms.date: 05/16/2016
-ms.openlocfilehash: 06d6c154790f659c0c7ff73290357ab50a134362
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: f833539f2e31ffc6db4182bdbd2088e6dc2bb2cc
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43788119"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672241"
 ---
 # <a name="discriminated-unions"></a>已區分的聯集
 
@@ -51,7 +51,7 @@ let prism = Prism(5., 2.0, height = 3.0)
 
 此程式碼示範您可以使用具名的欄位初始化，或您可以依賴宣告中的欄位順序，並只接著每個欄位提供值。 建構函式呼叫`rect`在先前的程式碼會使用具名的欄位，但建構函式呼叫的`circ`使用順序。 您可以混合排序的欄位，並命名為欄位，如建構`prism`。
 
-`option`類型是 F# 核心程式庫中的簡單已區分聯集。 `option`類型宣告，如下所示。
+`option`類型是簡單的已區分聯集，在F#核心程式庫。 `option`類型宣告，如下所示。
 
 ```fsharp
 // The option type is a discriminated union.
@@ -84,7 +84,7 @@ let getShapeHeight shape =
 
 ### <a name="unwrapping-discriminated-unions"></a>解除包裝的差別聯的集
 
-在 F# 差別聯集通常用於在領域模型中包裝單一類型。 它可輕易擷取透過模式比對以及基礎值。 您不需要使用比對運算式，針對單一案例：
+在F#差別聯集通常用於在領域模型中包裝單一類型。 它可輕易擷取透過模式比對以及基礎值。 您不需要使用比對運算式，針對單一案例：
 
 ```fsharp
 let ([UnionCaseName] [values]) = [UnionValue]
@@ -95,15 +95,23 @@ let ([UnionCaseName] [values]) = [UnionValue]
 ```fsharp
 type ShaderProgram = | ShaderProgram of id:int
 
-let someMethodUsingShaderProgram shaderProgram =
+let someFunctionUsingShaderProgram shaderProgram =
     let (ShaderProgram id) = shaderProgram
     // Use the unwrapped value
-    ..
+    ...
+```
+
+模式比對也允許直接在函式參數，所以您可以解除包裝單一案例那里：
+
+```fsharp
+let someFunctionUsingShaderProgram (ShaderProgram id) =
+    // Use the unwrapped value
+    ...
 ```
 
 ## <a name="struct-discriminated-unions"></a>結構差別聯集
 
-從 F# 4.1 開始，您也可以表示差別等位為結構。  做法是使用`[<Struct>]`屬性。
+開頭為F#4.1，您也可以表示差別等位做為結構。  做法是使用`[<Struct>]`屬性。
 
 ```fsharp
 [<Struct>]
