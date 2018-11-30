@@ -5,12 +5,12 @@ helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-ms.openlocfilehash: e0ed2d678363a29bb870a496846fc6f054769a4b
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 2c3f22cb2a011aea9f0fff9ef49d1fd780d6d832
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47111109"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52671957"
 ---
 # <a name="arrays-c-programming-guide"></a>陣列 (C# 程式設計手冊)
 
@@ -54,6 +54,5 @@ ms.locfileid: "47111109"
   
 ## <a name="see-also"></a>請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
-- [集合](../../../csharp/programming-guide/concepts/collections.md)  
-- [Array 集合類型 (英文)](https://msdn.microsoft.com/library/8a9964de-8941-47b1-a3cf-a01bc88db9e8)
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [集合](../../../csharp/programming-guide/concepts/collections.md)
