@@ -4,12 +4,12 @@ description: Microsoft 平台和工具的容器化 Docker 應用程式生命週�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: a2fe2c325377ec49f89199ad2e36c950ebab6a24
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 17dabb143a1948cbcfa748b4c3bbcff5a57d2c24
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50757344"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52743265"
 ---
 # <a name="monolithic-applications"></a>整合型應用程式
 
@@ -69,7 +69,6 @@ ms.locfileid: "50757344"
 
 圖 4-4 也會顯示發行流程將透過容器登錄庫，它可以是 Azure Container Registry （登錄接近您在 Azure 中的部署和受保護的 Azure Active Directory 群組和帳戶） 或任何其他的 Docker 登錄的映像推送像是 Docker Hub 或內部部署的登錄。
 
-
 >[!div class="step-by-step"]
-[上一頁](common-container-design-principles.md)
-[下一頁](state-and-data-in-docker-applications.md)
+>[上一頁](common-container-design-principles.md)
+>[下一頁](state-and-data-in-docker-applications.md)
