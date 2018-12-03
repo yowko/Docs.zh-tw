@@ -4,12 +4,12 @@ description: 了解建置 Web 應用程式時，如何在傳統 Web 應用程式
 author: ardalis
 ms.author: wiwagn
 ms.date: 6/28/2018
-ms.openlocfilehash: 40b17d07b008c2a3a9457bffc26b612e6b5c9fe5
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: abeee719c15263fea04a3bcf80a6e41c43b640d2
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404141"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52745299"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>在傳統 Web 應用程式和單頁應用程式 (SPA) 之間作選擇
 
@@ -73,7 +73,7 @@ SPAs 可以支援豐富的用戶端功能，且當使用者採取動作或在應
 > - **Angular**  
 >   <https://angular.io>
 > - **JavaScript 架構的比較**  
->   <https://javascriptreport.com/the-ultimate-guide-to-javascript-frameworks/>
+>   <https://jsreport.io/the-ultimate-guide-to-javascript-frameworks/>
 
 **您的應用程式必須已針對其他 (內部或公開) 用戶端公開 API**
 
@@ -91,5 +91,5 @@ SPAs 可以支援豐富的用戶端功能，且當使用者採取動作或在應
 | 內容豐富且複雜的使用者介面需求            | **有限**             | **適用**             |
 
 >[!div class="step-by-step"]
-[上一頁](modern-web-applications-characteristics.md)
-[下一頁](architectural-principles.md)
+>[上一頁](modern-web-applications-characteristics.md)
+>[下一頁](architectural-principles.md)

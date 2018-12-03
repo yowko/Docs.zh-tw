@@ -4,12 +4,12 @@ description: 發行 .NET 程式庫到 NuGet 的最佳做法建議。
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: e0244d2a9d09382c289c74a45969bca0a1311445
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.openlocfilehash: 036aa99c89790274628c40824be7e230d81850fe
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "50757305"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672065"
 ---
 # <a name="publishing-a-nuget-package"></a>發行 NuGet 套件
 
@@ -43,5 +43,5 @@ NuGet 套件發行之後可從套件存放庫取用。 雖然 NuGet.org 是最�
 **✔️ 請務必**啟用套件發行時的電子郵件通知。
 
 >[!div class="step-by-step"]
-[上一頁](./sourcelink.md)
-[下一頁](./versioning.md)
+>[上一頁](sourcelink.md)
+>[下一頁](versioning.md)
