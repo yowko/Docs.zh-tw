@@ -10,10 +10,10 @@ ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8b9eedfab68dc6aeacf9ed51ffc7205b73c062ca
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2018
+ms.lasthandoff: 12/03/2018
 ms.locfileid: "45698334"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 插入 XML 資料
