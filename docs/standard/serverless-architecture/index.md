@@ -4,16 +4,16 @@ description: 無伺服器架構指南。 了解實作企業應用程式的無伺
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 6/26/2018
-ms.openlocfilehash: 89e5f387e218703a2f6311ef848b3d613a9279f7
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: a19784f42c63914e9cf8f42ee6408ec9aa46e4f3
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404813"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52745312"
 ---
-![](./media/Cover.jpg)
-
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>無伺服器應用程式：架構、模式和 Azure 實作
+
+![](./media/Cover.jpg)
 
 > 下載：<https://aka.ms/serverless-ebook>
 
@@ -61,7 +61,7 @@ Mac 與 macOS 是 Apple Inc. 的商標。
 
 ## <a name="introduction"></a>簡介
 
-無伺服器旨在朝純雲端機器碼的方向發展雲端平台。 無伺服器可帶領開發人員更貼近商務邏輯，同時讓他們需擔心基礎結構。 這種模式並不代表「沒有伺服器」，而是「少掉伺服器」。 無伺服器程式碼由事件驅動。 程式碼可能因任何項目 (從傳統 HTTP Web 要求到計時器) 或上傳檔案，而受到觸發。 無伺服器背後的基礎結構可立即調整，以符合彈性需求，及提供微帳單以真正「支付您所使用項目的費用」。 無伺服器需要您以新的思考方式和方法建置應用程式，且並不是適合所有問題的解決方案。 身為開發人員，您必須決定：
+[無伺服器](https://azure.microsoft.com/solutions/serverless/)旨在朝純雲端機器碼的方向發展雲端平台。 無伺服器可帶領開發人員更貼近商務邏輯，同時讓他們需擔心基礎結構。 這種模式並不代表「沒有伺服器」，而是「少掉伺服器」。 無伺服器程式碼由事件驅動。 程式碼可能因任何項目 (從傳統 HTTP Web 要求到計時器) 或上傳檔案，而受到觸發。 無伺服器背後的基礎結構可立即調整，以符合彈性需求，及提供微帳單以真正「支付您所使用項目的費用」。 無伺服器需要您以新的思考方式和方法建置應用程式，且並不是適合所有問題的解決方案。 身為開發人員，您必須決定：
 
 * 無伺服器的優缺點為何？
 * 為什麼您應該考慮為自己的應用程式使用無伺服器？
@@ -138,4 +138,4 @@ Mac 與 macOS 是 Apple Inc. 的商標。
 本指南和相關範例會不斷改進，因此歡迎您提供意見反應！ 如果您想提出如何改進本指南意見，請使用 [GitHub 問題](https://github.com/dotnet/docs/issues)之任何頁面底部的意見反應區段。
 
 >[!div class="step-by-step"]
-[下一步](architecture-approaches.md)
+>[下一步](architecture-approaches.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7953e34f76e23e3f9f4913726adc4b2176b172c9
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1f86ed838e1333a5475d72eabc4d4248fc256211
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45615322"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672027"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>規則運算式中的反向參考建構
 反向參考提供便利的方式來識別字串內的重複字元或子字串。 例如，如果輸入字串包含多次出現的任意子字串，您可以比對第一個出現的子字串與擷取的群組，接著使用反向參考來比對隨後出現的子字串。  
@@ -103,7 +103,7 @@ ms.locfileid: "45615322"
 |模式|描述|  
 |-------------|-----------------|  
 |`(?<1>a)`|比對字元 "a"，並將結果指派給名為 `1` 的擷取群組。|  
-|`(?<1>\1b)*`|比對出現 0 或 1 次且名稱由 `1` 和 "b" 組成的群組，並將結果指派給名為 `1` 的擷取群組。|  
+|`(?<1>\1b)*`|比對 0 或多次出現名為 `1` 和 "b" 之群組的情況，並將結果指派給名為 `1` 的擷取群組。|  
   
  [!code-csharp[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference4.cs#4)]
  [!code-vb[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference4.vb#4)]  
@@ -114,7 +114,7 @@ ms.locfileid: "45615322"
   
 2.  它會前進到第二個字元，並且成功地比對字串 "ab" 與運算式 `\1b`，或是 "ab"。 然後它會將結果 "ab" 指派給 `\1`。  
   
-3.  它會前進到第四個字元。 運算式 `(?<1>\1b)` 要比對零次以上，才算成功地比對字串 "abb" 與運算式 `\1b`。 然後它會將結果 "abb" 指派回到 `\1`。  
+3.  它會前進到第四個字元。 運算式 `(?<1>\1b)*` 要比對零次以上，才算成功地比對字串 "abb" 與運算式 `\1b`。 然後它會將結果 "abb" 指派回到 `\1`。  
   
  在此範例中，`*` 是迴圈數量詞，它會重複評估直到規則運算式引擎無法符合其所定義的模式為止。 迴圈數量詞並不會清除群組定義。  
   
