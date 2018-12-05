@@ -17,7 +17,7 @@ ms.locfileid: "49453277"
 
 本逐步解說從同步化 Windows Presentation Foundation (WPF) 應用程式開始，該應用程式會加總網站清單中的位元組數目。 然後逐步解說會藉由使用新功能，將應用程式轉換為非同步解決方案。
 
-如果您不想要自行建置應用程式，可以下載 [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) (非同步範例：存取 Web 逐步解說 (C# 和 Visual Basic))。
+如果您不想要自行建置應用程式，可以下載 [非同步範例：存取 Web 逐步解說 (C# 和 Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) 。
 
 > [!NOTE]
 > 若要執行範例，您必須在電腦上安裝 Visual Studio 2012 或更新版本以及 .NET Framework 4.5 或更新版本。
@@ -691,7 +691,7 @@ namespace AsyncExampleWPF
 
 ## <a name="see-also"></a>另請參閱
 
-- [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) (非同步範例：存取 Web 逐步解說 (C# 和 Visual Basic))
+- [(非同步範例：存取 Web 逐步解說 (C# 和 Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) 
 - [async](../../../../csharp/language-reference/keywords/async.md)
 - [await](../../../../csharp/language-reference/keywords/await.md)
 - [使用 async 和 await 進行非同步程式設計 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
