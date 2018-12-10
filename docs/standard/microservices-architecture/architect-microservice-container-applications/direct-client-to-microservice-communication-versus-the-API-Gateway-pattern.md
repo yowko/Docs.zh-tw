@@ -115,7 +115,7 @@ API 閘道可以提供多個功能。 視產品而定，它可以提供更豐富
 - 負載平衡
 - 記錄、追蹤、相互關聯
 - 標頭、查詢字串和宣告轉換
-- IP 白名單
+- IP 允許清單
 
 如需詳細資訊，請參閱[閘道卸載模式](https://docs.microsoft.com/azure/architecture/patterns/gateway-offloading)。
 
