@@ -2,18 +2,18 @@
 title: 如何：投影物件圖形 (C#)
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-ms.openlocfilehash: f8e15e80a6914a8dcb848d91a13958f7e4175342
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cacbd05b7b03bfd56ce5a55dc088d3227788a3cb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196079"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147511"
 ---
-# <a name="how-to-project-an-object-graph-c"></a><span data-ttu-id="0d2bb-102">如何：投影物件圖形 (C#)</span><span class="sxs-lookup"><span data-stu-id="0d2bb-102">How to: Project an Object Graph (C#)</span></span>
-<span data-ttu-id="0d2bb-103">本主題說明如何從 XML 規劃或填入物件圖形。</span><span class="sxs-lookup"><span data-stu-id="0d2bb-103">This topic illustrates how to project, or populate, an object graph from XML.</span></span>  
+# <a name="how-to-project-an-object-graph-c"></a><span data-ttu-id="71828-102">如何：投影物件圖形 (C#)</span><span class="sxs-lookup"><span data-stu-id="71828-102">How to: Project an Object Graph (C#)</span></span>
+<span data-ttu-id="71828-103">本主題說明如何從 XML 規劃或填入物件圖形。</span><span class="sxs-lookup"><span data-stu-id="71828-103">This topic illustrates how to project, or populate, an object graph from XML.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0d2bb-104">範例</span><span class="sxs-lookup"><span data-stu-id="0d2bb-104">Example</span></span>  
- <span data-ttu-id="0d2bb-105">下列程式碼會填入具有 `Address`、`PurchaseOrder` 及來自[範例 XML 檔：典型採購訂單 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML 文件之 `PurchaseOrderItem` 類別的物件圖形。</span><span class="sxs-lookup"><span data-stu-id="0d2bb-105">The following code populates an object graph with the `Address`, `PurchaseOrder`, and `PurchaseOrderItem` classes from the [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML document.</span></span>  
+## <a name="example"></a><span data-ttu-id="71828-104">範例</span><span class="sxs-lookup"><span data-stu-id="71828-104">Example</span></span>  
+ <span data-ttu-id="71828-105">下列程式碼會填入具有 `Address`、`PurchaseOrder` 及來自[範例 XML 檔：典型採購訂單 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML 文件之 `PurchaseOrderItem` 類別的物件圖形。</span><span class="sxs-lookup"><span data-stu-id="71828-105">The following code populates an object graph with the `Address`, `PurchaseOrder`, and `PurchaseOrderItem` classes from the [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML document.</span></span>  
   
 ```csharp  
 class Address  
@@ -62,16 +62,15 @@ class Address
   
     public override string ToString()  
     {  
-        StringBuilder sb = new StringBuilder();  
-        sb.Append(String.Format("Type: {0}\n",  
-          addressType == AddressUse.Shipping ? "Shipping" : "Billing"));  
-        sb.Append(String.Format("Name: {0}\n", name));  
-        sb.Append(String.Format("Street: {0}\n", street));  
-        sb.Append(String.Format("City: {0}\n", city));  
-        sb.Append(String.Format("State: {0}\n", state));  
-        sb.Append(String.Format("Zip: {0}\n", zip));  
-        sb.Append(String.Format("Country: {0}\n", country));  
-        return sb.ToString();  
+        StringBuilder sb = new StringBuilder();
+        sb.Append($"Type: {(addressType == AddressUse.Shipping ? "Shipping" : "Billing")}\n");
+        sb.Append($"Name: {name}\n");
+        sb.Append($"Street: {street}\n");
+        sb.Append($"City: {city}\n");
+        sb.Append($"State: {state}\n");
+        sb.Append($"Zip: {zip}\n");
+        sb.Append($"Country: {country}\n");
+        return sb.ToString();
     }  
 }  
   
@@ -110,16 +109,16 @@ class PurchaseOrderItem
   
     public override string ToString()  
     {  
-        StringBuilder sb = new StringBuilder();  
-        sb.Append(String.Format("PartNumber: {0}\n", partNumber));  
-        sb.Append(String.Format("ProductName: {0}\n", productName));  
-        sb.Append(String.Format("Quantity: {0}\n", quantity));  
-        sb.Append(String.Format("USPrice: {0}\n", usPrice));  
-        if (comment != null)  
-            sb.Append(String.Format("Comment: {0}\n", comment));  
-        if (shipDate != DateTime.MinValue)  
-            sb.Append(String.Format("ShipDate: {0:d}\n", shipDate));  
-        return sb.ToString();  
+        StringBuilder sb = new StringBuilder();
+        sb.Append($"PartNumber: {partNumber}\n");
+        sb.Append($"ProductName: {productName}\n");
+        sb.Append($"Quantity: {quantity}\n");
+        sb.Append($"USPrice: {usPrice}\n");
+        if (comment != null)
+            sb.Append($"Comment: {comment}\n");
+        if (shipDate != DateTime.MinValue)
+            sb.Append($"ShipDate: {shipDate:d}\n");
+        return sb.ToString();
     }  
 }  
   
@@ -153,25 +152,25 @@ class PurchaseOrder
   
     public override string ToString()  
     {  
-        StringBuilder sb = new StringBuilder();  
-        sb.Append(String.Format("PurchaseOrderNumber: {0}\n", purchaseOrderNumber));  
-        sb.Append(String.Format("OrderDate: {0:d}\n", orderDate));  
-        sb.Append("\n");  
-        sb.Append("Addresses\n");  
-        sb.Append("=====\n");  
-        foreach (Address address in addresses)  
-        {  
-            sb.Append(address);  
-            sb.Append("\n");  
-        }  
-        sb.Append("Items\n");  
-        sb.Append("=====\n");  
-        foreach (PurchaseOrderItem item in items)  
-        {  
-            sb.Append(item);  
-            sb.Append("\n");  
-        }  
-        return sb.ToString();  
+        StringBuilder sb = new StringBuilder();
+        sb.Append($"PurchaseOrderNumber: {purchaseOrderNumber}\n");
+        sb.Append($"OrderDate: {orderDate:d}\n");
+        sb.Append("\n");
+        sb.Append("Addresses\n");
+        sb.Append("=====\n");
+        foreach (Address address in addresses)
+        {
+            sb.Append(address);
+            sb.Append("\n");
+        }
+        sb.Append("Items\n");
+        sb.Append("=====\n");
+        foreach (PurchaseOrderItem item in items)
+        {
+            sb.Append(item);
+            sb.Append("\n");
+        }
+        return sb.ToString();
     }  
 }  
   
@@ -215,9 +214,9 @@ class Program {
 }  
 ```  
   
- <span data-ttu-id="0d2bb-106">在此範例中，[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢的結果會當作 `PurchaseOrderItem` 的 <xref:System.Collections.Generic.IEnumerable%601> 傳回。</span><span class="sxs-lookup"><span data-stu-id="0d2bb-106">In this example, the result of the [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query is returned as an <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="0d2bb-107">`PurchaseOrder` 類別中的項目是 `PurchaseOrderItem` 的 <xref:System.Collections.Generic.IEnumerable%601> 類型。</span><span class="sxs-lookup"><span data-stu-id="0d2bb-107">The items in the `PurchaseOrder` class are of type <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="0d2bb-108">程式碼使用 <xref:System.Linq.Enumerable.ToList%2A> 擴充方法以從查詢結果建立 <xref:System.Collections.Generic.List%601> 集合。</span><span class="sxs-lookup"><span data-stu-id="0d2bb-108">The code uses the <xref:System.Linq.Enumerable.ToList%2A> extension method to create a <xref:System.Collections.Generic.List%601> collection from the results of the query.</span></span>  
+ <span data-ttu-id="71828-106">在此範例中，[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢的結果會當作 `PurchaseOrderItem` 的 <xref:System.Collections.Generic.IEnumerable%601> 傳回。</span><span class="sxs-lookup"><span data-stu-id="71828-106">In this example, the result of the [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query is returned as an <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="71828-107">`PurchaseOrder` 類別中的項目是 `PurchaseOrderItem` 的 <xref:System.Collections.Generic.IEnumerable%601> 類型。</span><span class="sxs-lookup"><span data-stu-id="71828-107">The items in the `PurchaseOrder` class are of type <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="71828-108">程式碼使用 <xref:System.Linq.Enumerable.ToList%2A> 擴充方法以從查詢結果建立 <xref:System.Collections.Generic.List%601> 集合。</span><span class="sxs-lookup"><span data-stu-id="71828-108">The code uses the <xref:System.Linq.Enumerable.ToList%2A> extension method to create a <xref:System.Collections.Generic.List%601> collection from the results of the query.</span></span>  
   
- <span data-ttu-id="0d2bb-109">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="0d2bb-109">The example produces the following output:</span></span>  
+ <span data-ttu-id="71828-109">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="71828-109">The example produces the following output:</span></span>  
   
 ```  
 PurchaseOrderNumber: 99503  
@@ -256,8 +255,8 @@ USPrice: 39.98
 ShipDate: 5/21/1999  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0d2bb-110">請參閱</span><span class="sxs-lookup"><span data-stu-id="0d2bb-110">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="71828-110">請參閱</span><span class="sxs-lookup"><span data-stu-id="71828-110">See Also</span></span>
 
 - <xref:System.Linq.Enumerable.Select%2A>  
 - <xref:System.Linq.Enumerable.ToList%2A>  
-- [<span data-ttu-id="0d2bb-111">投影和轉換 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="0d2bb-111">Projections and Transformations (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [<span data-ttu-id="71828-111">投影和轉換 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="71828-111">Projections and Transformations (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
