@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | Docker 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 651da766bc5931f5afa06699d1ec11fa40147e82
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f10d7d03bbf88ed8f7a89a5d3919a39b3c124ae0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45678265"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130230"
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker 容器、映像和登錄
 
@@ -34,5 +34,5 @@ ms.locfileid: "45678265"
 -   您想要在映像與所選擇的部署環境之間有最低的網路延遲。 例如，如果您的生產環境是 Azure 雲端，您可以將映像儲存在 [Azure Container Registry](https://azure.microsoft.com/services/container-registry/) 中，使網路延遲盡可能縮短。 同樣地，如果您的生產環境是內部部署，您可能想要在相同的區域網路內提供內部部署 Docker Trusted Registry。
 
 >[!div class="step-by-step"]
-[上一頁](docker-terminology.md)
-[下一頁](../net-core-net-framework-containers/index.md)
+>[上一頁](docker-terminology.md)
+>[下一頁](../net-core-net-framework-containers/index.md)

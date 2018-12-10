@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f51e3f36594a6f66c5fad32214d84a11b78726a4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: e5f683ff123652e312d4d8dacc614f8a451ccd91
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582875"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127390"
 ---
 # <a name="custom-date-and-time-format-strings"></a>自訂日期和時間格式字串
 
@@ -46,7 +46,7 @@ ms.locfileid: "48582875"
 
  下表說明自訂日期和時間格式規範，並顯示每個格式規範所產生的結果字串。 根據預設，結果字串會反映 en-US 文化特性的格式設定慣例。 如果特定格式規範會產生當地語系化的結果字串，則範例也會註明結果字串適用的文化特性。 如需使用自訂日期和時間格式字串的詳細資訊，請參閱注意一節。
 
-| 格式規範 | 描述 | 範例 |
+| 格式規範 | 說明 | 範例 |
 | ---------------------- | ----------------- | -------------- |
 |"d"|月份天數，從 1 到 31。<br /><br /> 詳細資訊：["d" 自訂格式規範](#dSpecifier)。|2009-06-01T13:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 15|
 |"dd"|月份天數，從 01 到 31。<br /><br /> 詳細資訊：["dd" 自訂格式規範](#ddSpecifier)。|2009-06-01T13:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 15|
@@ -94,7 +94,7 @@ ms.locfileid: "48582875"
 |"/"|日期分隔符號。<br /><br /> 詳細資訊：["/" 自訂格式規範](#dateSeparator)。|2009-06-15T13:45:30 -> / (en-US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -> . (tr-TR)|
 |"*string*"<br /><br /> '*string*'|常值字串分隔符號。<br /><br /> 詳細資訊︰[字元常值](#Literals)。|2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P|
 |%|將下列字元定義為自訂格式規範。<br /><br /> 詳細資訊：[使用單一自訂格式規範](#UsingSingleSpecifiers)。|2009-06-15T13:45:30 (%h) -> 1|
-|\\|逸出字元。<br /><br /> 詳細資訊︰[字元常值](#Literals)和[使用逸出字元](#escape)。|2009-06-15T13:45:30 (h \h) -> 1 h|
+|&#92;|逸出字元。<br /><br /> 詳細資訊︰[字元常值](#Literals)和[使用逸出字元](#escape)。|2009-06-15T13:45:30 (h \h) -> 1 h|
 |任意字元|字元會原封不動地複製到結果字串。<br /><br /> 詳細資訊︰[字元常值](#Literals)。|2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A|
 
  下列各節提供每個自訂日期和時間格式規範的其他資訊。 除非特別註明，否則每個規範都會產生相同的字串表示，無論是與 <xref:System.DateTime> 值或 <xref:System.DateTimeOffset> 值搭配使用。

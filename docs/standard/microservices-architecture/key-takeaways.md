@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 重點摘要
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 3366fa2494615db841b768f9149a070a65da58ee
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: d6e09b9856396e99c9b03d595c1896e2451724fe
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105510"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152252"
 ---
 # <a name="key-takeaways"></a>重點摘要
 
@@ -38,4 +38,4 @@ ms.locfileid: "37105510"
 **協調器。** 容器型協調器，例如 Azure Container Service (Kubernetes、Mesos DC/OS 和 Docker Swarm) 及 Azure Service Fabric 提供的協調器，對於具有大量複雜度、延展性需求和持續演變之任何已準備好用於生產環境的微服務型應用程式或多容器應用程式是不可或缺的。 本指南已在微服務及容器解決方案中推出協調器及其角色。 如果您的應用程式需求將您推向複雜的容器化應用程式，您會發現它對找出其他資源以深入了解協調器十分有幫助
 
 >[!div class="step-by-step"]
-[上一步](secure-net-microservices-web-applications/azure-key-vault-protects-secrets.md)
+>[上一步](secure-net-microservices-web-applications/azure-key-vault-protects-secrets.md)

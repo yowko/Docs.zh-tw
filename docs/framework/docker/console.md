@@ -4,12 +4,12 @@ description: 了解如何擷取現有的 .NET Framework 主控台應用程式並
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: bf21357efc234ea99836b190ce34c70f2644ea6a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 379e0814d7d254935ef23a483d5e0f9163babcd1
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200570"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145276"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>在 Windows 容器中執行主控台應用程式
 
@@ -59,7 +59,7 @@ Windows 容器受到 [Windows 10 年度更新版](https://www.microsoft.com/en-u
 
 在 `Invoke-MSBuild` 的呼叫中，`OutputPath` 會設定為 **publish**，而 `Configuration` 會設定為 [發行]。 
 
-```
+```powershell
 function Invoke-MSBuild ([string]$MSBuildPath, [string]$MSBuildParameters) {
     Invoke-Expression "$MSBuildPath $MSBuildParameters"
 }
@@ -133,7 +133,7 @@ docker run --rm console-random-answer-generator "Are you a square container?"
 
 若要執行，請開啟 PowerShell 並使用下列命令：
 
-```
+```powershell
 .\run.ps1 "Is this easy or what?"
 ```
 

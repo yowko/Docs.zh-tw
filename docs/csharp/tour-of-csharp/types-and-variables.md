@@ -3,12 +3,12 @@ title: C# 型別和變數 - C# 語言教學課程
 description: 了解如何在 C# 中定義類型和宣告變數
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 752ff490ec91919dc54539c3e39f6d0c527d6260
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34b724dff17feb699d797e9ed9aea25d85d8c5a9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352131"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129515"
 ---
 # <a name="types-and-variables"></a>型別與變數
 
@@ -116,5 +116,5 @@ C# 中有數種*變數*，包括欄位、陣列元素、區域變數和參數。
     - `null` 參考或相容的委派類型之執行個體的參考
 
 >[!div class="step-by-step"]
-[上一頁](program-structure.md)
-[下一頁](expressions.md)
+>[上一頁](program-structure.md)
+>[下一頁](expressions.md)

@@ -4,11 +4,11 @@ description: 了解 .NET 事件模式、如何建立標準事件來源，以及�
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
 ms.openlocfilehash: 16a091dabe34a064ab3ee65a6d9f3e0ab36f1db4
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297032"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129398"
 ---
 # <a name="standard-net-event-patterns"></a>標準的 .NET 事件模式
 

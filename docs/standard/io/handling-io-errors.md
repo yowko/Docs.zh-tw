@@ -2,7 +2,9 @@
 title: 在 .NET 中處理 I/O 錯誤
 ms.date: 08/27/2018
 ms.technology: dotnet-standard
-ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - I/O, exception handling
 - I/O, errors
@@ -11,12 +13,12 @@ ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 50dee427913e1ec94a06f1202966bb0f7f5f2099
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: d2ff4e69596e721f485d107317f261231615c5a6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46696413"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126871"
 ---
 # <a name="handling-io-errors-in-net"></a>在 .NET 中處理 I/O 錯誤
 
@@ -47,14 +49,14 @@ ms.locfileid: "46696413"
 
 | 例外狀況類型 | .NET Core | .NET Framework |
 |---|---|---|
-| <xref:System.IO.IOException> | [是] | [是] |
-| <xref:System.IO.FileNotFoundException> | [是] | [是] |
-| <xref:System.IO.DirectoryNotFoundException> | [是] | [是] |
-| <xref:System.IO.DriveNotFoundException?> | [是] | [是] |
-| <xref:System.IO.PathTooLongException> | [是] | [是] |
-| <xref:System.OperationCanceledException> | [是] | [是] |
+| <xref:System.IO.IOException> | 是 | [是] |
+| <xref:System.IO.FileNotFoundException> | 是 | 是 |
+| <xref:System.IO.DirectoryNotFoundException> | 是 | 是 |
+| <xref:System.IO.DriveNotFoundException?> | [是] | 是 |
+| <xref:System.IO.PathTooLongException> | 是 | [是] |
+| <xref:System.OperationCanceledException> | [是] | 是 |
 | <xref:System.UnauthorizedAccessException> | [是] | [是] |
-| <xref:System.ArgumentException> | .NET Core 2.0 及更早版本| [是] |
+| <xref:System.ArgumentException> | .NET Core 2.0 及更早版本| 是 |
 | <xref:System.NotSupportedException> | 否 | [是] |
 | <xref:System.Security.SecurityException> | 否 | 僅限有限信任 |
 
@@ -71,7 +73,7 @@ ms.locfileid: "46696413"
 
 若是 <xref:System.IO.IOException>，您可以從 [IOException.HResult](xref:System.Exception.HResult) 屬性取得額外的錯誤資訊。 若要將 HResult 值轉換為 Win32 錯誤碼，您要去除 32 位元值的前 16 位元。 下表列出可能包裝在 <xref:System.IO.IOException> 中的錯誤碼。
 
-| HResult | 常數 | 描述 |
+| HResult | 常數 | 說明 |
 | --- | --- | --- |
 | ERROR_SHARING_VIOLATION | 32 | 遺漏檔案名稱，或者檔案或目錄正在使用中。 |
 | ERROR_FILE_EXISTS | 80 | 檔案已存在。 |

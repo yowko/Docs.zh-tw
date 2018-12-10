@@ -3,12 +3,12 @@ title: 使用 XML 註解記錄您的程式碼
 description: 了解如何使用 XML 文件註解記錄您的程式碼，並在編譯時期產生 XML 文件檔案。
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 09e6b4aa75aababcebba96693d6e73b29a30fc6a
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 4b01d7989b97cbae56fc04212e6c6753fd1252a9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453264"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129659"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>使用 XML 註解記錄您的程式碼
 
@@ -18,9 +18,9 @@ XML 文件註解具特殊性，因為編譯器可以處理它們以在編譯時�
 
 編譯器會忽略 XML 文件註解 (例如所有其他註解)。
 
-您可以執行下列其中一個動作，以在編譯時期產生 XML 檔案︰
+您可以執行下列其中一項動作，以在編譯時期產生 XML 檔案︰
 
-- 如果您正在從命令列使用 .NET Core 開發應用程式，則可以將 [DocumentationFile 項目](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties)新增至 .csproj 專案檔的 `<PropertyGroup>` 區段。 下列範例會在根檔案名稱與組件相同的專案目錄中產生 XML 檔案：
+- 如果您正在從命令列使用 .NET Core 開發應用程式，則可以將 [DocumentationFile 項目](/visualstudio/msbuild/common-msbuild-project-properties)新增至 .csproj 專案檔的 `<PropertyGroup>` 區段。 下列範例會在根檔案名稱與組件相同的專案目錄中產生 XML 檔案：
 
    ```xml
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
@@ -196,7 +196,7 @@ XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 �
 
 `filename` 屬性代表包含文件的 XML 檔案名稱。
 
-`path` 屬性代表存在於所指定 `filename` 中之 `tag name` 的 [XPath](https://msdn.microsoft.com/library/ms256115.aspx) 查詢。
+`path` 屬性代表存在於所指定 `filename` 中之 `tag name` 的 [XPath](../standard/data/xml/xpath-queries-and-namespaces.md) 查詢。
 
 `name` 屬性代表標記中位在註解前面的名稱規範。
 

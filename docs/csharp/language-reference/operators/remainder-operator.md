@@ -8,11 +8,11 @@ helpviewer_keywords:
 - '% operator [C#]'
 ms.assetid: 3b74f4f9-fd9c-45e7-84fa-c8d71a0dfad7
 ms.openlocfilehash: cd6d49b69d40f3b45aae060d46b58632dc8448f8
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50041254"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144193"
 ---
 # <a name="-operator-c-reference"></a>% 運算子 (C# 參考)
 
@@ -38,7 +38,7 @@ ms.locfileid: "50041254"
 如需在非有限運算元情況中 `%` 運算子的行為，請參閱 [C# 語言規格](../language-specification/index.md)的[餘數運算子](~/_csharplang/spec/expressions.md#remainder-operator)小節。
 
 > [!NOTE]
-> 此計算餘數的方法和用於整數運算元的方法類似，但不同於 IEEE 754。 如需符合 IEEE 754 的餘數運算，請使用 <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> 方法。
+> 這項計算餘數的方法和用於整數運算元的方法類似，但不同於 IEEE 754。 如需符合 IEEE 754 的餘數運算，請使用 <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> 方法。
 
 下列範例示範 `float` 和 `double` 運算元的餘數運算子行為：
 

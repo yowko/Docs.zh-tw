@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | Az
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 487a303e5cf572cf4173423588ee7fb5a93cb394
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 932d3869483b6c96f2394ec308d3aa014b8650d4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185613"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152593"
 ---
 # <a name="development-process-for-azure"></a>Azure 開發程序
 
@@ -90,7 +90,7 @@ CI/CD 管線設定之後，您就可以直接更新 Web 應用程式，並認可
 
 #### <a name="step-3-build-server-continuous-integration-build-test-package"></a>步驟 3： 組建伺服器：持續整合。 建置、測試、封裝
 
-每當對共用應用程式程式碼存放庫進行新的認可時，便會在組建伺服器上觸發新的建置。 在 CI 程序中，此建置應該完整編譯應用程式，並執行自動化的測試，以確認一切如預期般運作。 CI 程序的最終結果應為 Web 應用程式的封裝版本，準備好進行部署。
+每當對共用應用程式程式碼存放庫進行新的認可時，便會在組建伺服器上觸發新的建置。 在 CI 程序中，這項建置應該完整編譯應用程式，並執行自動化的測試，以確認一切如預期般運作。 CI 程序的最終結果應為 Web 應用程式的封裝版本，準備好進行部署。
 
 #### <a name="step-4-build-server-continuous-delivery"></a>步驟 4： 組建伺服器：持續傳遞
 
@@ -110,5 +110,5 @@ Web 應用程式在執行時，您可以監視應用程式的健康狀態，並�
 <https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core>
 
 >[!div class="step-by-step"]
-[上一頁](test-asp-net-core-mvc-apps.md)
-[下一頁](azure-hosting-recommendations-for-asp-net-web-apps.md)
+>[上一頁](test-asp-net-core-mvc-apps.md)
+>[下一頁](azure-hosting-recommendations-for-asp-net-web-apps.md)

@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | AS
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: a70cb822c789638ca107b090d1aed2b88ccc6a5d
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 221ea2a9fc154468f16ce09195a0415883ada9df
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404524"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125928"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>ASP.NET Web Core 應用程式的 Azure 裝載建議
 
@@ -128,4 +128,4 @@ Azure 提供各種資料儲存選項，以便您的應用程式可以針對有�
   <https://docs.microsoft.com/azure/aks/intro-kubernetes>
 
 >[!div class="step-by-step"]
-[上一步](development-process-for-azure.md)
+>[上一步](development-process-for-azure.md)

@@ -4,12 +4,12 @@ description: 開始建置 .NET 程式庫。
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 6377e3fe606bf7603b418decdd0e3f9d2de6a510
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 05466de1469fc765570b8250301e8404cd5df173
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201239"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145721"
 ---
 # <a name="get-started"></a>開始使用
 
@@ -46,5 +46,5 @@ SourceLink 是可讓您 .NET 程式庫的使用者在偵錯期間逐步執行其
 .NET 程式庫必須在針對現有使用者提供穩定性，以及針對未來取得創新之間取得平衡。 了解各種類型的中斷性變更，以及在維持回溯相容性的同時新增功能的策略。
 
 >[!div class="step-by-step"]
-[上一頁](./index.md)
-[下一頁](./cross-platform-targeting.md)
+>[上一頁](index.md)
+>[下一頁](cross-platform-targeting.md)

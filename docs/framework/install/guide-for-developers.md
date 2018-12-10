@@ -11,11 +11,11 @@ ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8d78549d2822ad6c660fae39d458a98f23eca390
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199886"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146728"
 ---
 # <a name="install-the-net-framework-for-developers"></a>安裝適用於開發人員的 .NET Framework
 
@@ -67,7 +67,7 @@ ms.locfileid: "50199886"
 
 「目標套件」可讓您的應用程式在 Visual Studio 和其他開發環境中開發時，以特定版本的 .NET Framework 為目標。 「開發人員套件」包含特定版本的 .NET Framework 和其隨附的 SDK，以及對應的目標套件。
 
-.NET Framework 4.5.1 或 4.5.2 的開發人員套件、.NET Framework 4.6 的目標套件以及 .NET Framework 4.6.1、4.6.2、4.7、4.7.1 或 4.7.2 的開發人員套件，提供特定 .NET Framework 版本的參考組件、語言套件以及 IntelliSense 檔案，供用於 Visual Studio 這類的整合式開發環境。  若是使用 Visual Studio，開發人員套件或目標套件也會將已安裝的 .NET Framework 版本加入您在建立新專案時所選擇的目標。  選擇下列其中一個項目：
+.NET Framework 4.5.1 或 4.5.2 的開發人員套件、.NET Framework 4.6 的目標套件以及 .NET Framework 4.6.1、4.6.2、4.7、4.7.1 或 4.7.2 的開發人員套件，提供特定 .NET Framework 版本的參考組件、語言套件以及 IntelliSense 檔案，供用於 Visual Studio 這類的整合式開發環境。  若是使用 Visual Studio，開發人員套件或目標套件也會將已安裝的 .NET Framework 版本加入您在建立新專案時所選擇的目標。  選擇下列其中一項：
 
 - [Microsoft .NET Framework 4.7.2 開發人員套件](https://go.microsoft.com/fwlink/?LinkId=874338)
 
@@ -196,7 +196,7 @@ Web 和離線安裝程式都是針對 x86 和 x64 為主的電腦所設計 (請�
 | 丹麥文                | da      |
 | 荷蘭文                 | nl      |
 | 芬蘭文               | fi      |
-| 英文 (美國)         | zh-TW   |
+| 英文 (美國)         | en-US   |
 | 法文                | fr      |
 | 德文                | de      |
 | 希臘文                 | el      |

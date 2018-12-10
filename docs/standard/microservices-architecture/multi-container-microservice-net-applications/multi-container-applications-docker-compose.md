@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 如何使用 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 9ce8d64dbd481d30c6687b8747b2091733ea76db
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: dc9149cb1a17e3af66abd995fd2a2196109e0e05
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297175"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145250"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>使用 docker-compose.yml 定義多容器應用程式 
 
@@ -86,7 +86,7 @@ services:
 
 此檔案中的根金鑰就是服務。 在該金鑰下，您定義想要在執行 `docker-compose up` 命令或是使用此 docker-compose.yml 檔案從 Visual Studio 部署時所部署和執行的服務。 在此情況下，docker-compose.yml 檔案已定義多個服務，如下表所述。
 
-| 服務名稱 | 描述 |
+| 服務名稱 | 說明 |
 |--------------|-------------|
 | webmvc       | 容器，包括使用伺服器端 C\# 之微服務的 ASP.NET Core MVC 應用程式|
 | catalog.api  | 容器，包括 Catalog ASP.NET Core Web API 微服務 |
@@ -471,5 +471,5 @@ ENTRYPOINT ["dotnet", "run"]
     [*https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images*](https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images)
 
 >[!div class="step-by-step"]
-[上一頁](data-driven-crud-microservice.md)
-[下一頁](database-server-container.md)
+>[上一頁](data-driven-crud-microservice.md)
+>[下一頁](database-server-container.md)

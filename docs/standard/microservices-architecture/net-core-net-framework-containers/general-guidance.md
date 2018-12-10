@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 一般指引
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: e77065614423cd2e7fdb51258a8c7650280d0400
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 6ff6170fd1cdd0c69ecc8729cc8199cceea43ffa
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46537822"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128475"
 ---
 # <a name="general-guidance"></a>一般指引
 
@@ -45,7 +45,6 @@ ms.locfileid: "46537822"
 -   **應用程式範例：使用 Windows 容器現代化舊版 ASP.NET Web 應用程式**  
     https://aka.ms/eshopmodernizing
 
-
 >[!div class="step-by-step"]
-[上一頁](index.md)
-[下一頁](net-core-container-scenarios.md)
+>[上一頁](index.md)
+>[下一頁](net-core-container-scenarios.md)

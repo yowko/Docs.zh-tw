@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 了解如何�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 57c4af55bab9b17da5809f912d7c2d0b76eba40b
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: 31f4807c956a8b4fb9381145f8e9b5eaffafe698
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296707"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149493"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>使用列舉類別，而非列舉類型
 
@@ -125,8 +125,6 @@ public abstract class CardType : Enumeration
 - **SmartEnum**： Ardalis - 可協助在 .NET 中產生強型別且更聰明的列舉。 \
   [*https://www.nuget.org/packages/Ardalis.SmartEnum/*](https://www.nuget.org/packages/Ardalis.SmartEnum/)
 
-
 >[!div class="step-by-step"]
-[上一頁](implement-value-objects.md)
-[下一頁](domain-model-layer-validations.md)
-
+>[上一頁](implement-value-objects.md)
+>[下一頁](domain-model-layer-validations.md)

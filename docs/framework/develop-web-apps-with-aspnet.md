@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, ASP.NET
 - dynamic Web applications [ASP.NET]
 ms.assetid: b7861df0-690a-4a58-bd12-f9d0123e40df
-ms.openlocfilehash: 51cc54d67d5b68e07f1dcfcb4c62f32cd509d51a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 80b1d5496aeaf99008062299ac41b53eee167c61
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580507"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144321"
 ---
 # <a name="developing-web-apps-with-aspnet"></a>使用 ASP.NET 開發 Web 應用程式
 
@@ -22,7 +22,7 @@ ASP.NET 是用來建立 Web 應用程式的 .NET Framework 技術。 如需有�
 - [ASP.NET Web Pages](https://go.microsoft.com/fwlink/p/?LinkId=251040)
 - [ASP.NET Web API](https://go.microsoft.com/fwlink/p/?LinkId=251041)  
 - [在 Azure 中建立 ASP.NET Framework Web 應用程式](/azure/app-service/app-service-web-get-started-dotnet-framework)
-- 
+
 ## <a name="developing-web-apps-with-aspnet-core"></a>使用 ASP.NET Core 開發 Web 應用程式
 
 ASP.NET Core 是 ASP.NET 4.x 的重新設計。 ASP.NET Core 透過 ASP.NET 提供的一些優點：

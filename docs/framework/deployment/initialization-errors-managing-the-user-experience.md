@@ -9,11 +9,11 @@ ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 21dd9926684f51412384235d7b3af1aac280957a
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50035744"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155167"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework 初始化錯誤：管理使用者經驗
 Common Language Runtime (CLR) 啟用系統會決定將用來執行 Managed 應用程式碼的 CLR 版本。 在某些情況下，啟用系統可能找不到要載入的 CLR 版本。 應用程式需要無效或未安裝在指定電腦上的 CLR 版本時，通常會發生這種情況。 如果找不到要求的版本，CLR 啟用系統會從已呼叫的函式或介面傳回 HRESULT 錯誤碼，而且可能會向執行應用程式的使用者顯示錯誤訊息。 本文提供 HRESULT 代碼清單，並說明如何防止顯示錯誤訊息。  
@@ -66,7 +66,7 @@ Common Language Runtime (CLR) 啟用系統會決定將用來執行 Managed 應�
 ## <a name="ui-policy-for-clr-provided-hosts"></a>CLR 所提供主機的 UI 原則  
  CLR 會針對各種情況包括一組主機，而且這些主機只要在載入必要執行階段版本時發生問題時就會顯示錯誤訊息。 下表提供主機和其錯誤訊息原則清單。  
   
-|CLR 主機|描述|錯誤訊息原則|可以停用錯誤訊息？|  
+|CLR 主機|說明|錯誤訊息原則|可以停用錯誤訊息？|  
 |--------------|-----------------|--------------------------|------------------------------------|  
 |Managed EXE 主機|啟動 Managed EXE。|會在遺漏 .NET Framework 版本時顯示|否|  
 |Managed COM 主機|將 Managed COM 元件載入處理序。|會在遺漏 .NET Framework 版本時顯示|是，設定 SEM_FAILCRITICALERRORS 旗標|  

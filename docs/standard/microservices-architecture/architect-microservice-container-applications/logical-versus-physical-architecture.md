@@ -4,12 +4,12 @@ description: 了解邏輯架構與實體架構之間的差異。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: fe3833a4b65317e2ebbeb562e19b473ff0374ddd
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: e8ed375899637d06db8eb9b12a0e1cb0c05591f9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296122"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129918"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>邏輯架構與實體架構
 
@@ -36,5 +36,5 @@ ms.locfileid: "52296122"
 簡單來說，微服務的邏輯架構不一定會與實體部署架構一致。 在本指南中，每當我們提到微服務時，指的是無法對應至一或多個 (實體) 服務的商務或邏輯微服務。 在大部分情況下，這會是單一服務，但可能更多。
 
 >[!div class="step-by-step"]
-[上一頁](data-sovereignty-per-microservice.md)
-[下一頁](distributed-data-management.md)
+>[上一頁](data-sovereignty-per-microservice.md)
+>[下一頁](distributed-data-management.md)

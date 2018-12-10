@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee5f223d5e92d9a60776df6bf2108a4fd14b9e0f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 83b45d5cc8424acab789b9824af887f15036488d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195199"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143840"
 ---
 # <a name="in-process-side-by-side-execution"></a>同處理序並存執行
 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，您可以使用同處理序並存裝載，在單一處理序中執行多個 Common Language Runtime (CLR) 版本。 根據預設，Managed COM 元件會與建置它們的 .NET Framework 版本一起執行，不論針對程序所載入的 .NET Framework 版本為何。  
@@ -41,8 +41,8 @@ ms.locfileid: "50195199"
     |.NET Framework 版本|1.1|2.0 - 3.5|4|  
     |----------------------------|---------|----------------|-------|  
     |1.1|不適用|否|[是]|  
-    |2.0 - 3.5|否|不適用|[是]|  
-    |4|[是]|[是]|不適用|  
+    |2.0 - 3.5|否|不適用|是|  
+    |4|[是]|是|不適用|  
   
 > [!NOTE]
 >  .NET Framework 3.0 和 3.5 版是根據 2.0 版透過累加方式所建置，不需要並存執行。 這些本質上是相同的版本。  
@@ -90,7 +90,7 @@ ms.locfileid: "50195199"
   
  若要執行下列範例，請編譯並註冊下列使用 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] 的 Managed COM 元件。 若要註冊元件，請在 [專案] 功能表上按一下 [屬性]，再按一下 [組建] 索引標籤，然後選取 [註冊 COM Interop] 核取方塊。  
   
-```  
+```csharp
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -115,7 +115,7 @@ namespace BasicComObject
   
  編譯下列 Unmanaged C++ 應用程式，以啟用前一個範例所建立的 COM 物件。  
   
-```  
+```cpp
 #include "stdafx.h"  
 #include <string>  
 #include <iostream>  

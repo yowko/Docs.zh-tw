@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 關於 .NET �
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 7b2981579f28c083a31d7af6ae42f4e3ca8bbd88
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 53202d0f890df040480b9f54c54aaefdd025dffa
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105497"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149558"
 ---
 # <a name="about-authorization-in-net-microservices-and-web-applications"></a>關於 .NET 微服務和 Web 應用程式中的授權
 
@@ -125,9 +125,6 @@ services.AddAuthorization(options =>
 -   **自訂原則式授權**
     [*https://docs.microsoft.com/aspnet/core/security/authorization/policies*](https://docs.microsoft.com/aspnet/core/security/authorization/policies)
 
-
-
-
 >[!div class="step-by-step"]
-[上一頁](index.md)
-[下一頁](developer-app-secrets-storage.md)
+>[上一頁](index.md)
+>[下一頁](developer-app-secrets-storage.md)

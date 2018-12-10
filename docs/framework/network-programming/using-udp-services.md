@@ -18,11 +18,11 @@ helpviewer_keywords:
 - application protocols, UDP
 ms.assetid: d5c3477a-e798-454c-a890-738ba14c5707
 ms.openlocfilehash: 40cf14936fef7c29f00112a143203ced605f482b
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296811"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126559"
 ---
 # <a name="using-udp-services"></a>使用 UDP 服務
 <xref:System.Net.Sockets.UdpClient> 類別使用 UDP 與網路服務通訊。 <xref:System.Net.Sockets.UdpClient> 類別屬性和方法使用 UDP 取出建立 <xref:System.Net.Sockets.Socket> 來要求和接收資料的詳細資料。

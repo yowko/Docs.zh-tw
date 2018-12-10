@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 決策資料�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: 74b3749077fdb375f84ddacd98221aa4afcf2f67
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8044e3064ac372750c174d8b47c3f7a63d6bbd0b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47401234"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149051"
 ---
 # <a name="decision-table-net-frameworks-to-use-for-docker"></a>決策資料表：用於 Docker 的 .NET Frameworks
 
@@ -88,5 +88,5 @@ ms.locfileid: "47401234"
 </table>
 
 >[!div class="step-by-step"]
-[上一頁](net-framework-container-scenarios.md)
-[下一頁](net-container-os-targets.md)
+>[上一頁](net-framework-container-scenarios.md)
+>[下一頁](net-container-os-targets.md)

@@ -10,11 +10,11 @@ ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8a0679dafda7935034d3a3ab0f4c43656ab5668b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185244"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151404"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>.NET Framework 中過時的成員
 本文中的表格列出 .NET Framework 4.5 和更新版本中依組件分組的已淘汰類型成員。 請使用下列連結，查看每個組件中過時的成員和建議的替代做法清單。 本主題不會列出過時的類型成員。 如需過時的型別清單，請參閱[已淘汰類型](../../../docs/framework/whats-new/obsolete-types.md)。  

@@ -4,12 +4,12 @@ description: 了解 API 閘道模式和直接用戶端對微服務通訊的差�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 36b95f8b6308773dbb49cc68e4f8e2099bdd1ff0
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: c0c98733271e74e119373fe359b9aa6121930a40
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297295"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152639"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API 閘道模式與直接用戶端對微服務通訊
 
@@ -194,5 +194,5 @@ API 閘道產品的作用通常像是連入通訊的反向 Proxy，您也可以�
   [*https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html*](https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html)
 
 >[!div class="step-by-step"]
-[上一頁](identify-microservice-domain-model-boundaries.md)
-[下一頁](communication-in-microservice-architecture.md)
+>[上一頁](identify-microservice-domain-model-boundaries.md)
+>[下一頁](communication-in-microservice-architecture.md)

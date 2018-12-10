@@ -3,16 +3,16 @@ title: 對等名稱解析通訊協定
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
 ms.openlocfilehash: f04b0b2e27c03ed477c6ceb10a5cbe41e1c7ce7c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50185153"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129153"
 ---
 # <a name="peer-name-resolution-protocol"></a>對等名稱解析通訊協定
 在對等環境中，對等使用特定名稱解析系統，才能從名稱或其他類型的識別碼解析彼此的網路位置 (位址、通訊協定和連接埠)。 過去，網域名稱系統 (DNS) 內本來就是暫時性連線以及其他缺點，而讓對等名稱解析變得複雜。  
   
- Microsoft® Windows® 對等網路平台會利用對等名稱解析通訊協定 (PNRP) 解決此問題，此通訊協定最先是針對 Windows XP 所開發，之後於 Windows Vista™ 中升級，是一個安全、可調整的動態名稱登錄與名稱解析通訊協定。 PNRP 的運作方式與傳統的名稱解析系統十分不同，為應用程式開發人員開拓令人雀躍的嶄新視野。  
+ Microsoft® Windows® 對等網路平台會利用對等名稱解析通訊協定 (PNRP) 解決此問題，此通訊協定最先是針對 Windows XP 所開發，之後於 Windows Vista™ 中升級，是一項安全、可調整的動態名稱登錄與名稱解析通訊協定。 PNRP 的運作方式與傳統的名稱解析系統十分不同，為應用程式開發人員開拓令人雀躍的嶄新視野。  
   
  使用 PNRP，可以將對等名稱套用至電腦，或是電腦上的個別應用程式或服務。 對等名稱解析包含位址、連接埠，以及可能的延伸承載。 此系統的優點包含容錯、無瓶頸，以及絕不會傳回過時位址的名稱解析；這樣讓通訊協定成為尋找行動使用者的最佳解決方案。  
   

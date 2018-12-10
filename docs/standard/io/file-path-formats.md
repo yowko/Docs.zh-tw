@@ -2,18 +2,21 @@
 title: Windows 系統上的檔案路徑格式
 ms.date: 06/28/2018
 ms.technology: dotnet-standard
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b79ff1991f1d9b803b0c35b4ae9565f70de0b56
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: 1ac96ac86fb3ebf35af9176a025f0a5f71451f88
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296824"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144854"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 系統上的檔案路徑格式
 
@@ -29,7 +32,7 @@ ms.locfileid: "52296824"
 
 如果三個元件全都存在，則是絕對路徑。 如果未指定任何磁碟區或磁碟機代號，且目錄名稱開頭為[目錄分隔符號字元](<xref:System.IO.Path.DirectorySeparatorChar>)，則路徑是相對於目前磁碟機的根目錄。 否則，路徑是相對於目前的目錄。 下表顯示一些可能的目錄和檔案路徑。
 
-|路徑  |描述  |
+|路徑  |說明  |
 | -- | -- |
 | `C:\Documents\Newsletters\Summer2018.pdf` | 從磁碟機 C: 根目錄開始的絕對檔案路徑 |
 | `\Program Files\Custom Utilities\StringFinder.exe` | 從目前磁碟機根目錄開始的絕對路徑。 |
@@ -59,7 +62,7 @@ ms.locfileid: "52296824"
 
 以下是 UNC 路徑的一些範例：
 
-|路徑  |描述  |
+|路徑  |說明  |
 | -- | -- |
 | `\\system07\C$\` | `system07` 上磁碟機 C: 的根目錄。 |
 | `\\Server2\Share\Test\Foo.txt` | \\\\Server2\\Share 磁碟區 Test 目錄中的 Foo.txt 檔案。|
@@ -203,30 +206,14 @@ DOS 裝置路徑由以下元件組成：
 ```csharp
 Directory.Create("TeStDiReCtOrY");
 ```
+
+```vb
+Directory.Create("TeStDiReCtOrY")
+```
+
 會建立名為 TeStDiReCtOrY 的目錄。 如果您重新命名目錄或檔案，以變更其大小寫，目錄或檔案名稱會反映將它重新命名時所使用字串的大小寫。 例如，下列程式碼將一個名為 test.txt 的檔案重新命名為 Test.txt：
 
-```csharp
-using System;
-using System.IO;
-
-class Example
-{
-   public static void Main()
-   {
-      var fi = new FileInfo(@".\test.txt");
-      fi.MoveTo(@".\Test.txt");
-   }
-}
-``` 
-```vb
-Imports System.IO
-
-Module Example
-   Public Sub Main()
-      Dim fi As New FileInfo(".\test.txt")
-      fi.MoveTo(".\Test.txt")
-   End Sub
-End Module
-```
+[!code-csharp[case-and-renaming](~/samples/snippets/standard/io/file-names/cs/rename.cs)]
+[!code-vb[case-and-renaming](~/samples/snippets/standard/io/file-names/vb/rename.vb)]
 
 不過，目錄和檔案名稱比較不區分大小寫。 如果您搜尋名為 "test.txt" 的檔案，.NET 檔案系統 API 在比較時會忽略大小寫。 Test.txt、TEST.TXT、test.TXT 和大寫和小寫字母的任何其他組合都會符合 "test.txt"。

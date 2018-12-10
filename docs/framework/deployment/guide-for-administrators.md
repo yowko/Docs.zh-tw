@@ -8,21 +8,21 @@ ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 844e9e53c752be0c993255fc356ade1723109b39
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744583"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129814"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework 系統管理員部署手冊
-這篇逐步解說文章將描述系統管理員如何使用 Microsoft System Center Configuration Manager，在整個網路上部署 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其系統相依性。 此文章假設所有目標用戶端電腦都符合 .NET Framework 的最低需求。 如需安裝 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的軟體與硬體需求清單，請參閱[系統需求](../../../docs/framework/get-started/system-requirements.md)。  
+這篇逐步解說文章將描述系統管理員如何使用 Microsoft System Center Configuration Manager，在整個網路上部署 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其系統相依性。 本文章假設所有目標用戶端電腦都符合 .NET Framework 的最低需求。 如需安裝 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的軟體和硬體需求清單，請參閱[系統需求](../../../docs/framework/get-started/system-requirements.md)。  
   
 > [!NOTE]
 >  本文中提到的軟體包括 (但不限於) [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、System Center Configuration Manager 和 Active Directory，這些軟體皆受授權條款和條件之限制。 這些指示假定軟體之適當使用人均已檢視並接受該等授權條款和條件。 這些指示不可撤回任何該等授權合約之規定條件。  
 >   
 >  如需 .NET Framework 支援的資訊，請參閱 Microsoft 技術支援網站上的 [Microsoft .NET Framework 支援週期原則](https://go.microsoft.com/fwlink/?LinkId=196607)。  
   
- 此主題包括以下各節：  
+ 此主題包括下列章節：  
   
  [部署程序](#the_deployment_process)  
  [部署 .NET Framework](#deploying_in_a_test_environment)  
@@ -122,7 +122,7 @@ ms.locfileid: "50744583"
   
  下表描述在步驟 7 中指定的命令列選項。  
   
-|選項|描述|  
+|選項|說明|  
 |------------|-----------------|  
 |**/q**|設定無訊息模式。 不需要使用者輸入，也不會顯示輸出。|  
 |**/norestart**|避免安裝程式自動重新開機。 如果您使用這個選項，Configuration Manager 就必須處理電腦重新啟動。|  
@@ -234,7 +234,7 @@ ms.locfileid: "50744583"
   
  如需詳細資訊的連結，請參閱下一節：[下載錯誤碼](#additional_error_codes)。  
   
-|傳回碼|描述|  
+|傳回碼|說明|  
 |-----------------|-----------------|  
 |0|安裝已順利完成。|  
 |1602|使用者已取消安裝。|  

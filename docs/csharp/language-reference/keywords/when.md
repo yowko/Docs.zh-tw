@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - when keyword [C#]
 ms.assetid: dd543335-ae37-48ac-9560-bd5f047b9aea
-ms.openlocfilehash: a71cbdce256b1c1bd5d101d66f216fb229d70adf
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: ab533bc6b8bcff54774d849510c66ec3436ad3b5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48844900"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146942"
 ---
  # <a name="when-c-reference"></a>when (C# 參考)
 
@@ -23,10 +23,10 @@ ms.locfileid: "48844900"
 
 ## <a name="when-in-a-catch-statement"></a>`catch` 陳述式中的 `when`
 
-從 C# 6 開始，`When` 可以用於 `catch` 陳述式中，來指定必須符合才能執行特定例外狀況的處理常式的條件。 它的語法為：
+從 C# 6 開始，`when` 可以用於 `catch` 陳述式中，來指定必須符合才能執行特定例外狀況的處理常式的條件。 它的語法為：
 
 ```csharp
-catch ExceptionType [e] when (expr)
+catch (ExceptionType [e]) when (expr)
 ```
 其中，*expr* 是可評估為布林值的運算式。 如果它傳回 `true`，則會執行例外狀況處理常式；如果 `false` 則否。 
 

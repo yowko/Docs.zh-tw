@@ -4,12 +4,12 @@ description: 適用於容器化 .NET 應用程式的.NET 微服務架構 | 選�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: fa5efd3c2478965ef01efc39b57918ec2d35962a
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: b283916d6ae4d19fdc6a4f7976a3adbb66d26b2c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873371"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143399"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>選擇在 Docker 容器使用 .NET Core 的時機
 
@@ -53,7 +53,6 @@ ms.locfileid: "48873371"
 
 這對於微服務架構特別重要，您可以在其中執行數百個微服務 (容器)。 透過 Linux 或 Windows Nano 上的 ASP.NET Core 映像 (以 .NET Core 執行階段為基礎)，您可以大幅減少伺服器或 VM 的數量來執行系統，最終節省基礎架構和託管的成本。
 
-
 >[!div class="step-by-step"]
-[上一頁](general-guidance.md)
-[下一頁](net-framework-container-scenarios.md)
+>[上一頁](general-guidance.md)
+>[下一頁](net-framework-container-scenarios.md)
