@@ -4,19 +4,19 @@ description: 探索如何使用具有 ML.NET 的交叉驗證訓練機器學習�
 ms.date: 11/07/2018
 ms.custom: mvc,how-to
 ms.openlocfilehash: 41b99415d736b6583a8d43434c031e677e6f3ac8
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297575"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145958"
 ---
-# <a name="train-a-machine-learning-model-using-cross-validation---mlnet"></a><span data-ttu-id="70bed-103">使用交叉驗證訓練機器學習模型 - ML.NET</span><span class="sxs-lookup"><span data-stu-id="70bed-103">Train a machine learning model using cross-validation - ML.NET</span></span>
+# <a name="train-a-machine-learning-model-using-cross-validation---mlnet"></a><span data-ttu-id="42da8-103">使用交叉驗證訓練機器學習模型 - ML.NET</span><span class="sxs-lookup"><span data-stu-id="42da8-103">Train a machine learning model using cross-validation - ML.NET</span></span>
 
-<span data-ttu-id="70bed-104">[交叉驗證](https://en.wikipedia.org/wiki/Cross-validation_(statistics))對 ML 應用程式而言是相當實用的技術。</span><span class="sxs-lookup"><span data-stu-id="70bed-104">[Cross-validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) is a useful technique for ML applications.</span></span> <span data-ttu-id="70bed-105">這項技術有助於評估每回合模型品質的差異，也讓您不必擷取個別的測試集合來進行評估。</span><span class="sxs-lookup"><span data-stu-id="70bed-105">It helps estimate the variance of the model quality from one run to another and also eliminates the need to extract a separate test set for evaluation.</span></span>
+<span data-ttu-id="42da8-104">[交叉驗證](https://en.wikipedia.org/wiki/Cross-validation_(statistics))對 ML 應用程式而言是相當實用的技術。</span><span class="sxs-lookup"><span data-stu-id="42da8-104">[Cross-validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) is a useful technique for ML applications.</span></span> <span data-ttu-id="42da8-105">這項技術有助於評估每回合模型品質的差異，也讓您不必擷取個別的測試集合來進行評估。</span><span class="sxs-lookup"><span data-stu-id="42da8-105">It helps estimate the variance of the model quality from one run to another and also eliminates the need to extract a separate test set for evaluation.</span></span>
 
-<span data-ttu-id="70bed-106">ML.NET 會正確地自動套用功能 (只要所有前置處理都在一個學習管線)，然後使用「分層欄位」概念來確保相關範例不會分開。</span><span class="sxs-lookup"><span data-stu-id="70bed-106">ML.NET automatically applies featurization correctly (as long as all of the preprocessing resides in one learning pipeline) then use the 'stratification column' concept to make sure that related examples don't get separated.</span></span>
+<span data-ttu-id="42da8-106">ML.NET 會正確地自動套用功能 (只要所有前置處理都在一個學習管線)，然後使用「分層欄位」概念來確保相關範例不會分開。</span><span class="sxs-lookup"><span data-stu-id="42da8-106">ML.NET automatically applies featurization correctly (as long as all of the preprocessing resides in one learning pipeline) then use the 'stratification column' concept to make sure that related examples don't get separated.</span></span>
 
-<span data-ttu-id="70bed-107">以下訓練範例對 Iris 資料集使用隨機化的 90/10 訓練測試分割，以及 5 次交叉驗證：</span><span class="sxs-lookup"><span data-stu-id="70bed-107">Here's a training example on an Iris dataset using randomized 90/10 train-test split, and a 5-fold cross-validation:</span></span>
+<span data-ttu-id="42da8-107">以下訓練範例對 Iris 資料集使用隨機化的 90/10 訓練測試分割，以及 5 次交叉驗證：</span><span class="sxs-lookup"><span data-stu-id="42da8-107">Here's a training example on an Iris dataset using randomized 90/10 train-test split, and a 5-fold cross-validation:</span></span>
 
 ```csharp
 // Create a new context for ML.NET operations. It can be used for exception tracking and logging, 

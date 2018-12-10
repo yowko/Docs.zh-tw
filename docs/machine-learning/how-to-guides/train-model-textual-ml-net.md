@@ -4,26 +4,26 @@ description: 了解如何使用 ML.NET 套用功能工程以對文字資料進�
 ms.date: 11/07/2018
 ms.custom: mvc,how-to
 ms.openlocfilehash: ed24561c8cc821ece8a21ca61e22a11bda2516d1
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297635"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152158"
 ---
-# <a name="apply-feature-engineering-for-machine-learning-model-training-on-textual-data-with-mlnet"></a><span data-ttu-id="d77b5-103">使用 ML.NET 套用功能工程以對文字資料進行機器學習模型訓練</span><span class="sxs-lookup"><span data-stu-id="d77b5-103">Apply feature engineering for machine learning model training on textual data with ML.NET</span></span>
+# <a name="apply-feature-engineering-for-machine-learning-model-training-on-textual-data-with-mlnet"></a><span data-ttu-id="0b304-103">使用 ML.NET 套用功能工程以對文字資料進行機器學習模型訓練</span><span class="sxs-lookup"><span data-stu-id="0b304-103">Apply feature engineering for machine learning model training on textual data with ML.NET</span></span>
 
-<span data-ttu-id="d77b5-104">因為所有 ML.NET `learners` 都預期功能會是 `float vector`，所以您需要將所有非 float 資料轉換成 `float` 資料類型。</span><span class="sxs-lookup"><span data-stu-id="d77b5-104">You need to convert any non float data to `float` data types since all ML.NET `learners` expect features as a `float vector`.</span></span>
+<span data-ttu-id="0b304-104">因為所有 ML.NET `learners` 都預期功能會是 `float vector`，所以您需要將所有非 float 資料轉換成 `float` 資料類型。</span><span class="sxs-lookup"><span data-stu-id="0b304-104">You need to convert any non float data to `float` data types since all ML.NET `learners` expect features as a `float vector`.</span></span>
 
-<span data-ttu-id="d77b5-105">若要在文字資料上學習，您就需要擷取文字的功能。</span><span class="sxs-lookup"><span data-stu-id="d77b5-105">To learn on textual data, you need to extract text features.</span></span> <span data-ttu-id="d77b5-106">ML.NET 有一些基本的文字功能擷取機制：</span><span class="sxs-lookup"><span data-stu-id="d77b5-106">ML.NET has some basic text feature extraction mechanisms:</span></span>
+<span data-ttu-id="0b304-105">若要在文字資料上學習，您就需要擷取文字的功能。</span><span class="sxs-lookup"><span data-stu-id="0b304-105">To learn on textual data, you need to extract text features.</span></span> <span data-ttu-id="0b304-106">ML.NET 有一些基本的文字功能擷取機制：</span><span class="sxs-lookup"><span data-stu-id="0b304-106">ML.NET has some basic text feature extraction mechanisms:</span></span>
 
-- <span data-ttu-id="d77b5-107">`Text normalization` (移除標點符號、變音符號、切換至小寫等)</span><span class="sxs-lookup"><span data-stu-id="d77b5-107">`Text normalization` (removing punctuation, diacritics, switching to lowercase etc.)</span></span>
-- <span data-ttu-id="d77b5-108">`Separator-based tokenization`.</span><span class="sxs-lookup"><span data-stu-id="d77b5-108">`Separator-based tokenization`.</span></span>
-- <span data-ttu-id="d77b5-109">`Stopword` 移除。</span><span class="sxs-lookup"><span data-stu-id="d77b5-109">`Stopword` removal.</span></span>
-- <span data-ttu-id="d77b5-110">`Ngram` 及 `skip-gram` 擷取。</span><span class="sxs-lookup"><span data-stu-id="d77b5-110">`Ngram` and `skip-gram` extraction.</span></span>
-- <span data-ttu-id="d77b5-111">`TF-IDF` 重新調整。</span><span class="sxs-lookup"><span data-stu-id="d77b5-111">`TF-IDF` rescaling.</span></span>
-- <span data-ttu-id="d77b5-112">`Bag of words` 轉換。</span><span class="sxs-lookup"><span data-stu-id="d77b5-112">`Bag of words` conversion.</span></span>
+- <span data-ttu-id="0b304-107">`Text normalization` (移除標點符號、變音符號、切換至小寫等)</span><span class="sxs-lookup"><span data-stu-id="0b304-107">`Text normalization` (removing punctuation, diacritics, switching to lowercase etc.)</span></span>
+- <span data-ttu-id="0b304-108">`Separator-based tokenization`.</span><span class="sxs-lookup"><span data-stu-id="0b304-108">`Separator-based tokenization`.</span></span>
+- <span data-ttu-id="0b304-109">`Stopword` 移除。</span><span class="sxs-lookup"><span data-stu-id="0b304-109">`Stopword` removal.</span></span>
+- <span data-ttu-id="0b304-110">`Ngram` 及 `skip-gram` 擷取。</span><span class="sxs-lookup"><span data-stu-id="0b304-110">`Ngram` and `skip-gram` extraction.</span></span>
+- <span data-ttu-id="0b304-111">`TF-IDF` 重新調整。</span><span class="sxs-lookup"><span data-stu-id="0b304-111">`TF-IDF` rescaling.</span></span>
+- <span data-ttu-id="0b304-112">`Bag of words` 轉換。</span><span class="sxs-lookup"><span data-stu-id="0b304-112">`Bag of words` conversion.</span></span>
 
-<span data-ttu-id="d77b5-113">下列範例示範使用 [Wikipedia detox 資料集](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv)的 ML.NET 文字功能擷取機制：</span><span class="sxs-lookup"><span data-stu-id="d77b5-113">The following example demonstrates ML.NET text feature extraction mechanisms using the [Wikipedia detox dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv):</span></span>
+<span data-ttu-id="0b304-113">下列範例示範使用 [Wikipedia detox 資料集](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv)的 ML.NET 文字功能擷取機制：</span><span class="sxs-lookup"><span data-stu-id="0b304-113">The following example demonstrates ML.NET text feature extraction mechanisms using the [Wikipedia detox dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv):</span></span>
 
 ```console
 Sentiment   SentimentText

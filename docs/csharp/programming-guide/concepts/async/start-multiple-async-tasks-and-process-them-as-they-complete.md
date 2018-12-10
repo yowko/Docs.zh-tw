@@ -2,92 +2,92 @@
 title: 在非同步工作完成時進行處理
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: 9380be1dc24d7c147c22dbb1a362777f56a32358
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ec5729eaa8d63eb18b1ac4dea5820cbf834d001b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202038"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152355"
 ---
-# <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a><span data-ttu-id="a5f35-102">啟動多項非同步工作並在它們完成時進行處理 (C#)</span><span class="sxs-lookup"><span data-stu-id="a5f35-102">Start Multiple Async Tasks and Process Them As They Complete (C#)</span></span>
+# <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a><span data-ttu-id="84fec-102">啟動多項非同步工作並在它們完成時進行處理 (C#)</span><span class="sxs-lookup"><span data-stu-id="84fec-102">Start Multiple Async Tasks and Process Them As They Complete (C#)</span></span>
 
-<span data-ttu-id="a5f35-103">使用 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>，即可同時啟動多個工作，並在完成時逐一進行處理，而不是依啟動順序進行處理。</span><span class="sxs-lookup"><span data-stu-id="a5f35-103">By using <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>, you can start multiple tasks at the same time and process them one by one as they’re completed rather than process them in the order in which they're started.</span></span>
+<span data-ttu-id="84fec-103">使用 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>，即可同時啟動多個工作，並在完成時逐一進行處理，而不是依啟動順序進行處理。</span><span class="sxs-lookup"><span data-stu-id="84fec-103">By using <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>, you can start multiple tasks at the same time and process them one by one as they’re completed rather than process them in the order in which they're started.</span></span>
 
-<span data-ttu-id="a5f35-104">下列範例使用查詢來建立工作集合。</span><span class="sxs-lookup"><span data-stu-id="a5f35-104">The following example uses a query to create a collection of tasks.</span></span> <span data-ttu-id="a5f35-105">每項工作都會下載所指定網站的內容。</span><span class="sxs-lookup"><span data-stu-id="a5f35-105">Each task downloads the contents of a specified website.</span></span> <span data-ttu-id="a5f35-106">在 while 迴圈的的每個反覆運算中，等候的 `WhenAny` 呼叫會先傳回完成其下載的工作集合中的工作。</span><span class="sxs-lookup"><span data-stu-id="a5f35-106">In each iteration of a while loop, an awaited call to `WhenAny` returns the task in the collection of tasks that finishes its download first.</span></span> <span data-ttu-id="a5f35-107">該工作會從集合中予以移除，並進行處理。</span><span class="sxs-lookup"><span data-stu-id="a5f35-107">That task is removed from the collection and processed.</span></span> <span data-ttu-id="a5f35-108">迴圈會重複進行，直到集合未包含其他工作為止。</span><span class="sxs-lookup"><span data-stu-id="a5f35-108">The loop repeats until the collection contains no more tasks.</span></span>
+<span data-ttu-id="84fec-104">下列範例使用查詢來建立工作集合。</span><span class="sxs-lookup"><span data-stu-id="84fec-104">The following example uses a query to create a collection of tasks.</span></span> <span data-ttu-id="84fec-105">每項工作都會下載所指定網站的內容。</span><span class="sxs-lookup"><span data-stu-id="84fec-105">Each task downloads the contents of a specified website.</span></span> <span data-ttu-id="84fec-106">在 while 迴圈的的每個反覆運算中，等候的 `WhenAny` 呼叫會先傳回完成其下載的工作集合中的工作。</span><span class="sxs-lookup"><span data-stu-id="84fec-106">In each iteration of a while loop, an awaited call to `WhenAny` returns the task in the collection of tasks that finishes its download first.</span></span> <span data-ttu-id="84fec-107">該工作會從集合中予以移除，並進行處理。</span><span class="sxs-lookup"><span data-stu-id="84fec-107">That task is removed from the collection and processed.</span></span> <span data-ttu-id="84fec-108">迴圈會重複進行，直到集合未包含其他工作為止。</span><span class="sxs-lookup"><span data-stu-id="84fec-108">The loop repeats until the collection contains no more tasks.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="a5f35-109">若要執行範例，您必須在電腦上安裝 Visual Studio (2012 或更新版本) 以及 .NET Framework 4.5 或更新版本。</span><span class="sxs-lookup"><span data-stu-id="a5f35-109">To run the examples, you must have Visual Studio (2012 or newer) and the .NET Framework 4.5 or newer installed on your computer.</span></span>
+> <span data-ttu-id="84fec-109">若要執行範例，您必須在電腦上安裝 Visual Studio (2012 或更新版本) 以及 .NET Framework 4.5 或更新版本。</span><span class="sxs-lookup"><span data-stu-id="84fec-109">To run the examples, you must have Visual Studio (2012 or newer) and the .NET Framework 4.5 or newer installed on your computer.</span></span>
 
-## <a name="download-an-example-solution"></a><span data-ttu-id="a5f35-110">下載範例解決方案</span><span class="sxs-lookup"><span data-stu-id="a5f35-110">Download an example solution</span></span>
+## <a name="download-an-example-solution"></a><span data-ttu-id="84fec-110">下載範例解決方案</span><span class="sxs-lookup"><span data-stu-id="84fec-110">Download an example solution</span></span>
 
-<span data-ttu-id="a5f35-111">您可以從 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載完整 Windows Presentation Foundation (WPF) 專案，然後遵循下列步驟。</span><span class="sxs-lookup"><span data-stu-id="a5f35-111">You can download the complete Windows Presentation Foundation (WPF) project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) and then follow these steps.</span></span>
+<span data-ttu-id="84fec-111">您可以從 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載完整 Windows Presentation Foundation (WPF) 專案，然後遵循下列步驟。</span><span class="sxs-lookup"><span data-stu-id="84fec-111">You can download the complete Windows Presentation Foundation (WPF) project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) and then follow these steps.</span></span>
 
 > [!TIP]
-> <span data-ttu-id="a5f35-112">如果您不想要下載專案，可以檢閱本主題結尾的 MainWindow.xaml.cs 檔案。</span><span class="sxs-lookup"><span data-stu-id="a5f35-112">If you don't want to download the project, you can review the MainWindow.xaml.cs file at the end of this topic instead.</span></span>
+> <span data-ttu-id="84fec-112">如果您不想要下載專案，可以檢閱本主題結尾的 MainWindow.xaml.cs 檔案。</span><span class="sxs-lookup"><span data-stu-id="84fec-112">If you don't want to download the project, you can review the MainWindow.xaml.cs file at the end of this topic instead.</span></span>
 
-1.  <span data-ttu-id="a5f35-113">從 ZIP 檔案中解壓縮您下載的檔案，然後啟動 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="a5f35-113">Extract the files that you downloaded from the .zip file, and then start Visual Studio.</span></span>
+1.  <span data-ttu-id="84fec-113">從 ZIP 檔案中解壓縮您下載的檔案，然後啟動 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="84fec-113">Extract the files that you downloaded from the .zip file, and then start Visual Studio.</span></span>
 
-2.  <span data-ttu-id="a5f35-114">在功能表列上選擇 [檔案] >  [開啟] > [專案/解決方案]。</span><span class="sxs-lookup"><span data-stu-id="a5f35-114">On the menu bar, choose **File** > **Open** > **Project/Solution**.</span></span>
+2.  <span data-ttu-id="84fec-114">在功能表列上選擇 [檔案] >  [開啟] > [專案/解決方案]。</span><span class="sxs-lookup"><span data-stu-id="84fec-114">On the menu bar, choose **File** > **Open** > **Project/Solution**.</span></span>
 
-3.  <span data-ttu-id="a5f35-115">在 [開啟專案] 對話方塊中，開啟您已下載的範例程式碼所在的資料夾，然後開啟 AsyncFineTuningCS 的解決方案 (.sln) 檔案。</span><span class="sxs-lookup"><span data-stu-id="a5f35-115">In the **Open Project** dialog box, open the folder that holds the sample code you downloaded, and then open the solution (.sln) file for AsyncFineTuningCS.</span></span>
+3.  <span data-ttu-id="84fec-115">在 [開啟專案] 對話方塊中，開啟您已下載的範例程式碼所在的資料夾，然後開啟 AsyncFineTuningCS 的解決方案 (.sln) 檔案。</span><span class="sxs-lookup"><span data-stu-id="84fec-115">In the **Open Project** dialog box, open the folder that holds the sample code you downloaded, and then open the solution (.sln) file for AsyncFineTuningCS.</span></span>
 
-4.  <span data-ttu-id="a5f35-116">在方案總管中，開啟 **ProcessTasksAsTheyFinish** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。</span><span class="sxs-lookup"><span data-stu-id="a5f35-116">In **Solution Explorer**, open the shortcut menu for the **ProcessTasksAsTheyFinish** project, and then choose **Set as StartUp Project**.</span></span>
+4.  <span data-ttu-id="84fec-116">在方案總管中，開啟 **ProcessTasksAsTheyFinish** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。</span><span class="sxs-lookup"><span data-stu-id="84fec-116">In **Solution Explorer**, open the shortcut menu for the **ProcessTasksAsTheyFinish** project, and then choose **Set as StartUp Project**.</span></span>
 
-5.  <span data-ttu-id="a5f35-117">選擇 **F5** 鍵以執行程式 (或按 **Ctrl**+**F5** 鍵以執行程式而不進行偵錯)。</span><span class="sxs-lookup"><span data-stu-id="a5f35-117">Choose the **F5** key to run the program (or, press **Ctrl**+**F5** keys to run the program without debugging it).</span></span>
+5.  <span data-ttu-id="84fec-117">選擇 **F5** 鍵以執行程式 (或按 **Ctrl**+**F5** 鍵以執行程式而不進行偵錯)。</span><span class="sxs-lookup"><span data-stu-id="84fec-117">Choose the **F5** key to run the program (or, press **Ctrl**+**F5** keys to run the program without debugging it).</span></span>
 
-6.  <span data-ttu-id="a5f35-118">執行專案數次，確認所下載的長度不一定會以相同的順序出現。</span><span class="sxs-lookup"><span data-stu-id="a5f35-118">Run the project several times to verify that the downloaded lengths don't always appear in the same order.</span></span>
+6.  <span data-ttu-id="84fec-118">執行專案數次，確認所下載的長度不一定會以相同的順序出現。</span><span class="sxs-lookup"><span data-stu-id="84fec-118">Run the project several times to verify that the downloaded lengths don't always appear in the same order.</span></span>
 
-## <a name="create-the-program-yourself"></a><span data-ttu-id="a5f35-119">自行建立程式</span><span class="sxs-lookup"><span data-stu-id="a5f35-119">Create the program yourself</span></span>
+## <a name="create-the-program-yourself"></a><span data-ttu-id="84fec-119">自行建立程式</span><span class="sxs-lookup"><span data-stu-id="84fec-119">Create the program yourself</span></span>
 
-<span data-ttu-id="a5f35-120">此範例會新增至在[當其中一項工作完成時，取消剩餘的非同步工作 (C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md) 中開發的程式碼，並使用相同的 UI。</span><span class="sxs-lookup"><span data-stu-id="a5f35-120">This example adds to the code that’s developed in [Cancel Remaining Async Tasks after One Is Complete (C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md), and it uses the same UI.</span></span>
+<span data-ttu-id="84fec-120">此範例會新增至在[當其中一項工作完成時，取消剩餘的非同步工作 (C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md) 中開發的程式碼，並使用相同的 UI。</span><span class="sxs-lookup"><span data-stu-id="84fec-120">This example adds to the code that’s developed in [Cancel Remaining Async Tasks after One Is Complete (C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md), and it uses the same UI.</span></span>
 
-<span data-ttu-id="a5f35-121">若要自行逐步建置範例，請遵循[下載範例](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md#downloading-the-example)一節中的指示，但將 [CancelAfterOneTask] 設定為啟始專案。</span><span class="sxs-lookup"><span data-stu-id="a5f35-121">To build the example yourself, step by step, follow the instructions in the [Downloading the Example](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md#downloading-the-example) section, but set **CancelAfterOneTask** as the startup project.</span></span> <span data-ttu-id="a5f35-122">將本主題中的變更新增至該專案中的 `AccessTheWebAsync` 方法。</span><span class="sxs-lookup"><span data-stu-id="a5f35-122">Add the changes in this topic to the `AccessTheWebAsync` method in that project.</span></span> <span data-ttu-id="a5f35-123">變更會標上星號。</span><span class="sxs-lookup"><span data-stu-id="a5f35-123">The changes are marked with asterisks.</span></span>
+<span data-ttu-id="84fec-121">若要自行逐步建置範例，請遵循[下載範例](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md#downloading-the-example)一節中的指示，但將 [CancelAfterOneTask] 設定為啟始專案。</span><span class="sxs-lookup"><span data-stu-id="84fec-121">To build the example yourself, step by step, follow the instructions in the [Downloading the Example](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md#downloading-the-example) section, but set **CancelAfterOneTask** as the startup project.</span></span> <span data-ttu-id="84fec-122">將本主題中的變更新增至該專案中的 `AccessTheWebAsync` 方法。</span><span class="sxs-lookup"><span data-stu-id="84fec-122">Add the changes in this topic to the `AccessTheWebAsync` method in that project.</span></span> <span data-ttu-id="84fec-123">變更會標上星號。</span><span class="sxs-lookup"><span data-stu-id="84fec-123">The changes are marked with asterisks.</span></span>
 
-<span data-ttu-id="a5f35-124">**CancelAfterOneTask** 專案已經包含一個查詢，這個查詢在執行時，會建立一組工作。</span><span class="sxs-lookup"><span data-stu-id="a5f35-124">The **CancelAfterOneTask** project already includes a query that, when executed, creates a collection of tasks.</span></span> <span data-ttu-id="a5f35-125">下列程式碼中的每個 `ProcessURLAsync` 呼叫都會傳回 `TResult` 為整數的 <xref:System.Threading.Tasks.Task%601>：</span><span class="sxs-lookup"><span data-stu-id="a5f35-125">Each call to `ProcessURLAsync` in the following code returns a <xref:System.Threading.Tasks.Task%601>, where `TResult` is an integer:</span></span>
+<span data-ttu-id="84fec-124">**CancelAfterOneTask** 專案已經包含一個查詢，這個查詢在執行時，會建立一組工作。</span><span class="sxs-lookup"><span data-stu-id="84fec-124">The **CancelAfterOneTask** project already includes a query that, when executed, creates a collection of tasks.</span></span> <span data-ttu-id="84fec-125">下列程式碼中的每個 `ProcessURLAsync` 呼叫都會傳回 `TResult` 為整數的 <xref:System.Threading.Tasks.Task%601>：</span><span class="sxs-lookup"><span data-stu-id="84fec-125">Each call to `ProcessURLAsync` in the following code returns a <xref:System.Threading.Tasks.Task%601>, where `TResult` is an integer:</span></span>
 
 ```csharp
 IEnumerable<Task<int>> downloadTasksQuery = from url in urlList select ProcessURL(url, client, ct);
 ```
 
-<span data-ttu-id="a5f35-126">在專案的 MainWindow.xaml.cs 檔案中，對 `AccessTheWebAsync` 方法進行下列變更。</span><span class="sxs-lookup"><span data-stu-id="a5f35-126">In the MainWindow.xaml.cs file of the project, make the following changes to the `AccessTheWebAsync` method.</span></span>
+<span data-ttu-id="84fec-126">在專案的 MainWindow.xaml.cs 檔案中，對 `AccessTheWebAsync` 方法進行下列變更。</span><span class="sxs-lookup"><span data-stu-id="84fec-126">In the MainWindow.xaml.cs file of the project, make the following changes to the `AccessTheWebAsync` method.</span></span>
 
--   <span data-ttu-id="a5f35-127">套用 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> 來執行查詢，而非 <xref:System.Linq.Enumerable.ToArray%2A>。</span><span class="sxs-lookup"><span data-stu-id="a5f35-127">Execute the query by applying <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> instead of <xref:System.Linq.Enumerable.ToArray%2A>.</span></span>
+-   <span data-ttu-id="84fec-127">套用 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> 來執行查詢，而非 <xref:System.Linq.Enumerable.ToArray%2A>。</span><span class="sxs-lookup"><span data-stu-id="84fec-127">Execute the query by applying <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> instead of <xref:System.Linq.Enumerable.ToArray%2A>.</span></span>
 
     ```csharp
     List<Task<int>> downloadTasks = downloadTasksQuery.ToList();
     ```
 
--   <span data-ttu-id="a5f35-128">新增 `while` 迴圈，以對集合中的每個工作執行下列步驟：</span><span class="sxs-lookup"><span data-stu-id="a5f35-128">Add a `while` loop that performs the following steps for each task in the collection:</span></span>
+-   <span data-ttu-id="84fec-128">新增 `while` 迴圈，以對集合中的每個工作執行下列步驟：</span><span class="sxs-lookup"><span data-stu-id="84fec-128">Add a `while` loop that performs the following steps for each task in the collection:</span></span>
 
-    1.  <span data-ttu-id="a5f35-129">等候 `WhenAny` 呼叫，識別集合中的第一個工作以完成其下載。</span><span class="sxs-lookup"><span data-stu-id="a5f35-129">Awaits a call to `WhenAny` to identify the first task in the collection to finish its download.</span></span>
+    1.  <span data-ttu-id="84fec-129">等候 `WhenAny` 呼叫，識別集合中的第一個工作以完成其下載。</span><span class="sxs-lookup"><span data-stu-id="84fec-129">Awaits a call to `WhenAny` to identify the first task in the collection to finish its download.</span></span>
 
         ```csharp
         Task<int> firstFinishedTask = await Task.WhenAny(downloadTasks);
         ```
 
-    2.  <span data-ttu-id="a5f35-130">從集合中移除該工作。</span><span class="sxs-lookup"><span data-stu-id="a5f35-130">Removes that task from the collection.</span></span>
+    2.  <span data-ttu-id="84fec-130">從集合中移除該工作。</span><span class="sxs-lookup"><span data-stu-id="84fec-130">Removes that task from the collection.</span></span>
 
         ```csharp
         downloadTasks.Remove(firstFinishedTask);
         ```
 
-    3.  <span data-ttu-id="a5f35-131">等候 `ProcessURLAsync` 呼叫所傳回的 `firstFinishedTask`。</span><span class="sxs-lookup"><span data-stu-id="a5f35-131">Awaits `firstFinishedTask`, which is returned by a call to `ProcessURLAsync`.</span></span> <span data-ttu-id="a5f35-132">`firstFinishedTask` 變數是 <xref:System.Threading.Tasks.Task%601>，其中 `TReturn` 是整數。</span><span class="sxs-lookup"><span data-stu-id="a5f35-132">The `firstFinishedTask` variable is a <xref:System.Threading.Tasks.Task%601> where `TReturn` is an integer.</span></span> <span data-ttu-id="a5f35-133">工作已完成，但您等候它擷取所下載網站的長度，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="a5f35-133">The task is already complete, but you await it to retrieve the length of the downloaded website, as the following example shows.</span></span>
+    3.  <span data-ttu-id="84fec-131">等候 `ProcessURLAsync` 呼叫所傳回的 `firstFinishedTask`。</span><span class="sxs-lookup"><span data-stu-id="84fec-131">Awaits `firstFinishedTask`, which is returned by a call to `ProcessURLAsync`.</span></span> <span data-ttu-id="84fec-132">`firstFinishedTask` 變數是 <xref:System.Threading.Tasks.Task%601>，其中 `TReturn` 是整數。</span><span class="sxs-lookup"><span data-stu-id="84fec-132">The `firstFinishedTask` variable is a <xref:System.Threading.Tasks.Task%601> where `TReturn` is an integer.</span></span> <span data-ttu-id="84fec-133">工作已完成，但您等候它擷取所下載網站的長度，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="84fec-133">The task is already complete, but you await it to retrieve the length of the downloaded website, as the following example shows.</span></span>
 
         ```csharp
         int length = await firstFinishedTask;
-        resultsTextBox.Text += String.Format("\r\nLength of the download:  {0}", length);
+        resultsTextBox.Text += $"\r\nLength of the download:  {length}";
         ```
 
-<span data-ttu-id="a5f35-134">執行程式數次，確認所下載的長度不一定會以相同的順序出現。</span><span class="sxs-lookup"><span data-stu-id="a5f35-134">Run the program several times to verify that the downloaded lengths don't always appear in the same order.</span></span>
+<span data-ttu-id="84fec-134">執行程式數次，確認所下載的長度不一定會以相同的順序出現。</span><span class="sxs-lookup"><span data-stu-id="84fec-134">Run the program several times to verify that the downloaded lengths don't always appear in the same order.</span></span>
 
 > [!CAUTION]
-> <span data-ttu-id="a5f35-135">您可以如這個範例所述在迴圈中使用 `WhenAny`，以解決牽涉到少量工作的問題。</span><span class="sxs-lookup"><span data-stu-id="a5f35-135">You can use `WhenAny` in a loop, as described in the example, to solve problems that involve a small number of tasks.</span></span> <span data-ttu-id="a5f35-136">不過，如果您有大量的工作要處理，其他方法會更有效率。</span><span class="sxs-lookup"><span data-stu-id="a5f35-136">However, other approaches are more efficient if you have a large number of tasks to process.</span></span> <span data-ttu-id="a5f35-137">如需詳細資訊和範例，請參閱 [Processing tasks as they complete](https://blogs.msdn.microsoft.com/pfxteam/2012/08/02/processing-tasks-as-they-complete/) (在工作完成時加以處理)。</span><span class="sxs-lookup"><span data-stu-id="a5f35-137">For more information and examples, see [Processing tasks as they complete](https://blogs.msdn.microsoft.com/pfxteam/2012/08/02/processing-tasks-as-they-complete/).</span></span>
+> <span data-ttu-id="84fec-135">您可以如這個範例所述在迴圈中使用 `WhenAny`，以解決牽涉到少量工作的問題。</span><span class="sxs-lookup"><span data-stu-id="84fec-135">You can use `WhenAny` in a loop, as described in the example, to solve problems that involve a small number of tasks.</span></span> <span data-ttu-id="84fec-136">不過，如果您有大量的工作要處理，其他方法會更有效率。</span><span class="sxs-lookup"><span data-stu-id="84fec-136">However, other approaches are more efficient if you have a large number of tasks to process.</span></span> <span data-ttu-id="84fec-137">如需詳細資訊和範例，請參閱 [Processing tasks as they complete](https://blogs.msdn.microsoft.com/pfxteam/2012/08/02/processing-tasks-as-they-complete/) (在工作完成時加以處理)。</span><span class="sxs-lookup"><span data-stu-id="84fec-137">For more information and examples, see [Processing tasks as they complete](https://blogs.msdn.microsoft.com/pfxteam/2012/08/02/processing-tasks-as-they-complete/).</span></span>
 
-## <a name="complete-example"></a><span data-ttu-id="a5f35-138">完整範例</span><span class="sxs-lookup"><span data-stu-id="a5f35-138">Complete example</span></span>
+## <a name="complete-example"></a><span data-ttu-id="84fec-138">完整範例</span><span class="sxs-lookup"><span data-stu-id="84fec-138">Complete example</span></span>
 
-<span data-ttu-id="a5f35-139">下列程式碼是範例的 MainWindow.xaml.cs 檔案的完整文字。</span><span class="sxs-lookup"><span data-stu-id="a5f35-139">The following code is the complete text of the MainWindow.xaml.cs file for the example.</span></span> <span data-ttu-id="a5f35-140">星號會標記已針對此範例新增的項目。</span><span class="sxs-lookup"><span data-stu-id="a5f35-140">Asterisks mark the elements that were added for this example.</span></span> <span data-ttu-id="a5f35-141">同時請注意，您必須新增 <xref:System.Net.Http> 的參考。</span><span class="sxs-lookup"><span data-stu-id="a5f35-141">Also, take note that you must add a reference for <xref:System.Net.Http>.</span></span>
+<span data-ttu-id="84fec-139">下列程式碼是範例的 MainWindow.xaml.cs 檔案的完整文字。</span><span class="sxs-lookup"><span data-stu-id="84fec-139">The following code is the complete text of the MainWindow.xaml.cs file for the example.</span></span> <span data-ttu-id="84fec-140">星號會標記已針對此範例新增的項目。</span><span class="sxs-lookup"><span data-stu-id="84fec-140">Asterisks mark the elements that were added for this example.</span></span> <span data-ttu-id="84fec-141">同時請注意，您必須新增 <xref:System.Net.Http> 的參考。</span><span class="sxs-lookup"><span data-stu-id="84fec-141">Also, take note that you must add a reference for <xref:System.Net.Http>.</span></span>
 
-<span data-ttu-id="a5f35-142">您可以從 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載專案。</span><span class="sxs-lookup"><span data-stu-id="a5f35-142">You can download the project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).</span></span>
+<span data-ttu-id="84fec-142">您可以從 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載專案。</span><span class="sxs-lookup"><span data-stu-id="84fec-142">You can download the project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).</span></span>
 
 ```csharp
 using System;
@@ -181,7 +181,7 @@ namespace ProcessTasksAsTheyFinish
 
                     // Await the completed task.
                     int length = await firstFinishedTask;
-                    resultsTextBox.Text += String.Format("\r\nLength of the download:  {0}", length);
+                    resultsTextBox.Text += $"\r\nLength of the download:  {length}";
             }
         }
 
@@ -225,9 +225,9 @@ namespace ProcessTasksAsTheyFinish
 // Downloads complete.
 ```
 
-## <a name="see-also"></a><span data-ttu-id="a5f35-143">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a5f35-143">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="84fec-143">另請參閱</span><span class="sxs-lookup"><span data-stu-id="84fec-143">See also</span></span>
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
-- [<span data-ttu-id="a5f35-144">微調非同步應用程式 (C#)</span><span class="sxs-lookup"><span data-stu-id="a5f35-144">Fine-Tuning Your Async Application (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [<span data-ttu-id="a5f35-145">使用 async 和 await 進行非同步程式設計 (C#)</span><span class="sxs-lookup"><span data-stu-id="a5f35-145">Asynchronous Programming with async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/index.md)
-- [<span data-ttu-id="a5f35-146">非同步範例：微調應用程式 (英文)</span><span class="sxs-lookup"><span data-stu-id="a5f35-146">Async Sample: Fine Tuning Your Application</span></span>](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [<span data-ttu-id="84fec-144">微調非同步應用程式 (C#)</span><span class="sxs-lookup"><span data-stu-id="84fec-144">Fine-Tuning Your Async Application (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- [<span data-ttu-id="84fec-145">使用 Async 和 Await 進行非同步程式設計 (C#)</span><span class="sxs-lookup"><span data-stu-id="84fec-145">Asynchronous Programming with async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/index.md)
+- [<span data-ttu-id="84fec-146">非同步範例：微調應用程式 (英文)</span><span class="sxs-lookup"><span data-stu-id="84fec-146">Async Sample: Fine Tuning Your Application</span></span>](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

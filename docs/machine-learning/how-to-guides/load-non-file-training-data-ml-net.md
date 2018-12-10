@@ -4,29 +4,29 @@ description: 探索如何使用 ML.NET，載入此檔案內容以外的訓練資
 ms.date: 11/07/2018
 ms.custom: mvc,how-to
 ms.openlocfilehash: 971c5c62acc9dd7bf29aa11ce898c2b76822c3d7
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672078"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125398"
 ---
-# <a name="train-a-machine-learning-model-with-data-thats-not-in-a-text-file---mlnet"></a><span data-ttu-id="5d3fb-103">使用文字檔 ML.NET 內容以外的資料，訓練機器學習模型</span><span class="sxs-lookup"><span data-stu-id="5d3fb-103">Train a machine learning model with data that's not in a text file - ML.NET</span></span>
+# <a name="train-a-machine-learning-model-with-data-thats-not-in-a-text-file---mlnet"></a><span data-ttu-id="897ab-103">使用文字檔 ML.NET 內容以外的資料，訓練機器學習模型</span><span class="sxs-lookup"><span data-stu-id="897ab-103">Train a machine learning model with data that's not in a text file - ML.NET</span></span>
 
-<span data-ttu-id="5d3fb-104">使用 `TextLoader` 從檔案讀取訓練資料，是常見用來示範 ML.NET 的情境。</span><span class="sxs-lookup"><span data-stu-id="5d3fb-104">The commonly demonstrated use case for ML.NET is use the `TextLoader` to read the training data from a file.</span></span>
-<span data-ttu-id="5d3fb-105">但在真實的訓練情境下，資料可能俯拾皆是，例如：</span><span class="sxs-lookup"><span data-stu-id="5d3fb-105">However, in real-time training scenarios the data can be elsewhere, such as:</span></span>
+<span data-ttu-id="897ab-104">使用 `TextLoader` 從檔案讀取訓練資料，是常見用來示範 ML.NET 的情境。</span><span class="sxs-lookup"><span data-stu-id="897ab-104">The commonly demonstrated use case for ML.NET is use the `TextLoader` to read the training data from a file.</span></span>
+<span data-ttu-id="897ab-105">但在真實的訓練情境下，資料可能俯拾皆是，例如：</span><span class="sxs-lookup"><span data-stu-id="897ab-105">However, in real-time training scenarios the data can be elsewhere, such as:</span></span>
 
-* <span data-ttu-id="5d3fb-106">在 SQL 資料表中</span><span class="sxs-lookup"><span data-stu-id="5d3fb-106">in SQL tables</span></span>
-* <span data-ttu-id="5d3fb-107">從記錄檔案擷取</span><span class="sxs-lookup"><span data-stu-id="5d3fb-107">extracted from log files</span></span>
-* <span data-ttu-id="5d3fb-108">即時產生</span><span class="sxs-lookup"><span data-stu-id="5d3fb-108">generated on the fly</span></span>
+* <span data-ttu-id="897ab-106">在 SQL 資料表中</span><span class="sxs-lookup"><span data-stu-id="897ab-106">in SQL tables</span></span>
+* <span data-ttu-id="897ab-107">從記錄檔案擷取</span><span class="sxs-lookup"><span data-stu-id="897ab-107">extracted from log files</span></span>
+* <span data-ttu-id="897ab-108">即時產生</span><span class="sxs-lookup"><span data-stu-id="897ab-108">generated on the fly</span></span>
 
-<span data-ttu-id="5d3fb-109">使用[結構描述理解](https://github.com/dotnet/machinelearning/tree/master/docs/code/SchemaComprehension.md)，將現有的 C# `IEnumerable` 放入 ML.NET 成為 `DataView`。</span><span class="sxs-lookup"><span data-stu-id="5d3fb-109">Use [schema comprehension](https://github.com/dotnet/machinelearning/tree/master/docs/code/SchemaComprehension.md) to bring an existing C# `IEnumerable` into ML.NET as a `DataView`.</span></span>
+<span data-ttu-id="897ab-109">使用[結構描述理解](https://github.com/dotnet/machinelearning/tree/master/docs/code/SchemaComprehension.md)，將現有的 C# `IEnumerable` 放入 ML.NET 成為 `DataView`。</span><span class="sxs-lookup"><span data-stu-id="897ab-109">Use [schema comprehension](https://github.com/dotnet/machinelearning/tree/master/docs/code/SchemaComprehension.md) to bring an existing C# `IEnumerable` into ML.NET as a `DataView`.</span></span>
 
-<span data-ttu-id="5d3fb-110">在此範例中，您將建置客戶變換預測模型，並從您的生產系統擷取下列特性：</span><span class="sxs-lookup"><span data-stu-id="5d3fb-110">For this example, you'll build the customer churn prediction model, and extract the following features from your production system:</span></span>
+<span data-ttu-id="897ab-110">在此範例中，您將建置客戶變換預測模型，並從您的生產系統擷取下列特性：</span><span class="sxs-lookup"><span data-stu-id="897ab-110">For this example, you'll build the customer churn prediction model, and extract the following features from your production system:</span></span>
 
-* <span data-ttu-id="5d3fb-111">客戶識別碼 (模型會忽略此項)</span><span class="sxs-lookup"><span data-stu-id="5d3fb-111">Customer ID (ignored by the model)</span></span>
-* <span data-ttu-id="5d3fb-112">無論客戶變換與否 (目標 'label')</span><span class="sxs-lookup"><span data-stu-id="5d3fb-112">Whether the customer has churned (the target 'label')</span></span>
-* <span data-ttu-id="5d3fb-113">’demographic category’ (一個字串，例如 'young adult' 之類)</span><span class="sxs-lookup"><span data-stu-id="5d3fb-113">The 'demographic category' (one string, like 'young adult' etc.)</span></span>
-* <span data-ttu-id="5d3fb-114">過去 5 天內的瀏覽量。</span><span class="sxs-lookup"><span data-stu-id="5d3fb-114">The number of visits from the last 5 days.</span></span>
+* <span data-ttu-id="897ab-111">客戶識別碼 (模型會忽略此項)</span><span class="sxs-lookup"><span data-stu-id="897ab-111">Customer ID (ignored by the model)</span></span>
+* <span data-ttu-id="897ab-112">無論客戶變換與否 (目標 'label')</span><span class="sxs-lookup"><span data-stu-id="897ab-112">Whether the customer has churned (the target 'label')</span></span>
+* <span data-ttu-id="897ab-113">’demographic category’ (一個字串，例如 'young adult' 之類)</span><span class="sxs-lookup"><span data-stu-id="897ab-113">The 'demographic category' (one string, like 'young adult' etc.)</span></span>
+* <span data-ttu-id="897ab-114">過去 5 天內的瀏覽量。</span><span class="sxs-lookup"><span data-stu-id="897ab-114">The number of visits from the last 5 days.</span></span>
 
 ```csharp
 private class CustomerChurnInfo
@@ -40,7 +40,7 @@ private class CustomerChurnInfo
 }
 ```
 
-<span data-ttu-id="5d3fb-115">使用下列程式碼，將此資料載入 `DataView` 並訓練該模型：</span><span class="sxs-lookup"><span data-stu-id="5d3fb-115">Load this data into the `DataView` and train the model, using the following code:</span></span>
+<span data-ttu-id="897ab-115">使用下列程式碼，將此資料載入 `DataView` 並訓練該模型：</span><span class="sxs-lookup"><span data-stu-id="897ab-115">Load this data into the `DataView` and train the model, using the following code:</span></span>
 
 ```csharp
 // Create a new context for ML.NET operations. It can be used for exception tracking and logging,

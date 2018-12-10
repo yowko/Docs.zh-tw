@@ -2,47 +2,47 @@
 title: 在一段時間後取消非同步工作 (C#)
 ms.date: 07/20/2015
 ms.assetid: 194282c2-399f-46da-a7a6-96674e00b0b3
-ms.openlocfilehash: 157b1de664254e9bdf9e4a5a381f8f35eeb10e9a
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 48d3d41e8c4e2d696065c11245279e49142afa07
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453316"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125765"
 ---
-# <a name="cancel-async-tasks-after-a-period-of-time-c"></a><span data-ttu-id="3c0d1-102">在一段時間後取消非同步工作 (C#)</span><span class="sxs-lookup"><span data-stu-id="3c0d1-102">Cancel async tasks after a period of time (C#)</span></span>
+# <a name="cancel-async-tasks-after-a-period-of-time-c"></a><span data-ttu-id="204b9-102">在一段時間後取消非同步工作 (C#)</span><span class="sxs-lookup"><span data-stu-id="204b9-102">Cancel async tasks after a period of time (C#)</span></span>
 
-<span data-ttu-id="3c0d1-103">如果不想等候作業完成，則可以使用 <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> 方法，在一段時間之後取消非同步作業。</span><span class="sxs-lookup"><span data-stu-id="3c0d1-103">You can cancel an asynchronous operation after a period of time by using the  <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> method if you don't want to wait for the operation to finish.</span></span> <span data-ttu-id="3c0d1-104">這個方法排定取消未在 `CancelAfter` 運算式所指定之2期間內完成的任何相關工作。</span><span class="sxs-lookup"><span data-stu-id="3c0d1-104">This method schedules the cancellation of any associated tasks that aren’t complete within the period of time that’s designated by the `CancelAfter` expression.</span></span>
+<span data-ttu-id="204b9-103">如果不想等候作業完成，則可以使用 <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> 方法，在一段時間之後取消非同步作業。</span><span class="sxs-lookup"><span data-stu-id="204b9-103">You can cancel an asynchronous operation after a period of time by using the  <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> method if you don't want to wait for the operation to finish.</span></span> <span data-ttu-id="204b9-104">這個方法排定取消未在 `CancelAfter` 運算式所指定之2期間內完成的任何相關工作。</span><span class="sxs-lookup"><span data-stu-id="204b9-104">This method schedules the cancellation of any associated tasks that aren’t complete within the period of time that’s designated by the `CancelAfter` expression.</span></span>
 
-<span data-ttu-id="3c0d1-105">這個範例會新增至[取消一項非同步工作或工作清單 (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) 中所開發的程式碼來下載網站清單，以及顯示每個網站內容的長度。</span><span class="sxs-lookup"><span data-stu-id="3c0d1-105">This example adds to the code that’s developed in [Cancel an Async Task or a List of Tasks (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) to download a list of websites and to display the length of the contents of each one.</span></span>
+<span data-ttu-id="204b9-105">這個範例會新增至[取消一項非同步工作或工作清單 (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) 中所開發的程式碼來下載網站清單，以及顯示每個網站內容的長度。</span><span class="sxs-lookup"><span data-stu-id="204b9-105">This example adds to the code that’s developed in [Cancel an Async Task or a List of Tasks (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) to download a list of websites and to display the length of the contents of each one.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="3c0d1-106">若要執行範例，您必須在電腦上安裝 Visual Studio 2012 或更新版本以及 .NET Framework 4.5 或更新版本。</span><span class="sxs-lookup"><span data-stu-id="3c0d1-106">To run the examples, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>
+> <span data-ttu-id="204b9-106">若要執行範例，您必須在電腦上安裝 Visual Studio 2012 或更新版本以及 .NET Framework 4.5 或更新版本。</span><span class="sxs-lookup"><span data-stu-id="204b9-106">To run the examples, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>
 
-## <a name="download-the-example"></a><span data-ttu-id="3c0d1-107">下載範例</span><span class="sxs-lookup"><span data-stu-id="3c0d1-107">Download the example</span></span>
+## <a name="download-the-example"></a><span data-ttu-id="204b9-107">下載範例</span><span class="sxs-lookup"><span data-stu-id="204b9-107">Download the example</span></span>
 
-<span data-ttu-id="3c0d1-108">您可以從 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載完整 Windows Presentation Foundation (WPF) 專案，然後遵循下列步驟。</span><span class="sxs-lookup"><span data-stu-id="3c0d1-108">You can download the complete Windows Presentation Foundation (WPF) project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) and then follow these steps.</span></span>
+<span data-ttu-id="204b9-108">您可以從 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載完整 Windows Presentation Foundation (WPF) 專案，然後遵循下列步驟。</span><span class="sxs-lookup"><span data-stu-id="204b9-108">You can download the complete Windows Presentation Foundation (WPF) project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) and then follow these steps.</span></span>
 
-1.  <span data-ttu-id="3c0d1-109">解壓縮您下載的檔案，然後啟動 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="3c0d1-109">Decompress the file that you downloaded, and then start Visual Studio.</span></span>
+1.  <span data-ttu-id="204b9-109">解壓縮您下載的檔案，然後啟動 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="204b9-109">Decompress the file that you downloaded, and then start Visual Studio.</span></span>
 
-2.  <span data-ttu-id="3c0d1-110">在功能表列上選擇 [檔案] >  [開啟] > [專案/解決方案]。</span><span class="sxs-lookup"><span data-stu-id="3c0d1-110">On the menu bar, choose **File** > **Open** > **Project/Solution**.</span></span>
+2.  <span data-ttu-id="204b9-110">在功能表列上選擇 [檔案] >  [開啟] > [專案/解決方案]。</span><span class="sxs-lookup"><span data-stu-id="204b9-110">On the menu bar, choose **File** > **Open** > **Project/Solution**.</span></span>
 
-3.  <span data-ttu-id="3c0d1-111">在 [開啟專案] 對話方塊中，開啟保存已解壓縮之範例程式碼的資料夾，然後開啟 AsyncFineTuningCS 的方案 (.sln) 檔案。</span><span class="sxs-lookup"><span data-stu-id="3c0d1-111">In the **Open Project** dialog box, open the folder that holds the sample code that you decompressed, and then open the solution (.sln) file for AsyncFineTuningCS.</span></span>
+3.  <span data-ttu-id="204b9-111">在 [開啟專案] 對話方塊中，開啟保存已解壓縮之範例程式碼的資料夾，然後開啟 AsyncFineTuningCS 的方案 (.sln) 檔案。</span><span class="sxs-lookup"><span data-stu-id="204b9-111">In the **Open Project** dialog box, open the folder that holds the sample code that you decompressed, and then open the solution (.sln) file for AsyncFineTuningCS.</span></span>
 
-4.  <span data-ttu-id="3c0d1-112">在方案總管中，開啟 **CancelAfterTime** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。</span><span class="sxs-lookup"><span data-stu-id="3c0d1-112">In **Solution Explorer**, open the shortcut menu for the **CancelAfterTime** project, and then choose **Set as StartUp Project**.</span></span>
+4.  <span data-ttu-id="204b9-112">在方案總管中，開啟 **CancelAfterTime** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。</span><span class="sxs-lookup"><span data-stu-id="204b9-112">In **Solution Explorer**, open the shortcut menu for the **CancelAfterTime** project, and then choose **Set as StartUp Project**.</span></span>
 
-5.  <span data-ttu-id="3c0d1-113">選擇 **F5** 鍵以執行專案。</span><span class="sxs-lookup"><span data-stu-id="3c0d1-113">Choose the **F5** key to run the project.</span></span> <span data-ttu-id="3c0d1-114">(或者，按 **Ctrl** + **F5** 鍵以執行專案，而不進行偵錯)。</span><span class="sxs-lookup"><span data-stu-id="3c0d1-114">(Or, press **Ctrl**+**F5** to run the project without debugging it).</span></span>
+5.  <span data-ttu-id="204b9-113">選擇 **F5** 鍵以執行專案。</span><span class="sxs-lookup"><span data-stu-id="204b9-113">Choose the **F5** key to run the project.</span></span> <span data-ttu-id="204b9-114">(或者，按 **Ctrl** + **F5** 鍵以執行專案，而不進行偵錯)。</span><span class="sxs-lookup"><span data-stu-id="204b9-114">(Or, press **Ctrl**+**F5** to run the project without debugging it).</span></span>
 
-6.  <span data-ttu-id="3c0d1-115">執行程式數次，確認輸出可能會顯示所有網站、沒有網站或某些網站的輸出。</span><span class="sxs-lookup"><span data-stu-id="3c0d1-115">Run the program several times to verify that the output might show output for all websites, no websites, or some web sites.</span></span>
+6.  <span data-ttu-id="204b9-115">執行程式數次，確認輸出可能會顯示所有網站、沒有網站或某些網站的輸出。</span><span class="sxs-lookup"><span data-stu-id="204b9-115">Run the program several times to verify that the output might show output for all websites, no websites, or some web sites.</span></span>
 
-<span data-ttu-id="3c0d1-116">如果您不想要下載專案，則可以檢閱本主題結尾的 MainWindow.xaml.cs 檔案。</span><span class="sxs-lookup"><span data-stu-id="3c0d1-116">If you don't want to download the project, you can review the MainWindow.xaml.cs file at the end of this topic.</span></span>
+<span data-ttu-id="204b9-116">如果您不想要下載專案，則可以檢閱本主題結尾的 MainWindow.xaml.cs 檔案。</span><span class="sxs-lookup"><span data-stu-id="204b9-116">If you don't want to download the project, you can review the MainWindow.xaml.cs file at the end of this topic.</span></span>
 
-## <a name="build-the-example"></a><span data-ttu-id="3c0d1-117">建置範例</span><span class="sxs-lookup"><span data-stu-id="3c0d1-117">Build the example</span></span>
+## <a name="build-the-example"></a><span data-ttu-id="204b9-117">建置範例</span><span class="sxs-lookup"><span data-stu-id="204b9-117">Build the example</span></span>
 
-<span data-ttu-id="3c0d1-118">本主題中的範例會新增至[取消一項非同步工作或工作清單 (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) 中所開發的專案來取消工作清單。</span><span class="sxs-lookup"><span data-stu-id="3c0d1-118">The example in this topic adds to the project that's developed in [Cancel an Async Task or a List of Tasks (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) to cancel a list of tasks.</span></span> <span data-ttu-id="3c0d1-119">雖然未明確地使用 [取消] 按鈕，但是此範例會使用相同的 UI。</span><span class="sxs-lookup"><span data-stu-id="3c0d1-119">The example uses the same UI, although the **Cancel** button isn’t used explicitly.</span></span>
+<span data-ttu-id="204b9-118">本主題中的範例會新增至[取消一項非同步工作或工作清單 (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) 中所開發的專案來取消工作清單。</span><span class="sxs-lookup"><span data-stu-id="204b9-118">The example in this topic adds to the project that's developed in [Cancel an Async Task or a List of Tasks (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) to cancel a list of tasks.</span></span> <span data-ttu-id="204b9-119">雖然未明確地使用 [取消] 按鈕，但是此範例會使用相同的 UI。</span><span class="sxs-lookup"><span data-stu-id="204b9-119">The example uses the same UI, although the **Cancel** button isn’t used explicitly.</span></span>
 
-<span data-ttu-id="3c0d1-120">若要自行逐步建置範例，請遵循＜下載範例＞一節中的指示，但選擇 [CancelAListOfTasks] 作為 [啟始專案]。</span><span class="sxs-lookup"><span data-stu-id="3c0d1-120">To build the example yourself, step by step, follow the instructions in the "Downloading the Example" section, but choose **CancelAListOfTasks** as the **StartUp Project**.</span></span> <span data-ttu-id="3c0d1-121">將本主題中的變更新增至該專案。</span><span class="sxs-lookup"><span data-stu-id="3c0d1-121">Add the changes in this topic to that project.</span></span>
+<span data-ttu-id="204b9-120">若要自行逐步建置範例，請遵循＜下載範例＞一節中的指示，但選擇 [CancelAListOfTasks] 作為 [啟始專案]。</span><span class="sxs-lookup"><span data-stu-id="204b9-120">To build the example yourself, step by step, follow the instructions in the "Downloading the Example" section, but choose **CancelAListOfTasks** as the **StartUp Project**.</span></span> <span data-ttu-id="204b9-121">將本主題中的變更新增至該專案。</span><span class="sxs-lookup"><span data-stu-id="204b9-121">Add the changes in this topic to that project.</span></span>
 
-<span data-ttu-id="3c0d1-122">若要指定將工作標記為取消之前的最長時間，請將 `CancelAfter` 呼叫新增至 `startButton_Click`，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="3c0d1-122">To specify a maximum time before the tasks are marked as canceled, add a call to `CancelAfter` to `startButton_Click`, as the following example shows.</span></span> <span data-ttu-id="3c0d1-123">新增的項目會以星號標記。</span><span class="sxs-lookup"><span data-stu-id="3c0d1-123">The addition is marked with asterisks.</span></span>
+<span data-ttu-id="204b9-122">若要指定將工作標記為取消之前的最長時間，請將 `CancelAfter` 呼叫新增至 `startButton_Click`，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="204b9-122">To specify a maximum time before the tasks are marked as canceled, add a call to `CancelAfter` to `startButton_Click`, as the following example shows.</span></span> <span data-ttu-id="204b9-123">新增的項目會以星號標記。</span><span class="sxs-lookup"><span data-stu-id="204b9-123">The addition is marked with asterisks.</span></span>
 
 ```csharp
 private async void startButton_Click(object sender, RoutedEventArgs e)
@@ -74,7 +74,7 @@ private async void startButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
- <span data-ttu-id="3c0d1-124">執行程式數次，確認輸出可能會顯示所有網站、沒有網站或某些網站的輸出。</span><span class="sxs-lookup"><span data-stu-id="3c0d1-124">Run the program several times to verify that the output might show output for all websites, no websites, or some web sites.</span></span> <span data-ttu-id="3c0d1-125">下列輸出是範例。</span><span class="sxs-lookup"><span data-stu-id="3c0d1-125">The following output is a sample.</span></span>
+ <span data-ttu-id="204b9-124">執行程式數次，確認輸出可能會顯示所有網站、沒有網站或某些網站的輸出。</span><span class="sxs-lookup"><span data-stu-id="204b9-124">Run the program several times to verify that the output might show output for all websites, no websites, or some web sites.</span></span> <span data-ttu-id="204b9-125">下列輸出是範例。</span><span class="sxs-lookup"><span data-stu-id="204b9-125">The following output is a sample.</span></span>
 
 ```
 Length of the downloaded string: 35990.
@@ -86,13 +86,13 @@ Length of the downloaded string: 226091.
 Downloads canceled.
 ```
 
-## <a name="complete-example"></a><span data-ttu-id="3c0d1-126">完整範例</span><span class="sxs-lookup"><span data-stu-id="3c0d1-126">Complete example</span></span>
+## <a name="complete-example"></a><span data-ttu-id="204b9-126">完整範例</span><span class="sxs-lookup"><span data-stu-id="204b9-126">Complete example</span></span>
 
-<span data-ttu-id="3c0d1-127">下列程式碼是範例的 MainWindow.xaml.cs 檔案的完整文字。</span><span class="sxs-lookup"><span data-stu-id="3c0d1-127">The following code is the complete text of the MainWindow.xaml.cs file for the example.</span></span> <span data-ttu-id="3c0d1-128">星號會標記已針對此範例新增的項目。</span><span class="sxs-lookup"><span data-stu-id="3c0d1-128">Asterisks mark the elements that were added for this example.</span></span>
+<span data-ttu-id="204b9-127">下列程式碼是範例的 MainWindow.xaml.cs 檔案的完整文字。</span><span class="sxs-lookup"><span data-stu-id="204b9-127">The following code is the complete text of the MainWindow.xaml.cs file for the example.</span></span> <span data-ttu-id="204b9-128">星號會標記已針對此範例新增的項目。</span><span class="sxs-lookup"><span data-stu-id="204b9-128">Asterisks mark the elements that were added for this example.</span></span>
 
-<span data-ttu-id="3c0d1-129">請注意，您必須新增 <xref:System.Net.Http> 的參考。</span><span class="sxs-lookup"><span data-stu-id="3c0d1-129">Notice that you must add a reference for <xref:System.Net.Http>.</span></span>
+<span data-ttu-id="204b9-129">請注意，您必須新增 <xref:System.Net.Http> 的參考。</span><span class="sxs-lookup"><span data-stu-id="204b9-129">Notice that you must add a reference for <xref:System.Net.Http>.</span></span>
 
-<span data-ttu-id="3c0d1-130">您可以從 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載專案。</span><span class="sxs-lookup"><span data-stu-id="3c0d1-130">You can download the project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).</span></span>
+<span data-ttu-id="204b9-130">您可以從 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載專案。</span><span class="sxs-lookup"><span data-stu-id="204b9-130">You can download the project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).</span></span>
 
 ```csharp
 using System;
@@ -184,7 +184,7 @@ namespace CancelAfterTime
                 byte[] urlContents = await response.Content.ReadAsByteArrayAsync();
 
                 resultsTextBox.Text +=
-                    String.Format("\r\nLength of the downloaded string: {0}.\r\n", urlContents.Length);
+                    $"\r\nLength of the downloaded string: {urlContents.Length}.\r\n";
             }
         }
 
@@ -215,10 +215,10 @@ namespace CancelAfterTime
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="3c0d1-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3c0d1-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="204b9-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="204b9-131">See also</span></span>
 
-- [<span data-ttu-id="3c0d1-132">使用 async 和 await 進行非同步程式設計 (C#)</span><span class="sxs-lookup"><span data-stu-id="3c0d1-132">Asynchronous Programming with async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/index.md)
-- [<span data-ttu-id="3c0d1-133">逐步解說：使用 async 和 await 存取 Web (C#)</span><span class="sxs-lookup"><span data-stu-id="3c0d1-133">Walkthrough: Accessing the Web by Using async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [<span data-ttu-id="3c0d1-134">取消一項非同步工作或工作清單 (C#)</span><span class="sxs-lookup"><span data-stu-id="3c0d1-134">Cancel an Async Task or a List of Tasks (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)
-- [<span data-ttu-id="3c0d1-135">微調非同步應用程式 (C#)</span><span class="sxs-lookup"><span data-stu-id="3c0d1-135">Fine-Tuning Your Async Application (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [<span data-ttu-id="3c0d1-136">非同步範例：微調應用程式 (英文)</span><span class="sxs-lookup"><span data-stu-id="3c0d1-136">Async Sample: Fine Tuning Your Application</span></span>](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [<span data-ttu-id="204b9-132">使用 Async 和 Await 進行非同步程式設計 (C#)</span><span class="sxs-lookup"><span data-stu-id="204b9-132">Asynchronous Programming with async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/index.md)
+- [<span data-ttu-id="204b9-133">逐步解說：使用 async 和 await 存取 Web (C#)</span><span class="sxs-lookup"><span data-stu-id="204b9-133">Walkthrough: Accessing the Web by Using async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [<span data-ttu-id="204b9-134">取消一項非同步工作或工作清單 (C#)</span><span class="sxs-lookup"><span data-stu-id="204b9-134">Cancel an Async Task or a List of Tasks (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)
+- [<span data-ttu-id="204b9-135">微調非同步應用程式 (C#)</span><span class="sxs-lookup"><span data-stu-id="204b9-135">Fine-Tuning Your Async Application (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- [<span data-ttu-id="204b9-136">非同步範例：微調應用程式 (英文)</span><span class="sxs-lookup"><span data-stu-id="204b9-136">Async Sample: Fine Tuning Your Application</span></span>](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
