@@ -3,12 +3,12 @@ title: 分支和迴圈 - C# 教學課程簡介
 description: 在這個關於分支和迴圈的教學課程中，您將會撰寫 C# 程式碼以探索支援條件式分支和迴圈的語言語法，以重複執行陳述式。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 0997c0b4a8f450c0e5eadc9616457a1ab84e7d96
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bfb260ccfd0cf2b922c1bc3eaa98aa2c26b464d8
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186132"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153770"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>透過分支和迴圈陳述式了解條件式邏輯
 
@@ -29,7 +29,7 @@ if (a + b > 10)
     Console.WriteLine("The answer is greater than 10.");
 ```
 
-在主控台視窗中輸入 `dotnet run` 來嘗試此程式碼。 您應該會看見訊息 "The answer is greater than 10" 顯示於主控台中。
+在主控台視窗中鍵入 `dotnet run` 來嘗試此程式碼。 您應該會看見訊息 "The answer is greater than 10" 顯示於主控台中。
 
 修改 `b` 的宣告，讓總和小於 10： 
 
@@ -223,7 +223,7 @@ for(int index = 0; index < 10; index++)
 
 這與先前使用的 `while` 迴圈和 `do` 迴圈有相同的功能。 `for` 陳述式有三個部分來控制其運作方式。
 
-第一個部分是 **for 初始設定式**：`for index = 0;` 宣告 `index` 是迴圈變數，然後將它的初始值設為 `0`。
+第一個部分是 **for 初始設定式**：`int index = 0;` 宣告 `index` 是迴圈變數，然後將它的初始值設為 `0`。
 
 中間的部分是 **for 條件**：`index < 10` 宣告此 `for` 迴圈只要 counter (計數器) 的值小於 10，就會繼續執行。
 

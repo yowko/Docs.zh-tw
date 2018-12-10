@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 容器和 Doc
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: bc99bbfc3adee4cdc7008a91f42659ebcaa7a1b1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: cf86640456af03d4c44f537fe1ff3282521f2200
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45658427"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147935"
 ---
 # <a name="introduction-to-containers-and-docker"></a>容器和 Docker 簡介
 
@@ -29,7 +29,6 @@ ms.locfileid: "45658427"
 
 簡單來說，容器在整個應用程式生命週期工作流程中，提供隔離、可攜性、彈性、延展性和控制能力等優點。 最重要的優點是可為開發與作業提供環境的隔離。
 
-
 >[!div class="step-by-step"]
-[上一頁](../index.md)
-[下一頁](docker-defined.md)
+>[上一頁](../index.md)
+>[下一頁](docker-defined.md)

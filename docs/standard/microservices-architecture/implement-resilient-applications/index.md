@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 實作復原�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/08/2018
-ms.openlocfilehash: dc0db8f0cdfa77bcca467c3c632b3d93de8851d8
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: ec79221f0238d61f1ca1b2b7c58b1e16be7f4df4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37875116"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130790"
 ---
 # <a name="implementing-resilient-applications"></a>實作復原應用程式
 
@@ -21,7 +21,6 @@ ms.locfileid: "37875116"
 
 您應用程式的許多個別元件也應該納入狀況監控功能。 您可以遵循本章中的指引，建立即使在複雜的雲端式部署中發生暫時性停機或一般延遲的情況下也能順暢運作的應用程式。
 
-
 >[!div class="step-by-step"]
-[上一頁](../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md)
-[下一頁](handle-partial-failure.md)
+>[上一頁](../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md)
+>[下一頁](handle-partial-failure.md)

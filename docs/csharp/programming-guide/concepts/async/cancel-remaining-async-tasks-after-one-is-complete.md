@@ -2,12 +2,12 @@
 title: 當其中一項工作完成時，取消剩餘的非同步工作 (C#)
 ms.date: 07/20/2015
 ms.assetid: d3cebc74-c392-497b-b1e6-62a262eabe05
-ms.openlocfilehash: 40f010c4e1d84e6378334c826c58514f83b84657
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 969309f50f59a413e731113b6daec0c32bd1b540
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349039"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126910"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-c"></a>當其中一項工作完成時，取消剩餘的非同步工作 (C#)
 搭配使用 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 方法與 <xref:System.Threading.CancellationToken>，即可在其中一個工作完成時取消所有剩餘的工作。 `WhenAny` 方法會接受本身為一組工作的引數。 這個方法會啟動所有工作，並傳回單一工作。 集合中的任何工作完成時，單一工作即完成。  
@@ -97,7 +97,7 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
   
     ```csharp  
     var length = await firstFinishedTask;  
-    resultsTextBox.Text += String.Format("\r\nLength of the downloaded website:  {0}\r\n", length);  
+    resultsTextBox.Text += $"\r\nLength of the downloaded website:  {length}\r\n";
     ```  
   
  執行程式數次，確認先完成不同的下載。  
@@ -197,7 +197,7 @@ namespace CancelAfterOneTask
             //    byte[] urlContents = await response.Content.ReadAsByteArrayAsync();  
   
             //    resultsTextBox.Text +=  
-            //        String.Format("\r\nLength of the downloaded string: {0}.\r\n", urlContents.Length);  
+            //        $"\r\nLength of the downloaded string: {urlContents.Length}.\r\n";
             //}  
   
             // ***Create a query that, when executed, returns a collection of tasks.  
@@ -218,7 +218,7 @@ namespace CancelAfterOneTask
             // Run the program several times to demonstrate that different  
             // websites can finish first.  
             var length = await firstFinishedTask;  
-            resultsTextBox.Text += String.Format("\r\nLength of the downloaded website:  {0}\r\n", length);  
+            resultsTextBox.Text += $"\r\nLength of the downloaded website:  {length}\r\n";
         }  
   
         // ***Bundle the processing steps for a website into one async method.  
@@ -261,5 +261,5 @@ namespace CancelAfterOneTask
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>  
 - [微調非同步應用程式 (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
-- [使用 async 和 await 進行非同步程式設計 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
+- [使用 Async 和 Await 進行非同步程式設計 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
 - [非同步範例：微調應用程式 (英文)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

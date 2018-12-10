@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 微服務是�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 7113a229726368a65f4372b14c28da1165c22eee
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8304e4d0b06e7137c42e669191c4e9f0dd946dbb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193912"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152678"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET 微服務：容器化 .NET 應用程式的架構
 
@@ -179,6 +179,5 @@ Docker 鯨魚標誌是 Docker, Inc. 的註冊商標。使用需要許可。
 
 所有其他商標和標誌屬於其各自擁有者的財產。
 
-
 >[!div class="step-by-step"]
-[下一步](container-docker-introduction/index.md)
+>[下一步](container-docker-introduction/index.md)

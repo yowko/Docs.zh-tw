@@ -17,12 +17,12 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: 8b8237a09b36114f7100c90cee0bd753236789fd
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 60b9e1862c7ffd212f19cdc331930e3b5d120763
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522616"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131289"
 ---
 # <a name="basic-linq-query-operations-c"></a>基本 LINQ 查詢作業 (C#)
 本主題簡介 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢運算式以及在查詢中執行的一些一般類型的作業。 下列各主題提供更詳細的資訊：  
@@ -90,7 +90,7 @@ ms.locfileid: "43522616"
   
  在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 中，您不需要像在 SQL 中經常地使用 `join`，因為 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 中的外部索引鍵在物件模型中會呈現為保存項目集合的屬性。 例如，包含 `Order` 物件集合的 `Customer` 物件。 您可以使用點標記法來存取順序，而不是執行聯結：  
   
-```  
+```csharp
 from order in Customer.Orders...  
 ```  
   

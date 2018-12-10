@@ -3,12 +3,12 @@ title: C# 介面 - C# 語言教學課程
 description: 介面會定義 C# 中由類型實作的合約
 ms.date: 08/10/2016
 ms.assetid: a9bf82f4-efd1-4216-bd34-4ef0fa48c968
-ms.openlocfilehash: 0ad02d5b2792656783d93b2cc767aeb81efbc30e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bfc6b59a411ff2ddb3331a8bdf24c0ae3d611273
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343891"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144113"
 ---
 # <a name="interfaces"></a>介面
 
@@ -39,5 +39,5 @@ ms.locfileid: "33343891"
 [!code-csharp[InterfacesFive](../../../samples/snippets/csharp/tour/interfaces/Program.cs#L71-L74)]
 
 >[!div class="step-by-step"]
-[上一頁](arrays.md)
-[下一頁](enums.md)
+>[上一頁](arrays.md)
+>[下一頁](enums.md)

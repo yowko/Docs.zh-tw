@@ -4,12 +4,12 @@ description: 本指南會提供使用 ASP.NET Core 和 Azure 建置整合型 Web
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: e2d2545108b55043c322baffbd609b2422d2743b
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 0d59a07e01897400a53f48799383d1670a468d73
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936980"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148102"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式
 
@@ -110,4 +110,4 @@ Docker 鯨魚標誌是 Docker, Inc. 的註冊商標。使用需要許可。
   <https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server>
 
 >[!div class="step-by-step"]
-[下一步](modern-web-applications-characteristics.md)
+>[下一步](modern-web-applications-characteristics.md)

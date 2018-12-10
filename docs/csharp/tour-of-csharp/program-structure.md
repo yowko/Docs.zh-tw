@@ -3,12 +3,12 @@ title: C# 程式結構 - C# 語言教學課程
 description: 了解 C# 程式的基本建置區塊
 ms.date: 08/10/2016
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: 9efd2542d449da5ddcd9d3170c2e598282a34c39
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: de10cd000b4028a66ce6dd6f21e39c013e38ecd2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34565747"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131023"
 ---
 # <a name="program-structure"></a>程式結構
 
@@ -52,5 +52,5 @@ csc /r:acme.dll example.cs
 C# 允許以數個原始程式檔儲存程式的原始程式文字。 編譯有多檔案的 C# 程式時，所有原始程式檔都會一起處理，而原始程式檔可以隨意地互相參考。概念上，就如同將所有原始程式檔都串連成一個大型檔案，然後再進行處理。 C# 中不再需要向前宣告，原因是在極少數的例外狀況中，宣告順序並不重要。 C# 不會限制原始程式檔只能宣告一個公用型別，也不會要求原始程式檔符合原始程式檔中所宣告的型別名稱。
 
 >[!div class="step-by-step"]
-[上一頁](index.md)
-[下一頁](types-and-variables.md)
+>[上一頁](index.md)
+>[下一頁](types-and-variables.md)

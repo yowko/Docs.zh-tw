@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 0bd53d97cec4370adc78fc715b1cea5ee5a3fd6f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d19f238136ed4ce1eb9b9821ef12c6305c06e429
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44208792"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150027"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>互通性概觀 (C# 程式設計手冊)
 本主題說明可在 C# Managed 程式碼和 Unmanaged 程式碼之間啟用互通性的方法。  
@@ -59,8 +59,8 @@ ms.locfileid: "44208792"
   
 ## <a name="see-also"></a>請參閱
 
-- [Improving Interop Performance](https://msdn.microsoft.com/library/ms998551.aspx) (提升 Interop 效能)  
-- [COM 和.NET 之間的互通性簡介](https://msdn.microsoft.com/library/office/bb610378.aspx) \(機器翻譯\)  
+- [Improving Interop Performance](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29) (提升 Interop 效能)  
+- [COM 和.NET 之間的互通性簡介](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net) \(機器翻譯\)  
 - [Visual Basic 中的 COM Interop 簡介](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
 - [在受控碼和非受控碼之間進行封送處理](../../../../docs/framework/interop/interop-marshaling.md)  
 - [與 Unmanaged 程式碼互通](../../../../docs/framework/interop/index.md)  

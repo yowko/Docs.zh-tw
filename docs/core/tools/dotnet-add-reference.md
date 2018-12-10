@@ -3,13 +3,13 @@ title: dotnet-add reference 命令 - .NET Core CLI
 description: dotnet add reference 命令提供方便的選項，以新增專案對專案參考。
 author: mairaw
 ms.author: mairaw
-ms.date: 05/25/2018
-ms.openlocfilehash: 3398d4dc7bf70eaadcdd92269dbd3b784079c22d
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 12/04/2018
+ms.openlocfilehash: 33c5e532baf23cc8fe2b3a5084bff029caece842
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696958"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129541"
 ---
 # <a name="dotnet-add-reference"></a>dotnet-add reference
 
@@ -23,7 +23,7 @@ ms.locfileid: "34696958"
 
 `dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help]`
 
-## <a name="description"></a>描述
+## <a name="description"></a>說明
 
 `dotnet add reference` 命令提供方便的選項，將專案參考新增至專案。 執行命令之後，系統就會將 [`<ProjectReference>`](/visualstudio/msbuild/common-msbuild-project-items) 元素新增至專案檔。
 
@@ -37,34 +37,40 @@ ms.locfileid: "34696958"
 
 ## <a name="arguments"></a>引數
 
-`PROJECT`
+* **`PROJECT`**
 
-指定專案檔。 如果未指定，命令會在目前的目錄中搜尋一個專案檔。
+  指定專案檔。 如果未指定，命令會在目前的目錄中搜尋一個專案檔。
 
-`PROJECT_REFERENCES`
+* **`PROJECT_REFERENCES`**
 
-要新增的專案對專案 (P2P) 參考。 指定一個或多個專案。 Unix/Linux 系統支援 [Glob 模式 (英文)](https://en.wikipedia.org/wiki/Glob_(programming))。
+  要新增的專案對專案 (P2P) 參考。 指定一個或多個專案。 Unix/Linux 系統支援 [Glob 模式 (英文)](https://en.wikipedia.org/wiki/Glob_(programming))。
 
 ## <a name="options"></a>選項
 
-`-h|--help`
+* **`-h|--help`**
 
-印出命令的簡短說明。
+  印出命令的簡短說明。
 
-`-f|--framework <FRAMEWORK>`
+* **`-f|--framework <FRAMEWORK>`**
 
-只有在以特定[架構](../../standard/frameworks.md)為目標時，才能新增專案參考。
+  只有在以特定[架構](../../standard/frameworks.md)為目標時，才能新增專案參考。
 
 ## <a name="examples"></a>範例
 
-新增專案參考：
+* 新增專案參考：
 
-`dotnet add app/app.csproj reference lib/lib.csproj`
+  ```console
+  dotnet add app/app.csproj reference lib/lib.csproj
+  ```
 
-新增目前目錄中專案的多個專案參考：
+* 新增目前目錄中專案的多個專案參考：
 
-`dotnet add reference lib1/lib1.csproj lib2/lib2.csproj`
+  ```console
+  dotnet add reference lib1/lib1.csproj lib2/lib2.csproj
+  ```
 
-在 Linux/Unix 上使用 Glob 模式新增多個專案參考：
+* 在 Linux/Unix 上使用 Glob 模式新增多個專案參考：
 
-`dotnet add app/app.csproj reference **/*.csproj`
+  ```console
+  dotnet add app/app.csproj reference **/*.csproj
+  ```

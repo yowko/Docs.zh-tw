@@ -5,11 +5,11 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/21/2017
 ms.openlocfilehash: 761fb69d3bc774975caf63b8aa665f8c19c0430a
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52671919"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143593"
 ---
 # <a name="discards---c-guide"></a>Discard - C# 指南
 
@@ -68,15 +68,15 @@ ms.locfileid: "52671919"
 
 請注意，`_` 也是有效的識別項。 在支援的內容之外使用時，`_` 會視為有效的變數，而不是 discard。 如果範圍內已有名為 `_` 的識別項，使用 `_` 作為獨立 discard 可能會導致：
 
-- 將預定的 dscard 值指派給範圍內的 `_` 變數，而意外修改變數的值。 例如: 
+- 將預定的 dscard 值指派給範圍內的 `_` 變數，而意外修改變數的值。 例如：
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#1)]
 
-- 違反型別安全的編譯器錯誤。 例如: 
+- 違反型別安全的編譯器錯誤。 例如：
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#2)]
 
-- 編譯器錯誤 CS0136：「無法在此範圍宣告名為 '\_' 的區域變數或參數，因為該名稱已用於封入區域變數範圍，以定義區域變數或參數」。 例如: 
+- 編譯器錯誤 CS0136：「無法在此範圍宣告名為 '\_' 的區域變數或參數，因為該名稱已用於封入區域變數範圍，以定義區域變數或參數」。 例如：
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#3)]
 

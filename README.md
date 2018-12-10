@@ -8,7 +8,7 @@
 
 這三個存放庫的問題及工作會在此處追蹤。 這些資源的使用者眾多。 我們會盡可能地即時回應各項問題。 請參閱我們的[問題原則](issues-policy.md)主題，了解更多有關於我們如何分類及解決問題的程序。
 
-歡迎您參與協助我們改進及完成 .NET 文件。若要參與，請參閱 [.NET 社群參與者專案](https://github.com/dotnet/docs/projects/35)進行了解。 [參與指南](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md)包含所用程序的指示。 除此之外，您也可以查看[問題清單](https://github.com/dotnet/docs/issues)，從中尋找您關注的工作。
+歡迎您參與協助我們改進及完成 .NET 文件。若要參與，請參閱 [.NET 社群參與者專案](https://github.com/dotnet/docs/projects/35)進行了解。 [參與指南](CONTRIBUTING.md)包含所用程序的指示。 除此之外，您也可以查看[問題清單](https://github.com/dotnet/docs/issues)，從中尋找您關注的工作。
 
 我們期望 [Xamarin](https://docs.microsoft.com/xamarin)、[Mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) 及 [Unity](http://docs.unity3d.com/Manual/index.html) 也能使用此文件。
 

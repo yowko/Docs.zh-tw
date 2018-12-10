@@ -1,15 +1,13 @@
 ---
 title: dotnet build-server 命令 - .NET Core CLI
 description: dotnet build-server 命令會與組建所啟動的伺服器互動。
-author: mairaw
-ms.author: mairaw
-ms.date: 07/02/2018
-ms.openlocfilehash: 1c59c85f246b79c7e2552f704db5b4f076f9b502
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.date: 12/04/2018
+ms.openlocfilehash: 2746ade12cc819089258483e84a8c0f02a64c755
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404329"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125674"
 ---
 # <a name="dotnet-build-server"></a>dotnet build-server
 
@@ -29,24 +27,24 @@ dotnet build-server [-h|--help]
 
 ## <a name="commands"></a>命令
 
-`shutdown`
+* **`shutdown`**
 
-將透過 dotnet 啟動的組建伺服器關機。 根據預設，所有伺服器都會關機。
+  將透過 dotnet 啟動的組建伺服器關機。 根據預設，所有伺服器都會關機。
 
 ## <a name="options"></a>選項
 
-`-h|--help`
+* **`-h|--help`**
 
-印出命令的簡短說明。
+  印出命令的簡短說明。
 
-`--msbuild`
+* **`--msbuild`**
 
-將 MSBuild 組建伺服器關機。
+  將 MSBuild 組建伺服器關機。
 
-`--razor`
+* **`--razor`**
 
-將 Razor 組建伺服器關機。
+  將 Razor 組建伺服器關機。
 
-`--vbcscompiler`
+* **`--vbcscompiler`**
 
-將 VB/C# 編譯器組建伺服器關機。
+  將 VB/C# 編譯器組建伺服器關機。

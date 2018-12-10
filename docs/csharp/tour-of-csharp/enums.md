@@ -3,12 +3,12 @@ title: C# 列舉 - C# 語言教學課程
 description: 了解 C# 中的列舉、離散的具名常數。
 ms.date: 08/10/2016
 ms.assetid: 7faba1cc-6ea9-4a19-adb9-0335e4b132e5
-ms.openlocfilehash: 7fe2626381cb90e55842e3be17dd450eb73d5a5b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d55462f0360b6896c398d581918a9c17a87583be
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353350"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126650"
 ---
 # <a name="enums"></a>列舉
 
@@ -26,7 +26,7 @@ ms.locfileid: "33353350"
 
 如上一個範例所示，`enum` 成員宣告可以包含會指定成員值的常數運算式。 每個 `enum` 成員的常數值都必須在 `enum` 的基礎型別範圍內。 當 `enum` 成員宣告並未明確指定值時，賦予成員的值會是零 (如果它是 `enum` 型別中的第一個成員) 或是本文上前面 `enum` 成員的值加 1。
 
-您可以使用型別轉換將 `Enum` 值轉換成整數值。 例如: 
+您可以使用型別轉換將 `Enum` 值轉換成整數值。 例如：
 
 [!code-csharp[EnumStorage](../../../samples/snippets/csharp/tour/enums/Program.cs#L49-L50)]
 
@@ -35,5 +35,5 @@ ms.locfileid: "33353350"
 [!code-csharp[EnumZero](../../../samples/snippets/csharp/tour/enums/Program.cs#L58-L58)]
 
 >[!div class="step-by-step"]
-[上一頁](interfaces.md)
-[下一頁](delegates.md)
+>[上一頁](interfaces.md)
+>[下一頁](delegates.md)

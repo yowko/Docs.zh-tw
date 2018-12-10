@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: e4a4d58f154116974c7314e84f625b338cbfe204
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 73cd8b703fe30e622a849fa20e33b529ea3db61d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50038301"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127442"
 ---
 # <a name="methods"></a>方法 #
 
@@ -158,7 +158,7 @@ C# 中的類型為「實值型別」「參考型別」。 如需內建實值型�
 
 [!code-csharp[csSnippets.Methods#21](../../samples/snippets/csharp/concepts/methods/optional1.cs#21)]
 
-如果使用位置引數叫用了有多個選擇性引數的方法，則呼叫端必須為所有選擇性參數提供引數，從第一個到最後一個。 以 `ExampleMethod` 方法為例，當呼叫端為 `description` 參數提供引數時，它也必須為 `optionalInt` 參數提供一個引數。 `opt.ExampleMethod(2, 2, "Addition of 2 and 2");` 是有效的方法呼叫，而 `opt.ExampleMethod(2, , "Addition of 2 and 0);` 會產生「引數遺失」編譯器錯誤。
+如果使用位置引數叫用了有多個選擇性引數的方法，則呼叫端必須為所有選擇性參數提供引數，從第一個到最後一個。 以 `ExampleMethod` 方法為例，當呼叫端為 `description` 參數提供引數時，它也必須為 `optionalInt` 參數提供一個引數。 `opt.ExampleMethod(2, 2, "Addition of 2 and 2");` 是有效的方法呼叫，而 `opt.ExampleMethod(2, , "Addition of 2 and 0");` 會產生「引數遺失」編譯器錯誤。
 
 如果使用具名引數或位置和具名引數的組合來呼叫方法，則呼叫端可以省略方法呼叫中最後一個位置引數之後的任何引數。
 
@@ -242,7 +242,7 @@ if (person != null)
 
 一般來說，有兩種方式可將方法加入至現有的型別︰
 
-- 修改該型別的原始程式碼。 如果您未擁有型別的原始程式碼，當然就無法這樣做。 而如果您同時新增任何私用資料欄位以支援方法，這會成為一個重大變更。
+- 修改該型別的原始程式碼。 如果您未擁有型別的原始程式碼，當然就無法這樣做。 而如果您同時新增任何私用資料欄位以支援方法，這會成為一項重大變更。
 - 在衍生類別中定義新的方法。 方法不能以使用其他型別繼承的這種方式新增，例如結構和列舉。 也不能用來將方法「新增」至密封的類別。
 
 擴充方法可讓您將方法「新增」至現有的類型，但不必修改型別本身或在繼承的型別中實作新方法。 擴充方法也不必和其擴充型別位於相同的組件中。 呼叫擴充方法就像它是型別的定義成員一樣。

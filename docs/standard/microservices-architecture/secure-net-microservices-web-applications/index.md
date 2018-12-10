@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 保護 .NET �
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 0e55a68432dfd44c7a73ae51512f50d481ae100c
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 7ee559f3881101a2382e6767607d5de1482d74ba
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937029"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126467"
 ---
 # <a name="securing-net-microservices-and-web-applications"></a>保護 .NET 微服務和 Web 應用程式
 
@@ -248,7 +248,6 @@ JWT 持有人驗證中介軟體也可以支援更進階的案例；例如，在�
 -   **IdentityServer4，正式文件**
     [*https://identityserver4.readthedocs.io/en/release/*](https://identityserver4.readthedocs.io/en/release/)
 
-
 >[!div class="step-by-step"]
-[上一頁](../implement-resilient-applications/monitor-app-health.md)
-[下一頁](authorization-net-microservices-web-applications.md)
+>[上一頁](../implement-resilient-applications/monitor-app-health.md)
+>[下一頁](authorization-net-microservices-web-applications.md)

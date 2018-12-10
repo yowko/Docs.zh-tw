@@ -4,11 +4,11 @@ description: 學習如何使用 ML.NET，從多個檔案載入資料，供機器
 ms.date: 11/07/2018
 ms.custom: mvc,how-to
 ms.openlocfilehash: c9b34bd6bcbac62e9f9c33226f5d0feb41168392
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672400"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150728"
 ---
 # <a name="load-data-from-multiple-files-for-machine-learning-processing---mlnet"></a>從多個檔案載入資料，供機器學習處理之用 - ML.NET
 
