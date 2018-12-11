@@ -8,16 +8,16 @@ helpviewer_keywords:
 - security [WCF], creating a session
 ms.assetid: b6f42b5a-bbf7-45cf-b917-7ec9fa7ae110
 ms.openlocfilehash: c0e5281d227d343d8734809b27b57d8a2bead627
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297110"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147589"
 ---
 # <a name="how-to-create-a-secure-session"></a>HOW TO：建立安全工作階段
 除了[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)繫結時，系統提供繫結 Windows Communication Foundation (WCF) 中自動使用訊息安全性啟用時的安全工作階段。  
   
- 根據預設，安全工作階段不會存留回收的 Web 伺服器。 當建立安全工作階段時，用戶端和服務會快取與安全工作階段有關聯的索引鍵。 當交換訊息時，只會交換快取索引鍵的識別碼。 如果回收 Web 伺服器，也會回收快取，讓 Web 伺服器無法為識別碼擷取快取索引鍵。 如果發生這種情況，便會將例外狀況擲回用戶端。 使用具狀態之安全性內容權杖 (SCT) 的安全工作階段可以存留已回收的 Web 伺服器。 如需使用安全工作階段中的具狀態的 SCT 的詳細資訊，請參閱[如何： 為安全工作階段建立安全性內容權杖](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
+ 根據預設，安全工作階段不會存留回收的 Web 伺服器。 當建立安全工作階段時，用戶端和服務會快取與安全工作階段有關聯的索引鍵。 當交換訊息時，只會交換快取索引鍵的識別碼。 如果回收 Web 伺服器，也會回收快取，讓 Web 伺服器無法為識別碼擷取快取索引鍵。 如果發生這種情況，便會將例外狀況擲回用戶端。 使用具狀態之安全性內容權杖 (SCT) 的安全工作階段可以存留已回收的 Web 伺服器。 如需使用安全工作階段中的具狀態的 SCT 的詳細資訊，請參閱[How to:建立安全性內容權杖的安全工作階段](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
   
 ### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-one-of-the-system-provided-bindings"></a>使用其中一個系統提供的繫結來指定服務使用安全工作階段  
   
@@ -60,7 +60,7 @@ ms.locfileid: "52297110"
   
 -   請建立自訂繫結，指定 SOAP 訊息受到安全工作階段的保護。  
   
-     如需建立自訂繫結的詳細資訊，請參閱 <<c0> [ 如何： 自訂之繫結](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)。  
+     如需建立自訂繫結的詳細資訊，請參閱[How to:自訂系統提供的繫結](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)。  
   
      下列程式碼範例會使用組態來指定使用安全工作階段傳送訊息的自訂繫結。  
   

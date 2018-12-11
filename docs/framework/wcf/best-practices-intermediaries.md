@@ -3,11 +3,11 @@ title: 最佳做法：媒介
 ms.date: 03/30/2017
 ms.assetid: 2d41b337-8132-4ac2-bea2-6e9ae2f00f8d
 ms.openlocfilehash: 8b0e0e635c0e790b342115b988905ba29a6b8ad1
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296400"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143996"
 ---
 # <a name="best-practices-intermediaries"></a>最佳做法：媒介
 當呼叫媒介時必須務必注意地正確處理錯誤，以確認媒介的服務端通道有正常關閉。  

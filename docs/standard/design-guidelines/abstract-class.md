@@ -1,6 +1,6 @@
 ---
 title: 抽象類別設計
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - type design guidelines, abstract classes
@@ -10,14 +10,13 @@ helpviewer_keywords:
 - classes [.NET Framework], design guidelines
 - type design guidelines, classes
 ms.assetid: d3646e6d-5c1f-4922-8fb0-ec5effb30d60
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c5b9dacc4995a126e1ee3f6062dca796194d4882
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+author: KrzysztofCwalina
+ms.openlocfilehash: 1982c7c97802dedd1d49c770be5a7ac00944cbfc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46493486"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130870"
 ---
 # <a name="abstract-class-design"></a>抽象類別設計
 **X DO NOT** 抽象型別中定義公用或受保護的內部建構函式。  
@@ -36,7 +35,7 @@ ms.locfileid: "46493486"
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
+ *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
   
 ## <a name="see-also"></a>另請參閱
 

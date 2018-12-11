@@ -4,12 +4,12 @@ description: 了解各種不同的無伺服器架構，排程和事件為基礎�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 0261b9f17f133942d635cf331d8cef414378bd90
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: cf46c601ac6aa401c7c37bd64c1f8981589ebd2e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369747"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146702"
 ---
 # <a name="serverless-design-examples"></a>無伺服器設計範例
 
@@ -89,5 +89,5 @@ API 閘道的用戶端提供單一進入點，並以智慧方式將要求路由�
 * [使用中的變更摘要支援 Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/change-feed)
 
 >[!div class="step-by-step"]
-[上一頁](serverless-architecture-considerations.md)
-[下一頁](azure-serverless-platform.md)
+>[上一頁](serverless-architecture-considerations.md)
+>[下一頁](azure-serverless-platform.md)

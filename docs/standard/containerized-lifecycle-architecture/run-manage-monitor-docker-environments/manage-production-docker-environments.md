@@ -4,12 +4,12 @@ description: Microsoft 平台和工具的容器化 Docker 應用程式生命週�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 3bafdd9f6a6aa4f850fd28b6315e68c643d1f8c0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f968b5199f838e35f336dfa8c7d15aa9e5298951
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202851"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147290"
 ---
 # <a name="manage-production-docker-environments"></a>管理生產 Docker 環境
 
@@ -23,7 +23,7 @@ Container Service 提供快速部署常用的開放原始碼容器叢集和協�
 
 表 6-1 會列出其協調器、 排程器和叢集平台相關的一般管理工具。
 
-表 6-1: Docker 管理工具
+表 6-1:Docker 管理工具
 
 
 | 管理工具      | 描述           | 相關的協調器 |
@@ -44,7 +44,6 @@ Container Service 提供快速部署常用的開放原始碼容器叢集和協�
 
 -   [Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster)是特製化的 web UI 工具，提供深入解析和某些從節點 /vm 觀點來看，並從應用程式和服務的觀點來看，在 Service Fabric 叢集上的作業。
 
-
 >[!div class="step-by-step"]
-[上一頁](run-microservices-based-applications-in-production.md)
-[下一頁](monitor-containerized-application-services.md)
+>[上一頁](run-microservices-based-applications-in-production.md)
+>[下一頁](monitor-containerized-application-services.md)

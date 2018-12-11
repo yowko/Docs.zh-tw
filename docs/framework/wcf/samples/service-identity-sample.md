@@ -3,11 +3,11 @@ title: 服務身分識別範例
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
 ms.openlocfilehash: 341e4922089634c3e46929d6cdb474b2dfbd0666
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49633907"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152714"
 ---
 # <a name="service-identity-sample"></a>服務身分識別範例
 這個服務身分識別範例示範如何設定服務的身分識別。 在設計階段，用戶端可以使用服務的中繼資料擷取身分識別，然後在執行階段，用戶端就可以驗證服務的身分識別。 服務身分識別的概念主要是允許用戶端在呼叫任何作業之前驗證服務，從而保護用戶端以免遭到未經驗證的呼叫。 在安全連線上，服務還會在允許用戶端存取之前驗證其認證，但這不是本範例的重點。 請參閱中的範例[用戶端](../../../../docs/framework/wcf/samples/client.md)，示範伺服器驗證。
@@ -115,7 +115,7 @@ class CustomIdentityVerifier : IdentityVerifier
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>若要在同一部電腦上執行範例
 
-1.  在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 或 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，使用 MMC 嵌入式管理單元工具，將身分識別方案資料夾中的 Identity.pfx 憑證檔匯入至 LocalMachine/My (Personal) 憑證存放區。 這個檔案有密碼保護。 它會在匯入時要求您提供密碼。 型別`xyz`在密碼方塊。 如需詳細資訊，請參閱 <<c0> [ 如何： 使用 MMC 嵌入式管理單元檢視憑證](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)主題。 完成這個動作之後，請使用系統管理員權限，在 Visual Studio 命令提示字元中執行 Setup.bat，這會將此憑證複製到 CurrentUser/Trusted People 存放區，以供用戶端使用。
+1.  在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 或 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，使用 MMC 嵌入式管理單元工具，將身分識別方案資料夾中的 Identity.pfx 憑證檔匯入至 LocalMachine/My (Personal) 憑證存放區。 這個檔案有密碼保護。 它會在匯入時要求您提供密碼。 型別`xyz`在密碼方塊。 如需詳細資訊，請參閱[How to:使用 MMC 嵌入式管理單元檢視憑證](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)主題。 完成這個動作之後，請使用系統管理員權限，在 Visual Studio 命令提示字元中執行 Setup.bat，這會將此憑證複製到 CurrentUser/Trusted People 存放區，以供用戶端使用。
 
 2.  在  [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]，從範例安裝資料夾，在 Visual Studio 2012 的命令提示字元，以系統管理員權限執行 Setup.bat。 這會安裝執行範例所需的所有憑證。
 
@@ -157,6 +157,6 @@ class CustomIdentityVerifier : IdentityVerifier
 -   當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
   
     > [!NOTE]
-    >  跨電腦執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已執行跨電腦使用憑證的 Windows Communication Foundation (WCF) 範例，請務必清除已安裝在 CurrentUser-TrustedPeople 存放區的服務憑證。 若要這麼做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。
+    >  跨電腦執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已執行跨電腦使用憑證的 Windows Communication Foundation (WCF) 範例，請務必清除已安裝在 CurrentUser-TrustedPeople 存放區的服務憑證。 若要這樣做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 例如： `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。
 
 ## <a name="see-also"></a>另請參閱

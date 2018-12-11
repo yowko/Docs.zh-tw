@@ -10,11 +10,11 @@ helpviewer_keywords:
 - filealign compiler option [Visual Basic]
 ms.assetid: cc61ec3d-ad38-4b28-9659-099d73cad099
 ms.openlocfilehash: db70749f28592ae6711b6d9544f8704af9416490
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181718"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128163"
 ---
 # <a name="-filealign"></a>-filealign
 指定要對齊輸出檔案區段的位置。  
@@ -27,7 +27,7 @@ ms.locfileid: "50181718"
   
 ## <a name="arguments"></a>引數  
  `number`  
- 必要。 值，指定輸出檔中的區段的對齊方式。 有效值為 512、1024、2048、4096 和 8192。 這些值是以位元組為單位。  
+ 必要項。 值，指定輸出檔中的區段的對齊方式。 有效值為 512、1024、2048、4096 和 8192。 這些值是以位元組為單位。  
   
 ## <a name="remarks"></a>備註  
  您可以使用`-filealign`選項來指定輸出檔案區段的對齊方式。 在可攜式執行檔 (PE) 檔案包含程式碼或資料的連續記憶體區塊的區段。 `-filealign`選項可讓您編譯您的應用程式，使用標準的對齊方式，不需要使用此選項大部分的開發人員。  

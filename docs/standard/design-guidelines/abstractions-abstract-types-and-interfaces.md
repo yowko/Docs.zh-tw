@@ -1,6 +1,6 @@
 ---
 title: 抽象 (抽象類型和介面)
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - interfaces [.NET Framework], abstract
@@ -8,14 +8,13 @@ helpviewer_keywords:
 - abstract types [.NET Framework]
 - types [.NET Framework], abstract
 ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0ad8b2dd3dbf2a7a75c98a3115d4351dfea4e1a0
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+author: KrzysztofCwalina
+ms.openlocfilehash: 4ff79af968c8a0a360cade687b8c60cdd71de192
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46480678"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149909"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>抽象 (抽象類型和介面)
 抽象概念是描述合約，但不提供完整的實作合約的型別。 抽象概念通常會實作為抽象類別或介面，和其隨附一組妥善定義的參考文件描述的實作合約的型別所需的語意。 最重要的抽象概念，.NET Framework 中的部分<xref:System.IO.Stream>， <xref:System.Collections.Generic.IEnumerable%601>，和<xref:System.Object>。  
@@ -36,7 +35,7 @@ ms.locfileid: "46480678"
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
+ *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
   
 ## <a name="see-also"></a>另請參閱
 

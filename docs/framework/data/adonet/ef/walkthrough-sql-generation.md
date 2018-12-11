@@ -3,11 +3,11 @@ title: 逐步解說：SQL 產生
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
 ms.openlocfilehash: cbc400671e5194494772580e77316af07b5669ff
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672013"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149038"
 ---
 # <a name="walkthrough-sql-generation"></a>逐步解說：SQL 產生
 本主題說明中的 SQL 產生如何發[範例提供者](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)。 下列 Entity SQL 查詢會使用範例提供者所隨附的模型：  
@@ -136,7 +136,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  ![Diagram](../../../../../docs/framework/data/adonet/ef/media/1ec61ed3-fcdd-4649-9089-24385be7e423.gif "1ec61ed3-fcdd-4649-9089-24385be7e423")  
   
- 如果是 Join3，IsParentAJoin 會傳回 false 而且需要啟動新的 SqlSelectStatement (SelectStatement1) 並將它推送到堆疊上。 處理作業會繼續，就像處理之前的聯結一樣，而且新的範圍會推送到堆疊上並處理子系。 左邊子系是範圍 (Extent3) 而右邊子系是聯結 (Join2)，這個聯結也需要啟動新的 SqlSelectStatement：SelectStatement2。 Join2 上的子系也是範圍，而且會彙總到 SelectStatement2。  
+ 如果是 Join3，IsParentAJoin 會傳回 false 而且需要啟動新的 SqlSelectStatement (SelectStatement1) 並將它推送到堆疊上。 處理作業會繼續，就像處理之前的聯結一樣，而且新的範圍會推送到堆疊上並處理子系。 左子系是範圍 (Extent3) 而右邊的子系是聯結 (Join2) 也需要啟動新的 SqlSelectStatement:SelectStatement2。 Join2 上的子系也是範圍，而且會彙總到 SelectStatement2。  
   
  造訪者在瀏覽 Join2 之後，但是完成它的後置處理 (ProcessJoinInputResult) 之前的狀態會顯示在下一個圖中：  
   
