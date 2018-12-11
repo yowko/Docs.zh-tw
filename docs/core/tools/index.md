@@ -1,15 +1,14 @@
 ---
 title: .NET Core 命令列介面 (Command-Line Interface, CLI) 工具
 description: .NET Core 命令列介面 (CLI) 工具與功能概觀。
-author: mairaw
-ms.author: mairaw
 ms.date: 08/14/2017
-ms.openlocfilehash: 0ef69f98171da98b50aae4cdd2f5f88f37ad0c63
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.custom: seodec18
+ms.openlocfilehash: 698e6188d2cc73c30a7003f53199065d1eff2ec0
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43778876"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170183"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET Core 命令列介面 (CLI) 工具
 

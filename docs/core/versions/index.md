@@ -2,15 +2,14 @@
 title: .NET Core Runtime 與 SDK 如何進行版本設定
 description: 此文章說明 .NET Core SDK 與 Runtime 如何進行版本設定 (類似語意式版本設定)。
 author: bleroy
-ms.author: mairaw
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: 12bb270584eb0f63973acf40afd3f6a30363c9c6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 54b09a6b74b2cf213cea781dec95a413ac2ad059
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126047"
+ms.locfileid: "53170713"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core 版本設定概觀
 

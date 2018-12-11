@@ -2,15 +2,15 @@
 title: .NET Core 教學課程
 description: 遵循這些教學課程來了解 .NET Core，以便在 Mac、Linux 和 Windows 上建置應用程式和程式庫。
 author: richlander
-ms.author: mairaw
 ms.date: 03/16/2017
+titleSuffix: ''
 ms.custom: seodec18
-ms.openlocfilehash: 16f468ffdff3ea4fff1ab2400ac7dd3d270c781c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d7d4685295c17fb4029ee077f5985f2b4152bbb4
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130726"
+ms.locfileid: "53168738"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>透過探索這些教學課程來學習 .NET Core 與 .NET Core SDK 工具
 
@@ -26,7 +26,7 @@ ms.locfileid: "53130726"
 - [測試類別庫](testing-library-with-visual-studio.md)
 - [使用類別庫](consuming-library-with-visual-studio.md)
 - [在 Windows 上建置完整的 C# .NET Core 方案](using-on-windows-full-solution.md)
-- [Azure Cosmos DB：開始使用 SQL API 和 .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
+- [Azure Cosmos DB：Azure Cosmos DB：開始使用 SQL API 和 .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>使用 Visual Studio Code 建置應用程式
 

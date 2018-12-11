@@ -1,20 +1,20 @@
 ---
-title: .NET Core 其他 CLI 工具 - .NET Core
+title: .NET Core 其他 CLI 工具
 description: 支援及延伸 .NET Core 功能之其他工具的簡介。
 author: mlacouture
 ms.author: johalex
 ms.date: 01/19/2018
 ms.custom: seodec18
-ms.openlocfilehash: 695d1accba6d25d8b587dc86ad028e2281ff82e9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0fb04b65efa26de3f0db9b7f7c28cce01ad9df97
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147839"
+ms.locfileid: "53169192"
 ---
 # <a name="net-core-additional-tools-overview"></a>.NET Core 其他工具概觀
 
-此節編製了一份清單，內容涵蓋支援和延伸 .NET Core 功能的工具，以及 [.NET Core 命令列介面 (CLI)](../tools/index.md) 工具。
+本節編製了一份清單，內容涵蓋支援和延伸 .NET Core 功能的工具，以及 [.NET Core 命令列介面 (CLI)](../tools/index.md) 工具。
 
 ## <a name="wcf-web-service-reference-toolwcf-web-service-reference-guidemd"></a>[WCF Web Service Reference 工具](wcf-web-service-reference-guide.md)
 

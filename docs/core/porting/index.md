@@ -2,15 +2,14 @@
 title: 將程式碼從 .NET Framework 移植到 .NET Core
 description: 了解移植程序，並探索可協助將 .NET Framework 移植到 .NET Core 的工具。
 author: cartermp
-ms.author: mairaw
 ms.date: 12/04/2018
 ms.custom: seodec18
-ms.openlocfilehash: 3ea6456d066261f521a793d34dcb73c129016280
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5c7cd8b01672e71b0db7255dad23d994a95ce532
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145146"
+ms.locfileid: "53170037"
 ---
 # <a name="port-your-code-from-net-framework-to-net-core"></a>將您的程式碼從 .NET Framework 移植到 .NET Core
 

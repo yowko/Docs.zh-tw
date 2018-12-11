@@ -2,18 +2,18 @@
 title: 從 project.json 進行的 .NET Core 移轉
 description: 了解如何使用 project.json 來移轉舊版 .NET Core 專案
 author: blackdwarf
-ms.author: mairaw
 ms.date: 07/19/2017
-ms.openlocfilehash: 47d9cab48d83581afb9deb2fd91c4c9a6dc85201
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 40a0aaf9d687a580b83e11811effad458f708a85
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143281"
+ms.locfileid: "53170687"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>從 project.json 移轉 .NET Core 專案
 
-此文件將討論 .NET Core 專案的移轉案例，並將介紹下列三種移轉案例：
+本文將討論 .NET Core 專案的移轉案例，並將介紹下列三種移轉案例：
 
 1. [從 *project.json* 的有效最新結構描述移轉至 *csproj*](#migration-from-projectjson-to-csproj)
 2. [從 DNX 移轉至 csproj](#migration-from-dnx-to-csproj)
@@ -60,7 +60,7 @@ Visual Studio 會自動移轉所選擇的專案。 移轉方案時，如果您�
 
 ### <a name="common-issues"></a>常見問題
 
-- 若您收到錯誤：「找不到符合命令 dotnet-migrate 的可執行檔」：
+- 如果您收到錯誤：「找不到符合命令 dotnet-migrate 的可執行檔」：
 
 執行 `dotnet --version` 以查看您所使用的版本。 [`dotnet migrate`](../tools/dotnet-migrate.md) 需要 .NET Core CLI RC3 或更高版本。
 如果您目前的目錄或父目錄中有 *global.json* 檔案且 `sdk` 版本設定為舊版，則會收到此錯誤。
