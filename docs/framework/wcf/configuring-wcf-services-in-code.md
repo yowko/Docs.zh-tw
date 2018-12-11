@@ -2,12 +2,12 @@
 title: 在程式碼中設定 WCF 服務
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-ms.openlocfilehash: abd75e514d698e73c2297a5dc2e511f89f0534b1
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 96bd9af7fcf22789b95b2efabbed6a19401b2d97
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582433"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242408"
 ---
 # <a name="configuring-wcf-services-in-code"></a>在程式碼中設定 WCF 服務
 Windows Communication Foundation (WCF) 可讓開發人員使用組態檔或程式碼設定服務。  當服務需要在部署後進行設定時，組態檔非常有用。 使用組態檔時，IT 專業人員只需更新組態檔，不必重新編譯。 但是組態檔可能會很複雜而難以維護。 由於不支援組態檔偵錯，而且組態項目是以名稱來參考，這使得製作組態檔容易出錯且難度增加。 WCF 也可讓您在程式碼中設定服務。 在舊版的程式碼中的 WCF （4.0 及更早版本） 設定服務已在自我裝載的情況下，簡單<xref:System.ServiceModel.ServiceHost>類別允許您設定端點和呼叫 ServiceHost.Open 之前的行為。 但是在 Web 裝載案例中，您就無法直接存取 <xref:System.ServiceModel.ServiceHost> 類別。 為了設定 Web 裝載服務，您需要建立會建立 `System.ServiceModel.ServiceHostFactory` 的 <xref:System.ServiceModel.Activation.ServiceHostFactory>，並執行任何所需的設定。 從.NET 4.5 開始，WCF 會提供更簡單的方法來設定自我裝載和 web 裝載服務程式碼中。  
@@ -38,7 +38,7 @@ public class Service1 : IService1
   
         public string GetData(int value)  
         {  
-            return string.Format("You entered: {0}", value);  
+            return $"You entered: {value}";
         }  
   
         public CompositeType GetDataUsingDataContract(CompositeType composite)  
@@ -101,7 +101,7 @@ public class Service1 : IService1
  [IIS 和 WAS 中以組態為基礎的啟用](../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)  
  [組態與中繼資料支援](../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)  
  [組態](../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)  
- [如何：在設定中指定服務繫結](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)  
+ [如何：在組態中指定的服務繫結](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)  
  [如何：在組態中建立服務端點](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
- [如何：使用組態檔發行服務的中繼資料](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
- [如何：在設定中指定用戶端繫結](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)
+ [如何：發行服務，使用組態檔的中繼資料](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
+ [如何：在組態中指定的用戶端繫結](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)

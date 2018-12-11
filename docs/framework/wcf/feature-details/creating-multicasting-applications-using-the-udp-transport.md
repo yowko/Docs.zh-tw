@@ -2,12 +2,12 @@
 title: 使用 UDP 傳輸建立多點傳送應用程式
 ms.date: 03/30/2017
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
-ms.openlocfilehash: 89ac99ffec614eeebd076f9868568dcf2c7b04fd
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: b65a277b6e76767d1e3bfdbebbac5051759986e0
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46324749"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241849"
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>使用 UDP 傳輸建立多點傳送應用程式
 多點傳送應用程式會在同一時間將小量訊息發送給大量的收件人，而無需建立點對點連接。 這類應用程式著重速度勝於可靠性。 換句話說，及時發送資料要比確保任何特定訊息實際送達來得更重要。 WCF 現在支援使用 <xref:System.ServiceModel.UdpBinding> 撰寫多點傳送應用程式。 這種傳輸適用於服務需要將出小量訊息同時傳送給許多用戶端的情節。 股票行情指示器應用程式是這類服務的範例。  
@@ -15,7 +15,7 @@ ms.locfileid: "46324749"
 ## <a name="implementing-a-multicast-application"></a>實作多點傳送應用程式  
  若要實作多點傳送應用程式，請定義服務合約，並為每個需要回應多點傳送訊息的軟體元件實作服務合約。 例如，股票行情指示器應用程式可能定義下列服務合約：  
   
-```  
+```csharp
 // Shared contracts between the client and the service  
 [ServiceContract]
 interface IStockTicker
@@ -43,7 +43,7 @@ class StockInfo
   
  每個想要接收多點傳送訊息的應用程式都必須裝載公開此介面的服務。  例如，下列示範如何接收多點傳送訊息的程式碼範例：  
   
-```  
+```csharp
 // Service Address
 string serviceAddress = "soap.udp://224.0.0.1:40000";
 // Binding
@@ -63,7 +63,7 @@ Console.ReadLine();
   
  在這種類型的情節中，實際發送多點傳送訊息的是用戶端。 每個正在接聽正確 UDP 位址的服務都會接收多點傳送訊息。 下列是發送多點傳送訊息之用戶端的範例：  
   
-```  
+```csharp
 // Multicast Address
 string serviceAddress = "soap.udp://224.0.0.1:40000";
 
@@ -82,7 +82,7 @@ while (true)
 {
     // This will continue to mulicast stock information
     proxy.SendStockInfo(GetStockInfo());
-    Console.WriteLine(String.Format("sent stock info at {0}", DateTime.Now));
+    Console.WriteLine($"sent stock info at {DateTime.Now}");
     // Wait for one second before sending another update
     System.Threading.Thread.Sleep(new TimeSpan(0, 0, 1));
 }
@@ -96,7 +96,7 @@ while (true)
 ### <a name="two-way-multicast-messaging"></a>雙向多點傳送訊息  
  雖然多點傳送訊息通常為單向，但 UdpBinding 確實可支援要求/回覆訊息交換。 使用 UDP 傳輸傳送的訊息會同時包含寄件者和收件者位址。 使用寄件者位址時必須多加小心，因為它可能會在傳送途中遭到惡意變更。  可以使用下列程式碼來檢查位址：  
   
-```  
+```csharp
 if (address.AddressFamily == AddressFamily.InterNetwork)
 {
     // IPv4

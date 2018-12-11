@@ -2,21 +2,21 @@
 title: HOW TO：建立異動式服務
 ms.date: 03/30/2017
 ms.assetid: 1bd2e4ed-a557-43f9-ba98-4c70cb75c154
-ms.openlocfilehash: bba3a1f9c1d08e882cd5e4117c97f9f84d0c2be8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c4d2db0ca912be8840788bc363f86d621fa76e34
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509863"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245635"
 ---
 # <a name="how-to-create-a-transactional-service"></a>HOW TO：建立異動式服務
 這個範例示範建立異動式服務的各層面，以及使用用戶端初始化的異動以協調服務作業。  
   
 ### <a name="creating-a-transactional-service"></a>建立交易式服務  
   
-1.  建立服務合約並使用 <xref:System.ServiceModel.TransactionFlowOption> 列舉的所需設定來標註作業，以指定傳入交易的需求。 請注意，您也可以將 <xref:System.ServiceModel.TransactionFlowAttribute> 置於已實作的服務類別上。 這可以讓介面的單一實作 (而不是每個實作) 使用這些交易設定。  
+1.  建立服務合約並使用 <xref:System.ServiceModel.TransactionFlowOption> 列舉的所需設定來標註作業，以指定傳入異動的需求。 請注意，您也可以將 <xref:System.ServiceModel.TransactionFlowAttribute> 置於已實作的服務類別上。 這可以讓介面的單一實作 (而不是每個實作) 使用這些交易設定。  
   
-    ```  
+    ```csharp
     [ServiceContract]  
     public interface ICalculator  
     {  
@@ -31,9 +31,9 @@ ms.locfileid: "43509863"
     }  
     ```  
   
-2.  建立實作類別，然後使用 <xref:System.ServiceModel.ServiceBehaviorAttribute> 選擇性地指定 <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> 和 <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A>。 您應該注意到在許多案例中，<xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> 預設 60 秒以及 <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> 預設 `Unspecified` 是適當的。 針對每個作業，您可以使用 <xref:System.ServiceModel.OperationBehaviorAttribute> 屬性指定在方法內執行的工作，是否應該發生在根據 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 屬性值定義的交易範圍內。 在此例中，`Add` 方法使用的交易與從用戶端流入的強制傳入交易相同，而且 `Subtract` 方法使用的交易會與傳入交易相同 (如果交易從用戶端流入)，或是與本機建立的新隱含交易相同。  
+2.  建立實作類別，然後使用 <xref:System.ServiceModel.ServiceBehaviorAttribute> 選擇性地指定 <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> 和 <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A>。 您應該注意到在許多案例中，<xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> 預設 60 秒以及 <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> 預設 `Unspecified` 是適當的。 針對每個作業，您可以使用 <xref:System.ServiceModel.OperationBehaviorAttribute> 屬性指定在方法內執行的工作，是否應該發生在根據 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 屬性值定義的異動範圍內。 在此例中，`Add` 方法使用的交易與從用戶端流入的強制傳入交易相同，而且 `Subtract` 方法使用的交易會與傳入交易相同 (如果交易從用戶端流入)，或是與本機建立的新隱含交易相同。  
   
-    ```  
+    ```csharp
     [ServiceBehavior(  
         TransactionIsolationLevel = System.Transactions.IsolationLevel.Serializable,  
         TransactionTimeout = "00:00:45")]  
@@ -43,7 +43,7 @@ ms.locfileid: "43509863"
         public double Add(double n1, double n2)  
         {  
             // Perform transactional operation  
-            RecordToLog(String.Format("Adding {0} to {1}", n1, n2));  
+            RecordToLog($"Adding {n1} to {n2}");
             return n1 + n2;  
         }  
   
@@ -51,7 +51,7 @@ ms.locfileid: "43509863"
         public double Subtract(double n1, double n2)  
         {  
             // Perform transactional operation  
-            RecordToLog(String.Format("Subtracting {0} from {1}", n2, n1));  
+            RecordToLog($"Subtracting {n2} from {n1}");
             return n1 - n2;  
         }  
   
@@ -77,7 +77,7 @@ ms.locfileid: "43509863"
     </service>  
     ```  
   
-     藉由使用 `transactionFlow` 屬性能夠在組態層級啟用交易流程，而使用 `transactionProtocol` 屬性可以指定交易通訊協定，如同下列組態所示。  
+     藉由使用 `transactionFlow` 屬性能夠在組態層級啟用異動流程，而使用 `transactionProtocol` 屬性可以指定異動通訊協定，如同下列組態所示。  
   
     ```xml  
     <bindings>  
@@ -108,7 +108,7 @@ ms.locfileid: "43509863"
     </service>  
     ```  
   
-     使用 `transactionProtocol` 屬性可以指定交易通訊協定。 但是，系統提供的 `wsHttpBinding` 並沒有這個屬性，因為這個繫結只能夠使用 WS-AT 通訊協定。  
+     使用 `transactionProtocol` 屬性可以指定異動通訊協定。 但是，系統提供的 `wsHttpBinding` 並沒有這個屬性，因為這個繫結只能夠使用 WS-AT 通訊協定。  
   
     ```xml  
     <bindings>  
@@ -128,7 +128,7 @@ ms.locfileid: "43509863"
   
 1.  根據預設，WCF 作業自動完成的交易如果沒有未處理的例外狀況。 您可以藉由使用 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 屬性和 <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> 方法修改這個行為。 當作業需要發生在與其他作業相同的交易中 (例如，借貸作業) 時，您可以將 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 屬性設定為 `false` 以停用自動完成行為，如同下列 `Debit` 作業範例所示。 在呼叫 `Debit` 屬性設定為 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 的方法 (如同作業 `true` 中所示)，或是呼叫 `Credit1` 方法以明確標記交易完成 (如同作業 <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> 中所示) 後，`Credit2` 作業使用的交易才完成。 請注意，這兩個貸款作業是為了示範目的，而單一貸款作業會更單純。  
   
-    ```  
+    ```csharp
     [ServiceBehavior]  
     public class CalculatorService : IAccount  
     {  
@@ -164,7 +164,7 @@ ms.locfileid: "43509863"
   
 2.  為了交易相互關聯目的，將 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 屬性設定為 `false` 需要使用工作階段繫結。 `SessionMode` 的 <xref:System.ServiceModel.ServiceContractAttribute> 屬性會指定這項需求。  
   
-    ```  
+    ```csharp
     [ServiceContract(SessionMode = SessionMode.Required)]  
     public interface IAccount  
     {  
@@ -184,7 +184,7 @@ ms.locfileid: "43509863"
   
 1.  WCF 會使用<xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A>屬性來指定在異動完成時，是否要釋放基礎服務執行個體。 因為這個預設值為`true`，除非另外設定，否則為 WCF 展示有效率且可預測 「 在 just-in-time"啟動行為。 呼叫後續異動的服務，可以確保新服務執行個體不會有之前異動狀態的殘餘資料。 雖然這方法通常很有用，但是有時候您可能會想要在異動完成之外維護服務執行個體中的狀態。 這種情況的範例是，當必要的狀態或資源控制代碼很難擷取或重組時。 藉由將 <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> 屬性設定為 `false`，您可以達到這個目的。 使用這項設定時，後續呼叫就可以使用執行個體與任何關聯的狀態。 當使用這項功能時，請特別考量清除與完成狀態及交易的時機與方式。 下列範例示範如何使用 `runningTotal` 變數來維護執行個體以進行這項作業。  
   
-    ```  
+    ```csharp
     [ServiceBehavior(TransactionIsolationLevel = [ServiceBehavior(  
         ReleaseServiceInstanceOnTransactionComplete = false)]  
     public class CalculatorService : ICalculator  
@@ -195,7 +195,7 @@ ms.locfileid: "43509863"
         public double Add(double n)  
         {  
             // Perform transactional operation  
-            RecordToLog(String.Format("Adding {0} to {1}", n, runningTotal));  
+            RecordToLog($"Adding {n} to {runningTotal}");
             runningTotal = runningTotal + n;  
             return runningTotal;  
         }  
@@ -204,7 +204,7 @@ ms.locfileid: "43509863"
         public double Subtract(double n)  
         {  
             // Perform transactional operation  
-            RecordToLog(String.Format("Subtracting {0} from {1}", n, runningTotal));  
+            RecordToLog($"Subtracting {n} from {runningTotal}");
             runningTotal = runningTotal - n;  
             return runningTotal;  
         }  

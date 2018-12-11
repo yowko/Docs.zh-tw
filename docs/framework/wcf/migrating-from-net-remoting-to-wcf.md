@@ -2,12 +2,12 @@
 title: 從 .NET 遠端處理移轉到 WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: 91cbfa33c6645fbc0a8d9b513e3a59799114a710
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: cca303cf9b906fd395e594111fae808ae4ab6435
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200094"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245674"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>從 .NET 遠端處理移轉到 WCF
 此文章說明如何將使用 .NET 遠端處理的應用程式移轉為使用 Windows Communication Foundation (WCF)。 此文章會先比較這這些產品的類似概念，再說明如何在 WCF 中完成幾個常見的遠端處理案例。  
@@ -89,8 +89,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(WCFServer), baseAddress)
     serviceHost.AddServiceEndpoint(typeof(IWCFServer), binding, baseAddress);  
     serviceHost.Open();  
   
-    Console.WriteLine(String.Format("The WCF server is ready at {0}.",  
-                                    baseAddress));  
+    Console.WriteLine($"The WCF server is ready at {baseAddress}.");
     Console.WriteLine("Press <ENTER> to terminate service...");  
     Console.WriteLine();  
     Console.ReadLine();  
@@ -121,8 +120,7 @@ RemotingServer server = (RemotingServer)Activator.GetObject(
                             "tcp://localhost:8080/RemotingServer");  
   
 RemotingCustomer customer = server.GetCustomer(42);  
-Console.WriteLine(String.Format("Customer {0} {1} received.",   
-                                 customer.FirstName, customer.LastName));  
+Console.WriteLine($"Customer {customer.FirstName} {customer.LastName} received.");
 ```  
   
  從 Activator.GetObject() 傳回的 RemotingServer 執行個體稱為 "Transparent Proxy"。 它會針對用戶端上的 RemotingServer 類型實作公用 API，但所有方法都會呼叫在不同處理序或電腦中執行的伺服器物件。  
@@ -139,15 +137,14 @@ ChannelFactory<IWCFServer> channelFactory =
 IWCFServer server = channelFactory.CreateChannel();  
   
 Customer customer = server.GetCustomer(42);  
-Console.WriteLine(String.Format("  Customer {0} {1} received.",  
-                    customer.FirstName, customer.LastName));  
+Console.WriteLine($"  Customer {customer.FirstName} {customer.LastName} received.");
 ```  
   
  此範例顯示如何在通道層級進行程式設計，因為它最類似遠端處理範例。 也可**加入服務參考**產生程式碼以簡化用戶端程式設計的 Visual Studio 中的方法。 如需詳細資訊，請參閱下列主題：  
   
 -   [用戶端通道層級的程式設計](./extending/client-channel-level-programming.md)  
   
--   [如何： 加入、 更新或移除服務參考](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)  
+-   [如何：新增、 更新或移除服務參考](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)  
   
 ### <a name="serialization-usage"></a>序列化使用方式  
  雖然 .NET 遠端處理與 WCF 都是使用序列化在用戶端與伺服器之間傳送物件，但是它們在下列幾個重要方面有所不同：  
@@ -269,8 +266,7 @@ try
 }  
 catch (FaultException<CustomerServiceFault> fault)  
 {  
-    Console.WriteLine(String.Format("Fault received: {0}",  
-    fault.Detail.ErrorMessage));  
+    Console.WriteLine($"Fault received: {fault.Detail.ErrorMessage}");
 }  
 ```  
   
@@ -307,7 +303,7 @@ catch (FaultException<CustomerServiceFault> fault)
   
 -   **建立錯誤合約 （選擇性）。** 建立遇到錯誤時，要在伺服器與用戶端之間交換的類型。 以 [DataContract] 和 [DataMember] 標記這些類型，使這些類型可序列化。 針對已標記為 [OperationContract] 的所有服務作業，您也應該將它們標記為 [FaultContract]，以指出這些服務作業可能傳回的錯誤。  
   
--   **設定及裝載服務。** 建立服務合約之後，下一個步驟是設定繫結，以公開端點上的服務。 如需詳細資訊，請參閱 <<c0> [ 端點： 位址、 繫結和合約](./feature-details/endpoints-addresses-bindings-and-contracts.md)。  
+-   **設定及裝載服務。** 建立服務合約之後，下一個步驟是設定繫結，以公開端點上的服務。 如需詳細資訊，請參閱[端點：位址、 繫結和合約](./feature-details/endpoints-addresses-bindings-and-contracts.md)。  
   
  將遠端處理應用程式移轉至 WCF 之後，還必須移除與 .NET 遠端處理的相依性。 如此可確保移除應用程式中的任何遠端處理安全性弱點。 這些步驟包括：  
   
@@ -343,7 +339,7 @@ public class RemotingServer : MarshalByRefObject
 }  
 ```  
   
-#### <a name="scenario-1-service-returns-an-object-by-value"></a>案例 1：服務以傳值方式傳回物件  
+#### <a name="scenario-1-service-returns-an-object-by-value"></a>案例 1:服務傳值方式傳回物件  
  這個案例示範伺服器如何以傳值方式將物件傳回至用戶端。 WCF 一律會以傳值方式從伺服器傳回物件，因此下列步驟只會說明如何建置一般 WCF 服務。  
   
 1.  一開始請定義 WCF 服務的公用介面並以 [ServiceContract] 屬性標記。 我們會使用 [OperationContract] 來識別用戶端將呼叫的伺服器端方法。  
@@ -442,7 +438,7 @@ public class RemotingServer : MarshalByRefObject
     </configuration>  
     ```  
   
-     如需使用詳細資訊**加入服務參考**，請參閱[如何： 加入、 更新或移除服務參考](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)。  
+     如需使用詳細資訊**加入服務參考**，請參閱[How to:新增、 更新或移除服務參考](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)。  
   
 7.  現在我們可以從用戶端呼叫 WCF 服務。 若要執行此作業，請建立該服務的通道處理站，針對通道要求通道處理站，然後在該通道上直接呼叫所需的方法。 我們可以這樣做的原因，是因為通道會實作服務的介面並為我們處理基礎要求/回覆邏輯。 從該方法呼叫傳回的值是伺服器回應的已還原序列化複本。  
   
@@ -451,13 +447,12 @@ public class RemotingServer : MarshalByRefObject
        new ChannelFactory<ICustomerService>("customerservice");  
    ICustomerService service = factory.CreateChannel();  
    Customer customer = service.GetCustomer(42);  
-   Console.WriteLine(String.Format("  Customer {0} {1} received.",  
-           customer.FirstName, customer.LastName));  
+   Console.WriteLine($"  Customer {customer.FirstName} {customer.LastName} received.");
    ```  
   
  WCF 一律會以傳值方式將物件從伺服器傳回至用戶端。 這些物件是伺服器所傳送之資料的已還原序列化複本。 用戶端可以對這些本機複本呼叫方法，而不會有透過回呼叫用伺服器程式碼的任何危險。  
   
-#### <a name="scenario-2-server-returns-an-object-by-reference"></a>案例 2：伺服器以傳址方式傳回物件  
+#### <a name="scenario-2-server-returns-an-object-by-reference"></a>案例 2:伺服器傳址方式傳回物件  
  這個案例示範伺服器如何以傳址方式將物件提供給用戶端。 在 .NET 遠端處理中，所有衍生自以傳址方式序列化之 MarshalByRefObject 的類型都將自動處理。 這個案例的範例是讓多個用戶端具有獨立工作階段的伺服器端物件。 如前所述，WCF 服務所傳回的物件一律為傳值物件，因此沒有傳址物件的直接對應項，但這個物件可能取得與使用 <xref:System.ServiceModel.EndpointAddress10> 物件之傳址語意類似的結果。 這是可序列化的傳值物件，可供用戶端用來取得伺服器上的工作階段傳址物件。 如此一來，便可讓多個用戶端具有獨立工作階段的伺服器端物件。  
   
 1.  首先，我們需要定義對應到工作階段物件本身的 WCF 服務合約。  
@@ -640,7 +635,7 @@ public class RemotingServer : MarshalByRefObject
   
  WCF 一律會以傳值方式傳回物件，但是可透過使用 EndpointAddress10 來支援傳址語意的對應項。 這可讓用戶端要求工作階段 WCF 服務執行個體，在這之後，便可像任何其他 WCF 服務一樣與其互動。  
   
-#### <a name="scenario-3-client-sends-server-a-by-value-instance"></a>案例 3：用戶端將傳值執行個體傳送至伺服器  
+#### <a name="scenario-3-client-sends-server-a-by-value-instance"></a>案例 3:用戶端會傳送伺服器的傳值執行個體  
  這個案例示範用戶端如何以傳值方式將非基本物件執行個體傳送至伺服器。 由於 WCF 只會以傳值方式傳送物件，因此這個案例會示範一般 WCF 使用方式。  
   
 1.  使用案例 1 中的相同 WCF 服務。  
@@ -657,7 +652,7 @@ public class RemotingServer : MarshalByRefObject
    CustomerId = 43,   
    AccountId = 99};  
    bool success = service.UpdateCustomer(customer);  
-   Console.WriteLine(String.Format("  Server returned {0}.", success));  
+   Console.WriteLine($"  Server returned {success}.");
    ```  
   
      客戶物件會序列化並傳送至伺服器，再於其中還原序列化為該物件的新複本。  

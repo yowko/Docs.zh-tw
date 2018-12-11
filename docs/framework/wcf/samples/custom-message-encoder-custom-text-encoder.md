@@ -2,12 +2,12 @@
 title: 自訂訊息編碼器：自訂文字編碼器
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: aeb1690d7ead9116bd9c4afe3c64d65d8f51ad50
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 39f09fd2ca58bfe7eb38afe536194ecad104d394
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192676"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236540"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>自訂訊息編碼器：自訂文字編碼器
 此範例示範如何實作自訂文字訊息編碼器使用 Windows Communication Foundation (WCF)。  
@@ -65,8 +65,7 @@ public class CustomTextMessageEncoder : MessageEncoder
   
         this.writerSettings = new XmlWriterSettings();  
         this.writerSettings.Encoding = Encoding.GetEncoding(factory.CharSet);  
-        this.contentType = string.Format("{0}; charset={1}",   
-            this.factory.MediaType, this.writerSettings.Encoding.HeaderName);  
+        this.contentType = $"{this.factory.MediaType}; charset={this.writerSettings.Encoding.HeaderName}";
     }  
   
     public override string ContentType  
@@ -211,7 +210,7 @@ CustomBinding binding = new CustomBinding(bindingElements);
 ## <a name="adding-metadata-support-to-the-message-encoding-binding-element"></a>在訊息編碼繫結項目中新增中繼資料支援  
  任何衍生自 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 的型別都會負責更新針對服務所產生之 WSDL 文件中的 SOAP 繫結版本。 藉由實作 `ExportEndpoint` 介面上的 <xref:System.ServiceModel.Description.IWsdlExportExtension> 方法，再修改產生的 WSDL，即可做到這點。 在這個範例中，`CustomTextMessageBindingElement` 將使用 `TextMessageEncodingBinidngElement` 的 WSDL 匯出邏輯。  
   
- 在這個範例中，用戶端組態會以手動方式設定。 由於 `CustomTextMessageBindingElement` 並不匯出原則判斷提示來描述其行為，您將無法使用 Svcutil.exe 產生用戶端組態。 您通常應該在自訂繫結項目上實作 <xref:System.ServiceModel.Description.IPolicyExportExtension> 介面，以便匯出可描述繫結項目所實作之行為或功能的自訂原則判斷提示。 如需如何匯出原則判斷提示的自訂繫結項目的的範例，請參閱 <<c0> [ 傳輸： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例。  
+ 在這個範例中，用戶端組態會以手動方式設定。 由於 `CustomTextMessageBindingElement` 並不匯出原則判斷提示來描述其行為，您將無法使用 Svcutil.exe 產生用戶端組態。 您通常應該在自訂繫結項目上實作 <xref:System.ServiceModel.Description.IPolicyExportExtension> 介面，以便匯出可描述繫結項目所實作之行為或功能的自訂原則判斷提示。 如需如何匯出原則判斷提示的自訂繫結項目的的範例，請參閱[傳輸：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例。  
   
 ## <a name="message-encoding-binding-configuration-handler"></a>訊息編碼繫結組態處理常式  
  上一個區段示範的是如何以程式設計方式使用自訂文字訊息編碼器。 `CustomTextMessageEncodingBindingSection` 將會實作可讓您在組態檔中指定自訂文字訊息編碼器使用方式的組態處理常式。 `CustomTextMessageEncodingBindingSection` 類別衍生自 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 類別。 `BindingElementType` 屬性會通知組態系統要為此區段建立的繫結項目類型。  
