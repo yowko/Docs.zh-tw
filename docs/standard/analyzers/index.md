@@ -5,12 +5,12 @@ author: billwagner
 ms.author: billwagner
 ms.date: 01/24/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: ec153b8fed08ef245a3a0f58970b4e3955dfacb5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 226482d1d385078811f2b1c5ee138e24287a785e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567259"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154329"
 ---
 # <a name="the-roslyn-based-analyzers"></a>Roslyn 分析器
 
@@ -33,5 +33,6 @@ Roslyn 分析器能夠以互動方式運作，也可以在建置期間運作。 
 
 此章節將討論下列分析器：
 
-[API 分析器](api-analyzer.md)：此分析器會在您的程式碼中檢查潛在的相容性風險，或者檢查程式碼中是否使用已被取代的 API。    
-[架構分析器](framework-analyzer.md)：此分析器會檢查您的程式碼，以確保程式碼遵循適用於 .NET Framework 應用程式的指導方針。 這些規則包含數個安全性建議。
+* [API 分析器](api-analyzer.md)：此分析器會在您的程式碼中檢查潛在的相容性風險，或者檢查程式碼中是否使用已被取代的 API。    
+* [架構分析器](framework-analyzer.md)：此分析器會檢查您的程式碼，以確保程式碼遵循適用於 .NET Framework 應用程式的指導方針。 這些規則包含數個安全性建議。
+* [.NET 可攜性分析器](portability-analyzer.md)：此分析器會檢查您的程式碼，以查看需要多少工作才能讓您的應用程式相容於其他 .NET 實作與設定檔 (包括 .NET Core、.NET Standard、UWP 和適用於 iOS、Android 與 Mac 的 Xamarin)。 

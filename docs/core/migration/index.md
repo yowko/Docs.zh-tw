@@ -1,23 +1,25 @@
 ---
-title: 將 .NET Core 移轉至 csproj 格式
-description: 將 .NET Core project.json 移轉至 csproj
+title: 從 project.json 進行的 .NET Core 移轉
+description: 了解如何使用 project.json 來移轉舊版 .NET Core 專案
 author: blackdwarf
 ms.author: mairaw
 ms.date: 07/19/2017
-ms.openlocfilehash: da1995ed3b77cb802d1f3d04e6d741809de20927
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 47d9cab48d83581afb9deb2fd91c4c9a6dc85201
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584320"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143281"
 ---
-# <a name="migrating-net-core-projects-to-the-csproj-format"></a>將 .NET Core 專案移轉至 .csproj 格式
+# <a name="migrating-net-core-projects-from-projectjson"></a>從 project.json 移轉 .NET Core 專案
 
-本文將討論 .NET Core 專案的移轉案例，並將介紹下列三種移轉案例：
+此文件將討論 .NET Core 專案的移轉案例，並將介紹下列三種移轉案例：
 
 1. [從 *project.json* 的有效最新結構描述移轉至 *csproj*](#migration-from-projectjson-to-csproj)
 2. [從 DNX 移轉至 csproj](#migration-from-dnx-to-csproj)
 3. [從 RC3 和舊版 .NET Core csproj 專案移轉至最終格式](#migration-from-earlier-net-core-csproj-formats-to-rtm-csproj)
+
+此文件只適用於仍使用 project.json 的舊版 .NET Core 專案。 它不適用於從 .NET Framework 移轉到 .NET Core。
 
 ## <a name="migration-from-projectjson-to-csproj"></a>從 project.json 移轉至 csproj
 

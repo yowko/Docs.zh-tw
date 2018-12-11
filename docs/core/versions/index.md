@@ -1,17 +1,18 @@
 ---
-title: .NET Core 版本控制
-description: 了解 .NET Core 的版本控制運作方式。
+title: .NET Core Runtime 與 SDK 如何進行版本設定
+description: 此文章說明 .NET Core SDK 與 Runtime 如何進行版本設定 (類似語意式版本設定)。
 author: bleroy
 ms.author: mairaw
 ms.date: 07/26/2018
-ms.openlocfilehash: 9f77709abf59d5346bf5e3c6f512cfabbf9e50de
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.custom: seodec18
+ms.openlocfilehash: 12bb270584eb0f63973acf40afd3f6a30363c9c6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188465"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126047"
 ---
-# <a name="net-core-versioning"></a>.NET Core 版本控制
+# <a name="overview-of-how-net-core-is-versioned"></a>.NET Core 版本設定概觀
 
 .NET Core 參考 .NET Core Runtime 與 .NET Core SDK，它包含開發應用程式所需的工具。 .NET Core SDK 是設計來搭配任何舊版 .NET Core Runtime 使用的。 此文章說明執行階段與 SDK 版本策略。 您可以在介紹 [.NET Standard](../../standard/net-standard.md#net-implementation-support) 的文章中找到 .NET Standard 版本號碼的解釋。
 

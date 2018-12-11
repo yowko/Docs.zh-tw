@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: c4011092a6c605137053b544d4b9f14cce2fdb4c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: c5431e5141b1b4b1981f4a1399ca11939fe7dc45
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002810"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151105"
 ---
 # <a name="namespaces-c-programming-guide"></a>命名空間 (C# 程式設計手冊)
 
@@ -38,8 +38,8 @@ C# 程式設計大量使用命名空間的原因有兩個。 首先，.NET Frame
   
 - 命名空間可組織大型程式碼專案。  
 - 命名空間會使用 `.` 運算子分隔。  
-- `using directive` 讓您不需要指定每個類別的命名空間名稱。  
-- `global` 命名空間是「根」命名空間：`global::System` 一律會參考 .NET Framework 命名空間 `System`。  
+- `using` 指示詞讓您不需要指定每個類別的命名空間名稱。  
+- `global` 命名空間是「根」命名空間：`global::System` 一律會參考 .NET <xref:System> 命名空間。  
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
@@ -56,4 +56,3 @@ C# 程式設計大量使用命名空間的原因有兩個。 首先，.NET Frame
 - [using 指示詞](../../language-reference/keywords/using-directive.md)  
 - [:: 運算子](../../language-reference/operators/namespace-alias-qualifer.md)  
 - [.運算子](../../language-reference/operators/member-access-operator.md)
->>>>>>> 新增識別碼命名規則

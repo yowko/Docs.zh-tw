@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: a06a5144e91901417906f071efd8e19c10cf2cba
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 7034d37c141d79301bf108b9e7b41ab3e27e2572
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47170648"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143918"
 ---
 # <a name="strings-c-programming-guide"></a>字串 (C# 程式設計手冊)
 字串是 <xref:System.String> 類型的物件，其值為文字。 就內部而言，文字會儲存為 <xref:System.Char> 物件的循序唯讀集合。 C# 字串的結尾沒有終止的 Null 字元，因此 C# 字串可以包含任何數目的內嵌 Null 字元 ('\0')。 字串的 <xref:System.String.Length%2A> 屬性代表它包含的 `Char` 物件數目，而非 Unicode 字元的數目。 若要存取字串中的個別 Unicode 字碼指標，請使用 <xref:System.Globalization.StringInfo> 物件。  
@@ -70,11 +70,21 @@ ms.locfileid: "47170648"
 >  在編譯時期，逐字字串會轉換為具有所有相同逸出序列的一般字串。 因此，如果您在偵錯工具監看式視窗中檢視逐字字串，您會看到由編譯器新增的逸出字元，而非來自於您原始程式碼的逐字版本。 例如，逐字字串 @"C:\files.txt" 會在監看式視窗中顯示為 "C:\\\files.txt"。  
   
 ## <a name="format-strings"></a>格式字串  
- 格式字串是可在執行階段動態決定其內容的字串。 您可以使用靜態 <xref:System.String.Format%2A> 方法，並以大括弧內嵌將於執行階段由其他值取代的預留位置，來建立格式字串。 下列範例會使用格式字串輸出迴圈每個反覆項目的結果︰  
+ 格式字串是可在執行階段動態決定其內容的字串。 格式字串是透過內嵌「插入的運算式」或字串內大括弧內的預留位置來建立的。 大括弧 (`{...}`) 內的所有內容都會被解析為一個值並在執行階段以格式化字串形式輸出。 有兩種方式可用來建立格式字串：字串插補與複合格式設定。
+
+### <a name="string-interpolation"></a>字串插值
+C# 6.0 與更新版本中提供的[*插補字串*](../../language-reference/tokens/interpolated.md)可透過 `$` 特殊字元識別，而且在大括弧中包括插補運算式。 如果您是字串插補的新手，請參閱[字串插補 - C# 互動式教學課程](../../tutorials/intro-to-csharp/interpolated-strings.yml)以取得快速概觀。
+
+使用字串插補來改進您程式碼的可讀性與可維護性。 字串插補可達成與 `String.Format` 方法相同的結果，但可改進使用方便性與內嵌簡潔度。
+
+[!code-csharp[csProgGuideFormatStrings](~/samples/snippets/csharp/programming-guide/strings/Strings_1.cs#StringInterpolation)]
+
+### <a name="composite-formatting"></a>複合格式設定
+<xref:System.String.Format%2A?displayProperty=nameWithType> 利用大括弧內的預留位置來建立格式字串。 此範例可產生與上面使用之字串插補方法類似的輸出。
   
- [!code-csharp[csProgGuideStrings#26](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_6.cs)]  
-  
- <xref:System.Console.WriteLine%2A> 方法的其中一個多載會採用格式字串作為參數。 因此，您可以僅內嵌格式字串常值，而不需要明確呼叫方法。 不過，如果您使用 <xref:System.Diagnostics.Trace.WriteLine%2A> 方法，以在 Visual Studio [輸出] 視窗中顯示偵錯輸出，則必須明確呼叫 <xref:System.String.Format%2A> 方法，因為 <xref:System.Diagnostics.Trace.WriteLine%2A> 只接受字串，而不接受格式字串。 如需格式字串的詳細資訊，請參閱[格式化類型](../../../standard/base-types/formatting-types.md)。  
+[!code-csharp[csProgGuideFormatStrings](~/samples/snippets/csharp/programming-guide/strings/Strings_1.cs#StringFormat)]
+
+如需設定 .NET 類型格式的詳細資訊，請參閱 [.NET 中的格式設定類型](../../../standard/base-types/formatting-types.md)。
   
 ## <a name="substrings"></a>子字串  
  子字串是包含在字串中的任何字元序列。 使用 <xref:System.String.Substring%2A> 方法，來從原始字串的一部分建立新的字串。 您可以使用 <xref:System.String.IndexOf%2A> 方法，來搜尋子字串的一或多個出現位置。 使用 <xref:System.String.Replace%2A> 方法，以新字串取代所有指定的子字串。 與 <xref:System.String.Substring%2A> 方法類似，<xref:System.String.Replace%2A> 實際上會傳回新字串，並不會修改原始字串。 如需詳細資訊，請參閱[如何︰搜尋字串](../../how-to/search-strings.md)以及[如何︰修改字串內容](../../how-to/modify-string-contents.md)。  

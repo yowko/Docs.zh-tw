@@ -1,19 +1,19 @@
 ---
-title: 開放原始碼程式庫指導
+title: 開放原始碼 .NET 程式庫指導方針
 description: 協助開發人員建立高品質 .NET 程式庫的最佳做法建議。
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/17/2018
-ms.openlocfilehash: ca95cb5ba1ebf27464397b7850ac02aabded1a5b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a656094066eb43ffe64ab405784f4577621b5c46
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188621"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128066"
 ---
-# <a name="open-source-library-guidance"></a>開放原始碼程式庫指導
+# <a name="open-source-library-guidance"></a>開放原始碼程式庫指導方針
 
-這份指導提供協助開發人員建立高品質 .NET 程式庫的最佳做法建議。 本文件的重點在於建置 .NET 程式庫時的「內容」與「原因」，而不是「方法」。
+此指導方針提供協助開發人員建立高品質 .NET 程式庫的最佳做法建議。 此文件件的重點在於建置 .NET 程式庫時的「內容」與「原因」，而不是「方法」。
 
 高品質開放原始碼 .NET 程式庫的各個層面：
 
@@ -35,7 +35,7 @@ ms.locfileid: "50188621"
 
 **✔️ 優先**使用 NuGet 套件散發您的程式庫。
 
-另一方面，**考慮**建議則通常應該遵循，但也會有不符合規則的例外，而您不必因為沒有遵循指導而感到自責：
+至於**考慮**建議則通常應該遵循，但也會有不符合規則的例外，而您不必因為沒有遵循指導方針而感到自責：
 
 **✔️ 考慮**使用 [SemVer 2.0.0](https://semver.org/) 來設定 NuGet 套件的版本。
 
@@ -48,4 +48,4 @@ ms.locfileid: "50188621"
 **❌ 禁止**發行程式庫的強式名稱和非強式名稱版本。 例如，`Contoso.Api` 和 `Contoso.Api.StrongNamed`。
 
 >[!div class="step-by-step"]
-[下一步](./get-started.md)
+>[下一步](get-started.md)
