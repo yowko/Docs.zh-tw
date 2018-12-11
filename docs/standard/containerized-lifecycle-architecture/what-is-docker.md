@@ -4,12 +4,12 @@ description: Microsoft 平台和工具的容器化 Docker 應用程式生命週�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: 056fb613c078cc407380060dc11890406ac8cffd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 360a404e38651b78acc3a52d8102a4dae71f3e30
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197674"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152704"
 ---
 # <a name="what-is-docker"></a>什麼是 Docker？
 
@@ -17,7 +17,7 @@ ms.locfileid: "50197674"
 
 ![](./media/image2.png)
 
-圖 1-2: Docker 將容器部署在混合式雲端的所有層級
+圖 1-2:Docker 將容器部署在混合式雲端的所有圖層
 
 Docker 映像容器可以原生方式在 Linux 及 Windows 上執行。 不過，Windows 映像可以只在 Windows 主機上執行，而且只在 Linux 主機，這表示主機伺服器或 VM 上可以執行的 Linux 映像。
 
@@ -49,9 +49,8 @@ Docker 映像容器可以原生方式在 Linux 及 Windows 上執行。 不過�
 
 ![](./media/image3.png)
 
-圖 1-3： 的傳統 Vm 的 Docker 容器的比較
-
+圖 1-3:傳統 Vm 的 Docker 容器的比較
 
 >[!div class="step-by-step"]
-[上一頁](index.md)
-[下一頁](docker-terminology.md)
+>[上一頁](index.md)
+>[下一頁](docker-terminology.md)

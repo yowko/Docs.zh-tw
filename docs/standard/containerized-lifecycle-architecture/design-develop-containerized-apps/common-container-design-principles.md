@@ -4,12 +4,12 @@ description: Microsoft 平台和工具的容器化 Docker 應用程式生命週�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 3af174279e8b6f56a10413817b05ef68cfcabea5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8aa388c7c19f532829d64208a48b6e556e43d802
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202170"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152873"
 ---
 # <a name="common-container-design-principles"></a>一般容器設計原則
 
@@ -21,7 +21,6 @@ ms.locfileid: "50202170"
 
 您可能會發現您想要在單一容器中執行的多個處理序的案例。 在任何架構文件中，沒有永遠不會 」 永不，"，也不會有一個 「 永遠 」。 需要多個處理序的情況下，常見的模式是使用[監督員](http://supervisord.org/)。
 
-
 >[!div class="step-by-step"]
-[上一頁](design-docker-applications.md)
-[下一頁](monolithic-applications.md)
+>[上一頁](design-docker-applications.md)
+>[下一頁](monolithic-applications.md)
