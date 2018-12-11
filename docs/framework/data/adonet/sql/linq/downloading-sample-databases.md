@@ -1,52 +1,69 @@
 ---
-title: 取得範例資料庫的 ADO.NET 程式碼範例
-description: 下載範例資料庫中的 ADO.NET 文件，以及 SQL Server 和管理工具的程式碼範例使用
+title: 取得範例 SQL Server 資料庫的 ADO.NET 程式碼範例
+description: 下載 ADO.NET 文件，以及 SQL Server 和管理工具的程式碼範例中所使用的 SQL Server 範例資料庫
 ms.date: 10/18/2018
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-ms.openlocfilehash: 9779300288135cb9332a028d547ce55a07e89471
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8ab65f992c9cf2b65271a237fa06eb96e358ae6a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188387"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153484"
 ---
-# <a name="get-the-sample-databases-for-adonet-code-samples"></a><span data-ttu-id="af2bf-103">取得範例資料庫的 ADO.NET 程式碼範例</span><span class="sxs-lookup"><span data-stu-id="af2bf-103">Get the sample databases for ADO.NET code samples</span></span>
+# <a name="get-the-sample-databases-for-adonet-code-samples"></a><span data-ttu-id="2cea8-103">取得範例資料庫的 ADO.NET 程式碼範例</span><span class="sxs-lookup"><span data-stu-id="2cea8-103">Get the sample databases for ADO.NET code samples</span></span>
 
-<span data-ttu-id="af2bf-104">許多範例和逐步解說中的[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文件使用範例資料庫和 SQL Server Express。</span><span class="sxs-lookup"><span data-stu-id="af2bf-104">A number of samples and walkthroughs in the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation use sample databases and SQL Server Express.</span></span> <span data-ttu-id="af2bf-105">您可以從 Microsoft 下載這些免費的產品。</span><span class="sxs-lookup"><span data-stu-id="af2bf-105">You can download these products free of charge from Microsoft.</span></span>
+<span data-ttu-id="2cea8-104">許多範例和逐步解說中的[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文件使用的 SQL Server 範例資料庫和 SQL Server Express。</span><span class="sxs-lookup"><span data-stu-id="2cea8-104">A number of examples and walkthroughs in the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation use sample SQL Server databases and SQL Server Express.</span></span> <span data-ttu-id="2cea8-105">您可以從 Microsoft 下載這些免費的產品。</span><span class="sxs-lookup"><span data-stu-id="2cea8-105">You can download these products free of charge from Microsoft.</span></span>
 
-## <a name="get-the-northwind-sample-database"></a><span data-ttu-id="af2bf-106">取得 Northwind 範例資料庫</span><span class="sxs-lookup"><span data-stu-id="af2bf-106">Get the Northwind sample database</span></span>
+## <a name="get-the-northwind-sample-database-for-sql-server"></a><span data-ttu-id="2cea8-106">取得 SQL Server 的 Northwind 範例資料庫</span><span class="sxs-lookup"><span data-stu-id="2cea8-106">Get the Northwind sample database for SQL Server</span></span>
 
-<span data-ttu-id="af2bf-107">從 Microsoft 下載中心中的下列頁面下載 Northwind 範例資料庫：</span><span class="sxs-lookup"><span data-stu-id="af2bf-107">Download the Northwind sample database from the following page in the Microsoft Download Center:</span></span>
+<span data-ttu-id="2cea8-107">下載指令碼`instnwnd.sql`從下列的 GitHub 存放庫，來建立和載入適用於 SQL Server 的 Northwind 範例資料庫：</span><span class="sxs-lookup"><span data-stu-id="2cea8-107">Download the script `instnwnd.sql` from the following GitHub repository to create and load the Northwind sample database for SQL Server:</span></span>
 
-[<span data-ttu-id="af2bf-108">Northwind 和 Pubs 範例資料庫</span><span class="sxs-lookup"><span data-stu-id="af2bf-108">Northwind and Pubs Sample Databases</span></span>](https://go.microsoft.com/fwlink?linkid=64296)
+[<span data-ttu-id="2cea8-108">Microsoft SQL server 的 Northwind 和 pubs 範例資料庫</span><span class="sxs-lookup"><span data-stu-id="2cea8-108">Northwind and pubs sample databases for Microsoft SQL Server</span></span>](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)
 
-<span data-ttu-id="af2bf-109">下載檔案之後，連按兩下該檔案以解壓縮資料庫與指令碼。</span><span class="sxs-lookup"><span data-stu-id="af2bf-109">After the file has downloaded, double-click the file to extract the databases and scripts.</span></span> <span data-ttu-id="af2bf-110">根據預設，檔案會安裝在資料夾`<drive>:\SQL Server 2000 Sample Databases`。</span><span class="sxs-lookup"><span data-stu-id="af2bf-110">By default, the files are installed in the folder `<drive>:\SQL Server 2000 Sample Databases`.</span></span>
+<span data-ttu-id="2cea8-109">您可以使用 Northwind 資料庫之前，您必須執行已下載`instnwnd.sql`重新建立 SQL Server 執行個體上的資料庫所使用的指令碼檔案[SQL Server Management Studio](#get_ssms)或類似的工具。</span><span class="sxs-lookup"><span data-stu-id="2cea8-109">Before you can use the Northwind database, you have to run the downloaded `instnwnd.sql` script file to recreate the database on an instance of SQL Server by using [SQL Server Management Studio](#get_ssms) or a similar tool.</span></span> <span data-ttu-id="2cea8-110">請遵循存放庫中的讀我檔案中的指示。</span><span class="sxs-lookup"><span data-stu-id="2cea8-110">Follow the instructions in the Readme file in the repository.</span></span>
 
-<span data-ttu-id="af2bf-111">您可以使用 Northwind 資料庫之前，您必須使用 重新建立資料庫的 SQL Server 執行個體上[SQL Server Management Studio](#get_ssms)或類似工具來執行`instnwnd.sql`安裝資料夾中的指令碼檔案。</span><span class="sxs-lookup"><span data-stu-id="af2bf-111">Before you can use the Northwind database, you have to recreate the database on an instance of SQL Server by using [SQL Server Management Studio](#get_ssms) or a similar tool to run the `instnwnd.sql` script file in the installation folder.</span></span>
+> [!TIP]
+> <span data-ttu-id="2cea8-111">如果您想為 Microsoft Access Northwind 資料庫，請參閱[安裝 Microsoft Access Northwind 範例資料庫](#northwind_access)。</span><span class="sxs-lookup"><span data-stu-id="2cea8-111">If you're looking for the Northwind database for Microsoft Access, see [Install the Northwind sample database for Microsoft Access](#northwind_access).</span></span>
 
-## <a name="get-the-adventureworks-sample-database"></a><span data-ttu-id="af2bf-112">取得 AdventureWorks 範例資料庫</span><span class="sxs-lookup"><span data-stu-id="af2bf-112">Get the AdventureWorks sample database</span></span>
+## <a name="get-the-adventureworks-sample-database-for-sql-server"></a><span data-ttu-id="2cea8-112">取得 SQL Server 的 AdventureWorks 範例資料庫</span><span class="sxs-lookup"><span data-stu-id="2cea8-112">Get the AdventureWorks sample database for SQL Server</span></span>
 
-<span data-ttu-id="af2bf-113">從下列 GitHub 儲存機制下載 AdventureWorks 範例資料庫：</span><span class="sxs-lookup"><span data-stu-id="af2bf-113">Download the AdventureWorks sample database from the following GitHub repository:</span></span>
+<span data-ttu-id="2cea8-113">適用於 SQL Server，從下列 GitHub 儲存機制下載 AdventureWorks 範例資料庫：</span><span class="sxs-lookup"><span data-stu-id="2cea8-113">Download the AdventureWorks sample database for SQL Server from the following GitHub repository:</span></span>
 
-[<span data-ttu-id="af2bf-114">AdventureWorks 範例資料庫</span><span class="sxs-lookup"><span data-stu-id="af2bf-114">AdventureWorks sample databases</span></span>](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
+[<span data-ttu-id="2cea8-114">AdventureWorks 範例資料庫</span><span class="sxs-lookup"><span data-stu-id="2cea8-114">AdventureWorks sample databases</span></span>](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
 
-<span data-ttu-id="af2bf-115">下載其中一個資料庫備份之後 (\*.bak) 檔案，使用 SQL Server Management Studio (SSMS) 將備份還原到 SQL Server 的執行個體。</span><span class="sxs-lookup"><span data-stu-id="af2bf-115">After you download one of the database backup (\*.bak) files, restore the backup to an instance of SQL Server by using SQL Server Management Studio (SSMS).</span></span> <span data-ttu-id="af2bf-116">請參閱[取得 SQL Server Management Studio](#get_ssms)。</span><span class="sxs-lookup"><span data-stu-id="af2bf-116">See [Get SQL Server Management Studio](#get_ssms).</span></span>
+<span data-ttu-id="2cea8-115">下載其中一個資料庫備份之後 (\*.bak) 檔案，使用 SQL Server Management Studio (SSMS) 將備份還原到 SQL Server 的執行個體。</span><span class="sxs-lookup"><span data-stu-id="2cea8-115">After you download one of the database backup (\*.bak) files, restore the backup to an instance of SQL Server by using SQL Server Management Studio (SSMS).</span></span> <span data-ttu-id="2cea8-116">請參閱[取得 SQL Server Management Studio](#get_ssms)。</span><span class="sxs-lookup"><span data-stu-id="2cea8-116">See [Get SQL Server Management Studio](#get_ssms).</span></span>
 
-## <a name="get_sql"></a> <span data-ttu-id="af2bf-117">取得 SQL Server Express</span><span class="sxs-lookup"><span data-stu-id="af2bf-117">Get SQL Server Express</span></span>
+## <a name="get_sql"></a> <span data-ttu-id="2cea8-117">取得 SQL Server Express</span><span class="sxs-lookup"><span data-stu-id="2cea8-117">Get SQL Server Express</span></span>
 
-<span data-ttu-id="af2bf-118">SQL Server Express 是免費的入門級的 SQL Server 版本，您可以重新發佈的應用程式。</span><span class="sxs-lookup"><span data-stu-id="af2bf-118">SQL Server Express is a free, entry-level edition of SQL Server that you can redistribute with applications.</span></span> <span data-ttu-id="af2bf-119">下載 SQL Server Express 從下列頁面：</span><span class="sxs-lookup"><span data-stu-id="af2bf-119">Download SQL Server Express from the following page:</span></span>
+<span data-ttu-id="2cea8-118">SQL Server Express 是免費的入門級的 SQL Server 版本，您可以重新發佈的應用程式。</span><span class="sxs-lookup"><span data-stu-id="2cea8-118">SQL Server Express is a free, entry-level edition of SQL Server that you can redistribute with applications.</span></span> <span data-ttu-id="2cea8-119">下載 SQL Server Express 從下列頁面：</span><span class="sxs-lookup"><span data-stu-id="2cea8-119">Download SQL Server Express from the following page:</span></span>
   
-[<span data-ttu-id="af2bf-120">SQL Server Express Edition</span><span class="sxs-lookup"><span data-stu-id="af2bf-120">SQL Server Express Editions</span></span>](https://www.microsoft.com/sql-server/sql-server-editions-express)
+[<span data-ttu-id="2cea8-120">SQL Server Express Edition</span><span class="sxs-lookup"><span data-stu-id="2cea8-120">SQL Server Express Edition</span></span>](https://www.microsoft.com/sql-server/sql-server-editions-express)
 
-<span data-ttu-id="af2bf-121">如果您使用[Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)，SQL Server Express LocalDB 納入免費的 Community edition，以及專業和更高版本。</span><span class="sxs-lookup"><span data-stu-id="af2bf-121">If you're using [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017), SQL Server Express LocalDB is included in the free Community edition as well as the Professional and higher editions.</span></span>  
+<span data-ttu-id="2cea8-121">如果您使用[Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)，SQL Server Express LocalDB 納入的 Visual Studio 中，免費的 Community edition，以及專業和更高版本。</span><span class="sxs-lookup"><span data-stu-id="2cea8-121">If you're using [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017), SQL Server Express LocalDB is included in the free Community edition of Visual Studio, as well as the Professional and higher editions.</span></span>  
 
-## <a name="get_ssms"></a> <span data-ttu-id="af2bf-122">取得 SQL Server Management Studio</span><span class="sxs-lookup"><span data-stu-id="af2bf-122">Get SQL Server Management Studio</span></span>
-<span data-ttu-id="af2bf-123">如果您想要檢視或修改的資料庫，您已下載，您可以使用 SQL Server Management Studio (SSMS)。</span><span class="sxs-lookup"><span data-stu-id="af2bf-123">If you want to view or modify a database that you've downloaded, you can use SQL Server Management Studio (SSMS).</span></span> <span data-ttu-id="af2bf-124">下載 SSMS，從下列頁面：</span><span class="sxs-lookup"><span data-stu-id="af2bf-124">Download SSMS from the following page:</span></span>
+## <a name="get_ssms"></a> <span data-ttu-id="2cea8-122">取得 SQL Server Management Studio</span><span class="sxs-lookup"><span data-stu-id="2cea8-122">Get SQL Server Management Studio</span></span>
+<span data-ttu-id="2cea8-123">如果您想要檢視或修改的資料庫，您已下載，您可以使用 SQL Server Management Studio (SSMS)。</span><span class="sxs-lookup"><span data-stu-id="2cea8-123">If you want to view or modify a database that you've downloaded, you can use SQL Server Management Studio (SSMS).</span></span> <span data-ttu-id="2cea8-124">下載 SSMS，從下列頁面：</span><span class="sxs-lookup"><span data-stu-id="2cea8-124">Download SSMS from the following page:</span></span>
 
-[<span data-ttu-id="af2bf-125">下載 SQL Server Management Studio (SSMS)</span><span class="sxs-lookup"><span data-stu-id="af2bf-125">Download SQL Server Management Studio (SSMS)</span></span>](/sql/ssms/download-sql-server-management-studio-ssms) 
+[<span data-ttu-id="2cea8-125">下載 SQL Server Management Studio (SSMS)</span><span class="sxs-lookup"><span data-stu-id="2cea8-125">Download SQL Server Management Studio (SSMS)</span></span>](/sql/ssms/download-sql-server-management-studio-ssms) 
 
-<span data-ttu-id="af2bf-126">您也可以檢視和管理 Visual Studio 整合式的開發環境 (IDE) 中的資料庫。</span><span class="sxs-lookup"><span data-stu-id="af2bf-126">You can also view and manage databases in the Visual Studio integrated development environment (IDE).</span></span> <span data-ttu-id="af2bf-127">在[Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)，連接到資料庫**SQL Server 物件總管**，或建立的資料庫中的資料連接**伺服器總管**。</span><span class="sxs-lookup"><span data-stu-id="af2bf-127">In [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017), connect to the database from **SQL Server Object Explorer**, or create a Data Connection to the database in **Server Explorer**.</span></span> <span data-ttu-id="af2bf-128">開啟這些檔案總管 窗格，從**檢視**功能表。</span><span class="sxs-lookup"><span data-stu-id="af2bf-128">Open these explorer panes from the **View** menu.</span></span>
-  
-## <a name="see-also"></a><span data-ttu-id="af2bf-129">另請參閱</span><span class="sxs-lookup"><span data-stu-id="af2bf-129">See also</span></span>
+<span data-ttu-id="2cea8-126">您也可以檢視和管理 Visual Studio 整合式的開發環境 (IDE) 中的資料庫。</span><span class="sxs-lookup"><span data-stu-id="2cea8-126">You can also view and manage databases in the Visual Studio integrated development environment (IDE).</span></span> <span data-ttu-id="2cea8-127">在[Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)，連接到資料庫**SQL Server 物件總管**，或建立的資料庫中的資料連接**伺服器總管**。</span><span class="sxs-lookup"><span data-stu-id="2cea8-127">In [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017), connect to the database from **SQL Server Object Explorer**, or create a Data Connection to the database in **Server Explorer**.</span></span> <span data-ttu-id="2cea8-128">開啟這些檔案總管 窗格，從**檢視**功能表。</span><span class="sxs-lookup"><span data-stu-id="2cea8-128">Open these explorer panes from the **View** menu.</span></span>
 
-- [<span data-ttu-id="af2bf-130">快速入門</span><span class="sxs-lookup"><span data-stu-id="af2bf-130">Getting Started</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+## <a name="northwind_access"></a> <span data-ttu-id="2cea8-129">安裝 Microsoft Access Northwind 範例資料庫</span><span class="sxs-lookup"><span data-stu-id="2cea8-129">Install the Northwind sample database for Microsoft Access</span></span>
+
+<span data-ttu-id="2cea8-130">Microsoft Download Center 上，不可以使用 Microsoft access Northwind 範例資料庫。</span><span class="sxs-lookup"><span data-stu-id="2cea8-130">The Northwind sample database for Microsoft Access is not available on the Microsoft Download Center.</span></span> <span data-ttu-id="2cea8-131">若要安裝在 Access 中的直接從 Northwind，執行下列動作：</span><span class="sxs-lookup"><span data-stu-id="2cea8-131">To install Northwind directly from within Access, do the following things:</span></span>
+
+1. <span data-ttu-id="2cea8-132">開啟 [存取]。</span><span class="sxs-lookup"><span data-stu-id="2cea8-132">Open Access.</span></span>
+
+1. <span data-ttu-id="2cea8-133">Enter **Northwind**中**搜尋線上範本**方塊，然後按**Enter**。</span><span class="sxs-lookup"><span data-stu-id="2cea8-133">Enter **Northwind** in the **Search for Online Templates** box, and then select **Enter**.</span></span>
+
+1. <span data-ttu-id="2cea8-134">在 [結果] 畫面中，選取**Northwind**。</span><span class="sxs-lookup"><span data-stu-id="2cea8-134">On the results screen, select **Northwind**.</span></span> <span data-ttu-id="2cea8-135">新的視窗會開啟 Northwind 資料庫的描述。</span><span class="sxs-lookup"><span data-stu-id="2cea8-135">A new window opens with a description of the Northwind database.</span></span>
+
+1. <span data-ttu-id="2cea8-136">在新視窗中，在**檔案名**文字中，提供檔案名稱，為您的 Northwind 資料庫的副本。</span><span class="sxs-lookup"><span data-stu-id="2cea8-136">In the new window, in the **File Name** text box, provide a filename for your copy of the Northwind database.</span></span>
+
+1. <span data-ttu-id="2cea8-137">選取 [建立]。</span><span class="sxs-lookup"><span data-stu-id="2cea8-137">Select **Create**.</span></span> <span data-ttu-id="2cea8-138">存取下載 Northwind 資料庫，並準備此檔案。</span><span class="sxs-lookup"><span data-stu-id="2cea8-138">Access downloads the Northwind database and prepares the file.</span></span>
+
+1. <span data-ttu-id="2cea8-139">完成此程序時，資料庫便會開啟 歡迎使用畫面。</span><span class="sxs-lookup"><span data-stu-id="2cea8-139">When this process is complete, the database opens with a Welcome screen.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="2cea8-140">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2cea8-140">See also</span></span>
+
+- [<span data-ttu-id="2cea8-141">快速入門</span><span class="sxs-lookup"><span data-stu-id="2cea8-141">Getting Started</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)

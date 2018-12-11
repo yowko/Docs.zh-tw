@@ -3,48 +3,48 @@ title: 使用 CodeActivity 類別撰寫工作流程活動
 ms.date: 03/30/2017
 ms.assetid: cfe315c1-f86d-43ec-b9ce-2f8c469b1106
 ms.openlocfilehash: 4954dfa5dba03823d119a456149f0f16cf5ed410
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296135"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127091"
 ---
-# <a name="workflow-activity-authoring-using-the-codeactivity-class"></a><span data-ttu-id="8c6f3-102">使用 CodeActivity 類別撰寫工作流程活動</span><span class="sxs-lookup"><span data-stu-id="8c6f3-102">Workflow Activity Authoring Using the CodeActivity Class</span></span>
-<span data-ttu-id="8c6f3-103">繼承自 <xref:System.Activities.CodeActivity> 所建立的活動可藉由覆寫 <xref:System.Activities.CodeActivity.Execute%2A> 方法來實作基本命令式行為。</span><span class="sxs-lookup"><span data-stu-id="8c6f3-103">Activities created by inheriting from <xref:System.Activities.CodeActivity> can implement basic imperative behavior by overriding the <xref:System.Activities.CodeActivity.Execute%2A> method.</span></span>
+# <a name="workflow-activity-authoring-using-the-codeactivity-class"></a><span data-ttu-id="4c68d-102">使用 CodeActivity 類別撰寫工作流程活動</span><span class="sxs-lookup"><span data-stu-id="4c68d-102">Workflow Activity Authoring Using the CodeActivity Class</span></span>
+<span data-ttu-id="4c68d-103">繼承自 <xref:System.Activities.CodeActivity> 所建立的活動可藉由覆寫 <xref:System.Activities.CodeActivity.Execute%2A> 方法來實作基本命令式行為。</span><span class="sxs-lookup"><span data-stu-id="4c68d-103">Activities created by inheriting from <xref:System.Activities.CodeActivity> can implement basic imperative behavior by overriding the <xref:System.Activities.CodeActivity.Execute%2A> method.</span></span>
 
-## <a name="using-codeactivitycontext"></a><span data-ttu-id="8c6f3-104">使用 CodeActivityContext</span><span class="sxs-lookup"><span data-stu-id="8c6f3-104">Using CodeActivityContext</span></span>
- <span data-ttu-id="8c6f3-105">工作流程執行階段的功能可透過 <xref:System.Activities.CodeActivity.Execute%2A> 方法內部存取，方法是使用 `context` 參數的成員 (型別為 <xref:System.Activities.CodeActivityContext>)。</span><span class="sxs-lookup"><span data-stu-id="8c6f3-105">Features of the workflow runtime can be accessed from within the <xref:System.Activities.CodeActivity.Execute%2A> method by using members of the `context` parameter, of type <xref:System.Activities.CodeActivityContext>.</span></span> <span data-ttu-id="8c6f3-106">透過 <xref:System.Activities.CodeActivityContext> 可使用的功能如下：</span><span class="sxs-lookup"><span data-stu-id="8c6f3-106">The features available through <xref:System.Activities.CodeActivityContext> include the following:</span></span>
+## <a name="using-codeactivitycontext"></a><span data-ttu-id="4c68d-104">使用 CodeActivityContext</span><span class="sxs-lookup"><span data-stu-id="4c68d-104">Using CodeActivityContext</span></span>
+ <span data-ttu-id="4c68d-105">工作流程執行階段的功能可透過 <xref:System.Activities.CodeActivity.Execute%2A> 方法內部存取，方法是使用 `context` 參數的成員 (型別為 <xref:System.Activities.CodeActivityContext>)。</span><span class="sxs-lookup"><span data-stu-id="4c68d-105">Features of the workflow runtime can be accessed from within the <xref:System.Activities.CodeActivity.Execute%2A> method by using members of the `context` parameter, of type <xref:System.Activities.CodeActivityContext>.</span></span> <span data-ttu-id="4c68d-106">透過 <xref:System.Activities.CodeActivityContext> 可使用的功能如下：</span><span class="sxs-lookup"><span data-stu-id="4c68d-106">The features available through <xref:System.Activities.CodeActivityContext> include the following:</span></span>
 
--   <span data-ttu-id="8c6f3-107">取得與設定引數和變數的值。</span><span class="sxs-lookup"><span data-stu-id="8c6f3-107">Getting and setting the values of variables and arguments.</span></span>
+-   <span data-ttu-id="4c68d-107">取得與設定引數和變數的值。</span><span class="sxs-lookup"><span data-stu-id="4c68d-107">Getting and setting the values of variables and arguments.</span></span>
 
--   <span data-ttu-id="8c6f3-108">使用 <xref:System.Activities.CodeActivityContext.Track%2A> 自訂追蹤功能。</span><span class="sxs-lookup"><span data-stu-id="8c6f3-108">Custom tracking features using <xref:System.Activities.CodeActivityContext.Track%2A>.</span></span>
+-   <span data-ttu-id="4c68d-108">使用 <xref:System.Activities.CodeActivityContext.Track%2A> 自訂追蹤功能。</span><span class="sxs-lookup"><span data-stu-id="4c68d-108">Custom tracking features using <xref:System.Activities.CodeActivityContext.Track%2A>.</span></span>
 
--   <span data-ttu-id="8c6f3-109">使用 <xref:System.Activities.CodeActivityContext.GetProperty%2A> 存取活動的執行屬性。</span><span class="sxs-lookup"><span data-stu-id="8c6f3-109">Access to the activity’s execution properties using <xref:System.Activities.CodeActivityContext.GetProperty%2A>.</span></span>
+-   <span data-ttu-id="4c68d-109">使用 <xref:System.Activities.CodeActivityContext.GetProperty%2A> 存取活動的執行屬性。</span><span class="sxs-lookup"><span data-stu-id="4c68d-109">Access to the activity’s execution properties using <xref:System.Activities.CodeActivityContext.GetProperty%2A>.</span></span>
 
-#### <a name="to-create-a-custom-activity-that-inherits-from-codeactivity"></a><span data-ttu-id="8c6f3-110">若要建立繼承自 CodeActivity 的自訂活動</span><span class="sxs-lookup"><span data-stu-id="8c6f3-110">To create a custom activity that inherits from CodeActivity</span></span>
+#### <a name="to-create-a-custom-activity-that-inherits-from-codeactivity"></a><span data-ttu-id="4c68d-110">若要建立繼承自 CodeActivity 的自訂活動</span><span class="sxs-lookup"><span data-stu-id="4c68d-110">To create a custom activity that inherits from CodeActivity</span></span>
 
-1.  <span data-ttu-id="8c6f3-111">開啟 Visual Studio 2010。</span><span class="sxs-lookup"><span data-stu-id="8c6f3-111">Open Visual Studio 2010.</span></span>
+1.  <span data-ttu-id="4c68d-111">開啟 Visual Studio 2010。</span><span class="sxs-lookup"><span data-stu-id="4c68d-111">Open Visual Studio 2010.</span></span>
 
-2.  <span data-ttu-id="8c6f3-112">選取 **檔案**，**新**，然後**專案**。</span><span class="sxs-lookup"><span data-stu-id="8c6f3-112">Select **File**, **New**, and then **Project**.</span></span> <span data-ttu-id="8c6f3-113">選取  **Workflow 4.0**下方**Visual C#** 中**專案類型**視窗中，然後選取**v2010**節點。</span><span class="sxs-lookup"><span data-stu-id="8c6f3-113">Select **Workflow 4.0** under **Visual C#** in the **Project Types** window, and select the **v2010** node.</span></span> <span data-ttu-id="8c6f3-114">選取 **活動程式庫**中**範本**視窗。</span><span class="sxs-lookup"><span data-stu-id="8c6f3-114">Select **Activity Library** in the **Templates** window.</span></span> <span data-ttu-id="8c6f3-115">將新專案命名為 HelloActivity。</span><span class="sxs-lookup"><span data-stu-id="8c6f3-115">Name the new project HelloActivity.</span></span>
+2.  <span data-ttu-id="4c68d-112">選取 **檔案**，**新**，然後**專案**。</span><span class="sxs-lookup"><span data-stu-id="4c68d-112">Select **File**, **New**, and then **Project**.</span></span> <span data-ttu-id="4c68d-113">選取  **Workflow 4.0**下方**Visual C#** 中**專案類型**視窗中，然後選取**v2010**節點。</span><span class="sxs-lookup"><span data-stu-id="4c68d-113">Select **Workflow 4.0** under **Visual C#** in the **Project Types** window, and select the **v2010** node.</span></span> <span data-ttu-id="4c68d-114">選取 **活動程式庫**中**範本**視窗。</span><span class="sxs-lookup"><span data-stu-id="4c68d-114">Select **Activity Library** in the **Templates** window.</span></span> <span data-ttu-id="4c68d-115">將新專案命名為 HelloActivity。</span><span class="sxs-lookup"><span data-stu-id="4c68d-115">Name the new project HelloActivity.</span></span>
 
-3.  <span data-ttu-id="8c6f3-116">以滑鼠右鍵按一下 HelloActivity 專案中的 Activity1.xaml，然後選取**刪除**。</span><span class="sxs-lookup"><span data-stu-id="8c6f3-116">Right-click Activity1.xaml in the HelloActivity project and select **Delete**.</span></span>
+3.  <span data-ttu-id="4c68d-116">以滑鼠右鍵按一下 HelloActivity 專案中的 Activity1.xaml，然後選取**刪除**。</span><span class="sxs-lookup"><span data-stu-id="4c68d-116">Right-click Activity1.xaml in the HelloActivity project and select **Delete**.</span></span>
 
-4.  <span data-ttu-id="8c6f3-117">以滑鼠右鍵按一下 HelloActivity 專案並選取**新增**，然後**類別**。</span><span class="sxs-lookup"><span data-stu-id="8c6f3-117">Right-click the HelloActivity project and select **Add** , and then **Class**.</span></span> <span data-ttu-id="8c6f3-118">將新類別命名為 HelloActivity.cs。</span><span class="sxs-lookup"><span data-stu-id="8c6f3-118">Name the new class HelloActivity.cs.</span></span>
+4.  <span data-ttu-id="4c68d-117">以滑鼠右鍵按一下 HelloActivity 專案並選取**新增**，然後**類別**。</span><span class="sxs-lookup"><span data-stu-id="4c68d-117">Right-click the HelloActivity project and select **Add** , and then **Class**.</span></span> <span data-ttu-id="4c68d-118">將新類別命名為 HelloActivity.cs。</span><span class="sxs-lookup"><span data-stu-id="4c68d-118">Name the new class HelloActivity.cs.</span></span>
 
-5.  <span data-ttu-id="8c6f3-119">在 HelloActivity.cs 檔案中加入下列 `using` 指示詞。</span><span class="sxs-lookup"><span data-stu-id="8c6f3-119">In the HelloActivity.cs file, add the following `using` directives.</span></span>
+5.  <span data-ttu-id="4c68d-119">在 HelloActivity.cs 檔案中加入下列 `using` 指示詞。</span><span class="sxs-lookup"><span data-stu-id="4c68d-119">In the HelloActivity.cs file, add the following `using` directives.</span></span>
 
     ```csharp
     using System.Activities;
     using System.Activities.Statements;
     ```
 
-6.  <span data-ttu-id="8c6f3-120">將基底類別加入至類別宣告，使新的類別繼承自 <xref:System.Activities.CodeActivity>。</span><span class="sxs-lookup"><span data-stu-id="8c6f3-120">Make the new class inherit from <xref:System.Activities.CodeActivity> by adding a base class to the class declaration.</span></span>
+6.  <span data-ttu-id="4c68d-120">將基底類別加入至類別宣告，使新的類別繼承自 <xref:System.Activities.CodeActivity>。</span><span class="sxs-lookup"><span data-stu-id="4c68d-120">Make the new class inherit from <xref:System.Activities.CodeActivity> by adding a base class to the class declaration.</span></span>
 
     ```csharp
     class HelloActivity : CodeActivity
     ```
 
-7.  <span data-ttu-id="8c6f3-121">加入 <xref:System.Activities.CodeActivity.Execute%2A> 方法，藉此將功能加入至類別中。</span><span class="sxs-lookup"><span data-stu-id="8c6f3-121">Add functionality to the class by adding an <xref:System.Activities.CodeActivity.Execute%2A> method.</span></span>
+7.  <span data-ttu-id="4c68d-121">加入 <xref:System.Activities.CodeActivity.Execute%2A> 方法，藉此將功能加入至類別中。</span><span class="sxs-lookup"><span data-stu-id="4c68d-121">Add functionality to the class by adding an <xref:System.Activities.CodeActivity.Execute%2A> method.</span></span>
 
     ```csharp
     protected override void Execute(CodeActivityContext context)
@@ -53,7 +53,7 @@ ms.locfileid: "52296135"
     }
     ```
 
-8.  <span data-ttu-id="8c6f3-122">使用 <xref:System.Activities.CodeActivityContext> 建立追蹤記錄。</span><span class="sxs-lookup"><span data-stu-id="8c6f3-122">Use the <xref:System.Activities.CodeActivityContext> to create a tracking record.</span></span>
+8.  <span data-ttu-id="4c68d-122">使用 <xref:System.Activities.CodeActivityContext> 建立追蹤記錄。</span><span class="sxs-lookup"><span data-stu-id="4c68d-122">Use the <xref:System.Activities.CodeActivityContext> to create a tracking record.</span></span>
 
     ```csharp
     protected override void Execute(CodeActivityContext context)

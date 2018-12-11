@@ -1,6 +1,6 @@
 ---
 title: 類型設計方針
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - type design guidelines
@@ -8,44 +8,43 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], type design guidelines
 - types [.NET Framework], design guidelines
 ms.assetid: 6b49314e-8bba-43ea-97ca-4e0255812f95
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a7fb9964d0e542c0937c55ae65bd88b3f7149fa8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+author: KrzysztofCwalina
+ms.openlocfilehash: 16f2a095f461a406eedbd2b34b0c91d3ac43bbe5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44187935"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145224"
 ---
-# <a name="type-design-guidelines"></a><span data-ttu-id="553e5-102">類型設計方針</span><span class="sxs-lookup"><span data-stu-id="553e5-102">Type Design Guidelines</span></span>
-<span data-ttu-id="553e5-103">CLR 的觀點而言，有只有兩種型別，參考類型和實值型別，但為了解 framework 設計的討論，除類型分成多個邏輯群組，各有其專屬特定設計規則。</span><span class="sxs-lookup"><span data-stu-id="553e5-103">From the CLR perspective, there are only two categories of types—reference types and value types—but for the purpose of a discussion about framework design, we divide types into more logical groups, each with its own specific design rules.</span></span>  
+# <a name="type-design-guidelines"></a><span data-ttu-id="48203-102">類型設計方針</span><span class="sxs-lookup"><span data-stu-id="48203-102">Type Design Guidelines</span></span>
+<span data-ttu-id="48203-103">CLR 的觀點而言，有只有兩種型別，參考類型和實值型別，但為了解 framework 設計的討論，除類型分成多個邏輯群組，各有其專屬特定設計規則。</span><span class="sxs-lookup"><span data-stu-id="48203-103">From the CLR perspective, there are only two categories of types—reference types and value types—but for the purpose of a discussion about framework design, we divide types into more logical groups, each with its own specific design rules.</span></span>  
   
- <span data-ttu-id="553e5-104">類別是參考類型的一般情況。</span><span class="sxs-lookup"><span data-stu-id="553e5-104">Classes are the general case of reference types.</span></span> <span data-ttu-id="553e5-105">它們會構成大量的大部分的架構中的型別。</span><span class="sxs-lookup"><span data-stu-id="553e5-105">They make up the bulk of types in the majority of frameworks.</span></span> <span data-ttu-id="553e5-106">類別應該其大受歡迎，它們支援的物件導向功能的豐富，其一般適用性。</span><span class="sxs-lookup"><span data-stu-id="553e5-106">Classes owe their popularity to the rich set of object-oriented features they support and to their general applicability.</span></span> <span data-ttu-id="553e5-107">基底類別和抽象類別是特殊的邏輯群組，與擴充性。</span><span class="sxs-lookup"><span data-stu-id="553e5-107">Base classes and abstract classes are special logical groups related to extensibility.</span></span>  
+ <span data-ttu-id="48203-104">類別是參考類型的一般情況。</span><span class="sxs-lookup"><span data-stu-id="48203-104">Classes are the general case of reference types.</span></span> <span data-ttu-id="48203-105">它們會構成大量的大部分的架構中的型別。</span><span class="sxs-lookup"><span data-stu-id="48203-105">They make up the bulk of types in the majority of frameworks.</span></span> <span data-ttu-id="48203-106">類別應該其大受歡迎，它們支援的物件導向功能的豐富，其一般適用性。</span><span class="sxs-lookup"><span data-stu-id="48203-106">Classes owe their popularity to the rich set of object-oriented features they support and to their general applicability.</span></span> <span data-ttu-id="48203-107">基底類別和抽象類別是特殊的邏輯群組，與擴充性。</span><span class="sxs-lookup"><span data-stu-id="48203-107">Base classes and abstract classes are special logical groups related to extensibility.</span></span>  
   
- <span data-ttu-id="553e5-108">介面是參考型別和實值型別都可實作這個型別。</span><span class="sxs-lookup"><span data-stu-id="553e5-108">Interfaces are types that can be implemented by both reference types and value types.</span></span> <span data-ttu-id="553e5-109">他們因此可做為參考型別和實值型別多型階層的根憑證。</span><span class="sxs-lookup"><span data-stu-id="553e5-109">They can thus serve as roots of polymorphic hierarchies of reference types and value types.</span></span> <span data-ttu-id="553e5-110">此外，介面可用來模擬原本不支援由 CLR 中的多重繼承。</span><span class="sxs-lookup"><span data-stu-id="553e5-110">In addition, interfaces can be used to simulate multiple inheritance, which is not natively supported by the CLR.</span></span>  
+ <span data-ttu-id="48203-108">介面是參考型別和實值型別都可實作這個型別。</span><span class="sxs-lookup"><span data-stu-id="48203-108">Interfaces are types that can be implemented by both reference types and value types.</span></span> <span data-ttu-id="48203-109">他們因此可做為參考型別和實值型別多型階層的根憑證。</span><span class="sxs-lookup"><span data-stu-id="48203-109">They can thus serve as roots of polymorphic hierarchies of reference types and value types.</span></span> <span data-ttu-id="48203-110">此外，介面可用來模擬原本不支援由 CLR 中的多重繼承。</span><span class="sxs-lookup"><span data-stu-id="48203-110">In addition, interfaces can be used to simulate multiple inheritance, which is not natively supported by the CLR.</span></span>  
   
- <span data-ttu-id="553e5-111">結構是實值類型的一般情況下，而且應該是保留供小型的簡單類型，類似於語言基本類型。</span><span class="sxs-lookup"><span data-stu-id="553e5-111">Structs are the general case of value types and should be reserved for small, simple types, similar to language primitives.</span></span>  
+ <span data-ttu-id="48203-111">結構是實值類型的一般情況下，而且應該是保留供小型的簡單類型，類似於語言基本類型。</span><span class="sxs-lookup"><span data-stu-id="48203-111">Structs are the general case of value types and should be reserved for small, simple types, similar to language primitives.</span></span>  
   
- <span data-ttu-id="553e5-112">列舉是特殊案例的實值型別用於定義簡短的值，例如週、 主控台色彩等等的天數。</span><span class="sxs-lookup"><span data-stu-id="553e5-112">Enums are a special case of value types used to define short sets of values, such as days of the week, console colors, and so on.</span></span>  
+ <span data-ttu-id="48203-112">列舉是特殊案例的實值型別用於定義簡短的值，例如週、 主控台色彩等等的天數。</span><span class="sxs-lookup"><span data-stu-id="48203-112">Enums are a special case of value types used to define short sets of values, such as days of the week, console colors, and so on.</span></span>  
   
- <span data-ttu-id="553e5-113">靜態類別是要作為容器的靜態成員的型別。</span><span class="sxs-lookup"><span data-stu-id="553e5-113">Static classes are types intended to be containers for static members.</span></span> <span data-ttu-id="553e5-114">它們是通常用來提供其他作業的捷徑。</span><span class="sxs-lookup"><span data-stu-id="553e5-114">They are commonly used to provide shortcuts to other operations.</span></span>  
+ <span data-ttu-id="48203-113">靜態類別是要作為容器的靜態成員的型別。</span><span class="sxs-lookup"><span data-stu-id="48203-113">Static classes are types intended to be containers for static members.</span></span> <span data-ttu-id="48203-114">它們是通常用來提供其他作業的捷徑。</span><span class="sxs-lookup"><span data-stu-id="48203-114">They are commonly used to provide shortcuts to other operations.</span></span>  
   
- <span data-ttu-id="553e5-115">委派、 例外狀況、 屬性、 陣列和集合都適用於特定用途，參考類型的所有特殊的情況下，其設計和使用方式的指導方針將於他處討論這個活頁簿中。</span><span class="sxs-lookup"><span data-stu-id="553e5-115">Delegates, exceptions, attributes, arrays, and collections are all special cases of reference types intended for specific uses, and guidelines for their design and usage are discussed elsewhere in this book.</span></span>  
+ <span data-ttu-id="48203-115">委派、 例外狀況、 屬性、 陣列和集合都適用於特定用途，參考類型的所有特殊的情況下，其設計和使用方式的指導方針將於他處討論這個活頁簿中。</span><span class="sxs-lookup"><span data-stu-id="48203-115">Delegates, exceptions, attributes, arrays, and collections are all special cases of reference types intended for specific uses, and guidelines for their design and usage are discussed elsewhere in this book.</span></span>  
   
- <span data-ttu-id="553e5-116">**✓ DO** 確保每個類型的一組妥善定義之相關成員，不只是隨機的不相關的功能集合。</span><span class="sxs-lookup"><span data-stu-id="553e5-116">**✓ DO** ensure that each type is a well-defined set of related members, not just a random collection of unrelated functionality.</span></span>  
+ <span data-ttu-id="48203-116">**✓ DO** 確保每個類型的一組妥善定義之相關成員，不只是隨機的不相關的功能集合。</span><span class="sxs-lookup"><span data-stu-id="48203-116">**✓ DO** ensure that each type is a well-defined set of related members, not just a random collection of unrelated functionality.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="553e5-117">本節內容</span><span class="sxs-lookup"><span data-stu-id="553e5-117">In This Section</span></span>  
- [<span data-ttu-id="553e5-118">在類別和結構之間選擇</span><span class="sxs-lookup"><span data-stu-id="553e5-118">Choosing Between Class and Struct</span></span>](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)  
- [<span data-ttu-id="553e5-119">抽象類別設計</span><span class="sxs-lookup"><span data-stu-id="553e5-119">Abstract Class Design</span></span>](../../../docs/standard/design-guidelines/abstract-class.md)  
- [<span data-ttu-id="553e5-120">靜態類別設計</span><span class="sxs-lookup"><span data-stu-id="553e5-120">Static Class Design</span></span>](../../../docs/standard/design-guidelines/static-class.md)  
- [<span data-ttu-id="553e5-121">介面設計</span><span class="sxs-lookup"><span data-stu-id="553e5-121">Interface Design</span></span>](../../../docs/standard/design-guidelines/interface.md)  
- [<span data-ttu-id="553e5-122">結構設計</span><span class="sxs-lookup"><span data-stu-id="553e5-122">Struct Design</span></span>](../../../docs/standard/design-guidelines/struct.md)  
- [<span data-ttu-id="553e5-123">列舉設計</span><span class="sxs-lookup"><span data-stu-id="553e5-123">Enum Design</span></span>](../../../docs/standard/design-guidelines/enum.md)  
- [<span data-ttu-id="553e5-124">巢狀型別</span><span class="sxs-lookup"><span data-stu-id="553e5-124">Nested Types</span></span>](../../../docs/standard/design-guidelines/nested-types.md)  
- <span data-ttu-id="553e5-125">*Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*</span><span class="sxs-lookup"><span data-stu-id="553e5-125">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="48203-117">本節內容</span><span class="sxs-lookup"><span data-stu-id="48203-117">In This Section</span></span>  
+ [<span data-ttu-id="48203-118">在類別和結構之間選擇</span><span class="sxs-lookup"><span data-stu-id="48203-118">Choosing Between Class and Struct</span></span>](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)  
+ [<span data-ttu-id="48203-119">抽象類別設計</span><span class="sxs-lookup"><span data-stu-id="48203-119">Abstract Class Design</span></span>](../../../docs/standard/design-guidelines/abstract-class.md)  
+ [<span data-ttu-id="48203-120">靜態類別設計</span><span class="sxs-lookup"><span data-stu-id="48203-120">Static Class Design</span></span>](../../../docs/standard/design-guidelines/static-class.md)  
+ [<span data-ttu-id="48203-121">介面設計</span><span class="sxs-lookup"><span data-stu-id="48203-121">Interface Design</span></span>](../../../docs/standard/design-guidelines/interface.md)  
+ [<span data-ttu-id="48203-122">結構設計</span><span class="sxs-lookup"><span data-stu-id="48203-122">Struct Design</span></span>](../../../docs/standard/design-guidelines/struct.md)  
+ [<span data-ttu-id="48203-123">列舉設計</span><span class="sxs-lookup"><span data-stu-id="48203-123">Enum Design</span></span>](../../../docs/standard/design-guidelines/enum.md)  
+ [<span data-ttu-id="48203-124">巢狀型別</span><span class="sxs-lookup"><span data-stu-id="48203-124">Nested Types</span></span>](../../../docs/standard/design-guidelines/nested-types.md)  
+ <span data-ttu-id="48203-125">*Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*</span><span class="sxs-lookup"><span data-stu-id="48203-125">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- <span data-ttu-id="553e5-126">獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。</span><span class="sxs-lookup"><span data-stu-id="553e5-126">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
+ <span data-ttu-id="48203-126">*皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*</span><span class="sxs-lookup"><span data-stu-id="48203-126">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="553e5-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="553e5-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="48203-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="48203-127">See also</span></span>
 
-- [<span data-ttu-id="553e5-128">Framework 設計方針</span><span class="sxs-lookup"><span data-stu-id="553e5-128">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)
+- [<span data-ttu-id="48203-128">Framework 設計方針</span><span class="sxs-lookup"><span data-stu-id="48203-128">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)

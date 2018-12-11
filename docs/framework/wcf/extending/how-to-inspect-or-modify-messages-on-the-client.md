@@ -2,34 +2,34 @@
 title: HOW TO：檢查或修改用戶端上的訊息
 ms.date: 03/30/2017
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
-ms.openlocfilehash: 6cd0f39494006bf51b7c4bb55afcc112ec08aadb
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 06a5cae9abd77e45b0590ea7b87a24fc7bb314ff
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804166"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144386"
 ---
-# <a name="how-to-inspect-or-modify-messages-on-the-client"></a><span data-ttu-id="249c3-102">HOW TO：檢查或修改用戶端上的訊息</span><span class="sxs-lookup"><span data-stu-id="249c3-102">How to: Inspect or Modify Messages on the Client</span></span>
-<span data-ttu-id="249c3-103">您可以檢查或修改整個 WCF 用戶端的傳入或傳出訊息，藉由實作<xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>並將它插入用戶端執行階段。</span><span class="sxs-lookup"><span data-stu-id="249c3-103">You can inspect or modify the incoming or outgoing messages across a WCF client by implementing a <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> and inserting it into the client runtime.</span></span> <span data-ttu-id="249c3-104">如需詳細資訊，請參閱[擴充用戶端](../../../../docs/framework/wcf/extending/extending-clients.md)。</span><span class="sxs-lookup"><span data-stu-id="249c3-104">For more information, see [Extending Clients](../../../../docs/framework/wcf/extending/extending-clients.md).</span></span> <span data-ttu-id="249c3-105">服務上對等的功能為 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="249c3-105">The equivalent feature on the service is the <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>.</span></span> <span data-ttu-id="249c3-106">如需完整的程式碼範例，請參閱[訊息偵測器](../../../../docs/framework/wcf/samples/message-inspectors.md)範例。</span><span class="sxs-lookup"><span data-stu-id="249c3-106">For a complete code example see the [Message Inspectors](../../../../docs/framework/wcf/samples/message-inspectors.md) sample.</span></span>  
+# <a name="how-to-inspect-or-modify-messages-on-the-client"></a><span data-ttu-id="b8922-102">HOW TO：檢查或修改用戶端上的訊息</span><span class="sxs-lookup"><span data-stu-id="b8922-102">How to: Inspect or Modify Messages on the Client</span></span>
+<span data-ttu-id="b8922-103">您可以檢查或修改整個 WCF 用戶端的傳入或傳出訊息，藉由實作<xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>並將它插入用戶端執行階段。</span><span class="sxs-lookup"><span data-stu-id="b8922-103">You can inspect or modify the incoming or outgoing messages across a WCF client by implementing a <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> and inserting it into the client runtime.</span></span> <span data-ttu-id="b8922-104">如需詳細資訊，請參閱 <<c0> [ 擴充用戶端](../../../../docs/framework/wcf/extending/extending-clients.md)。</span><span class="sxs-lookup"><span data-stu-id="b8922-104">For more information, see [Extending Clients](../../../../docs/framework/wcf/extending/extending-clients.md).</span></span> <span data-ttu-id="b8922-105">服務上對等的功能為 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="b8922-105">The equivalent feature on the service is the <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>.</span></span> <span data-ttu-id="b8922-106">如需完整的程式碼範例，請參閱[訊息偵測器](../../../../docs/framework/wcf/samples/message-inspectors.md)範例。</span><span class="sxs-lookup"><span data-stu-id="b8922-106">For a complete code example see the [Message Inspectors](../../../../docs/framework/wcf/samples/message-inspectors.md) sample.</span></span>  
   
-### <a name="to-inspect-or-modify-messages"></a><span data-ttu-id="249c3-107">檢查或修改訊息</span><span class="sxs-lookup"><span data-stu-id="249c3-107">To inspect or modify messages</span></span>  
+### <a name="to-inspect-or-modify-messages"></a><span data-ttu-id="b8922-107">檢查或修改訊息</span><span class="sxs-lookup"><span data-stu-id="b8922-107">To inspect or modify messages</span></span>  
   
-1.  <span data-ttu-id="249c3-108">實作 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> 介面。</span><span class="sxs-lookup"><span data-stu-id="249c3-108">Implement the <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> interface.</span></span>  
+1.  <span data-ttu-id="b8922-108">實作 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> 介面。</span><span class="sxs-lookup"><span data-stu-id="b8922-108">Implement the <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> interface.</span></span>  
   
-2.  <span data-ttu-id="249c3-109">根據您要插入用戶端訊息偵測器的範圍，實作 <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="249c3-109">Implement a <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> or <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> depending upon the scope at which you want to insert the client message inspector.</span></span> <span data-ttu-id="249c3-110"><xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> 可讓您變更端點層級的行為。</span><span class="sxs-lookup"><span data-stu-id="249c3-110"><xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> allows you to change behavior at the endpoint level.</span></span> <span data-ttu-id="249c3-111"><xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> 可讓您變更合約層級的行為。</span><span class="sxs-lookup"><span data-stu-id="249c3-111"><xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> allows you to change behavior at the contract level.</span></span>  
+2.  <span data-ttu-id="b8922-109">根據您要插入用戶端訊息偵測器的範圍，實作 <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="b8922-109">Implement a <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> or <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> depending upon the scope at which you want to insert the client message inspector.</span></span> <span data-ttu-id="b8922-110"><xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> 可讓您變更端點層級的行為。</span><span class="sxs-lookup"><span data-stu-id="b8922-110"><xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> allows you to change behavior at the endpoint level.</span></span> <span data-ttu-id="b8922-111"><xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> 可讓您變更合約層級的行為。</span><span class="sxs-lookup"><span data-stu-id="b8922-111"><xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> allows you to change behavior at the contract level.</span></span>  
   
-3.  <span data-ttu-id="249c3-112">在 <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> 上呼叫 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 方法前，請先插入行為。</span><span class="sxs-lookup"><span data-stu-id="249c3-112">Insert the behavior prior to calling the <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> or the <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> method on the <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>.</span></span> <span data-ttu-id="249c3-113">如需詳細資訊，請參閱[設定與擴充執行階段行為](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。</span><span class="sxs-lookup"><span data-stu-id="249c3-113">For details, see [Configuring and Extending the Runtime with Behaviors](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).</span></span>  
+3.  <span data-ttu-id="b8922-112">在 <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> 上呼叫 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 方法前，請先插入行為。</span><span class="sxs-lookup"><span data-stu-id="b8922-112">Insert the behavior prior to calling the <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> or the <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> method on the <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>.</span></span> <span data-ttu-id="b8922-113">如需詳細資訊，請參閱 <<c0> [ 設定和擴充執行階段行為](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。</span><span class="sxs-lookup"><span data-stu-id="b8922-113">For details, see [Configuring and Extending the Runtime with Behaviors](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="249c3-114">範例</span><span class="sxs-lookup"><span data-stu-id="249c3-114">Example</span></span>  
- <span data-ttu-id="249c3-115">下列程式碼範例會依序顯示：</span><span class="sxs-lookup"><span data-stu-id="249c3-115">The following code examples show, in order:</span></span>  
+## <a name="example"></a><span data-ttu-id="b8922-114">範例</span><span class="sxs-lookup"><span data-stu-id="b8922-114">Example</span></span>  
+ <span data-ttu-id="b8922-115">下列程式碼範例會依序顯示：</span><span class="sxs-lookup"><span data-stu-id="b8922-115">The following code examples show, in order:</span></span>  
   
--   <span data-ttu-id="249c3-116">用戶端偵測器實作。</span><span class="sxs-lookup"><span data-stu-id="249c3-116">A client inspector implementation.</span></span>  
+-   <span data-ttu-id="b8922-116">用戶端偵測器實作。</span><span class="sxs-lookup"><span data-stu-id="b8922-116">A client inspector implementation.</span></span>  
   
--   <span data-ttu-id="249c3-117">插入偵測器的端點行為。</span><span class="sxs-lookup"><span data-stu-id="249c3-117">An endpoint behavior that inserts the inspector.</span></span>  
+-   <span data-ttu-id="b8922-117">插入偵測器的端點行為。</span><span class="sxs-lookup"><span data-stu-id="b8922-117">An endpoint behavior that inserts the inspector.</span></span>  
   
--   <span data-ttu-id="249c3-118"><xref:System.ServiceModel.Configuration.BehaviorExtensionElement> 衍生類別，允許您在組態檔中加入行為。</span><span class="sxs-lookup"><span data-stu-id="249c3-118">A <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>- derived class that allows you to add the behavior in a configuration file.</span></span>  
+-   <span data-ttu-id="b8922-118"><xref:System.ServiceModel.Configuration.BehaviorExtensionElement> 衍生類別，允許您在組態檔中加入行為。</span><span class="sxs-lookup"><span data-stu-id="b8922-118">A <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>- derived class that allows you to add the behavior in a configuration file.</span></span>  
   
--   <span data-ttu-id="249c3-119">加入端點行為的組態檔，這個行為會將用戶端訊息偵測器插入用戶端執行階段中。</span><span class="sxs-lookup"><span data-stu-id="249c3-119">A configuration file that adds the endpoint behavior which inserts the client message inspector into the client runtime.</span></span>  
+-   <span data-ttu-id="b8922-119">加入端點行為的組態檔，這個行為會將用戶端訊息偵測器插入用戶端執行階段中。</span><span class="sxs-lookup"><span data-stu-id="b8922-119">A configuration file that adds the endpoint behavior which inserts the client message inspector into the client runtime.</span></span>  
   
 ```csharp  
 // Client message inspector  
@@ -102,7 +102,8 @@ public class SimpleBehaviorExtensionElement : BehaviorExtensionElement
     <system.serviceModel>  
         <client>  
             <endpoint address="http://localhost:8080/SimpleService/"   
-                      binding="wsHttpBinding"  
+                      binding="wsHttpBinding"
+                      behaviorConfiguration="clientInspectorsAdded"
                       contract="ServiceReference1.IService1"  
                       name="WSHttpBinding_IService1"/>  
         </client>  
@@ -125,7 +126,7 @@ public class SimpleBehaviorExtensionElement : BehaviorExtensionElement
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="249c3-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="249c3-120">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="b8922-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b8922-120">See Also</span></span>  
  <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>  
  <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>  
- [<span data-ttu-id="249c3-121">使用行為來設定與擴充執行階段</span><span class="sxs-lookup"><span data-stu-id="249c3-121">Configuring and Extending the Runtime with Behaviors</span></span>](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+ [<span data-ttu-id="b8922-121">使用行為來設定與擴充執行階段</span><span class="sxs-lookup"><span data-stu-id="b8922-121">Configuring and Extending the Runtime with Behaviors</span></span>](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
