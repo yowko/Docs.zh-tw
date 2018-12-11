@@ -1,51 +1,55 @@
 ---
-title: 從 .NET Framework 移轉到 .NET Core
+title: 將程式碼從 .NET Framework 移植到 .NET Core
 description: 了解移植程序，並探索可協助將 .NET Framework 移植到 .NET Core 的工具。
 author: cartermp
 ms.author: mairaw
-ms.date: 10/23/2018
-ms.openlocfilehash: 0c0ec3d8ab09e34e8dae24623903ca571f2cca6c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 12/04/2018
+ms.custom: seodec18
+ms.openlocfilehash: 3ea6456d066261f521a793d34dcb73c129016280
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50192768"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145146"
 ---
-# <a name="porting-to-net-core-from-net-framework"></a><span data-ttu-id="d8863-103">從 .NET Framework 移轉到 .NET Core</span><span class="sxs-lookup"><span data-stu-id="d8863-103">Porting to .NET Core from .NET Framework</span></span>
+# <a name="port-your-code-from-net-framework-to-net-core"></a><span data-ttu-id="33308-103">將您的程式碼從 .NET Framework 移植到 .NET Core</span><span class="sxs-lookup"><span data-stu-id="33308-103">Port your code from .NET Framework to .NET Core</span></span>
 
-<span data-ttu-id="d8863-104">如果已在 .NET Framework 上執行程式碼，您可能也想要在 .NET Core 執行程式碼。</span><span class="sxs-lookup"><span data-stu-id="d8863-104">If you've got code running on the .NET Framework, you may be interested in running your code on .NET Core.</span></span>  <span data-ttu-id="d8863-105">本文章涵蓋移轉程序的概觀，以及移轉到 .NET Core 時可能覺得有用的工具清單。</span><span class="sxs-lookup"><span data-stu-id="d8863-105">This article covers an overview of the porting process and a list of the tools you may find helpful when porting to .NET Core.</span></span>
+<span data-ttu-id="33308-104">如果您有在 .NET Framework 上執行的程式碼，您可能也想要在 .NET Core 上執行程式碼。</span><span class="sxs-lookup"><span data-stu-id="33308-104">If you've got code that runs on the .NET Framework, you may be interested in running your code on .NET Core, too.</span></span> <span data-ttu-id="33308-105">此處提供移轉程序的概觀，以及將您的程式碼移轉到 .NET Core 時可能覺得有用的工具清單。</span><span class="sxs-lookup"><span data-stu-id="33308-105">Here's an overview of the porting process and a list of the tools you may find helpful when porting your code to .NET Core.</span></span>
 
-## <a name="overview-of-the-porting-process"></a><span data-ttu-id="d8863-106">移轉程序概觀</span><span class="sxs-lookup"><span data-stu-id="d8863-106">Overview of the Porting Process</span></span>
+## <a name="overview-of-the-porting-process"></a><span data-ttu-id="33308-106">移轉程序概觀</span><span class="sxs-lookup"><span data-stu-id="33308-106">Overview of the porting process</span></span>
 
-<span data-ttu-id="d8863-107">建議的移轉程序會遵循下列一系列步驟。</span><span class="sxs-lookup"><span data-stu-id="d8863-107">The recommended process for porting follows the following series of steps.</span></span>  <span data-ttu-id="d8863-108">此程序的每個部分未來會在其他文章中進一步討論。</span><span class="sxs-lookup"><span data-stu-id="d8863-108">Each of these parts of the process are covered in more detail in further articles.</span></span>
+<span data-ttu-id="33308-107">這是將您的程式碼移植到 .NET Core 的建議程序。</span><span class="sxs-lookup"><span data-stu-id="33308-107">This is the process we recommend you take when porting your project to .NET Core.</span></span> <span data-ttu-id="33308-108">此程序的每個步驟未來會在其他文章中進一步討論。</span><span class="sxs-lookup"><span data-stu-id="33308-108">Each step of the process is covered in more detail in further articles.</span></span>
 
-1. <span data-ttu-id="d8863-109">識別及說明協力廠商相依性。</span><span class="sxs-lookup"><span data-stu-id="d8863-109">Identify and account for your third-party dependencies.</span></span>
+1. <span data-ttu-id="33308-109">識別及說明協力廠商相依性。</span><span class="sxs-lookup"><span data-stu-id="33308-109">Identify and account for your third-party dependencies.</span></span>
 
-   <span data-ttu-id="d8863-110">這涉及了解程式協力廠商相依性是什麼、依賴它們的方式、查看它們是否也在 .NET Core 上執行的方式，以及不在 .NET Core 上執行時可以採取的步驟。</span><span class="sxs-lookup"><span data-stu-id="d8863-110">This will involve understanding what your third-party dependencies are, how you depend on them, how to see if they also run on .NET Core, and steps you can take if they don't.</span></span>
-   
-2. <span data-ttu-id="d8863-111">將所有想要移轉到目標最新版本之 .NET Framework 的專案重定為目標。</span><span class="sxs-lookup"><span data-stu-id="d8863-111">Retarget all projects you wish to port to target the latest version of .NET Framework.</span></span>
+   <span data-ttu-id="33308-110">此步驟涉及了解程式協力廠商相依性是什麼、依賴它們的方式、查看它們是否也在 .NET Core 上執行的方式，以及不在 .NET Core 上執行時可以採取的步驟。</span><span class="sxs-lookup"><span data-stu-id="33308-110">This step involves understanding what your third-party dependencies are, how you depend on them, how to check if they also run on .NET Core, and steps you can take if they don't.</span></span> <span data-ttu-id="33308-111">它涵蓋將您的相依性移轉到 .NET Core 中使用之 [PackageReference](/nuget/consume-packages/package-references-in-project-files) 格式的方式。</span><span class="sxs-lookup"><span data-stu-id="33308-111">It also covers how you can migrate your dependencies over to the [PackageReference](/nuget/consume-packages/package-references-in-project-files) format that is used in .NET Core.</span></span>
 
-   <span data-ttu-id="d8863-112">這可確保當 .NET Core 無法支援特定 API 時，您可以使用 .NET Framework 特定目標的 API 替代方案。</span><span class="sxs-lookup"><span data-stu-id="d8863-112">This ensures that you can use API alternatives for .NET Framework-specific targets in the cases where .NET Core can't support a particular API.</span></span>
-   
-3. <span data-ttu-id="d8863-113">使用 [.NET 可攜性分析工具](../../standard/analyzers/portability-analyzer.md)來分析組件，並且根據結果開發移轉計劃。</span><span class="sxs-lookup"><span data-stu-id="d8863-113">Use the [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md) to analyze your assemblies and develop a plan to port based on its results.</span></span>
+2. <span data-ttu-id="33308-112">將所有想要移轉到目標 .NET Framework 4.7.2 或更新版本的專案重定為目標。</span><span class="sxs-lookup"><span data-stu-id="33308-112">Retarget all projects you wish to port to target the .NET Framework 4.7.2 or higher.</span></span>
 
-   <span data-ttu-id="d8863-114">API 可攜性分析工具會分析已編譯的組件並產生報告，顯示高階的可攜性摘要，以及您使用但 .NET Core 不提供的每個 API 分析。</span><span class="sxs-lookup"><span data-stu-id="d8863-114">The API Portability Analyzer tool will analyze your compiled assemblies and generate a report which shows a high-level portability summary and a breakdown of each API you're using that isn't available on .NET Core.</span></span>  <span data-ttu-id="d8863-115">您可以使用此報告與程式碼基底分析，開發移轉程式碼的計劃。</span><span class="sxs-lookup"><span data-stu-id="d8863-115">You can use this report alongside an analysis of your codebase to develop a plan for how you'll port your code over.</span></span>
-   
-4. <span data-ttu-id="d8863-116">移轉測試程式碼。</span><span class="sxs-lookup"><span data-stu-id="d8863-116">Port your tests code.</span></span>
+   <span data-ttu-id="33308-113">此步驟可確保當 .NET Core 無法支援特定 API 時，您可以使用 .NET Framework 特定目標的 API 替代方案。</span><span class="sxs-lookup"><span data-stu-id="33308-113">This step ensures that you can use API alternatives for .NET Framework-specific targets when .NET Core doesn't support a particular API.</span></span>
 
-   <span data-ttu-id="d8863-117">因為移轉到 .NET Core 對程式碼基底是巨變，所以強烈建議您移轉測試，以便在移轉程式碼時執行測試。</span><span class="sxs-lookup"><span data-stu-id="d8863-117">Because porting to .NET Core is such a big change to your codebase, it's highly recommended to get your tests ported so that you can run tests as you port code over.</span></span>  <span data-ttu-id="d8863-118">MSTest、xUnit 與 NUnit 都支援目前的 .NET Core。</span><span class="sxs-lookup"><span data-stu-id="d8863-118">MSTest, xUnit, and NUnit all support .NET Core today.</span></span>
-   
-6. <span data-ttu-id="d8863-119">執行移轉計劃！</span><span class="sxs-lookup"><span data-stu-id="d8863-119">Execute your plan for porting!</span></span>
+3. <span data-ttu-id="33308-114">使用 [.NET 可攜性分析工具](../../standard/analyzers/portability-analyzer.md)來分析組件，並且根據結果開發移轉計劃。</span><span class="sxs-lookup"><span data-stu-id="33308-114">Use the [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md) to analyze your assemblies and develop a plan to port based on its results.</span></span>
 
-## <a name="tools-to-help"></a><span data-ttu-id="d8863-120">協助工具</span><span class="sxs-lookup"><span data-stu-id="d8863-120">Tools to help</span></span>
+   <span data-ttu-id="33308-115">API 可攜性分析器工具可分析您的設定組件，並產生報告以顯示高階可攜性摘要與您使用但 .NET Core 不提供之每個 API 的明細。</span><span class="sxs-lookup"><span data-stu-id="33308-115">The API Portability Analyzer tool analyzes your compiled assemblies and generates a report that shows a high-level portability summary and a breakdown of each API you're using that isn't available on .NET Core.</span></span> <span data-ttu-id="33308-116">您可以使用此報告與程式碼基底分析，開發移轉程式碼的計劃。</span><span class="sxs-lookup"><span data-stu-id="33308-116">You can use this report alongside an analysis of your codebase to develop a plan for how you'll port your code over.</span></span>
 
-<span data-ttu-id="d8863-121">以下是您會發現有幫助的簡短工具清單︰</span><span class="sxs-lookup"><span data-stu-id="d8863-121">Here's a short list of the tools you'll find helpful:</span></span>
+4. <span data-ttu-id="33308-117">移轉測試程式碼。</span><span class="sxs-lookup"><span data-stu-id="33308-117">Port your tests code.</span></span>
 
-* <span data-ttu-id="d8863-122">NuGet - [NuGet 用戶端](https://dist.nuget.org/index.html)或 [NuGet 套件總管](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer)，適用於 .NET 實作的 Microsoft 封裝管理員。</span><span class="sxs-lookup"><span data-stu-id="d8863-122">NuGet - [Nuget Client](https://dist.nuget.org/index.html) or [NuGet Package Explorer](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer), Microsoft's package manager for .NET implementations.</span></span>
-* <span data-ttu-id="d8863-123">API 可攜性分析器：[命令列工具](https://github.com/Microsoft/dotnet-apiport/releases)或 [Visual Studio 擴充功能](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)，一種工具鏈，可以產生一份報表，說明程式碼在 .NET Framework 與 .NET Core 之間的可攜程度，以及逐一分析組件問題。</span><span class="sxs-lookup"><span data-stu-id="d8863-123">Api Portability Analyzer - [command line tool](https://github.com/Microsoft/dotnet-apiport/releases) or [Visual Studio Extension](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b), a toolchain that can generate a report of how portable your code is between .NET Framework and .NET Core, with an assembly-by-assembly breakdown of issues.</span></span>  <span data-ttu-id="d8863-124">如需詳細資訊，請參閱 [Tooling to help you on the process](https://github.com/Microsoft/dotnet-apiport/blob/master/docs/HowTo/)。</span><span class="sxs-lookup"><span data-stu-id="d8863-124">See [Tooling to help you on the process](https://github.com/Microsoft/dotnet-apiport/blob/master/docs/HowTo/) for more information.</span></span>
-* <span data-ttu-id="d8863-125">反向封裝搜尋：[有用的 Web 服務](https://packagesearch.azurewebsites.net)，可讓您搜尋類型，以及尋找包含該類型的封裝。</span><span class="sxs-lookup"><span data-stu-id="d8863-125">Reverse Package Search - A [useful web service](https://packagesearch.azurewebsites.net) that allows you to search for a type and find packages containing that type.</span></span>
+   <span data-ttu-id="33308-118">因為移轉到 .NET Core 對程式碼基底是巨變，所以強烈建議您移轉測試，以便在移轉您的程式碼時執行測試。</span><span class="sxs-lookup"><span data-stu-id="33308-118">Because porting to .NET Core is such a significant change to your codebase, it's highly recommended to get your tests ported, so that you can run tests as you port your code over.</span></span> <span data-ttu-id="33308-119">MSTest、xUnit 與 NUnit 都支援 .NET Core。</span><span class="sxs-lookup"><span data-stu-id="33308-119">MSTest, xUnit, and NUnit all support .NET Core.</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="d8863-126">後續步驟</span><span class="sxs-lookup"><span data-stu-id="d8863-126">Next steps</span></span>
+5. <span data-ttu-id="33308-120">執行移轉計劃！</span><span class="sxs-lookup"><span data-stu-id="33308-120">Execute your plan for porting!</span></span>
 
-[<span data-ttu-id="d8863-127">分析協力廠商相依性。</span><span class="sxs-lookup"><span data-stu-id="d8863-127">Analyzing your third-party dependencies.</span></span>](third-party-deps.md)
-   
+## <a name="tools-to-help"></a><span data-ttu-id="33308-121">協助工具</span><span class="sxs-lookup"><span data-stu-id="33308-121">Tools to help</span></span>
+
+<span data-ttu-id="33308-122">下列清單顯示您在移轉程序期間可能會發現有用的工具：</span><span class="sxs-lookup"><span data-stu-id="33308-122">The following list shows tools you might find helpful to use during the porting process:</span></span>
+
+* <span data-ttu-id="33308-123">.NET 可攜性分析器：[命令列工具](https://github.com/Microsoft/dotnet-apiport/releases)或 [Visual Studio 擴充功能](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)，一種工具鏈，可以產生一份報表，說明程式碼在 .NET Framework 與 .NET Core 之間的可攜程度，以及逐一分析組件問題。</span><span class="sxs-lookup"><span data-stu-id="33308-123">.NET Portability Analyzer - [command line tool](https://github.com/Microsoft/dotnet-apiport/releases) or [Visual Studio Extension](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b), a toolchain that can generate a report of how portable your code is between .NET Framework and .NET Core, with an assembly-by-assembly breakdown of issues.</span></span> <span data-ttu-id="33308-124">如需詳細資訊，請參閱 [.NET 可攜性分析器](../../standard/analyzers/portability-analyzer.md)。</span><span class="sxs-lookup"><span data-stu-id="33308-124">For more information, see [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md).</span></span>
+* <span data-ttu-id="33308-125">.NET API 分析器 - 一個 Roslyn 分析器，可探索不同平台上 C# API 的潛在相容性風險，並偵測對已被取代之 API 的呼叫。</span><span class="sxs-lookup"><span data-stu-id="33308-125">.NET API analyzer - A Roslyn analyzer that discovers potential compatibility risks for C# APIs on different platforms and detects calls to deprecated APIs.</span></span> <span data-ttu-id="33308-126">如需詳細資訊，請參閱 [.NET API 分析器](../../standard/analyzers/api-analyzer.md)。</span><span class="sxs-lookup"><span data-stu-id="33308-126">For more information, see [.NET API analyzer](../../standard/analyzers/api-analyzer.md).</span></span>
+* <span data-ttu-id="33308-127">反向封裝搜尋：[有用的 Web 服務](https://packagesearch.azurewebsites.net)，可讓您搜尋類型，以及尋找包含該類型的封裝。</span><span class="sxs-lookup"><span data-stu-id="33308-127">Reverse Package Search - A [useful web service](https://packagesearch.azurewebsites.net) that allows you to search for a type and find packages containing that type.</span></span>
+
+<span data-ttu-id="33308-128">此外，您也可以嘗試使用 [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017) 工具將較小的解決方案或個別專案移植到 .NET Core 專案檔案格式。</span><span class="sxs-lookup"><span data-stu-id="33308-128">Additionally, you can attempt to port smaller solutions or individual projects to the .NET Core project file format with the [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017) tool.</span></span>
+
+> [!WARNING] 
+> <span data-ttu-id="33308-129">CsprojToVs2017 是第三方工具。</span><span class="sxs-lookup"><span data-stu-id="33308-129">CsprojToVs2017 is a third-party tool.</span></span> <span data-ttu-id="33308-130">不保證它可搭配您的所有專案運作，而且它可能會導致您所依賴的行為發生些微變更。</span><span class="sxs-lookup"><span data-stu-id="33308-130">There is no guarantee that it will work for all of your projects, and it may cause subtle changes in behavior that you depend on.</span></span> <span data-ttu-id="33308-131">CsprojToVs2017 應該當作將可自動化之基本事項自動化的「起點」使用。</span><span class="sxs-lookup"><span data-stu-id="33308-131">CsprojToVs2017 should be used as a _starting point_ that automates the basic things that can be automated.</span></span> <span data-ttu-id="33308-132">它不是可以用來移轉專案檔格式保證解決方案。</span><span class="sxs-lookup"><span data-stu-id="33308-132">It is not a guaranteed solution to migrating project file formats.</span></span>
+
+>[!div class="step-by-step"]
+>[<span data-ttu-id="33308-133">下一步</span><span class="sxs-lookup"><span data-stu-id="33308-133">Next</span></span>](third-party-deps.md)
