@@ -74,7 +74,7 @@ type Point =
 |-----------|------|------|----------|-------|
 | 具象類型 | PascalCase | 名詞 / 形容詞 | 清單、 Double、 複雜 | 具象型別是結構、 類別、 列舉、 委派、 記錄、 和等位。 雖然傳統上在 OCaml，小寫類型名稱F#已採用類型的.NET 命名配置。
 | DLL           | PascalCase |                 | Fabrikam.Core.dll |  |
-| 等位標記     | PascalCase | 名詞 | 部分新增成功 | 請勿使用公用 Api 中的前置詞。 （選擇性） 使用的前置詞，當內部，例如 ' 輸入小組 = TAlpha | TBeta | TDelta。 ' |
+| 等位標記     | PascalCase | 名詞 | 部分新增成功 | 請勿使用公用 Api 中的前置詞。 （選擇性） 使用的前置詞，當內部，例如 `輸入小組 = TAlpha | TBeta | TDelta` |
 | Event - 事件          | PascalCase | 動詞命令 | ValueChanged / ValueChanging |  |
 | 例外狀況     | PascalCase |      | WebException | 名稱應該以"Exception"結尾。 |
 | 欄位          | PascalCase | 名詞 | CurrentName  | |
