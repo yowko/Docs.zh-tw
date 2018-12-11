@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: a608b91c78808af70bd5e9188926a12b945c5604
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: a5e5826dddbf60e92a50fd4f83322e7c1062f636
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453173"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144867"
 ---
 # <a name="code-access-security-and-adonet"></a>程式碼存取安全性和 ADO.NET
 .NET Framework 會提供以角色為基礎的安全性和程式碼存取安全性 (CAS)，而這兩種安全性都是使用 Common Language Runtime (CLR) 所提供的通用基礎結構所實作的。 在 Unmanaged 程式碼的作用範圍內，大多數應用程式都是以使用者或主體的權限執行。 因此，當擁有更高權限的使用者執行惡意或充滿錯誤的軟體時，就可能損害電腦系統和竊取私人資料。  
@@ -23,7 +23,7 @@ ms.locfileid: "49453173"
  CLR 僅允許程式碼執行該程式碼有權執行的這些作業。 程式碼可以要求權限，而且系統會根據系統管理員所設定的安全性原則來接受這些要求。  
   
 > [!NOTE]
->  CLR 中執行的程式碼不能授與其本身的使用權限。 例如，程式碼可以要求而且被授與少於安全性原則允許的權限，但是它絕不會被授與更多權限。 授與權限時，系統是以完全沒有權限開始，然後加入執行特定工作的最少權限。 如果一開始便使用所有權限，然後再拒絕個別的權限，則會造成應用程式不安全，因為可能會授與超出必要的權限而導致意外安全性漏洞。 如需詳細資訊，請參閱 < [NIB： 設定安全性原則](https://msdn.microsoft.com/library/0f130bcd-1bba-4346-b231-0bcca7dab1a4)並[NIB： 安全性原則管理](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)。  
+>  CLR 中執行的程式碼不能授與其本身的使用權限。 例如，程式碼可以要求而且被授與少於安全性原則允許的權限，但是它絕不會被授與更多權限。 授與權限時，系統是以完全沒有權限開始，然後加入執行特定工作的最少權限。 如果一開始便使用所有權限，然後再拒絕個別的權限，則會造成應用程式不安全，因為可能會授與超出必要的權限而導致意外安全性漏洞。 如需詳細資訊，請參閱[NIB:設定安全性原則](https://msdn.microsoft.com/library/0f130bcd-1bba-4346-b231-0bcca7dab1a4)和[NIB:安全性原則管理](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)。  
   
  程式碼存取權限有三種類型：  
   
@@ -38,7 +38,7 @@ ms.locfileid: "49453173"
 ### <a name="requesting-permissions"></a>要求權限  
  要求權限的目的是向執行階段通知您的應用程式需要哪些權限才能執行，以及確保它只會收到實際需要的權限。 例如，如果您的應用程式必須將資料寫入本機磁碟，它就需要 <xref:System.Security.Permissions.FileIOPermission>。 如果系統沒有授與該權限，當此應用程式嘗試寫入磁碟時，它就會失敗。 不過，如果應用程式要求 `FileIOPermission`，但系統沒有授與該權限，則此應用程式一開始將產生例外狀況而且不會載入。  
   
- 在應用程式僅需要從磁碟中讀取資料的情況下，您可以要求絕不授與任何寫入權限給應用程式。 在錯誤或惡意攻擊的事件中，您的程式碼無法破壞它所運作的資料。 如需詳細資訊，請參閱 < [NIB： 要求權限](https://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2)。  
+ 在應用程式僅需要從磁碟中讀取資料的情況下，您可以要求絕不授與任何寫入權限給應用程式。 在錯誤或惡意攻擊的事件中，您的程式碼無法破壞它所運作的資料。 如需詳細資訊，請參閱[NIB:要求權限](https://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2)。  
   
 ## <a name="role-based-security-and-cas"></a>以角色為基礎的安全性和 CAS  
  同時實作以角色為基礎的安全性和程式碼存取安全性 (CAS) 可強化應用程式的整體安全性。 以角色為基礎的安全性可以根據 Windows 帳戶或自訂識別，將安全性主體的相關資訊提供給目前的執行緒。 此外，應用程式通常會根據使用者所提供的認證，提供對資料或資源的存取。 基本上，這類應用程式會檢查使用者的角色並根據這些角色提供資源存取。  
@@ -71,8 +71,8 @@ ms.locfileid: "49453173"
 |-----------------------------------|-----------------|  
 |`Action`|取得或設定安全性動作。 繼承自 <xref:System.Security.Permissions.SecurityAttribute>。|  
 |`AllowBlankPassword`|啟用或停用在連接字串中使用空白密碼。 有效值為 `true` (表示啟用空白密碼) 和 `false` (表示停用空白密碼)。 繼承自 <xref:System.Data.Common.DBDataPermissionAttribute>。|  
-|`ConnectionString`|識別允許的連接字串。 可識別多個連接字串。 **注意：** 不包含使用者識別碼或密碼在您的連接字串。 在這個發行版本中，您無法使用 .NET Framework 組態工具變更連接字串限制。 <br /><br /> 繼承自 <xref:System.Data.Common.DBDataPermissionAttribute>。|  
-|`KeyRestrictions`|識別是否為允許的連接字串參數。 在表單中所識別的連接字串參數*\<參數名稱 > =*。 也可以指定多個參數，只要以分號 (;) 將其分隔即可。 **注意：** 如果您未指定`KeyRestrictions`，但您設定`KeyRestrictionBehavior`屬性設`AllowOnly`或`PreventUsage`，允許任何其他連接字串參數。 繼承自 <xref:System.Data.Common.DBDataPermissionAttribute>。|  
+|`ConnectionString`|識別允許的連接字串。 可識別多個連接字串。 **注意：** 不要在連接字串中包含使用者 ID 或密碼。 在這個發行版本中，您無法使用 .NET Framework 組態工具變更連接字串限制。 <br /><br /> 繼承自 <xref:System.Data.Common.DBDataPermissionAttribute>。|  
+|`KeyRestrictions`|識別是否為允許的連接字串參數。 在表單中所識別的連接字串參數*\<參數名稱 > =*。 也可以指定多個參數，只要以分號 (;) 將其分隔即可。 **注意：** 如果您沒有指定 `KeyRestrictions`，卻將 `KeyRestrictionBehavior` 屬性設為 `AllowOnly` 或 `PreventUsage`，則不允許使用其他連接字串參數。 繼承自 <xref:System.Data.Common.DBDataPermissionAttribute>。|  
 |`KeyRestrictionBehavior`|將連接字串參數識別為唯一允許的其他參數 (`AllowOnly`)，或識別不允許的其他參數 (`PreventUsage`)。 `AllowOnly` 是預設值。 繼承自 <xref:System.Data.Common.DBDataPermissionAttribute>。|  
 |`TypeID`|在衍生類別中實作時，取得唯一識別項。 繼承自 <xref:System.Attribute>。|  
 |`Unrestricted`|指示是否針對資源，宣告不受限的使用權限。 繼承自 <xref:System.Security.Permissions.SecurityAttribute>。|  
@@ -160,7 +160,7 @@ AllowBlankPassword="False">
 ```  
   
 ## <a name="verifying-adonet-code-access-using-security-permissions"></a>使用安全性使用權限驗證 ADO.NET 程式碼存取  
- 若為部分信任案例，則可指定 <xref:System.Data.SqlClient.SqlClientPermissionAttribute>，藉以取得程式碼中之特定方法的 CAS 權限。 如果生效的限制安全性原則不允許該權限，則在執行程式碼前會擲回例外狀況。 如需有關安全性原則的詳細資訊，請參閱 < [NIB： 安全性原則管理](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)並[NIB： 安全性原則的最佳作法](https://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)。  
+ 若為部分信任案例，則可指定 <xref:System.Data.SqlClient.SqlClientPermissionAttribute>，藉以取得程式碼中之特定方法的 CAS 權限。 如果生效的限制安全性原則不允許該權限，則在執行程式碼前會擲回例外狀況。 如需有關安全性原則的詳細資訊，請參閱[NIB:安全性原則管理](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)和[NIB:安全性原則的最佳作法](https://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)。  
   
 ### <a name="example"></a>範例  
  下列範例示範如何撰寫需要特定連接字串的程式碼。 它模擬如何拒絕 <xref:System.Data.SqlClient> 的不受限權限，而系統管理員在實務上會使用 CAS 原則來實作這些權限。  
@@ -197,6 +197,5 @@ Failed, as expected: Request failed.
 ## <a name="see-also"></a>另請參閱  
  [設定 ADO.NET 應用程式的安全性](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [PAVE 機器碼和 .NET Framework 程式碼中的安全性](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
- [程式碼存取安全性](../../../../docs/framework/misc/code-access-security.md)  
  [以角色為基礎的安全性](../../../../docs/standard/security/role-based-security.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

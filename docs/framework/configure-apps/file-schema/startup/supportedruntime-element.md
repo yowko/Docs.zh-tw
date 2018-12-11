@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: b86ffdd242a95a0c5c34efb3f38b3501f3f2ba6c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b6303f765d1cc4a17fe19261c7326d8961ac1080
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197795"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129243"
 ---
 # <a name="ltsupportedruntimegt-element"></a>&lt;Supportedruntime>&gt;項目
 
@@ -36,8 +36,8 @@ ms.locfileid: "47197795"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|**version**|選擇性屬性。<br /><br /> 字串值，用於指定這個應用程式支援的通用語言執行平台 (CLR) 版本。 有效值`version`屬性，請參閱[「 執行階段版本 」 值](#version)一節。 **注意：** 透過.NET Framework 3.5 中，「*執行階段版本*」 值的形式*主要*。*次要*。*建置*。 從 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 開始，只需要主要和次要版本號碼 (也就是 "v4.0"，不需要 "v4.0.30319")。 建議使用較短的字串。|  
-|**sku**|選擇性屬性。<br /><br /> 字串值，指定庫存單位 (SKU)，進而指定哪些應用程式支援的.NET Framework 版本。<br /><br /> 從.NET Framework 4.0 使用`sku`建議的屬性。  該屬性存在時，會指出應用程式作為目標的 .NET Framework 版本。<br /><br /> 如需 sku 屬性的有效值，請參閱[「 sku 識別碼 」 值](#sku)一節。|  
+|**version**|選擇性屬性。<br /><br /> 字串值，用於指定這個應用程式支援的通用語言執行平台 (CLR) 版本。 有效值`version`屬性，請參閱[「 執行階段版本 」 值](#version)一節。 **注意：** 透過.NET Framework 3.5 中，「*執行階段版本*"值的形式*主要*。*次要*。*建置*。 從 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 開始，只需要主要和次要版本號碼 (也就是 "v4.0"，不需要 "v4.0.30319")。 建議使用較短的字串。|  
+|**sku**|選擇性屬性。<br /><br /> 字串值，指定庫存單位 (SKU)，進而指定哪些應用程式支援的.NET Framework 版本。<br /><br /> 從 .NET Framework 4.0 開始，建議使用 `sku` 屬性。  該屬性存在時，會指出應用程式作為目標的 .NET Framework 版本。<br /><br /> 如需 sku 屬性的有效值，請參閱[「 sku 識別碼 」 值](#sku)一節。|  
   
 ## <a name="remarks"></a>備註
 
@@ -48,7 +48,7 @@ ms.locfileid: "47197795"
 > [!NOTE]
 >  如果您使用[CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)函數來指定組態檔，您必須使用`<requiredRuntime>`的執行階段的所有版本的項目。 `<supportedRuntime>`當您使用時，便會忽略元素[CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)。  
   
-針對所支援執行階段為 .NET Framework 1.1 到 3.5 版本的應用程式，當支援多個執行階段版本時，第一個項目應該指定最常用的執行階段版本，而最後一個項目則指定最少用的版本。 針對支援的.NET Framework 4.0 或更新版本中，應用程式`version`屬性會指出 CLR 版本，也就是一般.NET Framework 4 和更新版本，而`sku`屬性會指出單一.NET Framework 版本的應用程式目標。  
+針對所支援執行階段為 .NET Framework 1.1 到 3.5 版本的應用程式，當支援多個執行階段版本時，第一個項目應該指定最常用的執行階段版本，而最後一個項目則指定最少用的版本。 針對支援 .NET Framework 4.0 或更新版本的應用程式，`version` 屬性會指出 CLR 版本，其對 .NET Framework 4 與更新版本而言為常用項目，而 `sku` 屬性會指出應用程式用以作為目標的單一 .NET Framework 版本。  
   
 > [!NOTE]
 >  如果您的應用程式使用舊版啟用路徑，例如[CorBindToRuntimeEx 函式](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)，和您想要這些路徑來啟動第 4 版的 clr，而不是較早的版本，或如果您的應用程式以建置[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]具有相依性，但以舊版.NET Framework 建置的混合模式組件，它並不足以指定[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]中支援的執行階段的清單。 此外，在[\<啟動 > 項目](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)在您的組態檔，您必須設定`useLegacyV2RuntimeActivationPolicy`屬性設定為`true`。 但是，將這個屬性設定為 `true`，即表示以舊版 .NET Framework 建置的所有元件都會使用 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] 執行，而不是原本建置時所使用的執行階段。  
@@ -77,12 +77,12 @@ ms.locfileid: "47197795"
 |----------------------------|---------------------|  
 |4.0|".NETFramework,Version=v4.0"|  
 |4.0，Client Profile|".NETFramework,Version=v4.0,Profile=Client"|  
-|4.0，平台更新 1|.NETFramework,Version=v4.0.1|  
-|4.0，Client Profile，更新 1|.NETFramework,Version=v4.0.1,Profile=Client|  
-|4.0，平台更新 2|.NETFramework,Version=v4.0.2|  
-|4.0，Client Profile，更新 2|.NETFramework,Version=v4.0.2,Profile=Client|  
-|4.0，平台更新 3|.NETFramework,Version=v4.0.3|  
-|4.0，Client Profile，更新 3|.NETFramework,Version=v4.0.3,Profile=Client|  
+|4.0，平台更新 1|".NETFramework，版本 = v4.0.1"|  
+|4.0，Client Profile，更新 1|".NETFramework，版本 = v4.0.1，設定檔 = Client"|  
+|4.0，平台更新 2|".NETFramework，版本 = v4.0.2"|  
+|4.0，Client Profile，更新 2|".NETFramework，版本 = v4.0.2，設定檔 = Client"|  
+|4.0，平台更新 3|".NETFramework，版本 = verze 4.0.3"|  
+|4.0，Client Profile，更新 3|".NETFramework，版本 = verze 4.0.3，設定檔 = Client"|  
 |4.5|".NETFramework,Version=v4.5"|  
 |4.5.1|".NETFramework,Version=v4.5.1"|  
 |4.5.2|".NETFramework,Version=v4.5.2"|  
