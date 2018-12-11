@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: f416ae8252d9991905da7eeaf4ce6398ff0e7461
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7086bdfbbd2ebace25f2999a0787bcee48494ab8
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514959"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147668"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server 連接共用 (ADO.NET)
 連接到資料庫伺服器通常需要執行幾個很費時的步驟。 必須要建立實體頻道 (如通訊端或具名管道)，必須建立與伺服器的初始信號交換、必須剖析連接字串資訊、伺服器必須要驗證連接，以及必須檢查是否已在現行交易中登記等。  
@@ -31,7 +31,7 @@ ms.locfileid: "43514959"
   
  在下列 C# 範例中，會建立三個新的 <xref:System.Data.SqlClient.SqlConnection> 物件，但是只需要兩個連接集區來管理它們。 請注意，第一個及第二個連接字串的不同之處在於指派給 `Initial Catalog` 的值不同。  
   
-```  
+```csharp
 using (SqlConnection connection = new SqlConnection(  
   "Integrated Security=SSPI;Initial Catalog=Northwind"))  
     {  
@@ -67,7 +67,7 @@ using (SqlConnection connection = new SqlConnection(
  連接共用器會藉由重新配置釋放回集區的連接，來滿足連接的請求。 如果已達到最大集區大小，但仍沒有可用的連接，則會將要求排入佇列。 共用器接下來會嘗試回收所有連接，直到達到逾時 (預設值是 15 秒)。 如果連接逾時之前共用器無法滿足要求，則會擲回例外狀況。  
   
 > [!CAUTION]
->  強烈建議您在使用完連接後一律關閉該連接，以便將連接傳回集區。 您可以使用`Close`或`Dispose`方法`Connection`物件，或藉由開啟內的所有連線`using`在 C# 中，陳述式或`Using`Visual Basic 中的陳述式。 可能不會將未明確關閉的連接加入或傳回集區。 如需詳細資訊，請參閱 < [using 陳述式](~/docs/csharp/language-reference/keywords/using-statement.md)或是[如何： 處置系統資源](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)Visual basic。  
+>  強烈建議您在使用完連接後一律關閉該連接，以便將連接傳回集區。 您可以使用`Close`或`Dispose`方法`Connection`物件，或藉由開啟內的所有連線`using`在 C# 中，陳述式或`Using`Visual Basic 中的陳述式。 可能不會將未明確關閉的連接加入或傳回集區。 如需詳細資訊，請參閱 < [using 陳述式](~/docs/csharp/language-reference/keywords/using-statement.md)或[How to:處置系統資源](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)Visual basic。  
   
 > [!NOTE]
 >  請不要在您類別之 `Close` 方法中的 `Dispose`、`Connection` 或任何其他 Managed 物件上呼叫 `DataReader` 或 `Finalize`。 在完成項中，只需釋放類別直接擁有的 Unmanaged 資源。 如果類別未擁有任何 Unmanaged 資源，請不要在類別定義中包含 `Finalize` 方法。 如需詳細資訊，請參閱 <<c0> [ 回收](../../../../docs/standard/garbage-collection/index.md)。  

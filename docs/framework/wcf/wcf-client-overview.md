@@ -7,22 +7,22 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: 03a9580bee6308ef53c7d2bc6e9dbe619c2048f7
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: e6e7d9fe6764120e3d676b9d2cbd248e7491e504
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808428"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152626"
 ---
 # <a name="wcf-client-overview"></a>WCF 用戶端概觀
-本節描述用戶端應用程式做什麼、 如何設定、 建立和使用 Windows Communication Foundation (WCF) 用戶端，以及如何保護用戶端應用程式。  
+本節說明用戶端應用程式做什麼、 如何設定、 建立和使用 Windows Communication Foundation (WCF) 用戶端，以及如何保護用戶端應用程式。  
   
 ## <a name="using-wcf-client-objects"></a>使用 WCF 用戶端物件  
- 用戶端應用程式是受管理的應用程式用來通訊的 WCF 用戶端與其他應用程式。 若要建立用戶端 WCF 服務應用程式需要下列步驟：  
+ 用戶端應用程式是受管理的應用程式與其他應用程式，用來通訊的 WCF 用戶端。 若要建立用戶端為 WCF 服務的應用程式需要下列步驟：  
   
 1.  取得服務端點的服務合約、繫結和位址資訊。  
   
-2.  建立 WCF 用戶端使用這些資訊。  
+2.  建立 WCF 用戶端使用該資訊。  
   
 3.  呼叫作業。  
   
@@ -41,48 +41,48 @@ ms.locfileid: "33808428"
 -   透過用戶端通道呼叫服務。  
   
 ## <a name="obtain-the-service-contract-bindings-and-addresses"></a>取得服務合約、繫結和位址  
- 在 WCF 中，服務和用戶端模型合約會使用 managed 的屬性、 介面和方法。 若要在用戶端應用程式中連接到服務，您必須取得服務合約的類型資訊。 一般而言，您可以使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)，從服務下載中繼資料會將它轉換成在您選擇的語言中的 managed 的原始程式碼檔，並建立用戶端您可以使用來設定您的 WCF 用戶端物件的應用程式組態檔。 例如，如果您要建立 WCF 用戶端物件來叫用`MyCalculatorService`，而且您知道該服務的中繼資料在發行`http://computerName/MyCalculatorService/Service.svc?wsdl`，則下列程式碼範例示範如何使用 Svcutil.exe 來取得`ClientCode.vb`檔包含以 managed 程式碼的服務合約。  
+ 在 WCF 中，服務和用戶端模型合約會使用 managed 的屬性、 介面和方法。 若要在用戶端應用程式中連接到服務，您必須取得服務合約的類型資訊。 一般而言，您可以使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)，下載中繼資料從服務中，將它轉換成在您選擇的語言中的 managed 的原始程式碼檔，並建立用戶端可用來設定您的 WCF 用戶端物件的應用程式組態檔。 例如，如果您要建立 WCF 用戶端物件來叫用`MyCalculatorService`，而且您知道該服務的中繼資料已發佈於`http://computerName/MyCalculatorService/Service.svc?wsdl`，則下列程式碼範例示範如何使用 Svcutil.exe 來取得`ClientCode.vb`檔案包含 managed 程式碼中的服務合約。  
   
 ```  
 svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/MyCalculatorService/Service.svc?wsdl  
 ```  
   
- 您可以此合約程式碼在用戶端應用程式或編譯成用戶端應用程式可以用來建立 WCF 用戶端物件的另一個組件。 您可以使用組態檔來設定用戶端物件，以便正確連接到服務。  
+ 至用戶端應用程式或用戶端應用程式可用來建立 WCF 用戶端物件的另一個組件，您可能可以編譯此合約程式碼。 您可以使用組態檔來設定用戶端物件，以便正確連接到服務。  
   
- 如需此程序的範例，請參閱[How to： 建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 如需完整合約的詳細資訊，請參閱[合約](../../../docs/framework/wcf/feature-details/contracts.md)。  
+ 如需此程序的範例，請參閱[How to:建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 如需更完整合約的詳細資訊，請參閱[合約](../../../docs/framework/wcf/feature-details/contracts.md)。  
   
 ## <a name="create-a-wcf-client-object"></a>建立 WCF 用戶端物件  
- WCF 用戶端是本機的物件，代表用戶端可用來與遠端服務通訊的表單中的 WCF 服務。 WCF 用戶端類型會實作目標服務合約，因此當您建立一個，並將其設定，您可以直接用來叫用服務作業，然後使用用戶端物件。 WCF 執行階段將方法呼叫轉換成訊息、 將它們傳送至服務，接聽回覆，並傳回這些值的 WCF 用戶端物件做為傳回值或`out`或`ref`參數。  
+ WCF 用戶端是本機物件，表示在表單中的用戶端可用來與遠端服務進行通訊的 WCF 服務。 WCF 用戶端型別會實作目標服務合約，因此當您建立並設定它，您可以使用用戶端物件直接叫用服務作業。 WCF 執行階段方法呼叫轉換為訊息、 將它們傳送至服務、 接聽回覆，並傳回這些值給 WCF 用戶端物件，作為傳回值或`out`或`ref`參數。  
   
- 您也可以使用 WCF 用戶端通道物件來連接及使用服務。 如需詳細資訊，請參閱[WCF 用戶端架構](../../../docs/framework/wcf/feature-details/client-architecture.md)。  
+ 您也可以使用 WCF 用戶端通道物件來連接及使用服務。 如需詳細資訊，請參閱 < [WCF 用戶端架構](../../../docs/framework/wcf/feature-details/client-architecture.md)。  
   
 #### <a name="creating-a-new-wcf-object"></a>建立新的 WCF 物件  
  為說明 <xref:System.ServiceModel.ClientBase%601> 類別的使用方式，請假設已從服務應用程式產生下列簡單服務合約。  
   
 > [!NOTE]
->  如果您使用 Visual Studio 來建立您的 WCF 用戶端，會自動將物件載入物件瀏覽器時加入服務參考加入專案。  
+>  如果您使用 Visual Studio 建立您的 WCF 用戶端，物件會自動載入物件瀏覽器到當您將新增服務參考加入專案。  
   
  [!code-csharp[C_GeneratedCodeFiles#12](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#12)]  
   
- 如果您不使用 Visual Studio，請檢查產生的合約程式碼，以尋找擴充的型別<xref:System.ServiceModel.ClientBase%601>和服務合約介面`ISampleService`。 在這種情況下，該型別看起來類似下列程式碼：  
+ 如果您不使用 Visual Studio，檢查產生的合約程式碼，以尋找擴充的型別<xref:System.ServiceModel.ClientBase%601>和服務合約介面`ISampleService`。 在這種情況下，該型別看起來類似下列程式碼：  
   
  [!code-csharp[C_GeneratedCodeFiles#14](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#14)]  
   
  您可以將這個類別建立成本機物件，其方式是使用其中一個建構函式，然後加以設定，再用來連接到型別為 `ISampleService` 的服務。  
   
- 建議您首先，建立 WCF 用戶端物件，然後使用它並關閉單一的 try/catch 區塊內。 您不應該使用`using`陳述式 (`Using`在 Visual Basic 中) 因為這可能會遮罩中特定失敗模式的例外狀況。 如需詳細資訊，請參閱下列各節以及[避免 Using 陳述式的問題](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)。  
+ 建議您首先，建立您的 WCF 用戶端物件，然後使用它並關閉單一的 try/catch 區塊內。 您不應該使用`using`陳述式 (`Using` Visual Basic 中) 因為它可能會遮罩特定失敗模式的例外狀況。 如需詳細資訊，請參閱下列各節，以及[使用關閉和中止發行 WCF 用戶端資源](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)。  
   
 ### <a name="contracts-bindings-and-addresses"></a>合約、繫結和位址  
- 您可以建立 WCF 用戶端物件之前，您必須設定用戶端物件。 具體來說，它必須有服務*端點*使用。 端點是服務合約、繫結和位址的組合  (如需端點的詳細資訊，請參閱[端點： 位址、 繫結和合約](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)。)一般而言，這項資訊位於[\<端點 >](../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)中用戶端應用程式組態檔，例如，Svcutil.exe 工具產生的而且當您建立您的用戶端時自動載入的項目物件。 這兩個 WCF 用戶端類型也會有多載可讓您以程式設計方式指定這項資訊。  
+ 您可以建立 WCF 用戶端物件之前，您必須設定用戶端物件。 具體來說，它必須擁有的服務*端點*使用。 端點是服務合約、繫結和位址的組合  (如需有關端點的詳細資訊，請參閱[端點：位址、 繫結和合約](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)。)一般而言，這項資訊位於[\<端點 >](../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)用戶端應用程式組態檔，例如 Svcutil.exe 工具產生的而且當您建立您的用戶端時自動載入的項目物件。 這兩種 WCF 用戶端類型也會有多載，可讓您以程式設計方式指定這項資訊。  
   
  例如，針對前面範例中使用的 `ISampleService` 所產生的組態檔會包含下列端點資訊。  
   
  [!code-xml[C_GeneratedCodeFiles#19](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/common/client.exe.config#19)]  
   
- 這個組態檔會在 `<client>` 元素中指定目標端點。 如需有關使用多個目標端點的詳細資訊，請參閱<xref:System.ServiceModel.ClientBase%601.%23ctor%2A?displayProperty=nameWithType>或<xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A?displayProperty=nameWithType>建構函式。  
+ 這個組態檔會在 `<client>` 元素中指定目標端點。 如需使用多個目標端點的詳細資訊，請參閱 <<c0> <xref:System.ServiceModel.ClientBase%601.%23ctor%2A?displayProperty=nameWithType> 或<xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A?displayProperty=nameWithType>建構函式。  
   
 ## <a name="calling-operations"></a>呼叫作業  
- 一旦您建立用戶端物件和設定，建立 try/catch 區塊，就是在本機，物件的相同方式呼叫作業並關閉 WCF 用戶端物件。 當用戶端應用程式呼叫第一項作業時，WCF 會自動開啟基礎通道，以及當物件遭回收時，會關閉基礎通道。 (或者，您也可以在呼叫其他作業之前或之後明確地開啟和關閉通道)。  
+ 一旦您已建立的用戶端物件和設定，建立 try/catch 區塊中，相同的方式，就像是本機，如果在呼叫作業並關閉 WCF 用戶端物件。 當用戶端應用程式呼叫第一項作業時，WCF 會自動開啟基礎通道，並回收物件時，系統會關閉基礎通道。 (或者，您也可以在呼叫其他作業之前或之後明確地開啟和關閉通道)。  
   
  例如，您若有下列服務合約：  
   
@@ -127,17 +127,17 @@ Namespace Microsoft.ServiceModel.Samples
 End Interface  
 ```  
   
- 您可以建立 WCF 用戶端物件來呼叫作業，並呼叫其方法，如下列程式碼範例示範。 請注意，開啟、 呼叫和關閉 WCF 用戶端物件就會發生在單一的 try/catch 區塊內。 如需詳細資訊，請參閱[使用 WCF 用戶端存取服務](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)和[避免 Using 陳述式的問題](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)。  
+ 您可以藉由建立 WCF 用戶端物件來呼叫作業，並呼叫其方法，如下列程式碼範例示範。 請注意開啟、 呼叫和 WCF 用戶端物件的結尾，會在單一的 try/catch 區塊內。 如需詳細資訊，請參閱 <<c0> [ 使用 WCF 用戶端存取服務](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)並[使用關閉和中止發行 WCF 用戶端資源](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)。  
   
  [!code-csharp[C_GeneratedCodeFiles#20](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#20)]  
   
 ## <a name="handling-errors"></a>處理錯誤  
- 當開啟基礎用戶端通道 (無論是明確或是自動呼叫作業)、使用用戶端或通道物件來呼叫作業，或關閉基礎用戶端通道時，都可能會在用戶端應用程式中發生例外狀況。 除了要由作業傳回因 SOAP 錯誤而擲回的任何 <xref:System.TimeoutException?displayProperty=nameWithType> 物件之外，建議您最少還要讓應用程式有能力處理可能發生的 <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType> 和 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 例外狀況。 作業合約中指定的 SOAP 錯誤會針對用戶端應用程式引發為 <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>，其中的類型參數是 SOAP 錯誤的詳細類型。 如需有關處理用戶端應用程式中的錯誤狀況的詳細資訊，請參閱[傳送和接收錯誤](../../../docs/framework/wcf/sending-and-receiving-faults.md)。 如需完整範例將示範如何在用戶端中處理錯誤，請參閱[預期的例外狀況](../../../docs/framework/wcf/samples/expected-exceptions.md)。  
+ 當開啟基礎用戶端通道 (無論是明確或是自動呼叫作業)、使用用戶端或通道物件來呼叫作業，或關閉基礎用戶端通道時，都可能會在用戶端應用程式中發生例外狀況。 除了要由作業傳回因 SOAP 錯誤而擲回的任何 <xref:System.TimeoutException?displayProperty=nameWithType> 物件之外，建議您最少還要讓應用程式有能力處理可能發生的 <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType> 和 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 例外狀況。 作業合約中指定的 SOAP 錯誤會針對用戶端應用程式引發為 <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>，其中的型別參數是 SOAP 錯誤的詳細類型。 如需有關處理用戶端應用程式中的錯誤狀況的詳細資訊，請參閱 < [Sending and Receiving Faults](../../../docs/framework/wcf/sending-and-receiving-faults.md)。 完整範例示範如何在用戶端中處理錯誤，請參閱[預期的例外狀況](../../../docs/framework/wcf/samples/expected-exceptions.md)。  
   
 ## <a name="configuring-and-securing-clients"></a>設定和保護用戶端  
  設定用戶端時，通常是先從組態檔載入用戶端或通道物件的必要目標端點資訊；儘管可以透過用戶端建構函式和屬性，使用程式設計方式載入這項資訊， 但是為了啟用特定用戶端行為，並符合許多安全性案例的需要，您應該另外執行其他必要的設定步驟。  
   
- 例如，服務合約的安全性需求會在服務合約介面中宣告；如果 Svcutil.exe 建立了組態檔，這個檔案通常應包含能夠支援服務安全性需求的繫結。 不過，在某些情況下，可能需要進行更多的安全性設定，例如設定用戶端認證。 完成安全性設定，讓 WCF 用戶端的詳細資訊，請參閱[保護用戶端](../../../docs/framework/wcf/securing-clients.md)。  
+ 例如，服務合約的安全性需求會在服務合約介面中宣告；如果 Svcutil.exe 建立了組態檔，這個檔案通常應包含能夠支援服務安全性需求的繫結。 不過，在某些情況下，可能需要進行更多的安全性設定，例如設定用戶端認證。 如需 WCF 用戶端安全性組態的完整資訊，請參閱[保護的用戶端](../../../docs/framework/wcf/securing-clients.md)。  
   
  此外，還可以在用戶端應用程式中啟用某些自訂修改，例如自訂執行階段行為。 如需如何設定自訂用戶端行為的詳細資訊，請參閱[設定用戶端行為](../../../docs/framework/wcf/configuring-client-behaviors.md)。  
   
@@ -148,13 +148,13 @@ End Interface
   
 -   實作回呼合約類別。  
   
--   建立回呼合約實作類別的執行個體，並用來建立<xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType>您傳遞至 WCF 用戶端建構函式物件。  
+-   建立回呼合約實作類別的執行個體，並使用它來建立<xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType>您傳遞至 WCF 用戶端建構函式物件。  
   
 -   叫用作業和處理作業回呼。  
   
- 雙工的 WCF 用戶端物件函式，例如與其工的對應項目，與前者會公開支援回呼，包括回呼服務的組態所需的功能例外狀況。  
+ 雙工的 WCF 用戶端物件函式，例如其非雙工的對應項目，與例外狀況，其會公開支援回呼，包括回呼服務的組態所需的功能。  
   
- 例如，您可以在回呼類別上使用 <xref:System.ServiceModel.CallbackBehaviorAttribute?displayProperty=nameWithType> 屬性 (Attribute) 的屬性 (Property)，控制回呼物件執行階段行為的各種層面。 此外，還可以使用 <xref:System.ServiceModel.Description.CallbackDebugBehavior?displayProperty=nameWithType> 類別，讓例外狀況資訊回傳給呼叫回呼物件的服務。 如需詳細資訊，請參閱[雙工服務](../../../docs/framework/wcf/feature-details/duplex-services.md)。 如需完整範例，請參閱[雙工](../../../docs/framework/wcf/samples/duplex.md)。  
+ 例如，您可以在回呼類別上使用 <xref:System.ServiceModel.CallbackBehaviorAttribute?displayProperty=nameWithType> 屬性 (Attribute) 的屬性 (Property)，控制回呼物件執行階段行為的各種層面。 此外，還可以使用 <xref:System.ServiceModel.Description.CallbackDebugBehavior?displayProperty=nameWithType> 類別，讓例外狀況資訊回傳給呼叫回呼物件的服務。 如需詳細資訊，請參閱 <<c0> [ 雙工服務](../../../docs/framework/wcf/feature-details/duplex-services.md)。 如需完整範例，請參閱 <<c0> [ 雙工](../../../docs/framework/wcf/samples/duplex.md)。  
   
  在執行 Internet Information Services (IIS) 5.1 的 Windows XP 電腦上，雙工用戶端必須使用 <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType> 類別來指定用戶端基底位址，否則會擲回例外狀況。 下列程式碼範例示範如何在程式碼中執行這項工作。  
   
@@ -166,10 +166,10 @@ End Interface
  [!code-csharp[S_DualHttp#134](../../../samples/snippets/csharp/VS_Snippets_CFX/s_dualhttp/cs/program.cs#134)]  
   
 ## <a name="calling-services-asynchronously"></a>以非同步方式呼叫服務  
- 呼叫作業的方式完全取決於用戶端開發人員。 這是因為透過 Managed 程式碼來表達呼叫程序時，您可以將組成作業的訊息對應至同步或非同步的方法。 因此，如果要建置以非同步方式呼叫作業的用戶端，您可以透過 Svcutil.exe，使用 `/async` 選項來產生非同步用戶端程式碼。 如需詳細資訊，請參閱[如何： 非同步呼叫服務作業](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。  
+ 呼叫作業的方式完全取決於用戶端開發人員。 這是因為透過 Managed 程式碼來表達呼叫程序時，您可以將組成作業的訊息對應至同步或非同步的方法。 因此，如果要建置以非同步方式呼叫作業的用戶端，您可以透過 Svcutil.exe，使用 `/async` 選項來產生非同步用戶端程式碼。 如需詳細資訊，請參閱[＜How to：以非同步方式呼叫服務作業](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。  
   
 ## <a name="calling-services-using-wcf-client-channels"></a>使用 WCF 用戶端通道呼叫服務  
- WCF 用戶端型別會擴充<xref:System.ServiceModel.ClientBase%601>，而其本身衍生自<xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>介面，以公開基礎通道系統。 您可以搭配 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 類別使用目標服務合約來叫用服務。 如需詳細資訊，請參閱[WCF 用戶端架構](../../../docs/framework/wcf/feature-details/client-architecture.md)。  
+ WCF 用戶端型別會擴充<xref:System.ServiceModel.ClientBase%601>，而其本身衍生自<xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>介面，以公開基礎通道系統。 您可以搭配 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 類別使用目標服務合約來叫用服務。 如需詳細資訊，請參閱 < [WCF 用戶端架構](../../../docs/framework/wcf/feature-details/client-architecture.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  

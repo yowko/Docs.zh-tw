@@ -4,12 +4,12 @@ description: 將現有的.NET 應用程式使用 Azure 雲端和 Windows 容器�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 17838381f42a760caa7fba7e09ab798c6284bccb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 8a59a78bbf7ec38f32b14e67d4cb35a9c2375e94
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45683199"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151055"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>現代化雲端最佳化應用程式的現有.NET 應用程式的原因
 
@@ -23,7 +23,7 @@ ms.locfileid: "45683199"
 
 ## <a name="cloud-optimized-application-principles-and-tenets"></a>雲端最佳化應用程式原則和原則 
 
-在雲端中的增強功能大多著重在達成兩個目標： 降低成本並提升業務成長，藉由改善靈活度。 這些目標，可達到簡化程序，並減少摩擦，當您發行並出貨的應用程式。
+在雲端中的增強功能大多著重在達成兩個目標：降低成本並提升業務成長藉由改善靈活度。 這些目標，可達到簡化程序，並減少摩擦，當您發行並出貨的應用程式。
 
 如果您可以在敏捷式軟體開發方式開發您的應用程式自主來自其他內部部署應用程式，並再放開時，部署時，自動調整雲端最佳化的應用程式是監視和疑難排解您在雲端中的應用程式。
 
@@ -68,5 +68,5 @@ ms.locfileid: "45683199"
 在下列章節中，這些優點的詳細資料，說明，並連結到特定的技術。
 
 >[!div class="step-by-step"]
-[上一頁](index.md)
-[下一頁](microsoft-technologies-in-cloud-optimized-applications.md)
+>[上一頁](index.md)
+>[下一頁](microsoft-technologies-in-cloud-optimized-applications.md)

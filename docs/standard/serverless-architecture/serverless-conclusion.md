@@ -4,12 +4,12 @@ description: 無伺服器提供許多優點，並具有自己的挑戰。 從本
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 055facf7ef46c18f8cda518da9a9f3e114dec1a2
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 6f4951dc85f739b92e56e84d0bd0262166181bd4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369695"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128839"
 ---
 # <a name="conclusion"></a>結論
 
@@ -30,4 +30,4 @@ ms.locfileid: "49369695"
 **無伺服器作為工具，不是 [工具箱]。** 無伺服器是不應用程式架構的專屬解決方案。 它是一種工具，可利用混合式應用程式可能會包含傳統的層級、 單體後端，以及容器的一部分。 無伺服器可用來增強現有的解決方案，並不是孤注一擲的方法，應用程式開發。
 
 >[!div class="step-by-step"]
-[上一步](serverless-business-scenarios.md)
+>[上一步](serverless-business-scenarios.md)

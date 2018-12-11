@@ -1,19 +1,18 @@
 ---
 title: Attributes1
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - attributes [.NET Framework], about
 - class library design guidelines [.NET Framework], attributes
 ms.assetid: ee0038ef-b247-4747-a650-3c5c5cd58d8b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 51aa91b1acbae9f1a15ac12441090dd4c1c2dcb1
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+author: KrzysztofCwalina
+ms.openlocfilehash: 7ab499d5a9c8388e9081a07921d3e444c0cdd879
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259484"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131426"
 ---
 # <a name="attributes"></a>屬性
 <xref:System.Attribute?displayProperty=nameWithType> 用來定義自訂屬性的基底類別。  
@@ -48,7 +47,7 @@ ms.locfileid: "44259484"
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
+ *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
   
 ## <a name="see-also"></a>另請參閱
 

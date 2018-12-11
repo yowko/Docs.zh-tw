@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
 ms.openlocfilehash: eb165b69e1312363a8cc7c1a3ceea66a422d54f7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200107"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143463"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>沒有安全保障的內部網路用戶端與服務
 下圖說明簡單的 Windows Communication Foundation (WCF) 服務，開發 WCF 應用程式的安全私人網路上提供的資訊。 因為資料重要性低、 預期是原本就是安全的網路，或安全性由 WCF 基礎結構下一層提供，則不需要安全性。  

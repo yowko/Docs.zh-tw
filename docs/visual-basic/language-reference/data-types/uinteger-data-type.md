@@ -16,12 +16,12 @@ helpviewer_keywords:
 - UI literal type characters [Visual Basic]
 - data types [Visual Basic], integral
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
-ms.openlocfilehash: 660e51338d274bbe25da800ca701e6fb9eccbcda
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c63b9a25c1830f142002e9854e9ce275f55ef54b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183200"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154815"
 ---
 # <a name="uinteger-data-type"></a>UInteger 資料類型
 
@@ -56,7 +56,7 @@ Dim number As UInteger = &H_0F8C_0326
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-也可以包含數值常值`UI`或是`ui`[型別字元](../../programming-guide\language-features\data-types/type-characters.md)表示`UInteger`資料型別，如下列範例所示。
+也可以包含數值常值`UI`或是`ui`[型別字元](../../programming-guide/language-features/data-types/type-characters.md)表示`UInteger`資料型別，如下列範例所示。
 
 ```vb
 Dim number = &H_0FAC_14D7ui
@@ -83,5 +83,5 @@ Dim number = &H_0FAC_14D7ui
  [資料類型](../../../visual-basic/language-reference/data-types/index.md)  
  [類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [轉換摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [操作說明：呼叫使用不帶正負號類型的 Windows 函式](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
+ [操作說明：呼叫 Windows 函式使用不帶正負號的類型](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
  [有效率地使用資料類型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

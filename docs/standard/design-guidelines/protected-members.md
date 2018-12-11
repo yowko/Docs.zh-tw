@@ -1,6 +1,6 @@
 ---
 title: Protected 成員
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - members [.NET Framework], protected
@@ -10,14 +10,13 @@ helpviewer_keywords:
 - unsealed classes
 - customizing class behavior
 ms.assetid: aa0b58ee-3956-494d-ab48-471ae5db8740
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4574dffc3f9dd1b60d655bfde33a4ddc1a81d350
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+author: KrzysztofCwalina
+ms.openlocfilehash: f0ad21f0a5b869332223d96991dd0a7bebeba420
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44199735"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149350"
 ---
 # <a name="protected-members"></a>Protected 成員
 受保護的成員，本身不提供任何擴充性，但它們可以讓透過子類別化的擴充性功能更強大。 它們可以用來公開 （expose） 而不需要不必要地複雜的主要公用介面的進階的自訂選項。  
@@ -32,7 +31,7 @@ ms.locfileid: "44199735"
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
+ *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
   
 ## <a name="see-also"></a>另請參閱
 

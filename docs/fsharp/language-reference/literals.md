@@ -1,24 +1,24 @@
 ---
 title: 常值 (F#)
-description: 深入了解 F# 程式設計語言中的常值類型。
+description: 深入了解中的常值型別F#程式設計語言。
 ms.date: 05/16/2016
-ms.openlocfilehash: e6d34acd928edce8447c793105b08085ab0757b9
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 7a531cd63c5a4dc1123834d481fc998216b0d82d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44087621"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131335"
 ---
 # <a name="literals"></a>常值
 
 > [!NOTE]
-這篇文章中的 API 參考連結將帶您前往 MSDN （適用於目前）。
+> 這篇文章中的 API 參考連結將帶您前往 MSDN （適用於目前）。
 
-本主題提供說明如何在 F# 中指定的常值類型的資料表。
+本主題提供示範如何指定類型的常值中的資料表F#。
 
 ## <a name="literal-types"></a>常值類型
 
-下表顯示 F# 中的常值的類型。 表示之數字的十六進位表示法的字元不區分大小寫，識別類型的字元會區分大小寫。
+下表顯示中的常值型別F#。 表示之數字的十六進位表示法的字元不區分大小寫，識別類型的字元會區分大小寫。
 
 |類型|描述|後置字元或前置詞|範例|
 |----|-----------|----------------|--------|
@@ -47,20 +47,20 @@ ms.locfileid: "44087621"
 
 Unicode 字串可以包含您可以使用指定的明確編碼`\u`後面的 16 位元的十六進位碼或您可以使用指定的 UTF-32 編碼`\U`後面接著 32 位元的十六進位代碼，表示 Unicodesurrogate 字組。
 
-自 F# 3.1 之後，您可以使用`+`登合併字串常值。 您也可以使用位元或 (`|||`) 運算子合併列舉旗標。 例如，下列程式碼是 F# 3.1 中合法的：
+從F#3.1 中，您可以使用`+`登入合併字串常值。 您也可以使用位元或 (`|||`) 運算子合併列舉旗標。 例如，下列程式碼是合法的在F#3.1:
 
 ```fsharp
 [<Literal>]
-let Literal1 = "a" + "b"
+let literal1 = "a" + "b"
 
 [<Literal>]
-let FileLocation =   __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
+let fileLocation =   __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
 
 [<Literal>]
-let Literal2 = 1 ||| 64
+let literal2 = 1 ||| 64
 
 [<Literal>]
-let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
+let literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 ```
 
 不允許使用其他位元運算子。
@@ -82,14 +82,14 @@ let Numbers = (0x9F, 0o77, 0b1010)
 
 ## <a name="underscores-in-numeric-literals"></a>數值常值中的底線
 
-從 F# 4.1 開始，您可以分隔數字與底線字元 (`_`)。
+開頭為F#4.1，您可以使用底線字元來分隔數字 (`_`)。
 
 ```fsharp
-let DeadBeef = 0xDEAD_BEEF
+let value = 0xDEAD_BEEF
 
-let DeadBeefAsBits = 0b1101_1110_1010_1101_1011_1110_1110_1111
+let valueAsBits = 0b1101_1110_1010_1101_1011_1110_1110_1111
 
-let ExampleSSN = 123_456_7890
+let exampleSSN = 123_456_7890
 ```
 
 ## <a name="see-also"></a>另請參閱

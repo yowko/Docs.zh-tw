@@ -2,12 +2,12 @@
 title: ADO.NET 中的並存執行
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: 7435f64afa9ce45a29f4d0a537219f31968eb3f5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: f69a269e5f6370cf7c5a60920b3d5a47ce1079cb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042149"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126610"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>ADO.NET 中的並存執行
 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中，並存執行是指在安裝多個 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 版本的電腦上執行應用程式 (單獨使用針對編譯該應用程式所用的版本) 的能力。 如需設定並排顯示執行的詳細資訊，請參閱[並排顯示執行](../../../../docs/framework/deployment/side-by-side-execution.md)。  
@@ -47,7 +47,7 @@ ms.locfileid: "44042149"
   
  請考慮使用下列在 <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> 呼叫中執行的命令批次。  
   
-```  
+```sql
 SET NOCOUNT ON;  
 SELECT * FROM dbo.Customers;  
 ```  
@@ -58,7 +58,7 @@ SELECT * FROM dbo.Customers;
   
  若應用程式會在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的之前和以後版本上執行，則您可以撰寫程式碼來確保它在不同版本上的行為是相同的。 如果您想要確保某個命令會針對所有後續命令修改連接的狀態，我們建議您使用 <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> 來執行命令。 如果您想要確保命令不會針對所有後續命令修改連接，則我們建議您在命令中加入要重設連接狀態的命令。 例如:   
   
-```  
+```sql
 SET NOCOUNT ON;  
 SELECT * FROM dbo.Customers;  
 SET NOCOUNT OFF;  

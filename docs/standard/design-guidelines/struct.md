@@ -1,6 +1,6 @@
 ---
 title: 結構設計
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - class library design guidelines [.NET Framework], structures
@@ -11,14 +11,13 @@ helpviewer_keywords:
 - type design guidelines, structures
 - structures [.NET Framework], design guidelines
 ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3879dc3f0270a56132b44882a74c50d05914ff89
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+author: KrzysztofCwalina
+ms.openlocfilehash: 240492590fab4579b9d984d5dce759f6d9f8cbab
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48849967"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153107"
 ---
 # <a name="struct-design"></a>結構設計
 一般用途的實值型別最常稱為結構時，它的 C# 關鍵字。 本節提供一般的結構設計指導方針。  
@@ -45,7 +44,7 @@ ms.locfileid: "48849967"
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
+ *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
   
 ## <a name="see-also"></a>另請參閱
 

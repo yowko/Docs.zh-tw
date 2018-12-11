@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3e5efbc5-92e4-4229-b31f-ce368a1adb96
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 02f16bd9560346cca9b24d4e5b8e760fdb3afd18
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1bfc3aa2bb7d1819f5f6221154ba1d276e0c202c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357309"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149363"
 ---
 # <a name="dangerousthreadingapi-mda"></a>dangerousThreadingAPI MDA
 在目前執行緒以外的執行緒上呼叫 <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> 方法時，會啟用 `dangerousThreadingAPI` Managed 偵錯助理 (MDA)。  
@@ -54,7 +54,7 @@ ms.locfileid: "33357309"
 ## <a name="example"></a>範例  
  下列程式碼範例示範如何呼叫 <xref:System.Threading.Thread.Suspend%2A> 方法，以啟用 `dangerousThreadingAPI`。  
   
-```  
+```csharp
 using System.Threading;  
 void FireMda()  
 {  

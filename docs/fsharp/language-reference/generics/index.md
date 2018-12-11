@@ -1,13 +1,13 @@
 ---
 title: 泛型 (F#)
-description: 了解如何使用 F# 泛型函式和類型，可讓您撰寫程式碼，而不需要重複程式碼適用於各種不同的類型。
+description: 了解如何使用F#泛型函式和類型，可讓您撰寫程式碼，而不需要重複程式碼適用於各種不同的類型。
 ms.date: 05/16/2016
-ms.openlocfilehash: fc061f19c6c7fa737f7ca05aae83fd42c0010b37
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 7eae69bc0286bff4997c6399c7417bde119c2204
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44084958"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147001"
 ---
 # <a name="generics"></a>泛型
 
@@ -71,8 +71,8 @@ type type-name<type-parameters> type-definition
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1702.fs)]
 
->[!NOTE]
-依照名稱參考泛型型別的方法有兩種。 例如，`list<int>` 和 `int list` 就是兩種用於參考具有單一類型引數 `int` 之泛型型別 `list` 的方法。 後面的形式照慣例僅適用於內建的 F# 類型，例如 `list` 和 `option`。 若有多個類型引數，您通常會使用語法 `Dictionary<int, string>`，但是也可以使用語法 `(int, string) Dictionary`。
+> [!NOTE]
+> 依照名稱參考泛型型別的方法有兩種。 例如，`list<int>` 和 `int list` 就是兩種用於參考具有單一類型引數 `int` 之泛型型別 `list` 的方法。 後面的形式照慣例僅適用於內建的 F# 類型，例如 `list` 和 `option`。 若有多個類型引數，您通常會使用語法 `Dictionary<int, string>`，但是也可以使用語法 `(int, string) Dictionary`。
 
 ## <a name="wildcards-as-type-arguments"></a>使用萬用字元作為類型引數
 

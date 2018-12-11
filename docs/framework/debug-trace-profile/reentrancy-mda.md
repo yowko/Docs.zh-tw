@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5aea903a7b16491a84998d8290270044e167b79f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc2e725ecb2208256f6d0e025d4cc79339f385cd
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387857"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130113"
 ---
 # <a name="reentrancy-mda"></a>重新進入 MDA
 如果未透過循序轉換執行先前從 Managed 程式碼到機器碼的切換時嘗試從機器碼轉換成 Managed 程式碼，啟用 `reentrancy` Managed 偵錯助理 (MDA)。  
@@ -69,7 +69,7 @@ ConsoleApplication1\bin\Debug\ConsoleApplication1.vshost.exe'.
 ## <a name="example"></a>範例  
  下列程式碼範例會導致擲回 <xref:System.AccessViolationException>。  在支援向量化例外狀況處理的 Windows 版本上，這會呼叫 Managed 向量化例外狀況處理常式。  如果啟用 `reentrancy` MDA，則會在透過作業系統的向量化例外狀況處理支援程式碼嘗試呼叫 `MyHandler` 期間啟用 MDA。  
   
-```  
+```csharp
 using System;  
 public delegate int ExceptionHandler(IntPtr ptrExceptionInfo);  
   

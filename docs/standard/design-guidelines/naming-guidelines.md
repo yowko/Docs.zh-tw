@@ -1,6 +1,6 @@
 ---
 title: 命名方針
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - names [.NET Framework], about naming guidelines
@@ -11,14 +11,13 @@ helpviewer_keywords:
 - names [.NET Framework]
 - format naming guidelines [.NET Framework]
 ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 70888e068782add5ebe5ae1c7da3bdee842faea8
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+author: KrzysztofCwalina
+ms.openlocfilehash: 4c7f411bdf538762de18873007c839f66911f96a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120904"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127702"
 ---
 # <a name="naming-guidelines"></a>命名方針
 遵循一組一致的開發架構的命名慣例，可以是主要的投稿內容架構的可用性。 它可讓廣泛分隔的專案上的許多開發人員所使用的架構。 超過表單的一致性，必須容易了解架構元素的名稱，並必須傳達每個項目的函式。  
@@ -38,7 +37,7 @@ ms.locfileid: "49120904"
  [命名資源](../../../docs/standard/design-guidelines/naming-resources.md)  
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
+ *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
   
 ## <a name="see-also"></a>另請參閱
 

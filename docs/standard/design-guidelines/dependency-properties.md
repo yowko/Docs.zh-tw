@@ -1,16 +1,15 @@
 ---
 title: 相依性屬性
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 212cfb1e-cec4-4047-94a6-47209b387f6f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 75c83dc75d1c86c89169fcc54220ced2a195bfbe
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+author: KrzysztofCwalina
+ms.openlocfilehash: b577f42c98cb56fb367cb57a550cb094a8ef105e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44079083"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145237"
 ---
 # <a name="dependency-properties"></a>相依性屬性
 相依性屬性 (DP) 是將其值儲存在屬性存放區，而不是儲存在類型變數 （欄位），例如一般屬性。  
@@ -96,7 +95,7 @@ public class Grid {
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
+ *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
   
 ## <a name="see-also"></a>另請參閱
 

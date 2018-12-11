@@ -3,11 +3,11 @@ title: WCF 測試用戶端 (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
 ms.openlocfilehash: 4e3531b91382c4d47aed73198bd8dd954ae4ca1f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181588"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148999"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF 測試用戶端 (WcfTestClient.exe)
 Windows Communication Foundation (WCF) 測試用戶端 (WcfTestClient.exe) 是一種 GUI 工具，可讓使用者輸入測試參數，請將該服務中，輸入送出，並檢視服務傳回的回應。 它提供了完善的服務測試經驗搭配 WCF 服務主機。  
@@ -136,7 +136,7 @@ Windows Communication Foundation (WCF) 測試用戶端 (WcfTestClient.exe) 是�
 ## <a name="features-supported-by-wcf-test-client"></a>WCF 測試用戶端支援的功能  
  下列是 WCF 測試用戶端支援的功能清單：  
   
--   服務叫用：要求/回應和單向訊息。  
+-   服務引動過程：要求/回覆和單向訊息。  
   
 -   繫結：Svcutil.exe 支援的所有繫結。  
   
@@ -156,7 +156,7 @@ Windows Communication Foundation (WCF) 測試用戶端 (WcfTestClient.exe) 是�
   
 -   安全性：[!INCLUDE[infocard](../../../includes/infocard-md.md)]、憑證和使用者名稱/密碼。  
   
--   繫結：WSFederationbinding、任何 Context 繫結和 Https 繫結、WebHttpbinding (Json 回應訊息支援)。  
+-   繫結：WSFederationbinding、 任何內容繫結和 Https 繫結、 WebHttpbinding （Json 回應訊息支援）。  
   
 ## <a name="closing-wcf-test-client"></a>關閉 WCF 測試用戶端  
  您可以透過下列方式來關閉 WCF 測試用戶端：  

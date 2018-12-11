@@ -1,16 +1,15 @@
 ---
 title: 集合方針
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3571ebb2fdd2bcdfd8be1f0087d096e01f18790a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+author: KrzysztofCwalina
+ms.openlocfilehash: 12f086ac92b449e074b9d39a563a20a3ebf2ff26
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964829"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145578"
 ---
 # <a name="guidelines-for-collections"></a>集合方針
 任何型別，專門設計來管理一組具有一些共同的特性的物件可以視為一個集合。 幾乎都是實作這種類型的適當<xref:System.Collections.IEnumerable>或<xref:System.Collections.Generic.IEnumerable%601>，所以在本節中，我們只考慮實作一個或多個這些介面的型別是集合。  
@@ -109,7 +108,7 @@ ms.locfileid: "45964829"
  **X DO NOT** 例如繼承自非泛型基底集合 `CollectionBase`。 使用`Collection<T>`， `ReadOnlyCollection<T>`，和`KeyedCollection<TKey,TItem>`改。  
   
 ### <a name="naming-custom-collections"></a>命名自訂集合  
- 集合 (型別都會實作`IEnumerable`) 會建立主要的原因有二: (1) 若要建立新的資料結構與結構特定作業通常比現有的資料結構的不同效能特性 (例如<xref:System.Collections.Generic.List%601>，<xref:System.Collections.Generic.LinkedList%601>， <xref:System.Collections.Generic.Stack%601>)，以及 (2) 若要建立特製化的集合，用於保存一組特定的項目 (例如<xref:System.Collections.Specialized.StringCollection>)。 在內部實作應用程式和程式庫中最常使用的資料結構。 特製化的集合是主要是為了公開 Api 中 （屬性和參數的型別）。  
+ 集合 (型別都會實作`IEnumerable`) 會建立主要的原因有二：（1） 若要建立新的資料結構與結構特定作業通常比現有的資料結構的不同效能特性 (例如<xref:System.Collections.Generic.List%601>， <xref:System.Collections.Generic.LinkedList%601>， <xref:System.Collections.Generic.Stack%601>)，以及 （2） 若要建立特製化的集合保存一組特定的項目 (例如<xref:System.Collections.Specialized.StringCollection>)。 在內部實作應用程式和程式庫中最常使用的資料結構。 特製化的集合是主要是為了公開 Api 中 （屬性和參數的型別）。  
   
  **✓ DO** 抽象層實作名稱中使用 「 字典 」 尾碼 `IDictionary` 或 `IDictionary<TKey,TValue>`。  
   
@@ -127,7 +126,7 @@ ms.locfileid: "45964829"
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
+ *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
   
 ## <a name="see-also"></a>另請參閱
 

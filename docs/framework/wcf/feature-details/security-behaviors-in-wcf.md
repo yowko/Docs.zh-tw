@@ -3,11 +3,11 @@ title: WCF 中的安全性行為
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
 ms.openlocfilehash: 221e9cb23e05378b68e4b53bc9d678c119738af5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192898"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127416"
 ---
 # <a name="security-behaviors-in-wcf"></a>WCF 中的安全性行為
 在 Windows Communication Foundation (WCF) 中，行為會修改服務層級或端點層級的執行階段行為。 (如需行為的詳細資訊在一般情況下，請參閱[指定服務執行階段行為](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)。)*安全性行為*可控制認證、 驗證、 授權和稽核記錄。 您可以藉由程式設計的方式或透過組態的方式使用這些行為。 本主題將著重於設定下列與安全性功能相關的行為：  
@@ -53,10 +53,10 @@ ms.locfileid: "50192898"
 ### <a name="servicecertificate-element"></a>\<v > 項目  
  使用此項目指定 X.509 憑證，而該憑證將用以驗證使用訊息安全性模式的用戶端服務。 如果您是使用會定期更新的憑證，則其指紋將會變更。 在這種情況下，請使用主體名稱當成 `X509FindType`，因為憑證可以使用相同的主體名稱重新發出。  
   
- 如需使用元素的詳細資訊，請參閱[How to: Specify Client Credential Values](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
+ 如需使用元素的詳細資訊，請參閱[How to:指定用戶端認證值](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
   
 ### <a name="certificate-of-clientcertificate-element"></a>\<憑證 > 的\<clientCertificate > 項目  
- 使用[\<憑證 >](../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md)項目時，服務必須具有用戶端的憑證，進而與用戶端安全通訊。 這種情況發生在使用雙工通訊模式時。 在較為典型的要求-回覆模式下，用戶端會在要求中納入其憑證，以便讓服務使用此憑證安全地將回覆傳回用戶端。 不過，雙工通訊模式便沒有要求和回覆。 由於服務無法從通訊中推斷用戶端的憑證，服務即需要用戶端的憑證，以便與用戶端安全地傳遞訊息。 您必須以頻外的方式來取得用戶端的憑證，並使用此元素來指定憑證。 如需有關雙工服務的詳細資訊，請參閱[如何： 建立雙工合約](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)。  
+ 使用[\<憑證 >](../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md)項目時，服務必須具有用戶端的憑證，進而與用戶端安全通訊。 這種情況發生在使用雙工通訊模式時。 在較為典型的要求-回覆模式下，用戶端會在要求中納入其憑證，以便讓服務使用此憑證安全地將回覆傳回用戶端。 不過，雙工通訊模式便沒有要求和回覆。 由於服務無法從通訊中推斷用戶端的憑證，服務即需要用戶端的憑證，以便與用戶端安全地傳遞訊息。 您必須以頻外的方式來取得用戶端的憑證，並使用此元素來指定憑證。 如需有關雙工服務的詳細資訊，請參閱[How to:建立雙工合約](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)。  
   
 ### <a name="authentication-of-clientcertificate-element"></a>\<驗證 > 的\<clientCertificate > 項目  
  [\<驗證 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)項目可讓您自訂用戶端驗證的方式。 您可以將 `CertificateValidationMode` 屬性 (Attribute) 設定為 `None`、`ChainTrust`、`PeerOrChainTrust`、`PeerTrust` 或 `Custom`。 根據預設，層級設定為`ChainTrust`，指定每個憑證必須位於結尾中的憑證階層*根授權單位*在鏈結頂端。 這是最安全的模式。 您也可以將值設定為 `PeerOrChainTrust`，指定可接受自行發出的憑證 (對等信任)，以及信任鏈結內的憑證。 這個值會在開發及偵錯用戶端和服務時使用，因為自行發出的憑證不需要從受信任的授權單位購買。 部署用戶端時，請改用 `ChainTrust` 值。 您也可以將值設定為 `Custom`。 設定為 `Custom` 值時，您還必須將 `CustomCertificateValidatorType` 屬性設定為可用來驗證憑證的組件與型別。 若要建立自己的自訂驗證程式，您必須繼承自抽象 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 類別。  
@@ -84,7 +84,7 @@ ms.locfileid: "50192898"
   
  如需詳細資訊，請參閱<xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>。  
   
- 如需使用這個組態項目的詳細資訊，請參閱[如何： 在 Federation Service 上的 設定認證](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)。  
+ 如需使用這個組態項目的詳細資訊，請參閱[How to:Federation Service 上設定認證](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)。  
   
 #### <a name="allowing-anonymous-cardspace-users"></a>允許匿名的 CardSpace 使用者  
  將 `AllowUntrustedRsaIssuers` 項目的 `<IssuedTokenAuthentication>` 屬性設定為 `true`，以明確地允許任何用戶端提出以任一 RSA 金鑰組所簽署之自行發行的權杖。 簽發者*未受信任*因為索引鍵沒有任何與其相關聯的簽發者資料。 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 使用者可以建立自動發行資訊卡，其中包含自行提供的身分識別宣告。 使用這個功能時必須要很小心。 若要使用此功能，請考慮使用 RSA 公開金鑰做為更安全的密碼，這個金鑰應該與使用者名稱一起儲存在資料庫中。 允許用戶端存取服務之前，請確認用戶端所提出的 RSA 公開金鑰，此動作可透過將用戶端所提出的 RSA 公開金鑰與所呈現之使用者名稱對應的儲存公開金鑰進行比較來達成。 這個情況是假設您已建立註冊程式，以便讓使用者註冊其使用者名稱，並將其與自行發行的 RSA 公開金鑰產生關聯。  
@@ -115,13 +115,13 @@ ms.locfileid: "50192898"
 ```  
   
 #### <a name="clientcertifictate-element"></a>\<clientCertifictate > 項目  
- 使用此項目來設定用以驗證用戶端的憑證。 如需詳細資訊，請參閱 < [How to: Specify Client Credential Values](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
+ 使用此項目來設定用以驗證用戶端的憑證。 如需詳細資訊，請參閱[＜How to：指定用戶端認證值](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
   
 #### <a name="httpdigest"></a>\<httpDigest >  
  此功能必須與 Windows 和 Internet Information Services (IIS) 上的 Active Directory 一起啟用。 如需詳細資訊，請參閱 <<c0> [ 在 IIS 6.0 中的摘要式驗證](https://go.microsoft.com/fwlink/?LinkId=88443)。  
   
 #### <a name="issuedtoken-element"></a>\<issuedToken > 項目  
- [ \<IssuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)包含用來設定本機簽發者的權杖或搭配安全性權杖服務的行為項目。 如需設定用戶端使用本機簽發者的指示，請參閱[如何： 設定本機簽發者](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)。  
+ [ \<IssuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)包含用來設定本機簽發者的權杖或搭配安全性權杖服務的行為項目。 如需設定用戶端使用本機簽發者的指示，請參閱[How to:設定本機簽發者](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)。  
   
 #### <a name="localissueraddress"></a>\<localIssuerAddress >  
  指定預設的安全性權杖服務位址。 這用時<xref:System.ServiceModel.WSFederationHttpBinding>並不提供的 URL 安全性權杖服務，或是聯合繫結的簽發者位址是 `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` 或 `null` 。 在這種情形下，<xref:System.ServiceModel.Description.ClientCredentials> 必須設定本機簽發者的位址，以及用於與該簽發者進行通訊的繫結。  
@@ -144,7 +144,7 @@ ms.locfileid: "50192898"
   
  使用[ \<scopedCertificates >](../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md)並[\<新增 >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md)設定特定服務相關聯的服務憑證。 `<add>` 項目包含 `targetUri` 屬性，此屬性是用於將憑證與服務產生關聯。  
   
- [\<驗證 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)項目會指定用來驗證憑證的信任層級。 根據預設，層級會設為 "ChainTrust"，指定每一個憑證必須出現在鏈結頂端以受信任的憑證授權單位為結尾的憑證階層中。 這是最安全的模式。 您也可以將其值設定為 "PeerOrChainTrust"，指定可接受自行簽發的憑證 (對等信任)，以及信任鏈結內的憑證。 這個值會在開發及偵錯用戶端和服務時使用，因為自行發出的憑證不需要從受信任的授權單位購買。 部署用戶端時，請改用 "ChainTrust" 值。 您也可以將值設定為 "Custom" 或 "None"。 若要使用 "Custom" 值，您必須同時將 `CustomCertificateValidatorType` 屬性設為可用來驗證憑證的組件與型別。 若要建立自己的自訂驗證程式，您必須繼承自抽象 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 類別。 如需詳細資訊，請參閱 <<c0> [ 如何： 建立使用自訂憑證驗證程式服務](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)。  
+ [\<驗證 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)項目會指定用來驗證憑證的信任層級。 根據預設，層級會設為 "ChainTrust"，指定每一個憑證必須出現在鏈結頂端以受信任的憑證授權單位為結尾的憑證階層中。 這是最安全的模式。 您也可以將其值設定為 "PeerOrChainTrust"，指定可接受自行簽發的憑證 (對等信任)，以及信任鏈結內的憑證。 這個值會在開發及偵錯用戶端和服務時使用，因為自行發出的憑證不需要從受信任的授權單位購買。 部署用戶端時，請改用 "ChainTrust" 值。 您也可以將值設定為 "Custom" 或 "None"。 若要使用 "Custom" 值，您必須同時將 `CustomCertificateValidatorType` 屬性設為可用來驗證憑證的組件與型別。 若要建立自己的自訂驗證程式，您必須繼承自抽象 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 類別。 如需詳細資訊，請參閱[＜How to：建立使用自訂憑證驗證程式服務](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)。  
   
  [\<驗證 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)項目包含`RevocationMode`屬性，指定如何檢查憑證撤銷。 預設為 "online"，指出會自動檢查該憑證是否已被撤銷。 如需詳細資訊，請參閱 < [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 343e8dda-70b2-409d-9334-ce9a880c3cea
-ms.openlocfilehash: 4db511d74c4cce82bfd010f77cb1580dbb704b41
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1dc74eb9c196efba329f7054b1f78d9c3b69b32c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501894"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153497"
 ---
 # <a name="query-expression-syntax-examples-join-operators"></a>查詢運算式語法範例：聯結運算子
 在以彼此沒有可瀏覽關聯性之資料來源 (例如關聯式資料庫資料表) 為目標的查詢中，聯結 (Join) 是一項重要的作業。 兩個資料來源的聯結是指某個資料來源中的物件與另一個資料來源中共用相同屬性之物件的關聯。 如需詳細資訊，請參閱 <<c0> [ 標準查詢運算子概觀](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。  
@@ -32,12 +32,6 @@ ms.locfileid: "43501894"
   
 ### <a name="example"></a>範例  
  下列範例會在 Contact 和 SalesOrderHeader 資料表上執行 <xref:System.Linq.Enumerable.GroupJoin%2A> 來尋找每一連絡人的定單數目。 然後顯示每一連絡人的訂單數目和 ID。  
-  
- [!code-csharp[DP L2E Examples#GroupJoin](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#groupjoin)]
- [!code-vb[DP L2E Examples#GroupJoin](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#groupjoin)]  
-  
-### <a name="example"></a>範例  
- 下列範例會針對 Contact 和 SalesOrderHeader 資料表執行 <xref:System.Linq.Enumerable.GroupJoin%2A>。 群組聯結是左外部聯結的對等項目，它會傳回第一個 (左) 資料來源的每個項目，即使其他資料來源中沒有相互關聯的項目也一樣。  
   
  [!code-csharp[DP L2E Examples#GroupJoin](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#groupjoin)]
  [!code-vb[DP L2E Examples#GroupJoin](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#groupjoin)]  

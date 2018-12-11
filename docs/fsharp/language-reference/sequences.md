@@ -1,18 +1,18 @@
 ---
 title: 序列 (F#)
-description: 了解如何使用 F# 時序，當您使用較大，已排序集合的資料，但不一定會預期要使用的所有項目。
+description: 了解如何使用F#序列，當您使用較大，已排序的資料的集合，但不一定會預期要使用的所有項目。
 ms.date: 05/16/2016
-ms.openlocfilehash: cfe8d1e350a8ac46b7700c12aa84d250f8b35855
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 835aa5fdc32f98efdc7e1795efd09541a5f1b791
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48838899"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129203"
 ---
 # <a name="sequences"></a>序列
 
 > [!NOTE]
-本文中的 API 參考連結將帶您前往 MSDN。  docs.microsoft.com API 參考不完整。
+> 本文中的 API 參考連結將帶您前往 MSDN。  docs.microsoft.com API 參考不完整。
 
 A*順序*是邏輯的一連串的項目所有的一種類型。 當您使用較大，已排序集合的資料，但不是一定會使用所有的項目時，順序會特別有用。 個別序列項目會計算只做為必要項，因此序列可以提供較佳的效能比在中，並非所有項目所使用的情況下的清單。 序列由`seq<'T>`類型，這是別名的`System.Collections.Generic.IEnumerable`。 因此，任何.NET Framework 型別可實作`System.IEnumerable`可用來當做一系列。 [Seq 模組](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)支援牽涉到序列的操作。
 
@@ -22,7 +22,7 @@ A*序列運算式*是評估為一連串的運算式。 循序項運算式可以�
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1502.fs)]
 
-循序項運算式會組成 F# 運算式會產生序列的值。 他們可以使用`yield`關鍵字來產生值，成為順序的一部分。
+循序項運算式組成F#產生的序列值的運算式。 他們可以使用`yield`關鍵字來產生值，成為順序的一部分。
 
 以下是範例。
 
@@ -62,7 +62,7 @@ A*序列運算式*是評估為一連串的運算式。 循序項運算式可以�
 
 序列支援許多功能都與相同[列出](lists.md)。 序列也支援等分組，並且使用索引鍵產生函式來計算作業。 序列也會支援不同的函式來擷取子序列。
 
-許多資料類型，例如清單、 陣列、 集合和對應是以隱含方式序列，因為它們是可列舉集合。 序列，當成引數適用於任何一般 F# 資料類型，除了可實作任何.NET Framework 資料型別的函式`System.Collections.Generic.IEnumerable<'T>`。 與此相反接受清單做為引數只能接受清單的函式。 型別`seq<'T>`是類型縮寫`IEnumerable<'T>`。 這表示，任何型別實作泛型`System.Collections.Generic.IEnumerable<'T>`，其中包括陣列、 清單、 設定和中 F# 和也大部分.NET Framework 集合類型，對應相容`seq`輸入，然後就可以使用預期的順序。
+許多資料類型，例如清單、 陣列、 集合和對應是以隱含方式序列，因為它們是可列舉集合。 序列，當成引數搭配任一一個常見的函式F#資料類型，除了可實作任何.NET Framework 資料型別`System.Collections.Generic.IEnumerable<'T>`。 與此相反接受清單做為引數只能接受清單的函式。 型別`seq<'T>`是類型縮寫`IEnumerable<'T>`。 這表示，任何型別實作泛型`System.Collections.Generic.IEnumerable<'T>`，其中包括陣列、 清單、 設定，並對應中的F#，和也大部分.NET Framework 集合類型，適用於`seq`輸入，然後就可以使用預期的順序.
 
 ## <a name="module-functions"></a>模組函式
 
@@ -120,7 +120,7 @@ The sequence fib contains Fibonacci numbers.
 
 ## <a name="searching-and-finding-elements"></a>搜尋和尋找項目
 
-序列支援功能的清單： [Seq.exists](https://msdn.microsoft.com/library/428c97bf-599d-4c39-a5b9-f8717c198ad1)， [Seq.exists2](https://msdn.microsoft.com/library/efdf14a4-27f7-4dc1-9281-52639e66d565)， [Seq.find](https://msdn.microsoft.com/library/02c21ecd-97e5-4e99-a4c1-b4d0b730b7d8)， [Seq.findIndex](https://msdn.microsoft.com/library/96dfe86b-df15-4d92-8316-7cd6055e09f3)， [Seq.pick](https://msdn.microsoft.com/library/a87bc771-55f7-43f9-94f9-33d8f9bf325d)， [Seq.tryFind](https://msdn.microsoft.com/library/ac43c6f5-4dc7-4e9a-a222-00b5736aee47)，以及[Seq.tryFindIndex](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a)。 這些函式可供順序版本評估只到要搜尋的項目序列。 如需範例，請參閱[列出](https://msdn.microsoft.com/library/83102799-f251-42e1-93ef-64232e8c5b1d)。
+序列支援適用於清單的功能：[Seq.exists](https://msdn.microsoft.com/library/428c97bf-599d-4c39-a5b9-f8717c198ad1)， [Seq.exists2](https://msdn.microsoft.com/library/efdf14a4-27f7-4dc1-9281-52639e66d565)， [Seq.find](https://msdn.microsoft.com/library/02c21ecd-97e5-4e99-a4c1-b4d0b730b7d8)， [Seq.findIndex](https://msdn.microsoft.com/library/96dfe86b-df15-4d92-8316-7cd6055e09f3)， [Seq.pick](https://msdn.microsoft.com/library/a87bc771-55f7-43f9-94f9-33d8f9bf325d)， [Seq.tryFind](https://msdn.microsoft.com/library/ac43c6f5-4dc7-4e9a-a222-00b5736aee47)，並[Seq.tryFindIndex](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a)。 這些函式可供順序版本評估只到要搜尋的項目序列。 如需範例，請參閱[列出](https://msdn.microsoft.com/library/83102799-f251-42e1-93ef-64232e8c5b1d)。
 
 ## <a name="obtaining-subsequences"></a>取得子序列
 

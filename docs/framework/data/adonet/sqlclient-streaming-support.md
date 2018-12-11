@@ -2,12 +2,12 @@
 title: SqlClient 資料流支援
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: 7c9c7300678b9e285965a3c1b673a92b6f26973e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a393274a7cf40b01399c5909c2d5ec4097ec9310
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191034"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152886"
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient 資料流支援
 串流應用程式和 SQL Server 之間的支援 (新[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) 支援 （文件、 影像和媒體檔案） 的伺服器上的非結構化的資料。 SQL Server 資料庫可以儲存二進位大型物件 (Blob)，但擷取 BLOB，可以使用大量記憶體。  
@@ -76,7 +76,7 @@ ms.locfileid: "50191034"
 ## <a name="sample----streaming-from-sql-server"></a>從 SQL Server 中串流範例-  
  使用下列 [!INCLUDE[tsql](../../../../includes/tsql-md.md)] 建立範例資料庫：  
   
-```  
+```sql
 CREATE DATABASE [Demo]  
 GO  
 USE [Demo]  
@@ -105,7 +105,7 @@ GO
   
 -   大型檔案 (Blob) 從一個 SQL Server 資料庫傳送到另一個記憶體充足。  
   
-```  
+```csharp
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -297,7 +297,7 @@ namespace StreamingFromServer {
 ## <a name="sample----streaming-to-sql-server"></a>範例--串流到 SQL Server  
  使用下列 [!INCLUDE[tsql](../../../../includes/tsql-md.md)] 建立範例資料庫：  
   
-```  
+```sql
 CREATE DATABASE [Demo2]  
 GO  
 USE [Demo2]  
@@ -330,7 +330,7 @@ GO
   
 -   從一部 SQL Server 串流處理到另一個使用新的非同步功能。  
   
-```  
+```csharp
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -453,7 +453,7 @@ namespace StreamingToServer {
 ## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a>範例--從一部 SQL Server 串流處理到其他 SQL Server  
  此範例示範如何以非同步方式傳送資料流到另一個，同時支援取消作業將大型 BLOB 從一個 SQL Server。  
   
-```  
+```csharp
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  

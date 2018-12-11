@@ -4,12 +4,12 @@ description: 將現有的.NET 應用程式使用 Azure 雲端和 Windows 容器�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: c4d3eaa50f6c7645c954ca65bf42c6c1eab3a68d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: c4eeb5606d3ea93b76efee58ddfecae0abbbd743
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070782"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128176"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>現代化您的應用程式生命週期 CI/CD 管線與雲端中的 DevOps 工具
 
@@ -36,5 +36,5 @@ Azure 的 DevOps 服務支援持續整合和多容器應用程式部署到各種
 > **圖 4 到 12 個。** Azure 的 DevOps 服務持續部署管線，將部署到 Kubernetes 叢集
 
 >[!div class="step-by-step"]
-[上一頁](modernize-your-apps-with-monitoring-and-telemetry.md)
-[下一頁](migrate-to-hybrid-cloud-scenarios.md)
+>[上一頁](modernize-your-apps-with-monitoring-and-telemetry.md)
+>[下一頁](migrate-to-hybrid-cloud-scenarios.md)

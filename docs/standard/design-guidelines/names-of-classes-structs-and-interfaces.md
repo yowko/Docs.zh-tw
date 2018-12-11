@@ -1,6 +1,6 @@
 ---
 title: 類別、結構和介面的名稱
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 helpviewer_keywords:
 - type names, guidelines
 - classes [.NET Framework], names
@@ -12,14 +12,13 @@ helpviewer_keywords:
 - interfaces [.NET Framework], names
 - generic type parameters
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0c56f840bc5ebd5070c9b686384751acab3f0203
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+author: KrzysztofCwalina
+ms.openlocfilehash: ce0daae9b5994808a6ef5d35f09533d96d1d697f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47454324"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127936"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>類別、結構和介面的名稱
 請依照下列命名方針適用於一般類型命名。  
@@ -99,7 +98,7 @@ public interface ISessionChannel<TSession> where TSession : ISession {
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
+ *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
   
 ## <a name="see-also"></a>另請參閱
 

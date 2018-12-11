@@ -5,11 +5,11 @@ helpviewer_keywords:
 - message security [WCF]
 ms.assetid: e681f3bd-0c09-4a58-b0e4-0ecbdf1aa6c7
 ms.openlocfilehash: 05dc9c810d2e8ba64c4dcf21d83e91f8a61225a1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190875"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148843"
 ---
 # <a name="securing-services-and-clients"></a>確保服務與用戶端的安全
 在本節中的資訊，著重於程式設計 Windows Communication Foundation (WCF) 中的安全性。 一般來說，此安全性包括選取適當之系統提供的繫結、設定安全性項目的屬性，以及設定服務行為的屬性，而這些服務行為則會管理擷取認證以用於服務或用戶端的方法。 這些技術涵蓋了大部分的情況下，大多數使用者的安全性需求，如中所示[常見的安全性案例](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)。 如果您的案例需要更多的功能，第一次看到[自訂繫結的安全性功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md); 如果方案不明顯，請參閱[擴充安全性](../../../../docs/framework/wcf/extending/extending-security.md)。 如果您要建立 （或與交互操作） 的系統，使用豐富的宣告，請參閱中的主題[授權](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)。  

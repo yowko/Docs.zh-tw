@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 864367e71f3ed05af87931b2a87f576df42dcbf5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 73f96ea8cf215c1392857635e85556f530784397
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390688"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147648"
 ---
 # <a name="invalidapartmentstatechange-mda"></a>invalidApartmentStateChange MDA
 `invalidApartmentStateChange` Managed 偵錯助理 (MDA) 是由下列兩個問題之一所啟動：  
@@ -63,7 +63,7 @@ ms.locfileid: "33390688"
 ## <a name="example"></a>範例  
  下列程式碼範例示範可以啟動此 MDA 的情況。  
   
-```  
+```csharp
 using System.Threading;  
 namespace ApartmentStateMDA  
 {  

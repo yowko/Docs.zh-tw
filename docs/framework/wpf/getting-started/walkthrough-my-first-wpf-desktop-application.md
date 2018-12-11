@@ -1,6 +1,6 @@
 ---
 title: 在 Visual Studio 中建立 WPF 應用程式
-ms.date: 04/12/2018
+ms.date: 10/26/2018
 dev_langs:
 - csharp
 - vb
@@ -11,16 +11,16 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: 1a9c82a0bca25fa1242b29393e41e6eb4ce7f3b9
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.openlocfilehash: 6ea5997906c0bf34de67a6a125552d2b2c4e1a43
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46007252"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150741"
 ---
-# <a name="walkthrough-my-first-wpf-desktop-application"></a>逐步解說：我的第一個 WPF 桌面應用程式
+# <a name="walkthrough-my-first-wpf-desktop-application"></a>逐步解說：我第一個 WPF 桌面應用程式
 
-這篇文章會示範如何開發簡單的 Windows Presentation Foundation (WPF) 應用程式，其中包含大部分的 WPF 應用程式通用的項目： Extensible Application Markup Language (XAML) 標記、 程式碼後置、 應用程式定義控制項、 版面配置、 資料繫結和樣式。
+這篇文章會示範如何開發簡單的 Windows Presentation Foundation (WPF) 應用程式，其中包含大部分的 WPF 應用程式通用的項目：Extensible Application Markup Language (XAML) 標記、 程式碼後置、 應用程式定義、 控制項、 版面配置、 資料繫結和樣式。
 
 本逐步解說包含下列步驟：
 
@@ -43,7 +43,7 @@ ms.locfileid: "46007252"
 
 ## <a name="prerequisites"></a>必要條件
 
-- Visual Studio 2012 或更新版本 （這篇文章根據 Visual Studio 2017）
+- Visual Studio 2017 或更新版本
 
    如需有關如何安裝最新版的 Visual Studio 的詳細資訊，請參閱 <<c0> [ 安裝 Visual Studio](/visualstudio/install/install-visual-studio)。
 
@@ -57,7 +57,7 @@ ms.locfileid: "46007252"
 
       **新的專案** 對話方塊隨即開啟。
 
-   2. 底下**已安裝**分類中，展開**Visual C#** 或**Visual Basic**節點，然後再選取**Windows 傳統桌面**。
+   2. 底下**已安裝**分類中，展開**視覺化C#** 或**Visual Basic**節點，，然後選取**Windows 桌面**。
 
    3. 選取  **WPF 應用程式 (.NET Framework)** 範本。 輸入名稱**`ExpenseIt`** ，然後選取**確定**。
 
@@ -66,7 +66,7 @@ ms.locfileid: "46007252"
       Visual Studio 會建立專案並開啟名為預設應用程式視窗的設計工具**MainWindow.xaml**。
 
    > [!NOTE]
-   > 本逐步解說使用<xref:System.Windows.Controls.DataGrid>可在.NET Framework 4 及更新版本的控制項。 為確定您的專案目標.NET Framework 4 或更新版本。 如需詳細資訊，請參閱[如何：以 .NET Framework 版本為目標](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)。
+   > 本逐步解說使用<xref:System.Windows.Controls.DataGrid>可在.NET Framework 4 及更新版本的控制項。 為確定您的專案目標.NET Framework 4 或更新版本。 如需詳細資訊，請參閱[＜How to：以.NET framework 版本為目標](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)。
 
 2. 開啟*Application.xaml* (Visual Basic) 或*App.xaml* (C#)。
 
@@ -254,7 +254,7 @@ ms.locfileid: "46007252"
 
     [!code-xaml[ExpenseIt#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt3/ExpenseItHome.xaml#8)]
 
-    <xref:System.Windows.Controls.RowDefinition.Height%2A>兩個資料列設<xref:System.Windows.GridLength.Auto%2A>，也就是說，資料列的大小調整的基礎資料列中的內容。 預設值<xref:System.Windows.Controls.RowDefinition.Height%2A>是<xref:System.Windows.GridUnitType.Star>調整大小，這表示資料列高度的可用空間的加權的比例。 例如，如果兩個資料列有<xref:System.Windows.Controls.RowDefinition.Height%2A>的 「 * 」，它們都各自具有的高度都是可用空間的一半。
+    <xref:System.Windows.Controls.RowDefinition.Height%2A>兩個資料列設<xref:System.Windows.GridLength.Auto%2A>，這表示資料列的大小調整為基礎的資料列中的內容。 預設值<xref:System.Windows.Controls.RowDefinition.Height%2A>是<xref:System.Windows.GridUnitType.Star>調整大小，這表示資料列高度的可用空間的加權的比例。 例如，如果兩個資料列有<xref:System.Windows.Controls.RowDefinition.Height%2A>的 「 * 」，它們都各自具有的高度都是可用空間的一半。
 
     您<xref:System.Windows.Controls.Grid>現在看起來應該像下列 XAML:
 
@@ -327,7 +327,7 @@ ms.locfileid: "46007252"
 
 1. 開啟*`ExpenseItHome.xaml`*。
 
-2. 新增<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件處理常式來<xref:System.Windows.Controls.Button>項目。 如需詳細資訊，請參閱 <<c0> [ 如何： 建立簡單的事件處理常式](https://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480)。
+2. 新增<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件處理常式來<xref:System.Windows.Controls.Button>項目。 如需詳細資訊，請參閱[＜How to：建立簡單的事件處理常式](https://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480)。
 
     [!code-xaml[ExpenseIt#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]
 
@@ -353,7 +353,7 @@ ms.locfileid: "46007252"
 3. 建置並執行應用程式。
 
     > [!NOTE]
-    > 如果您收到錯誤指出<xref:System.Windows.Controls.DataGrid>找不到或不存在，請確定您的專案目標.NET Framework 4 或更新版本。 如需詳細資訊，請參閱[如何：以 .NET Framework 版本為目標](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)。
+    > 如果您收到錯誤指出<xref:System.Windows.Controls.DataGrid>找不到或不存在，請確定您的專案目標.NET Framework 4 或更新版本。 如需詳細資訊，請參閱[＜How to：以.NET framework 版本為目標](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)。
 
 4. 選取 [**檢視**] 按鈕。
 
@@ -375,17 +375,17 @@ ms.locfileid: "46007252"
 
     這個 XAML 會加入下列樣式：
 
-    - `headerTextStyle`：格式化頁面標題 <xref:System.Windows.Controls.Label>。
+    - `headerTextStyle`：若要格式化頁面標題<xref:System.Windows.Controls.Label>。
 
-    - `labelStyle`：格式化 <xref:System.Windows.Controls.Label> 控制項。
+    - `labelStyle`：若要格式化<xref:System.Windows.Controls.Label>控制項。
 
-    - `columnHeaderStyle`：格式化 <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>。
+    - `columnHeaderStyle`：若要格式化<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>。
 
-    - `listHeaderStyle`：格式化清單標頭 <xref:System.Windows.Controls.Border> 控制項。
+    - `listHeaderStyle`：若要格式化清單標頭<xref:System.Windows.Controls.Border>控制項。
 
-    - `listHeaderTextStyle`： 若要格式化清單標頭<xref:System.Windows.Controls.Label>。
+    - `listHeaderTextStyle`：若要格式化清單標頭<xref:System.Windows.Controls.Label>。
 
-    - `buttonStyle`： 用來格式化<xref:System.Windows.Controls.Button>上`ExpenseItHome.xaml`。
+    - `buttonStyle`：若要格式化<xref:System.Windows.Controls.Button>上`ExpenseItHome.xaml`。
 
     請注意，樣式是資源和子系<xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType>屬性項目。 在這裡，樣式會套用至應用程式中的所有元素。 如需在.NET Framework 應用程式中使用資源的範例，請參閱[使用應用程式資源](../../../../docs/framework/wpf/advanced/how-to-use-application-resources.md)。
 

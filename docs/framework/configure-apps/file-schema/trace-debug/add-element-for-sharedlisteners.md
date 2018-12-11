@@ -10,28 +10,30 @@ helpviewer_keywords:
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 93fdb548882422634e1d2456b4d37f434b278f8d
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 9e0a23411f4bc37a1e09460113d15f4861e0a190
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845368"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151157"
 ---
 # <a name="ltaddgt-element-for-ltsharedlistenersgt"></a>&lt;新增&gt;項目&lt;sharedListeners&gt;
 將接聽項新增至 `sharedListeners` 集合。 `sharedListeners` 是的接聽程式集合的任何[\<來源 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)或是[\<追蹤 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)可以參考。  根據預設，在 接聽程式`sharedListeners`集合不會放在`Listeners`集合。 它們必須依名稱加入[\<來源 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)或是[\<追蹤 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)。 不可能取得接聽程式`sharedListeners`在執行階段程式碼中的集合。  
   
  \<configuration>  
-\<system.diagnostics >  
-\<sharedListeners > 項目  
-\<add>  
+&nbsp;&nbsp;\<system.diagnostics >  
+&nbsp;&nbsp;&nbsp;&nbsp;\<sharedListeners > 項目  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<新增 >  
   
 ## <a name="syntax"></a>語法  
   
 ```xml  
 <add name="name"   
   type="TraceListenerClassName, Version, Culture, PublicKeyToken"  
-  initializeData="data"/>  
-```  
+  initializeData="data"
+  traceOutputOptions = "None"
+/>  
+```
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
  下列各節描述屬性、子項目和父項目。  
@@ -43,7 +45,8 @@ ms.locfileid: "48845368"
 |`name`|必要屬性。<br /><br /> 指定用來新增共用的接聽程式接聽程式名稱`Listeners`集合。|  
 |`type`|必要屬性。<br /><br /> 指定接聽程式的類型。 您必須使用符合在指定之需求的字串[指定完整的型別名稱](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。|  
 |`initializeData`|選擇性屬性。<br /><br /> 指定的類別，建構函式傳遞的字串。|  
-  
+|`traceOutputOptions`|選擇性屬性。<br/><br/>一或多個的字串表示<xref:System.Diagnostics.TraceOptions>列舉成員，表示要寫入至追蹤輸出的資料。 以逗號分隔多個項目。 預設值為"None"。|
+
 ### <a name="child-elements"></a>子元素  
   
 |項目|描述|  

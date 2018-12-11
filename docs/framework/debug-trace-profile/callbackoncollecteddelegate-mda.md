@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 398b0ce0-5cc9-4518-978d-b8263aa21e5b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0aa9ecd357a192eba64cc14f8940b264461b5e74
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8441e1b2c623126e844d8a641d7f002aef495e9d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356351"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145880"
 ---
 # <a name="callbackoncollecteddelegate-mda"></a>callbackOnCollectedDelegate MDA
 如果委派以函式指標形式從 Managed 程式碼封送處理至 Unmanaged 程式碼，而在對委派進行記憶體回收之後，將回呼放在該函式指標上，`callbackOnCollectedDelegate` Managed 偵錯助理 (MDA) 就會啟動。  
@@ -61,7 +61,7 @@ ms.locfileid: "33356351"
 ## <a name="example"></a>範例  
  下列範例示範可以啟動此 MDA 的情況：  
   
-```  
+```cpp
 // Library.cpp : Defines the unmanaged entry point for the DLL application.  
 #include "windows.h"  
 #include "stdio.h"  
@@ -76,8 +76,10 @@ void __stdcall Initialize(void __stdcall pfTarget())
 void __stdcall Callback()  
 {  
     g_pfTarget();  
-}  
-// ---------------------------------------------------  
+}
+```
+
+```csharp
 // C# Client  
 using System;  
 using System.Runtime.InteropServices;  

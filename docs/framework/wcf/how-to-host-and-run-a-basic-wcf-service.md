@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: b79c3246b7c12a3a99a5c68586387fc30573dcb6
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 710ccd69d7b0f8cd8cd3e04729fd952308a3fb4a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562290"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129372"
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>HOW TO：裝載和執行基本 Windows Communication Foundation 服務
 
@@ -149,7 +149,7 @@ End Module
 
 **步驟 4** – 啟用中繼資料交換。 用戶端會使用中繼資料交換來產生用於呼叫服務作業的 Proxy。 若要啟用中繼資料交換，請建立 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 執行個體，將其 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> 屬性設定為 `true`，並將行為新增至 <xref:System.ServiceModel.ServiceHost> 執行個體的 <!--zz <xref:System.ServiceModel.ServiceHost.Behaviors%2A>  -->`System.ServiceModel.ServiceHost.Behaviors%2A` 集合。
 
-**步驟 5** – 開啟<xref:System.ServiceModel.ServiceHost>來接聽內送訊息。 注意程式碼會等待使用者按下 Enter。 如果不這麼做，應用程式會立即關閉而服務也將關閉。另外也要注意使用的 try/catch 區塊。 在 <xref:System.ServiceModel.ServiceHost> 具現化之後，會將所有其他程式碼放置在 try/catch 區塊中。 如需安全攔截 <xref:System.ServiceModel.ServiceHost> 擲回之例外狀況的詳細資訊，請參閱[避免 Using 陳述式發生問題](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)
+**步驟 5** – 開啟<xref:System.ServiceModel.ServiceHost>來接聽內送訊息。 注意程式碼會等待使用者按下 Enter。 如果不這麼做，應用程式會立即關閉而服務也將關閉。另外也要注意使用的 try/catch 區塊。 在 <xref:System.ServiceModel.ServiceHost> 具現化之後，會將所有其他程式碼放置在 try/catch 區塊中。 如需安全攔截擲回例外狀況的詳細資訊<xref:System.ServiceModel.ServiceHost>，請參閱[使用關閉和中止發行 WCF 用戶端資源](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)
 
 > [!IMPORTANT]
 > 編輯 App.config 以反映在程式碼中所做的變更 GettingStartedLib 中：
@@ -403,7 +403,7 @@ End Module
 服務目前正在執行中。 在下一個工作中，您可以建立 WCF 用戶端。
 
 > [!div class="nextstepaction"]
-> [如何： 建立 WCF 用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+> [操作說明：建立 WCF 用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
 
 如需針對資訊進行疑難排解，請參閱[針對使用者入門教學課程進行疑難排解](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md)。
 

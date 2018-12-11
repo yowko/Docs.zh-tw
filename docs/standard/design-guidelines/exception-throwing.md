@@ -1,20 +1,19 @@
 ---
 title: 擲回例外狀況
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - exceptions, throwing
 - explicitly throwing exceptions
 - throwing exceptions, design guidelines
 ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9fbbe84811e3fa096b9e13c459143311bb75a198
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+author: KrzysztofCwalina
+ms.openlocfilehash: 016a42ee7a772a3268e823e75b6239467e13b315
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397903"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148038"
 ---
 # <a name="exception-throwing"></a>擲回例外狀況
 擲回例外狀況這一節所述的指導方針需要良好定義的執行失敗的意義。 每當成員不是什麼，就會發生執行失敗設計 （成員名稱有隱含意義）。 例如，如果`OpenFile`方法無法傳回給呼叫端的開啟的檔案控制代碼，它會被視為新的執行失敗。  
@@ -63,7 +62,7 @@ ms.locfileid: "47397903"
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
+ *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
   
 ## <a name="see-also"></a>另請參閱
 

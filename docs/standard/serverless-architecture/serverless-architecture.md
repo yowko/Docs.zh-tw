@@ -4,12 +4,12 @@ description: 探勘的各種架構和支援的無伺服器架構，包括 web �
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: ea944a172154a1cff2b8f830cb8fc3fa24a15028
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 5f22f8b9894a23e5920adb2af3fdf02bce2877d7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369742"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150299"
 ---
 # <a name="serverless-architecture"></a>無伺服器架構
 
@@ -42,7 +42,7 @@ WebJobs 核心提供函式的執行內容。 Language Runtime 會執行指令碼
 
 ![無伺服器的單體移轉](./media/serverless-monolith-migration.png)
 
-若要深入了解此方法，請觀看影片：[將應用程式帶至雲端，無伺服器 Azure Functions](https://channel9.msdn.com/Events/Connect/2017/E102)。
+若要深入了解此方法，觀看影片：[將應用程式帶至雲端，無伺服器 Azure Functions](https://channel9.msdn.com/Events/Connect/2017/E102)。
 
 ## <a name="web-apps"></a>Web 應用程式
 
@@ -74,5 +74,5 @@ IoT 是指透過網路連接在一起的實體物件。 它們是有時稱為 �
 IoT 普遍性導致數個無伺服器的產品，將特別著重在 IoT 考量，這類[Azure IoT 中樞](https://docs.microsoft.com/azure/iot-hub)。 無伺服器會自動執行工作，例如裝置註冊、 原則強制執行、 追蹤和甚至是部署到在裝置的程式碼*邊緣*。 邊緣是指例如感應器和傳動器要連線，但非作用中的一部分，網際網路的裝置。
 
 >[!div class="step-by-step"]
-[上一頁](architecture-approaches.md)
-[下一頁](serverless-architecture-considerations.md)
+>[上一頁](architecture-approaches.md)
+>[下一頁](serverless-architecture-considerations.md)

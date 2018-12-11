@@ -2,12 +2,12 @@
 title: 效能考量 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: d244c3e9c48aed1844a90f1f42d33a91edc80046
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8adf3a2787c47efd929ebc5c0198e13240c279ee
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520372"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130216"
 ---
 # <a name="performance-considerations-entity-framework"></a>效能考量 (Entity Framework)
 本主題說明 ADO.NET Entity Framework 的效能特性，並提供一些考量因素以協助提升 Entity Framework 應用程式的效能。  
@@ -19,8 +19,8 @@ ms.locfileid: "43520372"
 |---------------|-------------------|---------------|--------------|  
 |載入中繼資料|一般|在每個應用程式定義域中執行一次。|Entity Framework 使用的模型和對應中繼資料會載入至 <xref:System.Data.Metadata.Edm.MetadataWorkspace>。 這個中繼資料會在全域中作快取，並在相同的應用程式定義域中，提供給其他 <xref:System.Data.Objects.ObjectContext> 執行個體使用。|  
 |開啟資料庫連接|中度<sup>1</sup>|需要時。|資料庫的開啟連接會消耗寶貴的資源，因為[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]開啟和關閉資料庫連接，只有在必要時。 您也可以明確開啟連接。 如需詳細資訊，請參閱 <<c0> [ 管理連接和交易](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)。|  
-|產生檢視|High|在每個應用程式定義域中執行一次。 (可以預先產生。)|在 Entity Framework 可以針對概念模型執行查詢，或儲存變更至資料來源之前，Entity Framework 必須產生本地查詢檢視集，才能存取資料庫。 由於產生這些檢視的成本很高，您可以預先產生檢視，在設計階段就把這些檢視加入至專案。 如需詳細資訊，請參閱 <<c0> [ 如何： Pre-Generate 檢視，以改善查詢效能](https://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579)。|  
-|準備查詢|中度<sup>2</sup>|針對每個唯一查詢執行一次。|包括組成查詢命令、根據模型和對應的中繼資料產生命令樹，以及定義傳回資料的形式等成本。 由於現在會快取 Entity SQL 查詢命令和 LINQ 查詢，因此後續執行相同查詢時可減少些許時間。 之後執行時您仍可以使用已編譯的 LINQ 查詢減少這種成本，且已編譯查詢可能比自動快取的 LINQ 查詢更有效率。 如需詳細資訊，請參閱 <<c0> [ 編譯的查詢 (LINQ to Entities)](../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)。 如需 LINQ 查詢執行的一般資訊，請參閱[LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。 **注意︰** LINQ to Entities 查詢套用`Enumerable.Contains`至記憶體中集合的運算子不會自動快取。 此外也不允許在已編譯的 LINQ 查詢中參數化記憶體中的集合。|  
+|產生檢視|High|在每個應用程式定義域中執行一次。 (可以預先產生。)|在 Entity Framework 可以針對概念模型執行查詢，或儲存變更至資料來源之前，Entity Framework 必須產生本地查詢檢視集，才能存取資料庫。 由於產生這些檢視的成本很高，您可以預先產生檢視，在設計階段就把這些檢視加入至專案。 如需詳細資訊，請參閱[＜How to：預先產生檢視以改善查詢效能](https://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579)。|  
+|準備查詢|中度<sup>2</sup>|針對每個唯一查詢執行一次。|包括組成查詢命令、根據模型和對應的中繼資料產生命令樹，以及定義傳回資料的形式等成本。 由於現在會快取 Entity SQL 查詢命令和 LINQ 查詢，因此後續執行相同查詢時可減少些許時間。 之後執行時您仍可以使用已編譯的 LINQ 查詢減少這種成本，且已編譯查詢可能比自動快取的 LINQ 查詢更有效率。 如需詳細資訊，請參閱 <<c0> [ 編譯的查詢 (LINQ to Entities)](../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)。 如需 LINQ 查詢執行的一般資訊，請參閱[LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。 **注意：** 不會自動快取將 `Enumerable.Contains` 運算子套用至記憶體中集合的 LINQ to Entities 查詢。 此外也不允許在已編譯的 LINQ 查詢中參數化記憶體中的集合。|  
 |執行查詢|低<sup>2</sup>|針對每個查詢執行一次。|使用 ADO.NET 資料提供者，針對資料來源執行命令的成本。 由於大部分的資料來源都會對查詢計畫作快取，後續執行相同查詢命令可能會減少些許時間。|  
 |載入和使用型別|低<sup>3</sup>|針對每個 <xref:System.Data.Objects.ObjectContext> 執行個體執行一次。|載入型別，並針對概念模型定義的型別進行驗證。|  
 |追蹤|低<sup>3</sup>|針對每個查詢傳回的物件執行一次。 <sup>4</sup>|如果查詢使用 <xref:System.Data.Objects.MergeOption.NoTracking> 合併選項，這個階段不會影響效能。<br /><br /> 如果查詢使用 <xref:System.Data.Objects.MergeOption.AppendOnly>、<xref:System.Data.Objects.MergeOption.PreserveChanges> 或 <xref:System.Data.Objects.MergeOption.OverwriteChanges> 合併選項，會在 <xref:System.Data.Objects.ObjectStateManager> 中追蹤查詢結果。 針對查詢傳回的每一個已追蹤物件產生 <xref:System.Data.EntityKey>，並用來建立 <xref:System.Data.Objects.ObjectStateEntry> 中的 <xref:System.Data.Objects.ObjectStateManager>。 如果可以針對 <xref:System.Data.Objects.ObjectStateEntry>，找到現有的 <xref:System.Data.EntityKey>，則會回傳現有的物件。 如果使用 <xref:System.Data.Objects.MergeOption.PreserveChanges> 或 <xref:System.Data.Objects.MergeOption.OverwriteChanges> 選項，傳回前會先更新物件。<br /><br /> 如需詳細資訊，請參閱 <<c0> [ 識別解析、 狀態管理和變更追蹤](https://msdn.microsoft.com/library/3bd49311-0e72-4ea4-8355-38fe57036ba0)。|  
@@ -58,7 +58,7 @@ ms.locfileid: "43520372"
 -   針對概念模型進行的查詢看似簡單，但可能會導致針對資料來源執行更複雜的查詢。 發生這個問題的原因是 Entity Framework 會將針對概念模型的查詢轉譯為針對資料來源的同等查詢。 當概念模型中的單一實體集對應至資料來源中一個以上的資料表，或當實體之間的關聯性對應至聯結資料表時，針對資料來源查詢執行的查詢命令可能需要一個以上的聯結。  
   
     > [!NOTE]
-    >  請使用 <xref:System.Data.Objects.ObjectQuery.ToTraceString%2A> 的 <xref:System.Data.Objects.ObjectQuery%601> 方法或 <xref:System.Data.EntityClient.EntityCommand> 類別，檢視針對資料來源而執行之指定查詢的命令。 如需詳細資訊，請參閱 <<c0> [ 如何： 檢視存放命令](https://msdn.microsoft.com/library/f9771c6e-3b62-4b24-a5d4-55d68e14fa79)。  
+    >  請使用 <xref:System.Data.Objects.ObjectQuery.ToTraceString%2A> 的 <xref:System.Data.Objects.ObjectQuery%601> 方法或 <xref:System.Data.EntityClient.EntityCommand> 類別，檢視針對資料來源而執行之指定查詢的命令。 如需詳細資訊，請參閱[＜How to：檢視存放命令](https://msdn.microsoft.com/library/f9771c6e-3b62-4b24-a5d4-55d68e14fa79)。  
   
 -   巢狀 Entity SQL 查詢可在伺服器上建立聯結，並傳回大量資料列。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "43520372"
   
      此外，這類查詢會使查詢管線產生單一查詢，並重複跨巢狀查詢的物件。 因此，單一資料行可能會重複多次。 在某些些資料庫上 (包括 SQL Server)，這個工作會使 TempDB 資料表變得非常大，降低伺服器的效能。 您執行巢狀查詢時應特別注意。  
   
--   如果用戶端正在執行耗用資源與結果集大小成正比的作業，任何傳回大量資料的查詢可能會使效能降低。 在這種情況下，您應該考慮依查詢限制傳回的資料量。 如需詳細資訊，請參閱 <<c0> [ 如何： 查詢結果透過頁面](https://msdn.microsoft.com/library/ffc0f920-e7de-42e0-9b12-ef356421d030)。  
+-   如果用戶端正在執行耗用資源與結果集大小成正比的作業，任何傳回大量資料的查詢可能會使效能降低。 在這種情況下，您應該考慮依查詢限制傳回的資料量。 如需詳細資訊，請參閱[＜How to：逐頁檢視查詢結果](https://msdn.microsoft.com/library/ffc0f920-e7de-42e0-9b12-ef356421d030)。  
   
  由 Entity Framework 自動產生的任何命令，會比由資料庫開發人員明確撰寫的類似命令更為複雜。 如果您需要明確控制針對資料來源執行的命令，請考慮資料表值函式的對應或預存程序。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "43520372"
  查詢路徑會定義查詢傳回的物件圖形。 定義查詢路徑時，只需針對資料庫進行單一要求，即可傳回此路徑定義的所有物件。 使用查詢路徑可能會使表面上簡單的物件查詢變成要針對資料來源執行複雜的命令。 發生這種情況是因為必須進行一或多次聯結才能在單一查詢中傳回相關物件。 在針對複雜實體模型 (例如具有繼承的實體或包含多對多關聯性的路徑) 的查詢中，這種複雜性會變得更大。  
   
 > [!NOTE]
->  使用 <xref:System.Data.Objects.ObjectQuery.ToTraceString%2A> 方法可查看將會由 <xref:System.Data.Objects.ObjectQuery%601> 產生的命令。 如需詳細資訊，請參閱 <<c0> [ 如何： 檢視存放命令](https://msdn.microsoft.com/library/f9771c6e-3b62-4b24-a5d4-55d68e14fa79)。  
+>  使用 <xref:System.Data.Objects.ObjectQuery.ToTraceString%2A> 方法可查看將會由 <xref:System.Data.Objects.ObjectQuery%601> 產生的命令。 如需詳細資訊，請參閱[＜How to：檢視存放命令](https://msdn.microsoft.com/library/f9771c6e-3b62-4b24-a5d4-55d68e14fa79)。  
   
  如果查詢路徑包含太多相關物件，或是物件包含太多資料列資料，資料來源可能會無法完成查詢。 如果查詢需要超過資料來源能力的中繼暫時儲存體，就會發生這種情況。 發生這種情況時，請明確載入相關物件來降低資料來源查詢的複雜性。  
   
@@ -116,27 +116,27 @@ ms.locfileid: "43520372"
   
 -   包含針對 SQL Server 2000 資料庫或其他資料來源之作業的明確交易，永遠會將明確交易提升至 DTC。  
   
--   當連接是由 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 管理時，會執行包含針對 SQL Server 2005 之作業的明確交易。 發生這種情況，是因為每當單一交易內的連接關閉又重新開啟時，SQL Server 2005 會提升至 DTC，這是 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 的預設行為。 使用 SQL Server 2008 就不會發生 DTC 提升。 若要在使用 SQL Server 2005 時防止這個問題發生，您必須明確開啟和關閉異動內的連接。 如需詳細資訊，請參閱 <<c0> [ 管理連接和交易](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)。  
+-   當連接是由 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 管理時，會執行包含針對 SQL Server 2005 之作業的明確交易。 發生這種情況，是因為每當單一異動內的連接關閉又重新開啟時，SQL Server 2005 會提升至 DTC，這是 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 的預設行為。 使用 SQL Server 2008 就不會發生 DTC 提升。 若要在使用 SQL Server 2005 時防止這個問題發生，您必須明確開啟和關閉異動內的連接。 如需詳細資訊，請參閱 <<c0> [ 管理連接和交易](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)。  
   
- 當一個或多個作業在 <xref:System.Transactions> 交易內執行時，會使用明確交易。 如需詳細資訊，請參閱 <<c0> [ 管理連接和交易](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)。  
+ 當一個或多個作業在 <xref:System.Transactions> 異動內執行時，會使用明確異動。 如需詳細資訊，請參閱 <<c0> [ 管理連接和交易](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)。  
   
 ## <a name="strategies-for-improving-performance"></a>提升效能的策略  
  您可以利用下列策略，改善 Entity Framework 中查詢的整體效能。  
   
 #### <a name="pre-generate-views"></a>預先產生檢視  
- 應用程式第一次執行查詢時，根據實體模型產生檢視會耗用大量成本。 請使用 EdmGen.exe 公用程式，預先產生做為 Visual Basic 或 C# 程式碼檔案的檢視表，在設計期間就可以加入至專案中。 您也可以使用文字範本轉換工具組來產生預先編譯的檢視表。 預先產生的檢視表會在執行階段進行驗證，以確保與指定之實體模型的目前版本一致。 如需詳細資訊，請參閱 <<c0> [ 如何： Pre-Generate 檢視，以改善查詢效能](https://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579)並[預先編譯/預先產生檢視 Entity Framework 4 中使用隔離效能](https://go.microsoft.com/fwlink/?LinkID=201337&clcid=0x409)。  
+ 應用程式第一次執行查詢時，根據實體模型產生檢視會耗用大量成本。 請使用 EdmGen.exe 公用程式，預先產生做為 Visual Basic 或 C# 程式碼檔案的檢視表，在設計期間就可以加入至專案中。 您也可以使用文字範本轉換工具組來產生預先編譯的檢視表。 預先產生的檢視表會在執行階段進行驗證，以確保與指定之實體模型的目前版本一致。 如需詳細資訊，請參閱[＜How to：預先產生檢視以改善查詢效能](https://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579)並[隔離使用先行編譯/預先產生檢視 Entity Framework 4 中的效能](https://go.microsoft.com/fwlink/?LinkID=201337&clcid=0x409)。  
   
  當您處理非常大的模型時，必須考量以下事項：  
   
  .NET 中繼資料格式會將給定二進位格式的使用者字串字元數目限制為 16,777,215 (0xFFFFFF)。 如果您要產生極大的模型的檢視和檢視表檔案到達這個大小限制，就會收到 「 沒有剩餘的邏輯空間來建立更多使用者字串。 」 編譯錯誤。 這個大小限制適用於所有 Managed 二進位檔。 如需詳細資訊，請參閱[部落格](https://go.microsoft.com/fwlink/?LinkId=201476)示範如何在處理大型和複雜模型時避免錯誤。  
   
 #### <a name="consider-using-the-notracking-merge-option-for-queries"></a>考慮針對查詢使用 NoTracking 合併選項  
- 追蹤在物件內容中傳回的物件是必要成本。 偵測物件的變更，並確保相同邏輯實體的多個要求能傳回相同物件執行個體，需要將物件附加至 <xref:System.Data.Objects.ObjectContext> 執行個體。 如果沒有更新或刪除物件的計畫，且不需要識別管理，則執行查詢時，請考慮使用 <xref:System.Data.Objects.MergeOption.NoTracking> 合併選項。  
+ 追蹤在物件內容中傳回的物件是必要成本。 偵測物件的變更，並確保相同邏輯實體的多個要求能傳回相同物件執行個體，需要將物件附加至 <xref:System.Data.Objects.ObjectContext> 執行個體。 如果您不打算對物件進行更新或刪除，而且不需要身分識別管理，請考慮使用<xref:System.Data.Objects.MergeOption.NoTracking>合併選項，當您執行查詢。  
   
 #### <a name="return-the-correct-amount-of-data"></a>傳回正確的資料量  
  在某些情況下，<xref:System.Data.Objects.ObjectQuery%601.Include%2A> 方法指定查詢路徑會比較快速，因為需要反覆存取資料庫的次數較少。 不過，在其他情況下，額外反覆存取資料庫以載入相關物件可能會比較快速，因為較簡單的查詢加上較少的聯結，可產生較少的資料重複。 因此，我們建議您測試各種不同的擷取相關物件方法。 如需詳細資訊，請參閱 <<c0> [ 載入相關物件](https://msdn.microsoft.com/library/452347d2-7b3b-44cd-9001-231299a28cb1)。  
   
- 若要防止單一查詢傳回太多資料，請考慮將查詢結果分頁成多個可管理的群組。 如需詳細資訊，請參閱 <<c0> [ 如何： 查詢結果透過頁面](https://msdn.microsoft.com/library/ffc0f920-e7de-42e0-9b12-ef356421d030)。  
+ 若要防止單一查詢傳回太多資料，請考慮將查詢結果分頁成多個可管理的群組。 如需詳細資訊，請參閱[＜How to：逐頁檢視查詢結果](https://msdn.microsoft.com/library/ffc0f920-e7de-42e0-9b12-ef356421d030)。  
   
 #### <a name="limit-the-scope-of-the-objectcontext"></a>限制 ObjectContext 的範圍  
  在大多數的情況下，您應該在 <xref:System.Data.Objects.ObjectContext> 陳述式 (Visual Basic 中的 `using`) 中，建立 `Using…End Using` 執行個體。 確保當程式碼存在陳述式區塊時，與物件內容關聯的資源會自動公開，這麼做可以提高效能。 不過，當控制項繫結至由物件內容管理的物件時，只要繫結是必要且為手動公開的，則應維護 <xref:System.Data.Objects.ObjectContext> 執行個體。 如需詳細資訊，請參閱 <<c0> [ 管理連接和交易](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)。  

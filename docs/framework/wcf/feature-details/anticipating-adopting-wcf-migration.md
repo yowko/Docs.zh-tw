@@ -1,15 +1,15 @@
 ---
-title: 預計採用 Windows Communication Foundation：簡化未來移轉
+title: 預計採用 Windows Communication Foundation:簡化未來移轉
 ms.date: 03/30/2017
 ms.assetid: f49664d9-e9e0-425c-a259-93f0a569d01b
-ms.openlocfilehash: 171a31b375eae4c032849c2a1c2090f5d9ff856f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 306ffbae86058a2caad70d3788fb7bb4e7998eec
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837381"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129580"
 ---
-# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a>預計採用 Windows Communication Foundation：簡化未來移轉
+# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a>預計採用 Windows Communication Foundation:簡化未來移轉
 若要確保更容易未來新 ASP.NET 應用程式移轉至 WCF，請遵循上述建議，以及下列建議。  
   
 ## <a name="protocols"></a>通訊協定  
@@ -36,7 +36,7 @@ ms.locfileid: "48837381"
   
 -   使用 `MessageName` 的 <xref:System.Web.Services.WebMethodAttribute> 參數，為服務的作業提供明確名稱。  
   
-    ```  
+    ```csharp  
     [WebMethod(MessageName="ExplicitName")]  
     string Echo(string input);  
     ```  
@@ -47,7 +47,7 @@ ms.locfileid: "48837381"
   
 -   使用 <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute>，為用來將 HTTP 要求傳送至方法的 SOAPAction HTTP 標頭，提供明確值。  
   
-    ```  
+    ```csharp  
     [WebMethod]  
     [SoapDocumentMethod(RequestElementName="ExplicitAction")]  
     string Echo(string input);  
@@ -63,7 +63,7 @@ ms.locfileid: "48837381"
 ## <a name="exception-handling"></a>例外狀況處理  
  在設計服務所傳送和接收資料型別的結構時，也請設計各種例外狀況類型的結構，這些是您希望向用戶端告知可能會在服務中發生的例外狀況。  
   
-```  
+```csharp  
 [Serializable]  
 [XmlRoot(  
      Namespace="ExplicitNamespace", IsNullable=true)]  
@@ -84,7 +84,7 @@ ms.locfileid: "48837381"
   
  提供這些類別自我序列化為 XML 的能力：  
   
-```  
+```csharp  
 public XmlNode ToXML()  
 {  
      XmlSerializer serializer = new XmlSerializer(  
@@ -103,7 +103,7 @@ public XmlNode ToXML()
   
  然後，類別就可以用來為明確擲回的 <xref:System.Web.Services.Protocols.SoapException> 執行個體提供詳細資料：  
   
-```  
+```csharp  
 AnctipatedException exception = new AnticipatedException();  
 exception.AnticipatedExceptionInformation = "…";  
 throw new SoapException(  
@@ -125,4 +125,4 @@ throw new SoapException(
 -   考慮使用 ASP.NET 2.0 角色提供者，來授權存取服務資源。  
   
 ## <a name="see-also"></a>另請參閱  
- [預計採用 Windows Communication Foundation：簡化未來整合](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
+ [預計採用 Windows Communication Foundation:簡化未來整合](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)

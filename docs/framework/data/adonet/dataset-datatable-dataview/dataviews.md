@@ -2,17 +2,17 @@
 title: DataView
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-ms.openlocfilehash: 75719e91daba189c1d93491a1db26acc80100bea
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 93789cf64653af863cbedbf1caeea886afb713f5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514748"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129385"
 ---
 # <a name="dataviews"></a>DataView
 <xref:System.Data.DataView> 允許您為儲存在 <xref:System.Data.DataTable> 內的資料建立不同的檢視，這是資料繫結應用程式中常用的功能。 使用**DataView**可以公開資料表以不同排序順序中的資料，您可以依資料列狀態或根據篩選條件運算式來篩選資料。  
   
- A **DataView**提供動態檢視的資料在基礎**DataTable**： 內容、 順序和成員資格反映的變更發生時。 此行為不同於**選取 **方法**DataTable**，以傳回<xref:System.Data.DataRow>特定的篩選和/或排序順序為基礎的資料表中的陣列： thiscontent 反映的變更基礎資料表，但其成員資格和順序仍維持靜態。 動態功能**DataView**適合用來資料繫結的應用程式。  
+ A **DataView**提供動態檢視的資料在基礎**DataTable**： 內容、 順序和成員資格反映的變更發生時。 此行為不同於**選取 **方法**DataTable**，以傳回<xref:System.Data.DataRow>特定的篩選和/或排序順序為基礎的資料表中的陣列： 這個內容反映變更基礎資料表，但其成員資格和順序仍維持靜態。 動態功能**DataView**適合用來資料繫結的應用程式。  
   
  A **DataView**您提供一組資料，很像資料庫檢視，您可以套用不同的排序和篩選準則的動態檢視。 與資料庫檢視，不過，不同**DataView**無法被視為資料表，而無法提供聯結資料表的檢視。 此外，您也不能排除來源資料表中的資料行，也不能附加來源資料表中不存在的資料行 (如計算資料行)。  
   

@@ -2,12 +2,12 @@
 title: 根據開發情況比較 ASP.NET Web 服務與 WCF
 ms.date: 03/30/2017
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-ms.openlocfilehash: 6292c863e4e72187b78d28e32044633fe938abc8
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: c4c07d24ba322c957aac5ba9fa6ed3a5f337fb9a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580693"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127364"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>根據開發情況比較 ASP.NET Web 服務與 WCF
 Windows Communication Foundation (WCF) 已啟用來進行程式設計和設定類似 ASP.NET Web 服務的 WCF 應用程式及模擬其行為的 ASP.NET 相容性模式選項。 下列各節比較 ASP.NET Web 服務與 WCF 的功能才能使用這兩種技術開發應用程式。  
@@ -29,7 +29,7 @@ Windows Communication Foundation (WCF) 已啟用來進行程式設計和設定�
   
  WCF<xref:System.Runtime.Serialization.DataContractAttribute>和<xref:System.Runtime.Serialization.DataMemberAttribute>可以新增至.NET Framework 型別，表示型別的執行個體已序列化為 XML，以及哪些特定的欄位或屬性的型別會進行序列化，如下列範例程式碼所示。  
   
-```  
+```csharp  
 //Example One:   
 [DataContract]  
 public class LineItem  
@@ -149,7 +149,7 @@ public class LineItem
   
 -   <xref:System.Xml.Serialization.XmlSerializer> 和 <xref:System.Xml.Serialization> 命名空間屬性是設計用來讓您將 .NET Framework 型別對應至 XML 結構描述中任何有效型別，因此，它們會就控制如何使用 XML 來表示型別方面提供極為精密的控制。 <xref:System.Runtime.Serialization.DataContractSerializer>、<xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 對於控制如何使用 XML 來表示型別則提供較少的控制。 您只能指定在採用 XML 時用來表示型別及其欄位或屬性的命名空間和名稱，以及指定這些欄位和屬性在 XML 中的顯示順序：  
   
-    ```  
+    ```csharp  
     [DataContract(  
     Namespace="urn:Contoso:2006:January:29",  
     Name="LineItem")]  
@@ -184,7 +184,7 @@ public class LineItem
   
  儘管存在以上這些差異，但根據預設，只要 XML 的命名空間已明確定義，<xref:System.Xml.Serialization.XmlSerializer> 序列化型別的目標 XML 與 <xref:System.Runtime.Serialization.DataContractSerializer> 序列化型別的目標 XML 在語意上是完全相同的。 下列類別，有兩個序列化程式搭配使用的屬性，則會轉譯為相同語意的 XML 所<xref:System.Xml.Serialization.XmlSerializer>，經由<xref:System.Runtime.Serialization.DataContractAttribute>:  
   
-```  
+```csharp  
 [Serializable]  
 [XmlRoot(Namespace="urn:Contoso:2006:January:29")]  
 [DataContract(Namespace="urn:Contoso:2006:January:29")]  
@@ -207,7 +207,7 @@ public class LineItem
 ## <a name="service-development"></a>服務開發  
  若要使用 ASP.NET 開發服務，習慣上會將 <xref:System.Web.Services.WebService> 屬性新增至類別，以及將 <xref:System.Web.Services.WebMethodAttribute> 新增至該類別要成為服務作業的任何方法：  
   
-```  
+```csharp  
 [WebService]  
 public class Service : T:System.Web.Services.WebService  
 {  
@@ -221,7 +221,7 @@ public class Service : T:System.Web.Services.WebService
   
  ASP.NET 2.0 引入了將屬性 <xref:System.Web.Services.WebService> 和 <xref:System.Web.Services.WebMethodAttribute> 新增至介面 (而非類別)，以及撰寫類別來實作介面的選項：  
   
-```  
+```csharp  
 [WebService]  
 public interface IEcho  
 {  
@@ -245,7 +245,7 @@ public class Service : IEcho
   
  通常會先定義服務合約，定義方式是將 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 新增至介面：  
   
-```  
+```csharp  
 [ServiceContract]  
 public interface IEcho  
 {  
@@ -258,7 +258,7 @@ public interface IEcho
   
  完成定義服務合約之後，這個服務合約就會在類別實作用來定義此服務合約之介面的程序下，實作於類別中：  
   
-```  
+```csharp  
 public class Service : IEcho  
 {  
     public string Echo(string input)  
@@ -308,7 +308,7 @@ public class Service : IEcho
   
  服務類型的內部行為可以透過使用一系列類別的屬性 (稱為行為) 來進行調整。 在下面範例中，<xref:System.ServiceModel.ServiceBehaviorAttribute> 類別是用來指定此服務類型要成為多執行緒。  
   
-```  
+```csharp  
 [ServiceBehavior(ConcurrencyMode=ConcurrencyMode.Multiple]  
 public class DerivativesCalculatorServiceType: IDerivativesCalculator  
 ```  
@@ -346,7 +346,7 @@ public class DerivativesCalculatorServiceType: IDerivativesCalculator
   
  若要裝載 WCF 服務的.NET 應用程式中，編譯類別庫的組件，應用程式時，所參考的服務類型，和程式的應用程式，以裝載服務會使用<xref:System.ServiceModel.ServiceHost>類別。 下列是所需要的基礎程式設計範例：  
   
-```  
+```csharp  
 string httpBaseAddress = "http://www.contoso.com:8000/";  
 string tcpBaseAddress = "net.tcp://www.contoso.com:8080/";  
   
@@ -369,13 +369,13 @@ typeof(Service), //"Service" is the name of the service type baseAdresses))
   
  下列範例會示範如何在 <xref:System.ServiceModel.ServiceHost> 的建構中指定一個或多個傳輸通訊協定的位址。 這些位址指的是基底位址 (Base Address)。  
   
- WCF 服務的任何端點所提供的位址是主機的相對於基底位址的端點位址。 主機的每個通訊傳輸通訊協定都可以擁有一個基底位址。 在上述組態檔的範例組態中，針對端點選取的 <xref:System.ServiceModel.BasicHttpBinding> 會以 HTTP 做為傳輸通訊協定，因此端點 `EchoService` 的位址會相對於主機的 HTTP 基底位址。 在上述範例中，主機，是的 HTTP 基底位址`http://www.contoso.com:8000/`。 對於裝載於 IIS 或 WAS 的服務，其基底位址是服務之服務檔的 URL。  
+ WCF 服務的任何端點所提供的位址是主機的相對於基底位址的端點位址。 主機的每個通訊傳輸通訊協定都可以擁有一個基底位址。 在上述組態檔的範例組態中，針對端點選取的 <xref:System.ServiceModel.BasicHttpBinding> 會以 HTTP 做為傳輸通訊協定，因此端點 `EchoService` 的位址會相對於主機的 HTTP 基底位址。 在上述範例中的主機，須的 HTTP 基底位址 `http://www.contoso.com:8000/`。 對於裝載於 IIS 或 WAS 的服務，其基底位址是服務之服務檔的 URL。  
   
  唯一的服務裝載於 IIS 或 WAS，並設定使用 HTTP 做為傳輸通訊協定，可以對使用 WCF ASP.NET 相容性模式選項。 若要開啟該選項，請遵循下列步驟。  
   
 1.  程式設計人員必須將 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 屬性新增至服務類型，並指定允許或需要 ASP.NET 相容性模式。  
   
-    ```  
+    ```csharp  
     [System.ServiceModel.Activation.AspNetCompatibilityRequirements(  
           RequirementsMode=AspNetCompatbilityRequirementsMode.Require)]  
     public class DerivativesCalculatorServiceType: IDerivativesCalculator  
@@ -426,7 +426,7 @@ typeof(Service), //"Service" is the name of the service type baseAdresses))
 ## <a name="message-representation"></a>訊息表示  
  您可以自訂 ASP.NET Web 服務所傳送及接收之 SOAP 訊息的標頭。 此時會從 <xref:System.Web.Services.Protocols.SoapHeader> 衍生類別來定義標頭的結構，接著，使用 <xref:System.Web.Services.Protocols.SoapHeaderAttribute> 來表示標頭是否存在。  
   
-```  
+```csharp  
 public class SomeProtocol : SoapHeader  
 {  
      public long CurrentValue;  
@@ -473,7 +473,7 @@ public class Service: WebService, IEcho
   
  WCF 提供的屬性<xref:System.ServiceModel.MessageContractAttribute>， <xref:System.ServiceModel.MessageHeaderAttribute>，和<xref:System.ServiceModel.MessageBodyMemberAttribute>來描述服務所傳送及接收之 SOAP 訊息的結構。  
   
-```  
+```csharp  
 [DataContract]  
 public class SomeProtocol  
 {  
@@ -536,7 +536,7 @@ public interface IItemService
   
  ASP.NET 2.0 可以驗證服務是否相容於 Web Services-Interoperability Organization (WS-I) 的 Basic Profile 1.1，而且可以插入有關服務相容於其 WSDL 的宣告。 透過 `ConformsTo` 屬性的 `EmitConformanceClaims` 和 <xref:System.Web.Services.WebServiceBindingAttribute> 參數，便可完成這個動作。  
   
-```  
+```csharp  
 [WebService(Namespace = "http://tempuri.org/")]  
 [WebServiceBinding(  
      ConformsTo = WsiProfiles.BasicProfile1_1,  
@@ -572,7 +572,7 @@ public interface IEcho
   
  若要將 SOAP 錯誤傳回給用戶端，您可以使用資料合約類型做為泛型型別，並擲回此泛型型別的執行個體，<xref:System.ServiceModel.FaultException%601>。 您還可以新增 <xref:System.ServiceModel.FaultContractAttribute> 屬性至作業，以指定作業可能產生的錯誤。  
   
-```  
+```csharp  
 [DataContract]  
 public class MathFault  
 {   
@@ -593,7 +593,7 @@ public interface ICalculator
   
  這樣做會使得可能的錯誤將以 WSDL 向服務通告，讓用戶端程式設計人員預測作業可能產生的錯誤，並撰寫適當的 catch 陳述式。  
   
-```  
+```csharp  
 try  
 {  
      result = client.Divide(value1, value2);  
@@ -610,7 +610,7 @@ catch (FaultException<MathFault> e)
 ## <a name="state-management"></a>狀態管理  
  用來實作 ASP.NET Web 服務的類別可以從 <xref:System.Web.Services.WebService> 衍生。  
   
-```  
+```csharp  
 public class Service : WebService, IEcho  
 {  
   
@@ -629,14 +629,14 @@ public class Service : WebService, IEcho
   
  此處，服務型別`TradingSystem`，具有<xref:System.ServiceModel.ServiceBehaviorAttribute>，指定來自相同的 WCF 用戶端執行個體的所有呼叫會都路由至相同的執行個體的服務類型。  
   
-```  
+```csharp  
 [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]  
 public class TradingSystem: ITradingService  
 ```  
   
  類別 `DealData` 會定義相同服務類型執行個體中執行之任何程式碼可以存取的狀態。  
   
-```  
+```csharp  
 internal class DealData: IExtension<InstanceContext>  
 {  
  public string DealIdentifier = null;  
@@ -646,7 +646,7 @@ internal class DealData: IExtension<InstanceContext>
   
  在實作服務合約其中一個作業的服務類型程式碼中，`DealData` 狀態物件會新增至目前服務類型執行個體的狀態中。  
   
-```  
+```csharp  
 string ITradingService.BeginDeal()  
 {  
  string dealIdentifier = Guid.NewGuid().ToString();  
@@ -658,7 +658,7 @@ string ITradingService.BeginDeal()
   
  接著，該狀態物件可由實作服務合約之其他作業的程式碼進行擷取和修改。  
   
-```  
+```csharp  
 void ITradingService.AddTrade(Trade trade)  
 {  
  DealData dealData =  OperationContext.Current.InstanceContext.Extensions.Find<DealData>();  
@@ -672,7 +672,7 @@ void ITradingService.AddTrade(Trade trade)
  用來保護 ASP.NET Web 服務的選項，就是用來保護任何 IIS 應用程式的選項。 因為 WCF 應用程式可以裝載在 IIS 中不僅在任何.NET 可執行檔，來保護 WCF 應用程式的選項必須設定為獨立於 IIS 的機能。 不過，還有適用於在 ASP.NET 相容性模式中執行的 WCF 服務的 ASP.NET Web 服務所提供的功能。  
   
 ### <a name="security-authentication"></a>安全性：驗證  
- IIS 會提供可以用來控制存取應用程式的機能，而您可以從其中選取匿名存取或各種的驗證模式：Windows 驗證、摘要式驗證、基本驗證和 .NET Passport 驗證。 Windows 驗證選項可用來控制 ASP.NET Web 服務的存取。 不過，當 WCF 應用程式裝載於 IIS 時，IIS 必須設定為允許匿名存取應用程式，讓驗證可以管理 wcf 本身，支援 Windows 驗證，在其他各種選項。 其他選項還包括使用者名稱權杖、X.509 憑證、SAML 權杖和 CardSpace 卡，但是您也可以定義自訂的驗證機制。  
+ IIS 提供的功能以控制您所選取匿名存取或各種不同的驗證模式的應用程式的存取：Windows 驗證、 摘要式驗證、 基本驗證，以及.NET Passport 驗證。 Windows 驗證選項可用來控制 ASP.NET Web 服務的存取。 不過，當 WCF 應用程式裝載於 IIS 時，IIS 必須設定為允許匿名存取應用程式，讓驗證可以管理 wcf 本身，支援 Windows 驗證，在其他各種選項。 其他選項還包括使用者名稱權杖、X.509 憑證、SAML 權杖和 CardSpace 卡，但是您也可以定義自訂的驗證機制。  
   
 ### <a name="security-impersonation"></a>安全性：模擬  
  ASP.NET 提供了身分識別項目，透過此項目，ASP.NET Web 服務便可設定成模擬特定的使用者，或是目前要求所提供的任何使用者認證。 該項目可用來在 ASP.NET 相容性模式中執行的 WCF 應用程式中設定模擬。  
@@ -691,12 +691,12 @@ void ITradingService.AddTrade(Trade trade)
   
  服務作業可以設定為模擬目前要求所提供的任何使用者認證。  
   
-```  
+```csharp  
 [OperationBehavior(Impersonation = ImpersonationOption.Required)]  
 public void Receive(Message input)  
 ```  
   
-### <a name="security-authorization-using-access-control-lists"></a>安全性：使用存取控制清單進行驗證  
+### <a name="security-authorization-using-access-control-lists"></a>安全性：使用存取控制清單的授權  
  存取控制清單 (ACL) 可用來限制對 .asmx 檔案的存取。 不過，WCF.svc 檔案的 Acl 會忽略除了 ASP.NET 相容性模式。  
   
 ### <a name="security-role-based-authorization"></a>安全性：以角色為基礎的授權  
@@ -725,7 +725,7 @@ public void Receive(Message input)
 </system.serviceModel>  
 ```  
   
-### <a name="security-claims-based-authorization"></a>安全性：宣告架構的授權  
+### <a name="security-claims-based-authorization"></a>安全性：宣告式授權  
  其中一個最重要的創新功能的 WCF 是全面支援以宣告為基礎的受保護資源存取的授權。 宣告是由類型、權限和值組成。以駕照為例， 駕照會建立一組關於持有人的宣告，而其中一個宣告是持有人的生日。 該宣告的類型為生日，而宣告的值為駕駛人的出生日期。 宣告賦予持有人的權限會指定持有人可以如何使用宣告值。 例如，在宣告為駕駛人生日、權限為持有的案例中：駕駛人持有該生日，但無法更改這個日期。 宣告架構的授權也包含以角色為基礎的驗證，因為角色就是一種宣告類型。  
   
  宣告架構的授權方式會藉由將一組宣告與作業的存取需求進行比較，並根據該比較的結果授與或拒絕作業存取，來完成其作業。 在 WCF 中，您可以指定要指派值給一次重新執行宣告架構的授權，使用的類別`ServiceAuthorizationManager`屬性<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>。  

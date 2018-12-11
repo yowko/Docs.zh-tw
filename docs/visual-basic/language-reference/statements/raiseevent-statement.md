@@ -11,11 +11,11 @@ helpviewer_keywords:
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
 ms.openlocfilehash: ba4c05b3ef69d180f43ac3b90aa8fd6dee9c80fb
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296863"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143294"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent 陳述式
 觸發程序在類別、 表單或文件中的模組層級宣告的事件。  
@@ -28,7 +28,7 @@ RaiseEvent eventname[( argumentlist )]
   
 ## <a name="parts"></a>組件  
  `eventname`  
- 必要。 若要觸發事件的名稱。  
+ 必要項。 若要觸發事件的名稱。  
   
  `argumentlist`  
  選擇性。 以逗號分隔的變數、 陣列或運算式清單。 `argumentlist`引數必須以括號括住。 如果不有任何引數，必須省略括弧。  

@@ -2,17 +2,17 @@
 title: F# Interactive 選項
 description: 深入了解所支援的命令列選項F#Interactive fsi.exe。
 ms.date: 05/16/2016
-ms.openlocfilehash: a461dd0eeff2de3d15e557ba37138fbd62ca43ba
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: cca1ef6671878acb1b837d6590139d5de7b7167d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "33565801"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128150"
 ---
 # <a name="f-interactive-options"></a>F# Interactive 選項
 
 > [!NOTE]
-本文目前僅描述 Windows 的體驗。  將會加以重新撰寫。
+> 本文目前僅描述 Windows 的體驗。  將會加以重新撰寫。
 
 本主題說明所支援的命令列選項F#Interactive， `fsi.exe`。 F#Interactive 接受許多與相同的命令列選項F#編譯器，但也接受某些其他選項。
 

@@ -2,12 +2,12 @@
 title: OVERLAPS (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41743e89-79cb-4d7b-8a27-355b45024b61
-ms.openlocfilehash: 9b67e6824317b032f420501ffba385ec6fd651b9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f0c5d79b437ff06603ea10404357aa0b3270bc53
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762672"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150768"
 ---
 # <a name="overlaps-entity-sql"></a>OVERLAPS (Entity SQL)
 判斷兩個集合是否有共同項目。  
@@ -30,12 +30,12 @@ expression OVERLAPS expression
   
  `EXISTS ( expression INTERSECT expression )`  
   
- OVERLAPS 是其中一個 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 設定運算子。 所有 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 設定運算子都會從左到右評估。 優先順序資訊[!INCLUDE[esql](../../../../../../includes/esql-md.md)]設定運算子，請參閱[EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)。  
+ OVERLAPS 是其中一個 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 設定運算子。 所有 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 設定運算子都會從左到右評估。 優先順序資訊[!INCLUDE[esql](../../../../../../includes/esql-md.md)]設定運算子，請參閱 < [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)。  
   
 ## <a name="example"></a>範例  
  下列 Entity SQL 查詢會使用 OVERLAPS 運算子來判斷兩個集合是否具有共通的值。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
   
-1.  遵循 [如何：執行可傳回 StructuralType 結果的查詢](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)中的程序進行。  
+1.  請依照下列中的程序[How to:執行可傳回 StructuralType 結果的查詢](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。  
   
 2.  將下列查詢當成引數，傳遞至 `ExecuteStructuralTypeQuery` 方法：  
   

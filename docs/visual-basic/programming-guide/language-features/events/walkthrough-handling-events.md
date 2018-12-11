@@ -10,14 +10,14 @@ helpviewer_keywords:
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
 ms.openlocfilehash: fe797885a9063a19efc3f35da9cdf62d7f271693
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297162"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153380"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>逐步解說：處理事件 (Visual Basic)
-這是示範如何使用事件的兩個主題的第二個。 第一個主題中，[逐步解說： 宣告和引發事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)，示範如何宣告及引發事件。 本節會使用表單和類別，從該逐步解說示範如何處理它們發生的事件。  
+這是示範如何使用事件的兩個主題的第二個。 第一個主題中，[逐步解說：宣告和引發事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)，示範如何宣告及引發事件。 本節會使用表單和類別，從該逐步解說示範如何處理它們發生的事件。  
   
  `Widget`類別的範例會使用傳統的事件處理陳述式。 Visual Basic 會提供其他技術來處理事件。 在練習中，您可以修改此範例中使用`AddHandler`和`Handles`陳述式。  
   

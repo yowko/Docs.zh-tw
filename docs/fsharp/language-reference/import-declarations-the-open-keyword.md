@@ -1,18 +1,18 @@
 ---
-title: 匯入宣告：open 關鍵字 (F#)
-description: 了解 F# 匯入宣告，以及如何指定模組或命名空間不需使用完整限定的名稱，您可以參考其項目。
+title: 匯入宣告：Open 關鍵字 (F#)
+description: 深入了解F#匯入宣告，以及如何指定模組或命名空間不需使用完整限定的名稱，您可以參考其項目。
 ms.date: 05/16/2016
-ms.openlocfilehash: 8cae4b4f5418689bfb0933b7db4ec23a313d5ed8
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 1f6fa791f993459178646687195037563da82540
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "46586619"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127299"
 ---
 # <a name="import-declarations-the-open-keyword"></a>匯入宣告：`open`關鍵字
 
 > [!NOTE]
-本文中的 API 參考連結將帶您前往 MSDN。  docs.microsoft.com API 參考不完整。
+> 本文中的 API 參考連結將帶您前往 MSDN。  docs.microsoft.com API 參考不完整。
 
 *匯入宣告*指定的模組或命名空間不需使用完整限定的名稱，您可以參考其項目。
 
@@ -36,7 +36,7 @@ open module-or-namespace-name
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6801.fs)]
 
-F# 編譯器不會發出錯誤或警告時相同的名稱，就會發生多個開啟的模組或命名空間中時，會發生模稜兩可。 發生模稜兩可時，F# 提供更多最近開啟的模組或命名空間的喜好設定。 例如，在下列程式碼中，`empty`意味著`Seq.empty`，即使`empty`兩者都位於`List`和`Seq`模組。
+F#編譯器不會發出錯誤或警告時相同的名稱，就會發生多個開啟的模組或命名空間中時，會發生模稜兩可。 發生模稜兩可時，F#提供更多最近開啟的模組或命名空間的喜好設定。 例如，在下列程式碼中，`empty`意味著`Seq.empty`，即使`empty`兩者都位於`List`和`Seq`模組。
 
 ```fsharp
 open List
@@ -48,11 +48,11 @@ printfn "%A" empty
 
 ## <a name="namespaces-that-are-open-by-default"></a>開啟預設的命名空間
 
-F# 程式碼它們會以隱含方式開啟而不需要明確的匯入宣告頻繁使用某些命名空間。 下表顯示已開啟預設的命名空間。
+某些命名空間會因此常常會用於F#程式碼，它們會以隱含方式開啟而不需要明確的匯入宣告。 下表顯示已開啟預設的命名空間。
 
 |命名空間|描述|
 |---------|-----------|
-|`Microsoft.FSharp.Core`|包含基本 F# 型別定義的內建類型，例如`int`和`float`。|
+|`Microsoft.FSharp.Core`|包含基本F#類型的內建型別定義，例如`int`並`float`。|
 |`Microsoft.FSharp.Core.Operators`|包含基本算術運算，例如`+`和`*`。|
 |`Microsoft.FSharp.Collections`|包含不可變的集合類別，例如`List`和`Array`。|
 |`Microsoft.FSharp.Control`|包含控制項的建構，例如延遲評估和非同步工作流程的型別。|

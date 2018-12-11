@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 36dbf725dfcd6fefe6482f7de69daea9356d3d07
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 3094c82382292be3295238ef9cf2687f6eeb98f8
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087695"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149883"
 ---
 # <a name="configuring-http-and-https"></a>設定 HTTP 和 HTTPS
 WCF 服務與用戶端可以透過 HTTP 和 HTTPS 進行通訊。 HTTP/HTTPS 設定是使用 Internet Information Services (IIS)，或使用命令列工具設定。 在 IIS HTTP 或 HTTPS 之下裝載 WCF 服務時，設定可以在 IIS (使用 inetmgr.exe 工具) 內進行。 如果是自我裝載的 WCF 服務，可以使用命令列工具設定 HTTP 或 HTTPS 設定。  
@@ -32,7 +32,7 @@ WCF 服務與用戶端可以透過 HTTP 和 HTTPS 進行通訊。 HTTP/HTTPS 設
   
  下列將說明搭配 `set urlacl` 選項的 Httpcfg 命令語法  
   
-```  
+```console  
 httpcfg set urlacl /u {http://URL:Port/ | https://URL:Port/} /aACL  
 ```  
   
@@ -42,14 +42,14 @@ httpcfg set urlacl /u {http://URL:Port/ | https://URL:Port/} /aACL
   
  下列範例示範此命令的使用方式。  
   
-```  
+```console  
 httpcfg.exe set urlacl /u http://myhost:8000/ /a "O:AOG:DAD:(A;;RPWPCCDCLCSWRCWDWOGA;;;S-1-0-0)"  
 ```  
   
 ### <a name="running-windows-vista-windows-server-2008-r2-or-windows-7"></a>執行 Windows Vista、Windows Server 2008 R2 或 Windows 7  
  如果您是在 [!INCLUDE[wv](../../../../includes/wv-md.md)]、Windows Server 2008 R2 或 Windows 7 上執行，請使用 Netsh.exe 工具。 下列範例示範此命令的使用方式。  
   
-```  
+```console  
 netsh http add urlacl url=http://+:80/MyUri user=DOMAIN\user  
 ```  
   
@@ -63,7 +63,7 @@ netsh http add urlacl url=http://+:80/MyUri user=DOMAIN\user
   
  憑證會依據 IP 位址與連線的連接埠號碼，儲存在集中保管的存放區。 特殊 IP 位址 0.0.0.0 會符合本機電腦的任何 IP 位址。 請注意，憑證存放區無法依照路徑來識別 URL。 包含相同 IP 位址與連接埠號碼組合的服務必須共用憑證，就算每項服務之 URL 中的路徑都不一樣也需這麼做。  
   
- 如需逐步指示，請參閱 <<c0> [ 如何： 使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
+ 如需逐步指示，請參閱[How to:使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
   
 ## <a name="configuring-the-ip-listen-list"></a>設定 IP 接聽清單  
  一旦使用者註冊了 URL，HTTP 伺服器 API 只會繫結至 IP 位址與連接埠。 根據預設，HTTP 伺服器 API 會針對電腦中的所有 IP 位址繫結至其 URL 中的連接埠。 如果不使用 HTTP 伺服器 API 的應用程式先前已經繫結至該 IP 位址與連接埠的組合，就會產生衝突情況。 IP 接聽清單可讓 WCF 服務與使用某些電腦的 IP 位址的連接埠的應用程式並存。 如果 IP 接聽清單包含任何項目，則 HTTP 伺服器 API 只會繫結至清單所指定的特定 IP 位址。 您需要系統管理員權限才能修改 IP 接聽清單。  
@@ -71,14 +71,14 @@ netsh http add urlacl url=http://+:80/MyUri user=DOMAIN\user
 ### <a name="running-windows-xp-or-server-2003"></a>執行 Windows XP 或 Server 2003  
  請使用 httpcfg 工具來修改 IP 接聽清單，如下列範例所示。 [Windows 支援工具文件](https://go.microsoft.com/fwlink/?LinkId=94840)說明 httpcfg.exe 工具的語法。  
   
-```  
+```console  
 httpcfg.exe set iplisten -i 0.0.0.0:8000  
 ```  
   
 ### <a name="running-windows-vista-or-windows-7"></a>執行 Windows Vista 或 Windows 7  
  請使用 netsh 工具來修改 IP 接聽清單，如下列範例所示。  
   
-```  
+```console  
 netsh http add iplisten ipaddress=0.0.0.0:8000  
 ```  
   
@@ -92,4 +92,4 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.WSDualHttpBinding>  
- [如何：使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+ [操作說明：使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)

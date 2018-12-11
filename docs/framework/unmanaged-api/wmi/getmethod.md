@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a913de0ff20fba51295fd8282b58e3953be9bba2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 133e056663b208f2a0d12f05f31daaca95676dc5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43773955"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152314"
 ---
 # <a name="getmethod-function"></a>GetMethod 函式
 擷取指定之方法的相關資訊。
@@ -53,7 +53,7 @@ HRESULT GetMethod (
 [in]方法名稱。 這個參數不能`null`而且必須指向有效`LPCWSTR`。
 
 `lFlags`  
-[in]保留。 這個參數必須是 0。
+[in] 保留。 這個參數必須是 0。
 
 `ppInSignature`   
 [out]位址指標[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)描述方法在 paramteers 的執行個體。 如果設定為，則會忽略這個參數`null`。 
@@ -77,7 +77,7 @@ HRESULT GetMethod (
 
 Windows 管理可以設定[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)指標`null`如果方法沒有任何 in 參數。
 
-在 `ppInSignature`並`ppOutSignature`分別中的屬性描述輸入和輸出參數，`IWbemClassObject`系統類別的執行個體[_Parameters](/windows/desktop/WmiSdk/--parameters)。 中的屬性`ppInsignature`名為 **Param * * * n*，其中*n*是方法簽章中參數的位置 (例如`Param1`， `Param2`，依此類推。)。 中的屬性`ppOutSignature`也稱為 **Param * * * n*，和名為傳回值**ReturnValue**。 如需詳細資訊和範例，請參閱 < [IWbemClassObject::GetMethod 方法](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod)。
+在 `ppInSignature`並`ppOutSignature`分別中的屬性描述輸入和輸出參數，`IWbemClassObject`系統類別的執行個體[_Parameters](/windows/desktop/WmiSdk/--parameters)。 中的屬性`ppInsignature`具名`Param` *n*，其中*n*是方法簽章中參數的位置 (例如`Param1`， `Param2`，依此類推。)。 中的屬性`ppOutSignature`也稱為`Param` *n*，和名為傳回值`ReturnValue`。 如需詳細資訊和範例，請參閱 < [IWbemClassObject::GetMethod 方法](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod)。
 
 ## <a name="requirements"></a>需求  
 **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

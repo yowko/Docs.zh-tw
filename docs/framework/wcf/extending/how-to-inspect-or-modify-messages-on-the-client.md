@@ -2,15 +2,15 @@
 title: HOW TO：檢查或修改用戶端上的訊息
 ms.date: 03/30/2017
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
-ms.openlocfilehash: 6cd0f39494006bf51b7c4bb55afcc112ec08aadb
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 06a5cae9abd77e45b0590ea7b87a24fc7bb314ff
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804166"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144386"
 ---
 # <a name="how-to-inspect-or-modify-messages-on-the-client"></a>HOW TO：檢查或修改用戶端上的訊息
-您可以檢查或修改整個 WCF 用戶端的傳入或傳出訊息，藉由實作<xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>並將它插入用戶端執行階段。 如需詳細資訊，請參閱[擴充用戶端](../../../../docs/framework/wcf/extending/extending-clients.md)。 服務上對等的功能為 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>。 如需完整的程式碼範例，請參閱[訊息偵測器](../../../../docs/framework/wcf/samples/message-inspectors.md)範例。  
+您可以檢查或修改整個 WCF 用戶端的傳入或傳出訊息，藉由實作<xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>並將它插入用戶端執行階段。 如需詳細資訊，請參閱 <<c0> [ 擴充用戶端](../../../../docs/framework/wcf/extending/extending-clients.md)。 服務上對等的功能為 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>。 如需完整的程式碼範例，請參閱[訊息偵測器](../../../../docs/framework/wcf/samples/message-inspectors.md)範例。  
   
 ### <a name="to-inspect-or-modify-messages"></a>檢查或修改訊息  
   
@@ -18,7 +18,7 @@ ms.locfileid: "33804166"
   
 2.  根據您要插入用戶端訊息偵測器的範圍，實作 <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>。 <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> 可讓您變更端點層級的行為。 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> 可讓您變更合約層級的行為。  
   
-3.  在 <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> 上呼叫 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 方法前，請先插入行為。 如需詳細資訊，請參閱[設定與擴充執行階段行為](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。  
+3.  在 <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> 上呼叫 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 方法前，請先插入行為。 如需詳細資訊，請參閱 <<c0> [ 設定和擴充執行階段行為](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。  
   
 ## <a name="example"></a>範例  
  下列程式碼範例會依序顯示：  
@@ -102,7 +102,8 @@ public class SimpleBehaviorExtensionElement : BehaviorExtensionElement
     <system.serviceModel>  
         <client>  
             <endpoint address="http://localhost:8080/SimpleService/"   
-                      binding="wsHttpBinding"  
+                      binding="wsHttpBinding"
+                      behaviorConfiguration="clientInspectorsAdded"
                       contract="ServiceReference1.IService1"  
                       name="WSHttpBinding_IService1"/>  
         </client>  

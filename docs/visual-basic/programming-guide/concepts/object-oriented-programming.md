@@ -3,11 +3,11 @@ title: 物件導向程式設計 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 49794de4-64c3-473c-b8ed-fe98835df69c
 ms.openlocfilehash: 058d8b932e50f784d4a5cefa9fadfb31953687f0
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297084"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153917"
 ---
 # <a name="object-oriented-programming-visual-basic"></a>物件導向程式設計 (Visual Basic)
 
@@ -173,7 +173,7 @@ Class SampleClass
 End Class
 ```
 
-如需詳細資訊，請參閱：[物件存留期： 物件的建立和終結的方式](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)。
+如需詳細資訊，請參閱:[物件存留期：如何建立和終結物件](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)。
 
 #### <a name="destructors"></a>解構函式
 
@@ -293,7 +293,7 @@ Dim sampleObject =
     New With {Key .FirstProperty = "A", .SecondProperty = "B"}
 ```
 
-如需詳細資訊，請參閱[匿名型別](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。
+如需詳細資訊，請參閱:[匿名型別](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。
 
 ## <a name="inheritance"></a>繼承
 

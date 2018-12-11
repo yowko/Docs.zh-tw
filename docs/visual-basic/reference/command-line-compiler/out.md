@@ -7,11 +7,11 @@ helpviewer_keywords:
 - out compiler option [Visual Basic]
 ms.assetid: 9f148c15-0909-4cb8-a2db-777f8a8b45ae
 ms.openlocfilehash: b619505f6e87efd1c3b18e1bed2862d3467984a7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199925"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152592"
 ---
 # <a name="-out-visual-basic"></a>-out (Visual Basic)
 指定輸出檔案的名稱。  
@@ -26,7 +26,7 @@ ms.locfileid: "50199925"
   
 |詞彙|定義|  
 |---|---|  
-|`filename`|必要。 編譯器會建立輸出檔的名稱。 如果檔案名稱包含空格，將名稱括在引號 ("")。|  
+|`filename`|必要項。 編譯器會建立輸出檔的名稱。 如果檔案名稱包含空格，將名稱括在引號 ("")。|  
   
 ## <a name="remarks"></a>備註  
  指定的完整名稱和要建立之檔案的副檔名。 如果您不這樣做的.exe 檔案會從原始程式碼檔案包含其名稱`Sub Main`程序和.dll 檔案會從第一個原始程式檔取得其名稱。  

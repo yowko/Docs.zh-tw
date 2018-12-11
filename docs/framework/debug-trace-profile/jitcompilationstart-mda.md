@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9643a2d2ea0967b8cf6d8e18ce2e9073ae583f71
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d73c299231a588a5ae0b252dd2b5a0a834685f2d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387032"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150663"
 ---
 # <a name="jitcompilationstart-mda"></a>jitCompilationStart MDA
 當 Just-In-time (JIT) 編譯器開始編譯函式時，會啟動 `jitCompilationStart` Managed 偵錯助理 (MDA)。  
@@ -39,7 +39,7 @@ method name="Test!ns2.C0::m"
 ```  
   
 ## <a name="configuration"></a>組態  
- 下列組態檔顯示的各種篩選器，可用來篩選出第一次 JIT 編譯時要報告哪些方法。 您可以將名稱屬性的值設定為 *，指定回報所有的方法。  
+ 下列組態檔顯示的各種篩選器，可用來篩選出第一次 JIT 編譯時要報告哪些方法。 您可以藉由設定名稱屬性的值會報告所有的方法來指定\*。  
   
 ```xml  
 <mdaConfig>  
@@ -62,7 +62,7 @@ method name="Test!ns2.C0::m"
 ## <a name="example"></a>範例  
  下列程式碼範例是用來搭配先前的組態檔。  
   
-```  
+```csharp
 using System;  
 using System.Reflection;  
 using System.Runtime.CompilerServices;  

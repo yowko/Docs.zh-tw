@@ -1,6 +1,6 @@
 ---
 title: 靜態類別設計
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - type design guidelines, static classes
@@ -10,14 +10,13 @@ helpviewer_keywords:
 - classes [.NET Framework], design guidelines
 - type design guidelines, classes
 ms.assetid: d67c14d8-c4dd-443f-affb-4ccae677c9b6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c3a0a51fc6055190f9a0189de2e17d98f88036ea
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+author: KrzysztofCwalina
+ms.openlocfilehash: a521842d8c4651984d8d6667b93b0f28a1eba894
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261572"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130754"
 ---
 # <a name="static-class-design"></a>靜態類別設計
 靜態類別會定義為只包含靜態成員的類別 (當然除了繼承自的執行個體成員<xref:System.Object?displayProperty=nameWithType>和可能的私用的建構函式)。 某些語言中提供靜態類別的內建的支援。 在 C# 2.0 和更新版本中，當類別宣告為靜態，它是密封的抽象，而且可以覆寫或宣告任何執行個體成員。  
@@ -36,7 +35,7 @@ ms.locfileid: "48261572"
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
+ *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
   
 ## <a name="see-also"></a>另請參閱
 

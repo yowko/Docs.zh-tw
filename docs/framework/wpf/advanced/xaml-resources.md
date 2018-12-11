@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: c43505497b947004ffb282346459967579d52375
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e02c80f4c1fdacbfdcb50ed57d89cc9df1f277f9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44199540"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126393"
 ---
 # <a name="xaml-resources"></a>XAML 資源
 資源是可在應用程式中不同位置重複使用的物件。 資源的範例包括筆刷和樣式。 本概觀說明如何使用中的資源[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 您也可以建立及存取資源，使用程式碼，或是交換使用程式碼之間和[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 如需詳細資訊，請參閱 <<c0> [ 資源和程式碼](../../../../docs/framework/wpf/advanced/resources-and-code.md)。  
@@ -147,7 +147,7 @@ ms.locfileid: "44199540"
   
  該樣式其實有索引鍵： 隱含索引鍵`typeof(` <xref:System.Windows.Controls.Button> `)`。 在標記中，您可以指定<xref:System.Windows.Style.TargetType%2A>直接做為類型名稱 (或您可以選擇性地使用[{x: Type...}](../../../../docs/framework/xaml-services/x-type-markup-extension.md) 要傳回<xref:System.Type>。  
   
- 透過所使用的預設佈景主題樣式機制[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，樣式會套用作為執行階段樣式<xref:System.Windows.Controls.Button>在頁面上，即使<xref:System.Windows.Controls.Button>本身不會嘗試指定其<xref:System.Windows.FrameworkElement.Style%2A>屬性或特定的資源參考的樣式。 定義於頁面中的樣式會在查閱順序稍早的佈景主題字典樣式之前找到，並使用佈景主題字典樣式所具有的相同索引鍵。 您可以指定`<Button>Hello</Button>`頁面，並以您定義的樣式中的任何地方<xref:System.Windows.Style.TargetType%2A>的`Button`會套用至該按鈕。 如果您想，您可以仍然明確樣式的索引鍵具有相同的型別值<xref:System.Windows.Style.TargetType%2A>、 清楚的標記，但為選用。  
+ 透過所使用的預設佈景主題樣式機制[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，樣式會套用作為執行階段樣式<xref:System.Windows.Controls.Button>在頁面上，即使<xref:System.Windows.Controls.Button>本身不會嘗試指定其<xref:System.Windows.FrameworkElement.Style%2A>屬性或特定的資源參考的樣式。 稍早在比使用佈景主題字典樣式所具有的相同金鑰的佈景主題字典樣式的查閱序列中找到您頁面中定義的樣式。 您可以指定`<Button>Hello</Button>`頁面，並以您定義的樣式中的任何地方<xref:System.Windows.Style.TargetType%2A>的`Button`會套用至該按鈕。 如果您想，您可以仍然明確樣式的索引鍵具有相同的型別值<xref:System.Windows.Style.TargetType%2A>、 清楚的標記，但為選用。  
   
  樣式的隱含索引鍵不會套用在控制項上如果<xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A>已`true`(另請注意，<xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A>可能設定為 control 類別，而不是明確的控制項執行個體上的原生行為的一部分)。 此外，為了支援衍生的類別情節的隱含索引鍵，控制項必須覆寫<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>(提供做為一部分的所有現有控制項[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]這麼做)。 如需樣式、 佈景主題和控制設計的詳細資訊，請參閱[設計可設定樣式控制項的方針](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md)。  
   

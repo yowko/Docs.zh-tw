@@ -4,12 +4,12 @@ description: 了解記錄、 追蹤與診斷的架構從狀態管理和調整，
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 5f175351cf42f3d9966add72750d64a4efe14e07
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: b12a09c0fcef7e7ff954a3f959fb9e3080a6e859
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "49369775"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155060"
 ---
 # <a name="serverless-architecture-considerations"></a>無伺服器架構考量
 
@@ -71,7 +71,7 @@ DevOps 中經常被忽略的層面監視一次部署的應用程式。 務必要
 
 ## <a name="managing-failure-and-providing-resiliency"></a>管理失敗，並提供恢復功能
 
-也很重要，請考慮*斷路器模式*： 如果基於某些原因，服務會繼續失敗，它不建議您重複呼叫該服務。 相反地，稱為替代服務或傳回一則訊息，直到重新建立相依服務的健全狀況為止。 無伺服器架構，就必須考慮解析和管理服務間的相依性的策略。
+也很重要，請考慮*斷路器模式*:如果基於某些原因，服務會繼續失敗，並不建議您重複呼叫該服務。 相反地，稱為替代服務或傳回一則訊息，直到重新建立相依服務的健全狀況為止。 無伺服器架構，就必須考慮解析和管理服務間的相依性的策略。
 
 若要繼續斷路器模式，服務必須可容錯且具有恢復功能。 容錯移轉是指您即使在非預期的例外狀況之後繼續執行的應用程式的能力，或遇到無效的狀態。 容錯移轉通常是程式碼本身的函式和如何寫完要處理的例外狀況。 復原是指如何支援應用程式是在從失敗復原。 復原通常受無伺服器平台。 平台應該能夠現有失敗時，啟動新的無伺服器函式執行個體。 平台應該也不夠聰明，無法停止微調，啟動新執行個體，每個新的執行個體失敗時。
 
@@ -82,5 +82,5 @@ DevOps 中經常被忽略的層面監視一次部署的應用程式。 務必要
 無伺服器的主要優點是升級特定的函式，而不必重新部署整個應用程式的能力。 若要成功升級，以便呼叫它們的服務會路由傳送至正確的程式碼版本必須已設定版本函式。 部署新版本的策略也很重要的。 常見的方法是使用 「 綠色/藍色部署。 」 綠色的部署是目前的函式。 新的 「 藍色 」 版本是部署到生產環境，且測試。 在測試階段時，讓新的版本是即時交換的綠色和藍色的版本。 如果發生任何問題，他們可以互相交換上一步。 支援版本控制和綠色/藍色部署需要撰寫的函式，以容納版本變更，以及使用無伺服器的平台，可處理部署的組合。 其中一個方法是將 proxy 中所述[Azure 無伺服器平台](azure-functions.md#proxies)一章。
 
 >[!div class="step-by-step"]
-[上一頁](serverless-architecture.md)
-[下一頁](serverless-design-examples.md)
+>[上一頁](serverless-architecture.md)
+>[下一頁](serverless-design-examples.md)

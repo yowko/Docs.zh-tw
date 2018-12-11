@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 4ec2ba884f0f60182dd59bb6a4491e223f43ce1a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: badab8200a4b10fdc13987dfe39ebfebd4d1f7cf
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196612"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143159"
 ---
 # <a name="ltoidmapgt-element"></a>&lt;oidMap&gt;項目
 包含類別的 ASN.1 物件識別碼 (OID) 對應。  
@@ -76,8 +76,8 @@ ms.locfileid: "47196612"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [密碼編譯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
- [密碼編譯服務](../../../../../docs/standard/security/cryptographic-services.md)  
- [設定密碼編譯類別](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
- [對應物件識別項至密碼編譯演算法](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
+- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [密碼編譯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+- [The signature is valid](../../../../../docs/standard/security/cryptographic-services.md)  
+- [設定密碼編譯類別](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
+- [對應物件識別項至密碼編譯演算法](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)

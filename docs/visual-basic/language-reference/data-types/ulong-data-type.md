@@ -16,12 +16,12 @@ helpviewer_keywords:
 - ULong data type
 - UL literal type characters [Visual Basic]
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
-ms.openlocfilehash: 13dec9f298655a4bfe6672e2dbba7c7262379cc4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 60f39d7bd294a737b5e3c6d5877f5d7e46269dc1
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202877"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125505"
 ---
 # <a name="ulong-data-type-visual-basic"></a>ULong 資料類型 (Visual Basic)
 
@@ -56,7 +56,7 @@ Dim number As ULong = &H_F9AC_0326_1489_D68C
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-也可以包含數值常值`UL`或是`ul`[型別字元](../../programming-guide\language-features\data-types/type-characters.md)表示`ULong`資料型別，如下列範例所示。
+也可以包含數值常值`UL`或是`ul`[型別字元](../../programming-guide/language-features/data-types/type-characters.md)表示`ULong`資料型別，如下列範例所示。
 
 ```vb
 Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
@@ -84,5 +84,5 @@ Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
  [資料類型](../../../visual-basic/language-reference/data-types/index.md)  
  [類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [轉換摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [操作說明：呼叫使用不帶正負號類型的 Windows 函式](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
+ [操作說明：呼叫 Windows 函式使用不帶正負號的類型](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
  [有效率地使用資料類型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

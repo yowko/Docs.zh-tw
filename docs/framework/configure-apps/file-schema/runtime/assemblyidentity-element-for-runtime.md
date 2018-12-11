@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 2b0d7968ce2cf8f326004c9e564cb2e7912c1a0a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 2d82aed13e185b2957a22f097b60e12265a5f190
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025606"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128202"
 ---
 # <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a>&lt;assemblyIdentity&gt;項目&lt;執行階段&gt;
 包含組件的識別資訊。  
@@ -52,10 +52,10 @@ culture="assembly culture"/>
   
 |值|描述|  
 |-----------|-----------------|  
-|`amd64`|64 位元的 AMD 處理器只。|  
-|`ia64`|在 64 位元 Intel 處理器只。|  
-|`msil`|相對於處理器和每個字組的位元的中性|  
-|`x86`|32 位元 Intel 處理器、 原生或 Windows 上的 64 位元平台上的 Windows (WOW) 環境中。|  
+|`amd64`|AMD x86 64 架構。|  
+|`ia64`|Intel Itanium 架構。|  
+|`msil`|相對於處理器和每個字組的位元的中性。|  
+|`x86`|32 位元 x86 處理器、 原生或 Windows 上的 64 位元平台上的 Windows (WOW) 環境中。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  

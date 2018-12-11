@@ -2,12 +2,12 @@
 title: 安全存取資料
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: e5bb96a091dcd64f12d086d864643d00c34d8f17
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d7964a084c1d5936b034d76b8c6e46053e8dcb0a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185936"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129190"
 ---
 # <a name="secure-data-access"></a>安全存取資料
 若要撰寫安全的 ADO.NET 程式碼，您必須了解基礎資料存放區或資料庫中可用的安全性機制。 您也需要考量您的應用程式所可能包含的其他功能或元件的安全性隱含。  
@@ -66,11 +66,8 @@ ms.locfileid: "50185936"
 |資源|描述|  
 |--------------|-----------------|  
 |[Access 2007 的安全性考量和指引](https://go.microsoft.com/fwlink/?LinkId=98354)|說明 Access 2007 的安全性技巧，例如加密檔案、管理密碼、將資料庫轉換為新的 ACCDB 和 ACCDE 格式，以及使用其他的安全性選項。|  
-|[協助保護 Access 資料庫與使用者層級安全性 (MDB)](https://go.microsoft.com/fwlink/?LinkId=47697)|適用於 Access 2003。 提供實作使用者層級安全性以保護 Access 2003 資料的指示。|  
 |[了解工作群組資訊檔的角色存取安全性](https://support.microsoft.com/kb/305542)|說明 Access 2003 安全性中的工作群組資訊檔的角色和關係。|  
 |[問題的相關 Microsoft Access 安全性常見問題集的 Microsoft Access 2.0 版到 2000](https://go.microsoft.com/fwlink/?LinkId=47698)|可下載版本的 Microsoft Access 安全性常見問題集。|  
-|[安全性和防護疑難排解](https://go.microsoft.com/fwlink/?LinkId=47703)|呈現 Excel 2003 一般安全性問題的解決方案。|  
-  
 ## <a name="enterprise-services"></a>企業服務  
  COM+ 本身包含根據 Windows NT 帳戶和處理序/執行緒模擬而定的安全性模型。 <xref:System.EnterpriseServices> 命名空間提供包裝函式，這些包裝函式允許 .NET 應用程式透過 <xref:System.EnterpriseServices.ServicedComponent> 類別來整合 Managed 程式碼與 COM+ 安全性服務。  
   
@@ -87,9 +84,9 @@ ms.locfileid: "50185936"
   
 |資源|描述|  
 |--------------|-----------------|  
-|[與 Unmanaged 程式碼互通](../../../../docs/framework/interop/index.md)|包含說明如何將 COM 元件公開至 .NET Framework 以及如何將 .NET Framework 元件公開至 COM 的主題。|  
-|[進階 COM 互通性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx)|包含主要 Interop 組件 (Assembly)、執行緒和自訂封送處理 (Marshaling) 等進階主題。|  
-  
+|[與 Unmanaged 程式碼互通](../../../../docs/framework/interop/index.md)|包含說明如何將 COM 元件公開至 .NET Framework 以及如何將 .NET Framework 元件公開至 COM 的主題。|
+|[進階 COM 互通性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|包含主要 Interop 組件 (Assembly)、執行緒和自訂封送處理 (Marshaling) 等進階主題。|
+
 ## <a name="see-also"></a>另請參閱  
  [設定 ADO.NET 應用程式的安全性](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  

@@ -3,11 +3,11 @@ title: 探索安全性範例
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
 ms.openlocfilehash: 09b7bad2e0b6b68a00d5ad2ed18e6ec831b04416
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50041202"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129346"
 ---
 # <a name="discovery-security-sample"></a>探索安全性範例
 探索規格不會要求參與探索程序的端點是安全的。 增強探索訊息的安全性會減少各種攻擊 (訊息變更、阻斷服務、重新執行、詐騙)。 此範例使用精簡簽章格式 (如 WS-Discovery 規格的第 8.2 節所述) 實作計算與驗證訊息簽章的自訂通道。 此範例同時支援[2005年探索規格](https://go.microsoft.com/fwlink/?LinkId=177912)並[1.1 版](https://go.microsoft.com/fwlink/?LinkId=179677)。  
@@ -47,13 +47,13 @@ ms.locfileid: "50041202"
 ## <a name="sample-details"></a>範例詳細資料  
  此範例包含程式庫和 4 個主控台應用程式：  
   
--   **DiscoverySecurityChannels**： 公開安全繫結的程式庫。 此程式庫會計算與驗證傳出/傳入訊息的精簡簽章。  
+-   **DiscoverySecurityChannels**:會公開安全繫結程式庫。 此程式庫會計算與驗證傳出/傳入訊息的精簡簽章。  
   
--   **服務**： 公開 ICalculatorService 合約的服務，自我裝載。 此服務會標示為可搜尋。 使用者會透過指定存放位置和名稱、憑證的主體名稱或其他唯一識別碼，以及用戶端憑證所在的存放位置 (用來檢查傳入訊息之簽章的憑證)，指定簽署訊息所使用之憑證的詳細資料。 根據這些詳細資料，就會建立並使用具有額外安全性的 UdpDiscoveryEndpoint。  
+-   **服務**:公開 ICalculatorService 合約，自我裝載服務。 此服務會標示為可搜尋。 使用者會透過指定存放位置和名稱、憑證的主體名稱或其他唯一識別碼，以及用戶端憑證所在的存放位置 (用來檢查傳入訊息之簽章的憑證)，指定簽署訊息所使用之憑證的詳細資料。 根據這些詳細資料，就會建立並使用具有額外安全性的 UdpDiscoveryEndpoint。  
   
--   **用戶端**： 此類別會嘗試探索 ICalculatorService 並呼叫服務上的方法。 同樣地，系統會建立並使用具有額外安全性的 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 來簽署與驗證訊息。  
+-   **用戶端**:此類別會嘗試探索 ICalculatorService 並呼叫服務上的方法。 同樣地，系統會建立並使用具有額外安全性的 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 來簽署與驗證訊息。  
   
--   **AnnouncementListener**： 自我裝載的服務會接聽線上與離線公告，並使用安全公告端點。  
+-   **AnnouncementListener**:自我裝載的服務會接聽線上與離線公告，並使用安全公告端點。  
   
 > [!NOTE]
 >  如果多次執行 Setup.bat，憑證管理員會因為有重複的憑證而提示您選擇要加入的憑證。 在該情況下，應該中止 Setup.bat 並呼叫 Cleanup.bat，因為已經產生重複。 Cleanup.bat 也會提示您選擇要刪除的憑證。 選取清單中的憑證並繼續執行 Cleanup.bat，直到沒有剩下任何憑證為止。  

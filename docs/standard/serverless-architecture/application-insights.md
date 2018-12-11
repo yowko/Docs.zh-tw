@@ -4,12 +4,12 @@ description: Application Insights 是一個無伺服器的診斷平台，可讓�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 57b1f70825251c48f720dcd78d094f5e8fb1edb8
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: b4884d483de07c1c2077f7280b6b77c6059572c0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369738"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154252"
 ---
 # <a name="telemetry-with-application-insights"></a>使用 Application Insights 的遙測
 
@@ -58,5 +58,5 @@ Application Insights 提供強大、 便利的方式來記錄詳細的遙測，�
 如需詳細資訊，請參閱 <<c0> [ 監視 Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-monitoring)。
 
 >[!div class="step-by-step"]
-[上一頁](azure-functions.md)
-[下一頁](logic-apps.md)
+>[上一頁](azure-functions.md)
+>[下一頁](logic-apps.md)

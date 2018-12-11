@@ -1,16 +1,15 @@
 ---
 title: Serialization1
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd66f8d8589baaa6fc5e22ce0b68beafac916fdf
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+author: KrzysztofCwalina
+ms.openlocfilehash: 3e21251710a44764bd06fbce83f97288b6925bc2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087114"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155102"
 ---
 # <a name="serialization"></a>序列化
 序列化是將物件轉換成的格式，可以輕易地保存或傳輸的程序。 例如，您可以將物件序列化、 傳輸，使用 HTTP 和還原序列化該在目的地電腦在網際網路上。  
@@ -85,14 +84,14 @@ ms.locfileid: "44087114"
   
  **✓ DO** 進行保護序列化建構函式，並提供兩個參數類型和名為完全依照此處的範例所示。  
   
-```  
+```csharp
 [Serializable]  
 public class Person : ISerializable {  
     protected Person(SerializationInfo info, StreamingContext context) {  
         ...  
     }  
 }  
-```  
+```
   
  **✓ DO** 實作 `ISerializable` 成員明確。  
   
@@ -100,7 +99,7 @@ public class Person : ISerializable {
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
+ *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
   
 ## <a name="see-also"></a>另請參閱
 

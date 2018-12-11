@@ -1,19 +1,18 @@
 ---
 title: 命名參數
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - parameters, names
 - names [.NET Framework], parameters
 ms.assetid: ca3c956e-725a-441b-b4e3-eab5d472f41c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8e6a8a1dcdcb8fa3311b040c72987f0f76e681fc
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+author: KrzysztofCwalina
+ms.openlocfilehash: 35965f03f5c50cbe3ffcc9bdb615d99c50fc30a2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086468"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147907"
 ---
 # <a name="naming-parameters"></a>命名參數
 除了可讀性的明顯原因，請務必遵循的指導方針的參數名稱，因為參數會顯示在文件，並在設計工具中，視覺化設計工具提供 Intellisense 和瀏覽功能的類別時。  
@@ -35,7 +34,7 @@ ms.locfileid: "44086468"
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
+ *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -2,20 +2,20 @@
 title: F# Interactive (fsi.exe) 參考
 description: 了解如何F#Interactive (fsi.exe) 用來執行F#程式碼以互動方式在主控台上或執行F#指令碼。
 ms.date: 05/16/2016
-ms.openlocfilehash: 459a2a4ba49ba0f55455797617781d010efecc0b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 8f6d261c6570935b665fc8a826b0829b3953a587
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50195251"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153627"
 ---
 # <a name="interactive-programming-with-f"></a>F# 互動式程式設計 #
 
 > [!NOTE]
-本文目前僅描述 Windows 的體驗。  將會加以重新撰寫。
+> 本文目前僅描述 Windows 的體驗。  將會加以重新撰寫。
 
 > [!NOTE]
-API 參考連結將帶您前往 MSDN。  docs.microsoft.com API 參考不完整。
+> API 參考連結將帶您前往 MSDN。  docs.microsoft.com API 參考不完整。
 
 F# Interactive (fsi.exe) 在主控台中，以互動方式用於執行 F# 程式碼，或執行 F# 指令碼。 換句話說，F# Interactive 會執行 F# 語言的 REPL (讀取、評估、列印迴圈)。
 

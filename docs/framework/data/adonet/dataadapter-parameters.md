@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
-ms.openlocfilehash: e633c7cdd105125fc5fb595566d15cf5f5fe4e6f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: ad0045f926b05b6a73dd64089290f4b8937004ca
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845609"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150988"
 ---
 # <a name="dataadapter-parameters"></a>DataAdapter 的參數
 <xref:System.Data.Common.DbDataAdapter> 具有四個屬性，可用來擷取資料來源的資料，以及將資料更新至資料來源：<xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> 屬性可傳回資料來源的資料，而 <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>、<xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> 和 <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> 屬性可用來管理在資料來源的變更。 在您呼叫 `SelectCommand` 的 `Fill` 方法前，必須先設定 `DataAdapter` 屬性。 您必須先設定 `InsertCommand`、`UpdateCommand` 或 `DeleteCommand` 屬性，然後再呼叫 `Update` 的 `DataAdapter` 方法，端視針對 <xref:System.Data.DataTable> 中的資料進行哪些變更而定。 例如，如果已經加入資料列，則必須先設定 `InsertCommand`，才能呼叫 `Update`。 `Update` 正在處理已插入、已更新或已刪除的資料列時，`DataAdapter` 會使用個別的 `Command` 屬性來處理這項動作。 已修改資料列的目前資訊會透過 `Command` 集合傳遞給 `Parameters` 物件。  
   
  更新資料來源的資料列時，您呼叫的 UPDATE 陳述式會使用唯一的識別項來識別資料表中需要更新的資料列。 唯一的識別項一般是主索引鍵欄位的值。 UPDATE 陳述式所使用的參數包含唯一的識別項，以及要更新的資料行和值，如下列 Transact-SQL 陳述式所示。  
   
-```  
+```sql
 UPDATE Customers SET CompanyName = @CompanyName   
   WHERE CustomerID = @CustomerID  
 ```  
@@ -27,7 +27,7 @@ UPDATE Customers SET CompanyName = @CompanyName
   
  在 Visual Basic 範例中，`CompanyName`欄位會更新其值為`@CompanyName`資料列的參數位置`CustomerID`等於值`@CustomerID`參數。 參數會擷取資訊從修改過的資料列使用<xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A>屬性<xref:System.Data.SqlClient.SqlParameter>物件。 下列是前述範例 UPDATE 陳述式的參數。 程式碼會假設變數 `adapter` 表示有效的 <xref:System.Data.SqlClient.SqlDataAdapter> 物件。  
   
-```  
+```vb
 adapter.Parameters.Add( _  
   "@CompanyName", SqlDbType.NChar, 15, "CompanyName")  
 Dim parameter As SqlParameter = _  

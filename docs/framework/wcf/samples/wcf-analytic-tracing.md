@@ -3,11 +3,11 @@ title: WCF 分析追蹤
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
 ms.openlocfilehash: a5e4b82bd28cae18f393a4143325623634d4bbaf
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181653"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147420"
 ---
 # <a name="wcf-analytic-tracing"></a>WCF 分析追蹤
 這個範例會示範如何將您自己的追蹤事件加入至 Windows Communication Foundation (WCF) 寫入至 ETW 的分析追蹤的資料流[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。 分析追蹤的用意在於輕鬆取得服務的可視性，而不必付出高效能的代價。 此範例示範如何使用<xref:System.Diagnostics.Eventing?displayProperty=nameWithType>Api 來與 WCF 服務整合的寫入事件。  
@@ -106,7 +106,7 @@ ms.locfileid: "50181653"
 4.  按一下 **清除**可清除事件。  
   
 ## <a name="known-issue"></a>已知問題  
- 沒有已知的問題**事件檢視器**其中可能無法為 ETW 事件解碼。 您可能會看到錯誤訊息，指出: 「 事件識別碼的描述\<識別碼 > 來自來源 Microsoft-windows-Windows 應用程式伺服器-應用程式找不到。 本機電腦可能並未安裝引發此事件的元件，或安裝已損毀。 您可以安裝或修復該元件在本機電腦上的。 」 如果您遇到這個錯誤，請選取**重新整理**從**動作**功能表。 接著，事件應該就會正確解碼。  
+ 沒有已知的問題**事件檢視器**其中可能無法為 ETW 事件解碼。 您可能會看到錯誤訊息，指出：「 事件識別碼的描述\<識別碼 > 找不到 Microsoft Windows 應用程式伺服器-應用程式的來源。 本機電腦可能並未安裝引發此事件的元件，或安裝已損毀。 您可以安裝或修復該元件在本機電腦上的。 」 如果您遇到這個錯誤，請選取**重新整理**從**動作**功能表。 接著，事件應該就會正確解碼。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

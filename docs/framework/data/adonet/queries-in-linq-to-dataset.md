@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: da9e5bd39cebce27dbaf89ac020c2bf8f154adcc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2b2d487484f026be7637185ef759fb87db571b3a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211836"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145802"
 ---
 # <a name="queries-in-linq-to-dataset"></a>LINQ to DataSet 中的查詢
 查詢是指從資料來源中擷取資料的運算式。 查詢通常會以特定的查詢語言來表示，例如 SQL 用於關聯式資料庫，而 XQuery 用於 XML。 因此，開發人員必須針對他們所查詢的每種資料來源或資料格式，學習新的查詢語言。 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 提供了一種較簡單且一致的模型，可處理各種資料來源和格式的資料。 在 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 查詢中，您一定會使用程式設計物件。  
@@ -23,7 +23,7 @@ ms.locfileid: "44211836"
   
  在傳回值序列的查詢中，查詢變數本身絕不會保存查詢結果，只會儲存查詢命令而已。 查詢的執行會延後，直到在 `foreach` 或 `For Each` 迴圈 (Loop) 中反覆查看查詢變數為止。 這就叫做*延後執行*; 也就是會在建構查詢之後的某個時間執行的查詢。 這表示，您可以依照想要的頻率來執行查詢。 例如，當您擁有一個正由其他應用程式更新的資料庫時，這就很有用。 您可以在應用程式中建立擷取最新資訊的查詢，然後重複執行此查詢，以便每次都傳回更新的資訊。  
   
- 相較於傳回值序列的延後查詢，傳回單一子句值的查詢會立即執行。 單一子句查詢的某些範例包括 <xref:System.Linq.Enumerable.Count%2A>、<xref:System.Linq.Enumerable.Max%2A>、<xref:System.Linq.Enumerable.Average%2A> 和 <xref:System.Linq.Enumerable.First%2A>。 這些查詢會立即執行，因為系統需要查詢結果來計算單一子句結果。 例如，若要尋找查詢結果的平均值，您必須執行查詢，如此平均函式才有輸入資料可處理。 此外，您也可以針對查詢使用 <xref:System.Linq.Enumerable.ToList%2A> 或 <xref:System.Linq.Enumerable.ToArray%2A> 方法，強制立即執行不會產生單一子句值的查詢。 當您想要快取查詢的結果時，這些強制立即執行的技巧就很有用。 如需延後和立即查詢執行的詳細資訊，請參閱[Getting Started with LINQ](https://msdn.microsoft.com/library/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9)。  
+ 相較於傳回值序列的延後查詢，傳回單一子句值的查詢會立即執行。 單一子句查詢的某些範例包括 <xref:System.Linq.Enumerable.Count%2A>、<xref:System.Linq.Enumerable.Max%2A>、<xref:System.Linq.Enumerable.Average%2A> 和 <xref:System.Linq.Enumerable.First%2A>。 這些查詢會立即執行，因為系統需要查詢結果來計算單一子句結果。 例如，若要尋找查詢結果的平均值，您必須執行查詢，如此平均函式才有輸入資料可處理。 此外，您也可以針對查詢使用 <xref:System.Linq.Enumerable.ToList%2A> 或 <xref:System.Linq.Enumerable.ToArray%2A> 方法，強制立即執行不會產生單一子句值的查詢。 當您想要快取查詢的結果時，這些強制立即執行的技巧就很有用。
   
 ## <a name="queries"></a>查詢  
  [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 在兩個不同的語法，即可制訂查詢： 查詢運算式語法和以方法為基礎的查詢語法。  

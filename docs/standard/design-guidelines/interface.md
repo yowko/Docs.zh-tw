@@ -1,20 +1,19 @@
 ---
 title: 介面設計
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - interfaces [.NET Framework], design guidelines
 - type design guidelines, interfaces
 - class library design guidelines [.NET Framework], interfaces
 ms.assetid: a016bd18-6710-4358-9438-9f190a295392
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c687d7622e82ee206b2201760818827398f8543b
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+author: KrzysztofCwalina
+ms.openlocfilehash: a017b34ab410824e3ddac4365e5711840fb50031
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863718"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148726"
 ---
 # <a name="interface-design"></a>介面設計
 雖然大部分 Api 最會使用類別和結構建立模型，但有一些的情況介面比較適合或是唯一的選項。  
@@ -47,7 +46,7 @@ ms.locfileid: "43863718"
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
+ *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
 ms.openlocfilehash: f435136bb08876b759087b9cdd258f6ae7881be5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191112"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130804"
 ---
 # <a name="message-security-with-a-certificate-client"></a>憑證用戶端的訊息安全性
 下列案例示範 Windows Communication Foundation (WCF) 用戶端和服務使用訊息安全性模式保護。 用戶端與服務皆以憑證驗證。 如需詳細資訊，請參閱 <<c0> [ 分散式應用程式安全性](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)。  

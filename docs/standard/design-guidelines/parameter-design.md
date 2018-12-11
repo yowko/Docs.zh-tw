@@ -1,6 +1,6 @@
 ---
 title: 參數設計
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - member design guidelines [.NET Framework], parameters
@@ -9,14 +9,13 @@ helpviewer_keywords:
 - parameters, design guidelines
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ea5311de8cef266af23b259d943568bfa95eaf72
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+author: KrzysztofCwalina
+ms.openlocfilehash: a639e1389d0771dfcb5635b7d78982150b684fd3
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964812"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150806"
 ---
 # <a name="parameter-design"></a>參數設計
 本章節會提供廣泛的指導方針，在參數的設計，包括各節來檢查引數的指導方針。 此外，您應該參閱中所述的指導方針[命名的參數](../../../docs/standard/design-guidelines/naming-parameters.md)。  
@@ -154,7 +153,7 @@ public class String {
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
+ *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
   
 ## <a name="see-also"></a>另請參閱
 

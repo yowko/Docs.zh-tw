@@ -14,11 +14,11 @@ ms.assetid: 694a33c5-a040-450d-aed5-ac49fc88ce61
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 63780583d035d6fab6b3a79424857b82a910ef09
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744609"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155073"
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>逐步解說：建立可延伸應用程式
 本逐步解說描述如何建立增益集執行簡單的計算機功能的管線。 它不會示範真實世界的案例;相反地，它會示範管線和如何增益集可以提供服務主機的基本的功能。  
@@ -43,11 +43,11 @@ ms.locfileid: "50744609"
   
 -   執行主應用程式。  
   
- 這個管線會將傳遞的可序列化的型別 (<xref:System.Double>和<xref:System.String>)、 主機和增益集之間。 如需示範如何將複雜資料型別集合的範例，請參閱[逐步解說： 將集合之間的主機和增益集](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)。  
+ 這個管線會將傳遞的可序列化的型別 (<xref:System.Double>和<xref:System.String>)、 主機和增益集之間。 如需示範如何將複雜資料型別集合的範例，請參閱[逐步解說：主機和增益集之間傳遞集合](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)。  
   
  此管線的合約會定義四個數學運算的物件模型： 新增、 減、 乘、 和分割。 與方程式來計算，例如 2 + 2，主機會提供增益集和增益集將結果傳回至主應用程式。  
   
- 計算機增益集的第 2 版提供更多計算的可能性，並示範了版本控制。 所述[逐步解說： 為您的主機變更啟用回溯相容性](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)。  
+ 計算機增益集的第 2 版提供更多計算的可能性，並示範了版本控制。 中描述[逐步解說：啟用主應用程式變更的回溯相容性](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)。  
   
 ## <a name="prerequisites"></a>必要條件  
  您需要下列項目才能完成本逐步解說：  
@@ -86,7 +86,7 @@ ms.locfileid: "50744609"
      不需要在您的應用程式的資料夾; 中放入管線資料夾結構此處作法僅是為了方便起見。 在適當的步驟，逐步解說會說明如何變更程式碼，如果管線資料夾結構是在不同的位置。 請參閱中的管線目錄需求的討論[管線開發需求](https://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)。  
   
     > [!NOTE]
-    >  `CalcV2`資料夾不會用於本逐步解說，它是一個預留位置，如[逐步解說： 為您的主機變更啟用回溯相容性](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)。  
+    >  `CalcV2`資料夾不會用於本逐步解說，它是一個預留位置，如[逐步解說：啟用主應用程式變更的回溯相容性](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)。  
   
 ## <a name="creating-the-contract-and-views"></a>建立合約和檢視  
  此管線的合約區段會定義`ICalc1Contract`介面，定義四種方法： `add`， `subtract`， `multiply`，和`divide`。  
@@ -355,8 +355,8 @@ ms.locfileid: "50744609"
 4.  型別**結束**然後按**Enter**鍵以關閉應用程式。  
   
 ## <a name="see-also"></a>另請參閱  
-- [逐步解說： 啟用主應用程式變更的回溯相容性](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
--  [主機和增益集之間的逐步解說： 將集合](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
+- [逐步解說：啟用主應用程式變更的回溯相容性](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+-  [逐步解說：主機和增益集之間傳遞集合](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
 -  [管線開發需求](https://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
 -  [合約、 檢視和配接器](https://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)  
 -  [管線開發](../../../docs/framework/add-ins/pipeline-development.md)

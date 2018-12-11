@@ -5,16 +5,16 @@ ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0a89474ddfe3bcde1c44271818b7e3c730469f48
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199704"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152522"
 ---
 # <a name="net-native-and-compilation"></a>.NET 原生和編譯
-以 .NET Framework 為目標的 Windows 8.1 應用程式及 Windows 桌面應用程式，會以特定的程式設計語言撰寫，並會編譯成中繼語言 (IL)。 在執行階段，Just-In-Time (JIT) 編譯器在第一次執行方法之前，才會負責編譯 IL 為本機電腦的原生程式碼。 相較之下，.NET 原生工具鏈會在編譯時期轉換原始碼為原生程式碼。 本主題比較 .NET 原生與其他適用於 .NET Framework 應用程式的編譯技術，並提供 .NET 原生如何產生原生程式碼的實用概觀，可協助您了解為什麼在以 .NET 原生編譯的程式碼中發生的例外狀況不會發生在 JIT 編譯程式碼中。  
+以 .NET Framework 為目標的 Windows 8.1 應用程式及 Windows 桌面應用程式，會以特定的程式設計語言撰寫，並會編譯成中繼語言 (IL)。 在執行階段，Just-In-Time (JIT) 編譯器在第一次執行方法之前，才會負責編譯 IL 為本機電腦的原生程式碼。 相較之下，.NET 原生工具鏈會在編譯時期轉換原始碼為原生程式碼。 本主題比較 .NET Native 與其他適用於 .NET Framework 應用程式的編譯技術，並提供 .NET Native 如何產生原生程式碼的實用概觀，可協助您了解為什麼在以 .NET Native 編譯的程式碼中發生的例外狀況不會發生在 JIT 編譯程式碼中。  
   
-## <a name="net-native-generating-native-binaries"></a>.NET 原生：產生原生二進位檔  
+## <a name="net-native-generating-native-binaries"></a>.NET 原生：產生的原生二進位檔  
  目標為 .NET Framework 且不使用 .NET 原生工具鏈編譯的應用程式，可由您的應用程式組件組成，其中包含下列項目：  
   
 -   描述組件、其相依性、包含的類型和其成員的[中繼資料](../../../docs/standard/metadata-and-self-describing-components.md)。 中繼資料用於反映和晚期繫結存取，以及在某些情況下也由編譯器及建置工具所使用。  

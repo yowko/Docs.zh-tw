@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-ms.openlocfilehash: a9a83f64b7ea0de275631d7d3b8d2755671223ce
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 0f8d21ca4f08ad4dc2e5f5e62695b9b14aff13d5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864478"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53156713"
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>HOW TO：建立自訂追蹤參與者
 工作流程追蹤會提供工作流程執行狀態的可見性。 工作流程執行階段會發出追蹤記錄，其中描述工作流程開發週期事件、活動開發週期事件、書籤繼續及錯誤。 這些追蹤記錄由追蹤參與者使用。 Windows Workflow Foundation (WF) 包含寫入追蹤記錄當做事件追蹤的 Windows (ETW) 事件的標準追蹤參與者。 如果不符合需求，您也可以寫入自訂的追蹤參與者。 本教學課程步驟描述如何建立擷取 `WriteLine` 活動輸出的自訂追蹤參與者和追蹤設定檔，以便向使用者顯示這些項目。  
@@ -320,7 +320,7 @@ ms.locfileid: "43864478"
     }  
     ```  
   
-###  <a name="BKMK_BuildAndRun"></a> 若要建置並執行應用程式  
+###  <a name="BKMK_BuildAndRun"></a> 若要建置及執行應用程式  
   
 1.  按 Ctrl+Shift+B 建置應用程式。  
   
@@ -334,8 +334,9 @@ ms.locfileid: "43864478"
  **請輸入介於 1 到 10 之間的數字**  
 **您猜得過長。**   
 **請輸入介於 1 到 10 之間的數字**    
+
     > [!NOTE]
-    >  此資訊可用於判斷隨機數字的範圍，但不包含任何先前猜測的相關資訊。 這項資訊會在下一個步驟中，[如何： 主應用程式的工作流程-並存的多個版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。  
+    >  此資訊可用於判斷隨機數字的範圍，但不包含任何先前猜測的相關資訊。 這項資訊會在下一個步驟中， [How to:裝載的工作流程-並存的多個版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。  
   
      請記下工作流程執行個體識別碼，並玩遊戲直到結束。  
   
@@ -345,4 +346,4 @@ ms.locfileid: "43864478"
 **您猜得過長。**   
 **請輸入介於 1 到 10 之間的數字**   
 **您猜得過長。**   
-**請輸入介於 1 到 10 之間的數字**沒有該使用者的猜測時，除了這個追蹤資料並不包含工作流程最後猜測的相關資訊。 這是因為追蹤資訊僅包含工作流程的 `WriteLine` 輸出，在工作流程完成後顯示的最後一個訊息，是由 `Completed` 處理常式完成的。 在下一個步驟的教學課程中，[如何： 主應用程式的工作流程-並存的多個版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)，現有`WriteLine`活動會修改成顯示該使用者的猜測和額外`WriteLine`新增的活動會顯示最後的結果。 整合這些變更之後，[如何： 主應用程式的工作流程-並存的多個版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)示範如何同時裝載工作流程的多個版本。
+**請輸入介於 1 到 10 之間的數字**沒有該使用者的猜測時，除了這個追蹤資料並不包含工作流程最後猜測的相關資訊。 這是因為追蹤資訊僅包含工作流程的 `WriteLine` 輸出，在工作流程完成後顯示的最後一個訊息，是由 `Completed` 處理常式完成的。 在下一個步驟的教學課程中， [How to:裝載多個版本的工作流程-並存](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)，現有`WriteLine`活動會修改成顯示該使用者的猜測和額外`WriteLine`活動加入顯示最終的結果。 整合這些變更之後， [How to:裝載的工作流程-並存的多個版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)示範如何同時裝載工作流程的多個版本。

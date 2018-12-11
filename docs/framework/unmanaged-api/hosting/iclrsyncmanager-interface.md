@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ede896cdb93217fcfba9d66ed7102bcc1ba762e9
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50041826"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129320"
 ---
 # <a name="iclrsyncmanager-interface"></a>ICLRSyncManager 介面
 定義方法，可讓主應用程式取得要求的工作的相關資訊，以及偵測死結的同步處理實作中。  

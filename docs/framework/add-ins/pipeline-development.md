@@ -12,11 +12,11 @@ ms.assetid: 932788f2-b87d-44cf-82f9-04492a8b2722
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f981d667f3cbf35ab010ac5bd26a9ecd5c2aae11
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50135429"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151339"
 ---
 # <a name="pipeline-development"></a>管線開發
 增益集管線是主應用程式和其增益集必須使用與彼此進行通訊的管線區段的路徑。  
@@ -80,11 +80,11 @@ ms.locfileid: "50135429"
   
      描述主機執行加法、 減法、 乘法和除法計算的計算機增益集。  
   
--   [逐步解說： 啟用主應用程式變更的回溯相容性](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+-   [逐步解說：啟用主應用程式變更的回溯相容性](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
   
      描述計算機增益集與增強的計算功能，以及如何維護與第一個計算機增益集的相容性。  
   
--   [主機和增益集之間的逐步解說： 將集合](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
+-   [逐步解說：主機和增益集之間傳遞集合](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
   
      描述如何透過使用案例的管線傳遞資料集合。  
   

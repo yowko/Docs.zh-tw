@@ -4,12 +4,12 @@ ms.date: 04/23/2017
 helpviewer_keywords:
 - tuples [Visual Basic]
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
-ms.openlocfilehash: d76c14aa83fcf47faea41946614e83cfbc8ad57b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c0198cde88b66f5e115c82b5454bd8a32db7ef96
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195498"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143710"
 ---
 # <a name="tuples-visual-basic"></a>Tuple (Visual Basic)
 
@@ -50,7 +50,7 @@ Visual Basic tuple 的欄位會讀取-寫入;tuple 已具現化之後，您可�
 
 [!code-vb[ExplicitlyNamed](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
-若要啟用 interred 的元組元素名稱，您必須定義在 Visual Basic 專案中使用 Visual Basic 編譯器的版本 (\*.vbproj) 檔案： 
+若要啟用推斷的元組元素名稱，您必須定義在 Visual Basic 專案中使用 Visual Basic 編譯器的版本 (\*.vbproj) 檔案： 
 
 ```xml 
 <PropertyGroup> 

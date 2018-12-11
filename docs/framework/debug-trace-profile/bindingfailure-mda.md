@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1a75efaf6703858fdb48a3f09635da1be4463d34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6cf0c944fc904a50a5b652f666f50c457a60204
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364694"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130829"
 ---
 # <a name="bindingfailure-mda"></a>bindingFailure MDA
 無法載入組件時，會啟用 `bindingFailure` Managed 偵錯助理 (MDA)。  
@@ -77,7 +77,7 @@ ms.locfileid: "33364694"
 ## <a name="example"></a>範例  
  下列程式碼範例示範可啟用此 MDA 的情況：  
   
-```  
+```csharp
 using System;  
 using System.Collections.Generic;  
 using System.Text;  

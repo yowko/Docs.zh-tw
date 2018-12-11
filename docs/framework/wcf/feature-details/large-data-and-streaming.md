@@ -2,12 +2,12 @@
 title: 大型資料與資料流
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: f381df2acdb370c6e84d3a00079578f8fceb69f3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: a6c655e260aa75504e9a445458664b11d8e4d56d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192570"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145133"
 ---
 # <a name="large-data-and-streaming"></a>大型資料與資料流
 Windows Communication Foundation (WCF) 是一種以 XML 為基礎的通訊基礎結構。 因為 XML 資料通常編碼中定義的標準文字格式[XML 1.0 規格](https://go.microsoft.com/fwlink/?LinkId=94838)、 已連線系統開發人員和架構設計人員通常會關心傳送訊息的網路使用量 （或大小） 之間網路和以文字為基礎的編碼 XML 帶來的特殊挑戰的二進位資料的傳輸效率。  
@@ -15,7 +15,7 @@ Windows Communication Foundation (WCF) 是一種以 XML 為基礎的通訊基礎
 ## <a name="basic-considerations"></a>基本考量  
  若要提供 WCF 的下列資訊的背景資訊，本節會重點說明一些一般性的問題和考量的編碼、 二進位資料，且資料流，通常套用至連線的系統基礎結構。  
   
-### <a name="encoding-data-text-vs-binary"></a>資料編碼：文字與二元  
+### <a name="encoding-data-text-vs-binary"></a>資料編碼：文字與。二元  
  常見的開發人員問題包括：由於開始標記和結束標記的重複性質，因此與二進位格式相比，XML 的額外負荷相當大；一般認為數值的編碼會龐大很多，因為它們是以文字值來表示；而二進位資料無法有效地表示，因為它必須進行特殊編碼才能內嵌在文字格式中。  
   
  雖然上述許多問題和類似問題的確存在，但是 XML Web Service 環境中的 XML 文字編碼訊息和舊版遠端程序呼叫 (RPC) 環境中的二進位編碼訊息之間的實際差異常常不如最初所想的那麼顯著。  
@@ -59,7 +59,7 @@ Windows Communication Foundation (WCF) 是一種以 XML 為基礎的通訊基礎
  傳送大量資料時您必須設定`maxAllowedContentLength`IIS 設定 (如需詳細資訊，請參閱[設定 IIS 要求限制](https://go.microsoft.com/fwlink/?LinkId=253165)) 和`maxReceivedMessageSize`繫結設定 (例如[System.ServiceModel.BasicHttpBinding.MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A)或<xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A>)。 `maxAllowedContentLength`屬性預設為 28.6 M，`maxReceivedMessageSize`屬性預設為 64 KB。  
   
 ## <a name="encodings"></a>編碼方式  
- *編碼*定義一組有關如何在網路上呈現訊息的規則。 *編碼器*實作這類編碼，並負責在寄件者端，如開啟<xref:System.ServiceModel.Channels.Message>記憶體中訊息位元組資料流或可透過網路傳送的位元組緩衝區。 在接收者端，編碼器會將位元組序列變成記憶體中的訊息。  
+ *編碼*定義一組有關如何在網路上呈現訊息的規則。 *編碼器*實作這類編碼，並負責在寄件者端，開啟 記憶體中<xref:System.ServiceModel.Channels.Message>成位元組資料流或可透過網路傳送的位元組緩衝區。 在接收者端，編碼器會將位元組序列變成記憶體中的訊息。  
   
  WCF 包含三種編碼器，並可讓您撰寫及插入您自己的編碼器，如有必要。  
   
@@ -76,7 +76,7 @@ Windows Communication Foundation (WCF) 是一種以 XML 為基礎的通訊基礎
  如果您的方案不需要互通性，但您還是想要使用 HTTP 傳輸，可以將 <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> 撰寫為使用 <xref:System.ServiceModel.Channels.HttpTransportBindingElement> 類別傳輸的自訂繫結。 如果您的服務有許多用戶端需要互通性，建議您公開平行端點，其中每個端點都已啟用適合個別用戶端的傳輸和編碼選擇。  
   
 ### <a name="enabling-mtom"></a>啟用 MTOM  
- 當互通性成為一項需求且必須傳送大型二進位資料時，MTOM 訊息編碼是可以在標準 <xref:System.ServiceModel.BasicHttpBinding> 或 <xref:System.ServiceModel.WSHttpBinding> 繫結上啟用的替代編碼策略，方法是將個別 `MessageEncoding` 屬性設定為 <xref:System.ServiceModel.WSMessageEncoding.Mtom> 或將 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> 撰寫為 <xref:System.ServiceModel.Channels.CustomBinding>。 下列範例程式碼，擷取自[MTOM 編碼](../../../../docs/framework/wcf/samples/mtom-encoding.md)範例示範如何在組態中啟用 MTOM。  
+ 當互通性成為一項需求且必須傳送大型二進位資料時，MTOM 訊息編碼是可以在標準 <xref:System.ServiceModel.BasicHttpBinding> 或 <xref:System.ServiceModel.WSHttpBinding> 繫結程序上啟用的替代編碼策略，方法是將個別 `MessageEncoding` 屬性設定為 <xref:System.ServiceModel.WSMessageEncoding.Mtom> 或將 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> 撰寫為 <xref:System.ServiceModel.Channels.CustomBinding>。 下列範例程式碼，擷取自[MTOM 編碼](../../../../docs/framework/wcf/samples/mtom-encoding.md)範例示範如何在組態中啟用 MTOM。  
   
 ```xml  
 <system.serviceModel>  
@@ -239,4 +239,4 @@ public class UploadStreamMessage
 >  使用緩衝或資料流傳輸是由端點處決定。 如果是 HTTP 傳輸，傳輸模式不會在連線上傳播，或是在 Proxy 伺服器與其他媒介之間進行傳播。 設定傳輸模式不會反映在服務介面的描述中。 之後產生 WCF 用戶端至服務，您必須編輯組態檔來設定模式，搭配資料流傳輸使用的服務。 如果是 TCP 和具名管道傳輸，會傳播傳輸模式做為原則判斷提示。  
   
 ## <a name="see-also"></a>另請參閱  
- [如何：啟用資料流](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+ [操作說明：啟用資料流](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

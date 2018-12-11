@@ -1,73 +1,72 @@
 ---
-title: 雲端原生應用程式呢？
-description: 現代化現有的.NET 應用程式與 Azure 雲端和 Windows 容器 |雲端原生應用程式呢？
+title: 雲端原生應用程式如何呢？
+description: 將現有的.NET 應用程式使用 Azure 雲端和 Windows 容器現代化 |雲端原生應用程式如何呢？
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 0e880689001ece2b770811cfbe3fea43aa425b32
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 0e390fcc838fc745e5950a8adcaeee0e5aa6e434
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33957988"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152562"
 ---
-# <a name="what-about-cloud-native-applications"></a>雲端原生應用程式呢？
+# <a name="what-about-cloud-native-applications"></a>雲端原生應用程式如何呢？
 
-雖然[雲端原生](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms)應用程式不是主要焦點本指南中，最好先了解此現代化成熟度層級，以及區別雲端最佳化應用程式。
+雖然[雲端原生](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms)應用程式不是重點的本指南中，很有幫助，若要了解這個現代化成熟度等級中，並以區分它與雲端最佳化應用程式。
 
-圖 4-3 的應用程式現代化成熟度層級中放置雲端原生應用程式：
+圖 4-3 將置於應用程式現代化成熟度等級的雲端原生應用程式：
 
 ![定位雲端原生應用程式](./media/image3.png)
 
 > **圖 4-3。** 定位雲端原生應用程式
 
-雲端原生現代化成熟度等級通常會需要新的開發投資。 移至雲端原生層級通常是由所驅動商務需要現代化應用程式來大幅改善大型應用程式藉由建立可部署的自發子系統 (microservices) 中的小數位數和小數位數最大的獨立應用程式，同時降低成本的長詞彙並增加演進靈活度提供的這些自發的應用程式的組件中的其他區域重大競爭優勢。 
+雲端原生現代化成熟度等級通常會需要新的開發投資。 通常將移至雲端原生層級是由所驅動商務需求將現代化的應用程式以大幅改善在大型應用程式中藉由建立可部署的自發子系統 （微服務） 和刻度最大的獨立從其他區域，同時降低成本，在很長的詞彙，並增加發展靈活度方面提供的這些自發性應用程式的組件的應用程式的重要競爭優勢。 
 
-主要功能[雲端原生](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)microservices 架構方法，它可以形成具有高的靈活性並調整會很難達到整合架構，為部署的限制會根據應用程式在內部部署或雲端環境。
+主要支柱[雲端原生](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)應用程式為基礎的微服務架構方法，它可以靈活地發展並調整很難達到整合型架構部署到其中的限制在內部部署或雲端環境。
 
 圖 4-4 顯示雲端原生模式的主要特性。  
 
-> ![雲端原生特性是 Microservices 容器具有恢復功能雲端、 orchestrators 和 serverles](./media/image4.png)
+> ![雲端原生特性是微服務，容器，雲端彈性、 協調器和 serverles](./media/image4.png)
 >
 > **圖 4-4。** 雲端原生特性
 
-此外，您可以透過新增其他服務，例如人工地智慧 (AI)、 機器學習 (ML)，以及 IoT 擴充基本的現代化 web 應用程式和雲端原生應用程式。 您可能會使用任一這些服務來擴充任何可行的雲端最佳化方法。
+此外，您可以藉由新增其他服務，人工智慧 (AI)、 機器學習 (ML) 和 IoT 等擴充基本的新式 web 應用程式和雲端原生應用程式。 您可以使用任一這些服務來擴充任何可能的雲端最佳化方法。
 
-在雲端原生層級的應用程式中的基本差異是在應用程式架構。 [雲端原生](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms)應用程式是，根據定義，microservices 為基礎的應用程式。 雲端原生應用程式需要特殊的架構、 技術與平台，相較於龐大的 web 應用程式或傳統的多層式架構應用程式。
+雲端原生層級的應用程式的基本差異，是在應用程式架構。 [雲端原生](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms)是應用程式，根據定義，微服務為基礎的應用程式。 雲端原生應用程式需要特殊的架構、 技術與平台，相較於單體式 web 應用程式或傳統的多層式架構應用程式。
 
 ## <a name="cloud-native-applications-details"></a>雲端原生應用程式詳細資料
 
-[雲端原生](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)是大型和業務關鍵應用程式的更進階或成熟狀態。 雲端原生應用程式通常需要架構和設計，而不是從頭由種現有的應用程式。 雲端原生應用程式更簡單的雲端最佳化的 web 應用程式之間的主要差異是使用以雲端原生方法 microservices 架構建議。 雲端最佳化應用程式也可以整合 web 應用程式或多層式架構應用程式。
+[雲端原生](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)是一種更進階或成熟的狀態，針對大型和關鍵任務應用程式。 雲端原生應用程式通常需要架構和設計，而不是從頭建立的現代化現有的應用程式。 雲端原生應用程式和簡單的雲端最佳化的 web 應用程式之間的主要差異是建議使用的雲端原生方法中的微服務架構。 雲端最佳化應用程式時，也可以是整合型 web 應用程式或多層式架構應用程式。
 
-[12 個因素應用程式](https://12factor.net/)（microservices 方法密切相關的模式的集合） 也會被視為對於[雲端原生](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms)應用程式架構。
+[Twelve-factor App](https://12factor.net/) （密切相關微服務方法的模式的集合） 也會被視為需求[雲端原生](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms)應用程式架構。
 
-[雲端原生運算基礎 (CNCF)](https://www.cncf.io/)是主要的升級程式的原生雲端原則。 Microsoft 是[隸屬 CNCF](https://azure.microsoft.com/blog/announcing-cncf/)。
+[雲端原生運算基礎 (CNCF)](https://www.cncf.io/)是主要的升級程式的雲端原生的原則。 Microsoft 一向[隸屬 CNCF](https://azure.microsoft.com/blog/announcing-cncf/)。
 
-範例定義和雲端原生應用程式的特性的詳細資訊，請參閱 Gartner 文章[如何架構設計人員和設計雲端原生應用程式](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)。 如需 microsoft 如何實作雲端原生應用程式的特定指引，請參閱[.NET microservices： 容器化的.NET 應用程式的架構](https://aka.ms/microservicesebook)。
+如需範例定義和雲端原生應用程式的特性的詳細資訊，請參閱 Gartner 文章[如何架構和設計雲端原生應用程式](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)。 如需 microsoft 如何實作雲端原生應用程式的特定指引，請參閱[.NET 微服務：容器化.NET 應用程式架構](https://aka.ms/microservicesebook)。
 
-考慮移轉至完整的應用程式最重要的因素[雲端原生](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms)模型是您必須 rearchitect microservices 為基礎的架構。 清楚地，這需要大量投資，在開發大型重構流程，因為。 選擇此選項，通常是針對需要新的層級的延展性和長期的靈活度關鍵任務應用程式。 但是，可以開始加入幾個新的情況下，microservices 邁向雲端原生，最終重構為 microservices 完整應用程式。 這是最佳的選項，在某些情況下的漸進方法。
+如果您移轉至完整的應用程式，請考慮最重要的因素[雲端原生](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms)模型是您必須重新架構微服務為基礎的架構。 顯然，這會需要大量投資開發大型重構流程，因為。 選擇此選項通常會需要新的層級的延展性和長期靈活度的任務關鍵性應用程式。 但是，您可以開始邁向雲端原生，藉由新增少數新的情況下，微服務，並最終重構為微服務的完整應用程式。 這是累加的方式，是最佳的選項，在某些情況下。
 
-## <a name="what-about-microservices"></a>Microservices 呢？ 
+## <a name="what-about-microservices"></a>微服務呢？ 
 
-當您考慮雲端原生應用程式為您的組織，則了 microservices 以及它們如何運作相當重要。
+當您考慮雲端原生應用程式為您的組織，了解微服務和其運作方式是重要的。
 
-Microservices 架構是進階的方法，您可以使用全新或改良朝雲端原生應用程式的現有應用程式所建立的應用程式。 您可以開始將少數 microservices 加入至現有的應用程式，以了解新 microservices 典範。 但是很明顯地，您需要架構設計人員和程式碼，特別是針對這種類型的架構方法。
+微服務架構是您可以使用全新或發展到雲端原生應用程式的現有應用程式所建立的應用程式的進階的方法。 您可以藉由將現有的應用程式，以了解新的微服務架構中的幾個微服務中啟動。 但很明顯地，您需要架構設計人員和程式碼，特別是針對這種類型的架構方法。
 
-不過，microservices 並非強制的任何新的或現代應用程式。 Microservices 不"magic bullet"，而且這些參數不會建立每個應用程式的單一的最佳方式。 您如何及何時使用 microservices 取決於您要建置的應用程式的類型。
+不過，並非強制的任何新的或現代應用程式的微服務。 微服務無法"magic bullet"，而且它們都無法建立每個應用程式的單一、 最佳的方式。 您如何及何時使用微服務取決於您要建置的應用程式的類型。
 
-Microservices 架構成為分散式和大型或複雜關鍵任務應用程式為基礎的自發的服務形式的多個獨立子系統的慣用的方法。 在 microservices 基礎架構中，應用程式會建立可以是獨立開發、 測試、 版本設定，部署，以及調整的服務集合。 這可包括任何相關的自發每個資料庫微服務。
+微服務架構逐漸成為分散式大型或複雜關鍵任務應用程式是以自發性服務的形式的多個獨立子系統為基礎的慣用的方法。 在微服務型架構中，應用程式會建立可獨立開發、 測試、 建立版本、 部署及調整服務的集合。 這可包括每個微服務的任何相關的自發資料庫。
 
-您可以使用.NET Core 實作 microservices 架構的詳細檢視，請參閱可下載 PDF 電子書[.NET microservices： 容器化的.NET 應用程式的架構](https://aka.ms/microservicesebook)。 本指南也可以使用[線上](../../microservices-architecture/index.md)。
+您可以使用.NET Core 實作微服務架構將詳細探討，請參閱可下載的 PDF 電子書[.NET 微服務：容器化.NET 應用程式架構](https://aka.ms/microservicesebook)。 本指南也可以使用[線上](../../microservices-architecture/index.md)。
 
-但即使是個 microservices 提供功能強大的功能與獨立部署、 強式子系統界限和技術多樣化的案例-它們也會引發許多新的挑戰。 分散式應用程式開發，例如分散且獨立的資料模型中; 與挑戰相關達到復原 microservices; 之間的通訊最終一致性; 需要和操作的複雜性。 Microservices 導入相較於傳統的整合應用程式的複雜性較高的層的級。
+但即使在微服務提供功能強大的功能獨立部署、 強式子系統界限和技術多樣化的案例-它們也會引發許多新的挑戰。 分散式應用程式開發，例如分散式和獨立資料模型，與相關的挑戰達到復原微服務; 之間的通訊最終一致性，需要和操作的複雜性。 微服務會採用較高層級的相較於傳統的單體式應用程式的複雜度。
 
-由於 microservices 架構的複雜度，只有特定案例與特定應用程式類型是適用於微服務為基礎的應用程式。 這些包括具有多個大型且複雜的應用程式發展子系統。 在這些情況下，值得投資更複雜的軟體架構，更長期高的靈活性和更有效率地維護應用程式。 但較不複雜的情況下，可能是較好的方式繼續進行整合的應用程式方法，或接近簡單多層式架構。
+微服務架構的複雜度，因為只有特定案例與特定應用程式類型都適用於微服務架構應用程式。 這些包括有多個的大型且複雜的應用程式不斷演進的子系統。 在這些情況下，值得投入更複雜的軟體架構，增加的長期靈活度和更有效率的應用程式維護。 但較不複雜的情況下，最好是以繼續使用單體式應用程式的方法，或簡化多層式架構方法。
 
-您不應該查看在做為 「 all-in 或根本 nothing。 」 的應用程式中使用 microservices 為最後請注意，即使有重複有關這個概念，正在執行的風險 您可以擴充，並藉由新增新的、 根據 microservices 小規模案例發展整合的現有應用程式。 您不需要從頭開始使用 microservices 架構方法。 事實上，我們建議您發展藉由新增新的案例中使用現有的龐大的單一或多層式架構應用程式。 最後，您可以細分成自主元件或 microservices 應用程式。 您可以啟動發展 microservices 方向，逐步解說應用程式整合。
+最後請注意，即使風險是重複性有關這個概念，您不應該看看為 「 全或完全沒有。 」 的應用程式中使用微服務 您可以擴充，並藉由新增新的、 微服務為基礎的小規模案例改進現有的單體式應用程式。 您不需要從頭開始使用微服務架構方法。 事實上，我們建議您持續改進從使用現有的單體式 」 或 「 多層式架構應用程式加入新的案例。 最後，您可以細分成獨立的元件或微服務應用程式。 您可以開始發展微服務方向，逐步解說中的應用程式整合。
 
-在任何情況下，所以本指南的主要目標的現有應用程式通常會有龐大或 N-tier 架構現代化本存在指南的其餘部分著重最重要的是在 「 沒有 microservices 型應用程式 」。
-
+在任何情況下，本存在指南的其餘部分著重最重要的是在 「 任何微服務型應用程式 」，因為本指南的主要目標單體式 」 或 「 多層式架構通常會有的現有應用程式現代化。
 
 >[!div class="step-by-step"]
-[上一頁](microsoft-technologies-in-cloud-optimized-applications.md)
-[下一頁](deploy-existing-net-apps-as-windows-containers.md)
+>[上一頁](microsoft-technologies-in-cloud-optimized-applications.md)
+>[下一頁](deploy-existing-net-apps-as-windows-containers.md)

@@ -3,11 +3,11 @@ title: 已區分的聯集 (F#)
 description: 了解如何使用F#差別聯集。
 ms.date: 05/16/2016
 ms.openlocfilehash: f833539f2e31ffc6db4182bdbd2088e6dc2bb2cc
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672241"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154407"
 ---
 # <a name="discriminated-unions"></a>已區分的聯集
 
@@ -39,7 +39,7 @@ type Shape =
     | Prism of width : float * float * height : float
 ```
 
-上述的程式碼宣告差別等位圖形，它可以有三種情況下的任何值： 矩形、 圓形和角柱。 每個案例中有一組不同的欄位。 矩形案例有兩個具名欄位，都屬於型別`float`，具有名稱寬度和長度。 圓形案例有只有一個具名的欄位，radius。 角柱案例有三個欄位，其中的 （寬度和高度） 兩個名為欄位。 未命名的欄位稱為匿名欄位。
+上述程式碼宣告差別等位圖形，它可以有三種情況下的任何值：矩形、 圓形和角柱。 每個案例中有一組不同的欄位。 矩形案例有兩個具名欄位，都屬於型別`float`，具有名稱寬度和長度。 圓形案例有只有一個具名的欄位，radius。 角柱案例有三個欄位，其中的 （寬度和高度） 兩個名為欄位。 未命名的欄位稱為匿名欄位。
 
 您所提供的具名和匿名的欄位，根據下列範例值建構物件。
 

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 SecurityBindingElement 建立自訂繫結
+title: HOW TO：建立自訂繫結使用 SecurityBindingElement
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
 ms.openlocfilehash: df40d8dbd5af9acf9e9484ee7694df2bba7ad9f1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181130"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155245"
 ---
-# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>HOW TO：使用 SecurityBindingElement 建立自訂繫結
+# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>HOW TO：建立自訂繫結使用 SecurityBindingElement
 Windows Communication Foundation (WCF) 包含數個系統提供繫結，您可以設定，但不是能提供充分的彈性設定 WCF 支援的所有安全性選項時。 本主題示範如何直接從個別的繫結元素建立自訂繫結，並強調一些可在建立這類繫結時指定的安全設定。 如需建立自訂繫結的詳細資訊，請參閱[擴充繫結](../../../../docs/framework/wcf/extending/extending-bindings.md)。  
   
 > [!WARNING]
@@ -25,7 +25,7 @@ Windows Communication Foundation (WCF) 包含數個系統提供繫結，您可�
   
  相反的，若要建立自訂繫結，會建立並且設定繫結項目，並且從自訂項目建立一個<xref:System.ServiceModel.Channels.CustomBinding>。  
   
- 若要進行這個步驟，您可以將個別的繫結項目加入到由 <xref:System.ServiceModel.Channels.BindingElementCollection>`Elements`類別之執行個體所表示的集合，然後，將 `CustomBinding`的 屬性設定為等同於該物件的項目。 必須按照下列順序加入繫結項目：Transaction Flow、Reliable Session、Security、Composite Duplex、One-way、Stream Security、Message Encoding 然後是 Transport。 請注意，並非每個繫結都需要所列的所有繫結項目。  
+ 若要進行這個步驟，您可以將個別的繫結項目加入到由 <xref:System.ServiceModel.Channels.BindingElementCollection>`Elements`類別之執行個體所表示的集合，然後，將 `CustomBinding`的 屬性設定為等同於該物件的項目。 您必須依下列順序加入繫結項目：交易流程、 可靠工作階段、 安全性、 複合雙工、 單向、 Stream Security、 訊息編碼，和傳輸。 請注意，並非每個繫結都需要所列的所有繫結項目。  
   
 ## <a name="securitybindingelement"></a>SecurityBindingElement  
  有三個繫結項目與訊息層級安全性相關，這些項目全都衍生自 <xref:System.ServiceModel.Channels.SecurityBindingElement> 類別。 這三個項目分別是 <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>、<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 和 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>。 <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> 用於提供混合模式安全性。 當訊息層提供安全性時，則使用另外兩個項目。  

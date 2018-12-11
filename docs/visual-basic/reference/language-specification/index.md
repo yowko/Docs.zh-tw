@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual Basic code, specifications
 - specifications, Visual Basic
 ms.assetid: 42c30017-19d0-442e-87a2-850b66ddc3df
-ms.openlocfilehash: 6708ad107a2ee5b4ba2896d811c103ed49b476b8
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: afba7e742c665712ec41d62e8248e81d3b0d74cc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45970769"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153315"
 ---
 # <a name="visual-basic-language-specification"></a>Visual Basic 語言規格
 Visual Basic 語言規格是有關 Visual Basic 文法和語法的所有問題的解答的授權來源。 它包含的語言，包括 Visual Basic 參考文件中未涵蓋的許多相關的詳細的資訊。  
@@ -26,4 +26,4 @@ Visual Basic 語言規格是有關 Visual Basic 文法和語法的所有問題�
  [Visual Basic 語言參考](../../../visual-basic/language-reference/index.md)
 
 >[!div class="step-by-step"]
-[下一步](../../../../_vblang/spec/introduction.md)
+>[下一步](../../../../_vblang/spec/introduction.md)

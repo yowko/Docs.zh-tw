@@ -1,6 +1,6 @@
 ---
 title: 等號比較運算子
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - class library design guidelines [.NET Framework], Equals method
@@ -9,14 +9,13 @@ helpviewer_keywords:
 - Equals method
 - == operator (equality) [.NET Framework]
 ms.assetid: bc496a91-fefb-4ce0-ab4c-61f09964119a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 27550a8fd8292029cad9c2e699374a190b1a532e
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+author: KrzysztofCwalina
+ms.openlocfilehash: ae188fc7cd55dd843e93afccbe1ea05575a9c36d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839351"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129073"
 ---
 # <a name="equality-operators"></a>等號比較運算子
 本節討論多載等號比較運算子，而是指`operator==`和`operator!=`為等號比較運算子。  
@@ -47,7 +46,7 @@ ms.locfileid: "48839351"
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
+ *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
   
 ## <a name="see-also"></a>另請參閱
 

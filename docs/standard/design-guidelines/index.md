@@ -1,27 +1,26 @@
 ---
 title: Framework 設計方針
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - libraries, .NET Framework class library
 - class library design guidelines [.NET Framework], about
 - class library design guidelines [.NET Framework]
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: df2ccf3d778e26e16937554304ae847f624cfec0
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+author: KrzysztofCwalina
+ms.openlocfilehash: 736069926a2a3fdc4856a51c5226f725b22c1d5f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085631"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147602"
 ---
 # <a name="framework-design-guidelines"></a>Framework 設計方針
 本章節提供指導方針來設計擴充並與其互動 .NET Framework 的程式庫。 目標是要協助確保 API 一致性和易用性，藉由提供統一的程式設計模型，用於開發的程式設計語言無關的程式庫設計人員。 我們建議您遵循這些設計指導方針，開發可擴充.NET Framework 的類別和元件時。 不一致的程式庫設計造成不良影響開發人員的生產力，並防止採用。  
   
  指導方針會編排成簡單的建議前置詞條款`Do`， `Consider`， `Avoid`，和`Do not`。 這些指導方針旨在協助類別庫設計人員了解不同方案之間的取捨。 可能會有一些情況良好的程式庫設計需要您違反這些設計指導方針。 這種情況下應該很少見，而且您必須清除且吸引人的原因，對您的決策。  
   
- 這些指導方針摘錄自本書*Framework 設計方針： 慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式*，Krzysztof Cwalina 與 Brad Abrams。  
+ 這些指導方針摘錄自*Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式*，Krzysztof Cwalina 與 Brad Abrams。  
   
 ## <a name="in-this-section"></a>本節內容  
  [命名方針](../../../docs/standard/design-guidelines/naming-guidelines.md)  
@@ -47,7 +46,7 @@ ms.locfileid: "44085631"
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
+ *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
   
 ## <a name="see-also"></a>另請參閱
 

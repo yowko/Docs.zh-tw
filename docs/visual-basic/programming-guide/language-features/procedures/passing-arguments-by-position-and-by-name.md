@@ -23,11 +23,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
 ms.openlocfilehash: bdaa0351e288b85a3e35818c0f53ef4d772932e5
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296447"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151303"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>依位置和名稱傳遞引數 (Visual Basic)
 當您呼叫`Sub`或`Function`程序中，您可以傳遞引數*依位置*— 在程序的定義中的出現順序，或您可以將其傳遞*依名稱*，而不需要考慮位置。  
@@ -64,7 +64,7 @@ ms.locfileid: "52296447"
   
  在上述範例中，沒有額外的逗號是為了保留位置省略`age`引數，因為`birth`依名稱傳遞。  
   
-在 Visual basic 15.5 之前的版本，當您在混合位置和名稱、 位置引數所提供引數必須放在第一次。 一旦您依名稱提供引數，任何剩餘的引數必須全部是依名稱傳遞。  例如，下列呼叫來`Display`方法會顯示編譯器錯誤[BC30241： 具名引數必須是](../../../misc/bc30241.md)。
+在 Visual basic 15.5 之前的版本，當您在混合位置和名稱、 位置引數所提供引數必須放在第一次。 一旦您依名稱提供引數，任何剩餘的引數必須全部是依名稱傳遞。  例如，下列呼叫來`Display`方法會顯示編譯器錯誤[BC30241:具名引數必須是](../../../misc/bc30241.md)。
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#6)] 
 
@@ -97,7 +97,7 @@ ms.locfileid: "52296447"
 ## <a name="see-also"></a>另請參閱  
  [程序](./index.md)  
  [程序參數和引數](./procedure-parameters-and-arguments.md)  
- [如何：將引數傳遞至程序](./how-to-pass-arguments-to-a-procedure.md)  
+ [操作說明：將引數傳遞至程序](./how-to-pass-arguments-to-a-procedure.md)  
  [以傳值和傳址方式傳遞引數](./passing-arguments-by-value-and-by-reference.md)  
  [選擇性參數](./optional-parameters.md)  
  [參數陣列](./parameter-arrays.md)  

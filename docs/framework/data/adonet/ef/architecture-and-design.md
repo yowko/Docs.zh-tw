@@ -2,17 +2,17 @@
 title: 架構與設計
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 5a0d8aac401a3485bc5f158bcda893ad9ab424e8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 281f321e45b019178aa82946eb451e56f5c04841
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530466"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154257"
 ---
 # <a name="architecture-and-design"></a>架構與設計
-中的 SQL 產生模組[範例提供者](https://go.microsoft.com/fwlink/?LinkId=180616)會實作成運算式樹狀架構表示的命令樹上的造訪者。 此產生作業是透過運算式樹狀，在單一行程中完成。  
+中的 SQL 產生模組[範例提供者](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)會實作成運算式樹狀架構表示的命令樹上的造訪者。 此產生作業是透過運算式樹狀，在單一行程中完成。  
   
- 樹狀結構節點的處理方式是由下而上。 首先，系統會產生中繼結構：SqlSelectStatement 或 SqlBuilder (都會實作 ISqlFragment)。 接著，系統會根據該結構產生 SQL 陳述式字串。 使用中繼結構的原因有兩個：  
+ 樹狀節點的處理方式是由下而上。 首先，會產生中繼結構：: SqlSelectStatement 或 SqlBuilder，這兩個實作 ISqlFragment。 接著，系統會根據該結構產生 SQL 陳述式字串。 使用中繼結構的原因有兩個：  
   
 -   就邏輯上來說，SQL SELECT 陳述式會以不按照順序的方式擴展。 系統會先造訪參與 FROM 子句的節點，然後再造訪參與 WHERE、GROUP BY 和 ORDER BY 子句的節點。  
   
@@ -25,7 +25,7 @@ ms.locfileid: "43530466"
  在第二個階段中，產生實際字串時，就會重新命名別名。  
   
 ## <a name="data-structures"></a>資料結構  
- 本章節將討論使用中的型別[範例提供者](https://go.microsoft.com/fwlink/?LinkId=180616)您用於建立 SQL 陳述式。  
+ 本章節將討論使用中的型別[範例提供者](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)您用於建立 SQL 陳述式。  
   
 ### <a name="isqlfragment"></a>ISqlFragment  
  本節內容涵蓋了實作 ISqlFragment 介面的類別，而這個介面具有兩種用途：  
@@ -226,9 +226,9 @@ private bool IsParentAJoin{get}
  聯結別名扁平化是在造訪 DbPropertyExpression 時達成，如＜DbPropertyExpression＞一節所述。  
   
 ### <a name="column-name-and-extent-alias-renaming"></a>資料行名稱和範圍別名重新命名  
- 資料行名稱和範圍別名重新命名的問題是使用只在產生的第二個階段中由別名取代的符號來處理，如＜SQL 產生的第二個階段：產生字串命令＞一節所述。  
+ 資料行名稱和範圍別名重新命名的問題所產生的 SQL 產生第二個階段一節中所述的第二個階段中使用別名的僅替代的符號：產生字串命令。  
   
-## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a>SQL 產生的第一個階段：造訪運算式樹狀結構  
+## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a>SQL 產生的第一個階段：瀏覽運算式樹狀架構  
  本節將描述 SQL 產生的第一個階段，這個階段會造訪代表查詢的運算式並且產生中繼結構：SqlSelectStatement 或 SqlBuilder。  
   
  本節將描述造訪不同運算式節點分類的原則，以及造訪特定運算式型別的詳細資料。  

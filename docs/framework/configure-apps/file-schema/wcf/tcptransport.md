@@ -2,12 +2,12 @@
 title: '&lt;tcpTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 92590f556d93859e8681eea8f8f05da4f560e150
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 39fb57af6ad97c1a0e51a2c5dcf06245ddf293ba
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738166"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152459"
 ---
 # <a name="lttcptransportgt"></a>&lt;tcpTransport&gt;
 定義 TCP 傳輸，通道可使用此傳輸來傳輸自訂繫結的訊息。  
@@ -45,7 +45,7 @@ ms.locfileid: "43738166"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -54,7 +54,7 @@ ms.locfileid: "43738166"
 |channelInitializationTimeout|取得或設定接受通道初始化的時間限制。  通道在中斷連接之前，可以處於初始化狀態中的最長時間 (以秒為單位)。 這個配額包含 TCP 連接可以使用 .Net Message Framing 通訊協定自行驗證所花費的時間。 用戶端必須先傳送一些初始資料，讓伺服器有足夠的資訊來執行驗證。 預設為 30 秒。|  
 |connectionBufferSize|取得或設定用來在用戶端或服務的網路上，傳輸已序列化訊息區塊 (Chunk) 的緩衝區大小。|  
 |hostNameComparisonMode|取得或設定值，這個值會指出在比對 URI 時主機名稱是否會用來取用服務。|  
-|listenBacklog|Web 服務可擱置之佇列連線要求的最大數目。 `connectionLeaseTimeout` 屬性會限制用戶端在擲回連線例外狀況之前，等待連線的持續時間。 這是通訊端層級屬性，用來控制 Web 服務可擱置之佇列連線要求的最大數目。 當 ListenBacklog 太低時，WCF 會停止接受要求，因此將捨棄新的連接直到伺服器認可佇列中部分現有連接為止。預設值為 16 * 處理器數量。|  
+|listenBacklog|Web 服務可擱置之佇列連線要求的最大數目。 `connectionLeaseTimeout` 屬性會限制用戶端在擲回連線例外狀況之前，等待連線的持續時間。 這是通訊端層級屬性，用來控制 Web 服務可擱置之佇列連線要求的最大數目。 當 ListenBacklog 太低，WCF 將會停止接受要求，並因此卸除新的連接，直到伺服器認可的一些現有已排入佇列的連線。 預設值為 16 * 處理器數量。|  
 |manualAddressing|取得或設定值，這個值會指出是否需要訊息的手動定址。|  
 |maxBufferPoolSize|取得或設定此傳輸所使用之任何緩衝區集區的大小上限。|  
 |maxBufferSize|取得或設定要使用之緩衝區的大小上限。 對於已進行資料流處理的訊息，這個值至少應為訊息標頭的最大可能大小 (可在緩衝模式中讀取)。|  
@@ -67,7 +67,7 @@ ms.locfileid: "43738166"
 |transferMode|取得或設定值，這個值表示訊息是否使用連線導向傳輸進行緩衝或資料流處理。|  
 |connectionPoolSettings|為具名管道繫結指定其他連線集區設定。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無  
   
 ### <a name="parent-elements"></a>父項目  

@@ -1,17 +1,17 @@
 ---
 title: 計算運算式 (F#)
-description: 了解如何建立方便的語法，撰寫 F#，可以進行排序和合併使用控制流程建構和繫結中的計算。
+description: 了解如何建立方便的語法，以寫入計算的F#，可以是循序和合併使用控制流程建構和繫結。
 ms.date: 07/27/2018
-ms.openlocfilehash: 148d1a661fb7630782c6dc48507a66e7bdc1d56b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: b1fee11f68e99e53d19b47bef9eca6298cce2f45
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48839865"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169842"
 ---
 # <a name="computation-expressions"></a>計算運算式
 
-F# 中的計算運算式提供便利的語法來撰寫可以進行排序和合併使用控制流程建構和繫結的計算。 根據計算運算式的類型，它們可以視為 express monads、 monoids、 monad transformer 和 applicative 函式的方式。 不過，不同於其他語言 (例如*do 標記法*Haskell 中)，它們不會繫結至單一的抽象概念，並不依賴巨集或其他形式的 metaprogramming 完成方便且內容相關的語法。
+在 計算運算式F#提供方便的語法來撰寫可以進行排序和合併使用控制流程建構和繫結的計算。 根據計算運算式的類型，它們可以視為 express monads、 monoids、 monad transformer 和 applicative 函式的方式。 不過，不同於其他語言 (例如*do 標記法*Haskell 中)，它們不會繫結至單一的抽象概念，並不依賴巨集或其他形式的 metaprogramming 完成方便且內容相關的語法。
 
 ## <a name="overview"></a>總覽
 
@@ -22,7 +22,7 @@ F# 中的計算運算式提供便利的語法來撰寫可以進行排序和合�
 * Effectful 計算
 * 富有生產力的計算
 
-更一般來說，有*即時線上*您必須執行的應用程式特定部分中的計算。 撰寫即時程式碼可能相當困難，因為很容易之外指定的內容，而不需要的抽象概念，讓您無法這樣的 「 洩漏 」 計算。 這些抽象概通常很難撰寫您自己，這就是為什麼 F# 提供一個通用的方法，可執行所謂**計算運算式**。
+更一般來說，有*即時線上*您必須執行的應用程式特定部分中的計算。 撰寫即時程式碼可能相當困難，因為很容易之外指定的內容，而不需要的抽象概念，讓您無法這樣的 「 洩漏 」 計算。 這些抽象概通常很難撰寫您自己，這也是為什麼F#已有一般化的作法所謂**計算運算式**。
 
 計算運算式提供統一的語法和抽象概念模型的即時線上計算的編碼方式。
 
@@ -61,9 +61,9 @@ expr { return! ... }
 expr { match! ... }
 ```
 
-如果已定義在支援產生器類型，每個這些關鍵字，以及其他標準 F# 關鍵字所僅適用於計算運算式。 是唯一的例外`match!`，這是本身使用的語法捷徑`let!`後面模式比對的結果。
+每個這些關鍵字，以及其他標準F#關鍵字才可在計算運算式，如果已定義在支援產生器類型。 是唯一的例外`match!`，這是本身使用的語法捷徑`let!`後面模式比對的結果。
 
-產生器型別是物件，定義方式結合，計算運算式的片段; 的特殊方法也就是它的方法來控制計算運算式的運作方式。 描述產生器類別的另一種方式是說，它可讓您自訂的許多 F# 建構，例如迴圈和繫結作業。
+產生器型別是物件，定義方式結合，計算運算式的片段; 的特殊方法也就是它的方法來控制計算運算式的運作方式。 描述產生器類別的另一個方法是說，它可讓您自訂的許多作業F#建構，例如迴圈和繫結。
 
 ### `let!`
 
@@ -179,7 +179,7 @@ let result = Async.RunSynchronously req
 
 ### `match!`
 
-F# 從 4.5 開始，`match!`關鍵字可讓您將內嵌呼叫另一個計算運算式和模式比對其結果：
+開頭為F#4.5`match!`關鍵字可讓您將內嵌呼叫另一個計算運算式和模式比對其結果：
 
 ```fsharp
 let doThingsAsync url =
@@ -194,7 +194,7 @@ let doThingsAsync url =
 
 ## <a name="built-in-computation-expressions"></a>內建的計算運算式
 
-F# 核心程式庫會定義三個內建的計算運算式：[循序項運算式](sequences.md)，[非同步工作流程](asynchronous-workflows.md)，並[查詢運算式](query-expressions.md)。
+F#核心程式庫會定義三個內建的計算運算式：[排序運算式](sequences.md)，[非同步工作流程](asynchronous-workflows.md)，以及[查詢運算式](query-expressions.md)。
 
 ## <a name="creating-a-new-type-of-computation-expression"></a>建立新的計算運算式的類型
 
@@ -227,7 +227,7 @@ F# 核心程式庫會定義三個內建的計算運算式：[循序項運算式]
 builder.Run(builder.Delay(fun () -> {| cexpr |}))
 ```
 
-在上述程式碼來呼叫`Run`和`Delay`會省略所計算的運算式產生器類別中有未定義。 計算運算式，這裡表示為主體`{| cexpr |}`，轉譯成牽涉到的產生器類別方法的呼叫下表中所述的翻譯。 計算運算式`{| cexpr |}`會定義以遞迴方式，根據這些翻譯所在`expr`是 F# 運算式和`cexpr`是計算運算式。
+在上述程式碼來呼叫`Run`和`Delay`會省略所計算的運算式產生器類別中有未定義。 計算運算式，這裡表示為主體`{| cexpr |}`，轉譯成牽涉到的產生器類別方法的呼叫下表中所述的翻譯。 計算運算式`{| cexpr |}`會定義以遞迴方式，根據這些翻譯其中`expr`是F#運算式並`cexpr`是計算運算式。
 
 |運算式|轉譯|
 |----------|-----------|
@@ -251,6 +251,7 @@ builder.Run(builder.Delay(fun () -> {| cexpr |}))
 |<code>{&#124; cexpr1; cexpr2 &#124;}</code>|<code>builder.Combine({&#124;cexpr1 &#124;}, {&#124; cexpr2 &#124;})</code>|
 |<code>{&#124; other-expr; cexpr &#124;}</code>|<code>expr; {&#124; cexpr &#124;}</code>|
 |<code>{&#124; other-expr &#124;}</code>|`expr; builder.Zero()`|
+
 在上表中，`other-expr`告訴您，否則為未列在資料表的運算式。 產生器類別不必實作的所有方法，並支援所有在上表中列出的翻譯。 無法使用該類型的計算運算式中不會實作這些建構。 例如，如果您不想要支援`use`計算運算式中的關鍵字，您可以省略的定義`Use`產生器類別中。
 
 下列程式碼範例會顯示封裝計算為一系列的步驟可評估一次的一個步驟的計算運算式。 差別等位型別， `OkOrException`，編碼錯誤狀態的運算式，評估為止。 此程式碼示範您可以使用您的計算運算式，例如產生器方法的一部分的未定案實作中的數種一般模式。
@@ -266,7 +267,7 @@ module Eventually =
     // computation.
     let rec bind func expr =
         match expr with
-        | Done value -> NotYetDone (fun () -> func value)
+        | Done value -> func value
         | NotYetDone work -> NotYetDone (fun () -> bind func (work()))
 
     // Return the final value wrapped in the Eventually type.
@@ -372,13 +373,8 @@ comp |> step |> step
 
 // prints "x = 1"
 // prints "x = 2"
-// returns "NotYetDone <closure>"
-comp |> step |> step |> step |> step |> step |> step
-
-// prints "x = 1"
-// prints "x = 2"
 // returns "Done 7"
-comp |> step |> step |> step |> step |> step |> step |> step |> step
+comp |> step |> step |> step |> step 
 ```
 
 計算運算式具有基礎類型，則運算式會傳回。 計算的結果或可執行的延遲的計算，可能代表基礎類型，或者它可能提供逐一查看集合的某種類型的方法。 在上述範例中，基礎類型是**最終**。 序列運算式中，基礎類型是<xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>。 查詢運算式的基礎類型是<xref:System.Linq.IQueryable?displayProperty=nameWithType>。 非同步工作流程的基礎類型是[ `Async` ](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7)。 `Async`物件代表要計算的結果執行的工作。 例如，您呼叫[ `Async.RunSynchronously` ](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b)來執行計算並傳回結果。

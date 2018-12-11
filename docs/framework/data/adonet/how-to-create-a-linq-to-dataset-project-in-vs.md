@@ -3,13 +3,13 @@ title: 建立 LINQ to DataSet 專案在 Visual Studio
 ms.date: 08/15/2018
 ms.assetid: 49ba6cb0-cdd2-4571-aeaa-25bf0f40e9b3
 ms.openlocfilehash: 22763d3b9581d09d7bdda0c09480f8d36bb8e2ec
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297012"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154030"
 ---
-# <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>如何： 建立 LINQ to DataSet 專案在 Visual Studio
+# <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>HOW TO：建立 LINQ to DataSet 專案在 Visual Studio
 
 LINQ 專案的不同類型需要特定的組件參考和匯入的命名空間 (Visual Basic) 或[使用](../../../csharp/language-reference/keywords/using-directive.md)指示詞 (C#)。 LINQ 的最低需求是參考*System.Core.dll*並`using`指示詞<xref:System.Linq>。
 

@@ -1,6 +1,6 @@
 ---
 title: 巢狀類型
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - types, nested
@@ -10,14 +10,13 @@ helpviewer_keywords:
 - members [.NET Framework], type
 - class library design guidelines [.NET Framework], nested types
 ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2593b85dd4747a3fbe365994c3e5d9beae3e3406
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+author: KrzysztofCwalina
+ms.openlocfilehash: 7e5fe66106ad34e88bbf435794a08a159c045b02
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44188139"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148872"
 ---
 # <a name="nested-types"></a>巢狀類型
 巢狀型別是另一個類型，稱為封入類型的範圍內定義的類型。 巢狀型別可以存取其封入類型的所有成員。 比方說，它必須定義在封入類型，以及受保護的欄位定義中的封入類型的所有上階的私用欄位的存取。  
@@ -44,7 +43,7 @@ ms.locfileid: "44188139"
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
+ *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
   
 ## <a name="see-also"></a>另請參閱
 

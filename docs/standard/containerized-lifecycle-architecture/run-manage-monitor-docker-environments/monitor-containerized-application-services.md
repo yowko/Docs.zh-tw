@@ -4,12 +4,12 @@ description: Microsoft 平台和工具的容器化 Docker 應用程式生命週�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 4bdc4470624ce6e905ab858a2bd8b607c8d3d646
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5630bfcc3173def670e2fa780d28024799b7c2a1
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47232920"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153915"
 ---
 # <a name="monitor-containerized-application-services"></a>監視容器化應用程式服務
 
@@ -25,13 +25,13 @@ ms.locfileid: "47232920"
 
 ![範例](./media/image1.png)
 
-圖 6-1: Application Insights 監視 Docker 主機和容器
+圖 6-1:Application Insights 監視 Docker 主機和容器
 
 當您執行[Application Insights 的 Docker 映像](https://hub.docker.com/r/microsoft/applicationinsights/)上您的 Docker 主機，您可以從下列：
 
 -   生命週期主機上執行的所有容器的相關遙測-啟動、 停止和等等。
 
--   所有容器的效能計數器： CPU、 記憶體、 網路使用量，等等。
+-   所有容器的效能計數器：CPU、 記憶體、 網路使用量，等等。
 
 -   如果您也安裝了[Application Insights SDK](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net)在容器中執行的應用程式，這些應用程式的所有遙測資料會識別容器和主機電腦的其他屬性。 因此，比方說，如果您有一個以上的主控件上執行的應用程式的執行個體時，輕易地就能夠篩選由主應用程式的應用程式遙測。
 
@@ -60,7 +60,7 @@ ms.locfileid: "47232920"
 
 ![](./media/image2.png)
 
-圖 6-2： 顯示 Operations Management suite 的 Docker 容器的資訊
+圖 6-2:顯示由 Operations Management Suite 的 Docker 容器的相關資訊
 
 Application Insights 和 Operations Management Suite 焦點放在監視活動;不過，Application Insights 著重於更監視的應用程式本身由於其應用程式內執行的 SDK。 不過，Operations Management Suite 更著重於基礎結構主機，再加上它同時提供極具彈性的資料導向搜尋/查詢系統提供大規模的記錄檔的深入分析。
 
@@ -90,12 +90,12 @@ Application Insights 和 Operations Management Suite 焦點放在監視活動;�
 
 ![DockerPerfMetricsView](./media/image3.png){width="5.78625in" height="3.25in"}
 
-圖 6-3： 效能度量的顯示 Operations Management suite 的 Docker 主機
+圖 6-3:效能度量的顯示 Operations Management suite 的 Docker 主機
 
 儲存查詢也是 Operations Management Suite 中的標準功能，可協助您保留您認為有用，並找出您的系統中的趨勢的查詢。
 
 **進一歩** 若要尋找有關安裝及設定 Docker 中的容器解決方案[Operations Management Suite](https://microsoft.com/oms)，請移至<https://docs.microsoft.com/azure/log-analytics/log-analytics-containers>。
 
 >[!div class="step-by-step"]
-[上一頁](manage-production-docker-environments.md)
-[下一頁](../key-takeaways/index.md)
+>[上一頁](manage-production-docker-environments.md)
+>[下一頁](../key-takeaways/index.md)

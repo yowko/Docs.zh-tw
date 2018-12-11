@@ -1,6 +1,6 @@
 ---
 title: 擴充性設計
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - extending class libraries
@@ -8,14 +8,13 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], extensibility
 - class library extensibility [.NET Framework]
 ms.assetid: 1cdb8740-871a-456c-9bd9-db96ca8d79b3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9c1690d0cdf1f57eaf0a794d6e71babfa4fa6425
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+author: KrzysztofCwalina
+ms.openlocfilehash: 94900dee72230a1b9d099d78168acc508af62af7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216442"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127351"
 ---
 # <a name="designing-for-extensibility"></a>擴充性設計
 設計一套架構的一個重要層面確保已仔細考慮擴充性的 framework。 這需要您了解各種擴充性機制相關聯的優點與成本。 此章節可協助您決定哪一種的擴充性機制，子類別化、 事件、 虛擬成員、 回呼和等等 — 可以最符合您的架構需求。  
@@ -32,7 +31,7 @@ ms.locfileid: "47216442"
  [密封](../../../docs/standard/design-guidelines/sealing.md)  
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
+ *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
   
 ## <a name="see-also"></a>另請參閱
 

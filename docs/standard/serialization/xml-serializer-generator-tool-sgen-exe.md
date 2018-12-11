@@ -2,12 +2,12 @@
 title: XML 序列化程式產生器工具 (Sgen.exe)
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: e0fee890f86f4e377a9372d7e4c47ef78effc9fa
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1e11a4d762950b4227b0a9accef10500fd89886d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45668466"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148115"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>XML 序列化程式產生器工具 (Sgen.exe)
 XML 序列化程式產生器會為指定組件中的型別建立 XML 序列化 (Serialization) 組件，以改善 <xref:System.Xml.Serialization.XmlSerializer> 在序列化或還原序列化指定型別物件時的啟動效能。  
@@ -22,18 +22,18 @@ sgen [options]
   
 |選項|描述|  
 |------------|-----------------|  
-|**/a**[**ssembly**]**:***filename*|為組件中包含的所有類型或 *filename* 所指定的可執行檔產生序列化程式碼。 只能提供一個檔名。 如果重複使用這個引數，則會使用最後一個檔名。|  
+|**/a**[**ssembly**]**:**_filename_|為組件中包含的所有類型或 *filename* 所指定的可執行檔產生序列化程式碼。 只能提供一個檔名。 如果重複使用這個引數，則會使用最後一個檔名。|  
 |**/c[ompiler]:** *options*|指定要傳遞至 C# 編譯器的選項。 所有 csc.exe 選項都受到支援，可以傳遞至編譯器。 這個選項可以用來指定組件必須經過簽署，並指定金鑰檔。|  
 |**/d**[**ebug**]|產生可以與偵錯工具搭配使用的影像。|  
 |**/f[orce]**|強制覆寫現有的同名組件。 預設值為 **false**。|  
 |**/help 或 /?**|顯示工具的命令語法和選項。|  
 |**/k**[**eep**]|將產生的原始程式檔 (Source File) 和其他暫存檔案編譯成序列化組件之後，隱藏刪除這些檔案的動作。 這個選項可以用來判斷工具是否正在為特定的型別產生序列化程式碼。|  
 |**/n**[**ologo**]|隱藏顯示 Microsoft 程式啟始資訊。|  
-|**/o**[**ut**] **: * * * 路徑*|指定要在其中儲存所產生之組件的目錄。 **注意：** 產生的組件名稱是由輸入組件的名稱加上 "xmlSerializers.dll" 所組成。|  
+|**/o**[**ut**]**:**_path_|指定要在其中儲存所產生之組件的目錄。 **注意：** 產生的組件名稱是由輸入組件的名稱加上 "xmlSerializers.dll" 所組成。|  
 |**/p**[**roxytypes**]|只為 XML Web 服務 Proxy 型別產生序列化程式碼。|  
-|**/r**[**eference**]**:***assemblyfiles*|指定要求 XML 序列化的型別所參考的組件。 這個選項接受以逗號分隔多個組件檔案。|  
+|**/r**[**eference**]**:**_assemblyfiles_|指定要求 XML 序列化的型別所參考的組件。 這個選項接受以逗號分隔多個組件檔案。|  
 |**/s**[**ilent**]|隱藏顯示成功訊息。|  
-|**/t**[**ype**]**:***type*|只為指定的型別產生序列化程式碼。|  
+|**/t**[**ype**]**:**_type_|只為指定的型別產生序列化程式碼。|  
 |**/v**[**erbose**]|顯示詳細資訊輸出以供偵錯。 此選項會列出無法使用 <xref:System.Xml.Serialization.XmlSerializer> 進行序列化之目標組件中的型別。|  
 |**/?**|顯示工具的命令語法和選項。|  
   

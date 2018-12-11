@@ -2,12 +2,12 @@
 title: Entity Framework 概觀
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: 35eb3b1503c8754752662aef0c5101251d60d49c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a6649744c4ad719c760ebc6ce5d97b51815c8ee6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216938"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145789"
 ---
 # <a name="entity-framework-overview"></a>Entity Framework 概觀
 
@@ -26,11 +26,11 @@ ms.locfileid: "47216938"
 
  使用實體資料模型工具時，概念模型、儲存體模型和兩者之間的對應會以 XML 架構的結構描述來表示，並定義於具有對應副檔名的檔案中。
 
--   概念結構定義語言 (CSDL) 會定義概念模型。 Csdl[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]的實作[Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md)。 副檔名是 .csdl。
+- 概念結構定義語言 (CSDL) 會定義概念模型。 Csdl[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]的實作[Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md)。 副檔名是 .csdl。
 
--   存放結構定義語言 (SSDL) 會定義儲存體模型，也稱為邏輯模型。 副檔名是 .ssdl。
+- 存放結構定義語言 (SSDL) 會定義儲存體模型，也稱為邏輯模型。 副檔名是 .ssdl。
 
--   對應規格語言檔案 (MSL) 會定義儲存體模型和概念模型之間的對應。 副檔名是 .msl。
+- 對應規格語言檔案 (MSL) 會定義儲存體模型和概念模型之間的對應。 副檔名是 .msl。
 
 儲存體模型和對應可依需要變更，不需要變更概念模型、資料類別或應用程式程式碼。 由於儲存模型是提供者特有的，所以您可以在各種資料來源中使用一致的概念模型。
 
@@ -45,9 +45,9 @@ ms.locfileid: "47216938"
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 不只是另一個物件關聯式對應方案而已，它基本上是有關如何讓應用程式存取和變更表示成概念模型中之實體和關聯性的資料。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 會使用模型和對應檔中的資訊，將針對在概念模型中表示之實體類型的物件查詢轉譯成資料來源特有的查詢。 查詢結果會具體化為物件的[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]管理。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]提供下列方式來查詢概念模型，並傳回物件：
 
--   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]. 查詢概念模型中定義的實體類型提供 Language-Integrated Query (LINQ) 支援。 如需詳細資訊，請參閱 < [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。
+- [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]. 查詢概念模型中定義的實體類型提供 Language-Integrated Query (LINQ) 支援。 如需詳細資訊，請參閱 < [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。
 
--   [!INCLUDE[esql](../../../../../includes/esql-md.md)]. 與儲存體無關的 SQL dialect，可直接與概念模型中的實體一起運作並支援[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)]概念。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 會使用以物件查詢以及使用 EntityClient 提供者所執行的查詢。 如需詳細資訊，請參閱 < [Entity SQL 概觀](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)。
+- [!INCLUDE[esql](../../../../../includes/esql-md.md)]. 與儲存體無關的 SQL dialect，可直接與概念模型中的實體一起運作並支援[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)]概念。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 會使用以物件查詢以及使用 EntityClient 提供者所執行的查詢。 如需詳細資訊，請參閱 < [Entity SQL 概觀](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)。
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 包含 EntityClient 資料提供者 (Data Provider)。 這個提供者會管理連接、將實體查詢轉譯成資料來源特有的查詢，以及傳回 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 用來將實體資料具體化為物件的資料讀取器。 不需要物件具體化時，EntityClient 提供者也使用標準[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]資料提供者，讓應用程式執行[!INCLUDE[esql](../../../../../includes/esql-md.md)]查詢並且取用傳回的唯讀資料讀取器。 如需詳細資訊，請參閱 < [Entity Framework 的 EntityClient 提供者](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)。
 
@@ -71,7 +71,7 @@ ms.locfileid: "47216938"
 
 若要深入了解[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，請參閱：
 
-[快速入門](../../../../../docs/framework/data/adonet/ef/getting-started.md)-提供有關如何啟動的資訊並執行使用快速[快速入門](https://msdn.microsoft.com/library/0bc534be-789f-4819-b9f6-76e51d961675)，其中顯示如何建立簡單[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]應用程式。
+[快速入門](../../../../../docs/framework/data/adonet/ef/getting-started.md)-提供有關如何啟動的資訊並執行使用快速[快速入門](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399182(v=vs.100))，其中顯示如何建立簡單[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]應用程式。
 
 [Entity Framework 詞彙](../../../../../docs/framework/data/adonet/ef/terminology.md)-定義的許多詞彙導入的實體資料模型，而[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]用來在[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]文件。
 

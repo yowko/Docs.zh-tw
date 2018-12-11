@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
 ms.openlocfilehash: dbfcd7ea7b8422c79274e7bc65929080da6f11af
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180481"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153419"
 ---
 # <a name="message-security-with-a-windows-client"></a>Windows 用戶端的訊息安全性
 這個案例示範 Windows Communication Foundation (WCF) 用戶端與受保護的訊息安全性模式的伺服器。 此用戶端和伺服器會以 Windows 認證進行驗證。  

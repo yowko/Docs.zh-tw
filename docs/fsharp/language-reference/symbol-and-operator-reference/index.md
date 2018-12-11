@@ -2,12 +2,12 @@
 title: 符號和運算子參考 (F#)
 description: 深入了解符號和運算子，可在F#程式設計語言。
 ms.date: 04/04/2018
-ms.openlocfilehash: f6f99f8fa563b71c935122c6f8597599c59b5c7f
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: a382400213aa288bb134faefd8ce747a7319a76f
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297301"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169868"
 ---
 # <a name="symbol-and-operator-reference"></a>符號和運算子參考
 
@@ -61,7 +61,7 @@ ms.locfileid: "52297301"
 |`::`|[清單](../lists.md)<br /><br />[比對運算式](../match-expressions.md)|<ul><li>建立清單。 左側的項目會附加到右側清單的前面。<br /></li><li>用於模式比對中以分隔清單的組件。<br /></li></ul>|
 |`:=`|[參考儲存格](../reference-cells.md)|<ul><li>將值指派給參考儲存格。<br /></li></ul>|
 |`:>`|[轉型和轉換](../casting-and-conversions.md)|<ul><li>將類型轉換成階層中較高階的類型。<br /></li></ul>|
-|`:?`|[比對運算式](../match-expressions.md)|<ul><li>如果值符合指定的類型，即傳回 `true`；否則，會傳回 `false` (類型測試運算子)。<br /></li></ul>|
+|`:?`|[比對運算式](../match-expressions.md)|<ul><li>會傳回`true`如果值符合指定的型別 （包括如果它是一個子類型）; 否則會傳回`false`（類型測試運算子）。<br /></li></ul>|
 |`:?>`|[轉型和轉換](../casting-and-conversions.md)|<ul><li>將類型轉換成階層中較低階的類型。<br /></li></ul>|
 |`;`|[詳細語法](../verbose-syntax.md)<br /><br />[清單](../lists.md)<br /><br />[記錄](../records.md)|<ul><li>分隔運算式 (大部分用於詳細語法中)。<br /></li><li>分隔清單的元素。<br /></li><li>分隔記錄的欄位。<br /></li></ul>|
 |`<`|[算術運算子](arithmetic-operators.md)|<ul><li>計算小於運算。<br /></li></ul>|
@@ -146,6 +146,7 @@ ms.locfileid: "52297301"
 |`.`|左|
 |`f(x)`|左|
 |`f<`*類型*`>`|左|
+
 F# 支援自訂運算子多載。 這表示您可以定義自己的運算子。 在上表中，*op* 可以是任何有效的 (可能是空的) 運算子字元序列，即內建或使用者定義的序列。 因此，您可以使用此表格來判斷要對自訂運算子使用什麼字元序列，以達到您想要的優先順序等級。 前置 `.` 字元在編譯器判斷優先順序時，會予以忽略。
 
 ## <a name="see-also"></a>另請參閱

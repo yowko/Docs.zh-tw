@@ -4,12 +4,12 @@ description: Microsoft 平台和工具的容器化 Docker 應用程式生命週�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 9b048beb0eb913fc6587dcc639a16df8153c550b
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7454b25cdb1bede87c6f0bd179fcabd489922263
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123224"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154173"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker 應用程式中的狀態和資料
 
@@ -39,7 +39,7 @@ A[的資料磁碟區容器](https://docs.docker.com/glossary/?term=volume)一般
 
 ![](./media/image5.png)
 
-圖 4-5： 資料磁碟區和容器應用程式/容器的外部資料來源
+圖 4-5:資料磁碟區和容器應用程式/容器的外部資料來源
 
 因為無法管理在不同的實體主機執行的容器之間共用的資料，建議，除非您不使用磁碟區的商務資料的 Docker 主機已固定的主機/VM，因為當協調器時，在使用 Docker 容器容器應要移動一到另一部主機，根據叢集所執行的最佳化。
 
@@ -49,7 +49,6 @@ A[的資料磁碟區容器](https://docs.docker.com/glossary/?term=volume)一般
 
 遠端資料來源，例如 SQL Database、 DocumentDB 或遠端的快取，例如 Redis 快取會是不含容器開發相同。 這是其中一種慣用，且經過實證，來儲存商務應用程式資料。
 
-
 >[!div class="step-by-step"]
-[上一頁](monolithic-applications.md)
-[下一頁](soa-applications.md)
+>[上一頁](monolithic-applications.md)
+>[下一頁](soa-applications.md)

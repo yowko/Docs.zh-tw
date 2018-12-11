@@ -4,12 +4,12 @@ description: Azure functions 提供無伺服器的功能 （C#、 JavaScript、 
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: f08ba20b485197acd3bb5cdfe5699cd6be991d7c
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 2d8729276a5797bd8b89c39d8fb03c6f20646ea0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369740"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145159"
 ---
 # <a name="azure-functions"></a>Azure Functions
 
@@ -17,17 +17,17 @@ Azure functions 提供無伺服器計算體驗。 函式會叫用*觸發程序*�
 
 ![Azure functions 標誌](./media/azure-functions-logo.png)
 
-有兩個版本的 Azure Functions 架構。 舊版的版本可支援完整的.NET Framework，新的執行階段支援跨平台.NET Core 應用程式。 除了 C# JavaScript、 F # 和 Java 等其他語言支援。 在入口網站中建立的函式提供豐富的指令碼語法。 做為獨立專案所建立的函式可以部署與完整的平台支援和功能。
+有兩個版本的 Azure Functions 架構。 舊版的版本可支援完整的.NET Framework，新的執行階段支援跨平台.NET Core 應用程式。 以外的其他語言C#JavaScript 等F#，並支援 Java。 在入口網站中建立的函式提供豐富的指令碼語法。 做為獨立專案所建立的函式可以部署與完整的平台支援和功能。
 
 如需詳細資訊，請參閱 < [Azure Functions 文件](https://docs.microsoft.com/azure/azure-functions)。
 
 ## <a name="functions-v1-vs-v2"></a>函式 v1 與 v2
 
-有兩個 Azure Functions 執行階段版本： 1.x 和 2.x。 版本 1.x 已正式推出 (GA)。 它支援從入口網站或 Windows 電腦的.NET 開發，並使用.NET Framework。 1.x 支援 C#、 JavaScript 和 F # 中，使用 Python、 PHP、 TypeScript、 Batch、 Bash、 和 PowerShell 的實驗性支援。
+有兩個 Azure Functions 執行階段版本：1.x 和 2.x。 版本 1.x 已正式推出 (GA)。 它支援從入口網站或 Windows 電腦的.NET 開發，並使用.NET Framework。 1.x 支援C#，JavaScript，和F#，使用 Python、 PHP、 TypeScript、 Batch、 Bash、 和 PowerShell 的實驗性支援。
 
 版本 2.x 處於預覽狀態。 它會利用.NET Core，而且支援在 Windows、 macOS 和 Linux 機器上跨平台開發。 2.x 新增適用於 Java 的頂級支援，但尚不直接支援的任何實驗性語言。 版本 2.x 使用新的繫結擴充性模型，可讓協力廠商擴充功能的平台獨立的版本設定的繫結，並更精簡的執行環境。
 
-> **與 1.x 中沒有已知的問題[繫結重新導向支援](https://github.com/Azure/azure-functions-host/issues/992)。** 問題在於專用的.NET 開發。 受影響的相依性會包含在執行階段程式庫中的不同版本的程式庫的專案。 Functions 小組已致力於問題的具體進度。 小組會在它進入正式運作之前解決在 2.x 中的繫結重新導向。 建議的修正和因應措施的官方團隊陳述式，請參閱這裡：[在 Azure Functions 中的組件解析](https://github.com/Azure/azure-functions-host/wiki/Assembly-Resolution-in-Azure-Functions)。
+> **與 1.x 中沒有已知的問題[繫結重新導向支援](https://github.com/Azure/azure-functions-host/issues/992)。** 問題在於專用的.NET 開發。 受影響的相依性會包含在執行階段程式庫中的不同版本的程式庫的專案。 Functions 小組已致力於問題的具體進度。 小組會在它進入正式運作之前解決在 2.x 中的繫結重新導向。 這裡有建議的修正和因應措施的官方團隊陳述式：[在 Azure Functions 中的組件解析](https://github.com/Azure/azure-functions-host/wiki/Assembly-Resolution-in-Azure-Functions)。
 
 如需詳細資訊，請參閱 <<c0> [ 比較 1.x 和 2.x](https://docs.microsoft.com/azure/azure-functions/functions-versions)。
 
@@ -175,10 +175,10 @@ Proxy 會儲存為 JSON 定義中。 請看以下範例：
 
 `Root` Proxy 會傳送至根 URL 的任何項目 (`https://--shorturl--/`) 並將它重新導向的文件網站。
 
-使用 proxy 的範例所示的影片[Azure： 將應用程式帶至雲端，無伺服器 Azure Functions](https://channel9.msdn.com/events/Connect/2017/E102)。 即時本機 SQL Server 上執行的 ASP.NET Core 應用程式移轉到 Azure 雲端。 為了重構傳統的 Web API 專案，使用函式會使用 proxy。
+使用 proxy 的範例所示影片[Azure:將應用程式帶至雲端，無伺服器 Azure Functions](https://channel9.msdn.com/events/Connect/2017/E102)。 即時本機 SQL Server 上執行的 ASP.NET Core 應用程式移轉到 Azure 雲端。 為了重構傳統的 Web API 專案，使用函式會使用 proxy。
 
 如需 Proxy 的詳細資訊，請參閱[使用 Azure Functions Proxy](https://docs.microsoft.com/azure/azure-functions/functions-proxies)。
 
 >[!div class="step-by-step"]
-[上一頁](azure-serverless-platform.md)
-[下一頁](application-insights.md)
+>[上一頁](azure-serverless-platform.md)
+>[下一頁](application-insights.md)

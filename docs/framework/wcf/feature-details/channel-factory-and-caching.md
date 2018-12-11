@@ -2,12 +2,12 @@
 title: 通道處理站和快取
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
-ms.openlocfilehash: 1bf8e3fe4833b662f16bd6311056fda8609dd9d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa333d3ffa0063e226405eb8e715f9ee99f68432
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490987"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151326"
 ---
 # <a name="channel-factory-and-caching"></a>通道處理站和快取
 WCF 用戶端應用程式會使用 <xref:System.ServiceModel.ChannelFactory%601> 類別來建立與 WCF 服務的通訊通道。  建立 <xref:System.ServiceModel.ChannelFactory%601> 執行個體會產生額外負荷，因為這涉及到下列作業：  
@@ -25,20 +25,20 @@ WCF 用戶端應用程式會使用 <xref:System.ServiceModel.ChannelFactory%601>
 > [!TIP]
 >  直接使用 <xref:System.ServiceModel.ChannelFactory%601> 類別時，您可以直接控制通道處理站的建立作業。  
   
- WCF 用戶端 proxy 產生含有[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)衍生自<xref:System.ServiceModel.ClientBase%601>。 <xref:System.ServiceModel.ClientBase%601> 會定義用於定義通道處理站快取行為的靜態 <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> 屬性。 快取設定會針對特定類型來設定。 例如，設定`ClientBase<ITest>.CacheSettings`底下定義之值的其中一個會影響只有那些 proxy/ClientBase 型別的`ITest`。 第一個 Proxy/ClientBase 執行個體一經建立，特定 <xref:System.ServiceModel.ClientBase%601> 的快取設定就會是不可變的。  
+ WCF 用戶端 proxy 產生含有[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)衍生自<xref:System.ServiceModel.ClientBase%601>。 <xref:System.ServiceModel.ClientBase%601> 會定義用於定義通道處理站快取行為的靜態 <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> 屬性。 快取設定會針對特定類型來設定。 例如，設定`ClientBase<ITest>.CacheSettings`其中一個下面定義的值將會影響只有那些 proxy/ClientBase 型別的`ITest`。 第一個 Proxy/ClientBase 執行個體一經建立，特定 <xref:System.ServiceModel.ClientBase%601> 的快取設定就會是不可變的。  
   
 ## <a name="specifying-caching-behavior"></a>指定快取行為  
  快取行為是藉由將 <xref:System.ServiceModel.ClientBase%601.CacheSetting> 屬性設定為下列其中一個值所指定。  
   
 |快取設定值|描述|  
 |-------------------------|-----------------|  
-|<xref:System.ServiceModel.CacheSetting.AlwaysOn>|應用程式定義域內 <xref:System.ServiceModel.ClientBase%601> 的所有執行個體都可以參與快取。 開發人員已經確定對快取沒有不利的安全性影響。 快取將不會關閉即使 「 安全性敏感 」 屬性<xref:System.ServiceModel.ClientBase%601>存取。 「 安全性敏感 」 屬性<xref:System.ServiceModel.ClientBase%601>是<xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>，<xref:System.ServiceModel.ClientBase%601.Endpoint%2A>和<xref:System.ServiceModel.ClientBase%601.ChannelFactory%2A>。|  
-|<xref:System.ServiceModel.CacheSetting.Default>|只有從定義於組態檔之端點建立的 <xref:System.ServiceModel.ClientBase%601> 執行個體才會在應用程式定義域中參與快取。 任何以程式設計方式在應用程式定義域內建立的 <xref:System.ServiceModel.ClientBase%601> 執行個體都不會參與快取。 此外，將會停用快取的執行個體<xref:System.ServiceModel.ClientBase%601>之後的任何 「 安全性敏感 」 屬性存取。|  
+|<xref:System.ServiceModel.CacheSetting.AlwaysOn>|應用程式定義域內 <xref:System.ServiceModel.ClientBase%601> 的所有執行個體都可以參與快取。 開發人員已經確定對快取沒有不利的安全性影響。 快取將不會關閉即使 「 安全性敏感 」 屬性<xref:System.ServiceModel.ClientBase%601>存取。 「 安全性敏感 」 屬性<xref:System.ServiceModel.ClientBase%601>都<xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>，<xref:System.ServiceModel.ClientBase%601.Endpoint%2A>和<xref:System.ServiceModel.ClientBase%601.ChannelFactory%2A>。|  
+|<xref:System.ServiceModel.CacheSetting.Default>|只有從定義於組態檔之端點建立的 <xref:System.ServiceModel.ClientBase%601> 執行個體才會在應用程式定義域中參與快取。 任何以程式設計方式在應用程式定義域內建立的 <xref:System.ServiceModel.ClientBase%601> 執行個體都不會參與快取。 此外，將會停用快取執行個體<xref:System.ServiceModel.ClientBase%601>之後的任何 「 安全性敏感 」 屬性存取。|  
 |<xref:System.ServiceModel.CacheSetting.AlwaysOff>|在相關應用程式定義域內，特定類型之所有 <xref:System.ServiceModel.ClientBase%601> 執行個體的快取都會關閉。|  
   
  下列程式碼片段說明如何使用 <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> 屬性。  
   
-```  
+```csharp  
 class Program   
 {   
    static void Main(string[] args)   
@@ -61,7 +61,7 @@ public partial class TestClient : System.ServiceModel.ClientBase, ITest { }
   
  在上述程式碼中，`TestClient` 的所有執行個體都將使用相同的通道處理站。  
   
-```  
+```csharp  
 class Program   
 {   
    static void Main(string[] args)   
@@ -89,7 +89,7 @@ public partial class TestClient : System.ServiceModel.ClientBase, ITest {}
   
  在上述範例中，除了執行個體 #4 以外，`TestClient` 的所有執行個體都會使用相同的通道處理站。 執行個體 #4 會使用專門針對其用途建立的通道處理站。 這個設定適用於特定端點需要的安全性設定與通道處理站類型 (在本例中為 `ITest`) 相同之其他端點所需安全性設定有所不同時的情節。  
   
-```  
+```csharp  
 class Program   
 {   
    static void Main(string[] args)   
@@ -116,4 +116,4 @@ public partial class TestClient : System.ServiceModel.ClientBase, ITest {}
  [建置用戶端](../../../../docs/framework/wcf/building-clients.md)  
  [用戶端](../../../../docs/framework/wcf/feature-details/clients.md)  
  [使用 WCF 用戶端存取服務](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- [如何：使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+ [操作說明：使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)

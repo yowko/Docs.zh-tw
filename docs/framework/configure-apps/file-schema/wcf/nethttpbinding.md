@@ -2,12 +2,12 @@
 title: '&lt;netHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: b0d81ca0-87c5-4090-8baa-e390fd3656d2
-ms.openlocfilehash: 22e010957b59759d60747e32ab226af6615df7c4
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 33ba00bbc695b1cbec0c246c72dc86c8de1b3e5c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841589"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151248"
 ---
 # <a name="ltnethttpbindinggt"></a>&lt;netHttpBinding&gt;
 表示 Windows Communication Foundation (WCF) 服務可用來設定和公開能夠透過 HTTP 進行通訊之端點的繫結。 與雙工合約搭配使用時，將會使用 Web 通訊端，否則使用 HTTP。  
@@ -70,14 +70,14 @@ ms.locfileid: "48841589"
 |`maxBufferPoolSize`|整數值，指定配置供從通道接收訊息之訊息緩衝區管理員使用的最大記憶體量。 預設值為 524288 (0x80000) 位元組。<br /><br /> 緩衝區管理員會利用緩衝區集區，將使用緩衝區的成本降至最低。 當訊息從通道送出時，服務將需要緩衝區來處理訊息。 如果緩衝區集區中沒有足夠的記憶體可以處理訊息負載，緩衝區管理員就必須從 CLR 堆積配置額外的記憶體，進而增加記憶體回收負荷。 從 CLR 記憶體回收堆積所產生的大量配置表示緩衝區集區太小，而提高這個屬性指定的限制來提供較大的配置，便可改善效能。|  
 |`maxBufferSize`|整數值，指定儲存訊息之緩衝區的大小上限 (以位元組為單位)。在為此繫結設定的端點處理訊息時，可以將訊息儲存在緩衝區中。 預設值為 65,536 位元組。|  
 |`maxReceivedMessageSize`|正整數，定義在使用此繫結設定之通道上可以接收的訊息大小上限 (以位元組為單位，包括標頭)。 如果對收件者而言訊息太大，寄件者便會收到 SOAP 錯誤。 收件者會捨棄訊息，然後在追蹤記錄檔中建立此事件的項目。 預設為 65,536 個位元組。|  
-|`messageEncoding`|定義用來對 SOAP 訊息進行編碼的編碼器。 有效值包括以下的值：<br /><br /> 文字： 使用文字訊息編碼器。<br />Mtom： 使用訊息傳輸 Organization Mechanism 1.0 (MTOM) 編碼器。<br /><br /> 預設為 Text。 此屬性的型別為 <xref:System.ServiceModel.WSMessageEncoding>。|  
+|`messageEncoding`|定義用來對 SOAP 訊息進行編碼的編碼器。 有效值包括以下的值：<br /><br /> 文字：使用文字訊息編碼器。<br />Mtom:使用訊息傳輸 Organization Mechanism 1.0 (MTOM) 編碼器。<br /><br /> 預設為 Text。 此屬性的型別為 <xref:System.ServiceModel.WSMessageEncoding>。|  
 |`name`|包含繫結之組態名稱的字串。 這個值應該是唯一的，因為它會當做繫結的識別使用。 每一個繫結都有一個 `name` 和 `namespace` 屬性，兩者結合在一起便可在服務的中繼資料中唯一識別各個繫結。 此外，這個名稱在相同型別的繫結中也是唯一的。 從 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 開始，繫結和行為都不需要有名稱。 如需有關預設組態和無名稱繫結和行為的詳細資訊，請參閱 < [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md)並[Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。|  
 |`namespace`|指定繫結的 XML 命名空間。 預設值為 " http://tempuri.org/Bindings "。 每一個繫結都有一個 `name` 和 `namespace` 屬性，兩者結合在一起便可在服務的中繼資料中唯一識別各個繫結。|  
 |`openTimeout`|<xref:System.TimeSpan> 值，指定提供用來讓開啟作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
 |`proxyAddress`|包含 HTTP Proxy 位址的 URI。 如果 `useSystemWebProxy` 設定為 `true`，則這個設定必須為 `null`。 預設為 `null`。|  
 |`receiveTimeout`|<xref:System.TimeSpan> 值，指定接收作業完成其作業之時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:10:00。|  
 |`sendTimeout`|<xref:System.TimeSpan> 值，指定提供用來讓傳送作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
-|`textEncoding`|設定要在繫結上發出訊息時使用的字元集編碼方式。 有效值包括以下的值：<br /><br /> -BigEndianUnicode: Unicode BigEndian 編碼方式。<br />Unicode: 16 位元編碼方式。<br />-UTF8: 8 位元編碼方式<br /><br /> 預設為 UTF8。 此屬性的型別為 <xref:System.Text.Encoding>。|  
+|`textEncoding`|設定要在繫結上發出訊息時使用的字元集編碼方式。 有效值包括以下的值：<br /><br /> -BigEndianUnicode:Unicode BigEndian 編碼方式。<br />Unicode:16 位元編碼方式。<br />-UTF8:8 位元編碼<br /><br /> 預設為 UTF8。 此屬性的型別為 <xref:System.Text.Encoding>。|  
 |`transferMode`|有效的 <xref:System.ServiceModel.TransferMode> 值，指定進行要求或回應時，訊息是經過緩衝處理或資料流處理。|  
 |`useDefaultWebProxy`|布林值，指定是否應使用系統自動設定的 HTTP Proxy (如果有的話)。 預設為 `true`。|  
 |||  
@@ -139,7 +139,7 @@ ms.locfileid: "48841589"
 ```  
   
 ## <a name="example"></a>範例  
- 從 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 開始，繫結和行為都不需要有名稱。 前一個範例的功能可以藉由從端點位址移除 bindingConfiguration 以及從繫結移除名稱的方式達成。  
+ 從 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 開始，繫結和行為都不需要有名稱。 上一個範例中的功能，可透過移除 bindingConfiguration 從端點位址和繫結的名稱。  
   
 ```xml  
 <system.serviceModel>   

@@ -1,19 +1,19 @@
 ---
-title: '&lt;u d&gt;'
+title: '&lt;Udpannouncementendpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 842d92e9-6199-4ec5-b2d1-58533054e1f0
-ms.openlocfilehash: f1ec25a5747186ade1d721f266ff58fa5e559a49
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 50e3b283bb10ba3f34303acbbd76b42d37fa7078
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767592"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127793"
 ---
-# <a name="ltudptransportsettingsgt"></a>&lt;u d&gt;
+# <a name="ltudptransportsettingsgt"></a>&lt;Udpannouncementendpoint&gt;
 這個組態項目會公開 UDP 傳輸設定[ \<udpDiscoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpdiscoveryendpoint.md)。  
   
 \<system.ServiceModel>  
-\<Kind >  
+\<standardEndpoints >  
 \<udpDiscoveryEndpoint >  
   
 ## <a name="syntax"></a>語法  
@@ -52,10 +52,10 @@ ms.locfileid: "32767592"
 |maxReceivedMessageSize|整數，指定繫結可處理之訊息的大小上限。<br /><br /> 預設值為 65507。|  
 |maxUnicastRetransmitCount|整數，指定應重新傳送訊息的次數上限 (除了第一次傳送之外)。  如果訊息是傳送至單點傳播位址，並且收到含有對應 RelatesTo 標頭的回應訊息，重新傳輸可能會較早終止 (在重新傳輸您設定的次數之前)。<br /><br /> 預設值為 1。|  
 |multicastInterfaceId|字串，這個字串可唯一識別在多重主目錄電腦上傳送及接收多點傳送流量時應使用的網路介面卡。 在執行階段，傳輸會使用這個屬性值查詢介面索引，接著使用介面索引設定 `IP_MULTICAST_IF` 和 `IPV6_MULTICAST_IF` 通訊端選項。  聯結多點傳送群組時會使用相同的介面索引 (如果適用的話)。<br /><br /> 預設值是 `null`。|  
-|socketReceiveBufferSize|整數，指定基礎 WinSock 通訊端上接收緩衝區的大小。<br /><br /> 接收通道的使用者可以在繫結上使用此屬性控制系統接收資料時的行為。  例如，假設應用程式會於最大臨界值耗用傳入 WCF 訊息，則使用此屬性較高的值可讓訊息在等候應用程式能夠加以處理時，堆疊在 WinSock 緩衝區中。  同樣的情況下若使用較小的值，則會導致捨棄訊息。這個屬性會公開基礎 WinSock `SO_RCVBUF` 通訊端選項。此屬性的值至少須等於 `maxReceivedMessageSize` 的大小。   將它設定為小於 `maxReceivedMessageSize` 的值，會導致執行階段例外狀況。<br /><br /> 預設值為 65536。|  
+|socketReceiveBufferSize|整數，指定基礎 WinSock 通訊端上接收緩衝區的大小。<br /><br /> 接收通道的使用者可以在繫結上使用此屬性控制系統接收資料時的行為。  例如，假設應用程式會於最大臨界值耗用傳入 WCF 訊息，則使用此屬性較高的值可讓訊息在等候應用程式能夠加以處理時，堆疊在 WinSock 緩衝區中。  在同樣情況下使用較低的值，會導致訊息遭捨棄。 這個屬性會公開基礎 WinSock`SO_RCVBUF`通訊端選項。此屬性值必須是至少大小`maxReceivedMessageSize`。   將它設定為值小於`maxReceivedMessageSize`會導致執行階段例外狀況。<br /><br /> 預設值為 65536。|  
 |timeToLive|整數，指定多點傳送封包可以周遊的網路區段躍點數目。  這個屬性會公開與 `IP_MULTICAST_TTL` 和 `IP_TTL` 通訊端選項相關聯的功能。<br /><br /> 預設值為 1。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  

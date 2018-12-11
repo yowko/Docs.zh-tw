@@ -1,15 +1,15 @@
 ---
-title: HOW TO：擷取中繼資料並實作相容性服務
+title: HOW TO：擷取中繼資料，並實作相容服務
 ms.date: 03/30/2017
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
 ms.openlocfilehash: dc7f5d97a5201698e8dc99e4523e3ab2925f6883
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185218"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148922"
 ---
-# <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>HOW TO：擷取中繼資料並實作相容性服務
+# <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>HOW TO：擷取中繼資料，並實作相容服務
 服務通常不會由同一個人設計並實作。 在重視應用程式之間互通性的環境中，可以使用 Web 服務描述語言 (WSDL) 來設計或描述合約，而開發人員則必須實作符合所提供合約的服務。 您也可以將現有服務移轉至 Windows Communication Foundation (WCF)，但是保留 wire 格式。 此外，雙工合約還會要求呼叫端也必須實作回呼合約。  
   
  在這些情況下，您必須使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) （或對等的工具） 來產生服務合約介面在 managed 語言中，您可以實作以滿足的需求合約。 通常[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)可用來取得與通道處理站或 WCF 用戶端類型以及正確的繫結會設定用戶端組態檔使用的服務合約和地址。 若要使用產生的組態檔，您必須將它變更為服務組態檔。 您可能還需要修改服務合約。  
@@ -24,7 +24,7 @@ ms.locfileid: "50185218"
   
 3.  如果 WSDL 沒有為所有的作業指定回覆動作，則產生的作業合約可能會將 <xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A> 屬性設定為萬用字元 (*)。 請移除這個屬性設定。 否則，當您實作服務合約中繼資料時，就無法匯出這些作業的中繼資料。  
   
-4.  在類別上實作介面並裝載服務。 如需範例，請參閱[如何： 實作服務合約](../../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)，或請參閱下方範例 > 一節中的簡單實作。  
+4.  在類別上實作介面並裝載服務。 如需範例，請參閱[How to:實作服務合約](../../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)，或請參閱下方範例 > 一節中的簡單實作。  
   
 5.  在用戶端組態檔[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)產生時，變更[\<用戶端 >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md)的組態區段[ \<服務 >](../../../../docs/framework/configure-apps/file-schema/wcf/services.md)組態區段。 (如需所產生之用戶端應用程式組態檔的範例，請參閱下列＜範例＞一節)。  
   

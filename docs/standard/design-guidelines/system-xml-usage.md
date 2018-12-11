@@ -1,16 +1,15 @@
 ---
 title: System.Xml 使用方式
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 82302f0d-a621-4c6f-b57d-999bd61f21a6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5c3eb01e1050bc78d2b31de19a8a728af92777e8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+author: KrzysztofCwalina
+ms.openlocfilehash: fb0e1d3dc851f9726905dc375d50cf211dba8400
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863383"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149533"
 ---
 # <a name="systemxml-usage"></a>System.Xml 使用方式
 本節說明中的數種類型的使用方式<xref:System.Xml?displayProperty=nameWithType>可用來代表 XML 資料的命名空間。  
@@ -25,7 +24,7 @@ ms.locfileid: "43863383"
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
+ *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
   
 ## <a name="see-also"></a>另請參閱
 

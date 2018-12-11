@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: a809dbc34d08fc864f6cfe8263489ab52ce41e35
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8719ffc458297191514cfe65714d5b6dd862dd60
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183798"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143613"
 ---
 # <a name="adonet-code-examples"></a>ADO.NET 程式碼範例
 本主題的程式碼清單示範如何使用下列 ADO.NET 技術來擷取資料庫中的資料：
@@ -63,7 +63,7 @@ ms.locfileid: "50183798"
  [!code-vb[DataWorks SampleApp.Oracle#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Oracle/VB/source.vb#1)]
 
 ## <a name="entity-framework-examples"></a>Entity Framework 範例
-下列程式碼清單將示範如何透過查詢 Entity Data Model (EDM) 中的實體，擷取資料來源中的資料。 這些範例會使用[Northwind 模型](https://msdn.microsoft.com/74521f8c-e974-48cb-8858-c08deff52638)。 如需詳細資訊，請參閱 < [Entity Framework 概觀](../../../../docs/framework/data/adonet/ef/overview.md)。
+下列程式碼清單將示範如何透過查詢 Entity Data Model (EDM) 中的實體，擷取資料來源中的資料。 這些範例使用 Northwind 範例資料庫為基礎的模型。 如需有關 Entity Framework 的詳細資訊，請參閱[Entity Framework 概觀](../../../../docs/framework/data/adonet/ef/overview.md)。
 
 ### <a name="linq-to-entities"></a>LINQ to Entities
 這則範例中的程式碼會使用 LINQ 查詢來傳回資料當做 Categories 物件，而這些物件會投影成僅包含 CategoryID 和 CategoryName 屬性的匿名型別。 如需詳細資訊，請參閱 < [LINQ to Entities 概觀](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。
@@ -348,5 +348,5 @@ End Class
  [在 ADO.NET 中擷取和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [建立資料應用程式](https://msdn.microsoft.com/library/ab334d5f-4f49-4346-bce0-3325d6130b3e)  
  [查詢 Entity Data Model （Entity Framework 工作）](https://msdn.microsoft.com/187f1caa-e4d3-4e31-bd99-5d5c2b329c77)  
- [如何： 執行可傳回匿名類型集合的查詢](https://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)  
+ [操作說明：執行可傳回匿名類型集合的查詢](https://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7d8e9a46-1af6-4a02-bf61-969d77ae07e0
-ms.openlocfilehash: c975913ab5df9c2e7f792ed73f8c5d20bdca1c5a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c868528edbccfeb32e6aca02c92b87d51bb0b829
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526881"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144763"
 ---
 # <a name="modifying-data-with-stored-procedures"></a>使用預存程序修改資料
 預存程序 (Stored Procedure) 可以接受資料做為輸入參數，也可以將資料以輸出參數、結果集 (Result Set) 或傳回值的形式傳回。 下列範例說明 ADO.NET 如何傳送及接收輸入參數、輸出參數和傳回值。 此範例會將新記錄插入資料表 (該資料表的主索引鍵資料行是 SQL Server 資料庫中的識別欄位)。  
@@ -21,7 +21,7 @@ ms.locfileid: "43526881"
 ## <a name="example"></a>範例  
  此範例會使用下列的預存程序插入至新的類別**Northwind** **類別**資料表。 預存程序會採用值**CategoryName**資料行做為輸入的參數，然後使用 scope_identity （） 函式來擷取識別欄位的新值**CategoryID**，並將它傳回做為輸出參數。 RETURN 陳述式使用 @@ROWCOUNT函式傳回插入的資料列數目。  
   
-```  
+```sql
 CREATE PROCEDURE dbo.InsertCategory  
   @CategoryName nvarchar(15),  
   @Identity int OUT  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 486c3c44b69c69a472b7405b6c14f9d27a29d756
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2cb99a1bda8223ddece4b4aff4a87d95357d90e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387516"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153692"
 ---
 # <a name="opengenericcercall-mda"></a>openGenericCERCall MDA
 啟用 `openGenericCERCall` Managed 偵錯助理，警告根方法有泛型型別變數的限制執行區域 (CER) 圖形將在 JIT 編譯或原生映像產生時間處理，而且至少一個泛型型別變數是物件參考型別。  
@@ -64,7 +64,7 @@ ms.locfileid: "33387516"
 ## <a name="example"></a>範例  
  未執行 CER 程式碼。  
   
-```  
+```csharp
 using System;  
 using System.Collections.Generic;  
 using System.Runtime.CompilerServices;  

@@ -3,11 +3,11 @@ title: 服務：安全性驗證和驗證失敗數
 ms.date: 03/30/2017
 ms.assetid: 55c98268-b1ad-459d-851b-25ef52248187
 ms.openlocfilehash: ba8da3ae6be6bd089690359f19e153da1e0b54fc
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744245"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150897"
 ---
 # <a name="service-security-validation-and-authentication-failures"></a>服務：安全性驗證和驗證失敗數
 計數器名稱：安全性驗證和驗證失敗數  

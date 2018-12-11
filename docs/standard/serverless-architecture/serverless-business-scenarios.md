@@ -4,12 +4,12 @@ description: 了解實際動手的方法與無伺服器行動後端和 ETL 管�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: c38d1c6c4e04f3fa38946c97af5d94758b3ed6f7
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 4299768b701336e427b22b295bc459424bfc5927
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369743"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153783"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>無伺服器的商務案例和使用案例
 
@@ -27,7 +27,7 @@ ms.locfileid: "49369743"
 
 ![自動化映像庫](./media/automated-image-gallery.png)
 
-完整的存放庫和指示，來建置邏輯應用程式是：[事件格線黏附](https://github.com/JeremyLikness/Event-Grid-Glue)。
+完整的存放庫和指示，來建置邏輯應用程式有以下：[事件格線黏附](https://github.com/JeremyLikness/Event-Grid-Glue)。
 
 ## <a name="cross-platform-mobile-client-using-xamarinforms-and-functions"></a>使用 Xamarin.Forms 和函式的跨平台行動裝置用戶端
 
@@ -55,7 +55,7 @@ ms.locfileid: "49369743"
 
 Proxy 提供單一的 API 端點更新為移動的執行無伺服器函式，將個別要求重新路由傳送。
 
-您可以檢視進行整個移轉逐步解說的影片：[使用無伺服器 Azure functions 原形](https://channel9.msdn.com/Events/Connect/2017/E102)。 存取的範例程式碼：[攜帶您自己的應用程式](https://github.com/JeremyLikness/bring-own-app-connect-17)。
+您可以檢視進行整個移轉逐步解說的影片：[撤銷並轉移使用無伺服器 Azure functions](https://channel9.msdn.com/Events/Connect/2017/E102)。 存取的範例程式碼：[攜帶您自己的應用程式](https://github.com/JeremyLikness/bring-own-app-connect-17)。
 
 ## <a name="parse-a-csv-file-and-insert-into-a-database"></a>剖析 CSV 檔案，並將插入資料庫
 
@@ -77,7 +77,7 @@ Azure Functions 用來提供單一頁面應用程式 (SPA)，可讓您貼上完�
 
 ![Power BI 範例](./media/power-bi-example.png)
 
-指示的完整連結縮網址程式存放庫，請參閱這裡：[無伺服器 URL 縮網址程式](https://github.com/jeremylikness/serverless-url-shortener)。 您可以閱讀以下的簡化版本：[無伺服器的.NET 應用程式，以分鐘為單位的 Azure 儲存體](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/)。
+這裡有指示的完整連結縮網址程式存放庫：[無伺服器 URL 縮網址程式](https://github.com/jeremylikness/serverless-url-shortener)。 您可以閱讀以下的簡化版本：[無伺服器的.NET 應用程式，以分鐘為單位的 azure 儲存體](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/)。
 
 ## <a name="verify-device-connectivity-using-a-ping"></a>確認裝置的連線，使用 ping
 
@@ -98,5 +98,5 @@ Azure Functions 用來提供單一頁面應用程式 (SPA)，可讓您貼上完�
 * [無伺服器 URL 縮網址程式](https://github.com/jeremylikness/serverless-url-shortener)
 
 >[!div class="step-by-step"]
-[上一頁](orchestration-patterns.md)
-[下一頁](serverless-conclusion.md)
+>[上一頁](orchestration-patterns.md)
+>[下一頁](serverless-conclusion.md)

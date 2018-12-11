@@ -9,11 +9,11 @@ helpviewer_keywords:
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
 ms.openlocfilehash: 87a944eca6ea4158f15c9911c6b13fd4d3c0921d
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672354"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151196"
 ---
 # <a name="ltsettingsgt-element-network-settings"></a>&lt;設定&gt;項目 （網路設定）
 為 <xref:System.Net?displayProperty=nameWithType> 命名空間設定基本的網路選項。  

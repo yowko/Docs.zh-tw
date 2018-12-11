@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
 ms.openlocfilehash: f8bd0f3eed8599f7f9e316df8274e8204a69c48f
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297448"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149896"
 ---
 # <a name="arrays-in-visual-basic"></a>Visual Basic 中的陣列
 
@@ -126,7 +126,7 @@ Dim sales()() As Double = New Double(11)() {}
 
 [!code-vb[nested-type-inference](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#6)]
 
-如需其他範例，請參閱[如何：在 Visual Basic 中初始化陣列變數](../../language-features/arrays/how-to-initialize-an-array-variable.md)。
+如需其他範例，請參閱[How to:初始化陣列變數在 Visual Basic 中的](../../language-features/arrays/how-to-initialize-an-array-variable.md)。
 
 ## <a name="iterating-through-an-array"></a>逐一查看陣列
 
@@ -299,9 +299,9 @@ Dim arrZ(-1) As String
 |詞彙|定義|
 |----------|----------------|
 |[Array Dimensions in Visual Basic](../../language-features/arrays/array-dimensions.md)|說明陣列中的順位和維度。|
-|[如何：在 Visual Basic 中初始化陣列變數](../../language-features/arrays/how-to-initialize-an-array-variable.md)|描述如何在陣列中填入初始值。|
-|[如何：在 Visual Basic 中排序陣列](../../language-features/arrays/how-to-sort-an-array.md)|示範如何依字母順序排列陣列中的項目。|
-|[如何：指派一個陣列至另一個陣列](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|描述將陣列指派給另一個陣列變數的規則和步驟。|
+|[操作說明：初始化陣列變數在 Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md)|描述如何在陣列中填入初始值。|
+|[操作說明：在 Visual Basic 中排序陣列](../../language-features/arrays/how-to-sort-an-array.md)|示範如何依字母順序排列陣列中的項目。|
+|[操作說明：指派一個陣列至另一個陣列](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|描述將陣列指派給另一個陣列變數的規則和步驟。|
 |[陣列的疑難排解](../../language-features/arrays/troubleshooting-arrays.md)|討論在使用陣列時會引發的一些常見問題。|
 
 ## <a name="see-also"></a>另請參閱

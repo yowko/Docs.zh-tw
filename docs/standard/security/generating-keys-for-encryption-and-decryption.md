@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 839a04d8a06e782582705cf0d9ad92d2e2df6af6
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 349324cabc999bac3bd0c247d3614dfc503b8b61
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47173118"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153523"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>產生加密和解密金鑰
 建立和管理金鑰是密碼編譯程序中很重要的一部分。 對稱演算法需要建立金鑰和初始化向量 (IV)。 務必不要對不該解密您資料的任何人透露金鑰。 IV 不需要加密，但是應該針對每個工作階段變更。 非對稱演算法需要建立公開金鑰和私密金鑰。 公開金鑰可以公開給任何人，但私密金鑰必須只有將解密以公開金鑰加密之資料的一方知道。 本節描述如何產生及管理對稱和非對稱演算法的金鑰。  
@@ -43,7 +43,7 @@ TripleDESCryptoServiceProvider TDES = new TripleDESCryptoServiceProvider();
   
  先前的程式碼執行時，會產生新的金鑰和 IV 並分別放在 **Key** 和 **IV** 屬性。  
   
- 有時候您可能需要產生多個金鑰。 在此情況下，您可以建立實作對稱演算法之類別的新執行個體，然後呼叫 **GenerateKey** 和 **GenerateIV** 方法來建立新的金鑰和 IV。 下列程式碼範例說明在建立非對稱密碼編譯類別的新執行個體之後，如何建立新的金鑰和 IV。  
+ 有時候您可能需要產生多個金鑰。 在此情況下，您可以建立實作對稱演算法之類別的新執行個體，然後呼叫 **GenerateKey** 和 **GenerateIV** 方法來建立新的金鑰和 IV。 下列程式碼範例說明如何進行對稱密碼編譯類別的新執行個體之後，建立新的金鑰和 Iv。  
   
 ```vb  
 Dim TDES As TripleDESCryptoServiceProvider = new TripleDESCryptoServiceProvider()  
@@ -70,7 +70,7 @@ TDES.GenerateKey();
   
  這兩種方法都接受布林值，表示是否只傳回公用金鑰資訊，還是同時傳回公開金鑰和私密金鑰資訊。 **RSACryptoServiceProvider** 類別可以使用 **方法，初始化為** RSAParameters <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A> 結構的值。  
   
- 非對稱私密金鑰不應逐字或以純文字儲存到本機電腦上。 如果您需要儲存私密金鑰，您應該使用金鑰容器。 如需如何將私密金鑰儲存到金鑰容器的詳細資訊，請參閱 [操作說明：將對稱金鑰儲存在金鑰容器中](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)。  
+ 非對稱私密金鑰不應逐字或以純文字儲存到本機電腦上。 如果您需要儲存私密金鑰，您應該使用金鑰容器。 如需如何將私密金鑰儲存到金鑰容器中的詳細資訊，請參閱[How to:將對稱金鑰儲存到金鑰容器中](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)。  
   
  下列程式碼範例會建立 **RSACryptoServiceProvider** 類別的新執行個體、建立公開/私密金鑰組，並將公開金鑰資訊儲存到 **RSAParameters** 結構。  
   
@@ -93,4 +93,4 @@ RSAParameters RSAKeyInfo = RSA.ExportParameters(false);
 - [加密資料](../../../docs/standard/security/encrypting-data.md)  
 - [解密資料](../../../docs/standard/security/decrypting-data.md)  
 - [The signature is valid](../../../docs/standard/security/cryptographic-services.md)  
-- [操作說明：將對稱金鑰儲存在金鑰容器中](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)
+- [操作說明：在金鑰容器儲存非對稱金鑰](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)

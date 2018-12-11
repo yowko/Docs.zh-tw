@@ -1,31 +1,33 @@
 ---
 title: 命名空間 (F#)
-description: 了解 F# 命名空間如何讓您將組織成相關功能的程式碼，方法是讓您將名稱附加到的程式項目群組。
-ms.date: 04/24/2017
-ms.openlocfilehash: 769a1241f76ac32d3a6a80bd637078493119bb3c
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+description: 了解如何F#命名空間可讓您將組織成相關功能的程式碼，方法是讓您將名稱附加到的程式項目群組。
+ms.date: 12/08/2018
+ms.openlocfilehash: ad5cca8947d09d8480bfa418b003c84546edc29b
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44178244"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169017"
 ---
 # <a name="namespaces"></a>命名空間
 
-命名空間可讓您將名稱附加至程式項目群組，將程式碼依相關功能分類。
+命名空間可讓您將程式碼組織成相關功能，方法是讓您將名稱附加至的群組F#的程式項目。 命名空間是通常最上層的項目，在F#檔案。
 
 ## <a name="syntax"></a>語法
 
 ```fsharp
-namespace [parent-namespaces.]identifier
+namespace [rec] [parent-namespaces.]identifier
 ```
 
 ## <a name="remarks"></a>備註
 
-如果您想要將程式碼放在命名空間，檔案中的第一個宣告必須宣告命名空間。 整個檔案的內容則會變成命名空間的一部分。
+如果您想要將程式碼放在命名空間，檔案中的第一個宣告必須宣告命名空間。 然後將整個檔案的內容會成為命名空間的一部分，提供其他的命名空間宣告存在進一步檔案中。 如果這種情況，第一個命名空間內被視為下一個命名空間宣告為止的所有程式碼。
 
 值和函式，不能直接包含命名空間。 而值和函式必須包含在模組中，模組會包含命名空間中。 命名空間可以包含類型，模組。
 
-命名空間可以明確宣告命名空間關鍵字，或以隱含方式宣告模組時。 若要明確宣告命名空間，使用命名空間關鍵字後面加上命名空間名稱。 下列範例示範宣告命名空間與型別，該命名空間中包含一個模組的小工具的程式碼檔案。
+XML 文件註解可以宣告上方的命名空間，但會忽略它們。 編譯器指示詞也可以在上面的命名空間宣告。
+
+命名空間可以明確宣告命名空間關鍵字，或以隱含方式宣告模組時。 若要明確宣告命名空間，使用命名空間關鍵字後面加上命名空間名稱。 下列範例示範宣告命名空間的程式碼檔案`Widgets`類型與包含該命名空間中的模組。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6406.fs)]
 
@@ -74,7 +76,7 @@ Module2 5 6
 
 ## <a name="recursive-namespaces"></a>遞迴命名空間
 
-F# 4.1 導入了可讓要相互遞迴所有內含的程式碼的命名空間的概念。  這透過完成`namespace rec`。  使用`namespace rec`可以減輕不能夠撰寫相互參考的程式碼類型和模組之間的一些難題。  這個範例如下：
+命名空間也可以宣告為遞迴，以便能夠相互遞迴所有內含的程式碼。  這透過完成`namespace rec`。 使用`namespace rec`可以減輕不能夠撰寫相互參考的程式碼類型和模組之間的一些難題。 這個範例如下：
 
 ```fsharp
 namespace rec MutualReferences
@@ -115,12 +117,12 @@ module BananaHelpers =
         | Down -> b |> peelSides
 ```
 
-請注意，例外狀況`DontSqueezeTheBananaException`和類別`Banana`都會指向彼此。  此外，模組`BananaHelpers`和類別`Banana`也彼此參考。  這不是來表示 F# 中，如果您移除可能`rec`關鍵字，從`MutualReferences`命名空間。
+請注意，例外狀況`DontSqueezeTheBananaException`和類別`Banana`都會指向彼此。  此外，模組`BananaHelpers`和類別`Banana`也彼此參考。 這不是可表達F#如果您移除了`rec`從的關鍵字`MutualReferences`命名空間。
 
-這項功能也是適用於最上層[模組](modules.md)中 F# 4.1 或更高版本。
+這項功能也是適用於最上層[模組](modules.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 - [F# 語言參考](index.md)
 - [模組](modules.md)
-- [F# RFC FS-1009-允許透過檔案內的較大範圍的相互參考的類型和模組](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)
+- [F#RFC FS-1009-允許透過檔案內的較大範圍的相互參考的類型和模組](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)

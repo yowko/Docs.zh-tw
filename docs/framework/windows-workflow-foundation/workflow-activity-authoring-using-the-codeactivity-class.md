@@ -3,11 +3,11 @@ title: 使用 CodeActivity 類別撰寫工作流程活動
 ms.date: 03/30/2017
 ms.assetid: cfe315c1-f86d-43ec-b9ce-2f8c469b1106
 ms.openlocfilehash: 4954dfa5dba03823d119a456149f0f16cf5ed410
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296135"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127091"
 ---
 # <a name="workflow-activity-authoring-using-the-codeactivity-class"></a>使用 CodeActivity 類別撰寫工作流程活動
 繼承自 <xref:System.Activities.CodeActivity> 所建立的活動可藉由覆寫 <xref:System.Activities.CodeActivity.Execute%2A> 方法來實作基本命令式行為。

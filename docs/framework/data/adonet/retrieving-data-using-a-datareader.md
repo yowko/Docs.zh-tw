@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: d3c59b667c05be083e44de8cc3e7e44d50fefc71
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.openlocfilehash: c97c30d77551f519777afa6efd31d507b3f21851
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "43516787"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155349"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>使用 DataReader 擷取資料
 若要擷取的資料使用**DataReader**，建立的執行個體**命令**物件，然後再建立**DataReader**藉由呼叫**Command.ExecuteReader**從資料來源擷取資料列。 **DataReader**提供未緩衝處理資料流的資料，可讓程序邏輯有效地循序處理來自資料來源的結果。 **DataReader**是不錯的選擇，因為資料不會快取記憶體，在擷取大量資料時。
@@ -144,7 +144,7 @@ using (OleDbConnection connection = new OleDbConnection(
   
  例如，請考慮下列的 Oracle Package 和 Package 內容。  
   
-```  
+```sql
 CREATE OR REPLACE PACKAGE CURSPKG AS   
   TYPE T_CURSOR IS REF CURSOR;   
   PROCEDURE OPEN_TWO_CURSORS (EMPCURSOR OUT T_CURSOR,   

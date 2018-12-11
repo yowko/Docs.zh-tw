@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: c9eed211b65e7069897718d98c301667a23aaec2
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: bcf218efeb7bff5f7457164411efed796314ba82
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702903"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129476"
 ---
 # <a name="attached-properties-overview"></a>附加屬性概觀
 
@@ -60,7 +60,7 @@ WPF 定義附加的屬性的地方的最常見案例是當父項目支援子項�
 
 ## 在程式碼中的附加的屬性 <a name="attached_properties_code"></a>
 
-在 WPF 中的附加的屬性沒有一般[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]簡單的 get/set 存取的 「 包裝函式 」 方法。 這是因為附加屬性不一定屬於已設定屬性之執行個體的 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 命名空間。 不過，XAML 處理器必須可以在剖析 XAML 時設定這些值。 若要支援有效的附加的屬性使用方式，該附加屬性的擁有者類型必須在表單中實作專用存取子方法**取得 * PropertyName*** 和 **設定*PropertyName * * *。 這些專用存取子方法也適用於取得或設定程式碼中的附加屬性。 從程式碼觀點，附加屬性類似具有方法存取子而非屬性存取子的支援欄位，而且該支援欄位可以存在於任何物件，而不需要特別進行定義。
+在 WPF 中的附加的屬性沒有一般[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]簡單的 get/set 存取的 「 包裝函式 」 方法。 這是因為附加屬性不一定屬於已設定屬性之執行個體的 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 命名空間。 不過，XAML 處理器必須可以在剖析 XAML 時設定這些值。 若要支援有效的附加的屬性使用方式，該附加屬性的擁有者類型必須在表單中實作專用存取子方法**Get_PropertyName_** 並**Set_PropertyName_**。 這些專用存取子方法也適用於取得或設定程式碼中的附加屬性。 從程式碼觀點，附加屬性類似具有方法存取子而非屬性存取子的支援欄位，而且該支援欄位可以存在於任何物件，而不需要特別進行定義。
 
 下列範例示範如何在程式碼中設定附加屬性。 在此範例中，`myCheckBox`的執行個體<xref:System.Windows.Controls.CheckBox>類別。
 
@@ -91,14 +91,14 @@ WPF 定義附加的屬性的地方的最常見案例是當父項目支援子項�
 
 如果您的類別會定義使用嚴格的附加的屬性上其他類型，則不需要衍生自類別<xref:System.Windows.DependencyObject>。 但您必須衍生自<xref:System.Windows.DependencyObject>如果您遵循將附加的屬性，也相依性屬性的整體 WPF 模型。
 
-將附加的屬性定義為相依性屬性，藉由宣告`public static readonly`型別的欄位<xref:System.Windows.DependencyProperty>。 您使用的傳回值來定義此欄位<xref:System.Windows.DependencyProperty.RegisterAttached%2A>方法。 欄位名稱必須符合的附加的屬性名稱，加上字串`Property`，以遵循命名識別欄位，與它們所代表的屬性建立的 WPF 模式。 附加的屬性提供者也必須提供靜態**取得 * PropertyName*** 和**設定 * PropertyName*** 附加的屬性; 當做存取子方法失敗，若要這樣做會導致屬性系統無法使用您的附加的屬性。
+將附加的屬性定義為相依性屬性，藉由宣告`public static readonly`型別的欄位<xref:System.Windows.DependencyProperty>。 您使用的傳回值來定義此欄位<xref:System.Windows.DependencyProperty.RegisterAttached%2A>方法。 欄位名稱必須符合的附加的屬性名稱，加上字串`Property`，以遵循命名識別欄位，與它們所代表的屬性建立的 WPF 模式。 附加的屬性提供者也必須提供靜態**Get_PropertyName_** 並**Set_PropertyName_** 附加的屬性; 當做存取子方法失敗，若要這樣做會導致屬性系統無法使用您的附加的屬性。
 
 > [!NOTE]
 > 如果您省略附加的屬性的 get 存取子，在屬性上的資料繫結無法在設計工具，例如 Visual Studio 和 Expression Blend。
 
 #### <a name="the-get-accessor"></a>Get 存取子
 
-簽章**取得 * PropertyName*** 存取子必須是：
+簽章**Get_PropertyName_** 存取子必須是：
 
 `public static object GetPropertyName(object target)`
 
@@ -108,7 +108,7 @@ WPF 定義附加的屬性的地方的最常見案例是當父項目支援子項�
 
 #### <a name="the-set-accessor"></a>Set 存取子
 
-簽章**設定 * PropertyName*** 存取子必須是：
+簽章**Set_PropertyName_** 存取子必須是：
 
 `public static void SetPropertyName(object target, object value)`
 
@@ -116,7 +116,7 @@ WPF 定義附加的屬性的地方的最常見案例是當父項目支援子項�
 
 -   `value` 物件可以指定為實作中的更特定類型。 例如，<xref:System.Windows.Controls.DockPanel.SetDock%2A>方法型別為<xref:System.Windows.Controls.Dock>，因為值只能設定為該列舉。 請記住，當這個方法在標記的附加屬性使用方式中遇到附加屬性時，其值是來自 XAML 載入器的輸入。 該輸入是指定為標記中 XAML 屬性值的值。 因此，您使用的類型必須要有類型轉換、值序列化程式或標記延伸支援，因此，可以從屬性值 (這最後就是一個字串) 建立適當的類型。
 
-下列範例示範相依性屬性註冊 (使用<xref:System.Windows.DependencyProperty.RegisterAttached%2A>方法)，以及**取得 * PropertyName*** 與**設定 * PropertyName*** 存取子。 在此範例中，附加屬性名稱為 `IsBubbleSource`。 因此，存取子必須命名為 `GetIsBubbleSource` 和 `SetIsBubbleSource`。
+下列範例示範相依性屬性註冊 (使用<xref:System.Windows.DependencyProperty.RegisterAttached%2A>方法)，以及**Get_PropertyName_** 並**Set_PropertyName_** 存取子。 在此範例中，附加屬性名稱為 `IsBubbleSource`。 因此，存取子必須命名為 `GetIsBubbleSource` 和 `SetIsBubbleSource`。
 
 [!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
 [!code-vb[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]

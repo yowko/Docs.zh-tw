@@ -10,11 +10,11 @@ helpviewer_keywords:
 - /netcf compiler option [Visual Basic]
 ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
 ms.openlocfilehash: d213f0f95d047a3758a4c85e4dc8263f82dcac8a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184565"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130203"
 ---
 # <a name="-netcf"></a>-netcf
 設定要以 [!INCLUDE[Compact](~/includes/compact-md.md)] 為目標的編譯器。  

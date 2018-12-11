@@ -4,12 +4,12 @@ description: 不同的方式企業架構的指南會為已部署至雲端，透�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 6566971d8984ec046b8b5fa2db295c1d48c30b20
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 5477b8c4531780fdebf194e4f798564e59cd2953
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369745"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152665"
 ---
 # <a name="architecture-deployment-approaches"></a>架構的部署方法
 
@@ -166,5 +166,5 @@ PaaS 的主要缺點一直都廠商鎖定中。 比方說，有些 PaaS 提供�
 * [Wingtip Tickets SaaS 應用程式](https://docs.microsoft.com/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app)
 
 >[!div class="step-by-step"]
-[上一頁](architecture-approaches.md)
-[下一頁](serverless-architecture.md)
+>[上一頁](architecture-approaches.md)
+>[下一頁](serverless-architecture.md)

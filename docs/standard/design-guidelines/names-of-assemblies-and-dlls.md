@@ -1,6 +1,6 @@
 ---
 title: 組件和 DLL 的名稱
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - names [.NET Framework], DLLs
@@ -8,14 +8,13 @@ helpviewer_keywords:
 - assemblies [.NET Framework], names
 - DLLs, names
 ms.assetid: e800b610-31b4-4949-9c14-cb60e9f254be
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 97bd152cff53fb1c2edb107b6d6b34bd91ca1c49
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+author: KrzysztofCwalina
+ms.openlocfilehash: 8e20d77c20be8dc74723117f3b0910ecc2090ef7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45972055"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130971"
 ---
 # <a name="names-of-assemblies-and-dlls"></a>組件和 DLL 的名稱
 組件是部署和 managed 程式碼程式的身分識別的單位。 雖然組件可以跨越一或多個檔案，通常對應一對一與 DLL 組件。 因此，本節會描述唯一 DLL 命名慣例，則可以對應至組件命名慣例。  
@@ -34,7 +33,7 @@ ms.locfileid: "45972055"
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
+ *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
   
 ## <a name="see-also"></a>另請參閱
 

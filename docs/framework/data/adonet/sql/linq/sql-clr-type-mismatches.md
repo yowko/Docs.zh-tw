@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-ms.openlocfilehash: 8b072c739b56d191e79b4cc2eff195adfe9da2eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61731c4d9590892bdae8e90717d77b4dddf1d71d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365666"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147615"
 ---
 # <a name="sql-clr-type-mismatches"></a>SQL-CLR 類型不符
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會自動執行物件模型 (Object Model) 與 SQL Server 之間大部分的轉譯作業。 不過，在某些情況下，還是無法進行精確的轉譯。 下列各節將摘要列出 Common Language Runtime (CLR) 型別與 SQL Server 資料庫型別之間的這些主要不符。 您可以找到更多特定的型別對應和在函式轉譯詳細[SQL CLR 類型對應](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)和[Data Types and Functions](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會自動執行物件模型 (Object Model) 與 SQL Server 之間大部分的轉譯作業。 不過，在某些情況下，還是無法進行精確的轉譯。 下列各節將摘要列出 Common Language Runtime (CLR) 型別與 SQL Server 資料庫型別之間的這些主要不符。 您可以找到更多特定型別對應和在函式轉譯詳細[SQL-CLR 類型對應](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)並[Data Types and Functions](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)。  
   
 ## <a name="data-types"></a>資料類型  
  CLR 與 SQL Server 之間的轉譯會在查詢傳送至資料庫，以及結果傳回給物件模型時進行。 例如，下列 Transact-SQL 查詢需要進行兩種值轉換：  
@@ -36,20 +36,20 @@ Select DateOfBirth From Customer Where CustomerId = @id
     -   **TimeSpan**。 這種型別代表兩個 `DateTime` 值之間的差異，而且不會對應至 SQL Server 的 `timestamp`。 在某些情況下，CLR <xref:System.TimeSpan?displayProperty=nameWithType> 可能也會對應至 SQL Server `TIME` 型別。 SQL Server `TIME` 型別只能用於代表小於 24 小時的正值。 CLR <xref:System.TimeSpan> 具有較大的範圍。  
   
     > [!NOTE]
-    >  SQL Server 特有[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]中的型別<xref:System.Data.SqlTypes>不包含在這項比較。  
+    >  SQL Server 專屬[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]中的型別<xref:System.Data.SqlTypes>不包含在這項比較。  
   
 -   SQL Server 中的不符：  
   
-    -   **固定長度字元型別**。 TRANSACT-SQL 會區分 Unicode 與非 Unicode 類別目錄和每個類別中有三種不同類型： 固定長度`nchar` / `char`，可變長度`nvarchar` / `varchar`，和較大大小`ntext` / `text`。 固定長度字元型別可以對應至 CLR <xref:System.Char?displayProperty=nameWithType> 型別供字元擷取之用，但它們在轉換時和行為上並不會真的對應至這個型別。  
+    -   **固定長度字元型別**。 TRANSACT-SQL 會區分 Unicode 與非 Unicode 類別和每個類別中有三種不同類型： 固定長度`nchar` / `char`，可變長度`nvarchar` / `varchar`，及較大型`ntext` / `text`。 固定長度字元型別可以對應至 CLR <xref:System.Char?displayProperty=nameWithType> 型別供字元擷取之用，但它們在轉換時和行為上並不會真的對應至這個型別。  
   
-    -   **位元**。 雖然 `bit` 定義域與 `Nullable<Boolean>` 具有相同數目的值，但是它們是不同的型別。 `Bit` 會使用值`1`和`0`而不是`true` / `false`，而且無法當做布林運算式的對等用法。  
+    -   **位元**。 雖然 `bit` 定義域與 `Nullable<Boolean>` 具有相同數目的值，但是它們是不同的型別。 `Bit` 接受的值`1`並`0`而不是`true` / `false`，並不能當做布林運算式的對等用法。  
   
     -   **時間戳記**。 與 CLR <xref:System.TimeSpan?displayProperty=nameWithType> 型別不同的是，SQL Server `TIMESTAMP` 型別代表資料庫針對每次更新所產生的 8 位元組唯一數字，因此不是根據 <xref:System.DateTime> 值之間的差異。  
   
-    -   **Money**和**SmallMoney**。 這些型別可以對應至 <xref:System.Decimal>，但是它們基本上是不同的型別，而且伺服器架構函式和轉換也會將它們視為不同的型別。  
+    -   **金錢**並**SmallMoney**。 這些型別可以對應至 <xref:System.Decimal>，但是它們基本上是不同的型別，而且伺服器架構函式和轉換也會將它們視為不同的型別。  
   
 ### <a name="multiple-mappings"></a>多重對應  
- 可對應至一或多個 CLR 資料型別的 SQL Server 資料型別有許多種。 可對應至一或多個 SQL Server 資料型別的 CLR 型別也有許多種。 雖然 LINQ to SQL 可能會支援某種對應，但是這並不表示在 CLR 與 SQL Server 之間對應的兩種型別在精確度、範圍和語意 (Semantics) 方面就是完美的相符。 在任何或所有這些維度 (Dimension) 中，某些對應可能會包含差異。 您可以找到有關這些潛在的差異的詳細資料的各種對應可能性在[SQL CLR 型別對應](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)。  
+ 可對應至一或多個 CLR 資料型別的 SQL Server 資料型別有許多種。 可對應至一或多個 SQL Server 資料型別的 CLR 型別也有許多種。 雖然 LINQ to SQL 可能會支援某種對應，但是這並不表示在 CLR 與 SQL Server 之間對應的兩種型別在精確度、範圍和語意 (Semantics) 方面就是完美的相符。 在任何或所有這些維度 (Dimension) 中，某些對應可能會包含差異。 您可以找到關於這些可能差異的詳細資料在各種對應可能性[SQL-CLR 類型對應](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)。  
   
 ### <a name="user-defined-types"></a>使用者定義型別  
  使用者定義 CLR 型別的設計目的是協助填補型別系統之間的差距。 不過，它們也產生型別版本控制的相關問題。 用戶端上的版本變更可能會與資料庫伺服器上儲存的型別變更不符。 任何這類變更都會導致另一項類型不符問題，即型別語意不相符，因而產生版本差距。 隨著後續版本重新調整繼承階層架構 (Inheritance Hierarchy)，情況會越來越複雜。  
@@ -107,7 +107,7 @@ or col1 != col2
   
  在上一個案例中，雖然產生的 SQL 會有對等的行為，但是轉譯作業可能不會精確地反映您的意圖。  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不會強制 C#`null`或 Visual Basic`nothing`在 SQL 上的比較語意。 比較運算子會轉譯為語法上的 SQL 對等用法。 而語意會反映伺服器所定義的 SQL 語意或連接設定。 在預設 SQL Server 設定下，兩個 null 值會視為不相等的值 (雖然您可以變更設定來變更語意)。 不過，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 在轉譯查詢時並不會考慮伺服器設定。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不會造成C#`null`或 Visual Basic`nothing`上 SQL 的比較語意。 比較運算子會轉譯為語法上的 SQL 對等用法。 而語意會反映伺服器所定義的 SQL 語意或連接設定。 在預設 SQL Server 設定下，兩個 null 值會視為不相等的值 (雖然您可以變更設定來變更語意)。 不過，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 在轉譯查詢時並不會考慮伺服器設定。  
   
  結果為常值 `null` (`nothing`) 的比較作業會轉譯為適當的 SQL 版本 (`is null` 或 `is not null`)。  
   
@@ -144,7 +144,7 @@ Where Col1 = Col2
 -- Error, collation conflict.  
 ```  
   
- 實際上，定序子項子句建立*限制型別*不是可替代。  
+ 實際上，定序子項子句會建立*限制型別*這不是可取代。  
   
  同樣地，這些型別系統的排序次序也有顯著的差異。 這項差異會影響結果的排序。 所有 16 位元組上的 <xref:System.Guid> 都會依詞彙編篡順序來排序 (`IComparable()`)，而 T-SQL 會依下列順序比較 GUID：node(10-15)、clock-seq(8-9)、time-high(6-7)、time-mid(4-5)、time-low(0-3)。 在 SQL 7.0 中，這項排序作業會在 NT 產生的 GUID 具有這類八位元順序時執行。 這種方式可確保在相同節點叢集上產生的 GUID，會根據時間戳記連續出現。 這種方式同時也適用於建置索引 (「插入」現在變成「附加」，而不是隨機 IO)。 後來在 Windows 中，這個順序基於隱私權考量被打亂了，但是 SQL 還是必須維護相容性。 因應措施是使用<xref:System.Data.SqlTypes.SqlGuid>而不是<xref:System.Guid>。  
   
@@ -153,9 +153,9 @@ Where Col1 = Col2
   
 -   C# 會根據邏輯運算子 (Logical Operator) `&&` 和 `||` 的運算元語彙順序，指定最少運算 (Short Circuit) 語意。 相反地，SQL 是針對集合架構查詢，因此可提供更多的自由讓最佳化工具決定執行順序。 下列是部分隱含意義：  
   
-    -   語意對等的轉譯，則必須"`CASE` ... `WHEN` … `THEN`「 SQL 以避免重設運算元執行順序中建構。  
+    -   語意上相等的轉譯，則必須 「`CASE` ... `WHEN` … `THEN`「 SQL，以避免重設運算元執行順序中建構。  
   
-    -   則鬆散轉譯為`AND` / `OR`運算子可能會導致未預期的錯誤，如果在 C# 運算式評估第二個運算元根據第一個運算元評估的結果。  
+    -   則鬆散轉譯為`AND` / `OR`運算子可能會導致未預期的錯誤，如果C#運算式依賴評估根據第一個運算元評估結果的第二個運算元。  
   
 -   `Round()` 函式在 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 和 T-SQL 中的語意不同。  
   
@@ -168,7 +168,7 @@ Where Col1 = Col2
     > [!NOTE]
     >  這個 `Like` 運算子行為僅適用於 C#，Visual Basic 的 `Like` 關鍵字仍未改變。  
   
--   溢位一定會先在 SQL 中檢查但有明確指定在 C# 中 （不在 Visual Basic) 若要避免發生繞回問題。 假設有三個整數資料行：C1、C2，和負責儲存 C1+C2 的 C3 (Update T Set C3 = C1 + C2)。  
+-   溢位則一律會在 SQL 中檢查但有明確指定在C#(不在 Visual Basic)，以避免發生繞回問題。 假設有三個整數資料行：C1、C2，和負責儲存 C1+C2 的 C3 (Update T Set C3 = C1 + C2)。  
   
     ```  
     create table T3 (  
@@ -186,7 +186,7 @@ Where Col1 = Col2
   
 -   SQL 會在 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 使用 Banker's Rounding (四捨六入五成雙) 時，執行對稱式算術捨入。 如需詳細資訊，請參閱知識庫文件 196652。  
   
--   根據預設，在通用地區設定 (Locale) 中，SQL 中的字元字串比較作業不會區分大小寫。 在 Visual Basic 和 C# 中，則會區分大小寫。 例如， `s == "Food"` (`s = "Food"`在 Visual Basic 中) 和`s == "Food"`可以產生不同的結果，如果`s`是`food`。  
+-   根據預設，在通用地區設定 (Locale) 中，SQL 中的字元字串比較作業不會區分大小寫。 在 Visual Basic 和 C# 中，則會區分大小寫。 例如， `s == "Food"` (`s = "Food"` Visual Basic 中) 及`s == "Food"`可以產生不同的結果，如果`s`是`food`。  
   
     ```  
     -- Assume default US-English locale (case insensitive).  
@@ -257,7 +257,7 @@ Where Col1 + Col2 > 4
 ```  
   
 ## <a name="performance-issues"></a>效能問題  
- 說明某些 SQL Server-CLR 型別差異可能會在 CLR 與 SQL Server 型別系統之間跨越時，造成效能降低。 影響效能之案例的範例包括：  
+ 帳戶處理的某些 SQL Server CLR 型別差異可能會導致效能降低時跨越 CLR 與 SQL Server 型別系統。 影響效能之案例的範例包括：  
   
 -   強制限制邏輯 and/or 運算子的評估順序  
   

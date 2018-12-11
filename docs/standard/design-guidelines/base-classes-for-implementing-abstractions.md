@@ -1,19 +1,18 @@
 ---
 title: 實作抽象的基底類別
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - abstractions [.NET Framework]
 - base classes, abstractions
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9f326ee895251678c7a23ea84a11e83951edf2cc
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+author: KrzysztofCwalina
+ms.openlocfilehash: 411596f342930c9387dc6523d25805bddad18687
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677067"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148664"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>實作抽象的基底類別
 嚴格來說，類別就變得基底類別衍生自此類別的另一個類別。 不過，為了本章節中，基底類別是設計主要是為了提供常見的抽象概念，或重複使用一些其他類別的預設實作透過繼承的類別。 基底類別通常位於繼承階層架構，在階層的根的抽象概念與數個在底部的自訂實作之間的中間。  
@@ -32,7 +31,7 @@ ms.locfileid: "45677067"
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
+ *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
   
 ## <a name="see-also"></a>另請參閱
 

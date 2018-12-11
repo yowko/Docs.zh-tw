@@ -1,18 +1,17 @@
 ---
 title: 使用指導方針
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - class library design guidelines [.NET Framework], usage guidelines
 ms.assetid: 42215ffa-a099-4a26-b14e-fb2bdb6f95b7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8e583bf7768c60477effb6c1cf9b838ae4c8c182
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+author: KrzysztofCwalina
+ms.openlocfilehash: 761570b899a2a36391eb81dc7f42e13fff1f14ef
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197934"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155401"
 ---
 # <a name="usage-guidelines"></a>使用指導方針
 
@@ -34,7 +33,7 @@ ms.locfileid: "50197934"
 
 *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*
 
-獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。
+*皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*
   
 ## <a name="see-also"></a>另請參閱
 

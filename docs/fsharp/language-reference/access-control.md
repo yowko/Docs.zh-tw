@@ -1,13 +1,13 @@
 ---
 title: 存取控制 (F#)
-description: 了解如何控制存取權等型別、 方法和函式，在 F# 程式設計語言的程式設計項目。
+description: 了解如何控制存取權的程式設計項目，例如類型、 方法和函式中，F#程式設計語言。
 ms.date: 05/16/2016
-ms.openlocfilehash: 66a260d326acf07391e3775e5a7853654b4feee4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 136eba5ec33fa6128e677b614fc0ace3c71d17df
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43803970"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153705"
 ---
 # <a name="access-control"></a>存取控制
 
@@ -15,7 +15,7 @@ ms.locfileid: "43803970"
 
 ## <a name="basics-of-access-control"></a>存取控制的基本概念
 
-在 F# 中，存取控制規範`public`， `internal`，和`private`可以套用至模組、 類型、 方法、 值的定義，函式、 屬性和明確欄位。
+在F#，存取控制規範`public`， `internal`，並`private`可以套用至模組、 類型、 方法、 值的定義，函式、 屬性和明確欄位。
 
 - `public` 指出所有呼叫端可以存取實體。
 
@@ -23,14 +23,14 @@ ms.locfileid: "43803970"
 
 - `private` 表示實體，可以存取只能從封入類型或模組。
 
->[!NOTE]
-存取規範`protected`未使用在 F# 中，雖然它是可接受的如果您正在使用中支援的語言撰寫的類型`protected`存取。 因此，如果您覆寫受保護的方法，您的方法仍然只能在類別和其下階中存取。
+> [!NOTE]
+> 存取規範`protected`不會在F#，不過，如果您正在使用中支援的語言撰寫的類型，它是可接受`protected`存取。 因此，如果您覆寫受保護的方法，您的方法仍然只能在類別和其下階中存取。
 
 一般情況下，規範放，除非在實體的名稱前面`mutable`或`inline`使用規範時，會在存取控制規範之後。
 
 如果沒有存取規範，則預設值是`public`，除了`let`型別，其一律為繫結`private`為型別。
 
-F# 中的簽章提供另一個機制來控制存取權 F# 程式項目。 簽章並不需要存取控制。 如需詳細資訊，請參閱[簽章](signatures.md)。
+中的簽章F#提供另一個機制來控制存取權F#的程式項目。 簽章並不需要存取控制。 如需詳細資訊，請參閱[簽章](signatures.md)。
 
 ## <a name="rules-for-access-control"></a>存取控制規則
 

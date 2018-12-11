@@ -3,11 +3,11 @@ title: 撰寫 Entity Framework 資料提供者
 ms.date: 03/30/2017
 ms.assetid: 092e88c4-a301-453a-b5c3-5740c6575a9f
 ms.openlocfilehash: 513af001392ae0b7abe8e6c62dc74f09469b3655
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296629"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148440"
 ---
 # <a name="writing-an-entity-framework-data-provider"></a>撰寫 Entity Framework 資料提供者
 本節討論如何撰寫[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]支援 SQL Server 以外的資料來源的提供者。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]包含支援 SQL Server 的提供者。  

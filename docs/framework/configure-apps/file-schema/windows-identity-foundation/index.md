@@ -3,12 +3,12 @@ title: Windows Identity Foundation 組態結構描述
 ms.date: 03/30/2017
 ms.assetid: 4d4f6d76-49a5-4bad-b345-097b2e2844e9
 author: BrucePerlerMS
-ms.openlocfilehash: c081e582f4c509843c04c292ecf13b2bff2fef06
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 7d6a3b1d0a67eb349fc6c9828e74a50ed621294e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397838"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146585"
 ---
 # <a name="windows-identity-foundation-configuration-schema"></a>Windows Identity Foundation 組態結構描述
 本節中的主題提供 Windows Identity Foundation (WIF) 組態結構描述的相關資訊。 您也可以設定應用程式透過架構所公開的類別使用 WIF。 這些類別會在處理結構描述中相關項目的章節中說明。 以下顯示 WIF 組態結構描述所公開的基本 XML 標記結構描述。 已省略屬性。 醒目提示的註解表示結構描述的主要元件。  

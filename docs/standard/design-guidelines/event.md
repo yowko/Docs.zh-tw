@@ -1,6 +1,6 @@
 ---
 title: 事件設計
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - pre-events
@@ -10,14 +10,13 @@ helpviewer_keywords:
 - post-events
 - signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b257da73d33fae54ef464e9dd69906316b87fd88
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+author: KrzysztofCwalina
+ms.openlocfilehash: 54f98b3c685b77ecb9fe659522c599662aa8243c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261364"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129086"
 ---
 # <a name="event-design"></a>事件設計
 事件是最常使用的回呼 （允許呼叫使用者程式碼架構的建構）。 其他回呼機制包括做委派、 虛擬成員，以及以介面為基礎的隨插即用集的成員。資料可用性研究表示大部分的開發人員可以更輕鬆地使用事件，比使用其他回呼機制。 使用 Visual Studio 和許多語言妥善整合事件。  
@@ -69,7 +68,7 @@ ms.locfileid: "48261364"
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
+ *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
   
 ## <a name="see-also"></a>另請參閱
 

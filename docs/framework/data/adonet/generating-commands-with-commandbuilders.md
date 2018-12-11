@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
-ms.openlocfilehash: e1071261f45c56655f8e6fb5fec6fccb08fd13c6
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a8767ca492a514f3ee7a2d4688858282ec706ef7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584295"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150832"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>使用 CommandBuilder 產生命令
 當 `SelectCommand` 屬性是在執行階段時以動態方式指定 (例如透過能接收使用者下達文字命令的查詢工具)，則您可能無法於設計階段指定適當的 `InsertCommand`、`UpdateCommand` 或 `DeleteCommand`。 如果您的 <xref:System.Data.DataTable> 對應至或產生自單一資料庫資料表，則可以利用 <xref:System.Data.Common.DbCommandBuilder> 物件來自動產生 `DeleteCommand` 的 `InsertCommand`、`UpdateCommand` 和 <xref:System.Data.Common.DbDataAdapter>。  
@@ -82,9 +82,13 @@ builder.QuoteSuffix = "]";
   
  下列程式碼範例將自動產生的更新命令寫入主控台。  
   
-```  
+```vb
 Console.WriteLine(builder.GetUpdateCommand().CommandText)  
-```  
+```
+
+```csharp
+Console.WriteLine(builder.GetUpdateCommand().CommandText);
+```
   
  下列範例會在 `Customers` 資料集中重新建立 `custDS` 資料表。 **RefreshSchema**呼叫方法來重新整理自動產生的命令，這個新的資料行資訊。  
   

@@ -2,12 +2,12 @@
 title: '&lt;customBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: 741f195a78c1716b95d8d4d88594207708ce6289
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: c927ba59ccdb6e5a717fcaccde9294845a2c41cc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123822"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153900"
 ---
 # <a name="ltcustombindinggt"></a>&lt;customBinding&gt;
 對使用者提供訊息堆疊的完整控制權。  
@@ -290,9 +290,8 @@ ms.locfileid: "49123822"
   
  此外，您也可以定義自己的繫結項目，並將其插入上述任何定義層之間。  
   
- 如需如何使用自訂繫結來修改系統提供繫結的討論，請參閱 <<c0> [ 如何： 自訂之繫結](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)。  
-  
-1.  
+ 如需如何使用自訂繫結來修改系統提供繫結的討論，請參閱[How to:自訂系統提供的繫結](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)。  
+    
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Channels.Binding>  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c4a942bb-2651-4b65-8718-809f892a0659
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bb5777e275fd7c48f7125b9e0315b08d3095c373
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54ce0f75ddfbf9f3b62917aa67f4d97140bbdc42
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357802"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153332"
 ---
 # <a name="datetimeinvalidlocalformat-mda"></a>dateTimeInvalidLocalFormat MDA
 使用只能用於當地 <xref:System.DateTime> 執行個體的格式來格式化儲存為全球定位時間 (UTC) 的 <xref:System.DateTime> 執行個體時，會啟用 `dateTimeInvalidLocalFormat` MDA。 針對未指定或預設 <xref:System.DateTime> 執行個體，不會啟用此 MDA。  
@@ -27,7 +27,7 @@ ms.locfileid: "33357802"
 ## <a name="symptom"></a>症狀  
  應用程式使用當地格式手動序列化 UTC <xref:System.DateTime> 執行個體：  
   
-```  
+```csharp
 DateTime myDateTime = DateTime.UtcNow;  
 Serialize(myDateTime.ToString("yyyy-MM-dd'T'HH:mm:ss.fffffffzzz"));  
 ```  
@@ -38,14 +38,14 @@ Serialize(myDateTime.ToString("yyyy-MM-dd'T'HH:mm:ss.fffffffzzz"));
 ### <a name="resolution"></a>解決方式  
  UTC <xref:System.DateTime> 執行個體應該使用指出它們為 UTC 的方式進行格式化。 UTC 時間的建議格式是使用 'Z' 表示 UTC 時間：  
   
-```  
+```csharp
 DateTime myDateTime = DateTime.UtcNow;  
 Serialize(myDateTime.ToString("yyyy-MM-dd'T'HH:mm:ss.fffffffZ"));  
 ```  
   
  也有 "o" 格式可序列化利用正確序列化之 <xref:System.DateTime.Kind%2A> 屬性的 <xref:System.DateTime>，不論執行個體是當地時間、UTC 還是未指定都一樣：  
   
-```  
+```csharp
 DateTime myDateTime = DateTime.UtcNow;  
 Serialize(myDateTime.ToString("o"));  
 ```  
@@ -69,7 +69,7 @@ Serialize(myDateTime.ToString("o"));
 ## <a name="example"></a>範例  
  請以下列方式考慮使用利用 <xref:System.Xml.XmlConvert> 或 <xref:System.Data.DataSet> 類別間接序列化 UTC <xref:System.DateTime> 值的應用程式。  
   
-```  
+```csharp
 DateTime myDateTime = DateTime.UtcNow;  
 String serialized = XMLConvert.ToString(myDateTime);  
 ```  
@@ -80,7 +80,7 @@ String serialized = XMLConvert.ToString(myDateTime);
   
  如果使用 <xref:System.Data.DataSet>，請將 <xref:System.Data.DataColumn> 物件上的 <xref:System.Data.DataColumn.DateTimeMode%2A> 屬性設定為 <xref:System.Data.DataSetDateTime.Utc>。  
   
-```  
+```csharp
 DateTime myDateTime = DateTime.UtcNow;  
 String serialized = XmlConvert.ToString(myDateTime,   
     XmlDateTimeSerializationMode.RoundtripKind);  

@@ -2,16 +2,16 @@
 title: 數學函式
 ms.date: 03/30/2017
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
-ms.openlocfilehash: e6c58d781d7138f8295f2d0a2f0db110ad4b1dd6
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 63f83532c399f77e268913da3198327345b9c2ee
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837306"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143671"
 ---
 # <a name="mathematical-functions"></a>數學函式
 
-.NET Framework Data Provider for SQL Server (SqlClient) 提供了數學函式，這些函式會在當做引數提供的輸入值上執行計算，並傳回數值結果。 這些函式位於您使用 SqlClient 時可以使用的 SqlServer 命名空間 (Namespace) 內。 提供者命名空間屬性可以讓 Entity Framework 了解此提供者對特定建構 (例如型別和函式) 所使用的前置詞。下表將描述 SqlClient 數學函式。  
+.NET Framework Data Provider for SQL Server (SqlClient) 提供了數學函式，這些函式會在當做引數提供的輸入值上執行計算，並傳回數值結果。 這些函式位於您使用 SqlClient 時可以使用的 SqlServer 命名空間 (Namespace) 內。 提供者命名空間屬性可以讓 Entity Framework 了解此提供者對特定建構 (例如型別和函式) 所使用的前置詞。 下表將描述 SqlClient 數學函式。  
   
 ## <a name="absexpression"></a>ABS(expression)
 
@@ -19,7 +19,7 @@ ms.locfileid: "48837306"
 
 **引數**
 
-`expression`：`Int32`、`Int64`、`Double` 或 `Decimal`。
+`expression`：`Int32`， `Int64`， `Double`，或`Decimal`。
 
 **傳回值**
 
@@ -99,7 +99,7 @@ ms.locfileid: "48837306"
 
 **引數**
 
-`expression`：`Int32`、`Int64`、`Double` 或 `Decimal`。
+`expression`：`Int32`， `Int64`， `Double`，或`Decimal`。
 
 **傳回值**
 
@@ -148,7 +148,7 @@ ms.locfileid: "48837306"
 
 **引數** 
 
-`expression`：`Int32`、`Int64`、`Double` 或 `Decimal`。 
+`expression`：`Int32`， `Int64`， `Double`，或`Decimal`。 
 
 **傳回值** 
 
@@ -258,7 +258,7 @@ ms.locfileid: "48837306"
 
 **引數** 
 
-`expression`：`Int32`、`Int64`、`Double` 或 `Decimal`。 
+`expression`：`Int32`， `Int64`， `Double`，或`Decimal`。 
 
 **傳回值** 
 
@@ -384,8 +384,8 @@ ms.locfileid: "48837306"
 
 如需 SqlClient 支援之數學函式的詳細資訊，請參閱 SqlClient 提供者資訊清單中所指定之 SQL Server 版本的說明文件：  
   
-**SQL Server 2005:** [數學函數 & Amp;#40;transact-SQL&AMP;#41;](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))  
-**SQL Server 2008:** [數學函數 & Amp;#40;transact-SQL&AMP;#41;](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))  
-**SQL Server 2012 及更新版本：** [數學函數 & Amp;#40;transact-SQL&AMP;#41;](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)   
+**SQL Server 2005:**[數學函數 & Amp;#40;transact-SQL&AMP;#41](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))  
+**SQL Server 2008：**[數學函數 & Amp;#40;transact-SQL&AMP;#41](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))  
+**SQL Server 2012 和更新版本：**[數學函數 & Amp;#40;transact-SQL&AMP;#41](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)   
 
  [適用於 Entity Framework 的 SqlClient 函式](sqlclient-for-ef-functions.md)

@@ -3,11 +3,11 @@ title: 一段時間 (Visual Basic) 後取消非同步工作
 ms.date: 07/20/2015
 ms.assetid: a48045a3-6a99-42af-b824-af340f0b9a5d
 ms.openlocfilehash: b1c56cb6d894dbcd9e70f06d7e5cd44b559b8cd4
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50033684"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148454"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-visual-basic"></a>一段時間 (Visual Basic) 後取消非同步工作
 如果不想等候作業完成，則可以使用 <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> 方法，在一段時間之後取消非同步作業。 這個方法排定取消未在 `CancelAfter` 運算式所指定之2期間內完成的任何相關工作。  
@@ -18,7 +18,7 @@ ms.locfileid: "50033684"
 >  若要執行範例，您必須擁有 Visual Studio 2012 或更新版本和.NET Framework 4.5 或更新版本安裝在電腦上。  
   
 ## <a name="downloading-the-example"></a>下載範例  
- 您可以從 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載完整 Windows Presentation Foundation (WPF) 專案，然後遵循下列步驟。  
+ 您可以下載完整 Windows Presentation Foundation (WPF) 專案從[非同步範例：精確微調應用程式](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)然後遵循這些步驟。  
   
 1.  解壓縮您下載的檔案，然後啟動 Visual Studio。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "50033684"
   
 4.  在方案總管中，開啟 **CancelAfterTime** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。  
   
-5.  選擇 F5 鍵執行執行專案。  
+5.  選擇 F5 鍵以執行專案。  
   
      選擇 CTRL+F5 鍵以執行專案，而不進行偵錯。  
   
@@ -88,7 +88,7 @@ Downloads canceled.
   
  請注意，您必須新增 <xref:System.Net.Http> 的參考。  
   
- 您可以從 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載專案。  
+ 您可以下載從專案[非同步範例：順利微調您的應用程式](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)。  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -191,7 +191,7 @@ End Class
   
 ## <a name="see-also"></a>另請參閱  
  [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
- [逐步解說：使用 Async 和 Await 存取 Web (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+ [逐步解說：存取 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
  [取消一項非同步工作或一份工作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)  
  [微調非同步應用程式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
- [非同步範例：微調應用程式 (英文)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+ [非同步範例：微調您的應用程式](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

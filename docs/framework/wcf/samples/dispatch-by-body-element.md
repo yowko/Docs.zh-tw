@@ -2,12 +2,12 @@
 title: 按本文項目分派
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-ms.openlocfilehash: 449c153092d80bb457a2059b80158ea665bfc645
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 58d505770a495e5e423104b9fb912d088ca56f86
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396374"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143151"
 ---
 # <a name="dispatch-by-body-element"></a>按本文項目分派
 這個範例會示範如何實作將傳入訊息指派至作業的替代演算法。  
@@ -20,7 +20,7 @@ ms.locfileid: "43396374"
   
  類別建構函式預期會以 `XmlQualifiedName` 和字串組填入字典，因此限定名稱表示 SOAP 本文之第一個子系的名稱，而字串表示相符的作業名稱。 `defaultOperationName` 是作業的名稱，而此作業會接收不符合此字典的所有訊息：  
   
-```  
+```csharp
 class DispatchByBodyElementOperationSelector : IDispatchOperationSelector  
 {  
     Dictionary<XmlQualifiedName, string> dispatchDictionary;  
@@ -31,13 +31,14 @@ class DispatchByBodyElementOperationSelector : IDispatchOperationSelector
         this.dispatchDictionary = dispatchDictionary;  
         this.defaultOperationName = defaultOperationName;  
     }  
+}
 ```  
   
  <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 實作的建置上則非常簡單，因為在介面上只有一個方法：<xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>。 此方法的工作為檢查傳入的訊息，並針對目前的端點，傳回等於服務合約之方法名稱的字串。  
   
  在此範例中，作業選取器會使用 <xref:System.Xml.XmlDictionaryReader>，取得傳入訊息本文的 <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A>。 這個方法已經將讀取器放置在訊息本文的第一個子系上，因此便可取得目前項目的名稱和命名空間 URI，並將這些項目結合至 `XmlQualifiedName`，然後使用結合項目查閱作業選取器持有之字典的對應作業。  
   
-```  
+```csharp
 public string SelectOperation(ref System.ServiceModel.Channels.Message message)  
 {  
     XmlDictionaryReader bodyReader = message.GetReaderAtBodyContents();  
@@ -57,7 +58,7 @@ public string SelectOperation(ref System.ServiceModel.Channels.Message message)
   
  使用 <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> 或其他可存取訊息本文內容的方法來存取訊息本文時，會導致訊息標示為「已讀取」，這表示無法對該訊息進行進一步的處理。 因此，作業選取器會使用下列程式碼中顯示的方法，建立傳入訊息的複本。 由於讀取器的位置在檢查期間並未變更，新建立的訊息便可用它來參考也複製的訊息屬性和訊息標頭，因此會對原始訊息進行完整複製：  
   
-```  
+```csharp
 private Message CreateMessageCopy(Message message,   
                                      XmlDictionaryReader body)  
 {  
@@ -77,7 +78,7 @@ private Message CreateMessageCopy(Message message,
   
  為達到簡潔性，下列程式碼摘錄只會顯示方法 <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%2A> 的實作，而這個方法會影響此範例中發送器的組態變更。 不會顯示其他方法，因為這些方法會傳回呼叫者而不會進行任何運作。  
   
-```  
+```csharp
 [AttributeUsage(AttributeTargets.Class|AttributeTargets.Interface)]  
 class DispatchByBodyElementBehaviorAttribute : Attribute, IContractBehavior  
 {  
@@ -92,7 +93,7 @@ class DispatchByBodyElementBehaviorAttribute : Attribute, IContractBehavior
   
  填入字典之後，就會以此資訊建構新的 `DispatchByBodyElementOperationSelector`，並設定為分派執行階段的作業選取器：  
   
-```  
+```csharp
 public void ApplyDispatchBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.DispatchRuntime dispatchRuntime)  
 {  
     Dictionary<XmlQualifiedName,string> dispatchDictionary =   
@@ -123,7 +124,7 @@ public void ApplyDispatchBehavior(ContractDescription contractDescription, Servi
   
  由於作業選取器只會根據訊息本文項目進行分派，而忽略 "Action"，因此需要告知執行階段不要在傳回的回覆上檢查 "Action" 標頭，方法是將萬用字元 "*" 指派給 `ReplyAction` 的 <xref:System.ServiceModel.OperationContractAttribute> 屬性即可。 此外，它才可讓預設作業具有"Action"屬性設定為萬用字元"\*」。 預設作業會接收無法分派也沒有 `DispatchBodyElementAttribute` 的所有訊息：  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"),  
                             DispatchByBodyElementBehavior]  
 public interface IDispatchedByBody  

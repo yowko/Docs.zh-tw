@@ -1,20 +1,19 @@
 ---
 title: 虛擬成員
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - overridable members
 - virtual members
 - members [.NET Framework], virtual
 ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b92b648e7886fb0214238e32eacae2870b470340
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+author: KrzysztofCwalina
+ms.openlocfilehash: 1719e9843252c25d1e799471330c6cb08211245b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121061"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128919"
 ---
 # <a name="virtual-members"></a>虛擬成員
 虛擬成員可以被覆寫，因此變更子類別的行為。 它們是回呼提供，擴充性方面相當類似，但它們會有較高的執行效能和記憶體耗用量。 此外，虛擬成員覺得在需要建立一種特殊種類的現有類型 （特製化） 的情況下更自然的。  
@@ -37,7 +36,7 @@ ms.locfileid: "49121061"
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
+ *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -1,41 +1,41 @@
 ---
-title: 當 Azure 容器執行個體 (ACI) 部署 Windows 容器
-description: 現代化現有的.NET 應用程式與 Azure 雲端和 Windows 容器 |當 Azure 容器執行個體 (ACI) 部署 Windows 容器
+title: 將 Windows 容器部署至 Azure Container Instances (ACI) 中的時機
+description: 將現有的.NET 應用程式使用 Azure 雲端和 Windows 容器現代化 |將 Windows 容器部署至 Azure Container Instances (ACI) 中的時機
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/29/2018
-ms.openlocfilehash: 3dc23c96543d9611763b571105f52b150dfec06f
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 297461f1403ab2d6ca6fd63a05d5ded7f210483e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33957948"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128095"
 ---
-# <a name="when-to-deploy-windows-containers-to-azure-container-instances-aci"></a>當 Azure 容器執行個體 (ACI) 部署 Windows 容器
+# <a name="when-to-deploy-windows-containers-to-azure-container-instances-aci"></a>將 Windows 容器部署至 Azure Container Instances (ACI) 中的時機
 
-Azure 容器執行個體主要價值主張是以立即開始，您可以將容器部署它，而且您不需要維護該環境，您不需要升級/修補程式 underlaying 作業系統或 Vm，所有透明的而且您只部署已備妥要使用環境的容器。
+Azure 容器執行個體的主要價值主張是立即，您可以將容器部署到它，而且您不需要維護該環境，您不需要升級/修補 underlaying 作業系統或所有的而言是透明的 Vm，並只需將部署準備使用環境的容器。
 
-原因和案例時，您會想要使用 ACI 類似的主要案例搭配使用 Azure Vm 和容器，因此基本上，使用 Azure 容器執行個體的主要案例包括：
+原因，以及在您想要使用 ACI 案例中的主要案例類似當您使用 Azure Vm 與容器，所以基本上，使用 Azure Container Instances 的主要案例包括：
 
 -   **開發/測試案例**
 -   **工作自動化**
 -   **CI/CD 代理程式**
--   **小型/小數位數批次處理**
+-   **小型/擴展批次處理**
 -   **簡單 web 應用程式**
 
-簡單的 web 應用程式案例是普通的 ACI 狀況，但納入考量，因為 ACI 中只能有單一容器每個執行個體的容器映像，您不需要高可用性，並只具有有限的延展性。
+簡單的 web 應用程式案例 ACI 公平案例，但請考慮在 ACI 中只能有單一的容器執行個體，每個容器映像，因為您不需要高可用性，並只會有有限延展性。
 
-不過，即使 ACI 會被視為基礎結構，因為它只提供單一容器執行個體，是一大優勢，相較於一般的 Azure Vm 與 Windows Server。 ACI，只要將容器部署到自我維護的環境與您只需支付這些容器。 您不需要維護/更新/修補的 Vm，所以較佳 platform 大部分的情況下，您也可以使用 Vm 與容器。 使用 ACI 直截了當，您只要部署容器，來建立您剛部署容器在 VM 環境不需要。
+不過，即使在 ACI 被視為基礎結構，因為它只是提供單一容器執行個體，是相較於一般的 Azure 虛擬機器與 Windows Server 是一大福音。 使用 ACI，只需將容器部署到自我維護的環境，並只支付這些容器。 您不需要維護/更新/修補的 Vm，所以大部分的情況下，您也可以使用 Vm 與容器的太多的完美平台。 使用 ACI 很簡單，您只是將容器部署，則不需要建立 VM 環境，您只需將容器部署。
 
-Azure 容器執行個體 (ACI) 的主要優點為：
+Azure Container Instances (ACI) 的主要優點為：
 
--   執行的容器，而不需要管理伺服器
--   增加靈活性視容器
--   部署至雲端與前所未有的簡單和速度的容器，使用單一命令。 
--   安全 hypervisor 隔離的應用程式
+-   執行容器而不必管理伺服器
+-   隨選容器增加彈性
+-   將容器部署至雲端，前所未有的簡潔且高速 — 使用單一命令。 
+-   利用 hypervisor 隔離保護應用程式
 
-簡單地說，ACI 與您可以快速而不需要管理虛擬機器或需要了解新的工具開發應用程式。 只要您的應用程式，在容器中，在雲端中執行它。
+簡單地說，透過 ACI 中，您可以開發應用程式快速而不需要管理虛擬機器或不必學習新工具。 它是只是您的應用程式，在容器中，在雲端中執行。
 
 >[!div class="step-by-step"]
-[上一頁](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
-[下一頁](when-to-deploy-windows-containers-to-service-fabric.md)
+>[上一頁](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
+>[下一頁](when-to-deploy-windows-containers-to-service-fabric.md)

@@ -1,6 +1,6 @@
 ---
 title: 類型設計方針
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - type design guidelines
@@ -8,14 +8,13 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], type design guidelines
 - types [.NET Framework], design guidelines
 ms.assetid: 6b49314e-8bba-43ea-97ca-4e0255812f95
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a7fb9964d0e542c0937c55ae65bd88b3f7149fa8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+author: KrzysztofCwalina
+ms.openlocfilehash: 16f2a095f461a406eedbd2b34b0c91d3ac43bbe5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44187935"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145224"
 ---
 # <a name="type-design-guidelines"></a>類型設計方針
 CLR 的觀點而言，有只有兩種型別，參考類型和實值型別，但為了解 framework 設計的討論，除類型分成多個邏輯群組，各有其專屬特定設計規則。  
@@ -44,7 +43,7 @@ CLR 的觀點而言，有只有兩種型別，參考類型和實值型別，但�
  [巢狀型別](../../../docs/standard/design-guidelines/nested-types.md)  
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
+ *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
   
 ## <a name="see-also"></a>另請參閱
 

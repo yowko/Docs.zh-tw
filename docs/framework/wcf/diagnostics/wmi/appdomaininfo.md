@@ -3,11 +3,11 @@ title: AppDomainInfo
 ms.date: 03/30/2017
 ms.assetid: 6610b7d8-81eb-4bec-a543-9b72ad7b6f73
 ms.openlocfilehash: 0b7f8aadbd9a9dfcdd33fc65be3a5a41ea95f5be
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50170220"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127078"
 ---
 # <a name="appdomaininfo"></a>AppDomainInfo
 應用程式定義域資訊  
@@ -74,7 +74,7 @@ class AppDomainInfo
  值，指定是否在傳輸層級追蹤訊息。  
   
 ### <a name="messageloggingtracelisteners"></a>MessageLoggingTraceListeners  
- 資料型別：TraceListener 陣列  
+ 資料類型：TraceListener 陣列  
   
  存取類型：唯讀  
   
@@ -116,7 +116,7 @@ class AppDomainInfo
  System.Wmi 追蹤來源的追蹤層級。  
   
 ### <a name="servicemodeltracelisteners"></a>ServiceModelTraceListeners  
- 資料型別：TraceListener 陣列  
+ 資料類型：TraceListener 陣列  
   
  存取類型：唯讀  
   

@@ -3,11 +3,11 @@ title: 未包裝的訊息
 ms.date: 03/30/2017
 ms.assetid: 019657bd-1f9b-4315-ad74-eaa4e7551ff6
 ms.openlocfilehash: 835312101ba9e0daaa7986a78c9a0040535881b9
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743933"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154917"
 ---
 # <a name="unwrapped-messages"></a>未包裝的訊息
 此範例示範未包裝的訊息。 根據預設，訊息本文會格式化，以便包裝服務作業的參數。 下列範例說明對包裝模式中對 `Add` 服務的 `ICalculator` 要求訊息。  

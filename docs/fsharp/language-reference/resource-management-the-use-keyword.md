@@ -1,15 +1,15 @@
 ---
-title: 資源管理：use 關鍵字 (F#)
+title: 資源管理：Use 關鍵字 (F#)
 description: 深入了解F#關鍵字 'use' 和 'using' 函式，可以控制的初始設定和版本的資源。
 ms.date: 05/16/2016
 ms.openlocfilehash: 300fb4113019f676625f75541d117458eab3f6ab
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296876"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147628"
 ---
-# <a name="resource-management-the-use-keyword"></a>資源管理：use 關鍵字
+# <a name="resource-management-the-use-keyword"></a>資源管理：Use 關鍵字
 
 本主題說明關鍵字`use`而`using`函式，可以控制的初始設定和版本的資源。
 

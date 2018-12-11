@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/12/2018
 ms.custom: vs-dotnet
-ms.openlocfilehash: c58c680c6500bc3b9adec50e18c26af3329122c9
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 79e9b5cc9bac317a368583013abbc5124ef2c9ac
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086384"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151209"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>使用 Visual Studio Tools for Docker (Windows 上的 Visual Studio)
 
@@ -33,7 +33,7 @@ ms.locfileid: "49086384"
 
 ![在 Visual Studio 中新增 Docker 支援 功能表選項](media/add-docker-support-menu.png)
 
-圖 4-26： 新增 Docker 支援新增至 Visual Studio 2017 的專案
+圖 4-26:將 Docker 支援新增至 Visual Studio 2017 的專案
 
 ### <a name="add-docker-support"></a>新增 Docker 支援
 
@@ -41,7 +41,7 @@ ms.locfileid: "49086384"
 
 ![Visual Studio 中的新 ASP.NET Core web 應用程式中啟用 Docker 支援](./media/enable-docker-support-visual-studio.png)
 
-圖 4-27： 在 Visual Studio 2017 中的專案建立期間啟用 Docker 支援
+圖 4 月 27 日：在 Visual Studio 2017 中的專案建立期間啟用 Docker 支援
 
 當您新增或啟用 Docker 支援時，Visual Studio 會加入*Dockerfile*檔案加入專案。
 
@@ -50,7 +50,7 @@ ms.locfileid: "49086384"
 >
 > ![啟用 Docker compose 的.NET Framework web 應用程式專案的支援](media/enable-docker-compose-support.png)
 
-> 圖 4-28： 啟用 Visual Studio 2017 中的.NET Framework web 應用程式專案上的 Docker Compose 的支援
+> 圖 4-28:啟用 Docker Compose 的支援，在 Visual Studio 2017 中的.NET Framework web 應用程式專案
 
 ### <a name="add-container-orchestration-support"></a>新增容器協調流程的支援
 
@@ -62,7 +62,7 @@ ms.locfileid: "49086384"
 
 ![在 Visual Studio 中的 [方案總管] 中的 docker 檔案](media/docker-support-solution-explorer.png)
 
-圖 4-29： 在 Visual Studio 2017 中的 [方案總管] 中的 Docker 檔案
+圖 4-29:Visual Studio 2017 中的 [方案總管] 中的 docker 檔案
 
 如果*docker compose.yml*已經存在，Visual Studio 只會將必要的組態程式碼的行加入至它。
 
@@ -72,7 +72,7 @@ ms.locfileid: "49086384"
 
 ![](./media/visual-studio-docker-tools-options.png)
 
-圖 4-30: Docker 工具選項
+圖 4-30:Docker 工具選項
 
 下表可協助您決定如何設定這些選項。
 
@@ -93,5 +93,5 @@ ms.locfileid: "49086384"
 將 ASP.NET Core Docker 容器部署至容器登錄： [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker/](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
 
 >[!div class="step-by-step"]
-[上一頁](docker-apps-inner-loop-workflow.md)
-[下一頁](set-up-windows-containers-with-powershell.md)
+>[上一頁](docker-apps-inner-loop-workflow.md)
+>[下一頁](set-up-windows-containers-with-powershell.md)

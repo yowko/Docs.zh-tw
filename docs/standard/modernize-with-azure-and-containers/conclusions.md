@@ -4,12 +4,12 @@ description: 將現有.NET 應用程式與 Azure 雲端和 Windows 容器現代�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: af6151d04622c72acdb7f27ebb220bf611418b4c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 62a9a38ccbe696c34ef799b574c0f5a95bc8f726
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45743965"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147914"
 ---
 # <a name="conclusions"></a>結論
 
@@ -30,4 +30,4 @@ ms.locfileid: "45743965"
 - Microsoft Azure 提供最全面且最完整的環境，以將您現有的.NET Framework 應用程式，Windows 容器、 雲端基礎結構與 PaaS 服務現代化。
 
 >[!div class="step-by-step"]
-[上一步](walkthroughs-technical-get-started-overview.md)
+>[上一步](walkthroughs-technical-get-started-overview.md)

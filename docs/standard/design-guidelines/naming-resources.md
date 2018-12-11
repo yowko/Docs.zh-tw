@@ -1,6 +1,6 @@
 ---
 title: 命名資源
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - names [.NET Framework], localized resources
@@ -9,14 +9,13 @@ helpviewer_keywords:
 - global applications, naming guidelines
 - international applications, naming guidelines
 ms.assetid: 8b0e97f3-7877-44fd-bc76-e05d36d5d79c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a5b53fc383e6fc9a5f056bab4eabde9979cd734b
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+author: KrzysztofCwalina
+ms.openlocfilehash: 5331c82069bb289c282e746841f5a328e2e628f2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48260676"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130865"
 ---
 # <a name="naming-resources"></a>命名資源
 因為可以透過特定的物件參考可當地語系化的資源，如同它們是屬性，就有一個資源的命名方針如下屬性指導方針。  
@@ -39,7 +38,7 @@ ms.locfileid: "48260676"
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
+ *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
   
 ## <a name="see-also"></a>另請參閱
 

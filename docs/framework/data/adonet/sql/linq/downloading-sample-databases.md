@@ -1,32 +1,33 @@
 ---
-title: 取得範例資料庫的 ADO.NET 程式碼範例
-description: 下載範例資料庫中的 ADO.NET 文件，以及 SQL Server 和管理工具的程式碼範例使用
+title: 取得範例 SQL Server 資料庫的 ADO.NET 程式碼範例
+description: 下載 ADO.NET 文件，以及 SQL Server 和管理工具的程式碼範例中所使用的 SQL Server 範例資料庫
 ms.date: 10/18/2018
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-ms.openlocfilehash: 9779300288135cb9332a028d547ce55a07e89471
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8ab65f992c9cf2b65271a237fa06eb96e358ae6a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188387"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153484"
 ---
 # <a name="get-the-sample-databases-for-adonet-code-samples"></a>取得範例資料庫的 ADO.NET 程式碼範例
 
-許多範例和逐步解說中的[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文件使用範例資料庫和 SQL Server Express。 您可以從 Microsoft 下載這些免費的產品。
+許多範例和逐步解說中的[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文件使用的 SQL Server 範例資料庫和 SQL Server Express。 您可以從 Microsoft 下載這些免費的產品。
 
-## <a name="get-the-northwind-sample-database"></a>取得 Northwind 範例資料庫
+## <a name="get-the-northwind-sample-database-for-sql-server"></a>取得 SQL Server 的 Northwind 範例資料庫
 
-從 Microsoft 下載中心中的下列頁面下載 Northwind 範例資料庫：
+下載指令碼`instnwnd.sql`從下列的 GitHub 存放庫，來建立和載入適用於 SQL Server 的 Northwind 範例資料庫：
 
-[Northwind 和 Pubs 範例資料庫](https://go.microsoft.com/fwlink?linkid=64296)
+[Microsoft SQL server 的 Northwind 和 pubs 範例資料庫](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)
 
-下載檔案之後，連按兩下該檔案以解壓縮資料庫與指令碼。 根據預設，檔案會安裝在資料夾`<drive>:\SQL Server 2000 Sample Databases`。
+您可以使用 Northwind 資料庫之前，您必須執行已下載`instnwnd.sql`重新建立 SQL Server 執行個體上的資料庫所使用的指令碼檔案[SQL Server Management Studio](#get_ssms)或類似的工具。 請遵循存放庫中的讀我檔案中的指示。
 
-您可以使用 Northwind 資料庫之前，您必須使用 重新建立資料庫的 SQL Server 執行個體上[SQL Server Management Studio](#get_ssms)或類似工具來執行`instnwnd.sql`安裝資料夾中的指令碼檔案。
+> [!TIP]
+> 如果您想為 Microsoft Access Northwind 資料庫，請參閱[安裝 Microsoft Access Northwind 範例資料庫](#northwind_access)。
 
-## <a name="get-the-adventureworks-sample-database"></a>取得 AdventureWorks 範例資料庫
+## <a name="get-the-adventureworks-sample-database-for-sql-server"></a>取得 SQL Server 的 AdventureWorks 範例資料庫
 
-從下列 GitHub 儲存機制下載 AdventureWorks 範例資料庫：
+適用於 SQL Server，從下列 GitHub 儲存機制下載 AdventureWorks 範例資料庫：
 
 [AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
 
@@ -38,7 +39,7 @@ SQL Server Express 是免費的入門級的 SQL Server 版本，您可以重新�
   
 [SQL Server Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express)
 
-如果您使用[Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)，SQL Server Express LocalDB 納入免費的 Community edition，以及專業和更高版本。  
+如果您使用[Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)，SQL Server Express LocalDB 納入的 Visual Studio 中，免費的 Community edition，以及專業和更高版本。  
 
 ## <a name="get_ssms"></a> 取得 SQL Server Management Studio
 如果您想要檢視或修改的資料庫，您已下載，您可以使用 SQL Server Management Studio (SSMS)。 下載 SSMS，從下列頁面：
@@ -46,7 +47,23 @@ SQL Server Express 是免費的入門級的 SQL Server 版本，您可以重新�
 [下載 SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) 
 
 您也可以檢視和管理 Visual Studio 整合式的開發環境 (IDE) 中的資料庫。 在[Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)，連接到資料庫**SQL Server 物件總管**，或建立的資料庫中的資料連接**伺服器總管**。 開啟這些檔案總管 窗格，從**檢視**功能表。
-  
+
+## <a name="northwind_access"></a> 安裝 Microsoft Access Northwind 範例資料庫
+
+Microsoft Download Center 上，不可以使用 Microsoft access Northwind 範例資料庫。 若要安裝在 Access 中的直接從 Northwind，執行下列動作：
+
+1. 開啟 [存取]。
+
+1. Enter **Northwind**中**搜尋線上範本**方塊，然後按**Enter**。
+
+1. 在 [結果] 畫面中，選取**Northwind**。 新的視窗會開啟 Northwind 資料庫的描述。
+
+1. 在新視窗中，在**檔案名**文字中，提供檔案名稱，為您的 Northwind 資料庫的副本。
+
+1. 選取 [建立]。 存取下載 Northwind 資料庫，並準備此檔案。
+
+1. 完成此程序時，資料庫便會開啟 歡迎使用畫面。
+
 ## <a name="see-also"></a>另請參閱
 
 - [快速入門](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)

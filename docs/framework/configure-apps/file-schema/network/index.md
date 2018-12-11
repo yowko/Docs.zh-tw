@@ -12,14 +12,12 @@ helpviewer_keywords:
 - connections [.NET Framework], network configuration elements
 - network resources, network configuration elements
 ms.assetid: f1de5a0f-76c5-4833-819f-5222b8146340
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 5783e63d81c8951afb6b1646b595fc619d51549c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 93248823284389a865111f9ab47cdac026be55b4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837478"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143203"
 ---
 # <a name="network-settings-schema"></a>網路設定結構描述
 網路設定會指定 .NET Framework 如何連接至網際網路。 下表描述 [\<system.Net> 項目 (網路設定)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) 下每個子組態項目的功能。  
@@ -42,5 +40,5 @@ ms.locfileid: "48837478"
 |[\<schemeSettings> 項目 (URI 設定)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|指定如何針對特定配置剖析 <xref:System.Uri>。|  
   
 ## <a name="see-also"></a>另請參閱  
- [設定網際網路應用程式](../../../../../docs/framework/network-programming/configuring-internet-applications.md)  
- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [設定網際網路應用程式](../../../../../docs/framework/network-programming/configuring-internet-applications.md)  
+- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)

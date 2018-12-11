@@ -2,12 +2,12 @@
 title: 修改 SQL 產生
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: 8e0568e32094b6cc27137409f3d908928d82cebb
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: bfeb4f826022d39b2a45132a5b2bf344ef4c99c6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836909"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127065"
 ---
 # <a name="modification-sql-generation"></a>修改 SQL 產生
 本節將討論如何為您的 (SQL:1999 相容資料庫) 提供者開發修改 SQL 產生模組。 這個模組負責將修改命令樹轉譯為適當的 SQL INSERT、UPDATE 或 DELETE 陳述式。  
@@ -83,7 +83,7 @@ The elements of the list are specified as type DbModificationClause, which speci
 -   DbOrExpression  
   
 ## <a name="modification-sql-generation-in-the-sample-provider"></a>範例提供者中的修改 SQL 產生  
- [Entity Framework 範例提供者](https://go.microsoft.com/fwlink/?LinkId=180616)之 ADO.NET 資料提供者支援的元件會示範[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]。 它會以 SQL Server 2005 資料庫為目標，並且實作成 System.Data.SqlClient ADO.NET 2.0 資料提供者上層的包裝函式。  
+ [Entity Framework 範例提供者](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)之 ADO.NET 資料提供者支援的元件會示範[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]。 它會以 SQL Server 2005 資料庫為目標，並且實作成 System.Data.SqlClient ADO.NET 2.0 資料提供者上層的包裝函式。  
   
  範例提供者的修改 SQL 產生模組 (位於 SQL Generation\DmlSqlGenerator.cs 檔案中) 會採用 DbModificationCommandTree 輸入，並產生單一修改 SQL 陳述式，後面可能接著 select 陳述式來傳回讀取器 (如果 DbModificationCommandTree 有指定)。 請注意，產生之命令的形狀會受到目標 SQL Server 資料庫所影響。  
   

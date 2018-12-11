@@ -3,11 +3,11 @@ title: 行為安全性
 ms.date: 03/30/2017
 ms.assetid: 19710ae3-f197-4d28-ba9d-52e465006819
 ms.openlocfilehash: f5fd9cdb5fa0a84a151bc00ba63f1f5e89530629
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192807"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146897"
 ---
 # <a name="behavior-security"></a>行為安全性
 本節包含示範設定服務行為之安全性的範例。  

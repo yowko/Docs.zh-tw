@@ -4,12 +4,12 @@ description: Azure Event Grid 是可靠的事件傳遞和路由事件支付每�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: b2507da61cbea3b4bdc51c6eecfe4d784737e924
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 240542014a34235aea9fd0f8162748749f23eacf
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369744"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143658"
 ---
 # <a name="event-grid"></a>Event Grid
 
@@ -123,7 +123,7 @@ Event Grid 會使用標準的結構描述，來包裝自訂事件。 結構描�
 * [App service 方案](https://docs.microsoft.com/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)
 * [Application Insights](https://docs.microsoft.com/azure/application-insights)
 * [Application Insights 分析](https://docs.microsoft.com/azure/application-insights/app-insights-analytics)
-* [Azure： 將應用程式帶至雲端，無伺服器 Azure Functions](https://channel9.msdn.com/events/Connect/2017/E102)
+* [Azure:將應用程式帶至雲端，無伺服器 Azure Functions](https://channel9.msdn.com/events/Connect/2017/E102)
 * [Azure 事件格線](https://docs.microsoft.com/azure/azure-event-grid/overview)
 * [Azure Event Grid 事件結構描述](https://docs.microsoft.com/azure/event-grid/event-schema)
 * [Azure 事件中樞](https://docs.microsoft.com/azure/event-hubs)
@@ -142,5 +142,5 @@ Event Grid 會使用標準的結構描述，來包裝自訂事件。 結構描�
 * [使用 Azure Functions Proxy](https://docs.microsoft.com/azure/azure-functions/functions-proxies)
 
 >[!div class="step-by-step"]
-[上一頁](logic-apps.md)
-[下一頁](durable-azure-functions.md)
+>[上一頁](logic-apps.md)
+>[下一頁](durable-azure-functions.md)

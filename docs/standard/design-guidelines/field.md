@@ -1,20 +1,19 @@
 ---
 title: 欄位設計
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - fields, design guidelines
 - read-only fields
 - member design guidelines, fields
 ms.assetid: 7cb4b0f3-7a10-4c93-b84d-733f7134fcf8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65c54fe9a076a219c61280a98c390b16f56b5015
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+author: KrzysztofCwalina
+ms.openlocfilehash: 34c5a163e545b78c188f37b2819962b4c7c56f80
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45970652"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144347"
 ---
 # <a name="field-design"></a>欄位設計
 封裝原則可讓其中一個最重要的概念是物件導向設計中。 此原則就是儲存在物件內的資料必須能夠存取只適用於該物件。  
@@ -41,7 +40,7 @@ ms.locfileid: "45970652"
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
+ *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
   
 ## <a name="see-also"></a>另請參閱
 

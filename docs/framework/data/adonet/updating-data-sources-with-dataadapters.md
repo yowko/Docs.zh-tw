@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
-ms.openlocfilehash: c334fb695f80bcac19167e9347d27d40f5139580
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 8feffd5c3a6205dcb67072f8e17b0e771a0f0d6b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45658661"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144737"
 ---
 # <a name="updating-data-sources-with-dataadapters"></a>使用 DataAdapter 更新資料來源
 呼叫 `Update` 的 <xref:System.Data.Common.DataAdapter> 方法，可將 <xref:System.Data.DataSet> 的變更解析回資料來源。 `Update` 方法類似 `Fill` 方法，會將 `DataSet` 的執行個體以及選擇性 (Optional) <xref:System.Data.DataTable> 物件或 `DataTable` 名稱做為引數。 `DataSet` 執行個體是包含已進行之變更的 `DataSet`，而 `DataTable` 則識別要從中擷取變更的資料表。 如果沒有指定任何 `DataTable`，就會使用 `DataTable` 中的第一個 `DataSet`。  
@@ -108,7 +108,7 @@ adapter.Update(table.Select(null, null, DataViewRowState.Added));
   
  在編譯和執行範例之前，您必須建立範例資料庫：  
   
-```  
+```sql
 USE [master]  
 GO  
   
@@ -174,7 +174,7 @@ GO
   
  這個程式碼範例的 C# 和 Visual Basic 專案都位於[開發人員程式碼範例](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=SearchText&f%5B0%5D.Value=How%20to%20use%20DataAdapter%20to%20retrieve%20and%20update%20data&f%5B1%5D)。  
   
-```  
+```csharp
 using System;  
 using System.Data;  
 using System.Data.Common;  

@@ -1,6 +1,6 @@
 ---
 title: 命名空間的名稱
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 helpviewer_keywords:
 - names [.NET Framework], conflicts
 - names [.NET Framework], namespaces
@@ -8,14 +8,13 @@ helpviewer_keywords:
 - namespaces [.NET Framework], names
 - names [.NET Framework], type names
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6d68966f60c5039fd67195a03facc1586b9ed154
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+author: KrzysztofCwalina
+ms.openlocfilehash: 64efdc46583a0931df9f57c32424ca4233bf2b82
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45991268"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143437"
 ---
 # <a name="names-of-namespaces"></a>命名空間的名稱
 做為其他命名指導方針，命名的命名空間時的目標建立足夠的清晰度給程式設計人員立即知道命名空間的內容可能是使用架構。 下列範本指定為命名空間進行的一般規則：  
@@ -83,7 +82,7 @@ ms.locfileid: "45991268"
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
+ *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
   
 ## <a name="see-also"></a>另請參閱
 

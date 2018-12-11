@@ -4,12 +4,12 @@ description: Azure Logic Apps 可讓您啟用建置自動化可調整的工作�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 019539f0da1d38259870907c38ed0eb6a62f1929
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 14670a8459db3b80b8fbe3139c2675321cf9592c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369739"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147941"
 ---
 # <a name="azure-logic-apps"></a>Azure Logic Apps
 
@@ -34,5 +34,5 @@ Logic Apps 如何運用雲端資源 （例如佇列和資料庫） 的多個只�
 若要進一步了解，請參閱[Azure Logic Apps](https://docs.microsoft.com/azure/logic-apps)。
 
 >[!div class="step-by-step"]
-[上一頁](application-insights.md)
-[下一頁](event-grid.md)
+>[上一頁](application-insights.md)
+>[下一頁](event-grid.md)

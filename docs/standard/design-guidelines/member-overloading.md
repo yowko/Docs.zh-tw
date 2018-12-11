@@ -1,6 +1,6 @@
 ---
 title: 成員多載
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - default arguments
@@ -9,14 +9,13 @@ helpviewer_keywords:
 - overloaded members
 - signatures, members
 ms.assetid: 964ba19e-8b94-4b5b-b1e3-5a0b531a0bb1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2127497d294cbfd4e1bb24d033f432378627ff13
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+author: KrzysztofCwalina
+ms.openlocfilehash: 93b294c4b535e015c7f4b021e0f950f038a60361
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964198"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152431"
 ---
 # <a name="member-overloading"></a>成員多載
 成員多載是指的差別只在於參數類型或數目，但具有相同名稱的相同型別上建立兩個或多個成員。 例如，在下列程式碼，`WriteLine`多載方法：  
@@ -56,7 +55,7 @@ public static class Console {
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
+ *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
   
 ## <a name="see-also"></a>另請參閱
 

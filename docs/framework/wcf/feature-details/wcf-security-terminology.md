@@ -7,11 +7,11 @@ helpviewer_keywords:
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
 ms.openlocfilehash: 8b8f92697181c76710e75d6e5a07296b1fcf9188
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297058"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126818"
 ---
 # <a name="wcf-security-terminology"></a>WCF 安全性用語
 您可能會對討論安全性時使用的一些用語感到陌生。 本主題僅針對一些安全性名詞提供簡短說明，而不會針對每個項目逐一提供完整的文件說明。  
@@ -120,7 +120,7 @@ ms.locfileid: "52297058"
  位於 CA 階層架構上層的 CA。 根授權可於下一層階層架構中驗證 CA。  
   
  安全雜湊演算法 (SHA)  
- 可產生訊息摘要的雜湊演算法。 SHA 專門用在數位簽章標準 (DSS) 的數位簽章演算法 (DSA) 中。 SHA 共衍生出四種強度不同的演算法：SHA-1、SHA-256、SHA-384，與 SHA-512。 SHA-1 可產生 160 位元的訊息摘要。 SHA-256、SHA-384，與 SHA-512 可分別產生 256 位元、384 位元，與 512 位元的訊息摘要。 SHA 是由美國國家標準與技術局 (NIST) 與美國國家安全局 (NSA) 所共同開發出來的標準。  
+ 可產生訊息摘要的雜湊演算法。 SHA 專門用在數位簽章標準 (DSS) 的數位簽章演算法 (DSA) 中。 有四種 SHA:Sha-1、 SHA-256、 SHA-384 和 SHA-512。 SHA-1 可產生 160 位元的訊息摘要。 SHA-256、SHA-384，與 SHA-512 可分別產生 256 位元、384 位元，與 512 位元的訊息摘要。 SHA 是由美國國家標準與技術局 (NIST) 與美國國家安全局 (NSA) 所共同開發出來的標準。  
   
  安全通訊端層 (SSL)  
  透過結合公開與私密金鑰技術來進行安全網路通訊的通訊協定。  

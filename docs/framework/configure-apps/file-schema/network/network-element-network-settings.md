@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <network> element
 - network element
 ms.assetid: 2c2c6ad4-ed11-48ab-b28e-2bc0ba9b42c7
-ms.openlocfilehash: 242ee42ded339b349cb9e4eb93750b9f5db29b51
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 8e5f44c5e915f63dbcc34ccd985d69c7e5551fb8
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50135228"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144477"
 ---
 # <a name="ltnetworkgt-element-network-settings"></a>&lt;網路&gt;項目 （網路設定）
 設定外部的 Simple Mail Transport Protocol (SMTP) 伺服器的網路選項。  
@@ -47,8 +47,8 @@ ms.locfileid: "50135228"
 |屬性|描述|  
 |---------------|-----------------|  
 |`clientDomain`|指定要用於連接到 SMTP 郵件伺服器的初始 SMTP 通訊協定要求的用戶端網域名稱。 預設值是傳送要求到本機電腦的本機主機名稱。|  
-|`defaultCredentials`|指定是否應該使用預設使用者認證存取 SMTP 交易的 SMTP 郵件伺服器。 預設值是 `false`。|  
-|`enableSsl`|指定是否使用 SSL 存取 SMTP 郵件伺服器。 預設值是 `false`。|  
+|`defaultCredentials`|指定是否應該使用預設使用者認證存取 SMTP 交易的 SMTP 郵件伺服器。 預設值為 `false`。|  
+|`enableSsl`|指定是否使用 SSL 存取 SMTP 郵件伺服器。 預設值為 `false`。|  
 |`host`|指定要用於 SMTP 交易的 SMTP 郵件伺服器的主機名稱。 此屬性有沒有預設值。|  
 |`password`|指定要用於驗證的 SMTP 郵件伺服器的密碼。 此屬性有沒有預設值。|  
 |`port`|指定要用來連線到 SMTP 郵件伺服器的連接埠號碼。 預設值為 25。|  
@@ -110,7 +110,7 @@ ms.locfileid: "50135228"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Net.Configuration.SmtpNetworkElement?displayProperty=nameWithType>  
- <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>  
- <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>  
- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.Configuration.SmtpNetworkElement?displayProperty=nameWithType>  
+- <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>  
+- <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>  
+- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

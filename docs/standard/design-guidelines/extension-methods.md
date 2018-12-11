@@ -1,16 +1,15 @@
 ---
 title: 擴充方法
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6bfc2e6def94d0830df4a4cdf738cdeef106de9f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+author: KrzysztofCwalina
+ms.openlocfilehash: 6fedd41e901035290995d7ece1b5aa23e76f345e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47396912"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148286"
 ---
 # <a name="extension-methods"></a>擴充方法
 擴充方法是允許使用執行個體方法呼叫語法來呼叫靜態方法的語言功能。 這些方法必須接受至少一個參數，表示要對方法的執行個體。  
@@ -45,7 +44,7 @@ ms.locfileid: "47396912"
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
+ *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
   
 ## <a name="see-also"></a>另請參閱
 
