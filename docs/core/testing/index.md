@@ -1,20 +1,20 @@
 ---
 title: .NET Core 與 .NET Standard 中的單元測試
-description: .NET Core 與 .NET Standard 專案中的單元測試。
+description: 此文章提供 .NET Core 與 .NET Standard 專案單元測試的簡短概觀。
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: b63b2706a9a97413a7166c87ae25cbe964e4610b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 3fdacd5beb2c6cbfc631d58e99a8741f7a6b233c
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170011"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243970"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core 與 .NET Standard 中的單元測試
 
-.NET Core 使單元測試的建立便得更加輕鬆。 本文會介紹單元測試，並示範它們和其他種類測試之間的差異。 接近頁面底部的連結資源，會向您示範如何將測試專案新增到解決方案。 在您設定好測試專案後，就能使用命令列或 Visual Studio 來執行單元測試。
+.NET Core 使單元測試的建立便得更加輕鬆。 此文章會介紹單元測試，並示範它們和其他種類測試之間的差異。 接近頁面底部的連結資源，會向您示範如何將測試專案新增到解決方案。 在您設定好測試專案後，就能使用命令列或 Visual Studio 來執行單元測試。
 
 .NET Core 2.0 和最新的版本均支援 [.NET Standard 2.0](../../standard/net-standard.md)，而我們將使用它的程式庫來示範單元測試。
 
@@ -30,6 +30,8 @@ ms.locfileid: "53170011"
 > ASP.NET 小組遵循了[這些慣例](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests)，來協助開發人員為測試類型與方法下個好名稱。
 
 請試著不要在撰寫單元測試時於基礎結構導入相依性。 相依性會導致測試變慢且不穩定，它們應該留給整合測試使用。 您可以遵循 [Explicit Dependencies Principle](https://deviq.com/explicit-dependencies-principle/) (明確相依性準則) 的內容，並使用 [Dependency Injection](/aspnet/core/fundamentals/dependency-injection) (相依性注入)，來在應用程式中避免這些相依性。 您也可以將單元測試保留在個別專案中，和您的整合測試分開。 這能確保您的單元測試專案不會對基礎結構套件具有參考或相依性。
+
+## <a name="next-steps"></a>後續步驟
 
 .NET Core 專案單元測試的詳細資訊：
 

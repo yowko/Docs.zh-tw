@@ -1,5 +1,6 @@
 ---
-title: Main() 和命令列引數 (C# 程式設計指南)
+title: Main() 和命令列引數 - C# 程式設計指南
+ms.custom: seodec18
 ms.date: 08/02/2017
 f1_keywords:
 - CS5001
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - command line [C#], arguments
 - command-line arguments [C#], Main method
 ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
-ms.openlocfilehash: 144d03edf28464717430bd0ae83db637578d8296
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: e9fcee86f8a3daed73adebb1f4ce3e16f7ea2042
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698586"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237086"
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() 和命令列引數 (C# 程式設計指南)
 
@@ -41,7 +42,7 @@ ms.locfileid: "45698586"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [使用 csc.exe 建置命令列](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
 - [C# 程式設計指南](../../../csharp/programming-guide/index.md)  

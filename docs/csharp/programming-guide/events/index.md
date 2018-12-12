@@ -1,17 +1,18 @@
 ---
-title: 事件 (C# 程式設計手冊)
+title: 事件 - C# 程式設計手冊
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - classes [C#], events
 - C# language, events
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-ms.openlocfilehash: 05024f9163080e21c59efe601b2a522cd9b94777
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.openlocfilehash: 0745b0089de3b5fe9220f3ff2e0ccd4e2aba77f0
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743941"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243565"
 ---
 # <a name="events-c-programming-guide"></a>事件 (C# 程式設計手冊)
 事件可讓 [類別](../../../csharp/language-reference/keywords/class.md) 或物件在某些相關的事情發生時，告知其他類別或物件。 傳送 (或 *「引發」*(raise)) 事件的類別稱為 *「發行者」* (publisher)，而接收 (或 *「處理」*(handle)) 事件的類別則稱為 *「訂閱者」*(subscriber)。  
@@ -34,11 +35,11 @@ ms.locfileid: "50743941"
 -   在 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 類別庫中，事件會以 <xref:System.EventHandler> 委派和 <xref:System.EventArgs> 基底類別為基礎。  
   
 ## <a name="related-sections"></a>相關章節  
- 如需詳細資訊，請參閱:  
+ 如需詳細資訊，請參閱：  
   
 -   [如何：訂閱及取消訂閱事件](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)  
   
--   [如何：發行符合 .NET Framework 方針的事件](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
+-   [如何：發行符合 .NET Framework 指導方針的事件](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
   
 -   [如何：在衍生類別中引發基底類別事件](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)  
   
@@ -53,11 +54,11 @@ ms.locfileid: "50743941"
 如需詳細資訊，請參閱 [C# 語言規格](../../language-reference/language-specification/index.md)中的[事件](~/_csharplang/spec/classes.md#events)。 語言規格是 C# 語法及用法的限定來源。
   
 ## <a name="featured-book-chapters"></a>精選書籍章節  
- [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](https://msdn.microsoft.com/library/orm-9780596516109-03-09.aspx) (C# 3.0 Cookbook 第三版：250 個以上 C# 3.0 程式設計人員適用的方案) 中的 [Delegates, Events, and Lambda Expressions](https://msdn.microsoft.com/library/orm-9780596516109-03.aspx)  
+ [C# 3.0 Cookbook 第三版：250 個以上 C# 3.0 程式設計人員適用的方案](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)中的[委派、事件與 Lambda 運算式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29)  
   
- [Delegates and Events](https://msdn.microsoft.com/library/orm-9780596521066-01-17.aspx) in [Learning C# 3.0: Master the fundamentals of C# 3.0](https://msdn.microsoft.com/library/orm-9780596521066-01.aspx)  
+ [了解 C# 3.0：掌握 C# 3.0 的基本概念](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v=orm.10%29)中的[委派與事件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652490%28v=orm.10%29)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.EventHandler>  
 - [C# 程式設計指南](../../../csharp/programming-guide/index.md)  

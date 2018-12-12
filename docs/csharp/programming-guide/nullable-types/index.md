@@ -1,5 +1,6 @@
 ---
-title: 可為 Null 的型別 (C# 程式設計指南)
+title: 可為 Null 的型別 - C# 程式設計指南
+ms.custom: seodec18
 description: 深入了解 C# 可為 Null 的型別和其使用方式
 ms.date: 07/30/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - C# language, nullable types
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-ms.openlocfilehash: 2af0704abcad00c75a5d40bfe2d0523d07ee6a3f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: cd5ac40ca73f7c528a903d5863f3cf5880738f11
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45658700"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245119"
 ---
 # <a name="nullable-types-c-programming-guide"></a>可為 Null 的型別 (C# 程式設計指南)
 
@@ -52,9 +53,9 @@ ms.locfileid: "45658700"
   
 - 不允許巢狀可為 Null 的型別。 系統不會編譯下列這一行：`Nullable<Nullable<int>> n;`  
 
-如需詳細資訊，請參閱[使用可為 Null 的型別](using-nullable-types.md)和[如何：識別可為 Null 的型別](how-to-identify-a-nullable-type.md)主題。
+如需詳細資訊，請參閱[可為 Null 的型別](using-nullable-types.md)與[如何：識別可為 Null 的型別](how-to-identify-a-nullable-type.md)主題。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Nullable%601?displayProperty=nameWithType>  
 - <xref:System.Nullable?displayProperty=nameWithType>  

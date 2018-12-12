@@ -1,16 +1,17 @@
 ---
-title: 泛型 (C# 程式設計手冊)
+title: 泛型 - C# 程式設計手冊
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, generics
 - generics [C#]
 ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
-ms.openlocfilehash: 9aa57fd31b8d969bbbbf4329a028007f42d3e097
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 03a5a594db86f5286979dbe22a8841f0e7d4518c
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129827"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240863"
 ---
 # <a name="generics-c-programming-guide"></a>泛型 (C# 程式設計手冊)
 泛型是在 C# 語言和 Common Language Runtime (CLR) 的 2.0 版中新增的功能。 泛型將型別參數的概念引進 .NET Framework 中，使得類別和方法在設計時，可以先行擱置一或多個類型的規格，直到用戶端程式碼對類別或方法進行宣告或具現化時再行處理。 例如，您可以使用泛型型別參數 T，撰寫一個類別供其他用戶端程式碼使用，而不會在執行階段產生轉換或 boxing 作業的成本或風險，如下所示：  
@@ -59,7 +60,7 @@ ms.locfileid: "53129827"
 ## <a name="c-language-specification"></a>C# 語言規格  
  如需詳細資訊，請參閱＜[C# 語言規格](~/_csharplang/spec/types.md#constructed-types)＞。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Collections.Generic>  
 - [C# 程式設計指南](../../../csharp/programming-guide/index.md)  

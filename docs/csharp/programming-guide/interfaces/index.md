@@ -1,22 +1,23 @@
 ---
-title: 介面 (C# 程式設計手冊)
+title: 介面 - C# 程式設計手冊
+ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: ce4580f9fab80cc85a281786d5de262d8de7a679
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 33e3feb874b8ddb13788a2a3a2bb69a199335e54
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181510"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245437"
 ---
 # <a name="interfaces-c-programming-guide"></a>介面 (C# 程式設計手冊)
 
 介面包含[類別](../../language-reference/keywords/class.md)或 [struct](../../language-reference/keywords/struct.md) 可實作的一組相關功能定義。
   
-例如，您可以藉由使用介面，在類別中包含多個來源的行為。 這項功能在 C# 中是很重要的，因為語言不支援類別的多重繼承。 此外，如果您要模擬結構繼承，則必須使用介面，因為它們實際上無法繼承自另一個結構或類別。  
+例如，您可以藉由使用介面，在類別中包含多個來源的行為。 此功能在 C# 中是很重要的，因為語言不支援類別的多重繼承。 此外，如果您要模擬結構繼承，則必須使用介面，因為它們實際上無法繼承自另一個結構或類別。  
   
 您會使用 [interface](../../language-reference/keywords/interface.md) 關鍵字來定義介面， 如下列範例所示。  
   
@@ -56,7 +57,7 @@ ms.locfileid: "50181510"
 - 介面不包含方法的實作。
 - 類別或結構可以實作多個介面。 類別可以繼承基底類別，也會實作一或多個介面。
 
-## <a name="in-this-section"></a>本節內容
+## <a name="in-this-section"></a>此節內容
 
 [明確介面實作](explicit-interface-implementation.md)  
  說明如何建立介面特定的類別成員。  
@@ -83,9 +84,9 @@ ms.locfileid: "50181510"
   
 ## <a name="featured-book-chapter"></a>精選書籍章節
 
-[了解 C# 3.0：掌握 C# 3.0 的基本概念 (英文)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v%253dorm.10%29) 中的[介面](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652489%28v%3Dorm.10%29)
+[了解 C# 3.0：掌握 C# 3.0 的基本概念](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v%253dorm.10%29)中的[介面](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652489%28v%3Dorm.10%29)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [繼承](../classes-and-structs/inheritance.md)

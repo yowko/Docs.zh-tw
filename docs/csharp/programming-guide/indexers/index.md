@@ -1,5 +1,6 @@
 ---
-title: 索引子 (C# 程式設計手冊)
+title: 索引子 - C# 程式設計手冊
+ms.custom: seodec18
 ms.date: 03/10/2017
 f1_keywords:
 - cs.indexers
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 405de22ea7e48a5964de48eb20becdaf5fc5ae01
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 1b3dd16cf4c12dca0bc155c478c187047caf4c25
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "43503629"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236579"
 ---
 # <a name="indexers-c-programming-guide"></a>索引子 (C# 程式設計手冊)
 
@@ -33,7 +34,7 @@ ms.locfileid: "43503629"
 
 請注意，`=>` 會引進運算式主體，且不使用 `get` 關鍵字。 
 
-從 C# 7.0 開始，可同時將 get 和 set 存取子實作為運算式主體成員。 在此情況下，必須同時使用 `get` 和 `set` 關鍵字。 例如: 
+從 C# 7.0 開始，可同時將 get 和 set 存取子實作為運算式主體成員。 在此情況下，必須同時使用 `get` 和 `set` 關鍵字。 例如：
 
 [!code-csharp[indexers#3](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-3.cs)]  
   
@@ -67,7 +68,7 @@ ms.locfileid: "43503629"
 
 如需詳細資訊，請參閱 [C# 語言規格](../../language-reference/language-specification/index.md)中的[索引子](~/_csharplang/spec/classes.md#indexers)。 語言規格是 C# 語法及用法的限定來源。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
 - [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)

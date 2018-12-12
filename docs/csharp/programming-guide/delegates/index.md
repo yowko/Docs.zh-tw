@@ -1,16 +1,17 @@
 ---
-title: 委派 (C# 程式設計手冊)
+title: 委派 - C# 程式設計手冊
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: cbceea24082d091c516c78313ca4c62bce44054d
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 1352b7b6d2146f4cf043034b8b24d7a737f93c3b
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "48584186"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240433"
 ---
 # <a name="delegates-c-programming-guide"></a>委派 (C# 程式設計手冊)
 [委派](../../../csharp/language-reference/keywords/delegate.md)是一種類型，代表具有特定參數清單及傳回型別的方法參考。 當您具現化委派時，可以將其執行個體與任何具有相容簽章和傳回型別的方法產生關聯。 您可以透過委派執行個體叫用 (或呼叫) 方法。  
@@ -41,7 +42,7 @@ ms.locfileid: "48584186"
   
 -   C# 2.0 版開始引進[匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)的概念。此方法能夠以參數的方式傳遞程式碼區塊，取代了個別定義方法的作法。 C# 3.0 引進了 Lambda 運算式，做為更簡潔的內嵌 (Inline) 程式碼區塊撰寫方式。 匿名方法與 Lambda 運算式 (在特定內容中) 都會編譯為委派類型。 現在，這些功能合稱為「匿名函式」(Anonymous Function)。 如需 Lambda 運算式的詳細資訊，請參閱[匿名函式](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>此節內容  
   
 -   [使用委派](../../../csharp/programming-guide/delegates/using-delegates.md)  
   
@@ -63,11 +64,11 @@ ms.locfileid: "48584186"
 如需詳細資訊，請參閱 [C# 語言規格](../../language-reference/language-specification/index.md)中的[委派](~/_csharplang/spec/delegates.md)。 語言規格是 C# 語法及用法的限定來源。
   
 ## <a name="featured-book-chapters"></a>精選書籍章節  
- [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29) (C# 3.0 Cookbook 第三版：250 個以上 C# 3.0 程式設計人員適用的方案) 中的 [Delegates, Events, and Lambda Expressions](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)  
+ [C# 3.0 Cookbook 第三版：250 個以上 C# 3.0 程式設計人員適用的方案](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)中的[委派、事件與 Lambda 運算式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29)  
   
- [Delegates and Events](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652490%28v=orm.10%29) in [Learning C# 3.0: Master the fundamentals of C# 3.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v=orm.10%29)  
+ [了解 C# 3.0：掌握 C# 3.0 的基本概念](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v=orm.10%29)中的[委派與事件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652490%28v=orm.10%29)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Delegate>  
 - [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
