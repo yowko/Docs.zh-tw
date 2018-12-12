@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 055c7db652426651dd3c2a74825a11e305d939f1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b6f759523acab1a248b92c69b95227b878696bbf
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183902"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286581"
 ---
 # <a name="working-with-calendars"></a>使用行事曆
 
@@ -137,6 +137,9 @@ ms.locfileid: "50183902"
 
 曆法通常會將日期細分成紀元。 不過，<xref:System.Globalization.Calendar>在.NET 中的類別不支援定義行事曆，以及大部份的每一個紀元<xref:System.Globalization.Calendar>類別可支援單一紀元。 只有 <xref:System.Globalization.JapaneseCalendar> 和 <xref:System.Globalization.JapaneseLunisolarCalendar> 類別支援多個紀元。
 
+> [!IMPORTANT]
+>  新時代的來臨<xref:System.Globlalization.JapaneseCalendar>和<xref:System.Globalization.JapaneseLunisolarCalendar>於 2019 5 月 1 日開始。 這項變更會影響使用這些行事曆的所有應用程式。 請參閱[處理在.NET 中日本曆法中的新時代](https://blogs.msdn.microsoft.com/dotnet/2018/11/14/handling-a-new-era-in-the-japanese-calendar-in-net/)如需詳細資訊，並判斷您的應用程式是否會受到影響。 請參閱[準備您的應用程式，以日文的紀元變更](~/windows/uwp/design/globalizing/japanese-era-change)上測試以確保紀元變更其準備就緒可以安裝在 Windows 應用程式的資訊。
+
 ### <a name="eras-and-era-names"></a>紀元和紀元名稱
 
 在.NET 中，代表特定曆法實作支援的紀元的整數會以反向順序在儲存<xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType>陣列。 目前紀元的索引位置為零，而針對支援多個紀元的 <xref:System.Globalization.Calendar> 類別，後續每個索引都會反映前一個紀元。 靜態 <xref:System.Globalization.Calendar.CurrentEra?displayProperty=nameWithType> 屬性會定義 <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> 陣列中目前紀元的索引，它是一個常數，且其值永遠為零。 個別 <xref:System.Globalization.Calendar> 類別也會包含傳回目前紀元值的靜態欄位。 下表中列出這些欄位。
@@ -193,5 +196,5 @@ ms.locfileid: "50183902"
 
 ## <a name="see-also"></a>另請參閱
 
-* [如何： 在非西曆中顯示日期](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
-* [範例： 行事曆週範圍公用程式](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
+* [如何：在非西曆中顯示日期](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
+* [範例：行事曆週範圍公用程式](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)

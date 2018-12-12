@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: c19169d61a96314e9fcfad94b013af18440e1ff5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9957b937dd59f82a5d1962fee33593d7a0c1b7c1
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503610"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286555"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Windows Communication Foundation 的主要概念
 本文件提供 Windows Communication Foundation (WCF) 架構的高階檢視。 以說明重要概念，以及如何搭配運用這些概念。 如需建立 WCF 服務和用戶端的最簡單版本的教學課程，請參閱 <<c0> [ 入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)。 若要深入了解 WCF 程式設計，請參閱[基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)。  
@@ -55,7 +55,7 @@ ms.locfileid: "43503610"
  這是公開一個或多個端點的建構，其中每個端點會公開一項或多項服務作業。  
   
  endpoint  
- 這是訊息傳送或接收 (或兩者) 所在位置的建構。 它包含一個定義可以傳送訊息的位置 (位址)、描述如何傳送訊息的通訊機制規格 (繫結)，以及該位置 (描述可以傳送訊息的位置) 上一組可傳送或接收 (或兩者) 之訊息的定義 (服務合約)。  
+ 這是訊息傳送或接收 (或兩者) 所在位置的建構。 它包含在其中可傳送訊息，說明如何應該傳送訊息，通訊機制 (binding) 的規格會定義的位置 （位址） 和一組可以傳送或接收訊息的定義 （或兩者）位置 （服務合約），描述可以傳送訊息。  
   
  WCF 服務會對外界公開為端點集合。  
   
@@ -144,7 +144,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  指定由傳輸層機制 (例如 HTTPS) 提供機密性、完整性和驗證。 在使用如 HTTPS 的傳輸時，這個模式的優點在於效能會更有效率，而且易於理解 (因為普遍使用在網際網路上)。 缺點是，這種類型的安全性是個別套用在通訊路徑上的每個躍點，因此通訊容易受到「攔截式」攻擊。  
   
  訊息安全性模式  
- 指定安全性提供藉由實作一或多個安全性規格，例如名為規格[Web 服務安全性： SOAP 訊息安全性](https://go.microsoft.com/fwlink/?LinkId=94684)。 每個訊息都會包含必要機制，以便在訊息傳輸期間提供安全性，並讓接收者可以偵測竄改及解密訊息。 就這個意義而言，安全性是封裝在每個訊息內，可以在多個躍點間提供端對端安全性。 因為安全性資訊成為訊息的一部分，它也可包含多種認證包含在訊息 (這些指*宣告*)。 這個方法的優點是，訊息可以透過任何傳輸安全地傳送，包括來源和目的地之間的多個傳輸。 缺點是使用的密碼編譯機制很複雜，因此會影響效能。  
+ 指定安全性提供藉由實作一或多個安全性規格，例如規格名為[Web 服務安全性：SOAP 訊息安全性](https://go.microsoft.com/fwlink/?LinkId=94684)。 每個訊息都會包含必要機制，以便在訊息傳輸期間提供安全性，並讓接收者可以偵測竄改及解密訊息。 就這個意義而言，安全性是封裝在每個訊息內，可以在多個躍點間提供端對端安全性。 因為安全性資訊成為訊息的一部分，它也可包含多種認證包含在訊息 (這些指*宣告*)。 這個方法的優點是，訊息可以透過任何傳輸安全地傳送，包括來源和目的地之間的多個傳輸。 缺點是使用的密碼編譯機制很複雜，因此會影響效能。  
   
  使用訊息認證的傳輸安全性模式  
  指定使用傳輸層來提供訊息的機密性、驗證和完整性，而每個訊息都包含訊息接收者所需的多個認證 (宣告)。  
