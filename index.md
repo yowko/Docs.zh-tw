@@ -6,12 +6,12 @@ title: .NET 文件
 description: 了解如何使用 C#、Visual Basic 及 F#，在任何平台上使用 .NET 建立各種應用程式。 瀏覽 API 參考、範例程式碼、教學課程及更多資源。
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: b53abcb46589a012c5bcf2eff901846074004d09
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1eb9f263c26dd86873df1320f77c3944e9bfd7d2
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240251"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286503"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -498,10 +498,8 @@ ms.locfileid: "53240251"
                         <a href="#desktop">傳統型</a>
                         <ul id="desktop" class="cardsC">
                             <li>
-<<<<<<< HEAD <a href="https://msdn.microsoft.com/library/windows/apps/dn609832.aspx">
-=======
                                 <a href="/uwp">
->>>>>>> 主要 <div class="cardSize">
+                                    <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
