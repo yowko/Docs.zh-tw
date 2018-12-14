@@ -4,18 +4,18 @@ description: 此文章說明 .NET Core SDK 與 Runtime 如何進行版本設定 
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: 54b09a6b74b2cf213cea781dec95a413ac2ad059
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: e4ab5e3a6dd487437e267aec042639c70fdc61ad
+ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170713"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53334804"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core 版本設定概觀
 
 .NET Core 參考 .NET Core Runtime 與 .NET Core SDK，它包含開發應用程式所需的工具。 .NET Core SDK 是設計來搭配任何舊版 .NET Core Runtime 使用的。 此文章說明執行階段與 SDK 版本策略。 您可以在介紹 [.NET Standard](../../standard/net-standard.md#net-implementation-support) 的文章中找到 .NET Standard 版本號碼的解釋。
 
-.NET Core 執行階段與 .NET Core SDK 加入不同費率的新功能：一般而言，.NET Core SDK 提供更新工具的速度比 .NET Core 執行階段變更您在生產環境中使用的執行階段的速度快。 不幸的是，此問題在過去幾年已造成數個版本控制策略。 您可以在 [.NET Core 版本控制](version-history.md)一文中了解歷史記錄。
+.NET Core 執行階段與 .NET Core SDK 加入不同費率的新功能：一般而言，.NET Core SDK 提供更新工具的速度比 .NET Core 執行階段變更您在生產環境中使用的執行階段的速度快。
 
 ## <a name="versioning-details"></a>版本控制的詳細資料
 
@@ -32,7 +32,7 @@ SDK 版本號碼的第三個位置同時傳達次要與修補號碼。 次要版
 | 執行階段與 SDK 修補程式 | 2.2.1             | 2.2.102           |
 | SDK 功能變更    | 2.2.1             | 2.2.200           |
 
-(\*) 此圖表使用未來的 2.2 .NET Core 執行階段做為範例，因為歷史成品表示 .NET Core 2.1 的第一個 SDK 是 2.1.300。 如需詳細資訊，請參閱 [.NET Core 版本控制的歷史](version-history.md)。
+(\*) 此圖表使用未來的 2.2 .NET Core 執行階段做為範例，因為歷史成品表示 .NET Core 2.1 的第一個 SDK 是 2.1.300。 如需詳細資訊，請參閱 [.NET Core 版本選擇](selection.md)。
 
 注意：
 
