@@ -1,28 +1,28 @@
 ### YamlMime:Tutorial
-title: <span data-ttu-id="52845-101">了解如何使用一般清單類型管理資料收集</span><span class="sxs-lookup"><span data-stu-id="52845-101">Learn to manage data collections using the generic list type</span></span>
+title: <span data-ttu-id="1155f-101">了解如何使用一般清單類型管理資料收集</span><span class="sxs-lookup"><span data-stu-id="1155f-101">Learn to manage data collections using the generic list type</span></span>
 metadata:
   title: 資料收集 - C# 互動式教學課程簡介
-  description: 在此教學課程中，您將使用瀏覽器以互動方式學習 C#。 您將會撰寫 C# 程式碼，並直接在瀏覽器中查看程式碼編譯和執行的結果。
+  description: 在本教學課程中，您將使用瀏覽器以互動方式學習 C#。 您將會撰寫 C# 程式碼，並直接在瀏覽器中查看程式碼編譯和執行的結果。
   audience: Developer
   ms.custom: mvc
   ms.date: 10/23/2018
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 6b7a00a0d7ea17ab48e673b735bdd1a77328c099
-  ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+  ms.openlocfilehash: 1d4ae646dfc4c96db77bee69d0b7fe0876cce85d
+  ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 10/28/2018
-  ms.locfileid: "50200148"
+  ms.lasthandoff: 12/10/2018
+  ms.locfileid: "53129008"
 items:
 - durationInMinutes: 1
   content: >
-    <span data-ttu-id="52845-105">此教學課程會以互動方式讓您使用瀏覽器撰寫 C# 程式碼，並查看編譯及執行程式碼的結果，以了解 C#。</span><span class="sxs-lookup"><span data-stu-id="52845-105">This tutorial teaches you C# interactively, using your browser to write C# code and see the results of compiling and running your code.</span></span> <span data-ttu-id="52845-106">它包含一系列針對建立、修改及探索集合和陣列的課程。</span><span class="sxs-lookup"><span data-stu-id="52845-106">It contains a series of lessons that create, modify and explore collections and arrays.</span></span>
-- title: <span data-ttu-id="52845-107">建立清單</span><span class="sxs-lookup"><span data-stu-id="52845-107">Create lists</span></span>
+    <span data-ttu-id="1155f-105">此教學課程會以互動方式讓您使用瀏覽器撰寫 C# 程式碼，並查看編譯及執行程式碼的結果，以了解 C#。</span><span class="sxs-lookup"><span data-stu-id="1155f-105">This tutorial teaches you C# interactively, using your browser to write C# code and see the results of compiling and running your code.</span></span> <span data-ttu-id="1155f-106">它包含一系列針對建立、修改及探索集合和陣列的課程。</span><span class="sxs-lookup"><span data-stu-id="1155f-106">It contains a series of lessons that create, modify and explore collections and arrays.</span></span>
+- title: <span data-ttu-id="1155f-107">建立清單</span><span class="sxs-lookup"><span data-stu-id="1155f-107">Create lists</span></span>
   durationInMinutes: 2
   content: >
-    <span data-ttu-id="52845-108">在互動式視窗中執行下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="52845-108">Run the following code in the interactive window.</span></span> <span data-ttu-id="52845-109">若要這樣做，請在互動式視窗中輸入下列程式碼區塊 (以您的名稱取代 `<name>`)，然後按一下 [執行] 按鈕：</span><span class="sxs-lookup"><span data-stu-id="52845-109">To do that, type the following code block in the interactive window (replace `<name>` with your name) and click the **Run** button:</span></span>
+    <span data-ttu-id="1155f-108">在互動式視窗中執行下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="1155f-108">Run the following code in the interactive window.</span></span> <span data-ttu-id="1155f-109">若要這樣做，請在互動式視窗中輸入下列程式碼區塊 (以您的名稱取代 `<name>`)，然後按一下 [執行] 按鈕：</span><span class="sxs-lookup"><span data-stu-id="1155f-109">To do that, type the following code block in the interactive window (replace `<name>` with your name) and click the **Run** button:</span></span>
 
 
     ```csharp
@@ -38,25 +38,25 @@ items:
     ```
 
 
-    <span data-ttu-id="52845-110">您剛才已建立字串清單，在該清單中新增三個名稱，並以全部大寫的形式列印出那些名稱。</span><span class="sxs-lookup"><span data-stu-id="52845-110">You've just created a list of strings, added three names to that list, and printed out the names in all CAPS.</span></span> <span data-ttu-id="52845-111">您會使用從先前教學課程中學習到的概念，在清單中執行迴圈。</span><span class="sxs-lookup"><span data-stu-id="52845-111">You're using concepts that you've learned in earlier tutorials to loop through the list.</span></span>
+    <span data-ttu-id="1155f-110">您剛才已建立字串清單，在該清單中新增三個名稱，並以全部大寫的形式列印出那些名稱。</span><span class="sxs-lookup"><span data-stu-id="1155f-110">You've just created a list of strings, added three names to that list, and printed out the names in all CAPS.</span></span> <span data-ttu-id="1155f-111">您會使用從先前教學課程中學習到的概念，在清單中執行迴圈。</span><span class="sxs-lookup"><span data-stu-id="1155f-111">You're using concepts that you've learned in earlier tutorials to loop through the list.</span></span>
 
 
-    <span data-ttu-id="52845-112">顯示名稱的程式碼會運用[字串內插補點](../../language-reference/tokens/interpolated.md)功能。</span><span class="sxs-lookup"><span data-stu-id="52845-112">The code to display names makes use of the [string interpolation](../../language-reference/tokens/interpolated.md) feature.</span></span> <span data-ttu-id="52845-113">當您在 `string` 的前方放置 `$` 時，您可以在字串宣告中內嵌 C# 程式碼。</span><span class="sxs-lookup"><span data-stu-id="52845-113">When you precede a `string` with the `$` character, you can embed C# code in the string declaration.</span></span> <span data-ttu-id="52845-114">實際的字串會以它所產生的值取代 C# 程式碼。</span><span class="sxs-lookup"><span data-stu-id="52845-114">The actual string replaces that C# code with the value it generates.</span></span> <span data-ttu-id="52845-115">在此範例中，它會以每個 (轉換成大寫字母的) 名稱取代 `{name.ToUpper()}`，因為您呼叫了 <xref:System.String.ToUpper%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="52845-115">In this example, it replaces the `{name.ToUpper()}` with each name, converted to capital letters, because you called the <xref:System.String.ToUpper%2A?displayProperty=nameWithType> method.</span></span>
+    <span data-ttu-id="1155f-112">顯示名稱的程式碼會運用[字串內插補點](../../language-reference/tokens/interpolated.md)功能。</span><span class="sxs-lookup"><span data-stu-id="1155f-112">The code to display names makes use of the [string interpolation](../../language-reference/tokens/interpolated.md) feature.</span></span> <span data-ttu-id="1155f-113">當您在 `string` 的前方放置 `$` 時，您可以在字串宣告中內嵌 C# 程式碼。</span><span class="sxs-lookup"><span data-stu-id="1155f-113">When you precede a `string` with the `$` character, you can embed C# code in the string declaration.</span></span> <span data-ttu-id="1155f-114">實際的字串會以它所產生的值取代 C# 程式碼。</span><span class="sxs-lookup"><span data-stu-id="1155f-114">The actual string replaces that C# code with the value it generates.</span></span> <span data-ttu-id="1155f-115">在此範例中，它會以每個 (轉換成大寫字母的) 名稱取代 `{name.ToUpper()}`，因為您呼叫了 <xref:System.String.ToUpper%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="1155f-115">In this example, it replaces the `{name.ToUpper()}` with each name, converted to capital letters, because you called the <xref:System.String.ToUpper%2A?displayProperty=nameWithType> method.</span></span>
 
 
-    <span data-ttu-id="52845-116">讓我們繼續探索。</span><span class="sxs-lookup"><span data-stu-id="52845-116">Let's keep exploring.</span></span>
+    <span data-ttu-id="1155f-116">讓我們繼續探索。</span><span class="sxs-lookup"><span data-stu-id="1155f-116">Let's keep exploring.</span></span>
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="52845-117">此線上程式碼撰寫體驗仍處於預覽模式。</span><span class="sxs-lookup"><span data-stu-id="52845-117">This online coding experience is in preview mode.</span></span> <span data-ttu-id="52845-118">如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。</span><span class="sxs-lookup"><span data-stu-id="52845-118">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="52845-119">修改清單內容</span><span class="sxs-lookup"><span data-stu-id="52845-119">Modify list contents</span></span>
+    > <span data-ttu-id="1155f-117">此線上程式碼撰寫體驗仍處於預覽模式。</span><span class="sxs-lookup"><span data-stu-id="1155f-117">This online coding experience is in preview mode.</span></span> <span data-ttu-id="1155f-118">如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。</span><span class="sxs-lookup"><span data-stu-id="1155f-118">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="1155f-119">修改清單內容</span><span class="sxs-lookup"><span data-stu-id="1155f-119">Modify list contents</span></span>
   durationInMinutes: 3
   content: >
-    <span data-ttu-id="52845-120">您所建立的集合會使用 <xref:System.Collections.Generic.List%601> 類型。</span><span class="sxs-lookup"><span data-stu-id="52845-120">The collection you created uses the <xref:System.Collections.Generic.List%601> type.</span></span> <span data-ttu-id="52845-121">此類型會儲存元素的序列。</span><span class="sxs-lookup"><span data-stu-id="52845-121">This type stores sequences of elements.</span></span> <span data-ttu-id="52845-122">您會在角括弧之間指定元素的類型。</span><span class="sxs-lookup"><span data-stu-id="52845-122">You specify the type of the elements between the angle brackets.</span></span>
+    <span data-ttu-id="1155f-120">您所建立的集合會使用 <xref:System.Collections.Generic.List%601> 類型。</span><span class="sxs-lookup"><span data-stu-id="1155f-120">The collection you created uses the <xref:System.Collections.Generic.List%601> type.</span></span> <span data-ttu-id="1155f-121">此類型會儲存元素的序列。</span><span class="sxs-lookup"><span data-stu-id="1155f-121">This type stores sequences of elements.</span></span> <span data-ttu-id="1155f-122">您會在角括弧之間指定元素的類型。</span><span class="sxs-lookup"><span data-stu-id="1155f-122">You specify the type of the elements between the angle brackets.</span></span>
 
 
-    <span data-ttu-id="52845-123">此 <xref:System.Collections.Generic.List%601> 類型的其中一個重要層面，在於它可以擴張或縮小，使您可以新增或移除元素。</span><span class="sxs-lookup"><span data-stu-id="52845-123">One important aspect of this <xref:System.Collections.Generic.List%601> type is that it can grow or shrink, enabling you to add or remove elements.</span></span> <span data-ttu-id="52845-124">在您已撰寫的程式碼下方新增下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="52845-124">Add the following code below the code you've already written:</span></span>
+    <span data-ttu-id="1155f-123">此 <xref:System.Collections.Generic.List%601> 類型的其中一個重要層面，在於它可以擴張或縮小，使您可以新增或移除元素。</span><span class="sxs-lookup"><span data-stu-id="1155f-123">One important aspect of this <xref:System.Collections.Generic.List%601> type is that it can grow or shrink, enabling you to add or remove elements.</span></span> <span data-ttu-id="1155f-124">在您已撰寫的程式碼下方新增下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="1155f-124">Add the following code below the code you've already written:</span></span>
 
 
     ```csharp
@@ -78,10 +78,10 @@ items:
     ```
 
 
-    <span data-ttu-id="52845-125">您已在清單末端新增兩個額外的名稱。</span><span class="sxs-lookup"><span data-stu-id="52845-125">You've added two more names to the end of the list.</span></span> <span data-ttu-id="52845-126">您也移除了一個名稱。</span><span class="sxs-lookup"><span data-stu-id="52845-126">You've also removed one as well.</span></span>
+    <span data-ttu-id="1155f-125">您已在清單末端新增兩個額外的名稱。</span><span class="sxs-lookup"><span data-stu-id="1155f-125">You've added two more names to the end of the list.</span></span> <span data-ttu-id="1155f-126">您也移除了一個名稱。</span><span class="sxs-lookup"><span data-stu-id="1155f-126">You've also removed one as well.</span></span>
 
 
-    <span data-ttu-id="52845-127"><xref:System.Collections.Generic.List%601> 也可讓您透過**索引**參考個別的項目。</span><span class="sxs-lookup"><span data-stu-id="52845-127">The <xref:System.Collections.Generic.List%601> enables you to reference individual items by **index** as well.</span></span> <span data-ttu-id="52845-128">您使用 `[` 和 `]` 語彙基元存取項目。</span><span class="sxs-lookup"><span data-stu-id="52845-128">You access items using the `[` and `]` tokens.</span></span> <span data-ttu-id="52845-129">在您已撰寫的程式碼下方新增下列程式碼，然後嘗試它：</span><span class="sxs-lookup"><span data-stu-id="52845-129">Add the following code below what you've already written and try it:</span></span>
+    <span data-ttu-id="1155f-127"><xref:System.Collections.Generic.List%601> 也可讓您透過**索引**參考個別的項目。</span><span class="sxs-lookup"><span data-stu-id="1155f-127">The <xref:System.Collections.Generic.List%601> enables you to reference individual items by **index** as well.</span></span> <span data-ttu-id="1155f-128">您使用 `[` 和 `]` 語彙基元存取項目。</span><span class="sxs-lookup"><span data-stu-id="1155f-128">You access items using the `[` and `]` tokens.</span></span> <span data-ttu-id="1155f-129">在您已撰寫的程式碼下方新增下列程式碼，然後嘗試它：</span><span class="sxs-lookup"><span data-stu-id="1155f-129">Add the following code below what you've already written and try it:</span></span>
 
 
     ```csharp
@@ -93,7 +93,7 @@ items:
     ```
 
 
-    <span data-ttu-id="52845-130">您不能存取清單結尾之後的內容。</span><span class="sxs-lookup"><span data-stu-id="52845-130">You're not allowed to access past the end of the list.</span></span> <span data-ttu-id="52845-131">您可以使用 <xref:System.Collections.Generic.List%601.Count%2A> 屬性檢查清單的長度。</span><span class="sxs-lookup"><span data-stu-id="52845-131">You can check how long the list is using the <xref:System.Collections.Generic.List%601.Count%2A> property.</span></span> <span data-ttu-id="52845-132">新增下列程式碼以嘗試它：</span><span class="sxs-lookup"><span data-stu-id="52845-132">Add the following code to try it:</span></span>
+    <span data-ttu-id="1155f-130">您不能存取清單結尾之後的內容。</span><span class="sxs-lookup"><span data-stu-id="1155f-130">You're not allowed to access past the end of the list.</span></span> <span data-ttu-id="1155f-131">您可以使用 <xref:System.Collections.Generic.List%601.Count%2A> 屬性檢查清單的長度。</span><span class="sxs-lookup"><span data-stu-id="1155f-131">You can check how long the list is using the <xref:System.Collections.Generic.List%601.Count%2A> property.</span></span> <span data-ttu-id="1155f-132">新增下列程式碼以嘗試它：</span><span class="sxs-lookup"><span data-stu-id="1155f-132">Add the following code to try it:</span></span>
 
 
     ```csharp
@@ -103,16 +103,16 @@ items:
     ```
 
 
-    <span data-ttu-id="52845-133">再次按一下 [執行] 來查看結果。</span><span class="sxs-lookup"><span data-stu-id="52845-133">Click **Run** again to see the results.</span></span> <span data-ttu-id="52845-134">在 C# 中，索引是從 0 開始，因此最大的有效索引數目為清單項目數目減去 1。</span><span class="sxs-lookup"><span data-stu-id="52845-134">In C#, indices start at 0, so the largest valid index is one less than the number of items in the list.</span></span>
+    <span data-ttu-id="1155f-133">再次按一下 [執行] 來查看結果。</span><span class="sxs-lookup"><span data-stu-id="1155f-133">Click **Run** again to see the results.</span></span> <span data-ttu-id="1155f-134">在 C# 中，索引是從 0 開始，因此最大的有效索引數目為清單項目數目減去 1。</span><span class="sxs-lookup"><span data-stu-id="1155f-134">In C#, indices start at 0, so the largest valid index is one less than the number of items in the list.</span></span>
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="52845-135">此線上程式碼撰寫體驗仍處於預覽模式。</span><span class="sxs-lookup"><span data-stu-id="52845-135">This online coding experience is in preview mode.</span></span> <span data-ttu-id="52845-136">如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。</span><span class="sxs-lookup"><span data-stu-id="52845-136">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="52845-137">針對清單進行搜尋和排序</span><span class="sxs-lookup"><span data-stu-id="52845-137">Search and sort lists</span></span>
+    > <span data-ttu-id="1155f-135">此線上程式碼撰寫體驗仍處於預覽模式。</span><span class="sxs-lookup"><span data-stu-id="1155f-135">This online coding experience is in preview mode.</span></span> <span data-ttu-id="1155f-136">如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。</span><span class="sxs-lookup"><span data-stu-id="1155f-136">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="1155f-137">針對清單進行搜尋和排序</span><span class="sxs-lookup"><span data-stu-id="1155f-137">Search and sort lists</span></span>
   durationInMinutes: 5
   content: >
-    <span data-ttu-id="52845-138">我們的範例所使用的清單相對較小，但是您的應用程式可能經常會建立具有更多元素的清單，數量甚至會達數千個之多。</span><span class="sxs-lookup"><span data-stu-id="52845-138">Our samples use relatively small lists, but your applications may often create lists with many more elements, sometimes numbering in the thousands.</span></span> <span data-ttu-id="52845-139">若要在這些較大的集合中尋找元素，您需要在清單中搜尋不同的項目。</span><span class="sxs-lookup"><span data-stu-id="52845-139">To find elements in these larger collections, you need to search the list for different items.</span></span> <span data-ttu-id="52845-140"><xref:System.Collections.Generic.List%601.IndexOf%2A> 方法會搜尋項目，並傳回該項目的索引。</span><span class="sxs-lookup"><span data-stu-id="52845-140">The <xref:System.Collections.Generic.List%601.IndexOf%2A> method searches for an item and returns the index of the item.</span></span> <span data-ttu-id="52845-141">請嘗試以查看其運作方式。</span><span class="sxs-lookup"><span data-stu-id="52845-141">Try this to see how it works.</span></span>  <span data-ttu-id="52845-142">在您目前已撰寫的程式碼下方新增下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="52845-142">Add the following code below what you've written so far:</span></span>
+    <span data-ttu-id="1155f-138">我們的範例所使用的清單相對較小，但是您的應用程式可能經常會建立具有更多元素的清單，數量甚至會達數千個之多。</span><span class="sxs-lookup"><span data-stu-id="1155f-138">Our samples use relatively small lists, but your applications may often create lists with many more elements, sometimes numbering in the thousands.</span></span> <span data-ttu-id="1155f-139">若要在這些較大的集合中尋找元素，您需要在清單中搜尋不同的項目。</span><span class="sxs-lookup"><span data-stu-id="1155f-139">To find elements in these larger collections, you need to search the list for different items.</span></span> <span data-ttu-id="1155f-140"><xref:System.Collections.Generic.List%601.IndexOf%2A> 方法會搜尋項目，並傳回該項目的索引。</span><span class="sxs-lookup"><span data-stu-id="1155f-140">The <xref:System.Collections.Generic.List%601.IndexOf%2A> method searches for an item and returns the index of the item.</span></span> <span data-ttu-id="1155f-141">請嘗試以查看其運作方式。</span><span class="sxs-lookup"><span data-stu-id="1155f-141">Try this to see how it works.</span></span>  <span data-ttu-id="1155f-142">在您目前已撰寫的程式碼下方新增下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="1155f-142">Add the following code below what you've written so far:</span></span>
 
 
     ```csharp
@@ -127,10 +127,10 @@ items:
     ```
 
 
-    <span data-ttu-id="52845-143">您可能不清楚項目是否已位於清單中，因此您應該一律檢查由 <xref:System.Collections.Generic.List%601.IndexOf%2A> 所傳回的索引。</span><span class="sxs-lookup"><span data-stu-id="52845-143">You may not know if an item is in the list, so you should always check the index returned by <xref:System.Collections.Generic.List%601.IndexOf%2A>.</span></span> <span data-ttu-id="52845-144">如果它的值是 -1，便代表找不到該項目。</span><span class="sxs-lookup"><span data-stu-id="52845-144">If it is -1, the item was not found.</span></span>
+    <span data-ttu-id="1155f-143">您可能不清楚項目是否已位於清單中，因此您應該一律檢查由 <xref:System.Collections.Generic.List%601.IndexOf%2A> 所傳回的索引。</span><span class="sxs-lookup"><span data-stu-id="1155f-143">You may not know if an item is in the list, so you should always check the index returned by <xref:System.Collections.Generic.List%601.IndexOf%2A>.</span></span> <span data-ttu-id="1155f-144">如果它的值是 -1，便代表找不到該項目。</span><span class="sxs-lookup"><span data-stu-id="1155f-144">If it is -1, the item was not found.</span></span>
 
 
-    <span data-ttu-id="52845-145">也可以對您清單中的項目進行排序。</span><span class="sxs-lookup"><span data-stu-id="52845-145">The items in your list can be sorted as well.</span></span> <span data-ttu-id="52845-146"><xref:System.Collections.Generic.List%601.Sort%2A> 方法會依項目的一般順序方式，對清單中的所有項目進行排序 (針對字串會依字母順序排列)。</span><span class="sxs-lookup"><span data-stu-id="52845-146">The <xref:System.Collections.Generic.List%601.Sort%2A> method sorts all the items in the list in their normal order (alphabetically in the case of strings).</span></span> <span data-ttu-id="52845-147">新增下列程式碼，然後再次執行：</span><span class="sxs-lookup"><span data-stu-id="52845-147">Add this code and run again:</span></span>
+    <span data-ttu-id="1155f-145">也可以對您清單中的項目進行排序。</span><span class="sxs-lookup"><span data-stu-id="1155f-145">The items in your list can be sorted as well.</span></span> <span data-ttu-id="1155f-146"><xref:System.Collections.Generic.List%601.Sort%2A> 方法會依項目的一般順序方式，對清單中的所有項目進行排序 (針對字串會依字母順序排列)。</span><span class="sxs-lookup"><span data-stu-id="1155f-146">The <xref:System.Collections.Generic.List%601.Sort%2A> method sorts all the items in the list in their normal order (alphabetically in the case of strings).</span></span> <span data-ttu-id="1155f-147">新增下列程式碼，然後再次執行：</span><span class="sxs-lookup"><span data-stu-id="1155f-147">Add this code and run again:</span></span>
 
 
     ```csharp
@@ -148,11 +148,11 @@ items:
 
     > [!NOTE]
 
-    > <span data-ttu-id="52845-148">此線上程式碼撰寫體驗仍處於預覽模式。</span><span class="sxs-lookup"><span data-stu-id="52845-148">This online coding experience is in preview mode.</span></span> <span data-ttu-id="52845-149">如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。</span><span class="sxs-lookup"><span data-stu-id="52845-149">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="52845-150">其他類型的清單</span><span class="sxs-lookup"><span data-stu-id="52845-150">Lists of other types</span></span>
+    > <span data-ttu-id="1155f-148">此線上程式碼撰寫體驗仍處於預覽模式。</span><span class="sxs-lookup"><span data-stu-id="1155f-148">This online coding experience is in preview mode.</span></span> <span data-ttu-id="1155f-149">如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。</span><span class="sxs-lookup"><span data-stu-id="1155f-149">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="1155f-150">其他類型的清單</span><span class="sxs-lookup"><span data-stu-id="1155f-150">Lists of other types</span></span>
   durationInMinutes: 5
   content: >
-    <span data-ttu-id="52845-151">到目前為止，您都是使用清單中的 `string` 類型。</span><span class="sxs-lookup"><span data-stu-id="52845-151">You've been using the `string` type in lists so far.</span></span> <span data-ttu-id="52845-152">讓我們使用不同的類型建立 <xref:System.Collections.Generic.List%601>。</span><span class="sxs-lookup"><span data-stu-id="52845-152">Let's make a <xref:System.Collections.Generic.List%601> using a different type.</span></span> <span data-ttu-id="52845-153">讓我們來建置一組數字。</span><span class="sxs-lookup"><span data-stu-id="52845-153">Let's build a set of numbers.</span></span> <span data-ttu-id="52845-154">刪除您到目前為止所撰寫的程式碼，並以下列內容取代它：</span><span class="sxs-lookup"><span data-stu-id="52845-154">Delete the code you wrote so far, and replace it with this:</span></span>
+    <span data-ttu-id="1155f-151">到目前為止，您都是使用清單中的 `string` 類型。</span><span class="sxs-lookup"><span data-stu-id="1155f-151">You've been using the `string` type in lists so far.</span></span> <span data-ttu-id="1155f-152">讓我們使用不同的類型建立 <xref:System.Collections.Generic.List%601>。</span><span class="sxs-lookup"><span data-stu-id="1155f-152">Let's make a <xref:System.Collections.Generic.List%601> using a different type.</span></span> <span data-ttu-id="1155f-153">讓我們來建置一組數字。</span><span class="sxs-lookup"><span data-stu-id="1155f-153">Let's build a set of numbers.</span></span> <span data-ttu-id="1155f-154">刪除您到目前為止所撰寫的程式碼，並以下列內容取代它：</span><span class="sxs-lookup"><span data-stu-id="1155f-154">Delete the code you wrote so far, and replace it with this:</span></span>
 
 
     ```csharp
@@ -162,7 +162,7 @@ items:
     ```
 
 
-    <span data-ttu-id="52845-155">這將會建立整數清單，並將前兩個整數設定為 1 的值。</span><span class="sxs-lookup"><span data-stu-id="52845-155">That creates a list of integers, and sets the first two integers to the value 1.</span></span> <span data-ttu-id="52845-156">這是*費氏數列*的前兩個值。</span><span class="sxs-lookup"><span data-stu-id="52845-156">These are the first two values of a *Fibonacci Sequence*, a sequence of numbers.</span></span> <span data-ttu-id="52845-157">這兩個值之後每個費式數列數字，都會是其前兩個數字的總和。</span><span class="sxs-lookup"><span data-stu-id="52845-157">Each next Fibonacci number is found by taking the sum of the previous two numbers.</span></span> <span data-ttu-id="52845-158">新增下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="52845-158">Add this code:</span></span>
+    <span data-ttu-id="1155f-155">這將會建立整數清單，並將前兩個整數設定為 1 的值。</span><span class="sxs-lookup"><span data-stu-id="1155f-155">That creates a list of integers, and sets the first two integers to the value 1.</span></span> <span data-ttu-id="1155f-156">這是*費氏數列*的前兩個值。</span><span class="sxs-lookup"><span data-stu-id="1155f-156">These are the first two values of a *Fibonacci Sequence*, a sequence of numbers.</span></span> <span data-ttu-id="1155f-157">這兩個值之後每個費式數列數字，都會是其前兩個數字的總和。</span><span class="sxs-lookup"><span data-stu-id="1155f-157">Each next Fibonacci number is found by taking the sum of the previous two numbers.</span></span> <span data-ttu-id="1155f-158">新增下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="1155f-158">Add this code:</span></span>
 
 
     ```csharp
@@ -180,26 +180,32 @@ items:
     ```
 
 
-    <span data-ttu-id="52845-159">按 [執行] 以查看結果。</span><span class="sxs-lookup"><span data-stu-id="52845-159">Press **Run** to see the results;</span></span>
+    <span data-ttu-id="1155f-159">按 [執行] 以查看結果。</span><span class="sxs-lookup"><span data-stu-id="1155f-159">Press **Run** to see the results;</span></span>
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="52845-160">此線上程式碼撰寫體驗仍處於預覽模式。</span><span class="sxs-lookup"><span data-stu-id="52845-160">This online coding experience is in preview mode.</span></span> <span data-ttu-id="52845-161">如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。</span><span class="sxs-lookup"><span data-stu-id="52845-161">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="52845-162">挑戰</span><span class="sxs-lookup"><span data-stu-id="52845-162">Challenge</span></span>
+    > <span data-ttu-id="1155f-160">此線上程式碼撰寫體驗仍處於預覽模式。</span><span class="sxs-lookup"><span data-stu-id="1155f-160">This online coding experience is in preview mode.</span></span> <span data-ttu-id="1155f-161">如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。</span><span class="sxs-lookup"><span data-stu-id="1155f-161">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="1155f-162">挑戰</span><span class="sxs-lookup"><span data-stu-id="1155f-162">Challenge</span></span>
   durationInMinutes: 10
   content: >
-    <span data-ttu-id="52845-163">看看您是否可以結合運用來自此課程和先前課程的概念。</span><span class="sxs-lookup"><span data-stu-id="52845-163">See if you can put together some of the concepts from this and earlier lessons.</span></span> <span data-ttu-id="52845-164">請依費式數列數字，擴展您到目前為止所建立的內容。</span><span class="sxs-lookup"><span data-stu-id="52845-164">Expand on what you've built so far with Fibonacci Numbers.</span></span> <span data-ttu-id="52845-165">請嘗試將程式碼撰寫成可產生該數列的前 20 個數字。</span><span class="sxs-lookup"><span data-stu-id="52845-165">Try and write the code to generate the first 20 numbers in the sequence.</span></span> <span data-ttu-id="52845-166">(小提示：第 20 個費式數列數字為 6765)。</span><span class="sxs-lookup"><span data-stu-id="52845-166">(As a hint, the 20th Fibonacci number is 6765.)</span></span>
+    <span data-ttu-id="1155f-163">看看您是否可以結合運用來自此課程和先前課程的概念。</span><span class="sxs-lookup"><span data-stu-id="1155f-163">See if you can put together some of the concepts from this and earlier lessons.</span></span> <span data-ttu-id="1155f-164">請依費式數列數字，擴展您到目前為止所建立的內容。</span><span class="sxs-lookup"><span data-stu-id="1155f-164">Expand on what you've built so far with Fibonacci Numbers.</span></span> <span data-ttu-id="1155f-165">請嘗試將程式碼撰寫成可產生該數列的前 20 個數字。</span><span class="sxs-lookup"><span data-stu-id="1155f-165">Try and write the code to generate the first 20 numbers in the sequence.</span></span> <span data-ttu-id="1155f-166">(小提示：第 20 個費式數列數字為 6765)。</span><span class="sxs-lookup"><span data-stu-id="1155f-166">(As a hint, the 20th Fibonacci number is 6765.)</span></span>
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="52845-167">此線上程式碼撰寫體驗仍處於預覽模式。</span><span class="sxs-lookup"><span data-stu-id="52845-167">This online coding experience is in preview mode.</span></span> <span data-ttu-id="52845-168">如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。</span><span class="sxs-lookup"><span data-stu-id="52845-168">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="52845-169">完成挑戰</span><span class="sxs-lookup"><span data-stu-id="52845-169">Complete challenge</span></span>
+    > <span data-ttu-id="1155f-167">此線上程式碼撰寫體驗仍處於預覽模式。</span><span class="sxs-lookup"><span data-stu-id="1155f-167">This online coding experience is in preview mode.</span></span> <span data-ttu-id="1155f-168">如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。</span><span class="sxs-lookup"><span data-stu-id="1155f-168">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="1155f-169">完成挑戰</span><span class="sxs-lookup"><span data-stu-id="1155f-169">Complete challenge</span></span>
   durationInMinutes: 3
-  content: "<span data-ttu-id=\"52845-170\">您是否有得到與下列程式碼類似的內容？</span><span class=\"sxs-lookup\"><span data-stu-id=\"52845-170\">Did you come up with something like this?</span></span>\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n\nwhile (fibonacciNumbers.Count < 20)\n{\n    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\n    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n    \n    fibonacciNumbers.Add(previous + previous2);\n}\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\n<span data-ttu-id=\"52845-171\">在迴圈每次反覆運算時，您都必須取清單中的最後兩個整數，將它們加總，並將該值新增至清單。</span><span class=\"sxs-lookup\"><span data-stu-id=\"52845-171\">With each iteration of the loop, you're taking the last two integers in the list, summing them, and adding that value to the list.</span></span> <span data-ttu-id=\"52845-172\">迴圈會持續重複，直到將 20 個項目新增至清單為止。</span><span class=\"sxs-lookup\"><span data-stu-id=\"52845-172\">The loop repeats until you've added 20 items to the list.</span></span>\n\n> [!NOTE]\n> <span data-ttu-id=\"52845-173\">此線上程式碼撰寫體驗仍處於預覽模式。</span><span class=\"sxs-lookup\"><span data-stu-id=\"52845-173\">This online coding experience is in preview mode.</span></span> <span data-ttu-id=\"52845-174\">如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。</span><span class=\"sxs-lookup\"><span data-stu-id=\"52845-174\">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>\n"
+  content: "<span data-ttu-id=\"1155f-170\">您是否有得到與下列程式碼類似的內容？</span><span class=\"sxs-lookup\"><span data-stu-id=\"1155f-170\">Did you come up with something like this?</span></span>\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n\nwhile (fibonacciNumbers.Count < 20)\n{\n    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\n    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n    \n    fibonacciNumbers.Add(previous + previous2);\n}\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\n<span data-ttu-id=\"1155f-171\">在迴圈每次反覆運算時，您都必須取清單中的最後兩個整數，將它們加總，並將該值新增至清單。</span><span class=\"sxs-lookup\"><span data-stu-id=\"1155f-171\">With each iteration of the loop, you're taking the last two integers in the list, summing them, and adding that value to the list.</span></span> <span data-ttu-id=\"1155f-172\">迴圈會持續重複，直到將 20 個項目新增至清單為止。</span><span class=\"sxs-lookup\"><span data-stu-id=\"1155f-172\">The loop repeats until you've added 20 items to the list.</span></span>\n\n> [!NOTE]\n> <span data-ttu-id=\"1155f-173\">此線上程式碼撰寫體驗仍處於預覽模式。</span><span class=\"sxs-lookup\"><span data-stu-id=\"1155f-173\">This online coding experience is in preview mode.</span></span> <span data-ttu-id=\"1155f-174\">如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。</span><span class=\"sxs-lookup\"><span data-stu-id=\"1155f-174\">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>\n"
 - content: >-
-    <span data-ttu-id="52845-175">您已經完成清單教學課程。</span><span class="sxs-lookup"><span data-stu-id="52845-175">You've completed the list tutorial.</span></span> <span data-ttu-id="52845-176">此教學課程是最後的互動式教學課程。</span><span class="sxs-lookup"><span data-stu-id="52845-176">This tutorial is the final interactive tutorial.</span></span> <span data-ttu-id="52845-177">您可以在自己的開發環境中，繼續進行這些教學課程。</span><span class="sxs-lookup"><span data-stu-id="52845-177">You can continue these tutorials on your own development environment.</span></span> <span data-ttu-id="52845-178">了解[本機開發](local-environment.md)的基本概念，然後選擇一個教學課程。</span><span class="sxs-lookup"><span data-stu-id="52845-178">Learn the basics of [local development](local-environment.md) and then pick a tutorial.</span></span> <span data-ttu-id="52845-179">您可以嘗試這個相同的練習、直接移至下一個教學課程，或從 [C# 中的數字](numbers-in-csharp-local.md)教學課程重新開始。</span><span class="sxs-lookup"><span data-stu-id="52845-179">You can try this same exercise, move directly to the next tutorial, or start again at with the [numbers in C#](numbers-in-csharp-local.md) tutorial.</span></span>
+    <span data-ttu-id="1155f-175">您已經完成清單互動式教學課程。</span><span class="sxs-lookup"><span data-stu-id="1155f-175">You've completed the list interactive tutorial.</span></span> <span data-ttu-id="1155f-176">那是對於 C# 互動式教學課程的最終簡介。</span><span class="sxs-lookup"><span data-stu-id="1155f-176">That's the final introduction to C# interactive tutorial.</span></span> <span data-ttu-id="1155f-177">您可以瀏覽 [.NET 網站](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) \(英文\) 以下載 .NET Core SDK、在您的機器上建立專案，並繼續撰寫程式碼。</span><span class="sxs-lookup"><span data-stu-id="1155f-177">You can visit the [.NET site](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) to download the .NET Core SDK, create a project on your machine, and keep coding.</span></span> <span data-ttu-id="1155f-178">「繼續學習」步驟會帶您回到這些教學課程，以便在您的機器上建置專案。</span><span class="sxs-lookup"><span data-stu-id="1155f-178">The "Keep Learning" step brings you back to these tutorials to build projects on your machine.</span></span>
 
 
-    <span data-ttu-id="52845-180">您可以在關於[集合](../../../standard/collections/index.md)的 [.NET 指南](../../../standard/index.md)主題中，深入了解 `List` 類型的使用方式。</span><span class="sxs-lookup"><span data-stu-id="52845-180">You can learn more about working with the `List` type in the [.NET Guide](../../../standard/index.md) topic on [collections](../../../standard/collections/index.md).</span></span> <span data-ttu-id="52845-181">您也能學習到許多其他的集合類型。</span><span class="sxs-lookup"><span data-stu-id="52845-181">You'll also learn about many other collection types.</span></span>
+    <span data-ttu-id="1155f-179">您可以在下列主題中深入了解 [.NET 集合](../../../standard/collections/index.md)：</span><span class="sxs-lookup"><span data-stu-id="1155f-179">You can learn more about [.NET collections](../../../standard/collections/index.md) in the following topics:</span></span>
+
+    - [<span data-ttu-id="1155f-180">選取集合型別</span><span class="sxs-lookup"><span data-stu-id="1155f-180">Selecting a collection type</span></span>](../../../standard/collections/selecting-a-collection-class.md)
+
+    - [<span data-ttu-id="1155f-181">常用的集合型別</span><span class="sxs-lookup"><span data-stu-id="1155f-181">Commonly used collection types</span></span>](../../../standard/collections/commonly-used-collection-types.md)
+
+    - [<span data-ttu-id="1155f-182">何時使用泛型集合</span><span class="sxs-lookup"><span data-stu-id="1155f-182">When to use generic collections</span></span>](../../../standard/collections/when-to-use-generic-collections.md)
